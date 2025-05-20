@@ -108,13 +108,13 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Tech blog for thakicloud"
   location         : "Seoul, Korea"
-  email            : "contact@thakicloud.com"
+  email            : "info@thakicloud.co.kr"
   uri              :
   home             :
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://thakicloud.com"
+      url: "https://thakicloud.co.kr"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/thakicloud"

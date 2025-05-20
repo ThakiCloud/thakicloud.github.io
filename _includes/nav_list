@@ -30,17 +30,20 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-        <span class="nav__sub-title" v-on:click='togglec()'>📂 전체 글 수 {{ site.posts.size }} 개</span>
+        <span class="nav__sub-title" v-on:click='togglec()'>📂 Total Posts: {{ site.posts.size }}</span>
       </li>
       <li>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/논문리뷰">📝 논문리뷰 ({{ site.categories['논문리뷰'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/튜토리얼">💻 튜토리얼 ({{ site.categories['튜토리얼'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/리서치">📒 리서치 ({{ site.categories['리서치'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/AI뉴스">🌐 AI소식 ({{ site.categories['AI뉴스'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/AI활용">🤖 AI활용 ({{ site.categories['AI활용'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/철학">🧠 철학 ({{ site.categories['철학'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/과학">🔬 과학 ({{ site.categories['과학'].size }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/기타">📒 기타 ({{ site.categories['기타'].size }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/iaas/">☁️ IaaS & Private Cloud ({{ site.categories['iaas'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/paas/">🏗️ PaaS & Platform Engineering ({{ site.categories['paas'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/saas/">🚀 SaaS Development ({{ site.categories['saas'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/llmops/">🤖 LLM Ops & AI Engineering ({{ site.categories['llmops'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/tutorials/">💻 Tech Insights & Tutorials ({{ site.categories['tutorials'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/careers/">🤝 Thaki Cloud Life & Careers ({{ site.categories['careers'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/reviews/">📝 Academic Paper Reviews ({{ site.categories['reviews'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/news/">🌐 Tech News & Trends ({{ site.categories['news'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/research/">📒 Industry Research & Analysis ({{ site.categories['research'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/science/">🔬 Science & Deep Tech ({{ site.categories['science'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/misc/">📎 Miscellaneous ({{ site.categories['misc'].size | default: 0 }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">
