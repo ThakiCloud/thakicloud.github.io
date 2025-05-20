@@ -40,9 +40,9 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/tutorials/">💻 Tutorials ({{ site.categories['tutorials'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/careers/">🤝 Careers ({{ site.categories['careers'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/reviews/">📝 Reviews ({{ site.categories['reviews'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/news/">🌐 TechNews & Trends ({{ site.categories['news'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/news/">🌐 News ({{ site.categories['news'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/research/">📒 Research ({{ site.categories['research'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/science/">🔬 Deep Tech ({{ site.categories['science'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/science/">🔬 DeepTech ({{ site.categories['science'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/misc/">📎 Miscellaneous ({{ site.categories['misc'].size | default: 0 }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
