@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Classical Computer Section (Left) -->
+    <g transform="translate(50,50)">
+        <text x="150" y="30" text-anchor="middle" font-size="20" font-weight="bold">일반 컴퓨터 (Classical)</text>
+        
+        <!-- Binary States -->
+        <g transform="translate(50,50)">
+            <!-- State 0 -->
+            <circle cx="100" cy="100" r="40" fill="#e6e6ff" stroke="black" stroke-width="2"/>
+            <text x="100" y="105" text-anchor="middle" font-size="24">0</text>
+            
+            <!-- State 1 -->
+            <circle cx="100" cy="200" r="40" fill="#e6e6ff" stroke="black" stroke-width="2"/>
+            <text x="100" y="205" text-anchor="middle" font-size="24">1</text>
+            
+            <!-- Arrow indicating transition -->
+            <path d="M100,140 L100,160" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+            
+            <text x="200" y="150" font-size="14">한 번에 하나의 상태만</text>
+        </g>
+    </g>
+
+    <!-- Quantum Computer Section (Right) -->
+    <g transform="translate(400,50)">
+        <text x="150" y="30" text-anchor="middle" font-size="20" font-weight="bold">양자 컴퓨터 (Quantum)</text>
+        
+        <!-- Quantum Sphere (Bloch Sphere) -->
+        <g transform="translate(50,50)">
+            <!-- Sphere outline -->
+            <ellipse cx="100" cy="150" rx="80" ry="80" fill="none" stroke="#ccc" stroke-width="1"/>
+            <ellipse cx="100" cy="150" rx="80" ry="30" fill="none" stroke="#ccc" stroke-width="1"/>
+            
+            <!-- Superposition State -->
+            <path d="M100,150 L160,100" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead)"/>
+            
+            <!-- State labels -->
+            <text x="100" y="60" text-anchor="middle">|1⟩</text>
+            <text x="100" y="250" text-anchor="middle">|0⟩</text>
+            
+            <!-- Superposition arrow rotation -->
+            <path d="M100,150 C130,150 150,130 160,100" fill="none" stroke="#6b6bff" stroke-width="1" stroke-dasharray="5,5"/>
+            
+            <text x="200" y="150" font-size="14">여러 상태의 중첩 가능</text>
+        </g>
+    </g>
+
+    <!-- Computation Visualization -->
+    <g transform="translate(50,400)">
+        <!-- Classical Computation -->
+        <text x="150" y="30" text-anchor="middle" font-size="16">순차적 계산</text>
+        <rect x="50" y="50" width="200" height="60" fill="#f0f0f0" stroke="black"/>
+        <text x="70" y="85" font-size="14">→ → → →</text>
+        <text x="150" y="85" font-size="14">한 번에 하나씩</text>
+    </g>
+
+    <g transform="translate(400,400)">
+        <!-- Quantum Computation -->
+        <text x="150" y="30" text-anchor="middle" font-size="16">병렬 계산</text>
+        <!-- 3D Computation Space -->
+        <path d="M50,50 L250,50 L250,110 L50,110 Z" fill="#e6e6ff" stroke="black"/>
+        <path d="M250,50 L280,70 L280,130 L250,110 Z" fill="#d4d4ff" stroke="black"/>
+        <path d="M50,110 L80,130 L280,130 L250,110 Z" fill="#c2c2ff" stroke="black"/>
+        <text x="150" y="85" font-size="14">동시에 여러 계산</text>
+    </g>
+
+    <!-- Arrow Marker Definition -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+        refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+
+    <!-- Legend -->
+    <g transform="translate(50,520)">
+        <rect x="0" y="0" width="700" height="60" fill="#fff" stroke="#000"/>
+        <text x="10" y="20" font-size="14" font-weight="bold">설명:</text>
+        <text x="10" y="40" font-size="12">• 일반 컴퓨터: 0과 1의 명확한 상태만 가능</text>
+        <text x="350" y="40" font-size="12">• 양자 컴퓨터: 0과 1의 중첩 상태 가능 (회전하는 동전처럼)</text>
+    </g>
+</svg>

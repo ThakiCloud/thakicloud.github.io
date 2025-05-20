@@ -1,0 +1,106 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">양자 컴퓨터 vs GPU 성능 비교 (2024)</text>
+
+    <!-- Current State Comparison -->
+    <g transform="translate(50,80)">
+        <!-- GPU -->
+        <g transform="translate(0,0)">
+            <text x="150" y="20" text-anchor="middle" font-size="16" font-weight="bold">NVIDIA GPU (H100)</text>
+            
+            <!-- GPU Specs -->
+            <rect x="0" y="40" width="300" height="120" fill="#e6f3ff" stroke="black"/>
+            <text x="20" y="70" font-size="14">• 80GB HBM3 메모리</text>
+            <text x="20" y="95" font-size="14">• 16,896 CUDA 코어</text>
+            <text x="20" y="120" font-size="14">• 3.958 테라플롭스 (FP32)</text>
+            <text x="20" y="145" font-size="14">• 안정적인 성능</text>
+        </g>
+
+        <!-- Current Quantum -->
+        <g transform="translate(400,0)">
+            <text x="150" y="20" text-anchor="middle" font-size="16" font-weight="bold">현재 양자 컴퓨터</text>
+            
+            <!-- Quantum Specs -->
+            <rect x="0" y="40" width="300" height="120" fill="#ffe6e6" stroke="black"/>
+            <text x="20" y="70" font-size="14">• IBM: ~400 큐비트</text>
+            <text x="20" y="95" font-size="14">• Google: ~100 큐비트</text>
+            <text x="20" y="120" font-size="14">• 높은 에러율</text>
+            <text x="20" y="145" font-size="14">• 제한된 응용 분야</text>
+        </g>
+    </g>
+
+    <!-- Performance Comparison -->
+    <g transform="translate(50,240)">
+        <text x="350" y="20" text-anchor="middle" font-size="18" font-weight="bold">문제 유형별 성능 비교</text>
+        
+        <!-- Comparison Chart -->
+        <rect x="0" y="40" width="700" height="200" fill="#fff" stroke="black"/>
+        
+        <!-- Problem Types -->
+        <text x="20" y="70" font-size="14">소인수분해</text>
+        <text x="20" y="120" font-size="14">데이터베이스 검색</text>
+        <text x="20" y="170" font-size="14">딥러닝</text>
+        <text x="20" y="220" font-size="14">일반 연산</text>
+
+        <!-- Performance Bars -->
+        <!-- GPU -->
+        <rect x="200" y="55" width="200" height="20" fill="#4d94ff"/>
+        <rect x="200" y="105" width="250" height="20" fill="#4d94ff"/>
+        <rect x="200" y="155" width="400" height="20" fill="#4d94ff"/>
+        <rect x="200" y="205" width="350" height="20" fill="#4d94ff"/>
+
+        <!-- Quantum -->
+        <rect x="200" y="60" width="350" height="10" fill="#ff6b6b"/>
+        <rect x="200" y="110" width="300" height="10" fill="#ff6b6b"/>
+        <rect x="200" y="160" width="100" height="10" fill="#ff6b6b"/>
+        <rect x="200" y="210" width="50" height="10" fill="#ff6b6b"/>
+
+        <!-- Legend -->
+        <rect x="550" y="60" width="20" height="10" fill="#4d94ff"/>
+        <text x="580" y="70" font-size="12">GPU</text>
+        <rect x="550" y="80" width="20" height="10" fill="#ff6b6b"/>
+        <text x="580" y="90" font-size="12">양자 컴퓨터</text>
+    </g>
+
+    <!-- Commercialization Timeline -->
+    <g transform="translate(50,480)">
+        <text x="350" y="20" text-anchor="middle" font-size="18" font-weight="bold">상용화 전망</text>
+        
+        <!-- Timeline -->
+        <line x1="50" y1="80" x2="650" y2="80" stroke="black" stroke-width="2"/>
+        
+        <!-- Milestones -->
+        <g transform="translate(50,60)">
+            <circle cx="0" cy="20" r="5" fill="black"/>
+            <text x="0" y="45" text-anchor="middle" font-size="12">2024</text>
+            <text x="0" y="60" text-anchor="middle" font-size="10">현재</text>
+        </g>
+        
+        <g transform="translate(200,60)">
+            <circle cx="0" cy="20" r="5" fill="black"/>
+            <text x="0" y="45" text-anchor="middle" font-size="12">2025-2027</text>
+            <text x="0" y="60" text-anchor="middle" font-size="10">오류 교정</text>
+        </g>
+        
+        <g transform="translate(400,60)">
+            <circle cx="0" cy="20" r="5" fill="black"/>
+            <text x="0" y="45" text-anchor="middle" font-size="12">2028-2030</text>
+            <text x="0" y="60" text-anchor="middle" font-size="10">제한적 상용화</text>
+        </g>
+        
+        <g transform="translate(600,60)">
+            <circle cx="0" cy="20" r="5" fill="black"/>
+            <text x="0" y="45" text-anchor="middle" font-size="12">2035+</text>
+            <text x="0" y="60" text-anchor="middle" font-size="10">광범위 상용화</text>
+        </g>
+    </g>
+
+    <!-- Current Limitations -->
+    <g transform="translate(50,600)">
+        <rect x="0" y="0" width="700" height="80" fill="#f8f8f8" stroke="black"/>
+        <text x="20" y="30" font-size="16" font-weight="bold">현재 주요 한계점</text>
+        <text x="40" y="60" font-size="14">• 높은 오류율 (디코히어런스)</text>
+        <text x="250" y="60" font-size="14">• 제한된 큐비트 수</text>
+        <text x="450" y="60" font-size="14">• 높은 비용</text>
+    </g>
+</svg>

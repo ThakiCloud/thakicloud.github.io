@@ -1,0 +1,79 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">양자 컴퓨팅 결과 검증 프로세스</text>
+
+    <!-- Process Flow -->
+    <g transform="translate(50,80)">
+        <!-- Quantum Computer -->
+        <g transform="translate(0,0)">
+            <text x="150" y="20" text-anchor="middle" font-size="16" font-weight="bold">양자 컴퓨터</text>
+            
+            <!-- Quantum Process Box -->
+            <path d="M50,40 L250,40 L250,120 L50,120 Z" fill="#e6e6ff" stroke="black" stroke-width="2"/>
+            <path d="M250,40 L280,60 L280,140 L250,120 Z" fill="#d6d6ff" stroke="black" stroke-width="2"/>
+            <path d="M50,120 L80,140 L280,140 L250,120 Z" fill="#c6c6ff" stroke="black" stroke-width="2"/>
+            
+            <text x="150" y="70" text-anchor="middle">계산 실행</text>
+            <text x="150" y="90" text-anchor="middle" font-size="12">(여러 번 반복)</text>
+        </g>
+
+        <!-- Arrow -->
+        <path d="M290,90 L350,90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+        <!-- Results Collection -->
+        <g transform="translate(360,0)">
+            <text x="150" y="20" text-anchor="middle" font-size="16" font-weight="bold">결과 수집</text>
+            
+            <!-- Results Box -->
+            <rect x="50" y="40" width="200" height="100" fill="#ffe6e6" stroke="black"/>
+            <text x="150" y="70" text-anchor="middle">측정된 결과들</text>
+            <text x="150" y="90" text-anchor="middle" font-size="12">결과 1: 42%</text>
+            <text x="150" y="110" text-anchor="middle" font-size="12">결과 2: 58%</text>
+        </g>
+
+        <!-- Arrow -->
+        <path d="M650,90 L710,90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+        <!-- Classical Computer -->
+        <g transform="translate(720,0)">
+            <text x="0" y="20" font-size="16" font-weight="bold">일반 컴퓨터</text>
+            <!-- Classical Computer Icon -->
+            <rect x="-30" y="40" width="80" height="80" fill="#e6ffe6" stroke="black"/>
+            <text x="10" y="80" text-anchor="middle" font-size="12">검증</text>
+        </g>
+    </g>
+
+    <!-- Verification Process Detail -->
+    <g transform="translate(50,250)">
+        <text x="350" y="20" text-anchor="middle" font-size="18" font-weight="bold">결과 검증 방법</text>
+
+        <!-- Method 1 -->
+        <g transform="translate(0,40)">
+            <rect x="0" y="0" width="700" height="80" fill="#f8f8f8" stroke="black"/>
+            <text x="20" y="30" font-size="16" font-weight="bold">1. 일반 컴퓨터로 검증 가능한 경우</text>
+            <text x="40" y="60" font-size="14">• 계산 결과를 일반 컴퓨터로 직접 확인 (예: 소인수분해의 결과 검증)</text>
+        </g>
+
+        <!-- Method 2 -->
+        <g transform="translate(0,140)">
+            <rect x="0" y="0" width="700" height="80" fill="#f8f8f8" stroke="black"/>
+            <text x="20" y="30" font-size="16" font-weight="bold">2. 통계적 검증이 필요한 경우</text>
+            <text x="40" y="60" font-size="14">• 여러 번의 실행 결과를 통계적으로 분석 (예: 양자 시뮬레이션)</text>
+        </g>
+
+        <!-- Method 3 -->
+        <g transform="translate(0,240)">
+            <rect x="0" y="0" width="700" height="80" fill="#f8f8f8" stroke="black"/>
+            <text x="20" y="30" font-size="16" font-weight="bold">3. 하이브리드 방식</text>
+            <text x="40" y="60" font-size="14">• 양자와 일반 컴퓨터가 상호 보완적으로 검증 (예: VQE 알고리즘)</text>
+        </g>
+    </g>
+
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+        refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+</svg>

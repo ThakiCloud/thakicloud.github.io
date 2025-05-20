@@ -1,0 +1,21 @@
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/kimjy99/kimjy99.github.io@master/assets/js/simple-jekyll-search.min.js"></script> -->
+
+<script type="text/javascript">
+var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('search'),
+      resultsContainer: document.getElementById('results'),
+      json: '/search.json',
+      limit: 10,
+      searchResultTemplate: `
+        <div class="list__item">
+          <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+            <h2 class="archive__item-title" itemprop="headline">
+              <a href="{url}" rel="permalink">{title}</a>
+            </h2>
+            <p class="archive__item-excerpt" itemprop="description">{excerpt}</p>
+          </article>
+        </div>
+      `
+});
+</script>
