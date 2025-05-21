@@ -11,6 +11,7 @@ tags:
   - Developer Story
   - Team
 author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
+# ---
 
 ## [Thaki Cloud Life & 커리어] 게시물 작성 가이드
 ## 여기에 실제 [Thaki Cloud Life & 커리어] 관련 내용을 작성하세요.
