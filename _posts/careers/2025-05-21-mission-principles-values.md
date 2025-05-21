@@ -3,7 +3,7 @@ title: "[Thaki Cloud Life & 커리어] 미션, 원칙, 가치"
 excerpt: "Thaki Cloud의 미션, 원칙, 그리고 가치를 공유합니다."
 date: 2025-05-21 # 실제 발행일로 변경하세요
 categories:
-  - Thaki Cloud Life 및 커리어
+  - careers
 tags:
   - Company Culture
   - Careers
