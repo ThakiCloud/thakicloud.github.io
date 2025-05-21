@@ -3,7 +3,7 @@ title: "[산업 리서치 & 분석] 여기에 리서치 주제/제목을 입력�
 excerpt: "특정 기술 시장, 산업 동향, 경쟁 환경에 대한 Thaki Cloud의 심층 리서치 및 분석 자료"
 date: YYYY-MM-DD # 실제 리서치 완료 또는 발행일로 변경하세요
 categories:
-  - 산업 리서치 및 분석
+  - research
 tags:
   - Industry Research
   - Market Analysis

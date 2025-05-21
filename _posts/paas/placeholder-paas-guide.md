@@ -3,7 +3,7 @@ title: "[플랫폼 엔지니어링 (PaaS)] 여기에 제목을 입력하세요"
 excerpt: "Thaki Cloud의 PaaS 솔루션 개발, 운영 및 플랫폼 엔지니어링 기술 심층 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요
 categories:
-  - 플랫폼 엔지니어링 (PaaS)
+  - paas
 tags:
   - PaaS
   - Platform Engineering

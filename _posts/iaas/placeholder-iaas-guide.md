@@ -3,7 +3,7 @@ title: "[프라이빗 클라우드 & IaaS] 여기에 제목을 입력하세요"
 excerpt: "프라이빗 클라우드 구축, 운영, IaaS 솔루션 관련 심층 분석 및 기술 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요 (예: 2024-01-15)
 categories:
-  - 프라이빗 클라우드 및 IaaS
+  - iaas
 tags:
   - Private Cloud
   - IaaS

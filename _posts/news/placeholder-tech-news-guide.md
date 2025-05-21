@@ -3,7 +3,7 @@ title: "[기술 뉴스 & 트렌드] 여기에 주목할 만한 뉴스/트렌드 
 excerpt: "최신 기술 뉴스, 산업 동향, 주요 이벤트에 대한 Thaki Cloud의 관점과 분석"
 date: YYYY-MM-DD # 실제 발행일 또는 뉴스 발생일 기준으로 변경하세요
 categories:
-  - 기술 뉴스 및 트렌드
+  - news
 tags:
   - Tech News
   - Industry Trends

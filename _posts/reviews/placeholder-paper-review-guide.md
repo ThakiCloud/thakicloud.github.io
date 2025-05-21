@@ -3,7 +3,7 @@ title: "[논문 리뷰] 여기에 리뷰할 논문 제목 또는 핵심 내용�
 excerpt: "최신 주요 논문에 대한 심층 분석 및 Thaki Cloud 기술과의 연관성 고찰"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요
 categories:
-  - 논문 리뷰
+  - reviews
 tags:
   - Paper Review
   - # 논문의 주요 분야 (예: LLM, Distributed Systems, Cloud Computing)

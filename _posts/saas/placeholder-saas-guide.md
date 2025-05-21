@@ -3,7 +3,7 @@ title: "[SaaS 개발 & 아키텍처] 여기에 제목을 입력하세요"
 excerpt: "Thaki Cloud의 SaaS 애플리케이션 설계, 개발, 멀티테넌시, 확장성 확보 전략 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요
 categories:
-  - SaaS 개발 및 아키텍처
+  - saas
 tags:
   - SaaS
   - Software Architecture

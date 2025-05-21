@@ -3,7 +3,7 @@ title: "Thaki Cloud Life & 커리어 가이드"
 excerpt: "Thaki Cloud의 기업 문화, 복지, 개발자들의 이야기, 채용 정보 등을 공유합니다."
 date: 2025-05-21
 categories:
-  - Thaki Cloud Life 및 커리어
+  - careers
 tags:
   - Company Culture
   - Careers

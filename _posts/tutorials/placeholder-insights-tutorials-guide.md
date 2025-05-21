@@ -3,7 +3,7 @@ title: "[기술 인사이트 & 튜토리얼] 여기에 제목을 입력하세요
 excerpt: "최신 기술 동향 분석, 특정 기술 튜토리얼, 개발 생산성 팁 등 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요
 categories:
-  - 기술 인사이트 및 튜토리얼
+  - tutorials
 tags:
   - Technical Deep Dive
   - Tutorial
