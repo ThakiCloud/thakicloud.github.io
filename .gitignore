@@ -1,2 +1,223 @@
-_site
-.idea
+# =============================================================================
+# ThakiCloud Jekyll Blog - .gitignore
+# =============================================================================
+
+# Jekyll Generated Files
+# -----------------------
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby & Bundler
+# ---------------
+*.gem
+.bundle/
+vendor/bundle/
+vendor/cache/
+.rbenv-vars
+.ruby-version
+.ruby-gemset
+
+# Gemfile.lock (uncomment if you want to ignore it)
+# Gemfile.lock
+
+# Node.js & NPM
+# --------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json.backup
+
+# Build & Distribution
+# --------------------
+dist/
+build/
+*.min.js
+*.min.css
+assets/js/main.min.js
+
+# Environment & Configuration
+# ---------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE & Editor Files
+# ------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Cursor IDE
+.cursor/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.un~
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# macOS
+# -----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+# -------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+# -----
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Logs & Debug
+# ------------
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+.grunt
+lib-cov
+coverage/
+.nyc_output
+.coverage
+.pytest_cache/
+.cache
+
+# Temporary Files
+# ---------------
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Archives
+# --------
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Database
+# --------
+*.sqlite
+*.sqlite3
+*.db
+
+# Security & Credentials
+# ----------------------
+*.pem
+*.key
+*.p12
+*.p8
+*.cer
+*.crt
+credentials.yml
+secrets.yml
+
+# Jekyll Plugins Cache
+# --------------------
+.jekyll-cache/
+_plugins/.jekyll-cache/
+
+# GitHub Pages
+# ------------
+.github/workflows/pages-deploy.yml.hook
+
+# Deployment
+# ----------
+.deploy/
+.publish/
+.surge/
+.netlify/
+
+# Testing
+# -------
+.rspec
+spec/reports/
+test/tmp/
+test/version_tmp/
+coverage/
+
+# Documentation Build
+# -------------------
+doc/
+docs/_site/
+.yardoc/
+
+# Local Development
+# -----------------
+.local/
+.dev/
+.development/
+
+# Misc
+# ----
+*.pid
+*.seed
+*.pid.lock
+.tgz
+.tar.gz
