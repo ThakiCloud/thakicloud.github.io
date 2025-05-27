@@ -38,7 +38,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/paas/">🏗️ PaaS ({{ site.categories['paas'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/saas/">🚀 SaaS ({{ site.categories['saas'].size | default: 0 }})</a></span>
       -->
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/dev/">💻 Dev ({{ site.categories['dev'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/dev/">🚀 Dev ({{ site.categories['dev'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/llmops/">🤖 LLM Ops ({{ site.categories['llmops'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/tutorials/">💻 Tutorials ({{ site.categories['tutorials'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/careers/">🤝 Careers ({{ site.categories['careers'].size | default: 0 }})</a></span>
