@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+title: Jekyll 블로그 포스트 작성 규칙
+scope: _posts/**/*.md
+---
+
+블로그 포스트 작성 시 다음 포맷을 반드시 준수합니다:
+
+- 파일명은 `YYYY-MM-DD-title.md` 형식이어야 합니다.
+- Front Matter에는 다음 항목을 포함해야 합니다:
+  ```yaml
+  ---
+  title: "포스트 제목"
+  date: YYYY-MM-DD
+  categories: 
+    - 카테고리1
+    - 카테고리2
+  tags: 
+    - 태그1
+    - 태그2
+  author_profile: true
+  toc: true
+  toc_label: XXXXXXX
+  ---
+
+
+

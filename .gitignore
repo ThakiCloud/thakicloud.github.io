@@ -59,8 +59,6 @@ assets/js/main.min.js
 .AppleDouble
 .LSOverride
 
-# Cursor IDE
-.cursor/
 
 # Sublime Text
 *.sublime-project
