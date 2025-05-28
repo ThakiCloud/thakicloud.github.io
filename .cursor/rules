@@ -1,6 +1,0 @@
-Always read .cursor/design.md before writing any code.
-Always check .cursor/requirements.md to confirm features.
-Always update .cursor/architecture.md when adding/modifying files.
-Do not write monolithic files. Use one file per feature or route.
-Each API must have a matching test in __tests__/.
-Use TypeScript in all backend and frontend code.
