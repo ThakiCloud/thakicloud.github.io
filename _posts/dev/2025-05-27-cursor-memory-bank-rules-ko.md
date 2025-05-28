@@ -175,11 +175,11 @@ flowchart TD
 
 <figure class="video-container">
   <iframe
-    src="https://www.youtube.com/watch?v=KLl6rNG4sUU"
+    src="https://youtu.be/KLl6rNG4sUU?si=AOqKn9EpBHW-ccBk"
     title="AI 코딩, 맨날 까먹는 AI? '커서 메모리 뱅크'로 해결! | 환각 줄이기"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
   ></iframe>
-  <figcaption>※ 동영상 전체(≈ 24 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
+  <figcaption>※ 동영상 전체(≈ 9 분)를 직접 재생하며 확인할 수 있어요.</figcaption>
 </figure>
