@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT Next Web + vLLM 로컬 환경 구축 가이드 - HyperCLOVA X SEED 0.5B로 경량 한국어 AI"
-date: 2025-01-26
+date: 2025-05-28
 categories: 
   - tutorials
   - ai
@@ -71,14 +71,14 @@ pyenv global 3.12.8
 ### Node.js 환경 설정
 
 ```bash
-# Node.js 18+ 설치
-brew install node@18
+# Node.js 22+ 설치
+brew install node@22
 
 # Yarn 설치
 npm install -g yarn
 
 # 버전 확인
-node --version  # v18.0.0+
+node --version  # v22.0.0+
 yarn --version  # 1.22.0+
 ```
 
@@ -435,6 +435,12 @@ vllm serve naver-clova-ix/HyperCLOVA-X-SEED-0.5B \
   --max-model-len 1024 \
   --host 127.0.0.1 \
   --port 8000 \
+  --disable-log-requests
+```
+
+### 서버 상태 확인
+
+```bash
 # 새 터미널에서 실행
 # 모델 목록 확인
 curl http://localhost:8000/v1/models
