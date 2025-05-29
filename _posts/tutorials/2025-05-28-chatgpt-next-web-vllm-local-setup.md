@@ -137,18 +137,30 @@ git clone https://github.com/vllm-project/vllm.git
 cd vllm
 
 # CPU 전용 요구사항 설치
-pip install -r requirements-cpu.txt
-
+pip install -r requirements/cpu.txt
 # 소스에서 빌드
-python setup.py bdist_wheel
-
-# 빌드된 패키지 설치
-pip install dist/vllm-*.whl
-
-# 추가 의존성 설치
-pip install transformers accelerate fastapi uvicorn
+pip install -e . 
 
 echo "✅ vLLM 소스 빌드 완료"
+```
+
+#### Build image from source¶
+
+```bash
+# vLLM 설치 확인
+$ docker build -f docker/Dockerfile.cpu --tag vllm-cpu-env --target vllm-openai .
+
+# Launching OpenAI server 
+$ docker run --rm \
+             --privileged=true \
+             --shm-size=4g \
+             -p 8000:8000 \
+             -e VLLM_CPU_KVCACHE_SPACE=<KV cache space> \
+             -e VLLM_CPU_OMP_THREADS_BIND=<CPU cores for inference> \
+             vllm-cpu-env \
+             --model=meta-llama/Llama-3.2-1B-Instruct \
+             --dtype=bfloat16 \
+             other vLLM OpenAI server arguments
 ```
 
 #### 빌드 확인
@@ -168,8 +180,9 @@ python -c "import vllm; print('vLLM CPU 모드 설치 완료')"
 ```bash
 # 1. HyperCLOVA X SEED 0.5B (경량 한국어 모델)
 # 모델 크기: ~1GB
-MODEL_NAME="naver-clova-ix/HyperCLOVA-X-SEED-0.5B"
+MODEL_NAME="naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B"
 
+MODEL_NAME="Mungert/HyperCLOVAX-SEED-Text-Instruct-0.5B-GGUF"
 # 2. CodeLlama 7B (코딩 특화)
 # 모델 크기: ~13GB  
 MODEL_NAME="codellama/CodeLlama-7b-Instruct-hf"
@@ -193,9 +206,24 @@ MODEL_NAME="beomi/KoAlpaca-Polyglot-12.8B"
 pip install huggingface_hub
 
 # 모델 다운로드 (예: HyperCLOVA X SEED 0.5B)
-huggingface-cli download naver-clova-ix/HyperCLOVA-X-SEED-0.5B \
-  --local-dir ./models/hyperclova-x-seed-0.5b \
+huggingface-cli download naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B \
+  --local-dir ./models/HyperCLOVAX-SEED-Text-Instruct-0.5Bb \
   --local-dir-use-symlinks False
+
+huggingface-cli download Mungert/HyperCLOVAX-SEED-Text-Instruct-0.5B-GGUF \
+  --local-dir ./models/HyperCLOVAX-SEED-Text-Instruct-0.5B-GGUF \
+  --local-dir-use-symlinks False
+
+python - <<EOF
+from huggingface_hub import hf_hub_download
+
+print(
+    hf_hub_download(
+        repo_id="Mungert/HyperCLOVAX-SEED-Text-Instruct-0.5B-GGUF",
+        filename="HyperCLOVAX-SEED-Text-Instruct-0.5B-f16.gguf"
+    )
+)
+EOF
 ```
 
 ### vLLM 서버 실행 스크립트 작성
@@ -393,13 +421,18 @@ source vllm-env/bin/activate
 
 # 서버 실행 (HyperCLOVA X SEED 0.5B 예시)
 python vllm-server.py \
-  --model naver-clova-ix/HyperCLOVA-X-SEED-0.5B \
+  --model naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B \
   --host 127.0.0.1 \
   --port 8000
 
 # 또는 로컬 다운로드된 모델 사용
 python vllm-server.py \
-  --model ./models/hyperclova-x-seed-0.5b \
+  --model ./models/HyperCLOVAX-SEED-Text-Instruct-0.5B \
+  --host 127.0.0.1 \
+  --port 8000
+
+python vllm-server.py \
+  --model ./models/hyperclovax-f16 \
   --host 127.0.0.1 \
   --port 8000
 ```
@@ -411,25 +444,32 @@ python vllm-server.py \
 source vllm-env/bin/activate
 
 # CPU 모드로 서버 실행 (Apple Silicon 최적화)
-vllm serve naver-clova-ix/HyperCLOVA-X-SEED-0.5B \
+vllm serve naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B \
   --device cpu \
   --max-num-seqs 4 \
   --host 127.0.0.1 \
   --port 8000
 
 # 또는 로컬 모델 경로 사용
-vllm serve ./models/hyperclova-x-seed-0.5b \
+vllm serve ./models/HyperCLOVAX-SEED-Text-Instruct-0.5B \
   --device cpu \
   --max-num-seqs 4 \
   --host 127.0.0.1 \
   --port 8000
+
+vllm serve ./models/hyperclovax-f16 \
+  --device cpu \
+  --max-num-seqs 4 \
+  --host 127.0.0.1 \
+  --port 8000
+
 ```
 
 #### CPU 모드 최적화 옵션
 
 ```bash
 # 메모리 제한 환경에서의 최적화 실행
-vllm serve naver-clova-ix/HyperCLOVA-X-SEED-0.5B \
+vllm serve naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B\
   --device cpu \
   --max-num-seqs 2 \
   --max-model-len 1024 \
@@ -449,7 +489,7 @@ curl http://localhost:8000/v1/models
 curl -X POST http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "hyperclova-x-seed-0.5b",
+    "model": "HyperCLOVAX-SEED-Text-Instruct-0.5B",
     "messages": [
       {"role": "user", "content": "안녕하세요! 자기소개를 해주세요."}
     ],

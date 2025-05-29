@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT Next Web 완전 가이드 - 설치부터 배포까지"
-date: 2025-01-26
+date: 2025-05-28
 categories: 
   - tutorials
   - ai
