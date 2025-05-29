@@ -489,13 +489,14 @@ curl http://localhost:8000/v1/models
 curl -X POST http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "HyperCLOVAX-SEED-Text-Instruct-0.5B",
+    "model": "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B",
     "messages": [
       {"role": "user", "content": "안녕하세요! 자기소개를 해주세요."}
     ],
     "temperature": 0.7,
     "max_tokens": 100
   }'
+
 ```
 
 ## 3단계: ChatGPT Next Web 설치 및 설정
@@ -522,7 +523,7 @@ OPENAI_API_KEY=sk-dummy-key-for-local-vllm
 BASE_URL=http://localhost:8000/v1
 
 # 접근 제어 (선택사항)
-CODE=your-access-password
+CODE=1234
 
 # 기능 설정
 HIDE_USER_API_KEY=1
