@@ -520,7 +520,7 @@ yarn install
 cat > .env.local << 'EOF'
 # vLLM 서버 설정
 OPENAI_API_KEY=sk-dummy-key-for-local-vllm
-BASE_URL=http://localhost:8000/v1
+BASE_URL=http://localhost:8000
 
 # 접근 제어 (선택사항)
 CODE=1234
@@ -528,7 +528,7 @@ CODE=1234
 # 기능 설정
 HIDE_USER_API_KEY=1
 DISABLE_GPT4=0
-CUSTOM_MODELS=hyperclova-x-seed-0.5b
+CUSTOM_MODELS=naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B
 
 # 개발 환경 설정
 NEXT_PUBLIC_BUILD_MODE=development
