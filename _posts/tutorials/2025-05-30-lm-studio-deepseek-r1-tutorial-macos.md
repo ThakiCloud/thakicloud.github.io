@@ -138,10 +138,6 @@ LM Studio에서 DeepSeek R1 모델을 찾아보겠습니다:
 ls -la ~/.cache/lm-studio/models/
 ```
 
-![Model Download](/assets/images/posts/tutorial/model-download-progress.png)
-
-*DeepSeek R1 모델 다운로드 진행 상황*
-
 ## 모델 실행 및 기본 사용법
 
 ### 1단계: 모델 로드
@@ -150,10 +146,6 @@ ls -la ~/.cache/lm-studio/models/
 2. 상단의 모델 선택 드롭다운에서 다운로드한 DeepSeek R1 모델 선택
 3. **"Load Model"** 버튼 클릭
 4. 모델 로딩 완료 대기
-
-![Model Loading](/assets/images/posts/tutorial/model-loading.png)
-
-*DeepSeek R1 모델 로딩 과정*
 
 ### 2단계: 첫 번째 대화
 
