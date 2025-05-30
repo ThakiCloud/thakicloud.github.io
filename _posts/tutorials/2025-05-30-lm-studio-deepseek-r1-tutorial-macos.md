@@ -108,7 +108,7 @@ LM Studio에서 DeepSeek R1 모델을 찾아보겠습니다:
 1. LM Studio 실행 후 **"Search"** 탭 클릭
 2. 검색창에 다음 키워드 입력:
    ```
-   deepseek r1 0528 qwen 8b
+   deepseek r1 0528
    ```
 
 ![Model Search](/assets/images/posts/tutorial/deepseek-search.png)
