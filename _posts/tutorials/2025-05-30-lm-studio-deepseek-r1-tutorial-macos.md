@@ -95,9 +95,6 @@ open -a "LM Studio"
 2. macOS 보안 경고가 나타나면 **"열기"** 클릭
 3. 초기 설정 마법사 완료
 
-![LM Studio First Launch](/assets/images/posts/tutorial/lm-studio-first-launch.png)
-
-*LM Studio 첫 실행 시 나타나는 환영 화면*
 
 ## DeepSeek R1 모델 다운로드
 
