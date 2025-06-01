@@ -20,7 +20,7 @@ toc_label: "목차"
 
 ## Chatterbox TTS 개요
 
-![Chatterbox TTS](/assets/images/posts/tutorial/chatterbox-overview.png)
+![Chatterbox TTS](/assets/images/posts/tutorial/chatterbox-overview.jpg)
 
 *Chatterbox TTS: 감정 표현 제어가 가능한 오픈소스 음성 합성 시스템*
 

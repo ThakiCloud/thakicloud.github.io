@@ -29,7 +29,7 @@ toc_label: "목차"
 
 ## DeepSeek-V3 아키텍처 개요
 
-![DeepSeek-V3 Architecture](/assets/images/posts/research/deepseek-v3-architecture.png)
+![DeepSeek-V3 Architecture](/assets/images/posts/research/deepseek-v3-architecture.jpg)
 *Figure 1: DeepSeek-V3의 기본 아키텍처. MLA(Multi-head Latent Attention), DeepSeekMoE, Multi-Token Prediction 모듈, FP8 mixed-precision 훈련이 통합된 구조를 보여줍니다.*
 
 위 다이어그램에서 볼 수 있듯이, DeepSeek-V3는 여러 혁신적인 구성 요소들이 유기적으로 결합된 아키텍처를 채택하고 있습니다. 특히 **MTP(Multi-Token Prediction) 모듈**이 메인 모델과 병렬로 동작하며, **FP8 mixed-precision**이 모든 컴포넌트에 적용되어 있는 점이 주목할 만합니다.

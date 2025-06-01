@@ -18,10 +18,10 @@ OpenAI GPT-4o의 강력한 이미지 생성 기능을 활용하여 실사 이미
 
 ## 변환 결과 미리보기
 
-![원본 토스터 이미지](/assets/images/posts/tutorial/toast.png)
+![원본 토스터 이미지](/assets/images/posts/tutorial/toast.jpg)
 *원본 실사 토스터 이미지*
 
-![3D 스타일 변환 결과](/assets/images/posts/tutorial/3d-toast.png)
+![3D 스타일 변환 결과](/assets/images/posts/tutorial/3d-toast.jpg)
 *3D 이모지 스타일로 변환된 결과*
 
 ## GPT-4o 이미지 변환 프롬프트
