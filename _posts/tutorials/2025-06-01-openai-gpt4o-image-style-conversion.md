@@ -1,9 +1,8 @@
 ---
 title: "OpenAI GPT-4o로 실사 이미지를 3D 이모지 스타일로 변환하기"
-date: 2024-12-19
+date: 2025-06-01
 categories: 
-  - AI
-  - Tutorial
+  - tutorials
 tags: 
   - OpenAI
   - GPT-4o
