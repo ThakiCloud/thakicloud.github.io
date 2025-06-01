@@ -2,7 +2,7 @@
 title: "DeepSeek-R1-0528 + Ollama로 로컬 AI 구축하기: 완벽 가이드"
 date: 2024-05-31
 categories: 
-  - tutorial
+  - tutorials
 tags: 
   - deepseek
   - ollama
@@ -72,6 +72,9 @@ Windows 사용자는 [공식 웹사이트](https://ollama.com)에서 MSI 설치 
 가장 가벼운 Q4 양자화 버전으로, 16GB RAM + 8GB VRAM 노트북에서도 동작합니다.
 
 ```bash
+# 8B 모델 다운로드 (알아서)
+ollama pull deepseek-r1:8b
+
 # 8B 모델 다운로드 (약 5.2GB)
 ollama pull deepseek-r1:8b-0528-qwen3-q4_K_M
 
@@ -96,7 +99,10 @@ ollama run deepseek-r1:671b-0528
 #### 대화형 채팅
 
 ```bash
+
 # 모델과 대화 시작
+ollama run deepseek-r1:8b
+
 ollama run deepseek-r1:8b-0528-qwen3-q4_K_M
 
 # 예시 대화
