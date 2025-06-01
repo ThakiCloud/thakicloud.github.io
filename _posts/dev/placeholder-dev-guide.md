@@ -3,7 +3,7 @@ title: "[클라우드 개발] 여기에 제목을 입력하세요"
 excerpt: "클라우드 네이티브 개발, 마이크로서비스 아키텍처, 컨테이너 오케스트레이션 등 클라우드 개발 기술 심층 분석 및 실무 경험 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요 (예: 2024-01-15)
 categories:
-  - iaas
+  - dev
 tags:
   - Cloud Development
   - Cloud Native
