@@ -2,20 +2,28 @@
 <!-- <script src="https://cdn.jsdelivr.net/gh/kimjy99/kimjy99.github.io@master/assets/js/simple-jekyll-search.min.js"></script> -->
 
 <script type="text/javascript">
-var sjs = SimpleJekyllSearch({
-      searchInput: document.getElementById('search'),
-      resultsContainer: document.getElementById('results'),
-      json: '/search.json',
-      limit: 10,
-      searchResultTemplate: `
-        <div class="list__item">
-          <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-            <h2 class="archive__item-title" itemprop="headline">
-              <a href="{url}" rel="permalink">{title}</a>
-            </h2>
-            <p class="archive__item-excerpt" itemprop="description">{excerpt}</p>
-          </article>
-        </div>
-      `
+document.addEventListener('DOMContentLoaded', function() {
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search'),
+    resultsContainer: document.getElementById('results'),
+    json: '/search.json',
+    searchResultTemplate: '<div class="list__item"><article class="archive__item"><h2 class="archive__item-title"><a href="{url}" rel="permalink">{title}</a></h2><p class="archive__item-excerpt">{excerpt}</p><div class="archive__item-teaser"><span class="page__meta"><i class="far fa-calendar-alt"></i> {date}</span></div></article></div>',
+    noResultsText: '검색 결과가 없습니다.',
+    limit: 20,
+    fuzzy: false,
+    exclude: ['url']
+  });
+  
+  // 검색 입력 이벤트 리스너
+  var searchInput = document.getElementById('search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      console.log('검색어: "' + e.target.value + '"');
+      setTimeout(function() {
+        var results = document.querySelectorAll('#results .list__item');
+        console.log('검색 결과 개수:', results.length);
+      }, 100);
+    });
+  }
 });
 </script>
