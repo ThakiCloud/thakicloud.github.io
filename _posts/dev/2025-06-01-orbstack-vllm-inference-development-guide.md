@@ -276,6 +276,7 @@ volumes: []
 
 ### 4. Deployment 템플릿 작성
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/deployment.yaml
 apiVersion: apps/v1
@@ -383,9 +384,11 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 ```
+{% endraw %}
 
 ### 5. Service 템플릿 작성
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/service.yaml
 apiVersion: v1
@@ -404,9 +407,11 @@ spec:
   selector:
     {{- include "vllm-inference.selectorLabels" . | nindent 4 }}
 ```
+{% endraw %}
 
 ### 6. Ingress 템플릿 작성
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/ingress.yaml
 {{- if .Values.ingress.enabled -}}
@@ -451,9 +456,11 @@ spec:
     {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 7. HPA 템플릿 작성
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/hpa.yaml
 {{- if .Values.autoscaling.enabled }}
@@ -489,9 +496,11 @@ spec:
     {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 8. ConfigMap 템플릿 작성
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/configmap.yaml
 apiVersion: v1
@@ -513,6 +522,7 @@ data:
   omp-num-threads: {{ .Values.vllm.ompNumThreads | quote }}
   vllm-cpu-only: "1"
 ```
+{% endraw %}
 
 ## Helm Chart 배포 및 테스트
 
@@ -887,6 +897,7 @@ helm install monitoring prometheus-community/kube-prometheus-stack \
 
 ### 2. vLLM ServiceMonitor 생성
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/servicemonitor.yaml
 {{- if .Values.monitoring.enabled }}
@@ -907,6 +918,7 @@ spec:
     scrapeTimeout: 10s
 {{- end }}
 ```
+{% endraw %}
 
 ### 3. Grafana 대시보드
 
@@ -1072,6 +1084,7 @@ resourceQuota:
 
 ### 3. 캐싱 전략
 
+{% raw %}
 ```yaml
 # vllm-inference/templates/redis.yaml
 apiVersion: apps/v1
@@ -1112,6 +1125,7 @@ spec:
   - port: 6379
     targetPort: 6379
 ```
+{% endraw %}
 
 ## CI/CD 파이프라인
 
