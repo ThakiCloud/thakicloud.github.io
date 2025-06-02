@@ -76,6 +76,59 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
+
+![Blue icons 변환 결과](/assets/images/posts/tutorial/blueicon.jpg)
+*3D 이모지 스타일로 변환된 결과*
+
+OpenAI GPT-4o에서 실사 이미지를 blue icons으로 변환하려면 다음 프롬프트를 사용하세요:
+
+```
+
+Apply the following JSON-based texture to the provided image.
+{
+  "styleAesthetic": {
+    "title": "Bold Flat Abstract Portrait Icon",
+    "overallVibe": "Playful and expressive portrait rendered with clean, geometric flat shapes and strong contrast",
+    "viewAngle": "Centered straight-on view",
+    "renderingStyle": "2-D flat illustration using a single vivid color on a pure-white background; no gradients or shading",
+    "colorPalette": {
+      "baseTones": [
+        "Pure blue (100 % saturation)"
+      ],
+      "accents": [
+        "White negative space (background)"
+      ],
+      "gradientStyle": "None — strictly flat fills"
+    },
+    "lightingAndShadows": {
+      "type": "None — design is fully flat",
+      "shadowStyle": "None",
+      "highlightIntensity": 0.0
+    },
+    "characterFeatures": {
+      "facialExpressions": "Neutral yet engaging, conveyed through minimal stylized lines",
+      "eyeStyle": "Simple curved or dot shapes with no outline or highlights",
+      "mouthStyle": "Single curved stroke (or dash) for the mouth; optional stylized mustache stroke if needed"
+    },
+    "objectSurfaces": {
+      "type": "Completely flat vector shapes",
+      "textureDetail": "None — solid fills only"
+    },
+    "linework": {
+      "thickness": "Consistent medium-bold stroke",
+      "color": "Same single vivid color as the fills"
+    },
+    "moodKeywords": [
+      "Minimal",
+      "Bold",
+      "Graphic",
+      "Playful",
+      "Iconic"
+    ]
+  }
+}
+```
+
 ## 수동 변환 과정
 
 ### 단계 1: OpenAI ChatGPT 접속
