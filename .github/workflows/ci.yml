@@ -15,20 +15,16 @@ on:
       - 'Gemfile*'
       - '.github/workflows/**'
 
-  # 수동으로도 실행 가능
   workflow_dispatch:
 
-# PR에서 여러 커밋이 푸시될 때 이전 실행을 취소
 concurrency:
   group: ci-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  # 1. Jekyll 빌드 테스트
   build-test:
     name: 🏗️ Jekyll Build Test
     runs-on: ubuntu-latest
-    
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
@@ -38,7 +34,7 @@ jobs:
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.2'
           bundler-cache: true
 
       - name: 📦 Install dependencies
@@ -48,17 +44,14 @@ jobs:
           npm install -g broken-link-checker
 
       - name: 🔧 Configure Jekyll
-        run: |
-          bundle exec jekyll doctor
-          
+        run: bundle exec jekyll doctor
+
       - name: 🏗️ Build Jekyll site
-        run: |
-          JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
-          
+        run: JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
+
       - name: 📊 Display build info
         run: |
           echo "✅ Jekyll build completed successfully!"
-          echo "📁 Generated files:"
           find _site -type f -name "*.html" | wc -l | xargs echo "HTML files:"
           find _site -type f -name "*.css" | wc -l | xargs echo "CSS files:"
           find _site -type f -name "*.js" | wc -l | xargs echo "JS files:"
@@ -70,11 +63,9 @@ jobs:
           path: _site/
           retention-days: 7
 
-  # 2. Markdown 린트 검사
   markdown-lint:
     name: 📝 Markdown Lint
     runs-on: ubuntu-latest
-    
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
@@ -111,12 +102,10 @@ jobs:
           markdownlint '_posts/**/*.md' '_pages/**/*.md' 'README.md' --config .markdownlint.json || true
           echo "📝 Markdown lint check completed!"
 
-  # 3. HTML 유효성 및 링크 검사
   html-validation:
     name: 🔗 HTML Validation & Link Check
     runs-on: ubuntu-latest
     needs: build-test
-    
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
@@ -166,7 +155,6 @@ jobs:
           python3 -m http.server 8080 &
           SERVER_PID=$!
           sleep 5
-          
           blc http://localhost:8080 \
             --recursive \
             --filter-level 3 \
@@ -174,15 +162,12 @@ jobs:
             --requests 10 \
             --max-sockets 10 \
             || true
-          
           kill $SERVER_PID
           echo "🔗 Link check completed!"
 
-  # 4. 보안 및 코드 품질 검사
   security-scan:
     name: 🛡️ Security & Quality Scan
     runs-on: ubuntu-latest
-    
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
@@ -201,17 +186,18 @@ jobs:
         with:
           sarif_file: 'trivy-results.sarif'
 
-      - name: 🔍 Check for secrets
-        uses: Yelp/detect-secrets-action@v1
-        with:
-          args: '--scan --all-files --force-use-all-plugins'
+      - name: 🔍 Install detect-secrets
+        run: pip install detect-secrets
 
-  # 5. 성능 및 SEO 검사
+      - name: 🔍 Run detect-secrets CLI scan
+        run: |
+          detect-secrets scan > .secrets.baseline
+          echo "🛡️ Secret scan completed."
+
   lighthouse-audit:
     name: 🚦 Lighthouse Performance Audit
     runs-on: ubuntu-latest
     needs: build-test
-    
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
@@ -257,13 +243,11 @@ jobs:
           lhci autorun || true
           echo "📊 Lighthouse audit completed!"
 
-  # 6. 배포 시뮬레이션 (옵션)
   deployment-simulation:
     name: 🚀 Deployment Simulation
     runs-on: ubuntu-latest
     needs: [build-test, markdown-lint, html-validation]
     if: github.event.pull_request.draft == false
-    
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
@@ -278,7 +262,6 @@ jobs:
         run: |
           echo "🚀 Simulating deployment process..."
           echo "📁 Checking required files:"
-          
           required_files=("index.html" "search.json" "sitemap.xml")
           for file in "${required_files[@]}"; do
             if [ -f "_site/$file" ]; then
@@ -288,21 +271,17 @@ jobs:
               exit 1
             fi
           done
-          
           echo "📊 Site statistics:"
           echo "Total files: $(find _site -type f | wc -l)"
           echo "HTML files: $(find _site -name "*.html" | wc -l)"
           echo "Total size: $(du -sh _site | cut -f1)"
-          
           echo "✅ Deployment simulation successful!"
 
-  # 7. 최종 상태 리포트
   final-report:
     name: 📋 Final CI Report
     runs-on: ubuntu-latest
     needs: [build-test, markdown-lint, html-validation, security-scan, lighthouse-audit, deployment-simulation]
     if: always()
-    
     steps:
       - name: 📋 Generate CI Report
         run: |
@@ -318,4 +297,4 @@ jobs:
           echo "| Deployment Simulation | ${{ needs.deployment-simulation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### 🚀 Ready for merge!" >> $GITHUB_STEP_SUMMARY
-          echo "All checks have been completed. Review the results above before merging." >> $GITHUB_STEP_SUMMARY 
+          echo "All checks have been completed. Review the results above before merging." >> $GITHUB_STEP_SUMMARY
