@@ -202,7 +202,7 @@ jobs:
           sarif_file: 'trivy-results.sarif'
 
       - name: 🔍 Check for secrets
-        uses: Yelp/detect-secrets-action@master
+        uses: Yelp/detect-secrets-action@v1
         with:
           args: '--scan --all-files --force-use-all-plugins'
 
