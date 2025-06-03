@@ -1,6 +1,6 @@
 ---
 title: "macOS 딥러닝 모델 저장 위치 완벽 가이드: 전문가가 정리한 로컬 캐시 관리법"
-date: 2024-06-02
+date: 2025-06-02
 categories: 
   - dev
 tags: 

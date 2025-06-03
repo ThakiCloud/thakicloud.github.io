@@ -106,7 +106,7 @@ brew install yq
 
 ```bash
 # OrbStack에서 Kubernetes 활성화
-orb create k8s local-cluster
+orb start k8s 
 
 # 클러스터 상태 확인
 kubectl cluster-info
