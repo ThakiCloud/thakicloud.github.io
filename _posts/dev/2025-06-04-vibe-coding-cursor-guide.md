@@ -123,7 +123,7 @@ Each endpoint must have a test file with the same name.
 # init_cursor_rules.sh — Cursor .mdc rule scaffold
 set -euo pipefail
 
-printf "\n📁 Creating .cursor/rules structure...\n"
+printf "\n📁  Creating .cursor/rules structure...\n"
 mkdir -p .cursor/rules
 
 for name in design requirements architecture roadmap context; do
@@ -132,19 +132,25 @@ for name in design requirements architecture roadmap context; do
     echo "⚠️  $file already exists — skipping"
     continue
   fi
+
+  # Capitalise the first letter in a POSIX-portable way
+  first_upper=$(printf '%s' "${name:0:1}" | tr '[:lower:]' '[:upper:]')
+  title="${first_upper}${name:1}"
+
   cat > "$file" <<EOF
 ---
-title: "${name^}"
+title: "${title}"
 description: "TODO: add description"
 alwaysApply: false
 ---
 
-<!-- Write your ${name^} content here -->
+<!-- Write your ${title} content here -->
 EOF
   echo "✅  Created $file"
 done
 
-printf "\n🎉 Done. Customize each .mdc file as needed.\n"
+printf "\n🎉  Done. Customise each .mdc file as needed.\n"
+
 ```
 
 > 스크립트를 `chmod +x init_cursor_rules.sh` 후 프로젝트 루트에서 실행하세요.
