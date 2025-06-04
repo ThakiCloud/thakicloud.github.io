@@ -76,7 +76,6 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-
 ![Blue icons 변환 결과](/assets/images/posts/tutorial/blueicon.jpg)
 *3D 이모지 스타일로 변환된 결과*
 
@@ -124,6 +123,118 @@ Apply the following JSON-based texture to the provided image.
       "Graphic",
       "Playful",
       "Iconic"
+    ]
+  }
+}
+```
+
+![Paper Cutout 변환 결과](/assets/images/posts/tutorial/paper-cutout.jpg)
+*Pop-Up Paper Cutout 스타일로 변환된 결과*
+
+OpenAI GPT-4o에서 실사 이미지를 Pop-Up Paper Cutout으로 변환하려면 다음 프롬프트를 사용하세요:
+
+```
+Apply the following JSON-based texture to the provided image.
+{
+  "styleAesthetic": {
+    "title": "Children’s Pop-Up Paper Cutout Illustration",
+    "overallVibe": "Joyful, handcrafted scene made of layered cardstock with playful, childlike characters on a theatrical blank stage",
+    "viewAngle": "Frontal view with a slight top-down tilt to reveal the depth of each folded paper layer",
+    "renderingStyle": "3D paper-cut look featuring crisp fold lines, subtle paper-edge shadows, and bright flat fills",
+    "colorPalette": {
+      "baseTones": [
+        "Cherry red",
+        "Sunny yellow",
+        "Sky blue",
+        "Grass green"
+      ],
+      "accents": [
+        "Soft pastel pink",
+        "Bright orange highlights",
+        "Warm cream highlights"
+      ],
+      "gradientStyle": "Solid flat colors—volume suggested only by real paper shadow gradients near folds"
+    },
+    "lightingAndShadows": {
+      "type": "Soft top-front studio lighting",
+      "shadowStyle": "Crisp layered shadows cast by each cutout and fold, enhancing depth",
+      "highlightIntensity": 0.2
+    },
+    "characterFeatures": {
+      "facialExpressions": "Simple dot eyes and curved smiles conveying joy",
+      "eyeStyle": "Small black circular eyes without reflections",
+      "mouthStyle": "Wide curved paper-cut smile, centrally placed"
+    },
+    "objectSurfaces": {
+      "type": "Flat matte cardstock surface",
+      "textureDetail": "Very subtle paper fiber visible on close inspection"
+    },
+    "linework": {
+      "thickness": "None—edges are defined by the physical cutouts themselves",
+      "color": "N/A"
+    },
+    "moodKeywords": [
+      "Playful",
+      "Handcrafted",
+      "Pop-up book",
+      "Layered paper",
+      "Joyful"
+    ]
+  }
+}
+```
+
+![Illustration 변환 결과](/assets/images/posts/tutorial/children-illustration.jpg)
+*일러스트레이션 스타일로 변환된 결과*
+
+OpenAI GPT-4o에서 실사 이미지를 일러스트레이션으로 변환하려면 다음 프롬프트를 사용하세요:
+
+```
+
+Apply the following JSON-based texture to the provided image.
+{
+  "styleAesthetic": {
+    "title": "Modern Minimalist Style",
+    "overallVibe": "Gentle, symbolic scene with abundant white space and slightly awkward, childlike figures drawn in a loose hand",
+    "viewAngle": "Straight-on, eye-level view that lets negative space breathe around the subjects",
+    "renderingStyle": "Flat shapes with rough pencil outlines and soft hand-painted textures that leave visible brush or crayon strokes",
+    "colorPalette": {
+      "baseTones": [
+        "Warm off-white (background)",
+        "Muted teal",
+        "Mustard yellow",
+        "Soft coral"
+      ],
+      "accents": [
+        "Charcoal gray linework",
+        "Pale sky-blue wash"
+      ],
+      "gradientStyle": "Very light watercolor bleeds—most areas remain solid with subtle texture variations"
+    },
+    "lightingAndShadows": {
+      "type": "Ambient natural light with no strong direction",
+      "shadowStyle": "Minimal; faint gray pencil hatching or a light wash beneath characters",
+      "highlightIntensity": 0.05
+    },
+    "characterFeatures": {
+      "facialExpressions": "Tiny dot eyes and a small line mouth conveying quiet curiosity",
+      "eyeStyle": "Uneven dots, slightly asymmetrical for charm",
+      "mouthStyle": "Short horizontal dash or gentle curve, placed low on the face"
+    },
+    "objectSurfaces": {
+      "type": "Matte paper with visible grain and occasional watercolor pooling",
+      "textureDetail": "Subtle pencil pressure variations and brush edges visible"
+    },
+    "linework": {
+      "thickness": "Varies from hairline to 2 px, wobbling slightly to feel hand-drawn",
+      "color": "Dark charcoal gray, never pure black"
+    },
+    "moodKeywords": [
+      "Minimal",
+      "Contemplative",
+      "Gentle",
+      "Hand-painted",
+      "Symbolic"
     ]
   }
 }
