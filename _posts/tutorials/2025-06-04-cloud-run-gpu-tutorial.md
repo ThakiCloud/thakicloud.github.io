@@ -15,8 +15,6 @@ toc: true
 toc_label: "목차"
 ---
 
-# Cloud Run GPU 튜토리얼: 서버리스 AI 워크로드 실행하기
-
 Google Cloud의 서버리스 런타임인 Cloud Run이 이제 NVIDIA GPU를 지원하게 되었습니다. 이 튜토리얼에서는 Cloud Run에서 GPU를 활용하여 AI 워크로드를 실행하는 방법을 단계별로 알아보겠습니다.
 
 ## 목차
