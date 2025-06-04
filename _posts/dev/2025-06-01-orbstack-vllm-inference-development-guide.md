@@ -106,7 +106,7 @@ brew install yq
 
 ```bash
 # OrbStack에서 Kubernetes 활성화
-orb start k8s 
+orb start k8s
 
 # 클러스터 상태 확인
 kubectl cluster-info
@@ -141,6 +141,7 @@ cd ~/vllm-orbstack-project
 helm create vllm-inference
 
 # Chart 구조 확인
+brew install tree
 tree vllm-inference/
 ```
 
