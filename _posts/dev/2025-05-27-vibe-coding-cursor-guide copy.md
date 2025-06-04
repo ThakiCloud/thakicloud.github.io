@@ -1,5 +1,5 @@
 ---
-title: "바이브 코딩 시대: AI 개발 도구 Cursor, 전문가처럼 활용하기 (2025년 최신 가이드)"
+title: "바이브 코딩 시대: AI 개발 도구 Cursor, 전문가처럼 활용하기 (2025년 4월 가이드)"
 excerpt: "Cursor, Windsurf, Replit 등 AI 개발 도구 비교 분석과 바이브 코딩 실전 전략. Project Rules, Edit-Test Loop를 통한 생산성 극대화 가이드"
 date: 2025-05-27
 categories:
