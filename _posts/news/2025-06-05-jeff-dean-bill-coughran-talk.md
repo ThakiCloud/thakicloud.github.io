@@ -15,13 +15,73 @@ tags:
 author_profile: true
 
 ---
+
+<figure class="video-container">
+	<iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/dq8MhTFCs80?si=0qg8c0zG5YE1aail" 
+          title="Google's Jeff Dean on the Coming Transformations in AI" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    <figcaption>※ 동영상 전체(≈ 30 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
+</figure>
+
+
+<figure class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/id4YRO7G0wE"
+    title="The AI Revolution Is Underhyped | Eric Schmidt | TED"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <figcaption>※ 동영상 전체(≈ 24 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
+</figure>
+
 # Jeff Dean Tech Talk 요약: AI 인프라, 대규모 모델, 컴퓨팅의 미래
 
 **연사:** Jeff Dean (Alphabet 최고 과학자, Chief Scientist)  
-**진행:** Bill Korn (Sequoia 파트너, 전 Google 엔지니어링 총괄)  
+**진행:** Bill Coughran (Sequoia 파트너, 전 Google 엔지니어링 총괄)  
 **주제:** AI 스케일링, 파운데이션 모델, 추론 하드웨어, 차세대 컴퓨팅 인프라
 
 ---
+## 👤 Jeff Dean
+
+**직책:** Chief Scientist, Google DeepMind & Google Research (Alphabet Inc.)
+
+**소개:**  
+Jeff Dean은 Google 및 Alphabet 산하의 DeepMind, Google Research를 이끄는 **최고 과학자(Chief Scientist)**입니다.  
+그는 Google의 초기 엔지니어로 입사해 **Google 검색 인프라, MapReduce, BigTable, TensorFlow, BERT** 등  
+현대 컴퓨팅과 AI 기술 발전에 지대한 영향을 끼친 인물입니다.
+
+**주요 업적:**
+- Google Brain 공동 설립
+- TensorFlow 오픈소스 프로젝트 총괄
+- Transformer, BERT 등 핵심 논문 리더십
+- TPU (Tensor Processing Unit) 하드웨어 프로그램 주도
+- 최근 Google의 **Gemini 대형 모델** 전략 주도
+
+---
+
+## 👤 Bill Coughran
+
+**직책:** Partner, Sequoia Capital  
+**이전 직책:** SVP of Engineering, Google
+
+**소개:**  
+Bill Coughran은 현재 글로벌 VC인 **Sequoia Capital의 파트너**이며,  
+Google에서 8년 이상 엔지니어링을 총괄한 **전 Senior Vice President of Engineering** 출신입니다.  
+그는 Google의 검색, 인프라, 광고 시스템, Chrome, Android 개발팀까지 포괄하는  
+수천 명의 엔지니어링 조직을 이끌었습니다.
+
+**주요 업적:**
+- Google 엔지니어링 조직 수직 확장 기여
+- Chrome, Ads, Search 시스템 성능 개선 주도
+- Google 초기 리더십 팀 구성에 기여
+- Sequoia에서 Snowflake, Databricks 등 기술 스타트업 투자
+
+
 
 ## 🔧 AI의 진화와 스케일링 패러다임
 
