@@ -211,7 +211,7 @@ class SecureSession:
 
 이제는 ChatGPT에서 별도의 클라이언트 구현 없이도 커넥터 설정을 통해 MCP 서버에 직접 연결할 수 있습니다. 이 기능을 사용하면 앞서 설명한 복잡한 클라이언트 코드를 작성할 필요 없이 간편하게 MCP 서버를 활용할 수 있습니다.
 
-![ChatGPT MCP 커넥터 설정](/assets/images/chatgpt-connector-mcp.png)
+![ChatGPT MCP 커넥터 설정](/assets/images/posts/tutorial/chatgpt-connector-mcp.png)
 
 ### 커넥터 설정 방법
 
