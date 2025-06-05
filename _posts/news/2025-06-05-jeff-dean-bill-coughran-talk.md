@@ -27,18 +27,6 @@ author_profile: true
     <figcaption>※ 동영상 전체(≈ 30 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
 </figure>
 
-
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/id4YRO7G0wE"
-    title="The AI Revolution Is Underhyped | Eric Schmidt | TED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ 동영상 전체(≈ 24 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
-</figure>
-
 # Jeff Dean Tech Talk 요약: AI 인프라, 대규모 모델, 컴퓨팅의 미래
 
 **연사:** Jeff Dean (Alphabet 최고 과학자, Chief Scientist)  
