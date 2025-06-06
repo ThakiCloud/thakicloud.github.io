@@ -5,6 +5,7 @@ categories:
   - AI
   - Development
   - Automation
+  - tutorials
 tags: 
   - VibeOps
   - Cursor

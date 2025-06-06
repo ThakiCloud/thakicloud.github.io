@@ -4,7 +4,7 @@ date: 2025-06-05
 categories: 
   - Kubernetes
   - DevOps
-  - Tutorial
+  - tutorials
 tags: 
   - Helm
   - Kubernetes

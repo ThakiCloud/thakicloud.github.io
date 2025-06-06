@@ -5,6 +5,7 @@ categories:
   - Kubernetes
   - DevOps
   - Container
+  - tutorials
 tags: 
   - Kubernetes
   - kubectl

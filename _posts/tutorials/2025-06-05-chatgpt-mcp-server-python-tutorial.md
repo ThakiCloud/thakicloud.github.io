@@ -4,7 +4,7 @@ date: 2025-06-05
 categories: 
   - AI
   - Python
-  - Tutorial
+  - tutorials
 tags: 
   - ChatGPT
   - MCP

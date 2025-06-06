@@ -2,7 +2,7 @@
 title: "GitHub Pages로 여러 프로젝트 사이트 운영하기 - 완벽 가이드"
 date: 2025-06-05
 categories: 
-  - Tutorials
+  - tutorials
   - GitHub
 tags: 
   - GitHub Pages

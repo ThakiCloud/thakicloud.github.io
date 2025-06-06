@@ -5,6 +5,7 @@ categories:
   - AI
   - Development
   - Tools
+  - tutorials
 tags: 
   - Cursor
   - AI Coding

@@ -5,6 +5,7 @@ categories:
   - AI
   - Open Source
   - Platform
+  - tutorials
 tags: 
   - ACI.dev
   - AI Agents

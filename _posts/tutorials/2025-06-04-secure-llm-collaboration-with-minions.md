@@ -3,6 +3,7 @@ title: "로컬 AI + GPT-4o 협업의 미래: Stanford Minions로 시작하는 �
 date: 2025-06-04
 categories: 
   - dev
+  - tutorials
 tags: 
   - LLM
   - ollama
