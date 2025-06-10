@@ -4,7 +4,7 @@ date: 2025-06-10
 categories: 
   - AI
   - Framework
-  - Tutorial
+  - tutorials
 tags: 
   - CrewAI
   - Multi-Agent

@@ -4,7 +4,7 @@ date: 2025-06-10
 categories: 
   - AI
   - Memory
-  - Tutorial
+  - tutorials
 tags: 
   - Mem0
   - AI Memory

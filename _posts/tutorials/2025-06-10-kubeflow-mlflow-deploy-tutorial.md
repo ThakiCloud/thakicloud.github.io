@@ -4,7 +4,7 @@ date: 2025-06-10
 categories: 
   - MLOps
   - Kubernetes
-  - Tutorial
+  - tutorials
 tags: 
   - kubeflow
   - mlflow
