@@ -240,6 +240,197 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
+![pixel patch 변환 결과](/assets/images/posts/tutorial/pixel-patch.png)
+*일러스트레이션 스타일로 변환된 결과*
+
+OpenAI GPT-4o에서 실사 이미지를 pixel patch 변환하려면 다음 프롬프트를 사용하세요:
+
+```
+
+Apply the following JSON-based texture to the provided image.
+{
+  "styleAesthetic": {
+    "title": "Pixel-Patch Quilt Fantasy",
+    "overallVibe": "Whimsical and handmade, as if stitched together by a dreamer using pixels and fabric scraps—playful, nostalgic, and surreal.",
+    "viewAngle": "Flat 2D side view, like a stitched game screen or folk art tapestry.",
+    "renderingStyle": "Pixelated textile-quilt hybrid; visuals look hand-sewn from small colored fabric squares or digital 8-bit tiles with faux-thread borders.",
+    "colorPalette": {
+      "baseTones": [
+        "Sunrise Peach     #FFD4A3   // sky & warm glow",
+        "Ocean Denim       #5BA9C7   // water blocks",
+        "Patch Sand        #F4E1B9   // stitched foam & beach",
+        "Quilted Lilac     #D8C2F0   // decorative highlights"
+      ],
+      "accents": [
+        "Teacup Brass      #D4A05A   // ship elements",
+        "Crimson Thread    #C04D5A   // patch seams & contrast stitch",
+        "Clover Green      #88C57F   // foliage or flags"
+      ],
+      "gradientStyle": "None; colors remain flat and discrete—depth implied through contrast and overlapping ‘patches’."
+    },
+    "lightingAndShadows": {
+      "type": "Implied sunrise via color blocks (no realistic light modeling).",
+      "shadowStyle": "Flat drop shadows or stitched edge outlines to suggest elevation layers.",
+      "highlightIntensity": 0.00
+    },
+    "characterFeatures": {
+      "facialExpressions": "Blocky eyes, stitched smiles—charming and simplified like toys or sprites.",
+      "eyeStyle": "2×2 or 3×3 black pixel blocks or dark thread knots.",
+      "mouthStyle": "Single stitched line or pink patch arc."
+    },
+    "objectSurfaces": {
+      "type": "Woven cloth or pixel grid textures with faux-stitch overlay.",
+      "textureDetail": "Visible ‘fabric weave’ or retro dithering patterns where appropriate."
+    },
+    "linework": {
+      "thickness": "1 px pixel-width or dashed seams in contrasting thread color.",
+      "color": "Crimson Thread (#C04D5A) or soft brown tones."
+    },
+    "composition": {
+      "aspectRatio": "Horizontal 3:2 aspect—panoramic scene with layered elements stitched across the canvas.",
+      "focalStrategy": "Hero object (e.g., teacup pirate ship) centered, surrounded by stitched patterns or symbolic blocks (e.g., waves, clouds)."
+    },
+    "moodKeywords": [
+      "Patchwork",
+      "Pixel Art",
+      "Surreal",
+      "Folk-style",
+      "Playful"
+    ]
+  }
+}
+
+```
+
+![animal minimalism 변환 결과](/assets/images/posts/tutorial/animal-minimalism.png)
+*일러스트레이션 스타일로 변환된 결과*
+
+OpenAI GPT-4o에서 실사 이미지를 animal minimalism 변환하려면 다음 프롬프트를 사용하세요:
+
+```
+
+Apply the following JSON-based texture to the provided image.
+{
+  "styleAesthetic": {
+    "title": "Animal Minimalism",
+    "overallVibe": "Soft, cute and calm—rounded cartoon animal rendered with plenty of open space.",
+    "viewAngle": "Front-facing or ¾ perspective for friendly eye contact.",
+    "renderingStyle": "Cinema4D + Redshift quality; smooth, matte surfaces with subtle AO shading—no hard edges or outlines.",
+    "colorPalette": {
+      "baseTones": [
+        "Cream White   #FFF7F1   // main body",
+        "Powder Pink   #FADCE0   // inner ears & cheeks",
+        "Mint Mist     #DFF5EF   // optional body accent",
+        "Lilac Breeze  #E9E6FA   // optional background tint"
+      ],
+      "accents": [
+        "Glossy Black  #000000   // eyes",
+        "Soft Blush    #FFB7B7   // rosy cheek highlight"
+      ],
+      "gradientStyle": "Mostly flat pastel fills; depth created via soft ambient occlusion rather than color gradients."
+    },
+    "lightingAndShadows": {
+      "type": "Omnidirectional diffused studio lighting.",
+      "shadowStyle": "Barely-there contact shadow, feather-soft edges.",
+      "highlightIntensity": 0.10
+    },
+    "characterFeatures": {
+      "facialExpressions": "Wide glossy dot eyes and a tiny smile conveying gentle curiosity.",
+      "eyeStyle": "Spherical black eyes with a subtle specular highlight.",
+      "mouthStyle": "Small curved line or no mouth for extra simplicity."
+    },
+    "objectSurfaces": {
+      "type": "Matte plush fabric-like finish.",
+      "textureDetail": "Subtle velvety grain visible only at close range."
+    },
+    "linework": {
+      "thickness": "None—forms are defined by geometry and shading, not outlines.",
+      "color": "N/A"
+    },
+    "moodKeywords": [
+      "Cute",
+      "Pastel",
+      "Plush",
+      "Minimalist",
+      "Calm"
+    ],
+    "exportSettings": {
+      "background": "Transparent PNG or alpha-enabled EXR.",
+      "variation": "Single final render (no alternates)."
+    }
+  }
+}
+
+```
+
+![Nimbus Minimal Modernism 변환 결과](/assets/images/posts/tutorial/nimbus-minimal-modernism.png)
+*일러스트레이션 스타일로 변환된 결과*
+
+OpenAI GPT-4o에서 실사 이미지를 Nimbus Minimal Modernism 변환하려면 다음 프롬프트를 사용하세요:
+
+```
+Apply the following JSON-based texture to the provided image.
+{
+  "styleAesthetic": {
+    "title": "Nimbus Minimal Modernism",
+    "overallVibe": "A cloud-inspired visual language that feels both futuristic and friendly: generous whitespace, soft curves, and a balanced grid.",
+    "viewAngle": "Front view or 20° top-down oblique—symbolizing the perspective of looking down from above the clouds.",
+    "renderingStyle": "Flat design with a light grain texture. Lines are minimized; softly rounded shadow blocks provide depth.",
+    "colorPalette": {
+      "baseTones": [
+        "Nimbus White  #F9FBFD   // cloud-like background",
+        "Skyway Blue   #4FA4F7   // primary actions & links",
+        "Stratus Gray  #CCD5E0   // secondary text & lines",
+        "Deep Navy     #0E1B36   // headers & body text"
+      ],
+      "accents": [
+        "Circuit Teal  #13C5CA   // interactive highlights",
+        "Sunrise Coral #FF8663   // alerts & emphasis"
+      ],
+      "gradientStyle": "90 % solid color + a very subtle horizontal grain gradient (2 % opacity) for an analog touch"
+    },
+    "lightingAndShadows": {
+      "type": "Soft diffused light, 45° from above",
+      "shadowStyle": "Primary: 0 2 4 rgba(0,0,0,0.06) / Secondary: 0 6 12 rgba(0,0,0,0.04) – indicates layer depth",
+      "highlightIntensity": 0.08
+    },
+    "characterFeatures": {
+      "facialExpressions": "Dot eyes (●●) with a small rounded mouth, symbolizing curiosity and collaboration",
+      "eyeStyle": "Slightly asymmetric placement for warmth",
+      "mouthStyle": "Small U-shape or straight line"
+    },
+    "objectSurfaces": {
+      "type": "Matte paper texture or low-saturation plastic finish",
+      "textureDetail": "200 dpi grain or light noise under 2 %"
+    },
+    "linework": {
+      "thickness": "Variable 1 px–1.5 px with round caps",
+      "color": "Stratus Gray (#CCD5E0)"
+    },
+    "typography": {
+      "kr": "Pretendard 16/24 – Bold, SemiBold, Regular",
+      "en": "Inter 15/24 – Medium, Regular",
+      "code": "JetBrains Mono 14/22"
+    },
+    "iconography": {
+      "grid": "16 px grid with 1.5 px stroke weight",
+      "cornerRadius": "30 % radius to echo cloud shapes",
+      "styleNote": "Optical alignment: position slightly above the true center"
+    },
+    "moodKeywords": [
+      "Cloud-native",
+      "Future-friendly",
+      "Friendly Minimal",
+      "Open-source",
+      "Scalable"
+    ]
+  }
+}
+
+```
+
+
+
 ## 수동 변환 과정
 
 ### 단계 1: OpenAI ChatGPT 접속

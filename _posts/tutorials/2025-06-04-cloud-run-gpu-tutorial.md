@@ -2,7 +2,7 @@
 title: "Cloud Run GPU 튜토리얼: 서버리스 AI 워크로드 실행하기"
 date: 2025-06-04
 categories:
-  - Tutorials
+  - tutorials
   - Cloud
 tags:
   - cloud-run
@@ -18,10 +18,16 @@ toc_label: "목차"
 Google Cloud의 서버리스 런타임인 Cloud Run이 이제 NVIDIA GPU를 지원하게 되었습니다. 이 튜토리얼에서는 Cloud Run에서 GPU를 활용하여 AI 워크로드를 실행하는 방법을 단계별로 알아보겠습니다.
 
 ## 목차
+- [목차](#목차)
 - [소개](#소개)
 - [사전 요구사항](#사전-요구사항)
 - [Cloud Run GPU의 주요 특징](#cloud-run-gpu의-주요-특징)
 - [실습: Ollama를 Cloud Run에 배포하기](#실습-ollama를-cloud-run에-배포하기)
+  - [1. 프로젝트 설정](#1-프로젝트-설정)
+  - [2. Dockerfile 생성](#2-dockerfile-생성)
+  - [3. 이미지 빌드 및 푸시](#3-이미지-빌드-및-푸시)
+  - [4. Cloud Run 서비스 배포](#4-cloud-run-서비스-배포)
+  - [5. 모델 다운로드 및 테스트](#5-모델-다운로드-및-테스트)
 - [비용 최적화 팁](#비용-최적화-팁)
 - [결론](#결론)
 

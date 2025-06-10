@@ -1,6 +1,6 @@
 ---
 title: "MiMo-VL-7B: 소형 고성능 비전-언어 모델의 새로운 기준"
-date: 2024-05-31
+date: 2025-05-31
 categories: 
   - oss
   - ai

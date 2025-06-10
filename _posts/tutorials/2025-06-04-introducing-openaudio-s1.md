@@ -5,6 +5,7 @@ categories:
   - AI
   - TTS
   - Voice Synthesis
+  - tutorials
 tags:
   - OpenAudio
   - TTS
