@@ -206,6 +206,36 @@ doc/
 docs/_site/
 .yardoc/
 
+# Python & Virtual Environments
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.coverage
+.pytest_cache/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+agents-env/
+*-env/
+
 # Local Development
 # -----------------
 .local/
