@@ -2,7 +2,7 @@
 title: "Google A2A 프로토콜로 구축하는 안전한 에이전틱 AI 시스템"
 date: 2025-06-09
 categories: 
-  - LLMOps
+  - llmops
   - AI Engineering
 tags: 
   - A2A Protocol
