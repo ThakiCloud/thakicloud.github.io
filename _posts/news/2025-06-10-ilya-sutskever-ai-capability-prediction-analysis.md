@@ -3,7 +3,7 @@ title: "일리야 수츠케버, 'AI가 인간의 모든 능력 구현 가능' �
 date: 2025-06-10
 categories: 
   - AI
-  - News
+  - news
   - AGI
 tags: 
   - Ilya Sutskever
