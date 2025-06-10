@@ -45,6 +45,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/careers/">🤝 Careers ({{ site.categories['careers'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/news/">🌐 News ({{ site.categories['news'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/research/">📒 Research ({{ site.categories['research'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/datasets/">☁️ Datasets ({{ site.categories['datasets'].size | default: 0 }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">
