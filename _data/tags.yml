@@ -1,96 +1,125 @@
+# ThakiCloud 테크 블로그 실용 태그 시스템
+# 2025년 1월 기준 실제 포스트 내용을 바탕으로 재구성
+
+# === AI & LLM 관련 ===
 - AI
-- Computer Vision
-- 3D Vision
-- Audio and Speech Processing
-- NLP
-- Reinforcement Learning
-- Diffusion
-- Transformer
-- ViT
 - LLM
-- Large Multimodal Model
-- Gaussian Splatting
-- GAN
-- NeRF
-- Autoregressive
-- LoRA
-- Contrastive Learning
-- GPT
+- LLMOps
+- MLOps
+- AI Engineering
+- AI Agents
+- Multi-Agent
+- Tool Calling
+- Function Calling
+- RAG
+- Fine-tuning
+- Model Optimization
+- Quantization
+- AI Memory
+- Prompt Engineering
+- AI Safety
+
+# === 클라우드 & 인프라 ===
+- Cloud Native
+- Kubernetes
+- Docker
+- DevOps
+- CI/CD
+- Infrastructure
+- Platform Engineering
+- Microservices
+- Serverless
+- GPU Computing
+- Distributed Systems
+
+# === 개발 도구 & 프레임워크 ===
+- Python
+- JavaScript
+- Go
+- API Development
+- REST API
+- Web Development
+- Backend Development
+- Frontend Development
+
+# === 특정 기술 & 플랫폼 ===
+- OpenAI
+- Anthropic
+- Claude
+- GPT-4
 - Google
 - Microsoft
-- Meta AI
 - NVIDIA
-- OpenAI
-- CVPR
-- ICLR
-- NeurIPS
-- ICCV
-- ICML
-- SIGGRAPH
-- ECCV
-- INTERSPEECH
-- AAAI
-- Image Generation
-- Image-to-Image Translation
-- Image Editing
-- Image Segmentation
-- Text-to-Image
-- Novel View Synthesis
-- Video Generation
-- Object Detection
-- Fine-Tuning
-- Text-to-Speech
-- Image Classification
-- Text-to-3D
-- Vector Quantization
-- Image Restoration
-- Voice Conversion
-- Text-to-Video
-- Talking Head
-- GAN Inversion
-- Inpainting
-- Image-to-3D
-- Self-Supervised Learning
-- Language Generation
-- Music Generation
-- Video Classification
-- Singing Voice Conversion
-- Singing Voice Synthesis
-- Text-to-Motion
-- RLHF
-- RAG
-- Distillation
-- Text Generation
-- Text-to-Music
-- Image-to-Video
-- Text-To-Image
-- Neural Audio Codec
-- Surface Reconstruction
-- 3D Segmentation
-- Face Swapping
-- Head Swapping
-- Audio Generation
-- Semantic Image Synthesis
-- Source Separation
-- Speech Separation
-- Segmentation
-- Classification
-- Regression
-- Speech Recognition
-- Video Translation
-- Salient Object Detection
-- Table Structure Recognition
-- Text-to-Speech-and-Gesture
-- Image Captioning
-- Implicit Neural Representation
-- Image Recognition
-- Video Recognition
-- Stereo Depth Estimation
-- Monocular Depth Estimation
-- Video Understanding
-- Multiple Object Tracking
-- Style Transfer
-- 3D Motion Tracking
-- Pose Refinement
-- MuJoCo
-- VSCode
+- Hugging Face
+- LangChain
+- LangGraph
+
+# === 개발 환경 & 도구 ===
+- VS Code
+- Cursor
+- Git
+- Terminal
+- macOS
+- Linux
+- Development Environment
+- Local Development
+- Docker
+- OrbStack
+
+# === 자동화 & 통합 ===
+- Automation
+- Workflow
+- Integration
+- MCP
+- Computer Use
+- System Integration
+- Process Automation
+
+# === 튜토리얼 & 학습 ===
+- Tutorial
+- Guide
+- How-to
+- Beginner Guide
+- Best Practices
+- Case Study
+- Implementation Guide
+
+# === 데이터 & 연구 ===
+- Dataset
+- Research
+- Data Analysis
+- Benchmark
+- Evaluation
+- Performance Analysis
+
+# === 산업 동향 & 뉴스 ===
+- Tech News
+- Industry Trends
+- Market Analysis
+- Product Launch
+- Conference
+- Open Source
+
+# === 회사 & 커리어 ===
+- Company Culture
+- Careers
+- Team
+- Recruitment
+- Developer Story
+- Work-Life Balance
+
+# === 보안 & 품질 ===
+- Security
+- Privacy
+- Code Quality
+- Testing
+- Monitoring
+- Logging
+
+# === 특정 도메인 ===
+- Computer Vision
+- NLP
+- Speech Processing
+- Multimodal
+- Real-time Processing
+- Edge Computing
