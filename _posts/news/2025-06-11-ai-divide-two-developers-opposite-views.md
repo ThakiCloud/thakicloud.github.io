@@ -1,7 +1,7 @@
 ---
 title: "AI의 두 얼굴: 파이썬 거장들이 보여준 극명한 시선 차이"
 excerpt: "같은 날, 같은 주제로 정반대 글을 쓴 두 개발자. Glyph Lefkowitz의 회의론과 Armin Ronacher의 낙관론을 통해 본 2025년 AI 담론의 진짜 모습"
-date: 2025-06-13
+date: 2025-06-11
 categories:
   - news
 tags:
