@@ -8,9 +8,11 @@ title: Jekyll 블로그 포스트 작성 규칙
 scope: _posts/**/*.md
 ---
 
+터미널에서 오늘의 날짜를 확인하고 (date +"%Y-%m-%d")
 블로그 포스트 작성 시 다음 포맷을 반드시 준수합니다:
 
 - 파일명은 `YYYY-MM-DD-title.md` 형식이어야 합니다.
+- 카테고리는 dev, llmops, oss, tutorials, news, research, datasets, careers 중 하나를 반드시 포함합니다.
 - Front Matter에는 다음 항목을 포함해야 합니다:
   ```yaml
   ---
