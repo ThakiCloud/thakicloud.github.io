@@ -17,6 +17,7 @@ scope: _posts/**/*.md
   ```yaml
   ---
   title: "포스트 제목"
+  excerpt: "요약된 일부 내용"
   date: YYYY-MM-DD
   categories: 
     - 카테고리1
