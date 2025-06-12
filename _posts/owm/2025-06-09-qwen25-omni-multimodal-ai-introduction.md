@@ -2,7 +2,7 @@
 title: "Qwen2.5-Omni: 알리바바 클라우드의 차세대 멀티모달 AI 모델"
 date: 2025-06-09
 categories: 
-  - oss
+  - owm
   - ai
 tags: 
   - qwen

@@ -2,7 +2,7 @@
 title: "dots.llm1 - 오픈소스 MoE 모델의 새로운 지평"
 date: 2025-06-07
 categories: 
-  - oss
+  - owm
   - large-language-model
 tags: 
   - dots-llm1

@@ -1,4 +1,22 @@
-# 구글 딥마인드 CEO가 그리는 AGI의 미래: '급진적 풍요' 시대가 온다
+---
+title: "구글 딥마인드 CEO가 그리는 AGI의 미래: '급진적 풍요' 시대가 온다"
+date: 2025-06-12
+categories: 
+  - news
+  - research
+tags: 
+  - AGI
+  - DeepMind
+  - Demis Hassabis
+  - 인공지능
+  - 급진적 풍요
+  - AI 안전성
+author_profile: true
+toc: true
+toc_label: "목차"
+---
+
+## 구글 딥마인드 CEO가 그리는 AGI의 미래: '급진적 풍요' 시대가 온다
 
 **WIRED 인터뷰 영상**: https://www.youtube.com/watch?v=CRraHg4Ks_g
 

@@ -2,7 +2,7 @@
 title: "Lingshu: 의료 분야를 위한 통합 멀티모달 파운데이션 모델"
 date: 2025-06-11
 categories: 
-  - oss
+  - owm
   - ai
 tags: 
   - MLLM

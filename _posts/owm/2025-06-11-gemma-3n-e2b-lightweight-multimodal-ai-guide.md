@@ -2,7 +2,7 @@
 title: "Gemma 3n E2B - 모바일에서 돌아가는 멀티모달 AI 혁신"
 date: 2025-06-11
 categories: 
-  - oss
+  - owm
 tags: 
   - gemma
   - multimodal-ai

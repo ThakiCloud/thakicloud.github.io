@@ -4,7 +4,7 @@ date: 2025-06-07
 categories: 
   - llmops
   - model-optimization
-  - oss
+  - owm
 tags: 
   - nvidia
   - deepseek-r1

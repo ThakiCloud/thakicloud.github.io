@@ -40,7 +40,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/reviews/">📝 Reviews ({{ site.categories['reviews'].size | default: 0 }})</a></span>
       -->
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/dev/">🚀 DevOps ({{ site.categories['dev'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/oss/">📀 OSS ({{ site.categories['oss'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/owm/">📀 OWM ({{ site.categories['owm'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/llmops/">🤖 LLMOps ({{ site.categories['llmops'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/tutorials/">💻 Tutorials ({{ site.categories['tutorials'].size | default: 0 }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/careers/">🤝 Careers ({{ site.categories['careers'].size | default: 0 }})</a></span>

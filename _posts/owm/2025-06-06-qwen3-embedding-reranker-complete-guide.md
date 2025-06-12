@@ -2,7 +2,7 @@
 title: "Qwen3-Embedding & Reranker 시리즈 완전 가이드"
 date: 2025-06-06
 categories: 
-  - oss
+  - owm
   - ai
 tags: 
   - qwen3

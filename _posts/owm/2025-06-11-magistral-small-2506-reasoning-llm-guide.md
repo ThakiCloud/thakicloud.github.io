@@ -2,7 +2,7 @@
 title: "Magistral-Small-2506: Mistral AI의 24B 추론 특화 언어 모델 완전 가이드"
 date: 2025-06-11
 categories: 
-  - oss
+  - owm
   - AI
 tags: 
   - Mistral AI

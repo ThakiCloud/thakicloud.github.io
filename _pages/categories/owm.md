@@ -1,7 +1,7 @@
 ---
 title: "OSS"
-permalink: /categories/oss/
+permalink: /categories/owm/
 layout: category
 author_profile: true
-taxonomy: oss
+taxonomy: owm
 --- 

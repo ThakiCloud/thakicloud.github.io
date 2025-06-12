@@ -3,7 +3,7 @@ title: "[오픈 가중치 모델] 여기에 제목을 입력하세요"
 excerpt: "오픈소스 AI 모델, 가중치 공유, 모델 최적화 및 배포 관련 심층 분석 및 기술 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요 (예: 2024-01-15)
 categories:
-  - oss
+  - owm
 tags:
   - Open Source AI
   - Model Weights

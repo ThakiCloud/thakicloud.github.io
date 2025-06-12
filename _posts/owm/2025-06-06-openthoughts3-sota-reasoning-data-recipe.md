@@ -2,7 +2,7 @@
 title: "OpenThoughts3: 추론 모델의 새로운 SOTA 데이터 레시피"
 date: 2025-06-06
 categories: 
-  - oss
+  - owm
   - ai
 tags: 
   - openthoughts3
