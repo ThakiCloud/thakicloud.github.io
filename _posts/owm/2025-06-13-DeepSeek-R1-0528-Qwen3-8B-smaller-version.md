@@ -1,9 +1,19 @@
 ---
-layout: post
 title: "DeepSeek-R1-0528-Qwen3-8B: 오픈소스 LLM의 새로운 지평"
 date: 2025-06-13
-categories: [owm, ai]
-tags: [DeepSeek, Qwen, LLM, Open Source]
+categories: 
+  - owm
+  - ai
+tags: 
+  - DeepSeek
+  - Qwen
+  - LLM
+  - Open Source
+  - Reasoning
+  - Model Optimization
+author_profile: true
+toc: true
+toc_label: "목차"
 ---
 
 # DeepSeek-R1-0528-Qwen3-8B: 오픈소스 LLM의 새로운 지평
