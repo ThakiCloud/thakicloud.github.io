@@ -18,7 +18,16 @@ toc_label: "목차"
 
 ## 구글 딥마인드 CEO가 그리는 AGI의 미래: '급진적 풍요' 시대가 온다
 
-**WIRED 인터뷰 영상**: https://www.youtube.com/watch?v=CRraHg4Ks_g
+<figure class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/CRraHg4Ks_g"
+    title="Demis Hassabis AGI Interview - WIRED"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <figcaption>※ 구글 딥마인드 CEO Demis Hassabis의 AGI 비전 인터뷰 영상</figcaption>
+</figure>
 
 노벨상 수상자이자 구글 딥마인드의 CEO인 **Demis Hassabis**가 WIRED와의 인터뷰에서 AGI(Artificial General Intelligence) 달성 시점과 인류의 미래에 대한 놀라운 비전을 공개했습니다. 
 
@@ -303,6 +312,33 @@ Hassabis의 비전은 **AI가 다른 모든 도전을 돕는 유일한 도전**�
 ---
 
 **참고 자료:**
-- [WIRED - Demis Hassabis AGI Interview](https://www.youtube.com/watch?v=CRraHg4Ks_g)
-- [Google DeepMind](https://deepmind.google/)
-- [AlphaFold Database](https://alphafold.ebi.ac.uk/) 
+
+<figure class="link-preview">
+  <a href="https://www.youtube.com/watch?v=CRraHg4Ks_g" target="_blank">
+    <div class="link-preview-content">
+      <h3>WIRED - Demis Hassabis AGI Interview</h3>
+      <p>Google DeepMind CEO discusses AGI timeline and the future of artificial intelligence</p>
+      <span class="link-preview-url">youtube.com</span>
+    </div>
+  </a>
+</figure>
+
+<figure class="link-preview">
+  <a href="https://deepmind.google/" target="_blank">
+    <div class="link-preview-content">
+      <h3>Google DeepMind</h3>
+      <p>Official website of Google DeepMind research lab</p>
+      <span class="link-preview-url">deepmind.google</span>
+    </div>
+  </a>
+</figure>
+
+<figure class="link-preview">
+  <a href="https://alphafold.ebi.ac.uk/" target="_blank">
+    <div class="link-preview-content">
+      <h3>AlphaFold Database</h3>
+      <p>Protein structure predictions powered by AI</p>
+      <span class="link-preview-url">alphafold.ebi.ac.uk</span>
+    </div>
+  </a>
+</figure> 
