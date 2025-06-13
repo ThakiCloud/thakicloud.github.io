@@ -43,9 +43,6 @@ toc_label: 목차
 - Copilot 등 선행 제품이 시장을 열었고, Cursor는 "더 깊은 맥락+경험"으로 차별화.
 - AI 도입에 대한 심리적 저항이 낮아진 시점에 진입.
 
-자세한 분석:  
-[What Will Be the Next "Cursor for ____"?](https://testinprod.substack.com/p/who-will-be-the-next-cursor-for-____)
-
 ## "Cursor for X"가 적용될 수 있는 분야
 
 ### 1) 오피스(문서/스프레드시트/프레젠테이션)
@@ -84,5 +81,23 @@ toc_label: 목차
 ---
 
 **참고 자료:**
-- [What Will Be the Next "Cursor for ____"? - Testing in Production](https://testinprod.substack.com/p/who-will-be-the-next-cursor-for-____)
-- [Cursor at $100M ARR - Sacra](https://sacra.com/research/cursor-at-100m-arr/) 
+
+<figure class="link-preview">
+  <a href="https://testinprod.substack.com/p/who-will-be-the-next-cursor-for-____" target="_blank">
+    <div class="link-preview-content">
+      <h3>What Will Be the Next "Cursor for ____"? - Testing in Production</h3>
+      <p>The meteoric rise of Cursor and what we can learn from it to build the next big thing</p>
+      <span class="link-preview-url">testinprod.substack.com</span>
+    </div>
+  </a>
+</figure>
+
+<figure class="link-preview">
+  <a href="https://sacra.com/research/cursor-at-100m-arr/" target="_blank">
+    <div class="link-preview-content">
+      <h3>Cursor at $100M ARR - Sacra</h3>
+      <p>Analysis of Cursor's rapid growth to $100M ARR and market dynamics</p>
+      <span class="link-preview-url">sacra.com</span>
+    </div>
+  </a>
+</figure> 
