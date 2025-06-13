@@ -2,7 +2,7 @@
 title: "Kubernetes 환경에서 Prometheus와 Grafana로 모니터링 시스템 구축하기"
 date: 2025-06-13
 categories: 
-  - dev
+  - tutorials
   - kubernetes
 tags: 
   - kubernetes
