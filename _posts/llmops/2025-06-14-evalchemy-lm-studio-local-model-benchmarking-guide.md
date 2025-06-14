@@ -58,6 +58,11 @@ cd evalchemy
 - response = self.llm(payload)["response"]
 + response_obj = self.llm(payload)       # CuratorResponse
 + response = response_obj.response       # 실제 텍스트
+
+or
+
+sed -i '' 's/\["response"\]/.response/' \
+  eval/chat_benchmarks/curator_lm.py
 ```
 
 ### 서버 및 API 키 설정
@@ -128,6 +133,18 @@ curl -s http://127.0.0.1:1234/v1/models | jq .
 curl -s -H "Content-Type: application/json" \
      -d '{"model":"deepseek-ai_deepseek-r1-0528-qwen3-8b","messages":[{"role":"user","content":"ping"}]}' \
      http://127.0.0.1:1234/v1/chat/completions
+
+python - <<'PY'
+from litellm import completion
+import os, json
+os.environ["LM_STUDIO_API_BASE"]="http://127.0.0.1:1234/v1"
+os.environ["LM_STUDIO_API_KEY"]="dummy"
+print( completion(
+        model="lm_studio/deepseek-ai_deepseek-r1-0528-qwen3-8b",
+        messages=[{"role":"user","content":"ping?"}]
+      )["choices"][0]["message"]["content"][:120] )
+PY
+
 ```
 
 여기서 `200 OK` 응답을 받았다면 Evalchemy 역시 문제없이 통신할 수 있습니다.
@@ -137,7 +154,7 @@ curl -s -H "Content-Type: application/json" \
 벤치마크가 완료되면 터미널에 다음과 같은 최종 통계표가 출력됩니다.
 
 ```text
-python -m eval.eval --model curator --tasks AIME24 --limit 1 \
+python -m eval.eval --model curator --tasks AIME24 --limit 1 --predict_only \
   --model_name "lm_studio/deepseek-ai_deepseek-r1-0528-qwen3-8b" \
   --model_args "api_base=http://127.0.0.1:1234/v1,api_key=dummy" \
   --apply_chat_template True --batch_size 1 \
