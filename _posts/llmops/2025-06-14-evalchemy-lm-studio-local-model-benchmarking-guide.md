@@ -57,11 +57,13 @@ cd evalchemy
 # eval/chat_benchmarks/curator_lm.py  
 - response = self.llm(payload)["response"]
 + response_obj = self.llm(payload)       # CuratorResponse
-+ response = response_obj.response       # 실제 텍스트
+#+ response = response_obj.response       # 실제 텍스트
+#+ response  = response_obj.to_list()[0]["response"]
++ response  = response_obj.dataset[0]["response"]
 
 or
 
-sed -i '' 's/\["response"\]/.response/' \
+sed -i '' 's/\["response"\]/.to_list()[0]["response"]/' \
   eval/chat_benchmarks/curator_lm.py
 ```
 
@@ -145,21 +147,73 @@ print( completion(
       )["choices"][0]["message"]["content"][:120] )
 PY
 
+cp  eval/chat_benchmarks/AIME24/data/aime24.json \
+    eval/chat_benchmarks/AIME24/data/aime24_full.json
+
+jq '.[0]' \
+  eval/chat_benchmarks/AIME24/data/aime24_full.json \
+  > eval/chat_benchmarks/AIME24/data/aime24.json
+
+mv eval/chat_benchmarks/AIME24/data/aime24_full.json \
+   eval/chat_benchmarks/AIME24/data/aime24.json
+
 ```
 
-여기서 `200 OK` 응답을 받았다면 Evalchemy 역시 문제없이 통신할 수 있습니다.
+## YAML 하위 셋(AIME24_subset) 위치·작성법
+
+```text
+<repo root>/
+├─ configs/
+│   └─ aime24_subset.yaml   ← 여기!
+├─ eval/
+│   └─ chat_benchmarks/
+│       └─ AIME24/
+│           └─ data/aime24.json  (30 문제 원본)
+└─ … 기타 파일 …
+
+
+```
+
+| 용도                          | 실제 경로                                                      |
+| --------------------------- | ---------------------------------------------------------- |
+| **원본 문제 JSON** (30 문제 전부)   | `eval/chat_benchmarks/AIME24/data/aime24.json`             |
+| **하위 YAML**(1 문제만 쓰는 설정 파일) | `eval/chat_benchmarks/AIME24/aime24_subset.yaml` ← 새로 만드세요 |
+
+
+
+
 
 ## 결과 분석: 통계표 읽는 법
 
 벤치마크가 완료되면 터미널에 다음과 같은 최종 통계표가 출력됩니다.
 
-```text
-python -m eval.eval --model curator --tasks AIME24 --limit 1 --predict_only \
+```bash
+python -m eval.eval --model curator --tasks AIME24 --limit 1 \
+  --model_name "lm_studio/deepseek-ai_deepseek-r1-0528-qwen3-8b" \
+  --model_args "api_base=http://127.0.0.1:1234/v1,api_key=dummy" \
+  --apply_chat_template True --batch_size 1 \
+  --gen_kwargs "max_new_tokens=256,stop=[\"\\n\"]" \
+  --output_path logs/quickcheck.json
+
+python -m eval.eval --model curator --config configs/aime24_subset.yaml \
   --model_name "lm_studio/deepseek-ai_deepseek-r1-0528-qwen3-8b" \
   --model_args "api_base=http://127.0.0.1:1234/v1,api_key=dummy" \
   --apply_chat_template True --batch_size 1 \
   --output_path logs/quickcheck.json
 
+python -m eval.eval            \
+  --model curator              \
+  --tasks AIME24               \
+  --limit 1 --predict_only --skip_eval \
+  --model_name "lm_studio/deepseek-ai_deepseek-r1-0528-qwen3-8b" \
+  --model_args "api_base=http://127.0.0.1:1234/v1,api_key=dummy" \
+  --apply_chat_template True   \
+  --batch_size 1               \
+  --gen_kwargs "max_new_tokens=256" \
+  --output_path logs/quickcheck.json
+```
+
+```text
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • Time Elapsed 0:49:49 • Time Remaining 0:00:00
 Requests: Total: 30 • Cached: 0✓ • Success: 30✓ • Failed: 0✗ • In Progress: 0⋯ • Req/min: 0.6 • Res/min: 0.6
 

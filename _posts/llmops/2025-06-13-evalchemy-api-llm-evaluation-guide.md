@@ -26,6 +26,91 @@ toc_label: "목차"
 
 이 가이드에서는 환경 설정부터 대표적인 세 가지 패턴(공식 OpenAI, 사내 vLLM OpenAI-호환 엔드포인트, Google Gemini)까지 단계별로 살펴보겠습니다.
 
+## 한 눈에 보는 Evalchemy / LM-Eval-Harness 파이프라인
+
+LM-Eval-Harness(이하 *Harness*)는 **"두 라운드·세 단계"** 구조로 평가를 수행합니다.
+
+1. **데이터 로드·Split 생성** → 2) **모델 생성(inference)** → 3) **채점(metrics)**.
+   표준 설정에서는 *train*·*eval* 두 split을 차례로 처리하며, 각각 ① "모델 응답 생성(Generating…)" 로그가 한 번씩 찍힙니다.
+   `--predict_only`, `--skip_train`, `--skip_eval` 등 CLI 플래그는 **어떤 단계/라운드를 생략할지** 지정할 뿐, 데이터셋 자체를 줄이지 않습니다.
+   아래에서는 다수 태스크·다수 문제를 돌리는 **일반 케이스**를 기준으로 각 단계를 세부적으로 풀어냅니다.
+
+### 1. 데이터 로드 & Split 생성
+
+#### 1.1 태스크 YAML·CLI 해석
+
+Harness는 `--tasks`(쉼표 리스트) 또는 `--config YAML`을 읽어 실행할 태스크를 결정합니다. YAML에는
+`task_name`, `batch_size`, `num_examples`, `subsample` 등이 기록됩니다.
+
+#### 1.2 데이터셋 파싱
+
+각 태스크 패키지(예: `eval/chat_benchmarks/AIME24`)의 `__init__.py` 안 상수 `DATASET_PATH`가 원본 JSON / JSONL 위치를 가리킵니다.
+
+#### 1.3 Split 전략
+
+* **train split**: few-shot 프롬프트 구성 및 "모델 생성용" 예제로 사용.
+* **eval split**: 동일 데이터(또는 validation 셋)로 다시 생성한 뒤 정답과 비교해 메트릭을 산출.
+  – `--skip_eval` → eval split 전체 생략
+  – `--skip_train` → train split 생략 & eval만 수행.
+
+### 2. 모델 생성 라운드
+
+#### 2.1 Curator → LiteLLM → 백엔드
+
+Evalchemy는 `curator_lm.py`를 통해 **Curator LLM API**로 모든 프롬프트를 전달합니다.
+Curator는 요청 JSONL을 작성-캐시하고 **LiteLLM**을 호출, LiteLLM은
+OpenAI/Anthropic/vLLM/LM Studio 등 지정 provider에 REST POST를 보냅니다.
+
+#### 2.2 연속 배칭
+
+Curator는 요청을 토큰·RPM 한도 내에서 묶어 전송하며, vLLM / LM Studio 쪽에서는 추가로 동적 배칭이 이뤄집니다.
+
+#### 2.3 응답 수집 & 캐싱
+
+박스-단위 응답은 `CuratorResponse`; 텍스트는 `response_obj.dataset[i]["response"]` 로 꺼냅니다.
+모든 응답·원본 프롬프트는 `$HOME/.cache/curator/<run-id>/responses_*.jsonl` 에 영구 저장됩니다.
+
+### 3. 채점 단계
+
+#### 3.1 메트릭 계산
+
+태스크 정의에 따라 Exact Match, BLEU, F1, Code-Elo 등 다양한 메트릭 함수가 호출됩니다.
+
+* 채점은 **eval split** 생성이 끝난 뒤 실행됩니다.
+* `--predict_only` → 메트릭 함수를 건너뛰고 생성물만 저장합니다.
+
+#### 3.2 결과 집계 & 출력
+
+* Curator가 토큰·시간·비용을 합산해 콘솔 표로 출력.
+* Harness는 최종 딕셔너리를 `--output_path`(JSON) 에 기록합니다. 구조:
+
+  ```jsonc
+  { "results": {"AIME24": {"exact_match":0.83, …}},
+    "configs": {...}, "versions": {...} }
+  ```
+
+### 4. 플래그에 따른 실행 매트릭스
+
+| 플래그 조합           | train split 호출 | eval split 호출 | 채점 | 대표 로그                    | 용도                |
+| ---------------- | -------------- | ------------- | -- | ------------------------ | ----------------- |
+| (기본)             | ✓              | ✓             | ✓  | "Generating …"×2, 스코어 표  | 정식 벤치             |
+| `--predict_only` | ✓              | ✓             | ✗  | "Generating …"×2, 스코어 없음 | 모델 응답만 수집         |
+| `--skip_eval`    | ✓              | ✗             | ✗  | "Generating train …"만    | 빠른 추론 테스트         |
+| `--skip_train`   | ✗              | ✓             | ✓  | "Generating eval …"만     | 기존 few-shot 캐시 활용 |
+
+### 5. 런타임 최적화 포인트
+
+* **샘플 수 줄이기**: `--limit N`(태스크 수) + JSON 하위셋 or `subsample:` 키.
+* **응답 토큰 제한**: `--gen_kwargs "max_new_tokens=256"` 등.
+* **라운드 생략**: `--skip_eval` / `--skip_train` 조합.
+* **캐시 온**: `--use_cache DIR` → 동일 프롬프트는 재호출 안 함.
+
+### 6. 파이프라인 이해의 중요성
+
+**"두 split(생성-채점)"** 패턴이 LM-Eval-Harness의 핵심 설계이며,
+`--predict_only`·`--skip_*` 플래그가 **어떤 라운드·단계를 생략**하는지 이해하면 벤치마크 실행을 효율적으로 제어할 수 있습니다.
+또한 Curator → LiteLLM → provider 계층 구조와 응답 캐시(`$HOME/.cache/curator/<run-id>/responses_*.jsonl`)가 실험 재현·비용 분석에 매우 유용합니다.
+
 ## 사전 준비
 
 ### 의존성 설치
