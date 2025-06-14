@@ -47,6 +47,17 @@ pip show litellm
 
 # v1.72 이상으로 업그레이드
 pip install -U "litellm>=1.72"
+
+pip install --upgrade bespokelabs-curator litellm
+
+git clone https://github.com/mlfoundations/evalchemy.git
+
+cd evalchemy
+
+# eval/chat_benchmarks/curator_lm.py  
+- response = self.llm(payload)["response"]
++ response_obj = self.llm(payload)       # CuratorResponse
++ response = response_obj.response       # 실제 텍스트
 ```
 
 ### 서버 및 API 키 설정
