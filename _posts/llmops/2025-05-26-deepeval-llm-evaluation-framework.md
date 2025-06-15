@@ -32,6 +32,9 @@ DeepEval은 단순한 단위 테스트를 넘어 LLM 시스템의 복잡성을 �
     * **Answer Relevancy (답변 관련성)**: 주어진 입력에 대해 LLM의 답변이 얼마나 관련성이 높은지 측정합니다.
     * **RAGAS 메트릭**: RAG 시스템 평가에 특화된 Faithfulness, Context Precision/Recall 등을 지원합니다.
     * **Task Completion (과업 완료율)**: LLM이 특정 과업을 성공적으로 완수했는지 여부를 평가합니다.
+    * **Summarization (요약)**: 생성된 요약문의 품질과 정확성을 평가합니다.
+    * **Bias (편향)**: 모델 출력에서 성별, 인종, 종교 등에 대한 편향을 탐지합니다.
+    * **Toxicity (독성)**: 생성된 콘텐츠의 독성, 혐오 표현, 부적절한 내용을 식별합니다.
 * **강력한 레드팀(Red Teaming) 기능**: 약 40개 이상의 사전 정의된 레드팀 공격 시나리오(독성, 편향, SQL 인젝션 등)를 손쉽게 실행하여 모델의 안전성과 견고성을 테스트합니다.
 * **커스텀 메트릭 정의 및 통합**: 사용자는 자체적인 평가 기준에 맞는 커스텀 메트릭을 정의하고, 이를 DeepEval 생태계에 원활하게 통합하여 활용할 수 있습니다.
 * **Confident AI 플랫폼 연동**: 테스트 결과를 Confident AI 클라우드 플랫폼에 저장하고 공유함으로써, 팀 내 협업을 강화하고 평가 이력을 체계적으로 관리할 수 있습니다.
@@ -65,6 +68,47 @@ DeepEval의 도입은 매우 간결합니다.
     deepeval test run test_my_llm_app.py
     ```
     테스트 통과 시 CLI에 ✅ 아이콘이 표시됩니다.
+
+### 1-1. 실제 테스트 케이스 작성 예시
+
+DeepEval은 Pytest와 유사한 방식으로 LLM 출력을 단위 테스트할 수 있도록 설계되었습니다. 다음은 실제 테스트 케이스 작성 예시입니다:
+
+```python
+from deepeval import assert_test
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+
+def test_case():
+    correctness_metric = GEval(
+        name="Correctness",
+        criteria="Determine if the 'actual output' is correct based on the 'expected output'.",
+        evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
+        threshold=0.5
+    )
+    test_case = LLMTestCase(
+        input="What if these shoes don't fit?",
+        actual_output="You have 30 days to get a full refund at no extra cost.",
+        expected_output="We offer a 30-day full refund at no extra costs.",
+        retrieval_context=["All customers are eligible for a 30 day full refund at no extra costs."]
+    )
+    assert_test(test_case, [correctness_metric])
+```
+
+이러한 방식으로 테스트를 작성한 후, CLI에서 다음 명령어를 실행하여 평가를 수행할 수 있습니다:
+
+```bash
+deepeval test run test_chatbot.py
+```
+
+### 1-2. 코드 기반 평가 방식의 장점
+
+DeepEval이 코드 기반 접근 방식을 채택한 이유는 다음과 같습니다:
+
+* **자동화 및 반복성**: 평가를 자동화하고 반복 가능한 방식으로 수행하여 일관된 결과를 보장합니다.
+* **체계적 테스트**: 다양한 입력에 대한 LLM의 출력을 체계적으로 테스트하고, 결과를 정량적으로 분석할 수 있습니다.
+* **CI/CD 통합**: 지속적 통합/배포 파이프라인에 통합하여 지속적인 평가를 수행할 수 있습니다.
+* **버전 관리**: 테스트 케이스를 코드로 관리하여 변경 이력을 추적하고 협업을 용이하게 합니다.
+* **확장성**: 새로운 테스트 케이스와 메트릭을 쉽게 추가하고 관리할 수 있습니다.
 
 ### 2. 테스트 케이스 구성
 
@@ -190,6 +234,58 @@ DeepEval CLI를 통해 로컬에서 실행된 테스트 및 벤치마크 결과�
 
 DeepEval은 활발한 오픈소스 커뮤니티를 기반으로 성장하고 있습니다. 프로젝트에 대한 자세한 내용과 기여 방법은 공식 [DeepEval GitHub 저장소](https://github.com/confident-ai/deepeval)의 `CONTRIBUTING.md` 파일에 상세히 안내되어 있으며, 새로운 아이디어 제안 및 기능 개발 참여를 환영합니다. 향후 로드맵에는 Guardrails 기능 강화, 추가적인 고급 메트릭 지원, 자동 데이터셋 생성 도구 등 LLM 평가 생태계를 더욱 풍부하게 할 기능들이 계획되어 있습니다.
 
+## 실무 활용 가이드
+
+### 다양한 메트릭 활용 예시
+
+DeepEval의 강력함은 다양한 메트릭을 조합하여 종합적인 평가를 수행할 수 있다는 점입니다:
+
+```python
+from deepeval.metrics import (
+    GEval, AnswerRelevancyMetric, HallucinationMetric, 
+    BiasMetric, ToxicityMetric, SummarizationMetric
+)
+
+# 다중 메트릭 평가
+def comprehensive_test():
+    metrics = [
+        GEval(name="Correctness", criteria="정확성 평가", threshold=0.7),
+        AnswerRelevancyMetric(threshold=0.8),
+        HallucinationMetric(threshold=0.3),
+        BiasMetric(threshold=0.2),
+        ToxicityMetric(threshold=0.1),
+        SummarizationMetric(threshold=0.7)
+    ]
+    
+    test_case = LLMTestCase(
+        input="사용자 질문",
+        actual_output="LLM 응답",
+        expected_output="기대 응답"
+    )
+    
+    assert_test(test_case, metrics)
+```
+
+### 자동화된 평가 파이프라인
+
+DeepEval을 CI/CD 파이프라인에 통합하여 지속적인 품질 관리를 실현할 수 있습니다:
+
+```bash
+# GitHub Actions 또는 Jenkins에서 실행
+deepeval test run tests/ --verbose --output-format json
+```
+
+이를 통해 모델 업데이트 시마다 자동으로 성능 검증을 수행하고, 품질 저하를 사전에 방지할 수 있습니다.
+
 ## 결론
 
-DeepEval은 LLM 기반 시스템의 개발 및 운영에 있어 필수적인 '신뢰성'과 '성능'을 체계적으로 확보할 수 있도록 지원하는 포괄적이고 유연한 평가 프레임워크입니다. 전문가들은 DeepEval을 통해 몇 줄의 코드만으로도 복잡한 LLM 애플리케이션을 심층적으로 분석하고, 다양한 공개 벤치마크를 활용하여 모델 성능을 객관적으로 측정할 수 있습니다. 사내 모델 개발, 오픈소스 모델 검증, API 기반 서비스 평가 등 어떠한 LLM 활용 시나리오에서도 DeepEval은 일관되고 신뢰할 수 있는 평가 방법론을 제시하며, 더 나아가 Confident AI 플랫폼과의 연동을 통해 MLOps 파이프라인의 효율성을 극대화할 것입니다.
+DeepEval은 LLM 기반 시스템의 개발 및 운영에 있어 필수적인 '신뢰성'과 '성능'을 체계적으로 확보할 수 있도록 지원하는 포괄적이고 유연한 평가 프레임워크입니다. 
+
+### 핵심 가치
+
+* **개발자 친화적**: Pytest와 유사한 익숙한 인터페이스로 빠른 도입 가능
+* **포괄적 평가**: 정확성부터 안전성까지 다양한 측면의 종합적 평가
+* **자동화 지원**: CI/CD 파이프라인 통합을 통한 지속적 품질 관리
+* **확장성**: 커스텀 메트릭과 벤치마크 추가로 특화된 평가 가능
+
+전문가들은 DeepEval을 통해 몇 줄의 코드만으로도 복잡한 LLM 애플리케이션을 심층적으로 분석하고, 다양한 공개 벤치마크를 활용하여 모델 성능을 객관적으로 측정할 수 있습니다. 사내 모델 개발, 오픈소스 모델 검증, API 기반 서비스 평가 등 어떠한 LLM 활용 시나리오에서도 DeepEval은 일관되고 신뢰할 수 있는 평가 방법론을 제시하며, 더 나아가 Confident AI 플랫폼과의 연동을 통해 MLOps 파이프라인의 효율성을 극대화할 것입니다.
