@@ -18,12 +18,11 @@
             </li>
           {%- endfor -%}
         </ul>
-        {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+        <!-- 통합 검색 아이콘 -->
+        <a href="{{ '/search/' | relative_url }}" class="search__toggle" title="검색">
+          <span class="visually-hidden">검색</span>
           <i class="fas fa-search"></i>
-        </button>
-        {% endif %}
+        </a>
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>

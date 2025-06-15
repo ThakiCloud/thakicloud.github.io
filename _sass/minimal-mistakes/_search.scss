@@ -19,9 +19,24 @@
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
 
   &:hover {
     color: mix(#000, $primary-color, 25%);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+
+  i {
+    pointer-events: none;
   }
 }
 

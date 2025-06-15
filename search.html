@@ -6,13 +6,16 @@ permalink: /search/
 
 <div class="search-container">
   <div class="search-header">
-    <h1>🔍 블로그 검색</h1>
-    <p>한글과 영어를 모두 지원하는 고급 검색입니다.</p>
+    <h1><i class="fas fa-search"></i> 블로그 검색</h1>
+    <p>원하는 내용을 빠르게 찾아보세요. 한글과 영어를 모두 지원합니다.</p>
   </div>
 
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="검색어를 입력하세요 (예: AI, 인공지능, Claude)" autocomplete="off">
-    <button id="search-button">검색</button>
+    <input type="text" id="search-input" placeholder="검색어를 입력하세요 (예: AI, 인공지능, LLM)" autocomplete="off" autofocus>
+    <button id="search-button">
+      <i class="fas fa-search"></i>
+      <span>검색</span>
+    </button>
   </div>
 
   <div id="search-suggestions" class="search-suggestions" style="display: none;">
@@ -69,11 +72,37 @@ permalink: /search/
   border: none;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  justify-content: center;
 }
 
 #search-button:hover {
   background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+#search-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+#search-button i {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  #search-button span {
+    display: none;
+  }
+  #search-button {
+    min-width: 60px;
+    padding: 15px 20px;
+  }
 }
 
 .search-suggestions {
