@@ -395,8 +395,9 @@ spec:
 
 ### 알림 설정
 
-```yaml
 # ArgoCD 알림 구성
+```yaml
+{% raw %}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -409,6 +410,7 @@ data:
   trigger.on-deployed: |
     - when: app.status.operationState.phase in ['Succeeded']
       send: [app-deployed]
+{% endraw %}
 ```
 
 ## 트러블슈팅 가이드
