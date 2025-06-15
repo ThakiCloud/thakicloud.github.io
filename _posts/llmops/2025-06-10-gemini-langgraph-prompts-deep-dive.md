@@ -66,6 +66,7 @@ query_writer_instructions = """
 - 최신 정보 강조 (현재 날짜: {current_date})
 
 JSON 형식으로 반환:
+{% raw %}
 {{
   "queries": [
     {{
@@ -74,8 +75,10 @@ JSON 형식으로 반환:
     }}
   ]
 }}
+{% endraw %}
 
 예시:
+{% raw %}
 {{
   "queries": [
     {{
@@ -88,6 +91,7 @@ JSON 형식으로 반환:
     }}
   ]
 }}
+{% endraw %}
 
 연구 주제: {research_topic}
 """
@@ -336,11 +340,13 @@ reflection_instructions = """
 - 한계점 및 주의사항
 
 JSON 형식으로 응답:
+{% raw %}
 {{
   "is_sufficient": true/false,
   "knowledge_gap": "부족한 정보 설명 (120자 이내)",
   "follow_up_queries": ["추가 검색어1", "추가 검색어2"]
 }}
+{% endraw %}
 
 연구 주제: {research_topic}
 수집된 요약: {summaries}

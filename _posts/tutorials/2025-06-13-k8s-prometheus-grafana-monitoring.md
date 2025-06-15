@@ -353,6 +353,7 @@ count by (namespace) (kube_pod_info)
 아래 명령어를 터미널에 복사해서 실행하면 `monitoring-alerts.yaml` 파일이 생성됩니다.
 
 ```bash
+{% raw %}
 cat <<EOF > monitoring-alerts.yaml
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
@@ -385,8 +386,9 @@ spec:
       labels:
         severity: warning
       annotations:
-        summary: "Container {{ $labels.container }} in pod {{ $labels.pod }} is using high memory"
+summary: "Container {{ $labels.container }} in pod {{ $labels.pod }} is using high memory"
 EOF
+{% endraw %}
 ```
 
 생성한 파일을 아래 명령어로 적용하세요.
