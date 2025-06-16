@@ -17,7 +17,9 @@ toc_label: "Contents"
 
 최근 AI 커뮤니티에서는 추론(Reasoning) 능력을 갖춘 모델 개발 가능성을 둘러싼 열띤 토론이 이어지고 있습니다. Apple과 Lawson 연구진 역시 각자의 시각에서 AI 추론 능력의 현재와 미래를 분석하고 있으며, 본 포스트에서는 해당 토론의 핵심 내용을 정리했습니다.
 
-아래 이미지는 토론 과정에서 공유된 주요 슬라이드 및 시각 자료로, 각 인사이트를 한눈에 확인할 수 있습니다.
+아래 이미지는 토론 과정에서 공유된 주요 슬라이드 및 시각 자료로, 각 인사이트를 한눈에 확인할 수 있습니다.  
+
+<embed src="/assets/pdf/ai_reasoning_debate_apple_lawsen_20250615224622.pdf" type="application/pdf" width="100%" height="600" />
 
 ## 이미지 자료
 

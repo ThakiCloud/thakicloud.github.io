@@ -54,9 +54,11 @@ toc_label: "목차"
 
 ### 3-B. `jekyll-pdf-embed` Gem
 
+{% raw %}
 ```liquid
 {% pdf https://example.com/report.pdf height="650" %}
 ```
+{% endraw %}
 
 - **PDF, PPT, PPTX** 모두 처리, 반응형 `<iframe>` 자동 래핑.
 - 플러그인 활성화가 필요하므로 자체 호스팅 또는 GitHub Actions 배포가 전제.
