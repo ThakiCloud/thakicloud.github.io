@@ -14,11 +14,16 @@ declare -a RAW_ITEMS=(
   "frontend-guidelines"
   "backend-structure"
   "security-checklist"
-  "user flow"
+  "user-flow"
   "styling"
-  "project structure"
+  "project-structure"
   "schema design"
   "api-spec"
+  "design" 
+  "requirements" 
+  "architecture"
+  "roadmap"
+  "context"
 )
 
 #######################################################################
@@ -57,7 +62,64 @@ for slug in "${UNIQUE_ITEMS[@]}"; do
 
   title="$(to_title "$slug")"
 
-  cat > "$file" <<EOF
+  if [[ "$slug" == "prd" ]]; then
+    cat > "$file" <<EOF
+---
+title: "PRD"
+description: "Product Requirements Document – single source of truth for the project."
+alwaysApply: false
+---
+
+## 프로젝트 개요 (Project Overview)
+
+<!-- 프로젝트의 비전, 문제 정의, 목표를 서술하세요. -->
+
+## 기술 스택 (Tech Stack)
+
+| Layer | Tech/Tool | Rationale |
+|-------|-----------|-----------|
+| Frontend | | |
+| Backend  | | |
+| Database | | |
+| Infrastructure | | |
+
+## 유저 플로우 (User Flow)
+
+```mermaid
+flowchart TD
+    User["사용자"] -->|Action| System["서비스"]
+```
+
+## 핵심 기능 (Core Features)
+
+1. Feature 1  
+   - KPI:  
+   - Priority:
+
+## UI 상세 (UI Details)
+
+<!-- 주요 화면, 컴포넌트, 인터랙션을 설명하거나 링크하세요. -->
+
+## 백엔드 스키마 (Backend Schema)
+
+```sql
+-- 예: CREATE TABLE users (...)
+```
+
+## 보안 가이드라인 (Security Guidelines)
+
+- 인증/인가  
+- 데이터 암호화  
+- 로깅 및 모니터링
+
+## 규제 준수 (Regulations)
+
+- GDPR  
+- 기타 산업 표준
+
+EOF
+  else
+    cat > "$file" <<EOF
 ---
 title: "${title}"
 description: "TODO: add description for ${title}"
@@ -66,6 +128,7 @@ alwaysApply: false
 
 <!-- Write your ${title} content here -->
 EOF
+  fi
   echo "✅  Created $file"
 done
 
