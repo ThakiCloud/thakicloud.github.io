@@ -19,7 +19,8 @@ toc_label: "Contents"
 
 아래 이미지는 토론 과정에서 공유된 주요 슬라이드 및 시각 자료로, 각 인사이트를 한눈에 확인할 수 있습니다.  
 
-<embed src="/assets/pdf/ai_reasoning_debate_apple_lawsen_20250615224622.pdf" type="application/pdf" width="100%" height="600" />
+
+ {% pdf "/assets/pdf/ai_reasoning_debate_apple_lawsen_20250615224622.pdf" %}
 
 ## 이미지 자료
 
