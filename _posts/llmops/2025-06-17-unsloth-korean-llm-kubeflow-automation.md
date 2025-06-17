@@ -1,9 +1,9 @@
 ---
-title: "Unsloth 한국어 LLM 학습 자동화 - 3편: Kubeflow 및 MLOps 프레임워크 활용"
+title: "Unsloth+TRL 한국어 LLM 학습 자동화 - 3편: Kubeflow 및 MLOps 프레임워크 활용"
 excerpt: "Kubeflow, MLflow, DVC를 활용한 엔터프라이즈급 한국어 LLM 학습 파이프라인 구축"
 date: 2025-06-17
 categories:
-  - tutorials
+  - llmops
 tags:
   - Kubeflow
   - MLflow
@@ -20,7 +20,7 @@ toc_label: "목차"
 
 ## 개요
 
-본 가이드는 [Unsloth 한국어 LLM 학습 시리즈]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})의 3편으로, Kubeflow, MLflow, DVC 등 엔터프라이즈급 MLOps 프레임워크를 활용하여 한국어 LLM 학습을 완전 자동화하는 방법을 다룹니다.
+본 가이드는 [Unsloth+TRL 한국어 LLM 학습 시리즈]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})의 3편으로, Kubeflow, MLflow, DVC 등 엔터프라이즈급 MLOps 프레임워크를 활용하여 한국어 LLM 학습을 완전 자동화하는 방법을 다룹니다.
 
 **학습 목표**:
 - 🚀 **Kubeflow Pipelines**: 시각적 ML 워크플로우 구축
