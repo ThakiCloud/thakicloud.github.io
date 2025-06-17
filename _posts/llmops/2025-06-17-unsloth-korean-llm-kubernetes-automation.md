@@ -671,6 +671,7 @@ if __name__ == "__main__":
 ### 5.2 모니터링 및 알림
 
 ```python
+{% raw %}
 # scripts/monitor.py
 import os
 import time
@@ -745,6 +746,7 @@ class TrainingMonitor:
 if __name__ == "__main__":
     monitor = TrainingMonitor()
     monitor.monitor_training()
+{% endraw %}
 ```
 
 ---

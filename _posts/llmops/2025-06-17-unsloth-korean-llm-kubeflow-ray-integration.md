@@ -18,6 +18,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+---
+
 ## 1. 아키텍처 설계 및 설치
 
 ### 1.1 통합 아키텍처 다이어그램

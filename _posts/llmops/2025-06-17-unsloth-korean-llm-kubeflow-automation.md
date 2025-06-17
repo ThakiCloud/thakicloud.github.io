@@ -729,7 +729,7 @@ groups:
       severity: critical
     annotations:
       summary: "Korean LLM training job failed"
-      description: "Pipeline {{ $labels.pipeline_name }} failed"
+      description: "Pipeline {% raw %}{{ $labels.pipeline_name }}{% endraw %} failed"
   
   - alert: LowGPUUtilization
     expr: nvidia_gpu_utilization < 50
