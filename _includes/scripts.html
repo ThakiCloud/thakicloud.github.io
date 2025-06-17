@@ -43,3 +43,28 @@ MathJax.Hub.Config({
   "HTML-CSS": { availableFonts: ["TeX"] }
 });
 </script>
+
+<!-- Mermaid diagram initialization -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mermaid 초기화가 완료되면 다이어그램 렌더링
+    if (typeof mermaid !== 'undefined') {
+      // 모든 mermaid 코드 블록을 찾아서 다이어그램으로 변환
+      const mermaidElements = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
+      
+      mermaidElements.forEach(function(element, index) {
+        const mermaidCode = element.textContent;
+        const mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = mermaidCode;
+        mermaidDiv.id = 'mermaid-' + index;
+        
+        // 기존 코드 블록을 새로운 div로 교체
+        element.parentNode.replaceWith(mermaidDiv);
+      });
+      
+      // Mermaid 다이어그램 렌더링 실행
+      mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+    }
+  });
+</script>

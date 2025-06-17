@@ -8,4 +8,25 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
+<!-- Mermaid.js for diagram rendering -->
+<link rel="stylesheet" href="{{ '/assets/css/mermaid-custom.css' | relative_url }}">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    themeVariables: {
+      primaryColor: '#ff6b6b',
+      primaryTextColor: '#333',
+      primaryBorderColor: '#ff6b6b',
+      lineColor: '#333',
+      sectionBkgColor: '#f8f9fa',
+      altSectionBkgColor: '#ffffff',
+      gridColor: '#e9ecef',
+      secondaryColor: '#6c757d',
+      tertiaryColor: '#f8f9fa'
+    }
+  });
+</script>
+
 <!-- end custom head snippets -->

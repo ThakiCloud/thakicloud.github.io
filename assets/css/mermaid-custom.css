@@ -1,0 +1,60 @@
+/* Mermaid 다이어그램 커스텀 스타일 */
+.mermaid {
+  text-align: center;
+  margin: 1em 0;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .mermaid {
+    background-color: #0d1117;
+    border-color: #30363d;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .mermaid {
+    font-size: 0.8em;
+    padding: 12px;
+  }
+}
+
+/* Mermaid SVG 요소 스타일링 */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 플로우차트 노드 스타일 커스터마이징 */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: #f8f9fa;
+  stroke: #6c757d;
+  stroke-width: 2px;
+}
+
+/* 텍스트 가독성 향상 */
+.mermaid .nodeLabel,
+.mermaid .edgeLabel {
+  color: #212529;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* 화살표 스타일 */
+.mermaid .edgePath path {
+  stroke: #6c757d;
+  stroke-width: 2px;
+}
+
+.mermaid .arrowheadPath {
+  fill: #6c757d;
+} 
