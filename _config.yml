@@ -104,9 +104,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "thakicloud"
+  name             : 
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Tech blog for thakicloud"
+  bio              : 
   location         : "Seoul, Korea"
   email            : "info@thakicloud.co.kr"
   uri              :
