@@ -106,9 +106,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "ThakiCloud Team"
+  name             : 
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "AI/ML Engineering & DevOps 전문가 팀"
+  bio              : 
   location         : "Seoul, Korea"
   email            : "info@thakicloud.co.kr"
   uri              :
