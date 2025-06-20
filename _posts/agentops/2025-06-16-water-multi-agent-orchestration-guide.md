@@ -3,8 +3,7 @@ title: "Water 프레임워크 완벽 가이드: 멀티 에이전트 오케스트
 excerpt: "프레임워크에 구애받지 않는 멀티 에이전트 오케스트레이션 프레임워크 Water를 활용해 LangChain, CrewAI, 커스텀 에이전트를 통합하고 복잡한 워크플로우를 구축하는 방법을 소개합니다."
 date: 2025-06-16
 categories:
-  - dev
-  - llmops
+  - agentops
 tags:
   - water
   - multi-agent

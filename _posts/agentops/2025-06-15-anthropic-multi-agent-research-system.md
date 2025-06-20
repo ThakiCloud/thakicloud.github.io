@@ -3,8 +3,7 @@ title: "Anthropic의 멀티 에이전트 연구 시스템: AI 에이전트의 �
 excerpt: "Claude Research가 보여준 멀티 에이전트 시스템의 혁신적 접근법과 단일 에이전트 대비 90% 성능 향상의 비밀"
 date: 2025-06-15
 categories: 
-  - research
-  - llmops
+  - agentops
 tags: 
   - anthropic
   - claude

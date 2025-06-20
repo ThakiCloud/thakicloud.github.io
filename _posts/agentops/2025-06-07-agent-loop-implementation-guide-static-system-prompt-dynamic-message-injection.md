@@ -2,7 +2,7 @@
 title: "Agent Loop 구현 가이드: 정적 시스템 프롬프트와 동적 메시지 주입 패턴"
 date: 2025-06-07
 categories: 
-  - llmops
+  - agentops
 tags: 
   - AI
   - Agent

@@ -3,8 +3,7 @@ title: "Agent Flow 완벽 가이드: 비주얼 워크플로우로 AI 에이전�
 excerpt: "Composio와 LangGraph 기반의 Agent Flow 플랫폼을 활용해 드래그 앤 드롭으로 AI 워크플로우를 설계하고, API로 실행하는 방법을 단계별로 소개합니다."
 date: 2025-06-16
 categories:
-  - dev
-  - llmops
+  - agentops
 tags:
   - agent-flow
   - composio
