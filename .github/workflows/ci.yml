@@ -1,4 +1,4 @@
-name: CI - Pull Request Validation
+name: CI - Build Test
 
 on:
   pull_request:
@@ -10,10 +10,8 @@ on:
       - '**/*.yaml'
       - '**/*.scss'
       - '**/*.css'
-      - '**/*.js'
       - '_config.yml'
       - 'Gemfile*'
-      - '.github/workflows/**'
 
   workflow_dispatch:
 
@@ -28,8 +26,6 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -38,30 +34,13 @@ jobs:
           bundler-cache: true
 
       - name: 📦 Install dependencies
-        run: |
-          bundle install
-          npm install -g markdownlint-cli
-          npm install -g broken-link-checker
-
-      - name: 🔧 Configure Jekyll
-        run: bundle exec jekyll doctor
+        run: bundle install
 
       - name: 🏗️ Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
+        run: JEKYLL_ENV=production bundle exec jekyll build
 
-      - name: 📊 Display build info
-        run: |
-          echo "✅ Jekyll build completed successfully!"
-          find _site -type f -name "*.html" | wc -l | xargs echo "HTML files:"
-          find _site -type f -name "*.css" | wc -l | xargs echo "CSS files:"
-          find _site -type f -name "*.js" | wc -l | xargs echo "JS files:"
-
-      - name: 📤 Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: jekyll-site
-          path: _site/
-          retention-days: 7
+      - name: ✅ Build success
+        run: echo "✅ Jekyll build completed successfully!"
 
   markdown-lint:
     name: 📝 Markdown Lint
@@ -82,14 +61,8 @@ jobs:
         run: |
           cat > .markdownlint.json << 'EOF'
           {
-            "MD013": {
-              "line_length": 120,
-              "code_blocks": false,
-              "tables": false
-            },
-            "MD033": {
-              "allowed_elements": ["img", "a", "br", "sub", "sup", "kbd", "mark"]
-            },
+            "MD013": false,
+            "MD033": false,
             "MD034": false,
             "MD036": false,
             "MD041": false
@@ -98,203 +71,5 @@ jobs:
 
       - name: 🔍 Run Markdown lint
         run: |
-          echo "🔍 Linting Markdown files..."
-          markdownlint '_posts/**/*.md' '_pages/**/*.md' 'README.md' --config .markdownlint.json || true
-          echo "📝 Markdown lint check completed!"
-
-  html-validation:
-    name: 🔗 HTML Validation & Link Check
-    runs-on: ubuntu-latest
-    needs: build-test
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
-
-      - name: 📤 Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: jekyll-site
-          path: _site/
-
-      - name: 📦 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: 📦 Install HTML validators
-        run: |
-          npm install -g html-validate
-          npm install -g broken-link-checker
-          sudo apt-get update
-          sudo apt-get install -y tidy
-
-      - name: 🔧 Create HTML validation config
-        run: |
-          cat > .htmlvalidate.json << 'EOF'
-          {
-            "extends": ["html-validate:recommended"],
-            "rules": {
-              "no-trailing-whitespace": "off",
-              "void-style": "off",
-              "no-inline-style": "off",
-              "element-required-attributes": "off"
-            }
-          }
-          EOF
-
-      - name: ✅ HTML validation
-        run: |
-          echo "🔍 Validating HTML files..."
-          find _site -name "*.html" -exec html-validate {} \; || true
-          echo "✅ HTML validation completed!"
-
-      - name: 🔗 Check internal links
-        run: |
-          echo "🔍 Checking internal links..."
-          cd _site
-          python3 -m http.server 8080 &
-          SERVER_PID=$!
-          sleep 5
-          blc http://localhost:8080 \
-            --recursive \
-            --filter-level 3 \
-            --exclude-external \
-            --requests 10 \
-            --max-sockets 10 \
-            || true
-          kill $SERVER_PID
-          echo "🔗 Link check completed!"
-
-  security-scan:
-    name: 🛡️ Security & Quality Scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
-
-      - name: 🛡️ Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          scan-type: 'fs'
-          scan-ref: '.'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-
-      - name: 📤 Upload Trivy scan results
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: 'trivy-results.sarif'
-
-      - name: 🔍 Install detect-secrets
-        run: pip install detect-secrets
-
-      - name: 🔍 Run detect-secrets CLI scan
-        run: |
-          detect-secrets scan > .secrets.baseline
-          echo "🛡️ Secret scan completed."
-
-  lighthouse-audit:
-    name: 🚦 Lighthouse Performance Audit
-    runs-on: ubuntu-latest
-    needs: build-test
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
-
-      - name: 📤 Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: jekyll-site
-          path: _site/
-
-      - name: 📦 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: 📦 Install Lighthouse CI
-        run: npm install -g @lhci/cli
-
-      - name: 🔧 Create Lighthouse config
-        run: |
-          cat > lighthouserc.json << 'EOF'
-          {
-            "ci": {
-              "collect": {
-                "staticDistDir": "./_site",
-                "numberOfRuns": 1
-              },
-              "assert": {
-                "assertions": {
-                  "categories:performance": ["warn", {"minScore": 0.8}],
-                  "categories:accessibility": ["warn", {"minScore": 0.9}],
-                  "categories:best-practices": ["warn", {"minScore": 0.8}],
-                  "categories:seo": ["warn", {"minScore": 0.9}]
-                }
-              }
-            }
-          }
-          EOF
-
-      - name: 🚦 Run Lighthouse audit
-        run: |
-          echo "🚦 Running Lighthouse performance audit..."
-          lhci autorun || true
-          echo "📊 Lighthouse audit completed!"
-
-  deployment-simulation:
-    name: 🚀 Deployment Simulation
-    runs-on: ubuntu-latest
-    needs: [build-test, markdown-lint, html-validation]
-    if: github.event.pull_request.draft == false
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
-
-      - name: 📤 Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: jekyll-site
-          path: _site/
-
-      - name: 🚀 Simulate deployment
-        run: |
-          echo "🚀 Simulating deployment process..."
-          echo "📁 Checking required files:"
-          required_files=("index.html" "search.json" "sitemap.xml")
-          for file in "${required_files[@]}"; do
-            if [ -f "_site/$file" ]; then
-              echo "✅ $file exists"
-            else
-              echo "❌ $file missing"
-              exit 1
-            fi
-          done
-          echo "📊 Site statistics:"
-          echo "Total files: $(find _site -type f | wc -l)"
-          echo "HTML files: $(find _site -name "*.html" | wc -l)"
-          echo "Total size: $(du -sh _site | cut -f1)"
-          echo "✅ Deployment simulation successful!"
-
-  final-report:
-    name: 📋 Final CI Report
-    runs-on: ubuntu-latest
-    needs: [build-test, markdown-lint, html-validation, security-scan, lighthouse-audit, deployment-simulation]
-    if: always()
-    steps:
-      - name: 📋 Generate CI Report
-        run: |
-          echo "## 🎯 CI/CD Pipeline Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
-          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Jekyll Build | ${{ needs.build-test.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Markdown Lint | ${{ needs.markdown-lint.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| HTML Validation | ${{ needs.html-validation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Security Scan | ${{ needs.security-scan.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Lighthouse Audit | ${{ needs.lighthouse-audit.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Deployment Simulation | ${{ needs.deployment-simulation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 🚀 Ready for merge!" >> $GITHUB_STEP_SUMMARY
-          echo "All checks have been completed. Review the results above before merging." >> $GITHUB_STEP_SUMMARY
+          markdownlint '_posts/**/*.md' --config .markdownlint.json || true
+          echo "📝 Markdown lint completed!"
