@@ -1,18 +1,14 @@
-name: CI - Build Test
+name: CI - Lint & Test
 
 on:
+  push:
+    branches: [ "**" ]
+    branches-ignore:
+      - 'hotfix/**'
   pull_request:
     branches: [ main, develop ]
-    paths:
-      - '**/*.md'
-      - '**/*.html'
-      - '**/*.yml'
-      - '**/*.yaml'
-      - '**/*.scss'
-      - '**/*.css'
-      - '_config.yml'
-      - 'Gemfile*'
-
+    branches-ignore:
+      - 'hotfix/**'
   workflow_dispatch:
 
 concurrency:
@@ -20,8 +16,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-test:
-    name: 🏗️ Jekyll Build Test
+  lint-test:
+    name: 🧹 Lint & Test
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout repository
@@ -36,11 +32,15 @@ jobs:
       - name: 📦 Install dependencies
         run: bundle install
 
-      - name: 🏗️ Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build
+      - name: 🧹 Lint Jekyll configuration
+        run: |
+          bundle exec jekyll doctor
+          echo "✅ Jekyll configuration is valid!"
 
-      - name: ✅ Build success
-        run: echo "✅ Jekyll build completed successfully!"
+      - name: 🧪 Test Jekyll build
+        run: |
+          JEKYLL_ENV=development bundle exec jekyll build --drafts --verbose
+          echo "✅ Jekyll test build completed!"
 
   markdown-lint:
     name: 📝 Markdown Lint
@@ -71,5 +71,25 @@ jobs:
 
       - name: 🔍 Run Markdown lint
         run: |
-          markdownlint '_posts/**/*.md' --config .markdownlint.json || true
+          markdownlint '_posts/**/*.md' --config .markdownlint.json
           echo "📝 Markdown lint completed!"
+
+  yaml-lint:
+    name: 📄 YAML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: 📦 Install yamllint
+        run: pip install yamllint
+
+      - name: 🔍 Run YAML lint
+        run: |
+          yamllint -d relaxed .
+          echo "📄 YAML lint completed!"

@@ -256,3 +256,143 @@ git commit -m "hotfix: critical bug fix [skip ci]"
 ---
 
 **📞 문의사항이나 개선 제안이 있으시면 이슈를 생성해 주세요!** 
+
+# CI/CD 워크플로우 가이드
+
+## 📋 개요
+
+이 프로젝트는 3단계 CI/CD 파이프라인을 사용합니다:
+
+1. **Lint & Test**: 모든 커밋에서 실행
+2. **Build & Package**: main 브랜치 머지 시 실행
+3. **Production Deploy**: 태그 생성 시 실행
+
+## 🔄 워크플로우 정책
+
+### 1. Lint & Test (`ci.yml`)
+
+**트리거 조건:**
+- 모든 브랜치의 push (hotfix/* 브랜치 제외)
+- main, develop 브랜치로의 Pull Request (hotfix/* 브랜치 제외)
+- 수동 실행 (workflow_dispatch)
+
+**실행 작업:**
+- Jekyll 설정 검증 (`bundle exec jekyll doctor`)
+- 개발 환경 빌드 테스트
+- Markdown 문법 검사
+- YAML 문법 검사
+
+**목적:**
+- 코드 품질 유지
+- 빌드 오류 사전 방지
+- 문서 규칙 준수 확인
+
+### 2. Build & Package (`jekyll-gh-pages.yml`)
+
+**트리거 조건:**
+- main 브랜치 push (hotfix/* 브랜치 제외)
+- 수동 실행 (workflow_dispatch)
+
+**실행 작업:**
+- 프로덕션 환경 Jekyll 빌드
+- 빌드 정보 생성 (날짜, 커밋, 실행 번호)
+- 빌드 아티팩트 저장 (30일 보관)
+
+**목적:**
+- 배포 준비된 빌드 생성
+- 빌드 아티팩트 관리
+- 배포 추적성 확보
+
+### 3. Production Deploy (`production-deploy.yml`)
+
+**트리거 조건:**
+- 태그 생성 (v*.*.* 패턴, hotfix/* 브랜치 제외)
+- 수동 실행 (workflow_dispatch)
+
+**실행 작업:**
+- 최신 성공 빌드 아티팩트 다운로드
+- 배포 정보 추가
+- GitHub Pages 배포
+
+**목적:**
+- 태그 기반 운영 배포
+- 아티팩트 기반 배포로 일관성 보장
+- 배포 추적 및 롤백 지원
+
+## 🚫 제외 정책
+
+### hotfix/* 브랜치
+- 모든 워크플로우에서 제외
+- 긴급 수정사항에 대한 별도 처리 필요
+
+## 📱 사용 방법
+
+### 개발 워크플로우
+
+1. **기능 개발**
+   ```bash
+   git checkout -b feature/new-feature
+   git commit -m "Add new feature"
+   git push origin feature/new-feature
+   ```
+   → Lint & Test 실행
+
+2. **Pull Request 생성**
+   ```bash
+   # GitHub에서 PR 생성
+   ```
+   → Lint & Test 실행
+
+3. **main 브랜치 머지**
+   ```bash
+   # PR 승인 후 merge
+   ```
+   → Build & Package 실행
+
+### 배포 워크플로우
+
+1. **운영 배포**
+   ```bash
+   git tag v1.2.3
+   git push origin v1.2.3
+   ```
+   → Production Deploy 실행
+
+2. **수동 배포**
+   - GitHub Actions 탭에서 "Production Deploy" 워크플로우 실행
+   - 배포할 태그 입력
+
+## 🔍 모니터링
+
+### 빌드 상태 확인
+- GitHub Actions 탭에서 워크플로우 실행 상태 확인
+- 실패 시 로그 확인 및 수정
+
+### 아티팩트 관리
+- 빌드 아티팩트는 30일간 보관
+- 배포 시 최신 성공 빌드 사용
+
+### 배포 추적
+- `build-info.txt`: 빌드 정보
+- `deploy-info.txt`: 배포 정보
+
+## ⚠️ 주의사항
+
+1. **hotfix 브랜치**는 모든 자동화에서 제외됩니다
+2. **태그는 v*.*.* 형식**만 운영 배포를 트리거합니다
+3. **배포는 아티팩트 기반**으로 수행되므로 main 브랜치에 성공적인 빌드가 필요합니다
+4. **동시 배포는 차단**되므로 이전 배포 완료 후 새 배포가 시작됩니다
+
+## 🛠️ 트러블슈팅
+
+### 빌드 실패
+1. Lint & Test 실패: 코드 품질 문제 수정
+2. Build & Package 실패: Jekyll 설정 또는 종속성 문제 확인
+
+### 배포 실패
+1. 아티팩트 없음: main 브랜치에 성공적인 빌드 확인
+2. 권한 오류: GitHub Pages 설정 및 repository 권한 확인
+
+### 응급 상황
+- hotfix 브랜치 사용 시 수동으로 워크플로우 실행 필요
+- 긴급 배포 시 workflow_dispatch 사용 

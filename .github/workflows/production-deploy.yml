@@ -1,0 +1,116 @@
+name: Production Deploy
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+    branches-ignore:
+      - 'hotfix/**'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to deploy (e.g., v1.2.3)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "production-deploy"
+  cancel-in-progress: false
+
+jobs:
+  get-artifact:
+    name: 📦 Get Build Artifact
+    runs-on: ubuntu-latest
+    outputs:
+      build-run-id: ${{ steps.find-build.outputs.run-id }}
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔍 Find latest successful build
+        id: find-build
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: runs } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'build-package.yml',
+              branch: 'main',
+              status: 'completed',
+              conclusion: 'success',
+              per_page: 1
+            });
+            
+            if (runs.total_count === 0) {
+              core.setFailed('No successful build found on main branch');
+              return;
+            }
+            
+            const runId = runs.workflow_runs[0].id;
+            core.setOutput('run-id', runId);
+            console.log(`Found build run ID: ${runId}`);
+
+  deploy:
+    name: 🚀 Deploy to Production
+    runs-on: ubuntu-latest
+    needs: get-artifact
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 📥 Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ needs.get-artifact.outputs.build-run-id }}
+          pattern: 'jekyll-site-*'
+          merge-multiple: false
+
+      - name: 📁 Prepare deployment files
+        run: |
+          # Find the artifact directory
+          ARTIFACT_DIR=$(find . -name "jekyll-site-*" -type d | head -1)
+          if [ -z "$ARTIFACT_DIR" ]; then
+            echo "No artifact directory found"
+            exit 1
+          fi
+          
+          echo "Found artifact directory: $ARTIFACT_DIR"
+          ls -la "$ARTIFACT_DIR"
+          
+          # Move contents to _site directory for GitHub Pages
+          mkdir -p _site
+          cp -r "$ARTIFACT_DIR"/* _site/
+          
+          # Add deployment info
+          echo "Deployment Info:" >> _site/deploy-info.txt
+          echo "Deploy Date: $(date)" >> _site/deploy-info.txt
+          echo "Tag: ${{ github.ref_name }}" >> _site/deploy-info.txt
+          echo "Commit: ${{ github.sha }}" >> _site/deploy-info.txt
+
+      - name: 🔧 Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: 📦 Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: ✅ Deployment completed
+        run: |
+          echo "🎉 Production deployment completed!"
+          echo "🌐 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "🏷️ Tag: ${{ github.ref_name }}" 
