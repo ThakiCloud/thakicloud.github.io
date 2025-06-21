@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - 'v*.*.*'
-    branches-ignore:
-      - 'hotfix/**'
   workflow_dispatch:
     inputs:
       tag:
@@ -43,7 +41,7 @@ jobs:
             const { data: runs } = await github.rest.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              workflow_id: 'ci.yml',
+              workflow_id: 'build.yml',
               branch: 'main',
               status: 'completed',
               conclusion: 'success',

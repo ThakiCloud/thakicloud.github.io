@@ -1,0 +1,54 @@
+name: Build & Package
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: "build"
+  cancel-in-progress: false
+
+jobs:
+  build-package:
+    name: 🏗️ Build & Package
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 💎 Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: 📦 Install dependencies
+        run: bundle install
+
+      - name: 🏗️ Build Jekyll site for production
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build
+          echo "✅ Production build completed!"
+
+      - name: 📋 Generate build info
+        run: |
+          echo "Build Info:" > _site/build-info.txt
+          echo "Build Date: $(date)" >> _site/build-info.txt
+          echo "Git Commit: ${{ github.sha }}" >> _site/build-info.txt
+          echo "Git Ref: ${{ github.ref }}" >> _site/build-info.txt
+          echo "Workflow Run: ${{ github.run_number }}" >> _site/build-info.txt
+
+      - name: 📦 Create build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site-${{ github.run_number }}
+          path: _site/
+          retention-days: 30
+
+      - name: ✅ Build & Package completed
+        run: echo "🎉 Build artifact created successfully!" 
