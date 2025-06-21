@@ -46,11 +46,13 @@ LLM 서버는 한 번에 하나의 요청만 처리하지 않습니다. vLLM과 
 vLLM의 핵심 차별화 요소는 **continuous batching**과 **비동기 요청 큐**입니다.
 
 **비동기 요청 처리 흐름:**
+
 1. HTTP 요청 수신 → 즉시 `asyncio.Queue`에 저장
 2. 요청 상태: **waiting**(대기) ↔ **running**(GPU 처리 중)
 3. 스케줄러가 매 토큰 생성마다 상태 동적 관리
 
 **과부하 상황 대응:**
+
 - GPU 토큰 버짓 초과 → 다음 스텝에서 재시도
 - 큐 길이 한계 초과 → HTTP 429/503 응답
 - 긴 요청 → Partial Prefill로 점진적 처리
@@ -359,7 +361,8 @@ vLLM과 Evalchemy를 활용한 LLM 벤치마킹은 단순히 스크립트를 실
 ---
 
 **참고 자료:**
+
 - [vLLM 공식 문서](https://docs.vllm.ai/)
 - [Evalchemy API 가이드](https://docs.bespokelabs.ai/)
 - [Prometheus 모니터링 설정](https://prometheus.io/docs/)
-- [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) 
+- [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness)

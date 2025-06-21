@@ -20,6 +20,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 왜 '책 리스트'로 채용 조건을 이야기할까요?
+
 우리는 경력보다 **문제를 푸는 태도**와 **학습 깊이**를 더 크게 봐요.  
 한 권을 끝까지 읽고, 실무에 적용하고, 동료에게 설명까지 해 본 경험이라면 그 자체로 지속 가능한 역량을 증명해 주니까요.  
 그래서 아래 열 권은 **백엔드·인프라 엔지니어의 기본 소양**으로 삼고 있어요.
@@ -27,6 +28,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 1. 《Clean Code》
+
 * **저자** — Robert C. Martin  
 * **핵심 키워드** — 가독성, 리팩터링, 네이밍  
 * **우리가 중요하게 보는 이유**  
@@ -37,6 +39,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 2. 《Head First Design Patterns (2nd)》
+
 * **저자** — Eric Freeman & Elisabeth Robson  
 * **핵심 키워드** — 객체지향, SOLID, 재사용성  
 * **우리가 중요하게 보는 이유**  
@@ -47,6 +50,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 3. 《Designing Data-Intensive Applications》
+
 * **저자** — Martin Kleppmann  
 * **핵심 키워드** — 분산 시스템, CAP, 이벤트 소싱  
 * **우리가 중요하게 보는 이유**  
@@ -57,6 +61,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 4. 《Building Microservices (2nd)》
+
 * **저자** — Sam Newman  
 * **핵심 키워드** — 도메인 분할, CI/CD, 관측 가능성  
 * **우리가 중요하게 보는 이유**  
@@ -67,6 +72,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 5. 《Designing Web APIs》
+
 * **저자** — Brenda Jin, Saurabh Sahni & Amir Shevat  
 * **핵심 키워드** — REST, OpenAPI, DX  
 * **우리가 중요하게 보는 이유**  
@@ -77,6 +83,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 6. 《System Design Interview Vol. 2》
+
 * **저자** — Alex Xu, Sahn Lam / **역자** — 이병준  
 * **핵심 키워드** — 대규모 시스템 설계, 면접, 트레이드오프  
 * **우리가 중요하게 보는 이유**  
@@ -87,6 +94,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 7. 《인프라 엔지니어의 교과서》
+
 * **저자** — 사노 유타카 / **역자** — 김성재  
 * **핵심 키워드** — 서버, 네트워크, 가상화, 운영  
 * **우리가 중요하게 보는 이유**  
@@ -97,6 +105,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 8. 《Software Engineering at Google》
+
 * **저자** — Titus Winters, Tom Manshreck, Hyrum Wright / **역자** — 개앞맵시  
 * **핵심 키워드** — 대규모 코드베이스, 리뷰, 자동화  
 * **우리가 중요하게 보는 이유**  
@@ -107,6 +116,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 9. 《개발자를 위한 쉬운 쿠버네티스》
+
 * **저자** — William Denniss / **역자** — 이준  
 * **핵심 키워드** — Kubernetes, 배포, 확장성  
 * **우리가 중요하게 보는 이유**  
@@ -117,6 +127,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 10. 《CUDA 기반 GPU 병렬 처리》
+
 * **저자** — 김덕수  
 * **핵심 키워드** — CUDA, 병렬 프로그래밍, 최적화  
 * **우리가 중요하게 보는 이유**  
@@ -147,6 +158,7 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ---
 
 ## 지원 방법 & 문의
+
 1. 이력서·포트폴리오·GitHub 링크를 **info@thakicloud.co.kr** 로 보내 주세요.  
 2. **책에서 배운 내용을 실무에 적용한 사례**가 있다면 포맷 상관없이 자유롭게 첨부해 주세요.  
 
@@ -156,5 +168,6 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 
 ---
 
-_읽어 주셔서 고마워요. 공유하고 싶다면 "Copy Link" 한 번이면 끝이에요!_
+*읽어 주셔서 고마워요. 공유하고 싶다면 "Copy Link" 한 번이면 끝이에요!*
+
 ```

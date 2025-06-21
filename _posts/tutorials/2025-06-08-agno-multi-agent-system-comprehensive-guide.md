@@ -255,6 +255,7 @@ python evals/performance/other/langgraph_instantiation.py
 ```
 
 Apple M4 MacBook Pro에서 측정된 결과:
+
 - **Agno**: 평균 3μs 인스턴스화 시간
 - **메모리 사용량**: 평균 6.5KiB
 
@@ -375,4 +376,4 @@ Agno는 현대적인 멀티 에이전트 시스템 구축을 위한 강력하고
 
 특히 추론을 일급 시민으로 다루는 접근 방식과 네이티브 멀티모달 지원은 차세대 AI 애플리케이션 개발에 필수적인 기능들입니다. 27.9k GitHub 스타를 기록한 활발한 커뮤니티와 함께, Agno는 AGI 시대를 준비하는 개발자들에게 최적의 선택입니다.
 
-더 자세한 정보는 [공식 문서](https://docs.agno.com), [커뮤니티 포럼](https://community.agno.com), 그리고 [GitHub 리포지토리](https://github.com/agno-agi/agno)에서 확인할 수 있습니다. 
+더 자세한 정보는 [공식 문서](https://docs.agno.com), [커뮤니티 포럼](https://community.agno.com), 그리고 [GitHub 리포지토리](https://github.com/agno-agi/agno)에서 확인할 수 있습니다.

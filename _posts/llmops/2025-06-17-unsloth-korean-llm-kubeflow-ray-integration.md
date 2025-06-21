@@ -1595,24 +1595,28 @@ if __name__ == "__main__":
 본 가이드를 통해 Kubeflow Pipelines를 워크플로 오케스트레이터로, Ray를 분산 실행 엔진으로 활용하는 완전한 엔터프라이즈 MLOps 시스템을 구축했습니다.
 
 **주요 성과**:
+
 - 🔄 **명확한 역할 분리**: Kubeflow는 워크플로 관리, Ray는 분산 처리
 - ⚡ **최적화된 성능**: 각 단계별 맞춤형 분산 처리로 효율성 극대화
 - 📊 **통합 관리**: MLflow & DVC를 통한 실험 추적 및 버전 관리
 - 🚀 **자동화된 배포**: RayService + Argo Rollout으로 안전한 배포
 
 **엔터프라이즈 가치**:
+
 - **확장성**: Ray의 동적 스케일링으로 워크로드에 따른 자동 확장
 - **안정성**: Kubeflow의 워크플로 관리로 장애 복구 및 재실행 지원
 - **효율성**: 각 스텝별 최적화된 리소스 사용으로 비용 절감
 - **거버넌스**: 완전한 추적 가능성과 재현 가능한 파이프라인
 
 **실무 적용 시나리오**:
+
 - **대규모 LLM 학습**: 수백 GB 데이터셋의 효율적 처리
 - **실시간 서빙**: 고성능 추론 서비스 제공
 - **A/B 테스트**: 안전한 모델 배포 및 성능 비교
 - **지속적 학습**: 새로운 데이터로 모델 지속 개선
 
 이 시리즈의 다른 글 보기:
+
 - [1편: Unsloth를 활용한 한국어 특화 LLM 학습 완전 가이드]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})
 - [2편: 쿠버네티스 파이프라인 구축]({% post_url 2025-06-17-unsloth-korean-llm-kubernetes-automation %})
 - [3편: Kubeflow 및 MLOps 프레임워크 활용]({% post_url 2025-06-17-unsloth-korean-llm-kubeflow-automation %})
@@ -1628,6 +1632,7 @@ Kubeflow와 Ray의 강력한 조합으로 한국어 특화 LLM 개발의 새로�
 본 가이드는 [Unsloth+TRL 한국어 LLM 학습 시리즈]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})의 5편으로, Kubeflow Pipelines를 워크플로 오케스트레이터로, Ray를 스텝 내부의 분산 실행 엔진으로 활용하는 완전한 엔터프라이즈 MLOps 시스템을 구축합니다.
 
 **아키텍처 개요**:
+
 ```
 Kubeflow Pipeline DAG
  ├─ Preprocess ( RayJob → ray.data )  ─┐
@@ -1639,10 +1644,11 @@ Serve 단계: RayService + Argo Rollout (A/B) → 외부 LoadBalancer
 ```
 
 **학습 목표**:
+
 - 🔄 **Kubeflow Pipelines**: DAG 기반 워크플로 오케스트레이션
 - ⚡ **Ray Integration**: 각 스텝에서 분산 처리 엔진으로 활용
 - 📊 **MLflow & DVC**: 실험 추적 및 데이터 버전 관리 통합
 - 🚀 **RayService**: 고성능 모델 서빙 인프라
 - 🔄 **Argo Rollout**: A/B 테스트 및 점진적 배포
 
---- 
+---

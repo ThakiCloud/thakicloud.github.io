@@ -55,9 +55,11 @@ toc_label: "목차"
 ### 3-B. `jekyll-pdf-embed` Gem
 
 {% raw %}
+
 ```liquid
 {% pdf https://example.com/report.pdf height="650" %}
 ```
+
 {% endraw %}
 
 - **PDF, PPT, PPTX** 모두 처리, 반응형 `<iframe>` 자동 래핑.
@@ -119,10 +121,12 @@ toc_label: "목차"
 ## 6. 구현 팁
 
 - **iframe 반응형 처리**: 16:9 예시
+
   ```css
   .embed-wrap {position: relative; padding-top: 56.25%;}
   .embed-wrap iframe {position: absolute; top:0; left:0; width:100%; height:100%;}
   ```
+
   실제 예시는 [Stack Overflow][12]를 참고하세요.
 - **PDF 미리 압축**(`pdfsizeopt`)으로 정적 번들 용량 최소화.
 - **모바일 호환**을 위해 `<a href="file.pdf">Download PDF</a>` 등 대체 링크 추가.
@@ -153,4 +157,4 @@ GitHub Pages에서 가장 간단하고 유지보수 부담 없는 조합은 다�
 [9]: https://stackoverflow.com/questions/7101080/embed-a-powerpoint-in-a-web-page?utm_source=chatgpt.com
 [10]: https://stackoverflow.com/questions/39696866/how-to-put-google-slide-on-jekyll?utm_source=chatgpt.com
 [11]: https://stackoverflow.com/questions/6137457/how-to-embed-pdfs-that-work-in-all-web-and-mobile-browsers?utm_source=chatgpt.com
-[12]: https://stackoverflow.com/questions/39696866/how-to-put-google-slide-on-jekyll 
+[12]: https://stackoverflow.com/questions/39696866/how-to-put-google-slide-on-jekyll

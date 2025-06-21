@@ -325,12 +325,14 @@ performance_metrics = {
 OpenMathReasoning 데이터셋은 **Creative Commons Attribution 4.0 International License**로 제공됩니다.
 
 **허용사항**:
+
 - ✅ **상업적 사용**: 영리 목적 활용 가능
 - ✅ **수정**: 데이터 수정 및 변형 가능  
 - ✅ **배포**: 원본 및 수정된 버전 배포 가능
 - ✅ **사적 사용**: 개인적 용도 사용 가능
 
 **의무사항**:
+
 - 📝 **저작자 표시**: NVIDIA Corporation 명시 필요
 - 📝 **라이센스 표시**: CC BY 4.0 라이센스 고지 필요
 - 📝 **변경사항 표시**: 수정한 경우 변경사항 명시 권장
@@ -371,12 +373,14 @@ OpenMathReasoning 데이터셋은 **Creative Commons Attribution 4.0 Internation
 ### 파이프라인 이슈 및 해결
 
 **초기 문제 수 불일치**:
+
 - 초기 보고: 540K 문제
 - 실제 릴리즈: 306K 문제
 - 원인: 필터링 과정에서 문제 제거
 - 해결: 투명한 데이터 처리 과정 공개
 
 **137K 증명 문제 손실**:
+
 - 파이프라인 버그로 인한 데이터 손실
 - 복구 후 성능 저하 발견
 - 현재 개선 방안 연구 중
@@ -386,6 +390,7 @@ OpenMathReasoning 데이터셋은 **Creative Commons Attribution 4.0 Internation
 ### 교육 분야
 
 1. **개인 맞춤형 수학 튜터**
+
    ```python
    # 수학 튜터 시스템 예시
    class MathTutor:
@@ -431,6 +436,7 @@ OpenMathReasoning 데이터셋은 **Creative Commons Attribution 4.0 Internation
 ### 추론 방법별 성능 분석
 
 **CoT vs TIR 비교**:
+
 - **CoT 장점**: 논리적 사고 과정 명확
 - **TIR 장점**: 복잡한 계산에서 우수
 - **GenSelect 효과**: 두 방법 모두 크게 향상
@@ -486,4 +492,4 @@ CoT, TIR, GenSelect라는 **혁신적인 추론 방법론**과 체계적인 **�
 - [ArXiv 논문: AIMO-2 Winning Solution](https://arxiv.org/abs/2504.16891)
 - [OpenMath-Nemotron 모델 시리즈](https://huggingface.co/collections/nvidia/openmathReasoning-65f5c88537a3a906b26f0f46)
 - [Creative Commons BY 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
-- [NVIDIA AI 윤리 정책](https://www.nvidia.com/en-us/ai-data-science/ai-governance/) 
+- [NVIDIA AI 윤리 정책](https://www.nvidia.com/en-us/ai-data-science/ai-governance/)

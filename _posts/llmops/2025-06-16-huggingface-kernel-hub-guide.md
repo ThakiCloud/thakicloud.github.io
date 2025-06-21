@@ -168,4 +168,4 @@ GPU·입력 형상·dtype에 따라 편차가 있으므로 실제 서비스 환�
 
 Hugging Face Kernel Hub는 **컴파일 번거로움 없이** 최적화된 CUDA·Triton 커널을 손쉽게 적용할 수 있는 혁신적인 플랫폼입니다. LLM 추론 Latency를 낮추고, 학습 속도를 높이며, DevOps 복잡도를 대폭 줄일 수 있습니다. 지금 바로 `pip install kernels` 후 FlashAttention·RMSNorm 커널을 적용해 보세요!
 
-> 더 자세한 내용은 Hugging Face 공식 블로그 글을 참고하세요: [🏎️ Enhance Your Models in 5 Minutes with the Hugging Face Kernel Hub](https://huggingface.co/blog/hello-hf-kernels) \[HF Blog\] 
+> 더 자세한 내용은 Hugging Face 공식 블로그 글을 참고하세요: [🏎️ Enhance Your Models in 5 Minutes with the Hugging Face Kernel Hub](https://huggingface.co/blog/hello-hf-kernels) \[HF Blog\]

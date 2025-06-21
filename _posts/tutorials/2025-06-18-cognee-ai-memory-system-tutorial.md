@@ -23,7 +23,7 @@ AI 에이전트가 과거 대화와 학습 내용을 기억하고 활용할 수 
 
 ## Cognee란 무엇인가?
 
-Cognee는 AI 에이전트를 위한 동적 메모리 시스템으로, ECL(Extract, Cognify, Load) 파이프라인을 통해 확장 가능하고 모듈형 구조를 제공합니다. 
+Cognee는 AI 에이전트를 위한 동적 메모리 시스템으로, ECL(Extract, Cognify, Load) 파이프라인을 통해 확장 가능하고 모듈형 구조를 제공합니다.
 
 ### 핵심 특징
 
@@ -389,6 +389,7 @@ async def batch_process(documents):
 ### 일반적인 오류와 해결방법
 
 **1. API 키 오류**
+
 ```python
 # 환경변수 확인
 import os
@@ -396,12 +397,14 @@ print(os.environ.get("LLM_API_KEY"))
 ```
 
 **2. 메모리 부족**
+
 ```python
 # 청크 크기 줄이기
 await cognee.cognify(chunk_size=256)
 ```
 
 **3. 연결 오류**
+
 ```python
 # 데이터베이스 연결 확인
 from cognee.infrastructure.databases import get_relational_engine
@@ -430,4 +433,4 @@ Cognee는 AI 에이전트에 메모리 기능을 부여하는 강력하면서도
 3. **기여**: 오픈소스 프로젝트에 기여하고 커뮤니티와 함께 발전시켜보세요
 4. **확장**: 더 복잡한 AI 에이전트 시스템을 구축해보세요
 
-이제 여러분도 AI 에이전트의 메모리 전문가가 되어보세요! 
+이제 여러분도 AI 에이전트의 메모리 전문가가 되어보세요!

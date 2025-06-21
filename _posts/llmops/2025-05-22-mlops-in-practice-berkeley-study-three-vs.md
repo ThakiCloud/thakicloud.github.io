@@ -143,5 +143,4 @@ Berkeley 연구는 “MLOps는 공학적 난제가 아니라 *사회-기술적 �
 
 ## 참고 문헌
 
-*   Shankar, S., Garcia, R., Hellerstein, J. M., & Parameswaran, A. G. (2022). *Operationalizing Machine Learning: An Interview Study*. arXiv preprint arXiv:2209.09125. Available at: [https://arxiv.org/abs/2209.09125](https://arxiv.org/abs/2209.09125)
-
+* Shankar, S., Garcia, R., Hellerstein, J. M., & Parameswaran, A. G. (2022). *Operationalizing Machine Learning: An Interview Study*. arXiv preprint arXiv:2209.09125. Available at: [https://arxiv.org/abs/2209.09125](https://arxiv.org/abs/2209.09125)

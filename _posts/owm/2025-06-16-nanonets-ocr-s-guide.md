@@ -96,6 +96,7 @@ evllm serve nanonets/Nanonets-OCR-s
 
 # 2) 클라이언트 예제
 ```
+
 ```python
 from openai import OpenAI, AsyncOpenAI
 import base64, asyncio
@@ -146,4 +147,4 @@ OWM 단계별로 S3 이벤트 트리거 → AWS Lambda(vLLM RPC) → Elasticsear
 
 Nanonets-OCR-s는 **일반 OCR+LLM 전처리**의 공백을 메우는 강력한 모델로, 복잡한 문서를 구조화해 RAG·계약 자동화·데이터셋 제작에 즉시 활용할 수 있습니다. Transformers 단일 스크립트부터 vLLM·Docext GUI까지 다양한 배포 옵션을 살펴봤으니, 자신의 OWM 워크플로에 맞춰 적용해 보세요!
 
-> 모델 카드와 자세한 사용 예시는 [Nanonets-OCR-s on Hugging Face](https://huggingface.co/nanonets/Nanonets-OCR-s)에서 확인할 수 있습니다. \[HF Model Card\] 
+> 모델 카드와 자세한 사용 예시는 [Nanonets-OCR-s on Hugging Face](https://huggingface.co/nanonets/Nanonets-OCR-s)에서 확인할 수 있습니다. \[HF Model Card\]

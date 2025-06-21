@@ -30,6 +30,7 @@ toc_label: "목차"
 **Strudel**은 **Tidal Cycles 패턴 언어의 공식 JavaScript 포트**입니다. Tidal Cycles는 Haskell 기반의 라이브 코딩 언어로, 복잡한 리듬과 멜로디 패턴을 코드로 표현하는 데 특화되어 있습니다.
 
 **주요 특징:**
+
 - **웹 기반**: 브라우저에서 바로 실행 가능
 - **실시간 코딩**: 코드 변경이 즉시 음악에 반영
 - **패턴 중심**: 반복과 변형을 통한 음악 구조 생성
@@ -45,6 +46,7 @@ s("bd sd hh sd")
 ```
 
 이 간단한 코드만으로도:
+
 - `bd` (베이스 드럼), `sd` (스네어 드럼), `hh` (하이햇) 패턴 생성
 - 속도를 `<1 2 1 0.5>` 패턴으로 변조
 - 볼륨을 `0.8 0.6 0.4 0.6` 패턴으로 조절
@@ -66,6 +68,7 @@ stack(
 ```
 
 **라이브 코딩의 장점:**
+
 - **즉석 창작**: 관객 앞에서 실시간으로 음악 생성
 - **투명한 과정**: 코드가 음악이 되는 과정을 시각적으로 공개
 - **무한한 변형**: 코드 수정으로 즉시 새로운 음악 창조
@@ -84,6 +87,7 @@ n("0 [3 5] 2 [1 4]")
 ```
 
 **알고리즘 작곡의 특징:**
+
 - **패턴 기반**: 수학적 구조를 음악으로 변환
 - **확률적 요소**: 랜덤 함수로 예측 불가능한 변화
 - **자기 유사성**: 프랙탈 구조로 복잡하면서도 일관된 음악
@@ -100,6 +104,7 @@ sound("c d e f g a b c5")
 ```
 
 **교육적 활용:**
+
 - **시각적 피드백**: 코드 변경이 즉시 소리로 확인
 - **점진적 학습**: 단순한 패턴부터 복잡한 구조까지
 - **창의적 표현**: 기술 학습과 예술적 창작의 결합
@@ -117,6 +122,7 @@ n("0 3 7 10")
 ```
 
 **통합 기능:**
+
 - **MIDI 지원**: 하드웨어/소프트웨어 신디사이저 제어
 - **OSC 통신**: 다른 음악 소프트웨어와 실시간 통신
 - **유연한 시퀀싱**: 전통적인 시퀀서보다 강력한 패턴 조작
@@ -156,16 +162,19 @@ stack(
 ### 코드 구조 분석
 
 **1. 기본 설정**
+
 - `samples('github:eddyflux/crate')`: GitHub에서 샘플 로드
 - `setcps(.75)`: 템포를 75 BPM으로 설정
 - `let chords = chord("<Bbm9 Fm9>/4")`: 코드 진행 정의
 
 **2. 레이어별 구성**
+
 - **드럼**: 킥, 스네어, 하이햇, 라이드의 복합 패턴
 - **화성**: 전자 피아노로 코드 진행
 - **멜로디**: 코드 기반의 복잡한 멜로디 라인
 
 **3. 고급 기법들**
+
 - `struct()`: 리듬 구조 정의
 - `voicing()`: 코드 보이싱 자동 생성
 - `rand.range()`: 확률적 매개변수 조절
@@ -176,6 +185,7 @@ stack(
 ### 1. 패턴 시스템 (Pattern System)
 
 **미니 표시법 (Mini-Notation)**
+
 ```javascript
 // 기본 패턴
 "bd sd hh sd"        // 4비트 패턴
@@ -185,6 +195,7 @@ stack(
 ```
 
 **패턴 변형 함수들**
+
 ```javascript
 s("bd sd hh sd")
   .fast(2)          // 2배 빠르게
@@ -197,6 +208,7 @@ s("bd sd hh sd")
 ### 2. 시간 조작 (Time Modifiers)
 
 **복잡한 시간 구조**
+
 ```javascript
 // 폴리리듬 - 3 대 4 리듬
 stack(
@@ -212,6 +224,7 @@ s("bd sd hh cp")
 ### 3. 오디오 효과 (Audio Effects)
 
 **실시간 오디오 프로세싱**
+
 ```javascript
 s("bd sd hh sd")
   .lpf(sine.range(200, 2000).slow(8))  // 로우패스 필터 모듈레이션
@@ -224,6 +237,7 @@ s("bd sd hh sd")
 ### 4. 신디사이저 엔진
 
 **내장 신디사이저**
+
 ```javascript
 // 서브트랙티브 신디사이저
 n("c3 eb3 g3 bb3")
@@ -296,6 +310,7 @@ stack(
 ### 1. 확장 가능한 아키텍처
 
 **패키지 시스템**
+
 - **@strudel-cycles/core**: 핵심 패턴 엔진
 - **@strudel-cycles/webaudio**: 웹 오디오 통합
 - **@strudel-cycles/midi**: MIDI 입출력
@@ -303,6 +318,7 @@ stack(
 - **@strudel-cycles/csound**: CSound 통합
 
 **커스텀 패키지 개발**
+
 ```javascript
 // 사용자 정의 함수 추가
 Pattern.register('myEffect', (pat, amount) => {
@@ -319,6 +335,7 @@ s("bd sd hh sd").myEffect(0.5)
 ### 2. 시각적 피드백 시스템
 
 **실시간 시각화**
+
 ```javascript
 // Hydra와의 통합 - 시각적 피드백
 s("bd sd hh sd")
@@ -332,6 +349,7 @@ s("bd sd hh sd")
 ### 3. 교육 리소스
 
 **체계적인 학습 경로**
+
 1. **First Sounds**: 기본 소리 생성
 2. **First Notes**: 음정과 스케일
 3. **First Effects**: 오디오 효과 적용
@@ -498,6 +516,7 @@ tutorial.evaluate()  // 학습 평가
 ### 1. 학습 로드맵
 
 **초급 단계 (1-2주)**
+
 ```javascript
 // 기본 패턴 익히기
 s("bd sd hh sd")
@@ -506,6 +525,7 @@ n("0 2 4 7").scale("major")
 ```
 
 **중급 단계 (2-4주)**  
+
 ```javascript
 // 효과와 변형 적용
 s("bd sd hh sd").fast(2).lpf(800)
@@ -516,6 +536,7 @@ stack(
 ```
 
 **고급 단계 (1-2개월)**
+
 ```javascript
 // 복잡한 구조와 실시간 조작
 const live = new LiveCoding()
@@ -527,6 +548,7 @@ live.mix()
 ### 2. 실무 적용 시나리오
 
 **1. 게임 오디오**
+
 ```javascript
 // 동적 게임 음악
 const gameMusic = (playerState) => {
@@ -541,6 +563,7 @@ const gameMusic = (playerState) => {
 ```
 
 **2. 인터랙티브 설치 작품**
+
 ```javascript
 // 센서 데이터 기반 음악
 const installation = (sensorData) => {
@@ -554,6 +577,7 @@ const installation = (sensorData) => {
 ```
 
 **3. 라이브 공연**
+
 ```javascript
 // 공연용 라이브 세트
 const liveSet = {
@@ -622,4 +646,4 @@ const liveSet = {
       <span class="link-preview-url">github.com</span>
     </div>
   </a>
-</figure> 
+</figure>

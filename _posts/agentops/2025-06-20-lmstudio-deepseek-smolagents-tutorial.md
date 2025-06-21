@@ -23,6 +23,7 @@ toc_label: LM Studio Agent Tutorial
 이 튜토리얼에서는 **LM Studio**에서 **DeepSeek-R1 모델**을 활용해 웹 스크래핑과 텍스트 요약 기능을 가진 실전 Agent 시스템을 구축합니다. **Smolagents**로 Agent 로직을 구현하고, **AGUIApp**으로 사용자 친화적인 웹 인터페이스까지 제공하는 완전한 솔루션을 단계별로 만들어보겠습니다.
 
 ### 🎯 학습 목표
+
 - LM Studio 설치 및 DeepSeek-R1 모델 설정
 - Smolagents를 활용한 멀티 도구 Agent 구현
 - 웹 스크래핑과 LLM 요약을 결합한 실용적 도구 개발
@@ -34,6 +35,7 @@ toc_label: LM Studio Agent Tutorial
 ### 1.1 LM Studio 설치
 
 **macOS 설치:**
+
 ```bash
 # Homebrew를 통한 설치
 brew install --cask lm-studio
@@ -43,6 +45,7 @@ brew install --cask lm-studio
 ```
 
 **Windows/Linux:**
+
 1. [LM Studio 공식 사이트](https://lmstudio.ai/)에서 설치 파일 다운로드
 2. 설치 후 실행
 
@@ -711,12 +714,14 @@ if __name__ == "__main__":
 ### 6.1 단계별 실행
 
 **1단계: LM Studio 서버 확인**
+
 ```bash
 # LM Studio에서 DeepSeek-R1 모델이 로드되어 있는지 확인
 curl http://localhost:1234/v1/models
 ```
 
 **2단계: CLI 버전 실행**
+
 ```bash
 # 가상환경 활성화
 source agent_env/bin/activate
@@ -726,6 +731,7 @@ python main.py
 ```
 
 **3단계: 웹 UI 실행**
+
 ```bash
 # 웹 UI 실행 (별도 터미널)
 python ui_app.py
@@ -734,6 +740,7 @@ python ui_app.py
 ### 6.2 사용 예시
 
 **CLI에서 뉴스 분석:**
+
 ```
 선택하세요 (1-3): 1
 분석할 웹사이트 URL을 입력하세요: https://techcrunch.com
@@ -741,6 +748,7 @@ python ui_app.py
 ```
 
 **웹 UI에서 사용:**
+
 ```
 웹사이트 https://www.testingcatalog.com/ 에서 최신 뉴스 3개를 분석해줘
 ```
@@ -904,6 +912,7 @@ class NewsDatabase:
 ### 8.1 일반적인 문제와 해결책
 
 **문제 1: LM Studio 연결 실패**
+
 ```bash
 # 해결 방법
 1. LM Studio가 실행 중인지 확인
@@ -917,6 +926,7 @@ curl -X POST http://localhost:1234/v1/chat/completions \
 ```
 
 **문제 2: 웹 스크래핑 실패**
+
 ```python
 # 해결 방법: 더 견고한 스크래핑 로직
 def robust_scraping(url):
@@ -933,6 +943,7 @@ def robust_scraping(url):
 ```
 
 **문제 3: 메모리 부족**
+
 ```python
 # 해결 방법: 배치 처리 및 메모리 관리
 def process_articles_in_batches(articles, batch_size=2):
@@ -944,6 +955,7 @@ def process_articles_in_batches(articles, batch_size=2):
 ### 8.2 성능 최적화
 
 **비동기 처리:**
+
 ```python
 import asyncio
 import aiohttp
@@ -955,6 +967,7 @@ async def async_scrape_articles(urls):
 ```
 
 **캐싱 구현:**
+
 ```python
 from functools import lru_cache
 import hashlib
@@ -981,16 +994,19 @@ def get_text_hash(text):
 ### 9.2 향후 확장 계획
 
 **멀티모달 기능 추가:**
+
 - 이미지 분석 및 OCR
 - 음성 인식 및 TTS
 - PDF/문서 처리
 
 **고급 분석 기능:**
+
 - 트렌드 분석 및 예측
 - 다국어 지원
 - 실시간 모니터링 대시보드
 
 **엔터프라이즈 기능:**
+
 - 사용자 권한 관리
 - API 키 관리
 - 상세한 로깅 및 감사
@@ -1007,6 +1023,7 @@ def get_text_hash(text):
 ---
 
 *이 튜토리얼의 전체 소스코드는 [GitHub](https://github.com/your-repo/lmstudio-agent-tutorial)에서 확인하실 수 있습니다.*
+
 ```
 
-이 글은 너무 길어서 계속해서 UI 부분과 마지막 부분을 추가로 작성하겠습니다. 
+이 글은 너무 길어서 계속해서 UI 부분과 마지막 부분을 추가로 작성하겠습니다.

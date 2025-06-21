@@ -22,12 +22,14 @@ toc_label: "목차"
 MiniMax-M1은 세계 최초의 오픈 웨이트, 대규모 하이브리드 어텐션 추론 모델입니다. MiniMax에서 개발한 이 모델은 혁신적인 하이브리드 어텐션 메커니즘을 통해 뛰어난 추론 성능과 긴 컨텍스트 처리 능력을 제공합니다.
 
 **GitHub 통계**:
+
 - ⭐ **110 stars**
 - 🍴 **1 fork**
 - 👥 **3 contributors**
 - 📄 **기술 보고서** 포함
 
 **모델 특징**:
+
 - 🧠 **하이브리드 어텐션**: 혁신적인 어텐션 메커니즘
 - 🔢 **뛰어난 수학 추론**: AIME 2024에서 86.0% 성능
 - 💻 **코딩 능력**: LiveCodeBench에서 65.0% 성능
@@ -43,6 +45,7 @@ MiniMax-M1은 세계 최초의 오픈 웨이트, 대규모 하이브리드 어�
 MiniMax-M1의 가장 중요한 혁신은 **하이브리드 어텐션 메커니즘**입니다. 이는 기존의 단일 어텐션 방식과 달리 여러 어텐션 패턴을 조합하여 효율성과 성능을 동시에 달성합니다.
 
 **하이브리드 어텐션의 장점**:
+
 - **효율적인 메모리 사용**: 긴 시퀀스에서도 메모리 효율성 유지
 - **향상된 추론 능력**: 복잡한 논리적 관계 파악
 - **확장 가능성**: 다양한 컨텍스트 길이에 적응
@@ -85,6 +88,7 @@ MiniMax-M1의 가장 중요한 혁신은 **하이브리드 어텐션 메커니�
 ### 수학적 추론
 
 **AIME (American Invitational Mathematics Examination)**:
+
 - **AIME 2024**: 86.0% (GPT-4o 83.3%, Claude-3.5-Sonnet 85.7% 대비 우수)
 - **AIME 2025**: 76.9% (최신 문제에서도 높은 성능)
 - **MATH-500**: 96.8% (수학 문제 해결에서 최고 수준)
@@ -92,43 +96,51 @@ MiniMax-M1의 가장 중요한 혁신은 **하이브리드 어텐션 메커니�
 ### 코딩 능력
 
 **LiveCodeBench (2024/8~2025/5)**:
+
 - **MiniMax-M1**: 65.0%
 - **GPT-4o**: 62.3%
 - **Claude-3.5-Sonnet**: 65.9%
 - **o1-preview**: 73.1% (참고용)
 
 **FullStackBench**:
+
 - **MiniMax-M1**: 68.3%
 - 전체적으로 경쟁 모델들과 유사한 성능
 
 ### 추론 및 지식
 
 **GPQA Diamond**:
+
 - **MiniMax-M1**: 70.0%
 - 과학적 추론에서 안정적인 성능
 
 **ZebraLogic**:
+
 - **MiniMax-M1**: 86.8%
 - 논리적 추론에서 뛰어난 성능
 
 **MMLU-Pro**:
+
 - **MiniMax-M1**: 81.1%
 - 종합적인 지식 평가에서 우수한 결과
 
 ### 소프트웨어 엔지니어링
 
 **SWE-bench Verified**:
+
 - **MiniMax-M1**: 56.0%
 - 실제 소프트웨어 버그 수정 작업에서 높은 성능
 
 ### 긴 컨텍스트 처리
 
 **OpenAI-MRCR**:
+
 - **128k 컨텍스트**: 73.4%
 - **1M 컨텍스트**: 56.2%
 - 매우 긴 문서 처리에서 우수한 성능
 
 **LongBench-v2**:
+
 - **MiniMax-M1**: 61.5%
 - 다양한 긴 컨텍스트 작업에서 안정적인 성능
 
@@ -139,6 +151,7 @@ MiniMax-M1의 가장 중요한 혁신은 **하이브리드 어텐션 메커니�
 ### MiniMax-M1-40k
 
 **기본 모델**:
+
 - **컨텍스트 길이**: 40,960 토큰
 - **용도**: 일반적인 추론 및 코딩 작업
 - **성능**: 균형 잡힌 성능과 효율성
@@ -146,6 +159,7 @@ MiniMax-M1의 가장 중요한 혁신은 **하이브리드 어텐션 메커니�
 ### MiniMax-M1-80k
 
 **확장 컨텍스트 모델**:
+
 - **컨텍스트 길이**: 81,920 토큰
 - **용도**: 긴 문서 분석 및 복잡한 추론
 - **성능**: 더 긴 컨텍스트에서 향상된 성능
@@ -157,6 +171,7 @@ MiniMax-M1의 가장 중요한 혁신은 **하이브리드 어텐션 메커니�
 ### vLLM을 사용한 프로덕션 배포
 
 **권장 배포 방법**:
+
 ```bash
 # vLLM 설치
 pip install vllm
@@ -171,6 +186,7 @@ python -m vllm.entrypoints.openai.api_server \
 ```
 
 **vLLM의 장점**:
+
 - 🔥 **뛰어난 서빙 처리량**: 높은 동시 요청 처리
 - ⚡ **효율적인 메모리 관리**: 지능적인 메모리 할당
 - 📦 **강력한 배치 처리**: 요청 배치 최적화
@@ -342,16 +358,17 @@ class CodeReviewer:
 ```
 
 Please analyze:
+
 1. Code quality and style
 2. Potential bugs or issues
 3. Performance optimizations
 4. Best practices recommendations
 5. Security considerations
 """
-        
+
         response = self.generate_response(prompt)
         return response
-    
+
     def suggest_improvements(self, code, language="python"):
         prompt = f"""Suggest improvements for this {language} code:
 
@@ -360,15 +377,17 @@ Please analyze:
 ```
 
 Provide:
+
 1. Refactored code
 2. Explanation of changes
 3. Benefits of improvements
 """
-        
+
         response = self.generate_response(prompt)
         return response
 
 # 사용 예시
+
 reviewer = CodeReviewer()
 code_to_review = """
 def fibonacci(n):
@@ -380,6 +399,7 @@ def fibonacci(n):
 
 review = reviewer.review_code(code_to_review)
 print(review)
+
 ```
 
 ### 긴 문서 분석 시스템
@@ -451,6 +471,7 @@ print(summary)
 MiniMax는 일반 사용 및 평가를 위해 온라인 검색 기능이 있는 챗봇을 제공합니다.
 
 **기능**:
+
 - 실시간 웹 검색
 - 수학 문제 해결
 - 코드 생성 및 디버깅
@@ -461,6 +482,7 @@ MiniMax는 일반 사용 및 평가를 위해 온라인 검색 기능이 있는 
 개발자를 위한 MCP (Model Context Protocol) 서버를 제공합니다.
 
 **지원 기능**:
+
 - 🎥 **비디오 생성**: AI 기반 비디오 콘텐츠 생성
 - 🖼️ **이미지 생성**: 텍스트-이미지 변환
 - 🗣️ **음성 합성**: 자연스러운 음성 생성
@@ -578,6 +600,7 @@ def batch_generate(prompts, batch_size=4):
 ### 장단점 분석
 
 **장점**:
+
 - ✅ **혁신적인 아키텍처**: 하이브리드 어텐션의 효율성
 - ✅ **뛰어난 추론 성능**: 수학 및 논리적 추론에서 우수
 - ✅ **오픈 웨이트**: 완전한 모델 접근 가능
@@ -585,6 +608,7 @@ def batch_generate(prompts, batch_size=4):
 - ✅ **긴 컨텍스트**: 최대 1M 토큰 지원
 
 **개선 영역**:
+
 - 🔄 **커뮤니티 생태계**: 상대적으로 새로운 모델
 - 🔄 **문서화**: 더 많은 사용 예제 필요
 - 🔄 **최적화**: 추가적인 성능 튜닝 가능
@@ -596,11 +620,13 @@ def batch_generate(prompts, batch_size=4):
 ### 기술적 개선
 
 **하이브리드 어텐션 고도화**:
+
 - 더 효율적인 어텐션 패턴 개발
 - 메모리 사용량 추가 최적화
 - 더 긴 컨텍스트 지원
 
 **성능 향상**:
+
 - 추론 속도 개선
 - 배치 처리 최적화
 - 하드웨어 가속 지원 강화
@@ -608,12 +634,14 @@ def batch_generate(prompts, batch_size=4):
 ### 응용 분야 확장
 
 **전문 도메인**:
+
 - 과학 연구 지원
 - 의료 진단 보조
 - 법률 문서 분석
 - 금융 데이터 분석
 
 **멀티모달 확장**:
+
 - 이미지-텍스트 통합
 - 오디오 처리 능력
 - 비디오 이해 기능
@@ -625,22 +653,25 @@ def batch_generate(prompts, batch_size=4):
 MiniMax-M1은 하이브리드 어텐션 메커니즘을 통해 추론 성능과 효율성을 동시에 달성한 혁신적인 오픈 웨이트 모델입니다. 주요 성과는 다음과 같습니다:
 
 **기술적 혁신**:
+
 - **하이브리드 어텐션**: 새로운 어텐션 패러다임 제시
 - **뛰어난 추론 능력**: 수학, 코딩, 논리적 추론에서 최고 수준
 - **긴 컨텍스트 처리**: 최대 1M 토큰까지 효율적 처리
 - **함수 호출**: 구조화된 도구 사용 지원
 
 **실무적 가치**:
+
 - **오픈 웨이트**: 완전한 모델 접근성
 - **프로덕션 준비**: vLLM 등을 통한 쉬운 배포
 - **다양한 응용**: 교육, 연구, 개발 등 폭넓은 활용
 - **확장성**: 다양한 하드웨어 환경 지원
 
 **생태계 기여**:
+
 - **오픈소스 발전**: 투명한 모델 공개
 - **연구 촉진**: 하이브리드 어텐션 연구 활성화
 - **실용성**: 실제 문제 해결에 적용 가능
 
 MiniMax-M1은 오픈 웨이트 모델의 새로운 가능성을 보여주며, 특히 추론이 중요한 작업에서 상용 모델에 필적하는 성능을 제공합니다. 하이브리드 어텐션이라는 혁신적인 접근 방식은 향후 LLM 발전의 중요한 방향을 제시하고 있습니다.
 
-더 자세한 정보는 [MiniMax-M1 GitHub 저장소](https://github.com/MiniMax-AI/MiniMax-M1)와 [공식 웹사이트](https://www.minimax.io/)에서 확인할 수 있습니다. 
+더 자세한 정보는 [MiniMax-M1 GitHub 저장소](https://github.com/MiniMax-AI/MiniMax-M1)와 [공식 웹사이트](https://www.minimax.io/)에서 확인할 수 있습니다.

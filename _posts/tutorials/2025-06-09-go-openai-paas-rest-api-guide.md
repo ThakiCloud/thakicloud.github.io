@@ -686,6 +686,7 @@ curl http://localhost:8080/api/v1/health
 ```
 
 예상 응답:
+
 ```json
 {
   "message": "Go REST API Server is running",
@@ -1079,7 +1080,8 @@ go mod download
 ---
 
 **참고 링크:**
+
 - [Go 공식 문서](https://golang.org/doc/)
 - [Gin 웹 프레임워크](https://gin-gonic.com/)
 - [OrbStack 공식 사이트](https://orbstack.dev/)
-- [Docker Compose 문서](https://docs.docker.com/compose/) 
+- [Docker Compose 문서](https://docs.docker.com/compose/)

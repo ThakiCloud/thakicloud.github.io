@@ -56,6 +56,7 @@ open http://localhost:3000
 ## 4. 노드 타입별 활용법
 
 ### 4.1 Input Node
+
 워크플로우의 진입점으로, 사용자 쿼리나 외부 데이터를 받습니다.
 
 ```json
@@ -68,6 +69,7 @@ open http://localhost:3000
 ```
 
 ### 4.2 LLM Node
+
 대화형 AI 모델을 통해 의사결정을 수행합니다.
 
 ```json
@@ -83,6 +85,7 @@ open http://localhost:3000
 ```
 
 ### 4.3 Tool Node
+
 외부 API나 서비스를 호출합니다.
 
 ```json
@@ -98,6 +101,7 @@ open http://localhost:3000
 ```
 
 ### 4.4 Agent Node
+
 LLM과 Tool을 결합한 복합 노드입니다.
 
 ```json
@@ -243,6 +247,7 @@ agent-flow/
 ## 10. 고급 패턴
 
 ### 10.1 평가-최적화 루프
+
 ```json
 {
   "nodes": [
@@ -259,6 +264,7 @@ agent-flow/
 ```
 
 ### 10.2 조건부 라우팅
+
 ```json
 {
   "nodes": [
@@ -277,4 +283,4 @@ agent-flow/
 
 Agent Flow는 복잡한 AI 워크플로우를 시각적으로 설계하고 API로 실행할 수 있는 강력한 플랫폼입니다. Composio의 광범위한 도구 생태계와 LangGraph의 유연한 오케스트레이션을 결합하여, 개발자가 빠르게 AI 자동화 솔루션을 구축할 수 있도록 지원합니다. 노코드 인터페이스와 코드 확장성을 모두 제공하므로, 프로토타이핑부터 프로덕션 배포까지 전 과정을 커버할 수 있습니다.
 
-> 프로젝트 소스코드와 최신 업데이트는 GitHub에서 확인하세요: [ComposioHQ/agent-flow](https://github.com/ComposioHQ/agent-flow) \[GitHub Repo\] 
+> 프로젝트 소스코드와 최신 업데이트는 GitHub에서 확인하세요: [ComposioHQ/agent-flow](https://github.com/ComposioHQ/agent-flow) \[GitHub Repo\]

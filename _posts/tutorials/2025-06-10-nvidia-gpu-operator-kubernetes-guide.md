@@ -32,22 +32,28 @@ GPU Operator는 GPU 관련 구성 요소들을 쿠버네티스 클러스터에 �
 GPU Operator는 다음과 같은 NVIDIA 구성요소들을 자동으로 설치 및 관리합니다:
 
 ### 1. NVIDIA 드라이버 (NVIDIA Driver)
+
 GPU 장치를 쿠버네티스 노드에서 인식하게 합니다.
 
 ### 2. NVIDIA Container Toolkit (nvidia-container-toolkit)
+
 쿠버네티스 파드가 GPU 리소스를 사용할 수 있도록 런타임 통합을 제공합니다.
 
 ### 3. NVIDIA Device Plugin
+
 - GPU 리소스를 쿠버네티스에 노출
 - 파드 스케줄러가 GPU 요청을 처리할 수 있도록 지원
 
 ### 4. NVIDIA DCGM Exporter (NVIDIA Data Center GPU Manager)
+
 GPU 헬스/모니터링 지표를 Prometheus로 내보냅니다.
 
 ### 5. NVIDIA MIG 관리 (Multi-Instance GPU)
+
 A100, H100과 같은 GPU에서 MIG 기능 사용 시 활성화 가능합니다.
 
 ### 6. NVIDIA GPU Feature Discovery
+
 GPU 특성 정보를 자동 감지하고 노드 레이블링을 수행합니다.
 
 ## 사용 시 이점
@@ -65,6 +71,7 @@ GPU 특성 정보를 자동 감지하고 노드 레이블링을 수행합니다.
 GPU Operator를 설치하기 전에 다음 조건들을 확인해야 합니다:
 
 ### 시스템 요구사항
+
 - **쿠버네티스 버전**: 1.10 이상
 - **노드**: NVIDIA GPU가 장착된 워커 노드
 - **컨테이너 런타임**: containerd 또는 Docker
@@ -72,6 +79,7 @@ GPU Operator를 설치하기 전에 다음 조건들을 확인해야 합니다:
 - **네트워크**: 클러스터 인터넷 연결 (드라이버 다운로드 필요)
 
 ### 권한 요구사항
+
 - 클러스터 관리자 권한 (cluster-admin)
 - Helm 3.x 설치됨
 
@@ -682,12 +690,14 @@ spec:
 ## 참고 자료
 
 ### 공식 문서 및 리소스
+
 - **공식 문서**: [NVIDIA GPU Operator 문서](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/index.html)
 - **GitHub 리포지토리**: [NVIDIA/gpu-operator](https://github.com/NVIDIA/gpu-operator)
 - **Helm 차트**: [ArtifactHub - GPU Operator](https://artifacthub.io/packages/helm/nvidia/gpu-operator)
 - **NVIDIA 개발자 블로그**: [GPU Operator 관련 글](https://developer.nvidia.com/blog/announcing-the-nvidia-gpu-operator-for-kubernetes/)
 
 ### 커뮤니티 및 지원
+
 - **NVIDIA Developer Forums**: GPU Operator 관련 질문과 답변
 - **Kubernetes Slack**: #sig-node 채널에서 GPU 관련 논의
 - **Stack Overflow**: nvidia-gpu-operator 태그
@@ -700,4 +710,4 @@ NVIDIA GPU Operator는 쿠버네티스 환경에서 GPU 자원을 효율적으�
 
 ---
 
-*이 포스트는 NVIDIA 공식 문서와 실제 운영 경험을 바탕으로 작성되었습니다. 최신 정보는 [NVIDIA GPU Operator 공식 문서](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/index.html)를 참조하시기 바랍니다.* 
+*이 포스트는 NVIDIA 공식 문서와 실제 운영 경험을 바탕으로 작성되었습니다. 최신 정보는 [NVIDIA GPU Operator 공식 문서](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/index.html)를 참조하시기 바랍니다.*

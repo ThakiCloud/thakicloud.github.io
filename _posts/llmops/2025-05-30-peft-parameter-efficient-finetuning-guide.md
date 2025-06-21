@@ -124,10 +124,13 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 #### 수학적 원리
 
 기존 가중치 행렬 W에 대해:
+
 ```
 W_new = W + BA
 ```
+
 여기서:
+
 - W: 원래 가중치 (고정)
 - B: r×d 행렬
 - A: k×r 행렬  
@@ -803,4 +806,4 @@ OpenAI, Google, Meta 등 주요 기업들이 이미 PEFT를 적극 도입하고 
 
 ---
 
-*이 글이 도움이 되었다면, PEFT GitHub에 ⭐를 눌러주세요!* 
+*이 글이 도움이 되었다면, PEFT GitHub에 ⭐를 눌러주세요!*

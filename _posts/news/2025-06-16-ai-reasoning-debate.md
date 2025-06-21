@@ -19,7 +19,6 @@ toc_label: "Contents"
 
 아래 이미지는 토론 과정에서 공유된 주요 슬라이드 및 시각 자료로, 각 인사이트를 한눈에 확인할 수 있습니다.  
 
-
 <iframe src="/assets/pdf/ai_reasoning_debate_apple_lawsen_20250615224622.pdf#toolbar=0" width="100%" height="800px" title="AI Reasoning Debate PDF"></iframe>
 
 ## 이미지 자료
@@ -66,4 +65,4 @@ toc_label: "Contents"
   
 - 추론 중심 모델을 실제 제품에 적용하기 위한 신뢰성(reliability) 검증 절차 마련.
 
-본 포스트가 AI 추론 연구 동향을 이해하는 데 도움이 되길 바랍니다. 
+본 포스트가 AI 추론 연구 동향을 이해하는 데 도움이 되길 바랍니다.

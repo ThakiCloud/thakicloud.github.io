@@ -19,24 +19,29 @@ toc_label: "AI Engineering Roadmap"
 AI 엔지니어링을 시작하고자 하는 분들을 위한 학습 로드맵을 공유합니다. 이 로드맵은 AI 엔지니어링의 핵심 영역들을 단계별로 학습할 수 있도록 구성되어 있습니다.
 
 ## 👨‍💻 Coding & ML Fundamentals
+
 ### 기초 언어 및 개념
 
 #### Python
+
 - [Python for Data Science (freeCodeCamp)](https://www.youtube.com/watch?v=LHBE6Q9XlzI)
 - Python의 기본 문법과 데이터 구조.
 - NumPy, Pandas, Matplotlib 등 데이터 사이언스 라이브러리.
 
 #### Bash
+
 - [Bash Scripting Crash Course](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
 - 기본 쉘 명령어와 스크립팅.
 - 자동화와 시스템 관리.
 
 #### Typescript (Optional)
+
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 - 정적 타입 시스템.
 - 객체지향 프로그래밍.
 
 #### Statistics & Types of ML Models
+
 - [Khan Academy - Statistics and Probability](https://www.khanacademy.org/math/statistics-probability)
 - [Google's Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)
 - ["The Hundred-Page Machine Learning Book" by Andriy Burkov](http://themlbook.com/)
@@ -117,9 +122,9 @@ AI 엔지니어링을 시작하고자 하는 분들을 위한 학습 로드맵�
 - 관련 커뮤니티에 참여하여 다른 개발자들과 경험을 공유하세요.
 - 지속적으로 최신 트렌드와 기술을 업데이트하세요.
 
-이 로드맵은 AI 엔지니어링의 여정을 시작하는 데 도움이 되길 바랍니다. 각자의 속도와 관심사에 맞춰 학습을 진행하시기 바랍니다. 
+이 로드맵은 AI 엔지니어링의 여정을 시작하는 데 도움이 되길 바랍니다. 각자의 속도와 관심사에 맞춰 학습을 진행하시기 바랍니다.
 
 Ready to Build the Future of Private AI Cloud?
 
-다키클라우드의 미션—“AI Compute & Software for Everyone”—에 공감한다면, 메일로 지금 바로 문의 주세요. 
-📧 info@thakicloud.co.kr 
+다키클라우드의 미션—“AI Compute & Software for Everyone”—에 공감한다면, 메일로 지금 바로 문의 주세요.
+📧 info@thakicloud.co.kr

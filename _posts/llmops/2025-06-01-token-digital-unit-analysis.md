@@ -111,4 +111,4 @@ toc_label: 목차
 [3]: https://arxiv.org/abs/2303.16727?utm_source=chatgpt.com
 [4]: https://www.coindesk.com/business/2024/11/13/blackrock-expands-tokenized-fund-buidl-beyond-ethereum-to-five-new-blockchains?utm_source=chatgpt.com
 [5]: https://thecryptobasic.com/2025/03/25/blackrock-expands-1-7b-tokenized-money-market-funds-to-solana/?utm_source=chatgpt.com
-[6]: https://www.hkma.gov.hk/eng/news-and-media/press-releases/2024/02/20240207-6/?utm_source=chatgpt.com 
+[6]: https://www.hkma.gov.hk/eng/news-and-media/press-releases/2024/02/20240207-6/?utm_source=chatgpt.com

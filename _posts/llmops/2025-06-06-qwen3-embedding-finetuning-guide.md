@@ -184,6 +184,6 @@ doc_embeddings = get_embeddings(["This paper discusses neural networks..."])
 
 ## 마무리
 
-Qwen3-Embedding 파인튜닝을 통해 도메인 특화된 검색 시스템을 구축할 수 있습니다. LoRA와 DeepSpeed를 활용하면 제한된 자원으로도 효과적인 미세 조정이 가능합니다. 
+Qwen3-Embedding 파인튜닝을 통해 도메인 특화된 검색 시스템을 구축할 수 있습니다. LoRA와 DeepSpeed를 활용하면 제한된 자원으로도 효과적인 미세 조정이 가능합니다.
 
-여러분의 특정 사용 사례에 맞게 데이터셋과 하이퍼파라미터를 조정하여 최적의 성능을 달성해보세요. 
+여러분의 특정 사용 사례에 맞게 데이터셋과 하이퍼파라미터를 조정하여 최적의 성능을 달성해보세요.

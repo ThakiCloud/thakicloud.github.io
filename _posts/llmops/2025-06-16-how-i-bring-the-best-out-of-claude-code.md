@@ -128,6 +128,7 @@ func process(data []byte) string {
 ```
 
 Include unit tests using Go's testing package.
+
 ```
 
 **Claude 예상 응답 (요약)**
@@ -196,4 +197,4 @@ test('debounce should delay execution', () => {
 
 위 예시를 바탕으로 팀 프로젝트에 맞는 도메인 코드·테스트 케이스를 추가하여 Claude 프롬프트 템플릿을 확장하세요.
 
-> 전체 구현 예시는 GitHub Gist에서 확인할 수 있습니다. 
+> 전체 구현 예시는 GitHub Gist에서 확인할 수 있습니다.

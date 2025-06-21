@@ -109,6 +109,6 @@ sass-migrator namespace path/to/**/*.scss
 
 ## 정리
 
-1. **도구 설치** → 2. **division → module → namespace 순차 마이그레이션** → 3. **빌드·CI 업데이트** → 4. **수동 보강 & 테스트** 
+1. **도구 설치** → 2. **division → module → namespace 순차 마이그레이션** → 3. **빌드·CI 업데이트** → 4. **수동 보강 & 테스트**
 
-순서로 진행하면 대부분의 Sass 3.x 프로젝트를 하루 만에 Dart Sass로 옮길 수 있습니다. 이제 그대로 따라 적용해 보세요! 
+순서로 진행하면 대부분의 Sass 3.x 프로젝트를 하루 만에 Dart Sass로 옮길 수 있습니다. 이제 그대로 따라 적용해 보세요!

@@ -48,26 +48,32 @@ AG-UI는 다른 주요 에이전틱 프로토콜들과 상호 보완적인 역�
 ## 주요 기능
 
 ### 💬 실시간 에이전틱 채팅
+
 - 스트리밍 지원으로 실시간 대화 구현
 - 사용자와 에이전트 간의 자연스러운 상호작용
 
 ### 🔄 양방향 상태 동기화
+
 - 에이전트와 프론트엔드 간의 상태 실시간 동기화
 - 일관된 사용자 경험 보장
 
 ### 🧩 생성형 UI 및 구조화된 메시지
+
 - 동적으로 생성되는 사용자 인터페이스 컴포넌트
 - 에이전트의 응답에 따른 맞춤형 UI 렌더링
 
 ### 🧠 실시간 컨텍스트 강화
+
 - 대화 중 컨텍스트 정보의 실시간 업데이트
 - 더 정확하고 관련성 높은 에이전트 응답
 
 ### 🛠️ 프론트엔드 도구 통합
+
 - 웹 애플리케이션의 기존 도구와 seamless 통합
 - 에이전트가 프론트엔드 기능을 직접 활용
 
 ### 🧑‍💻 인간 참여형(Human-in-the-loop) 협업
+
 - 필요시 인간의 개입이 가능한 워크플로우
 - 복잡한 의사결정 과정에서의 협업 지원
 
@@ -76,6 +82,7 @@ AG-UI는 다른 주요 에이전틱 프로토콜들과 상호 보완적인 역�
 AG-UI는 다양한 인기 에이전트 프레임워크와 통합됩니다:
 
 ### ✅ 지원 완료
+
 - **[LangGraph](https://www.langchain.com/langgraph)** - [데모 보기](https://v0-langgraph-land.vercel.app/)
 - **[Mastra](https://mastra.ai/)** - [데모 보기](https://v0-mastra-land.vercel.app/)
 - **[CrewAI](https://crewai.com/)** - [데모 보기](https://v0-crew-land.vercel.app/)
@@ -84,10 +91,12 @@ AG-UI는 다양한 인기 에이전트 프레임워크와 통합됩니다:
 - **[LlamaIndex](https://github.com/run-llama/llama_index)**
 
 ### 🛠️ 개발 중
+
 - **[Pydantic AI](https://github.com/pydantic/pydantic-ai)**
 - **[Vercel AI SDK](https://github.com/vercel/ai)**
 
 ### 💡 컨트리뷰션 환영
+
 - **[OpenAI Agent SDK](https://openai.github.io/openai-agents-python/)**
 - **[Google ADK](https://google.github.io/adk-docs/get-started/)**
 - **[AWS Bedrock Agents](https://aws.amazon.com/bedrock/agents/)**
@@ -155,16 +164,19 @@ agui.onEvent('message', (event) => {
 ## 실제 사용 사례
 
 ### 1. 고객 지원 챗봇
+
 - 실시간 대화와 상태 동기화
 - 복잡한 문의 시 인간 상담원 개입
 - 동적 UI로 문서나 이미지 표시
 
 ### 2. 코드 리뷰 어시스턴트
+
 - 실시간 코드 분석 결과 표시
 - 인터랙티브한 개선 제안
 - 개발자와의 협업적 코드 수정
 
 ### 3. 데이터 분석 대시보드
+
 - 자연어 쿼리를 통한 데이터 탐색
 - 실시간 차트와 그래프 생성
 - 분석 결과의 인터랙티브 시각화
@@ -186,7 +198,8 @@ AG-UI는 AI 에이전트와 사용자 인터페이스 간의 격차를 해소하
 ---
 
 **참고 링크:**
+
 - [AG-UI GitHub 리포지토리](https://github.com/ag-ui-protocol/ag-ui)
 - [공식 문서](https://ag-ui.com)
 - [Hello World 데모](https://agui-demo.vercel.app/)
-- [Discord 커뮤니티](https://discord.gg/ag-ui) 
+- [Discord 커뮤니티](https://discord.gg/ag-ui)

@@ -85,6 +85,7 @@ jobs:
 ### 장점
 
 **빠른 설정과 익숙함**
+
 ```bash
 # 간단한 배포 명령어
 kubectl apply -f k8s/
@@ -92,17 +93,20 @@ helm upgrade myapp ./chart
 ```
 
 **유연한 커스터마이징**
+
 - 복잡한 배포 로직 구현 가능
 - 조건부 배포, A/B 테스트 등 손쉽게 구현
 - 기존 도구와의 통합 용이
 
 **즉시 피드백**
+
 - CI에서 배포 성공/실패 즉시 확인
 - 로그와 메트릭의 중앙화된 관리
 
 ### 단점
 
 **보안 취약점**
+
 ```yaml
 # 클러스터 접근 권한이 CI에 노출
 env:
@@ -112,11 +116,13 @@ env:
 ```
 
 **상태 관리의 어려움**
+
 - Git에 정의된 상태 vs 실제 클러스터 상태 불일치 가능
 - 수동 변경사항 추적 어려움
 - Drift 감지 및 복구가 수동적
 
 **운영 복잡성**
+
 - 여러 환경별 배포 스크립트 관리
 - 롤백 시 복잡한 절차 필요
 
@@ -139,6 +145,7 @@ graph TD
 ### 워크플로우 세부 분석
 
 **1. 애플리케이션 정의**
+
 ```yaml
 # argocd-app.yaml
 apiVersion: argoproj.io/v1alpha1
@@ -160,11 +167,13 @@ spec:
 ```
 
 **2. 자동 동기화 프로세스**
+
 - ArgoCD가 Git 저장소를 주기적으로 폴링 (기본 3분)
 - Webhook을 통한 즉시 동기화도 가능
 - 변경 감지 시 자동으로 클러스터 상태 업데이트
 
 **3. 상태 모니터링**
+
 ```bash
 # ArgoCD CLI를 통한 상태 확인
 argocd app get myapp
@@ -175,11 +184,13 @@ argocd app rollback myapp
 ### ArgoCD의 주요 장점
 
 **강화된 보안**
+
 - 클러스터 내부에서 실행되어 외부 접근 최소화
 - RBAC 기반 세밀한 권한 관리
 - Git 기반 감사 추적
 
 **자동 상태 관리**
+
 ```yaml
 # 자동 복구 설정
 syncPolicy:
@@ -189,11 +200,13 @@ syncPolicy:
 ```
 
 **직관적인 UI**
+
 - 실시간 애플리케이션 상태 시각화
 - 의존성 그래프 표시
 - 원클릭 롤백 및 동기화
 
 **멀티 클러스터 지원**
+
 ```yaml
 # 여러 클러스터 관리
 destination:
@@ -208,6 +221,7 @@ destination:
 ### ArgoCD의 제한사항
 
 **초기 설정 복잡성**
+
 ```bash
 # ArgoCD 설치 및 설정
 kubectl create namespace argocd
@@ -225,6 +239,7 @@ data:
 ```
 
 **CI 통합의 복잡성**
+
 - 이미지 태그 업데이트를 위한 별도 프로세스 필요
 - 동적 값 처리를 위한 추가 도구 필요 (예: Kustomize, Helm)
 
@@ -311,6 +326,7 @@ spec:
 ### 리소스 사용량
 
 **ArgoCD 클러스터 요구사항:**
+
 ```yaml
 resources:
   limits:
@@ -322,6 +338,7 @@ resources:
 ```
 
 **대규모 환경에서의 고려사항:**
+
 - 100+ 애플리케이션 관리 시 ArgoCD 인스턴스 샤딩 고려
 - Git 저장소 크기가 성능에 직접적 영향
 - 네트워크 지연이 동기화 주기에 영향
@@ -331,6 +348,7 @@ resources:
 ### 전통적 CI/CD 보안 이슈
 
 **Credential 관리:**
+
 ```yaml
 # 취약한 예시
 env:
@@ -347,6 +365,7 @@ env:
 ### ArgoCD 보안 모범 사례
 
 **RBAC 세밀 설정:**
+
 ```yaml
 # argocd-rbac-cm
 policy.csv: |
@@ -362,6 +381,7 @@ policy.csv: |
 ```
 
 **Git 저장소 보안:**
+
 ```yaml
 # Private 저장소 접근
 spec:
@@ -389,6 +409,7 @@ spec:
 ```
 
 **주요 메트릭:**
+
 - `argocd_app_health_status`: 애플리케이션 건강 상태
 - `argocd_app_sync_total`: 동기화 횟수
 - `argocd_git_request_duration`: Git 요청 응답 시간
@@ -396,6 +417,7 @@ spec:
 ### 알림 설정
 
 # ArgoCD 알림 구성
+
 ```yaml
 {% raw %}
 apiVersion: v1
@@ -418,6 +440,7 @@ data:
 ### 일반적인 ArgoCD 문제들
 
 **1. 동기화 실패**
+
 ```bash
 # 문제 진단
 kubectl logs -n argocd deployment/argocd-application-controller
@@ -427,6 +450,7 @@ argocd app sync myapp --force
 ```
 
 **2. Git 접근 권한 문제**
+
 ```bash
 # Repository 연결 상태 확인
 argocd repo list
@@ -438,6 +462,7 @@ argocd repo add https://github.com/myorg/myapp-config \
 ```
 
 **3. RBAC 권한 문제**
+
 ```yaml
 # 사용자 권한 확인
 apiVersion: v1
@@ -453,6 +478,7 @@ data:
 ### 성능 최적화 팁
 
 **Git 저장소 최적화:**
+
 ```bash
 # 대용량 저장소 최적화
 git config --global core.preloadindex true
@@ -461,6 +487,7 @@ git config --global gc.auto 256
 ```
 
 **ArgoCD 설정 튜닝:**
+
 ```yaml
 # 대규모 환경을 위한 설정
 apiVersion: v1
@@ -487,10 +514,12 @@ data:
 ### 운영 비용 고려사항
 
 **학습 곡선:**
+
 - 전통적 CI/CD: 1-2주 (기존 경험 활용)
 - ArgoCD: 2-4주 (새로운 패러다임 학습)
 
 **유지보수 시간:**
+
 - 전통적 CI/CD: 주당 5-10시간
 - ArgoCD: 주당 2-5시간 (안정화 후)
 
@@ -499,6 +528,7 @@ data:
 ### 단계별 도입 방안
 
 **Phase 1: 평가 및 준비 (2-4주)**
+
 ```bash
 # ArgoCD 테스트 환경 구축
 kubectl create namespace argocd-test
@@ -506,16 +536,19 @@ kubectl apply -n argocd-test -f https://raw.githubusercontent.com/argoproj/argo-
 ```
 
 **Phase 2: 파일럿 프로젝트 (4-6주)**
+
 - 중요도가 낮은 애플리케이션으로 시작
 - 기존 CI/CD와 병렬 운영
 - 팀 교육 및 피드백 수집
 
 **Phase 3: 점진적 확산 (8-12주)**
+
 - 성공 사례를 기반으로 다른 팀 확산
 - 표준화된 템플릿 및 가이드라인 구축
 - 모니터링 및 알림 체계 구축
 
 **Phase 4: 전면 전환 (12-16주)**
+
 - 모든 애플리케이션 마이그레이션
 - 기존 CI/CD 파이프라인 정리
 - 운영 프로세스 최적화
@@ -523,12 +556,14 @@ kubectl apply -n argocd-test -f https://raw.githubusercontent.com/argoproj/argo-
 ### 마이그레이션 체크리스트
 
 **기술적 준비사항:**
+
 - [ ] Git 저장소 구조 재설계
 - [ ] Kubernetes 매니페스트 표준화
 - [ ] 비밀 정보 관리 방안 수립
 - [ ] 모니터링 및 로깅 체계 구축
 
 **조직적 준비사항:**
+
 - [ ] 팀 교육 계획 수립
 - [ ] 역할 및 책임 재정의
 - [ ] 승인 프로세스 재설계
@@ -539,16 +574,19 @@ kubectl apply -n argocd-test -f https://raw.githubusercontent.com/argoproj/argo-
 ### ArgoCD를 선택해야 하는 경우
 
 **조직 규모 및 복잡성:**
+
 - 10개 이상의 마이크로서비스
 - 다중 환경 (dev/staging/prod)
 - 다중 클러스터 운영
 
 **보안 요구사항:**
+
 - 엄격한 감사 추적 필요
 - 최소 권한 원칙 적용
 - 규제 준수 요구사항
 
 **운영 성숙도:**
+
 - DevOps 문화 정착
 - Kubernetes 운영 경험
 - 자동화 우선 철학
@@ -556,11 +594,13 @@ kubectl apply -n argocd-test -f https://raw.githubusercontent.com/argoproj/argo-
 ### 전통적 CI/CD를 유지해야 하는 경우
 
 **프로젝트 특성:**
+
 - 소규모 팀 (5명 이하)
 - 단순한 배포 요구사항
 - 레거시 시스템 통합 필요
 
 **기술적 제약:**
+
 - Kubernetes 미도입
 - 기존 도구에 대한 높은 의존성
 - 단기 프로젝트
@@ -579,4 +619,4 @@ GitOps와 ArgoCD는 현대적인 클라우드 네이티브 환경에서 강력�
 
 무엇보다 중요한 것은 팀의 준비도와 점진적 전환입니다. 하루아침에 완벽한 GitOps 환경을 구축하기보다는, 작은 성공을 쌓아가며 조직 전체의 역량을 키워나가는 것이 성공의 열쇠입니다.
 
-GitOps는 단순한 기술 도입이 아닌 문화적 변화입니다. 기술적 우수성뿐만 아니라 팀워크, 학습 의지, 그리고 지속적인 개선에 대한 의지가 뒷받침될 때 진정한 가치를 발휘할 수 있습니다. 
+GitOps는 단순한 기술 도입이 아닌 문화적 변화입니다. 기술적 우수성뿐만 아니라 팀워크, 학습 의지, 그리고 지속적인 개선에 대한 의지가 뒷받침될 때 진정한 가치를 발휘할 수 있습니다.

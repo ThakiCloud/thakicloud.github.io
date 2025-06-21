@@ -692,7 +692,7 @@ complete_project = complete_collaboration_workflow()
 
 ## 결론
 
-**Mem0 Multi-User Collaboration 시스템**은 팀 협업의 효율성을 크게 향상시킬 수 있는 강력한 도구입니다. 
+**Mem0 Multi-User Collaboration 시스템**은 팀 협업의 효율성을 크게 향상시킬 수 있는 강력한 도구입니다.
 
 ### 주요 장점
 
@@ -725,4 +725,4 @@ Mem0의 강력한 메모리 기능을 활용하여 더욱 스마트한 협업 �
 - [Mem0 Collaborative Task Agent 예제](https://docs.mem0.ai/examples/collaborative-task-agent)
 - [OpenAI API 문서](https://platform.openai.com/docs)
 - [Mem0 GitHub](https://github.com/mem0ai/mem0)
-- [Mem0 연구 논문](https://arxiv.org/abs/2024.14527) 
+- [Mem0 연구 논문](https://arxiv.org/abs/2024.14527)

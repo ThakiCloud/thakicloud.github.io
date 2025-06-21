@@ -62,7 +62,7 @@ Claude의 Tool Calling은 직관적인 흐름으로 작동합니다:
 }
 ```
 
-### 3. 클라이언트 실행 → `"15 degrees"`를 얻음.
+### 3. 클라이언트 실행 → `"15 degrees"`를 얻음
 
 ### 4. `tool_result`로 반환 후 Claude가 최종 자연어 답을 작성. ([docs.anthropic.com][1])
 
@@ -356,4 +356,4 @@ JSON Schema만 준비되면 어떤 모델·환경에서도 동일한 패턴을 �
 [5]: https://docs.anthropic.com/en/docs/agents-and-tools/computer-use "Computer use tool - Anthropic"
 [6]: https://www.anthropic.com/news/3-5-models-and-computer-use "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku \ Anthropic"
 [7]: https://murraycole.com/posts/claude-tool-use-pydantic "Implementing Claude Tool Use with Pydantic for Structured AI Responses"
-[8]: https://python.langchain.com/docs/concepts/tool_calling/ "Tool calling | ️ LangChain" 
+[8]: https://python.langchain.com/docs/concepts/tool_calling/ "Tool calling | ️ LangChain"

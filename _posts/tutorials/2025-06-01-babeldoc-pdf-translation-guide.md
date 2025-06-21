@@ -520,4 +520,4 @@ BabelDOC을 활용하여 언어 장벽 없이 전 세계의 과학 지식에 접
 
 ---
 
-*이 가이드는 BabelDOC v0.3.57 버전을 기준으로 작성되었습니다. 최신 정보는 [공식 GitHub 저장소](https://github.com/funstory-ai/BabelDOC)를 참조하세요.* 
+*이 가이드는 BabelDOC v0.3.57 버전을 기준으로 작성되었습니다. 최신 정보는 [공식 GitHub 저장소](https://github.com/funstory-ai/BabelDOC)를 참조하세요.*

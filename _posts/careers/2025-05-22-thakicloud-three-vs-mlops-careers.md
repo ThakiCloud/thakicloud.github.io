@@ -22,16 +22,19 @@ author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 ## ThakiCloud의 MLOps, 이렇게 다릅니다
 
 ### 1. Velocity — 아이디어가 프로덕션이 되기까지, 커피가 식기 전에
+
 - **IaaS-PaaS-SaaS 수직 통합**: Kubernetes NodePool에 GPU·NPU를 혼합 배치, 실험에서 서빙 전환 시 재스케줄링 비용이 0입니다.
 - **JupyterHub 이미지 자동 빌드**: 브랜치만 푸시하면 Helm Chart가 staging 클러스터에 즉시 배포됩니다.
 - **Feature Store 기반 실험 UI**: 데이터·피처 버전을 클릭 한 번에 조합, 15분 안에 새 실험을 런칭합니다.
 
 ### 2. Validation — 실패는 빠르게, 지표는 제품 언어로
+
 - **Shadow Traffic 퍼널**: 실시간 트래픽의 10%를 복사해 사용자 비노출 상태에서 새 모델을 평가합니다.
 - **클릭률·MAU ↔ ML 지표 자동 연동**: Prometheus + Grafana 대시보드에서 비즈니스 KPI와 ML 지표를 함께 모니터링합니다.
 - **휴리스틱 Safety Layer**: confidence < τ 예측은 자동 필터링해 사용자 경험을 보호합니다.
 
 ### 3. Versioning — 도커 태그 한 줄로 시간 여행
+
 - **OCI 모델 레지스트리**: 모델·피처·메타데이터를 이미지 태그로 관리, `sha`만 지정하면 즉시 롤백됩니다.
 - **일일 자동 재학습**: 데이터 drift 감지 시 Airflow DAG가 재훈련·검증·프로모션을 자동 실행합니다.
 - **Fallback 모델**: SLO 위반 시 라이트 모델이 1초 내 투입됩니다.

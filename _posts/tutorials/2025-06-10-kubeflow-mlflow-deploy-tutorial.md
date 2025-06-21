@@ -211,6 +211,7 @@ kubectl port-forward svc/mlflow-server-service -n mlflow-system 5050:5000
 ### KubeFlow의 장단점
 
 **장점:**
+
 - **완전한 ML 워크플로우 오케스트레이션**: 데이터 전처리부터 모델 배포까지 전체 파이프라인 관리
 - **Kubernetes 네이티브**: 클라우드 환경에서의 확장성과 안정성 제공
 - **다양한 ML 프레임워크 지원**: TensorFlow, PyTorch, Scikit-learn 등 광범위한 지원
@@ -218,6 +219,7 @@ kubectl port-forward svc/mlflow-server-service -n mlflow-system 5050:5000
 - **하이퍼파라미터 튜닝**: Katib을 통한 자동화된 하이퍼파라미터 최적화
 
 **단점:**
+
 - **높은 복잡성**: 설치 및 관리가 복잡하고 Kubernetes 전문 지식 필요
 - **리소스 집약적**: 많은 메모리와 CPU 리소스 소비
 - **러닝 커브**: 초기 학습 비용이 높음
@@ -226,6 +228,7 @@ kubectl port-forward svc/mlflow-server-service -n mlflow-system 5050:5000
 ### MLFlow의 장단점
 
 **장점:**
+
 - **단순함과 직관성**: 빠른 설치와 쉬운 사용법
 - **실험 추적 특화**: 매개변수, 메트릭, 아티팩트 체계적 관리
 - **모델 레지스트리**: 중앙화된 모델 버전 관리 및 배포
@@ -233,6 +236,7 @@ kubectl port-forward svc/mlflow-server-service -n mlflow-system 5050:5000
 - **가벼운 아키텍처**: 최소한의 리소스로 운영 가능
 
 **단점:**
+
 - **제한적인 워크플로우 관리**: 복잡한 파이프라인 오케스트레이션 부족
 - **스케일링 한계**: 대규모 분산 처리에 제약
 - **UI 기능 제한**: 기본적인 실험 추적 인터페이스만 제공
@@ -253,6 +257,7 @@ Jwks doesnt have key to match kid or alg from Jwt
 **1단계: 브라우저 쿠키 삭제**
 
 Chrome/Safari 브라우저의 경우:
+
 1. 개발자 도구 열기 (`F12` 또는 `Cmd+Option+I`)
 2. **Application** 탭으로 이동
 3. 왼쪽 메뉴에서 **Storage > Cookies** 선택
@@ -265,6 +270,7 @@ Chrome/Safari 브라우저의 경우:
 # 브라우저를 완전히 종료 후 재시작
 # 또는 시크릿/프라이빗 모드로 접속 시도
 ```
+
 ## 결론
 
 본 가이드를 통해 Kubernetes 환경에서 KubeFlow와 MLFlow를 성공적으로 구축했습니다.
@@ -272,6 +278,7 @@ Chrome/Safari 브라우저의 경우:
 ### 구축된 MLOps 아키텍처
 
 **핵심 구성 요소:**
+
 - **KubeFlow**: 파이프라인 오케스트레이션 및 워크플로우 자동화
 - **MLFlow**: 실험 추적 및 모델 레지스트리 관리  
 - **Istio**: 마이크로서비스 통신 보안 및 트래픽 관리
@@ -281,7 +288,8 @@ Chrome/Safari 브라우저의 경우:
 ---
 
 **참고 링크:**
+
 - [KubeFlow 공식 문서](https://www.kubeflow.org/docs/)
 - [MLFlow 공식 문서](https://mlflow.org/docs/latest/index.html)
 - [Istio 공식 문서](https://istio.io/latest/docs/)
-- [Kubernetes 공식 문서](https://kubernetes.io/docs/home/) 
+- [Kubernetes 공식 문서](https://kubernetes.io/docs/home/)

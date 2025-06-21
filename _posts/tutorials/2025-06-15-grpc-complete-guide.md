@@ -46,6 +46,7 @@ toc_label: "목차"
 gRPC는 **4가지 통신 패턴**을 제공합니다:
 
 #### 1. Unary RPC (단일 요청-응답)
+
 - **정의**: 클라이언트가 하나의 요청을 보내고 서버가 하나의 응답을 반환
 - **사용 사례**: 전통적인 REST API와 유사한 패턴
 - **Proto 정의**: `rpc MethodName(RequestType) returns (ResponseType);`
@@ -57,6 +58,7 @@ rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
 ```
 
 #### 2. Server Streaming RPC
+
 - **정의**: 클라이언트가 하나의 요청을 보내고 서버가 여러 응답을 스트리밍으로 반환
 - **사용 사례**: 대용량 데이터 조회, 실시간 모니터링
 - **Proto 정의**: `rpc MethodName(RequestType) returns (stream ResponseType);`
@@ -68,6 +70,7 @@ rpc GetOrderHistory(OrderRequest) returns (stream Order);
 ```
 
 #### 3. Client Streaming RPC
+
 - **정의**: 클라이언트가 여러 요청을 스트리밍으로 보내고 서버가 하나의 응답을 반환
 - **사용 사례**: 파일 업로드, 배치 데이터 처리
 - **Proto 정의**: `rpc MethodName(stream RequestType) returns (ResponseType);`
@@ -79,6 +82,7 @@ rpc UploadFile(stream FileChunk) returns (UploadResponse);
 ```
 
 #### 4. Bidirectional Streaming RPC
+
 - **정의**: 클라이언트와 서버가 모두 스트리밍으로 데이터를 주고받음
 - **사용 사례**: 실시간 채팅, 양방향 통신
 - **Proto 정의**: `rpc MethodName(stream RequestType) returns (stream ResponseType);`
@@ -853,6 +857,7 @@ func main() {
 ```
 
 **특징:**
+
 - gRPC 라이브러리에서 제공하는 표준 서버
 - 각 서비스를 개별적으로 등록
 - 인터셉터, 옵션 등을 서버 생성 시 설정
@@ -930,6 +935,7 @@ func main() {
 ```
 
 **특징:**
+
 - 애플리케이션별 설정과 로직을 캡슐화
 - 여러 서비스를 한 번에 관리
 - 설정 파일, 의존성 주입 등을 통합 관리
@@ -1027,10 +1033,12 @@ func applicationServer() {
 ```
 
 **권장사항:**
+
 - **소규모 프로젝트**: `grpc.NewServer()` 사용
 - **마이크로서비스**: `grpc.NewServer()` + 개별 서비스 등록
 - **대규모 모놀리식**: `NewAppServer()` + 통합 관리
 - **복잡한 설정**: `NewAppServer()` + 설정 파일 관리
+
 ```
 
 ## 클라이언트 구현
@@ -1610,32 +1618,32 @@ volumes:
 .PHONY: proto build run-server run-client docker-up docker-down
 
 proto:
-	protoc --go_out=pb --go_opt=paths=source_relative \
-	       --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
-	       proto/user.proto
+ protoc --go_out=pb --go_opt=paths=source_relative \
+        --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
+        proto/user.proto
 
 build:
-	go build -o bin/server server/main.go
-	go build -o bin/client client/main.go
+ go build -o bin/server server/main.go
+ go build -o bin/client client/main.go
 
 run-server:
-	go run server/main.go
+ go run server/main.go
 
 run-client:
-	go run client/main.go
+ go run client/main.go
 
 docker-up:
-	docker-compose up -d
+ docker-compose up -d
 
 docker-down:
-	docker-compose down
+ docker-compose down
 
 test:
-	go test ./...
+ go test ./...
 
 clean:
-	rm -rf bin/
-	rm -rf pb/*.go
+ rm -rf bin/
+ rm -rf pb/*.go
 ```
 
 ## 트러블슈팅 가이드
@@ -1711,7 +1719,8 @@ gRPC는 현대적인 분산 시스템에서 필수적인 기술입니다. 이 �
 ---
 
 **참고 자료:**
+
 - [gRPC 공식 문서](https://grpc.io/)
 - [Protocol Buffers Language Guide](https://developers.google.com/protocol-buffers/docs/proto3)
 - [gRPC-Go API Reference](https://pkg.go.dev/google.golang.org/grpc)
-- [gRPC 성능 최적화 가이드](https://grpc.io/docs/guides/performance/) 
+- [gRPC 성능 최적화 가이드](https://grpc.io/docs/guides/performance/)

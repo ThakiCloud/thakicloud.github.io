@@ -100,18 +100,21 @@ JSON 형식으로 반환:
 ### 설계 원칙과 안전장치
 
 #### 1. 단일 책임 원칙
+
 ```text
 "고도화된 다변화 웹 검색 쿼리를 생성..."
 → 모델이 답변 작성이나 해석으로 산만해지지 않도록 범위 한정
 ```
 
 #### 2. 비용 최적화
+
 ```text
 "최대 {number_queries}개" + "중복 방지"
 → API 호출 수 통제로 비용 관리
 ```
 
 #### 3. 시간 앵커링
+
 ```python
 # 런타임 삽입 예시
 current_date = datetime.now().strftime("%Y-%m-%d")
@@ -123,6 +126,7 @@ query_writer_instructions.format(
 ```
 
 #### 4. 구조화된 출력
+
 ```json
 {
   "queries": [
@@ -214,6 +218,7 @@ web_searcher_instructions = """
 ### 실행 플로우와 안전장치
 
 #### 1. 검색 실행
+
 ```python
 def execute_web_search(query: str, current_date: str) -> SearchResult:
     """Google Search API 호출 및 결과 처리"""
@@ -235,6 +240,7 @@ def execute_web_search(query: str, current_date: str) -> SearchResult:
 ```
 
 #### 2. 인용 추적 시스템
+
 ```python
 def insert_citation_markers(text: str, citations: List[str]) -> str:
     """텍스트에 인용 마커 자동 삽입"""
@@ -258,6 +264,7 @@ def get_citations(search_results: List[SearchResult]) -> List[str]:
 ```
 
 #### 3. 신뢰도 평가
+
 ```python
 class SourceReliabilityChecker:
     """소스 신뢰도 자동 평가"""
@@ -356,6 +363,7 @@ JSON 형식으로 응답:
 ### 판정 로직과 제어 흐름
 
 #### 1. 이진 분기 시스템
+
 ```python
 class ReflectionController:
     """반성 단계 제어 로직"""
@@ -385,6 +393,7 @@ class ReflectionController:
 ```
 
 #### 2. 지식 격차 유형화
+
 ```python
 class KnowledgeGapAnalyzer:
     """지식 격차 유형별 분석"""
@@ -432,6 +441,7 @@ class KnowledgeGapAnalyzer:
 ### 품질 개선 전략
 
 #### 1. 격차 설명 최적화
+
 ```python
 def optimize_knowledge_gap_description(gap: str, max_chars: int = 120) -> str:
     """지식 격차 설명을 간결하게 최적화"""
@@ -452,6 +462,7 @@ def optimize_knowledge_gap_description(gap: str, max_chars: int = 120) -> str:
 ```
 
 #### 2. 중복 쿼리 방지
+
 ```python
 def deduplicate_follow_up_queries(
     new_queries: List[str], 
@@ -511,6 +522,7 @@ answer_instructions = """
 ### 인용 시스템 구현
 
 #### 1. 자동 인용 삽입
+
 ```python
 class CitationManager:
     """인용 관리 시스템"""
@@ -558,6 +570,7 @@ class CitationManager:
 ```
 
 #### 2. 인용 품질 검증
+
 ```python
 def validate_citation_integrity(answer: str, citations: List[str]) -> bool:
     """답변의 인용 무결성 검증"""
@@ -605,6 +618,7 @@ def extract_factual_claims(text: str) -> List[str]:
 ### 사용자 경험 최적화
 
 #### 1. 메타 정보 은폐
+
 ```python
 def sanitize_response(text: str) -> str:
     """응답에서 메타 정보 제거"""
@@ -628,6 +642,7 @@ def sanitize_response(text: str) -> str:
 ```
 
 #### 2. 응답 구조화
+
 ```python
 class AnswerFormatter:
     """답변 형식 최적화"""
@@ -893,4 +908,4 @@ Gemini Fullstack LangGraph Quickstart의 4개 핵심 프롬프트는 **단일 �
 - **성능 최적화**: 토큰 사용량 관리와 캐싱 전략 구현
 - **품질 관리**: 인용 무결성과 사실 정확성 검증 시스템
 
-이러한 설계 원칙을 이해하고 적용하면, 신뢰할 수 있고 확장 가능한 AI 연구 에이전트를 구축할 수 있습니다. 
+이러한 설계 원칙을 이해하고 적용하면, 신뢰할 수 있고 확장 가능한 AI 연구 에이전트를 구축할 수 있습니다.

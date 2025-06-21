@@ -37,11 +37,13 @@ AI 개발에서 프롬프트 엔지니어링은 이제 필수 스킬이 되었�
 Anthropic은 다음 순서로 학습할 것을 권장합니다:
 
 ### 1️⃣ **Anthropic API Fundamentals**
+
 **Claude SDK 사용법의 모든 것**
 
 첫 번째 과정은 Claude API의 기본기를 다집니다:
 
 #### **핵심 학습 내용**
+
 - **API 키 설정**: 안전한 인증 방법과 환경 변수 관리
 - **모델 파라미터**: temperature, max_tokens, top_p 등 세부 조정
 - **멀티모달 프롬프트**: 텍스트와 이미지를 함께 처리하는 방법
@@ -49,6 +51,7 @@ Anthropic은 다음 순서로 학습할 것을 권장합니다:
 - **에러 처리**: 견고한 API 호출을 위한 예외 처리
 
 #### **실습 예제**
+
 ```python
 import anthropic
 
@@ -68,11 +71,13 @@ message = client.messages.create(
 ```
 
 ### 2️⃣ **Prompt Engineering Interactive Tutorial**
+
 **프롬프트 엔지니어링의 핵심 기법들**
 
 두 번째 과정은 효과적인 프롬프트 작성의 핵심을 다룹니다:
 
 #### **주요 기법들**
+
 - **명확한 지시사항**: 모호함을 제거하는 구체적 지시법
 - **역할 부여**: Claude에게 특정 역할을 부여하는 방법
 - **예시 활용**: Few-shot learning을 통한 성능 향상
@@ -80,6 +85,7 @@ message = client.messages.create(
 - **출력 형식 지정**: 원하는 형태로 응답을 구조화
 
 #### **프롬프트 예시**
+
 ```markdown
 # 역할 부여 + 구체적 지시
 당신은 전문 기술 문서 작성자입니다.
@@ -93,11 +99,13 @@ message = client.messages.create(
 ```
 
 ### 3️⃣ **Real World Prompting**
+
 **복잡한 실제 상황에서의 프롬프팅**
 
 세 번째 과정에서는 이론을 실제 프로젝트에 적용하는 방법을 학습합니다:
 
 #### **실무 시나리오**
+
 - **비즈니스 문서 자동화**: 보고서, 제안서, 이메일 생성
 - **코드 생성 및 리뷰**: 개발 워크플로우에 AI 통합
 - **데이터 분석**: 복잡한 데이터셋에서 인사이트 추출
@@ -105,6 +113,7 @@ message = client.messages.create(
 - **고객 서비스**: 문의사항 분류 및 자동 응답
 
 #### **복합 프롬프트 구조**
+
 ```python
 # 실제 업무용 복합 프롬프트 예시
 def create_business_report_prompt(data, context, audience):
@@ -129,11 +138,13 @@ def create_business_report_prompt(data, context, audience):
 ```
 
 ### 4️⃣ **Prompt Evaluations**
+
 **프롬프트 품질 측정 및 개선**
 
 네 번째 과정은 프롬프트의 성능을 객관적으로 평가하는 방법을 다룹니다:
 
 #### **평가 방법론**
+
 - **정확성 측정**: 사실 기반 응답의 정확도 평가
 - **일관성 검증**: 동일한 입력에 대한 응답 일관성
 - **유용성 평가**: 사용자 요구사항 충족도 측정
@@ -141,6 +152,7 @@ def create_business_report_prompt(data, context, audience):
 - **효율성 분석**: 토큰 사용량 대비 성능 비교
 
 #### **자동 평가 시스템**
+
 ```python
 # 프롬프트 평가 프레임워크 예시
 class PromptEvaluator:
@@ -164,11 +176,13 @@ class PromptEvaluator:
 ```
 
 ### 5️⃣ **Tool Use**
+
 **Claude를 도구와 연결하여 실제 작업 수행**
 
 마지막 과정에서는 Claude가 외부 도구를 사용할 수 있도록 하는 고급 기능을 학습합니다:
 
 #### **도구 통합 기능**
+
 - **함수 호출**: Python 함수를 Claude가 직접 실행
 - **API 통합**: 외부 서비스와의 실시간 연동
 - **데이터베이스 조회**: SQL 쿼리 생성 및 실행
@@ -176,6 +190,7 @@ class PromptEvaluator:
 - **웹 스크래핑**: 실시간 정보 수집
 
 #### **도구 사용 예시**
+
 ```python
 # 도구 정의
 tools = [
@@ -217,6 +232,7 @@ message = client.messages.create(
 ### 🛠️ **개발 환경 설정**
 
 #### **필요한 도구들**
+
 ```bash
 # Python 환경 구성
 pip install anthropic jupyter pandas matplotlib
@@ -226,6 +242,7 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
 #### **Jupyter 노트북 실행**
+
 ```bash
 # 저장소 클론
 git clone https://github.com/anthropics/courses.git
@@ -259,21 +276,25 @@ def cost_effective_request(prompt, model="claude-3-haiku-20240307"):
 ### 📅 **4주 완성 계획**
 
 #### **1주차: API 기초 마스터**
+
 - Anthropic API 설정 및 기본 사용법
 - 다양한 모델 파라미터 실험
 - 멀티모달 프롬프트 작성 연습
 
 #### **2주차: 프롬프트 엔지니어링**
+
 - 핵심 프롬프팅 기법 학습
 - 다양한 사용 사례별 프롬프트 작성
 - A/B 테스트를 통한 프롬프트 최적화
 
 #### **3주차: 실무 적용**
+
 - 실제 업무 시나리오에 프롬프트 적용
 - 복잡한 작업을 위한 프롬프트 체인 구성
 - 프롬프트 평가 및 개선 방법론 학습
 
 #### **4주차: 고급 기능 활용**
+
 - 도구 사용 기능 마스터
 - 외부 시스템과의 통합 구현
 - 종합 프로젝트 완성
@@ -283,6 +304,7 @@ def cost_effective_request(prompt, model="claude-3-haiku-20240307"):
 #### **업무별 활용 방안**
 
 **📊 데이터 분석가**
+
 ```python
 # 데이터 분석 전용 프롬프트 템플릿
 data_analysis_prompt = """
@@ -301,6 +323,7 @@ data_analysis_prompt = """
 ```
 
 **💻 개발자**
+
 ```python
 # 코드 리뷰 자동화 프롬프트
 code_review_prompt = """
@@ -311,12 +334,14 @@ code_review_prompt = """
 ```
 
 리뷰 포인트:
+
 - 코드 품질 및 가독성
 - 보안 취약점
 - 성능 최적화 방안
 - 베스트 프랙티스 준수
 - 구체적인 개선 제안
 """
+
 ```
 
 **📝 콘텐츠 크리에이터**
@@ -342,6 +367,7 @@ content_creation_prompt = """
 ### 🔗 **API 통합 패턴**
 
 #### **마이크로서비스 아키텍처**
+
 ```python
 class ClaudeService:
     def __init__(self):
@@ -369,6 +395,7 @@ class ClaudeService:
 ```
 
 #### **배치 처리 시스템**
+
 ```python
 import asyncio
 from typing import List, Dict
@@ -393,11 +420,13 @@ class BatchProcessor:
 ### 🏢 **기업 적용 사례**
 
 #### **고객 서비스 자동화**
+
 - **티켓 분류**: 고객 문의를 자동으로 카테고리별 분류
 - **초기 응답**: 일반적인 문의에 대한 즉시 답변 제공
 - **에스컬레이션**: 복잡한 문제의 우선순위 판단
 
 #### **내부 업무 효율화**
+
 - **회의록 요약**: 음성 회의 내용을 구조화된 요약으로 변환
 - **보고서 생성**: 데이터를 기반으로 한 자동 보고서 작성
 - **정책 문서 검색**: 내부 규정 및 정책에 대한 자연어 질의응답
@@ -407,11 +436,13 @@ class BatchProcessor:
 ### 🌐 **추가 학습 자료**
 
 #### **공식 리소스**
+
 - **[Anthropic 문서](https://docs.anthropic.com/)**: 최신 API 문서 및 가이드
 - **[Claude 모델 가이드](https://docs.anthropic.com/claude/docs)**: 모델별 특징 및 사용법
 - **[안전성 가이드](https://docs.anthropic.com/claude/docs/safety-guidelines)**: 책임감 있는 AI 사용법
 
 #### **커뮤니티 활동**
+
 - **GitHub Issues**: 질문 및 버그 리포트
 - **Pull Requests**: 교육 자료 개선에 기여
 - **포럼 참여**: AI 개발자 커뮤니티와 경험 공유
@@ -419,11 +450,13 @@ class BatchProcessor:
 ### 📈 **지속적인 학습**
 
 #### **최신 트렌드 팔로우**
+
 - **Anthropic 블로그**: 새로운 기능 및 연구 결과
 - **연구 논문**: 프롬프트 엔지니어링 관련 최신 연구
 - **컨퍼런스**: AI 관련 학술 대회 및 산업 이벤트
 
 #### **실무 경험 축적**
+
 - **개인 프로젝트**: 학습한 내용을 실제 문제에 적용
 - **오픈소스 기여**: 커뮤니티 프로젝트에 참여
 - **멘토링**: 다른 학습자들과 지식 공유
@@ -433,6 +466,7 @@ class BatchProcessor:
 **Anthropic Courses**는 Claude와 AI 프롬프팅을 체계적으로 학습할 수 있는 최고의 교육 자료입니다. 15.1k개의 스타가 증명하듯이, 이는 AI 개발 커뮤니티에서 검증받은 high-quality 교육 콘텐츠입니다.
 
 무료로 제공되는 이 과정을 통해 여러분은:
+
 - **Claude API의 모든 기능**을 능숙하게 활용할 수 있게 됩니다
 - **프롬프트 엔지니어링의 핵심 기법**들을 마스터하게 됩니다
 - **실무에서 바로 적용 가능한 스킬**을 습득하게 됩니다
@@ -440,4 +474,4 @@ class BatchProcessor:
 
 AI가 빠르게 발전하는 현재, 이러한 체계적인 교육을 통해 전문성을 쌓는 것은 선택이 아닌 필수입니다. 지금 바로 Anthropic Courses를 시작하여 AI 시대의 핵심 역량을 갖춘 전문가로 성장해보시기 바랍니다.
 
-> 💡 **학습 팁**: 각 과정을 순서대로 완료하되, 실제 프로젝트에 적용해보면서 학습 효과를 극대화하세요. 이론만으로는 부족하며, 실전 경험을 통해 진정한 전문성을 기를 수 있습니다. 
+> 💡 **학습 팁**: 각 과정을 순서대로 완료하되, 실제 프로젝트에 적용해보면서 학습 효과를 극대화하세요. 이론만으로는 부족하며, 실전 경험을 통해 진정한 전문성을 기를 수 있습니다.

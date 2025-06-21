@@ -668,7 +668,7 @@ documentation = await tech_doc_agent.research(
 
 ## 결론 및 향후 전망
 
-[Google Gemini Fullstack LangGraph Quickstart](https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart)는 **"검색 · 반성 · 응답 합성"** 과정을 LangGraph로 모델링해, 연구형 에이전트를 풀스택으로 구현하려는 개발자에게 훌륭한 템플릿을 제공합니다. 
+[Google Gemini Fullstack LangGraph Quickstart](https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart)는 **"검색 · 반성 · 응답 합성"** 과정을 LangGraph로 모델링해, 연구형 에이전트를 풀스택으로 구현하려는 개발자에게 훌륭한 템플릿을 제공합니다.
 
 ### 핵심 가치
 
@@ -690,4 +690,4 @@ documentation = await tech_doc_agent.research(
 | 프로덕션 기반 확장 | ⭐⭐⭐⭐ | 커스터마이징 필요 |
 | 엔터프라이즈 배포 | ⭐⭐⭐ | 보안·스케일링 고려 필요 |
 
-11.6k 스타와 활발한 커뮤니티 참여는 이 프로젝트의 실용성과 확장성을 입증하며, Google의 공식 지원으로 지속적인 업데이트와 개선이 기대됩니다. **대규모 에이전트 시스템을 구축하려는 팀에게 중요한 레퍼런스**가 될 것이며, AI 에이전트 개발에 관심이 있다면 반드시 참고해야 할 필수 리소스입니다. 
+11.6k 스타와 활발한 커뮤니티 참여는 이 프로젝트의 실용성과 확장성을 입증하며, Google의 공식 지원으로 지속적인 업데이트와 개선이 기대됩니다. **대규모 에이전트 시스템을 구축하려는 팀에게 중요한 레퍼런스**가 될 것이며, AI 에이전트 개발에 관심이 있다면 반드시 참고해야 할 필수 리소스입니다.

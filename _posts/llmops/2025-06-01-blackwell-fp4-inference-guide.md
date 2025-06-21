@@ -23,7 +23,7 @@ toc_label: "블랙웰 FP4 추론 가이드"
 
 ---
 
-NVIDIA의 최신 Blackwell 아키텍처가 AI 추론 분야에서 또 한 번의 혁신을 예고하고 있습니다. 특히 **FP4(4비트 부동 소수점) 정밀도**를 활용한 추론은 기존 모델의 성능을 극대화하고 비용 효율성을 크게 향상시킬 수 있는 핵심 기술로 주목받고 있습니다. 
+NVIDIA의 최신 Blackwell 아키텍처가 AI 추론 분야에서 또 한 번의 혁신을 예고하고 있습니다. 특히 **FP4(4비트 부동 소수점) 정밀도**를 활용한 추론은 기존 모델의 성능을 극대화하고 비용 효율성을 크게 향상시킬 수 있는 핵심 기술로 주목받고 있습니다.
 
 NVIDIA가 GTC 2025에서 발표한 DeepSeek-R1 모델의 추론 성능 세계 기록 달성 소식은 이러한 가능성을 명확히 보여줍니다. 단일 NVIDIA DGX B200 시스템(8개의 Blackwell GPU 탑재)이 6,710억 개의 파라미터를 가진 거대 언어 모델(LLM) DeepSeek-R1에서 사용자당 초당 250토큰 이상, 최대 초당 30,000토큰 이상의 처리량을 달성한 것은 FP4와 최적화된 소프트웨어 스택의 강력한 시너지 덕분입니다.
 
@@ -83,11 +83,13 @@ Blackwell GPU에서 FP4 추론의 이점을 누리려면, 기존 BF16/FP16 모�
 NVIDIA NeMo 카탈로그에는 이미 FP4로 양자화된 다양한 모델이 준비되어 있습니다.
 
 **모델 다운로드:**
+
 ```bash
 nemo pull stt_en_conformer_transducer_xl_fp4
 ```
 
 **TensorRT-LLM 엔진 빌드:**
+
 ```bash
 trtllm-build --checkpoint stt_fp4.nemo --dtype fp4
 ```
@@ -99,6 +101,7 @@ trtllm-build --checkpoint stt_fp4.nemo --dtype fp4
 가지고 있는 BF16 모델을 빠르게 FP4로 변환하고 싶을 때 사용합니다. TensorRT-LLM v10의 AutoDeploy 파이프라인을 활용하면 몇 단계만으로 PTQ를 거쳐 FP4 엔진을 생성할 수 있습니다.
 
 **(선택 사항) ONNX 변환:** 모델을 ONNX 형식으로 변환합니다.
+
 ```bash
 # 예시: transformers 라이브러리 사용
 transformers-onnx-export mymodel --dtype bf16
@@ -107,6 +110,7 @@ transformers-onnx-export mymodel --dtype bf16
 **대표 데이터셋 수집:** 모델 보정(calibration)을 위해 512~1024개의 대표 입력 샘플을 JSONL 형식으로 준비합니다.
 
 **AutoDeploy 실행:** TensorRT-LLM의 `deploy` API를 사용합니다.
+
 ```python
 from tensorrt_llm.torch.auto_deploy import deploy
 
@@ -127,6 +131,7 @@ deploy(
 의료, 금융 등 정확도가 매우 중요한 분야에서는 QAT를 통해 정확도 손실을 거의 없앨 수 있습니다.
 
 **NeMo 프레임워크 활용:** NeMo를 사용하여 모델을 로드하고 QAT를 활성화하여 미세 조정을 진행합니다.
+
 ```python
 # 예시 코드 스니펫
 # nemo_llm = nemo.from_pretrained("mymodel_bf16.nemo")
@@ -158,4 +163,4 @@ NVIDIA Blackwell 아키텍처의 네이티브 FP4 지원은 AI 추론 성능과 
 - 자체 BF16 모델을 보유하고 있다면 **TensorRT-LLM AutoDeploy (PTQ)**를 통해 몇 분 만에 FP4 엔진을 생성할 수 있습니다.
 - 최고 수준의 정확도가 요구되는 서비스에는 **NeMo QAT**를 통해 모델을 재학습하여 배포하세요.
 
-이 가이드라인을 통해 여러분도 Blackwell GPU의 엄청난 잠재력을 최대한 발휘하고, 모델 정확도를 안전하게 유지하면서 AI 서비스의 새로운 지평을 열 수 있기를 바랍니다! 
+이 가이드라인을 통해 여러분도 Blackwell GPU의 엄청난 잠재력을 최대한 발휘하고, 모델 정확도를 안전하게 유지하면서 AI 서비스의 새로운 지평을 열 수 있기를 바랍니다!

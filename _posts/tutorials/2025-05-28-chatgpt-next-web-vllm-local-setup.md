@@ -36,12 +36,14 @@ excerpt: "ChatGPT Next Web과 vLLM을 맥북에서 연결하여 네이버 클로
 ### 시스템 요구사항
 
 #### 최소 요구사항
+
 - **macOS**: 12.0 (Monterey) 이상
 - **메모리**: 8GB RAM (0.5B 모델 기준)
 - **저장공간**: 20GB 이상 여유 공간
 - **프로세서**: Apple Silicon (M1/M2/M3) 또는 Intel x86_64
 
 #### 권장 요구사항
+
 - **메모리**: 16GB RAM 이상
 - **저장공간**: 50GB 이상 SSD
 - **프로세서**: Apple Silicon M1 이상
@@ -909,4 +911,4 @@ rsync -av --exclude='*.git*' ./models/ ./models-backup/
 - **Hugging Face 모델 허브**: [https://huggingface.co/models](https://huggingface.co/models)
 - **Apple Silicon 최적화**: [https://developer.apple.com/metal/](https://developer.apple.com/metal/)
 
-이 가이드를 통해 완전한 로컬 AI 환경을 구축하여 프라이버시를 보장하면서도 강력한 AI 기능을 활용할 수 있습니다. 🚀 
+이 가이드를 통해 완전한 로컬 AI 환경을 구축하여 프라이버시를 보장하면서도 강력한 AI 기능을 활용할 수 있습니다. 🚀

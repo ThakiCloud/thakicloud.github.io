@@ -139,4 +139,4 @@ PaperCoder는 "읽기 → 이해 → 구현"의 반복 루프를 **자동화**�
 ### 참고 자료
 
 - [PaperCoder 논문 (arXiv)](https://arxiv.org/abs/2504.17192)
-- [GitHub 리포지토리](https://github.com/going-doer/Paper2Code) 
+- [GitHub 리포지토리](https://github.com/going-doer/Paper2Code)

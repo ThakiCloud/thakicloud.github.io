@@ -52,6 +52,7 @@ Tensor Parallel은 기본적인 병렬화 패턴으로, 각 전문가의 가중�
 ```
 
 **특징:**
+
 - 각 GPU가 모든 전문가의 부분 가중치를 보유
 - 모든 GPU가 모든 토큰의 hidden state를 받음
 - 부분 가중치로 계산 수행
@@ -67,6 +68,7 @@ Expert Parallel은 전문가 전체를 다른 GPU에 분배하는 방식입니�
 ```
 
 **특징:**
+
 - 각 GPU가 일부 전문가의 완전한 가중치를 보유
 - 해당 GPU의 전문가에 선택된 토큰만 처리
 - 완전한 가중치로 계산 수행
@@ -88,10 +90,12 @@ Expert Parallel은 전문가 전체를 다른 GPU에 분배하는 방식입니�
 ### 1. 적절한 병렬화 전략 선택
 
 **고처리량 시나리오 (Maximum Throughput)**
+
 - Pipeline Parallel 활용 권장
 - Llama 3.1 405B 기준 764 tokens/second 달성 가능
 
 **저지연 시나리오 (Minimum Latency)**  
+
 - Tensor Parallel 활용 권장
 - Llama 3.1 405B 기준 56 tokens/second로 5.6배 빠른 응답
 
@@ -107,6 +111,7 @@ num_local_experts = 8    # 로컬 전문가 수
 ### 3. 통신 오버헤드 최적화
 
 **NVLink Switch 활용**
+
 - H200 HGX 시스템에서 NVLink Switch 사용 시
 - Pipeline Parallel에서 3.5배 향상된 대역폭 제공
 - Expert Parallel 간 통신 효율성 대폭 개선
@@ -162,6 +167,7 @@ trtllm-build \
 ### 실제 운영 환경에서의 고려사항
 
 **청킹(Chunking) 전략**
+
 - 작은 청크 크기: 높은 TPS, 높은 TTFT
 - 큰 청크 크기: 낮은 TTFT, 낮은 TPS
 - 최적 청크 크기: 896 토큰 (GPT 1.8T MoE 기준)
@@ -213,4 +219,4 @@ TensorRT-LLM의 Expert Parallelism은 대규모 MoE 모델의 추론 성능을 �
 - [NVIDIA TensorRT-LLM Expert Parallelism 문서](https://nvidia.github.io/TensorRT-LLM/advanced/expert-parallelism.html)
 - [Scaling LLMs with NVIDIA Triton and TensorRT-LLM](https://developer.nvidia.com/blog/scaling-llms-with-nvidia-triton-and-nvidia-tensorrt-llm-using-kubernetes/)
 - [Demystifying AI Inference Deployments for Trillion Parameter Models](https://developer.nvidia.com/blog/demystifying-ai-inference-deployments-for-trillion-parameter-large-language-models)
-- [Switch Transformer Paper](https://arxiv.org/pdf/2101.03961.pdf) 
+- [Switch Transformer Paper](https://arxiv.org/pdf/2101.03961.pdf)

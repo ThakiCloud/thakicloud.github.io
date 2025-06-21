@@ -104,14 +104,17 @@ Authentication Flow:
 ### 주요 위협 벡터
 
 #### 1. AgentCard 조작
+
 - **위험**: 악의적 에이전트가 허위 능력 정보 제공
 - **완화**: 스키마 검증, 디지털 서명, 신뢰 점수 시스템
 
 #### 2. 작업 재생 공격 (Task Replay)
+
 - **위험**: 이전 작업 메시지 재사용으로 인한 중복 실행
 - **완화**: 타임스탬프, 논스(nonce), 일회용 토큰 사용
 
 #### 3. 크로스 에이전트 권한 상승
+
 - **위험**: 한 에이전트의 권한을 이용한 다른 에이전트 공격
 - **완화**: 최소 권한 원칙, 에이전트별 샌드박싱
 
@@ -276,6 +279,6 @@ LLMOps 엔지니어로서 A2A를 도입할 때는:
 ---
 
 **참고 자료**:
+
 - [Building A Secure Agentic AI Application Leveraging Google's A2A Protocol](https://arxiv.org/pdf/2504.16902)
 - [Google Developer Blog: A2A Protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)
-
