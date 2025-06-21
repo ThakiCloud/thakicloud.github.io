@@ -556,6 +556,7 @@ Docling은 PDF 문서 처리의 새로운 표준을 제시하는 강력한 도�
 ---
 
 **참고 자료**:
+
 - [Docling 공식 문서](https://docling-project.github.io/docling/)
 - [GitHub 저장소](https://github.com/DS4SD/docling)
-- [PyPI 패키지](https://pypi.org/project/docling/) 
+- [PyPI 패키지](https://pypi.org/project/docling/)

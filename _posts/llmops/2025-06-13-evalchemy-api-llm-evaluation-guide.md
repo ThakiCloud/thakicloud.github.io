@@ -243,12 +243,14 @@ JSON 구조는 LM-Eval-Harness 표준을 따르므로 기존 파이프라인에 
 ### 추가 디버깅 팁
 
 **로그 레벨 조정**
+
 ```bash
 export LOGLEVEL=DEBUG
 python -m eval.eval --model curator --model_name "openai/gpt-4o-mini" --tasks MTBench
 ```
 
 **네트워크 연결 테스트**
+
 ```bash
 curl -H "Authorization: Bearer $OPENAI_API_KEY" \
      -H "Content-Type: application/json" \
@@ -380,25 +382,28 @@ done
 ## 정리
 
 **핵심 장점**
-- **설치 대신 REST API 호출만으로** 동일한 벤치마크를 손쉽게 재현
-- **OpenAI, Anthropic, Google 등 다양한 LLM 제공자**를 단일 CLI로 테스트
-- **YAML 컨피그와 비동기 배치 기능**으로 비용과 시간 대폭 절약
+
+* **설치 대신 REST API 호출만으로** 동일한 벤치마크를 손쉽게 재현
+* **OpenAI, Anthropic, Google 등 다양한 LLM 제공자**를 단일 CLI로 테스트
+* **YAML 컨피그와 비동기 배치 기능**으로 비용과 시간 대폭 절약
 
 **활용 시나리오**
-- GPU 자원 확보 전 신속한 모델 스크리닝
-- 여러 API 제공자 간 성능 비교 분석
-- CI/CD 파이프라인에서 자동화된 모델 평가
-- 비용 효율적인 대규모 벤치마크 실행
 
-Evalchemy + Curator + LiteLLM 조합을 사내 MLOps 파이프라인에 통합하면 **GPU 자원 확보 전에도 신속한 모델 스크리닝과 회귀 테스트**가 가능합니다. 
+* GPU 자원 확보 전 신속한 모델 스크리닝
+* 여러 API 제공자 간 성능 비교 분석
+* CI/CD 파이프라인에서 자동화된 모델 평가
+* 비용 효율적인 대규모 벤치마크 실행
+
+Evalchemy + Curator + LiteLLM 조합을 사내 MLOps 파이프라인에 통합하면 **GPU 자원 확보 전에도 신속한 모델 스크리닝과 회귀 테스트**가 가능합니다.
 
 특히 API 기반 평가는 로컬 GPU 환경 구축 비용 없이도 다양한 최신 모델들을 즉시 검증할 수 있어, 빠르게 변화하는 LLM 생태계에서 경쟁력을 유지하는 데 필수적인 도구가 되고 있습니다.
 
 ---
 
 **참고 자료:**
-- [Evalchemy GitHub 저장소](https://github.com/mlfoundations/Evalchemy)
-- [Bespoke Curator 문서](https://docs.bespokelabs.ai/bespoke-curator/getting-started)
-- [LiteLLM 공식 문서](https://docs.litellm.ai/docs/providers)
-- [LM-Eval-Harness](https://github.com/EleutherAI/lm-evaluation-harness)
-- [OpenAI API 문서](https://platform.openai.com/docs/models) 
+
+* [Evalchemy GitHub 저장소](https://github.com/mlfoundations/Evalchemy)
+* [Bespoke Curator 문서](https://docs.bespokelabs.ai/bespoke-curator/getting-started)
+* [LiteLLM 공식 문서](https://docs.litellm.ai/docs/providers)
+* [LM-Eval-Harness](https://github.com/EleutherAI/lm-evaluation-harness)
+* [OpenAI API 문서](https://platform.openai.com/docs/models)

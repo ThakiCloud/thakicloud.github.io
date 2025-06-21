@@ -901,12 +901,14 @@ class TestAgentSystem:
 OpenAI Agents SDK는 AI 에이전트 개발의 새로운 패러다임을 제시합니다. 이 가이드에서 다룬 내용들을 통해:
 
 ### 핵심 장점
+
 1. **간단한 시작**: 몇 줄의 코드로 강력한 에이전트 구축 가능
 2. **확장성**: 단일 에이전트부터 복잡한 멀티 에이전트 시스템까지
 3. **유연성**: 다양한 도구와 외부 시스템 통합 지원
 4. **안정성**: 가드레일과 모니터링을 통한 안전한 운영
 
 ### 다음 단계
+
 - 프로덕션 환경에서의 스케일링 전략
 - 다른 AI 프레임워크와의 통합
 - 에이전트 성능 최적화 및 비용 관리
@@ -917,7 +919,8 @@ AI 에이전트는 이제 실험실의 개념이 아닌 실용적인 도구입�
 ---
 
 **참고 링크:**
+
 - [OpenAI Agents SDK 공식 문서](https://platform.openai.com/docs/agents)
 - [Agents SDK GitHub 저장소](https://github.com/openai/agents-sdk)
 - [MCP 프로토콜 사양](https://spec.modelcontextprotocol.io/)
-- [Composio MCP 통합](https://composio.dev/mcp) 
+- [Composio MCP 통합](https://composio.dev/mcp)

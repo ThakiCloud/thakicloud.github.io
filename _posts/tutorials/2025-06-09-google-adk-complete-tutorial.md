@@ -919,18 +919,21 @@ class TestADKAgents:
 Google Agent Development Kit (ADK)는 AI 에이전트 개발의 새로운 표준을 제시합니다. 이 가이드에서 다룬 핵심 내용들:
 
 ### 주요 장점
+
 1. **간편한 시작**: 100줄 미만의 코드로 강력한 에이전트 구축
 2. **엔터프라이즈 준비**: Vertex AI와의 완벽한 통합
 3. **오픈 생태계**: Agent2Agent 프로토콜로 다양한 시스템과 연동
 4. **확장성**: 단일 에이전트부터 복잡한 멀티 에이전트 시스템까지
 
 ### 차별화 요소
+
 - **Google의 신뢰성**: Gemini 모델과 최적화된 통합
 - **Agent Garden**: 즉시 사용 가능한 샘플과 도구
 - **Agent Engine**: 완전 관리형 프로덕션 런타임
 - **멀티모달 지원**: 텍스트, 오디오, 비디오 상호작용
 
 ### 다음 단계
+
 - Agent Engine을 통한 프로덕션 배포
 - Google Cloud 서비스와의 심화 통합
 - Agent2Agent 프로토콜을 활용한 에코시스템 구축
@@ -941,7 +944,8 @@ Google ADK는 실험실의 개념이 아닌 실무에서 바로 활용할 수 �
 ---
 
 **참고 링크:**
+
 - [Google ADK 공식 문서](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit)
 - [Vertex AI Agents 가이드](https://cloud.google.com/vertex-ai/generative-ai/docs/agents)
 - [Agent Garden 샘플](https://github.com/GoogleCloudPlatform/agent-garden)
-- [Google Codelabs: ADK 시작하기](https://codelabs.developers.google.com/your-first-agent-with-adk) 
+- [Google Codelabs: ADK 시작하기](https://codelabs.developers.google.com/your-first-agent-with-adk)

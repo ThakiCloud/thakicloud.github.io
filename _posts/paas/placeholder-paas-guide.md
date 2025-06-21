@@ -63,7 +63,7 @@ Thaki Cloud의 PaaS(Platform as a Service) 솔루션과 플랫폼 엔지니어�
 
 ---
 
-## 여기에 실제 [플랫폼 엔지니어링 (PaaS)] 관련 내용을 작성하세요.
+## 여기에 실제 [플랫폼 엔지니어링 (PaaS)] 관련 내용을 작성하세요
 
 (예시)
 
@@ -73,4 +73,4 @@ Thaki Cloud의 PaaS(Platform as a Service) 솔루션과 플랫폼 엔지니어�
 
 ---
 
-_이 파일은 '플랫폼 엔지니어링 (PaaS)' 카테고리 게시물 작성 가이드라인입니다. 실제 게시물 작성 시 이 내용을 참고하여 YAML 프론트매터와 본문을 수정해 주세요. 파일명은 `YYYY-MM-DD-meaningful-title-in-english.md` 형식으로 저장하는 것을 권장합니다._ 
+_이 파일은 '플랫폼 엔지니어링 (PaaS)' 카테고리 게시물 작성 가이드라인입니다. 실제 게시물 작성 시 이 내용을 참고하여 YAML 프론트매터와 본문을 수정해 주세요. 파일명은 `YYYY-MM-DD-meaningful-title-in-english.md` 형식으로 저장하는 것을 권장합니다._

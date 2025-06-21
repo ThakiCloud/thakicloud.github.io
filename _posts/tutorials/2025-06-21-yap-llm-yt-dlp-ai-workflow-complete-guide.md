@@ -25,6 +25,7 @@ toc_label: "AI 워크플로우 가이드"
 YouTube 영상을 보다가 "이 내용을 빠르게 요약해서 읽고 싶다"고 생각해본 적이 있으신가요? 오늘 소개할 워크플로우를 사용하면 **단 한 줄의 명령어**로 YouTube 영상을 다운로드하고, 음성을 텍스트로 전사한 후, AI가 내용을 요약해주는 완전 자동화된 시스템을 구축할 수 있습니다.
 
 이 튜토리얼에서는 세 가지 강력한 도구를 조합합니다:
+
 - **🗣️ yap**: macOS 온디바이스 음성 전사
 - **🤖 llm**: 다양한 LLM과의 CLI 인터페이스  
 - **📹 yt-dlp**: YouTube 영상 다운로드
@@ -36,6 +37,7 @@ YouTube 영상을 보다가 "이 내용을 빠르게 요약해서 읽고 싶다"
 [yap](https://github.com/finnvoor/yap)은 macOS 26의 Speech.framework를 활용한 **온디바이스 음성 전사 도구**입니다. 외부 API 호출 없이 로컬에서 고품질 전사를 제공합니다.
 
 **주요 특징:**
+
 - 🔒 **완전한 프라이버시**: 모든 처리가 로컬에서 진행
 - ⚡ **빠른 속도**: macOS 최적화된 네이티브 성능
 - 🎯 **높은 정확도**: Apple의 최신 Speech.framework 활용
@@ -47,6 +49,7 @@ YouTube 영상을 보다가 "이 내용을 빠르게 요약해서 읽고 싶다"
 [llm](https://llm.datasette.io/en/stable/)은 Simon Willison이 개발한 **범용 LLM CLI 도구**입니다. OpenAI, Anthropic, Google, Meta 등 모든 주요 LLM을 하나의 인터페이스로 사용할 수 있습니다.
 
 **주요 특징:**
+
 - 🔌 **플러그인 생태계**: 다양한 모델 지원
 - 💾 **자동 로깅**: SQLite에 모든 대화 기록 저장
 - 🔧 **도구 통합**: 함수 호출, 스키마 추출 지원
@@ -644,18 +647,21 @@ ytsummary_robust() {
 ### 일반적인 문제들
 
 1. **yap 전사 오류**
+
    ```bash
    # macOS 권한 확인
    # System Preferences > Security & Privacy > Microphone
    ```
 
 2. **yt-dlp 다운로드 실패**
+
    ```bash
    # yt-dlp 업데이트
    pip install --upgrade yt-dlp
    ```
 
 3. **llm API 키 오류**
+
    ```bash
    # API 키 재설정
    llm keys set openai
@@ -664,16 +670,19 @@ ytsummary_robust() {
 ## 실제 사용 사례
 
 ### 1. 연구자/학생
+
 - 온라인 강의 요약
 - 학술 발표 내용 정리
 - 연구 인터뷰 전사
 
 ### 2. 콘텐츠 크리에이터
+
 - 경쟁사 분석
 - 트렌드 파악
 - 자막 생성
 
 ### 3. 비즈니스 전문가
+
 - 컨퍼런스 세션 요약
 - 업계 인사이트 추출
 - 회의록 작성
@@ -683,6 +692,7 @@ ytsummary_robust() {
 yap, llm, yt-dlp의 조합은 **정보 소비 방식을 혁신**하는 강력한 도구입니다. 몇 시간짜리 영상을 몇 분 만에 핵심 내용으로 압축하고, 다양한 관점에서 분석할 수 있습니다.
 
 이 워크플로우의 진정한 가치는:
+
 - ⏰ **시간 절약**: 긴 영상을 빠르게 파악
 - 🔒 **프라이버시 보호**: 로컬 전사로 민감한 내용도 안전
 - 🎯 **맞춤 분석**: 필요에 따른 다양한 분석 형태
@@ -693,6 +703,7 @@ yap, llm, yt-dlp의 조합은 **정보 소비 방식을 혁신**하는 강력한
 ---
 
 **참고 자료**:
+
 - [yap GitHub 저장소](https://github.com/finnvoor/yap)
 - [llm 공식 문서](https://llm.datasette.io/en/stable/)
-- [yt-dlp GitHub 저장소](https://github.com/yt-dlp/yt-dlp) 
+- [yt-dlp GitHub 저장소](https://github.com/yt-dlp/yt-dlp)

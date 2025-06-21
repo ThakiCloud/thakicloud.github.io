@@ -172,7 +172,6 @@ flowchart TD
 번역한 위의 문서는 다음 GitHub Gist 링크의 내용을 한국어로 번역한 것입니다:
 🔗 https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab#file-cursor-memory-bank-rules-md
 
-
 <figure class="video-container">
   <iframe
     src="https://youtu.be/KLl6rNG4sUU?si=AOqKn9EpBHW-ccBk"

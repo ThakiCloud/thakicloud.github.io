@@ -27,14 +27,14 @@ DeepEval은 단순한 단위 테스트를 넘어 LLM 시스템의 복잡성을 �
 
 * **엔드 투 엔드 및 컴포넌트 단위 평가**: 전체 LLM 애플리케이션의 최종 응답 품질뿐만 아니라, 내부 컴포넌트(예: 리트리버, LLM 호출 단계)의 성능까지 세밀하게 평가할 수 있습니다.
 * **즉시 사용 가능한 풍부한 메트릭**:
-    * **G-Eval**: LLM을 활용하여 LLM 출력을 평가하는 유연한 메트릭입니다.
-    * **Hallucination (환각)**: 생성된 응답이 사실에 기반하는지, 혹은 잘못된 정보를 포함하는지 평가합니다.
-    * **Answer Relevancy (답변 관련성)**: 주어진 입력에 대해 LLM의 답변이 얼마나 관련성이 높은지 측정합니다.
-    * **RAGAS 메트릭**: RAG 시스템 평가에 특화된 Faithfulness, Context Precision/Recall 등을 지원합니다.
-    * **Task Completion (과업 완료율)**: LLM이 특정 과업을 성공적으로 완수했는지 여부를 평가합니다.
-    * **Summarization (요약)**: 생성된 요약문의 품질과 정확성을 평가합니다.
-    * **Bias (편향)**: 모델 출력에서 성별, 인종, 종교 등에 대한 편향을 탐지합니다.
-    * **Toxicity (독성)**: 생성된 콘텐츠의 독성, 혐오 표현, 부적절한 내용을 식별합니다.
+  * **G-Eval**: LLM을 활용하여 LLM 출력을 평가하는 유연한 메트릭입니다.
+  * **Hallucination (환각)**: 생성된 응답이 사실에 기반하는지, 혹은 잘못된 정보를 포함하는지 평가합니다.
+  * **Answer Relevancy (답변 관련성)**: 주어진 입력에 대해 LLM의 답변이 얼마나 관련성이 높은지 측정합니다.
+  * **RAGAS 메트릭**: RAG 시스템 평가에 특화된 Faithfulness, Context Precision/Recall 등을 지원합니다.
+  * **Task Completion (과업 완료율)**: LLM이 특정 과업을 성공적으로 완수했는지 여부를 평가합니다.
+  * **Summarization (요약)**: 생성된 요약문의 품질과 정확성을 평가합니다.
+  * **Bias (편향)**: 모델 출력에서 성별, 인종, 종교 등에 대한 편향을 탐지합니다.
+  * **Toxicity (독성)**: 생성된 콘텐츠의 독성, 혐오 표현, 부적절한 내용을 식별합니다.
 * **강력한 레드팀(Red Teaming) 기능**: 약 40개 이상의 사전 정의된 레드팀 공격 시나리오(독성, 편향, SQL 인젝션 등)를 손쉽게 실행하여 모델의 안전성과 견고성을 테스트합니다.
 * **커스텀 메트릭 정의 및 통합**: 사용자는 자체적인 평가 기준에 맞는 커스텀 메트릭을 정의하고, 이를 DeepEval 생태계에 원활하게 통합하여 활용할 수 있습니다.
 * **Confident AI 플랫폼 연동**: 테스트 결과를 Confident AI 클라우드 플랫폼에 저장하고 공유함으로써, 팀 내 협업을 강화하고 평가 이력을 체계적으로 관리할 수 있습니다.
@@ -54,19 +54,25 @@ DeepEval은 기존 MLOps 및 개발 워크플로우에 쉽게 통합될 수 있�
 DeepEval의 도입은 매우 간결합니다.
 
 * **설치**:
+
     ```bash
     pip install -U deepeval
     ```
+
 * **로그인 (선택 사항)**: Confident AI 플랫폼 연동을 위해 `deepeval login` 명령어로 계정을 생성하고 API 키를 CLI에 입력합니다.
 * **테스트 파일 작성**:
+
     ```bash
     touch test_my_llm_app.py
     ```
+
     해당 파일 내에서 `LLMTestCase`를 정의하고, `GEval`과 같은 적절한 메트릭을 지정합니다.
 * **실행**:
+
     ```bash
     deepeval test run test_my_llm_app.py
     ```
+
     테스트 통과 시 CLI에 ✅ 아이콘이 표시됩니다.
 
 ### 1-1. 실제 테스트 케이스 작성 예시
@@ -155,7 +161,8 @@ DeepEval은 다양한 공개 벤치마크를 지원하며, 모든 벤치마크 �
 
 DeepEval을 사용한 벤치마킹은 몇 줄의 코드로 간단하게 수행할 수 있습니다.
 
-1.  **모델 래퍼 작성**: `DeepEvalBaseLLM`을 상속받아 사용하고자 하는 LLM(사내 모델, 오픈소스 모델, API 기반 모델 등)을 위한 래퍼 클래스를 구현합니다.
+1. **모델 래퍼 작성**: `DeepEvalBaseLLM`을 상속받아 사용하고자 하는 LLM(사내 모델, 오픈소스 모델, API 기반 모델 등)을 위한 래퍼 클래스를 구현합니다.
+
     ```python
     from deepeval.models.base_model import DeepEvalBaseLLM
 
@@ -186,7 +193,8 @@ DeepEval을 사용한 벤치마킹은 몇 줄의 코드로 간단하게 수행�
             return "My Custom LLM"
     ```
 
-2.  **벤치마크 인스턴스화**: 평가하고자 하는 벤치마크를 선택하고 인스턴스를 생성합니다. 특정 태스크만 선택하여 평가할 수도 있습니다.
+2. **벤치마크 인스턴스화**: 평가하고자 하는 벤치마크를 선택하고 인스턴스를 생성합니다. 특정 태스크만 선택하여 평가할 수도 있습니다.
+
     ```python
     from deepeval.benchmarks import MMLU
     from deepeval.benchmarks.mmlu.mmlu_metric import MMLUTask # 예시, 실제 사용 시 올바른 import 경로 확인
@@ -198,7 +206,8 @@ DeepEval을 사용한 벤치마킹은 몇 줄의 코드로 간단하게 수행�
     # benchmark = MMLU(tasks=[MMLUTask.ASTRONOMY]) # MMLUTask enum 값은 실제 라이브러리 참조
     ```
 
-3.  **평가 실행**: 준비된 모델 래퍼와 벤치마크 인스턴스를 사용하여 평가를 실행합니다.
+3. **평가 실행**: 준비된 모델 래퍼와 벤치마크 인스턴스를 사용하여 평가를 실행합니다.
+
     ```python
     my_model_instance = MyCustomLLM()
     # results = benchmark.evaluate(model=my_model_instance, batch_size=8) # 배치 생성 지원 시
@@ -206,6 +215,7 @@ DeepEval을 사용한 벤치마킹은 몇 줄의 코드로 간단하게 수행�
     # print(benchmark.task_scores) # DataFrame 형태
     # print(benchmark.predictions) # DataFrame 형태
     ```
+
     *실제 `evaluate` 실행 및 결과 출력은 모델 래퍼가 완전하게 구현된 후 가능합니다.*
 
 ### 3. 벤치마크 구성 옵션
@@ -222,6 +232,7 @@ DeepEval을 사용한 벤치마킹은 몇 줄의 코드로 간단하게 수행�
 다지선다형(MCQ) 벤치마크는 종종 단일 문자(예: A, B, C, D) 형태의 답변을 요구합니다. 모델이 불완전하거나 형식이 다른 문자열을 반환할 경우, 점수가 비정상적으로 낮게 나올 수 있습니다. 이를 해결하기 위해 DeepEval 모델 래퍼 내에서 후처리 로직을 추가하거나, 프롬프트 엔지니어링을 통해 응답 형식을 강제하는 것이 좋습니다.
 
 평가 결과는 다음과 같이 활용됩니다:
+
 * `overall_score`: 벤치마크 전체에 대한 종합 성능 지표입니다.
 * `task_scores`: (DataFrame 형태) 각 세부 과제별 정확도 및 성능 지표를 제공합니다.
 * `predictions`: (DataFrame 형태) 개별 입력, 모델의 예측, 정답 여부 등 상세 분석 자료를 제공합니다.
@@ -279,7 +290,7 @@ deepeval test run tests/ --verbose --output-format json
 
 ## 결론
 
-DeepEval은 LLM 기반 시스템의 개발 및 운영에 있어 필수적인 '신뢰성'과 '성능'을 체계적으로 확보할 수 있도록 지원하는 포괄적이고 유연한 평가 프레임워크입니다. 
+DeepEval은 LLM 기반 시스템의 개발 및 운영에 있어 필수적인 '신뢰성'과 '성능'을 체계적으로 확보할 수 있도록 지원하는 포괄적이고 유연한 평가 프레임워크입니다.
 
 ### 핵심 가치
 

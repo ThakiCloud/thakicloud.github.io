@@ -57,12 +57,14 @@ toc_label: "OpenCodeReasoning 가이드"
 ### 데이터 소스 상세
 
 **원본 데이터셋 컬렉션**:
+
 - [TACO](https://huggingface.co/datasets/BAAI/TACO)
 - [APPS](https://huggingface.co/datasets/codeparrot/apps)
 - [CodeContests](https://huggingface.co/datasets/deepmind/code_contests)
 - [open-r1/codeforces](https://huggingface.co/datasets/open-r1/codeforces)
 
 **제외사항**:
+
 - CodeContests와 open-r1/codeforces의 테스트 스플릿 제외
 - 데이터 오염 방지를 위한 엄격한 분리
 
@@ -88,11 +90,13 @@ toc_label: "OpenCodeReasoning 가이드"
 ### 스플릿 구조
 
 #### Split_0 (567,850 샘플)
+
 - **완전한 문제 설명** 포함
 - 즉시 사용 가능한 형태
 - 직접적인 SFT 훈련 활용
 
 #### Split_1 (167,405 샘플)
+
 - **참조 기반 구조** (input = "-")
 - TACO/APPS 데이터셋에서 별도 로드 필요
 - 저장 공간 효율성 최적화
@@ -187,6 +191,7 @@ for platform, data in stats.items():
 ### 추론 품질 특징
 
 **R1 모델의 추론 특성**:
+
 1. **단계별 사고 과정** 명시
 2. **문제 분석과 해결 전략** 설명
 3. **코드 구현과 검증** 과정 포함
@@ -226,9 +231,11 @@ def max_subarray_sum(arr):
 공간 복잡도: O(1)
 
 테스트 케이스 검증:
+
 - 입력: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 - 출력: 6 (부분 배열 [4, -1, 2, 1])
 """
+
 ```
 
 ## 데이터 품질 및 특성
@@ -441,12 +448,14 @@ processor = OpenCodeReasoningProcessor()
 ### CC BY 4.0 라이센스
 
 **허용사항**:
+
 - ✅ **상업적 사용**: 자유로운 상업적 활용
 - ✅ **수정**: 데이터 변경 및 가공 가능
 - ✅ **배포**: 원본 및 수정본 재배포 허용
 - ✅ **사적 사용**: 개인/조직 내부 사용
 
 **의무사항**:
+
 - 📝 **저작자 표시**: NVIDIA 개발자 명시 필요
 - 📝 **라이센스 고지**: CC BY 4.0 라이센스 표시
 - 📝 **변경사항 표시**: 수정 시 변경사항 명시
@@ -631,4 +640,4 @@ class CodeReasoningEvaluator:
 - [GitHub 전체 파이프라인](https://github.com/nvidia/OpenCodeReasoning)
 - [OpenCodeReasoning-Nemotron 모델 시리즈](https://huggingface.co/collections/nvidia/opencodereasoning-65f42e4f2e4ca0f7b69a4c6c)
 - [Creative Commons BY 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
-- [NVIDIA AI 윤리 정책](https://www.nvidia.com/en-us/ai-data-science/ai-governance/) 
+- [NVIDIA AI 윤리 정책](https://www.nvidia.com/en-us/ai-data-science/ai-governance/)

@@ -103,12 +103,14 @@ NVIDIA에서 2025년 6월 16일에 공개한 **AceReason-1.1-SFT**는 수학과 
 AceReason-1.1-SFT 데이터셋은 **Creative Commons Attribution 4.0 International License**로 제공됩니다.
 
 **허용사항**:
+
 - **상업적 사용**: 영리 목적으로 사용 가능
 - **수정**: 데이터셋 수정 및 변형 가능
 - **배포**: 원본 및 수정된 버전 배포 가능
 - **사적 사용**: 개인적 용도로 사용 가능
 
 **의무사항**:
+
 - **저작자 표시**: 원본 저작자(NVIDIA) 및 라이센스 명시 필요
 - **라이센스 표시**: CC BY 4.0 라이센스 고지 필요
 - **변경사항 표시**: 수정한 경우 변경사항 명시 권장
@@ -221,4 +223,4 @@ NVIDIA AceReason-1.1-SFT는 수학과 코딩 추론 분야에서 높은 품질�
 - [NVIDIA AceReason-1.1-SFT Hugging Face](https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT)
 - [ArXiv 논문: AceReason-Nemotron 1.1](https://arxiv.org/abs/2506.13284)
 - [Creative Commons BY 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
-- [NVIDIA AI Trustworthy AI Policies](https://www.nvidia.com/en-us/ai-data-science/ai-governance/) 
+- [NVIDIA AI Trustworthy AI Policies](https://www.nvidia.com/en-us/ai-data-science/ai-governance/)

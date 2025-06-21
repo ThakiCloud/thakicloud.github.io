@@ -27,6 +27,7 @@ toc_label: "목차"
 ## 주요 특징
 
 ### 핵심 기능
+
 - **Few-shot 평가**: 언어 모델의 few-shot learning 능력 측정
 - **다양한 백엔드 지원**: HuggingFace, vLLM, OpenAI API, Anthropic API 등
 - **표준화된 벤치마크**: MMLU, HellaSwag, ARC, GSM8K 등 주요 벤치마크 내장
@@ -183,8 +184,6 @@ lm_eval --model anthropic \
         --batch_size 3
 ```
 
-
-
 ## 사내 vLLM 서버와 LM Studio 평가 완벽 가이드
 
 사내 vLLM 서버와 LM Studio에서 모델을 호출‧평가할 때 꼭 알아야 할 핵심 절차를 단계별로 정리했습니다. 두 환경 모두 **OpenAI API 호환 모드**를 사용하므로, LM-Evaluation-Harness나 OpenAI 클라이언트 코드를 거의 그대로 재활용할 수 있습니다.
@@ -230,6 +229,7 @@ lm_eval --model openai-chat-completions \
 ```
 
 **주요 옵션 설명:**
+
 - `openai-completions` → `text-completion` 방식, `openai-chat-completions` → 챗 모델용 드라이버
 - `base_url`은 **꼭** `/v1`까지 포함해야 엔드포인트 해석이 정확합니다
 - 네트워크 지연·GPU 메모리에 따라 `--batch_size`를 조정하세요. 너무 크게 잡으면 `context length` 초과 오류가 날 수 있습니다
@@ -761,12 +761,14 @@ lm_eval --model hf \
 LM-Evaluation-Harness는 언어 모델 평가의 표준 도구로 자리잡았습니다. 이 가이드를 통해 다음을 달성할 수 있습니다:
 
 ### 핵심 성과
+
 - **표준화된 평가**: 일관되고 재현 가능한 모델 성능 측정
 - **다양한 백엔드 지원**: HuggingFace부터 API 모델까지 통합 평가
 - **확장성**: 커스텀 태스크와 메트릭 쉽게 추가
 - **시각화**: W&B, Zeno를 통한 직관적인 결과 분석
 
 ### 활용 분야
+
 - **모델 개발**: 새로운 모델의 성능 검증
 - **모델 선택**: 용도에 맞는 최적 모델 선택
 - **연구**: 학술 연구의 실험 재현성 확보
@@ -777,8 +779,9 @@ LM-Evaluation-Harness를 MLOps 파이프라인에 통합하면 체계적이고 �
 ---
 
 **참고 자료:**
+
 - [LM-Evaluation-Harness GitHub](https://github.com/EleutherAI/lm-evaluation-harness)
 - [EleutherAI 공식 웹사이트](https://www.eleuther.ai)
 - [Weights & Biases 문서](https://docs.wandb.ai/)
 - [Zeno 시각화 플랫폼](https://hub.zenoml.com/)
-- [HuggingFace Transformers](https://huggingface.co/docs/transformers/) 
+- [HuggingFace Transformers](https://huggingface.co/docs/transformers/)

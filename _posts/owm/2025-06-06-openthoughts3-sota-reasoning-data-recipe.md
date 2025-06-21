@@ -44,6 +44,7 @@ OpenThinker3-7B는 다양한 추론 벤치마크에서 기존 모델들을 크�
 OpenThinker3-7B의 뛰어난 성능은 **OpenThoughts3-1.2M** 데이터셋에 기반합니다:
 
 ### 데이터셋 구성
+
 - **총 120만 개** 질문-답변 쌍
 - **수학**: 85만 개 (70.8%)
 - **코딩**: 25만 개 (20.8%)
@@ -51,6 +52,7 @@ OpenThinker3-7B의 뛰어난 성능은 **OpenThoughts3-1.2M** 데이터셋에 �
 - **추론 trace**: QwQ-32B로 생성된 추론 과정 포함
 
 ### 학습 방식
+
 - **순수 지도학습(SFT)**: 강화학습 없이 supervised fine-tuning만 사용
 - **QwQ-32B 교사 모델**: 추론 trace 생성을 위한 강력한 교사 모델
 - **1000+ 실험**: 데이터 생성 파이프라인의 각 단계별 엄격한 실험
@@ -60,21 +62,27 @@ OpenThinker3-7B의 뛰어난 성능은 **OpenThoughts3-1.2M** 데이터셋에 �
 OpenThoughts3는 다음 6단계의 데이터 생성 파이프라인을 체계적으로 최적화했습니다:
 
 ### 1. 질문 소싱 (Question Sourcing)
+
 고품질 문제 데이터셋에서 다양한 난이도의 질문 수집
 
 ### 2. 질문 믹싱 (Question Mixing)
+
 수학, 코딩, 과학 도메인 간 균형 잡힌 조합
 
 ### 3. 질문 필터링 (Question Filtering)
+
 LLM 기반 난이도 평가 및 품질 검증
 
 ### 4. 다중 답변 생성 (Multiple Answers Generation)
+
 질문당 여러 개의 답변을 교사 모델에서 샘플링
 
 ### 5. 답변 필터링 (Answer Filtering)
+
 생성된 답변의 품질 평가 및 선별
 
 ### 6. 교사 모델 선택 (Teacher Model Selection)
+
 최적의 교사 모델 실험적 검증
 
 ## 💡 핵심 발견 사항
@@ -82,25 +90,30 @@ LLM 기반 난이도 평가 및 품질 검증
 1000+ 실험을 통해 도출된 중요한 인사이트들:
 
 ### 1. 다중 샘플링의 효과
+
 - **질문당 여러 답변 샘플링**이 데이터 크기를 **최소 16배** 증가시키는 효과적 기법
 - 단순 데이터 증강을 넘어서는 품질 향상 효과
 
 ### 2. 교사 모델 선택의 중요성
+
 - **QwQ-32B**가 DeepSeek-R1보다 더 강력한 교사 모델
 - 벤치마크 점수가 높다고 항상 좋은 교사는 아님
 - JEEBench 등 타겟 추론 벤치마크에서 DeepSeek-R1이 더 높은 점수에도 불구
 
 ### 3. 검증 방법의 한계
+
 - 다양한 검증 및 답변 필터링 방법 실험
 - **대부분의 필터링 방법이 유의미한 성능 향상을 주지 않음**
 - 단순한 품질 기준이 오히려 효과적
 
 ### 4. 소수 정예 vs 다양성
+
 - **소수(1-2개)의 고품질 소스** 선택이 효과적
 - 다양성 추구(8-16개 소스)보다 품질 집중이 우수
 - 데이터 큐레이션에서 품질 > 다양성
 
 ### 5. 효과적인 필터링 기준
+
 - **LLM 라벨링된 난이도** 기반 필터링
 - **LLM 응답 길이** 기반 필터링
 - 임베딩이나 fastText 같은 전통적 전처리 필터보다 우수
@@ -110,12 +123,14 @@ LLM 기반 난이도 평가 및 품질 검증
 OpenThoughts 시리즈의 진화 과정에서 스케일링의 중요성이 입증되었습니다:
 
 ### 데이터셋 진화
+
 1. **Bespoke-Stratos**: 17K 샘플
 2. **OpenThoughts**: 114K 샘플  
 3. **OpenThoughts2**: 1M 샘플
 4. **OpenThoughts3**: 1.2M 샘플
 
 ### 스케일링 효과
+
 - 데이터셋 크기 증가에 따른 **지속적인 성능 향상**
 - "More-is-More" 패러다임의 추론 분야 적용
 - 기존 SOTA 오픈 추론 데이터셋(AM, Nemotron Nano) 대비 우수한 성능
@@ -125,10 +140,12 @@ OpenThoughts 시리즈의 진화 과정에서 스케일링의 중요성이 입�
 ### 모델 및 데이터 접근
 
 **Hugging Face 리소스**
+
 - [OpenThinker3-7B 모델](https://huggingface.co/open-thoughts/OpenThinker3-7B)
 - [OpenThoughts3-1.2M 데이터셋](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M)
 
 **연구 자료**
+
 - ArXiv 논문: 상세한 방법론 및 실험 결과
 - OpenThoughts 저장소: 데이터 처리 코드
 - Evalchemy 저장소: 평가 코드
@@ -152,11 +169,13 @@ solution = tokenizer.decode(outputs[0], skip_special_tokens=True)
 ## 🔮 향후 계획
 
 ### 확장 로드맵
+
 - **32B 모델 개발**: OpenThinker3-7B의 32B 버전 계획
 - **파이프라인 스케일링**: 더 큰 규모의 데이터셋 구축
 - **도메인 확장**: 추가 전문 분야로의 확장
 
 ### 커뮤니티 기여
+
 - **완전 오픈소스**: 모든 연구 산출물 공개
 - **재현 가능성**: 실험 코드 및 데이터 제공
 - **협업 연구**: 커뮤니티와 함께하는 발전
@@ -164,21 +183,25 @@ solution = tokenizer.decode(outputs[0], skip_special_tokens=True)
 ## 🌟 OpenThoughts3의 의의
 
 ### 1. **순수 지도학습의 가능성**
+
 - 강화학습 없이도 SOTA 성능 달성
 - 훨씬 간단하고 안정적인 학습 파이프라인
 - 계산 비용 및 복잡성 대폭 감소
 
 ### 2. **체계적 실험의 중요성**
+
 - 1000+ 실험을 통한 과학적 접근
 - 각 단계별 정량적 검증
 - 직관에 반하는 발견들의 가치
 
 ### 3. **오픈 연구 생태계 기여**
+
 - 완전한 투명성과 재현성
 - 커뮤니티 기반 발전 모델
 - 연구 접근성 대폭 향상
 
 ### 4. **실용적 성능 향상**
+
 - 기존 모델 대비 15-20%p 성능 향상
 - 다양한 추론 도메인에서 일관된 우수성
 - 실제 활용 가능한 수준의 모델
@@ -196,4 +219,4 @@ OpenThoughts3는 추론 모델 개발에 새로운 패러다임을 제시합니�
 - [OpenThoughts3 공식 블로그](https://www.openthoughts.ai/blog/ot3)
 - [OpenThinker3-7B 모델](https://huggingface.co/open-thoughts/OpenThinker3-7B)
 - [OpenThoughts3-1.2M 데이터셋](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M)
-- ArXiv 논문: "OpenThoughts: Data Recipes for Reasoning Models" 
+- ArXiv 논문: "OpenThoughts: Data Recipes for Reasoning Models"

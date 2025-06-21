@@ -118,6 +118,7 @@ Claude Code·통합 검색·고급 Research 기능이 묶여 제공. ([anthropic
 **1. 요금**: 최소 5석, 월 $30/석(연 $25) – 팀 단일 청구. ([anthropic.com](https://www.anthropic.com/pricing))
 
 **2. Claude Code 미포함**: 팀 플랜 기본 범위에는 Code가 없으므로
+
 - (a) 구성원이 개별 **Pro/Max** 구독을 추가 결제하거나,
 - (b) 조직이 **API 키**를 발급해 토큰 단가 기준으로 Code를 사용하도록 설정해야 합니다. ([docs.anthropic.com](https://docs.anthropic.com/en/docs/claude-code/team))
 
@@ -442,4 +443,4 @@ claude --config-path
 3. **팀 협업**: API 키 공유와 권한 관리로 효율적인 팀 워크플로우 구축
 4. **비용 모니터링**: 정기적인 사용량 확인과 최적화
 
-이 가이드를 따라 설정하고, 본인·팀 상황에 맞는 최적 플랜을 찾아 보세요! 🚀 
+이 가이드를 따라 설정하고, 본인·팀 상황에 맞는 최적 플랜을 찾아 보세요! 🚀

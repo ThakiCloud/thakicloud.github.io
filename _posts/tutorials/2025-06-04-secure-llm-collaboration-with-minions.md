@@ -57,16 +57,19 @@ Minions는 로컬 모델이 민감한 컨텍스트를 처리하고, 클라우드
 ## 기업이 MinionS를 도입해야 하는 이유
 
 ### 1. 규제 준수
+
 - GDPR, CCPA 등 글로벌 개인정보보호법 대응
 - 금융, 의료 등 규제 산업의 데이터 보안 요구사항 충족
 - 내부 감사 및 규정 준수 증명 용이
 
 ### 2. 비용 효율성
+
 - 클라우드 API 비용 5-30배 절감
 - 로컬 리소스 활용으로 인프라 비용 최적화
 - 확장성 있는 아키텍처로 유연한 비용 관리
 
 ### 3. 보안 강화
+
 - 데이터 암호화 전송 및 처리
 - 하드웨어 수준의 보안 격리
 - 클라우드 제공자도 접근 불가능한 보안 수준
@@ -107,9 +110,9 @@ streamlit run app.py
 
 브라우저 창이 열리면 아래처럼 설정하세요:
 
-* **Remote Provider**: `Secure`
-* **Secure Endpoint URL**: `http://20.57.33.122:5056`
-* **Local Client**: `Ollama`, 모델은 `gemma3:4b`
+- **Remote Provider**: `Secure`
+- **Secure Endpoint URL**: `http://20.57.33.122:5056`
+- **Local Client**: `Ollama`, 모델은 `gemma3:4b`
 
 ## 예제 코드 실행 (Python)
 
@@ -283,6 +286,7 @@ if __name__ == "__main__":
    - 보안 메타데이터 관리
 
 실행 방법:
+
 ```bash
 python financial_analysis.py
 ```
@@ -292,16 +296,19 @@ python financial_analysis.py
 ## 향후 전망
 
 ### 1. 기술 발전 방향
+
 - 더 작은 모델로의 확장 (1B 이하)
 - 멀티모달 지원 강화
 - 실시간 협업 기능 추가
 
 ### 2. 산업 적용 확대
+
 - 금융권 실시간 거래 분석
 - 의료 데이터 보안 처리
 - 법률 문서 검토 자동화
 
 ### 3. 보안 강화
+
 - 양자 내성 암호화 적용
 - 분산형 보안 프로토콜
 - 자동화된 보안 감사
@@ -315,4 +322,4 @@ python financial_analysis.py
 
 ---
 
-**관련 태그:** `#ollama` `#gpt4o` `#프라이버시AI` `#secureLLM` `#nvidiaH100` `#minions` `#보안연산` 
+**관련 태그:** `#ollama` `#gpt4o` `#프라이버시AI` `#secureLLM` `#nvidiaH100` `#minions` `#보안연산`

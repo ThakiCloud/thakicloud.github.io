@@ -62,6 +62,7 @@ git --version   # 2.0.0+
 #### 단계별 가이드
 
 1. **프로젝트 Fork**
+
    ```bash
    # GitHub에서 ChatGPTNextWeb/NextChat 저장소를 Fork
    https://github.com/ChatGPTNextWeb/NextChat
@@ -74,6 +75,7 @@ git --version   # 2.0.0+
    - "Import" 클릭
 
 3. **환경 변수 설정**
+
    ```bash
    # 필수 환경 변수
    OPENAI_API_KEY=sk-your-openai-api-key
@@ -214,6 +216,7 @@ yarn build && yarn start
 ### 필수 환경 변수
 
 #### OPENAI_API_KEY
+
 ```bash
 # 단일 키
 OPENAI_API_KEY=sk-your-openai-api-key
@@ -223,6 +226,7 @@ OPENAI_API_KEY=sk-key1,sk-key2,sk-key3
 ```
 
 #### CODE (접근 비밀번호)
+
 ```bash
 # 단일 비밀번호
 CODE=mypassword123
@@ -582,4 +586,4 @@ ChatGPT Next Web은 강력하고 유연한 AI 채팅 인터페이스를 제공�
 3. **커스터마이징**: 브랜딩 및 기능 확장
 4. **자동화**: CI/CD 파이프라인 구축
 
-이 튜토리얼이 ChatGPT Next Web 프로젝트를 성공적으로 구축하는 데 도움이 되기를 바랍니다. 
+이 튜토리얼이 ChatGPT Next Web 프로젝트를 성공적으로 구축하는 데 도움이 되기를 바랍니다.

@@ -111,4 +111,3 @@ cd docker/docker-cuda && docker compose up -d
 프레임워크·모델 라이선스는 Apache‑2.0 및 각 모델 고유 라이선스를 준수해야 한다. 세부 내용은 저장소 `LICENSE` 파일과 모델 카드 참고.
 
 ---
-

@@ -58,6 +58,7 @@ https://huggingface.co/join
 ```
 
 가입 옵션:
+
 - **GitHub 계정 연동** (권장)
 - **Google 계정 연동**
 - **이메일 직접 가입**
@@ -192,6 +193,7 @@ Enterprise 플랜에서는 더 세밀한 권한 제어가 가능합니다:
 #### 자동 가입 설정
 
 도메인 인증 후 같은 이메일 도메인 사용자는:
+
 - 자동으로 조직에 가입 신청 가능
 - "Verified" 상태로 표시
 - 별도 초대 없이도 조직 검색 및 가입 가능
@@ -481,6 +483,7 @@ A: 없습니다. Free 플랜에서도 무제한 멤버를 초대할 수 있습�
 ### 기술적 질문
 
 **Q: CLI에서 조직 리포지토리에 푸시하려면?**
+
 ```bash
 # 조직 리포지토리 생성
 huggingface-cli repo create your-org-name/model-name --type=model --private
@@ -559,15 +562,19 @@ model = AutoModel.from_pretrained("your-org/model-name")
 ```
 
 ## 성능 지표
+
 | 데이터셋 | 정확도 | F1 Score |
 |----------|--------|----------|
 | Test Set | 95.2%  | 0.94     |
 
 ## 라이선스
+
 MIT License
 
 ## 연락처
+
 팀 이메일 또는 Slack 채널
+
 ```
 
 ## 마이그레이션 가이드
@@ -647,4 +654,4 @@ Hugging Face 조직 계정은 AI/ML 팀의 협업을 위한 강력한 도구입�
 
 ---
 
-*이 가이드는 [Hugging Face 공식 문서](https://huggingface.co/docs/hub/organizations), [커뮤니티 포럼](https://discuss.huggingface.co), [요금 정보](https://huggingface.co/pricing) 등을 참조하여 작성되었습니다.* 
+*이 가이드는 [Hugging Face 공식 문서](https://huggingface.co/docs/hub/organizations), [커뮤니티 포럼](https://discuss.huggingface.co), [요금 정보](https://huggingface.co/pricing) 등을 참조하여 작성되었습니다.*

@@ -30,6 +30,7 @@ toc_label: AceReason 분석 가이드
 ## 🎯 시스템 개요
 
 AceReason Evaluation Toolkit은 다음 두 가지 주요 평가를 수행합니다:
+
 - **AIME (American Invitational Mathematics Examination)**: 고난도 수학 문제 추론 평가
 - **LiveCodeBench**: 실시간 코딩 능력 평가
 
@@ -87,6 +88,7 @@ fi
 ```
 
 **핵심 특징:**
+
 - **다중 시드**: 8개 서로 다른 시드로 통계적 신뢰성 확보
 - **모델별 차별화**: 각 모델에 최적화된 시드 및 템플릿 적용
 - **데이터셋 분리**: AIME 2024, AIME 2025 별도 평가
@@ -119,6 +121,7 @@ graph LR
 ```
 
 **추론 파라미터:**
+
 ```bash
 BSZ=30              # 배치 크기: 전체 문제 수
 TOTAL=30            # 총 문제 수 (AIME)
@@ -131,6 +134,7 @@ temperature=0.6     # 온도 매개변수
 #### 1.3 모델별 템플릿 처리
 
 **AceReason r1 모델 (7B, 14B)**:
+
 ```python
 def apply_r1_template(problem):
     return f"""<|im_start|>user
@@ -146,6 +150,7 @@ def apply_r1_template(problem):
 ```
 
 **AceReason Qwen 모델 (1.1-7B)**:
+
 ```python
 def apply_qwen_template(problem):
     return f"""<|im_start|>user
@@ -178,6 +183,7 @@ graph TD
 ```
 
 **패턴 매칭 순서:**
+
 1. `\\boxed{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)}` - LaTeX boxed 형식
 2. `\\*\\*(.*?)\\*\\*` - 마크다운 강조 형식
 3. `\\\\\\[\\n(.*?)\\n\\\\\\]` - LaTeX 수식 환경
@@ -237,12 +243,14 @@ graph TD
 ```
 
 **수치적 동치성 검사:**
+
 ```python
 def numeric_equal(prediction: float, reference: float):
     return isclose(prediction, reference, rel_tol=1e-4, abs_tol=1e-6)
 ```
 
 **기호적 동치성 검사:**
+
 ```python
 def symbolic_equal(a, b):
     try:
@@ -315,6 +323,7 @@ graph LR
 #### 1.2 코드 생성 프로세스
 
 **문제 구조:**
+
 ```json
 {
     "question_id": "unique_identifier",
@@ -325,6 +334,7 @@ graph LR
 ```
 
 **생성된 코드 형식:**
+
 ````python
 ```python
 def solution():
@@ -421,6 +431,7 @@ def check_correctness(problem_to_check, timeout=5, debug=False):
 ### AIME 채점 방식
 
 #### 1. 패턴 기반 답안 추출
+
 ```python
 patterns = [
     r"\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)}",  # LaTeX boxed
@@ -432,6 +443,7 @@ patterns = [
 ```
 
 #### 2. 다단계 정규화 처리
+
 - **1단계**: LaTeX 명령어 정규화 (`\\dfrac` → `\\frac`)
 - **2단계**: 단위 및 기호 제거 (`^\\circ`, `\\text{}`)
 - **3단계**: 공백 및 구두점 정리
@@ -439,6 +451,7 @@ patterns = [
 - **5단계**: 함수 표기 간소화 (`f(x)=y` → `y`)
 
 #### 3. 동치성 검증 알고리즘
+
 ```python
 def math_equal(prediction, reference):
     # 1차: 문자열 완전 일치
@@ -461,6 +474,7 @@ def math_equal(prediction, reference):
 ### LiveCodeBench 채점 방식
 
 #### 1. 실행 기반 검증
+
 ```python
 def run_test(problem, timeout=5):
     """실제 코드 실행을 통한 검증"""
@@ -488,6 +502,7 @@ def run_test(problem, timeout=5):
 ```
 
 #### 2. 보안 샌드박스
+
 - **프로세스 격리**: 각 코드 실행을 별도 프로세스에서 수행
 - **시간 제한**: 테스트 케이스당 5초 제한
 - **메모리 제한**: 과도한 메모리 사용 방지
@@ -525,11 +540,13 @@ graph TD
 ### 2. 메모리 효율성
 
 **VLLM 최적화:**
+
 - **PagedAttention**: KV 캐시 효율적 관리
 - **동적 배치**: 가변 길이 시퀀스 최적화
 - **메모리 공유**: GPU 간 모델 가중치 공유
 
 **배치 처리 전략:**
+
 ```python
 # AIME: 전체 문제를 한 번에 처리
 BSZ = 30  # = 총 문제 수
@@ -541,11 +558,13 @@ BSZ = 132  # 132문제씩 배치 처리
 ### 3. 캐싱 메커니즘
 
 **결과 캐싱:**
+
 - 시드별 결과를 개별 JSONL 파일로 저장
 - 중간 결과 체크포인트 지원
 - 실패 시 재시작 가능
 
 **모델 캐싱:**
+
 - 모델 가중치를 GPU 메모리에 상주
 - 토크나이저 사전 로드
 - 컴파일된 CUDA 커널 재사용
@@ -620,11 +639,13 @@ def compute_statistics(results):
 ### 2. 세분화된 분석
 
 **AIME 분석:**
+
 - 연도별 성능 (2024 vs 2025)
 - 문제 난이도별 성능
 - 수학 영역별 성능 (대수, 기하, 수론 등)
 
 **LiveCodeBench 분석:**
+
 - 기간별 성능 (2023.05-2024.05)
 - 버전별 성능 (v5 vs v6)
 - 월별 성능 트렌드
@@ -659,6 +680,7 @@ def compute_statistics(results):
 ## 🔧 실행 명령어 요약
 
 ### AIME 평가 실행
+
 ```bash
 # 전체 AIME 평가 (2024 + 2025)
 bash run_aime.sh nvidia/AceReason-Nemotron-1.1-7B output_folder
@@ -671,6 +693,7 @@ python evaluate_aime.py --modelfolder output_folder --dataset data/aime24.jsonl
 ```
 
 ### LiveCodeBench 평가 실행
+
 ```bash
 # 전체 LiveCodeBench 평가
 bash run_livecodebench.sh nvidia/AceReason-Nemotron-1.1-7B output_folder
@@ -687,16 +710,19 @@ python evaluate_livecodebench.py
 ## 📊 성능 벤치마크
 
 ### 시스템 요구사항
+
 - **GPU**: 8x NVIDIA H100 80GB (권장), 더 적은 GPU도 가능
 - **메모리**: 640GB GPU 메모리 총합
 - **스토리지**: 1TB+ (모델 및 결과 저장)
 
 ### 예상 실행 시간
+
 - **AIME 평가**: 45-60분 (8개 시드, 60문제)
 - **LiveCodeBench 평가**: 25-35분 (8개 시드, 1055문제)
 - **총 평가 시간**: 약 1.5-2시간
 
 ### 메모리 사용량
+
 - **모델 로딩**: 50-100GB (모델 크기에 따라)
 - **추론 과정**: 400-500GB (배치 처리 시)
 - **결과 저장**: 1-5GB (시드별 결과 파일)
@@ -708,6 +734,7 @@ python evaluate_livecodebench.py
 AceReason Evaluation Toolkit은 다음과 같은 특징을 가진 정교한 평가 시스템입니다:
 
 ### 🎯 핵심 강점
+
 1. **정확성**: 수학적 동치성과 코드 실행 기반의 엄격한 채점
 2. **신뢰성**: 다중 시드를 통한 통계적 신뢰성 확보
 3. **효율성**: VLLM 기반 고성능 병렬 추론
@@ -715,9 +742,10 @@ AceReason Evaluation Toolkit은 다음과 같은 특징을 가진 정교한 평�
 5. **확장성**: 유연한 GPU 구성과 모듈러 아키텍처
 
 ### 🚀 기술적 혁신
+
 - **LaTeX2SymPy**: 정교한 수학 표기법 파싱
 - **PagedAttention**: 메모리 효율적인 대화형 추론
 - **다중 패턴 매칭**: robust한 답안 추출
 - **프로세스 격리**: 안전한 코드 실행 환경
 
-이 시스템은 AI 모델의 복합적 추론 능력을 객관적이고 재현 가능한 방식으로 평가할 수 있는 industry-standard 도구로 자리잡을 수 있는 기술적 기반을 제공합니다. 
+이 시스템은 AI 모델의 복합적 추론 능력을 객관적이고 재현 가능한 방식으로 평가할 수 있는 industry-standard 도구로 자리잡을 수 있는 기술적 기반을 제공합니다.

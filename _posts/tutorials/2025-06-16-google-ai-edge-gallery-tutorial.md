@@ -106,4 +106,4 @@ LiteRT 변환 스크립트와 지원 모델 목록은 [Project Wiki](https://git
 
 Google AI Edge Gallery는 인터넷 연결 없이도 GenAI 모델을 실험할 수 있는 훌륭한 테스트베드입니다. 본 튜토리얼을 통해 모델 다운로드, 이미지 질의, 프롬프트 실험, 성능 분석까지 핵심 기능을 익혔다면, 이제 자신의 **온디바이스 AI** 워크플로에 적극 활용해 보세요!
 
-> 프로젝트 소스와 최신 업데이트는 GitHub에서 확인하세요: [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) \[Repo README\] 
+> 프로젝트 소스와 최신 업데이트는 GitHub에서 확인하세요: [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) \[Repo README\]

@@ -23,6 +23,7 @@ toc_label: "목차"
 Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 설계된 통합 프레임워크입니다. LLaMA, Mistral, Mixtral, Pythia 등 다양한 모델을 지원하며, HuggingFace transformers의 causal language model과 호환됩니다.
 
 **GitHub 통계**:
+
 - ⭐ **9.6k stars**
 - 🍴 **1k forks**
 - 👥 **198+ contributors**
@@ -35,6 +36,7 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 ### 다양한 모델 지원
 
 **지원 모델**:
+
 - LLaMA (Llama 4 포함)
 - Mistral (Magistral 포함)
 - Mixtral
@@ -44,6 +46,7 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 ### 훈련 방법론
 
 **파인튜닝 기법**:
+
 - **Full Fine-tuning**: 전체 모델 파라미터 훈련
 - **LoRA**: Low-Rank Adaptation
 - **QLoRA**: Quantized LoRA
@@ -51,6 +54,7 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 - **QAT**: Quantization Aware Training
 
 **고급 훈련 기법**:
+
 - **Preference Tuning**: DPO, IPO, KTO, ORPO
 - **Reinforcement Learning**: GRPO (Group Relative Policy Optimization)
 - **Multimodal Training**: 멀티모달 모델 파인튜닝
@@ -59,6 +63,7 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 ### 성능 최적화
 
 **메모리 및 속도 최적화**:
+
 - **Multipacking**: 효율적인 배치 처리
 - **Flash Attention**: 메모리 효율적인 어텐션
 - **Xformers**: 최적화된 트랜스포머 연산
@@ -68,6 +73,7 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 - **Sequence Parallelism (SP)**: 시퀀스 병렬화
 
 **분산 훈련**:
+
 - **Multi-GPU Training**: FSDP1, FSDP2, DeepSpeed
 - **Multi-node Training**: Torchrun, Ray
 - **LoRA Optimizations**: 단일/다중 GPU 환경에서 LoRA 최적화
@@ -77,23 +83,29 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 ## 최신 업데이트 (2025년)
 
 ### 2025년 6월
+
 **Magistral 지원 추가** - mistral-common tokenizer를 사용하는 Magistral 모델 훈련 지원
 
 ### 2025년 5월
+
 **Quantization Aware Training (QAT)** - 양자화 인식 훈련 지원 추가
 
 ### 2025년 4월
+
 **Llama 4 지원** - Axolotl의 linearized 버전으로 Llama 4 모델 훈련 지원
 
 ### 2025년 3월
+
 **Sequence Parallelism (SP)** - 컨텍스트 길이 확장을 위한 시퀀스 병렬화 구현
 **Multimodal Fine-tuning (Beta)** - 멀티모달 모델 파인튜닝 지원
 
 ### 2025년 2월
+
 **LoRA 최적화** - 메모리 사용량 감소 및 훈련 속도 향상
 **GRPO 지원** - Group Relative Policy Optimization 추가
 
 ### 2025년 1월
+
 **Reward Modelling** - RM/PRM 파인튜닝 지원 추가
 
 ---
@@ -103,6 +115,7 @@ Axolotl은 다양한 AI 모델의 포스트 트레이닝을 간소화하도록 �
 ### 시스템 요구사항
 
 **하드웨어**:
+
 - NVIDIA GPU (Ampere 이상, `bf16` 및 Flash Attention용)
 - AMD GPU 지원
 - Python 3.11
@@ -380,6 +393,7 @@ axolotl train config.yml --ray
 ### 지원 데이터 소스
 
 **로컬 및 클라우드**:
+
 - 로컬 파일 시스템
 - HuggingFace Datasets
 - AWS S3
@@ -661,6 +675,7 @@ special_tokens:
 ### 일반적인 문제 해결
 
 **메모리 부족 오류**:
+
 ```yaml
 # 메모리 최적화 설정
 micro_batch_size: 1
@@ -670,6 +685,7 @@ load_in_8bit: true
 ```
 
 **훈련 속도 개선**:
+
 ```yaml
 # 속도 최적화
 sample_packing: true
@@ -679,6 +695,7 @@ dataloader_num_workers: 8
 ```
 
 **수렴 문제**:
+
 ```yaml
 # 학습률 조정
 learning_rate: 1e-5
@@ -727,20 +744,23 @@ axolotl validate config.yml
 Axolotl은 현대적인 LLM 파인튜닝의 모든 요구사항을 충족하는 포괄적인 프레임워크입니다. 주요 장점은 다음과 같습니다:
 
 **기술적 우수성**:
+
 - 최신 파인튜닝 기법 지원 (LoRA, QLoRA, DPO, GRPO 등)
 - 고성능 최적화 (Flash Attention, Sequence Parallelism 등)
 - 확장 가능한 분산 훈련 (Multi-GPU, Multi-node)
 
 **사용 편의성**:
+
 - 단일 YAML 설정 파일로 전체 파이프라인 관리
 - 풍부한 예제와 문서
 - 활발한 커뮤니티 지원
 
 **실무 적용성**:
+
 - 다양한 모델 아키텍처 지원
 - 클라우드 및 온프레미스 환경 호환
 - 도메인 특화 모델 개발 지원
 
 Axolotl을 통해 연구자와 엔지니어는 복잡한 구현 세부사항에 얽매이지 않고 모델 개선과 혁신에 집중할 수 있습니다. 지속적인 업데이트와 커뮤니티 기여를 통해 LLM 파인튜닝의 표준 도구로 자리잡고 있습니다.
 
-더 자세한 정보는 [Axolotl GitHub 저장소](https://github.com/axolotl-ai-cloud/axolotl)에서 확인할 수 있습니다. 
+더 자세한 정보는 [Axolotl GitHub 저장소](https://github.com/axolotl-ai-cloud/axolotl)에서 확인할 수 있습니다.

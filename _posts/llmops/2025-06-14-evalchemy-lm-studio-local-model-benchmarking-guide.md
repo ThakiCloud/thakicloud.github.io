@@ -77,7 +77,7 @@ LM Studio 서버 설정에 따라 API 키와 Base URL을 맞춰야 합니다.
 | **API 키 설정 후 서버 실행**<br/>`lms server start --port 1234 --api-key my-secret-key` | 설정한 키를 `LM_STUDIO_API_KEY` 또는 `OPENAI_API_KEY` 환경 변수로 내보냅니다. (`export LM_STUDIO_API_KEY="my-secret-key"`) |
 
 > **중요: Base URL에 `/v1` 포함하기**
-> 
+>
 > 모든 OpenAI 호환 클라이언트는 Base URL 끝에 반드시 `/v1`을 포함해야 합니다 (예: `http://127.0.0.1:1234/v1`). 이 부분을 빠뜨리면 `404 Not Found` 오류가 발생합니다.
 
 ## 실행: 예시 명령어와 테스트
@@ -178,10 +178,6 @@ mv eval/chat_benchmarks/AIME24/data/aime24_full.json \
 | --------------------------- | ---------------------------------------------------------- |
 | **원본 문제 JSON** (30 문제 전부)   | `eval/chat_benchmarks/AIME24/data/aime24.json`             |
 | **하위 YAML**(1 문제만 쓰는 설정 파일) | `eval/chat_benchmarks/AIME24/aime24_subset.yaml` ← 새로 만드세요 |
-
-
-
-
 
 ## 결과 분석: 통계표 읽는 법
 
@@ -342,7 +338,8 @@ LM-Eval-Harness의 `--limit N`은 **"태스크 개수"**(datasets)만 잘라냅�
 ---
 
 **참고 자료:**
+
 - [Bespoke Labs - Evalchemy](https://www.bespokelabs.ai/blog/measuring-reasoning-with-evalchemy)
 - [LiteLLM Documentation](https://docs.litellm.ai/)
 - [LM Studio API Reference](https://lmstudio.ai/docs/api)
-- [vLLM Performance Optimization](https://docs.vllm.ai/en/latest/design/v1/metrics.html) 
+- [vLLM Performance Optimization](https://docs.vllm.ai/en/latest/design/v1/metrics.html)

@@ -41,12 +41,14 @@ NVIDIA에서 2025년 6월 16일에 발표한 **AceReason-Nemotron-1.1-7B**는 �
 ### 2단계 훈련 방법론
 
 #### 1단계: 지도 학습(SFT)
+
 - **데이터셋**: [AceReason-1.1-SFT](https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT)
 - **데이터 규모**: 약 400만 개 샘플
 - **구성**: 수학 추론 데이터 267만 개, 코딩 추론 데이터 130만 개
 - **품질**: DeepSeek-R1 기반 고품질 응답 생성
 
 #### 2단계: 강화 학습(RL)
+
 - **방법론**: AceReason-Nemotron-1.0-7B와 동일한 RL 레시피 적용
 - **핵심 발견**: 더 강한 SFT 모델이 RL 후에도 지속적으로 우수한 성능 유지
 - **성능 격차**: RL 훈련 중 성능 격차는 줄어들지만 상대적 우위는 유지
@@ -189,6 +191,7 @@ generation_config = {
 ### 성능 최적화 팁
 
 1. **GPU 메모리 최적화**
+
    ```python
    model = AutoModelForCausalLM.from_pretrained(
        model_name,
@@ -199,6 +202,7 @@ generation_config = {
    ```
 
 2. **배치 처리**
+
    ```python
    # 여러 문제를 동시에 처리
    prompts = [prompt1, prompt2, prompt3]
@@ -206,6 +210,7 @@ generation_config = {
    ```
 
 3. **메모리 효율적 추론**
+
    ```python
    with torch.no_grad():
        outputs = model.generate(**model_inputs, **generation_config)
@@ -216,6 +221,7 @@ generation_config = {
 ### 평가 도구킷
 
 NVIDIA는 공식 평가 도구킷을 제공합니다:
+
 - **평가 코드**: [GitHub 링크](https://huggingface.co/nvidia/AceReason-Nemotron-14B/blob/main/README%5FEVALUATION.md)
 - **벤치마크 데이터**: AIME 2024/2025, LiveCodeBench v5/v6
 - **메트릭**: avg@64 (AIME), avg@8 (LiveCodeBench)
@@ -240,6 +246,7 @@ NVIDIA는 공식 평가 도구킷을 제공합니다:
 이 모델은 **NVIDIA Open Model License**에 따라 제공됩니다.
 
 **주요 특징**:
+
 - 연구 및 상업적 사용 허용
 - 수정 및 배포 가능
 - 특정 제한 사항 존재 (상세 내용은 라이센스 문서 참조)
@@ -315,10 +322,12 @@ NVIDIA는 공식 평가 도구킷을 제공합니다:
 ### 경쟁 모델과의 비교
 
 **수학 추론 부문**:
+
 - **OpenMath-Nemotron-7B**: AIME 2024에서 74.8로 최고 성능
 - **AceReason-Nemotron-1.1-7B**: AIME 2025에서 64.8로 최고 성능
 
 **코딩 추론 부문**:
+
 - **AceReason-Nemotron-1.1-7B**: LCB v5, v6 모두에서 최고 성능
 - **o3-mini**: LCB v5에서 경쟁적 성능 (60.9)
 
@@ -363,4 +372,4 @@ NVIDIA는 공식 평가 도구킷을 제공합니다:
 - [AceReason-1.1-SFT 데이터셋](https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT)
 - [ArXiv 기술 보고서](https://arxiv.org/abs/2506.13284)
 - [NVIDIA Open Model License](https://developer.nvidia.com/nvidia-open-model-license)
-- [평가 도구킷](https://huggingface.co/nvidia/AceReason-Nemotron-14B/blob/main/README%5FEVALUATION.md) 
+- [평가 도구킷](https://huggingface.co/nvidia/AceReason-Nemotron-14B/blob/main/README%5FEVALUATION.md)

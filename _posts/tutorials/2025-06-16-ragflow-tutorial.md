@@ -26,6 +26,7 @@ toc_label: RAGFlow Tutorial
 - 공개 LLM API 키(OpenAI, DeepSeek 등) 또는 내부 프록시
 
 ### 시스템 확인 예시
+
 ```bash
 # Docker, Compose 버전 확인
 docker --version
@@ -48,6 +49,7 @@ docker compose -f docker-compose.yml up -d
 > GPU를 활용하려면 `docker-compose-gpu.yml` 파일을 선택하세요.
 
 ### 실행 상태 확인
+
 ```bash
 docker logs -f ragflow-server | cat
 ```
@@ -78,11 +80,14 @@ RAGFlow는 세 개 파일로 대부분의 환경을 제어합니다.
 | `docker-compose.yml` | 컨테이너 오케스트레이션 |
 
 예를 들어 기본 HTTP 포트 `80`을 `8080`으로 바꾸려면 `docker-compose.yml`에서 아래 부분을 수정합니다.
+
 ```yaml
 ports:
   - "8080:80"
 ```
+
 수정 후 컨테이너를 재시작합니다.
+
 ```bash
 docker compose -f docker-compose.yml up -d
 ```
@@ -92,11 +97,14 @@ docker compose -f docker-compose.yml up -d
 벡터·전문 검색 엔진을 **Elasticsearch**에서 **Infinity**로 변경하려면 다음 절차를 따릅니다.
 
 1. 기존 컨테이너 중지 및 볼륨 삭제(데이터 초기화 주의)
+
    ```bash
    docker compose -f docker/docker-compose.yml down -v
    ```
+
 2. `docker/.env`에서 `DOC_ENGINE=infinity`로 변경
 3. 컨테이너 재기동
+
    ```bash
    docker compose -f docker-compose.yml up -d
    ```
@@ -130,4 +138,4 @@ docker compose -f docker-compose.yml down -v
 
 이번 글에서는 RAGFlow를 **Docker**로 빠르게 배포하고, 대시보드에서 기본 채팅을 수행하는 과정을 살펴보았습니다. 다음 편에서는 PDF 업로드, Agentic Reasoning, 그래프 기반 RAG(GraphRAG) 등 고급 기능을 심화 탐구할 예정입니다.
 
-> 본 튜토리얼은 GitHub `main` 브랜치 기준 **v0.19.0** 릴리스를 참조했습니다. 최신 정보는 항상 [RAGFlow GitHub](https://github.com/infiniflow/ragflow) 레포지토리를 확인하세요. 
+> 본 튜토리얼은 GitHub `main` 브랜치 기준 **v0.19.0** 릴리스를 참조했습니다. 최신 정보는 항상 [RAGFlow GitHub](https://github.com/infiniflow/ragflow) 레포지토리를 확인하세요.

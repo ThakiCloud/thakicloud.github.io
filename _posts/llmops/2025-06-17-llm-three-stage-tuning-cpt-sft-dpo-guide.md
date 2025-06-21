@@ -202,16 +202,19 @@ dpo_trainer = DPOTrainer(
 ### 각 단계별 핵심 지표
 
 **CPT 단계**:
+
 - Perplexity 변화
 - Loss curve 안정성
 - 도메인 특화 벤치마크 성능
 
 **SFT 단계**:
+
 - Instruction following 정확도
 - 다양한 태스크 성능 균형
 - 응답 형식 일관성
 
 **DPO 단계**:
+
 - 인간 평가 선호도
 - Helpfulness vs. Harmlessness 균형
 - 과도한 거부 패턴 모니터링
@@ -227,4 +230,4 @@ dpo_trainer = DPOTrainer(
 - [Fine-tuning large language models for domain adaptation](https://arxiv.org/abs/2409.03444)
 - [Continuing Pre-Training on Raw Text](https://mccormickml.com/2025/01/18/continuing-pre-training-on-raw-text/)
 - [DPO Trainer Documentation](https://huggingface.co/docs/trl/main/en/dpo_trainer)
-- [Supervised Fine Tuning for Gemini](https://cloud.google.com/blog/products/ai-machine-learning/master-gemini-sft) 
+- [Supervised Fine Tuning for Gemini](https://cloud.google.com/blog/products/ai-machine-learning/master-gemini-sft)

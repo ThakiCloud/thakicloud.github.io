@@ -69,13 +69,14 @@ TensorRT는 학습된 모델을 NVIDIA GPU에 최적화된 경량 엔진(.plan �
 
 #### 3.2. TensorRT 변환 기본 워크플로우 🔄
 
-1.  **모델 준비**: TensorFlow, PyTorch 등으로 학습된 모델을 준비합니다.
-2.  **ONNX로 변환 (권장)**:
+1. **모델 준비**: TensorFlow, PyTorch 등으로 학습된 모델을 준비합니다.
+2. **ONNX로 변환 (권장)**:
     - 다양한 프레임워크 간 모델 호환성을 위해 **ONNX (Open Neural Network Exchange)** 형식으로 먼저 변환하는 것이 일반적입니다. 각 프레임워크는 ONNX 변환 도구를 제공합니다.
     - 예시 (PyTorch): `torch.onnx.export()` 함수 사용
-3.  **ONNX 모델을 TensorRT 엔진으로 변환**:
+3. **ONNX 모델을 TensorRT 엔진으로 변환**:
     - NVIDIA에서 제공하는 `trtexec` 커맨드라인 도구나 TensorRT Python/C++ API를 사용합니다.
     - **`trtexec` 사용 예시:**
+
       ```bash
       trtexec --onnx=/path/to/your_model.onnx \
               --saveEngine=/path/to/your_model.plan \
@@ -85,12 +86,13 @@ TensorRT는 학습된 모델을 NVIDIA GPU에 최적화된 경량 엔진(.plan �
               --maxShapes=input_name:16x3x224x224 \ # 최대 크기
               --fp16 # FP16 정밀도 사용 옵션
       ```
+
     - **Python API 사용 시 주요 단계:**
-      1.  Logger, Builder, Network Definition 생성
-      2.  ONNX Parser를 사용하여 ONNX 모델 로드
-      3.  Builder Configuration 설정 (정밀도, 동적 입력 크기 등)
-      4.  최적화된 엔진 빌드 (`builder.build_engine()`)
-      5.  엔진 직렬화 및 파일로 저장 (`engine.serialize()`)
+      1. Logger, Builder, Network Definition 생성
+      2. ONNX Parser를 사용하여 ONNX 모델 로드
+      3. Builder Configuration 설정 (정밀도, 동적 입력 크기 등)
+      4. 최적화된 엔진 빌드 (`builder.build_engine()`)
+      5. 엔진 직렬화 및 파일로 저장 (`engine.serialize()`)
 
 #### 3.3. 주요 개념 🔑
 
@@ -120,9 +122,10 @@ Triton Server는 최적화된 TensorRT 엔진을 포함한 다양한 모델들�
 
 #### 4.2. Triton Server 기본 사용법 🚀
 
-1.  **모델 저장소 (Model Repository) 준비**:
+1. **모델 저장소 (Model Repository) 준비**:
     - Triton이 모델을 인식하고 로드할 수 있도록 특정 디렉토리 구조로 모델을 배치해야 합니다.
     - 기본 구조:
+
       ```
       <model_repository_path>/
         <model_name>/
@@ -133,7 +136,9 @@ Triton Server는 최적화된 TensorRT 엔진을 포함한 다양한 모델들�
             model.plan
           ...
       ```
+
     - `config.pbtxt` 예시 (TensorRT 모델):
+
       ```protobuf
       name: "my_tensorrt_model"
       platform: "tensorrt_plan" # 또는 "onnxruntime_onnx", "pytorch_libtorch" 등
@@ -167,8 +172,9 @@ Triton Server는 최적화된 TensorRT 엔진을 포함한 다양한 모델들�
       ]
       ```
 
-2.  **Triton Server 실행**:
+2. **Triton Server 실행**:
     - Docker 사용 시 (권장):
+
       ```bash
       docker run --gpus all --rm -p 8000:8000 -p 8001:8001 -p 8002:8002 \
              -v /path/to/your/model_repository:/models \
@@ -177,13 +183,15 @@ Triton Server는 최적화된 TensorRT 엔진을 포함한 다양한 모델들�
              --model-control-mode=poll \ # 주기적으로 모델 저장소 변경 감지
              --repository-poll-secs=10   # 10초마다 감지
       ```
+
       - `<yy.mm>`: Triton 버전 (예: `23.10`)
       - `/path/to/your/model_repository`: 실제 모델 저장소 경로
       - 포트: `8000` (HTTP), `8001` (gRPC), `8002` (Metrics)
 
-3.  **클라이언트로 추론 요청 보내기**:
+3. **클라이언트로 추론 요청 보내기**:
     - Triton은 Python, C++, Java 등 다양한 언어의 클라이언트 라이브러리를 제공합니다.
     - **Python 클라이언트 예시 (HTTP):**
+
       ```python
       import numpy as np
       import tritonclient.http as httpclient
@@ -231,8 +239,8 @@ Triton Server는 최적화된 TensorRT 엔진을 포함한 다양한 모델들�
 - `platform`: 모델 타입 (`tensorrt_plan`, `onnxruntime_onnx`, `tensorflow_savedmodel`, `pytorch_libtorch` 등).
 - `max_batch_size`: 모델이 한 번에 처리할 수 있는 최대 배치 크기. `0`으로 설정하면 동적 배치를 사용하지 않고, 각 요청을 개별 처리합니다. TensorRT 엔진 빌드 시 `explicitBatch`를 사용했다면 보통 `0`으로 설정하고, `dynamic_batching` 설정을 통해 배치 크기를 관리합니다.
 - `input`, `output`: 모델의 입력 및 출력 텐서 정보 (이름, 데이터 타입, shape).
-    - 텐서 이름은 원본 모델 또는 ONNX 모델의 텐서 이름과 일치해야 합니다. `Netron` 같은 도구로 ONNX 모델을 열어 확인 가능합니다.
-    - `dims`: `[-1]`을 사용하여 동적 차원을 나타낼 수 있습니다. 예를 들어, 가변 배치 크기를 지원하려면 `dims: [-1, 3, 224, 224]` 와 같이 첫 번째 차원을 `-1`로 설정합니다.
+  - 텐서 이름은 원본 모델 또는 ONNX 모델의 텐서 이름과 일치해야 합니다. `Netron` 같은 도구로 ONNX 모델을 열어 확인 가능합니다.
+  - `dims`: `[-1]`을 사용하여 동적 차원을 나타낼 수 있습니다. 예를 들어, 가변 배치 크기를 지원하려면 `dims: [-1, 3, 224, 224]` 와 같이 첫 번째 차원을 `-1`로 설정합니다.
 - `dynamic_batching`: 서버가 요청을 모아 배치 처리하는 기능. `preferred_batch_size` (선호 배치 크기), `max_queue_delay_microseconds` (배치 구성을 위한 최대 대기 시간) 등을 설정합니다. TensorRT 엔진이 고정 배치 크기로 빌드되었다면 이 기능을 활용하기 어렵습니다. **동적 shape를 지원하는 TensorRT 엔진과 함께 사용할 때 가장 효과적**입니다.
 - `instance_group`: 모델 인스턴스를 몇 개, 어떤 장치(CPU/GPU)에 띄울지 설정합니다. GPU 여러 개에 동일 모델 인스턴스를 띄워 병렬 처리 능력을 높일 수 있습니다.
 
@@ -295,4 +303,4 @@ Triton Server는 최적화된 TensorRT 엔진을 포함한 다양한 모델들�
 - **NVIDIA Triton Inference Server 공식 문서**: [https://github.com/triton-inference-server/server/tree/main/docs](https://github.com/triton-inference-server/server/tree/main/docs)
 - **NVIDIA NGC (NVIDIA GPU Cloud) 카탈로그**: Triton Server Docker 이미지, 사전 학습된 모델 등 제공. [https://ngc.nvidia.com](https://ngc.nvidia.com)
 - **TensorRT GitHub 예제**: [https://github.com/NVIDIA/TensorRT/tree/main/samples](https://github.com/NVIDIA/TensorRT/tree/main/samples)
-- **Triton 튜토리얼**: [https://github.com/triton-inference-server/tutorials](https://github.com/triton-inference-server/tutorials) 
+- **Triton 튜토리얼**: [https://github.com/triton-inference-server/tutorials](https://github.com/triton-inference-server/tutorials)

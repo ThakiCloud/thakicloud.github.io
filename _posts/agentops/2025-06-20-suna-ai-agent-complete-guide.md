@@ -24,6 +24,7 @@ toc_label: Suna Agent Guide
 [Suna](https://github.com/kortix-ai/suna)는 Kortix AI에서 개발한 **오픈소스 범용 AI 에이전트**로, 실제 업무를 대신 수행하는 디지털 동반자입니다. **14.9k 스타**와 **2.2k 포크**를 기록하며 오픈소스 AI 에이전트 생태계에서 주목받고 있는 프로젝트입니다. 자연어 대화를 통해 복잡한 연구, 데이터 분석, 일상적인 과제를 해결하며, 강력한 브라우저 자동화와 직관적인 인터페이스를 결합하여 실질적인 결과를 제공합니다.
 
 ### 🎯 Suna의 핵심 특징
+
 - **브라우저 자동화**: 웹 탐색 및 데이터 추출
 - **파일 관리**: 문서 생성 및 편집
 - **웹 크롤링**: 확장된 검색 기능
@@ -106,6 +107,7 @@ python start.py
 설정 마법사는 다음 단계를 자동화합니다:
 
 **1단계: 환경 변수 설정**
+
 ```bash
 # .env 파일 생성
 SUPABASE_URL=your_supabase_url
@@ -116,6 +118,7 @@ OPENAI_API_KEY=your_openai_key
 ```
 
 **2단계: Supabase 프로젝트 설정**
+
 ```sql
 -- 사용자 테이블
 CREATE TABLE users (
@@ -143,6 +146,7 @@ CREATE TABLE messages (
 ```
 
 **3단계: Docker 컨테이너 구성**
+
 ```yaml
 # docker-compose.yaml
 version: '3.8'
@@ -958,6 +962,7 @@ jobs:
 ### 7.1 일반적인 문제들
 
 **문제 1: Docker 컨테이너 시작 실패**
+
 ```bash
 # 해결 방법
 docker-compose down
@@ -966,6 +971,7 @@ docker-compose up --build
 ```
 
 **문제 2: Supabase 연결 실패**
+
 ```bash
 # 환경 변수 확인
 echo $SUPABASE_URL
@@ -976,6 +982,7 @@ curl -H "apikey: $SUPABASE_ANON_KEY" $SUPABASE_URL/rest/v1/
 ```
 
 **문제 3: 브라우저 자동화 실패**
+
 ```python
 # 더 안정적인 브라우저 설정
 browser = await playwright.chromium.launch(
@@ -1117,11 +1124,13 @@ Suna는 다음과 같은 고유한 가치를 제공합니다:
 ### 9.2 향후 발전 방향
 
 **단기 계획:**
+
 - 더 많은 API 통합 (Slack, Microsoft 365, Google Workspace)
 - 고급 분석 기능 (AI 기반 인사이트 생성)
 - 모바일 앱 지원
 
 **중장기 계획:**
+
 - 멀티모달 기능 (이미지, 음성 처리)
 - 자동 학습 및 개선 기능
 - 엔터프라이즈급 관리 기능
@@ -1135,6 +1144,7 @@ Suna는 오픈소스 프로젝트로서 커뮤니티 기여를 환영합니다:
 - **피드백**: 사용 경험 공유, 개선 제안
 
 **기여 방법:**
+
 1. [GitHub Issues](https://github.com/kortix-ai/suna/issues)에서 문제 보고
 2. Pull Request를 통한 코드 기여
 3. [Discord](https://discord.gg/suna) 커뮤니티 참여
@@ -1143,4 +1153,4 @@ Suna는 AI 에이전트 기술의 민주화를 통해 누구나 강력한 자동
 
 ---
 
-*참고자료: [Suna GitHub Repository](https://github.com/kortix-ai/suna) | [공식 웹사이트](https://www.suna.so)* 
+*참고자료: [Suna GitHub Repository](https://github.com/kortix-ai/suna) | [공식 웹사이트](https://www.suna.so)*

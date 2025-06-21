@@ -49,6 +49,7 @@ LLM(Large Language Model)의 신뢰성을 높이기 위한 혁신적인 접근�
 문제에서 중요한 수치나 논리적 세부사항을 제거하여 답을 계산할 수 없게 만듭니다.
 
 **예시:**
+
 - 원본: "Doug constructs a square window using **8 equal-size panes** of glass..."
 - 수정: "Doug constructs a square window using **equal-size panes** of glass..."
 
@@ -57,6 +58,7 @@ LLM(Large Language Model)의 신뢰성을 높이기 위한 혁신적인 접근�
 문제 진술을 모호하거나 불명확한 세부사항으로 수정하여 정확한 추론을 방해합니다.
 
 **예시:**
+
 - 원본: "There are $11$ students in Mrs. Germain's class, $8$ students in Mr. Newton's class..."
 - 수정: "In Mrs. Germain's class there are **more than ten but fewer than fifteen students**..."
 
@@ -85,12 +87,15 @@ LLM(Large Language Model)의 신뢰성을 높이기 위한 혁신적인 접근�
 SUM 데이터셋은 다음과 같은 다양한 목적으로 활용될 수 있습니다:
 
 ### 진단 (Diagnose)
+
 강화학습 미세조정(RFT) 맥락에서 LLM의 환각 현상에 대한 취약성을 평가합니다.
 
 ### 훈련 (Train)
+
 RFT 과정에서 SUM 데이터를 혼합하여 LLM의 신뢰성을 개선합니다.
 
 ### 교육 (Teach)
+
 모델이 자신의 불확실성과 지식 경계에 대해 추론하고 적절한 때에 답변을 거부하는 일반화 가능한 능력을 개발하도록 돕습니다.
 
 ### 실증적 효과
@@ -164,4 +169,4 @@ Synthetic Unanswerable Math 데이터셋은 AI 모델의 겸손함을 가르치�
 
 ---
 
-*이 포스트는 USC 연구팀의 공개 연구 자료를 바탕으로 작성되었습니다. 데이터셋 사용 시 적절한 인용을 부탁드립니다.* 
+*이 포스트는 USC 연구팀의 공개 연구 자료를 바탕으로 작성되었습니다. 데이터셋 사용 시 적절한 인용을 부탁드립니다.*

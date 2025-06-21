@@ -19,7 +19,7 @@ toc_label: "목차"
 
 ## 소개
 
-GPU 서버에서 vLLM으로 모델을 고속 실행하면서 체계적인 벤치마크를 원하셨나요? **vLLM + Evalchemy** 조합이면 OpenAI API와 동일한 인터페이스로 50+ 종류의 평가 태스크를 실행할 수 있습니다. 
+GPU 서버에서 vLLM으로 모델을 고속 실행하면서 체계적인 벤치마크를 원하셨나요? **vLLM + Evalchemy** 조합이면 OpenAI API와 동일한 인터페이스로 50+ 종류의 평가 태스크를 실행할 수 있습니다.
 
 이 가이드에서는 vLLM 서버 설정부터 Evalchemy 연동, 그리고 수학 추론(MATH500), 코딩(HumanEval), 과학 지식(MMLU), 상식 추론(HellaSwag) 등 다양한 벤치마크 태스크를 실행하는 전 과정을 다룹니다. Evalchemy의 `Curator` 모델 어댑터와 `LM-Eval-Harness`를 통해 REST API로 모델을 호출하고 평가하는 전 과정을 정리합니다. CLI 플래그에서 `--model curator` 또는 `--model openai`만 바꿔주면 GPT-4o, Claude 3, Gemini는 물론, 자체 vLLM 서버나 100종 이상의 API 모델을 설치 없이 동일한 방식으로 평가할 수 있다는 것이 핵심입니다.
 
@@ -423,7 +423,8 @@ vLLM과 Evalchemy의 조합은 대규모 언어 모델의 종합적 성능 평�
 ---
 
 **참고 자료:**
+
 - [vLLM 공식 문서](https://docs.vllm.ai/)
 - [Evalchemy API 레퍼런스](https://docs.bespokelabs.ai/)
 - [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness)
-- [HuggingFace Transformers](https://huggingface.co/docs/transformers) 
+- [HuggingFace Transformers](https://huggingface.co/docs/transformers)

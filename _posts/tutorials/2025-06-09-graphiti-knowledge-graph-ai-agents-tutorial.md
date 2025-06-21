@@ -471,6 +471,7 @@ class ResearchPaperManager:
 ### 일반적인 문제들
 
 1. **Neo4j 연결 오류**
+
    ```python
    # 연결 테스트
    try:
@@ -481,6 +482,7 @@ class ResearchPaperManager:
    ```
 
 2. **OpenAI API 한도 초과**
+
    ```python
    # API 호출 제한 설정
    import time
@@ -492,6 +494,7 @@ class ResearchPaperManager:
    ```
 
 3. **메모리 사용량 최적화**
+
    ```python
    # 주기적으로 연결 정리
    await graphiti.close()
@@ -540,7 +543,8 @@ Graphiti는 AI 에이전트에게 강력한 메모리 시스템을 제공하는 
 ---
 
 **참고 링크:**
+
 - [Graphiti GitHub 저장소](https://github.com/getzep/graphiti)
 - [Graphiti 공식 문서](https://help.getzep.com/graphiti)
 - [Neo4j Desktop 다운로드](https://neo4j.com/download/)
-- [OpenAI API 문서](https://platform.openai.com/docs) 
+- [OpenAI API 문서](https://platform.openai.com/docs)

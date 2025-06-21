@@ -79,4 +79,4 @@ DeepSeek-V3는 '**스케일만이 답**'이라는 통념을 뒤집고, **하드�
 
 ### 참고 자료
 
-- [DeepSeek-V3 논문 (arXiv)](https://arxiv.org/pdf/2505.09343v1) 
+- [DeepSeek-V3 논문 (arXiv)](https://arxiv.org/pdf/2505.09343v1)

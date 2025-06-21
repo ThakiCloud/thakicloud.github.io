@@ -68,14 +68,17 @@ NVIDIA에서 공개한 정확성 벤치마크 결과는 다음과 같습니다.
 ### 성능 분석 인사이트
 
 **1. 수학적 추론 성능 우수**
+
 - MATH-500과 AIME 2024에서 기준 모델과 동등하거나 더 나은 성능
 - 양자화 후에도 수학적 추론 능력 완전 보존
 
 **2. 코딩 능력 유지**
+
 - LiveCodeBench에서 99.1%의 성능 유지율
 - 실제 코딩 작업에서도 실용적 성능 확보
 
 **3. 일반 지식 처리**
+
 - MMLU Pro와 GPQA Diamond에서 98% 이상의 성능 유지
 - 복합적 추론 작업에서도 안정적 성능
 
@@ -467,6 +470,7 @@ class CodingAssistant:
 검토 중점사항: {focus_text}
 
 다음 형식으로 답변해주세요:
+
 1. 코드 분석
 2. 발견된 문제점
 3. 개선 제안
@@ -478,9 +482,11 @@ class CodingAssistant:
         return result['generated_text']
 
 # 사용 예시
+
 coding_assistant = CodingAssistant()
 
 # 코드 생성 테스트
+
 task = "사용자 인증을 위한 JWT 토큰 생성 및 검증 함수"
 code_result = coding_assistant.generate_code(task)
 
@@ -488,9 +494,11 @@ print("생성된 코드:")
 print(code_result['code'])
 
 # 코드 리뷰
+
 review = coding_assistant.review_code(code_result['code'])
 print("\n코드 리뷰:")
 print(review)
+
 ```
 
 ### 2. 교육용 튜터 시스템
@@ -609,14 +617,16 @@ NVIDIA DeepSeek-R1-0528-FP4는 **양자화 기술의 새로운 지평**을 열�
 ### 활용 권장 사항
 
 **적합한 사용 사례**:
+
 - 대규모 언어 모델이 필요한 프로덕션 환경
 - 메모리 제약이 있는 온프레미스 배포
 - 코딩 어시스턴트, 교육용 AI, 비즈니스 분석 도구
 - 수학적 추론이 중요한 애플리케이션
 
 **도입 시 고려사항**:
+
 - 초기 하드웨어 투자 비용 (8x B200 GPU)
 - TensorRT-LLM 환경 구축 복잡성
 - 모델 로딩 시간 및 초기화 과정
 
-NVIDIA DeepSeek-R1 FP4는 양자화 기술의 성숙도를 보여주는 중요한 이정표입니다. 향후 더 많은 모델들이 이러한 최적화 기법을 도입하면서, **고성능 AI 모델의 대중화**에 기여할 것으로 예상됩니다. 
+NVIDIA DeepSeek-R1 FP4는 양자화 기술의 성숙도를 보여주는 중요한 이정표입니다. 향후 더 많은 모델들이 이러한 최적화 기법을 도입하면서, **고성능 AI 모델의 대중화**에 기여할 것으로 예상됩니다.

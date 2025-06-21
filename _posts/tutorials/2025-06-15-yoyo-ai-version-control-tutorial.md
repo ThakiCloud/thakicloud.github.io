@@ -73,6 +73,7 @@ yoyo save "Updated CSS styles" --files="*.css"
 ```
 
 **언제 사용하나요?**
+
 - AI가 큰 변경사항을 만들기 전
 - 복잡한 리팩토링 시작 전  
 - 새로운 기능 구현 시작 시점
@@ -88,6 +89,7 @@ yoyo diff v1 current
 ```
 
 **실전 팁:**
+
 - 대규모 AI 편집 전에 항상 preview 사용
 - 예상치 못한 변경사항 조기 발견 가능
 
@@ -259,6 +261,7 @@ yoyo merge theme-minimal main
 ### 자주 발생하는 이슈
 
 **Q: YoYo가 너무 많은 디스크 공간을 사용해요**
+
 ```bash
 # 오래된 버전 정리
 yoyo cleanup --older-than="30d"
@@ -268,12 +271,14 @@ yoyo config compression true
 ```
 
 **Q: Git과 충돌이 발생해요**
+
 ```bash
 # YoYo를 Git과 분리하여 사용
 yoyo config git-integration false
 ```
 
 **Q: AI 편집이 너무 자주 실패해요**
+
 ```bash
 # 더 작은 단위로 저장하도록 설정
 yoyo config save-frequency high
@@ -303,4 +308,3 @@ YoYo는 단순한 버전 컨트롤을 넘어서 **AI 시대의 새로운 개발 
 전통적인 Git의 엄격함에서 벗어나, YoYo와 함께 더 자유롭고 창의적인 코딩을 시작해보세요. [지금 설치해보기](https://www.runyoyo.com/)
 
 ---
-

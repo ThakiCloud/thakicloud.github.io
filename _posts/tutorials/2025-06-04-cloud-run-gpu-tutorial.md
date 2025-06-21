@@ -18,6 +18,7 @@ toc_label: "목차"
 Google Cloud의 서버리스 런타임인 Cloud Run이 이제 NVIDIA GPU를 지원하게 되었습니다. 이 튜토리얼에서는 Cloud Run에서 GPU를 활용하여 AI 워크로드를 실행하는 방법을 단계별로 알아보겠습니다.
 
 ## 목차
+
 - [목차](#목차)
 - [소개](#소개)
 - [사전 요구사항](#사전-요구사항)
@@ -155,4 +156,4 @@ Cloud Run의 GPU 지원은 AI 워크로드를 실행하는 새로운 방식을 �
 
 이 튜토리얼에서 다룬 내용을 바탕으로, 여러분만의 AI 서비스를 Cloud Run에 배포해보세요. 추가적인 도움이 필요하시다면 [Google Cloud 문서](https://cloud.google.com/run/docs)를 참고하시기 바랍니다.
 
---- 
+---

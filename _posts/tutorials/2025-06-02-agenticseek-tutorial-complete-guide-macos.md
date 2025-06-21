@@ -107,6 +107,7 @@ AgenticSeek는 맥북용 자동 설치 스크립트를 제공합니다:
 ```
 
 이 스크립트가 다음 작업들을 자동으로 수행합니다:
+
 - pip 업그레이드
 - setuptools 및 wheel 업그레이드
 - 필요한 Python 패키지들 설치
@@ -171,6 +172,7 @@ sudo ./start_services.sh
 ```
 
 이 명령어는 다음 서비스들을 시작합니다:
+
 - SearXNG (검색 엔진)
 - Redis (SearXNG 필요)
 - Frontend (웹 인터페이스)
@@ -186,6 +188,7 @@ python3 cli.py
 **옵션 2: 웹 인터페이스**
 
 백엔드 시작:
+
 ```bash
 python3 api.py
 ```
@@ -232,6 +235,7 @@ agent_name = Friday  # 원하는 이름으로 변경 가능
 ```
 
 음성 기능 사용법:
+
 1. "Friday"라고 말해서 시스템을 깨웁니다
 2. 명령어를 명확하게 말합니다
 3. "실행해", "시작해", "고마워" 등의 확인 문구로 마무리합니다
@@ -308,6 +312,7 @@ python3 app.py --provider ollama --port 3333
 ```
 
 클라이언트 `config.ini`:
+
 ```ini
 provider_name = server
 provider_model = deepseek-r1:70b
@@ -332,4 +337,4 @@ AgenticSeek는 완전히 로컬에서 실행되는 강력한 AI 어시스턴트�
 
 ---
 
-이 글이 도움이 되셨다면 댓글로 설치 경험이나 활용 사례를 공유해 주세요! 🚀 
+이 글이 도움이 되셨다면 댓글로 설치 경험이나 활용 사례를 공유해 주세요! 🚀

@@ -94,6 +94,7 @@ EOF
 ```
 
 적용:
+
 ```bash
 kubectl apply -f foo.yaml -n nginx-ingress
 ```
@@ -144,6 +145,7 @@ EOF
 ```
 
 적용:
+
 ```bash
 kubectl apply -f bar.yaml -n nginx-ingress
 ```
@@ -184,6 +186,7 @@ EOF
 ```
 
 적용:
+
 ```bash
 kubectl apply -f ingress.yaml -n nginx-ingress
 ```
@@ -205,4 +208,4 @@ curl http://<EXTERNAL-IP>/bar
 ## 참고
 
 - 공식 문서: [https://kubernetes.github.io/ingress-nginx/](https://kubernetes.github.io/ingress-nginx/)
-- 더미 echo 컨테이너: [https://hub.docker.com/r/hashicorp/http-echo](https://hub.docker.com/r/hashicorp/http-echo) 
+- 더미 echo 컨테이너: [https://hub.docker.com/r/hashicorp/http-echo](https://hub.docker.com/r/hashicorp/http-echo)

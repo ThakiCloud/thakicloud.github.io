@@ -46,6 +46,7 @@ Twisted 네트워크 프레임워크를 20년간 유지보수해온 Glyph는 **�
 ### 시스템적 외부효과에 대한 우려
 
 개인의 편의를 넘어선 **거시적 비용**을 강조합니다:
+
 - **기후 비용**: 막대한 에너지 소비
 - **저작권 문제**: 무단 학습된 데이터
 - **교육 파괴**: 부정행위 조장
@@ -102,6 +103,7 @@ AI를 **증기기관이나 전기**와 같은 혁명적 기술로 봅니다. 사
 ### 데이터보다 기질이 결정적
 
 두 개발자 모두 합리적이지만, **감정적 출발점**이 다릅니다:
+
 - 완벽주의 vs 실용주의
 - 장기 기억 vs 단기 피드백
 - 시스템 사고 vs 개인 효용
@@ -109,6 +111,7 @@ AI를 **증기기관이나 전기**와 같은 혁명적 기술로 봅니다. 사
 ### 불확실성을 다루는 방식
 
 결국 어떤 **불확실성을 기꺼이 감수할 것인가**의 문제입니다:
+
 - 신뢰성, 에너지, 윤리적 순수성을 우선시한다면 → Glyph의 길
 - 개인적 효율성과 외부효과의 점진적 해결을 믿는다면 → Armin의 길
 
@@ -122,7 +125,7 @@ AI 같은 범용 기술의 채택은 단순한 기술적 판단이 아닙니다.
 
 하지만 그 영향을 어떻게 받아들일지는 여전히 **개인의 선택**입니다. Glyph처럼 잠시 거리를 두는 것도, Armin처럼 적극적으로 활용하는 것도 모두 유효한 전략입니다.
 
-중요한 것은 **교조적 입장보다는 지속적인 관찰과 성찰**입니다. 기술은 계속 발전하고, 사회적 합의도 변화할 것입니다. 
+중요한 것은 **교조적 입장보다는 지속적인 관찰과 성찰**입니다. 기술은 계속 발전하고, 사회적 합의도 변화할 것입니다.
 
 ## 앞으로의 관전 포인트
 
@@ -136,6 +139,7 @@ AI 같은 범용 기술의 채택은 단순한 기술적 판단이 아닙니다.
 ---
 
 **참고 자료:**
+
 - [Glyph Lefkowitz - "I Think I'm Done Thinking About genAI For Now"](https://blog.glyph.im/2025/06/i-think-im-done-thinking-about-genai-for-now.html)
 - [Armin Ronacher - "AI Changes Everything"](https://lucumr.pocoo.org/2025/6/4/changes/)
-- [Armin Ronacher - "How I Use AI: Meet My Promptly Hired Model Intern"](https://lucumr.pocoo.org/) 
+- [Armin Ronacher - "How I Use AI: Meet My Promptly Hired Model Intern"](https://lucumr.pocoo.org/)

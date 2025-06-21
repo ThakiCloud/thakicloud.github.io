@@ -79,6 +79,7 @@ models--facebook--opt-1.3b/
 ```
 
 **주요 파일 형식:**
+
 - **`.safetensors`**: 메모리 안전한 텐서 직렬화 형식, 빠른 로딩 지원
 - **`.bin` (PyTorch)**: 전통적인 PyTorch pickle 형식
 - **`.h5` (TensorFlow/Keras)**: HDF5 기반 TensorFlow 형식
@@ -102,6 +103,7 @@ Ollama는 자체적인 모델 관리 시스템을 사용합니다:
 ```
 
 **특징:**
+
 - **Content-addressable storage**: SHA256 해시 기반 중복 제거
 - **GGUF 기반**: 양자화된 모델 형식으로 메모리 효율적
 - **레이어 분할**: 큰 모델을 여러 조각으로 나누어 관리
@@ -121,6 +123,7 @@ LM Studio는 주로 GGUF 형식의 모델을 저장합니다:
 ```
 
 **GGUF 양자화 레벨:**
+
 - **`f16`**: 16-bit 부동소수점 (원본 품질)
 - **`q8_0`**: 8-bit 양자화 (높은 품질)
 - **`q4_k_m`**: 4-bit 양자화 (균형)
@@ -143,6 +146,7 @@ PyTorch Hub는 Git 레포지토리 기반으로 모델을 관리합니다:
 ```
 
 **특징:**
+
 - **`.pth`**: PyTorch 네이티브 체크포인트 형식
 - **Git 기반**: 모델 코드와 가중치를 함께 관리
 - **체크섬 검증**: 파일 무결성 자동 검증
@@ -164,6 +168,7 @@ Keras는 다양한 형식으로 모델을 저장합니다:
 ```
 
 **파일 형식:**
+
 - **`.h5`**: HDF5 형식, 계층적 데이터 구조
 - **`.pb`**: Protocol Buffer, TensorFlow SavedModel 형식
 - **`.tflite`**: TensorFlow Lite, 모바일/엣지 최적화
@@ -281,4 +286,4 @@ python -c "from huggingface_hub import scan_cache_dir; scan_cache_dir().delete_r
 3. **프로덕션 환경**: 검증된 PyTorch/TensorFlow 형식 사용
 4. **크로스 플랫폼**: Hugging Face Hub 통합 활용
 
-macOS에서 딥러닝 모델을 효율적으로 관리하려면 각 플랫폼의 특성을 이해하고, 정기적인 정리와 모니터링이 필요합니다. 특히 디스크 공간이 제한적인 환경에서는 양자화된 모델이나 외부 저장소 활용을 적극 고려해보시기 바랍니다. 
+macOS에서 딥러닝 모델을 효율적으로 관리하려면 각 플랫폼의 특성을 이해하고, 정기적인 정리와 모니터링이 필요합니다. 특히 디스크 공간이 제한적인 환경에서는 양자화된 모델이나 외부 저장소 활용을 적극 고려해보시기 바랍니다.

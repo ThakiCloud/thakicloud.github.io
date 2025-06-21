@@ -28,6 +28,7 @@ AI 산업이 급속도로 발전하면서 LLM(Large Language Model) 애플리케
 2025년 6월 4일, Langfuse는 모든 제품 기능을 MIT 라이선스 하에 오픈소스로 공개한다고 발표했습니다. 이는 LLM 엔지니어링 플랫폼 분야에서 매우 혁신적인 결정입니다.
 
 **새롭게 오픈소스화된 기능들:**
+
 - **LLM-as-a-Judge 평가 시스템**
 - **어노테이션 큐 (Annotation Queues)**
 - **프롬프트 실험 (Prompt Experiments)**
@@ -76,6 +77,7 @@ generation = trace.generation(
 ```
 
 **주요 추적 기능:**
+
 - **LLM 추론 추적**: 입력부터 출력까지 전체 결정 과정 기록
 - **임베딩 검색 추적**: 벡터 검색 과정 모니터링
 - **API 사용 감사**: 모든 API 호출 로깅 및 분석
@@ -102,6 +104,7 @@ result = evaluator.evaluate(
 ```
 
 **평가 방법:**
+
 - **모델 기반 평가**: 독성, 편향성, 환각 등 자동 평가
 - **사용자 피드백**: 실제 사용자 만족도 수집
 - **수동 라벨링**: 중요한 케이스에 대한 인간 검증
@@ -135,6 +138,7 @@ result = await generateText({
 ```
 
 **프롬프트 관리 기능:**
+
 - **버전 컨트롤**: Git과 유사한 프롬프트 버전 관리
 - **A/B 테스팅**: 다양한 프롬프트 변형 성능 비교
 - **협업 도구**: 팀원 간 프롬프트 공유 및 피드백
@@ -161,6 +165,7 @@ generation = trace.generation(
 ```
 
 **지원 형식:**
+
 - **이미지**: PNG, JPG, WebP
 - **오디오**: MPEG, MP3, WAV
 - **문서**: PDF, 텍스트 파일
@@ -215,6 +220,7 @@ from langfuse import Langfuse
 ```
 
 **지원 플랫폼:**
+
 - **LangChain**: 체인 및 에이전트 추적
 - **LlamaIndex**: RAG 시스템 모니터링
 - **OpenAI SDK**: GPT 모델 직접 통합
@@ -226,15 +232,18 @@ from langfuse import Langfuse
 ### 엔터프라이즈 성공 사례
 
 **Samsara**: IoT 및 Physical Operations 기술 제공업체
+
 - Samsara Assistant (생성형 AI 솔루션) 모니터링
 - 플릿 관리, 규정 준수, 안전 관련 복잡한 질문 처리
 - 멀티모달 AI 애플리케이션의 성능 및 신뢰성 보장
 
 **Merck Group**: 독일 기반 과학기술 회사
+
 - 조직 전반의 AI 플랫폼에서 실시간 LLM 추적
 - 헬스케어, 생명과학, 전자 사업 분야 AI 솔루션 최적화
 
 **Twilio**: 고객 참여 솔루션 제공업체
+
 - 협업적 프롬프트 관리를 통한 고객 서비스 개선
 - 대화형 AI 솔루션의 성능 최적화
 
@@ -337,6 +346,7 @@ npm run dev
 ```
 
 **기여 영역:**
+
 - **기능 개발**: 새로운 평가자, 통합, UI 개선
 - **문서화**: 사용 사례, 튜토리얼, API 문서
 - **버그 리포트**: GitHub Issues를 통한 버그 제보
@@ -374,13 +384,14 @@ export TELEMETRY_ENABLED=false
 ### v3.0 개발자 프리뷰
 
 차세대 Langfuse 아키텍처가 개발자 프리뷰로 제공됩니다:
+
 - **향상된 성능**: 더 빠른 쿼리 및 대시보드
 - **새로운 UI/UX**: 사용자 경험 대폭 개선
 - **고급 분석**: 더욱 정교한 메트릭 및 인사이트
 
 ## 결론
 
-Langfuse는 LLM 엔지니어링 플랫폼의 새로운 표준을 제시하고 있습니다. 완전한 오픈소스 전환을 통해 개발자 커뮤니티의 신뢰를 얻고, 기업급 기능을 누구나 접근할 수 있게 만들었습니다. 
+Langfuse는 LLM 엔지니어링 플랫폼의 새로운 표준을 제시하고 있습니다. 완전한 오픈소스 전환을 통해 개발자 커뮤니티의 신뢰를 얻고, 기업급 기능을 누구나 접근할 수 있게 만들었습니다.
 
 월간 700만 건 이상의 SDK 설치와 8,000개 이상의 활성 배포 인스턴스라는 수치는 Langfuse가 이미 LLMOps 분야의 핵심 도구로 자리잡았음을 보여줍니다. AWS와의 깊은 통합, 다양한 AI 프레임워크 지원, 그리고 멀티모달 기능까지 갖춘 Langfuse는 현재와 미래의 AI 애플리케이션 개발에 필수적인 플랫폼입니다.
 
@@ -392,4 +403,4 @@ LLM 애플리케이션의 관찰성과 최적화가 중요해지는 시대에, L
 - [Langfuse Documentation](https://langfuse.com/docs)
 - [AWS Marketplace - Langfuse](https://aws.amazon.com/marketplace/seller-profile?id=langfuse)
 - [Langfuse Blog](https://langfuse.com/blog)
-- [Discord Community](https://discord.gg/7NXusRtqYU) 
+- [Discord Community](https://discord.gg/7NXusRtqYU)

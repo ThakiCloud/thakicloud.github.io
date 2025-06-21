@@ -36,6 +36,7 @@ toc_label: MLX vs GGUF 비교
 ### 2.1 Apple Silicon에서의 성능
 
 #### MLX 장점
+
 ```python
 # MLX 예제 - Apple Silicon 최적화
 import mlx.core as mx
@@ -52,6 +53,7 @@ response = generate(model, tokenizer, prompt="Explain quantum computing", max_to
 - **배치 처리** 시 메모리 효율성 극대화
 
 #### GGUF 성능 특성
+
 ```bash
 # llama.cpp GGUF 실행
 ./llama-server -m llama-3.2-3b-instruct-q4_k_m.gguf -c 4096 -ngl 32
@@ -77,6 +79,7 @@ response = generate(model, tokenizer, prompt="Explain quantum computing", max_to
 #### 2.3.1 하드웨어 아키텍처 최적화
 
 **Apple Silicon GPU 코어 활용**
+
 ```python
 # MLX GPU 코어 사용 확인
 import mlx.core as mx
@@ -95,6 +98,7 @@ MLX는 Apple Silicon의 **GPU 코어를 완전히 활용**합니다:
 - **병렬 처리**: 수천 개의 GPU 스레드에서 동시 연산 수행
 
 **GGUF의 제한사항**:
+
 ```bash
 # GGUF Metal 백엔드 (제한적 GPU 활용)
 ./llama-server -m model.gguf -ngl 32  # GPU 레이어 수 제한
@@ -104,6 +108,7 @@ MLX는 Apple Silicon의 **GPU 코어를 완전히 활용**합니다:
 #### 2.3.2 메모리 아키텍처 최적화
 
 **Unified Memory 완전 활용**
+
 ```python
 # MLX Unified Memory 최적화
 import mlx.core as mx
@@ -124,6 +129,7 @@ result = mx.matmul(tensor, tensor.T)  # GPU에서 연산, 복사 없음
 #### 2.3.3 연산 최적화 비교
 
 **MLX 연산 최적화**
+
 ```python
 # MLX 최적화된 행렬 연산
 import mlx.core as mx
@@ -141,6 +147,7 @@ print(f"MLX 시간: {mlx_time:.3f}초")
 ```
 
 **GGUF 연산 특성**
+
 ```c
 // GGUF llama.cpp 행렬 연산 (단순화)
 // CPU 중심 설계, Metal 백엔드는 부분적 지원
@@ -164,6 +171,7 @@ void ggml_mul_mat_metal(
 | **13B 모델** | 16.2 | 9.8 | 1.65배 | MLX: 98%, GGUF: 65% |
 
 **배치 처리 성능 차이**
+
 ```python
 # MLX 배치 처리 (GPU 병렬화 최적화)
 import mlx.core as mx
@@ -186,11 +194,13 @@ print(f"처리량: {batch_size * seq_len / batch_time:.0f} 토큰/초")
 #### 2.3.5 메모리 대역폭 활용도
 
 **Apple Silicon 메모리 시스템**
+
 - **M3 Max**: 400GB/s 통합 메모리 대역폭
 - **M3 Pro**: 150GB/s 통합 메모리 대역폭  
 - **M3**: 100GB/s 통합 메모리 대역폭
 
 **실제 대역폭 활용률**:
+
 ```python
 # MLX 메모리 대역폭 측정
 import mlx.core as mx
@@ -222,6 +232,7 @@ print(f"MLX 실제 대역폭: {mlx_bandwidth:.1f} GB/s")
 #### 2.3.6 컴파일러 최적화
 
 **MLX 컴파일러 최적화**
+
 ```python
 # MLX 그래프 최적화
 import mlx.core as mx
@@ -239,6 +250,7 @@ def optimized_attention(q, k, v):
 ```
 
 **최적화 효과**:
+
 - **연산 융합**: 여러 연산을 단일 GPU 커널로 결합
 - **메모리 접근 최적화**: 캐시 친화적 메모리 패턴
 - **스레드 그룹 최적화**: GPU 코어 활용률 극대화
@@ -246,6 +258,7 @@ def optimized_attention(q, k, v):
 #### 2.3.7 실제 워크로드별 성능 차이
 
 **텍스트 생성 (Llama-3.2-7B)**
+
 ```python
 # MLX 텍스트 생성 벤치마크
 from mlx_lm import load, generate
@@ -280,6 +293,7 @@ print(f"평균 토큰/초: {(512 * 3) / total_time:.1f}")
 #### 2.3.8 GPU 코어 활용 상세 분석
 
 **Apple Silicon GPU 아키텍처**
+
 ```python
 # GPU 코어 정보 확인
 import mlx.core as mx
@@ -297,12 +311,14 @@ get_gpu_info()
 ```
 
 **MLX GPU 활용 패턴**:
+
 - **스레드 그룹**: 1024개 스레드/그룹 (최대 활용)
 - **워프 크기**: 32 스레드 (SIMD 최적화)
 - **메모리 계층**: L1(32KB) → L2(공유) → 통합메모리
 - **점유율**: 평균 90-95% GPU 활용률
 
 **GGUF GPU 활용 제한**:
+
 - **부분적 오프로드**: 일부 레이어만 GPU 처리
 - **CPU-GPU 동기화**: 빈번한 동기화 오버헤드
 - **메모리 복사**: CPU↔GPU 데이터 전송 병목
@@ -315,12 +331,14 @@ get_gpu_info()
 ### 3.1 플랫폼 지원
 
 #### MLX
+
 - ✅ **macOS** (M1/M2/M3/M4)
 - ❌ **Windows/Linux** (지원 없음)
 - ❌ **Intel Mac** (지원 없음)
 - ✅ **iOS/iPadOS** (실험적 지원)
 
 #### GGUF
+
 - ✅ **Windows** (CPU/CUDA/OpenCL)
 - ✅ **Linux** (CPU/CUDA/ROCm/Vulkan)
 - ✅ **macOS** (CPU/Metal)
@@ -330,6 +348,7 @@ get_gpu_info()
 ### 3.2 프레임워크 통합
 
 #### MLX 생태계
+
 ```python
 # MLX-LM: 언어모델 특화
 from mlx_lm import load, generate, convert
@@ -348,6 +367,7 @@ import mlx.core as mx
 - **Swift 바인딩**: iOS 앱 개발 지원
 
 #### GGUF 생태계
+
 ```python
 # llama-cpp-python
 from llama_cpp import Llama
@@ -378,11 +398,13 @@ model = mx.load("model.safetensors")
 ```
 
 **장점:**
+
 - **Unified Memory** 풀 활용으로 메모리 단편화 최소화
 - **지연 로딩**: 필요한 레이어만 메모리에 로드
 - **자동 가비지 컬렉션**: 사용하지 않는 텐서 자동 해제
 
 **단점:**
+
 - 메모리 사용량 예측이 어려움
 - 다른 앱과 메모리 경합 시 성능 저하
 
@@ -397,11 +419,13 @@ model = mx.load("model.safetensors")
 ```
 
 **장점:**
+
 - **예측 가능한 메모리 사용량**
 - **mlock** 지원으로 스와핑 방지
 - **점진적 로딩** 옵션
 
 **단점:**
+
 - Unified Memory 활용 제한적
 - 메모리 단편화 가능성
 
@@ -456,6 +480,7 @@ convert(
 ### 6.1 MLX 개발 경험
 
 **장점:**
+
 - **Python 네이티브**: NumPy 스타일 API
 - **Swift 통합**: iOS 앱 개발 용이
 - **자동 미분**: 파인튜닝 지원
@@ -474,6 +499,7 @@ for batch in dataloader:
 ```
 
 **단점:**
+
 - 플랫폼 제약
 - 상대적으로 작은 커뮤니티
 - 문서화 부족
@@ -481,6 +507,7 @@ for batch in dataloader:
 ### 6.2 GGUF 개발 경험
 
 **장점:**
+
 - **크로스 플랫폼**: 어디서나 동일한 경험
 - **성숙한 생태계**: 풍부한 도구와 문서
 - **활발한 커뮤니티**: 빠른 이슈 해결
@@ -500,6 +527,7 @@ chain = ConversationChain(llm=llm)
 ```
 
 **단점:**
+
 - C++ 기반으로 디버깅 어려움
 - Apple Silicon 최적화 제한
 - 복잡한 빌드 과정
@@ -580,12 +608,14 @@ def batch_generate(prompts, model, tokenizer):
 ## 9. 미래 전망
 
 ### 9.1 MLX 로드맵
+
 - **더 많은 모델 아키텍처** 지원
 - **iOS/iPadOS 정식 지원**
 - **Vision Pro 최적화**
 - **Swift 생태계 확장**
 
 ### 9.2 GGUF 로드맵
+
 - **더 효율적인 양자화** 알고리즘
 - **WebGPU 지원** 확대
 - **모바일 최적화** 강화
@@ -607,15 +637,17 @@ def batch_generate(prompts, model, tokenizer):
 ### 최종 권장사항
 
 **MLX를 선택하세요:**
+
 - Apple Silicon Mac에서 최고 성능이 필요한 경우
 - iOS/macOS 앱 개발 시
 - Python 중심의 ML 워크플로우
 - 파인튜닝이나 실험적 작업
 
 **GGUF를 선택하세요:**
+
 - 여러 플랫폼에서 동작해야 하는 경우
 - 프로덕션 환경의 안정성이 중요한 경우
 - 기존 도구 체인과의 호환성이 필요한 경우
 - 서버나 클라우드 배포
 
-두 포맷 모두 각각의 영역에서 최적화되어 있으므로, 프로젝트의 요구사항과 제약사항을 종합적으로 고려하여 선택하는 것이 중요합니다. 
+두 포맷 모두 각각의 영역에서 최적화되어 있으므로, 프로젝트의 요구사항과 제약사항을 종합적으로 고려하여 선택하는 것이 중요합니다.

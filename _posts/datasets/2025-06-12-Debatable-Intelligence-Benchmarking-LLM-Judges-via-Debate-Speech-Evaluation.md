@@ -158,6 +158,7 @@ class DebateJudgeEvaluator:
 **발견**: 7B 미만 모델들은 일관되게 성능이 낮음
 
 **실무 적용**:
+
 ```python
 def select_judge_model(task_complexity: str, budget_constraint: float):
     """작업 복잡도와 예산에 따른 모델 선택 가이드"""
@@ -185,6 +186,7 @@ def select_judge_model(task_complexity: str, budget_constraint: float):
 **발견**: LLM들은 인간보다 체계적으로 낮은 점수를 부여
 
 **해결책 구현**:
+
 ```python
 class BiasAdjustedJudge:
     def __init__(self, base_judge, calibration_data):
@@ -624,6 +626,7 @@ class DomainAdapter:
 ### 단계별 구현 로드맵
 
 1. **Phase 1**: 기본 평가 시스템 구축
+
    ```python
    # MVP 구현
    basic_judge = DebateJudgeEvaluator(openai_gpt4)
@@ -631,12 +634,14 @@ class DomainAdapter:
    ```
 
 2. **Phase 2**: 편향 보정 및 신뢰성 향상
+
    ```python
    # 보정 시스템 추가
    calibrated_judge = BiasAdjustedJudge(basic_judge, calibration_data)
    ```
 
 3. **Phase 3**: 실시간 서비스 및 확장
+
    ```python
    # 프로덕션 배포
    app = create_debate_api(calibrated_judge)
@@ -664,6 +669,7 @@ class JudgePerformanceMonitor:
 ---
 
 **참고자료**
+
 - [논문 원문](https://arxiv.org/pdf/2506.05062)
 - [관련 코드 저장소](https://github.com/ibm-research/debatable-intelligence)
 - [IBM Project Debater](https://research.ibm.com/interactive/project-debater/)

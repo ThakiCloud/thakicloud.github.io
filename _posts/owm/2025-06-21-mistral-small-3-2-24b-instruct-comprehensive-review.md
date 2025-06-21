@@ -27,9 +27,10 @@ Mistral AI가 **Mistral-Small-3.2-24B-Instruct-2506**을 공개했습니다. 언
 
 ### 1. 정밀한 명령 수행 (Instruction Following)
 
-Mistral-Small-3.2의 가장 큰 강점은 **사용자의 의도를 정확히 파악하고 실행하는 능력**입니다. 
+Mistral-Small-3.2의 가장 큰 강점은 **사용자의 의도를 정확히 파악하고 실행하는 능력**입니다.
 
 **벤치마크 비교**:
+
 - **Wildbench v2**: 55.6% → **65.33%** (17.5% 향상)
 - **Arena Hard v2**: 19.56% → **43.1%** (120% 향상)
 - **내부 정확도 테스트**: 82.75% → **84.78%**
@@ -147,7 +148,7 @@ print(response.choices[0].message.content)
 
 **실제 응답 예시**:
 > "이 상황에서는 레벨 42 피카츄가 레벨 17 구구를 상대하고 있습니다. 가능한 행동들을 분석해보겠습니다:
-> 
+>
 > 1. **싸우기 (FIGHT)**: 레벨 차이가 크므로 쉽게 승리할 수 있으며 경험치 획득이 가능
 > 2. **가방 (BAG)**: 포켓볼로 포획하거나 아이템 사용 가능
 > 3. **포켓몬 교체**: 다른 포켓몬 훈련 기회 제공
@@ -219,6 +220,7 @@ print(result)
 ### 1. 코딩 어시스턴트
 
 **HumanEval Plus 92.90%** 성능을 바탕으로:
+
 - 복잡한 알고리즘 구현
 - 코드 리뷰 및 최적화 제안
 - 버그 탐지 및 수정
@@ -226,6 +228,7 @@ print(result)
 ### 2. 멀티모달 문서 분석
 
 **DocVQA 94.86%** 성능 활용:
+
 - 차트, 그래프 해석
 - 문서 내 정보 추출
 - 시각적 데이터 분석
@@ -233,6 +236,7 @@ print(result)
 ### 3. 정밀한 업무 자동화
 
 개선된 **함수 호출 기능**으로:
+
 - API 통합 작업
 - 워크플로우 자동화
 - 복잡한 비즈니스 로직 구현
@@ -256,18 +260,21 @@ print(result)
 ## 최적화 팁
 
 ### 1. 온도 설정
+
 ```python
 # 권장 온도: 0.15
 temperature = 0.15  # 일관성 있는 결과를 위해 낮은 온도 사용
 ```
 
 ### 2. 시스템 프롬프트 활용
+
 ```python
 # 모델 저장소에서 제공하는 시스템 프롬프트 사용
 system_prompt = load_system_prompt(model_id, "SYSTEM_PROMPT.txt")
 ```
 
 ### 3. 메모리 최적화
+
 ```bash
 # 텐서 병렬화로 메모리 분산
 --tensor-parallel-size 2  # GPU 2개 사용시
@@ -301,6 +308,7 @@ Mistral-Small-3.2-24B-Instruct-2506은 **이론적 성능보다 실용적 가치
 ---
 
 **참고 자료**:
+
 - [Mistral-Small-3.2-24B-Instruct-2506 모델 카드](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506)
 - [Mistral AI 공식 문서](https://docs.mistral.ai/)
-- [vLLM 설치 가이드](https://docs.vllm.ai/) 
+- [vLLM 설치 가이드](https://docs.vllm.ai/)

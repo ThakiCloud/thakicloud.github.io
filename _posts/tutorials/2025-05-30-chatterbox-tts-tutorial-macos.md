@@ -37,6 +37,7 @@ toc_label: "목차"
 ### 성능 비교
 
 Chatterbox는 다음과 같은 우수한 성능을 보여줍니다:
+
 - ElevenLabs 대비 선호도 평가에서 일관되게 우수한 결과
 - 200ms 미만의 초저지연 처리 가능
 - 다양한 언어와 억양 지원
@@ -393,6 +394,7 @@ for lang, text in multilingual_texts.items():
 ### 일반적인 오류와 해결책
 
 **1. 모델 다운로드 실패**
+
 ```bash
 # 네트워크 문제 시 수동 다운로드
 export HF_HUB_CACHE="/tmp/huggingface_cache"
@@ -400,6 +402,7 @@ python -c "from chatterbox.tts import ChatterboxTTS; ChatterboxTTS.from_pretrain
 ```
 
 **2. 메모리 부족 오류**
+
 ```python
 # 더 작은 배치 크기 사용
 model = ChatterboxTTS.from_pretrained(device="cpu")
@@ -407,6 +410,7 @@ model = ChatterboxTTS.from_pretrained(device="cpu")
 ```
 
 **3. 오디오 품질 문제**
+
 ```python
 # 샘플링 레이트 확인 및 조정
 print(f"모델 샘플링 레이트: {model.sr}")
@@ -473,4 +477,4 @@ Chatterbox TTS는 오픈소스 음성 합성 분야의 새로운 기준을 제�
 
 맥북에서의 설치와 사용이 비교적 간단하며, Apple Silicon의 성능을 활용하면 더욱 빠른 음성 생성이 가능합니다. 팟캐스트 제작, 교육 콘텐츠 생성, 게임 개발 등 다양한 분야에서 활용할 수 있는 강력한 도구로 추천합니다.
 
-**API 키도, 숨겨진 비용도, 기능 제한도 없는 진정한 오픈소스 음성 AI**를 경험해보세요! 
+**API 키도, 숨겨진 비용도, 기능 제한도 없는 진정한 오픈소스 음성 AI**를 경험해보세요!

@@ -23,6 +23,7 @@ FlashInfer는 NVIDIA에서 개발한 고성능 LLM 추론을 위한 커스터마
 ### 핵심 특징
 
 **속도와 개발자 생산성** - FlashInfer는 두 가지 핵심 요소에 집중합니다:
+
 - **속도**: 고도로 최적화된 컴퓨트 커널 알고리즘으로 하드웨어 효율성 극대화
 - **개발자 생산성**: 새로운 커널을 빠르게 도입하고 새로운 모델, 알고리즘, 하드웨어를 가속화할 수 있는 능력
 
@@ -302,6 +303,7 @@ benchmark_attention(batch_size=32, seq_len=2048, num_heads=32, head_dim=128)
 ### 일반적인 문제들
 
 **메모리 부족 오류**:
+
 ```python
 # 배치 크기나 시퀀스 길이 줄이기
 # 또는 그래디언트 체크포인팅 사용
@@ -309,6 +311,7 @@ torch.cuda.empty_cache()
 ```
 
 **커널 컴파일 오류**:
+
 ```python
 # CUDA 버전 확인
 import torch
@@ -319,6 +322,7 @@ print(f"PyTorch version: {torch.__version__}")
 ```
 
 **성능 저하**:
+
 ```python
 # 적절한 백엔드 선택
 attention = BatchAttention(backend="cutlass")  # 일반적으로 최고 성능
@@ -335,4 +339,4 @@ FlashInfer는 NVIDIA의 최신 LLM 추론 최적화 기술을 집약한 강력�
 
 특히 대규모 배치 처리, 긴 시퀀스 처리, 그리고 실시간 서빙 환경에서 FlashInfer의 장점이 극대화됩니다. 지속적인 개발과 커뮤니티 기여를 통해 앞으로도 더욱 발전된 기능들이 추가될 예정입니다.
 
-더 자세한 정보는 [FlashInfer GitHub 저장소](https://github.com/flashinfer-ai/flashinfer)와 [공식 문서](https://docs.flashinfer.ai/)를 참조하시기 바랍니다. 
+더 자세한 정보는 [FlashInfer GitHub 저장소](https://github.com/flashinfer-ai/flashinfer)와 [공식 문서](https://docs.flashinfer.ai/)를 참조하시기 바랍니다.

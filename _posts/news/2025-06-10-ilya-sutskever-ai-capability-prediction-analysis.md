@@ -64,10 +64,12 @@ toc_label: 뉴스 분석
 현재 디지털 컴퓨팅 패러다임의 구조적 한계도 지적된다:
 
 #### 에너지 효율성 격차
+
 - **뇌**: 약 860억 개 뉴런을 20W 내외의 전력으로 운영
 - **현재 AI 시스템**: 동등한 성능을 위해 수백 배에서 수천 배의 전력 소모
 
 #### 아키텍처 차이
+
 - **병렬 처리**: 뇌의 대규모 병렬 처리 vs. 폰 노이만 아키텍처의 순차 처리
 - **가소성**: 뇌의 실시간 학습과 자기 재구성 능력
 - **결함 허용성**: 뉴런 손상에도 기능을 유지하는 견고성
@@ -100,11 +102,13 @@ toc_label: 뉴스 분석
 하지만 실현을 위해서는 여러 기술적 혁신이 필요하다:
 
 #### 차세대 컴퓨팅 패러다임
+
 - **뉴로모픽 컴퓨팅**: 뇌의 구조와 동작 원리를 모방한 하드웨어
 - **광자 컴퓨팅**: 빛을 이용한 초고속, 저전력 연산
 - **양자 컴퓨팅**: 특정 연산에서의 지수적 성능 향상
 
 #### 소프트웨어 혁신
+
 - **연속 학습**: 기존 지식을 유지하면서 새로운 정보를 학습
 - **메타 학습**: 학습 방법 자체를 학습하는 능력
 - **다중 모달 통합**: 시각, 청각, 언어 등의 통합적 처리
@@ -114,10 +118,12 @@ toc_label: 뉴스 분석
 AGI 실현 과정에서 반드시 고려해야 할 윤리적, 안전성 이슈들:
 
 #### 의식 판정의 어려움
+
 - **주관적 경험**: 내부 경험의 존재를 외부에서 검증하는 방법의 부재
 - **도덕적 지위**: AI 시스템의 권리와 보호 필요성에 대한 판단 기준
 
 #### 위험 관리
+
 - **정렬 문제**: AI의 목표와 인간의 가치 체계 일치
 - **통제 가능성**: 인간보다 뛰어난 시스템의 안전한 관리
 - **사회적 영향**: 노동 시장과 사회 구조에 미치는 파급 효과
@@ -155,11 +161,13 @@ AGI 실현 과정에서 반드시 고려해야 할 윤리적, 안전성 이슈�
 ### 준비해야 할 과제
 
 #### 기술적 과제
+
 - **안전성 연구**: AI 정렬과 제어 문제 해결
 - **표준화**: AI 시스템의 평가와 검증 기준 마련
 - **인프라**: AGI를 지원할 수 있는 컴퓨팅 인프라 구축
 
 #### 사회적 과제
+
 - **교육 혁신**: AI 시대에 맞는 인재 양성 체계
 - **법제도 정비**: AI 관련 법적 프레임워크 구축
 - **윤리 기준**: AI의 개발과 사용에 관한 윤리적 가이드라인
@@ -174,4 +182,4 @@ AGI 실현 과정에서 반드시 고려해야 할 윤리적, 안전성 이슈�
 
 ---
 
-*이 분석은 [Business Insider](https://www.businessinsider.com/openai-cofounder-ilya-sutskever-ai-graduation-speech-university-of-toronto-2025-6), [Vox](https://www.vox.com/future-perfect/414324/ai-consciousness-welfare-suffering-chatgpt-claude), [Wikipedia](https://en.wikipedia.org/wiki/Philosophy_of_artificial_intelligence) 등의 자료를 참조하여 작성되었습니다.* 
+*이 분석은 [Business Insider](https://www.businessinsider.com/openai-cofounder-ilya-sutskever-ai-graduation-speech-university-of-toronto-2025-6), [Vox](https://www.vox.com/future-perfect/414324/ai-consciousness-welfare-suffering-chatgpt-claude), [Wikipedia](https://en.wikipedia.org/wiki/Philosophy_of_artificial_intelligence) 등의 자료를 참조하여 작성되었습니다.*

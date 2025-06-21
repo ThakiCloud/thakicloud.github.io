@@ -342,4 +342,4 @@ Water 프레임워크는 다음 기능들을 개발 중입니다:
 
 Water는 멀티 에이전트 시스템의 복잡성을 해결하면서도 기존 투자를 보호할 수 있는 혁신적인 오케스트레이션 프레임워크입니다. 프레임워크에 구애받지 않는 설계로 인해 LangChain, CrewAI 등 기존 도구들을 그대로 활용하면서도 더 복잡하고 확장 가능한 워크플로우를 구축할 수 있습니다. 프로덕션 환경에서의 안정성과 개발자 경험을 모두 고려한 설계로, 엔터프라이즈급 멀티 에이전트 시스템 구축에 적합합니다.
 
-> 프로젝트 소스코드와 더 많은 예제는 GitHub에서 확인하세요: [manthanguptaa/water](https://github.com/manthanguptaa/water) \[GitHub Repo\] 
+> 프로젝트 소스코드와 더 많은 예제는 GitHub에서 확인하세요: [manthanguptaa/water](https://github.com/manthanguptaa/water) \[GitHub Repo\]

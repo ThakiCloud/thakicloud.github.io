@@ -46,7 +46,7 @@ Magenta RealTime은 세 가지 핵심 컴포넌트로 구성되어 있습니다.
 
 **인코더-디코더 Transformer LLM**은 컨텍스트와 스타일 정보를 바탕으로 오디오 토큰을 생성합니다.
 
-- **인코더 입력**: 
+- **인코더 입력**:
   - 컨텍스트: 1000개 토큰 (10초 오디오 컨텍스트, 4 RVQ 깊이)
   - 스타일: 6개 토큰 (양자화된 MusicCoCa 스타일 임베딩)
 - **디코더 출력**: 800개 토큰 (2초 오디오, 16 RVQ 깊이)
@@ -110,5 +110,6 @@ Magenta RealTime은 실시간 연속 음악 오디오 생성을 지원하는 최
 ---
 
 **참고 자료**:
+
 - [Hugging Face Model Card](https://huggingface.co/google/magenta-realtime)
-- [Google DeepMind Blog Post](https://g.co/magenta/rt) 
+- [Google DeepMind Blog Post](https://g.co/magenta/rt)

@@ -136,16 +136,19 @@ image = model.generate(
 ## 활용 분야
 
 ### 교육 및 학습
+
 - 멀티모달 콘텐츠 분석
 - 음성 인식 기반 학습 도구
 - 시각적 질문 응답 시스템
 
 ### 콘텐츠 생성
+
 - 텍스트-이미지 생성
 - 음성 합성 및 더빙
 - 이미지 편집 및 스타일 변환
 
 ### 접근성 도구
+
 - 시각 장애인을 위한 이미지 설명
 - 청각 장애인을 위한 음성-텍스트 변환
 - 다국어 음성 번역
@@ -153,11 +156,13 @@ image = model.generate(
 ## 기술적 혁신
 
 ### 모달리티별 라우터
+
 - 각 모달리티에 특화된 처리 경로
 - 태스크 간 충돌 해결
 - 효율적인 토큰 통합
 
 ### 통합 인식-생성 아키텍처
+
 - 단일 모델로 다양한 모달리티 처리
 - 컨텍스트 인식 생성
 - 태스크별 미세 조정 불필요
@@ -180,6 +185,7 @@ Ming-Lite-Omni는 멀티모달 AI 분야에서 중요한 이정표를 제시합�
 ---
 
 **참고 자료:**
+
 - [Ming-Lite-Omni 모델 페이지](https://huggingface.co/inclusionAI/Ming-Lite-Omni)
 - [기술 논문](https://arxiv.org/abs/2506.09344)
-- [프로젝트 페이지](https://github.com/inclusionAI/Ming-Omni) 
+- [프로젝트 페이지](https://github.com/inclusionAI/Ming-Omni)

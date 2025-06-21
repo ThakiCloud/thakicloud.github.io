@@ -460,17 +460,22 @@ kubectl apply -f prometheus-config.yaml
 
 1. **메트릭이 수집되지 않는 경우**:
    - Prometheus 파드의 로그를 확인하세요.
+
    ```bash
    kubectl logs -n monitoring prometheus-prometheus-kube-prometheus-prometheus-0
    ```
+
 2. **Grafana 대시보드가 표시되지 않는 경우**:
    - 서비스 상태를 확인하세요.
+
    ```bash
    kubectl get svc -n monitoring
    kubectl describe svc prometheus-grafana -n monitoring
    ```
+
 3. **Prometheus의 높은 메모리 사용량**:
    - Helm values 파일에서 아래와 같이 retention 설정을 추가하세요.
+
    ```yaml
    prometheus:
      prometheusSpec:
@@ -512,7 +517,7 @@ Kubernetes 환경에서 Prometheus와 Grafana를 활용한 완전한 모니터�
 - **시각적 인사이트**: 직관적인 대시보드를 통한 시스템 상태 파악
 - **성능 최적화**: 리소스 사용 패턴 분석을 통한 최적화 방향 도출
 
-이러한 모니터링 시스템을 통해 Kubernetes 클러스터의 안정성과 성능을 크게 향상시킬 수 있으며, 운영 효율성도 높일 수 있습니다. 
+이러한 모니터링 시스템을 통해 Kubernetes 클러스터의 안정성과 성능을 크게 향상시킬 수 있으며, 운영 효율성도 높일 수 있습니다.
 
 ## 실습 후 리소스 정리 방법
 
@@ -533,4 +538,4 @@ helm uninstall prometheus -n monitoring
 kubectl delete namespace monitoring
 ```
 
-> ⚠️ **주의:** 위 명령어를 실행하면 관련 리소스와 네임스페이스가 모두 삭제되니, 실습 환경에서만 사용하세요. 
+> ⚠️ **주의:** 위 명령어를 실행하면 관련 리소스와 네임스페이스가 모두 삭제되니, 실습 환경에서만 사용하세요.

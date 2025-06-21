@@ -19,7 +19,7 @@ author_profile: true
 # comments: true
 ---
 
-> **핵심 메시지**  구조화와 제어가 잘 된 환경에서 **Cursor**와 생성형 AI를 결합하면, 소규모 팀도 대형 서비스 수준의 생산성을 얻을 수 있다. 이 글은 **바이브 코딩(Vibe Coding)** 문화 속에서 Cursor를 "유능한 주니어"처럼 다루는 실전 전략을 담고 있다. 
+> **핵심 메시지**  구조화와 제어가 잘 된 환경에서 **Cursor**와 생성형 AI를 결합하면, 소규모 팀도 대형 서비스 수준의 생산성을 얻을 수 있다. 이 글은 **바이브 코딩(Vibe Coding)** 문화 속에서 Cursor를 "유능한 주니어"처럼 다루는 실전 전략을 담고 있다.
 
 ## 1 · End‑to‑End AI 개발 파이프라인
 
@@ -77,8 +77,8 @@ author_profile: true
 
 ### 3‑2 Project Rules 설정
 
-1. **5‒10개의 명확한 규칙** 정의 ⇒ `Cursor > Settings > Project Rules` 
-2. `/_Generate Cursor Rules` 명령으로 자동 생성 가능 
+1. **5‒10개의 명확한 규칙** 정의 ⇒ `Cursor > Settings > Project Rules`
+2. `/_Generate Cursor Rules` 명령으로 자동 생성 가능
 3. 예시 Rules 파일 (`.cursor/rules`):
 
 ```text
@@ -90,12 +90,12 @@ Do not modify files in __tests__/ (see .cursorignore).
 
 ### 3‑3 Edit‑Test Loop (Micro Increment)
 
-1. **작업 정의** → 작은 기능·파일 단위 설정 
-2. **실패 테스트 작성** (`__tests__/`) 
-3. **AI에게 코드 작성** 지시 (Agent mode) 
-4. **테스트 실행** 
-5. **실패 시 루프** → AI가 분석·수정 
-6. **테스트 통과 후** → 개발자 리뷰 
+1. **작업 정의** → 작은 기능·파일 단위 설정
+2. **실패 테스트 작성** (`__tests__/`)
+3. **AI에게 코드 작성** 지시 (Agent mode)
+4. **테스트 실행**
+5. **실패 시 루프** → AI가 분석·수정
+6. **테스트 통과 후** → 개발자 리뷰
 
 ### 3‑4 베스트 프랙티스 체크리스트 (from "Cursor Best Practices")
 
@@ -123,7 +123,6 @@ Do not modify files in __tests__/ (see .cursorignore).
 ```
 
 > 각 Markdown 파일은 **글로벌 컨텍스트**로 인식되어, 다음 프롬프트에서도 자동 참고된다.
-
 
 물론입니다. 요청하신 대로 **4개의 상위 챕터** 아래에 각 `.cursor/` 파일을 포함하여 구조화된 형태로 정리해드리겠습니다.
 
@@ -155,6 +154,7 @@ Do not modify files in __tests__/ (see .cursorignore).
    ├── chat/
    └── usage/
   ```
+
 * 각 디렉토리 역할:
 
   * `auth/`: 로그인, 토큰, 인증 미들웨어
@@ -237,5 +237,3 @@ Do not modify files in __tests__/ (see .cursorignore).
 3. **AI 출력은 반드시 리뷰** – 잘못된 코드는 수정 예시로 재학습.
 4. **밤새 인덱싱** – 대형 프로젝트는 느린 Context Lookup을 방지.
 5. **Cursor = 유능한 주니어** – 방향만 잡아주면 멀리 간다.
-
-
