@@ -43,7 +43,7 @@ jobs:
             const { data: runs } = await github.rest.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              workflow_id: 'build-package.yml',
+              workflow_id: 'ci.yml',
               branch: 'main',
               status: 'completed',
               conclusion: 'success',
@@ -80,11 +80,11 @@ jobs:
           # Find the artifact directory
           ARTIFACT_DIR=$(find . -name "jekyll-site-*" -type d | head -1)
           if [ -z "$ARTIFACT_DIR" ]; then
-            echo "No artifact directory found"
+            echo "❌ No artifact directory found"
             exit 1
           fi
           
-          echo "Found artifact directory: $ARTIFACT_DIR"
+          echo "✅ Found artifact directory: $ARTIFACT_DIR"
           ls -la "$ARTIFACT_DIR"
           
           # Move contents to _site directory for GitHub Pages
