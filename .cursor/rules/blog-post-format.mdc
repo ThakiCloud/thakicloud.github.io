@@ -3,11 +3,6 @@ description:
 globs: 
 alwaysApply: true
 ---
----
-title: Jekyll 블로그 포스트 작성 규칙
-scope: _posts/**/*.md
----
-
 터미널에서 오늘의 날짜를 확인하고 (date +"%Y-%m-%d")
 블로그 포스트 작성 시 다음 포맷을 반드시 준수합니다:
 
