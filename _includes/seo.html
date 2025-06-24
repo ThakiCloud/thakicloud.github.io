@@ -50,6 +50,16 @@
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 
+{% if site.keywords %}
+<meta name="keywords" content="{{ site.keywords }}">
+{% endif %}
+
+<!-- Brand name variations for better SEO -->
+<meta name="alternate-names" content="Thaki Cloud, ThakiCloud, 타키클라우드, ثاكي كلاود, thaki-cloud">
+<meta name="brand" content="Thaki Cloud">
+<meta name="language" content="ko-KR, ar, en">
+<meta name="coverage" content="Worldwide">
+
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author }}">
   {% if og_type == "article" %}
