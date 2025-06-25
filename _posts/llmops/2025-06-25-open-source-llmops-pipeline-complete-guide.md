@@ -34,7 +34,7 @@ Data Sources → DVC + Airflow → Axolotl/Unsloth → LM Eval → vLLM → Prod
 
 ### 2. 스택 구성 요소
 
-| 기능 영역 | NVIDIA/Amdocs | 오픈소스 대안 |
+| 기능 영역 | NVIDIA | 오픈소스 대안 |
 |-----------|---------------|--------------|
 | 데이터 큐레이션 | NeMo Curator | DVC + Apache Airflow |
 | 모델 훈련 | NeMo Customizer | Axolotl + Unsloth |
@@ -1038,86 +1038,6 @@ roleRef:
   kind: Role
   name: llmops-operator
   apiGroup: rbac.authorization.k8s.io
-```
-
-## 성능 벤치마크 및 비교
-
-### 1. 기존 NVIDIA 스택 대비 성능
-
-| 메트릭 | NVIDIA NeMo | 오픈소스 스택 | 개선율 |
-|--------|-------------|--------------|-------|
-| 훈련 속도 | 기준선 | Unsloth로 2-3배 향상 | +200% |
-| 추론 속도 | NIM | vLLM로 1.5-2배 향상 | +150% |
-| 메모리 사용량 | 기준선 | 4bit 양자화로 50% 절약 | -50% |
-| 총 소유 비용 | 높음 | 라이센스 비용 제거 | -70% |
-| 커스터마이징 | 제한적 | 완전한 소스코드 접근 | +100% |
-
-### 2. 비용 분석
-
-```python
-# src/analysis/cost_analysis.py
-import pandas as pd
-import matplotlib.pyplot as plt
-
-def calculate_tco_comparison():
-    """총소유비용 비교 분석"""
-    
-    # 기간별 비용 (연간, 단위: USD)
-    nvidia_costs = {
-        'software_license': 50000,  # NeMo, NIM 라이센스
-        'cloud_compute': 120000,    # DGX Cloud
-        'support': 20000,           # 엔터프라이즈 지원
-        'training': 15000,          # 전문 교육
-        'maintenance': 10000        # 유지보수
-    }
-    
-    opensource_costs = {
-        'software_license': 0,      # 오픈소스
-        'cloud_compute': 60000,     # 50% 절약 (효율적인 리소스 사용)
-        'support': 30000,           # 커뮤니티 + 상업적 지원
-        'training': 25000,          # 더 많은 교육 필요
-        'maintenance': 15000        # 자체 유지보수
-    }
-    
-    nvidia_total = sum(nvidia_costs.values())
-    opensource_total = sum(opensource_costs.values())
-    
-    savings = nvidia_total - opensource_total
-    savings_percentage = (savings / nvidia_total) * 100
-    
-    print(f"NVIDIA 스택 연간 비용: ${nvidia_total:,}")
-    print(f"오픈소스 스택 연간 비용: ${opensource_total:,}")
-    print(f"연간 절약액: ${savings:,} ({savings_percentage:.1f}%)")
-    
-    return {
-        'nvidia_total': nvidia_total,
-        'opensource_total': opensource_total,
-        'savings': savings,
-        'savings_percentage': savings_percentage
-    }
-
-def plot_cost_comparison():
-    """비용 비교 시각화"""
-    costs = calculate_tco_comparison()
-    
-    categories = ['NVIDIA 스택', '오픈소스 스택']
-    values = [costs['nvidia_total'], costs['opensource_total']]
-    
-    plt.figure(figsize=(10, 6))
-    bars = plt.bar(categories, values, color=['#76B900', '#00D4AA'])
-    
-    plt.title('연간 총소유비용 비교', fontsize=16, fontweight='bold')
-    plt.ylabel('비용 (USD)', fontsize=12)
-    
-    # 막대 위에 값 표시
-    for bar, value in zip(bars, values):
-        plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 2000,
-                f'${value:,}', ha='center', va='bottom', fontweight='bold')
-    
-    plt.tight_layout()
-    plt.show()
-    
-    return costs
 ```
 
 ## 실전 배포 체크리스트
