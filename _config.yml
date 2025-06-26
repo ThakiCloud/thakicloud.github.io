@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale : "ko-KR"
-title  : "Thaki Cloud Tech Blog | ThakiCloud 기술 블로그"
+title  : "Thaki Cloud Tech Blog | ThakiCloud | 타키클라우드 기술 블로그"
 title_separator          : "-"
 subtitle                 : "AI/ML Engineering & DevOps 전문 기술 블로그"
-name   : "ThakiCloud"
-description              : "Thaki Cloud(ThakiCloud, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. 머신러닝 모델 운영, 쿠버네티스, 클라우드 인프라, AI 엔지니어링 커리어, 인공지능 기술 블로그, 타키클라우드 개발 팀의 깊이 있는 인사이트를 제공합니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
+name   : "Thaki Cloud"
+description              : "Thaki Cloud (ThakiCloud, 타키클라우드, thaki cloud, THAKI CLOUD, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. 머신러닝 모델 운영, 쿠버네티스, 클라우드 인프라, AI 엔지니어링 커리어, 인공지능 기술 블로그, 타키클라우드 개발 팀의 깊이 있는 인사이트를 제공합니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
 url    : "https://thakicloud.github.io"
 baseurl: ""
 repository               : "ThakiCloud/thakicloud.github.io"
@@ -90,13 +90,13 @@ facebook:
 og_image                 : "/assets/images/thakicloud-og-image.jpg" # Open Graph/Twitter default site image
 
 # Keywords for SEO
-keywords: "Thaki Cloud, ThakiCloud, 타키클라우드, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات"
+keywords: "Thaki Cloud, ThakiCloud, 타키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, 타키 클라우드, 타키클라우드 기술블로그, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات"
 
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type : Organization # Person or Organization (defaults to Person)
-  name : "Thaki Cloud | ThakiCloud | 타키클라우드" # If the user or organization name differs from the site's name
+  name : "Thaki Cloud | ThakiCloud | 타키클라우드 | thaki cloud" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://github.com/thakicloud"
     - "https://thakicloud.co.kr"
@@ -234,6 +234,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -242,6 +243,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 
 # Archives

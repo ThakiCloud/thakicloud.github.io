@@ -12,7 +12,8 @@ sitemap: false
       "categories": {{ post.categories | jsonify }},
       "tags": {{ post.tags | jsonify }},
       "content": {{ post.content | prepare_search_content | jsonify }},
-      "excerpt": {{ post.excerpt | strip_html | truncatewords: 50 | prepare_search_content | jsonify }}
+      "excerpt": {{ post.excerpt | strip_html | truncatewords: 50 | prepare_search_content | jsonify }},
+      "brand_keywords": "Thaki Cloud, ThakiCloud, 타키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
