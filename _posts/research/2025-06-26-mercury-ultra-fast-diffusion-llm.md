@@ -315,4 +315,5 @@ Mercury는 **diffusion 기반 언어 모델**이라는 새로운 패러다임을
 
 Mercury는 단순한 성능 개선을 넘어서 **AI 언어 모델의 패러다임 전환**을 의미합니다. Diffusion 기반 접근법이 언어 생성 분야에서도 이미지 생성만큼 혁신적인 결과를 가져올 수 있음을 증명한 이 연구는, 앞으로 더 빠르고 효율적인 AI 시스템 개발의 새로운 방향을 제시합니다.
 
+**원 논문**: [Mercury: Ultra-Fast Language Models Based on Diffusion](https://arxiv.org/abs/2506.17298)  
 **API 및 플레이그라운드**: [platform.inceptionlabs.ai](https://platform.inceptionlabs.ai) | [chat.inceptionlabs.ai](https://chat.inceptionlabs.ai) 
