@@ -1,6 +1,8 @@
 ---
 title: "Open WebUI 완전 분석: 셀프 호스팅 AI 플랫폼의 새로운 기준"
 excerpt: "vLLM UI를 넘어 ChatGPT와 경쟁하는 Open WebUI의 핵심 기능, 경쟁 우위, 그리고 에이전트 시대를 향한 로드맵까지 종합 분석"
+seo_title: "Open WebUI 완전 분석 가이드 - 셀프 호스팅 AI 플랫폼 - Thaki Cloud"
+seo_description: "Open WebUI vs ChatGPT 비교분석, 셀프호스팅 AI 플랫폼 구축 가이드, RAG 시스템과 멀티에이전트 지원까지 모든 것을 다룹니다. Thaki Cloud 기술 블로그"
 date: 2025-06-26
 categories: 
   - tutorials
@@ -12,9 +14,12 @@ tags:
   - llm
   - rag
   - multi-agent
+  - chatgpt-alternative
+  - thaki-cloud
 author_profile: true
 toc: true
 toc_label: "Open WebUI 분석 가이드"
+canonical_url: "https://thakicloud.github.io/tutorials/open-webui-comprehensive-platform-analysis/"
 ---
 
 AI 인터페이스 생태계가 급속히 발전하면서, 개발자와 기업들은 ChatGPT 같은 클라우드 서비스와 셀프 호스팅 솔루션 사이에서 선택의 기로에 서 있습니다. 이런 상황에서 **Open WebUI**는 단순한 LLM 인터페이스를 넘어 통합 AI 플랫폼으로 자리매김하며 주목받고 있습니다.

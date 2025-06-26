@@ -13,16 +13,20 @@ alwaysApply: true
   ---
   title: "포스트 제목"
   excerpt: "요약된 일부 내용"
+  seo_title: "SEO 최적화된 제목 - Thaki Cloud"
+  seo_description: "검색 엔진을 위한 상세 설명 (150-160자)"
   date: YYYY-MM-DD
   categories: 
     - 카테고리1
     - 카테고리2
   tags: 
-    - 태그1
-    - 태그2
+    - 핵심키워드
+    - 브랜드명
+    - 기술스택
   author_profile: true
   toc: true
   toc_label: XXXXXXX
+  canonical_url: "https://thakicloud.github.io/포스트-경로/"
   ---
 
 
