@@ -8,6 +8,7 @@ alwaysApply: true
 
 - 파일명은 `YYYY-MM-DD-title.md` 형식이어야 합니다.
 - 카테고리는 dev, llmops, owm, tutorials, news, research, datasets, careers, culture 중 하나를 반드시 포함합니다.
+- 카테고리가 tutorials이면서 맥북에서 실행 가능한 경우 테스트 스크립트를 작성하고 실제 돌리고 해당 결과를 간략히 요약하여 글에 포함시켜줘. 개발환경 버전들을 반드시 같이 표기해줘. zshrc alias를 등록하여 쉽게 사용 가능한 가이드 역시 만들어줘.
 - Front Matter에는 다음 항목을 포함해야 합니다:
   ```yaml
   ---
@@ -28,6 +29,7 @@ alwaysApply: true
   toc_label: XXXXXXX
   canonical_url: "https://thakicloud.github.io/포스트-경로/"
   ---
-- 카테고리가 tutorials이면서 맥북에서 실행 가능한 경우 테스트 스크립트를 작성하고 실제 돌리고 해당 결과를 간략히 요약하여 글에 포함시켜줘. 개발환경 버전들을 반드시 같이 표기해줘. zshrc alias를 등록하여 쉽게 사용 가능한 가이드 역시 만들어줘.
+  ```
+
 
 
