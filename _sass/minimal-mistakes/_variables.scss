@@ -55,32 +55,32 @@ $h-size-6: 1em !default; // ~16px
    Colors
    ========================================================================== */
 
-$gray: #7a8288 !default;
-$dark-gray: mix(#000, $gray, 50%) !default;
-$darker-gray: mix(#000, $gray, 60%) !default;
-$light-gray: mix(#fff, $gray, 50%) !default;
-$lighter-gray: mix(#fff, $gray, 90%) !default;
+$gray: #9e9e9e !default;
+$dark-gray: #e0e0e0 !default;
+$darker-gray: #f5f5f5 !default;
+$light-gray: #757575 !default;
+$lighter-gray: #424242 !default;
 
-$background-color: #fff !default;
-$code-background-color: #fafafa !default;
-$code-background-color-dark: $light-gray !default;
-$text-color: $dark-gray !default;
-$muted-text-color: mix(#fff, $text-color, 20%) !default;
-$border-color: $lighter-gray !default;
-$form-background-color: $lighter-gray !default;
-$footer-background-color: $lighter-gray !default;
+$background-color: #212121 !default;
+$code-background-color: #252526 !default;
+$code-background-color-dark: $lighter-gray !default;
+$text-color: #ffffff !default;
+$muted-text-color: #b0b0b0 !default;
+$border-color: #424242 !default;
+$form-background-color: #2a2a2a !default;
+$footer-background-color: #1a1a1a !default;
 
-$primary-color: #6f777d !default;
-$success-color: #3fa63f !default;
-$warning-color: #d67f05 !default;
-$danger-color: #ee5f5b !default;
-$info-color: #3b9cba !default;
+$primary-color: #90caf9 !default;
+$success-color: #4caf50 !default;
+$warning-color: #ff9800 !default;
+$danger-color: #f44336 !default;
+$info-color: #2196f3 !default;
 $focus-color: $primary-color !default;
-$active-color: mix(#fff, $primary-color, 80%) !default;
+$active-color: mix(#000, $primary-color, 40%) !default;
 
 /* YIQ color contrast */
-$yiq-contrasted-dark-default: $dark-gray !default;
-$yiq-contrasted-light-default: #fff !default;
+$yiq-contrasted-dark-default: #212121 !default;
+$yiq-contrasted-light-default: #ffffff !default;
 $yiq-contrasted-threshold: 175 !default;
 $yiq-debug: false !default;
 
@@ -111,11 +111,11 @@ $youtube-color: #bb0000 !default;
 $xing-color: #006567 !default;
 
 /* links */
-$link-color: mix(#000, $info-color, 20%) !default;
-$link-color-hover: mix(#000, $link-color, 25%) !default;
-$link-color-visited: mix(#fff, $link-color, 15%) !default;
+$link-color: #64b5f6 !default;
+$link-color-hover: #90caf9 !default;
+$link-color-visited: #ce93d8 !default;
 $masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
+$masthead-link-color-hover: mix(#fff, $primary-color, 25%) !default;
 $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
 
 /* notices */
@@ -123,13 +123,13 @@ $notice-background-mix: 80% !default;
 $code-notice-background-mix: 90% !default;
 
 /* syntax highlighting (base16) */
-$base00: #263238 !default;
-$base01: #2e3c43 !default;
-$base02: #314549 !default;
-$base03: #546e7a !default;
-$base04: #b2ccd6 !default;
-$base05: #eeffff !default;
-$base06: #eeffff !default;
+$base00: #212121 !default;
+$base01: #2a2a2a !default;
+$base02: #3a3a3a !default;
+$base03: #5a5a5a !default;
+$base04: #b0b0b0 !default;
+$base05: #e0e0e0 !default;
+$base06: #f0f0f0 !default;
 $base07: #ffffff !default;
 $base08: #f07178 !default;
 $base09: #f78c6c !default;
