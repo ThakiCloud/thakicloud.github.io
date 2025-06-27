@@ -14,7 +14,7 @@
   height: $nav-toggle-height;
   border: 0;
   outline: none;
-  color: $primary-color;
+  color: #e0e0e0;
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: 0.2s;
@@ -26,7 +26,7 @@
   font-size: 1.2em;
 
   &:hover {
-    color: mix(#000, $primary-color, 25%);
+    color: #ffffff;
     text-decoration: none;
   }
 

@@ -382,25 +382,25 @@
       }
 
       &:hover {
-        color: #fff;
+        color: $text-color;
         border-color: $gray;
-        background-color: mix(white, #000, 20%);
+        background-color: mix($text-color, $background-color, 20%);
 
         &:before,
         &:after {
-          background-color: #fff;
+          background-color: $text-color;
         }
       }
     }
 
     /* selected*/
     input:checked + label {
-      color: white;
-      background-color: mix(white, #000, 20%);
+      color: $text-color;
+      background-color: mix($text-color, $background-color, 20%);
 
       &:before,
       &:after {
-        background-color: #fff;
+        background-color: $text-color;
       }
     }
 
@@ -496,7 +496,7 @@
   font-size: 0.82em; /* $type-size-6 */
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 1px solid $border-color;
+  border-bottom: none;
 }
 
 /*
@@ -513,7 +513,7 @@
   box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
+    color: $text-color;
     font-size: $type-size-6;
     background: $primary-color;
     border-top-left-radius: $border-radius;
