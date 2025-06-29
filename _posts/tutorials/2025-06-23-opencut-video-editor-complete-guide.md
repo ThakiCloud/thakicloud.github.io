@@ -1,6 +1,6 @@
 ---
-title: "OpenCut 완전 가이드: 무료 오픈소스 비디오 에디터로 CapCut 대체하기"
-excerpt: "프라이버시 중심의 무료 비디오 에디터 OpenCut 설치부터 고급 기능까지 완벽 가이드"
+title: "OpenCut 완전 가이드: macOS 로컬 테스트 완료! 무료 오픈소스 비디오 에디터로 CapCut 대체하기"
+excerpt: "프라이버시 중심의 무료 비디오 에디터 OpenCut을 macOS에서 완전 테스트했습니다. 설치부터 개발 서버 실행까지 단계별 가이드를 제공합니다."
 date: 2025-06-23
 categories: 
   - tutorials
@@ -12,6 +12,10 @@ tags:
   - CapCut Alternative
   - 비디오 편집
   - 웹 에디터
+  - macOS
+  - Next.js
+  - PostgreSQL
+  - Bun
 author_profile: true
 toc: true
 toc_label: "OpenCut 완전 가이드"
@@ -67,10 +71,14 @@ OpenCut은 웹, 데스크톱, 모바일에서 사용할 수 있는 무료 오픈
 
 ```bash
 # 필수 소프트웨어
-- Node.js 22.16.0 이상
-- Yarn 4.9.1
+- Node.js 16.9+ (테스트 환경: v24.1.0)
+- Bun 1.2.17 (프로젝트 패키지 매니저)
 - Git
-- PostgreSQL (선택사항)
+- PostgreSQL 14+ (로컬 개발용)
+
+# macOS 환경에서 확인된 버전
+- PostgreSQL 14.18 (Homebrew)
+- macOS: darwin 25.0.0 (Apple Silicon)
 ```
 
 ## 사용자 가이드
@@ -142,55 +150,113 @@ cd OpenCut
 cd apps/web
 ```
 
-### 2단계: 환경 설정
-
-```bash
-# 환경 변수 파일 생성
-cp env.example .env.local
-
-# .env.local 파일 편집
-DATABASE_URL=postgresql://username:password@localhost:5432/opencut
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-secret-key-here
-```
-
-### 3단계: 의존성 설치
-
-```bash
-# 기존 lock 파일 정리
-rm -f package-lock.json bun.lock
-
-# Yarn 설정 (node_modules 모드)
-yarn config set nodeLinker node-modules
-
-# 의존성 설치
-yarn install
-```
-
-### 4단계: 개발 서버 실행
-
-```bash
-# 개발 서버 시작
-yarn dev
-
-# 접속 URL
-# Local: http://localhost:3000
-# Network: http://[your-ip]:3000
-```
-
-### 5단계: 데이터베이스 설정 (선택사항)
+### 2단계: PostgreSQL 설정
 
 ```bash
 # PostgreSQL 설치 (macOS)
-brew install postgresql
-brew services start postgresql
+brew install postgresql@14
+brew services start postgresql@14
 
-# 데이터베이스 생성
-createdb opencut
+# admin 사용자 생성 (슈퍼유저 권한)
+createuser -s admin
 
-# 스키마 생성
-yarn db:generate
-yarn db:push:local
+# admin 사용자 패스워드 설정
+psql -d postgres -c "ALTER USER admin PASSWORD 'admin';"
+
+# opencut 데이터베이스 생성
+createdb -O admin opencut
+
+# 연결 테스트
+psql -d "postgresql://admin:admin@localhost:5432/opencut" -c "SELECT version();"
+```
+
+### 3단계: 환경 설정
+
+```bash
+# 환경 변수 파일 생성
+cp .env.example .env.local
+
+# .env.local 파일 내용 (admin/admin 사용자로 설정)
+cat > .env.local << 'EOF'
+DATABASE_URL="postgresql://admin:admin@localhost:5432/opencut"
+BETTER_AUTH_URL=http://localhost:3001
+BETTER_AUTH_SECRET=your-secret-key-here-opencut-test-2025
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NODE_ENV=development
+UPSTASH_REDIS_REST_URL=http://localhost:8079
+UPSTASH_REDIS_REST_TOKEN=example_token
+EOF
+```
+
+### 4단계: Bun 설치 및 의존성 설치
+
+```bash
+# Bun 설치 (프로젝트에서 지정된 패키지 매니저)
+curl -fsSL https://bun.sh/install | bash
+
+# PATH 업데이트
+export PATH="$HOME/.bun/bin:$PATH"
+
+# Corepack 활성화 (필요시)
+corepack enable
+
+# 의존성 설치
+bun install
+```
+
+### 5단계: 데이터베이스 스키마 생성
+
+```bash
+# 데이터베이스 스키마 생성
+bun run db:generate
+
+# 로컬 데이터베이스에 스키마 적용
+bun run db:push:local
+
+# 생성된 테이블 확인
+psql -d "postgresql://admin:admin@localhost:5432/opencut" -c "\dt"
+```
+
+### 6단계: 개발 서버 실행
+
+```bash
+# 포트 충돌 방지를 위해 3001 포트 사용 (OrbStack 등이 3000 포트 사용시)
+PORT=3001 bun run dev
+
+# 접속 URL
+# Local: http://localhost:3001
+# Network: http://[your-ip]:3001
+```
+
+### ✅ 성공 시 확인사항
+
+서버가 정상적으로 실행되면 다음과 같은 출력을 볼 수 있습니다:
+
+```bash
+▲ Next.js 15.3.4 (Turbopack)
+- Local:        http://localhost:3001
+- Network:      http://172.30.1.64:3001
+- Environments: .env.local
+
+✓ Starting...
+✓ Compiled middleware in 71ms
+✓ Ready in 707ms
+```
+
+**주요 라우트 확인**:
+- `/` - 메인 페이지
+- `/editor` - 비디오 에디터 페이지  
+- `/api/auth/get-session` - 인증 API
+
+**데이터베이스 테이블 확인**:
+```sql
+-- 생성되는 테이블들
+accounts      | table | admin
+sessions      | table | admin
+users         | table | admin
+verifications | table | admin
+waitlist      | table | admin
 ```
 
 ## 고급 기능 활용
@@ -716,21 +782,77 @@ chrome --max-old-space-size=8192
 ### 개발 환경 문제
 
 ```bash
-# Yarn 설치 오류
-npm install -g yarn
+# 1. 패키지 매니저 오류 (Corepack 관련)
+# 오류: "This project's package.json defines packageManager: yarn@bun@1.2.17"
+corepack enable
+# 또는 직접 Bun 설치
+curl -fsSL https://bun.sh/install | bash
 
-# 의존성 충돌
-yarn cache clean
-rm -rf node_modules
-yarn install
+# 2. 포트 충돌 문제
+# 포트 3000이 사용 중인 경우 (OrbStack, Docker 등)
+lsof -i :3000  # 사용 중인 프로세스 확인
+PORT=3001 bun run dev  # 다른 포트 사용
 
-# 빌드 오류
-# Node.js 버전 확인
-node --version  # 22.16.0 이상 필요
+# 3. 의존성 설치 오류
+# 기존 lock 파일 정리 후 재설치
+rm -f package-lock.json yarn.lock
+bun install
 
-# 데이터베이스 연결 오류
+# 4. Node.js 버전 확인
+node --version  # 16.9+ 필요 (테스트: v24.1.0)
+bun --version   # 1.2.17 확인
+
+# 5. 데이터베이스 연결 오류
 # PostgreSQL 서비스 상태 확인
 brew services list | grep postgresql
+brew services start postgresql@14
+
+# 6. 데이터베이스 권한 문제
+# admin 사용자 재생성
+dropuser admin  # 기존 사용자 삭제 (있는 경우)
+createuser -s admin
+psql -d postgres -c "ALTER USER admin PASSWORD 'admin';"
+
+# 7. 스키마 생성 실패
+# 데이터베이스 재생성
+dropdb opencut
+createdb -O admin opencut
+bun run db:push:local
+```
+
+### macOS 특정 문제
+
+```bash
+# 1. Apple Silicon (M1/M2) 환경
+# Rosetta 없이 네이티브 ARM64 바이너리 사용
+arch -arm64 brew install postgresql@14
+
+# 2. Xcode Command Line Tools 필요
+xcode-select --install
+
+# 3. 환경 변수 PATH 설정
+# ~/.zshrc에 추가
+echo 'export PATH="$HOME/.bun/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+# 4. 방화벽/보안 설정
+# 시스템 설정 > 보안 및 개인정보보호 > 방화벽에서 포트 허용
+```
+
+### 서버 실행 확인
+
+```bash
+# 서버 정상 실행 확인
+curl -I http://localhost:3001
+
+# 성공 시 응답
+# HTTP/1.1 200 OK
+# content-type: text/html; charset=utf-8
+
+# 실패 시 대안
+# 1. 포트 변경: PORT=3002 bun run dev
+# 2. 캐시 정리: bun install --force
+# 3. 프로세스 종료: lsof -ti:3001 | xargs kill -9
 ```
 
 ## 커뮤니티 및 기여
@@ -776,9 +898,29 @@ OpenCut은 단순히 CapCut의 대안이 아닌, 프라이버시와 자유를 �
 ### 다음 단계
 
 1. **OpenCut 체험하기**: [opencut.app](https://opencut.app)에서 바로 시작
-2. **개발 환경 구축**: 로컬에서 개발하며 기여하기
+2. **로컬 개발 환경 구축**: 위의 가이드를 따라 macOS에서 테스트 완료
 3. **커뮤니티 참여**: GitHub에서 다른 개발자들과 소통
 4. **고급 기능 활용**: 플러그인과 API로 확장하기
+
+### 🎯 macOS 테스트 완료 확인사항
+
+**테스트 환경**:
+- macOS darwin 25.0.0 (Apple Silicon)
+- Node.js v24.1.0
+- PostgreSQL 14.18 (Homebrew)
+- Bun 1.2.17
+
+**확인된 기능**:
+- ✅ 데이터베이스 연결 및 스키마 생성 성공
+- ✅ Next.js 15.3.4 (Turbopack) 서버 실행 성공
+- ✅ 주요 라우트 (`/`, `/editor`, `/api/auth/get-session`) 정상 동작
+- ✅ Better Auth 인증 시스템 로드 완료
+- ✅ 개발 서버 핫 리로드 기능 정상
+
+**알려진 제한사항**:
+- Google OAuth 설정 없음 (선택사항)
+- Redis 미설정 (선택사항)
+- 포트 3000 충돌 가능 (3001 포트 사용 권장)
 
 OpenCut과 함께 창의적이고 자유로운 비디오 편집의 새로운 시대를 열어보세요!
 
