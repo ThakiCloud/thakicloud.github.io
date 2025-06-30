@@ -148,7 +148,8 @@ input[type="file"] {
 
 select {
   width: auto;
-  background-color: #fff;
+  background-color: $form-background-color;
+  color: $text-color;
 }
 
 select[multiple],
