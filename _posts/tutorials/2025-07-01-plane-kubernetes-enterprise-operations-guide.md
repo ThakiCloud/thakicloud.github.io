@@ -635,6 +635,7 @@ podDisruptionBudget:
 
 ### 5. 헬퍼 템플릿 (_helpers.tpl)
 
+{% raw %}
 ```yaml
 {{/*
 Expand the name of the chart.
@@ -748,9 +749,11 @@ imagePullSecrets:
 {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 6. API Deployment 템플릿
 
+{% raw %}
 ```yaml
 # templates/api/deployment.yaml
 {{- if .Values.api.enabled }}
@@ -865,9 +868,11 @@ spec:
       {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 7. HPA 템플릿
 
+{% raw %}
 ```yaml
 # templates/api/hpa.yaml
 {{- if and .Values.api.enabled .Values.api.autoscaling.enabled }}
@@ -905,6 +910,7 @@ spec:
   {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 8. Helm 차트 배포 스크립트
 
