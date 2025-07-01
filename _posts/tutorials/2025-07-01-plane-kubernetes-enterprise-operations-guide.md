@@ -2531,6 +2531,7 @@ echo "   Kibana 로그인: admin / your-kibana-password"
 
 ### 3. 알림 시스템 설정
 
+{% raw %}
 ```bash
 #!/bin/bash
 # setup-alerting.sh
@@ -2679,6 +2680,7 @@ EOF
 
 echo "✅ 알림 시스템 설정 완료!"
 ```
+{% endraw %}
 
 ## 엔터프라이즈 보안 강화
 

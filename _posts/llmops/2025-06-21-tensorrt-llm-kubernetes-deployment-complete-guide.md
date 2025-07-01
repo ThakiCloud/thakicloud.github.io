@@ -477,6 +477,7 @@ logging:
 
 ### 3.3 Deployment 템플릿
 
+{% raw %}
 ```yaml
 # helm/tensorrt-llm/templates/deployment.yaml
 apiVersion: apps/v1
@@ -573,9 +574,11 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 ```
+{% endraw %}
 
 ### 3.4 HPA 구성
 
+{% raw %}
 ```yaml
 # helm/tensorrt-llm/templates/hpa.yaml
 {{- if .Values.autoscaling.enabled }}
@@ -611,9 +614,11 @@ spec:
     {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 3.5 ServiceMonitor 구성
 
+{% raw %}
 ```yaml
 # helm/tensorrt-llm/templates/servicemonitor.yaml
 {{- if and .Values.monitoring.enabled .Values.monitoring.serviceMonitor.enabled }}
@@ -633,6 +638,7 @@ spec:
     interval: {{ .Values.monitoring.serviceMonitor.interval }}
 {{- end }}
 ```
+{% endraw %}
 
 ## 단계 4: Kubernetes 클러스터 준비
 

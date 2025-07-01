@@ -138,6 +138,7 @@ docker run -d \
 
 ### 엔티티 추출 에이전트
 
+{% raw %}
 ```python
 # agents/entity_extractor.py
 from crewai import Agent, Task, Crew
@@ -195,6 +196,7 @@ class EntityExtractorAgent:
         result = crew.kickoff()
         return result
 ```
+{% endraw %}
 
 ### 쿼리 분석 에이전트
 

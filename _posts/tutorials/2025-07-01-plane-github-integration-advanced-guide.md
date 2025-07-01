@@ -391,6 +391,7 @@ fi
 
 ### 2. AI 기반 이슈 우선순위 자동 설정
 
+{% raw %}
 ```python
 # priority_ai.py
 import openai
@@ -435,6 +436,7 @@ def auto_prioritize_issues():
             
             print(f"✅ {issue['name']}: {analysis['priority']} ({analysis['reason']})")
 ```
+{% endraw %}
 
 ### 3. Slack 통합 알림 시스템
 

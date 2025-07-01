@@ -923,6 +923,7 @@ spec:
 
 ### 1. Prometheus 모니터링
 
+{% raw %}
 ```yaml
 # k8s/monitoring.yaml
 apiVersion: monitoring.coreos.com/v1
@@ -992,6 +993,7 @@ spec:
         summary: "Dovecot service is down"
         description: "Dovecot has been down for more than 5 minutes"
 ```
+{% endraw %}
 
 ### 2. 로그 집계
 
@@ -1397,6 +1399,7 @@ jobs:
 
 ### 2. 알림 규칙
 
+{% raw %}
 ```yaml
 # k8s/alerting-rules.yaml
 apiVersion: monitoring.coreos.com/v1
@@ -1441,6 +1444,7 @@ spec:
         description: "Mail storage is {{ $value }}% full"
         runbook_url: "https://wiki.company.com/disk-cleanup"
 ```
+{% endraw %}
 
 ## 결론
 

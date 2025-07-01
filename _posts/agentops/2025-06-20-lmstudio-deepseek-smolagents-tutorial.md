@@ -275,6 +275,7 @@ def search_web_content(query: str, max_results: int = 5) -> List[Dict]:
 
 ### 3.2 텍스트 요약 도구 (tools/summarizer.py)
 
+{% raw %}
 ```python
 # tools/summarizer.py
 from smolagents import tool, OpenAIServerModel
@@ -409,6 +410,7 @@ def extract_keywords(text: str, max_keywords: int = 10) -> List[str]:
         words = re.findall(r'\b[가-힣a-zA-Z]{2,}\b', text)
         return list(set(words))[:max_keywords]
 ```
+{% endraw %}
 
 ## 4. 메인 Agent 시스템 (main.py)
 

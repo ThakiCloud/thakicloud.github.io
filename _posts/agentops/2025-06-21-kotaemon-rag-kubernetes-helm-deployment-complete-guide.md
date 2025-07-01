@@ -327,6 +327,7 @@ postgresql:
 
 ### 4. Deployment 템플릿
 
+{% raw %}
 ```yaml
 # templates/deployment.yaml
 apiVersion: apps/v1
@@ -428,9 +429,11 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 ```
+{% endraw %}
 
 ### 5. Service 템플릿
 
+{% raw %}
 ```yaml
 # templates/service.yaml
 apiVersion: v1
@@ -449,9 +452,11 @@ spec:
   selector:
     {{- include "kotaemon.selectorLabels" . | nindent 4 }}
 ```
+{% endraw %}
 
 ### 6. PersistentVolumeClaim 템플릿
 
+{% raw %}
 ```yaml
 # templates/pvc.yaml
 {{- if .Values.persistence.enabled }}
@@ -472,9 +477,11 @@ spec:
   {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ### 7. ChromaDB 배포
 
+{% raw %}
 ```yaml
 # templates/chromadb-deployment.yaml
 {{- if .Values.chromadb.enabled }}
@@ -553,6 +560,7 @@ spec:
 {{- end }}
 {{- end }}
 ```
+{% endraw %}
 
 ## 배포 실행
 
@@ -694,6 +702,7 @@ kubectl logs -f deployment/kotaemon -n kotaemon
 
 ### 1. 헬스 체크 설정
 
+{% raw %}
 ```yaml
 # templates/healthcheck.yaml
 apiVersion: v1
@@ -732,6 +741,7 @@ data:
         else:
             sys.exit(1)
 ```
+{% endraw %}
 
 ### 2. 모니터링 대시보드
 
