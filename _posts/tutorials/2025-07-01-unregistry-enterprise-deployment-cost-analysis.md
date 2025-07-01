@@ -218,7 +218,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
         
       - name: Build image
-        run: docker build -t myapp:${{ github.sha }} .
+        run: docker build -t myapp:$`github.sha` .
         
       - name: Install docker-pussh
         run: |
@@ -230,7 +230,7 @@ jobs:
         run: |
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > deploy_key
           chmod 600 deploy_key
-          docker-pussh myapp:${{ github.sha }} deploy@staging-server -i deploy_key
+          docker-pussh myapp:$`github.sha` deploy@staging-server -i deploy_key
 ```
 
 ### 개발 워크플로우 최적화
@@ -607,6 +607,7 @@ tail_logs myapp dev-server
 
 ### 기존 Docker Hub에서 Unregistry로 전환
 
+{% raw %}
 ```bash
 #!/bin/bash
 # migration-script.sh
@@ -622,6 +623,7 @@ done < current_images.txt
 
 echo "Migration completed!"
 ```
+{% endraw %}
 
 ### CI/CD 파이프라인 업데이트
 
@@ -629,13 +631,13 @@ echo "Migration completed!"
 # Before: Docker Hub 배포
 - name: Push to Docker Hub
   run: |
-    docker tag myapp:${{ github.sha }} myuser/myapp:${{ github.sha }}
-    docker push myuser/myapp:${{ github.sha }}
+    docker tag myapp:$`github.sha` myuser/myapp:$`github.sha`
+    docker push myuser/myapp:$`github.sha`
 
 # After: Unregistry 배포
 - name: Deploy with Unregistry
   run: |
-    docker pussh myapp:${{ github.sha }} deploy-server
+    docker pussh myapp:$`github.sha` deploy-server
 ```
 
 ## 운영 가이드
@@ -816,15 +818,15 @@ calculate_roi 800 50
 # 기존 (GitHub Actions)
 - name: Push to Docker Hub
   run: |
-    docker tag myapp:${{ github.sha }} user/myapp:${{ github.sha }}
-    docker push user/myapp:${{ github.sha }}
+    docker tag myapp:$`github.sha` user/myapp:$`github.sha`
+    docker push user/myapp:$`github.sha`
 
 # 변경 후
 - name: Deploy with Unregistry  
   run: |
     echo "${{ secrets.DEPLOY_SSH_KEY }}" > /tmp/deploy_key
     chmod 600 /tmp/deploy_key
-    docker pussh myapp:${{ github.sha }} deploy@server -i /tmp/deploy_key
+    docker pussh myapp:$`github.sha` deploy@server -i /tmp/deploy_key
 ```
 
 #### Q2: 보안은 어떻게 보장하나요?
