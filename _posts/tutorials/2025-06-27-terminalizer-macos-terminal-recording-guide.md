@@ -77,7 +77,7 @@ terminalizer --version
 terminalizer init
 ```
 
-이 명령은 `~/config/terminalizer` 디렉토리를 생성하고 기본 설정 파일을 복사합니다.
+이 명령은 `~/.config/terminalizer` 디렉토리를 생성하고 기본 설정 파일을 복사합니다.
 
 ### 기본 녹화 워크플로우
 
