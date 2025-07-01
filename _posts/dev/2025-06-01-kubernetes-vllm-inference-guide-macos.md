@@ -1174,20 +1174,20 @@ jobs:
       run: |
         docker buildx build \
           --platform linux/amd64 \
-          -t vllm-cpu-custom:${{ github.sha }} \
+          -t vllm-cpu-custom:$`github.sha` \
           --load .
         
     - name: Test DeepSeek model compatibility
       run: |
         docker run --rm --platform linux/amd64 \
-          vllm-cpu-custom:${{ github.sha }} \
+          vllm-cpu-custom:$`github.sha` \
           --model bartowski/deepseek-ai_DeepSeek-R1-0528-Qwen3-8B-GGUF \
           --dry-run
         
     - name: Deploy to Kubernetes
       run: |
         kubectl set image deployment/vllm-inference \
-          vllm=vllm-cpu-custom:${{ github.sha }} \
+          vllm=vllm-cpu-custom:$`github.sha` \
           -n vllm-inference
 ```
 
@@ -1343,20 +1343,20 @@ jobs:
       run: |
         docker buildx build \
           --platform linux/amd64 \
-          -t vllm-cpu-custom:${{ github.sha }} \
+          -t vllm-cpu-custom:$`github.sha` \
           --load .
         
     - name: Test DeepSeek model compatibility
       run: |
         docker run --rm --platform linux/amd64 \
-          vllm-cpu-custom:${{ github.sha }} \
+          vllm-cpu-custom:$`github.sha` \
           --model bartowski/deepseek-ai_DeepSeek-R1-0528-Qwen3-8B-GGUF \
           --dry-run
         
     - name: Deploy to Kubernetes
       run: |
         kubectl set image deployment/vllm-inference \
-          vllm=vllm-cpu-custom:${{ github.sha }} \
+          vllm=vllm-cpu-custom:$`github.sha` \
           -n vllm-inference
 ```
 

@@ -36,7 +36,7 @@ reading_time: true
 
 ## 서론
 
-[이전 글]({% post_url 2025-07-01-plane-project-management-complete-guide %})에서 Plane의 기본 설치와 설정을 다뤘다면, 이번에는 **실무 활용의 핵심**인 GitHub 연동과 API 자동화에 집중하겠습니다. 
+[이전 글](#)에서 Plane의 기본 설치와 설정을 다뤘다면, 이번에는 **실무 활용의 핵심**인 GitHub 연동과 API 자동화에 집중하겠습니다. 
 
 이 가이드에서는 단순한 연동을 넘어서 **개발 생산성을 극대화**하는 창의적인 방법들을 다룹니다:
 
@@ -406,7 +406,7 @@ def analyze_issue_priority(title, description):
     제목: {title}
     설명: {description}
     
-    JSON 형태로 응답해주세요: {{"priority": "medium", "reason": "이유"}}
+    JSON 형태로 응답해주세요: `"priority": "medium", "reason": "이유"`
     """
     
     response = openai.ChatCompletion.create(
@@ -918,7 +918,7 @@ EOF
 이 글은 **Plane 완전 정복 시리즈**의 두 번째 글입니다:
 
 ### 시리즈 목록
-1. **[Plane 프로젝트 관리 도구 완전 가이드]({% post_url 2025-07-01-plane-project-management-complete-guide %})** - 기본 설치와 설정
+1. **[Plane 프로젝트 관리 도구 완전 가이드](#)** - 기본 설치와 설정
 2. **Plane GitHub 연동 완전 정복** *(현재 글)* - API 자동화와 워크플로우 최적화  
 3. **Plane 고급 커스터마이징과 확장** *(예정)* - 플러그인 개발과 고급 설정
 
@@ -961,4 +961,4 @@ slack_notify "🎉 Plane 자동화가 설정되었습니다! 이제 더 스마�
 **🔗 참고 자료**
 - [Plane API 문서](https://docs.plane.so/api-reference)
 - [GitHub Webhooks 가이드](https://docs.github.com/en/developers/webhooks-and-events/webhooks)
-- [첫 번째 시리즈: Plane 기본 가이드]({% post_url 2025-07-01-plane-project-management-complete-guide %}) 
+- [첫 번째 시리즈: Plane 기본 가이드](#) 

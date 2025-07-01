@@ -446,19 +446,19 @@ jobs:
     
     - name: Build ModelKit
       run: |
-        kit pack . -t ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:${{ github.sha }}
-        kit tag ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:${{ github.sha }} \
-               ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:latest
+        kit pack . -t ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:$`github.sha`
+        kit tag ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:$`github.sha` \
+               ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:latest
     
     - name: Push to Registry
       run: |
         echo ${{ secrets.REGISTRY_PASSWORD }} | kit login ${{ secrets.REGISTRY_URL }} -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
-        kit push ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:${{ github.sha }}
-        kit push ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:latest
+        kit push ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:$`github.sha`
+        kit push ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:latest
     
     - name: Deploy to Staging
       run: |
-        kit deploy create-k8s ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:${{ github.sha }} \
+        kit deploy create-k8s ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:$`github.sha` \
           --output k8s-staging.yaml \
           --namespace ml-staging
         kubectl apply -f k8s-staging.yaml
@@ -470,7 +470,7 @@ jobs:
     - name: Deploy to Production
       if: success()
       run: |
-        kit deploy create-k8s ${{ secrets.REGISTRY_URL }}/ml-models/${{ github.repository }}:latest \
+        kit deploy create-k8s ${{ secrets.REGISTRY_URL }}/ml-models/$`github.repository`:latest \
           --output k8s-production.yaml \
           --namespace ml-production \
           --replicas 5

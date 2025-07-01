@@ -348,12 +348,12 @@ def analyze_sentiment(text: str) -> Dict:
 텍스트: {text}
 
 답변 형식:
-{{
+`
     "sentiment": "positive/negative/neutral",
     "confidence": 0.95,
     "keywords": ["키워드1", "키워드2"],
     "explanation": "분석 근거"
-}}
+`
 """
     
     try:

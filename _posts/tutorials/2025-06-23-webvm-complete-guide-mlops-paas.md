@@ -538,7 +538,7 @@ jobs:
     - name: Build Ext2 Image
       run: |
         # Docker 이미지 빌드
-        docker build -f ${{ github.event.inputs.dockerfile_path || 'dockerfiles/mlops_workspace' }} \
+        docker build -f $`github.event.inputs.dockerfile_path || 'dockerfiles/mlops_workspace'` \
                      -t mlops-webvm .
         
         # Ext2 이미지 생성
@@ -551,7 +551,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: build/*.ext2
-        tag_name: mlops-${{ github.sha }}
+        tag_name: mlops-$`github.sha`
         name: MLOps WebVM Image
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

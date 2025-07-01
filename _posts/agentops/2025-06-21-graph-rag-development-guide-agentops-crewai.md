@@ -176,10 +176,10 @@ class EntityExtractorAgent:
             다음 형식으로 결과를 반환하세요:
             {{
                 "entities": [
-                    {{"name": "엔티티명", "type": "PERSON|ORGANIZATION|CONCEPT|DATE", "description": "설명"}}
+                    `"name": "엔티티명", "type": "PERSON|ORGANIZATION|CONCEPT|DATE", "description": "설명"`
                 ],
                 "relationships": [
-                    {{"source": "엔티티1", "target": "엔티티2", "relationship": "관계타입", "description": "관계설명"}}
+                    `"source": "엔티티1", "target": "엔티티2", "relationship": "관계타입", "description": "관계설명"`
                 ]
             }}
             """,

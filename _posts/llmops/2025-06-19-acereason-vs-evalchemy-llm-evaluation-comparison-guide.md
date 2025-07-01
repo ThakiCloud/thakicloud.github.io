@@ -334,6 +334,7 @@ if len(variable_values) > 0:
 
 #### 1. 프롬프트 템플릿에서의 Think 태그 생성
 
+{% raw %}
 ```python
 def preprocess_aime(data_file, model_type):
     if model_type == "qwen":
@@ -343,6 +344,7 @@ def preprocess_aime(data_file, model_type):
 {question}\nPlease reason step by step, and put your final answer within \\boxed{{}}.
 <think>\n""".format(question=final_question)
 ```
+{% endraw %}
 
 #### 2. LiveCodeBench에서의 Think 태그 처리
 

@@ -1158,7 +1158,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/vllm-inference
+  IMAGE_NAME: $`github.repository`/vllm-inference
 
 jobs:
   test:
@@ -1206,7 +1206,7 @@ jobs:
       uses: docker/login-action@v3
       with:
         registry: ${{ env.REGISTRY }}
-        username: ${{ github.actor }}
+        username: $`github.actor`
         password: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Extract metadata
@@ -1245,7 +1245,7 @@ jobs:
         helm upgrade --install vllm-dev vllm-inference/ \
           --namespace vllm-dev \
           --create-namespace \
-          --set image.tag=${{ github.sha }} \
+          --set image.tag=$`github.sha` \
           -f values-dev.yaml
 
   deploy-prod:
@@ -1266,7 +1266,7 @@ jobs:
         helm upgrade --install vllm-prod vllm-inference/ \
           --namespace vllm-system \
           --create-namespace \
-          --set image.tag=${{ github.sha }} \
+          --set image.tag=$`github.sha` \
           -f values-production.yaml
 ```
 

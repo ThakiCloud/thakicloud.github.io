@@ -20,7 +20,7 @@ toc_label: "목차"
 
 ## 개요
 
-본 가이드는 [Unsloth+TRL 한국어 LLM 학습 가이드 - 1편]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})의 연장선으로, 쿠버네티스를 활용하여 한국어 특화 LLM 학습 과정을 완전 자동화하는 방법을 다룹니다.
+본 가이드는 [Unsloth+TRL 한국어 LLM 학습 가이드 - 1편](#)의 연장선으로, 쿠버네티스를 활용하여 한국어 특화 LLM 학습 과정을 완전 자동화하는 방법을 다룹니다.
 
 **학습 목표**:
 
@@ -1148,7 +1148,7 @@ class ExperimentTracker:
 
 이 시리즈의 다른 글 보기:
 
-- [1편: Unsloth를 활용한 한국어 특화 LLM 학습 완전 가이드]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})
+- [1편: Unsloth를 활용한 한국어 특화 LLM 학습 완전 가이드](#)
 - 2편: Unsloth 한국어 LLM 학습 자동화 - 쿠버네티스 파이프라인 구축 (현재 글)
 
 이러한 자동화 시스템을 통해 한국어 특화 LLM 개발의 생산성과 품질을 크게 향상시킬 수 있습니다.

@@ -69,10 +69,10 @@ JSON 형식으로 반환:
 {% raw %}
 {{
   "queries": [
-    {{
+    `
       "rationale": "쿼리 생성 이유",
       "query": "실제 검색어"
-    }}
+    `
   ]
 }}
 {% endraw %}
@@ -81,14 +81,14 @@ JSON 형식으로 반환:
 {% raw %}
 {{
   "queries": [
-    {{
+    `
       "rationale": "최신 성능 벤치마크 확인",
       "query": "GPT-4o vs Claude 3.5 performance benchmark 2025"
-    }},
-    {{
+    `,
+    `
       "rationale": "실제 구현 사례 탐색",
       "query": "GPT-4o production implementation case studies"
-    }}
+    `
   ]
 }}
 {% endraw %}

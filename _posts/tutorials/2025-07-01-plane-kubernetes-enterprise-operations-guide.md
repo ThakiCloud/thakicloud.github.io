@@ -43,7 +43,7 @@ reading_time: true
 
 ## 서론
 
-[이전 글]({% post_url 2025-07-01-plane-kubernetes-production-deployment-guide %})에서 OrbStack 개발 환경과 기본 쿠버네티스 배포를 다뤘다면, 이번에는 **실제 엔터프라이즈 운영**에 필요한 모든 것을 다루겠습니다.
+[이전 글](#)에서 OrbStack 개발 환경과 기본 쿠버네티스 배포를 다뤘다면, 이번에는 **실제 엔터프라이즈 운영**에 필요한 모든 것을 다루겠습니다.
 
 이 가이드는 **진짜 현업에서 사용할 수 있는** 완전한 운영 매뉴얼입니다:
 
@@ -3128,7 +3128,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/plane
+  IMAGE_NAME: $`github.repository`/plane
 
 jobs:
   test:
@@ -3218,7 +3218,7 @@ jobs:
       uses: docker/login-action@v3
       with:
         registry: ${{ env.REGISTRY }}
-        username: ${{ github.actor }}
+        username: $`github.actor`
         password: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Extract metadata
@@ -3264,7 +3264,7 @@ jobs:
                   "parameters": [
                     {
                       "name": "plane.image.tag",
-                      "value": "develop-${{ github.sha }}"
+                      "value": "develop-$`github.sha`"
                     }
                   ]
                 }
@@ -3292,7 +3292,7 @@ jobs:
                   "parameters": [
                     {
                       "name": "plane.image.tag",
-                      "value": "main-${{ github.sha }}"
+                      "value": "main-$`github.sha`"
                     }
                   ]
                 }
@@ -3320,7 +3320,7 @@ jobs:
                   "parameters": [
                     {
                       "name": "plane.image.tag",
-                      "value": "${{ github.ref_name }}"
+                      "value": "$`github.ref_name`"
                     }
                   ]
                 }
@@ -4027,9 +4027,9 @@ echo "체크리스트 완료: $(date)"
 
 ### 📚 시리즈 연결
 이 시리즈의 다른 글들:
-- **1편**: [Plane 프로젝트 관리 완전 가이드]({% post_url 2025-07-01-plane-project-management-complete-guide %})
-- **2편**: [Plane GitHub 통합 고급 가이드]({% post_url 2025-07-01-plane-github-integration-advanced-guide %})
-- **3편**: [Plane 쿠버네티스 운영 배포 가이드]({% post_url 2025-07-01-plane-kubernetes-production-deployment-guide %})
+- **1편**: [Plane 프로젝트 관리 완전 가이드](#)
+- **2편**: [Plane GitHub 통합 고급 가이드](#)
+- **3편**: [Plane 쿠버네티스 운영 배포 가이드](#)
 - **4편**: 현재 글 - Plane 엔터프라이즈 쿠버네티스 운영 가이드
 
 ### 💡 마지막 팁

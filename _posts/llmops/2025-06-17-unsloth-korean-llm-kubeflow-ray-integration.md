@@ -1617,10 +1617,10 @@ if __name__ == "__main__":
 
 이 시리즈의 다른 글 보기:
 
-- [1편: Unsloth를 활용한 한국어 특화 LLM 학습 완전 가이드]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})
-- [2편: 쿠버네티스 파이프라인 구축]({% post_url 2025-06-17-unsloth-korean-llm-kubernetes-automation %})
-- [3편: Kubeflow 및 MLOps 프레임워크 활용]({% post_url 2025-06-17-unsloth-korean-llm-kubeflow-automation %})
-- [4편: Ray와 KubeRay를 활용한 대규모 분산 학습]({% post_url 2025-06-17-unsloth-korean-llm-ray-kuberay-automation %})
+- [1편: Unsloth를 활용한 한국어 특화 LLM 학습 완전 가이드](#)
+- [2편: 쿠버네티스 파이프라인 구축](#)
+- [3편: Kubeflow 및 MLOps 프레임워크 활용](#)
+- [4편: Ray와 KubeRay를 활용한 대규모 분산 학습](#)
 - 5편: Kubeflow + Ray 통합 엔터프라이즈 MLOps 시스템 (현재 글)
 
 Kubeflow와 Ray의 강력한 조합으로 한국어 특화 LLM 개발의 새로운 표준을 경험해보세요! 🚀
@@ -1629,7 +1629,7 @@ Kubeflow와 Ray의 강력한 조합으로 한국어 특화 LLM 개발의 새로�
 
 ## 개요
 
-본 가이드는 [Unsloth+TRL 한국어 LLM 학습 시리즈]({% post_url 2025-06-17-unsloth-korean-llm-training-guide %})의 5편으로, Kubeflow Pipelines를 워크플로 오케스트레이터로, Ray를 스텝 내부의 분산 실행 엔진으로 활용하는 완전한 엔터프라이즈 MLOps 시스템을 구축합니다.
+본 가이드는 [Unsloth+TRL 한국어 LLM 학습 시리즈](#)의 5편으로, Kubeflow Pipelines를 워크플로 오케스트레이터로, Ray를 스텝 내부의 분산 실행 엔진으로 활용하는 완전한 엔터프라이즈 MLOps 시스템을 구축합니다.
 
 **아키텍처 개요**:
 

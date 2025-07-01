@@ -37,7 +37,7 @@ reading_time: true
 
 ## 서론
 
-[첫 번째 글]({% post_url 2025-07-01-plane-project-management-complete-guide %})에서 Plane의 기본 설치를, [두 번째 글]({% post_url 2025-07-01-plane-github-integration-advanced-guide %})에서 GitHub 연동과 API 자동화를 다뤘다면, 이번에는 **엔터프라이즈급 운영**을 위한 쿠버네티스 배포에 집중하겠습니다.
+[첫 번째 글](#)에서 Plane의 기본 설치를, [두 번째 글](#)에서 GitHub 연동과 API 자동화를 다뤘다면, 이번에는 **엔터프라이즈급 운영**을 위한 쿠버네티스 배포에 집중하겠습니다.
 
 이 가이드에서는 **개발부터 운영까지** 전체 라이프사이클을 다룹니다:
 

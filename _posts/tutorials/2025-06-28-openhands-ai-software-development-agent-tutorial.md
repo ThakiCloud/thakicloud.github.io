@@ -561,7 +561,7 @@ docker run --cpus="2.0" ...
     python -m openhands.core.main \
       --task "이 PR을 리뷰하고 개선점을 제안해주세요" \
       --github-token ${{ secrets.GITHUB_TOKEN }} \
-      --pr-number ${{ github.event.number }}
+      --pr-number $`github.event.number`
 ```
 
 ### 레거시 코드 마이그레이션

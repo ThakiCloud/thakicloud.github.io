@@ -65,12 +65,12 @@ jobs:
     
     - name: Build Docker Image
       run: |
-        docker build -t myapp:${{ github.sha }} .
-        docker push myregistry/myapp:${{ github.sha }}
+        docker build -t myapp:$`github.sha` .
+        docker push myregistry/myapp:$`github.sha`
     
     - name: Deploy to Kubernetes
       run: |
-        kubectl set image deployment/myapp myapp=myregistry/myapp:${{ github.sha }}
+        kubectl set image deployment/myapp myapp=myregistry/myapp:$`github.sha`
         kubectl rollout status deployment/myapp
 ```
 
@@ -258,15 +258,15 @@ jobs:
     steps:
     - name: Build and Push Image
       run: |
-        docker build -t myapp:${{ github.sha }} .
-        docker push myapp:${{ github.sha }}
+        docker build -t myapp:$`github.sha` .
+        docker push myapp:$`github.sha`
     
     - name: Update Manifest
       run: |
         git clone https://github.com/myorg/myapp-config
         cd myapp-config
-        sed -i "s|myapp:.*|myapp:${{ github.sha }}|" k8s/deployment.yaml
-        git commit -am "Update image to ${{ github.sha }}"
+        sed -i "s|myapp:.*|myapp:$`github.sha`|" k8s/deployment.yaml
+        git commit -am "Update image to $`github.sha`"
         git push
 ```
 
