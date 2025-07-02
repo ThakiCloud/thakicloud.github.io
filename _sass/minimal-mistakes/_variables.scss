@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -76,7 +78,7 @@ $warning-color: #ff9800 !default;
 $danger-color: #f44336 !default;
 $info-color: #2196f3 !default;
 $focus-color: $primary-color !default;
-$active-color: mix(#000, $primary-color, 40%) !default;
+$active-color: color.mix(#000, $primary-color, 40%) !default;
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: #212121 !default;
@@ -115,8 +117,8 @@ $link-color: #64b5f6 !default;
 $link-color-hover: #90caf9 !default;
 $link-color-visited: #ce93d8 !default;
 $masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: mix(#fff, $primary-color, 25%) !default;
-$navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
+$masthead-link-color-hover: color.mix(#fff, $primary-color, 25%) !default;
+$navicon-link-color-hover: color.mix(#fff, $primary-color, 75%) !default;
 
 /* notices */
 $notice-background-mix: 80% !default;
