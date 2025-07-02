@@ -1,6 +1,3 @@
-@use "sass:color";
-@use "sass:math";
-
 /* ==========================================================================
    MIXINS
    ========================================================================== */
@@ -18,7 +15,7 @@
    ========================================================================== */
 
 @function em($target, $context: $doc-font-size) {
-  @return math.div($target, $context) * 1em;
+  @return ($target / $context) * 1em;
 }
 
 
@@ -64,11 +61,11 @@
   $color,
   $threshold: $yiq-contrasted-threshold
 ) {
-  $red: color.channel($color, "red", $space: rgb);
-  $green: color.channel($color, "green", $space: rgb);
-  $blue: color.channel($color, "blue", $space: rgb);
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
 
-  $yiq: math.div(($red*299)+($green*587)+($blue*114), 1000);
+  $yiq: (($red*299)+($green*587)+($blue*114)) / 1000;
 
   @if $yiq-debug { @debug $yiq, $threshold; }
 

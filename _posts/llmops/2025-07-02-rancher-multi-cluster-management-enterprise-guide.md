@@ -21,10 +21,6 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-header:
-  teaser: "/assets/images/thumbnails/post-thumbnail.jpg"
-  overlay_image: "/assets/images/headers/post-header.jpg"
-  overlay_filter: 0.5
 canonical_url: "https://thakicloud.github.io/llmops/rancher-multi-cluster-management-enterprise-guide/"
 reading_time: true
 ---
@@ -717,7 +713,7 @@ spec:
         severity: critical
       annotations:
         summary: "클러스터 노드 다운"
-        description: "{{ $labels.instance }} 노드가 5분 이상 응답하지 않습니다."
+        description: "{% raw %}{{ $labels.instance }}{% endraw %} 노드가 5분 이상 응답하지 않습니다."
 ```
 
 ## 문제 해결 및 유지보수
@@ -855,14 +851,14 @@ apiVersion: v1
 kind: ResourceQuota
 metadata:
   name: project-quota
-  namespace: "{{ .Project.Name }}"
+  namespace: "{% raw %}{{ .Project.Name }}{% endraw %}"
 spec:
   hard:
-    requests.cpu: "{{ .Project.CpuQuota }}"
-    requests.memory: "{{ .Project.MemoryQuota }}"
-    limits.cpu: "{{ .Project.CpuLimit }}"
-    limits.memory: "{{ .Project.MemoryLimit }}"
-    count/pods: "{{ .Project.PodLimit }}"
+    requests.cpu: "{% raw %}{{ .Project.CpuQuota }}{% endraw %}"
+    requests.memory: "{% raw %}{{ .Project.MemoryQuota }}{% endraw %}"
+    limits.cpu: "{% raw %}{{ .Project.CpuLimit }}{% endraw %}"
+    limits.memory: "{% raw %}{{ .Project.MemoryLimit }}{% endraw %}"
+    count/pods: "{% raw %}{{ .Project.PodLimit }}{% endraw %}"
 ```
 
 ## 미래 전망 및 로드맵

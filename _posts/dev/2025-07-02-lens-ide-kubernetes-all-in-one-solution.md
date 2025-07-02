@@ -21,10 +21,6 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-header:
-  teaser: "/assets/images/thumbnails/post-thumbnail.jpg"
-  overlay_image: "/assets/images/headers/post-header.jpg"
-  overlay_filter: 0.5
 canonical_url: "https://thakicloud.github.io/dev/lens-ide-kubernetes-all-in-one-solution/"
 reading_time: true
 ---
