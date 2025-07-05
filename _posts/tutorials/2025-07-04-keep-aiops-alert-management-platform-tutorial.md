@@ -135,6 +135,7 @@ Keep은 100개 이상의 provider를 지원하여 다양한 도구와 통합할 
 ### Sentry 알림을 Jira 티켓으로 변환
 
 ```yaml
+{% raw %}
 workflow:
   id: sentry-to-jira
   description: Sentry 크리티컬 알림을 Jira 티켓으로 생성
@@ -167,6 +168,7 @@ workflow:
             
             ```json
             {{ alert | tojson }}
+{% endraw %}
             ```
           enrich_alert:
             - key: ticket_id
@@ -178,6 +180,7 @@ workflow:
 ### 복합 워크플로우: 알림 → Slack + 자동 복구
 
 ```yaml
+{% raw %}
 workflow:
   id: disk-space-automation
   description: 디스크 공간 부족 시 자동 대응
@@ -209,6 +212,7 @@ workflow:
             **사용률**: {{ alert.usage }}%
             
             **현재 상태**:
+{% endraw %}
             ```
             {{ steps.check-disk-usage.results.stdout }}
             ```
@@ -341,6 +345,7 @@ EOF
 ### Slack Provider 설정
 
 ```yaml
+{% raw %}
 # providers.yaml
 providers:
   slack-ops:
@@ -349,11 +354,13 @@ providers:
       webhook_url: "{{ env.SLACK_WEBHOOK_URL }}"
       bot_token: "{{ env.SLACK_BOT_TOKEN }}"
       signing_secret: "{{ env.SLACK_SIGNING_SECRET }}"
+{% endraw %}
 ```
 
 ### Jira Provider 설정
 
 ```yaml
+{% raw %}
 providers:
   jira:
     type: jira
@@ -363,11 +370,13 @@ providers:
       password: "{{ env.JIRA_PASSWORD }}"
       # 또는 API 토큰 사용
       api_token: "{{ env.JIRA_API_TOKEN }}"
+{% endraw %}
 ```
 
 ### Prometheus Provider 설정
 
 ```yaml
+{% raw %}
 providers:
   prometheus:
     type: prometheus
@@ -375,6 +384,7 @@ providers:
       url: "{{ env.PROMETHEUS_URL }}"
       username: "{{ env.PROMETHEUS_USERNAME }}"
       password: "{{ env.PROMETHEUS_PASSWORD }}"
+{% endraw %}
 ```
 
 ## 실무 활용 사례
@@ -382,6 +392,7 @@ providers:
 ### 1. 인시던트 대응 자동화
 
 ```yaml
+{% raw %}
 workflow:
   id: incident-response
   description: 인시던트 발생 시 자동 대응 워크플로우
@@ -437,11 +448,13 @@ workflow:
           namespace: "{{ alert.namespace }}"
           deployment: "{{ alert.service }}"
           action: "rollback"
+{% endraw %}
 ```
 
 ### 2. 성능 모니터링 및 자동 스케일링
 
 ```yaml
+{% raw %}
 workflow:
   id: auto-scaling
   description: CPU 사용률 기반 자동 스케일링
@@ -503,11 +516,13 @@ workflow:
             **이전 replica**: {{ steps.get-current-replicas.results.replicas }}
             **새 replica**: {{ steps.calculate-new-replicas.results.new_replicas }}
             **CPU 사용률**: {{ alert.usage }}%
+{% endraw %}
 ```
 
 ### 3. 로그 분석 및 이상 탐지
 
 ```yaml
+{% raw %}
 workflow:
   id: log-anomaly-detection
   description: 로그 패턴 분석을 통한 이상 탐지
@@ -589,6 +604,7 @@ workflow:
             자동 로그 분석 결과 다음과 같은 이상 패턴들이 감지되었습니다:
             
             {{ steps.analyze-patterns.results | tojson }}
+{% endraw %}
 ```
 
 ## Enterprise 기능 및 보안 설정
@@ -598,6 +614,7 @@ workflow:
 #### SSO (Single Sign-On) 설정
 
 ```yaml
+{% raw %}
 # config/auth.yaml
 auth:
   providers:
@@ -616,6 +633,7 @@ auth:
         client_secret: "{{ env.OIDC_CLIENT_SECRET }}"
         discovery_url: "https://your-provider.com/.well-known/openid-configuration"
         scopes: ["openid", "profile", "email"]
+{% endraw %}
 ```
 
 #### RBAC (Role-Based Access Control)
@@ -779,6 +797,7 @@ spec:
 ### 조건부 분기 처리
 
 ```yaml
+{% raw %}
 workflow:
   id: conditional-escalation
   description: 알림 심각도에 따른 조건부 에스컬레이션
@@ -824,11 +843,13 @@ workflow:
             - Service: {{ alert.service }}
             - Duration: {{ alert.duration }}s
             - Message: {{ alert.message }}
+{% endraw %}
 ```
 
 ### 루프 처리 및 배치 작업
 
 ```yaml
+{% raw %}
 workflow:
   id: batch-server-health-check
   description: 여러 서버의 상태를 배치로 확인
@@ -910,11 +931,13 @@ workflow:
             - {{ server.host }}: {{ server.error }}
             {% endfor %}
             {% endif %}
+{% endraw %}
 ```
 
 ### 다중 환경 관리
 
 ```yaml
+{% raw %}
 # workflows/multi-env-deployment.yaml
 workflow:
   id: multi-env-deployment
@@ -1015,6 +1038,7 @@ workflow:
             {% endif %}
             
             자세한 로그를 확인하고 수동으로 롤백을 진행하세요.
+{% endraw %}
 ```
 
 ## 모범 사례 및 최적화
@@ -1024,6 +1048,7 @@ workflow:
 #### 워크플로우 최적화
 
 ```yaml
+{% raw %}
 # Best practices for workflow optimization
 workflow:
   id: optimized-workflow
@@ -1064,6 +1089,7 @@ workflow:
         type: bash
         with:
           command: "pg_stat_activity analysis script"
+{% endraw %}
 ```
 
 #### 리소스 관리
@@ -1102,6 +1128,7 @@ services:
 #### 시크릿 로테이션
 
 ```yaml
+{% raw %}
 workflow:
   id: secret-rotation
   description: 주기적 시크릿 로테이션
@@ -1151,6 +1178,7 @@ workflow:
             {% for secret in steps.rotate-api-keys.results.keys() %}
             - {{ secret }}
             {% endfor %}
+{% endraw %}
 ```
 
 ## 트러블슈팅 가이드
@@ -1198,6 +1226,7 @@ test_provider("jira", {"url": "https://company.atlassian.net", "username": "..."
 #### 3. 성능 문제 진단
 
 ```yaml
+{% raw %}
 # 성능 모니터링 워크플로우
 workflow:
   id: performance-monitoring
@@ -1230,6 +1259,7 @@ workflow:
             **평균 실행 시간**: {{ steps.check-metrics.results.keep_workflow_execution_duration_seconds.value }}초
             **메모리 사용량**: {{ steps.check-metrics.results.keep_memory_usage_bytes.value | filesizeformat }}
             **활성 워크플로우**: {{ steps.check-metrics.results.keep_active_workflows.value }}
+{% endraw %}
 ```
 
 ## 결론

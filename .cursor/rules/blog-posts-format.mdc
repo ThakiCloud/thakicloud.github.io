@@ -230,12 +230,34 @@ blogdir
 - [ ] 개발환경 버전을 명시했는가?
 - [ ] zshrc alias 가이드를 제공했는가?
 
-## 10. 개선 사항
-### 원본 대비 개선점
-1. **구조화된 가이드**: 단계별로 명확하게 구분
-2. **자동화 스크립트**: 반복 작업 자동화
-3. **품질 체크리스트**: 누락 방지
-4. **명확한 규칙**: 각 요소별 세부 기준 제시
-5. **실용적인 aliases**: 자주 사용하는 명령어 단축
-6. **에러 처리**: 스크립트에 유효성 검사 포함
-7. **확장 가능성**: 새로운 카테고리나 기능 추가 용이
+## 10. 실제 글 완료 후에 로컬 테스트 해보고 문제 해결하기
+
+### Ruby Gem & Bundler
+```sh
+gem install bundler
+bundle install
+```
+---
+
+### Jekyll Doctor (설정 점검)
+```sh
+bundle exec jekyll doctor
+```
+
+### Jekyll Build (프로덕션 빌드)
+```sh
+JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
+```
+- 빌드 결과는 `_site/` 폴더에 생성됩니다.
+
+---
+
+### 마크다운 문법 검사 (Markdown Lint)
+
+```sh
+markdownlint '_posts/**/*.md' '_pages/**/*.md' 'README.md' --config .markdownlint.json
+```
+- `.markdownlint.json`이 없다면 워크플로우의 설정을 참고해 생성하세요.
+
+---
+
