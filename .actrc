@@ -1,0 +1,12 @@
+# Docker 이미지 설정 (macOS ARM64 호환)
+-P ubuntu-latest=catthehacker/ubuntu:act-latest
+-P ubuntu-22.04=catthehacker/ubuntu:act-22.04
+-P ubuntu-20.04=catthehacker/ubuntu:act-20.04
+
+# 환경 변수 파일 지정
+--env-file .env.local
+
+# 워크플로우 실행 옵션
+--container-architecture linux/amd64
+--verbose
+--rm

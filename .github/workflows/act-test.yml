@@ -1,0 +1,44 @@
+name: Act Local Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  simple-test:
+    name: 🧪 Simple Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📋 Show environment info
+        run: |
+          echo "🚀 Act 로컬 테스트 실행 중..."
+          echo "OS: $(uname -a)"
+          echo "User: $(whoami)"
+          echo "Date: $(date)"
+          echo "Current directory: $(pwd)"
+          echo "Files in current directory:"
+          ls -la
+          
+      - name: 🔍 Environment variables
+        run: |
+          echo "📝 GitHub 환경 변수:"
+          echo "GITHUB_ACTIONS: $GITHUB_ACTIONS"
+          echo "RUNNER_OS: $RUNNER_OS"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+          echo "GITHUB_ACTOR: $GITHUB_ACTOR"
+          echo "GITHUB_REF: $GITHUB_REF"
+          
+      - name: 🧪 Basic tests
+        run: |
+          echo "🔧 기본 도구 확인:"
+          which bash || echo "bash not found"
+          which git || echo "git not found"
+          which curl || echo "curl not found"
+          which wget || echo "wget not found"
+          
+      - name: ✅ Success message
+        run: |
+          echo "🎉 Act 로컬 테스트 성공!"
+          echo "GitHub Actions가 로컬에서 정상적으로 실행되었습니다." 

@@ -87,6 +87,21 @@ reading_time: true
 ⏱️ **예상 읽기 시간**: X분
 ```
 
+### yaml 코드 포맷
+```yaml
+{% raw %}
+providers:
+  jira:
+    type: jira
+    config:
+      url: "{{ env.JIRA_URL }}"
+      username: "{{ env.JIRA_USERNAME }}"
+      password: "{{ env.JIRA_PASSWORD }}"
+      # 또는 API 토큰 사용
+      api_token: "{{ env.JIRA_API_TOKEN }}"
+{% endraw %}
+```
+
 ## 6. 자동화 스크립트
 
 ### 6.1 블로그 포스트 생성 스크립트
