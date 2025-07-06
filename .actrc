@@ -1,12 +1,32 @@
+# Act 로컬 테스트 설정 파일
+# GitHub Actions를 로컬에서 실행할 때 최적화된 설정
+
+# 기본적으로 오프라인 모드 사용 (외부 액션 다운로드 방지)
+--action-offline-mode
+
+# Docker 플랫폼 설정 (M1/M2 Mac 호환)
+--platform linux/amd64
+
 # Docker 이미지 설정 (macOS ARM64 호환)
 -P ubuntu-latest=catthehacker/ubuntu:act-latest
 -P ubuntu-22.04=catthehacker/ubuntu:act-22.04
 -P ubuntu-20.04=catthehacker/ubuntu:act-20.04
 
-# 환경 변수 파일 지정
---env-file .env.local
+# 환경 변수 설정
+--env CI=true
+--env JEKYLL_ENV=development
 
-# 워크플로우 실행 옵션
---container-architecture linux/amd64
---verbose
+# 캐시 디렉토리 설정 (성능 향상)
+--artifact-server-path /tmp/artifacts
+
+# 볼륨 마운트 (필요한 경우)
+# --bind
+
+# 로그 레벨 설정 (디버깅이 필요한 경우)
+# --verbose
+
+# 컨테이너 정리 자동화
 --rm
+
+# 네트워크 설정
+--use-gitignore=false

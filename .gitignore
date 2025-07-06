@@ -249,3 +249,6 @@ agents-env/
 *.pid.lock
 .tgz
 .tar.gz
+
+.secrets
+.env.local
