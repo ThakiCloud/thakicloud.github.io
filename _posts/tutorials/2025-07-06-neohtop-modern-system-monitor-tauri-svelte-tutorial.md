@@ -118,7 +118,7 @@ cargo --version
 curl -s https://api.github.com/repos/Abdenasser/neohtop/releases/latest | grep "browser_download_url.*dmg" | cut -d '"' -f 4
 
 # wget 또는 curl로 다운로드 (예시 - 실제 URL은 위 명령어 결과 사용)
-wget https://github.com/Abdenasser/neohtop/releases/download/v1.2.0/NeoHtop_1.2.0_universal.dmg
+wget https://github.com/Abdenasser/neohtop/releases/download/v1.2.0/silicon-NeoHtop_1.2.0_aarch64.dm
 
 # DMG 파일 마운트 및 설치
 open NeoHtop_1.2.0_universal.dmg

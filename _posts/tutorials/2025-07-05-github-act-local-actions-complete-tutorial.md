@@ -374,7 +374,7 @@ cat >> ~/.zshrc << 'EOF'
 # GitHub Act 관련 alias
 alias act-list="act --list"
 alias act-ci="act push -j lint-test"
-alias act-build="act workflow_dispatch -j build"
+alias act-build="act --secret-file .secrets workflow_dispatch -j build"
 alias act-dry="act --dryrun"
 alias act-debug="act --verbose --shell"
 

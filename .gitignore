@@ -252,3 +252,5 @@ agents-env/
 
 .secrets
 .env.local
+
+watchyourlan-data
