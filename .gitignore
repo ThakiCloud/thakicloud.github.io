@@ -254,3 +254,5 @@ agents-env/
 .env.local
 
 watchyourlan-data
+
+hedge_fund_env/

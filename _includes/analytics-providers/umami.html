@@ -1,0 +1,8 @@
+{% if site.analytics.umami.script_url and site.analytics.umami.website_id %}
+<!-- Umami Analytics -->
+<script defer 
+        src="{{ site.analytics.umami.script_url }}" 
+        data-website-id="{{ site.analytics.umami.website_id }}"
+        data-domains="{{ site.url | remove: 'https://' | remove: 'http://' }}">
+</script>
+{% endif %} 

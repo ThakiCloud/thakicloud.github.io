@@ -80,6 +80,13 @@ naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
+# Analytics
+analytics:
+  provider: "umami" # false (default), "google", "google-universal", "google-gtag", "custom", "umami"
+  umami:
+    script_url: "" # Your Umami tracking script URL (will be added after setup)
+    website_id: "" # Your Umami website ID (will be added after setup)
+
 # Social Sharing
 twitter:
   username               : "thakicloud"
