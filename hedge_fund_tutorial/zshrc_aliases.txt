@@ -1,25 +1,34 @@
-# 헤지펀드 시계열 모델링 환경 알리아스
+# 헤지펀드 시계열 모델링 환경 Aliases
 # ~/.zshrc에 추가하세요
 
-# 환경 설정
-alias hedge_setup='cd /Users/hanhyojung/work/thakicloud/thakicloud.github.io/hedge_fund_tutorial'
-alias hedge_env='source hedge_fund_env/bin/activate'
-alias hedge_activate='hedge_setup && hedge_env'
+# 환경 변수
+export HEDGE_FUND_DIR="/Users/hanhyojung/thaki/thaki.github.io/hedge_fund_tutorial"
 
-# 테스트 실행
-alias test_garch='python test_garch_simple.py'
-alias run_hedge_test='hedge_activate && test_garch'
+# 기본 명령어
+alias hedge_env="cd $HEDGE_FUND_DIR && source hedge_fund_env/bin/activate"
+alias hedge_test="cd $HEDGE_FUND_DIR && python test_garch_simple.py"
+alias hedge_dir="cd $HEDGE_FUND_DIR"
 
-# 개발 도구
-alias hedge_jupyter='hedge_activate && jupyter notebook'
-alias hedge_install='pip install'
-alias hedge_list='pip list | grep -E "(numpy|pandas|scipy|sklearn|torch|ray)"'
+# 개발환경 정보
+alias hedge_info="echo '🏦 헤지펀드 모델링 환경 정보' && echo '📍 경로: $HEDGE_FUND_DIR' && echo '🐍 Python: $(python3 --version)' && echo '💻 시스템: $(uname -s) $(uname -r)'"
 
-# 시스템 정보
-alias sys_info='echo "CPU: $(sysctl -n machdep.cpu.brand_string)" && echo "Cores: $(sysctl -n hw.ncpu)" && echo "Memory: $(echo "$(sysctl -n hw.memsize) / 1024 / 1024 / 1024" | bc) GB"'
+# 패키지 관리
+alias hedge_packages="pip list | grep -E '(arch|xgboost|torch|ray|pandas|numpy)'"
+alias hedge_update="pip install --upgrade numpy pandas arch xgboost ray torch"
 
-echo "🔧 zshrc 알리아스 설정 완료!"
-echo "사용법:"
-echo "  hedge_activate  # 환경 활성화"
-echo "  run_hedge_test  # GARCH 테스트 실행"
-echo "  sys_info        # 시스템 정보 확인"
+# 성능 벤치마크
+alias hedge_benchmark="python -c 'import time; start=time.time(); import numpy as np; a=np.random.rand(1000,1000); b=np.random.rand(1000,1000); c=np.dot(a,b); print(f\"행렬 연산 (1000x1000): {time.time()-start:.3f}초\")'"
+
+# 자주 사용하는 명령어
+alias ll="ls -la"
+alias la="ls -A"
+alias gst="git status"
+alias gaa="git add ."
+alias gcm="git commit -m"
+
+# 헤지펀드 특화 명령어
+alias models_count="find models/ -name '*.py' | wc -l | tr -d ' '"
+alias data_size="du -sh data/ 2>/dev/null || echo '데이터 디렉토리 없음'"
+
+echo "🏦 헤지펀드 모델링 aliases 로드 완료!"
+echo "📝 사용법: hedge_env, hedge_test, hedge_info, hedge_benchmark"

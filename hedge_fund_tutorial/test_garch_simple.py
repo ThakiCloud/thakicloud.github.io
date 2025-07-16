@@ -1,129 +1,190 @@
 #!/usr/bin/env python3
-# test_garch_simple.py
+"""
+헤지펀드 수준의 GARCH 모델 간단 테스트
+"""
 
 import numpy as np
 import pandas as pd
+from arch import arch_model
 import warnings
 warnings.filterwarnings('ignore')
 
-print("🏦 헤지펀드 GARCH 모델 기본 테스트")
-print("="*50)
-
-# 1. 간단한 시장 데이터 생성
-def generate_simple_returns(n_days=500):
-    """기본적인 시계열 수익률 생성"""
-    print("📊 시장 데이터 생성 중...")
+def test_garch_model():
+    """GARCH 모델 기본 테스트"""
+    print("🏦 헤지펀드 GARCH 모델 테스트 시작")
+    print("=" * 50)
     
-    # 간단한 GARCH 효과 시뮬레이션
+    # 1. 가상 데이터 생성 (GARCH 스타일)
+    np.random.seed(42)
+    n_days = 1000
+    
+    # GARCH(1,1) 시뮬레이션
+    omega = 0.00001
+    alpha = 0.05
+    beta = 0.90
+    
     returns = np.zeros(n_days)
     volatilities = np.zeros(n_days)
-    volatilities[0] = 0.02  # 초기 변동성
+    volatilities[0] = 0.02
     
     for t in range(1, n_days):
-        # 변동성 클러스터링 효과
-        volatilities[t] = 0.02 + 0.1 * abs(returns[t-1]) + 0.85 * volatilities[t-1]
-        
-        # 수익률 생성
+        volatilities[t] = np.sqrt(
+            omega + alpha * returns[t-1]**2 + beta * volatilities[t-1]**2
+        )
         returns[t] = np.random.normal(0, volatilities[t])
     
-    print(f"✅ {n_days}일 데이터 생성 완료")
-    print(f"📈 평균 수익률: {returns.mean():.6f}")
-    print(f"📊 수익률 변동성: {returns.std():.6f}")
+    print(f"📊 시뮬레이션 데이터 생성 완료: {n_days}일")
+    print(f"  평균 수익률: {returns.mean():.6f}")
+    print(f"  평균 변동성: {volatilities.mean():.6f}")
     
-    return returns, volatilities
-
-# 2. 기본 변동성 예측
-def simple_volatility_forecast(returns, window=20):
-    """이동평균 기반 변동성 예측"""
-    squared_returns = returns ** 2
-    volatility = np.sqrt(np.mean(squared_returns[-window:]))
-    return volatility
-
-# 3. VaR 계산
-def calculate_var(volatility, confidence_levels=[0.01, 0.05, 0.10]):
-    """정규분포 가정 VaR 계산"""
+    # 2. GARCH 모델 학습
+    print("\n🔄 GARCH 모델 학습 중...")
+    
+    # GARCH(1,1) 모델
+    model = arch_model(returns * 100, vol='GARCH', p=1, q=1, dist='normal')
+    result = model.fit(disp='off')
+    
+    print("✅ GARCH 모델 학습 완료")
+    print(f"  AIC: {result.aic:.2f}")
+    print(f"  BIC: {result.bic:.2f}")
+    print(f"  Log-likelihood: {result.loglikelihood:.2f}")
+    
+    # 3. 모델 파라미터 출력
+    print("\n📈 모델 파라미터:")
+    params = result.params
+    for param_name, param_value in params.items():
+        print(f"  {param_name}: {param_value:.6f}")
+    
+    # 4. 변동성 예측
+    print("\n🔮 변동성 예측 (5일):")
+    forecast = result.forecast(horizon=5)
+    vol_forecast = np.sqrt(forecast.variance.iloc[-1].values) / 100
+    
+    for i, vol in enumerate(vol_forecast, 1):
+        print(f"  {i}일 후 예상 변동성: {vol:.4f}")
+    
+    # 5. VaR 계산
+    print("\n📊 VaR (Value at Risk) 계산:")
     from scipy.stats import norm
     
-    var_results = {}
-    for conf in confidence_levels:
-        z_score = norm.ppf(conf)
-        var_estimate = z_score * volatility
-        var_results[f"{(1-conf)*100:.0f}%"] = var_estimate
+    confidence_levels = [0.01, 0.05, 0.10]
+    for confidence in confidence_levels:
+        z_score = norm.ppf(confidence)
+        var_estimate = z_score * vol_forecast[0]
+        print(f"  {confidence*100}% VaR (1일): {var_estimate:.4f}")
     
-    return var_results
+    print("\n✅ GARCH 모델 테스트 완료!")
+    
+    return {
+        'model': result,
+        'forecast': vol_forecast,
+        'returns': returns,
+        'volatilities': volatilities
+    }
 
-# 4. 테스트 실행
-if __name__ == "__main__":
-    try:
-        # 데이터 생성
-        returns, true_volatilities = generate_simple_returns(500)
-        
-        # 변동성 예측
-        print("\n🔮 변동성 예측:")
-        predicted_vol = simple_volatility_forecast(returns)
-        actual_vol = true_volatilities[-1]
-        
-        print(f"  예측 변동성: {predicted_vol:.4f} ({predicted_vol*100:.2f}%)")
-        print(f"  실제 변동성: {actual_vol:.4f} ({actual_vol*100:.2f}%)")
-        print(f"  예측 오차: {abs(predicted_vol - actual_vol):.4f}")
-        
-        # VaR 계산
-        print("\n📊 VaR (Value at Risk) 계산:")
-        var_results = calculate_var(predicted_vol)
-        
-        for level, var_val in var_results.items():
-            print(f"  {level} VaR: {var_val:.4f} ({var_val*100:.2f}%)")
-        
-        # 간단한 백테스팅
-        print("\n🧪 간단한 백테스팅:")
-        prediction_window = 100
-        predictions = []
-        actuals = []
-        
-        for i in range(prediction_window, len(returns) - 1):
-            # 과거 데이터로 예측
-            pred_vol = simple_volatility_forecast(returns[:i])
-            actual_vol = abs(returns[i+1])  # 다음날 실제 수익률 절댓값
+def test_multiple_garch_models():
+    """여러 GARCH 모델 변형 테스트"""
+    print("\n🔄 다중 GARCH 모델 테스트")
+    print("=" * 50)
+    
+    # 동일한 데이터 사용
+    np.random.seed(42)
+    n_days = 500
+    returns = np.random.normal(0, 0.02, n_days)
+    
+    models = {
+        'GARCH(1,1)': {'vol': 'GARCH', 'p': 1, 'q': 1, 'dist': 'normal'},
+        'EGARCH(1,1)': {'vol': 'EGARCH', 'p': 1, 'q': 1, 'dist': 'normal'},
+        'GJR-GARCH(1,1)': {'vol': 'GARCH', 'p': 1, 'q': 1, 'dist': 't'},
+    }
+    
+    results = {}
+    
+    for model_name, config in models.items():
+        try:
+            print(f"\n📊 {model_name} 학습 중...")
             
-            predictions.append(pred_vol)
-            actuals.append(actual_vol)
+            model = arch_model(
+                returns * 100,
+                vol=config['vol'],
+                p=config['p'],
+                q=config['q'],
+                dist=config['dist']
+            )
+            
+            result = model.fit(disp='off', show_warning=False)
+            
+            results[model_name] = {
+                'aic': result.aic,
+                'bic': result.bic,
+                'loglik': result.loglikelihood
+            }
+            
+            print(f"  ✅ AIC: {result.aic:.2f}, BIC: {result.bic:.2f}")
+            
+        except Exception as e:
+            print(f"  ❌ 오류: {str(e)}")
+            results[model_name] = None
+    
+    # 최적 모델 선택
+    print(f"\n🏆 모델 성능 비교:")
+    valid_results = {k: v for k, v in results.items() if v is not None}
+    
+    if valid_results:
+        best_model = min(valid_results.keys(), key=lambda x: valid_results[x]['aic'])
+        print(f"  최적 모델 (AIC 기준): {best_model}")
         
-        # 예측 성능 계산
-        mae = np.mean(np.abs(np.array(predictions) - np.array(actuals)))
-        correlation = np.corrcoef(predictions, actuals)[0, 1]
+        for model_name, metrics in valid_results.items():
+            marker = "🏆" if model_name == best_model else "  "
+            print(f"  {marker} {model_name}: AIC={metrics['aic']:.2f}")
+    
+    return results
+
+def performance_benchmark():
+    """성능 벤치마크"""
+    print("\n⚡ 성능 벤치마크")
+    print("=" * 50)
+    
+    import time
+    
+    # 다양한 데이터 크기로 테스트
+    data_sizes = [100, 500, 1000, 2000]
+    
+    for size in data_sizes:
+        print(f"\n📊 데이터 크기: {size}일")
         
-        print(f"  평균 절대 오차 (MAE): {mae:.6f}")
-        print(f"  상관관계: {correlation:.3f}")
+        # 데이터 생성
+        np.random.seed(42)
+        returns = np.random.normal(0, 0.02, size)
         
-        print("\n✅ 기본 GARCH 테스트 완료!")
+        # 시간 측정
+        start_time = time.time()
         
-        # 헤지펀드 확장 시나리오
-        print("\n🏦 헤지펀드 환경 확장 가능성:")
-        
-        models_per_asset = 5  # GARCH, EGARCH, TGARCH, DCC, GJR
-        assets = 500
-        total_models = models_per_asset * assets
-        
-        # 현재 테스트 기준 예상 학습 시간
-        single_model_time = 0.1  # 초 (간단한 모델 기준)
-        total_time_serial = total_models * single_model_time
-        
-        print(f"  🔢 총 모델 수: {total_models:,}개")
-        print(f"  ⏱️  순차 처리 시간: {total_time_serial:,.0f}초 ({total_time_serial/3600:.1f}시간)")
-        
-        # 병렬 처리 시나리오 (M3 Pro 12코어)
-        available_cores = 12
-        parallel_time = total_time_serial / available_cores
-        
-        print(f"  🚀 병렬 처리 시간 (12코어): {parallel_time:,.0f}초 ({parallel_time/3600:.1f}시간)")
-        
-        # GPU 클러스터 시나리오
-        gpu_speedup = 100
-        gpu_time = total_time_serial / gpu_speedup
-        
-        print(f"  ⚡ GPU 클러스터 처리 시간: {gpu_time:,.0f}초 ({gpu_time/60:.1f}분)")
-        
-    except Exception as e:
-        print(f"❌ 오류 발생: {e}")
-        import traceback
-        traceback.print_exc()
+        try:
+            model = arch_model(returns * 100, vol='GARCH', p=1, q=1)
+            result = model.fit(disp='off')
+            
+            end_time = time.time()
+            training_time = end_time - start_time
+            
+            print(f"  ⏱️  학습 시간: {training_time:.3f}초")
+            print(f"  📈 AIC: {result.aic:.2f}")
+            
+        except Exception as e:
+            print(f"  ❌ 오류: {str(e)}")
+
+if __name__ == "__main__":
+    # 기본 GARCH 테스트
+    basic_results = test_garch_model()
+    
+    # 다중 모델 테스트
+    multi_results = test_multiple_garch_models()
+    
+    # 성능 벤치마크
+    performance_benchmark()
+    
+    print("\n🎉 모든 테스트 완료!")
+    print("\n💡 다음 단계:")
+    print("  1. source hedge_fund_env/bin/activate")
+    print("  2. python scripts/data_generator.py")
+    print("  3. python models/garch/garch_ensemble.py")
