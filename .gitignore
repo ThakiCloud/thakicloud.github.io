@@ -254,7 +254,7 @@ agents-env/
 .env.local
 
 watchyourlan-data
-
+hedge_fund_tutorial/
 hedge_fund_env/
 
 meetily-test/
