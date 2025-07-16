@@ -660,10 +660,10 @@ export default function ProjectTable() {
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div 
                       className="bg-blue-600 h-2 rounded-full" 
-                      style={{width: `${project.progress}%`}}
+                      style={% raw %}{{width: `${project.progress}%`}}{% endraw %}
                     />
                   </div>
-                  <span className="text-sm">{project.progress}%</span>
+                  <span className="text-sm">{% raw %}{project.progress}{% endraw %}%</span>
                 </div>
               </TableCell>
               <TableCell>{project.team}</TableCell>
