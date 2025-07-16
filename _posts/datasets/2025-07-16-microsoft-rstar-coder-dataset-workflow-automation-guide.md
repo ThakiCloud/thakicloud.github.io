@@ -6,7 +6,7 @@ seo_description: "Microsoft rStar-Coder 418K 프로그래밍 문제 데이터셋
 date: 2025-07-16
 last_modified_at: 2025-07-16
 categories:
-  - owm
+  - datasets
 tags:
   - rStar-Coder
   - Microsoft
