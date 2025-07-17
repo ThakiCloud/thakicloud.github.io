@@ -920,14 +920,14 @@ export function AIUsageDashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-lg shadow border">
           <h3 className="text-xl font-semibold mb-4">Cost Trend</h3>
-          <Line data={costTrendData} options={{% raw %}{ responsive: true }{% endraw %}} />
+          <Line data={costTrendData} options={% raw %}{{ responsive: true }}{% endraw %} />
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow border">
           <h3 className="text-xl font-semibold mb-4">Service Distribution</h3>
           <Doughnut 
             data={serviceDistributionData} 
-            options={{% raw %}{
+            options={% raw %}{{
               responsive: true,
               plugins: {
                 legend: {
@@ -955,7 +955,7 @@ export function AIUsageDashboard() {
                 <div className="w-32 bg-gray-200 rounded-full h-2">
                   <div 
                     className="bg-blue-600 h-2 rounded-full"
-                    style={{ width: `${(model.usage / metrics.topModels[0].usage) * 100}%` }}
+                    style={% raw %}{{ width: `${(model.usage / metrics.topModels[0].usage) * 100}%` }}{% endraw %}
                   ></div>
                 </div>
                 <span className="text-sm text-gray-600 w-16 text-right">
