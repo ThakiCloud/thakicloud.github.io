@@ -249,7 +249,137 @@ blogdir
 - [ ] 개발환경 버전을 명시했는가?
 - [ ] zshrc alias 가이드를 제공했는가?
 
-## 10. 실제 글 완료 후에 로컬 테스트 해보고 문제 해결하기
+## 10. Jekyll Liquid 문법 오류 방지 가이드
+
+### 10.1 JavaScript 스타일 객체 처리
+
+블로그 포스트에서 React/JavaScript 코드 예제를 작성할 때, 스타일 객체가 Jekyll의 Liquid 템플릿 엔진과 충돌할 수 있습니다.
+
+#### ❌ 문제가 되는 코드
+```jsx
+// 이런 스타일 객체들이 Liquid 변수로 잘못 인식됨
+<div style={{width: '67%'}} />
+<button style={{padding: '10px', backgroundColor: '#007bff'}} />
+```
+
+#### ✅ 올바른 해결 방법
+```jsx
+// {% raw %} 태그로 감싸서 Liquid 처리 방지
+<div style={% raw %}{{width: '67%'}}{% endraw %} />
+<button style={% raw %}{{padding: '10px', backgroundColor: '#007bff'}}{% endraw %} />
+```
+
+### 10.2 {% raw %} 태그 올바른 사용법
+
+#### ❌ 잘못된 문법
+```liquid
+{{% raw %} // 중괄호가 하나 더 많음
+{% raw %  // 닫는 중괄호 누락
+%} raw %} // 여는 중괄호 누락
+```
+
+#### ✅ 올바른 문법
+```liquid
+{% raw %}
+// 여기에 Liquid 처리를 방지할 코드 작성
+{{ 변수명 }}
+{%- if 조건 -%}
+{% endraw %}
+```
+
+### 10.3 자주 발생하는 Liquid 충돌 패턴
+
+#### JavaScript/React 코드에서 주의할 패턴
+- `style={{...}}` - 인라인 스타일 객체
+- `className={{...}}` - 동적 클래스명
+- `onClick={() => {...}}` - 화살표 함수
+- `${변수명}` - 템플릿 리터럴
+- `{{조건 ? 값1 : 값2}}` - 삼항 연산자
+
+#### YAML 설정에서 주의할 패턴
+```yaml
+# ❌ 문제가 되는 경우
+config:
+  url: "{{ env.API_URL }}"
+
+# ✅ raw 태그로 보호
+{% raw %}
+config:
+  url: "{{ env.API_URL }}"
+{% endraw %}
+```
+
+### 10.4 빌드 전 Liquid 오류 체크
+
+#### 로컬 테스트 명령어
+```bash
+# 1. Jekyll doctor로 설정 검증
+bundle exec jekyll doctor
+
+# 2. 개발 빌드로 Liquid 오류 확인
+bundle exec jekyll build --verbose
+
+# 3. Liquid Warning 검색
+bundle exec jekyll build 2>&1 | grep -i "liquid"
+```
+
+#### CI/CD에서 자동 체크
+```bash
+# GitHub Actions에서 Liquid 오류 감지
+JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
+```
+
+### 10.5 문제 해결 체크리스트
+
+포스트 작성 후 반드시 확인:
+
+- [ ] React/JavaScript 코드의 `style={{}}` 패턴을 `{% raw %}` 태그로 감쌌는가?
+- [ ] `{% raw %}` 태그 문법이 올바른가? (`{{% raw %}`가 아닌 `{% raw %}`)
+- [ ] YAML 설정에서 `{{ }}` 변수를 사용했다면 `{% raw %}` 태그로 보호했는가?
+- [ ] 로컬에서 `bundle exec jekyll build`가 경고 없이 성공하는가?
+- [ ] 터미널에서 "Liquid Warning" 메시지가 없는가?
+
+### 10.6 자동화 스크립트 추가
+
+#### Liquid 오류 체크 스크립트
+```bash
+#!/bin/bash
+# 파일: ~/scripts/check-liquid-errors.sh
+
+echo "🔍 Jekyll Liquid 문법 오류 체크 중..."
+
+# Jekyll 빌드 실행 및 Liquid 경고 확인
+OUTPUT=$(bundle exec jekyll build 2>&1)
+LIQUID_WARNINGS=$(echo "$OUTPUT" | grep -i "liquid warning" | wc -l)
+
+if [ "$LIQUID_WARNINGS" -gt 0 ]; then
+    echo "❌ Liquid 경고 발견: $LIQUID_WARNINGS 개"
+    echo "$OUTPUT" | grep -i "liquid warning"
+    echo ""
+    echo "💡 해결 방법:"
+    echo "1. JavaScript 스타일 객체를 {% raw %} 태그로 감싸세요"
+    echo "2. {% raw %} 태그 문법이 올바른지 확인하세요"
+    exit 1
+else
+    echo "✅ Liquid 문법 오류 없음"
+fi
+```
+
+#### zshrc alias 추가
+```bash
+# ~/.zshrc에 추가
+alias checkliquid="$SCRIPTS_DIR/check-liquid-errors.sh"
+```
+
+### 10.7 VS Code 확장 추천
+
+Jekyll 포스트 작성 시 도움되는 확장:
+- **Jekyll Snippets**: Jekyll 문법 자동완성
+- **Liquid Languages Support**: Liquid 문법 하이라이팅
+- **YAML**: YAML 문법 검증
+
+
+## 11. 실제 글 완료 후에 로컬 테스트 해보고 문제 해결하기
 
 ### Ruby Gem & Bundler
 ```sh
