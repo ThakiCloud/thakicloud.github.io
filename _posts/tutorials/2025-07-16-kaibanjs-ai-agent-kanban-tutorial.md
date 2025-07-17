@@ -280,20 +280,20 @@ const KanbanBoard = () => {
   }, {});
 
   return (
-    <div className="kanban-board" style={{ display: 'flex', gap: '20px', padding: '20px' }}>
+    <div className="kanban-board" style={% raw %}{{ display: 'flex', gap: '20px', padding: '20px' }}{% endraw %}>
       {/* 컨트롤 패널 */}
-      <div style={{ marginBottom: '20px' }}>
+      <div style={% raw %}{{ marginBottom: '20px' }}{% endraw %}>
         <button 
           onClick={() => aiTeam.start()} 
           disabled={isRunning}
-          style={{
+          style={% raw %}{{
             padding: '10px 20px',
             backgroundColor: isRunning ? '#ccc' : '#007bff',
             color: 'white',
             border: 'none',
             borderRadius: '5px',
             cursor: isRunning ? 'not-allowed' : 'pointer'
-          }}
+          }}{% endraw %}
         >
           {isRunning ? '🔄 Running...' : '🚀 Start Workflow'}
         </button>
@@ -301,24 +301,24 @@ const KanbanBoard = () => {
 
       {/* 칸반 컬럼들 */}
       {['TODO', 'DOING', 'DONE'].map(status => (
-        <div key={status} className="kanban-column" style={{
+        <div key={status} className="kanban-column" style={% raw %}{{
           flex: 1,
           backgroundColor: '#f8f9fa',
           border: '1px solid #dee2e6',
           borderRadius: '8px',
           padding: '15px'
-        }}>
-          <h3 style={{ textAlign: 'center', marginBottom: '15px' }}>{status}</h3>
+        }}{% endraw %}>
+          <h3 style={% raw %}{{ textAlign: 'center', marginBottom: '15px' }}{% endraw %}>{status}</h3>
           
           {tasksByStatus[status]?.map(task => (
-            <div key={task.id} className="task-card" style={{
+            <div key={task.id} className="task-card" style={% raw %}{{
               backgroundColor: 'white',
               border: '1px solid #e9ecef',
               borderRadius: '6px',
               padding: '12px',
               marginBottom: '10px',
               boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-            }}>
+            }}{% endraw %}>
               <h4>{task.description}</h4>
               <p><strong>Agent:</strong> {task.agent?.name}</p>
               <p><strong>Role:</strong> {task.agent?.role}</p>
@@ -331,22 +331,22 @@ const KanbanBoard = () => {
       ))}
 
       {/* 에이전트 상태 패널 */}
-      <div className="agents-panel" style={{
+      <div className="agents-panel" style={% raw %}{{
         width: '300px',
         backgroundColor: '#f8f9fa',
         border: '1px solid #dee2e6',
         borderRadius: '8px',
         padding: '15px'
-      }}>
+      }}{% endraw %}>
         <h3>🤖 Agents Status</h3>
         {agents.map(agent => (
-          <div key={agent.id} style={{
+          <div key={agent.id} style={% raw %}{{
             backgroundColor: 'white',
             border: '1px solid #e9ecef',
             borderRadius: '6px',
             padding: '10px',
             marginBottom: '8px'
-          }}>
+          }}{% endraw %}>
             <h4>{agent.name}</h4>
             <p><strong>Role:</strong> {agent.role}</p>
             <p><strong>Status:</strong> {agent.status || 'Idle'}</p>
@@ -354,7 +354,7 @@ const KanbanBoard = () => {
         ))}
         
         {workflowResult && (
-          <div style={{ marginTop: '20px', padding: '15px', backgroundColor: '#d4edda', borderRadius: '6px' }}>
+          <div style={% raw %}{{ marginTop: '20px', padding: '15px', backgroundColor: '#d4edda', borderRadius: '6px' }}{% endraw %}>
             <h4>✅ Workflow Complete</h4>
             <p>{workflowResult}</p>
           </div>
