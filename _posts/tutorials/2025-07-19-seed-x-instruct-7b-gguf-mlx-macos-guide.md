@@ -169,12 +169,14 @@ brew install ollama
 cat > ~/Models/Modelfile.seed-x << EOF
 FROM ~/Models/seed-x-instruct-7b-q4_k_m.gguf
 
+{% raw %}
 TEMPLATE """{{ if .System }}<|system|>
 {{ .System }}<|end|>
 {{ end }}{{ if .Prompt }}<|user|>
 {{ .Prompt }}<|end|>
 {{ end }}<|assistant|>
 """
+{% endraw %}
 
 PARAMETER stop <|end|>
 PARAMETER stop <|user|>

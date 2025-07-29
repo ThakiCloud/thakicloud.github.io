@@ -1829,7 +1829,7 @@ const aiWorkflow = {
       "type": "@n8n/n8n-nodes-slack", 
       "config": {
         "channel": "#welcome",
-        "message": "새 팀원 {{$node.BambooHR.json.name}}님을 환영합니다!"
+        "message": "새 팀원 {% raw %}{{$node.BambooHR.json.name}}{% endraw %}님을 환영합니다!"
       }
     },
     {

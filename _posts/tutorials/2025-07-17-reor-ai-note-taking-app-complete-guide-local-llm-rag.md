@@ -998,6 +998,7 @@ mkdir -p ~/Research/{Papers,Notes,Ideas,Reviews}
 **논문 요약 템플릿:**
 
 ```markdown
+{% raw %}
 # 📄 {{논문 제목}}
 
 ## 📊 메타데이터
@@ -1027,11 +1028,13 @@ mkdir -p ~/Research/{Papers,Notes,Ideas,Reviews}
 ---
 🤖 **AI 질문 예시:**
 "이 논문의 핵심 아이디어를 다른 도메인에 적용할 수 있을까?"
+{% endraw %}
 ```
 
 ### 개발자를 위한 코드 지식 베이스
 
 ```markdown
+{% raw %}
 # 🚀 프로젝트: {{프로젝트명}}
 
 ## 🏗️ 아키텍처 개요
@@ -1067,6 +1070,7 @@ mkdir -p ~/Research/{Papers,Notes,Ideas,Reviews}
 🤖 **AI 활용:**
 "이 코드를 다른 프레임워크로 포팅하는 방법은?"
 "성능 최적화 방안을 제안해줘"
+{% endraw %}
 ```
 
 ## 결론
