@@ -425,7 +425,7 @@ workflow:
   2. research_phase:
       agent: researcher
       tasks:
-        - search_web_content: "{{{#123;topic}}#125;} 관련 최신 정보 수집"
+        - search_web_content: "{% raw %}{{{#123;topic}}#125;}{% endraw %} 관련 최신 정보 수집"
         - extract_key_points: "핵심 내용 요약"
         - create_outline: "글 구조 설계"
         
@@ -456,7 +456,7 @@ workflow:
   6. output:
       format: markdown_with_frontmatter
       includes: [content, images, metadata]
-      destination: blog_posts/{{{#123;date}}#125;}-{{{#123;slug}}#125;}.md
+      destination: blog_posts/{% raw %}{{{#123;date}}#125;}-{{{#123;slug}}#125;}{% endraw %}.md
 ```
 
 ### 3. 이미지 생성 워크플로우
@@ -704,7 +704,7 @@ results = workflows.batch_generate_images(portrait_workflow, portrait_inputs)
       "name": "Generate Content",
       "config": {
         "model": "llama3.2:8b",
-        "prompt": "Create engaging social media content about: {{{#123;$input.topic}}#125;}\nTone: {{{#123;$input.tone}}#125;}\nPlatform: {{{#123;$input.platform}}#125;}\nLength: {{{#123;$input.length}}#125;}",
+        "prompt": "Create engaging social media content about: {% raw %}{{{#123;$input.topic}}#125;}{% endraw %}\nTone: {% raw %}{{{#123;$input.tone}}#125;}{% endraw %}\nPlatform: {% raw %}{{{#123;$input.platform}}#125;}{% endraw %}\nLength: {% raw %}{{{#123;$input.length}}#125;}{% endraw %}",
         "temperature": 0.8
       },
       "inputs": ["trigger"]
@@ -715,7 +715,7 @@ results = workflows.batch_generate_images(portrait_workflow, portrait_inputs)
       "type": "stable_diffusion", 
       "name": "Generate Image",
       "config": {
-        "prompt": "{{{#123;$content_generator.output}}#125;} visual representation, social media style, engaging, colorful",
+        "prompt": "{% raw %}{{{#123;$content_generator.output}}#125;}{% endraw %} visual representation, social media style, engaging, colorful",
         "style": "modern",
         "aspect_ratio": "1:1"
       },
@@ -728,7 +728,7 @@ results = workflows.batch_generate_images(portrait_workflow, portrait_inputs)
       "name": "Generate Hashtags",
       "config": {
         "model": "qwen2.5:7b",
-        "prompt": "Generate relevant hashtags for this content: {{{#123;$content_generator.output}}#125;}\nPlatform: {{{#123;$input.platform}}#125;}\nReturn only hashtags, max 10",
+        "prompt": "Generate relevant hashtags for this content: {% raw %}{{{#123;$content_generator.output}}#125;}{% endraw %}\nPlatform: {% raw %}{{{#123;$input.platform}}#125;}{% endraw %}\nReturn only hashtags, max 10",
         "temperature": 0.3
       },
       "inputs": ["content_generator"]
@@ -741,11 +741,11 @@ results = workflows.batch_generate_images(portrait_workflow, portrait_inputs)
       "config": {
         "table": "scheduled_posts",
         "data": {
-          "content": "{{{#123;$content_generator.output}}#125;}",
-          "image": "{{{#123;$image_generator.output}}#125;}",
-          "hashtags": "{{{#123;$hashtag_generator.output}}#125;}",
-          "platform": "{{{#123;$input.platform}}#125;}",
-          "scheduled_time": "{{{#123;$input.schedule_time}}#125;}",
+          "content": "{% raw %}{{{#123;$content_generator.output}}#125;}{% endraw %}",
+          "image": "{% raw %}{{{#123;$image_generator.output}}#125;}{% endraw %}",
+          "hashtags": "{% raw %}{{{#123;$hashtag_generator.output}}#125;}{% endraw %}",
+          "platform": "{% raw %}{{{#123;$input.platform}}#125;}{% endraw %}",
+          "scheduled_time": "{% raw %}{{{#123;$input.schedule_time}}#125;}{% endraw %}",
           "status": "pending"
         }
       },
@@ -757,12 +757,12 @@ results = workflows.batch_generate_images(portrait_workflow, portrait_inputs)
       "type": "webhook_send",
       "name": "Send Notification", 
       "config": {
-        "url": "{{{#123;$input.notification_webhook}}#125;}",
+        "url": "{% raw %}{{{#123;$input.notification_webhook}}#125;}{% endraw %}",
         "method": "POST",
         "body": {
           "message": "Content created and scheduled successfully",
-          "content_id": "{{{#123;$content_scheduler.insert_id}}#125;}",
-          "preview": "{{{#123;$content_generator.output | truncate(100)}}#125;}"
+          "content_id": "{% raw %}{{{#123;$content_scheduler.insert_id}}#125;}{% endraw %}",
+          "preview": "{% raw %}{{{#123;$content_generator.output | truncate(100)}}#125;}{% endraw %}"
         }
       },
       "inputs": ["content_scheduler"]
@@ -864,7 +864,7 @@ class DataProcessingPipeline {
             "prompt": `
             Analyze the pricing data and provide insights:
             
-            Data: {{{#123;$data_cleaning.price_data}}#125;}
+            Data: {% raw %}{{{#123;$data_cleaning.price_data}}#125;}{% endraw %}
             
             Please provide:
             1. Price trend analysis (increase/decrease/stable)
@@ -888,7 +888,7 @@ class DataProcessingPipeline {
             "prompt": `
             Analyze social media sentiment data:
             
-            Data: {{{#123;$data_cleaning.sentiment_data}}#125;}
+            Data: {% raw %}{{{#123;$data_cleaning.sentiment_data}}#125;}{% endraw %}
             
             Provide:
             1. Overall sentiment score
@@ -910,21 +910,21 @@ class DataProcessingPipeline {
             "charts": [
               {
                 "type": "line_chart",
-                "data": "{{{#123;$price_analysis.trends}}#125;}",
+                "data": "{% raw %}{{{#123;$price_analysis.trends}}#125;}{% endraw %}",
                 "title": "Price Trends Over Time",
                 "x_axis": "date",
                 "y_axis": "price"
               },
               {
                 "type": "bar_chart", 
-                "data": "{{{#123;$sentiment_analysis.by_platform}}#125;}",
+                "data": "{% raw %}{{{#123;$sentiment_analysis.by_platform}}#125;}{% endraw %}",
                 "title": "Sentiment by Platform",
                 "x_axis": "platform",
                 "y_axis": "sentiment_score"
               },
               {
                 "type": "scatter_plot",
-                "data": "{{{#123;$data_cleaning.competitor_data}}#125;}",
+                "data": "{% raw %}{{{#123;$data_cleaning.competitor_data}}#125;}{% endraw %}",
                 "title": "Price vs Quality Matrix",
                 "x_axis": "price",
                 "y_axis": "quality_score"
@@ -943,26 +943,26 @@ class DataProcessingPipeline {
             "sections": [
               {
                 "title": "Executive Summary",
-                "content": "{{{#123;$price_analysis.summary}}#125;}"
+                "content": "{% raw %}{{{#123;$price_analysis.summary}}#125;}{% endraw %}"
               },
               {
                 "title": "Market Trends",
-                "content": "{{{#123;$price_analysis.trends}}#125;}",
-                "charts": ["{{{#123;$visualization.price_trends}}#125;}"]
+                "content": "{% raw %}{{{#123;$price_analysis.trends}}#125;}{% endraw %}",
+                "charts": ["{% raw %}{{{#123;$visualization.price_trends}}#125;}{% endraw %}"]
               },
               {
                 "title": "Competitive Analysis", 
-                "content": "{{{#123;$price_analysis.competitive_positioning}}#125;}",
-                "charts": ["{{{#123;$visualization.competitor_matrix}}#125;}"]
+                "content": "{% raw %}{{{#123;$price_analysis.competitive_positioning}}#125;}{% endraw %}",
+                "charts": ["{% raw %}{{{#123;$visualization.competitor_matrix}}#125;}{% endraw %}"]
               },
               {
                 "title": "Social Sentiment",
-                "content": "{{{#123;$sentiment_analysis.summary}}#125;}",
-                "charts": ["{{{#123;$visualization.sentiment_chart}}#125;}"]
+                "content": "{% raw %}{{{#123;$sentiment_analysis.summary}}#125;}{% endraw %}",
+                "charts": ["{% raw %}{{{#123;$visualization.sentiment_chart}}#125;}{% endraw %}"]
               },
               {
                 "title": "Recommendations",
-                "content": "{{{#123;$price_analysis.recommendations}}#125;}"
+                "content": "{% raw %}{{{#123;$price_analysis.recommendations}}#125;}{% endraw %}"
               }
             ],
             "format": "pdf",
@@ -980,23 +980,23 @@ class DataProcessingPipeline {
               {
                 "type": "email",
                 "recipients": ["executives@company.com"],
-                "subject": "Weekly Market Analysis Report - {{{#123;$date}}#125;}",
+                "subject": "Weekly Market Analysis Report - {% raw %}{{{#123;$date}}#125;}{% endraw %}",
                 "body": "Please find attached the latest market analysis report.",
-                "attachments": ["{{{#123;$report_generation.pdf}}#125;}"]
+                "attachments": ["{% raw %}{{{#123;$report_generation.pdf}}#125;}{% endraw %}"]
               },
               {
                 "type": "slack",
                 "channel": "#market-intelligence", 
                 "message": "📊 New market analysis report available",
-                "file": "{{{#123;$report_generation.pdf}}#125;}"
+                "file": "{% raw %}{{{#123;$report_generation.pdf}}#125;}{% endraw %}"
               },
               {
                 "type": "database",
                 "table": "reports",
                 "data": {
-                  "report_date": "{{{#123;$date}}#125;}",
-                  "file_path": "{{{#123;$report_generation.pdf}}#125;}",
-                  "summary": "{{{#123;$price_analysis.summary}}#125;}",
+                  "report_date": "{% raw %}{{{#123;$date}}#125;}{% endraw %}",
+                  "file_path": "{% raw %}{{{#123;$report_generation.pdf}}#125;}{% endraw %}",
+                  "summary": "{% raw %}{{{#123;$price_analysis.summary}}#125;}{% endraw %}",
                   "status": "completed"
                 }
               }
