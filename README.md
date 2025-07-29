@@ -1,5 +1,7 @@
 # Thaki Cloud 기술 블로그
 
+> 🇬🇧 [English README is available here.](README-en.md)
+
 Thaki Cloud 공식 기술 블로그 리포지토리에 오신 것을 환영합니다! 이 블로그는 프라이빗 클라우드 솔루션(IaaS, PaaS, SaaS), LLM Ops 및 AI 엔지니어링 분야에서의 저희 전문 지식, 인사이트, 그리고 혁신을 공유하는 플랫폼입니다. 저희의 주요 목표는 뛰어난 기술 전문가들과 소통하고 Thaki Cloud에서의 흥미로운 기회를 소개하는 것입니다.
 
 ## ✨ 목적
