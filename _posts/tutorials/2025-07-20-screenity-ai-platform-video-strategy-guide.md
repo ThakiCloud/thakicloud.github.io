@@ -6,8 +6,7 @@ seo_description: "Screenity 오픈소스 스크린 레코더로 AI 플랫폼 회
 date: 2025-07-20
 last_modified_at: 2025-07-20
 categories:
-  - tutorials
-  - dev
+  - news
 tags:
   - Screenity
   - 영상마케팅
