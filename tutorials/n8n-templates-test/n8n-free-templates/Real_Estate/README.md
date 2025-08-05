@@ -1,0 +1,11 @@
+# Real_Estate Templates
+- **lead_scoring_with_mls_data.json** – pinecone/openai/huggingface
+- **rental_price_estimator.json** – supabase/cohere/anthropic
+- **neighborhood_safety_insights.json** – redis/huggingface/anthropic
+- **mortgage_rate_alert.json** – pinecone/openai/huggingface
+- **property_description_generator.json** – supabase/huggingface/huggingface
+- **tenant_screening_summary.json** – pinecone/cohere/huggingface
+- **open_house_reminder.json** – supabase/cohere/openai
+- **real_estate_market_trend_report.json** – weaviate/cohere/anthropic
+- **hoa_fee_analyzer.json** – weaviate/huggingface/anthropic
+- **zoning_regulation_checker.json** – redis/openai/huggingface

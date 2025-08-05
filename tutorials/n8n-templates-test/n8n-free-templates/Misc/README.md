@@ -1,0 +1,50 @@
+# Misc Templates
+
+- **customer_auto-tagging.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
+- **etsy_review_to_slack.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
+- **price_update_google_sheet.json** – Uses Cohere Embeddings, OpenAI Chat
+- **return_ticket_assignment.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
+- **order_shipped_notification.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
+- **woo_order_mailchimp.json** – Uses Cohere Embeddings, OpenAI Chat
+- **low_stock_discord.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
+- **notion_api_update.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
+- **csv_attachment_to_airtable.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
+- **ga_report_email.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
+- **rss_headlines_slack.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
+- **keyword_rank_checker.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
+- **api_stats_chart.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
+- **json_to_sheet.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
+- **server_health_grafana.json** – Uses Anthropic Claude, Cohere Embeddings
+- **hourly_weather_log.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
+- **course_completion_certificate.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
+- **zoom_attendance_log.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
+- **assignment_sms_reminder.json** – Uses Cohere Embeddings, OpenAI Chat
+- **interview_scheduler.json** – Uses OpenAI Chat, OpenAI Embeddings
+- **onboarding_checklist_slack.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
+- **applicant_feedback_folder.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
+- **medication_sms_reminder.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
+- **fitness_api_weekly_report.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
+- **crm_patient_intake.json** – Uses Anthropic Claude, OpenAI Embeddings
+- **blood_test_email_alert.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
+- **api_monitor_auto_restart.json** – Uses OpenAI Chat, OpenAI Embeddings
+- **cron_success_slack.json** – Uses Anthropic Claude, OpenAI Embeddings
+- **pr_merged_qa_notify.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
+- **issue_trello_card.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
+- **voice_task_to_notion.json** – Uses OpenAI Chat, OpenAI Embeddings
+- **toggl_daily_report.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
+- **calendar_to_clickup.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
+- **starred_slack_to_notion.json** – Uses Cohere Embeddings, OpenAI Chat
+- **birthday_telegram_reminder.json** – Uses OpenAI Chat, OpenAI Embeddings
+- **drink_water_reminder.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
+- **habit_form_weekly_summary.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
+- **weekly_notes_backup.json** – Uses Cohere Embeddings, OpenAI Chat
+- **calendar_event_auto-tag.json** – Uses OpenAI Chat, OpenAI Embeddings
+- **disaster_api_sms.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
+- **survey_auto_analyze.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
+- **grant_application_routing.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
+- **idea_to_ig_carousel.json** – Uses Anthropic Claude, OpenAI Embeddings
+- **podcast_transcribe_publish.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
+- **unsplash_to_pinterest.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
+- **blog_comment_discord.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
+- **record_crypto_prices.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
+- **bank_sms_alert_to_telegram.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector

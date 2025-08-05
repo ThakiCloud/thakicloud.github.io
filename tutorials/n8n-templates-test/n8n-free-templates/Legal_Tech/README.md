@@ -1,0 +1,11 @@
+# Legal_Tech Templates
+- **contract_clause_extractor.json** – weaviate/cohere/openai
+- **case_law_summarizer.json** – supabase/cohere/openai
+- **nda_risk_detector.json** – redis/huggingface/openai
+- **trademark_status_monitor.json** – pinecone/huggingface/huggingface
+- **court_date_reminder.json** – supabase/cohere/openai
+- **compliance_checklist_builder.json** – pinecone/openai/huggingface
+- **legal_billing_analyzer.json** – redis/cohere/anthropic
+- **privacy_policy_generator.json** – redis/cohere/anthropic
+- **patent_abstract_summarizer.json** – supabase/openai/openai
+- **gdpr_violation_alert.json** – supabase/openai/huggingface

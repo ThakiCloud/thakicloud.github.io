@@ -1,0 +1,11 @@
+# Manufacturing Templates
+- **machine_downtime_predictor.json** – weaviate/openai/anthropic
+- **inventory_restock_forecast.json** – supabase/cohere/anthropic
+- **quality_defect_classifier.json** – redis/openai/anthropic
+- **safety_incident_alert.json** – redis/huggingface/huggingface
+- **production_kpi_dashboard.json** – weaviate/cohere/openai
+- **supply_chain_delay_monitor.json** – supabase/cohere/openai
+- **maintenance_ticket_router.json** – supabase/cohere/huggingface
+- **shift_handover_summary.json** – supabase/huggingface/huggingface
+- **mes_log_analyzer.json** – weaviate/huggingface/openai
+- **packaging_waste_calculator.json** – redis/openai/anthropic
