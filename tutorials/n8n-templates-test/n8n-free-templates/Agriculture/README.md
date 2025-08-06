@@ -1,0 +1,11 @@
+# Agriculture Templates
+- **soil_nutrient_analysis.json** – weaviate/huggingface/huggingface
+- **crop_yield_predictor.json** – supabase/huggingface/openai
+- **pest_outbreak_alert.json** – pinecone/cohere/openai
+- **irrigation_schedule_optimizer.json** – pinecone/openai/huggingface
+- **farm_equipment_maintenance_reminder.json** – weaviate/openai/huggingface
+- **commodity_price_tracker.json** – redis/cohere/anthropic
+- **weather_impact_report.json** – supabase/huggingface/anthropic
+- **drone_image_crop_health.json** – supabase/openai/anthropic
+- **harvest_logbook.json** – pinecone/openai/huggingface
+- **greenhouse_climate_controller.json** – pinecone/huggingface/huggingface

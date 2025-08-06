@@ -1,0 +1,11 @@
+# Gaming Templates
+- **player_sentiment_dashboard.json** – supabase/huggingface/anthropic
+- **twitch_clip_highlights_script.json** – weaviate/cohere/huggingface
+- **in‑game_event_reminder.json** – supabase/openai/anthropic
+- **patch_note_summarizer.json** – weaviate/cohere/huggingface
+- **esports_match_alert.json** – weaviate/huggingface/openai
+- **loot‑box_probability_calculator.json** – pinecone/cohere/openai
+- **discord_guild_welcome_bot.json** – weaviate/openai/huggingface
+- **game_bug_triage.json** – redis/cohere/huggingface
+- **achievement_suggestion_engine.json** – supabase/huggingface/huggingface
+- **virtual_economy_price_tracker.json** – pinecone/cohere/huggingface

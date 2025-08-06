@@ -1,0 +1,11 @@
+# Travel Templates
+- **flight_price_drop_alert.json** – weaviate/openai/huggingface
+- **local_attraction_recommender.json** – pinecone/cohere/anthropic
+- **weather_packing_list_generator.json** – supabase/openai/anthropic
+- **visa_requirement_checker.json** – weaviate/cohere/anthropic
+- **hotel_review_sentiment.json** – pinecone/huggingface/huggingface
+- **travel_itinerary_builder.json** – supabase/cohere/openai
+- **currency_exchange_estimator.json** – weaviate/huggingface/huggingface
+- **airport_lounge_finder.json** – redis/cohere/huggingface
+- **travel_advisory_monitor.json** – pinecone/openai/anthropic
+- **road_trip_stop_planner.json** – supabase/cohere/anthropic

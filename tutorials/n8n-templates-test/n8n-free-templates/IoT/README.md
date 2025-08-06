@@ -1,0 +1,11 @@
+# IoT Templates
+- **sensor_fault_detector.json** – supabase/openai/huggingface
+- **smart_home_energy_saver.json** – supabase/cohere/huggingface
+- **iot_device_firmware_update_planner.json** – pinecone/huggingface/openai
+- **environmental_data_dashboard.json** – weaviate/openai/openai
+- **predictive_maintenance_alert.json** – weaviate/openai/openai
+- **edge_device_log_compressor.json** – redis/cohere/anthropic
+- **mqtt_topic_monitor.json** – redis/openai/huggingface
+- **ble_beacon_mapper.json** – pinecone/huggingface/openai
+- **industrial_iot_kpi_email.json** – redis/cohere/openai
+- **vehicle_telematics_analyzer.json** – redis/openai/huggingface

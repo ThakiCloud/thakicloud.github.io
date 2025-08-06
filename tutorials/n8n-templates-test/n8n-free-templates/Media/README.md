@@ -1,0 +1,11 @@
+# Media Templates
+- **podcast_show_notes_generator.json** – supabase/cohere/openai
+- **tv_rating_trend_report.json** – redis/huggingface/huggingface
+- **breaking_news_summarizer.json** – weaviate/huggingface/openai
+- **ad_campaign_performance_alert.json** – pinecone/cohere/openai
+- **content_idea_brainstormer.json** – redis/openai/anthropic
+- **script_dialogue_analyzer.json** – pinecone/huggingface/openai
+- **music_playlist_mood_tagger.json** – redis/openai/openai
+- **live_stream_chat_moderator.json** – supabase/openai/anthropic
+- **social_buzz_heatmap.json** – supabase/openai/huggingface
+- **pr_crisis_detector.json** – redis/openai/huggingface
