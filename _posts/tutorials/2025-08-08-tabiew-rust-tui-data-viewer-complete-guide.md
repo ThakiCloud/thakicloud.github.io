@@ -3,8 +3,8 @@ title: "Tabiew - Rust 기반 TUI 데이터 뷰어 완벽 가이드: CSV, Parquet
 excerpt: "Tabiew는 터미널에서 실행되는 강력한 데이터 뷰어입니다. CSV, Parquet, JSON 파일을 빠르게 보고, SQL 쿼리를 실행하며, Vim 스타일의 키바인딩을 지원합니다."
 seo_title: "Tabiew Rust TUI 데이터 뷰어 완벽 튜토리얼 - CSV Parquet SQL 지원 - Thaki Cloud"
 seo_description: "Tabiew 설치부터 고급 사용법까지 완벽 가이드. Rust로 개발된 터미널 데이터 뷰어로 CSV, Parquet, JSON 파일을 빠르게 분석하고 SQL 쿼리를 실행하는 방법을 알아보세요."
-date: 2025-01-27
-last_modified_at: 2025-01-27
+date: 2025-08-08
+last_modified_at: 2025-08-08
 categories:
   - tutorials
   - dev

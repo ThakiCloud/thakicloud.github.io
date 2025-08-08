@@ -3,8 +3,8 @@ title: "ByteDance Dolphin 문서 이미지 파싱: Fox 데이터셋과 벤치마
 excerpt: "ByteDance에서 공개한 Dolphin 프로젝트의 Fox 데이터셋과 벤치마크를 상세히 분석합니다. ACL 2025에 게재된 최신 문서 이해 기술과 3천만 개 이상의 샘플로 구성된 대규모 데이터셋을 알아보세요."
 seo_title: "ByteDance Dolphin Fox 데이터셋 분석 - 문서 이미지 파싱 벤치마크 가이드 - Thaki Cloud"
 seo_description: "ByteDance Dolphin의 Fox 데이터셋과 문서 이미지 파싱 벤치마크를 완전 분석. ACL 2025 논문 기반 최신 AI 문서 이해 기술과 3천만 개 샘플 데이터셋 구성을 상세히 설명합니다."
-date: 2025-01-27
-last_modified_at: 2025-01-27
+date: 2025-08-08
+last_modified_at: 2025-08-08
 categories:
   - datasets
   - research

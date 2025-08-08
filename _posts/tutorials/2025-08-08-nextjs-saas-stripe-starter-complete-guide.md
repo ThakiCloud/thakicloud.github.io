@@ -3,8 +3,8 @@ title: "Next.js SaaS Stripe Starter: 완전한 구독 결제 시스템 구축 �
 excerpt: "Next.js, Supabase, Stripe를 활용한 완전한 SaaS 애플리케이션 구축 방법을 알아보세요. 구독 결제, 사용자 인증, 데이터베이스 관리까지 모든 것을 다룹니다."
 seo_title: "Next.js SaaS Stripe Starter 완전 가이드 - 구독 결제 시스템 구축 - Thaki Cloud"
 seo_description: "Next.js, Supabase, Stripe를 사용한 SaaS 애플리케이션 개발 완전 가이드. 구독 결제, 웹훅, 사용자 관리, 배포까지 실무 중심의 단계별 튜토리얼을 제공합니다."
-date: 2025-01-27
-last_modified_at: 2025-01-27
+date: 2025-08-08
+last_modified_at: 2025-08-08
 categories:
   - tutorials
   - dev

@@ -3,8 +3,8 @@ title: "Mautic 오픈소스 마케팅 자동화 플랫폼 완벽 가이드: 설�
 excerpt: "Mautic은 강력한 오픈소스 마케팅 자동화 플랫폼입니다. 이메일 마케팅, 리드 관리, 캠페인 자동화를 무료로 구축하고 완전한 데이터 소유권을 확보하는 방법을 알아보세요."
 seo_title: "Mautic 오픈소스 마케팅 자동화 완벽 설치 가이드 - 무료 대안 - Thaki Cloud"
 seo_description: "Mautic 오픈소스 마케팅 자동화 플랫폼 설치부터 고급 활용까지 완벽 가이드. Docker, AWS 배포, 이메일 캠페인, 리드 스코링, API 연동 등 실무 중심의 튜토리얼을 제공합니다."
-date: 2025-01-27
-last_modified_at: 2025-01-27
+date: 2025-08-08
+last_modified_at: 2025-08-08
 categories:
   - tutorials
   - dev

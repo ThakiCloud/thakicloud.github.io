@@ -3,8 +3,8 @@ title: "HubProxy 완전 가이드 - Docker와 GitHub 가속을 위한 고성능 
 excerpt: "Go 기반의 오픈소스 HubProxy로 Docker 이미지 풀링과 GitHub 파일 다운로드 속도를 획기적으로 개선하는 방법을 배웁니다."
 seo_title: "HubProxy 설치 및 구축 완전 가이드 - Docker GitHub 가속 프록시 - Thaki Cloud"
 seo_description: "Go 언어로 구현된 HubProxy 프록시 서버 설치부터 운영까지, Docker 이미지와 GitHub 파일 다운로드 속도 개선을 위한 완전한 튜토리얼"
-date: 2025-01-27
-last_modified_at: 2025-01-27
+date: 2025-08-07
+last_modified_at: 2025-08-07
 categories:
   - tutorials
 tags:
