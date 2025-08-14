@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenReplay 데모 - 세션 리플레이 테스트</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .demo-section {
+            margin: 30px;
+            padding: 30px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            background: #fafbfc;
+        }
+
+        .demo-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+        }
+
+        button.danger {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+        }
+
+        button.danger:hover {
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .counter-display {
+            font-size: 48px;
+            font-weight: bold;
+            color: #3498db;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .status-indicator {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .console-output {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+
+        .privacy-mask {
+            background: #34495e;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .demo-section {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎥 OpenReplay 세션 리플레이 데모</h1>
+            <p>사용자 행동 분석과 세션 기록을 위한 오픈소스 플랫폼</p>
+            <div id="session-status" class="status-indicator status-info">
+                OpenReplay 초기화 중...
+            </div>
+        </header>
+
+        <div class="demo-section">
+            <h2>📊 기본 상호작용 테스트</h2>
+            <p>다양한 UI 상호작용을 통해 세션 기록을 테스트합니다.</p>
+            
+            <div class="counter-display" id="counter">0</div>
+            <button onclick="incrementCounter()">카운터 증가</button>
+            <button onclick="decrementCounter()">카운터 감소</button>
+            <button onclick="resetCounter()">리셋</button>
+        </div>
+
+        <div class="demo-section">
+            <h2>📝 폼 입력 테스트</h2>
+            <p>사용자 입력과 폼 제출 과정을 추적합니다.</p>
+            
+            <form id="demo-form">
+                <div class="form-group">
+                    <label for="username">사용자명:</label>
+                    <input type="text" id="username" name="username" placeholder="사용자명을 입력하세요">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">이메일:</label>
+                    <input type="email" id="email" name="email" placeholder="이메일을 입력하세요">
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">카테고리:</label>
+                    <select id="category" name="category">
+                        <option value="">선택하세요</option>
+                        <option value="general">일반</option>
+                        <option value="technical">기술</option>
+                        <option value="billing">결제</option>
+                        <option value="support">지원</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">메시지:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="메시지를 입력하세요"></textarea>
+                </div>
+                
+                <button type="submit">폼 제출</button>
+            </form>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔍 고급 기능 테스트</h2>
+            <p>API 호출, 오류 처리, 성능 측정 등을 테스트합니다.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>🌐 네트워크 요청</h3>
+                    <button onclick="testApiCall()">API 호출 테스트</button>
+                    <button onclick="testFailedApi()">실패 API 테스트</button>
+                    <div id="api-result"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>❌ 오류 처리</h3>
+                    <button class="danger" onclick="triggerJSError()">JavaScript 오류</button>
+                    <button class="danger" onclick="triggerConsoleError()">콘솔 오류</button>
+                    <button class="danger" onclick="triggerNetworkError()">네트워크 오류</button>
+                </div>
+                
+                <div class="card">
+                    <h3>⚡ 성능 테스트</h3>
+                    <button onclick="testPerformance()">성능 측정</button>
+                    <button onclick="simulateSlowOperation()">느린 작업 시뮬레이션</button>
+                    <div id="performance-result"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔒 프라이버시 제어 테스트</h2>
+            <p>민감한 데이터 마스킹과 프라이버시 설정을 테스트합니다.</p>
+            
+            <div class="form-group">
+                <label for="credit-card">신용카드 번호 (마스킹됨):</label>
+                <input type="text" id="credit-card" class="or-mask" placeholder="1234-5678-9012-3456">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">비밀번호 (숨김):</label>
+                <input type="password" id="password" data-openreplay-obscured placeholder="비밀번호 입력">
+            </div>
+            
+            <div class="privacy-mask" data-openreplay-hidden>
+                <p>🔒 이 영역은 완전히 숨겨집니다.</p>
+                <p>민감한 정보: 계좌번호 123-456-789</p>
+            </div>
+            
+            <div data-openreplay-masked>
+                <p>📝 이 텍스트는 마스킹됩니다: 개인정보 김철수</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎮 사용자 경험 테스트</h2>
+            <p>스크롤, 호버, 드래그 등 다양한 상호작용을 테스트합니다.</p>
+            
+            <div style="height: 200px; overflow-y: scroll; border: 2px solid #bdc3c7; padding: 15px;">
+                <h4>스크롤 가능한 영역</h4>
+                <p>이 영역을 스크롤하여 스크롤 이벤트를 생성하세요.</p>
+                <div style="height: 500px; background: linear-gradient(to bottom, #3498db, #2980b9); border-radius: 4px; margin: 10px 0;"></div>
+                <p>스크롤 테스트 완료!</p>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <button onmouseover="handleHover(this)" onmouseout="handleHoverOut(this)">호버 테스트</button>
+                <button onclick="simulateComplexInteraction()">복잡한 상호작용</button>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📱 실시간 지원 테스트</h2>
+            <p>Assist 기능을 통한 실시간 사용자 지원을 테스트합니다.</p>
+            
+            <button onclick="requestSupport()">고객 지원 요청</button>
+            <button onclick="startScreenShare()">화면 공유 시작</button>
+            <div id="support-status"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📈 분석 및 메트릭</h2>
+            <p>커스텀 이벤트와 비즈니스 메트릭을 추적합니다.</p>
+            
+            <button onclick="trackConversion()">전환 이벤트</button>
+            <button onclick="trackEngagement()">참여도 측정</button>
+            <button onclick="trackFeatureUsage()">기능 사용률</button>
+            
+            <div class="console-output" id="metrics-log">
+                메트릭 로그가 여기에 표시됩니다...
+            </div>
+        </div>
+    </div>
+
+    <script src="demo.js"></script>
+</body>
+</html>
