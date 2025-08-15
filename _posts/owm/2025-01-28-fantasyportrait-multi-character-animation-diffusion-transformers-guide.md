@@ -3,8 +3,8 @@ title: "FantasyPortrait: 다중 캐릭터 초상화 애니메이션을 위한 �
 excerpt: "Alibaba AMAP CV Lab의 FantasyPortrait로 다중 인물 초상화 애니메이션 생성하기. Multi-Expr 데이터셋과 확산 변환기를 활용한 워크플로우 자동화"
 seo_title: "FantasyPortrait 다중 캐릭터 애니메이션 가이드 - 확산 변환기 활용 - Thaki Cloud"
 seo_description: "FantasyPortrait를 활용한 다중 인물 초상화 애니메이션 생성 워크플로우. 설치부터 Multi-Expr 데이터셋 활용까지 포함한 완전 가이드"
-date: 2025-08-15
-last_modified_at: 2025-08-15
+date: 2025-01-28
+last_modified_at: 2025-01-28
 categories:
   - owm
   - research
