@@ -1,7 +1,5 @@
 ---
-description: 
-globs: 
-alwaysApply: true
+alwaysApply: false
 ---
 ---
 title: 기술 블로그 시리즈 작성 가이드
