@@ -1,0 +1,32 @@
+# MetaGPT 개발 환경 설정
+# ~/.metagpt/config2.yaml에 복사하여 사용
+
+llm:
+  api_type: "openai"
+  model: "gpt-3.5-turbo"  # 빠르고 저렴한 모델
+  base_url: "https://api.openai.com/v1"
+  api_key: "YOUR_OPENAI_API_KEY"  # 실제 API 키로 교체
+  temperature: 0.3                # 일관성 있는 결과
+  max_tokens: 2048               # 토큰 절약
+  timeout: 60                    # 빠른 타임아웃
+
+workspace:
+  path: "./workspace"            # 프로젝트 생성 경로
+
+logging:
+  level: "DEBUG"                 # 상세한 로그
+  file: "~/.metagpt/logs/dev.log"
+
+# 개발용 최적화 설정
+optimization:
+  max_concurrent_requests: 2
+  request_rate_limit: 10        # 분당 요청 수
+  enable_caching: true
+  cache_ttl: 3600              # 1시간 캐시
+
+# 프로젝트 기본 설정
+project:
+  default_language: "python"
+  default_framework: "fastapi"
+  include_tests: true
+  include_docs: true

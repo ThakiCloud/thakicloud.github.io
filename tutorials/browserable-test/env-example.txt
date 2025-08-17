@@ -1,0 +1,16 @@
+# Browserable API 설정
+BROWSERABLE_API_KEY=your_browserable_api_key_here
+BROWSERABLE_BASE_URL=http://localhost:2003
+
+# LLM 제공업체 중 하나 선택
+OPENAI_API_KEY=your_openai_key
+CLAUDE_API_KEY=your_claude_key  
+GEMINI_API_KEY=your_gemini_key
+
+# 원격 브라우저 제공업체 중 하나 선택
+HYPERBROWSER_API_KEY=your_hyperbrowser_key
+STEEL_API_KEY=your_steel_key
+
+# 테스트 설정
+TEST_MODE=true
+DEBUG=true

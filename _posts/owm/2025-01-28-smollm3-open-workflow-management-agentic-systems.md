@@ -3,8 +3,8 @@ title: "SmolLM3 기반 오픈 워크플로우 관리 - 온디바이스 에이전
 excerpt: "Hugging Face SmolLM3 3B 모델을 활용한 효율적인 로컬 AI 워크플로우 관리 시스템 구축 방법과 향후 에이전트 생태계 전략을 살펴봅니다."
 seo_title: "SmolLM3 온디바이스 에이전트 워크플로우 관리 완전 가이드 - Thaki Cloud"
 seo_description: "3B 파라미터 SmolLM3로 구축하는 로컬 AI 에이전트 시스템. 툴 콜링, 멀티모달 처리, 128k 컨텍스트를 활용한 오픈 워크플로우 관리 전략"
-date: 2025-08-15
-last_modified_at: 2025-08-15
+date: 2025-01-28
+last_modified_at: 2025-01-28
 categories:
   - owm
 tags:
