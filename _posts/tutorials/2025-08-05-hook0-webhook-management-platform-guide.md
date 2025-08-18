@@ -1949,7 +1949,7 @@ groups:
           severity: warning
         annotations:
           summary: "High webhook failure rate"
-          description: "Webhook failure rate is {{ $value | humanizePercentage }} for the last 5 minutes"
+          description: "Webhook failure rate is {% raw %}{{ $value | humanizePercentage }}{% endraw %} for the last 5 minutes"
       
       - alert: QueueBacklog
         expr: hook0_queue_size > 1000
@@ -1958,7 +1958,7 @@ groups:
           severity: critical
         annotations:
           summary: "Large queue backlog detected"
-          description: "Queue {{ $labels.queue_name }} has {{ $value }} pending jobs"
+          description: "Queue {% raw %}{{ $labels.queue_name }}{% endraw %} has {% raw %}{{ $value }}{% endraw %} pending jobs"
       
       - alert: HighResponseTime
         expr: histogram_quantile(0.95, rate(hook0_webhook_duration_seconds_bucket[5m])) > 10
@@ -1967,7 +1967,7 @@ groups:
           severity: warning
         annotations:
           summary: "High webhook response time"
-          description: "95th percentile response time is {{ $value }}s"
+          description: "95th percentile response time is {% raw %}{{ $value }}{% endraw %}s"
       
       - alert: CircuitBreakerOpen
         expr: hook0_circuit_breaker_state == 1
@@ -1976,7 +1976,7 @@ groups:
           severity: critical
         annotations:
           summary: "Circuit breaker is open"
-          description: "Circuit breaker for {{ $labels.endpoint }} is open"
+          description: "Circuit breaker for {% raw %}{{ $labels.endpoint }}{% endraw %} is open"
       
       - alert: ServiceDown
         expr: up{job="hook0"} == 0

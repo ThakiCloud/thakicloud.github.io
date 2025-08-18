@@ -710,10 +710,10 @@ data:
     template {
       destination = "/vault/secrets/database"
       contents = <<EOH
-      {{ with secret "secret/data/myapp/database" }}
-      DATABASE_USERNAME={{ .Data.data.username }}
-      DATABASE_PASSWORD={{ .Data.data.password }}
-      {{ end }}
+      {% raw %}{{ with secret "secret/data/myapp/database" }}{% endraw %}
+      DATABASE_USERNAME={% raw %}{{ .Data.data.username }}{% endraw %}
+      DATABASE_PASSWORD={% raw %}{{ .Data.data.password }}{% endraw %}
+      {% raw %}{{ end }}{% endraw %}
       EOH
     }
 ```

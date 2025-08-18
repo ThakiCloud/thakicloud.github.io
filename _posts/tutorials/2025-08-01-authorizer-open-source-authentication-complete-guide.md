@@ -676,13 +676,13 @@ CUSTOM_MAGIC_LINK_URL=https://yourapp.com/auth/magic-link
 </head>
 <body>
     <div class="container">
-        <h2>{{APP_NAME}} 로그인</h2>
+        <h2>{% raw %}{{APP_NAME}}{% endraw %} 로그인</h2>
         <p>안녕하세요!</p>
-        <p>아래 버튼을 클릭하여 {{APP_NAME}}에 로그인하세요:</p>
+        <p>아래 버튼을 클릭하여 {% raw %}{{APP_NAME}}{% endraw %}에 로그인하세요:</p>
         <p>
-            <a href="{{MAGIC_LINK}}" class="button">로그인하기</a>
+            <a href="{% raw %}{{MAGIC_LINK}}{% endraw %}" class="button">로그인하기</a>
         </p>
-        <p>이 링크는 {{EXPIRY_TIME}}분 후에 만료됩니다.</p>
+        <p>이 링크는 {% raw %}{{EXPIRY_TIME}}{% endraw %}분 후에 만료됩니다.</p>
         <p>링크를 요청하지 않으셨다면 이 이메일을 무시하세요.</p>
     </div>
 </body>
@@ -713,11 +713,11 @@ import { AuthorizerProvider } from '@authorizerdev/authorizer-react';
 function App() {
   return (
     <AuthorizerProvider
-      config={{
+      config={% raw %}{{
         authorizerURL: 'http://localhost:8080',
         redirectURL: window.location.origin,
         clientID: 'your-client-id',
-      }}
+      }}{% endraw %}
     >
       <div className="App">
         <Routes />
@@ -738,7 +738,7 @@ import { Authorizer } from '@authorizerdev/authorizer-react';
 
 const LoginPage = () => {
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
+    <div style={% raw %}{{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}{% endraw %}>
       <h2>로그인</h2>
       <Authorizer />
     </div>
@@ -809,11 +809,11 @@ import App from './App.vue';
 
 const app = createApp(App);
 
-app.use(AuthorizerPlugin, {
+app.use(AuthorizerPlugin, {% raw %}{
   authorizerURL: 'http://localhost:8080',
   redirectURL: window.location.origin,
   clientID: 'your-client-id',
-});
+}{% endraw %});
 
 app.mount('#app');
 ```

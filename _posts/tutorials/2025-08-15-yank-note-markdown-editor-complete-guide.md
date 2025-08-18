@@ -901,16 +901,16 @@ module.exports = {
 
 ```markdown
 <!-- 매크로 대체 기능 -->
-오늘 날짜: {{new Date().toLocaleDateString('ko-KR')}}
-현재 시간: {{new Date().toLocaleTimeString('ko-KR')}}
-문서 경로: {{ctx.currentFile.path}}
-작성자: {{process.env.USER || 'Unknown'}}
+오늘 날짜: {% raw %}{{new Date().toLocaleDateString('ko-KR')}}{% endraw %}
+현재 시간: {% raw %}{{new Date().toLocaleTimeString('ko-KR')}}{% endraw %}
+문서 경로: {% raw %}{{ctx.currentFile.path}}{% endraw %}
+작성자: {% raw %}{{process.env.USER || 'Unknown'}}{% endraw %}
 
 <!-- 동적 목차 생성 -->
-{{
+{% raw %}{{
   const headings = ctx.document.getHeadings();
   headings.map(h => `${'  '.repeat(h.level-1)}- [${h.text}](#${h.anchor})`).join('\n')
-}}
+}}{% endraw %}
 ```
 
 ### 팀 협업 설정

@@ -1024,7 +1024,7 @@ class ReceiptProcessingAction(Action):
             {receipt_data}
             
             Please provide a JSON response with:
-            {{
+            {% raw %}{{
                 "merchant_name": "Store name",
                 "date": "YYYY-MM-DD",
                 "time": "HH:MM",
@@ -1042,7 +1042,7 @@ class ReceiptProcessingAction(Action):
                 "payment_method": "Cash/Card/etc",
                 "receipt_number": "Number if available",
                 "location": "Store address if available"
-            }}
+            }}{% endraw %}
             """
         
         elif processing_type == "categorize":

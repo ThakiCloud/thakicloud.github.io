@@ -1115,10 +1115,10 @@ function OpenReplayDemo() {
   };
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div style={% raw %}{{ padding: '20px', fontFamily: 'Arial, sans-serif' }}{% endraw %}>
       <h1>OpenReplay 데모 애플리케이션</h1>
       
-      <div style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc' }}>
+      <div style={% raw %}{{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc' }}{% endraw %}>
         <h2>카운터 테스트</h2>
         <p>현재 카운트: {counter}</p>
         <button onClick={handleCounterClick}>
@@ -1126,7 +1126,7 @@ function OpenReplayDemo() {
         </button>
       </div>
 
-      <div style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc' }}>
+      <div style={% raw %}{{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc' }}{% endraw %}>
         <h2>폼 입력 테스트</h2>
         <form onSubmit={handleFormSubmit}>
           <div>
@@ -1140,11 +1140,11 @@ function OpenReplayDemo() {
                   name: e.target.value
                 }))}
                 placeholder="이름을 입력하세요"
-                style={{ marginLeft: '10px', padding: '5px' }}
+                style={% raw %}{{ marginLeft: '10px', padding: '5px' }}{% endraw %}
               />
             </label>
           </div>
-          <div style={{ marginTop: '10px' }}>
+          <div style={% raw %}{{ marginTop: '10px' }}{% endraw %}>
             <label>
               이메일:
               <input
@@ -1155,29 +1155,29 @@ function OpenReplayDemo() {
                   email: e.target.value
                 }))}
                 placeholder="이메일을 입력하세요"
-                style={{ marginLeft: '10px', padding: '5px' }}
+                style={% raw %}{{ marginLeft: '10px', padding: '5px' }}{% endraw %}
               />
             </label>
           </div>
-          <button type="submit" style={{ marginTop: '10px' }}>제출</button>
+          <button type="submit" style={% raw %}{{ marginTop: '10px' }}{% endraw %}>제출</button>
         </form>
       </div>
 
-      <div style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc' }}>
+      <div style={% raw %}{{ marginBottom: '30px', padding: '20px', border: '1px solid #ccc' }}{% endraw %}>
         <h2>오류 테스트</h2>
         <button onClick={handleErrorTest}>
           의도적 오류 발생
         </button>
       </div>
 
-      <div style={{ padding: '20px', border: '1px solid #ccc' }}>
+      <div style={% raw %}{{ padding: '20px', border: '1px solid #ccc' }}{% endraw %}>
         <h2>개발자 도구</h2>
         <p>브라우저 개발자 도구를 열어 OpenReplay 로그를 확인하세요.</p>
-        <button onClick={() => {
+        <button onClick={% raw %}{{() => {
           console.log('OpenReplay 콘솔 로그 테스트');
           console.warn('OpenReplay 경고 메시지 테스트');
           console.error('OpenReplay 오류 메시지 테스트');
-        }}>
+        }}}{% endraw %}>
           콘솔 로그 생성
         </button>
       </div>

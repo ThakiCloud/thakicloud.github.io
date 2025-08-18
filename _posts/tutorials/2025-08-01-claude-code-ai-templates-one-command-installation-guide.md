@@ -707,18 +707,18 @@ post_install:
 ```typescript
 // templates/src/App.tsx.template
 import React from 'react';
-{{#if options.ui_library === "styled-components"}}
+{% raw %}{{#if options.ui_library === "styled-components"}}{% endraw %}
 import styled from 'styled-components';
-{{/if}}
-{{#if options.ui_library === "tailwind"}}
+{% raw %}{{/if}}{% endraw %}
+{% raw %}{{#if options.ui_library === "tailwind"}}{% endraw %}
 import './App.css';
-{{/if}}
+{% raw %}{{/if}}{% endraw %}
 
 const App: React.FC = () => {
   return (
-    <div className="{{#if options.ui_library === "tailwind"}}min-h-screen bg-gray-100{{/if}}">
-      <h1>{{template.name}}</h1>
-      <p>{{template.description}}</p>
+    <div className="{% raw %}{{#if options.ui_library === "tailwind"}}min-h-screen bg-gray-100{{/if}}{% endraw %}">
+      <h1>{% raw %}{{template.name}}{% endraw %}</h1>
+      <p>{% raw %}{{template.description}}{% endraw %}</p>
     </div>
   );
 };
@@ -933,7 +933,7 @@ analyze_trends = ClaudeAnalysisOperator(
     task_id='analyze_sales_trends',
     analysis_type='trend_analysis',
     model='claude-3-sonnet-20240229',
-    input_data='{{ ti.xcom_pull(task_ids="extract_sales_data") }}',
+    input_data='{% raw %}{{ ti.xcom_pull(task_ids="extract_sales_data") }}{% endraw %}',
     dag=dag
 )
 

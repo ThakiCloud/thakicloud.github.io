@@ -962,7 +962,7 @@ docker exec wg-easy wg show wg0 peers | wc -l
 
 # CPU/메모리 사용률
 echo -e "\n4. 리소스 사용률"
-docker stats wg-easy --no-stream --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"
+docker stats wg-easy --no-stream --format "table {% raw %}{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}{% endraw %}"
 EOF
 
 chmod +x performance-test.sh
@@ -1620,7 +1620,7 @@ ping -c 20 10.8.0.1 | tail -n 1
 # 3. CPU 사용률 테스트
 echo -e "\n3. CPU 사용률 (VPN 트래픽 중)"
 echo "WireGuard 서버:"
-docker stats wg-easy --no-stream --format "{{.CPUPerc}}"
+docker stats wg-easy --no-stream --format "{% raw %}{{.CPUPerc}}{% endraw %}"
 
 # 4. 암호화 오버헤드 측정
 echo -e "\n4. 암호화 오버헤드"

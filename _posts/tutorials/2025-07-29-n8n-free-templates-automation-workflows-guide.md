@@ -845,7 +845,7 @@ await fetch('https://api.datadoghq.com/api/v1/series', {
     "onError": {
       "slack": {
         "channel": "#alerts",
-        "message": "🚨 워크플로우 오류: {{$workflow.name}} - {{$execution.id}}"
+        "message": "🚨 워크플로우 오류: {% raw %}{{$workflow.name}} - {{$execution.id}}{% endraw %}"
       }
     },
     "onSuccess": {
