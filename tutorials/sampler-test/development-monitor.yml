@@ -1,0 +1,63 @@
+variables:
+  project_dir: ~/work/thakicloud/thakicloud.github.io
+
+sparklines:
+  - title: Git Commits per Day
+    rate-ms: 5000
+    scale: 0
+    sample: cd $project_dir && git log --since="1 day ago" --oneline | wc -l | tr -d ' '
+
+  - title: Code Lines Changed Today
+    rate-ms: 10000
+    scale: 0
+    sample: cd $project_dir && git log --since="1 day ago" --numstat | awk '{add+=$1; del+=$2} END {print add+del}'
+
+barcharts:
+  - title: File Types in Project
+    rate-ms: 15000
+    items:
+      - label: Markdown (.md)
+        sample: cd $project_dir && find . -name "*.md" | wc -l | tr -d ' '
+      - label: YAML (.yml)
+        sample: cd $project_dir && find . -name "*.yml" | wc -l | tr -d ' '
+      - label: JavaScript (.js)
+        sample: cd $project_dir && find . -name "*.js" | wc -l | tr -d ' '
+      - label: Python (.py)
+        sample: cd $project_dir && find . -name "*.py" | wc -l | tr -d ' '
+      - label: Shell (.sh)
+        sample: cd $project_dir && find . -name "*.sh" | wc -l | tr -d ' '
+
+runcharts:
+  - title: Development Activity (Files Modified)
+    rate-ms: 5000
+    scale: 0
+    items:
+      - label: Modified Files
+        sample: cd $project_dir && git status --porcelain | wc -l | tr -d ' '
+        color: 178
+      - label: Staged Files
+        sample: cd $project_dir && git diff --cached --name-only | wc -l | tr -d ' '
+        color: 85
+
+textboxes:
+  - title: Project Statistics
+    rate-ms: 20000
+    sample: |
+      cd $project_dir
+      echo "=== Repository Info ==="
+      echo "Current Branch: $(git branch --show-current)"
+      echo "Last Commit: $(git log -1 --format='%h - %s (%cr)')"
+      echo "Total Commits: $(git rev-list --count HEAD)"
+      echo "Contributors: $(git log --format='%an' | sort -u | wc -l | tr -d ' ')"
+      echo ""
+      echo "=== File Statistics ==="
+      echo "Total Files: $(find . -type f | wc -l | tr -d ' ')"
+      echo "Blog Posts: $(find ./_posts -name "*.md" | wc -l | tr -d ' ')"
+      echo "Tutorials: $(find ./_posts/tutorials -name "*.md" | wc -l | tr -d ' ')"
+      echo ""
+      echo "=== Recent Activity ==="
+      echo "Files changed today: $(git log --since='1 day ago' --name-only --pretty=format: | sort | uniq | wc -l | tr -d ' ')"
+
+  - title: Git Status
+    rate-ms: 3000
+    sample: cd $project_dir && git status --short

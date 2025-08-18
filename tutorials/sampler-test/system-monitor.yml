@@ -1,0 +1,53 @@
+variables:
+  refresh_rate: 1000
+
+sparklines:
+  - title: CPU Usage (%)
+    rate-ms: 1000
+    scale: 0
+    sample: ps -A -o %cpu | awk '{s+=$1} END {print s}'
+
+  - title: Memory Usage (%)
+    rate-ms: 1000
+    scale: 0
+    sample: ps -A -o %mem | awk '{s+=$1} END {print s}'
+
+  - title: Disk Usage (GB)
+    rate-ms: 5000
+    scale: 0
+    sample: df -h / | awk 'NR==2 {print $3}' | sed 's/Gi//'
+
+barcharts:
+  - title: Top Processes by CPU
+    rate-ms: 3000
+    items:
+      - label: Process 1
+        sample: ps aux --sort=-%cpu | awk 'NR==2 {print $3}'
+      - label: Process 2
+        sample: ps aux --sort=-%cpu | awk 'NR==3 {print $3}'
+      - label: Process 3
+        sample: ps aux --sort=-%cpu | awk 'NR==4 {print $3}'
+      - label: Process 4
+        sample: ps aux --sort=-%cpu | awk 'NR==5 {print $3}'
+      - label: Process 5
+        sample: ps aux --sort=-%cpu | awk 'NR==6 {print $3}'
+
+runcharts:
+  - title: Network Activity (KB/s)
+    rate-ms: 2000
+    scale: 0
+    items:
+      - label: RX
+        sample: netstat -ib | awk 'FNR==2 {print $7/1024}'
+      - label: TX
+        sample: netstat -ib | awk 'FNR==2 {print $10/1024}'
+
+textboxes:
+  - title: System Information
+    rate-ms: 5000
+    sample: |
+      echo "Hostname: $(hostname)"
+      echo "Uptime: $(uptime | awk -F'up ' '{print $2}' | awk -F', load' '{print $1}')"
+      echo "Load Average: $(uptime | awk -F'load averages: ' '{print $2}')"
+      echo "Users: $(who | wc -l | tr -d ' ')"
+      echo "Processes: $(ps aux | wc -l | tr -d ' ')"

@@ -1,0 +1,52 @@
+sparklines:
+  - title: Running Containers
+    rate-ms: 3000
+    scale: 0
+    sample: docker ps -q | wc -l | tr -d ' '
+
+  - title: Total Images
+    rate-ms: 5000
+    scale: 0
+    sample: docker images -q | wc -l | tr -d ' '
+
+barcharts:
+  - title: Container Status
+    rate-ms: 5000
+    items:
+      - label: Running
+        sample: docker ps --filter "status=running" -q | wc -l | tr -d ' '
+      - label: Stopped
+        sample: docker ps --filter "status=exited" -a -q | wc -l | tr -d ' '
+      - label: Paused
+        sample: docker ps --filter "status=paused" -q | wc -l | tr -d ' '
+
+runcharts:
+  - title: Docker System Usage
+    rate-ms: 3000
+    scale: 0
+    items:
+      - label: CPU Usage (%)
+        sample: docker stats --no-stream --format "{{.CPUPerc}}" | head -1 | sed 's/%//' || echo "0"
+        color: 178
+      - label: Memory Usage (%)
+        sample: docker stats --no-stream --format "{{.MemPerc}}" | head -1 | sed 's/%//' || echo "0"
+        color: 85
+
+textboxes:
+  - title: Docker System Info
+    rate-ms: 10000
+    sample: |
+      echo "=== Docker Version ==="
+      docker --version
+      echo ""
+      echo "=== System Info ==="
+      docker system df --format "table {{.Type}}\t{{.Total}}\t{{.Active}}\t{{.Size}}"
+      echo ""
+      echo "=== Running Containers ==="
+      docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | head -10
+
+  - title: Container Resource Usage
+    rate-ms: 5000
+    sample: |
+      echo "=== Container Stats ==="
+      docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}" | head -5 || echo "No containers running"
