@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmbedPDF Vanilla JavaScript 예제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .file-input {
+            margin-bottom: 20px;
+        }
+
+        .file-input input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px dashed #007aff;
+            border-radius: 8px;
+            background: #f0f8ff;
+            cursor: pointer;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .controls button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #007aff;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .controls button:hover {
+            background: #0056b3;
+        }
+
+        .controls button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .pdf-viewer {
+            min-height: 400px;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0f8ff;
+            border-radius: 6px;
+            border: 1px solid #007aff;
+        }
+
+        .error {
+            background: #ffe6e6;
+            border-color: #ff4444;
+            color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 EmbedPDF Vanilla JavaScript</h1>
+            <p>순수 JavaScript로 PDF 뷰어 구현하기</p>
+        </div>
+
+        <div class="section">
+            <h2>파일 선택</h2>
+            <div class="file-input">
+                <input type="file" id="pdfInput" accept=".pdf">
+            </div>
+            
+            <div class="controls">
+                <button id="loadBtn" disabled>PDF 로드</button>
+                <button id="prevBtn" disabled>이전</button>
+                <span id="pageInfo">페이지: - / -</span>
+                <button id="nextBtn" disabled>다음</button>
+                <button id="zoomInBtn" disabled>확대</button>
+                <button id="zoomOutBtn" disabled>축소</button>
+                <span id="zoomInfo">100%</span>
+            </div>
+
+            <div class="pdf-viewer" id="pdfViewer">
+                PDF 파일을 선택하세요
+            </div>
+
+            <div id="status" class="status" style="display: none;">
+                상태 정보가 여기에 표시됩니다.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 구현 가이드</h2>
+            <p>실제 EmbedPDF 구현 시에는 다음과 같은 코드를 사용합니다:</p>
+            <pre><code>// EmbedPDF 초기화
+import EmbedPDF from '@embedpdf/core';
+
+const viewer = new EmbedPDF('#pdf-container', {
+  plugins: ['annotations', 'search', 'zoom'],
+  theme: 'light',
+  toolbar: true
+});
+
+// PDF 로드
+await viewer.load(pdfFile);
+
+// 이벤트 리스너
+viewer.on('pageChange', (page) => {
+  console.log('현재 페이지:', page);
+});
+            </code></pre>
+        </div>
+    </div>
+
+    <script>
+        // Vanilla JavaScript 구현
+        class PDFViewerDemo {
+            constructor() {
+                this.currentPage = 1;
+                this.totalPages = 0;
+                this.zoomLevel = 100;
+                this.selectedFile = null;
+                
+                this.initElements();
+                this.bindEvents();
+            }
+
+            initElements() {
+                this.pdfInput = document.getElementById('pdfInput');
+                this.loadBtn = document.getElementById('loadBtn');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.zoomInBtn = document.getElementById('zoomInBtn');
+                this.zoomOutBtn = document.getElementById('zoomOutBtn');
+                this.pdfViewer = document.getElementById('pdfViewer');
+                this.pageInfo = document.getElementById('pageInfo');
+                this.zoomInfo = document.getElementById('zoomInfo');
+                this.status = document.getElementById('status');
+            }
+
+            bindEvents() {
+                this.pdfInput.addEventListener('change', (e) => this.handleFileSelect(e));
+                this.loadBtn.addEventListener('click', () => this.loadPDF());
+                this.prevBtn.addEventListener('click', () => this.previousPage());
+                this.nextBtn.addEventListener('click', () => this.nextPage());
+                this.zoomInBtn.addEventListener('click', () => this.zoomIn());
+                this.zoomOutBtn.addEventListener('click', () => this.zoomOut());
+            }
+
+            handleFileSelect(event) {
+                const file = event.target.files[0];
+                if (file && file.type === 'application/pdf') {
+                    this.selectedFile = file;
+                    this.loadBtn.disabled = false;
+                    this.showStatus(`선택된 파일: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`);
+                } else {
+                    this.showStatus('PDF 파일만 선택 가능합니다.', true);
+                    this.loadBtn.disabled = true;
+                }
+            }
+
+            async loadPDF() {
+                if (!this.selectedFile) return;
+
+                this.showStatus('PDF 로딩 중...');
+                this.pdfViewer.innerHTML = '<div>📄 PDF 로딩 중...</div>';
+
+                try {
+                    // 실제 구현에서는 여기서 EmbedPDF API 사용
+                    // const viewer = new EmbedPDF(this.pdfViewer, { file: this.selectedFile });
+                    
+                    // 데모용 시뮬레이션
+                    await this.simulateLoading();
+                    
+                    this.totalPages = 15; // 데모용
+                    this.currentPage = 1;
+                    this.updateUI();
+                    this.enableControls();
+                    
+                    this.pdfViewer.innerHTML = `
+                        <div>
+                            <h3>📋 PDF 뷰어 (데모)</h3>
+                            <p>파일: ${this.selectedFile.name}</p>
+                            <p>현재 페이지: ${this.currentPage}</p>
+                            <p>줌 레벨: ${this.zoomLevel}%</p>
+                            <br>
+                            <p style="color: #666; font-size: 14px;">
+                                실제 환경에서는 여기에 PDF 내용이 렌더링됩니다.
+                            </p>
+                        </div>
+                    `;
+                    
+                    this.showStatus('PDF 로드 완료!');
+                } catch (error) {
+                    this.showStatus('PDF 로드 중 오류가 발생했습니다.', true);
+                }
+            }
+
+            simulateLoading() {
+                return new Promise(resolve => setTimeout(resolve, 1500));
+            }
+
+            enableControls() {
+                this.prevBtn.disabled = false;
+                this.nextBtn.disabled = false;
+                this.zoomInBtn.disabled = false;
+                this.zoomOutBtn.disabled = false;
+                this.updateUI();
+            }
+
+            previousPage() {
+                if (this.currentPage > 1) {
+                    this.currentPage--;
+                    this.updateViewer();
+                }
+            }
+
+            nextPage() {
+                if (this.currentPage < this.totalPages) {
+                    this.currentPage++;
+                    this.updateViewer();
+                }
+            }
+
+            zoomIn() {
+                if (this.zoomLevel < 200) {
+                    this.zoomLevel += 25;
+                    this.updateViewer();
+                }
+            }
+
+            zoomOut() {
+                if (this.zoomLevel > 50) {
+                    this.zoomLevel -= 25;
+                    this.updateViewer();
+                }
+            }
+
+            updateViewer() {
+                this.updateUI();
+                // 실제 구현에서는 여기서 PDF 페이지나 줌 업데이트
+                this.pdfViewer.innerHTML = `
+                    <div>
+                        <h3>📋 PDF 뷰어 (데모)</h3>
+                        <p>파일: ${this.selectedFile.name}</p>
+                        <p>현재 페이지: ${this.currentPage}</p>
+                        <p>줌 레벨: ${this.zoomLevel}%</p>
+                        <br>
+                        <p style="color: #666; font-size: 14px;">
+                            실제 환경에서는 여기에 PDF 내용이 렌더링됩니다.
+                        </p>
+                    </div>
+                `;
+            }
+
+            updateUI() {
+                this.pageInfo.textContent = `페이지: ${this.currentPage} / ${this.totalPages}`;
+                this.zoomInfo.textContent = `${this.zoomLevel}%`;
+                
+                this.prevBtn.disabled = this.currentPage <= 1;
+                this.nextBtn.disabled = this.currentPage >= this.totalPages;
+                this.zoomOutBtn.disabled = this.zoomLevel <= 50;
+                this.zoomInBtn.disabled = this.zoomLevel >= 200;
+            }
+
+            showStatus(message, isError = false) {
+                this.status.textContent = message;
+                this.status.style.display = 'block';
+                this.status.className = isError ? 'status error' : 'status';
+                
+                setTimeout(() => {
+                    this.status.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            new PDFViewerDemo();
+        });
+    </script>
+</body>
+</html>
