@@ -11,6 +11,9 @@ alwaysApply: true
 
 ### 서브모듈로 테스트 했다면 서브 모듈은 글 작성 완료 후 삭제해줘. 
 
+### 최근 글 10개만 빌드 테스트 해줘. 
+bundle exec jekyll build --verbose --trace --limit_posts 10
+
 ### news, career 카테고리는 코딩보다는 자연스러운 한국어 기반의 글을 작성해줘.
 
 ### 날짜 확인 및 환경 설정
@@ -399,7 +402,7 @@ bundle exec jekyll doctor
 
 ### Jekyll Build (프로덕션 빌드)
 ```sh
-JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
+JEKYLL_ENV=production bundle exec jekyll build --verbose --trace --limit_posts 10
 ```
 - 빌드 결과는 `_site/` 폴더에 생성됩니다.
 
