@@ -126,9 +126,8 @@ AI: [요약] 모든 필요한 정보를 확보했으며 관련 API를 호출할 
 
 ## 학습 과정 플로우 다이어그램
 
-<function_calls>
-<invoke name="create_diagram">
-<parameter name="content">graph TD
+```mermaid
+graph TD
     A["기존 도구 학습 데이터셋"] --> B["매개변수 식별 및 중요도 평가"]
     B --> C["핵심 매개변수 선택적 제거"]
     C --> D["미명시 쿼리 생성"]
@@ -165,6 +164,7 @@ AI: [요약] 모든 필요한 정보를 확보했으며 관련 API를 호출할 
     style M fill:#fff3e0
     style R fill:#ffebee
     style V fill:#e0f2f1
+```
 
 ## 종합적 실험 결과와 성능 분석
 
