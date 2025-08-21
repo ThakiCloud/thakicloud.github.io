@@ -1,0 +1,20 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "Sample project for AGENTS.md demonstration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "webpack": "^5.0.0"
+  }
+}
