@@ -204,7 +204,7 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
-incremental: false
+incremental: true
 
 
 # Markdown Processing
@@ -232,6 +232,12 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: Asia/Seoul
+
+# Build Performance Optimization
+future: false
+unpublished: false
+limit_posts: 0 # 0 means no limit, can be overridden in build commands
+profile: false
 
 
 # Plugins (previously gems:)
