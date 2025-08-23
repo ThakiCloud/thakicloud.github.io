@@ -16,6 +16,8 @@
   {%- when "algolia" -%}
   {% include_cached search/algolia-search-scripts.html %}
 {%- endcase -%}
+<!-- Multilingual Search Enhancement -->
+<script src="{{ '/assets/js/multilingual-search.js' | relative_url }}"></script>
 {% endif %}
 
 {% include analytics.html %}

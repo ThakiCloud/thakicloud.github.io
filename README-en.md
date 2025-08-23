@@ -1,16 +1,18 @@
 
-# Thaki Cloud Technical Blog
+# 🌍 Thaki Cloud Multilingual Technical Blog
 
-Welcome to the official technical blog repository of Thaki Cloud! This blog is a platform for sharing our expertise, insights, and innovations in private cloud solutions (IaaS, PaaS, SaaS), LLM Ops, and AI engineering.  
-Our primary goal is to engage with top-tier tech professionals and showcase exciting opportunities at Thaki Cloud.
+> 🇰🇷 [한국어 README](README.md) | 🇸🇦 [العربية README](README-ar.md)
+
+Welcome to the official multilingual technical blog repository of Thaki Cloud! This blog is served in **Korean, English, and Arabic**, providing a platform for sharing our expertise, insights, and innovations in private cloud solutions (IaaS, PaaS, SaaS), LLM Ops, and AI engineering with readers worldwide.
 
 ---
 
 ## ✨ Purpose
 
-- **Talent Acquisition**: Attract top technical talent by demonstrating our technical depth and culture.
-- **Knowledge Sharing**: Share insights, tutorials, research, and news to contribute to the tech community.
-- **Brand Building**: Establish Thaki Cloud as a thought leader in our domain.
+- **Global Talent Acquisition**: Attract top technical talent worldwide through multilingual content.
+- **Knowledge Sharing**: Share insights, tutorials, research, and news in multiple languages to contribute to the global tech community.
+- **Brand Building**: Establish Thaki Cloud as an international technology leader.
+- **Cultural Accessibility**: Enable all users to access technical knowledge without language barriers.
 
 ---
 
@@ -19,102 +21,270 @@ Our primary goal is to engage with top-tier tech professionals and showcase exci
 - **Static Site Generator**: [Jekyll](https://jekyllrb.com/)
 - **Theme**: [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 - **Content Format**: Markdown
-- **Hosting**: (e.g., GitHub Pages, Netlify, Vercel – *update based on actual usage*)
+- **Multilingual Support**: Korean, English, Arabic (automatic browser language detection)
+- **Hosting**: GitHub Pages
+- **CI/CD**: GitHub Actions (automated multilingual builds)
+- **Local Testing**: act (local GitHub Actions execution)
+
+## 🌐 Website Access Guide
+
+### Automatic Language Detection
+When you visit [**thakicloud.github.io**](https://thakicloud.github.io), you'll be automatically redirected to the appropriate language page based on your browser language settings:
+
+- **Korean Browser** → `/ko/` (Korean blog)
+- **English Browser** → `/en/` (English blog)  
+- **Arabic Browser** → `/ar/` (Arabic blog)
+
+### Direct Language Selection
+You can also access your preferred language directly:
+
+- 🇰🇷 **한국어**: [thakicloud.github.io/ko/](https://thakicloud.github.io/ko/)
+- 🇺🇸 **English**: [thakicloud.github.io/en/](https://thakicloud.github.io/en/)
+- 🇸🇦 **العربية**: [thakicloud.github.io/ar/](https://thakicloud.github.io/ar/)
+
+### Language Switching
+You can freely switch languages using the navigation menu at the top of each page. Your selected language is saved in cookies and remembered for future visits.
 
 ---
 
-## ✍️ How to Write a Blog Post
+## ✍️ How to Write Multilingual Blog Posts
 
-Follow these steps to contribute content to the Thaki Cloud tech blog:
+This guide explains how to contribute content to the Thaki Cloud multilingual technical blog. All posts are written in **Korean, English, and Arabic**.
 
-### 1. Choose a Category
+### 1. Automatic Multilingual Post Generation
 
-Select the most appropriate category for your post. Current categories:
-
-- `dev` (Development & Architecture)
-- `llmops` (LLM Ops & AI Engineering)
-- `tutorials` (Technical Insights & Tutorials)
-- `careers` (Life at Thaki Cloud & Careers)
-- `reviews` (Academic Paper Reviews)
-- `news` (Tech News & Trends)
-- `research` (Industry Research & Analysis)
-- `science` (Science & Deep Tech)
-- `misc` (Miscellaneous)
-
-Each category has its own folder under `_posts/` (e.g., `_posts/dev/`, `_posts/llmops/`).
-
-### 2. Create a Post File
-
-- Navigate to the appropriate `_posts/<category>/` folder.
-- Create a new Markdown file: `YYYY-MM-DD-your-post-title.md`
-  - Example: `2024-07-30-optimizing-inference-speed.md`
-
-### 3. Add Front Matter
-
-Include metadata at the top of the file:
-
-```yaml
----
-title: "Optimizing LLM Inference Speed: A Practical Guide"
-categories:
-  - llmops
-# Optional: tags:
-#   - performance
-#   - llm
-#   - optimization
-# Optional: author override (see _config.yml)
-# author: "Your Name"
-# Optional: excerpt for list previews
-# excerpt: "Learn key techniques to dramatically improve LLM inference performance..."
----
-```
-
-### 4. Write Your Content
-
-Write your content below the front matter using Markdown.  
-Example:
-
-```markdown
-## Introduction
-
-Welcome to our practical guide on optimizing LLM inference speed...
-
-### Key Techniques
-
-1. **Quantization**: ...
-2. **Pruning**: ...
-```
-
-Use all standard Markdown features: headings, lists, code blocks, images, etc.
-
-### 5. Add Images (Optional)
-
-- Place images in a new folder under `assets/images/posts/` (e.g., `assets/images/posts/optimizing-inference-speed/`)
-- Link images in Markdown:
-  ```markdown
-  ![Alt Text](/assets/images/posts/optimizing-inference-speed/image-name.png)
-  ```
-
-### 6. Preview Locally
-
-If you have Jekyll set up locally:
+Use the multilingual post generation script to create templates for all 3 languages at once:
 
 ```bash
-bundle exec jekyll serve
+# Usage: new-multilingual-post <title-slug> <category>
+~/scripts/new-multilingual-post.sh "ai-tutorial-guide" "tutorials"
 ```
 
-Visit [http://localhost:4000](http://localhost:4000) to preview your post.
+### 2. Choose a Category
 
-### 7. Publish the Post
+Current supported categories:
 
-Once satisfied:
+- `agentops` (AI Agent Development and Operations)
+- `careers` (Career and Growth)
+- `culture` (Development Team Culture and Methodology)
+- `datasets` (Data Analysis and Processing)
+- `dev` (Programming and Development Tips)
+- `devops` (Development Operations and Infrastructure)
+- `llmops` (Large Language Model Operations)
+- `news` (Latest Technology Trends)
+- `owm` (Open Workflow Management)
+- `research` (Technical Research and Paper Reviews)
+- `tutorials` (Hands-on Guides)
 
-1. Commit the new post (and images)
-2. Push to the `main` branch on GitHub
+Each language has its own directory structure:
+- Korean: `_posts/ko/<category>/`
+- English: `_posts/en/<category>/`
+- Arabic: `_posts/ar/<category>/`
 
-The blog will auto-rebuild and publish via the configured hosting platform (e.g., GitHub Pages or CI/CD).
+### 3. Language-specific Content Creation
+
+After running the script, the following 3 files will be generated:
+
+```
+_posts/ko/tutorials/2025-01-28-ai-tutorial-guide.md  (Korean)
+_posts/en/tutorials/2025-01-28-ai-tutorial-guide.md  (English)
+_posts/ar/tutorials/2025-01-28-ai-tutorial-guide.md  (Arabic)
+```
+
+Write or translate each file in the respective language.
+
+### 4. Front Matter Structure
+
+The generated templates include multilingual-optimized front matter:
+
+**Korean Example:**
+```yaml
+---
+title: "AI 튜토리얼 가이드"
+excerpt: "AI 기술의 기초부터 고급까지 다루는 완전 가이드"
+seo_title: "AI 튜토리얼 완전 가이드 - Thaki Cloud"
+seo_description: "AI 기술을 처음부터 배우고 싶은 개발자를 위한 단계별 튜토리얼"
+date: 2025-01-28
+lang: ko
+categories:
+  - tutorials
+tags:
+  - ai
+  - tutorial
+  - guide
+author_profile: true
+toc: true
+canonical_url: "https://thakicloud.github.io/ko/tutorials/ai-tutorial-guide/"
+---
+```
+
+**English Example:**
+```yaml
+---
+title: "Complete AI Tutorial Guide"
+excerpt: "Comprehensive guide covering AI technology from basics to advanced"
+seo_title: "Complete AI Tutorial Guide - Thaki Cloud"
+seo_description: "Step-by-step tutorial for developers who want to learn AI technology from scratch"
+date: 2025-01-28
+lang: en
+categories:
+  - tutorials
+tags:
+  - ai
+  - tutorial
+  - guide
+author_profile: true
+toc: true
+canonical_url: "https://thakicloud.github.io/en/tutorials/ai-tutorial-guide/"
+---
+```
+
+### 5. Content Writing Guide
+
+Write content for each language considering the respective audience:
+
+**Korean Content:**
+```markdown
+⏱️ **예상 읽기 시간**: 15분
+
+## 서론
+
+AI 기술이 급속도로 발전하면서...
+
+## 주요 내용
+
+### 1. 기초 개념
+- 머신러닝의 기본 원리
+- 딥러닝과의 차이점
+
+### 2. 실습 예제
+```python
+import tensorflow as tf
+# 한국어 주석으로 설명
+```
+
+## 결론
+```
+
+**English Content:**
+```markdown
+⏱️ **Estimated reading time**: 15 min read
+
+## Introduction
+
+As AI technology rapidly evolves...
+
+## Main Content
+
+### 1. Fundamental Concepts
+- Basic principles of machine learning
+- Differences from deep learning
+
+### 2. Practical Examples
+```python
+import tensorflow as tf
+# Explanations in English comments
+```
+
+## Conclusion
+```
+
+### 6. Adding Images and Media
+
+Images can be organized by language:
+
+```
+assets/images/posts/
+├── ko/ai-tutorial-guide/
+│   ├── diagram-ko.png
+│   └── screenshot-ko.png
+├── en/ai-tutorial-guide/
+│   ├── diagram-en.png
+│   └── screenshot-en.png
+└── ar/ai-tutorial-guide/
+    ├── diagram-ar.png
+    └── screenshot-ar.png
+```
+
+Link in Markdown:
+```markdown
+![AI Diagram](/assets/images/posts/en/ai-tutorial-guide/diagram-en.png)
+```
+
+### 7. Multilingual Build and Preview
+
+#### Individual Language Preview:
+```bash
+# Korean site (port 4000)
+bundle exec jekyll serve --config _config.yml,_config-ko.yml --port 4000
+
+# English site (port 4001)  
+bundle exec jekyll serve --config _config.yml,_config-en.yml --port 4001
+
+# Arabic site (port 4002)
+bundle exec jekyll serve --config _config.yml,_config-ar.yml --port 4002
+```
+
+#### Integrated Multilingual Build:
+```bash
+# Build complete multilingual site
+./scripts/build-multilingual.sh
+
+# Preview built site
+cd _site && python3 -m http.server 4000
+```
+
+Access URLs:
+- Korean: http://localhost:4000/ko/
+- English: http://localhost:4000/en/
+- Arabic: http://localhost:4000/ar/
+
+### 8. Publishing Posts
+
+#### Local Testing:
+```bash
+# CI/CD testing (using act)
+act -j build -W .github/workflows/multilingual-deploy.yml --container-architecture linux/amd64
+
+# Or run test script
+~/scripts/test-multilingual-ci.sh
+```
+
+#### Deploy to GitHub:
+```bash
+# Commit all language files
+git add _posts/ko/ _posts/en/ _posts/ar/
+git commit -m "feat: Add multilingual AI tutorial guide"
+git push origin main
+```
+
+GitHub Actions automatically builds and deploys the multilingual site:
+1. Build Korean, English, and Arabic separately
+2. Generate integrated site
+3. Deploy to GitHub Pages
 
 ---
+
+## 🎯 Multilingual Blog Management Commands
+
+Useful commands for convenience:
+
+```bash
+# Check blog status
+echo "📊 Multilingual Blog Status:"
+echo "🇰🇷 Korean Posts: $(find _posts/ko -name '*.md' | wc -l)"
+echo "🇺🇸 English Posts: $(find _posts/en -name '*.md' | wc -l)"  
+echo "🇸🇦 Arabic Posts: $(find _posts/ar -name '*.md' | wc -l)"
+
+# Navigate to language directories
+cd _posts/ko/    # Korean posts
+cd _posts/en/    # English posts  
+cd _posts/ar/    # Arabic posts
+```
+
+---
+
+That's it! We look forward to your contributions to the Thaki Cloud multilingual technical blog. If you have questions, please contact the project manager.
 
 ## 📝 Contribution & Local Dev Guide
 

@@ -1,18 +1,75 @@
-# main links
+# main links (default - Korean)
 main:
+  - title: "포스트"
+    url: /ko/posts/
+  - title: "카테고리"
+    url: /ko/categories/
+  - title: "태그"
+    url: /ko/tags/
+  - title: "검색"
+    url: /ko/search/
+  - title: "언어"
+    children:
+      - title: "🇰🇷 한국어"
+        url: /ko/
+      - title: "🇺🇸 English"
+        url: /en/
+      - title: "🇸🇦 العربية"
+        url: /ar/
+
+# 한국어 네비게이션
+ko:
+  - title: "포스트"
+    url: /ko/posts/
+  - title: "카테고리"
+    url: /ko/categories/
+  - title: "태그"
+    url: /ko/tags/
+  - title: "검색"
+    url: /ko/search/
+  - title: "언어"
+    children:
+      - title: "🇰🇷 한국어"
+        url: /ko/
+      - title: "🇺🇸 English"
+        url: /en/
+      - title: "🇸🇦 العربية"
+        url: /ar/
+
+# 영어 네비게이션
+en:
   - title: "Posts"
-    url: /posts/
+    url: /en/posts/
   - title: "Categories"
-    url: /categories/
+    url: /en/categories/
   - title: "Tags"
-    url: /tags/
+    url: /en/tags/
   - title: "Search"
-    url: /search/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    url: /en/search/
+  - title: "Language"
+    children:
+      - title: "🇰🇷 한국어"
+        url: /ko/
+      - title: "🇺🇸 English"
+        url: /en/
+      - title: "🇸🇦 العربية"
+        url: /ar/
+
+# 아랍어 네비게이션
+ar:
+  - title: "المشاركات"
+    url: /ar/posts/
+  - title: "الفئات"
+    url: /ar/categories/
+  - title: "العلامات"
+    url: /ar/tags/
+  - title: "البحث"
+    url: /ar/search/
+  - title: "اللغة"
+    children:
+      - title: "🇰🇷 한국어"
+        url: /ko/
+      - title: "🇺🇸 English"
+        url: /en/
+      - title: "🇸🇦 العربية"
+        url: /ar/

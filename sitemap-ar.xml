@@ -1,0 +1,54 @@
+---
+layout: null
+sitemap: false
+lang: ar
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Arabic Homepage -->
+  <url>
+    <loc>{{ site.url }}/ar/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}/ko/" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}/ar/" />
+  </url>
+
+  <!-- Arabic Posts -->
+  {% for post in site.posts %}
+    {% if post.lang == "ar" %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Arabic Pages -->
+  {% for page in site.pages %}
+    {% if page.lang == "ar" %}
+      {% unless page.sitemap == false %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  <!-- Arabic Categories -->
+  {% for category in site.categories %}
+  <url>
+    <loc>{{ site.url }}/ar/categories/#{{ category[0] | slugify }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+</urlset>

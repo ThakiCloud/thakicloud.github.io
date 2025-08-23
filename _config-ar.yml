@@ -1,0 +1,52 @@
+# Arabic site configuration
+locale: "ar-SA"
+title: "مدونة ثاكي كلاود التقنية | هندسة الذكاء الاصطناعي والحوسبة السحابية"
+description: "مدونة تقنية متخصصة تشارك أحدث تقنيات هندسة الذكاء الاصطناعي وعمليات التطوير والحوسبة السحابية."
+lang: "ar"
+
+# 언어별 URL 설정
+url: "https://thakicloud.github.io"
+baseurl: "/ar"
+
+# 검색 설정
+search: true
+search_full_content: true
+search_provider: lunr
+lunr:
+  search_within_pages: true
+
+# Language-specific defaults
+defaults:
+  - scope:
+      path: "_posts/ar"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: true
+      lang: ar
+      permalink: /ar/:categories/:title/
+  - scope:
+      path: "_pages/ar"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      lang: ar
+
+# Arabic navigation
+navigation: ar
+
+# Arabic category archive
+category_archive:
+  type: liquid
+  path: /ar/posts/
+tag_archive:
+  type: liquid
+  path: /ar/tags/
+
+# Arabic pagination
+paginate_path: /ar/page:num/

@@ -42,6 +42,9 @@ jobs:
       changed-pages: ${{ steps.changes.outputs.pages }}
       changed-config: ${{ steps.changes.outputs.config }}
       changed-assets: ${{ steps.changes.outputs.assets }}
+      korean-changed: ${{ steps.changes.outputs.korean }}
+      english-changed: ${{ steps.changes.outputs.english }}
+      arabic-changed: ${{ steps.changes.outputs.arabic }}
       should-lint: ${{ steps.decision.outputs.should-lint }}
       lint-scope: ${{ steps.decision.outputs.lint-scope }}
     steps:
@@ -60,7 +63,7 @@ jobs:
             pages:
               - '_pages/**'
             config:
-              - '_config.yml'
+              - '_config*.yml'
               - '_data/**'
               - 'Gemfile*'
             assets:
@@ -70,6 +73,18 @@ jobs:
               - 'assets/**'
             workflows:
               - '.github/workflows/**'
+            korean:
+              - '_posts/ko/**'
+              - '_pages/ko/**'
+              - '_config-ko.yml'
+            english:
+              - '_posts/en/**'
+              - '_pages/en/**'
+              - '_config-en.yml'
+            arabic:
+              - '_posts/ar/**'
+              - '_pages/ar/**'
+              - '_config-ar.yml'
 
       - name: 🤔 Lint decision
         id: decision
@@ -116,22 +131,52 @@ jobs:
       - name: 🧪 Test Jekyll build
         run: |
           LINT_SCOPE="${{ needs.detect-changes.outputs.lint-scope }}"
+          KOREAN_CHANGED="${{ needs.detect-changes.outputs.korean-changed }}"
+          ENGLISH_CHANGED="${{ needs.detect-changes.outputs.english-changed }}"
+          ARABIC_CHANGED="${{ needs.detect-changes.outputs.arabic-changed }}"
           
           if [[ "$LINT_SCOPE" == "full" ]]; then
-            echo "🔄 Running full Jekyll build test..."
-            JEKYLL_ENV=development bundle exec jekyll build --drafts --verbose
+            echo "🔄 Running full Jekyll build test for all languages..."
+            
+            echo "🇰🇷 Testing Korean build..."
+            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 10
+            
+            echo "🇺🇸 Testing English build..."
+            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-en.yml --destination _test_en --drafts --limit_posts 10
+            
+            echo "🇸🇦 Testing Arabic build..."
+            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ar.yml --destination _test_ar --drafts --limit_posts 10
+            
+            rm -rf _test_ko _test_en _test_ar
           else
             echo "⚡ Running incremental Jekyll build test..."
-            # Get changed files for incremental build
-            CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(md|markdown)$' | head -10)
             
-            if [[ -n "$CHANGED_FILES" ]]; then
-              echo "📝 Testing with changed files:"
-              echo "$CHANGED_FILES"
-              JEKYLL_ENV=development bundle exec jekyll build --drafts --limit_posts 20 --incremental
-            else
-              echo "⚡ No markdown files changed, running minimal build test..."
-              JEKYLL_ENV=development bundle exec jekyll build --drafts --limit_posts 5
+            # Test Korean if changed
+            if [[ "$KOREAN_CHANGED" == "true" ]]; then
+              echo "🇰🇷 Testing Korean build (changed)..."
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 20
+              rm -rf _test_ko
+            fi
+            
+            # Test English if changed
+            if [[ "$ENGLISH_CHANGED" == "true" ]]; then
+              echo "🇺🇸 Testing English build (changed)..."
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-en.yml --destination _test_en --drafts --limit_posts 20
+              rm -rf _test_en
+            fi
+            
+            # Test Arabic if changed
+            if [[ "$ARABIC_CHANGED" == "true" ]]; then
+              echo "🇸🇦 Testing Arabic build (changed)..."
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ar.yml --destination _test_ar --drafts --limit_posts 20
+              rm -rf _test_ar
+            fi
+            
+            # If no specific language changed, test Korean as default
+            if [[ "$KOREAN_CHANGED" != "true" && "$ENGLISH_CHANGED" != "true" && "$ARABIC_CHANGED" != "true" ]]; then
+              echo "⚡ No specific language changes, testing Korean as default..."
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 5
+              rm -rf _test_ko
             fi
           fi
           

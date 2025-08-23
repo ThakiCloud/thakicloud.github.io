@@ -1,0 +1,87 @@
+name: Deploy Multilingual Jekyll Site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v4
+      
+    - name: Build Korean Site
+      run: |
+        echo "🇰🇷 Building Korean site..."
+        JEKYLL_ENV=production bundle exec jekyll build \
+          --config _config.yml,_config-ko.yml \
+          --destination _site \
+          --verbose --limit_posts 10
+          
+    - name: Build English Site
+      run: |
+        echo "🇺🇸 Building English site..."
+        JEKYLL_ENV=production bundle exec jekyll build \
+          --config _config.yml,_config-en.yml \
+          --destination _site_en \
+          --verbose --limit_posts 10
+          
+    - name: Build Arabic Site
+      run: |
+        echo "🇸🇦 Building Arabic site..."
+        JEKYLL_ENV=production bundle exec jekyll build \
+          --config _config.yml,_config-ar.yml \
+          --destination _site_ar \
+          --verbose --limit_posts 10
+          
+    - name: Integrate Multilingual Sites
+      run: |
+        echo "🔗 Integrating multilingual sites..."
+        mkdir -p _site/en _site/ar
+        cp -r _site_en/* _site/en/
+        cp -r _site_ar/* _site/ar/
+        rm -rf _site_en _site_ar
+        
+        echo "📊 Site structure:"
+        find _site -type d -maxdepth 2 | head -20
+        
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

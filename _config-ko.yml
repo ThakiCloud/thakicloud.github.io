@@ -1,0 +1,52 @@
+# 한국어 사이트 설정
+locale: "ko-KR"
+title: "Thaki Cloud Tech Blog | 타키클라우드 기술 블로그"
+description: "AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다."
+lang: "ko"
+
+# 언어별 URL 설정
+url: "https://thakicloud.github.io"
+baseurl: "/ko"
+
+# 검색 설정
+search: true
+search_full_content: true
+search_provider: lunr
+lunr:
+  search_within_pages: true
+
+# 언어별 기본값 설정
+defaults:
+  - scope:
+      path: "_posts/ko"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: true
+      lang: ko
+      permalink: /ko/:categories/:title/
+  - scope:
+      path: "_pages/ko"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      lang: ko
+
+# 한국어 네비게이션 설정
+navigation: ko
+
+# 한국어 카테고리 아카이브
+category_archive:
+  type: liquid
+  path: /ko/posts/
+tag_archive:
+  type: liquid
+  path: /ko/tags/
+
+# 한국어 페이지네이션
+paginate_path: /ko/page:num/
