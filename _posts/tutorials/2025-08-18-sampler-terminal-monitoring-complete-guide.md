@@ -355,10 +355,10 @@ runcharts:
     scale: 0
     items:
       - label: CPU Usage (%)
-        sample: docker stats --no-stream --format "{{.CPUPerc}}" | head -1 | sed 's/%//' || echo "0"
+        sample: docker stats --no-stream --format "{% raw %}{{.CPUPerc}}{% endraw %}" | head -1 | sed 's/%//' || echo "0"
         color: 178
       - label: Memory Usage (%)
-        sample: docker stats --no-stream --format "{{.MemPerc}}" | head -1 | sed 's/%//' || echo "0"
+        sample: docker stats --no-stream --format "{% raw %}{{.MemPerc}}{% endraw %}" | head -1 | sed 's/%//' || echo "0"
         color: 85
 
 textboxes:
@@ -369,16 +369,16 @@ textboxes:
       docker --version
       echo ""
       echo "=== System Info ==="
-      docker system df --format "table {{.Type}}\t{{.Total}}\t{{.Active}}\t{{.Size}}"
+      docker system df --format "table {% raw %}{{.Type}}\t{{.Total}}\t{{.Active}}\t{{.Size}}{% endraw %}"
       echo ""
       echo "=== Running Containers ==="
-      docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | head -10
+      docker ps --format "table {% raw %}{{.Names}}\t{{.Status}}\t{{.Ports}}{% endraw %}" | head -10
 
   - title: Container Resource Usage
     rate-ms: 5000
     sample: |
       echo "=== Container Stats ==="
-      docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}" | head -5 || echo "No containers running"
+      docker stats --no-stream --format "table {% raw %}{{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}{% endraw %}" | head -5 || echo "No containers running"
 ```
 
 ## 6. 실무 활용을 위한 스크립트 및 Alias 설정
