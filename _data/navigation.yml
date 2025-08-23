@@ -6,8 +6,6 @@ main:
     url: /ko/categories/
   - title: "태그"
     url: /ko/tags/
-  - title: "검색"
-    url: /ko/search/
   - title: "언어"
     children:
       - title: "🇰🇷 한국어"
@@ -25,8 +23,6 @@ ko:
     url: /ko/categories/
   - title: "태그"
     url: /ko/tags/
-  - title: "검색"
-    url: /ko/search/
   - title: "언어"
     children:
       - title: "🇰🇷 한국어"
@@ -44,8 +40,6 @@ en:
     url: /en/categories/
   - title: "Tags"
     url: /en/tags/
-  - title: "Search"
-    url: /en/search/
   - title: "Language"
     children:
       - title: "🇰🇷 한국어"
@@ -63,8 +57,6 @@ ar:
     url: /ar/categories/
   - title: "العلامات"
     url: /ar/tags/
-  - title: "البحث"
-    url: /ar/search/
   - title: "اللغة"
     children:
       - title: "🇰🇷 한국어"

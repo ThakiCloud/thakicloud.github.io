@@ -4,23 +4,55 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
+        {% comment %} Site logo and title always go to language selection home (/) {% endcomment %}
+        {% assign main_home_url = '/' %}
+        
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ main_home_url | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
+        <a class="site-title" href="{{ main_home_url | relative_url }}">
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          {% comment %} Select navigation based on page language {% endcomment %}
+          {% if page.lang == 'en' %}
+            {% assign navigation_data = site.data.navigation.en %}
+          {% elsif page.lang == 'ar' %}
+            {% assign navigation_data = site.data.navigation.ar %}
+          {% elsif page.lang == 'ko' %}
+            {% assign navigation_data = site.data.navigation.ko %}
+          {% else %}
+            {% assign navigation_data = site.data.navigation.main %}
+          {% endif %}
+          
+          {%- for link in navigation_data -%}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              {% if link.children %}
+                <a href="#" class="dropdown-toggle">{{ link.title }} <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                  {%- for child in link.children -%}
+                    <li><a href="{{ child.url | relative_url }}"{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              {% else %}
+                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              {% endif %}
             </li>
           {%- endfor -%}
         </ul>
-        <!-- 통합 검색 아이콘 -->
-        <a href="{{ '/search/' | relative_url }}" class="search__toggle" title="검색">
-          <span class="visually-hidden">검색</span>
+        <!-- 검색 링크 버튼 -->
+        {% comment %} Generate language-specific search URL {% endcomment %}
+        {% if page.lang == 'en' %}
+          {% assign search_url = '/en/search/' %}
+        {% elsif page.lang == 'ar' %}
+          {% assign search_url = '/ar/search/' %}
+        {% else %}
+          {% assign search_url = '/search/' %}
+        {% endif %}
+        
+        <a href="{{ search_url | relative_url }}" class="search__toggle" title="{% if page.lang == 'en' %}Search{% elsif page.lang == 'ar' %}البحث{% else %}검색{% endif %}">
+          <span class="visually-hidden">{% if page.lang == 'en' %}Search{% elsif page.lang == 'ar' %}البحث{% else %}검색{% endif %}</span>
           <i class="fas fa-search"></i>
         </a>
         <button class="greedy-nav__toggle hidden" type="button">

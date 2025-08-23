@@ -23,6 +23,9 @@
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
 
+<!-- Language dropdown functionality -->
+<script src="{{ '/assets/js/dropdown.js' | relative_url }}"></script>
+
 {% if site.after_footer_scripts %}
 {% for script in site.after_footer_scripts %}
     <script src="{{ script | relative_url }}"></script>

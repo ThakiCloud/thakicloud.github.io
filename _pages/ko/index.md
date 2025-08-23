@@ -2,12 +2,12 @@
 layout: home
 permalink: /ko/
 lang: ko
-title: "타키클라우드 기술 블로그"
+title: "다키클라우드 기술 블로그"
 excerpt: "AI/ML Engineering, LLMOps, DevOps 전문 기술 블로그"
 author_profile: true
 ---
 
-## 🚀 타키클라우드 기술 블로그에 오신 것을 환영합니다
+## 🚀 다키클라우드 기술 블로그에 오신 것을 환영합니다
 
 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다.
 

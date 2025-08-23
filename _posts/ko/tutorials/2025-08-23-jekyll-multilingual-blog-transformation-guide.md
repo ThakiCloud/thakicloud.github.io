@@ -100,7 +100,7 @@ markdown: kramdown
 
 # _config-ko.yml (한국어 전용)
 locale: "ko-KR"
-title: "Thaki Cloud Tech Blog | 타키클라우드 기술 블로그"
+title: "Thaki Cloud Tech Blog | 다키클라우드 기술 블로그"
 lang: "ko"
 baseurl: "/ko"
 # ... 한국어 전용 설정들
