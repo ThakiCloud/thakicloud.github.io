@@ -228,7 +228,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+# permalink: /:categories/:title/ # 다국어 지원을 위해 언어별 설정 파일에서 개별 설정
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: Asia/Seoul

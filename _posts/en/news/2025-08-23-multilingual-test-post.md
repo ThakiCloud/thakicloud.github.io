@@ -5,6 +5,7 @@ seo_title: "Multilingual Blog System Launch - Thaki Cloud"
 seo_description: "Introducing the launch of Thaki Cloud tech blog's multilingual support system and new features."
 date: 2025-08-23
 lang: en
+permalink: /en/news/multilingual-test-post/
 categories:
   - news
 tags:

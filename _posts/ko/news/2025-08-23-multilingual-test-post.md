@@ -5,6 +5,7 @@ seo_title: "다국어 블로그 시스템 런칭 - Thaki Cloud"
 seo_description: "Thaki Cloud 기술 블로그의 다국어 지원 시스템 런칭 소식과 새로운 기능들을 소개합니다."
 date: 2025-08-23
 lang: ko
+permalink: /ko/news/multilingual-test-post/
 categories:
   - news
 tags:

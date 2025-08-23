@@ -5,6 +5,7 @@ seo_title: "[عنوان SEO العربي] - ثاكي كلاود"
 seo_description: "[أدخل وصف SEO العربي]"
 date: 2025-08-23
 lang: ar
+permalink: /ar/tutorials/jekyll-multilingual-blog-transformation-guide/
 categories:
   - tutorials
 tags:
