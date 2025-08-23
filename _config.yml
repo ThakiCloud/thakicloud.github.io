@@ -362,3 +362,4 @@ defaults:
       type: "static"
     values:
       image: true
+
