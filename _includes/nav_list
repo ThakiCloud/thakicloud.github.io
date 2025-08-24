@@ -1,4 +1,5 @@
-<!-- {% assign navigation = site.data.navigation[include.nav] %}
+{% comment %} Original navigation assignment - now replaced with custom logic {% endcomment %}
+{% comment %} {% assign navigation = site.data.navigation[include.nav] %} {% endcomment %}
 
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
@@ -29,26 +30,75 @@
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items" id="category_tag_menu">
+      {% comment %} Filter posts by language for accurate counts {% endcomment %}
+      {% if page.lang %}
+        {% assign filtered_posts = site.posts | where: "lang", page.lang %}
+        {% assign lang_prefix = '/' | append: page.lang %}
+      {% else %}
+        {% comment %} For Korean main site, filter by path containing _posts/ko/ {% endcomment %}
+        {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains '_posts/ko/'" %}
+        {% assign lang_prefix = '' %}
+      {% endif %}
+
+      {% comment %} Calculate language-specific category counts {% endcomment %}
+      {% assign lang_dev_count = 0 %}
+      {% assign lang_owm_count = 0 %}
+      {% assign lang_llmops_count = 0 %}
+      {% assign lang_agentops_count = 0 %}
+      {% assign lang_tutorials_count = 0 %}
+      {% assign lang_careers_count = 0 %}
+      {% assign lang_culture_count = 0 %}
+      {% assign lang_news_count = 0 %}
+      {% assign lang_research_count = 0 %}
+      {% assign lang_datasets_count = 0 %}
+
+      {% for post in filtered_posts %}
+        {% if post.categories contains 'dev' %}
+          {% assign lang_dev_count = lang_dev_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'owm' %}
+          {% assign lang_owm_count = lang_owm_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'llmops' %}
+          {% assign lang_llmops_count = lang_llmops_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'agentops' %}
+          {% assign lang_agentops_count = lang_agentops_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'tutorials' %}
+          {% assign lang_tutorials_count = lang_tutorials_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'careers' %}
+          {% assign lang_careers_count = lang_careers_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'culture' %}
+          {% assign lang_culture_count = lang_culture_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'news' %}
+          {% assign lang_news_count = lang_news_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'research' %}
+          {% assign lang_research_count = lang_research_count | plus: 1 %}
+        {% endif %}
+        {% if post.categories contains 'datasets' %}
+          {% assign lang_datasets_count = lang_datasets_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+
       <li>
-        <span class="nav__sub-title" v-on:click='togglec()'>📂 Total Posts: {{ site.posts.size }}</span>
+        <span class="nav__sub-title" v-on:click='togglec()'>📂 Total Posts: {{ filtered_posts.size }}</span>
       </li>
       <li>
-        <!--
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/iaas/">☁️ IaaS ({{ site.categories['iaas'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/paas/">🏗️ PaaS ({{ site.categories['paas'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/saas/">🚀 SaaS ({{ site.categories['saas'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/reviews/">📝 Reviews ({{ site.categories['reviews'].size | default: 0 }})</a></span>
-      -->
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/dev/">🚀 DevOps ({{ site.categories['dev'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/owm/">📀 OWM ({{ site.categories['owm'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/llmops/">🤖 LLMOps ({{ site.categories['llmops'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/agentops/">🏗️ AgentOps ({{ site.categories['agentops'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/tutorials/">💻 Tutorials ({{ site.categories['tutorials'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/careers/">🤝 Careers ({{ site.categories['careers'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/culture/">🎨 Culture ({{ site.categories['culture'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/news/">🌐 News ({{ site.categories['news'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/research/">📒 Research ({{ site.categories['research'].size | default: 0 }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/datasets/">☁️ Datasets ({{ site.categories['datasets'].size | default: 0 }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/dev/">🚀 DevOps ({{ lang_dev_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/owm/">📀 OWM ({{ lang_owm_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/llmops/">🤖 LLMOps ({{ lang_llmops_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/agentops/">🏗️ AgentOps ({{ lang_agentops_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/tutorials/">💻 Tutorials ({{ lang_tutorials_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/careers/">🤝 Careers ({{ lang_careers_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/culture/">🎨 Culture ({{ lang_culture_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/news/">🌐 News ({{ lang_news_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/research/">📒 Research ({{ lang_research_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/datasets/">☁️ Datasets ({{ lang_datasets_count }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">

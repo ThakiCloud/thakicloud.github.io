@@ -4,7 +4,8 @@ sitemap: false
 ---
 
 [
-  {% for post in site.posts %}
+  {% assign posts = site.posts | where: "lang", "ko" %}
+  {% for post in posts %}
     {
       "title": {{ post.title | jsonify }},
       "url": {{ post.url | relative_url | jsonify }},
@@ -13,7 +14,7 @@ sitemap: false
       "tags": {{ post.tags | jsonify }},
       "content": {{ post.content | prepare_search_content | jsonify }},
       "excerpt": {{ post.excerpt | strip_html | truncatewords: 50 | prepare_search_content | jsonify }},
-      "brand_keywords": "Thaki Cloud, ThakiCloud, 타키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD"
+      "brand_keywords": "Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

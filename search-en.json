@@ -1,0 +1,23 @@
+---
+layout: null
+sitemap: false
+lang: en
+---
+
+[
+  {% for post in site.posts %}
+    {% if post.lang == "en" %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | relative_url | jsonify }},
+      "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      "categories": {{ post.categories | jsonify }},
+      "tags": {{ post.tags | jsonify }},
+      "content": {{ post.content | prepare_search_content | jsonify }},
+      "excerpt": {{ post.excerpt | strip_html | truncatewords: 50 | prepare_search_content | jsonify }},
+      "lang": "en",
+      "brand_keywords": "Thaki Cloud, ThakiCloud, AI/ML Engineering, LLMOps, DevOps, Cloud Computing"
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+]

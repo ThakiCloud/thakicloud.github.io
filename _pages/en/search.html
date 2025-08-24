@@ -1,0 +1,599 @@
+---
+layout: default
+title: "Search"
+permalink: /en/search/
+lang: en
+---
+
+<div class="search-container">
+  <div class="search-header">
+    <h1><i class="fas fa-search"></i> Blog Search</h1>
+    <p>Find what you're looking for quickly. Supports both Korean and English.</p>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Enter search terms (e.g., AI, Machine Learning, LLM)" autocomplete="off" autofocus>
+    <button id="search-button">
+      <i class="fas fa-search"></i>
+      <span>Search</span>
+    </button>
+  </div>
+
+  <div id="search-suggestions" class="search-suggestions" style="display: none;">
+    <!-- Search suggestions -->
+  </div>
+
+  <div id="search-results" class="search-results">
+    <!-- Search results will be displayed here -->
+  </div>
+
+  <div id="search-stats" class="search-stats" style="display: none;">
+    <!-- Search statistics -->
+  </div>
+</div>
+
+<style>
+.search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-header h1 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#search-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  font-family: inherit;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+#search-button {
+  padding: 15px 25px;
+  background: #90caf9;
+  color: #212121;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  justify-content: center;
+}
+
+#search-button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+#search-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+#search-button i {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  #search-button span {
+    display: none;
+  }
+  #search-button {
+    min-width: 60px;
+    padding: 15px 20px;
+  }
+}
+
+.search-suggestions {
+  background: #2a2a2a;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #424242;
+  color: #ffffff;
+}
+
+.suggestion-item:hover {
+  background: #90caf9;
+  color: #212121;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.search-stats {
+  text-align: center;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.search-results {
+  min-height: 200px;
+}
+
+.search-result-item {
+  background: #2a2a2a;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s;
+}
+
+.search-result-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.result-title a {
+  color: #90caf9;
+  text-decoration: none;
+}
+
+.result-title a:hover {
+  color: #64b5f6;
+}
+
+.result-meta {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 10px;
+}
+
+.result-snippet {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.result-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #424242;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #b0b0b0;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #b0b0b0;
+}
+
+mark {
+  background: #90caf9;
+  color: #212121;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.search-tips {
+  background: #212121;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.search-tips h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.search-tips ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.search-tips li {
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 15px;
+  }
+  
+  .search-box {
+    flex-direction: column;
+  }
+  
+  #search-input, #search-button {
+    border-radius: 0;
+  }
+  
+  #search-input {
+    border-bottom: 1px solid #ddd;
+  }
+}
+</style>
+
+<script>
+// Global search data
+let searchData = [];
+let isSearching = false;
+
+// Load search data
+async function loadSearchData() {
+  try {
+    const response = await fetch('/en/search.json');
+    searchData = await response.json();
+    console.log(`Search data loaded: ${searchData.length} posts`);
+  } catch (error) {
+    console.error('Failed to load search data:', error);
+  }
+}
+
+// Text normalization (same logic as Ruby filter)
+function normalizeText(text) {
+  if (!text) return '';
+  
+  return text
+    .replace(/[\x00-\x1F\x7F-\x9F]/g, '') // Remove control characters
+    .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+    .trim()
+    .toLowerCase();
+}
+
+// Calculate search score
+function calculateScore(post, query) {
+  const normalizedQuery = normalizeText(query);
+  if (!normalizedQuery) return 0;
+  
+  let score = 0;
+  
+  // Title search (weight 3)
+  const title = normalizeText(post.title || '');
+  if (title.includes(normalizedQuery)) score += 300;
+  
+  // Content search (weight 1)
+  const content = normalizeText(post.content || '');
+  if (content.includes(normalizedQuery)) score += 100;
+  
+  // Tags search (weight 2)
+  const tags = normalizeText((post.tags || []).join(' '));
+  if (tags.includes(normalizedQuery)) score += 200;
+  
+  // Categories search (weight 2)
+  const categories = normalizeText((post.categories || []).join(' '));
+  if (categories.includes(normalizedQuery)) score += 200;
+  
+  // Add partial matching score
+  const queryWords = normalizedQuery.split(/\s+/).filter(word => word.length > 0);
+  queryWords.forEach(word => {
+    if (word.length >= 2) {
+      [title, content, tags, categories].forEach((text, index) => {
+        const weight = [3, 1, 2, 2][index];
+        if (text.includes(word)) {
+          score += 25 * weight;
+        }
+      });
+    }
+  });
+  
+  return score;
+}
+
+// Search highlighting
+function highlightMatches(text, query) {
+  if (!text || !query) return text;
+  
+  const normalizedQuery = normalizeText(query);
+  const queryWords = normalizedQuery.split(/\s+/).filter(word => word.length >= 2);
+  
+  let highlighted = text;
+  
+  // Highlight full query
+  if (normalizedQuery.length >= 2) {
+    const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+    highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+  }
+  
+  // Highlight individual words
+  queryWords.forEach(word => {
+    const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+    highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+  });
+  
+  return highlighted;
+}
+
+// Escape regex
+function escapeRegex(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Extract snippet
+function extractSnippet(content, query, length = 200) {
+  if (!content || !query) return content ? content.substring(0, length) : '';
+  
+  const normalizedContent = normalizeText(content);
+  const normalizedQuery = normalizeText(query);
+  
+  const matchPos = normalizedContent.indexOf(normalizedQuery);
+  
+  if (matchPos !== -1) {
+    const start = Math.max(0, matchPos - length / 4);
+    let snippet = content.substring(start, start + length);
+    
+    if (start > 0) {
+      snippet = '...' + snippet.substring(snippet.indexOf(' ') + 1);
+    }
+    
+    if (start + length < content.length) {
+      const lastSpace = snippet.lastIndexOf(' ');
+      if (lastSpace > 0) {
+        snippet = snippet.substring(0, lastSpace) + '...';
+      }
+    }
+    
+    return snippet;
+  }
+  
+  return content.substring(0, length);
+}
+
+// Perform search
+async function performSearch(query) {
+  if (isSearching) return;
+  if (!query || query.trim().length < 1) {
+    showNoResults('Please enter a search term.');
+    return;
+  }
+  
+  isSearching = true;
+  showLoading();
+  
+  try {
+    // Load search data if not loaded
+    if (searchData.length === 0) {
+      await loadSearchData();
+    }
+    
+    const results = [];
+    
+    searchData.forEach(post => {
+      const score = calculateScore(post, query);
+      if (score > 0) {
+        results.push({
+          post: post,
+          score: score,
+          titleHighlighted: highlightMatches(post.title || '', query),
+          snippet: extractSnippet(post.content || '', query),
+          snippetHighlighted: highlightMatches(extractSnippet(post.content || '', query), query)
+        });
+      }
+    });
+    
+    // Sort by score
+    results.sort((a, b) => b.score - a.score);
+    
+    // Show top 20 results
+    const limitedResults = results.slice(0, 20);
+    
+    showResults(limitedResults, query);
+    
+  } catch (error) {
+    console.error('Search error:', error);
+    showNoResults('An error occurred during search.');
+  } finally {
+    isSearching = false;
+  }
+}
+
+// Show loading
+function showLoading() {
+  document.getElementById('search-results').innerHTML = `
+    <div class="loading">
+      <p>🔍 Searching...</p>
+    </div>
+  `;
+  document.getElementById('search-stats').style.display = 'none';
+}
+
+// Show results
+function showResults(results, query) {
+  const resultsContainer = document.getElementById('search-results');
+  const statsContainer = document.getElementById('search-stats');
+  
+  if (results.length === 0) {
+    showNoResults(`No results found for "${query}".`);
+    return;
+  }
+  
+  // Show statistics
+  statsContainer.innerHTML = `
+    <p>Search results for "<strong>${query}</strong>": <strong>${results.length} posts</strong></p>
+  `;
+  statsContainer.style.display = 'block';
+  
+  // Show results
+  const resultsHtml = results.map(result => {
+    const post = result.post;
+    const date = new Date(post.date).toLocaleDateString('en-US');
+    const categories = (post.categories || []).join(' > ');
+    const tags = (post.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
+    
+    return `
+      <div class="search-result-item">
+        <div class="result-title">
+          <a href="${post.url}">${result.titleHighlighted}</a>
+        </div>
+        <div class="result-meta">
+          📅 ${date} | 📁 ${categories}
+        </div>
+        <div class="result-snippet">
+          ${result.snippetHighlighted}
+        </div>
+        ${tags ? `<div class="result-tags">${tags}</div>` : ''}
+      </div>
+    `;
+  }).join('');
+  
+  resultsContainer.innerHTML = resultsHtml;
+}
+
+// Show no results
+function showNoResults(message) {
+  document.getElementById('search-results').innerHTML = `
+    <div class="no-results">
+      <p>${message}</p>
+    </div>
+  `;
+  document.getElementById('search-stats').style.display = 'none';
+}
+
+// Show suggestions
+function showSuggestions(suggestions) {
+  const suggestionsContainer = document.getElementById('search-suggestions');
+  
+  if (suggestions.length === 0) {
+    suggestionsContainer.style.display = 'none';
+    return;
+  }
+  
+  const suggestionsHtml = suggestions.map(suggestion => 
+    `<div class="suggestion-item" onclick="selectSuggestion('${suggestion}')">${suggestion}</div>`
+  ).join('');
+  
+  suggestionsContainer.innerHTML = suggestionsHtml;
+  suggestionsContainer.style.display = 'block';
+}
+
+// Select suggestion
+function selectSuggestion(suggestion) {
+  document.getElementById('search-input').value = suggestion;
+  document.getElementById('search-suggestions').style.display = 'none';
+  performSearch(suggestion);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+  
+  // Search button click
+  searchButton.addEventListener('click', function() {
+    const query = searchInput.value.trim();
+    if (query) {
+      performSearch(query);
+    }
+  });
+  
+  // Enter key search
+  searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      const query = searchInput.value.trim();
+      if (query) {
+        performSearch(query);
+      }
+    }
+  });
+  
+  // Real-time search suggestions (debouncing)
+  let debounceTimer;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    const query = this.value.trim();
+    
+    if (query.length >= 2) {
+      debounceTimer = setTimeout(() => {
+        // Simple search suggestion logic
+        const suggestions = [];
+        searchData.forEach(post => {
+          const title = normalizeText(post.title || '');
+          const normalizedQuery = normalizeText(query);
+          
+          if (title.includes(normalizedQuery) && !suggestions.includes(post.title)) {
+            suggestions.push(post.title);
+          }
+        });
+        
+        showSuggestions(suggestions.slice(0, 5));
+      }, 300);
+    } else {
+      document.getElementById('search-suggestions').style.display = 'none';
+    }
+  });
+  
+  // Hide suggestions on outside click
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.search-suggestions') && !e.target.closest('#search-input')) {
+      document.getElementById('search-suggestions').style.display = 'none';
+    }
+  });
+  
+  // Extract search term from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const queryParam = urlParams.get('q');
+  if (queryParam) {
+    searchInput.value = queryParam;
+    performSearch(queryParam);
+  }
+  
+  // Preload search data
+  loadSearchData();
+});
+</script>
+
+<div class="search-tips">
+  <h3>💡 Search Tips</h3>
+  <ul>
+    <li>Supports both Korean and English (e.g., "AI", "인공지능")</li>
+    <li>Partial search is available (e.g., "prompt" → "prompt engineering")</li>
+    <li>Searches in title, content, tags, and categories</li>
+    <li>Use multiple words for more accurate results</li>
+  </ul>
+</div>

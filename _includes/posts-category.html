@@ -1,4 +1,12 @@
-{%- for post in site.categories[include.taxonomy] -%}
+{% comment %} Filter posts by language first {% endcomment %}
+{% if page.lang %}
+  {% assign filtered_posts = site.categories[include.taxonomy] | where: "lang", page.lang %}
+{% else %}
+  {% comment %} Default to Korean if no language specified {% endcomment %}
+  {% assign filtered_posts = site.categories[include.taxonomy] | where: "lang", "ko" %}
+{% endif %}
+
+{%- for post in filtered_posts -%}
   {%- unless post.hidden -%}
     {% include archive-single.html %}
   {%- endunless -%}

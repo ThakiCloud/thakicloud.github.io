@@ -9,7 +9,13 @@ layout: archive
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
-  {% assign posts = site.posts %}
+  {% comment %} Filter posts by language {% endcomment %}
+  {% if page.lang %}
+    {% assign posts = site.posts | where: "lang", page.lang %}
+  {% else %}
+    {% comment %} Default to Korean if no language specified {% endcomment %}
+    {% assign posts = site.posts | where: "lang", "ko" %}
+  {% endif %}
 {% endif %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}

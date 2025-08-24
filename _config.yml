@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale : "ko-KR"
-title  : "Thaki Cloud Tech Blog | ThakiCloud | 타키클라우드 기술 블로그"
+title  : "Thaki Cloud Tech Blog | ThakiCloud | 다키클라우드 기술 블로그"
 title_separator          : "-"
 subtitle                 : "AI/ML Engineering & DevOps 전문 기술 블로그"
 name   : "Thaki Cloud"
-description              : "Thaki Cloud (ThakiCloud, 타키클라우드, thaki cloud, THAKI CLOUD, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. 머신러닝 모델 운영, 쿠버네티스, 클라우드 인프라, AI 엔지니어링 커리어, 인공지능 기술 블로그, 타키클라우드 개발 팀의 깊이 있는 인사이트를 제공합니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
+description              : "Thaki Cloud (ThakiCloud, 다키클라우드, thaki cloud, THAKI CLOUD, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. 머신러닝 모델 운영, 쿠버네티스, 클라우드 인프라, AI 엔지니어링 커리어, 인공지능 기술 블로그, 다키클라우드 개발 팀의 깊이 있는 인사이트를 제공합니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
 url    : "https://thakicloud.github.io"
 baseurl: ""
 repository               : "ThakiCloud/thakicloud.github.io"
@@ -97,13 +97,13 @@ facebook:
 og_image                 : "/assets/images/thakicloud-og-image.jpg" # Open Graph/Twitter default site image
 
 # Keywords for SEO
-keywords: "Thaki Cloud, ThakiCloud, 타키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, 타키 클라우드, 타키클라우드 기술블로그, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات"
+keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, 타키 클라우드, 다키클라우드 기술블로그, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات"
 
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type : Organization # Person or Organization (defaults to Person)
-  name : "Thaki Cloud | ThakiCloud | 타키클라우드 | thaki cloud" # If the user or organization name differs from the site's name
+  name : "Thaki Cloud | ThakiCloud | 다키클라우드 | thaki cloud" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://github.com/thakicloud"
     - "https://thakicloud.co.kr"
@@ -204,7 +204,7 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
-incremental: false
+incremental: true
 
 
 # Markdown Processing
@@ -228,10 +228,16 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+# permalink: /:categories/:title/ # 다국어 지원을 위해 언어별 설정 파일에서 개별 설정
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: Asia/Seoul
+
+# Build Performance Optimization
+future: false
+unpublished: false
+limit_posts: 0 # 0 means no limit, can be overridden in build commands
+profile: false
 
 
 # Plugins (previously gems:)
@@ -282,6 +288,13 @@ tag_archive:
 #     tag: /tags/:name/
 
 
+# Search
+search: true
+search_full_content: false
+search_provider: lunr
+lunr:
+  search_within_pages: false
+
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
@@ -292,7 +305,46 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+  # Korean posts (default)
+  - scope:
+      path: "_posts/ko"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: # true
+      share: false
+      related: true
+      lang: ko
+      permalink: /ko/:categories/:title/
+  # English posts
+  - scope:
+      path: "_posts/en"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: # true
+      share: false
+      related: true
+      lang: en
+      permalink: /en/:categories/:title/
+  # Arabic posts
+  - scope:
+      path: "_posts/ar"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: # true
+      share: false
+      related: true
+      lang: ar
+      permalink: /ar/:categories/:title/
+  # All other posts (fallback to Korean)
   - scope:
       path: ""
       type: posts
@@ -303,8 +355,11 @@ defaults:
       comments: # true
       share: false
       related: true
+      lang: ko
+      permalink: /ko/:categories/:title/
   - scope:
       path: "assets/images"  
       type: "static"
     values:
       image: true
+

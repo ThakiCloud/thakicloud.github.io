@@ -1,0 +1,23 @@
+---
+layout: null
+sitemap: false
+lang: ar
+---
+
+[
+  {% for post in site.posts %}
+    {% if post.lang == "ar" %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | relative_url | jsonify }},
+      "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      "categories": {{ post.categories | jsonify }},
+      "tags": {{ post.tags | jsonify }},
+      "content": {{ post.content | prepare_search_content | jsonify }},
+      "excerpt": {{ post.excerpt | strip_html | truncatewords: 50 | prepare_search_content | jsonify }},
+      "lang": "ar",
+      "brand_keywords": "ثاكي كلاود, Thaki Cloud, الذكاء الاصطناعي, تعلم الآلة, الحوسبة السحابية, مدونة تقنية"
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+]

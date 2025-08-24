@@ -1,0 +1,193 @@
+name: Incremental Build & Deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_posts/**'
+      - '_pages/**'
+      - '_config.yml'
+      - '_data/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_sass/**'
+      - 'assets/**'
+  workflow_dispatch:
+    inputs:
+      force_full_build:
+        description: 'Force full build (ignore incremental)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: "incremental-build"
+  cancel-in-progress: true
+
+jobs:
+  detect-changes:
+    name: 🔍 Detect Changes
+    runs-on: ubuntu-latest
+    outputs:
+      changed-posts: ${{ steps.changes.outputs.posts }}
+      changed-pages: ${{ steps.changes.outputs.pages }}
+      changed-config: ${{ steps.changes.outputs.config }}
+      changed-assets: ${{ steps.changes.outputs.assets }}
+      should-build: ${{ steps.decision.outputs.should-build }}
+      build-type: ${{ steps.decision.outputs.build-type }}
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔍 Detect changed files
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            posts:
+              - '_posts/**'
+            pages:
+              - '_pages/**'
+            config:
+              - '_config.yml'
+              - '_data/**'
+              - 'Gemfile*'
+            assets:
+              - '_includes/**'
+              - '_layouts/**'
+              - '_sass/**'
+              - 'assets/**'
+
+      - name: 🤔 Build decision
+        id: decision
+        run: |
+          FORCE_FULL="${{ github.event.inputs.force_full_build }}"
+          
+          if [[ "$FORCE_FULL" == "true" ]]; then
+            echo "should-build=true" >> $GITHUB_OUTPUT
+            echo "build-type=full" >> $GITHUB_OUTPUT
+            echo "🔄 Force full build requested"
+          elif [[ "${{ steps.changes.outputs.config }}" == "true" || "${{ steps.changes.outputs.assets }}" == "true" ]]; then
+            echo "should-build=true" >> $GITHUB_OUTPUT
+            echo "build-type=full" >> $GITHUB_OUTPUT
+            echo "🔄 Full build needed (config/assets changed)"
+          elif [[ "${{ steps.changes.outputs.posts }}" == "true" || "${{ steps.changes.outputs.pages }}" == "true" ]]; then
+            echo "should-build=true" >> $GITHUB_OUTPUT
+            echo "build-type=incremental" >> $GITHUB_OUTPUT
+            echo "⚡ Incremental build (content changed)"
+          else
+            echo "should-build=false" >> $GITHUB_OUTPUT
+            echo "build-type=none" >> $GITHUB_OUTPUT
+            echo "⏭️ No build needed"
+          fi
+
+  incremental-build:
+    name: ⚡ Incremental Build
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.should-build == 'true'
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 💎 Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: 📦 Install dependencies
+        run: bundle install
+
+      - name: 🔧 Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: ⚡ Incremental Jekyll Build
+        run: |
+          BUILD_TYPE="${{ needs.detect-changes.outputs.build-type }}"
+          
+          if [[ "$BUILD_TYPE" == "full" ]]; then
+            echo "🔄 Running full build..."
+            JEKYLL_ENV=production bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --verbose
+          else
+            echo "⚡ Running incremental build..."
+            
+            # Get changed files
+            CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(md|markdown)$' | head -20)
+            
+            if [[ -n "$CHANGED_FILES" ]]; then
+              echo "📝 Changed files:"
+              echo "$CHANGED_FILES"
+              
+              # Build with limit to recent posts for faster build
+              JEKYLL_ENV=production bundle exec jekyll build \
+                --baseurl "${{ steps.pages.outputs.base_path }}" \
+                --limit_posts 50 \
+                --incremental \
+                --verbose
+            else
+              echo "⚡ No markdown files changed, running minimal build..."
+              JEKYLL_ENV=production bundle exec jekyll build \
+                --baseurl "${{ steps.pages.outputs.base_path }}" \
+                --limit_posts 10 \
+                --incremental
+            fi
+          fi
+
+      - name: 📊 Build Statistics
+        run: |
+          echo "📊 Build Statistics:"
+          echo "Build Type: ${{ needs.detect-changes.outputs.build-type }}"
+          echo "Site Size: $(du -sh _site | cut -f1)"
+          echo "File Count: $(find _site -type f | wc -l)"
+          echo "HTML Files: $(find _site -name '*.html' | wc -l)"
+          
+          # Create build info
+          cat > _site/build-info.json << EOF
+          {
+            "build_type": "${{ needs.detect-changes.outputs.build-type }}",
+            "build_date": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+            "commit": "${{ github.sha }}",
+            "ref": "${{ github.ref }}",
+            "run_number": "${{ github.run_number }}",
+            "changed_posts": ${{ needs.detect-changes.outputs.changed-posts }},
+            "changed_pages": ${{ needs.detect-changes.outputs.changed-pages }},
+            "changed_config": ${{ needs.detect-changes.outputs.changed-config }},
+            "changed_assets": ${{ needs.detect-changes.outputs.changed-assets }}
+          }
+          EOF
+
+      - name: 📦 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    name: 🚀 Deploy
+    runs-on: ubuntu-latest
+    needs: [detect-changes, incremental-build]
+    if: needs.detect-changes.outputs.should-build == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: ✅ Deployment completed
+        run: |
+          echo "🎉 Deployment completed!"
+          echo "🌐 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📊 Build Type: ${{ needs.detect-changes.outputs.build-type }}"

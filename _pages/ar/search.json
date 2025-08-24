@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /ar/search.json
+---
+[
+  {% assign posts = site.posts | where: "lang", "ar" %}
+  {% for post in posts %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | jsonify }},
+      "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      "categories": {{ post.categories | jsonify }},
+      "tags": {{ post.tags | jsonify }},
+      "content": {{ post.content | strip_html | normalize_whitespace | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

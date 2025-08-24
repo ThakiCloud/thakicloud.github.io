@@ -1,7 +1,152 @@
 ---
-layout: home
-author_profile: true
+layout: default
 title: "Thaki Cloud | ThakiCloud 기술 블로그 - AI/ML Engineering & DevOps"
-description: "Thaki Cloud(ThakiCloud, 타키클라우드, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
-keywords: "Thaki Cloud, ThakiCloud, 타키클라우드, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, الذكاء الاصطناعي, تعلم الآلة, الحوسبة السحابية, مدونة تقنية"
+description: "Thaki Cloud(ThakiCloud, 다키클라우드, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
+keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, الذكاء الاصطناعي, تعلم الآلة, الحوسبة السحابية, مدونة تقنية"
 ---
+
+<div id="language-selector" style="text-align: center; padding: 50px 20px; min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h1 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">Welcome to Thaki Cloud Tech Blog</h1>
+    <h2 style="font-size: 1.8em; margin-bottom: 20px; color: #555;">다키클라우드 기술 블로그에 오신 것을 환영합니다</h2>
+    <h2 style="font-size: 1.8em; margin-bottom: 40px; color: #555;">مرحباً بكم في مدونة ثاكي كلاود التقنية</h2>
+    
+    <div style="margin: 30px 0; font-size: 1.2em; color: #666;">
+      <p>Please select your preferred language / 언어를 선택해주세요 / يرجى اختيار لغتك المفضلة</p>
+    </div>
+    
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 40px 0;">
+      <a href="/ko/" class="btn btn--primary btn--large" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+        🇰🇷 한국어
+      </a>
+      <a href="/en/" class="btn btn--primary btn--large" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+        🇺🇸 English
+      </a>
+      <a href="/ar/" class="btn btn--primary btn--large" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+        🇸🇦 العربية
+      </a>
+    </div>
+    
+    <div id="redirect-message" style="margin-top: 30px; font-size: 0.9em; color: #999; opacity: 0; transition: opacity 0.5s ease;">
+      <p>Redirecting based on your browser language... / 브라우저 언어에 따라 자동 이동 중... / إعادة التوجيه بناءً على لغة المتصفح...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+    // 브라우저 언어 감지 및 자동 리디렉션
+    const userLang = navigator.language || navigator.userLanguage;
+    const supportedLangs = {
+        'ko': '/ko/',
+        'en': '/en/',
+        'ar': '/ar/'
+    };
+    
+    // 언어 코드 매핑
+    let targetLang = 'ko'; // 기본값
+    
+    if (userLang.startsWith('en')) {
+        targetLang = 'en';
+    } else if (userLang.startsWith('ar')) {
+        targetLang = 'ar';
+    } else if (userLang.startsWith('ko')) {
+        targetLang = 'ko';
+    }
+    
+    // 쿠키에서 사용자 선택 언어 확인
+    const savedLang = getCookie('preferred_language');
+    if (savedLang && supportedLangs[savedLang]) {
+        targetLang = savedLang;
+    }
+    
+    // 리디렉션 메시지 표시
+    setTimeout(function() {
+        const redirectMessage = document.getElementById('redirect-message');
+        if (redirectMessage) {
+            redirectMessage.style.opacity = '1';
+        }
+    }, 1000);
+    
+    // 3초 후 자동 리디렉션 (사용자가 수동 선택할 시간 제공)
+    setTimeout(function() {
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            window.location.href = supportedLangs[targetLang];
+        }
+    }, 3000);
+    
+    // 쿠키 헬퍼 함수
+    function getCookie(name) {
+        const value = "; " + document.cookie;
+        const parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+    
+    function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
+    }
+    
+    // 언어 선택 버튼에 이벤트 리스너 추가
+    document.addEventListener('DOMContentLoaded', function() {
+        const langButtons = document.querySelectorAll('a[href^="/"]');
+        langButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                const lang = href.split('/')[1];
+                if (supportedLangs[lang]) {
+                    setCookie('preferred_language', lang, 365);
+                }
+            });
+            
+            // 호버 효과
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    });
+})();
+</script>
+
+<style>
+.btn--primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    display: inline-block;
+}
+
+.btn--primary:hover {
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+}
+
+.btn--large {
+    font-size: 1.1em;
+    padding: 15px 30px;
+}
+
+@media (max-width: 768px) {
+    #language-selector h1 {
+        font-size: 2em !important;
+    }
+    
+    #language-selector h2 {
+        font-size: 1.4em !important;
+    }
+    
+    .btn--large {
+        min-width: 120px !important;
+        padding: 12px 20px !important;
+        font-size: 1em !important;
+    }
+}
+</style>

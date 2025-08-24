@@ -1,0 +1,935 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 블로그 포스트 작성 자동화 가이드
+
+## 1. 기본 설정
+
+### 내용이 매우 길어서 단락별로 나눠서 글을 작성해줘.
+
+### 서브모듈로 테스트 했다면 서브 모듈은 글 작성 완료 후 삭제해줘. 
+
+### 최근 글 10개만 빌드 테스트 해줘. 
+bundle exec jekyll build --verbose --trace --limit_posts 10
+
+### news, career 카테고리는 코딩보다는 자연스러운 한국어 기반의 글을 작성해줘.
+
+### 날짜 확인 및 환경 설정
+```bash
+# 오늘 날짜 확인
+date +"%Y-%m-%d"
+
+# 블로그 작업 디렉토리 설정
+export BLOG_DIR="./_posts"
+export SCRIPTS_DIR="$HOME/scripts"
+```
+
+## 2. 파일명 규칙
+
+**필수 형식**: `YYYY-MM-DD-title.md`
+
+예시:
+- `2025-06-28-ai-model-deployment-guide.md`
+- `2025-06-28-docker-kubernetes-tutorial.md`
+
+## 3. 카테고리 분류
+
+반드시 다음 카테고리 중 하나 이상 포함:
+
+| 카테고리 | 설명 | 사용 예시 |
+|---------|------|----------|
+| `dev` | 개발 관련 내용 | 프로그래밍, 코딩 팁 |
+| `llmops` | LLM 운영 및 관리 | AI 모델 배포, MLOps |
+| `owm` | 오픈 워크플로우 관리 | 워크플로우 자동화 |
+| `tutorials` | 실습 가이드 | 단계별 튜토리얼 |
+| `news` | 기술 뉴스 | 업계 동향, 릴리즈 소식 |
+| `research` | 연구 자료 | 논문 리뷰, 실험 결과 |
+| `datasets` | 데이터셋 관련 | 데이터 분석, 처리 |
+| `careers` | 커리어 | 취업, 이직, 성장 |
+| `culture` | 개발 문화 | 팀워크, 방법론 |
+
+## 4. Tutorials 카테고리 특별 규칙
+
+### 4.1 macOS 실행 가능한 경우
+1. **테스트 스크립트 작성 필수**
+2. **실제 실행 및 결과 포함**
+3. **개발환경 버전 명시**
+4. **zshrc alias 가이드 제공**
+
+- 테스트한 내용이 있다면 반드시 글에 포함시켜줘. 
+
+### 4.2 NVIDIA GPU 필요한 경우
+- 테스트 생략, 이론적 설명만 작성
+- GPU 요구사항 명시
+- 대안 환경 제시
+
+## 5. Front Matter 템플릿
+
+```yaml
+---
+title: "명확하고 구체적인 제목"
+excerpt: "핵심 내용을 2-3문장으로 요약 (100-150자)"
+seo_title: "SEO 최적화 제목 (60자 이내) - Thaki Cloud"
+seo_description: "검색 의도를 반영한 상세 설명 (150-160자)"
+date: YYYY-MM-DD
+last_modified_at: YYYY-MM-DD
+categories:
+  - 주요카테고리
+  - 부카테고리
+tags:
+  - 핵심키워드1
+  - 핵심키워드2
+  - 기술스택
+  - 브랜드명
+  - 도구명
+author_profile: true
+toc: true
+toc_label: "목차"
+toc_icon: "cog"
+toc_sticky: true
+canonical_url: "https://thakicloud.github.io/카테고리/포스트-slug/"
+reading_time: true
+---
+
+⏱️ **예상 읽기 시간**: X분
+```
+
+### yaml 코드 포맷
+```yaml
+{% raw %}
+providers:
+  jira:
+    type: jira
+    config:
+      url: "{{ env.JIRA_URL }}"
+      username: "{{ env.JIRA_USERNAME }}"
+      password: "{{ env.JIRA_PASSWORD }}"
+      # 또는 API 토큰 사용
+      api_token: "{{ env.JIRA_API_TOKEN }}"
+{% endraw %}
+```
+
+## 6. 자동화 스크립트
+
+### 6.1 블로그 포스트 생성 스크립트
+```bash
+#!/bin/bash
+# 파일: ~/scripts/new-post.sh
+
+TODAY=$(date +"%Y-%m-%d")
+TITLE_SLUG=$1
+CATEGORY=$2
+
+if [ -z "$TITLE_SLUG" ] || [ -z "$CATEGORY" ]; then
+    echo "사용법: new-post <title-slug> <category>"
+    echo "카테고리: dev, llmops, owm, tutorials, news, research, datasets, careers, culture"
+    exit 1
+fi
+
+FILENAME="${TODAY}-${TITLE_SLUG}.md"
+FILEPATH="${BLOG_DIR}/${FILENAME}"
+
+# Front Matter 템플릿 생성
+cat > "$FILEPATH" << EOF
+---
+title: ""
+excerpt: ""
+seo_title: " - Thaki Cloud"
+seo_description: ""
+date: ${TODAY}
+categories:
+  - ${CATEGORY}
+tags:
+  - 
+author_profile: true
+toc: true
+toc_label: "목차"
+canonical_url: "https://thakicloud.github.io/${CATEGORY}/${TITLE_SLUG}/"
+---
+
+⏱️ **예상 읽기 시간**: 분
+
+## 서론
+
+## 본론
+
+## 결론
+EOF
+
+echo "블로그 포스트 생성됨: $FILEPATH"
+```
+
+### 6.2 읽기 시간 계산 스크립트
+```bash
+#!/bin/bash
+# 파일: ~/scripts/calculate-reading-time.sh
+
+FILE=$1
+if [ -z "$FILE" ]; then
+    echo "사용법: calculate-reading-time <markdown-file>"
+    exit 1
+fi
+
+WORD_COUNT=$(wc -w < "$FILE")
+READING_TIME=$((WORD_COUNT / 200)) # 분당 200단어 기준
+
+if [ $READING_TIME -eq 0 ]; then
+    READING_TIME=1
+fi
+
+echo "${READING_TIME}분"
+```
+
+## 7. zshrc Aliases
+
+```bash
+# ~/.zshrc에 추가
+export BLOG_DIR="./_posts"
+export SCRIPTS_DIR="$HOME/scripts"
+
+# 블로그 관련 alias
+alias newpost="$SCRIPTS_DIR/new-post.sh"
+alias readtime="$SCRIPTS_DIR/calculate-reading-time.sh"
+alias blogdir="cd $BLOG_DIR"
+alias editpost="code $BLOG_DIR"
+
+# 자주 사용하는 명령어 단축
+alias ll="ls -la"
+alias la="ls -A"
+alias gst="git status"
+alias gaa="git add ."
+alias gcm="git commit -m"
+alias gps="git push"
+alias gpl="git pull"
+
+# 개발환경 확인
+alias pyver="python --version"
+alias nodefer="node --version"
+alias npmver="npm --version"
+alias gitver="git --version"
+
+# 다국어 블로그 관련 alias
+alias newmultipost="$SCRIPTS_DIR/create-multilingual-post.sh"
+alias checkurls="bundle exec jekyll doctor"
+alias buildtest="JEKYLL_ENV=production bundle exec jekyll build --verbose --trace --limit_posts 10"
+```
+
+## 8. 실행 가이드
+
+### 8.1 초기 설정
+```bash
+# 스크립트 디렉토리 생성
+mkdir -p ~/scripts
+
+# 스크립트 파일들 생성 및 실행 권한 부여
+chmod +x ~/scripts/*.sh
+
+# zshrc 재로드
+source ~/.zshrc
+```
+
+### 8.2 사용 예시
+```bash
+# 새 포스트 생성
+newpost "docker-kubernetes-guide" "tutorials"
+
+# 읽기 시간 계산
+readtime ./_posts/2025-06-28-docker-kubernetes-guide.md
+
+# 블로그 디렉토리로 이동
+blogdir
+```
+
+## 9. 품질 체크리스트
+
+### 필수 확인 사항
+- [ ] 파일명이 `YYYY-MM-DD-title.md` 형식인가?
+- [ ] 카테고리가 지정된 9개 중 하나인가?
+- [ ] Front Matter가 완전한가?
+- [ ] SEO 제목이 60자 이내인가?
+- [ ] SEO 설명이 150-160자인가?
+- [ ] 읽기 시간이 표시되어 있는가?
+
+### Tutorials 카테고리 추가 확인
+- [ ] macOS에서 실행 가능한가?
+- [ ] 테스트 스크립트를 작성했는가?
+- [ ] 실행 결과를 포함했는가?
+- [ ] 개발환경 버전을 명시했는가?
+- [ ] zshrc alias 가이드를 제공했는가?
+
+## 10. Jekyll Liquid 문법 오류 방지 가이드
+
+### 10.1 JavaScript 스타일 객체 처리
+
+블로그 포스트에서 React/JavaScript 코드 예제를 작성할 때, 스타일 객체가 Jekyll의 Liquid 템플릿 엔진과 충돌할 수 있습니다.
+
+#### ❌ 문제가 되는 코드
+```jsx
+// 이런 스타일 객체들이 Liquid 변수로 잘못 인식됨
+<div style={{width: '67%'}} />
+<button style={{padding: '10px', backgroundColor: '#007bff'}} />
+```
+
+#### ✅ 올바른 해결 방법
+```jsx
+// {% raw %} 태그로 감싸서 Liquid 처리 방지
+<div style={% raw %}{{width: '67%'}}{% endraw %} />
+<button style={% raw %}{{padding: '10px', backgroundColor: '#007bff'}}{% endraw %} />
+```
+
+### 10.2 {% raw %} 태그 올바른 사용법
+
+#### ❌ 잘못된 문법
+```liquid
+{{% raw %} // 중괄호가 하나 더 많음
+{% raw %  // 닫는 중괄호 누락
+%} raw %} // 여는 중괄호 누락
+```
+
+#### ✅ 올바른 문법
+```liquid
+{% raw %}
+// 여기에 Liquid 처리를 방지할 코드 작성
+{{ 변수명 }}
+{%- if 조건 -%}
+{% endraw %}
+```
+
+### 10.3 자주 발생하는 Liquid 충돌 패턴
+
+#### JavaScript/React 코드에서 주의할 패턴
+- `style={{...}}` - 인라인 스타일 객체
+- `className={{...}}` - 동적 클래스명
+- `onClick={() => {...}}` - 화살표 함수
+- `${변수명}` - 템플릿 리터럴
+- `{{조건 ? 값1 : 값2}}` - 삼항 연산자
+
+#### YAML 설정에서 주의할 패턴
+```yaml
+# ❌ 문제가 되는 경우
+config:
+  url: "{{ env.API_URL }}"
+
+# ✅ raw 태그로 보호
+{% raw %}
+config:
+  url: "{{ env.API_URL }}"
+{% endraw %}
+```
+
+### 10.4 빌드 전 Liquid 오류 체크
+
+#### 오늘 날짜 이후의 블로그 글들만 체크하면 돼. 
+
+#### 로컬 테스트 명령어
+```bash
+# 1. Jekyll doctor로 설정 검증
+bundle exec jekyll doctor
+
+# 2. 개발 빌드로 Liquid 오류 확인
+bundle exec jekyll build --verbose
+
+# 3. Liquid Warning 검색
+bundle exec jekyll build 2>&1 | grep -i "liquid"
+```
+
+#### CI/CD에서 자동 체크
+```bash
+# GitHub Actions에서 Liquid 오류 감지
+JEKYLL_ENV=production bundle exec jekyll build --verbose --trace
+```
+
+### 10.5 문제 해결 체크리스트
+
+포스트 작성 후 반드시 확인:
+
+- [ ] React/JavaScript 코드의 `style={{}}` 패턴을 `{% raw %}` 태그로 감쌌는가?
+- [ ] `{% raw %}` 태그 문법이 올바른가? (`{{% raw %}`가 아닌 `{% raw %}`)
+- [ ] YAML 설정에서 `{{ }}` 변수를 사용했다면 `{% raw %}` 태그로 보호했는가?
+- [ ] 로컬에서 `bundle exec jekyll build`가 경고 없이 성공하는가?
+- [ ] 터미널에서 "Liquid Warning" 메시지가 없는가?
+
+### 10.6 자동화 스크립트 추가
+
+#### Liquid 오류 체크 스크립트
+```bash
+#!/bin/bash
+# 파일: ~/scripts/check-liquid-errors.sh
+
+echo "🔍 Jekyll Liquid 문법 오류 체크 중..."
+
+# Jekyll 빌드 실행 및 Liquid 경고 확인
+OUTPUT=$(bundle exec jekyll build 2>&1)
+LIQUID_WARNINGS=$(echo "$OUTPUT" | grep -i "liquid warning" | wc -l)
+
+if [ "$LIQUID_WARNINGS" -gt 0 ]; then
+    echo "❌ Liquid 경고 발견: $LIQUID_WARNINGS 개"
+    echo "$OUTPUT" | grep -i "liquid warning"
+    echo ""
+    echo "💡 해결 방법:"
+    echo "1. JavaScript 스타일 객체를 {% raw %} 태그로 감싸세요"
+    echo "2. {% raw %} 태그 문법이 올바른지 확인하세요"
+    exit 1
+else
+    echo "✅ Liquid 문법 오류 없음"
+fi
+```
+
+#### zshrc alias 추가
+```bash
+# ~/.zshrc에 추가
+alias checkliquid="$SCRIPTS_DIR/check-liquid-errors.sh"
+```
+
+### 10.7 VS Code 확장 추천
+
+Jekyll 포스트 작성 시 도움되는 확장:
+- **Jekyll Snippets**: Jekyll 문법 자동완성
+- **Liquid Languages Support**: Liquid 문법 하이라이팅
+- **YAML**: YAML 문법 검증
+
+
+## 11. 실제 글 완료 후에 로컬 테스트 해보고 문제 해결하기
+
+### Ruby Gem & Bundler
+```sh
+gem install bundler
+bundle install
+```
+---
+
+### Jekyll Doctor (설정 점검)
+```sh
+bundle exec jekyll doctor
+```
+
+**Jekyll Doctor 주요 체크 항목:**
+- 설정 파일 문법 오류 검증
+- 플러그인 호환성 확인
+- **다국어 포스트 URL 충돌 감지** ⚠️
+- 누락된 의존성 확인
+
+**URL 충돌 해결 방법:**
+다국어 포스트에서 같은 URL이 생성되어 충돌하는 경우, 각 포스트에 명시적 `permalink` 추가:
+
+```yaml
+# 한국어 포스트
+permalink: /ko/카테고리/포스트명/
+
+# 영어 포스트  
+permalink: /en/카테고리/포스트명/
+
+# 아랍어 포스트
+permalink: /ar/카테고리/포스트명/
+```
+
+### Jekyll Build (프로덕션 빌드)
+```sh
+JEKYLL_ENV=production bundle exec jekyll build --verbose --trace --limit_posts 10
+```
+- 빌드 결과는 `_site/` 폴더에 생성됩니다.
+
+---
+
+### 마크다운 문법 검사 (Markdown Lint)
+
+```sh
+markdownlint '_posts/**/*.md' '_pages/**/*.md' 'README.md' --config .markdownlint.json
+```
+- `.markdownlint.json`이 없다면 워크플로우의 설정을 참고해 생성하세요.
+
+---
+
+## 12. LaTeX 수식 작성 규칙
+
+### 12.1 수식 표기법 통일
+
+블로그 포스트에서 수학 수식을 작성할 때는 다음 규칙을 따라야 합니다:
+
+#### ✅ 올바른 LaTeX 수식 포맷
+```markdown
+# 블록 수식 (독립된 줄)
+$$J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]$$
+
+# 인라인 수식 (문장 내)
+여기서 $\theta$는 모델의 매개변수입니다.
+```
+
+#### ❌ 잘못된 수식 포맷
+```markdown
+# 이중 백슬래시 사용 금지
+\\[J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]\\]
+
+# 괄호 형태 인라인 수식 금지
+여기서 \\(\theta\\)는 모델의 매개변수입니다.
+```
+
+### 12.2 수식 작성 가이드라인
+
+#### 블록 수식
+- **독립된 수식**: `$$` 사용
+- **수식 앞뒤 빈 줄**: 가독성을 위해 반드시 포함
+- **복잡한 수식**: 여러 줄로 나누어 작성 가능
+
+```markdown
+목적 함수는 다음과 같이 정의됩니다:
+
+$$J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]$$
+
+이 함수를 최적화하기 위해...
+```
+
+#### 인라인 수식
+- **문장 내 변수**: `$variable$` 사용
+- **간단한 수식**: 문장 흐름을 방해하지 않는 선에서 사용
+- **복잡한 수식**: 블록 수식으로 분리
+
+```markdown
+모델의 매개변수 $\theta$를 업데이트하여 목적 함수 $J(\theta)$를 최적화합니다.
+```
+
+### 12.3 수식 설명 작성법
+
+#### 변수 설명
+```markdown
+여기서:
+- $\theta$는 모델의 매개변수
+- $D$는 훈련 데이터 분포
+- $\pi_\theta(y|x)$는 매개변수 $\theta$를 가진 정책(모델)
+```
+
+#### 수식 해석
+- **수학적 의미**: 각 수식이 나타내는 개념 설명
+- **직관적 설명**: 수식을 일반인도 이해할 수 있게 풀어서 설명
+- **실무적 의미**: 해당 수식이 실제로 어떤 역할을 하는지 설명
+
+### 12.4 자주 사용하는 LaTeX 기호
+
+#### 기본 기호
+```latex
+# 그리스 문자
+$\alpha, \beta, \gamma, \theta, \lambda, \mu, \sigma$
+
+# 수학 연산자
+$\sum, \prod, \int, \nabla, \partial$
+
+# 확률/통계
+$\mathbb{E}, \mathbb{P}, \sim, \propto$
+
+# 집합/논리
+$\in, \subset, \cup, \cap, \forall, \exists$
+```
+
+#### 복잡한 표현
+```latex
+# 기댓값
+$\mathbb{E}_{x \sim D}[f(x)]$
+
+# 조건부 확률
+$P(y|x, \theta)$
+
+# 그래디언트
+$\nabla_\theta J(\theta)$
+
+# 최적화
+$\arg\max_\theta J(\theta)$
+```
+
+### 12.5 수식 검증 체크리스트
+
+포스트 작성 후 반드시 확인:
+
+- [ ] 모든 블록 수식이 `$$`로 감싸져 있는가?
+- [ ] 모든 인라인 수식이 `$`로 감싸져 있는가?
+- [ ] `\\[`, `\\]`, `\\(`, `\\)` 형태의 수식이 없는가?
+- [ ] 수식 앞뒤에 적절한 빈 줄이 있는가?
+- [ ] 모든 변수와 기호가 일관되게 사용되었는가?
+- [ ] 수식에 대한 설명이 충분히 제공되었는가?
+
+### 12.6 MathJax 렌더링 확인
+
+Jekyll에서 MathJax가 올바르게 작동하는지 확인:
+
+```bash
+# 로컬 빌드 테스트
+bundle exec jekyll serve
+
+# 수식이 포함된 페이지 확인
+# 브라우저에서 수식이 올바르게 렌더링되는지 검증
+```
+
+---
+
+## 13. 다국어 번역 및 Permalink 설정 가이드
+
+### 13.1 다국어 포스트 번역 프로세스
+
+#### 단계 1: 원본 포스트 작성 (한국어)
+```yaml
+---
+title: "Jekyll 다국어 블로그 구축 가이드"
+excerpt: "Jekyll을 사용하여 한국어, 영어, 아랍어를 지원하는 다국어 블로그를 구축하는 방법"
+date: 2025-01-28
+lang: ko
+permalink: /ko/tutorials/jekyll-multilingual-blog-guide/
+categories:
+  - tutorials
+tags:
+  - Jekyll
+  - 다국어
+  - i18n
+canonical_url: "https://thakicloud.github.io/ko/tutorials/jekyll-multilingual-blog-guide/"
+---
+```
+
+#### 단계 2: 영어 번역 파일 생성
+```yaml
+---
+title: "Jekyll Multilingual Blog Setup Guide"
+excerpt: "How to build a multilingual blog supporting Korean, English, and Arabic using Jekyll"
+date: 2025-01-28
+lang: en
+permalink: /en/tutorials/jekyll-multilingual-blog-guide/
+categories:
+  - tutorials
+tags:
+  - Jekyll
+  - multilingual
+  - i18n
+canonical_url: "https://thakicloud.github.io/en/tutorials/jekyll-multilingual-blog-guide/"
+---
+```
+
+#### 단계 3: 아랍어 번역 파일 생성
+```yaml
+---
+title: "دليل إنشاء مدونة متعددة اللغات باستخدام Jekyll"
+excerpt: "كيفية بناء مدونة متعددة اللغات تدعم الكورية والإنجليزية والعربية باستخدام Jekyll"
+date: 2025-01-28
+lang: ar
+permalink: /ar/tutorials/jekyll-multilingual-blog-guide/
+categories:
+  - tutorials
+tags:
+  - Jekyll
+  - متعدد اللغات
+  - i18n
+canonical_url: "https://thakicloud.github.io/ar/tutorials/jekyll-multilingual-blog-guide/"
+---
+```
+
+### 13.2 Permalink 설정 규칙
+
+#### ✅ 올바른 Permalink 패턴
+```yaml
+# 한국어 (기본)
+permalink: /ko/카테고리/포스트-슬러그/
+
+# 영어
+permalink: /en/category/post-slug/
+
+# 아랍어  
+permalink: /ar/category/post-slug/
+```
+
+#### ❌ 피해야 할 패턴
+```yaml
+# 언어 코드 누락 (충돌 발생)
+permalink: /카테고리/포스트명/
+
+# 날짜 포함 (불필요한 복잡성)
+permalink: /ko/2025/01/28/포스트명/
+
+# 특수문자 사용
+permalink: /ko/카테고리/포스트명!/
+```
+
+### 13.3 번역 시 필수 수정 항목
+
+#### Front Matter 번역 체크리스트
+- [ ] `title`: 언어별 적절한 번역
+- [ ] `excerpt`: 언어별 요약문 작성
+- [ ] `seo_title`: 언어별 SEO 최적화 제목
+- [ ] `seo_description`: 언어별 SEO 설명
+- [ ] `lang`: 언어 코드 설정 (ko/en/ar)
+- [ ] `permalink`: 언어별 고유 URL 설정
+- [ ] `canonical_url`: 언어별 정규 URL 설정
+- [ ] `tags`: 언어별 태그 번역
+- [ ] `toc_label`: 목차 라벨 번역
+
+#### 본문 번역 체크리스트
+- [ ] 모든 제목과 부제목 번역
+- [ ] 코드 주석 번역 (필요시)
+- [ ] 이미지 alt 텍스트 번역
+- [ ] 링크 텍스트 번역
+- [ ] 예상 읽기 시간 표기 번역
+
+### 13.4 자동화 스크립트
+
+#### 다국어 포스트 생성 스크립트
+```bash
+#!/bin/bash
+# 파일: ~/scripts/create-multilingual-post.sh
+
+TITLE_SLUG=$1
+CATEGORY=$2
+TODAY=$(date +"%Y-%m-%d")
+
+if [ -z "$TITLE_SLUG" ] || [ -z "$CATEGORY" ]; then
+    echo "사용법: create-multilingual-post <title-slug> <category>"
+    exit 1
+fi
+
+# 언어별 디렉토리 생성
+mkdir -p "_posts/ko/${CATEGORY}"
+mkdir -p "_posts/en/${CATEGORY}" 
+mkdir -p "_posts/ar/${CATEGORY}"
+
+# 한국어 원본 파일 생성
+cat > "_posts/ko/${CATEGORY}/${TODAY}-${TITLE_SLUG}.md" << EOF
+---
+title: ""
+excerpt: ""
+seo_title: " - Thaki Cloud"
+seo_description: ""
+date: ${TODAY}
+lang: ko
+permalink: /ko/${CATEGORY}/${TITLE_SLUG}/
+categories:
+  - ${CATEGORY}
+tags:
+  - 
+canonical_url: "https://thakicloud.github.io/ko/${CATEGORY}/${TITLE_SLUG}/"
+---
+
+⏱️ **예상 읽기 시간**: 분
+
+## 서론
+
+## 본론
+
+## 결론
+EOF
+
+# 영어 번역 템플릿 생성
+cat > "_posts/en/${CATEGORY}/${TODAY}-${TITLE_SLUG}.md" << EOF
+---
+title: "[Enter English Title]"
+excerpt: "[Enter English Summary]"
+seo_title: "[English SEO Title] - Thaki Cloud"
+seo_description: "[Enter English SEO Description]"
+date: ${TODAY}
+lang: en
+permalink: /en/${CATEGORY}/${TITLE_SLUG}/
+categories:
+  - ${CATEGORY}
+tags:
+  - 
+canonical_url: "https://thakicloud.github.io/en/${CATEGORY}/${TITLE_SLUG}/"
+---
+
+⏱️ **Estimated reading time**: min read
+
+## Introduction
+
+## Main Content
+
+## Conclusion
+EOF
+
+# 아랍어 번역 템플릿 생성
+cat > "_posts/ar/${CATEGORY}/${TODAY}-${TITLE_SLUG}.md" << EOF
+---
+title: "[أدخل العنوان العربي]"
+excerpt: "[أدخل الملخص العربي]"
+seo_title: "[عنوان SEO العربي] - ثاكي كلاود"
+seo_description: "[أدخل وصف SEO العربي]"
+date: ${TODAY}
+lang: ar
+permalink: /ar/${CATEGORY}/${TITLE_SLUG}/
+categories:
+  - ${CATEGORY}
+tags:
+  - 
+canonical_url: "https://thakicloud.github.io/ar/${CATEGORY}/${TITLE_SLUG}/"
+---
+
+⏱️ **وقت القراءة المقدر**: دقيقة قراءة
+
+## مقدمة
+
+## المحتوى الرئيسي
+
+## خلاصة
+EOF
+
+echo "다국어 포스트 템플릿 생성 완료:"
+echo "- 한국어: _posts/ko/${CATEGORY}/${TODAY}-${TITLE_SLUG}.md"
+echo "- 영어: _posts/en/${CATEGORY}/${TODAY}-${TITLE_SLUG}.md"
+echo "- 아랍어: _posts/ar/${CATEGORY}/${TODAY}-${TITLE_SLUG}.md"
+```
+
+### 13.5 URL 충돌 방지 체크리스트
+
+#### 번역 전 확인사항
+- [ ] 원본 포스트에 명시적 `permalink` 설정되어 있는가?
+- [ ] `_config.yml`에서 전역 permalink 설정이 주석 처리되어 있는가?
+- [ ] 언어별 설정 파일(`_config-ko.yml`, `_config-en.yml`, `_config-ar.yml`)이 올바른가?
+
+#### 번역 후 검증
+- [ ] `bundle exec jekyll doctor` 실행하여 충돌 없는지 확인
+- [ ] 각 언어별 URL이 고유한지 확인
+- [ ] 모든 언어의 canonical_url이 올바른지 확인
+
+### 13.6 사용 예시
+
+```bash
+# 다국어 포스트 생성
+newmultipost "ai-model-deployment" "tutorials"
+
+# URL 충돌 검사
+checkurls
+
+# 제한된 포스트로 빌드 테스트
+buildtest
+```
+
+---
+
+## 14. Research 카테고리 특별 작성 규칙
+
+### 14.1 Research 카테고리 글 작성 원칙
+
+Research 카테고리는 학술 논문 분석, 연구 동향 리뷰, 기술적 심화 분석을 다루는 카테고리입니다. 코딩 튜토리얼이 아닌 **이론적 분석과 학술적 해석**에 중점을 둡니다.
+
+#### ✅ Research 카테고리 핵심 원칙
+- **코딩 글 작성 금지**: 실행 가능한 코드나 설치 가이드 포함 안 함
+- **단락별 상세 분석**: 각 개념을 긴 문장으로 심도 있게 설명
+- **수학적 공식 포함**: LaTeX 형태로 중요한 수식을 정리하고 해석
+- **학술적 접근**: 논문의 이론적 배경과 기여도를 중심으로 분석
+- **실무적 시사점**: 연구 결과가 실제 산업에 미치는 영향 분석
+
+### 14.2 논문 리서치 블로그 포스트 작성 프로세스
+
+#### 단계 1: 논문 분석 및 구조화
+```markdown
+1. 논문의 핵심 기여도 파악
+2. 주요 수학적 공식 및 알고리즘 추출
+3. 실험 결과 및 성능 지표 정리
+4. 기존 연구와의 차별점 분석
+5. 실무 적용 가능성 평가
+```
+
+#### 단계 2: 블로그 포스트 구조 설계
+```markdown
+## 서론: 연구 배경 및 문제 정의
+- 기존 방법론의 한계점 분석
+- 새로운 접근법의 필요성 제시
+- 논문의 핵심 아이디어 소개
+
+## 핵심 개념: 이론적 프레임워크
+- 주요 개념의 정의와 원리
+- 기존 방법론과의 비교 분석
+- 수학적 공식화 및 해석
+
+## 수학적 공식화와 알고리즘
+- 핵심 수식의 LaTeX 표현
+- 각 수식의 의미와 역할 설명
+- 알고리즘의 동작 원리 분석
+
+## 실험 결과 및 성능 분석
+- 벤치마크 데이터셋에서의 성능
+- 기존 방법론과의 정량적 비교
+- 성능 향상의 원인 분석
+
+## 응용 분야와 확장 가능성
+- 다양한 도메인에서의 적용 가능성
+- 실무 환경에서의 활용 방안
+- 향후 연구 방향 제시
+
+## 결론: 연구의 의의와 한계
+- 학술적 기여도 요약
+- 실무적 시사점 정리
+- 향후 개선 방향 제시
+```
+
+### 14.3 수학적 공식 작성 및 해석 가이드
+
+#### LaTeX 수식 작성 원칙
+```markdown
+# 블록 수식 (독립된 중요 공식)
+$$J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]$$
+
+# 인라인 수식 (문장 내 변수)
+모델의 매개변수 $\theta$를 최적화하여...
+```
+
+#### 수식 해석 작성법
+```markdown
+### 수식의 수학적 의미
+$$\nabla_\theta J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y) \nabla_\theta \log \pi_\theta(y|x)]$$
+
+위 수식은 정책 그래디언트 방법의 핵심을 나타냅니다. 여기서:
+- $\theta$는 모델의 학습 가능한 매개변수
+- $D$는 훈련 데이터의 확률 분포
+- $\pi_\theta(y|x)$는 입력 $x$에 대한 출력 $y$의 조건부 확률
+- $R(x, y)$는 입력-출력 쌍에 대한 보상 함수
+
+### 직관적 해석
+이 그래디언트는 높은 보상을 받은 출력의 확률을 증가시키고, 낮은 보상을 받은 출력의 확률을 감소시키는 방향으로 모델을 업데이트합니다. 즉, 모델이 좋은 결과를 낸 행동을 더 자주 하도록 학습시키는 것입니다.
+
+### 실무적 의미
+실제 구현에서는 이 그래디언트를 사용하여 Adam이나 SGD 같은 최적화 알고리즘으로 모델의 가중치를 업데이트합니다. 보상 함수 $R(x, y)$의 설계가 모델 성능에 결정적인 영향을 미치므로, 도메인 전문 지식을 바탕으로 적절한 보상 체계를 구축하는 것이 중요합니다.
+```
+
+### 14.4 Research 카테고리 작성 체크리스트
+
+#### 필수 확인 사항
+- [ ] 코딩 예제나 설치 가이드가 포함되지 않았는가?
+- [ ] 각 단락이 충분히 상세하고 긴 문장으로 구성되었는가?
+- [ ] 주요 수학적 공식이 LaTeX 형태로 포함되었는가?
+- [ ] 모든 수식에 대한 해석과 설명이 제공되었는가?
+- [ ] 논문의 이론적 기여도가 명확히 설명되었는가?
+- [ ] 실험 결과의 의미와 시사점이 분석되었는가?
+- [ ] 실무 적용 가능성이 구체적으로 논의되었는가?
+
+#### Research 글 품질 기준
+- **학술적 엄밀성**: 논문의 내용을 정확하게 이해하고 전달
+- **이론적 깊이**: 표면적 요약이 아닌 심층적 분석 제공
+- **수학적 정확성**: 수식의 의미와 역할을 정확히 해석
+- **실무적 관련성**: 연구 결과의 실제 활용 방안 제시
+- **비판적 사고**: 연구의 한계점과 개선 방향 논의
+
+### 14.5 Research 카테고리 글 예시 구조
+
+#### 제목 작성법
+```markdown
+# 좋은 예시
+"DuPO: 듀얼 정책 최적화를 통한 대규모 언어 모델의 혁신적 자기 감독 학습 프레임워크"
+"강화학습 기반 포스트 트레이닝의 패러다임 전환: 2025년 핵심 연구 동향 분석"
+
+# 피해야 할 예시 (코딩 가이드 형태)
+"DuPO 구현하기: Python으로 듀얼 정책 최적화 튜토리얼"
+"강화학습 포스트 트레이닝 실습 가이드"
+```
+
+#### 내용 구성 예시
+```markdown
+## 서론: 연구 배경과 동기 (2-3 단락)
+현대 인공지능 분야에서 대규모 언어 모델의 성능 향상은 지속적인 연구의 핵심 과제로 자리잡고 있습니다. 특히 모델의 출력 품질을 개선하고 인간의 선호도에 맞춘 응답을 생성하기 위한 다양한 방법론들이 제안되어 왔습니다...
+
+## 핵심 개념: 이론적 프레임워크 (4-5 단락)
+DuPO는 듀얼 학습 개념을 기반으로 한 자기 감독 학습 프레임워크로, 외부 주석이나 검증자에 대한 의존도를 크게 줄이면서도 다양한 작업에서 일관된 성능 향상을 달성할 수 있는 새로운 패러다임을 제시합니다...
+
+## 수학적 공식화 (3-4 단락 + 수식)
+$$R(x, y) = \text{Similarity}(x_u, \hat{x_u})$$
+
+DuPO의 핵심은 듀얼 작업의 재구성 품질을 기반으로 한 자기 감독 보상 함수입니다...
+```
+
+
+
+---
+

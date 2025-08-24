@@ -1,0 +1,349 @@
+name: Multilingual Incremental Deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_posts/**'
+      - '_pages/**'
+      - '_config*.yml'
+      - '_data/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_sass/**'
+      - 'assets/**'
+      - 'index.html'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '_posts/**'
+      - '_pages/**'
+      - '_config*.yml'
+      - '_data/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_sass/**'
+      - 'assets/**'
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  detect-language-changes:
+    name: 🔍 Detect Language Changes
+    runs-on: ubuntu-latest
+    outputs:
+      korean-changed: ${{ steps.changes.outputs.korean }}
+      english-changed: ${{ steps.changes.outputs.english }}
+      arabic-changed: ${{ steps.changes.outputs.arabic }}
+      global-changed: ${{ steps.changes.outputs.global }}
+      should-build-all: ${{ steps.decision.outputs.should-build-all }}
+      build-languages: ${{ steps.decision.outputs.build-languages }}
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔍 Detect changed files by language
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            korean:
+              - '_posts/ko/**'
+              - '_pages/ko/**'
+              - '_config-ko.yml'
+            english:
+              - '_posts/en/**'
+              - '_pages/en/**'
+              - '_config-en.yml'
+            arabic:
+              - '_posts/ar/**'
+              - '_pages/ar/**'
+              - '_config-ar.yml'
+            global:
+              - '_config.yml'
+              - '_data/**'
+              - '_includes/**'
+              - '_layouts/**'
+              - '_sass/**'
+              - 'assets/**'
+              - 'index.html'
+              - '.github/workflows/**'
+
+      - name: 🤔 Build decision
+        id: decision
+        run: |
+          KOREAN="${{ steps.changes.outputs.korean }}"
+          ENGLISH="${{ steps.changes.outputs.english }}"
+          ARABIC="${{ steps.changes.outputs.arabic }}"
+          GLOBAL="${{ steps.changes.outputs.global }}"
+          
+          BUILD_LANGUAGES=""
+          
+          if [[ "$GLOBAL" == "true" ]]; then
+            echo "should-build-all=true" >> $GITHUB_OUTPUT
+            echo "build-languages=ko,en,ar" >> $GITHUB_OUTPUT
+            echo "🔄 Global changes detected - building all languages"
+          else
+            echo "should-build-all=false" >> $GITHUB_OUTPUT
+            
+            if [[ "$KOREAN" == "true" ]]; then
+              BUILD_LANGUAGES="${BUILD_LANGUAGES}ko,"
+              echo "🇰🇷 Korean changes detected"
+            fi
+            
+            if [[ "$ENGLISH" == "true" ]]; then
+              BUILD_LANGUAGES="${BUILD_LANGUAGES}en,"
+              echo "🇺🇸 English changes detected"
+            fi
+            
+            if [[ "$ARABIC" == "true" ]]; then
+              BUILD_LANGUAGES="${BUILD_LANGUAGES}ar,"
+              echo "🇸🇦 Arabic changes detected"
+            fi
+            
+            # Remove trailing comma
+            BUILD_LANGUAGES=${BUILD_LANGUAGES%,}
+            
+            if [[ -z "$BUILD_LANGUAGES" ]]; then
+              BUILD_LANGUAGES="ko"
+              echo "⚡ No specific language changes, defaulting to Korean"
+            fi
+            
+            echo "build-languages=$BUILD_LANGUAGES" >> $GITHUB_OUTPUT
+            echo "📋 Languages to build: $BUILD_LANGUAGES"
+          fi
+
+  build-multilingual:
+    name: 🏗️ Build Multilingual Sites
+    runs-on: ubuntu-latest
+    needs: detect-language-changes
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 💎 Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: 📦 Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: 🏗️ Build sites based on changes
+        run: |
+          BUILD_ALL="${{ needs.detect-language-changes.outputs.should-build-all }}"
+          BUILD_LANGUAGES="${{ needs.detect-language-changes.outputs.build-languages }}"
+          
+          echo "🔧 Build configuration:"
+          echo "  Build all: $BUILD_ALL"
+          echo "  Languages: $BUILD_LANGUAGES"
+          
+          # Create base site directory
+          mkdir -p _site
+          
+          # Always build the main index (language selector)
+          echo "🏠 Building main index page..."
+          cp index.html _site/
+          
+          # Build Korean site (always build as default)
+          if [[ "$BUILD_LANGUAGES" == *"ko"* ]] || [[ "$BUILD_ALL" == "true" ]]; then
+            echo "🇰🇷 Building Korean site..."
+            JEKYLL_ENV=production bundle exec jekyll build \
+              --config _config.yml,_config-ko.yml \
+              --destination _site_ko \
+              --verbose --limit_posts 50
+            
+            # Copy Korean content to main site root (default language)
+            cp -r _site_ko/* _site/
+            
+            # Also create /ko/ directory
+            mkdir -p _site/ko
+            cp -r _site_ko/* _site/ko/
+            
+            rm -rf _site_ko
+            echo "✅ Korean site built successfully"
+          else
+            echo "⏭️ Skipping Korean site build"
+          fi
+          
+          # Build English site
+          if [[ "$BUILD_LANGUAGES" == *"en"* ]] || [[ "$BUILD_ALL" == "true" ]]; then
+            echo "🇺🇸 Building English site..."
+            JEKYLL_ENV=production bundle exec jekyll build \
+              --config _config.yml,_config-en.yml \
+              --destination _site_en \
+              --verbose --limit_posts 50
+            
+            mkdir -p _site/en
+            cp -r _site_en/* _site/en/
+            rm -rf _site_en
+            echo "✅ English site built successfully"
+          else
+            echo "⏭️ Skipping English site build"
+          fi
+          
+          # Build Arabic site
+          if [[ "$BUILD_LANGUAGES" == *"ar"* ]] || [[ "$BUILD_ALL" == "true" ]]; then
+            echo "🇸🇦 Building Arabic site..."
+            JEKYLL_ENV=production bundle exec jekyll build \
+              --config _config.yml,_config-ar.yml \
+              --destination _site_ar \
+              --verbose --limit_posts 50
+            
+            mkdir -p _site/ar
+            cp -r _site_ar/* _site/ar/
+            rm -rf _site_ar
+            echo "✅ Arabic site built successfully"
+          else
+            echo "⏭️ Skipping Arabic site build"
+          fi
+
+      - name: 🔗 Generate language-specific search indexes
+        run: |
+          BUILD_LANGUAGES="${{ needs.detect-language-changes.outputs.build-languages }}"
+          
+          echo "🔍 Generating search indexes for languages: $BUILD_LANGUAGES"
+          
+          # Generate Korean search index
+          if [[ "$BUILD_LANGUAGES" == *"ko"* ]] || [[ "${{ needs.detect-language-changes.outputs.should-build-all }}" == "true" ]]; then
+            echo "🇰🇷 Generating Korean search index..."
+            JEKYLL_ENV=production bundle exec jekyll build \
+              --config _config.yml,_config-ko.yml \
+              --destination _temp_ko \
+              --verbose --limit_posts 1000
+            
+            if [[ -f "_temp_ko/search.json" ]]; then
+              mkdir -p _site/ko/assets/js
+              cp _temp_ko/search.json _site/ko/assets/js/search-ko.json
+              cp _temp_ko/search.json _site/assets/js/search-ko.json 2>/dev/null || true
+            fi
+            rm -rf _temp_ko
+          fi
+          
+          # Generate English search index
+          if [[ "$BUILD_LANGUAGES" == *"en"* ]] || [[ "${{ needs.detect-language-changes.outputs.should-build-all }}" == "true" ]]; then
+            echo "🇺🇸 Generating English search index..."
+            JEKYLL_ENV=production bundle exec jekyll build \
+              --config _config.yml,_config-en.yml \
+              --destination _temp_en \
+              --verbose --limit_posts 1000
+            
+            if [[ -f "_temp_en/search.json" ]]; then
+              mkdir -p _site/en/assets/js
+              cp _temp_en/search.json _site/en/assets/js/search-en.json
+            fi
+            rm -rf _temp_en
+          fi
+          
+          # Generate Arabic search index
+          if [[ "$BUILD_LANGUAGES" == *"ar"* ]] || [[ "${{ needs.detect-language-changes.outputs.should-build-all }}" == "true" ]]; then
+            echo "🇸🇦 Generating Arabic search index..."
+            JEKYLL_ENV=production bundle exec jekyll build \
+              --config _config.yml,_config-ar.yml \
+              --destination _temp_ar \
+              --verbose --limit_posts 1000
+            
+            if [[ -f "_temp_ar/search.json" ]]; then
+              mkdir -p _site/ar/assets/js
+              cp _temp_ar/search.json _site/ar/assets/js/search-ar.json
+            fi
+            rm -rf _temp_ar
+          fi
+
+      - name: 📊 Verify site structure
+        run: |
+          echo "📊 Final site structure:"
+          find _site -type d -maxdepth 3 | sort
+          
+          echo ""
+          echo "📄 Key files check:"
+          ls -la _site/ | head -10
+          
+          if [[ -d "_site/ko" ]]; then
+            echo "🇰🇷 Korean site files:"
+            ls -la _site/ko/ | head -5
+          fi
+          
+          if [[ -d "_site/en" ]]; then
+            echo "🇺🇸 English site files:"
+            ls -la _site/en/ | head -5
+          fi
+          
+          if [[ -d "_site/ar" ]]; then
+            echo "🇸🇦 Arabic site files:"
+            ls -la _site/ar/ | head -5
+          fi
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: 🚀 Deploy to GitHub Pages
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build-multilingual
+    steps:
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  post-deploy-verification:
+    name: ✅ Post-Deploy Verification
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: [deploy, detect-language-changes]
+    steps:
+      - name: 🔍 Verify deployment
+        run: |
+          echo "🔍 Verifying deployment..."
+          
+          BASE_URL="${{ steps.deployment.outputs.page_url || 'https://thakicloud.github.io' }}"
+          BUILD_LANGUAGES="${{ needs.detect-language-changes.outputs.build-languages }}"
+          
+          echo "🌐 Base URL: $BASE_URL"
+          echo "🏗️ Built languages: $BUILD_LANGUAGES"
+          
+          # Wait a bit for deployment to propagate
+          sleep 30
+          
+          # Test main page
+          echo "🏠 Testing main page..."
+          curl -s -o /dev/null -w "%{http_code}" "$BASE_URL" || echo "Main page test completed"
+          
+          # Test language-specific pages
+          if [[ "$BUILD_LANGUAGES" == *"ko"* ]]; then
+            echo "🇰🇷 Testing Korean site..."
+            curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/ko/" || echo "Korean site test completed"
+          fi
+          
+          if [[ "$BUILD_LANGUAGES" == *"en"* ]]; then
+            echo "🇺🇸 Testing English site..."
+            curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/en/" || echo "English site test completed"
+          fi
+          
+          if [[ "$BUILD_LANGUAGES" == *"ar"* ]]; then
+            echo "🇸🇦 Testing Arabic site..."
+            curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/ar/" || echo "Arabic site test completed"
+          fi
+          
+          echo "✅ Deployment verification completed"
