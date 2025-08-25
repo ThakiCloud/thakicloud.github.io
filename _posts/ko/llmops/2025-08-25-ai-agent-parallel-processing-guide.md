@@ -267,12 +267,12 @@ def market_analysis_agent(state: AdvancedState) -> AdvancedState:
         {task}
         
         JSON 형식으로 응답하세요:
-        {{
+        {% raw %}{{
             "market_size": "시장 규모",
             "growth_rate": "성장률",
             "key_players": ["주요 기업1", "주요 기업2"],
             "trends": ["트렌드1", "트렌드2"]
-        }}
+        }}{% endraw %}
         """
         
         response = llm.invoke(prompt)
@@ -296,12 +296,12 @@ def technical_analysis_agent(state: AdvancedState) -> AdvancedState:
         {task}
         
         JSON 형식으로 응답하세요:
-        {{
+        {% raw %}{{
             "technology_stack": ["기술1", "기술2"],
             "complexity": "복잡도",
             "implementation_time": "구현 시간",
             "risks": ["위험요소1", "위험요소2"]
-        }}
+        }}{% endraw %}
         """
         
         response = llm.invoke(prompt)
