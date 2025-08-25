@@ -3,8 +3,8 @@ title: "Vercel Commerce AI 플랫폼 가이드 - Private Cloud 팀을 위한 완
 excerpt: "Next.js 기반 Vercel Commerce를 활용한 AI 플랫폼 팀의 내부 도구, 마켓플레이스, 고객 서비스 구축 실전 가이드"
 seo_title: "Vercel Commerce AI 플랫폼 Private Cloud 완전 가이드 - Thaki Cloud"
 seo_description: "Private Cloud AI 플랫폼 팀이 Vercel Commerce로 내부 도구, AI 서비스 마켓플레이스, 개인화 쇼핑몰을 구축하는 실전 가이드와 코드 예제"
-date: 2025-01-17
-last_modified_at: 2025-01-17
+date: 2025-08-25
+last_modified_at: 2025-08-25
 categories:
   - tutorials
 tags:

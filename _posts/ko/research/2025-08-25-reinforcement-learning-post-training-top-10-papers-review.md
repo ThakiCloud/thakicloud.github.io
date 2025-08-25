@@ -3,8 +3,8 @@ title: "2025년 강화학습 후훈련 연구의 최전선: 필독 논문 10선 
 excerpt: "2025년 4월부터 발표된 강화학습 후훈련 분야의 핵심 연구들을 심층 분석합니다. Kimi k1.5부터 AlphaMed까지, LLM의 추론 능력을 혁신적으로 향상시키는 최신 기법들을 한국어로 상세히 소개합니다."
 seo_title: "2025년 강화학습 후훈련 연구 TOP 10 논문 리뷰 - 추론 능력 혁신의 최전선 - Thaki Cloud"
 seo_description: "Kimi k1.5, Microsoft RPT, Agent Lightning 등 2025년 최신 강화학습 후훈련 연구 10선을 한국어로 상세 분석. LLM 추론 능력 향상의 핵심 기법과 실무 적용 인사이트를 제공합니다."
-date: 2025-01-28
-last_modified_at: 2025-01-28
+date: 2025-08-25
+last_modified_at: 2025-08-25
 categories:
   - research
 tags:

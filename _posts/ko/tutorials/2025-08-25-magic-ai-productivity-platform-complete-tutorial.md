@@ -3,8 +3,8 @@ title: "Magic AI 생산성 플랫폼 완전 가이드: 오픈소스 올인원 AI
 excerpt: "Magic은 첫 번째 오픈소스 올인원 AI 생산성 플랫폼입니다. 범용 AI Agent, 워크플로우 엔진, 엔터프라이즈 메신저, 협업 시스템을 포함한 완전한 제품군을 Docker로 설치하고 활용하는 방법을 단계별로 알아봅니다."
 seo_title: "Magic AI 생산성 플랫폼 완전 설치 가이드 - Docker 기반 오픈소스 AI 솔루션 - Thaki Cloud"
 seo_description: "Magic AI 플랫폼 설치부터 활용까지 완전 가이드. Super Magic AI Agent, Magic Flow 워크플로우, Magic IM 메신저 시스템을 Docker로 구축하고 엔터프라이즈 AI 생산성을 100배 향상시키는 방법을 알아보세요."
-date: 2025-01-28
-last_modified_at: 2025-01-28
+date: 2025-08-25
+last_modified_at: 2025-08-25
 categories:
   - tutorials
   - llmops
