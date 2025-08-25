@@ -7,7 +7,6 @@ date: 2025-08-19
 last_modified_at: 2025-08-19
 categories:
   - llmops
-  - research
 tags:
   - AutoCodeBench
   - LLM
