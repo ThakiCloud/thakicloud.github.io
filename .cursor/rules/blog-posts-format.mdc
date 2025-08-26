@@ -16,6 +16,7 @@ alwaysApply: true
 ## 2. 파일명 및 카테고리 규칙
 
 ### 파일명 형식
+- TODAY=$(date +"%Y-%m-%d") 오늘 날짜 먼저 확인하고 파일 생성.
 **필수**: `YYYY-MM-DD-title.md`
 
 ### 카테고리 분류
