@@ -16,13 +16,13 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
     </div>
     
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 40px 0;">
-      <a href="/ko/" class="btn btn--primary btn--large" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+      <a href="/ko/" class="btn btn--primary btn--large" data-lang="ko" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
         🇰🇷 한국어
       </a>
-      <a href="/en/" class="btn btn--primary btn--large" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+      <a href="/en/" class="btn btn--primary btn--large" data-lang="en" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
         🇺🇸 English
       </a>
-      <a href="/ar/" class="btn btn--primary btn--large" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+      <a href="/ar/" class="btn btn--primary btn--large" data-lang="ar" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
         🇸🇦 العربية
       </a>
     </div>
@@ -37,10 +37,23 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
 (function() {
     // 브라우저 언어 감지 및 자동 리디렉션
     const userLang = navigator.language || navigator.userLanguage;
+    
+    // 동적으로 기본 URL 감지
+    const currentPath = window.location.pathname;
+    const currentHost = window.location.protocol + '//' + window.location.host;
+    
+    // GitHub Pages나 다른 호스팅에서 기본 경로 자동 감지
+    let baseUrl = '';
+    if (currentPath.includes('/thakicloud.github.io/')) {
+        baseUrl = '/thakicloud.github.io';
+    } else if (window.location.hostname === 'thakicloud.github.io') {
+        baseUrl = '';
+    }
+    
     const supportedLangs = {
-        'ko': '/ko/',
-        'en': '/en/',
-        'ar': '/ar/'
+        'ko': baseUrl + '/ko/',
+        'en': baseUrl + '/en/',
+        'ar': baseUrl + '/ar/'
     };
     
     // 언어 코드 매핑
@@ -68,9 +81,20 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
         }
     }, 1000);
     
+    // 디버깅 정보 출력
+    console.log('🔧 Debug Info:');
+    console.log('  Base URL:', baseUrl);
+    console.log('  User Language:', userLang);
+    console.log('  Target Language:', targetLang);
+    console.log('  Target URL:', supportedLangs[targetLang]);
+    console.log('  Current Path:', window.location.pathname);
+    console.log('  Supported URLs:', supportedLangs);
+    
     // 3초 후 자동 리디렉션 (사용자가 수동 선택할 시간 제공)
     setTimeout(function() {
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        const currentPath = window.location.pathname;
+        if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
+            console.log('🚀 Redirecting to:', supportedLangs[targetLang]);
             window.location.href = supportedLangs[targetLang];
         }
     }, 3000);
@@ -90,13 +114,53 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
     
     // 언어 선택 버튼에 이벤트 리스너 추가
     document.addEventListener('DOMContentLoaded', function() {
-        const langButtons = document.querySelectorAll('a[href^="/"]');
+        const langButtons = document.querySelectorAll('.btn--primary');
+        
+        // 초기화: 모든 버튼의 URL을 올바르게 설정
+        langButtons.forEach(button => {
+            const lang = button.getAttribute('data-lang');
+            const correctUrl = supportedLangs[lang];
+            if (correctUrl) {
+                const oldHref = button.getAttribute('href');
+                button.setAttribute('href', correctUrl);
+                console.log(`🔄 Updated ${lang} button URL:`, oldHref, '→', correctUrl);
+            }
+        });
+        
+        // 언어별 페이지 접근성 테스트 (선택적)
+        async function testLanguagePages() {
+            console.log('🧪 Testing language page accessibility...');
+            for (const [lang, url] of Object.entries(supportedLangs)) {
+                try {
+                    const response = await fetch(url, { method: 'HEAD' });
+                    console.log(`${lang.toUpperCase()}: ${response.status} - ${url}`);
+                } catch (error) {
+                    console.warn(`❌ ${lang.toUpperCase()} page test failed:`, error.message);
+                }
+            }
+        }
+        
+        // 페이지 테스트 실행 (5초 후)
+        setTimeout(testLanguagePages, 5000);
+        
         langButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
-                const lang = href.split('/')[1];
-                if (supportedLangs[lang]) {
+                const lang = this.getAttribute('data-lang');
+                console.log('🖱️ Button clicked:', { href, lang });
+                
+                // 동적으로 올바른 URL 생성
+                const correctUrl = supportedLangs[lang];
+                if (correctUrl && href !== correctUrl) {
+                    console.log('🔧 Correcting URL from', href, 'to', correctUrl);
+                    this.setAttribute('href', correctUrl);
+                }
+                
+                if (['ko', 'en', 'ar'].includes(lang)) {
                     setCookie('preferred_language', lang, 365);
+                    console.log('✅ Language preference saved:', lang);
+                } else {
+                    console.warn('⚠️ Invalid language:', lang);
                 }
             });
             
