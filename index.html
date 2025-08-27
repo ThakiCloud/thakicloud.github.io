@@ -16,13 +16,13 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
     </div>
     
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 40px 0;">
-      <a href="/ko/" class="btn btn--primary btn--large" data-lang="ko" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+      <a href="{{ site.baseurl }}/ko/" class="btn btn--primary btn--large" data-lang="ko" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
         🇰🇷 한국어
       </a>
-      <a href="/en/" class="btn btn--primary btn--large" data-lang="en" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+      <a href="{{ site.baseurl }}/en/" class="btn btn--primary btn--large" data-lang="en" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
         🇺🇸 English
       </a>
-      <a href="/ar/" class="btn btn--primary btn--large" data-lang="ar" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+      <a href="{{ site.baseurl }}/ar/" class="btn btn--primary btn--large" data-lang="ar" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
         🇸🇦 العربية
       </a>
     </div>
@@ -38,22 +38,31 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
     // 브라우저 언어 감지 및 자동 리디렉션
     const userLang = navigator.language || navigator.userLanguage;
     
-    // 동적으로 기본 URL 감지
-    const currentPath = window.location.pathname;
-    const currentHost = window.location.protocol + '//' + window.location.host;
+    // Jekyll 변수를 사용하여 안전한 baseURL 설정
+    const rawBaseUrl = '{{ site.baseurl }}';
+    const siteUrl = '{{ site.url }}';
     
-    // GitHub Pages나 다른 호스팅에서 기본 경로 자동 감지
-    let baseUrl = '';
-    if (currentPath.includes('/thakicloud.github.io/')) {
-        baseUrl = '/thakicloud.github.io';
-    } else if (window.location.hostname === 'thakicloud.github.io') {
-        baseUrl = '';
+    // baseUrl 정규화 (빈 문자열 또는 슬래시 처리)
+    const baseUrl = rawBaseUrl === '' ? '' : rawBaseUrl;
+    
+    // 디버깅 정보
+    console.log('🏠 Site URL:', siteUrl);
+    console.log('📁 Raw Base URL:', rawBaseUrl);
+    console.log('📁 Normalized Base URL:', baseUrl);
+    console.log('🌐 Current Location:', window.location.href);
+    
+    // 안전한 URL 생성 함수
+    function buildUrl(lang) {
+        if (baseUrl === '' || baseUrl === '/') {
+            return '/' + lang + '/';
+        }
+        return baseUrl + '/' + lang + '/';
     }
     
     const supportedLangs = {
-        'ko': baseUrl + '/ko/',
-        'en': baseUrl + '/en/',
-        'ar': baseUrl + '/ar/'
+        'ko': buildUrl('ko'),
+        'en': buildUrl('en'),
+        'ar': buildUrl('ar')
     };
     
     // 언어 코드 매핑
