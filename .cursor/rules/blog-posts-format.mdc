@@ -9,14 +9,16 @@ alwaysApply: true
 
 - **내용이 매우 길어서 단락별로 나눠서 글을 작성해줘**
 - **서브모듈로 테스트 했다면 서브 모듈은 글 작성 완료 후 삭제해줘**
-- **최근 글 10개만 빌드 테스트**: `bundle exec jekyll build --verbose --trace --limit_posts 10`
-- **news, career 카테고리는 코딩보다는 자연스러운 문장 형태의 글을 작성해줘**
+- **최근 글 10개만 로컬 빌드 테스트**: `bundle exec jekyll build --verbose --trace --limit_posts 10`
+- **news, career,research 카테고리는 코딩보다는 자연스러운 문장 형태의 글을 작성해줘**
 - 블로그 글 작성시 먼저 영어로 작성 후 한국어, 아랍어는 영어를 자연스럽게 해당 언어 문화에 맞게 번역해서 3개의 글로 작성해줘.
+
 
 ## 2. 파일명 및 카테고리 규칙
 
 ### 파일명 형식
 - TODAY=$(date +"%Y-%m-%d") 오늘 날짜 먼저 확인하고 파일 생성.
+- 파일명에 반드시 언어(ko,en,ar)을 넣어서 파일명이 동일하지 않게 해줘. 
 **필수**: `YYYY-MM-DD-title.md`
 
 ### 카테고리 분류
@@ -283,7 +285,7 @@ markdownlint '_posts/**/*.md' '_pages/**/*.md' 'README.md' --config .markdownlin
 ### 6단계: 로컬 서버 테스트
 ```bash
 # 로컬 서버 실행
-bundle exec jekyll serve
+bundle exec jekyll serve --verbose
 
 # 브라우저에서 확인사항:
 # - 포스트가 올바르게 렌더링되는가?
