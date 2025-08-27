@@ -1,0 +1,1782 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드 - Thaki Cloud Tech Blog      다키클라우드 기술 블로그      </title>
+<meta name="description" content="AI 에이전트 기반 연구 자동화 플랫폼 MAESTRO의 설치부터 고급 활용까지 단계별 완전 가이드">
+
+
+<meta name="keywords" content="Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, 타키 클라우드, 다키클라우드 기술블로그, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات">
+
+
+<!-- Brand name variations for better SEO -->
+<meta name="alternate-names" content="Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود">
+<meta name="brand" content="Thaki Cloud">
+<meta name="brand-keywords" content="thaki cloud, thakicloud, 다키클라우드, 타키 클라우드">
+<meta name="organization" content="Thaki Cloud">
+<meta name="language" content="ko-KR, ar, en">
+<meta name="coverage" content="Worldwide">
+<meta name="geo.region" content="KR-11">
+<meta name="geo.placename" content="Seoul, Korea">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Thaki Cloud Tech Blog | 다키클라우드 기술 블로그">
+<meta property="og:title" content="MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드">
+<meta property="og:url" content="https://thakicloud.github.io/ko/tutorials/maestro-ai-research-platform-complete-setup-guide/">
+
+
+  <meta property="og:description" content="AI 에이전트 기반 연구 자동화 플랫폼 MAESTRO의 설치부터 고급 활용까지 단계별 완전 가이드">
+
+
+
+  <meta property="og:image" content="https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg">
+
+
+
+  <meta name="twitter:site" content="@thakicloud">
+  <meta name="twitter:title" content="MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드">
+  <meta name="twitter:description" content="AI 에이전트 기반 연구 자동화 플랫폼 MAESTRO의 설치부터 고급 활용까지 단계별 완전 가이드">
+  <meta name="twitter:url" content="https://thakicloud.github.io/ko/tutorials/maestro-ai-research-platform-complete-setup-guide/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2025-08-26T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://thakicloud.github.io/ko/tutorials/maestro-ai-research-platform-complete-setup-guide/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Organization",
+      "url": "https://thakicloud.github.io/",
+      "logo": "https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="vTtIRRz5XMsZ10-HAT-4-xuTZEmXG-zUCArAl3ANtAI" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Thaki Cloud Tech Blog | 다키클라우드 기술 블로그 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Mermaid.js for diagram rendering -->
+<link rel="stylesheet" href="/assets/css/mermaid-custom.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    themeVariables: {
+      primaryColor: '#ff6b6b',
+      primaryTextColor: '#333',
+      primaryBorderColor: '#ff6b6b',
+      lineColor: '#333',
+      sectionBkgColor: '#f8f9fa',
+      altSectionBkgColor: '#ffffff',
+      gridColor: '#e9ecef',
+      secondaryColor: '#6c757d',
+      tertiaryColor: '#f8f9fa'
+    }
+  });
+</script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        
+        
+        
+        <a class="site-title" href="/">
+          Thaki Cloud Tech Blog | 다키클라우드 기술 블로그
+          <span class="site-subtitle">AI/ML Engineering & DevOps 전문 기술 블로그</span>
+        </a>
+        <ul class="visible-links">
+          
+          <li class="masthead__menu-item">
+              
+                <a href="/ko/posts/">포스트</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="/ko/categories/">카테고리</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="/ko/tags/">태그</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="#" class="dropdown-toggle">언어 <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu"><li><a href="/ko/">🇰🇷 한국어</a></li><li><a href="/en/">🇺🇸 English</a></li><li><a href="/ar/">🇸🇦 العربية</a></li></ul>
+              
+            </li></ul>
+        <!-- 검색 링크 버튼 -->
+        
+        
+        
+        <a href="/search/" class="search__toggle" title="검색">
+          <span class="visually-hidden">검색</span>
+          <i class="fas fa-search"></i>
+        </a>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/ko/posts/#ko" itemprop="item"><span itemprop="name">Ko</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/ko/posts/#tutorials" itemprop="item"><span itemprop="name">Tutorials</span></a>
+          <meta itemprop="position" content="3" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://thakicloud.github.io/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://thakicloud.co.kr" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/thakicloud" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:info@thakicloud.co.kr" rel="me" class="u-email">
+            <meta itemprop="email" content="info@thakicloud.co.kr" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav> -->
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items" id="category_tag_menu">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+
+      <li>
+        <span class="nav__sub-title" v-on:click='togglec()'>📂 Total Posts: 5</span>
+      </li>
+      <li>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/dev/">🚀 DevOps (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/owm/">📀 OWM (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/llmops/">🤖 LLMOps (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/agentops/">🏗️ AgentOps (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/tutorials/">💻 Tutorials (4)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/careers/">🤝 Careers (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/culture/">🎨 Culture (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/news/">🌐 News (0)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/research/">📒 Research (1)</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/ko/categories/datasets/">☁️ Datasets (0)</a></span>
+
+        <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
+        <ul v-show="flag_t">
+        
+          
+          
+
+            
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li><a href="/tags/#docker" class="">docker (2)</a></li>
+                
+              
+                
+              
+                
+              
+                
+                  <li><a href="/tags/#postgresql" class="">postgresql (2)</a></li>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+              
+                
+                  <li><a href="/tags/#llm-보안" class="">LLM-보안 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#ai-안전성" class="">AI-안전성 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#적대적-공격" class="">적대적-공격 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#기계학습" class="">기계학습 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#사이버보안" class="">사이버보안 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#llm" class="">LLM (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#대규모언어모델" class="">대규모언어모델 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#o-reilly" class="">O'Reilly (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#ai" class="">AI (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#머신러닝" class="">머신러닝 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#트랜스포머" class="">트랜스포머 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#자연어처리" class="">자연어처리 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#ai-agent" class="">ai-agent (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#coding-agent" class="">coding-agent (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#anthropic-claude" class="">anthropic-claude (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#go-programming" class="">go-programming (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#developer-tools" class="">developer-tools (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#cursor-alternative" class="">cursor-alternative (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#maestro" class="">maestro (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#ai-research" class="">ai-research (1)</a></li>
+                
+              
+                
+              
+                
+                  <li><a href="/tags/#fastapi" class="">fastapi (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#react" class="">react (1)</a></li>
+                
+              
+                
+              
+                
+                  <li><a href="/tags/#pgvector" class="">pgvector (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#searxng" class="">searxng (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#local-llm" class="">local-llm (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#gpu" class="">gpu (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#neosync" class="">neosync (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#데이터익명화" class="">데이터익명화 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#합성데이터" class="">합성데이터 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#개인정보보호" class="">개인정보보호 (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#gdpr" class="">gdpr (1)</a></li>
+                
+              
+                
+                  <li><a href="/tags/#데이터보안" class="">데이터보안 (1)</a></li>
+                
+              
+            
+            
+        </ul> -->
+      </li>
+  </ul>
+</nav>
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드">
+    <meta itemprop="description" content="AI 에이전트 기반 연구 자동화 플랫폼 MAESTRO의 설치부터 고급 활용까지 단계별 완전 가이드">
+    <meta itemprop="datePublished" content="2025-08-26T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://thakicloud.github.io/ko/tutorials/maestro-ai-research-platform-complete-setup-guide/" class="u-url" itemprop="url">MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+              <ul class="toc__menu"><li><a href="#1-maestro-소개">1. MAESTRO 소개</a><ul><li><a href="#maestro란">MAESTRO란?</a></li><li><a href="#주요-특징">주요 특징</a></li><li><a href="#기술-스택">기술 스택</a></li></ul></li><li><a href="#2-시스템-요구사항">2. 시스템 요구사항</a><ul><li><a href="#최소-하드웨어-사양">최소 하드웨어 사양</a></li><li><a href="#필수-소프트웨어">필수 소프트웨어</a></li></ul></li><li><a href="#3-설치-및-초기-설정">3. 설치 및 초기 설정</a><ul><li><a href="#31-저장소-클론-및-기본-설정">3.1 저장소 클론 및 기본 설정</a></li><li><a href="#32-환경변수-설정">3.2 환경변수 설정</a></li><li><a href="#33-gpu-지원-확인">3.3 GPU 지원 확인</a></li></ul></li><li><a href="#4-플랫폼별-설치-가이드">4. 플랫폼별 설치 가이드</a><ul><li><a href="#41-linux-ubuntudebian---gpu-지원">4.1 Linux (Ubuntu/Debian) - GPU 지원</a></li><li><a href="#42-macos-apple-siliconintel">4.2 macOS (Apple Silicon/Intel)</a></li><li><a href="#43-windows-wsl2">4.3 Windows (WSL2)</a></li></ul></li><li><a href="#5-서비스-구성-및-시작">5. 서비스 구성 및 시작</a><ul><li><a href="#51-기본-서비스-시작">5.1 기본 서비스 시작</a></li><li><a href="#52-서비스-상태-확인">5.2 서비스 상태 확인</a></li><li><a href="#53-데이터베이스-초기화">5.3 데이터베이스 초기화</a></li></ul></li><li><a href="#6-웹-인터페이스-접속-및-초기-설정">6. 웹 인터페이스 접속 및 초기 설정</a><ul><li><a href="#61-첫-접속-및-계정-생성">6.1 첫 접속 및 계정 생성</a></li><li><a href="#62-기본-설정-구성">6.2 기본 설정 구성</a></li></ul></li><li><a href="#7-로컬-llm-연동-ollama">7. 로컬 LLM 연동 (Ollama)</a><ul><li><a href="#71-ollama-설치-및-설정">7.1 Ollama 설치 및 설정</a></li><li><a href="#72-maestro와-ollama-연동">7.2 MAESTRO와 Ollama 연동</a></li><li><a href="#73-연동-테스트">7.3 연동 테스트</a></li></ul></li><li><a href="#8-searxng-검색-엔진-설정">8. SearXNG 검색 엔진 설정</a><ul><li><a href="#81-searxng-컨테이너-설정-확인">8.1 SearXNG 컨테이너 설정 확인</a></li><li><a href="#82-검색-카테고리-설정">8.2 검색 카테고리 설정</a></li><li><a href="#83-프라이빗-검색-테스트">8.3 프라이빗 검색 테스트</a></li></ul></li><li><a href="#9-실전-활용-시나리오">9. 실전 활용 시나리오</a><ul><li><a href="#91-문서-수집-및-분석">9.1 문서 수집 및 분석</a></li><li><a href="#92-연구-프로젝트-생성">9.2 연구 프로젝트 생성</a></li><li><a href="#93-ai-에이전트-워크플로우-실행">9.3 AI 에이전트 워크플로우 실행</a></li></ul></li><li><a href="#10-고급-설정-및-최적화">10. 고급 설정 및 최적화</a><ul><li><a href="#101-gpu-메모리-최적화">10.1 GPU 메모리 최적화</a></li><li><a href="#102-다중-gpu-설정">10.2 다중 GPU 설정</a></li><li><a href="#103-성능-튜닝">10.3 성능 튜닝</a></li></ul></li><li><a href="#11-문제-해결-가이드">11. 문제 해결 가이드</a><ul><li><a href="#111-일반적인-오류-및-해결책">11.1 일반적인 오류 및 해결책</a></li><li><a href="#112-디버깅-도구-활용">11.2 디버깅 도구 활용</a></li><li><a href="#113-데이터-백업-및-복구">11.3 데이터 백업 및 복구</a></li></ul></li><li><a href="#12-보안-고려사항">12. 보안 고려사항</a><ul><li><a href="#121-인증-및-권한-관리">12.1 인증 및 권한 관리</a></li><li><a href="#122-네트워크-보안">12.2 네트워크 보안</a></li></ul></li><li><a href="#13-모니터링-및-유지보수">13. 모니터링 및 유지보수</a><ul><li><a href="#131-시스템-모니터링">13.1 시스템 모니터링</a></li><li><a href="#132-정기-유지보수">13.2 정기 유지보수</a></li></ul></li><li><a href="#14-확장-및-커스터마이징">14. 확장 및 커스터마이징</a><ul><li><a href="#141-커스텀-ai-에이전트-개발">14.1 커스텀 AI 에이전트 개발</a></li><li><a href="#142-api-확장">14.2 API 확장</a></li></ul></li><li><a href="#15-트러블슈팅-체크리스트">15. 트러블슈팅 체크리스트</a><ul><li><a href="#151-설치-후-체크리스트">15.1 설치 후 체크리스트</a></li><li><a href="#152-성능-최적화-체크리스트">15.2 성능 최적화 체크리스트</a></li></ul></li><li><a href="#16-결론">16. 결론</a><ul><li><a href="#주요-성과">주요 성과</a></li><li><a href="#다음-단계">다음 단계</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>⏱️ <strong>예상 읽기 시간</strong>: 25분</p>
+
+<h2 id="1-maestro-소개">1. MAESTRO 소개</h2>
+
+<h3 id="maestro란">MAESTRO란?</h3>
+
+<p>MAESTRO는 AI 기반의 연구 자동화 플랫폼으로, 복잡한 연구 작업을 효율적으로 처리할 수 있도록 설계된 오픈소스 애플리케이션입니다. AI 에이전트를 활용하여 문서 수집, 분석, 보고서 생성까지 전체 연구 워크플로우를 자동화할 수 있습니다.</p>
+
+<h3 id="주요-특징">주요 특징</h3>
+
+<ul>
+  <li><strong>AI 에이전트 기반 연구</strong>: LLM을 활용한 자동화된 연구 파이프라인</li>
+  <li><strong>RAG (Retrieval-Augmented Generation)</strong>: 벡터 검색 기반 문서 처리</li>
+  <li><strong>실시간 웹소켓 통신</strong>: 작업 진행 상황 실시간 모니터링</li>
+  <li><strong>완전 셀프 호스팅</strong>: 로컬 환경에서 완전한 독립 운영 가능</li>
+  <li><strong>다양한 LLM 지원</strong>: OpenAI, 로컬 LLM, API 호환 모델</li>
+  <li><strong>SearXNG 통합</strong>: 프라이빗 메타 검색 엔진 연동</li>
+</ul>
+
+<h3 id="기술-스택">기술 스택</h3>
+
+<ul>
+  <li><strong>백엔드</strong>: FastAPI, SQLAlchemy, PostgreSQL, pgvector</li>
+  <li><strong>프론트엔드</strong>: React, TypeScript, Vite, Tailwind CSS</li>
+  <li><strong>인프라</strong>: Docker Compose, WebSocket</li>
+  <li><strong>AI/ML</strong>: 벡터 임베딩, LLM API 통합</li>
+</ul>
+
+<h2 id="2-시스템-요구사항">2. 시스템 요구사항</h2>
+
+<h3 id="최소-하드웨어-사양">최소 하드웨어 사양</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CPU 모드 (최소)</span>
+- CPU: 4코어 이상
+- RAM: 8GB 이상
+- 저장공간: 10GB 이상
+- OS: Linux, macOS, Windows <span class="o">(</span>WSL2<span class="o">)</span>
+
+<span class="c"># GPU 모드 (권장)</span>
+- GPU: NVIDIA GPU <span class="o">(</span>CUDA 11.0 이상<span class="o">)</span>
+- VRAM: 8GB 이상
+- RAM: 16GB 이상
+- 저장공간: 20GB 이상
+</code></pre></div></div>
+
+<h3 id="필수-소프트웨어">필수 소프트웨어</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 공통 요구사항</span>
+- Docker Desktop <span class="o">(</span>최신 버전<span class="o">)</span>
+- Docker Compose v2
+- Git
+
+<span class="c"># GPU 사용 시 추가 요구사항 (Linux)</span>
+- nvidia-container-toolkit
+- NVIDIA 드라이버 <span class="o">(</span>최신 버전<span class="o">)</span>
+
+<span class="c"># Windows 사용자</span>
+- WSL2 <span class="o">(</span>Ubuntu 20.04 이상<span class="o">)</span>
+- Windows Terminal <span class="o">(</span>권장<span class="o">)</span>
+</code></pre></div></div>
+
+<h2 id="3-설치-및-초기-설정">3. 설치 및 초기 설정</h2>
+
+<h3 id="31-저장소-클론-및-기본-설정">3.1 저장소 클론 및 기본 설정</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. MAESTRO 저장소 클론</span>
+git clone https://github.com/murtaza-nasir/maestro.git
+<span class="nb">cd </span>maestro
+
+<span class="c"># 2. 실행 권한 부여 (Linux/macOS)</span>
+<span class="nb">chmod</span> +x start.sh stop.sh detect_gpu.sh maestro-cli.sh
+
+<span class="c"># 3. 환경 설정 파일 생성</span>
+<span class="nb">cp</span> .env.example .env
+</code></pre></div></div>
+
+<h3 id="32-환경변수-설정">3.2 환경변수 설정</h3>
+
+<p><code class="language-plaintext highlighter-rouge">.env</code> 파일을 편집하여 기본 설정을 구성합니다:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># .env 파일 주요 설정</span>
+<span class="c"># ===================</span>
+
+<span class="c"># 데이터베이스 설정</span>
+<span class="nv">POSTGRES_DB</span><span class="o">=</span>maestro_db
+<span class="nv">POSTGRES_USER</span><span class="o">=</span>maestro_user
+<span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>your_secure_password_here
+
+<span class="c"># JWT 보안 설정</span>
+<span class="nv">JWT_SECRET_KEY</span><span class="o">=</span>your_jwt_secret_key_here
+<span class="nv">JWT_ALGORITHM</span><span class="o">=</span>HS256
+<span class="nv">JWT_ACCESS_TOKEN_EXPIRE_MINUTES</span><span class="o">=</span>30
+
+<span class="c"># LLM API 설정 (OpenAI 사용 시)</span>
+<span class="nv">OPENAI_API_KEY</span><span class="o">=</span>your_openai_api_key_here
+<span class="nv">LLM_MODEL</span><span class="o">=</span>gpt-4
+
+<span class="c"># 로컬 LLM 설정 (Ollama 사용 시)</span>
+<span class="nv">LOCAL_LLM_BASE_URL</span><span class="o">=</span>http://localhost:11434/v1
+<span class="nv">LOCAL_LLM_MODEL</span><span class="o">=</span>llama3.1:8b
+<span class="nv">USE_LOCAL_LLM</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="c"># 검색 엔진 설정</span>
+<span class="nv">SEARCH_ENGINE</span><span class="o">=</span>searxng
+<span class="nv">SEARXNG_BASE_URL</span><span class="o">=</span>http://searxng:8080
+
+<span class="c"># GPU 설정</span>
+<span class="nv">GPU_AVAILABLE</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">BACKEND_GPU_DEVICE</span><span class="o">=</span>0
+<span class="nv">DOC_PROCESSOR_GPU_DEVICE</span><span class="o">=</span>0
+
+<span class="c"># CPU 전용 모드 (GPU 없는 환경)</span>
+<span class="nv">FORCE_CPU_MODE</span><span class="o">=</span><span class="nb">false</span>
+</code></pre></div></div>
+
+<h3 id="33-gpu-지원-확인">3.3 GPU 지원 확인</h3>
+
+<p>GPU 지원 여부를 확인하고 최적 설정을 적용합니다:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># GPU 감지 스크립트 실행</span>
+./detect_gpu.sh
+
+<span class="c"># 출력 예시:</span>
+<span class="c"># =========== GPU Detection Results ===========</span>
+<span class="c"># Platform: Linux</span>
+<span class="c"># GPU Support: Available</span>
+<span class="c"># NVIDIA Driver: 525.147.05</span>
+<span class="c"># CUDA Version: 12.0</span>
+<span class="c"># Recommended Configuration: GPU-enabled</span>
+<span class="c"># ===========================================</span>
+</code></pre></div></div>
+
+<h2 id="4-플랫폼별-설치-가이드">4. 플랫폼별 설치 가이드</h2>
+
+<h3 id="41-linux-ubuntudebian---gpu-지원">4.1 Linux (Ubuntu/Debian) - GPU 지원</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. NVIDIA 컨테이너 툴킷 설치</span>
+<span class="nv">distribution</span><span class="o">=</span><span class="si">$(</span><span class="nb">.</span> /etc/os-release<span class="p">;</span><span class="nb">echo</span> <span class="nv">$ID$VERSION_ID</span><span class="si">)</span>
+curl <span class="nt">-s</span> <span class="nt">-L</span> https://nvidia.github.io/nvidia-docker/gpgkey | <span class="nb">sudo </span>apt-key add -
+curl <span class="nt">-s</span> <span class="nt">-L</span> https://nvidia.github.io/nvidia-docker/<span class="nv">$distribution</span>/nvidia-docker.list | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/nvidia-docker.list
+
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> nvidia-container-toolkit
+
+<span class="c"># 2. Docker 재시작</span>
+<span class="nb">sudo </span>systemctl restart docker
+
+<span class="c"># 3. GPU 테스트</span>
+docker run <span class="nt">--rm</span> <span class="nt">--gpus</span> all nvidia/cuda:11.0-base nvidia-smi
+
+<span class="c"># 4. MAESTRO 시작</span>
+./start.sh
+</code></pre></div></div>
+
+<h3 id="42-macos-apple-siliconintel">4.2 macOS (Apple Silicon/Intel)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Docker Desktop 설치 확인</span>
+docker <span class="nt">--version</span>
+docker-compose <span class="nt">--version</span>
+
+<span class="c"># 2. CPU 최적화 모드로 시작</span>
+docker-compose <span class="nt">-f</span> docker-compose.cpu.yml up <span class="nt">-d</span>
+
+<span class="c"># 또는 환경변수 설정 후 일반 시작</span>
+<span class="nb">echo</span> <span class="s2">"FORCE_CPU_MODE=true"</span> <span class="o">&gt;&gt;</span> .env
+./start.sh
+</code></pre></div></div>
+
+<h3 id="43-windows-wsl2">4.3 Windows (WSL2)</h3>
+
+<p>PowerShell을 관리자 권한으로 실행:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. WSL2 및 Ubuntu 설치 확인</span><span class="w">
+</span><span class="n">wsl</span><span class="w"> </span><span class="nt">--list</span><span class="w"> </span><span class="nt">--verbose</span><span class="w">
+
+</span><span class="c"># 2. Docker Desktop Windows 실행 확인</span><span class="w">
+</span><span class="n">docker</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+
+</span><span class="c"># 3. 저장소 클론 (WSL2 내부)</span><span class="w">
+</span><span class="n">wsl</span><span class="w">
+</span><span class="nx">cd</span><span class="w"> </span><span class="nx">/mnt/c/</span><span class="w">
+</span><span class="n">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https://github.com/murtaza-nasir/maestro.git</span><span class="w">
+</span><span class="n">cd</span><span class="w"> </span><span class="nx">maestro</span><span class="w">
+
+</span><span class="c"># 4. 권한 설정 및 시작</span><span class="w">
+</span><span class="n">chmod</span><span class="w"> </span><span class="o">+</span><span class="nx">x</span><span class="w"> </span><span class="o">*.</span><span class="nf">sh</span><span class="w">
+</span><span class="o">.</span><span class="nx">/start.sh</span><span class="w">
+
+</span><span class="c"># 또는 PowerShell 스크립트 사용</span><span class="w">
+</span><span class="c"># .\start.ps1</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="5-서비스-구성-및-시작">5. 서비스 구성 및 시작</h2>
+
+<h3 id="51-기본-서비스-시작">5.1 기본 서비스 시작</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 자동 플랫폼 감지로 시작</span>
+./start.sh
+
+<span class="c"># 또는 수동으로 Docker Compose 실행</span>
+docker-compose up <span class="nt">-d</span>
+
+<span class="c"># CPU 전용 모드</span>
+docker-compose <span class="nt">-f</span> docker-compose.cpu.yml up <span class="nt">-d</span>
+</code></pre></div></div>
+
+<h3 id="52-서비스-상태-확인">5.2 서비스 상태 확인</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 컨테이너 상태 확인</span>
+docker-compose ps
+
+<span class="c"># 로그 확인</span>
+docker-compose logs <span class="nt">-f</span> backend
+docker-compose logs <span class="nt">-f</span> frontend
+docker-compose logs <span class="nt">-f</span> postgres
+docker-compose logs <span class="nt">-f</span> searxng
+
+<span class="c"># 전체 로그 확인</span>
+docker-compose logs <span class="nt">-f</span>
+</code></pre></div></div>
+
+<h3 id="53-데이터베이스-초기화">5.3 데이터베이스 초기화</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 데이터베이스 상태 확인</span>
+./maestro-cli.sh reset-db <span class="nt">--check</span>
+
+<span class="c"># 데이터베이스 통계 조회</span>
+./maestro-cli.sh reset-db <span class="nt">--stats</span>
+
+<span class="c"># 백업과 함께 데이터베이스 리셋 (필요시)</span>
+./maestro-cli.sh reset-db <span class="nt">--backup</span>
+</code></pre></div></div>
+
+<h2 id="6-웹-인터페이스-접속-및-초기-설정">6. 웹 인터페이스 접속 및 초기 설정</h2>
+
+<h3 id="61-첫-접속-및-계정-생성">6.1 첫 접속 및 계정 생성</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 브라우저에서 접속</span>
+http://localhost:3000
+
+<span class="c"># 또는 CLI로 관리자 계정 생성</span>
+./maestro-cli.sh create-user admin securepassword123 <span class="nt">--admin</span>
+</code></pre></div></div>
+
+<h3 id="62-기본-설정-구성">6.2 기본 설정 구성</h3>
+
+<p>웹 인터페이스에서 <code class="language-plaintext highlighter-rouge">Settings</code> 메뉴로 이동하여 다음을 설정합니다:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># LLM 설정</span>
+<span class="na">Model Provider</span><span class="pi">:</span> <span class="s">OpenAI / Local LLM</span>
+<span class="na">API Key</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">YOUR_API_KEY</span><span class="pi">]</span>
+<span class="na">Model Name</span><span class="pi">:</span> <span class="s">gpt-4 / llama3.1:8b</span>
+<span class="na">Temperature</span><span class="pi">:</span> <span class="m">0.7</span>
+<span class="na">Max Tokens</span><span class="pi">:</span> <span class="m">4000</span>
+
+<span class="c1"># 검색 설정</span>
+<span class="na">Search Engine</span><span class="pi">:</span> <span class="s">SearXNG</span>
+<span class="na">Categories</span><span class="pi">:</span> 
+  <span class="pi">-</span> <span class="s">General</span>
+  <span class="pi">-</span> <span class="s">Science</span>
+  <span class="pi">-</span> <span class="s">IT</span>
+  <span class="pi">-</span> <span class="s">News</span>
+<span class="na">Results per Query</span><span class="pi">:</span> <span class="m">10</span>
+
+<span class="c1"># 연구 매개변수</span>
+<span class="na">Planning Context</span><span class="pi">:</span> <span class="m">200000</span>
+<span class="na">Max Documents</span><span class="pi">:</span> <span class="m">50</span>
+<span class="na">Chunk Size</span><span class="pi">:</span> <span class="m">1000</span>
+<span class="na">Overlap</span><span class="pi">:</span> <span class="m">200</span>
+</code></pre></div></div>
+
+<h2 id="7-로컬-llm-연동-ollama">7. 로컬 LLM 연동 (Ollama)</h2>
+
+<h3 id="71-ollama-설치-및-설정">7.1 Ollama 설치 및 설정</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Ollama 설치 (Linux/macOS)</span>
+curl <span class="nt">-fsSL</span> https://ollama.ai/install.sh | sh
+
+<span class="c"># Windows (PowerShell)</span>
+<span class="c"># Invoke-WebRequest -Uri https://ollama.ai/install.ps1 -OutFile install.ps1; .\install.ps1</span>
+
+<span class="c"># 모델 다운로드</span>
+ollama pull llama3.1:8b
+ollama pull codellama:7b
+ollama pull mistral:7b
+
+<span class="c"># Ollama 서비스 시작</span>
+ollama serve
+</code></pre></div></div>
+
+<h3 id="72-maestro와-ollama-연동">7.2 MAESTRO와 Ollama 연동</h3>
+
+<p><code class="language-plaintext highlighter-rouge">.env</code> 파일을 다음과 같이 수정:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 로컬 LLM 설정</span>
+<span class="nv">USE_LOCAL_LLM</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">LOCAL_LLM_BASE_URL</span><span class="o">=</span>http://host.docker.internal:11434/v1
+<span class="nv">LOCAL_LLM_MODEL</span><span class="o">=</span>llama3.1:8b
+<span class="nv">LOCAL_LLM_API_KEY</span><span class="o">=</span>ollama
+
+<span class="c"># OpenAI 호환 엔드포인트 사용</span>
+<span class="nv">LLM_PROVIDER</span><span class="o">=</span><span class="nb">local</span>
+</code></pre></div></div>
+
+<h3 id="73-연동-테스트">7.3 연동 테스트</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CLI로 모델 테스트</span>
+./maestro-cli.sh test-llm
+
+<span class="c"># 또는 Python 스크립트로 직접 테스트</span>
+python <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh">
+import requests
+
+response = requests.post('http://localhost:11434/v1/chat/completions', 
+    json={
+        'model': 'llama3.1:8b',
+        'messages': [{'role': 'user', 'content': 'Hello, MAESTRO!'}],
+        'max_tokens': 100
+    }
+)
+print(response.json())
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<h2 id="8-searxng-검색-엔진-설정">8. SearXNG 검색 엔진 설정</h2>
+
+<h3 id="81-searxng-컨테이너-설정-확인">8.1 SearXNG 컨테이너 설정 확인</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SearXNG 컨테이너 상태 확인</span>
+docker-compose logs searxng
+
+<span class="c"># 설정 파일 확인</span>
+docker-compose <span class="nb">exec </span>searxng <span class="nb">cat</span> /etc/searxng/settings.yml
+</code></pre></div></div>
+
+<h3 id="82-검색-카테고리-설정">8.2 검색 카테고리 설정</h3>
+
+<p>SearXNG의 <code class="language-plaintext highlighter-rouge">settings.yml</code> 파일을 커스터마이징:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># searxng/settings.yml</span>
+<span class="na">search</span><span class="pi">:</span>
+  <span class="na">safe_search</span><span class="pi">:</span> <span class="m">0</span>
+  <span class="na">autocomplete</span><span class="pi">:</span> <span class="s">duckduckgo</span>
+  <span class="na">default_lang</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+  <span class="na">formats</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">html</span>
+    <span class="pi">-</span> <span class="s">json</span>  <span class="c1"># MAESTRO 통합을 위해 필수</span>
+
+<span class="na">categories</span><span class="pi">:</span>
+  <span class="na">general</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">google</span>
+    <span class="pi">-</span> <span class="s">bing</span>
+    <span class="pi">-</span> <span class="s">duckduckgo</span>
+  <span class="na">science</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">arxiv</span>
+    <span class="pi">-</span> <span class="s">pubmed</span>
+    <span class="pi">-</span> <span class="s">semantic scholar</span>
+  <span class="na">it</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">github</span>
+    <span class="pi">-</span> <span class="s">stackoverflow</span>
+    <span class="pi">-</span> <span class="s">documentation</span>
+  <span class="na">news</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">google news</span>
+    <span class="pi">-</span> <span class="s">reuters</span>
+    <span class="pi">-</span> <span class="s">bbc</span>
+</code></pre></div></div>
+
+<h3 id="83-프라이빗-검색-테스트">8.3 프라이빗 검색 테스트</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SearXNG API 테스트</span>
+curl <span class="s2">"http://localhost:8080/search?q=artificial+intelligence&amp;format=json&amp;category=science"</span>
+
+<span class="c"># MAESTRO에서 검색 테스트</span>
+<span class="c"># 웹 인터페이스 &gt; Settings &gt; Search &gt; Test Search 버튼 클릭</span>
+</code></pre></div></div>
+
+<h2 id="9-실전-활용-시나리오">9. 실전 활용 시나리오</h2>
+
+<h3 id="91-문서-수집-및-분석">9.1 문서 수집 및 분석</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CLI로 문서 일괄 업로드</span>
+./maestro-cli.sh ingest username ./research_documents
+
+<span class="c"># 지원 형식</span>
+<span class="c"># - PDF, DOCX, TXT, MD</span>
+<span class="c"># - 웹 URL, arXiv 논문</span>
+<span class="c"># - JSON, CSV 데이터</span>
+
+<span class="c"># 업로드 진행 상황 모니터링</span>
+./maestro-cli.sh status username
+</code></pre></div></div>
+
+<h3 id="92-연구-프로젝트-생성">9.2 연구 프로젝트 생성</h3>
+
+<p>웹 인터페이스에서 새 연구 프로젝트 생성:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 연구 설정 예시</span>
+<span class="na">Project Name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">AI</span><span class="nv"> </span><span class="s">Agent</span><span class="nv"> </span><span class="s">Architecture</span><span class="nv"> </span><span class="s">Analysis"</span>
+<span class="na">Research Question</span><span class="pi">:</span> <span class="s2">"</span><span class="s">What</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">latest</span><span class="nv"> </span><span class="s">trends</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">architectures?"</span>
+<span class="na">Scope</span><span class="pi">:</span> 
+  <span class="pi">-</span> <span class="s">Academic papers (2023-2024)</span>
+  <span class="pi">-</span> <span class="s">Industry reports</span>
+  <span class="pi">-</span> <span class="s">Technical documentation</span>
+<span class="na">Output Format</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Comprehensive</span><span class="nv"> </span><span class="s">report</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">citations"</span>
+</code></pre></div></div>
+
+<h3 id="93-ai-에이전트-워크플로우-실행">9.3 AI 에이전트 워크플로우 실행</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 계획 수립 단계</span>
+Research Agent -&gt; Planning Context Analysis
+              -&gt; Outline Generation
+              -&gt; Resource Identification
+
+<span class="c"># 2. 데이터 수집 단계  </span>
+Search Agent -&gt; Web Search <span class="o">(</span>SearXNG<span class="o">)</span>
+             -&gt; Document Retrieval
+             -&gt; Content Extraction
+
+<span class="c"># 3. 분석 단계</span>
+Analysis Agent -&gt; RAG-based Analysis
+               -&gt; Cross-reference Validation
+               -&gt; Insight Generation
+
+<span class="c"># 4. 보고서 생성 단계</span>
+Report Agent -&gt; Content Synthesis
+             -&gt; Citation Management
+             -&gt; Output Formatting
+</code></pre></div></div>
+
+<h2 id="10-고급-설정-및-최적화">10. 고급 설정 및 최적화</h2>
+
+<h3 id="101-gpu-메모리-최적화">10.1 GPU 메모리 최적화</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># GPU 메모리 모니터링</span>
+nvidia-smi <span class="nt">-l</span> 1
+
+<span class="c"># 메모리 사용량 최적화 설정</span>
+<span class="c"># .env 파일에 추가</span>
+<span class="nv">MAX_GPU_MEMORY</span><span class="o">=</span>8192  <span class="c"># MB 단위</span>
+<span class="nv">BATCH_SIZE</span><span class="o">=</span>32
+<span class="nv">CHUNK_OVERLAP</span><span class="o">=</span>100
+</code></pre></div></div>
+
+<h3 id="102-다중-gpu-설정">10.2 다중 GPU 설정</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 서비스별 GPU 할당</span>
+<span class="nv">BACKEND_GPU_DEVICE</span><span class="o">=</span>0
+<span class="nv">DOC_PROCESSOR_GPU_DEVICE</span><span class="o">=</span>1
+<span class="nv">CLI_GPU_DEVICE</span><span class="o">=</span>0
+
+<span class="c"># GPU 로드 밸런싱 확인</span>
+nvidia-smi topo <span class="nt">-m</span>
+</code></pre></div></div>
+
+<h3 id="103-성능-튜닝">10.3 성능 튜닝</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># PostgreSQL 튜닝</span>
+<span class="c"># docker-compose.yml에서 postgres 서비스 설정</span>
+environment:
+  - <span class="nv">POSTGRES_SHARED_PRELOAD_LIBRARIES</span><span class="o">=</span>pg_stat_statements,auto_explain
+  - <span class="nv">POSTGRES_LOG_STATEMENT</span><span class="o">=</span>all
+  - <span class="nv">POSTGRES_EFFECTIVE_CACHE_SIZE</span><span class="o">=</span>4GB
+  - <span class="nv">POSTGRES_SHARED_BUFFERS</span><span class="o">=</span>1GB
+
+<span class="c"># pgvector 인덱스 최적화</span>
+docker-compose <span class="nb">exec </span>postgres psql <span class="nt">-U</span> maestro_user <span class="nt">-d</span> maestro_db
+CREATE INDEX CONCURRENTLY idx_embeddings_cosine ON documents 
+USING ivfflat <span class="o">(</span>embedding vector_cosine_ops<span class="o">)</span> WITH <span class="o">(</span>lists <span class="o">=</span> 100<span class="o">)</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="11-문제-해결-가이드">11. 문제 해결 가이드</h2>
+
+<h3 id="111-일반적인-오류-및-해결책">11.1 일반적인 오류 및 해결책</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 포트 충돌 오류</span>
+Error: Port 3000 already <span class="k">in </span>use
+해결: <span class="nb">sudo </span>lsof <span class="nt">-i</span> :3000<span class="p">;</span> <span class="nb">kill</span> <span class="nt">-9</span> &lt;PID&gt;
+
+<span class="c"># 2. GPU 메모리 부족</span>
+CUDA out of memory
+해결: <span class="nv">FORCE_CPU_MODE</span><span class="o">=</span><span class="nb">true </span>설정 또는 배치 크기 조정
+
+<span class="c"># 3. 데이터베이스 연결 오류</span>
+Connection refused to PostgreSQL
+해결: docker-compose restart postgres
+
+<span class="c"># 4. Ollama 연결 실패</span>
+Local LLM connection failed
+해결: host.docker.internal 대신 실제 IP 사용
+</code></pre></div></div>
+
+<h3 id="112-디버깅-도구-활용">11.2 디버깅 도구 활용</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 상세 로그 활성화</span>
+<span class="nb">export </span><span class="nv">MAESTRO_LOG_LEVEL</span><span class="o">=</span>DEBUG
+docker-compose up <span class="nt">-d</span>
+
+<span class="c"># 컨테이너 내부 접근</span>
+docker-compose <span class="nb">exec </span>backend bash
+docker-compose <span class="nb">exec </span>postgres psql <span class="nt">-U</span> maestro_user <span class="nt">-d</span> maestro_db
+
+<span class="c"># 건강 상태 검사</span>
+curl http://localhost:8000/health
+curl http://localhost:3000/health
+</code></pre></div></div>
+
+<h3 id="113-데이터-백업-및-복구">11.3 데이터 백업 및 복구</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 데이터베이스 백업</span>
+docker-compose <span class="nb">exec </span>postgres pg_dump <span class="nt">-U</span> maestro_user maestro_db <span class="o">&gt;</span> backup.sql
+
+<span class="c"># 벡터 데이터 백업 (pgvector 확장 포함)</span>
+docker-compose <span class="nb">exec </span>postgres pg_dump <span class="nt">-U</span> maestro_user <span class="nt">-Fc</span> maestro_db <span class="o">&gt;</span> backup.dump
+
+<span class="c"># 복구</span>
+docker-compose <span class="nb">exec</span> <span class="nt">-T</span> postgres psql <span class="nt">-U</span> maestro_user <span class="nt">-d</span> maestro_db &lt; backup.sql
+</code></pre></div></div>
+
+<h2 id="12-보안-고려사항">12. 보안 고려사항</h2>
+
+<h3 id="121-인증-및-권한-관리">12.1 인증 및 권한 관리</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 강력한 JWT 시크릿 생성</span>
+openssl rand <span class="nt">-hex</span> 32
+
+<span class="c"># 사용자 권한 설정</span>
+./maestro-cli.sh create-user researcher pass123 <span class="nt">--role</span> user
+./maestro-cli.sh create-user admin admin123 <span class="nt">--role</span> admin
+
+<span class="c"># API 키 로테이션</span>
+./maestro-cli.sh rotate-keys
+</code></pre></div></div>
+
+<h3 id="122-네트워크-보안">12.2 네트워크 보안</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 방화벽 설정 (Ubuntu/Debian)</span>
+<span class="nb">sudo </span>ufw allow from 192.168.1.0/24 to any port 3000
+<span class="nb">sudo </span>ufw allow from 192.168.1.0/24 to any port 8000
+
+<span class="c"># Reverse Proxy 설정 (Nginx)</span>
+<span class="c"># nginx/maestro.conf</span>
+server <span class="o">{</span>
+    listen 443 ssl<span class="p">;</span>
+    server_name maestro.yourdomain.com<span class="p">;</span>
+    
+    ssl_certificate /path/to/cert.pem<span class="p">;</span>
+    ssl_certificate_key /path/to/key.pem<span class="p">;</span>
+    
+    location / <span class="o">{</span>
+        proxy_pass http://localhost:3000<span class="p">;</span>
+        proxy_websocket_upgrade on<span class="p">;</span>
+    <span class="o">}</span>
+    
+    location /api <span class="o">{</span>
+        proxy_pass http://localhost:8000<span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="13-모니터링-및-유지보수">13. 모니터링 및 유지보수</h2>
+
+<h3 id="131-시스템-모니터링">13.1 시스템 모니터링</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 리소스 사용량 모니터링</span>
+docker stats maestro_backend maestro_frontend maestro_postgres
+
+<span class="c"># 로그 로테이션 설정</span>
+<span class="c"># docker-compose.yml에 추가</span>
+logging:
+  driver: json-file
+  options:
+    max-size: <span class="s2">"100m"</span>
+    max-file: <span class="s2">"3"</span>
+
+<span class="c"># 자동 건강 검사</span>
+<span class="c"># healthcheck.sh</span>
+<span class="c">#!/bin/bash</span>
+curl <span class="nt">-f</span> http://localhost:8000/health <span class="o">||</span> <span class="nb">exit </span>1
+curl <span class="nt">-f</span> http://localhost:3000/ <span class="o">||</span> <span class="nb">exit </span>1
+</code></pre></div></div>
+
+<h3 id="132-정기-유지보수">13.2 정기 유지보수</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 주간 유지보수 스크립트</span>
+<span class="c">#!/bin/bash</span>
+<span class="c"># weekly_maintenance.sh</span>
+
+<span class="c"># 1. 컨테이너 업데이트</span>
+docker-compose pull
+docker-compose up <span class="nt">-d</span>
+
+<span class="c"># 2. 데이터베이스 정리</span>
+./maestro-cli.sh cleanup-orphaned-docs
+
+<span class="c"># 3. 로그 압축</span>
+find /var/log/maestro <span class="nt">-name</span> <span class="s2">"*.log"</span> <span class="nt">-mtime</span> +7 <span class="nt">-exec</span> <span class="nb">gzip</span> <span class="o">{}</span> <span class="se">\;</span>
+
+<span class="c"># 4. 시스템 상태 보고</span>
+./maestro-cli.sh system-report <span class="o">&gt;</span> /var/log/maestro/weekly_report_<span class="si">$(</span><span class="nb">date</span> +%Y%m%d<span class="si">)</span>.txt
+</code></pre></div></div>
+
+<h2 id="14-확장-및-커스터마이징">14. 확장 및 커스터마이징</h2>
+
+<h3 id="141-커스텀-ai-에이전트-개발">14.1 커스텀 AI 에이전트 개발</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># maestro_backend/agents/custom_agent.py
+</span><span class="kn">from</span> <span class="n">maestro_backend.core.agent_base</span> <span class="kn">import</span> <span class="n">BaseAgent</span>
+
+<span class="k">class</span> <span class="nc">CustomResearchAgent</span><span class="p">(</span><span class="n">BaseAgent</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="nf">super</span><span class="p">().</span><span class="nf">__init__</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">specialty</span> <span class="o">=</span> <span class="sh">"</span><span class="s">domain_specific_research</span><span class="sh">"</span>
+    
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">process_request</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">커스텀 연구 로직 구현</span><span class="sh">"""</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">self</span><span class="p">.</span><span class="nf">search_documents</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">query</span><span class="p">)</span>
+        <span class="n">analysis</span> <span class="o">=</span> <span class="k">await</span> <span class="n">self</span><span class="p">.</span><span class="nf">analyze_with_llm</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">self</span><span class="p">.</span><span class="nf">generate_report</span><span class="p">(</span><span class="n">analysis</span><span class="p">)</span>
+    
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">search_documents</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">도메인 특화 검색 로직</span><span class="sh">"""</span>
+        <span class="c1"># 구현 로직
+</span>        <span class="k">pass</span>
+</code></pre></div></div>
+
+<h3 id="142-api-확장">14.2 API 확장</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># maestro_backend/api/custom_endpoints.py
+</span><span class="kn">from</span> <span class="n">fastapi</span> <span class="kn">import</span> <span class="n">APIRouter</span><span class="p">,</span> <span class="n">Depends</span>
+<span class="kn">from</span> <span class="n">maestro_backend.core.auth</span> <span class="kn">import</span> <span class="n">get_current_user</span>
+
+<span class="n">router</span> <span class="o">=</span> <span class="nc">APIRouter</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="sh">"</span><span class="s">/api/custom</span><span class="sh">"</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">custom</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="nd">@router.post</span><span class="p">(</span><span class="sh">"</span><span class="s">/domain-research</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">domain_research</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">DomainResearchRequest</span><span class="p">,</span>
+    <span class="n">current_user</span><span class="p">:</span> <span class="n">User</span> <span class="o">=</span> <span class="nc">Depends</span><span class="p">(</span><span class="n">get_current_user</span><span class="p">)</span>
+<span class="p">):</span>
+    <span class="sh">"""</span><span class="s">커스텀 도메인 연구 엔드포인트</span><span class="sh">"""</span>
+    <span class="n">agent</span> <span class="o">=</span> <span class="nc">CustomResearchAgent</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">agent</span><span class="p">.</span><span class="nf">process_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="sh">"</span><span class="s">results</span><span class="sh">"</span><span class="p">:</span> <span class="n">results</span><span class="p">,</span> <span class="sh">"</span><span class="s">status</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">completed</span><span class="sh">"</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="15-트러블슈팅-체크리스트">15. 트러블슈팅 체크리스트</h2>
+
+<h3 id="151-설치-후-체크리스트">15.1 설치 후 체크리스트</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Docker 컨테이너 모두 실행 중 (<code class="language-plaintext highlighter-rouge">docker-compose ps</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />포트 3000, 8000, 5432, 8080 접근 가능</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />데이터베이스 연결 정상 (<code class="language-plaintext highlighter-rouge">./maestro-cli.sh reset-db --check</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />LLM API 연결 테스트 통과</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />웹 인터페이스 로그인 가능</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />검색 기능 정상 작동</li>
+</ul>
+
+<h3 id="152-성능-최적화-체크리스트">15.2 성능 최적화 체크리스트</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />GPU 메모리 사용량 모니터링</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />PostgreSQL 인덱스 최적화</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />SearXNG 응답 속도 확인</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />문서 처리 배치 크기 조정</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />캐시 설정 확인</li>
+</ul>
+
+<h2 id="16-결론">16. 결론</h2>
+
+<p>MAESTRO는 AI 기반 연구 자동화의 새로운 패러다임을 제시하는 강력한 플랫폼입니다. 이 튜토리얼을 통해 기본 설치부터 고급 설정까지 완전히 마스터할 수 있습니다.</p>
+
+<h3 id="주요-성과">주요 성과</h3>
+
+<p>✅ <strong>완전 셀프 호스팅 환경 구축</strong><br />
+✅ <strong>AI 에이전트 기반 연구 워크플로우 구현</strong><br />
+✅ <strong>로컬 LLM과 프라이빗 검색엔진 통합</strong><br />
+✅ <strong>확장 가능한 아키텍처 이해</strong></p>
+
+<h3 id="다음-단계">다음 단계</h3>
+
+<ol>
+  <li><strong>고급 AI 에이전트 개발</strong>: 도메인 특화 연구 에이전트 구현</li>
+  <li><strong>기업 환경 배포</strong>: Kubernetes 클러스터 배포 고려</li>
+  <li><strong>API 통합</strong>: 기존 연구 도구와의 연동 확장</li>
+  <li><strong>커뮤니티 기여</strong>: MAESTRO 오픈소스 프로젝트 참여</li>
+</ol>
+
+<p>MAESTRO를 통해 연구 생산성을 혁신적으로 향상시키고, AI 에이전트의 무한한 가능성을 경험해보세요! 🚀</p>
+
+<hr />
+
+<p><strong>참고 자료</strong></p>
+<ul>
+  <li><a href="https://github.com/murtaza-nasir/maestro">MAESTRO GitHub Repository</a></li>
+  <li><a href="https://docs.docker.com/compose/">Docker Compose 공식 문서</a></li>
+  <li><a href="https://github.com/pgvector/pgvector">PostgreSQL + pgvector 가이드</a></li>
+  <li><a href="https://docs.searxng.org/">SearXNG 설정 가이드</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+        <a href="/ko-posts-tags-ai-research" class="page__taxonomy-item p-category" rel="tag">ai-research</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-docker" class="page__taxonomy-item p-category" rel="tag">docker</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-fastapi" class="page__taxonomy-item p-category" rel="tag">fastapi</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-gpu" class="page__taxonomy-item p-category" rel="tag">gpu</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-local-llm" class="page__taxonomy-item p-category" rel="tag">local-llm</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-maestro" class="page__taxonomy-item p-category" rel="tag">maestro</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-pgvector" class="page__taxonomy-item p-category" rel="tag">pgvector</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-postgresql" class="page__taxonomy-item p-category" rel="tag">postgresql</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-react" class="page__taxonomy-item p-category" rel="tag">react</a><span class="sep">, </span>
+      
+    
+      
+        <a href="/ko-posts-tags-searxng" class="page__taxonomy-item p-category" rel="tag">searxng</a>
+      
+    
+    </span>
+  </p>
+
+
+<!-- 
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/ko/tags/#ai-research" class="page__taxonomy-item p-category" rel="tag">ai-research</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#docker" class="page__taxonomy-item p-category" rel="tag">docker</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#fastapi" class="page__taxonomy-item p-category" rel="tag">fastapi</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#gpu" class="page__taxonomy-item p-category" rel="tag">gpu</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#local-llm" class="page__taxonomy-item p-category" rel="tag">local-llm</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#maestro" class="page__taxonomy-item p-category" rel="tag">maestro</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#pgvector" class="page__taxonomy-item p-category" rel="tag">pgvector</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#postgresql" class="page__taxonomy-item p-category" rel="tag">postgresql</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#react" class="page__taxonomy-item p-category" rel="tag">react</a><span class="sep">, </span>
+    
+      <a href="/ko/tags/#searxng" class="page__taxonomy-item p-category" rel="tag">searxng</a>
+    
+    </span>
+  </p>
+ -->
+
+
+
+  
+
+
+  
+
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/ko/categories/#tutorials" class="page__taxonomy-item p-category" rel="tag">tutorials</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-08-26T00:00:00+09:00">August 26, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/ko/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/" class="pagination--pager" title="코딩 에이전트 빌딩 완전 가이드: 실전 워크샵
+">이전</a>
+    
+    
+      <a href="/ko/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/" class="pagination--pager" title="Neosync 완전 가이드: 데이터 익명화와 합성 데이터 생성 마스터하기
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ko/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/" rel="permalink">Neosync 완전 가이드: 데이터 익명화와 합성 데이터 생성 마스터하기
+</a>
+      
+    </h2>
+    
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2025-08-26T00:00:00+09:00">August 26, 2025 </time>&emsp;
+      
+    </p>
+    
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Neosync 오픈소스 플랫폼으로 개인정보 익명화, 합성 데이터 생성, 환경 동기화를 실습을 통해 완전히 마스터하는 종합 가이드
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ko/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/" rel="permalink">코딩 에이전트 빌딩 완전 가이드: 실전 워크샵
+</a>
+      
+    </h2>
+    
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2025-08-26T00:00:00+09:00">August 26, 2025 </time>&emsp;
+      
+    </p>
+    
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Go와 Anthropic Claude API를 활용하여 Cursor, Cline, Windsurf와 같은 AI 코딩 에이전트를 직접 만드는 단계별 실전 튜토리얼
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ko/tutorials/hands-on-large-language-models-complete-tutorial-guide/" rel="permalink">Hands-On Large Language Models: 완전 튜토리얼 가이드 및 도서 리뷰
+</a>
+      
+    </h2>
+    
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2025-08-26T00:00:00+09:00">August 26, 2025 </time>&emsp;
+      
+    </p>
+    
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">O’Reilly 출간 ‘Hands-On Large Language Models’ 책의 완전 가이드 - 12개 챕터별 실습 튜토리얼, 코드 예제, LLM 개발을 위한 구현 가이드 포함.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ko/research/advertisement-embedding-attacks-llm-security-threat/" rel="permalink">광고 임베딩 공격: 대형 언어 모델에 대한 새로운 보안 위협
+</a>
+      
+    </h2>
+    
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2025-08-26T00:00:00+09:00">August 26, 2025 </time>&emsp;
+      
+    </p>
+    
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">대형 언어 모델(LLM)을 대상으로 한 광고 임베딩 공격(AEA)의 등장과 그 위험성을 분석하고, 모델 출력에 악성 콘텐츠를 은밀하게 삽입하여 정보 무결성을 훼손하는 새로운 공격 벡터를 탐구합니다.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Thaki Cloud. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<script src="/assets/js/simple-jekyll-search.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/kimjy99/kimjy99.github.io@master/assets/js/simple-jekyll-search.min.js"></script> -->
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search'),
+    resultsContainer: document.getElementById('results'),
+    json: '/search.json',
+    searchResultTemplate: '<div class="list__item"><article class="archive__item"><h2 class="archive__item-title"><a href="{url}" rel="permalink">{title}</a></h2><p class="archive__item-excerpt">{excerpt}</p><div class="archive__item-teaser"><span class="page__meta"><i class="far fa-calendar-alt"></i> {date}</span></div></article></div>',
+    noResultsText: '검색 결과가 없습니다.',
+    limit: 20,
+    fuzzy: false,
+    exclude: ['url']
+  });
+  
+  // 검색 입력 이벤트 리스너
+  var searchInput = document.getElementById('search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      console.log('검색어: "' + e.target.value + '"');
+      setTimeout(function() {
+        var results = document.querySelectorAll('#results .list__item');
+        console.log('검색 결과 개수:', results.length);
+      }, 100);
+    });
+  }
+});
+</script><!-- Multilingual Search Enhancement -->
+<script src="/assets/js/multilingual-search.js"></script>
+
+
+
+
+
+<!-- Language dropdown functionality -->
+<script src="/assets/js/dropdown.js"></script>
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+  displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+  processEscapes: true
+  },
+  "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+<!-- Mermaid diagram initialization -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mermaid 초기화가 완료되면 다이어그램 렌더링
+    if (typeof mermaid !== 'undefined') {
+      // 모든 mermaid 코드 블록을 찾아서 다이어그램으로 변환
+      const mermaidElements = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
+      
+      mermaidElements.forEach(function(element, index) {
+        const mermaidCode = element.textContent;
+        const mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = mermaidCode;
+        mermaidDiv.id = 'mermaid-' + index;
+        
+        // 기존 코드 블록을 새로운 div로 교체
+        element.parentNode.replaceWith(mermaidDiv);
+      });
+      
+      // Mermaid 다이어그램 렌더링 실행
+      mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+    }
+  });
+</script>
+
+  </body>
+</html>
