@@ -139,13 +139,13 @@ jobs:
             echo "🔄 Running full Jekyll build test for all languages..."
             
             echo "🇰🇷 Testing Korean build..."
-            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 10
+            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 20
             
             echo "🇺🇸 Testing English build..."
-            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-en.yml --destination _test_en --drafts --limit_posts 10
+            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-en.yml --destination _test_en --drafts --limit_posts 20
             
             echo "🇸🇦 Testing Arabic build..."
-            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ar.yml --destination _test_ar --drafts --limit_posts 10
+            JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ar.yml --destination _test_ar --drafts --limit_posts 20
             
             rm -rf _test_ko _test_en _test_ar
           else
@@ -154,28 +154,28 @@ jobs:
             # Test Korean if changed
             if [[ "$KOREAN_CHANGED" == "true" ]]; then
               echo "🇰🇷 Testing Korean build (changed)..."
-              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 20
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 30
               rm -rf _test_ko
             fi
             
             # Test English if changed
             if [[ "$ENGLISH_CHANGED" == "true" ]]; then
               echo "🇺🇸 Testing English build (changed)..."
-              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-en.yml --destination _test_en --drafts --limit_posts 20
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-en.yml --destination _test_en --drafts --limit_posts 30
               rm -rf _test_en
             fi
             
             # Test Arabic if changed
             if [[ "$ARABIC_CHANGED" == "true" ]]; then
               echo "🇸🇦 Testing Arabic build (changed)..."
-              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ar.yml --destination _test_ar --drafts --limit_posts 20
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ar.yml --destination _test_ar --drafts --limit_posts 30
               rm -rf _test_ar
             fi
             
             # If no specific language changed, test Korean as default
             if [[ "$KOREAN_CHANGED" != "true" && "$ENGLISH_CHANGED" != "true" && "$ARABIC_CHANGED" != "true" ]]; then
               echo "⚡ No specific language changes, testing Korean as default..."
-              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 5
+              JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config-ko.yml --destination _test_ko --drafts --limit_posts 10
               rm -rf _test_ko
             fi
           fi

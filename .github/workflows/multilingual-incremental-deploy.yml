@@ -166,7 +166,7 @@ jobs:
             JEKYLL_ENV=production bundle exec jekyll build \
               --config _config.yml,_config-ko.yml \
               --destination _site_ko \
-              --verbose --limit_posts 50
+              --verbose
             
             # Copy Korean content to main site root (default language)
             cp -r _site_ko/* _site/
@@ -187,7 +187,7 @@ jobs:
             JEKYLL_ENV=production bundle exec jekyll build \
               --config _config.yml,_config-en.yml \
               --destination _site_en \
-              --verbose --limit_posts 50
+              --verbose
             
             mkdir -p _site/en
             cp -r _site_en/* _site/en/
@@ -203,7 +203,7 @@ jobs:
             JEKYLL_ENV=production bundle exec jekyll build \
               --config _config.yml,_config-ar.yml \
               --destination _site_ar \
-              --verbose --limit_posts 50
+              --verbose
             
             mkdir -p _site/ar
             cp -r _site_ar/* _site/ar/
@@ -225,7 +225,7 @@ jobs:
             JEKYLL_ENV=production bundle exec jekyll build \
               --config _config.yml,_config-ko.yml \
               --destination _temp_ko \
-              --verbose --limit_posts 1000
+              --verbose
             
             if [[ -f "_temp_ko/search.json" ]]; then
               mkdir -p _site/ko/assets/js
@@ -241,7 +241,7 @@ jobs:
             JEKYLL_ENV=production bundle exec jekyll build \
               --config _config.yml,_config-en.yml \
               --destination _temp_en \
-              --verbose --limit_posts 1000
+              --verbose
             
             if [[ -f "_temp_en/search.json" ]]; then
               mkdir -p _site/en/assets/js
@@ -256,7 +256,7 @@ jobs:
             JEKYLL_ENV=production bundle exec jekyll build \
               --config _config.yml,_config-ar.yml \
               --destination _temp_ar \
-              --verbose --limit_posts 1000
+              --verbose
             
             if [[ -f "_temp_ar/search.json" ]]; then
               mkdir -p _site/ar/assets/js

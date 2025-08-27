@@ -6,7 +6,7 @@ lang: "ko"
 
 # 언어별 URL 설정
 url: "https://thakicloud.github.io"
-baseurl: "/ko"
+baseurl: ""
 
 # 검색 설정
 search: true
