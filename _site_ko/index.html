@@ -1,0 +1,573 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            Thaki Cloud      ThakiCloud 기술 블로그 - AI/ML Engineering &amp; DevOps - Thaki Cloud Tech Blog      다키클라우드 기술 블로그      </title>
+<meta name="description" content="Thaki Cloud(ThakiCloud, 다키클라우드, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية.">
+
+
+<meta name="keywords" content="Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, 타키 클라우드, 다키클라우드 기술블로그, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات">
+
+
+<!-- Brand name variations for better SEO -->
+<meta name="alternate-names" content="Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود">
+<meta name="brand" content="Thaki Cloud">
+<meta name="brand-keywords" content="thaki cloud, thakicloud, 다키클라우드, 타키 클라우드">
+<meta name="organization" content="Thaki Cloud">
+<meta name="language" content="ko-KR, ar, en">
+<meta name="coverage" content="Worldwide">
+<meta name="geo.region" content="KR-11">
+<meta name="geo.placename" content="Seoul, Korea">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Thaki Cloud Tech Blog | 다키클라우드 기술 블로그">
+<meta property="og:title" content="            Thaki Cloud      ThakiCloud 기술 블로그 - AI/ML Engineering &amp; DevOps      ">
+<meta property="og:url" content="https://thakicloud.github.io/">
+
+
+  <meta property="og:description" content="Thaki Cloud(ThakiCloud, 다키클라우드, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية.">
+
+
+
+  <meta property="og:image" content="https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg">
+
+
+
+  <meta name="twitter:site" content="@thakicloud">
+  <meta name="twitter:title" content="            Thaki Cloud      ThakiCloud 기술 블로그 - AI/ML Engineering &amp; DevOps      ">
+  <meta name="twitter:description" content="Thaki Cloud(ThakiCloud, 다키클라우드, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية.">
+  <meta name="twitter:url" content="https://thakicloud.github.io/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://thakicloud.github.io/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Organization",
+      "url": "https://thakicloud.github.io/",
+      "logo": "https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="vTtIRRz5XMsZ10-HAT-4-xuTZEmXG-zUCArAl3ANtAI" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Thaki Cloud Tech Blog | 다키클라우드 기술 블로그 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Mermaid.js for diagram rendering -->
+<link rel="stylesheet" href="/assets/css/mermaid-custom.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    themeVariables: {
+      primaryColor: '#ff6b6b',
+      primaryTextColor: '#333',
+      primaryBorderColor: '#ff6b6b',
+      lineColor: '#333',
+      sectionBkgColor: '#f8f9fa',
+      altSectionBkgColor: '#ffffff',
+      gridColor: '#e9ecef',
+      secondaryColor: '#6c757d',
+      tertiaryColor: '#f8f9fa'
+    }
+  });
+</script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        
+        
+        
+        <a class="site-title" href="/">
+          Thaki Cloud Tech Blog | 다키클라우드 기술 블로그
+          <span class="site-subtitle">AI/ML Engineering & DevOps 전문 기술 블로그</span>
+        </a>
+        <ul class="visible-links">
+          
+          <li class="masthead__menu-item">
+              
+                <a href="/ko/posts/">포스트</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="/ko/categories/">카테고리</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="/ko/tags/">태그</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="#" class="dropdown-toggle">언어 <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu"><li><a href="/ko/">🇰🇷 한국어</a></li><li><a href="/en/">🇺🇸 English</a></li><li><a href="/ar/">🇸🇦 العربية</a></li></ul>
+              
+            </li></ul>
+        <!-- 검색 링크 버튼 -->
+        
+        
+        
+        <a href="/search/" class="search__toggle" title="검색">
+          <span class="visually-hidden">검색</span>
+          <i class="fas fa-search"></i>
+        </a>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <div id="language-selector" style="text-align: center; padding: 50px 20px; min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h1 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">Welcome to Thaki Cloud Tech Blog</h1>
+    <h2 style="font-size: 1.8em; margin-bottom: 20px; color: #555;">다키클라우드 기술 블로그에 오신 것을 환영합니다</h2>
+    <h2 style="font-size: 1.8em; margin-bottom: 40px; color: #555;">مرحباً بكم في مدونة ثاكي كلاود التقنية</h2>
+    
+    <div style="margin: 30px 0; font-size: 1.2em; color: #666;">
+      <p>Please select your preferred language / 언어를 선택해주세요 / يرجى اختيار لغتك المفضلة</p>
+    </div>
+    
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 40px 0;">
+      <a href="/ko/" class="btn btn--primary btn--large" data-lang="ko" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+        🇰🇷 한국어
+      </a>
+      <a href="/en/" class="btn btn--primary btn--large" data-lang="en" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+        🇺🇸 English
+      </a>
+      <a href="/ar/" class="btn btn--primary btn--large" data-lang="ar" style="min-width: 150px; padding: 15px 30px; font-size: 1.1em; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;">
+        🇸🇦 العربية
+      </a>
+    </div>
+    
+    <div id="redirect-message" style="margin-top: 30px; font-size: 0.9em; color: #999; opacity: 0; transition: opacity 0.5s ease;">
+      <p>Redirecting based on your browser language... / 브라우저 언어에 따라 자동 이동 중... / إعادة التوجيه بناءً على لغة المتصفح...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+    // 브라우저 언어 감지 및 자동 리디렉션
+    const userLang = navigator.language || navigator.userLanguage;
+    
+    // Jekyll 변수를 사용하여 안전한 baseURL 설정
+    const rawBaseUrl = '';
+    const siteUrl = 'https://thakicloud.github.io';
+    
+    // baseUrl 정규화 (빈 문자열 또는 슬래시 처리)
+    const baseUrl = rawBaseUrl === '' ? '' : rawBaseUrl;
+    
+    // 디버깅 정보
+    console.log('🏠 Site URL:', siteUrl);
+    console.log('📁 Raw Base URL:', rawBaseUrl);
+    console.log('📁 Normalized Base URL:', baseUrl);
+    console.log('🌐 Current Location:', window.location.href);
+    
+    // 안전한 URL 생성 함수
+    function buildUrl(lang) {
+        if (baseUrl === '' || baseUrl === '/') {
+            return '/' + lang + '/';
+        }
+        return baseUrl + '/' + lang + '/';
+    }
+    
+    const supportedLangs = {
+        'ko': buildUrl('ko'),
+        'en': buildUrl('en'),
+        'ar': buildUrl('ar')
+    };
+    
+    // 언어 코드 매핑
+    let targetLang = 'ko'; // 기본값
+    
+    if (userLang.startsWith('en')) {
+        targetLang = 'en';
+    } else if (userLang.startsWith('ar')) {
+        targetLang = 'ar';
+    } else if (userLang.startsWith('ko')) {
+        targetLang = 'ko';
+    }
+    
+    // 쿠키에서 사용자 선택 언어 확인
+    const savedLang = getCookie('preferred_language');
+    if (savedLang && supportedLangs[savedLang]) {
+        targetLang = savedLang;
+    }
+    
+    // 리디렉션 메시지 표시
+    setTimeout(function() {
+        const redirectMessage = document.getElementById('redirect-message');
+        if (redirectMessage) {
+            redirectMessage.style.opacity = '1';
+        }
+    }, 1000);
+    
+    // 디버깅 정보 출력
+    console.log('🔧 Debug Info:');
+    console.log('  Base URL:', baseUrl);
+    console.log('  User Language:', userLang);
+    console.log('  Target Language:', targetLang);
+    console.log('  Target URL:', supportedLangs[targetLang]);
+    console.log('  Current Path:', window.location.pathname);
+    console.log('  Supported URLs:', supportedLangs);
+    
+    // 3초 후 자동 리디렉션 (사용자가 수동 선택할 시간 제공)
+    setTimeout(function() {
+        const currentPath = window.location.pathname;
+        if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
+            console.log('🚀 Redirecting to:', supportedLangs[targetLang]);
+            window.location.href = supportedLangs[targetLang];
+        }
+    }, 3000);
+    
+    // 쿠키 헬퍼 함수
+    function getCookie(name) {
+        const value = "; " + document.cookie;
+        const parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+    
+    function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
+    }
+    
+    // 언어 선택 버튼에 이벤트 리스너 추가
+    document.addEventListener('DOMContentLoaded', function() {
+        const langButtons = document.querySelectorAll('.btn--primary');
+        
+        // 초기화: 모든 버튼의 URL을 올바르게 설정
+        langButtons.forEach(button => {
+            const lang = button.getAttribute('data-lang');
+            const correctUrl = supportedLangs[lang];
+            if (correctUrl) {
+                const oldHref = button.getAttribute('href');
+                button.setAttribute('href', correctUrl);
+                console.log(`🔄 Updated ${lang} button URL:`, oldHref, '→', correctUrl);
+            }
+        });
+        
+        // 언어별 페이지 접근성 테스트 (선택적)
+        async function testLanguagePages() {
+            console.log('🧪 Testing language page accessibility...');
+            for (const [lang, url] of Object.entries(supportedLangs)) {
+                try {
+                    const response = await fetch(url, { method: 'HEAD' });
+                    console.log(`${lang.toUpperCase()}: ${response.status} - ${url}`);
+                } catch (error) {
+                    console.warn(`❌ ${lang.toUpperCase()} page test failed:`, error.message);
+                }
+            }
+        }
+        
+        // 페이지 테스트 실행 (5초 후)
+        setTimeout(testLanguagePages, 5000);
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                const lang = this.getAttribute('data-lang');
+                console.log('🖱️ Button clicked:', { href, lang });
+                
+                // 동적으로 올바른 URL 생성
+                const correctUrl = supportedLangs[lang];
+                if (correctUrl && href !== correctUrl) {
+                    console.log('🔧 Correcting URL from', href, 'to', correctUrl);
+                    this.setAttribute('href', correctUrl);
+                }
+                
+                if (['ko', 'en', 'ar'].includes(lang)) {
+                    setCookie('preferred_language', lang, 365);
+                    console.log('✅ Language preference saved:', lang);
+                } else {
+                    console.warn('⚠️ Invalid language:', lang);
+                }
+            });
+            
+            // 호버 효과
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    });
+})();
+</script>
+
+<style>
+.btn--primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    display: inline-block;
+}
+
+.btn--primary:hover {
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+}
+
+.btn--large {
+    font-size: 1.1em;
+    padding: 15px 30px;
+}
+
+@media (max-width: 768px) {
+    #language-selector h1 {
+        font-size: 2em !important;
+    }
+    
+    #language-selector h2 {
+        font-size: 1.4em !important;
+    }
+    
+    .btn--large {
+        min-width: 120px !important;
+        padding: 12px 20px !important;
+        font-size: 1em !important;
+    }
+}
+</style>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Thaki Cloud. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<script src="/assets/js/simple-jekyll-search.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/kimjy99/kimjy99.github.io@master/assets/js/simple-jekyll-search.min.js"></script> -->
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search'),
+    resultsContainer: document.getElementById('results'),
+    json: '/search.json',
+    searchResultTemplate: '<div class="list__item"><article class="archive__item"><h2 class="archive__item-title"><a href="{url}" rel="permalink">{title}</a></h2><p class="archive__item-excerpt">{excerpt}</p><div class="archive__item-teaser"><span class="page__meta"><i class="far fa-calendar-alt"></i> {date}</span></div></article></div>',
+    noResultsText: '검색 결과가 없습니다.',
+    limit: 20,
+    fuzzy: false,
+    exclude: ['url']
+  });
+  
+  // 검색 입력 이벤트 리스너
+  var searchInput = document.getElementById('search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      console.log('검색어: "' + e.target.value + '"');
+      setTimeout(function() {
+        var results = document.querySelectorAll('#results .list__item');
+        console.log('검색 결과 개수:', results.length);
+      }, 100);
+    });
+  }
+});
+</script><!-- Multilingual Search Enhancement -->
+<script src="/assets/js/multilingual-search.js"></script>
+
+
+
+
+
+<!-- Language dropdown functionality -->
+<script src="/assets/js/dropdown.js"></script>
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+  displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+  processEscapes: true
+  },
+  "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+<!-- Mermaid diagram initialization -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mermaid 초기화가 완료되면 다이어그램 렌더링
+    if (typeof mermaid !== 'undefined') {
+      // 모든 mermaid 코드 블록을 찾아서 다이어그램으로 변환
+      const mermaidElements = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
+      
+      mermaidElements.forEach(function(element, index) {
+        const mermaidCode = element.textContent;
+        const mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = mermaidCode;
+        mermaidDiv.id = 'mermaid-' + index;
+        
+        // 기존 코드 블록을 새로운 div로 교체
+        element.parentNode.replaceWith(mermaidDiv);
+      });
+      
+      // Mermaid 다이어그램 렌더링 실행
+      mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+    }
+  });
+</script>
+
+  </body>
+</html>

@@ -312,16 +312,9 @@ jobs:
                [[ -d "artifacts/site-$lang" ]]; then
               echo "📁 Processing $lang site..."
 
-              if [[ "$lang" == "ko" ]]; then
-                # Korean is default - copy to root and /ko/
-                cp -r artifacts/site-$lang/* _site/
-                mkdir -p _site/ko
-                cp -r artifacts/site-$lang/* _site/ko/
-              else
-                # Other languages go to their subdirectories
-                mkdir -p _site/$lang
-                cp -r artifacts/site-$lang/* _site/$lang/
-              fi
+              # Each language goes to its own subdirectory
+              mkdir -p _site/$lang
+              cp -r artifacts/site-$lang/* _site/$lang/
 
               echo "✅ $lang site combined"
             else

@@ -1,0 +1,952 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            البحث - Thaki Cloud Tech Blog      다키클라우드 기술 블로그      </title>
+<meta name="description" content="AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다.">
+
+
+<meta name="keywords" content="Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링, 타키 클라우드, 다키클라우드 기술블로그, الذكاء الاصطناعي, تعلم الآلة, هندسة الذكاء الاصطناعي, الحوسبة السحابية, تطوير العمليات, كوبرنيتس, مدونة تقنية, هندسة البرمجيات">
+
+
+<!-- Brand name variations for better SEO -->
+<meta name="alternate-names" content="Thaki Cloud, ThakiCloud, 다키클라우드, thaki cloud, thaki-cloud, THAKI CLOUD, ثاكي كلاود">
+<meta name="brand" content="Thaki Cloud">
+<meta name="brand-keywords" content="thaki cloud, thakicloud, 다키클라우드, 타키 클라우드">
+<meta name="organization" content="Thaki Cloud">
+<meta name="language" content="ko-KR, ar, en">
+<meta name="coverage" content="Worldwide">
+<meta name="geo.region" content="KR-11">
+<meta name="geo.placename" content="Seoul, Korea">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Thaki Cloud Tech Blog | 다키클라우드 기술 블로그">
+<meta property="og:title" content="البحث">
+<meta property="og:url" content="https://thakicloud.github.io/ar/search/">
+
+
+  <meta property="og:description" content="AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다.">
+
+
+
+  <meta property="og:image" content="https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg">
+
+
+
+  <meta name="twitter:site" content="@thakicloud">
+  <meta name="twitter:title" content="البحث">
+  <meta name="twitter:description" content="AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다.">
+  <meta name="twitter:url" content="https://thakicloud.github.io/ar/search/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://thakicloud.github.io/ar/search/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Organization",
+      "url": "https://thakicloud.github.io/",
+      "logo": "https://thakicloud.github.io/assets/images/thakicloud-og-image.jpg"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="vTtIRRz5XMsZ10-HAT-4-xuTZEmXG-zUCArAl3ANtAI" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Thaki Cloud Tech Blog | 다키클라우드 기술 블로그 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Mermaid.js for diagram rendering -->
+<link rel="stylesheet" href="/assets/css/mermaid-custom.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    themeVariables: {
+      primaryColor: '#ff6b6b',
+      primaryTextColor: '#333',
+      primaryBorderColor: '#ff6b6b',
+      lineColor: '#333',
+      sectionBkgColor: '#f8f9fa',
+      altSectionBkgColor: '#ffffff',
+      gridColor: '#e9ecef',
+      secondaryColor: '#6c757d',
+      tertiaryColor: '#f8f9fa'
+    }
+  });
+</script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        
+        
+        
+        <a class="site-title" href="/">
+          Thaki Cloud Tech Blog | 다키클라우드 기술 블로그
+          <span class="site-subtitle">AI/ML Engineering & DevOps 전문 기술 블로그</span>
+        </a>
+        <ul class="visible-links">
+          
+          <li class="masthead__menu-item">
+              
+                <a href="/ar/posts/">المشاركات</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="/ar/categories/">الفئات</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="/ar/tags/">العلامات</a>
+              
+            </li><li class="masthead__menu-item">
+              
+                <a href="#" class="dropdown-toggle">اللغة <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu"><li><a href="/ko/">🇰🇷 한국어</a></li><li><a href="/en/">🇺🇸 English</a></li><li><a href="/ar/">🇸🇦 العربية</a></li></ul>
+              
+            </li></ul>
+        <!-- 검색 링크 버튼 -->
+        
+        
+        
+        <a href="/ar/search/" class="search__toggle" title="البحث">
+          <span class="visually-hidden">البحث</span>
+          <i class="fas fa-search"></i>
+        </a>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <div class="search-container">
+  <div class="search-header">
+    <h1><i class="fas fa-search"></i> البحث في المدونة</h1>
+    <p>ابحث عما تريد بسرعة. يدعم اللغة الكورية والإنجليزية والعربية.</p>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="أدخل مصطلحات البحث (مثل: AI، التعلم الآلي، LLM)" autocomplete="off" autofocus>
+    <button id="search-button">
+      <i class="fas fa-search"></i>
+      <span>بحث</span>
+    </button>
+  </div>
+
+  <div id="search-suggestions" class="search-suggestions" style="display: none;">
+    <!-- اقتراحات البحث -->
+  </div>
+
+  <div id="search-results" class="search-results">
+    <!-- ستظهر نتائج البحث هنا -->
+  </div>
+
+  <div id="search-stats" class="search-stats" style="display: none;">
+    <!-- إحصائيات البحث -->
+  </div>
+</div>
+
+<style>
+.search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  direction: rtl;
+  text-align: right;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-header h1 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  direction: ltr;
+}
+
+#search-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  font-family: inherit;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  text-align: right;
+  direction: rtl;
+}
+
+#search-button {
+  padding: 15px 25px;
+  background: #90caf9;
+  color: #212121;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  justify-content: center;
+}
+
+#search-button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+#search-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+#search-button i {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  #search-button span {
+    display: none;
+  }
+  #search-button {
+    min-width: 60px;
+    padding: 15px 20px;
+  }
+}
+
+.search-suggestions {
+  background: #2a2a2a;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #424242;
+  color: #ffffff;
+}
+
+.suggestion-item:hover {
+  background: #90caf9;
+  color: #212121;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.search-stats {
+  text-align: center;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.search-results {
+  min-height: 200px;
+}
+
+.search-result-item {
+  background: #2a2a2a;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s;
+}
+
+.search-result-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.result-title a {
+  color: #90caf9;
+  text-decoration: none;
+}
+
+.result-title a:hover {
+  color: #64b5f6;
+}
+
+.result-meta {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 10px;
+}
+
+.result-snippet {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.result-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #424242;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #b0b0b0;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #b0b0b0;
+}
+
+mark {
+  background: #90caf9;
+  color: #212121;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.search-tips {
+  background: #212121;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.search-tips h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.search-tips ul {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.search-tips li {
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 15px;
+  }
+  
+  .search-box {
+    flex-direction: column;
+  }
+  
+  #search-input, #search-button {
+    border-radius: 0;
+  }
+  
+  #search-input {
+    border-bottom: 1px solid #ddd;
+  }
+}
+</style>
+
+<script>
+// بيانات البحث العامة
+let searchData = [];
+let isSearching = false;
+
+// تحميل بيانات البحث
+async function loadSearchData() {
+  try {
+    const response = await fetch('/ar/search.json');
+    searchData = await response.json();
+    console.log(`تم تحميل بيانات البحث: ${searchData.length} مقالة`);
+  } catch (error) {
+    console.error('فشل في تحميل بيانات البحث:', error);
+  }
+}
+
+// تطبيع النص (نفس منطق مرشح Ruby)
+function normalizeText(text) {
+  if (!text) return '';
+  
+  return text
+    .replace(/[\x00-\x1F\x7F-\x9F]/g, '') // إزالة أحرف التحكم
+    .replace(/\s+/g, ' ') // استبدال المسافات المتعددة بمسافة واحدة
+    .trim()
+    .toLowerCase();
+}
+
+// حساب نقاط البحث
+function calculateScore(post, query) {
+  const normalizedQuery = normalizeText(query);
+  if (!normalizedQuery) return 0;
+  
+  let score = 0;
+  
+  // البحث في العنوان (وزن 3)
+  const title = normalizeText(post.title || '');
+  if (title.includes(normalizedQuery)) score += 300;
+  
+  // البحث في المحتوى (وزن 1)
+  const content = normalizeText(post.content || '');
+  if (content.includes(normalizedQuery)) score += 100;
+  
+  // البحث في العلامات (وزن 2)
+  const tags = normalizeText((post.tags || []).join(' '));
+  if (tags.includes(normalizedQuery)) score += 200;
+  
+  // البحث في الفئات (وزن 2)
+  const categories = normalizeText((post.categories || []).join(' '));
+  if (categories.includes(normalizedQuery)) score += 200;
+  
+  // إضافة نقاط المطابقة الجزئية
+  const queryWords = normalizedQuery.split(/\s+/).filter(word => word.length > 0);
+  queryWords.forEach(word => {
+    if (word.length >= 2) {
+      [title, content, tags, categories].forEach((text, index) => {
+        const weight = [3, 1, 2, 2][index];
+        if (text.includes(word)) {
+          score += 25 * weight;
+        }
+      });
+    }
+  });
+  
+  return score;
+}
+
+// تمييز المطابقات
+function highlightMatches(text, query) {
+  if (!text || !query) return text;
+  
+  const normalizedQuery = normalizeText(query);
+  const queryWords = normalizedQuery.split(/\s+/).filter(word => word.length >= 2);
+  
+  let highlighted = text;
+  
+  // تمييز الاستعلام الكامل
+  if (normalizedQuery.length >= 2) {
+    const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+    highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+  }
+  
+  // تمييز الكلمات الفردية
+  queryWords.forEach(word => {
+    const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+    highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+  });
+  
+  return highlighted;
+}
+
+// تجنب regex
+function escapeRegex(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// استخراج المقطع
+function extractSnippet(content, query, length = 200) {
+  if (!content || !query) return content ? content.substring(0, length) : '';
+  
+  const normalizedContent = normalizeText(content);
+  const normalizedQuery = normalizeText(query);
+  
+  const matchPos = normalizedContent.indexOf(normalizedQuery);
+  
+  if (matchPos !== -1) {
+    const start = Math.max(0, matchPos - length / 4);
+    let snippet = content.substring(start, start + length);
+    
+    if (start > 0) {
+      snippet = '...' + snippet.substring(snippet.indexOf(' ') + 1);
+    }
+    
+    if (start + length < content.length) {
+      const lastSpace = snippet.lastIndexOf(' ');
+      if (lastSpace > 0) {
+        snippet = snippet.substring(0, lastSpace) + '...';
+      }
+    }
+    
+    return snippet;
+  }
+  
+  return content.substring(0, length);
+}
+
+// تنفيذ البحث
+async function performSearch(query) {
+  if (isSearching) return;
+  if (!query || query.trim().length < 1) {
+    showNoResults('يرجى إدخال مصطلح البحث.');
+    return;
+  }
+  
+  isSearching = true;
+  showLoading();
+  
+  try {
+    // تحميل بيانات البحث إذا لم يتم تحميلها
+    if (searchData.length === 0) {
+      await loadSearchData();
+    }
+    
+    const results = [];
+    
+    searchData.forEach(post => {
+      const score = calculateScore(post, query);
+      if (score > 0) {
+        results.push({
+          post: post,
+          score: score,
+          titleHighlighted: highlightMatches(post.title || '', query),
+          snippet: extractSnippet(post.content || '', query),
+          snippetHighlighted: highlightMatches(extractSnippet(post.content || '', query), query)
+        });
+      }
+    });
+    
+    // ترتيب حسب النقاط
+    results.sort((a, b) => b.score - a.score);
+    
+    // عرض أفضل 20 نتيجة
+    const limitedResults = results.slice(0, 20);
+    
+    showResults(limitedResults, query);
+    
+  } catch (error) {
+    console.error('خطأ في البحث:', error);
+    showNoResults('حدث خطأ أثناء البحث.');
+  } finally {
+    isSearching = false;
+  }
+}
+
+// عرض التحميل
+function showLoading() {
+  document.getElementById('search-results').innerHTML = `
+    <div class="loading">
+      <p>🔍 جاري البحث...</p>
+    </div>
+  `;
+  document.getElementById('search-stats').style.display = 'none';
+}
+
+// عرض النتائج
+function showResults(results, query) {
+  const resultsContainer = document.getElementById('search-results');
+  const statsContainer = document.getElementById('search-stats');
+  
+  if (results.length === 0) {
+    showNoResults(`لا توجد نتائج لـ "${query}".`);
+    return;
+  }
+  
+  // عرض الإحصائيات
+  statsContainer.innerHTML = `
+    <p>نتائج البحث عن "<strong>${query}</strong>": <strong>${results.length} مقالة</strong></p>
+  `;
+  statsContainer.style.display = 'block';
+  
+  // عرض النتائج
+  const resultsHtml = results.map(result => {
+    const post = result.post;
+    const date = new Date(post.date).toLocaleDateString('ar-SA');
+    const categories = (post.categories || []).join(' > ');
+    const tags = (post.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
+    
+    return `
+      <div class="search-result-item">
+        <div class="result-title">
+          <a href="${post.url}">${result.titleHighlighted}</a>
+        </div>
+        <div class="result-meta">
+          📅 ${date} | 📁 ${categories}
+        </div>
+        <div class="result-snippet">
+          ${result.snippetHighlighted}
+        </div>
+        ${tags ? `<div class="result-tags">${tags}</div>` : ''}
+      </div>
+    `;
+  }).join('');
+  
+  resultsContainer.innerHTML = resultsHtml;
+}
+
+// عرض عدم وجود نتائج
+function showNoResults(message) {
+  document.getElementById('search-results').innerHTML = `
+    <div class="no-results">
+      <p>${message}</p>
+    </div>
+  `;
+  document.getElementById('search-stats').style.display = 'none';
+}
+
+// عرض الاقتراحات
+function showSuggestions(suggestions) {
+  const suggestionsContainer = document.getElementById('search-suggestions');
+  
+  if (suggestions.length === 0) {
+    suggestionsContainer.style.display = 'none';
+    return;
+  }
+  
+  const suggestionsHtml = suggestions.map(suggestion => 
+    `<div class="suggestion-item" onclick="selectSuggestion('${suggestion}')">${suggestion}</div>`
+  ).join('');
+  
+  suggestionsContainer.innerHTML = suggestionsHtml;
+  suggestionsContainer.style.display = 'block';
+}
+
+// اختيار الاقتراح
+function selectSuggestion(suggestion) {
+  document.getElementById('search-input').value = suggestion;
+  document.getElementById('search-suggestions').style.display = 'none';
+  performSearch(suggestion);
+}
+
+// التهيئة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+  
+  // نقر زر البحث
+  searchButton.addEventListener('click', function() {
+    const query = searchInput.value.trim();
+    if (query) {
+      performSearch(query);
+    }
+  });
+  
+  // البحث بمفتاح Enter
+  searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      const query = searchInput.value.trim();
+      if (query) {
+        performSearch(query);
+      }
+    }
+  });
+  
+  // اقتراحات البحث الفورية (debouncing)
+  let debounceTimer;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    const query = this.value.trim();
+    
+    if (query.length >= 2) {
+      debounceTimer = setTimeout(() => {
+        // منطق اقتراح البحث البسيط
+        const suggestions = [];
+        searchData.forEach(post => {
+          const title = normalizeText(post.title || '');
+          const normalizedQuery = normalizeText(query);
+          
+          if (title.includes(normalizedQuery) && !suggestions.includes(post.title)) {
+            suggestions.push(post.title);
+          }
+        });
+        
+        showSuggestions(suggestions.slice(0, 5));
+      }, 300);
+    } else {
+      document.getElementById('search-suggestions').style.display = 'none';
+    }
+  });
+  
+  // إخفاء الاقتراحات عند النقر خارجها
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.search-suggestions') && !e.target.closest('#search-input')) {
+      document.getElementById('search-suggestions').style.display = 'none';
+    }
+  });
+  
+  // استخراج مصطلح البحث من URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const queryParam = urlParams.get('q');
+  if (queryParam) {
+    searchInput.value = queryParam;
+    performSearch(queryParam);
+  }
+  
+  // تحميل بيانات البحث مسبقاً
+  loadSearchData();
+});
+</script>
+
+<div class="search-tips">
+  <h3>💡 نصائح البحث</h3>
+  <ul>
+    <li>يدعم اللغة الكورية والإنجليزية والعربية (مثل: "AI"، "인공지능"، "ذكاء اصطناعي")</li>
+    <li>البحث الجزئي متاح (مثل: "prompt" → "prompt engineering")</li>
+    <li>يبحث في العنوان والمحتوى والعلامات والفئات</li>
+    <li>استخدم كلمات متعددة للحصول على نتائج أكثر دقة</li>
+  </ul>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Thaki Cloud. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<script src="/assets/js/simple-jekyll-search.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/kimjy99/kimjy99.github.io@master/assets/js/simple-jekyll-search.min.js"></script> -->
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search'),
+    resultsContainer: document.getElementById('results'),
+    json: '/search.json',
+    searchResultTemplate: '<div class="list__item"><article class="archive__item"><h2 class="archive__item-title"><a href="{url}" rel="permalink">{title}</a></h2><p class="archive__item-excerpt">{excerpt}</p><div class="archive__item-teaser"><span class="page__meta"><i class="far fa-calendar-alt"></i> {date}</span></div></article></div>',
+    noResultsText: '검색 결과가 없습니다.',
+    limit: 20,
+    fuzzy: false,
+    exclude: ['url']
+  });
+  
+  // 검색 입력 이벤트 리스너
+  var searchInput = document.getElementById('search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      console.log('검색어: "' + e.target.value + '"');
+      setTimeout(function() {
+        var results = document.querySelectorAll('#results .list__item');
+        console.log('검색 결과 개수:', results.length);
+      }, 100);
+    });
+  }
+});
+</script><!-- Multilingual Search Enhancement -->
+<script src="/assets/js/multilingual-search.js"></script>
+
+
+
+
+
+<!-- Language dropdown functionality -->
+<script src="/assets/js/dropdown.js"></script>
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+  displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+  processEscapes: true
+  },
+  "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+<!-- Mermaid diagram initialization -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mermaid 초기화가 완료되면 다이어그램 렌더링
+    if (typeof mermaid !== 'undefined') {
+      // 모든 mermaid 코드 블록을 찾아서 다이어그램으로 변환
+      const mermaidElements = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
+      
+      mermaidElements.forEach(function(element, index) {
+        const mermaidCode = element.textContent;
+        const mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = mermaidCode;
+        mermaidDiv.id = 'mermaid-' + index;
+        
+        // 기존 코드 블록을 새로운 div로 교체
+        element.parentNode.replaceWith(mermaidDiv);
+      });
+      
+      // Mermaid 다이어그램 렌더링 실행
+      mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+    }
+  });
+</script>
+
+  </body>
+</html>
