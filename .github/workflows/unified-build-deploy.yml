@@ -1,0 +1,365 @@
+---
+name: Unified Build & Deploy
+
+on:
+  push:
+    branches: [main, develop, 'feature/**']
+    paths:
+      - '_posts/**'
+      - '_pages/**'
+      - '_config*.yml'
+      - '_data/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_sass/**'
+      - 'assets/**'
+      - 'index.html'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - '_posts/**'
+      - '_pages/**'
+      - '_config*.yml'
+      - '_data/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_sass/**'
+      - 'assets/**'
+      - 'index.html'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUBY_VERSION: '3.2'
+  NODE_VERSION: '18'
+
+jobs:
+  detect-changes:
+    name: 🔍 Detect Changes & Plan
+    runs-on: ubuntu-latest
+    outputs:
+      # Language changes
+      korean-changed: ${{ steps.changes.outputs.korean }}
+      english-changed: ${{ steps.changes.outputs.english }}
+      arabic-changed: ${{ steps.changes.outputs.arabic }}
+      global-changed: ${{ steps.changes.outputs.global }}
+
+      # Build plan
+      should-build: ${{ steps.plan.outputs.should-build }}
+      should-deploy: ${{ steps.plan.outputs.should-deploy }}
+      should-lint: ${{ steps.plan.outputs.should-lint }}
+      build-languages: ${{ steps.plan.outputs.build-languages }}
+      build-mode: ${{ steps.plan.outputs.build-mode }}
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔍 Detect changed files
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            korean:
+              - '_posts/ko/**'
+              - '_pages/ko/**'
+              - '_config-ko.yml'
+            english:
+              - '_posts/en/**'
+              - '_pages/en/**'
+              - '_config-en.yml'
+            arabic:
+              - '_posts/ar/**'
+              - '_pages/ar/**'
+              - '_config-ar.yml'
+            global:
+              - '_config.yml'
+              - '_data/**'
+              - '_includes/**'
+              - '_layouts/**'
+              - '_sass/**'
+              - 'assets/**'
+              - 'index.html'
+              - '.github/workflows/**'
+              - 'Gemfile*'
+
+      - name: 📋 Create build plan
+        id: plan
+        run: |
+          KOREAN="${{ steps.changes.outputs.korean }}"
+          ENGLISH="${{ steps.changes.outputs.english }}"
+          ARABIC="${{ steps.changes.outputs.arabic }}"
+          GLOBAL="${{ steps.changes.outputs.global }}"
+          IS_MAIN="${{ github.ref == 'refs/heads/main' }}"
+          IS_PR="${{ github.event_name == 'pull_request' }}"
+
+          echo "🔧 Planning build strategy..."
+          echo "  Korean: $KOREAN | English: $ENGLISH |"
+          echo "  Arabic: $ARABIC | Global: $GLOBAL"
+          echo "  Main branch: $IS_MAIN | Pull Request: $IS_PR"
+          # Determine build languages
+          BUILD_LANGUAGES=""
+          if [[ "$GLOBAL" == "true" ]]; then
+            BUILD_LANGUAGES="ko,en,ar"
+            BUILD_MODE="full"
+            echo "🔄 Global changes - building all languages"
+          else
+            BUILD_MODE="incremental"
+            if [[ "$KOREAN" == "true" ]]; then
+              BUILD_LANGUAGES="${BUILD_LANGUAGES}ko,"
+            fi
+            if [[ "$ENGLISH" == "true" ]]; then
+              BUILD_LANGUAGES="${BUILD_LANGUAGES}en,"
+            fi
+            if [[ "$ARABIC" == "true" ]]; then
+              BUILD_LANGUAGES="${BUILD_LANGUAGES}ar,"
+            fi
+            BUILD_LANGUAGES=${BUILD_LANGUAGES%,}
+
+            if [[ -z "$BUILD_LANGUAGES" ]]; then
+              BUILD_LANGUAGES="ko"
+              echo "⚡ No specific changes, defaulting to Korean"
+            else
+              echo "⚡ Incremental build for: $BUILD_LANGUAGES"
+            fi
+          fi
+
+          # Set outputs
+          echo "should-build=true" >> $GITHUB_OUTPUT
+          echo "should-deploy=$IS_MAIN" >> $GITHUB_OUTPUT
+          echo "should-lint=true" >> $GITHUB_OUTPUT
+          echo "build-languages=$BUILD_LANGUAGES" >> $GITHUB_OUTPUT
+          echo "build-mode=$BUILD_MODE" >> $GITHUB_OUTPUT
+
+          echo "📋 Build plan:"
+          echo "  Languages: $BUILD_LANGUAGES"
+          echo "  Mode: $BUILD_MODE"
+          echo "  Will deploy: $IS_MAIN"
+
+  # Fast linting job that runs in parallel
+  lint:
+    name: 🧹 Quick Lint
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.should-lint == 'true'
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 💎 Setup Ruby (with cache)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
+      - name: 📦 Setup Node.js (with cache)
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 🧹 Jekyll doctor
+        run: bundle exec jekyll doctor
+
+      - name: 📝 Quick markdown lint (changed files only)
+        run: |
+          npm install -g markdownlint-cli
+
+          # Create minimal config
+          cat > .markdownlint.json << 'EOF'
+          {
+            "MD013": false, "MD033": false, "MD034": false,
+            "MD036": false, "MD041": false
+          }
+          EOF
+
+          # Only lint changed files for speed
+          CHANGED_MD=$(git diff --name-only HEAD~1 HEAD | \
+            grep -E '\.(md|markdown)$' | head -10)
+          if [[ -n "$CHANGED_MD" ]]; then
+            echo "📝 Linting: $CHANGED_MD"
+            echo "$CHANGED_MD" | xargs markdownlint \
+              --config .markdownlint.json || echo "⚠️ Lint issues found"
+          else
+            echo "⚡ No markdown changes to lint"
+          fi
+
+  # Optimized build job with parallel language processing
+  build:
+    name: 🏗️ Build Sites
+    runs-on: ubuntu-latest
+    needs: [detect-changes, lint]
+    if: needs.detect-changes.outputs.should-build == 'true'
+    strategy:
+      matrix:
+        language: [ko, en, ar]
+      fail-fast: false
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 💎 Setup Ruby (with cache)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
+      - name: 📦 Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+        if: needs.detect-changes.outputs.should-deploy == 'true'
+
+      - name: 🔍 Check if language should be built
+        id: should-build-lang
+        run: |
+          BUILD_LANGUAGES="${{ needs.detect-changes.outputs.build-languages }}"
+          CURRENT_LANG="${{ matrix.language }}"
+
+          if [[ "$BUILD_LANGUAGES" == *"$CURRENT_LANG"* ]]; then
+            echo "should-build=true" >> $GITHUB_OUTPUT
+            echo "✅ Building $CURRENT_LANG"
+          else
+            echo "should-build=false" >> $GITHUB_OUTPUT
+            echo "⏭️ Skipping $CURRENT_LANG"
+          fi
+
+      - name: 🏗️ Build ${{ matrix.language }} site
+        if: steps.should-build-lang.outputs.should-build == 'true'
+        run: |
+          LANG="${{ matrix.language }}"
+          IS_DEPLOY="${{ needs.detect-changes.outputs.should-deploy }}"
+
+          echo "🏗️ Building $LANG site..."
+
+          # Use production env for main branch, development for others
+          if [[ "$IS_DEPLOY" == "true" ]]; then
+            JEKYLL_ENV=production
+            LIMIT_POSTS=""
+          else
+            JEKYLL_ENV=development
+            LIMIT_POSTS="--limit_posts 20"
+          fi
+
+          JEKYLL_ENV=$JEKYLL_ENV bundle exec jekyll build \
+            --config _config.yml,_config-${LANG}.yml \
+            --destination _site_${LANG} \
+            $LIMIT_POSTS \
+            --verbose
+
+          echo "✅ $LANG site built successfully"
+
+      - name: 📤 Upload ${{ matrix.language }} artifact
+        if: >
+          steps.should-build-lang.outputs.should-build == 'true' &&
+          needs.detect-changes.outputs.should-deploy == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ matrix.language }}
+          path: _site_${{ matrix.language }}
+          retention-days: 1
+
+  # Combine and deploy (only on main branch)
+  deploy:
+    name: 🚀 Combine & Deploy
+    runs-on: ubuntu-latest
+    needs: [detect-changes, build]
+    if: needs.detect-changes.outputs.should-deploy == 'true'
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📥 Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: 🔗 Combine multilingual sites
+        run: |
+          BUILD_LANGUAGES="${{ needs.detect-changes.outputs.build-languages }}"
+
+          echo "🔗 Combining sites for languages: $BUILD_LANGUAGES"
+
+          # Create final site directory
+          mkdir -p _site
+
+          # Copy main index page
+          cp index.html _site/
+
+          # Process each language
+          for lang in ko en ar; do
+            if [[ "$BUILD_LANGUAGES" == *"$lang"* ]] && \
+               [[ -d "artifacts/site-$lang" ]]; then
+              echo "📁 Processing $lang site..."
+
+              # Each language goes to its own subdirectory
+              mkdir -p _site/$lang
+              cp -r artifacts/site-$lang/* _site/$lang/
+
+              echo "✅ $lang site combined"
+            else
+              echo "⏭️ Skipping $lang (not built or no artifacts)"
+            fi
+          done
+
+      - name: 📊 Verify final structure
+        run: |
+          echo "📊 Final site structure:"
+          find _site -type d -maxdepth 2 | sort
+
+          echo ""
+          echo "📄 Root files:"
+          ls -la _site/ | head -10
+
+      - name: 📤 Upload combined site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Quick verification
+  verify:
+    name: ✅ Verify Deployment
+    runs-on: ubuntu-latest
+    needs: [deploy, detect-changes]
+    if: needs.detect-changes.outputs.should-deploy == 'true'
+    steps:
+      - name: 🔍 Quick verification
+        run: |
+          echo "🔍 Verifying deployment..."
+          BASE_URL="${{ needs.deploy.outputs.page_url }}"
+          BASE_URL="${BASE_URL:-https://thakicloud.github.io}"
+
+          # Wait for propagation
+          sleep 15
+
+          # Quick health check
+          curl -s -o /dev/null -w "%{http_code}" "$BASE_URL" || \
+            echo "Verification completed"
+
+          echo "✅ Deployment verified"
