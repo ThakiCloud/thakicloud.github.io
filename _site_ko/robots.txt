@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Disallow certain paths to improve crawl efficiency
+Disallow: /_site/
+Disallow: /assets/js/
+Disallow: /.git/
+Disallow: /.jekyll-cache/
+
+# Priority sitemaps
+Sitemap: https://thakicloud.github.io/sitemap.xml
+Sitemap: https://thakicloud.github.io/feed.xml
+
+# Language-specific sitemaps
+Sitemap: https://thakicloud.github.io/sitemap-ko.xml
+Sitemap: https://thakicloud.github.io/sitemap-en.xml
+Sitemap: https://thakicloud.github.io/sitemap-ar.xml
+
+# Language-specific search indexes
+Allow: /search-ko.json
+Allow: /search-en.json
+Allow: /search-ar.json
+
+# Language directories
+Allow: /ko/
+Allow: /en/
+Allow: /ar/

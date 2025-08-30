@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Korean Homepage -->
+  <url>
+    <loc>https://thakicloud.github.io/ko/</loc>
+    <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thakicloud.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thakicloud.github.io/ar/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://thakicloud.github.io/ko/" />
+  </url>
+
+  <!-- Korean Posts -->
+  
+    
+    <url>
+      <loc>https://thakicloud.github.io/ko/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/</loc>
+      <lastmod>2025-08-26T00:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://thakicloud.github.io/ko/tutorials/maestro-ai-research-platform-complete-setup-guide/</loc>
+      <lastmod>2025-08-26T00:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://thakicloud.github.io/ko/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/</loc>
+      <lastmod>2025-08-26T00:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://thakicloud.github.io/ko/tutorials/hands-on-large-language-models-complete-tutorial-guide/</loc>
+      <lastmod>2025-08-26T00:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://thakicloud.github.io/ko/research/advertisement-embedding-attacks-llm-security-threat/</loc>
+      <lastmod>2025-08-26T00:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+
+  <!-- Korean Pages -->
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/agentops/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/careers/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/culture/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/datasets/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/dev/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/feed-ko.xml</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/llmops/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/news/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/owm/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/posts/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/research/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/search/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/search.json</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/tags/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/ko/categories/tutorials/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  <!-- Korean Categories -->
+  
+  <url>
+    <loc>https://thakicloud.github.io/ko/categories/#research</loc>
+    <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://thakicloud.github.io/ko/categories/#tutorials</loc>
+    <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

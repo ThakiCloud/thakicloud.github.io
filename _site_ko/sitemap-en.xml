@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English Homepage -->
+  <url>
+    <loc>https://thakicloud.github.io/en/</loc>
+    <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://thakicloud.github.io/ko/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thakicloud.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thakicloud.github.io/ar/" />
+  </url>
+
+  <!-- English Posts -->
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  <!-- English Pages -->
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/agentops/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/careers/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/culture/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/datasets/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/dev/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/feed-en.xml</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/llmops/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/news/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/owm/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/posts/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/research/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/search/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/tags/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <url>
+        <loc>https://thakicloud.github.io/en/categories/tutorials/</loc>
+        <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  <!-- English Categories -->
+  
+  <url>
+    <loc>https://thakicloud.github.io/en/categories/#research</loc>
+    <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://thakicloud.github.io/en/categories/#tutorials</loc>
+    <lastmod>2025-08-27T15:02:50+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
