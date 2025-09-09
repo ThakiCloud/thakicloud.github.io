@@ -3,7 +3,7 @@ title: "KAG: 지식 증강 생성 프레임워크 완전 가이드"
 excerpt: "전문 도메인 지식 베이스에서 논리적 추론과 검색을 위해 OpenSPG 엔진과 LLM을 결합한 혁신적인 KAG 프레임워크를 깊이 있게 탐구합니다."
 seo_title: "KAG 튜토리얼: 지식 증강 생성 프레임워크 가이드 - Thaki Cloud"
 seo_description: "KAG 프레임워크의 특징, 아키텍처, 설치 및 구현 방법을 학습하세요. 지식 그래프 추론과 Q&A 솔루션을 위한 완전한 튜토리얼입니다."
-date: 2025-01-28
+date: 2025-09-09
 categories:
   - tutorials
 tags:
