@@ -3,10 +3,18 @@
 
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
+  var searchInputEl = document.getElementById('search');
+  var resultsEl = document.getElementById('results');
+  
+  // 검색 UI가 없는 페이지(예: 루트 index.html)에서는 초기화를 건너뜀
+  if (!searchInputEl || !resultsEl) {
+    return;
+  }
+
   var sjs = SimpleJekyllSearch({
-    searchInput: document.getElementById('search'),
-    resultsContainer: document.getElementById('results'),
-    json: '/search.json',
+    searchInput: searchInputEl,
+    resultsContainer: resultsEl,
+    json: '{% if page.lang %}/{{ page.lang }}{% else %}/ko{% endif %}/search.json',
     searchResultTemplate: '<div class="list__item"><article class="archive__item"><h2 class="archive__item-title"><a href="{url}" rel="permalink">{title}</a></h2><p class="archive__item-excerpt">{excerpt}</p><div class="archive__item-teaser"><span class="page__meta"><i class="far fa-calendar-alt"></i> {date}</span></div></article></div>',
     noResultsText: '검색 결과가 없습니다.',
     limit: 20,
@@ -15,15 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // 검색 입력 이벤트 리스너
-  var searchInput = document.getElementById('search');
-  if (searchInput) {
-    searchInput.addEventListener('input', function(e) {
-      console.log('검색어: "' + e.target.value + '"');
-      setTimeout(function() {
-        var results = document.querySelectorAll('#results .list__item');
-        console.log('검색 결과 개수:', results.length);
-      }, 100);
-    });
-  }
+  searchInputEl.addEventListener('input', function(e) {
+    console.log('검색어: "' + e.target.value + '"');
+    setTimeout(function() {
+      var results = document.querySelectorAll('#results .list__item');
+      console.log('검색 결과 개수:', results.length);
+    }, 100);
+  });
 });
 </script>

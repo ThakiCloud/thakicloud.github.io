@@ -102,9 +102,15 @@ keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/
     // 3초 후 자동 리디렉션 (사용자가 수동 선택할 시간 제공)
     setTimeout(function() {
         const currentPath = window.location.pathname;
-        if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
-            console.log('🚀 Redirecting to:', supportedLangs[targetLang]);
-            window.location.href = supportedLangs[targetLang];
+        // 검색 스크립트 로딩 실패 등으로 인한 오류를 방지하기 위해 try/catch 추가
+        try {
+            if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
+                console.log('🚀 Redirecting to:', supportedLangs[targetLang]);
+                window.location.href = supportedLangs[targetLang];
+            }
+        } catch (e) {
+            console.warn('Redirection failed, fallback to Korean. Error:', e);
+            window.location.href = supportedLangs['ko'];
         }
     }, 3000);
     
