@@ -291,6 +291,12 @@ jobs:
       - name: 📦 Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: 💎 Setup Ruby (for main page processing)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
       - name: 📥 Download build artifacts
         uses: actions/download-artifact@v4
         with:
@@ -305,8 +311,29 @@ jobs:
           # Create final site directory
           mkdir -p _site
 
-          # Copy main index page
-          cp index.html _site/
+          # Build and copy main index page with Jekyll processing
+          echo "🏗️ Building main index page with Jekyll..."
+          
+          # Build main page with Jekyll to process Liquid templates
+          JEKYLL_ENV=production bundle exec jekyll build \
+            --config _config.yml \
+            --destination _site_main \
+            --verbose \
+            --trace
+          
+          # Copy processed index.html
+          cp _site_main/index.html _site/
+          
+          # Copy essential assets for main page
+          if [[ -d "_site_main/assets" ]]; then
+            cp -r _site_main/assets _site/ 2>/dev/null || true
+            echo "✅ Main page assets copied"
+          fi
+          
+          echo "✅ Main index page processed and copied"
+          
+          # Clean up temporary build directory
+          rm -rf _site_main
 
           # Process each language
           for lang in ko en ar; do
