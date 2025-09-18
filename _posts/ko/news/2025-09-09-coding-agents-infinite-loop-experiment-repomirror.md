@@ -16,7 +16,9 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/news/coding-agents-infinite-loop-experiment-repomirror/"
+lang: ko
+permalink: /ko/news/coding-agents-infinite-loop-experiment-repomirror/
+canonical_url: "https://thakicloud.github.io/ko/news/coding-agents-infinite-loop-experiment-repomirror/"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
