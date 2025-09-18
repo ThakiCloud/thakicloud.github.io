@@ -367,6 +367,10 @@ jobs:
             exit 1
           fi
           
+          # Ensure GitHub Pages doesn't reprocess with Jekyll
+          echo "Creating .nojekyll to prevent reprocessing"
+          touch _site/.nojekyll
+          
           echo "✅ Site prepared for deployment"
 
       - name: 📊 Verify site structure
