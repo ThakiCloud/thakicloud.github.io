@@ -1,5 +1,7 @@
 # English site configuration
 # Theme Settings
+#theme: "minimal-mistakes-jekyll"
+# remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default"
 
 # Site Settings
@@ -44,11 +46,13 @@ og_image: "/assets/images/thakicloud-og-image.jpg"
 
 # Site Author
 author:
-  name: 
-  avatar: 
-  bio: 
+  name: "Thaki Cloud"
+  avatar: # path of avatar image
+  bio: "AI/ML Engineering & DevOps Expert"
   location: "Seoul, Korea"
   email: "info@thakicloud.co.kr"
+  uri:
+  home:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -56,6 +60,16 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/thakicloud"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thakicloud"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://thakicloud.co.kr"
 
 # Search Settings
 search: true
@@ -162,6 +176,10 @@ compress_html:
   ignore:
     envs: development
 
+# Reading Files
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
 # File Processing
 include:
   - .htaccess
@@ -198,6 +216,8 @@ exclude:
   - tmp
   - /docs
   - /test
+  - "_posts/ko/**"
+  - "_posts/ar/**"
 keep_files:
   - .git
   - .svn

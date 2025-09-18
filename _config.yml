@@ -80,9 +80,12 @@ naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
-# Analytics
+# Analytics (Primary configuration)
 analytics:
-  provider: "umami" # false (default), "google", "google-universal", "google-gtag", "custom", "umami"
+  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom", "umami"
+  google:
+    tracking_id: "G-H3R0WGN0LF"
+    anonymize_ip: false
   umami:
     script_url: "" # Your Umami tracking script URL (will be added after setup)
     website_id: "" # Your Umami website ID (will be added after setup)
@@ -109,12 +112,12 @@ social:
     - "https://thakicloud.co.kr"
     - "https://thakicloud.github.io"
 
-# Analytics
-analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : "G-H3R0WGN0LF"
-    anonymize_ip         : # true, false (default)
+# Analytics (Duplicate - will be removed)
+# analytics:
+#   provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+#   google:
+#     tracking_id          : "G-H3R0WGN0LF"
+#     anonymize_ip         : # true, false (default)
 
 
 # Site Author

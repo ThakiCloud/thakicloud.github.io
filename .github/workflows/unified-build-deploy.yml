@@ -254,7 +254,11 @@ jobs:
           IS_DEPLOY="${{ needs.detect-changes.outputs.should-deploy }}"
 
           echo "🏗️ Building $LANG site..."
-
+          echo "🔧 Checking configuration files..."
+          
+          # Verify config files exist
+          ls -la _config*.yml
+          
           # Use production env for main branch, development for others
           if [[ "$IS_DEPLOY" == "true" ]]; then
             JEKYLL_ENV=production
@@ -264,12 +268,24 @@ jobs:
             LIMIT_POSTS="--limit_posts 20"
           fi
 
+          echo "🔍 Building with JEKYLL_ENV=$JEKYLL_ENV"
+          echo "📋 Config files: _config.yml,_config-${LANG}.yml"
+          
+          # First run Jekyll doctor to check configuration
+          echo "🩺 Running Jekyll doctor..."
+          bundle exec jekyll doctor --config _config.yml,_config-${LANG}.yml || echo "⚠️ Doctor found issues"
+
+          # Build with verbose output for debugging
           JEKYLL_ENV=$JEKYLL_ENV bundle exec jekyll build \
             --config _config.yml,_config-${LANG}.yml \
             --destination _site_${LANG} \
             $LIMIT_POSTS \
-            --verbose
+            --verbose \
+            --trace
 
+          echo "📁 Checking build output..."
+          ls -la _site_${LANG}/ | head -10
+          
           echo "✅ $LANG site built successfully"
 
       - name: 📤 Upload ${{ matrix.language }} artifact
