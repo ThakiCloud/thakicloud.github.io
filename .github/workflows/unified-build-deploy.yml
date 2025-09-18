@@ -42,6 +42,7 @@ concurrency:
 env:
   RUBY_VERSION: '3.2'
   NODE_VERSION: '18'
+  DEFAULT_LANGUAGE: 'ko' # 기본 언어 설정
 
 jobs:
   detect-changes:
@@ -60,6 +61,7 @@ jobs:
       should-lint: ${{ steps.plan.outputs.should-lint }}
       build-languages: ${{ steps.plan.outputs.build-languages }}
       build-mode: ${{ steps.plan.outputs.build-mode }}
+      deploy-language: ${{ steps.plan.outputs.deploy-language }}
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v4
@@ -103,12 +105,14 @@ jobs:
           GLOBAL="${{ steps.changes.outputs.global }}"
           IS_MAIN="${{ github.ref == 'refs/heads/main' }}"
           IS_PR="${{ github.event_name == 'pull_request' }}"
+          DEFAULT_LANG="${{ env.DEFAULT_LANGUAGE }}"
 
           echo "🔧 Planning build strategy..."
-          echo "  Korean: $KOREAN | English: $ENGLISH |"
-          echo "  Arabic: $ARABIC | Global: $GLOBAL"
-          echo "  Main branch: $IS_MAIN | Pull Request: $IS_PR"
-          # Determine build languages
+          echo "  Korean: $KOREAN | English: $ENGLISH | Arabic: $ARABIC"
+          echo "  Global: $GLOBAL | Main branch: $IS_MAIN | PR: $IS_PR"
+          echo "  Default language: $DEFAULT_LANG"
+          
+          # 빌드 언어 결정 로직 개선
           BUILD_LANGUAGES=""
           if [[ "$GLOBAL" == "true" ]]; then
             BUILD_LANGUAGES="ko,en,ar"
@@ -116,23 +120,26 @@ jobs:
             echo "🔄 Global changes - building all languages"
           else
             BUILD_MODE="incremental"
-            if [[ "$KOREAN" == "true" ]]; then
-              BUILD_LANGUAGES="${BUILD_LANGUAGES}ko,"
-            fi
-            if [[ "$ENGLISH" == "true" ]]; then
-              BUILD_LANGUAGES="${BUILD_LANGUAGES}en,"
-            fi
-            if [[ "$ARABIC" == "true" ]]; then
-              BUILD_LANGUAGES="${BUILD_LANGUAGES}ar,"
-            fi
+            # 변경된 언어만 빌드 목록에 추가
+            [[ "$KOREAN" == "true" ]] && BUILD_LANGUAGES="${BUILD_LANGUAGES}ko,"
+            [[ "$ENGLISH" == "true" ]] && BUILD_LANGUAGES="${BUILD_LANGUAGES}en,"
+            [[ "$ARABIC" == "true" ]] && BUILD_LANGUAGES="${BUILD_LANGUAGES}ar,"
             BUILD_LANGUAGES=${BUILD_LANGUAGES%,}
 
+            # 빌드할 언어가 없으면 기본 언어 사용
             if [[ -z "$BUILD_LANGUAGES" ]]; then
-              BUILD_LANGUAGES="ko"
-              echo "⚡ No specific changes, defaulting to Korean"
+              BUILD_LANGUAGES="$DEFAULT_LANG"
+              echo "⚡ No specific changes, defaulting to $DEFAULT_LANG"
             else
               echo "⚡ Incremental build for: $BUILD_LANGUAGES"
             fi
+          fi
+
+          # 배포 언어 결정 (기본 언어 우선, 없으면 첫 번째)
+          DEPLOY_LANGUAGE="$DEFAULT_LANG"
+          if [[ "$BUILD_LANGUAGES" != *"$DEFAULT_LANG"* ]]; then
+            DEPLOY_LANGUAGE=$(echo "$BUILD_LANGUAGES" | cut -d',' -f1)
+            echo "⚠️ Default language not in build list, using $DEPLOY_LANGUAGE for deployment"
           fi
 
           # Set outputs
@@ -141,10 +148,12 @@ jobs:
           echo "should-lint=true" >> $GITHUB_OUTPUT
           echo "build-languages=$BUILD_LANGUAGES" >> $GITHUB_OUTPUT
           echo "build-mode=$BUILD_MODE" >> $GITHUB_OUTPUT
+          echo "deploy-language=$DEPLOY_LANGUAGE" >> $GITHUB_OUTPUT
 
           echo "📋 Build plan:"
           echo "  Languages: $BUILD_LANGUAGES"
           echo "  Mode: $BUILD_MODE"
+          echo "  Deploy language: $DEPLOY_LANGUAGE"
           echo "  Will deploy: $IS_MAIN"
 
   # Fast linting job that runs in parallel
@@ -273,9 +282,9 @@ jobs:
           path: _site_${{ matrix.language }}
           retention-days: 1
 
-  # Combine and deploy (only on main branch)
+  # Single unified site deploy (only on main branch)
   deploy:
-    name: 🚀 Combine & Deploy
+    name: 🚀 Deploy Single Site
     runs-on: ubuntu-latest
     needs: [detect-changes, build]
     if: needs.detect-changes.outputs.should-deploy == 'true'
@@ -296,44 +305,72 @@ jobs:
         with:
           path: artifacts
 
-      - name: 🔗 Combine multilingual sites
+      - name: 🔗 Deploy main site (single language approach)
         run: |
           BUILD_LANGUAGES="${{ needs.detect-changes.outputs.build-languages }}"
-
-          echo "🔗 Combining sites for languages: $BUILD_LANGUAGES"
-
-          # Create final site directory
+          DEPLOY_LANGUAGE="${{ needs.detect-changes.outputs.deploy-language }}"
+          
+          echo "🔗 Preparing single site for deployment..."
+          echo "Build languages: $BUILD_LANGUAGES"
+          echo "Deploy language: $DEPLOY_LANGUAGE"
+          
+          # Create site directory
           mkdir -p _site
-
-          # Copy main index page
-          cp index.html _site/
-
-          # Process each language
-          for lang in ko en ar; do
-            if [[ "$BUILD_LANGUAGES" == *"$lang"* ]] && \
-               [[ -d "artifacts/site-$lang" ]]; then
-              echo "📁 Processing $lang site..."
-
-              # Each language goes to its own subdirectory
-              mkdir -p _site/$lang
-              cp -r artifacts/site-$lang/* _site/$lang/
-
-              echo "✅ $lang site combined"
-            else
-              echo "⏭️ Skipping $lang (not built or no artifacts)"
+          
+          # 배포할 언어의 사이트를 루트에 복사
+          if [[ -d "artifacts/site-$DEPLOY_LANGUAGE" ]]; then
+            echo "📁 Deploying $DEPLOY_LANGUAGE site to root"
+            cp -r artifacts/site-$DEPLOY_LANGUAGE/* _site/
+            echo "✅ $DEPLOY_LANGUAGE site deployed successfully"
+          else
+            echo "❌ No site artifacts found for $DEPLOY_LANGUAGE!"
+            echo "Available artifacts:"
+            ls -la artifacts/ || echo "No artifacts directory"
+            
+            # 폴백: 사용 가능한 첫 번째 언어 사용
+            for lang in ko en ar; do
+              if [[ -d "artifacts/site-$lang" ]]; then
+                echo "🔄 Fallback: Using $lang site"
+                cp -r artifacts/site-$lang/* _site/
+                echo "✅ $lang site deployed as fallback"
+                break
+              fi
+            done
+            
+            # 여전히 없으면 에러
+            if [[ ! -f "_site/index.html" ]]; then
+              echo "❌ No valid site found for deployment!"
+              exit 1
             fi
-          done
+          fi
+          
+          # 필수 파일 검증
+          if [[ ! -f "_site/index.html" ]]; then
+            echo "❌ index.html not found!"
+            ls -la _site/ || echo "No _site directory"
+            exit 1
+          fi
+          
+          echo "✅ Site prepared for deployment"
 
-      - name: 📊 Verify final structure
+      - name: 📊 Verify site structure
         run: |
           echo "📊 Final site structure:"
-          find _site -type d -maxdepth 2 | sort
-
+          find _site -type f -name "*.html" | head -10
           echo ""
           echo "📄 Root files:"
           ls -la _site/ | head -10
+          echo ""
+          echo "📈 Site statistics:"
+          echo "  HTML files: $(find _site -name "*.html" | wc -l)"
+          echo "  CSS files: $(find _site -name "*.css" | wc -l)"
+          echo "  JS files: $(find _site -name "*.js" | wc -l)"
+          echo "  Total files: $(find _site -type f | wc -l)"
+          echo ""
+          echo "🌐 URL structure verification:"
+          find _site -name "*.html" | grep -E "(ko|en|ar)" | head -5
 
-      - name: 📤 Upload combined site
+      - name: 📤 Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
@@ -342,24 +379,50 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # Quick verification
+  # Enhanced verification
   verify:
     name: ✅ Verify Deployment
     runs-on: ubuntu-latest
     needs: [deploy, detect-changes]
     if: needs.detect-changes.outputs.should-deploy == 'true'
     steps:
-      - name: 🔍 Quick verification
+      - name: 🔍 Enhanced verification
         run: |
           echo "🔍 Verifying deployment..."
           BASE_URL="${{ needs.deploy.outputs.page_url }}"
           BASE_URL="${BASE_URL:-https://thakicloud.github.io}"
+          DEPLOY_LANGUAGE="${{ needs.detect-changes.outputs.deploy-language }}"
+
+          echo "🌐 Deployed language: $DEPLOY_LANGUAGE"
+          echo "🔗 Base URL: $BASE_URL"
 
           # Wait for propagation
-          sleep 15
+          echo "⏳ Waiting for DNS propagation..."
+          sleep 30
 
-          # Quick health check
-          curl -s -o /dev/null -w "%{http_code}" "$BASE_URL" || \
-            echo "Verification completed"
+          # Main site health check
+          echo "🏠 Testing main site..."
+          MAIN_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL" || echo "000")
+          echo "Main site status: $MAIN_STATUS"
 
-          echo "✅ Deployment verified"
+          # Test language-specific URLs
+          echo "🌍 Testing language URLs..."
+          for lang in ko en ar; do
+            lang_url="${BASE_URL}/${lang}/"
+            lang_status=$(curl -s -o /dev/null -w "%{http_code}" "$lang_url" || echo "000")
+            echo "$lang URL ($lang_url): $lang_status"
+          done
+
+          # Basic content verification
+          if [[ "$MAIN_STATUS" == "200" ]]; then
+            echo "📝 Testing main content..."
+            content_check=$(curl -s "$BASE_URL" | grep -i "thaki" || echo "")
+            if [[ -n "$content_check" ]]; then
+              echo "✅ Content verification passed"
+            else
+              echo "⚠️ Content verification failed"
+            fi
+          fi
+
+          echo "✅ Deployment verification completed"
+          echo "🎯 Main site ($DEPLOY_LANGUAGE): $MAIN_STATUS"

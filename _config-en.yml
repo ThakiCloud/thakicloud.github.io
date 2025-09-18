@@ -1,19 +1,106 @@
 # English site configuration
+# Theme Settings
+minimal_mistakes_skin: "default"
+
+# Site Settings
 locale: "en-US"
 title: "Thaki Cloud Tech Blog | AI/ML Engineering & DevOps"
+title_separator: "-"
+subtitle: "Professional AI/ML Engineering & DevOps Tech Blog"
+name: "Thaki Cloud"
 description: "Professional tech blog sharing latest AI/ML Engineering, LLMOps, and DevOps technologies and practical experiences."
 lang: "en"
+repository: "ThakiCloud/thakicloud.github.io"
+teaser: # path of fallback teaser image
+logo: # path of logo image to display in the masthead
+masthead_title: # overrides the website title displayed in the masthead
+breadcrumbs: true
+words_per_minute: 200
 
-# 언어별 URL 설정
+# URL Settings
 url: "https://thakicloud.github.io"
 baseurl: ""
 
-# 검색 설정
+# Comments
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: #
+
+# SEO Related
+google_site_verification: vTtIRRz5XMsZ10-HAT-4-xuTZEmXG-zUCArAl3ANtAI
+
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-H3R0WGN0LF"
+    anonymize_ip: false
+
+# Social Sharing
+twitter:
+  username: "thakicloud"
+og_image: "/assets/images/thakicloud-og-image.jpg"
+
+# Site Author
+author:
+  name: 
+  avatar: 
+  bio: 
+  location: "Seoul, Korea"
+  email: "info@thakicloud.co.kr"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://thakicloud.co.kr"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thakicloud"
+
+# Search Settings
 search: true
 search_full_content: true
 search_provider: lunr
 lunr:
   search_within_pages: true
+
+# Reading Files
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: true
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  syntax_highlighter: rouge
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+paginate: 5
+timezone: Asia/Seoul
+
+# Build Performance
+future: false
+unpublished: false
+limit_posts: 0
+profile: false
 
 # Language-specific defaults
 defaults:
@@ -69,7 +156,13 @@ whitelist:
   - jekyll-include-cache
   - jekyll-seo-tag
 
-# Reading Files
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# File Processing
 include:
   - .htaccess
   - _pages
@@ -103,5 +196,13 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - /docs
+  - /test
+keep_files:
+  - .git
+  - .svn
+  - .svg
+  - .webp
+  - .ico
+  - .png
+  - .jpg
