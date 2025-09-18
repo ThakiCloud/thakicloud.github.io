@@ -360,6 +360,18 @@ jobs:
             fi
           fi
           
+          # Overlay language-specific subtrees so each uses its own build
+          echo "🔁 Overlaying language-specific subtrees from their own artifacts"
+          for lang in en ar; do
+            if [[ -d "artifacts/site-$lang/$lang" ]]; then
+              echo "📁 Overlaying $lang subtree from its own artifact"
+              mkdir -p "_site/$lang"
+              cp -r "artifacts/site-$lang/$lang/"* "_site/$lang/" 2>/dev/null || echo "⚠️  No content in $lang subtree"
+            else
+              echo "⚠️  No subtree artifacts for $lang; keeping existing content if any"
+            fi
+          done
+          
           # 필수 파일 검증
           if [[ ! -f "_site/index.html" ]]; then
             echo "❌ index.html not found!"
