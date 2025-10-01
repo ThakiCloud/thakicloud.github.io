@@ -460,3 +460,4 @@ Experience the new world of financial data analysis with OpenBB!
 - [OpenBB Official Documentation](https://docs.openbb.co)
 - [OpenBB GitHub Repository](https://github.com/OpenBB-finance/OpenBB)
 - [OpenBB Discord Community](https://discord.gg/openbb)
+

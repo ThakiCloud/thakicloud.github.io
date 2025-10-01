@@ -460,3 +460,4 @@ def safe_data_fetch(symbol, data_type="price"):
 - [الوثائق الرسمية لـ OpenBB](https://docs.openbb.co)
 - [مستودع OpenBB على GitHub](https://github.com/OpenBB-finance/OpenBB)
 - [مجتمع OpenBB على Discord](https://discord.gg/openbb)
+

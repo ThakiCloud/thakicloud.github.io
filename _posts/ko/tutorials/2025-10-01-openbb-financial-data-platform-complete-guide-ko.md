@@ -460,3 +460,4 @@ OpenBB와 함께 금융 데이터 분석의 새로운 세계를 경험해보세�
 - [OpenBB 공식 문서](https://docs.openbb.co)
 - [OpenBB GitHub 저장소](https://github.com/OpenBB-finance/OpenBB)
 - [OpenBB Discord 커뮤니티](https://discord.gg/openbb)
+
