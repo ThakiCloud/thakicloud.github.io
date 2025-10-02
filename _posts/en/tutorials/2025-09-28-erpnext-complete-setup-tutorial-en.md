@@ -640,3 +640,5 @@ After completing this tutorial, consider:
 ERPNext's journey from a simple accounting tool to a comprehensive ERP system demonstrates the power of open-source development. With its continuous evolution and growing community, ERPNext is well-positioned to meet the changing needs of modern businesses.
 
 Start your ERPNext journey today and experience the benefits of a truly integrated business management system!
+
+
