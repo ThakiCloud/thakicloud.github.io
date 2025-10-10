@@ -1,11 +1,23 @@
 # Self-Hosted Runner 설정 및 문제 해결 가이드
 
-## 📋 현재 문제 상황
+## 📋 발생 가능한 문제들
+
+### 문제 1: Artifact 배포 실패 (Symlink 문제)
 ```
 Error: Artifact could not be deployed. 
 Please ensure the content does not contain any hard links, symlinks 
 and total size is less than 10GB.
 ```
+
+### 문제 2: Native Extension 컴파일 실패 (빌드 도구 미설치) ⚠️
+```
+You have to install development tools first.
+No such file or directory - make
+ERROR: Failed to build gem native extension.
+```
+
+**원인**: 호스트러너에 C 컴파일러, make 등 빌드 도구가 설치되지 않음
+**영향받는 gem**: bigdecimal, eventmachine, http_parser.rb, json, ffi 등
 
 ## 🎯 문제 원인 및 해결 방법
 
@@ -26,7 +38,42 @@ and total size is less than 10GB.
     rm -rf ./_site/.jekyll-cache || true
 ```
 
-### 2️⃣ **호스트러너 환경 체크리스트**
+### 2️⃣ **빌드 도구 설치 문제** ⚠️ 가장 흔한 문제!
+
+#### 원인
+- Native extension gem (C 코드로 작성된 gem)을 컴파일하려면 빌드 도구 필요
+- 호스트러너에 gcc, make, 헤더 파일이 없으면 설치 실패
+
+#### 해결 방법 A: 워크플로우에서 자동 설치 (✅ 이미 적용됨)
+```yaml
+- name: Install build dependencies
+  run: |
+    # Ubuntu/Debian
+    if command -v apt-get &> /dev/null; then
+      sudo apt-get update -qq
+      sudo apt-get install -y -qq build-essential libssl-dev libreadline-dev zlib1g-dev
+    # macOS
+    elif command -v brew &> /dev/null; then
+      brew install openssl readline
+    fi
+```
+
+#### 해결 방법 B: 호스트러너에 수동 설치 (한 번만 실행)
+```bash
+# Ubuntu/Debian 호스트러너
+sudo apt-get update
+sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev
+
+# macOS 호스트러너
+xcode-select --install
+brew install openssl readline
+
+# 설치 확인
+gcc --version
+make --version
+```
+
+### 3️⃣ **호스트러너 환경 체크리스트**
 
 #### CPU & 메모리 설정 (현재: CPU 1.6, 메모리 4GB)
 ```bash
@@ -39,7 +86,17 @@ CPU: 2 코어 이상
 
 #### 필수 확인 사항
 
-##### ✅ 1. Ruby 환경 확인
+##### ✅ 1. 빌드 도구 확인 (최우선!)
+```bash
+# 호스트러너에서 실행
+gcc --version  # C 컴파일러
+make --version  # make 도구
+pkg-config --version  # 패키지 설정 도구
+
+# 하나라도 없으면 위의 "해결 방법 B" 실행
+```
+
+##### ✅ 2. Ruby 환경 확인
 ```bash
 # 호스트러너에서 실행
 ruby -v  # 3.2 이상 필요
@@ -91,7 +148,7 @@ ls -la /path/to/runner/_work
 # runner 사용자가 읽기/쓰기 권한을 가져야 함
 ```
 
-### 3️⃣ **GitHub Actions Runner 설정**
+### 4️⃣ **GitHub Actions Runner 설정**
 
 #### Runner 레이블 확인
 ```bash
@@ -111,7 +168,7 @@ launchctl list | grep actions.runner
 ./run.sh  # runner 디렉토리에서
 ```
 
-### 4️⃣ **빌드 최적화 옵션**
+### 5️⃣ **빌드 최적화 옵션**
 
 #### 옵션 1: 빌드 job만 self-hosted 사용 (현재 설정)
 ```yaml
@@ -135,7 +192,7 @@ build:
   runs-on: [self-hosted, linux]  # 또는 [self-hosted, macOS]
 ```
 
-### 5️⃣ **트러블슈팅 명령어**
+### 6️⃣ **트러블슈팅 명령어**
 
 #### 호스트러너에서 수동 빌드 테스트
 ```bash
