@@ -509,7 +509,7 @@ done
 1. **Resource monitoring**:
    ```bash
    # Monitor container stats
-   docker stats $(docker ps --format "table {{.Names}}" | grep mcp)
+   docker stats $(docker ps --format "table {% raw %}{{.Names}}{% endraw %}" | grep mcp)
    ```
 
 2. **Health checks**:

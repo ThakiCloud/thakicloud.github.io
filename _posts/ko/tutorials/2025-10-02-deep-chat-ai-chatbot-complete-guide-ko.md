@@ -96,7 +96,7 @@ function App() {
     return (
         <div className="App">
             <DeepChat
-                style={{borderRadius: '10px', width: '100%', height: '600px'}}
+                style={% raw %}{{borderRadius: '10px', width: '100%', height: '600px'}}{% endraw %}
                 introMessage={% raw %}{{text: "환영합니다! 오늘 무엇을 도와드릴까요?"}}{% endraw %}}
             />
         </div>

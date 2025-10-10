@@ -509,7 +509,7 @@ done
 1. **مراقبة الموارد**:
    ```bash
    # مراقبة إحصائيات الحاوية
-   docker stats $(docker ps --format "table {{.Names}}" | grep mcp)
+   docker stats $(docker ps --format "table {% raw %}{{.Names}}{% endraw %}" | grep mcp)
    ```
 
 2. **فحوصات الصحة**:
