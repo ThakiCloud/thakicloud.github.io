@@ -110,7 +110,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest  # deploy는 GitHub-hosted runner 사용 (안정성)
+    runs-on: self-hosted  # build와 동일한 self-hosted runner 사용 (호환성)
     needs: build
     steps:
       - name: Deploy to GitHub Pages
