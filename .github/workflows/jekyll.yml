@@ -24,21 +24,28 @@ jobs:
   # Build job
   build:
     runs-on: self-hosted  # 호스트러너 사용
+    timeout-minutes: 60  # 빌드 타임아웃 60분 (기본 360분이지만 명시적 설정)
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
       - name: Install build dependencies
         run: |
-          # Ubuntu/Debian 기반 시스템용
-          if command -v apt-get &> /dev/null; then
-            sudo apt-get update -qq
-            sudo apt-get install -y -qq build-essential libssl-dev libreadline-dev zlib1g-dev
-          # macOS용
-          elif command -v brew &> /dev/null; then
-            brew install openssl readline
+          # 이미 설치되어 있는지 확인 (캐시된 runner의 경우 스킵)
+          if command -v gcc &> /dev/null && command -v make &> /dev/null; then
+            echo "✅ Build tools already installed, skipping..."
+          else
+            echo "📦 Installing build tools..."
+            # Ubuntu/Debian 기반 시스템용
+            if command -v apt-get &> /dev/null; then
+              sudo apt-get update -qq
+              sudo apt-get install -y -qq build-essential libssl-dev libreadline-dev zlib1g-dev
+            # macOS용
+            elif command -v brew &> /dev/null; then
+              brew install openssl readline
+            fi
+            echo "✅ Build tools installed"
           fi
-          echo "✅ Build tools installed"
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -53,7 +60,19 @@ jobs:
       
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: |
+          echo "🚀 Starting Jekyll build..."
+          START_TIME=$(date +%s)
+          
+          # 빌드 최적화 옵션 설정
+          bundle exec jekyll build \
+            --baseurl "${{ steps.pages.outputs.base_path }}" \
+            --profile \
+            --trace
+          
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          echo "✅ Build completed in ${DURATION} seconds"
         env:
           JEKYLL_ENV: production
       
