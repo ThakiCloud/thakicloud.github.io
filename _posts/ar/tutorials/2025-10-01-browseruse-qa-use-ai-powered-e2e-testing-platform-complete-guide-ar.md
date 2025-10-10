@@ -15,9 +15,9 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/browseruse-qa-use-ai-powered-e2e-testing-platform-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/browseruse-qa-use-tutorial/"
 lang: ar
-permalink: /ar/tutorials/browseruse-qa-use-ai-powered-e2e-testing-platform-complete-guide/
+permalink: /ar/tutorials/browseruse-qa-use-tutorial/
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة
