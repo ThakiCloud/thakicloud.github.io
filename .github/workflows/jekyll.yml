@@ -23,7 +23,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  # 호스트러너 사용
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,18 +45,44 @@ jobs:
         env:
           JEKYLL_ENV: production
       
+      - name: Clean up symlinks and hard links
+        run: |
+          echo "🔍 Checking for symlinks and hard links in _site..."
+          # Remove all symlinks
+          find ./_site -type l -delete || true
+          # Check for hard links (just report, as they're harder to handle)
+          find ./_site -links +1 -type f || true
+          # Remove common cache directories that might contain symlinks
+          rm -rf ./_site/.sass-cache || true
+          rm -rf ./_site/.jekyll-cache || true
+          echo "✅ Cleanup completed"
+      
+      - name: Verify _site size
+        run: |
+          SIZE=$(du -sh ./_site | cut -f1)
+          echo "📦 _site directory size: $SIZE"
+          # Check if size is reasonable (less than 1GB for safety)
+          SIZE_BYTES=$(du -sb ./_site | cut -f1)
+          if [ $SIZE_BYTES -gt 1073741824 ]; then
+            echo "⚠️  Warning: _site is larger than 1GB"
+          fi
+      
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+          retention-days: 1  # artifact 보관 기간을 1일로 제한
 
   # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # deploy는 GitHub-hosted runner 사용 (안정성)
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
+        timeout-minutes: 10  # 배포 타임아웃 설정 
