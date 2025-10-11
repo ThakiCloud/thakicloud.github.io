@@ -23,29 +23,10 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: self-hosted  # 호스트러너 사용
-    timeout-minutes: 60  # 빌드 타임아웃 60분 (기본 360분이지만 명시적 설정)
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      - name: Install build dependencies
-        run: |
-          # 이미 설치되어 있는지 확인 (캐시된 runner의 경우 스킵)
-          if command -v gcc &> /dev/null && command -v make &> /dev/null; then
-            echo "✅ Build tools already installed, skipping..."
-          else
-            echo "📦 Installing build tools..."
-            # Ubuntu/Debian 기반 시스템용
-            if command -v apt-get &> /dev/null; then
-              sudo apt-get update -qq
-              sudo apt-get install -y -qq build-essential libssl-dev libreadline-dev zlib1g-dev
-            # macOS용
-            elif command -v brew &> /dev/null; then
-              brew install openssl readline
-            fi
-            echo "✅ Build tools installed"
-          fi
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -60,60 +41,22 @@ jobs:
       
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: |
-          echo "🚀 Starting Jekyll build..."
-          START_TIME=$(date +%s)
-          
-          # 빌드 최적화 옵션 설정
-          bundle exec jekyll build \
-            --baseurl "${{ steps.pages.outputs.base_path }}" \
-            --profile \
-            --trace
-          
-          END_TIME=$(date +%s)
-          DURATION=$((END_TIME - START_TIME))
-          echo "✅ Build completed in ${DURATION} seconds"
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      
-      - name: Clean up symlinks and hard links
-        run: |
-          echo "🔍 Checking for symlinks and hard links in _site..."
-          # Remove all symlinks
-          find ./_site -type l -delete || true
-          # Check for hard links (just report, as they're harder to handle)
-          find ./_site -links +1 -type f || true
-          # Remove common cache directories that might contain symlinks
-          rm -rf ./_site/.sass-cache || true
-          rm -rf ./_site/.jekyll-cache || true
-          echo "✅ Cleanup completed"
-      
-      - name: Verify _site size
-        run: |
-          SIZE=$(du -sh ./_site | cut -f1)
-          echo "📦 _site directory size: $SIZE"
-          # Check if size is reasonable (less than 1GB for safety)
-          SIZE_BYTES=$(du -sb ./_site | cut -f1)
-          if [ $SIZE_BYTES -gt 1073741824 ]; then
-            echo "⚠️  Warning: _site is larger than 1GB"
-          fi
       
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./_site
-          retention-days: 1  # artifact 보관 기간을 1일로 제한
 
   # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: self-hosted  # build와 동일한 self-hosted runner 사용 (호환성)
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-        timeout-minutes: 10  # 배포 타임아웃 설정 
+        uses: actions/deploy-pages@v4 
