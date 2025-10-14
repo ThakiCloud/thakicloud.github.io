@@ -23,12 +23,17 @@ jobs:
           echo "=== Disk usage before cleanup ==="
           df -h
           sudo rm -rf /home/runner/work/_temp/*
-          sudo rm -rf /home/runner/work/_actions/*
+          sudo rm -rf /home/runner/work/_actions/* || true
           sudo rm -rf /home/runner/work/_tool/*
           sudo rm -rf /home/runner/actions-runner/_diag/*
           sudo docker system prune -af || true
           echo "=== Disk usage after cleanup ==="
           df -h
+
+      - name: 🔧 Fix corrupted _actions cache
+        run: |
+          sudo rm -rf /home/runner/work/_actions || true
+          mkdir -p /home/runner/work/_actions
 
       - name: 🧾 Checkout source
         uses: actions/checkout@v4
@@ -59,11 +64,10 @@ jobs:
           JEKYLL_ENV: production
 
       - name: ❗ Retry build on failure (clear bundler cache)
-        if: failure()  # Only runs if the previous step failed
+        if: failure()
         run: |
           echo "Build failed — clearing bundler cache and retrying..."
-          rm -rf ~/.bundle
-          rm -rf vendor/bundle
+          rm -rf ~/.bundle vendor/bundle
           bundle config set --local path 'vendor/bundle'
           bundle install --no-cache
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
