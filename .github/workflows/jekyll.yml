@@ -1,62 +1,91 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - name: Checkout
+      - name: 🧹 Pre-clean disk before build
+        run: |
+          echo "=== Disk usage before cleanup ==="
+          df -h
+          sudo rm -rf /home/runner/work/_temp/*
+          sudo rm -rf /home/runner/work/_actions/* || true
+          sudo rm -rf /home/runner/work/_tool/*
+          sudo rm -rf /home/runner/actions-runner/_diag/*
+          sudo docker system prune -af || true
+          echo "=== Disk usage after cleanup ==="
+          df -h
+
+      - name: 🔧 Fix corrupted _actions cache
+        run: |
+          sudo rm -rf /home/runner/work/_actions || true
+          mkdir -p /home/runner/work/_actions
+
+      - name: 🧾 Checkout source
         uses: actions/checkout@v4
-      
-      - name: Setup Ruby
+
+      - name: 💎 Setup Ruby (with bundler cache)
+        id: setup-ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2' # Use latest stable Ruby
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      
-      - name: Setup Pages
+          ruby-version: '3.2'
+          bundler-cache: true
+          cache-version: 1
+
+      - name: ⚙️ Setup GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
-      
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: 🧱 Build with Jekyll
+        id: jekyll-build
+        run: |
+          echo "=== Before build disk usage ==="
+          df -h
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          echo "=== _site size ==="
+          du -sh _site || true
+          echo "=== After build disk usage ==="
+          df -h
         env:
           JEKYLL_ENV: production
-      
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v4
 
-  # Deployment job
+      - name: ❗ Retry build on failure (clear bundler cache)
+        if: failure()
+        run: |
+          echo "Build failed — clearing bundler cache and retrying..."
+          rm -rf ~/.bundle vendor/bundle
+          bundle config set --local path 'vendor/bundle'
+          bundle install --no-cache
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      - name: 📦 Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
