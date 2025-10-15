@@ -16,37 +16,126 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - name: Checkout
+      - name: 🧹 Pre-clean disk before build
+        run: |
+          echo "=== Disk usage before cleanup ==="
+          df -h
+
+          # 기존 임시 파일 정리
+          sudo rm -rf /home/runner/work/_temp/* || true
+          sudo rm -rf /home/runner/work/_tool/* || true
+          sudo rm -rf /home/runner/actions-runner/_diag/* || true
+
+          # 대용량 불필요한 SDK 및 도구 제거 (약 15-20GB 확보)
+          sudo rm -rf /usr/local/lib/android || true         # Android SDK (~11GB)
+          sudo rm -rf /usr/share/dotnet || true              # .NET SDK (~2GB)
+          sudo rm -rf /opt/hostedtoolcache || true           # 호스트 도구 캐시
+          sudo rm -rf /usr/share/swift || true               # Swift
+          sudo rm -rf /home/linuxbrew || true                # Homebrew
+
+          # apt 및 패키지 캐시 정리
+          sudo rm -rf /var/cache/apt/archives/* || true
+          sudo rm -rf /var/lib/apt/lists/* || true
+
+          # Docker 정리
+          sudo docker system prune -af || true
+
+          echo "=== Disk usage after cleanup ==="
+          df -h
+
+      - name: 🧾 Checkout source
         uses: actions/checkout@v4
-      
-      - name: Setup Ruby
+
+      - name: 💎 Setup Ruby (with bundler cache)
+        id: setup-ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
-          cache-version: 0
-      
-      - name: Setup Pages
+          cache-version: 1
+
+      - name: ⚙️ Setup GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
-      
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: 🧱 Build with Jekyll
+        id: jekyll-build
+        run: |
+          echo "=== Before build disk usage ==="
+          df -h
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          echo "=== _site size ==="
+          du -sh _site || true
+          echo "=== After build disk usage ==="
+          df -h
         env:
           JEKYLL_ENV: production
-      
-      - name: Upload artifact
+
+      - name: 🔗 Remove symlinks and hardlinks from _site
+        run: |
+          echo "=== Checking for symlinks in _site ==="
+          find _site -type l -ls || true
+          
+          echo "=== Converting symlinks to real files ==="
+          for link in $(find _site -type l); do
+            if [ -e "$link" ]; then
+              target=$(readlink -f "$link")
+              rm "$link"
+              cp -rL "$target" "$link" 2>/dev/null || echo "Warning: Could not copy $target"
+            else
+              echo "Removing broken symlink: $link"
+              rm "$link"
+            fi
+          done
+          
+          echo "=== Resolving hardlinks ==="
+          find _site -type f -links +1 -exec sh -c 'cp -f "$1" "$1.tmp" && mv -f "$1.tmp" "$1"' _ {} \;
+          
+          echo "=== Verifying no symlinks remain ==="
+          remaining=$(find _site -type l | wc -l)
+          if [ "$remaining" -gt 0 ]; then
+            echo "ERROR: $remaining symlinks still present"
+            exit 1
+          fi
+          echo "✓ All symlinks and hardlinks resolved"
+
+      - name: ❗ Retry build on failure (clear bundler cache)
+        if: failure()
+        run: |
+          echo "Build failed — clearing bundler cache and retrying..."
+          rm -rf ~/.bundle vendor/bundle
+          bundle config set --local path 'vendor/bundle'
+          bundle install --no-cache
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          
+          echo "=== Removing symlinks/hardlinks after retry ==="
+          for link in $(find _site -type l); do
+            if [ -e "$link" ]; then
+              target=$(readlink -f "$link")
+              rm "$link"
+              cp -rL "$target" "$link" 2>/dev/null || rm "$link"
+            else
+              rm "$link"
+            fi
+          done
+          find _site -type f -links +1 -exec sh -c 'cp -f "$1" "$1.tmp" && mv -f "$1.tmp" "$1"' _ {} \;
+        env:
+          JEKYLL_ENV: production
+
+      - name: 📦 Upload artifact for Pages
         uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
