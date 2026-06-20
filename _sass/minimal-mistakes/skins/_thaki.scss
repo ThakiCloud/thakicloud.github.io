@@ -1,0 +1,49 @@
+/* ==========================================================================
+   ThakiCloud skin — Apple-grade, light base (dark handled at runtime via
+   CSS custom properties in assets/css/main.scss). Imported BEFORE
+   minimal-mistakes/variables, so values set here (no !default) win.
+   ========================================================================== */
+
+/* Typeface roles ---------------------------------------------------------- */
+/* Pretendard = KO/EN display+body (SF/Apple SD Gothic feel, single family).
+   Arabic locale swaps to IBM Plex Sans Arabic via [lang="ar"] in main.scss.
+   JetBrains Mono = code/data utility face (identity of a code blog). */
+$sans-serif: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+  system-ui, "Apple SD Gothic Neo", "Segoe UI", Roboto, "Helvetica Neue",
+  "Malgun Gothic", "맑은 고딕", sans-serif !default;
+$monospace: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas,
+  "Liberation Mono", monospace !default;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+$caption-font-family: $sans-serif;
+
+/* Type scale — larger, tighter display (Apple) vs MM's modest default ------ */
+$type-size-1: 2.75em !default; // ~44px  page/archive titles
+$type-size-2: 2em !default;    // ~32px
+$type-size-3: 1.5em !default;  // ~24px
+$type-size-4: 1.25em !default; // ~20px
+$type-size-5: 1em !default;    // ~16px
+$type-size-6: 0.8em !default;  // ~12.8px eyebrows/meta
+$type-size-7: 0.6875em !default;
+$type-size-8: 0.625em !default;
+
+/* Light palette (Apple marketing) — compile-time fallback ----------------- */
+$background-color: #ffffff !default;
+$text-color: #1d1d1f !default;          // Apple near-black
+$muted-text-color: #6e6e73 !default;    // Apple secondary gray
+$primary-color: #0071e3 !default;       // Apple blue (accent)
+$border-color: #d2d2d7 !default;        // Apple hairline
+$footer-background-color: #f5f5f7 !default;
+$link-color: #0071e3 !default;
+$link-color-hover: #0077ed !default;
+$link-color-visited: #0071e3 !default;
+$masthead-link-color: #1d1d1f !default;
+$masthead-link-color-hover: #0071e3 !default;
+$navicon-link-color-hover: #6e6e73 !default;
+
+/* Code surfaces (light) — re-themed for both modes in main.scss ----------- */
+$code-background-color: #f5f5f7 !default;
+$code-background-color-dark: #1d1d1f !default;
+
+/* Geometry ---------------------------------------------------------------- */
+$border-radius: 12px !default;          // cards/inputs (Apple uses generous radii)
