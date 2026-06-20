@@ -21,6 +21,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/evalchemy-api-llm-evaluation-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/evalchemy-api-llm-evaluation-guide/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

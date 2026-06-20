@@ -21,6 +21,7 @@ toc_label: "دليل Unsloth الشامل"
 lang: ar
 permalink: /ar/llmops/unsloth-ultrafast-llm-finetuning/
 canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-ultrafast-llm-finetuning/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

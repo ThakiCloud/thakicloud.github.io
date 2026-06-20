@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "Blackwell FP4 Inference Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/blackwell-fp4-inference-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

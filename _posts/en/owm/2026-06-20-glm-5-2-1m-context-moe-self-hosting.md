@@ -30,6 +30,8 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 7 min
 
+![GLM-5.2 sparse MoE and 1M context concept](/assets/images/glm-5-2-hero.png)
+
 ## What Makes GLM-5.2 Different
 
 GLM-5.2, released by Z.ai (formerly Zhipu AI), is a MoE model with 753B total parameters. It is available at the HuggingFace repository `zai-org/GLM-5.2` under the MIT license.

@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 toc_label: "NeMo QAT Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/nemo-qat-comprehensive-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 14 minutes

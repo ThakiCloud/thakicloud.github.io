@@ -30,6 +30,8 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 7 min
 
+![MiniMax-M2.7 self-evolving agent teams concept](/assets/images/minimax-m2-7-hero.png)
+
 ## MiniMax-M2.7 Overview
 
 This is the model released by MiniMax as `MiniMaxAI/MiniMax-M2.7`. It has 229B total parameters and supports three dtypes: F32, BF16, and FP8 (F8_E4M3). Native FP8 support provides memory efficiency and throughput advantages on the latest NVIDIA GPUs (H100, H200, Blackwell family).

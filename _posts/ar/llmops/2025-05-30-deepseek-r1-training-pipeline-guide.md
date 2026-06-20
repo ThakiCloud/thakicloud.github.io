@@ -22,6 +22,7 @@ toc_label: "خط أنابيب تدريب DeepSeek-R1"
 lang: ar
 permalink: /ar/llmops/deepseek-r1-training-pipeline-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/deepseek-r1-training-pipeline-guide/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

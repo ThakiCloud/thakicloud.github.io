@@ -30,6 +30,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/enterprise-rag-datasets-industry-specific-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 20 دقيقة

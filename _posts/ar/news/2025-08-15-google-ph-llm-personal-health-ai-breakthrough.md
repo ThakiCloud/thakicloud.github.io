@@ -27,6 +27,7 @@ canonical_url: "https://thakicloud.github.io/ar/news/google-ph-llm-personal-heal
 reading_time: true
 lang: ar
 permalink: /ar/news/google-ph-llm-personal-health-ai-breakthrough/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 16 دقيقة

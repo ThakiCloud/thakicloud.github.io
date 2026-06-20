@@ -23,6 +23,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/unsloth-notebooks-llm-finetuning/
 canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-notebooks-llm-finetuning/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 10 دقائق

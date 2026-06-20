@@ -29,6 +29,8 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 8분
 
+![Kimi K2.6 에이전트 스웜 개념도](/assets/images/kimi-k2-6-hero.png)
+
 ## Kimi K2.6 개요
 
 Moonshot AI가 공개한 Kimi K2.6은 `moonshotai/Kimi-K2.6` 저장소에서 확인할 수 있다. 라이선스는 Modified MIT다. 총 1조(1T) 파라미터이지만 추론 시 활성화되는 파라미터는 32B에 불과하다.

@@ -22,6 +22,7 @@ author_profile: true
 toc: true
 toc_label: "دليل OpenCodeReasoning"
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-opencode-reasoning-dataset-comprehensive-guide/"
+published: false
 ---
 
 ## نظرة عامة

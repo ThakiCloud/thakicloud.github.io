@@ -30,6 +30,8 @@ reading_time: true
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
+![مخطط مفاهيمي لـ GLM-5.2](/assets/images/glm-5-2-hero.png)
+
 ## ما الذي يميز GLM-5.2؟
 
 GLM-5.2 هو نموذج MoE بحجم إجمالي 753B معامل، أصدرته Z.ai (المعروفة سابقًا بـ Zhipu AI). يمكن الوصول إليه عبر مستودع HuggingFace `zai-org/GLM-5.2`، وترخيصه MIT.

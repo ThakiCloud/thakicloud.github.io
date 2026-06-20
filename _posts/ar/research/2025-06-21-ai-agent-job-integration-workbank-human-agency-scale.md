@@ -20,6 +20,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "وكلاء الذكاء الاصطناعي وسوق العمل"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

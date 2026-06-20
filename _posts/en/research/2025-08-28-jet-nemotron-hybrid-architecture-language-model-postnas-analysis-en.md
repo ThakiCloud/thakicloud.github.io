@@ -20,6 +20,7 @@ toc_label: "Contents"
 lang: en
 permalink: /en/research/jet-nemotron-hybrid-architecture-language-model-postnas-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/jet-nemotron-hybrid-architecture-language-model-postnas-analysis/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

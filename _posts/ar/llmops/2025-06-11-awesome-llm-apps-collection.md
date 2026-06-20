@@ -21,6 +21,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/awesome-llm-apps-collection/
 canonical_url: "https://thakicloud.github.io/ar/llmops/awesome-llm-apps-collection/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

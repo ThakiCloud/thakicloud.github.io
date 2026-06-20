@@ -22,6 +22,7 @@ toc_label: "دليل PEFT الشامل"
 lang: ar
 permalink: /ar/llmops/peft-parameter-efficient-finetuning-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/peft-parameter-efficient-finetuning-guide/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 14 دقيقة

@@ -29,6 +29,8 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 7분
 
+![GLM-5.2 희소 MoE와 1M 컨텍스트 개념도](/assets/images/glm-5-2-hero.png)
+
 ## GLM-5.2는 무엇이 다른가
 
 Z.ai(智谱, 구 Zhipu AI)가 공개한 GLM-5.2는 총 753B 파라미터 규모의 MoE 모델이다. HuggingFace 저장소 `zai-org/GLM-5.2`에서 접근할 수 있고, 라이선스는 MIT다.

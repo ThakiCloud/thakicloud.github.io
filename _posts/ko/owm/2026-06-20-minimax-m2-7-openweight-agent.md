@@ -29,6 +29,8 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 7분
 
+![MiniMax-M2.7 자기진화 에이전트 팀 개념도](/assets/images/minimax-m2-7-hero.png)
+
 ## MiniMax-M2.7 개요
 
 MiniMax가 `MiniMaxAI/MiniMax-M2.7`로 공개한 모델이다. 총 229B 파라미터이며 F32, BF16, FP8(F8_E4M3) 세 가지 dtype을 지원한다. FP8 네이티브 지원은 최신 NVIDIA GPU(H100, H200, Blackwell 계열)에서 메모리 효율과 throughput 측면의 이점을 준다.

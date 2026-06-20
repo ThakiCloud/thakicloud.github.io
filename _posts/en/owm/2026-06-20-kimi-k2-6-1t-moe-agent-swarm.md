@@ -30,6 +30,8 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 8 min
 
+![Kimi K2.6 agent swarm concept](/assets/images/kimi-k2-6-hero.png)
+
 ## Kimi K2.6 Overview
 
 Kimi K2.6, released by Moonshot AI, is available at the `moonshotai/Kimi-K2.6` repository under a Modified MIT license. Total parameter count is 1 trillion (1T), but only 32B parameters are active during inference.

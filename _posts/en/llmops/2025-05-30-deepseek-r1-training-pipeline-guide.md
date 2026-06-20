@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 Training Pipeline"
 canonical_url: "https://thakicloud.github.io/en/llmops/deepseek-r1-training-pipeline-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

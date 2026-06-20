@@ -22,6 +22,7 @@ toc_label: "دليل استنتاج Blackwell FP4"
 lang: ar
 permalink: /ar/llmops/blackwell-fp4-inference-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/blackwell-fp4-inference-guide/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 10 دقائق

@@ -18,6 +18,7 @@ author_profile: true
 toc: true
 toc_label: "DeepEval Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/deepeval-llm-evaluation-framework/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

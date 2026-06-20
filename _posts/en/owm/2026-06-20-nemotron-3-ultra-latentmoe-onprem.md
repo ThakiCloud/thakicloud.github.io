@@ -30,6 +30,8 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 8 min
 
+![Nemotron-3-Ultra hybrid architecture concept](/assets/images/nemotron-3-ultra-hero.png)
+
 ## Nemotron-3-Ultra-550B Overview
 
 `nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16`, released by NVIDIA on June 4, 2026, is a MoE-family model with 550B total parameters and 55B active. The license is OpenMDW-1.1.

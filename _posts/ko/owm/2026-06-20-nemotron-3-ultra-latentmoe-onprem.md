@@ -29,6 +29,8 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 8분
 
+![Nemotron-3-Ultra 하이브리드 아키텍처 개념도](/assets/images/nemotron-3-ultra-hero.png)
+
 ## Nemotron-3-Ultra-550B 개요
 
 NVIDIA가 2026년 6월 4일 공개한 `nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16`은 총 550B 파라미터, active 55B인 MoE 계열 모델이다. 라이선스는 OpenMDW-1.1이다.

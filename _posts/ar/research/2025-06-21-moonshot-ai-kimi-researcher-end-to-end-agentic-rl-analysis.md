@@ -20,6 +20,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "تحليل Kimi-Researcher"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

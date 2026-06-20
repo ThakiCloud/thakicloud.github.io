@@ -30,6 +30,8 @@ reading_time: true
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
+![مخطط معماري لـ Nemotron-3-Ultra](/assets/images/nemotron-3-ultra-hero.png)
+
 ## نظرة عامة على Nemotron-3-Ultra-550B
 
 أصدرت NVIDIA في الرابع من يونيو 2026 نموذج `nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16`، وهو نموذج من فئة MoE بمجموع 550B معامل و55B معاملًا نشطًا. الترخيص هو OpenMDW-1.1.

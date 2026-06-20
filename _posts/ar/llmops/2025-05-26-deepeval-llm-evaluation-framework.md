@@ -20,6 +20,7 @@ toc_label: "دليل DeepEval"
 lang: ar
 permalink: /ar/llmops/deepeval-llm-evaluation-framework/
 canonical_url: "https://thakicloud.github.io/ar/llmops/deepeval-llm-evaluation-framework/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

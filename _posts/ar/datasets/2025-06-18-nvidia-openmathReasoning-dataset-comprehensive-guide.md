@@ -23,6 +23,7 @@ author_profile: true
 toc: true
 toc_label: "دليل OpenMathReasoning"
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-openmathReasoning-dataset-comprehensive-guide/"
+published: false
 ---
 
 ## نظرة عامة

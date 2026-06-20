@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/research/llm-overthinking-reasoning-completion-point-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/llm-overthinking-reasoning-completion-point-analysis/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

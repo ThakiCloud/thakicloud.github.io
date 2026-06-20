@@ -21,6 +21,7 @@ toc_label: "دليل LLaMA Factory"
 lang: ar
 permalink: /ar/llmops/llama-factory-unified-llm-finetuning-framework/
 canonical_url: "https://thakicloud.github.io/ar/llmops/llama-factory-unified-llm-finetuning-framework/"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق
