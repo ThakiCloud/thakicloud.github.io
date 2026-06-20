@@ -24,6 +24,7 @@ toc: true
 toc_label: "دليل AceReason-Nemotron-1.1-7B"
 canonical_url: "https://thakicloud.github.io/ar/owm/nvidia-acereason-nemotron-1-1-7b-model-guide/"
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

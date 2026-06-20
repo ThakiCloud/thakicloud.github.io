@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 > "코드는 더 이상 한 몸이 아니다.

@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: MLX vs GGUF 비교
+published: false
 ---
 
 ## 개요

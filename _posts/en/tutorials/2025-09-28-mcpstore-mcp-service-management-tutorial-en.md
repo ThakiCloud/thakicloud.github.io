@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/mcpstore-mcp-service-management-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcpstore-mcp-service-management-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/"
 lang: en
 permalink: /en/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

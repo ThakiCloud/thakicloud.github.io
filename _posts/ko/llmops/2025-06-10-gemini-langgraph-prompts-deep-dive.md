@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
+published: false
 ---
 
 Google Gemini Fullstack LangGraph Quickstart 프로젝트의 핵심은 정교하게 설계된 4개의 프롬프트입니다. 각 프롬프트는 **검색 쿼리 생성 → 웹 연구 → 반성적 평가 → 최종 답변 합성**의 워크플로우에서 고유한 역할을 수행하며, 전체 에이전트의 품질과 신뢰성을 결정짓습니다. 이번 포스트에서는 `backend/src/agent/prompts.py`에 정의된 핵심 프롬프트들을 프롬프트 엔지니어링 관점에서 심층 분석합니다.

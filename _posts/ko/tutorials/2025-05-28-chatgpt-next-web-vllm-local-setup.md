@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 excerpt: "ChatGPT Next Web과 vLLM을 맥북에서 연결하여 네이버 클로바의 HyperCLOVA X SEED 0.5B 모델로 경량 한국어 AI 환경을 구축하는 실전 가이드. Python 3.12와 Yarn을 활용한 최신 개발 환경 설정법을 포함합니다."
+published: false
 ---
 
 ## 개요

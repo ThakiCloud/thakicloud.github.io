@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/github-spec-kit-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/github-spec-kit-tutorial/"
+published: false
 ---
 
 ⏱️ Estimated reading time: 12 min

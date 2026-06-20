@@ -26,6 +26,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/deep-cogito-v2-self-improving-ai-owm-revolution/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

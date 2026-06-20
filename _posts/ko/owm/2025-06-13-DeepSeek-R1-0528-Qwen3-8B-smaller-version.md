@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 DeepSeek가 최근 출시한 DeepSeek-R1-0528-Qwen3-8B는 오픈소스 대규모 언어 모델(LLM)의 새로운 이정표를 세웠습니다. 이 모델은 단일 GPU에서도 실행 가능하면서도 뛰어난 성능을 보여주는 혁신적인 모델입니다.

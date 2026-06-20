@@ -20,6 +20,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

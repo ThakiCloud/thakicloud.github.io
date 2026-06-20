@@ -18,6 +18,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/lemonai-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/lemonai-complete-setup-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

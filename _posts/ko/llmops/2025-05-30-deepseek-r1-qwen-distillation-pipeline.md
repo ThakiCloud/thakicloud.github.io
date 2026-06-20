@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 지식 증류 가이드"
+published: false
 ---
 
 > **TL;DR** DeepSeek-R1의 추론 능력을 Qwen 계열 모델로 증류하는 **11개 오픈소스 파이프라인**을 완전 정리했다. 공식 참조부터 미니멀 구현체, 커뮤니티 확장 버전까지 **MIT/Apache 2.0 라이선스**로 자유롭게 활용 가능하다. **A100 1장으로도 재현 가능한** 실전 가이드다.

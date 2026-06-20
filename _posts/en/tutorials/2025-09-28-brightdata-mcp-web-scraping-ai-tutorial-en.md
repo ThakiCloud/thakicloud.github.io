@@ -20,6 +20,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/brightdata-mcp-web-scraping-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/brightdata-mcp-web-scraping-ai-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

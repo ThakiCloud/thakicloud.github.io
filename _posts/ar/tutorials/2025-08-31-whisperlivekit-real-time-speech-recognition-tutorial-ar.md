@@ -22,6 +22,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/"
 lang: ar
 permalink: /ar/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

@@ -19,6 +19,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/autoagent-zero-code-llm-framework/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/autoagent-zero-code-llm-framework/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

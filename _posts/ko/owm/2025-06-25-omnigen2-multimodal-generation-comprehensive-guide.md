@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "OmniGen2 완전 분석"
+published: false
 ---
 
 ## 개요

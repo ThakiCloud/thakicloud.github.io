@@ -17,6 +17,7 @@ author_profile: true
 # toc: true
 # toc_label: "Table of Contents"
 # comments: true
+published: false
 ---
 
 > **핵심 메시지**  구조화와 제어가 잘 된 환경에서 **Cursor**와 생성형 AI를 결합하면, 소규모 팀도 대형 서비스 수준의 생산성을 얻을 수 있다. 이 글은 **바이브 코딩(Vibe Coding)** 문화 속에서 Cursor를 "유능한 주니어"처럼 다루는 실전 전략을 담고 있다.

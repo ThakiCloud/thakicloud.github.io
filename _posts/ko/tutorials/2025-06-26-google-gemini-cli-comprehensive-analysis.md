@@ -21,6 +21,7 @@ author_profile: true
 toc: true
 toc_label: Gemini CLI 분석 가이드
 canonical_url: "https://thakicloud.github.io/tutorials/google-gemini-cli-comprehensive-analysis/"
+published: false
 ---
 
 ## 개요

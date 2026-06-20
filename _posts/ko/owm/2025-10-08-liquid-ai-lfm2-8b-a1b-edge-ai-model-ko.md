@@ -20,6 +20,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/
 canonical_url: "https://thakicloud.github.io/ko/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

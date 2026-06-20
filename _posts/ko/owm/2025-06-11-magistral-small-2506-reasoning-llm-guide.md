@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 Mistral AI가 새롭게 선보인 **Magistral-Small-2506**은 기존 Mistral Small 3.1을 기반으로 강화된 추론 능력을 갖춘 혁신적인 24B 파라미터 언어 모델입니다. 단일 RTX 4090이나 32GB MacBook에서도 로컬 배포가 가능한 이 모델은 Apache 2.0 라이센스 하에 상업적 이용까지 허용하는 완전한 오픈소스 솔루션입니다.

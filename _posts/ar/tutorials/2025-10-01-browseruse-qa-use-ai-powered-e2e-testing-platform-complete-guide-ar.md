@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/browseruse-qa-use-tutorial/"
 lang: ar
 permalink: /ar/tutorials/browseruse-qa-use-tutorial/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

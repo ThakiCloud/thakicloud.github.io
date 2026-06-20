@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 뉴스 분석
+published: false
 ---
 
 전 OpenAI 수석과학자 일리야 수츠케버(Ilya Sutskever)가 토론토대학교 졸업식 기조연설에서 AI의 미래에 대한 야심찬 전망을 제시해 학계와 업계의 주목을 받고 있다. 그의 발언은 단순한 기술적 예측을 넘어 AI 연구의 철학적 기반과 미래 방향성에 대한 근본적 질문을 던지고 있다.

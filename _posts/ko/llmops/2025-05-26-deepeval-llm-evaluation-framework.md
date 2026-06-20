@@ -11,6 +11,7 @@ tags:
   - Evaluation
   - Thaki Cloud
 author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
+published: false
 ---
 
 대규모 언어 모델(LLM)의 발전과 함께, LLM 기반 애플리케이션의 신뢰성과 성능을 체계적으로 평가하는 것은 모든 개발 및 연구 조직의 핵심 과제가 되었습니다. **DeepEval** ([GitHub 저장소](https://github.com/confident-ai/deepeval))은 이러한 LLM 시스템의 테스트 및 평가 과정을 혁신적으로 간소화하도록 설계된 강력한 오픈소스 프레임워크입니다. 마치 Pytest를 사용하는 것처럼 익숙한 개발 경험을 제공하면서도, LLM 출력 평가에 고도로 특화된 기능을 통해 RAG(Retrieval Augmented Generation) 파이프라인, 정교한 챗봇, 자율 에이전트 등 모든 종류의 LLM 활용 애플리케이션을 효과적으로 검증할 수 있도록 지원합니다.

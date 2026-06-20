@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/kite-kubernetes-dashboard-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/kite-kubernetes-dashboard-complete-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

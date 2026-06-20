@@ -21,6 +21,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/owm/granite-docling-258m-document-conversion-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/granite-docling-258m-document-conversion-workflow-automation/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

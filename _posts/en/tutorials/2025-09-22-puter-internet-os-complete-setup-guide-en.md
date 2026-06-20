@@ -21,6 +21,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/puter-internet-os-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/puter-internet-os-complete-setup-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

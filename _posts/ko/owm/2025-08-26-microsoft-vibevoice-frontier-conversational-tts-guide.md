@@ -20,6 +20,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/owm/microsoft-vibevoice-frontier-conversational-tts-guide/
 canonical_url: "https://thakicloud.github.io/ko/owm/microsoft-vibevoice-frontier-conversational-tts-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: Helm 명령어 가이드
+published: false
 ---
 
 Helm은 쿠버네티스를 위한 패키지 관리자로, 복잡한 애플리케이션을 쉽게 배포하고 관리할 수 있게 해주는 강력한 도구입니다. 이 가이드에서는 Helm의 최신 명령어들을 체계적으로 정리하여 실무에서 바로 활용할 수 있도록 안내해드리겠습니다.

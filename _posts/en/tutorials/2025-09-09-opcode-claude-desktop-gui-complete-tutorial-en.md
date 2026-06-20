@@ -20,6 +20,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/opcode-claude-desktop-gui-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/opcode-claude-desktop-gui-complete-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

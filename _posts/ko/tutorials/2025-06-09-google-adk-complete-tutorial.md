@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 Google의 Agent Development Kit (ADK)는 2025년 4월에 발표된 오픈소스 AI 에이전트 개발 프레임워크입니다. Vertex AI와 완벽하게 통합되어 누구나 강력한 AI 에이전트와 멀티 에이전트 시스템을 쉽게 구축할 수 있게 되었습니다. 이 가이드에서는 기초부터 실제 엔터프라이즈 애플리케이션 구축까지 모든 과정을 상세히 다뤄보겠습니다.

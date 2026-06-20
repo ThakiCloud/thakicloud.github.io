@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Claude Code 완전 가이드"
+published: false
 ---
 
 VS Code에서 Claude Code를 활용해 코딩하는 법과 요금제·결제 구조를 한눈에 정리한 가이드입니다. 최근 업데이트된 공식 자료와 외부 리뷰를 종합해 Pro·Max·Team 플랜의 차이, Claude Code의 포함 여부, 팀 결제 시 체크리스트까지 깔끔히 정리했습니다.

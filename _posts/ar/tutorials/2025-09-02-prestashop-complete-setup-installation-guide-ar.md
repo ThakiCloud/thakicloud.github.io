@@ -19,6 +19,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/prestashop-complete-setup-installation-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/prestashop-complete-setup-installation-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

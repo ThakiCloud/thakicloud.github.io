@@ -21,6 +21,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/ultrarag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ultrarag-complete-tutorial-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

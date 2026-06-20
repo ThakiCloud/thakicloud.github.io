@@ -28,6 +28,7 @@ canonical_url: "https://thakicloud.github.io/ar/owm/chinese-ai-models-owm-agenti
 reading_time: true
 lang: ar
 permalink: /ar/owm/chinese-ai-models-owm-agentic-intelligence-revolution/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

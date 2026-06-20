@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 vLLM 0.8.5부터 지원되는 Qwen3-Embedding 모델을 활용하여 대규모 데이터 처리와 유사도 검색을 효율적으로 수행하는 방법을 상세히 알아보겠습니다. 100만 개 이상의 문서 처리를 위한 실전 예제와 최적화 방법을 포함합니다.

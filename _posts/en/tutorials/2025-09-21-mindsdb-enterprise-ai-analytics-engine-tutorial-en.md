@@ -21,6 +21,7 @@ toc_label: "Tutorial Contents"
 lang: en
 permalink: /en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 20 minutes

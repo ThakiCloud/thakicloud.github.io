@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-
+published: false
 ---
 
 2025년 6월 4일, 파이썬 커뮤니티의 두 거장이 AI에 대한 정반대 견해를 담은 글을 거의 동시에 발표했습니다. Twisted 프레임워크의 창시자 **Glyph Lefkowitz**는 "AI 생각하기를 그만두겠다"며 회의론을 토로했고, Flask 창시자 **Armin Ronacher**는 "AI가 모든 것을 바꾼다"며 낙관론을 펼쳤습니다.

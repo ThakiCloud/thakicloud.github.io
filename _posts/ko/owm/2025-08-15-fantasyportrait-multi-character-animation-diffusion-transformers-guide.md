@@ -25,6 +25,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/fantasyportrait-multi-character-animation-diffusion-transformers-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

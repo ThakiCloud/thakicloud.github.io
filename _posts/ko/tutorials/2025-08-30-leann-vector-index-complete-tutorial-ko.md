@@ -21,6 +21,7 @@ toc_label: "LEANN 튜토리얼"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/leann-vector-index-complete-tutorial-ko/"
 lang: ko
 permalink: /ko/tutorials/leann-vector-index-complete-tutorial/
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

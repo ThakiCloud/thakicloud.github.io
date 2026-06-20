@@ -21,6 +21,7 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/"
 lang: ko
 permalink: /ko/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

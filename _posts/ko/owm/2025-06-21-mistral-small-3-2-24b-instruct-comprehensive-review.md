@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Mistral-Small-3.2 가이드"
+published: false
 ---
 
 ## Mistral-Small-3.2: 세밀함이 만드는 큰 차이

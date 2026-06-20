@@ -21,6 +21,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "فهرس المحتويات"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

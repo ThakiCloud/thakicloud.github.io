@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "dots.llm1 완전 가이드"
+published: false
 ---
 
 ## dots.llm1 소개

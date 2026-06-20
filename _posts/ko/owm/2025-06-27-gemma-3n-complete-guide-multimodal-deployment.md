@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 toc_label: "Gemma 3n 완전 가이드"
 canonical_url: "https://thakicloud.github.io/owm/tutorials/gemma-3n-complete-guide-multimodal-deployment/"
+published: false
 ---
 
 Google의 Gemma 3n은 2B/4B 파라미터로 멀티모달 기능을 제공하는 경량 AI 모델입니다. 선택적 파라미터 활성화 기술을 통해 모바일 환경에서도 높은 성능을 발휘할 수 있어, 온디바이스 AI 구현에 최적화되어 있습니다.

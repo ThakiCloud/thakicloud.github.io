@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "NeMo-Skills 가이드"
 canonical_url: "https://thakicloud.github.io/nvidia-nemo-skills-llm-workflow-automation-guide/"
+published: false
 ---
 
 **읽는 시간: 12분**

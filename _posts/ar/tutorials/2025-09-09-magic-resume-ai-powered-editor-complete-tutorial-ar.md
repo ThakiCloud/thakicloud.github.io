@@ -19,6 +19,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/magic-resume-ai-powered-editor-complete-tutorial/"
 lang: ar
 permalink: /ar/tutorials/magic-resume-ai-powered-editor-complete-tutorial/
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

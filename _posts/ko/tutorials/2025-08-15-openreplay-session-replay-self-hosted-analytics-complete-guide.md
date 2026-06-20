@@ -25,6 +25,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/openreplay-session-replay-self-hosted-analytics-complete-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

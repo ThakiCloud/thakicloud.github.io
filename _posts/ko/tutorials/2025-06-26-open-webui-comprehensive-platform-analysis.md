@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "Open WebUI 분석 가이드"
 canonical_url: "https://thakicloud.github.io/tutorials/open-webui-comprehensive-platform-analysis/"
+published: false
 ---
 
 AI 인터페이스 생태계가 급속히 발전하면서, 개발자와 기업들은 ChatGPT 같은 클라우드 서비스와 셀프 호스팅 솔루션 사이에서 선택의 기로에 서 있습니다. 이런 상황에서 **Open WebUI**는 단순한 LLM 인터페이스를 넘어 통합 AI 플랫폼으로 자리매김하며 주목받고 있습니다.

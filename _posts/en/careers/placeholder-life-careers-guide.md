@@ -14,6 +14,7 @@ author_profile: true
 lang: en
 permalink: /en/careers/life-careers-guide/
 canonical_url: "https://thakicloud.github.io/en/careers/life-careers-guide/"
+published: false
 ---
 
 ## [Thaki Cloud Life & Career] Post Writing Guide

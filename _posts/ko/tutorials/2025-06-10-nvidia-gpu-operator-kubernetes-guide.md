@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: GPU Operator 가이드
+published: false
 ---
 
 쿠버네티스 클러스터에서 GPU를 사용하는 ML/AI 워크로드를 실행하려면 복잡한 드라이버 설치와 설정이 필요합니다. NVIDIA GPU Operator는 이러한 복잡성을 해결하고 GPU 자원을 자동으로 관리해주는 혁신적인 솔루션입니다. 이 가이드에서는 설치부터 실제 사용까지 모든 과정을 상세히 다루겠습니다.

@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "Terminalizer 가이드"
 canonical_url: "https://thakicloud.github.io/tutorials/dev/terminalizer-macos-terminal-recording-guide/"
+published: false
 ---
 
 개발자라면 누구나 터미널 작업을 공유하거나 문서화해야 할 때가 있습니다. [Terminalizer](https://github.com/faressoft/terminalizer)는 터미널 세션을 녹화하고 아름다운 animated GIF로 변환해주는 강력한 도구입니다. 이 가이드에서는 macOS에서 Terminalizer를 완벽하게 활용하는 방법을 다룹니다.

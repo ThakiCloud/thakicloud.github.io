@@ -19,6 +19,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/amazon-q-developer-cli-setup-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/amazon-q-developer-cli-setup-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

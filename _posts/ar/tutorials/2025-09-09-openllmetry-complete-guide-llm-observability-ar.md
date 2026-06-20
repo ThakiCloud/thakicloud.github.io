@@ -19,6 +19,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/openllmetry-complete-guide-llm-observability/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/openllmetry-complete-guide-llm-observability/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

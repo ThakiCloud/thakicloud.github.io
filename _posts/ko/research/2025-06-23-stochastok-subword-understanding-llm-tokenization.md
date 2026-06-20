@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "STOCHASTOK 연구 분석"
+published: false
 ---
 
 옥스포드 대학교 연구진이 발표한 이 논문은 대규모 언어 모델(LLM)의 서브워드 레벨 이해 능력을 획기적으로 향상시키는 새로운 토크나이제이션 방법인 **STOCHASTOK**을 제안합니다.

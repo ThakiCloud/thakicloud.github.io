@@ -20,6 +20,7 @@ toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/promptify-prompt-engineering-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/promptify-prompt-engineering-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

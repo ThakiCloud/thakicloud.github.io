@@ -17,6 +17,7 @@ author_profile: true
 toc: true
 toc_label: "Memory Bank 가이드"
 # comments: true
+published: false
 ---
 
 # 커서(CURSOR)의 메모리 뱅크

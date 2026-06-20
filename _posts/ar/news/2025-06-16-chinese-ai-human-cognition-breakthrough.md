@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "اختراق الإدراك للذكاء الاصطناعي"
+published: false
 ---
 
 ## نظرة عامة على البحث

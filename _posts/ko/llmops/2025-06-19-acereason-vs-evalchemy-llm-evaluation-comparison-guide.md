@@ -19,6 +19,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 평가 시스템 비교 가이드
+published: false
 ---
 
 ## 📋 문서 개요

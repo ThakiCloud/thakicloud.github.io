@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "학습 가이드 목차"
+published: false
 ---
 
 대형 언어 모델(LLM)을 한국어 특화로 학습시키는 것은 많은 기업과 연구진이 관심을 갖는 주제입니다. 이 글에서는 **Qwen 2.5-72B(또는 7B) 기반 모델에 한국어 데이터를 집중 투입하여 CPT → SFT → RLHF 학습 스택**을 구현하는 두 가지 방법을 비교 분석합니다.

@@ -19,6 +19,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "OpenCodeReasoning 가이드"
+published: false
 ---
 
 ## 개요

@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 NVIDIA CEO 젠슨 황이 최근 힐튼 밸리 포럼에서 AI가 가져올 산업혁명의 전모를 상세히 설명했습니다. 그는 AI를 단순한 기술이 아닌 **전력과 같은 새로운 산업혁명의 동력**으로 정의하며, 'AI 팩토리'라는 개념을 통해 미래 경제의 청사진을 제시했습니다.

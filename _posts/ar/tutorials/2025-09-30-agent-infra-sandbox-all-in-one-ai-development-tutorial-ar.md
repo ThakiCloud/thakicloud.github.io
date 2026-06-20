@@ -20,6 +20,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/"
 lang: ar
 permalink: /ar/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

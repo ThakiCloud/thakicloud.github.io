@@ -23,6 +23,7 @@ toc: true
 toc_label: "دليل Skywork-SWE-32B"
 canonical_url: "https://thakicloud.github.io/ar/owm/skywork-swe-32b-cost-effective-code-agent-guide/"
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

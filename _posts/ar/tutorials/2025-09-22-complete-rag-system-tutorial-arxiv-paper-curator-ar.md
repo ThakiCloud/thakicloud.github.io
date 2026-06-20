@@ -21,6 +21,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

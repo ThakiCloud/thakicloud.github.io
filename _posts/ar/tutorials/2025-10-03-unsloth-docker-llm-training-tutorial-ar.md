@@ -21,6 +21,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/unsloth-docker-llm-training-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/unsloth-docker-llm-training-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

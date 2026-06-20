@@ -18,6 +18,7 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/airweave-agent-search-platform-tutorial/"
 lang: ko
 permalink: /ko/tutorials/airweave-agent-search-platform-tutorial/
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

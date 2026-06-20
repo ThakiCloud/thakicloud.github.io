@@ -18,6 +18,7 @@ author_profile: true
 # toc: true
 # toc_label: "Table of Contents"
 # comments: true
+published: false
 ---
 
 ## [오픈 가중치 모델] 게시물 작성 가이드

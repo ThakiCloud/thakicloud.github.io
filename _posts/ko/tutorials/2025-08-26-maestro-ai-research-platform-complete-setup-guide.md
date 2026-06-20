@@ -23,6 +23,7 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/maestro-ai-research-platform-complete-setup-guide/"
 lang: ko
 permalink: /ko/tutorials/maestro-ai-research-platform-complete-setup-guide/
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

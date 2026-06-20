@@ -19,6 +19,7 @@ toc_label: "محتويات الدليل"
 lang: ar
 permalink: /ar/tutorials/ccpm-claude-code-project-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ccpm-claude-code-project-management-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

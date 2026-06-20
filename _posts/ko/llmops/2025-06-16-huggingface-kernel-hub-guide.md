@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: HF Kernel Hub Guide
+published: false
 ---
 
 ## 서론

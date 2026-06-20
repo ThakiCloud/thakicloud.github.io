@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-revolutionary-llm-workflow-management/"
 lang: ar
 permalink: /ar/owm/qwen3-revolutionary-llm-workflow-management/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

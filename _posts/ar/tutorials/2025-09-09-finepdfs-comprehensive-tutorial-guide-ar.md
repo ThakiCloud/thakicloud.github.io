@@ -20,6 +20,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/finepdfs-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/finepdfs-comprehensive-tutorial-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

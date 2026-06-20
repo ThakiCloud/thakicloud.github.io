@@ -20,6 +20,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/noscribe-ai-audio-transcription-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/noscribe-ai-audio-transcription-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

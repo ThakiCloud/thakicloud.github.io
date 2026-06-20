@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "KitOps 완전 가이드"
+published: false
 ---
 
 ## 개요

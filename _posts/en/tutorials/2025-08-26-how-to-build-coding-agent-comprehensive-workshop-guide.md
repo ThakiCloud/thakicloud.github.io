@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/"
+published: false
 ---
 
 ⏱️ **Expected Reading Time**: 15 minutes

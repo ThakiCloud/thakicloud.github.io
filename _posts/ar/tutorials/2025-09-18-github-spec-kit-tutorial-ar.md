@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/github-spec-kit-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/github-spec-kit-tutorial/"
+published: false
 ---
 
 ⏱️ الوقت المتوقع للقراءة: 12 دقيقة

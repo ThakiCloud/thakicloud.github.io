@@ -20,6 +20,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/growchief-social-media-automation-complete-tutorial/"
 lang: ar
 permalink: /ar/tutorials/growchief-social-media-automation-complete-tutorial/
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

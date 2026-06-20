@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-
+published: false
 ---
 
 2024~2025년, Cursor는 단 1년 만에 $100M ARR을 돌파하며 역대 SaaS 중 가장 빠른 성장세를 기록했습니다. 이 성공은 단순한 "AI 코딩 도구"를 넘어, **특정 전문직군의 워크플로우에 AI를 깊이 내장해 "생산성 혁명"을 일으키는 제품 전략**의 상징이 되었습니다.

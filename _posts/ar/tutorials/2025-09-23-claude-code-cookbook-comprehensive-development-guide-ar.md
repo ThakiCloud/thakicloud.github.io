@@ -20,6 +20,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/claude-code-cookbook-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/claude-code-cookbook-comprehensive-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 18 دقيقة

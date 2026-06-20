@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: AI 인지능력 돌파구
+published: false
 ---
 
 ## 연구 개요

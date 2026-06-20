@@ -22,6 +22,7 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/wan21-video-generation-model-guide/"
 lang: en
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

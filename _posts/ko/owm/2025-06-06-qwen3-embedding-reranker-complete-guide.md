@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 Alibaba에서 발표한 Qwen3-Embedding과 Qwen3-Reranker 시리즈가 다국어 텍스트 임베딩과 관련도 랭킹 분야에서 새로운 기준을 제시하고 있습니다. 119개 언어를 지원하며 MMTEB, MTEB, MTEB-Code에서 최고 성능을 달성한 이 모델들을 자세히 살펴보겠습니다.

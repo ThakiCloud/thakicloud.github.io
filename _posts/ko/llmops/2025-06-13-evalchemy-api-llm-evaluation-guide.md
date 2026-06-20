@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 ## 한눈에 보는 핵심 요약

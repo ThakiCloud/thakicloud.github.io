@@ -20,6 +20,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AceReason-Nemotron-1.1-7B 가이드"
+published: false
 ---
 
 ## 개요

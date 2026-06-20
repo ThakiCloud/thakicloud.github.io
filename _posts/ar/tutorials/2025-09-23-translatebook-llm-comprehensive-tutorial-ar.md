@@ -20,6 +20,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/translatebook-llm-comprehensive-tutorial/"
 lang: ar
 permalink: /ar/tutorials/translatebook-llm-comprehensive-tutorial/
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

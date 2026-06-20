@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "블랙웰 FP4 추론 가이드"
+published: false
 ---
 
 > **TL;DR** NVIDIA Blackwell GPU의 **FP4(4비트 부동 소수점) 추론**은 AI 모델 성능을 극대화하고 비용을 획기적으로 절감하는 게임 체인저다. DeepSeek-R1 모델의 **세계 기록 달성**이 그 가능성을 증명했다. 이 글에서는 **왜 FP4가 필요한지**부터 **실전 구현 방법**까지 완전 가이드를 제시한다.

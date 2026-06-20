@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/convertx-self-hosted-file-converter-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/convertx-self-hosted-file-converter-complete-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 ## 1. 아키텍처 설계 및 설치

@@ -19,6 +19,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/prestashop-complete-setup-installation-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/prestashop-complete-setup-installation-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/flashrag-tutorial/"
 lang: en
 permalink: /en/tutorials/flashrag-tutorial/
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

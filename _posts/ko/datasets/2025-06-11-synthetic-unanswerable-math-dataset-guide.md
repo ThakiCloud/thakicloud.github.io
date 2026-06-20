@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 LLM(Large Language Model)의 신뢰성을 높이기 위한 혁신적인 접근법이 등장했습니다. USC의 연구팀이 개발한 **Synthetic Unanswerable Math (SUM)** 데이터셋은 AI 모델이 "모른다"고 말할 수 있는 능력을 기르는 데 특화된 고품질 수학 문제 모음입니다.

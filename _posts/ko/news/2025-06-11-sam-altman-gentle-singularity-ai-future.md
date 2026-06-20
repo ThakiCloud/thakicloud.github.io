@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 OpenAI의 CEO 샘 알트만이 자신의 블로그에 "The Gentle Singularity(젠틀 특이점)"라는 제목의 글을 발표했습니다. 이 글에서 그는 현재 AI 발전 상황과 앞으로의 전망에 대한 깊이 있는 통찰을 제공합니다.

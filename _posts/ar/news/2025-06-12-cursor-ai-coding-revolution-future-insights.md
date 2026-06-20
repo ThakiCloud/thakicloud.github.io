@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
+published: false
 ---
 
 ## Cursor يحقق 300 مليون دولار ARR في 21 شهراً منذ الإطلاق

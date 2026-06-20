@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 아래는 **Jekyll 기반 블로그(예: GitHub Pages)에서 방문자가 PowerPoint(`*.ppt`, `*.pptx`)와 PDF 파일을 직접 열람**할 수 있게 하는 가장 실용적인 방법을 한눈에 정리한 표입니다. 상황별로 조합해 쓰는 것도 좋습니다. 예를 들어 PDF는 로컬 뷰어로, 슬라이드만 클라우드 뷰어로 띄우는 식이죠.

@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 Go 언어로 확장 가능한 REST API 서비스를 구축하고, 맥북에서 Docker와 OrbStack을 활용하여 컨테이너 환경에서 개발하는 방법을 완전 초보자도 따라할 수 있도록 단계별로 설명합니다. 이 가이드를 통해 AI 에이전트 연동을 위한 기반 서비스를 만들어보세요.

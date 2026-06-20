@@ -18,6 +18,7 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/ai-novel-generator-tutorial-ko/"
 lang: ko
 permalink: /ko/tutorials/ai-novel-generator-tutorial-ko/
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

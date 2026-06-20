@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AI 에이전트와 노동 시장"
+published: false
 ---
 
 ## AI 시대, 진짜 궁금한 것은 '노동자의 목소리'

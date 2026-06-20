@@ -26,6 +26,7 @@ toc_icon: "chart-line"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/hedge-fund-timeseries-models-infrastructure-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

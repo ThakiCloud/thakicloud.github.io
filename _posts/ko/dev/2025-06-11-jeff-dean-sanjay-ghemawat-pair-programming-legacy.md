@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 구글의 검색 인덱스가 5개월이나 뒤처진 절체절명의 위기 상황에서, 두 명의 엔지니어가 5일 밤낮을 함께 코딩하며 구글을 구원한 이야기가 있습니다. **Jeff Dean**과 **Sanjay Ghemawat** - 구글에서 단 두 명뿐인 "레벨 11 Google Senior Fellow"인 이들의 독특한 짝코딩(pair programming) 방식은 MapReduce, BigTable, TensorFlow 등 오늘날 빅데이터와 클라우드 생태계의 기반이 된 핵심 기술들을 탄생시켰습니다.

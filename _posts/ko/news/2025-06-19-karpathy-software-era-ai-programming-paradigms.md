@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 핵심 내용
+published: false
 ---
 
 <figure class="video-container">

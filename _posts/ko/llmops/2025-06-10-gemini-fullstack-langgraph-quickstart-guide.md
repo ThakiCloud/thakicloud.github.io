@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
+published: false
 ---
 
 Google에서 공식 발표한 [Gemini Fullstack LangGraph Quickstart](https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart) 프로젝트는 Gemini 2.5 모델과 LangGraph를 활용하여 고도화된 AI 연구 에이전트를 구축하는 완전한 풀스택 솔루션입니다. 11.6k 스타를 받으며 큰 관심을 받고 있는 이 프로젝트는 단순한 질의응답을 넘어 반복적 검색과 지식 격차 분석을 통해 종합적인 연구 결과를 제공하는 혁신적인 접근법을 제시합니다.

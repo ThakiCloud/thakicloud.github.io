@@ -23,6 +23,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/apple-diffucoder-7b-cpgrpo-mlx-lm-support-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

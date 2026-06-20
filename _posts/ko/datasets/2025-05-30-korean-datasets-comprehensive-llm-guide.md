@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "한국어 LLM 데이터셋 가이드"
+published: false
 ---
 
 > **TL;DR** 한국어 LLM 학습을 위한 **완전한 데이터셋 생태계**를 소개한다. **허깅페이스 heegyu 컬렉션 37.5만 샘플**부터 **AI-Hub 수백TB 공공데이터**까지, 사전학습→SFT→RLHF 전체 파이프라인을 커버하는 실전 가이드다. **한국어 ChatGPT 수준 모델** 구축을 위한 모든 자료가 여기 있다.

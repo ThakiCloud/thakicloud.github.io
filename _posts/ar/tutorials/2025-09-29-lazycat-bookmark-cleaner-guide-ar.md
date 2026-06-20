@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/lazycat-bookmark-cleaner-guide/"
 lang: ar
 permalink: /ar/tutorials/lazycat-bookmark-cleaner-guide/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

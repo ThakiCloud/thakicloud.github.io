@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 알리바바 클라우드의 Qwen 팀이 최근 발표한 Qwen2.5-Omni는 텍스트, 오디오, 비전, 비디오를 통합적으로 처리할 수 있는 엔드-투-엔드 멀티모달 AI 모델입니다. 이 모델은 실시간 음성 생성 기능까지 지원하여 더욱 자연스러운 인간-AI 상호작용을 가능하게 합니다.

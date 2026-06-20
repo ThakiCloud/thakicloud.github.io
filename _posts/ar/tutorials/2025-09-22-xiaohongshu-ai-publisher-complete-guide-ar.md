@@ -21,6 +21,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/xiaohongshu-ai-publisher-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/xiaohongshu-ai-publisher-complete-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

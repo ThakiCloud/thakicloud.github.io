@@ -21,6 +21,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/motia-modern-backend-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/motia-modern-backend-framework-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

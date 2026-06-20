@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/erpnext-complete-setup-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/erpnext-complete-setup-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

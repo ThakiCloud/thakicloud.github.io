@@ -21,6 +21,7 @@ toc_label: "Tutorial Contents"
 lang: en
 permalink: /en/tutorials/mcp-pointer-dom-selection-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcp-pointer-dom-selection-ai-tutorial/"
+published: false
 ---
 
 ⏱️ **Expected Reading Time**: 12 minutes

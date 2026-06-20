@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ollm-large-context-llm-inference-guide/"
 lang: ar
 permalink: /ar/tutorials/ollm-large-context-llm-inference-guide/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Skywork-SWE-32B 가이드"
+published: false
 ---
 
 ## 개요

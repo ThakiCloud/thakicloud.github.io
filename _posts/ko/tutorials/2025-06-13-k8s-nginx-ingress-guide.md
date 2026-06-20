@@ -12,6 +12,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "K8s Nginx Ingress 튜토리얼"
+published: false
 ---
 
 ## 개요

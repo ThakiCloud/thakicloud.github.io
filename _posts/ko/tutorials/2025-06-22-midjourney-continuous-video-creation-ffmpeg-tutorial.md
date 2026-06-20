@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "미드저니 연속 동영상 제작"
+published: false
 ---
 
 ## 개요

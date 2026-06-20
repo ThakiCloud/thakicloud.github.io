@@ -19,6 +19,7 @@ toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/tutorials/mcp-containers-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-containers-comprehensive-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

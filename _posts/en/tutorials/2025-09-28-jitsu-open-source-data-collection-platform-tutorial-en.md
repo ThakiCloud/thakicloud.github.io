@@ -20,6 +20,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/jitsu-open-source-data-collection-platform-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/jitsu-open-source-data-collection-platform-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

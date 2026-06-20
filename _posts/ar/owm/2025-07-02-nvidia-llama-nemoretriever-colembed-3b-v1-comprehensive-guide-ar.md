@@ -24,6 +24,7 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/nvidia-llama-nemoretriever-colembed-3b-v1-comprehensive-guide/"
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 FP4 가이드"
+published: false
 ---
 
 ## NVIDIA DeepSeek-R1 FP4 모델 소개

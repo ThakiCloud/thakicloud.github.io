@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-novel-generator-tutorial-ar/"
 lang: ar
 permalink: /ar/tutorials/ai-novel-generator-tutorial-ar/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

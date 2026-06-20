@@ -21,6 +21,7 @@ toc: true
 toc_label: "تحليل OmniGen2 الشامل"
 canonical_url: "https://thakicloud.github.io/ar/owm/omnigen2-multimodal-generation-comprehensive-guide/"
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 14 دقيقة

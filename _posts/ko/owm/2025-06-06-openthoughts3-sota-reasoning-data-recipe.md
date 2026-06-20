@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 수학, 코딩, 과학 분야의 추론 능력에서 새로운 기준을 제시하는 [OpenThoughts3](https://www.openthoughts.ai/blog/ot3)이 공개되었습니다. OpenThinker3-7B 모델은 해당 규모에서 SOTA 오픈 데이터 추론 모델로, 강화학습 없이 순수 지도학습만으로 놀라운 성능을 달성했습니다.

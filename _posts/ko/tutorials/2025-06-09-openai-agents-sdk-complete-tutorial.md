@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 AI 에이전트는 더 이상 먼 미래의 이야기가 아닙니다. OpenAI가 2025년 3월에 발표한 Agents SDK를 통해 누구나 강력한 AI 에이전트를 쉽게 개발할 수 있게 되었습니다. 이 가이드에서는 기초부터 실제 애플리케이션 구축까지 모든 과정을 상세히 다뤄보겠습니다.

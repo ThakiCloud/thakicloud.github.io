@@ -16,6 +16,7 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/autoscraper-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

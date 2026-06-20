@@ -21,6 +21,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/chat-ollama-complete-tutorial-korean-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

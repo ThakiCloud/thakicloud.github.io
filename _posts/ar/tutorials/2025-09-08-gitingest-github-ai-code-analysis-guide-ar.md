@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/gitingest-github-ai-code-analysis-guide/"
 lang: ar
 permalink: /ar/tutorials/gitingest-github-ai-code-analysis-guide/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

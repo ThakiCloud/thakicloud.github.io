@@ -18,6 +18,7 @@ author_profile: true
 toc: true
 toc_label: "Neo4j 튜토리얼"
 canonical_url: "https://thakicloud.github.io/tutorials/neo4j-complete-tutorial/"
+published: false
 ---
 
 Neo4j는 세계에서 가장 인기 있는 그래프 데이터베이스입니다. 관계형 데이터베이스와 달리 노드(Node)와 관계(Relationship)로 데이터를 저장하여, 복잡한 관계를 직관적으로 표현하고 빠르게 탐색할 수 있습니다.

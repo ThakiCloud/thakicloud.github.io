@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 ## Kent Beck이 말하는 AI 시대의 코딩: TDD가 '슈퍼파워'가 되는 이유

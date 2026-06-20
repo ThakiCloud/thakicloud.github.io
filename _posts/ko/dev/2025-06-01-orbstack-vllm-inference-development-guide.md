@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 macOS에서 AI 모델 추론 서비스를 개발할 때 Docker Desktop은 무겁고 리소스를 많이 사용합니다. **OrbStack**은 이런 문제를 해결해주는 혁신적인 대안입니다. 이번 포스트에서는 OrbStack을 사용해 가볍고 빠른 Kubernetes 환경을 구축하고, Helm을 활용해 vLLM 추론 서비스를 개발하는 전 과정을 신입 개발자 관점에서 상세히 안내해드리겠습니다.

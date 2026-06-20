@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 AI 개발 도구들이 어떻게 작동하는지 궁금하셨나요? 유명한 AI 코딩 어시스턴트들의 내부 시스템 프롬프트가 어떻게 구성되어 있는지 알고 싶으셨나요? 그렇다면 오늘 소개할 프로젝트가 여러분에게 큰 도움이 될 것입니다.

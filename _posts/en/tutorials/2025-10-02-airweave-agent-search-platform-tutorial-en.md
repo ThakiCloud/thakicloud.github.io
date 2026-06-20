@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/airweave-agent-search-platform-tutorial/"
 lang: en
 permalink: /en/tutorials/airweave-agent-search-platform-tutorial/
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

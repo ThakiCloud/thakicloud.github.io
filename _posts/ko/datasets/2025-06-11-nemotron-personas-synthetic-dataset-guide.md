@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 NVIDIA가 공개한 **Nemotron-Personas**는 실제 인구 통계학적 분포를 정확히 반영한 혁신적인 합성 페르소나 데이터셋입니다. 100,000개의 다양한 인물 프로필로 구성된 이 데이터셋은 AI 모델의 편향을 줄이고 데이터 다양성을 크게 향상시키는 게임체인저 역할을 하고 있습니다.

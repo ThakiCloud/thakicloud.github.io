@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: CrewAI 가이드
+published: false
 ---
 
 AI 에이전트들이 서로 협력하여 복잡한 작업을 수행하는 모습을 상상해본 적이 있나요? CrewAI는 바로 이런 꿈을 현실로 만들어주는 혁신적인 프레임워크입니다. 오늘은 32,000개 이상의 GitHub 스타를 받으며 개발자들의 주목을 받고 있는 CrewAI에 대해 깊이 있게 살펴보겠습니다.

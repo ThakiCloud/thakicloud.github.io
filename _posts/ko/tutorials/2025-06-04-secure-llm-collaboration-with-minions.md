@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 최근 Stanford의 Hazy Research Lab은 로컬 LLM과 클라우드 LLM을 **프라이버시를 지키면서 연동**할 수 있는 오픈소스 프레임워크, **Minions (ICML 2025)**를 발표했습니다. 이 프로젝트는 Ollama와 같은 로컬 모델을 GPT-4o 등 프론티어 모델과 연결하여 **비용을 최대 30배 절감하면서도 GPT-4 수준의 성능을 달성**합니다. 특히 NVIDIA H100 GPU의 **confidential computing** 기능을 활용한 **보안 강화 버전(MinionS)**도 함께 공개되어 주목받고 있습니다.

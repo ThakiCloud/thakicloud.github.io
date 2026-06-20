@@ -21,6 +21,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/owm/ling-flash-2-0-comprehensive-model-review/
 canonical_url: "https://thakicloud.github.io/ko/owm/ling-flash-2-0-comprehensive-model-review/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

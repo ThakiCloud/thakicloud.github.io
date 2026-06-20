@@ -17,6 +17,7 @@ author_profile: true
 # toc: true
 # toc_label: "Table of Contents"
 # comments: true
+published: false
 ---
 
 ## [프라이빗 클라우드 & IaaS] 게시물 작성 가이드

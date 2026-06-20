@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 toc_label: Hunyuan-A13B 가이드
 canonical_url: "https://thakicloud.github.io/owm/llmops/hunyuan-a13b-instruct-comprehensive-guide/"
+published: false
 ---
 
 텐센트에서 공개한 **Hunyuan-A13B-Instruct**는 혁신적인 Mixture-of-Experts(MoE) 아키텍처를 기반으로 구축된 오픈소스 대형 언어모델입니다. 총 80억 개의 파라미터 중 13억 개만 활성화하여 높은 성능과 효율성을 동시에 달성한 차세대 모델로 주목받고 있습니다.

@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/pandocx-file-converter-tutorial/"
 lang: en
 permalink: /en/tutorials/pandocx-file-converter-tutorial/
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

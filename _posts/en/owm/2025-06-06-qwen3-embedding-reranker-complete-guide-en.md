@@ -22,6 +22,7 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/qwen3-embedding-reranker-complete-guide/"
 lang: en
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

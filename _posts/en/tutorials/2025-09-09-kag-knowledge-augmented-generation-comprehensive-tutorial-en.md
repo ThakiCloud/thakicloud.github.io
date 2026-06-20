@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/kag-knowledge-augmented-generation-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/kag-knowledge-augmented-generation-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

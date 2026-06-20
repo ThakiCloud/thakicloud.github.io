@@ -19,6 +19,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/hands-on-large-language-models-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/hands-on-large-language-models-complete-tutorial-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

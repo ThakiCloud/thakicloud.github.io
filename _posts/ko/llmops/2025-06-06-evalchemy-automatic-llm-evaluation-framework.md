@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 LLM 개발과 배포에서 가장 중요한 과정 중 하나인 모델 평가를 자동화하고 표준화하는 혁신적인 도구, [Evalchemy](https://github.com/mlfoundations/Evalchemy)를 소개합니다. ML Foundations에서 개발한 이 프레임워크는 다양한 벤치마크를 통한 LLM 자동 평가를 간편하고 효율적으로 만들어줍니다.

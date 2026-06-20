@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 Ollama의 최신 업데이트로 스트리밍과 툴 콜링이 동시에 가능해졌습니다. 이제 macOS에서 완전히 로컬 환경으로 실시간 대화형 AI 에이전트를 구축할 수 있게 되었습니다. 이번 글에서는 새로운 기능들을 살펴보고, 실제 개발 환경을 구축하는 방법을 단계별로 안내하겠습니다.

@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 AI 개발에 관심이 있는 개발자들에게 정말 유용한 오픈소스 프로젝트를 소개하려고 합니다. **Awesome LLM Apps**는 RAG, AI 에이전트, 멀티 에이전트 팀, MCP, 음성 에이전트 등을 활용한 LLM 애플리케이션들을 한곳에 모아놓은 큐레이션 컬렉션입니다.

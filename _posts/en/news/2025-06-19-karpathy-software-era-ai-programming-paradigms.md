@@ -17,6 +17,7 @@ toc_label: "Key Contents"
 lang: en
 permalink: /en/news/karpathy-software-era-ai-programming-paradigms/
 canonical_url: "https://thakicloud.github.io/en/news/karpathy-software-era-ai-programming-paradigms/"
+published: false
 ---
 
 <figure class="video-container">

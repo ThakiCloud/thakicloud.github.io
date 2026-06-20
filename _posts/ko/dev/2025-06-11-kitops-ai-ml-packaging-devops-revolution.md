@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "KitOps 가이드"
+published: false
 ---
 
 AI/ML 프로젝트에서 **모델, 데이터셋, 코드, 설정을 어떻게 효율적으로 관리하고 배포할까요?** KitOps는 이 문제를 해결하는 혁신적인 오픈소스 DevOps 도구입니다. **OCI(Open Container Initiative) 표준을 활용**해 기존 컨테이너 레지스트리와 완벽하게 호환되면서, AI/ML 프로젝트의 전체 라이프사이클을 단순화합니다.

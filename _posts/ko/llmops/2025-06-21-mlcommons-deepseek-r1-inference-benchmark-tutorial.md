@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "MLCommons DeepSeek-R1 벤치마크"
+published: false
 ---
 
 ## 개요

@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 학술 포스터 제작은 연구자들에게 중요하지만 시간이 많이 소요되는 작업입니다. 긴 논문을 시각적으로 일관성 있는 한 페이지로 압축하는 것은 쉽지 않은 일이죠. **Paper2Poster**는 이러한 문제를 해결하기 위해 개발된 최초의 자동화된 포스터 생성 시스템입니다.

@@ -19,6 +19,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
+published: false
 ---
 
 ## Kent Beck on Coding in the AI Era: Why TDD Becomes a 'Superpower'

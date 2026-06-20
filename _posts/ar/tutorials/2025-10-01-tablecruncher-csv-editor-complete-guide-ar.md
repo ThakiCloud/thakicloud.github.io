@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/tablecruncher-csv-editor-complete-guide/"
 lang: ar
 permalink: /ar/tutorials/tablecruncher-csv-editor-complete-guide/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

@@ -19,6 +19,7 @@ toc_label: "튜토리얼 목차"
 lang: ko
 permalink: /ko/tutorials/ccpm-claude-code-project-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/ccpm-claude-code-project-management-tutorial/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

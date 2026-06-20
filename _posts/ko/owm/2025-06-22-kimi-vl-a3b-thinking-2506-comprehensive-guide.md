@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Kimi-VL-A3B-Thinking-2506 가이드"
+published: false
 ---
 
 ## 모델 개요

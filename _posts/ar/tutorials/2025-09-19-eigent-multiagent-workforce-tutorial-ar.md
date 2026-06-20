@@ -20,6 +20,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "محتويات الدرس"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

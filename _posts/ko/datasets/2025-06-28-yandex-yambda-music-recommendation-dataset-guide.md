@@ -22,6 +22,7 @@ author_profile: true
 toc: true
 toc_label: "Yambda 데이터셋 가이드"
 canonical_url: "https://thakicloud.github.io/yandex-yambda-music-recommendation-dataset-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

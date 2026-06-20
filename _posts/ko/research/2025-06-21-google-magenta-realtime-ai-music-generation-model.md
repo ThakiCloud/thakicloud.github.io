@@ -16,6 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Magenta RealTime 가이드"
+published: false
 ---
 
 ## 실시간 AI 음악 생성의 혁신

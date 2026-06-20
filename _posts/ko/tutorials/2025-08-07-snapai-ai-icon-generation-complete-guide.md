@@ -25,6 +25,7 @@ toc_icon: "magic"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/snapai-ai-icon-generation-complete-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

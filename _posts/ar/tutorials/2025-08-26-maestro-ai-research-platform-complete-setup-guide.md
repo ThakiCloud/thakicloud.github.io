@@ -23,6 +23,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/maestro-ai-research-platform-complete-setup-guide/"
 lang: ar
 permalink: /ar/tutorials/maestro-ai-research-platform-complete-setup-guide/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

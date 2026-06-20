@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 음성 합성(TTS) 기술이 급속도로 발전하면서, 이제 개인 개발자도 고품질의 음성 생성 시스템을 사용할 수 있게 되었습니다. **Chatterbox TTS**는 Resemble AI에서 개발한 최초의 프로덕션급 오픈소스 TTS 모델로, ElevenLabs와 같은 상용 서비스와 비교해도 뛰어난 성능을 보여줍니다.

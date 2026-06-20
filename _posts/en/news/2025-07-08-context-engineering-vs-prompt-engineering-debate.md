@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.github.io/en/news/context-engineering-vs-prom
 reading_time: true
 lang: en
 permalink: /en/news/context-engineering-vs-prompt-engineering-debate/
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

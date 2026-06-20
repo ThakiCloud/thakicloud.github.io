@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AceReason-1.1-SFT 가이드"
+published: false
 ---
 
 ## 개요

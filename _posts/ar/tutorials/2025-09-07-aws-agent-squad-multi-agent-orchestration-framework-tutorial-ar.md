@@ -21,6 +21,7 @@ toc_label: "محتويات الدليل"
 lang: ar
 permalink: /ar/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

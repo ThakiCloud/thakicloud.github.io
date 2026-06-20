@@ -22,6 +22,7 @@ toc: true
 toc_label: "DeepSeek-R1 FP4 Guide"
 canonical_url: "https://thakicloud.github.io/en/owm/nvidia-deepseek-r1-fp4-quantized-model-guide/"
 lang: en
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

@@ -21,6 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/deepseek-r1-0528-qwen3-8b-smaller-version/"
 lang: en
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 6 minutes

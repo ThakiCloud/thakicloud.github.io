@@ -21,6 +21,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/langextract-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/langextract-comprehensive-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

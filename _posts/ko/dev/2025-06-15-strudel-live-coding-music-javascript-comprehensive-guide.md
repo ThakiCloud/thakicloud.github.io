@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 ## Strudel: 코드로 음악을 만드는 새로운 패러다임

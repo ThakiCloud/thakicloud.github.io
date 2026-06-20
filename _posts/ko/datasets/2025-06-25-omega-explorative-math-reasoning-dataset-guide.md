@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "OMEGA Explorative 데이터셋"
+published: false
 ---
 
 ## 개요

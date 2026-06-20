@@ -18,6 +18,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-ui-next-generation-ai-interface-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

@@ -20,6 +20,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

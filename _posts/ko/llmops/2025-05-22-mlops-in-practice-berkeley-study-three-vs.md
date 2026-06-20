@@ -11,6 +11,7 @@ tags:
   - Cloud
   - Thaki Cloud
 author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
+published: false
 ---
 
 ## MLOps 현장 속으로 — UC Berkeley 인터뷰 연구로 본 성공 전략, 난제, 그리고 미래 🌐🚀

@@ -18,6 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
+published: false
 ---
 
 ## رؤية الرئيس التنفيذي لـ Google DeepMind لمستقبل الذكاء العام الاصطناعي: عصر 'الوفرة الجذرية' قادم

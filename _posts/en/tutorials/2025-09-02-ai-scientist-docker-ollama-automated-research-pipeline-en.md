@@ -24,6 +24,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/"
 lang: en
 permalink: /en/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 18 minutes

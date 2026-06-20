@@ -21,6 +21,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/motia-modern-backend-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/motia-modern-backend-framework-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

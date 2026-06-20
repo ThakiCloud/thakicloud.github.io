@@ -19,6 +19,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/google-adk-samples-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/google-adk-samples-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

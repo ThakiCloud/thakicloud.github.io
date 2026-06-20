@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ollama-app-complete-guide/"
 lang: ar
 permalink: /ar/tutorials/ollama-app-complete-guide/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

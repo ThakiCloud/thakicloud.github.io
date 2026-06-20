@@ -30,6 +30,7 @@ header:
   overlay_filter: 0.5
 canonical_url: "https://thakicloud.github.io/tutorials/supabase-complete-fullstack-tutorial-macos/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

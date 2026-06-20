@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: VibeOps 가이드
+published: false
 ---
 
 개발의 새로운 패러다임이 등장했습니다. AI Tinkerers London에서 ACI.dev 팀이 선보인 **"VibeOps"**는 단일 MCP 서버만으로 Cursor를 Lovable처럼 강력한 도구로 변신시키는 혁신적인 접근법입니다. 이제 비기술적이거나 반기술적인 빌더들도 아이디어에서 배포까지 전체 개발 루프를 devOps 지식 없이 완성할 수 있게 되었습니다.

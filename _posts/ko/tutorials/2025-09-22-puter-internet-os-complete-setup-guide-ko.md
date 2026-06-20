@@ -21,6 +21,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/puter-internet-os-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/puter-internet-os-complete-setup-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

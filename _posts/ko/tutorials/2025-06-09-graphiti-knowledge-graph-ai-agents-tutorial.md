@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 AI 에이전트의 메모리와 지식 관리는 점점 중요해지고 있습니다. 특히 실시간으로 변화하는 정보를 효과적으로 저장하고 검색할 수 있는 시스템이 필요합니다. Graphiti는 이러한 요구사항을 충족하는 실시간 지식 그래프 구축 도구로, AI 에이전트에게 강력한 메모리 시스템을 제공합니다.

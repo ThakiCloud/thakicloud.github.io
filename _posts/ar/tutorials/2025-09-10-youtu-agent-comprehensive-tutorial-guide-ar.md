@@ -20,6 +20,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/youtu-agent-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/youtu-agent-comprehensive-tutorial-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

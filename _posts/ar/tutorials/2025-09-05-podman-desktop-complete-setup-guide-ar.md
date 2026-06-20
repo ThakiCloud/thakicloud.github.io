@@ -20,6 +20,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

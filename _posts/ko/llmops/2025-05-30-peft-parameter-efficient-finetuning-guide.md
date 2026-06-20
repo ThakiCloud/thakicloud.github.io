@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "PEFT 완전 가이드"
+published: false
 ---
 
 > **TL;DR** [PEFT (Parameter-Efficient Fine-Tuning)](https://github.com/huggingface/peft)는 🤗Hugging Face의 **파라미터 효율적 파인튜닝 라이브러리**다. LoRA, AdaLoRA, IA3 등을 통해 **전체 파라미터의 0.2%만 학습**해도 전체 파인튜닝과 **동등한 성능**을 달성한다. **1만 8천 개 이상의 GitHub 스타**를 받으며 메모리 부족 문제를 해결하는 업계 표준 솔루션이 되었다.

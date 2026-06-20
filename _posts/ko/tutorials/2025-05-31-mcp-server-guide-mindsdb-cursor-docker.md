@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 오늘 우리는 200개가 넘는 방대한 로컬 데이터 소스에 연결할 수 있는 강력한 MCP(MindsDB Control Protocol) 서버를 구축하는 여정을 시작하겠습니다. 이 서버는 분산된 데이터를 통합적으로 관리하고 활용하는 데 핵심적인 역할을 수행할 것입니다.

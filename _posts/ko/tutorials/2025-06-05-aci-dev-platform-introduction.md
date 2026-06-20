@@ -17,6 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: ACI.dev 플랫폼 가이드
+published: false
 ---
 
 AI 에이전트 개발의 새로운 패러다임을 제시하는 오픈소스 플랫폼, [ACI.dev](https://github.com/aipotheosis-labs/aci)를 소개합니다. 이 플랫폼은 AI 에이전트가 600개 이상의 도구와 서비스에 안전하고 효율적으로 연결할 수 있도록 하는 통합 인프라를 제공하며, 이미 GitHub에서 3.8k개의 스타를 받으며 개발자들의 주목을 받고 있습니다.

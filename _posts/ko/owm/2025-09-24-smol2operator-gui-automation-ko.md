@@ -18,6 +18,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/owm/smol2operator-gui-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/smol2operator-gui-automation/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

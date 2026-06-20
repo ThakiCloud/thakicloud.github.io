@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: Google AI Edge Gallery Guide
+published: false
 ---
 
 ## 개요

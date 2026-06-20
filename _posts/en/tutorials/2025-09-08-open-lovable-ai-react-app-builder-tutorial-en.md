@@ -19,6 +19,7 @@ toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/open-lovable-ai-react-app-builder-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/open-lovable-ai-react-app-builder-tutorial/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

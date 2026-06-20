@@ -11,6 +11,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
+published: false
 ---
 
 OpenAI GPT-4o의 강력한 이미지 생성 기능을 활용하여 실사 이미지를 귀여운 3D 이모지 스타일로 변환하는 방법을 알아보겠습니다. 이 튜토리얼에서는 토스터 이미지를 예시로 사용하여 단계별로 설명하고, 폴더 내 모든 이미지를 자동으로 변환하는 프로그램도 함께 제공합니다.

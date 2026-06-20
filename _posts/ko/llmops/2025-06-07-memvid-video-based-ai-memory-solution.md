@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Memvid 완전 가이드"
+published: false
 ---
 
 ## Memvid 소개

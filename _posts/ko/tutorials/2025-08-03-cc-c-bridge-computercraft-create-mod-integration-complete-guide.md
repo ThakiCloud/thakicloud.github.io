@@ -27,6 +27,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/cc-c-bridge-computercraft-create-mod-integration-complete-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

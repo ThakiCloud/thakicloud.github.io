@@ -19,6 +19,7 @@ author_profile: true
 # toc: true
 # toc_label: "Table of Contents"
 # comments: true
+published: false
 ---
 
 > **업데이트 핵심** – 2025‑05‑15 릴리스(버전 0.50) 이후 **.mdc** 포맷이 Project Rules의 표준이 되었고, 규칙 파일 위치가 **`.cursor/rules`** 로 고정되었습니다. 또한 **Tab Model**, **Background Agent**, **Max Mode** 등 대규모 기능 추가로 멀티‑파일 리팩터링과 병렬 작업 지원이 향상되었습니다. **Claude‑4 Sonnet** 모델은 프론트엔드/UX 로직에서 가장 안정적인 품질을 보여 신속한 UI 프로토타이핑에 권장됩니다.

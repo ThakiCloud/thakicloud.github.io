@@ -21,6 +21,7 @@ toc_label: "محتويات الدليل"
 lang: ar
 permalink: /ar/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 20 دقيقة

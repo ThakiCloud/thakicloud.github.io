@@ -19,6 +19,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

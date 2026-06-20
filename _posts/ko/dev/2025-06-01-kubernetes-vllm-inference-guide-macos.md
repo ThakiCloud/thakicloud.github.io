@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 AI 모델 추론 서비스를 Kubernetes 환경에서 운영하는 것은 현대 AI 개발의 핵심 스킬입니다. 특히 vLLM은 대규모 언어 모델의 고성능 추론을 위한 최고의 도구 중 하나입니다. 이번 포스트에서는 macOS 환경에서 Kubernetes 클러스터를 구축하고, vLLM을 사용한 추론 서비스를 개발하는 전 과정을 신입 개발자 관점에서 상세히 안내해드리겠습니다.

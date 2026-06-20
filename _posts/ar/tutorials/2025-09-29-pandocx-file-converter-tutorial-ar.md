@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/pandocx-file-converter-tutorial/"
 lang: ar
 permalink: /ar/tutorials/pandocx-file-converter-tutorial/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

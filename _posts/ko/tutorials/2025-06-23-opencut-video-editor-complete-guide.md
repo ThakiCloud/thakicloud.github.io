@@ -19,6 +19,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "OpenCut 완전 가이드"
+published: false
 ---
 
 ## OpenCut 소개

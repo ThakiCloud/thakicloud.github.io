@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/mcp-ui-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcp-ui-complete-tutorial-guide/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

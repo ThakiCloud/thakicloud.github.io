@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: Mem0 가이드
+published: false
 ---
 
 AI 에이전트가 사용자의 대화를 기억하고 개인화된 응답을 제공한다면 어떨까요? Mem0는 바로 이런 꿈을 현실로 만들어주는 혁신적인 메모리 레이어입니다. 34,000개 이상의 GitHub 스타를 받으며 주목받고 있는 Mem0에 대해 깊이 있게 알아보겠습니다.

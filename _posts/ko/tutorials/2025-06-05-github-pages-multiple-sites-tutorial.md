@@ -12,6 +12,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 GitHub Pages는 개발자들이 무료로 정적 사이트를 호스팅할 수 있는 훌륭한 서비스입니다. 하지만 많은 사용자들이 이미 `https://username.github.io` 형태의 메인 사이트를 운영하고 있을 때, 추가 프로젝트 사이트를 어떻게 구성해야 할지 궁금해합니다. 이 글에서는 GitHub Pages의 URL 구조를 이해하고, 하나의 저장소에서 여러 하위 페이지를 효율적으로 관리하는 방법을 알아보겠습니다.

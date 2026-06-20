@@ -20,6 +20,7 @@ toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/tutorials/xpander-ai-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/xpander-ai-complete-guide/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

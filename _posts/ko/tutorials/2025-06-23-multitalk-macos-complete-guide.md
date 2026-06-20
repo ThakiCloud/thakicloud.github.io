@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "MultiTalk 맥북 가이드"
+published: false
 ---
 
 ## MultiTalk 소개

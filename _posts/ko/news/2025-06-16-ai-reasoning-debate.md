@@ -11,6 +11,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
+published: false
 ---
 
 ## 서론

@@ -20,6 +20,7 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/claude-code-cookbook-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-cookbook-comprehensive-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

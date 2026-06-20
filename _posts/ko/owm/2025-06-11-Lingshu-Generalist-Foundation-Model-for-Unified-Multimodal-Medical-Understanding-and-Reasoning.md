@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 최근 멀티모달 대규모 언어 모델(MLLM)들이 일반적인 시각적 요소들을 이해하는 데 인상적인 성능을 보여주고 있지만, 의료 분야에서의 활용은 여전히 제한적입니다. 이러한 문제를 해결하기 위해 알리바바 DAMO Academy에서 의료 전문 MLLM인 **Lingshu**를 개발했습니다.

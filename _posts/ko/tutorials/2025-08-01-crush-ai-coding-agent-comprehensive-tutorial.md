@@ -24,6 +24,7 @@ toc_icon: "robot"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/crush-ai-coding-agent-comprehensive-tutorial/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
