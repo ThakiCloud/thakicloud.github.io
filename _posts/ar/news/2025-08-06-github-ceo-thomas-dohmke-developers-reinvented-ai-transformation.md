@@ -28,6 +28,7 @@ canonical_url: "https://thakicloud.github.io/ar/news/github-ceo-thomas-dohmke-de
 reading_time: true
 lang: ar
 permalink: /ar/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

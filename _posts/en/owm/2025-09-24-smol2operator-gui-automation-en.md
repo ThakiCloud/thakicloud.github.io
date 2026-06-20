@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/smol2operator-gui-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/smol2operator-gui-automation/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

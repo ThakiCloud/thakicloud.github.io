@@ -20,6 +20,7 @@ toc_label: "فهرس المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/longcat-flash-thinking-sota-reasoning-model/"
 lang: ar
 permalink: /ar/owm/longcat-flash-thinking-sota-reasoning-model/
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

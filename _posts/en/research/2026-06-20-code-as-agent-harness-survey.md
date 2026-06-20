@@ -1,0 +1,103 @@
+---
+title: "Code as Agent Harness: A Three-Layer Framework for AI Agent Infrastructure (arXiv:2605.18747)"
+excerpt: "An analysis of a survey that systematizes how code functions as the foundational infrastructure for AI agent systems, organized into three layers: harness interface, harness mechanism, and multi-agent coordination."
+seo_title: "Code-Based AI Agent Harness Architecture Survey Analysis - Thaki Cloud"
+seo_description: "arXiv 2605.18747 Code as Agent Harness survey: deep analysis of the three-layer agent infrastructure framework, planning and adaptive control, multi-agent coordination, and open safety challenges."
+date: 2026-06-20
+last_modified_at: 2026-06-20
+categories:
+  - research
+tags:
+  - ai-agent
+  - agent-harness
+  - code-agent
+  - multi-agent
+  - llm
+  - arxiv-2605.18747
+  - survey
+  - agent-infrastructure
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_icon: "cog"
+toc_sticky: true
+canonical_url: "https://thakicloud.github.io/en/research/code-as-agent-harness-survey/"
+lang: en
+reading_time: true
+---
+
+⏱️ **Estimated reading time**: 8 min
+
+## The Question the Survey Answers
+
+Anyone who has built agent systems recognizes recurring patterns: how the agent interacts with its environment, how it forms and revises plans, how multiple agents cooperate. These patterns are scattered across papers and systems without a common vocabulary.
+
+arXiv:2605.18747, "Code as Agent Harness," brings these patterns under one framework. The central claim is that code functions as the foundational infrastructure of AI agent systems. Code connects agents to their reasoning engines, defines the interface to the environment, and enables multi-agent coordination. The survey analyzes this role through three layers.
+
+## The Three-Layer Framework
+
+### Layer 1: Harness Interface
+
+The first layer deals with how an agent is positioned between its reasoning engine (the LLM) and the environment. Code here defines interfaces in two directions simultaneously.
+
+Toward the LLM, it specifies the input format the model should receive, the output format it should produce, and the signatures of callable tools. Toward the environment, it handles the execution layer that interacts with file systems, APIs, databases, GUIs, and external services.
+
+When this interface layer is well designed, agent logic and the execution environment are decoupled. The execution environment can be swapped without touching agent logic, and the same agent code can drive a test environment and a production environment.
+
+### Layer 2: Harness Mechanism
+
+The second layer covers the mechanisms an agent uses when performing complex tasks. Planning and adaptive control are at the center.
+
+Planning is the process of decomposing a long-horizon goal into short-horizon executable steps. In a code-based harness, there is a concrete advantage when the output of planning itself is executable code: the translation cost between planning and execution decreases.
+
+Adaptive control is how the agent handles exceptions and failures during execution. When an agent following a plan encounters an unexpected situation, what does it do? Retry, search for an alternative path, and escalate to a human are patterns that belong here.
+
+### Layer 3: Multi-Agent Coordination
+
+The third layer covers how multiple agents cooperate. Tasks too hard for a single agent are distributed across multiple agents, results are aggregated, and dependencies between agents are managed.
+
+When code serves as the harness, multi-agent coordination is expressed naturally. Each agent can be treated as a function or a service, and coordination logic can be written in ordinary programming patterns.
+
+## Application Domains
+
+The survey analyzes coding assistants, GUI automation, scientific discovery, and enterprise workflows as the main application domains.
+
+**Coding assistants.** Agents that perform code generation, bug fixes, and test writing. Code execution results provide an immediate feedback signal, making this a favorable environment for agent learning.
+
+**GUI automation.** Agents that directly operate browsers, desktop apps, and mobile apps. Recognizing screen elements and generating interaction code are the core challenges.
+
+**Scientific discovery.** Agents that assist with experiment design, data analysis, and result interpretation. Code-based harnesses are useful for iterative experimentation and hypothesis testing.
+
+**Enterprise workflows.** Automation that connects multiple SaaS services and internal systems. API integration and data flow management are the primary concerns.
+
+## Open Challenges
+
+The open challenges the survey identifies are grounded in reality.
+
+**Evaluation methods.** How do you measure agent performance? Single-task accuracy is not enough. Multi-dimensional evaluation covering adaptation speed to new environments, failure recovery capability, and resource efficiency is needed.
+
+**Verification strategies.** How do you ensure that code and plans generated by an agent behave as intended? Combinations of static analysis before execution, sandbox execution, and formal verification are discussed.
+
+**Safety.** How do you prevent an agent from causing unintended side effects? Permission management, execution isolation, and cancellation mechanisms are central.
+
+## ThakiCloud Platform Perspective
+
+The three-layer framework of this survey is a useful reference for ThakiCloud when designing an agent platform.
+
+Looking at the current `ai-platform-strategy` repository structure, these layers already exist implicitly. Skill definitions under `.claude/skills/` correspond to the harness interface. Execution code under `scripts/` implements harness mechanisms. Orchestrator skills handle multi-agent coordination.
+
+The difference is that this structure formed incrementally rather than through explicit architectural decisions. Applying the survey's framework to evaluate the current structure makes it straightforward to identify what is well designed and what is fragile.
+
+**From the harness interface perspective:** it is worth checking whether skill YAML frontmatter defines tool signatures consistently. The `skill-description-quality` rule already covers this area.
+
+**From the harness mechanism perspective:** `pge-loop` and `dev-loop` implement adaptive control mechanisms. The question is whether failure detection, retry, and escalation paths are clearly defined.
+
+**From the multi-agent coordination perspective:** 55 specialized subagents exist, but whether the dependency graph between agents is managed explicitly is the key to scalability.
+
+## Closing Thoughts
+
+"Code as Agent Harness" is a useful map for teams starting to design agent systems. It organizes which problems belong at which layer, which patterns are validated, and which questions remain open.
+
+Survey papers have inherent limits: broad coverage means specific design decisions require going back to the original papers. But as a starting point for building a systematic understanding of agent infrastructure, this survey is worth the time.
+
+Original paper: [https://arxiv.org/abs/2605.18747](https://arxiv.org/abs/2605.18747)

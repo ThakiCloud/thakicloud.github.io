@@ -18,6 +18,7 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/owm/alibaba-logics-parsing-document-ai-workflow/
 canonical_url: "https://thakicloud.github.io/ar/owm/alibaba-logics-parsing-document-ai-workflow/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

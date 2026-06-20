@@ -21,6 +21,7 @@ toc_label: "Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/qwen3-omni-audio-captioner-workflow-automation/"
 lang: en
 permalink: /en/owm/qwen3-omni-audio-captioner-workflow-automation/
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

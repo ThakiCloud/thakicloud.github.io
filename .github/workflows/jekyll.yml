@@ -25,9 +25,11 @@ jobs:
         run: |
           echo "=== Filtering posts to reduce build size ==="
           
-          # 대량 카테고리 목록 (최신 15개만 유지)
-          LIMIT_CATEGORIES=("agentops" "tutorials" "dev" "owm" "research")
-          KEEP_COUNT=15
+          # 빌드 크기 백스톱. 실제 게이트는 front-matter published:false
+          # (tech-blog-manager의 250/lang cap). 여기선 파일 수만 넉넉히 제한.
+          # KEEP_COUNT는 카테고리별 published 상한(research 30 등)보다 커야 한다.
+          LIMIT_CATEGORIES=("agentops" "tutorials" "dev" "owm" "research" "llmops")
+          KEEP_COUNT=40
           
           for lang in ko en ar; do
             for category in "${LIMIT_CATEGORIES[@]}"; do

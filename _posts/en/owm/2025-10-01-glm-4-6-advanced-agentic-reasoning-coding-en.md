@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/glm-4-6-advanced-agentic-reasoning-coding/"
 lang: en
 permalink: /en/owm/glm-4-6-advanced-agentic-reasoning-coding/
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 minutes

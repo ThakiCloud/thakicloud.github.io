@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/owm/smol2operator-gui-automation/
 canonical_url: "https://thakicloud.github.io/ar/owm/smol2operator-gui-automation/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

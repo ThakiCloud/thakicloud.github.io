@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/granite-4-micro-enterprise-workflow-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/granite-4-micro-enterprise-workflow-automation/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

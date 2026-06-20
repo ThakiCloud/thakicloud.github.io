@@ -19,6 +19,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/glm-45-air-intelligent-agent-model-introduction/
 canonical_url: "https://thakicloud.github.io/en/owm/glm-45-air-intelligent-agent-model-introduction/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

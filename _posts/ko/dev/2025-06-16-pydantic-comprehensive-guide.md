@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: Pydantic 완벽 가이드
+published: false
 ---
 
 ## 개요

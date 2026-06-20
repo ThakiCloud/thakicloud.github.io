@@ -18,6 +18,7 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

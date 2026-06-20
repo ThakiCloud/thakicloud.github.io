@@ -18,6 +18,7 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/tiny-reasoning-language-model-trl-135m-guide/"
 lang: ar
 permalink: /ar/owm/tiny-reasoning-language-model-trl-135m-guide/
+published: false
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق
