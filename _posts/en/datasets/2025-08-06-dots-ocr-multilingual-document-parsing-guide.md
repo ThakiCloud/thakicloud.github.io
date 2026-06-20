@@ -25,7 +25,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 lang: en
-published: true
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 min

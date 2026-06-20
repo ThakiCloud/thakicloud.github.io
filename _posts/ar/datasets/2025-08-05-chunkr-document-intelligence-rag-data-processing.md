@@ -26,7 +26,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/chunkr-document-intelligence-rag-data-processing/"
 reading_time: true
 lang: ar
-published: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

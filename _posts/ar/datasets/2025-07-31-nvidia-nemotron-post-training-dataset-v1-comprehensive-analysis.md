@@ -25,7 +25,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-nemotron-post-training-dataset-v1-comprehensive-analysis/"
 reading_time: true
 lang: ar
-published: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق

@@ -27,6 +27,8 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 7분
 
+![주제 한 줄에서 판매용 이북까지 자동화 파이프라인 개념도](/assets/images/ai-ebook-pipeline-hero.png)
+
 이번 글은 책 내용 소개가 아니다. 책 한 권을 만드는 과정 전체를 스킬 하나로 묶으면 어디까지 자동화되는지에 대한 기록이다. 지난 6일간 `ai-ebook-launch` 스킬로 한국어 이북 5권이 나왔다. 흥미로운 지점은 "무슨 책을 썼나"가 아니라 "주제 한 줄에서 판매 직전 상태까지 어떤 단계가 사람 손 없이 굴러갔나"에 있다.
 
 ## 무엇을 만드는 스킬인가
@@ -64,13 +66,15 @@ outputs/<niche-slug>/
 
 스킬을 돌린 결과물의 메타데이터를 보면 이렇다.
 
-| 제목 | 포맷 | PDF 크기 | 생성일 |
-|---|---|---|---|
-| 욕망을 읽는 10가지 시장의 법칙 (v2) | 한국어 ebook.pdf | 2.9 MB | 6/18 |
-| 사람을 읽는 22가지 마음의 법칙 | 한국어 ebook.pdf | 261 KB | 6/18 |
-| 욕망을 읽는 10가지 시장의 법칙 (v1) | 한국어 ebook.pdf | 216 KB | 6/18 |
-| 주린이를 위한 투자 전략 교과서 | 한국어 book-ko | (PDF 미생성) | 6/16 |
-| 부의 지수 함수 | 한국어 ebook.pdf | book-pipeline | 6/19 |
+| 제목 | 포맷 | PDF 크기 | 생성일 | 샘플 |
+|---|---|---|---|---|
+| 욕망을 읽는 10가지 시장의 법칙 (v2) | 한국어 ebook.pdf | 2.9 MB | 6/18 | [PDF 보기](https://drive.google.com/file/d/1LUDP2cVE4dpdRfn7X5hjYRMxqGrlzJbp/view) |
+| 사람을 읽는 22가지 마음의 법칙 | 한국어 ebook.pdf | 261 KB | 6/18 | [PDF 보기](https://drive.google.com/file/d/1jRDO9deuRhuyuq7FvKdjT1PwV6s0omj-/view) |
+| 부의 지수 함수 | 한국어 ebook.pdf | 88 KB | 6/19 | [PDF 보기](https://drive.google.com/file/d/1wi0bIwAPA8DiwxI_fQaxoFPCXHZqEJNL/view) |
+| 욕망을 읽는 10가지 시장의 법칙 (v1) | 한국어 ebook.pdf | 216 KB | 6/18 | (샘플 생략) |
+| 주린이를 위한 투자 전략 교과서 | 한국어 book-ko | (PDF 미생성) | 6/16 | (PDF 미생성) |
+
+실제 산출물 PDF 세 권을 Google Drive에 공개로 올려 두었다. 위 "PDF 보기" 링크로 스킬이 뽑은 결과물을 직접 확인할 수 있다.
 
 PDF 크기가 216 KB에서 2.9 MB까지 벌어진다. 챕터 수와 이미지 밀도 차이다. 같은 주제를 v1, v2로 두 번 돌린 흔적도 보인다. 한 번에 완성본이 나온다기보다, 빠르게 뽑고 다시 돌리는 쪽에 가깝다.
 

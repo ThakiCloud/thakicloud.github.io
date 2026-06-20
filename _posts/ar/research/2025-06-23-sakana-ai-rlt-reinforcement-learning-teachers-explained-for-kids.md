@@ -16,6 +16,7 @@ toc: true
 toc_label: "دليل RLT"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/sakana-ai-rlt-reinforcement-learning-teachers-explained-for-kids/"
+published: false
 ---
 
 ## مقدمة
