@@ -45,7 +45,7 @@ lang: ko
 }
 
 .search-header h1 {
-  color: #e0e0e0;
+  color: var(--text);
   margin-bottom: 10px;
 }
 
@@ -64,14 +64,14 @@ lang: ko
   font-size: 16px;
   outline: none;
   font-family: inherit;
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: var(--surface);
+  color: var(--text);
 }
 
 #search-button {
   padding: 15px 25px;
-  background: #90caf9;
-  color: #212121;
+  background: var(--accent);
+  color: var(--bg);
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -84,7 +84,7 @@ lang: ko
 }
 
 #search-button:hover {
-  background: #2980b9;
+  background: var(--accent-hover);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
 }
@@ -109,8 +109,8 @@ lang: ko
 }
 
 .search-suggestions {
-  background: #2a2a2a;
-  border: 1px solid #424242;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -119,13 +119,13 @@ lang: ko
 .suggestion-item {
   padding: 10px 15px;
   cursor: pointer;
-  border-bottom: 1px solid #424242;
-  color: #ffffff;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
 }
 
 .suggestion-item:hover {
-  background: #90caf9;
-  color: #212121;
+  background: var(--accent);
+  color: var(--bg);
 }
 
 .suggestion-item:last-child {
@@ -134,7 +134,7 @@ lang: ko
 
 .search-stats {
   text-align: center;
-  color: #b0b0b0;
+  color: var(--text-muted);
   margin-bottom: 20px;
   font-size: 14px;
 }
@@ -144,8 +144,8 @@ lang: ko
 }
 
 .search-result-item {
-  background: #2a2a2a;
-  border: 1px solid #424242;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 15px;
@@ -163,23 +163,23 @@ lang: ko
 }
 
 .result-title a {
-  color: #90caf9;
+  color: var(--accent);
   text-decoration: none;
 }
 
 .result-title a:hover {
-  color: #64b5f6;
+  color: var(--accent);
 }
 
 .result-meta {
   font-size: 14px;
-  color: #b0b0b0;
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .result-snippet {
   line-height: 1.6;
-  color: #e0e0e0;
+  color: var(--text);
 }
 
 .result-tags {
@@ -188,8 +188,8 @@ lang: ko
 
 .tag {
   display: inline-block;
-  background: #424242;
-  color: #ffffff;
+  background: var(--border);
+  color: var(--text);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -200,35 +200,35 @@ lang: ko
 .no-results {
   text-align: center;
   padding: 40px;
-  color: #b0b0b0;
+  color: var(--text-muted);
 }
 
 .loading {
   text-align: center;
   padding: 20px;
-  color: #b0b0b0;
+  color: var(--text-muted);
 }
 
 mark {
-  background: #90caf9;
-  color: #212121;
+  background: var(--accent);
+  color: var(--bg);
   padding: 2px 4px;
   border-radius: 3px;
   font-weight: bold;
 }
 
 .search-tips {
-  background: #212121;
-  border: 1px solid #424242;
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
   margin-top: 30px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .search-tips h3 {
   margin-top: 0;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .search-tips ul {
@@ -238,7 +238,7 @@ mark {
 
 .search-tips li {
   margin-bottom: 5px;
-  color: #6c757d;
+  color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
@@ -255,7 +255,7 @@ mark {
   }
   
   #search-input {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
   }
 }
 </style>
