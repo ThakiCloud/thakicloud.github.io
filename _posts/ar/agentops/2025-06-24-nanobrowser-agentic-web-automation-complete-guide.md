@@ -20,6 +20,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/agentops/nanobrowser-agentic-web-automation-complete-guide/"
+published: false
 ---
 
 ## نظرة عامة
