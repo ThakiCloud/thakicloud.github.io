@@ -1,8 +1,8 @@
 ---
-title: "GPU를 더 사도 안 풀린다: llm-d 분산추론과 GPU + 국산 NPU 이기종 아키텍처"
-excerpt: "llm-d는 GPU를 늘리는 대신 같은 GPU에서 더 많은 요청을 처리하는 추론 스케줄러입니다. KV-cache aware 라우팅과 prefill/decode 분리의 원리부터, 그 위에 GPU와 Rebellions NPU를 함께 얹는 이기종 소버린 추론 구성도까지 정리합니다."
-seo_title: "llm-d 분산추론과 GPU+NPU 이기종 아키텍처 - Thaki Cloud"
-seo_description: "Kubernetes-native 분산추론 llm-d의 KV-cache aware 라우팅과 prefill/decode 분리 원리, 그리고 vLLM 위에서 GPU와 Rebellions NPU를 함께 운용하는 이기종 소버린 AI 추론 레퍼런스 아키텍처를 코드와 표로 정리합니다."
+title: "GPU를 더 사도 안 풀린다: llm-d 분산추론과 GPU + 어떤 NPU/XPU든 이기종 아키텍처"
+excerpt: "llm-d는 GPU를 늘리는 대신 같은 GPU에서 더 많은 요청을 처리하는 추론 스케줄러입니다. KV-cache aware 라우팅과 prefill/decode 분리의 원리부터, vLLM 호환이면 어떤 가속기(Rebellions·Furiosa 등 NPU, Intel·TPU 등 XPU)든 같은 오케스트레이션에 꽂는 가속기 중립 이기종 구성까지 정리합니다."
+seo_title: "llm-d 분산추론과 GPU+NPU/XPU 이기종 아키텍처 - Thaki Cloud"
+seo_description: "분산추론 llm-d의 KV-cache 라우팅과 prefill/decode 분리 원리, 그리고 vLLM 위에서 GPU와 다양한 NPU·XPU(Rebellions, Furiosa, Intel Gaudi, TPU 등)를 가속기 중립으로 함께 운용하는 소버린 AI 추론 레퍼런스 아키텍처를 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
 categories:
@@ -14,7 +14,10 @@ tags:
   - kv-cache-routing
   - prefill-decode
   - heterogeneous-computing
-  - rebellions-npu
+  - npu
+  - xpu
+  - rebellions
+  - furiosa
   - sovereign-ai
   - kubernetes
   - thakicloud
@@ -85,65 +88,73 @@ flowchart LR
 
 대안과의 관계도 명확히 해둡니다. 모델이 단일 노드 GPU에 들어가면 vLLM 단독이 가장 단순한 정답입니다. 단일 노드를 넘고 멀티모델과 K8s 스케일이 필요할 때 llm-d가 들어옵니다. NVIDIA Dynamo는 데이터센터 스케일 오케스트레이션을, SGLang은 MoE-EP와 최신 PD 분리 성능을 노립니다. llm-d와 Dynamo는 배타적이지 않습니다. Dynamo가 오케스트레이션, vLLM과 llm-d가 엔진 레이어로 공존할 수 있습니다.
 
-## 이기종: GPU 위에 국산 NPU를 더한다
+## 이기종: GPU 위에 어떤 NPU/XPU든 더한다
 
-여기서부터가 우리 아키텍처 리포트의 핵심입니다. llm-d와 vLLM의 오케스트레이션 레이어는 가속기 종류와 독립적입니다. 라우팅과 disaggregation 로직은 그대로 두고 가속기 풀만 GPU에서 NPU로 바꿀 수 있다는 뜻입니다.
+여기서부터가 우리 아키텍처 리포트의 핵심입니다. 그리고 가장 먼저 못 박을 것은, 이 설계가 특정 가속기 벤더에 묶이지 않는다는 점입니다. llm-d와 vLLM의 오케스트레이션 레이어는 가속기 종류와 독립적입니다. 라우팅과 disaggregation 로직은 그대로 두고, 가속기 풀만 바꿀 수 있다는 뜻입니다.
 
-국산 AI 반도체 기업 Rebellions의 NPU는 vLLM-RBLN 플러그인으로 vLLM 생태계에 직접 연결됩니다. 모델은 optimum-rbln으로 컴파일한 뒤 vLLM-RBLN이 참조하고, FlashAttention과 PagedAttention, Sliding Window Attention을 NPU 메모리 계층에 이식해 단일 실행 그래프로 묶었습니다. 스케일아웃은 RSD(Rebellions Scalable Design)가 prefill/decode 분리와 멀티노드, MoE 라우팅을 담당합니다. 즉 llm-d가 하는 일의 일부를 NPU 레벨에서 자체 제공합니다.
+이것이 가설이 아닌 이유는 vLLM 자체가 이미 폭넓은 백엔드를 공식 지원하기 때문입니다. NVIDIA와 AMD GPU는 물론, Intel CPU/XPU/Gaudi(HPU), Google TPU, AWS Neuron, 그리고 플러그인으로 IBM Spyre, Huawei Ascend, 국산 NPU인 Rebellions와 Furiosa까지 같은 vLLM 인터페이스 뒤에 붙습니다. 즉 "GPU 풀 + NPU/XPU 풀"의 NPU/XPU 자리에는 vLLM 호환 가속기라면 무엇이든 들어갈 수 있습니다.
 
-| 칩 | 구성 | 메모리 | 용도 |
-|---|---|---|---|
-| ATOM+ (RBLN-CA22) | 단일 NPU | 16GB on-chip | 추론, vLLM-RBLN 지원 |
-| ATOM-Max (RBLN-CA25) | 듀얼서버 8 NPU | 총 128GB | 70B급 모델 구동 가능 |
-| REBEL / Rebel100 | 4 칩렛 + HBM3E | HBM3E 대용량 | PetaFLOPS급, MoE 최적화 |
-| REBEL Quad | REBEL 4개 결합 | HBM3E | 2026 상반기 양산 예정 |
+| 가속기 | vLLM 백엔드 | 비고 |
+|---|---|---|
+| NVIDIA GPU | CUDA (네이티브) | 생태계·커널 성숙도 최고 |
+| AMD GPU | ROCm | MI300X 등, 공식 지원 |
+| Intel Gaudi / XPU | HPU / XPU 백엔드 | 데이터센터 가속기 |
+| Google TPU / AWS Neuron | 전용 백엔드 | 클라우드 가속기 |
+| Rebellions NPU | vLLM-RBLN (플러그인) | 국산, optimum-rbln/RSD |
+| Furiosa NPU | Furiosa-LLM (vLLM 호환) | 국산, RNGD/TCP |
 
-Kubernetes 통합도 GPU와 대칭입니다. Red Hat AI 레퍼런스 기준으로 OpenShift에서 NFD가 PCI vendor ID 1eff로 ATOM을 탐지하고, Rebellions NPU Operator가 드라이버와 device-plugin, 모니터링을 관리해 NPU를 allocatable 자원으로 등록합니다. vLLM 설정은 `VLLM_TARGET_DEVICE=rbln`, `VLLM_USE_V1=1`, `RBLN_KERNEL_MODE=triton` 환경변수로 제어하고, 전력과 온도, 메모리를 Prometheus로 노출합니다.
+이 글이 두 국산 NPU를 함께 드는 이유는, 선택지가 하나가 아니라는 것을 보이기 위해서입니다. 어느 한 벤더에 의존하지 않고 vLLM 추상화 위에서 갈아끼울 수 있다는 점이 핵심입니다.
+
+Rebellions는 vLLM-RBLN 플러그인으로 연결됩니다. 모델을 optimum-rbln으로 컴파일한 뒤 vLLM-RBLN이 참조하고, FlashAttention·PagedAttention을 NPU 메모리 계층에 이식해 단일 실행 그래프로 묶었습니다. 스케일아웃은 RSD(Rebellions Scalable Design)가 prefill/decode 분리와 MoE 라우팅을 담당합니다. K8s에서는 NFD가 PCI vendor ID로 탐지하고 Rebellions NPU Operator가 device-plugin으로 등록하며, `VLLM_TARGET_DEVICE=rbln` 같은 환경변수로 제어합니다(라인업: ATOM-Max 듀얼서버 8 NPU·128GB로 70B급, 양산 예정 REBEL Quad는 MoE 최적화 주장).
+
+Furiosa는 Furiosa-LLM이라는 vLLM 호환 서빙 프레임워크로 연결됩니다. 대표 칩 RNGD는 TCP(Tensor Contraction Processor) 아키텍처에 48GB HBM3(대역폭 1.5TB/s)·180W TDP로, FP8 기준 512 TFLOPS를 냅니다. NXT RNGD 서버는 8카드로 384GB HBM3·4 petaFLOPS(FP8)를 3kW TDP에 담으며 2026년 1월 양산을 시작했습니다. 전력효율을 1차 무기로 내세운다는 점에서 GPU와 결이 다릅니다.
+
+두 NPU의 공통점이 곧 일반 원리입니다. 각 벤더가 device-plugin/operator와 vLLM 백엔드를 제공하기만 하면, 위쪽 llm-d 오케스트레이션은 손대지 않고 가속기 풀만 추가됩니다.
 
 ```mermaid
 flowchart TD
     G["Inference Gateway + llm-d<br/>(가속기 독립적 오케스트레이션)"] --> K["Kueue<br/>통합 쿼터·우선순위"]
-    K --> P1["GPU 풀<br/>NVIDIA GPU Operator"]
-    K --> P2["NPU 풀<br/>Rebellions NPU Operator + NFD"]
-    P1 --> V1["vLLM (CUDA 커널)<br/>H100/H200/B200"]
-    P2 --> V2["vLLM-RBLN (optimum-rbln/RSD)<br/>ATOM-Max / REBEL Quad"]
+    K --> P1["GPU 풀<br/>NVIDIA / AMD"]
+    K --> P2["NPU·XPU 풀<br/>device-plugin/operator로 등록"]
+    P1 --> V1["vLLM (CUDA/ROCm)<br/>H100/H200/B200, MI300X"]
+    P2 --> V2["vLLM 호환 백엔드<br/>Rebellions·Furiosa·Intel·TPU·Neuron …"]
 ```
 
-두 풀을 한 클러스터에서 비교하면 역할이 갈립니다.
+두 종류의 풀을 한 클러스터에서 비교하면 역할이 갈립니다. 단, 오른쪽 칸은 특정 벤더가 아니라 NPU/XPU 일반입니다.
 
-| 구분 | GPU 풀 | Rebellions NPU 풀 |
+| 구분 | GPU 풀 | NPU/XPU 풀 (예: Rebellions, Furiosa, Intel, TPU) |
 |---|---|---|
-| 대표 하드웨어 | H100/H200/B200 + NVLink | ATOM-Max(8 NPU·128GB) / REBEL Quad |
-| 서빙 엔진 | vLLM (CUDA 커널) | vLLM-RBLN (optimum-rbln/RSD) |
-| disagg/MoE | llm-d로 성숙 | RSD 자체 제공, llm-d 연동은 검증 대상 |
-| 강점 | 생태계와 커널 성숙도, 최고 처리량 | 전력효율, 소버린(국산), MoE 최적 주장 |
-| 주의 | 전력과 공급, 비용 | 분산 disagg/KV 라우팅, 대형모델 레퍼런스 적음 |
+| 서빙 엔진 | vLLM (CUDA/ROCm) | vLLM 호환 백엔드(vLLM-RBLN, Furiosa-LLM, HPU/XPU 등) |
+| K8s device 노출 | NVIDIA/AMD GPU Operator | 벤더 NPU Operator + NFD / device-plugin |
+| disagg/MoE | llm-d로 성숙 | 벤더 자체(RSD 등) + llm-d 연동은 검증 대상 |
+| 강점 | 생태계·커널 성숙도, 최고 처리량 | 전력효율, 소버린(공급망 다변화), MoE 최적 주장 |
+| 주의 | 전력·공급·비용 | 분산 disagg/KV 라우팅 성숙도, 대형모델 레퍼런스 적음 |
 
 ## ThakiCloud 적용과 도입 로드맵
 
 이 구성의 가장 큰 장점은 우리 스택에 신규 인프라 없이 그대로 얹힌다는 것입니다. 이미 쓰는 Kubernetes, Kueue, ArgoCD 위에서 동작합니다. Kueue가 prefill과 decode 워커 풀을 gang-scheduling과 쿼터로 배치하고, ArgoCD가 CRD를 GitOps로 관리합니다. 관측성은 TTFT, ITL, tok/s, KV 적중률을 Prometheus와 Grafana로, 모델 티어별 SLO를 SRE 룰로 잡습니다.
 
-도입은 정량 게이트를 통과하며 단계적으로 갑니다. Phase 0에서 GPU 풀에 llm-d 베이스라인을 구축하고 KV 라우팅과 PD 분리 효과를 측정합니다. Phase 1에서 prefix-cache 라우팅을 튜닝하고 멀티모델 서빙과 SLO를 수립합니다. Phase 2에서 Rebellions ATOM-Max 1노드를 K8s에 편입해 동일 모델을 NPU로 벤치합니다. Phase 3에서 이종 라우팅 정책을 세우고 REBEL Quad 양산 일정에 맞춰 MoE 워크로드를 재평가합니다. 각 단계 전에 측정 정의, 즉 단일과 합산, 입력 길이, 배치, 정밀도를 먼저 고정하는 것이 원칙입니다.
+도입은 정량 게이트를 통과하며 단계적으로 갑니다. Phase 0에서 GPU 풀에 llm-d 베이스라인을 구축하고 KV 라우팅과 PD 분리 효과를 측정합니다. Phase 1에서 prefix-cache 라우팅을 튜닝하고 멀티모델 서빙과 SLO를 수립합니다. Phase 2에서 NPU 후보(Rebellions, Furiosa 등) 1노드를 K8s에 편입해 동일 모델을 같은 조건으로 벤치합니다. 가속기 선택은 전력효율과 공급, 모델 적합도로 평가하며 특정 벤더를 전제하지 않습니다. Phase 3에서 이종 라우팅 정책을 세우고 각 벤더의 양산 일정에 맞춰 MoE 워크로드를 재평가합니다. 각 단계 전에 측정 정의, 즉 단일과 합산, 입력 길이, 배치, 정밀도를 먼저 고정하는 것이 원칙입니다.
 
 ## 리스크와 반대 결론
 
 좋은 설계 문서는 자기 주장을 스스로 공격해야 합니다. 이 구성의 약점을 정직하게 적습니다.
 
-NPU 경로의 성숙도가 가장 큰 미지수입니다. vLLM-RBLN은 단일 노드 서빙에는 견고하지만, llm-d의 분산 disaggregation과 precise KV 라우팅을 NPU에서 그대로 쓸 수 있는지는 아직 검증되지 않았습니다. RSD가 자체 disaggregation을 제공하므로, "llm-d 위 NPU"가 아니라 "RSD 단독" 구성이 더 현실적일 수도 있습니다. 대형 모델 레퍼런스도 GPU 대비 적습니다. ATOM-Max 128GB로 70B는 되지만 744B급 MoE는 다수 노드와 대규모 RSD가 필요하고, 공개 레퍼런스가 부족합니다. 우리 PoC가 곧 레퍼런스가 된다는 점은 기회이자 리스크입니다.
+NPU/XPU 경로의 성숙도가 가장 큰 미지수입니다. 어느 벤더든 단일 노드 서빙은 견고해지고 있지만, llm-d의 분산 disaggregation과 precise KV 라우팅을 NPU/XPU에서 그대로 쓸 수 있는지는 아직 검증 대상입니다. 일부 벤더는 자체 disaggregation(예: Rebellions RSD)을 제공하므로, "llm-d 위 NPU"가 아니라 "벤더 자체 스택 단독" 구성이 더 현실적일 수도 있습니다. 대형 모델 레퍼런스도 GPU 대비 적습니다. 단일 서버 메모리로 70B급은 되지만 744B급 MoE는 다수 노드가 필요하고 공개 레퍼런스가 부족합니다. 이 한계는 특정 벤더가 아니라 NPU/XPU 생태계 전반의 현재 상태이며, 우리 PoC가 곧 레퍼런스가 된다는 점은 기회이자 리스크입니다.
 
-그리고 반대 결론입니다. 만약 목표가 최단기 최고 처리량뿐이라면 NPU 도입은 복잡도만 늘립니다. 그때는 GPU와 llm-d로 충분합니다. NPU의 가치는 전력효율과 국산화, 공급망 다변화라는 별도의 전략 목표가 있을 때 비로소 성립합니다. 마찬가지로 모델이 단일 노드에 들어가고 트래픽이 작다면 llm-d 자체가 과투자이고 vLLM 단독이 정답입니다.
+그리고 반대 결론입니다. 만약 목표가 최단기 최고 처리량뿐이라면 NPU/XPU 도입은 복잡도만 늘립니다. 그때는 GPU와 llm-d로 충분합니다. 대체 가속기의 가치는 전력효율과 공급망 다변화, 소버린이라는 별도의 전략 목표가 있을 때 비로소 성립합니다. 마찬가지로 모델이 단일 노드에 들어가고 트래픽이 작다면 llm-d 자체가 과투자이고 vLLM 단독이 정답입니다.
 
 ## ThakiCloud 관점: 가속기에 묶이지 않는 추론
 
-우리가 이 아키텍처에 주목하는 이유는 단순합니다. llm-d의 오케스트레이션이 가속기에 독립적이라는 한 가지 성질이, GPU 풀과 국산 NPU 풀을 한 클러스터에서 운용하는 소버린 AI 추론 구성을 설계상 가능하게 만들기 때문입니다.
+우리가 이 아키텍처에 주목하는 이유는 단순합니다. llm-d의 오케스트레이션이 가속기에 독립적이라는 한 가지 성질이, GPU 풀과 다양한 NPU/XPU 풀을 한 클러스터에서 벤더에 묶이지 않고 운용하는 소버린 AI 추론 구성을 설계상 가능하게 만들기 때문입니다.
 
-이것은 온프레미스 AI 플랫폼을 제공하는 우리에게 전략적으로 중요합니다. 고객은 전력 예산과 공급망, 그리고 국산화 요구에 따라 가속기를 선택할 수 있어야 하고, 그 선택이 추론 스택 전체를 다시 짜는 비용으로 이어져서는 안 됩니다. vLLM 추상화와 llm-d의 가속기 독립성이 그 비용을 없앱니다. 대형과 저지연은 GPU로, 중형과 전력효율은 NPU로 보내는 이종 정책을 같은 라우팅 로직 위에서 구현할 수 있습니다.
+이것은 온프레미스 AI 플랫폼을 제공하는 우리에게 전략적으로 중요합니다. 고객은 전력 예산과 공급망, 그리고 국산화 요구에 따라 가속기를 자유롭게 선택할 수 있어야 하고, 그 선택이 추론 스택 전체를 다시 짜는 비용으로 이어져서는 안 됩니다. 특정 NPU 한 곳에 락인되는 것은 오히려 GPU 락인을 다른 락인으로 바꾸는 것일 뿐입니다. vLLM 추상화와 llm-d의 가속기 독립성이 그 비용과 락인을 함께 없앱니다. 대형과 저지연은 GPU로, 중형과 전력효율은 NPU/XPU로 보내는 이종 정책을, 어떤 벤더 조합이든 같은 라우팅 로직 위에서 구현할 수 있습니다.
 
 물론 이 모든 것은 레퍼런스 설계이며 PoC 검증 전입니다. 그래서 우리는 측정 정의를 먼저 고정하고, GPU 베이스라인부터 정량 게이트를 통과하며 NPU로 확장하는 단계적 경로를 택했습니다.
 
 ## 마무리
 
-llm-d의 교훈은 추론 효율이 하드웨어 구매가 아니라 스케줄링의 문제라는 것입니다. KV-cache aware 라우팅으로 중복 연산을 없애고, prefill과 decode를 분리해 활용률을 안정화하면, 같은 GPU에서 더 많은 요청을 처리할 수 있습니다. 그리고 그 오케스트레이션이 가속기에 독립적이기 때문에, GPU 위에 국산 NPU를 더해 소버린 추론으로 확장하는 길이 열립니다.
+llm-d의 교훈은 추론 효율이 하드웨어 구매가 아니라 스케줄링의 문제라는 것입니다. KV-cache aware 라우팅으로 중복 연산을 없애고, prefill과 decode를 분리해 활용률을 안정화하면, 같은 GPU에서 더 많은 요청을 처리할 수 있습니다. 그리고 그 오케스트레이션이 가속기에 독립적이기 때문에, GPU 위에 어떤 NPU/XPU든(Rebellions, Furiosa를 비롯해 vLLM 호환이면 무엇이든) 더해 벤더에 묶이지 않는 소버린 추론으로 확장하는 길이 열립니다.
 
 ThakiCloud는 이 이기종 추론 아키텍처를 Kubernetes, Kueue, ArgoCD 위에서 검증하고 있습니다. 더 많은 이야기는 홈페이지에서 확인하실 수 있습니다.
 
@@ -156,5 +167,9 @@ ThakiCloud는 이 이기종 추론 아키텍처를 Kubernetes, Kueue, ArgoCD 위
 - Rebellions, LLM Serving with NPU: [https://rebellions.ai/llm-serving-with-npu/](https://rebellions.ai/llm-serving-with-npu/)
 - Red Hat Developer, Running AI inference on Rebellions ATOM NPU: [https://developers.redhat.com/articles/2026/05/27/running-ai-inference-rebellions-atom-npu-red-hat-ai](https://developers.redhat.com/articles/2026/05/27/running-ai-inference-rebellions-atom-npu-red-hat-ai)
 - vLLM-RBLN 플러그인: [https://github.com/rebellions-sw/vllm-rbln](https://github.com/rebellions-sw/vllm-rbln)
+- FuriosaAI RNGD 사양 및 NXT RNGD 서버: [https://furiosa.ai/rngd](https://furiosa.ai/rngd)
+- FuriosaAI Developer Center (Furiosa-LLM, vLLM 호환): [https://developer.furiosa.ai/](https://developer.furiosa.ai/)
+- vLLM 지원 하드웨어(백엔드 매트릭스): [https://docs.vllm.ai/](https://docs.vllm.ai/)
+- PyTorch Foundation, vLLM 다중 백엔드: [https://pytorch.org/blog/pytorch-foundation-welcomes-vllm/](https://pytorch.org/blog/pytorch-foundation-welcomes-vllm/)
 
-주: 구성도는 공개 자료 기반 레퍼런스 설계입니다. 일부 칩 사양은 공개 백서에 미기재되어 비워 두었고, llm-d 위 Rebellions NPU 통합은 vLLM-RBLN을 전제로 한 설계 가설로 PoC 검증 전입니다. 성능 수치는 환경 의존적이므로 단일과 합산 처리량을 구분해 해석해야 합니다.
+주: 구성도는 공개 자료 기반 레퍼런스 설계이며 특정 가속기 벤더를 권장하지 않습니다. Rebellions·Furiosa는 vLLM 호환 NPU의 두 예시일 뿐이고, 동일 원리가 vLLM이 지원하는 다른 NPU/XPU(Intel Gaudi/XPU, Google TPU, AWS Neuron, IBM Spyre, Huawei Ascend 등)에도 적용됩니다. 일부 칩 사양은 공개 백서에 미기재되어 비워 두었고, llm-d 위 NPU/XPU 통합은 각 벤더의 vLLM 백엔드를 전제한 설계 가설로 PoC 검증 전입니다. 성능 수치는 환경 의존적이므로 단일과 합산 처리량을 구분해 해석해야 합니다.
