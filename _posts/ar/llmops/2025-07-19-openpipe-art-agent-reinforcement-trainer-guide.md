@@ -27,6 +27,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/openpipe-art-agent-reinforcement-trainer-guide/"
 reading_time: true
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 30 دقيقة
