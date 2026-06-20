@@ -27,6 +27,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
 reading_time: true
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة
