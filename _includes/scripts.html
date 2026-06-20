@@ -49,27 +49,42 @@ MathJax.Hub.Config({
 });
 </script>
 
-<!-- Mermaid diagram initialization -->
+<!-- Mermaid diagram initialization (theme-aware: follows light/dark toggle) -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Mermaid 초기화가 완료되면 다이어그램 렌더링
-    if (typeof mermaid !== 'undefined') {
-      // 모든 mermaid 코드 블록을 찾아서 다이어그램으로 변환
-      const mermaidElements = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
-      
-      mermaidElements.forEach(function(element, index) {
-        const mermaidCode = element.textContent;
-        const mermaidDiv = document.createElement('div');
-        mermaidDiv.className = 'mermaid';
-        mermaidDiv.textContent = mermaidCode;
-        mermaidDiv.id = 'mermaid-' + index;
-        
-        // 기존 코드 블록을 새로운 div로 교체
-        element.parentNode.replaceWith(mermaidDiv);
-      });
-      
-      // Mermaid 다이어그램 렌더링 실행
-      mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+  (function () {
+    function mermaidTheme() {
+      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default';
     }
-  });
+    function convert() {
+      // Convert rouge ```mermaid code blocks into .mermaid divs once, caching source.
+      document.querySelectorAll('pre code.language-mermaid, code.language-mermaid').forEach(function (element, index) {
+        var code = element.textContent;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.setAttribute('data-src', code);
+        div.textContent = code;
+        div.id = 'mermaid-' + index;
+        element.parentNode.replaceWith(div);
+      });
+    }
+    function render() {
+      if (typeof mermaid === 'undefined') return;
+      mermaid.initialize({ startOnLoad: false, theme: mermaidTheme(), securityLevel: 'loose' });
+      document.querySelectorAll('.mermaid').forEach(function (el) {
+        el.removeAttribute('data-processed');
+        var src = el.getAttribute('data-src'); // restore source (render replaces it with SVG)
+        if (src) { el.innerHTML = src; }
+      });
+      try { mermaid.init(undefined, document.querySelectorAll('.mermaid')); }
+      catch (e) { console.warn('mermaid render failed:', e); }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      convert();
+      render();
+      // Re-render diagrams whenever the light/dark theme flips.
+      new MutationObserver(function (muts) {
+        muts.forEach(function (m) { if (m.attributeName === 'data-theme') render(); });
+      }).observe(document.documentElement, { attributes: true });
+    });
+  })();
 </script>

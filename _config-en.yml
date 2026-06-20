@@ -2,7 +2,7 @@
 # Theme Settings
 #theme: "minimal-mistakes-jekyll"
 # remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "thaki"
 
 # Site Settings
 locale: "en-US"
