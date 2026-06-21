@@ -26,6 +26,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/archscale-scalable-pretraining-framework-guide/"
 reading_time: true
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

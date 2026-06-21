@@ -27,6 +27,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-nemo-reasoning-llm-weekend-training-guide/"
 lang: en
 reading_time: true
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 15 min

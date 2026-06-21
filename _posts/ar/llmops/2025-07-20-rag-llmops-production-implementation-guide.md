@@ -24,6 +24,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/rag-llmops-production-implementation-guide/"
 reading_time: true
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 22 دقيقة
