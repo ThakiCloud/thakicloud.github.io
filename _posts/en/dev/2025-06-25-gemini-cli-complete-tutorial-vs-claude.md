@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 toc_label: "Gemini CLI Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/dev/gemini-cli-complete-tutorial-vs-claude/"
+published: false
 ---
 
 ## Overview

@@ -16,6 +16,7 @@ lang: en
 author_profile: true
 toc: true
 toc_label: "Cursor AI Mastery Guide"
+published: false
 ---
 
 ## Overview

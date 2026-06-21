@@ -10,6 +10,7 @@ canonical_url: "https://thakicloud.github.io/ar/dev/cursor-ai-mastery-guide-2025
 toc: true
 toc_sticky: true
 toc_label: "دليل إتقان Cursor AI"
+published: false
 ---
 
 ## نظرة عامة: تجاوز حد 500 طلب شهريًا
