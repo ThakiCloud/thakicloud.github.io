@@ -25,6 +25,7 @@ toc_icon: "dna"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

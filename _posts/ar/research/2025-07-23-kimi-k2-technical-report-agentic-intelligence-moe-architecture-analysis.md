@@ -25,6 +25,7 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 reading_time: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

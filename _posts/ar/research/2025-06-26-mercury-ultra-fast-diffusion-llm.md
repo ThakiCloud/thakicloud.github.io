@@ -16,6 +16,7 @@ toc: true
 toc_label: "تحليل بحث Mercury"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/mercury-ultra-fast-diffusion-llm/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

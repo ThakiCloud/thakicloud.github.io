@@ -10,6 +10,7 @@ canonical_url: "https://thakicloud.github.io/ar/dev/gemini-cli-complete-tutorial
 toc: true
 toc_sticky: true
 toc_label: "الدليل الشامل لـ Gemini CLI"
+published: false
 ---
 
 ## نظرة عامة: ثورة في تجربة الطرفية

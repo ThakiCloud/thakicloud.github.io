@@ -15,6 +15,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 canonical_url: https://thakicloud.github.io/en/dev/reverse-engineering-history-modern-methodologies/
+published: false
 ---
 
 ## Introduction

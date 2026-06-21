@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AI 코딩 패러다임 실전 가이드"
+published: false
 ---
 
 ## 개요

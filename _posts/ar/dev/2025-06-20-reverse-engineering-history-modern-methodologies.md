@@ -15,6 +15,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 canonical_url: https://thakicloud.github.io/ar/dev/reverse-engineering-history-modern-methodologies/
+published: false
 ---
 
 ## مقدمة

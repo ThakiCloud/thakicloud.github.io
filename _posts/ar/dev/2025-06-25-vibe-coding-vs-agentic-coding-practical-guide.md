@@ -10,6 +10,7 @@ canonical_url: "https://thakicloud.github.io/ar/dev/vibe-coding-vs-agentic-codin
 toc: true
 toc_sticky: true
 toc_label: "الدليل العملي لنماذج برمجة الذكاء الاصطناعي"
+published: false
 ---
 
 ## نظرة عامة: نموذجان جديدان للتطوير

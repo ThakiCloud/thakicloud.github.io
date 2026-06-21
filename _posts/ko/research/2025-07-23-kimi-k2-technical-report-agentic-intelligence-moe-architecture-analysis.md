@@ -24,6 +24,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

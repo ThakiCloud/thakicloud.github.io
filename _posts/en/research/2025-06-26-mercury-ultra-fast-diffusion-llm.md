@@ -16,6 +16,7 @@ toc: true
 toc_label: "Mercury Research Analysis"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/mercury-ultra-fast-diffusion-llm/"
+published: false
 ---
 
 Mercury, announced by Inception Labs, is an innovative large language model based on diffusion that surpasses the limitations of conventional autoregressive models to deliver ultra-fast inference performance.

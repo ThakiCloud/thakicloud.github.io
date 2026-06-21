@@ -14,6 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Mercury 연구 분석"
+published: false
 ---
 
 Inception Labs에서 발표한 Mercury는 diffusion 기반의 혁신적인 대규모 언어 모델로, 기존 autoregressive 모델의 한계를 뛰어넘는 초고속 추론 성능을 달성했습니다.

@@ -26,6 +26,7 @@ toc_label: "المحتويات"
 toc_icon: "dna"
 toc_sticky: true
 reading_time: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
