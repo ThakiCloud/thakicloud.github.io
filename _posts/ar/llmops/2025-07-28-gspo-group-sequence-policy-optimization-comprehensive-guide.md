@@ -24,7 +24,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/gspo-group-sequence-policy-optimization-comprehensive-guide/"
 reading_time: true
 lang: ar
-published: true
+published: false
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 12 دقائق
