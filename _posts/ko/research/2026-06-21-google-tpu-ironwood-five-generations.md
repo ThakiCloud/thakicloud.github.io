@@ -27,6 +27,8 @@ reading_time: true
 
 저희 ThakiCloud는 K8s 기반 AI/ML SaaS 플랫폼에서 GPU 워크로드와 학습 인프라를 다룹니다. 이 논문이 왜 데이터 과학자와 인프라 엔지니어 모두에게 유용한지 짚어보겠습니다.
 
+> 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/10SsDPZB1CV-x4LzzzQQdhnY8m_PfWzG8/view)할 수 있습니다.
+
 ## 다섯 축으로 보는 진화
 
 논문이 5세대를 평가하는 다섯 축은 그 자체로 대규모 학습 인프라의 평가 프레임입니다.
@@ -58,3 +60,5 @@ reading_time: true
 ---
 
 출처: "Google's Training Supercomputers from TPU v2 to Ironwood: Architectural Stability, Scale, Resilience, Power Efficiency, and Sustainability Across Five Generations", arXiv:2606.15870 (2026-06-14). https://arxiv.org/abs/2606.15870
+
+📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/10SsDPZB1CV-x4LzzzQQdhnY8m_PfWzG8/view)할 수 있습니다.
