@@ -15,19 +15,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/id4YRO7G0wE"
-    title="ثورة الذكاء الاصطناعي مُقلَّلة التقدير | إريك شميت | TED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ يمكنك مشاهدة الفيديو الكامل (≈ 24 دقيقة) والاطلاع على المحاضرة مباشرة.</figcaption>
-</figure>
+{% include video id="id4YRO7G0wE" provider="youtube" %}
+
+*يمكنك مشاهدة الفيديو الكامل (≈ 24 دقيقة) والاطلاع على المحاضرة مباشرة.*
 
 ## الرسائل الأساسية في لمحة
 

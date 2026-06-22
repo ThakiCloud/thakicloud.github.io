@@ -16,19 +16,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Key Contents"
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/giT0ytynSqg"
-    title="Geoffrey Hinton - AI Safety Interview"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ You can watch the complete interview with Geoffrey Hinton on AI safety by playing the full video.</figcaption>
-</figure>
+{% include video id="giT0ytynSqg" provider="youtube" %}
+
+*You can watch the complete interview with Geoffrey Hinton on AI safety by playing the full video.*
 
 ## Key Messages at a Glance
 

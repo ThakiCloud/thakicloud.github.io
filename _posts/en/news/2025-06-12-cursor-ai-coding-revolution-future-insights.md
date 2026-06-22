@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-published: false
+published: true
 ---
 
 ## Cursor Achieves $300M ARR in 21 Months Since Launch
@@ -46,7 +46,7 @@ AI coding tool **Cursor** has surpassed $300 million in Annual Recurring Revenue
 
 ## Cursor Growth Story Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BGgsoIgbT_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include video id="BGgsoIgbT_Y" provider="youtube" %}
 
 *Source: [The Present and Future of AI Coding Tools](https://www.youtube.com/watch?v=BGgsoIgbT_Y)*
 

@@ -19,21 +19,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: false
+published: true
 ---
 
 ## كينت بيك حول البرمجة في عصر الذكاء الاصطناعي: لماذا يصبح TDD 'قوة خارقة'
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/aSXaxOdVtAQ"
-    title="TDD، عوامل الذكاء الاصطناعي والبرمجة مع كينت بيك"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ مقابلة متعمقة مع كينت بيك حول TDD وعوامل الذكاء الاصطناعي والبرمجة</figcaption>
-</figure>
+{% include video id="aSXaxOdVtAQ" provider="youtube" %}
+
+*مقابلة متعمقة مع كينت بيك حول TDD وعوامل الذكاء الاصطناعي والبرمجة*
 
 **منشئ البرمجة المتطرفة (XP)**، **المؤلف المشارك لبيان Agile**، و**أبو التطوير المدفوع بالاختبار (TDD)** كينت بيك شارك خبرته في البرمجة لـ 52 عاماً وأفكاره حول أدوات الذكاء الاصطناعي في بودكاست Pragmatic Engineer.
 

@@ -13,19 +13,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: 핵심 내용
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/giT0ytynSqg"
-    title="Geoffrey Hinton - AI Safety Interview"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ 동영상 전체를 직접 재생하며 제프리 힌튼의 AI 안전성에 대한 완전한 인터뷰를 확인할 수 있어요.</figcaption>
-</figure>
+{% include video id="giT0ytynSqg" provider="youtube" %}
+
+*동영상 전체를 직접 재생하며 제프리 힌튼의 AI 안전성에 대한 완전한 인터뷰를 확인할 수 있어요.*
 
 ## 한눈에 보는 핵심 메시지
 

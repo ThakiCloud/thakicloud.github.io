@@ -23,21 +23,14 @@ canonical_url: "https://thakicloud.github.io/en/news/po-shen-loh-ai-creative-sup
 reading_time: true
 lang: en
 permalink: /en/news/po-shen-loh-ai-creative-supremacy-era-insights/
-published: false
+published: true
 ---
 
 ⏱️ **Estimated Reading Time**: 7 minutes
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/xWYb7tImErI"
-    title="AI Era Success Strategy | Dr. Po-Shen Loh"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ You can watch the full video to check Dr. Po-Shen Loh's insights on the AI era.</figcaption>
-</figure>
+{% include video id="xWYb7tImErI" provider="youtube" %}
+
+*You can watch the full video to check Dr. Po-Shen Loh's insights on the AI era.*
 
 ## Key Messages at a Glance
 

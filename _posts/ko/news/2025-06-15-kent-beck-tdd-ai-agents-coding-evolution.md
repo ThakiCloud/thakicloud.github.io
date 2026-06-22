@@ -17,21 +17,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-published: false
+published: true
 ---
 
 ## Kent Beck이 말하는 AI 시대의 코딩: TDD가 '슈퍼파워'가 되는 이유
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/aSXaxOdVtAQ"
-    title="TDD, AI agents and coding with Kent Beck"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ Kent Beck과의 TDD, AI 에이전트, 그리고 코딩에 대한 심층 인터뷰</figcaption>
-</figure>
+{% include video id="aSXaxOdVtAQ" provider="youtube" %}
+
+*Kent Beck과의 TDD, AI 에이전트, 그리고 코딩에 대한 심층 인터뷰*
 
 **Extreme Programming(XP)의 창시자**이자 **Agile 선언문의 공동 저자**, 그리고 **Test-Driven Development(TDD)의 아버지**로 불리는 Kent Beck이 Pragmatic Engineer 팟캐스트에서 52년간의 프로그래밍 경험과 AI 도구에 대한 생각을 공유했습니다.
 

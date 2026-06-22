@@ -16,19 +16,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات الرئيسية"
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/giT0ytynSqg"
-    title="جيفري هينتون - مقابلة أمان الذكاء الاصطناعي"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ يمكنك مشاهدة المقابلة الكاملة مع جيفري هينتون حول أمان الذكاء الاصطناعي بتشغيل الفيديو الكامل.</figcaption>
-</figure>
+{% include video id="giT0ytynSqg" provider="youtube" %}
+
+*يمكنك مشاهدة المقابلة الكاملة مع جيفري هينتون حول أمان الذكاء الاصطناعي بتشغيل الفيديو الكامل.*
 
 ## الرسائل الرئيسية في لمحة
 

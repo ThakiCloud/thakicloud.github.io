@@ -13,19 +13,12 @@ tags:
   - TPU
   - Future of Computing
 author_profile: true
-published: false
+published: true
 ---
 
-<figure class="video-container">
- <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/dq8MhTFCs80?si=0qg8c0zG5YE1aail"
-          title="Google's Jeff Dean on the Coming Transformations in AI"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-    <figcaption>※ 동영상 전체(≈ 30 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
-</figure>
+{% include video id="dq8MhTFCs80" provider="youtube" %}
+
+*동영상 전체(≈ 30 분)를 직접 재생하며 토크를 확인할 수 있어요.*
 
 # Jeff Dean Tech Talk 요약: AI 인프라, 대규모 모델, 컴퓨팅의 미래
 

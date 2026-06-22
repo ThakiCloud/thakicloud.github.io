@@ -18,19 +18,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: false
+published: true
 ---
 
-<figure class="video-container">
- <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/dq8MhTFCs80?si=0qg8c0zG5YE1aail"
-          title="جيف دين من Google حول التحولات القادمة في الذكاء الاصطناعي"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-    <figcaption>※ يمكنك مشاهدة الفيديو الكامل (≈ 30 دقيقة) والاطلاع على المحاضرة مباشرة.</figcaption>
-</figure>
+{% include video id="dq8MhTFCs80" provider="youtube" %}
+
+*يمكنك مشاهدة الفيديو الكامل (≈ 30 دقيقة) والاطلاع على المحاضرة مباشرة.*
 
 # ملخص محاضرة جيف دين التقنية: البنية التحتية للذكاء الاصطناعي والنماذج واسعة النطاق ومستقبل الحوسبة
 

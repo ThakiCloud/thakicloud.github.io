@@ -17,19 +17,12 @@ toc_label: "المحتويات الرئيسية"
 lang: ar
 permalink: /ar/news/karpathy-software-era-ai-programming-paradigms/
 canonical_url: "https://thakicloud.github.io/ar/news/karpathy-software-era-ai-programming-paradigms/"
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/LCEmiRjPEtQ"
-    title="البرمجيات في عصر الذكاء الاصطناعي - أندريه كارباثي"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ يمكنك الاطلاع على رؤى أندريه كارباثي الكاملة حول برمجيات عصر الذكاء الاصطناعي من خلال فيديو العرض الكامل.</figcaption>
-</figure>
+{% include video id="LCEmiRjPEtQ" provider="youtube" %}
+
+*يمكنك الاطلاع على رؤى أندريه كارباثي الكاملة حول برمجيات عصر الذكاء الاصطناعي من خلال فيديو العرض الكامل.*
 
 ## الرسائل الرئيسية في لمحة
 

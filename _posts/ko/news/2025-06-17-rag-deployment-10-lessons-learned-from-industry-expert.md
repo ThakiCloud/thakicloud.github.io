@@ -14,12 +14,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: 핵심 교훈
-published: false
+published: true
 ---
 
 ## 87%가 실패하는 RAG 시스템의 진실
 
-*참고: [RAG 배포 전문가 강연](https://www.youtube.com/watch?v=kPL-6-9MVyA)*
+{% include video id="kPL-6-9MVyA" provider="youtube" %}
+
+*RAG의 아버지 Douwe Kiela의 RAG 배포 전문가 강연 전체 영상입니다.*
 
 매년 수천 개의 기업이 RAG 시스템을 배포하지만, **87%가 결국 장식품으로 전락**한다. 기술 자체는 완벽해도 접근 방법이 틀렸기 때문이다. RAG의 아버지로 불리는 Douwe Kiela의 강연 나온 통찰은 많은 AI 프로젝트 팀의 고정관념을 뒤흔든다.
 

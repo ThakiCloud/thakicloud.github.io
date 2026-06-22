@@ -18,19 +18,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-published: false
+published: true
 ---
 
-<figure class="video-container">
- <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/dq8MhTFCs80?si=0qg8c0zG5YE1aail"
-          title="Google's Jeff Dean on the Coming Transformations in AI"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-    <figcaption>※ You can watch the full video (≈ 30 minutes) and check the talk directly.</figcaption>
-</figure>
+{% include video id="dq8MhTFCs80" provider="youtube" %}
+
+*You can watch the full video (≈ 30 minutes) and check the talk directly.*
 
 # Jeff Dean Tech Talk Summary: AI Infrastructure, Large-Scale Models, and the Future of Computing
 

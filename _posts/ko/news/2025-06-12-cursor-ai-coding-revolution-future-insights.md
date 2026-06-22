@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-published: false
+published: true
 ---
 
 ## Cursor, 출시 21개월 만에 4천억 원 ARR을 달성하다
@@ -42,7 +42,7 @@ AI 코딩 도구 **Cursor**가 등장 21개월 만에 연간 반복 매출(ARR) 
 
 ## Cursor 성장 스토리를 영상으로 만나보세요
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BGgsoIgbT_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include video id="BGgsoIgbT_Y" provider="youtube" %}
 
 *출처: [AI 코딩 도구의 오늘과 내일](https://www.youtube.com/watch?v=BGgsoIgbT_Y)*
 

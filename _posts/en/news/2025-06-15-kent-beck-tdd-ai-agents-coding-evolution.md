@@ -19,21 +19,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-published: false
+published: true
 ---
 
 ## Kent Beck on Coding in the AI Era: Why TDD Becomes a 'Superpower'
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/aSXaxOdVtAQ"
-    title="TDD, AI agents and coding with Kent Beck"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ In-depth interview with Kent Beck on TDD, AI agents, and coding</figcaption>
-</figure>
+{% include video id="aSXaxOdVtAQ" provider="youtube" %}
+
+*In-depth interview with Kent Beck on TDD, AI agents, and coding*
 
 **Creator of Extreme Programming (XP)**, **co-author of the Agile Manifesto**, and **father of Test-Driven Development (TDD)** Kent Beck shared his 52 years of programming experience and thoughts on AI tools in the Pragmatic Engineer podcast.
 

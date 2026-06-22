@@ -18,21 +18,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-published: false
+published: true
 ---
 
 ## Google DeepMind CEO's Vision for AGI's Future: The Era of 'Radical Abundance' Is Coming
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/CRraHg4Ks_g"
-    title="Demis Hassabis AGI Interview - WIRED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ Google DeepMind CEO Demis Hassabis's AGI vision interview video</figcaption>
-</figure>
+{% include video id="CRraHg4Ks_g" provider="youtube" %}
+
+*Google DeepMind CEO Demis Hassabis's AGI vision interview video*
 
 Nobel Prize winner and Google DeepMind CEO **Demis Hassabis** revealed stunning visions for AGI (Artificial General Intelligence) achievement timeline and humanity's future in an interview with WIRED.
 

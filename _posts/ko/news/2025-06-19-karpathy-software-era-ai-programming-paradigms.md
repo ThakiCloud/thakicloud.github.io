@@ -14,19 +14,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: 핵심 내용
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/LCEmiRjPEtQ"
-    title="Software in the Era of AI - Andrej Karpathy"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ 전체 발표 영상을 통해 Andrej Karpathy의 AI 시대 소프트웨어에 대한 완전한 인사이트를 확인할 수 있어요.</figcaption>
-</figure>
+{% include video id="LCEmiRjPEtQ" provider="youtube" %}
+
+*전체 발표 영상을 통해 Andrej Karpathy의 AI 시대 소프트웨어에 대한 완전한 인사이트를 확인할 수 있어요.*
 
 ## 한눈에 보는 핵심 메시지
 

@@ -21,21 +21,14 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/po-shen-loh-ai-creative-supremacy-era-insights/"
 reading_time: true
-published: false
+published: true
 ---
 
 ⏱️ **예상 읽기 시간**: 7분
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/xWYb7tImErI"
-    title="AI 시대 성공 전략 | Po-Shen Loh 박사"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ 동영상 전체를 직접 재생하며 Po-Shen Loh 박사의 AI 시대 통찰을 확인할 수 있어요.</figcaption>
-</figure>
+{% include video id="xWYb7tImErI" provider="youtube" %}
+
+*동영상 전체를 직접 재생하며 Po-Shen Loh 박사의 AI 시대 통찰을 확인할 수 있어요.*
 
 ## 한눈에 보는 핵심 메시지
 

@@ -15,19 +15,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/id4YRO7G0wE"
-    title="The AI Revolution Is Underhyped | Eric Schmidt | TED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ You can watch the full video (≈ 24 minutes) and check the talk directly.</figcaption>
-</figure>
+{% include video id="id4YRO7G0wE" provider="youtube" %}
+
+*You can watch the full video (≈ 24 minutes) and check the talk directly.*
 
 ## Key Messages at a Glance
 

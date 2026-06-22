@@ -18,14 +18,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: false
+published: true
 ---
 
 قدم الرئيس التنفيذي لـ NVIDIA جنسن هوانغ مؤخراً شرحاً مفصلاً للنطاق الكامل للثورة الصناعية للذكاء الاصطناعي في منتدى هيلتون فالي. عرّف الذكاء الاصطناعي ليس كمجرد تقنية بل كـ**قوة ثورة صناعية جديدة مثل الكهرباء** وقدم مخطط الاقتصاد المستقبلي من خلال مفهوم 'مصنع الذكاء الاصطناعي'.
 
 ## فيديو مقابلة جنسن هوانغ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nkhrEnuZi20?si=3MhNmCrlR3xvdvy0" title="مشغل فيديو YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include video id="nkhrEnuZi20" provider="youtube" %}
 
 *المصدر: [منتدى هيلن فالي - مقابلة جنسن هوانغ](https://youtu.be/nkhrEnuZi20?si=3MhNmCrlR3xvdvy0)*
 

@@ -18,14 +18,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-published: false
+published: true
 ---
 
 NVIDIA CEO Jensen Huang recently provided a detailed explanation of the full scope of the AI industrial revolution at the Hilton Valley Forum. He defined AI not as mere technology but as **a new industrial revolution power like electricity** and presented the blueprint for the future economy through the concept of 'AI Factory.'
 
 ## Jensen Huang Interview Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nkhrEnuZi20?si=3MhNmCrlR3xvdvy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include video id="nkhrEnuZi20" provider="youtube" %}
 
 *Source: [Hillen Valley Forum - Jensen Huang Interview](https://youtu.be/nkhrEnuZi20?si=3MhNmCrlR3xvdvy0)*
 

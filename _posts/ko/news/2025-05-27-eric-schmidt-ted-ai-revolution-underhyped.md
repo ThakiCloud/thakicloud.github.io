@@ -10,19 +10,12 @@ tags:
   - TED
   - Eric Schmidt
 author_profile: true
-published: false
+published: true
 --- 
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/id4YRO7G0wE"
-    title="The AI Revolution Is Underhyped | Eric Schmidt | TED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ 동영상 전체(≈ 24 분)를 직접 재생하며 토크를 확인할 수 있어요.</figcaption>
-</figure>
+{% include video id="id4YRO7G0wE" provider="youtube" %}
+
+*동영상 전체(≈ 24 분)를 직접 재생하며 토크를 확인할 수 있어요.*
 
 ## 한눈에 보는 핵심 메시지
 

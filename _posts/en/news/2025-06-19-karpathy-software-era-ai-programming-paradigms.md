@@ -17,19 +17,12 @@ toc_label: "Key Contents"
 lang: en
 permalink: /en/news/karpathy-software-era-ai-programming-paradigms/
 canonical_url: "https://thakicloud.github.io/en/news/karpathy-software-era-ai-programming-paradigms/"
-published: false
+published: true
 ---
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/LCEmiRjPEtQ"
-    title="Software in the Era of AI - Andrej Karpathy"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ You can check Andrej Karpathy's complete insights on AI-era software through the full presentation video.</figcaption>
-</figure>
+{% include video id="LCEmiRjPEtQ" provider="youtube" %}
+
+*You can check Andrej Karpathy's complete insights on AI-era software through the full presentation video.*
 
 ## Key Messages at a Glance
 

@@ -18,21 +18,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: false
+published: true
 ---
 
 ## رؤية الرئيس التنفيذي لـ Google DeepMind لمستقبل الذكاء العام الاصطناعي: عصر 'الوفرة الجذرية' قادم
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/CRraHg4Ks_g"
-    title="مقابلة ديميس هاسابيس حول الذكاء العام الاصطناعي - WIRED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ فيديو مقابلة رؤية الذكاء العام الاصطناعي للرئيس التنفيذي لـ Google DeepMind ديميس هاسابيس</figcaption>
-</figure>
+{% include video id="CRraHg4Ks_g" provider="youtube" %}
+
+*فيديو مقابلة رؤية الذكاء العام الاصطناعي للرئيس التنفيذي لـ Google DeepMind ديميس هاسابيس*
 
 الحائز على جائزة نوبل والرئيس التنفيذي لـ Google DeepMind **ديميس هاسابيس** كشف رؤى مذهلة لجدول تحقيق الذكاء العام الاصطناعي (AGI) ومستقبل البشرية في مقابلة مع WIRED.
 

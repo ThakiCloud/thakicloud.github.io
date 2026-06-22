@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: false
+published: true
 ---
 
 ## Cursor يحقق 300 مليون دولار ARR في 21 شهراً منذ الإطلاق
@@ -46,7 +46,7 @@ published: false
 
 ## فيديو قصة نمو Cursor
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BGgsoIgbT_Y" title="مشغل فيديو YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include video id="BGgsoIgbT_Y" provider="youtube" %}
 
 *المصدر: [حاضر ومستقبل أدوات البرمجة بالذكاء الاصطناعي](https://www.youtube.com/watch?v=BGgsoIgbT_Y)*
 

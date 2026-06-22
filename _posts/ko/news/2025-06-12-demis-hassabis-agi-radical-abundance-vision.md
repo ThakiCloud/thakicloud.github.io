@@ -14,21 +14,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-published: false
+published: true
 ---
 
 ## 구글 딥마인드 CEO가 그리는 AGI의 미래: '급진적 풍요' 시대가 온다
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/CRraHg4Ks_g"
-    title="Demis Hassabis AGI Interview - WIRED"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ 구글 딥마인드 CEO Demis Hassabis의 AGI 비전 인터뷰 영상</figcaption>
-</figure>
+{% include video id="CRraHg4Ks_g" provider="youtube" %}
+
+*구글 딥마인드 CEO Demis Hassabis의 AGI 비전 인터뷰 영상*
 
 노벨상 수상자이자 구글 딥마인드의 CEO인 **Demis Hassabis**가 WIRED와의 인터뷰에서 AGI(Artificial General Intelligence) 달성 시점과 인류의 미래에 대한 놀라운 비전을 공개했습니다.
 

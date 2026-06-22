@@ -23,21 +23,14 @@ canonical_url: "https://thakicloud.github.io/ar/news/po-shen-loh-ai-creative-sup
 reading_time: true
 lang: ar
 permalink: /ar/news/po-shen-loh-ai-creative-supremacy-era-insights/
-published: false
+published: true
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-<figure class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/xWYb7tImErI"
-    title="استراتيجية النجاح في عصر الذكاء الاصطناعي | د. Po-Shen Loh"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <figcaption>※ يمكنك مشاهدة الفيديو الكامل للاطلاع على رؤى د. Po-Shen Loh حول عصر الذكاء الاصطناعي.</figcaption>
-</figure>
+{% include video id="xWYb7tImErI" provider="youtube" %}
+
+*يمكنك مشاهدة الفيديو الكامل للاطلاع على رؤى د. Po-Shen Loh حول عصر الذكاء الاصطناعي.*
 
 ## الرسائل الرئيسية في لمحة
 
