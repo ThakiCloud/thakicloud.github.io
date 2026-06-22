@@ -411,3 +411,17 @@ html[data-theme="dark"] {
 .highlight .gd { color: var(--syn-keyword); background-color: var(--syn-del-bg); }
 .highlight .gp { color: var(--syn-comment); }
 .highlight .err { color: var(--syn-keyword); background: transparent; }
+/* ─── Hero(상단 헤더) 이미지 높이 제한 ──────────────────────────────────
+   header.image 로 렌더되는 .page__hero-image 는 테마 기본이 width:100% /
+   height:auto 라, 가로 넓은 데스크톱에서 16:9 이미지도 뷰포트를 절반 이상
+   차지해 본문이 fold 아래로 밀린다(2026-06-22 local-llm-inference-stack-guide
+   제보). Notion 커버처럼 높이를 캡하고 object-fit:cover 로 크롭한다.
+   → header.image 를 쓰는 모든 글에 자동 적용(글별 frontmatter 수정 불필요). */
+.page__hero-image {
+  max-height: 240px;            /* 모바일 기본 */
+  object-fit: cover;
+  object-position: center;
+
+  @include breakpoint($medium) { max-height: 340px; }  /* ≥768px */
+  @include breakpoint($large)  { max-height: 440px; }  /* ≥1024px */
+}
