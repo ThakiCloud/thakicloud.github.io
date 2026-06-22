@@ -20,7 +20,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "n8n 워크플로우 가이드"
-canonical_url: "https://thakicloud.github.io/n8n-workflows-ai-platform-automation-guide/"
+canonical_url: "https://thakicloud.github.io/ko/dev/n8n-workflows-ai-platform-automation-guide/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

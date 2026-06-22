@@ -23,7 +23,7 @@ author_profile: true
 toc: true
 toc_label: "دليل سير عمل n8n"
 canonical_url: "https://thakicloud.github.io/ar/dev/n8n-workflows-ai-platform-automation-guide/"
-published: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق
