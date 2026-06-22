@@ -1,0 +1,27 @@
+{%- comment -%}
+Emits reciprocal hreflang <xhtml:link> alternates for a multilingual post.
+Translation key = post URL with the leading /ko//en//ar/ language prefix removed,
+so only true translations (same category + slug across languages) are linked —
+basename collisions in different categories are NOT falsely paired.
+x-default policy: ko (domestic primary) > en > ar.
+Usage (inside a sitemap <url> block): {% include hreflang-alternates.html url=post.url %}
+{%- endcomment -%}
+{%- assign _key = include.url | remove_first: '/ko/' | remove_first: '/en/' | remove_first: '/ar/' -%}
+{%- assign _ko = '' -%}{%- assign _en = '' -%}{%- assign _ar = '' -%}
+{%- for p in site.posts -%}
+  {%- assign _k2 = p.url | remove_first: '/ko/' | remove_first: '/en/' | remove_first: '/ar/' -%}
+  {%- if _k2 == _key -%}
+    {%- if p.lang == 'ko' -%}{%- assign _ko = p.url -%}{%- endif -%}
+    {%- if p.lang == 'en' -%}{%- assign _en = p.url -%}{%- endif -%}
+    {%- if p.lang == 'ar' -%}{%- assign _ar = p.url -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if _ko != '' %}      <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}{{ _ko }}" />
+{% endif -%}
+{%- if _en != '' %}      <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ _en }}" />
+{% endif -%}
+{%- if _ar != '' %}      <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}{{ _ar }}" />
+{% endif -%}
+{%- if _ko != '' -%}{%- assign _xdef = _ko -%}{%- elsif _en != '' -%}{%- assign _xdef = _en -%}{%- else -%}{%- assign _xdef = _ar -%}{%- endif -%}
+{%- if _xdef != '' %}      <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ _xdef }}" />
+{% endif -%}

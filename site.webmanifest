@@ -1,0 +1,19 @@
+---
+layout: null
+sitemap: false
+---
+{
+  "name": "Thaki Cloud Tech Blog",
+  "short_name": "Thaki Cloud",
+  "description": "AI/ML Engineering, LLMOps, DevOps 전문 기술 블로그",
+  "lang": "ko-KR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/favicon/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

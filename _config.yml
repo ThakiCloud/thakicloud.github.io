@@ -75,8 +75,9 @@ google:
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification : vTtIRRz5XMsZ10-HAT-4-xuTZEmXG-zUCArAl3ANtAI
-bing_site_verification   :
-naver_site_verification  :
+# 인증 코드 발급 + 사이트맵 제출 절차: docs/SEO-SETUP.md 참고. 코드만 붙여넣으면 _includes/seo.html이 자동 출력.
+bing_site_verification   :   # Bing Webmaster Tools > Import from GSC (가장 빠름) 또는 meta content 값
+naver_site_verification  :   # 네이버 서치어드바이저 > 사이트 등록 > HTML 태그 인증의 content 값 (국내 노출 핵심)
 yandex_site_verification :
 baidu_site_verification  :
 

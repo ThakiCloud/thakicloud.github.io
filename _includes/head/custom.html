@@ -32,4 +32,10 @@
 <link rel="stylesheet" href="{{ '/assets/css/mermaid-custom.css' | relative_url }}">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 
+<!-- PWA web app manifest -->
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+
+<!-- Structured data (JSON-LD): BlogPosting / BreadcrumbList / WebSite -->
+{% include head/structured-data.html %}
+
 <!-- end custom head snippets -->
