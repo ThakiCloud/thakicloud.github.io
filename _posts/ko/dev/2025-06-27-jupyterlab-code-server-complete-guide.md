@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 toc_label: 개발 환경 가이드
 canonical_url: "https://thakicloud.github.io/dev/jupyterlab-code-server-complete-guide/"
+published: false
 ---
 
 VS Code를 웹 브라우저에서 사용할 수 있다면 얼마나 편할까요? JupyterLab 4에서 `jupyter-codeserver-proxy`를 사용하면 클릭 한 번으로 VS Code Web을 띄울 수 있습니다. 이 글에서는 맥북 로컬 환경부터 도커 컨테이너, GPU 서버까지 모든 개발 시나리오를 다루겠습니다.

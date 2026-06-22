@@ -27,6 +27,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/gmpo-geometric-mean-policy-optimization-stable-rlhf/"
 lang: en
 reading_time: true
+published: false
 ---
 
 > ⏱️ **Estimated reading time**: 10 min

@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-published: true
+published: false
 ---
 
 {% include video id="CRraHg4Ks_g" provider="youtube" %}

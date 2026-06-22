@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "Development Environment Guide"
 canonical_url: "https://thakicloud.github.io/en/dev/jupyterlab-code-server-complete-guide/"
+published: false
 ---
 
 What if you could use VS Code right inside a web browser? With `jupyter-codeserver-proxy` in JupyterLab 4, you can launch VS Code Web with a single click. This guide covers every development scenario: local MacBook setup, Docker containers, and GPU servers.

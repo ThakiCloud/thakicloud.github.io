@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 핵심 내용
-published: true
+published: false
 ---
 
 {% include video id="giT0ytynSqg" provider="youtube" %}

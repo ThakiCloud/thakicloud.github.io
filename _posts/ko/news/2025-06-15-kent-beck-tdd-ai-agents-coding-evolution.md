@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-published: true
+published: false
 ---
 
 {% include video id="aSXaxOdVtAQ" provider="youtube" %}

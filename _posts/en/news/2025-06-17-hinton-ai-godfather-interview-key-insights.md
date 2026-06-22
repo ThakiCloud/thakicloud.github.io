@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Key Contents"
-published: true
+published: false
 ---
 
 {% include video id="giT0ytynSqg" provider="youtube" %}

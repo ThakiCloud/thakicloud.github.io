@@ -12,6 +12,7 @@ canonical_url: "https://thakicloud.github.io/ar/dev/jupyterlab-code-server-compl
 toc: true
 toc_sticky: true
 toc_label: "دليل بيئة التطوير"
+published: false
 ---
 
 هل تريد استخدام VS Code في المتصفح من خلال JupyterLab 4؟ يُتيح لك امتداد `jupyter-codeserver-proxy` تشغيل VS Code كاملًا (عبر code-server) مباشرةً داخل بيئة JupyterLab، مما يوفر تجربة تطوير موحدة عبر المتصفح دون الحاجة إلى تثبيت برامج إضافية محليًا.

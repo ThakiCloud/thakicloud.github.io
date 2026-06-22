@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-published: true
+published: false
 ---
 
 ## Cursor, 출시 21개월 만에 4천억 원 ARR을 달성하다

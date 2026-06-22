@@ -10,7 +10,7 @@ tags:
   - TED
   - Eric Schmidt
 author_profile: true
-published: true
+published: false
 --- 
 
 {% include video id="id4YRO7G0wE" provider="youtube" %}
