@@ -24,7 +24,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/gmpo-geometric-mean-policy-optimization-stable-rlhf/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/gmpo-geometric-mean-policy-optimization-stable-rlhf/"
 reading_time: true
 ---
 

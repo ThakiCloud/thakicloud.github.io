@@ -6,7 +6,6 @@ seo_description: "تحليل مفصل لتقنية GMPO القائمة على ا
 date: 2025-08-03
 last_modified_at: 2025-08-03
 lang: ar
-published: true
 categories:
   - llmops
   - research

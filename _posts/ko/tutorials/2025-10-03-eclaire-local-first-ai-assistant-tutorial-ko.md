@@ -20,7 +20,8 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/eclaire-local-first-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/eclaire-local-first-ai-assistant-tutorial/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/eclaire-local-first-ai-assistant-tutorial-ko/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분
