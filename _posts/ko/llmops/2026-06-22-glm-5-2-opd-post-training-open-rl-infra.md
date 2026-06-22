@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/glm-5-2-opd-post-training-open-rl-infra/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
 ---
 
