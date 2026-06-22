@@ -36,9 +36,11 @@ published: true
 
 في هذه المراجعة، ندرس 10 أوراق بحثية جوهرية استقطبت أكبر اهتمام مجتمعي لاستكشاف كيف يحوّل التعلم المعزز النماذج اللغوية الكبيرة إلى وكلاء حقيقيين. من استخدام الأدوات متعدد الوسائط إلى التعاون متعدد الوكلاء وتعلم المناهج الفعّال، نحلل بعمق الأفكار الجوهرية في كل بحث وانعكاساتها على تطوير أنظمة الذكاء الاصطناعي العملية.
 
+![خريطة تقنيات التدريب اللاحق الوكيلة القائمة على التعلم المعزز: 10 أوراق ضمن أربعة محاور](/assets/images/rl-post-training-agentic-models-diagram.svg)
+
 ## 1. Visual-ARFT: تعليم الوكلاء متعددي الوسائط استخدام الأدوات
 
-**الورقة البحثية**: Visual-ARFT: Visual Agentic Reinforcement Fine-Tuning (arXiv 2505.14720، يونيو 2025)
+**الورقة البحثية**: Visual-ARFT: Visual Agentic Reinforcement Fine-Tuning (arXiv 2505.14246، مايو 2025)
 
 يقدم Visual-ARFT مقاربةً مبتكرةً لتدريب النماذج اللغوية البصرية الكبيرة (LVLMs) على استخدام الأدوات الخارجية استخدامًا استراتيجيًا. جوهر هذا البحث هو تدريب النماذج لا على توليد النصوص فحسب، بل عبر التعلم المعزز على الحكم على متى وكيف تستخدم أدوات معقدة كالتصفح على الويب وتنفيذ الكود والتعامل مع الصور.
 
@@ -104,7 +106,7 @@ MARFT مفيد بشكل خاص في سيناريوهات الوكلاء التع
 
 ## 3. ReTool: الاستخدام الاستراتيجي للأدوات عبر التعلم المعزز
 
-**الورقة البحثية**: ReTool: Reinforcement Learning for Strategic Tool Use in LLMs (arXiv 2506.06680، يونيو 2025)
+**الورقة البحثية**: ReTool: Reinforcement Learning for Strategic Tool Use in LLMs (arXiv 2504.11536، أبريل 2025)
 
 يقدم ReTool منهجيةً لتعلّم النماذج اللغوية متى وكيف تستخدم الأدوات الخارجية عبر التعلم المعزز، ولا سيما في مجالات كالرياضيات والهندسة حيث يكون تنفيذ الكود حاسمًا للاستدلال.
 
@@ -199,7 +201,7 @@ optimizer = Adam(important_params, lr=1e-5)
 
 ## 5. UFT: توحيد الضبط الدقيق الخاضع للإشراف والتعلم المعزز
 
-**الورقة البحثية**: UFT: Unifying Supervised and Reinforcement Fine-Tuning (arXiv 2504.20361، أبريل 2025)
+**الورقة البحثية**: UFT: Unifying Supervised and Reinforcement Fine-Tuning (arXiv 2505.16984، مايو 2025)
 
 في معظم البيئات العملية، يمر تطوير الوكيل بعملية مكوّنة من مرحلتين تبدأ بالتعلم الخاضع للإشراف (SFT) وتستمر إلى التعلم المعزز (RFT). يقدم UFT نموذجًا تدريبيًا أكثر فاعليةً وكفاءةً بدمج هاتين المرحلتين في واحدة.
 
@@ -707,3 +709,18 @@ def compute_l2t_reward(reasoning_steps, final_answer, ground_truth):
 - تحقيق كفاءة التكلفة عبر تحسين الاستدلال النظري-المعلوماتي
 
 سيكون عام 2025 نقطة تحول يتحوّل فيها التدريب اللاحق القائم على RL من بحث نظري إلى تقنية عملية. المنهجيات التي قدمتها هذه الأوراق لم تعد تجارب معملية بل تقنيات موثّقة قابلة للتطبيق الفوري في البيئات المؤسسية الحقيقية.
+
+## المراجع
+
+فيما يلي مصادر arXiv للأوراق البحثية التي تناولتها هذه المراجعة. جرى التحقق من كل رابط مقابل صفحة الملخص على arXiv وقت الكتابة.
+
+1. Visual Agentic Reinforcement Fine-Tuning (Visual-ARFT): [https://arxiv.org/abs/2505.14246](https://arxiv.org/abs/2505.14246)
+2. MARFT: Multi-Agent Reinforcement Fine-Tuning: [https://arxiv.org/abs/2504.16129](https://arxiv.org/abs/2504.16129)
+3. ReTool: Reinforcement Learning for Strategic Tool Use in LLMs: [https://arxiv.org/abs/2504.11536](https://arxiv.org/abs/2504.11536)
+4. Reinforcement Learning Finetunes Small Subnetworks in Large Language Models: [https://arxiv.org/abs/2505.11711](https://arxiv.org/abs/2505.11711)
+5. UFT: Unifying Supervised and Reinforcement Fine-Tuning: [https://arxiv.org/abs/2505.16984](https://arxiv.org/abs/2505.16984)
+6. Self-Evolving Curriculum for LLM Reasoning: [https://arxiv.org/abs/2505.14970](https://arxiv.org/abs/2505.14970)
+7. Improving Data Efficiency for LLM Reinforcement Fine-tuning Through Difficulty-targeted Online Data Selection and Rollout Replay: [https://arxiv.org/abs/2506.05316](https://arxiv.org/abs/2506.05316)
+8. Reinforcement Fine-Tuning for Reasoning towards Multi-Step Multi-Source Search (R-Search): [https://arxiv.org/abs/2506.08352](https://arxiv.org/abs/2506.08352)
+9. Learning What Reinforcement Learning Can't: Interleaved Online Fine-Tuning for Hardest Questions (ReLIFT): [https://arxiv.org/abs/2506.07527](https://arxiv.org/abs/2506.07527)
+10. Learning to Think: Information-Theoretic Reinforcement Fine-Tuning for LLMs (L2T): [https://arxiv.org/abs/2505.10425](https://arxiv.org/abs/2505.10425)

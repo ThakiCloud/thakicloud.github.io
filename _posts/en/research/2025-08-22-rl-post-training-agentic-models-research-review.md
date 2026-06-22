@@ -36,9 +36,11 @@ published: true
 
 In this review, we examine 10 key papers that have received the most attention in the community to explore how reinforcement learning is transforming large language models into genuine agents. From multi-modal tool use to multi-agent collaboration and efficient curriculum learning, we deeply analyze the core ideas each research presents and their implications for practical AI system development.
 
+![Landscape of RL-based agentic post-training techniques: 10 papers grouped into four themes](/assets/images/rl-post-training-agentic-models-diagram.svg)
+
 ## 1. Visual-ARFT: Teaching Tool Use to Multimodal Agents
 
-**Paper**: Visual-ARFT: Visual Agentic Reinforcement Fine-Tuning (arXiv 2505.14720, June 2025)
+**Paper**: Visual-ARFT: Visual Agentic Reinforcement Fine-Tuning (arXiv 2505.14246, May 2025)
 
 Visual-ARFT presents an innovative approach to training large vision-language models (LVLMs) to strategically utilize external tools. The core of this research is training models not just to generate text, but through reinforcement learning to judge and execute when and how to use complex tools like web browsing, code execution, and image manipulation.
 
@@ -104,7 +106,7 @@ MARFT is particularly useful in collaborative agent scenarios such as:
 
 ## 3. ReTool: Strategic Tool Use via Reinforcement Learning
 
-**Paper**: ReTool: Reinforcement Learning for Strategic Tool Use in LLMs (arXiv 2506.06680, June 2025)
+**Paper**: ReTool: Reinforcement Learning for Strategic Tool Use in LLMs (arXiv 2504.11536, April 2025)
 
 ReTool presents a methodology for learning when and how language models should use external tools through reinforcement learning, particularly in domains like mathematics and geometry where code execution is decisively helpful for reasoning.
 
@@ -199,7 +201,7 @@ optimizer = Adam(important_params, lr=1e-5)
 
 ## 5. UFT: Unifying Supervised and Reinforcement Fine-Tuning
 
-**Paper**: UFT: Unifying Supervised and Reinforcement Fine-Tuning (arXiv 2504.20361, April 2025)
+**Paper**: UFT: Unifying Supervised and Reinforcement Fine-Tuning (arXiv 2505.16984, May 2025)
 
 In most practical environments, AI agent development goes through a 2-stage process starting with supervised learning (SFT) and continuing to reinforcement learning (RFT). UFT presents a more effective and efficient training paradigm by integrating these two stages into one.
 
@@ -727,3 +729,18 @@ A comprehensive strategy for applying the results of these research papers to pr
 Particularly, opportunities have opened in the Korean AI ecosystem to proactively adopt and develop these technologies, securing advantages in global AI competition. Now that methodologies for building world-class agent systems with limited resources have been established, execution capability and application strategy will be the key to success.
 
 The future of RL-based agent development is no longer in the realm of "possibility" but in the realm of "reality." How these technologies are combined and utilized will determine the competitiveness of next-generation AI systems.
+
+## References
+
+The arXiv sources for the papers covered in this review are listed below. Each link was verified against its arXiv abstract page at the time of writing.
+
+1. Visual Agentic Reinforcement Fine-Tuning (Visual-ARFT): [https://arxiv.org/abs/2505.14246](https://arxiv.org/abs/2505.14246)
+2. MARFT: Multi-Agent Reinforcement Fine-Tuning: [https://arxiv.org/abs/2504.16129](https://arxiv.org/abs/2504.16129)
+3. ReTool: Reinforcement Learning for Strategic Tool Use in LLMs: [https://arxiv.org/abs/2504.11536](https://arxiv.org/abs/2504.11536)
+4. Reinforcement Learning Finetunes Small Subnetworks in Large Language Models: [https://arxiv.org/abs/2505.11711](https://arxiv.org/abs/2505.11711)
+5. UFT: Unifying Supervised and Reinforcement Fine-Tuning: [https://arxiv.org/abs/2505.16984](https://arxiv.org/abs/2505.16984)
+6. Self-Evolving Curriculum for LLM Reasoning: [https://arxiv.org/abs/2505.14970](https://arxiv.org/abs/2505.14970)
+7. Improving Data Efficiency for LLM Reinforcement Fine-tuning Through Difficulty-targeted Online Data Selection and Rollout Replay: [https://arxiv.org/abs/2506.05316](https://arxiv.org/abs/2506.05316)
+8. Reinforcement Fine-Tuning for Reasoning towards Multi-Step Multi-Source Search (R-Search): [https://arxiv.org/abs/2506.08352](https://arxiv.org/abs/2506.08352)
+9. Learning What Reinforcement Learning Can't: Interleaved Online Fine-Tuning for Hardest Questions (ReLIFT): [https://arxiv.org/abs/2506.07527](https://arxiv.org/abs/2506.07527)
+10. Learning to Think: Information-Theoretic Reinforcement Fine-Tuning for LLMs (L2T): [https://arxiv.org/abs/2505.10425](https://arxiv.org/abs/2505.10425)

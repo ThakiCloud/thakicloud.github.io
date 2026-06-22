@@ -26,7 +26,7 @@ canonical_url: "https://thakicloud.github.io/en/research/advertisement-embedding
 
 The rapid proliferation of Large Language Models (LLMs) in commercial and research applications has introduced unprecedented capabilities in natural language understanding and generation. However, this widespread adoption has also exposed these systems to sophisticated adversarial attacks that threaten their integrity and reliability. A recent groundbreaking research paper titled "Attacking LLMs and AI Agents: Advertisement Embedding Attacks Against Large Language Models" (arXiv:2508.17674) reveals a novel and particularly insidious form of attack that challenges traditional notions of AI security.
 
-Unlike conventional adversarial attacks that primarily aim to degrade model performance or cause obvious failures, Advertisement Embedding Attacks (AEA) represent a paradigm shift in adversarial methodology. These attacks operate by stealthily embedding malicious content—including advertisements, propaganda, or hate speech—into seemingly normal model outputs, thereby compromising information integrity while maintaining the facade of legitimate responses.
+Unlike conventional adversarial attacks that primarily aim to degrade model performance or cause obvious failures, Advertisement Embedding Attacks (AEA) represent a paradigm shift in adversarial methodology. These attacks operate by stealthily embedding malicious content (including advertisements, propaganda, or hate speech) into seemingly normal model outputs, thereby compromising information integrity while maintaining the facade of legitimate responses.
 
 The significance of this research extends far beyond academic curiosity. As LLMs become increasingly integrated into critical decision-making processes, customer service systems, educational platforms, and content generation pipelines, the potential for widespread misinformation and manipulation through AEA becomes a pressing concern for the entire AI ecosystem. This analysis provides a comprehensive examination of AEA's mechanisms, implications, and the defensive strategies required to mitigate this emerging threat.
 
@@ -45,6 +45,8 @@ where $x$ represents the input prompt, $y$ is the generated sequence, $\theta$ d
 $$P_{AEA}(y|x, \theta) = \prod_{i=1}^{n} P(y_i|y_{<i}, M(x), M(\theta))$$
 
 This manipulation ensures that certain predetermined content appears in the output with high probability while maintaining the overall coherence and naturalness of the response. The sophistication of AEA lies in making this manipulation imperceptible to standard evaluation metrics and human reviewers.
+
+![Advertisement Embedding Attack (AEA) threat model: attack vectors, compromised LLM, ad-injected output, and defense layer](/assets/images/advertisement-embedding-attacks-diagram.svg)
 
 The attack methodology operates on two primary vectors: input manipulation and model parameter manipulation. Input manipulation involves crafting prompts or system messages that encourage the model to include specific content in its responses. This can be achieved through carefully designed prompt injections that exploit the model's instruction-following capabilities. Model parameter manipulation, on the other hand, involves training or fine-tuning models with poisoned datasets that create backdoors for content injection.
 
@@ -316,7 +318,7 @@ $$\frac{dI_{contaminated}}{dt} = \beta \cdot I_{contaminated} \cdot S_{susceptib
 
 where $I_{contaminated}$ represents the population with contaminated knowledge, $S_{susceptible}$ denotes the susceptible population, $\beta$ is the transmission rate of contaminated information, and $\gamma$ represents the recovery rate through exposure to correct information.
 
-The long-term implications for epistemic communities—groups that share knowledge-building practices and standards—are particularly concerning. As these communities increasingly rely on AI-assisted research, content generation, and knowledge synthesis, AEA could systematically bias the direction of scientific inquiry, policy development, and cultural discourse. The mathematical framework for this bias propagation can be expressed through network diffusion models that account for the influence relationships within epistemic communities.
+The long-term implications for epistemic communities, that is, groups that share knowledge-building practices and standards, are particularly concerning. As these communities increasingly rely on AI-assisted research, content generation, and knowledge synthesis, AEA could systematically bias the direction of scientific inquiry, policy development, and cultural discourse. The mathematical framework for this bias propagation can be expressed through network diffusion models that account for the influence relationships within epistemic communities.
 
 ### Trust Degradation and Adoption Barriers
 
@@ -328,7 +330,7 @@ $$T_{AI}(t+1) = \alpha \cdot T_{AI}(t) + \beta \cdot E_{positive}(t) - \gamma \c
 
 where $T_{AI}(t)$ represents AI trust at time $t$, $E_{positive}(t)$ denotes positive user experiences, $I_{security}(t)$ represents security incidents, $A_{awareness}(t)$ measures public awareness of vulnerabilities, and $\alpha$, $\beta$, $\gamma$, $\delta$ are parameters that determine the relative influence of each factor.
 
-The asymmetric nature of trust formation and degradation presents particular challenges for AI adoption. While building trust typically requires consistent positive experiences over extended periods, security incidents—particularly those involving deception or manipulation—can rapidly erode trust that took years to establish. This asymmetry is mathematically represented through different decay rates and recovery functions in trust models.
+The asymmetric nature of trust formation and degradation presents particular challenges for AI adoption. While building trust typically requires consistent positive experiences over extended periods, security incidents, particularly those involving deception or manipulation, can rapidly erode trust that took years to establish. This asymmetry is mathematically represented through different decay rates and recovery functions in trust models.
 
 The impact of trust degradation extends beyond individual user decisions to affect institutional adoption policies, regulatory frameworks, and investment patterns in AI development. Organizations may implement more conservative AI adoption strategies, regulators may impose stricter oversight requirements, and investors may demand higher security standards, all of which can slow the beneficial deployment of AI technologies.
 
@@ -439,3 +441,7 @@ As the AI community grapples with these challenges, the emergence of AEA serves 
 The path forward requires sustained commitment to security research, investment in defensive technologies, and the development of governance frameworks that can adapt to evolving threats while preserving the beneficial potential of AI systems. Only through such comprehensive efforts can the AI community hope to maintain public trust and ensure that these powerful technologies continue to serve as tools for human empowerment rather than vectors for manipulation and control.
 
 The significance of this research extends beyond its immediate technical contributions to serve as a crucial wake-up call for the entire AI ecosystem. As we stand at a critical juncture in the development and deployment of AI technologies, the lessons learned from understanding and addressing Advertisement Embedding Attacks will likely prove foundational for building more secure, trustworthy, and beneficial AI systems for future generations.
+
+## References
+
+- Qiming Guo, Jinwen Tang, Xingran Huang. "Attacking LLMs and AI Agents: Advertisement Embedding Attacks Against Large Language Models." arXiv:2508.17674. [https://arxiv.org/abs/2508.17674](https://arxiv.org/abs/2508.17674)

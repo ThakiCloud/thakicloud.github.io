@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 380" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="STORM 4-step research workflow">
+  <rect width="1040" height="380" fill="#f8fafc"/>
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">STORM 4단계 리서치 워크플로</text>
+
+  <!-- pre-writing group -->
+  <rect x="24" y="70" width="700" height="180" rx="16" fill="#eef2ff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="44" y="98" font-size="14" font-weight="700" fill="#4338ca">작성 전 (Pre-writing)</text>
+
+  <!-- writing group -->
+  <rect x="744" y="70" width="272" height="180" rx="16" fill="#ecfdf5" stroke="#bbf7d0" stroke-width="2"/>
+  <text x="764" y="98" font-size="14" font-weight="700" fill="#15803d">작성 (Writing)</text>
+
+  <!-- step 1 -->
+  <rect x="44" y="120" width="200" height="100" rx="12" fill="#fff" stroke="#6366f1" stroke-width="2"/>
+  <text x="144" y="150" text-anchor="middle" font-size="15" font-weight="600" fill="#3730a3">1. 관점 도출</text>
+  <text x="144" y="172" text-anchor="middle" font-size="12" fill="#4f46e5">Perspectives</text>
+  <text x="144" y="194" text-anchor="middle" font-size="11.5" fill="#64748b">페르소나 3~5개</text>
+
+  <!-- step 2 -->
+  <rect x="262" y="120" width="200" height="100" rx="12" fill="#fff" stroke="#6366f1" stroke-width="2"/>
+  <text x="362" y="146" text-anchor="middle" font-size="15" font-weight="600" fill="#3730a3">2. 다관점 질문</text>
+  <text x="362" y="167" text-anchor="middle" font-size="12" fill="#4f46e5">Multi-perspective Q&amp;A</text>
+  <text x="362" y="189" text-anchor="middle" font-size="11.5" fill="#64748b">+ 검색 근거 수집</text>
+
+  <!-- step 3 -->
+  <rect x="480" y="120" width="200" height="100" rx="12" fill="#fff" stroke="#6366f1" stroke-width="2"/>
+  <text x="580" y="150" text-anchor="middle" font-size="15" font-weight="600" fill="#3730a3">3. 개요 합성</text>
+  <text x="580" y="172" text-anchor="middle" font-size="12" fill="#4f46e5">Outline synthesis</text>
+  <text x="580" y="194" text-anchor="middle" font-size="11.5" fill="#64748b">중복 제거·논리 정렬</text>
+
+  <!-- step 4 -->
+  <rect x="764" y="120" width="232" height="100" rx="12" fill="#fff" stroke="#22c55e" stroke-width="2"/>
+  <text x="880" y="150" text-anchor="middle" font-size="15" font-weight="600" fill="#166534">4. 인용 본문 작성</text>
+  <text x="880" y="172" text-anchor="middle" font-size="12" fill="#16a34a">Cited article</text>
+  <text x="880" y="194" text-anchor="middle" font-size="11.5" fill="#64748b">모든 주장 ↔ 근거</text>
+
+  <defs>
+    <marker id="sarr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <line x1="244" y1="170" x2="258" y2="170" stroke="#64748b" stroke-width="2.5" marker-end="url(#sarr)"/>
+  <line x1="462" y1="170" x2="476" y2="170" stroke="#64748b" stroke-width="2.5" marker-end="url(#sarr)"/>
+  <line x1="680" y1="170" x2="760" y2="170" stroke="#64748b" stroke-width="2.5" marker-end="url(#sarr)"/>
+
+  <text x="520" y="300" text-anchor="middle" font-size="13.5" fill="#475569">단계 분리 = 검증 지점: 개요(3단계)에서 멈춰 고치는 비용이 본문 전체를 버리는 것보다 싸다</text>
+  <text x="520" y="328" text-anchor="middle" font-size="12.5" fill="#64748b">다관점 질문하기가 커버리지 엔진 · 인용 강제가 환각을 줄인다</text>
+</svg>

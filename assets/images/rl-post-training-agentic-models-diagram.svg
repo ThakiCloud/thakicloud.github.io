@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 470" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="RL post-training techniques taxonomy">
+  <rect width="1040" height="470" fill="#f8fafc"/>
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">RL 기반 에이전트 Post-Training 기법 지형</text>
+  <text x="520" y="64" text-anchor="middle" font-size="13" fill="#64748b">10개 논문을 4개 테마로 묶은 지도 (Reinforcement learning for agentic models, 2025)</text>
+
+  <!-- cluster 1: tool & retrieval -->
+  <rect x="28" y="92" width="478" height="160" rx="14" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="48" y="118" font-size="15" font-weight="700" fill="#1e3a8a">도구·검색 통합 (Tool &amp; Retrieval)</text>
+  <rect x="48" y="132" width="135" height="100" rx="10" fill="#fff" stroke="#93c5fd"/>
+  <text x="115" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#1e3a8a">Visual-ARFT</text>
+  <text x="115" y="192" text-anchor="middle" font-size="11" fill="#475569">멀티모달 도구</text>
+  <text x="115" y="208" text-anchor="middle" font-size="10.5" fill="#94a3b8">2505.14246</text>
+  <rect x="193" y="132" width="135" height="100" rx="10" fill="#fff" stroke="#93c5fd"/>
+  <text x="260" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#1e3a8a">ReTool</text>
+  <text x="260" y="192" text-anchor="middle" font-size="11" fill="#475569">전략적 도구 사용</text>
+  <text x="260" y="208" text-anchor="middle" font-size="10.5" fill="#94a3b8">2504.11536</text>
+  <rect x="338" y="132" width="148" height="100" rx="10" fill="#fff" stroke="#93c5fd"/>
+  <text x="412" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#1e3a8a">R-Search</text>
+  <text x="412" y="192" text-anchor="middle" font-size="11" fill="#475569">추론·검색 통합</text>
+  <text x="412" y="208" text-anchor="middle" font-size="10.5" fill="#94a3b8">2506.08352</text>
+
+  <!-- cluster 2: RL<->SFT unification -->
+  <rect x="534" y="92" width="478" height="160" rx="14" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="554" y="118" font-size="15" font-weight="700" fill="#166534">RL ↔ SFT 통합 (Unification)</text>
+  <rect x="554" y="132" width="218" height="100" rx="10" fill="#fff" stroke="#86efac"/>
+  <text x="663" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#166534">UFT</text>
+  <text x="663" y="192" text-anchor="middle" font-size="11" fill="#475569">지도·강화 통합 파인튜닝</text>
+  <text x="663" y="208" text-anchor="middle" font-size="10.5" fill="#94a3b8">2505.16984</text>
+  <rect x="782" y="132" width="210" height="100" rx="10" fill="#fff" stroke="#86efac"/>
+  <text x="887" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#166534">ReLIFT</text>
+  <text x="887" y="192" text-anchor="middle" font-size="11" fill="#475569">RL+SFT 적응적 통합</text>
+  <text x="887" y="208" text-anchor="middle" font-size="10.5" fill="#94a3b8">2506.07527</text>
+
+  <!-- cluster 3: efficiency -->
+  <rect x="28" y="268" width="610" height="172" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="48" y="294" font-size="15" font-weight="700" fill="#92400e">효율화 (Efficiency)</text>
+  <rect x="48" y="308" width="178" height="116" rx="10" fill="#fff" stroke="#fcd34d"/>
+  <text x="137" y="344" text-anchor="middle" font-size="13.5" font-weight="600" fill="#92400e">Sparse Subnetworks</text>
+  <text x="137" y="366" text-anchor="middle" font-size="11" fill="#475569">스파스 업데이트</text>
+  <text x="137" y="384" text-anchor="middle" font-size="10.5" fill="#94a3b8">2505.11711</text>
+  <rect x="236" y="308" width="190" height="116" rx="10" fill="#fff" stroke="#fcd34d"/>
+  <text x="331" y="338" text-anchor="middle" font-size="13.5" font-weight="600" fill="#92400e">Difficulty-Targeted</text>
+  <text x="331" y="360" text-anchor="middle" font-size="11" fill="#475569">적응 샘플링 + Rollout Replay</text>
+  <text x="331" y="378" text-anchor="middle" font-size="10.5" fill="#94a3b8">2506.05316</text>
+  <rect x="436" y="308" width="186" height="116" rx="10" fill="#fff" stroke="#fcd34d"/>
+  <text x="529" y="344" text-anchor="middle" font-size="13.5" font-weight="600" fill="#92400e">L2T</text>
+  <text x="529" y="366" text-anchor="middle" font-size="11" fill="#475569">정보론적 추론 효율</text>
+  <text x="529" y="384" text-anchor="middle" font-size="10.5" fill="#94a3b8">2505.10425</text>
+
+  <!-- cluster 4: multi-agent & curriculum -->
+  <rect x="654" y="268" width="358" height="172" rx="14" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="674" y="294" font-size="15" font-weight="700" fill="#5b21b6">멀티에이전트·커리큘럼</text>
+  <rect x="674" y="308" width="158" height="116" rx="10" fill="#fff" stroke="#c4b5fd"/>
+  <text x="753" y="344" text-anchor="middle" font-size="13.5" font-weight="600" fill="#5b21b6">MARFT</text>
+  <text x="753" y="366" text-anchor="middle" font-size="11" fill="#475569">다중 에이전트 RL</text>
+  <text x="753" y="384" text-anchor="middle" font-size="10.5" fill="#94a3b8">2504.16129</text>
+  <rect x="842" y="308" width="150" height="116" rx="10" fill="#fff" stroke="#c4b5fd"/>
+  <text x="917" y="344" text-anchor="middle" font-size="13.5" font-weight="600" fill="#5b21b6">SEC</text>
+  <text x="917" y="366" text-anchor="middle" font-size="11" fill="#475569">자기 진화 커리큘럼</text>
+  <text x="917" y="384" text-anchor="middle" font-size="10.5" fill="#94a3b8">2505.14970</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 360" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="SkillWeaver Decompose-Retrieve-Compose pipeline">
+  <rect width="1040" height="360" fill="#f8fafc"/>
+  <text x="520" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Compositional Skill Routing: Decompose → Retrieve → Compose</text>
+
+  <!-- stage boxes -->
+  <!-- query -->
+  <rect x="30" y="120" width="150" height="80" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="155" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">복합 쿼리</text>
+  <text x="105" y="178" text-anchor="middle" font-size="13" fill="#475569">Composite query</text>
+
+  <!-- decompose (bottleneck) -->
+  <rect x="230" y="120" width="170" height="80" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="315" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#991b1b">Decompose 분해</text>
+  <text x="315" y="172" text-anchor="middle" font-size="12.5" fill="#b91c1c">병목 · bottleneck</text>
+  <text x="315" y="189" text-anchor="middle" font-size="11.5" fill="#7f1d1d">step recall ↓</text>
+
+  <!-- retrieve -->
+  <rect x="450" y="120" width="170" height="80" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="535" y="155" text-anchor="middle" font-size="16" font-weight="600" fill="#1e3a8a">Retrieve 검색</text>
+  <text x="535" y="178" text-anchor="middle" font-size="12.5" fill="#1d4ed8">bi-encoder + FAISS</text>
+
+  <!-- compose -->
+  <rect x="670" y="120" width="170" height="80" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="755" y="155" text-anchor="middle" font-size="16" font-weight="600" fill="#166534">Compose 조립</text>
+  <text x="755" y="178" text-anchor="middle" font-size="12.5" fill="#15803d">dependency-aware DAG</text>
+
+  <!-- plan -->
+  <rect x="890" y="120" width="120" height="80" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="950" y="155" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">실행 계획</text>
+  <text x="950" y="178" text-anchor="middle" font-size="13" fill="#475569">Plan</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arrfb" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="180" y1="160" x2="226" y2="160" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="400" y1="160" x2="446" y2="160" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="620" y1="160" x2="666" y2="160" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="840" y1="160" x2="886" y2="160" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- retrieval-augmented feedback loop: Retrieve -> Decompose -->
+  <path d="M535,200 C535,270 315,270 315,204" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#arrfb)"/>
+  <text x="425" y="293" text-anchor="middle" font-size="13" fill="#b45309">retrieval-augmented 루프: 검색 결과로 분해를 스킬 어휘에 정렬</text>
+
+  <text x="520" y="335" text-anchor="middle" font-size="12.5" fill="#64748b">교훈: 검색기를 키우기 전에 분해 단계의 step-level recall을 측정하고 고친다</text>
+</svg>
