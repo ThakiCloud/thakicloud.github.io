@@ -15,8 +15,6 @@ toc: true
 toc_label: "AI Engineering Roadmap"
 ---
 
-## AI Engineering Learning Roadmap
-
 AI 엔지니어링을 시작하려는 분들을 위한 학습 로드맵입니다. 순서대로 따라가도 되고, 관심 있는 영역부터 먼저 파도 됩니다.
 
 ## 코딩 & ML 기초

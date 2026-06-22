@@ -17,8 +17,6 @@ permalink: /ar/careers/ai-engineering-learning-roadmap/
 canonical_url: "https://thakicloud.github.io/ar/careers/ai-engineering-learning-roadmap/"
 ---
 
-## خريطة طريق تعلم هندسة الذكاء الاصطناعي
-
 نحن نشارك خريطة طريق التعلم لأولئك الذين يريدون بدء هندسة الذكاء الاصطناعي. هذه الخريطة منظمة للسماح بالتعلم التدريجي للمجالات الأساسية لهندسة الذكاء الاصطناعي.
 
 ## 👨‍💻 البرمجة وأساسيات التعلم الآلي

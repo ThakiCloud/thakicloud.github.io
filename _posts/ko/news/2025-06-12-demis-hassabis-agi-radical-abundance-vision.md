@@ -17,8 +17,6 @@ toc_label: "목차"
 published: true
 ---
 
-## 구글 딥마인드 CEO가 그리는 AGI의 미래: '급진적 풍요' 시대가 온다
-
 {% include video id="CRraHg4Ks_g" provider="youtube" %}
 
 *구글 딥마인드 CEO Demis Hassabis의 AGI 비전 인터뷰 영상*

@@ -21,8 +21,6 @@ published: false
 
 ⏱️ **Estimated reading time**: 15 minutes
 
-# Complete Guide to ProxyCat: Building and Operating Tunnel Proxy Pools
-
 ProxyCat is an innovative tunnel proxy pool middleware that transforms short-term proxy IPs into fixed IPs for continuous use. This comprehensive guide covers everything from installation to advanced configuration and operational best practices.
 
 ## What is ProxyCat?

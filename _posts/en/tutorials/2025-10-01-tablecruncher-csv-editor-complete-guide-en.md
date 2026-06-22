@@ -23,8 +23,6 @@ published: false
 
 ⏱️ **Estimated reading time**: 15 minutes
 
-# Tablecruncher: Complete Guide to the Powerful CSV Editor for Large Files
-
 As a data analyst or developer, you've likely encountered the frustration of working with large CSV files. Opening millions of rows in Excel often results in the program freezing or running out of memory, making your work impossible.
 
 **Tablecruncher** is the powerful CSV editor designed to solve exactly these problems. It boasts incredible performance, capable of opening a 2GB file with 16 million rows in just 32 seconds on a Mac Mini M2.

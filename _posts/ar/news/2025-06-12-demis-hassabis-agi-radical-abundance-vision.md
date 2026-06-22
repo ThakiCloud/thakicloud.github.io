@@ -21,8 +21,6 @@ toc_label: "المحتويات"
 published: true
 ---
 
-## رؤية الرئيس التنفيذي لـ Google DeepMind لمستقبل الذكاء العام الاصطناعي: عصر 'الوفرة الجذرية' قادم
-
 {% include video id="CRraHg4Ks_g" provider="youtube" %}
 
 *فيديو مقابلة رؤية الذكاء العام الاصطناعي للرئيس التنفيذي لـ Google DeepMind ديميس هاسابيس*

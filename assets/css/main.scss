@@ -52,6 +52,8 @@ search: false
 
 .masthead__menu-item:hover .dropdown-menu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-toggle {
@@ -74,23 +76,9 @@ search: false
   }
 }
 
-/* Dark theme support */
-@media (prefers-color-scheme: dark) {
-  .dropdown-menu {
-    background-color: #2a2a2a;
-    border-color: #555;
-  }
-  
-  .dropdown-menu a {
-    color: #ddd;
-    border-bottom-color: #555;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #3a3a3a;
-    color: #fff;
-  }
-}
+/* Dark theme handled by runtime data-theme vars below (theme layer),
+   not prefers-color-scheme — the manual toggle is the source of truth.
+   Old hardcoded #2a2a2a block removed (mismatched the data-theme toggle). */
 
 /* Animation for smooth dropdown */
 .dropdown-menu {
@@ -194,11 +182,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-.page__title, .archive__item-title, .page__content h1, .page__content h2 {
+.page__title, .page__title a, .archive__item-title, .page__content h1, .page__content h2 {
   color: var(--text);
   letter-spacing: -0.02em;         /* tight display tracking */
   font-weight: 700;
 }
+/* MM bakes `.page__title a { color: $text-color }` (the post H1 is a permalink
+   <a>); that dark-ish value made the title near-invisible in dark mode. */
+.page__title a:hover { color: var(--text); }
 .page__content h1, .page__content h2 { line-height: 1.18; }
 
 p, li, .page__content { color: var(--text); }
@@ -270,7 +261,12 @@ a:hover, a:focus { color: var(--accent-hover); text-decoration: none; }
 pre, code, .highlight, div.highlighter-rouge, figure.highlight {
   font-family: var(--font-mono);
 }
-code.highlighter-rouge, .page__content code {
+/* `.page__content :not(pre) > code` matches MM's own selector specificity
+   (0,1,2) — MM bakes a light `$code-background-color` there, which in dark
+   mode rendered inline code as a light box over light text (invisible).
+   Same specificity + loaded later = our vars win in BOTH themes. */
+code.highlighter-rouge, .page__content code,
+.page__content :not(pre) > code {
   background: var(--code-bg);
   color: var(--code-text);
   border-radius: 6px;
@@ -292,6 +288,31 @@ hr { border-color: var(--border); }
 }
 .page__footer a, .page__footer-copyright a { color: var(--text-muted); }
 .page__footer a:hover { color: var(--accent); }
+
+/* Table of contents (목차) — MM bakes a single light palette ($gray /
+   $background-color / $primary-color); repaint onto vars so it follows the
+   dark/light toggle instead of staying light in dark mode. */
+.toc {
+  color: var(--text-muted);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+}
+.toc .nav__title {
+  color: #fff;
+  background: var(--accent);
+}
+.toc__menu a {
+  color: var(--text-muted);
+  border-bottom-color: var(--border);
+}
+.toc__menu a:hover { color: var(--text); }
+.toc__menu .active a,
+.toc .active a {
+  background-color: var(--accent);
+  color: #fff;
+}
 
 /* =========================================================================
    Theme toggle button (sits next to search in masthead)

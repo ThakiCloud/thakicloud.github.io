@@ -17,8 +17,6 @@ permalink: /en/careers/ai-engineering-learning-roadmap/
 canonical_url: "https://thakicloud.github.io/en/careers/ai-engineering-learning-roadmap/"
 ---
 
-## AI Engineering Learning Roadmap
-
 We're sharing a learning roadmap for those who want to start AI engineering. This roadmap is structured to allow step-by-step learning of the core areas of AI engineering.
 
 ## 👨‍💻 Coding & ML Fundamentals

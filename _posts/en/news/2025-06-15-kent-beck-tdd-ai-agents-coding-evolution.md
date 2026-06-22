@@ -22,8 +22,6 @@ toc_label: "Contents"
 published: true
 ---
 
-## Kent Beck on Coding in the AI Era: Why TDD Becomes a 'Superpower'
-
 {% include video id="aSXaxOdVtAQ" provider="youtube" %}
 
 *In-depth interview with Kent Beck on TDD, AI agents, and coding*

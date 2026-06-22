@@ -20,8 +20,6 @@ toc_label: "목차"
 published: true
 ---
 
-## Kent Beck이 말하는 AI 시대의 코딩: TDD가 '슈퍼파워'가 되는 이유
-
 {% include video id="aSXaxOdVtAQ" provider="youtube" %}
 
 *Kent Beck과의 TDD, AI 에이전트, 그리고 코딩에 대한 심층 인터뷰*
