@@ -30,35 +30,7 @@ At ThakiCloud, we run training workloads and GPU orchestration on a K8s-based AI
 
 > A general overview of the slime RL post-training framework itself is covered in a separate post, [RL Post-Training as Infrastructure: the slime Open-Source Framework and RL Scaling](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/). This post focuses on the OPD post-training and expert-model merging that run on top of it.
 
-## Slide Summary: OPD Post-Training and the Open RL Stack
-
-The slides below were generated automatically from the source with NotebookLM (`strategic_blue` style). They are the original slides rendered by NotebookLM, not GPT image regenerations.
-
-![GLM-5.2 OPD post-training slide 1](/assets/images/tw-2068253789589741847-slide-01.png)
-
-![GLM-5.2 OPD post-training slide 2](/assets/images/tw-2068253789589741847-slide-02.png)
-
-![GLM-5.2 OPD post-training slide 3](/assets/images/tw-2068253789589741847-slide-03.png)
-
-![GLM-5.2 OPD post-training slide 4](/assets/images/tw-2068253789589741847-slide-04.png)
-
-![GLM-5.2 OPD post-training slide 5](/assets/images/tw-2068253789589741847-slide-05.png)
-
-![GLM-5.2 OPD post-training slide 6](/assets/images/tw-2068253789589741847-slide-06.png)
-
-![GLM-5.2 OPD post-training slide 7](/assets/images/tw-2068253789589741847-slide-07.png)
-
-![GLM-5.2 OPD post-training slide 8](/assets/images/tw-2068253789589741847-slide-08.png)
-
-![GLM-5.2 OPD post-training slide 9](/assets/images/tw-2068253789589741847-slide-09.png)
-
-![GLM-5.2 OPD post-training slide 10](/assets/images/tw-2068253789589741847-slide-10.png)
-
-![GLM-5.2 OPD post-training slide 11](/assets/images/tw-2068253789589741847-slide-11.png)
-
-![GLM-5.2 OPD post-training slide 12](/assets/images/tw-2068253789589741847-slide-12.png)
-
-_(Showing 12 of 17 slides. See the deck file for the rest.)_
+![Abstract: distributed RL post-training and model merging](/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.png)
 
 ## What kind of model is GLM-5.2
 
