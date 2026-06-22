@@ -27,7 +27,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/qwen3-4b-grpo-korean-reasoning-training-guide/"
 reading_time: true
 lang: ar
-published: true
+published: false
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 8 دقائق

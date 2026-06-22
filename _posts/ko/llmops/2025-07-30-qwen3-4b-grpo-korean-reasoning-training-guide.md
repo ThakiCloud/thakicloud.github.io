@@ -26,6 +26,7 @@ toc_icon: "brain"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/qwen3-4b-grpo-korean-reasoning-training-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
