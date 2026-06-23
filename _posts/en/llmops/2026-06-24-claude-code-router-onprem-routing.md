@@ -24,7 +24,15 @@ canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-router-onprem
 reading_time: true
 ---
 
-![Routing structure that branches Claude Code requests to multiple model backends](/assets/images/claude-code-router-onprem-routing-diagram.png)
+```mermaid
+flowchart LR
+    CC["Claude Code"] --> CCR["claude-code-router proxy"]
+    CCR -->|default| VLLM["In-house vLLM (Qwen3 / DeepSeek)"]
+    CCR -->|background| OLLAMA["Local Ollama"]
+    CCR -->|think| ANTH["Anthropic API"]
+    CCR -->|longContext| OR["OpenRouter"]
+    VLLM --> K8S["ThakiCloud K8s (Kueue + GPU)"]
+```
 
 ## Overview
 
