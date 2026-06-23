@@ -29,13 +29,17 @@ canonical_url: "https://thakicloud.github.io/ar/culture/hassabis-agi-realism-vs-
 لكن هاسابيس قال غير ذلك.
 
 "أنظمة اليوم ليست قريبة على الإطلاق من [الذكاء الاصطناعي العام]. لا يهم كم مسألة من مسائل إيردوش تحلّ."
-(النص الأصلي بالإنجليزية: "Today's systems are nowhere near [AGI]" — Fortune، 23 يناير 2026)
+(النص الأصلي بالإنجليزية: "Today's systems are nowhere near [AGI]"، Fortune، 23 يناير 2026)
 
 مسائل إيردوش من أصعب الألغاز الرياضية في العالم. وإن استطاع الذكاء الاصطناعي حلّها فذلك مثير للإعجاب بلا شك، غير أن هاسابيس كان قاطعًا: ليس هذا معيار الذكاء الاصطناعي العام. لماذا؟
 
 هذا السؤال هو نقطة انطلاق هذا المقال. وهو ليس حكرًا على باحثي الذكاء الاصطناعي، بل يعني كل منظمة تتبنى الذكاء الاصطناعي أو تبني فرقًا متخصصة فيه أو تطوّر منتجاته.
 
 ---
+
+![مخطط مفاهيمي](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+
+*ثلاثة معايير واقعية تصفّي المبالغة حول الذكاء الاصطناعي العام*
 
 ## الخط الذي رسمه هاسابيس: "الفهم" مقابل "مطابقة الأنماط"
 
@@ -52,7 +56,7 @@ canonical_url: "https://thakicloud.github.io/ar/culture/hassabis-agi-realism-vs-
 بعد نحو أربعة أشهر من تصريحات دافوس، وتحديدًا في 26 مايو 2026، وفي مقابلة مع Axios عقب مؤتمر Google I/O، تحدّث هاسابيس بنبرة مختلفة، مشيرًا إلى أن "الذكاء الاصطناعي العام سيتحقق على الأرجح في غضون السنوات الخمس المقبلة". لخّص بعض المنابر هذا القول بـ"الذكاء الاصطناعي العام خلال 3 إلى 4 سنوات"، وانتشر التصريح على نطاق واسع.
 
 بيد أن هاسابيس أضاف في المقابلة ذاتها: "بعض المصطلحات التي استخدمتها كانت استفزازية بعض الشيء عمدًا."
-(النص الأصلي: "some of the terms I used were a little bit provocative" — Axios، 2026-05-26)
+(النص الأصلي: "some of the terms I used were a little bit provocative"، Axios، 2026-05-26)
 
 التصريح الحذر في يناير، والجدول الزمني المُقدَّم في مايو. الشخص نفسه، في العام نفسه، في سياقين مختلفين. فأيهما يعكس الفكر "الحقيقي" لهاسابيس؟
 
@@ -145,8 +149,8 @@ canonical_url: "https://thakicloud.github.io/ar/culture/hassabis-agi-realism-vs-
 
 ## المصادر
 
-- Fortune (2026-01-23): "DeepMind's Demis Hassabis, Anthropic's Dario Amodei, Yann LeCun at AI Davos" — https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/
-- WEF Radio Davos Podcast (2026-01): "AI & AGI — Dario Amodei, Demis Hassabis" — https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/
-- Axios (2026-05-26): "DeepMind CEO Demis Hassabis on AGI timeline" — https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis
-- Sherwood News: "Google DeepMind's Hassabis: AGI is 3 to 4 years away" — https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/
-- CryptoBriefing: "DeepMind Hassabis AGI Einstein Test" — https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/
+- Fortune (2026-01-23): "DeepMind's Demis Hassabis, Anthropic's Dario Amodei, Yann LeCun at AI Davos"، https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/
+- WEF Radio Davos Podcast (2026-01): "AI & AGI، Dario Amodei, Demis Hassabis"، https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/
+- Axios (2026-05-26): "DeepMind CEO Demis Hassabis on AGI timeline"، https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis
+- Sherwood News: "Google DeepMind's Hassabis: AGI is 3 to 4 years away"، https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/
+- CryptoBriefing: "DeepMind Hassabis AGI Einstein Test"، https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/

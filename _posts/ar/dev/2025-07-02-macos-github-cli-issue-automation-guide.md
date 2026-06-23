@@ -22,9 +22,10 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/dev/2025-07-02-macos-github-cli-issue-automation-guide/"
+canonical_url: "https://thakicloud.github.io/ar/dev/macos-github-cli-issue-automation-guide/"
 lang: ar
 reading_time: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="380" fill="transparent"/>
+  <!-- A -->
+  <rect x="340" y="16" width="280" height="62" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="480" y="42" text-anchor="middle" font-size="16" font-weight="600" fill="#1e293b">Code marginal cost &#8594; 0</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#475569">(AI code generation)</text>
+  <!-- B -->
+  <rect x="50" y="150" width="320" height="62" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="210" y="176" text-anchor="middle" font-size="14" fill="#334155">Repetitive implementation</text>
+  <text x="210" y="196" text-anchor="middle" font-size="14" fill="#334155">becomes commoditized</text>
+  <!-- C -->
+  <rect x="590" y="150" width="320" height="48" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="750" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#1e3a8a">Value migrates to judgment</text>
+  <!-- G list -->
+  <rect x="560" y="244" width="380" height="118" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="580" y="272" font-size="13" font-weight="600" fill="#1e293b">Durable engineering value:</text>
+  <text x="580" y="298" font-size="13" fill="#334155">&#8226; Problem selection</text>
+  <text x="580" y="320" font-size="13" fill="#334155">&#8226; Validation and taste</text>
+  <text x="580" y="342" font-size="13" fill="#334155">&#8226; Human-system boundary design</text>
+  <!-- arrows -->
+  <line x1="430" y1="78" x2="250" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="540" y1="78" x2="710" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="750" y1="198" x2="750" y2="244" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+</svg>

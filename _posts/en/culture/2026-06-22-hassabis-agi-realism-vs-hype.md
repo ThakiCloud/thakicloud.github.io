@@ -27,7 +27,7 @@ In January 2026, two figures sat side by side at the World Economic Forum in Dav
 Hassabis said otherwise.
 
 "Today's systems are nowhere near [AGI]. It doesn't matter how many Erdős problems they solve."
-(Original quote: "Today's systems are nowhere near [AGI]" — Fortune, January 23, 2026)
+(Original quote: "Today's systems are nowhere near [AGI]", Fortune, January 23, 2026)
 
 Erdős problems are among the most fiendishly difficult mathematical puzzles in the world. If AI can solve them, that is certainly impressive. But Hassabis was categorical: that is not the benchmark for AGI. Why?
 
@@ -35,9 +35,13 @@ This question is the starting point of this post. It isn't only a conversation f
 
 ---
 
+![Concept diagram](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+
+*Three realism checks that filter AGI hype*
+
 ## The Line Hassabis Drew: "Understanding" vs. "Pattern Matching"
 
-The benchmark Hassabis proposed for AGI is not "solve Erdős problems." His standard is higher. Multiple outlets reported the so-called "Einstein Test": the ability to independently propose a genuinely novel physical theory — a system with real understanding, not statistical pattern reproduction.
+The benchmark Hassabis proposed for AGI is not "solve Erdős problems." His standard is higher. Multiple outlets reported the so-called "Einstein Test": the ability to independently propose a genuinely novel physical theory, a system with real understanding, not statistical pattern reproduction.
 
 So where do today's LLMs stand? No matter how vast the training data or how sophisticated the simulated reasoning, whether that constitutes "understanding" or merely "statistical pattern reproduction" remains an open question. Hassabis himself, in the same Davos panel, said "one or two more breakthroughs are still needed." His timeline: "5 to 10 years."
 
@@ -47,10 +51,10 @@ The story did not end there.
 
 ## A Timeline Shift in Four Months: The Intentional Use of Provocative Language
 
-About four months after the Davos remarks — on May 26, 2026, in an interview with Axios shortly after Google I/O — Hassabis struck a different tone. He suggested "AGI will probably arrive within the next five years." Some outlets summarized this as "AGI in 3 to 4 years," and the statement spread quickly.
+About four months after the Davos remarks, on May 26, 2026, in an interview with Axios shortly after Google I/O, Hassabis struck a different tone. He suggested "AGI will probably arrive within the next five years." Some outlets summarized this as "AGI in 3 to 4 years," and the statement spread quickly.
 
 Yet in the same interview, Hassabis added: "some of the terms I used were a little bit provocative."
-(Original: "some of the terms I used were a little bit provocative" — Axios, 2026-05-26)
+(Original: "some of the terms I used were a little bit provocative", Axios, 2026-05-26)
 
 The careful January statement and the upgraded May timeline. The same person, in the same year, speaking in different contexts. Which reflects the "real" Hassabis?
 
@@ -86,12 +90,12 @@ This should not be read as a conservative posture. That Hassabis admitted in May
 
 ## What Expectation Management Culture Actually Means
 
-In AI organizations, "expectation management" often sounds negative — misread as a defensive posture of "lower your expectations" or "preempt disappointment." Hassabis's approach is nothing of the sort.
+In AI organizations, "expectation management" often sounds negative, misread as a defensive posture of "lower your expectations" or "preempt disappointment." Hassabis's approach is nothing of the sort.
 
 Honest expectation management comes down to three things.
 
 **1. Use language that distinguishes current capability from future possibility.**
-"This model can do X" and "If we go this direction, X will become possible" are different statements. Clearly separating these two for teammates, boards, and customers is the foundation of trust — just as Hassabis distinguished "today's systems" from "systems after one or two more breakthroughs."
+"This model can do X" and "If we go this direction, X will become possible" are different statements. Clearly separating these two for teammates, boards, and customers is the foundation of trust, just as Hassabis distinguished "today's systems" from "systems after one or two more breakthroughs."
 
 **2. Define success criteria measurably.**
 "Improve operational efficiency through AI" cannot tell you whether you succeeded. "Reduce processing time for task X by 30% six months after AI adoption" has a clear answer. Just as AlphaFold defined protein structure prediction accuracy numerically against the previous state of the art, AI projects must do the same.
@@ -119,7 +123,7 @@ If Hassabis's realism remains a personal virtue, it disappears when that person 
 
 At ThakiCloud, we encounter this challenge frequently. As a company building an AI platform, we feel the tension every day between explaining AI's possibilities to customers and honestly describing its limits. Tilt too far one way and you over-promise; tilt too far the other and you miss the opportunity.
 
-One practice we have been trying: at the start of a project, explicitly writing a list of "what we will not achieve in this stage" — not just what we intend to do, but what we explicitly will not do. Experience has taught us that the "will not" list is more effective at calibrating expectations to reality than the "will do" list.
+One practice we have been trying: at the start of a project, explicitly writing a list of "what we will not achieve in this stage", not just what we intend to do, but what we explicitly will not do. Experience has taught us that the "will not" list is more effective at calibrating expectations to reality than the "will do" list.
 
 That Hassabis can say "today's systems are nowhere near AGI" is not because he is pessimistic about the future of AI. He is the person who reshaped the landscape of biology with AlphaFold. Stating clearly the limits of current systems is a way of setting direction toward the next breakthrough.
 
@@ -137,14 +141,14 @@ Hassabis said that hard thing at Davos in January 2026. Solving Erdős problems 
 
 When these two postures work together, organizational trust accumulates. Stating limits clearly. Admitting when you have overstated. The slow accumulation of honesty is a far stronger cultural asset than the short-term attention won by a single piece of hype.
 
-For those leading AI organizations, Hassabis's approach offers a useful benchmark. What can current AI do? What can it not yet do? What is the next stage, and what breakthrough does it require? A culture that answers these three questions honestly is the foundation of a sustainable AI organization — whether or not AGI ever arrives.
+For those leading AI organizations, Hassabis's approach offers a useful benchmark. What can current AI do? What can it not yet do? What is the next stage, and what breakthrough does it require? A culture that answers these three questions honestly is the foundation of a sustainable AI organization, whether or not AGI ever arrives.
 
 ---
 
 ## Sources
 
-- Fortune (2026-01-23): "DeepMind's Demis Hassabis, Anthropic's Dario Amodei, Yann LeCun at AI Davos" — https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/
-- WEF Radio Davos Podcast (2026-01): "AI & AGI — Dario Amodei, Demis Hassabis" — https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/
-- Axios (2026-05-26): "DeepMind CEO Demis Hassabis on AGI timeline" — https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis
-- Sherwood News: "Google DeepMind's Hassabis: AGI is 3 to 4 years away" — https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/
-- CryptoBriefing: "DeepMind Hassabis AGI Einstein Test" — https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/
+- Fortune (2026-01-23): "DeepMind's Demis Hassabis, Anthropic's Dario Amodei, Yann LeCun at AI Davos", https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/
+- WEF Radio Davos Podcast (2026-01): "AI & AGI, Dario Amodei, Demis Hassabis", https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/
+- Axios (2026-05-26): "DeepMind CEO Demis Hassabis on AGI timeline", https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis
+- Sherwood News: "Google DeepMind's Hassabis: AGI is 3 to 4 years away", https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/
+- CryptoBriefing: "DeepMind Hassabis AGI Einstein Test", https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/

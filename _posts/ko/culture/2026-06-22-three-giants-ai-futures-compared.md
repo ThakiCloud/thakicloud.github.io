@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
+canonical_url: "https://thakicloud.github.io/ko/culture/three-giants-ai-futures-compared/"
 ---
 
 ## 같은 파도를 다르게 읽는 세 사람
@@ -26,6 +27,10 @@ toc_label: 목차
 셋 다 AI 최전선에 있습니다. 그런데 같은 현상을 보면서 서로 다른 미래를 그립니다. 단순한 견해 차이가 아닙니다. 각자의 조직 포지션, 리스크 지형, 이해관계가 반영된 구조적 차이입니다. 그 차이 안에 빌더 조직이 취해야 할 것이 있습니다.
 
 ---
+
+![개념 다이어그램](/assets/images/three-giants-ai-futures-compared-diagram.svg)
+
+*세 거인의 미래관 비교*
 
 ## 데미스 허사비스: 이해하지 못하면 AGI가 아니다
 
@@ -159,14 +164,14 @@ AI 도구를 도입할 때 빌더 조직이 자주 하는 실수는 벤치마크
 
 - Fortune / WEF Davos 2026: [https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/](https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/)
 - WEF Radio Davos 팟캐스트: [https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/](https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/)
-- Axios — Hassabis 2026-05-26 인터뷰: [https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis](https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis)
-- Sherwood News — Hassabis AGI 3~4년: [https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/](https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/)
-- CryptoBriefing — Hassabis Einstein 테스트: [https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/](https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/)
-- Fortune — Huang 에이전트·직원 2026-03-19: [https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/](https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/)
-- Fortune — Huang 공장 로봇 2026-05-06: [https://fortune.com/2026/05/06/jensen-huang-servicenow-bill-mcdermott-agentic-ai-robos/](https://fortune.com/2026/05/06/jensen-huang-servicenow-bill-mcdermott-agentic-ai-robos/)
+- Axios, Hassabis 2026-05-26 인터뷰: [https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis](https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis)
+- Sherwood News, Hassabis AGI 3~4년: [https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/](https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/)
+- CryptoBriefing, Hassabis Einstein 테스트: [https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/](https://cryptobriefing.com/deepmind-hassabis-agi-einstein-test/)
+- Fortune, Huang 에이전트·직원 2026-03-19: [https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/](https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/)
+- Fortune, Huang 공장 로봇 2026-05-06: [https://fortune.com/2026/05/06/jensen-huang-servicenow-bill-mcdermott-agentic-ai-robos/](https://fortune.com/2026/05/06/jensen-huang-servicenow-bill-mcdermott-agentic-ai-robos/)
 - NVIDIA GTC Taipei 공식 블로그: [https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/](https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/)
-- Yahoo Finance — Huang "소프트웨어 기업은 안 죽는다": [https://finance.yahoo.com/markets/article/nvidia-ceo-jensen-huang-just-perfectly-explained-the-ai-stock-boom-130835624.html](https://finance.yahoo.com/markets/article/nvidia-ceo-jensen-huang-just-perfectly-explained-the-ai-stock-boom-130835624.html)
-- Semiconalpha Substack — GTC Taipei 키노트 트랜스크립트: [https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)
-- CNBC — Amodei "unusually painful" 2026-01-27: [https://www.cnbc.com/2026/01/27/dario-amodei-warns-ai-cause-unusually-painful-disruption-jobs.html](https://www.cnbc.com/2026/01/27/dario-amodei-warns-ai-cause-unusually-painful-disruption-jobs.html)
-- The News.com.pk — Amodei "소프트웨어 무료화": [https://www.thenews.com.pk/latest/1402953-software-will-become-essentially-free-warns-anthropic-ceo-amodei](https://www.thenews.com.pk/latest/1402953-software-will-become-essentially-free-warns-anthropic-ceo-amodei)
-- Fortune — Amodei 톤 완화 2026-05-26: [https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/](https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/)
+- Yahoo Finance, Huang "소프트웨어 기업은 안 죽는다": [https://finance.yahoo.com/markets/article/nvidia-ceo-jensen-huang-just-perfectly-explained-the-ai-stock-boom-130835624.html](https://finance.yahoo.com/markets/article/nvidia-ceo-jensen-huang-just-perfectly-explained-the-ai-stock-boom-130835624.html)
+- Semiconalpha Substack, GTC Taipei 키노트 트랜스크립트: [https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)
+- CNBC, Amodei "unusually painful" 2026-01-27: [https://www.cnbc.com/2026/01/27/dario-amodei-warns-ai-cause-unusually-painful-disruption-jobs.html](https://www.cnbc.com/2026/01/27/dario-amodei-warns-ai-cause-unusually-painful-disruption-jobs.html)
+- The News.com.pk, Amodei "소프트웨어 무료화": [https://www.thenews.com.pk/latest/1402953-software-will-become-essentially-free-warns-anthropic-ceo-amodei](https://www.thenews.com.pk/latest/1402953-software-will-become-essentially-free-warns-anthropic-ceo-amodei)
+- Fortune, Amodei 톤 완화 2026-05-26: [https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/](https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/)

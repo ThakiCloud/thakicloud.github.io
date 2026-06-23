@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="900" height="470" fill="transparent"/>
+  <!-- pipeline center column -->
+  <rect x="320" y="16" width="280" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="460" y="44" text-anchor="middle" font-size="15" font-weight="600" fill="#1e3a8a">Decision</text>
+
+  <rect x="300" y="96" width="320" height="56" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="460" y="120" text-anchor="middle" font-size="13" fill="#334155">Log: assumptions, rationale,</text>
+  <text x="460" y="138" text-anchor="middle" font-size="13" fill="#334155">and prediction</text>
+
+  <rect x="300" y="188" width="320" height="44" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="460" y="216" text-anchor="middle" font-size="13" fill="#334155">Compare outcome vs prediction</text>
+
+  <rect x="300" y="268" width="320" height="44" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="460" y="296" text-anchor="middle" font-size="13" fill="#334155">Find patterns of error</text>
+
+  <rect x="300" y="348" width="320" height="56" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="460" y="372" text-anchor="middle" font-size="13" font-weight="600" fill="#1e293b">Correct intuition bias</text>
+  <text x="460" y="390" text-anchor="middle" font-size="13" font-weight="600" fill="#1e293b">with data</text>
+
+  <!-- side note -->
+  <rect x="660" y="188" width="220" height="84" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="770" y="214" text-anchor="middle" font-size="12" fill="#334155">Reserve human judgment:</text>
+  <text x="770" y="234" text-anchor="middle" font-size="12" fill="#334155">new domains,</text>
+  <text x="770" y="252" text-anchor="middle" font-size="12" fill="#334155">sparse data</text>
+
+  <!-- arrows down -->
+  <line x1="460" y1="60" x2="460" y2="96" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="460" y1="152" x2="460" y2="188" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="460" y1="232" x2="460" y2="268" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="460" y1="312" x2="460" y2="348" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <!-- loop back E -> A on the left -->
+  <path d="M300,376 L200,376 L200,38 L320,38" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="150" y="210" text-anchor="middle" font-size="12" fill="#64748b" transform="rotate(-90 150 210)">feed learning back</text>
+  <!-- side note -> A -->
+  <path d="M770,188 L770,38 L600,38" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ar)"/>
+</svg>

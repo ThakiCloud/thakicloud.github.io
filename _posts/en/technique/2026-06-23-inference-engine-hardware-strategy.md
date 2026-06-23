@@ -22,6 +22,7 @@ toc_icon: "microchip"
 header:
   image: /assets/images/inference-engine-hardware-strategy-hero.png
 canonical_url: "https://thakicloud.github.io/en/technique/inference-engine-hardware-strategy/"
+published: false
 ---
 
 ![Abstract image of hardware foundations determining the shape of software above them](/assets/images/inference-engine-hardware-strategy-hero.png)

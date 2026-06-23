@@ -15,6 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
+canonical_url: "https://thakicloud.github.io/ko/culture/jensen-huang-agent-managed-org-culture/"
 ---
 
 ## 엔지니어는 없어지지 않습니다. 달라질 뿐입니다
@@ -26,6 +27,10 @@ toc_label: 목차
 이 글은 그 전환이 조직 문화에 어떤 질문을 던지는지 살펴봅니다. 기술 트렌드 요약이 아니라, 팀을 어떻게 구성하고 일을 어떻게 배분하며 성과를 어떻게 측정할지를 묻는 문화 에세이입니다.
 
 ---
+
+![개념 다이어그램](/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg)
+
+*엔지니어 한 명이 수백 개 에이전트를 지휘할 때의 거버넌스 구조*
 
 ## 100:1이라는 새로운 조직 단위
 
@@ -71,11 +76,11 @@ Token 예산을 받은 엔지니어는 스스로 에이전트 포트폴리오를
 
 문화 관점에서 이 변화가 갖는 함의는 속도가 아니라 책임의 재분배입니다. 자동화된 시스템이 실수를 하면 책임은 누구에게 있는가. 에이전트가 잘못된 코드를 배포하거나 에러를 잘못 처리했을 때, 그것을 설계한 사람인가, 지시를 내린 사람인가, 검토를 생략한 사람인가.
 
-이 질문은 에이전트 시대 이전에도 존재했습니다. 자동화 스크립트가 프로덕션 DB를 날렸을 때, 그 스크립트를 짠 사람인가 실행한 사람인가 검토하지 않은 사람인가 — 이 논쟁은 낯설지 않습니다. 차이는 스케일입니다. 에이전트가 수백 개가 되고 처리하는 작업이 코드 배포를 넘어 비즈니스 의사결정까지 내릴 수 있다면, 책임 구조의 불명확함이 초래하는 리스크의 크기가 완전히 달라집니다.
+이 질문은 에이전트 시대 이전에도 존재했습니다. 자동화 스크립트가 프로덕션 DB를 날렸을 때, 그 스크립트를 짠 사람인가 실행한 사람인가 검토하지 않은 사람인가, 이 논쟁은 낯설지 않습니다. 차이는 스케일입니다. 에이전트가 수백 개가 되고 처리하는 작업이 코드 배포를 넘어 비즈니스 의사결정까지 내릴 수 있다면, 책임 구조의 불명확함이 초래하는 리스크의 크기가 완전히 달라집니다.
 
 이 질문에 미리 답을 가지고 있는 조직이 사고를 덜 냅니다. 자동화 범위의 경계를 명확히 정하고, 어느 결정은 반드시 인간이 승인하는지를 절차로 박아두며, 에이전트의 출력을 검증하는 습관을 팀 전체가 공유하는 것. 에이전트 시대의 품질 문화란 그런 것입니다.
 
-소프트웨어 팀을 넘어 더 넓은 조직 단위에서도 이 문제는 나타납니다. 영업 에이전트가 고객에게 잘못된 가격을 제안했을 때, 법무 에이전트가 표준 계약서를 잘못 해석해 서명을 안내했을 때 — 이 경우들은 이미 "에이전트 실수"가 기업 리스크가 되는 시나리오입니다. 그래서 에이전트 도입은 기술 결정이면서 동시에 거버넌스 결정입니다. 어떤 에이전트에게 어떤 권한을 주고, 어떤 작업은 반드시 사람이 최종 확인하는지를 정하는 일은 CTO만의 일이 아니라 경영진 전체의 결정이어야 합니다.
+소프트웨어 팀을 넘어 더 넓은 조직 단위에서도 이 문제는 나타납니다. 영업 에이전트가 고객에게 잘못된 가격을 제안했을 때, 법무 에이전트가 표준 계약서를 잘못 해석해 서명을 안내했을 때, 이 경우들은 이미 "에이전트 실수"가 기업 리스크가 되는 시나리오입니다. 그래서 에이전트 도입은 기술 결정이면서 동시에 거버넌스 결정입니다. 어떤 에이전트에게 어떤 권한을 주고, 어떤 작업은 반드시 사람이 최종 확인하는지를 정하는 일은 CTO만의 일이 아니라 경영진 전체의 결정이어야 합니다.
 
 AI 인프라 플랫폼 팀에서는 이 논의가 이미 실제 운영 질문으로 들어옵니다. 에이전트 작업을 스케줄링하고, 배포를 자동화하며, 멀티테넌트 환경에서 수십 개 에이전트가 동시에 돌아갈 때, "누가 이것을 보고 있는가"라는 질문은 감시의 문제가 아니라 책임 구조의 문제입니다. 오케스트레이션 레이어를 기술적으로 구축하는 것과 오케스트레이션 문화를 조직 안에 심는 것은 전혀 다른 일입니다.
 
@@ -99,8 +104,8 @@ AI 인프라 플랫폼 팀에서는 이 논의가 이미 실제 운영 질문으
 
 ## 출처
 
-- **Jensen Huang, "Every engineer is going to have and manage hundreds of agents"** — GTC Taipei / Computex 2026 키노트 발언. NVIDIA 공식 블로그 보도: [NVIDIA GTC Taipei Computex 2026](https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/)
-- **Jensen Huang, 75,000 workers + 7.5 million AI agents 비전** — Fortune, 2026-03-19: [Jensen Huang on NVIDIA AI Agents Future of Work](https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/)
-- **Jensen Huang, "operated by robots, managed by more robots"** — Fortune, 2026-05-06: [Agentic AI Robots](https://fortune.com/2026/05/06/jensen-huang-servicenow-bill-mcdermott-agentic-ai-robos/)
-- **Jensen Huang, "software companies aren't dead because AI agents still need an application layer"** — Yahoo Finance: [NVIDIA CEO Jensen Huang AI Stock Boom](https://finance.yahoo.com/markets/article/nvidia-ceo-jensen-huang-just-perfectly-explained-the-ai-stock-boom-130835624.html)
-- **Jensen Huang, 엔지니어 연봉 절반 Token 예산 지급 목표** — Semiconalpha Substack, GTC Taipei 2026 키노트 트랜스크립트: [NVIDIA Keynote Computex 2026 Key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)
+- **Jensen Huang, "Every engineer is going to have and manage hundreds of agents"**, GTC Taipei / Computex 2026 키노트 발언. NVIDIA 공식 블로그 보도: [NVIDIA GTC Taipei Computex 2026](https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/)
+- **Jensen Huang, 75,000 workers + 7.5 million AI agents 비전**, Fortune, 2026-03-19: [Jensen Huang on NVIDIA AI Agents Future of Work](https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/)
+- **Jensen Huang, "operated by robots, managed by more robots"**, Fortune, 2026-05-06: [Agentic AI Robots](https://fortune.com/2026/05/06/jensen-huang-servicenow-bill-mcdermott-agentic-ai-robos/)
+- **Jensen Huang, "software companies aren't dead because AI agents still need an application layer"**, Yahoo Finance: [NVIDIA CEO Jensen Huang AI Stock Boom](https://finance.yahoo.com/markets/article/nvidia-ceo-jensen-huang-just-perfectly-explained-the-ai-stock-boom-130835624.html)
+- **Jensen Huang, 엔지니어 연봉 절반 Token 예산 지급 목표**, Semiconalpha Substack, GTC Taipei 2026 키노트 트랜스크립트: [NVIDIA Keynote Computex 2026 Key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)

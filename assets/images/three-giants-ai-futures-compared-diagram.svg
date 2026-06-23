@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="360" fill="transparent"/>
+  <!-- question -->
+  <rect x="350" y="16" width="260" height="48" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="480" y="46" text-anchor="middle" font-size="15" font-weight="600" fill="#1e3a8a">Future of AI and work</text>
+  <!-- three giants -->
+  <rect x="40" y="150" width="280" height="160" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="180" y="184" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Amodei (Anthropic)</text>
+  <text x="180" y="214" text-anchor="middle" font-size="12" fill="#334155">software becomes</text>
+  <text x="180" y="232" text-anchor="middle" font-size="12" fill="#334155">near-free;</text>
+  <text x="180" y="250" text-anchor="middle" font-size="12" fill="#334155">painful transition</text>
+
+  <rect x="340" y="150" width="280" height="160" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="480" y="184" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Hassabis (DeepMind)</text>
+  <text x="480" y="214" text-anchor="middle" font-size="12" fill="#334155">AGI realism;</text>
+  <text x="480" y="232" text-anchor="middle" font-size="12" fill="#334155">about 3 to 4 years;</text>
+  <text x="480" y="250" text-anchor="middle" font-size="12" fill="#334155">no hype</text>
+
+  <rect x="640" y="150" width="280" height="160" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="780" y="184" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Huang (NVIDIA)</text>
+  <text x="780" y="214" text-anchor="middle" font-size="12" fill="#334155">every engineer</text>
+  <text x="780" y="232" text-anchor="middle" font-size="12" fill="#334155">manages hundreds</text>
+  <text x="780" y="250" text-anchor="middle" font-size="12" fill="#334155">of agents</text>
+  <!-- arrows -->
+  <line x1="420" y1="64" x2="200" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="480" y1="64" x2="480" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="540" y1="64" x2="760" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#ar)"/>
+</svg>
