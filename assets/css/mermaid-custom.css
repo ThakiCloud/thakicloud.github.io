@@ -93,9 +93,9 @@
   will-change: transform;
 }
 .mmd-lb-canvas svg {
-  max-width: 92vw;
-  max-height: 80vh;
-  height: auto;
+  /* Size is set explicitly in JS (fit-to-viewport from viewBox aspect),
+     so do NOT cap with max-width here or it would shrink back to a thumbnail. */
+  display: block;
   background: #ffffff;
   border-radius: 8px;
 }

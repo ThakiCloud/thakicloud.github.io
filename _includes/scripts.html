@@ -106,8 +106,24 @@ MathJax.Hub.Config({
       function open(svg) {
         canvas.innerHTML = '';
         var clone = svg.cloneNode(true); // mermaid v10 inlines <style>, so colors survive
+        // Mermaid SVGs carry width="100%"/small intrinsic sizing, so a plain clone
+        // stays thumbnail-sized. Force an explicit fit-to-viewport size from the
+        // viewBox aspect ratio so it opens large (then transform scale zooms further).
+        var vb = (svg.getAttribute('viewBox') || '').split(/[\s,]+/).map(parseFloat);
+        var r = svg.getBoundingClientRect();
+        var iw = (vb.length === 4 && vb[2]) ? vb[2] : (parseFloat(svg.getAttribute('width')) || r.width || 800);
+        var ih = (vb.length === 4 && vb[3]) ? vb[3] : (parseFloat(svg.getAttribute('height')) || r.height || 600);
+        var aspect = iw / ih;
+        var maxW = window.innerWidth * 0.92, maxH = window.innerHeight * 0.82;
+        var w, h;
+        if (maxW / maxH > aspect) { h = maxH; w = h * aspect; } else { w = maxW; h = w / aspect; }
         clone.removeAttribute('style');
+        clone.setAttribute('width', w);
+        clone.setAttribute('height', h);
+        clone.style.width = w + 'px';
+        clone.style.height = h + 'px';
         clone.style.maxWidth = 'none';
+        clone.style.maxHeight = 'none';
         canvas.appendChild(clone);
         reset();
         lb.removeAttribute('hidden');
