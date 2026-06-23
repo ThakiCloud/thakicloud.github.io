@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/manufacturing-autonomous-agent-teams/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/manufacturing-autonomous-agent-teams/"
 reading_time: true
 ---
 

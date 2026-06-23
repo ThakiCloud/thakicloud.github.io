@@ -23,6 +23,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/generative-models-prompt-adaptation-study/"
 reading_time: true
 lang: en
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 min

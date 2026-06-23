@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/saas/sovereign-ai-airgap-public-sector/"
+canonical_url: "https://thakicloud.github.io/ko/saas/sovereign-ai-airgap-public-sector/"
 reading_time: true
 ---
 
