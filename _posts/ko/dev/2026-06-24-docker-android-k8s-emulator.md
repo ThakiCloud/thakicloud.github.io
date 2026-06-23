@@ -22,8 +22,17 @@ canonical_url: "https://thakicloud.github.io/ko/dev/docker-android-k8s-emulator/
 reading_time: true
 ---
 
-![Android 에뮬레이터 컨테이너를 K8s에 배치한 구조](/assets/images/docker-android-k8s-emulator-diagram.png)
-
+```mermaid
+flowchart LR
+    subgraph NODE["KVM 활성 K8s 노드 / Pod"]
+      EMU["Android 에뮬레이터 (QEMU + KVM, 옵션 CUDA)"]
+      KVM["/dev/kvm"]
+    end
+    KVM -->|passthrough| EMU
+    EMU --> SVC["ADB Service"]
+    SVC --> CI["CI 팜"]
+    SVC --> SCRCPY["scrcpy 원격 제어"]
+```
 ## 개요
 
 모바일 앱을 테스트하려면 Android 디바이스가 필요합니다. 실제 단말을 여러 대 두는 방식은 관리가 번거롭고, 로컬에 무거운 에뮬레이터를 까는 방식은 환경이 사람마다 달라져 재현성이 떨어집니다. CI 파이프라인에 Android 테스트를 넣으려고 하면 이 문제는 더 커집니다. 빌드 노드마다 에뮬레이터를 일관되게 깔아야 하기 때문입니다.

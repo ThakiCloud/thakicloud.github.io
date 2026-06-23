@@ -41,7 +41,14 @@ Third, **Review Studio 2.0**. It consolidates intent, triggers, output evaluatio
 
 The license is MIT, and the manifest declares a maturity tier of "governed," a lifecycle stage of "library," and a review cadence of "quarterly." The intent to manage skills like code — with versions, tiers, and review cadences — is visible at the metadata level itself.
 
-![Diagram of the flow from Skill IR through target compilers, Output Eval Lab, and Review Studio](/assets/images/yao-meta-skill-diagram.png)
+```mermaid
+flowchart LR
+    IN["Repetitive task input"] --> IR["Skill IR"]
+    IR --> COMPILE["Target compiler (multi-platform)"]
+    COMPILE --> EVAL["Output Eval Lab"]
+    EVAL --> REVIEW["Review Studio 2.0"]
+    REVIEW --> REL["Release evidence"]
+```
 *Repetitive-work inputs pass through Skill IR, compile to multiple platforms, then clear the Output Eval Lab and Review Studio gates to finish as release evidence.*
 
 ## Installation and Integration (Real Commands)

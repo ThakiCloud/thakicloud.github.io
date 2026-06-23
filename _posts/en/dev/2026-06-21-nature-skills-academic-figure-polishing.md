@@ -37,7 +37,16 @@ The star of this article, **nature-figure, is version 2.0.0**, and it has a rout
 
 The most impressive design is the **"figure contract."** Before writing any code, it forces you to fix a one-sentence core conclusion, the evidence chain, the archetype classification, the backend, and the journal/export contract first. The skill insists that "a figure is a visual argument, not an isolated pretty plot." It also puts backend selection behind a **blocking gate**. If the user does not specify Python or R, it asks "Python or R?" and stops. It reduces the degrees of freedom so the model cannot pick a default on its own.
 
-![nature-figure routing diagram from Figure Contract through the backend gate to the QA contract](/assets/images/nature-skills-diagram.png)
+```mermaid
+flowchart LR
+    FC["Figure Contract (define key takeaway)"] --> BE{"Backend gate: Python or R?"}
+    BE -->|Python| PY["matplotlib rcParams"]
+    BE -->|R| RR["ggplot2"]
+    PY --> STYLE["apply rcParams + PALETTE"]
+    RR --> STYLE
+    STYLE --> EXP["editable SVG / TIFF"]
+    EXP --> QA["QA contract"]
+```
 *The flow defines the core conclusion, passes the Python/R backend gate, applies rcParams and PALETTE to export editable SVG/TIFF, and finishes with the QA contract.*
 
 ## Installation and Integration (Real Commands)

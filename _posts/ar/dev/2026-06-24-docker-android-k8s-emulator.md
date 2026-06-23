@@ -25,8 +25,17 @@ canonical_url: "https://thakicloud.github.io/ar/dev/docker-android-k8s-emulator/
 reading_time: true
 ---
 
-![هيكل نشر حاويات محاكي أندرويد على K8s](/assets/images/docker-android-k8s-emulator-diagram.png)
-
+```mermaid
+flowchart LR
+    subgraph NODE["عقدة K8s مع KVM / Pod"]
+      EMU["محاكي Android (QEMU + KVM، اختياري CUDA)"]
+      KVM["/dev/kvm"]
+    end
+    KVM -->|passthrough| EMU
+    EMU --> SVC["خدمة ADB"]
+    SVC --> CI["مزرعة CI"]
+    SVC --> SCRCPY["تحكم scrcpy عن بُعد"]
+```
 ## نظرة عامة
 
 اختبار تطبيق موبايل يستلزم أجهزة أندرويد. إدارة أسطول من الأجهزة الحقيقية عبء صيانة مُضنٍ، وتثبيت محاكٍ ثقيل على كل جهاز مطوّر يُفضي إلى اختلاف البيئات وضعف قابلية التكرار. تتضاعف هذه المشكلة حين تُريد إدراج اختبارات أندرويد في خط CI، إذ يحتاج كل عقدة بناء إلى إعداد محاكٍ متسق.

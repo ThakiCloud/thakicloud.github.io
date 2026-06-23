@@ -41,7 +41,14 @@ yao-meta-skill هي "مهارة تصنع مهارات"، أي ميتا-سكيل.
 
 الرخصة MIT، ويُعلن البيان الوصفي (manifest) درجة النضج بأنها "governed"، ومرحلة دورة الحياة بأنها "library"، ودورية المراجعة بأنها "quarterly". فالنيّة في إدارة المهارات كالكود — بالإصدارات والدرجات ودوريات المراجعة — تتجلّى من مستوى البيانات الوصفية نفسه.
 
-![رسم بياني لتدفّق البيانات من Skill IR عبر المُصرِّفات المستهدفة وOutput Eval Lab وReview Studio](/assets/images/yao-meta-skill-diagram.png)
+```mermaid
+flowchart LR
+    IN["مُدخل المهام المتكررة"] --> IR["Skill IR"]
+    IR --> COMPILE["المُجمِّع الهدف (متعدد المنصات)"]
+    COMPILE --> EVAL["Output Eval Lab"]
+    EVAL --> REVIEW["Review Studio 2.0"]
+    REVIEW --> REL["دليل الإصدار"]
+```
 *خطّ معالجة تمرّ فيه مُدخَلات العمل المتكرّر عبر Skill IR، فتُصرَّف إلى منصّات متعدّدة، ثم تجتاز بوابتَي Output Eval Lab وReview Studio لتنتهي كأدلّة إصدار.*
 
 ## التثبيت والتكامل (أوامر حقيقية)

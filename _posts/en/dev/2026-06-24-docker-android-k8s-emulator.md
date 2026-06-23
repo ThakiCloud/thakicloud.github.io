@@ -24,8 +24,17 @@ canonical_url: "https://thakicloud.github.io/en/dev/docker-android-k8s-emulator/
 reading_time: true
 ---
 
-![Android emulator containers deployed on K8s architecture](/assets/images/docker-android-k8s-emulator-diagram.png)
-
+```mermaid
+flowchart LR
+    subgraph NODE["KVM-enabled K8s node / Pod"]
+      EMU["Android emulator (QEMU + KVM, optional CUDA)"]
+      KVM["/dev/kvm"]
+    end
+    KVM -->|passthrough| EMU
+    EMU --> SVC["ADB Service"]
+    SVC --> CI["CI farm"]
+    SVC --> SCRCPY["scrcpy remote control"]
+```
 ## Overview
 
 Testing a mobile app requires Android devices. Managing a fleet of physical handsets is a maintenance burden, and installing a heavy emulator locally on every developer's machine leads to environment drift and poor reproducibility. Those problems multiply when you try to include Android tests in a CI pipeline, because every build node needs a consistent emulator setup.

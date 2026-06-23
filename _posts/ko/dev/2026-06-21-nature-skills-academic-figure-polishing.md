@@ -37,7 +37,16 @@ toc_icon: "cog"
 
 가장 인상적인 설계는 **"그림 계약(figure contract)"** 입니다. 코드를 작성하기 전에 핵심 결론 한 문장, 증거 사슬, 아키타입 분류, 백엔드, 저널/내보내기 계약을 먼저 확정하도록 강제합니다. 스킬은 "그림은 시각적 논증이지 고립된 예쁜 플롯이 아니다"라고 못 박습니다. 또한 백엔드 선택을 **차단 게이트(blocking gate)** 로 둡니다. 사용자가 Python인지 R인지 명시하지 않으면 "Python or R?"을 묻고 멈춥니다. 모델이 임의로 기본값을 고르지 못하게 자유도를 줄인 것입니다.
 
-![Figure Contract에서 백엔드 게이트와 QA 계약으로 이어지는 nature-figure 라우팅 다이어그램](/assets/images/nature-skills-diagram.png)
+```mermaid
+flowchart LR
+    FC["Figure Contract (핵심 결론 정의)"] --> BE{"백엔드 게이트: Python or R?"}
+    BE -->|Python| PY["matplotlib rcParams"]
+    BE -->|R| RR["ggplot2"]
+    PY --> STYLE["rcParams + PALETTE 적용"]
+    RR --> STYLE
+    STYLE --> EXP["편집 가능한 SVG / TIFF"]
+    EXP --> QA["QA 계약"]
+```
 *핵심 결론을 정의하고 Python/R 백엔드 게이트를 통과한 뒤, rcParams와 PALETTE를 적용해 편집 가능한 SVG/TIFF를 내보내고 QA 계약으로 마무리되는 흐름입니다.*
 
 ## 설치 및 통합 (실제 명령)

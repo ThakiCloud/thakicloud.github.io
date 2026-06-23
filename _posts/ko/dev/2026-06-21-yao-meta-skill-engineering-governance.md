@@ -41,7 +41,14 @@ yao-meta-skill은 "스킬을 만들어 주는 스킬", 즉 메타스킬입니다
 
 라이선스는 MIT이며, 매니페스트는 성숙도 등급을 "governed", 라이프사이클 단계를 "library", 리뷰 주기를 "quarterly"로 선언합니다. 스킬을 코드처럼 버전·등급·리뷰 주기로 관리하겠다는 의도가 메타데이터 수준에서부터 드러납니다.
 
-![Skill IR에서 타깃 컴파일러와 Output Eval Lab, Review Studio로 이어지는 데이터 흐름 다이어그램](/assets/images/yao-meta-skill-diagram.png)
+```mermaid
+flowchart LR
+    IN["반복 작업 입력"] --> IR["Skill IR"]
+    IR --> COMPILE["타깃 컴파일러 (다중 플랫폼)"]
+    COMPILE --> EVAL["Output Eval Lab"]
+    EVAL --> REVIEW["Review Studio 2.0"]
+    REVIEW --> REL["릴리스 증거"]
+```
 *반복 작업 입력이 Skill IR을 거쳐 다중 플랫폼으로 컴파일되고, Output Eval Lab과 Review Studio 게이트를 통과해 릴리스 증거로 마무리되는 파이프라인입니다.*
 
 ## 설치 및 통합 (실제 명령)
