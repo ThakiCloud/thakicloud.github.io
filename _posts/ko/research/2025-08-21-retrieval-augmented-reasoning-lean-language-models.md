@@ -22,8 +22,9 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/retrieval-augmented-reasoning-lean-language-models/"
+canonical_url: "https://thakicloud.github.io/ko/research/retrieval-augmented-reasoning-lean-language-models/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분
