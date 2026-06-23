@@ -26,7 +26,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-deepops-gpu-cluster-infrastructure-management-guide/"
 reading_time: true
 lang: ar
-published: true
+published: false
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 22 دقائق

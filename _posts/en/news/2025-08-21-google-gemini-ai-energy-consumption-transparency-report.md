@@ -27,6 +27,7 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/news/google-gemini-ai-energy-consumption-transparency-report/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 7 min

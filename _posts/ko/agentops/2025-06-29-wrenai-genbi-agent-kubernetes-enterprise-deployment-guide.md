@@ -23,8 +23,9 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/wrenai-genbi-agent-kubernetes-enterprise-deployment-guide/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/wrenai-genbi-agent-kubernetes-enterprise-deployment-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

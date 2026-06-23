@@ -14,6 +14,7 @@ tags: [parlant, ai-agents, llm-framework, production-ai, guideline-control, conv
 toc: true
 toc_label: "دليل Parlant لـ LLMOps"
 reading_time: 15 min
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق

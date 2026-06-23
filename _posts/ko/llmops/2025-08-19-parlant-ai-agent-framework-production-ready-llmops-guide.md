@@ -22,8 +22,9 @@ toc: true
 toc_label: "Parlant LLMOps 가이드"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/parlant-ai-agent-framework-production-ready-llmops-guide/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/parlant-ai-agent-framework-production-ready-llmops-guide/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

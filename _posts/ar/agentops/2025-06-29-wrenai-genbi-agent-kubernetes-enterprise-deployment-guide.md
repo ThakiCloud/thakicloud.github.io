@@ -24,6 +24,7 @@ toc_label: "جدول المحتويات"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/wrenai-genbi-agent-kubernetes-enterprise-deployment-guide/"
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق
