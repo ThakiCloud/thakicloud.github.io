@@ -19,6 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "shield-alt"
 canonical_url: "https://thakicloud.github.io/ko/technique/ai-coding-agent-skill-guardrails/"
+published: false
 ---
 
 ## 개요

@@ -18,6 +18,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "cog"
+published: false
 ---
 
 ## 개요
