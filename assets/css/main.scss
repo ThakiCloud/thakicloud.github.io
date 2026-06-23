@@ -222,6 +222,15 @@ a:hover, a:focus { color: var(--accent-hover); text-decoration: none; }
 .greedy-nav a:hover { color: var(--accent); }
 .site-subtitle { color: var(--text-muted); }
 
+/* Masthead brand mark (diamond) — left of the site title (Image #7) -------- */
+.site-logo { display: inline-flex; align-items: center; margin-right: 0.6rem; }
+.site-logo img {
+  height: 2rem; width: auto; max-width: none; display: block;
+  transition: filter 0.2s ease;
+}
+/* gradient mark goes invisible on near-black — render as clean white in dark */
+html[data-theme="dark"] .site-logo img { filter: brightness(0) invert(1); }
+
 /* Archive / post list — quiet cards with hairline + lift on hover --------- */
 .archive__item {
   border: 1px solid var(--border);
@@ -349,12 +358,14 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-flex; }
   font-size: 0.8rem; letter-spacing: 0.04em;
   color: var(--text-muted); margin-bottom: 1.5rem;
 }
-.lang-hero__wordmark {
-  font-size: clamp(2.75rem, 8vw, 5.25rem);
-  font-weight: 800; letter-spacing: -0.04em; line-height: 1.02;
-  color: var(--text); margin: 0;
+.lang-hero__wordmark { margin: 0; line-height: 1; }
+.lang-hero__logo {
+  display: block; margin: 0 auto;
+  width: clamp(260px, 42vw, 560px); height: auto;
+  transition: filter 0.2s ease;
 }
-.lang-hero__wordmark .accent { color: var(--accent); }
+/* dark two-tone wordmark would vanish on near-black — flip to white in dark */
+html[data-theme="dark"] .lang-hero__logo { filter: brightness(0) invert(1); }
 .lang-hero__taglines {
   margin: 1.5rem 0 2.75rem;
   display: flex; flex-direction: column; gap: 0.35rem;

@@ -14,7 +14,7 @@ description: "Professional tech blog sharing latest AI/ML Engineering, LLMOps, a
 lang: "en"
 repository: "ThakiCloud/thakicloud.github.io"
 teaser: # path of fallback teaser image
-logo: # path of logo image to display in the masthead
+logo: "/assets/images/thaki-logo-mark.png"
 masthead_title: # overrides the website title displayed in the masthead
 breadcrumbs: true
 words_per_minute: 200

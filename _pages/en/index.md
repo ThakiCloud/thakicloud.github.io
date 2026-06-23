@@ -27,4 +27,3 @@ A professional tech blog sharing the latest AI/ML Engineering, LLMOps, and DevOp
 ### 🌐 View in Other Languages
 
 - [🇰🇷 한국어](/ko/)
-- [🇸🇦 العربية](/ar/)

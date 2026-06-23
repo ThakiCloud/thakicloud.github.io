@@ -12,8 +12,6 @@ main:
         url: /ko/
       - title: "🇺🇸 English"
         url: /en/
-      - title: "🇸🇦 العربية"
-        url: /ar/
 
 # 한국어 네비게이션
 ko:
@@ -29,8 +27,6 @@ ko:
         url: /ko/
       - title: "🇺🇸 English"
         url: /en/
-      - title: "🇸🇦 العربية"
-        url: /ar/
 
 # 영어 네비게이션
 en:
@@ -46,8 +42,6 @@ en:
         url: /ko/
       - title: "🇺🇸 English"
         url: /en/
-      - title: "🇸🇦 العربية"
-        url: /ar/
 
 # 아랍어 네비게이션
 ar:
