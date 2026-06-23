@@ -56,6 +56,14 @@ search: false
   transform: translateY(0);
 }
 
+/* MM's greedy-nav clips .visible-links with `overflow:hidden` (its overflow-
+   measuring mechanism). That also clipped the language dropdown, which drops
+   BELOW the bar (top:100%), so it was invisible except at the $large
+   breakpoint. greedy-nav.js moves non-fitting links into .hidden-links, so the
+   horizontal clip is redundant after JS — make it visible so the dropdown shows
+   at every width. */
+.greedy-nav .visible-links { overflow: visible; }
+
 .dropdown-toggle {
   cursor: pointer;
 }

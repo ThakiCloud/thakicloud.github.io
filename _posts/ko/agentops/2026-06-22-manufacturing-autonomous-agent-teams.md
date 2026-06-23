@@ -102,15 +102,15 @@ graph TB
         REPORT --- HKE
     end
 
-    CP -->|"gRPC 양방향 스트림"| US[울산 MCC Agent\nGPU 클러스터 추론전용]
-    CP -->|"gRPC 양방향 스트림"| GU[구미 MCC Agent\nGPU 클러스터 학습전용]
-    CP -->|"gRPC 양방향 스트림"| GJ[광주 MCC Agent\nGPU 클러스터 개발/혼합]
+    CP -->|"gRPC 양방향 스트림"| US[울산 MCC Agent<br/>GPU 클러스터 추론전용]
+    CP -->|"gRPC 양방향 스트림"| GU[구미 MCC Agent<br/>GPU 클러스터 학습전용]
+    CP -->|"gRPC 양방향 스트림"| GJ[광주 MCC Agent<br/>GPU 클러스터 개발/혼합]
 
-    PRAXIS -->|"Kueue 크로스클러스터 스케줄링\n모델 재학습 트리거\nDCGM 메트릭 수집"| CP
+    PRAXIS -->|"Kueue 크로스클러스터 스케줄링<br/>모델 재학습 트리거<br/>DCGM 메트릭 수집"| CP
 
-    US --> DCGM1[DCGM Exporter\nVictoriaMetrics]
-    GU --> DCGM2[DCGM Exporter\nVictoriaMetrics]
-    GJ --> DCGM3[DCGM Exporter\nVictoriaMetrics]
+    US --> DCGM1[DCGM Exporter<br/>VictoriaMetrics]
+    GU --> DCGM2[DCGM Exporter<br/>VictoriaMetrics]
+    GJ --> DCGM3[DCGM Exporter<br/>VictoriaMetrics]
 ```
 
 ### 컨트롤 플레인과 데이터 플레인 분리

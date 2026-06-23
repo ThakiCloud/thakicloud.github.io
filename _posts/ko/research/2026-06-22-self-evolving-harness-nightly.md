@@ -56,13 +56,13 @@ ThakiCloud의 `selfharness-evolve` 작업은 이 논문의 3단계 루프를 실
 
 ```mermaid
 flowchart TD
-    A["🌙 00:00 launchd 트리거"] --> B["1단계: Weakness Mining\n지난 24h 실패 트레이스 채굴\n실패 유형별 클러스터링"]
-    B --> C["2단계: Harness Proposal\n실패 클래스별 최소 패치 생성\n단일 관심사 diff, 다양한 제안"]
-    C --> D["3단계: Proposal Validation\n비회귀 게이트 통과 여부 검증\n통과+무회귀일 때만 SKILL.md 적용"]
+    A["🌙 00:00 launchd 트리거"] --> B["1단계: Weakness Mining<br/>지난 24h 실패 트레이스 채굴<br/>실패 유형별 클러스터링"]
+    B --> C["2단계: Harness Proposal<br/>실패 클래스별 최소 패치 생성<br/>단일 관심사 diff, 다양한 제안"]
+    C --> D["3단계: Proposal Validation<br/>비회귀 게이트 통과 여부 검증<br/>통과+무회귀일 때만 SKILL.md 적용"]
     D --> E{게이트 통과?}
-    E -- "통과" --> F["✅ SKILL.md 자동 업데이트\n(shadow-git 체크포인트 포함)"]
-    E -- "실패/증거 없음" --> G["🛑 ABORT\n변형 적용 없음"]
-    F --> H["🌅 개선된 하네스로\n다음 날 시작"]
+    E -- "통과" --> F["✅ SKILL.md 자동 업데이트<br/>(shadow-git 체크포인트 포함)"]
+    E -- "실패/증거 없음" --> G["🛑 ABORT<br/>변형 적용 없음"]
+    F --> H["🌅 개선된 하네스로<br/>다음 날 시작"]
     G --> H
 ```
 

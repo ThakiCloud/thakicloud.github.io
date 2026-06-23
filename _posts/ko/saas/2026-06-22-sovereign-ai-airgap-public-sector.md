@@ -67,12 +67,12 @@ graph TB
         end
 
         subgraph "접근 제어 레이어"
-            GW[Traefik Gateway API\nHTTP/gRPC/WebSocket]
-            KC[Keycloak IdP\nOIDC/MFA/RBAC]
+            GW[Traefik Gateway API<br/>HTTP/gRPC/WebSocket]
+            KC[Keycloak IdP<br/>OIDC/MFA/RBAC]
         end
 
         subgraph "컨트롤 플레인 (k0s)"
-            CP[Go API Server\n:3000]
+            CP[Go API Server<br/>:3000]
             WEB[React Web Console]
             ARGO[ArgoCD GitOps]
             PG[(PostgreSQL)]
@@ -80,14 +80,14 @@ graph TB
         end
 
         subgraph "데이터 플레인 A - 추론"
-            VLLM[vLLM Serverless\n+ KEDA Scale-to-Zero]
-            KAI[KAI Scheduler\n+ Kueue]
-            GPU1[GPU 노드 (MIG)]
+            VLLM[vLLM Serverless<br/>+ KEDA Scale-to-Zero]
+            KAI[KAI Scheduler<br/>+ Kueue]
+            GPU1["GPU 노드 (MIG)"]
         end
 
         subgraph "데이터 플레인 B - 학습"
-            KF[Kubeflow TrainJob\nSFT/DPO/LoRA]
-            GPU2[GPU 노드 (Full)]
+            KF[Kubeflow TrainJob<br/>SFT/DPO/LoRA]
+            GPU2["GPU 노드 (Full)"]
         end
 
         subgraph "관측 스택"
@@ -97,8 +97,8 @@ graph TB
         end
 
         subgraph "내부 레지스트리"
-            REG[Harbor\n이미지 미러]
-            GIT[Gitea\n내부 Git]
+            REG[Harbor<br/>이미지 미러]
+            GIT[Gitea<br/>내부 Git]
         end
     end
 

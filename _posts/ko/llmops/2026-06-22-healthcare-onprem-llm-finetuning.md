@@ -56,21 +56,21 @@ ThakiCloud AI Platform은 Kubernetes 기반으로 설계되어 있으며, 모든
 
 ```mermaid
 flowchart TD
-    A[원천 데이터\n임상 노트 / EMR / 처방 코드] --> B[비식별화 전처리\n병원 내부 ETL]
-    B --> C[데이터셋 업로드\nThakiCloud Dataset Manager\nHuggingFace 포맷 / S3 호환 스토리지]
+    A[원천 데이터<br/>임상 노트 / EMR / 처방 코드] --> B[비식별화 전처리<br/>병원 내부 ETL]
+    B --> C[데이터셋 업로드<br/>ThakiCloud Dataset Manager<br/>HuggingFace 포맷 / S3 호환 스토리지]
     C --> D{파인튜닝 방법 선택}
-    D --> E1[SFT\nSupervised Fine-Tuning]
-    D --> E2[LoRA / QLoRA\n경량 어댑터]
-    D --> E3[DPO\n선호도 학습]
-    D --> E4[CPT\n지속 사전학습]
-    E1 --> F[DevSpace\nJupyter / VSCode\n실험 및 검증]
+    D --> E1[SFT<br/>Supervised Fine-Tuning]
+    D --> E2[LoRA / QLoRA<br/>경량 어댑터]
+    D --> E3[DPO<br/>선호도 학습]
+    D --> E4[CPT<br/>지속 사전학습]
+    E1 --> F[DevSpace<br/>Jupyter / VSCode<br/>실험 및 검증]
     E2 --> F
     E3 --> F
     E4 --> F
-    F --> G[Kubeflow TrainJob\nKueue GPU 스케줄링]
-    G --> H[학습 완료 모델\n사내 스토리지]
-    H --> I[vLLM 서버리스 엔드포인트\nKEDA Scale-to-Zero]
-    I --> J[내부 API 소비자\nEMR 시스템 / 임상 의사결정 지원]
+    F --> G[Kubeflow TrainJob<br/>Kueue GPU 스케줄링]
+    G --> H[학습 완료 모델<br/>사내 스토리지]
+    H --> I[vLLM 서버리스 엔드포인트<br/>KEDA Scale-to-Zero]
+    I --> J[내부 API 소비자<br/>EMR 시스템 / 임상 의사결정 지원]
 ```
 
 *위 다이어그램은 개념적 흐름을 나타내며, 실제 구성 파라미터는 환경에 따라 다를 수 있습니다.*

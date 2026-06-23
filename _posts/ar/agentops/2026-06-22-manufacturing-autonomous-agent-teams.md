@@ -103,15 +103,15 @@ graph TB
         REPORT --- HKE
     end
 
-    CP -->|"gRPC Bidirectional Stream"| US[Ulsan MCC Agent\nGPU Cluster Inference-Only]
-    CP -->|"gRPC Bidirectional Stream"| GU[Gumi MCC Agent\nGPU Cluster Training-Only]
-    CP -->|"gRPC Bidirectional Stream"| GJ[Gwangju MCC Agent\nGPU Cluster Dev/Mixed]
+    CP -->|"gRPC Bidirectional Stream"| US[Ulsan MCC Agent<br/>GPU Cluster Inference-Only]
+    CP -->|"gRPC Bidirectional Stream"| GU[Gumi MCC Agent<br/>GPU Cluster Training-Only]
+    CP -->|"gRPC Bidirectional Stream"| GJ[Gwangju MCC Agent<br/>GPU Cluster Dev/Mixed]
 
-    PRAXIS -->|"Kueue Cross-Cluster Scheduling\nModel Retraining Trigger\nDCGM Metrics Collection"| CP
+    PRAXIS -->|"Kueue Cross-Cluster Scheduling<br/>Model Retraining Trigger<br/>DCGM Metrics Collection"| CP
 
-    US --> DCGM1[DCGM Exporter\nVictoriaMetrics]
-    GU --> DCGM2[DCGM Exporter\nVictoriaMetrics]
-    GJ --> DCGM3[DCGM Exporter\nVictoriaMetrics]
+    US --> DCGM1[DCGM Exporter<br/>VictoriaMetrics]
+    GU --> DCGM2[DCGM Exporter<br/>VictoriaMetrics]
+    GJ --> DCGM3[DCGM Exporter<br/>VictoriaMetrics]
 ```
 
 ### فصل مستوى التحكم عن مستوى البيانات

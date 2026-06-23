@@ -68,12 +68,12 @@ graph TB
         end
 
         subgraph "طبقة التحكم في الوصول"
-            GW[Traefik Gateway API\nHTTP/gRPC/WebSocket]
-            KC[Keycloak IdP\nOIDC/MFA/RBAC]
+            GW[Traefik Gateway API<br/>HTTP/gRPC/WebSocket]
+            KC[Keycloak IdP<br/>OIDC/MFA/RBAC]
         end
 
         subgraph "مستوى التحكم (k0s)"
-            CP[خادم Go API\n:3000]
+            CP[خادم Go API<br/>:3000]
             WEB[لوحة تحكم React]
             ARGO[ArgoCD GitOps]
             PG[(PostgreSQL)]
@@ -81,14 +81,14 @@ graph TB
         end
 
         subgraph "مستوى البيانات أ - الاستدلال"
-            VLLM[vLLM Serverless\n+ KEDA Scale-to-Zero]
-            KAI[KAI Scheduler\n+ Kueue]
-            GPU1[عقدة GPU (MIG)]
+            VLLM[vLLM Serverless<br/>+ KEDA Scale-to-Zero]
+            KAI[KAI Scheduler<br/>+ Kueue]
+            GPU1["عقدة GPU (MIG)"]
         end
 
         subgraph "مستوى البيانات ب - التدريب"
-            KF[Kubeflow TrainJob\nSFT/DPO/LoRA]
-            GPU2[عقدة GPU (كاملة)]
+            KF[Kubeflow TrainJob<br/>SFT/DPO/LoRA]
+            GPU2["عقدة GPU (كاملة)"]
         end
 
         subgraph "مجموعة الرصد والمراقبة"
@@ -98,8 +98,8 @@ graph TB
         end
 
         subgraph "السجل الداخلي"
-            REG[Harbor\nمرآة الصور]
-            GIT[Gitea\nGit الداخلي]
+            REG[Harbor<br/>مرآة الصور]
+            GIT[Gitea<br/>Git الداخلي]
         end
     end
 

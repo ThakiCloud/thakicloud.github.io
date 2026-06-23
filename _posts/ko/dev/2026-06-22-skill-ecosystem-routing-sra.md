@@ -46,15 +46,15 @@ ThakiCloud가 채택한 구조는 SRA 논문의 3단계 프로토콜과 BM25 기
 
 ```mermaid
 flowchart TD
-    A[사용자 요청 도착] --> B{프리필터\n인사/명령/동일 턴?}
+    A[사용자 요청 도착] --> B{프리필터<br/>인사/명령/동일 턴?}
     B -- SKIP --> C[토큰 0 패스스루]
-    B -- PROCEED --> D[BM25 자동 검색\nretrieve.py]
-    D --> E{SCORE_MIN 6.0\n이상 후보 있나?}
+    B -- PROCEED --> D[BM25 자동 검색<br/>retrieve.py]
+    D --> E{SCORE_MIN 6.0<br/>이상 후보 있나?}
     E -- 없음 --> F[후보 없음 = Native 실행]
-    E -- 있음 --> G[TOP_K 5 후보\n컨텍스트 주입]
-    G --> H{모델 Triage\nNative vs Skill-worthy?}
+    E -- 있음 --> G[TOP_K 5 후보<br/>컨텍스트 주입]
+    G --> H{모델 Triage<br/>Native vs Skill-worthy?}
     H -- Native --> I[기본 도구로 직접 실행]
-    H -- Skill-worthy --> J[Incorporation\n최적 스킬 1개 선택]
+    H -- Skill-worthy --> J[Incorporation<br/>최적 스킬 1개 선택]
     J --> K[Skill 도구로 로드 및 실행]
 ```
 

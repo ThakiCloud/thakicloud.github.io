@@ -47,15 +47,15 @@ The structure ThakiCloud adopted combines the SRA paper's three-stage protocol w
 
 ```mermaid
 flowchart TD
-    A[User request arrives] --> B{Pre-filter\nGreeting/Command/Same turn?}
+    A[User request arrives] --> B{Pre-filter<br/>Greeting/Command/Same turn?}
     B -- SKIP --> C[Zero-token passthrough]
-    B -- PROCEED --> D[BM25 automatic search\nretrieve.py]
-    D --> E{Any candidates\nabove SCORE_MIN 6.0?}
+    B -- PROCEED --> D[BM25 automatic search<br/>retrieve.py]
+    D --> E{Any candidates<br/>above SCORE_MIN 6.0?}
     E -- None --> F[No candidates = Native execution]
-    E -- Found --> G[TOP_K 5 candidates\ninjected into context]
-    G --> H{Model Triage\nNative vs Skill-worthy?}
+    E -- Found --> G[TOP_K 5 candidates<br/>injected into context]
+    G --> H{Model Triage<br/>Native vs Skill-worthy?}
     H -- Native --> I[Execute directly with built-in tools]
-    H -- Skill-worthy --> J[Incorporation\nSelect optimal single skill]
+    H -- Skill-worthy --> J[Incorporation<br/>Select optimal single skill]
     J --> K[Load and execute via Skill tool]
 ```
 

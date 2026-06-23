@@ -57,13 +57,13 @@ ThakiCloud's `selfharness-evolve` task ports this three-phase loop into a real o
 
 ```mermaid
 flowchart TD
-    A["🌙 00:00 launchd trigger"] --> B["Phase 1: Weakness Mining\nMine last 24h failure traces\nCluster by failure type"]
-    B --> C["Phase 2: Harness Proposal\nGenerate minimal patches per failure class\nSingle-concern diff, diverse proposals"]
-    C --> D["Phase 3: Proposal Validation\nValidate against regression gate\nApply to SKILL.md only if pass + no regression"]
+    A["🌙 00:00 launchd trigger"] --> B["Phase 1: Weakness Mining<br/>Mine last 24h failure traces<br/>Cluster by failure type"]
+    B --> C["Phase 2: Harness Proposal<br/>Generate minimal patches per failure class<br/>Single-concern diff, diverse proposals"]
+    C --> D["Phase 3: Proposal Validation<br/>Validate against regression gate<br/>Apply to SKILL.md only if pass + no regression"]
     D --> E{Gate passed?}
-    E -- "Pass" --> F["✅ Auto-update SKILL.md\n(with shadow-git checkpoint)"]
-    E -- "Fail / no evidence" --> G["🛑 ABORT\nNo mutation applied"]
-    F --> H["🌅 Next day starts\nwith improved harness"]
+    E -- "Pass" --> F["✅ Auto-update SKILL.md<br/>(with shadow-git checkpoint)"]
+    E -- "Fail / no evidence" --> G["🛑 ABORT<br/>No mutation applied"]
+    F --> H["🌅 Next day starts<br/>with improved harness"]
     G --> H
 ```
 

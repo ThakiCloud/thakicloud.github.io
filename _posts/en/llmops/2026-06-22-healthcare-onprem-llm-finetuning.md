@@ -57,21 +57,21 @@ ThakiCloud AI Platform is built on Kubernetes, and all training and inference is
 
 ```mermaid
 flowchart TD
-    A[Source Data\nClinical Notes / EMR / Prescription Codes] --> B[De-identification Preprocessing\nHospital-Internal ETL]
-    B --> C[Dataset Upload\nThakiCloud Dataset Manager\nHuggingFace Format / S3-Compatible Storage]
+    A[Source Data<br/>Clinical Notes / EMR / Prescription Codes] --> B[De-identification Preprocessing<br/>Hospital-Internal ETL]
+    B --> C[Dataset Upload<br/>ThakiCloud Dataset Manager<br/>HuggingFace Format / S3-Compatible Storage]
     C --> D{Choose Fine-Tuning Method}
-    D --> E1[SFT\nSupervised Fine-Tuning]
-    D --> E2[LoRA / QLoRA\nLightweight Adapter]
-    D --> E3[DPO\nPreference Learning]
-    D --> E4[CPT\nContinued Pre-Training]
-    E1 --> F[DevSpace\nJupyter / VSCode\nExperimentation and Validation]
+    D --> E1[SFT<br/>Supervised Fine-Tuning]
+    D --> E2[LoRA / QLoRA<br/>Lightweight Adapter]
+    D --> E3[DPO<br/>Preference Learning]
+    D --> E4[CPT<br/>Continued Pre-Training]
+    E1 --> F[DevSpace<br/>Jupyter / VSCode<br/>Experimentation and Validation]
     E2 --> F
     E3 --> F
     E4 --> F
-    F --> G[Kubeflow TrainJob\nKueue GPU Scheduling]
-    G --> H[Trained Model\nOn-Premises Storage]
-    H --> I[vLLM Serverless Endpoint\nKEDA Scale-to-Zero]
-    I --> J[Internal API Consumers\nEMR System / Clinical Decision Support]
+    F --> G[Kubeflow TrainJob<br/>Kueue GPU Scheduling]
+    G --> H[Trained Model<br/>On-Premises Storage]
+    H --> I[vLLM Serverless Endpoint<br/>KEDA Scale-to-Zero]
+    I --> J[Internal API Consumers<br/>EMR System / Clinical Decision Support]
 ```
 
 *The diagram above represents a conceptual flow. Actual configuration parameters may vary by environment.*

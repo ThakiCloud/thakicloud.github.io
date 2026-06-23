@@ -68,12 +68,12 @@ graph TB
         end
 
         subgraph "Access Control Layer"
-            GW[Traefik Gateway API\nHTTP/gRPC/WebSocket]
-            KC[Keycloak IdP\nOIDC/MFA/RBAC]
+            GW[Traefik Gateway API<br/>HTTP/gRPC/WebSocket]
+            KC[Keycloak IdP<br/>OIDC/MFA/RBAC]
         end
 
         subgraph "Control Plane (k0s)"
-            CP[Go API Server\n:3000]
+            CP[Go API Server<br/>:3000]
             WEB[React Web Console]
             ARGO[ArgoCD GitOps]
             PG[(PostgreSQL)]
@@ -81,14 +81,14 @@ graph TB
         end
 
         subgraph "Data Plane A - Inference"
-            VLLM[vLLM Serverless\n+ KEDA Scale-to-Zero]
-            KAI[KAI Scheduler\n+ Kueue]
-            GPU1[GPU Node (MIG)]
+            VLLM[vLLM Serverless<br/>+ KEDA Scale-to-Zero]
+            KAI[KAI Scheduler<br/>+ Kueue]
+            GPU1["GPU Node (MIG)"]
         end
 
         subgraph "Data Plane B - Training"
-            KF[Kubeflow TrainJob\nSFT/DPO/LoRA]
-            GPU2[GPU Node (Full)]
+            KF[Kubeflow TrainJob<br/>SFT/DPO/LoRA]
+            GPU2["GPU Node (Full)"]
         end
 
         subgraph "Observability Stack"
@@ -98,8 +98,8 @@ graph TB
         end
 
         subgraph "Internal Registry"
-            REG[Harbor\nImage Mirror]
-            GIT[Gitea\nInternal Git]
+            REG[Harbor<br/>Image Mirror]
+            GIT[Gitea<br/>Internal Git]
         end
     end
 
