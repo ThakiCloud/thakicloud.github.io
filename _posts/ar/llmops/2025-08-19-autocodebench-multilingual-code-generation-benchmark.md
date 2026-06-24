@@ -26,6 +26,7 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/autocodebench-multilingua
 lang: ar
 dir: rtl
 reading_time: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
