@@ -10,7 +10,6 @@ canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-tensorrt-llm-perfo
 categories: [llmops, ai-infrastructure]
 tags: [tensorrt-llm, nvidia, llm-optimization, gpu-inference, performance-tuning, h100, h200, tensor-parallelism, flashattention]
 toc_label: "Table of Contents"
-published: false
 ---
 
 ⏱️ **Estimated reading time**: 12 min

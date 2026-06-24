@@ -62,7 +62,7 @@ flowchart TB
         U3["Team Member C"] -.->|observe| C
     end
     C -->|ambient monitoring| MEM["Accumulated Channel Context (Long-term Memory)"]
-    C -->|scoped permissions| TOOLS["Enterprise Tools\nGitHub · Data · Sales Systems"]
+    C -->|scoped permissions| TOOLS["Enterprise Tools<br/>GitHub · Data · Sales Systems"]
     C -->|proactive follow-up| TASK["Stalled Threads · Unresolved Work"]
     MEM --> C
 ```

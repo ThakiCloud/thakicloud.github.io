@@ -21,11 +21,13 @@ permalink: /en/tutorials/pepper-proactive-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/pepper-proactive-ai-assistant-tutorial/"
 ---
 
+![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)
+
 ⏱️ **Estimated Reading Time**: 12 minutes
 
 ## Introduction
 
-**Pepper** is revolutionizing how we interact with AI assistants. Unlike traditional chatbots that passively wait for your commands, Pepper **proactively works for you** in the background—continuously monitoring your Gmail, summarizing important emails, surfacing critical updates, and autonomously handling complex tasks through a swarm of specialized workers.
+**Pepper** is revolutionizing how we interact with AI assistants. Unlike traditional chatbots that passively wait for your commands, Pepper **proactively works for you** in the background, continuously monitoring your Gmail, summarizing important emails, surfacing critical updates, and autonomously handling complex tasks through a swarm of specialized workers.
 
 Developed by the **Agentica team** at **Berkeley Sky Computing Lab**, Pepper represents a fundamental shift from reactive, request-driven systems to real-time, event-driven architectures. This tutorial will guide you through setting up your own Pepper instance and understanding its powerful architecture.
 
@@ -51,6 +53,11 @@ Developed by the **Agentica team** at **Berkeley Sky Computing Lab**, Pepper rep
 ✅ **Event-Driven Architecture**: Continuous Sense-Think-Act loop  
 ✅ **Real-Time Context**: Maintains conversation history and user memory  
 ✅ **Non-Blocking Design**: Responds immediately while processing in background
+
+
+![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg)
+
+*Concept diagram*
 
 ## Prerequisites
 
@@ -245,7 +252,7 @@ The Scheduler:
 
 **Key Innovation: Asynchronous Tool Calls**
 
-Traditional LLM APIs enforce synchronous tool calls—the conversation must halt until a tool returns. Pepper solves this by:
+Traditional LLM APIs enforce synchronous tool calls, the conversation must halt until a tool returns. Pepper solves this by:
 - Appending tool invocations to conversation history
 - Continuing to process new events immediately
 - Handling tool results asynchronously when they arrive
@@ -566,7 +573,7 @@ source env_var.sh
 - This is normal for first-time setup
 - Check system resources (CPU, memory)
 - Ensure stable internet connection
-- Wait patiently—subsequent launches are faster
+- Wait patiently, subsequent launches are faster
 
 ## Best Practices
 
@@ -684,7 +691,7 @@ Pepper learning from your behavior:
 
 ## Conclusion
 
-Pepper represents a paradigm shift in AI assistant technology—from passive responders to proactive partners. By leveraging event-driven architecture with its Sense-Think-Act loop, Pepper continuously works for you, handling complex tasks in the background while keeping you informed of what truly matters.
+Pepper represents a paradigm shift in AI assistant technology, from passive responders to proactive partners. By leveraging event-driven architecture with its Sense-Think-Act loop, Pepper continuously works for you, handling complex tasks in the background while keeping you informed of what truly matters.
 
 The open-source nature of Pepper, combined with its modular architecture, makes it an ideal platform for experimenting with next-generation agentic systems. Whether you're looking to automate email management, build custom workflows, or explore real-time AI orchestration, Pepper provides a solid foundation.
 

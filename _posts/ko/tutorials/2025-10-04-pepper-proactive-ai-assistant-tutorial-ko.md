@@ -21,6 +21,8 @@ permalink: /ko/tutorials/pepper-proactive-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-assistant-tutorial/"
 ---
 
+![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)
+
 ⏱️ **예상 읽기 시간**: 12분
 
 ## 소개
@@ -51,6 +53,11 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-as
 ✅ **이벤트 드리븐 아키텍처**: 지속적인 Sense-Think-Act 루프  
 ✅ **실시간 컨텍스트**: 대화 기록 및 사용자 메모리 유지  
 ✅ **논블로킹 설계**: 백그라운드 처리 중에도 즉시 응답
+
+
+![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg)
+
+*개념 다이어그램*
 
 ## 사전 요구사항
 
@@ -566,7 +573,7 @@ source env_var.sh
 - 최초 설정에는 정상입니다
 - 시스템 리소스(CPU, 메모리) 확인
 - 안정적인 인터넷 연결 확인
-- 인내심을 가지고 기다리세요—이후 실행은 더 빠릅니다
+- 인내심을 가지고 기다리세요, 이후 실행은 더 빠릅니다
 
 ## 모범 사례
 

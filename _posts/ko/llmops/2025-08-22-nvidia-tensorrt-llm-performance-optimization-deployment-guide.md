@@ -25,7 +25,6 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-tensorrt-llm-performance-optimization-deployment-guide/"
 reading_time: true
-published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

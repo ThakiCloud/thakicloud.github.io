@@ -29,6 +29,8 @@ reading_time: true
 lang: en
 ---
 
+![Concept diagram](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.png)
+
 ⏱️ **Estimated reading time**: 20 min
 
 ## Introduction
@@ -40,6 +42,11 @@ As of 2025, [Turso Database](https://github.com/tursodatabase/turso) has reached
 Turso overcomes the limitations of traditional SQLite while providing a familiar SQL interface, opening new possibilities for **infrastructure engineers and DevOps teams**. Its adoption is growing rapidly in **microservice architectures, containerized environments, and serverless platforms**.
 
 This article takes a DevOps perspective and systematically covers Turso Database from core features through real-world production deployment.
+
+
+![Concept diagram](/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg)
+
+*Concept diagram*
 
 ## Turso Database Overview
 

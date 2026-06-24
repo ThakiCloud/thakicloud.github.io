@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414.941 524.1" width="414.941" height="524.1" style="--bg:#1a1b26;--fg:#a9b1d6">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="IN" data-to="VE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="212.84274999999997,76.9 212.84274999999997,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="VE" data-to="DS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="212.84274999999997,178.70000000000002 212.84274999999997,226.70000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="DS" data-to="LLM" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="212.84274999999997,280.5 212.84274999999997,328.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LLM" data-to="GR" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="212.84274999999997,382.3 212.84274999999997,406.30000000000007 122.10749999999999,406.30000000000007 122.10749999999999,430.30000000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LLM" data-to="CTX" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="212.84274999999997,382.3 212.84274999999997,406.30000000000007 303.578,406.30000000000007 303.578,430.30000000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="IN" data-label="Image / Video input" data-shape="rectangle">
+  <rect x="138.51574999999997" y="40" width="148.654" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="212.84274999999997" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Image / Video input</text>
+</g>
+<g class="node" data-id="VE" data-label="Vision encoder
+(multi-scale features)" data-shape="rectangle">
+  <rect x="131.84674999999996" y="124.9" width="161.99200000000002" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="212.84274999999997" y="151.8" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="212.84274999999997" dy="-3.9000000000000012">Vision encoder</tspan><tspan x="212.84274999999997" dy="16.900000000000002">(multi-scale features)</tspan></text>
+</g>
+<g class="node" data-id="DS" data-label="DeepStack fusion
+(strategic layer selection)" data-shape="rectangle">
+  <rect x="117.76774999999998" y="226.70000000000002" width="190.14999999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="212.84274999999997" y="253.60000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="212.84274999999997" dy="-3.9000000000000012">DeepStack fusion</tspan><tspan x="212.84274999999997" dy="16.900000000000002">(strategic layer selection)</tspan></text>
+</g>
+<g class="node" data-id="LLM" data-label="LLM backbone
+(MoE: 235B total / 22B active)" data-shape="rectangle">
+  <rect x="108.50524999999998" y="328.5" width="208.67499999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="212.84274999999997" y="355.4" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="212.84274999999997" dy="-3.9000000000000012">LLM backbone</tspan><tspan x="212.84274999999997" dy="16.900000000000002">(MoE: 235B total / 22B active)</tspan></text>
+</g>
+<g class="node" data-id="GR" data-label="2D and 3D grounding
+(spatial reasoning)" data-shape="rectangle">
+  <rect x="40" y="430.30000000000007" width="164.21499999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="122.10749999999999" y="457.20000000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="122.10749999999999" dy="-3.9000000000000012">2D and 3D grounding</tspan><tspan x="122.10749999999999" dy="16.900000000000002">(spatial reasoning)</tspan></text>
+</g>
+<g class="node" data-id="CTX" data-label="Long context
+(up to ~1M tokens)" data-shape="rectangle">
+  <rect x="232.21499999999997" y="430.30000000000007" width="142.726" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="303.578" y="457.20000000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="303.578" dy="-3.9000000000000012">Long context</tspan><tspan x="303.578" dy="16.900000000000002">(up to ~1M tokens)</tspan></text>
+</g>
+</svg>

@@ -23,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-router-onprem
 reading_time: true
 ---
 
+![Concept diagram](/assets/images/claude-code-router-onprem-routing-hero.png)
+
 ```mermaid
 flowchart LR
     CC["Claude Code"] --> CCR["claude-code-router proxy"]
@@ -42,6 +44,11 @@ Claude Code is a terminal-based agentic coding tool. By default it sends request
 The governing principle, stated up front: **every model routed through CCR is only worthwhile if it is more cost-efficient than Claude Sonnet.** Otherwise you lower quality while the money still flows. So we don't assert. We measure.
 
 ---
+
+
+![Concept diagram](/assets/images/claude-code-router-onprem-routing-diagram.svg)
+
+*Concept diagram*
 
 ## What claude-code-router is
 
@@ -164,7 +171,7 @@ Rates verified on 2026-06-24 (USD per 1M tokens):
 |-------|-------|--------|---------|-----------|
 | Claude Sonnet 4.6 (baseline) | $3.00 | $15.00 | per-token | 1.0x |
 | MiniMax-M2.7 | $0.24 | $0.96 | per-token | ~0.07x |
-| glm-5.2 / kimi-k2.7-code | — | — | subscription $20/mo (Pro) | usage-dependent |
+| glm-5.2 / kimi-k2.7-code | - | - | subscription $20/mo (Pro) | usage-dependent |
 
 MiniMax-M2.7 is about 7-8% of Sonnet's per-token rate, so it is always dramatically cheaper. Ollama Cloud, by contrast, is a flat monthly subscription rather than per-token. Its effective rate is `monthly fee / monthly tokens used`, and at low volume the $20 flat fee is actually a loss. Using a blended $9/M, you must push **roughly 2.2M tokens per month** before it beats Sonnet.
 

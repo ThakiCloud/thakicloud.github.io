@@ -29,6 +29,8 @@ reading_time: true
 lang: ar
 ---
 
+![مخطط مفاهيمي](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.png)
+
 ⏱️ **وقت القراءة المقدر**: 20 دقيقة
 
 ## مقدمة
@@ -40,6 +42,11 @@ lang: ar
 تتجاوز Turso قيود SQLite التقليدية مع الحفاظ على واجهة SQL المألوفة، مما يفتح آفاقًا جديدة لـ**مهندسي البنية التحتية وفرق DevOps**. ويتنامى استخدامها بسرعة في **معماريات الخدمات المصغرة والبيئات المُحوَّلة إلى حاويات والمنصات عديمة الخادم (serverless)**.
 
 تتناول هذه المقالة Turso Database من منظور DevOps بصورة منهجية، من الميزات الأساسية وصولًا إلى النشر الإنتاجي الفعلي.
+
+
+![مخطط مفاهيمي](/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg)
+
+*مخطط مفاهيمي*
 
 ## نظرة عامة على Turso Database
 

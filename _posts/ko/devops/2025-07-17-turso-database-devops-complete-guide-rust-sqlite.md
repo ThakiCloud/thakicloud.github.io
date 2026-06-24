@@ -28,17 +28,24 @@ canonical_url: "https://thakicloud.github.io/devops/turso-database-devops-comple
 reading_time: true
 ---
 
+![개념 다이어그램](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.png)
+
 ⏱️ **예상 읽기 시간**: 20분
 
 ## 서론
 
-> **"Turso Database is an in-process SQL database, compatible with SQLite."** — [Turso Team](https://github.com/tursodatabase/turso)
+> **"Turso Database is an in-process SQL database, compatible with SQLite."**, [Turso Team](https://github.com/tursodatabase/turso)
 
 2025년 현재, [Turso Database](https://github.com/tursodatabase/turso)가 **12.1k 스타, 459 포크**를 기록하며 차세대 SQLite로 주목받고 있습니다. Rust로 구축된 이 혁신적인 데이터베이스는 **SQLite의 완벽한 호환성을 유지하면서도 비동기 I/O, 다중 언어 바인딩, 현대적 DevOps 워크플로우**를 지원합니다.
 
 기존 SQLite의 한계를 극복하면서도 친숙한 SQL 인터페이스를 제공하는 Turso는 **인프라 엔지니어와 DevOps 팀**에게 새로운 가능성을 열어주고 있습니다. 특히 **마이크로서비스 아키텍처, 컨테이너 환경, 서버리스 플랫폼**에서의 활용도가 급속히 증가하고 있습니다.
 
 이 글에서는 DevOps 관점에서 Turso Database의 핵심 기능부터 실제 프로덕션 배포까지 체계적으로 다뤄보겠습니다.
+
+
+![개념 다이어그램](/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg)
+
+*개념 다이어그램*
 
 ## Turso Database 개요
 
