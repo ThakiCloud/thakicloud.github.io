@@ -17,6 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/news/multilingual-test-post/"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 3 دقائق قراءة

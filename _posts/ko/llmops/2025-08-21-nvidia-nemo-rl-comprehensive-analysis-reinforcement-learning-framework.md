@@ -25,8 +25,9 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/nvidia-nemo-rl-comprehensive-analysis-reinforcement-learning-framework/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-nemo-rl-comprehensive-analysis-reinforcement-learning-framework/"
 reading_time: true
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

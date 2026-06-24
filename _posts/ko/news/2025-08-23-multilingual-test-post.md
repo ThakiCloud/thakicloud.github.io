@@ -17,6 +17,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/news/multilingual-test-post/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 3분
