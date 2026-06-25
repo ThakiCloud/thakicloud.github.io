@@ -19,6 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/technique/claude-code-video-toolkit/"
+published: false
 ---
 
 ![자동화된 영상 제작 파이프라인을 추상적으로 표현한 이미지](/assets/images/claude-code-video-toolkit-hero.png)

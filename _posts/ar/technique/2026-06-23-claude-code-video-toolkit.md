@@ -20,6 +20,7 @@ toc_label: "المحتويات"
 toc_icon: "robot"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/technique/claude-code-video-toolkit/"
+published: false
 ---
 
 ![تمثيل تجريدي لخط إنتاج فيديو مؤتمت](/assets/images/claude-code-video-toolkit-hero.png)

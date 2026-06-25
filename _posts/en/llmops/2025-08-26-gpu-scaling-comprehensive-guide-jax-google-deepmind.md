@@ -21,6 +21,7 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/"
 lang: en
 permalink: /en/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 25 minutes

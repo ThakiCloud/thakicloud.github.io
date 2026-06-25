@@ -20,6 +20,7 @@ toc_label: "Contents"
 toc_icon: "robot"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/technique/claude-code-video-toolkit/"
+published: false
 ---
 
 ![Abstract representation of an automated video production pipeline](/assets/images/claude-code-video-toolkit-hero.png)
