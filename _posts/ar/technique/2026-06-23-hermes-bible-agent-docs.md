@@ -20,6 +20,7 @@ toc_label: "المحتويات"
 toc_icon: "robot"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/technique/hermes-bible-agent-docs/"
+published: false
 ---
 
 ![تمثيل تجريدي لمكتبة معرفة مفهرسة](/assets/images/hermes-bible-agent-docs-hero.png)

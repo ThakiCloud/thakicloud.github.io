@@ -19,6 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/technique/hermes-bible-agent-docs/"
+published: false
 ---
 
 ![색인된 지식 라이브러리를 추상적으로 표현한 이미지](/assets/images/hermes-bible-agent-docs-hero.png)

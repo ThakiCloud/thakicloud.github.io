@@ -20,6 +20,7 @@ toc_label: "Contents"
 toc_icon: "robot"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/technique/hermes-bible-agent-docs/"
+published: false
 ---
 
 ![Abstract representation of an indexed knowledge library](/assets/images/hermes-bible-agent-docs-hero.png)

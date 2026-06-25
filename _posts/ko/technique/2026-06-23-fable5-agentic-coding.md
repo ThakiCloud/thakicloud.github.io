@@ -19,6 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/technique/fable5-agentic-coding/"
+published: false
 ---
 
 ## 개요

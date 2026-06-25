@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
+published: false
 ---
 
 ## نظرة عامة

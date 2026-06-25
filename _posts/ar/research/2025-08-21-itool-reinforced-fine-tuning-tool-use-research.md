@@ -25,7 +25,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/itool-reinforced-fine-tuning-tool-use-research/"
 lang: ar
 reading_time: true
-published: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق
