@@ -28,6 +28,22 @@ reading_time: true
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق
 
+<!-- evolve-diagram -->
+*رسم تخطيطي توضيحي*
+
+```mermaid
+graph TD
+  R["agent_run (root span)"] --> P["plan: decompose query"]
+  R --> L1["llm_call: sonnet<br/>tokens + latency"]
+  R --> T1["tool_call: web_search<br/>input + result"]
+  R --> S1["subagent: research_agent"]
+  S1 --> L2["llm_call"]
+  S1 --> T2["tool_call: fetch"]
+  R --> C["cost attribution<br/>per-span tokens + USD"]
+  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class R root;
+```
+
 ## لماذا يفقد التسجيل معناه في بيئة الوكلاء
 
 يُؤدي التسجيل التقليدي مهمته جيداً مع استدعاءات LLM الفردية: تسجيل أزواج الإدخال والإخراج، وقياس زمن الاستجابة، والتقاط الأخطاء.
@@ -181,3 +197,13 @@ span.set_attribute("cost.estimated_usd", estimated_cost)
 تشغيل وكلاء الإنتاج بلا قابلية مراقبة يشبه قيادة طائرة بلا أجهزة قياس: يبدو الأمر على ما يرام حين تسير الأمور حسناً، لكن حين يحدث خطأ لا توجد طريقة لمعرفة مصدره.
 
 التتبع وإسناد التكاليف وحلقات التقييم ليست اختيارية بل هي متطلبات تشغيلية لوكلاء الإنتاج. لا بأس بالبدء بسيطاً؛ لكن البدء بلا أي منظومة بنية على تأجيلها لاحقاً يعني الوقوع في الاضطرار إلى بناء البنية التحتية بعد تراكم أنماط الإخفاق.
+
+---
+
+<!-- evolve-refs -->
+## المراجع
+
+- [MLflow Tracing](https://mlflow.org/docs/latest/genai/tracing/)
+- [LangSmith](https://docs.langchain.com/langsmith)
+- [Arize Phoenix](https://github.com/Arize-ai/phoenix)
+- [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions-genai)

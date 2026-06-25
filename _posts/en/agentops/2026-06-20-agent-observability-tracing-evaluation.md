@@ -28,6 +28,22 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 9 min
 
+<!-- evolve-diagram -->
+*Conceptual diagram*
+
+```mermaid
+graph TD
+  R["agent_run (root span)"] --> P["plan: decompose query"]
+  R --> L1["llm_call: sonnet<br/>tokens + latency"]
+  R --> T1["tool_call: web_search<br/>input + result"]
+  R --> S1["subagent: research_agent"]
+  S1 --> L2["llm_call"]
+  S1 --> T2["tool_call: fetch"]
+  R --> C["cost attribution<br/>per-span tokens + USD"]
+  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class R root;
+```
+
 ## Why Logs Are Not Enough for Agents
 
 For a single LLM call, traditional logging works fine. Record the input-output pair, measure latency, capture errors.
@@ -181,3 +197,13 @@ Do not attempt all five stages at once. Stabilize stages 1 and 2 first, then bui
 Running production agents without observability is like flying a plane with no instruments. Things look fine when everything is working, but when something goes wrong there is no way to know where it happened.
 
 Tracing, cost attribution, and evaluation loops are not optional features. They are operational requirements for production agents. Starting simple is fine. Starting without them at all, on the assumption you will add them later, means you will be building the infrastructure after failure patterns have already accumulated.
+
+---
+
+<!-- evolve-refs -->
+## References
+
+- [MLflow Tracing](https://mlflow.org/docs/latest/genai/tracing/)
+- [LangSmith](https://docs.langchain.com/langsmith)
+- [Arize Phoenix](https://github.com/Arize-ai/phoenix)
+- [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions-genai)

@@ -21,11 +21,27 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/agent-observability-tracing-evaluation/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/agent-observability-tracing-evaluation/"
 reading_time: true
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
+
+<!-- evolve-diagram -->
+*개념 다이어그램*
+
+```mermaid
+graph TD
+  R["agent_run (root span)"] --> P["plan: decompose query"]
+  R --> L1["llm_call: sonnet<br/>tokens + latency"]
+  R --> T1["tool_call: web_search<br/>input + result"]
+  R --> S1["subagent: research_agent"]
+  S1 --> L2["llm_call"]
+  S1 --> T2["tool_call: fetch"]
+  R --> C["cost attribution<br/>per-span tokens + USD"]
+  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class R root;
+```
 
 ## 에이전트에서 로그가 의미없는 이유
 
@@ -180,3 +196,13 @@ MLflow는 이 목적으로 에이전트 리플레이 기능을 제공합니다. 
 관찰가능성 없이 프로덕션 에이전트를 운영하는 것은 계기판 없이 비행기를 모는 것과 같습니다. 잘 될 때는 괜찮아 보이지만 뭔가 잘못되면 어디서 잘못됐는지 알 방법이 없습니다.
 
 트레이싱, 비용 어트리뷰션, 평가 루프는 선택이 아니라 프로덕션 에이전트의 운영 요건입니다. 처음에 단순하게 시작해도 좋습니다. 단, 나중에 추가하겠다는 생각으로 아예 없이 시작하면 실패 패턴이 쌓인 이후에야 인프라를 뒤늦게 구축하는 상황이 됩니다.
+
+---
+
+<!-- evolve-refs -->
+## 참고 자료
+
+- [MLflow Tracing](https://mlflow.org/docs/latest/genai/tracing/)
+- [LangSmith](https://docs.langchain.com/langsmith)
+- [Arize Phoenix](https://github.com/Arize-ai/phoenix)
+- [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions-genai)

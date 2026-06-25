@@ -16,18 +16,32 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/langgpt-structured-prompt-framework-tutorial/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/langgpt-structured-prompt-framework-tutorial-en/"
 lang: en
 permalink: /en/tutorials/langgpt-structured-prompt-framework-tutorial/
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes
 
+<!-- evolve-diagram -->
+*Conceptual diagram*
+
+```mermaid
+graph TD
+  Role["# Role: agent name"] --> Profile["## Profile<br/>author, version, language"]
+  Role --> Skills["## Skills<br/>capabilities list"]
+  Role --> Rules["## Rules<br/>constraints + guidelines"]
+  Role --> Workflow["## Workflow<br/>ordered steps 1..n"]
+  Role --> Init["## Initialization<br/>greeting + instructions"]
+  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class Role root;
+```
+
 ## Introduction: Why Structured Prompts Matter
 
 Traditional prompt engineering often feels like throwing darts in the dark. You craft a prompt, test it, adjust it, and repeat until something works. **LangGPT changes this chaotic process into a systematic methodology** that produces consistent, high-quality results.
 
-[LangGPT](https://github.com/langgptai/LangGPT) is a structured, reusable prompt design framework that enables anyone to create professional-grade prompts for Large Language Models. Think of it as a **"programming language for prompts"** — systematic, template-based, and infinitely scalable.
+[LangGPT](https://github.com/langgptai/LangGPT) is a structured, reusable prompt design framework that enables anyone to create professional-grade prompts for Large Language Models. Think of it as a **"programming language for prompts"**: systematic, template-based, and infinitely scalable.
 
 ### What You'll Learn
 

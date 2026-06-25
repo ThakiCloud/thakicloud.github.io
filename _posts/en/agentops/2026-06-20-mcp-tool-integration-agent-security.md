@@ -28,6 +28,23 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 10 min
 
+<!-- evolve-diagram -->
+*Conceptual diagram*
+
+```mermaid
+graph TD
+  Agent["Agent (LLM runtime)"] --> GW["MCP Gateway"]
+  GW --> A1["authn / authz"]
+  GW --> A2["tool allowlist"]
+  GW --> A3["audit logging"]
+  GW --> A4["rate limiting"]
+  GW --> S1["MCP Server A: GitHub"]
+  GW --> S2["MCP Server B: Slack"]
+  GW --> S3["MCP Server C: Database"]
+  classDef gw fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class GW gw;
+```
+
 ## How MCP Became the Production Standard
 
 The Model Context Protocol (MCP), announced by Anthropic in 2024, became the de facto standard for agent tool connectivity by the first half of 2026. Major AI development tools such as Cursor, Windsurf, and Claude Code support MCP natively, and in enterprise environments connecting Slack, GitHub, Jira, and databases to agents via MCP servers has become the default pattern.
@@ -216,3 +233,12 @@ MCP has significantly reduced the complexity of agent tool integration. But as s
 The security principles are not fundamentally different from traditional API security: least privilege, input validation, audit logging, and incident response readiness. What is different is that these principles must now be applied to a new attack surface where LLMs read and interpret tool specifications.
 
 Tool Poisoning is a novel attack, which means traditional WAF or SAST tools will not catch it. Inspecting tool specifications directly and monitoring agent runtime behavior are the most practical defenses available today.
+
+---
+
+<!-- evolve-refs -->
+## References
+
+- [Model Context Protocol](https://modelcontextprotocol.io/)
+- [Anthropic: Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
+- [Invariant Labs: MCP Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)

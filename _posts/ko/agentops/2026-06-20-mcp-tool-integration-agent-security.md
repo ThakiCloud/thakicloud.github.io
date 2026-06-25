@@ -21,11 +21,28 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/mcp-tool-integration-agent-security/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
 ---
 
 ⏱️ **예상 읽기 시간**: 10분
+
+<!-- evolve-diagram -->
+*개념 다이어그램*
+
+```mermaid
+graph TD
+  Agent["Agent (LLM runtime)"] --> GW["MCP Gateway"]
+  GW --> A1["authn / authz"]
+  GW --> A2["tool allowlist"]
+  GW --> A3["audit logging"]
+  GW --> A4["rate limiting"]
+  GW --> S1["MCP Server A: GitHub"]
+  GW --> S2["MCP Server B: Slack"]
+  GW --> S3["MCP Server C: Database"]
+  classDef gw fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class GW gw;
+```
 
 ## MCP가 프로덕션 표준이 된 배경
 
@@ -215,3 +232,12 @@ MCP는 에이전트 도구 통합의 복잡도를 크게 낮췄습니다. 하지
 보안 원칙은 기존 API 보안과 크게 다르지 않습니다. 최소 권한, 입력 검증, 감사 로깅, 인시던트 대응 준비. 다른 점은 이 원칙들을 LLM이 도구 명세를 읽고 해석하는 새로운 공격 표면에 적용해야 한다는 것입니다.
 
 Tool Poisoning이 새로운 공격이기 때문에 전통적인 WAF나 SAST 도구로는 잡히지 않습니다. 도구 명세 자체를 검사하고, 에이전트 런타임 행동을 모니터링하는 것이 현재로서 가장 현실적인 방어 방법입니다.
+
+---
+
+<!-- evolve-refs -->
+## 참고 자료
+
+- [Model Context Protocol](https://modelcontextprotocol.io/)
+- [Anthropic: Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
+- [Invariant Labs: MCP Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)

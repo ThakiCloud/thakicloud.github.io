@@ -16,18 +16,32 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/langgpt-structured-prompt-framework-tutorial/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/langgpt-structured-prompt-framework-tutorial-ko/"
 lang: ko
 permalink: /ko/tutorials/langgpt-structured-prompt-framework-tutorial/
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
 
+<!-- evolve-diagram -->
+*개념 다이어그램*
+
+```mermaid
+graph TD
+  Role["# Role: agent name"] --> Profile["## Profile<br/>author, version, language"]
+  Role --> Skills["## Skills<br/>capabilities list"]
+  Role --> Rules["## Rules<br/>constraints + guidelines"]
+  Role --> Workflow["## Workflow<br/>ordered steps 1..n"]
+  Role --> Init["## Initialization<br/>greeting + instructions"]
+  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class Role root;
+```
+
 ## 서론: 구조화된 프롬프트가 중요한 이유
 
 전통적인 프롬프트 엔지니어링은 종종 어둠 속에서 다트를 던지는 것과 같습니다. 프롬프트를 작성하고, 테스트하고, 조정하고, 뭔가 작동할 때까지 반복합니다. **LangGPT는 이러한 혼란스러운 과정을 일관되고 고품질의 결과를 생성하는 체계적인 방법론으로 바꿉니다**.
 
-[LangGPT](https://github.com/langgptai/LangGPT)는 누구나 대형 언어 모델을 위한 전문가급 프롬프트를 만들 수 있게 해주는 구조화되고 재사용 가능한 프롬프트 설계 프레임워크입니다. **"프롬프트를 위한 프로그래밍 언어"**라고 생각하면 됩니다 — 체계적이고, 템플릿 기반이며, 무한히 확장 가능합니다.
+[LangGPT](https://github.com/langgptai/LangGPT)는 누구나 대형 언어 모델을 위한 전문가급 프롬프트를 만들 수 있게 해주는 구조화되고 재사용 가능한 프롬프트 설계 프레임워크입니다. **"프롬프트를 위한 프로그래밍 언어"**라고 생각하면 됩니다. 체계적이고, 템플릿 기반이며, 무한히 확장 가능합니다.
 
 ### 이 튜토리얼에서 배울 내용
 

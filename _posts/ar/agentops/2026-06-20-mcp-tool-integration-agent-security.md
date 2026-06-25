@@ -28,6 +28,23 @@ reading_time: true
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق
 
+<!-- evolve-diagram -->
+*رسم تخطيطي توضيحي*
+
+```mermaid
+graph TD
+  Agent["Agent (LLM runtime)"] --> GW["MCP Gateway"]
+  GW --> A1["authn / authz"]
+  GW --> A2["tool allowlist"]
+  GW --> A3["audit logging"]
+  GW --> A4["rate limiting"]
+  GW --> S1["MCP Server A: GitHub"]
+  GW --> S2["MCP Server B: Slack"]
+  GW --> S3["MCP Server C: Database"]
+  classDef gw fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class GW gw;
+```
+
 ## كيف أصبح MCP معيار الإنتاج
 
 البروتوكول Model Context Protocol (MCP) الذي أعلنت عنه Anthropic عام 2024 تحول في النصف الأول من 2026 إلى معيار الصناعة الفعلي لتوصيل أدوات الوكلاء. باتت أدوات التطوير الذكية الرئيسية مثل Cursor وWindsurf وClaude Code تدعم MCP افتراضياً، وأصبح توصيل Slack وGitHub وJira وقواعد البيانات بالوكلاء عبر خوادم MCP النمط المعتاد في البيئات المؤسسية.
@@ -216,3 +233,12 @@ async def call_tool_with_fallback(tool_name, params):
 مبادئ الأمن لا تختلف كثيراً عن أمن APIs التقليدية: أقل الصلاحيات، التحقق من المدخلات، تسجيل مراجعة المسار، الاستعداد للاستجابة للحوادث. الفارق هو ضرورة تطبيق هذه المبادئ على سطح الهجوم الجديد المتمثل في قراءة النموذج لمواصفات الأدوات وتفسيرها.
 
 Tool Poisoning هجوم جديد لا تُمسك به WAF التقليدية أو أدوات SAST. فحص مواصفات الأدوات ذاتها ومراقبة سلوك الوكيل أثناء التشغيل هو الدفاع الأكثر واقعية في الوقت الراهن.
+
+---
+
+<!-- evolve-refs -->
+## المراجع
+
+- [Model Context Protocol](https://modelcontextprotocol.io/)
+- [Anthropic: Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
+- [Invariant Labs: MCP Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)

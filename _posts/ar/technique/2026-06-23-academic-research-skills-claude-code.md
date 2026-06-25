@@ -22,6 +22,7 @@ toc_icon: "graduation-cap"
 header:
   image: /assets/images/academic-research-skills-claude-code-hero.png
 canonical_url: "https://thakicloud.github.io/ar/technique/academic-research-skills-claude-code/"
+published: false
 ---
 
 ![صورة مجردة لخط تجميع بحثي](/assets/images/academic-research-skills-claude-code-hero.png)

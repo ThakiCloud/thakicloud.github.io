@@ -16,18 +16,32 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/langgpt-structured-prompt-framework-tutorial/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/langgpt-structured-prompt-framework-tutorial-ar/"
 lang: ar
 permalink: /ar/tutorials/langgpt-structured-prompt-framework-tutorial/
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
 
+<!-- evolve-diagram -->
+*رسم تخطيطي توضيحي*
+
+```mermaid
+graph TD
+  Role["# Role: agent name"] --> Profile["## Profile<br/>author, version, language"]
+  Role --> Skills["## Skills<br/>capabilities list"]
+  Role --> Rules["## Rules<br/>constraints + guidelines"]
+  Role --> Workflow["## Workflow<br/>ordered steps 1..n"]
+  Role --> Init["## Initialization<br/>greeting + instructions"]
+  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class Role root;
+```
+
 ## مقدمة: لماذا تهم المحفزات المنظمة
 
 غالباً ما تبدو هندسة المحفزات التقليدية وكأنها رمي السهام في الظلام. تقوم بصياغة محفز، واختباره، وتعديله، والتكرار حتى يعمل شيء ما. **يغير LangGPT هذه العملية الفوضوية إلى منهجية منظمة تنتج نتائج متسقة وعالية الجودة**.
 
-[LangGPT](https://github.com/langgptai/LangGPT) هو إطار عمل منظم وقابل لإعادة الاستخدام لتصميم المحفزات يمكّن أي شخص من إنشاء محفزات احترافية لنماذج اللغة الكبيرة. فكر فيه كـ **"لغة برمجة للمحفزات"** — منظمة وقائمة على القوالب وقابلة للتوسع بلا حدود.
+[LangGPT](https://github.com/langgptai/LangGPT) هو إطار عمل منظم وقابل لإعادة الاستخدام لتصميم المحفزات يمكّن أي شخص من إنشاء محفزات احترافية لنماذج اللغة الكبيرة. فكر فيه كـ **"لغة برمجة للمحفزات"**: منظمة وقائمة على القوالب وقابلة للتوسع بلا حدود.
 
 ### ما ستتعلمه
 

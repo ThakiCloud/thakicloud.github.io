@@ -20,11 +20,27 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/multi-agent-orchestration-production-patterns/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
+
+<!-- evolve-diagram -->
+*개념 다이어그램*
+
+```mermaid
+graph TD
+  O["Orchestrator (Sonnet)<br/>classify + decompose"] --> WA["Worker A: researcher<br/>(Haiku)"]
+  O --> WB["Worker B: coder<br/>(Sonnet)"]
+  O --> WC["Worker C: reviewer<br/>(Opus, gate only)"]
+  WA --> M["merge results"]
+  WB --> M
+  WC --> M
+  M --> Out["final output"]
+  classDef orch fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class O orch;
+```
 
 ## 왜 지금 이 주제인가
 
@@ -160,3 +176,12 @@ LLM 단일 호출보다 정확도가 높지만 비용도 높습니다. 속도보
 패턴을 고르는 것이 프레임워크를 고르는 것보다 중요합니다. LangGraph로 Fan-out을 구현하든 CrewAI로 Orchestrator-Worker를 구현하든, 패턴이 태스크 구조와 맞지 않으면 프레임워크가 문제를 해결해주지 않습니다.
 
 지금 가장 많은 팀이 실수하는 지점은 Adaptive Planning이 필요 없는 태스크에 해당 패턴을 쓰는 것입니다. 종료 조건 없이 개방형 탐색 루프를 프로덕션에 올리면 비용 폭주나 타임아웃으로 이어집니다. Sequential Pipeline이나 Fan-out으로 충분한지를 먼저 확인하는 것이 좋습니다.
+
+---
+
+<!-- evolve-refs -->
+## 참고 자료
+
+- [Anthropic: How we built our multi-agent research system](https://www.anthropic.com/engineering/built-multi-agent-research-system)
+- [LangGraph](https://github.com/langchain-ai/langgraph)
+- [CrewAI Docs](https://docs.crewai.com/)

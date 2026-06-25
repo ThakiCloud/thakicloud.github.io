@@ -27,6 +27,22 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 8 min
 
+<!-- evolve-diagram -->
+*Conceptual diagram*
+
+```mermaid
+graph TD
+  O["Orchestrator (Sonnet)<br/>classify + decompose"] --> WA["Worker A: researcher<br/>(Haiku)"]
+  O --> WB["Worker B: coder<br/>(Sonnet)"]
+  O --> WC["Worker C: reviewer<br/>(Opus, gate only)"]
+  WA --> M["merge results"]
+  WB --> M
+  WC --> M
+  M --> Out["final output"]
+  classDef orch fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class O orch;
+```
+
 ## Why This Topic Now
 
 As of the first half of 2026, a significant portion of production LLM workloads have shifted from single-model calls to multi-agent pipelines. With frameworks like LangGraph, CrewAI, Microsoft Agent Framework, and Google ADK reaching stable releases, the more important question is no longer "how do I wire these together" but "which pattern do I use and when."
@@ -161,3 +177,12 @@ Third, when a critique-review loop demonstrably improves accuracy. In that case 
 Choosing the right pattern matters more than choosing the right framework. Whether you implement Fan-out with LangGraph or Orchestrator-Worker with CrewAI, a framework cannot fix a mismatch between the pattern and the task structure.
 
 The most common mistake teams make right now is applying Adaptive Planning to tasks that do not need it. Putting an open-ended exploration loop without termination conditions into production leads to cost explosions or timeouts. It is worth confirming first whether Sequential Pipeline or Fan-out is sufficient.
+
+---
+
+<!-- evolve-refs -->
+## References
+
+- [Anthropic: How we built our multi-agent research system](https://www.anthropic.com/engineering/built-multi-agent-research-system)
+- [LangGraph](https://github.com/langchain-ai/langgraph)
+- [CrewAI Docs](https://docs.crewai.com/)

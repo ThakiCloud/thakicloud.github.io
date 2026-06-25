@@ -27,6 +27,22 @@ reading_time: true
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
+<!-- evolve-diagram -->
+*رسم تخطيطي توضيحي*
+
+```mermaid
+graph TD
+  O["Orchestrator (Sonnet)<br/>classify + decompose"] --> WA["Worker A: researcher<br/>(Haiku)"]
+  O --> WB["Worker B: coder<br/>(Sonnet)"]
+  O --> WC["Worker C: reviewer<br/>(Opus, gate only)"]
+  WA --> M["merge results"]
+  WB --> M
+  WC --> M
+  M --> Out["final output"]
+  classDef orch fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
+  class O orch;
+```
+
 ## لماذا هذا الموضوع الآن
 
 في النصف الأول من عام 2026، تحولت نسبة كبيرة من أحمال عمل LLM في بيئات الإنتاج من استدعاءات نموذج واحدة إلى خطوط أنابيب متعددة الوكلاء. بعد أن أصدرت أطر العمل مثل LangGraph وCrewAI وMicrosoft Agent Framework وGoogle ADK إصداراتها المستقرة، باتت مسألة "أي نمط نستخدم ومتى" أهم من مسألة "كيف نربط المكونات".
@@ -161,3 +177,12 @@ final_report = merge_agent.run(results)
 اختيار النمط أهم من اختيار الإطار. سواء نفّذت Fan-out عبر LangGraph أو Orchestrator-Worker عبر CrewAI، فإن عدم توافق النمط مع بنية المهمة يعني أن الإطار لن يحل المشكلة.
 
 الخطأ الأكثر شيوعاً اليوم هو تطبيق Adaptive Planning على مهام لا تستلزمه. نشر حلقة استكشاف مفتوحة بلا شرط إيقاف في الإنتاج يُفضي إلى انفجار التكاليف أو انتهاء المهلة. يُستحسن التحقق أولاً من كفاية Sequential Pipeline أو Fan-out.
+
+---
+
+<!-- evolve-refs -->
+## المراجع
+
+- [Anthropic: How we built our multi-agent research system](https://www.anthropic.com/engineering/built-multi-agent-research-system)
+- [LangGraph](https://github.com/langchain-ai/langgraph)
+- [CrewAI Docs](https://docs.crewai.com/)
