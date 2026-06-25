@@ -28,6 +28,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/2025-07-02-macos-github-cli-complete-guide/"
 lang: ar
 reading_time: true
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 20 دقيقة
