@@ -24,7 +24,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/lens-ide-kubernetes-all-in-one-solution/"
 reading_time: true
-published: true
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 9 min

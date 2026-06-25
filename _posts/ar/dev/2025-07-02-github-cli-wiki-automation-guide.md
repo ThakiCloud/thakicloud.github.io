@@ -22,7 +22,6 @@ author_profile: true
 toc: true
 toc_label: "أتمتة Wiki"
 canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-wiki-automation-guide/"
-published: true
 ---
 
 ⏱️ **وقت القراءة المقدر**: 22 دقائق
