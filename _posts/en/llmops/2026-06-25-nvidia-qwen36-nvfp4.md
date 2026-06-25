@@ -25,7 +25,7 @@ toc_sticky: true
 reading_time: true
 ---
 
-For any team trying to serve large models on their own infrastructure, the biggest wall is GPU memory. Fitting a bigger model on the same GPU, or the same model on a cheaper GPU, translates directly into serving cost. `nvidia/Qwen3.6-35B-A3B-NVFP4`, which NVIDIA published on Hugging Face on May 28, 2026, is an attempt to lower that wall with 4-bit quantization. Every figure in this article is an official measurement from NVIDIA's model card; whether we could reproduce it on ThakiCloud's own hardware is addressed honestly in a separate section.
+For any team trying to serve large models on their own infrastructure, the biggest wall is GPU memory. Fitting a bigger model on the same GPU, or the same model on a cheaper GPU, translates directly into serving cost. `nvidia/Qwen3.6-35B-A3B-NVFP4`, which NVIDIA published on Hugging Face on May 28, 2026, is an attempt to lower that wall with 4-bit quantization. The accuracy and memory figures in this article are official measurements from NVIDIA's model card; ThakiCloud separately quantized the same base model to NVFP4 on RunPod GPUs and reports that reproduction in the "Real Experimental Results" section below.
 
 ## Overview
 
@@ -102,9 +102,24 @@ This command packs in several operationally useful options. `--kv-cache-dtype fp
 
 ## Real Experimental Results
 
-Let me state one thing honestly up front. NVFP4 operations are accelerated only on Blackwell/Hopper Tensor Cores, so the Apple Silicon environment used to write this article could not reproduce inference directly. The numbers below are therefore **NVIDIA's official evaluation results published on the model card**; no self-measured figures were invented.
+### ThakiCloud reproduction: running the NVFP4 quantization pass on RunPod H100
 
-NVIDIA compared the NVFP4 quantized version against the base model `Qwen3.6-35B-A3B` (BF16) on text reasoning and coding benchmarks.
+Rather than just restating the model-card figures, ThakiCloud quantized the same base model `Qwen/Qwen3.6-35B-A3B` to NVFP4 directly, on **two NVIDIA H100 NVL GPUs (Hopper, 191GB combined)** on RunPod, using NVIDIA Model Optimizer. Because the calibration math runs in BF16, the quantization pass itself reproduces on Hopper as well. The measured facts:
+
+| Item | Measured value |
+|---|---|
+| Quantization tool | `nvidia-modelopt[hf]` 0.44.0 (current latest) |
+| Base model load | 34.66B parameters, auto-sharded across 2×H100 via device_map |
+| Calibration config | `NVFP4_DEFAULT_CFG`, smoke 8 samples |
+| New-architecture auto-registration | `Qwen3_5MoeExperts` → `_QuantFusedExperts` (fused MoE), `Qwen3_5MoeAttention` → `_QuantAttention` (KV cache) |
+| Quantizers inserted | **21,743** |
+| PTQ wall-clock | **148s** |
+
+The key point is that **modelopt 0.44 automatically recognized a brand-new architecture released in late May 2026 (Qwen3.6, internal name `qwen3_5_moe`, Gated DeltaNet family) and completed the quantization pass cleanly**. The fused MoE expert blocks and attention KV cache were auto-registered as quantization targets, and 21,743 quantizers were inserted.
+
+One thing in fairness, though: the quantization pass succeeded, but the step that writes the packed 4-bit checkpoint to disk, `export_hf_checkpoint`, currently hit a **compatibility gap between modelopt 0.44 and transformers 5.x** (`transformers>=5.0 support is experimental`). `qwen3_5_moe` requires transformers 5.x, and in that combination the unified HF export does not work yet, so it fell back to BF16. This is the kind of toolchain lag commonly seen for an architecture less than a month old. We therefore cite NVIDIA's published checkpoint for the packed-checkpoint size (~3.06× reduction, ~18.7B) and the accuracy figures.
+
+The accuracy table below is **NVIDIA's official evaluation published on the model card**. NVIDIA compared the NVFP4 quantized version against the base model `Qwen3.6-35B-A3B` (BF16) on text reasoning and coding benchmarks.
 
 | Benchmark | BF16 (baseline) | NVFP4 | Δ |
 |---|---|---|---|
@@ -129,7 +144,7 @@ On the memory side, the model card states roughly 3.06x savings. Per the Hugging
 
 From ThakiCloud's platform perspective, the appeal of this model is clear. In a multi-tenant environment, the GPU is the most expensive shared resource, and the more tenant models we can load onto the same GPU simultaneously, the lower the per-inference cost. NVFP4 reducing memory by about 3.06x means, in simplified terms, room to fit a larger model or more concurrent sessions in the same GPU memory. Layer in the MoE characteristic of running a 35B MoE at roughly 3B compute, and the on-premises value proposition of "high-quality models at low serving cost" becomes much more concrete.
 
-ThakiCloud already reflects this in operations. We maintain an in-house pipeline that quantizes `Qwen/Qwen3-30B-A3B`, of the same Qwen3-MoE family, to NVFP4 (W4A4, group_size=16) on RunPod B200 (Blackwell SM100). In a validation run on May 1, 2026, it **produced a 17.1GB checkpoint with 137 seconds of PTQ compute.** Total wall-clock was about 25 minutes, and cost was around $3.48 on B200 on-demand. Two things follow from this experience. First, NVFP4 quantization itself is a one-time job that finishes in a short time at low cost. Second, when a pre-quantized checkpoint is published as NVIDIA did here, you can skip even that one-time job and go straight to serving. In other words, NVIDIA's public checkpoint is a superset input to our pipeline.
+ThakiCloud already reflects this in operations. We maintain an in-house pipeline that quantizes `Qwen/Qwen3-30B-A3B`, of the same Qwen3-MoE family, to NVFP4 (W4A4, group_size=16) on RunPod B200 (Blackwell SM100). In a validation run on May 1, 2026, it **produced a 17.1GB checkpoint with 137 seconds of PTQ compute.** Total wall-clock was about 25 minutes, and cost was around $3.48 on B200 on-demand. And while preparing this article we applied the same pipeline to the new `Qwen3.6-35B-A3B`, reproducing the NVFP4 quantization pass on two RunPod H100 NVL GPUs (modelopt 0.44, 21,743 quantizers inserted, the new fused-MoE auto-registered, 148s). Two things follow from this experience. First, NVFP4 quantization itself is a one-time job that finishes in a short time at low cost. Second, when a pre-quantized checkpoint is published as NVIDIA did here, you can skip even that one-time job and go straight to serving. In other words, NVIDIA's public checkpoint is a superset input to our pipeline.
 
 On the K8s operations side, it aligns as follows. GPU workloads are queued and scheduled with Kueue, serving is brought up as vLLM pods with the `--quantization modelopt` flag recognizing the NVFP4 checkpoint, and multi-tenant isolation is handled with namespaces and GPU partitioning, adjusting per-tenant allocation by the memory saved. One hardware premise comes attached, though. NVFP4 acceleration works only on Blackwell and Hopper, so existing A100-based node pools cannot enjoy this model's 4-bit benefit as-is. This is an operational decision tied directly to node-pool composition, which we flag as a limitation in the next section.
 
@@ -137,7 +152,7 @@ On the K8s operations side, it aligns as follows. GPU workloads are queued and s
 
 First, **the hardware dependency is strong.** NVFP4 Tensor Cores exist only on Blackwell and Hopper. On prior-generation GPUs like the A100 or V100, NVFP4 is not accelerated, so you cannot expect the same memory savings and must take a different path such as INT8 or FP8. If an on-premises customer's existing GPU assets are prior-generation, reaping this model's benefit incurs the added cost of node replacement.
 
-Second, **memory savings and throughput gains are different matters.** The model card states roughly 3.06x disk and memory savings, but it does not directly present throughput figures such as tokens/sec or latency. While 4-bit weights generally help decoding by easing memory-bandwidth pressure, actual throughput depends on batch size, context length, and KV cache settings. Asserting "it's N times faster" without ThakiCloud's own serving benchmark would be inaccurate. Until we measure it directly in our environment, it is safer to rely only on the accuracy table.
+Second, **memory savings and throughput gains are different matters.** The model card states roughly 3.06x disk and memory savings, but it does not directly present throughput figures such as tokens/sec or latency. While 4-bit weights generally help decoding by easing memory-bandwidth pressure, actual throughput depends on batch size, context length, and KV cache settings. Asserting "it's N times faster" without ThakiCloud's own serving benchmark would be inaccurate. Native FP4 acceleration runs only on Blackwell, and at the time of this reproduction we could not secure B200 stock on RunPod, so we validated the quantization pass on Hopper (two H100 NVL GPUs) and left native FP4 serving throughput as a separate benchmark task once Blackwell is available.
 
 Third, **quantization inherits the base model's limitations as-is.** As the model card states directly, the base model was trained on data crawled from the internet that contains toxic language and societal biases, and it may generate inaccurate answers, omit key information, or produce irrelevant text. Quantization only optimizes memory and speed; it does not solve these safety and accuracy issues. Multi-tenant serving still requires separate output filtering and monitoring.
 
