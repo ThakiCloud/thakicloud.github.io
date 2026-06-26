@@ -25,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/en/culture/saberr-team-chemistry-da
 
 Research consistently confirms that approximately sixty-five percent of startup failures stem from people problems. Traditional capability and experience evaluations struggle to predict team dynamics and conflict points. Saberr takes an approach that quantifies value alignment and behavioral diversity to proactively reduce risks.
 
+![Saberr data flow: from collecting surveys, behavior, and interactions to hiring, onboarding, and reshaping teams](/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg)
+
 ## Input Data and Feature Engineering
 
 ### Fifteen-Minute Values and Motivation Survey
@@ -70,3 +72,9 @@ Several potential risks require careful management. Self-reporting bias, inheren
 Saberr transforms team chemistry into real-time metrics using brief surveys and conversation metadata. Simple numbers like Pairwise, Resonance, and behavioral matrices connect the entire hiring-onboarding-organizational development process into a single data pipeline.
 
 Organizations that establish initial baselines and implement CoachBot can significantly reduce costs and time consumed by people problems. Furthermore, data-driven objective hiring and team management can establish foundations for sustainable organizational growth.
+
+## References
+
+- [Schwartz theory of basic human values](https://en.wikipedia.org/wiki/Theory_of_basic_human_values) - theoretical basis of the value and motivation survey
+- [Belbin team roles](https://www.belbin.com/about/belbin-team-roles) - basis for the behaviour diversity chart
+- [Big Five personality model](https://en.wikipedia.org/wiki/Big_Five_personality_traits)

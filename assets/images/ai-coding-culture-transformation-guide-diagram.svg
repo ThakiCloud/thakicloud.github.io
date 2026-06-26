@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 410" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="Vibe Coding vs Agentic Coding paradigms">
+  <rect width="1040" height="410" fill="#f8fafc"/>
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">두 가지 AI 협업 패러다임</text>
+  <text x="520" y="64" text-anchor="middle" font-size="13" fill="#64748b">Vibe Coding vs Agentic Coding (arXiv:2505.19443)</text>
+
+  <!-- Vibe Coding column -->
+  <rect x="40" y="92" width="450" height="234" rx="16" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="265" y="124" text-anchor="middle" font-size="17" font-weight="700" fill="#3730a3">Vibe Coding</text>
+  <rect x="64" y="142" width="402" height="50" rx="10" fill="#fff" stroke="#c7d2fe"/>
+  <text x="265" y="164" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3730a3">개발자 = Creative Director</text>
+  <text x="265" y="182" text-anchor="middle" font-size="11" fill="#475569">방향·느낌을 결정</text>
+  <rect x="64" y="200" width="402" height="50" rx="10" fill="#fff" stroke="#c7d2fe"/>
+  <text x="265" y="222" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3730a3">AI = 고속 실행자</text>
+  <text x="265" y="240" text-anchor="middle" font-size="11" fill="#475569">방향을 빠르게 코드로 구현</text>
+  <rect x="64" y="258" width="402" height="50" rx="10" fill="#e0e7ff" stroke="#c7d2fe"/>
+  <text x="265" y="280" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3730a3">적합한 단계</text>
+  <text x="265" y="298" text-anchor="middle" font-size="11" fill="#475569">빠른 프로토타이핑 · 아이디어 탐색 · MVP</text>
+
+  <!-- Agentic Coding column -->
+  <rect x="550" y="92" width="450" height="234" rx="16" fill="#ecfdf5" stroke="#10b981" stroke-width="2.5"/>
+  <text x="775" y="124" text-anchor="middle" font-size="17" font-weight="700" fill="#065f46">Agentic Coding</text>
+  <rect x="574" y="142" width="402" height="50" rx="10" fill="#fff" stroke="#a7f3d0"/>
+  <text x="775" y="164" text-anchor="middle" font-size="12.5" font-weight="600" fill="#065f46">개발자 = Strategic Supervisor</text>
+  <text x="775" y="182" text-anchor="middle" font-size="11" fill="#475569">목표·제약 조건을 설정</text>
+  <rect x="574" y="200" width="402" height="50" rx="10" fill="#fff" stroke="#a7f3d0"/>
+  <text x="775" y="222" text-anchor="middle" font-size="12.5" font-weight="600" fill="#065f46">AI = 자율 에이전트</text>
+  <text x="775" y="240" text-anchor="middle" font-size="11" fill="#475569">구현·테스트·반복 개선을 처리</text>
+  <rect x="574" y="258" width="402" height="50" rx="10" fill="#d1fae5" stroke="#a7f3d0"/>
+  <text x="775" y="280" text-anchor="middle" font-size="12.5" font-weight="600" fill="#065f46">적합한 단계</text>
+  <text x="775" y="298" text-anchor="middle" font-size="11" fill="#475569">반복적이고 규칙이 명확한 작업</text>
+
+  <!-- shared bar -->
+  <rect x="40" y="342" width="960" height="48" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="520" y="372" text-anchor="middle" font-size="13" font-weight="600" fill="#92400e">공통점: 개발자 역할은 사라지지 않고 '코드 타이핑'에서 '품질 판단·방향 제시'로 전환된다</text>
+</svg>

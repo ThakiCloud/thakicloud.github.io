@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 410" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="Moneyball metric shift across engineering, product, and hiring">
+  <rect width="1040" height="410" fill="#f8fafc"/>
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">머니볼 사고: 측정하기 쉬운 지표에서 가치에 연결된 지표로</text>
+  <text x="520" y="64" text-anchor="middle" font-size="13" fill="#64748b">Moneyball thinking — from easy-to-measure to value-linked metrics</text>
+
+  <defs>
+    <marker id="mbk" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/>
+    </marker>
+  </defs>
+
+  <!-- column headers -->
+  <text x="290" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#991b1b">전통적으로 쓰던 지표</text>
+  <text x="760" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">비즈니스에 연결된 지표</text>
+
+  <!-- Row 1: 개발 -->
+  <text x="58" y="150" font-size="14" font-weight="700" fill="#1B4F72">개발</text>
+  <rect x="120" y="116" width="340" height="68" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="290" y="146" text-anchor="middle" font-size="13.5" font-weight="600" fill="#991b1b">커밋 횟수 · 코드 라인 수</text>
+  <text x="290" y="167" text-anchor="middle" font-size="11.5" fill="#b91c1c">측정은 쉽지만 가치 연결이 약함</text>
+  <line x1="468" y1="150" x2="586" y2="150" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#mbk)"/>
+  <rect x="592" y="116" width="356" height="68" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="770" y="146" text-anchor="middle" font-size="13.5" font-weight="600" fill="#166534">배포 사이클 타임 · 변경 실패율 · MTTR</text>
+  <text x="770" y="167" text-anchor="middle" font-size="11" fill="#475569">DORA delivery metrics</text>
+
+  <!-- Row 2: PM -->
+  <text x="58" y="234" font-size="14" font-weight="700" fill="#1B4F72">PM</text>
+  <rect x="120" y="200" width="340" height="68" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="290" y="230" text-anchor="middle" font-size="13.5" font-weight="600" fill="#991b1b">출시한 기능 수</text>
+  <text x="290" y="251" text-anchor="middle" font-size="11.5" fill="#b91c1c">화려하지만 행동 변화는 불확실</text>
+  <line x1="468" y1="234" x2="586" y2="234" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#mbk)"/>
+  <rect x="592" y="200" width="356" height="68" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="770" y="230" text-anchor="middle" font-size="13.5" font-weight="600" fill="#166534">활성화율 · 리텐션</text>
+  <text x="770" y="251" text-anchor="middle" font-size="11" fill="#475569">activation &amp; retention</text>
+
+  <!-- Row 3: 채용 -->
+  <text x="58" y="318" font-size="14" font-weight="700" fill="#1B4F72">채용</text>
+  <rect x="120" y="284" width="340" height="68" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="290" y="314" text-anchor="middle" font-size="13.5" font-weight="600" fill="#991b1b">학벌 · 전 회사 명성</text>
+  <text x="290" y="335" text-anchor="middle" font-size="11.5" fill="#b91c1c">성과 예측력이 생각보다 약함</text>
+  <line x1="468" y1="318" x2="586" y2="318" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#mbk)"/>
+  <rect x="592" y="284" width="356" height="68" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="770" y="314" text-anchor="middle" font-size="13.5" font-weight="600" fill="#166534">실무 과제 결과 · 성장 잠재력</text>
+  <text x="770" y="335" text-anchor="middle" font-size="11" fill="#475569">work-sample &amp; growth signals</text>
+
+  <text x="520" y="388" text-anchor="middle" font-size="12.5" fill="#64748b">핵심: 시장이 과소평가한 '숨은 출루율' 지표를 찾아 자원 대비 최대 성과를 낸다</text>
+</svg>

@@ -63,7 +63,9 @@ This honest approach maximizes AI's capabilities. AI doesn't judge your ignoranc
 
 The learning cycle of AI vibe coding follows this pattern: Discovery leads to Experimentation, which leads to Observation, then Abstraction, and finally Application.
 
-In the Discovery phase, you accidentally encounter interesting code or techniques. During Experimentation, you try using them even without complete understanding. Through Observation, you see what works and what fails. In Abstraction, you generalize successful patterns. Finally, in Application, you adapt and apply these patterns to other problems.
+In the Discovery phase, you accidentally encounter interesting code or techniques. During Experimentation, you try using them even without complete understanding. Through Observation, you see what works and what fails. In Abstraction, you generalize successful patterns. Finally, in Application, you adapt and apply these patterns to other problems. The key is not to hesitate at the Experimentation step - trying things before fully understanding them is the point. Understanding follows during and after experimentation.
+
+![AI vibe coding learning loop: discover, experiment, observe, abstract, apply - then repeat](/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg)
 
 This resembles a scientist's research methodology of forming hypotheses, conducting experiments, and observing results.
 
@@ -74,3 +76,8 @@ Developers in the AI era must become curious hackers. Instead of trying to know 
 Your ignorance isn't a weakness but a possibility. When you use AI as an extension of your brain, the things you don't know become seeds for new discoveries.
 
 Navigate the AI era with the spirit of hacking and reverse engineering. Everything you don't know will soon become your weapon.
+
+## References
+
+- [Andrej Karpathy, "vibe coding" original post (2025-02)](https://x.com/karpathy/status/1886192184808149383) - origin of the term 'vibe coding'
+- [Vibe coding (Wikipedia)](https://en.wikipedia.org/wiki/Vibe_coding)

@@ -6,7 +6,7 @@ seo_description: "اكتشف رحلة يانغ زيلين في ريادة الأ
 date: 2025-08-28
 lang: ar
 permalink: /ar/llmops/yang-zhilin-kimi-founder-interview-insights/
-canonical_url: "https://thakicloud.github.io/ar/llmops/yang-zhilin-kimi-founder-interview-insights/"
+canonical_url: "https://thakicloud.github.io/ar/llmops/yang-zhilin-kimi-founder-interview-insights-ar/"
 categories:
   - llmops
 tags:
@@ -21,6 +21,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 10 دقائق

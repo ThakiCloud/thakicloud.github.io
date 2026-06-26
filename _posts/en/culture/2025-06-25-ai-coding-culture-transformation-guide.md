@@ -27,13 +27,15 @@ canonical_url: "https://thakicloud.github.io/en/culture/ai-coding-culture-transf
 
 "Blindly trusting and deploying AI-generated code is problematic." Have you heard this statement before? As of 2025, it's one of the hottest debates in development teams. However, this debate itself might be a product of outdated thinking.
 
-According to the GitHub Octoverse 2024 report, seventy-three percent of open-source contributors are using AI coding tools, and JetBrains surveys show that seven out of ten developers are utilizing ChatGPT. AI coding has already become an essential skill rather than an option.
+According to the GitHub Octoverse 2024 report, seventy-three percent of open source survey respondents are using AI coding tools, and in JetBrains' 2024 developer survey, 69% of respondents had tried ChatGPT and 49% use it regularly. AI coding has already become an essential skill rather than an option.
 
-The issue isn't whether to use AI or not, but rather how to use it effectively. Based on the Vibe Coding and Agentic Coding paradigms presented in recent Cornell University research, let's explore how to build a development culture suited for this new era.
+The issue isn't whether to use AI or not, but rather how to use it effectively. The term "vibe coding" was first coined by Andrej Karpathy in February 2025; an arXiv study (2505.19443) later systematically contrasted Vibe Coding and Agentic Coding. The two describe distinct axes of how AI is used, and they offer a useful lens for building a development culture suited for this new era.
 
 ### Cultural Implications of Two Paradigms
 
 Vibe Coding positions developers as Creative Directors with AI serving as high-speed copilots. Agentic Coding establishes developers as Strategic Supervisors with AI functioning as autonomous colleagues. This change represents not merely a tool transition but a complete paradigm shift in development culture.
+
+![Vibe Coding vs Agentic Coding: developer and AI roles and where each fits](/assets/images/ai-coding-culture-transformation-guide-diagram.svg)
 
 ## Current Development Culture Dilemma
 
@@ -43,7 +45,7 @@ Traditional AI code rejection scenarios typically unfold as follows: when a deve
 
 ### What Real Data Reveals
 
-Current statistics paint a different picture than common assumptions. GitHub Octoverse 2024 shows seventy-three percent AI coding tool usage, JetBrains Developer Survey 2024 indicates seventy percent regular ChatGPT usage among developers, while quality degradation from AI tools remains unverified according to GitHub quality analysis. Multiple research studies demonstrate average development speed improvements of thirty-five to fifty percent.
+Current statistics paint a different picture than common assumptions. GitHub Octoverse 2024 shows 73% of open source survey respondents use AI coding tools, JetBrains Developer Survey 2024 indicates 69% of respondents had tried ChatGPT and 49% use it regularly, while quality degradation from AI tools remains unverified according to GitHub quality analysis. Multiple research studies demonstrate average development speed improvements of thirty-five to fifty percent.
 
 The key insight is that AI usage itself isn't the problem, but rather the usage methods and verification processes are crucial.
 
@@ -241,4 +243,11 @@ Hybrid workflows for situational optimization should use Vibe Coding for rapid p
 
 Start small experiments in your team today by creating one ChatGPT prompt template, experiencing Cursor AI context setting functions, scheduling one-hour team AI collaboration sessions, and sharing success cases in Slack channels.
 
-New culture begins not with grand declarations but with small practices. Based on the scientific foundation of Vibe Coding and Agentic Coding presented by Cornell University, become pioneers of the AI coding era and work together to create more creative, productive, and enjoyable development cultures.
+New culture begins not with grand declarations but with small practices. Grounded in the paradigms of Vibe Coding and Agentic Coding - first articulated by Andrej Karpathy and systematically compared in arXiv:2505.19443 - become pioneers of the AI coding era and work together to create more creative, productive, and enjoyable development cultures.
+
+## References
+
+- [GitHub Octoverse 2024](https://github.blog/news-insights/octoverse/octoverse-2024/) - 73% of open source survey respondents use AI coding tools
+- [JetBrains State of Developer Ecosystem 2024](https://www.jetbrains.com/lp/devecosystem-2024/) - AI tool adoption among developers
+- [Vibe Coding vs. Agentic Coding (arXiv:2505.19443)](https://arxiv.org/abs/2505.19443) - systematic comparison of the two paradigms
+- [Andrej Karpathy, original "vibe coding" post (2025-02)](https://x.com/karpathy/status/1886192184808149383)

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 400" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="NVIDIA Granary data pipeline from source corpora to NeMo">
+  <rect width="1040" height="400" fill="#f8fafc"/>
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">NVIDIA Granary 데이터 파이프라인</text>
+  <text x="520" y="64" text-anchor="middle" font-size="13" fill="#64748b">Source corpora → quality control → Granary → NeMo (arXiv:2505.13404)</text>
+
+  <defs>
+    <marker id="gnk" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 1: corpora -->
+  <text x="140" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1B4F72">① 4개 음성 코퍼스</text>
+  <rect x="32" y="120" width="216" height="218" rx="14" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="48" y="134" width="184" height="44" rx="9" fill="#fff" stroke="#bae6fd"/>
+  <text x="140" y="161" text-anchor="middle" font-size="12.5" font-weight="600" fill="#075985">YODAS (YouTube)</text>
+  <rect x="48" y="186" width="184" height="44" rx="9" fill="#fff" stroke="#bae6fd"/>
+  <text x="140" y="213" text-anchor="middle" font-size="12.5" font-weight="600" fill="#075985">VoxPopuli (의회)</text>
+  <rect x="48" y="238" width="184" height="44" rx="9" fill="#fff" stroke="#bae6fd"/>
+  <text x="140" y="265" text-anchor="middle" font-size="12.5" font-weight="600" fill="#075985">YouTube-Commons</text>
+  <rect x="48" y="290" width="184" height="44" rx="9" fill="#fff" stroke="#bae6fd"/>
+  <text x="140" y="317" text-anchor="middle" font-size="12.5" font-weight="600" fill="#075985">LibriLight (낭독)</text>
+
+  <line x1="252" y1="229" x2="296" y2="229" stroke="#475569" stroke-width="2.5" marker-end="url(#gnk)"/>
+
+  <!-- Stage 2: QC -->
+  <text x="430" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1B4F72">② 품질 관리</text>
+  <rect x="302" y="120" width="256" height="218" rx="14" fill="#ede9fe" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="320" y="138" width="220" height="48" rx="9" fill="#fff" stroke="#ddd6fe"/>
+  <text x="430" y="160" text-anchor="middle" font-size="12" font-weight="600" fill="#5b21b6">2단계 Whisper 추론 (ASR)</text>
+  <text x="430" y="177" text-anchor="middle" font-size="10.5" fill="#475569">언어 식별 검증</text>
+  <rect x="320" y="194" width="220" height="48" rx="9" fill="#fff" stroke="#ddd6fe"/>
+  <text x="430" y="216" text-anchor="middle" font-size="12" font-weight="600" fill="#5b21b6">EuroLLM-9B 번역 (AST)</text>
+  <text x="430" y="233" text-anchor="middle" font-size="10.5" fill="#475569">교차 언어 검증</text>
+  <rect x="320" y="250" width="220" height="48" rx="9" fill="#fff" stroke="#ddd6fe"/>
+  <text x="430" y="272" text-anchor="middle" font-size="12" font-weight="600" fill="#5b21b6">환각 탐지 · 문자율 필터링</text>
+  <text x="430" y="289" text-anchor="middle" font-size="10.5" fill="#475569">hallucination filtering</text>
+  <text x="430" y="322" text-anchor="middle" font-size="10.5" fill="#6d28d9">NeMo-speech-data-processor 파이프라인</text>
+
+  <line x1="562" y1="229" x2="606" y2="229" stroke="#475569" stroke-width="2.5" marker-end="url(#gnk)"/>
+
+  <!-- Stage 3: Granary + NeMo -->
+  <text x="810" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1B4F72">③ Granary &amp; 활용</text>
+  <rect x="612" y="120" width="396" height="218" rx="14" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <rect x="632" y="138" width="356" height="62" rx="10" fill="#fff" stroke="#86efac"/>
+  <text x="810" y="164" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">Granary 데이터셋 · 25개 유럽 언어</text>
+  <text x="810" y="186" text-anchor="middle" font-size="11" fill="#475569">ASR 64.3만h · AST 35.1만h · CC-BY-4.0</text>
+  <rect x="632" y="210" width="356" height="50" rx="10" fill="#fff" stroke="#86efac"/>
+  <text x="810" y="232" text-anchor="middle" font-size="12.5" font-weight="600" fill="#166534">NeMo 매니페스트 (즉시 학습)</text>
+  <text x="810" y="250" text-anchor="middle" font-size="10.5" fill="#475569">WebDataset 변환 · 대규모 분산 학습</text>
+  <rect x="632" y="270" width="356" height="50" rx="10" fill="#fff" stroke="#86efac"/>
+  <text x="810" y="292" text-anchor="middle" font-size="12.5" font-weight="600" fill="#166534">다언어 ASR · 실시간 음성 번역</text>
+  <text x="810" y="310" text-anchor="middle" font-size="10.5" fill="#475569">저자원 언어 전이 학습 · 도메인 적응</text>
+
+  <text x="520" y="380" text-anchor="middle" font-size="12.5" fill="#64748b">NVIDIA · 카네기멜론(CMU) · Fondazione Bruno Kessler(FBK) 협력 · 허깅페이스 공개</text>
+</svg>

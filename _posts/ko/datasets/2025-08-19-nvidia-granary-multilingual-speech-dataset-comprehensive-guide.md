@@ -23,7 +23,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/ko/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 reading_time: true
 ---
 
@@ -34,6 +34,8 @@ reading_time: true
 음성 AI 기술이 급속도로 발전하면서, 다양한 언어를 지원하는 고품질 음성 데이터셋의 중요성이 더욱 커지고 있습니다. 특히 글로벌 서비스를 위해서는 단일 언어가 아닌 다언어 음성 처리 능력이 필수적입니다. 이런 상황에서 NVIDIA가 공개한 **Granary 데이터셋**은 음성 AI 분야에 새로운 이정표를 제시합니다.
 
 Granary는 25개 유럽 언어에 걸쳐 총 64만 시간에 달하는 방대한 음성 데이터를 제공하는 대규모 다언어 데이터셋입니다. 단순히 음성 인식(ASR)뿐만 아니라 음성 번역(AST) 작업까지 지원하여, 연구자와 개발자들이 차세대 다언어 음성 AI 모델을 구축할 수 있는 풍부한 토대를 마련했습니다.
+
+![25개 유럽 언어 음성 데이터가 하나의 다언어 음성 AI 토대로 모이는 개념도](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.png)
 
 ## NVIDIA Granary 데이터셋 개요
 
@@ -76,6 +78,8 @@ Granary의 강력함은 서로 다른 특성을 가진 4개의 주요 음성 코
 각 코퍼스마다 엄격한 품질 관리 과정을 거쳤습니다. 음성 인식의 경우, 두 단계의 Whisper 모델을 사용한 추론 과정과 언어 식별 검증을 통해 정확성을 보장했습니다. 또한 음성 분할, 잡음 제거, 메타데이터 일관성 검사 등 다양한 전처리 과정을 통해 최고 품질의 데이터만을 선별했습니다.
 
 음성 번역 데이터의 경우, EuroLLM-9B 모델을 사용한 고품질 번역과 교차 언어 검증을 통해 번역 품질을 보장했습니다. 환각(hallucination) 탐지와 문자율 필터링 등의 추가적인 품질 관리 과정도 적용되었습니다.
+
+![NVIDIA Granary 데이터 파이프라인: 4개 코퍼스에서 품질 관리를 거쳐 Granary와 NeMo로](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg)
 
 ## 데이터 구조와 접근 방법
 
@@ -151,7 +155,7 @@ Granary의 4개 코퍼스는 각각 다른 특성을 가지고 있습니다. Vox
 
 ### 개방적인 라이선스 정책
 
-Granary 데이터셋은 **CC-BY-3.0** 라이선스 하에 제공됩니다. 이는 매우 개방적인 라이선스로, 상업적 이용을 포함한 거의 모든 용도로 사용할 수 있습니다. 유일한 요구사항은 적절한 출처 표시뿐입니다.
+Granary 데이터셋은 **CC-BY-4.0** 라이선스 하에 제공됩니다. 이는 매우 개방적인 라이선스로, 상업적 이용을 포함한 거의 모든 용도로 사용할 수 있습니다. 유일한 요구사항은 적절한 출처 표시뿐입니다.
 
 이러한 개방적인 라이선스 정책은 학술 연구뿐만 아니라 산업계에서의 활용도 장려합니다. 스타트업부터 대기업까지, 누구나 이 데이터셋을 활용해서 혁신적인 음성 AI 제품을 개발할 수 있습니다.
 
@@ -212,3 +216,10 @@ NVIDIA Granary 데이터셋은 단순히 큰 규모의 데이터셋을 넘어서
 특히 체계적인 품질 관리, NeMo 툴킷과의 완벽한 통합, 개방적인 라이선스 정책 등은 이 데이터셋을 실제로 활용 가능한 실용적인 자원으로 만들어줍니다. 산학연 협력을 통한 개발 과정과 오픈 사이언스 정신의 구현은 앞으로의 AI 연구 발전 방향에 대한 좋은 지침을 제공합니다.
 
 앞으로 Granary를 활용한 다양한 연구 성과들이 나타날 것이며, 이는 다시 더 발전된 다언어 음성 AI 기술로 이어질 것입니다. 언어의 장벽을 넘나드는 진정한 글로벌 커뮤니케이션 시대의 기술적 기반이 바로 여기서 시작되고 있습니다.
+
+## 참고 자료
+
+- [nvidia/Granary (Hugging Face)](https://huggingface.co/datasets/nvidia/Granary) - 데이터셋 본체 (CC-BY-4.0)
+- [Granary 논문 (arXiv:2505.13404, Interspeech 2025)](https://arxiv.org/abs/2505.13404)
+- [NVIDIA NeMo 툴킷](https://github.com/NVIDIA/NeMo)
+- 구성 코퍼스: [YODAS](https://arxiv.org/abs/2406.00899) · [VoxPopuli](https://arxiv.org/abs/2101.00390) · [LibriLight](https://arxiv.org/abs/1912.07875)

@@ -36,6 +36,8 @@ As speech AI technology advances rapidly, high-quality speech datasets that supp
 
 Granary is a large-scale multilingual dataset providing a total of 640,000 hours of audio across 25 European languages. It supports not only automatic speech recognition (ASR) but also automatic speech translation (AST), giving researchers and developers a rich foundation for building next-generation multilingual speech AI models.
 
+![Conceptual image of speech data in 25 European languages converging into a single multilingual speech-AI foundation](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.png)
+
 ## Overview of the NVIDIA Granary Dataset
 
 ### Scale and Breadth
@@ -77,6 +79,8 @@ An English-only dataset providing **23,000 hours** of English speech. Based on a
 Each corpus went through a rigorous quality control process. For speech recognition, accuracy was guaranteed through a two-stage Whisper model inference pipeline and language identification verification. Additional preprocessing steps such as speech segmentation, noise reduction, and metadata consistency checks were applied to select only the highest-quality data.
 
 For speech translation data, high-quality translations were produced using the EuroLLM-9B model and verified through cross-lingual validation. Further quality control measures including hallucination detection and character-rate filtering were also applied.
+
+![NVIDIA Granary data pipeline: from four corpora through quality control to Granary and NeMo](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg)
 
 ## Data Structure and Access
 
@@ -152,7 +156,7 @@ Researchers can analyze how a model trained in one domain performs in another, o
 
 ### Open License Policy
 
-The Granary dataset is provided under the **CC-BY-3.0** license, which is a very open license permitting almost all uses including commercial applications. The only requirement is appropriate attribution.
+The Granary dataset is provided under the **CC-BY-4.0** license, which is a very open license permitting almost all uses including commercial applications. The only requirement is appropriate attribution.
 
 This open licensing encourages use not only in academic research but also in industry. Anyone from startups to large enterprises can use this dataset to develop speech AI products.
 
@@ -213,3 +217,10 @@ The NVIDIA Granary dataset goes beyond simply being a large dataset; it is a res
 Systematic quality control, seamless integration with the NeMo toolkit, and an open license policy make this dataset a genuinely practical resource. The development process built on industry-academia collaboration and the embodiment of the open science principle provide valuable guidance for the direction of AI research going forward.
 
 A variety of research outcomes leveraging Granary will emerge in the coming years, leading in turn to further advances in multilingual speech AI technology. The technical foundation for an era of truly global communication that transcends language barriers is being built here.
+
+## References
+
+- [nvidia/Granary (Hugging Face)](https://huggingface.co/datasets/nvidia/Granary) - Dataset (CC-BY-4.0)
+- [Granary paper (arXiv:2505.13404, Interspeech 2025)](https://arxiv.org/abs/2505.13404)
+- [NVIDIA NeMo Toolkit](https://github.com/NVIDIA/NeMo)
+- Component corpora: [YODAS](https://arxiv.org/abs/2406.00899) · [VoxPopuli](https://arxiv.org/abs/2101.00390) · [LibriLight](https://arxiv.org/abs/1912.07875)

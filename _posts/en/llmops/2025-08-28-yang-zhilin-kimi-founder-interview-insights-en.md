@@ -6,7 +6,7 @@ seo_description: "Discover Yang Zhilin's entrepreneurial journey, his vision for
 date: 2025-08-28
 lang: en
 permalink: /en/llmops/yang-zhilin-kimi-founder-interview-insights/
-canonical_url: "https://thakicloud.github.io/en/llmops/yang-zhilin-kimi-founder-interview-insights/"
+canonical_url: "https://thakicloud.github.io/en/llmops/yang-zhilin-kimi-founder-interview-insights-en/"
 categories:
   - llmops
 tags:
@@ -21,6 +21,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

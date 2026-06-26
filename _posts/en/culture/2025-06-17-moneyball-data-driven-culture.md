@@ -24,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/en/culture/moneyball-data-driven-cu
 
 The Oakland Athletics, operating with a limited budget, revolutionized baseball by discovering and utilizing hidden metrics like on-base percentage instead of relying on intuition. The essence lies in redefining true performance through data and strategically combining undervalued resources to achieve maximum results relative to available resources.
 
+![Moneyball thinking: shifting from traditional metrics to value-linked metrics across engineering, product, and hiring](/assets/images/moneyball-data-driven-culture-diagram.svg)
+
 ## Implications for Developers
 
 Traditional practices often focus on superficial metrics like lines of code written, while Moneyball thinking emphasizes metrics that directly explain business impact and stability. For development teams, this means tracking deployment cycle time, mean time to recovery, and customer value improvement tickets rather than vanity metrics.
@@ -91,3 +93,8 @@ Applying Moneyball thinking to organizational culture yields several core princi
 **Connecting All Processes Through Data**: By connecting data across the entire process from hiring through onboarding to performance creation and continuously optimizing, even small startups can secure competitive advantages against large corporations.
 
 By applying Moneyball thinking this way, all areas of development, product management, and hiring can achieve sustainable growth through the principle of "data over money, verification over intuition."
+
+## References
+
+- [Moneyball: The Art of Winning an Unfair Game (Michael Lewis)](https://en.wikipedia.org/wiki/Moneyball:_The_Art_of_Winning_an_Unfair_Game) - 2002 Oakland Athletics and on-base percentage
+- [DORA Software Delivery Metrics](https://dora.dev/guides/dora-metrics/) - deployment frequency, lead time, change failure rate, time to restore

@@ -6,7 +6,7 @@ seo_description: "양지린의 창업 여정, Kimi Chat에 대한 비전, 그리
 date: 2025-08-28
 lang: ko
 permalink: /ko/llmops/yang-zhilin-kimi-founder-interview-insights/
-canonical_url: "https://thakicloud.github.io/ko/llmops/yang-zhilin-kimi-founder-interview-insights/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/yang-zhilin-kimi-founder-interview-insights-ko/"
 categories:
   - llmops
 tags:
@@ -21,6 +21,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 10분
