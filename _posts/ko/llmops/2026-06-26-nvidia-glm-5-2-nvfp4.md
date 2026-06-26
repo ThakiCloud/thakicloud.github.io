@@ -36,6 +36,9 @@ reading_time: true
 
 ## 개요
 
+![753B 파라미터를 16비트로 올리면 1.5TB에 달하는 GPU 메모리 벽](/assets/images/nvidia-glm-5-2-nvfp4-slide-02.png)
+*프런티어급 모델을 자체 인프라에 서빙할 때 가장 먼저 부딪히는 벽은 GPU 메모리입니다.*
+
 `nvidia/GLM-5.2-NVFP4`는 ZAI의 `zai-org/GLM-5.2`를 NVIDIA Model Optimizer(ModelOpt)로 양자화한 버전입니다. 베이스 모델은 추론과 코딩을 위한 Mixture-of-Experts(MoE) 구조로, 총 753B 파라미터 중 토큰당 40B만 활성화됩니다. 네트워크 아키텍처는 `GlmMoeDsaForCausalLM`이며, IndexShare 인덱서를 사용하는 희소 어텐션(sparse attention)으로 최대 1M 토큰의 긴 컨텍스트를 지원합니다. 라이선스는 베이스 모델과 동일한 MIT로, 상업·비상업 모두 사용 가능합니다.
 
 핵심을 한 문장으로 요약하면 이렇습니다. **MoE는 연산량을, 선택적 NVFP4 양자화는 메모리를 줄이되, 정확도에 민감한 부분은 일부러 양자화에서 제외합니다.** MoE 구조 덕분에 753B 모델이면서도 토큰당 계산은 40B 활성 전문가에 한정됩니다. 여기에 NVFP4가 더해져 모델의 메모리 무게 대부분을 차지하는 라우팅 전문가의 가중치를 16비트에서 4비트로 낮춥니다. 그러면서도 공유 전문가는 양자화하지 않고 BF16으로 남겨, 정확도 손실을 최소화하는 방향을 택했습니다.
@@ -43,6 +46,9 @@ reading_time: true
 타이밍도 의미가 있습니다. 강한 오픈웨이트 모델이 MIT로 풀리는 흐름과, NVIDIA가 그 모델을 자사 하드웨어에 맞춰 곧장 서빙 가능한 형태로 재배포하는 흐름이 맞물립니다. 모델 주권을 고민하는 조직에게 이것은 추상적 정책 이슈가 아니라 "어떤 GPU에 무엇을 어떻게 올릴 것인가"라는 당장의 아키텍처 선택입니다.
 
 ## 이 모델은 무엇인가
+
+![지식 용량은 753B, 토큰당 연산은 40B 활성 전문가로 분리하는 MoE 희소성](/assets/images/nvidia-glm-5-2-nvfp4-slide-03.png)
+*MoE 희소성과 어텐션 희소성이 결합해 지식 용량과 연산량을 분리합니다.*
 
 GLM-5.2는 ZAI가 공개한 MoE 추론·코딩 모델입니다. 일반적인 밀집(dense) 모델과 달리, 트랜스포머 블록 안에 여러 개의 전문가(expert) 네트워크를 두고 입력 토큰마다 일부만 활성화합니다. GLM-5.2는 총 753B 파라미터를 가지지만 토큰 하나를 생성할 때 실제로 계산에 참여하는 것은 40B 활성 파라미터뿐입니다. 즉 모델의 "지식 용량"은 753B급이지만, 추론 시 연산 비용은 40B 밀집 모델에 가깝습니다.
 
@@ -85,6 +91,9 @@ NVIDIA가 모델카드에 공개한 정확도 비교는 아래와 같습니다. 
 
 ## 배포: vLLM과 SGLang
 
+![Runtime vLLM/SGLang, 8-way 텐서 병렬, Blackwell 8-GPU 노드로 구성되는 배포 스택](/assets/images/nvidia-glm-5-2-nvfp4-slide-06.png)
+*런타임·텐서 병렬·하드웨어 요구를 한 화면에 정리한 배포 스택입니다.*
+
 이 체크포인트는 SGLang과 vLLM 두 런타임을 공식 지원하며, 하드웨어는 NVIDIA Blackwell, 운영체제는 Linux를 요구합니다. NVFP4 텐서 코어가 Blackwell 세대에만 존재하기 때문에, 이전 세대 GPU에서는 이 4비트 경로를 그대로 활용할 수 없다는 점이 중요한 제약입니다. 모델카드가 제시하는 SGLang 서빙 명령은 다음과 같습니다.
 
 ```sh
@@ -105,6 +114,9 @@ python3 -m sglang.launch_server \
 메모리 측면을 거칠게 따져보면, 753B를 BF16으로 올릴 경우 약 1.5TB가 필요합니다[추정]. 라우팅 전문가가 파라미터 대부분을 차지하고 이를 4비트로 줄이므로, 실제 가중치 메모리는 대략 3분의 1 수준으로 내려가 8-way 텐서 병렬 단일 노드에 적재할 수 있는 범위로 들어옵니다(커뮤니티 NVFP4 미러 배포본은 약 1.37TB→459GB, 약 3배 수준으로 보고합니다 [추정]). 모델카드가 양자화 전후의 정확한 GB 수치를 명시하지는 않으므로 이 메모리 값에는 `[추정]` 표시를 남깁니다. 분명한 사실은 `--tensor-parallel-size 8`이라는 명령 자체가 "Blackwell 8장이면 1M 컨텍스트의 753B 추론 모델을 서빙할 수 있다"는 것을 가리킨다는 점입니다.
 
 ## ThakiCloud K8s AI/ML SaaS 플랫폼 적용 및 시사점
+
+![멀티테넌트 SaaS 플랫폼에서의 전략적 가치: 데이터 주권, 엔지니어링 오버헤드 소거, 도입 표준](/assets/images/nvidia-glm-5-2-nvfp4-slide-07.png)
+*멀티테넌트 SaaS 운영 관점에서 이 체크포인트가 갖는 세 가지 전략적 가치입니다.*
 
 ThakiCloud는 K8s 위에서 Kueue로 GPU를 스케줄링하고 vLLM으로 모델을 서빙하는 멀티테넌트 플랫폼을 운영합니다. 이런 환경에서 `nvidia/GLM-5.2-NVFP4` 같은 사전 양자화 프런티어 체크포인트는 세 가지 측면에서 의미가 있습니다.
 
@@ -131,4 +143,4 @@ ThakiCloud는 K8s 위에서 Kueue로 GPU를 스케줄링하고 vLLM으로 모델
 - [nvidia/GLM-5.2-NVFP4 · Hugging Face](https://huggingface.co/nvidia/GLM-5.2-NVFP4)
 - [베이스 모델 GLM-5.2 (ZAI) · Hugging Face](https://huggingface.co/zai-org/GLM-5.2)
 - [NVIDIA Model Optimizer · GitHub](https://github.com/NVIDIA/Model-Optimizer)
-- [Inference-Optimized Checkpoints with Model Optimizer (컬렉션) · Hugging Face](https://huggingface.co/collections/nvidia/inference-optimized-checkpoints-with-model-optimizer)
+- [Introducing NVFP4 for Efficient and Accurate Low-Precision Inference · NVIDIA Technical Blog](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
