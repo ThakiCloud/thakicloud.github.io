@@ -46,6 +46,8 @@ For Llama-3.1-70B: BF16 is roughly 140 GB, FP8 is roughly 70 GB, and NVFP4 is ro
 
 NVFP4 is Blackwell-only. FP8 remains the right choice for H100 and A100 environments.
 
+![Llama-3.1-70B memory footprint by precision and per-node-pool quantization routing in Kueue](/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg)
+
 ## Framework Support Status (as of June 2026)
 
 **TensorRT-LLM**: The most mature NVFP4 support. v0.17 and later provide native NVFP4 quantization for B200 and other Blackwell GPUs. Recommended for throughput-first production environments.
@@ -118,3 +120,11 @@ serving:
 On a 100-GPU cluster, if using NVFP4 instead of FP8 allows processing twice the context on the same GPU, or reduces the required GPU count by half, annual savings at $3 per GPU-hour run into the hundreds of thousands of dollars. Actual savings depend on model size, context length, and batch configuration.
 
 If you are starting to get access to Blackwell hardware, there is no reason to delay evaluating NVFP4. TensorRT-LLM v0.17 and later provide a sufficiently mature path to adoption.
+
+## References
+
+- [Introducing NVFP4 for Efficient and Accurate Low-Precision Inference (NVIDIA Technical Blog)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
+- [NVIDIA TensorRT Model Optimizer (ModelOpt, GitHub)](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
+- [TensorRT-LLM - Quantization docs](https://nvidia.github.io/TensorRT-LLM/latest/features/quantization.html)
+- [vLLM official documentation](https://docs.vllm.ai/)
+- [Kueue - Kubernetes job queueing](https://kueue.sigs.k8s.io/)

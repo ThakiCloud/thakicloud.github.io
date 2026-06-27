@@ -28,6 +28,8 @@ In June 2026, an X article titled "40 Claude Opus 4.8 Workflows That Make Money 
 
 This post separates two things. First, it distinguishes what is marketing and what is real in the "earn money while you sleep" claim. Then it examines the real part - the infrastructure demand created by long-running unattended agent fan-out. ThakiCloud operates a Kubernetes-based AI/ML SaaS platform with GPU workload serving as a core product, so we are more interested in the billing structure of the inference workloads running underneath the viral headline than in the headline itself. All factual claims here are limited to what was confirmed from publicly available article metadata; unverified revenue claims have not been reproduced.
 
+![Conceptual view of unattended long-running agent fan-out generating concurrent inference load absorbed by ThakiCloud](/assets/images/opus-4-8-overnight-agent-workflows-hero.png)
+
 ## What the Overnight Workflow Actually Is: Hype vs. Reality
 
 The original article was written by @eng_khairallah1 and was amplified by a retweet. The body wrapped a t.co shortened link around a single X article. The "making money" part of the title is not something we can verify. No objective evidence was presented for how much anyone actually earned, and such figures are inherently non-reproducible. That framing is accurately classified as marketing.
@@ -50,6 +52,8 @@ The skeleton of a dynamic workflow is straightforward. A single orchestrator rec
         v
 [ Collect ] --> [ Verification Gate ] --> [ Synthesize ] --> 1 clean result
 ```
+
+![Dynamic workflow diagram: orchestrator fan-out closed by an adversarial verification gate](/assets/images/opus-4-8-overnight-agent-workflows-diagram.svg)
 
 A common misconception here: parallelism is not unconditionally good. It only pays off when the branches are truly independent. If a downstream step must see all upstream results before it can proceed, that is a barrier, and a barrier forces everyone to wait for the slowest branch. A well-designed workflow minimizes barriers and lets each item flow through the pipeline at its own pace. This is the same principle ThakiCloud applies repeatedly in skill and pipeline design: constrain free-form composition to a validated skeleton to lift average quality.
 
@@ -88,4 +92,12 @@ Third, the narrative of "earning money while you sleep" distorts expectations. W
 ## Sources
 
 - @eng_khairallah1, "40 Claude Opus 4.8 Workflows That Make Money While You Sleep" (X Article, 2026-06)
-- Original retweet: x.com/hjguyhan/status/2069026741155442835
+- Original retweet: [x.com/hjguyhan/status/2069026741155442835](https://x.com/hjguyhan/status/2069026741155442835)
+
+### Technical References
+
+- [Building Effective Agents (Anthropic)](https://www.anthropic.com/news/building-effective-agents)
+- [How We Built Our Multi-Agent Research System (Anthropic)](https://www.anthropic.com/engineering/built-multi-agent-research-system)
+- [Building Agents with the Claude Agent SDK (Anthropic)](https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk)
+- [Kueue - Kubernetes job queueing](https://kueue.sigs.k8s.io/)
+- [vLLM official documentation](https://docs.vllm.ai/)

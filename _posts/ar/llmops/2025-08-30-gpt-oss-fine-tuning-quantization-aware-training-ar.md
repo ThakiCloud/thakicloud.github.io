@@ -22,6 +22,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

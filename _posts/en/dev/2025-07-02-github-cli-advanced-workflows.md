@@ -26,6 +26,8 @@ published: true
 
 This is the final installment of the **macOS GitHub CLI Complete Automation Series**. We will integrate all the systems built so far and create a complete workflow ready for immediate production use. This part covers CI/CD integration, team onboarding automation, and performance optimization.
 
+![Conceptual view of zshrc loading automation modules into a unified gh dispatcher that drives GitHub](/assets/images/github-cli-advanced-workflows-hero.png)
+
 ## Integrated System Architecture
 
 ### 1. Master Control System
@@ -731,6 +733,8 @@ EOF
 chmod +x ~/scripts/github-cli/utils/deployment-checklist.sh
 ```
 
+![GitHub CLI integrated automation system architecture: zshrc load to modules to unified gh dispatcher to GitHub](/assets/images/github-cli-advanced-workflows-diagram.svg)
+
 ## Series Complete
 
 Congratulations! The **GitHub CLI Complete Automation Series** is now finished.
@@ -781,3 +785,10 @@ You have now fully built an **expert-level GitHub automation system**!
 - [Part 3: Project Management + Work/Personal Project Separation](github-cli-project-management-automation)
 - [Part 4: Complete Wiki Management Automation](github-cli-wiki-automation-guide)
 - **Part 5: Advanced Workflows and Real-World Application** (this post - final part!)
+
+## References
+
+- [GitHub CLI Manual (cli.github.com)](https://cli.github.com/manual/)
+- [cli/cli - GitHub CLI repository](https://github.com/cli/cli)
+- [GitHub Actions documentation](https://docs.github.com/en/actions)
+- [GitHub Projects documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects)

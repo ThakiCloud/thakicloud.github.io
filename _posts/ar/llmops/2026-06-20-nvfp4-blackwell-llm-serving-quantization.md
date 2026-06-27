@@ -46,6 +46,8 @@ lang: ar
 
 NVFP4 حصري لـ Blackwell، أما H100/A100 فلا تزال FP8 الخيار الأمثل لها.
 
+![مخطط بصمة ذاكرة Llama-3.1-70B حسب الدقة وتوجيه التكميم لكل تجمّع عُقد في Kueue](/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg)
+
 ## حالة دعم أطر العمل (يونيو 2026)
 
 **TensorRT-LLM**: الدعم الأكثر نضجاً لـ NVFP4 على Blackwell. الإصدار 0.17 فأحدث يدعم NVFP4 أصلياً على B200 وغيرها من GPU Blackwell. موصى به لبيئات الإنتاج ذات الأولوية القصوى للإنتاجية.
@@ -118,3 +120,11 @@ serving:
 في كتلة 100 GPU، إن أتاح استبدال FP8 بـ NVFP4 مضاعفة السياق المعالَج أو خفض عدد GPU إلى النصف، يبلغ التوفير السنوي عشرات الآلاف من الدولارات بسعر 3 دولارات لكل GPU في الساعة. الوفورات الفعلية تتوقف على حجم النموذج وطول السياق وهيكل الدفعة.
 
 إن بدأ الوصول إلى أجهزة Blackwell، لا يوجد مبرر لتأجيل تقييم الانتقال إلى NVFP4. مسار التطبيق عبر TensorRT-LLM الإصدار 0.17 فأعلى ناضج بما يكفي للإنتاج.
+
+## المصادر
+
+- [Introducing NVFP4 for Efficient and Accurate Low-Precision Inference (NVIDIA Technical Blog)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
+- [NVIDIA TensorRT Model Optimizer (ModelOpt, GitHub)](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
+- [TensorRT-LLM - وثائق التكميم](https://nvidia.github.io/TensorRT-LLM/latest/features/quantization.html)
+- [وثائق vLLM الرسمية](https://docs.vllm.ai/)
+- [Kueue - طوابير مهام Kubernetes](https://kueue.sigs.k8s.io/)

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 430" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="RAGHub taxonomy mapped onto the RAG pipeline">
+  <rect width="1040" height="430" fill="#f8fafc"/>
+  <text x="520" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">RAGHub 프레임워크 분류와 RAG 파이프라인</text>
+  <text x="520" y="62" text-anchor="middle" font-size="13" fill="#64748b">커뮤니티 기반 디렉토리 — 신흥 프레임워크·엔진·평가 도구 카탈로그</text>
+
+  <defs>
+    <marker id="rh" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- pipeline row -->
+  <text x="520" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">RAG 파이프라인 흐름</text>
+
+  <rect x="60" y="116" width="180" height="56" rx="10" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <text x="150" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="#075985">데이터 준비</text>
+  <text x="150" y="159" text-anchor="middle" font-size="11" fill="#0c4a6e">청킹 · 임베딩 · 인덱싱</text>
+
+  <rect x="290" y="116" width="180" height="56" rx="10" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+  <text x="380" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1e40af">검색 (Retrieval)</text>
+  <text x="380" y="159" text-anchor="middle" font-size="11" fill="#1e3a8a">벡터 DB · 맥락적 검색</text>
+
+  <rect x="520" y="116" width="180" height="56" rx="10" fill="#ede9fe" stroke="#a78bfa" stroke-width="2"/>
+  <text x="610" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5b21b6">생성 (Generation)</text>
+  <text x="610" y="159" text-anchor="middle" font-size="11" fill="#4c1d95">LLM 종합 응답</text>
+
+  <rect x="750" y="116" width="180" height="56" rx="10" fill="#dcfce7" stroke="#34d399" stroke-width="2"/>
+  <text x="840" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="#047857">평가 (Evaluation)</text>
+  <text x="840" y="159" text-anchor="middle" font-size="11" fill="#065f46">관련성 · 환각 탐지</text>
+
+  <line x1="240" y1="144" x2="286" y2="144" stroke="#475569" stroke-width="2.5" marker-end="url(#rh)"/>
+  <line x1="470" y1="144" x2="516" y2="144" stroke="#475569" stroke-width="2.5" marker-end="url(#rh)"/>
+  <line x1="700" y1="144" x2="746" y2="144" stroke="#475569" stroke-width="2.5" marker-end="url(#rh)"/>
+
+  <!-- taxonomy cards -->
+  <text x="520" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">RAGHub 카테고리</text>
+
+  <rect x="60" y="232" width="210" height="118" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="165" y="258" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">핵심 프레임워크</text>
+  <text x="165" y="282" text-anchor="middle" font-size="11.5" fill="#475569">LangChain · LlamaIndex</text>
+  <text x="165" y="302" text-anchor="middle" font-size="11.5" fill="#475569">Dcup · Scout (신흥)</text>
+  <text x="165" y="328" text-anchor="middle" font-size="10.5" fill="#94a3b8">RAG 앱 구동 엔진</text>
+
+  <rect x="290" y="232" width="210" height="118" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="395" y="258" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">엔진·인프라</text>
+  <text x="395" y="282" text-anchor="middle" font-size="11.5" fill="#475569">수평 확장 · 실시간</text>
+  <text x="395" y="302" text-anchor="middle" font-size="11.5" fill="#475569">클라우드 네이티브 · 엣지</text>
+  <text x="395" y="328" text-anchor="middle" font-size="10.5" fill="#94a3b8">스트리밍 RAG (Kafka)</text>
+
+  <rect x="520" y="232" width="210" height="118" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="625" y="258" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">데이터 준비</text>
+  <text x="625" y="282" text-anchor="middle" font-size="11.5" fill="#475569">의미론적 청킹</text>
+  <text x="625" y="302" text-anchor="middle" font-size="11.5" fill="#475569">멀티모달 (ColPali)</text>
+  <text x="625" y="328" text-anchor="middle" font-size="10.5" fill="#94a3b8">레이아웃·표·이미지</text>
+
+  <rect x="750" y="232" width="210" height="118" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="855" y="258" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">평가·최적화</text>
+  <text x="855" y="282" text-anchor="middle" font-size="11.5" fill="#475569">ragas · Trulens</text>
+  <text x="855" y="302" text-anchor="middle" font-size="11.5" fill="#475569">Phoenix · Deepchecks</text>
+  <text x="855" y="328" text-anchor="middle" font-size="10.5" fill="#94a3b8">검색·생성 품질 측정</text>
+
+  <text x="520" y="392" text-anchor="middle" font-size="11.5" fill="#94a3b8">출처: Andrew-Jang/RAGHub (MIT) — r/RAG 커뮤니티 주도 디렉토리</text>
+</svg>

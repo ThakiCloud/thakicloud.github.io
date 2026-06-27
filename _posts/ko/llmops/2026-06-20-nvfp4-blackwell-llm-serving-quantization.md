@@ -45,6 +45,8 @@ Llama-3.1-70B를 기준으로 BF16은 약 140GB, FP8은 약 70GB, NVFP4는 약 3
 
 다만 NVFP4는 Blackwell 전용입니다. H100/A100 환경에서는 FP8이 여전히 최선입니다.
 
+![정밀도별 Llama-3.1-70B 메모리 풋프린트와 Kueue 노드풀별 양자화 분기 다이어그램](/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg)
+
 ## 프레임워크 지원 현황 (2026년 6월 기준)
 
 **TensorRT-LLM**: Blackwell용 NVFP4 지원이 가장 성숙합니다. v0.17 이상에서 B200과 기타 Blackwell GPU에 네이티브 NVFP4 양자화를 지원합니다. 처리량 최우선 프로덕션 환경에 권장합니다.
@@ -117,3 +119,11 @@ serving:
 100 GPU 클러스터에서 FP8 대신 NVFP4를 써서 같은 GPU에 2배 컨텍스트를 처리하거나 GPU 수를 절반으로 줄일 수 있다면, GPU당 시간당 $3 기준으로 연간 절감액은 수십만 달러 규모가 됩니다. 물론 실제 절감폭은 모델 크기, 컨텍스트 길이, 배치 구성에 따라 달라집니다.
 
 Blackwell 하드웨어에 대한 접근이 생기기 시작했다면 NVFP4 전환 검토를 미룰 이유가 없습니다. TensorRT-LLM v0.17 이상이면 적용 경로가 충분히 성숙했습니다.
+
+## 참고 자료
+
+- [Introducing NVFP4 for Efficient and Accurate Low-Precision Inference (NVIDIA Technical Blog)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
+- [NVIDIA TensorRT Model Optimizer (ModelOpt, GitHub)](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
+- [TensorRT-LLM - Quantization 문서](https://nvidia.github.io/TensorRT-LLM/latest/features/quantization.html)
+- [vLLM 공식 문서](https://docs.vllm.ai/)
+- [Kueue - Kubernetes 작업 큐잉](https://kueue.sigs.k8s.io/)

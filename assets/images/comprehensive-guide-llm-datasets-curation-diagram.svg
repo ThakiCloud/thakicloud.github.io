@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 430" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="LLM post-training data curation pipeline from collection to alignment">
+  <rect width="1040" height="430" fill="#f8fafc"/>
+  <text x="520" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">LLM 후훈련 데이터 큐레이션 파이프라인</text>
+  <text x="520" y="62" text-anchor="middle" font-size="13" fill="#64748b">수집 → 필터·중복제거 → 합성 → SFT → 선호도 정렬 → 탐색·검증</text>
+
+  <!-- quality axes banner -->
+  <rect x="40" y="82" width="960" height="34" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="520" y="104" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3730a3">품질 3축: 정확성 (accuracy) · 다양성 (diversity) · 복잡성 (complexity)</text>
+
+  <defs>
+    <marker id="dc" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 1: collect -->
+  <rect x="40" y="150" width="150" height="120" rx="12" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <text x="115" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#075985">① 수집</text>
+  <text x="115" y="202" text-anchor="middle" font-size="11.5" fill="#0c4a6e">Trafilatura (웹)</text>
+  <text x="115" y="222" text-anchor="middle" font-size="11.5" fill="#0c4a6e">Marker (PDF)</text>
+  <text x="115" y="248" text-anchor="middle" font-size="10.5" fill="#64748b">Common Crawl</text>
+
+  <!-- Stage 2: filter -->
+  <rect x="215" y="150" width="160" height="120" rx="12" fill="#ede9fe" stroke="#a78bfa" stroke-width="2"/>
+  <text x="295" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#5b21b6">② 필터·중복제거</text>
+  <text x="295" y="202" text-anchor="middle" font-size="11.5" fill="#4c1d95">규칙 기반 필터</text>
+  <text x="295" y="222" text-anchor="middle" font-size="11.5" fill="#4c1d95">SemHash (퍼지 dedup)</text>
+  <text x="295" y="244" text-anchor="middle" font-size="11.5" fill="#4c1d95">Argilla (사람 검수)</text>
+
+  <!-- Stage 3: synth -->
+  <rect x="400" y="150" width="160" height="120" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="480" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">③ 합성</text>
+  <text x="480" y="202" text-anchor="middle" font-size="11.5" fill="#92400e">Distilabel</text>
+  <text x="480" y="222" text-anchor="middle" font-size="11.5" fill="#92400e">Curator</text>
+  <text x="480" y="244" text-anchor="middle" font-size="11.5" fill="#92400e">Augmentoolkit</text>
+
+  <!-- Stage 4: SFT -->
+  <rect x="585" y="150" width="160" height="120" rx="12" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+  <text x="665" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">④ SFT 데이터셋</text>
+  <text x="665" y="202" text-anchor="middle" font-size="11.5" fill="#1e3a8a">Infinity-Instruct</text>
+  <text x="665" y="222" text-anchor="middle" font-size="11.5" fill="#1e3a8a">SmolTalk · OpenHermes</text>
+  <text x="665" y="244" text-anchor="middle" font-size="11.5" fill="#1e3a8a">WildChat · OASST</text>
+
+  <!-- Stage 5: preference -->
+  <rect x="770" y="150" width="160" height="120" rx="12" fill="#dcfce7" stroke="#34d399" stroke-width="2"/>
+  <text x="850" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">⑤ 선호도 정렬</text>
+  <text x="850" y="202" text-anchor="middle" font-size="11.5" fill="#065f46">선택 vs 거부 쌍 (DPO)</text>
+  <text x="850" y="222" text-anchor="middle" font-size="11.5" fill="#065f46">Skywork · UltraFeedback</text>
+  <text x="850" y="244" text-anchor="middle" font-size="11.5" fill="#065f46">ORPO-DPO-Mix</text>
+
+  <line x1="190" y1="210" x2="211" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#dc)"/>
+  <line x1="375" y1="210" x2="396" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#dc)"/>
+  <line x1="560" y1="210" x2="581" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#dc)"/>
+  <line x1="745" y1="210" x2="766" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#dc)"/>
+
+  <!-- exploration band -->
+  <rect x="215" y="300" width="715" height="48" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="572" y="322" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">탐색·분석·검증 (전 단계 가로지름)</text>
+  <text x="572" y="340" text-anchor="middle" font-size="11.5" fill="#64748b">Lilac · Nomic Atlas · Text-clustering · Judges (LLM-as-judge)</text>
+  <line x1="572" y1="270" x2="572" y2="298" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#dc)"/>
+
+  <text x="520" y="392" text-anchor="middle" font-size="11.5" fill="#94a3b8">출처: mlabonne/llm-datasets — 후훈련 데이터셋·도구 큐레이션 목록</text>
+</svg>

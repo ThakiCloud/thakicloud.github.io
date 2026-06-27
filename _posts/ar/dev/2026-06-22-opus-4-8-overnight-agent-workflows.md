@@ -28,6 +28,8 @@ canonical_url: "https://thakicloud.github.io/ar/dev/opus-4-8-overnight-agent-wor
 
 تفصل هذه المقالة بين أمرين: أولاً، ما هو تسويق وما هو حقيقي في ادعاء "كسب المال أثناء النوم". ثانياً، الجانب الحقيقي، أي الطلب الذي يفرضه توزيع العوامل الطويل الأمد غير المراقَب على البنية التحتية. تشغّل ThakiCloud منصة SaaS للذكاء الاصطناعي والتعلم الآلي مبنية على Kubernetes، وخدمة أحمال GPU هي منتجها الأساسي، لذا نهتم بهيكل الفوترة لأحمال الاستنتاج الكامنة تحت العناوين الرنانة أكثر من اهتمامنا بالعناوين ذاتها. وقد اقتصرنا في الحقائق المستشهَد بها على ما تأكّد من البيانات الوصفية العلنية للمقالة، ولم نُورد ادعاءات الإيرادات غير الموثّقة.
 
+![رسم تخطيطي: توزيع العوامل الطويل الأمد غير المراقَب يولّد حمل استنتاج متزامن تمتصه ThakiCloud](/assets/images/opus-4-8-overnight-agent-workflows-hero.png)
+
 ## ماهية سير العمل "الليلي": بين المبالغة والواقع
 
 كتب المقالة الأصلية @eng_khairallah1، وانتشرت من خلال إعادة تغريد. كان المحتوى يضم رابطاً مختصراً عبر t.co يشير إلى مقالة واحدة على X. الجزء المتعلق بـ "كسب المال" في العنوان لا يمكن التحقق منه؛ لم يُقدَّم دليل موضوعي على ما كسبه أحد فعلاً، وهذه الأرقام غير قابلة للتحقق أصلاً. هذا الإطار يُصنَّف بدقة ضمن التسويق.
@@ -50,6 +52,8 @@ canonical_url: "https://thakicloud.github.io/ar/dev/opus-4-8-overnight-agent-wor
         v
 [ تجميع ] --> [ بوابة التحقق ] --> [ تركيب ] --> نتيجة واحدة نظيفة
 ```
+
+![رسم تخطيطي لسير العمل الديناميكي: توزيع المنسّق يُغلق ببوابة تحقق تخاصمية](/assets/images/opus-4-8-overnight-agent-workflows-diagram.svg)
 
 ثمة سوء فهم شائع هنا: التوازي ليس جيداً دائماً. لا يحقق فائدة إلا عندما تكون الفروع مستقلة فعلاً. إذا كانت مرحلة تالية تحتاج لرؤية جميع نتائج المراحل السابقة قبل المتابعة، فذلك حاجز، والحاجز يجبر الجميع على انتظار أبطأ فرع. سير العمل المصمم جيداً يُقلّل الحواجز ويسمح لكل عنصر بالمرور عبر المسار بسرعته الخاصة. هذا المبدأ ذاته تعتمده ThakiCloud في تصميم المهارات والمسارات: تقييد التكوين الحر بإطار عمل مُتحقَّق منه لرفع متوسط الجودة.
 
@@ -88,4 +92,12 @@ canonical_url: "https://thakicloud.github.io/ar/dev/opus-4-8-overnight-agent-wor
 ## المصادر
 
 - @eng_khairallah1, "40 Claude Opus 4.8 Workflows That Make Money While You Sleep" (X Article, 2026-06)
-- إعادة التغريد الأصلية: x.com/hjguyhan/status/2069026741155442835
+- إعادة التغريد الأصلية: [x.com/hjguyhan/status/2069026741155442835](https://x.com/hjguyhan/status/2069026741155442835)
+
+### مراجع تقنية
+
+- [Building Effective Agents (Anthropic)](https://www.anthropic.com/news/building-effective-agents)
+- [How We Built Our Multi-Agent Research System (Anthropic)](https://www.anthropic.com/engineering/built-multi-agent-research-system)
+- [Building Agents with the Claude Agent SDK (Anthropic)](https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk)
+- [Kueue - طوابير مهام Kubernetes](https://kueue.sigs.k8s.io/)
+- [وثائق vLLM الرسمية](https://docs.vllm.ai/)

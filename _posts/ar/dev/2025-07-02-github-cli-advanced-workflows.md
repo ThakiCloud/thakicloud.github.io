@@ -30,6 +30,8 @@ published: true
 
 هذا هو الجزء الأخير من سلسلة GitHub CLI. سنغطي تقنيات الأتمتة المتقدمة التي ترفع إنتاجية الفرق إلى المستوى الاحترافي.
 
+![رسم تخطيطي: يحمّل zshrc وحدات الأتمتة إلى موزّع gh موحّد يتحكم في GitHub](/assets/images/github-cli-advanced-workflows-hero.png)
+
 ## نظام التحكم الرئيسي
 
 ### بنية نظام التحكم الرئيسي
@@ -686,6 +688,8 @@ restore_repository_config() {
 }
 ```
 
+![رسم معماري لنظام أتمتة GitHub CLI المتكامل: تحميل zshrc ← الوحدات ← موزّع gh الموحّد ← GitHub](/assets/images/github-cli-advanced-workflows-diagram.svg)
+
 ## الخلاصة
 
 في هذه السلسلة المكونة من خمسة أجزاء، تعلمنا:
@@ -723,3 +727,10 @@ test_before_automating() {
 - [توثيق GitHub CLI الرسمي](https://cli.github.com/manual/)
 - [موسوعة GitHub Actions](https://github.com/features/actions)
 - [واجهة برمجة تطبيقات GitHub REST](https://docs.github.com/en/rest)
+
+## المصادر
+
+- [GitHub CLI Manual (cli.github.com)](https://cli.github.com/manual/)
+- [cli/cli - مستودع GitHub CLI](https://github.com/cli/cli)
+- [توثيق GitHub Actions](https://docs.github.com/en/actions)
+- [توثيق GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects)

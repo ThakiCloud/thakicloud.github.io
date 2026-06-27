@@ -29,6 +29,8 @@ The field of Retrieval-Augmented Generation (RAG) is experiencing unprecedented 
 
 RAGHub represents a community-driven initiative that serves as a comprehensive directory of tools, frameworks, and resources for Retrieval-Augmented Generation systems. Born from the recognition that the RAG landscape changes so rapidly that frameworks from just three months ago might already be obsolete, RAGHub aims to help practitioners, researchers, and organizations navigate this ever-evolving terrain with confidence.
 
+![Conceptual view of modular framework blocks connected around a central vector index in the RAG ecosystem](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.png)
+
 ## Understanding RAGHub: A Community-Powered Resource
 
 RAGHub distinguishes itself as more than just another curated list of tools. It represents a living, breathing collection that captures the pulse of the RAG community's collective intelligence. The project operates under the philosophy that in a field moving as quickly as RAG, community wisdom becomes invaluable for separating signal from noise.
@@ -74,6 +76,8 @@ The quality of RAG system outputs is fundamentally dependent on the quality of t
 Modern data preparation frameworks go far beyond simple text splitting and embedding generation. They incorporate advanced techniques such as semantic chunking, where documents are divided based on meaning rather than arbitrary length limits. This approach can significantly improve retrieval quality by ensuring that semantically coherent information remains together in individual chunks.
 
 Some frameworks in this category also address the challenge of multimodal data processing, enabling RAG systems to work with documents that contain text, images, tables, and other data types. This capability is particularly important for enterprise RAG systems that need to process diverse document formats and extract meaningful information from complex layouts.
+
+![Diagram mapping RAGHub framework categories (core, engines, data prep, evaluation) onto the RAG pipeline stages](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-diagram.svg)
 
 ## Emerging Trends and Innovations
 
@@ -180,3 +184,11 @@ As the RAG field continues to evolve, resources like RAGHub become increasingly 
 For organizations building or enhancing RAG systems, RAGHub provides not just a catalog of options but a window into the future of retrieval-augmented generation. By understanding the trends and innovations represented in its collection, organizations can make more informed decisions about their RAG strategies and position themselves to take advantage of emerging capabilities as they mature.
 
 The ultimate value of RAGHub lies in its ability to transform the overwhelming complexity of the RAG ecosystem into actionable intelligence. In a field where yesterday's breakthrough can become tomorrow's obsolete technology, having access to community-validated insights about emerging tools and trends becomes a competitive advantage that can inform both immediate implementation decisions and long-term strategic planning.
+
+## References
+
+- [Andrew-Jang/RAGHub - community-driven RAG directory (GitHub, MIT)](https://github.com/Andrew-Jang/RAGHub)
+- [LangChain](https://github.com/langchain-ai/langchain) · [LlamaIndex](https://github.com/run-llama/llama_index)
+- [ColPali: Efficient Document Retrieval with Vision Language Models (arXiv:2407.01449)](https://arxiv.org/abs/2407.01449)
+- [Contextual Retrieval (Anthropic Engineering)](https://www.anthropic.com/engineering/contextual-retrieval)
+- [r/RAG community](https://www.reddit.com/r/Rag/)

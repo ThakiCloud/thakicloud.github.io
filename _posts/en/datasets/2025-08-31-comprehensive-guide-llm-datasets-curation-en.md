@@ -25,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/en/datasets/comprehensive-guide-llm
 
 The landscape of Large Language Model (LLM) development has evolved dramatically, with data quality emerging as the most critical factor determining model performance. In the post-training phase, where pre-trained models are transformed into capable assistants, the selection and curation of datasets becomes paramount. This comprehensive guide explores the essential datasets, methodologies, and tools that define modern LLM training practices.
 
+![Conceptual view of data from many sources passing through filtering layers and converging into a single refined training-data core](/assets/images/comprehensive-guide-llm-datasets-curation-hero.png)
+
 ## Understanding Dataset Quality: The Foundation of Excellence
 
 The development of high-quality LLMs fundamentally depends on three core characteristics that define exceptional datasets. These principles serve as the bedrock for evaluating and constructing training data that can produce models capable of sophisticated reasoning and reliable performance across diverse applications.
@@ -155,6 +157,8 @@ Understanding dataset characteristics and identifying potential issues requires 
 
 **Autolabel** addresses the challenge of data annotation by automatically labeling data using popular language models. This approach can significantly reduce the manual effort required for dataset preparation while maintaining labeling consistency across large volumes of data. The tool's integration with established language models ensures that labeling quality reflects current best practices in the field.
 
+![LLM post-training data curation pipeline diagram, from collection through preference alignment and validation](/assets/images/comprehensive-guide-llm-datasets-curation-diagram.svg)
+
 ## Future Directions and Emerging Trends
 
 The field of LLM dataset curation continues to evolve rapidly, driven by advances in model capabilities, changing application requirements, and deeper understanding of the relationship between data quality and model performance. Several emerging trends are shaping the future direction of dataset development and curation practices.
@@ -170,3 +174,11 @@ The field of LLM dataset curation continues to evolve rapidly, driven by advance
 The landscape of LLM dataset curation represents a dynamic and rapidly evolving field where technical innovation meets practical application requirements. Success in this domain requires not only technical expertise but also deep understanding of the relationship between data characteristics and model behavior. As the field continues to advance, the principles of accuracy, diversity, and complexity will remain fundamental, while new challenges and opportunities will drive continued innovation in tools, methodologies, and best practices.
 
 The comprehensive approach to dataset curation outlined in this guide provides a foundation for understanding current best practices while preparing for future developments in this critical area of AI development. Whether working with existing datasets or developing new collections, practitioners who master these concepts and tools will be well-positioned to contribute to the continued advancement of language model capabilities and applications.
+
+## References
+
+- [mlabonne/llm-datasets - Curated list of datasets and tools for post-training (GitHub)](https://github.com/mlabonne/llm-datasets)
+- [Distilabel - synthetic data & AI feedback framework](https://github.com/argilla-io/distilabel)
+- [Argilla - dataset collaboration & annotation platform](https://github.com/argilla-io/argilla)
+- [Trafilatura - web text & metadata extraction](https://github.com/adbar/trafilatura)
+- [Hugging Face Datasets Hub](https://huggingface.co/datasets)

@@ -24,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/dev/github-cli-advanced-workflows/"
 
 **macOS GitHub CLI 완전 자동화 시리즈**의 최종편입니다. 지금까지 구축한 모든 시스템을 통합하고, 실무에서 바로 활용할 수 있는 완성형 워크플로우를 만들어보겠습니다. CI/CD 연동, 팀 온보딩 자동화, 성능 최적화까지 다룹니다.
 
+![zshrc가 자동화 모듈을 로드해 통합 gh 디스패처로 GitHub을 제어하는 개념도](/assets/images/github-cli-advanced-workflows-hero.png)
+
 ## 통합 시스템 아키텍처
 
 ### 1. 마스터 제어 시스템
@@ -731,6 +733,8 @@ EOF
 chmod +x ~/scripts/github-cli/utils/deployment-checklist.sh
 ```
 
+![GitHub CLI 통합 자동화 시스템 아키텍처: zshrc 로드 → 모듈 → 통합 gh 디스패처 → GitHub 다이어그램](/assets/images/github-cli-advanced-workflows-diagram.svg)
+
 ## 시리즈 완결
 
 축하합니다! 🎉 **GitHub CLI 완전 자동화 시리즈**가 완성되었습니다.
@@ -780,4 +784,11 @@ chmod +x ~/scripts/github-cli/utils/deployment-checklist.sh
 - [2편: 이슈 관리 완전 자동화](macos-github-cli-issue-automation-guide)  
 - [3편: 프로젝트 관리 + 회사/개인 프로젝트 분리](github-cli-project-management-automation)
 - [4편: 위키 관리 완전 자동화](github-cli-wiki-automation-guide)
-- **5편: 고급 워크플로우와 실무 적용** ← 완결편! 
+- **5편: 고급 워크플로우와 실무 적용** ← 완결편!
+
+## 참고 자료
+
+- [GitHub CLI Manual (cli.github.com)](https://cli.github.com/manual/)
+- [cli/cli - GitHub CLI 저장소](https://github.com/cli/cli)
+- [GitHub Actions 공식 문서](https://docs.github.com/en/actions)
+- [GitHub Projects 문서](https://docs.github.com/en/issues/planning-and-tracking-with-projects) 
