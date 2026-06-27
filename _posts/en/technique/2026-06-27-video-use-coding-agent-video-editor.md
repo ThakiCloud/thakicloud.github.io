@@ -67,6 +67,8 @@ flowchart TB
     H --> I[최종 MP4 렌더링]
 ```
 
+*How video-use decomposes editing into cuts, subtitles, color grading, and animation, spawns a sub-agent per animation in parallel, then merges them into a single timeline. (Diagram labels in Korean, shared across languages.)*
+
 As the diagram shows, the animation block is not a single node but fans out into multiple sub-agents. Each sub-agent is responsible only for its assigned animation and does not see the others' intermediate results. With this separation, whether there are three animations or five, they can proceed simultaneously, and total wall-clock time converges to the duration of the single longest animation.
 
 ## Installation and Integration

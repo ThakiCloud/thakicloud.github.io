@@ -54,6 +54,8 @@ flowchart TB
     J --> K
 ```
 
+*How a request with no model specified passes through the gateway's default policy, cache lookup, and difficulty-based routing to flatten spend at low cost. (Diagram labels in Korean, shared across languages.)*
+
 ## Three Techniques
 
 The cost control Armstrong laid out comes down to three axes. None is a new invention, but the key is combining all three in one place, the gateway.
