@@ -22,6 +22,7 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/technique/nvidia-verified-agent-skills/"
 reading_time: true
+published: false
 ---
 
 ![Abstract image showing modular skill blocks sealed with cryptographic stamps, linked into a chain of trust](/assets/images/nvidia-verified-agent-skills-hero.png)

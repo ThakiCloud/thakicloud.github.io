@@ -23,6 +23,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/asktoact-llm-tool-use-self-correcting-clarification/"
 reading_time: true
 lang: ar
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
