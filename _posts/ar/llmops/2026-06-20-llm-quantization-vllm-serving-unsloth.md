@@ -124,7 +124,7 @@ model.save_pretrained_merged("merged_model", tokenizer, save_method="merged_16bi
 
 ## منظور ThakiCloud: لماذا كان هذا الملخّص ضروريًا
 
-منصة الذكاء الاصطناعي في ThakiCloud تعمل على Kubernetes، وتجدول أعباء عمل GPU بـ Kueue، وتخدم النماذج بـ vLLM. منصة الوكلاء Praxis لدينا تستدعي backend مستضاف ذاتيًا بـ vLLM (اسم الشفرة Metis) عبر واجهة برمجية متوافقة مع OpenAI. اختيارات الضغط الكمّي تؤثر مباشرةً على تكلفة الخدمة لكل رمز لدينا.
+منصة الذكاء الاصطناعي في ThakiCloud تعمل على Kubernetes، وتجدول أعباء عمل GPU بـ Kueue، وتخدم النماذج بـ vLLM. منصة الوكلاء Paxis لدينا تستدعي backend مستضاف ذاتيًا بـ vLLM (اسم الشفرة Metis) عبر واجهة برمجية متوافقة مع OpenAI. اختيارات الضغط الكمّي تؤثر مباشرةً على تكلفة الخدمة لكل رمز لدينا.
 
 الواقع التشغيلي هو أسطول أجهزة متنوّع. NVFP4 هو الأمثل على Blackwell (B200)، لكن هذا المسار مغلق على عُقد Hopper وAmpere. لذا نُوجّه الضغط الكمّي حسب طبقة الأجهزة: Blackwell يحصل على NVFP4 أو FP8 block-wise؛ Hopper يحصل على FP8 وW4A16؛ Ampere يحصل على AWQ/GPTQ W4A16. توحيد كل شيء تحت compressed-tensors يعني أن vLLM يكتشف الصيغة تلقائيًا، فيكاد كود الخدمة لا يتغيّر عبر الطبقات. الضبط الدقيق للمجال يُنجز بتكلفة منخفضة مع Unsloth، ثم يُدمج ويُعاد ضغطه إلى W4A16 أو FP8 للخدمة في الإنتاج -- هذا هو مسارنا المعياري.
 
@@ -142,4 +142,4 @@ model.save_pretrained_merged("merged_model", tokenizer, save_method="merged_16bi
 - وثائق الضغط الكمّي في vLLM: [docs.vllm.ai](https://docs.vllm.ai/en/latest/features/quantization/)
 - llm-compressor: [github.com/vllm-project/llm-compressor](https://github.com/vllm-project/llm-compressor)
 - Unsloth Dynamic 2.0: [unsloth.ai/blog/dynamic-v2](https://unsloth.ai/blog/dynamic-v2)
-- ThakiCloud Praxis: [github.com/ThakiCloud/praxis](https://github.com/ThakiCloud/praxis)
+- ThakiCloud Paxis: [github.com/ThakiCloud/praxis](https://github.com/ThakiCloud/praxis)

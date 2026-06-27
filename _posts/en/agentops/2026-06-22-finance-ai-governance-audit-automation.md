@@ -2,7 +2,7 @@
 title: "AI Governance and Audit Automation in Financial Services: Regulatory Compliance and Autonomous Agent Control"
 excerpt: "A hypothetical case study examining how banks, securities firms, and insurers can meet data localization, audit trail, and internal control requirements when deploying AI agents -- using a policy engine and hash-chain audit logs."
 seo_title: "AI Governance and Audit Automation in Financial Services - Thaki Cloud"
-seo_description: "Financial AI audit logs, AI governance in financial services, and how to comply with ISMS and Electronic Financial Supervision Regulations when deploying on-premises AI agents. A case study applying the Praxis platform with a 4-level autonomy x 7-tier risk policy engine, hash-chain audit logs, and masking of 16 categories of personal data."
+seo_description: "Financial AI audit logs, AI governance in financial services, and how to comply with ISMS and Electronic Financial Supervision Regulations when deploying on-premises AI agents. A case study applying the Paxis platform with a 4-level autonomy x 7-tier risk policy engine, hash-chain audit logs, and masking of 16 categories of personal data."
 lang: en
 date: 2026-06-22
 last_modified_at: 2026-06-22
@@ -61,7 +61,7 @@ Even when different divisions -- securities, insurance, trust -- share the same 
 
 Giving an agent a tool and controlling how that tool is used safely are different problems. Simply configuring "this agent may use the customer query API" cannot prevent the agent from executing thousands of queries in succession due to a misjudgment, or reading sensitive fields excessively.
 
-Praxis's policy engine cross-examines two dimensions before any tool call is executed.
+Paxis's policy engine cross-examines two dimensions before any tool call is executed.
 
 **4 Levels of Autonomy:**
 
@@ -113,7 +113,7 @@ Nine high-risk operations (account termination, bulk transfers, external system 
 
 ### How Hash-Chain Audit Logs Work
 
-Praxis's audit framework is designed with a hash-chain structure. Each audit event contains the hash value of the previous event, so deleting or modifying a middle record causes hash verification to fail for all subsequent blocks. This structure enables detection of tampering even if a database administrator accidentally or intentionally alters logs.
+Paxis's audit framework is designed with a hash-chain structure. Each audit event contains the hash value of the previous event, so deleting or modifying a middle record causes hash verification to fail for all subsequent blocks. This structure enables detection of tampering even if a database administrator accidentally or intentionally alters logs.
 
 More than 20 event types are recorded; key items include:
 
@@ -128,7 +128,7 @@ Each event is keyed by `run_id`, enabling all tool calls, policy decisions, and 
 
 ### Automatic Masking of 16 Personal Data Categories
 
-Data processed by agents may include personal information such as resident registration numbers, account numbers, phone numbers, and email addresses. Praxis's prompt protection layer detects 16 categories of personal data patterns in real time at the input stage and automatically masks them.
+Data processed by agents may include personal information such as resident registration numbers, account numbers, phone numbers, and email addresses. Paxis's prompt protection layer detects 16 categories of personal data patterns in real time at the input stage and automatically masks them.
 
 For example, if a customer information query result contains a resident registration number, it is replaced with `[Resident Registration Number Masked]` before the agent passes it to the LLM. Since audit logs also record only the masked form rather than the original data, the risk of logs themselves becoming a personal data exposure vector is reduced.
 
@@ -136,7 +136,7 @@ The system also detects 11 types of prompt injection attack patterns in real tim
 
 ### Multi-Tenancy Isolation
 
-Even when Bank A's credit department and asset management department use the same Praxis instance, wikis, sessions, settings, and audit logs are completely isolated based on team identifiers (team IDs). If an agent from the credit team attempts to access customer data from the asset management team, the data itself responds as "not found," exposing not even its existence.
+Even when Bank A's credit department and asset management department use the same Paxis instance, wikis, sessions, settings, and audit logs are completely isolated based on team identifiers (team IDs). If an agent from the credit team attempts to access customer data from the asset management team, the data itself responds as "not found," exposing not even its existence.
 
 ---
 
@@ -144,7 +144,7 @@ Even when Bank A's credit department and asset management department use the sam
 
 ### On-Premises + Air-Gap Deployment for Data Localization Compliance
 
-The ThakiCloud AI Platform can be deployed directly to the internal network of a financial institution's data center on a Kubernetes basis. Since all inference computation takes place within the institution, customer financial information is never transmitted outside. The Praxis roadmap includes an air-gap deployment kit [estimate: Q1 2027], with plans to support configurations that operate independently even in closed network environments where external networks are completely blocked.
+The ThakiCloud AI Platform can be deployed directly to the internal network of a financial institution's data center on a Kubernetes basis. Since all inference computation takes place within the institution, customer financial information is never transmitted outside. The Paxis roadmap includes an air-gap deployment kit [estimate: Q1 2027], with plans to support configurations that operate independently even in closed network environments where external networks are completely blocked.
 
 Observation infrastructure (VictoriaMetrics/VictoriaLogs) is also deployed together on the internal network, enabling real-time monitoring of agent operations, costs, and anomalous behavior.
 
@@ -168,9 +168,9 @@ An LLM router supporting more than 10 LLM providers as well as ThakiCloud's own 
 
 An honest assessment is necessary. No matter how sophisticated the architecture, real-world constraints exist.
 
-**Regulatory Interpretation Uncertainty:** Domestic regulations on financial AI governance are still evolving. The AI utilization provisions of the Electronic Financial Supervision Regulations and the Korea Financial Security Institute's AI security guidelines often do not specify detailed technical requirements, so actual compliance requires prior consultation with legal teams and regulatory authorities. There is no guarantee that the audit logs and policy engine provided by Praxis satisfy specific regulatory requirements; this requires separate review for each institution.
+**Regulatory Interpretation Uncertainty:** Domestic regulations on financial AI governance are still evolving. The AI utilization provisions of the Electronic Financial Supervision Regulations and the Korea Financial Security Institute's AI security guidelines often do not specify detailed technical requirements, so actual compliance requires prior consultation with legal teams and regulatory authorities. There is no guarantee that the audit logs and policy engine provided by Paxis satisfy specific regulatory requirements; this requires separate review for each institution.
 
-**SOC 2 Type II Certification:** The Praxis SOC 2 Type II certification roadmap is scheduled for Q2 2027 or later. Financial institutions currently requiring SOC 2 Type II certification must take this timeline into account.
+**SOC 2 Type II Certification:** The Paxis SOC 2 Type II certification roadmap is scheduled for Q2 2027 or later. Financial institutions currently requiring SOC 2 Type II certification must take this timeline into account.
 
 **Complexity of Policy Design:** The autonomy x risk matrix is a powerful tool, but correctly designing it to fit an organization's business processes requires considerable domain knowledge and time. If initial policy design is flawed, problems will arise where the agent blocks too many operations (excessive restriction) or has too much autonomy (excessive permissiveness). Phased deployment and data-driven policy adjustment are essential.
 

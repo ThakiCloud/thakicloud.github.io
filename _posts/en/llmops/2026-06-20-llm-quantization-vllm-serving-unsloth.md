@@ -124,7 +124,7 @@ Quantization reduces cost but it is not free. Three things must be tracked toget
 
 ## ThakiCloud's Perspective: Why This Summary Was Needed
 
-ThakiCloud's AI platform runs on Kubernetes, schedules GPU workloads with Kueue, and serves models with vLLM. Our agent platform Praxis calls a self-hosted vLLM backend (codename Metis) through an OpenAI-compatible API. Quantization choices directly affect our per-token serving cost.
+ThakiCloud's AI platform runs on Kubernetes, schedules GPU workloads with Kueue, and serves models with vLLM. Our agent platform Paxis calls a self-hosted vLLM backend (codename Metis) through an OpenAI-compatible API. Quantization choices directly affect our per-token serving cost.
 
 The operational reality is a heterogeneous hardware fleet. NVFP4 is optimal on Blackwell (B200), but that path is closed on Hopper and Ampere nodes. So we route quantization by hardware tier: Blackwell gets NVFP4 or FP8 block-wise; Hopper gets FP8 and W4A16; Ampere gets AWQ/GPTQ W4A16. Unifying everything under compressed-tensors means vLLM auto-detects the format, so serving code barely changes across tiers. Domain fine-tuning is done cheaply with Unsloth, then merged and re-quantized to W4A16 or FP8 for production serving -- that is our standard path.
 
@@ -142,4 +142,4 @@ The advantage is clear. In on-premises and self-hosting environments, data never
 - vLLM quantization docs: [docs.vllm.ai](https://docs.vllm.ai/en/latest/features/quantization/)
 - llm-compressor: [github.com/vllm-project/llm-compressor](https://github.com/vllm-project/llm-compressor)
 - Unsloth Dynamic 2.0: [unsloth.ai/blog/dynamic-v2](https://unsloth.ai/blog/dynamic-v2)
-- ThakiCloud Praxis: [github.com/ThakiCloud/praxis](https://github.com/ThakiCloud/praxis)
+- ThakiCloud Paxis: [github.com/ThakiCloud/praxis](https://github.com/ThakiCloud/praxis)

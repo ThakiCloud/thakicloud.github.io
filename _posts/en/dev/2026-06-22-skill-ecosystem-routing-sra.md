@@ -124,13 +124,13 @@ Top-1 accuracy of 31.1% is still low. The gap between 73% (correct answer in top
 
 A separate experiment was also conducted on composite requests (e.g., "research this, fact-check it, make a docx, and post it to Slack"). For 12 cases, the step_coverage of the single-query retrieve (SINGLE) strategy was 32.8%. Bundling multiple steps into a single query causes the skills for later steps to be missed. This problem is not fully resolved yet; composite requests are partially addressed by having the agent decompose into sub-tasks and retrieve each separately.
 
-## Productization into Praxis
+## Productization into Paxis
 
-This routing structure is generalized on the same principles in ThakiCloud's SaaS product Praxis. Praxis's skill router has a two-stage structure. Stage 1 narrows domain candidates from a large skill pool. Stage 2 evaluates seven factors (intent match, trigger coverage, boundary violation, input sufficiency, output fit, reference dependencies, context cost) to select the optimal skill.
+This routing structure is generalized on the same principles in ThakiCloud's SaaS product Paxis. Paxis's skill router has a two-stage structure. Stage 1 narrows domain candidates from a large skill pool. Stage 2 evaluates seven factors (intent match, trigger coverage, boundary violation, input sufficiency, output fit, reference dependencies, context cost) to select the optimal skill.
 
-The key difference is diversification of scale. In Claude Code local operation, a single agent sees 1,600 skills, but in Praxis the skill pool is separated per tenant and the router readjusts to each tenant's context. The BM25 + gate + description discipline validated in solo operation applies directly to the multi-tenant product.
+The key difference is diversification of scale. In Claude Code local operation, a single agent sees 1,600 skills, but in Paxis the skill pool is separated per tenant and the router readjusts to each tenant's context. The BM25 + gate + description discipline validated in solo operation applies directly to the multi-tenant product.
 
-The part that changes most significantly during productization is responsibility for description writing. In local operation, the operator writes descriptions directly and validates with benchmarks. In Praxis, a gate is needed to automatically check description quality when customers register skills. Without this gate, skills registered by customers conflict and routing accuracy degrades. This gate is currently under development.
+The part that changes most significantly during productization is responsibility for description writing. In local operation, the operator writes descriptions directly and validates with benchmarks. In Paxis, a gate is needed to automatically check description quality when customers register skills. Without this gate, skills registered by customers conflict and routing accuracy degrades. This gate is currently under development.
 
 ## Limitations and Lessons
 

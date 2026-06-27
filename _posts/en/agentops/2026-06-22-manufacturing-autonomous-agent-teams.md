@@ -1,8 +1,8 @@
 ---
 title: "How to Automate Manufacturing Operations with Autonomous Agent Teams"
-excerpt: "A practical approach to resolving MLOps talent shortages and multi-factory cluster management challenges using multi-persona autonomous agent teams. Explained through a hypothetical manufacturer case study showing how ThakiCloud AI Platform and Praxis apply to smart factory operations."
+excerpt: "A practical approach to resolving MLOps talent shortages and multi-factory cluster management challenges using multi-persona autonomous agent teams. Explained through a hypothetical manufacturer case study showing how ThakiCloud AI Platform and Paxis apply to smart factory operations."
 seo_title: "Manufacturing AI Agent Automation - Multi-Cluster GPU Operations and Autonomous Agent Teams - Thaki Cloud"
-seo_description: "How to automate MLOps talent bottlenecks and multi-factory cluster management for smart factories, heavy industry, and electronics manufacturers using autonomous agent teams. Real-world application of ThakiCloud AI Platform multi-cluster central management and Praxis agent operations cloud."
+seo_description: "How to automate MLOps talent bottlenecks and multi-factory cluster management for smart factories, heavy industry, and electronics manufacturers using autonomous agent teams. Real-world application of ThakiCloud AI Platform multi-cluster central management and Paxis agent operations cloud."
 date: 2026-06-22
 last_modified_at: 2026-06-22
 categories:
@@ -29,7 +29,7 @@ reading_time: true
 
 Modern manufacturing faces a structural contradiction: high intent to adopt AI, but a critical shortage of operational personnel. Even when factories want to deploy vision inspection models on production lines, they lack the MLOps specialists to maintain, service, and retrain those models. With three factory GPU clusters each managed by different teams, resource waste and downtime repeat in a cycle.
 
-This article explains how multi-persona autonomous agent teams resolve this problem and how GPU clusters distributed across multiple factories can be unified under a single control plane -- using the hypothetical manufacturer "HanTek" as a case study. The core technologies covered are ThakiCloud AI Platform's multi-cluster central management and the Praxis agent operations cloud.
+This article explains how multi-persona autonomous agent teams resolve this problem and how GPU clusters distributed across multiple factories can be unified under a single control plane -- using the hypothetical manufacturer "HanTek" as a case study. The core technologies covered are ThakiCloud AI Platform's multi-cluster central management and the Paxis agent operations cloud.
 
 ---
 
@@ -49,7 +49,7 @@ These problems are not unique to HanTek. Across the manufacturing industry, a re
 
 ## Autonomous Agent Team Configuration - Multi-Persona and Dynamic Tasks
 
-The solution HanTek adopted is a Praxis-based multi-persona autonomous agent team. Praxis is an agent operations cloud that treats agents as first-class resources "like VMs on AWS." Skills, Tools, Policies, and Audit Logs are the platform's core resources, and each agent references its domain wiki (Hybrid Knowledge Engine, HKE) to make judgments based on accumulated knowledge.
+The solution HanTek adopted is a Praxis-based multi-persona autonomous agent team. Paxis is an agent operations cloud that treats agents as first-class resources "like VMs on AWS." Skills, Tools, Policies, and Audit Logs are the platform's core resources, and each agent references its domain wiki (Hybrid Knowledge Engine, HKE) to make judgments based on accumulated knowledge.
 
 HanTek configured the agent team with three personas.
 
@@ -57,7 +57,7 @@ HanTek configured the agent team with three personas.
 
 The infrastructure operations agent is responsible for GPU cluster status monitoring, job scheduling optimization, and automatic recovery when anomalies are detected. It continuously collects metrics from Kueue and KAI Scheduler, and autonomously decides to relocate jobs to another cluster when a particular cluster's queue wait time exceeds a threshold.
 
-This agent executes recurring tasks defined in natural language -- such as "generate a GPU utilization report every morning at 7 AM" -- through Praxis's dynamic task scheduler. Operators no longer need to write separate cron scripts; they simply enter the task specification in chat or Slack and the agent self-schedules.
+This agent executes recurring tasks defined in natural language -- such as "generate a GPU utilization report every morning at 7 AM" -- through Paxis's dynamic task scheduler. Operators no longer need to write separate cron scripts; they simply enter the task specification in chat or Slack and the agent self-schedules.
 
 ### Model Quality Agent (Benchmark Analyst Persona)
 
@@ -67,11 +67,11 @@ This agent references the line-by-line model history accumulated in the HKE. Dom
 
 ### Operations Report Agent (Report Automation Persona)
 
-The operations report agent automatically generates and distributes daily, weekly, and monthly AI operations reports. It aggregates GPU utilization, inference counts per model, quality anomaly detection events, and retraining status, then formats them into a form management can easily read. Through Praxis's multi-channel delivery capability, reports are simultaneously posted to Slack, email, and web dashboards.
+The operations report agent automatically generates and distributes daily, weekly, and monthly AI operations reports. It aggregates GPU utilization, inference counts per model, quality anomaly detection events, and retraining status, then formats them into a form management can easily read. Through Paxis's multi-channel delivery capability, reports are simultaneously posted to Slack, email, and web dashboards.
 
 ### Agent Team Collaboration Structure
 
-The three agents operate independently but collaborate when needed through Praxis's Multi-Agent Orchestration. For example, when the model quality agent triggers retraining, a cross-agent delegation automatically occurs -- requesting the infrastructure operations agent to secure GPU cluster capacity for training. This delegation process records all decision-making through the Policy Engine and Audit Log.
+The three agents operate independently but collaborate when needed through Paxis's Multi-Agent Orchestration. For example, when the model quality agent triggers retraining, a cross-agent delegation automatically occurs -- requesting the infrastructure operations agent to secure GPU cluster capacity for training. This delegation process records all decision-making through the Policy Engine and Audit Log.
 
 ---
 
@@ -93,7 +93,7 @@ graph TB
         CP2 --- VK
     end
 
-    subgraph PRAXIS["Praxis Agent Operations Cloud"]
+    subgraph PAXIS["Paxis Agent Operations Cloud"]
         INFRA[Infrastructure Operations Agent]
         QA[Model Quality Agent]
         REPORT[Operations Report Agent]
@@ -107,7 +107,7 @@ graph TB
     CP -->|"gRPC Bidirectional Stream"| GU[Gumi MCC Agent<br/>GPU Cluster Training-Only]
     CP -->|"gRPC Bidirectional Stream"| GJ[Gwangju MCC Agent<br/>GPU Cluster Dev/Mixed]
 
-    PRAXIS -->|"Kueue Cross-Cluster Scheduling<br/>Model Retraining Trigger<br/>DCGM Metrics Collection"| CP
+    PAXIS -->|"Kueue Cross-Cluster Scheduling<br/>Model Retraining Trigger<br/>DCGM Metrics Collection"| CP
 
     US --> DCGM1[DCGM Exporter<br/>VictoriaMetrics]
     GU --> DCGM2[DCGM Exporter<br/>VictoriaMetrics]
@@ -142,11 +142,11 @@ The practical application insights from the HanTek case are as follows.
 
 **A substantive approach to resolving talent bottlenecks.** Multi-persona agent teams are not designed to replace MLOps engineers, but to delegate repetitive monitoring and reporting tasks. Engineers focus on high-value work such as model architecture improvements and anomaly case analysis, while agents handle day-to-day operations. The long-term value comes from the fact that the more domain knowledge is accumulated in the HKE wiki, the higher the agent's judgment accuracy becomes.
 
-**Operational flexibility through the dynamic task scheduler.** Praxis's dynamic task scheduler allows tasks to be defined in natural language, enabling field operators to set up automation directly without going through the IT department. Specific operational requirements such as "send a summary report of the previous week's quality anomalies to team leaders' email every Monday at 8 AM" can be reflected immediately.
+**Operational flexibility through the dynamic task scheduler.** Paxis's dynamic task scheduler allows tasks to be defined in natural language, enabling field operators to set up automation directly without going through the IT department. Specific operational requirements such as "send a summary report of the previous week's quality anomalies to team leaders' email every Monday at 8 AM" can be reflected immediately.
 
 **Visibility through multi-cluster integration.** Multi-cluster management through a single control plane provides at-a-glance visibility into company-wide GPU utilization, job queue status, and per-cluster costs. Policies that were previously impossible -- such as "automatically allow new training jobs when the combined GPU utilization across three factories falls below 60%" -- can now be configured at the control plane level.
 
-**Reliability of the policy engine and audit logs.** In manufacturing environments, traceability of AI-driven decisions is critical. Praxis's Policy Engine and Audit Log record all agent actions and leave an auditable record of what actions were taken based on what rationale. This provides practical assistance in meeting quality certification audits and internal compliance requirements.
+**Reliability of the policy engine and audit logs.** In manufacturing environments, traceability of AI-driven decisions is critical. Paxis's Policy Engine and Audit Log record all agent actions and leave an auditable record of what actions were taken based on what rationale. This provides practical assistance in meeting quality certification audits and internal compliance requirements.
 
 ---
 
@@ -156,14 +156,14 @@ This approach does not apply uniformly to all manufacturing environments. There 
 
 **Initial domain knowledge construction cost.** Building out the domain knowledge in the HKE wiki that agents will utilize requires upfront investment. Tacit knowledge such as line-specific model characteristics, normal operating ranges, and retraining criteria must be explicitly documented. Deploying agents without this preparation can result in early judgment errors.
 
-**Defining the scope of agent autonomy.** The range of decisions agents can make autonomously must be clearly defined. Model retraining triggers and report generation are well-suited to autonomous execution, but model replacements and cluster reconfigurations that affect production lines are safer to keep under human approval steps. Praxis's Policy Engine allows these boundaries to be configured.
+**Defining the scope of agent autonomy.** The range of decisions agents can make autonomously must be clearly defined. Model retraining triggers and report generation are well-suited to autonomous execution, but model replacements and cluster reconfigurations that affect production lines are safer to keep under human approval steps. Paxis's Policy Engine allows these boundaries to be configured.
 
 **The reality of network environments.** In domestic heavy-industry factory environments, firewall policies are often strict for connections between internal factory networks and the cloud. It must be verified in advance whether MCC Agent's gRPC connections are permitted and whether WAN bandwidth is stable. For on-premises-only environments, a configuration deploying both CP and DP on-site should be considered.
 
-**Complexity of agent collaboration.** Multi-agent orchestration creates more complex failure scenarios than a single agent. Rollback policies and alerting systems must be designed to handle cases where one agent sends an incorrect cross-agent delegation. While Praxis's Plan-Execute Pipeline structures execution in three stages -- Planner, Executor, and Synthesizer -- sufficient testing for anomaly cases is essential.
+**Complexity of agent collaboration.** Multi-agent orchestration creates more complex failure scenarios than a single agent. Rollback policies and alerting systems must be designed to handle cases where one agent sends an incorrect cross-agent delegation. While Paxis's Plan-Execute Pipeline structures execution in three stages -- Planner, Executor, and Synthesizer -- sufficient testing for anomaly cases is essential.
 
 **Gradual acquisition of operational maturity.** Delegating all operations to agents from the outset is not recommended. A gradual approach is more realistic: start with low-risk tasks such as reporting automation, verify the quality of the agent's judgments, and expand autonomy only after trust has been established.
 
 ---
 
-The talent bottleneck in manufacturing AI operations cannot be solved simply by hiring more people. The sustainable direction for manufacturing AI operations is a structure where autonomous agent teams handle repetitive operational tasks, multi-cluster central management reduces GPU resource waste, and people focus on more complex judgments and improvements. ThakiCloud AI Platform and Praxis provide the concrete technical means to implement this structure.
+The talent bottleneck in manufacturing AI operations cannot be solved simply by hiring more people. The sustainable direction for manufacturing AI operations is a structure where autonomous agent teams handle repetitive operational tasks, multi-cluster central management reduces GPU resource waste, and people focus on more complex judgments and improvements. ThakiCloud AI Platform and Paxis provide the concrete technical means to implement this structure.

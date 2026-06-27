@@ -1,8 +1,8 @@
 ---
-title: "Praxis: Run a Full Team of AI Employees Without Writing Code"
-excerpt: "Just as traditional clouds treat servers as first-class resources, Praxis treats agent skills, tools, policies, and audit logs as first-class resources. 849 skills loaded automatically, a CostRouter that picks the right model per task, and capabilities that sharpen with use. We share a working PoC with real code."
-seo_title: "Praxis Agent-Native Cloud: Governance, CostRouter, and Evolving Skills - Thaki Cloud"
-seo_description: "ThakiCloud Praxis is an Agent-Native Cloud for running autonomous AI agents safely. It features L0-L3 autonomy governance, multi-LLM CostRouter cost optimization, a Git-based HKE knowledge engine, and an 849-skill harness. Explained with real code."
+title: "Paxis: Run a Full Team of AI Employees Without Writing Code"
+excerpt: "Just as traditional clouds treat servers as first-class resources, Paxis treats agent skills, tools, policies, and audit logs as first-class resources. 849 skills loaded automatically, a CostRouter that picks the right model per task, and capabilities that sharpen with use. We share a working PoC with real code."
+seo_title: "Paxis Agent-Native Cloud: Governance, CostRouter, and Evolving Skills - Thaki Cloud"
+seo_description: "ThakiCloud Paxis is an Agent-Native Cloud for running autonomous AI agents safely. It features L0-L3 autonomy governance, multi-LLM CostRouter cost optimization, a Git-based HKE knowledge engine, and an 849-skill harness. Explained with real code."
 lang: en
 canonical_url: https://thakicloud.github.io/en/agentops/praxis-agent-native-cloud/
 date: 2026-06-20
@@ -26,21 +26,21 @@ toc: true
 toc_sticky: true
 ---
 
-![Praxis layered architecture: Cloud infrastructure at the base, Praxis Core above it, and the 849-skill / 14-domain agent capability layer on top](/assets/images/praxis-architecture-hero.png)
+![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top](/assets/images/praxis-architecture-hero.png)
 
 ## The Next Question in Cloud: How Do You Operate Agents?
 
 Over the past decade, cloud generations have been defined by what they manage. First came servers and infrastructure. Then data and pipelines. The question surfacing in production right now is different. The moment you start running multiple AI agents, you lose visibility into who did what, costs escape prediction, security and audit requirements go unmet, and every team rebuilds the same thing independently.
 
-Praxis targets that gap. Traditional cloud treated compute, databases, and networking as first-class resources. Praxis treats AI agent capabilities (Skills), tools (Tools), policies (Policies), and audit logs (Audit) as first-class resources. Customers hire, manage, and audit "a full team of AI employees" without writing code. We call this category Agent-Native Cloud.
+Paxis targets that gap. Traditional cloud treated compute, databases, and networking as first-class resources. Paxis treats AI agent capabilities (Skills), tools (Tools), policies (Policies), and audit logs (Audit) as first-class resources. Customers hire, manage, and audit "a full team of AI employees" without writing code. We call this category Agent-Native Cloud.
 
-![Traditional cloud manages Compute, DB, and Network as first-class resources; Praxis manages Skills, Tools, Policies, and Audit Logs](/assets/images/praxis-cloud-analogy.png)
+![Traditional cloud manages Compute, DB, and Network as first-class resources; Paxis manages Skills, Tools, Policies, and Audit Logs](/assets/images/praxis-cloud-analogy.png)
 
 This post is not a marketing tagline -- it walks through a working PoC with real code. Every number below was verified against an actual server (`localhost:8080`).
 
 ## Core Modules: Three Things to Remember
 
-The Praxis backend is written in Go. The architecture reads cleanly as three layers: infrastructure at the bottom, the core above it, and the capability layer on top.
+The Paxis backend is written in Go. The architecture reads cleanly as three layers: infrastructure at the bottom, the core above it, and the capability layer on top.
 
 - Agent Runtime (Native Loop): The single execution entry point where the ReAct loop, tool execution, cost tracking, and autonomy gates converge.
 - Skill Harness: Automatically loads skills at boot and selects relevant ones using TF-IDF.
@@ -53,7 +53,7 @@ Sandbox execution and multi-agent orchestration sit underneath all of this. If y
 
 ## Adding Capability = One File
 
-The cost of adding a new capability in Praxis is zero code deployments. Drop a single `skills/<domain>/<name>/SKILL.md` file and the server scans the directory automatically, picking it up immediately.
+The cost of adding a new capability in Paxis is zero code deployments. Drop a single `skills/<domain>/<name>/SKILL.md` file and the server scans the directory automatically, picking it up immediately.
 
 ```markdown
 ---
@@ -83,7 +83,7 @@ Type "summarize the top 10 competitor news items every morning at 9" in chat, an
 
 ## CostRouter: The Code Picks the Model Per Task
 
-The "AI cost explosion" problem is almost always the same cause: using an expensive model for everything. Praxis splits a task into three phases -- Planner, Executor, Synthesizer -- and automatically assigns the right model to each.
+The "AI cost explosion" problem is almost always the same cause: using an expensive model for everything. Paxis splits a task into three phases -- Planner, Executor, Synthesizer -- and automatically assigns the right model to each.
 
 ```mermaid
 flowchart LR
@@ -108,9 +108,9 @@ The key insight is that most tasks are well-served by the cheapest model, Haiku,
 
 ## What Makes HKE Different from Traditional RAG
 
-Traditional RAG is essentially a one-shot retrieval bolted on at query time. Praxis's Hybrid Knowledge Engine (HKE) treats knowledge as an asset that accumulates.
+Traditional RAG is essentially a one-shot retrieval bolted on at query time. Paxis's Hybrid Knowledge Engine (HKE) treats knowledge as an asset that accumulates.
 
-| Traditional RAG | Praxis HKE |
+| Traditional RAG | Paxis HKE |
 |---|---|
 | Stateless single-shot retrieval | Git-based persistent wiki (knowledge accumulates) |
 | No domain boundaries | Per-agent domain scoping and isolation |
@@ -121,7 +121,7 @@ Documents or code pushed in are refined and grow into a knowledge graph. Answers
 
 ## Governed Agents: Control as a Moat
 
-There is no shortage of flashy agent demos, but weak governance keeps agents out of the enterprise. Praxis treats control as the default.
+There is no shortage of flashy agent demos, but weak governance keeps agents out of the enterprise. Paxis treats control as the default.
 
 - Autonomy matrix L0-L3: Execution gates before a task runs, based on task risk and permission level.
 - Prompt security and personally identifiable information removal.
@@ -132,7 +132,7 @@ Beyond that, the system is designed so that capabilities sharpen through use. A 
 
 ## Three Demo Scenarios Your Sales Team Can Use Today
 
-Praxis's strength is that the team using it internally is the same team showing it to customers.
+Paxis's strength is that the team using it internally is the same team showing it to customers.
 
 1. A delegate that works while you sleep: Toggle Proactive ON once and the next morning's briefing lands in Slack automatically.
 2. Assign work by speaking: One natural-language sentence registers as a cron and a skill.
@@ -142,11 +142,11 @@ All of this is managed from a single screen, Command Center, covering schedule, 
 
 ## ThakiCloud's Perspective: Why This Direction
 
-ThakiCloud's AI platform runs a multi-tenant environment on Kubernetes, scheduling GPUs with Kueue and serving models with vLLM. Praxis is the control plane on top of that for operating agents safely.
+ThakiCloud's AI platform runs a multi-tenant environment on Kubernetes, scheduling GPUs with Kueue and serving models with vLLM. Paxis is the control plane on top of that for operating agents safely.
 
 Three things make this combination meaningful. First, governance -- L0-L3 autonomy, full action auditing, and team isolation -- is built in, which means public-sector, financial, and enterprise environments that require security, auditing, and data separation get it out of the box. Second, the design assumes on-premises and self-hosted deployments, so organizations that cannot send data outside their perimeter can still run it. Third, CostRouter's per-task model selection with budget caps makes it possible to operate while keeping GPU and API costs under control. The cost advantage at the serving layer translates directly into a product moat.
 
-Praxis is at the PoC stage today. The core -- conversation, skills, scheduler, Command Center, cost routing, and HKE -- is working. Some advanced features are on the roadmap. "Demo-ready today, pilot one workflow first" is our honest message.
+Paxis is at the PoC stage today. The core -- conversation, skills, scheduler, Command Center, cost routing, and HKE -- is working. Some advanced features are on the roadmap. "Demo-ready today, pilot one workflow first" is our honest message.
 
 ## Further Reading
 

@@ -2,7 +2,7 @@
 title: "How a Solo AI Engineer Operates a Stack of 1,620 Skills"
 excerpt: "1,620 skills, 55 sub-agents, nightly self-evolution, and cost guardrails. Exposing the full operational system that lets a solo AI team maintain a massive automation stack."
 seo_title: "Solo AI Engineer Automation Stack: 1,620 Skills, 55 Agents - Thaki Cloud"
-seo_description: "How a solo AI engineer operates 1,620 skills, 55 sub-agents, nightly self-evolution loops, and haiku/sonnet/opus cost routing to manage a large AI automation stack. Original experience behind ThakiCloud Praxis."
+seo_description: "How a solo AI engineer operates 1,620 skills, 55 sub-agents, nightly self-evolution loops, and haiku/sonnet/opus cost routing to manage a large AI automation stack. Original experience behind ThakiCloud Paxis."
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
@@ -33,7 +33,7 @@ The numbers look impossible at a glance. But these numbers are not things to man
 
 The secret is not managing scale -- it is **designing scale to manage itself**. Skills evolve skills, agents route agents, and retro loops optimize model selection. The human's job is only to set direction, notice anomalous signals, and make key judgment calls.
 
-This post is the first time the full operational system is laid out in one place. It explains how skill routing, nightly evolution, and cost control interlock as a single operating system -- and how this experience became the source material for the ThakiCloud Praxis product.
+This post is the first time the full operational system is laid out in one place. It explains how skill routing, nightly evolution, and cost control interlock as a single operating system -- and how this experience became the source material for the ThakiCloud Paxis product.
 
 ---
 
@@ -138,9 +138,9 @@ Context hygiene also matters. Reading the same file repeatedly within a session 
 
 ---
 
-## This Is the Product: Praxis and the AI Platform
+## This Is the Product: Paxis and the AI Platform
 
-This solo operational approach is exactly what ThakiCloud is productizing as Praxis. The goal is to make the autonomous agent runtime, skill ecosystem, self-evolution, governance, and cost control available to any engineer.
+This solo operational approach is exactly what ThakiCloud is productizing as Paxis. The goal is to make the autonomous agent runtime, skill ecosystem, self-evolution, governance, and cost control available to any engineer.
 
 The operational system described so far proves two things.
 
@@ -148,7 +148,7 @@ The first is **that this operational approach actually works**. Not a concept or
 
 The second is **that this approach is scalable**. A solo engineer managing 1,620 skills does not happen by manually touching each one. The system evolves itself, the router finds the right skill, and guardrails protect the budget. This structure works identically when scaled to a team.
 
-Praxis is the work of turning this experience into a platform. Operators define skills, configure agents, and set cost policy -- then the runtime handles the rest. The AI Platform adds K8s-based workload orchestration (Kueue, ArgoCD) on top of that.
+Paxis is the work of turning this experience into a platform. Operators define skills, configure agents, and set cost policy -- then the runtime handles the rest. The AI Platform adds K8s-based workload orchestration (Kueue, ArgoCD) on top of that.
 
 ---
 
@@ -172,4 +172,4 @@ The operational system described in this post was not built in a day. It is the 
 
 If you want to run a solo AI team, the first investment should be skill quality and cost guardrails. Not flashy features -- the real leverage is routing that works quietly and an evolution loop that improves itself at night. I hope this post is useful as a reference for anyone thinking through automation at a similar scale.
 
-In the next post, I plan to cover the design principles of the Praxis skill ecosystem -- particularly why the distinction between a thin harness and a fat skill matters.
+In the next post, I plan to cover the design principles of the Paxis skill ecosystem -- particularly why the distinction between a thin harness and a fat skill matters.

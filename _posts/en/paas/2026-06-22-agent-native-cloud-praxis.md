@@ -2,7 +2,7 @@
 title: "What Is Agent-Native Cloud: Skills and Policies as First-Class Resources"
 excerpt: "Why VM-centric cloud is ill-suited for autonomous AI agent operations, and the design principles of agent-native infrastructure that treats Skills, Tools, Policies, and Audit Logs as first-class resources."
 seo_title: "Agent-Native Cloud Design Principles - Thaki Cloud"
-seo_description: "A paradigm shift in cloud infrastructure for autonomous AI agent operations. Introducing agent-native architecture and ThakiCloud Praxis, where Skills, Tools, Policies, and Audit Logs -- not VMs -- are first-class resources."
+seo_description: "A paradigm shift in cloud infrastructure for autonomous AI agent operations. Introducing agent-native architecture and ThakiCloud Paxis, where Skills, Tools, Policies, and Audit Logs -- not VMs -- are first-class resources."
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.github.io/en/paas/agent-native-cloud-praxis/"
 reading_time: true
 ---
 
-![Agent-Native Cloud Praxis Overview](/assets/images/agent-native-cloud-praxis-hero.png)
+![Agent-Native Cloud Paxis Overview](/assets/images/agent-native-cloud-praxis-hero.png)
 
 ## Overview
 
@@ -123,9 +123,9 @@ graph TB
 
 Treating these four resources as first-class citizens means more than simply being able to store and retrieve them. It means full lifecycle management: provisioning them like compute resources, versioning, controlling access through policies, tracking costs, and rolling back on failure. Just as Kubernetes handles containers through "Deployment" and "ReplicaSet" abstractions, an agent-native platform must handle skills through "SkillRelease" and "SkillPolicy" abstractions.
 
-## ThakiCloud's Implementation: Praxis and AI Platform Integration
+## ThakiCloud's Implementation: Paxis and AI Platform Integration
 
-ThakiCloud is developing **Praxis** as the platform that concretizes these design principles. Under the concept of "AWS for Agents," the goal is to treat Skills, Tools, Policies, and Audit Logs as first-class resources -- in the same way that traditional cloud treats VMs, DBs, and Networks.
+ThakiCloud is developing **Paxis** as the platform that concretizes these design principles. Under the concept of "AWS for Agents," the goal is to treat Skills, Tools, Policies, and Audit Logs as first-class resources -- in the same way that traditional cloud treats VMs, DBs, and Networks.
 
 **The LLM and skill router** automatically selects the right model for each stage of agent execution (Planning, Execution, Synthesis). It supports more than 10 providers including Claude, GPT, Gemini, Kimi, Ollama, and ThakiCloud's own model Metis, and reduces unnecessary high-cost model calls through cost-aware routing. Skill selection is a two-stage process: it first narrows down the domain candidate set, then selects the optimal skill based on 7 criteria including suitability, cost, and reliability.
 
@@ -137,7 +137,7 @@ ThakiCloud is developing **Praxis** as the platform that concretizes these desig
 
 **The Hybrid Knowledge Engine (HKE)** combines team-specific wiki-based RAG with a knowledge graph. Each agent references a knowledge base specialized to its domain, continuously enriching it through execution experience.
 
-Praxis operates in conjunction with the **AI Platform (ai-suite)**. It is a three-layer architecture where the AI Platform handles central LLM policy and cost control, Praxis provides the agent runtime, and Metis handles the inference layer. The way each layer has clear responsibilities and combines is similar to the separation of control plane and data plane in traditional cloud.
+Paxis operates in conjunction with the **AI Platform (ai-suite)**. It is a three-layer architecture where the AI Platform handles central LLM policy and cost control, Paxis provides the agent runtime, and Metis handles the inference layer. The way each layer has clear responsibilities and combines is similar to the separation of control plane and data plane in traditional cloud.
 
 The stack is built with Go 1.26 (backend) and React 19 (frontend), using PostgreSQL, Redis, and MinIO as the storage layer in production environments.
 
@@ -155,6 +155,6 @@ The concept of agent-native cloud itself is not yet mature. Several fundamental 
 
 The direction, nonetheless, is clear. As agents establish themselves as part of software systems, the level of abstraction in the infrastructure that operates them must rise as well. Just as we moved from an era of directly managing physical servers to an era of calling VM APIs, an era is approaching where "an agent's capabilities and scope of action are defined via API, and the platform enforces them."
 
-Praxis's journey, with a skill marketplace [estimate] on the roadmap for Q4 2026 and SOC2 certification and air-gap deployment [estimate] for Q2 2027 and beyond, is part of that flow. As the platform matures, developers will be able to focus on designing agent capabilities, while the infrastructure handles execution safety and cost optimization.
+Paxis's journey, with a skill marketplace [estimate] on the roadmap for Q4 2026 and SOC2 certification and air-gap deployment [estimate] for Q2 2027 and beyond, is part of that flow. As the platform matures, developers will be able to focus on designing agent capabilities, while the infrastructure handles execution safety and cost optimization.
 
 Agent-native cloud is not yet a complete concept. But what problems in the next generation of software operations need to be solved at the infrastructure layer is, at this moment, taking shape as design principles.

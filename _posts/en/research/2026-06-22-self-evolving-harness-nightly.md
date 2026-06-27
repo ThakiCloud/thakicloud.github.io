@@ -2,7 +2,7 @@
 title: "The AI Harness That Evolves Itself Every Night - Nightly Self-Evolving Harness"
 excerpt: "While you sleep, the system learns from yesterday's failures and improves itself. We reveal how ThakiCloud's nightly self-evolving loop meets the Self-Harness paradigm from arXiv:2606.09498."
 seo_title: "The AI Harness That Evolves Itself Every Night - Thaki Cloud"
-seo_description: "A real-world implementation of a nightly self-evolving loop based on Self-Harness (arXiv:2606.09498). Covers the three phases -- Weakness Mining, Harness Proposal, Proposal Validation -- along with the anti-hallucination gate, the hermes/autoimprove/auto-distill skill ecosystem, and the path to productization as Praxis Curator."
+seo_description: "A real-world implementation of a nightly self-evolving loop based on Self-Harness (arXiv:2606.09498). Covers the three phases -- Weakness Mining, Harness Proposal, Proposal Validation -- along with the anti-hallucination gate, the hermes/autoimprove/auto-distill skill ecosystem, and the path to productization as Paxis Curator."
 date: 2026-06-22
 last_modified_at: 2026-06-22
 categories:
@@ -37,7 +37,7 @@ ThakiCloud built a nightly self-evolving loop to answer these questions head-on.
 
 ThakiCloud is running this vision as a live operational loop. Two autonomous tasks execute sequentially every midnight. The first, `selfharness-evolve`, starts at 00:00 and mines agent failure traces from the past 24 hours to improve the harness itself. The second, `skill-evolution`, starts at 00:15 and generates new skills and improves existing ones. Both tasks are launched unattended by local launchd, with the most powerful reasoning model -- Opus -- handling all judgments.
 
-This article explains the principles behind that nightly loop: which safeguards block hallucinations, how the several mechanisms of skill evolution cooperate, and how this will be productized as the Curator daemon on the Praxis platform.
+This article explains the principles behind that nightly loop: which safeguards block hallucinations, how the several mechanisms of skill evolution cooperate, and how this will be productized as the Curator daemon on the Paxis platform.
 
 ## Learning from Yesterday's Failures: Weakness Mining
 
@@ -125,9 +125,9 @@ These three skills operate at different timescales and complement each other. `a
 
 `selfharness-evolve` is responsible for the harness itself -- the foundation on which everything else runs. No matter how well a skill is written, if the harness that executes it carries failure patterns, the results will deteriorate repeatedly. Harness evolution is a prerequisite for skill evolution.
 
-## Productization as Praxis Curator
+## Productization as Paxis Curator
 
-ThakiCloud's AI operations platform, Praxis, is implementing this nightly self-evolving loop as a production-grade daemon. Curator transforms a solo researcher's local experiment into a service that every organization can use on a multi-tenant platform.
+ThakiCloud's AI operations platform, Paxis, is implementing this nightly self-evolving loop as a production-grade daemon. Curator transforms a solo researcher's local experiment into a service that every organization can use on a multi-tenant platform.
 
 Curator performs four core functions.
 
@@ -165,4 +165,4 @@ While acknowledging these limitations, ThakiCloud believes this direction is the
 
 Every night, the system prepares a tomorrow that is a little better than today. Without an engineer present, without explicit instructions, an AI harness that learns from failure and improves itself. Quiet, compounding improvement becomes the system's competitive advantage. This is the operational future ThakiCloud is building.
 
-If you are interested in the Self-Harness paper (arXiv:2606.09498) and the Praxis platform, you can find more details at the [ThakiCloud official site](https://thakicloud.co.kr).
+If you are interested in the Self-Harness paper (arXiv:2606.09498) and the Paxis platform, you can find more details at the [ThakiCloud official site](https://thakicloud.co.kr).

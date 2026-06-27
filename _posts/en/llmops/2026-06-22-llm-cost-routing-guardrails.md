@@ -1,6 +1,6 @@
 ---
 title: "How We Controlled LLM Operating Costs with Routing and Guardrails - Lessons from a $705/Day Incident"
-excerpt: "We honestly disclose a $705 single-day billing incident and prove with numbers the root cause found in a one-month audit (Opus main session at 90.3%) along with the remedies: model routing, retro-based escalation, cron offloading, and context hygiene. Includes the path to productization with Praxis's cost-aware router."
+excerpt: "We honestly disclose a $705 single-day billing incident and prove with numbers the root cause found in a one-month audit (Opus main session at 90.3%) along with the remedies: model routing, retro-based escalation, cron offloading, and context hygiene. Includes the path to productization with Paxis's cost-aware router."
 seo_title: "LLM Cost Optimization in Practice: How Model Routing and Guardrails Prevent a $705/Day Incident - Thaki Cloud"
 seo_description: "We disclose a $705 single-day Claude Opus overuse incident and a one-month $4,691 audit. We explain with numbers and code the cost control mechanisms we actually run in production: model routing, retro-based automatic escalation, cron offloading, and context hygiene."
 date: 2026-06-22
@@ -33,7 +33,7 @@ All nine sessions were running on Opus. One monitoring session alone ran for 9.4
 
 It didn't take long to identify the cause. It was not a cache-miss problem. It was the result of a massive context accumulating repeated turns, multiplied by Opus pricing (input $15/MTok, output $75/MTok).
 
-This post honestly discloses the results of a one-month cost audit triggered by that incident, along with four control mechanisms we actually run in production. At the end, we explain how this operational knowledge was productized in ThakiCloud Praxis and AI Platform.
+This post honestly discloses the results of a one-month cost audit triggered by that incident, along with four control mechanisms we actually run in production. At the end, we explain how this operational knowledge was productized in ThakiCloud Paxis and AI Platform.
 
 ---
 
@@ -167,11 +167,11 @@ Within a session, never re-read a file already read. Write large tool outputs to
 
 ---
 
-## Praxis, AI Platform: Productizing Operational Knowledge
+## Paxis, AI Platform: Productizing Operational Knowledge
 
 This operational experience translated into two ThakiCloud products.
 
-**Praxis's cost-aware LLM router** automatically switches to lower-cost models as budget headroom decreases. The per-step automatic model selection logic described above is implemented at the product level. When 70% of monthly budget is consumed, the default model drops to Sonnet; above 90%, it falls back to Haiku. Quality-threshold skills are pinned and excluded from demotion.
+**Paxis's cost-aware LLM router** automatically switches to lower-cost models as budget headroom decreases. The per-step automatic model selection logic described above is implemented at the product level. When 70% of monthly budget is consumed, the default model drops to Sonnet; above 90%, it falls back to Haiku. Quality-threshold skills are pinned and excluded from demotion.
 
 **AI Platform's cost tracking and quota control** aggregates LLM costs separately per team and project. The platform performs auditing equivalent to cost_audit.py automatically, and sends an alert when a particular team's Opus usage share exceeds a threshold. It applies the same mindset as coordinating GPU workloads with Kubernetes Kueue -- to LLM token budgets.
 
@@ -208,4 +208,4 @@ Following this sequence, the $705/day incident will not recur. At the same time,
 
 ---
 
-ThakiCloud is incorporating this operational experience into Praxis and AI Platform. If you are curious about how cost-aware LLM routing works as a product, contact us at [hello@thakicloud.co.kr](mailto:hello@thakicloud.co.kr).
+ThakiCloud is incorporating this operational experience into Paxis and AI Platform. If you are curious about how cost-aware LLM routing works as a product, contact us at [hello@thakicloud.co.kr](mailto:hello@thakicloud.co.kr).
