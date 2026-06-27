@@ -45,8 +45,28 @@ Claude Code عميل برمجي قوي. غير أن بنيته القائمة ع
 
 لنتوسع قليلاً في سبب صعوبة التوحيد: يفترض Claude Code بنية استجابة خاصة بـ Anthropic؛ فخطوات الاستدلال تأتي ككتل `thinking`، واستدعاءات الأدوات ككتل محتوى `tool_use`. لكن DeepSeek يُصدر الاستدلال كحقل منفصل، في حين تُعيد المزودين المتوافقين مع OpenAI استدعاءات الأدوات كمصفوفة `tool_calls`. المعنى واحد وهو "استُدعيت أداة"، لكن صيغة السلك تختلف في كل حالة. يجب على المُوحِّد استيعاب هذه الفوارق وضمان حصول Claude Code على استجابات بشكل متطابق بغض النظر عن الخلفية المستخدمة. يذهب مسار Codex (`/v1/responses`) خطوة أبعد بتحويل طلبات OpenAI Responses داخلياً إلى Anthropic Messages قبل مشاركة الموجّه والمُوحِّد ومحوّلات المزودين ذاتها. أي أن تحويل البروتوكول يجري في الاتجاهين — وهذا هو الفارق الجوهري بين البروكسي العكسي البسيط وبروكسي التوجيه.
 
-![بنية توجيه free-claude-code](/assets/images/free-claude-code-router-diagram.png)
-*الشكل 1. يستقبل بروكسي FastAPI حركة المرور المتوافقة مع Anthropic من Claude Code ويوزعها على 17 مزوداً. من منظور ThakiCloud، المسارات الجوهرية هي الخلفيات المستضافة ذاتياً على اليمين (Ollama وLM Studio وvLLM).*
+```mermaid
+flowchart TB
+    CC["Claude Code<br/>(العميل)"]
+    CX["Codex<br/>(العميل)"]
+    FP["بروكسي FastAPI<br/>(خادم محلي)"]
+    EP1["/v1/messages<br/>متوافق مع Anthropic"]
+    EP2["/v1/responses<br/>متوافق مع OpenAI → تحويل"]
+    MR{"موجّه النماذج<br/>MODEL_OPUS / SONNET / HAIKU"}
+    NZ["طبقة التطبيع<br/>(thinking · tool_use · تحويل الأخطاء)"]
+    CLOUD["مزودو السحابة<br/>NVIDIA NIM · OpenRouter · Gemini<br/>DeepSeek · Mistral · Groq + 8 آخرون"]
+    SELF["خلفيات ذاتية الاستضافة<br/>Ollama · LM Studio<br/>llama.cpp / vLLM"]
+
+    CC --> EP1
+    CX --> EP2
+    EP1 --> FP
+    EP2 --> FP
+    FP --> MR
+    MR --> NZ
+    NZ --> CLOUD
+    NZ --> SELF
+```
+*يعترض بروكسي FastAPI طلبات Claude Code وCodex ويوجّهها حسب مستوى النموذج إلى 17 مزوداً. انقر المخطط لتكبيره.*
 
 المزودون المدعومون 17 مزوداً. على الجانب السحابي: NVIDIA NIM وOpenRouter وGoogle AI Studio (Gemini) وDeepSeek وMistral La Plateforme وMistral Codestral وOpenCode Zen وOpenCode Go وWafer وKimi وCerebras وGroq وFireworks وZ.ai. على **جانب الاستضافة الذاتية: LM Studio وllama.cpp وOllama**. الثلاثة الأخيرة هي ذات الأهمية من منظور ThakiCloud. إذ يكشف Ollama وllama.cpp نقاط نهاية متوافقة مع OpenAI، مما يعني أن خادم vLLM المنشور بالطريقة ذاتها على Kubernetes يمكن ربطه بنفس الأسلوب.
 

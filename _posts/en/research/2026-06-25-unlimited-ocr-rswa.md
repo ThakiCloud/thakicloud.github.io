@@ -37,7 +37,20 @@ At ThakiCloud, we run multi-tenant inference and document-processing workloads d
 
 Unlimited OCR is not a from-scratch model but one that pushes DeepSeek-OCR one step further. It keeps DeepSeek-OCR's strong **DeepEncoder** as its encoder and swaps only the decoder's attention for R-SWA.
 
-![Diagram of the Unlimited OCR DeepEncoder encoder and the R-SWA decoder](/assets/images/unlimited-ocr-rswa-diagram.png)
+```mermaid
+flowchart TB
+    A["Input Document<br/>(PDF, Image)"] --> B["SAM-ViT<br/>Feature Extraction"]
+    B --> C["CLIP-ViT<br/>16× Token Compression"]
+    C --> D["Visual Reference Tokens<br/>(256 per page)"]
+    D --> E{"R-SWA Attention"}
+    F["Sliding Window<br/>Recent Generated Text"] --> E
+    E --> G["MoE Decoder<br/>3B params / ~500M active"]
+    G --> H["Constant KV Cache<br/>(length-independent)"]
+    G --> I["Output Text<br/>(Markdown / Structured)"]
+    H -.maintained.-> E
+```
+
+*The DeepEncoder compresses each page to 256 visual tokens; the R-SWA decoder transcribes long documents in one shot with a constant KV cache. Click the diagram to enlarge.*
 *A high-compression encoder shrinks a page into a handful of visual tokens, and the R-SWA decoder generates long output with a constant KV cache.*
 
 **Encoder (DeepEncoder)**: SAM-ViT and CLIP-ViT are cascaded in series, applying 16x token compression. A single 1024x1024 PDF page compresses to just 256 visual tokens. Because the token count is already cut sharply on the input side, the amount of visual information the decoder must reference is small. This high-compression design works together with the constant KV cache discussed below to enable long-document processing.

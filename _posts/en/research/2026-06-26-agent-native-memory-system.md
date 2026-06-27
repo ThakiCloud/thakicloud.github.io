@@ -45,7 +45,31 @@ That framing hides exactly what an operator needs to know: how much **operationa
 
 The authors (Wei Zhou, Xuanhe Zhou, Guoliang Li, Zhiyu Li, Feiyu Xiong, and others, notably including database-systems researchers, which explains the paper's character) therefore study memory systematically from a **data-management perspective**. The core of that study is an analytical framework that decomposes agent memory into four modules.
 
-![Architecture diagram showing the four memory modules surrounding agent execution: Representation & Storage, Extraction, Retrieval & Routing, and Maintenance, with write, read, and consolidation flows](/assets/images/agent-native-memory-system-diagram.png)
+```mermaid
+flowchart TB
+    AE[Agent Execution]
+    EX[Extraction]
+    RS["Representation & Storage"]
+    RR["Retrieval & Routing"]
+    MA[Maintenance]
+    RF[Representation Fidelity]
+    RP[Retrieval Precision]
+    UC[Update Correctness]
+    LS[Long-horizon Stability]
+
+    AE -->|write| EX
+    EX --> RS
+    RS -->|read| RR
+    RR --> AE
+    RS -.consolidation.-> MA
+    MA --> RS
+    RS --> RF
+    RR --> RP
+    MA --> UC
+    MA --> LS
+```
+
+*The four-module architecture of an agent-native memory system and its data flows. Click the diagram to enlarge.*
 
 The four modules are as follows.
 

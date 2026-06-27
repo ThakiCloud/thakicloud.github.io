@@ -40,7 +40,20 @@ NVIDIA agent skills are a bundle of portable instructions that teach an agent ho
 
 The verification pipeline has eight stages. It begins at the source repository and flows through review, scanning, evaluation, skill-card generation, signing, catalogue registration, and synchronization. The pipeline runs on a daily sync cycle, and each stage must complete before the next begins.
 
-![Diagram of NVIDIA's 8-stage verification pipeline and the post-download signature-verification flow](/assets/images/nvidia-verified-agent-skills-diagram.png)
+```mermaid
+flowchart TB
+    A[Source repository] --> B[Review]
+    B --> C[Security scan<br/>SkillSpector]
+    C --> D[Evaluation]
+    D --> E[Skill card]
+    E --> F[OMS signing]
+    F --> G[Catalog listing]
+    G --> H[Daily sync]
+    H -. download .-> V{Signature verify<br/>model_signing}
+    V -->|hash match| OK[Verified<br/>deploy proceeds]
+    V -->|hash mismatch| NG[Tamper detected<br/>deploy blocked]
+```
+*NVIDIA's 8-stage verification pipeline and the post-download signature-verification flow. Click the diagram to enlarge.*
 
 Three axes hold this structure together.
 

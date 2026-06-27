@@ -45,8 +45,28 @@ When a request arrives, a **model router** decides which provider to send it to,
 
 To elaborate on why normalization is difficult: Claude Code assumes Anthropic's own response structure. For instance, reasoning steps arrive as `thinking` blocks and tool calls as `tool_use` content blocks. DeepSeek, however, exports reasoning as a separate field, and OpenAI-compatible providers return tool calls as a `tool_calls` array. Even though they all mean "a tool was called," the wire format differs in each case. The normalizer must absorb these differences and ensure Claude Code receives identically shaped responses regardless of which backend is used. The Codex path (`/v1/responses`) goes one step further, converting OpenAI Responses requests internally to Anthropic Messages before sharing the same router, normalizer, and provider adapters. This means protocol conversion happens in both directions — the key distinction between a simple reverse proxy and a routing proxy.
 
-![free-claude-code routing architecture](/assets/images/free-claude-code-router-diagram.png)
-*Figure 1. The FastAPI proxy receives Anthropic-compatible traffic from Claude Code and routes it to 17 providers. From ThakiCloud's perspective, the important paths are the self-hosted backends on the right (Ollama, LM Studio, vLLM).*
+```mermaid
+flowchart TB
+    CC["Claude Code<br/>(client)"]
+    CX["Codex<br/>(client)"]
+    FP["FastAPI Proxy<br/>(local server)"]
+    EP1["/v1/messages<br/>Anthropic-compatible"]
+    EP2["/v1/responses<br/>OpenAI-compatible → converted"]
+    MR{"Model Router<br/>MODEL_OPUS / SONNET / HAIKU"}
+    NZ["Normalizer<br/>(thinking · tool_use · error transform)"]
+    CLOUD["Cloud Providers<br/>NVIDIA NIM · OpenRouter · Gemini<br/>DeepSeek · Mistral · Groq + 8 more"]
+    SELF["Self-hosted Backends<br/>Ollama · LM Studio<br/>llama.cpp / vLLM"]
+
+    CC --> EP1
+    CX --> EP2
+    EP1 --> FP
+    EP2 --> FP
+    FP --> MR
+    MR --> NZ
+    NZ --> CLOUD
+    NZ --> SELF
+```
+*The FastAPI proxy intercepts Claude Code and Codex requests and routes them by model tier to 17 providers. Click the diagram to enlarge.*
 
 The supported providers number 17. On the cloud side: NVIDIA NIM, OpenRouter, Google AI Studio (Gemini), DeepSeek, Mistral La Plateforme, Mistral Codestral, OpenCode Zen, OpenCode Go, Wafer, Kimi, Cerebras, Groq, Fireworks, and Z.ai. On the **self-hosted side: LM Studio, llama.cpp, and Ollama**. The last three are the meaningful ones from ThakiCloud's perspective. Since Ollama and llama.cpp expose OpenAI-compatible endpoints, a vLLM server deployed the same way on Kubernetes can be attached identically.
 

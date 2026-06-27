@@ -45,7 +45,31 @@ reading_time: true
 
 لذلك أجرى المؤلفون، وهم Wei Zhou وXuanhe Zhou وGuoliang Li وZhiyu Li وFeiyu Xiong وآخرون، ولافتٌ أن في صفوفهم باحثين متخصصين في أنظمة قواعد البيانات مما يشكّل هوية الورقة، تجارب منهجية على الذاكرة **من منظور إدارة البيانات**. ويتجسد هذا في إطار تحليلي يُفكّك ذاكرة الوكيل إلى أربع وحدات جوهرية.
 
-![مخطط هيكلي يُبيّن الوحدات الأربع للذاكرة المحيطة بتنفيذ الوكيل (التمثيل والتخزين، الاستخراج، الاسترجاع والتوجيه، الصيانة)، مع تدفقات الكتابة والقراءة والدمج](/assets/images/agent-native-memory-system-diagram.png)
+```mermaid
+flowchart TB
+    AE[تنفيذ الوكيل<br/>Agent Execution]
+    EX[الاستخراج<br/>Extraction]
+    RS["التمثيل والتخزين<br/>Representation & Storage"]
+    RR["الاسترجاع والتوجيه<br/>Retrieval & Routing"]
+    MA[الصيانة<br/>Maintenance]
+    RF[دقة التمثيل<br/>Representation Fidelity]
+    RP[دقة الاسترجاع<br/>Retrieval Precision]
+    UC[دقة التحديث<br/>Update Correctness]
+    LS[الاستقرار طويل الأمد<br/>Long-horizon Stability]
+
+    AE -->|كتابة| EX
+    EX --> RS
+    RS -->|قراءة| RR
+    RR --> AE
+    RS -.دمج.-> MA
+    MA --> RS
+    RS --> RF
+    RR --> RP
+    MA --> UC
+    MA --> LS
+```
+
+*البنية المعمارية للوحدات الأربع لنظام الذاكرة الأصيل للوكيل وتدفقات بياناتها. انقر المخطط لتكبيره.*
 
 الوحدات الأربع هي:
 

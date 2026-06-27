@@ -44,8 +44,21 @@ Headroom routes to a different compressor per content type. In this experiment t
 
 The diagram below is the data flow we observed. Tool output passes through the router into SmartCrusher, and while the compressed context goes to the LLM call, the original is stored separately for reversible restoration when needed.
 
-![Headroom pipeline diagram](/assets/images/headroom-reversible-context-compression-diagram.png)
-*Tool output → Content-Type Router → SmartCrusher → compressed context → LLM. The original is kept with a breadcrumb hash and TTL to preserve a reversible restoration path. (Labels are in Korean in the rendered image.)*
+```mermaid
+flowchart TB
+    A[Tool Output] --> B[Content-Type Router]
+    B --> C{Content Type Branch}
+    C -->|JSON arrays / nested objects| D[SmartCrusher<br/>Deterministic JSON Compression]
+    C -->|Source code| E[Code Compressor]
+    C -->|Images| F[Image Compressor]
+    D --> G[Compressed Context]
+    E --> G
+    F --> G
+    G --> H[LLM Call]
+    A -.breadcrumb hash + TTL.-> I[(Original Store<br/>Reversible Store)]
+    I -.reversible restore.-> H
+```
+*Headroom data flow: tool output is routed through a content-type router, compressed by SmartCrusher, and delivered to the LLM — while the original is held in a reversible store with TTL. Click the diagram to enlarge.*
 
 ## Install and Integration
 
