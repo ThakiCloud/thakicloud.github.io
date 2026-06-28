@@ -18,9 +18,10 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/llmops/skypilot-comprehensive-ai-workload-management-platform/"
+canonical_url: "https://thakicloud.github.io/ar/llmops/skypilot-comprehensive-ai-workload-management-platform-ar/"
 lang: ar
 permalink: /ar/llmops/skypilot-comprehensive-ai-workload-management-platform/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

@@ -82,6 +82,19 @@ canonical_url: "https://thakicloud.github.io/ko/news/gpu-overinvestment-ai-agent
 
 빅테크의 GPU 과투자는 거품일 수도, 합리적 보험일 수도 있습니다. 그러나 이를 "비대칭 보상 구조에 대한 합리적 반응 + 다음 세대 톨게이트 선점 경쟁"으로 읽으면, 단순한 광기보다 훨씬 정교한 구조적 강제가 보입니다. 그리고 그 경쟁의 반대편에는, 톨게이트에 종속되기를 원치 않는 엔터프라이즈 수요가 형성되고 있습니다. ThakiCloud는 그 자리를 위해 만들어진 인프라입니다.
 
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 1](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-01.png)
+
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 2](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-02.png)
+
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 3](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-03.png)
+
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 4](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-04.png)
+
 ## 출처
 
 - 원 분석 스레드: [@Tesla_Teslaway (X)](https://x.com/Tesla_Teslaway/status/2070414320631173429)

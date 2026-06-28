@@ -25,6 +25,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/ai-researcher-autonomous-scientific-innovation-analysis/"
 reading_time: true
 lang: en
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 12 min
