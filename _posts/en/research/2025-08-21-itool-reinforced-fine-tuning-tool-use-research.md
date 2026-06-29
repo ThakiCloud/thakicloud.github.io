@@ -155,31 +155,31 @@ The following diagram illustrates the complete iTool training pipeline:
 
 ```mermaid
 graph TD
-    A[초기 모델] --> B[Easy-to-Hard 워밍업 SFT]
-    B --> C[복잡 데이터 식별]
-    C --> D[MCTS 기반 경로 탐색]
-    D --> E[다양한 응답 경로 생성]
-    E --> F[Q-값 평가]
-    F --> G[선호도 쌍 구성]
-    G --> H[선택된 응답 vs 거부된 응답]
-    H --> I[DPO/SimPO 최적화]
-    I --> J[모델 업데이트]
-    J --> K{수렴 여부 확인}
+    A[Initial Model] --> B[Easy-to-Hard Warmup SFT]
+    B --> C[Complex Data Identification]
+    C --> D[MCTS-Based Path Search]
+    D --> E[Diverse Response Path Generation]
+    E --> F[Q-Value Evaluation]
+    F --> G[Preference Pair Construction]
+    G --> H[Chosen Response vs Rejected Response]
+    H --> I[DPO/SimPO Optimization]
+    I --> J[Model Update]
+    J --> K{Check Convergence}
     K -->|No| C
-    K -->|Yes| L[최종 iTool 모델]
+    K -->|Yes| L[Final iTool Model]
     
-    subgraph "MCTS 세부 과정"
-        D1[루트 노드] --> D2[액션 선택]
-        D2 --> D3[확장]
-        D3 --> D4[시뮬레이션]
-        D4 --> D5[백프로파게이션]
+    subgraph "MCTS Detail Process"
+        D1[Root Node] --> D2[Action Selection]
+        D2 --> D3[Expansion]
+        D3 --> D4[Simulation]
+        D4 --> D5[Backpropagation]
         D5 --> D2
     end
     
-    subgraph "선호도 최적화 과정"
-        I1[정답 응답 선호도 증가]
-        I2[오류 응답 선호도 감소]
-        I3[단편적 결함 보정]
+    subgraph "Preference Optimization Process"
+        I1[Increase Preference for Correct Responses]
+        I2[Decrease Preference for Erroneous Responses]
+        I3[Fragment Deficiency Correction]
     end
 ```
 

@@ -41,18 +41,18 @@ The real value of the map is the answer to one question: when does each componen
 
 ```mermaid
 flowchart TB
-    ROOT["프로젝트 루트"]
-    ROOT --> BRAIN["CLAUDE.md<br/>프로젝트 브레인<br/>(매 세션 자동 로드)"]
-    ROOT --> LOCAL["CLAUDE.local.md<br/>개인 오버라이드<br/>(gitignore)"]
-    ROOT --> IGNORE[".claudeignore<br/>컨텍스트 경계"]
-    ROOT --> MCP[".mcp.json<br/>외부 도구 연결"]
+    ROOT["Project Root"]
+    ROOT --> BRAIN["CLAUDE.md<br/>Project Brain<br/>(auto-loaded every session)"]
+    ROOT --> LOCAL["CLAUDE.local.md<br/>Personal Override<br/>(gitignore)"]
+    ROOT --> IGNORE[".claudeignore<br/>Context Boundary"]
+    ROOT --> MCP[".mcp.json<br/>External Tool Connections"]
     ROOT --> DOTC[".claude/"]
-    DOTC --> SET["settings.json<br/>권한·훅·환경변수"]
-    DOTC --> RULES["rules/<br/>상시 규칙<br/>(매 턴 로드)"]
-    DOTC --> SKILLS["skills/<br/>온디맨드 전문지식<br/>(요청 시 로드)"]
-    DOTC --> AGENTS["agents/<br/>서브에이전트 정의"]
-    DOTC --> MEM["agent-memory/<br/>에이전트가 학습한 지식"]
-    DOTC --> WT["worktrees/<br/>병렬 격리"]
+    DOTC --> SET["settings.json<br/>Permissions · Hooks · Env Vars"]
+    DOTC --> RULES["rules/<br/>Always-on Constraints<br/>(loaded every turn)"]
+    DOTC --> SKILLS["skills/<br/>On-demand Expertise<br/>(loaded on request)"]
+    DOTC --> AGENTS["agents/<br/>Subagent Definitions"]
+    DOTC --> MEM["agent-memory/<br/>Knowledge Learned by Agents"]
+    DOTC --> WT["worktrees/<br/>Parallel Isolation"]
 ```
 *Claude Code project components organized by load timing. Click to enlarge.*
 
@@ -80,18 +80,18 @@ You can have the map memorized and still hesitate when it is time to add a new r
 
 ```mermaid
 flowchart TB
-    START["새 지식·규칙·워크플로 추가"]
-    START --> Q1{"항상 적용 +<br/>전체 팀 공유?"}
-    Q1 -->|예| CMD["CLAUDE.md (짧게)<br/>또는 .claude/rules/"]
-    Q1 -->|아니오| Q2{"가끔만 필요한<br/>전문 워크플로?"}
-    Q2 -->|예| SK[".claude/skills/"]
-    Q2 -->|아니오| Q3{"독립 역할·<br/>도구 조합?"}
-    Q3 -->|예| AG[".claude/agents/"]
-    Q3 -->|아니오| Q4{"개인 환경<br/>특이사항?"}
-    Q4 -->|예| LO["CLAUDE.local.md<br/>(gitignore)"]
-    Q4 -->|아니오| Q5{"에이전트가<br/>경험으로 배운 것?"}
-    Q5 -->|예| ME[".claude/agent-memory/"]
-    Q5 -->|아니오| PL["plugins/<br/>(여러 프로젝트 배포)"]
+    START["Adding New Knowledge · Rule · Workflow"]
+    START --> Q1{"Always applied +<br/>shared across team?"}
+    Q1 -->|Yes| CMD["CLAUDE.md (concise)<br/>or .claude/rules/"]
+    Q1 -->|No| Q2{"Occasional specialized<br/>workflow?"}
+    Q2 -->|Yes| SK[".claude/skills/"]
+    Q2 -->|No| Q3{"Independent role ·<br/>tool combination?"}
+    Q3 -->|Yes| AG[".claude/agents/"]
+    Q3 -->|No| Q4{"Personal environment<br/>specifics?"}
+    Q4 -->|Yes| LO["CLAUDE.local.md<br/>(gitignore)"]
+    Q4 -->|No| Q5{"Something an agent<br/>learned through experience?"}
+    Q5 -->|Yes| ME[".claude/agent-memory/"]
+    Q5 -->|No| PL["plugins/<br/>(deploy across multiple projects)"]
 ```
 *Placement decision tree for new knowledge. The questions run in order: is this always needed, is it occasional expertise, does it define an independent role, is it personal, or is it something an agent learned?*
 

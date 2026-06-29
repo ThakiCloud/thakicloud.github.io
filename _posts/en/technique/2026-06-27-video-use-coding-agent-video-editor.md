@@ -48,23 +48,23 @@ This design is fundamentally different from the common approach of "generate a v
 
 ```mermaid
 flowchart TB
-    A[원본 영상 폴더<br/>+ 한 문장 지시] --> B[에이전트: 의도 분해]
-    B --> C[컷 편집<br/>구간 선택]
-    B --> D[필러 워드 제거<br/>음성 분석]
-    B --> E[자막 생성<br/>음성 인식]
-    B --> F[색보정<br/>톤 통일]
-    B --> G[애니메이션 오버레이]
-    G --> G1[서브에이전트 1<br/>HyperFrames]
-    G --> G2[서브에이전트 2<br/>Remotion]
-    G --> G3[서브에이전트 3<br/>Manim / PIL]
-    C --> H[타임라인 조립]
+    A[Raw Footage Folder<br/>+ One-sentence Instruction] --> B[Agent: Intent Decomposition]
+    B --> C[Cut Editing<br/>Segment Selection]
+    B --> D[Filler Word Removal<br/>Audio Analysis]
+    B --> E[Subtitle Generation<br/>Speech Recognition]
+    B --> F[Color Grading<br/>Tone Unification]
+    B --> G[Animation Overlays]
+    G --> G1[Sub-agent 1<br/>HyperFrames]
+    G --> G2[Sub-agent 2<br/>Remotion]
+    G --> G3[Sub-agent 3<br/>Manim / PIL]
+    C --> H[Timeline Assembly]
     D --> H
     E --> H
     F --> H
     G1 --> H
     G2 --> H
     G3 --> H
-    H --> I[최종 MP4 렌더링]
+    H --> I[Final MP4 Rendering]
 ```
 
 *How video-use decomposes editing into cuts, subtitles, color grading, and animation, spawns a sub-agent per animation in parallel, then merges them into a single timeline. (Diagram labels in Korean, shared across languages.)*

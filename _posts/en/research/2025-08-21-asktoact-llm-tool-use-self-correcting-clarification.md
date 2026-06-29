@@ -130,35 +130,35 @@ User: Why is that relevant? All I need is email validation.
 
 ```mermaid
 graph TD
-    A["기존 도구 학습 데이터셋"] --> B["매개변수 식별 및 중요도 평가"]
-    B --> C["핵심 매개변수 선택적 제거"]
-    C --> D["미명시 쿼리 생성"]
+    A["Existing Tool-Learning Dataset"] --> B["Parameter Identification & Importance Evaluation"]
+    B --> C["Selective Removal of Key Parameters"]
+    C --> D["Underspecified Query Generation"]
     
-    D --> E["작업 분해"]
-    E --> F["명확화 질문 생성"]
-    F --> G["다중턴 대화 조립"]
+    D --> E["Task Decomposition"]
+    E --> F["Clarification Question Generation"]
+    F --> G["Multi-turn Dialogue Assembly"]
     
-    G --> H["기본 명확화 데이터셋"]
-    H --> I["오류-교정 쌍 생성"]
-    I --> J["4가지 오류 유형<br/>• 중복 질문<br/>• 무관한 질문<br/>• 누락된 질문<br/>• 부정확한 해석"]
+    G --> H["Base Clarification Dataset"]
+    H --> I["Error-Correction Pair Generation"]
+    I --> J["4 Error Types<br/>• Redundant questions<br/>• Irrelevant questions<br/>• Missing questions<br/>• Inaccurate interpretation"]
     
-    J --> K["오류-교정 데이터 보강"]
-    H --> L["원본 대화 데이터"]
-    K --> M["통합 훈련 데이터셋"]
+    J --> K["Error-Correction Data Augmentation"]
+    H --> L["Original Dialogue Data"]
+    K --> M["Integrated Training Dataset"]
     L --> M
     
-    M --> N["선택적 마스킹 적용"]
-    N --> O["오류 턴: 손실 계산 제외"]
-    N --> P["교정 턴: 정상 학습"]
+    M --> N["Selective Masking Applied"]
+    N --> O["Error turns: excluded from loss computation"]
+    N --> P["Correction turns: normal learning"]
     
-    O --> Q["LoRA 기반 파인튜닝"]
+    O --> Q["LoRA-based Fine-tuning"]
     P --> Q
-    Q --> R["AskToAct 모델"]
+    Q --> R["AskToAct Model"]
     
-    R --> S["실시간 대화"]
-    S --> T["의도 명확화"]
-    T --> U["자기교정 메커니즘"]
-    U --> V["정확한 도구 호출"]
+    R --> S["Real-time Conversation"]
+    S --> T["Intent Clarification"]
+    T --> U["Self-correcting Mechanism"]
+    U --> V["Accurate Tool Calls"]
     
     style A fill:#e1f5fe
     style D fill:#f3e5f5

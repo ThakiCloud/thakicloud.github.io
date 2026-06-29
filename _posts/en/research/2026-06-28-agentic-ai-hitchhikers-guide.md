@@ -44,11 +44,11 @@ The guide's scope, compressed into four layers:
 
 ```mermaid
 flowchart TB
-    A["1. LLM 기질<br/>트랜스포머 · GPU 시스템<br/>SFT · LoRA · MoE · 압축 · 추론 최적화"] --> B["2. 정렬과 추론<br/>RLHF · PPO · DPO · GRPO<br/>보상 모델링 · CoT · 테스트타임 스케일링"]
-    B --> C["3. 에이전트 시스템<br/>궤적 기반 RL · RAG / Agentic RAG<br/>메모리 · MCP · 스킬/도구 · A2A · 멀티에이전트"]
-    C --> D["4. 배포와 평가<br/>에이전트 프레임워크 · 에이전트 UI<br/>평가 방법론 · 프로덕션 배포"]
-    D -.피드백.-> C
-    C -.재학습 신호.-> B
+    A["1. LLM Substrate<br/>Transformers · GPU Systems<br/>SFT · LoRA · MoE · Compression · Inference Optimization"] --> B["2. Alignment & Reasoning<br/>RLHF · PPO · DPO · GRPO<br/>Reward Modeling · CoT · Test-Time Scaling"]
+    B --> C["3. Agent Systems<br/>Trajectory-Based RL · RAG / Agentic RAG<br/>Memory · MCP · Skills/Tools · A2A · Multi-Agent"]
+    C --> D["4. Deployment & Evaluation<br/>Agent Frameworks · Agent UI<br/>Evaluation Methodology · Production Deployment"]
+    D -.Feedback.-> C
+    C -.Retraining Signal.-> B
 ```
 
 We walk through each layer below.

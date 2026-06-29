@@ -64,27 +64,27 @@ The [GitHub repository](https://github.com/HKUDS/AI-Researcher) has earned **ove
 
 ```mermaid
 graph TD
-    A["🚀 AI-Researcher<br/>Main System"] --> B["📚 Research Agent<br/>(연구 수행)"]
-    A --> C["✍️ Paper Agent<br/>(논문 작성)"]
-    A --> D["📊 Benchmark Suite<br/>(평가 시스템)"]
+    A["🚀 AI-Researcher<br/>Main System"] --> B["📚 Research Agent<br/>(Research Execution)"]
+    A --> C["✍️ Paper Agent<br/>(Paper Writing)"]
+    A --> D["📊 Benchmark Suite<br/>(Evaluation System)"]
     
-    B --> E["📖 Literature Review<br/>(문헌 조사)"]
-    B --> F["🔍 Gap Analysis<br/>(연구 갭 분석)"]
-    B --> G["💡 Idea Generation<br/>(아이디어 생성)"]
-    B --> H["🧪 Experiment Design<br/>(실험 설계)"]
-    B --> I["⚡ Implementation<br/>(구현 및 검증)"]
+    B --> E["📖 Literature Review<br/>(Literature Survey)"]
+    B --> F["🔍 Gap Analysis<br/>(Research Gap Analysis)"]
+    B --> G["💡 Idea Generation<br/>(Idea Generation)"]
+    B --> H["🧪 Experiment Design<br/>(Experiment Design)"]
+    B --> I["⚡ Implementation<br/>(Implementation & Validation)"]
     
-    C --> J["📝 Abstract Generation<br/>(초록 생성)"]
-    C --> K["📄 Content Writing<br/>(본문 작성)"]
-    C --> L["📈 Result Analysis<br/>(결과 분석)"]
-    C --> M["🔗 Citation Management<br/>(참고문헌 관리)"]
+    C --> J["📝 Abstract Generation<br/>(Abstract Generation)"]
+    C --> K["📄 Content Writing<br/>(Body Writing)"]
+    C --> L["📈 Result Analysis<br/>(Result Analysis)"]
+    C --> M["🔗 Citation Management<br/>(Reference Management)"]
     
-    D --> N["🎯 CV Domain<br/>(컴퓨터 비전)"]
-    D --> O["🔤 NLP Domain<br/>(자연어 처리)"]
-    D --> P["📊 DM Domain<br/>(데이터 마이닝)"]
-    D --> Q["🔍 IR Domain<br/>(정보 검색)"]
+    D --> N["🎯 CV Domain<br/>(Computer Vision)"]
+    D --> O["🔤 NLP Domain<br/>(Natural Language Processing)"]
+    D --> P["📊 DM Domain<br/>(Data Mining)"]
+    D --> Q["🔍 IR Domain<br/>(Information Retrieval)"]
     
-    E --> R["🧠 Global State<br/>(전역 상태 관리)"]
+    E --> R["🧠 Global State<br/>(Global State Management)"]
     F --> R
     G --> R
     H --> R
@@ -107,50 +107,50 @@ AI-Researcher consists of three core components:
 
 ```mermaid
 flowchart TD
-    START["🎬 시작: 연구 주제 입력"] --> LEVEL{"연구 레벨 선택"}
+    START["🎬 Start: Research Topic Input"] --> LEVEL{"Select Research Level"}
     
-    LEVEL -->|Level 1<br/>기존 아이디어 활용| L1_SURVEY["📚 기존 아이디어로<br/>문헌 조사 시작"]
-    LEVEL -->|Level 2<br/>새로운 아이디어 생성| L2_PAPERS["📄 참고 논문만으로<br/>아이디어 생성"]
+    LEVEL -->|Level 1<br/>Using Existing Ideas| L1_SURVEY["📚 Literature Review<br/>Starting from Existing Ideas"]
+    LEVEL -->|Level 2<br/>Generating New Ideas| L2_PAPERS["📄 Idea Generation<br/>from Reference Papers Only"]
     
-    L1_SURVEY --> EXPERIMENT["🧪 실험 설계 및 구현"]
-    L2_PAPERS --> IDEA_GEN["💡 새로운 연구<br/>아이디어 생성"]
+    L1_SURVEY --> EXPERIMENT["🧪 Experiment Design & Implementation"]
+    L2_PAPERS --> IDEA_GEN["💡 New Research<br/>Idea Generation"]
     IDEA_GEN --> EXPERIMENT
     
-    EXPERIMENT --> CODE_IMPL["⚙️ 알고리즘<br/>코드 구현"]
-    CODE_IMPL --> VALIDATION["✅ 결과 검증<br/>및 분석"]
-    VALIDATION --> REFINEMENT["🔧 코드 최적화<br/>및 개선"]
+    EXPERIMENT --> CODE_IMPL["⚙️ Algorithm<br/>Code Implementation"]
+    CODE_IMPL --> VALIDATION["✅ Result Validation<br/>& Analysis"]
+    VALIDATION --> REFINEMENT["🔧 Code Optimization<br/>& Improvement"]
     
-    REFINEMENT --> PAPER_GEN["📝 논문 생성 시작"]
-    PAPER_GEN --> HIERARCHICAL["🏗️ 계층적 글쓰기<br/>접근법 적용"]
+    REFINEMENT --> PAPER_GEN["📝 Paper Generation Start"]
+    PAPER_GEN --> HIERARCHICAL["🏗️ Hierarchical Writing<br/>Approach Applied"]
     
-    HIERARCHICAL --> SECTIONS["📋 논문 섹션별 작성"]
-    SECTIONS --> INTRO["🎯 서론 및 동기"]
-    SECTIONS --> METHODS["🔬 방법론"]
-    SECTIONS --> RESULTS["📊 실험 결과"]
-    SECTIONS --> CONCLUSION["🎉 결론"]
+    HIERARCHICAL --> SECTIONS["📋 Paper Section Writing"]
+    SECTIONS --> INTRO["🎯 Introduction & Motivation"]
+    SECTIONS --> METHODS["🔬 Methodology"]
+    SECTIONS --> RESULTS["📊 Experimental Results"]
+    SECTIONS --> CONCLUSION["🎉 Conclusion"]
     
-    INTRO --> INTEGRATE["🔗 섹션 통합"]
+    INTRO --> INTEGRATE["🔗 Section Integration"]
     METHODS --> INTEGRATE
     RESULTS --> INTEGRATE
     CONCLUSION --> INTEGRATE
     
-    INTEGRATE --> REVIEW["👀 자동 검토<br/>및 품질 확인"]
-    REVIEW --> POLISH["✨ 최종 수정<br/>및 완성"]
+    INTEGRATE --> REVIEW["👀 Automated Review<br/>& Quality Check"]
+    REVIEW --> POLISH["✨ Final Revision<br/>& Completion"]
     
-    POLISH --> FINAL["🎊 완성된 논문<br/>출력"]
+    POLISH --> FINAL["🎊 Completed Paper<br/>Output"]
     
-    subgraph DOCKER["🐳 Docker 환경"]
+    subgraph DOCKER["🐳 Docker Environment"]
         CODE_IMPL
         VALIDATION
         REFINEMENT
     end
     
-    subgraph BENCHMARK["📏 벤치마크 평가"]
-        NOVELTY["🌟 참신성"]
-        EXPERIMENTAL["🔬 실험 완성도"]
-        THEORETICAL["📖 이론적 기반"]
-        ANALYSIS["📈 결과 분석"]
-        WRITING["✍️ 글쓰기 품질"]
+    subgraph BENCHMARK["📏 Benchmark Evaluation"]
+        NOVELTY["🌟 Novelty"]
+        EXPERIMENTAL["🔬 Experimental Completeness"]
+        THEORETICAL["📖 Theoretical Foundation"]
+        ANALYSIS["📈 Result Analysis"]
+        WRITING["✍️ Writing Quality"]
     end
     
     FINAL --> BENCHMARK
@@ -172,40 +172,40 @@ The system supports two research levels:
 
 ```mermaid
 graph LR
-    subgraph AI_MODELS["🤖 AI 모델 계층"]
+    subgraph AI_MODELS["🤖 AI Model Layer"]
         CLAUDE["🎭 Claude 3.5<br/>Sonnet/Haiku"]
         OPENAI["🧠 OpenAI<br/>GPT Models"]
         DEEPSEEK["🔍 DeepSeek<br/>Models"]
-        OTHERS["⚡ 기타 LLM<br/>Provider"]
+        OTHERS["⚡ Other LLM<br/>Providers"]
     end
     
-    subgraph CORE_SYSTEM["🎯 핵심 시스템"]
-        MAIN["🚀 main_ai_researcher.py<br/>(메인 오케스트레이터)"]
-        GLOBAL["🌐 global_state.py<br/>(전역 상태 관리)"]
-        WEB["🌍 web_ai_researcher.py<br/>(웹 인터페이스)"]
+    subgraph CORE_SYSTEM["🎯 Core System"]
+        MAIN["🚀 main_ai_researcher.py<br/>(Main Orchestrator)"]
+        GLOBAL["🌐 global_state.py<br/>(Global State Management)"]
+        WEB["🌍 web_ai_researcher.py<br/>(Web Interface)"]
     end
     
-    subgraph AGENTS["🤝 에이전트 시스템"]
-        RA["📚 Research Agent<br/>(연구 수행)"]
-        PA["✍️ Paper Agent<br/>(논문 작성)"]
-        EA["📊 Evaluator Agent<br/>(평가 수행)"]
+    subgraph AGENTS["🤝 Agent System"]
+        RA["📚 Research Agent<br/>(Research Execution)"]
+        PA["✍️ Paper Agent<br/>(Paper Writing)"]
+        EA["📊 Evaluator Agent<br/>(Evaluation)"]
     end
     
-    subgraph EXECUTION["⚙️ 실행 환경"]
+    subgraph EXECUTION["⚙️ Execution Environment"]
         DOCKER["🐳 Docker<br/>Container"]
         SCRIPTS["📜 Shell Scripts<br/>(run_infer_*.sh)"]
         PYTHON["🐍 Python<br/>Environment"]
         GPU["💾 GPU Support<br/>(CUDA)"]
     end
     
-    subgraph BENCHMARK["📏 벤치마크 시스템"]
+    subgraph BENCHMARK["📏 Benchmark System"]
         EVAL_DATA["📊 Evaluation<br/>Datasets"]
         METRICS["📈 Performance<br/>Metrics"]
         DOMAINS["🎯 Multi-Domain<br/>Testing"]
         GROUND_TRUTH["✅ Expert<br/>Ground Truth"]
     end
     
-    subgraph OUTPUT["📤 결과물"]
+    subgraph OUTPUT["📤 Outputs"]
         PAPERS["📄 Academic<br/>Papers"]
         CODE["💻 Research<br/>Code"]
         RESULTS["📊 Experimental<br/>Results"]
@@ -218,9 +218,9 @@ graph LR
     EXECUTION --> BENCHMARK
     BENCHMARK --> OUTPUT
     
-    RA --> |"문헌조사<br/>실험설계"| EXECUTION
-    PA --> |"논문작성<br/>구조화"| EXECUTION
-    EA --> |"품질평가<br/>검증"| BENCHMARK
+    RA --> |"Literature Review<br/>Experiment Design"| EXECUTION
+    PA --> |"Paper Writing<br/>Structuring"| EXECUTION
+    EA --> |"Quality Evaluation<br/>Validation"| BENCHMARK
     
     style AI_MODELS fill:#e3f2fd
     style CORE_SYSTEM fill:#f3e5f5

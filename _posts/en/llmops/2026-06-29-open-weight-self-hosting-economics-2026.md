@@ -62,15 +62,15 @@ Third, **open-weight models with self-hosting**. You pull the weights and serve 
 
 ```mermaid
 flowchart TD
-    A["워크로드 정의<br/>(처리량·지연·데이터 민감도)"] --> B{"지속적 고처리량인가?"}
-    B -->|"아니오 (스파이크·소량)"| C["프로프라이어터리 API<br/>또는 서드파티 호스팅"]
-    B -->|"예"| D{"데이터 주권·규제 요구가 있나?"}
-    D -->|"예"| E["오픈웨이트 self-hosting<br/>(온프레미스/사설 클러스터)"]
-    D -->|"아니오"| F{"실효 토큰 단가 손익분기를 넘기나?"}
-    F -->|"넘김"| E
-    F -->|"못 넘김"| C
-    E --> G["K8s GPU 서빙 운영<br/>(스케줄링·멀티테넌시·관측)"]
-    C --> H["가변비용 모니터링"]
+    A["Workload definition<br/>(throughput·latency·data sensitivity)"] --> B{"Is sustained high throughput needed?"}
+    B -->|"No (spiky·low volume)"| C["Proprietary API<br/>or third-party hosting"]
+    B -->|"Yes"| D{"Are there data sovereignty or regulatory requirements?"}
+    D -->|"Yes"| E["Open-weight self-hosting<br/>(on-premises/private cluster)"]
+    D -->|"No"| F{"Does effective per-token cost break even?"}
+    F -->|"Yes"| E
+    F -->|"No"| C
+    E --> G["K8s GPU serving operations<br/>(scheduling·multi-tenancy·observability)"]
+    C --> H["Variable cost monitoring"]
 ```
 
 The most common mistake in this decision flow is **collapsing stages two and three into a single line from a pricing table**. The real cost of self-hosting is not the weight download fee (which is zero for open-weight models). It is GPU procurement, the serving stack, scheduling, observability, and operational staff. "Open-weight is free" is therefore only half true. The model is free, but **the operations are not.** How cheaply and reliably you can run those operations is the actual substance of self-hosting economics.

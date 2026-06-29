@@ -39,17 +39,17 @@ The power of this idea is that it does not fight human behavior patterns. Most u
 
 ```mermaid
 flowchart TB
-    A[엔지니어 요청<br/>모델 미지정] --> B[LLM 게이트웨이]
-    B --> C{기본값 정책}
-    C -->|기존| D[비싼 프런티어 모델<br/>높은 토큰 단가]
-    C -->|변경 후| E[오픈웨이트 기본값<br/>GLM 5.2 / Kimi 2.7]
-    E --> F[작업 난이도 라우팅]
-    F -->|단순 반복| G[저렴한 모델]
-    F -->|고난도| H[프런티어 모델<br/>명시 선택]
-    B --> I[캐시 조회]
-    I -->|히트| J[캐시 응답<br/>토큰 0]
-    I -->|미스| F
-    G --> K[지출 평탄화]
+    A[Engineer request<br/>no model specified] --> B[LLM Gateway]
+    B --> C{Default policy}
+    C -->|Before| D[Expensive frontier model<br/>high token cost]
+    C -->|After change| E[Open-weight default<br/>GLM 5.2 / Kimi 2.7]
+    E --> F[Task difficulty routing]
+    F -->|Simple repetitive| G[Cheap model]
+    F -->|High complexity| H[Frontier model<br/>explicit selection]
+    B --> I[Cache lookup]
+    I -->|Hit| J[Cached response<br/>0 tokens]
+    I -->|Miss| F
+    G --> K[Spend flattened]
     H --> K
     J --> K
 ```

@@ -45,23 +45,23 @@ slime decomposes this loop into three components.
 
 ```mermaid
 flowchart TB
-    subgraph ROLLOUT["롤아웃 (SGLang + Router)"]
-        SGL["SGLang 추론 엔진<br/>응답 생성"]
-        RT["sgl-router<br/>OpenAI 호환 단일 엔드포인트"]
-        RW["보상 / verifier<br/>점수 계산"]
+    subgraph ROLLOUT["Rollout (SGLang + Router)"]
+        SGL["SGLang inference engine<br/>response generation"]
+        RT["sgl-router<br/>single OpenAI-compatible endpoint"]
+        RW["reward / verifier<br/>score computation"]
     end
-    subgraph BUFFER["Data Buffer (브리지)"]
-        DB["프롬프트 초기화<br/>커스텀 데이터<br/>롤아웃 생성 전략 관리"]
+    subgraph BUFFER["Data Buffer (bridge)"]
+        DB["prompt initialization<br/>custom data<br/>rollout generation strategy management"]
     end
-    subgraph TRAIN["학습 (Megatron-LM)"]
-        MG["Megatron 학습 루프<br/>가중치 업데이트"]
+    subgraph TRAIN["Training (Megatron-LM)"]
+        MG["Megatron training loop<br/>weight update"]
     end
 
     RT --> SGL
     SGL --> RW
-    RW -->|"생성 데이터 + 보상 기록"| DB
-    DB -->|"학습 배치 공급"| MG
-    MG -.->|"파라미터 동기화"| SGL
+    RW -->|"generated data + reward record"| DB
+    DB -->|"training batch supply"| MG
+    MG -.->|"parameter sync"| SGL
 ```
 
 - **Training (Megatron-LM)**: Handles the main training process. It reads data from the Data Buffer to update the model, and synchronizes parameters with the rollout module once training completes.

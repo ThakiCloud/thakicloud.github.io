@@ -104,10 +104,10 @@ The practical production path is therefore: **fine-tune with Unsloth, re-quantiz
 
 ```mermaid
 flowchart LR
-    A[Unsloth QLoRA<br/>NF4 4-bit 학습] --> B[LoRA 병합<br/>merged_16bit]
-    B --> C1[로컬/소규모:<br/>GGUF Q4_K_M<br/>Ollama·llama.cpp]
-    B --> C2[프로덕션 vLLM:<br/>W4A16/FP8 재양자화<br/>llm-compressor]
-    C2 --> D[vllm serve<br/>compressed-tensors 자동 로드]
+    A[Unsloth QLoRA<br/>NF4 4-bit training] --> B[LoRA merge<br/>merged_16bit]
+    B --> C1[Local/small-scale:<br/>GGUF Q4_K_M<br/>Ollama·llama.cpp]
+    B --> C2[Production vLLM:<br/>W4A16/FP8 re-quantization<br/>llm-compressor]
+    C2 --> D[vllm serve<br/>compressed-tensors auto-detected]
 ```
 
 ```python
