@@ -19,7 +19,8 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/
-canonical_url: "https://thakicloud.github.io/ko/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-ko/"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
