@@ -28,6 +28,9 @@ lang: ar
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق
 
+![رسم تجريدي يجسّد خط أنابيب المسودة والتحقق في الفك الترميز التخميني](/assets/images/vllm-eagle-speculative-decoding-production-hero.png)
+*تجسيد تجريدي للفك الترميز التخميني، حيث يولّد نموذج المسودة الرموز مسبقاً ويتحقق منها النموذج المستهدف بشكل متوازٍ.*
+
 يُقلص الفك الترميز التخميني (speculative decoding) زمن الاستجابة عبر نموذج مسودة يُولّد رموزاً مسبقاً بسرعة، فيما يتحقق النموذج المستهدف من صحتها بشكل متوازٍ. النظرية متاحة منذ 2022، لكن ثمة أسباب جعلت التبني الإنتاجي مترددًا: تكلفة إدارة نموذج المسودة، تضاؤل الفائدة مع تزايد حجم الدُفعة، وعدم اكتمال دعم أطر العمل. تغير الوضع في مايو 2026 حين اندمج EAGLE 3.1 في الفرع الرئيسي لـ vLLM.
 
 ## لماذا يعود الاهتمام بالفك الترميز التخميني
@@ -35,6 +38,15 @@ lang: ar
 في الفك الترميزي الاعتيادي ذاتي الانحدار، تُولَّد الرموز واحداً تلو الآخر. عرض ذاكرة GPU هو عنق الزجاجة، مما يعني انخفاض معدل استخدام GPU كلما صغرت الدفعة. يستهدف الفك التخميني هذه الفجوة بالتحديد.
 
 نموذج المسودة (بحجم عادةً 1/10 من المستهدف) يُولّد k رمزاً مسبقاً، ثم يتحقق النموذج المستهدف منها بمرور أمامي واحد. الرموز التي تجتاز التحقق تُضاف إلى المخرجات، وتبدأ العملية من جديد عند أول تباين. رياضياً، يبقى التوزيع في المخرجات مطابقاً للنموذج المستهدف، أي أن الجودة لا تتراجع مع تحسن السرعة.
+
+```mermaid
+flowchart LR
+    D["نموذج المسودة<br/>نحو 1/10 من المستهدف"] -->|"توليد k رموز"| V["تحقق متوازٍ بالنموذج المستهدف<br/>مرور أمامي واحد"]
+    V --> A{"هل تُقبل الرموز؟"}
+    A -->|"مقبولة"| O["تُدمج في المخرجات"]
+    A -->|"أول تباين"| R["إعادة البدء من نقطة التباين"]
+    R --> D
+```
 
 يرفع EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) جودة المسودة بشكل كبير. بدلاً من نموذج لغوي صغير مستقل، يستخدم رأس مسودة ذاتي الانحدار يستعين بطبقة ميزات النموذج المستهدف للتنبؤ بالرمز التالي.
 
@@ -106,3 +118,10 @@ vllm:generation_tokens_total
 في المقابل: الاستدلال الدُفعي الكبير، خطوط أنابيب متعددة الوسائط ذات توزيعات مدخلات متباينة جداً، وأعباء العمل التي تُعطي الأولوية لأقصى إنتاجية على حساب TTFT، تُفضّل الفك الاعتيادي.
 
 دمج EAGLE 3.1 في vLLM خفّض تكلفة إدارة نموذج المسودة بشكل ملحوظ. إن كان تحسين زمن استجابة التقديم هدفاً في حالات استخدام تفاعلية، فهذا هو الوقت المناسب لتقييم التبني.
+
+## المصادر
+
+- vLLM Blog, "EAGLE 3.1: Advancing Speculative Decoding Through Collaboration Between the EAGLE Team, vLLM, and TorchSpec" (2026-05-26): <https://vllm.ai/blog/2026-05-26-eagle-3-1>
+- Li et al., "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test" (arXiv:2503.01840): <https://arxiv.org/abs/2503.01840>
+- AWS Machine Learning Blog, "P-EAGLE: Faster LLM inference with Parallel Speculative Decoding in vLLM": <https://aws.amazon.com/blogs/machine-learning/p-eagle-faster-llm-inference-with-parallel-speculative-decoding-in-vllm/>
+- Red Hat Developer, "Fly Eagle(3) fly: Faster inference with vLLM & speculative decoding" (2025-07-01): <https://developers.redhat.com/articles/2025/07/01/fly-eagle3-fly-faster-inference-vllm-speculative-decoding>

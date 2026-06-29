@@ -28,6 +28,9 @@ lang: en
 
 ⏱️ **Estimated reading time**: 9 min
 
+![Abstract illustration of the draft-and-verify pipeline in speculative decoding](/assets/images/vllm-eagle-speculative-decoding-production-hero.png)
+*An abstract depiction of speculative decoding, where a draft model generates tokens ahead of time and the target model verifies them in parallel.*
+
 Speculative decoding reduces latency by having a draft model generate tokens quickly while the target model verifies them in parallel. The idea has existed since 2022, but several barriers slowed production adoption: draft model management overhead, gains that disappeared at large batch sizes, and inadequate framework support. EAGLE 3.1 merging into the vLLM main branch in May 2026 changed that picture.
 
 ## Why Speculative Decoding Is Getting Renewed Attention
@@ -35,6 +38,15 @@ Speculative decoding reduces latency by having a draft model generate tokens qui
 Standard autoregressive decoding generates tokens one at a time. GPU memory bandwidth is the bottleneck, so GPU utilization drops as batch size shrinks. Speculative decoding targets exactly that gap.
 
 A draft model (typically 1/10 the size of the target) generates k tokens first. The target model then verifies them in a single forward pass. Only tokens that pass verification enter the output; the first mismatch triggers a restart from that point. Mathematically, the output distribution remains identical to the target model alone. Speed improves without any quality degradation.
+
+```mermaid
+flowchart LR
+    D["Draft model<br/>about 1/10 of target"] -->|"generate k tokens"| V["Target model parallel verify<br/>single forward pass"]
+    V --> A{"Tokens accepted?"}
+    A -->|"accepted"| O["Merge into output"]
+    A -->|"first mismatch"| R["Restart from mismatch point"]
+    R --> D
+```
 
 EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) dramatically improves draft quality. Instead of a simple small language model, it uses an autoregressive draft head that leverages the target model's feature layer to predict the next token.
 
@@ -106,3 +118,10 @@ The scenarios where speculative decoding helps are clear. Low-batch (1-4 concurr
 Conversely, standard decoding is better for large-batch inference, multimodal pipelines with highly varied input distributions, and workloads where the goal is maximum throughput rather than minimizing TTFT (Time to First Token).
 
 EAGLE 3.1's integration into vLLM has significantly reduced draft model management burden. If your use case involves interactive serving where lower latency matters, this is the right time to evaluate adoption.
+
+## Sources
+
+- vLLM Blog, "EAGLE 3.1: Advancing Speculative Decoding Through Collaboration Between the EAGLE Team, vLLM, and TorchSpec" (2026-05-26): <https://vllm.ai/blog/2026-05-26-eagle-3-1>
+- Li et al., "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test" (arXiv:2503.01840): <https://arxiv.org/abs/2503.01840>
+- AWS Machine Learning Blog, "P-EAGLE: Faster LLM inference with Parallel Speculative Decoding in vLLM": <https://aws.amazon.com/blogs/machine-learning/p-eagle-faster-llm-inference-with-parallel-speculative-decoding-in-vllm/>
+- Red Hat Developer, "Fly Eagle(3) fly: Faster inference with vLLM & speculative decoding" (2025-07-01): <https://developers.redhat.com/articles/2025/07/01/fly-eagle3-fly-faster-inference-vllm-speculative-decoding>

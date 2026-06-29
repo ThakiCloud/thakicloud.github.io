@@ -21,6 +21,7 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/news/google-liquid-cooling-datacenter-hot-chips-2025/"
 permalink: /ar/news/google-liquid-cooling-datacenter-hot-chips-2025/
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

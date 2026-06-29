@@ -21,11 +21,14 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/vllm-eagle-speculative-decoding-production/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
+
+![투기적 디코딩의 드래프트-검증 파이프라인을 형상화한 추상 이미지](/assets/images/vllm-eagle-speculative-decoding-production-hero.png)
+*드래프트 모델이 토큰을 미리 생성하고 타깃 모델이 병렬로 검증하는 투기적 디코딩 구조를 형상화한 이미지입니다.*
 
 투기적 디코딩(speculative decoding)은 드래프트 모델이 토큰을 빠르게 미리 생성하고 타깃 모델이 병렬로 검증하는 방식으로 레이턴시를 줄입니다. 이론은 2022년부터 있었지만 프로덕션 도입을 망설이게 만든 이유가 있었습니다. 드래프트 모델 관리 오버헤드, 배치 크기가 커지면 사라지는 이득, 그리고 프레임워크 지원 미흡이었습니다. 2026년 5월 EAGLE 3.1이 vLLM 메인 브랜치에 머지되면서 상황이 바뀌었습니다.
 
@@ -34,6 +37,15 @@ reading_time: true
 일반 자기회귀 디코딩은 토큰을 하나씩 순차 생성합니다. GPU 메모리 대역폭이 병목이기 때문에 배치가 작을수록 GPU 활용률이 낮아지는 구조입니다. 투기적 디코딩은 이 구간을 노립니다.
 
 드래프트 모델(보통 타깃의 1/10 규모)이 k개 토큰을 먼저 생성하면, 타깃 모델은 이를 한 번의 포워드 패스로 검증합니다. 검증 통과 토큰만 출력에 편입되고 첫 불일치 지점부터 재시작합니다. 수학적으로 출력 분포는 타깃 모델과 동일하게 유지됩니다. 즉 품질 저하 없이 속도를 올립니다.
+
+```mermaid
+flowchart LR
+    D["드래프트 모델<br/>타깃의 약 1/10 규모"] -->|"k개 토큰 생성"| V["타깃 모델 병렬 검증<br/>1회 포워드 패스"]
+    V --> A{"토큰 수락 여부"}
+    A -->|"수락"| O["출력에 편입"]
+    A -->|"첫 불일치"| R["불일치 지점부터 재시작"]
+    R --> D
+```
 
 EAGLE(Extrapolation Algorithm for Greater Language-model Efficiency)은 여기서 드래프트 품질을 크게 높입니다. 단순한 소형 언어 모델 대신, 타깃 모델의 피처 레이어를 활용해 다음 토큰을 예측하는 자동회귀 드래프트 헤드를 씁니다.
 
@@ -105,3 +117,23 @@ vllm:generation_tokens_total
 반대로 대규모 배치 추론, 입력 분포가 매우 다양한 멀티모달 파이프라인, 그리고 TTFT(Time to First Token)보다 처리량 극대화가 목표인 워크로드에서는 일반 디코딩이 낫습니다.
 
 EAGLE 3.1의 vLLM 통합은 드래프트 모델 관리 부담을 크게 줄였습니다. 서빙 레이턴시 개선이 필요한 인터랙티브 사용 사례라면 지금이 도입을 검토할 시점입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![vllm-eagle-speculative-decoding-production 슬라이드 1](/assets/images/vllm-eagle-speculative-decoding-production-slide-01.png)
+
+![vllm-eagle-speculative-decoding-production 슬라이드 2](/assets/images/vllm-eagle-speculative-decoding-production-slide-02.png)
+
+![vllm-eagle-speculative-decoding-production 슬라이드 3](/assets/images/vllm-eagle-speculative-decoding-production-slide-03.png)
+
+![vllm-eagle-speculative-decoding-production 슬라이드 4](/assets/images/vllm-eagle-speculative-decoding-production-slide-04.png)
+
+## 출처
+
+- vLLM Blog, "EAGLE 3.1: Advancing Speculative Decoding Through Collaboration Between the EAGLE Team, vLLM, and TorchSpec" (2026-05-26): <https://vllm.ai/blog/2026-05-26-eagle-3-1>
+- Li et al., "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test" (arXiv:2503.01840): <https://arxiv.org/abs/2503.01840>
+- AWS Machine Learning Blog, "P-EAGLE: Faster LLM inference with Parallel Speculative Decoding in vLLM": <https://aws.amazon.com/blogs/machine-learning/p-eagle-faster-llm-inference-with-parallel-speculative-decoding-in-vllm/>
+- Red Hat Developer, "Fly Eagle(3) fly: Faster inference with vLLM & speculative decoding" (2025-07-01): <https://developers.redhat.com/articles/2025/07/01/fly-eagle3-fly-faster-inference-vllm-speculative-decoding>

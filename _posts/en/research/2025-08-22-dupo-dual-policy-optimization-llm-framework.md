@@ -28,6 +28,11 @@ published: true
 
 ⏱️ **Estimated reading time**: 12 min
 
+![Abstract illustration of symmetric primal-dual flows reconstructing each other](/assets/images/dupo-dual-policy-optimization-llm-framework-hero.png)
+*An abstract depiction of DuPO's duality structure, where a primal task and a dual task reconstruct each other's outputs to form a self-supervised signal.*
+
+> **Source note**: The official DuPO paper (arXiv:2508.14460) is titled "Dual **Preference** Optimization." It frames the method as a primal task paired with a dual reconstruction task that yields a self-supervised verification signal, rather than two literal exploration/exploitation policies. The framing below is a simplification; consult the linked source for the precise mechanism.
+
 ## Introduction
 
 One of the most fundamental challenges in large language model post-training is the exploration-exploitation dilemma. A model needs to explore diverse response strategies during training, but simultaneously must exploit what it has already learned to maximize performance. If either side tilts excessively, training stability suffers or the model becomes trapped in local optima.
@@ -273,4 +278,7 @@ From a technical perspective, DuPO's dual-policy structure is a new contribution
 
 From a practical perspective, DuPO offers concrete advantages in multi-task learning, continuous learning, and low-resource scenarios. Given that these are important challenges for real AI system deployment, DuPO's contributions have great practical value beyond pure academic advancement.
 
-**Reference**: DuPO: Dual-Policy Optimization for Large Language Models - relevant research paper on dual-policy RL post-training for LLMs.
+## Sources
+
+- Yang et al., "DuPO: Enabling Reliable LLM Self-Verification via Dual Preference Optimization" (arXiv:2508.14460, ByteDance Seed, 2025): <https://arxiv.org/abs/2508.14460>
+- The performance figures cited above (translation COMET, math accuracy, inference-time reranking) are as reported in the paper and were not reproduced in this environment.

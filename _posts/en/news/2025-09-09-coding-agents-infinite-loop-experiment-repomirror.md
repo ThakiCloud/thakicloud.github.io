@@ -23,6 +23,9 @@ permalink: /en/news/coding-agents-infinite-loop-experiment-repomirror/
 
 ⏱️ **Estimated Reading Time**: 8 minutes
 
+![Abstract illustration of two repositories mirroring each other while being ported inside an infinite loop](/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.png)
+*An abstract depiction of RepoMirror's mirroring structure, repeatedly transforming a source repository into its target form inside an infinite loop.*
+
 ## Introduction: A New Paradigm in AI-Driven Development Automation
 
 A revolutionary experiment recently captured the attention of the developer community, showcasing an unprecedented level of automation in software development. A developer placed a Claude coding agent in a headless infinite while loop, and overnight, the agent automatically completed over 1000 commits along with multiple complete codebase porting projects. This experiment transcends merely demonstrating AI coding capabilities, presenting new possibilities for software development automation that could fundamentally change how we approach programming tasks.
@@ -32,6 +35,16 @@ A revolutionary experiment recently captured the attention of the developer comm
 ### Core Concept and Execution Method
 
 The essence of this experiment lay in providing coding agents with a continuous and iterative working environment. The developer implemented a simple shell script using commands like `while :; do cat prompt.md | claude -p --dangerously-skip-permissions; done` to enable the Claude coding agent to run indefinitely. This approach, based on methodologies proposed by Geoff Huntley, automates the entire process where the agent modifies files, commits changes, and pushes updates in each work cycle, creating a seamless development pipeline without human intervention.
+
+```mermaid
+flowchart TB
+    P["Read prompt.md"] --> C["Run claude -p"]
+    C --> E["Edit files · commit · push"]
+    E --> T["Update .agent · TODO.md"]
+    T --> Q{"Work complete?"}
+    Q -->|"not done"| P
+    Q -->|"done, pkill self-terminate"| Z["Loop ends"]
+```
 
 ### Work Tracking and Management Systems
 
@@ -124,3 +137,8 @@ This innovative experiment demonstrated that AI coding agents can evolve beyond 
 The emergence of tools like RepoMirror shows that these automation technologies are gradually evolving into practical and accessible forms. Developers will need to learn effective collaboration methods with AI, developing new skill sets that maximize automation benefits while understanding and compensating for its limitations. This represents a fundamental shift in how developers must think about their role in an AI-augmented development landscape.
 
 The most important insight this experiment provides is that human creativity and wisdom in utilizing AI, rather than AI's capabilities alone, remain at the core of innovation. The remarkable results produced by placing AI in an infinite loop were due to human insight in appropriately designing and utilizing it, rather than AI's inherent abilities. Therefore, for developers in the AI era, effective communication and collaboration skills with AI will become even more important capabilities alongside technical proficiency, defining the next generation of software engineering excellence.
+
+## Sources
+
+- RepoMirror open-source repository: <https://github.com/repomirrorhq/repomirror>
+- Geoff Huntley, "ralph wiggum as a software engineer" (origin of the ralph infinite-loop technique): <https://ghuntley.com/ralph>

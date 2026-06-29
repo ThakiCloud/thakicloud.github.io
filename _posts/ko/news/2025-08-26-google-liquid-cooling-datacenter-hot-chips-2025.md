@@ -21,6 +21,7 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/news/google-liquid-cooling-datacenter-hot-chips-2025/"
 permalink: /ko/news/google-liquid-cooling-datacenter-hot-chips-2025/
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
@@ -86,3 +87,16 @@ GPU 클라우드 서비스 업계에게 이러한 냉각 기술 진보의 시사
 ---
 
 *출처: [Chips and Cheese - Google's Liquid Cooling at Hot Chips 2025](https://chipsandcheese.com/p/googles-liquid-cooling-at-hot-chips)*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 1](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-01.png)
+
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 2](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-02.png)
+
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 3](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-03.png)
+
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 4](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-04.png)
+
