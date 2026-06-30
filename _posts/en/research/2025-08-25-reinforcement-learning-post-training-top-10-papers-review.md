@@ -27,6 +27,8 @@ permalink: /en/research/reinforcement-learning-post-training-top-10-papers-revie
 reading_time: true
 ---
 
+![Key concept illustration](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)
+
 ⏱️ **Estimated reading time**: 25 min
 
 ## Introduction: A New Horizon Opened by RL Post-Training
@@ -36,6 +38,11 @@ reading_time: true
 This article provides a deep analysis of the ten most important papers on reinforcement learning post-training published from April 2025 to the present. These works offer innovations ranging from concrete methods for lifting open models in the 7B to 13B parameter range to GPT-4-level reasoning, through to specialized applications in domains such as medicine and law.
 
 By examining the core ideas and practical implications of each paper, we explore how reinforcement learning is forging a new paradigm that pushes past the limitations of current LLMs.
+
+
+![Concept diagram](/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg)
+
+*Concept diagram*
 
 ## 1. Kimi k1.5: Setting a New Standard for Reasoning via Large-Scale RL
 
@@ -262,3 +269,15 @@ The multi-domain integrated approach proposed by General-Reasoner points to **th
 These ten papers prove that reinforcement learning is not merely a tool for incremental model improvement, but a **paradigm that fundamentally transforms AI reasoning capabilities**. Combined with democratized access to open models, these innovations are opening a new golden era of AI development.
 
 Future research will evolve toward overcoming the limits of current methods while increasing practical applicability. RL post-training is no longer a laboratory experiment, but a **powerful tool that companies and developers can put to real use**.
+
+## References
+
+Primary sources for the research and tools discussed in this post.
+
+- [Kimi k1.5: Scaling Reinforcement Learning with LLMs (arXiv:2501.12599)](https://arxiv.org/abs/2501.12599)
+- [Reinforcement Pre-Training / RPT (arXiv:2506.08007)](https://arxiv.org/abs/2506.08007)
+- [Agent Lightning: Train ANY AI Agents with RL (arXiv:2508.03680)](https://arxiv.org/abs/2508.03680)
+- [Beyond Ten Turns / ASearcher (arXiv:2508.07976)](https://arxiv.org/abs/2508.07976)
+- [ARTIST: Agentic Reasoning and Tool Integration via RL (arXiv:2505.01441)](https://arxiv.org/abs/2505.01441)
+- [AlphaMed: Minimalist Rule-Based RL for Medical Reasoning (arXiv:2505.17952)](https://arxiv.org/abs/2505.17952)
+- [General-Reasoner: Advancing LLM Reasoning Across All Domains (arXiv:2505.14652)](https://arxiv.org/abs/2505.14652)

@@ -32,6 +32,11 @@ The research team employed a privacy-preserving automated pipeline to analyze re
 
 The study's methodology represents a significant advancement in AI research ethics, demonstrating how large-scale user behavior analysis can be conducted while maintaining strict privacy protections. By implementing automated classification systems that prevent human exposure to actual message content, the research establishes new standards for responsible AI research that could influence future studies in this rapidly evolving field.
 
+
+![Concept diagram](/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg)
+
+*Concept diagram*
+
 ## Deep Analysis of User Adoption Patterns
 
 Examining ChatGPT's user adoption patterns reveals extraordinary growth dynamics, with daily message volume increasing approximately 5.8 times from 451 million messages in June 2024 to 2.627 billion messages in June 2025. This explosive expansion cannot be explained solely by user base growth; rather, it indicates that individual users are engaging with ChatGPT more frequently and for increasingly diverse purposes, suggesting a deepening integration of AI assistance into daily decision-making processes.
@@ -128,3 +133,9 @@ Finally, the privacy-focused research methodology demonstrated in this study est
 
 The research ultimately reveals that the impact of AI technology extends far beyond narrow technical applications to encompass fundamental changes in how humans access information, make decisions, and solve problems across diverse life contexts. As this technology continues to evolve and expand, understanding these usage patterns and their implications will be crucial for ensuring that AI development serves broad human welfare while addressing important challenges related to equity, privacy, and social responsibility.
 
+## References
+
+Primary sources for the research and tools discussed in this post.
+
+- [OpenAI: How people are using ChatGPT](https://openai.com/index/how-people-are-using-chatgpt/)
+- [How People Use ChatGPT, NBER Working Paper 34255](https://www.nber.org/papers/w34255)

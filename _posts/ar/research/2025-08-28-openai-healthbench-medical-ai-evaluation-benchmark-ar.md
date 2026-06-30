@@ -27,6 +27,11 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/openai-healthbench-medica
 
 يمثل دمج الذكاء الاصطناعي في الرعاية الصحية أحد أكثر المجالات الواعدة والتحدي في التكنولوجيا الحديثة. مع تزايد تطبيقات النماذج اللغوية الكبيرة (LLMs) في السياقات الطبية، تصبح الحاجة إلى أطر تقييم قوية أمرًا بالغ الأهمية. يظهر OpenAI HealthBench كحل مبتكر، حيث يضع معايير جديدة لتقييم الذكاء الاصطناعي الطبي من خلال منهجيات LLMOps المبتكرة.
 
+
+![مخطط مفاهيمي](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+
+*مخطط مفاهيمي*
+
 ## ما هو OpenAI HealthBench؟
 
 يمثل HealthBench معيارًا ثوريًا مصممًا خصيصًا لتقييم أداء أنظمة الذكاء الاصطناعي في السيناريوهات الطبية. تم تطوير إطار التقييم الشامل هذا من خلال تعاون غير مسبوق مع **262 من المتخصصين الطبيين من 60 دولة**، مما يخلق منظورًا عالميًا حقيقيًا لتقييم الذكاء الاصطناعي الطبي.
@@ -325,3 +330,11 @@ class MedicalAIMonitor:
 - مستقبل الذكاء الاصطناعي الطبي يعتمد على منهجيات التقييم الصارمة مثل HealthBench
 
 من خلال تنفيذ معايير تقييم HealthBench، يمكن لفرق LLMOps نشر أنظمة الذكاء الاصطناعي الطبية بثقة تلبي أعلى معايير السلامة والفعالية والحساسية الثقافية، مما يدفع في النهاية هدف الرعاية الصحية المعززة بالذكاء الاصطناعي للسكان العالميين.
+
+## المراجع
+
+المصادر الأساسية للأبحاث والأدوات التي تناولها هذا المقال.
+
+- [HealthBench: Evaluating LLMs Towards Improved Human Health (arXiv:2505.08775)](https://arxiv.org/abs/2505.08775)
+- [OpenAI HealthBench announcement](https://openai.com/index/healthbench/)
+- [openai/simple-evals (HealthBench grader)](https://github.com/openai/simple-evals)

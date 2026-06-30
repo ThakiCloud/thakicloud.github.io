@@ -27,6 +27,8 @@ reading_time: true
 published: true
 ---
 
+![Key concept illustration](/assets/images/post-training-revolution-rl-agent-development-hero.png)
+
 ⏱️ **Estimated reading time**: 18 min
 
 ## Introduction
@@ -34,6 +36,11 @@ published: true
 Reinforcement learning (RL) post-training is rapidly evolving as the core technology for transforming large language models into genuine agents. In 2025, a large number of innovative methodologies were proposed in this area, and the community has validated the value of each through practical experiments.
 
 In this article, we comprehensively analyze the top 10 papers by GitHub stars in RL post-training for agent development. From the foundational approaches of GRPO and GMPO to the novel ideas of tool use learning and dual-policy optimization, we will look at the current state and future of agent training technology.
+
+
+![Concept diagram](/assets/images/post-training-revolution-rl-agent-development-diagram.svg)
+
+*Concept diagram*
 
 ## Ranking Criteria and Methodology
 
@@ -442,3 +449,15 @@ ToolRL demonstrated the importance of tool use learning, GMPO improved training 
 What these papers share is the recognition that genuine agent capability cannot be learned through simple instruction following but must be acquired through genuine experience-based learning. The reward structures, optimization methods, and exploration strategies they propose each contribute to making this learning more efficient and effective.
 
 The evolution of agent training technology in 2025 is just beginning. The methodologies these papers have established will provide important foundations for further innovation in the future.
+
+## References
+
+Primary sources for the research and tools discussed in this post.
+
+- [ToolRL: Reward is All Tool Learning Needs (arXiv:2504.13958)](https://arxiv.org/abs/2504.13958)
+- [Geometric-Mean Policy Optimization / GMPO (arXiv:2507.20673)](https://arxiv.org/abs/2507.20673)
+- [Pre-DPO: Improving Data Utilization in DPO (arXiv:2504.15843)](https://arxiv.org/abs/2504.15843)
+- [Doubly Robust Alignment for LLMs / DRPO (arXiv:2506.01183)](https://arxiv.org/abs/2506.01183)
+- [KDRL: Unified Knowledge Distillation and RL (arXiv:2506.02208)](https://arxiv.org/abs/2506.02208)
+- [DSPy framework (Stanford NLP)](https://github.com/stanfordnlp/dspy)
+- [vLLM inference engine](https://github.com/vllm-project/vllm)

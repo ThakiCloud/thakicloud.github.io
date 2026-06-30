@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 631.8314999999999 422.3" width="631.8314999999999" height="422.3" style="--bg:#1a1b26;--fg:#a9b1d6">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="MSG" data-to="CLS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="367.67449999999997,76.9 367.67449999999997,100.9 242.29749999999996,100.9 242.29749999999996,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CLS" data-to="WORK" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="242.29749999999996,161.8 242.29749999999996,190.025 133.593,190.025 133.593,218.25" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CLS" data-to="NON" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="242.29749999999996,161.8 242.29749999999996,190.025 351.00199999999995,190.025 351.00199999999995,218.25" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="NON" data-to="TOP" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="351.00199999999995,255.15 351.00199999999995,311.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="MSG" data-to="INT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="367.67449999999997,76.9 367.67449999999997,100.9 493.0514999999999,100.9 493.0514999999999,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="MSG" data-label="ChatGPT message" data-shape="rectangle">
+  <rect x="292.236" y="40" width="150.877" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="367.67449999999997" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">ChatGPT message</text>
+</g>
+<g class="node" data-id="CLS" data-label="Privacy-preserving LLM classifier" data-shape="rectangle">
+  <rect x="118.3235" y="124.9" width="247.94799999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="242.29749999999996" y="143.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Privacy-preserving LLM classifier</text>
+</g>
+<g class="node" data-id="WORK" data-label="Work-related (about 27%)" data-shape="rectangle">
+  <rect x="40" y="218.25" width="187.18599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="133.593" y="236.7" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Work-related (about 27%)</text>
+</g>
+<g class="node" data-id="NON" data-label="Non-work (more than 70%)" data-shape="rectangle">
+  <rect x="255.18599999999998" y="218.25" width="191.63199999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="351.00199999999995" y="236.7" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Non-work (more than 70%)</text>
+</g>
+<g class="node" data-id="TOP" data-label="Top topics: Practical Guidance,
+Seeking Information, Writing
+(nearly 80% of all chats)" data-shape="rectangle">
+  <rect x="239.25449999999998" y="311.6" width="223.49499999999998" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="351.00199999999995" y="346.95000000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="351.00199999999995" dy="-12.350000000000001">Top topics: Practical Guidance,</tspan><tspan x="351.00199999999995" dy="16.900000000000002">Seeking Information, Writing</tspan><tspan x="351.00199999999995" dy="16.900000000000002">(nearly 80% of all chats)</tspan></text>
+</g>
+<g class="node" data-id="INT" data-label="Interaction type:
+Asking, Doing, Expressing" data-shape="rectangle">
+  <rect x="394.27149999999995" y="124.9" width="197.55999999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="493.0514999999999" y="151.8" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="493.0514999999999" dy="-3.9000000000000012">Interaction type:</tspan><tspan x="493.0514999999999" dy="16.900000000000002">Asking, Doing, Expressing</tspan></text>
+</g>
+</svg>

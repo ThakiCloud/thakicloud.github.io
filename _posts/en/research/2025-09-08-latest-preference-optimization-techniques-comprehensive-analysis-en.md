@@ -36,6 +36,11 @@ where $D$ represents the data distribution, $R(x, y)$ denotes the reward functio
 
 The contemporary challenges in preference optimization arise from several fundamental issues: reward hacking, where models exploit loopholes in reward functions; training instability caused by poor gradient estimates; computational inefficiency in sampling and comparison processes; and the difficulty of scaling to complex, multi-modal tasks. These challenges have motivated the development of five innovative approaches that represent the current state-of-the-art in the field.
 
+
+![Concept diagram](/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg)
+
+*Concept diagram*
+
 ## Pref-GRPO: Addressing Reward Hacking Through Pairwise Preferences
 
 Pref-GRPO represents a significant advancement in stabilizing text-to-image reinforcement learning through its innovative approach to reward design. The method fundamentally reconceptualizes the optimization objective by shifting from pointwise reward maximization to pairwise preference fitting, addressing a critical vulnerability in traditional reward-based training.
@@ -151,3 +156,13 @@ The collective impact of these advances extends beyond individual performance im
 As the field continues to evolve, the integration of insights from these diverse approaches will likely lead to even more powerful and generalizable preference optimization techniques. The ultimate goal of creating AI systems that consistently produce outputs aligned with human values and expectations remains challenging, but the progress demonstrated by these methods provides a strong foundation for continued advancement in this critical area of artificial intelligence research.
 
 The practical implications of these developments extend across numerous application domains, from creative AI systems that generate high-quality content to agentic systems that can effectively utilize external tools and resources. As these techniques mature and become more widely adopted, they will play an increasingly important role in ensuring that AI systems behave in ways that are beneficial, reliable, and aligned with human intentions.
+
+## References
+
+Primary sources for the research and tools discussed in this post.
+
+- [Pref-GRPO: Pairwise Preference Reward GRPO for Text-to-Image RL (arXiv:2508.20751)](https://arxiv.org/abs/2508.20751)
+- [PVPO: Pre-Estimated Value-Based Policy Optimization (arXiv:2508.21104)](https://arxiv.org/abs/2508.21104)
+- [DCPO: Dynamic Clipping Policy Optimization (arXiv:2509.02333)](https://arxiv.org/abs/2509.02333)
+- [ARPO: Agentic Reinforced Policy Optimization (arXiv:2507.19849)](https://arxiv.org/abs/2507.19849)
+- [rStar2-Agent (introduces GRPO-RoC) (arXiv:2508.20722)](https://arxiv.org/abs/2508.20722)

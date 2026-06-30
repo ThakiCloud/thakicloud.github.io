@@ -27,6 +27,8 @@ reading_time: true
 published: true
 ---
 
+![رسم توضيحي للمفهوم](/assets/images/post-training-revolution-rl-agent-development-hero.png)
+
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة
 
 ## مقدمة
@@ -34,6 +36,11 @@ published: true
 يتطور التدريب اللاحق القائم على التعلم المعزز (RL) بسرعة بوصفه التقنية الجوهرية لتحويل النماذج اللغوية الكبيرة إلى وكلاء حقيقيين. في عام 2025، اقترح عدد كبير من المنهجيات المبتكرة في هذا المجال، وتحقّق المجتمع من قيمة كل منها عبر تجارب عملية.
 
 في هذا المقال، نحلل بشكل شامل الأوراق البحثية العشر الأعلى نجومًا على GitHub في التدريب اللاحق القائم على RL لتطوير الوكلاء. من الأساليب التأسيسية لـ GRPO وGMPO إلى الأفكار المبتكرة في تعلم استخدام الأدوات وتحسين السياسة المزدوجة، سنتناول الوضع الراهن ومستقبل تقنية تدريب الوكلاء.
+
+
+![مخطط مفاهيمي](/assets/images/post-training-revolution-rl-agent-development-diagram.svg)
+
+*مخطط مفاهيمي*
 
 ## معايير الترتيب والمنهجية
 
@@ -343,3 +350,15 @@ $$\mathcal{L}_{KD} = KL(\pi_{student} || \pi_{teacher})$$
 ما تشترك فيه هذه الأوراق هو الإدراك بأن القدرة الحقيقية للوكلاء لا يمكن تعلمها عبر الاتباع البسيط للتعليمات، بل يجب اكتسابها من خلال التعلم الحقيقي القائم على الخبرة.
 
 تطور تقنية تدريب الوكلاء في عام 2025 لم يبدأ سوى تواً. ستوفر المنهجيات التي أرستها هذه الأوراق أسسًا مهمة لمزيد من الابتكار في المستقبل.
+
+## المراجع
+
+المصادر الأساسية للأبحاث والأدوات التي تناولها هذا المقال.
+
+- [ToolRL: Reward is All Tool Learning Needs (arXiv:2504.13958)](https://arxiv.org/abs/2504.13958)
+- [Geometric-Mean Policy Optimization / GMPO (arXiv:2507.20673)](https://arxiv.org/abs/2507.20673)
+- [Pre-DPO: Improving Data Utilization in DPO (arXiv:2504.15843)](https://arxiv.org/abs/2504.15843)
+- [Doubly Robust Alignment for LLMs / DRPO (arXiv:2506.01183)](https://arxiv.org/abs/2506.01183)
+- [KDRL: Unified Knowledge Distillation and RL (arXiv:2506.02208)](https://arxiv.org/abs/2506.02208)
+- [DSPy framework (Stanford NLP)](https://github.com/stanfordnlp/dspy)
+- [vLLM inference engine](https://github.com/vllm-project/vllm)

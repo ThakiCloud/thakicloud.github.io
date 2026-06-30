@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.5659999999999 609" width="400.5659999999999" height="609" style="--bg:#1a1b26;--fg:#a9b1d6">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="SFT" data-to="RL" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="200.28299999999996,76.9 200.28299999999996,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RL" data-to="RW" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="200.28299999999996,178.70000000000002 200.28299999999996,226.70000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RW" data-to="POL" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="200.28299999999996,280.5 200.28299999999996,328.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="POL" data-to="AG" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="200.28299999999996,365.4 200.28299999999996,413.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AG" data-to="PROD" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="200.28299999999996,467.20000000000005 200.28299999999996,515.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="SFT" data-label="Base LLM (after SFT)" data-shape="rectangle">
+  <rect x="115.58199999999997" y="40" width="169.402" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="200.28299999999996" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Base LLM (after SFT)</text>
+</g>
+<g class="node" data-id="RL" data-label="RL Post-Training
+(GRPO, GMPO, DRPO, KDRL)" data-shape="rectangle">
+  <rect x="95.57499999999999" y="124.9" width="209.41599999999994" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="200.28299999999996" y="151.8" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="200.28299999999996" dy="-3.9000000000000012">RL Post-Training</tspan><tspan x="200.28299999999996" dy="16.900000000000002">(GRPO, GMPO, DRPO, KDRL)</tspan></text>
+</g>
+<g class="node" data-id="RW" data-label="Reward Signal
+(tool-arg match, geometric mean, doubly-robust)" data-shape="rectangle">
+  <rect x="42.96399999999997" y="226.70000000000002" width="314.638" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="200.28299999999996" y="253.60000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="200.28299999999996" dy="-3.9000000000000012">Reward Signal</tspan><tspan x="200.28299999999996" dy="16.900000000000002">(tool-arg match, geometric mean, doubly-robust)</tspan></text>
+</g>
+<g class="node" data-id="POL" data-label="Policy Update" data-shape="rectangle">
+  <rect x="138.92349999999996" y="328.5" width="122.71900000000001" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="200.28299999999996" y="346.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Policy Update</text>
+</g>
+<g class="node" data-id="AG" data-label="Optimized Agent
+(tool calling, multi-module chains, self-correction)" data-shape="rectangle">
+  <rect x="40" y="413.4" width="320.5659999999999" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="200.28299999999996" y="440.29999999999995" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="200.28299999999996" dy="-3.9000000000000012">Optimized Agent</tspan><tspan x="200.28299999999996" dy="16.900000000000002">(tool calling, multi-module chains, self-correction)</tspan></text>
+</g>
+<g class="node" data-id="PROD" data-label="Production Runtime
+(guardrails, cost tracking, chain tracing)" data-shape="rectangle">
+  <rect x="62.970999999999975" y="515.2" width="274.62399999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="200.28299999999996" y="542.1" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="200.28299999999996" dy="-3.9000000000000012">Production Runtime</tspan><tspan x="200.28299999999996" dy="16.900000000000002">(guardrails, cost tracking, chain tracing)</tspan></text>
+</g>
+</svg>

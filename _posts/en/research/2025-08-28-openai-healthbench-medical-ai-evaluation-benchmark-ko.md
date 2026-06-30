@@ -28,6 +28,11 @@ published: true
 
 The convergence of artificial intelligence and medicine is one of the most promising yet demanding areas in modern technology. As large language models (LLMs) find growing application in healthcare, the need for robust evaluation frameworks has never been more urgent. OpenAI HealthBench has emerged as a landmark solution that establishes a new standard for medical AI evaluation through an innovative LLMOps methodology.
 
+
+![Concept diagram](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+
+*Concept diagram*
+
 ## What Is OpenAI HealthBench?
 
 HealthBench is a purpose-built benchmark designed to assess AI system performance in medical scenarios. This comprehensive evaluation framework was developed through an unprecedented collaboration with **262 medical professionals across 60 countries**, providing a genuinely global perspective on medical AI assessment.
@@ -326,3 +331,11 @@ Integrating HealthBench into LLMOps workflows is not simply a technical advancem
 - The future of medical AI depends on rigorous evaluation methodologies like HealthBench
 
 By implementing HealthBench evaluation standards, LLMOps teams can deploy medical AI systems with confidence that they meet the highest benchmarks for safety, efficacy, and cultural sensitivity, ultimately advancing the goal of AI-enhanced healthcare for populations worldwide.
+
+## References
+
+Primary sources for the research and tools discussed in this post.
+
+- [HealthBench: Evaluating LLMs Towards Improved Human Health (arXiv:2505.08775)](https://arxiv.org/abs/2505.08775)
+- [OpenAI HealthBench announcement](https://openai.com/index/healthbench/)
+- [openai/simple-evals (HealthBench grader)](https://github.com/openai/simple-evals)

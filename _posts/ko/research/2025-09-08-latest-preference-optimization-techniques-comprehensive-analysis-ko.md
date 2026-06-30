@@ -36,6 +36,11 @@ $$J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]$$
 
 현대 선호도 최적화의 도전과제들은 여러 근본적인 문제들로부터 발생합니다: 모델이 보상 함수의 허점을 악용하는 보상 해킹; 불량한 기울기 추정으로 인한 훈련 불안정성; 샘플링과 비교 과정에서의 계산 비효율성; 그리고 복잡한 다중 모달 작업으로의 확장 어려움 등입니다. 이러한 도전과제들은 현재 이 분야의 최첨단 기술을 대표하는 다섯 가지 혁신적인 접근법의 개발을 촉진하였습니다.
 
+
+![개념 다이어그램](/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg)
+
+*개념 다이어그램*
+
 ## Pref-GRPO: 쌍별 선호도를 통한 보상 해킹 해결
 
 Pref-GRPO는 보상 설계에 대한 혁신적인 접근을 통해 텍스트-이미지 강화학습의 안정화에서 중요한 진전을 나타냅니다. 이 방법은 점별 보상 최대화에서 쌍별 선호도 적합으로의 전환을 통해 최적화 목표를 근본적으로 재개념화하여, 전통적인 보상 기반 훈련의 중요한 취약점을 해결합니다.
@@ -151,3 +156,13 @@ $$Q(y_i^+) = \alpha \cdot R_{quality}(y_i^+) + \beta \cdot R_{efficiency}(y_i^+)
 이 분야가 계속 발전함에 따라, 이러한 다양한 접근법들로부터의 통찰의 통합은 아마도 더욱 강력하고 일반화 가능한 선호도 최적화 기법들로 이어질 것입니다. 인간의 가치와 기대에 일관되게 맞는 출력을 생성하는 AI 시스템을 만드는 궁극적인 목표는 여전히 도전적이지만, 이러한 방법들이 보여준 진전은 인공지능 연구의 이 중요한 영역에서 지속적인 발전을 위한 강력한 기반을 제공합니다.
 
 이러한 발전의 실용적 함의는 고품질 콘텐츠를 생성하는 창의적 AI 시스템부터 외부 도구와 자원을 효과적으로 활용할 수 있는 에이전트 시스템까지 수많은 응용 도메인에 걸쳐 확장됩니다. 이러한 기법들이 성숙하고 더 널리 채택됨에 따라, 그들은 AI 시스템이 유익하고, 신뢰할 수 있으며, 인간의 의도와 일치하는 방식으로 행동하도록 보장하는 데 있어 점점 더 중요한 역할을 할 것입니다.
+
+## 참고 자료
+
+이 글에서 다룬 연구와 도구의 원문입니다.
+
+- [Pref-GRPO: Pairwise Preference Reward GRPO for Text-to-Image RL (arXiv:2508.20751)](https://arxiv.org/abs/2508.20751)
+- [PVPO: Pre-Estimated Value-Based Policy Optimization (arXiv:2508.21104)](https://arxiv.org/abs/2508.21104)
+- [DCPO: Dynamic Clipping Policy Optimization (arXiv:2509.02333)](https://arxiv.org/abs/2509.02333)
+- [ARPO: Agentic Reinforced Policy Optimization (arXiv:2507.19849)](https://arxiv.org/abs/2507.19849)
+- [rStar2-Agent (introduces GRPO-RoC) (arXiv:2508.20722)](https://arxiv.org/abs/2508.20722)

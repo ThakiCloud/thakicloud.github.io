@@ -27,6 +27,11 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/openai-healthbench-medica
 
 인공지능과 의료 분야의 융합은 현대 기술에서 가장 유망하면서도 도전적인 영역 중 하나입니다. 대규모 언어 모델(LLM)이 의료 분야에서 점점 더 많이 활용되면서, 견고한 평가 프레임워크의 필요성이 그 어느 때보다 중요해지고 있습니다. OpenAI의 HealthBench는 혁신적인 LLMOps 방법론을 통해 의료 AI 평가의 새로운 표준을 확립하는 획기적인 솔루션으로 등장했습니다.
 
+
+![개념 다이어그램](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+
+*개념 다이어그램*
+
 ## OpenAI HealthBench란 무엇인가?
 
 HealthBench는 의료 시나리오에서 AI 시스템의 성능을 평가하기 위해 특별히 설계된 혁신적인 벤치마크입니다. 이 포괄적인 평가 프레임워크는 **60개국 262명의 의료 전문가**와의 전례 없는 협업을 통해 개발되어, 의료 AI 평가에 대한 진정한 글로벌 관점을 제공합니다.
@@ -325,3 +330,11 @@ HealthBench를 LLMOps 워크플로우에 통합하는 것은 단순한 기술적
 - 의료 AI의 미래는 HealthBench와 같은 엄격한 평가 방법론에 달려 있음
 
 HealthBench 평가 표준을 구현함으로써, LLMOps 팀은 안전성, 효능성, 문화적 민감성의 최고 기준을 충족하는 의료 AI 시스템을 자신 있게 배포할 수 있으며, 궁극적으로 전 세계 인구를 위한 AI 강화 의료 서비스의 목표를 발전시킬 수 있습니다.
+
+## 참고 자료
+
+이 글에서 다룬 연구와 도구의 원문입니다.
+
+- [HealthBench: Evaluating LLMs Towards Improved Human Health (arXiv:2505.08775)](https://arxiv.org/abs/2505.08775)
+- [OpenAI HealthBench announcement](https://openai.com/index/healthbench/)
+- [openai/simple-evals (HealthBench grader)](https://github.com/openai/simple-evals)

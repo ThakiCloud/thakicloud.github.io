@@ -27,6 +27,8 @@ toc_sticky: true
 reading_time: true
 ---
 
+![رسم توضيحي للمفهوم](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)
+
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة
 
 ## مقدمة: التدريب اللاحق بالتعلم المعزز وآفاق الذكاء الاصطناعي الجديدة
@@ -34,6 +36,11 @@ reading_time: true
 شهد عام 2025 تطوراً متسارعاً في أبحاث التدريب اللاحق بالتعلم المعزز (Reinforcement Learning Post-Training)، إذ أسهمت هذه الأبحاث في تحسين قدرات الاستدلال لدى نماذج اللغة الكبيرة (LLM) بصورة ملحوظة. لم تعد قدرات الاستدلال المتقدمة التي أظهرها نموذج o1 من OpenAI حكراً على النماذج المغلقة المصدر.
 
 يتناول هذا المقال بالتحليل المعمّق أبرز 10 أوراق بحثية في مجال التدريب اللاحق بالتعلم المعزز، صدرت منذ أبريل 2025 حتى الآن. تقدم هذه الأبحاث ابتكارات متنوعة، تمتد من منهجيات عملية ترفع قدرات النماذج المفتوحة ذات الحجم 7B-13B إلى مستوى GPT-4، وصولاً إلى تطبيقات متخصصة في مجالات كالطب والقانون.
+
+
+![مخطط مفاهيمي](/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg)
+
+*مخطط مفاهيمي*
 
 ## 1. Kimi k1.5: معايير جديدة لقدرات الاستدلال عبر التعلم المعزز الموسّع
 
@@ -239,3 +246,15 @@ $$
 ### خاتمة: آفاق إمكانيات جديدة
 
 لم يعد التدريب اللاحق بالتعلم المعزز تجربةً حكراً على المختبرات البحثية، بل بات أداةً فعّالة تستطيع الشركات والمطورون توظيفها فعلياً في تطبيقاتهم.
+
+## المراجع
+
+المصادر الأساسية للأبحاث والأدوات التي تناولها هذا المقال.
+
+- [Kimi k1.5: Scaling Reinforcement Learning with LLMs (arXiv:2501.12599)](https://arxiv.org/abs/2501.12599)
+- [Reinforcement Pre-Training / RPT (arXiv:2506.08007)](https://arxiv.org/abs/2506.08007)
+- [Agent Lightning: Train ANY AI Agents with RL (arXiv:2508.03680)](https://arxiv.org/abs/2508.03680)
+- [Beyond Ten Turns / ASearcher (arXiv:2508.07976)](https://arxiv.org/abs/2508.07976)
+- [ARTIST: Agentic Reasoning and Tool Integration via RL (arXiv:2505.01441)](https://arxiv.org/abs/2505.01441)
+- [AlphaMed: Minimalist Rule-Based RL for Medical Reasoning (arXiv:2505.17952)](https://arxiv.org/abs/2505.17952)
+- [General-Reasoner: Advancing LLM Reasoning Across All Domains (arXiv:2505.14652)](https://arxiv.org/abs/2505.14652)

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1242.0439999999999 235.60000000000002" width="1242.0439999999999" height="235.60000000000002" style="--bg:#1a1b26;--fg:#a9b1d6">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="ROOT" data-to="F" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="568.0405,93.80000000000001 568.0405,111.80000000000001 132.85199999999998,111.80000000000001 132.85199999999998,129.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROOT" data-to="C" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="568.0405,93.80000000000001 568.0405,111.80000000000001 352.8545,111.80000000000001 352.8545,129.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROOT" data-to="S" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="568.0405,93.80000000000001 568.0405,111.80000000000001 568.0405,111.80000000000001 568.0405,129.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROOT" data-to="A" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="568.0405,93.80000000000001 568.0405,111.80000000000001 816.5715,111.80000000000001 816.5715,129.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROOT" data-to="D" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="568.0405,93.80000000000001 568.0405,111.80000000000001 1089.5555,111.80000000000001 1089.5555,129.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="ROOT" data-label="RL Post-Training 2025
+(10 key papers)" data-shape="rectangle">
+  <rect x="480.746" y="40" width="174.589" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="568.0405" y="66.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="568.0405" dy="-3.9000000000000012">RL Post-Training 2025</tspan><tspan x="568.0405" dy="16.900000000000002">(10 key papers)</tspan></text>
+</g>
+<g class="node" data-id="F" data-label="Foundations
+(Kimi k1.5, Microsoft RPT)" data-shape="rectangle">
+  <rect x="40" y="129.8" width="185.70399999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="132.85199999999998" y="156.70000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="132.85199999999998" dy="-3.9000000000000012">Foundations</tspan><tspan x="132.85199999999998" dy="16.900000000000002">(Kimi k1.5, Microsoft RPT)</tspan></text>
+</g>
+<g class="node" data-id="C" data-label="Critical Limits
+(RL reweights, not creates)" data-shape="rectangle">
+  <rect x="253.70399999999998" y="129.8" width="198.301" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="352.8545" y="156.70000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="352.8545" dy="-3.9000000000000012">Critical Limits</tspan><tspan x="352.8545" dy="16.900000000000002">(RL reweights, not creates)</tspan></text>
+</g>
+<g class="node" data-id="S" data-label="Training Strategy
+(online RL beats offline)" data-shape="rectangle">
+  <rect x="480.005" y="129.8" width="176.07099999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="568.0405" y="156.70000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="568.0405" dy="-3.9000000000000012">Training Strategy</tspan><tspan x="568.0405" dy="16.900000000000002">(online RL beats offline)</tspan></text>
+</g>
+<g class="node" data-id="A" data-label="Agentic Tool Use
+(Agent Lightning, ASearcher, ARTIST)" data-shape="rectangle">
+  <rect x="684.076" y="129.8" width="264.991" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="816.5715" y="156.70000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="816.5715" dy="-3.9000000000000012">Agentic Tool Use</tspan><tspan x="816.5715" dy="16.900000000000002">(Agent Lightning, ASearcher, ARTIST)</tspan></text>
+</g>
+<g class="node" data-id="D" data-label="Domain and General
+(AlphaMed, General-Reasoner)" data-shape="rectangle">
+  <rect x="977.067" y="129.8" width="224.97699999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1089.5555" y="156.70000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1089.5555" dy="-3.9000000000000012">Domain and General</tspan><tspan x="1089.5555" dy="16.900000000000002">(AlphaMed, General-Reasoner)</tspan></text>
+</g>
+</svg>

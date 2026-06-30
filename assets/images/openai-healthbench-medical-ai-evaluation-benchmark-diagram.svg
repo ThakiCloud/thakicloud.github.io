@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 715.6374999999999 456.8" width="715.6374999999999" height="456.8" style="--bg:#1a1b26;--fg:#a9b1d6">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="DS" data-to="M" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="370.193,230.1 370.193,249.875 485.75174999999996,249.875 485.75174999999996,269.65" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="M" data-to="SC" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="485.75174999999996,323.45 485.75174999999996,351 348.3770833333333,351 348.3770833333333,363" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SC" data-to="G" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="269.43274999999994,363 269.43274999999994,351 40.039999999999964,351 40.039999999999964,181.2 104.24229166666669,181.2 104.24229166666669,76.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G" data-to="DEP" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="pass" points="152.7060416666667,76.9 152.7060416666667,112.9 137.964,112.9 137.96399999999997,176.29999999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="DEP" data-to="MON" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="137.96399999999997,213.20000000000002 137.96399999999997,269.65" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G" data-to="RT" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="fail" points="201.16979166666667,76.9 201.16979166666667,96 601.3104999999999,96 601.3104999999999,176.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RT" data-to="M" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="601.3104999999999,213.20000000000002 601.3104999999999,249.875 485.75174999999996,249.875 485.75174999999996,269.65" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="G" data-to="DEP" data-label="pass">
+  <rect x="116.96399999999998" y="119.9" width="41.41" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="137.66899999999998" y="135.05" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">pass</text>
+</g>
+<g class="edge-label" data-from="G" data-to="RT" data-label="fail">
+  <rect x="585.8104999999999" y="103" width="30.717999999999996" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="601.1695" y="118.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">fail</text>
+</g>
+<g class="node" data-id="DS" data-label="HealthBench
+(5,000 physician-built conversations)" data-shape="rectangle">
+  <rect x="241.4025" y="176.29999999999998" width="257.5809999999999" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="370.193" y="203.2" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="370.193" dy="-3.9000000000000012">HealthBench</tspan><tspan x="370.193" dy="16.900000000000002">(5,000 physician-built conversations)</tspan></text>
+</g>
+<g class="node" data-id="M" data-label="Medical AI Model
+(inference)" data-shape="rectangle">
+  <rect x="415.12974999999994" y="269.65" width="141.244" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="485.75174999999996" y="296.54999999999995" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="485.75174999999996" dy="-3.9000000000000012">Medical AI Model</tspan><tspan x="485.75174999999996" dy="16.900000000000002">(inference)</tspan></text>
+</g>
+<g class="node" data-id="SC" data-label="Rubric Scoring
+(48,562 physician-written criteria)" data-shape="rectangle">
+  <rect x="190.48841666666667" y="363" width="236.8329999999999" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="308.9049166666666" y="389.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="308.9049166666666" dy="-3.9000000000000012">Rubric Scoring</tspan><tspan x="308.9049166666666" dy="16.900000000000002">(48,562 physician-written criteria)</tspan></text>
+</g>
+<g class="node" data-id="G" data-label="Safety and Accuracy Gate" data-shape="rectangle">
+  <rect x="55.77854166666668" y="40" width="193.855" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="152.7060416666667" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Safety and Accuracy Gate</text>
+</g>
+<g class="node" data-id="DEP" data-label="Production Deploy" data-shape="rectangle">
+  <rect x="62.525499999999965" y="176.29999999999998" width="150.877" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="137.96399999999997" y="194.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Production Deploy</text>
+</g>
+<g class="node" data-id="MON" data-label="Continuous Monitoring" data-shape="rectangle">
+  <rect x="51.039999999999964" y="269.65" width="173.848" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="137.96399999999997" y="288.09999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Continuous Monitoring</text>
+</g>
+<g class="node" data-id="RT" data-label="Retrain / Fine-tune" data-shape="rectangle">
+  <rect x="526.9834999999999" y="176.3" width="148.654" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="601.3104999999999" y="194.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Retrain / Fine-tune</text>
+</g>
+</svg>

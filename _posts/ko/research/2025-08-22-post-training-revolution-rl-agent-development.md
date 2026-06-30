@@ -27,6 +27,8 @@ canonical_url: "https://thakicloud.github.io/research/post-training-revolution-r
 reading_time: true
 ---
 
+![핵심 개념 일러스트](/assets/images/post-training-revolution-rl-agent-development-hero.png)
+
 ⏱️ **예상 읽기 시간**: 15분
 
 ## 서론: 포스트 트레이닝의 패러다임 전환
@@ -34,6 +36,11 @@ reading_time: true
 인공지능 분야에서 2025년은 포스트 트레이닝(Post-Training) 영역의 혁명적 변화를 목격하고 있습니다. 특히 강화학습(Reinforcement Learning)을 활용한 AI 에이전트 개발에서 놀라운 진전이 이루어지고 있습니다. 더 이상 단순한 지도학습 기반의 미세조정에 머물지 않고, 복잡한 툴 호출, 다단계 추론, 그리고 동적 환경 적응까지 가능한 지능형 에이전트 구축이 현실화되고 있습니다.
 
 이 글에서는 2025년 4월 이후 arXiv에 공개된 강화학습 기반 포스트 트레이닝 분야의 핵심 논문 10편을 GitHub 스타 수 기준으로 정리하고, 각 연구의 실무 적용 가능성을 심도 있게 분석해보겠습니다. 특히 에이전트 네이티브 런타임(Agent-Native Runtime) 관점에서 이들 연구가 가져올 변화를 조망해보겠습니다.
+
+
+![개념 다이어그램](/assets/images/post-training-revolution-rl-agent-development-diagram.svg)
+
+*개념 다이어그램*
 
 ## 연구 선정 및 평가 기준
 
@@ -195,3 +202,15 @@ $$\hat{V}_{DR} = \frac{\pi(a|s)}{\mu(a|s)} \cdot R + (1 - \frac{\pi(a|s)}{\mu(a|
 본 분석의 순위는 arXiv가 논문별 인기 지표를 공개하지 않는 한계로 인해 **공식 GitHub 스타 수**를 1차 기준으로 사용했습니다. 더 정밀한 대체 인기 지표로는 Papers with Code나 Hugging Face Papers의 업보트, 트렌딩, OpenAlex 인용 수 등을 결합할 수 있지만, 각 지표의 표본과 정의가 달라 **혼합 지수의 공정성** 문제가 있어 이번 분석에서는 미반영했습니다.
 
 표에 제시된 모든 날짜와 주장은 arXiv 본문 또는 논문에 연결된 공식 리포지터리에서 확인 가능한 내용만을 포함했으며, 주요 출처는 각 섹션에서 명시했습니다.
+
+## 참고 자료
+
+이 글에서 다룬 연구와 도구의 원문입니다.
+
+- [ToolRL: Reward is All Tool Learning Needs (arXiv:2504.13958)](https://arxiv.org/abs/2504.13958)
+- [Geometric-Mean Policy Optimization / GMPO (arXiv:2507.20673)](https://arxiv.org/abs/2507.20673)
+- [Pre-DPO: Improving Data Utilization in DPO (arXiv:2504.15843)](https://arxiv.org/abs/2504.15843)
+- [Doubly Robust Alignment for LLMs / DRPO (arXiv:2506.01183)](https://arxiv.org/abs/2506.01183)
+- [KDRL: Unified Knowledge Distillation and RL (arXiv:2506.02208)](https://arxiv.org/abs/2506.02208)
+- [DSPy framework (Stanford NLP)](https://github.com/stanfordnlp/dspy)
+- [vLLM inference engine](https://github.com/vllm-project/vllm)
