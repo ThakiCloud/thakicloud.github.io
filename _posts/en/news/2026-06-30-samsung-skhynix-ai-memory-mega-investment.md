@@ -5,6 +5,7 @@ seo_title: "Samsung & SK 4,755 Trillion KRW Investment Announcement: Honam Fabs 
 seo_description: "Samsung 2,655 trillion + SK 2,100 trillion = 4,755 trillion KRW domestic investment announced. Covers the 800 trillion KRW southwestern memory fabs, SK's 1,000 trillion KRW 15GW AI data centers, the HBM supercycle, the Semiconductor Special Act, and ThakiCloud's K8s/Kueue serving perspective."
 date: 2026-06-30
 last_modified_at: 2026-06-30
+disable_mathjax: true
 categories:
   - news
 tags:
@@ -38,7 +39,7 @@ Chairman Lee Jae-yong named Gwangju as a candidate site for the new semiconducto
 
 One important context: 4,755 trillion KRW represents a cumulative planned figure spread over more than 10 years, not a near-term commitment. The two companies' current combined annual capital expenditure runs at roughly 70 trillion KRW (Samsung DS approximately 41 trillion, SK hynix approximately 29 trillion). Announcement scale and annual execution pace should be read separately.
 
-> USD conversion note: International media reported this announcement using figures ranging from "$880 billion," "$1.3 trillion," and "$520 billion." The discrepancies stem from different scope definitions and exchange rates applied. The most reliable reference is the Korean won original. For those who require a conversion, 4,755 trillion KRW at 1 USD = 1,380 KRW implies approximately $3.44 trillion.
+> USD conversion note: The announced figure is denominated in Korean won, which is the reference to use. At an exchange rate of 1,380 KRW per USD, 4,755 trillion KRW is roughly 3.4 trillion USD.
 
 ## Investment Structure: 800 Trillion KRW Southwestern Fabs and 15GW Data Centers
 

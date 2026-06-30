@@ -34,6 +34,10 @@ AI 에이전트 개발에서 가장 어려운 선택 중 하나는 모델 훈련
 
 BERT 시대부터 GPT-3까지의 변화를 경험한 Manus팀은 "확률적 대학원생 하강법(Stochastic Graduate Descent)"이라고 불리는 경험적 접근법을 통해 4번의 프레임워크 재구축을 거쳐 현재의 최적화 전략에 도달했습니다.
 
+![개념 다이어그램](/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg)
+
+*개념 다이어그램*
+
 ## KV-캐시 중심 설계: 프로덕션 에이전트의 핵심 지표
 
 ### 왜 KV-캐시 히트율이 중요한가?

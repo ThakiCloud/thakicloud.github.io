@@ -37,6 +37,10 @@ reading_time: true
 
 تغطي هذه المقالة كل ما يلزم لتحسين نظام RAG باستخدام Binary Quantization، من المبادئ الأساسية وحتى التنفيذ الفعلي.
 
+![مخطط مفاهيمي](/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg)
+
+*مخطط مفاهيمي*
+
 ## الفكرة الجوهرية لـ Binary Quantization
 
 ### اختناقات أنظمة RAG التقليدية

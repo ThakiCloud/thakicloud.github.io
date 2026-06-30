@@ -35,6 +35,10 @@ reading_time: true
 
 [**LangChain Open Deep Research**](https://github.com/langchain-ai/open_deep_research)는 4.6k개의 스타와 673개의 포크를 보유한 활발한 오픈소스 프로젝트입니다. MIT 라이선스 하에 배포되며, 연구자부터 비즈니스 애널리스트까지 다양한 전문가들이 활용할 수 있는 포괄적인 연구 자동화 솔루션을 제공합니다.
 
+![개념 다이어그램](/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg)
+
+*개념 다이어그램*
+
 ## Open Deep Research 핵심 아키텍처
 
 ### 1. 이원화된 에이전트 시스템

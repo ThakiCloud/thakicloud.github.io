@@ -36,6 +36,10 @@ reading_time: true
 
 This guide covers the full architecture from core concepts to production deployment, including the quality-focused agent design, multi-agent orchestration patterns, advanced RAG, and domain-specific adaptations for financial and medical research.
 
+![Concept diagram](/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg)
+
+*Concept diagram*
+
 ## System Architecture Overview
 
 Open Deep Research uses a hub-and-spoke agent architecture built on LangGraph:

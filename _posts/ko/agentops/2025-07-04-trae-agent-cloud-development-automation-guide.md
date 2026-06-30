@@ -34,6 +34,10 @@ reading_time: true
 
 이 도구는 단순한 코드 생성을 넘어서 전체 개발 프로세스를 자동화할 수 있는 강력한 CLI 인터페이스를 제공합니다. 특히 클라우드 네이티브 환경에서 인프라 코드 작성, CI/CD 파이프라인 구축, 모니터링 시스템 개발 등 다양한 영역에서 혁신적인 자동화를 구현할 수 있습니다.
 
+![개념 다이어그램](/assets/images/trae-agent-cloud-development-automation-guide-diagram.svg)
+
+*개념 다이어그램*
+
 ## TRAE-agent 소개
 
 ### 핵심 특징

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 880" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="Manus context engineering loop from user input to action with append-only observation">
+  <rect width="920" height="880" fill="#f8fafc"/>
+  <text x="460" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Manus 컨텍스트 엔지니어링 루프</text>
+  <text x="460" y="70" text-anchor="middle" font-size="13" fill="#64748b">Manus context-engineering loop — six production lessons</text>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/>
+    </marker>
+  </defs>
+
+  <rect x="160" y="120" width="540" height="60" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="156" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">User input</text>
+  <line x1="430" y1="180" x2="430" y2="212" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="212" width="540" height="60" rx="12" fill="#dbe4f0" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="241" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Stable system-prompt prefix</text>
+  <text x="430" y="259" text-anchor="middle" font-size="11" fill="#475569">KV-cache preserved · 10x cost difference on hit</text>
+  <line x1="430" y1="272" x2="430" y2="304" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="304" width="540" height="60" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="333" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Context-aware state machine</text>
+  <text x="430" y="351" text-anchor="middle" font-size="11" fill="#475569">mask tools, never remove</text>
+  <line x1="430" y1="364" x2="430" y2="396" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="396" width="540" height="60" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="425" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">FileSystemContext</text>
+  <text x="430" y="443" text-anchor="middle" font-size="11" fill="#475569">store large observations, return summary references</text>
+  <line x1="430" y1="456" x2="430" y2="488" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="488" width="540" height="60" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="517" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Recite todo.md</text>
+  <text x="430" y="535" text-anchor="middle" font-size="11" fill="#475569">goal at context tail, avoid lost-in-the-middle</text>
+  <line x1="430" y1="548" x2="430" y2="580" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="580" width="540" height="60" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="616" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">ErrorLearningContext — keep failed actions</text>
+  <line x1="430" y1="640" x2="430" y2="672" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="672" width="540" height="60" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="708" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">ContextDiversifier — break few-shot patterns</text>
+  <line x1="430" y1="732" x2="430" y2="764" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="160" y="764" width="540" height="60" rx="12" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+  <text x="430" y="800" text-anchor="middle" font-size="14.5" font-weight="600" fill="#166534">Action + append-only observation</text>
+
+  <path d="M700,794 C 800,794 800,334 700,334" fill="none" stroke="#1B4F72" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+  <text x="812" y="560" text-anchor="middle" font-size="12" font-weight="600" fill="#1B4F72" transform="rotate(90 812 560)">next step</text>
+</svg>

@@ -36,6 +36,10 @@ AI agents that raise software development productivity are receiving significant
 
 [**Refact.ai**](https://github.com/smallcloudai/refact) is an active open-source project with 3k stars and 248 forks. Distributed under the BSD-3-Clause license, it provides an enterprise-grade solution capable of self-hosting.
 
+![Concept diagram](/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg)
+
+*Concept diagram*
+
 ## Core Architecture of Refact.ai
 
 ### 1. Multi-Modal AI Integration System

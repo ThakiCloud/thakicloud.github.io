@@ -35,6 +35,10 @@ reading_time: true
 
 شهد فريق Manus التحوّل من حقبة BERT إلى GPT-3، وتوصّل إلى استراتيجية التحسين الحالية عبر نهج تجريبي يسمّونه "Stochastic Graduate Descent"، بعد إعادة بناء إطارهم أربع مرات.
 
+![مخطط مفاهيمي](/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg)
+
+*مخطط مفاهيمي*
+
 ## التصميم المحوري على KV-Cache: المقياس الأهم لوكلاء الإنتاج
 
 ### لماذا تهم نسبة إصابة KV-Cache؟

@@ -32,6 +32,10 @@
 {% endfor %}
 {% endif %}
 
+<!-- MathJax: $...$ is enabled as inline math, which collides with currency ($20 billion).
+     Posts that use $ only for currency (news, finance) set `disable_mathjax: true` in front
+     matter to opt out — otherwise currency pairs render as non-wrapping math and overflow sideways. -->
+{% unless page.disable_mathjax %}
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
 </script>
@@ -48,6 +52,7 @@ MathJax.Hub.Config({
   "HTML-CSS": { availableFonts: ["TeX"] }
 });
 </script>
+{% endunless %}
 
 <!-- Mermaid diagram initialization (theme-aware: follows light/dark toggle) -->
 <script>

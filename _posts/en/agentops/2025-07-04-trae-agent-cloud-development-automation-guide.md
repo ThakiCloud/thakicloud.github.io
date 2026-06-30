@@ -36,6 +36,10 @@ reading_time: true
 
 TRAE Agent is built on a philosophy that goes beyond simple code generation: it functions as an intelligent agent that deeply understands development tasks, plans systematically, and executes end to end. It reduces development time, handles repetitive tasks, and lets engineers focus on creative problem solving.
 
+![Concept diagram](/assets/images/trae-agent-cloud-development-automation-guide-diagram.svg)
+
+*Concept diagram*
+
 ## Core Architecture
 
 TRAE Agent centers on three main components:

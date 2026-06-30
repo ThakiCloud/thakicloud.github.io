@@ -36,6 +36,10 @@ RAG(Retrieval-Augmented Generation) 시스템이 기업 AI 애플리케이션의
 
 이번 글에서는 Binary Quantization의 핵심 원리부터 실제 구현까지, RAG 시스템 최적화에 필요한 모든 것을 상세히 다뤄보겠습니다.
 
+![개념 다이어그램](/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg)
+
+*개념 다이어그램*
+
 ## Binary Quantization의 혁신적 아이디어
 
 ### 기존 RAG 시스템의 한계
