@@ -1,8 +1,8 @@
 ---
-title: "Samsung and SK's 4,755 Trillion KRW Investment: Where Does the '$880 Billion' Figure Come From, and the AI Memory Supercycle"
-excerpt: "On June 29, 2026, Samsung Electronics and SK hynix announced a combined 4,755 trillion KRW in domestic investment over ten years. This analysis verifies the widely cited '$880 billion' figure against primary sources, examines the 800 trillion KRW Southwestern memory fab commitment and the HBM supercycle, and explains what Korea's AI infrastructure buildout means for ThakiCloud's Kubernetes and Kueue-based serving platform."
-seo_title: "Samsung and SK 4,755 Trillion KRW Investment Analysis: The Truth Behind $880 Billion and AI Memory - ThakiCloud"
-seo_description: "Fact-checking the Samsung 2,655 trillion and SK 2,100 trillion KRW announcements against primary sources. The $880 billion figure is not an official number. This analysis covers the 800 trillion KRW Southwestern memory fab, the HBM supercycle, and sovereign AI infrastructure demand from a ThakiCloud perspective."
+title: "Samsung & SK’s 4,755 Trillion KRW 10-Year Domestic Investment: Honam Memory Fabs to 15GW AI Data Centers"
+excerpt: "On June 29, 2026, Samsung Electronics and SK hynix announced a combined 4,755 trillion KRW domestic investment over the next 10 years. Centered on four memory fabs in the southwestern region (800 trillion KRW) and SK's 15GW AI data center plan (1,000 trillion KRW), this post breaks down the announcement, examines the HBM supercycle and policy environment, and explores what rapidly expanding domestic AI infrastructure means for ThakiCloud's Kubernetes- and Kueue-based serving platform."
+seo_title: "Samsung & SK 4,755 Trillion KRW Investment Announcement: Honam Fabs & AI Data Centers - Thaki Cloud"
+seo_description: "Samsung 2,655 trillion + SK 2,100 trillion = 4,755 trillion KRW domestic investment announced. Covers the 800 trillion KRW southwestern memory fabs, SK's 1,000 trillion KRW 15GW AI data centers, the HBM supercycle, the Semiconductor Special Act, and ThakiCloud's K8s/Kueue serving perspective."
 date: 2026-06-30
 last_modified_at: 2026-06-30
 categories:
@@ -24,109 +24,111 @@ toc_icon: "microchip"
 canonical_url: "https://thakicloud.github.io/en/news/samsung-skhynix-ai-memory-mega-investment/"
 ---
 
-On June 29, 2026, a single set of figures was unveiled at the Presidential Guesthouse in Seoul. Samsung Electronics and SK hynix announced plans to invest a combined 4,755 trillion KRW domestically over the next ten years. President Lee Jae-myung presided over the event, flanked by Samsung Chairman Lee Jae-yong and SK Group Chairman Chey Tae-won. Yet in overseas media and on social platforms, the same announcement was circulating under the figure "$880 billion." Some outlets reported "1.3 trillion dollars." Others said "520 billion dollars."
+On June 29, 2026, a landmark figure emerged at the Cheongwadae State Guest House. Samsung Electronics and SK hynix announced plans to invest a combined 4,755 trillion KRW domestically over the next 10 years. The declaration was made in person by Samsung Chairman Lee Jae-yong and SK Group Chairman Chey Tae-won at the "Republic of Korea Great Leap, Three National Mega-Projects Public Briefing" presided over by President Lee Jae-myung.
 
-One announcement, wildly divergent numbers. This analysis traces each figure to its primary source, identifies the genuine architecture of the announcement, and explains what it means for operators of AI infrastructure like ThakiCloud.
+This post calmly unpacks what was announced that day: what will be built, where, and at what scale; the industrial trends and policies behind the numbers; and what it all means for operators of AI infrastructure.
 
-## The "$880 Billion" Figure Is Not an Official Number
+![Bar chart comparing Samsung and SK's 10-year domestic investment plan against the government's annual budget](/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.png)
 
-The bottom line first: neither Samsung, SK Group, nor the Korean government has ever officially cited "$880 billion." Every confirmed primary report in the Korean press uses Korean won amounts only and provides no dollar conversion.
+## What Was Announced
 
-The $880 billion figure originates from Bloomberg, which converted a subset of the total investment, specifically a portion covering data centers and selected semiconductor items estimated at a minimum of 1,350 trillion KRW, at an exchange rate of approximately 1 USD to 1,534 KRW. That is a secondary estimate, not an official announcement. The "1.3 trillion dollar" figure covers a different, broader aggregation. The "520 billion dollar" figure isolates only the Southwestern fab commitment and applies yet another exchange rate. In short, each dollar headline reflects a different scope and a different rate.
+The announcement was not a standalone corporate IR event. It was a declaration of a national mega-project, which President Lee framed as a "Korean-style AI industrial revolution." Two groups are investing: Samsung Group pledged 2,655 trillion KRW and SK Group pledged 2,100 trillion KRW in domestic investment over 10 years, for a combined total of 4,755 trillion KRW, roughly 6.5 times the government's annual budget of approximately 728 trillion KRW.
 
-The picture is clearest in Korean won. The verified total is 4,755 trillion KRW: Samsung's 2,655 trillion KRW plus SK Group's 2,100 trillion KRW. This figure is consistent across multiple independent primary reports including Financial News, Aju Economy, Newsis, and MBC. Applying the current exchange rate of 1 USD to 1,380 KRW, the full 4,755 trillion KRW is equivalent to approximately 3.4 trillion USD. The Bloomberg-derived $880 billion represents only a portion of that total, calculated at a higher exchange rate.
+Chairman Lee Jae-yong named Gwangju as a candidate site for the new semiconductor complex, stating: "We are considering Gwangju as a candidate site where incentive support is expected." Chairman Chey Tae-won emphasized his intention to transform Korea "from a country that consumes AI into a country that exports it." SK hynix CEO Kwak Noh-jung specifically requested the application of the Semiconductor Special Act to the Yongin cluster and improvements to regional living conditions.
 
-> Citation principle: when referencing figures from this announcement, always state the Korean won original and the exchange rate applied. A dollar headline stripped of context can make the same announcement appear to vary by a factor of four.
+One important context: 4,755 trillion KRW represents a cumulative planned figure spread over more than 10 years, not a near-term commitment. The two companies' current combined annual capital expenditure runs at roughly 70 trillion KRW (Samsung DS approximately 41 trillion, SK hynix approximately 29 trillion). Announcement scale and annual execution pace should be read separately.
 
-![Bar chart comparing Samsung and SK hynix ten-year domestic investment plans against Korea's annual government budget](/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.png)
+> USD conversion note: International media reported this announcement using figures ranging from "$880 billion," "$1.3 trillion," and "$520 billion." The discrepancies stem from different scope definitions and exchange rates applied. The most reliable reference is the Korean won original. For those who require a conversion, 4,755 trillion KRW at 1 USD = 1,380 KRW implies approximately $3.44 trillion.
 
-To calibrate the scale, comparing 4,755 trillion KRW against Korea's annual government budget of approximately 728 trillion KRW, the combined ten-year plan equals roughly 6.5 times the national annual budget. That said, this is a cumulative plan extending over a decade. The two companies' current combined annual capital expenditure runs at roughly 70 trillion KRW, with Samsung DS at approximately 41 trillion and SK hynix at approximately 29 trillion.
+## Investment Structure: 800 Trillion KRW Southwestern Fabs and 15GW Data Centers
 
-## The True Architecture of the Announcement: The 800 Trillion KRW Southwestern Memory Fabs
-
-Within the 4,755 trillion KRW total, the most concrete commitment is the Southwestern (Honam) memory fab cluster. Samsung and SK hynix will each invest 400 trillion KRW, totaling 800 trillion KRW, to build four new memory fab facilities, two per company. Samsung Chairman Lee Jae-yong specifically named Gwangju as a candidate site for the new complex. The remaining components break down as follows.
+Within the 4,755 trillion KRW total, the most binding commitment is the southwestern (Honam) memory fab plan. Samsung and SK will each contribute 400 trillion KRW, 800 trillion KRW in total, to build four new memory fabs (two per company). Samsung is considering Gwangju as its site. The remaining components break down as follows.
 
 ```mermaid
 flowchart TB
-    A["Samsung and SK 10-Year Domestic Investment<br/>4,755 Trillion KRW"] --> B["Samsung Electronics<br/>2,655 Trillion"]
+    A["Samsung & SK 10-Year Domestic Investment<br/>4,755 Trillion KRW"] --> B["Samsung Electronics<br/>2,655 Trillion"]
     A --> C["SK Group<br/>2,100 Trillion"]
-    B --> B1["Pyeongtaek and Yongin Semiconductor<br/>Approx. 2,030 Trillion"]
+    B --> B1["Pyeongtaek & Yongin Semiconductors<br/>approx. 2,030 Trillion"]
     B --> B2["Chungcheong HBM Packaging<br/>140 Trillion"]
-    C --> C1["AI Data Centers<br/>1,000 Trillion / 15GW"]
-    C --> C2["Yongin Semiconductor<br/>600 Trillion"]
-    C --> C3["Cheongju NAND Expansion<br/>100 Trillion"]
-    B --> D["Southwestern Memory Fabs (4 units)<br/>800 Trillion / Joint Commitment"]
+    C --> C1["AI Data Centers<br/>1,000 Trillion · 15GW"]
+    C --> C2["Yongin Semiconductors<br/>600 Trillion"]
+    C --> C3["Cheongju NAND Capacity Expansion<br/>100 Trillion"]
+    B --> D["Southwestern Memory Fabs (4 fabs)<br/>800 Trillion · Joint Samsung & SK"]
     C --> D
 ```
 
-Two figures in this structure are commonly conflated and deserve clarification. SK Group's "1,000 trillion KRW" refers to SKT's plan to build AI data centers totaling 15 GW of capacity nationwide by 2035. The separate "100 trillion KRW" refers to SK hynix's NAND flash capacity expansion at its Cheongju facility. These are not competing figures; they describe entirely different projects. Cross-checking against industry benchmarks, where 1 GW of data center capacity typically costs between 1 billion and 3 billion USD to construct, a 15 GW target at 1,000 trillion KRW is broadly consistent.
+The most notable item on the SK side is the AI data center plan. Led by SKT, the group intends to spend 1,000 trillion KRW by 2035 to build 15GW of AI data centers nationwide. Given that typical capex for a 1GW data center runs roughly $1 to $3 billion, a 1,000 trillion KRW figure for 15GW is broadly consistent. In addition, SK hynix will separately invest 100 trillion KRW in expanding NAND flash capacity at its Cheongju facility. Samsung has allocated approximately 2,030 trillion KRW to Pyeongtaek and Yongin semiconductor operations and 140 trillion KRW to HBM packaging in the Chungcheong region.
 
-## Why Now and Why This Scale: The HBM Supercycle
+## Why Now, Why This Scale: The HBM Supercycle
 
-The driver behind these figures converges on one product category: HBM, or High Bandwidth Memory. HBM is the stacked, high-value memory integrated into AI accelerators, priced at five to seven times the cost of conventional DRAM. The global HBM market is forecast to grow from approximately 35 billion USD in 2025 to between 54.6 billion and 58 billion USD in 2026, a growth rate of more than 58 percent.
+The driving force behind these enormous numbers converges on a single technology: HBM, or High Bandwidth Memory. HBM is a high-value memory stacked directly onto AI accelerators, commanding a unit price five to seven times that of conventional DRAM. The global HBM market is forecast to grow from approximately $35 billion in 2025 to $54.6 to $58 billion in 2026, a jump of more than 58%.
 
-Demand originates primarily from hyperscaler capital expenditure. Amazon, Microsoft, Google, Meta, and Oracle collectively exceeded 600 billion USD in AI infrastructure capex for 2026, with memory now accounting for roughly 30 percent of that spending, up from approximately 8 percent in 2023 and 2024, a nearly fourfold increase. NVIDIA's Blackwell and Rubin product cycles have generated hundreds of billions of dollars in order backlogs, and all three HBM suppliers, SK hynix, Micron, and Samsung, report their 2026 production is effectively sold out.
+The root of that demand lies in hyperscaler spending. Amazon, Microsoft, Google, Meta, and Oracle together exceeded $600 billion in AI infrastructure capex in 2026, with memory's share of that spending rising to approximately 30%, roughly four times the 8% share seen in 2023 to 2024. Backlog from NVIDIA Blackwell and Rubin demand alone has reached hundreds of billions of dollars, and the 2026 production output of the three HBM suppliers, SK hynix, Micron, and Samsung, is effectively sold out.
 
-The critical insight is that this bottleneck is a capacity constraint, not a capital constraint. The industry cannot produce enough HBM not because investment is lacking but because fab capacity is insufficient. This is precisely why both companies are moving simultaneously toward large-scale expansion. SK hynix posted an operating margin of 47 percent in Q3 2025, and that profitability is being recycled directly into Yongin and Cheongju capacity, creating a self-reinforcing expansion cycle.
+The critical insight is that the bottleneck is capacity, not capital. The constraint is not a lack of money to build; it is a lack of fabs to build in. That is why both companies are moving toward large-scale expansion simultaneously. SK hynix posted an operating margin of 47% in Q3 2025, and that profitability is now being recycled into Yongin and Cheongju facilities, creating a virtuous cycle.
 
-## The Policy Architecture: The Semiconductor Special Act
+## Policy Backing: The Semiconductor Special Act
 
-Korea has historically supported its semiconductor industry through tax credits rather than direct cash subsidies, unlike the United States and Europe. The K-Chips Act, passed in February 2025, raised the investment tax credit rate for large enterprises from 15 to 20 percent and extended R&D credits through 2031. The combined tax benefit for the two companies is estimated at approximately 6 trillion KRW.
+Korea has historically supported its semiconductor industry through tax credits rather than direct cash subsidies as seen in the United States or Europe. The K-Chips Act passed in February 2025 raised the facility investment tax credit rate for large corporations from 15% to 20% and extended R&D credits through 2031. The combined tax benefit for the two companies is estimated at approximately 6 trillion KRW.
 
-The Semiconductor Special Act, passed in January 2026, adds a further layer of support by establishing a legal basis for central and local government to directly fund industrial infrastructure including power, water, and road access. Implementation is scheduled for Q3 2026. Whether the 800 trillion KRW Southwestern fabs actually come online will depend critically on timely delivery of power and water infrastructure under this special act. SK hynix CEO Kwak No-jung explicitly called for application of the special act to the Yongin cluster and improvement of regional living conditions at the announcement event, underscoring the infrastructure dependency.
+Layered on top is the Semiconductor Special Act, passed in January 2026. This legislation creates a legal basis for the state and local governments to directly support the construction of critical industrial infrastructure including power, water, and roads. Implementation is scheduled for Q3 2026. For the 800 trillion KRW Honam fabs to actually come online, the timely delivery of power and water infrastructure under this Special Act will be the decisive variable. CEO Kwak Noh-jung's direct request at the announcement for the Special Act to be applied to the Yongin cluster reflects exactly this concern.
 
 ## Global Competition: Three HBM Suppliers Expanding Simultaneously
 
 | Company | Position | Recent Investment | HBM Status |
 |---|---|---|---|
-| SK hynix | Memory market leader | Yongin 600 trillion KRW and others | Approximately 57% HBM share, priority HBM4 supply |
-| Samsung Electronics | Memory challenger | Pyeongtaek and Yongin approx. 2,030 trillion KRW | Approximately 35% HBM share, 50% capacity increase in 2026 |
-| Micron | Memory third place | Approx. 20 billion USD in FY26 | 2026 HBM sold out, HBM4 volume production in Q2 |
-| TSMC | Foundry | 165 billion USD in Arizona | CoWoS packaging sold out through 2026 |
+| SK hynix | Memory No. 1 | Yongin 600 trillion KRW, etc. | HBM share approx. 57%, HBM4 priority supply |
+| Samsung Electronics | Memory challenger | Pyeongtaek & Yongin approx. 2,030 trillion KRW | HBM share approx. 35%, 50% capacity expansion in 2026 |
+| Micron | Memory No. 3 | FY26 approx. $20 billion | 2026 HBM fully booked, HBM4 mass production in Q2 |
+| TSMC | Foundry | Arizona $165 billion | CoWoS packaging sold out through 2026 |
 
-All three HBM suppliers are effectively sold out for 2026. The competitive inflection point is 2027 and 2028. If Korean fab capacity coming online in those years is insufficient, incremental HBM4 and HBM5 demand may shift toward Micron. On the foundry side, TSMC is committing 165 billion USD to Arizona alone, with CoWoS packaging capacity sold out through 2026. Intel has effectively withdrawn from HBM competition amid its foundry restructuring.
+All three HBM suppliers have their 2026 output sold out. The real question is 2027 to 2028. If sufficient Korean fab capacity is not online by then, the incremental demand for HBM4 and HBM5 could shift to Micron. On the foundry side, TSMC is committing $165 billion to Arizona alone, filling its CoWoS packaging capacity through 2026, while Intel has effectively withdrawn from HBM competition through its foundry restructuring.
 
-## Power Is the Real Bottleneck: Location Competition for Data Centers
+## Power as the Real Bottleneck: Data Center Location Competition
 
-Beginning in Q1 2026, the primary constraint for AI infrastructure shifted from chip supply to power availability. In the United States, approximately 7 GW of data center projects have been delayed or cancelled due to power shortages. Paradoxically, this development increases the attractiveness of sites in Korea's Southwestern region and the Middle East, where power and land can be secured.
+Since Q1 2026, the primary bottleneck for AI infrastructure has shifted from chips to power. In the United States, approximately 7GW of data center projects have been delayed or cancelled due to power constraints. Paradoxically, this makes Korea's southwestern region and parts of the Middle East, where power and land remain available, increasingly attractive.
 
-SK's plan to build 15 GW of AI data center capacity nationwide by 2035 at a cost of 1,000 trillion KRW is not simply a real estate play. When a memory manufacturer directly builds the data centers to which it sells HBM, it creates its own end-demand and improves its negotiating position within a supply chain where NVIDIA and hyperscalers currently set specifications. Samsung is moving in the same vertical integration direction with its AI data center in Haenam and its AI server substrate factory in Sejong.
+SK's plan to build 15GW of AI data centers nationwide for 1,000 trillion KRW by 2035 is not simply a real estate bet. When a memory manufacturer directly builds the data centers that will consume its HBM output, it can create its own demand and recover bargaining power in a supply chain where NVIDIA and hyperscalers currently set the terms. Samsung is moving in the same direction of vertical integration, with AI data center projects in Haenam and an AI server substrate factory in Sejong.
 
-## ThakiCloud Perspective: More Hardware Raises the Value of the Software Layer
+## Market Reaction
 
-The strategic significance of this announcement is that Korea is vertically integrating AI infrastructure at a national scale, and that trajectory connects directly to ThakiCloud's ai-platform business.
+Immediately following the announcement, Samsung Electronics shares closed at 323,000 KRW after volatile trading, and on June 30 SK hynix reclaimed the top position in KOSPI market capitalization from Samsung Electronics. Some analysts drew parallels to the Cisco-Microsoft reversal during the 2000 dot-com bubble and raised concerns about a market peak. However, the majority of analysts withheld judgment on simple overheating, noting that "actual earnings and the macro environment need more observation." There is also a view that the valuation reversal is excessive, given that Samsung's 2026 operating profit estimate (361 trillion KRW) remains higher than SK hynix's (262 trillion KRW).
 
-First, as domestic AI data center capacity expands toward 15 GW, the demand for multi-tenant infrastructure to train and serve models on top of that hardware grows in parallel. ThakiCloud targets exactly this layer with GPU scheduling built on Kubernetes and Kueue, and model serving via vLLM. As fabs and data centers supply the hardware, a control plane capable of safely isolating and running multiple customers' workloads becomes essential.
+## ThakiCloud Perspective: The More Hardware Scales, the More the Software Layer Matters
 
-Second, sovereign AI and on-premises requirements intensify. National critical infrastructure and public sector organizations frequently cannot operate models on external clouds and must run them within their own data centers, a requirement that grows stricter in regulated and security-sensitive environments. ThakiCloud's self-hosting capability, multi-tenant isolation, and cost-efficient serving are precise fits for this demand.
+The essence of this announcement is that Korea is vertically integrating AI infrastructure at the national level, and that connects directly to ThakiCloud's ai-platform business.
 
-Third, and perhaps most consequentially, as HBM and high-performance GPUs become more abundant, the competitive axis shifts from "how much did you procure" to "how efficiently do you operate it." GPU lifecycle management and queuing systems that keep expensive accelerators utilized, not idle, ultimately determine unit economics. The 4,755 trillion KRW investment creates hardware. Raising the utilization rate of that hardware is the job of the scheduler and the serving engine. That is where ThakiCloud's value proposition sits.
+As domestic AI data centers expand to 15GW, the demand for multi-tenant infrastructure to train and serve models on top of that hardware grows with it. ThakiCloud targets exactly this layer with Kubernetes and Kueue-based GPU scheduling and vLLM serving. When fabs and data centers supply the hardware, a control plane is needed to safely isolate and run multiple customers' workloads on top of it.
 
-## Risks and Counterarguments: Caution Is Warranted
+The nature of the demand also works in our favor. National critical industries and public sector entities frequently need to operate models inside their own data centers rather than relying on external clouds, especially in security-sensitive environments. ThakiCloud's self-hosting, multi-tenant isolation, and cost-efficient serving align precisely with this sovereign AI demand.
 
-Treating this announcement as an unqualified positive signal carries real risks. The counterarguments deserve direct acknowledgment.
+And the most important shift is this: as HBM and high-performance GPUs proliferate, the axis of competition moves from "how much did you buy" to "how efficiently can you run it." GPU lifecycle management and queuing that prevents expensive accelerators from sitting idle ultimately determines cost. The software layer that runs the hardware created by 4,755 trillion KRW efficiently, that is exactly where ThakiCloud's value lies.
 
-The 4,755 trillion KRW is a ten-year cumulative plan, not a verified annual execution commitment. Government-sponsored announcements carry inherent upward bias, and the Yongin 622 trillion KRW cluster announced in 2024 has already experienced schedule delays. There is invariably a gap between announcement and execution.
+## Caveats and Counterarguments: Too Early for Pure Optimism
 
-If the HBM supercycle turns, today's capacity expansion becomes tomorrow's oversupply. Memory is historically among the most cyclical industries. If AI capex proves to be overinvestment, as some analysts argue, the fabs scheduled to come online in 2027 and 2028 could coincide with a demand slowdown.
+Reading this announcement as unambiguously positive would be a mistake. The counterarguments deserve an honest look.
 
-Power and water infrastructure that fails to arrive on schedule will delay even an 800 trillion KRW fab. Given that power constraints are the primary reason for global data center delays, this is not an abstract concern.
+First, 4,755 trillion KRW is a 10-year cumulative "plan," not an annualized figure with verified execution. The government event context may introduce upward bias, and the Yongin 622 trillion KRW cluster announced in 2024 has already experienced schedule delays. There is always a gap between announcement and execution.
 
-Finally, the day after the announcement, on June 30, SK hynix surpassed Samsung Electronics to become the largest company on the KOSPI by market capitalization. Some observers drew parallels to the Cisco-Microsoft market cap reversal at the peak of the 2000 dot-com bubble, citing it as a potential top signal. Most analysts chose to reserve judgment, citing the need to track earnings and macro conditions, but the warning that valuations may be running ahead of fundamentals cannot be dismissed.
+Second, if the HBM supercycle reverses, today's expansion becomes tomorrow's oversupply. Memory is historically a sharply cyclical industry. If AI capex proves to be overinvestment as some analysts contend, the fabs coming online in 2027 to 2028 could coincide with a period of softening demand.
+
+Third, if power and water infrastructure is not delivered on schedule, even an 800 trillion KRW fab investment will be delayed. Power is the leading cause of global data center delays, making this a concrete rather than abstract risk.
+
+Finally, the valuation reversal has prompted warnings that market prices are running ahead of fundamentals. Announcement scale does not guarantee earnings.
 
 ## Summary
 
-The verified number from the June 29, 2026 announcement is 4,755 trillion KRW. The figure "$880 billion," derived by Bloomberg at 1 USD to 1,380 KRW basis, represents only a portion of that total calculated at a higher exchange rate, making it a secondary estimate rather than an official figure. The structural pillars of the announcement are the 800 trillion KRW Southwestern memory fabs and SK Group's 15 GW AI data center program. The force driving all of it is the HBM supercycle. Whether the plan translates into capacity depends above all on the speed of power and water infrastructure delivery.
+The framework of the June 29, 2026 announcement is clear. Samsung and SK will invest 4,755 trillion KRW domestically over 10 years, anchored by 800 trillion KRW in southwestern memory fabs and SK's 15GW AI data centers. The HBM supercycle is the engine driving all of it, and success will depend on the speed of power and water infrastructure delivery.
 
-While Korea constructs AI hardware at national scale, the value of the software layer that operates that hardware efficiently grows alongside it. ThakiCloud is positioned at exactly that intersection, with Kubernetes and Kueue-based serving and sovereign infrastructure as its core offering.
+As Korea builds AI hardware at national scale, the value of the software layer that runs that hardware efficiently grows alongside it. ThakiCloud is positioning itself at exactly that intersection, with K8s- and Kueue-based serving and sovereign infrastructure.
 
 ## Sources
 
-- Financial News, Samsung and SK 4,755 Trillion KRW Southwestern Fab Four Units (2026-06-29): [https://www.fnnews.com/news/202606291837098645](https://www.fnnews.com/news/202606291837098645)
-- Newsis, Samsung and SK 800 Trillion KRW Honam Semiconductor Hub (2026-06-29): [https://www.newsis.com/view/NISX20260629_0003687807](https://www.newsis.com/view/NISX20260629_0003687807)
-- Aju Economy, SKT 15GW AI Data Centers (2026-06-29): [https://www.ajunews.com/view/20260629171803513](https://www.ajunews.com/view/20260629171803513)
-- Hankyung, Yongin 600 Trillion and Cheongju 100 Trillion (2026-06-29): [https://www.hankyung.com/article/2026062943107](https://www.hankyung.com/article/2026062943107)
+- Financial News, Southwestern Fabs Samsung & SK 4,755 Trillion (2026-06-29): [https://www.fnnews.com/news/202606291837098645](https://www.fnnews.com/news/202606291837098645)
+- Newsis, Samsung & SK 800 Trillion Honam Semiconductor Hub (2026-06-29): [https://www.newsis.com/view/NISX20260629_0003687807](https://www.newsis.com/view/NISX20260629_0003687807)
+- Aju News, SKT 15GW AI Data Centers (2026-06-29): [https://www.ajunews.com/view/20260629171803513](https://www.ajunews.com/view/20260629171803513)
+- Hankyung, Yongin 600 Trillion & Cheongju 100 Trillion (2026-06-29): [https://www.hankyung.com/article/2026062943107](https://www.hankyung.com/article/2026062943107)
 - CNBC, South Korea Samsung SK Hynix mega-projects (2026-06-29): [https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html](https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html)
 - SK hynix, 2026 Market Outlook (HBM Supercycle): [https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/](https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/)
-- TrendForce, Micron CapEx $20B and 2026 HBM booked (2025-12-18): [https://www.trendforce.com/news/2025/12/18/news-micron-hikes-capex-to-20b-with-2026-hbm-supply-fully-booked-hbm4-ramps-2q26/](https://www.trendforce.com/news/2025/12/18/news-micron-hikes-capex-to-20b-with-2026-hbm-supply-fully-booked-hbm4-ramps-2q26/)
-- Korea Policy Briefing, Semiconductor Special Act Passed by National Assembly (2026-01-30): [https://www.korea.kr/briefing/pressReleaseView.do?newsId=156742072](https://www.korea.kr/briefing/pressReleaseView.do?newsId=156742072)
+- TrendForce, Micron CapEx $20B & 2026 HBM booked (2025-12-18): [https://www.trendforce.com/news/2025/12/18/news-micron-hikes-capex-to-20b-with-2026-hbm-supply-fully-booked-hbm4-ramps-2q26/](https://www.trendforce.com/news/2025/12/18/news-micron-hikes-capex-to-20b-with-2026-hbm-supply-fully-booked-hbm4-ramps-2q26/)
+- Policy Briefing, Semiconductor Special Act Passed by National Assembly (2026-01-30): [https://www.korea.kr/briefing/pressReleaseView.do?newsId=156742072](https://www.korea.kr/briefing/pressReleaseView.do?newsId=156742072)
