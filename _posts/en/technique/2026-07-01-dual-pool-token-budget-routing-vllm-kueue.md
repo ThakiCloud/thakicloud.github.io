@@ -58,13 +58,13 @@ The threshold depends on workload characteristics. In the paper's experiments, 5
 
 ```mermaid
 flowchart TB
-    A[Client Request] --> B[Router\nToken-Budget Classifier]
-    B -->|Estimated tokens < threshold| C[Short-Context Pool\nvLLM Instance A]
-    B -->|Estimated tokens >= threshold| D[Long-Context Pool\nvLLM Instance B]
-    C --> E[Kueue LocalQueue\nshort-pool]
-    D --> F[Kueue LocalQueue\nlong-pool]
-    E --> G[GPU Worker Group A\nSmall KV Cache Requests]
-    F --> H[GPU Worker Group B\nLarge KV Cache Requests]
+    A[Client Request] --> B[Router<br/>Token-Budget Classifier]
+    B -->|Estimated tokens < threshold| C[Short-Context Pool<br/>vLLM Instance A]
+    B -->|Estimated tokens >= threshold| D[Long-Context Pool<br/>vLLM Instance B]
+    C --> E[Kueue LocalQueue<br/>short-pool]
+    D --> F[Kueue LocalQueue<br/>long-pool]
+    E --> G[GPU Worker Group A<br/>Small KV Cache Requests]
+    F --> H[GPU Worker Group B<br/>Large KV Cache Requests]
     G --> I[Return Response]
     H --> I
 ```

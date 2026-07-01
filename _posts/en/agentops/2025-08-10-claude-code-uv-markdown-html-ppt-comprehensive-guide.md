@@ -29,6 +29,8 @@ canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-uv-markdown
 reading_time: true
 ---
 
+![Key concept illustration](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)
+
 ⏱️ **Estimated reading time**: 25 min
 
 ## Introduction
@@ -40,6 +42,10 @@ By following this process you will learn:
 - Practical usage of the UV package manager
 - Techniques for converting Markdown to HTML slides
 - Effective presentation design principles
+
+![Workflow diagram](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg)
+
+*Workflow diagram*
 
 ## 1. Getting Started with Claude Code
 

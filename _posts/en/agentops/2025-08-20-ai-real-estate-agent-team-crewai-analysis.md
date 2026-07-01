@@ -28,6 +28,8 @@ lang: en
 published: true
 ---
 
+![Key concept illustration](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)
+
 ⏱️ **Estimated reading time**: 15 min
 
 ## Introduction

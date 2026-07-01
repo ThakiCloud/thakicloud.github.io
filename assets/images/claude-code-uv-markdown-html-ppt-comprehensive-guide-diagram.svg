@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" font-family="-apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif" role="img" aria-label="Workflow from Claude Code research to Markdown tutorial to HTML presentation via Reveal.js, Marp or Slidev">
+  <rect width="920" height="600" fill="#f8fafc"/>
+  <text x="460" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Claude Code + UV, Markdown에서 HTML PPT까지</text>
+  <text x="460" y="66" text-anchor="middle" font-size="13" fill="#64748b">Research to presentation, one pipeline</text>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/>
+    </marker>
+  </defs>
+
+  <rect x="210" y="100" width="500" height="56" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="460" y="124" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Claude Code, UV 패키지 관리자 조사</text>
+  <text x="460" y="143" text-anchor="middle" font-size="11" fill="#475569">web search, docs analysis</text>
+  <line x1="460" y1="156" x2="460" y2="186" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="210" y="186" width="500" height="56" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="460" y="210" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Markdown 튜토리얼 작성</text>
+  <text x="460" y="229" text-anchor="middle" font-size="11" fill="#475569">install, project init, package management, examples</text>
+  <line x1="460" y1="242" x2="460" y2="272" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="280" y="272" width="360" height="50" rx="12" fill="#dbe4f0" stroke="#1B4F72" stroke-width="2"/>
+  <text x="460" y="302" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Markdown to slides 변환</text>
+
+  <line x1="420" y1="322" x2="220" y2="368" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="460" y1="322" x2="460" y2="368" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="500" y1="322" x2="700" y2="368" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="95" y="372" width="225" height="64" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="207" y="400" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Reveal.js</text>
+  <text x="207" y="419" text-anchor="middle" font-size="11" fill="#475569">HTML/CSS/JS, plugins</text>
+
+  <rect x="347" y="372" width="226" height="64" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="460" y="400" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Marp</text>
+  <text x="460" y="419" text-anchor="middle" font-size="11" fill="#475569">Markdown-native, CLI</text>
+
+  <rect x="600" y="372" width="225" height="64" rx="12" fill="#eef2f8" stroke="#1B4F72" stroke-width="2"/>
+  <text x="712" y="400" text-anchor="middle" font-size="14.5" font-weight="600" fill="#0f172a">Slidev</text>
+  <text x="712" y="419" text-anchor="middle" font-size="11" fill="#475569">Vue-based, dev-friendly</text>
+
+  <line x1="240" y1="436" x2="400" y2="492" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="460" y1="436" x2="460" y2="492" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="680" y1="436" x2="520" y2="492" stroke="#1B4F72" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="210" y="496" width="500" height="60" rx="12" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+  <text x="460" y="524" text-anchor="middle" font-size="14.5" font-weight="600" fill="#166534">HTML 프레젠테이션</text>
+  <text x="460" y="543" text-anchor="middle" font-size="11" fill="#166534">browser-ready, self-hosted, no vendor lock-in</text>
+</svg>

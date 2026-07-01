@@ -29,6 +29,8 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/chatgpt-web-midjourney-
 reading_time: true
 ---
 
+![توضيح للمفهوم الأساسي](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.png)
+
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
 
 ## مقدمة
@@ -36,6 +38,10 @@ reading_time: true
 مع تزايد خدمات الذكاء الاصطناعي، أصبحت إدارة منصات متعددة ومنفصلة عبئاً حقيقياً على الإنتاجية. **ChatGPT Web Midjourney Proxy** مشروع مفتوح المصدر يعالج هذه المشكلة مباشرةً بدمج ChatGPT وMidjourney وGPTs وSuno وLuma في واجهة ويب واحدة.
 
 يغطي هذا الدليل كل ما تحتاج معرفته، من إعداد البيئة إلى النشر الإنتاجي واستراتيجيات AgentOps المتقدمة.
+
+![مخطط معماري](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-diagram.svg)
+
+*مخطط معماري*
 
 ## نظرة عامة على المشروع
 

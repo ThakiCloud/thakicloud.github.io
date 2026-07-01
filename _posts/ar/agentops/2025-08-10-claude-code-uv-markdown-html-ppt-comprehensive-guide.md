@@ -29,6 +29,8 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-uv-markdown
 reading_time: true
 ---
 
+![توضيح للمفهوم الأساسي](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)
+
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة
 
 ## مقدمة
@@ -40,6 +42,10 @@ reading_time: true
 - الاستخدام العملي لمدير حزم UV
 - تقنيات تحويل Markdown إلى شرائح HTML
 - مبادئ تصميم العروض التقديمية الفعّالة
+
+![مخطط سير العمل](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg)
+
+*مخطط سير العمل*
 
 ## 1. البدء مع Claude Code
 

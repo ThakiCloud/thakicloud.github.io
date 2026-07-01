@@ -28,6 +28,8 @@ lang: ar
 published: true
 ---
 
+![توضيح للمفهوم الأساسي](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)
+
 ⏱️ **وقت القراءة المقدر**: 15 دقائق
 
 ## مقدمة

@@ -19,6 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 published: true
+canonical_url: "https://thakicloud.github.io/ko/technique/dual-pool-token-budget-routing-vllm-kueue/"
 ---
 
 ## 문제: HoL 블로킹이 GPU 시간을 조용히 낭비합니다
@@ -56,13 +57,13 @@ Dual-Pool의 핵심은 단순합니다. 요청마다 **예상 최대 토큰 수*
 
 ```mermaid
 flowchart TB
-    A[클라이언트 요청] --> B[라우터\nToken-Budget 분류기]
-    B -->|예상 토큰 < 임계값| C[Short-Context 풀\nvLLM 인스턴스 A]
-    B -->|예상 토큰 >= 임계값| D[Long-Context 풀\nvLLM 인스턴스 B]
-    C --> E[Kueue LocalQueue\nshort-pool]
-    D --> F[Kueue LocalQueue\nlong-pool]
-    E --> G[GPU 워커 그룹 A\n작은 KV 캐시 요청]
-    F --> H[GPU 워커 그룹 B\n큰 KV 캐시 요청]
+    A[클라이언트 요청] --> B[라우터<br/>Token-Budget 분류기]
+    B -->|예상 토큰 < 임계값| C[Short-Context 풀<br/>vLLM 인스턴스 A]
+    B -->|예상 토큰 >= 임계값| D[Long-Context 풀<br/>vLLM 인스턴스 B]
+    C --> E[Kueue LocalQueue<br/>short-pool]
+    D --> F[Kueue LocalQueue<br/>long-pool]
+    E --> G[GPU 워커 그룹 A<br/>작은 KV 캐시 요청]
+    F --> H[GPU 워커 그룹 B<br/>큰 KV 캐시 요청]
     G --> I[응답 반환]
     H --> I
 ```
