@@ -195,7 +195,12 @@ PLATFORMS
 DEPENDENCIES
   faraday-retry (~> 2.3)
   jekyll (~> 4.3)
+  jekyll-feed
+  jekyll-gist
+  jekyll-include-cache
+  jekyll-paginate
   jekyll-seo-tag
+  jekyll-sitemap
   minimal-mistakes-jekyll (~> 4.27)
   tzinfo
   tzinfo-data
