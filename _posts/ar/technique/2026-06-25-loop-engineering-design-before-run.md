@@ -21,7 +21,6 @@ toc_label: "المحتويات"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ar/technique/loop-engineering-design-before-run/"
 slug: loop-engineering-design-before-run
-published: false
 ---
 
 ## نظرة عامة
