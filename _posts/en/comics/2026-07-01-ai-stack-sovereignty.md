@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/ai-stack-sovereignty/strip.png
+published: false
 ---
 
 The day the whole stack belonged to someone else — Paxis and Metis cope.
