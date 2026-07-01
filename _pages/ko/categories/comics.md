@@ -1,6 +1,6 @@
 ---
 title: "만화"
-permalink: /ko/categories/manhwa/
+permalink: /ko/categories/comics/
 layout: category
 author_profile: true
 taxonomy: 만화

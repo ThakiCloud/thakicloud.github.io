@@ -51,6 +51,7 @@
       {% assign lang_news_count = 0 %}
       {% assign lang_research_count = 0 %}
       {% assign lang_datasets_count = 0 %}
+      {% assign lang_comics_count = 0 %}
 
       {% for post in filtered_posts %}
         {% if post.categories contains 'dev' %}
@@ -83,6 +84,9 @@
         {% if post.categories contains 'datasets' %}
           {% assign lang_datasets_count = lang_datasets_count | plus: 1 %}
         {% endif %}
+        {% if post.categories contains 'comics' or post.categories contains '만화' %}
+          {% assign lang_comics_count = lang_comics_count | plus: 1 %}
+        {% endif %}
       {% endfor %}
 
       <li>
@@ -99,6 +103,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/news/">🌐 News ({{ lang_news_count }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/research/">📒 Research ({{ lang_research_count }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/datasets/">☁️ Datasets ({{ lang_datasets_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/comics/">💬 Comics ({{ lang_comics_count }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">
