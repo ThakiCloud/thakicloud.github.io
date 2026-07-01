@@ -13,7 +13,6 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/five-work-archetypes/strip.png
-published: false
 canonical_url: "https://thakicloud.github.io/en/comics/five-work-archetypes/"
 ---
 
