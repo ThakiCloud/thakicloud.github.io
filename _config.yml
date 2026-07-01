@@ -113,12 +113,6 @@ social:
     - "https://thakicloud.co.kr"
     - "https://thakicloud.github.io"
 
-# Analytics (Duplicate - will be removed)
-# analytics:
-#   provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
-#   google:
-#     tracking_id          : "G-H3R0WGN0LF"
-#     anonymize_ip         : # true, false (default)
 
 
 # Site Author
