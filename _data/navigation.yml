@@ -6,6 +6,8 @@ main:
     url: /ko/categories/
   - title: "태그"
     url: /ko/tags/
+  - title: "만화"
+    url: /ko/categories/manhwa/
   - title: "언어"
     children:
       - title: "🇰🇷 한국어"
@@ -23,6 +25,8 @@ ko:
     url: /ko/categories/
   - title: "태그"
     url: /ko/tags/
+  - title: "만화"
+    url: /ko/categories/manhwa/
   - title: "언어"
     children:
       - title: "🇰🇷 한국어"
@@ -40,6 +44,8 @@ en:
     url: /en/categories/
   - title: "Tags"
     url: /en/tags/
+  - title: "Comics"
+    url: /en/categories/comics/
   - title: "Language"
     children:
       - title: "🇰🇷 한국어"
