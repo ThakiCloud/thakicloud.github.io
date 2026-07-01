@@ -16,7 +16,7 @@ image: /assets/images/posts/comics/five-work-archetypes/strip.png
 canonical_url: "https://thakicloud.github.io/en/comics/five-work-archetypes/"
 ---
 
-The future of work supposedly dissolves job titles into five archetypes: prototyper, builder, sweeper, grower, maintainer. Everyone wants the first four. Nobody raises a hand for the sixth, the unglamorous work of keeping the lights on. Paxis and Metis act out what happens to that empty chair.
+The future of work supposedly dissolves job titles into five archetypes. The prototyper throws out new ideas fast. The builder turns those ideas into real, shipped products. The sweeper cleans up code and UI and simplifies systems. The grower iterates a shipped product toward product-market fit. The maintainer keeps a mature system stable and secure. Everyone wants those five. Nobody raises a hand for the sixth, the unglamorous, repetitive work of keeping the lights on. Paxis and Metis act out what happens to that empty chair.
 
 ![The Future of Work: Five Archetypes, Not Job Titles](/assets/images/posts/comics/five-work-archetypes/strip.png)
 
@@ -24,7 +24,7 @@ The future of work supposedly dissolves job titles into five archetypes: prototy
 
 ## What this means for ThakiCloud
 
-For the five creative archetypes to shine, someone has to take the sixth: GPU lifecycle, scaling, security patches, the 3 a.m. incident nobody sees. That is what ThakiCloud does. The platform absorbs the repetitive toil so your team can build and grow. We even turned these five archetypes into orchestration agents of our own. The sixth role nobody wants is the one the platform is built to carry.
+For the five creative archetypes to shine, someone has to take the sixth: GPU lifecycle, scaling, security patches, the 3 a.m. incident nobody sees. We turned this idea into real automation. We built the five archetypes as AI agents (prototyper, builder, sweeper, grower, maintainer), and a Jarvis orchestrator dispatches whichever archetype fits the task. This very blog runs that way: the prototyper mines post ideas, the builder writes the draft, the sweeper cleans up the site, and the maintainer checks security and dependencies. That is what ThakiCloud is for. The platform and its agents carry the sixth role nobody wants, so people can focus on building and growing.
 
 ---
 
