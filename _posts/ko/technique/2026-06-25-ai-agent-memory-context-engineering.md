@@ -21,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/technique/ai-agent-memory-context-engineering/"
 reading_time: true
 published: false
+audiobook: /assets/audio/posts/ai-agent-memory-context-engineering/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. 대화가 길어질수록 에이전트가 앞에서 한 약속을 잊고, 초반에 정한 규칙을 무시하기 시작합니다. 흔한 처방은 "컨텍스트 창이 더 크면 해결된다"입니다. 그러나 이것은 틀린 진단입니다. 진짜 문제는 창의 크기가 아니라 그 안의 토큰을 어떻게 관리하느냐, 즉 컨텍스트 엔지니어링입니다. 이 글은 장기 실행 에이전트가 컨텍스트 한계를 넘는 네 가지 검증된 기법을 정리하고, ThakiCloud가 실제 에이전트 운용에 이를 어떻게 녹였는지 보여 줍니다.
@@ -102,6 +104,19 @@ Anthropic은 Sonnet 4.5 출시와 함께 Claude 개발자 플랫폼에 메모리
 서브에이전트는 분업의 경계를 잘못 그으면 오히려 오버헤드가 됩니다. 단일 파일 편집이나 단순 조회까지 서브에이전트로 위임하면 컨텍스트를 아끼는 대신 디스패치 비용만 늘어납니다. 위임은 메인 컨텍스트 위생을 위한 도구이지 모든 작업의 기본값이 아닙니다.
 
 마지막으로 모델이 더 똑똑해질수록 이런 처방의 필요가 줄어든다는 점도 정직하게 인정해야 합니다. 이미 더 강한 모델은 덜 규범적인 엔지니어링으로도 더 큰 자율성을 보입니다. 그래도 컨텍스트를 한정 자원으로 다루는 원칙 자체는 능력이 커져도 남을 것입니다. 기법은 바뀌어도 주의 예산을 아낀다는 방향은 유효합니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-agent-memory-context-engineering 슬라이드 1](/assets/images/ai-agent-memory-context-engineering-slide-01.png)
+
+![ai-agent-memory-context-engineering 슬라이드 2](/assets/images/ai-agent-memory-context-engineering-slide-02.png)
+
+![ai-agent-memory-context-engineering 슬라이드 3](/assets/images/ai-agent-memory-context-engineering-slide-03.png)
+
+![ai-agent-memory-context-engineering 슬라이드 4](/assets/images/ai-agent-memory-context-engineering-slide-04.png)
 
 ## 출처
 
