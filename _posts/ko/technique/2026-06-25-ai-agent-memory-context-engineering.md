@@ -20,6 +20,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/technique/ai-agent-memory-context-engineering/"
 reading_time: true
+published: false
 ---
 
 LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. 대화가 길어질수록 에이전트가 앞에서 한 약속을 잊고, 초반에 정한 규칙을 무시하기 시작합니다. 흔한 처방은 "컨텍스트 창이 더 크면 해결된다"입니다. 그러나 이것은 틀린 진단입니다. 진짜 문제는 창의 크기가 아니라 그 안의 토큰을 어떻게 관리하느냐, 즉 컨텍스트 엔지니어링입니다. 이 글은 장기 실행 에이전트가 컨텍스트 한계를 넘는 네 가지 검증된 기법을 정리하고, ThakiCloud가 실제 에이전트 운용에 이를 어떻게 녹였는지 보여 줍니다.
