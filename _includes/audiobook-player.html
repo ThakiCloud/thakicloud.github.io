@@ -1,0 +1,30 @@
+{% comment %}
+  Audiobook player — rendered on posts that set `audiobook:` in front-matter.
+  Generated locally by scripts/tts/audiobook_build.py (Qwen3-TTS local, VoxCPM2 fallback).
+  Optional front-matter:
+    audiobook:          /assets/audio/posts/<slug>/audiobook-ko.mp3   (required to show)
+    audiobook_en:       /assets/audio/posts/<slug>/audiobook-en.mp3   (optional 2nd track)
+    audiobook_label:    "AI 내레이션으로 듣기"                          (optional heading)
+    audiobook_note:     "Qwen3-TTS 로컬 합성"                          (optional caption)
+{% endcomment %}
+{% if page.audiobook %}
+<div class="audiobook-player" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid #d7dde3;border-left:4px solid #1B4F72;border-radius:8px;background:#f7f9fb;">
+  <div style="font-weight:600;color:#1B4F72;margin-bottom:0.5em;">
+    🎧 {{ page.audiobook_label | default: "이 글을 오디오북으로 듣기" }}
+  </div>
+  <audio controls preload="none" style="width:100%;">
+    <source src="{{ page.audiobook | relative_url }}" type="audio/mpeg">
+    브라우저가 오디오 재생을 지원하지 않습니다. <a href="{{ page.audiobook | relative_url }}">MP3 다운로드</a>
+  </audio>
+  {% if page.audiobook_en %}
+  <div style="font-size:0.85em;color:#2E4057;margin-top:0.6em;">English narration</div>
+  <audio controls preload="none" style="width:100%;">
+    <source src="{{ page.audiobook_en | relative_url }}" type="audio/mpeg">
+    <a href="{{ page.audiobook_en | relative_url }}">Download MP3</a>
+  </audio>
+  {% endif %}
+  {% if page.audiobook_note %}
+  <div style="font-size:0.78em;color:#6B7280;margin-top:0.5em;">{{ page.audiobook_note }}</div>
+  {% endif %}
+</div>
+{% endif %}

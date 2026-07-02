@@ -24,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 reading_time: true
+audiobook: /assets/audio/posts/qwen3-6-27b-nvfp4-onprem-serving/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 11분
