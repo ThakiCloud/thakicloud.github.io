@@ -27,22 +27,7 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 10분
 
-<!-- evolve-diagram -->
-*개념 다이어그램*
-
-```mermaid
-graph TD
-  Agent["Agent (LLM runtime)"] --> GW["MCP Gateway"]
-  GW --> A1["authn / authz"]
-  GW --> A2["tool allowlist"]
-  GW --> A3["audit logging"]
-  GW --> A4["rate limiting"]
-  GW --> S1["MCP Server A: GitHub"]
-  GW --> S2["MCP Server B: Slack"]
-  GW --> S3["MCP Server C: Database"]
-  classDef gw fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class GW gw;
-```
+![MCP 게이트웨이가 인증, 도구 허용목록, 감사 로깅, 레이트 리미팅을 중앙에서 처리하고 GitHub, Slack, Database MCP 서버로 요청을 분기하는 보안 아키텍처 구조도](/assets/images/mcp-tool-integration-agent-security-diagram.png)
 
 ## MCP가 프로덕션 표준이 된 배경
 

@@ -27,21 +27,7 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 8 min
 
-<!-- evolve-diagram -->
-*Conceptual diagram*
-
-```mermaid
-graph TD
-  O["Orchestrator (Sonnet)<br/>classify + decompose"] --> WA["Worker A: researcher<br/>(Haiku)"]
-  O --> WB["Worker B: coder<br/>(Sonnet)"]
-  O --> WC["Worker C: reviewer<br/>(Opus, gate only)"]
-  WA --> M["merge results"]
-  WB --> M
-  WC --> M
-  M --> Out["final output"]
-  classDef orch fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class O orch;
-```
+![Orchestrator-Worker structure where an orchestrator (Sonnet) classifies and decomposes the request, distributes it to researcher (Haiku), coder (Sonnet), and reviewer (Opus, gate only) workers, then merges the results into the final output](/assets/images/multi-agent-orchestration-production-patterns-diagram.png)
 
 ## Why This Topic Now
 

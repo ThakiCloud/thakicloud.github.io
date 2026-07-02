@@ -28,22 +28,7 @@ reading_time: true
 
 ⏱️ **Estimated reading time**: 10 min
 
-<!-- evolve-diagram -->
-*Conceptual diagram*
-
-```mermaid
-graph TD
-  Agent["Agent (LLM runtime)"] --> GW["MCP Gateway"]
-  GW --> A1["authn / authz"]
-  GW --> A2["tool allowlist"]
-  GW --> A3["audit logging"]
-  GW --> A4["rate limiting"]
-  GW --> S1["MCP Server A: GitHub"]
-  GW --> S2["MCP Server B: Slack"]
-  GW --> S3["MCP Server C: Database"]
-  classDef gw fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class GW gw;
-```
+![Security architecture where an MCP gateway centrally handles authentication, tool allowlisting, audit logging, and rate limiting before routing requests to the GitHub, Slack, and Database MCP servers](/assets/images/mcp-tool-integration-agent-security-diagram.png)
 
 ## How MCP Became the Production Standard
 

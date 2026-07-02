@@ -27,21 +27,7 @@ reading_time: true
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-<!-- evolve-diagram -->
-*رسم تخطيطي توضيحي*
-
-```mermaid
-graph TD
-  O["Orchestrator (Sonnet)<br/>classify + decompose"] --> WA["Worker A: researcher<br/>(Haiku)"]
-  O --> WB["Worker B: coder<br/>(Sonnet)"]
-  O --> WC["Worker C: reviewer<br/>(Opus, gate only)"]
-  WA --> M["merge results"]
-  WB --> M
-  WC --> M
-  M --> Out["final output"]
-  classDef orch fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class O orch;
-```
+![رسم لبنية Orchestrator-Worker حيث يصنّف المنسّق (Sonnet) الطلب ويفككه ثم يوزعه على عمال الباحث (Haiku) والمبرمج (Sonnet) والمراجع (Opus، بوابة فقط)، ثم يدمج النتائج في المخرج النهائي](/assets/images/multi-agent-orchestration-production-patterns-diagram.png)
 
 ## لماذا هذا الموضوع الآن
 

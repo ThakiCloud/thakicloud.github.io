@@ -26,21 +26,7 @@ reading_time: true
 
 ⏱️ **예상 읽기 시간**: 8분
 
-<!-- evolve-diagram -->
-*개념 다이어그램*
-
-```mermaid
-graph TD
-  O["Orchestrator (Sonnet)<br/>classify + decompose"] --> WA["Worker A: researcher<br/>(Haiku)"]
-  O --> WB["Worker B: coder<br/>(Sonnet)"]
-  O --> WC["Worker C: reviewer<br/>(Opus, gate only)"]
-  WA --> M["merge results"]
-  WB --> M
-  WC --> M
-  M --> Out["final output"]
-  classDef orch fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class O orch;
-```
+![오케스트레이터(Sonnet)가 요청을 분류하고 분해해 리서처(Haiku), 코더(Sonnet), 리뷰어(Opus, 게이트 전용) 워커로 분배한 뒤 결과를 병합해 최종 출력을 만드는 Orchestrator-Worker 구조도](/assets/images/multi-agent-orchestration-production-patterns-diagram.png)
 
 ## 왜 지금 이 주제인가
 
