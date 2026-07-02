@@ -18,7 +18,8 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/raghub-comprehensive-guide-to-rag-ecosystem/
-canonical_url: "https://thakicloud.github.io/en/llmops/raghub-comprehensive-guide-to-rag-ecosystem/"
+canonical_url: "https://thakicloud.github.io/en/llmops/raghub-comprehensive-guide-to-rag-ecosystem-en/"
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes
