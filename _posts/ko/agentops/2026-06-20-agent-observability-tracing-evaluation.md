@@ -53,6 +53,11 @@ graph TD
 
 ---
 
+
+![개념 다이어그램](/assets/images/agent-observability-tracing-evaluation-diagram.svg)
+
+*개념 다이어그램*
+
 ## 에이전트 트레이싱의 세 가지 요소
 
 ### 1. 중첩 스팬

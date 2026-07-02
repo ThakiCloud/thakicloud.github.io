@@ -31,6 +31,11 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-sdk-email-a
 
 يمثل [مستودع Claude Code SDK Demos](https://github.com/anthropics/claude-code-sdk-demos) خطوة مهمة إلى الأمام في توضيح كيفية دمج نماذج اللغة الكبيرة في تطبيقات العالم الحقيقي مع أدوات وأنماط تفاعل متطورة.
 
+
+![مخطط مفاهيمي](/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg)
+
+*مخطط مفاهيمي*
+
 ## نظرة عامة على المشروع
 
 ### ما هو وكيل البريد الإلكتروني Claude Code SDK؟

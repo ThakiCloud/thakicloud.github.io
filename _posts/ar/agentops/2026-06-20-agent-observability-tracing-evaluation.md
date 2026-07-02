@@ -54,6 +54,11 @@ graph TD
 
 ---
 
+
+![مخطط مفاهيمي](/assets/images/agent-observability-tracing-evaluation-diagram.svg)
+
+*مخطط مفاهيمي*
+
 ## العناصر الثلاثة لتتبع الوكلاء
 
 ### 1. النطاقات المتشعبة

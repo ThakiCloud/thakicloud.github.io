@@ -54,6 +54,11 @@ A 2025 analysis found that approximately 65% of agent failures originate from co
 
 ---
 
+
+![Concept diagram](/assets/images/agent-observability-tracing-evaluation-diagram.svg)
+
+*Concept diagram*
+
 ## Three Components of Agent Tracing
 
 ### 1. Nested Spans

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316.4268333333333 574.8" width="316.4268333333333" height="574.8" style="--bg:#1a1b26;--fg:#a9b1d6">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="IMAP" data-to="SDK" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="169.8285,93.80000000000001 169.8285,141.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SDK" data-to="SEARCH" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="169.8285,212.5 169.8285,236.5 124.701,236.5 124.701,379.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SDK" data-to="CACHE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="169.8285,212.5 169.8285,236.5 170.3285,236.5 170.3285,260.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CACHE" data-to="SEARCH" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="170.3285,331.2 170.3285,367.2 152.93466666666666,367.2 152.93466666666666,379.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SEARCH" data-to="STREAM" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="124.701,433 124.701,469 153.11816666666664,469 153.11816666666664,481" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SDK" data-to="STREAM" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="169.8285,212.5 169.8285,236.5 183.94533333333334,236.5 183.94533333333334,481" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="IMAP" data-label="IMAP Mailbox
+(fetch, sync)" data-shape="rectangle">
+  <rect x="108.46899999999998" y="40" width="122.71900000000001" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="169.8285" y="66.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="169.8285" dy="-3.9000000000000012">IMAP Mailbox</tspan><tspan x="169.8285" dy="16.900000000000002">(fetch, sync)</tspan></text>
+</g>
+<g class="node" data-id="SDK" data-label="Claude Code SDK Agent
+(natural-language query,
+tool use, streaming)" data-shape="rectangle">
+  <rect x="76.60600000000001" y="141.8" width="186.44499999999996" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="169.8285" y="177.15" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="169.8285" dy="-12.350000000000001">Claude Code SDK Agent</tspan><tspan x="169.8285" dy="16.900000000000002">(natural-language query,</tspan><tspan x="169.8285" dy="16.900000000000002">tool use, streaming)</tspan></text>
+</g>
+<g class="node" data-id="SEARCH" data-label="AI Email Search
+(intent parse, ranking)" data-shape="rectangle">
+  <rect x="40" y="379.2" width="169.402" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="124.701" y="406.09999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="124.701" dy="-3.9000000000000012">AI Email Search</tspan><tspan x="124.701" dy="16.900000000000002">(intent parse, ranking)</tspan></text>
+</g>
+<g class="node" data-id="CACHE" data-label="SQLite Cache
+(messages, threads,
+embeddings)" data-shape="rectangle">
+  <rect x="90.0735" y="260.5" width="160.51" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="170.3285" y="295.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="170.3285" dy="-12.350000000000001">SQLite Cache</tspan><tspan x="170.3285" dy="16.900000000000002">(messages, threads,</tspan><tspan x="170.3285" dy="16.900000000000002">embeddings)</tspan></text>
+</g>
+<g class="node" data-id="STREAM" data-label="Real-time Streaming UI
+(incremental responses)" data-shape="rectangle">
+  <rect x="91.46383333333331" y="481" width="184.96300000000002" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="183.94533333333334" y="507.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="183.94533333333334" dy="-3.9000000000000012">Real-time Streaming UI</tspan><tspan x="183.94533333333334" dy="16.900000000000002">(incremental responses)</tspan></text>
+</g>
+</svg>
