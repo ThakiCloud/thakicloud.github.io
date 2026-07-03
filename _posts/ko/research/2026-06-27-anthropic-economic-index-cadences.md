@@ -22,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ko/research/anthropic-economic-inde
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/anthropic-economic-index-cadences/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![시간의 흐름을 따라 빛의 파동이 리듬을 그리며 데이터 격자 위를 흐르는 추상 이미지](/assets/images/anthropic-economic-index-cadences-hero.png)
@@ -85,6 +87,19 @@ ai-platform은 Paxis 위에서 작동하는 에이전트들이 사용하는 추�
 설문 데이터는 더 조심스럽게 읽어야 합니다. "내년에 AI가 내 업무 대부분을 처리할 것"이라는 기대는 체감이지 검증된 역량이 아닙니다. 보고서 안에서도 실제 직업별 노출 지표보다 체감 역량이 더 높게 나타난다는 점이 확인됩니다. 기대와 현실 사이의 이 간극 자체가 측정 대상이지, 기대치를 곧 미래로 받아들일 근거는 아닙니다.
 
 마지막으로, 측정 방법론의 고도화가 곧 영향의 크기를 키우는 것은 아닙니다. 더 정교하게 본다는 것과 더 크게 일어난다는 것은 다른 이야기입니다. 이 보고서의 가치는 "AI가 일을 얼마나 대체했다"는 결론이 아니라, "그 영향을 어떻게 더 정직하게 측정할 것인가"라는 질문을 다층 혼합 방법론으로 다시 세운 데 있습니다. ThakiCloud가 가져갈 것도 결론이 아니라 그 측정의 태도입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![anthropic-economic-index-cadences 슬라이드 1](/assets/images/anthropic-economic-index-cadences-slide-01.png)
+
+![anthropic-economic-index-cadences 슬라이드 2](/assets/images/anthropic-economic-index-cadences-slide-02.png)
+
+![anthropic-economic-index-cadences 슬라이드 3](/assets/images/anthropic-economic-index-cadences-slide-03.png)
+
+![anthropic-economic-index-cadences 슬라이드 4](/assets/images/anthropic-economic-index-cadences-slide-04.png)
 
 ## 출처
 

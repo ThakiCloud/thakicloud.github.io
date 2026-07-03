@@ -18,6 +18,9 @@ toc_label: "Kimi-Researcher 분석"
 published: false
 categories:
   - research
+audiobook: /assets/audio/posts/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.github.io/ko/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
 ---
 
 ## 개요
@@ -738,4 +741,17 @@ Moonshot AI의 Kimi-Researcher는 End-to-End 에이전트 강화학습의 새로
 - **방법론 발전**: End-to-End 에이전트 RL의 지속적 개선
 - **실용화 가속**: 다양한 도메인에서의 실제 활용 확산
 
-Kimi-Researcher는 단순히 성능이 우수한 AI 모델을 넘어, **AI 에이전트가 인간처럼 복잡한 연구와 추론을 수행할 수 있는 가능성**을 보여주었습니다. 이는 AI 연구의 새로운 지평을 열었으며, 향후 더욱 지능적이고 자율적인 AI 시스템 개발의 토대가 될 것입니다. 
+Kimi-Researcher는 단순히 성능이 우수한 AI 모델을 넘어, **AI 에이전트가 인간처럼 복잡한 연구와 추론을 수행할 수 있는 가능성**을 보여주었습니다. 이는 AI 연구의 새로운 지평을 열었으며, 향후 더욱 지능적이고 자율적인 AI 시스템 개발의 토대가 될 것입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 1](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-01.png)
+
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 2](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-02.png)
+
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 3](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-03.png)
+
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 4](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-04.png)
+

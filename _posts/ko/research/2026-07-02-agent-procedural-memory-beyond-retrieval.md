@@ -19,6 +19,8 @@ published: true
 canonical_url: "https://thakicloud.github.io/ko/research/agent-procedural-memory-beyond-retrieval/"
 categories:
   - research
+audiobook: /assets/audio/posts/agent-procedural-memory-beyond-retrieval/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![에이전트 절차적 메모리: 프롬프트 검색을 넘어 임시 템플릿에서 인지 인프라로의 전환](/assets/images/agent-procedural-memory-beyond-retrieval-slide-01.png)

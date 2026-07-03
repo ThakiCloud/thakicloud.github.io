@@ -19,10 +19,12 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/code-as-agent-harness-survey/"
+canonical_url: "https://thakicloud.github.io/ko/research/code-as-agent-harness-survey/"
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/code-as-agent-harness-survey/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

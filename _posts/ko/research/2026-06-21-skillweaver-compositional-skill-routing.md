@@ -17,10 +17,12 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/skillweaver-compositional-skill-routing/"
+canonical_url: "https://thakicloud.github.io/ko/research/skillweaver-compositional-skill-routing/"
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/skillweaver-compositional-skill-routing/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 LLM 에이전트가 외부 스킬(재사용 가능한 도구 명세)에 의존하는 흐름은 이제 보편적입니다. 그런데 현실의 작업은 스킬을 하나 "고르는" 문제가 아니라 여러 개를 "조합하는" 문제입니다. "딥리서치를 돌리고, 팩트체크한 뒤, 보고서를 docx로 만들고, 슬랙에 올려라" 같은 복합 요청은 단일 스킬 검색으로 풀리지 않습니다. 2026년 6월 16일 arXiv에 공개된 논문 SkillWeaver(arXiv:2606.18051, "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose")는 이 문제를 정식으로 정의하고, 더 중요하게는 **진짜 병목이 어디에 있는지**를 데이터로 짚어냅니다.
@@ -72,3 +74,16 @@ SkillWeaver의 메시지는 명확합니다. 복합 작업에서 라우팅 품�
 출처: "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose", arXiv:2606.18051 (2026-06-16). https://arxiv.org/abs/2606.18051
 
 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1xKcquYDJ534VquYHdJL93tvrmIdq3qVl/view)할 수 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![skillweaver-compositional-skill-routing 슬라이드 1](/assets/images/skillweaver-compositional-skill-routing-slide-01.png)
+
+![skillweaver-compositional-skill-routing 슬라이드 2](/assets/images/skillweaver-compositional-skill-routing-slide-02.png)
+
+![skillweaver-compositional-skill-routing 슬라이드 3](/assets/images/skillweaver-compositional-skill-routing-slide-03.png)
+
+![skillweaver-compositional-skill-routing 슬라이드 4](/assets/images/skillweaver-compositional-skill-routing-slide-04.png)
+

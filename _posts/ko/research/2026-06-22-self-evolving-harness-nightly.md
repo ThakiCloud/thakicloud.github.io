@@ -20,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ko/research/self-evolving-harness-n
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/self-evolving-harness-nightly/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![매일 밤 스스로 진화하는 AI 하네스](/assets/images/self-evolving-harness-nightly-hero.png)
@@ -165,3 +167,16 @@ ThakiCloud는 이러한 한계들을 기술적 과제로 인식하고 지속적�
 매일 밤 시스템은 어제보다 조금 더 나은 내일을 준비합니다. 엔지니어가 없어도, 명시적 지시 없이도, 실패에서 배우고 스스로 개선하는 AI 하네스. 복리처럼 조용히 쌓이는 개선이 시스템의 경쟁력이 됩니다. 이것이 ThakiCloud가 만들고 있는 운영의 미래입니다.
 
 Self-Harness 논문(arXiv:2606.09498)과 Paxis 플랫폼에 관심 있으시다면 [ThakiCloud 공식 사이트](https://thakicloud.co.kr)에서 더 자세한 내용을 확인하실 수 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![self-evolving-harness-nightly 슬라이드 1](/assets/images/self-evolving-harness-nightly-slide-01.png)
+
+![self-evolving-harness-nightly 슬라이드 2](/assets/images/self-evolving-harness-nightly-slide-02.png)
+
+![self-evolving-harness-nightly 슬라이드 3](/assets/images/self-evolving-harness-nightly-slide-03.png)
+
+![self-evolving-harness-nightly 슬라이드 4](/assets/images/self-evolving-harness-nightly-slide-04.png)
+

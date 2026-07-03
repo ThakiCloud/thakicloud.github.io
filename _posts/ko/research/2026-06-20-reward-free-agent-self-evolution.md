@@ -19,10 +19,12 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/reward-free-agent-self-evolution/"
+canonical_url: "https://thakicloud.github.io/ko/research/reward-free-agent-self-evolution/"
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/reward-free-agent-self-evolution/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
@@ -88,3 +90,16 @@ ThakiCloud의 AI 플랫폼은 다양한 고객 환경에서 에이전트를 운�
 - HuggingFace 모델: [https://huggingface.co/Bklight999/World-Knowledge](https://huggingface.co/Bklight999/World-Knowledge)
 
 저자는 텐센트와 홍콩과기대(광저우) 소속입니다. 별도 데이터셋 페이지와 프로젝트 페이지는 확인되지 않았습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![reward-free-agent-self-evolution 슬라이드 1](/assets/images/reward-free-agent-self-evolution-slide-01.png)
+
+![reward-free-agent-self-evolution 슬라이드 2](/assets/images/reward-free-agent-self-evolution-slide-02.png)
+
+![reward-free-agent-self-evolution 슬라이드 3](/assets/images/reward-free-agent-self-evolution-slide-03.png)
+
+![reward-free-agent-self-evolution 슬라이드 4](/assets/images/reward-free-agent-self-evolution-slide-04.png)
+

@@ -23,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/ko/research/agentic-ai-hitchhikers-
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/agentic-ai-hitchhikers-guide/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![빛으로 이루어진 네 개의 층이 아래에서 위로 쌓이며 서로 연결되는 추상 구조](/assets/images/agentic-ai-hitchhikers-guide-hero.png)

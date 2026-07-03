@@ -25,6 +25,8 @@ reading_time: true
 published: false
 categories:
   - research
+audiobook: /assets/audio/posts/retrieval-augmented-reasoning-lean-language-models/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 15분
@@ -568,3 +570,16 @@ DeepSeek-R1 모델을 활용한 추론 트레이스 생성에 사용된 프롬�
 4. **심각도 일관성**: 동일한 조건에 대한 심각도 판단의 일관성 확인
 
 이러한 체계적인 데이터셋 구성과 검증 과정은 시스템의 신뢰성과 실용성을 크게 향상시키는 핵심 요소였습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 1](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-01.png)
+
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 2](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-02.png)
+
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 3](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-03.png)
+
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 4](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-04.png)
+

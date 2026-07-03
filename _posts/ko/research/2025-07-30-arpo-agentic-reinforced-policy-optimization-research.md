@@ -19,11 +19,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/arpo-agentic-reinforced-policy-optimization-research/"
+canonical_url: "https://thakicloud.github.io/ko/research/arpo-agentic-reinforced-policy-optimization-research/"
 reading_time: true
 published: false
 categories:
   - research
+audiobook: /assets/audio/posts/arpo-agentic-reinforced-policy-optimization-research/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 10분
@@ -503,3 +505,16 @@ ARPO의 등장은 AI 에이전트 개발에서 다음과 같은 변화를 가져
 - [ARPO 데이터셋 및 모델](https://huggingface.co/collections/dongguanting/arpo-688229ff8a6143fe5b4ad8ae)
 
 **태그**: `#ARPO` `#강화학습` `#LLM에이전트` `#멀티턴추론` `#도구사용` `#엔트로피샘플링`
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.png)
+
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.png)
+
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.png)
+
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.png)
+

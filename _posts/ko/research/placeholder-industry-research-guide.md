@@ -53,6 +53,9 @@ Thaki Cloud가 사업을 영위하고 있는 프라이빗 클라우드, IaaS, Pa
 published: false
 categories:
   - research
+audiobook: /assets/audio/posts/placeholder-industry-research-guide/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.github.io/ko/research/placeholder-industry-research-guide/"
 ---
 
 ## 여기에 실제 [산업 리서치 & 분석] 관련 내용을 작성하세요
@@ -66,3 +69,16 @@ categories:
 ---
 
 _이 파일은 '산업 리서치 & 분석' 카테고리 게시물 작성 가이드라인입니다. 실제 게시물 작성 시 이 내용을 참고하여 YAML 프론트매터와 본문을 수정해 주세요. 파일명은 `YYYY-MM-DD-industry-research-topic.md` 형식으로 저장하는 것을 권장합니다._
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![placeholder-industry-research-guide 슬라이드 1](/assets/images/placeholder-industry-research-guide-slide-01.png)
+
+![placeholder-industry-research-guide 슬라이드 2](/assets/images/placeholder-industry-research-guide-slide-02.png)
+
+![placeholder-industry-research-guide 슬라이드 3](/assets/images/placeholder-industry-research-guide-slide-03.png)
+
+![placeholder-industry-research-guide 슬라이드 4](/assets/images/placeholder-industry-research-guide-slide-04.png)
+

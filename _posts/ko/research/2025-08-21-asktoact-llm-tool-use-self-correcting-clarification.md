@@ -23,6 +23,8 @@ reading_time: true
 published: false
 categories:
   - research
+audiobook: /assets/audio/posts/asktoact-llm-tool-use-self-correcting-clarification/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

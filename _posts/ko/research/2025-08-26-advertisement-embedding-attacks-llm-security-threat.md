@@ -18,6 +18,8 @@ permalink: /ko/research/advertisement-embedding-attacks-llm-security-threat/
 canonical_url: "https://thakicloud.github.io/ko/research/advertisement-embedding-attacks-llm-security-threat/"
 categories:
   - research
+audiobook: /assets/audio/posts/advertisement-embedding-attacks-llm-security-threat/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 15분
@@ -445,3 +447,16 @@ AI 커뮤니티가 이러한 도전과 씨름하면서, AEA의 등장은 AI 시�
 ## 참고문헌
 
 - Qiming Guo, Jinwen Tang, Xingran Huang. "Attacking LLMs and AI Agents: Advertisement Embedding Attacks Against Large Language Models." arXiv:2508.17674. [https://arxiv.org/abs/2508.17674](https://arxiv.org/abs/2508.17674)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 1](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.png)
+
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 2](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.png)
+
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 3](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.png)
+
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 4](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.png)
+

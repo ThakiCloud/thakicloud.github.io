@@ -18,11 +18,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/chain-of-agents-llm-collaboration-long-context-tasks/"
+canonical_url: "https://thakicloud.github.io/ko/research/chain-of-agents-llm-collaboration-long-context-tasks/"
 reading_time: true
 published: false
 categories:
   - research
+audiobook: /assets/audio/posts/chain-of-agents-llm-collaboration-long-context-tasks/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
@@ -157,3 +159,16 @@ Chain-of-Agents는 긴 컨텍스트 처리라는 LLM의 근본적 한계를 해�
 - **소속**: Penn State University, Google Cloud AI Research  
 - **출판**: arXiv:2406.02818
 - **링크**: [https://arxiv.org/pdf/2406.02818](https://arxiv.org/pdf/2406.02818)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 1](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-01.png)
+
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 2](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-02.png)
+
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 3](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-03.png)
+
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 4](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-04.png)
+

@@ -15,6 +15,9 @@ published: false
 categories:
   - research
   - llmops
+audiobook: /assets/audio/posts/stochastok-subword-understanding-llm-tokenization/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.github.io/ko/research/stochastok-subword-understanding-llm-tokenization/"
 ---
 
 옥스포드 대학교 연구진이 발표한 이 논문은 대규모 언어 모델(LLM)의 서브워드 레벨 이해 능력을 획기적으로 향상시키는 새로운 토크나이제이션 방법인 **STOCHASTOK**을 제안합니다.
@@ -220,4 +223,17 @@ STOCHASTOK은 최소한의 변경으로 LLM의 서브워드 이해 능력을 획
 
 이 연구는 토크나이제이션이 여전히 LLM 성능 향상의 핵심 요소임을 보여주며, 인간과 기계의 언어 인식 차이를 줄이는 중요한 진전을 나타냅니다.
 
-**GitHub 코드**: [github.com/anyasims/stochastok](https://github.com/anyasims/stochastok) 
+**GitHub 코드**: [github.com/anyasims/stochastok](https://github.com/anyasims/stochastok)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![stochastok-subword-understanding-llm-tokenization 슬라이드 1](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.png)
+
+![stochastok-subword-understanding-llm-tokenization 슬라이드 2](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.png)
+
+![stochastok-subword-understanding-llm-tokenization 슬라이드 3](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.png)
+
+![stochastok-subword-understanding-llm-tokenization 슬라이드 4](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.png)
+
