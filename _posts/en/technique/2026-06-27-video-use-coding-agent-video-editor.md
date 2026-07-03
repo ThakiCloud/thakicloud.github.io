@@ -19,6 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "film"
 canonical_url: "https://thakicloud.github.io/en/technique/video-use-coding-agent-video-editor/"
+published: false
 ---
 
 ## Overview

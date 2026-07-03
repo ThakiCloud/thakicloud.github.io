@@ -20,6 +20,7 @@ toc_label: "목차"
 toc_icon: "robot"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/technique/hermes-agent-learn-skills/"
+published: false
 ---
 
 ![Skill authoring process depicted as scattered document fragments converging into a single structured crystal](/assets/images/hermes-agent-learn-skills-hero.png)

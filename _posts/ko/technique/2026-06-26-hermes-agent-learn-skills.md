@@ -19,6 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/technique/hermes-agent-learn-skills/"
+published: false
 ---
 
 ![흩어진 문서 조각이 하나의 구조화된 결정체로 수렴하는 모습으로 표현한 스킬 저작 과정](/assets/images/hermes-agent-learn-skills-hero.png)
