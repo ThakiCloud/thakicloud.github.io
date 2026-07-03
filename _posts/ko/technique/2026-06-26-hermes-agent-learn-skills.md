@@ -20,6 +20,8 @@ toc_label: "목차"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/technique/hermes-agent-learn-skills/"
 published: false
+audiobook: /assets/audio/posts/hermes-agent-learn-skills/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![흩어진 문서 조각이 하나의 구조화된 결정체로 수렴하는 모습으로 표현한 스킬 저작 과정](/assets/images/hermes-agent-learn-skills-hero.png)
@@ -199,6 +201,19 @@ progressive disclosure의 약 3,000토큰 인덱스도 서빙 비용 관점에�
 셋째, 이번 검증의 명백한 공백은 우리 설치본이 `/learn` 이전 버전이라 실제 산출물을 측정하지 못했다는 것입니다. 동작 사실은 공식 문서와 보도로 교차 검증했지만, 산출물 품질, 저작 소요 시간, 표준 준수율 같은 수치는 직접 캡처하지 못했습니다. 이런 수치는 격리 프로파일에서 업스트림 버전을 돌린 뒤 후속 글에서 보강하겠습니다.
 
 결론적으로 `/learn`은 스킬을 만드는 마찰을 크게 줄이는 동시에, 그 마찰이 수행하던 자연스러운 검토 단계를 게이트와 curator로 옮긴 설계입니다. 멀티테넌트 에이전트 플랫폼을 운용하는 입장에서는 편의 기능이 아니라 거버넌스 설계로 읽는 편이 정확합니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![hermes-agent-learn-skills 슬라이드 1](/assets/images/hermes-agent-learn-skills-slide-01.png)
+
+![hermes-agent-learn-skills 슬라이드 2](/assets/images/hermes-agent-learn-skills-slide-02.png)
+
+![hermes-agent-learn-skills 슬라이드 3](/assets/images/hermes-agent-learn-skills-slide-03.png)
+
+![hermes-agent-learn-skills 슬라이드 4](/assets/images/hermes-agent-learn-skills-slide-04.png)
 
 ## 출처 (Sources)
 
