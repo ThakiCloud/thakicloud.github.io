@@ -22,9 +22,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/post-training-revolution-rl-agent-development/"
 reading_time: true
-published: true
 categories:
   - research
+published: false
 ---
 
 ![Key concept illustration](/assets/images/post-training-revolution-rl-agent-development-hero.png)

@@ -6,7 +6,7 @@ seo_description: "In an era where a skill pack can redefine an agent's behavior 
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/ai-coding-agent-skill-guardrails/"
+canonical_url: "https://thakicloud.github.io/en/agentops/ai-coding-agent-skill-guardrails/"
 tags:
   - ai-agents
   - security
@@ -28,6 +28,8 @@ What an AI coding agent can actually do is increasingly determined not by the un
 
 This post is not about that tool and does not explain how to use it. It is the opposite: an examination of the structural problem the incident exposed. The fact that "a single skill pack can change an agent's character" carries significant implications for enterprise environments, and it raises the question of how to defend against it. For that reason, neither attack techniques nor the location of the project are included here. ThakiCloud operates agent workloads for multiple customers simultaneously on a Kubernetes-based AI/ML SaaS platform, which means governance questions like this are not abstract concerns but concrete design challenges the platform faces every day.
 
+![Conceptual image of enterprise AI agent guardrails](/assets/images/ai-coding-agent-skill-guardrails-hero.png)
+
 ## What Happened: The Controversy a Single Skill Pack Sparked
 
 The core of the incident was this: without touching the model at all, a single configuration file containing routing rules was enough to transform a general-purpose agent into a pipeline optimized for specific purposes. The published skill pack was structured to automatically classify and route toward various security research and reverse-engineering workflows, and the author made clear that the combination was susceptible to misuse.
@@ -38,19 +40,9 @@ What deserves attention here is not the ethics of any individual tool. The real 
 
 The attack surface of traditional software is relatively static. Code is fixed, and what that code does is determined before deployment. Agents are different. Even with the same model and the same binary, agent behavior can change at runtime depending on which skills are loaded and which tools are accessible. The attack surface is dynamic.
 
-```text
-[ User intent (natural language) ]
-        |
-        v
-[ Agent + loaded skill pack ]  <-- behavior is decided here, at runtime
-        |
-        +--> [ Filesystem access ]
-        +--> [ Shell / command execution ]
-        +--> [ Network egress ]
-        +--> [ External tools / MCP calls ]
-        v
-[ Actual side effects ]
-```
+![Dynamic attack surface and four guardrail layers](/assets/images/ai-coding-agent-skill-guardrails-diagram.svg)
+
+*The dynamic attack surface and four guardrail layers: user intent flows through the agent to filesystem, shell, egress, and external tools, with each boundary gated by one of four guardrails.*
 
 This dynamic attack surface creates three new categories of risk. First, skill injection: loading skills or configuration from untrusted sources changes the agent's behavior at its core. Second, privilege escalation: once an agent is granted broad tool permissions, those permissions apply uniformly across all tasks regardless of intent. Third, data exfiltration: an agent that can read an entire codebase and communicate externally becomes a pathway for sensitive data to leave the organization if left uncontrolled. All three arise independently of how capable the model is. In fact, a more capable model can execute these risks more efficiently.
 
@@ -84,4 +76,6 @@ Third, framing this incident as a problem specific to one tool misses the point.
 
 ## Sources
 
-- Original post (includes dual-use warning): x.com/hjguyhan/status/2069026847523049739
+- Original post (includes dual-use warning): [x.com/hjguyhan/status/2069026847523049739](https://x.com/hjguyhan/status/2069026847523049739)
+- OWASP Top 10 for Large Language Model Applications, covering excessive agency, prompt injection, and sensitive information disclosure: [owasp.org](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- NIST AI Risk Management Framework (AI RMF): [nist.gov](https://www.nist.gov/itl/ai-risk-management-framework)

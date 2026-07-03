@@ -20,11 +20,12 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/post-training-revolution-rl-agent-development/"
+canonical_url: "https://thakicloud.github.io/ko/research/post-training-revolution-rl-agent-development/"
 reading_time: true
 categories:
   - research
   - llmops
+published: false
 ---
 
 ![핵심 개념 일러스트](/assets/images/post-training-revolution-rl-agent-development-hero.png)

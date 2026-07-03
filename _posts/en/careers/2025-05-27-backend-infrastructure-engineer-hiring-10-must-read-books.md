@@ -23,27 +23,9 @@ categories:
 ---
 
 <!-- evolve-diagram -->
-*Conceptual diagram*
+![Conceptual diagram mapping hiring skill areas to must-read books](/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg)
 
-```mermaid
-graph TD
-  Hire["Backend / Infra Engineer"] --> D1["Code Quality"]
-  Hire --> D2["Distributed Systems & APIs"]
-  Hire --> D3["Infra & Kubernetes"]
-  Hire --> D4["GPU & Parallel Compute"]
-  D1 --> B1["Clean Code"]
-  D1 --> B2["Head First Design Patterns"]
-  D1 --> B3["Software Engineering at Google"]
-  D2 --> B4["Designing Data-Intensive Applications"]
-  D2 --> B5["Building Microservices"]
-  D2 --> B6["Designing Web APIs"]
-  D2 --> B7["System Design Interview Vol. 2"]
-  D3 --> B8["Infra Engineer Textbook"]
-  D3 --> B9["Kubernetes for Developers"]
-  D4 --> B10["CUDA GPU Parallel Computing"]
-  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class Hire root;
-```
+*Conceptual diagram: the four skill areas of a backend/infra engineer (code quality, distributed systems and APIs, infrastructure and Kubernetes, GPU parallel compute) mapped to the ten must-read books.*
 
 ## Why Talk About Hiring Criteria Through a 'Book List'?
 

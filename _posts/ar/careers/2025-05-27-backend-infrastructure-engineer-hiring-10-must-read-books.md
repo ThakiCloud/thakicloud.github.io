@@ -23,27 +23,9 @@ categories:
 ---
 
 <!-- evolve-diagram -->
-*رسم تخطيطي توضيحي*
+![رسم تخطيطي يربط مجالات مهارات التوظيف بالكتب الأساسية](/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg)
 
-```mermaid
-graph TD
-  Hire["Backend / Infra Engineer"] --> D1["Code Quality"]
-  Hire --> D2["Distributed Systems & APIs"]
-  Hire --> D3["Infra & Kubernetes"]
-  Hire --> D4["GPU & Parallel Compute"]
-  D1 --> B1["Clean Code"]
-  D1 --> B2["Head First Design Patterns"]
-  D1 --> B3["Software Engineering at Google"]
-  D2 --> B4["Designing Data-Intensive Applications"]
-  D2 --> B5["Building Microservices"]
-  D2 --> B6["Designing Web APIs"]
-  D2 --> B7["System Design Interview Vol. 2"]
-  D3 --> B8["Infra Engineer Textbook"]
-  D3 --> B9["Kubernetes for Developers"]
-  D4 --> B10["CUDA GPU Parallel Computing"]
-  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class Hire root;
-```
+*رسم تخطيطي توضيحي: مجالات المهارات الأربعة لمهندس الواجهة الخلفية والبنية التحتية (جودة الشيفرة، الأنظمة الموزعة وواجهات البرمجة، البنية التحتية وKubernetes، الحوسبة المتوازية على GPU) مرتبطة بالكتب العشرة الأساسية.*
 
 ## لماذا نتحدث عن معايير التوظيف من خلال 'قائمة كتب'؟
 

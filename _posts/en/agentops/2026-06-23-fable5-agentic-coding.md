@@ -6,7 +6,7 @@ seo_description: "We separate the confirmed facts about Fable 5 (pricing of $10 
 date: 2026-06-23
 last_modified_at: 2026-06-23
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/fable5-agentic-coding/"
+canonical_url: "https://thakicloud.github.io/en/agentops/fable5-agentic-coding/"
 tags:
   - ai-coding
   - agentic
@@ -28,6 +28,8 @@ A quote recently spread fast across developer communities: the creator of Claude
 
 ThakiCloud operates a Kubernetes-based AI/ML SaaS platform, and our own development relies heavily on agentic coding tools. The trend of "frontier models writing most of the code" is therefore not someone else's story for us. It is a daily operational design problem. The goal of this post is to look calmly at what this shift demands of cost and governance, without getting swept up in inflated numbers.
 
+![Conceptual image of agentic coding](/assets/images/fable5-agentic-coding-hero.png)
+
 ## Separating Confirmed Facts From the Quote
 
 First, the numbers "100%" and "3x" stay as a quote only. The source is an individual statement, and the measurement method is not public. We do not treat these figures as fact in the body.
@@ -40,18 +42,9 @@ On performance, the company's stated claim is that on a core analytics benchmark
 
 Traditional code completion was a tool that assisted the flow of a person typing. The human sits in the driver's seat and the model suggests the next token alongside them. Agentic coding raises the level of abstraction by one step. The human gives an intent, and the agent autonomously plans, reads files, writes code, runs tests, and repeats a loop that fixes itself when it fails.
 
-```text
-[ Human: state intent/goal ]
-        |
-        v
-[ Agent: make a plan ] ---> [ write code ] ---> [ test/run ]
-        ^                                            |
-        |                                            v
-[ Human: review direction (steering) ] <--- [ self-verify/fix loop ]
-                                              |
-                                              v
-                                   [ submit change on pass ]
-```
+![The autonomous loop of agentic coding](/assets/images/fable5-agentic-coding-diagram.svg)
+
+*The autonomous loop of agentic coding: the human states an intent, the agent iterates through planning, writing, testing, and self-verification, submits the change on pass, and the human steers direction.*
 
 There are two key differences. First, the unit of work grows larger. It is no longer a single suggested line but a whole feature, a whole refactoring, or a whole bug fix. Second, the point of human intervention changes. While the model runs its self-verification loop, the human does not read every line. Instead, they intervene at the input (what to build) and the output (whether the result matches intent). That is the reality behind the phrase "from monitoring to steering."
 

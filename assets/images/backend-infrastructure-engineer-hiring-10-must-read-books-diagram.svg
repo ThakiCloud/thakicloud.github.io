@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2289.816 274.70000000000005" width="2289.816" height="274.70000000000005" style="--bg:#1a1b26;--fg:#a9b1d6;--line:#3d59a1;--accent:#7aa2f7;--muted:#565f89;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="Hire" data-to="D1" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1468.0547166666663,76.9 1468.0547166666663,91.9 277.27250000000015,91.9 277.27250000000015,106.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Hire" data-to="D2" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1468.0547166666663,76.9 1468.0547166666663,91.9 1136.9422499999996,91.9 1136.9422499999996,106.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Hire" data-to="D3" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1468.0547166666663,76.9 1468.0547166666663,91.9 1777.0851499999997,91.9 1777.0851499999997,106.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Hire" data-to="D4" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1468.0547166666663,76.9 1468.0547166666663,91.9 2141.0325,91.9 2141.0325,106.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D1" data-to="B1" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="277.27250000000015,143.8 277.27250000000015,161.8 94.6905,161.8 94.6905,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D1" data-to="B2" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="277.27250000000015,143.8 277.27250000000015,161.8 277.2725000000001,161.8 277.2725000000001,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D1" data-to="B3" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="277.27250000000015,143.8 277.27250000000015,161.8 517.6524999999999,161.8 517.6524999999999,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D2" data-to="B4" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1136.9422499999996,143.8 1136.9422499999996,161.8 789.1544999999999,161.8 789.1544999999999,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D2" data-to="B5" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1136.9422499999996,143.8 1136.9422499999996,161.8 1038.0559999999998,161.8 1038.0559999999998,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D2" data-to="B6" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1136.9422499999996,143.8 1136.9422499999996,161.8 1235.8284999999996,161.8 1235.8284999999996,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D2" data-to="B7" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1136.9422499999996,143.8 1136.9422499999996,161.8 1452.8669999999997,161.8 1452.8669999999997,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D3" data-to="B8" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1777.0851499999997,143.8 1777.0851499999997,161.8 1682.1319999999996,161.8 1682.1319999999996,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D3" data-to="B9" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1777.0851499999997,143.8 1777.0851499999997,161.8 1903.2459999999996,161.8 1903.2459999999996,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D4" data-to="B10" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="2141.0325,143.8 2141.0325,179.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="Hire" data-label="Backend / Infra Engineer" data-shape="rectangle">
+  <rect x="1374.4617166666662" y="40" width="187.186" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1468.0547166666663" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Backend / Infra Engineer</text>
+</g>
+<g class="node" data-id="D1" data-label="Code Quality" data-shape="rectangle">
+  <rect x="219.61800000000017" y="106.9" width="115.30900000000001" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="277.27250000000015" y="125.35000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Code Quality</text>
+</g>
+<g class="node" data-id="D2" data-label="Distributed Systems &amp; APIs" data-shape="rectangle">
+  <rect x="1037.7917499999996" y="106.9" width="198.30099999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1136.9422499999996" y="125.35000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Distributed Systems &amp; APIs</text>
+</g>
+<g class="node" data-id="D3" data-label="Infra &amp; Kubernetes" data-shape="rectangle">
+  <rect x="1702.0171499999997" y="106.9" width="150.13599999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1777.0851499999997" y="125.35000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Infra &amp; Kubernetes</text>
+</g>
+<g class="node" data-id="D4" data-label="GPU &amp; Parallel Compute" data-shape="rectangle">
+  <rect x="2051.515" y="106.9" width="179.03499999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2141.0325" y="125.35000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">GPU &amp; Parallel Compute</text>
+</g>
+<g class="node" data-id="B1" data-label="Clean Code" data-shape="rectangle">
+  <rect x="40" y="179.8" width="109.381" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="94.6905" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Clean Code</text>
+</g>
+<g class="node" data-id="B2" data-label="Head First Design Patterns" data-shape="rectangle">
+  <rect x="177.38100000000009" y="179.8" width="199.783" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="277.2725000000001" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Head First Design Patterns</text>
+</g>
+<g class="node" data-id="B3" data-label="Software Engineering at Google" data-shape="rectangle">
+  <rect x="405.164" y="179.8" width="224.97699999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="517.6524999999999" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Software Engineering at Google</text>
+</g>
+<g class="node" data-id="B4" data-label="Designing Data-Intensive Applications" data-shape="rectangle">
+  <rect x="658.1409999999998" y="179.8" width="262.02699999999993" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="789.1544999999999" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Designing Data-Intensive Applications</text>
+</g>
+<g class="node" data-id="B5" data-label="Building Microservices" data-shape="rectangle">
+  <rect x="948.1679999999999" y="179.8" width="179.77599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1038.0559999999998" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Building Microservices</text>
+</g>
+<g class="node" data-id="B6" data-label="Designing Web APIs" data-shape="rectangle">
+  <rect x="1155.9439999999997" y="179.8" width="159.769" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1235.8284999999996" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Designing Web APIs</text>
+</g>
+<g class="node" data-id="B7" data-label="System Design Interview Vol. 2" data-shape="rectangle">
+  <rect x="1343.7129999999997" y="179.8" width="218.30799999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1452.8669999999997" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">System Design Interview Vol. 2</text>
+</g>
+<g class="node" data-id="B8" data-label="Infra Engineer Textbook" data-shape="rectangle">
+  <rect x="1590.0209999999997" y="179.8" width="184.22199999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1682.1319999999996" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Infra Engineer Textbook</text>
+</g>
+<g class="node" data-id="B9" data-label="Kubernetes for Developers" data-shape="rectangle">
+  <rect x="1802.2429999999997" y="179.8" width="202.00599999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1903.2459999999996" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Kubernetes for Developers</text>
+</g>
+<g class="node" data-id="B10" data-label="CUDA GPU Parallel Computing" data-shape="rectangle">
+  <rect x="2032.2489999999998" y="179.8" width="217.56699999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2141.0325" y="198.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">CUDA GPU Parallel Computing</text>
+</g>
+<g class="node" data-id="class" data-label="class" data-shape="rectangle">
+  <rect x="1589.6477166666664" y="40" width="74.554" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1626.9247166666664" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">class</text>
+</g>
+</svg>

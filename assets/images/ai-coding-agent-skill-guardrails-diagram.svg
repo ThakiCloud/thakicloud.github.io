@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1041.2463333333333 456.5" width="1041.2463333333333" height="456.5" style="--bg:#1a1b26;--fg:#a9b1d6;--line:#3d59a1;--accent:#7aa2f7;--muted:#565f89;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="Intent" data-to="Agent" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="517.3686666666666,182.10000000000002 517.3686666666666,197.8 500.05708333333325,197.8 500.05708333333325,215.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Agent" data-to="FS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="468.24191666666655,252.70000000000002 468.24191666666655,279.70000000000005 369.72616666666664,279.70000000000005 369.72616666666664,306.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Agent" data-to="Shell" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="468.24191666666655,252.70000000000002 468.24191666666655,279.70000000000005 183.06866666666667,279.70000000000005 183.06866666666667,306.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Agent" data-to="Egress" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="468.24191666666655,252.70000000000002 468.24191666666655,279.70000000000005 755.6381666666666,279.70000000000005 755.6381666666666,306.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Agent" data-to="Tools" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="468.24191666666655,252.70000000000002 468.24191666666655,279.70000000000005 566.7576666666666,279.70000000000005 566.7576666666666,306.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FS" data-to="Effect" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="369.72616666666664,343.6 369.72616666666664,355.6 543.4639999999999,355.6 543.4639999999999,379.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Shell" data-to="Effect" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="183.06866666666667,343.6 183.06866666666667,367.6 520.1703333333332,367.6 520.1703333333332,379.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Egress" data-to="Effect" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="755.6381666666666,343.6 755.6381666666666,355.6 590.0513333333333,355.6 590.0513333333333,379.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Tools" data-to="Effect" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="566.7576666666666,343.6 566.7576666666666,379.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G1" data-to="Agent" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="gates" points="357.0001,85.20000000000002 357.0001,197.8 436.4267499999999,197.8 436.4267499999999,215.8" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G2" data-to="Shell" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="limits" points="155.82299999999998,182.10000000000002 155.82299999999998,306.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G3" data-to="Egress" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="restricts" points="778.5613333333332,182.10000000000002 778.5613333333333,306.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G4" data-to="Effect" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="records" points="916.1748333333333,252.70000000000002 916.1748333333333,367.6 613.3449999999999,367.6 613.3449999999999,379.6" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="G1" data-to="Agent" data-label="gates">
+  <rect x="335.0001" y="136.5" width="43.786" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="356.8931" y="151.65" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">gates</text>
+</g>
+<g class="edge-label" data-from="G2" data-to="Shell" data-label="limits">
+  <rect x="135.32299999999998" y="245.4" width="40.221999999999994" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="155.43399999999997" y="260.55" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">limits</text>
+</g>
+<g class="edge-label" data-from="G3" data-to="Egress" data-label="restricts">
+  <rect x="749.0613333333332" y="233.40000000000003" width="58.04200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="778.0823333333332" y="248.55000000000004" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">restricts</text>
+</g>
+<g class="edge-label" data-from="G4" data-to="Effect" data-label="records">
+  <rect x="887.6748333333333" y="330.3" width="56.854" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="916.1018333333333" y="345.45" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">records</text>
+</g>
+<g class="node" data-id="Intent" data-label="User Intent" data-shape="rectangle">
+  <rect x="464.9011666666666" y="145.20000000000002" width="104.93500000000002" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="517.3686666666666" y="163.65000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">User Intent</text>
+</g>
+<g class="node" data-id="Agent" data-label="Agent + Loaded Skillpack" data-shape="rectangle">
+  <rect x="372.7964166666666" y="215.8" width="190.891" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="468.24191666666655" y="234.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Agent + Loaded Skillpack</text>
+</g>
+<g class="node" data-id="FS" data-label="Filesystem Access" data-shape="rectangle">
+  <rect x="292.80566666666664" y="306.70000000000005" width="153.84099999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="369.72616666666664" y="325.15000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Filesystem Access</text>
+</g>
+<g class="node" data-id="Shell" data-label="Shell Command Exec" data-shape="rectangle">
+  <rect x="101.33166666666666" y="306.70000000000005" width="163.474" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="183.06866666666667" y="325.15000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Shell Command Exec</text>
+</g>
+<g class="node" data-id="Egress" data-label="Network Egress" data-shape="rectangle">
+  <rect x="686.8686666666666" y="306.70000000000005" width="137.539" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="755.6381666666666" y="325.15000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Network Egress</text>
+</g>
+<g class="node" data-id="Tools" data-label="External Tools and MCP" data-shape="rectangle">
+  <rect x="474.64666666666665" y="306.70000000000005" width="184.22199999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="566.7576666666666" y="325.15000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">External Tools and MCP</text>
+</g>
+<g class="node" data-id="Effect" data-label="Real Side Effects" data-shape="rectangle">
+  <rect x="496.8766666666666" y="379.6" width="139.762" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="566.7576666666666" y="398.05" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Real Side Effects</text>
+</g>
+<g class="node" data-id="G1" data-label="Guardrail 1 Skill Whitelist" data-shape="rectangle">
+  <rect x="266.37109999999996" y="48.300000000000004" width="181.25799999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="357.0000999999999" y="66.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Guardrail 1 Skill Whitelist</text>
+</g>
+<g class="node" data-id="G2" data-label="Guardrail 2 Tool Exec Boundary" data-shape="rectangle">
+  <rect x="40" y="145.20000000000002" width="231.646" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="155.82299999999998" y="163.65000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Guardrail 2 Tool Exec Boundary</text>
+</g>
+<g class="node" data-id="G3" data-label="Guardrail 3 Egress Control" data-shape="rectangle">
+  <rect x="678.6698333333333" y="145.20000000000002" width="199.783" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="778.5613333333332" y="163.65000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Guardrail 3 Egress Control</text>
+</g>
+<g class="node" data-id="G4" data-label="Guardrail 4 Audit Trail" data-shape="rectangle">
+  <rect x="831.1033333333332" y="215.8" width="170.14299999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="916.1748333333333" y="234.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Guardrail 4 Audit Trail</text>
+</g>
+<g class="node" data-id="class" data-label="class" data-shape="rectangle">
+  <rect x="475.62909999999994" y="48.300000000000004" width="74.554" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="512.9060999999999" y="66.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">class</text>
+</g>
+</svg>

@@ -22,27 +22,9 @@ categories:
 ---
 
 <!-- evolve-diagram -->
-*개념 다이어그램*
+![채용 역량 영역별 필독서 개념 다이어그램](/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg)
 
-```mermaid
-graph TD
-  Hire["Backend / Infra Engineer"] --> D1["Code Quality"]
-  Hire --> D2["Distributed Systems & APIs"]
-  Hire --> D3["Infra & Kubernetes"]
-  Hire --> D4["GPU & Parallel Compute"]
-  D1 --> B1["Clean Code"]
-  D1 --> B2["Head First Design Patterns"]
-  D1 --> B3["Software Engineering at Google"]
-  D2 --> B4["Designing Data-Intensive Applications"]
-  D2 --> B5["Building Microservices"]
-  D2 --> B6["Designing Web APIs"]
-  D2 --> B7["System Design Interview Vol. 2"]
-  D3 --> B8["Infra Engineer Textbook"]
-  D3 --> B9["Kubernetes for Developers"]
-  D4 --> B10["CUDA GPU Parallel Computing"]
-  classDef root fill:#7aa2f7,stroke:#7aa2f7,color:#1a1b26;
-  class Hire root;
-```
+*개념 다이어그램: 백엔드·인프라 엔지니어의 네 역량 영역(코드 품질, 분산 시스템과 API, 인프라와 쿠버네티스, GPU 병렬 처리)과 열 권의 필독서 매핑*
 
 ## 왜 책 리스트로 채용 기준을 이야기하는가
 
