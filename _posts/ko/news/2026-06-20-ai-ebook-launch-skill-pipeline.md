@@ -5,8 +5,6 @@ seo_title: "AI 이북 제작 자동화 파이프라인 ai-ebook-launch - Thaki C
 seo_description: "주제 선정, 본문 집필, gpt-image-2 표지, 세일즈 페이지, Whop/X 배포까지 6단계로 자동화한 이북 제작 스킬. 6일간 한국어 이북 5권을 뽑은 실제 운용 기록과 한계."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - news
 tags:
   - ai-ebook-launch
   - ebook
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/ai-ebook-launch-skill-pipeline/"
 reading_time: true
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

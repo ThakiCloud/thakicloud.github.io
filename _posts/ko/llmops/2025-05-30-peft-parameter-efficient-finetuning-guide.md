@@ -2,8 +2,6 @@
 title: "PEFT: 대형 모델을 0.2%만 학습해도 전체 파인튜닝 성능을 내는 혁신 기술"
 excerpt: "LoRA, AdaLoRA, IA3 등 최신 PEFT 기법으로 메모리는 80% 절약하면서 성능은 그대로. Llama, BERT, Stable Diffusion까지 모든 모델에 적용 가능"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - PEFT
   - LoRA
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "PEFT 완전 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** [PEFT (Parameter-Efficient Fine-Tuning)](https://github.com/huggingface/peft)는 🤗Hugging Face의 **파라미터 효율적 파인튜닝 라이브러리**다. LoRA, AdaLoRA, IA3 등을 통해 **전체 파라미터의 0.2%만 학습**해도 전체 파인튜닝과 **동등한 성능**을 달성한다. **1만 8천 개 이상의 GitHub 스타**를 받으며 메모리 부족 문제를 해결하는 업계 표준 솔루션이 되었다.

@@ -5,8 +5,6 @@ seo_title: "Mem0 Gemini 2.5 장기 메모리 AI 완벽 가이드 - LLMOps 최적
 seo_description: "Mem0 오픈소스 프레임워크로 Gemini 2.5에 장기 메모리를 구현하는 방법. 벡터 임베딩 기반 메모리 시스템과 창의적 응용 사례, 엔터프라이즈 배포 전략까지 완전 정리."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - llmops
 tags:
   - mem0
   - gemini-2.5
@@ -29,6 +27,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/mem0-gemini-long-term-memory-creative-applications-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

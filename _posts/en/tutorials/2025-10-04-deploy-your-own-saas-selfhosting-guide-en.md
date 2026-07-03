@@ -4,8 +4,6 @@ excerpt: "A comprehensive guide to deploying your own VPN, file storage, analyti
 seo_title: "Deploy Your Own SaaS: Self-Hosting Guide for Privacy-Focused Services"
 seo_description: "Learn how to deploy your own VPN, cloud storage, analytics, password manager, and 30+ other services. Complete self-hosting guide with privacy and data control in mind."
 date: 2025-10-04
-categories:
-  - tutorials
 tags:
   - self-hosting
   - privacy
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/deploy-your-own-saas-selfhosting-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/deploy-your-own-saas-selfhosting-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

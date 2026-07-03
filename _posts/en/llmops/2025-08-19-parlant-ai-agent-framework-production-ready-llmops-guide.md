@@ -8,12 +8,13 @@ date: 2025-08-19
 last_modified_at: 2025-08-19
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/parlant-ai-agent-framework-production-ready-llmops-guide/"
-categories: [llmops]
 tags: [parlant, ai-agents, llm-framework, production-ai, guideline-control, conversation-analytics, agent-reliability, enterprise-ai, emcie]
 toc: true
 toc_label: "Parlant LLMOps Guide"
 reading_time: 15 min
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 15 min

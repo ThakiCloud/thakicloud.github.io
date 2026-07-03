@@ -5,8 +5,6 @@ seo_title: "pgroll PostgreSQL 무중단 마이그레이션 완벽 가이드 - Th
 seo_description: "pgroll로 PostgreSQL 스키마를 안전하게 변경하는 실무 가이드. 제로 다운타임 마이그레이션, 롤백 기능, expand/contract 패턴까지 실제 테스트 결과와 함께 완벽 설명"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
 tags:
   - pgroll
   - postgresql
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/pgroll-postgresql-zero-downtime-migrations-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

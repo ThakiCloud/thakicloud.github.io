@@ -4,8 +4,6 @@ excerpt: "دليل شامل لمنصة Neosync مفتوحة المصدر لإخ�
 seo_title: "دليل Neosync: إخفاء البيانات والبيانات التركيبية الشامل - Thaki Cloud"
 seo_description: "تعلم منصة Neosync مفتوحة المصدر لإخفاء هوية البيانات وتوليد البيانات التركيبية ومزامنة البيئات الآمنة. دليل شامل مع إعداد Docker وأمثلة."
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - neosync
   - إخفاء-البيانات
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/neosync-data-anonymiza
 lang: ar
 permalink: /ar/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

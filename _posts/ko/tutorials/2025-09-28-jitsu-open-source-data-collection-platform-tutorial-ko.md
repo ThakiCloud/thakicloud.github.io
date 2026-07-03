@@ -4,8 +4,6 @@ excerpt: "실시간 데이터 수집 및 데이터 웨어하우스 스트리밍�
 seo_title: "Jitsu 튜토리얼: 오픈소스 데이터 수집 플랫폼 설정 가이드 - Thaki Cloud"
 seo_description: "Jitsu 설치, 구성, 통합을 다루는 완전한 튜토리얼. 현대적인 데이터 팀을 위한 오픈소스 Segment 대안으로 실시간 데이터 파이프라인을 구축하는 방법을 학습하세요."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - jitsu
   - 데이터수집
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/jitsu-open-source-data-collection-platform-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/jitsu-open-source-data-collection-platform-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "Umami Analytics GitHub Pages Jekyll 설정 완벽 가이드 - Thaki 
 seo_description: "GitHub Pages Jekyll 블로그에 Umami Analytics를 연동하는 단계별 가이드. 프라이버시 중심 웹 분석 툴 설정부터 실시간 모니터링까지 완벽 구현 방법을 제공합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15
-categories:
-  - tutorials
 tags:
   - umami-analytics
   - github-pages
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/umami-analytics-github-pages-jekyll-setup-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

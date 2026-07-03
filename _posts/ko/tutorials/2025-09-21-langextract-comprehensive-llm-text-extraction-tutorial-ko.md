@@ -4,8 +4,6 @@ excerpt: "Google의 LangExtract 라이브러리를 활용해 비구조화된 텍
 seo_title: "LangExtract 튜토리얼: LLM 텍스트 추출 완전 가이드 - Thaki Cloud"
 seo_description: "Google의 LangExtract 라이브러리를 사용한 구조화된 데이터 추출 튜토리얼. Gemini, OpenAI, Ollama 모델을 활용한 실용적인 예제로 완벽 학습."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - LangExtract
   - LLM
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/langextract-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/langextract-comprehensive-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "NVIDIA Granary Multilingual Speech Dataset Comprehensive Guide - Tha
 seo_description: "A detailed look at NVIDIA Granary: 25 European languages, 640,000 hours of audio, dataset structure, and how to use it for ASR and AST tasks."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - datasets
 tags:
   - nvidia
   - granary
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 lang: en
 reading_time: true
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated reading time**: 8 min

@@ -2,8 +2,6 @@
 title: "Corrective RAG 완전 분석: 자체 평가 메커니즘으로 RAG 시스템 혁신하기"
 excerpt: "Corrective RAG의 핵심 구현 원리와 자체 평가 메커니즘을 AgentOps 관점에서 상세 분석하고, 실전 구현 방법을 제시합니다."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - Corrective-RAG
   - Self-Assessment
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "Corrective RAG 분석"
 published: false
+categories:
+  - agentops
 ---
 
 ## 개요

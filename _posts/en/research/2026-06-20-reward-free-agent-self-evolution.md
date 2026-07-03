@@ -5,8 +5,6 @@ seo_title: "Reward-Free LLM Agent Self-Evolution Training Analysis - Thaki Cloud
 seo_description: "arXiv 2604.18131: reward-free agent self-evolution, world knowledge exploration training, 20% web task performance gain, and the ThakiCloud platform perspective."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - self-evolution
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/reward-free-agent-self-evolution/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 8 min

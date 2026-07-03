@@ -7,8 +7,6 @@ date: 2025-09-08
 lang: en
 permalink: /en/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/"
-categories:
-  - research
 tags:
   - ai-efficiency
   - model-optimization
@@ -19,6 +17,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
+categories:
+  - research
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

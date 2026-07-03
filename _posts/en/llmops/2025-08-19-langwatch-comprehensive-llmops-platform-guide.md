@@ -5,9 +5,6 @@ seo_title: "LangWatch LLMOps Platform Complete Guide - Building AI Operations - 
 seo_description: "How to implement LLM observability, evaluation, dataset management, and prompt optimization with open-source LangWatch, and build a comprehensive LLMOps environment integrated with RunPod and vLLM"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
-  - tutorials
 tags:
   - LangWatch
   - LLMOps
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/en/llmops/langwatch-comprehensive-l
 lang: en
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 12 min

@@ -4,8 +4,6 @@ excerpt: "Discover Ling-flash-2.0, inclusionAI's latest MoE architecture achievi
 seo_title: "Ling-flash-2.0 Model Review: 100B Parameter MoE with 6.1B Activation - Thaki Cloud"
 seo_description: "Complete analysis of Ling-flash-2.0's MoE architecture, performance benchmarks, deployment options with vLLM/SGLang, and practical implementation guide for enterprise workflows."
 date: 2025-09-18
-categories:
-  - owm
 tags:
   - ling-flash-2.0
   - moe-architecture
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/owm/ling-flash-2-0-comprehensive-model-review/
 canonical_url: "https://thakicloud.github.io/en/owm/ling-flash-2-0-comprehensive-model-review/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

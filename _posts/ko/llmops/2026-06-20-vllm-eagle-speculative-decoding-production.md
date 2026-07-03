@@ -5,8 +5,6 @@ seo_title: "EAGLE 3.1 + vLLM 투기적 디코딩 프로덕션 가이드 - Thaki 
 seo_description: "vLLM에 통합된 EAGLE 3.1 투기적 디코딩의 원리, 설정 방법, K8s 멀티테넌트 환경에서의 실전 운용 전략을 ML 인프라 엔지니어 관점으로 정리한다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - vllm
   - speculative-decoding
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

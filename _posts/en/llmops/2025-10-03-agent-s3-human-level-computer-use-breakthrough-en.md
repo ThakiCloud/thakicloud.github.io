@@ -4,8 +4,6 @@ excerpt: "Simular's Agent S3 achieves 69.9% accuracy on OSWorld benchmark, appro
 seo_title: "Agent S3: Human-Level Computer Use AI Agent Innovation - Thaki Cloud"
 seo_description: "Comprehensive analysis of Simular Agent S3's 69.9% OSWorld performance, Behavior Best-of-N technique, and native coding agent integration revolutionizing computer use automation."
 date: 2025-10-03
-categories:
-  - llmops
 tags:
   - Agent-S3
   - Computer-Use-Agent
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/agent-s3-human-level-computer-use-breakthrough/
 canonical_url: "https://thakicloud.github.io/en/llmops/agent-s3-human-level-computer-use-breakthrough/"
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

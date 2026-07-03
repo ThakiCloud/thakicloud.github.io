@@ -5,8 +5,6 @@ seo_title: "جرد العمليات المستقلة: launchd والخطافات
 seo_description: "القائمة الكاملة للأتمتة في ThakiCloud: مهام launchd المجدولة، وخطافات UserPromptSubmit وStop، وحلقات التطور الذاتي الليلية، وأنبوب ذاكرة memkraft، مصنفةً بين حتمي ($0) وتكلفة LLM."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - automation
   - autonomous-ops
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/autonomous-ops-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![طبولوجيا العمليات المستقلة حيث تتشابك الجداول الزمنية وخطافات الأحداث](/assets/images/autonomous-ops-hero.png)

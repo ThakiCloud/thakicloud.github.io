@@ -4,8 +4,6 @@ excerpt: "اكتشف مجموعة منسقة من تطبيقات النماذج 
 seo_title: "Awesome LLM Apps - مجموعة منسقة من تطبيقات الذكاء الاصطناعي"
 seo_description: "استكشف Awesome LLM Apps، مجموعة شاملة من تطبيقات النماذج اللغوية الكبيرة التي تتميز بـ RAG ووكلاء الذكاء الاصطناعي والأنظمة متعددة الوكلاء ووكلاء الصوت للتطوير العملي للذكاء الاصطناعي"
 date: 2025-06-11
-categories: 
-  - llmops
 tags: 
   - النماذج-اللغوية-الكبيرة
   - وكلاء-الذكاء-الاصطناعي
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/llmops/awesome-llm-apps-collection/
 canonical_url: "https://thakicloud.github.io/ar/llmops/awesome-llm-apps-collection/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

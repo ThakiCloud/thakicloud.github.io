@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 + slime RL Post-Training Framework On-Prem Guide - ThakiClou
 seo_description: "GLM-5.2 architecture (MoE+DSA, 1M context, IndexShare), benchmarks, MIT license, the slime RL post-training stack (Apache-2.0), vLLM/SGLang serving, and a Kueue deployment perspective."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - owm
 tags:
   - glm-5-2
   - zai
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/glm-5-2-slime-rl-posttraining/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 8 min

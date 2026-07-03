@@ -5,9 +5,6 @@ seo_title: "Kimi K2 로컬 실행 가이드 - 1T 파라미터 MoE 모델 설치 
 seo_description: "Moonshot AI Kimi K2 모델을 로컬 환경에서 실행하는 완전한 가이드. Unsloth 양자화 버전과 llama.cpp 활용법, GPU 메모리 최적화 방법 포함."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
-  - llmops
 tags:
   - Kimi-K2
   - Moonshot-AI
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/kimi-k2-local-execution-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

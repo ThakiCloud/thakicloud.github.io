@@ -4,8 +4,6 @@ excerpt: "Discover AgentOps, a powerful Python SDK for monitoring, debugging, an
 seo_title: "AgentOps: AI Agent Monitoring & Debugging Platform - Thaki Cloud"
 seo_description: "Learn how AgentOps helps monitor, debug, and optimize AI agents with comprehensive tracking, cost management, and security features for production environments."
 date: 2025-09-28
-categories:
-  - llmops
 tags:
   - AgentOps
   - AI-Agents
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/agentops-ai-agent-monitoring-debugging-platform/
 canonical_url: "https://thakicloud.github.io/en/llmops/agentops-ai-agent-monitoring-debugging-platform/"
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

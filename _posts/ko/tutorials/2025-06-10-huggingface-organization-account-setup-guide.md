@@ -1,10 +1,6 @@
 ---
 title: "Hugging Face 조직 계정 완전 가이드: 팀 협업을 위한 설정부터 관리까지"
 date: 2025-06-10
-categories: 
-  - AI
-  - MLOps
-  - tutorials
 tags: 
   - Hugging Face
   - Organization
@@ -16,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: Hugging Face 조직 가이드
 published: false
+categories:
+  - tutorials
 ---
 
 AI/ML 팀에서 모델과 데이터셋을 효율적으로 관리하고 협업하기 위해서는 Hugging Face 조직 계정이 필수입니다. 이 가이드에서는 조직 계정 생성부터 팀원 관리, 권한 설정, 실무 활용까지 모든 과정을 상세히 다루겠습니다.

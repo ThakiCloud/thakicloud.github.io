@@ -1,10 +1,6 @@
 ---
 title: "ChatGPT와 Python으로 구축하는 MCP 서버 완전 가이드"
 date: 2025-06-05
-categories: 
-  - AI
-  - Python
-  - tutorials
 tags: 
   - ChatGPT
   - MCP
@@ -16,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: MCP 서버 구축 가이드
 published: false
+categories:
+  - tutorials
 ---
 
 ChatGPT와 Python으로 구축한 MCP(Model Context Protocol) 서버를 연동하여 외부 도구나 데이터를 활용하는 방법을 안내해 드리겠습니다. MCP는 AI 모델과 다양한 도구 및 데이터 소스를 효과적으로 연결하는 프로토콜로, ChatGPT의 기능을 확장하는 강력한 방법입니다.

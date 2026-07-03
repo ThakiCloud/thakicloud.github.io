@@ -4,8 +4,6 @@ excerpt: "Google ADK의 공식 샘플 저장소를 활용하여 지능형 멀티
 seo_title: "Google ADK 샘플 튜토리얼: 멀티 에이전트 애플리케이션 구축 - Thaki Cloud"
 seo_description: "Google Agent Development Kit (ADK)의 설치부터 샘플 에이전트, 실전 구현 예제까지 멀티 에이전트 시스템 개발의 모든 것을 알아보세요."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - google-adk
   - 멀티에이전트시스템
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/google-adk-samples-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/google-adk-samples-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

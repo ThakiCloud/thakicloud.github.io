@@ -4,8 +4,6 @@ excerpt: "Learn how to create interactive UI components for MCP (Model Context P
 seo_title: "MCP-UI Tutorial: Build Interactive AI Agent UIs - Complete Guide"
 seo_description: "Master MCP-UI development with this comprehensive tutorial. Learn to create interactive UI components for AI agents using TypeScript and Ruby with practical examples."
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - mcp-ui
   - ai-agents
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/mcp-ui-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcp-ui-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

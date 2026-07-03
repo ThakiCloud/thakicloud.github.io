@@ -4,8 +4,6 @@ excerpt: "Learn how to use Strix, an open-source AI agent that acts like real ha
 seo_title: "Strix AI Security Testing Tutorial: Autonomous Vulnerability Detection Guide"
 seo_description: "Complete guide to Strix AI security testing tool - installation, configuration, and practical usage for automated vulnerability detection and validation in web applications and codebases."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - security
   - ai
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/strix-ai-security-testing-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/strix-ai-security-testing-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

@@ -5,9 +5,6 @@ seo_title: "Reveal.js HTML 프레젠테이션 프레임워크 완전 가이드 -
 seo_description: "Reveal.js를 활용한 HTML 기반 인터랙티브 프레젠테이션 완전 가이드. 설치부터 고급 기능, 커스텀 테마, 플러그인 개발, 배포까지 전문가 수준의 웹 프레젠테이션 제작 방법을 완전 마스터하세요."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - Reveal-js
   - HTML-Presentation
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/reveal-js-html-presentation-framework-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

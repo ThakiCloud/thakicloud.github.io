@@ -5,8 +5,6 @@ seo_title: "MiniMax-M3 428B MoE 멀티모달 모델 온프렘 서빙 가이드 -
 seo_description: "MiniMax-M3 아키텍처(428B/23B MoE, 1M 컨텍스트, MSA), arXiv:2606.13392, SGLang/vLLM 서빙, Kueue 배포 전략, 라이선스 주의사항."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - minimax-m3
   - minimax
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/minimax-m3-multimodal-moe/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

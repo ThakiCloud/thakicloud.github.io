@@ -5,9 +5,6 @@ seo_title: "UI-TARS Desktop 튜토리얼: GUI 자동화 에이전트 완전 가�
 seo_description: "ByteDance UI-TARS Desktop 설치부터 기업 활용까지. Vision-Language Model 기반 GUI 자동화 솔루션의 모든 것을 150분 만에 마스터하세요."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
-  - llmops
 tags:
   - UI-TARS
   - Agent-TARS
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ui-tars-desktop-comprehensive-tutorial-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 150분

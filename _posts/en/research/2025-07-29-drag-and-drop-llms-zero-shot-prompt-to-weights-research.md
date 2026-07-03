@@ -7,8 +7,6 @@ date: 2025-07-29
 last_modified_at: 2025-07-29
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/drag-and-drop-llms-zero-shot-prompt-to-weights-research/"
-categories:
-  - research
 tags:
   - LLM
   - 파라미터 생성
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 8 min

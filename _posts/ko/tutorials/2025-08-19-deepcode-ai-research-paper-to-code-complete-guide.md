@@ -5,9 +5,6 @@ seo_title: "DeepCode AI 논문 변환 도구 설치 사용법 가이드 - Thaki 
 seo_description: "DeepCode 설치부터 AI 멀티에이전트로 연구 논문을 코드로 변환하는 실전 가이드. macOS 환경 테스트 포함, API 설정, 53개 전문 에이전트 활용법까지 완벽 정리"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - tutorials
-  - llmops
 tags:
   - DeepCode
   - AI-Agent
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/deepcode-ai-research-paper-to-code-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

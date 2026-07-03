@@ -4,8 +4,6 @@ excerpt: "Airweave를 사용하여 25개 이상의 앱과 도구를 연결하고
 seo_title: "Airweave AI 에이전트 검색 플랫폼 완전 가이드 - Thaki Cloud"
 seo_description: "Airweave로 25개 이상 앱 연결, 의미론적 검색, MCP 서버 구축하는 AI 에이전트 검색 플랫폼 완전 튜토리얼. REST API, Python/TypeScript SDK 사용법 포함."
 date: 2025-10-02
-categories:
-  - tutorials
 tags:
   - airweave
   - ai-agent
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/airweave-agent-search-
 lang: ko
 permalink: /ko/tutorials/airweave-agent-search-platform-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

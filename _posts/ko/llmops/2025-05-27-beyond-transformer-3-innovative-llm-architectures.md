@@ -2,8 +2,6 @@
 title: "Transformer를 넘어: LLM의 미래를 바꿀 3가지 혁신 아키텍처 심층 분석"
 excerpt: "리퀴드 뉴럴넷, 맘바(Mamba), 디퓨전 기반 언어 모델 등 Transformer를 대체할 차세대 LLM 아키텍처들의 핵심 원리와 성능 비교 분석"
 date: 2025-05-27
-categories:
-  - llmops
 tags:
   - MLOps
   - LLMOps 
@@ -14,6 +12,8 @@ tags:
   - Thaki Cloud
 author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 published: false
+categories:
+  - llmops
 ---
 
 대규모 언어 모델(LLM) 분야는 Transformer 아키텍처의 등장 이후 눈부신 발전을 거듭해 왔습니다. 그러나 Transformer의 이차적 연산량 증가, 긴 시퀀스 처리의 어려움, 막대한 에너지 소비 등의 한계는 새로운 아키텍처 탐색의 필요성을 야기했습니다. 본 포스트에서는 Transformer를 대체하거나 강력한 경쟁자로 부상하고 있는 세 가지 혁신적인 아키텍처인 리퀴드 뉴럴넷(Liquid Neural Networks, LNNs), 맘바(Mamba, 선택적 상태 공간 모델), 그리고 디퓨전 기반 언어 모델(Diffusion-based Language Models)에 대해 심층적으로 분석하고 미래 전망을 논의하고자 합니다. 이들은 공통적으로 메모리, 지연 시간, 에너지 비용을 절감하면서도 Transformer와 동등하거나 그 이상의 성능 달성을 목표로 합니다.

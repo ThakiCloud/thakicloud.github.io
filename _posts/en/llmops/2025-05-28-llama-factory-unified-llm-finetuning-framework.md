@@ -4,8 +4,6 @@ excerpt: "Fine-tune Llama 3, Qwen 3, DeepSeek, and 100+ cutting-edge LLMs effort
 seo_title: "LLaMA Factory - Complete Guide to Unified LLM Fine-Tuning Framework"
 seo_description: "Master LLaMA Factory, the comprehensive framework for fine-tuning 100+ LLMs including Llama 3, Qwen 3, DeepSeek with LoRA, QLoRA, and advanced optimization techniques"
 date: 2025-05-28
-categories:
-  - llmops
 tags:
   - LLaMAFactory
   - LoRA
@@ -20,6 +18,8 @@ toc: true
 toc_label: "LLaMA Factory Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/llama-factory-unified-llm-finetuning-framework/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

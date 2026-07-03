@@ -5,9 +5,6 @@ date: 2025-06-16
 lang: ar
 permalink: /ar/news/chinese-ai-human-cognition-breakthrough/
 canonical_url: "https://thakicloud.github.io/ar/news/chinese-ai-human-cognition-breakthrough/"
-categories:
-  - news
-  - research
 tags:
   - إدراك الذكاء الاصطناعي
   - البحث الصيني
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "اختراق الإدراك للذكاء الاصطناعي"
 published: false
+categories:
+  - news
+  - research
 ---
 
 ## نظرة عامة على البحث

@@ -1,9 +1,6 @@
 ---
 title: "AgenticSeek 완전 가이드: 100% 로컬 AI 어시스턴트 맥북 설치 및 활용법"
 date: 2025-06-02
-categories: 
-  - 튜토리얼
-  - AI
 tags: 
   - AgenticSeek
   - AI어시스턴트
@@ -14,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ## AgenticSeek란 무엇인가?

@@ -5,8 +5,6 @@ seo_title: "AI 추론 비용 최적화 실전: GPU 원가·Kueue·vLLM scale-to-
 seo_description: "ThakiCloud의 AI 추론 비용 최적화 실전 가이드. GPU 시간당 원가 산식, OpEx 분해, Kueue+KAI 갱 스케줄링, vLLM+KEDA scale-to-zero, 모델 티어 라우팅과 일일 비용 감사까지 코드와 수식으로 설명합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - cost-optimization
   - finops
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/cost-opt-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - llmops
 ---
 
 ![GPU 데이터센터에서 흐르는 컴퓨트 비용](/assets/images/cost-opt-hero.png)

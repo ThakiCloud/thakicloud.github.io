@@ -3,8 +3,6 @@ title: "[Thaki Cloud Life & 커리어] 미션, 원칙, 가치"
 excerpt: "Thaki Cloud의 미션, 원칙, 그리고 가치를 공유합니다."
 date: 2025-05-21
 last_modified_at: 2026-06-20
-categories:
-  - careers
 tags:
   - Company Culture
   - Careers
@@ -12,6 +10,8 @@ tags:
   - Developer Story
   - Team
 author_profile: true
+categories:
+  - careers
 ---
 
 Thaki Cloud는 기술이 가져온 혜택을 더 많은 사람들이 실제로 누릴 수 있도록 만드는 것을 목표로 합니다.

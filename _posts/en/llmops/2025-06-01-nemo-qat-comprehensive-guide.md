@@ -4,8 +4,6 @@ excerpt: "Professional guide to minimizing accuracy loss during FP4 quantization
 seo_title: "NeMo QAT Guide - Quantization-Aware Training for FP4 Models"
 seo_description: "Master NVIDIA NeMo QAT for FP4 quantization with minimal accuracy loss. Complete guide covering implementation, optimization, and production deployment"
 date: 2025-06-01
-categories:
-  - llmops
 tags:
   - NeMo-QAT
   - Quantization-Aware-Training
@@ -20,6 +18,8 @@ toc: true
 toc_label: "NeMo QAT Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/nemo-qat-comprehensive-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 14 minutes

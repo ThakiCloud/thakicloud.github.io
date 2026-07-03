@@ -2,8 +2,6 @@
 title: "[Agent Ops] 여기에 제목을 입력하세요"
 excerpt: "Thaki Cloud의 Agent 기반 AI 시스템 개발, 배포, 운영(Agent Ops) 기술 전략 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요
-categories:
-  - agentops
 tags:
   - Agent Ops
   - AI Agents
@@ -20,6 +18,8 @@ tags:
 author_profile: true
 # toc: true
 published: false
+categories:
+  - agentops
 --- 
 
 ## [Agent Ops] 게시물 작성 가이드

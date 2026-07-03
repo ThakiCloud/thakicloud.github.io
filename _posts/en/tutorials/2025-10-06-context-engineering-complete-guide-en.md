@@ -4,8 +4,6 @@ excerpt: "Master Context Engineering - the revolutionary approach that's 10x bet
 seo_title: "Context Engineering Complete Guide - AI Coding Assistant Mastery - Thaki Cloud"
 seo_description: "Learn Context Engineering fundamentals, PRP workflow, and best practices to make AI coding assistants 10x more effective. Complete tutorial with examples."
 date: 2025-10-06
-categories:
-  - tutorials
 tags:
   - context-engineering
   - ai-coding
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/context-engineering-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/context-engineering-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

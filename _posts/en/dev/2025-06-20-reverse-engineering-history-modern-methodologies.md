@@ -2,8 +2,6 @@
 title: "The History of Reverse Engineering and Modern Methodologies: From GitSearchAI to Cursor"
 excerpt: "The evolution of reverse engineering through representative cases by era, and new approaches in the age of AI"
 date: 2025-06-20
-categories: 
-  - dev
 tags: 
   - reverse-engineering
   - ai-tools
@@ -16,6 +14,8 @@ toc_label: "Contents"
 lang: en
 canonical_url: https://thakicloud.github.io/en/dev/reverse-engineering-history-modern-methodologies/
 published: false
+categories:
+  - dev
 ---
 
 ## Introduction

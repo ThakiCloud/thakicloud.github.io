@@ -5,8 +5,6 @@ seo_title: "TRAE Agent Complete Guide - AI Software Engineering Agent by ByteDan
 seo_description: "Complete technical guide to TRAE Agent by ByteDance. AI agent for automated software development, task planning, multi-tool integration, and development workflow automation with trajectory recording."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - agentops
 tags:
   - trae-agent
   - ByteDance
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/en/agentops/trae-agent-cloud-develo
 lang: en
 reading_time: true
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **Estimated reading time**: 12 min

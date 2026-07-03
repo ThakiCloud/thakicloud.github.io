@@ -6,8 +6,6 @@ seo_description: "نحلّل دلالة تفوّق GLM-5.2 من Z.ai (744B MoE،
 lang: ar
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - glm-5-2
   - open-weight
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-sovereign-serving/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 على مدار العام الماضي، تصاعدت حجج التشكيك القائلة بأن النماذج مفتوحة الأوزان لن تلحق بالنماذج المغلقة. كان الأداء يتأخر دائماً جيلاً أو جيلين، وكان الاعتقاد السائد أن المهام الفعلية في طليعة التقنية تستلزم الاعتماد على واجهات برمجية كـ GPT أو Claude. جاء GLM-5.2 الذي أصدرته Z.ai (المعروفة سابقاً بـ Zhipu) في يونيو 2026 ليهزّ هذه الفرضية مباشرةً: فقد تجاوز GPT-5.5 في SWE-bench Pro، وحمل ترخيص MIT الحر من أي قيود، مع إمكانية تنزيل الأوزان كاملةً وتشغيلها على البنية التحتية الخاصة.

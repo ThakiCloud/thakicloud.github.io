@@ -5,8 +5,6 @@ seo_title: "macOS GitHub CLI Full Automation Part 1 - Installation and Environme
 seo_description: "How to fully automate GitHub CLI on macOS: a step-by-step guide from Homebrew installation to advanced zshrc scripts and custom aliases for a professional-grade development environment"
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - macos
@@ -29,6 +27,8 @@ canonical_url: "https://thakicloud.github.io/en/dev/2025-07-02-macos-github-cli-
 lang: en
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 20 min

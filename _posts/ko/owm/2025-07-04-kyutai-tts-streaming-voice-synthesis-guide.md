@@ -5,8 +5,6 @@ seo_title: "Kyutai TTS 1.6B 실시간 음성 합성 완벽 가이드 - Thaki Clo
 seo_description: "CC-BY 4.0 라이센스의 Kyutai TTS 1.6B 모델로 실시간 스트리밍 음성 합성을 구현하는 방법. 영어/프랑스어 지원, 음성 조건화, CFG distillation 최적화까지 완벽 정리."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - owm
 tags:
   - kyutai
   - tts
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/kyutai-tts-streaming-voice-synthesis-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

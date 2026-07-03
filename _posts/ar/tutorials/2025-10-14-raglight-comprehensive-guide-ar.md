@@ -4,8 +4,6 @@ excerpt: "إتقان إطار RAGLight مع أمثلة عملية تغطي RAG،
 seo_title: "دروس RAGLight: دليل إطار RAG الكامل - Thaki Cloud"
 seo_description: "تعلم إطار RAGLight مع أمثلة عملية. بناء RAG، Agentic RAG، و RAT pipelines على macOS باستخدام Ollama أو OpenAI أو Mistral لتطبيقات الذكاء الاصطناعي الواعية بالسياق."
 date: 2025-10-14
-categories:
-  - tutorials
 tags:
   - raglight
   - rag
@@ -22,6 +20,8 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/raglight-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/raglight-comprehensive-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

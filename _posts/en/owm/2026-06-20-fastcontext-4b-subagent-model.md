@@ -5,8 +5,6 @@ seo_title: "FastContext-1.0-4B-SFT Coding Agent Subagent Model Guide - ThakiClou
 seo_description: "Microsoft FastContext-1.0-4B-SFT architecture (Qwen3-4B base, 262K context), arXiv:2606.14066, SWE-bench benchmarks, vLLM serving, and direct connection to subagent-model-routing."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - fastcontext
   - microsoft
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/fastcontext-4b-subagent-model/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 7 min

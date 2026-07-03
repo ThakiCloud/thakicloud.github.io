@@ -5,8 +5,6 @@ seo_title: "ستة أنماط لتنسيق الوكلاء المتعددين ف�
 seo_description: "دليل عملي لأنماط الوكلاء المتعددين موجه للمهندسين الذين يشغلون وكلاء LLM. يشرح بنية Orchestrator-Worker وFan-out/Fan-in وMulti-agent Debate والمفاضلات في التكاليف."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - multi-agent
   - orchestration
@@ -23,6 +21,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

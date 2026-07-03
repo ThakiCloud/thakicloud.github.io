@@ -5,8 +5,6 @@ seo_title: "OpenPipe ART Reinforcement Learning Agent Guide - GRPO Multi-Step Tr
 seo_description: "Train real-world AI agents with OpenPipe ART. Complete guide covering GRPO algorithm, multi-step training, RULER reward functions, and vLLM integration"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - llmops
 tags:
   - OpenPipe
   - ART
@@ -28,6 +26,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/openpipe-art-agent-reinfo
 reading_time: true
 lang: en
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 30 min

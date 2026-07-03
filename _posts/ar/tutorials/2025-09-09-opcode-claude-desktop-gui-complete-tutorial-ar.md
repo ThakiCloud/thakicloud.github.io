@@ -4,8 +4,6 @@ excerpt: "دليل شامل لتثبيت وتكوين وإتقان opcode - ال
 seo_title: "دليل opcode لواجهة Claude Code الرسومية - دليل الإعداد والاستخدام الكامل"
 seo_description: "تعلم كيفية تثبيت واستخدام opcode، الواجهة المكتبية القوية لـ Claude Code. إنشاء وكلاء مخصصين وإدارة الجلسات وأتمتة سير العمل مع هذا الدليل الشامل."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - opcode
   - claude-code
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/opcode-claude-desktop-gui-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/opcode-claude-desktop-gui-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

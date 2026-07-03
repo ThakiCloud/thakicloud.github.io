@@ -5,10 +5,6 @@ seo_title: "Automated AI Web Researcher Ollama 완전 가이드 - Thaki Cloud"
 seo_description: "Ollama 기반 AI 자동 연구 도구로 웹 검색, 스크래핑, 분석을 자동화하는 완전 가이드. 설치부터 활용까지 단계별 설명"
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - tutorials
-  - llmops
-  - dev
 tags:
   - Ollama
   - AI Research
@@ -27,6 +23,10 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/automated-ai-web-researcher-ollama-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -4,8 +4,6 @@ excerpt: "An in-depth exploration of Qwen3-VL's architectural innovations includ
 seo_title: "Qwen3-VL Architecture Innovations - Advanced Vision-Language Models - Thaki Cloud"
 seo_description: "Comprehensive analysis of Qwen3-VL's breakthrough architecture featuring Interleaved-MRoPE positional embeddings, DeepStack multi-level feature fusion, and 235B parameter scale for enhanced multimodal reasoning"
 date: 2025-10-14
-categories:
-  - research
 tags:
   - qwen3-vl
   - vision-language
@@ -21,6 +19,8 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/research/qwen3-vl-vision-language-architecture-innovations/"
 lang: en
 permalink: /en/research/qwen3-vl-vision-language-architecture-innovations/
+categories:
+  - research
 ---
 
 ![Concept diagram](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.png)

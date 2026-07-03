@@ -5,8 +5,6 @@ seo_title: "코인베이스 AI 비용 절감 전략: 라우팅·캐싱·기본�
 seo_description: "코인베이스는 토큰 사용량이 기하급수적으로 늘어나는 가운데 AI 비용을 절반 가까이 줄였습니다. 핵심은 모델 라우팅, 공격적 캐싱, 오픈웨이트 기본값입니다. 직원 91%가 한도에 닿지 않는다는 데이터와 LLM 게이트웨이 전략을 분석하고, ThakiCloud ai-platform의 멀티테넌트 저비용 서빙 관점 시사점을 정리합니다."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - llmops
 tags:
   - llmops
   - model-routing
@@ -19,6 +17,8 @@ toc: true
 toc_label: "목차"
 toc_icon: "coins"
 canonical_url: "https://thakicloud.github.io/ko/llmops/coinbase-flat-ai-spend-routing-caching-defaults/"
+categories:
+  - llmops
 ---
 
 ## 개요

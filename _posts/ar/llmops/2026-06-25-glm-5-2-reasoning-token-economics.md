@@ -6,8 +6,6 @@ seo_description: "نحلل استهلاك رموز GLM-5.2 (744B MoE، سياق 
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: ar
-categories:
-  - llmops
 tags:
   - glm-5
   - reasoning-model
@@ -24,6 +22,8 @@ toc_icon: "microchip"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 إذا احتاج نموذج إلى 220 ألف رمز ليحل مكعب روبيك واحداً، فمن يدفع تلك التكلفة؟ هذا بالضبط ما يطرحه Matt Pocock (@mattpocockuk)، صانع أدوات المطورين، حين جعل GLM-5.2 يحل مكعب روبيك عبر مهارة `/teach` الخاصة به. وقد رصد في أدنى مستويات الجهد (High) نحو 220 ألف رمز من آثار التفكير في ثلاث جولات فحسب. أن يكون نموذج الاستدلال أقوى يعني حتماً أنه يستهلك رموزاً أكثر، وأن يستهلك رموزاً أكثر يعني أن شخصاً ما يتلقى فاتورة بذلك الحجم.

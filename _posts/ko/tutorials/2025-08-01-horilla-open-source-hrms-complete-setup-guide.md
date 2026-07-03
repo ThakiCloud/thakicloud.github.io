@@ -5,9 +5,6 @@ seo_title: "Horilla 오픈소스 HRMS 설치 가이드 - 무료 인사관리 시
 seo_description: "Horilla 오픈소스 HRMS 완전 설치 및 설정 가이드. Django 기반 무료 인사관리 시스템으로 채용, 급여, 출근관리, 성과관리까지 HR 업무 자동화하는 방법을 상세히 설명합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - tutorials
-  - hrms
 tags:
   - Horilla
   - Open-Source
@@ -27,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/horilla-open-source-hrms-complete-setup-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 21분

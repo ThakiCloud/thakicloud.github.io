@@ -4,8 +4,6 @@ excerpt: "DocuSign의 오픈소스 대안인 DocuSeal 설치부터 사용법까�
 seo_title: "DocuSeal 튜토리얼: 오픈소스 문서 서명 플랫폼 가이드 - Thaki Cloud"
 seo_description: "DocuSeal 완벽 튜토리얼 - 설치, 설정, 사용법 총정리. PDF 양식 생성, 디지털 서명 관리, 오픈소스 DocuSign 대안 활용법을 배워보세요."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - docuseal
   - 오픈소스
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/docuseal-open-source-document-signing-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/docuseal-open-source-document-signing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -4,8 +4,6 @@ excerpt: "inclusionAI의 1조 파라미터 사고 모델 Ring-1T-FP8가 딥 러�
 seo_title: "Ring-1T-FP8 1조 파라미터 AI 모델 워크플로우 자동화 가이드 - Thaki Cloud"
 seo_description: "Ring-1T-FP8를 AWorld 프레임워크, SGLang 배포, ASystem RL 훈련과 함께 워크플로우 자동화 시스템에 통합하는 방법을 알아보세요."
 date: 2025-10-14
-categories:
-  - owm
 tags:
   - Ring-1T
   - AI-모델
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "دليل WrenAI GenBI Agent للنشر المؤسسي على Kuberne
 seo_description: "ميزات WrenAI GenBI Agent من النص إلى SQL ومن النص إلى الرسوم البيانية، ومعمارية النشر المؤسسي على مجموعات Kubernetes، والتوافر العالي، واستراتيجيات التوسع."
 date: 2025-06-29
 last_modified_at: 2025-06-29
-categories:
-  - agentops
 tags:
   - WrenAI
   - GenBI-Agent
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/wrenai-genbi-agent-kubernetes-enterprise-deployment-guide/"
 lang: ar
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق

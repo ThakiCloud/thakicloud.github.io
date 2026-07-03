@@ -5,8 +5,6 @@ seo_title: "تجربة عملية لتحليل المستندات متعددة �
 seo_description: "تقرير تجربة عملية لتثبيت PaddleOCR-VL-0.9B (مشفّر NaViT + ERNIE-4.5-0.3B) واستخدامه على مستندات كورية وعربية. يتناول أداء OmniDocBench، والبنية ثنائية المراحل، وتحليل التطبيق في بيئة Kubernetes لاستخبارات المستندات في ThakiCloud."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - research
 tags:
   - paddleocr-vl
   - document-parsing
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/paddleocr-vl-09b-multil
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png
+categories:
+  - research
 ---
 
 ![تصوير مجرد يوضح تحول المستندات الشفافة إلى شبكة منظمة من العقد](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png)

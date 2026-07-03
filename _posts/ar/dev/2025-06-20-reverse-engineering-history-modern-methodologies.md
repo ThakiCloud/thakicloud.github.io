@@ -2,8 +2,6 @@
 title: "تاريخ الهندسة العكسية والمنهجيات الحديثة: من GitSearchAI إلى Cursor"
 excerpt: "تطور الهندسة العكسية عبر الحقب الزمنية من خلال حالات بارزة، والأساليب الجديدة في عصر الذكاء الاصطناعي"
 date: 2025-06-20
-categories: 
-  - dev
 tags: 
   - reverse-engineering
   - ai-tools
@@ -16,6 +14,8 @@ toc_label: "المحتويات"
 lang: ar
 canonical_url: https://thakicloud.github.io/ar/dev/reverse-engineering-history-modern-methodologies/
 published: false
+categories:
+  - dev
 ---
 
 ## مقدمة

@@ -5,9 +5,6 @@ seo_title: "vLLM CLI 튜토리얼 - LLM 서버 구축 완전 가이드 - Thaki C
 seo_description: "vLLM CLI로 대화형 LLM 서버를 구축하는 완전 가이드. 설치, 설정, 모델 관리, 모니터링까지 macOS 실습 예제와 함께 제공"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
-  - llmops
 tags:
   - vllm
   - llm
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/vllm-cli-comprehensive-tutorial-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

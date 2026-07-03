@@ -5,8 +5,6 @@ seo_title: "n8n 무료 템플릿 200개 AI 자동화 워크플로우 가이드 -
 seo_description: "n8n-free-templates로 AI, Vector DB, LLM을 활용한 200개 자동화 워크플로우를 실무에 즉시 적용하는 방법. 이메일, 소셜미디어, 금융, 전자상거래 등 23개 카테고리 완전 분석"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - tutorials
 tags:
   - n8n
   - 자동화
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/n8n-free-templates-automation-workflows-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

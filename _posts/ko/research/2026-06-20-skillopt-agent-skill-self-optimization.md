@@ -5,8 +5,6 @@ seo_title: "SkillOpt 에이전트 스킬 자기최적화 시스템 분석 - Thak
 seo_description: "arXiv 2605.23904 SkillOpt: 텍스트 공간 스킬 최적화, 제어된 편집 메커니즘, GPT-5.5 +23.5 포인트 향상, 크로스 모델 전이성에 대한 심층 분석"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - skill-optimization
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/skillopt-agent-skill-self-optimization/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

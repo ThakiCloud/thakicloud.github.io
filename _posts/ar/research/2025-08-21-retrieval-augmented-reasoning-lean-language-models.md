@@ -6,8 +6,6 @@ seo_description: "أحدث أبحاث معهد آلان تورينج حول دم
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: ar
-categories:
-  - research
 tags:
   - RAG
   - lean-language-models
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/retrieval-augmented-reasoning-lean-language-models/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق

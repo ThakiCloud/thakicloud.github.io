@@ -7,8 +7,6 @@ date: 2025-08-28
 lang: en
 permalink: /en/llmops/yang-zhilin-kimi-founder-interview-insights/
 canonical_url: "https://thakicloud.github.io/en/llmops/yang-zhilin-kimi-founder-interview-insights-en/"
-categories:
-  - llmops
 tags:
   - Yang Zhilin
   - Kimi Chat
@@ -22,6 +20,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

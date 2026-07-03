@@ -4,8 +4,6 @@ excerpt: "دليل عملي خطوة بخطوة لتطوير قائم على ا�
 seo_title: "دليل Spec Kit للتطوير القائم على المواصفات - Thaki Cloud"
 seo_description: "شرح عملي لاستخدام Spec Kit لإنشاء المواصفات، تكرار التحسين، توليد خطة تقنية، التحقق بالقوائم المرجعية، والتحضير للتنفيذ. يتضمن سكربتات macOS ونصائح حل المشكلات."
 date: 2025-09-18
-categories:
-  - tutorials
 tags:
   - spec-kit
   - spec-driven-development
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/tutorials/github-spec-kit-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/github-spec-kit-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ الوقت المتوقع للقراءة: 12 دقيقة

@@ -4,8 +4,6 @@ excerpt: "MCP 기반 로우코드 프레임워크인 UltraRAG를 사용하여 �
 seo_title: "UltraRAG 튜토리얼: 로우코드 RAG 프레임워크 완전 가이드 - Thaki Cloud"
 seo_description: "UltraRAG 프레임워크를 마스터하기 위한 종합 튜토리얼. 설치, 구성, 실전 예제를 통한 고급 RAG 시스템 구현 방법을 배워보세요."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - RAG
   - UltraRAG
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/ultrarag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/ultrarag-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

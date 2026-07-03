@@ -5,8 +5,6 @@ seo_title: "OpenPipe ART 강화학습 에이전트 가이드 - GRPO 멀티스텝
 seo_description: "OpenPipe ART로 실전 AI 에이전트 강화학습하기. GRPO 알고리즘, 멀티스텝 훈련, RULER 보상함수, vLLM 통합까지 완벽 가이드"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - llmops
 tags:
   - OpenPipe
   - ART
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/openpipe-art-agent-reinforcement-trainer-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 30분

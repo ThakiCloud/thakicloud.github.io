@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 추론 토큰 비용과 온프레미스 자가호스팅 경�
 seo_description: "GLM-5.2(744B MoE, 1M 컨텍스트, MIT)의 effort별 토큰 사용량과 Z.ai API 단가, 수출통제 배경을 ThakiCloud K8s·Kueue·vLLM 멀티테넌트 서빙 관점에서 분석합니다. 장황한 추론 트레이스가 자가호스팅 비용 셈법을 어떻게 뒤집는지 공개 수치로 정리합니다."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - llmops
 tags:
   - glm-5
   - reasoning-model
@@ -23,6 +21,8 @@ toc_icon: "microchip"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 루빅스 큐브 하나를 풀게 하는 데 모델이 22만 토큰을 생각한다면, 그 비용은 누가 냅니까. 개발자 도구를 만드는 Matt Pocock(@mattpocockuk)이 자신의 `/teach` 스킬과 `pi`로 GLM-5.2에 루빅스 큐브 풀이를 시키면서 남긴 첫인상이 바로 이 질문을 던집니다. 가장 낮은 effort 설정(High)에서도 3턴에 약 22만 토큰의 사고 트레이스가 쌓였다는 관찰입니다. 추론 모델이 강해진다는 말은 곧 토큰을 많이 쓴다는 말이고, 토큰을 많이 쓴다는 말은 누군가 그만큼의 청구서를 받는다는 뜻입니다.

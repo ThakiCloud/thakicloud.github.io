@@ -5,8 +5,6 @@ seo_title: "Qwen3.6-27B-NVFP4 On-Prem Serving Guide - Hopper/Blackwell 4-bit Qua
 seo_description: "Serving Qwen3.6-27B-NVFP4 (27B, hybrid attention, 262K context, multimodal reasoning) with vLLM: NVFP4 4-bit quantization cuts memory ~2.5x, benchmarks within 1 point of FP8. Hopper and Blackwell support, Apache 2.0. ThakiCloud K8s on-prem serving and agent-worker perspective."
 date: 2026-07-01
 last_modified_at: 2026-07-01
-categories:
-  - owm
 tags:
   - qwen3
   - nvfp4
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 lang: en
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 11 min

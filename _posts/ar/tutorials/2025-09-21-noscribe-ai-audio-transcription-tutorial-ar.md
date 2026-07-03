@@ -4,8 +4,6 @@ excerpt: "أتقن تحويل الصوت إلى نص الاحترافي باست
 seo_title: "دروس noScribe لتحويل الصوت إلى نص بالذكاء الاصطناعي - دليل الإعداد الكامل"
 seo_description: "تعلم كيفية استخدام noScribe لتحويل الصوت إلى نص الاحترافي باستخدام الذكاء الاصطناعي. دليل خطوة بخطوة يغطي التثبيت والتكوين والميزات المتقدمة للباحثين ومنشئي المحتوى."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - تحويل-الصوت-إلى-نص
   - whisper
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/noscribe-ai-audio-transcription-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/noscribe-ai-audio-transcription-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

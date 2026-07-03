@@ -5,8 +5,6 @@ seo_title: "NVIDIA Dynamo vs Dynamo-Triton: LLM 분산 추론 프레임워크 �
 seo_description: "NVIDIA Dynamo와 Dynamo-Triton의 아키텍처, 성능, 사용 시나리오를 비교 분석하여 최적의 LLM 서빙 솔루션 선택을 도와드립니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29
-categories:
-  - llmops
 tags:
   - NVIDIA-Dynamo
   - Triton-Inference-Server
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/nvidia-dynamo-triton-distributed-inference-framework-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

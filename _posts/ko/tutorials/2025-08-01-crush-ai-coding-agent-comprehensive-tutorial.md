@@ -5,8 +5,6 @@ seo_title: "Crush AI 코딩 에이전트 완전 가이드 - macOS 설치 및 사
 seo_description: "Charm Bracelet Crush AI 코딩 에이전트 설치, 설정, 사용법을 macOS 환경에서 실제 테스트한 결과와 함께 상세히 안내합니다. LSP, MCP 연동 포함"
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - tutorials
 tags:
   - Crush
   - AI-Coding-Agent
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/crush-ai-coding-agent-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

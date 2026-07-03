@@ -2,9 +2,6 @@
 title: "AG-UI: The Protocol Bridging AI Agents and Frontend Applications"
 excerpt: "AG-UI is a lightweight, event-driven protocol that standardizes interactions between AI agents and user interfaces. It supports popular agent frameworks including LangGraph, CrewAI, and Mastra, and delivers capabilities such as real-time streaming, bidirectional state synchronization, and generative UI."
 date: 2025-06-19
-categories: 
-  - dev
-  - llmops
 tags: 
   - ag-ui
   - ai-agent
@@ -21,6 +18,9 @@ toc_label: "AG-UI Protocol Guide"
 lang: en
 canonical_url: https://thakicloud.github.io/en/dev/ag-ui-agent-user-interaction-protocol-guide/
 published: false
+categories:
+  - dev
+  - llmops
 ---
 
 ## AI Agents Meet the Frontend

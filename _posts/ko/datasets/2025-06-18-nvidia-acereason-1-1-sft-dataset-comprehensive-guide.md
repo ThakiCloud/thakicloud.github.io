@@ -2,9 +2,6 @@
 title: "NVIDIA AceReason-1.1-SFT: 수학·코딩 추론 특화 SFT 데이터셋 완전 가이드"
 excerpt: "NVIDIA의 AceReason-1.1-SFT 데이터셋 상세 분석 - CC BY 4.0 라이센스, 400만 샘플, DeepSeek-R1 기반 고품질 수학·코딩 추론 데이터"
 date: 2025-06-18
-categories: 
-  - datasets
-  - llmops
 tags: 
   - nvidia
   - acereason
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: "AceReason-1.1-SFT 가이드"
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ## 개요

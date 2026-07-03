@@ -5,8 +5,6 @@ seo_title: "NVIDIA Canary-1B v2 다국어 워크플로우 자동화 가이드 - 
 seo_description: "NVIDIA Canary-1B v2 모델을 활용한 25개 언어 지원 음성 인식 및 번역 워크플로우 자동화 전략과 실무 적용 방안"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - owm
 tags:
   - NVIDIA
   - Canary
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nvidia-canary-1b-v2-multilingual-workflow-automation-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

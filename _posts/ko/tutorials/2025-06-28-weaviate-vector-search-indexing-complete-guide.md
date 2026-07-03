@@ -4,9 +4,6 @@ excerpt: "Weaviate를 활용한 벡터 검색, 하이브리드 검색, 인덱싱
 seo_title: "Weaviate 벡터 검색 완전 가이드 - AI 검색 시스템 구축 튜토리얼 - Thaki Cloud"
 seo_description: "Weaviate 벡터 데이터베이스를 활용한 AI 검색 시스템 구축 완전 가이드. Docker 설치, Python 클라이언트, 벡터 검색, 하이브리드 검색 실전 예제 포함"
 date: 2025-06-28
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Weaviate
   - 벡터검색
@@ -21,6 +18,9 @@ toc: true
 toc_label: "Weaviate 벡터 검색 가이드"
 canonical_url: "https://thakicloud.github.io/tutorials/weaviate-vector-search-indexing-complete-guide/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 Weaviate는 현재 가장 인기 있는 오픈소스 벡터 데이터베이스 중 하나로, AI 기반의 차세대 검색 시스템을 구축할 수 있게 해줍니다. 기존의 키워드 기반 검색을 넘어서 의미적 유사성을 기반으로 한 벡터 검색, 하이브리드 검색, 그리고 생성형 AI와의 통합을 지원합니다.

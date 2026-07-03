@@ -5,9 +5,6 @@ seo_title: "Illa Helper 언어 학습 확장 프로그램 완전 가이드 - 몰
 seo_description: "AI 번역과 발음 기능으로 웹 브라우징하며 자연스럽게 언어를 학습하는 Illa Helper 확장 프로그램의 설치, 설정, 활용법을 상세히 알아보세요. OpenAI API 연동부터 스마트 번역까지."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - tutorials
-  - llmops
 tags:
   - illa-helper
   - 언어학습
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/illa-helper-immersive-language-learning-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "vLLM 양자화 서빙 총정리: AWQ·GPTQ·FP8·W4A16·Unsloth - Th
 seo_description: "vLLM으로 서빙 가능한 LLM 양자화 기법을 비교합니다. llm-compressor(compressed-tensors) W4A16·W8A8·FP8, AWQ+Marlin, GPTQModel, AutoRound, Unsloth Dynamic 2.0와 merge→AWQ 프로덕션 경로까지 실제 코드로 정리."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - quantization
   - vllm
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/llm-quant-vllm-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - llmops
 ---
 
 ![vLLM이 서빙하는 양자화 포맷 지도](/assets/images/llm-quant-vllm-hero.png)

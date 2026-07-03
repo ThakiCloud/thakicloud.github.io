@@ -5,8 +5,6 @@ seo_title: "Polaris 4B 오픈소스 AI 모델 완벽 분석 - Claude 능가 전�
 seo_description: "4B 파라미터 Polaris 모델이 100% 오픈소스 데이터로 Claude-4-Opus 성능을 능가하는 방법. 강화학습 기반 추론 모델 스케일링과 리소스 요구사항 완전 분석."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - owm
 tags:
   - polaris
   - open-source-ai
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/polaris-open-source-ai-revolution-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

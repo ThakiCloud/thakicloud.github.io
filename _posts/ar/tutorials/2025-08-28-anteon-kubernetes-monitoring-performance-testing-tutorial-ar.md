@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تنفيذ مراقبة Kubernetes الشاملة 
 seo_title: "دليل مراقبة Kubernetes باستخدام Anteon - خرائط خدمة eBPF واختبار الأداء - Thaki Cloud"
 seo_description: "دليل عملي شامل لـ Anteon: مراقبة Kubernetes بتقنية eBPF، إنشاء خرائط خدمة تلقائية، مقاييس فورية، واختبار أداء متعدد المواقع. دليل إعداد مجاني."
 date: 2025-08-28
-categories:
-  - tutorials
 tags:
   - كوبرنيتس
   - مراقبة
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

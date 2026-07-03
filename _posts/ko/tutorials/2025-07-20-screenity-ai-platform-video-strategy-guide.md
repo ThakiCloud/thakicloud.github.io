@@ -5,8 +5,6 @@ seo_title: "Screenity 클라우드 AI 플랫폼 영상 마케팅 전략 가이�
 seo_description: "Screenity 오픈소스 스크린 레코더로 AI 플랫폼 회사의 제품 데모, 튜토리얼, 고객 지원 영상을 효과적으로 제작하는 방법과 실제 활용 사례를 제공합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - news
 tags:
   - Screenity
   - 영상마케팅
@@ -24,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/screenity-ai-platform-video-strategy-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

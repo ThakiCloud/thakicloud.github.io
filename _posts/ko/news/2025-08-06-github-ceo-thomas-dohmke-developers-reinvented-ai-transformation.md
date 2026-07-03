@@ -5,9 +5,6 @@ seo_title: "GitHub CEO 토마스 돔케가 말하는 AI 시대 개발자 혁명 
 seo_description: "GitHub CEO의 최신 연구가 밝혀낸 개발자 직업의 근본적 변화. 22명 개발자 인터뷰로 확인한 AI 시대 4단계 진화론과 2-5년 내 90% AI 코딩 시대 전망을 상세 분석합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - news
-  - careers
 tags:
   - github-ceo
   - thomas-dohmke
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/"
 reading_time: true
 published: false
+categories:
+  - news
+  - careers
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

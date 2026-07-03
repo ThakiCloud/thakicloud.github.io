@@ -4,8 +4,6 @@ excerpt: "Gmail을 자동으로 관리하고, 중요한 이메일을 요약하�
 seo_title: "Pepper AI 어시스턴트 튜토리얼: 실시간 이벤트 기반 개인 비서 - Thaki Cloud"
 seo_description: "Berkeley Sky Computing Lab에서 개발한 프로액티브 AI 어시스턴트 Pepper 설정 가이드. 설치, Gmail 연동, Feeds, Scheduler, Workers를 활용한 이벤트 드리븐 아키텍처 완벽 분석."
 date: 2025-10-04
-categories:
-  - tutorials
 tags:
   - AI-어시스턴트
   - 이벤트-드리븐-아키텍처
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/pepper-proactive-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-assistant-tutorial/"
+categories:
+  - tutorials
 ---
 
 ![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)

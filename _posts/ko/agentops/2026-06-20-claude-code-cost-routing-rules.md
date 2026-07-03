@@ -5,8 +5,6 @@ seo_title: "Claude Code 비용 최적화: 모델 라우팅·스킬 라우터·�
 seo_description: "ThakiCloud가 Claude Code 에이전트 운영비를 줄이는 실전 규칙. haiku/sonnet/opus/fable 모델 라우팅, BM25 스킬 라우터, 2K 토큰 룰, retro 모델 에스컬레이션, 일일 비용 감사까지 사고 사례와 수치로 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - cost-optimization
   - model-routing
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/cost-routing-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![에이전트 작업이 모델 티어별로 분기되며 비용이 접히는 모습](/assets/images/cost-routing-hero.png)

@@ -4,8 +4,6 @@ excerpt: "دليل شامل لإعداد واستخدام Eclaire، مساعد �
 seo_title: "دليل Eclaire للمساعد الذكي المحلي الأولوية - دليل الإعداد الكامل"
 seo_description: "تعلم كيفية إعداد Eclaire، المساعد الذكي مفتوح المصدر محلي الأولوية لإدارة البيانات الشخصية. دليل خطوة بخطوة مع التثبيت والتكوين وأمثلة الاستخدام."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - eclaire
   - مساعد-ذكي
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/eclaire-local-first-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/eclaire-local-first-ai-assistant-tutorial-ar/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

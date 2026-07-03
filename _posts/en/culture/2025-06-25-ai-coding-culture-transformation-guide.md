@@ -4,9 +4,6 @@ excerpt: "How to embrace and develop the new development culture brought by Vibe
 seo_title: "AI Coding Culture Transformation Guide - From Resistance to Collaboration - Thaki Cloud"
 seo_description: "Transform your development culture for the AI era. Complete guide to building collaborative AI-human workflows with Vibe Coding and Agentic Coding approaches."
 date: 2025-06-25
-categories: 
-  - culture
-  - dev
 tags: 
   - ai-coding-culture
   - development-culture
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: "AI Era Development Culture Innovation"
 canonical_url: "https://thakicloud.github.io/en/culture/ai-coding-culture-transformation-guide/"
+categories:
+  - culture
+  - dev
 ---
 
 ⏱️ **Estimated Reading Time**: 25 minutes

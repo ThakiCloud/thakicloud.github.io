@@ -5,8 +5,6 @@ seo_title: "Gemma 4 26B Local Multi-Agent Orchestration Analysis - Thaki Cloud"
 seo_description: "Analysis of a Gemma 4 26B local parallel subagent demo, on-premise inference economics, and a K8s-based multi-agent serving perspective"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - agentops
 tags:
   - gemma4
   - multi-agent
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/gemma4-local-multi-agent-orchestration/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 Multi-agent orchestration usually brings cloud APIs to mind. A demo shared recently in the community points somewhere else, though. It ran Gemma 4 26B **on a local machine** to orchestrate 10 parallel subagents coding an SVG art gallery, and reportedly hit throughput above 100 tokens per second.

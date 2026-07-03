@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إتقان أدوات البرمجة المدعو�
 seo_title: "دليل مساعد الذكاء الاصطناعي للبرمجة: تعظيم إنتاجية التطوير - Thaki Cloud"
 seo_description: "تعلم كيفية استخدام مساعدي البرمجة بالذكاء الاصطناعي مثل GitHub Copilot وChatGPT وClaude بفعالية لتحسين جودة الكود وزيادة سرعة التطوير وتعزيز مهارات البرمجة."
 date: 2025-10-09
-categories:
-  - tutorials
 tags:
   - البرمجة-بالذكاء-الاصطناعي
   - github-copilot
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/ai-coding-assistant-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-coding-assistant-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

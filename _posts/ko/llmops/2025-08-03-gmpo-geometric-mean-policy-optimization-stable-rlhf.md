@@ -5,9 +5,6 @@ seo_title: "GMPO 기하 평균 정책 최적화 완전 가이드 - RLHF 안정�
 seo_description: "GRPO 한계를 극복한 GMPO의 기하 평균 기반 토큰 레벨 보상 최적화 기법과 실제 구현 방법, LLMOps 관점에서의 활용 전략을 상세 분석합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - llmops
-  - research
 tags:
   - GMPO
   - Geometric-Mean-Policy-Optimization
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/gmpo-geometric-mean-policy-optimization-stable-rlhf/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

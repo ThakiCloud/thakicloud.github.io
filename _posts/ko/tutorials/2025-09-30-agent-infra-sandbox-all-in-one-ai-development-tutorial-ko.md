@@ -4,8 +4,6 @@ excerpt: "브라우저 자동화, 터미널 접근, 파일 조작, VSCode 서버
 seo_title: "AIO Sandbox 튜토리얼: AI 에이전트 개발 올인원 환경 - Thaki Cloud"
 seo_description: "agent-infra/sandbox 완벽 가이드 - 브라우저 자동화, VSCode 서버, Jupyter, MCP 통합이 포함된 Docker 컨테이너로 AI 에이전트 개발하기. 단계별 설정 가이드."
 date: 2025-09-30
-categories:
-  - tutorials
 tags:
   - ai-agents
   - docker
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/agent-infra-sandbox-al
 lang: ko
 permalink: /ko/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "Moonshot AI Kimi-Dev-72B 소프트웨어 엔지니어링 LLM 가이�
 seo_description: "오픈소스 최고 성능 Kimi-Dev-72B로 소프트웨어 이슈 해결, 코드 패치, 테스트 자동화를 구현하는 완전한 실전 가이드"
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - owm
 tags:
   - Moonshot-AI
   - Kimi-Dev-72B
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/moonshot-ai-kimi-dev-72b-software-engineering-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

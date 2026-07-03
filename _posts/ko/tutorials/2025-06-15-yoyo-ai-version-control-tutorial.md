@@ -2,9 +2,6 @@
 title: "YoYo - Vibe 코더를 위한 새로운 AI 버전 컨트롤 완벽 가이드"
 excerpt: "AI 코딩에서 실수를 즉시 되돌리고 안전하게 실험할 수 있는 YoYo 사용법과 활용 전략"
 date: 2025-06-15
-categories: 
-  - tutorials
-  - dev
 tags: 
   - yoyo
   - ai-coding
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: YoYo 가이드
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 AI 코딩 시대가 본격화되면서 기존 Git의 한계가 드러나고 있습니다. **"Vibe Coding"**이라 불리는 실험적이고 창의적인 AI 코딩에서는 빠른 반복과 안전한 롤백이 필수입니다. [YoYo](https://www.runyoyo.com/)는 바로 이런 니즈를 위해 탄생한 AI 버전 컨트롤 도구입니다.

@@ -7,8 +7,6 @@ date: 2025-09-05
 lang: en
 permalink: /en/tutorials/podman-desktop-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/podman-desktop-complete-setup-guide/"
-categories:
-  - tutorials
 tags:
   - podman
   - docker
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

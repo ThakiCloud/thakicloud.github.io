@@ -5,8 +5,6 @@ seo_title: "دليل التدريب المسبق لـ ArchScale - إطار عم�
 seo_description: "دليل شامل للتدريب المسبق على النماذج اللغوية الكبيرة باستخدام Microsoft ArchScale. يغطي تحجيم mu-P++ والتدريب على السياق الطويل والمعالجة الموزعة وتقييم الأداء."
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - llmops
 tags:
   - ArchScale
   - Microsoft
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/archscale-scalable-pretra
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

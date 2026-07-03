@@ -5,8 +5,6 @@ seo_title: "Building LLM Agent Observability - Thaki Cloud"
 seo_description: "A production guide to LLM agent tracing and evaluation loops using MLflow, LangSmith, and Arize AI. Grounded in the finding that 65% of agent failures stem from context problems rather than model capability."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - observability
   - tracing
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/agent-observability-tracing-evaluation/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ⏱️ **Estimated reading time**: 9 min

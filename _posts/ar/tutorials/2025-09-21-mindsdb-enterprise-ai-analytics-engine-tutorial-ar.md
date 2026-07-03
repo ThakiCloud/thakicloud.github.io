@@ -4,8 +4,6 @@ excerpt: "دليل شامل لاستخدام MindsDB - محرك التحليلا
 seo_title: "دليل MindsDB: محرك التحليلات المؤسسية بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "أتقن محرك التحليلات MindsDB بالذكاء الاصطناعي مع هذا الدليل الشامل. تعلم ربط أكثر من 200 مصدر بيانات، إنشاء نماذج الذكاء الاصطناعي، وبناء خطوط البيانات الذكية للتطبيقات المؤسسية."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - MindsDB
   - التحليلات-بالذكاء-الاصطناعي
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 20 دقيقة

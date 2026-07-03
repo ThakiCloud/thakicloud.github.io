@@ -4,8 +4,6 @@ excerpt: "LandingAI의 Agentic Document Extraction 라이브러리를 활용한 
 seo_title: "LandingAI Agentic Document Extraction 튜토리얼 - AI PDF 처리 가이드"
 seo_description: "LandingAI의 Agentic Document Extraction 라이브러리를 활용한 AI 기반 문서 처리 방법을 학습하세요. 코드 예제, 배치 처리, 시각화 기능을 포함한 완전한 튜토리얼입니다."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - LandingAI
   - 문서추출
@@ -21,6 +19,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/agentic-document-extraction-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/agentic-document-extraction-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

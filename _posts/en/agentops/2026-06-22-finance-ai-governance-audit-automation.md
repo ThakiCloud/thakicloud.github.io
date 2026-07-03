@@ -6,8 +6,6 @@ seo_description: "Financial AI audit logs, AI governance in financial services, 
 lang: en
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - agentops
 tags:
   - ai-governance
   - finance
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/finance-ai-governance-audit-automation/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ![AI Governance and Audit Automation in Financial Services](/assets/images/finance-ai-governance-audit-automation-hero.png)

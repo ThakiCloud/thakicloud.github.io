@@ -4,8 +4,6 @@ excerpt: "دليل شامل لتثبيت واستخدام LemonAI، أول إط�
 seo_title: "دروس LemonAI: دليل إعداد الذكاء الاصطناعي المحلي الشامل - Thaki Cloud"
 seo_description: "تعلم كيفية تثبيت واستخدام LemonAI، البديل مفتوح المصدر لـ Manus & Genspark AI. دليل شامل مع إعداد Docker وتكوين صندوق أمان VM وأمثلة عملية."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - LemonAI
   - الذكاء-الاصطناعي-التكيفي
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/tutorials/lemonai-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/lemonai-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

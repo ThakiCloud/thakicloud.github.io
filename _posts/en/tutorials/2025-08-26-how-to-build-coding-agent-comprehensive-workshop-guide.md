@@ -4,8 +4,6 @@ excerpt: "Learn to build your own AI coding agent similar to Cursor, Cline, and 
 seo_title: "Build AI Coding Agent: Step-by-Step Tutorial with Go & Claude - Thaki Cloud"
 seo_description: "Complete guide to building coding agents like Cursor and Windsurf. Learn tool integration, API management, and progressive development with practical examples"
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - ai-agent
   - coding-agent
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Expected Reading Time**: 15 minutes

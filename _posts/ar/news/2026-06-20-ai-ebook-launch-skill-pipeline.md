@@ -6,8 +6,6 @@ seo_description: "اختيار الموضوع والتأليف وغلاف gpt-im
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - news
 tags:
   - ai-ebook-launch
   - ebook
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/news/ai-ebook-launch-skill-pipeline/"
 reading_time: true
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

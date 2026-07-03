@@ -5,8 +5,6 @@ date: 2025-06-05
 lang: ar
 permalink: /ar/news/jeff-dean-bill-coughran-talk/
 canonical_url: "https://thakicloud.github.io/ar/news/jeff-dean-bill-coughran-talk/"
-categories:
-  - news
 tags:
   - البنية التحتية للذكاء الاصطناعي
   - النماذج الكبيرة
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
 ---
 
 {% include video id="dq8MhTFCs80" provider="youtube" %}

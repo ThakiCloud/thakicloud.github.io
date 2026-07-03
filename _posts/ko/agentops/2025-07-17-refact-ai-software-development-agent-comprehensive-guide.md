@@ -5,8 +5,6 @@ seo_title: "Refact.ai AI 개발 에이전트 완전 가이드 - 오픈소스 SWE
 seo_description: "3k stars의 오픈소스 AI 에이전트 Refact.ai 심층 분석. 자체 호스팅, 25+ 언어 지원, Docker 통합, VS Code/JetBrains 플러그인까지 실무 적용 가이드"
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - agentops
 tags:
   - ai-agent
   - refact
@@ -25,6 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/refact-ai-software-development-agent-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

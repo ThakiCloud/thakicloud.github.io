@@ -4,8 +4,6 @@ excerpt: "Curated automation use cases and implementation patterns for cloud AI 
 seo_title: "n8n Workflow AI Platform Automation Guide - Cloud Operations Optimization - Thaki Cloud"
 seo_description: "Complete guide to automating cloud AI platform operations with n8n workflows. Practical examples covering customer management, model monitoring, notification systems, and more."
 date: 2025-06-28
-categories:
-  - dev
 tags:
   - n8n
   - workflow-automation
@@ -23,6 +21,8 @@ toc: true
 toc_label: "n8n Workflow Guide"
 canonical_url: "https://thakicloud.github.io/en/dev/n8n-workflows-ai-platform-automation-guide/"
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 12 min

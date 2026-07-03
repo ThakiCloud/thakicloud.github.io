@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إنشاء مكونات واجهة المستخد�
 seo_title: "دليل MCP-UI: بناء واجهات وكلاء الذكاء الاصطناعي التفاعلية - دليل شامل"
 seo_description: "أتقن تطوير MCP-UI مع هذا الدليل الشامل. تعلم إنشاء مكونات واجهة المستخدم التفاعلية لوكلاء الذكاء الاصطناعي باستخدام TypeScript و Ruby مع أمثلة عملية."
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - mcp-ui
   - ai-agents
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/mcp-ui-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-ui-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

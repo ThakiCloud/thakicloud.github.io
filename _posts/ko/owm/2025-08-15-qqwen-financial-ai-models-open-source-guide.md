@@ -5,8 +5,6 @@ seo_title: "QQWen 금융 AI 모델 완전 가이드 - Q 언어 특화 LLM - Thak
 seo_description: "Morgan Stanley의 QQWen 프로젝트로 Q 프로그래밍 언어 특화 AI 모델을 이해하고 활용하는 방법. 1.5B부터 32B까지 다양한 모델 크기와 풀스택 파인튜닝 기법"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - owm
 tags:
   - qqwen
   - q-language
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/qqwen-financial-ai-models-open-source-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

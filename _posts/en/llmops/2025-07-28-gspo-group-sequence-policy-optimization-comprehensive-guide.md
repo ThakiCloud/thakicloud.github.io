@@ -5,8 +5,6 @@ seo_title: "GSPO vs GRPO: Complete Analysis of LLM Reinforcement Learning Algori
 seo_description: "In-depth analysis of Group Sequence Policy Optimization (GSPO) core principles and advantages over GRPO. Comprehensive guide covering Qwen3 application and MoE model stability."
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - llmops
 tags:
   - GSPO
   - GRPO
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/gspo-group-sequence-polic
 lang: en
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 12 min

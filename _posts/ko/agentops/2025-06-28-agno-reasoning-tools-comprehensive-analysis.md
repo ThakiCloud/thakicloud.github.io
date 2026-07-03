@@ -4,9 +4,6 @@ excerpt: "Agno 프레임워크의 ReasoningTools를 상세히 분석하고 RAG �
 seo_title: "Agno ReasoningTools 완전 분석 가이드 - Thaki Cloud"
 seo_description: "Agno ReasoningTools의 구조, 작동 원리, RAG 시스템에서의 활용법을 상세 분석. Chain-of-Thought, think tool, Agentic RAG 구현 방법과 실전 예제 코드를 제공합니다."
 date: 2025-06-28
-categories: 
-  - agentops
-  - dev
 tags: 
   - Agno
   - ReasoningTools
@@ -21,6 +18,9 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/agno-reasoning-tools-comprehensive-analysis/"
 published: false
+categories:
+  - agentops
+  - dev
 ---
 
 ## 들어가며

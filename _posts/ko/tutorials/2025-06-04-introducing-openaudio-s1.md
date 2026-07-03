@@ -1,11 +1,6 @@
 ---
 title: "OpenAudio S1 소개: 차세대 AI 음성 합성 기술"
 date: 2025-06-04
-categories:
-  - AI
-  - TTS
-  - Voice Synthesis
-  - tutorials
 tags:
   - OpenAudio
   - TTS
@@ -15,6 +10,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 OpenAudio가 혁신적인 새로운 시리즈의 고급 텍스트-투-스피치(TTS) 모델을 출시했습니다. Fish-Speech의 기반을 바탕으로 품질, 성능, 기능성에서 큰 발전을 이루어낸 첫 번째 모델, OpenAudio-S1을 소개합니다.

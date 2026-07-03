@@ -5,9 +5,6 @@ seo_title: "DeepWiki Open AI 위키 생성기 완전 가이드 - Thaki Cloud"
 seo_description: "GitHub, GitLab, Bitbucket 리포지토리를 AI로 자동 문서화하는 DeepWiki Open의 설치부터 고급 활용까지 상세히 설명합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - tutorials
-  - dev
 tags:
   - deepwiki
   - ai-documentation
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/deepwiki-open-ai-powered-repository-wiki-generator-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

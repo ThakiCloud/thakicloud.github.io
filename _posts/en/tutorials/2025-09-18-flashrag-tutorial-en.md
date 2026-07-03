@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to FlashRAG - a modular Python toolkit for Retriev
 seo_title: "FlashRAG Tutorial: RAG Research Toolkit Guide - Thaki Cloud"
 seo_description: "Learn how to use FlashRAG for efficient RAG research. Complete tutorial with installation, configuration, dataset processing, and practical examples."
 date: 2025-09-18
-categories:
-  - tutorials
 tags:
   - FlashRAG
   - RAG
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/flashrag-tutorial/"
 lang: en
 permalink: /en/tutorials/flashrag-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

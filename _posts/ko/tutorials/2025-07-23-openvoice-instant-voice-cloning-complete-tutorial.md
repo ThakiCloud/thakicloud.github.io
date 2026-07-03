@@ -5,9 +5,6 @@ seo_title: "OpenVoice 음성 복제 튜토리얼 - MIT TTS 기술 완전 가이�
 seo_description: "OpenVoice V2를 사용한 즉석 음성 복제 방법을 실전 예제와 함께 상세히 알아보세요. 설치부터 고급 활용까지 포함된 완전한 가이드입니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23
-categories:
-  - tutorials
-  - dev
 tags:
   - OpenVoice
   - 음성복제
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/openvoice-instant-voice-cloning-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

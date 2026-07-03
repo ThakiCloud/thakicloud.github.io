@@ -5,8 +5,6 @@ seo_title: "Kueue GPU Scheduling Preemption Patterns ClusterQueue Design - Thaki
 seo_description: "Kueue ClusterQueue design, workload priority, GPU preemption policy, quota borrowing, and MultiKueue multi-cluster deployment patterns with practical examples."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [kueue, kubernetes, gpu-scheduling, preemption, clusterqueue, ai-platform, kueue-v1beta1, mlops]
 author_profile: true
 toc: true
@@ -16,6 +14,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/kueue-gpu-scheduling-preemption-patterns/"
 reading_time: true
 lang: en
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 8 min

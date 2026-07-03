@@ -5,8 +5,6 @@ seo_title: "Binary Quantization RAG 시스템 32배 메모리 최적화 - Thaki 
 seo_description: "Binary Quantization을 활용해 RAG 시스템의 메모리를 32배 절약하고 실시간 검색을 구현하는 방법. Groq, LlamaIndex, Milvus를 활용한 완전한 구현 가이드와 코드 예시 제공."
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - agentops
 tags:
   - binary-quantization
   - rag
@@ -24,6 +22,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/binary-quantization-rag-32x-memory-optimization/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

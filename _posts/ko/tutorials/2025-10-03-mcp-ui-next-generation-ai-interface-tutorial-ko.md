@@ -4,8 +4,6 @@ excerpt: "Model Context Protocol 기반 인터랙티브 UI 개발 방법을 학�
 seo_title: "MCP-UI 튜토리얼: 차세대 AI 인터페이스 개발 가이드 - Thaki Cloud"
 seo_description: "MCP-UI 개발 완벽 가이드. TypeScript, Python, Ruby로 인터랙티브 AI 인터페이스 구축하기. 실전 예제와 배포 전략 포함."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - mcp-ui
   - ai-interface
@@ -19,6 +17,8 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mcp-ui-next-generation-ai-interface-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

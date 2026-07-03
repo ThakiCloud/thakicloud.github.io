@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to implementing s3fs-fuse in enterprise cloud envi
 seo_title: "s3fs-fuse Enterprise Tutorial: Complete Implementation Guide - Thaki Cloud"
 seo_description: "Master s3fs-fuse deployment for cloud companies with detailed installation, configuration, and GPL-2.0 licensing guidelines"
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - s3fs-fuse
   - AWS-S3
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/
 canonical_url: "https://thakicloud.github.io/en/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

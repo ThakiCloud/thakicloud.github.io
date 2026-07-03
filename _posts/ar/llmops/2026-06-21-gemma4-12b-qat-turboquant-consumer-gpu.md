@@ -5,8 +5,6 @@ seo_title: "تحليل استدلال Gemma 4 12B QAT TurboQuant على GPU اس
 seo_description: "تحليل لإصدار Gemma 4 12B مع QAT، وتقنية تكميم TurboQuant، ومعيار مرجعي محلي على بطاقة RTX 4060 بذاكرة 8GB، مع تغطية اقتصاد الاستدلال المحلي ومنظور الخدمة على GPU استهلاكية"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - llmops
 tags:
   - gemma4
   - quantization
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/gemma4-12b-qat-turboquant-consumer-gpu/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 كانت ذاكرة VRAM دائمًا العائق الأكبر أمام خدمة نماذج اللغة الكبيرة محليًا. تشغيل نموذج بحجم 12B كان يتطلب عادةً بطاقة GPU مخصصة لمراكز البيانات باهظة الثمن. لكن معيارًا مرجعيًا مجتمعيًا حديثًا يروي قصة مختلفة، إذ يُشغّل Gemma 4 12B باستخدام QAT (التدريب الواعي بالتكميم) وتكميم TurboQuant على بطاقة **RTX 4060 بذاكرة 8GB**، ويدّعي تحقيق إنتاجية prefill قوية مع الحفاظ على دعم السياق الطويل في الوقت نفسه.

@@ -2,9 +2,6 @@
 title: "KitOps 완전 가이드: AI/ML 모델 패키징과 버전 관리의 새로운 표준"
 excerpt: "OCI 표준 기반 KitOps로 AI/ML 모델, 데이터셋, 코드를 통합 패키징하고 버전 관리하는 실전 가이드"
 date: 2025-06-25
-categories: 
-  - llmops
-  - tutorials
 tags: 
   - kitops
   - modelkit
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "KitOps 완전 가이드"
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ## 개요

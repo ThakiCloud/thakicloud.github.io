@@ -4,8 +4,6 @@ excerpt: "PandocX is a powerful file conversion tool based on Pandoc. It enables
 seo_title: "PandocX File Converter Tutorial - Complete Document Format Conversion Guide"
 seo_description: "Complete guide to file conversion using PandocX. Learn how to convert between Markdown, HTML, PDF, Word and other document formats with detailed examples and best practices."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - PandocX
   - file-conversion
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/pandocx-file-converter
 lang: en
 permalink: /en/tutorials/pandocx-file-converter-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

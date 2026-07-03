@@ -4,8 +4,6 @@ excerpt: "Liquid AI의 LFM2-8B-A1B 모델을 심층 분석합니다. 83억 개�
 seo_title: "Liquid AI LFM2-8B-A1B 엣지 AI 모델 완전 분석 - Thaki Cloud"
 seo_description: "Liquid AI의 LFM2-8B-A1B 하이브리드 MoE 모델 완전 분석. 83억 파라미터, 엣지 배포 기능, 모바일 디바이스에서의 뛰어난 성능을 자세히 살펴보세요."
 date: 2025-10-08
-categories:
-  - owm
 tags:
   - liquid-ai
   - lfm2
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/
 canonical_url: "https://thakicloud.github.io/ko/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

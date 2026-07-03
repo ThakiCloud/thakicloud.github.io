@@ -5,8 +5,6 @@ seo_title: "2025년 강화학습 후훈련 연구 TOP 10 논문 리뷰 - 추론 
 seo_description: "Kimi k1.5, Microsoft RPT, Agent Lightning 등 2025년 최신 강화학습 후훈련 연구 10선을 한국어로 상세 분석. LLM 추론 능력 향상의 핵심 기법과 실무 적용 인사이트를 제공합니다."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - research
 tags:
   - 강화학습
   - 후훈련
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/reinforcement-learning-post-training-top-10-papers-review/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![핵심 개념 일러스트](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)

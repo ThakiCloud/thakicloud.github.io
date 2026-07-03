@@ -5,8 +5,6 @@ seo_title: "Onlook 완벽 가이드 - 디자이너를 위한 AI 비주얼 코드
 seo_description: "Onlook 설치부터 Next.js 앱 제작, AI 활용, 실시간 편집까지 디자이너와 개발자를 위한 혁신적인 비주얼 코드 에디터 완전 정복"
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - tutorials
 tags:
   - onlook
   - visual-editor
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/onlook-visual-code-editor-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

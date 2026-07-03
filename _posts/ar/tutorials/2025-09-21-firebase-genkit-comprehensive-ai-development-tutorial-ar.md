@@ -4,8 +4,6 @@ excerpt: "تعلم Firebase Genkit لبناء ونشر ومراقبة التطب
 seo_title: "دروس Firebase Genkit: بناء تطبيقات الذكاء الاصطناعي الإنتاجية - Thaki Cloud"
 seo_description: "تعلم Firebase Genkit لبناء تطبيقات الذكاء الاصطناعي الإنتاجية. دليل كامل يغطي التثبيت والتطوير والنشر والمراقبة مع أمثلة عملية."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - firebase
   - genkit
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

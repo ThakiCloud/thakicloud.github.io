@@ -5,8 +5,6 @@ seo_title: "تطور ذاتي كل ليلة: الحزام الذكي الذي ي
 seo_description: "تطبيق عملي لحلقة التطور الذاتي الليلي المبنية على Self-Harness (arXiv:2606.09498). يشمل المراحل الثلاث -- Weakness Mining وHarness Proposal وProposal Validation -- وبوابة مكافحة الهلوسة، ومنظومة المهارات hermes/autoimprove/auto-distill، والتطوير نحو منتج Paxis Curator."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - research
 tags:
   - self-evolving
   - ai-agents
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/self-evolving-harness-nightly/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![الحزام الذكي الذي يتطور ذاتياً كل ليلة](/assets/images/self-evolving-harness-nightly-hero.png)

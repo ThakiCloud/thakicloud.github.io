@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تنفيذ LightRAG، نظام RAG الثوري ا
 seo_title: "دليل LightRAG: تنفيذ RAG السريع - Thaki Cloud"
 seo_description: "دليل LightRAG الشامل مع الإعداد وأمثلة الاستخدام ومقارنة الأداء. تعلم بناء أنظمة RAG فعالة مع الرسوم البيانية للمعرفة."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - LightRAG
   - RAG
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/lightrag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/lightrag-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

@@ -4,8 +4,6 @@ excerpt: "إتقان Google GenAI Toolbox لعمليات قواعد البيان
 seo_title: "دليل Google GenAI Toolbox MCP لقواعد البيانات - دليل التكامل الشامل"
 seo_description: "دليل شامل حول Google GenAI Toolbox لتكامل خادم MCP مع قواعد البيانات. تعلم الإعداد والتكوين وتكامل الإطار مع أمثلة عملية."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - GenAI-Toolbox
   - MCP
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

@@ -1,9 +1,6 @@
 ---
 title: "MiMo-VL-7B: 소형 고성능 비전-언어 모델의 새로운 기준"
 date: 2025-05-31
-categories: 
-  - owm
-  - ai
 tags: 
   - vision-language-model
   - multimodal
@@ -13,6 +10,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - owm
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ seo_title: "에이전트 절차적 메모리: 프롬프트 검색을 넘어선 �
 seo_description: "LLM 에이전트의 절차적 메모리 연구를 Memp(arXiv 2508.06433)와 AFTER 벤치마크(arXiv 2606.23127) 중심으로 정리하고, 빌드·검색·갱신 구조와 파라메트릭 전환, ThakiCloud Paxis 스킬 하니스 적용을 다룹니다."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - research
 tags:
   - agent-memory
   - procedural-memory
@@ -19,6 +17,8 @@ toc_label: "목차"
 toc_icon: "brain"
 published: true
 canonical_url: "https://thakicloud.github.io/ko/research/agent-procedural-memory-beyond-retrieval/"
+categories:
+  - research
 ---
 
 ![에이전트 절차적 메모리: 프롬프트 검색을 넘어 임시 템플릿에서 인지 인프라로의 전환](/assets/images/agent-procedural-memory-beyond-retrieval-slide-01.png)

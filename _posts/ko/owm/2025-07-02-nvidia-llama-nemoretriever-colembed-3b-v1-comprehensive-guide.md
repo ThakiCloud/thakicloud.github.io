@@ -5,9 +5,6 @@ seo_title: "NVIDIA LLaMA NemoRetriever ColEmbed 3B 모델 완전 가이드 - Tha
 seo_description: "ViDoRe V1, V2 벤치마크 1위를 차지한 NVIDIA의 시각적 문서 검색 모델 llama-nemoretriever-colembed-3b-v1의 아키텍처, 성능, 사용법을 상세히 분석합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - owm
-  - llmops
 tags:
   - nvidia
   - llama
@@ -29,6 +26,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nvidia-llama-nemoretriever-colembed-3b-v1-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

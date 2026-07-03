@@ -4,9 +4,6 @@ excerpt: "تحليل شامل لنموذج NVIDIA الرائد DeepSeek-R1-0528-
 seo_title: "دليل نموذج NVIDIA DeepSeek-R1 FP4 المُكمم - تحسين TensorRT-LLM - Thaki Cloud"
 seo_description: "استكشف نموذج NVIDIA DeepSeek-R1-0528-FP4 مع تقنية التكميم FP4 الثورية، محققاً كفاءة ذاكرة 1.6x مع الحفاظ على أداء 98%+ عبر معايير الاستدلال الرياضي."
 date: 2025-06-07
-categories: 
-  - owm
-  - llmops
 tags: 
   - nvidia
   - deepseek-r1
@@ -23,6 +20,9 @@ toc_label: "دليل DeepSeek-R1 FP4"
 canonical_url: "https://thakicloud.github.io/ar/owm/nvidia-deepseek-r1-fp4-quantized-model-guide/"
 lang: ar
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

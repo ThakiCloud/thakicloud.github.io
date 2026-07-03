@@ -1,8 +1,6 @@
 ---
 title: "Flowith AI 완전 가이드: 차세대 AI 워크스페이스 마스터하기"
 date: 2025-06-01
-categories: 
-  - tutorials
 tags: 
   - flowith-ai
   - ai-workspace
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 AI 도구의 패러다임이 변화하고 있습니다. 단순한 질문-답변 방식을 넘어, 복잡한 프로젝트를 자율적으로 수행하는 AI 에이전트 시대가 도래했습니다. Flowith AI는 이러한 변화의 최전선에 서 있는 혁신적인 플랫폼입니다.

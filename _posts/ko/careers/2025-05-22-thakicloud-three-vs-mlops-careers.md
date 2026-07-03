@@ -3,8 +3,6 @@ title: "Three Vs-Driven MLOps at ThakiCloud: Why You'll Want to Join Us"
 excerpt: "ThakiCloud의 Three Vs(속도, 검증, 버전관리) 기반 MLOps 문화와 실전 사례, 그리고 함께할 동료를 찾는 채용 안내를 담았습니다."
 date: 2025-05-22
 last_modified_at: 2026-06-20
-categories:
-  - careers
 tags:
   - MLOps
   - ThreeVs
@@ -12,6 +10,8 @@ tags:
   - Recruitment
   - Thaki Cloud
 author_profile: true
+categories:
+  - careers
 ---
 
 Velocity, Validation, Versioning. 이 세 단어가 심박수를 올린다면, ThakiCloud가 맞는 자리일 수 있습니다.

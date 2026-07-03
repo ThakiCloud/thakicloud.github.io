@@ -4,9 +4,6 @@ excerpt: "복잡한 LLM 개발 파이프라인을 간소화하는 NVIDIA NeMo-Sk
 seo_title: "NVIDIA NeMo-Skills LLM 워크플로우 자동화 완전 가이드 - Thaki Cloud"
 seo_description: "NVIDIA NeMo-Skills로 복잡한 LLM 개발 파이프라인을 자동화하고 최적화하는 방법. 합성 데이터 생성부터 모델 평가까지 통합 솔루션 (150자)"
 date: 2025-06-28
-categories: 
-  - llmops
-  - research
 tags: 
   - NVIDIA
   - NeMo-Skills
@@ -21,6 +18,9 @@ toc: true
 toc_label: "NeMo-Skills 가이드"
 canonical_url: "https://thakicloud.github.io/nvidia-nemo-skills-llm-workflow-automation-guide/"
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 **읽는 시간: 12분**

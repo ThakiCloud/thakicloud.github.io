@@ -4,8 +4,6 @@ excerpt: "دليل شامل لـ Beta9، منصة الذكاء الاصطناع�
 seo_title: "دليل منصة Beta9 للذكاء الاصطناعي اللاخادمية - بنية ML التحتية Python أولاً"
 seo_description: "تعلم كيف يُحدث Beta9 ثورة في نشر أحمال الذكاء الاصطناعي مع بدء تشغيل الحاويات في أقل من ثانية، والتوسع اللاخادمي، وواجهات Python البرمجية الأصلية للبنية التحتية الحديثة لـ ML."
 date: 2025-08-26
-categories:
-  - llmops
 tags:
   - beta9
   - لاخادمي
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/llmops/beta9-serverless-ai-platform-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

@@ -5,8 +5,6 @@ seo_title: "Unlimited OCR R-SWA 상수 KV 캐시 장문 문서 파싱 분석 - T
 seo_description: "Baidu Unlimited OCR(arXiv 2606.23050)의 Reference Sliding Window Attention 분석. 상수 KV 캐시로 32K 컨텍스트 한 번에 처리, OmniDocBench v1.5 93.23%. ThakiCloud 쿠버네티스 멀티테넌트 문서 추론 적용 관점."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - research
 tags:
   - unlimited-ocr
   - document-parsing
@@ -21,6 +19,8 @@ toc_icon: "file-text"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/unlimited-ocr-rswa/"
 reading_time: true
+categories:
+  - research
 ---
 
 ## 개요

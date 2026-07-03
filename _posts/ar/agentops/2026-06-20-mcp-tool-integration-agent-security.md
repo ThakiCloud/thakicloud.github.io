@@ -5,8 +5,6 @@ seo_title: "دليل تكامل أدوات MCP وأمن الوكلاء - Thaki C
 seo_description: "الثغرات الأمنية في تكامل أدوات الوكلاء القائم على Model Context Protocol وأنماط تشغيل الإنتاج. يتناول الدفاع ضد هجمات Tool Poisoning وتقليص الصلاحيات وتهيئة MCP Gateway."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - mcp
   - tool-integration
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

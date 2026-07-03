@@ -4,8 +4,6 @@ excerpt: "اضبط Qwen3 وLlama 4 وGemma 3 بسرعة 2x مع توفير يص�
 seo_title: "Unsloth الضبط الدقيق للنماذج اللغوية الكبيرة - تدريب أسرع بـ 2x مع توفير 80% من الذاكرة"
 seo_description: "أتقن Unsloth للضبط الدقيق فائق السرعة للنماذج اللغوية الكبيرة. تعلم كيفية تدريب Qwen3 وLlama 4 وGemma 3 مع تحسن السرعة بـ 2x وتقليل الذاكرة بـ 80%"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - Unsloth
   - النماذج-اللغوية-الكبيرة
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/llmops/unsloth-ultrafast-llm-finetuning/
 canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-ultrafast-llm-finetuning/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

@@ -5,8 +5,6 @@ seo_title: "AI Creativity Era Survival Guide: Po-Shen Loh's Insights - Thaki Clo
 seo_description: "In the AI era that conquered math olympiads, Carnegie Mellon Po-Shen Loh's proposed human survival strategies and future educational directions"
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - news
 tags:
   - AI
   - Creativity
@@ -24,6 +22,8 @@ reading_time: true
 lang: en
 permalink: /en/news/po-shen-loh-ai-creative-supremacy-era-insights/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 7 minutes

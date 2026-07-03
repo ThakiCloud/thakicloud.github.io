@@ -5,8 +5,6 @@ seo_title: "Chatterbox-vLLM TTS 튜토리얼 macOS 완전 가이드 - Thaki Clou
 seo_description: "vLLM 최적화된 Chatterbox TTS 모델 설치부터 배치 처리까지. RTX GPU에서 초고속 음성 합성 구현하는 완전한 튜토리얼과 실제 벤치마크 결과 포함."
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - tutorials
 tags:
   - chatterbox
   - vllm
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/chatterbox-vllm-tts-tutorial-macos/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

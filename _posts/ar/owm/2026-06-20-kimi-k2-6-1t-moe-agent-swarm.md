@@ -5,8 +5,6 @@ seo_title: "دليل نشر Kimi K2.6 1T MoE بنية سرب الوكلاء مح
 seo_description: "نحلل بنية Kimi K2.6 (انتباه MLA، 384 خبيرًا، MoonViT 400M)، والمعايير (SWE-Bench Verified 80.2، AIME 2026 96.4)، والخدمة عبر vLLM/SGLang/KTransformers، وبصمة H100 في الخدمة."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - kimi-k2-6
   - moonshot-ai
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/kimi-k2-6-1t-moe-agent-swarm/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

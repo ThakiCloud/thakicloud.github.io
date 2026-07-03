@@ -5,8 +5,6 @@ seo_title: "دليل OpenPipe ART للتعلم التعزيزي للوكلاء -
 seo_description: "تدريب وكلاء ذكاء اصطناعي فعليين باستخدام OpenPipe ART. دليل شامل يغطي خوارزمية GRPO والتدريب متعدد الخطوات ودوال مكافأة RULER وتكامل vLLM"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - llmops
 tags:
   - OpenPipe
   - ART
@@ -28,6 +26,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/openpipe-art-agent-reinfo
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 30 دقيقة

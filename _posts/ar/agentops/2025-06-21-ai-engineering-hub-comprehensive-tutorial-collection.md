@@ -2,8 +2,6 @@
 title: "AI Engineering Hub: مجموعة شاملة من دروس وكلاء الذكاء الاصطناعي وRAG"
 excerpt: "استعرض دروس متنوعة لوكلاء الذكاء الاصطناعي وRAG وLLM من مستودع AI Engineering Hub الحاصل على 10.7k نجمة، وتعلم كيفية تطبيقها في المشاريع الفعلية."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - AI-Engineering-Hub
   - Multi-Agent
@@ -19,6 +17,8 @@ toc_label: "دليل AI Engineering Hub"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/agentops/ai-engineering-hub-comprehensive-tutorial-collection/"
 published: false
+categories:
+  - agentops
 ---
 
 ## نظرة عامة

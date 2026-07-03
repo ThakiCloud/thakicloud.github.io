@@ -5,8 +5,6 @@ seo_title: "FFmpeg 완전 튜토리얼 - 동영상 편집 마스터 가이드 - 
 seo_description: "FFmpeg 설치부터 고급 편집까지 macOS 환경에서 단계별로 배우는 완전 가이드. 실제 코드 예제와 테스트 결과 포함."
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - ffmpeg
   - video-editing
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ffmpeg-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

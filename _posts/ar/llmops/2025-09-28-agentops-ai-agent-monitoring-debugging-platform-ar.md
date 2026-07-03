@@ -4,8 +4,6 @@ excerpt: "اكتشف AgentOps، وهو SDK قوي لـ Python لمراقبة و�
 seo_title: "AgentOps: منصة مراقبة وتصحيح أخطاء وكلاء الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "تعلم كيف يساعد AgentOps في مراقبة وتصحيح أخطاء وتحسين وكلاء الذكاء الاصطناعي مع التتبع الشامل وإدارة التكاليف وميزات الأمان للبيئات الإنتاجية."
 date: 2025-09-28
-categories:
-  - llmops
 tags:
   - AgentOps
   - وكلاء-الذكاء-الاصطناعي
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/agentops-ai-agent-monitoring-debugging-platform/
 canonical_url: "https://thakicloud.github.io/ar/llmops/agentops-ai-agent-monitoring-debugging-platform/"
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

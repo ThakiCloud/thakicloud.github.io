@@ -5,8 +5,6 @@ seo_title: "MiniMax-M2.7 229B 오픈웨이트 에이전트 모델 온프렘 가�
 seo_description: "MiniMax-M2.7의 아키텍처, 벤치마크(MLE Bench Lite 66.6%, SWE-Pro 56.22%, GDPval-AA ELO 1495), SGLang/vLLM/NIM 서빙 방법과 라이선스 주의사항을 정리했다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - minimax-m2-7
   - minimax
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/minimax-m2-7-openweight-agent/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

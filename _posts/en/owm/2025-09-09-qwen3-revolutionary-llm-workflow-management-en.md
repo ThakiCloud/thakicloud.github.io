@@ -4,8 +4,6 @@ excerpt: "Explore Qwen3, the latest breakthrough in LLM technology featuring uni
 seo_title: "Qwen3 LLM: Advanced Workflow Management & AI Integration - Thaki Cloud"
 seo_description: "Discover how Qwen3's innovative features like unified thought modes and budget mechanisms revolutionize open workflow management and AI-driven automation processes."
 date: 2025-09-09
-categories:
-  - owm
 tags:
   - Qwen3
   - Large Language Models
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/owm/qwen3-revolutionary-llm-work
 lang: en
 permalink: /en/owm/qwen3-revolutionary-llm-workflow-management/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

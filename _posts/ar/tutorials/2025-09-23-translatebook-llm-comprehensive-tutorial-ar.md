@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية ترجمة الكتب وملفات EPUB والتر
 seo_title: "دليل TranslateBook LLM: أداة ترجمة الكتب بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل لـ TranslateBookWithLLM - ترجمة الكتب وملفات EPUB وترجمات SRT باستخدام Ollama وGemini API مع واجهة الويب وسطر الأوامر. دليل إعداد خطوة بخطوة."
 date: 2025-09-23
-categories:
-  - tutorials
 tags:
   - llm
   - ترجمة
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/translatebook-llm-comp
 lang: ar
 permalink: /ar/tutorials/translatebook-llm-comprehensive-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

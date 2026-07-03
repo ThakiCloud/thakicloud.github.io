@@ -1,8 +1,6 @@
 ---
 title: "AI 기업 도입 완벽 가이드: OpenAI, Google, Anthropic의 최신 실무 자료 모음"
 date: 2024-05-31
-categories: 
-  - llmops
 tags: 
   - OpenAI
   - Google
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 AI 기술이 기업 환경에서 본격적으로 활용되기 시작하면서, 주요 AI 기업들이 실무진을 위한 종합적인 가이드를 연이어 공개했습니다. OpenAI, Google, Anthropic이 최근 발표한 이 자료들은 AI 도입을 고려하는 기업과 개발자들에게 매우 실용적인 인사이트를 제공합니다.

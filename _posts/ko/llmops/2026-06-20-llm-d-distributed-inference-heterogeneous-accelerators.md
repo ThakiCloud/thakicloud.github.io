@@ -5,8 +5,6 @@ seo_title: "llm-d 분산추론과 GPU+NPU/XPU 이기종 아키텍처 - Thaki Clo
 seo_description: "분산추론 llm-d의 KV-cache 라우팅과 prefill/decode 분리 원리, 그리고 vLLM 위에서 GPU와 다양한 NPU·XPU(Rebellions, Furiosa, Intel Gaudi, TPU 등)를 가속기 중립으로 함께 운용하는 소버린 AI 추론 레퍼런스 아키텍처를 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - llm-d
   - distributed-inference
@@ -25,6 +23,8 @@ header:
   teaser: /assets/images/llm-d-heterogeneous-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - llmops
 ---
 
 ![GPU 풀과 국산 NPU 풀이 한 클러스터에서 함께 추론을 처리하는 이기종 구성](/assets/images/llm-d-heterogeneous-hero.png)

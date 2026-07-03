@@ -5,8 +5,6 @@ seo_title: "Autoselll AI 마켓플레이스 리스팅 생성기 완전 가이드
 seo_description: "상품 사진에서 자동으로 제목, 설명, 가격을 생성하는 Autoselll 플랫폼. GPT-4o Vision, Claude 3.5, Next.js 15 기반 AI 커머스 솔루션"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - tutorials
 tags:
   - autoselll
   - ai-commerce
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/autoselll-ai-marketplace-listing-generator-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

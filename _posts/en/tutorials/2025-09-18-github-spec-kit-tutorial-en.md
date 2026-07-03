@@ -4,8 +4,6 @@ excerpt: "End-to-end tutorial on Spec‑Driven Development using GitHub's Spec K
 seo_title: "Spec Kit Tutorial for Spec‑Driven Development - Thaki Cloud"
 seo_description: "Hands-on Spec Kit tutorial: create baseline specs, iterate, generate a plan, validate checklists, and implement. Includes macOS scripts, troubleshooting, and best practices."
 date: 2025-09-18
-categories:
-  - tutorials
 tags:
   - spec-kit
   - spec-driven-development
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/tutorials/github-spec-kit-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/github-spec-kit-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ Estimated reading time: 12 min

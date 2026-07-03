@@ -5,8 +5,6 @@ seo_title: "تحليل محلل PDF المستقل عن النماذج LiteParse
 seo_description: "تحليل لمحلل LiteParse من LlamaIndex، وهو محلل PDF مستقل عن النماذج برخصة Apache 2.0، يغطي خفض تكلفة استيعاب مستندات RAG وسيادة البيانات ومزايا التحليل المستقل عن النماذج."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - liteparse
   - llamaindex
@@ -22,6 +20,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/liteparse-model-free-pdf-parser-rag/"
 reading_time: true
+categories:
+  - dev
 ---
 
 الخطوة الأولى في أي خط أنابيب RAG هي استيعاب المستندات، وأكثر ما يعطل هذه الخطوة الأولى هو تحليل ملفات PDF. زادت في الآونة الأخيرة المحللات القائمة على النماذج اللغوية الكبيرة، غير أن تشغيل نموذج لغوي على كل مستند يراكم التكلفة والتأخير، كما أن إرسال مستندات حساسة إلى نموذج خارجي يثير مسألة سيادة البيانات. اختارت LlamaIndex (جيري ليو) اتجاهاً مختلفاً مع إطلاق **LiteParse**، وهو محلل مفتوح المصدر برخصة Apache 2.0 يحول ملفات PDF إلى ماركداون **دون استخدام نموذج لغوي**.

@@ -6,8 +6,6 @@ seo_description: "Thaki Cloud 기술 블로그의 다국어 지원 시스템 런
 date: 2025-08-23
 lang: ko
 permalink: /ko/news/multilingual-test-post/
-categories:
-  - news
 tags:
   - multilingual
   - blog
@@ -18,6 +16,8 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/news/multilingual-test-post/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 3분

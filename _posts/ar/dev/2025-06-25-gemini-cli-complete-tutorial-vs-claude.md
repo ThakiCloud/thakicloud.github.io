@@ -3,7 +3,6 @@ layout: single
 title: "الدليل الشامل لـ Gemini CLI: وكيل الذكاء الاصطناعي من الجيل القادم في الطرفية"
 excerpt: "استكشاف شامل لميزات Gemini CLI الثورية ومقارنته بـ Claude وقدراته متعددة الوسائط وتكامل الأدوات"
 date: 2025-06-25
-categories: [dev, tutorials]
 tags: [gemini-cli, google-gemini, ai-agent, multimodal-ai, tool-calling, mcp-servers, claude-comparison]
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/gemini-cli-complete-tutorial-vs-claude/"
@@ -11,6 +10,9 @@ toc: true
 toc_sticky: true
 toc_label: "الدليل الشامل لـ Gemini CLI"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## نظرة عامة: ثورة في تجربة الطرفية

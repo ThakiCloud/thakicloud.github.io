@@ -4,8 +4,6 @@ excerpt: "اكتشف كل شيء عن تحليل البيانات المالية
 seo_title: "دليل OpenBB الشامل - تحليل البيانات المالية | Thaki Cloud"
 seo_description: "حلل بيانات الأسهم والعملات المشفرة والعملات الأجنبية بسهولة مع منصة OpenBB. دليل شامل لتحليل البيانات المالية عبر Python و CLI"
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - OpenBB
   - البيانات_المالية
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/openbb-financial-data-
 lang: ar
 permalink: /ar/tutorials/openbb-financial-data-platform-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

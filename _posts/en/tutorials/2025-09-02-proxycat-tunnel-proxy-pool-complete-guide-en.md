@@ -4,8 +4,6 @@ excerpt: "Comprehensive implementation guide covering installation to practical 
 seo_title: "ProxyCat Tunnel Proxy Pool Complete Guide - Cost-Effective IP Management Solution"
 seo_description: "Learn how to transform 1-minute short-term IPs into permanent tunnel proxies using ProxyCat. Complete coverage of Docker deployment, Web UI management, HTTP/SOCKS5 support, and practical applications"
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - ProxyCat
   - ProxyPool
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/proxycat-tunnel-proxy-pool-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

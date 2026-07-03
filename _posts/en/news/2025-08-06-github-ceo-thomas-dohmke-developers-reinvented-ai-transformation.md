@@ -5,9 +5,6 @@ seo_title: "GitHub CEO Thomas Dohmke on AI Era Developer Revolution - Thaki Clou
 seo_description: "GitHub CEO's latest research reveals fundamental changes in the developer profession. Detailed analysis of AI era 4-stage evolution theory and prospects for 90% AI coding era within 2-5 years, confirmed through 22 developer interviews."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - news
-  - careers
 tags:
   - github-ceo
   - thomas-dohmke
@@ -29,6 +26,9 @@ reading_time: true
 lang: en
 permalink: /en/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/
 published: false
+categories:
+  - news
+  - careers
 ---
 
 ⏱️ **Estimated Reading Time**: 18 minutes

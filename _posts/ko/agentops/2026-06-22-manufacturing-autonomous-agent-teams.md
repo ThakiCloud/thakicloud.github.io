@@ -5,8 +5,6 @@ seo_title: "제조 AI 에이전트 자동화 - 멀티클러스터 GPU 운영과 
 seo_description: "스마트팩토리·중공업·전자 제조사의 MLOps 인력 병목과 멀티공장 클러스터 관리를 자율 에이전트팀으로 자동화하는 방법. ThakiCloud AI Platform의 멀티클러스터 중앙관리와 Paxis 에이전트 운영 클라우드 실전 적용 사례."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - agentops
 tags:
   - manufacturing
   - autonomous-agents
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/manufacturing-autonomous-agent-teams/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ![제조 운영 자율 에이전트팀 헤더 이미지](/assets/images/manufacturing-autonomous-agent-teams-hero.png)

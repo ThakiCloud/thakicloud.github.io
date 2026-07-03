@@ -5,9 +5,6 @@ seo_title: "NVIDIA Nemotron Post-Training Dataset v1 Comprehensive Analysis - Th
 seo_description: "Detailed analysis of the NVIDIA Nemotron Post-Training Dataset v1: structure, per-category data distribution, usage guide, and practical fine-tuning workflows for the 25.6M sample synthetic dataset."
 date: 2025-07-31
 last_modified_at: 2025-07-31
-categories:
-  - datasets
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -26,6 +23,9 @@ canonical_url: "https://thakicloud.github.io/en/datasets/nvidia-nemotron-post-tr
 reading_time: true
 lang: en
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 12 min

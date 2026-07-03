@@ -4,8 +4,6 @@ excerpt: "Claude 및 기타 AI 어시스턴트와 Bright Data의 Model Context P
 seo_title: "Bright Data MCP 튜토리얼: AI 웹 스크래핑 및 실시간 데이터 액세스 - Thaki Cloud"
 seo_description: "Claude AI와 Bright Data MCP 통합 마스터하기. 웹 스크래핑, 실시간 검색, 브라우저 자동화를 위한 월 5,000회 무료 요청. 완전한 설정 가이드 포함."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - brightdata
   - mcp
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/brightdata-mcp-web-scraping-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/brightdata-mcp-web-scraping-ai-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -7,9 +7,6 @@ date: 2025-08-03
 last_modified_at: 2025-08-03
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/hierarchical-reasoning-model-brain-inspired-ai-architecture/"
-categories:
-  - research
-  - llmops
 tags:
   - Hierarchical-Reasoning-Model
   - HRM
@@ -28,6 +25,9 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

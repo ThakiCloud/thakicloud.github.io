@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 RL 프레임워크 slime 분석 Megatron SGLang 후처리 �
 seo_description: "THUDM slime(SGLang-native RL post-training framework)의 Training/Rollout/Data Buffer 3-컴포넌트 구조, colocated·disaggregated 모드, 멀티턴 에이전트 RL 설계, GLM-5.x 검증 사례를 ThakiCloud K8s 기반 멀티테넌트 GPU 운영 관점에서 분석합니다."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - llmops
 tags:
   - slime
   - glm-5.2
@@ -23,6 +21,8 @@ toc_icon: "robot"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/glm52-slime-rl-framework/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![생성 클러스터와 학습 클러스터가 중앙 버퍼를 통해 비동기로 데이터를 주고받는 모습을 형상화한 추상 이미지](/assets/images/glm52-slime-rl-framework-hero.png)

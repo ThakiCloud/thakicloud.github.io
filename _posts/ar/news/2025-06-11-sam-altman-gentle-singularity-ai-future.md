@@ -5,9 +5,6 @@ date: 2025-06-11
 lang: ar
 permalink: /ar/news/sam-altman-gentle-singularity-ai-future/
 canonical_url: "https://thakicloud.github.io/ar/news/sam-altman-gentle-singularity-ai-future/"
-categories: 
-  - news
-  - dev
 tags: 
   - سام ألتمان
   - OpenAI
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
+  - dev
 ---
 
 نشر الرئيس التنفيذي لـ OpenAI سام ألتمان منشوراً بعنوان "التفرد اللطيف" على مدونته. في هذه القطعة، يقدم رؤى عميقة حول الحالة الحالية لتطوير الذكاء الاصطناعي والآفاق المستقبلية.

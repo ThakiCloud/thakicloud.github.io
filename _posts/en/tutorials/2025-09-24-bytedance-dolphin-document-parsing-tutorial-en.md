@@ -4,8 +4,6 @@ excerpt: "Learn how to use ByteDance Dolphin, a state-of-the-art multimodal docu
 seo_title: "ByteDance Dolphin Tutorial: Document Image Parsing Guide - Thaki Cloud"
 seo_description: "Comprehensive tutorial on ByteDance Dolphin document parsing model. Learn installation, usage, and implementation of page-level and element-level parsing with practical examples."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - document-parsing
   - ocr
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/bytedance-dolphin-document-parsing-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/bytedance-dolphin-document-parsing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

@@ -5,8 +5,6 @@ seo_title: "تحسين تكاليف استدلال الذكاء الاصطناع
 seo_description: "دليل عملي لتحسين تكاليف استدلال الذكاء الاصطناعي من ThakiCloud. صيغة تكلفة GPU في الساعة، تفكيك OpEx، جدولة عصابات Kueue+KAI، تقليص vLLM+KEDA إلى الصفر، توجيه طبقات النماذج، ومراجعة التكاليف اليومية — كل ذلك بالأكواد والصيغ الرياضية."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - cost-optimization
   - finops
@@ -24,6 +22,8 @@ toc: true
 toc_sticky: true
 lang: ar
 canonical_url: https://thakicloud.github.io/ar/llmops/gpu-inference-cost-optimization-thakicloud/
+categories:
+  - llmops
 ---
 
 ![تكاليف الحوسبة تتدفق عبر مركز بيانات GPU](/assets/images/cost-opt-hero.png)

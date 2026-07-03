@@ -4,8 +4,6 @@ excerpt: "استكشف Qwen3، الاختراق الأحدث في تقنية LLM
 seo_title: "Qwen3 LLM: إدارة سير العمل المتقدمة وتكامل الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "اكتشف كيف تحدث الميزات المبتكرة لـ Qwen3 مثل أنماط التفكير الموحد وآليات الميزانية ثورة في إدارة سير العمل المفتوح وعمليات الأتمتة المدفوعة بالذكاء الاصطناعي."
 date: 2025-09-09
-categories:
-  - owm
 tags:
   - Qwen3
   - نماذج اللغة الكبيرة
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-revolutionary-llm-work
 lang: ar
 permalink: /ar/owm/qwen3-revolutionary-llm-workflow-management/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

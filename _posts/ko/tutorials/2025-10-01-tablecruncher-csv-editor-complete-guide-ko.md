@@ -4,8 +4,6 @@ excerpt: "2GB, 1600만 행의 거대한 CSV 파일을 32초 만에 열 수 있�
 seo_title: "Tablecruncher CSV 에디터 완전 가이드 - 대용량 파일 처리"
 seo_description: "Tablecruncher로 대용량 CSV 파일을 효율적으로 편집하고 JavaScript 매크로로 자동화하는 방법을 단계별로 학습하세요."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - Tablecruncher
   - CSV
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/tablecruncher-csv-edit
 lang: ko
 permalink: /ko/tutorials/tablecruncher-csv-editor-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,8 +5,6 @@ seo_title: "Anthropic Economic Index Cadences 보고서 분석 - AI 경제 영�
 seo_description: "Anthropic Economic Index Cadences(2026-06) 보고서를 공식 자료 기준으로 분석합니다. 시간 단위 샘플링, 93% 대화의 산출물 분류, Claude Code 자율성 0.37점 격차, 경제지수 설문(10명 중 6명 내년 기대 상승), 그리고 ThakiCloud 쿠버네티스 멀티테넌트 AI 플랫폼의 ROI 측정 프레임워크 적용 관점."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - research
 tags:
   - anthropic
   - economic-index
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/anthropic-economic-index-cadences/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![시간의 흐름을 따라 빛의 파동이 리듬을 그리며 데이터 격자 위를 흐르는 추상 이미지](/assets/images/anthropic-economic-index-cadences-hero.png)

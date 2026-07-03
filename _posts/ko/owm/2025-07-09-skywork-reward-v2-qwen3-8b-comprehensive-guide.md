@@ -5,9 +5,6 @@ seo_title: "Skywork-Reward-V2-Qwen3-8B 리워드 모델 완벽 가이드 - Thaki
 seo_description: "Skywork-Reward-V2-Qwen3-8B 모델의 기술적 특징, 성능 벤치마크, 활용 방안을 통해 AI 정렬 기술의 최신 동향을 살펴봅니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09
-categories:
-  - owm
-  - llmops
 tags:
   - skywork
   - reward-model
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/skywork-reward-v2-qwen3-8b-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

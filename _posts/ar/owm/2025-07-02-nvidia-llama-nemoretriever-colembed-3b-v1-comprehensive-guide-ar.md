@@ -4,9 +4,6 @@ excerpt: "تحليل شامل لنموذج التضمين متعدد الوسا�
 seo_title: "دليل NVIDIA LLaMA NemoRetriever ColEmbed 3B الشامل - رائد استرجاع الوثائق البصرية - Thaki Cloud"
 seo_description: "استكشف نموذج NVIDIA llama-nemoretriever-colembed-3b-v1 الذي يحقق أداءً متقدماً على معايير ViDoRe و MTEB لاسترجاع الوثائق البصرية مع دليل تنفيذ شامل وتطبيقات عملية."
 date: 2025-07-02
-categories:
-  - owm
-  - llmops
 tags:
   - nvidia
   - llama
@@ -25,6 +22,9 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/nvidia-llama-nemoretriever-colembed-3b-v1-comprehensive-guide/"
 lang: ar
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

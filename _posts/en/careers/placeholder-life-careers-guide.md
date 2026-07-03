@@ -2,8 +2,6 @@
 title: "Thaki Cloud Life & Career Guide"
 excerpt: "Sharing Thaki Cloud's corporate culture, benefits, developer stories, recruitment information, and more."
 date: 2025-05-21
-categories:
-  - careers
 tags:
   - Company Culture
   - Careers
@@ -15,6 +13,8 @@ lang: en
 permalink: /en/careers/life-careers-guide/
 canonical_url: "https://thakicloud.github.io/en/careers/life-careers-guide/"
 published: false
+categories:
+  - careers
 ---
 
 ## [Thaki Cloud Life & Career] Post Writing Guide

@@ -5,8 +5,6 @@ seo_title: "NVIDIA DeepOps GPU Cluster Management Complete Guide - LLMOps Infras
 seo_description: "Enterprise GPU cluster infrastructure management strategy built on NVIDIA DeepOps. Covers Kubernetes, Slurm, DGX system optimization, and LLMOps environments in a comprehensive analysis."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - llmops
 tags:
   - nvidia-deepops
   - gpu-cluster
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-deepops-gpu-cluster-infrastructure-management-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 22 min

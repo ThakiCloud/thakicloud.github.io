@@ -2,9 +2,6 @@
 title: "Kotaemon RAG 시스템 완전 구축 가이드: vLLM + Kubernetes + Helm 배포"
 excerpt: "오픈소스 RAG 도구 kotaemon을 Kubernetes 환경에서 vLLM과 연동하여 완전한 RAG 시스템을 구축하는 전체 가이드"
 date: 2025-06-24
-categories: 
-  - tutorials
-  - llmops
 tags: 
   - kotaemon
   - vLLM
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ## 개요

@@ -5,9 +5,6 @@ seo_title: "Google Gemini AI Energy Consumption Disclosed: Big-Tech Transparency
 seo_description: "Detailed data from Google's first-ever public disclosure of Gemini AI energy usage: 0.24 Wh per prompt, 0.03 g CO2, a 33x efficiency improvement in one year, and an analysis of the industry impact."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - news
-  - research
 tags:
   - GoogleAI
   - Gemini
@@ -28,6 +25,9 @@ lang: en
 canonical_url: "https://thakicloud.github.io/en/news/google-gemini-ai-energy-consumption-transparency-report/"
 reading_time: true
 published: false
+categories:
+  - news
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 7 min

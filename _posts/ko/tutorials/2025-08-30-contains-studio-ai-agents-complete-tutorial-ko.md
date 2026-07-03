@@ -4,8 +4,6 @@ excerpt: "개발의 모든 측면을 가속화하는 포괄적인 AI 에이전�
 seo_title: "Contains Studio AI 에이전트 튜토리얼 - 완전 가이드 2025"
 seo_description: "Contains Studio AI 에이전트 시스템 완전 튜토리얼. 엔지니어링, 디자인, 마케팅, 운영을 다루는 30개 이상의 전문 AI 에이전트 설정, 커스터마이징, 모범 사례를 학습하세요."
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - ai-agents
   - claude-code
@@ -18,6 +16,8 @@ toc: true
 toc_label: "튜토리얼 목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/contains-studio-ai-agents-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

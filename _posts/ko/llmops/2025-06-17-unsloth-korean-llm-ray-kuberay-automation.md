@@ -2,8 +2,6 @@
 title: "Unsloth+TRL 한국어 LLM 학습 자동화 - 4편: Ray와 KubeRay를 활용한 대규모 분산 학습"
 excerpt: "Ray Train/Tune/Serve와 KubeRay를 활용한 엔터프라이즈급 분산 한국어 LLM 학습 및 오토스케일링 시스템 구축"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - Ray
   - KubeRay
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

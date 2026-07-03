@@ -2,8 +2,6 @@
 title: "NVIDIA DGX Cloud Lepton: 클라우드 인프라 회사가 알아야 할 새로운 GPU 마켓플레이스"
 excerpt: "NVIDIA가 직접 운영하는 통합 AI 플랫폼 DGX Cloud Lepton의 기술적 특징과 클라우드 인프라 회사의 참여 전략을 분석합니다."
 date: 2025-06-13
-categories: 
-  - tutorials
 tags: 
   - NVIDIA
   - DGX Cloud Lepton
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ## NVIDIA DGX Cloud Lepton 개요

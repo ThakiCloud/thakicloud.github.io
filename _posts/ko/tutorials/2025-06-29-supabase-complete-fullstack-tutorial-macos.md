@@ -5,8 +5,6 @@ seo_title: "Supabase 완전 가이드: PostgreSQL BaaS 풀스택 개발 튜토�
 seo_description: "Supabase의 모든 기능을 macOS에서 실제 테스트한 완전한 튜토리얼. PostgreSQL 데이터베이스, 인증, 실시간, 스토리지, Edge Functions, Vector DB까지 단계별 구현 가이드를 제공합니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29
-categories:
-  - tutorials
 tags:
   - Supabase
   - PostgreSQL
@@ -31,6 +29,8 @@ header:
 canonical_url: "https://thakicloud.github.io/tutorials/supabase-complete-fullstack-tutorial-macos/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

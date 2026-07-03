@@ -4,8 +4,6 @@ excerpt: "최첨단 연구 기반의 실시간 음성 전사 시스템 WhisperLi
 seo_title: "WhisperLiveKit 실시간 음성 인식 튜토리얼 - 완전 가이드 - Thaki Cloud"
 seo_description: "초저지연 실시간 음성 전사를 위한 WhisperLiveKit 구현 방법을 학습하세요. 설치, 설정, 화자 분리 등 고급 기능을 포함한 완전한 튜토리얼을 제공합니다."
 date: 2025-08-31
-categories:
-  - tutorials
 tags:
   - WhisperLiveKit
   - 실시간음성인식
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/whisperlivekit-real-ti
 lang: ko
 permalink: /ko/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

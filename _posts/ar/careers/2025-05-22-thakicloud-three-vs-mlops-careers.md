@@ -2,8 +2,6 @@
 title: "MLOps المدفوع بالـ Three Vs في ThakiCloud 🚀 — لماذا ستريد الانضمام إلينا"
 excerpt: "ثقافة MLOps القائمة على Three Vs (السرعة، التحقق، الإصدار) في ThakiCloud والحالات العملية، بالإضافة إلى معلومات التوظيف للزملاء للانضمام إلينا."
 date: 2025-05-22
-categories:
-  - careers
 tags:
   - MLOps
   - ThreeVs
@@ -14,6 +12,8 @@ author_profile: true
 lang: ar
 permalink: /ar/careers/thakicloud-three-vs-mlops-careers/
 canonical_url: "https://thakicloud.github.io/ar/careers/thakicloud-three-vs-mlops-careers/"
+categories:
+  - careers
 ---
 
 ## النمو في ThakiCloud، ومهنتك 🚀

@@ -4,8 +4,6 @@ excerpt: "Learn how to build sophisticated RAG (Retrieval-Augmented Generation) 
 seo_title: "UltraRAG Tutorial: Complete Guide to Low-Code RAG Framework - Thaki Cloud"
 seo_description: "Master UltraRAG framework with our comprehensive tutorial. Learn installation, configuration, and advanced RAG system implementation with practical examples."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - RAG
   - UltraRAG
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/ultrarag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/ultrarag-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

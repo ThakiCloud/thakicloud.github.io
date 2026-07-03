@@ -5,8 +5,6 @@ seo_title: "Context Engineering vs Prompt Engineering 논쟁 분석 - Thaki Clou
 seo_description: "Context Engineering의 등장과 프롬프트 엔지니어링의 진화, AI 개발에서 두 접근법의 상호보완적 관계를 심층 분석"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - news
 tags:
   - Context-Engineering
   - Prompt-Engineering
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/context-engineering-vs-prompt-engineering-debate/"
 reading_time: true
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

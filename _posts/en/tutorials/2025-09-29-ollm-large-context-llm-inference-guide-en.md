@@ -4,8 +4,6 @@ excerpt: "Learn how to efficiently run large-context LLMs using the oLLM library
 seo_title: "oLLM Large-Context LLM Inference Guide - 8GB GPU Optimization"
 seo_description: "Complete guide to using oLLM library for processing 100k token contexts on 8GB GPUs. Includes contract analysis, medical records processing, and log analysis with real-world examples."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - oLLM
   - LLM
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/ollm-large-context-llm
 lang: en
 permalink: /en/tutorials/ollm-large-context-llm-inference-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

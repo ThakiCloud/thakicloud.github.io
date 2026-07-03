@@ -5,8 +5,6 @@ seo_title: "User Prompt Adaptation Patterns as Generative AI Models Improve - Th
 seo_description: "A study of 1,893 participants shows how DALL-E users co-evolved their prompting strategies alongside model upgrades, with user adaptation contributing as much as model improvement to final outcomes."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - research
 tags:
   - AI연구
   - 프롬프트엔지니어링
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/en/research/generative-models-promp
 reading_time: true
 lang: en
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 8 min

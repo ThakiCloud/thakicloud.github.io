@@ -4,8 +4,6 @@ excerpt: "أتقن فن تصميم الحلقات الوكيلة الفعالة 
 seo_title: "دليل الحلقات الوكيلة: دليل تصميم وكلاء الترميز بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل لتصميم الحلقات الوكيلة لوكلاء الترميز بالذكاء الاصطناعي. تعلم وضع YOLO واختيار الأدوات وممارسات الأمان وأمثلة التنفيذ العملية."
 date: 2025-10-06
-categories:
-  - tutorials
 tags:
   - ai-agents
   - coding-agents
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/designing-agentic-loops-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/designing-agentic-loops-complete-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

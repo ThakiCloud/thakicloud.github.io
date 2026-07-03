@@ -5,9 +5,6 @@ seo_title: "ccflare Claude API 프록시 튜토리얼 - Rate Limit 해결 가이
 seo_description: "ccflare로 Claude API rate limit 문제 해결하기. 다중 계정 로드밸런싱, 실시간 모니터링, 디버깅 기능까지 완전 튜토리얼."
 date: 2025-07-31
 last_modified_at: 2025-07-31
-categories:
-  - tutorials
-  - llmops
 tags:
   - ccflare
   - Claude-API
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ccflare-claude-api-proxy-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

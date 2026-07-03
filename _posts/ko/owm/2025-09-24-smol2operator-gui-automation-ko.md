@@ -4,8 +4,6 @@ excerpt: "경량 비전-언어 모델을 GUI 자동화 에이전트로 변환하
 seo_title: "Smol2Operator GUI 에이전트 훈련: 컴퓨터 사용 자동화 가이드 - Thaki Cloud"
 seo_description: "HuggingFace의 Smol2Operator가 통합 액션 공간과 에이전틱 추론 능력을 사용한 혁신적인 2단계 훈련을 통해 경량 VLM을 GUI 자동화 에이전트로 변환하는 방법을 알아보세요."
 date: 2025-09-24
-categories:
-  - owm
 tags:
   - gui-자동화
   - 비전-언어-모델
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/owm/smol2operator-gui-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/smol2operator-gui-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

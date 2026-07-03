@@ -1,8 +1,6 @@
 ---
 title: "DeepSeek-R1-0528 + Ollama로 로컬 AI 구축하기: 완벽 가이드"
 date: 2024-05-31
-categories: 
-  - tutorials
 tags: 
   - deepseek
   - ollama
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ## 개요

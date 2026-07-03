@@ -4,8 +4,6 @@ excerpt: "Discover Operit AI, the most comprehensive mobile AI assistant with Ub
 seo_title: "Operit AI Mobile Assistant Tutorial - Complete Setup Guide"
 seo_description: "Learn how to set up and use Operit AI, the most powerful Android AI agent with Ubuntu VM, 40+ tools, and advanced automation capabilities."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - operit-ai
   - android-ai
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/operit-ai-complete-mob
 lang: en
 permalink: /en/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

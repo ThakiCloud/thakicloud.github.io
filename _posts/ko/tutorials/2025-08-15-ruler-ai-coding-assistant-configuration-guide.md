@@ -5,8 +5,6 @@ seo_title: "Ruler AI 코딩 어시스턴트 통합 관리 가이드 - macOS 테�
 seo_description: "Ruler로 GitHub Copilot, Cursor, Claude, Aider 등 AI 코딩 도구들을 통합 관리하는 방법. 설치부터 실전 활용까지 macOS 테스트 예제 포함"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
 tags:
   - ruler
   - ai-coding-assistant
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ruler-ai-coding-assistant-configuration-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

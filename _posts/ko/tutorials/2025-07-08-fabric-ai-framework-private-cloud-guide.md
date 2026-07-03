@@ -5,8 +5,6 @@ seo_title: "Fabric AI 프레임워크 Private Cloud 활용 가이드 - Thaki Clo
 seo_description: "Fabric CLI 도구를 사용한 AI 플랫폼 개발 자동화, 패턴 기반 워크플로우, Private Cloud 배포 가이드"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - tutorials
 tags:
   - Fabric
   - AI-Framework
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/fabric-ai-framework-private-cloud-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

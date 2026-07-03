@@ -2,8 +2,6 @@
 title: "AI의 대부 제프리 힌튼이 말하는 인공지능의 위험과 미래"
 excerpt: "노벨상 수상자 제프리 힌튼의 심층 인터뷰: 초지능 AI의 실존적 위험부터 일자리 위협, 사이버 공격, 자율 무기까지 AI 안전성에 대한 모든 것"
 date: 2025-06-17
-categories:
-  - news
 tags:
   - AI Safety
   - Geoffrey Hinton
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: 핵심 내용
 published: false
+categories:
+  - news
 ---
 
 {% include video id="giT0ytynSqg" provider="youtube" %}

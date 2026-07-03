@@ -5,8 +5,6 @@ seo_title: "llm-d Distributed Inference and GPU+NPU/XPU Heterogeneous Architectu
 seo_description: "How llm-d's KV-cache routing and prefill/decode disaggregation work, and how to run GPUs alongside diverse NPUs and XPUs (Rebellions, Furiosa, Intel Gaudi, TPU) on a vendor-neutral sovereign AI inference reference architecture."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - llm-d
   - distributed-inference
@@ -25,6 +23,8 @@ header:
   teaser: /assets/images/llm-d-heterogeneous-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - llmops
 ---
 
 ![Heterogeneous cluster where a GPU pool and NPU pool jointly serve inference workloads](/assets/images/llm-d-heterogeneous-hero.png)

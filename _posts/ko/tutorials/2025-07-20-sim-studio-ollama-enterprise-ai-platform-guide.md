@@ -5,9 +5,6 @@ seo_title: "Sim Studio Ollama 엔터프라이즈 AI 플랫폼 구축 가이드 -
 seo_description: "Sim Studio와 Ollama를 활용한 클라우드 AI 플랫폼 구축 방법과 비즈니스 활용 사례, 비용 절감 전략, 엔터프라이즈 배포 가이드를 상세히 제공합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - tutorials
-  - llmops
 tags:
   - SimStudio
   - Ollama
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/sim-studio-ollama-enterprise-ai-platform-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

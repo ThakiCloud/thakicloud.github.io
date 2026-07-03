@@ -7,8 +7,6 @@ lang: en
 canonical_url: https://thakicloud.github.io/en/agentops/praxis-agent-native-cloud/
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - agent-native-cloud
   - praxis
@@ -24,6 +22,9 @@ header:
   teaser: /assets/images/praxis-architecture-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
+published: false
 ---
 
 ![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top](/assets/images/praxis-architecture-hero.png)

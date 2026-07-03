@@ -4,8 +4,6 @@ excerpt: "135M 파라미터로 구현된 TRLM-135M은 소형 모델의 단계별
 seo_title: "TRLM-135M 소형 추론 언어 모델 가이드 - Thaki Cloud"
 seo_description: "135M 파라미터 TRLM-135M 모델의 3단계 학습 파이프라인과 추론 능력 향상 방법을 알아보세요. 소형 모델의 추론 학습 연구 성과를 확인할 수 있습니다."
 date: 2025-09-29
-categories:
-  - owm
 tags:
   - TRLM
   - 소형모델
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/owm/tiny-reasoning-language-mode
 lang: ko
 permalink: /ko/owm/tiny-reasoning-language-model-trl-135m-guide/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

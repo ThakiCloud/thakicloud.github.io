@@ -2,9 +2,6 @@
 title: "LLM 3단계 튜닝 완벽 가이드: CPT → SFT → DPO 파이프라인"
 excerpt: "폭넓게 적응(CPT) → 정확히 가르치기(SFT) → 사람 취향 맞추기(DPO)의 3단계 순차 튜닝으로 똑똑하면서도 인간 친화적인 LLM을 만드는 검증된 전략을 알아봅니다."
 date: 2025-06-17
-categories:
-  - llmops
-  - tutorials
 tags:
   - LLM
   - fine-tuning
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "3단계 LLM 튜닝 가이드"
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ## 핵심 요약

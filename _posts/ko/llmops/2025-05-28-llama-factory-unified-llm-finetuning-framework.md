@@ -2,8 +2,6 @@
 title: "LLaMA Factory: 100+ 모델을 손쉽게 파인튜닝하는 통합 LLM 프레임워크"
 excerpt: "Llama 3, Qwen 3, DeepSeek 등 100+ 최신 LLM을 코드 한 줄로 파인튜닝. LoRA/QLoRA, FSDP, Flash-Attention 2 등 최신 기법 통합한 오픈소스 프레임워크"
 date: 2025-05-28
-categories:
-  - llmops
 tags:
   - LLaMAFactory
   - LoRA
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "LLaMA Factory 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** LLaMA Factory는 Llama 3, Qwen 3, DeepSeek, Mistral 등 100종 이상의 최신 대형 언어·멀티모달 모델을 **코드 한 줄**로 학습·배포할 수 있는 오픈소스 프레임워크다. LoRA/QLoRA, FSDP, Flash‑Attention 2, vLLM, PPO/DPO/KTO/ORPO 등 최신 기법을 통합하고, CLI·Gradio 기반 Web UI를 제공해 연구·프로덕션 경계를 크게 좁혀준다.

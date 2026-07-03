@@ -7,8 +7,6 @@ date: 2025-09-01
 lang: ko
 permalink: /ko/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/
 canonical_url: "https://thakicloud.github.io/ko/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/"
-categories:
-  - owm
 tags:
   - 에이전틱-인텔리전스
   - 믹스처-오브-익스퍼츠
@@ -20,6 +18,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

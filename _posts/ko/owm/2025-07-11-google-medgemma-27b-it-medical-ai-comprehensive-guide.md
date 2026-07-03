@@ -5,8 +5,6 @@ seo_title: "Google MedGemma-27B-IT 의료 AI 모델 완전 가이드 - Thaki Clo
 seo_description: "Google MedGemma-27B-IT 의료 특화 AI 모델의 멀티모달 기능, 실제 활용 사례, 그리고 실습 가이드를 통해 의료 현장의 혁신적 변화를 소개합니다."
 date: 2025-07-11
 last_modified_at: 2025-07-11
-categories:
-  - owm
 tags:
   - google
   - medgemma
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/google-medgemma-27b-it-medical-ai-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

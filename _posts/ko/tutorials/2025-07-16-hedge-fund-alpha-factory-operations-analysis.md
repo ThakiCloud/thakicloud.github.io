@@ -5,8 +5,6 @@ seo_title: "헤지펀드 알파 공장 운영 전략 - Renaissance Citadel Two S
 seo_description: "Renaissance Technologies, Citadel, Two Sigma 등 탑티어 헤지펀드 6곳의 알파 공장 운영 방식을 상세 분석. 수천 개 모델을 어떻게 집계해서 초과수익을 만드는지 완전 해부"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - hedge-fund
   - alpha-factory
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/hedge-fund-alpha-factory-operations-analysis/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

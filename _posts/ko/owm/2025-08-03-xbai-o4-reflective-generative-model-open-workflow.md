@@ -5,9 +5,6 @@ seo_title: "XBai o4 오픈소스 추론 모델 완전 가이드 - Reflective Gen
 seo_description: "MetaStone-AI XBai o4의 Reflective Generative Form 기술, 성능 벤치마크, 설치 방법까지 오픈 워크플로우 관리 관점에서 종합 분석합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - owm
-  - llmops
 tags:
   - XBai-o4
   - MetaStone-AI
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/xbai-o4-reflective-generative-model-open-workflow/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

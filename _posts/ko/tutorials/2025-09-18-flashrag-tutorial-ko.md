@@ -4,8 +4,6 @@ excerpt: "FlashRAG의 설치부터 고급 활용까지, 검색 증강 생성 연
 seo_title: "FlashRAG 튜토리얼: RAG 연구 툴킷 완벽 가이드 - Thaki Cloud"
 seo_description: "FlashRAG로 효율적인 RAG 연구하기. 설치, 설정, 데이터셋 처리, 실전 예제까지 포함한 완벽한 튜토리얼 가이드."
 date: 2025-09-18
-categories:
-  - tutorials
 tags:
   - FlashRAG
   - RAG
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/flashrag-tutorial/"
 lang: ko
 permalink: /ko/tutorials/flashrag-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

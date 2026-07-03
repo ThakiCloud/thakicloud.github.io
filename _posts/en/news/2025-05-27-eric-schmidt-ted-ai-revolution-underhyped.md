@@ -5,8 +5,6 @@ date: 2025-05-27
 lang: en
 permalink: /en/news/eric-schmidt-ted-ai-revolution-underhyped/
 canonical_url: "https://thakicloud.github.io/en/news/eric-schmidt-ted-ai-revolution-underhyped/"
-categories:
-  - news
 tags:
   - Tech News
   - AI
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
 ---
 
 {% include video id="id4YRO7G0wE" provider="youtube" %}

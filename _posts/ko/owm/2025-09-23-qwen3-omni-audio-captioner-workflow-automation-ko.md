@@ -4,8 +4,6 @@ excerpt: "Qwen3-Omni-30B-A3B-Captioner의 고급 멀티모달 기능을 통해 �
 seo_title: "Qwen3-Omni 오디오 캡셔너: 기업 워크플로우 자동화 가이드 - Thaki Cloud"
 seo_description: "자동화된 오디오 처리 워크플로우를 위한 Qwen3-Omni-30B-A3B-Captioner 구현 종합 가이드. 배포 전략, 통합 패턴, 기업 활용 사례를 학습하세요."
 date: 2025-09-23
-categories:
-  - owm
 tags:
   - 오디오처리
   - 워크플로우자동화
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-omni-audio-captioner-w
 lang: ko
 permalink: /ko/owm/qwen3-omni-audio-captioner-workflow-automation/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

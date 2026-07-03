@@ -5,8 +5,6 @@ seo_title: "دليل تطبيق RAG LLMOps في الإنتاج - نظام RAG ا
 seo_description: "دليل موجّه للممارسين يشمل تصميم بنية نظام RAG ونشره في الإنتاج وتحسين أدائه من منظور LLMOps. استراتيجيات تنفيذ RAG في البيئات المؤسسية وأفضل الممارسات موضحة بالتفصيل."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - llmops
 tags:
   - RAG
   - LLMOps
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/rag-llmops-production-imp
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 22 دقيقة

@@ -4,8 +4,6 @@ excerpt: "دليل تفصيلي خطوة بخطوة لتثبيت وتكوين م
 seo_title: "دليل تثبيت PrestaShop 2025 - دليل الإعداد الشامل - Thaki Cloud"
 seo_description: "تعلم كيفية تثبيت منصة PrestaShop 9.0 للتجارة الإلكترونية خطوة بخطوة. يتضمن إعداد Docker وتكوين قاعدة البيانات وأفضل الممارسات لتطوير المتاجر الإلكترونية."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - prestashop
   - التجارة الإلكترونية
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/prestashop-complete-setup-installation-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/prestashop-complete-setup-installation-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

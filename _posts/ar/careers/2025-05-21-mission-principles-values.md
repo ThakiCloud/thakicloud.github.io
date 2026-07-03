@@ -2,8 +2,6 @@
 title: "[Thaki Cloud الحياة والمهنة] المهمة، المبادئ، القيم"
 excerpt: "مشاركة مهمة ومبادئ وقيم Thaki Cloud."
 date: 2025-05-21
-categories:
-  - careers
 tags:
   - ثقافة الشركة
   - المهن
@@ -14,6 +12,8 @@ author_profile: true
 lang: ar
 permalink: /ar/careers/mission-principles-values/
 canonical_url: "https://thakicloud.github.io/ar/careers/mission-principles-values/"
+categories:
+  - careers
 --- 
 
 تهدف Thaki Cloud إلى المساهمة في المجتمع من خلال تمكين الناس من الاستفادة بشكل مفيد من الابتكارات التي تجلبها التكنولوجيا.

@@ -4,8 +4,6 @@ excerpt: "TRLM-135M, a 135M parameter model, represents a breakthrough in step-b
 seo_title: "TRLM-135M Tiny Reasoning Language Model Guide - Thaki Cloud"
 seo_description: "Discover the 3-stage training pipeline and reasoning capabilities of the 135M parameter TRLM-135M model. Explore how small models can achieve advanced reasoning through innovative training methods."
 date: 2025-09-29
-categories:
-  - owm
 tags:
   - TRLM
   - SmallModels
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/owm/tiny-reasoning-language-mode
 lang: en
 permalink: /en/owm/tiny-reasoning-language-model-trl-135m-guide/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 8 minutes

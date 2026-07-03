@@ -4,8 +4,6 @@ excerpt: "اتقن هندسة الأوامر واحصل على مخرجات من
 seo_title: "دورة Promptify: هندسة الأوامر للحصول على مخرجات منظمة من نماذج اللغة الكبيرة"
 seo_description: "تعلم كيفية استخدام Promptify لهندسة الأوامر مع GPT ونماذج اللغة الكبيرة الأخرى. احصل على مخرجات منظمة لـ NER والتصنيف والأسئلة والأجوبة ومهام معالجة اللغة الطبيعية الأخرى بدون بيانات تدريب."
 date: 2025-09-05
-categories:
-  - tutorials
 tags:
   - هندسة-الأوامر
   - نماذج-اللغة-الكبيرة
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/promptify-prompt-engineering-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/promptify-prompt-engineering-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

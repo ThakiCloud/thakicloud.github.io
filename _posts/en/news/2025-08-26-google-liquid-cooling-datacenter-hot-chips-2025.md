@@ -4,8 +4,6 @@ excerpt: "Google showcases datacenter-scale liquid cooling innovation at Hot Chi
 seo_title: "Google Liquid Cooling Technology Hot Chips 2025 Datacenter Innovation - Thaki Cloud"
 seo_description: "Explore Google's groundbreaking liquid cooling technology presented at Hot Chips 2025, featuring TPU cooling systems, maintenance protocols, and implications for GPU cloud services."
 date: 2025-08-26
-categories:
-  - news
 tags:
   - google
   - liquid-cooling
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/news/google-liquid-cooling-datacenter-hot-chips-2025/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

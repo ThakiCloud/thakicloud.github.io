@@ -5,8 +5,6 @@ seo_title: "Yank Note 마크다운 에디터 완전 가이드 - VSCode 경험의
 seo_description: "Yank Note의 설치부터 고급 기능까지. AI 코파일럿, 버전 관리, 플러그인 개발, 문서 암호화, 코드 실행 등 모든 기능을 상세하게 설명하는 완전 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
 tags:
   - yank-note
   - markdown-editor
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/yank-note-markdown-editor-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

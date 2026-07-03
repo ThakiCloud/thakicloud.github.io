@@ -4,8 +4,6 @@ excerpt: "90분 길이의 다화자 대화를 표현력 풍부하고 자연스�
 seo_title: "Microsoft VibeVoice TTS 모델 완전 가이드 - 다화자 대화형 AI 음성 합성"
 seo_description: "최대 4명의 화자로 90분까지 대화를 생성할 수 있는 Microsoft VibeVoice의 고급 텍스트-음성 변환 모델과 크로스 언어 기능, 자연스러운 화자 전환에 대해 알아보세요."
 date: 2025-08-26
-categories:
-  - owm
 tags:
   - TTS
   - 텍스트음성변환
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/owm/microsoft-vibevoice-frontier-conversational-tts-guide/
 canonical_url: "https://thakicloud.github.io/ko/owm/microsoft-vibevoice-frontier-conversational-tts-guide/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -4,8 +4,6 @@ excerpt: "Explore Liquid AI's LFM2-8B-A1B, a groundbreaking hybrid MoE model wit
 seo_title: "Liquid AI LFM2-8B-A1B Edge AI Model Review - Thaki Cloud"
 seo_description: "Comprehensive review of Liquid AI's LFM2-8B-A1B hybrid MoE model featuring 8.3B parameters, edge deployment capabilities, and superior performance on mobile devices."
 date: 2025-10-08
-categories:
-  - owm
 tags:
   - liquid-ai
   - lfm2
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/
 canonical_url: "https://thakicloud.github.io/en/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

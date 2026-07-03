@@ -2,8 +2,6 @@
 title: "Agents Last Exam: 컴퓨터 사용 에이전트 평가 기준이 왜 153개 장기 과제로 진화했는가"
 excerpt: "agents-last-exam은 153개 장기 과제로 컴퓨터 사용 에이전트를 평가하는 벤치마크 데이터셋이다. Business, Computing, Engineering, Legal 등 5개 도메인, CC-BY-4.0 라이선스. 자체 모델 벤치마킹 파이프라인 구축 가이드."
 date: 2026-06-20
-categories:
-  - datasets
 tags:
   - benchmark
   - computer-use
@@ -18,6 +16,8 @@ toc: true
 toc_label: "Agents Last Exam 가이드"
 reading_time: true
 canonical_url: https://thakicloud.github.io/datasets/agents-last-exam-benchmark/
+categories:
+  - datasets
 ---
 
 ![Agents Last Exam 에이전트 평가 개념도](/assets/images/agents-last-exam-benchmark-hero.png)

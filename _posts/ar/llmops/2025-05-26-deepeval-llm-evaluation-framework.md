@@ -4,8 +4,6 @@ excerpt: "DeepEval يحدث ثورة في تقييم أنظمة النماذج �
 seo_title: "إطار عمل DeepEval لتقييم النماذج اللغوية - دليل شامل لاختبار الذكاء الاصطناعي"
 seo_description: "اكتشف DeepEval، الإطار القوي مفتوح المصدر لتقييم تطبيقات النماذج اللغوية الكبيرة مع مقاييس مدمجة ومعايير وقدرات اختبار جاهزة للإنتاج"
 date: 2025-05-26
-categories:
-  - llmops
 tags:
   - MLOps
   - LLMOps
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/llmops/deepeval-llm-evaluation-framework/
 canonical_url: "https://thakicloud.github.io/ar/llmops/deepeval-llm-evaluation-framework/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

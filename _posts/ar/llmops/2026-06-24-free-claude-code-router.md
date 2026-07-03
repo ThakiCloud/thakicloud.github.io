@@ -5,8 +5,6 @@ seo_title: "توجيه free-claude-code ذاتي الاستضافة - بروكس
 seo_description: "توثيق عملي لتوجيه Claude Code إلى نماذج مستضافة ذاتياً مثل Ollama وvLLM باستخدام free-claude-code. يشمل بنية بروكسي FastAPI المتوافقة مع Anthropic، وقياسات تأخر Ollama المحلية، ومخاطر النشر من اشتراط Python 3.14 الصارم، محللةً من منظور بيئة Kubernetes في ThakiCloud."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - free-claude-code
   - Claude Code
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/llmops/free-claude-code-router/"
+categories:
+  - llmops
 ---
 
 ## نظرة عامة

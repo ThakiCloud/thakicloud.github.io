@@ -4,8 +4,6 @@ excerpt: "Financial experts warn that AI data centers face massive annual deprec
 seo_title: "AI Data Center Financial Crisis: $40B Annual Loss Problem - Thaki Cloud"
 seo_description: "Analysis reveals AI data centers will suffer $40 billion annual depreciation while generating only $15-20 billion revenue, creating an unsustainable financial bubble."
 date: 2025-09-01
-categories:
-  - news
 tags:
   - ai-data-centers
   - financial-bubble
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/news/ai-data-centers-financial-bubble-crisis/
 canonical_url: "https://thakicloud.github.io/en/news/ai-data-centers-financial-bubble-crisis/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Reading Time**: 6 minutes

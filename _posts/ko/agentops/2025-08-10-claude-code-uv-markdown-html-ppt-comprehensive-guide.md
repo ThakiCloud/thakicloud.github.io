@@ -5,9 +5,6 @@ seo_title: "Claude Code UV 패키지 관리자 HTML PPT 제작 가이드 - Agent
 seo_description: "Claude Code로 UV 패키지 관리자 사용법을 조사하고 Markdown 튜토리얼 작성 후 HTML PPT로 변환하는 실전 가이드. Reveal.js, Marp, Slidev 비교와 GenSpark, SkyWork 기반 디자인 팁 포함"
 date: 2025-08-10
 last_modified_at: 2025-08-10
-categories:
-  - agentops
-  - tutorials
 tags:
   - claude-code
   - uv-package-manager
@@ -26,6 +23,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+  - tutorials
+published: false
 ---
 
 ![핵심 개념 일러스트](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)

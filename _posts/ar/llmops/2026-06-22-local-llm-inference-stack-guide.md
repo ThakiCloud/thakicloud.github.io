@@ -5,8 +5,6 @@ seo_title: "تحليل دليل محركات الاستدلال المحلي ل�
 seo_description: "دليل Ahmad Osman للاستدلال المحلي، الاختيار حسب السيناريو عبر llama.cpp وMLX وvLLM وSGLang وTensorRT-LLM وNVIDIA Dynamo، واقتصاديات الخدمة داخل المؤسسة من منظور ThakiCloud."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - local-llm
   - inference-engine
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/local-llm-inference-stack-guide/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 أول سؤال يواجه من يبدأ بالاستدلال المحلي لنماذج LLM هو "أي محرّك يجب أن أستخدم؟" تنهمر أسماء مثل llama.cpp وvLLM وSGLang وTensorRT-LLM، لكن لا يوجد توجيه واضح حول الأساس الذي يُبنى عليه الاختيار. نشر Ahmad Osman (@TheAhmadOsman)، مشرف GPU في r/LocalLLaMA، مؤخراً دليلاً شاملاً مجانياً يسدّ هذه الفجوة.

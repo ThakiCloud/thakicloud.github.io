@@ -4,8 +4,6 @@ excerpt: "While technical excellence is the foundation of any career, true advan
 seo_title: "Career Growth Strategy: Beyond Technical Skills - Thaki Cloud"
 seo_description: "Discover why technical competence alone isn't enough for career advancement and learn the four essential disciplines that distinguish high-performing professionals."
 date: 2025-09-11
-categories:
-  - careers
 tags:
   - career-development
   - professional-growth
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/careers/beyond-technical-skills-career-growth-strategy/
 canonical_url: "https://thakicloud.github.io/en/careers/beyond-technical-skills-career-growth-strategy/"
+categories:
+  - careers
 ---
 
 ⏱️ **Estimated reading time**: 8 minutes

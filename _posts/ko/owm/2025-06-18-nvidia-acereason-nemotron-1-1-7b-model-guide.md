@@ -2,9 +2,6 @@
 title: "NVIDIA AceReason-Nemotron-1.1-7B: SFT+RL 시너지로 진화한 수학·코딩 추론 모델"
 excerpt: "Qwen2.5-Math-7B 기반 NVIDIA의 최신 추론 모델 - SFT와 RL의 완벽한 결합으로 AIME 2024/2025, LiveCodeBench에서 기록적 성능 달성"
 date: 2025-06-18
-categories: 
-  - owm
-  - llmops
 tags: 
   - nvidia
   - acereason
@@ -21,6 +18,9 @@ author_profile: true
 toc: true
 toc_label: "AceReason-Nemotron-1.1-7B 가이드"
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ seo_title: "WatchYourLAN 네트워크 스캐너 Go Docker 완벽 튜토리얼 - 
 seo_description: "Go와 TypeScript로 구축된 WatchYourLAN 네트워크 IP 스캐너의 설치, 설정, 모니터링, Grafana 연동을 macOS 환경에서 실습과 함께 상세히 알아봅니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06
-categories:
-  - tutorials
 tags:
   - watchyourlan
   - network-scanner
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/watchyourlan-network-scanner-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

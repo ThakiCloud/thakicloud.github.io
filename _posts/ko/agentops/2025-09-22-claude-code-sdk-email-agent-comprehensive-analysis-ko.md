@@ -4,8 +4,6 @@ excerpt: "IMAP 이메일 어시스턴트, AI 기반 검색, 자연어 처리, �
 seo_title: "Claude Code SDK 이메일 에이전트 분석 - AI 이메일 어시스턴트 튜토리얼"
 seo_description: "Anthropic의 Claude Code SDK 이메일 에이전트 데모 심층 리뷰: IMAP 통합, AI 기반 검색, WebSocket 스트리밍, SQLite 캐싱 구현 분석."
 date: 2025-09-22
-categories:
-  - agentops
 tags:
   - claude-code-sdk
   - 이메일-자동화
@@ -21,6 +19,9 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/agentops/claude-code-sdk-email-agent-analysis/
 canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-sdk-email-agent-analysis/"
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

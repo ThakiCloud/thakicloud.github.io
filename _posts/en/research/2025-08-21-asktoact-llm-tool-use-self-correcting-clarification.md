@@ -5,8 +5,6 @@ seo_title: "AskToAct: Self-Correcting Clarification Framework for LLM Tool Use -
 seo_description: "A detailed analysis of AskToAct's core mechanisms, dataset construction methodology, and training process for handling underspecified queries in real-world LLM tool-use scenarios."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - LLM
   - 도구학습
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/en/research/asktoact-llm-tool-use-s
 reading_time: true
 lang: en
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 12 min

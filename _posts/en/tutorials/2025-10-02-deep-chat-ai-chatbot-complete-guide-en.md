@@ -7,8 +7,6 @@ date: 2025-10-02
 lang: en
 permalink: /en/tutorials/deep-chat-ai-chatbot-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/deep-chat-ai-chatbot-complete-guide/"
-categories:
-  - tutorials
 tags:
   - deep-chat
   - ai-chatbot
@@ -22,6 +20,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

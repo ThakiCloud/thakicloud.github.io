@@ -5,8 +5,6 @@ seo_title: "LLM Cost Optimization in Practice: How Model Routing and Guardrails 
 seo_description: "We disclose a $705 single-day Claude Opus overuse incident and a one-month $4,691 audit. We explain with numbers and code the cost control mechanisms we actually run in production: model routing, retro-based automatic escalation, cron offloading, and context hygiene."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - cost-optimization
   - llm-routing
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/llm-cost-routing-guardrails/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![LLM Cost Routing Guardrails in Practice](/assets/images/llm-cost-routing-guardrails-hero.png)

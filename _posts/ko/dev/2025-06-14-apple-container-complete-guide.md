@@ -2,9 +2,6 @@
 title: "Apple Container 완전 가이드: Apple Silicon 최적화 컨테이너 도구"
 excerpt: "Swift로 작성된 Apple의 네이티브 컨테이너 도구로 경량 가상화와 OCI 호환성을 제공하는 완벽한 가이드"
 date: 2025-06-14
-categories: 
-  - dev
-  - tutorials
 tags: 
   - apple-container
   - apple-silicon
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## 개요

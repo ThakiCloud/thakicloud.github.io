@@ -4,9 +4,6 @@ excerpt: "تحليل شامل لنموذج الاستدلال الأحدث من 
 seo_title: "دليل نموذج NVIDIA AceReason-Nemotron-1.1-7B للاستدلال الرياضي - Thaki Cloud"
 seo_description: "استكشف نموذج NVIDIA AceReason-Nemotron-1.1-7B الذي يحقق أداءً متقدماً على AIME و LiveCodeBench من خلال منهجية تدريب SFT+RL المتقدمة مع دليل تنفيذ شامل."
 date: 2025-06-18
-categories: 
-  - owm
-  - llmops
 tags: 
   - nvidia
   - acereason
@@ -25,6 +22,9 @@ toc_label: "دليل AceReason-Nemotron-1.1-7B"
 canonical_url: "https://thakicloud.github.io/ar/owm/nvidia-acereason-nemotron-1-1-7b-model-guide/"
 lang: ar
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

@@ -4,8 +4,6 @@ excerpt: "A comprehensive guide to building high-performance tunnel proxy pools 
 seo_title: "ProxyCat Tunnel Proxy Pool Complete Guide - Thaki Cloud"
 seo_description: "Learn how to build and operate high-performance tunnel proxy pools using ProxyCat with step-by-step instructions and best practices."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - ProxyCat
   - ProxyPool
@@ -17,6 +15,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

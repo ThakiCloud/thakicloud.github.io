@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 Reasoning Token Economics and On-Premises Self-Hosting Analy
 seo_description: "A breakdown of GLM-5.2 (744B MoE, 1M context, MIT) token usage by effort level, Z.ai API pricing, and export-control context, analyzed through the lens of ThakiCloud's K8s, Kueue, and vLLM multi-tenant serving stack. Public figures show how verbose reasoning traces change the self-hosting cost calculus."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - llmops
 tags:
   - glm-5
   - reasoning-model
@@ -24,6 +22,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 When a model needs 220,000 tokens just to think through a Rubik's cube, who pays for that? That is the question Matt Pocock (@mattpocockuk) surfaced while using his `/teach` skill and `pi` to have GLM-5.2 work through a cube solution. Even at the lowest effort setting (High), three turns produced roughly 220,000 tokens of thinking traces. A more capable reasoning model means a model that thinks longer, and a model that thinks longer means someone receives a larger invoice.

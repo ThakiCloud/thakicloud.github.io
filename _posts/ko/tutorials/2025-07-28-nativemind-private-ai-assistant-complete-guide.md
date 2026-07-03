@@ -5,8 +5,6 @@ seo_title: "NativeMind 완벽 가이드 - 프라이빗 온디바이스 AI 브라
 seo_description: "NativeMind 설치, 설정, Ollama 연동, WebLLM 활용까지 완전 프라이빗 온디바이스 AI 어시스턴트 브라우저 확장 완전 가이드"
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - tutorials
 tags:
   - nativemind
   - ai-assistant
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/nativemind-private-ai-assistant-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

@@ -4,9 +4,6 @@ excerpt: "Python 코드로 클라우드 아키텍처를 그릴 수 있는 Diagra
 seo_title: "Diagrams 쿠버네티스 Agentic RAG 아키텍처 가이드 - Thaki Cloud"
 seo_description: "Python Diagrams 라이브러리로 쿠버네티스 환경의 Agentic RAG 시스템 아키텍처를 설계하는 방법. 실전 예제 코드와 함께 Diagram as Code 개념을 마스터하세요."
 date: 2025-06-28
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Diagrams
   - Kubernetes
@@ -21,6 +18,9 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/diagrams-kubernetes-agentic-rag-architecture-guide/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## 들어가며

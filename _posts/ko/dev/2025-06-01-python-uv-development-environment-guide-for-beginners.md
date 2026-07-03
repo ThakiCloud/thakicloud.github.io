@@ -1,8 +1,6 @@
 ---
 title: "신입 개발자를 위한 Python uv 완벽 가이드: 현대적인 패키지 관리의 시작"
 date: 2025-06-01
-categories: 
-  - dev
 tags: 
   - python
   - uv
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
 ---
 
 Python 개발을 시작하는 신입 개발자라면 패키지 관리와 가상환경 설정에 대해 고민해본 적이 있을 것입니다. 기존의 `pip`, `virtualenv`, `conda` 등 다양한 도구들이 있지만, 최근 주목받고 있는 **uv**는 이 모든 것을 하나로 통합한 혁신적인 도구입니다. 이번 포스트에서는 uv가 무엇인지, 왜 사용해야 하는지, 그리고 실제로 어떻게 사용하는지를 신입 개발자 관점에서 상세히 알아보겠습니다.

@@ -2,9 +2,6 @@
 title: "Chain-of-Thought 추론 모델 평가: 실전 가이드와 최적화 전략"
 excerpt: "DeepSeek-R1, Qwen-Reasoner 등 최신 추론 모델의 평가 과제와 LM-Eval-Harness, Evalchemy를 활용한 체계적 평가 방법론을 소개합니다."
 date: 2025-06-15
-categories: 
-  - llmops
-  - dev
 tags: 
   - chain-of-thought
   - model-evaluation
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 개요

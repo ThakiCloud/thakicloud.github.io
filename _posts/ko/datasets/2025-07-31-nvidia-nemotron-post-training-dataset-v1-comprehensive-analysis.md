@@ -5,9 +5,6 @@ seo_title: "NVIDIA Nemotron Post-Training Dataset v1 완전 분석 - Thaki Cloud
 seo_description: "NVIDIA Nemotron Post-Training Dataset v1의 구조, 카테고리별 데이터 분포, 사용법을 상세히 분석한 가이드. 25.6M 샘플의 고품질 합성 데이터셋 활용 방법까지."
 date: 2025-07-31
 last_modified_at: 2025-07-31
-categories:
-  - datasets
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/nvidia-nemotron-post-training-dataset-v1-comprehensive-analysis/"
 reading_time: true
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

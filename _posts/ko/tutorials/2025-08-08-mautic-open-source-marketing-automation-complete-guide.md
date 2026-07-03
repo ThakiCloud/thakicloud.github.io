@@ -5,9 +5,6 @@ seo_title: "Mautic 오픈소스 마케팅 자동화 완벽 설치 가이드 - �
 seo_description: "Mautic 오픈소스 마케팅 자동화 플랫폼 설치부터 고급 활용까지 완벽 가이드. Docker, AWS 배포, 이메일 캠페인, 리드 스코링, API 연동 등 실무 중심의 튜토리얼을 제공합니다."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - tutorials
-  - dev
 tags:
   - mautic
   - marketing-automation
@@ -28,6 +25,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/mautic-open-source-marketing-automation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

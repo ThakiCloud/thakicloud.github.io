@@ -5,8 +5,6 @@ seo_title: "أتمتة إدارة مشاريع GitHub CLI باستخدام Proje
 seo_description: "دليل عملي لأتمتة إدارة المشاريع باستخدام GitHub CLI وGitHub Projects v2. يغطي إدارة حقول الإصدار وتعيين المهام وإعداد التقارير التلقائية."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - project-management
@@ -21,7 +19,9 @@ author_profile: true
 toc: true
 toc_label: "أتمتة إدارة المشاريع"
 canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-project-management-automation/"
-published: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق

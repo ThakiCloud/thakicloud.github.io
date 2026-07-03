@@ -5,9 +5,6 @@ seo_title: "Magic AI 생산성 플랫폼 완전 설치 가이드 - Docker 기반
 seo_description: "Magic AI 플랫폼 설치부터 활용까지 완전 가이드. Super Magic AI Agent, Magic Flow 워크플로우, Magic IM 메신저 시스템을 Docker로 구축하고 엔터프라이즈 AI 생산성을 100배 향상시키는 방법을 알아보세요."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - tutorials
-  - llmops
 tags:
   - magic
   - ai-productivity
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/magic-ai-productivity-platform-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

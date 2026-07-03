@@ -4,8 +4,6 @@ excerpt: "Discover RepomMirror, the innovative tool that automates local Git rep
 seo_title: "RepomMirror Git Caching Tool - Bandwidth Optimization for Developers"
 seo_description: "Learn about RepomMirror, a powerful Git repository caching solution that creates local mirrors to optimize bandwidth usage and speed up repo operations for development teams."
 date: 2025-08-26
-categories:
-  - news
 tags:
   - git
   - repository-management
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/news/repomirror-revolutionary-git-caching-tool/
 canonical_url: "https://thakicloud.github.io/en/news/repomirror-revolutionary-git-caching-tool/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

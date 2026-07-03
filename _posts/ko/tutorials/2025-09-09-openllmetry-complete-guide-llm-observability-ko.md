@@ -4,8 +4,6 @@ excerpt: "OpenLLMetry를 사용하여 AI 애플리케이션의 포괄적인 관�
 seo_title: "OpenLLMetry 튜토리얼: LLM 관찰 가능성 및 모니터링 가이드 - Thaki Cloud"
 seo_description: "OpenLLMetry를 활용한 LLM 관찰 가능성 완전 튜토리얼. 설치, 구성, AI 애플리케이션 모니터링을 실제 예제와 함께 학습하세요."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - openllmetry
   - llm-observability
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/openllmetry-complete-guide-llm-observability/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/openllmetry-complete-guide-llm-observability/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

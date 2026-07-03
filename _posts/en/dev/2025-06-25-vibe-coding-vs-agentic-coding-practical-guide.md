@@ -3,9 +3,6 @@ title: "Vibe Coding vs. Agentic Coding: A Complete Practical Guide Using ChatGPT
 excerpt: "Based on a Cornell University paper, understand the two AI coding paradigms and learn how to effectively use ChatGPT and Cursor AI in real-world development"
 date: 2025-06-25
 last_modified_at: 2025-06-25
-categories:
-  - dev
-  - tutorials
 tags:
   - vibe-coding
   - agentic-coding
@@ -19,6 +16,9 @@ toc: true
 toc_label: "AI Coding Paradigm Practical Guide"
 canonical_url: "https://thakicloud.github.io/en/dev/vibe-coding-vs-agentic-coding-practical-guide/"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## Overview

@@ -4,8 +4,6 @@ excerpt: "Learn how to implement LightRAG, a revolutionary RAG system that outpe
 seo_title: "LightRAG Tutorial: Fast RAG Implementation Guide - Thaki Cloud"
 seo_description: "Complete LightRAG tutorial with setup, usage examples, and performance comparison. Learn to build efficient RAG systems with knowledge graphs."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - LightRAG
   - RAG
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/lightrag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/lightrag-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

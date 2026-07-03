@@ -5,8 +5,6 @@ seo_title: "أنماط نشر Ollama على Kubernetes في الإنتاج GPU P
 seo_description: "شرح إعداد عقد GPU عند نشر Ollama على Kubernetes، تصميم PVC لتخزين النماذج، التوسع التلقائي HPA، مراقبة Prometheus، وأنماط إعداد Modelfile."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [ollama, kubernetes, llm-serving, gpu, self-hosting, modelfile, prometheus, hpa]
 author_profile: true
 toc: true
@@ -16,6 +14,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/ollama-kubernetes-production-patterns/"
 reading_time: true
 lang: ar
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق

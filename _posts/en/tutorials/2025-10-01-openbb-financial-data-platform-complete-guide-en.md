@@ -4,8 +4,6 @@ excerpt: "Discover everything about financial data analysis with OpenBB Platform
 seo_title: "OpenBB Platform Complete Guide - Financial Data Analysis | Thaki Cloud"
 seo_description: "Analyze stocks, crypto, and forex data easily with OpenBB Platform. Complete guide to financial data analysis through Python and CLI"
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - OpenBB
   - FinancialData
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/openbb-financial-data-
 lang: en
 permalink: /en/tutorials/openbb-financial-data-platform-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

@@ -4,8 +4,6 @@ excerpt: "Complete guide to Neosync - Open-source data security platform for PII
 seo_title: "Neosync Tutorial: Data Anonymization & Synthetic Data Guide - Thaki Cloud"
 seo_description: "Learn Neosync open-source platform for data anonymization, synthetic data generation, and secure environment sync. Complete tutorial with Docker setup and examples."
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - neosync
   - data-anonymization
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/neosync-data-anonymiza
 lang: en
 permalink: /en/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

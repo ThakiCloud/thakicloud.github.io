@@ -4,8 +4,6 @@ excerpt: "하이브리드 어텐션 메커니즘과 초효율적 처리 능력�
 seo_title: "Qwen3-Next AI 모델: 하이브리드 아키텍처 혁신 - Thaki Cloud"
 seo_description: "하이브리드 어텐션, 스파스 MoE, 최대 1M 토큰의 초장문 컨텍스트 처리 능력으로 AI를 혁신하는 Qwen3-Next-80B-A3B-Instruct를 알아보세요."
 date: 2025-09-22
-categories:
-  - owm
 tags:
   - 인공지능
   - 대규모언어모델
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/
 canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -6,8 +6,6 @@ seo_description: "How to cut RAG system memory by 32x using Binary Quantization 
 date: 2025-08-05
 last_modified_at: 2025-08-05
 lang: en
-categories:
-  - agentops
 tags:
   - binary-quantization
   - rag
@@ -25,6 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/binary-quantization-rag-32x-memory-optimization/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 12 min

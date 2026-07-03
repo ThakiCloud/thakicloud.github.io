@@ -5,8 +5,6 @@ seo_title: "تحليل Qwen-AgentWorld نموذج عالم اللغة - محاك
 seo_description: "تحليل Qwen-AgentWorld-35B-A3B وAgentWorldBench وفق المصادر الرسمية. التدريب ثلاثي المراحل CPT/SFT/RL، محاكاة البيئة في 7 نطاقات، التحسينات الفعلية لـ Sim RL ودفء LWM، وتطبيقاتها على منصة ThakiCloud لوكلاء Kubernetes."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - research
 tags:
   - qwen-agentworld
   - world-model
@@ -23,6 +21,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/qwen-agentworld-language-world-models/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 14 دقيقة

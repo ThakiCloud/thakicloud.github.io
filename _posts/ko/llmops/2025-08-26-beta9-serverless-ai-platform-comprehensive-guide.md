@@ -4,8 +4,6 @@ excerpt: "빠른 컨테이너 시작, 제로 스케일 아키텍처, 원활한 G
 seo_title: "Beta9 서버리스 AI 플랫폼 가이드 - Python 우선 ML 인프라"
 seo_description: "Beta9가 1초 이하 컨테이너 시작, 서버리스 스케일링, Python 네이티브 API로 현대적인 ML 인프라를 위한 AI 워크로드 배포를 어떻게 변화시키는지 알아보세요."
 date: 2025-08-26
-categories:
-  - llmops
 tags:
   - beta9
   - 서버리스
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/llmops/beta9-serverless-ai-platform-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ko/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

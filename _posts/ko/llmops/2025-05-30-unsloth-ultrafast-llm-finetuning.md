@@ -2,8 +2,6 @@
 title: "Unsloth: LLM 파인튜닝을 2배 빠르게, 메모리는 80% 절약하는 혁신적 프레임워크"
 excerpt: "Qwen3, Llama 4, Gemma 3를 2배 빠르게 파인튜닝하면서 VRAM을 80%까지 절약. OpenAI Triton 기반의 정확도 손실 없는 최적화 엔진"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - Unsloth
   - LLM
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "Unsloth 완전 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** Unsloth는 Qwen3, Llama 4, Gemma 3, Phi-4 등 최신 LLM을 **2배 빠르게** 파인튜닝하면서 **VRAM을 80%까지 절약**하는 오픈소스 라이브러리다. OpenAI Triton으로 작성된 커널과 수동 역전파 엔진으로 **정확도 손실 없이** 메모리 효율성을 극대화한다. 초보자부터 전문가까지 누구나 사용할 수 있는 무료 노트북과 상세한 문서를 제공한다.

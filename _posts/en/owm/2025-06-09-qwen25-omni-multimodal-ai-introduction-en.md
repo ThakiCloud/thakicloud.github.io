@@ -4,8 +4,6 @@ excerpt: "Comprehensive introduction to Alibaba Cloud's Qwen2.5-Omni, an end-to-
 seo_title: "Qwen2.5-Omni Multimodal AI Model Guide - Real-time Speech Generation - Thaki Cloud"
 seo_description: "Discover Alibaba Cloud's Qwen2.5-Omni multimodal AI model featuring integrated text, audio, vision, and video processing with groundbreaking real-time speech generation for natural human-AI interaction."
 date: 2025-06-09
-categories: 
-  - owm
 tags: 
   - qwen
   - multimodal
@@ -22,6 +20,8 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/qwen25-omni-multimodal-ai-introduction/"
 lang: en
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 7 minutes

@@ -4,8 +4,6 @@ excerpt: "Open Lovable을 사용해 AI와 대화하며 React 애플리케이션�
 seo_title: "Open Lovable 튜토리얼: AI React 앱 빌더 가이드 - Thaki Cloud"
 seo_description: "AI 기반 React 앱 빌더 Open Lovable의 완전한 튜토리얼. 설정, 사용법, AI 지원 애플리케이션 구축 방법을 상세히 다룹니다."
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - AI
   - React
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/open-lovable-ai-react-app-builder-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/open-lovable-ai-react-app-builder-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

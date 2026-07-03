@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to fine-tuning LLMs for free using Unsloth Noteboo
 seo_title: "Unsloth Notebooks - Free LLM Fine-Tuning Complete Guide"
 seo_description: "Learn to fine-tune LLMs for free with Unsloth Notebooks. 100+ Jupyter notebooks for Google Colab and Kaggle supporting Qwen, Llama, Gemma, and other models"
 date: 2025-06-11
-categories: 
-  - llmops
 tags: 
   - LLM
   - Fine-Tuning
@@ -22,6 +20,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-notebooks-llm-finetuning/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

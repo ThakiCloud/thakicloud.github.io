@@ -5,9 +5,6 @@ seo_title: "الرئيس التنفيذي لـ GitHub توماس دومكه حو
 seo_description: "أحدث بحوث الرئيس التنفيذي لـ GitHub تكشف تغييرات جوهرية في مهنة المطور. تحليل مفصل لنظرية التطور من 4 مراحل في عصر الذكاء الاصطناعي وآفاق عصر البرمجة بالذكاء الاصطناعي 90% خلال 2-5 سنوات، مؤكدة من خلال مقابلات 22 مطوراً."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - news
-  - careers
 tags:
   - رئيس تنفيذي github
   - توماس دومكه
@@ -29,6 +26,9 @@ reading_time: true
 lang: ar
 permalink: /ar/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/
 published: false
+categories:
+  - news
+  - careers
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

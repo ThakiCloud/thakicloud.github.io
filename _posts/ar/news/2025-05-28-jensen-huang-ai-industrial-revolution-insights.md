@@ -5,8 +5,6 @@ date: 2025-05-28
 lang: ar
 permalink: /ar/news/jensen-huang-ai-industrial-revolution-insights/
 canonical_url: "https://thakicloud.github.io/ar/news/jensen-huang-ai-industrial-revolution-insights/"
-categories: 
-  - news
 tags: 
   - جنسن هوانغ
   - الثورة الصناعية للذكاء الاصطناعي
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
 ---
 
 قدم الرئيس التنفيذي لـ NVIDIA جنسن هوانغ مؤخراً شرحاً مفصلاً للنطاق الكامل للثورة الصناعية للذكاء الاصطناعي في منتدى هيلتون فالي. عرّف الذكاء الاصطناعي ليس كمجرد تقنية بل كـ**قوة ثورة صناعية جديدة مثل الكهرباء** وقدم مخطط الاقتصاد المستقبلي من خلال مفهوم 'مصنع الذكاء الاصطناعي'.

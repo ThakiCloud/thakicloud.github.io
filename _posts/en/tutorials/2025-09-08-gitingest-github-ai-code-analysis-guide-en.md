@@ -4,8 +4,6 @@ excerpt: "Transform GitHub repositories into AI-friendly format with a simple UR
 seo_title: "GitIngest GitHub Code AI Analysis Tool Complete Guide - Thaki Cloud"
 seo_description: "Learn how to use GitIngest to convert GitHub projects into AI-friendly format. Step-by-step tutorial from basic usage to Python package automation"
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - GitIngest
   - GitHub
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/gitingest-github-ai-co
 lang: en
 permalink: /en/tutorials/gitingest-github-ai-code-analysis-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

@@ -4,8 +4,6 @@ excerpt: "Master NeoHtop, a modern cross-platform system monitor with 8.2K+ GitH
 seo_title: "NeoHtop System Monitor Rust Tauri Complete Tutorial Guide - Thaki Cloud"
 seo_description: "Complete guide to NeoHtop, the modern system monitor built with Rust, Tauri & Svelte. Installation, advanced search, process management, and best practices."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - neohtop
   - rust
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/neohtop-blazing-fast-s
 lang: en
 permalink: /en/tutorials/neohtop-blazing-fast-system-monitor-rust-tauri-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

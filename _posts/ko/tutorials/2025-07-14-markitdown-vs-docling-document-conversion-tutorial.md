@@ -5,8 +5,6 @@ seo_title: "MarkItDown vs Docling 문서 변환 도구 비교 튜토리얼 - Tha
 seo_description: "Microsoft MarkItDown과 IBM Docling의 기능, 성능, 사용법을 실제 테스트와 함께 비교하여 최적의 문서 변환 도구를 선택하는 완벽 가이드"
 date: 2025-07-14
 last_modified_at: 2025-07-14
-categories:
-  - tutorials
 tags:
   - MarkItDown
   - Docling
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/markitdown-vs-docling-document-conversion-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

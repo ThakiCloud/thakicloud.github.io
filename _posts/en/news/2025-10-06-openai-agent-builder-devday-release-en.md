@@ -4,8 +4,6 @@ excerpt: "OpenAI introduces Agent Builder, a drag-and-drop canvas for creating A
 seo_title: "OpenAI Agent Builder DevDay 2025 Release - Visual AI Workflow Tool"
 seo_description: "OpenAI launches Agent Builder at DevDay 2025, offering drag-and-drop AI workflow creation with MCP integration, templates, and visual canvas for developers and businesses."
 date: 2025-10-06
-categories:
-  - news
 tags:
   - OpenAI
   - Agent Builder
@@ -20,6 +18,8 @@ toc_label: "Contents"
 lang: en
 permalink: /en/news/openai-agent-builder-devday-release/
 canonical_url: "https://thakicloud.github.io/en/news/openai-agent-builder-devday-release/"
+categories:
+  - news
 ---
 
 ⏱️ **Expected Reading Time**: 4 minutes

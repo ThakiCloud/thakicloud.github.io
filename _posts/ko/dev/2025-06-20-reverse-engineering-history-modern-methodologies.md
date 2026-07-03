@@ -2,8 +2,6 @@
 title: "역 엔지니어링의 역사와 현대적 방법론: GitSearchAI부터 Cursor까지"
 excerpt: "시대별 대표 사례로 살펴보는 역 엔지니어링의 진화와 AI 시대의 새로운 접근법"
 date: 2025-06-20
-categories: 
-  - dev
 tags: 
   - reverse-engineering
   - ai-tools
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
 ---
 
 ## 들어가며

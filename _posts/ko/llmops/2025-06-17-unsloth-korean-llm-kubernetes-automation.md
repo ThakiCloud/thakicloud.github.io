@@ -2,8 +2,6 @@
 title: "Unsloth+TRL 한국어 LLM 학습 자동화 - 2편: 쿠버네티스 파이프라인 구축"
 excerpt: "쿠버네티스로 Unsloth+TRL 기반 한국어 LLM 학습 파이프라인을 완전 자동화하는 실무 가이드"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - Kubernetes
   - Unsloth
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

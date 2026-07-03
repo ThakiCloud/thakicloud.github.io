@@ -1,10 +1,6 @@
 ---
 title: "Langfuse: 오픈소스 LLM 엔지니어링 플랫폼의 새로운 표준"
 date: 2025-06-05
-categories: 
-  - LLMOps
-  - AI
-  - Development
 tags: 
   - Langfuse
   - LLM
@@ -16,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: Langfuse 플랫폼 가이드
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

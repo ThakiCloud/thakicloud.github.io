@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إدارة خوادم nginx بسهولة باست�
 seo_title: "دليل nginx-ignition: واجهة ويب لإدارة خادم nginx - Thaki Cloud"
 seo_description: "أتقن واجهة nginx-ignition الويب لإدارة خادم nginx. دليل خطوة بخطوة يغطي إعداد Docker وشهادات SSL والمضيفات الافتراضية وتكوين البروكسي."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - nginx
   - خادم-ويب
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/nginx-ignition-web-ui-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/nginx-ignition-web-ui-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

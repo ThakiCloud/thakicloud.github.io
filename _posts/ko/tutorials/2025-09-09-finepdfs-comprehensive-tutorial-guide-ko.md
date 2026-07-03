@@ -4,8 +4,6 @@ excerpt: "470만 문서의 FinePDFs 데이터셋 마스터하기. 추출, 필터
 seo_title: "FinePDFs 튜토리얼: PDF 데이터셋 처리 완전 가이드 - Thaki Cloud"
 seo_description: "FinePDFs 데이터셋 효과적 활용법을 실제 예제, 최적화 팁, 실무 응용사례로 학습. AI 훈련과 연구를 위한 필수 가이드."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - FinePDFs
   - 허깅페이스
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/finepdfs-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/finepdfs-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

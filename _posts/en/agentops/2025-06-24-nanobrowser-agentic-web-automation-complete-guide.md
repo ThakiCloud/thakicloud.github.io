@@ -3,10 +3,6 @@ title: "Nanobrowser Complete Guide: AI Agent-Based Web Automation and Agentic Op
 excerpt: "A detailed look at implementing multi-agent web automation with the open-source Chrome extension Nanobrowser, including practical use cases and deployment strategies."
 date: 2025-06-24
 last_modified_at: 2025-06-24
-categories: 
-  - agentops
-  - tutorials
-  - llmops
 tags: 
   - nanobrowser
   - web-automation
@@ -21,6 +17,10 @@ toc_label: "Table of Contents"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/agentops/nanobrowser-agentic-web-automation-complete-guide/"
 published: false
+categories:
+  - agentops
+  - tutorials
+  - llmops
 ---
 
 ## Overview

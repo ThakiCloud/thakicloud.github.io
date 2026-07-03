@@ -5,9 +5,6 @@ seo_title: "ByteDance Dolphin Fox 데이터셋 분석 - 문서 이미지 파싱 
 seo_description: "ByteDance Dolphin의 Fox 데이터셋과 문서 이미지 파싱 벤치마크를 완전 분석. ACL 2025 논문 기반 최신 AI 문서 이해 기술과 3천만 개 샘플 데이터셋 구성을 상세히 설명합니다."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - datasets
-  - research
 tags:
   - dolphin
   - bytedance
@@ -26,6 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
 reading_time: true
+categories:
+  - datasets
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

@@ -2,8 +2,6 @@
 title: "Cursor for X: AI 시대, 다음 혁신은 어디서 나올까?"
 excerpt: "Cursor의 성공 방정식과 'Cursor for X'가 의미하는 AI+SaaS 혁신 공식, 그리고 각 산업별 적용 가능성과 성공 조건을 분석한다."
 date: 2025-06-13
-categories:
-  - news
 tags:
   - Tech News
   - AI
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - news
 ---
 
 2024~2025년, Cursor는 단 1년 만에 $100M ARR을 돌파하며 역대 SaaS 중 가장 빠른 성장세를 기록했습니다. 이 성공은 단순한 "AI 코딩 도구"를 넘어, **특정 전문직군의 워크플로우에 AI를 깊이 내장해 "생산성 혁명"을 일으키는 제품 전략**의 상징이 되었습니다.

@@ -5,8 +5,6 @@ seo_title: "Qwen3.6-27B-NVFP4 온프렘 서빙 가이드 - Hopper/Blackwell 4비
 seo_description: "Qwen3.6-27B-NVFP4(27B, 하이브리드 어텐션, 262K 컨텍스트, 멀티모달 추론)를 vLLM으로 서빙: NVFP4 4비트 양자화로 메모리 약 2.5배 절감, FP8 대비 벤치 1%p 이내. Hopper/Blackwell 동시 지원, Apache 2.0. ThakiCloud K8s 온프렘 서빙과 에이전트 워커 관점."
 date: 2026-07-01
 last_modified_at: 2026-07-01
-categories:
-  - owm
 tags:
   - qwen3
   - nvfp4
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-6-27b-nvfp4-onprem-ser
 reading_time: true
 audiobook: /assets/audio/posts/qwen3-6-27b-nvfp4-onprem-serving/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 11분

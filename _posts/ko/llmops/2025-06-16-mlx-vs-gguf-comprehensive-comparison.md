@@ -2,9 +2,6 @@
 title: "MLX vs GGUF 완벽 비교: 로컬 LLM 추론을 위한 최적 포맷 선택 가이드"
 excerpt: "Apple Silicon 최적화 MLX와 범용 GGUF 포맷을 성능, 호환성, 메모리 효율성, 개발자 경험 등 다양한 관점에서 상세 비교하여 최적의 선택 기준을 제시합니다."
 date: 2025-06-16
-categories:
-  - llmops
-  - dev
 tags:
   - mlx
   - gguf
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: MLX vs GGUF 비교
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 개요

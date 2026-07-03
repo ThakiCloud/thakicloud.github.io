@@ -4,8 +4,6 @@ excerpt: "Master cutting-edge reinforcement learning techniques including SFT, D
 seo_title: "TRL Transformer Reinforcement Learning - Complete Post-Training Guide"
 seo_description: "Comprehensive guide to TRL (Transformer Reinforcement Learning) framework covering SFT, DPO, GRPO, PPO, and advanced post-training techniques for LLMs"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - TRL
   - TransformerRL
@@ -22,6 +20,8 @@ toc: true
 toc_label: "TRL Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/trl-comprehensive-llm-post-training-framework/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 16 minutes

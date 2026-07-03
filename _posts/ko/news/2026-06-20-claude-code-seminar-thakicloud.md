@@ -5,8 +5,6 @@ seo_title: "ThakiCloud Claude Code 사내 세미나 자료 공개 - 개발자 �
 seo_description: "ThakiCloud 개발팀이 운영한 Claude Code 사내 세미나 자료를 공개합니다. 환경설정, 핵심 명령어, 마스터하기, 놓치기 쉬운 기능까지 실무 중심으로 정리한 슬라이드와 녹화 영상."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - news
 tags:
   - claude-code
   - seminar
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/claude-code-seminar-thakicloud/"
 reading_time: true
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 6분

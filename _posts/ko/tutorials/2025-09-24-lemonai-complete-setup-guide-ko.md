@@ -4,8 +4,6 @@ excerpt: "VM 샌드박스로 안전하게 실행되는 최초의 풀스택 오�
 seo_title: "LemonAI 튜토리얼: 완전한 로컬 AI 에이전트 설치 가이드 - Thaki Cloud"
 seo_description: "Manus & Genspark AI의 오픈소스 대안 LemonAI 설치 및 사용법을 배워보세요. Docker 설정, VM 샌드박스 구성, 실전 예제까지 포함된 완벽 튜토리얼입니다."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - LemonAI
   - AI-에이전트
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/tutorials/lemonai-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/lemonai-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -6,8 +6,6 @@ seo_description: "سجلات تدقيق الذكاء الاصطناعي الما
 lang: ar
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - agentops
 tags:
   - ai-governance
   - finance
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/finance-ai-governance-audit-automation/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي](/assets/images/finance-ai-governance-audit-automation-hero.png)

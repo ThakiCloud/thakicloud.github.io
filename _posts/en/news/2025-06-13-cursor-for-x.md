@@ -5,8 +5,6 @@ date: 2025-06-13
 lang: en
 permalink: /en/news/cursor-for-x/
 canonical_url: "https://thakicloud.github.io/en/news/cursor-for-x/"
-categories:
-  - news
 tags:
   - Tech News
   - AI
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
 ---
 
 Between 2024-2025, Cursor broke through $100M ARR in just one year, recording the fastest growth rate among all SaaS companies in history. This success has become a symbol of **product strategy that deeply embeds AI into specific professional workflows to create a "productivity revolution"** beyond simply being an "AI coding tool."

@@ -7,8 +7,6 @@ date: 2025-09-19
 lang: ko
 permalink: /ko/tutorials/eigent-multiagent-workforce-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/eigent-multiagent-workforce-tutorial/"
-categories:
-  - tutorials
 tags:
   - Eigent
   - 멀티에이전트
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "튜토리얼 목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

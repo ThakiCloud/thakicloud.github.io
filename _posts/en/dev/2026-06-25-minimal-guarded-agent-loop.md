@@ -5,8 +5,6 @@ seo_title: "Minimal AI Agent Loop with Guardrails - Direct Implementation (2026)
 seo_description: "Explains the LLM brain, memory, tools, agent loop, and ReAct pattern, then implements and runs a minimal agent loop with step limits, time budgets, and repeat-detection guardrails in pure Python without an external LLM. Verified with real numbers. Applied to Kubernetes Kueue-based loop guardrails and auditability."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - dev
 tags:
   - ai-agent
   - react
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/dev/minimal-guarded-agent-loop/"
 reading_time: true
+categories:
+  - dev
 ---
 
 Beginner guides titled "How to build your first AI agent" have a steady following. The good ones typically break an agent into four pieces: the LLM brain that handles reasoning, memory that holds state, tools that interact with the outside world, and the agent loop that ties all three together in repetition. The ReAct pattern - alternating between reasoning and acting - usually comes along as the de facto standard. All of that is correct. But when you actually run agents in production, the part that breaks is different. It is the guardrails that decide when to stop the loop. This post runs a minimal agent loop with guardrails in pure Python, calling no external LLM, and shows the difference in real numbers.

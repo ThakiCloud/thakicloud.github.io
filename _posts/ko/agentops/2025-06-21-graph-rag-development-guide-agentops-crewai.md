@@ -2,9 +2,6 @@
 title: "AgentOps와 CrewAI로 구축하는 Graph RAG 시스템 완전 가이드"
 excerpt: "전통적인 RAG의 한계를 극복하는 Graph RAG를 AgentOps와 CrewAI를 활용하여 단계별로 구축하는 실전 가이드입니다."
 date: 2025-06-21
-categories: 
-  - agentops
-  - tutorials
 tags: 
   - GraphRAG
   - AgentOps
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "Graph RAG 개발 가이드"
 published: false
+categories:
+  - agentops
+  - tutorials
 ---
 
 ## 개요

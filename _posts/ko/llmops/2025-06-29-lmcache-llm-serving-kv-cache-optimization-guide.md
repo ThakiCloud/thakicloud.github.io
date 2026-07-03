@@ -5,8 +5,6 @@ seo_title: "LMCache: LLM KV 캐시 최적화로 3-10배 성능 향상 가이드 
 seo_description: "LMCache로 LLM 서빙 성능을 극대화하세요. KV 캐시 재사용, vLLM 통합, RAG 최적화를 통한 실전 가이드와 구현 방법을 제공합니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29
-categories:
-  - llmops
 tags:
   - LMCache
   - vLLM
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/lmcache-llm-serving-kv-cache-optimization-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

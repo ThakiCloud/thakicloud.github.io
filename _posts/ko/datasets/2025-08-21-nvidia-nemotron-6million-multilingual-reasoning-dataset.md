@@ -5,9 +5,6 @@ seo_title: "NVIDIA 6백만 다국어 추론 데이터셋 공개 - AI 훈련 데�
 seo_description: "NVIDIA Nemotron Post-Training Dataset v2 분석. 6백만 다국어 추론 데이터셋의 번역 방법론, 품질 관리, 활용 방법을 상세히 알아보세요. 오픈소스 AI 개발에 필수적인 고품질 훈련 데이터입니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - datasets
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -25,6 +22,9 @@ toc_icon: "database"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
 reading_time: true
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

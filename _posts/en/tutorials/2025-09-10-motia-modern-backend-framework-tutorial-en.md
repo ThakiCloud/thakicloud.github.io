@@ -4,8 +4,6 @@ excerpt: "Learn how to build unified APIs, background jobs, workflows, and AI ag
 seo_title: "Motia Tutorial: Unified Backend Framework Guide - Thaki Cloud"
 seo_description: "Master Motia framework with hands-on examples: APIs, background jobs, workflows, AI agents in one system. JavaScript, TypeScript, Python support included."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - motia
   - backend-framework
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/motia-modern-backend-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/motia-modern-backend-framework-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

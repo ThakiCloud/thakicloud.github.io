@@ -5,8 +5,6 @@ seo_title: "Netron AI 모델 시각화 도구 완전 가이드 macOS PyTorch Ten
 seo_description: "Netron으로 AI 모델을 시각화하세요. PyTorch, TensorFlow, ONNX 모델 구조를 직관적으로 분석하고 디버깅하는 방법을 실습과 함께 학습합니다"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - Netron
   - AI
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/netron-ai-model-visualization-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

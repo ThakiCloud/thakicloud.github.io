@@ -4,8 +4,6 @@ excerpt: "Kubernetes, 17개 이상의 클라우드, 온프레미스 인프라에
 seo_title: "SkyPilot AI 워크로드 관리 플랫폼 가이드 - 멀티클라우드 LLMOps"
 seo_description: "AI/ML 워크로드를 위한 SkyPilot 완전 가이드. 클라우드 간 배포, 비용 최적화, LLMOps 인프라 모범 사례를 학습하세요."
 date: 2025-09-02
-categories:
-  - llmops
 tags:
   - SkyPilot
   - 멀티클라우드
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/skypilot-comprehensive-ai
 lang: ko
 permalink: /ko/llmops/skypilot-comprehensive-ai-workload-management-platform/
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,9 +5,6 @@ date: 2025-06-10
 lang: ar
 permalink: /ar/news/ilya-sutskever-ai-capability-prediction-analysis/
 canonical_url: "https://thakicloud.github.io/ar/news/ilya-sutskever-ai-capability-prediction-analysis/"
-categories: 
-  - news
-  - AGI
 tags: 
   - إيليا سوتسكيفر
   - OpenAI
@@ -19,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "تحليل الأخبار"
 published: false
+categories:
+  - news
 ---
 
 قدم كبير علماء OpenAI السابق إيليا سوتسكيفر رؤية طموحة لمستقبل الذكاء الاصطناعي في خطابه الرئيسي في حفل تخرج جامعة تورونتو، لافتاً انتباه الأوساط الأكاديمية والصناعية. تتجاوز ملاحظاته التنبؤات التقنية البسيطة لتثير أسئلة جوهرية حول الأسس الفلسفية لبحوث الذكاء الاصطناعي والاتجاهات المستقبلية.

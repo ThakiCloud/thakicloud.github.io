@@ -4,8 +4,6 @@ excerpt: "GLM-4.6은 실세계 코딩, 긴 컨텍스트 처리(최대 200K 토�
 seo_title: "GLM-4.6: 고급 AI 모델의 혁신적 기능 - Thaki Cloud"
 seo_description: "GLM-4.6의 고급 에이전트, 추론, 코딩 능력과 200K 토큰 컨텍스트 처리 기능을 살펴보세요. 실세계 애플리케이션을 위한 차세대 AI 모델의 모든 것을 알아보세요."
 date: 2025-10-01
-categories:
-  - owm
 tags:
   - GLM-4.6
   - AI모델
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/ko/owm/glm-4-6-advanced-agentic-rea
 lang: ko
 permalink: /ko/owm/glm-4-6-advanced-agentic-reasoning-coding/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

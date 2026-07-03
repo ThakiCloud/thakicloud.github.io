@@ -4,8 +4,6 @@ excerpt: "GitHub Spec Kit으로 스펙 기반 개발을 단계별로 실습: 베
 seo_title: "Spec Kit 튜토리얼 - 스펙 기반 개발 가이드 - Thaki Cloud"
 seo_description: "Spec Kit으로 스펙 작성부터 플랜 수립·검증·구현 준비까지 실전 튜토리얼. macOS 스크립트, 트러블슈팅, 모범 사례 포함."
 date: 2025-09-18
-categories:
-  - tutorials
 tags:
   - spec-kit
   - spec-driven-development
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/tutorials/github-spec-kit-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/github-spec-kit-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ 예상 읽기 시간: 12분

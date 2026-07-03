@@ -4,8 +4,6 @@ excerpt: "دليل شامل لكتاب O'Reilly 'نماذج اللغة الكب�
 seo_title: "دليل نماذج اللغة الكبيرة العملية - مراجعة شاملة | Thaki Cloud"
 seo_description: "أتقن نماذج اللغة الكبيرة مع هذا الدليل التعليمي الشامل لكتاب Jay Alammar و Maarten Grootendorst من O'Reilly. يتضمن أمثلة عملية وتنفيذات برمجية وتحليل تفصيلي لكل فصل."
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - نماذج-اللغة-الكبيرة
   - الذكاء-الاصطناعي
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/hands-on-large-language-models-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/hands-on-large-language-models-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

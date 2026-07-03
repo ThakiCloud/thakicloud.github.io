@@ -5,8 +5,6 @@ seo_title: "تحليل خدمة GLM-5.2 753B على RTX 4090 داخل المؤس
 seo_description: "تشغيل أوزان GLM-5.2 753B المفتوحة على RTX 4090، نقل نواة الانتباه المتناثر DSA، واقتصاديات خدمة LLM الكبيرة داخل المؤسسة."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - llmops
 tags:
   - glm
   - open-weight
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-rtx4090-on-premise-serving/"
 reading_time: true
 lang: ar
+categories:
+  - llmops
 ---
 
 كان تشغيل نموذج بحجم 753 مليار معامل على بطاقة GPU استهلاكية واحدة أمرًا يصعب تخيله قبل بضع سنوات. تُبلّغ حالة شاركها أحدهم مؤخرًا عن تشغيل النموذج مفتوح الأوزان GLM-5.2 (753 مليار، FP8) على GPU استهلاكي من نوع **RTX 4090** لأول مرة. يبلغ معدله نحو 10 رموز/ثانية، لكن الجوهر ليس الإنتاجية، بل حقيقة أنه "يعمل".

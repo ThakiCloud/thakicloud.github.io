@@ -5,8 +5,6 @@ seo_title: "LocalSend 튜토리얼 - 크로스플랫폼 파일 공유 완전 가
 seo_description: "LocalSend 오픈소스 파일 공유 앱 설치부터 사용법까지 완벽 가이드. macOS, Windows, Linux, Android, iOS 모든 플랫폼 지원. AirDrop 대안 솔루션."
 date: 2025-07-07
 last_modified_at: 2025-07-07
-categories:
-  - tutorials
 tags:
   - localsend
   - file-sharing
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/localsend-cross-platform-file-sharing-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

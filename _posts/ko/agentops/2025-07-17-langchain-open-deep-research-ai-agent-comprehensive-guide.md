@@ -5,8 +5,6 @@ seo_title: "LangChain Open Deep Research AI 연구 에이전트 완전 가이드
 seo_description: "4.6k stars 오픈소스 LangChain Open Deep Research 심층 분석. 멀티 에이전트 아키텍처, RAG 활용, 자동화된 연구 보고서 생성까지 실무 활용 가이드"
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - agentops
 tags:
   - langchain
   - open-deep-research
@@ -25,6 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

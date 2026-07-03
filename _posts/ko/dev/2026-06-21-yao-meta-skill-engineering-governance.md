@@ -5,8 +5,6 @@ seo_title: "yao-meta-skill v1.1.0 검증 리포트 - Thaki Cloud"
 seo_description: "yao-meta-skill(YAO) 메타스킬을 직접 클론·검증한 실측 리포트. Skill IR 플랫폼 중립 표현, Output Eval Lab, Review Studio 2.0 거버넌스 게이트를 632파일·77테스트 규모로 분해하고 ThakiCloud .claude/skills 운영에 적용"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - claude-skills
   - meta-skill
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ![모듈형 블록이 정밀 조립 라인을 이루고 거버넌스 게이트가 빛나는 추상 이미지](/assets/images/yao-meta-skill-hero.png)

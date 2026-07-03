@@ -5,8 +5,6 @@ seo_title: "ThakiCloud Claude Code Internal Seminar Materials - Developer Produc
 seo_description: "ThakiCloud's engineering team shares the Claude Code internal seminar materials. Slides and recorded video covering environment setup, key commands, mastering workflows, and easy-to-miss features."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - news
 tags:
   - claude-code
   - seminar
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/news/claude-code-seminar-thakicloud/"
 reading_time: true
+categories:
+  - news
 ---
 
 ⏱️ **Estimated reading time**: 6 min

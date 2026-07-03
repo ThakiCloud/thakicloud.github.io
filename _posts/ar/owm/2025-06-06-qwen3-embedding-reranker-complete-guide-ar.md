@@ -4,8 +4,6 @@ excerpt: "تحليل شامل لنماذج Qwen3-Embedding و Qwen3-Reranker م�
 seo_title: "دليل Qwen3-Embedding و Reranker الشامل - نماذج متعددة اللغات متقدمة - Thaki Cloud"
 seo_description: "استكشف سلسلة Qwen3-Embedding و Qwen3-Reranker من علي بابا التي تحقق أداءً متميزاً في معايير MMTEB و MTEB و MTEB-Code مع دعم 119 لغة ومتاحة مفتوحة المصدر."
 date: 2025-06-06
-categories: 
-  - owm
 tags: 
   - qwen3
   - embedding
@@ -23,6 +21,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-embedding-reranker-complete-guide/"
 lang: ar
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

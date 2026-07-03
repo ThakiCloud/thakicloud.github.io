@@ -6,8 +6,6 @@ seo_description: "Deep dive into Refact.ai, the open-source AI agent with 3k sta
 date: 2025-07-17
 last_modified_at: 2025-07-17
 lang: en
-categories:
-  - agentops
 tags:
   - ai-agent
   - refact
@@ -26,6 +24,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/refact-ai-software-development-agent-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 18 min

@@ -5,8 +5,6 @@ seo_title: "Unregistry 기업용 Docker 배포 시스템 - 비용 절감 가이�
 seo_description: "Docker Hub, GHCR 없이 SSH로 직접 이미지 배포하는 Unregistry 도입으로 기업 규모별 90% 이상 비용 절감을 실현하는 완벽 가이드"
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - docker
   - containers
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/unregistry-enterprise-deployment-cost-analysis/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

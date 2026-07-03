@@ -4,8 +4,6 @@ excerpt: "MCP Pointer의 Option+Click 기능을 활용하여 브라우저 DOM �
 seo_title: "MCP Pointer 튜토리얼: AI 도구를 위한 DOM 요소 선택 - Thaki Cloud"
 seo_description: "MCP Pointer의 Chrome 확장프로그램과 MCP 서버를 마스터하여 Claude Code, Cursor 등 AI 어시스턴트가 Option+Click으로 선택한 브라우저 DOM 요소를 분석할 수 있도록 설정하는 방법을 알아보세요."
 date: 2025-09-19
-categories:
-  - tutorials
 tags:
   - mcp-pointer
   - dom-selection
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/mcp-pointer-dom-selection-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mcp-pointer-dom-selection-ai-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

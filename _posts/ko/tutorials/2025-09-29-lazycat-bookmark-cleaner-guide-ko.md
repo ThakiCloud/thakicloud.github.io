@@ -4,8 +4,6 @@ excerpt: "귀여운 고양이 AI 어시스턴트와 함께 브라우저 북마�
 seo_title: "LazyCat Bookmark Cleaner 북마크 정리 자동화 가이드 - Thaki Cloud"
 seo_description: "LazyCat Bookmark Cleaner로 브라우저 북마크를 스마트하게 정리하는 방법. 중복 제거, 무효 링크 정리, 북마크 프로필 생성까지 완벽 튜토리얼을 제공합니다."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - 북마크관리
   - 브라우저확장프로그램
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/lazycat-bookmark-clean
 lang: ko
 permalink: /ko/tutorials/lazycat-bookmark-cleaner-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

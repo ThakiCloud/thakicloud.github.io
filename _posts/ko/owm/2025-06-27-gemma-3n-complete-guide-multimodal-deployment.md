@@ -4,9 +4,6 @@ excerpt: "Google의 Gemma 3n 모델 라인업부터 실전 배포까지, 개발�
 seo_title: "Gemma 3n 완전 활용 가이드 - 멀티모달 AI 모델 실전 배포 - Thaki Cloud"
 seo_description: "Google Gemma 3n E2B/E4B 모델 선택부터 GGUF 배포, 파인튜닝까지 개발자를 위한 실전 가이드. huggingface-gemma-recipes와 Unsloth를 활용한 완전한 워크플로우"
 date: 2025-06-27
-categories: 
-  - owm
-  - tutorials
 tags: 
   - Gemma-3n
   - Google-AI
@@ -20,6 +17,9 @@ toc: true
 toc_label: "Gemma 3n 완전 가이드"
 canonical_url: "https://thakicloud.github.io/owm/tutorials/gemma-3n-complete-guide-multimodal-deployment/"
 published: false
+categories:
+  - owm
+  - tutorials
 ---
 
 Google의 Gemma 3n은 2B/4B 파라미터로 멀티모달 기능을 제공하는 경량 AI 모델입니다. 선택적 파라미터 활성화 기술을 통해 모바일 환경에서도 높은 성능을 발휘할 수 있어, 온디바이스 AI 구현에 최적화되어 있습니다.

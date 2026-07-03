@@ -5,8 +5,6 @@ seo_title: "AI 에이전트 스킬 1600개 라우팅 설계 - Skill Retrieval Au
 seo_description: "스킬이 많다고 좋은 게 아닙니다. Claude Code 기반 1,620개 스킬 생태계에서 SRA + BM25 2단 게이트로 노이즈를 제거한 라우팅 설계와 실측 벤치를 공개합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - skill-routing
   - ai-agents
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/dev/skill-ecosystem-routing-sra/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ![스킬 생태계 라우팅 SRA 히어로 이미지](/assets/images/skill-ecosystem-routing-sra-hero.png)

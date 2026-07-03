@@ -2,9 +2,6 @@
 title: "Vibe Coding vs Agentic Coding: ChatGPT와 Cursor AI 활용 완전 실전 가이드"
 excerpt: "Cornell 대학 논문 기반으로 두 AI 코딩 패러다임을 이해하고 실제 개발에서 ChatGPT와 Cursor AI를 효과적으로 활용하는 방법"
 date: 2025-06-25
-categories: 
-  - dev
-  - tutorials
 tags: 
   - vibe-coding
   - agentic-coding
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "AI 코딩 패러다임 실전 가이드"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## 개요

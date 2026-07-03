@@ -5,8 +5,6 @@ seo_title: "Claude Code Templates CLI 완전 튜토리얼 - macOS 테스트 포�
 seo_description: "Claude Code 프로젝트 설정을 자동화하는 오픈소스 CLI 도구 사용법. Python, JavaScript/TypeScript 지원, MCP 서버 통합, 실제 macOS 테스트 결과 포함"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - claude-code
   - ai-development
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/claude-code-templates-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

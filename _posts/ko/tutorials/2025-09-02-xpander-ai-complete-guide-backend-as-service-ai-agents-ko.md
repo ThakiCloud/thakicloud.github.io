@@ -4,8 +4,6 @@ excerpt: "xpander.ai 플랫폼을 활용한 프로덕션 레디 AI 에이전트 
 seo_title: "xpander.ai 튜토리얼: AI 에이전트 Backend-as-a-Service 플랫폼 완전 가이드"
 seo_description: "xpander.ai Backend-as-a-Service 플랫폼으로 AI 에이전트를 구축, 배포, 확장하는 방법을 학습하세요. 코드 예제와 모범 사례 포함 완전 튜토리얼."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - ai-agents
   - backend-as-a-service
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/xpander-ai-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/xpander-ai-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -6,8 +6,6 @@ seo_description: "معمارية MiniMax-M3 (428B/23B MoE، سياق 1M، MSA)،
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - owm
 tags:
   - minimax-m3
   - minimax
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/minimax-m3-multimodal-moe/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

@@ -4,8 +4,6 @@ excerpt: "Master NVIDIA's TensorRT Model Optimizer for enterprise LLM deployment
 seo_title: "TensorRT Model Optimizer Complete Guide: LLMOps Best Practices 2025"
 seo_description: "Learn how to optimize LLM inference with NVIDIA TensorRT Model Optimizer. Complete guide covering quantization, pruning, distillation for production AI deployment."
 date: 2025-09-08
-categories:
-  - llmops
 tags:
   - tensorrt
   - model-optimization
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/
 canonical_url: "https://thakicloud.github.io/en/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-en/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

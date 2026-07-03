@@ -6,8 +6,6 @@ seo_description: "بنية DiffusionGemma-26B-A4B-it: MoE والانتشار ا�
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - owm
 tags:
   - diffusiongemma
   - google-deepmind
@@ -27,6 +25,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/diffusiongemma-26b-a4b-diffusion-llm/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق

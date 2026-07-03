@@ -4,8 +4,6 @@ excerpt: "agents-last-exam مجموعة بيانات معيارية لتقييم
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - datasets
 tags:
   - benchmark
   - computer-use
@@ -20,6 +18,8 @@ toc: true
 toc_label: "دليل Agents Last Exam"
 reading_time: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/agents-last-exam-benchmark/"
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

@@ -4,8 +4,6 @@ excerpt: "ArXiv Paper Curator 프로젝트를 활용하여 프로덕션 환경�
 seo_title: "RAG 시스템 튜토리얼: ArXiv 논문으로 프로덕션 AI 구축하기 - Thaki Cloud"
 seo_description: "ArXiv Paper Curator를 사용한 완전한 RAG 시스템 구축 가이드. 데이터 수집, OpenSearch, 임베딩, LLM 통합을 통한 프로덕션 AI 애플리케이션 개발 방법을 단계별로 학습하세요."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - RAG
   - AI
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

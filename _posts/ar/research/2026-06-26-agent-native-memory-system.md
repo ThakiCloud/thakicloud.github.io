@@ -5,8 +5,6 @@ seo_title: "تحليل Agent-Native Memory System - ذاكرة الوكيل من
 seo_description: "تحليل arXiv 2606.24775 بناءً على الملخص الرسمي: تفكيك الوحدات الأربع (التمثيل والتخزين / الاستخراج / الاسترجاع والتوجيه / الصيانة)، وتقييم 12 نظام ذاكرة عبر 5 أعباء عمل و11 مجموعة بيانات، ومقايضات التكلفة والأداء، وانعكاسات ذلك على منصة ThakiCloud متعددة المستأجرين على Kubernetes."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
- - research
 tags:
  - agent-memory
  - llm-agent
@@ -23,6 +21,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/agent-native-memory-system/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![صورة تجريدية تُظهر بيانات طبقية تتدفق عبر بنية شبكية تجمع بين الشبكات العصبية وقواعد البيانات، مع خلايا ذاكرة تتشكل وتتلاشى](/assets/images/agent-native-memory-system-hero.png)

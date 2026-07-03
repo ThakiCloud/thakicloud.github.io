@@ -4,8 +4,6 @@ excerpt: "상용 배포를 위한 상세한 라이센스 분석과 함께 엔터
 seo_title: "s3fs-fuse 엔터프라이즈 튜토리얼: 완전 구현 가이드 - Thaki Cloud"
 seo_description: "클라우드 기업을 위한 s3fs-fuse 배포 마스터하기: 상세한 설치, 구성, GPL-2.0 라이센스 가이드라인"
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - s3fs-fuse
   - AWS-S3
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

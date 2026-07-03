@@ -2,8 +2,6 @@
 title: "Vibe-Coding-Instruct: SFT for Lightweight Code Agents Using 1.1 Million Samples"
 excerpt: "Vibe-Coding-Instruct by lazarus19 is an Apache-2.0 dataset of 1.1 million coding instruction-response pairs. It has already been used to train 7 Gemma/Qwen derivative models, and can be used directly to build a custom code agent SFT pipeline."
 date: 2026-06-20
-categories:
-  - datasets
 tags:
   - sft
   - instruction-tuning
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Vibe-Coding-Instruct Guide"
 reading_time: true
 canonical_url: "https://thakicloud.github.io/en/datasets/vibe-coding-instruct-sft/"
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated reading time**: 7 min

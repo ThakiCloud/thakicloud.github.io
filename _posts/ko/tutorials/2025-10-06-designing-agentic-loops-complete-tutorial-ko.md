@@ -4,8 +4,6 @@ excerpt: "AI 코딩 에이전트를 위한 효과적인 에이전틱 루프 설�
 seo_title: "에이전틱 루프 튜토리얼: AI 코딩 에이전트 설계 가이드 - Thaki Cloud"
 seo_description: "AI 코딩 에이전트를 위한 에이전틱 루프 설계 완전 가이드. YOLO 모드, 도구 선택, 보안 실습, 실제 구현 예제를 학습하세요."
 date: 2025-10-06
-categories:
-  - tutorials
 tags:
   - ai-agents
   - coding-agents
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/designing-agentic-loops-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/designing-agentic-loops-complete-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "Jensen Huang's Agent-Managed Org Culture Vision - Thaki Cloud"
 seo_description: "Jensen Huang envisions 100 AI agents per engineer. Explore how this reshapes hiring, accountability, performance measurement, and organizational culture."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - ai-agents
   - jensen-huang
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/culture/jensen-huang-agent-managed-org-culture/"
+categories:
+  - culture
 ---
 
 ## Engineers Aren't Going Away. They're Just Changing

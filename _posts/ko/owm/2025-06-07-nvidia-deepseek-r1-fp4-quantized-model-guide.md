@@ -1,10 +1,6 @@
 ---
 title: "NVIDIA DeepSeek-R1 FP4 - 차세대 양자화 언어모델 완전 활용 가이드"
 date: 2025-06-07
-categories: 
-  - llmops
-  - model-optimization
-  - owm
 tags: 
   - nvidia
   - deepseek-r1
@@ -17,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 FP4 가이드"
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ## NVIDIA DeepSeek-R1 FP4 모델 소개

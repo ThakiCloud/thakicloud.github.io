@@ -5,8 +5,6 @@ seo_title: "AI Ebook Production Automation Pipeline ai-ebook-launch - Thaki Clou
 seo_description: "An ebook production skill that automates topic selection, manuscript writing, gpt-image-2 cover design, sales page, and Whop/X distribution across 6 stages. A real-world record of producing 5 Korean ebooks in 6 days, including its limitations."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - news
 tags:
   - ai-ebook-launch
   - ebook
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/news/ai-ebook-launch-skill-pipeline/"
 reading_time: true
+categories:
+  - news
 ---
 
 ⏱️ **Estimated reading time**: 7 min

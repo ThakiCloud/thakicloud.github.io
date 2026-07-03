@@ -2,9 +2,6 @@
 title: "AI Engineering Learning Roadmap"
 date: 2025-06-05
 last_modified_at: 2026-06-20
-categories: 
-  - careers
-  - ai
 tags: 
   - ai
   - engineering
@@ -13,6 +10,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AI Engineering Roadmap"
+categories:
+  - careers
 ---
 
 AI 엔지니어링을 시작하려는 분들을 위한 학습 로드맵입니다. 순서대로 따라가도 되고, 관심 있는 영역부터 먼저 파도 됩니다.

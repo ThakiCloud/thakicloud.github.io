@@ -5,9 +5,6 @@ seo_title: "RAG-Anything 멀티모달 RAG 시스템 완전 가이드 - 설치부
 seo_description: "오픈소스 멀티모달 RAG 시스템 RAG-Anything 완전 가이드. Python 설치, MinerU/Docling 파서, VLM 통합, API 활용법, macOS 테스트 결과까지 실전 튜토리얼을 제공합니다."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
-  - llmops
 tags:
   - rag-anything
   - multimodal-rag
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/rag-anything-multimodal-rag-system-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

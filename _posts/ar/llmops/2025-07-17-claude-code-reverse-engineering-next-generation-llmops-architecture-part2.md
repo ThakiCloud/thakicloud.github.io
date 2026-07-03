@@ -5,9 +5,6 @@ seo_title: "الهندسة العكسية لـ Claude Code الجزء الثان
 seo_description: "تحليل عملي معمّق لنظام حلقة Agent وإطار تنفيذ الأدوات ذي 6 مراحل ومعمارية الأمان ونظام المراقبة المكتشفة عبر الهندسة العكسية لـ Claude Code في إنتاج LLMOps."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - llmops
-  - research
 tags:
   - claude-code
   - reverse-engineering
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/claude-code-reverse-engin
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

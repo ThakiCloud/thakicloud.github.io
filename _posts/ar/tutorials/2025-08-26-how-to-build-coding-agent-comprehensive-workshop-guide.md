@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء وكيل ذكي للبرمجة مثل Cur
 seo_title: "تطوير وكيل ذكي للبرمجة: دليل عملي مع Go وClaude - Thaki Cloud"
 seo_description: "دليل شامل لبناء وكلاء البرمجة مثل Cursor وWindsurf. تعلم تكامل الأدوات وإدارة API ومنهجية التطوير التدريجي مع أمثلة عملية"
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - ai-agent
   - coding-agent
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: ١٥ دقيقة

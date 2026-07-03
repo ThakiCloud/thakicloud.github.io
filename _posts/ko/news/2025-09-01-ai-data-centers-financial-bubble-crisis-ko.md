@@ -4,8 +4,6 @@ excerpt: "금융 전문가들이 AI 데이터센터가 현재 수익 전망을 �
 seo_title: "AI 데이터센터 금융 위기: 400억 달러 연간 손실 문제 - Thaki Cloud"
 seo_description: "분석에 따르면 AI 데이터센터는 150-200억 달러의 수익만 창출하면서 400억 달러의 연간 감가상각을 겪어 지속 불가능한 금융 버블을 형성하고 있습니다."
 date: 2025-09-01
-categories:
-  - news
 tags:
   - ai-데이터센터
   - 금융-버블
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/news/ai-data-centers-financial-bubble-crisis/
 canonical_url: "https://thakicloud.github.io/ko/news/ai-data-centers-financial-bubble-crisis/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 6분

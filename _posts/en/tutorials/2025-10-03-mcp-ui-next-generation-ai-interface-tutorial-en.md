@@ -4,8 +4,6 @@ excerpt: "Learn how to create interactive UI experiences over MCP protocol. Buil
 seo_title: "MCP-UI Tutorial: Next-Gen AI Interface Development Guide - Thaki Cloud"
 seo_description: "Complete guide to MCP-UI development. Learn to build interactive AI interfaces with TypeScript, Python, and Ruby. Includes practical examples and deployment strategies."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - mcp-ui
   - ai-interface
@@ -19,6 +17,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcp-ui-next-generation-ai-interface-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

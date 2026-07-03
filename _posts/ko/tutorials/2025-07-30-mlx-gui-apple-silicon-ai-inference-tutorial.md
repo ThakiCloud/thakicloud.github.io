@@ -5,8 +5,6 @@ seo_title: "MLX-GUI Apple Silicon AI 추론 서버 구축 튜토리얼 - Thaki C
 seo_description: "Apple Silicon 맥북에서 MLX-GUI로 로컬 AI 추론 서버 구축하는 방법. OpenAI 호환 API, 멀티모달 모델 지원, 시스템 트레이 앱으로 간편한 관리까지 완전 가이드"
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - tutorials
 tags:
   - MLX-GUI
   - Apple-Silicon
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/mlx-gui-apple-silicon-ai-inference-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

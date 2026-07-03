@@ -4,8 +4,6 @@ excerpt: "Learn how to run Docker containers without root privileges using udock
 seo_title: "udocker Tutorial: Rootless Docker Container Execution Guide - Thaki Cloud"
 seo_description: "Complete tutorial on udocker for running Docker containers without root privileges. Perfect for HPC, batch systems, and secure environments."
 date: 2025-10-11
-categories:
-  - tutorials
 tags:
   - docker
   - containers
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/udocker-rootless-container-execution-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/udocker-rootless-container-execution-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

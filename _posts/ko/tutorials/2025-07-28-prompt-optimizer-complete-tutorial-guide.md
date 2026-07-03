@@ -5,8 +5,6 @@ seo_title: "Prompt Optimizer 완벽 가이드 - LLM 프롬프트 최적화 도�
 seo_description: "프롬프트 최적화 도구 Prompt Optimizer의 설치, 설정, 실전 활용법을 macOS 환경에서 실습해보는 완벽 가이드"
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - tutorials
 tags:
   - prompt-engineering
   - llm
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/prompt-optimizer-complete-tutorial-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

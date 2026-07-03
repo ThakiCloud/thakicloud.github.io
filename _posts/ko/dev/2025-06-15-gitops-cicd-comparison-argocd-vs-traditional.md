@@ -2,9 +2,6 @@
 title: "GitOps CI/CD 파이프라인 완전 비교: ArgoCD vs 전통적 방식"
 excerpt: "GitOps 기반 CI/CD와 전통적인 파이프라인의 차이점을 실무 관점에서 분석하고, ArgoCD 도입 시 고려사항과 모범 사례를 제시합니다."
 date: 2025-06-15
-categories: 
-  - dev
-  - llmops
 tags: 
   - gitops
   - cicd
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
+  - llmops
 ---
 
 ## 개요

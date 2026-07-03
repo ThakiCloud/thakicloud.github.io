@@ -4,8 +4,6 @@ excerpt: "اكتشف كيف يقلب UserLM-8b من Microsoft التدريب ا�
 seo_title: "UserLM-8b: محاكاة المستخدم لأتمتة سير العمل بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "تعرف على كيفية تحويل UserLM-8b لاختبار الذكاء الاصطناعي التحاوري من خلال محاكاة دور المستخدم، مما يوفر أتمتة اختبار واقعية وسير عمل تقييم لنماذج اللغة المساعدة."
 date: 2025-10-10
-categories:
-  - owm
 tags:
   - UserLM
   - LLM
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/owm/userlm-8b-user-simulation-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ar/owm/userlm-8b-user-simulation-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

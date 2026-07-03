@@ -4,8 +4,6 @@ excerpt: "أتقن هندسة السياق - النهج الثوري الذي ي
 seo_title: "الدليل الشامل لهندسة السياق - إتقان مساعدي البرمجة بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "تعلم أساسيات هندسة السياق وسير عمل PRP وأفضل الممارسات لجعل مساعدي البرمجة بالذكاء الاصطناعي أكثر فعالية بـ 10 أضعاف. دليل شامل مع أمثلة."
 date: 2025-10-06
-categories:
-  - tutorials
 tags:
   - هندسة-السياق
   - البرمجة-بالذكاء-الاصطناعي
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/context-engineering-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/context-engineering-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

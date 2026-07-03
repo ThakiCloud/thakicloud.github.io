@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء أنظمة RAG (الجيل المعزز �
 seo_title: "دليل UltraRAG: الدليل الشامل لإطار عمل RAG منخفض الأكواد - Thaki Cloud"
 seo_description: "أتقن إطار عمل UltraRAG مع دليلنا الشامل. تعلم التثبيت والتكوين وتنفيذ أنظمة RAG المتقدمة مع أمثلة عملية."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - RAG
   - UltraRAG
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/ultrarag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ultrarag-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

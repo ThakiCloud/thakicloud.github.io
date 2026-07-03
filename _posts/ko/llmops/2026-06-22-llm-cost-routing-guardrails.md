@@ -5,8 +5,6 @@ seo_title: "LLM 비용 최적화 실전기: 모델 라우팅과 가드레일로 
 seo_description: "Claude Opus 남발로 하루 $705 청구된 사고와 1개월 $4,691 감사 결과를 공개합니다. 모델 라우팅, 회고 기반 자동 에스컬레이션, cron화, 컨텍스트 위생 등 실제 운영 중인 비용 통제 메커니즘을 수치와 코드로 설명합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - cost-optimization
   - llm-routing
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/llm-cost-routing-guardrails/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![LLM 비용 라우팅 가드레일 실전기](/assets/images/llm-cost-routing-guardrails-hero.png)

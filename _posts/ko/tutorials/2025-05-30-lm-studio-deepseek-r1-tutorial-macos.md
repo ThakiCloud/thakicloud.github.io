@@ -1,8 +1,6 @@
 ---
 title: "LM Studio + DeepSeek R1 튜토리얼: 맥북에서 로컬 AI 모델 실행하기"
 date: 2025-05-30
-categories: 
-  - tutorials
 tags: 
   - LM Studio
   - DeepSeek R1
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 클라우드 기반 AI 서비스에 의존하지 않고 로컬에서 강력한 AI 모델을 실행하고 싶으신가요? **LM Studio**와 **DeepSeek R1** 모델을 사용하면 맥북에서 완전히 오프라인으로 고성능 AI 어시스턴트를 구축할 수 있습니다. 이 튜토리얼에서는 설치부터 실제 사용까지 단계별로 안내해드리겠습니다.

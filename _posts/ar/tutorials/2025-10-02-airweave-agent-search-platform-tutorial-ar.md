@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام Airweave لربط 25+ تطبيق و
 seo_title: "دليل منصة Airweave للبحث بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل لـ Airweave لربط 25+ تطبيق، البحث الدلالي، إعداد خادم MCP. يتضمن REST API، استخدام Python/TypeScript SDK، وأمثلة تطبيقية حقيقية."
 date: 2025-10-02
-categories:
-  - tutorials
 tags:
   - airweave
   - ai-agent
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/airweave-agent-search-
 lang: ar
 permalink: /ar/tutorials/airweave-agent-search-platform-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

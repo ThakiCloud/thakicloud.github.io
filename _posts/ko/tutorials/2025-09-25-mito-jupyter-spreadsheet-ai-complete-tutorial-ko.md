@@ -4,8 +4,6 @@ excerpt: "Mito AI와 스프레드시트 확장 프로그램을 사용하여 Jupy
 seo_title: "Mito Jupyter AI 튜토리얼 - 스프레드시트 & AI 채팅 가이드 - Thaki Cloud"
 seo_description: "완전한 Mito 튜토리얼: AI 기반 Jupyter 확장 프로그램을 설치하여 스프레드시트 편집, 상황 인식 AI 채팅, 자동 Python 코드 생성. 단계별 가이드."
 date: 2025-09-25
-categories:
-  - tutorials
 tags:
   - mito
   - jupyter
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/mito-jupyter-spreadsheet-ai-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mito-jupyter-spreadsheet-ai-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

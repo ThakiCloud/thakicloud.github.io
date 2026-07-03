@@ -4,8 +4,6 @@ excerpt: "PandocX는 Pandoc 기반의 강력한 파일 변환 도구입니다. M
 seo_title: "PandocX 파일 변환기 튜토리얼 - 모든 문서 형식 변환 가이드"
 seo_description: "PandocX를 사용한 파일 변환 완벽 가이드. Markdown, HTML, PDF, Word 등 다양한 문서 형식 간 변환 방법과 실전 활용법을 상세히 설명합니다."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - PandocX
   - 파일변환
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/pandocx-file-converter
 lang: ko
 permalink: /ko/tutorials/pandocx-file-converter-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

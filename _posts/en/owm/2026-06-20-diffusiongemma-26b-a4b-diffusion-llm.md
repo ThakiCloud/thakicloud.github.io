@@ -5,8 +5,6 @@ seo_title: "DiffusionGemma 26B-A4B Discrete Diffusion LLM K8s Deployment Guide -
 seo_description: "DiffusionGemma-26B-A4B-it architecture (MoE, discrete diffusion, 256K context), benchmarks (AIME 2026 69.1%, GPQA Diamond 73.2%), vLLM/SGLang serving, and K8s deployment considerations."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - diffusiongemma
   - google-deepmind
@@ -27,6 +25,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/diffusiongemma-26b-a4b-diffusion-llm/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 9 min

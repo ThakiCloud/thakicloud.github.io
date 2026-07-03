@@ -3,8 +3,6 @@ title: "세 거인의 서로 다른 미래관: 허사비스·황·아모데이�
 excerpt: "AGI·인프라·노동이라는 세 렌즈로 AI의 미래를 달리 보는 허사비스, 황, 아모데이의 세계관을 비교하고, 불확실성이 겹치는 지금 빌더 조직이 각자에게서 무엇을 취해야 하는지 종합한다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - AGI
   - Demis Hassabis
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/three-giants-ai-futures-compared/"
+categories:
+  - culture
 ---
 
 ## 같은 파도를 다르게 읽는 세 사람

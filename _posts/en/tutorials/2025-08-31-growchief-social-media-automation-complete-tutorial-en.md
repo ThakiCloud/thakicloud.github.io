@@ -4,8 +4,6 @@ excerpt: "Learn how to set up and use GrowChief, the ultimate open-source social
 seo_title: "GrowChief Tutorial: Social Media Automation Setup Guide - Thaki Cloud"
 seo_description: "Complete step-by-step tutorial for GrowChief social media automation tool. Learn installation, configuration, and best practices for LinkedIn outreach automation."
 date: 2025-08-31
-categories:
-  - tutorials
 tags:
   - social-media-automation
   - linkedin-automation
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/growchief-social-media
 lang: en
 permalink: /en/tutorials/growchief-social-media-automation-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

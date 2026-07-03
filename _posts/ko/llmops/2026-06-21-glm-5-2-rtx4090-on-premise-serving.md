@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 753B RTX 4090 온프레미스 서빙 분석 - Thaki Cloud"
 seo_description: "GLM-5.2 753B 오픈웨이트 RTX 4090 구동, DSA 희소 어텐션 커널 이식, 온프레미스 대형 LLM 서빙 경제성 관점 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - llmops
 tags:
   - glm
   - open-weight
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-rtx4090-on-premise-serving/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 753B 파라미터 모델을 소비자 GPU 한 장에서 돌린다는 것은 몇 년 전이라면 상상하기 어려운 일이었습니다. 최근 공유된 사례는 SOTA 오픈웨이트 모델 GLM-5.2(753B, FP8)를 **RTX 4090** 소비자 GPU에서 처음 구동했다고 보고합니다. 약 10 tok/s 수준이지만, 핵심은 처리량이 아니라 "돌아간다"는 사실 자체입니다.

@@ -5,9 +5,6 @@ seo_title: "GitHub Act 완벽 가이드 - 로컬 GitHub Actions 실행 도구 - 
 seo_description: "GitHub Actions를 로컬에서 실행할 수 있는 act 도구의 설치부터 실제 워크플로우 테스트까지, 개발 생산성을 높이는 완벽한 가이드를 제공합니다."
 date: 2025-07-05
 last_modified_at: 2025-07-05
-categories:
-  - tutorials
-  - dev
 tags:
   - GitHub Actions
   - act
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/github-act-local-actions-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,9 +5,6 @@ seo_title: "Claude Code 역공학 LLMOps 아키텍처 분석: 실시간 Steering
 seo_description: "Claude Code 역공학을 통해 발견된 차세대 LLMOps 기술 분석. 실시간 Steering, 지능형 컨텍스트 관리, Agent 루프 시스템, 보안 프레임워크 등 LLM 운영의 핵심 아키텍처를 상세히 해부합니다."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - llmops
-  - research
 tags:
   - claude-code
   - reverse-engineering
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

@@ -4,8 +4,6 @@ excerpt: "AI를 활용한 장편 소설 자동 생성 도구 사용법과 설정
 seo_title: "AI 소설 생성기 튜토리얼 - 장편 소설 자동 작성 가이드"
 seo_description: "AI 소설 생성기를 사용한 장편 소설 자동 작성 방법을 단계별로 설명합니다. OpenAI API 설정부터 일관성 있는 소설 생성까지 완전 가이드."
 date: 2025-09-30
-categories:
-  - tutorials
 tags:
   - AI
   - 소설생성
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/ai-novel-generator-tut
 lang: ko
 permalink: /ko/tutorials/ai-novel-generator-tutorial-ko/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

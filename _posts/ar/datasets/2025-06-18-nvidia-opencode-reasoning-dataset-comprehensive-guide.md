@@ -4,9 +4,6 @@ excerpt: "تحليل كامل لـ OpenCodeReasoning مع 735 ألف عينة و
 date: 2025-06-18
 lang: ar
 permalink: /ar/datasets/nvidia-opencode-reasoning-dataset-comprehensive-guide/
-categories: 
-  - datasets
-  - llmops
 tags: 
   - nvidia
   - opencode-reasoning
@@ -23,6 +20,9 @@ toc: true
 toc_label: "دليل OpenCodeReasoning"
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-opencode-reasoning-dataset-comprehensive-guide/"
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ## نظرة عامة

@@ -4,8 +4,6 @@ excerpt: "Fine-tune Qwen3, Llama 4, and Gemma 3 at 2x speed while saving up to 8
 seo_title: "Unsloth LLM Fine-Tuning - 2x Faster Training with 80% Memory Savings"
 seo_description: "Master Unsloth for ultrafast LLM fine-tuning. Learn how to train Qwen3, Llama 4, Gemma 3 with 2x speed improvement and 80% memory reduction"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - Unsloth
   - LLM
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Unsloth Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-ultrafast-llm-finetuning/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

@@ -5,8 +5,6 @@ seo_title: "Tiledesk Design Studio 노코드 챗봇 빌더 완벽 가이드 - Th
 seo_description: "Angular 기반 오픈소스 Tiledesk Design Studio로 드래그 앤 드롭 인터페이스와 ChatGPT 통합을 통해 전문적인 대화형 AI 챗봇을 구축하는 실전 튜토리얼"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - tutorials
 tags:
   - tiledesk
   - chatbot-builder
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/tiledesk-design-studio-chatbot-builder-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

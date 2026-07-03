@@ -1,9 +1,6 @@
 ---
 title: "Memvid - 비디오 기반 AI 메모리 혁신적 솔루션 완전 가이드"
 date: 2025-06-07
-categories: 
-  - llmops
-  - vector-database
 tags: 
   - memvid
   - video-memory
@@ -16,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "Memvid 완전 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 ## Memvid 소개

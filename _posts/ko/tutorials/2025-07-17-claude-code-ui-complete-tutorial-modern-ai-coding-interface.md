@@ -5,8 +5,6 @@ seo_title: "Claude Code UI 설치 가이드 - 모바일 웹 AI 코딩 인터페�
 seo_description: "Claude Code UI로 모바일과 웹에서 AI 코딩하기. React + Express 기반 실시간 터미널, 파일 탐색기, Git 통합 제공. 설치부터 커스터마이징까지 완벽 가이드"
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
 tags:
   - claude-code
   - ai-coding
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/claude-code-ui-complete-tutorial-modern-ai-coding-interface/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

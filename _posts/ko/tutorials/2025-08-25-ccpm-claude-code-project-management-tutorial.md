@@ -4,8 +4,6 @@ excerpt: "PRD를 에픽으로, 에픽을 GitHub 이슈로, 이슈를 운영 코�
 seo_title: "CCPM 튜토리얼: Claude Code 프로젝트 관리 완전 가이드 - Thaki Cloud"
 seo_description: "CCPM(Claude Code Project Management) 완전 가이드 - GitHub Issues, Git worktree, 병렬 AI 에이전트를 활용한 스펙 주도 개발 시스템"
 date: 2025-08-25
-categories:
-  - tutorials
 tags:
   - claude-code
   - 프로젝트관리
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/ccpm-claude-code-project-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/ccpm-claude-code-project-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,8 +5,6 @@ seo_title: "Anthropic Claude Tag 분석 - Slack 멀티플레이어 AI 팀원 - T
 seo_description: "Anthropic Claude Tag(Claude Opus 4.8 기반 Slack 상주 에이전트) 출시를 분석합니다. 채널당 단일 공유 Claude, 능동적 ambient 동작, 스코프 데이터 제어, 그리고 ThakiCloud K8s 멀티테넌트 에이전트 플랫폼 관점의 시사점."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - news
 tags:
   - anthropic
   - claude-tag
@@ -21,6 +19,8 @@ toc_icon: "users"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/news/anthropic-claude-tag-slack/"
 reading_time: true
+categories:
+  - news
 ---
 
 ![하나의 공유 채널에서 중앙 AI 노드가 여러 사람 노드와 연결된 협업 네트워크 추상 비주얼](/assets/images/anthropic-claude-tag-slack-hero.png)

@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام ByteDance Dolphin، نموذج مت
 seo_title: "دليل ByteDance Dolphin: تحليل صور الوثائق - Thaki Cloud"
 seo_description: "دليل شامل لنموذج ByteDance Dolphin لتحليل الوثائق. تعلم التثبيت والاستخدام والتنفيذ لتحليل مستوى الصفحة والعنصر مع أمثلة عملية."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - تحليل-الوثائق
   - التعرف-البصري-النصوص
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/bytedance-dolphin-document-parsing-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/bytedance-dolphin-document-parsing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

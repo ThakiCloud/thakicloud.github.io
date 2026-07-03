@@ -5,9 +5,6 @@ seo_title: "Magnitude AI 브라우저 자동화 튜토리얼 및 비즈니스 �
 seo_description: "Vision AI 기반 브라우저 자동화 프레임워크 Magnitude의 설치, 사용법, 그리고 클라우드 및 일반 기업에서의 실무 활용 사례를 상세히 분석합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - tutorials
-  - dev
 tags:
   - magnitude
   - browser-automation
@@ -28,6 +25,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/magnitude-ai-browser-automation-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

@@ -5,9 +5,6 @@ seo_title: "تحليل شامل لمجموعة بيانات NVIDIA Nemotron لل
 seo_description: "تحليل تفصيلي لمجموعة بيانات NVIDIA Nemotron للتدريب البعدي v1: البنية وتوزيع البيانات لكل فئة ودليل الاستخدام وسير عمل الضبط الدقيق للمجموعة التي تضم 25.6 مليون عينة."
 date: 2025-07-31
 last_modified_at: 2025-07-31
-categories:
-  - datasets
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -26,6 +23,9 @@ canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-nemotron-post-tr
 reading_time: true
 lang: ar
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق

@@ -5,9 +5,6 @@ seo_title: "Keep AIOps 플랫폼 완벽 가이드 - 알림 관리 자동화 - Th
 seo_description: "Keep 오픈소스 AIOps 플랫폼으로 알림 관리를 자동화하는 방법과 워크플로우 기반 모니터링 도구 통합 방법을 상세히 알아보세요."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - tutorials
-  - dev
 tags:
   - Keep
   - AIOps
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/keep-aiops-alert-management-platform-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

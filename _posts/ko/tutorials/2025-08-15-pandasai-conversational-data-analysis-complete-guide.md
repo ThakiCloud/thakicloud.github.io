@@ -5,8 +5,6 @@ seo_title: "PandasAI 대화형 데이터 분석 완전 가이드 - Python LLM RA
 seo_description: "PandasAI로 자연어 질문만으로 데이터 분석을 수행하는 방법. 설치부터 Docker 샌드박스, 다중 DataFrame, 시각화까지 macOS 테스트 예제 포함"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
 tags:
   - pandasai
   - data-analysis
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/pandasai-conversational-data-analysis-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

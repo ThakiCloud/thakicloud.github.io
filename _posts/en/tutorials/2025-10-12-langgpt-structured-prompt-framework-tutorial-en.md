@@ -4,8 +4,6 @@ excerpt: "Learn how to create high-quality, reusable prompts using LangGPT's str
 seo_title: "LangGPT Tutorial: Structured Prompt Engineering Framework Guide - Thaki Cloud"
 seo_description: "Complete LangGPT tutorial covering structured prompt design, role-based templates, and advanced prompt engineering techniques for ChatGPT, Claude, and other LLMs."
 date: 2025-10-12
-categories:
-  - tutorials
 tags:
   - LangGPT
   - prompt-engineering
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/langgpt-structured-prompt-framework-tutorial-en/"
 lang: en
 permalink: /en/tutorials/langgpt-structured-prompt-framework-tutorial/
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

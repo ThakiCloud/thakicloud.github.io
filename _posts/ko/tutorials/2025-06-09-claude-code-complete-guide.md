@@ -1,9 +1,6 @@
 ---
 title: "Claude Code 완벽 가이드: AI 기반 개발 도구의 모든 것"
 date: 2025-06-09
-categories: 
-  - tutorials
-  - AI
 tags: 
   - Claude
   - AI
@@ -14,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - tutorials
 ---
 
 인공지능 기반 개발 도구의 새로운 패러다임을 제시하는 Claude Code에 대해 알아보겠습니다. 최신 Claude 4 모델을 기반으로 한 이 강력한 CLI 도구는 개발자의 생산성을 혁신적으로 향상시킬 수 있습니다.

@@ -5,8 +5,6 @@ seo_title: "دليل شامل لمجموعة بيانات NVIDIA Granary متع�
 seo_description: "استعراض تفصيلي لمجموعة بيانات NVIDIA Granary: 25 لغة أوروبية و640,000 ساعة صوتية، هيكل البيانات وكيفية استخدامها في مهام ASR وAST."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - datasets
 tags:
   - nvidia
   - granary
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 lang: ar
 reading_time: true
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

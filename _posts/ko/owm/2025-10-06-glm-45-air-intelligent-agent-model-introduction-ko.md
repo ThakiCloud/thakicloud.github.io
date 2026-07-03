@@ -4,8 +4,6 @@ excerpt: "Z.ai의 혁신적인 106B 파라미터 모델 GLM-4.5-Air를 소개합
 seo_title: "GLM-4.5-Air 모델 가이드: 지능형 에이전트 개발 - Thaki Cloud"
 seo_description: "GLM-4.5-Air 완전 가이드: 106B 파라미터 모델의 하이브리드 추론, 도구 사용, 상업적 MIT 라이선스를 활용한 지능형 에이전트 애플리케이션 개발"
 date: 2025-10-06
-categories:
-  - owm
 tags:
   - GLM-4.5-Air
   - 지능형-에이전트
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/owm/glm-45-air-intelligent-agent-model-introduction/
 canonical_url: "https://thakicloud.github.io/ko/owm/glm-45-air-intelligent-agent-model-introduction/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

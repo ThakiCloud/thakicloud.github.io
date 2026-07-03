@@ -4,9 +4,6 @@ excerpt: "تحليل معمّق لـ ReasoningTools في إطار عمل Agno و
 seo_title: "دليل تحليل Agno ReasoningTools الشامل - Thaki Cloud"
 seo_description: "تحليل معمّق لبنية Agno ReasoningTools ومبادئ التشغيل واستخدامها في أنظمة RAG. أساليب تنفيذ التفكير السلسلي وأداة التفكير و Agentic RAG مع أمثلة برمجية عملية."
 date: 2025-06-28
-categories:
-  - agentops
-  - dev
 tags:
   - Agno
   - ReasoningTools
@@ -22,6 +19,9 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/agentops/agno-reasoning-tools-comprehensive-analysis/"
 lang: ar
 published: false
+categories:
+  - agentops
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق

@@ -5,9 +5,6 @@ seo_title: "NVIDIA AMPLIFY_120M 단백질 언어 모델 완벽 가이드 - Thaki
 seo_description: "NVIDIA AMPLIFY_120M의 기술적 특징, 효율성 혁신, 활용 방안을 통해 단백질 연구와 AI 기반 신약 개발의 새로운 패러다임을 탐구합니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09
-categories:
-  - owm
-  - llmops
 tags:
   - nvidia
   - amplify
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nvidia-amplify-120m-efficient-protein-language-model-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

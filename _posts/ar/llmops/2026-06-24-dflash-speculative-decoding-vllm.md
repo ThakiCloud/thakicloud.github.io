@@ -7,8 +7,6 @@ date: 2026-06-24
 last_modified_at: 2026-06-24
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/llmops/dflash-speculative-decoding-vllm/"
-categories:
-  - llmops
 tags:
   - speculative-decoding
   - dflash
@@ -22,6 +20,8 @@ toc_label: "المحتويات"
 toc_icon: "bolt"
 toc_sticky: true
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![مرئية تجريدية لكتل رموز متوازية تنطلق للأمام دفعة واحدة](/assets/images/dflash-speculative-decoding-vllm-hero.png)

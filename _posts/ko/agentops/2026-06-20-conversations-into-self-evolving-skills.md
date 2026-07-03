@@ -5,8 +5,6 @@ seo_title: "과거 대화를 스킬로: Chronicle 마이닝과 selfharness 자�
 seo_description: "ThakiCloud가 Claude Code 세션 801개에서 반복 워크플로를 결정론 마이너로 추출해 스킬로 변환하고, Self-Harness 논문 기반으로 스킬 본문을 누수 없이 진화시키는 방식을 코드와 수치로 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - skill-evolution
   - self-improvement
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/self-evolving-skills-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![과거 대화가 재사용 가능한 스킬로 응결되는 모습](/assets/images/self-evolving-skills-hero.png)

@@ -2,8 +2,6 @@
 title: "[LLM Ops & AI 엔지니어링] 여기에 제목을 입력하세요"
 excerpt: "Thaki Cloud의 LLM 모델 학습, 배포, 운영(LLM Ops) 및 AI 엔지니어링 기술 전략 공유"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요
-categories:
-  - llmops
 tags:
   - LLM Ops
   - MLOps
@@ -62,6 +60,8 @@ Thaki Cloud의 핵심 경쟁력인 LLM Ops 및 AI 엔지니어링 분야의 전�
 *   **연구 지향적:** 새로운 AI 기술을 탐구하고 실험하는 연구자적 자세를 보여줍니다.
 *   **명확하고 정제된 설명:** 복잡한 AI 개념과 LLM Ops 과정을 체계적이고 이해하기 쉽게 전달합니다.
 published: false
+categories:
+  - llmops
 ---
 
 ## 여기에 실제 [LLM Ops & AI 엔지니어링] 관련 내용을 작성하세요

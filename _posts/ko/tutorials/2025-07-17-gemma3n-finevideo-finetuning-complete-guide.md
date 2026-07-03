@@ -5,9 +5,6 @@ seo_title: "Gemma3n FineVideo 파인튜닝 가이드 - 멀티모달 AI 훈련 - 
 seo_description: "Gemma3n을 FineVideo 데이터셋으로 파인튜닝하는 단계별 가이드. Unsloth, LoRA 기법을 활용한 효율적인 멀티모달 AI 모델 훈련 방법을 상세히 설명합니다."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
-  - llmops
 tags:
   - Gemma3n
   - FineVideo
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/gemma3n-finevideo-finetuning-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

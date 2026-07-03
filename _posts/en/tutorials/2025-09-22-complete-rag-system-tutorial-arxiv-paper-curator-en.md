@@ -4,8 +4,6 @@ excerpt: "Learn to build a production-ready RAG (Retrieval-Augmented Generation)
 seo_title: "RAG System Tutorial: Build Production AI with ArXiv Papers - Thaki Cloud"
 seo_description: "Step-by-step guide to building a complete RAG system using ArXiv Paper Curator. Learn data ingestion, OpenSearch, embeddings, and LLM integration for production AI applications."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - RAG
   - AI
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/
 canonical_url: "https://thakicloud.github.io/en/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

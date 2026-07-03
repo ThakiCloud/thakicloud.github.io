@@ -5,8 +5,6 @@ seo_title: "HubProxy 설치 및 구축 완전 가이드 - Docker GitHub 가속 �
 seo_description: "Go 언어로 구현된 HubProxy 프록시 서버 설치부터 운영까지, Docker 이미지와 GitHub 파일 다운로드 속도 개선을 위한 완전한 튜토리얼"
 date: 2025-08-07
 last_modified_at: 2025-08-07
-categories:
-  - tutorials
 tags:
   - HubProxy
   - Docker
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/hubproxy-comprehensive-tutorial-docker-github-acceleration/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

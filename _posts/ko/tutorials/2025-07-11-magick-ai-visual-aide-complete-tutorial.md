@@ -5,8 +5,6 @@ seo_title: "Magick AI 비주얼 AIDE 플랫폼 완전 튜토리얼 - Thaki Cloud
 seo_description: "Magick의 설치부터 고급 활용까지, 노코드 AI 개발 환경의 모든 것을 단계별로 설명하는 완전한 가이드입니다."
 date: 2025-07-11
 last_modified_at: 2025-07-11
-categories:
-  - tutorials
 tags:
   - magick
   - no-code
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/magick-ai-visual-aide-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

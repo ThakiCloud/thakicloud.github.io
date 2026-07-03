@@ -4,8 +4,6 @@ excerpt: "Anteon(구 Ddosify)을 활용한 포괄적인 쿠버네티스 모니�
 seo_title: "Anteon 쿠버네티스 모니터링 튜토리얼 - eBPF 서비스 맵 & 성능 테스팅 - Thaki Cloud"
 seo_description: "Anteon을 활용한 실습 가이드: eBPF 기반 쿠버네티스 모니터링, 자동 서비스 맵 생성, 실시간 메트릭, 다중 위치 성능 테스팅. 무료 설정 튜토리얼."
 date: 2025-08-28
-categories:
-  - tutorials
 tags:
   - 쿠버네티스
   - 모니터링
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

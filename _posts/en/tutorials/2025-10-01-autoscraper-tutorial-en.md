@@ -4,8 +4,6 @@ excerpt: "AutoScraper is a Python library that uses machine learning to automati
 seo_title: "AutoScraper Python Web Scraping Automation Tutorial - Thaki Cloud"
 seo_description: "Complete guide to AutoScraper for Python web scraping automation. Learn machine learning-based scraping rule learning with practical examples and real-world projects."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - python
   - web-scraping
@@ -17,6 +15,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/autoscraper-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

@@ -5,9 +5,6 @@ seo_title: "Reflex 순수 Python 풀스택 웹 개발 완전 가이드 - JavaScr
 seo_description: "Reflex를 활용한 순수 Python 풀스택 웹 개발 완전 마스터 가이드. 설치부터 고급 상태 관리, AI 통합, 실시간 앱 구축, 클라우드 배포까지 JavaScript 없이 웹앱 개발하는 모든 방법을 완전 마스터하세요."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - Reflex
   - Python-Web-Development
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/reflex-pure-python-fullstack-web-development-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 28분

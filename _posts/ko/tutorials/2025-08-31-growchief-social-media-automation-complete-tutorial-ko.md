@@ -4,8 +4,6 @@ excerpt: "오픈소스 소셜 미디어 자동화 도구 GrowChief의 설치부�
 seo_title: "GrowChief 튜토리얼: 소셜 미디어 자동화 완벽 가이드 - Thaki Cloud"
 seo_description: "GrowChief 소셜 미디어 자동화 도구의 설치, 설정, 활용법을 단계별로 설명하는 완벽한 튜토리얼. 링크드인 자동화의 모든 것을 배워보세요."
 date: 2025-08-31
-categories:
-  - tutorials
 tags:
   - 소셜미디어자동화
   - 링크드인자동화
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/growchief-social-media
 lang: ko
 permalink: /ko/tutorials/growchief-social-media-automation-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

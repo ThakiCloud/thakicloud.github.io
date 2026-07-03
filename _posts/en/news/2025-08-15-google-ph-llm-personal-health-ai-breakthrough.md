@@ -5,8 +5,6 @@ seo_title: "Google PH-LLM Personal Health AI Innovation - Wearable Data Health C
 seo_description: "Google's PH-LLM published in Nature Medicine opens a new era of personal health management. Detailed analysis of AI health coaching innovation and future prospects using wearable data."
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - news
 tags:
   - google
   - ph-llm
@@ -28,6 +26,8 @@ reading_time: true
 lang: en
 permalink: /en/news/google-ph-llm-personal-health-ai-breakthrough/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 16 minutes

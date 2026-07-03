@@ -4,8 +4,6 @@ excerpt: "تقدم OpenAI أداة Agent Builder، وهي لوحة سحب وإف
 seo_title: "إطلاق OpenAI Agent Builder في DevDay 2025 - أداة سير العمل المرئي للذكاء الاصطناعي"
 seo_description: "أطلقت OpenAI أداة Agent Builder في DevDay 2025، تقدم إنشاء سير عمل الذكاء الاصطناعي بالسحب والإفلات مع تكامل MCP والقوالب واللوحة المرئية للمطورين والشركات."
 date: 2025-10-06
-categories:
-  - news
 tags:
   - OpenAI
   - Agent Builder
@@ -20,6 +18,8 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/news/openai-agent-builder-devday-release/
 canonical_url: "https://thakicloud.github.io/ar/news/openai-agent-builder-devday-release/"
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 4 دقائق

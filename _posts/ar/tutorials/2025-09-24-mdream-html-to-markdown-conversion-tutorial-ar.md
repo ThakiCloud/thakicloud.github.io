@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام mdream، مكتبة Node.js قوي�
 seo_title: "دروس mdream: تحويل HTML إلى مارك داون للذكاء الاصطناعي - Thaki Cloud"
 seo_description: "إتقان مكتبة mdream لتحويل مواقع الويب إلى مارك داون. يشمل التثبيت واستخدام API ونظام الإضافات وأمثلة واقعية لتطبيقات الذكاء الاصطناعي وتكامل نماذج اللغة الكبيرة."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - mdream
   - html-to-markdown
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/mdream-html-to-markdown-conversion-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mdream-html-to-markdown-conversion-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

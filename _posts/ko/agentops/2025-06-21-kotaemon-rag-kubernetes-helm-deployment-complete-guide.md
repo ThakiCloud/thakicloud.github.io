@@ -2,8 +2,6 @@
 title: "Kotaemon RAG 애플리케이션 완전 가이드: Kubernetes Helm 배포부터 운영까지"
 excerpt: "22.5k 스타 Kotaemon RAG 애플리케이션을 Kubernetes Helm으로 배포하고 운영하는 단계별 가이드입니다."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - Kotaemon
   - RAG
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "Kotaemon 배포 가이드"
 published: false
+categories:
+  - agentops
 ---
 
 ## 개요

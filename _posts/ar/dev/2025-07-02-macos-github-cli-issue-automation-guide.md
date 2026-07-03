@@ -5,8 +5,6 @@ seo_title: "أتمتة GitHub CLI على macOS الجزء الثاني - أتم�
 seo_description: "كيفية أتمتة سير عمل GitHub CLI بالكامل من إنشاء المشكلات والتصنيف إلى الوسوم وتعيين المسؤولين وتخطيط السبرينت. دليل شامل لبناء نظام ذكي لإدارة المشكلات."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - issue-management
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/ar/dev/macos-github-cli-issue-autom
 lang: ar
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

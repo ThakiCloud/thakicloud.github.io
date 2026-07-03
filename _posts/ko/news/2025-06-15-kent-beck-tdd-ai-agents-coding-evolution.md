@@ -2,9 +2,6 @@
 title: "Kent Beck이 말하는 AI 시대의 코딩: TDD가 '슈퍼파워'가 되는 이유"
 excerpt: "Extreme Programming 창시자이자 Agile 선언문 공동 저자인 Kent Beck이 52년간의 코딩 경험과 AI 도구로 재발견한 코딩의 즐거움을 이야기합니다."
 date: 2025-06-15
-categories: 
-  - dev
-  - news
 tags: 
   - TDD
   - AI
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - news
+  - dev
 ---
 
 {% include video id="aSXaxOdVtAQ" provider="youtube" %}

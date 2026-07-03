@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إعداد واستخدام DocuSeal، البدي�
 seo_title: "دليل DocuSeal: منصة توقيع المستندات مفتوحة المصدر - Thaki Cloud"
 seo_description: "دليل DocuSeal الشامل يغطي التثبيت والإعداد والاستخدام. تعلم إنشاء نماذج PDF وإدارة التوقيعات الرقمية وتكامل هذا البديل مفتوح المصدر لـ DocuSign."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - docuseal
   - مفتوح-المصدر
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/docuseal-open-source-document-signing-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/docuseal-open-source-document-signing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

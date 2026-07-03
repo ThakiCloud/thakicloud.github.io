@@ -4,9 +4,6 @@ excerpt: "AI 연구를 위한 대규모 멀티모달 인간 상호작용 데이�
 seo_title: "Facebook Seamless Interaction Dataset 완전 가이드 - 4,000시간 멀티모달 데이터 - Thaki Cloud"
 seo_description: "Facebook의 Seamless Interaction Dataset 완전 분석. 4,000시간 인간 상호작용 데이터로 가상 에이전트, HCI, 텔레프레즌스 AI 연구 활용법"
 date: 2025-06-28
-categories: 
-  - datasets
-  - research
 tags: 
   - Facebook
   - Meta
@@ -23,6 +20,9 @@ toc: true
 toc_label: "Seamless Interaction 가이드"
 canonical_url: "https://thakicloud.github.io/facebook-seamless-interaction-dataset-comprehensive-guide/"
 published: false
+categories:
+  - datasets
+  - research
 ---
 
 **읽는 시간: 15분**

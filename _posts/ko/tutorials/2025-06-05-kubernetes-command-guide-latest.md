@@ -1,11 +1,6 @@
 ---
 title: "쿠버네티스 최신 명령어 가이드 - kubectl로 마스터하는 컨테이너 오케스트레이션"
 date: 2025-06-05
-categories: 
-  - Kubernetes
-  - DevOps
-  - Container
-  - tutorials
 tags: 
   - Kubernetes
   - kubectl
@@ -17,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: 쿠버네티스 명령어 가이드
 published: false
+categories:
+  - tutorials
 ---
 
 쿠버네티스는 현대 클라우드 네이티브 애플리케이션의 핵심 플랫폼으로 자리잡았습니다. 이 가이드에서는 최신 kubectl 명령어들과 쿠버네티스의 핵심 기능들을 체계적으로 정리하여, 초보자부터 고급 사용자까지 모두가 실무에서 활용할 수 있도록 안내해드리겠습니다.

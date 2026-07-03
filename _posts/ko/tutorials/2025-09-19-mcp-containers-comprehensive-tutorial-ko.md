@@ -4,8 +4,6 @@ excerpt: "Docker 컨테이너로 제공되는 수백 개의 Model Context Protoc
 seo_title: "MCP Containers 튜토리얼: Docker 기반 AI 에이전트 개발 가이드"
 seo_description: "AI 에이전트 개발을 위한 MCP Containers 완전 튜토리얼. Docker를 통해 수백 개의 MCP 서버를 통합하여 AI 워크플로우를 구축하는 방법을 학습하세요."
 date: 2025-09-19
-categories:
-  - tutorials
 tags:
   - mcp
   - docker
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/mcp-containers-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mcp-containers-comprehensive-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

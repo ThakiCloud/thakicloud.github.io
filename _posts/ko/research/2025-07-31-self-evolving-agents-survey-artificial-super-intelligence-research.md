@@ -5,9 +5,6 @@ seo_title: "Self-Evolving Agents 연구 동향 분석 - ASI 구현 로드맵 - T
 seo_description: "Self-Evolving Agents의 핵심 개념부터 ASI 구현까지, 27명 연구진의 51페이지 서베이 논문을 바탕으로 한 심층 분석. 진화 메커니즘과 미래 연구 방향 완전 정리."
 date: 2025-07-31
 last_modified_at: 2025-07-31
-categories:
-  - research
-  - llmops
 tags:
   - Self-Evolving-Agents
   - 인공초지능
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

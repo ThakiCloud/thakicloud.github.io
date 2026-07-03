@@ -5,8 +5,6 @@ seo_title: "Qwen-AgentWorld 언어 월드 모델 분석 - 에이전트 환경 �
 seo_description: "Qwen-AgentWorld-35B-A3B와 AgentWorldBench를 공식 자료 기준으로 분석합니다. CPT/SFT/RL 3단계 학습, 7개 도메인 환경 시뮬레이션, Sim RL과 LWM 워밍업의 실제 성능 향상, ThakiCloud 쿠버네티스 에이전트 플랫폼 적용 관점."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - research
 tags:
   - qwen-agentworld
   - world-model
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/qwen-agentworld-language-world-models/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

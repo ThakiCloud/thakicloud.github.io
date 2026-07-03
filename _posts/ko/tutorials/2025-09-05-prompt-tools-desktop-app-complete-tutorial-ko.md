@@ -4,8 +4,6 @@ excerpt: "로컬 저장과 크로스 플랫폼 지원을 통해 AI 프롬프트�
 seo_title: "Prompt Tools 데스크톱 앱 튜토리얼: AI 프롬프트 관리 가이드 - Thaki Cloud"
 seo_description: "Prompt Tools 완전 튜토리얼 - AI 프롬프트 관리를 위한 Tauri 기반 데스크톱 앱. 설정, 사용법, 고급 기능을 실습 예제와 함께 학습하세요."
 date: 2025-09-05
-categories:
-  - tutorials
 tags:
   - 프롬프트-관리
   - tauri
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/prompt-tools-desktop-app-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/prompt-tools-desktop-app-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

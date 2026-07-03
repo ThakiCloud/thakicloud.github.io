@@ -4,9 +4,6 @@ excerpt: "텐센트의 Hunyuan-A13B-Instruct는 80B 파라미터 중 13B만 활�
 seo_title: "Hunyuan-A13B-Instruct MoE 언어모델 완전 가이드 - Thaki Cloud"
 seo_description: "텐센트 Hunyuan-A13B-Instruct 모델의 특징, 성능, 배포 방법과 활용 가이드. MoE 아키텍처로 구현한 효율적인 13B 액티브 파라미터 모델"
 date: 2025-06-27
-categories: 
-  - owm
-  - llmops
 tags: 
   - Hunyuan-A13B
   - MoE
@@ -20,6 +17,9 @@ toc: true
 toc_label: Hunyuan-A13B 가이드
 canonical_url: "https://thakicloud.github.io/owm/llmops/hunyuan-a13b-instruct-comprehensive-guide/"
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 텐센트에서 공개한 **Hunyuan-A13B-Instruct**는 혁신적인 Mixture-of-Experts(MoE) 아키텍처를 기반으로 구축된 오픈소스 대형 언어모델입니다. 총 80억 개의 파라미터 중 13억 개만 활성화하여 높은 성능과 효율성을 동시에 달성한 차세대 모델로 주목받고 있습니다.

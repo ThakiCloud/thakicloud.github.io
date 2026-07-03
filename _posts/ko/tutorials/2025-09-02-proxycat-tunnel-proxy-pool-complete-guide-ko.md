@@ -4,8 +4,6 @@ excerpt: "짧은 수명의 IP를 영구적인 터널 프록시로 변환하는 P
 seo_title: "ProxyCat 터널 프록시 풀 구축 완전 가이드 - 비용 효율적인 IP 관리 솔루션"
 seo_description: "ProxyCat을 활용하여 1분짜리 단기 IP를 영구 터널 프록시로 변환하는 방법. Docker 배포, Web UI 관리, HTTP/SOCKS5 지원 등 실무 활용법까지 완벽 정리"
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - ProxyCat
   - 프록시풀
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/proxycat-tunnel-proxy-pool-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

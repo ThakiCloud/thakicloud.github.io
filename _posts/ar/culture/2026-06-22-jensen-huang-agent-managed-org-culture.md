@@ -6,8 +6,6 @@ seo_description: "جنسن هوانغ يتصوّر 100 وكيل ذكاء اصط�
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - culture
 tags:
   - وكلاء-الذكاء-الاصطناعي
   - جنسن-هوانغ
@@ -20,6 +18,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/jensen-huang-agent-managed-org-culture/
 canonical_url: "https://thakicloud.github.io/ar/culture/jensen-huang-agent-managed-org-culture/"
+categories:
+  - culture
 ---
 
 ## المهندسون لن يختفوا. هم فقط سيتغيّرون

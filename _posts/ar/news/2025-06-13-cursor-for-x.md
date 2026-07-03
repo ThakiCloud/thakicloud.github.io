@@ -5,8 +5,6 @@ date: 2025-06-13
 lang: ar
 permalink: /ar/news/cursor-for-x/
 canonical_url: "https://thakicloud.github.io/ar/news/cursor-for-x/"
-categories:
-  - news
 tags:
   - أخبار التقنية
   - الذكاء الاصطناعي
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
 ---
 
 بين 2024-2025، اخترق Cursor حاجز 100 مليون دولار ARR في سنة واحدة فقط، مسجلاً أسرع معدل نمو بين جميع شركات SaaS في التاريخ. هذا النجاح أصبح رمزاً لـ**استراتيجية منتج تدمج الذكاء الاصطناعي بعمق في سير عمل مهني محدد لخلق "ثورة إنتاجية"** تتجاوز كونها مجرد "أداة برمجة بالذكاء الاصطناعي".

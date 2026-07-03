@@ -5,9 +5,6 @@ seo_title: "Stagewise 프론트엔드 AI 코딩 에이전트 완전 튜토리얼
 seo_description: "Stagewise로 React, Vue, Angular 등 모든 프레임워크에서 브라우저 기반 AI 코딩을 시작하세요. 설치부터 실전 활용까지 단계별 가이드."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - tutorials
-  - dev
 tags:
   - stagewise
   - ai-coding
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/stagewise-frontend-coding-agent-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

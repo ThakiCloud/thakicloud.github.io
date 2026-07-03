@@ -3,8 +3,6 @@ title: "SkillRet: 에이전트가 수천 개 스킬을 다루는 시대의 검�
 excerpt: "LLM 에이전트가 수천 개의 재사용 스킬을 운용할 때 정확한 스킬 검색이 병목이 됩니다. ThakiCloud가 직접 연구하고 Apache-2.0로 전부 공개한 대규모 벤치마크 SkillRet을 소개합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - skillret
   - skill-retrieval
@@ -16,6 +14,8 @@ canonical_url: "https://thakicloud.github.io/research/skillret-skill-retrieval-b
 reading_time: true
 toc: true
 toc_sticky: true
+categories:
+  - research
 ---
 
 ![SkillRet 2단계 스킬 검색 파이프라인](/assets/images/skillret-hero.png)

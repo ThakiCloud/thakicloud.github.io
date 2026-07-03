@@ -5,8 +5,6 @@ seo_title: "AI 창의성 시대 생존법: Po-Shen Loh 박사 인사이트 - Tha
 seo_description: "수학 올림피아드를 정복한 AI 시대, Carnegie Mellon Po-Shen Loh 박사가 제시하는 인간의 생존 전략과 미래 교육 방향성"
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - news
 tags:
   - AI
   - 창의성
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/po-shen-loh-ai-creative-supremacy-era-insights/"
 reading_time: true
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

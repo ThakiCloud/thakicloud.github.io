@@ -1,8 +1,6 @@
 ---
 title: "OpenAI o3/o4-mini 함수 호출 최적화 완벽 가이드"
 date: 2024-05-31
-categories: 
-  - tutorials
 tags: 
   - openai
   - function-calling
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ## 개요

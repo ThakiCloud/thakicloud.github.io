@@ -5,9 +5,6 @@ seo_title: "NVIDIA NeMo RL 완전 가이드 - LLM 강화학습 post-training 튜
 seo_description: "NVIDIA NeMo RL로 LLM 강화학습을 마스터하세요. SFT, DPO, RM 훈련 방법과 멀티노드 확장 가이드까지 완전 정복 튜토리얼"
 date: 2025-08-22
 last_modified_at: 2025-08-22
-categories:
-  - tutorials
-  - llmops
 tags:
   - nvidia
   - nemo-rl
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/nvidia-nemo-rl-complete-tutorial-llm-reinforcement-learning/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

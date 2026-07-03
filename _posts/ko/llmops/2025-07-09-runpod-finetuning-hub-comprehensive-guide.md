@@ -5,9 +5,6 @@ seo_title: "RunPod 파인튜닝 매니지먼트 서비스와 Hub 플랫폼 완�
 seo_description: "RunPod의 Axolotl 기반 파인튜닝 자동화 서비스와 GitHub 연동 Hub 플랫폼 분석. 멀티노드 클러스터, 서버리스 배포, 비용 최적화까지 실무 중심 가이드"
 date: 2025-07-09
 last_modified_at: 2025-07-09
-categories:
-  - llmops
-  - tutorials
 tags:
   - runpod
   - fine-tuning
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/runpod-finetuning-hub-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

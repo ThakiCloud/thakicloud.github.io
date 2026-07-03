@@ -5,8 +5,6 @@ seo_title: "دليل خدمة Qwen3.6-27B-NVFP4 على الخوادم الخاص
 seo_description: "خدمة Qwen3.6-27B-NVFP4 (27 مليار معامل، انتباه هجين، سياق 262 ألف رمز، استدلال متعدد الوسائط) عبر vLLM: تكميم NVFP4 رباعي البت يخفض الذاكرة نحو 2.5 ضعف، والمعايير ضمن نقطة واحدة من FP8. دعم Hopper وBlackwell، رخصة Apache 2.0. منظور خدمة ThakiCloud على K8s وعمّال الوكلاء."
 date: 2026-07-01
 last_modified_at: 2026-07-01
-categories:
-  - owm
 tags:
   - qwen3
   - nvfp4
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 11 دقيقة

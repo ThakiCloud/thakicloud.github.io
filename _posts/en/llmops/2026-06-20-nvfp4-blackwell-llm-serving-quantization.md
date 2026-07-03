@@ -5,8 +5,6 @@ seo_title: "NVFP4 Blackwell LLM Serving Quantization Guide - Thaki Cloud"
 seo_description: "Practical strategy for increasing LLM serving throughput and reducing GPU memory costs using NVIDIA Blackwell GPU NVFP4 quantization. Includes vLLM and TensorRT-LLM application methods."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/nvfp4-blackwell-llm-serving-quantization/"
 reading_time: true
 lang: en
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 8 min

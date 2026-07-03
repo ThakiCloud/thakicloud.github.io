@@ -5,8 +5,6 @@ seo_title: "PaddleOCR-VL 0.9B 다국어 문서 파싱 직접 실험 - Thaki Clou
 seo_description: "PaddleOCR-VL-0.9B(NaViT 인코더 + ERNIE-4.5-0.3B)를 직접 설치해 한국어·아랍어 문서로 추론한 실험 보고서. OmniDocBench 성능, 2단계 아키텍처, ThakiCloud 쿠버네티스 문서 인텔리전스 적용 관점 분석."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - research
 tags:
   - paddleocr-vl
   - document-parsing
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ko/research/paddleocr-vl-09b-multil
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png
+categories:
+  - research
 ---
 
 ![반투명한 문서가 구조화된 노드 격자로 변환되는 모습을 추상적으로 표현한 이미지](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png)

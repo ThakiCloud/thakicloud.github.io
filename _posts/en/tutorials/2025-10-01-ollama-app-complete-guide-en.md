@@ -4,8 +4,6 @@ excerpt: "Learn how to use Ollama App to interact with local AI models step by s
 seo_title: "Ollama App Complete Guide - Local AI Model Client Tutorial"
 seo_description: "Master Ollama App for chatting with local AI models. Complete installation, setup, and usage guide with advanced features and troubleshooting."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - ollama
   - ai
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/ollama-app-complete-gu
 lang: en
 permalink: /en/tutorials/ollama-app-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

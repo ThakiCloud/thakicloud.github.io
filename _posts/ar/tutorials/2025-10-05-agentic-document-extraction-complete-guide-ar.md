@@ -4,8 +4,6 @@ excerpt: "إتقان مكتبة LandingAI's Agentic Document Extraction لمعا
 seo_title: "دروس LandingAI Agentic Document Extraction - دليل معالجة PDF بالذكاء الاصطناعي"
 seo_description: "تعلم كيفية استخدام مكتبة LandingAI's Agentic Document Extraction لمعالجة المستندات بالذكاء الاصطناعي. دروس شاملة مع أمثلة الكود والمعالجة المجمعة وميزات التصور."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - LandingAI
   - استخراج-المستندات
@@ -21,6 +19,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/agentic-document-extraction-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/agentic-document-extraction-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

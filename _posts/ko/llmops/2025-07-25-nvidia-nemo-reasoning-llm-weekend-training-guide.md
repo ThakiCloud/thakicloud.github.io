@@ -5,9 +5,6 @@ seo_title: "NVIDIA NeMo 추론 LLM 훈련 완전 가이드 - 48시간 내 구현
 seo_description: "NVIDIA NeMo와 Llama Nemotron 데이터셋으로 단일 GPU에서 추론 가능한 LLM을 48시간 내에 훈련하는 실전 가이드."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - llmops
-  - tutorials
 tags:
   - nvidia-nemo
   - reasoning-llm
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/nvidia-nemo-reasoning-llm-weekend-training-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

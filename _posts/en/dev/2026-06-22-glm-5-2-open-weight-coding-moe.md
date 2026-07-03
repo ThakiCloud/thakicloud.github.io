@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 Open-Weight Coding Model Self-Hosting Analysis - Thaki Cloud
 seo_description: "Fact-checking GLM-5.2's SWE-bench Pro 62.1 and Terminal-Bench 81.0 scores (744B MoE, MIT, 1M context), reviewing FP8/8x H200/vLLM/SGLang self-hosting requirements, and drawing out ThakiCloud on-premises sovereign AI serving implications."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - glm-5-2
   - open-weight-llm
@@ -20,6 +18,8 @@ toc_label: "Contents"
 toc_icon: "cog"
 lang: en
 canonical_url: https://thakicloud.github.io/en/dev/glm-5-2-open-weight-coding-moe/
+categories:
+  - dev
 ---
 
 ## Overview

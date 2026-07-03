@@ -5,8 +5,6 @@ seo_title: "أنماط تكيّف المستخدمين مع تطور نماذج 
 seo_description: "تُظهر دراسة شملت 1893 مشاركاً كيف طوّر مستخدمو DALL-E استراتيجيات الموجّهات جنباً إلى جنب مع ترقيات النماذج، إذ أسهم تكيّف المستخدم بالقدر ذاته من تأثير تحسين النموذج."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - research
 tags:
   - AI연구
   - 프롬프트엔지니어링
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/generative-models-promp
 reading_time: true
 lang: ar
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

@@ -5,8 +5,6 @@ seo_title: "Headroom 가역 컨텍스트 압축 실측 리포트 - Thaki Cloud"
 seo_description: "Headroom(headroom-ai) SmartCrusher 가역 JSON 압축을 실제 repo 데이터로 측정한 결과(토큰 34~71% 절감), 설치·통합 명령, K8s LLM 서빙 토큰 비용 절감과 컨텍스트 위생 실무 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - headroom
   - context-compression
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/dev/headroom-reversible-context-compression/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ![데이터가 응축되는 추상 이미지](/assets/images/headroom-reversible-context-compression-hero.png)

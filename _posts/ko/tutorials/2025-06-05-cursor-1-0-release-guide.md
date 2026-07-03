@@ -1,11 +1,6 @@
 ---
 title: "Cursor 1.0 출시! AI 코딩의 새로운 시대를 여는 혁신적 기능들"
 date: 2025-06-05
-categories: 
-  - AI
-  - Development
-  - Tools
-  - tutorials
 tags: 
   - Cursor
   - AI Coding
@@ -17,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: Cursor 1.0 기능 가이드
 published: false
+categories:
+  - tutorials
 ---
 
 드디어 Cursor 1.0이 공개되었습니다! 이번 릴리스는 AI 기반 코딩 경험을 완전히 새로운 차원으로 끌어올리는 혁신적인 기능들로 가득합니다. BugBot을 통한 자동 코드 리뷰부터 모든 사용자에게 제공되는 Background Agent, 그리고 Jupyter Notebook 지원까지, 개발자들이 그동안 기다려온 모든 것들이 한꺼번에 출시되었습니다.

@@ -5,9 +5,6 @@ seo_title: "Hierarchical Reasoning Model HRM 논문 분석 - 뇌 구조 영감 A
 seo_description: "Chain-of-Thought 한계를 극복한 HRM의 계층적 추론 메커니즘, ARC 벤치마크 성능, AGI 향한 새로운 접근법을 상세 분석합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - research
-  - llmops
 tags:
   - Hierarchical-Reasoning-Model
   - HRM
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/hierarchical-reasoning-model-brain-inspired-ai-architecture/"
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

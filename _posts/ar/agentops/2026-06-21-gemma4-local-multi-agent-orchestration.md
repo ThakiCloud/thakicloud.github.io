@@ -5,8 +5,6 @@ seo_title: "تحليل تنسيق الوكلاء المتعددين المحلي
 seo_description: "تحليل عرض تجريبي لوكلاء فرعيين متوازيين محليين باستخدام Gemma 4 26B، واقتصاد الاستدلال المحلي، ومنظور خدمة الوكلاء المتعددين القائم على K8s"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - agentops
 tags:
   - gemma4
   - multi-agent
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/gemma4-local-multi-agent-orchestration/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 عادة ما يستحضر تنسيق الوكلاء المتعددين في الذهن واجهات برمجة السحابة. لكن عرضاً تجريبياً شارعه المجتمع مؤخراً يشير إلى اتجاه مختلف. فقد شغّل نموذج Gemma 4 26B **على جهاز محلي** لتنسيق 10 وكلاء فرعيين متوازيين يكتبون معرض فن بصيغة SVG، وحقق حسب التقارير معدل معالجة تجاوز 100 رمز في الثانية.

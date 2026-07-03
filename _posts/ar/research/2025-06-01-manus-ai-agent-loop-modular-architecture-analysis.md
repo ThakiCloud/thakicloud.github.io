@@ -5,8 +5,6 @@ date: 2025-06-01
 lang: ar
 permalink: /ar/research/manus-ai-agent-loop-modular-architecture-analysis/
 canonical_url: "https://thakicloud.github.io/ar/research/manus-ai-agent-loop-modular-architecture-analysis/"
-categories: 
-  - research
 tags: 
   - manus-ai
   - agent-loop
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

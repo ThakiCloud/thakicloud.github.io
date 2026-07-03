@@ -4,8 +4,6 @@ excerpt: "Learn how to set up and use Shannon, an open-source AI agent orchestra
 seo_title: "Shannon AI Agent Orchestrator Tutorial - Enterprise AI Agent Management"
 seo_description: "Complete tutorial for Shannon AI Agent Orchestrator: installation, configuration, multi-agent workflows, security features, and enterprise deployment guide."
 date: 2025-10-11
-categories:
-  - tutorials
 tags:
   - AI-Agent
   - Orchestrator
@@ -21,6 +19,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/shannon-ai-agent-orchestrator-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/shannon-ai-agent-orchestrator-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

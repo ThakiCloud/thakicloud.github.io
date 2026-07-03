@@ -5,9 +5,6 @@ date: 2025-06-12
 lang: ar
 permalink: /ar/news/demis-hassabis-agi-radical-abundance-vision/
 canonical_url: "https://thakicloud.github.io/ar/news/demis-hassabis-agi-radical-abundance-vision/"
-categories: 
-  - news
-  - research
 tags: 
   - الذكاء العام الاصطناعي
   - DeepMind
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
+  - research
 ---
 
 {% include video id="CRraHg4Ks_g" provider="youtube" %}

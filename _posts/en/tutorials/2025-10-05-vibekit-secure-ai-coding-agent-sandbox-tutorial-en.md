@@ -4,8 +4,6 @@ excerpt: "Learn how to run Claude Code, Gemini, and other AI coding agents in se
 seo_title: "VibeKit Tutorial: Secure AI Coding Agent Sandbox with Data Redaction - Thaki Cloud"
 seo_description: "Complete guide to VibeKit - run AI coding agents like Claude Code and Gemini in isolated Docker containers with automatic sensitive data redaction and real-time monitoring."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - vibekit
   - ai-agents
@@ -21,6 +19,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

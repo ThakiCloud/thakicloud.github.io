@@ -5,8 +5,6 @@ seo_title: "Qwen3.6-27B-NVFP4 على vLLM: تحليل الخدمة على GPU و
 seo_description: "كيف تُخدَم إعادة تكميم NVIDIA ModelOpt لـ Qwen3.6-27B-NVFP4 (MLP بصيغة NVFP4 W4A16 والانتباه وذاكرة KV بصيغة FP8) عبر vLLM، وماذا تعني الخدمة على GPU واحدة من Blackwell لكفاءة تكلفة GPU في ThakiCloud ai-platform."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - llmops
 tags:
   - vllm
   - nvfp4
@@ -19,6 +17,8 @@ toc_label: "المحتويات"
 toc_icon: "microchip"
 published: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
+categories:
+  - llmops
 ---
 
 ## نظرة عامة

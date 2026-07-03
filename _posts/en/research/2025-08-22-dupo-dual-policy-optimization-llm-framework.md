@@ -6,8 +6,6 @@ seo_description: "A detailed analysis of the DuPO dual-policy optimization frame
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: en
-categories:
-  - research
 tags:
   - DuPO
   - dual-policy-optimization
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
 published: true
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 12 min

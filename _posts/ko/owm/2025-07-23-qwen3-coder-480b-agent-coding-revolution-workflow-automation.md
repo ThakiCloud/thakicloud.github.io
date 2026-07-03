@@ -5,9 +5,6 @@ seo_title: "Qwen3-Coder 480B MoE 모델 완전 가이드 - 에이전트 코딩 �
 seo_description: "최강 오픈소스 코딩 에이전트 Qwen3-Coder 480B의 SWE-Bench 69.6% 성능 분석과 Qwen Code CLI를 활용한 워크플로우 자동화 전략을 상세히 알아보세요."
 date: 2025-07-23
 last_modified_at: 2025-07-23
-categories:
-  - owm
-  - llmops
 tags:
   - Qwen3Coder
   - 워크플로우자동화
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/qwen3-coder-480b-agent-coding-revolution-workflow-automation/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,9 +5,6 @@ seo_title: "LangWatch LLMOps 플랫폼 완벽 가이드 - AI 운영 체계 구�
 seo_description: "오픈소스 LangWatch로 LLM 관찰성, 평가, 데이터셋 관리, 프롬프트 최적화를 구현하고 RunPod, vLLM과 연계하여 종합적인 LLMOps 환경을 구축하는 방법"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
-  - tutorials
 tags:
   - LangWatch
   - LLMOps
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/langwatch-comprehensive-llmops-platform-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

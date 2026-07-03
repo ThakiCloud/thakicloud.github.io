@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to Beta9, an open-source serverless AI platform th
 seo_title: "Beta9 Serverless AI Platform Guide - Python-First ML Infrastructure"
 seo_description: "Learn how Beta9 transforms AI workload deployment with sub-second container startup, serverless scaling, and Python-native APIs for modern ML infrastructure."
 date: 2025-08-26
-categories:
-  - llmops
 tags:
   - beta9
   - serverless
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/llmops/beta9-serverless-ai-platform-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/en/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

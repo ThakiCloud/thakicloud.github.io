@@ -2,8 +2,6 @@
 title: "AI Engineering Hub: A Practical AI Agent and RAG Tutorial Collection"
 excerpt: "Explore diverse AI agent, RAG, and LLM tutorials from the AI Engineering Hub repository with 10.7k stars, and learn how to apply them in real-world practice."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - AI-Engineering-Hub
   - Multi-Agent
@@ -19,6 +17,8 @@ toc_label: "AI Engineering Hub Guide"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/agentops/ai-engineering-hub-comprehensive-tutorial-collection/"
 published: false
+categories:
+  - agentops
 ---
 
 ## Overview

@@ -4,9 +4,6 @@ excerpt: "تحليل كامل لمجموعة بيانات OpenMathReasoning مع
 date: 2025-06-18
 lang: ar
 permalink: /ar/datasets/nvidia-openmathReasoning-dataset-comprehensive-guide/
-categories: 
-  - datasets
-  - llmops
 tags: 
   - nvidia
   - openmathReasoning
@@ -24,6 +21,9 @@ toc: true
 toc_label: "دليل OpenMathReasoning"
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-openmathReasoning-dataset-comprehensive-guide/"
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ## نظرة عامة

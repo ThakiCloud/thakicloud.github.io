@@ -1,8 +1,6 @@
 ---
 title: "Perplexity Labs 완전 정복: AI로 10분 만에 보고서부터 웹앱까지 자동 생성하기"
 date: 2024-05-31
-categories: 
-  - tutorials
 tags: 
   - PerplexityLabs
   - AI도구
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 > "검색(Search)으로 **답**을, Research(구 Deep Research)로 **근거**를 찾았다면,

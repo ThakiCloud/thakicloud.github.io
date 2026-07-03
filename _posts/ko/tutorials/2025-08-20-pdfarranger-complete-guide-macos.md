@@ -5,8 +5,6 @@ seo_title: "PDF Arranger macOS 설치 가이드 - Python PDF 편집 도구 - Tha
 seo_description: "PDF Arranger를 macOS에서 설치하고 사용하는 완벽 가이드. PDF 병합, 분할, 회전, 페이지 재배열 기능을 pikepdf와 함께 활용하는 방법을 단계별로 설명합니다."
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - tutorials
 tags:
   - pdf-arranger
   - pdf-editor
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/pdfarranger-complete-guide-macos/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

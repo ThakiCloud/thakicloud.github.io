@@ -5,8 +5,6 @@ seo_title: "Manufacturing AI Agent Automation - Multi-Cluster GPU Operations and
 seo_description: "How to automate MLOps talent bottlenecks and multi-factory cluster management for smart factories, heavy industry, and electronics manufacturers using autonomous agent teams. Real-world application of ThakiCloud AI Platform multi-cluster central management and Paxis agent operations cloud."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - agentops
 tags:
   - manufacturing
   - autonomous-agents
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/manufacturing-autonomous-agent-teams/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ![Manufacturing Operations Autonomous Agent Teams Header Image](/assets/images/manufacturing-autonomous-agent-teams-hero.png)

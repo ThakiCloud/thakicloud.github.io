@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء واستخدام أدوات الأوام�
 seo_title: "دليل تطبيق أدوات الأوامر النصية: دليل إدارة أوامر الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل حول أدوات الأوامر النصية - تطبيق سطح مكتب مبني على Tauri لإدارة أوامر الذكاء الاصطناعي. تعلم الإعداد والاستخدام والميزات المتقدمة مع أمثلة عملية."
 date: 2025-09-05
-categories:
-  - tutorials
 tags:
   - إدارة-الأوامر
   - tauri
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/prompt-tools-desktop-app-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/prompt-tools-desktop-app-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

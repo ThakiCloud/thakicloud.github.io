@@ -1,8 +1,6 @@
 ---
 title: "토큰, 모든 것을 연결하는 디지털 단위: AI부터 경제까지 심층 분석"
 date: 2025-06-01
-categories: 
-  - llmops
 tags: 
   - 토큰화
   - AI
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - llmops
 ---
 
 '토큰(Token)'은 본질적으로 **가치·권리를 상징하는 가장 작은 디지털 단위**입니다. NLP에서는 문장을 기계가 이해할 최소 단위로 나눈 결과를 가리킵니다.

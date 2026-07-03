@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تشغيل نماذج LLM للسياق الكبي�
 seo_title: "دليل استنتاج LLM للسياق الكبير مع oLLM - تحسين GPU بسعة 8 جيجا"
 seo_description: "دليل شامل لاستخدام مكتبة oLLM لمعالجة سياقات 100 ألف رمز على GPU بسعة 8 جيجا. يتضمن تحليل العقود ومعالجة السجلات الطبية وتحليل السجلات مع أمثلة من العالم الحقيقي."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - oLLM
   - LLM
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/ollm-large-context-llm
 lang: ar
 permalink: /ar/tutorials/ollm-large-context-llm-inference-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

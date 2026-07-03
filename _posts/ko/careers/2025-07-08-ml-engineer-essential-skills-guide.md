@@ -5,8 +5,6 @@ seo_title: "ML 엔지니어 필수 스킬 가이드 - 채용 체크리스트 - T
 seo_description: "Made-With-ML 기반 ML 엔지니어 핵심 역량, 기술 스택, 실무 경험 요구사항을 정리한 채용 가이드"
 date: 2025-07-08
 last_modified_at: 2026-06-20
-categories:
-  - careers
 tags:
   - ML-Engineer
   - Career-Guide
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/careers/ml-engineer-essential-skills-guide/"
 reading_time: true
+categories:
+  - careers
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

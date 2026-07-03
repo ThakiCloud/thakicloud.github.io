@@ -4,8 +4,6 @@ excerpt: "MindsDB를 활용한 종합 가이드 - 대규모 데이터를 지능�
 seo_title: "MindsDB 튜토리얼: 엔터프라이즈 AI 분석 엔진 가이드 - Thaki Cloud"
 seo_description: "MindsDB AI 분석 엔진을 마스터하는 완벽한 튜토리얼. 200개 이상의 데이터 소스 연결, AI 모델 생성, 엔터프라이즈용 지능형 데이터 파이프라인 구축 방법을 학습하세요."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - MindsDB
   - AI-분석
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

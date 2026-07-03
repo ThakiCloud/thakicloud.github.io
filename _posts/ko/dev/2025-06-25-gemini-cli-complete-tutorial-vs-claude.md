@@ -2,9 +2,6 @@
 title: "Gemini CLI 완전 가이드: 터미널에서 만나는 차세대 AI 에이전트"
 excerpt: "Google Gemini CLI의 혁신적 기능부터 Claude와의 비교, 멀티모달 기능, 도구 통합까지 실전 활용법 완전 정복"
 date: 2025-06-25
-categories: 
-  - dev
-  - tutorials
 tags: 
   - gemini-cli
   - google-gemini
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "Gemini CLI 완전 가이드"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## 개요

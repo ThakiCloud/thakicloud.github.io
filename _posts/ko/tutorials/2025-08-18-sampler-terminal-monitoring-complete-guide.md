@@ -5,8 +5,6 @@ seo_title: "Sampler 터미널 모니터링 도구 완전 가이드 - macOS 실�
 seo_description: "Sampler로 시스템 리소스, 웹사이트 상태, Git 활동을 실시간 모니터링하는 방법. YAML 설정부터 실제 테스트까지 macOS 환경에서 완전히 검증된 튜토리얼"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
 tags:
   - sampler
   - monitoring
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/sampler-terminal-monitoring-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

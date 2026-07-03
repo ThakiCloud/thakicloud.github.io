@@ -5,9 +5,6 @@ seo_title: "Chinese AI Model Workflow Automation Innovation - Kimi K2, DeepSeek-
 seo_description: "Analysis of Chinese AI models' Agentic Intelligence innovation in 2025 from OWM perspective. From Kimi K2's ultra-long personalization to DeepSeek-R1's reasoning capabilities and Qwen3's thinking mode control, presenting workflow automation strategies."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - owm
-  - ai-agents
 tags:
   - Kimi-K2
   - DeepSeek-R1
@@ -29,6 +26,9 @@ reading_time: true
 lang: en
 permalink: /en/owm/chinese-ai-models-owm-agentic-intelligence-revolution/
 published: false
+categories:
+  - news
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

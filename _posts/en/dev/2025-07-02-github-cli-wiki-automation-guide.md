@@ -4,8 +4,6 @@ excerpt: "Auto-generate wikis from code, sync API documentation, and manage mult
 seo_title: "GitHub CLI Wiki Automation Part 4 - Complete Documentation Automation - Thaki Cloud"
 seo_description: "Expert guide to automating wiki generation, API doc synchronization, multilingual support, version management, and documentation quality checks with GitHub CLI"
 date: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - wiki-automation
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/en/dev/github-cli-wiki-automation-guide/"
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 22 min

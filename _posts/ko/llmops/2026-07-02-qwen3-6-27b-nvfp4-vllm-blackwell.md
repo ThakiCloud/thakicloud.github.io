@@ -5,8 +5,6 @@ seo_title: "Qwen3.6-27B-NVFP4 vLLM Blackwell 단일 GPU 서빙 분석 | Thaki Cl
 seo_description: "NVIDIA ModelOpt의 Qwen3.6-27B-NVFP4 재양자화(MLP는 NVFP4 W4A16, 어텐션·KV 캐시는 FP8)와 vLLM 서빙 방법을 정리하고, 단일 Blackwell GPU 서빙이 ThakiCloud ai-platform의 GPU 비용 효율에 주는 시사점을 분석합니다."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - llmops
 tags:
   - vllm
   - nvfp4
@@ -19,6 +17,8 @@ toc_label: "목차"
 toc_icon: "microchip"
 published: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
+categories:
+  - llmops
 ---
 
 ## 개요

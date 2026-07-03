@@ -5,8 +5,6 @@ seo_title: "Kimi-K2 Tool Calling 워크플로우 자동화 완벽 가이드 - Th
 seo_description: "Moonshot AI Kimi-K2의 Tool Calling 기능을 활용한 에이전틱 워크플로우 자동화 구현 방법, 기술 사양, 실무 적용 사례까지 상세히 분석합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15
-categories:
-  - llmops
 tags:
   - Kimi-K2
   - MoonshotAI
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/kimi-k2-tool-calling-workflow-automation-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

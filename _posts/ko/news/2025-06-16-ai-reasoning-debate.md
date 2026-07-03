@@ -2,8 +2,6 @@
 title: "AI Reasoning Debate: Apple & Lawson"
 excerpt: "AI 추론 능력에 대한 Apple, Lawson의 토론을 시각 자료와 함께 살펴봅니다."
 date: 2025-06-16
-categories:
-  - news
 tags:
   - AI
   - reasoning
@@ -12,6 +10,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
 ---
 
 ## 서론

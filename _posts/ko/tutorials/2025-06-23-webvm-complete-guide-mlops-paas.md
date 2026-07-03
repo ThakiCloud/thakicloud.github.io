@@ -2,10 +2,6 @@
 title: "WebVM 완전 가이드: 브라우저 리눅스 VM과 MLOps PaaS 연동 활용법"
 excerpt: "WebVM을 맥북에서 설정하고 클라우드 MLOps 환경의 PaaS 클라이언트로 활용하는 전문가 가이드"
 date: 2025-06-23
-categories: 
-  - tutorials
-  - dev
-  - paas
 tags: 
   - WebVM
   - Linux Virtual Machine
@@ -18,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "WebVM 완전 가이드"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## WebVM 소개

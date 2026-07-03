@@ -4,8 +4,6 @@ excerpt: "Step-by-step complete reproduction of DeepSeek-R1's official training 
 seo_title: "DeepSeek-R1 Training Pipeline - Complete Reproduction Guide"
 seo_description: "Master the complete DeepSeek-R1 training methodology with our comprehensive guide covering 2-stage RL, 2-stage SFT, and distillation processes"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - DeepSeek-R1
   - Reinforcement-Learning
@@ -21,6 +19,8 @@ toc: true
 toc_label: "DeepSeek-R1 Training Pipeline"
 canonical_url: "https://thakicloud.github.io/en/llmops/deepseek-r1-training-pipeline-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

@@ -5,9 +5,6 @@ seo_title: "دليل تدريب نموذج الاستدلال الكوري Qwen3
 seo_description: "تحليل شامل لعملية تدريب Qwen3-4B باستخدام GRPO. دليل مفصل للمختصين يغطي تشريح دفاتر Colab واستخدام مجموعات بيانات الاستدلال الكورية."
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - llmops
-  - tutorials
 tags:
   - Qwen3-4B
   - GRPO
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/qwen3-4b-grpo-korean-reas
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 8 دقائق

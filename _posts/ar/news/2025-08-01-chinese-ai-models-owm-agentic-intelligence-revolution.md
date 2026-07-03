@@ -5,9 +5,6 @@ seo_title: "ابتكار أتمتة سير العمل للنماذج الصين�
 seo_description: "تحليل ابتكار الذكاء العاملي للنماذج الصينية للذكاء الاصطناعي في 2025 من منظور OWM. من التخصيص فائق الطول لـ Kimi K2 إلى قدرات الاستدلال لـ DeepSeek-R1 والتحكم في وضع التفكير لـ Qwen3، تقديم استراتيجيات أتمتة سير العمل."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - owm
-  - ai-agents
 tags:
   - Kimi-K2
   - DeepSeek-R1
@@ -29,6 +26,9 @@ reading_time: true
 lang: ar
 permalink: /ar/owm/chinese-ai-models-owm-agentic-intelligence-revolution/
 published: false
+categories:
+  - news
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

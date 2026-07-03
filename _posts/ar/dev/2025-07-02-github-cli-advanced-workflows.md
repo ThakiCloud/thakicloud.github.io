@@ -5,8 +5,6 @@ seo_title: "سير العمل المتقدمة لـ GitHub CLI: أتمتة CI/CD
 seo_description: "دليل شامل حول سير العمل المتقدمة لـ GitHub CLI وأتمتة الإنتاج. يغطي أنماط أتمتة GitHub CLI المتقدمة بما في ذلك نظام التحكم الرئيسي ودمج CI/CD وأتمتة إعداد الفريق."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - automation
@@ -23,7 +21,9 @@ author_profile: true
 toc: true
 toc_label: "سير العمل المتقدمة"
 canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-advanced-workflows/"
-published: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقائق

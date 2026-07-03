@@ -7,8 +7,6 @@ date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-qwen36-nvfp4/"
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -23,6 +21,8 @@ toc_label: "المحتويات"
 toc_icon: "microchip"
 toc_sticky: true
 reading_time: true
+categories:
+  - llmops
 ---
 
 بالنسبة لأي فريق يحاول خدمة النماذج الكبيرة على بنيته التحتية الخاصة، فإن أكبر عائق هو ذاكرة GPU. إن وضع نموذج أكبر على نفس وحدة GPU، أو نفس النموذج على وحدة GPU أرخص، ينعكس مباشرة على تكلفة الخدمة. النموذج `nvidia/Qwen3.6-35B-A3B-NVFP4` الذي نشرته NVIDIA على Hugging Face في 28 مايو 2026 هو محاولة لخفض هذا العائق عبر التكميم بأربع بتات. أرقام الدقة والذاكرة في هذه المقالة هي قياسات رسمية من بطاقة نموذج NVIDIA، وقد كمّمت ThakiCloud النموذج الأساسي نفسه إلى NVFP4 على وحدات GPU في RunPod وتعرض نتيجة إعادة الإنتاج هذه في قسم «نتائج تجريبية حقيقية» أدناه.

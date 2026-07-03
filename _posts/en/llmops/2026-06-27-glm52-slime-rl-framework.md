@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 RL Framework slime Analysis: Megatron SGLang Post-Training -
 seo_description: "An analysis of THUDM slime (an SGLang-native RL post-training framework): its Training/Rollout/Data Buffer three-component design, colocated vs disaggregated modes, multi-turn agent-RL features, and GLM-5.x validation, examined from ThakiCloud's K8s-based multi-tenant GPU operations perspective."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - llmops
 tags:
   - slime
   - glm-5.2
@@ -24,6 +22,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/glm52-slime-rl-framework/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![An abstract image depicting a generation cluster and a training cluster exchanging data asynchronously through a central buffer](/assets/images/glm52-slime-rl-framework-hero.png)

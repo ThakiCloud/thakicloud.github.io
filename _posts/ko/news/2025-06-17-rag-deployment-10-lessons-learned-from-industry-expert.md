@@ -2,8 +2,6 @@
 title: "RAG 시스템 배포의 현실: 업계 전문가가 전하는 10가지 핵심 교훈"
 excerpt: "RAG의 아버지 Douwe Kiela가 전하는 기업 AI 프로젝트 성공의 비밀. 87%가 실패하는 RAG 시스템, 무엇이 문제일까?"
 date: 2025-06-17
-categories: 
-  - news
 tags: 
   - RAG
   - AI배포
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: 핵심 교훈
 published: false
+categories:
+  - news
 ---
 
 ## 87%가 실패하는 RAG 시스템의 진실

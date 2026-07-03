@@ -5,8 +5,6 @@ seo_title: "vLLM vs Ollama 로컬 LLM 추론 벤치마크 비교 (2026) - Thaki 
 seo_description: "vLLM과 Ollama의 처리량, 지연시간, VRAM 사용량을 RTX 4090 공개 벤치마크로 비교합니다. PagedAttention, 연속 배칭, 동시성 확장 곡선의 차이와 Kubernetes 기반 멀티테넌트 서빙 적용 관점."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - dev
 tags:
   - vllm
   - ollama
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/dev/vllm-vs-ollama-local-inference/"
 reading_time: true
+categories:
+  - dev
 ---
 
 로컬에서 LLM을 돌리려고 검색하면 거의 항상 두 이름이 먼저 나옵니다. Ollama와 vLLM입니다. "성능을 원하면 Ollama 쓰지 말고 vLLM을 써라"는 식의 강한 주장도 자주 보입니다. 맞는 말일까요. 결론부터 말하면 절반만 맞습니다. 노트북에서 혼자 한 번에 한 요청씩 쓰는 상황과, 서버에서 수십 명이 동시에 붙는 상황은 완전히 다른 문제이기 때문입니다. 이 글은 2026년에 공개된 RTX 4090 벤치마크 수치를 근거로 두 도구가 어디서 갈리는지, 그리고 그 차이가 ThakiCloud의 Kubernetes 기반 서빙에 어떤 의미인지를 정리합니다.

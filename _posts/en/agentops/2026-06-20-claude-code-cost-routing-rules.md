@@ -5,8 +5,6 @@ seo_title: "Claude Code Cost Optimization: Model Routing & Token Rules"
 seo_description: "ThakiCloud's field-tested rules for reducing Claude Code agent costs: haiku/sonnet/opus/fable routing, BM25 skill router, 2K token rule, retro-driven model escalation, and daily cost auditing -- all with real incident data."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - cost-optimization
   - model-routing
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/cost-routing-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![Agent tasks branching across model tiers as costs fold down](/assets/images/cost-routing-hero.png)

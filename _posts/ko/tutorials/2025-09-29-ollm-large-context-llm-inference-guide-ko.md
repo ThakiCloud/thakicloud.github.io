@@ -4,8 +4,6 @@ excerpt: "oLLM 라이브러리를 사용하여 8GB GPU에서 대용량 컨텍스
 seo_title: "oLLM 대용량 컨텍스트 LLM 추론 가이드 - 8GB GPU 최적화"
 seo_description: "oLLM 라이브러리로 8GB GPU에서 100k 토큰 컨텍스트를 처리하는 방법. 대용량 문서 분석, 계약서 검토, 의료 기록 분석 등 실전 활용 사례를 포함한 완전 가이드."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - oLLM
   - LLM
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/ollm-large-context-llm
 lang: ko
 permalink: /ko/tutorials/ollm-large-context-llm-inference-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

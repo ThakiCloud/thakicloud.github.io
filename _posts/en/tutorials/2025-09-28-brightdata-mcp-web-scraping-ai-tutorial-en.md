@@ -4,8 +4,6 @@ excerpt: "Learn how to integrate Bright Data's Model Context Protocol server wit
 seo_title: "Bright Data MCP Tutorial: AI Web Scraping & Real-Time Data Access - Thaki Cloud"
 seo_description: "Master Bright Data MCP integration with Claude AI. Get 5,000 free requests monthly for web scraping, real-time search, and browser automation. Complete setup guide included."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - brightdata
   - mcp
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/brightdata-mcp-web-scraping-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/brightdata-mcp-web-scraping-ai-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

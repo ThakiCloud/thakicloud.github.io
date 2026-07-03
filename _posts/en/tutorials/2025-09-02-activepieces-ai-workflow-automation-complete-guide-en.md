@@ -6,8 +6,6 @@ seo_description: "Master Activepieces platform with this complete guide. Learn A
 date: 2025-09-02
 lang: en
 permalink: /en/tutorials/activepieces-ai-workflow-automation-complete-guide/
-categories:
-  - tutorials
 tags:
   - activepieces
   - ai-workflow
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/tutorials/activepieces-ai-workflow-automation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 25 minutes

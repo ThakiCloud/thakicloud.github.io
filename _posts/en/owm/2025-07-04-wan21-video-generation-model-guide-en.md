@@ -4,9 +4,6 @@ excerpt: "Comprehensive guide to Wan2.1, the SOTA open-source video generation m
 seo_title: "Wan2.1 Video Generation AI Complete Guide - Open Source Content Creation - Thaki Cloud"
 seo_description: "Master Wan2.1 open-source video generation model with Text-to-Video and Image-to-Video capabilities. Complete implementation guide with creative applications and optimization strategies for content creators."
 date: 2025-07-04
-categories:
-  - owm
-  - tutorials
 tags:
   - wan21
   - video-generation
@@ -23,6 +20,9 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/wan21-video-generation-model-guide/"
 lang: en
 published: false
+categories:
+  - owm
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

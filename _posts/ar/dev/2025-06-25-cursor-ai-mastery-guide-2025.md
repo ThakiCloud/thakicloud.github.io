@@ -3,7 +3,6 @@ layout: single
 title: "دليل إتقان Cursor AI 2025: استراتيجيات تجاوز حد 500 طلب شهريًا"
 excerpt: "12 استراتيجية أساسية لاستخدام Cursor AI باحترافية بناءً على أحدث إصدار يونيو 2025، من تجاوز حد 500 طلب إلى تعظيم الإنتاجية"
 date: 2025-06-25
-categories: [dev, tutorials]
 tags: [cursor-ai, ai-assisted-development, productivity, development-workflow, coding-efficiency]
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/cursor-ai-mastery-guide-2025/"
@@ -11,6 +10,9 @@ toc: true
 toc_sticky: true
 toc_label: "دليل إتقان Cursor AI"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## نظرة عامة: تجاوز حد 500 طلب شهريًا

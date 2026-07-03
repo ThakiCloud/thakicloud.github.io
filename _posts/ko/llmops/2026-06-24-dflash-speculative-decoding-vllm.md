@@ -5,8 +5,6 @@ seo_title: "DFlash 추측 디코딩 vLLM 통합 분석 - 블록 확산 드래프
 seo_description: "DFlash 블록 확산 추측 디코딩이 vLLM/SGLang/TensorRT-LLM에 드롭인으로 붙어 EAGLE-3 대비 추론 처리량을 끌어올리는 원리와 공개 벤치마크(Qwen3-8B 무손실 6.08배, Blackwell 15배)를 ThakiCloud K8s 서빙 플랫폼 관점에서 분석합니다."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - speculative-decoding
   - dflash
@@ -21,6 +19,8 @@ toc_icon: "bolt"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/dflash-speculative-decoding-vllm/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![병렬 토큰 블록이 한 번에 앞으로 뻗어 나가는 추상 비주얼](/assets/images/dflash-speculative-decoding-vllm-hero.png)

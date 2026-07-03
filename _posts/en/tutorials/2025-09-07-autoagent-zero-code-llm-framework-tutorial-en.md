@@ -4,8 +4,6 @@ excerpt: "Learn how to build and deploy fully automated LLM agents with AutoAgen
 seo_title: "AutoAgent Tutorial: Zero-Code LLM Framework Guide - Thaki Cloud"
 seo_description: "Master AutoAgent framework for building automated LLM agents without coding. Step-by-step tutorial covering installation, Docker setup, and agent deployment."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - AutoAgent
   - LLM
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/autoagent-zero-code-llm-framework/
 canonical_url: "https://thakicloud.github.io/en/tutorials/autoagent-zero-code-llm-framework/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Expected Reading Time**: 15 minutes

@@ -4,8 +4,6 @@ excerpt: "استكشف نهج HuggingFace الرائد في تدريب نماذ�
 seo_title: "تدريب وكيل Smol2Operator GUI: دليل أتمتة استخدام الحاسوب - Thaki Cloud"
 seo_description: "تعلم كيف يحول Smol2Operator من HuggingFace نماذج VLM خفيفة الوزن إلى وكلاء أتمتة GUI باستخدام التدريب المبتكر ثنائي المراحل مع مساحات العمل الموحدة وقدرات التفكير الوكيلي."
 date: 2025-09-24
-categories:
-  - owm
 tags:
   - أتمتة-واجهة-المستخدم
   - نماذج-الرؤية-واللغة
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/owm/smol2operator-gui-automation/
 canonical_url: "https://thakicloud.github.io/ar/owm/smol2operator-gui-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

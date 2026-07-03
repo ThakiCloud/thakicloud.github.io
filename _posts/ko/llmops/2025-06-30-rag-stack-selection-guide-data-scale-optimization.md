@@ -5,8 +5,6 @@ seo_title: "RAG 벡터스토어 선택 가이드: FAISS, Chroma, Qdrant, Milvus 
 seo_description: "데이터 규모별 최적의 RAG 스택 선택 방법과 월간 비용 분석. FAISS에서 Weaviate까지 완벽 가이드와 Qwen3 임베딩 활용 전략을 제공합니다."
 date: 2025-06-30
 last_modified_at: 2025-06-30
-categories:
-  - llmops
 tags:
   - RAG
   - VectorStore
@@ -32,6 +30,8 @@ header:
 canonical_url: "https://thakicloud.github.io/llmops/rag-stack-selection-guide-data-scale-optimization/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

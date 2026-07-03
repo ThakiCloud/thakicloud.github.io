@@ -5,8 +5,6 @@ seo_title: "Qwen3.6-27B-NVFP4 on vLLM: Single-GPU Blackwell Serving Analysis | T
 seo_description: "How NVIDIA ModelOpt's Qwen3.6-27B-NVFP4 re-quantization (MLP in NVFP4 W4A16, attention and KV cache in FP8) serves on vLLM, and what single-GPU Blackwell serving implies for GPU cost efficiency on ThakiCloud ai-platform."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - llmops
 tags:
   - vllm
   - nvfp4
@@ -19,6 +17,8 @@ toc_label: "Contents"
 toc_icon: "microchip"
 published: true
 canonical_url: "https://thakicloud.github.io/en/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
+categories:
+  - llmops
 ---
 
 ## Overview

@@ -5,8 +5,6 @@ seo_title: "AnyCrawl LLM 웹 크롤러 완전 가이드 - AI 데이터 수집 �
 seo_description: "Any4AI의 AnyCrawl로 웹 스크래핑, SERP 크롤링, 멀티스레딩 데이터 수집을 구현하는 방법. Docker 설치부터 실전 활용까지 상세 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - datasets
 tags:
   - anycrawl
   - web-crawler
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 reading_time: true
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

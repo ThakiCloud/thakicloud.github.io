@@ -5,8 +5,6 @@ seo_title: "ReTool: LLM 도구 사용 강화학습 프레임워크 - 수학 추�
 seo_description: "ByteDance Seed의 ReTool 연구를 상세 분석합니다. 강화학습과 코드 인터프리터 통합으로 AIME 벤치마크에서 OpenAI o1-preview를 27.9% 상회하는 성과를 달성한 혁신적 접근법을 소개합니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - reinforcement-learning
   - llm
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/retool-reinforcement-learning-strategic-tool-use-llms/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

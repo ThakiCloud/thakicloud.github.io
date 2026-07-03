@@ -3,9 +3,6 @@ title: "Gemini CLI Complete Guide: Next-Generation AI Agent in Your Terminal"
 excerpt: "A complete practical guide covering Gemini CLI's innovative features, comparison with Claude, multimodal capabilities, and tool integration"
 date: 2025-06-25
 last_modified_at: 2025-06-25
-categories:
-  - dev
-  - tutorials
 tags:
   - gemini-cli
   - google-gemini
@@ -20,6 +17,9 @@ toc: true
 toc_label: "Gemini CLI Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/dev/gemini-cli-complete-tutorial-vs-claude/"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## Overview

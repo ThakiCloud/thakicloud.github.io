@@ -5,8 +5,6 @@ seo_title: "NVIDIA GLM-5.2-NVFP4 753B MoE 4-bit Quantization vLLM SGLang Serving
 seo_description: "An analysis of nvidia/GLM-5.2-NVFP4 (NVFP4 4-bit quantization) covering its selective quantization strategy, accuracy retention vs. FP8, vLLM/SGLang deployment commands, and the Blackwell TP=8 requirement, examined through the lens of ThakiCloud's Kubernetes-based multi-tenant serving platform."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -24,6 +22,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![Abstract image of a 16-bit neural network lattice condensing into a compact 4-bit core](/assets/images/nvidia-glm-5-2-nvfp4-hero.png)

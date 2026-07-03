@@ -4,8 +4,6 @@ excerpt: "أتقن WhisperLiveKit، نظام النسخ الصوتي المتط�
 seo_title: "دروس WhisperLiveKit للتعرف على الكلام في الوقت الفعلي - دليل شامل - Thaki Cloud"
 seo_description: "تعلم تنفيذ WhisperLiveKit للنسخ الصوتي في الوقت الفعلي مع زمن استجابة منخفض جداً. دروس شاملة تغطي التثبيت والتكوين والميزات المتقدمة مثل فصل المتحدثين."
 date: 2025-08-31
-categories:
-  - tutorials
 tags:
   - WhisperLiveKit
   - التعرف-على-الكلام-الفوري
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/whisperlivekit-real-ti
 lang: ar
 permalink: /ar/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

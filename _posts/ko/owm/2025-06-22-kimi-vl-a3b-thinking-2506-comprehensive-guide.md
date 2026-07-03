@@ -2,9 +2,6 @@
 title: "Kimi-VL-A3B-Thinking-2506: 효율적인 MoE 비전-언어 모델의 새로운 지평"
 excerpt: "Moonshot AI의 개선된 Vision-Language 모델로 토큰 소비 20% 감소하면서 추론 능력 대폭 향상"
 date: 2025-06-22
-categories: 
-  - owm
-  - research
 tags: 
   - vision-language-model
   - multimodal-ai
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "Kimi-VL-A3B-Thinking-2506 가이드"
 published: false
+categories:
+  - owm
+  - research
 ---
 
 ## 모델 개요

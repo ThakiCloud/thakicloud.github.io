@@ -5,9 +5,6 @@ seo_title: "Omnara 튜토리얼: MCP 원격 모니터링/런칭 가이드 - Thak
 seo_description: "Omnara로 AI 에이전트를 어디서나 제어하세요. 설치, 실시간 모니터링, 원격 런칭, MCP/SDK/REST 연동, macOS 테스트 스크립트, zsh 별칭까지 한 번에 정리한 실전형 튜토리얼."
 date: 2025-08-14
 last_modified_at: 2025-08-14
-categories:
-  - tutorials
-  - llmops
 tags:
   - Omnara
   - MCP
@@ -24,6 +21,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/omnara-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

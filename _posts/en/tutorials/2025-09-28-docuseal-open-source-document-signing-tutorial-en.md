@@ -4,8 +4,6 @@ excerpt: "Learn how to set up and use DocuSeal, the open-source alternative to D
 seo_title: "DocuSeal Tutorial: Open Source Document Signing Platform Guide - Thaki Cloud"
 seo_description: "Complete DocuSeal tutorial covering installation, setup, and usage. Learn to create PDF forms, manage digital signatures, and integrate this open-source DocuSign alternative."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - docuseal
   - open-source
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/docuseal-open-source-document-signing-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/docuseal-open-source-document-signing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

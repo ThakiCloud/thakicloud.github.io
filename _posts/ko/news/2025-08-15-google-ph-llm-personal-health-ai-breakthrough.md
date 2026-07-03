@@ -5,8 +5,6 @@ seo_title: "구글 PH-LLM 개인 건강 AI 혁신 - 웨어러블 데이터 활�
 seo_description: "Google의 PH-LLM이 Nature Medicine에 발표되어 개인 건강 관리의 새로운 시대를 열었습니다. 웨어러블 데이터를 활용한 AI 건강 코칭의 혁신과 미래 전망을 상세히 분석합니다."
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - news
 tags:
   - google
   - ph-llm
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/google-ph-llm-personal-health-ai-breakthrough/"
 reading_time: true
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

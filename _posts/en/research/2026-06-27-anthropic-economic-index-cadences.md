@@ -5,8 +5,6 @@ seo_title: "Anthropic Economic Index Cadences Report Analysis - Measuring AI Eco
 seo_description: "An analysis of Anthropic's Economic Index Cadences report (June 2026) based on official material: hourly sampling, 93% of conversations producing artifacts, the 0.37-point Claude Code autonomy gap, the Economic Index Survey (6 in 10 expect more next year), and how ThakiCloud's Kubernetes multi-tenant AI platform can apply this ROI measurement framework."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - research
 tags:
   - anthropic
   - economic-index
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/anthropic-economic-index-cadences/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![Abstract image of light pulses rippling in rhythm across a subtle data grid, evoking daily cadence](/assets/images/anthropic-economic-index-cadences-hero.png)

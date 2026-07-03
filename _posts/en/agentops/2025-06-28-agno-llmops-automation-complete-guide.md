@@ -5,9 +5,6 @@ seo_title: "Agno Tools LLMOps Workflow Automation Complete Guide - Thaki Cloud"
 seo_description: "A guide to LLMOps workflow automation built with the phidata agno framework. Detailed explanation of 7 practical applications and implementation methods using diverse tools such as Slack, GitHub, Airflow, and pandas."
 date: 2025-06-28
 lang: en
-categories: 
-  - agentops
-  - dev
 tags: 
   - agno
   - phidata
@@ -23,6 +20,9 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/agentops/agno-llmops-automation-complete-guide/"
 published: false
+categories:
+  - agentops
+  - dev
 ---
 
 ## Introduction

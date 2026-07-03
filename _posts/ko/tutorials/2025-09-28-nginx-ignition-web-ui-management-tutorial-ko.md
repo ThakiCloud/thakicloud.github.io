@@ -4,8 +4,6 @@ excerpt: "nginx-ignition의 직관적인 웹 인터페이스로 nginx 서버를 
 seo_title: "nginx-ignition 튜토리얼: nginx 서버 웹 UI 관리 - Thaki Cloud"
 seo_description: "nginx-ignition 웹 인터페이스로 nginx 서버를 관리하는 방법을 마스터하세요. Docker 설정, SSL 인증서, 가상 호스트, 프록시 구성까지 단계별 가이드."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - nginx
   - 웹서버
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/nginx-ignition-web-ui-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/nginx-ignition-web-ui-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

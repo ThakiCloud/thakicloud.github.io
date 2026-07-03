@@ -6,8 +6,6 @@ seo_description: "كيفية ضبط النماذج اللغوية الكبيرة
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - llmops
 tags:
   - healthcare
   - fine-tuning
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/healthcare-onprem-llm-finetuning/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى](/assets/images/healthcare-onprem-llm-finetuning-hero.png)

@@ -4,8 +4,6 @@ excerpt: "Comprehensive tutorial on building production-ready AI agents with xpa
 seo_title: "xpander.ai Tutorial: Build AI Agents with Backend-as-a-Service Platform"
 seo_description: "Learn how to build, deploy, and scale AI agents using xpander.ai's Backend-as-a-Service platform. Complete tutorial with code examples and best practices."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - ai-agents
   - backend-as-a-service
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/xpander-ai-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/xpander-ai-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Expected Reading Time**: 12 minutes

@@ -5,8 +5,6 @@ seo_title: "AutoCodeBench: Multilingual LLM Code Generation Benchmark - Thaki Cl
 seo_description: "Evaluate LLM multilingual code generation capabilities accurately with AutoCodeBench, developed by Tencent. Supporting 20 languages with automated test case generation, this benchmark overcomes the limitations of manual approaches."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
 tags:
   - AutoCodeBench
   - LLM
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/autocodebench-multilingua
 lang: en
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 8 min

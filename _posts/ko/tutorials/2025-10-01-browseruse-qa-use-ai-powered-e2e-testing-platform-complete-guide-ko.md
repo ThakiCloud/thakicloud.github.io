@@ -4,8 +4,6 @@ excerpt: "BrowserUse AI 에이전트를 활용한 지능형 웹 애플리케이�
 seo_title: "BrowserUse QA-Use AI E2E 테스팅 플랫폼 완전 가이드 - Thaki Cloud"
 seo_description: "BrowserUse AI 에이전트로 웹 애플리케이션 테스팅을 자동화하는 방법. Docker 기반 설치, 테스트 스위트 생성, 스케줄링까지 완전 가이드"
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - BrowserUse
   - AI Testing
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/browseruse-qa-use-tuto
 lang: ko
 permalink: /ko/tutorials/browseruse-qa-use-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

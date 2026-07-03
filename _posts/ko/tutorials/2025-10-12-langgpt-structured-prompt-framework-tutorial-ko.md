@@ -4,8 +4,6 @@ excerpt: "LangGPT의 구조화된 프레임워크를 사용하여 고품질의 �
 seo_title: "LangGPT 튜토리얼: 구조화된 프롬프트 엔지니어링 프레임워크 가이드 - Thaki Cloud"
 seo_description: "ChatGPT, Claude 등 LLM을 위한 구조화된 프롬프트 설계, 역할 기반 템플릿, 고급 프롬프트 엔지니어링 기법을 다루는 완전한 LangGPT 튜토리얼."
 date: 2025-10-12
-categories:
-  - tutorials
 tags:
   - LangGPT
   - 프롬프트-엔지니어링
@@ -19,6 +17,8 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/langgpt-structured-prompt-framework-tutorial-ko/"
 lang: ko
 permalink: /ko/tutorials/langgpt-structured-prompt-framework-tutorial/
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

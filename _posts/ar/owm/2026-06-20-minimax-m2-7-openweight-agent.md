@@ -5,8 +5,6 @@ seo_title: "دليل نشر MiniMax-M2.7 229B مفتوح الأوزان محلي
 seo_description: "نستعرض بنية MiniMax-M2.7 ومعاييره (MLE Bench Lite 66.6%، SWE-Pro 56.22%، GDPval-AA ELO 1495)، وطرق الخدمة عبر SGLang/vLLM/NIM، وتحفظات الترخيص."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - minimax-m2-7
   - minimax
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/minimax-m2-7-openweight-agent/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية نشر واستخدام Kite، لوحة تحكم K
 seo_title: "دليل لوحة تحكم Kite Kubernetes - أداة إدارة K8s الحديثة - Thaki Cloud"
 seo_description: "دليل شامل للوحة تحكم Kite Kubernetes: التثبيت عبر Helm/kubectl، إعداد المجموعات المتعددة، إدارة الموارد، المراقبة مع Prometheus، وميزات الأمان"
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - kubernetes
   - dashboard
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/tutorials/kite-kubernetes-dashboard-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/kite-kubernetes-dashboard-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

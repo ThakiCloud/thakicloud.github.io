@@ -4,8 +4,6 @@ excerpt: "Learn how to set up and use Bytebot, an open-source AI desktop agent t
 seo_title: "Bytebot AI Desktop Agent Setup Guide - Complete Tutorial 2025"
 seo_description: "Complete guide to setting up Bytebot AI desktop agent. Learn installation, configuration, and automation of computer tasks with natural language commands."
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - bytebot
   - ai-agent
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

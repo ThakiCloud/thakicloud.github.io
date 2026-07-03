@@ -5,8 +5,6 @@ seo_title: "دليل LangChain Open Deep Research الشامل - نظام بحث
 seo_description: "تحليل شامل لـ LangChain Open Deep Research. تطبيق QualityFocusedAgent وMultiAgentResearchSystem وAdvancedRAGSystem، والوكلاء الخاصة بالمجالات، ودليل النشر على Kubernetes."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - agentops
 tags:
   - langchain
   - open-deep-research
@@ -24,6 +22,9 @@ toc_label: "جدول المحتويات"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
 lang: ar
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 20 دقائق

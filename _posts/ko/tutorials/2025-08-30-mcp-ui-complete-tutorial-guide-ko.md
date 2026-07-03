@@ -4,8 +4,6 @@ excerpt: "MCP-UI를 사용하여 MCP(Model Context Protocol) 서버용 인터랙
 seo_title: "MCP-UI 튜토리얼: 인터랙티브 AI 에이전트 UI 구축 완전 가이드"
 seo_description: "이 포괄적인 튜토리얼로 MCP-UI 개발을 마스터하세요. 실용적인 예제와 함께 TypeScript와 Ruby를 사용하여 AI 에이전트용 인터랙티브 UI 컴포넌트를 만드는 방법을 학습하세요."
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - mcp-ui
   - ai-agents
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/mcp-ui-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mcp-ui-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

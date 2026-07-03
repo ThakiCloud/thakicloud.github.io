@@ -6,8 +6,6 @@ seo_description: "A comprehensive analysis of the 10 highest GitHub-starred RL p
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: en
-categories:
-  - research
 tags:
   - reinforcement-learning
   - post-training
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/post-training-revolution-rl-agent-development/"
 reading_time: true
 published: true
+categories:
+  - research
 ---
 
 ![Key concept illustration](/assets/images/post-training-revolution-rl-agent-development-hero.png)

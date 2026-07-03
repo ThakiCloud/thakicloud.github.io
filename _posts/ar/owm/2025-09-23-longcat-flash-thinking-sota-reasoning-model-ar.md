@@ -4,8 +4,6 @@ excerpt: "اكتشف LongCat-Flash-Thinking، نموذج MoE الثوري بـ 5
 seo_title: "LongCat-Flash-Thinking: نموذج استدلال متفوق مفتوح المصدر بـ 560B معامل"
 seo_description: "استكشف نموذج LongCat-Flash-Thinking الصيني الجديد - 560B معامل، تفعيل 27B، معايير متفوقة، تقليل رموز 64.5%، وتدريب RL غير متزامن."
 date: 2025-09-23
-categories:
-  - owm
 tags:
   - LongCat
   - نموذج-الاستدلال
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ar/owm/longcat-flash-thinking-sota-
 lang: ar
 permalink: /ar/owm/longcat-flash-thinking-sota-reasoning-model/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

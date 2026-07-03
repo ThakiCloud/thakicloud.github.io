@@ -4,8 +4,6 @@ excerpt: "يحذر خبراء الماليات من أن مراكز بيانات
 seo_title: "أزمة مراكز البيانات المالية للذكاء الاصطناعي: مشكلة خسارة سنوية بـ 40 مليار دولار - Thaki Cloud"
 seo_description: "يكشف التحليل أن مراكز بيانات الذكاء الاصطناعي ستتكبد استهلاكاً سنوياً بقيمة 40 مليار دولار مع توليد إيرادات 15-20 مليار دولار فقط، مما يخلق فقاعة مالية غير مستدامة."
 date: 2025-09-01
-categories:
-  - news
 tags:
   - مراكز-بيانات-الذكاء-الاصطناعي
   - فقاعة-مالية
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/news/ai-data-centers-financial-bubble-crisis/
 canonical_url: "https://thakicloud.github.io/ar/news/ai-data-centers-financial-bubble-crisis/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 6 دقائق

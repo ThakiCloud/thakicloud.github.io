@@ -5,8 +5,6 @@ seo_title: "Rancher 멀티 클러스터 관리 완벽 가이드 - 대규모 운�
 seo_description: "Rancher로 여러 Kubernetes 클러스터를 통합 관리하는 방법을 알아보세요. 사용자 관리, RBAC, Helm 배포까지 엔터프라이즈 환경에서의 실무 활용법을 제시합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - llmops
 tags:
   - rancher
   - kubernetes
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/rancher-multi-cluster-management-enterprise-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

@@ -6,9 +6,6 @@ seo_description: "دليل عملي للبحث عن استخدام مدير حز
 date: 2025-08-10
 last_modified_at: 2025-08-10
 lang: ar
-categories:
-  - agentops
-  - tutorials
 tags:
   - claude-code
   - uv-package-manager
@@ -27,6 +24,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+  - tutorials
+published: false
 ---
 
 ![توضيح للمفهوم الأساسي](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)

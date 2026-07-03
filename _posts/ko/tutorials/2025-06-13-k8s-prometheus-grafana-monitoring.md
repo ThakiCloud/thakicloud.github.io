@@ -1,9 +1,6 @@
 ---
 title: "Kubernetes 환경에서 Prometheus와 Grafana로 모니터링 시스템 구축하기"
 date: 2025-06-13
-categories: 
-  - tutorials
-  - kubernetes
 tags: 
   - kubernetes
   - prometheus
@@ -15,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 Kubernetes 클러스터의 효율적인 운영을 위해서는 노드, 파드, 컨테이너 수준의 상세한 모니터링이 필수입니다.

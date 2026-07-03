@@ -5,9 +5,6 @@ seo_title: "NextStep-1 자동회귀 이미지 생성 모델 완전 가이드 - T
 seo_description: "StepFun NextStep-1 14B 자동회귀 모델과 157M flow matching head로 구현하는 연속 토큰 기반 고품질 이미지 생성 시스템 구축 방법"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - owm
-  - llmops
 tags:
   - NextStep-1
   - StepFun
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nextstep-1-autoregressive-image-generation-continuous-tokens-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

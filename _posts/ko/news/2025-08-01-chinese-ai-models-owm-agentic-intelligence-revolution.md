@@ -5,9 +5,6 @@ seo_title: "중국 AI 모델 워크플로우 자동화 혁신 - Kimi K2, DeepSee
 seo_description: "2025년 중국 AI 모델들의 Agentic Intelligence 혁신을 OWM 관점에서 분석. Kimi K2의 초장문 개인화, DeepSeek-R1의 추론 능력, Qwen3의 사고 모드 제어까지 워크플로우 자동화 전략을 제시합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - owm
-  - ai-agents
 tags:
   - Kimi-K2
   - DeepSeek-R1
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/chinese-ai-models-owm-agentic-intelligence-revolution/"
 reading_time: true
 published: false
+categories:
+  - news
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,8 +5,6 @@ seo_title: "EXAONE 4.0-32B 오픈 워크플로우 관리 완벽 가이드 - Thak
 seo_description: "LG AI Research EXAONE 4.0-32B 모델의 기술 사양, 워크플로우 자동화 기능, 실무 적용 방안을 상세히 분석하고 실제 구현 예제를 제공합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15
-categories:
-  - owm
 tags:
   - EXAONE
   - LG-AI-Research
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/exaone-4-32b-open-workflow-management-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

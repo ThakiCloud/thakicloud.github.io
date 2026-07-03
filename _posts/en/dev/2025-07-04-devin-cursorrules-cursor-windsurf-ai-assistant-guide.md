@@ -6,8 +6,6 @@ seo_description: "The devin.cursorrules project converts a $20/month Cursor into
 date: 2025-07-04
 last_modified_at: 2025-07-04
 lang: en
-categories:
-  - dev
 tags:
   - devin.cursorrules
   - Cursor
@@ -24,6 +22,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/2025-07-04-devin-cursorrules-cursor-windsurf-ai-assistant-guide/"
 reading_time: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 min

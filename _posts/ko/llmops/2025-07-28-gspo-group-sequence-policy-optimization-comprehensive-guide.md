@@ -5,8 +5,6 @@ seo_title: "GSPO vs GRPO: LLM 강화학습 알고리즘 완전 분석 - Thaki Cl
 seo_description: "Group Sequence Policy Optimization(GSPO)의 핵심 원리와 GRPO 대비 장점을 심층 분석. Qwen3 적용 사례와 MoE 모델 안정성 확보 방법까지 상세 가이드."
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - llmops
 tags:
   - GSPO
   - GRPO
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/gspo-group-sequence-policy-optimization-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

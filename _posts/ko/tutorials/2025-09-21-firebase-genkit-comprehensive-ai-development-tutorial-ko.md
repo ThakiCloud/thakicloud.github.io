@@ -4,8 +4,6 @@ excerpt: "Firebase Genkit을 마스터하여 JavaScript, Go, Python으로 AI 기
 seo_title: "Firebase Genkit 튜토리얼: 프로덕션 AI 앱 구축 - Thaki Cloud"
 seo_description: "Firebase Genkit으로 프로덕션 AI 애플리케이션 구축하기. 설치, 개발, 배포, 모니터링을 실전 예제와 함께 배우는 완전한 가이드입니다."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - firebase
   - genkit
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

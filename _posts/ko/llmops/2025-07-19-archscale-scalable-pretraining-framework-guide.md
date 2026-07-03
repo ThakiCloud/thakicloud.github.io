@@ -5,8 +5,6 @@ seo_title: "ArchScale LLM 사전 훈련 가이드 - Microsoft 프레임워크 - 
 seo_description: "Microsoft ArchScale을 활용한 대규모 언어모델 사전 훈련 완벽 가이드. μP++ 스케일링, 롱 컨텍스트 훈련, 분산 처리, 성능 평가까지 실무 중심 설명"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - llmops
 tags:
   - ArchScale
   - Microsoft
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/archscale-scalable-pretraining-framework-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

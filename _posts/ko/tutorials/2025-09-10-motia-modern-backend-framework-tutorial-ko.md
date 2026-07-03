@@ -4,8 +4,6 @@ excerpt: "API, 백그라운드 작업, 워크플로우, AI 에이전트를 하�
 seo_title: "Motia 튜토리얼: 통합 백엔드 프레임워크 가이드 - Thaki Cloud"
 seo_description: "Motia 프레임워크 실습 가이드: API, 백그라운드 작업, 워크플로우, AI 에이전트를 하나의 시스템으로 구축. JavaScript, TypeScript, Python 지원."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - motia
   - backend-framework
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/motia-modern-backend-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/motia-modern-backend-framework-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

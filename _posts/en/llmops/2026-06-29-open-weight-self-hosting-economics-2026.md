@@ -5,8 +5,6 @@ seo_title: "Open-Weight Model Momentum and Self-Hosting Economics 2026 - Thaki C
 seo_description: "A mid-2026 survey of the open-weight landscape through DeepSeek V4 Flash, GLM-5.2, MiniMax M3, and Nemotron 3 Ultra, covering self-hosting break-even versus proprietary APIs and ThakiCloud Kubernetes serving analysis."
 date: 2026-06-29
 last_modified_at: 2026-06-29
-categories:
-  - llmops
 tags:
   - open-weight
   - self-hosting
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/open-weight-self-hosting-
 reading_time: true
 header:
   image: /assets/images/open-weight-self-hosting-economics-2026-hero.png
+categories:
+  - llmops
 ---
 
 ![Abstract visual representing open-weight models and self-hosting economics](/assets/images/open-weight-self-hosting-economics-2026-hero.png)

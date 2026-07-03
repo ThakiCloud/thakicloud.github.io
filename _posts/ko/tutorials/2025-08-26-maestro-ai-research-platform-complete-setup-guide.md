@@ -4,8 +4,6 @@ excerpt: "AI 에이전트 기반 연구 자동화 플랫폼 MAESTRO의 설치부
 seo_title: "MAESTRO AI 연구 플랫폼 설치 가이드 - Docker, GPU 설정, 로컬 LLM 연동 - Thaki Cloud"
 seo_description: "오픈소스 AI 연구 플랫폼 MAESTRO 설치 방법부터 GPU 최적화, SearXNG 검색 엔진 연동, 로컬 LLM 설정까지 실무 중심 튜토리얼"
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - maestro
   - ai-research
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/maestro-ai-research-pl
 lang: ko
 permalink: /ko/tutorials/maestro-ai-research-platform-complete-setup-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

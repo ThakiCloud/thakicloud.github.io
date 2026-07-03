@@ -5,9 +5,6 @@ seo_title: "Qwen3-4B GRPO 한국어 추론 모델 훈련 가이드 - Thaki Cloud
 seo_description: "Qwen3-4B 모델의 GRPO 학습 과정 완전 분석. Colab 노트북 해부부터 한국어 추론 데이터셋 활용법까지 실무진을 위한 상세 가이드."
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - llmops
-  - tutorials
 tags:
   - Qwen3-4B
   - GRPO
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/qwen3-4b-grpo-korean-reasoning-training-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

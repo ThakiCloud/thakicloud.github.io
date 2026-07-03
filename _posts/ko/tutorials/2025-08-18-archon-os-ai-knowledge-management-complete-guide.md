@@ -5,8 +5,6 @@ seo_title: "Archon OS AI 지식관리 플랫폼 설치 가이드 - Thaki Cloud"
 seo_description: "Archon OS를 통해 AI 코딩 어시스턴트에 강력한 지식 관리 기능을 추가하는 방법. MCP 연동, 웹 크롤링, 문서 처리, 프로젝트 관리까지 실제 테스트와 함께하는 완전 가이드"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
 tags:
   - Archon
   - AI-Assistant
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/archon-os-ai-knowledge-management-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

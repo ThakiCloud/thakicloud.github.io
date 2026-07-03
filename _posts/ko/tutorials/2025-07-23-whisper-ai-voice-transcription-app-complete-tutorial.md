@@ -5,9 +5,6 @@ seo_title: "Whisper AI 음성 전사 앱 개발 튜토리얼 - Next.js Together.
 seo_description: "Together.ai Whisper 모델과 Next.js를 사용한 AI 음성 전사 앱 개발 방법을 실전 코드와 함께 상세히 알아보세요. 인증, 파일 업로드, AI 변환까지 포함된 완전한 가이드입니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23
-categories:
-  - tutorials
-  - dev
 tags:
   - Whisper
   - 음성전사
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/whisper-ai-voice-transcription-app-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

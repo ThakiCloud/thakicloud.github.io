@@ -3,8 +3,6 @@ title: "소프트웨어가 공짜가 되면 엔지니어는 무엇을 하는가:
 excerpt: "코드의 한계비용이 0에 수렴할 때, 엔지니어링 팀의 가치는 '무엇을 만드는가'에서 '무엇을 만들어야 하는가를 아는가'로 옮겨간다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - Dario Amodei
   - Anthropic
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/amodei-free-software-engineer-value/"
+categories:
+  - culture
 ---
 
 ## 스위치가 켜지는 순간

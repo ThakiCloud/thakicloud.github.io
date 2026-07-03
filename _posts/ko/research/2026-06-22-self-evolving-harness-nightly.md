@@ -5,8 +5,6 @@ seo_title: "매일 밤 스스로 진화하는 AI 하네스 - Thaki Cloud"
 seo_description: "Self-Harness(arXiv:2606.09498) 기반 야간 자가진화 루프 구현 사례. Weakness Mining, Harness Proposal, Proposal Validation 3단계와 날조 방지 게이트, hermes/autoimprove/auto-distill 스킬 생태계, Paxis Curator 제품화까지 설명합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - research
 tags:
   - self-evolving
   - ai-agents
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/self-evolving-harness-nightly/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![매일 밤 스스로 진화하는 AI 하네스](/assets/images/self-evolving-harness-nightly-hero.png)

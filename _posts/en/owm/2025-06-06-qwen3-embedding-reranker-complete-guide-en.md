@@ -4,8 +4,6 @@ excerpt: "Comprehensive analysis of Alibaba's Qwen3-Embedding and Qwen3-Reranker
 seo_title: "Qwen3-Embedding & Reranker Complete Guide - SOTA Multilingual Models - Thaki Cloud"
 seo_description: "Explore Alibaba's Qwen3-Embedding and Qwen3-Reranker series achieving top performance on MMTEB, MTEB, and MTEB-Code benchmarks with 119-language support and open-source availability."
 date: 2025-06-06
-categories: 
-  - owm
 tags: 
   - qwen3
   - embedding
@@ -23,6 +21,8 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/qwen3-embedding-reranker-complete-guide/"
 lang: en
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

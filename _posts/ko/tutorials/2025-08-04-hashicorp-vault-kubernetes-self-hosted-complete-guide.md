@@ -5,9 +5,6 @@ seo_title: "HashiCorp Vault Kubernetes Self-Hosted 완전 가이드 - Thaki Clou
 seo_description: "HashiCorp Vault를 Kubernetes에 배포하여 시크릿 관리, 암호화 서비스, 권한 관리를 구현하는 완전한 튜토리얼 가이드"
 date: 2025-08-04
 last_modified_at: 2025-08-04
-categories:
-  - tutorials
-  - devops
 tags:
   - hashicorp-vault
   - kubernetes
@@ -25,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/hashicorp-vault-kubernetes-self-hosted-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

@@ -5,8 +5,6 @@ seo_title: "FastContext-1.0-4B-SFT 코딩 에이전트 서브에이전트 모델
 seo_description: "Microsoft FastContext-1.0-4B-SFT 아키텍처(Qwen3-4B 기반, 262K 컨텍스트), arXiv:2606.14066, SWE-bench 벤치마크, vLLM 서빙, subagent-model-routing 직결."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - fastcontext
   - microsoft
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/fastcontext-4b-subagent-model/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

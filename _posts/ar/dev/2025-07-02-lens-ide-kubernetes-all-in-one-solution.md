@@ -5,8 +5,6 @@ seo_title: "دليل شامل لأداة إدارة Kubernetes باستخدام 
 seo_description: "تعرّف على كيفية إدارة مجموعات Kubernetes بكفاءة في بيئة رسومية مع Lens IDE. حل المراقبة في الوقت الفعلي وتحليل السجلات وإدارة Helm كلها في مكان واحد."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - kubernetes
   - lens
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/lens-ide-kubernetes-all-in-one-solution/"
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق

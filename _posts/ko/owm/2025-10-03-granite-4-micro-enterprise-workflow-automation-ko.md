@@ -4,8 +4,6 @@ excerpt: "IBM Granite 4.0 Micro가 고급 도구 호출 기능, 다국어 지원
 seo_title: "IBM Granite 4.0 Micro 엔터프라이즈 워크플로우 자동화 가이드 - Thaki Cloud"
 seo_description: "엔터프라이즈 워크플로우 자동화를 위한 IBM Granite 4.0 Micro 구현 완전 가이드. 도구 호출, 다국어 지원, AI 기반 비즈니스 프로세스 최적화 방법을 학습하세요."
 date: 2025-10-03
-categories:
-  - owm
 tags:
   - IBM-Granite
   - 워크플로우-자동화
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/owm/granite-4-micro-enterprise-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/granite-4-micro-enterprise-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

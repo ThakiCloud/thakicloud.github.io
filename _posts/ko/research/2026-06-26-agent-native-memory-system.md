@@ -5,8 +5,6 @@ seo_title: "Agent-Native Memory System 분석 - 에이전트 메모리의 데이
 seo_description: "arXiv 2606.24775를 공식 초록 기준으로 분석합니다. 표현·저장 / 추출 / 검색·라우팅 / 유지보수 4개 모듈 분해, 12개 메모리 시스템과 5개 워크로드 11개 데이터셋 평가, 워크로드 병목 정합성과 비용-성능 트레이드오프, ThakiCloud 쿠버네티스 멀티테넌트 에이전트 플랫폼 적용 관점."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - research
 tags:
   - agent-memory
   - llm-agent
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/agent-native-memory-system/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![계층화된 데이터가 신경망과 데이터베이스가 섞인 격자 구조를 흐르며 기억 셀이 맺혔다 사라지는 추상 이미지](/assets/images/agent-native-memory-system-hero.png)

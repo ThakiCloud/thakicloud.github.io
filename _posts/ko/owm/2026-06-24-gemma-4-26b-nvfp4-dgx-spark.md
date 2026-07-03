@@ -5,8 +5,6 @@ seo_title: "Gemma-4-26B-A4B-NVFP4 DGX Spark 16배 병렬 추론 - 가성비 솔�
 seo_description: "Gemma-4-26B-A4B-NVFP4(25.2B MoE/active 3.8B)를 DGX Spark 128GB에서 16배 병렬 서빙: 스트림당 18tok/s, 합산 300tok/s. NVFP4 4비트 양자화, 메모리 대역폭 병목, RTX 5090/RTX PRO 6000/B200 가성비 비교와 ThakiCloud 온프렘 서빙 관점."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - owm
 tags:
   - gemma-4
   - nvfp4
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/gemma-4-26b-nvfp4-dgx-spark/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -4,8 +4,6 @@ excerpt: "실제 해커처럼 동작하는 오픈소스 AI 에이전트 Strix를
 seo_title: "Strix AI 보안 테스팅 튜토리얼: 자율적 취약점 탐지 완전 가이드"
 seo_description: "Strix AI 보안 테스팅 도구 완전 가이드 - 설치, 설정, 웹 애플리케이션과 코드베이스의 자동화된 취약점 탐지 및 검증을 위한 실전 사용법"
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - 보안
   - ai
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/strix-ai-security-testing-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/strix-ai-security-testing-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

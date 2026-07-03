@@ -4,8 +4,6 @@ excerpt: "استكشاف متعمق لابتكارات Qwen3-VL المعماري
 seo_title: "ابتكارات معمارية Qwen3-VL - نماذج الرؤية واللغة المتقدمة - Thaki Cloud"
 seo_description: "تحليل شامل للبنية المعمارية الرائدة لـ Qwen3-VL التي تتميز بتضمينات Interleaved-MRoPE الموضعية ودمج ميزات DeepStack متعدد المستويات ومقياس 235B معامل للتفكير متعدد الوسائط المحسّن"
 date: 2025-10-14
-categories:
-  - research
 tags:
   - qwen3-vl
   - الرؤية-واللغة
@@ -21,6 +19,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/research/qwen3-vl-vision-language-architecture-innovations/"
 lang: ar
 permalink: /ar/research/qwen3-vl-vision-language-architecture-innovations/
+categories:
+  - research
 ---
 
 ![مخطط مفاهيمي](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.png)

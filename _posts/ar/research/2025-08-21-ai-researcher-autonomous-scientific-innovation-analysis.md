@@ -5,8 +5,6 @@ seo_title: "تحليل نظام AI-Researcher للبحث العلمي المست
 seo_description: "نظرة معمّقة على بنية مشروع AI-Researcher وقدراته الرئيسية وما قد يعنيه البحث العلمي المستقل بالكامل لمجتمع الباحثين."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - AI-Researcher
   - 자율-연구-시스템
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/ai-researcher-autonomou
 reading_time: true
 lang: ar
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

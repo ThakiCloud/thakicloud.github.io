@@ -5,9 +5,6 @@ date: 2025-06-10
 lang: en
 permalink: /en/news/ilya-sutskever-ai-capability-prediction-analysis/
 canonical_url: "https://thakicloud.github.io/en/news/ilya-sutskever-ai-capability-prediction-analysis/"
-categories: 
-  - news
-  - AGI
 tags: 
   - Ilya Sutskever
   - OpenAI
@@ -19,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "News Analysis"
 published: false
+categories:
+  - news
 ---
 
 Former OpenAI Chief Scientist Ilya Sutskever presented an ambitious vision for AI's future in his keynote speech at the University of Toronto graduation ceremony, drawing attention from academia and industry. His remarks go beyond simple technical predictions to raise fundamental questions about AI research's philosophical foundations and future directions.

@@ -5,8 +5,6 @@ seo_title: "The AI Harness That Evolves Itself Every Night - Thaki Cloud"
 seo_description: "A real-world implementation of a nightly self-evolving loop based on Self-Harness (arXiv:2606.09498). Covers the three phases -- Weakness Mining, Harness Proposal, Proposal Validation -- along with the anti-hallucination gate, the hermes/autoimprove/auto-distill skill ecosystem, and the path to productization as Paxis Curator."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - research
 tags:
   - self-evolving
   - ai-agents
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/self-evolving-harness-nightly/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![The AI Harness That Evolves Itself Every Night](/assets/images/self-evolving-harness-nightly-hero.png)

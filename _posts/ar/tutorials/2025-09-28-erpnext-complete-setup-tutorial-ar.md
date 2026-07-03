@@ -4,8 +4,6 @@ excerpt: "دليل شامل لإعداد واستخدام ERPNext، نظام ت�
 seo_title: "دليل ERPNext: دليل الإعداد الشامل لنظام ERP مفتوح المصدر - Thaki Cloud"
 seo_description: "تعلم كيفية تثبيت وتكوين واستخدام ERPNext - نظام ERP مجاني مفتوح المصدر. دليل شامل يغطي إعداد Docker والتكوين الأساسي وميزات الأعمال."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - ERPNext
   - ERP
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/erpnext-complete-setup-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/erpnext-complete-setup-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

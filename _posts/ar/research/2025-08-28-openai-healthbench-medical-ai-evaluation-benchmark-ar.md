@@ -4,8 +4,6 @@ excerpt: "اكتشف كيف يحول OpenAI HealthBench تقييم الذكاء 
 seo_title: "OpenAI HealthBench: تقييم الذكاء الاصطناعي الطبي وأفضل ممارسات LLMOps"
 seo_description: "استكشف نهج OpenAI HealthBench الثوري في تقييم الذكاء الاصطناعي الطبي. تعلم كيف أنشأ 262 طبيبًا من 60 دولة 5000 محادثة طبية واقعية لقياس أمان الذكاء الاصطناعي في الرعاية الصحية."
 date: 2025-08-28
-categories:
-  - llmops
 tags:
   - OpenAI
   - HealthBench
@@ -19,6 +17,9 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/llmops/openai-healthbench-medical-ai-evaluation/
 canonical_url: "https://thakicloud.github.io/ar/llmops/openai-healthbench-medical-ai-evaluation/"
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

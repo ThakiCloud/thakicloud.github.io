@@ -5,9 +5,6 @@ seo_title: "Flet Python 멀티플랫폼 앱 개발 완전 가이드 - Flutter �
 seo_description: "Flet 프레임워크로 Python 하나로 웹, iOS, Android, Windows, macOS, Linux 앱을 동시 개발하는 실무 튜토리얼과 실제 프로젝트 예제를 제공합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - Flet
   - Python
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/flet-python-multiplatform-app-development-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

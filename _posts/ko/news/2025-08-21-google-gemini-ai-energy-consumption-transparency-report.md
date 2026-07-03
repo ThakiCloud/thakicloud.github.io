@@ -5,9 +5,6 @@ seo_title: "구글 Gemini AI 에너지 사용량 공개 - 빅테크 투명성 �
 seo_description: "구글이 업계 최초로 공개한 Gemini AI 에너지 사용량 상세 데이터. 프롬프트당 0.24와트시, 탄소배출 0.03g, 1년간 33배 효율성 개선 등 핵심 지표와 업계 영향 분석"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - news
-  - research
 tags:
   - GoogleAI
   - Gemini
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/news/google-gemini-ai-energy-consumption-transparency-report/"
 reading_time: true
 published: false
+categories:
+  - news
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

@@ -2,9 +2,6 @@
 title: "중국 과학자들, AI가 인간 수준 인지능력 자발적 형성 가능함을 최초 확인"
 excerpt: "중국과학원 연구팀이 멀티모달 대형언어모델이 인간과 유사한 객체 개념 표현 시스템을 자발적으로 형성할 수 있음을 Nature Machine Intelligence에 발표했습니다."
 date: 2025-06-16
-categories:
-  - news
-  - research
 tags:
   - ai-cognition
   - chinese-research
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: AI 인지능력 돌파구
 published: false
+categories:
+  - news
+  - research
 ---
 
 ## 연구 개요

@@ -5,9 +5,6 @@ seo_title: "Simba KMS RAG 시스템 튜토리얼 - macOS 완벽 가이드 - Thak
 seo_description: "오픈소스 Knowledge Management System Simba를 활용한 RAG 시스템 구축 가이드. Python SDK, 벡터 데이터베이스, 임베딩 모델 설정부터 실제 테스트까지 상세히 안내합니다."
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - tutorials
-  - llmops
 tags:
   - simba
   - kms
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/simba-kms-rag-tutorial-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

@@ -4,8 +4,6 @@ excerpt: "PandocX هو أداة تحويل ملفات قوية مبنية على
 seo_title: "دليل PandocX لتحويل الملفات - دليل تحويل تنسيقات المستندات الكامل"
 seo_description: "دليل كامل لتحويل الملفات باستخدام PandocX. تعلم كيفية التحويل بين Markdown وHTML وPDF وWord وتنسيقات المستندات الأخرى مع أمثلة مفصلة وأفضل الممارسات."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - PandocX
   - تحويل-الملفات
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/pandocx-file-converter
 lang: ar
 permalink: /ar/tutorials/pandocx-file-converter-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

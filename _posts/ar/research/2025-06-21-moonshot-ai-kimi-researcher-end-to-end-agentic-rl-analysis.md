@@ -5,8 +5,6 @@ date: 2025-06-21
 lang: ar
 permalink: /ar/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/
 canonical_url: "https://thakicloud.github.io/ar/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
-categories: 
-  - research
 tags: 
   - Kimi-Researcher
   - Moonshot-AI
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "تحليل Kimi-Researcher"
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

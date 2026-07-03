@@ -5,8 +5,6 @@ seo_title: "Ollama-OCR 완전 가이드 - 로컬 비전 모델 OCR 솔루션 - T
 seo_description: "Ollama-OCR로 LLaVA, Llama 3.2 Vision, Granite3.2 모델을 활용한 문서 텍스트 추출. PDF, 이미지 배치 처리, Streamlit 웹앱 구축까지 완전 가이드"
 date: 2025-08-07
 last_modified_at: 2025-08-07
-categories:
-  - tutorials
 tags:
   - ollama-ocr
   - vision-models
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ollama-ocr-comprehensive-vision-model-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

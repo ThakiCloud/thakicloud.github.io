@@ -1,9 +1,6 @@
 ---
 title: "Joel Spolsky: 개발자 중심 문화를 만든 선구자와 Vibeops 시대의 교훈"
 date: 2025-06-11
-categories: 
-  - dev
-  - engineering
 tags: 
   - Joel Spolsky
   - Stack Overflow
@@ -18,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
 ---
 
 Microsoft Excel PM에서 시작해 Stack Overflow와 Trello를 만들어 전 세계 개발자들의 일하는 방식을 바꾼 **Joel Spolsky**. 그의 25년 여정은 단순한 성공 스토리가 아니라, 오늘날 **Vibeops 시대**가 추구하는 개발자 경험(DX)과 문화 중심 조직 운영의 원형을 보여줍니다. 2000년 Fog Creek Software 창업부터 2021년 Stack Overflow 18억 달러 매각까지, 그가 일관되게 추구한 "개발자 우선" 철학이 현재 개발 생태계에 주는 의미를 살펴보겠습니다.

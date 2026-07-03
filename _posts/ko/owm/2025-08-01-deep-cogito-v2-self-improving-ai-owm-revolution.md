@@ -5,9 +5,6 @@ seo_title: "Deep Cogito v2 자기 개선 AI 워크플로우 혁신 - 오픈소�
 seo_description: "Deep Cogito v2 Preview 발표로 본 자기 개선 AI의 혁명적 변화. IDA 기술과 671B MoE 모델의 60% 효율성 개선, $3.5M 비용 혁신까지 OWM 워크플로우 자동화의 미래를 제시합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - owm
-  - ai-models
 tags:
   - Deep-Cogito
   - Cogito-v2
@@ -27,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/deep-cogito-v2-self-improving-ai-owm-revolution/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

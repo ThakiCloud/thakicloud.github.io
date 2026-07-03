@@ -5,8 +5,6 @@ seo_title: "AskToAct: LLM 도구 사용 자기교정 명확화 프레임워크 -
 seo_description: "실제 상황에서 모호한 사용자 쿼리를 효과적으로 처리하는 AskToAct 프레임워크의 핵심 메커니즘, 데이터셋 구축 방법론, 학습 과정을 상세히 분석합니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - LLM
   - 도구학습
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/asktoact-llm-tool-use-self-correcting-clarification/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

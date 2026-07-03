@@ -5,10 +5,6 @@ date: 2025-06-21
 lang: ar
 permalink: /ar/research/ai-agent-job-integration-workbank-human-agency-scale/
 canonical_url: "https://thakicloud.github.io/ar/research/ai-agent-job-integration-workbank-human-agency-scale/"
-categories: 
-  - research
-  - careers
-  - ai-application
 tags: 
   - AI-Agents
   - Labor-Market
@@ -21,6 +17,9 @@ author_profile: true
 toc: true
 toc_label: "وكلاء الذكاء الاصطناعي وسوق العمل"
 published: false
+categories:
+  - research
+  - careers
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

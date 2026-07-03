@@ -4,8 +4,6 @@ excerpt: "اكتشف المجموعة النهائية من مجموعات ال�
 seo_title: "مجموعات البيانات العامة الرائعة - دليل شامل لمصادر البيانات المفتوحة"
 seo_description: "استكشف مستودع GitHub الحاصل على 64.3 ألف نجمة والذي يضم مجموعات بيانات عامة عالية الجودة عبر أكثر من 30 فئة. اعثر على مجموعة البيانات المثالية لبحثك أو مشروعك."
 date: 2025-08-28
-categories:
-  - datasets
 tags:
   - البيانات-المفتوحة
   - مجموعات-البيانات-العامة
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/datasets/awesome-public-datasets-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ar/datasets/awesome-public-datasets-comprehensive-guide/"
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

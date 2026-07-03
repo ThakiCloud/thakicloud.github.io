@@ -4,8 +4,6 @@ excerpt: "전체 시스템 통합, CI/CD 연동, 팀 온보딩 자동화까지 -
 seo_title: "GitHub CLI 고급 워크플로우 5편 - 실무 적용 완전 가이드 - Thaki Cloud"
 seo_description: "GitHub CLI 자동화 시스템의 완성: 전체 통합, CI/CD 연동, 성능 최적화, 실무 적용 사례까지 전문가급 개발 환경 구축"
 date: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - advanced-workflows
@@ -16,6 +14,9 @@ tags:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/dev/github-cli-advanced-workflows/"
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

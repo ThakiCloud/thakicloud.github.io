@@ -4,8 +4,6 @@ excerpt: "استكشف كيف يُحدث Ring-1T-FP8 من inclusionAI، نموذ
 seo_title: "نموذج الذكاء الاصطناعي Ring-1T-FP8 بتريليون معامل لأتمتة سير العمل - Thaki Cloud"
 seo_description: "اكتشف دمج Ring-1T-FP8 في أنظمة أتمتة سير العمل مع إطار AWorld ونشر SGLang وتدريب ASystem RL لعمليات الذكاء الاصطناعي المؤسسية."
 date: 2025-10-14
-categories:
-  - owm
 tags:
   - Ring-1T
   - نموذج-الذكاء-الاصطناعي
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ar/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

@@ -5,9 +5,6 @@ seo_title: "ScreenCoder AI 비주얼 코딩 도구 완전 가이드 - 화면에�
 seo_description: "ScreenCoder로 스크린샷, 디자인 목업, UI 이미지에서 자동으로 HTML, CSS, React, Vue 코드를 생성하는 방법과 실무 활용 전략을 상세 설명합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - ScreenCoder
   - AI-코딩
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/screencoder-ai-powered-visual-coding-assistant-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

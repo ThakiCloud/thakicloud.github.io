@@ -4,8 +4,6 @@ excerpt: "دليل شامل من التثبيت إلى الاستخدام الم
 seo_title: "دليل إعداد منصة MAESTRO للبحث بالذكاء الاصطناعي - Docker، GPU، تكامل LLM المحلي - Thaki Cloud"
 seo_description: "درس تطبيقي شامل لمنصة MAESTRO مفتوحة المصدر للبحث بالذكاء الاصطناعي: التثبيت، تحسين GPU، تكامل محرك البحث SearXNG، وإعدادات LLM المحلية"
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - maestro
   - ai-research
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/maestro-ai-research-pl
 lang: ar
 permalink: /ar/tutorials/maestro-ai-research-platform-complete-setup-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

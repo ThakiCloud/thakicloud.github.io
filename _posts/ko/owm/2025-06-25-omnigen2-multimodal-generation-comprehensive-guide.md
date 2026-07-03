@@ -2,9 +2,6 @@
 title: "OmniGen2: 차세대 멀티모달 생성 모델 완전 분석"
 excerpt: "GPT-4o를 넘어서는 오픈소스 통합 멀티모달 모델 OmniGen2의 핵심 기능과 실전 활용 가이드"
 date: 2025-06-25
-categories: 
-  - owm
-  - research
 tags: 
   - omnigen2
   - multimodal
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "OmniGen2 완전 분석"
 published: false
+categories:
+  - owm
+  - research
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ date: 2025-06-05
 lang: en
 permalink: /en/news/jeff-dean-bill-coughran-talk/
 canonical_url: "https://thakicloud.github.io/en/news/jeff-dean-bill-coughran-talk/"
-categories:
-  - news
 tags:
   - AI Infrastructure
   - Large Models
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
 ---
 
 {% include video id="dq8MhTFCs80" provider="youtube" %}

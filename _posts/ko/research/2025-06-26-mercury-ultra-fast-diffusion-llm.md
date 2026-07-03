@@ -2,9 +2,6 @@
 title: "Mercury: Diffusion 기반 초고속 언어 모델의 혁신"
 excerpt: "Inception Labs에서 개발한 Mercury는 기존 autoregressive 모델 대비 최대 10배 빠른 추론 속도를 달성하며, 코딩 분야에서 새로운 속도-품질 프론티어를 개척하는 diffusion 기반 LLM입니다."
 date: 2025-06-26
-categories: 
-  - research
-  - llmops
 tags: 
   - Mercury
   - diffusion-models
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "Mercury 연구 분석"
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 Inception Labs에서 발표한 Mercury는 diffusion 기반의 혁신적인 대규모 언어 모델로, 기존 autoregressive 모델의 한계를 뛰어넘는 초고속 추론 성능을 달성했습니다.

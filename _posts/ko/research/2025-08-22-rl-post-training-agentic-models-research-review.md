@@ -5,8 +5,6 @@ seo_title: "2025년 RL 기반 에이전트 모델 포스트 트레이닝 연구 
 seo_description: "Visual-ARFT, MARFT, ReTool 등 최신 강화학습 기반 포스트 트레이닝 기술들과 멀티모달 에이전트, 도구 사용, 커리큘럼 학습의 혁신적 발전"
 date: 2025-08-22
 last_modified_at: 2025-08-22
-categories:
-  - research
 tags:
   - 강화학습
   - 포스트트레이닝
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/rl-post-training-agentic-models-research-review/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

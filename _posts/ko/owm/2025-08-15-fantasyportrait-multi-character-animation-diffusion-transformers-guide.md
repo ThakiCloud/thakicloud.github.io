@@ -5,9 +5,6 @@ seo_title: "FantasyPortrait 다중 캐릭터 애니메이션 가이드 - 확산 
 seo_description: "FantasyPortrait를 활용한 다중 인물 초상화 애니메이션 생성 워크플로우. 설치부터 Multi-Expr 데이터셋 활용까지 포함한 완전 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - owm
-  - research
 tags:
   - fantasyportrait
   - multi-character-animation
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/fantasyportrait-multi-character-animation-diffusion-transformers-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -1,9 +1,6 @@
 ---
 title: "ChatGPT Next Web 완전 가이드 - 설치부터 배포까지"
 date: 2025-05-28
-categories: 
-  - tutorials
-  - ai
 tags: 
   - ChatGPT
   - Next.js
@@ -16,6 +13,8 @@ toc: true
 toc_label: "목차"
 excerpt: "ChatGPT Next Web 프로젝트의 완전한 설치, 설정, 배포 가이드. Vercel, Docker, 로컬 개발 환경 구축부터 고급 커스터마이징까지 모든 것을 다룹니다."
 published: false
+categories:
+  - tutorials
 ---
 
 ## 개요

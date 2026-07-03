@@ -2,8 +2,6 @@
 title: "NeMo QAT 완전 가이드: 양자화 인식 훈련으로 FP4 모델 정확도 극대화하기"
 excerpt: "NVIDIA NeMo의 Quantization-Aware Training으로 FP4 양자화 시 정확도 손실을 최소화하는 전문 가이드. 실전 구현부터 최적화 팁까지"
 date: 2025-06-01
-categories:
-  - llmops
 tags:
   - NeMo-QAT
   - Quantization-Aware-Training
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "NeMo QAT 완전 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** [NVIDIA NeMo QAT](https://github.com/NVIDIA/NeMo)는 **양자화 인식 훈련(Quantization-Aware Training)**을 통해 FP4 양자화 시 정확도 손실을 최소화하는 혁신적인 기술이다. 사후 훈련 양자화(PTQ) 대비 **±0.1%p 수준의 더 높은 정확도**를 달성하며, 의료·금융 등 **정확도가 중요한 분야**에서 필수적인 기술로 자리잡고 있다.

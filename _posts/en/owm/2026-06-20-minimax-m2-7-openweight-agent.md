@@ -5,8 +5,6 @@ seo_title: "MiniMax-M2.7 229B Open-Weight Agent Model Self-Hosting Guide - Thaki
 seo_description: "MiniMax-M2.7 architecture, benchmarks (MLE Bench Lite 66.6%, SWE-Pro 56.22%, GDPval-AA ELO 1495), SGLang/vLLM/NIM serving methods, and license considerations explained."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - minimax-m2-7
   - minimax
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/minimax-m2-7-openweight-agent/"
 lang: en
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 7 min

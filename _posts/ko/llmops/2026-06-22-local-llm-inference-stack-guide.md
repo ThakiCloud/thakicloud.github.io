@@ -5,8 +5,6 @@ seo_title: "로컬 LLM 추론 엔진 종합 가이드 분석 - Thaki Cloud"
 seo_description: "Ahmad Osman 로컬 LLM 추론 가이드, llama.cpp·MLX·vLLM·SGLang·TensorRT-LLM·NVIDIA Dynamo 시나리오별 선택과 온프레미스 서빙 경제성을 ThakiCloud 관점에서 분석"
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - local-llm
   - inference-engine
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/local-llm-inference-stack-guide/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 로컬 LLM 추론을 처음 시작하는 사람이 가장 먼저 부딪히는 질문은 "어떤 엔진을 써야 하나"입니다. llama.cpp, vLLM, SGLang, TensorRT-LLM 같은 이름이 쏟아지지만, 무엇을 기준으로 골라야 하는지는 잘 정리되어 있지 않습니다. r/LocalLLaMA의 GPU 모더레이터인 Ahmad Osman(@TheAhmadOsman)이 최근 이 공백을 메우는 종합 가이드를 무료로 공개했습니다.

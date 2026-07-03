@@ -4,8 +4,6 @@ excerpt: "Ollama나 Gemini API와 같은 로컬 LLM을 사용하여 책, EPUB �
 seo_title: "TranslateBook LLM 튜토리얼: AI 도서 번역 도구 가이드 - Thaki Cloud"
 seo_description: "TranslateBookWithLLM 완전 가이드 - Ollama, Gemini API를 사용하여 책, EPUB, SRT 자막을 웹 인터페이스와 CLI로 번역하는 단계별 설정 튜토리얼"
 date: 2025-09-23
-categories:
-  - tutorials
 tags:
   - llm
   - 번역
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/translatebook-llm-comp
 lang: ko
 permalink: /ko/tutorials/translatebook-llm-comprehensive-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

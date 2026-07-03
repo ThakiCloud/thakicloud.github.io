@@ -4,8 +4,6 @@ excerpt: "Explore the essential datasets and tools for LLM post-training, includ
 seo_title: "LLM Dataset Curation Guide: Training Data & Tools - Thaki Cloud"
 seo_description: "Complete guide to LLM datasets for post-training, covering SFT datasets, preference alignment, and data curation tools for AI model development."
 date: 2025-08-31
-categories:
-  - datasets
 tags:
   - LLM
   - datasets
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/datasets/comprehensive-guide-llm-datasets-curation/
 canonical_url: "https://thakicloud.github.io/en/datasets/comprehensive-guide-llm-datasets-curation/"
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

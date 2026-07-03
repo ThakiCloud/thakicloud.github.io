@@ -4,8 +4,6 @@ excerpt: "حالات أتمتة مختارة وأنماط تنفيذ لشركا�
 seo_title: "دليل أتمتة منصة الذكاء الاصطناعي بـ n8n - تحسين العمليات السحابية - Thaki Cloud"
 seo_description: "دليل شامل لأتمتة عمليات منصة الذكاء الاصطناعي السحابية باستخدام سير عمل n8n. أمثلة عملية تشمل إدارة العملاء ومراقبة النماذج وأنظمة الإشعارات وغيرها."
 date: 2025-06-28
-categories:
-  - dev
 tags:
   - n8n
   - workflow-automation
@@ -24,6 +22,8 @@ toc: true
 toc_label: "دليل سير عمل n8n"
 canonical_url: "https://thakicloud.github.io/ar/dev/n8n-workflows-ai-platform-automation-guide/"
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق

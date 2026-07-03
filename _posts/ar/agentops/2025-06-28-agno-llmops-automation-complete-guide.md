@@ -5,9 +5,6 @@ seo_title: "الدليل الشامل لأتمتة سير عمل LLMOps بأدو
 seo_description: "دليل أتمتة سير عمل LLMOps المبني على إطار عمل phidata agno. شرح مفصّل لـ 7 تطبيقات عملية وطرق التنفيذ باستخدام أدوات متنوعة مثل Slack وGitHub وAirflow وpandas."
 date: 2025-06-28
 lang: ar
-categories: 
-  - agentops
-  - dev
 tags: 
   - agno
   - phidata
@@ -23,6 +20,9 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/agentops/agno-llmops-automation-complete-guide/"
 published: false
+categories:
+  - agentops
+  - dev
 ---
 
 ## مقدمة

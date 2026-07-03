@@ -2,9 +2,6 @@
 title: "바이브 코딩 시대: AI 개발 도구 Cursor, 전문가처럼 활용하기 (2025년 6월 4일 업데이트)"
 excerpt: "Cursor 0.50 이후 변화한 .mdc 규칙 시스템과 Claude‑4 Sonnet 최적 활용법, End‑to‑End 파이프라인 최신 가이드"
 date: 2025-06-04
-categories:
-categories:
-  - dev
 tags:
   - VibeCoding
   - Cursor
@@ -20,6 +17,8 @@ author_profile: true
 # toc_label: "Table of Contents"
 # comments: true
 published: false
+categories:
+  - dev
 ---
 
 > **업데이트 핵심** – 2025‑05‑15 릴리스(버전 0.50) 이후 **.mdc** 포맷이 Project Rules의 표준이 되었고, 규칙 파일 위치가 **`.cursor/rules`** 로 고정되었습니다. 또한 **Tab Model**, **Background Agent**, **Max Mode** 등 대규모 기능 추가로 멀티‑파일 리팩터링과 병렬 작업 지원이 향상되었습니다. **Claude‑4 Sonnet** 모델은 프론트엔드/UX 로직에서 가장 안정적인 품질을 보여 신속한 UI 프로토타이핑에 권장됩니다.

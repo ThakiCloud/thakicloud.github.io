@@ -5,9 +5,6 @@ seo_title: "Wetty 웹 터미널 가이드 - 클라우드 플랫폼 통합 완벽
 seo_description: "Wetty를 활용한 웹 터미널 구축 완벽 가이드. RunPod, AWS, Docker 환경에서의 배포 방법, 보안 설정, 성능 최적화, 실전 운영 노하우까지 모든 것을 다룹니다"
 date: 2025-08-10
 last_modified_at: 2025-08-10
-categories:
-  - tutorials
-  - devops
 tags:
   - wetty
   - web-terminal
@@ -27,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/wetty-web-terminal-cloud-platform-integration-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

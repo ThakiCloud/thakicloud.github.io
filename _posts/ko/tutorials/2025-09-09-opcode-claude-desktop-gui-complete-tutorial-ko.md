@@ -4,8 +4,6 @@ excerpt: "opcode 설치부터 고급 활용까지 - Claude Code 세션 관리, �
 seo_title: "opcode Claude Code GUI 튜토리얼 - 완벽한 설치 및 사용법 가이드"
 seo_description: "Claude Code용 강력한 데스크톱 GUI인 opcode 설치 및 사용법을 배워보세요. 커스텀 에이전트 생성, 세션 관리, AI 워크플로우 자동화까지 포괄적인 가이드입니다."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - opcode
   - claude-code
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/opcode-claude-desktop-gui-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/opcode-claude-desktop-gui-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

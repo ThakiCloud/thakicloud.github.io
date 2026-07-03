@@ -5,8 +5,6 @@ seo_title: "Headroom Reversible Context Compression Field Report - Thaki Cloud"
 seo_description: "Measuring Headroom (headroom-ai) SmartCrusher reversible JSON compression on real repo data (34-71% token reduction), install and integration commands, and K8s LLM serving token-cost and context-hygiene analysis"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags: [headroom, context-compression, token-cost, llm-serving, rag, mcp]
 author_profile: true
 toc: true
@@ -15,6 +13,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/headroom-reversible-context-compression/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ![Abstract image of data condensing](/assets/images/headroom-reversible-context-compression-hero.png)

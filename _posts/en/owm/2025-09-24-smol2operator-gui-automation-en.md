@@ -4,8 +4,6 @@ excerpt: "Explore HuggingFace's breakthrough approach to training lightweight vi
 seo_title: "Smol2Operator GUI Agent Training: Computer Use Automation Guide - Thaki Cloud"
 seo_description: "Learn how HuggingFace's Smol2Operator transforms lightweight VLMs into GUI automation agents using innovative two-phase training with unified action spaces and agentic reasoning capabilities."
 date: 2025-09-24
-categories:
-  - owm
 tags:
   - gui-automation
   - vision-language-models
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/owm/smol2operator-gui-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/smol2operator-gui-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

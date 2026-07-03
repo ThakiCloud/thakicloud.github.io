@@ -5,8 +5,6 @@ seo_title: "빅테크 GPU 과투자 논리: 비대칭 보험과 AI 톨게이트 
 seo_description: "빅테크의 2026년 AI 캐펙스 ~$725B(+77%)는 거품일까요. 비대칭 보험 논리와 의도 라우터 톨게이트, METR 태스크 호라이즌(~7개월·가속 시 ~4개월), 신뢰도 계단함수 수학으로 분석하고, 소버린 AI 수요와 ThakiCloud의 K8s·Kueue 기반 에이전트 인프라 관점 시사점을 정리합니다."
 date: 2026-06-28
 last_modified_at: 2026-06-28
-categories:
-  - news
 tags:
   - ai-capex
   - hyperscaler
@@ -20,6 +18,8 @@ toc: true
 toc_label: "목차"
 toc_icon: "chart-line"
 canonical_url: "https://thakicloud.github.io/ko/news/gpu-overinvestment-ai-agents-sovereign-ai/"
+categories:
+  - news
 ---
 
 빅테크와 AI 프런티어 랩이 채권까지 발행하며 GPU를 쓸어담고 있습니다. 2026년 하이퍼스케일러 네 곳(마이크로소프트·구글·메타·아마존)의 합산 캐펙스 추정치는 약 7,250억 달러로, 전년 대비 77% 늘어난 규모입니다. 이쯤 되면 "이게 과잉투자 아니냐"는 의문이 나오는 게 당연합니다. 후발 주자가 증류(distillation)로 훨씬 적은 비용에 비슷한 성능을 따라잡는 시대에, 몇 달 먼저 좋아지는 모델 하나를 위해 수천억 달러를 태우는 게 합리적이냐는 것입니다.

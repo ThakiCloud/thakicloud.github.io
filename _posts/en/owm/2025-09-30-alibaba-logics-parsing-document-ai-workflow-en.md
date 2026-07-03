@@ -4,8 +4,6 @@ excerpt: "Explore Alibaba's Logics-Parsing, a powerful VLM-based document parsin
 seo_title: "Alibaba Logics-Parsing Document AI Workflow - Advanced VLM Processing"
 seo_description: "Discover how Alibaba's Logics-Parsing revolutionizes document processing workflows with end-to-end VLM technology, achieving superior performance on complex layouts."
 date: 2025-09-30
-categories:
-  - owm
 tags:
   - document-parsing
   - vision-language-model
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/owm/alibaba-logics-parsing-document-ai-workflow/
 canonical_url: "https://thakicloud.github.io/en/owm/alibaba-logics-parsing-document-ai-workflow/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

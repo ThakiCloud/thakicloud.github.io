@@ -2,9 +2,6 @@
 title: "맥북에서 MLflow로 모델 실험 추적하기 - FAIR 원칙 기반 개인 MLOps 가이드"
 excerpt: "MLflow와 FAIR 원칙을 활용하여 맥북에서 개인 머신러닝 실험을 체계적으로 관리하고 추적하는 방법을 알아봅니다."
 date: 2025-06-23
-categories: 
-  - llmops
-  - dev
 tags: 
   - mlflow
   - experiment-tracking
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 개요

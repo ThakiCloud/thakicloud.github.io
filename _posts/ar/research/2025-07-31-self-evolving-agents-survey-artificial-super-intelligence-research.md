@@ -7,9 +7,6 @@ date: 2025-07-31
 last_modified_at: 2025-07-31
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
-categories:
-  - research
-  - llmops
 tags:
   - Self-Evolving-Agents
   - 인공초지능
@@ -27,6 +24,9 @@ toc_icon: "dna"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

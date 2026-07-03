@@ -5,8 +5,6 @@ seo_title: "AutoCodeBench: 다국어 LLM 코드 생성 벤치마크 혁신 - Tha
 seo_description: "텐센트가 개발한 AutoCodeBench로 LLM의 다국어 코드 생성 능력을 정확히 평가하세요. 20개 언어 지원, 자동화된 테스트 케이스 생성으로 수작업 한계를 극복한 혁신적 벤치마크입니다."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
 tags:
   - AutoCodeBench
   - LLM
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/autocodebench-multilingual-code-generation-benchmark/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

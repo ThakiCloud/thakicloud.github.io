@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to installing, configuring, and mastering opcode -
 seo_title: "opcode Claude Code GUI Tutorial - Complete Setup & Usage Guide"
 seo_description: "Learn how to install and use opcode, the powerful desktop GUI for Claude Code. Create custom agents, manage sessions, and automate AI workflows with this comprehensive tutorial."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - opcode
   - claude-code
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/opcode-claude-desktop-gui-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/opcode-claude-desktop-gui-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

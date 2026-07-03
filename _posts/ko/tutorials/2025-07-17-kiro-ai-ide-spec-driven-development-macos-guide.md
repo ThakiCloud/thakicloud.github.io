@@ -5,8 +5,6 @@ seo_title: "Kiro AI IDE 튜토리얼: Spec 기반 개발 완전 가이드 - Thak
 seo_description: "AWS Kiro AI IDE 설치부터 Spec 워크플로, Hook 자동화까지. 맥북에서 실습하며 배우는 새로운 AI 개발 패러다임과 Cursor 대비 장단점 분석."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
 tags:
   - kiro
   - ai-ide
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/kiro-ai-ide-spec-driven-development-macos-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

@@ -4,9 +4,6 @@ excerpt: "Comprehensive analysis of NVIDIA's groundbreaking multimodal embedding
 seo_title: "NVIDIA LLaMA NemoRetriever ColEmbed 3B Complete Guide - Visual Document Retrieval Leader - Thaki Cloud"
 seo_description: "Explore NVIDIA's llama-nemoretriever-colembed-3b-v1 model achieving top performance on ViDoRe and MTEB benchmarks for visual document retrieval with comprehensive implementation guide and practical applications."
 date: 2025-07-02
-categories:
-  - owm
-  - llmops
 tags:
   - nvidia
   - llama
@@ -25,6 +22,9 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/nvidia-llama-nemoretriever-colembed-3b-v1-comprehensive-guide/"
 lang: en
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

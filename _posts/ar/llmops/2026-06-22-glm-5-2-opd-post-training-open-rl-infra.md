@@ -6,8 +6,6 @@ seo_description: "التدريب اللاحق المتوازي OPD لـ GLM-5.2�
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - llmops
 tags:
   - glm
   - opd
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 لم يعد إصدار مختبر من الطراز الرائد للأوزان فقط أمراً غير معتاد. لكن Z.ai (THUDM) خطت خطوة إضافية مع GLM-5.2: إلى جانب الأوزان، فتحت مصدر البنية التحتية الكاملة للتدريب اللاحق بالتعلّم المعزّز (RL) التي بُني بها النموذج. وأبرز ما في الأمر هو طريقة التدريب اللاحق نفسها. تذكر Z.ai أنها دمجت أكثر من عشرة نماذج خبيرة في نموذج GLM-5.2 النهائي خلال نحو يومين. وتسمّي عملية الدمج المتوازي هذه OPD.

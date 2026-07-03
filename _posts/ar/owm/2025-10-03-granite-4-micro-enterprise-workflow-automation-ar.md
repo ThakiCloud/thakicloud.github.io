@@ -4,8 +4,6 @@ excerpt: "اكتشف كيف يحول IBM Granite 4.0 Micro أتمتة سير ا�
 seo_title: "دليل أتمتة سير العمل المؤسسي IBM Granite 4.0 Micro - Thaki Cloud"
 seo_description: "دليل شامل لتنفيذ IBM Granite 4.0 Micro لأتمتة سير العمل المؤسسي. تعلم استدعاء الأدوات ودعم متعدد اللغات وتحسين العمليات التجارية المدفوعة بالذكاء الاصطناعي."
 date: 2025-10-03
-categories:
-  - owm
 tags:
   - IBM-Granite
   - أتمتة-سير-العمل
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/owm/granite-4-micro-enterprise-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ar/owm/granite-4-micro-enterprise-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

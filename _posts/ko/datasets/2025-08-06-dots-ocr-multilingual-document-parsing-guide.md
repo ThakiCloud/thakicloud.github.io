@@ -5,9 +5,6 @@ seo_title: "dots.ocr 다국어 문서 파싱 모델 완전 분석 - Thaki Cloud"
 seo_description: "1.7B 파라미터 VLM으로 SOTA 성능을 달성한 dots.ocr의 아키텍처, 벤치마크 결과, 실제 활용법을 상세히 분석합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - datasets
-  - llmops
 tags:
   - dots.ocr
   - document-parsing
@@ -24,7 +21,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
-published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

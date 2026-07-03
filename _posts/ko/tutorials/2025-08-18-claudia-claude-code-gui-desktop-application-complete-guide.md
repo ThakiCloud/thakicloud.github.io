@@ -5,8 +5,6 @@ seo_title: "Claudia Claude Code GUI 애플리케이션 완전 설치 가이드 -
 seo_description: "Claude Code 전용 GUI 데스크톱 앱 Claudia 설치 방법. Tauri + React 기반, 커스텀 에이전트, 세션 관리, MCP 서버 통합까지 모든 기능 활용법"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
 tags:
   - claudia
   - claude-code
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/claudia-claude-code-gui-desktop-application-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

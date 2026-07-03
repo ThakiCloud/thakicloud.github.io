@@ -5,8 +5,6 @@ seo_title: "copyparty 기업 파일서버 구축 가이드 - 포터블 파일관
 seo_description: "MIT 라이선스 copyparty로 구축하는 엔터프라이즈 파일 서버. WebDAV, FTP, TFTP, 중복제거, 미디어 인덱싱을 지원하는 완전한 기업용 파일 관리 시스템"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
 tags:
   - copyparty
   - File Server
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/copyparty-enterprise-file-server-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

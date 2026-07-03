@@ -4,8 +4,6 @@ excerpt: "OpenBB 플랫폼을 활용한 금융 데이터 분석의 모든 것을
 seo_title: "OpenBB 플랫폼 완전 가이드 - 금융 데이터 분석 | Thaki Cloud"
 seo_description: "OpenBB 플랫폼으로 주식, 암호화폐, 외환 데이터를 쉽게 분석하세요. Python과 CLI를 통한 금융 데이터 분석 완전 가이드"
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - OpenBB
   - 금융데이터
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/openbb-financial-data-
 lang: ko
 permalink: /ko/tutorials/openbb-financial-data-platform-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -2,8 +2,6 @@
 title: "TensorRT-LLM Expert Parallelism 완전정복 - 대규모 MoE 모델 추론 최적화 가이드"
 excerpt: "NVIDIA TensorRT-LLM의 Expert Parallelism 기술을 활용하여 Mixture of Experts 모델의 대규모 추론 성능을 최적화하는 방법을 알아봅니다."
 date: 2025-06-18
-categories: 
-  - llmops
 tags: 
   - TensorRT-LLM
   - Expert-Parallelism
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "Expert Parallelism 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

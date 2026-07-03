@@ -4,8 +4,6 @@ excerpt: "استكشاف التهديد الناشئ لهجمات تضمين ا�
 seo_title: "هجمات تضمين الإعلانات على نماذج اللغة الكبيرة: ثغرات أمنية جديدة - Thaki Cloud"
 seo_description: "تحليل عميق لهجمات تضمين الإعلانات (AEA) المستهدفة لنماذج اللغة الكبيرة، فحص آليات الهجوم، مجموعات الضحايا، واستراتيجيات الدفاع للأمان الذكي الاصطناعي."
 date: 2025-08-26
-categories:
-  - research
 tags:
   - أمان-نماذج-اللغة
   - سلامة-الذكاء-الاصطناعي
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/research/advertisement-embedding-attacks-llm-security-threat/
 canonical_url: "https://thakicloud.github.io/ar/research/advertisement-embedding-attacks-llm-security-threat/"
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

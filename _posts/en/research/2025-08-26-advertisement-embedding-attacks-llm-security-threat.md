@@ -4,8 +4,6 @@ excerpt: "Exploring the emerging threat of Advertisement Embedding Attacks (AEA)
 seo_title: "Advertisement Embedding Attacks on LLMs: New Security Vulnerabilities - Thaki Cloud"
 seo_description: "Deep analysis of Advertisement Embedding Attacks (AEA) targeting Large Language Models, examining attack vectors, victim groups, and defense strategies for AI security."
 date: 2025-08-26
-categories:
-  - research
 tags:
   - LLM-Security
   - AI-Safety
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/research/advertisement-embedding-attacks-llm-security-threat/
 canonical_url: "https://thakicloud.github.io/en/research/advertisement-embedding-attacks-llm-security-threat/"
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

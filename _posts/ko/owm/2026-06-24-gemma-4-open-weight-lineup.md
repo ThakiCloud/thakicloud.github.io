@@ -5,8 +5,6 @@ seo_title: "Gemma 4 모델 5종 라인업 비교 - E2B/E4B/12B/26B MoE/31B 온�
 seo_description: "Gemma 4 라인업(E2B, E4B, 12B Unified, 26B A4B MoE, 31B Dense)의 파라미터, 컨텍스트, 멀티모달리티, 벤치마크(MMLU-Pro 85.2%, GPQA 84.3%)와 vLLM/SGLang/Ollama 서빙, Apache 2.0 라이선스를 정리했습니다."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - owm
 tags:
   - gemma-4
   - google-deepmind
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/gemma-4-open-weight-lineup/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

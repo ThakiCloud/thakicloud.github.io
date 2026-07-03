@@ -3,8 +3,6 @@ title: "تدريب نموذج لغوي كبير قادر على الاستدلا
 excerpt: "الأسلوب العملي لتدريب نموذج لغوي كبير بقدرات استدلالية تضاهي GPT-4 على وحدة معالجة رسومية واحدة في أقل من 48 ساعة باستخدام NVIDIA NeMo"
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - llmops
 tags:
   - nvidia-nemo
   - reasoning-llm
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 seo_title: "دليل شامل لتدريب نموذج لغوي كبير للاستدلال باستخدام NVIDIA NeMo: التنفيذ في 48 ساعة - Thaki Cloud"
 seo_description: "دليل عملي لتدريب نموذج لغوي كبير قادر على الاستدلال في 48 ساعة باستخدام NVIDIA NeMo ومجموعة بيانات Llama Nemotron على وحدة معالجة رسومية واحدة."
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

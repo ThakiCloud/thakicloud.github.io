@@ -5,8 +5,6 @@ seo_title: "دليل بناء قابلية مراقبة وكلاء LLM - Thaki C
 seo_description: "طرق بناء تتبع وكلاء LLM وحلقات التقييم باستخدام MLflow وLangSmith وArize AI. دليل عملي يستند إلى حقيقة أن 65% من إخفاقات وكلاء الإنتاج تنبع من مشكلات السياق."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - observability
   - tracing
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/agent-observability-tracing-evaluation/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق

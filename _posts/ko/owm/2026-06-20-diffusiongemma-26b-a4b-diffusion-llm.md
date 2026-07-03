@@ -5,8 +5,6 @@ seo_title: "DiffusionGemma 26B-A4B 이산 확산 LLM K8s 배포 가이드 - Thak
 seo_description: "DiffusionGemma-26B-A4B-it 아키텍처(MoE, discrete diffusion, 256K context), 벤치마크(AIME 2026 69.1%, GPQA Diamond 73.2%), vLLM/SGLang 서빙, K8s 배포 특이점."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - diffusiongemma
   - google-deepmind
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/diffusiongemma-26b-a4b-diffusion-llm/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

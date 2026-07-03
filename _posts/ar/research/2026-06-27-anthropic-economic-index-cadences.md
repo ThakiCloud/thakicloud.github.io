@@ -5,8 +5,6 @@ seo_title: "تحليل تقرير Anthropic Economic Index Cadences - قياس �
 seo_description: "تحليل لتقرير Anthropic Economic Index Cadences (يونيو 2026) استنادًا إلى المادة الرسمية: العيّنات بالساعة، 93% من المحادثات تُنتج مخرجات، فجوة استقلالية Claude Code البالغة 0.37 نقطة، استبيان المؤشر الاقتصادي (6 من كل 10 يتوقعون المزيد العام المقبل)، وكيف يمكن لمنصّة ThakiCloud متعددة المستأجرين على Kubernetes تطبيق إطار قياس العائد هذا."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - research
 tags:
   - anthropic
   - economic-index
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/anthropic-economic-index-cadences/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![صورة تجريدية لنبضات ضوئية تتموّج بإيقاع عبر شبكة بيانات خفيفة توحي بالإيقاع اليومي](/assets/images/anthropic-economic-index-cadences-hero.png)

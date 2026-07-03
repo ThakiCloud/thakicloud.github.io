@@ -4,9 +4,6 @@ excerpt: "Comprehensive analysis of NVIDIA's groundbreaking DeepSeek-R1-0528-FP4
 seo_title: "NVIDIA DeepSeek-R1 FP4 Quantized Model Guide - TensorRT-LLM Optimization - Thaki Cloud"
 seo_description: "Explore NVIDIA's DeepSeek-R1-0528-FP4 model with revolutionary FP4 quantization technology, achieving 1.6x memory efficiency while maintaining 98%+ performance across mathematical reasoning benchmarks."
 date: 2025-06-07
-categories: 
-  - owm
-  - llmops
 tags: 
   - nvidia
   - deepseek-r1
@@ -23,6 +20,9 @@ toc_label: "DeepSeek-R1 FP4 Guide"
 canonical_url: "https://thakicloud.github.io/en/owm/nvidia-deepseek-r1-fp4-quantized-model-guide/"
 lang: en
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

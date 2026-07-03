@@ -4,8 +4,6 @@ excerpt: "استكشف KAG (توليد المعرفة المعزز)، وهو إ�
 seo_title: "دروس KAG: دليل إطار عمل توليد المعرفة المعزز - Thaki Cloud"
 seo_description: "تعلم ميزات إطار عمل KAG وهيكليته وتثبيته وتنفيذه. دليل شامل لحلول الاستدلال في الرسوم البيانية للمعرفة والأسئلة والأجوبة."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - الرسم-البياني-للمعرفة
   - نماذج-اللغة-الكبيرة
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/tutorials/kag-knowledge-augmented-generation-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/kag-knowledge-augmented-generation-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 오픈웨이트 코딩 모델 자체 호스팅 분석 - Thak
 seo_description: "Z.ai GLM-5.2(744B MoE, MIT, 1M 컨텍스트)의 SWE-bench Pro 62.1·Terminal-Bench 81.0 벤치마크를 사실 확인하고, FP8·8x H200·vLLM·SGLang 자체 호스팅 요구사항과 ThakiCloud 온프렘 소버린 AI 서빙 시사점을 정리했습니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - glm-5-2
   - open-weight-llm
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ## 개요

@@ -4,8 +4,6 @@ excerpt: "Unsloth가 무료 Google Colab에서 gpt-oss 강화학습을 가능하
 seo_title: "Unsloth gpt-oss RL 훈련: 무료 GPU에서 3배 빠르게 - Thaki Cloud"
 seo_description: "Unsloth로 무료 Colab에서 gpt-oss-20b 강화학습 훈련하는 방법 알아보기. 3배 빠른 속도, 50% 적은 VRAM, 보상 해킹 방지 기법까지 완벽 가이드."
 date: 2025-10-02
-categories:
-  - llmops
 tags:
   - 강화학습
   - gpt-oss
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/
 canonical_url: "https://thakicloud.github.io/ko/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/"
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -5,9 +5,6 @@ seo_title: "Claude Relay Service 설치 튜토리얼 - 자체 Claude API 중계 
 seo_description: "Claude 계정 차단 걱정 없는 자체 Claude API 중계 서비스 구축 완전 가이드. 다중 계정 관리, OpenAI 호환, OAuth 인증, 클라이언트 제한 기능까지 상세한 설치와 설정 방법을 제공합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - tutorials
-  - ai-tools
 tags:
   - Claude-API
   - Claude-Relay-Service
@@ -27,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/claude-relay-service-complete-setup-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 19분

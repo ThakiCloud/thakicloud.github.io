@@ -5,9 +5,6 @@ seo_title: "SpiceAI Private 클라우드 AI 플랫폼 구축 가이드 - 엔터�
 seo_description: "SpiceAI로 private 클라우드 AI 플랫폼 구축하기. 데이터 페더레이션, 실시간 ML 추론, RAG 시스템 등 엔터프라이즈 AI 활용 사례 완전 가이드."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
-  - iaas
 tags:
   - SpiceAI
   - Private-Cloud
@@ -25,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/spiceai-private-cloud-ai-platform-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

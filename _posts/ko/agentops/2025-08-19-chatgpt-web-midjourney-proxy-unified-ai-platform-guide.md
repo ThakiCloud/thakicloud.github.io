@@ -5,9 +5,6 @@ seo_title: "ChatGPT Midjourney 통합 AI 플랫폼 구축 가이드 - Thaki Clou
 seo_description: "Docker 기반 ChatGPT Web Midjourney Proxy로 다중 AI 에이전트 통합 운영 플랫폼을 구축하는 완전한 AgentOps 가이드. Vue.js 기반 웹 UI와 실시간 음성, 이미지, 영상 생성 AI 서비스 통합"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - agentops
-  - tutorials
 tags:
   - chatgpt
   - midjourney
@@ -26,6 +23,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/chatgpt-web-midjourney-proxy-unified-ai-platform-guide/"
 reading_time: true
+categories:
+  - agentops
+  - tutorials
+published: false
 ---
 
 ![핵심 개념 일러스트](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.png)

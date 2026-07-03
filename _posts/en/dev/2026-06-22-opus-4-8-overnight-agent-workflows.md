@@ -5,8 +5,6 @@ seo_title: "Opus 4.8 Dynamic Workflows and Parallel Subagent Analysis - Thaki Cl
 seo_description: "We separate the hype from the substance in the viral 'AI earns money while you sleep' article, then examine the real engineering of Opus 4.8 dynamic workflows, parallel subagent fan-out, verification gates, and the GPU serving demand that unattended long-running agents create - from a ThakiCloud Kubernetes perspective."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - ai-agents
   - claude-opus
@@ -20,6 +18,8 @@ toc_label: "Contents"
 toc_icon: "cog"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/dev/opus-4-8-overnight-agent-workflows/"
+categories:
+  - dev
 ---
 
 ## Overview

@@ -4,10 +4,6 @@ excerpt: "تحليل شامل لـ Skywork-SWE-32B الذي يحقق أداءً 
 seo_title: "دليل Skywork-SWE-32B وكيل الكود الفعال - أداء SWE-bench - Thaki Cloud"
 seo_description: "اكتشف أداء Skywork-SWE-32B بنسبة 38% على SWE-bench، واستراتيجيات النشر الفعالة من حيث التكلفة، ودليل التنفيذ العملي لوكلاء هندسة البرمجيات بالذكاء الاصطناعي مع تكامل vLLM و OpenHands."
 date: 2025-06-24
-categories: 
-  - owm
-  - llmops
-  - tutorials
 tags: 
   - skywork-swe
   - code-agent
@@ -24,6 +20,10 @@ toc_label: "دليل Skywork-SWE-32B"
 canonical_url: "https://thakicloud.github.io/ar/owm/skywork-swe-32b-cost-effective-code-agent-guide/"
 lang: ar
 published: false
+categories:
+  - owm
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

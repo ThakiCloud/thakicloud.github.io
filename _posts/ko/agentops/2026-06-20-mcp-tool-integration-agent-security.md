@@ -5,8 +5,6 @@ seo_title: "MCP 에이전트 도구 통합과 보안 가이드 - Thaki Cloud"
 seo_description: "Model Context Protocol 기반 에이전트 도구 통합의 보안 취약점과 프로덕션 운영 패턴. Tool Poisoning 공격 방어, 권한 최소화, MCP 게이트웨이 구성 방법을 다룹니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - mcp
   - tool-integration
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

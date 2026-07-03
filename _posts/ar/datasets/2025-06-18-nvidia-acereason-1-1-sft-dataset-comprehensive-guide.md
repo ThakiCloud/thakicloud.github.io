@@ -4,9 +4,6 @@ excerpt: "تحليل مفصل لمجموعة بيانات NVIDIA AceReason-1.1-S
 date: 2025-06-18
 lang: ar
 permalink: /ar/datasets/nvidia-acereason-1-1-sft-dataset-comprehensive-guide/
-categories: 
-  - datasets
-  - llmops
 tags: 
   - nvidia
   - acereason
@@ -22,6 +19,9 @@ toc: true
 toc_label: "دليل AceReason-1.1-SFT"
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-acereason-1-1-sft-dataset-comprehensive-guide/"
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ## نظرة عامة

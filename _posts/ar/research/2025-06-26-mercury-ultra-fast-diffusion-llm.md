@@ -2,9 +2,6 @@
 title: "Mercury: الابتكار في نماذج اللغة التوليدية فائقة السرعة القائمة على الانتشار"
 excerpt: "Mercury، المطوَّر من Inception Labs، نموذج لغوي كبير يعتمد على الانتشار يحقق سرعات استدلال تصل إلى 10 أضعاف النماذج التوليدية التقليدية ويرسم حدوداً جديدة للسرعة والجودة في ذكاء الترميز."
 date: 2025-06-26
-categories:
-  - research
-  - llmops
 tags:
   - Mercury
   - diffusion-models
@@ -17,6 +14,9 @@ toc_label: "تحليل بحث Mercury"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/mercury-ultra-fast-diffusion-llm/"
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

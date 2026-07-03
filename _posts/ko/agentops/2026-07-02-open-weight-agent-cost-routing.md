@@ -5,8 +5,6 @@ seo_title: "오픈 가중치 에이전트 비용 최적화: 작업별 모델 라
 seo_description: "Gemma 4 tool-call 실험 6/6 성공, Paxis models.yaml 실가격 기반 비용 계산으로 프런티어 대비 44배 절감. 에이전트 자동화 워크로드를 오픈 가중치로 라우팅하는 CostRouter 패턴을 실측 수치로 정리합니다."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - agentops
 tags:
   - open-weight
   - cost-optimization
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ko/agentops/open-weight-agent-cost-
 reading_time: true
 header:
   image: /assets/images/open-weight-agent-cost-routing-hero.png
+categories:
+  - agentops
 ---
 
 ![작업 흐름이 프리즘을 지나 여러 비용 레인으로 갈라지는 추상 이미지](/assets/images/open-weight-agent-cost-routing-hero.png)

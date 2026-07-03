@@ -5,8 +5,6 @@ seo_title: "Context Engineering vs Prompt Engineering Debate Analysis - Thaki Cl
 seo_description: "In-depth analysis of the emergence of Context Engineering and the evolution of prompt engineering, exploring the complementary relationship between the two approaches in AI development"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - news
 tags:
   - Context-Engineering
   - Prompt-Engineering
@@ -25,6 +23,8 @@ reading_time: true
 lang: en
 permalink: /en/news/context-engineering-vs-prompt-engineering-debate/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

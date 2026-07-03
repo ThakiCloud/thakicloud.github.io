@@ -6,8 +6,6 @@ seo_description: "ملخص إعلان الاستثمار المحلي البال
 date: 2026-06-30
 last_modified_at: 2026-06-30
 disable_mathjax: true
-categories:
-  - news
 tags:
   - samsung
   - sk-hynix
@@ -23,6 +21,8 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "microchip"
 canonical_url: "https://thakicloud.github.io/ar/news/samsung-skhynix-ai-memory-mega-investment/"
+categories:
+  - news
 ---
 
 في 29 يونيو 2026، صدر إعلان ضخم من قصر الضيافة في الرئاسة الكورية. أعلنت شركتا Samsung Electronics وSK hynix عن خطط لاستثمار ما مجموعه 4,755 تريليون وون داخل كوريا خلال السنوات العشر المقبلة. جاء هذا الإعلان في اجتماع "التقرير الوطني الشعبي للمشاريع الثلاثة الكبرى للقفزة الكبرى في كوريا" الذي ترأسه الرئيس لي جيه-مونغ، وأعلن فيه الرئيسان التنفيذيان لي جيه-يونغ وتشوي تاي-وون عن هذا الالتزام مباشرة.

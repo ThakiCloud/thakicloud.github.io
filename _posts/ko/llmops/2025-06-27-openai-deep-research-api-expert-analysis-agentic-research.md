@@ -4,8 +4,6 @@ excerpt: "OpenAI의 Deep Research API가 제시하는 자율형 연구 워크플
 seo_title: "OpenAI Deep Research API 전문가 분석 - 에이전틱 AI 연구 혁신 - Thaki Cloud"
 seo_description: "OpenAI Deep Research API의 기술적 아키텍처, o3/o4-mini 모델 비교, MCP 프로토콜 활용, 프롬프트 엔지니어링 전략까지 실무 전문가를 위한 완전 분석"
 date: 2025-06-27
-categories: 
-  - llmops
 tags: 
   - OpenAI
   - Deep-Research-API
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Deep Research API 전문가 분석"
 canonical_url: "https://thakicloud.github.io/llmops/openai-deep-research-api-expert-analysis-agentic-research/"
 published: false
+categories:
+  - llmops
 ---
 
 OpenAI가 2025년 6월 25일 공개한 [Deep Research API](https://cookbook.openai.com/examples/deep_research_api/introduction_to_deep_research_api)는 단순한 API 확장을 넘어 **에이전틱 AI 연구의 새로운 패러다임**을 제시합니다. 본 분석에서는 기술적 아키텍처부터 실무 활용까지 전문가 관점에서 핵심 인사이트를 도출합니다.

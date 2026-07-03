@@ -5,8 +5,6 @@ seo_title: "Conversations to Skills: Chronicle Mining & Selfharness"
 seo_description: "ThakiCloud extracts recurring workflows from 801 Claude Code sessions with a deterministic miner, converts them to skills, and evolves skill bodies leak-free using the Self-Harness paper approach."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - skill-evolution
   - self-improvement
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/self-evolving-skills-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![Past conversations crystallizing into reusable skills](/assets/images/self-evolving-skills-hero.png)

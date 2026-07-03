@@ -4,8 +4,6 @@ excerpt: "최첨단 RAG 프레임워크, 도구, 리소스의 포괄적인 컬�
 seo_title: "RAGHub 가이드: RAG 프레임워크 및 도구 디렉토리 2025 - Thaki Cloud"
 seo_description: "RAGHub의 엄선된 RAG 프레임워크, 평가 도구, 신흥 프로젝트 컬렉션을 탐색하고 검색 증강 생성 생태계의 최신 트렌드를 확인하세요."
 date: 2025-09-21
-categories:
-  - llmops
 tags:
   - RAG
   - LLM
@@ -19,7 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/raghub-comprehensive-guide-to-rag-ecosystem/
 canonical_url: "https://thakicloud.github.io/ko/llmops/raghub-comprehensive-guide-to-rag-ecosystem-ko/"
-published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

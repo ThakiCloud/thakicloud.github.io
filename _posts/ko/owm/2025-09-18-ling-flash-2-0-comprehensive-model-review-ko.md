@@ -4,8 +4,6 @@ excerpt: "inclusionAI의 최신 MoE 아키텍처 Ling-flash-2.0을 살펴보세�
 seo_title: "Ling-flash-2.0 모델 리뷰: 1000억 매개변수 MoE 아키텍처 - Thaki Cloud"
 seo_description: "Ling-flash-2.0의 MoE 아키텍처, 성능 벤치마크, vLLM/SGLang 배포 옵션, 그리고 기업 워크플로우를 위한 실용적 구현 가이드를 완전 분석합니다."
 date: 2025-09-18
-categories:
-  - owm
 tags:
   - ling-flash-2.0
   - moe-아키텍처
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/owm/ling-flash-2-0-comprehensive-model-review/
 canonical_url: "https://thakicloud.github.io/ko/owm/ling-flash-2-0-comprehensive-model-review/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

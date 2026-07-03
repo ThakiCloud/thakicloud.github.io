@@ -4,8 +4,6 @@ excerpt: "إتقان مجموعة بيانات FinePDFs التي تحتوي عل
 seo_title: "شرح FinePDFs: الدليل الكامل لمعالجة مجموعة بيانات PDF - Thaki Cloud"
 seo_description: "تعلم كيفية استخدام مجموعة بيانات FinePDFs بفعالية مع أمثلة عملية ونصائح تحسين وتطبيقات واقعية لتدريب الذكاء الاصطناعي والبحث."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - FinePDFs
   - HuggingFace
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/finepdfs-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/finepdfs-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

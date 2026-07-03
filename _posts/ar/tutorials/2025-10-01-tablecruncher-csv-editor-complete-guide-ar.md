@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية فتح ملفات 2GB مع 16 مليون صف في
 seo_title: "دليل Tablecruncher محرر CSV - معالجة الملفات الكبيرة"
 seo_description: "أتقن قدرات Tablecruncher القوية في تحرير CSV ووحدات الماكرو JavaScript وتقنيات معالجة البيانات المتقدمة للتعامل مع مجموعات البيانات الضخمة بكفاءة."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - Tablecruncher
   - CSV
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/tablecruncher-csv-edit
 lang: ar
 permalink: /ar/tutorials/tablecruncher-csv-editor-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

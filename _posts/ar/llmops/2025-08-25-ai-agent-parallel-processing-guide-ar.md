@@ -5,8 +5,6 @@ seo_title: "دليل شامل للمعالجة المتوازية للوكلاء
 seo_description: "نفذ المهام المعقدة بكفاءة مع المعالجة المتوازية للوكلاء الذكية. أدلة عملية، تقنيات تحسين الأداء، وتطبيقات مشاريع حقيقية باستخدام LangGraph و CrewAI."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - llmops
 tags:
   - الوكلاء الذكية
   - المعالجة المتوازية
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/ai-agent-parallel-processing-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

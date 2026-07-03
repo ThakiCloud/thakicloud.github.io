@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to Microsoft's VibeVoice TTS model that can genera
 seo_title: "Microsoft VibeVoice TTS Model Complete Guide - Multi-Speaker Conversational AI"
 seo_description: "Learn about Microsoft VibeVoice, an advanced text-to-speech model supporting 4-speaker conversations up to 90 minutes with cross-lingual capabilities and natural turn-taking."
 date: 2025-08-26
-categories:
-  - owm
 tags:
   - TTS
   - text-to-speech
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/owm/microsoft-vibevoice-frontier-conversational-tts-guide/
 canonical_url: "https://thakicloud.github.io/en/owm/microsoft-vibevoice-frontier-conversational-tts-guide/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

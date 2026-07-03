@@ -4,8 +4,6 @@ excerpt: "Amazon Q Developer CLI(구 Fig)를 설치하고 설정하는 방법을
 seo_title: "Amazon Q Developer CLI 설정 가이드 - 터미널 자동완성 튜토리얼"
 seo_description: "터미널 지능형 자동완성을 위한 Amazon Q Developer CLI 설치 완벽 가이드. git, npm, docker 명령어 예제와 함께하는 단계별 튜토리얼."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - amazon-q
   - 터미널
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/amazon-q-developer-cli-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/amazon-q-developer-cli-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

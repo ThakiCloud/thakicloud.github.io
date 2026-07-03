@@ -5,9 +5,6 @@ seo_title: "تحليل ByteDance Dolphin Fox - دليل الاختبارات ا�
 seo_description: "تحليل شامل لمجموعة بيانات Fox والاختبارات المرجعية لـ ByteDance Dolphin. شرح مفصل لأحدث تقنيات فهم المستندات بالذكاء الاصطناعي المبنية على ورقة ACL 2025 ومجموعة البيانات المكونة من 30 مليون نموذج."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - datasets
-  - research
 tags:
   - dolphin
   - bytedance
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/ar/datasets/bytedance-dolphin-docum
 reading_time: true
 lang: ar
 published: true
+categories:
+  - datasets
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق

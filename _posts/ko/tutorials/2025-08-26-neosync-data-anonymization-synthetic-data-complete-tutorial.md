@@ -4,8 +4,6 @@ excerpt: "Neosync 오픈소스 플랫폼으로 개인정보 익명화, 합성 �
 seo_title: "Neosync 튜토리얼: 데이터 익명화 및 합성 데이터 완전 가이드 - Thaki Cloud"
 seo_description: "Neosync 오픈소스로 데이터 익명화, 합성 데이터 생성, 보안 환경 동기화를 배우세요. Docker 설치부터 실제 예제까지 완전 튜토리얼."
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - neosync
   - 데이터익명화
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/neosync-data-anonymiza
 lang: ko
 permalink: /ko/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

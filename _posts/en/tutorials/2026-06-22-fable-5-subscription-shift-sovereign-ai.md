@@ -5,8 +5,6 @@ seo_title: "Fable 5 Subscription End and LLM Sourcing Strategy - Thaki Cloud"
 seo_description: "What Anthropic ending free Fable 5 access (June 22) and moving to pay-per-use means for frontier model capacity economics and on-premise sovereign AI hedge strategy, analyzed by ThakiCloud."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - tutorials
 tags:
   - fable-5
   - llm-sourcing
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/tutorials/fable-5-subscription-shift-sovereign-ai/"
 reading_time: true
 lang: en
+categories:
+  - tutorials
 ---
 
 ![Abstract image contrasting a dispersing public cloud with a private infrastructure anchored in bedrock](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.png)

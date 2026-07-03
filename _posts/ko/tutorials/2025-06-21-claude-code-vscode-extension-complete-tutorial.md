@@ -2,9 +2,6 @@
 title: "Claude Code for VSCode: AI 코딩 어시스턴트 완전 활용 가이드"
 excerpt: "Anthropic의 Claude Code를 VSCode에서 활용하여 코딩 생산성을 극대화하는 방법을 단계별로 설명합니다. 설치부터 고급 기능까지 모든 것을 다룹니다."
 date: 2025-06-21
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Claude Code
   - VSCode
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "Claude Code 가이드"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ seo_title: "المحادثات إلى مهارات: Chronicle Mining و Selfharn
 seo_description: "يستخرج ThakiCloud سير العمل المتكررة من 801 جلسة Claude Code بمحرك حتمي، ويحولها إلى مهارات، ويطورها بدون تسرب باستخدام منهج ورقة Self-Harness."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - skill-evolution
   - self-improvement
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/self-evolving-skills-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![المحادثات السابقة تتبلور في مهارات قابلة لإعادة الاستخدام](/assets/images/self-evolving-skills-hero.png)

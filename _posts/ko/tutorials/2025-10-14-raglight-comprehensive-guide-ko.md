@@ -4,8 +4,6 @@ excerpt: "RAGLight 프레임워크를 마스터하세요. RAG, Agentic RAG, RAT 
 seo_title: "RAGLight 튜토리얼: 완전한 RAG 프레임워크 가이드 - Thaki Cloud"
 seo_description: "RAGLight 프레임워크로 실전 예제를 통해 학습하세요. macOS에서 Ollama, OpenAI, Mistral을 사용하여 RAG, Agentic RAG, RAT 파이프라인을 구축합니다."
 date: 2025-10-14
-categories:
-  - tutorials
 tags:
   - raglight
   - rag
@@ -22,6 +20,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/raglight-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/raglight-comprehensive-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

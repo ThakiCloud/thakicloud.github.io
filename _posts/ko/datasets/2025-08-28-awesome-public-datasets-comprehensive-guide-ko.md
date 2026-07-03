@@ -4,8 +4,6 @@ excerpt: "농업부터 e스포츠까지 다양한 분야의 엄선된 공개 데
 seo_title: "Awesome Public Datasets - 오픈 데이터 소스 완전 가이드"
 seo_description: "64.3k 스타를 받은 GitHub 리포지토리에서 30개 이상 카테고리의 고품질 공개 데이터셋을 탐색하세요. 연구나 프로젝트에 완벽한 데이터셋을 찾아보세요."
 date: 2025-08-28
-categories:
-  - datasets
 tags:
   - 오픈데이터
   - 공개데이터셋
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/awesome-public-datasets-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ko/datasets/awesome-public-datasets-comprehensive-guide/"
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

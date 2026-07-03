@@ -4,8 +4,6 @@ excerpt: "개인정보를 보호하면서 작업, 노트, 문서, 사진, 북마
 seo_title: "Eclaire 로컬 우선 AI 어시스턴트 튜토리얼 - 완전한 설정 가이드"
 seo_description: "개인 데이터 관리를 위한 오픈소스 로컬 우선 AI 어시스턴트 Eclaire 설정 방법을 배워보세요. 설치, 구성, 사용 예제가 포함된 단계별 튜토리얼입니다."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - eclaire
   - ai-어시스턴트
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/eclaire-local-first-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/eclaire-local-first-ai-assistant-tutorial-ko/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -2,9 +2,6 @@
 title: "RAGFlow 튜토리얼: 설치부터 기본 사용까지"
 excerpt: "오픈소스 Retrieval-Augmented Generation 엔진인 RAGFlow를 Docker 기반으로 설치하고 기본 채팅봇을 구축하는 과정을 단계별로 살펴봅니다."
 date: 2025-06-16
-categories:
-  - tutorials
-  - llmops
 tags:
   - ragflow
   - RAG
@@ -13,6 +10,9 @@ author_profile: true
 toc: true
 toc_label: RAGFlow Tutorial
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ seo_title: "스킬 섀도잉: 스킬 라이브러리가 커질수록 에이전�
 seo_description: "arXiv 2605.24050 'More Skills, Worse Agents?'를 중심으로 스킬 섀도잉과 컨텍스트 과부하를 분해하고, 스킬 선택 병목을 ThakiCloud Paxis 스킬 하니스의 BM25 검색과 어보스테인 게이트로 막는 방법을 실제 벤치 수치와 함께 정리합니다."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - research
 tags:
   - agent-skills
   - skill-retrieval
@@ -21,6 +19,8 @@ published: true
 canonical_url: "https://thakicloud.github.io/ko/research/agent-skill-shadowing-library-selection/"
 audiobook: /assets/audio/posts/agent-skill-shadowing-library-selection/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+categories:
+  - research
 ---
 
 ## 개요

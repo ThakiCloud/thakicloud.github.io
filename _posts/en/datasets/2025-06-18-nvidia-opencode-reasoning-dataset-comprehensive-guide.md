@@ -2,9 +2,6 @@
 title: "NVIDIA OpenCodeReasoning: Largest Reasoning-Based Coding Dataset for Competitive Programming"
 excerpt: "Complete analysis of OpenCodeReasoning with 735K samples and 28K problems - R1 model-based synthetic data, 10 major platforms integrated, SFT optimized"
 date: 2025-06-18
-categories: 
-  - datasets
-  - llmops
 tags: 
   - nvidia
   - opencode-reasoning
@@ -20,6 +17,9 @@ author_profile: true
 toc: true
 toc_label: "OpenCodeReasoning Guide"
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ## Overview

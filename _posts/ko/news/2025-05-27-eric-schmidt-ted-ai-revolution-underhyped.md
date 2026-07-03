@@ -2,8 +2,6 @@
 title: "AI 혁명은 과소평가되고 있어요: Eric Schmidt TED 토크 정리"
 excerpt: "Eric Schmidt의 TED 토크 분석: AI 과소평가 현상, 에너지·데이터 한계, 미중 경쟁, 자율 에이전트 안전성, AI의 긍정적 잠재력까지 핵심 메시지 정리"
 date: 2025-05-27
-categories:
-  - news
 tags:
   - Tech News
   - AI
@@ -11,6 +9,8 @@ tags:
   - Eric Schmidt
 author_profile: true
 published: false
+categories:
+  - news
 --- 
 
 {% include video id="id4YRO7G0wE" provider="youtube" %}

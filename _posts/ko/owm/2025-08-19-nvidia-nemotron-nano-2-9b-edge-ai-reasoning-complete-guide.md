@@ -5,9 +5,6 @@ seo_title: "NVIDIA Nemotron Nano 2 9B 엣지 AI 추론 모델 완전 가이드 -
 seo_description: "NVIDIA Nemotron Nano 2 9B의 Hybrid Transformer-Mamba 아키텍처, Thinking Budget 기능, 실습 가이드로 엣지 AI 추론 성능을 혁신하세요"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - owm
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nvidia-nemotron-nano-2-9b-edge-ai-reasoning-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

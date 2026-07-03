@@ -4,8 +4,6 @@ excerpt: "전 세계 262명의 의사와 5,000개의 실제 대화를 통해 구
 seo_title: "OpenAI HealthBench: 의료 AI 평가와 LLMOps 모범 사례"
 seo_description: "OpenAI HealthBench의 혁신적인 의료 AI 평가 접근법을 탐구해보세요. 60개국 262명의 의사가 의료 분야 AI 안전성 벤치마킹을 위해 5,000개의 현실적인 의료 대화를 어떻게 구축했는지 알아보세요."
 date: 2025-08-28
-categories:
-  - llmops
 tags:
   - OpenAI
   - HealthBench
@@ -19,6 +17,9 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/openai-healthbench-medical-ai-evaluation/
 canonical_url: "https://thakicloud.github.io/ko/llmops/openai-healthbench-medical-ai-evaluation/"
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

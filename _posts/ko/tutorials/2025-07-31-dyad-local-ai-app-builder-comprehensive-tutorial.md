@@ -5,9 +5,6 @@ seo_title: "Dyad 튜토리얼 - 로컬 AI 앱 빌더 설치부터 활용까지 �
 seo_description: "dyad AI 앱 빌더 설치, 설정, 활용법을 단계별로 안내합니다. v0, Bolt 대안으로 완전히 로컬에서 실행되는 무료 오픈소스 솔루션"
 date: 2025-07-31
 last_modified_at: 2025-07-31
-categories:
-  - tutorials
-  - dev
 tags:
   - dyad
   - ai-app-builder
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/dyad-local-ai-app-builder-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

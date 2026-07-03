@@ -5,9 +5,6 @@ seo_title: "ByteDance Dolphin Fox Dataset Analysis - Document Image Parsing Benc
 seo_description: "Complete analysis of ByteDance Dolphin's Fox dataset and document image parsing benchmark. Covers the ACL 2025 paper, the Analyze-then-Parse paradigm, and the 30M-sample dataset structure."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - datasets
-  - research
 tags:
   - dolphin
   - bytedance
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/en/datasets/bytedance-dolphin-docum
 reading_time: true
 lang: en
 published: true
+categories:
+  - datasets
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 18 min

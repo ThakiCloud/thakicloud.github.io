@@ -4,9 +4,6 @@ excerpt: "دليل شامل لـ Wan2.1، نموذج توليد الفيديو �
 seo_title: "دليل Wan2.1 لتوليد الفيديو بالذكاء الاصطناعي الشامل - إنشاء المحتوى مفتوح المصدر - Thaki Cloud"
 seo_description: "أتقن نموذج Wan2.1 مفتوح المصدر لتوليد الفيديو مع قدرات النص إلى فيديو والصورة إلى فيديو. دليل تنفيذ شامل مع تطبيقات إبداعية واستراتيجيات تحسين لمنشئي المحتوى."
 date: 2025-07-04
-categories:
-  - owm
-  - tutorials
 tags:
   - wan21
   - video-generation
@@ -23,6 +20,9 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/wan21-video-generation-model-guide/"
 lang: ar
 published: false
+categories:
+  - owm
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

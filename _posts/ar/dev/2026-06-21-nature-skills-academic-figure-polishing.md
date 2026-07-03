@@ -5,8 +5,6 @@ seo_title: "تقرير قياس فعلي لمهارات الأشكال والم�
 seo_description: "تقرير عن تشغيل حزمة skills الخاصة بـ Claude باسم nature-skills (Yuan1z0825) فعليًا. عرضنا شكلًا من لوحتين بمستوى جاهز للنشر باستخدام rcParams وPALETTE الخاصة بـ nature-figure بدقة 600dpi، وحللنا SVG القابل للتحرير ودلالات السوق العمودي الأكاديمي."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - claude-skills
   - academic-writing
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ![صورة تجريدية لمنحنيات بيانات متعددة اللوحات وألواح أشكال تطفو بأجواء أكاديمية](/assets/images/nature-skills-hero.png)

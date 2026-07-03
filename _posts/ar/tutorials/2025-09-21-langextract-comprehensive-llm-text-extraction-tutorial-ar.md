@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إتقان مكتبة LangExtract من Google لا
 seo_title: "دروس LangExtract: دليل استخراج النصوص بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل لمكتبة LangExtract من Google لاستخراج البيانات المُهيكلة من النصوص غير المُهيكلة باستخدام نماذج Gemini و OpenAI و Ollama مع أمثلة عملية."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - LangExtract
   - النماذج اللغوية
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/langextract-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/langextract-comprehensive-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

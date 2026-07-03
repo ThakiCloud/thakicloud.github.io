@@ -4,8 +4,6 @@ excerpt: "تحليل شامل لنموذج DeepSeek الثوري بـ 8 مليا
 seo_title: "دليل DeepSeek-R1-0528-Qwen3-8B نموذج اللغة مفتوح المصدر - أداء GPU واحدة - Thaki Cloud"
 seo_description: "اكتشف DeepSeek-R1-0528-Qwen3-8B، نموذج 8 مليارات معامل مفتوح المصدر يحقق 76.3% على AIME 2025، متفوقاً على النماذج الأكبر مع تشغيل فعال على GPU واحدة بترخيص MIT."
 date: 2025-06-13
-categories: 
-  - owm
 tags: 
   - deepseek
   - qwen
@@ -22,6 +20,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/deepseek-r1-0528-qwen3-8b-smaller-version/"
 lang: ar
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 6 دقائق

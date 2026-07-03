@@ -5,8 +5,6 @@ seo_title: "FineWeb2 다국어 데이터셋 완벽 가이드 - 50억 문서 LLM 
 seo_description: "Hugging Face FineWeb2 데이터셋 완벽 분석. 50억 개 다국어 웹 문서, 2000개 언어 지원, 투명한 처리 파이프라인, 실제 모델 학습 활용 사례와 한계점까지 상세 가이드."
 date: 2025-06-30
 last_modified_at: 2025-06-30
-categories:
-  - datasets
 tags:
   - fineweb2
   - multilingual-dataset
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/fineweb2-multilingual-dataset-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

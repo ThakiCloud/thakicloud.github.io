@@ -6,8 +6,6 @@ seo_description: "Samsung 2,655 trillion + SK 2,100 trillion = 4,755 trillion KR
 date: 2026-06-30
 last_modified_at: 2026-06-30
 disable_mathjax: true
-categories:
-  - news
 tags:
   - samsung
   - sk-hynix
@@ -23,6 +21,8 @@ toc: true
 toc_label: "Contents"
 toc_icon: "microchip"
 canonical_url: "https://thakicloud.github.io/en/news/samsung-skhynix-ai-memory-mega-investment/"
+categories:
+  - news
 ---
 
 On June 29, 2026, a landmark figure emerged at the Cheongwadae State Guest House. Samsung Electronics and SK hynix announced plans to invest a combined 4,755 trillion KRW domestically over the next 10 years. The declaration was made in person by Samsung Chairman Lee Jae-yong and SK Group Chairman Chey Tae-won at the "Republic of Korea Great Leap, Three National Mega-Projects Public Briefing" presided over by President Lee Jae-myung.

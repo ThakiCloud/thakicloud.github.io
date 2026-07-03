@@ -5,8 +5,6 @@ seo_title: "AnyCrawl LLM Web Crawler Comprehensive Guide - AI Data Collection To
 seo_description: "How to implement web scraping, SERP crawling, and multithreaded data collection with Any4AI's AnyCrawl. Detailed guide from Docker installation to real-world usage."
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - datasets
 tags:
   - anycrawl
   - web-crawler
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 lang: en
 reading_time: true
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated reading time**: 15 min

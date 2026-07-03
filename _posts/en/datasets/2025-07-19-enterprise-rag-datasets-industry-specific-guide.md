@@ -5,8 +5,6 @@ seo_title: "RAG Chatbot Industry Dataset Guide - Banking Insurance Healthcare Le
 seo_description: "Public dataset catalog and implementation examples for 7 industry sectors building enterprise RAG systems. Verified datasets including FDIC, SEC, MIMIC-IV, CourtListener usage methods"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - datasets
 tags:
   - RAG
   - LLM
@@ -29,6 +27,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/enterprise-rag-datasets-industry-specific-guide/"
 reading_time: true
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated Reading Time**: 20 minutes

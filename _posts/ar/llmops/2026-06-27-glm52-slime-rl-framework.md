@@ -5,8 +5,6 @@ seo_title: "تحليل إطار GLM-5.2 للتعلّم المعزّز slime: ت�
 seo_description: "تحليل لإطار THUDM slime (إطار تدريب لاحق للتعلّم المعزّز أصيل لـ SGLang): بنيته المكوّنة من Training/Rollout/Data Buffer، وضعا colocated وdisaggregated، ميزات التعلّم المعزّز للوكلاء متعدد الأدوار، والتحقق عبر GLM-5.x، من منظور عمليات GPU متعددة المستأجرين على منصة ThakiCloud القائمة على K8s."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - llmops
 tags:
   - slime
   - glm-5.2
@@ -24,6 +22,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/llmops/glm52-slime-rl-framework/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![صورة تجريدية تُظهر عنقود توليد وعنقود تدريب يتبادلان البيانات بشكل غير متزامن عبر مخزن مؤقت مركزي](/assets/images/glm52-slime-rl-framework-hero.png)

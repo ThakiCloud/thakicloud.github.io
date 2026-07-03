@@ -4,8 +4,6 @@ excerpt: "دليل شامل لبناء وكلاء ذكاء اصطناعي جاه
 seo_title: "دروس xpander.ai: بناء وكلاء الذكاء الاصطناعي بمنصة Backend-as-a-Service"
 seo_description: "تعلم كيفية بناء ونشر وتوسيع وكلاء الذكاء الاصطناعي باستخدام منصة xpander.ai Backend-as-a-Service. دليل شامل مع أمثلة كود وأفضل الممارسات."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - ai-agents
   - backend-as-a-service
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/xpander-ai-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/xpander-ai-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

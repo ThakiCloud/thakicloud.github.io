@@ -5,8 +5,6 @@ seo_title: "보상 없는 LLM 에이전트 자기진화 학습 분석 - Thaki Cl
 seo_description: "arXiv 2604.18131: 외부 보상 없는 에이전트 자기진화, 월드 노리지 탐색 학습, 웹 태스크 20% 성능 향상에 대한 심층 분석과 ThakiCloud 플랫폼 적용 관점"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - self-evolution
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/reward-free-agent-self-evolution/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

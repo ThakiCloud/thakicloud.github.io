@@ -5,8 +5,6 @@ seo_title: "GLM-4.5 오픈소스 AI 모델 완벽 가이드 - 코딩과 에이�
 seo_description: "중국 Zai의 GLM-4.5 AI 모델 완벽 분석. Claude Opus 수준 성능, 32B 활성 파라미터, 무료 사용 가능한 온라인 채팅, API 서비스까지 모든 정보를 확인하세요."
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - owm
 tags:
   - GLM-4.5
   - Zai
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/glm45-zai-opensource-ai-model-owm/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

@@ -5,8 +5,6 @@ seo_title: "NVIDIA NeMo RL 강화학습 프레임워크 완전 분석 - 아키�
 seo_description: "NVIDIA NeMo RL의 GRPO, DPO, SFT 기술과 Ray 기반 분산 처리 아키텍처를 상세 분석. 대규모 언어모델 강화학습의 모든 것을 담았습니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - llmops
 tags:
   - NVIDIA
   - NeMo-RL
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-nemo-rl-comprehensive-analysis-reinforcement-learning-framework/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

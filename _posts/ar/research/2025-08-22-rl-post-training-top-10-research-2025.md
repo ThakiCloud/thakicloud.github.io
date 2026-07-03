@@ -8,9 +8,6 @@ last_modified_at: 2025-08-22
 lang: ar
 permalink: /ar/research/rl-post-training-top-10-research-2025/
 canonical_url: "https://thakicloud.github.io/ar/research/rl-post-training-top-10-research-2025/"
-categories:
-  - research
-  - llmops
 tags:
   - التعلم-المعزز
   - التدريب-اللاحق
@@ -29,6 +26,9 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

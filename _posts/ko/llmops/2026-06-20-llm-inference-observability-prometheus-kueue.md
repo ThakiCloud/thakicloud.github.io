@@ -5,8 +5,6 @@ seo_title: "vLLM Prometheus Kueue LLM 서빙 관측가능성 가이드 - Thaki C
 seo_description: "vLLM /metrics 엔드포인트, DCGM Exporter, Kueue 메트릭을 연동한 K8s LLM 서빙 관측 스택 설계. GPU 활용률과 인퍼런스 비용을 실시간으로 파악한다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - observability
   - prometheus
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/llm-inference-observability-prometheus-kueue/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

@@ -5,8 +5,6 @@ seo_title: "ntfy 푸시 알림 서비스 완전 가이드 - macOS 실습 포함 
 seo_description: "ntfy를 이용한 무료 푸시 알림 시스템 구축 가이드. 기본 사용법부터 Docker 자체 서버 설치까지 macOS 환경에서 실습 가능한 예제로 설명합니다."
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - ntfy
   - push-notification
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ntfy-push-notification-service-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

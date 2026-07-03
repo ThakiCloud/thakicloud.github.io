@@ -2,10 +2,6 @@
 title: "Code-Server + AI 코딩 도구 완벽 통합 가이드: 원격 IDE에서 동등한 AI 개발 경험 구현하기"
 excerpt: "code-server에 Claude, Cline, MCP 서버를 통합하여 원격 환경에서도 로컬과 동등한 AI 코딩 경험을 제공하는 완벽한 설정 가이드입니다."
 date: 2025-06-24
-categories: 
-  - tutorials
-  - dev
-  - llmops
 tags: 
   - code-server
   - AI-coding
@@ -19,6 +15,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
+  - dev
+  - llmops
 ---
 
 ## 개요

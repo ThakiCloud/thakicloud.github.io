@@ -5,8 +5,6 @@ seo_title: "Dolibarr ERP/CRM 완전 설치 및 설정 가이드 - Thaki Cloud"
 seo_description: "오픈소스 Dolibarr ERP/CRM 시스템 구축 방법. 고객관리, 재고관리, 회계, 프로젝트 관리까지 중소기업 맞춤 비즈니스 자동화 솔루션"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - tutorials
 tags:
   - dolibarr
   - erp
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/dolibarr-erp-crm-complete-setup-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

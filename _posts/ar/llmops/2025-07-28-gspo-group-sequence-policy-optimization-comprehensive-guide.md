@@ -5,8 +5,6 @@ seo_title: "GSPO مقابل GRPO: تحليل شامل لخوارزميات ال�
 seo_description: "تحليل معمّق لمبادئ Group Sequence Policy Optimization (GSPO) ومزاياها مقارنة بـ GRPO. دليل تفصيلي يشمل حالة تطبيق Qwen3 وأساليب ضمان استقرار نماذج MoE."
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - llmops
 tags:
   - GSPO
   - GRPO
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/gspo-group-sequence-polic
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 12 دقائق

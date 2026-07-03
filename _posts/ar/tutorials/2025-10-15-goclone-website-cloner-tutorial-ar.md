@@ -7,8 +7,6 @@ date: 2025-10-15
 lang: ar
 permalink: /ar/tutorials/goclone-website-cloner-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/goclone-website-cloner-tutorial/"
-categories:
-  - tutorials
 tags:
   - goclone
   - استخراج-الويب
@@ -18,6 +16,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

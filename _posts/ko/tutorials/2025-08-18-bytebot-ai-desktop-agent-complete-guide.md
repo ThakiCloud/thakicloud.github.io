@@ -5,9 +5,6 @@ seo_title: "Bytebot AI 데스크톱 에이전트 완전 가이드 - 설치부터
 seo_description: "오픈소스 AI 데스크톱 에이전트 Bytebot 완전 가이드. Docker 설치, 자연어 작업 명령, API 활용법, macOS 테스트 결과까지 실전 튜토리얼을 제공합니다."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
-  - llmops
 tags:
   - bytebot
   - ai-agent
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/bytebot-ai-desktop-agent-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

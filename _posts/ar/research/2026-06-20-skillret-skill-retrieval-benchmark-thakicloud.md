@@ -4,8 +4,6 @@ excerpt: "عندما تُشغّل وكلاء LLM آلاف المهارات ال�
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - research
 tags:
   - skillret
   - skill-retrieval
@@ -17,6 +15,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/skillret-skill-retrieva
 reading_time: true
 toc: true
 toc_sticky: true
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 6 دقائق

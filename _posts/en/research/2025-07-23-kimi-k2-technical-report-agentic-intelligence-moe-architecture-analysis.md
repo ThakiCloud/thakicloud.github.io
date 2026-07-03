@@ -8,9 +8,6 @@ last_modified_at: 2025-07-23
 lang: en
 permalink: /en/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
-categories:
-  - research
-  - llmops
 tags:
   - KimiK2
   - AgenticAI
@@ -27,6 +24,9 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 18 minutes

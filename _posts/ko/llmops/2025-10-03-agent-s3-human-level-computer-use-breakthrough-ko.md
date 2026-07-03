@@ -4,8 +4,6 @@ excerpt: "Simular의 Agent S3가 OSWorld 벤치마크에서 69.9% 정확도를 �
 seo_title: "Agent S3: 인간 수준 컴퓨터 사용 AI 에이전트 혁신 - Thaki Cloud"
 seo_description: "Simular Agent S3의 69.9% OSWorld 성능, Behavior Best-of-N 기법, 네이티브 코딩 에이전트 통합을 통한 컴퓨터 사용 자동화 혁신을 상세 분석합니다."
 date: 2025-10-03
-categories:
-  - llmops
 tags:
   - Agent-S3
   - 컴퓨터-사용-에이전트
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agent-s3-human-level-computer-use-breakthrough/
 canonical_url: "https://thakicloud.github.io/ko/llmops/agent-s3-human-level-computer-use-breakthrough/"
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

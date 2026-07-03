@@ -5,9 +5,6 @@ seo_title: "CC:C Bridge ComputerCraft Create 모드 통합 완전 가이드 - �
 seo_description: "CC:C Bridge를 활용한 ComputerCraft와 Create 모드 완벽 통합 방법. 주변 장치 활용, Lua 스크립팅, 애니메트로닉 제어, RedRouter 활용까지 마인크래프트 자동화 완전 마스터 가이드입니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - CC-C-Bridge
   - ComputerCraft
@@ -28,6 +25,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/cc-c-bridge-computercraft-create-mod-integration-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

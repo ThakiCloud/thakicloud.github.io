@@ -4,8 +4,6 @@ excerpt: "Helm Dashboard에 대한 종합 튜토리얼 - 시각적 인터페이�
 seo_title: "Helm Dashboard 튜토리얼: Kubernetes Helm 차트 UI 가이드 - Thaki Cloud"
 seo_description: "Kubernetes를 위한 Helm Dashboard 설치 및 사용법 완벽 가이드. 설치 방법, 차트 관리, 롤백 작업, Helm UI 모범 사례를 상세히 다룹니다."
 date: 2025-10-10
-categories:
-  - tutorials
 tags:
   - helm
   - kubernetes
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -2,8 +2,6 @@
 title: "Anthropic의 멀티 에이전트 연구 시스템: AI 에이전트의 새로운 패러다임"
 excerpt: "Claude Research가 보여준 멀티 에이전트 시스템의 혁신적 접근법과 단일 에이전트 대비 90% 성능 향상의 비밀"
 date: 2025-06-15
-categories: 
-  - agentops
 tags: 
   - anthropic
   - claude
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 멀티 에이전트 시스템
 published: false
+categories:
+  - agentops
 ---
 
 Simon Willison이 최근 [자신의 블로그](https://simonwillison.net/2025/Jun/14/multi-agent-research-system/)에서 소개한 **Anthropic의 멀티 에이전트 연구 시스템**은 AI 에이전트 분야에 새로운 전환점을 제시하고 있습니다. 기존의 단일 프롬프트 접근법에 회의적이었던 전문가들조차 인정할 만큼 혁신적인 성과를 보여주고 있습니다.

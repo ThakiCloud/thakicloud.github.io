@@ -2,8 +2,6 @@
 title: "Claude 코드 생성 최적화 가이드: Tokenbender 사례 분석"
 excerpt: "Tokenbender의 경험을 바탕으로 Claude로부터 최고의 코드 출력을 이끌어내는 프롬프트 전략을 정리했습니다."
 date: 2025-06-16
-categories:
-  - llmops
 tags:
   - Claude
   - Prompt-engineering
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - llmops
 ---
 
 ## 서론

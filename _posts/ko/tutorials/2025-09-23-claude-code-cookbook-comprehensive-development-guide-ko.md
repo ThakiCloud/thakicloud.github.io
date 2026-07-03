@@ -4,8 +4,6 @@ excerpt: "60개 이상의 명령어, 역할, 훅을 제공하는 Claude Code Coo
 seo_title: "Claude Code Cookbook 완전 가이드 - AI 개발 도구 튜토리얼"
 seo_description: "Claude Code Cookbook 마스터하기: PR 자동화, 코드 리뷰, 리팩토링, 멀티 롤 에이전트, 개발 훅을 위한 60개 이상의 명령어로 AI 코딩 워크플로우 혁신."
 date: 2025-09-23
-categories:
-  - tutorials
 tags:
   - claude-code
   - 개발도구
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/claude-code-cookbook-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-cookbook-comprehensive-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

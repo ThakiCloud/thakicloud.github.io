@@ -5,8 +5,6 @@ seo_title: "تحليل TPU Ironwood من Google: خمسة أجيال من الح
 seo_description: "arXiv 2606.15870: خمسة أجيال من TPU v2 إلى Ironwood، وكفاءة الطاقة والمرونة، وتحليل من منظور MLOps لتصميم البنية التحتية لتدريب الذكاء الاصطناعي واسعة النطاق"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - tpu
   - ironwood
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/google-tpu-ironwood-five-generations/"
 reading_time: true
+categories:
+  - research
 ---
 
 كيف تطورت البنية التحتية المستخدمة في تدريب نماذج الذكاء الاصطناعي واسعة النطاق. تتتبع ورقة بحثية نشرتها Google على arXiv بعنوان "Google's Training Supercomputers from TPU v2 to Ironwood" (arXiv:2606.15870، قُدمت في 14 يونيو 2026) تطور خمسة أجيال من TPU عبر خمسة محاور: الاستقرار المعماري، والحجم، والمرونة، وكفاءة الطاقة، والاستدامة. ولأن الورقة تتناول كيفية توسيع **النظام بأكمله** بدلًا من أداء الشريحة الواحدة، فإنها تقدّم دروسًا مباشرة للفرق التي تدير بنية تحتية للذكاء الاصطناعي.

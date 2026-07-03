@@ -5,8 +5,6 @@ seo_title: "Chain of Agents: معالجة السياق الطويل عبر تع�
 seo_description: "يتفوق Chain-of-Agents على RAG والسياق الكامل بنسبة تصل إلى 10% في معالجة مهام السياق الطويل عبر إطار عمل تعاوني متعدد الوكلاء طوّرته Google وPenn State."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - llm
   - multiagent
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/chain-of-agents-llm-col
 reading_time: true
 lang: ar
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

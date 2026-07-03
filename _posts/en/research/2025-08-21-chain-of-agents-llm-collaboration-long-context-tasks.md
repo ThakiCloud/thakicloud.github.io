@@ -8,8 +8,6 @@ last_modified_at: 2025-08-21
 lang: en
 permalink: /en/research/chain-of-agents-llm-collaboration-long-context-tasks/
 canonical_url: "https://thakicloud.github.io/en/research/chain-of-agents-llm-collaboration-long-context-tasks/"
-categories:
-  - research
 tags:
   - llm
   - multiagent
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

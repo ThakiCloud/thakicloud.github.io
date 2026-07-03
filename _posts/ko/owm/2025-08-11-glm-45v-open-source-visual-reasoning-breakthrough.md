@@ -5,8 +5,6 @@ seo_title: "GLM-4.5V 오픈소스 시각 추론 106B MoE 아키텍처 Z.ai 완�
 seo_description: "ZAI에서 공개한 GLM-4.5V의 106B 매개변수 MoE 아키텍처, 41개 벤치마크 성능, GLM-4.5-Air 기반 기술과 활용 방법을 상세히 분석합니다."
 date: 2025-08-11
 last_modified_at: 2025-08-11
-categories:
-  - owm
 tags:
   - glm-45v
   - visual-reasoning
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/glm-45v-open-source-visual-reasoning-breakthrough/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

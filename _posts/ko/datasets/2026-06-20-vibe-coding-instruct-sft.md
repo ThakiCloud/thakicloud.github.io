@@ -2,8 +2,6 @@
 title: "Vibe-Coding-Instruct: 110만 샘플로 경량 코드 에이전트를 SFT하는 방법"
 excerpt: "lazarus19가 공개한 Vibe-Coding-Instruct는 Apache-2.0, 110만 개 코딩 instruction-response 쌍 데이터셋이다. 이미 7개 Gemma/Qwen 파생 모델을 훈련한 실적이 있으며, 커스텀 코드 에이전트 SFT 파이프라인 구축에 바로 쓸 수 있다."
 date: 2026-06-20
-categories:
-  - datasets
 tags:
   - sft
   - instruction-tuning
@@ -19,6 +17,8 @@ toc: true
 toc_label: "Vibe-Coding-Instruct 가이드"
 reading_time: true
 canonical_url: https://thakicloud.github.io/datasets/vibe-coding-instruct-sft/
+categories:
+  - datasets
 ---
 
 ![Vibe Coding Instruct SFT 개념도](/assets/images/vibe-coding-instruct-sft-hero.png)

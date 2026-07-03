@@ -3,8 +3,6 @@ title: "AGI는 아직 멀었다: 데미스 허사비스의 현실주의와 기�
 excerpt: "DeepMind CEO 허사비스의 'AGI와 거리가 멀다' 발언을 출발점으로, AI 조직이 과대광고 대신 정직한 기대치 설정을 문화로 삼아야 하는 이유를 살핀다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - Demis Hassabis
   - AGI
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/hassabis-agi-realism-vs-hype/"
+categories:
+  - culture
 ---
 
 ## "에르되시 문제를 풀어도 AGI가 아니다"

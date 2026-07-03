@@ -5,8 +5,6 @@ seo_title: "Qwen3-30B-A3B 맥북 로컬 실행 가이드 LM Studio - Thaki Cloud
 seo_description: "Qwen3-30B-A3B-Instruct-2507을 맥북에서 LM Studio로 실행하는 방법. GPT-4o급 성능의 오픈소스 AI 모델을 로컬에서 활용하는 완전 가이드와 최적화 팁"
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - owm
 tags:
   - Qwen3
   - LM-Studio
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/qwen3-30b-a3b-instruct-local-lm-studio-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

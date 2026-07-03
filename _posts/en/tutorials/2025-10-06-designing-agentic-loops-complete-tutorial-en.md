@@ -4,8 +4,6 @@ excerpt: "Master the art of designing effective agentic loops for AI coding agen
 seo_title: "Agentic Loops Tutorial: AI Coding Agent Design Guide - Thaki Cloud"
 seo_description: "Complete guide to designing agentic loops for AI coding agents. Learn YOLO mode, tool selection, security practices, and practical implementation examples."
 date: 2025-10-06
-categories:
-  - tutorials
 tags:
   - ai-agents
   - coding-agents
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/designing-agentic-loops-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/designing-agentic-loops-complete-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

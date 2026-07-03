@@ -4,8 +4,6 @@ excerpt: "Magic Resume을 활용한 전문적인 이력서 작성 완벽 튜토�
 seo_title: "Magic Resume 튜토리얼: AI 이력서 편집기 설치 및 사용법 - Thaki Cloud"
 seo_description: "Next.js로 구축된 오픈소스 AI 이력서 편집기 Magic Resume 사용법을 배워보세요. 설치, 커스터마이징, 배포 가이드 포함."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - magic-resume
   - nextjs
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/magic-resume-ai-powere
 lang: ko
 permalink: /ko/tutorials/magic-resume-ai-powered-editor-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

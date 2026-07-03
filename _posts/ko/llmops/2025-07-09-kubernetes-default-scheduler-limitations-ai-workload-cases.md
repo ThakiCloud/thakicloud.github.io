@@ -5,9 +5,6 @@ seo_title: "Kubernetes 기본 스케줄러 한계점: AI 워크로드 전문 스
 seo_description: "Kubernetes 기본 스케줄러의 AI/ML 워크로드 관리 한계점을 실제 기업 사례로 분석하고, GPU 활용률 30% 문제부터 배치 작업 스케줄링 실패까지 구체적 해결방안을 제시합니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09
-categories:
-  - llmops
-  - tutorials
 tags:
   - 쿠버네티스
   - 스케줄러
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/kubernetes-default-scheduler-limitations-ai-workload-cases/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

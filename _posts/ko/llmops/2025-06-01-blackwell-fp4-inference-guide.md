@@ -2,8 +2,6 @@
 title: "블랙웰 GPU에서 4비트 추론, 왜 필요하고 어떻게 시작할까요? 🚀"
 excerpt: "NVIDIA Blackwell 아키텍처의 FP4 추론으로 AI 성능을 극대화하고 비용을 절감하는 완전 가이드. DeepSeek-R1 세계 기록 달성의 비밀과 실전 구현 방법"
 date: 2025-06-01
-categories:
-  - llmops
 tags:
   - NVIDIA-Blackwell
   - FP4-Inference
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "블랙웰 FP4 추론 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** NVIDIA Blackwell GPU의 **FP4(4비트 부동 소수점) 추론**은 AI 모델 성능을 극대화하고 비용을 획기적으로 절감하는 게임 체인저다. DeepSeek-R1 모델의 **세계 기록 달성**이 그 가능성을 증명했다. 이 글에서는 **왜 FP4가 필요한지**부터 **실전 구현 방법**까지 완전 가이드를 제시한다.

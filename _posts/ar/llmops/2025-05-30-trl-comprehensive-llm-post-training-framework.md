@@ -4,8 +4,6 @@ excerpt: "أتقن تقنيات التعلم التعزيزي المتطورة �
 seo_title: "TRL التعلم التعزيزي للمحولات - دليل شامل لما بعد التدريب"
 seo_description: "دليل شامل لإطار عمل TRL (التعلم التعزيزي للمحولات) يغطي SFT وDPO وGRPO وPPO وتقنيات ما بعد التدريب المتقدمة للنماذج اللغوية الكبيرة"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - TRL
   - TransformerRL
@@ -24,6 +22,8 @@ lang: ar
 permalink: /ar/llmops/trl-comprehensive-llm-post-training-framework/
 canonical_url: "https://thakicloud.github.io/ar/llmops/trl-comprehensive-llm-post-training-framework/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 16 دقيقة

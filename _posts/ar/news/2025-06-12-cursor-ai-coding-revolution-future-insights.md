@@ -5,8 +5,6 @@ date: 2025-06-12
 lang: ar
 permalink: /ar/news/cursor-ai-coding-revolution-future-insights/
 canonical_url: "https://thakicloud.github.io/ar/news/cursor-ai-coding-revolution-future-insights/"
-categories: 
-  - news
 tags: 
   - Cursor
   - البرمجة بالذكاء الاصطناعي
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
 ---
 
 ## Cursor يحقق 300 مليون دولار ARR في 21 شهراً منذ الإطلاق

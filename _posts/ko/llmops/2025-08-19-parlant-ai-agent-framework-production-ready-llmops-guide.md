@@ -5,8 +5,6 @@ seo_title: "Parlant AI 에이전트 프레임워크 LLMOps 완벽 가이드 - Th
 seo_description: "Parlant를 활용해 프로덕션 환경에서 안정적인 AI 에이전트를 구축하고 운영하는 LLMOps 가이드. 가이드라인 기반 제어, 대화형 여정, 엔터프라이즈급 기능 구현 방법"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
 tags:
   - parlant
   - ai-agents
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/parlant-ai-agent-framework-production-ready-llmops-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

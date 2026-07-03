@@ -5,9 +5,6 @@ seo_title: "GMPO Geometric-Mean Policy Optimization Complete Guide - Improving R
 seo_description: "A detailed analysis of GMPO's geometric-mean token-level reward optimization technique that overcomes GRPO limitations, with concrete implementation guidance and LLMOps utilization strategies."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - llmops
-  - research
 tags:
   - GMPO
   - Geometric-Mean-Policy-Optimization
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/en/llmops/gmpo-geometric-mean-polic
 lang: en
 reading_time: true
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 > ⏱️ **Estimated reading time**: 10 min

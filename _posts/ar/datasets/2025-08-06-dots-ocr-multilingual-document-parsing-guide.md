@@ -5,9 +5,6 @@ seo_title: "dots.ocr - تحليل شامل لنموذج تحليل المستن�
 seo_description: "تحليل معمق لبنية dots.ocr الذي حقق أداء SOTA بـ 1.7B معامل، ونتائج الاختبارات المرجعية وطرق الاستخدام العملي."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - datasets
-  - llmops
 tags:
   - dots.ocr
   - document-parsing
@@ -25,7 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 lang: ar
-published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

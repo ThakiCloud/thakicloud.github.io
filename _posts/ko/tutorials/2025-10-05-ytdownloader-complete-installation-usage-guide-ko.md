@@ -4,8 +4,6 @@ excerpt: "ytDownloader 마스터하기 - YouTube, TikTok, Instagram 등 수백 �
 seo_title: "ytDownloader 튜토리얼: 완벽한 비디오 다운로드 가이드 2025 - Thaki Cloud"
 seo_description: "Windows/Linux/macOS 설치, 플레이리스트 다운로드, 비디오 압축 등 고급 기능과 문제 해결 팁을 포함한 완전한 ytDownloader 가이드."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - ytDownloader
   - 비디오다운로드
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/ytdownloader-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/ytdownloader-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

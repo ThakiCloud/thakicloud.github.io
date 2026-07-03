@@ -4,8 +4,6 @@ excerpt: "دليل شامل لإطار Agent Squad من AWS Labs - من الإع
 seo_title: "دليل AWS Agent Squad: إطار تنسيق الوكلاء المتعددة للذكاء الاصطناعي"
 seo_description: "تعلم إطار AWS Agent Squad لتنسيق الوكلاء المتعددة للذكاء الاصطناعي. دليل شامل مع أمثلة Python/TypeScript وتكامل Bedrock والتطبيقات العملية."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - aws
   - agent-squad
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

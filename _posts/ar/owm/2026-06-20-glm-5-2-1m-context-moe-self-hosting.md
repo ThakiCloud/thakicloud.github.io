@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 753B MoE دليل خدمة النشر المحلي بسيا�
 seo_description: "نستعرض بنية DSA في GLM-5.2، والمعايير (HLE 40.5، AIME 2026 99.2، SWE-bench Pro 62.1)، وطرق الخدمة عبر vLLM/SGLang/KTransformers، ومتطلبات النشر المحلي."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - glm-5-2
   - z-ai
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/glm-5-2-1m-context-moe-self-hosting/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

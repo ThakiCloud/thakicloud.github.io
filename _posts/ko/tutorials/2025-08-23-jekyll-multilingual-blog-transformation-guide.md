@@ -6,8 +6,6 @@ seo_description: "Jekyll 블로그를 다국어로 전환하는 실제 과정에
 date: 2025-08-23
 lang: ko
 permalink: /ko/tutorials/jekyll-multilingual-blog-transformation-guide/
-categories:
-  - tutorials
 tags:
   - Jekyll
   - 다국어
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/tutorials/jekyll-multilingual-blog-transformation-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

@@ -1,10 +1,6 @@
 ---
 title: "Debatable Intelligence: LLM 판사 성능 벤치마킹과 실전 활용 가이드"
 date: 2025-06-12
-categories: 
-  - datasets
-  - research
-  - tutorials
 tags: 
   - LLM
   - Judge
@@ -17,6 +13,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - datasets
+  - research
+  - tutorials
 ---
 
 ## 들어가며

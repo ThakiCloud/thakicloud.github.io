@@ -7,8 +7,6 @@ date: 2026-06-26
 last_modified_at: 2026-06-26
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/ornith-1-self-scaffolding-coding-model/"
-categories:
-  - llmops
 tags:
   - ornith
   - deepreinforce
@@ -24,6 +22,8 @@ toc_label: "목차"
 toc_icon: "robot"
 toc_sticky: true
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![Abstract image depicting a self-scaffolding structure building its own foundation layer by layer](/assets/images/ornith-1-self-scaffolding-coding-model-hero.png)

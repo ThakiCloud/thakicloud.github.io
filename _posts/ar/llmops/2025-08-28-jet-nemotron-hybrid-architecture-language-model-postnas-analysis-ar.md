@@ -4,8 +4,6 @@ excerpt: "تحليل متعمق لهندسة Jet-Nemotron الهجينة ومن�
 seo_title: "تحليل نموذج اللغة الهجين Jet-Nemotron PostNAS - Thaki Cloud"
 seo_description: "تحليل بحثي شامل لنهج Jet-Nemotron المبتكر PostNAS الذي يحقق تحسناً في سرعة التوليد بمقدار 53.6 مرة مع الحفاظ على دقة تنافسية عبر معايير نماذج اللغة."
 date: 2025-08-28
-categories:
-  - research
 tags:
   - jet-nemotron
   - postnas
@@ -21,6 +19,9 @@ lang: ar
 permalink: /ar/research/jet-nemotron-hybrid-architecture-language-model-postnas-analysis/
 canonical_url: "https://thakicloud.github.io/ar/llmops/jet-nemotron-hybrid-architecture-language-model-postnas-analysis-ar/"
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

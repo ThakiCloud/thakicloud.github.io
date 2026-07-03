@@ -6,8 +6,6 @@ seo_description: "قارن كيف يرى هاسابيس وهوانغ وأمود�
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - culture
 tags:
   - الذكاء-الاصطناعي-العام
   - ديميس-هاسابيس
@@ -20,6 +18,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/three-giants-ai-futures-compared/
 canonical_url: "https://thakicloud.github.io/ar/culture/three-giants-ai-futures-compared/"
+categories:
+  - culture
 ---
 
 ## ثلاثة أشخاص يقرؤون الموجة ذاتها بطريقة مختلفة

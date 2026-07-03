@@ -8,9 +8,6 @@ last_modified_at: 2025-08-22
 lang: en
 permalink: /en/research/rl-post-training-top-10-research-2025/
 canonical_url: "https://thakicloud.github.io/en/research/rl-post-training-top-10-research-2025/"
-categories:
-  - research
-  - llmops
 tags:
   - Reinforcement-Learning
   - Post-Training
@@ -29,6 +26,9 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

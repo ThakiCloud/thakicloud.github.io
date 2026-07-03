@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تثبيت وإعداد Amazon Q Developer CLI (ا
 seo_title: "دليل إعداد Amazon Q Developer CLI - تعليمي للإكمال التلقائي في Terminal"
 seo_description: "دليل شامل لتثبيت Amazon Q Developer CLI للإكمال التلقائي الذكي في Terminal. تعليمي خطوة بخطوة مع أمثلة لأوامر git و npm و docker."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - amazon-q
   - terminal
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/amazon-q-developer-cli-setup-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/amazon-q-developer-cli-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

@@ -4,8 +4,6 @@ excerpt: "IBM의 Granite Docling 258M이 멀티모달 AI를 통해 문서 처리
 seo_title: "IBM Granite Docling 258M: AI 기반 문서 워크플로우 자동화 - Thaki Cloud"
 seo_description: "IBM Granite Docling 258M이 멀티모달 AI 기술로 문서 변환 워크플로우를 혁신하는 방법을 알아보세요. 자동화된 문서 처리 및 구조화된 데이터 추출 완벽 가이드."
 date: 2025-09-18
-categories:
-  - owm
 tags:
   - granite-docling
   - 문서변환
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/owm/granite-docling-258m-document-conversion-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/granite-docling-258m-document-conversion-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

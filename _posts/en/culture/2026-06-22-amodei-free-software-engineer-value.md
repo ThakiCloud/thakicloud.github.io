@@ -5,8 +5,6 @@ seo_title: "When Software Becomes Free, What Do Engineers Do? Dario Amodei's Pro
 seo_description: "Amodei warned software could become 'essentially free.' When code generation costs approach zero, what engineering value survives? A structured analysis."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - dario-amodei
   - anthropic
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/culture/amodei-free-software-engineer-value/"
+categories:
+  - culture
 ---
 
 ## The Moment the Switch Flips

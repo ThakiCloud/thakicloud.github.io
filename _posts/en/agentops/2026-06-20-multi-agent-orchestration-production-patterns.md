@@ -5,8 +5,6 @@ seo_title: "6 Production Multi-Agent Orchestration Patterns - Thaki Cloud"
 seo_description: "A hands-on guide for engineers running LLM agents in production. Explains the structure and cost tradeoffs of Orchestrator-Worker, Fan-out/Fan-in, and Multi-agent Debate patterns."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - multi-agent
   - orchestration
@@ -23,6 +21,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 min

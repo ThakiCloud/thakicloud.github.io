@@ -5,8 +5,6 @@ seo_title: "Plane 프로젝트 관리 도구 완전 가이드 - JIRA 대안 오�
 seo_description: "Plane 오픈소스 프로젝트 관리 플랫폼 설치 가이드. Docker 배포, 환경 설정, 주요 기능 분석까지 JIRA Linear 대안 솔루션 완전 정복"
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - plane
   - project-management
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/plane-project-management-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

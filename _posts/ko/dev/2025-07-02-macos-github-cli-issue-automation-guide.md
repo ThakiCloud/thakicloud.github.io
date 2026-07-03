@@ -5,8 +5,6 @@ seo_title: "macOS GitHub CLI 완전 자동화 2편 - 이슈 관리 자동화 - T
 seo_description: "GitHub CLI로 이슈 생성부터 분류, 라벨링, 담당자 할당, 스프린트 계획까지 완전 자동화하는 방법. 지능형 이슈 관리 시스템 구축 가이드"
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - issue-management
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/dev/macos-github-cli-issue-automation-guide/"
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

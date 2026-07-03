@@ -4,9 +4,6 @@ excerpt: "macOS에서 Terminalizer로 터미널 세션을 녹화하고 animated 
 seo_title: "Terminalizer macOS 터미널 녹화 가이드 - GIF 생성 튜토리얼 - Thaki Cloud"
 seo_description: "macOS에서 Terminalizer 설치부터 zshrc alias 설정, 터미널 녹화, GIF 생성까지 개발자를 위한 완전한 가이드. 터미널 데모 영상 제작의 모든 것"
 date: 2025-06-27
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Terminalizer
   - macOS
@@ -21,6 +18,9 @@ toc: true
 toc_label: "Terminalizer 가이드"
 canonical_url: "https://thakicloud.github.io/tutorials/dev/terminalizer-macos-terminal-recording-guide/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 개발자라면 누구나 터미널 작업을 공유하거나 문서화해야 할 때가 있습니다. [Terminalizer](https://github.com/faressoft/terminalizer)는 터미널 세션을 녹화하고 아름다운 animated GIF로 변환해주는 강력한 도구입니다. 이 가이드에서는 macOS에서 Terminalizer를 완벽하게 활용하는 방법을 다룹니다.

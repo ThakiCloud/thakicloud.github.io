@@ -5,8 +5,6 @@ seo_title: "MiniMax-M3 428B MoE Multimodal Model On-Premises Serving Guide - Tha
 seo_description: "MiniMax-M3 architecture (428B/23B MoE, 1M context, MSA), arXiv:2606.13392, SGLang/vLLM serving, Kueue deployment strategy, and license considerations."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - minimax-m3
   - minimax
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/minimax-m3-multimodal-moe/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 8 min

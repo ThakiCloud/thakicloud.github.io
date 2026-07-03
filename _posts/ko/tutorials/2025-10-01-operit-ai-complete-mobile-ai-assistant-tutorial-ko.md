@@ -4,8 +4,6 @@ excerpt: "Ubuntu 24 VM, 40개 이상의 내장 도구, 고급 에이전트 기�
 seo_title: "Operit AI 모바일 어시스턴트 튜토리얼 - 완전 설정 가이드"
 seo_description: "Ubuntu VM, 40개 이상의 도구, 고급 자동화 기능을 갖춘 가장 강력한 Android AI 에이전트 Operit AI 설정 및 사용법을 배우세요."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - operit-ai
   - android-ai
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/operit-ai-complete-mob
 lang: ko
 permalink: /ko/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

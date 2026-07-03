@@ -5,9 +5,6 @@ seo_title: "Qwen3-MT 다국어 번역 가이드 - 글로벌 워크플로우 최�
 seo_description: "Qwen3-MT 번역 모델 활용법부터 API 연동, 비용 최적화까지. 92개 언어로 글로벌 워크플로우를 완전히 혁신하세요."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - owm
-  - llmops
 tags:
   - qwen3-mt
   - translation
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/qwen3-mt-multilingual-translation-workflow-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 19분

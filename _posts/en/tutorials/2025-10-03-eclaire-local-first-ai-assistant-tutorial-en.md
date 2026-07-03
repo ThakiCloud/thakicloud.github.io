@@ -4,8 +4,6 @@ excerpt: "Complete guide to setting up and using Eclaire, an open-source AI assi
 seo_title: "Eclaire Local-First AI Assistant Tutorial - Complete Setup Guide"
 seo_description: "Learn how to set up Eclaire, the open-source local-first AI assistant for personal data management. Step-by-step tutorial with installation, configuration, and usage examples."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - eclaire
   - ai-assistant
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/eclaire-local-first-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/eclaire-local-first-ai-assistant-tutorial-en/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

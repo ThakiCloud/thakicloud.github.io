@@ -5,8 +5,6 @@ seo_title: "Plane GitHub 연동 완전 정복 - API 자동화 개발 워크플�
 seo_description: "Plane GitHub 연동 설정부터 터미널 alias API 자동화까지. 개발 워크플로우 최적화를 위한 실전 스크립트와 창의적 활용법 완전 가이드"
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - plane
   - github
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/plane-github-integration-advanced-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

@@ -5,8 +5,6 @@ seo_title: "Gemini Embedding API 일반 공개 - 차세대 임베딩 모델 완�
 seo_description: "구글 Gemini Embedding API가 일반 공개되었습니다. MTEB 1위 성능, 100개 언어 지원, 3072 출력 차원, Matryoshka 기법 등 최신 기능을 상세히 분석합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15
-categories:
-  - llmops
 tags:
   - Gemini-Embedding
   - 임베딩
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/gemini-embedding-generally-available-llmops-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 6분

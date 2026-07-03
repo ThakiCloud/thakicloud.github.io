@@ -6,9 +6,6 @@ seo_description: "دليل AgentOps شامل لبناء منصة إدارة مو
 date: 2025-08-19
 last_modified_at: 2025-08-19
 lang: ar
-categories:
-  - agentops
-  - tutorials
 tags:
   - chatgpt
   - midjourney
@@ -27,6 +24,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/chatgpt-web-midjourney-proxy-unified-ai-platform-guide/"
 reading_time: true
+categories:
+  - agentops
+  - tutorials
+published: false
 ---
 
 ![توضيح للمفهوم الأساسي](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.png)

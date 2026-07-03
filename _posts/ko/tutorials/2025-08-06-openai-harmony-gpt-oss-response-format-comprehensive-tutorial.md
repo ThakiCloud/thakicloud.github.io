@@ -5,9 +5,6 @@ seo_title: "OpenAI Harmony GPT-OSS 응답 포맷 완전 가이드 - Thaki Cloud"
 seo_description: "Rust와 Python으로 구현된 OpenAI Harmony 라이브러리를 활용해 GPT-OSS 모델의 구조화된 응답과 툴 호출을 완벽하게 다루는 방법을 설명합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - tutorials
-  - llmops
 tags:
   - openai-harmony
   - gpt-oss
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/openai-harmony-gpt-oss-response-format-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

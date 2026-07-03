@@ -6,8 +6,6 @@ seo_description: "تحليل آلية التعلم المعزز التسقيلي
 date: 2026-06-26
 last_modified_at: 2026-06-26
 lang: ar
-categories:
-  - llmops
 tags:
   - ornith
   - deepreinforce
@@ -24,6 +22,8 @@ toc_icon: "robot"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/ornith-1-self-scaffolding-coding-model/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![صورة تجريدية تجسّد بنية التسقيل الذاتي التي تبني سقالاتها بنفسها](/assets/images/ornith-1-self-scaffolding-coding-model-hero.png)

@@ -5,8 +5,6 @@ seo_title: "تحسين تكلفة وكيل النماذج مفتوحة الأو�
 seo_description: "تجربة Gemma 4 لاستدعاء الأدوات بنجاح 6/6، وحساب التكلفة الفعلية عبر Paxis models.yaml لتحقيق وفورات تصل إلى 44 مرة مقارنة بنماذج الحدود. ملخص نمط CostRouter لتوجيه أعباء أتمتة الوكلاء إلى النماذج مفتوحة الأوزان بأرقام قياسية حقيقية."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - agentops
 tags:
   - open-weight
   - cost-optimization
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/open-weight-agent-cost-
 reading_time: true
 header:
   image: /assets/images/open-weight-agent-cost-routing-hero.png
+categories:
+  - agentops
 ---
 
 ![صورة مجردة لتدفق المهام عبر منشور ضوئي ينقسم إلى مسارات تكلفة متعددة](/assets/images/open-weight-agent-cost-routing-hero.png)

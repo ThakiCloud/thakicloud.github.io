@@ -4,8 +4,6 @@ excerpt: "Master Google's LangExtract library for extracting structured informat
 seo_title: "LangExtract Tutorial: LLM-Powered Text Extraction Guide - Thaki Cloud"
 seo_description: "Complete tutorial on Google's LangExtract library for structured data extraction from unstructured text using Gemini, OpenAI, and Ollama models with practical examples."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - LangExtract
   - LLM
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/langextract-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/langextract-comprehensive-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

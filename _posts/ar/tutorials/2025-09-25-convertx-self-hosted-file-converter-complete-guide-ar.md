@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية نشر واستخدام ConvertX، محول الم
 seo_title: "دروس محول الملفات ConvertX المستضاف ذاتياً - دليل شامل - Thaki Cloud"
 seo_description: "دليل خطوة بخطوة لنشر ConvertX مع Docker. محول ملفات مستضاف ذاتياً يدعم أكثر من 1000 تنسيق بما في ذلك الصور والفيديو والمستندات والأصول ثلاثية الأبعاد."
 date: 2025-09-25
-categories:
-  - tutorials
 tags:
   - docker
   - file-converter
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/tutorials/convertx-self-hosted-file-converter-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/convertx-self-hosted-file-converter-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

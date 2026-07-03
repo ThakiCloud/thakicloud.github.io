@@ -4,8 +4,6 @@ excerpt: "Jet-Nemotron의 하이브리드 아키텍처와 PostNAS 방법론에 �
 seo_title: "Jet-Nemotron PostNAS 하이브리드 언어 모델 분석 - Thaki Cloud"
 seo_description: "53.6배 생성 속도 향상을 달성하면서도 언어 모델 벤치마크에서 경쟁력 있는 정확도를 유지하는 Jet-Nemotron의 혁신적인 PostNAS 접근법에 대한 종합적인 연구 분석"
 date: 2025-08-28
-categories:
-  - research
 tags:
   - jet-nemotron
   - postnas
@@ -21,6 +19,9 @@ lang: ko
 permalink: /ko/research/jet-nemotron-hybrid-architecture-language-model-postnas-analysis/
 canonical_url: "https://thakicloud.github.io/ko/llmops/jet-nemotron-hybrid-architecture-language-model-postnas-analysis-ko/"
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

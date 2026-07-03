@@ -6,8 +6,6 @@ seo_description: "بنية Microsoft FastContext-1.0-4B-SFT (مستندة إلى
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - owm
 tags:
   - fastcontext
   - microsoft
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/fastcontext-4b-subagent-model/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

@@ -7,8 +7,6 @@ date: 2025-09-08
 lang: ar
 permalink: /ar/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/
 canonical_url: "https://thakicloud.github.io/ar/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/"
-categories:
-  - research
 tags:
   - كفاءة-الذكاء-الاصطناعي
   - تحسين-النماذج
@@ -19,6 +17,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

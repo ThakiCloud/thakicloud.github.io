@@ -5,8 +5,6 @@ seo_title: "NVIDIA Parakeet TDT 0.6B v3 다국어 ASR 워크플로우 자동화 
 seo_description: "25개 언어 지원, 자동 구두점 처리, 실시간 타임스탬프 제공하는 NVIDIA Parakeet TDT 0.6B v3로 글로벌 워크플로우 관리를 혁신하는 방법을 알아보세요."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - owm
 tags:
   - nvidia
   - parakeet
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nvidia-parakeet-tdt-multilingual-asr-open-workflow-management/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

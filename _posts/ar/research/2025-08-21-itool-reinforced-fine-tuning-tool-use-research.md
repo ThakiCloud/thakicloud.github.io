@@ -5,8 +5,6 @@ seo_title: "بحث iTool للضبط الدقيق المعزز: تحسين قدر
 seo_description: "تحليل ورقة بحث iTool المطورة بالتعاون بين معهد هاربين للتكنولوجيا وشركة هواوي. تحقق تحسينا بنسبة 13% في أداء LLM عبر البحث القائم على MCTS وتحسين التفضيل"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - iTool
   - reinforcement-learning
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/itool-reinforced-fine-t
 lang: ar
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق

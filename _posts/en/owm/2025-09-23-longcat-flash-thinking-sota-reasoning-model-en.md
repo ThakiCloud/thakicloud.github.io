@@ -4,8 +4,6 @@ excerpt: "Discover LongCat-Flash-Thinking, a groundbreaking 560B parameter MoE m
 seo_title: "LongCat-Flash-Thinking: SOTA Open-Source Reasoning Model with 560B Parameters"
 seo_description: "Explore China's new LongCat-Flash-Thinking model - 560B parameters, 27B activation, SOTA benchmarks, 64.5% token reduction, and asynchronous RL training."
 date: 2025-09-23
-categories:
-  - owm
 tags:
   - LongCat
   - Reasoning-Model
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/en/owm/longcat-flash-thinking-sota-
 lang: en
 permalink: /en/owm/longcat-flash-thinking-sota-reasoning-model/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

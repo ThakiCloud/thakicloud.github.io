@@ -5,8 +5,6 @@ date: 2025-06-17
 lang: en
 permalink: /en/news/hinton-ai-godfather-interview-key-insights/
 canonical_url: "https://thakicloud.github.io/en/news/hinton-ai-godfather-interview-key-insights/"
-categories:
-  - news
 tags:
   - AI Safety
   - Geoffrey Hinton
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "Key Contents"
 published: false
+categories:
+  - news
 ---
 
 {% include video id="giT0ytynSqg" provider="youtube" %}

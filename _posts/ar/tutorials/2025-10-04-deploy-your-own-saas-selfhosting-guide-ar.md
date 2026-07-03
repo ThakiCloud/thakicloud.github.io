@@ -4,8 +4,6 @@ excerpt: "دليل شامل لنشر VPN وتخزين الملفات والتح�
 seo_title: "نشر خدمات SaaS الخاصة بك: دليل الاستضافة الذاتية للخدمات المركزة على الخصوصية"
 seo_description: "تعلم كيفية نشر VPN وتخزين السحابة والتحليلات ومدير كلمات المرور و30+ خدمة أخرى. دليل استضافة ذاتية كامل مع التركيز على الخصوصية والتحكم في البيانات."
 date: 2025-10-04
-categories:
-  - tutorials
 tags:
   - الاستضافة-الذاتية
   - الخصوصية
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/deploy-your-own-saas-selfhosting-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/deploy-your-own-saas-selfhosting-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

@@ -5,9 +5,6 @@ seo_title: "LangExtract 튜토리얼 - LLM 텍스트 정보 추출 완벽 가이
 seo_description: "Google LangExtract 라이브러리로 의료기록, 비즈니스 문서, 학술논문에서 정확한 정보 추출하기. Gemini API 설정부터 시각화까지 macOS 실습 포함."
 date: 2025-08-04
 last_modified_at: 2025-08-04
-categories:
-  - tutorials
-  - datasets
 tags:
   - langextract
   - google
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/langextract-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

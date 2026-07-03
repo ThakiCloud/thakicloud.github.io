@@ -5,8 +5,6 @@ seo_title: "تحليل نظام SkillOpt للتحسين الذاتي لمهار�
 seo_description: "arXiv 2605.23904 SkillOpt: تحسين المهارات في فضاء النص، آلية التعديل المنضبط، تحسن +23.5 نقطة على GPT-5.5، قابلية النقل عبر النماذج، وزاوية ربط بنظام مهارات ThakiCloud"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - skill-optimization
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/skillopt-agent-skill-self-optimization/"
 reading_time: true
 lang: ar
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

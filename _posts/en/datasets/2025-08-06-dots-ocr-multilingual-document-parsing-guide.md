@@ -5,9 +5,6 @@ seo_title: "dots.ocr Multilingual Document Parsing Model Complete Analysis - Tha
 seo_description: "In-depth analysis of dots.ocr architecture, benchmark results, and practical usage. A 1.7B parameter VLM achieving SOTA performance on OmniDocBench."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - datasets
-  - llmops
 tags:
   - dots.ocr
   - document-parsing
@@ -25,7 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 lang: en
-published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 8 min

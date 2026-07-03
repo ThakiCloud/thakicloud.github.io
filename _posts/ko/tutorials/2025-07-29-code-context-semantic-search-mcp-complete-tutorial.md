@@ -5,8 +5,6 @@ seo_title: "Code Context MCP 시맨틱 코드 검색 튜토리얼 - Thaki Cloud"
 seo_description: "Zilliz의 Code Context MCP로 AI 코딩 에이전트에 시맨틱 코드 검색 기능을 추가하는 방법. Claude Code, Cursor, VSCode 통합 가이드와 실제 테스트 결과 포함"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - tutorials
 tags:
   - MCP
   - 코드검색
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/code-context-semantic-search-mcp-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

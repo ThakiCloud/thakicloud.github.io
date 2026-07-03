@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تنفيذ قابلية الملاحظة الشا�
 seo_title: "دليل OpenLLMetry: قابلية الملاحظة ومراقبة النماذج اللغوية - Thaki Cloud"
 seo_description: "دليل شامل حول OpenLLMetry لقابلية ملاحظة النماذج اللغوية الكبيرة. تعلم التثبيت والتكوين ومراقبة تطبيقات الذكاء الاصطناعي مع أمثلة عملية."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - openllmetry
   - llm-observability
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/openllmetry-complete-guide-llm-observability/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/openllmetry-complete-guide-llm-observability/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

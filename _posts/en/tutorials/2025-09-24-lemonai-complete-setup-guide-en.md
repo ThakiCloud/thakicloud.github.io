@@ -4,8 +4,6 @@ excerpt: "Comprehensive tutorial on setting up and using LemonAI, the first full
 seo_title: "LemonAI Tutorial: Complete Local AI Agent Setup Guide - Thaki Cloud"
 seo_description: "Learn how to install and use LemonAI, an open-source alternative to Manus & Genspark AI. Complete tutorial with Docker setup, VM sandbox configuration, and practical examples."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - LemonAI
   - AI-Agent
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/tutorials/lemonai-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/lemonai-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

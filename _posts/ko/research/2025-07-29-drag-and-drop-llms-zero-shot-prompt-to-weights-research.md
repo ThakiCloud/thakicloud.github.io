@@ -5,8 +5,6 @@ seo_title: "Drag-and-Drop LLMs 제로샷 프롬프트-투-웨이트 연구 분�
 seo_description: "NUS와 UT Austin 공동 연구진이 개발한 DnD LLMs 기술로 기존 LoRA 대비 12,000배 빠른 속도와 30% 성능 향상을 달성한 혁신적 접근법 분석"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - research
 tags:
   - LLM
   - 파라미터 생성
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/drag-and-drop-llms-zero-shot-prompt-to-weights-research/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

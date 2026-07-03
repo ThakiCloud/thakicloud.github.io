@@ -2,9 +2,6 @@
 title: "Ming-Lite-Omni: GPT-4o 수준의 멀티모달 AI 모델"
 excerpt: "이미지, 텍스트, 오디오, 비디오를 통합 처리하는 2.8B 파라미터 경량 멀티모달 모델"
 date: 2025-06-14
-categories: 
-  - owm
-  - llmops
 tags: 
   - multimodal
   - ai-model
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ## 소개

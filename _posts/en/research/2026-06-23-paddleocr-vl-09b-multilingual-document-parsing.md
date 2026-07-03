@@ -5,8 +5,6 @@ seo_title: "PaddleOCR-VL 0.9B Multilingual Document Parsing Hands-On - Thaki Clo
 seo_description: "Hands-on report installing PaddleOCR-VL-0.9B (NaViT encoder + ERNIE-4.5-0.3B) and running inference on Korean and Arabic documents. OmniDocBench results, two-stage architecture, and analysis for ThakiCloud Kubernetes document intelligence deployment."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - research
 tags:
   - paddleocr-vl
   - document-parsing
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/en/research/paddleocr-vl-09b-multil
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png
+categories:
+  - research
 ---
 
 ![Abstract image showing translucent documents transforming into a structured node grid](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png)

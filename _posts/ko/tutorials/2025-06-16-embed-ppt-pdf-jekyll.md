@@ -2,9 +2,6 @@
 title: "Jekyll 블로그에서 PPT·PDF 바로 보기 실전 가이드"
 excerpt: "GitHub Pages 환경에서도 슬라이드(PPTX)와 PDF를 별도 플러그인 없이 손쉽게 임베드하는 6가지 방법을 정리했습니다."
 date: 2025-06-16
-categories:
-  - dev
-  - tutorials
 tags:
   - Jekyll
   - GitHub Pages
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 아래는 **Jekyll 기반 블로그(예: GitHub Pages)에서 방문자가 PowerPoint(`*.ppt`, `*.pptx`)와 PDF 파일을 직접 열람**할 수 있게 하는 가장 실용적인 방법을 한눈에 정리한 표입니다. 상황별로 조합해 쓰는 것도 좋습니다. 예를 들어 PDF는 로컬 뷰어로, 슬라이드만 클라우드 뷰어로 띄우는 식이죠.

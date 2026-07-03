@@ -1,8 +1,6 @@
 ---
 title: "Gemma 3n E2B - 모바일에서 돌아가는 멀티모달 AI 혁신"
 date: 2025-06-11
-categories: 
-  - owm
 tags: 
   - gemma
   - multimodal-ai
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "Gemma 3n E2B 가이드"
 published: false
+categories:
+  - owm
 ---
 
 Google DeepMind가 2025년 새해를 맞아 공개한 **Gemma 3n E2B**는 AI 모델의 새로운 패러다임을 제시합니다. **스마트폰에서도 돌아가는 멀티모달 AI**라는 혁신적인 컨셉으로, 텍스트, 이미지, 비디오, 오디오를 모두 처리할 수 있으면서도 극도로 경량화된 모델입니다.

@@ -4,8 +4,6 @@ excerpt: "دليل شامل لبناء مجموعات البروكسي النف�
 seo_title: "دليل ProxyCat الشامل لمجموعات البروكسي النفقية - Thaki Cloud"
 seo_description: "تعلم كيفية بناء وتشغيل مجموعات البروكسي النفقية عالية الأداء باستخدام ProxyCat مع تعليمات خطوة بخطوة وأفضل الممارسات."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - ProxyCat
   - ProxyPool
@@ -17,6 +15,8 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

@@ -6,8 +6,6 @@ seo_description: "arXiv 2604.18131: التطور الذاتي للوكيل بل�
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - research
 tags:
   - ai-agent
   - self-evolution
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/reward-free-agent-self-evolution/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

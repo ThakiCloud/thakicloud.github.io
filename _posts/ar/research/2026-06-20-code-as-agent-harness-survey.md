@@ -5,8 +5,6 @@ seo_title: "تحليل مسح بنية تجهيز العملاء المبنية 
 seo_description: "arXiv 2605.18747 Code as Agent Harness: ثلاث طبقات لبنية العامل، التخطيط والتحكم التكيفي، تنسيق العملاء المتعددين، وتحديات السلامة، مع زاوية تطبيق على منصة ThakiCloud"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - agent-harness
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/code-as-agent-harness-survey/"
 reading_time: true
 lang: ar
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

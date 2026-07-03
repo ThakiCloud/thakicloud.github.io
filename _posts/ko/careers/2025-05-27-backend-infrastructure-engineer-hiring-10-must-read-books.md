@@ -3,8 +3,6 @@ title: "백엔드·인프라 엔지니어 채용: 10대 필독서와 우리가 �
 excerpt: "백엔드·인프라 엔지니어 채용을 위한 10대 필독서와 실무 적용 사례를 통해 우리가 찾는 인재상과 채용 기준을 소개합니다."
 date: 2025-05-27
 last_modified_at: 2026-06-20
-categories:
-  - careers
 tags:
   - MLOps
   - ThreeVs
@@ -13,6 +11,8 @@ tags:
   - Thaki Cloud
 author_profile: true
 canonical_url: "https://thakicloud.github.io/ko/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+categories:
+  - careers
 ---
 
 > **TL;DR**

@@ -5,9 +5,6 @@ seo_title: "KittenTTS 초경량 음성 합성 모델 완전 분석 - Thaki Cloud
 seo_description: "CPU 환경에서 실시간 동작하는 25MB 미만의 KittenTTS 모델 분석과 실제 구현 가이드를 제공합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - owm
-  - llmops
 tags:
   - kittentts
   - text-to-speech
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/kitten-tts-ultra-lightweight-text-to-speech-model-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

@@ -4,8 +4,6 @@ excerpt: "Discover how IBM's Granite Docling 258M transforms document processing
 seo_title: "IBM Granite Docling 258M: AI-Powered Document Workflow Automation - Thaki Cloud"
 seo_description: "Learn how IBM Granite Docling 258M revolutionizes document conversion workflows with multimodal AI technology. Complete guide to automated document processing and structured data extraction."
 date: 2025-09-18
-categories:
-  - owm
 tags:
   - granite-docling
   - document-conversion
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/owm/granite-docling-258m-document-conversion-workflow-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/granite-docling-258m-document-conversion-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

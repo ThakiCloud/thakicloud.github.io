@@ -6,8 +6,6 @@ seo_description: "We verify OpenRouter token share data showing US models droppi
 date: 2026-06-28
 last_modified_at: 2026-06-28
 lang: en
-categories:
-  - news
 tags:
   - openrouter
   - china-llm
@@ -21,6 +19,8 @@ toc: true
 toc_label: "Contents"
 toc_icon: "chart-bar"
 canonical_url: "https://thakicloud.github.io/en/news/openrouter-china-model-share-vendor-neutral/"
+categories:
+  - news
 ---
 
 OpenRouter is the platform where millions of developers pick and call multiple LLMs through a single API. Because it reflects real usage by cost-sensitive developers, it gets cited often as a leading indicator for the broader market. On that platform, US model token share dropped from roughly 70% to roughly 30% in a single year.

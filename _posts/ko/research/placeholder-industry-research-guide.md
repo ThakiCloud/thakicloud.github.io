@@ -2,8 +2,6 @@
 title: "[산업 리서치 & 분석] 여기에 리서치 주제/제목을 입력하세요"
 excerpt: "특정 기술 시장, 산업 동향, 경쟁 환경에 대한 Thaki Cloud의 심층 리서치 및 분석 자료"
 date: YYYY-MM-DD # 실제 리서치 완료 또는 발행일로 변경하세요
-categories:
-  - research
 tags:
   - Industry Research
   - Market Analysis
@@ -53,6 +51,8 @@ Thaki Cloud가 사업을 영위하고 있는 프라이빗 클라우드, IaaS, Pa
 *   **데이터 중심적 사고:** 모든 주장은 데이터를 근거로 하며, 객관성을 유지합니다.
 *   **전략적 시각:** 단순 분석을 넘어, 비즈니스와 기술 전략에 대한 깊이 있는 고민을 담아냅니다.
 published: false
+categories:
+  - research
 ---
 
 ## 여기에 실제 [산업 리서치 & 분석] 관련 내용을 작성하세요

@@ -5,8 +5,6 @@ seo_title: "생성형 AI 모델 발전에 따른 프롬프트 적응 패턴 연�
 seo_description: "DALL-E 시리즈를 통해 본 생성형 AI 모델 발전과 사용자 프롬프트 작성 방식의 공진화를 1,893명 대상 실험으로 분석한 최신 연구 동향"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - research
 tags:
   - AI연구
   - 프롬프트엔지니어링
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/generative-models-prompt-adaptation-study/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

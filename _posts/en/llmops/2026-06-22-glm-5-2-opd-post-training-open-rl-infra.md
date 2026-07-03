@@ -6,8 +6,6 @@ seo_description: "GLM-5.2 parallel OPD post-training, merging 10+ expert models,
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
-categories:
-  - llmops
 tags:
   - glm
   - opd
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 A frontier-grade lab releasing only model weights is no longer unusual. Z.ai (THUDM) went one step further with GLM-5.2: alongside the weights, it open-sourced the entire reinforcement-learning (RL) post-training infrastructure used to build the model. The most striking part is the post-training method itself. Z.ai reports that it merged more than ten expert models into the final GLM-5.2 in about two days. It calls this parallel merging process OPD.

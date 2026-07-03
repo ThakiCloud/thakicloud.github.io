@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام Mito AI وملحقات جداول �
 seo_title: "دليل Mito Jupyter AI - جداول البيانات ودردشة AI - Thaki Cloud"
 seo_description: "دليل Mito الكامل: تثبيت ملحقات Jupyter المدعومة بالذكاء الاصطناعي لتحرير جداول البيانات ودردشة AI الذكية وتوليد كود Python التلقائي. دليل خطوة بخطوة."
 date: 2025-09-25
-categories:
-  - tutorials
 tags:
   - mito
   - jupyter
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/mito-jupyter-spreadsheet-ai-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mito-jupyter-spreadsheet-ai-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

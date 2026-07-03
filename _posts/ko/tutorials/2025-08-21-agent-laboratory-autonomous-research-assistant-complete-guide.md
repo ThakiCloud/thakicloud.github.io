@@ -5,8 +5,6 @@ seo_title: "Agent Laboratory LLM 자율 연구 도우미 튜토리얼 - macOS �
 seo_description: "Agent Laboratory로 문헌 리뷰부터 실험 실행, 보고서 작성까지 자동화하는 연구 워크플로우 구축 방법을 상세히 안내합니다"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - tutorials
 tags:
   - Agent Laboratory
   - LLM
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/agent-laboratory-autonomous-research-assistant-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

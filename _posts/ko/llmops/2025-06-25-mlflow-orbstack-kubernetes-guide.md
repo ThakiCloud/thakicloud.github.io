@@ -2,9 +2,6 @@
 title: "OrbStack으로 MLflow 컨테이너 환경 구축하기 - Docker & Kubernetes 실험 가이드"
 excerpt: "OrbStack을 활용하여 Docker와 Kubernetes 환경에서 MLflow를 설치하고 머신러닝 실험을 체계적으로 관리하는 방법을 알아봅니다."
 date: 2025-06-25
-categories: 
-  - llmops
-  - dev
 tags: 
   - mlflow
   - orbstack
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 개요

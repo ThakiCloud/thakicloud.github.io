@@ -5,8 +5,6 @@ seo_title: "Top 10 RL Post-Training Papers of 2025 Review - Frontiers of Reasoni
 seo_description: "Detailed analysis of 10 leading reinforcement learning post-training papers from 2025, including Kimi k1.5, Microsoft RPT, and Agent Lightning. Key techniques for improving LLM reasoning and practical insights for deployment."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - research
 tags:
   - reinforcement-learning
   - post-training
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/research/reinforcement-learning-
 lang: en
 permalink: /en/research/reinforcement-learning-post-training-top-10-papers-review/
 reading_time: true
+categories:
+  - research
 ---
 
 ![Key concept illustration](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)

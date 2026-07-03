@@ -1,12 +1,6 @@
 ---
 title: "Triton Server & TensorRT 신입 개발자 개발 가이드"
 date: 2025-06-03
-categories:
-  - dev
-  - ai-inference
-  - nvidia
-  - triton
-  - tensorrt
 tags:
   - tritonserver
   - tensorrt
@@ -22,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: Triton & TensorRT 신입 개발자 가이드
 published: false
+categories:
+  - dev
 ---
 
 ## Triton Server & TensorRT 신입 개발자 개발 가이드 🚀

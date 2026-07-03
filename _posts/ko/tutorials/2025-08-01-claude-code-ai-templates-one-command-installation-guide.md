@@ -5,9 +5,6 @@ seo_title: "Claude Code AI Templates 설치 가이드 - 원클릭 에이전트, 
 seo_description: "Claude Code의 새로운 AI Templates 기능으로 에이전트, MCP 서버, 개발 템플릿을 한 번의 명령으로 설치하는 완전 가이드. GitHub Actions 기반 자동화와 실전 활용법까지 상세히 설명합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - tutorials
-  - ai-development
 tags:
   - Claude-Code
   - AI-Templates
@@ -27,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/claude-code-ai-templates-one-command-installation-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

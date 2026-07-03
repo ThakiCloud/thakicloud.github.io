@@ -4,8 +4,6 @@ excerpt: "Master Youtu-Agent, Tencent's open-source agent framework built on Ope
 seo_title: "Youtu-Agent Tutorial: Build AI Agents with Open-Source Models - Thaki Cloud"
 seo_description: "Complete guide to Youtu-Agent framework: installation, setup, examples, and benchmarking. Build powerful AI agents with web search, automation, and async processing capabilities."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - youtu-agent
   - ai-agents
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/youtu-agent-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/youtu-agent-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

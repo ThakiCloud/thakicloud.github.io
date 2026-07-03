@@ -4,8 +4,6 @@ excerpt: "Learn how to use AI-powered tools for automated novel generation with 
 seo_title: "AI Novel Generator Tutorial - Automated Fiction Writing Guide"
 seo_description: "Master AI novel generation with our comprehensive tutorial. Learn setup, configuration, and best practices for creating consistent long-form fiction using AI technology."
 date: 2025-09-30
-categories:
-  - tutorials
 tags:
   - AI
   - Novel Generation
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/ai-novel-generator-tut
 lang: en
 permalink: /en/tutorials/ai-novel-generator-tutorial-en/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

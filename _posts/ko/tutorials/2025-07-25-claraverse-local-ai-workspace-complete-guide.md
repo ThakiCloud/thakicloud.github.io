@@ -5,9 +5,6 @@ seo_title: "ClaraVerse 완전 가이드 - 로컬 AI 워크스페이스 구축하
 seo_description: "ClaraVerse 설치부터 고급 워크플로우까지. Ollama, Stable Diffusion, n8n 자동화를 통합한 완전 로컬 AI 환경 구축."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - tutorials
-  - llmops
 tags:
   - claraverse
   - local-ai
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/claraverse-local-ai-workspace-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

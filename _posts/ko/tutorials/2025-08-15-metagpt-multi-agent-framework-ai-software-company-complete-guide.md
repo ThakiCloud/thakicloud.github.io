@@ -5,9 +5,6 @@ seo_title: "MetaGPT 멀티 에이전트 AI 소프트웨어 개발 튜토리얼 -
 seo_description: "MetaGPT로 AI 소프트웨어 회사 구축하기. Python 설치, 설정, 실제 프로젝트 생성까지 포함한 완전 가이드. 자연어 프로그래밍의 혁신"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
-  - llmops
 tags:
   - metagpt
   - multi-agent
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/metagpt-multi-agent-framework-ai-software-company-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

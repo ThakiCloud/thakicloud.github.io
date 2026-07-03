@@ -4,8 +4,6 @@ excerpt: "udocker를 사용하여 루트 권한 없이 Docker 컨테이너를 �
 seo_title: "udocker 튜토리얼: 루트 권한 없는 Docker 컨테이너 실행 가이드 - Thaki Cloud"
 seo_description: "루트 권한 없이 Docker 컨테이너를 실행하는 udocker 완벽 튜토리얼. HPC, 배치 시스템, 보안 환경에 최적화된 가이드."
 date: 2025-10-11
-categories:
-  - tutorials
 tags:
   - docker
   - containers
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/udocker-rootless-container-execution-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/udocker-rootless-container-execution-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

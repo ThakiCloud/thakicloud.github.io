@@ -4,8 +4,6 @@ excerpt: "Master AI-powered coding tools like GitHub Copilot, ChatGPT, and Claud
 seo_title: "AI Coding Assistant Guide: Boost Development Productivity - Thaki Cloud"
 seo_description: "Learn how to effectively use AI coding assistants like GitHub Copilot, ChatGPT, and Claude to improve code quality, speed up development, and enhance your programming skills."
 date: 2025-10-09
-categories:
-  - tutorials
 tags:
   - ai-coding
   - github-copilot
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/ai-coding-assistant-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/ai-coding-assistant-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

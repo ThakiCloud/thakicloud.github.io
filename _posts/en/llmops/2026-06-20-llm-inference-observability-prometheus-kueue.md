@@ -5,8 +5,6 @@ seo_title: "vLLM Prometheus Kueue LLM Serving Observability Guide - Thaki Cloud"
 seo_description: "Design for a K8s LLM serving observability stack integrating vLLM /metrics, DCGM Exporter, and Kueue metrics. Track GPU utilization and inference costs in real time."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - observability
   - prometheus
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/llm-inference-observability-prometheus-kueue/"
 reading_time: true
 lang: en
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 10 min

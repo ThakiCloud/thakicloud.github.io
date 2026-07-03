@@ -4,8 +4,6 @@ excerpt: "As engineering, product, design, and data blur into a single mass, Bor
 date: 2026-07-01
 last_modified_at: 2026-07-01
 lang: en
-categories:
-  - culture
 tags:
   - future-of-work
   - organizational-culture
@@ -19,6 +17,8 @@ toc_label: Contents
 canonical_url: "https://thakicloud.github.io/en/culture/five-product-role-archetypes/"
 header:
   image: /assets/images/five-product-role-archetypes-hero.png
+categories:
+  - culture
 ---
 
 ![Abstract visual depicting the blurring of role boundaries and the emergence of new archetypes](/assets/images/five-product-role-archetypes-hero.png)

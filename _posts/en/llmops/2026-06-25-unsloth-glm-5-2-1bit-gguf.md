@@ -7,8 +7,6 @@ date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: en
 canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-glm-5-2-1bit-gguf/"
-categories:
-  - llmops
 tags:
   - gguf
   - quantization
@@ -24,6 +22,8 @@ toc_label: "Contents"
 toc_icon: "microchip"
 toc_sticky: true
 reading_time: true
+categories:
+  - llmops
 ---
 
 The first wall any team hits when serving a large model on its own infrastructure is always memory. Calling a frontier model through an external API sends your data outside the company; hosting it yourself means putting hundreds of gigabytes — often over a terabyte — of weights somewhere. Unsloth's `unsloth/GLM-5.2-GGUF`, released in June 2026, is a case study in lowering that wall through quantization. It takes GLM-5.2, an open MoE model of roughly 744B parameters, and compresses its 1.51TB BF16 weights down to 176GB with a 1-bit Dynamic GGUF. Every number in this post is a figure published by Unsloth or Hugging Face. The 744B model cannot be hosted in this analysis environment, so instead of self-reproducing benchmarks we cite the public figures and state their limits plainly.

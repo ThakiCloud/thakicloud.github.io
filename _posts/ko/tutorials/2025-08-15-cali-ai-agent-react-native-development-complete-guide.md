@@ -5,8 +5,6 @@ seo_title: "Cali AI Agent React Native 개발 자동화 완전 가이드 - Thaki
 seo_description: "Callstack Cali AI 에이전트로 React Native 개발을 자동화하는 방법. 빌드 자동화, 디바이스 관리, 의존성 설치부터 실전 활용까지 상세 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
 tags:
   - cali
   - react-native
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/cali-ai-agent-react-native-development-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -2,9 +2,6 @@
 title: "AceReason Evaluation Toolkit 완전 분석 - NVIDIA 수학/코딩 평가 시스템 심층 가이드"
 excerpt: "NVIDIA AceReason Evaluation Toolkit의 전체 동작 과정을 단계별로 상세하게 분석합니다. AIME 수학 문제와 LiveCodeBench 코딩 평가의 파이프라인, 채점 방식, 성능 최적화 전략까지 완벽 해부."
 date: 2025-06-19
-categories: 
-  - llmops
-  - research
 tags: 
   - AceReason
   - NVIDIA
@@ -20,6 +17,9 @@ author_profile: true
 toc: true
 toc_label: AceReason 분석 가이드
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ## 📋 문서 개요

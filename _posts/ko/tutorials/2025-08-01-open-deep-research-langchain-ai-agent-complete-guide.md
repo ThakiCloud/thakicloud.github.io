@@ -5,9 +5,6 @@ seo_title: "Open Deep Research LangChain AI 에이전트 튜토리얼 - 연구 �
 seo_description: "LangChain AI Open Deep Research 에이전트 완전 설치 및 활용 가이드. LangGraph Studio, MCP 서버 연동, 다중 모델 설정, 평가 시스템까지 AI 연구 자동화의 모든 것을 단계별로 설명합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - tutorials
-  - ai-agents
 tags:
   - Open-Deep-Research
   - LangChain-AI
@@ -27,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/open-deep-research-langchain-ai-agent-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

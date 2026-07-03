@@ -7,8 +7,6 @@ date: 2025-09-01
 lang: ar
 permalink: /ar/owm/claude-opus4-sonnet4-system-card-analysis/
 canonical_url: "https://thakicloud.github.io/ar/owm/claude-opus4-sonnet4-system-card-analysis/"
-categories:
-  - owm
 tags:
   - Claude-Opus-4
   - Claude-Sonnet-4
@@ -22,6 +20,8 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

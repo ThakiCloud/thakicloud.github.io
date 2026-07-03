@@ -5,8 +5,6 @@ seo_title: "alphaXiv autoresearch Paper Reproduction Automation Analysis - Thaki
 seo_description: "An analysis of alphaXiv autoresearch, an agent based approach to paper reproduction, GPU replication cost estimation, and how AI research reproducibility automation connects to Kueue GPU orchestration"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - alphaxiv
   - reproducibility
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/alphaxiv-autoresearch-reproducibility-agent/"
 reading_time: true
+categories:
+  - research
 ---
 
 Reproducibility has long been a headache in AI research. Papers report impressive results, but when you actually try to run the code you get stuck on environment setup, run short on GPUs, or hit broken dependencies. The autoresearch feature that alphaXiv introduced is an attempt to automate this friction away with an agent. Just swap `arxiv` for `autoarxiv` in an arXiv URL, and an agent sets up the codebase environment, runs a minimal reproduction, and even estimates the GPU cost of full replication.

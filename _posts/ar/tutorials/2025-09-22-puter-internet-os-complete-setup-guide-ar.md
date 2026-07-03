@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تثبيت واستخدام Puter، نظام ال�
 seo_title: "دليل إعداد Puter Internet OS - دروس شاملة 2025 - Thaki Cloud"
 seo_description: "دليل شامل لتثبيت واستخدام Puter، نظام التشغيل الإنترنت مفتوح المصدر. تعلم التطوير المحلي ونشر Docker والاستضافة الذاتية."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - puter
   - نظام-تشغيل-إنترنت
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/puter-internet-os-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/puter-internet-os-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

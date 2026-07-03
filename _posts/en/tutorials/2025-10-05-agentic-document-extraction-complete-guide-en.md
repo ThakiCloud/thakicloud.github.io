@@ -4,8 +4,6 @@ excerpt: "Master LandingAI's Agentic Document Extraction library for intelligent
 seo_title: "LandingAI Agentic Document Extraction Tutorial - AI PDF Processing Guide"
 seo_description: "Learn how to use LandingAI's Agentic Document Extraction library for AI-powered document processing. Complete tutorial with code examples, batch processing, and visualization features."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - LandingAI
   - Document-Extraction
@@ -21,6 +19,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/agentic-document-extraction-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/agentic-document-extraction-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

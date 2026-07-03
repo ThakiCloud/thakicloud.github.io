@@ -5,9 +5,6 @@ seo_title: "OpenReplay 자체 호스팅 세션 리플레이 플랫폼 튜토리�
 seo_description: "OpenReplay를 활용한 웹 애플리케이션 사용자 행동 분석 가이드. Docker 배포, 세션 리플레이, 실시간 지원까지 포함한 완전 튜토리얼"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
-  - devops
 tags:
   - openreplay
   - session-replay
@@ -26,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/openreplay-session-replay-self-hosted-analytics-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

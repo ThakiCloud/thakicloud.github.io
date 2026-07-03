@@ -5,8 +5,6 @@ seo_title: "تحليل نموذج تنسيق Sakana Fugu - الوكلاء الم
 seo_description: "Sakana AI Fugu نموذج تنسيق يُحكم التنسيق الديناميكي لمجموعة وكلاء LLM. يستعرض هذا المقال البنية المعمارية، وحدود المعايير المُعلنة ذاتيًا، ومنطق التحوط ضد التبعية للبائع، وانعكاسات ذلك على منصة الوكلاء متعددي المستأجرين في ThakiCloud المبنية على K8s."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - agentops
 tags:
   - sakana-ai
   - multi-agent
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/agentops/sakana-fugu-orchestration-model/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ## نظرة عامة

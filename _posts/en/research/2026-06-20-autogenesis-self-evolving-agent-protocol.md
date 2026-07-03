@@ -5,8 +5,6 @@ seo_title: "Autogenesis Self-Evolving Agent Protocol Analysis - Thaki Cloud"
 seo_description: "arXiv 2604.15034 Autogenesis Protocol: deep analysis of agent resource abstraction, self-evolution loop, benchmark performance gains, and ThakiCloud platform application perspective."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - self-evolving
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/autogenesis-self-evolving-agent-protocol/"
 lang: en
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 7 min

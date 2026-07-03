@@ -4,8 +4,6 @@ excerpt: "OpenAI가 에이전트 개발을 수개월에서 수시간으로 단�
 seo_title: "OpenAI AgentKit 출시: AI 에이전트 개발 플랫폼 - Thaki Cloud"
 seo_description: "시각적 워크플로우 설계, 커넥터 레지스트리, ChatKit을 통한 신속한 배포로 AI 에이전트 개발을 혁신하는 OpenAI AgentKit 플랫폼을 알아보세요."
 date: 2025-10-08
-categories:
-  - news
 tags:
   - OpenAI
   - AgentKit
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/news/openai-agentkit-introduction/
 canonical_url: "https://thakicloud.github.io/ko/news/openai-agentkit-introduction/"
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 4분

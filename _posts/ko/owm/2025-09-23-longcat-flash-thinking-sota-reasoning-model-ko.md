@@ -4,8 +4,6 @@ excerpt: "560B 매개변수 MoE 모델인 LongCat-Flash-Thinking의 혁신적인
 seo_title: "LongCat-Flash-Thinking: 560B 매개변수 SOTA 오픈소스 추론 모델"
 seo_description: "중국의 새로운 LongCat-Flash-Thinking 모델 소개 - 560B 매개변수, 27B 활성화, SOTA 벤치마크, 64.5% 토큰 감소, 비동기 RL 훈련."
 date: 2025-09-23
-categories:
-  - owm
 tags:
   - LongCat
   - 추론-모델
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ko/owm/longcat-flash-thinking-sota-
 lang: ko
 permalink: /ko/owm/longcat-flash-thinking-sota-reasoning-model/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

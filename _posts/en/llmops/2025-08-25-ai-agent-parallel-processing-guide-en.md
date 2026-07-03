@@ -5,8 +5,6 @@ seo_title: "AI Agent Parallel Processing Complete Guide: LangGraph CrewAI Workfl
 seo_description: "Efficiently perform complex tasks with AI Agent parallel processing. Practical guides, performance optimization techniques, and real-world project applications using LangGraph and CrewAI."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - llmops
 tags:
   - AI Agent
   - Parallel Processing
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/ai-agent-parallel-processing-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 12 minutes

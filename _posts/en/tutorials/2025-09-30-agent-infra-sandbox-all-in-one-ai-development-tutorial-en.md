@@ -4,8 +4,6 @@ excerpt: "Learn how to set up and use agent-infra/sandbox, the comprehensive Doc
 seo_title: "AIO Sandbox Tutorial: All-in-One AI Agent Development Environment - Thaki Cloud"
 seo_description: "Complete tutorial on agent-infra/sandbox - Docker container with browser automation, VSCode Server, Jupyter, MCP integration for AI agent development. Step-by-step setup guide."
 date: 2025-09-30
-categories:
-  - tutorials
 tags:
   - ai-agents
   - docker
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/agent-infra-sandbox-al
 lang: en
 permalink: /en/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

@@ -4,8 +4,6 @@ excerpt: "دليل احترافي لتقليل فقدان الدقة أثناء 
 seo_title: "دليل NeMo QAT - التدريب الواعي بالتكميم لنماذج FP4"
 seo_description: "أتقن NVIDIA NeMo QAT لتكميم FP4 مع فقدان دقة قليل. دليل شامل يغطي التنفيذ والتحسين والنشر الإنتاجي"
 date: 2025-06-01
-categories:
-  - llmops
 tags:
   - NeMo-QAT
   - التدريب-الواعي-بالتكميم
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/llmops/nemo-qat-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/nemo-qat-comprehensive-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 14 دقيقة

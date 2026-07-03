@@ -4,8 +4,6 @@ excerpt: "샤오홍슈 콘텐츠 생성과 발행을 자동화하는 xhs_ai_publ
 seo_title: "샤오홍슈 AI 퍼블리셔 튜토리얼: 완전 자동화 가이드 - Thaki Cloud"
 seo_description: "xhs_ai_publisher로 샤오홍슈 콘텐츠 생성과 발행을 자동화하는 방법 학습. 설치, 설정, 모범 사례를 포함한 단계별 소셜 미디어 자동화 튜토리얼."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - 샤오홍슈
   - AI자동화
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/xiaohongshu-ai-publisher-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/xiaohongshu-ai-publisher-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

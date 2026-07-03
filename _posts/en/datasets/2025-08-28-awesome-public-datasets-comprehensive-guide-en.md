@@ -4,8 +4,6 @@ excerpt: "Discover the ultimate collection of curated public datasets across div
 seo_title: "Awesome Public Datasets - Complete Guide to Open Data Sources"
 seo_description: "Explore 64.3k starred GitHub repository featuring high-quality public datasets across 30+ categories. Find the perfect dataset for your research or project."
 date: 2025-08-28
-categories:
-  - datasets
 tags:
   - open-data
   - public-datasets
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/datasets/awesome-public-datasets-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/en/datasets/awesome-public-datasets-comprehensive-guide/"
+categories:
+  - datasets
 ---
 
 ⏱️ **Expected Reading Time**: 8 minutes

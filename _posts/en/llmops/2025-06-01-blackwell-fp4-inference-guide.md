@@ -4,8 +4,6 @@ excerpt: "Maximize AI performance and dramatically reduce costs with NVIDIA Blac
 seo_title: "Blackwell FP4 Inference Guide - 4-Bit GPU Optimization for AI"
 seo_description: "Master NVIDIA Blackwell FP4 inference for maximum AI performance and cost efficiency. Complete implementation guide with practical examples and optimization tips"
 date: 2025-06-01
-categories:
-  - llmops
 tags:
   - NVIDIA-Blackwell
   - FP4-Inference
@@ -21,6 +19,8 @@ toc: true
 toc_label: "Blackwell FP4 Inference Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/blackwell-fp4-inference-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

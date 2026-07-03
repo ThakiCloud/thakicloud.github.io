@@ -5,9 +5,6 @@ seo_title: "Complete Guide to Training a Reasoning LLM with NVIDIA NeMo: Impleme
 seo_description: "A hands-on guide for training a reasoning-capable LLM on a single GPU within 48 hours using NVIDIA NeMo and the Llama Nemotron dataset."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - llmops
-  - tutorials
 tags:
   - nvidia-nemo
   - reasoning-llm
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-nemo-reasoning-llm
 lang: en
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 min

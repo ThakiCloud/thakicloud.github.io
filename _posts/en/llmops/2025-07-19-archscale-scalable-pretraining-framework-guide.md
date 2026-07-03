@@ -5,8 +5,6 @@ seo_title: "ArchScale LLM Pretraining Guide - Microsoft Framework - Thaki Cloud"
 seo_description: "A complete guide to large language model pretraining with Microsoft ArchScale. Covers mu-P++ scaling, long context training, distributed processing, and performance evaluation."
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - llmops
 tags:
   - ArchScale
   - Microsoft
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/archscale-scalable-pretra
 reading_time: true
 lang: en
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 25 min

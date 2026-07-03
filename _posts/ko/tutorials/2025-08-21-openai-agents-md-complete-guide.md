@@ -5,8 +5,6 @@ seo_title: "AGENTS.md 완전 가이드 - AI 코딩 에이전트 표준 포맷 - 
 seo_description: "OpenAI가 제안한 AGENTS.md 형식을 활용하여 AI 코딩 에이전트의 효율성을 극대화하는 방법을 실제 예제와 함께 알아보세요."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - tutorials
 tags:
   - AGENTS.md
   - OpenAI
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/openai-agents-md-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

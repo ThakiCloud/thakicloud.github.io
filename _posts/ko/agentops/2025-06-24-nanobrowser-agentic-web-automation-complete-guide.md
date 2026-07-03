@@ -2,10 +2,6 @@
 title: "Nanobrowser 완벽 가이드: AI 에이전트 기반 웹 자동화와 Agentic Ops 활용 전략"
 excerpt: "오픈소스 Chrome 확장 Nanobrowser를 활용한 멀티 에이전트 웹 자동화 구현과 실무 적용 사례를 상세하게 다룹니다."
 date: 2025-06-24
-categories: 
-  - agentops
-  - tutorials
-  - llmops
 tags: 
   - nanobrowser
   - web-automation
@@ -18,6 +14,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - agentops
+  - tutorials
+  - llmops
 ---
 
 ## 개요

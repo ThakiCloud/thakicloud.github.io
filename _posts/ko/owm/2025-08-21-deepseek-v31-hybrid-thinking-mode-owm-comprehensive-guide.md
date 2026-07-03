@@ -5,9 +5,6 @@ seo_title: "DeepSeek-V3.1 하이브리드 씽킹 모드 완전 가이드 - Thaki
 seo_description: "DeepSeek-V3.1의 671B 파라미터 하이브리드 모델과 코드/검색 에이전트를 활용한 오픈 워크플로우 관리 시스템 구축 가이드"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - owm
-  - research
 tags:
   - DeepSeek-V3.1
   - 하이브리드AI
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/deepseek-v31-hybrid-thinking-mode-owm-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

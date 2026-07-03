@@ -5,8 +5,6 @@ seo_title: "iTool 강화 미세조정 연구: LLM 도구 사용 능력 향상 �
 seo_description: "하빈공과대학과 화웨이가 공동 개발한 iTool 연구 논문 분석. MCTS 기반 경로 탐색과 선호도 최적화를 통한 LLM 도구 사용 성능 13% 향상 달성"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - iTool
   - 강화학습
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/itool-reinforced-fine-tuning-tool-use-research/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

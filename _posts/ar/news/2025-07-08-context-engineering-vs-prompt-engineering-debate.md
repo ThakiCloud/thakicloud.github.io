@@ -5,8 +5,6 @@ seo_title: "تحليل نقاش هندسة السياق مقابل هندسة ا
 seo_description: "تحليل متعمق لظهور هندسة السياق وتطور هندسة المطالبات، استكشاف العلاقة التكميلية بين النهجين في تطوير الذكاء الاصطناعي"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - news
 tags:
   - هندسة السياق
   - هندسة المطالبات
@@ -25,6 +23,8 @@ reading_time: true
 lang: ar
 permalink: /ar/news/context-engineering-vs-prompt-engineering-debate/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

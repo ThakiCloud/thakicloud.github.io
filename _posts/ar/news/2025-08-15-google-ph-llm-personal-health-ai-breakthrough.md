@@ -5,8 +5,6 @@ seo_title: "ابتكار الذكاء الاصطناعي الصحي الشخصي
 seo_description: "PH-LLM من Google المنشور في Nature Medicine يفتح عصراً جديداً لإدارة الصحة الشخصية. تحليل مفصل لابتكار تدريب الذكاء الاصطناعي الصحي والآفاق المستقبلية باستخدام البيانات القابلة للارتداء."
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - news
 tags:
   - google
   - ph-llm
@@ -28,6 +26,8 @@ reading_time: true
 lang: ar
 permalink: /ar/news/google-ph-llm-personal-health-ai-breakthrough/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 16 دقيقة

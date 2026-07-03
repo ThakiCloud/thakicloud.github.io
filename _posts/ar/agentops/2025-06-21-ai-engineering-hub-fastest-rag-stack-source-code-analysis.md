@@ -4,8 +4,6 @@ excerpt: "تحليل معمّق على مستوى كود المصدر لمشرو
 date: 2025-06-21
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/agentops/ai-engineering-hub-fastest-rag-stack-source-code-analysis/"
-categories: 
-  - agentops
 tags: 
   - Fastest-RAG-Stack
   - Binary-Quantization
@@ -20,6 +18,8 @@ author_profile: true
 toc: true
 toc_label: "تحليل Fastest RAG Stack"
 published: false
+categories:
+  - agentops
 ---
 
 ## نظرة عامة

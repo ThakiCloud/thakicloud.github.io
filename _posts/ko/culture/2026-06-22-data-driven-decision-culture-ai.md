@@ -3,8 +3,6 @@ title: "AI가 최고의 의사결정자라면: 데이터가 직관을 이기는 
 excerpt: "젠슨 황의 '시장이 붙인 별명'을 출발점으로, Moneyball 계승 심화, 데이터가 직관을 이기는 의사결정 문화를 어떻게 조직에 뿌리내릴 것인가"
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - Data-Driven
   - 의사결정
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/data-driven-decision-culture-ai/"
+categories:
+  - culture
 ---
 
 ## "주식을 고르지 않는 최고의 주식 선택자"

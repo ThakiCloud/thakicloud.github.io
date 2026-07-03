@@ -5,8 +5,6 @@ seo_title: "دليل TRAE Agent الشامل - وكيل هندسة البرمج�
 seo_description: "دليل تقني شامل لـ TRAE Agent من ByteDance. وكيل AI لأتمتة تطوير البرمجيات، تخطيط المهام، تكامل الأدوات المتعددة، وأتمتة سير عمل التطوير مع تسجيل المسارات."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - agentops
 tags:
   - trae-agent
   - ByteDance
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/trae-agent-cloud-development-automation-guide/"
 lang: ar
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق

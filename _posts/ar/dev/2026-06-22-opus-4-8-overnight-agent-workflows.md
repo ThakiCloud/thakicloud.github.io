@@ -5,8 +5,6 @@ seo_title: "تحليل سير العمل الديناميكي والعوامل �
 seo_description: "نفصل المبالغات عن الحقائق في مقالة 'الذكاء الاصطناعي يكسب المال أثناء نومك'، ثم نفحص الهندسة الفعلية لسير العمل الديناميكي في Opus 4.8، والتوزيع المتوازي للعوامل الفرعية، وبوابات التحقق، وطلب خدمة GPU الذي تولّده العوامل الطويلة الأمد غير المراقَبة - من منظور ThakiCloud على Kubernetes."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - ai-agents
   - claude-opus
@@ -20,6 +18,8 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/opus-4-8-overnight-agent-workflows/"
+categories:
+  - dev
 ---
 
 ## نظرة عامة

@@ -4,8 +4,6 @@ excerpt: "من معمارية وحدات معالجة الرسوميات NVIDIA 
 seo_title: "دليل توسع وحدات معالجة الرسوميات: معمارية H100/B200 وتحسين تدريب النماذج اللغوية الكبيرة - Thaki Cloud"
 seo_description: "تحليل معمق من معمارية أجهزة NVIDIA H100 و B200 إلى الشبكات والمعالجة المتوازية للنماذج اللغوية واسعة النطاق بناءً على دليل توسع وحدات معالجة الرسوميات من Google DeepMind"
 date: 2025-08-26
-categories:
-  - llmops
 tags:
   - توسع-وحدات-معالجة-الرسوميات
   - NVIDIA-H100
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/gpu-scaling-comprehensive
 lang: ar
 permalink: /ar/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 25 دقيقة

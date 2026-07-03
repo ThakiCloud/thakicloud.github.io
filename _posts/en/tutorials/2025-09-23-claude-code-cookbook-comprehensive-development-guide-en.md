@@ -4,8 +4,6 @@ excerpt: "A comprehensive tutorial on leveraging Claude Code Cookbook's 60+ comm
 seo_title: "Claude Code Cookbook Complete Guide - AI Development Tools Tutorial"
 seo_description: "Master Claude Code Cookbook: 60+ commands for PR automation, code review, refactoring, multi-role agents, and development hooks. Transform your coding workflow with AI."
 date: 2025-09-23
-categories:
-  - tutorials
 tags:
   - claude-code
   - development-tools
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/claude-code-cookbook-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/claude-code-cookbook-comprehensive-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 18 minutes

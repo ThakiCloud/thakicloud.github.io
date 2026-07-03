@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية دمج خادم Model Context Protocol من Bright
 seo_title: "دروس Bright Data MCP: استخراج البيانات بالذكاء الاصطناعي والوصول للبيانات الفورية - Thaki Cloud"
 seo_description: "إتقان تكامل Bright Data MCP مع Claude AI. احصل على 5000 طلب مجاني شهرياً لاستخراج البيانات والبحث الفوري وأتمتة المتصفح. دليل الإعداد الكامل مُضمن."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - brightdata
   - mcp
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/brightdata-mcp-web-scraping-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/brightdata-mcp-web-scraping-ai-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

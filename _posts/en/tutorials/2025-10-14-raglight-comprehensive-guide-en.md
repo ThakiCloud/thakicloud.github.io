@@ -4,8 +4,6 @@ excerpt: "Master RAGLight framework with hands-on examples covering RAG, Agentic
 seo_title: "RAGLight Tutorial: Complete RAG Framework Guide - Thaki Cloud"
 seo_description: "Learn RAGLight framework with practical examples. Build RAG, Agentic RAG, and RAT pipelines on macOS using Ollama, OpenAI, or Mistral for context-aware AI applications."
 date: 2025-10-14
-categories:
-  - tutorials
 tags:
   - raglight
   - rag
@@ -22,6 +20,8 @@ toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/raglight-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/raglight-comprehensive-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

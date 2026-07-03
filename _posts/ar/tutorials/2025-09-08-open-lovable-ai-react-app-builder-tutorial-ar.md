@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء تطبيقات React فوريًا باس�
 seo_title: "دليل Open Lovable: أداة بناء تطبيقات React بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل حول Open Lovable، أداة بناء تطبيقات React المدعومة بالذكاء الاصطناعي. تعلم الإعداد والاستخدام وبناء التطبيقات بمساعدة الذكاء الاصطناعي."
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - الذكاء الاصطناعي
   - React
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/open-lovable-ai-react-app-builder-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/open-lovable-ai-react-app-builder-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

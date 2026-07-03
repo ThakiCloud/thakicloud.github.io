@@ -5,8 +5,6 @@ seo_title: "Skill Shadowing: Why Bigger Skill Libraries Make Agents Worse | Thak
 seo_description: "Built on arXiv 2605.24050 'More Skills, Worse Agents?', this post separates skill shadowing from context overhead and shows how ThakiCloud Paxis's skill harness stops the selection bottleneck with BM25 retrieval and an abstain gate, backed by real bench numbers."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - research
 tags:
   - agent-skills
   - skill-retrieval
@@ -19,6 +17,8 @@ toc_label: "Contents"
 toc_icon: "layer-group"
 published: true
 canonical_url: "https://thakicloud.github.io/en/research/agent-skill-shadowing-library-selection/"
+categories:
+  - research
 ---
 
 ## Overview

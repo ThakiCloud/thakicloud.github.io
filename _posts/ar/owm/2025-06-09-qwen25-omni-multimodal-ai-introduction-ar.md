@@ -4,8 +4,6 @@ excerpt: "مقدمة شاملة لـ Qwen2.5-Omni من علي بابا كلاو�
 seo_title: "دليل نموذج Qwen2.5-Omni متعدد الوسائط - توليد الكلام الفوري - Thaki Cloud"
 seo_description: "اكتشف نموذج Qwen2.5-Omni متعدد الوسائط من علي بابا كلاود الذي يتميز بمعالجة متكاملة للنصوص والصوت والرؤية والفيديو مع توليد كلام فوري رائد للتفاعل الطبيعي بين الإنسان والذكاء الاصطناعي."
 date: 2025-06-09
-categories: 
-  - owm
 tags: 
   - qwen
   - multimodal
@@ -22,6 +20,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/qwen25-omni-multimodal-ai-introduction/"
 lang: ar
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

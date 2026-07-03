@@ -5,8 +5,6 @@ seo_title: "SmolLM3 온디바이스 에이전트 워크플로우 관리 완전 �
 seo_description: "3B 파라미터 SmolLM3로 구축하는 로컬 AI 에이전트 시스템. 툴 콜링, 멀티모달 처리, 128k 컨텍스트를 활용한 오픈 워크플로우 관리 전략"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - owm
 tags:
   - SmolLM3
   - SmolVLM
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/smollm3-open-workflow-management-agentic-systems/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

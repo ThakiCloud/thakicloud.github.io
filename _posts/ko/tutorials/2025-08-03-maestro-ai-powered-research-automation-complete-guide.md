@@ -5,10 +5,6 @@ seo_title: "Maestro AI 연구 자동화 플랫폼 완전 가이드 - 멀티 에�
 seo_description: "Maestro AI 연구 애플리케이션의 멀티 에이전트 시스템 구축 방법부터 RAG 파이프라인, 실시간 추적, 자체 호스팅까지 전문가 수준의 연구 자동화 솔루션을 완벽 마스터하세요."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
-  - llmops
 tags:
   - Maestro
   - AI-Research
@@ -28,6 +24,10 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/maestro-ai-powered-research-automation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

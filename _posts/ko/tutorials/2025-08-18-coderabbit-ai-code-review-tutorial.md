@@ -5,9 +5,6 @@ seo_title: "CodeRabbit AI 코드 리뷰 자동화 설정 가이드 - Thaki Cloud
 seo_description: "CodeRabbit을 사용한 AI 코드 리뷰 자동화 설정 방법과 GitHub 연동, 실전 활용 팁까지 완벽 가이드로 개발 생산성을 높여보세요"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
-  - dev
 tags:
   - CodeRabbit
   - AI
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/coderabbit-ai-code-review-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

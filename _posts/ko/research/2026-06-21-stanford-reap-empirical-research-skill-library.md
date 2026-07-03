@@ -5,8 +5,6 @@ seo_title: "스탠퍼드 REAP 실증연구 에이전트 스킬 라이브러리 �
 seo_description: "Stanford REAP/CoPaper.AI 23000+ 에이전트 스킬 라이브러리, 실증 연구 자동화의 가치와 인과식별·재현성·환각 한계, 멀티에이전트 지식노동 관점"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - reap
   - agent-skills
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/stanford-reap-empirical-research-skill-library/"
 reading_time: true
+categories:
+  - research
 ---
 
 "AI가 20분 만에 톱저널 논문을 쓴다"는 주장은 솔깃하지만, 그대로 믿으면 위험합니다. 스탠퍼드 REAP에서 유지하는 CoPaper.AI가 공개한 에이전트 스킬 라이브러리(brycewang-stanford/Auto-Empirical-Research-Skills)는 8개 사회과학 분야에 걸친 23,000개 이상의 실증 연구 에이전트 스킬을 모았습니다. 규모는 인상적이지만, 그 의미를 정직하게 분리하는 것이 데이터 과학자의 일입니다.

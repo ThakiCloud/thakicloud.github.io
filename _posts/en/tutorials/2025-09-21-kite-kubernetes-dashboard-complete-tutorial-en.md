@@ -4,8 +4,6 @@ excerpt: "Learn how to deploy and use Kite, a modern lightweight Kubernetes dash
 seo_title: "Kite Kubernetes Dashboard Tutorial - Modern K8s Management - Thaki Cloud"
 seo_description: "Complete tutorial for Kite Kubernetes Dashboard: installation via Helm/kubectl, multi-cluster setup, resource management, monitoring with Prometheus, and security features."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - kubernetes
   - dashboard
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/tutorials/kite-kubernetes-dashboard-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/kite-kubernetes-dashboard-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

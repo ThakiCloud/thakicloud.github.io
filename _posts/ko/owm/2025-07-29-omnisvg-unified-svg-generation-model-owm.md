@@ -5,8 +5,6 @@ seo_title: "OmniSVG SVG 생성 AI 완벽 가이드 - 벡터 그래픽 자동화 
 seo_description: "OmniSVG 분석. 세계 최초 멀티모달 SVG 생성 모델, Text-to-SVG, Image-to-SVG, MMSVG-2M 데이터셋까지. 디자인 업계 혁신과 다양한 활용 사례 완벽 정리"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - owm
 tags:
   - OmniSVG
   - SVG생성AI
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/omnisvg-unified-svg-generation-model-owm/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

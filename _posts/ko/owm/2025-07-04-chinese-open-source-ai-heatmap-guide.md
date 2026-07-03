@@ -5,8 +5,6 @@ seo_title: "중국 오픈소스 AI 히트맵 추적 도구 완벽 가이드 - Th
 seo_description: "중국 오픈소스 AI 생태계를 실시간 추적하는 히트맵 도구 소개. 알리바바, 텐센트, 바이트댄스부터 DeepSeek, 샤오미까지 주요 플레이어 분석과 활용법."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - owm
 tags:
   - chinese-ai
   - open-source
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/chinese-open-source-ai-heatmap-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

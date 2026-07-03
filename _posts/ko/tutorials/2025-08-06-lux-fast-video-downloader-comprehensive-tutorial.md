@@ -5,9 +5,6 @@ seo_title: "Lux 비디오 다운로더 완전 가이드 - Thaki Cloud"
 seo_description: "YouTube, Bilibili, TikTok 등 100개 이상 사이트 지원하는 Lux 다운로더 설치와 활용법을 상세히 설명합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06
-categories:
-  - tutorials
-  - dev
 tags:
   - lux
   - video-downloader
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/lux-fast-video-downloader-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

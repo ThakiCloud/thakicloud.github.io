@@ -5,9 +5,6 @@ seo_title: "Tabiew Rust TUI 데이터 뷰어 완벽 튜토리얼 - CSV Parquet S
 seo_description: "Tabiew 설치부터 고급 사용법까지 완벽 가이드. Rust로 개발된 터미널 데이터 뷰어로 CSV, Parquet, JSON 파일을 빠르게 분석하고 SQL 쿼리를 실행하는 방법을 알아보세요."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - tutorials
-  - dev
 tags:
   - tabiew
   - rust
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/tabiew-rust-tui-data-viewer-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,8 +5,6 @@ seo_title: "AI Agent 병렬 처리 완전 가이드: LangGraph CrewAI 워크플�
 seo_description: "AI Agent 병렬 처리로 복잡한 작업을 효율적으로 수행하세요. LangGraph와 CrewAI를 활용한 실전 가이드, 성능 최적화 기법, 실제 프로젝트 적용 사례를 제공합니다."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - llmops
 tags:
   - AI Agent
   - 병렬처리
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/ai-agent-parallel-processing-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

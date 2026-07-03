@@ -4,8 +4,6 @@ excerpt: "تحليل شامل لعرض توضيحي من Anthropic لـ Claude C
 seo_title: "تحليل وكيل البريد الإلكتروني Claude Code SDK - دليل مساعد البريد الإلكتروني بالذكاء الاصطناعي"
 seo_description: "مراجعة متعمقة لعرض وكيل البريد الإلكتروني Claude Code SDK من Anthropic: تكامل IMAP، البحث المدعوم بالذكاء الاصطناعي، بث WebSocket، تنفيذ التخزين المؤقت SQLite."
 date: 2025-09-22
-categories:
-  - agentops
 tags:
   - claude-code-sdk
   - أتمتة-البريد-الإلكتروني
@@ -21,6 +19,9 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/agentops/claude-code-sdk-email-agent-analysis/
 canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-sdk-email-agent-analysis/"
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

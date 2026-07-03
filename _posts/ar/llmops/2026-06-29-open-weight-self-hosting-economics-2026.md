@@ -5,8 +5,6 @@ seo_title: "ازدهار النماذج مفتوحة الأوزان واقتصا
 seo_description: "تحليل مشهد النماذج مفتوحة الأوزان في 2026 من خلال DeepSeek V4 Flash وGLM-5.2 وMiniMax M3 وNemotron 3 Ultra، ونقطة التعادل في التكلفة مقارنة بالنماذج المغلقة، من منظور خدمة K8s لدى ThakiCloud"
 date: 2026-06-29
 last_modified_at: 2026-06-29
-categories:
-  - llmops
 tags:
   - open-weight
   - self-hosting
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/open-weight-self-hosting-
 reading_time: true
 header:
   image: /assets/images/open-weight-self-hosting-economics-2026-hero.png
+categories:
+  - llmops
 ---
 
 ![صورة تجريدية تعبر عن النماذج مفتوحة الأوزان واقتصاديات self-hosting](/assets/images/open-weight-self-hosting-economics-2026-hero.png)

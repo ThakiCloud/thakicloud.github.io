@@ -6,8 +6,6 @@ seo_description: "A detailed analysis of ByteDance Seed's ReTool research. We co
 date: 2025-08-21
 last_modified_at: 2025-08-21
 lang: en
-categories:
-  - research
 tags:
   - reinforcement-learning
   - llm
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/retool-reinforcement-learning-strategic-tool-use-llms/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 15 min

@@ -5,8 +5,6 @@ seo_title: "GitHub Actions Jekyll 증분 빌드 최적화 가이드 - 빌드 시
 seo_description: "Jekyll 블로그 500개 포스트 GitHub Actions 빌드 시간을 90% 단축하는 증분 빌드 시스템 구축 가이드. 변경 파일 감지, act 로컬 테스트, 성능 최적화 전략까지 실무 중심 완벽 정리"
 date: 2025-08-23
 last_modified_at: 2025-08-23
-categories:
-  - tutorials
 tags:
   - github-actions
   - jekyll
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/github-actions-incremental-build-optimization-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

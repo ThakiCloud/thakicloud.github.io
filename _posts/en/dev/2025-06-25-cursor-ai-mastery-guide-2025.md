@@ -3,9 +3,6 @@ title: "Cursor AI Mastery Guide 2025: Strategic Techniques to Stay Within the 50
 excerpt: "12 essential strategies for using Cursor AI like a pro, based on the latest June 2025 version. Covers overcoming the 500-request monthly limit and maximizing productivity."
 date: 2025-06-25
 last_modified_at: 2025-06-25
-categories:
-  - dev
-  - tutorials
 tags:
   - cursor-ai
   - ai-assisted-development
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "Cursor AI Mastery Guide"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## Overview

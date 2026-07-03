@@ -3,8 +3,6 @@ title: "에이전트가 회사를 운영하는 시대: 젠슨 황의 비전과 �
 excerpt: "NVIDIA CEO 젠슨 황의 '엔지니어 1인당 수백 개 에이전트' 비전이 현실화될 때 조직 구조와 일하는 방식은 어떻게 바뀌어야 하는가."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - AI Agents
   - Jensen Huang
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/jensen-huang-agent-managed-org-culture/"
+categories:
+  - culture
 ---
 
 ## 엔지니어는 없어지지 않습니다. 달라질 뿐입니다

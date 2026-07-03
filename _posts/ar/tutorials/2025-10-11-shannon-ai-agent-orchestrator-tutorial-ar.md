@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إعداد واستخدام Shannon، منسق و�
 seo_title: "دروس Shannon AI Agent Orchestrator - إدارة وكلاء الذكاء الاصطناعي للمؤسسات"
 seo_description: "دروس شاملة لـ Shannon AI Agent Orchestrator: التثبيت والتكوين وسير العمل متعدد الوكلاء وميزات الأمان ودليل النشر للمؤسسات."
 date: 2025-10-11
-categories:
-  - tutorials
 tags:
   - AI-Agent
   - Orchestrator
@@ -21,6 +19,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/shannon-ai-agent-orchestrator-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/shannon-ai-agent-orchestrator-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

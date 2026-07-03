@@ -5,9 +5,6 @@ seo_title: "Authorizer 오픈소스 인증 시스템 설치 가이드 - 완전 �
 seo_description: "Authorizer 오픈소스 인증 시스템 완전 설치 가이드. Railway 120초 배포, Docker 설정, 소셜 로그인, 2FA, 매직 링크, RBAC까지 프로덕션 준비 완료 인증 시스템 구축 방법을 제공합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01
-categories:
-  - tutorials
-  - authentication
 tags:
   - Authorizer
   - Open-Source
@@ -29,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/authorizer-open-source-authentication-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 23분

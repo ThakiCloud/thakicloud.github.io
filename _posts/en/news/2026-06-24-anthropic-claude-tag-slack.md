@@ -5,8 +5,6 @@ seo_title: "Anthropic Claude Tag Analysis - Slack Multiplayer AI Teammate - Thak
 seo_description: "An analysis of Anthropic Claude Tag (a Slack-resident agent powered by Claude Opus 4.8). One shared Claude per channel, proactive ambient behavior, scoped data control, and implications for ThakiCloud's K8s multi-tenant agent platform."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - news
 tags:
   - anthropic
   - claude-tag
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/news/anthropic-claude-tag-slack/"
 lang: en
 reading_time: true
+categories:
+  - news
 ---
 
 ![Abstract visual of a collaboration network with a central AI node connected to multiple people nodes in a shared channel](/assets/images/anthropic-claude-tag-slack-hero.png)

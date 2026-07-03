@@ -7,9 +7,6 @@ date: 2025-08-18
 last_modified_at: 2025-08-18
 lang: ar
 permalink: /ar/datasets/rowfill-unstructured-data-processing-platform/
-categories:
-  - datasets
-  - tutorials
 tags:
   - rowfill
   - بيانات-غير-منظمة
@@ -28,6 +25,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/rowfill-unstructured-data-processing-platform/"
 reading_time: true
+categories:
+  - datasets
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

@@ -7,8 +7,6 @@ date: 2026-06-21
 last_modified_at: 2026-06-21
 lang: en
 canonical_url: "https://thakicloud.github.io/en/dev/structured-image-prompt-style-transfer/"
-categories:
-  - dev
 tags:
   - prompt-engineering
   - image-generation
@@ -21,6 +19,8 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 reading_time: true
+categories:
+  - dev
 ---
 
 Throw out a single line like "turn this travel photo into Ghibli style," and the result changes every time. One run loses the original composition, another applies a weak style, and another smears the person. A recently shared GPT Image 2 use case solves this problem with a **structured prompt**. Instead of free-form description, it splits the layers across five sections to control the transformation.

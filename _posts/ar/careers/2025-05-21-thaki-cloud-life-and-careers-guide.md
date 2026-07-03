@@ -2,8 +2,6 @@
 title: "دليل الحياة والمهنة في Thaki Cloud"
 excerpt: "مشاركة ثقافة الشركة والمزايا وقصص المطورين ومعلومات التوظيف في Thaki Cloud والمزيد."
 date: 2025-05-21
-categories:
-  - careers
 tags:
   - ثقافة الشركة
   - المهن
@@ -14,6 +12,8 @@ author_profile: true
 lang: ar
 permalink: /ar/careers/thaki-cloud-life-and-careers-guide/
 canonical_url: "https://thakicloud.github.io/ar/careers/thaki-cloud-life-and-careers-guide/"
+categories:
+  - careers
 ---
 
 ## دليل كتابة منشورات [Thaki Cloud الحياة والمهنة]

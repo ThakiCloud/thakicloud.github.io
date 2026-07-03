@@ -5,8 +5,6 @@ seo_title: "Unlimited OCR R-SWA Constant KV Cache Long-Document Parsing - Thaki 
 seo_description: "Analysis of Baidu Unlimited OCR (arXiv 2606.23050) and its Reference Sliding Window Attention. Constant KV cache processes 32K context in one pass, 93.23% on OmniDocBench v1.5. ThakiCloud Kubernetes multi-tenant document inference perspective."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - research
 tags:
   - unlimited-ocr
   - document-parsing
@@ -21,6 +19,8 @@ toc_icon: "file-text"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/unlimited-ocr-rswa/"
 reading_time: true
+categories:
+  - research
 ---
 
 ## Overview

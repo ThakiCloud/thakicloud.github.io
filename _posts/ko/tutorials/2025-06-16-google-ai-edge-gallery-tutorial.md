@@ -2,9 +2,6 @@
 title: "Google AI Edge Gallery 튜토리얼: 온디바이스 GenAI 앱 시작하기"
 excerpt: "Google AI Edge Gallery 앱을 설치하고, 다양한 로컬 GenAI 모델을 활용해 이미지 질의·프롬프트 실험·성능 벤치마킹을 수행하는 방법을 단계별로 안내합니다."
 date: 2025-06-16
-categories:
-  - tutorials
-  - dev
 tags:
   - google-ai-edge
   - on-device
@@ -14,6 +11,9 @@ author_profile: true
 toc: true
 toc_label: Google AI Edge Gallery Guide
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## 개요

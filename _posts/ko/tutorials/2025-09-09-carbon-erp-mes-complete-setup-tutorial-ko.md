@@ -7,8 +7,6 @@ date: 2025-09-09
 lang: ko
 permalink: /ko/tutorials/carbon-erp-mes-complete-setup-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/carbon-erp-mes-complete-setup-tutorial/"
-categories:
-  - tutorials
 tags:
   - carbon
   - erp
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

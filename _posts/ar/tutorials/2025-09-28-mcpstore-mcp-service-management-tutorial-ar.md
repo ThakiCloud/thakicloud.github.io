@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام MCPStore، أداة إدارة خد
 seo_title: "دروس MCPStore: إدارة خدمات MCP لوكلاء الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل حول MCPStore - أداة إدارة خدمات MCP مفتوحة المصدر مع تكامل LangChain وعزل الوكلاء المتعددين وواجهة برمجة تطبيقات RESTful لتطوير الذكاء الاصطناعي."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - MCP
   - وكلاء-الذكاء-الاصطناعي
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/mcpstore-mcp-service-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcpstore-mcp-service-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

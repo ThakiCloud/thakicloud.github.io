@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تشغيل حاويات Docker بدون صلاحي
 seo_title: "دليل udocker: تشغيل حاويات Docker بدون صلاحيات الجذر - Thaki Cloud"
 seo_description: "دليل شامل حول udocker لتشغيل حاويات Docker بدون صلاحيات الجذر. مثالي للحوسبة عالية الأداء وأنظمة المعالجة المجمعة والبيئات الآمنة."
 date: 2025-10-11
-categories:
-  - tutorials
 tags:
   - docker
   - containers
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/udocker-rootless-container-execution-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/udocker-rootless-container-execution-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

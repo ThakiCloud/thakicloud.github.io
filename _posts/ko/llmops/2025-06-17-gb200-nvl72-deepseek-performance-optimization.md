@@ -2,8 +2,6 @@
 title: "GB200 NVL72에서 DeepSeek 671B 최적화: 2.7배 성능 향상 달성"
 excerpt: "NVIDIA GB200 NVL72에서 SGLang을 활용한 DeepSeek 671B 모델의 대규모 추론 최적화 및 성능 분석"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - GB200
   - DeepSeek
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

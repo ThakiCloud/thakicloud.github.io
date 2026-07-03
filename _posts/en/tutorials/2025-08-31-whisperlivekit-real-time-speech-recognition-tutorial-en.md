@@ -4,8 +4,6 @@ excerpt: "Master WhisperLiveKit, the cutting-edge real-time speech transcription
 seo_title: "WhisperLiveKit Real-Time Speech Recognition Tutorial - Complete Guide - Thaki Cloud"
 seo_description: "Learn to implement WhisperLiveKit for real-time speech transcription with ultra-low latency. Complete tutorial covering installation, configuration, and advanced features like speaker diarization."
 date: 2025-08-31
-categories:
-  - tutorials
 tags:
   - WhisperLiveKit
   - real-time-speech
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/whisperlivekit-real-ti
 lang: en
 permalink: /en/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

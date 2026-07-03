@@ -7,8 +7,6 @@ date: 2025-08-30
 lang: ko
 permalink: /ko/llmops/gpt-oss-fine-tuning-quantization-aware-training/
 canonical_url: "https://thakicloud.github.io/ko/llmops/gpt-oss-fine-tuning-quantization-aware-training/"
-categories:
-  - llmops
 tags:
   - gpt-oss
   - 양자화
@@ -23,6 +21,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "yao-meta-skill v1.1.0 Verification Report - Thaki Cloud"
 seo_description: "A hands-on report cloning and verifying yao-meta-skill (YAO). We dissect its Skill IR platform-neutral representation, Output Eval Lab, and Review Studio 2.0 governance gates at 632-file/77-test scale, and apply them to ThakiCloud .claude/skills operations."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - claude-skills
   - meta-skill
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ![Abstract modular blocks forming a precision assembly line with glowing governance gates](/assets/images/yao-meta-skill-hero.png)

@@ -5,8 +5,6 @@ seo_title: "Kueue GPU 스케줄링 선점 패턴 ClusterQueue 설계 - Thaki Clo
 seo_description: "Kueue ClusterQueue 설계, 워크로드 우선순위, GPU 선점 정책, quota borrowing, MultiKueue 멀티클러스터 배포 패턴을 실전 예제와 함께 설명합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [kueue, kubernetes, gpu-scheduling, preemption, clusterqueue, ai-platform, kueue-v1beta1, mlops]
 author_profile: true
 toc: true
@@ -15,6 +13,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/dev/kueue-gpu-scheduling-preemption-patterns/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

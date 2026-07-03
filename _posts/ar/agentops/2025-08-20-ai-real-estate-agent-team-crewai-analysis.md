@@ -5,9 +5,6 @@ seo_title: "تحليل نظام وكيل الذكاء الاصطناعي الع�
 seo_description: "تحليل الكود والبنية المعمارية وتدفق المستخدم ومخططات Mermaid لنظام فريق وكلاء الذكاء الاصطناعي العقاري المبني على CrewAI و LangChain"
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - agentops
-  - llmops
 tags:
   - CrewAI
   - LangChain
@@ -25,7 +22,10 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/ai-real-estate-agent-team-crewai-analysis/"
 reading_time: true
 lang: ar
-published: true
+categories:
+  - agentops
+  - llmops
+published: false
 ---
 
 ![توضيح للمفهوم الأساسي](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)

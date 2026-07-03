@@ -5,8 +5,6 @@ seo_title: "NVIDIA DeepOps GPU 클러스터 관리 완전 가이드 - LLMOps 인
 seo_description: "NVIDIA DeepOps로 구축하는 엔터프라이즈 GPU 클러스터 인프라 관리 전략. Kubernetes, Slurm, DGX 시스템 최적화부터 LLMOps 환경까지 포괄적 분석을 제공합니다."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - llmops
 tags:
   - nvidia-deepops
   - gpu-cluster
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-deepops-gpu-cluster-infrastructure-management-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

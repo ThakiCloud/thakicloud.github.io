@@ -4,8 +4,6 @@ excerpt: "دليل خطوة بخطوة لإنشاء وتخصيص السير ال
 seo_title: "دليل Magic Resume: إعداد واستخدام محرر السيرة الذاتية بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "تعلم كيفية استخدام Magic Resume، محرر السيرة الذاتية مفتوح المصدر المدعوم بالذكاء الاصطناعي المبني على Next.js. يشمل دليل التثبيت والتخصيص والنشر"
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - magic-resume
   - nextjs
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/magic-resume-ai-powere
 lang: ar
 permalink: /ar/tutorials/magic-resume-ai-powered-editor-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

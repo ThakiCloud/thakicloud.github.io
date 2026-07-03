@@ -5,8 +5,6 @@ seo_title: "NVIDIA GLM-5.2-NVFP4 تكميم 4 بت لنموذج MoE بحجم 753
 seo_description: "تحليل لـ nvidia/GLM-5.2-NVFP4 (تكميم NVFP4 بدقة 4 بت): استراتيجية التكميم الانتقائي، تكافؤ الدقة مقابل FP8، أوامر النشر عبر vLLM/SGLang، ومتطلبات Blackwell بتوازي موتّر = 8، من منظور منصة الخدمة متعددة المستأجرين على K8s لدى ThakiCloud."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -24,6 +22,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![صورة تجريدية لشبكة عصبية بدقة 16 بت تتكثّف في نواة مدمجة بدقة 4 بت](/assets/images/nvidia-glm-5-2-nvfp4-hero.png)

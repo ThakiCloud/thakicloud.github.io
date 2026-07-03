@@ -4,8 +4,6 @@ excerpt: "دليل شامل للضبط الدقيق للنماذج اللغوي�
 seo_title: "دفاتر Unsloth - دليل شامل للضبط الدقيق المجاني للنماذج اللغوية الكبيرة"
 seo_description: "تعلم الضبط الدقيق للنماذج اللغوية الكبيرة مجاناً مع دفاتر Unsloth. أكثر من 100 دفتر Jupyter لـ Google Colab وKaggle يدعم Qwen وLlama وGemma ونماذج أخرى"
 date: 2025-06-11
-categories: 
-  - llmops
 tags: 
   - النماذج-اللغوية-الكبيرة
   - الضبط-الدقيق
@@ -24,6 +22,8 @@ lang: ar
 permalink: /ar/llmops/unsloth-notebooks-llm-finetuning/
 canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-notebooks-llm-finetuning/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 10 دقائق

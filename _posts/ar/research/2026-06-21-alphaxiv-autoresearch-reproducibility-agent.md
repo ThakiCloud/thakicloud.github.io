@@ -5,8 +5,6 @@ seo_title: "تحليل أتمتة إعادة إنتاج الأبحاث في alph
 seo_description: "تحليل لميزة alphaXiv autoresearch القائمة على الوكلاء لإعادة إنتاج الأبحاث، وتقدير تكلفة إعادة الإنتاج على GPU، وكيف ترتبط أتمتة قابلية إعادة الإنتاج بتنسيق موارد GPU عبر Kueue"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - alphaxiv
   - reproducibility
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/alphaxiv-autoresearch-reproducibility-agent/"
 reading_time: true
+categories:
+  - research
 ---
 
 قابلية إعادة الإنتاج مشكلة قديمة ومزعجة في أبحاث الذكاء الاصطناعي. تعرض الأوراق البحثية نتائج مبهرة، لكن عند محاولة تشغيل الكود فعليًا، يتعثر الباحث في إعداد البيئة، ويواجه نقصًا في وحدات GPU، وتنكسر التبعيات البرمجية. ميزة autoresearch التي قدمتها alphaXiv هي محاولة لأتمتة هذا الاحتكاك باستخدام وكيل ذكي. يكفي استبدال `arxiv` بـ `autoarxiv` في رابط arXiv، ليقوم الوكيل بإعداد بيئة الكود، وتشغيل تجربة إعادة إنتاج مصغرة، بل وتقدير تكلفة إعادة الإنتاج الكاملة على وحدات GPU.

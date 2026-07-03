@@ -2,9 +2,6 @@
 title: "AG-UI: AI 에이전트와 프론트엔드를 연결하는 혁신적인 프로토콜"
 excerpt: "AG-UI는 AI 에이전트와 사용자 인터페이스 간의 상호작용을 표준화하는 가볍고 이벤트 기반의 프로토콜입니다. LangGraph, CrewAI, Mastra 등 다양한 에이전트 프레임워크를 지원하며, 실시간 스트리밍, 양방향 상태 동기화, 생성형 UI 등의 기능을 제공합니다."
 date: 2025-06-19
-categories: 
-  - dev
-  - llmops
 tags: 
   - ag-ui
   - ai-agent
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: AG-UI 프로토콜 가이드
 published: false
+categories:
+  - dev
+  - llmops
 ---
 
 ## AI 에이전트와 프론트엔드의 완벽한 만남

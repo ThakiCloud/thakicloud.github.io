@@ -4,8 +4,6 @@ excerpt: "Discover a curated collection of LLM applications utilizing RAG, AI ag
 seo_title: "Awesome LLM Apps - Curated Collection of AI Applications"
 seo_description: "Explore Awesome LLM Apps, a comprehensive collection of LLM applications featuring RAG, AI agents, multi-agent systems, and voice agents for practical AI development"
 date: 2025-06-11
-categories: 
-  - llmops
 tags: 
   - LLM
   - AI-Agents
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/llmops/awesome-llm-apps-collection/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

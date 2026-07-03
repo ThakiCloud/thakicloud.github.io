@@ -5,8 +5,6 @@ seo_title: "Microsoft Phi-4-mini-flash-reasoning 완전 가이드 - Thaki Cloud"
 seo_description: "Microsoft Phi-4-mini-flash-reasoning의 하이브리드 SambaY 아키텍처, 수학 추론 능력, 그리고 실제 프로덕션 환경에서의 활용 방법을 상세히 소개합니다."
 date: 2025-07-11
 last_modified_at: 2025-07-11
-categories:
-  - owm
 tags:
   - microsoft
   - phi-4-mini
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/microsoft-phi-4-mini-flash-reasoning-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

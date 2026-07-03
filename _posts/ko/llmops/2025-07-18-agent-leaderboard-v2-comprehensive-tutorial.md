@@ -5,8 +5,6 @@ seo_title: "Agent Leaderboard v2 튜토리얼 - AI 에이전트 평가 완벽 �
 seo_description: "Agent Leaderboard v2를 사용한 AI 에이전트 성능 평가 방법, TSQ 메트릭 활용법, 실습 예제까지 포함한 종합 가이드입니다."
 date: 2025-07-18
 last_modified_at: 2025-07-18
-categories:
-  - llmops
 tags:
   - agent-leaderboard
   - ai-agents
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/agent-leaderboard-v2-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

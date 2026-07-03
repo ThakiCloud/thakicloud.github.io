@@ -4,8 +4,6 @@ excerpt: "컨텍스트 엔지니어링을 마스터하세요 - 프롬프트 엔�
 seo_title: "컨텍스트 엔지니어링 완전 가이드 - AI 코딩 어시스턴트 마스터 - Thaki Cloud"
 seo_description: "컨텍스트 엔지니어링 기초, PRP 워크플로우, 모범 사례를 학습하여 AI 코딩 어시스턴트를 10배 더 효과적으로 만드세요. 예제가 포함된 완전한 튜토리얼."
 date: 2025-10-06
-categories:
-  - tutorials
 tags:
   - 컨텍스트-엔지니어링
   - AI-코딩
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/context-engineering-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/context-engineering-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

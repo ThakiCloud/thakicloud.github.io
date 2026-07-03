@@ -2,10 +2,6 @@
 title: "Skywork-SWE-32B: 가성비 최고의 소프트웨어 엔지니어링 AI 에이전트 완벽 가이드"
 excerpt: "SWE-bench에서 38% 성능을 기록한 Skywork-SWE-32B 모델의 특징, 실용적 활용 방법, 비용 효율적인 배포 전략을 상세히 분석합니다."
 date: 2025-06-24
-categories: 
-  - owm
-  - llmops
-  - tutorials
 tags: 
   - skywork-swe
   - code-agent
@@ -19,6 +15,10 @@ author_profile: true
 toc: true
 toc_label: "Skywork-SWE-32B 가이드"
 published: false
+categories:
+  - owm
+  - llmops
+  - tutorials
 ---
 
 ## 개요

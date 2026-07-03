@@ -5,8 +5,6 @@ seo_title: "Seed-X-Instruct-7B GGUF MLX 변환 가이드 macOS - Thaki Cloud"
 seo_description: "ByteDance Seed-X-Instruct-7B를 GGUF 4-bit 양자화와 MLX Apple Silicon 최적화로 변환하여 Ollama, LM Studio에서 사용하는 완벽한 macOS 튜토리얼"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - tutorials
 tags:
   - ByteDance
   - Seed-X-Instruct
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/seed-x-instruct-7b-gguf-mlx-macos-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

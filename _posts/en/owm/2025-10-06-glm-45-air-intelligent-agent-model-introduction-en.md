@@ -4,8 +4,6 @@ excerpt: "Discover GLM-4.5-Air, Z.ai's groundbreaking 106B parameter model that 
 seo_title: "GLM-4.5-Air Model Guide: Intelligent Agent Development - Thaki Cloud"
 seo_description: "Complete guide to GLM-4.5-Air: 106B parameter model with hybrid reasoning, tool usage, and commercial MIT license for intelligent agent applications."
 date: 2025-10-06
-categories:
-  - owm
 tags:
   - GLM-4.5-Air
   - intelligent-agents
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/owm/glm-45-air-intelligent-agent-model-introduction/
 canonical_url: "https://thakicloud.github.io/en/owm/glm-45-air-intelligent-agent-model-introduction/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

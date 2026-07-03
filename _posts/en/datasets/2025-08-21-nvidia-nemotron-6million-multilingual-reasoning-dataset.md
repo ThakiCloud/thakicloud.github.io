@@ -5,9 +5,6 @@ seo_title: "NVIDIA 6 Million Multilingual Reasoning Dataset Released - AI Traini
 seo_description: "Analysis of the NVIDIA Nemotron Post-Training Dataset v2. Explore the translation methodology, quality controls, and usage patterns of the 6-million multilingual reasoning dataset. Essential high-quality training data for open-source AI development."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - datasets
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
 lang: en
 reading_time: true
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 8 min

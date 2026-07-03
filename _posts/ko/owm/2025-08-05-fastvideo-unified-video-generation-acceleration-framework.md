@@ -5,8 +5,6 @@ seo_title: "FastVideo 비디오 생성 가속화 프레임워크 완전 가이�
 seo_description: "FastVideo의 Sparse Distillation, Video Sparse Attention, FastWan 모델을 활용한 50배 빠른 비디오 생성 기술과 실제 구현 가이드. 엔드투엔드 워크플로우와 성능 최적화 방법 제공."
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - owm
 tags:
   - fastvideo
   - video-generation
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/fastvideo-unified-video-generation-acceleration-framework/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء واجهات برمجة التطبيقا�
 seo_title: "دروس Motia: دليل إطار العمل الخلفي الموحد - Thaki Cloud"
 seo_description: "إتقان إطار عمل Motia مع أمثلة عملية: واجهات برمجة التطبيقات والمهام الخلفية وسير العمل ووكلاء الذكاء الاصطناعي في نظام واحد. دعم JavaScript و TypeScript و Python."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - motia
   - backend-framework
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/motia-modern-backend-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/motia-modern-backend-framework-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

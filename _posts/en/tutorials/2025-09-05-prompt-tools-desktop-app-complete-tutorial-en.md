@@ -4,8 +4,6 @@ excerpt: "Learn how to build and use Prompt Tools, a powerful Tauri-based deskto
 seo_title: "Prompt Tools Desktop App Tutorial: AI Prompt Management Guide - Thaki Cloud"
 seo_description: "Complete tutorial on Prompt Tools - a Tauri-based desktop app for AI prompt management. Learn setup, usage, and advanced features with practical examples."
 date: 2025-09-05
-categories:
-  - tutorials
 tags:
   - prompt-management
   - tauri
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/prompt-tools-desktop-app-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/prompt-tools-desktop-app-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

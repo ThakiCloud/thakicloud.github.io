@@ -5,8 +5,6 @@ seo_title: "Gemma 4 Lineup Compared - E2B/E4B/12B/26B MoE/31B On-Prem Guide - Th
 seo_description: "Gemma 4 lineup (E2B, E4B, 12B Unified, 26B A4B MoE, 31B Dense): parameters, context, multimodality, benchmarks (MMLU-Pro 85.2%, GPQA 84.3%), vLLM/SGLang/Ollama serving, and the Apache 2.0 license."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - owm
 tags:
   - gemma-4
   - google-deepmind
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/gemma-4-open-weight-lineup/"
 lang: en
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 10 min

@@ -2,8 +2,6 @@
 title: "Suna AI Agent 완벽 가이드: 오픈소스 범용 AI 에이전트로 실제 업무 자동화하기"
 excerpt: "Kortix AI의 Suna를 활용해 브라우저 자동화, 데이터 분석, 파일 관리 등 실제 업무를 자동화하는 방법과 셀프 호스팅 설정을 완벽하게 마스터하는 종합 가이드입니다."
 date: 2025-06-20
-categories:
-  - agentops
 tags:
   - suna
   - kortix-ai
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: Suna Agent Guide
 published: false
+categories:
+  - agentops
 ---
 
 ## 개요

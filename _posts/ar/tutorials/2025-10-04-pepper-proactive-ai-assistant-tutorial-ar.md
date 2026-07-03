@@ -4,8 +4,6 @@ excerpt: "دليل شامل لإعداد واستخدام Pepper، مساعد AI
 seo_title: "دروس Pepper AI Assistant: مساعد شخصي استباقي في الوقت الفعلي - Thaki Cloud"
 seo_description: "تعلم كيفية إعداد Pepper، المساعد AI الاستباقي من Berkeley Sky Computing Lab. دليل كامل يغطي التثبيت، تكامل Gmail، والبنية المبنية على الأحداث مع Feeds وScheduler وWorkers."
 date: 2025-10-04
-categories:
-  - tutorials
 tags:
   - مساعد-AI
   - بنية-الأحداث
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/pepper-proactive-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/pepper-proactive-ai-assistant-tutorial/"
+categories:
+  - tutorials
 ---
 
 ![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)

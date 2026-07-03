@@ -4,8 +4,6 @@ excerpt: "يقدم GLM-4.6 تطورات كبيرة في البرمجة الوا�
 seo_title: "GLM-4.6: نموذج ذكي متقدم بقدرات ثورية - Thaki Cloud"
 seo_description: "اكتشف قدرات GLM-4.6 المتقدمة للوكيل الذكي والاستدلال والبرمجة مع معالجة سياق 200K رمز. استكشف نموذج الذكاء الاصطناعي الجيل القادم للتطبيقات الواقعية."
 date: 2025-10-01
-categories:
-  - owm
 tags:
   - GLM-4.6
   - نموذج-ذكي
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/ar/owm/glm-4-6-advanced-agentic-rea
 lang: ar
 permalink: /ar/owm/glm-4-6-advanced-agentic-reasoning-coding/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

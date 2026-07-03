@@ -5,8 +5,6 @@ seo_title: "تجربة وكيل الترميز في حلقة لانهائية: �
 seo_description: "تعرف على التجربة الثورية حيث نجح وكيل ترميز Claude في حلقة لانهائية في أتمتة نقل React→Vue و Python→TypeScript وتطوير أداة RepoMirror."
 date: 2025-09-09
 lang: ar
-categories:
-  - news
 tags:
   - وكيل_الترميز
   - أتمتة_الذكي_الاصطناعي
@@ -19,6 +17,8 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/news/coding-agents-infinite-loop-experiment-repomirror/"
 permalink: /ar/news/coding-agents-infinite-loop-experiment-repomirror/
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

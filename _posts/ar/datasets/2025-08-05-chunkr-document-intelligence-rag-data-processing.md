@@ -5,8 +5,6 @@ seo_title: "Chunkr: الدليل الشامل لمنصة معالجة المست
 seo_description: "كيفية معالجة بيانات المستندات باستخدام تحليل التخطيط وOCR والتقسيم الدلالي في Chunkr. دليل عملي لتحويل ملفات PDF وPPT وWord إلى بيانات منظمة ملائمة لنظم RAG ونماذج اللغة الكبيرة"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - datasets
 tags:
   - chunkr
   - document-intelligence
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/ar/datasets/chunkr-document-intelli
 reading_time: true
 lang: ar
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to SkyPilot - the unified platform for running, ma
 seo_title: "SkyPilot AI Workload Management Platform Guide - Multi-Cloud LLMOps"
 seo_description: "Complete guide to SkyPilot for AI/ML workload management across clouds. Learn deployment, cost optimization, and best practices for LLMOps infrastructure."
 date: 2025-09-02
-categories:
-  - llmops
 tags:
   - SkyPilot
   - Multi-Cloud
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/skypilot-comprehensive-ai
 lang: en
 permalink: /en/llmops/skypilot-comprehensive-ai-workload-management-platform/
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

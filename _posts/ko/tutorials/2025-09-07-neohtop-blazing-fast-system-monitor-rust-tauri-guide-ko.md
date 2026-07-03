@@ -4,8 +4,6 @@ excerpt: "GitHub 8.2K+ 스타를 받은 NeoHtop 완전 정복하기. 설치부�
 seo_title: "NeoHtop 시스템 모니터 Rust Tauri 완벽 튜토리얼 가이드 - Thaki Cloud"
 seo_description: "Rust, Tauri, Svelte로 구축된 현대적 시스템 모니터 NeoHtop의 설치, 고급 검색, 프로세스 관리, 성능 최적화 완벽 가이드"
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - neohtop
   - rust
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/neohtop-blazing-fast-s
 lang: ko
 permalink: /ko/tutorials/neohtop-blazing-fast-system-monitor-rust-tauri-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

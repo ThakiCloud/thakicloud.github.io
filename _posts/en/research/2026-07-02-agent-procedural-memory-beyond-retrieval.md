@@ -6,8 +6,6 @@ seo_description: "A survey of LLM agent procedural memory research centered on M
 date: 2026-07-02
 last_modified_at: 2026-07-02
 lang: en
-categories:
-  - research
 tags:
   - agent-memory
   - procedural-memory
@@ -20,6 +18,8 @@ toc_label: "Contents"
 toc_icon: "brain"
 published: true
 canonical_url: "https://thakicloud.github.io/en/research/agent-procedural-memory-beyond-retrieval/"
+categories:
+  - research
 ---
 
 ## Overview

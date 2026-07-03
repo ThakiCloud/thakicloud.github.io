@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام Strix، وكيل الذكاء ال�
 seo_title: "دليل اختبار أمان Strix AI: الكشف التلقائي عن الثغرات الأمنية"
 seo_description: "دليل شامل لأداة اختبار أمان Strix AI - التثبيت والتكوين والاستخدام العملي للكشف التلقائي والتحقق من الثغرات الأمنية في تطبيقات الويب وقواعد الأكواد."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - الأمان
   - الذكاء_الاصطناعي
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/strix-ai-security-testing-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/strix-ai-security-testing-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

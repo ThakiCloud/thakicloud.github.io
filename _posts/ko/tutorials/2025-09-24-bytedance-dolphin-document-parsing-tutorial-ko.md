@@ -4,8 +4,6 @@ excerpt: "혁신적인 이종 앵커 프롬프팅 기술을 통해 레이아웃 
 seo_title: "ByteDance Dolphin 튜토리얼: 문서 이미지 파싱 완벽 가이드 - Thaki Cloud"
 seo_description: "ByteDance Dolphin 문서 파싱 모델 완벽 튜토리얼. 설치부터 실전 활용까지, 페이지 레벨과 요소 레벨 파싱을 실무 예제와 함께 단계별로 학습하세요."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - 문서파싱
   - OCR
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/bytedance-dolphin-document-parsing-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/bytedance-dolphin-document-parsing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

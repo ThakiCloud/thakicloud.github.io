@@ -5,8 +5,6 @@ seo_title: "تحليل استضافة نموذج GLM-5.2 المفتوح الأو
 seo_description: "التحقق من نتائج GLM-5.2 في SWE-bench Pro (62.1) وTerminal-Bench (81.0) (نموذج 744B MoE، MIT، سياق 1M)، ومراجعة متطلبات الاستضافة الذاتية FP8/8x H200/vLLM/SGLang، واستخلاص توجهات ThakiCloud لخدمة الذكاء الاصطناعي المحلي السيادي."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - glm-5-2
   - open-weight-llm
@@ -20,6 +18,8 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 lang: ar
 canonical_url: https://thakicloud.github.io/ar/dev/glm-5-2-open-weight-coding-moe/
+categories:
+  - dev
 ---
 
 ## نظرة عامة

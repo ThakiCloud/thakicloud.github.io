@@ -4,8 +4,6 @@ excerpt: "Learn how to set up and use Jitsu, an open-source alternative to Segme
 seo_title: "Jitsu Tutorial: Open-Source Data Collection Platform Setup Guide - Thaki Cloud"
 seo_description: "Complete Jitsu tutorial covering installation, configuration, and integration. Learn to build real-time data pipelines with this open-source Segment alternative for modern data teams."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - jitsu
   - data-collection
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/jitsu-open-source-data-collection-platform-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/jitsu-open-source-data-collection-platform-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

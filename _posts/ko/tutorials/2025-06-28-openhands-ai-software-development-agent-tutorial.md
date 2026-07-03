@@ -4,9 +4,6 @@ excerpt: "AI가 대신 코딩해주는 시대! OpenHands 설치부터 실전 활
 seo_title: "OpenHands AI 개발 에이전트 완전 튜토리얼 - macOS Docker 설치 실행 가이드 - Thaki Cloud"
 seo_description: "OpenHands AI 소프트웨어 개발 에이전트 완전 가이드. macOS Docker 설치, 실행, 사용법부터 고급 활용까지 단계별 튜토리얼"
 date: 2025-06-28
-categories: 
-  - tutorials
-  - dev
 tags: 
   - OpenHands
   - AI개발에이전트
@@ -22,6 +19,9 @@ toc: true
 toc_label: "OpenHands 튜토리얼"
 canonical_url: "https://thakicloud.github.io/openhands-ai-software-development-agent-tutorial/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 **읽는 시간: 18분**

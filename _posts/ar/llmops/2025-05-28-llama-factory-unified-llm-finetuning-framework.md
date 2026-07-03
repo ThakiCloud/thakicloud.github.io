@@ -4,8 +4,6 @@ excerpt: "اضبط Llama 3 وQwen 3 وDeepSeek وأكثر من 100 نموذج ل
 seo_title: "LLaMA Factory - دليل شامل لإطار العمل الموحد لضبط النماذج اللغوية الكبيرة"
 seo_description: "أتقن LLaMA Factory، الإطار الشامل لضبط أكثر من 100 نموذج لغوي كبير بما في ذلك Llama 3 وQwen 3 وDeepSeek مع LoRA وQLoRA وتقنيات التحسين المتقدمة"
 date: 2025-05-28
-categories:
-  - llmops
 tags:
   - LLaMAFactory
   - LoRA
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/llmops/llama-factory-unified-llm-finetuning-framework/
 canonical_url: "https://thakicloud.github.io/ar/llmops/llama-factory-unified-llm-finetuning-framework/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

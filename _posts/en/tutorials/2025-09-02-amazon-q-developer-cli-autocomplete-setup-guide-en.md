@@ -4,8 +4,6 @@ excerpt: "Learn how to install and configure Amazon Q Developer CLI (formerly Fi
 seo_title: "Amazon Q Developer CLI Setup Guide - Terminal Autocomplete Tutorial"
 seo_description: "Complete guide to installing Amazon Q Developer CLI for intelligent terminal autocomplete. Step-by-step tutorial with examples for git, npm, docker commands."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - amazon-q
   - terminal
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/amazon-q-developer-cli-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/amazon-q-developer-cli-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

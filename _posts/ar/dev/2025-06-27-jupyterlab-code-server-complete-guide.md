@@ -5,7 +5,6 @@ excerpt: "دليل شامل يغطي جميع سيناريوهات التطوي�
 seo_title: "الدليل الشامل لـ JupyterLab 4 وcode-server - من MacBook إلى خوادم GPU - Thaki Cloud"
 seo_description: "كيفية استخدام VS Code في المتصفح عبر jupyter-codeserver-proxy في JupyterLab 4، وإعداد بيئة Docker، وبيئات تطوير خوادم GPU"
 date: 2025-06-27
-categories: [dev, tutorials]
 tags: [jupyterlab, code-server, vscode, docker, gpu-server, 개발환경, jupyter-codeserver-proxy]
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/jupyterlab-code-server-complete-guide/"
@@ -13,6 +12,9 @@ toc: true
 toc_sticky: true
 toc_label: "دليل بيئة التطوير"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 هل تريد استخدام VS Code في المتصفح من خلال JupyterLab 4؟ يُتيح لك امتداد `jupyter-codeserver-proxy` تشغيل VS Code كاملًا (عبر code-server) مباشرةً داخل بيئة JupyterLab، مما يوفر تجربة تطوير موحدة عبر المتصفح دون الحاجة إلى تثبيت برامج إضافية محليًا.

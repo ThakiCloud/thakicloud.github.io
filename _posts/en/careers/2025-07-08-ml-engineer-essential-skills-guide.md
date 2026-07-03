@@ -5,8 +5,6 @@ seo_title: "ML Engineer Essential Skills Guide - Hiring Checklist - Thaki Cloud"
 seo_description: "Made-With-ML based ML engineer core competencies, technology stack, and practical experience requirements hiring guide"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - careers
 tags:
   - ML-Engineer
   - Career-Guide
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/careers/ml-engineer-essential-sk
 reading_time: true
 lang: en
 permalink: /en/careers/ml-engineer-essential-skills-guide/
+categories:
+  - careers
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

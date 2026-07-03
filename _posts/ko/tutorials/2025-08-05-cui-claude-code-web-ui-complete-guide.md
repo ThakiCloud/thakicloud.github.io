@@ -5,8 +5,6 @@ seo_title: "CUI Claude Code Web UI 완전 설정 가이드 - Thaki Cloud"
 seo_description: "Claude Code를 웹 브라우저에서 사용할 수 있는 CUI 설정 방법. 병렬 에이전트, 태스크 관리, 음성 인식, 푸시 알림까지 모든 기능 활용법"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - tutorials
 tags:
   - cui
   - claude-code
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/cui-claude-code-web-ui-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

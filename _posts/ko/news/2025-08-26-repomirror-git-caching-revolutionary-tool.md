@@ -4,8 +4,6 @@ excerpt: "개발 워크플로우를 근본적으로 변화시키는 RepomMirror,
 seo_title: "RepomMirror Git 캐싱 도구 - 개발자를 위한 대역폭 최적화 솔루션"
 seo_description: "RepomMirror의 강력한 Git 저장소 캐싱 솔루션으로 로컬 미러를 생성하여 대역폭 사용량을 최적화하고 개발 팀의 repo 작업 속도를 향상시키는 방법을 알아보세요."
 date: 2025-08-26
-categories:
-  - news
 tags:
   - git
   - 저장소관리
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/news/repomirror-git-caching-revolutionary-tool/
 canonical_url: "https://thakicloud.github.io/ko/news/repomirror-git-caching-revolutionary-tool/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

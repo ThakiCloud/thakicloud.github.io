@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إنشاء محفزات عالية الجودة و
 seo_title: "دليل LangGPT: إطار عمل هندسة المحفزات المنظمة - Thaki Cloud"
 seo_description: "دليل شامل لـ LangGPT يغطي تصميم المحفزات المنظمة والقوالب القائمة على الأدوار وتقنيات هندسة المحفزات المتقدمة لـ ChatGPT وClaude ونماذج اللغة الكبيرة الأخرى."
 date: 2025-10-12
-categories:
-  - tutorials
 tags:
   - LangGPT
   - هندسة-المحفزات
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/langgpt-structured-prompt-framework-tutorial-ar/"
 lang: ar
 permalink: /ar/tutorials/langgpt-structured-prompt-framework-tutorial/
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

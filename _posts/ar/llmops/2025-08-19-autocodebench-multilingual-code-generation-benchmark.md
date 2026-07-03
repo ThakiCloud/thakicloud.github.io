@@ -5,8 +5,6 @@ seo_title: "AutoCodeBench: معيار متعدد اللغات لتقييم تو�
 seo_description: "قيّم قدرات نماذج اللغة الكبيرة في توليد الكود متعدد اللغات بدقة باستخدام AutoCodeBench الذي طورته تينسنت. يدعم 20 لغة مع توليد آلي لحالات الاختبار، ويتجاوز قيود الأساليب اليدوية."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
 tags:
   - AutoCodeBench
   - LLM
@@ -27,6 +25,8 @@ lang: ar
 dir: rtl
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

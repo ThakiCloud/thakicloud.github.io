@@ -2,8 +2,6 @@
 title: "AI 시대의 소프트웨어: Andrej Karpathy가 말하는 3가지 프로그래밍 패러다임"
 excerpt: "전 Tesla AI 디렉터 Andrej Karpathy의 통찰: Software 1.0에서 3.0까지, LLM을 운영체제로 보는 관점, 부분 자율성 앱의 미래, 그리고 모든 사람이 프로그래머가 되는 시대"
 date: 2025-06-19
-categories:
-  - dev
 tags:
   - Andrej Karpathy
   - Software Engineering
@@ -15,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: 핵심 내용
 published: false
+categories:
+  - news
+  - dev
 ---
 
 {% include video id="LCEmiRjPEtQ" provider="youtube" %}

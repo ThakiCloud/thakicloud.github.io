@@ -5,9 +5,6 @@ date: 2025-06-11
 lang: en
 permalink: /en/news/sam-altman-gentle-singularity-ai-future/
 canonical_url: "https://thakicloud.github.io/en/news/sam-altman-gentle-singularity-ai-future/"
-categories: 
-  - news
-  - dev
 tags: 
   - Sam Altman
   - OpenAI
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
+  - dev
 ---
 
 OpenAI CEO Sam Altman published a post titled "The Gentle Singularity" on his blog. In this piece, he provides deep insights into the current state of AI development and future prospects.

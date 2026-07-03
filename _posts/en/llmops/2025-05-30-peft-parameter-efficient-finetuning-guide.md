@@ -4,8 +4,6 @@ excerpt: "Save 80% memory while maintaining performance with cutting-edge PEFT t
 seo_title: "PEFT Parameter-Efficient Fine-Tuning - Complete Guide to Memory-Efficient Training"
 seo_description: "Master PEFT techniques for efficient LLM training. Learn LoRA, AdaLoRA, IA3, and more to achieve full fine-tuning performance with minimal resources"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - PEFT
   - LoRA
@@ -21,6 +19,8 @@ toc: true
 toc_label: "PEFT Complete Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/peft-parameter-efficient-finetuning-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 14 minutes

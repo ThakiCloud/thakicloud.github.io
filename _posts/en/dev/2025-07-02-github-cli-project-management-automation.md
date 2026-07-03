@@ -4,8 +4,6 @@ excerpt: "Complete work/personal project separation, GitHub Projects v2 automati
 seo_title: "GitHub CLI Project Management Automation Part 3 - Work/Personal Separation - Thaki Cloud"
 seo_description: "Expert guide to completely separating work and personal projects with GitHub CLI, automating Projects v2, and building team collaboration workflows"
 date: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - project-management
@@ -17,7 +15,9 @@ lang: en
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/en/dev/github-cli-project-management-automation/"
-published: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 18 min

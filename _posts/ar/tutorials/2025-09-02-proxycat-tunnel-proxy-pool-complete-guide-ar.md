@@ -4,8 +4,6 @@ excerpt: "دليل تنفيذ شامل يغطي التثبيت حتى التطب
 seo_title: "دليل ProxyCat الشامل لبناء مجموعة البروكسي النفقي - حل فعال لإدارة IP"
 seo_description: "تعلم كيفية تحويل عناوين IP قصيرة المدى (دقيقة واحدة) إلى بروكسيات نفقية دائمة باستخدام ProxyCat. تغطية شاملة لنشر Docker وإدارة Web UI ودعم HTTP/SOCKS5 والتطبيقات العملية"
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - ProxyCat
   - مجموعة_البروكسي
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/proxycat-tunnel-proxy-pool-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

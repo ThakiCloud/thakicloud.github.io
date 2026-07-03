@@ -2,9 +2,6 @@
 title: "vLLM 서버로 고성능 모델 벤치마킹하기: Evalchemy 완벽 실전 가이드"
 excerpt: "vLLM 서버와 Evalchemy를 연동하여 대규모 언어 모델을 효율적으로 평가하는 방법과 50+ 벤치마크 태스크 총정리"
 date: 2025-06-14
-categories: 
-  - llmops
-  - dev
 tags: 
   - vllm
   - evalchemy
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 소개

@@ -1,9 +1,6 @@
 ---
 title: "Kubernetes Nginx Ingress로 경로별 더미 서비스 연결 실습 가이드"
 date: 2025-06-13
-categories:
-  - tutorials
-  - kubernetes
 tags:
   - ingress
   - nginx
@@ -13,6 +10,8 @@ author_profile: true
 toc: true
 toc_label: "K8s Nginx Ingress 튜토리얼"
 published: false
+categories:
+  - tutorials
 ---
 
 ## 개요

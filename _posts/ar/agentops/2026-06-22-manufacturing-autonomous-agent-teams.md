@@ -5,8 +5,6 @@ seo_title: "أتمتة عملاء الذكاء الاصطناعي في التص�
 seo_description: "كيفية أتمتة اختناقات كوادر MLOps وإدارة مجموعات المصانع المتعددة في المصانع الذكية والصناعات الثقيلة وشركات التصنيع الإلكتروني باستخدام فرق العملاء الذكيين المستقلين. تطبيق عملي للإدارة المركزية متعددة المجموعات في ThakiCloud AI Platform وسحابة عمليات عملاء Paxis."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - agentops
 tags:
   - manufacturing
   - autonomous-agents
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/manufacturing-autonomous-agent-teams/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ![صورة رأسية لفرق العملاء الذكيين المستقلين في العمليات التصنيعية](/assets/images/manufacturing-autonomous-agent-teams-hero.png)

@@ -2,9 +2,6 @@
 title: "Mercury: Innovation in Ultra-Fast Diffusion-Based Language Models"
 excerpt: "Mercury, developed by Inception Labs, is a diffusion-based LLM that achieves inference speeds up to 10x faster than conventional autoregressive models and pioneers a new speed-quality frontier in coding AI."
 date: 2025-06-26
-categories:
-  - research
-  - llmops
 tags:
   - Mercury
   - diffusion-models
@@ -17,6 +14,9 @@ toc_label: "Mercury Research Analysis"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/mercury-ultra-fast-diffusion-llm/"
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 Mercury, announced by Inception Labs, is an innovative large language model based on diffusion that surpasses the limitations of conventional autoregressive models to deliver ultra-fast inference performance.

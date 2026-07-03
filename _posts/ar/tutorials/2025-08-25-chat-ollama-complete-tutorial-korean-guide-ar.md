@@ -4,8 +4,6 @@ excerpt: "دليل شامل لنظام macOS لـ شات-أولاما، من ا�
 seo_title: "دليل شات-أولاما الكامل - دروس روبوت المحادثة الذكية الخاص - ثاكي كلاود"
 seo_description: "دليل شات-أولاما التفصيلي يغطي التثبيت والتكوين وتكامل MCP وإعداد قواعد المعرفة. يشمل تكامل نماذج Ollama وOpenAI وAnthropic"
 date: 2025-08-25
-categories:
-  - tutorials
 tags:
   - chat-ollama
   - ollama
@@ -22,6 +20,8 @@ toc: true
 toc_label: "المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/chat-ollama-complete-tutorial-korean-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

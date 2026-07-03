@@ -6,8 +6,6 @@ seo_description: "حذّر أمودي من أن البرمجيات قد تصبح
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - culture
 tags:
   - داريو-أمودي
   - أنثروبيك
@@ -20,6 +18,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/amodei-free-software-engineer-value/
 canonical_url: "https://thakicloud.github.io/ar/culture/amodei-free-software-engineer-value/"
+categories:
+  - culture
 ---
 
 ## لحظة قلب المفتاح

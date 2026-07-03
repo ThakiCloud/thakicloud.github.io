@@ -5,9 +5,6 @@ seo_title: "NVIDIA OpenReasoning-Nemotron 하이브리드 AI 모델 완벽 가�
 seo_description: "NVIDIA Nemotron-H 추론 모델의 Mamba-Transformer 하이브리드 아키텍처, FP8 훈련, 테스트 시간 스케일링 기술을 상세히 분석하고 기업 워크플로우 적용 방안을 제시합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - owm
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nvidia-openreasoning-nemotron-hybrid-efficiency-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

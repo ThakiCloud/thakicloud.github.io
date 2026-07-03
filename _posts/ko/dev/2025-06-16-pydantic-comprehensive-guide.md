@@ -2,9 +2,6 @@
 title: "Pydantic 완벽 가이드: 왜 모든 Python 개발자가 주목하는가?"
 excerpt: "FastAPI 생태계의 핵심이자 타입 안전성의 혁신을 가져온 Pydantic의 핵심 특징, 실전 활용법, 그리고 현대 Python 개발에서 필수가 된 이유를 상세히 분석합니다."
 date: 2025-06-16
-categories:
-  - dev
-  - tutorials
 tags:
   - pydantic
   - python
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: Pydantic 완벽 가이드
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## 개요

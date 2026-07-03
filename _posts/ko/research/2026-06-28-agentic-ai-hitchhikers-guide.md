@@ -5,8 +5,6 @@ seo_title: "에이전트 AI 전 계층 가이드 정리 - Hitchhiker's Guide to 
 seo_description: "arXiv:2606.24937 'The Hitchhiker's Guide to Agentic AI'를 LLM 기질, 정렬·추론, 에이전트 시스템(MCP·스킬·메모리·멀티에이전트·A2A), 배포·평가의 네 층위로 정리하고 ThakiCloud Paxis Agent-Native Cloud 적용 관점을 더했습니다."
 date: 2026-06-28
 last_modified_at: 2026-06-28
-categories:
-  - research
 tags:
   - agentic-ai
   - llm
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/agentic-ai-hitchhikers-guide/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![빛으로 이루어진 네 개의 층이 아래에서 위로 쌓이며 서로 연결되는 추상 구조](/assets/images/agentic-ai-hitchhikers-guide-hero.png)

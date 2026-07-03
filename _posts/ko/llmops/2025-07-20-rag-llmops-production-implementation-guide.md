@@ -5,8 +5,6 @@ seo_title: "RAG LLMOps 프로덕션 구현 가이드 - 엔터프라이즈 RAG �
 seo_description: "RAG 시스템의 아키텍처 설계부터 프로덕션 배포, 성능 최적화까지 LLMOps 관점에서 제공하는 실무 중심 가이드. 엔터프라이즈 환경에서의 RAG 구현 전략과 모범 사례를 상세히 다룹니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - llmops
 tags:
   - RAG
   - LLMOps
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/rag-llmops-production-implementation-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

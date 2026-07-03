@@ -6,8 +6,6 @@ seo_description: "تعرف على إطلاق نظام الدعم متعدد ال
 date: 2025-08-23
 lang: ar
 permalink: /ar/news/multilingual-test-post/
-categories:
-  - news
 tags:
   - multilingual
   - blog
@@ -18,6 +16,8 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/news/multilingual-test-post/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 3 دقائق قراءة

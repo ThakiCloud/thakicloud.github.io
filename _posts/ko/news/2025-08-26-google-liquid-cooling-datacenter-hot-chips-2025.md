@@ -5,8 +5,6 @@ seo_title: "구글 액체 냉각 기술 Hot Chips 2025 데이터센터 혁신 - 
 seo_description: "Hot Chips 2025에서 발표된 구글의 혁신적 액체 냉각 기술을 탐구하며, TPU 냉각 시스템, 유지보수 프로토콜, GPU 클라우드 서비스에 대한 시사점을 분석합니다."
 date: 2025-08-26
 lang: ko
-categories:
-  - news
 tags:
   - 구글
   - 액체냉각
@@ -22,6 +20,8 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/news/google-liquid-cooling-datacenter-hot-chips-2025/"
 permalink: /ko/news/google-liquid-cooling-datacenter-hot-chips-2025/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

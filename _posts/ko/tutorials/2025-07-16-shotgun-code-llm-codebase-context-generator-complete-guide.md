@@ -5,8 +5,6 @@ seo_title: "Shotgun Code LLM 코드베이스 컨텍스트 생성기 사용법 - 
 seo_description: "Go + Wails 기반 Shotgun Code로 프로젝트 전체를 LLM이 이해할 수 있는 형태로 변환. 실시간 파일 감시, 제외 규칙 설정, 크로스 플랫폼 지원까지 완벽 가이드"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - shotgun-code
   - llm
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/shotgun-code-llm-codebase-context-generator-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

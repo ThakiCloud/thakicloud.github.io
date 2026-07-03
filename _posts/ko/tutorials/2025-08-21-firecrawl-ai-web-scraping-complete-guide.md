@@ -5,9 +5,6 @@ seo_title: "Firecrawl AI 웹 스크래핑 완전 가이드 - Python/Node.js 실�
 seo_description: "웹 데이터를 AI 모델에 최적화된 형태로 변환하는 Firecrawl 플랫폼 활용법. 실제 코드 예제와 함께 배우는 스크래핑/크롤링 완전 가이드"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - tutorials
-  - llmops
 tags:
   - firecrawl
   - web-scraping
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/firecrawl-ai-web-scraping-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

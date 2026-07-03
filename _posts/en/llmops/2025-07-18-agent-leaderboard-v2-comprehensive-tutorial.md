@@ -5,8 +5,6 @@ seo_title: "Agent Leaderboard v2 Tutorial - Complete Guide to AI Agent Evaluatio
 seo_description: "A comprehensive guide covering how to evaluate AI agent performance with Agent Leaderboard v2, how to use the TSQ metric, and practical examples."
 date: 2025-07-18
 last_modified_at: 2025-07-18
-categories:
-  - llmops
 tags:
   - agent-leaderboard
   - ai-agents
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/agent-leaderboard-v2-comp
 reading_time: true
 lang: en
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 15 min

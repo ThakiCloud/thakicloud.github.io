@@ -5,9 +5,6 @@ seo_title: "MoonshotAI Kimi-K1.5 강화학습 모델 완전 가이드 - Thaki Cl
 seo_description: "MoonshotAI Kimi-K1.5의 강화학습 기반 Long-CoT 추론, 128k 컨텍스트 확장, 멀티모달 능력을 활용한 실전 구현 가이드. AIME 77.5, MATH 96.2 달성"
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - owm
-  - llmops
 tags:
   - Kimi-K1.5
   - MoonshotAI
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/moonshot-ai-kimi-k1-5-reinforcement-learning-multimodal-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

@@ -5,8 +5,6 @@ seo_title: "NeoHtop 시스템 모니터 Rust Tauri Svelte 완벽 튜토리얼 - 
 seo_description: "Rust, Tauri, Svelte로 구축된 크로스플랫폼 시스템 모니터 NeoHtop의 설치, 설정, 고급 기능 사용법을 macOS 환경에서 실습과 함께 상세히 알아봅니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06
-categories:
-  - tutorials
 tags:
   - neohtop
   - rust
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/neohtop-modern-system-monitor-tauri-svelte-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 11분

@@ -5,8 +5,6 @@ seo_title: "iTool Reinforced Fine-Tuning Research: Improving LLM Tool Use Capabi
 seo_description: "Analysis of the iTool research paper jointly developed by Harbin Institute of Technology and Huawei. Achieves 13% improvement in LLM tool use performance through MCTS-based path search and preference optimization"
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - iTool
   - reinforcement-learning
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/en/research/itool-reinforced-fine-t
 lang: en
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 12 min

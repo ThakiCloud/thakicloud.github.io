@@ -4,8 +4,6 @@ excerpt: "NVIDIA TensorRT Model Optimizer를 활용한 기업용 LLM 배포 마�
 seo_title: "TensorRT Model Optimizer 완전 가이드: LLMOps 모범 사례 2025"
 seo_description: "NVIDIA TensorRT Model Optimizer로 LLM 추론 최적화하기. 프로덕션 AI 배포를 위한 양자화, 가지치기, 증류 기법 완전 정복."
 date: 2025-09-08
-categories:
-  - llmops
 tags:
   - tensorrt
   - 모델최적화
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/
 canonical_url: "https://thakicloud.github.io/ko/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-ko/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

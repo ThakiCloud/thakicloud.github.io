@@ -2,8 +2,6 @@
 title: "Unsloth+TRL를 활용한 한국어 특화 LLM 학습 완전 가이드"
 excerpt: "Unsloth+TRL로 높은 수준의 한국어 특화 대규모 언어 모델을 구축하는 단계별 실무 가이드"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - Unsloth
   - Korean LLM
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

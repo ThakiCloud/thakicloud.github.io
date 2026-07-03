@@ -5,9 +5,6 @@ seo_title: "دليل شامل لمنصة LangWatch للـ LLMOps - بناء بن
 seo_description: "كيفية تطبيق إمكانية الملاحظة والتقييم وإدارة مجموعات البيانات وتحسين النصوص التوجيهية للنماذج اللغوية الكبيرة باستخدام LangWatch مفتوح المصدر، وبناء بيئة LLMOps شاملة مع RunPod وvLLM"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - llmops
-  - tutorials
 tags:
   - LangWatch
   - LLMOps
@@ -29,6 +26,9 @@ lang: ar
 dir: rtl
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقائق

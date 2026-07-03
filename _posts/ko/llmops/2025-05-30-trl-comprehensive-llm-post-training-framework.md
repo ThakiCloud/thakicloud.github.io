@@ -2,8 +2,6 @@
 title: "TRL: Hugging Face의 차세대 LLM 후처리 프레임워크 완전 가이드"
 excerpt: "SFT, DPO, GRPO, PPO 등 최신 강화학습 기법으로 Transformer 모델을 후처리하는 포괄적 라이브러리. CLI부터 분산 학습까지 모든 것을 지원"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - TRL
   - TransformerRL
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "TRL 완전 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** [TRL (Transformer Reinforcement Learning)](https://github.com/huggingface/trl)은 🤗Hugging Face에서 개발한 **LLM 후처리 전용 라이브러리**다. SFT, DPO, GRPO, PPO, Reward Modeling 등 **최신 강화학습 기법**을 통합 지원하며, CLI부터 분산 학습까지 **모든 규모의 프로젝트**에 대응한다. Llama 3, Qwen, DeepSeek-R1 등 주요 모델들이 이 라이브러리로 후처리되었다.

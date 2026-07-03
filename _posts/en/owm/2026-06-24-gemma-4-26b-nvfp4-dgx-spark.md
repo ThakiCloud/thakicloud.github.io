@@ -5,8 +5,6 @@ seo_title: "Gemma-4-26B-A4B-NVFP4 DGX Spark 16x Parallel Inference - Honest Cost
 seo_description: "Serving Gemma-4-26B-A4B-NVFP4 (25.2B MoE / 3.8B active) on a DGX Spark 128 GB with 16x parallelism: 18 tok/s per stream, 300 tok/s combined. NVFP4 4-bit quantization, memory-bandwidth bottleneck, RTX 5090/RTX PRO 6000/B200 cost comparisons, and ThakiCloud on-premises serving perspective."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - owm
 tags:
   - gemma-4
   - nvfp4
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/gemma-4-26b-nvfp4-dgx-spark/"
 lang: en
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 12 min

@@ -5,9 +5,6 @@ seo_title: "Mini SWE-Agent 튜토리얼 - AI로 GitHub 이슈 자동 해결하�
 seo_description: "Mini SWE-Agent 설치, 설정, GitHub 이슈 자동 해결 실습까지. 100줄 코드로 65% SWE-bench 성능을 경험해보세요."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - tutorials
-  - llmops
 tags:
   - mini-swe-agent
   - ai-agent
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/mini-swe-agent-github-issues-automation-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,9 +5,6 @@ seo_title: "Neko 가상 데스크톱 튜토리얼 - 브라우저 원격 접속 �
 seo_description: "Neko 설치, 설정, 다중 사용자 관리까지. WebRTC 기반 고성능 가상 데스크톱을 브라우저에서 바로 사용하세요."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - tutorials
-  - dev
 tags:
   - neko
   - virtual-desktop
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/neko-browser-virtual-desktop-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

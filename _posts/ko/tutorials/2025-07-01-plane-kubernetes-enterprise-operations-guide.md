@@ -5,8 +5,6 @@ seo_title: "Plane 엔터프라이즈 쿠버네티스 운영 가이드 - Helm 자
 seo_description: "Plane 엔터프라이즈 쿠버네티스 완전 운영 가이드. Helm 차트 AWS EKS GCP GKE 자체클라우드 구축 규모별 하드웨어 스펙 모니터링 CI/CD 백업 보안"
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - plane
   - kubernetes
@@ -34,6 +32,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/plane-kubernetes-enterprise-operations-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 30분

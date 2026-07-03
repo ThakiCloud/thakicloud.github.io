@@ -2,8 +2,6 @@
 title: "LM Studio + DeepSeek-R1으로 구축하는 실전 Agent 시스템: Smolagents와 AGUIApp 완벽 가이드"
 excerpt: "LM Studio에서 DeepSeek-R1 모델을 활용해 웹 스크래핑과 요약 기능을 가진 Agent 시스템을 구축하고, AGUIApp으로 웹 UI까지 제공하는 방법을 단계별로 소개합니다."
 date: 2025-06-20
-categories:
-  - agentops
 tags:
   - lm-studio
   - deepseek-r1
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: LM Studio Agent Tutorial
 published: false
+categories:
+  - agentops
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ seo_title: "금융권 AI 거버넌스와 감사 자동화 - Thaki Cloud"
 seo_description: "금융 AI 감사로그, 금융권 AI 거버넌스, 내부망 AI 에이전트 도입 시 ISMS·전자금융감독규정 준수 방법. 자율성 4단계 x 위험도 7등급 정책엔진, 해시체인 감사 로그, 개인정보 16종 마스킹을 갖춘 Paxis 플랫폼 적용 사례."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - agentops
 tags:
   - ai-governance
   - finance
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/finance-ai-governance-audit-automation/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ![금융권 AI 거버넌스와 감사 자동화](/assets/images/finance-ai-governance-audit-automation-hero.png)

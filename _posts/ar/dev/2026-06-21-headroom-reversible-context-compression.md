@@ -5,8 +5,6 @@ seo_title: "تقرير ميداني عن الضغط القابل للعكس Head
 seo_description: "قياس ضغط JSON القابل للعكس عبر SmartCrusher من Headroom (headroom-ai) على بيانات مستودع حقيقية (خفض رموز 34-71%)، أوامر التثبيت والدمج، وتحليل تكلفة الرموز ونظافة السياق في تقديم نماذج LLM على K8s"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags: [headroom, context-compression, token-cost, llm-serving, rag, mcp]
 author_profile: true
 toc: true
@@ -15,6 +13,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/headroom-reversible-context-compression/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ![صورة تجريدية لتكثّف البيانات](/assets/images/headroom-reversible-context-compression-hero.png)

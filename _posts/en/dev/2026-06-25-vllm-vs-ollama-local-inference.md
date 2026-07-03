@@ -5,8 +5,6 @@ seo_title: "vLLM vs Ollama Local LLM Inference Benchmark Comparison (2026) - Tha
 seo_description: "Comparing vLLM and Ollama on throughput, latency, and VRAM usage with RTX 4090 public benchmarks. PagedAttention, continuous batching, concurrency scaling curves, and Kubernetes multi-tenant serving considerations."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - dev
 tags:
   - vllm
   - ollama
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/dev/vllm-vs-ollama-local-inference/"
 reading_time: true
+categories:
+  - dev
 ---
 
 Search for how to run an LLM locally and two names come up almost every time: Ollama and vLLM. Strong claims like "don't use Ollama if you care about performance, use vLLM instead" appear frequently. Are they right? The short answer is: half right. A laptop used by one person sending one request at a time is a completely different problem from a server handling dozens of concurrent users. This post uses RTX 4090 benchmark numbers published in 2026 to examine where the two tools diverge, and what that divergence means for ThakiCloud's Kubernetes-based serving stack.

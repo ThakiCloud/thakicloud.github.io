@@ -5,8 +5,6 @@ seo_title: "AI Scientist Docker Ollama Setup Guide - Automated Research Pipeline
 seo_description: "Complete tutorial on setting up SakanaAI's AI Scientist with OrbStack Docker, Ollama, and LM Studio for automated research. Includes queue management, monitoring, and 24/7 operation examples with practical implementation guides."
 date: 2025-09-02
 last_modified_at: 2025-09-02
-categories:
-  - tutorials
 tags:
   - AI-Scientist
   - Docker
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/ai-scientist-docker-ol
 lang: en
 permalink: /en/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 18 minutes

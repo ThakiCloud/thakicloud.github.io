@@ -4,8 +4,6 @@ excerpt: "통합 사고 모드, 예산 메커니즘, 향상된 다국어 지원�
 seo_title: "Qwen3 LLM: 고급 워크플로우 관리 및 AI 통합 - Thaki Cloud"
 seo_description: "통합 사고 모드와 예산 메커니즘 같은 Qwen3의 혁신적 기능들이 어떻게 오픈 워크플로우 관리와 AI 기반 자동화 프로세스를 혁신하는지 알아보세요."
 date: 2025-09-09
-categories:
-  - owm
 tags:
   - Qwen3
   - 대규모언어모델
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-revolutionary-llm-work
 lang: ko
 permalink: /ko/owm/qwen3-revolutionary-llm-workflow-management/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

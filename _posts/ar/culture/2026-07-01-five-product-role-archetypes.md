@@ -4,8 +4,6 @@ excerpt: "في عصر تتشابك فيه الهندسة والمنتج والت
 date: 2026-07-01
 last_modified_at: 2026-07-01
 lang: ar
-categories:
-  - culture
 tags:
   - مستقبل-العمل
   - ثقافة-تنظيمية
@@ -19,6 +17,8 @@ toc_label: المحتويات
 canonical_url: "https://thakicloud.github.io/ar/culture/five-product-role-archetypes/"
 header:
   image: /assets/images/five-product-role-archetypes-hero.png
+categories:
+  - culture
 ---
 
 ![تصور تجريدي يجسد تلاشي حدود الوظائف وبروز نماذج أصيلة جديدة للأدوار](/assets/images/five-product-role-archetypes-hero.png)

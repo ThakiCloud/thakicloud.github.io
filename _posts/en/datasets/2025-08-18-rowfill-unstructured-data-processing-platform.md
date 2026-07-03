@@ -5,9 +5,6 @@ seo_title: "Rowfill Unstructured Data Processing Platform Guide - OCR AI Documen
 seo_description: "How to convert PDF, images, and audio to structured data with open-source Rowfill. Detailed analysis including AI OCR, automatic schema generation, and local LLM support"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - datasets
-  - tutorials
 tags:
   - rowfill
   - unstructured-data
@@ -26,6 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/rowfill-unstructured-data-processing-platform/"
 reading_time: true
+categories:
+  - datasets
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

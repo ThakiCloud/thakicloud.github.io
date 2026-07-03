@@ -1,8 +1,6 @@
 ---
 title: "H100 클러스터를 활용한 대규모 AI 모델 배포 및 운영 전략"
 date: 2025-06-01
-categories: 
-  - llmops
 tags: 
   - h100
   - gpu-cluster
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 대규모 언어 모델(LLM)의 상용 서비스 운영에서 H100 클러스터를 효과적으로 활용하는 방법을 상세히 살펴보겠습니다. 월 4억 건 이상의 AI 추론 요청을 처리하는 실제 사례를 바탕으로 한 검증된 전략을 소개합니다.

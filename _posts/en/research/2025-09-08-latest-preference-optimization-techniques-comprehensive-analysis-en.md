@@ -5,8 +5,6 @@ seo_title: "Latest Preference Optimization Techniques 2025 - Comprehensive Analy
 seo_description: "Detailed analysis of modern policy optimization methods: Pref-GRPO, PVPO, DCPO, ARPO, and GRPO-RoC. Research insights into reinforcement learning advances"
 date: 2025-09-08
 lang: en
-categories:
-  - research
 tags:
   - preference-optimization
   - reinforcement-learning
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Contents"
 permalink: /en/research/latest-preference-optimization-techniques-comprehensive-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/latest-preference-optimization-techniques-comprehensive-analysis/"
+categories:
+  - research
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

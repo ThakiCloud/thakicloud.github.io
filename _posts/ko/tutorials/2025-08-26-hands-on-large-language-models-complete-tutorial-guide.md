@@ -4,8 +4,6 @@ excerpt: "O'Reilly 출간 'Hands-On Large Language Models' 책의 완전 가이�
 seo_title: "Hands-On Large Language Models 튜토리얼 가이드 - 완전 리뷰 | Thaki Cloud"
 seo_description: "Jay Alammar & Maarten Grootendorst의 O'Reilly 도서로 LLM 마스터하기. 실습 예제, 코드 구현, 챕터별 상세 분석 포함한 완전 튜토리얼 가이드."
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - LLM
   - 대규모언어모델
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/hands-on-large-language-models-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/hands-on-large-language-models-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

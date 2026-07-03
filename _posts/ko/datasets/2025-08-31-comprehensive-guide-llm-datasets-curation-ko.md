@@ -4,8 +4,6 @@ excerpt: "LLM 후훈련을 위한 필수 데이터셋과 도구들을 탐구합�
 seo_title: "LLM 데이터셋 큐레이션 가이드: 훈련 데이터 & 도구 - Thaki Cloud"
 seo_description: "LLM 후훈련을 위한 완전한 데이터셋 가이드. SFT 데이터셋, 선호도 정렬, AI 모델 개발을 위한 데이터 큐레이션 도구까지 포괄적으로 다룹니다."
 date: 2025-08-31
-categories:
-  - datasets
 tags:
   - LLM
   - 데이터셋
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/comprehensive-guide-llm-datasets-curation/
 canonical_url: "https://thakicloud.github.io/ko/datasets/comprehensive-guide-llm-datasets-curation/"
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

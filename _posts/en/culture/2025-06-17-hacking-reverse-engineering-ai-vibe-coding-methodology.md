@@ -4,8 +4,6 @@ excerpt: "In the AI era, developers don't need to know everything. Explore a new
 seo_title: "Hacking & Reverse Engineering in AI Vibe Coding Era - Thaki Cloud"
 seo_description: "Transform ignorance into strength with hacking mindset and reverse engineering approach in AI coding. New development methodology for the modern era."
 date: 2025-06-17
-categories: 
-  - culture
 tags: 
   - AI
   - hacking
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
+categories:
+  - culture
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

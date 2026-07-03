@@ -4,8 +4,6 @@ excerpt: "دليل شامل لتطبيق s3fs-fuse في بيئات الحوسب�
 seo_title: "برنامج s3fs-fuse للمؤسسات: دليل التطبيق الكامل - Thaki Cloud"
 seo_description: "إتقان نشر s3fs-fuse للشركات السحابية مع إرشادات مفصلة للتثبيت والتكوين وتراخيص GPL-2.0"
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - s3fs-fuse
   - AWS-S3
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

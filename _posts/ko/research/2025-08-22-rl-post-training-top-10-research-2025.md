@@ -5,9 +5,6 @@ seo_title: "2025년 RL 포스트트레이닝 연구 동향 분석 - GLM-4.5, GSP
 seo_description: "2025년 강화학습 포스트트레이닝 분야 핵심 연구 10편 분석. GLM-4.5 에이전틱 모델, GSPO 안정화 기법, 자기피드백 RL까지 최신 동향과 실무 적용 방안을 제공합니다."
 date: 2025-08-22
 last_modified_at: 2025-08-22
-categories:
-  - research
-  - llmops
 tags:
   - 강화학습
   - 포스트트레이닝
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/rl-post-training-top-10-research-2025/"
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

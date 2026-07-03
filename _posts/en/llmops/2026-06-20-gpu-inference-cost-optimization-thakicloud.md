@@ -5,8 +5,6 @@ seo_title: "AI Inference Cost Optimization in Practice: GPU Economics, Kueue, vL
 seo_description: "ThakiCloud's practical guide to AI inference cost optimization. GPU hourly cost formulas, OpEx breakdown, Kueue+KAI gang scheduling, vLLM+KEDA scale-to-zero, model-tier routing, and daily cost auditing -- explained with code and math."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - cost-optimization
   - finops
@@ -24,6 +22,8 @@ toc: true
 toc_sticky: true
 lang: en
 canonical_url: https://thakicloud.github.io/en/llmops/gpu-inference-cost-optimization-thakicloud/
+categories:
+  - llmops
 ---
 
 ![Compute costs flowing through a GPU data center](/assets/images/cost-opt-hero.png)

@@ -5,9 +5,6 @@ seo_title: "إطلاق مجموعة بيانات NVIDIA متعددة اللغا�
 seo_description: "تحليل مجموعة بيانات NVIDIA Nemotron Post-Training Dataset v2. استكشف منهجية الترجمة وضوابط الجودة وأساليب الاستخدام لمجموعة بيانات الاستدلال متعددة اللغات المؤلفة من ستة ملايين مثال. بيانات تدريب عالية الجودة لا غنى عنها لتطوير الذكاء الاصطناعي مفتوح المصدر."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - datasets
-  - llmops
 tags:
   - NVIDIA
   - Nemotron
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
 lang: ar
 reading_time: true
+categories:
+  - datasets
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

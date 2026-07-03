@@ -4,8 +4,6 @@ excerpt: "An in-depth source-code-level analysis of the Fastest RAG Stack projec
 date: 2025-06-21
 lang: en
 canonical_url: "https://thakicloud.github.io/en/agentops/ai-engineering-hub-fastest-rag-stack-source-code-analysis/"
-categories: 
-  - agentops
 tags: 
   - Fastest-RAG-Stack
   - Binary-Quantization
@@ -20,6 +18,8 @@ author_profile: true
 toc: true
 toc_label: "Fastest RAG Stack Analysis"
 published: false
+categories:
+  - agentops
 ---
 
 ## Overview

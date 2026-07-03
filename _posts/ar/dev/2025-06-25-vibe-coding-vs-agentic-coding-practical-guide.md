@@ -3,7 +3,6 @@ layout: single
 title: "Vibe Coding مقابل Agentic Coding: الدليل العملي الشامل لاستخدام ChatGPT وCursor AI"
 excerpt: "فهم نموذجي برمجة الذكاء الاصطناعي استناداً إلى ورقة بحثية من جامعة كورنيل، وكيفية استخدام ChatGPT وCursor AI بفعالية في التطوير الفعلي"
 date: 2025-06-25
-categories: [dev, tutorials]
 tags: [vibe-coding, agentic-coding, chatgpt, cursor-ai, ai-assisted-development, prompt-engineering]
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/vibe-coding-vs-agentic-coding-practical-guide/"
@@ -11,6 +10,9 @@ toc: true
 toc_sticky: true
 toc_label: "الدليل العملي لنماذج برمجة الذكاء الاصطناعي"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## نظرة عامة: نموذجان جديدان للتطوير

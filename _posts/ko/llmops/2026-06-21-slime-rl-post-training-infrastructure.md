@@ -5,8 +5,6 @@ seo_title: "slime RL 사후학습 인프라 오픈소스 분석 - Thaki Cloud"
 seo_description: "Z.ai slime LLM 사후학습 RL 스케일링 프레임워크, GLM-5.2 사후학습, K8s 기반 RL 학습 인프라와 GPU 오케스트레이션 관점 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - llmops
 tags:
   - slime
   - reinforcement-learning
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 강화학습 사후학습(RL post-training)은 최근 대형 LLM 품질의 핵심 단계가 되었습니다. 그런데 RL 사후학습을 대규모로 돌리는 것은 추론이나 지도학습보다 인프라가 까다롭습니다. 롤아웃 생성, 보상 계산, 정책 업데이트가 얽히면서 GPU 자원 관리가 복잡해집니다. Z.ai(THUDM)가 오픈소스화한 **slime**은 이 문제를 정면으로 다루는 "RL 스케일링을 위한 LLM 사후학습 프레임워크"입니다. GLM-5.2의 사후학습에 실제로 쓰였다고 보고됩니다.

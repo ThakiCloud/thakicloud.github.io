@@ -1,9 +1,6 @@
 ---
 title: "vLLM Qwen3-Reranking 마스터 가이드: 대규모 문서 재랭킹 시스템 구축"
 date: 2025-06-06
-categories: 
-  - llmops
-  - reranking
 tags: 
   - vllm
   - qwen3-reranking
@@ -14,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 vLLM 0.8.5와 Qwen3-Reranking 모델을 활용한 고성능 문서 재랭킹 시스템을 구축하는 방법을 상세히 알아보겠습니다. 쿼리-문서 쌍의 관련성을 확률적으로 판단하는 시스템부터 대규모 운영 환경까지 포괄적으로 다룹니다.

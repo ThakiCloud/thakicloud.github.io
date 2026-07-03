@@ -4,8 +4,6 @@ excerpt: "TRLM-135M، نموذج بـ 135 مليون معامل، يمثل اخ�
 seo_title: "دليل نموذج اللغة الصغير للاستدلال TRLM-135M - Thaki Cloud"
 seo_description: "اكتشف خط أنابيب التدريب المكون من 3 مراحل وقدرات الاستدلال لنموذج TRLM-135M بـ 135 مليون معامل. استكشف كيف يمكن للنماذج الصغيرة تحقيق استدلال متقدم من خلال طرق تدريب مبتكرة."
 date: 2025-09-29
-categories:
-  - owm
 tags:
   - TRLM
   - النماذجالصغيرة
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/owm/tiny-reasoning-language-mode
 lang: ar
 permalink: /ar/owm/tiny-reasoning-language-model-trl-135m-guide/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

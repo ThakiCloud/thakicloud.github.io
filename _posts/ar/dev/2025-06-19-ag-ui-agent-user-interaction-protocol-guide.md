@@ -2,9 +2,6 @@
 title: "AG-UI: البروتوكول الذي يربط وكلاء الذكاء الاصطناعي بتطبيقات الواجهة الأمامية"
 excerpt: "AG-UI بروتوكول خفيف الوزن قائم على الأحداث يُقنّن التفاعلات بين وكلاء الذكاء الاصطناعي وواجهات المستخدم. يدعم أطر عمل متعددة مثل LangGraph وCrewAI وMastra، ويوفر ميزات كالبث الفوري ومزامنة الحالة ثنائية الاتجاه والواجهة التوليدية."
 date: 2025-06-19
-categories: 
-  - dev
-  - llmops
 tags: 
   - ag-ui
   - ai-agent
@@ -21,6 +18,9 @@ toc_label: "دليل بروتوكول AG-UI"
 lang: ar
 canonical_url: https://thakicloud.github.io/ar/dev/ag-ui-agent-user-interaction-protocol-guide/
 published: false
+categories:
+  - dev
+  - llmops
 ---
 
 ## لقاء وكلاء الذكاء الاصطناعي بالواجهة الأمامية

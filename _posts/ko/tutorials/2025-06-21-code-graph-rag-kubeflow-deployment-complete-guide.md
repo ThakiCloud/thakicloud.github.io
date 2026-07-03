@@ -2,9 +2,6 @@
 title: "Code Graph RAG: 코드베이스를 위한 지식 그래프 RAG 시스템 완전 가이드"
 excerpt: "Python 코드베이스를 분석하여 지식 그래프를 구축하고, 자연어로 질의할 수 있는 RAG 시스템을 Kubeflow에 배포하는 방법을 단계별로 설명합니다."
 date: 2025-06-21
-categories: 
-  - tutorials
-  - llmops
 tags: 
   - RAG
   - Knowledge Graph
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "Code Graph RAG 가이드"
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ## 개요

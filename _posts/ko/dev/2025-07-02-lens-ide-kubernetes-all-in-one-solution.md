@@ -5,8 +5,6 @@ seo_title: "Lens IDE Kubernetes 관리 도구 완벽 가이드 - Thaki Cloud"
 seo_description: "Lens IDE로 Kubernetes 클러스터를 GUI 환경에서 효율적으로 관리하는 방법을 알아보세요. 실시간 모니터링, 로그 분석, Helm 관리까지 한 번에 해결합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - kubernetes
   - lens
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/dev/lens-ide-kubernetes-all-in-one-solution/"
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

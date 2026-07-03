@@ -4,8 +4,6 @@ excerpt: "برنامج تعليمي شامل حول Helm Dashboard - واجهة 
 seo_title: "دروس Helm Dashboard: دليل واجهة مخططات Helm في Kubernetes - Thaki Cloud"
 seo_description: "تعلم كيفية تثبيت واستخدام Helm Dashboard لـ Kubernetes. دليل شامل يغطي طرق التثبيت وإدارة المخططات وعمليات الاستعادة وأفضل ممارسات واجهة Helm."
 date: 2025-10-10
-categories:
-  - tutorials
 tags:
   - helm
   - kubernetes
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/helm-dashboard-kubernetes-ui-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/helm-dashboard-kubernetes-ui-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

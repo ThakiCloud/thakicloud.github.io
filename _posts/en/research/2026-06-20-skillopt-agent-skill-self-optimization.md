@@ -5,8 +5,6 @@ seo_title: "SkillOpt Agent Skill Self-Optimization System Analysis - Thaki Cloud
 seo_description: "arXiv 2605.23904 SkillOpt: deep analysis of text-space skill optimization, controlled edit mechanism, GPT-5.5 +23.5 point gain, and cross-model transferability."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - skill-optimization
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/skillopt-agent-skill-self-optimization/"
 lang: en
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 7 min

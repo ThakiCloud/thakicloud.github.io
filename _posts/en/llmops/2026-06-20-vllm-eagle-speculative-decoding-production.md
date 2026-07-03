@@ -5,8 +5,6 @@ seo_title: "EAGLE 3.1 + vLLM Speculative Decoding Production Guide - Thaki Cloud
 seo_description: "Principles, configuration, and practical multi-tenant operation strategy for EAGLE 3.1 speculative decoding integrated into vLLM, from an ML infrastructure engineer's perspective."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - vllm
   - speculative-decoding
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
 lang: en
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 9 min

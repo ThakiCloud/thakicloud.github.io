@@ -5,8 +5,6 @@ seo_title: "أتمتة GitHub CLI لـ Wiki والوثائق متعددة الل
 seo_description: "دليل شامل لأتمتة وثائق GitHub Wiki باستخدام GitHub CLI: توليد تلقائي لوثائق API، وإدارة متعددة اللغات، وتتبع تحديثات الوثائق."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - wiki
@@ -23,6 +21,8 @@ toc: true
 toc_label: "أتمتة Wiki"
 canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-wiki-automation-guide/"
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 22 دقائق

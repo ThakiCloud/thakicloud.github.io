@@ -5,8 +5,6 @@ seo_title: "Wan2.2 오픈소스 MoE 비디오 생성 AI 완벽 가이드 - 시�
 seo_description: "Wan AI의 Wan2.2 분석. 세계 최초 오픈소스 MoE 비디오 생성 모델, Text-to-Video, Image-to-Video, 시네마틱 컨트롤 시스템까지 완전 공개된 AI 영상 제작 도구"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - owm
 tags:
   - Wan2.2
   - MoE아키텍처
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/wan22-moe-video-generation-model-owm/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -4,8 +4,6 @@ excerpt: "MCPStore를 활용하여 AI 에이전트가 다양한 도구를 쉽게
 seo_title: "MCPStore 튜토리얼: AI 에이전트용 MCP 서비스 관리 - Thaki Cloud"
 seo_description: "MCPStore 완벽 가이드 - LangChain 통합, 멀티 에이전트 격리, RESTful API를 지원하는 오픈소스 MCP 서비스 관리 도구 튜토리얼"
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - MCP
   - AI-에이전트
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/mcpstore-mcp-service-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mcpstore-mcp-service-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

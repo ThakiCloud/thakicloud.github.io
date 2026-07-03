@@ -4,8 +4,6 @@ excerpt: "Learn how to implement comprehensive Kubernetes monitoring and perform
 seo_title: "Anteon Kubernetes Monitoring Tutorial - eBPF Service Map & Performance Testing - Thaki Cloud"
 seo_description: "Complete hands-on guide to Anteon: eBPF-based Kubernetes monitoring, automatic service map creation, real-time metrics, and multi-location performance testing. Free setup tutorial."
 date: 2025-08-28
-categories:
-  - tutorials
 tags:
   - Kubernetes
   - Monitoring
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

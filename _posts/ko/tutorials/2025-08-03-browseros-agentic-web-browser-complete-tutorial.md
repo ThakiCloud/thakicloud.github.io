@@ -5,9 +5,6 @@ seo_title: "BrowserOS AI 에이전트 웹 브라우저 완전 가이드 - 설치
 seo_description: "오픈소스 BrowserOS로 AI 에이전트 기반 자동화 웹 브라우징, 로컬 AI 채팅, 생산성 도구 개발 방법을 단계별로 상세 설명합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - BrowserOS
   - AI-Agent
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/browseros-agentic-web-browser-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

@@ -4,8 +4,6 @@ excerpt: "PrestaShop 9.0 전자상거래 플랫폼을 Docker, PHP, MySQL과 함�
 seo_title: "PrestaShop 설치 가이드 2025 - 완벽한 설정 튜토리얼 - Thaki Cloud"
 seo_description: "PrestaShop 9.0 전자상거래 플랫폼을 단계별로 설치하는 방법을 배우세요. Docker 설정, 데이터베이스 구성, 온라인 스토어 개발 모범 사례를 포함합니다."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - prestashop
   - 전자상거래
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/prestashop-complete-setup-installation-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/prestashop-complete-setup-installation-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

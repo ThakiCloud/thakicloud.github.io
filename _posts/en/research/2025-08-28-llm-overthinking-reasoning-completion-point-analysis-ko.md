@@ -4,8 +4,6 @@ excerpt: "An in-depth analysis of the overthinking pattern that large language m
 seo_title: "LLM Overthinking Analysis: Reasoning Completion Points - Thaki Cloud"
 seo_description: "A comprehensive research analysis of the overthinking phenomenon in large language models, reasoning completion point identification, and optimization strategies for improving AI efficiency."
 date: 2025-08-28
-categories:
-  - research
 tags:
   - LLM
   - Reasoning
@@ -18,6 +16,8 @@ toc_label: "Contents"
 lang: en
 permalink: /en/research/llm-overthinking-reasoning-completion-point-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/llm-overthinking-reasoning-completion-point-analysis/"
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 8 min

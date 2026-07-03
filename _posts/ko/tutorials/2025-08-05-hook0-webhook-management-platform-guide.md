@@ -5,8 +5,6 @@ seo_title: "Hook0 웹훅 관리 플랫폼 완전 설정 가이드 - Thaki Cloud"
 seo_description: "오픈소스 Hook0로 엔터프라이즈급 웹훅 시스템 구축. 이벤트 라우팅, 재시도 로직, 보안, 모니터링을 포함한 완전한 웹훅 인프라 설치 및 운영 가이드"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - tutorials
 tags:
   - hook0
   - webhook
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/hook0-webhook-management-platform-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 21분

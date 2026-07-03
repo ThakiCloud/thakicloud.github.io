@@ -5,8 +5,6 @@ seo_title: "دليل Stanford STORM الشامل - نظام وكيل تنظيم 
 seo_description: "تحليل كامل لمشروع Stanford STORM. بحث آلي، إنشاء تقارير على غرار Wikipedia، وكلاء AI تعاونيون، ودليل النشر الإنتاجي. كيفية استخدام المشروع مفتوح المصدر بـ 25.4k نجمة."
 date: 2025-06-30
 last_modified_at: 2025-06-30
-categories:
-  - agentops
 tags:
   - stanford-storm
   - knowledge-curation
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/stanford-storm-comprehensive-guide/"
 lang: ar
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

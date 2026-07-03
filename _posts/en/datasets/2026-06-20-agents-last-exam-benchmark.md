@@ -2,8 +2,6 @@
 title: "Agents Last Exam: Why Computer-Use Agent Evaluation Has Evolved to 153 Long-Horizon Tasks"
 excerpt: "agents-last-exam is a benchmark dataset of 153 long-horizon tasks for evaluating computer-use agents. Five domains including Business, Computing, Engineering, and Legal. CC-BY-4.0 license. A guide to building your own model benchmarking pipeline."
 date: 2026-06-20
-categories:
-  - datasets
 tags:
   - benchmark
   - computer-use
@@ -19,6 +17,8 @@ toc: true
 toc_label: "Agents Last Exam Guide"
 reading_time: true
 canonical_url: "https://thakicloud.github.io/en/datasets/agents-last-exam-benchmark/"
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated reading time**: 8 min

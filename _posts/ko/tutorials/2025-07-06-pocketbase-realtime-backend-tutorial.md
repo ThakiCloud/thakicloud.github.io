@@ -5,8 +5,6 @@ seo_title: "PocketBase 실시간 백엔드 Go SQLite MIT 라이센스 완벽 튜
 seo_description: "Go 기반 PocketBase로 단일 파일 백엔드 구축, SQLite 실시간 구독, 사용자 인증, 파일 관리, Admin UI를 macOS에서 실습과 함께 상세히 알아봅니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06
-categories:
-  - tutorials
 tags:
   - pocketbase
   - go
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/pocketbase-realtime-backend-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

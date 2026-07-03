@@ -2,8 +2,6 @@
 title: "My Whole AI Stack Went Chinese"
 excerpt: "87% cheaper is great. But you just swapped landlords, didn't you?"
 date: 2026-07-02
-categories:
-  - comics
 tags:
   - AI주권
   - 온프렘
@@ -14,7 +12,8 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.png
-published: false
+categories:
+  - comics
 ---
 
 A founder went viral bragging that swapping his entire AI stack to Chinese open models cut costs 87% with revenue untouched. The reasoning brain moved off Opus onto a Kimi-class model, and each task got routed to whatever was cheapest. On the spreadsheet, it's a clean win. But something quietly gets blurred. Sovereignty means the models, the data, and the infrastructure sit under your control, and on-prem means running all of it inside your own walls rather than someone else's cloud. Trading a US API for a Chinese one lowered the invoice. The keys still belong to somebody else.

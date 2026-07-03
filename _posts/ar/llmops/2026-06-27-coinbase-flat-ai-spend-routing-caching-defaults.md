@@ -5,8 +5,6 @@ seo_title: "استراتيجية Coinbase لكلفة الذكاء الاصطنا
 seo_description: "خفّضت Coinbase الإنفاق على الذكاء الاصطناعي إلى النصف تقريباً رغم النمو الأسي لاستخدام الرموز. المفاتيح هي توجيه النماذج والتخزين المؤقت الفعّال والإعدادات الافتراضية مفتوحة الأوزان. نحلل بيانات أن 91% من الموظفين لا يبلغون الحدود واستراتيجية بوابة LLM، ونربطها بالخدمة متعددة المستأجرين منخفضة الكلفة على ai-platform من ThakiCloud."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - llmops
 tags:
   - llmops
   - model-routing
@@ -19,6 +17,8 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "coins"
 canonical_url: "https://thakicloud.github.io/ar/llmops/coinbase-flat-ai-spend-routing-caching-defaults/"
+categories:
+  - llmops
 ---
 
 ## نظرة عامة

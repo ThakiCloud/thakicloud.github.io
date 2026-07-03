@@ -5,8 +5,6 @@ seo_title: "claude-code-router 비용 라우팅 - Claude Code 멀티모델 구�
 seo_description: "claude-code-router로 Claude Code를 glm-5.2/MiniMax-M2.7/Kimi K2로 라우팅하는 실전 가이드. 작업별 모델 분기, MiniMax thinking 누수 해결, Sonnet 대비 비용 상시 측정 루프를 ThakiCloud 환경에서 검증."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - claude-code
   - model-routing
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/claude-code-router-onprem-routing/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![개념 다이어그램](/assets/images/claude-code-router-onprem-routing-hero.png)

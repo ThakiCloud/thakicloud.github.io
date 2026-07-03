@@ -5,8 +5,6 @@ seo_title: "Gemma-4-26B-A4B-NVFP4 على DGX Spark: استدلال بتوازي 
 seo_description: "Gemma-4-26B-A4B-NVFP4 (25.2 مليار معامل MoE / 3.8 مليار معامل نشطة) على DGX Spark بذاكرة 128 جيجابايت: 18 رمزاً/ثانية لكل تدفق، 300 رمز/ثانية إجمالاً. تحليل تكميم NVFP4 رباعي البت، وعنق الزجاجة في النطاق الترددي للذاكرة، ومقارنة القيمة مع RTX 5090 وRTX PRO 6000 وB200 من منظور الخوادم الخاصة لـ ThakiCloud."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - owm
 tags:
   - gemma-4
   - nvfp4
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/gemma-4-26b-nvfp4-dgx-spark/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

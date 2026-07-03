@@ -5,8 +5,6 @@ seo_title: "تقنية التبريد السائل من جوجل Hot Chips 2025 
 seo_description: "استكشف تقنية التبريد السائل الرائدة من جوجل المقدمة في Hot Chips 2025، تتضمن أنظمة تبريد TPU وبروتوكولات الصيانة والآثار على خدمات GPU السحابية."
 date: 2025-08-26
 lang: ar
-categories:
-  - news
 tags:
   - جوجل
   - التبريد-السائل
@@ -22,6 +20,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/news/google-liquid-cooling-datacenter-hot-chips-2025/"
 permalink: /ar/news/google-liquid-cooling-datacenter-hot-chips-2025/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

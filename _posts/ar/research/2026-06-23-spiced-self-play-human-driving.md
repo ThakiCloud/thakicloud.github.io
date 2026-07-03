@@ -5,8 +5,6 @@ seo_title: "تحليل Spiced Self-Play (arXiv 2606.19370) - قيادة متوا
 seo_description: "كيف يتعلّم الـ self-play المُنظَّم بالبيانات سياسات قيادة تنسّق مع البشر. نحلّل تنظيم KL على المسار (on-policy)، و30 دقيقة بيانات بشرية، و15 ساعة على GPU استهلاكي، وكفاءة بيانات 2500 مرة من منظور بنية ThakiCloud متعددة الوكلاء والتعلّم المعزّز."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - research
 tags:
   - self-play
   - reinforcement-learning
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/spiced-self-play-human-driving/"
 reading_time: true
+categories:
+  - research
 ---
 
 ## نظرة عامة

@@ -4,8 +4,6 @@ excerpt: "Discover how Microsoft's UserLM-8b flips traditional LLM training by s
 seo_title: "UserLM-8b: User Simulation for AI Workflow Automation - Thaki Cloud"
 seo_description: "Learn how UserLM-8b transforms conversational AI testing with user role simulation, offering realistic test automation and evaluation workflows for assistant LLMs."
 date: 2025-10-10
-categories:
-  - owm
 tags:
   - UserLM
   - LLM
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/owm/userlm-8b-user-simulation-workflow-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/userlm-8b-user-simulation-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

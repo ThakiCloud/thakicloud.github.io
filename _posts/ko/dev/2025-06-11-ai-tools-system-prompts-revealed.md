@@ -1,10 +1,6 @@
 ---
 title: "AI 도구들의 비밀 공개: 주요 AI 서비스들의 시스템 프롬프트 대공개"
 date: 2025-06-11
-categories: 
-  - dev
-  - llmops
-  - oss
 tags: 
   - AI
   - 시스템-프롬프트
@@ -19,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
+  - llmops
 ---
 
 AI 개발 도구들이 어떻게 작동하는지 궁금하셨나요? 유명한 AI 코딩 어시스턴트들의 내부 시스템 프롬프트가 어떻게 구성되어 있는지 알고 싶으셨나요? 그렇다면 오늘 소개할 프로젝트가 여러분에게 큰 도움이 될 것입니다.

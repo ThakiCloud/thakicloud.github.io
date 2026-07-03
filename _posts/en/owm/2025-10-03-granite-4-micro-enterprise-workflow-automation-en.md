@@ -4,8 +4,6 @@ excerpt: "Explore how IBM's Granite 4.0 Micro transforms enterprise workflow aut
 seo_title: "IBM Granite 4.0 Micro Enterprise Workflow Automation Guide - Thaki Cloud"
 seo_description: "Complete guide to implementing IBM Granite 4.0 Micro for enterprise workflow automation. Learn tool-calling, multilingual support, and AI-driven business process optimization."
 date: 2025-10-03
-categories:
-  - owm
 tags:
   - IBM-Granite
   - Workflow-Automation
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/owm/granite-4-micro-enterprise-workflow-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/granite-4-micro-enterprise-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

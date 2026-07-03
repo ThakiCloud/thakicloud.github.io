@@ -5,8 +5,6 @@ seo_title: "MoonshotAI Kimi-K2-Instruct 1조 파라미터 에이전틱 AI 가이
 seo_description: "1조 파라미터 MoE 아키텍처와 128k 컨텍스트를 가진 Kimi-K2-Instruct의 에이전틱 인텔리전스 구현과 Long-CoT 추론 시스템 완전 가이드"
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - owm
 tags:
   - MoonshotAI
   - Kimi-K2-Instruct
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/moonshot-ai-kimi-k2-instruct-agentic-intelligence-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

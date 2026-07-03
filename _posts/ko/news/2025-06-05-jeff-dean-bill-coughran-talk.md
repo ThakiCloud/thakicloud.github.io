@@ -2,8 +2,6 @@
 title: "Jeff Dean과 함께 본 AI 인프라와 컴퓨팅의 미래"
 excerpt: "Alphabet 최고 과학자 Jeff Dean이 말하는 AI 대규모 모델의 진화, 추론 하드웨어, 멀티모달 에이전트, Pathways 시스템, 그리고 주니어 엔지니어 수준 AI의 실현 가능성까지—AI 인프라의 현재와 미래를 총정리한 대담 요약"
 date: 2025-06-05
-categories:
-  - news
 tags:
   - AI Infrastructure
   - Large Models
@@ -14,6 +12,8 @@ tags:
   - Future of Computing
 author_profile: true
 published: false
+categories:
+  - news
 ---
 
 {% include video id="dq8MhTFCs80" provider="youtube" %}

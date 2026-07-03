@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إنشاء ملف AGENTS.md فعال يحسن بش
 seo_title: "دليل AGENTS.md: تحسين جودة الكود بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل لكتابة ملفات AGENTS.md للحصول على مساعدة أفضل في البرمجة بالذكاء الاصطناعي. يتضمن أمثلة عملية وقواعد الأمان وهيكل المشروع للحصول على أفضل النتائج."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - ai
   - برمجة
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/tutorials/agents-md-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/agents-md-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

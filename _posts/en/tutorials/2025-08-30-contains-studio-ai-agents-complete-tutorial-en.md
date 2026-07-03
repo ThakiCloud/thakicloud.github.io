@@ -4,8 +4,6 @@ excerpt: "Master the comprehensive AI agent system that accelerates every aspect
 seo_title: "Contains Studio AI Agents Tutorial - Complete Guide 2025"
 seo_description: "Complete tutorial on Contains Studio AI Agents system. Learn setup, customization, and best practices for 30+ specialized AI agents covering engineering, design, marketing, and operations."
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - ai-agents
   - claude-code
@@ -18,6 +16,8 @@ toc: true
 toc_label: "Tutorial Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/contains-studio-ai-agents-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Expected Reading Time**: 12 minutes

@@ -5,8 +5,6 @@ seo_title: "MarkPDFdown PDF Markdown 변환 완전 가이드 - Thaki Cloud"
 seo_description: "멀티모달 AI를 활용한 MarkPDFdown으로 PDF를 마크다운으로 완벽 변환. macOS 설치부터 고급 활용법까지 단계별 실습 가이드. 표 인식, 수식 처리, Docker 활용법 포함."
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - tutorials
 tags:
   - MarkPDFdown
   - PDF변환
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/markpdfdown-multimodal-pdf-markdown-converter-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

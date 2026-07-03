@@ -5,8 +5,6 @@ seo_title: "에이전트 무인 운영 자동화 인벤토리: launchd·훅·야
 seo_description: "ThakiCloud가 실제로 돌리는 자동화 전체 목록. launchd 스케줄 잡, UserPromptSubmit·Stop 훅, 야간 자가진화 루프, memkraft 메모리 파이프라인을 결정론($0)과 LLM 비용으로 구분해 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - automation
   - autonomous-ops
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/autonomous-ops-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![시간축 스케줄과 이벤트 훅이 맞물려 도는 무인 운영 토폴로지](/assets/images/autonomous-ops-hero.png)

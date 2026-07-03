@@ -4,8 +4,6 @@ excerpt: "أتقن نظام الوكلاء الذكي الشامل الذي يس
 seo_title: "دليل وكلاء Contains Studio AI - الدليل الشامل 2025"
 seo_description: "دليل شامل لنظام وكلاء Contains Studio AI. تعلم الإعداد والتخصيص وأفضل الممارسات لأكثر من 30 وكيلاً ذكياً متخصصاً يغطي الهندسة والتصميم والتسويق والعمليات."
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - ai-agents
   - claude-code
@@ -18,6 +16,8 @@ toc: true
 toc_label: "محتويات الدليل"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/contains-studio-ai-agents-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

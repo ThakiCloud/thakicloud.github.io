@@ -4,9 +4,6 @@ excerpt: "AI 대모델을 활용한 자동 영상 생성 도구 MoneyPrinterTurb
 seo_title: "MoneyPrinterTurbo AI 영상 자동화 완전 가이드 - Thaki Cloud"
 seo_description: "AI 대모델을 이용해 원클릭으로 고화질 숏폼 영상을 제작하는 MoneyPrinterTurbo의 설치부터 자동화, 서버 운영 비용까지 완전 정리"
 date: 2025-06-26
-categories: 
-  - tutorials
-  - llmops
 tags: 
   - MoneyPrinterTurbo
   - AI비디오생성
@@ -22,6 +19,9 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/tutorials/llmops/moneyprinter-turbo-ai-video-automation-complete-guide/"
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ## 개요

@@ -4,8 +4,6 @@ excerpt: "noScribe로 전문적인 오디오 전사를 마스터하세요. OpenA
 seo_title: "noScribe AI 오디오 전사 튜토리얼 - 완전 설정 가이드"
 seo_description: "전문적인 오디오 전사를 위한 noScribe 사용법을 배우세요. 연구자와 콘텐츠 제작자를 위한 설치, 구성, 고급 기능까지 단계별 가이드를 제공합니다."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - 오디오전사
   - whisper
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/noscribe-ai-audio-transcription-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/noscribe-ai-audio-transcription-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

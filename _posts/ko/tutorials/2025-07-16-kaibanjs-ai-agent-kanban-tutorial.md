@@ -5,8 +5,6 @@ seo_title: "KaibanJS AI 에이전트 칸반 시스템 튜토리얼 - macOS 완�
 seo_description: "AI 에이전트 관리를 위한 KaibanJS 칸반 시스템을 macOS에서 설치하고 활용하는 방법. 실제 테스트 결과와 예제 코드 포함 (150자)"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - AI
   - kanban
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/kaibanjs-ai-agent-kanban-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

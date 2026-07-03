@@ -2,8 +2,6 @@
 title: "توظيف مهندس البنية التحتية والخلفية: **10 كتب يجب قراءتها** والأشخاص الذين نبحث عنهم"
 excerpt: "تقديم الملف المثالي للمرشح ومعايير التوظيف من خلال 10 كتب يجب قراءتها لتوظيف مهندس البنية التحتية والخلفية وحالات التطبيق العملية."
 date: 2025-05-27
-categories:
-  - careers
 tags:
   - MLOps
   - ThreeVs
@@ -14,6 +12,8 @@ author_profile: true
 lang: ar
 permalink: /ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/
 canonical_url: "https://thakicloud.github.io/ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+categories:
+  - careers
 ---
 
 > **TL;DR**  

@@ -5,8 +5,6 @@ seo_title: "LocalStack 완벽 가이드 - 로컬 AWS 클라우드 개발 환경 
 seo_description: "LocalStack을 사용하여 로컬 환경에서 AWS 서비스를 에뮬레이션하는 방법을 배워보세요. 설치, 설정, S3, DynamoDB, Lambda 등 주요 서비스 사용법을 실전 예제와 함께 제공합니다."
 date: 2025-07-14
 last_modified_at: 2025-07-14
-categories:
-  - tutorials
 tags:
   - localstack
   - aws
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/localstack-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

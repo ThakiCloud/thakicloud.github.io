@@ -4,8 +4,6 @@ excerpt: "9.8k 스타를 받은 n8n 워크플로우 컬렉션에서 클라우드
 seo_title: "n8n 워크플로우 AI 플랫폼 자동화 가이드 - 클라우드 운영 최적화 - Thaki Cloud"
 seo_description: "n8n 워크플로우를 활용한 클라우드 AI 플랫폼 운영 자동화 완전 가이드. 고객 관리, 모델 모니터링, 알림 시스템까지 실전 사례"
 date: 2025-06-28
-categories:
-  - dev
 tags:
   - n8n
   - 워크플로우자동화
@@ -22,6 +20,8 @@ toc: true
 toc_label: "n8n 워크플로우 가이드"
 canonical_url: "https://thakicloud.github.io/ko/dev/n8n-workflows-ai-platform-automation-guide/"
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

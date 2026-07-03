@@ -4,8 +4,6 @@ excerpt: "استكشف مجموعات البيانات والأدوات الأس
 seo_title: "دليل تنسيق مجموعات بيانات النماذج اللغوية: بيانات التدريب والأدوات - Thaki Cloud"
 seo_description: "دليل شامل لمجموعات بيانات النماذج اللغوية الكبيرة للتدريب اللاحق، يغطي مجموعات بيانات SFT ومحاذاة التفضيلات وأدوات تنسيق البيانات لتطوير نماذج الذكاء الاصطناعي."
 date: 2025-08-31
-categories:
-  - datasets
 tags:
   - النماذج-اللغوية-الكبيرة
   - مجموعات-البيانات
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/datasets/comprehensive-guide-llm-datasets-curation/
 canonical_url: "https://thakicloud.github.io/ar/datasets/comprehensive-guide-llm-datasets-curation/"
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

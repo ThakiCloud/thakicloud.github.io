@@ -5,8 +5,6 @@ seo_title: "SQL Studio 데이터베이스 탐색기 튜토리얼 - Thaki Cloud"
 seo_description: "Rust로 개발된 SQL Studio로 SQLite, PostgreSQL, MySQL, ClickHouse, MSSQL을 하나의 도구로 관리하는 방법. 웹 UI와 Rich IntelliSense 지원"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - tutorials
 tags:
   - SQL
   - 데이터베이스
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/sql-studio-database-explorer-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

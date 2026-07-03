@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إعداد واستخدام GrowChief، أداة �
 seo_title: "دليل GrowChief: إعداد أتمتة وسائل التواصل الاجتماعي - Thaki Cloud"
 seo_description: "دليل شامل خطوة بخطوة لأداة أتمتة وسائل التواصل الاجتماعي GrowChief. تعلم التثبيت والتكوين وأفضل الممارسات لأتمتة LinkedIn."
 date: 2025-08-31
-categories:
-  - tutorials
 tags:
   - أتمتة-وسائل-التواصل-الاجتماعي
   - أتمتة-لينكد-إن
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/growchief-social-media
 lang: ar
 permalink: /ar/tutorials/growchief-social-media-automation-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

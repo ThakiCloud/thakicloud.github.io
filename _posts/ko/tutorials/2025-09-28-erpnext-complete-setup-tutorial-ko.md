@@ -4,8 +4,6 @@ excerpt: "강력한 오픈소스 ERP 시스템인 ERPNext의 설치, 설정, 핵
 seo_title: "ERPNext 튜토리얼: 오픈소스 ERP 완벽 설치 가이드 - Thaki Cloud"
 seo_description: "무료 오픈소스 ERP 시스템 ERPNext 설치, 설정, 사용법을 배워보세요. Docker 설치부터 기본 설정, 비즈니스 기능까지 완벽 튜토리얼."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - ERPNext
   - ERP
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/erpnext-complete-setup-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/erpnext-complete-setup-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

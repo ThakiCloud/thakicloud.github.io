@@ -5,8 +5,6 @@ seo_title: "RAG LLMOps Production Implementation Guide - Enterprise RAG System -
 seo_description: "A practitioner-focused guide covering RAG system architecture design, production deployment, and performance optimization from an LLMOps perspective. Enterprise RAG implementation strategies and best practices explained in detail."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - llmops
 tags:
   - RAG
   - LLMOps
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/en/llmops/rag-llmops-production-imp
 reading_time: true
 lang: en
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated reading time**: 22 min

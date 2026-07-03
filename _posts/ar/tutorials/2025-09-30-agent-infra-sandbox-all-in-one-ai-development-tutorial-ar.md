@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إعداد واستخدام agent-infra/sandbox، 
 seo_title: "دروس AIO Sandbox: بيئة تطوير الذكاء الاصطناعي الموحدة - Thaki Cloud"
 seo_description: "دليل شامل لـ agent-infra/sandbox - حاوية Docker مع أتمتة المتصفح وخادم VSCode وJupyter وتكامل MCP لتطوير وكلاء الذكاء الاصطناعي. دليل الإعداد خطوة بخطوة."
 date: 2025-09-30
-categories:
-  - tutorials
 tags:
   - ai-agents
   - docker
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/agent-infra-sandbox-al
 lang: ar
 permalink: /ar/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

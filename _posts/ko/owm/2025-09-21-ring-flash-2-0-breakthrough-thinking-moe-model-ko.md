@@ -7,8 +7,6 @@ date: 2025-09-21
 lang: ko
 permalink: /ko/owm/ring-flash-2-0-breakthrough-thinking-moe-model/
 canonical_url: "https://thakicloud.github.io/ko/owm/ring-flash-2-0-breakthrough-thinking-moe-model/"
-categories:
-  - owm
 tags:
   - ring-flash-2.0
   - moe-모델
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -5,8 +5,6 @@ seo_title: "9ui React 컴포넌트 라이브러리 완벽 가이드 - Thaki Clou
 seo_description: "Base UI + Tailwind CSS 기반 copy-paste 방식의 9ui 라이브러리 설치부터 실제 프로젝트 적용까지 단계별 완벽 가이드"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - 9ui
   - React
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/9ui-react-component-library-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "Gemma 4 26B 로컬 멀티에이전트 오케스트레이션 분석 -
 seo_description: "Gemma 4 26B 로컬 병렬 서브에이전트 데모와 온프레미스 추론 경제성, K8s 기반 멀티에이전트 서빙 관점 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - agentops
 tags:
   - gemma4
   - multi-agent
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/gemma4-local-multi-agent-orchestration/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 멀티에이전트 오케스트레이션이라고 하면 보통 클라우드 API를 떠올립니다. 그런데 최근 커뮤니티에서 공유된 데모는 다른 방향을 보여줍니다. Gemma 4 26B를 **로컬 머신에서 띄워** 10개의 병렬 서브에이전트로 SVG 아트 갤러리를 코딩하고, 100 tokens/sec 이상의 처리량을 달성했다는 것입니다.

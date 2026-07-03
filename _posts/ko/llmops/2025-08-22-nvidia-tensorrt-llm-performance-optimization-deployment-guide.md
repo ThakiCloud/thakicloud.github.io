@@ -5,9 +5,6 @@ seo_title: "TensorRT-LLM 성능 최적화 가이드 - NVIDIA GPU에서 LLM 추�
 seo_description: "NVIDIA TensorRT-LLM으로 Llama 2 70B 모델 추론 성능을 6.7배 향상시키는 방법과 텐서 병렬 처리, FlashAttention 최적화 기법을 알아보세요."
 date: 2025-08-22
 last_modified_at: 2025-08-22
-categories:
-  - llmops
-  - ai-infrastructure
 tags:
   - tensorrt-llm
   - nvidia
@@ -26,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-tensorrt-llm-performance-optimization-deployment-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

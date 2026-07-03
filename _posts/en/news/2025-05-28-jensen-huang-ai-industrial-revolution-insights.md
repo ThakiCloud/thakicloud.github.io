@@ -5,8 +5,6 @@ date: 2025-05-28
 lang: en
 permalink: /en/news/jensen-huang-ai-industrial-revolution-insights/
 canonical_url: "https://thakicloud.github.io/en/news/jensen-huang-ai-industrial-revolution-insights/"
-categories: 
-  - news
 tags: 
   - Jensen Huang
   - AI Industrial Revolution
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
 ---
 
 NVIDIA CEO Jensen Huang recently provided a detailed explanation of the full scope of the AI industrial revolution at the Hilton Valley Forum. He defined AI not as mere technology but as **a new industrial revolution power like electricity** and presented the blueprint for the future economy through the concept of 'AI Factory.'

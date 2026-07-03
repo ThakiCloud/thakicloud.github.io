@@ -2,8 +2,6 @@
 title: "MiniMax-M1: 세계 최초 오픈 웨이트 하이브리드 어텐션 추론 모델"
 excerpt: "MiniMax-M1의 혁신적인 하이브리드 어텐션 아키텍처와 뛰어난 추론 성능, 실무 배포 가이드"
 date: 2025-06-17
-categories:
-  - owm
 tags:
   - MiniMax-M1
   - Hybrid Attention
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - owm
 ---
 
 ## 개요

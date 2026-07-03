@@ -5,8 +5,6 @@ seo_title: "تحسين تكاليف LLM عمليًا: كيف يمنع توجيه
 seo_description: "نكشف عن حادثة استخدام مفرط لـ Claude Opus بلغت تكلفتها $705 في يوم واحد، وتدقيق شهري بلغ $4,691. نشرح بالأرقام والكود آليات التحكم في التكاليف التي نشغلها فعليًا في الإنتاج: توجيه النماذج، والترقية التلقائية المبنية على المراجعة، ونقل المهام إلى cron، ونظافة السياق."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - cost-optimization
   - llm-routing
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/llmops/llm-cost-routing-guardrails/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![ضمانات توجيه تكاليف LLM في الممارسة العملية](/assets/images/llm-cost-routing-guardrails-hero.png)

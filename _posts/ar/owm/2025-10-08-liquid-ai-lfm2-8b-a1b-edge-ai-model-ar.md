@@ -4,8 +4,6 @@ excerpt: "استكشف نموذج Liquid AI LFM2-8B-A1B، وهو نموذج MoE 
 seo_title: "مراجعة نموذج Liquid AI LFM2-8B-A1B للذكاء الاصطناعي الطرفي - Thaki Cloud"
 seo_description: "مراجعة شاملة لنموذج Liquid AI الهجين LFM2-8B-A1B MoE الذي يضم 8.3 مليار معامل وقدرات النشر الطرفي وأداء متفوق على الأجهزة المحمولة."
 date: 2025-10-08
-categories:
-  - owm
 tags:
   - liquid-ai
   - lfm2
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/
 canonical_url: "https://thakicloud.github.io/ar/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

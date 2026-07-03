@@ -5,8 +5,6 @@ seo_title: "Ornith-1.0 자가-스캐폴딩 RL 오픈 코딩 모델 분석 vLLM �
 seo_description: "DeepReinforce Ornith-1.0(MIT, 9B/31B/35B/397B)의 self-scaffolding 강화학습 메커니즘, 공개 벤치마크(SWE-Bench Verified 82.4, Terminal-Bench 2.1 77.5), vLLM 서빙 레시피를 ThakiCloud K8s 기반 멀티테넌트 코딩 에이전트 운영 관점에서 분석합니다."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - llmops
 tags:
   - ornith
   - deepreinforce
@@ -23,6 +21,8 @@ toc_icon: "robot"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/ornith-1-self-scaffolding-coding-model/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![스스로 발판을 쌓아 올리는 자가-스캐폴딩 구조를 형상화한 추상 이미지](/assets/images/ornith-1-self-scaffolding-coding-model-hero.png)

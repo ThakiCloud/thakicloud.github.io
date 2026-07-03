@@ -5,8 +5,6 @@ seo_title: "LiteParse Model-Free PDF Parser and RAG Ingest Analysis - Thaki Clou
 seo_description: "An analysis of LlamaIndex's LiteParse, an Apache 2.0 model-free PDF parser, covering RAG document ingest cost reduction, data sovereignty, and the trade-offs of model-independent parsing."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - liteparse
   - llamaindex
@@ -22,6 +20,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/dev/liteparse-model-free-pdf-parser-rag/"
 reading_time: true
+categories:
+  - dev
 ---
 
 The first step of a RAG pipeline is document ingest, and the most common bottleneck in that first step is PDF parsing. LLM-based parsers have become more common recently, but running an LLM over every document racks up cost and latency, and sending sensitive documents to an external model raises data sovereignty concerns. LlamaIndex (Jerry Liu) has released **LiteParse**, which takes a different approach. It is an Apache 2.0 open-source parser that converts PDFs to markdown **without an LLM**.

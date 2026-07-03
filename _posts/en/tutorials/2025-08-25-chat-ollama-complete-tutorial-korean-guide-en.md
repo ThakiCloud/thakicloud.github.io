@@ -4,8 +4,6 @@ excerpt: "Comprehensive macOS tutorial for Chat-Ollama, from installation to adv
 seo_title: "Chat-Ollama Complete Guide - Private AI Chatbot Tutorial - Thaki Cloud"
 seo_description: "Step-by-step Chat-Ollama tutorial covering installation, configuration, MCP integration, and knowledge base setup. Includes Ollama, OpenAI, and Anthropic model integration"
 date: 2025-08-25
-categories:
-  - tutorials
 tags:
   - chat-ollama
   - ollama
@@ -22,6 +20,8 @@ toc: true
 toc_label: "Contents"
 canonical_url: "https://thakicloud.github.io/en/tutorials/chat-ollama-complete-tutorial-korean-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

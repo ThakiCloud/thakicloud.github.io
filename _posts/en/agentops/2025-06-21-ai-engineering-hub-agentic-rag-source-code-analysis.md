@@ -2,8 +2,6 @@
 title: "AI Engineering Hub Agentic RAG Source Code Deep Dive: Agent-Based Retrieval-Augmented Generation"
 excerpt: "A thorough source-level analysis of the Agentic RAG project inside the 10.7k-star AI Engineering Hub repository, with practical implementation guidance."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - Agentic-RAG
   - Multi-Agent-Systems
@@ -19,6 +17,8 @@ toc_label: "Agentic RAG Source Code Analysis"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/agentops/ai-engineering-hub-agentic-rag-source-code-analysis/"
 published: false
+categories:
+  - agentops
 ---
 
 ## Overview

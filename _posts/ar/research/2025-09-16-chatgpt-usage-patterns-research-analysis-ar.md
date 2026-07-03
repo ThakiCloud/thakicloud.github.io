@@ -7,8 +7,6 @@ date: 2025-09-16
 lang: ar
 permalink: /ar/research/chatgpt-usage-patterns-research-analysis/
 canonical_url: "https://thakicloud.github.io/ar/research/chatgpt-usage-patterns-research-analysis/"
-categories:
-  - research
 tags:
   - ChatGPT
   - تحليل-سلوك-المستخدمين
@@ -18,6 +16,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "فهرس المحتويات"
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

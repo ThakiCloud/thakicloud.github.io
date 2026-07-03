@@ -3,8 +3,6 @@ title: "Thaki Cloud Life & 커리어 가이드"
 excerpt: "Thaki Cloud의 기업 문화, 복지, 개발자들의 이야기, 채용 정보 등을 공유합니다."
 date: 2025-05-21
 last_modified_at: 2026-06-20
-categories:
-  - careers
 tags:
   - Company Culture
   - Careers
@@ -12,6 +10,8 @@ tags:
   - Developer Story
   - Team
 author_profile: true
+categories:
+  - careers
 ---
 
 ThakiCloud에서 일한다는 건 어떤 경험인지, 어떤 사람들과 함께하는지, 실제로 어떤 문화 속에서 일하는지를 솔직하게 이야기합니다. 채용 공고 문구보다 현장의 목소리가 더 설득력 있다고 생각하기 때문입니다.

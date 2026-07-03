@@ -5,8 +5,6 @@ seo_title: "Kimi K2.6 1T MoE 에이전트 스웜 아키텍처 온프렘 가이�
 seo_description: "Kimi K2.6 아키텍처(MLA 어텐션, 384전문가, MoonViT 400M), 벤치마크(SWE-Bench Verified 80.2, AIME 2026 96.4), vLLM/SGLang/KTransformers 서빙과 H100 서빙 footprint를 분석했다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - kimi-k2-6
   - moonshot-ai
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/kimi-k2-6-1t-moe-agent-swarm/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

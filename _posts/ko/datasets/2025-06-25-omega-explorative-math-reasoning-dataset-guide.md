@@ -2,9 +2,6 @@
 title: "OMEGA Explorative: LLM 수학 추론 능력 평가를 위한 혁신적 데이터셋"
 excerpt: "Allen AI의 OMEGA Explorative 데이터셋으로 LLM의 탐색적 일반화 능력을 체계적으로 평가하는 완전 가이드"
 date: 2025-06-25
-categories: 
-  - datasets
-  - research
 tags: 
   - omega
   - mathematical-reasoning
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "OMEGA Explorative 데이터셋"
 published: false
+categories:
+  - datasets
+  - research
 ---
 
 ## 개요

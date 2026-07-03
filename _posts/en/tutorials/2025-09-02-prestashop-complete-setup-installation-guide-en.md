@@ -4,8 +4,6 @@ excerpt: "Step-by-step tutorial for installing and configuring PrestaShop 9.0 e-
 seo_title: "PrestaShop Installation Guide 2025 - Complete Setup Tutorial - Thaki Cloud"
 seo_description: "Learn how to install PrestaShop 9.0 e-commerce platform step-by-step. Includes Docker setup, database configuration, and best practices for online store development."
 date: 2025-09-02
-categories:
-  - tutorials
 tags:
   - prestashop
   - ecommerce
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/prestashop-complete-setup-installation-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/prestashop-complete-setup-installation-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

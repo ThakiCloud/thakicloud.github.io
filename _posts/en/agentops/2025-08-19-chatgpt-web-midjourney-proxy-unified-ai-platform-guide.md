@@ -6,9 +6,6 @@ seo_description: "A complete AgentOps guide for building a multi-AI-agent unifie
 date: 2025-08-19
 last_modified_at: 2025-08-19
 lang: en
-categories:
-  - agentops
-  - tutorials
 tags:
   - chatgpt
   - midjourney
@@ -27,6 +24,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/chatgpt-web-midjourney-proxy-unified-ai-platform-guide/"
 reading_time: true
+categories:
+  - agentops
+  - tutorials
+published: false
 ---
 
 ![Key concept illustration](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.png)

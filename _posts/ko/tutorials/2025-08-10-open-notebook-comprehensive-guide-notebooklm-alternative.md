@@ -5,9 +5,6 @@ seo_title: "Open Notebook 가이드 - 오픈소스 NotebookLM 대안 완벽 활�
 seo_description: "프라이버시 중심의 오픈소스 AI 연구 도구 Open Notebook 완벽 가이드. 멀티 노트북, 16개 AI 모델 지원, 전문 팟캐스트 생성, REST API 등 핵심 기능과 실전 활용 방법 총정리"
 date: 2025-08-10
 last_modified_at: 2025-08-10
-categories:
-  - tutorials
-  - llmops
 tags:
   - open-notebook
   - notebooklm
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/open-notebook-comprehensive-guide-notebooklm-alternative/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

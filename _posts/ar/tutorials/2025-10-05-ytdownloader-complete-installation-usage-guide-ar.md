@@ -4,8 +4,6 @@ excerpt: "إتقان ytDownloader - تطبيق GUI حديث يدعم مئات ا
 seo_title: "دروس ytDownloader: دليل تحميل الفيديو الشامل 2025 - Thaki Cloud"
 seo_description: "دليل ytDownloader الشامل يغطي التثبيت على Windows/Linux/macOS والميزات المتقدمة مثل تحميل قوائم التشغيل وضغط الفيديو ونصائح استكشاف الأخطاء."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - ytDownloader
   - تحميل-الفيديو
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/ytdownloader-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ytdownloader-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

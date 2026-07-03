@@ -5,8 +5,6 @@ seo_title: "Qwen-Image 확산 모델 완전 가이드 텍스트 렌더링 혁신
 seo_description: "Qwen-Image 모델의 혁신적인 텍스트 렌더링 기술과 이미지 편집 기능을 상세 분석. Diffusers 파이프라인, 다중 화면비 지원, 실제 코드 예제와 워크플로우 통합 방법 제공."
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - owm
 tags:
   - qwen-image
   - diffusion-model
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/qwen-image-text-rendering-diffusion-model-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

@@ -5,9 +5,6 @@ seo_title: "Wan2.1 비디오 생성 AI 완벽 가이드 - 오픈소스 영상 �
 seo_description: "Wan2.1 오픈소스 비디오 생성 모델로 Text-to-Video, Image-to-Video 콘텐츠를 제작하는 방법과 창의적 응용 사례를 상세히 알아보세요."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - owm
-  - tutorials
 tags:
   - Wan2.1
   - 비디오생성
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/wan21-video-generation-model-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

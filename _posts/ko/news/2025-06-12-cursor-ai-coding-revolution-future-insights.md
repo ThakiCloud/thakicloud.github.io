@@ -1,8 +1,6 @@
 ---
 title: "Cursor가 보여준 AI 코딩 혁명: 21개월 만에 4천억 원 ARR 달성한 비밀과 2027년 개발자의 미래"
 date: 2025-06-12
-categories: 
-  - news
 tags: 
   - Cursor
   - AI Coding
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - news
 ---
 
 ## Cursor, 출시 21개월 만에 4천억 원 ARR을 달성하다

@@ -2,9 +2,6 @@
 title: "Cursor AI 마스터 가이드 2025: 월 500회 제한을 뛰어넘는 전략적 활용법"
 excerpt: "2025년 6월 최신 버전 기준으로 Cursor AI를 전문가처럼 활용하는 12가지 핵심 전략. 월 500회 제한 극복부터 생산성 극대화까지"
 date: 2025-06-25
-categories: 
-  - dev
-  - tutorials
 tags: 
   - cursor-ai
   - ai-assisted-development
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "Cursor AI 마스터 가이드"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## 개요

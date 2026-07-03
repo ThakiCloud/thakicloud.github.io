@@ -5,8 +5,6 @@ seo_title: "Nuvi Specification-as-Source Software 3.0 혁명 분석 - Thaki Clou
 seo_description: "Andrej Karpathy의 Software 3.0 비전을 현실화한 Nuvi의 혁신적 접근법. 자연어 명세에서 실행 가능한 AI 에이전트로의 패러다임 변화와 산업 임팩트를 심층 분석합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - news
 tags:
   - nuvi
   - software-3-0
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/news/nuvi-specification-as-source-software-3-0-revolution/"
 reading_time: true
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,9 +5,6 @@ seo_title: "AI 에이전트 컨텍스트 엔지니어링 실전 가이드 - Manu
 seo_description: "KV-캐시 최적화, 동적 도구 관리, 파일 시스템 활용 등 AI 에이전트 개발에서 검증된 컨텍스트 엔지니어링 전략을 Manus 구축 경험을 통해 학습하세요."
 date: 2025-07-23
 last_modified_at: 2025-07-23
-categories:
-  - agentops
-  - llmops
 tags:
   - AI에이전트
   - 컨텍스트엔지니어링
@@ -24,6 +21,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/context-engineering-ai-agents-manus-lessons/"
 reading_time: true
+categories:
+  - agentops
+  - llmops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "Open-Weight Agent Cost Optimization: Per-Task Model Routing in Pract
 seo_description: "Gemma 4 tool-call experiment 6/6 success rate, Paxis models.yaml real-price cost calculation showing 44x savings vs. frontier. A practical look at routing agent automation workloads to open-weight models with measured numbers."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - agentops
 tags:
   - open-weight
   - cost-optimization
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/en/agentops/open-weight-agent-cost-
 reading_time: true
 header:
   image: /assets/images/open-weight-agent-cost-routing-hero.png
+categories:
+  - agentops
 ---
 
 ![Abstract image of a task flow passing through a prism and splitting into multiple cost lanes](/assets/images/open-weight-agent-cost-routing-hero.png)

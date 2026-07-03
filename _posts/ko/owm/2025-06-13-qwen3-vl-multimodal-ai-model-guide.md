@@ -2,9 +2,6 @@
 title: "Qwen3-VL: 차세대 비전-언어 멀티모달 AI 모델 완전 가이드"
 excerpt: "알리바바 클라우드가 개발하는 Qwen3-VL의 주요 기능과 특징, 향상된 이미지·비디오 이해 능력과 다국어 지원에 대해 알아보세요."
 date: 2025-06-13
-categories: 
-  - owm
-  - llmops
 tags: 
   - Qwen3-VL
   - 멀티모달
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "Qwen3-VL 가이드"
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ## 개요

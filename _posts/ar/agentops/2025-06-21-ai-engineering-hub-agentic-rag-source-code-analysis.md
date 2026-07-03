@@ -2,8 +2,6 @@
 title: "تحليل شامل لكود مصدر Agentic RAG في AI Engineering Hub: نظام التوليد المعزز بالاسترجاع القائم على الوكلاء"
 excerpt: "تحليل معمق على مستوى الكود المصدري لمشروع Agentic RAG في مستودع AI Engineering Hub الحاصل على 10.7k نجمة، مع عرض منهجية التطبيق العملي."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - Agentic-RAG
   - Multi-Agent-Systems
@@ -19,6 +17,8 @@ toc_label: "تحليل كود مصدر Agentic RAG"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/agentops/ai-engineering-hub-agentic-rag-source-code-analysis/"
 published: false
+categories:
+  - agentops
 ---
 
 ## نظرة عامة

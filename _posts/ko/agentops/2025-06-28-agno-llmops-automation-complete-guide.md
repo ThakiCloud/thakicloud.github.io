@@ -4,9 +4,6 @@ excerpt: "phidata agno 프레임워크의 다양한 도구들을 활용하여 LL
 seo_title: "Agno 도구 LLMOps 업무 자동화 완벽 가이드 - Thaki Cloud"
 seo_description: "phidata agno 프레임워크로 구축하는 LLMOps 업무 자동화 가이드. Slack, GitHub, Airflow, pandas 등 다양한 도구를 활용한 7가지 실전 응용 프로그램과 구현 방법을 상세히 설명합니다."
 date: 2025-06-28
-categories: 
-  - agentops
-  - dev
 tags: 
   - agno
   - phidata
@@ -22,6 +19,9 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/agentops/agno-llmops-automation-complete-guide/"
 published: false
+categories:
+  - agentops
+  - dev
 ---
 
 ## 들어가며

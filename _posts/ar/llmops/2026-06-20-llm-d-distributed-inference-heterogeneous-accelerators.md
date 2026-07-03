@@ -5,8 +5,6 @@ seo_title: "llm-d: استدلال موزع وبنية GPU+NPU/XPU غير متج�
 seo_description: "كيف يعمل توجيه KV-cache وفصل prefill/decode في llm-d، وكيف تُشغّل GPUs إلى جانب NPUs و XPUs متنوعة (Rebellions و Furiosa و Intel Gaudi و TPU) في بنية استدلال ذكاء اصطناعي سيادي محايدة للموردين."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - llm-d
   - distributed-inference
@@ -25,6 +23,8 @@ header:
   teaser: /assets/images/llm-d-heterogeneous-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - llmops
 ---
 
 ![مجموعة GPU ومجموعة NPU تعملان معاً في نفس الكلستر لتقديم الاستدلال](/assets/images/llm-d-heterogeneous-hero.png)

@@ -5,8 +5,6 @@ seo_title: "Swark VS Code 확장 LLM 아키텍처 다이어그램 Mermaid GitHub
 seo_description: "Swark VS Code 확장으로 GitHub Copilot을 사용해 코드베이스에서 자동으로 Mermaid.js 아키텍처 다이어그램을 생성하는 방법을 설치부터 고급 활용까지 상세히 알아봅니다."
 date: 2025-08-11
 last_modified_at: 2025-08-11
-categories:
-  - tutorials
 tags:
   - swark
   - vscode
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/swark-vscode-architecture-diagram-llm-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

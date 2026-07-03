@@ -2,9 +2,6 @@
 title: "Docling 완전 정복: PDF를 텍스트로 변환하는 최고의 도구 사용법"
 excerpt: "IBM에서 개발한 Docling을 이용해 PDF 문서를 텍스트로 완벽하게 변환하는 방법을 단계별로 설명합니다. 설치부터 고급 활용법까지 모든 것을 다룹니다."
 date: 2025-06-21
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Docling
   - PDF변환
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "Docling 튜토리얼"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## Docling이란 무엇인가?

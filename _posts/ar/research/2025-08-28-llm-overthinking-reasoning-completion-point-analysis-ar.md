@@ -4,8 +4,6 @@ excerpt: "تحليل معمق لكيفية وقوع نماذج اللغة الك
 seo_title: "تحليل الإفراط في التفكير في نماذج اللغة الكبيرة: نقاط إتمام الاستدلال - Thaki Cloud"
 seo_description: "تحليل بحثي شامل حول ظاهرة الإفراط في التفكير في نماذج اللغة الكبيرة، وتحديد نقاط إتمام الاستدلال، واستراتيجيات التحسين لتعزيز كفاءة الذكاء الاصطناعي."
 date: 2025-08-28
-categories:
-  - research
 tags:
   - نماذج-اللغة-الكبيرة
   - الاستدلال
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/research/llm-overthinking-reasoning-completion-point-analysis/
 canonical_url: "https://thakicloud.github.io/ar/research/llm-overthinking-reasoning-completion-point-analysis/"
+categories:
+  - research
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

@@ -5,8 +5,6 @@ seo_title: "القرصنة والهندسة العكسية في عصر البر�
 seo_description: "حوّل الجهل إلى قوة بعقلية القرصنة ونهج الهندسة العكسية في البرمجة بالذكاء الاصطناعي. منهجية تطوير جديدة للعصر الحديث."
 date: 2025-06-17
 lang: ar
-categories: 
-  - culture
 tags: 
   - الذكاء-الاصطناعي
   - القرصنة
@@ -19,6 +17,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/
 canonical_url: "https://thakicloud.github.io/ar/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
+categories:
+  - culture
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

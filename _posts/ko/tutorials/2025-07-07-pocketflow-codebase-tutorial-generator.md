@@ -5,8 +5,6 @@ seo_title: "PocketFlow 튜토리얼: AI로 코드베이스 분석하고 튜토�
 seo_description: "PocketFlow를 사용하여 GitHub 저장소를 분석하고 AI가 자동으로 초보자용 튜토리얼을 생성하는 방법을 배워보세요. 설치부터 실제 사용까지 완벽 가이드입니다."
 date: 2025-07-07
 last_modified_at: 2025-07-07
-categories:
-  - tutorials
 tags:
   - PocketFlow
   - AI
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/pocketflow-codebase-tutorial-generator/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

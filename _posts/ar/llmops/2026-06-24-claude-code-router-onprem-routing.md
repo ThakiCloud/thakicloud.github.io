@@ -5,8 +5,6 @@ seo_title: "توجيه التكلفة عبر claude-code-router، إعداد Cla
 seo_description: "دليل عملي لتوجيه Claude Code عبر glm-5.2/MiniMax-M2.7/Kimi K2 باستخدام claude-code-router. تقسيم النماذج حسب المهمة، وإصلاح تسرّب التفكير في MiniMax، وحلقة قياس مستمرة للتكلفة مقابل Sonnet، جميعها مُتحقَّق منها في بيئة ThakiCloud."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - claude-code
   - model-routing
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/claude-code-router-onprem-routing/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![مخطط مفاهيمي](/assets/images/claude-code-router-onprem-routing-hero.png)

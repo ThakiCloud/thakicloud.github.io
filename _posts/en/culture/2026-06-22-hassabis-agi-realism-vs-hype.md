@@ -5,8 +5,6 @@ seo_title: "Hassabis AGI Realism vs Hype: Expectation Management Culture - Thaki
 seo_description: "Why AI organizations must adopt honest expectation management culture, drawing on Demis Hassabis's candid AGI timeline statements at Davos 2026 and Google I/O."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - demis-hassabis
   - agi
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/culture/hassabis-agi-realism-vs-hype/"
+categories:
+  - culture
 ---
 
 ## "Solving Erdős Problems Doesn't Make It AGI"

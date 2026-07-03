@@ -6,8 +6,6 @@ seo_description: "Visual-ARFT وMARFT وReTool وأحدث تقنيات التد�
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: ar
-categories:
-  - research
 tags:
   - reinforcement-learning
   - post-training
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/rl-post-training-agentic-models-research-review/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

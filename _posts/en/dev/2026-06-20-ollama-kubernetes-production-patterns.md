@@ -5,8 +5,6 @@ seo_title: "Ollama Kubernetes Production Deployment Patterns GPU PVC HPA - Thaki
 seo_description: "GPU node configuration, model storage PVC design, HPA autoscaling, Prometheus monitoring, and Modelfile patterns for deploying Ollama on Kubernetes."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [ollama, kubernetes, llm-serving, gpu, self-hosting, modelfile, prometheus, hpa]
 author_profile: true
 toc: true
@@ -16,6 +14,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/ollama-kubernetes-production-patterns/"
 reading_time: true
 lang: en
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 9 min

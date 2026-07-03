@@ -5,8 +5,6 @@ seo_title: "Autogenesis 자기진화 에이전트 프로토콜 분석 - Thaki Cl
 seo_description: "arXiv 2604.15034 Autogenesis Protocol: 에이전트 리소스 추상화, 자기진화 루프, 벤치마크 성능 향상에 대한 심층 분석과 ThakiCloud 플랫폼 적용 관점"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - self-evolving
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/autogenesis-self-evolving-agent-protocol/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

@@ -4,9 +4,6 @@ excerpt: "Voice-Pro를 활용하여 YouTube 비디오의 자막 생성, 다국�
 seo_title: "Voice-Pro YouTube 다국어 콘텐츠 자동화 튜토리얼 - Thaki Cloud"
 seo_description: "Voice-Pro 오픈소스 도구로 YouTube 비디오를 다국어로 자동 변환하는 방법. 음성복제, 자막생성, 번역, 더빙까지 완전 가이드"
 date: 2025-06-27
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Voice-Pro
   - YouTube
@@ -21,6 +18,9 @@ toc: true
 toc_label: YouTube 다국어 자동화 가이드
 canonical_url: "https://thakicloud.github.io/tutorials/dev/voice-pro-youtube-multilingual-automation-guide/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 YouTube 글로벌 콘텐츠 제작자들이 가장 어려워하는 것 중 하나가 **다국어 콘텐츠 생성**입니다. 하나의 비디오를 여러 언어로 번역하고 더빙하는 작업은 시간과 비용이 많이 드는 작업이었습니다. 하지만 **Voice-Pro** 오픈소스 도구를 활용하면 이 모든 과정을 자동화할 수 있습니다.

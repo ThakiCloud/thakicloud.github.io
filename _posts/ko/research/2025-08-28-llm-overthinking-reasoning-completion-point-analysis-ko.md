@@ -4,8 +4,6 @@ excerpt: "대형 언어 모델이 추론 과정에서 과도한 생각 패턴에
 seo_title: "LLM 과도한 생각 분석: 추론 완료 지점 - Thaki Cloud"
 seo_description: "대형 언어 모델의 과도한 생각 현상, 추론 완료 지점 식별, 그리고 AI 효율성 향상을 위한 최적화 전략에 대한 종합적인 연구 분석입니다."
 date: 2025-08-28
-categories:
-  - research
 tags:
   - 대형언어모델
   - 추론
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/research/llm-overthinking-reasoning-completion-point-analysis/
 canonical_url: "https://thakicloud.github.io/ko/research/llm-overthinking-reasoning-completion-point-analysis/"
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

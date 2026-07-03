@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تطوير واجهات تفاعلية باستخ�
 seo_title: "دروس MCP-UI: دليل تطوير واجهات الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "دليل شامل لتطوير MCP-UI. تعلم بناء واجهات الذكاء الاصطناعي التفاعلية باستخدام TypeScript و Python و Ruby. يتضمن أمثلة عملية واستراتيجيات النشر."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - mcp-ui
   - ai-interface
@@ -19,6 +17,8 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-ui-next-generation-ai-interface-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

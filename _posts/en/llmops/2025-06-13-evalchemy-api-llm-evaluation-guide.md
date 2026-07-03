@@ -4,8 +4,6 @@ excerpt: "Learn how to evaluate 100+ API models including GPT-4o, Claude-3, and 
 seo_title: "Evalchemy API LLM Evaluation - No-Installation Benchmark Guide"
 seo_description: "Complete guide to evaluating 100+ LLM models via API calls using Evalchemy, Curator, and LiteLLM. No installation required for GPT-4o, Claude-3, Gemini evaluation"
 date: 2025-06-13
-categories: 
-  - llmops
 tags: 
   - Evalchemy
   - LLM-Evaluation
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/llmops/evalchemy-api-llm-evaluation-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

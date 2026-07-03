@@ -4,8 +4,6 @@ excerpt: "텐센트의 오픈소스 에이전트 프레임워크 Youtu-Agent를 
 seo_title: "Youtu-Agent 튜토리얼: 오픈소스 모델로 AI 에이전트 구축하기 - Thaki Cloud"
 seo_description: "Youtu-Agent 프레임워크 완전 가이드: 설치, 설정, 예제, 벤치마킹. 웹 검색, 자동화, 비동기 처리 기능을 갖춘 강력한 AI 에이전트 구축 방법 알아보기."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - youtu-agent
   - ai-agents
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/youtu-agent-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/youtu-agent-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,8 +5,6 @@ date: 2025-06-17
 lang: ar
 permalink: /ar/news/hinton-ai-godfather-interview-key-insights/
 canonical_url: "https://thakicloud.github.io/ar/news/hinton-ai-godfather-interview-key-insights/"
-categories:
-  - news
 tags:
   - أمان الذكاء الاصطناعي
   - جيفري هينتون
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات الرئيسية"
 published: false
+categories:
+  - news
 ---
 
 {% include video id="giT0ytynSqg" provider="youtube" %}

@@ -5,8 +5,6 @@ seo_title: "Sakana Fugu 오케스트레이션 모델 분석 - 멀티에이전트
 seo_description: "Sakana AI Fugu는 LLM 에이전트 풀을 동적으로 조율하는 오케스트레이션 모델입니다. 아키텍처, 자체 발표 벤치마크의 한계, 벤더 종속 헤지 논리, ThakiCloud K8s 기반 멀티테넌트 에이전트 플랫폼 적용 관점을 정리했습니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - agentops
 tags:
   - sakana-ai
   - multi-agent
@@ -20,6 +18,8 @@ toc_icon: "sitemap"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/sakana-fugu-orchestration-model/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ## 개요

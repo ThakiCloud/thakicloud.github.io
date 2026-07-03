@@ -5,9 +5,6 @@ seo_title: "CrewAI AI 부동산 에이전트 시스템 분석 - 다중 에이전
 seo_description: "CrewAI와 LangChain을 활용한 AI 부동산 에이전트 팀 시스템의 코드 분석, 아키텍처 설계, 유저 플로우와 머메이드 다이어그램으로 상세 해부"
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - agentops
-  - llmops
 tags:
   - CrewAI
   - LangChain
@@ -24,6 +21,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/ai-real-estate-agent-team-crewai-analysis/"
 reading_time: true
+categories:
+  - agentops
+  - llmops
+published: false
 ---
 
 ![핵심 개념 일러스트](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)

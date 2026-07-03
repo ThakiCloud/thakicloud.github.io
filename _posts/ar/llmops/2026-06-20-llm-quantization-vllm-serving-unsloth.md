@@ -7,8 +7,6 @@ date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
 canonical_url: https://thakicloud.github.io/ar/llmops/llm-quantization-vllm-serving-unsloth/
-categories:
-  - llmops
 tags:
   - quantization
   - vllm
@@ -24,6 +22,8 @@ header:
   teaser: /assets/images/llm-quant-vllm-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - llmops
 ---
 
 ![خريطة صيغ الضغط الكمّي التي تخدمها vLLM](/assets/images/llm-quant-vllm-hero.png)

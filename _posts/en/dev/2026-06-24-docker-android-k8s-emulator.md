@@ -6,8 +6,6 @@ seo_title: "docker-android K8s Emulator - Container Android Device Farm - Thaki 
 seo_description: "How to run an Android emulator as a headless container with docker-android. A practical guide to KVM passthrough, GPU acceleration, scrcpy remote control, and CI/CD test automation on ThakiCloud Kubernetes."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - dev
 tags:
   - docker
   - android
@@ -22,6 +20,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/docker-android-k8s-emulator/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ```mermaid

@@ -5,8 +5,6 @@ seo_title: "DSPy 튜토리얼 - 선언적 AI 프로그래밍 완벽 가이드 - 
 seo_description: "DSPy 프레임워크로 언어 모델을 위한 모듈형 AI 소프트웨어를 구축하는 방법을 실제 코드 예제와 테스트 결과로 배워보세요. Stanford NLP 연구진이 개발한 혁신적인 AI 프로그래밍 패러다임을 마스터하세요."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - tutorials
 tags:
   - DSPy
   - AI-Programming
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/dspy-complete-tutorial-declarative-ai-programming/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

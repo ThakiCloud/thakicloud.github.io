@@ -5,8 +5,6 @@ seo_title: "claude-code-router Cost Routing - Multi-Model Claude Code Setup - Th
 seo_description: "Practical guide to routing Claude Code across glm-5.2/MiniMax-M2.7/Kimi K2 with claude-code-router. Per-task model split, MiniMax thinking-leak fix, and a continuous cost-vs-Sonnet measurement loop, all verified in the ThakiCloud environment."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - claude-code
   - model-routing
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-router-onprem-routing/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![Concept diagram](/assets/images/claude-code-router-onprem-routing-hero.png)

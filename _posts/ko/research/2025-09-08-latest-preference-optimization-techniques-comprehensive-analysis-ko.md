@@ -5,8 +5,6 @@ seo_title: "최신 선호도 최적화 기법 2025 - 종합 분석"
 seo_description: "현대 정책 최적화 방법론 상세 분석: Pref-GRPO, PVPO, DCPO, ARPO, GRPO-RoC. 강화학습 발전에 대한 연구 인사이트"
 date: 2025-09-08
 lang: ko
-categories:
-  - research
 tags:
   - 선호도-최적화
   - 강화학습
@@ -20,6 +18,8 @@ toc: true
 toc_label: "목차"
 permalink: /ko/research/latest-preference-optimization-techniques-comprehensive-analysis/
 canonical_url: "https://thakicloud.github.io/ko/research/latest-preference-optimization-techniques-comprehensive-analysis/"
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

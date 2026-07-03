@@ -5,8 +5,6 @@ seo_title: "Stanford STORM 완벽 가이드 - LLM 지식 큐레이션 에이전�
 seo_description: "Stanford STORM 프로젝트 완벽 분석. 자동 리서치, Wikipedia 스타일 보고서 생성, 협업 AI 에이전트, 실전 배포 가이드. 25.4k 스타 오픈소스 프로젝트 활용법."
 date: 2025-06-30
 last_modified_at: 2025-06-30
-categories:
-  - agentops
 tags:
   - stanford-storm
   - knowledge-curation
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/stanford-storm-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

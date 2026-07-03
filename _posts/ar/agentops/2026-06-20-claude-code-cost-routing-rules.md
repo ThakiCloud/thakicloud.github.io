@@ -5,8 +5,6 @@ seo_title: "تحسين تكلفة Claude Code: توجيه النماذج ومو�
 seo_description: "قواعد ThakiCloud الميدانية لتخفيض تكاليف وكلاء Claude Code: توجيه haiku/sonnet/opus/fable، وموجّه مهارات BM25، وقاعدة 2K توكن، وترقية النماذج بالمراجعة التراجعية، والتدقيق اليومي -- مع بيانات حوادث حقيقية."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - cost-optimization
   - model-routing
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/cost-routing-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![مهام الوكيل تتفرع عبر مستويات النماذج بينما تنخفض التكاليف](/assets/images/cost-routing-hero.png)

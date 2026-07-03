@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تنظيم وإدارة علامات المتصف�
 seo_title: "دليل LazyCat Bookmark Cleaner لإدارة العلامات التلقائية - Thaki Cloud"
 seo_description: "دليل شامل لاستخدام LazyCat Bookmark Cleaner لتنظيم علامات المتصفح بذكاء. تعلم إزالة التكرارات وتنظيف الروابط غير الصالحة وإنشاء ملفات تعريف العلامات مع هذا الدليل الشامل."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - إدارة-العلامات
   - إضافة-المتصفح
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/lazycat-bookmark-clean
 lang: ar
 permalink: /ar/tutorials/lazycat-bookmark-cleaner-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

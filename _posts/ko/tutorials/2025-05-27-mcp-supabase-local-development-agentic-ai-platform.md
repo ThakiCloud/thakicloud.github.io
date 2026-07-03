@@ -5,8 +5,6 @@ seo_title: "MCP Supabase 로컬 개발 환경 Agentic AI 플랫폼 구축 가이
 seo_description: "MCP와 Supabase를 활용한 로컬 개발 환경에서 AI 에이전트가 데이터베이스를 직접 제어하는 agentic AI 플랫폼 개발 방법과 클라우드 LLM 기반 소프트웨어 회사 활용 케이스를 상세히 안내합니다."
 date: 2025-01-27
 last_modified_at: 2025-01-27
-categories:
-  - tutorials
 tags:
   - MCP
   - Supabase
@@ -29,6 +27,8 @@ header:
 canonical_url: "https://thakicloud.github.io/tutorials/mcp-supabase-local-development-agentic-ai-platform/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

@@ -2,9 +2,6 @@
 title: "Ruby Sass 3.x에서 Dart Sass로 완벽 마이그레이션 가이드"
 excerpt: "Ruby Sass 3.x 코드베이스를 최신 Dart Sass로 안전하게 이동하는 단계별 체크리스트와 자동화 도구 활용법"
 date: 2025-06-15
-categories: 
-  - tutorials
-  - dev
 tags: 
   - sass
   - scss  
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: 마이그레이션 가이드
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 Ruby Sass 3.x 코드베이스를 최신 Dart Sass(향후 3.0 안전 대응)로 이동할 때 따라할 수 있는 체크리스트를 소개합니다. 핵심은 **"공식 Sass Migrator로 최대한 자동화 → 위험 구간만 수동 보강 → 빌드/CI 정비"**라는 세 단계로 압축됩니다.

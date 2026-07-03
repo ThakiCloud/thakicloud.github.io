@@ -8,8 +8,6 @@ last_modified_at: 2025-07-30
 lang: en
 permalink: /en/research/arpo-agentic-reinforced-policy-optimization-research/
 canonical_url: "https://thakicloud.github.io/en/research/arpo-agentic-reinforced-policy-optimization-research/"
-categories:
-  - research
 tags:
   - ARPO
   - Reinforcement-Learning
@@ -26,6 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

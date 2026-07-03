@@ -4,8 +4,6 @@ excerpt: "Exploring Alibaba's breakthrough Qwen3-Next-80B-A3B-Instruct model tha
 seo_title: "Qwen3-Next AI Model: Hybrid Architecture Revolution - Thaki Cloud"
 seo_description: "Discover how Qwen3-Next-80B-A3B-Instruct revolutionizes AI with hybrid attention, sparse MoE, and ultra-long context processing capabilities up to 1M tokens."
 date: 2025-09-22
-categories:
-  - owm
 tags:
   - artificial-intelligence
   - large-language-models
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/
 canonical_url: "https://thakicloud.github.io/en/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Expected Reading Time**: 8 minutes

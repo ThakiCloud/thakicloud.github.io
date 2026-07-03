@@ -5,8 +5,6 @@ seo_title: "NVIDIA Granary 다언어 음성 데이터셋 완벽 가이드 - Thak
 seo_description: "25개 유럽 언어, 64만 시간 오디오로 구성된 NVIDIA Granary 데이터셋의 특징, 구조, 활용법을 상세히 소개합니다."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - datasets
 tags:
   - nvidia
   - granary
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 reading_time: true
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

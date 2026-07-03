@@ -5,8 +5,6 @@ seo_title: "مقارنة معايير أداء vLLM مقابل Ollama للاست
 seo_description: "مقارنة بين vLLM وOllama من حيث الإنتاجية والكمون واستهلاك VRAM عبر معايير أداء RTX 4090. PagedAttention والتجميع المستمر ومنحنيات التوسع المتزامن واعتبارات الخدمة متعددة المستأجرين على Kubernetes."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - dev
 tags:
   - vllm
   - ollama
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/vllm-vs-ollama-local-inference/"
 reading_time: true
+categories:
+  - dev
 ---
 
 حين تبحث عن كيفية تشغيل نموذج لغوي كبير محلياً، يظهر اسمان في الغالب: Ollama وvLLM. وكثيراً ما تقرأ حججاً قاطعة من قبيل "إن كنت تريد الأداء فلا تستخدم Ollama، استخدم vLLM". هل هذا صحيح؟ الإجابة المختصرة: نصفه فقط. الجهاز المحمول الذي يستخدمه شخص واحد بطلب واحد في كل مرة مشكلة مختلفة تماماً عن خادم يخدم عشرات المستخدمين المتزامنين. يستند هذا المقال إلى أرقام معايير أداء RTX 4090 المنشورة عام 2026 لدراسة أين تتباين الأداتان، وما دلالة ذلك التباين لمنصة ThakiCloud المستندة إلى Kubernetes.

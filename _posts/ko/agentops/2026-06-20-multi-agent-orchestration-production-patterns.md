@@ -5,8 +5,6 @@ seo_title: "프로덕션 멀티에이전트 오케스트레이션 패턴 6가지
 seo_description: "LLM 에이전트를 운영하는 엔지니어를 위한 멀티에이전트 패턴 실전 가이드. Orchestrator-Worker, Fan-out/Fan-in, Multi-agent Debate 패턴의 구조와 비용 트레이드오프를 설명합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - multi-agent
   - orchestration
@@ -22,6 +20,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

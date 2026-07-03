@@ -4,8 +4,6 @@ excerpt: "알리바바의 Logics-Parsing을 통해 복잡한 문서 처리 워�
 seo_title: "알리바바 Logics-Parsing 문서 AI 워크플로우 - 고급 VLM 처리 기술"
 seo_description: "알리바바의 Logics-Parsing이 엔드투엔드 VLM 기술로 복잡한 레이아웃에서 뛰어난 성능을 달성하며 문서 처리 워크플로우를 어떻게 혁신하는지 알아보세요."
 date: 2025-09-30
-categories:
-  - owm
 tags:
   - 문서파싱
   - 비전언어모델
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/owm/alibaba-logics-parsing-document-ai-workflow/
 canonical_url: "https://thakicloud.github.io/ko/owm/alibaba-logics-parsing-document-ai-workflow/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

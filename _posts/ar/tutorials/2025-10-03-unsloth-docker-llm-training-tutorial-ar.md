@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية ضبط نماذج اللغة الكبيرة بكف
 seo_title: "دليل Unsloth Docker لضبط نماذج اللغة - الدليل الكامل 2025"
 seo_description: "أتقن ضبط نماذج اللغة الكبيرة باستخدام Unsloth Docker. دليل خطوة بخطوة يغطي التثبيت وإعداد GPU والوصول إلى Jupyter Lab وأمثلة التدريب العملية لتخصيص النماذج بكفاءة."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - unsloth
   - docker
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/unsloth-docker-llm-training-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/unsloth-docker-llm-training-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

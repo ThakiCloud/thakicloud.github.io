@@ -4,8 +4,6 @@ excerpt: "프롬프트 엔지니어링을 마스터하고 Promptify로 GPT, PaLM
 seo_title: "Promptify 튜토리얼: LLM 구조화 출력을 위한 프롬프트 엔지니어링 완전 가이드"
 seo_description: "GPT 등 LLM과 함께 프롬프트 엔지니어링을 위한 Promptify 사용법을 배웁니다. 학습 데이터 없이 NER, 분류, QA 등 NLP 태스크에서 구조화된 출력을 얻으세요."
 date: 2025-09-05
-categories:
-  - tutorials
 tags:
   - 프롬프트-엔지니어링
   - 대규모언어모델
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/promptify-prompt-engineering-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/promptify-prompt-engineering-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

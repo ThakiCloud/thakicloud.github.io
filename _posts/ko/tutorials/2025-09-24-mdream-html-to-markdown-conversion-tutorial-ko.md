@@ -4,8 +4,6 @@ excerpt: "웹사이트를 AI 애플리케이션과 LLM 컨텍스트 생성에 �
 seo_title: "mdream 튜토리얼: AI용 HTML to 마크다운 변환 - Thaki Cloud"
 seo_description: "웹사이트를 마크다운으로 변환하는 mdream 라이브러리 마스터하기. 설치, API 사용법, 플러그인 시스템, AI 애플리케이션과 LLM 통합을 위한 실제 예제 포함."
 date: 2025-09-24
-categories:
-  - tutorials
 tags:
   - mdream
   - html-to-markdown
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/mdream-html-to-markdown-conversion-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/mdream-html-to-markdown-conversion-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

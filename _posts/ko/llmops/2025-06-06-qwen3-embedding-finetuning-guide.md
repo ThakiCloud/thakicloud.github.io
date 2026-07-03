@@ -1,9 +1,6 @@
 ---
 title: "Qwen3-Embedding 파인튜닝 완전 가이드"
 date: 2025-06-06
-categories: 
-  - llmops
-  - machine-learning
 tags: 
   - qwen3
   - embedding
@@ -14,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 이 포스트에서는 Qwen3-Embedding 모델을 사용자 정의 검색 및 추천 작업에 맞게 파인튜닝하는 방법을 자세히 알아보겠습니다. DeepSpeed와 LoRA 기법을 활용한 효율적인 미세 조정 과정을 단계별로 설명드리겠습니다.

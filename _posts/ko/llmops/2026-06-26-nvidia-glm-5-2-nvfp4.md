@@ -5,8 +5,6 @@ seo_title: "NVIDIA GLM-5.2-NVFP4 753B MoE 4비트 양자화 vLLM SGLang 서빙 �
 seo_description: "nvidia/GLM-5.2-NVFP4(NVFP4 4비트 양자화)의 선택적 양자화 전략, FP8 대비 정확도 유지, vLLM/SGLang 배포 명령, Blackwell TP=8 요구를 ThakiCloud K8s 기반 멀티테넌트 서빙 플랫폼 관점에서 분석합니다."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -23,6 +21,8 @@ toc_icon: "microchip"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![16비트 신경망 격자가 4비트의 압축된 코어로 응축되는 추상 이미지](/assets/images/nvidia-glm-5-2-nvfp4-hero.png)

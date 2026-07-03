@@ -2,9 +2,6 @@
 title: "Google Magenta RealTime: 실시간 AI 음악 생성의 새로운 패러다임"
 excerpt: "Google DeepMind에서 공개한 오픈소스 실시간 음악 생성 모델 Magenta RealTime의 아키텍처, 특징, 활용 방안을 상세히 분석합니다."
 date: 2025-06-21
-categories: 
-  - research
-  - ai-application
 tags: 
   - AI음악
   - 실시간생성
@@ -17,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "Magenta RealTime 가이드"
 published: false
+categories:
+  - research
 ---
 
 ## 실시간 AI 음악 생성의 혁신

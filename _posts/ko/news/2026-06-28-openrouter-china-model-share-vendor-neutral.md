@@ -5,8 +5,6 @@ seo_title: "OpenRouter 미·중 모델 점유율 역전과 모델 중립 전략 
 seo_description: "OpenRouter 토큰 점유율에서 미국 모델이 70%에서 30%로 내려가고 중국 모델이 46%로 올라온 데이터를 검증하고, 토큰 점유율과 매출 점유율의 분리(Anthropic 토큰 12%·매출 46%)를 짚습니다. DeepSeek·Qwen 부상의 원인과 모델 중립 라우팅·컴플라이언스 레이어라는 ThakiCloud·Paxis 관점 시사점을 정리합니다."
 date: 2026-06-28
 last_modified_at: 2026-06-28
-categories:
-  - news
 tags:
   - openrouter
   - china-llm
@@ -20,6 +18,8 @@ toc: true
 toc_label: "목차"
 toc_icon: "chart-bar"
 canonical_url: "https://thakicloud.github.io/ko/news/openrouter-china-model-share-vendor-neutral/"
+categories:
+  - news
 ---
 
 OpenRouter는 수백만 명의 개발자가 여러 LLM을 하나의 API로 골라 쓰는 플랫폼입니다. 어떤 모델이 실제로 얼마나 호출되는지를 비용에 민감한 개발자들의 실사용으로 보여주기 때문에, 시장의 선행 지표로 자주 인용됩니다. 그 OpenRouter에서 미국 모델의 토큰 점유율이 1년 만에 약 70%에서 약 30%로 내려앉았습니다.

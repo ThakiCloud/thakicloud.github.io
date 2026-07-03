@@ -4,8 +4,6 @@ excerpt: "Master professional audio transcription with noScribe - a powerful GUI
 seo_title: "noScribe AI Audio Transcription Tutorial - Complete Setup Guide"
 seo_description: "Learn how to use noScribe for professional audio transcription with AI. Step-by-step guide covering installation, configuration, and advanced features for researchers and content creators."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - audio-transcription
   - whisper
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/noscribe-ai-audio-transcription-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/noscribe-ai-audio-transcription-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

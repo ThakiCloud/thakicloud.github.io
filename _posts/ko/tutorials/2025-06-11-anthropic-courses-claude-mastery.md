@@ -1,10 +1,6 @@
 ---
 title: "Claude 마스터하기: Anthropic의 공식 교육 과정으로 AI 프롬프팅 전문가 되기"
 date: 2025-06-11
-categories: 
-  - tutorials
-  - llmops
-  - dev
 tags: 
   - Claude
   - Anthropic
@@ -17,6 +13,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
+  - llmops
+  - dev
 ---
 
 AI 개발에서 프롬프트 엔지니어링은 이제 필수 스킬이 되었습니다. 하지만 어디서부터 시작해야 할지, 어떻게 체계적으로 학습해야 할지 막막하셨나요? **Anthropic**이 제공하는 공식 교육 과정이 그 해답을 제시합니다.

@@ -5,9 +5,6 @@ seo_title: "Claude Code 역공학 Part 2: Agent 루프와 도구 실행 LLMOps �
 seo_description: "Claude Code 역공학으로 발견된 Agent 루프 시스템, 6단계 도구 실행 프레임워크, 보안 아키텍처, 모니터링 시스템 등 프로덕션 LLMOps의 핵심 기술을 실무 관점에서 심층 분석합니다."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - llmops
-  - research
 tags:
   - claude-code
   - reverse-engineering
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

@@ -7,8 +7,6 @@ date: 2025-09-16
 lang: ko
 permalink: /ko/research/chatgpt-usage-patterns-research-analysis/
 canonical_url: "https://thakicloud.github.io/ko/research/chatgpt-usage-patterns-research-analysis/"
-categories:
-  - research
 tags:
   - ChatGPT
   - 사용자행동분석
@@ -18,6 +16,8 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

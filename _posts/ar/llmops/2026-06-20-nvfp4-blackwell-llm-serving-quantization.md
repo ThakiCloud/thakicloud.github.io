@@ -5,8 +5,6 @@ seo_title: "دليل تكميم LLM بـ NVFP4 على Blackwell لخدمة ال�
 seo_description: "استراتيجية عملية لرفع إنتاجية خدمة LLM وتقليص تكاليف ذاكرة GPU باستخدام NVFP4 على GPU NVIDIA Blackwell. يشمل طرق التطبيق على vLLM و TensorRT-LLM."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/nvfp4-blackwell-llm-serving-quantization/"
 reading_time: true
 lang: ar
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

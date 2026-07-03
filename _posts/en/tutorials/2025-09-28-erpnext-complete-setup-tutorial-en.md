@@ -4,8 +4,6 @@ excerpt: "Complete guide to setting up and using ERPNext, a powerful open-source
 seo_title: "ERPNext Tutorial: Complete Setup Guide for Open Source ERP - Thaki Cloud"
 seo_description: "Learn how to install, configure, and use ERPNext - a free open-source ERP system. Complete tutorial covering Docker setup, basic configuration, and business features."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - ERPNext
   - ERP
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/erpnext-complete-setup-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/erpnext-complete-setup-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

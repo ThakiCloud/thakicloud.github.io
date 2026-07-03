@@ -5,9 +5,6 @@ seo_title: "Next.js SaaS Stripe Starter 완전 가이드 - 구독 결제 시스�
 seo_description: "Next.js, Supabase, Stripe를 사용한 SaaS 애플리케이션 개발 완전 가이드. 구독 결제, 웹훅, 사용자 관리, 배포까지 실무 중심의 단계별 튜토리얼을 제공합니다."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - tutorials
-  - dev
 tags:
   - nextjs
   - saas
@@ -29,6 +26,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/nextjs-saas-stripe-starter-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

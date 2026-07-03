@@ -4,8 +4,6 @@ excerpt: "استكشاف نموذج Qwen3-Next-80B-A3B-Instruct الثوري م�
 seo_title: "نموذج Qwen3-Next للذكاء الاصطناعي: ثورة البنية المختلطة - Thaki Cloud"
 seo_description: "اكتشف كيف يثور Qwen3-Next-80B-A3B-Instruct في مجال الذكاء الاصطناعي بآليات الانتباه المختلطة وMoE المتناثر وقدرات معالجة السياق الفائق حتى مليون رمز."
 date: 2025-09-22
-categories:
-  - owm
 tags:
   - الذكاء-الاصطناعي
   - النماذج-اللغوية-الكبيرة
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/
 canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

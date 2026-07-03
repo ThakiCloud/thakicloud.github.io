@@ -6,8 +6,6 @@ seo_description: "كيف تبني ثقافة قرار تتفوق فيها الب
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - culture
 tags:
   - قرار-مبني-على-البيانات
   - صنع-القرار
@@ -20,6 +18,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/data-driven-decision-culture-ai/
 canonical_url: "https://thakicloud.github.io/ar/culture/data-driven-decision-culture-ai/"
+categories:
+  - culture
 ---
 
 ## "أفضل منتقي أسهم لا ينتقي الأسهم"

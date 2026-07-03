@@ -4,8 +4,6 @@ excerpt: "Learn how to fine-tune large language models efficiently using Unsloth
 seo_title: "Unsloth Docker LLM Fine-tuning Tutorial - Complete Guide 2025"
 seo_description: "Master LLM fine-tuning with Unsloth Docker. Step-by-step tutorial covering installation, GPU setup, Jupyter Lab access, and practical training examples for efficient model customization."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - unsloth
   - docker
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/unsloth-docker-llm-training-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/unsloth-docker-llm-training-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

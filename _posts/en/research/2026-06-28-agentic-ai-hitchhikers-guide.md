@@ -6,8 +6,6 @@ seo_description: "arXiv:2606.24937 'The Hitchhiker's Guide to Agentic AI' summar
 date: 2026-06-28
 last_modified_at: 2026-06-28
 lang: en
-categories:
-  - research
 tags:
   - agentic-ai
   - llm
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/agentic-ai-hitchhikers-guide/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![Abstract structure of four luminous layers stacked from bottom to top, connected to each other](/assets/images/agentic-ai-hitchhikers-guide-hero.png)

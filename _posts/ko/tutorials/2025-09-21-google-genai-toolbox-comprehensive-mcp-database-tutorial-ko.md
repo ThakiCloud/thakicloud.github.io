@@ -4,8 +4,6 @@ excerpt: "Google의 GenAI Toolbox를 활용한 MCP 프로토콜 기반 데이터
 seo_title: "Google GenAI Toolbox MCP 데이터베이스 튜토리얼 - 완전 통합 가이드"
 seo_description: "Google GenAI Toolbox를 활용한 MCP 서버 데이터베이스 통합 완전 튜토리얼. 설정, 구성, 프레임워크 통합을 실제 예제와 함께 학습하세요."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - GenAI-Toolbox
   - MCP
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

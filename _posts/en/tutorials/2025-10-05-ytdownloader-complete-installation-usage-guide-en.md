@@ -4,8 +4,6 @@ excerpt: "Master ytDownloader - a modern GUI application supporting hundreds of 
 seo_title: "ytDownloader Tutorial: Complete Video Download Guide 2025 - Thaki Cloud"
 seo_description: "Complete ytDownloader guide covering installation on Windows/Linux/macOS, advanced features like playlist downloads, video compression, and troubleshooting tips."
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - ytDownloader
   - video-download
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/ytdownloader-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/ytdownloader-complete-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

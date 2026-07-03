@@ -5,8 +5,6 @@ seo_title: "دليل Agent Leaderboard v2 - الدليل الشامل لتقيي
 seo_description: "دليل شامل يغطي كيفية تقييم أداء وكلاء الذكاء الاصطناعي باستخدام Agent Leaderboard v2 وكيفية استخدام مقياس TSQ مع أمثلة عملية."
 date: 2025-07-18
 last_modified_at: 2025-07-18
-categories:
-  - llmops
 tags:
   - agent-leaderboard
   - ai-agents
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/agent-leaderboard-v2-comp
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

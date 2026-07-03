@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to BrowserUse AI agent-powered intelligent web app
 seo_title: "BrowserUse QA-Use AI E2E Testing Platform Complete Guide - Thaki Cloud"
 seo_description: "Learn how to automate web application testing with BrowserUse AI agents. Complete guide covering Docker installation, test suite creation, and scheduling"
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - BrowserUse
   - AI Testing
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/browseruse-qa-use-tuto
 lang: en
 permalink: /en/tutorials/browseruse-qa-use-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

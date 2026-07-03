@@ -4,8 +4,6 @@ excerpt: "Learn how to implement comprehensive LLM observability using OpenLLMet
 seo_title: "OpenLLMetry Tutorial: LLM Observability & Monitoring Guide - Thaki Cloud"
 seo_description: "Complete tutorial on OpenLLMetry for LLM observability. Learn installation, configuration, and monitoring of AI applications with practical examples."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - openllmetry
   - llm-observability
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/openllmetry-complete-guide-llm-observability/
 canonical_url: "https://thakicloud.github.io/en/tutorials/openllmetry-complete-guide-llm-observability/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

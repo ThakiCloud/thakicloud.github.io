@@ -4,8 +4,6 @@ excerpt: "دليل شامل لنموذج Microsoft VibeVoice لتحويل الن
 seo_title: "دليل Microsoft VibeVoice الكامل - نموذج ذكي اصطناعي تحادثي متعدد المتحدثين"
 seo_description: "تعرف على Microsoft VibeVoice، نموذج متقدم لتحويل النص إلى كلام يدعم محادثات 4 متحدثين لمدة تصل إلى 90 دقيقة مع قدرات عبر اللغات والانتقال الطبيعي بين المتحدثين."
 date: 2025-08-26
-categories:
-  - owm
 tags:
   - تحويل-النص-إلى-كلام
   - مايكروسوفت
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/owm/microsoft-vibevoice-frontier-conversational-tts-guide/
 canonical_url: "https://thakicloud.github.io/ar/owm/microsoft-vibevoice-frontier-conversational-tts-guide/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

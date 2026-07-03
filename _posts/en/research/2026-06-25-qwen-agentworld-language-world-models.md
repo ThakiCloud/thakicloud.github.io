@@ -5,8 +5,6 @@ seo_title: "Qwen-AgentWorld Language World Model Analysis - Agent Environment Si
 seo_description: "A data-driven analysis of Qwen-AgentWorld-35B-A3B and AgentWorldBench based on official sources. Covers CPT/SFT/RL three-stage training, 7-domain environment simulation, real performance gains from Sim RL and LWM warmup, and implications for ThakiCloud's Kubernetes agent platform."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - research
 tags:
   - qwen-agentworld
   - world-model
@@ -23,6 +21,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/qwen-agentworld-language-world-models/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 14 min

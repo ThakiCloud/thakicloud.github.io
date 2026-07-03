@@ -5,8 +5,6 @@ seo_title: "Baidu ERNIE 4.5 완전 오픈소스 AI 모델 가이드 - 0.3B~424B 
 seo_description: "Baidu ERNIE 4.5 시리즈 완벽 분석. 0.3B~424B 파라미터, MoE 아키텍처, Vision-Language 모델, Apache 2.0 오픈소스, 128K 컨텍스트, 실전 배포 가이드까지 상세 정리."
 date: 2025-06-30
 last_modified_at: 2025-06-30
-categories:
-  - owm
 tags:
   - ernie-45
   - baidu
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/baidu-ernie-45-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

@@ -5,8 +5,6 @@ seo_title: "AskToAct: إطار التوضيح التصحيحي الذاتي لا
 seo_description: "تحليل مفصّل لآليات AskToAct الأساسية ومنهجية بناء مجموعة البيانات وعملية التدريب للتعامل مع الاستفسارات غير المحددة في سيناريوهات استخدام الأدوات الواقعية."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - LLM
   - 도구학습
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/research/asktoact-llm-tool-use-s
 reading_time: true
 lang: ar
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

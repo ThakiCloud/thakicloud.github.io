@@ -4,8 +4,6 @@ excerpt: "Full system integration, CI/CD pipeline connectivity, and team onboard
 seo_title: "GitHub CLI Advanced Workflows Part 5 - Real-World Application Complete Guide - Thaki Cloud"
 seo_description: "Completing the GitHub CLI automation system: full integration, CI/CD pipeline connectivity, performance optimization, and production use cases for an expert-level development environment"
 date: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - advanced-workflows
@@ -17,7 +15,9 @@ lang: en
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/en/dev/github-cli-advanced-workflows/"
-published: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 25 min

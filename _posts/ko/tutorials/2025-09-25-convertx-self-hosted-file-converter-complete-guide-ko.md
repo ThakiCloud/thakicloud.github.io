@@ -4,8 +4,6 @@ excerpt: "1000개 이상의 파일 형식을 지원하는 강력한 셀프 호�
 seo_title: "ConvertX 셀프 호스팅 파일 변환기 튜토리얼 - 완전 가이드 - Thaki Cloud"
 seo_description: "ConvertX를 Docker로 배포하는 단계별 가이드. 이미지, 비디오, 문서, 3D 에셋을 포함한 1000개 이상의 파일 형식을 지원하는 셀프 호스팅 파일 변환기입니다."
 date: 2025-09-25
-categories:
-  - tutorials
 tags:
   - docker
   - file-converter
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/tutorials/convertx-self-hosted-file-converter-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/convertx-self-hosted-file-converter-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

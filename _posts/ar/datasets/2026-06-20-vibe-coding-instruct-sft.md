@@ -4,8 +4,6 @@ excerpt: "Vibe-Coding-Instruct الذي نشره lazarus19 مجموعة بيان
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - datasets
 tags:
   - sft
   - instruction-tuning
@@ -21,6 +19,8 @@ toc: true
 toc_label: "دليل Vibe-Coding-Instruct"
 reading_time: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/vibe-coding-instruct-sft/"
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

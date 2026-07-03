@@ -5,8 +5,6 @@ seo_title: "커리어 성장 전략: 기술적 역량을 넘어서 - Thaki Cloud
 seo_description: "기술적 역량만으로는 커리어 성장에 한계가 있는 이유와 고성과 전문가들을 구별하는 네 가지 핵심 역량에 대해 알아보세요."
 date: 2025-09-11
 last_modified_at: 2026-06-20
-categories:
-  - careers
 tags:
   - 커리어개발
   - 직업성장
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/careers/beyond-technical-skills-career-growth-strategy/
 canonical_url: "https://thakicloud.github.io/ko/careers/beyond-technical-skills-career-growth-strategy/"
+categories:
+  - careers
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

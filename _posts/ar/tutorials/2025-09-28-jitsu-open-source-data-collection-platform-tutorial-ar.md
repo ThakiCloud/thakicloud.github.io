@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إعداد واستخدام Jitsu، البديل �
 seo_title: "دليل Jitsu: إعداد منصة جمع البيانات مفتوحة المصدر - Thaki Cloud"
 seo_description: "دليل Jitsu الشامل يغطي التثبيت والتكوين والتكامل. تعلم بناء خطوط أنابيب البيانات في الوقت الفعلي مع هذا البديل مفتوح المصدر لـ Segment للفرق الحديثة للبيانات."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - jitsu
   - جمع-البيانات
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/jitsu-open-source-data-collection-platform-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/jitsu-open-source-data-collection-platform-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

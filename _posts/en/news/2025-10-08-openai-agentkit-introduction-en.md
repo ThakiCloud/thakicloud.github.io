@@ -4,8 +4,6 @@ excerpt: "OpenAI introduces AgentKit, a comprehensive toolkit that transforms ag
 seo_title: "OpenAI AgentKit Launch: AI Agent Development Platform - Thaki Cloud"
 seo_description: "Discover OpenAI's new AgentKit platform that revolutionizes AI agent development with visual workflow design, connector registry, and ChatKit for rapid deployment."
 date: 2025-10-08
-categories:
-  - news
 tags:
   - OpenAI
   - AgentKit
@@ -18,6 +16,8 @@ toc_label: "Contents"
 lang: en
 permalink: /en/news/openai-agentkit-introduction/
 canonical_url: "https://thakicloud.github.io/en/news/openai-agentkit-introduction/"
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 4 minutes

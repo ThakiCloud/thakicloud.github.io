@@ -4,8 +4,6 @@ excerpt: "اكتشف كيف يُحدث IBM Granite Docling 258M تحولاً ف�
 seo_title: "IBM Granite Docling 258M: أتمتة سير عمل المستندات بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "تعلم كيف يُحدث IBM Granite Docling 258M ثورة في سير عمل تحويل المستندات بتقنية الذكاء الاصطناعي متعدد الوسائط. دليل شامل لمعالجة المستندات الآلية واستخراج البيانات المنظمة."
 date: 2025-09-18
-categories:
-  - owm
 tags:
   - granite-docling
   - تحويل-المستندات
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/owm/granite-docling-258m-document-conversion-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ar/owm/granite-docling-258m-document-conversion-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

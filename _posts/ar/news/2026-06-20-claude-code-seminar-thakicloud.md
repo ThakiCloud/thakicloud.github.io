@@ -6,8 +6,6 @@ seo_description: "مواد سيمنار Claude Code الداخلي الذي أج
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - news
 tags:
   - claude-code
   - seminar
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/news/claude-code-seminar-thakicloud/"
 reading_time: true
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 6 دقائق

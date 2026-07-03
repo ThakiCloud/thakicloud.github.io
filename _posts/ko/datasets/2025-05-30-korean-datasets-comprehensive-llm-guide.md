@@ -2,8 +2,6 @@
 title: "한국어 LLM 학습 완전 정복: 18만+ 샘플부터 11.4M 멀티모달까지"
 excerpt: "Hugging Face heegyu 컬렉션부터 AI-Hub 공공데이터까지. 한국어 대화형 AI 구축을 위한 사전학습, SFT, RLHF 전체 파이프라인 데이터셋 가이드"
 date: 2025-05-30
-categories:
-  - datasets
 tags:
   - 한국어데이터셋
   - Korean-RLHF
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "한국어 LLM 데이터셋 가이드"
 published: false
+categories:
+  - datasets
 ---
 
 > **TL;DR** 한국어 LLM 학습을 위한 **완전한 데이터셋 생태계**를 소개한다. **허깅페이스 heegyu 컬렉션 37.5만 샘플**부터 **AI-Hub 수백TB 공공데이터**까지, 사전학습→SFT→RLHF 전체 파이프라인을 커버하는 실전 가이드다. **한국어 ChatGPT 수준 모델** 구축을 위한 모든 자료가 여기 있다.

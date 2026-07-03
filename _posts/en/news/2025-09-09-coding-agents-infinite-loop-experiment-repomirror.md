@@ -5,8 +5,6 @@ seo_title: "Coding Agent Infinite Loop Experiment: How AI Built 6 Repositories O
 seo_description: "Learn about the revolutionary experiment where a Claude coding agent in infinite loop successfully automated React→Vue, Python→TypeScript porting and developed the RepoMirror tool."
 date: 2025-09-09
 lang: en
-categories:
-  - news
 tags:
   - CodingAgent
   - AIAutomation
@@ -19,6 +17,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/news/coding-agents-infinite-loop-experiment-repomirror/"
 permalink: /en/news/coding-agents-infinite-loop-experiment-repomirror/
+categories:
+  - news
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

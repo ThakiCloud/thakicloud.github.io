@@ -5,8 +5,6 @@ seo_title: "NVIDIA NeMo-RL GRPO DeepScaleR 레시피 완벽 가이드 - Thaki Cl
 seo_description: "NVIDIA NeMo-RL과 GRPO 기술의 핵심 원리, DeepScaleR 레시피 활용법, 그리고 대규모 언어 모델 강화학습의 혁신적 접근법을 상세히 소개합니다."
 date: 2025-07-11
 last_modified_at: 2025-07-11
-categories:
-  - llmops
 tags:
   - nvidia
   - nemo-rl
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/nvidia-nemo-rl-grpo-deepscaler-recipe-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -4,8 +4,6 @@ excerpt: "دليل شامل لـ FlashRAG - مجموعة أدوات Python ال�
 seo_title: "FlashRAG Tutorial: دليل أدوات بحث RAG - Thaki Cloud"
 seo_description: "تعلم كيفية استخدام FlashRAG للبحث الفعال في RAG. دليل شامل مع التثبيت والتكوين ومعالجة مجموعات البيانات والأمثلة العملية."
 date: 2025-09-18
-categories:
-  - tutorials
 tags:
   - FlashRAG
   - RAG
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/flashrag-tutorial/"
 lang: ar
 permalink: /ar/tutorials/flashrag-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

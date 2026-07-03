@@ -4,8 +4,6 @@ excerpt: "Explore how Qwen3-Omni-30B-A3B-Captioner transforms audio analysis wor
 seo_title: "Qwen3-Omni Audio Captioner: Enterprise Workflow Automation Guide - Thaki Cloud"
 seo_description: "Comprehensive guide to implementing Qwen3-Omni-30B-A3B-Captioner for automated audio processing workflows. Learn deployment strategies, integration patterns, and enterprise use cases."
 date: 2025-09-23
-categories:
-  - owm
 tags:
   - audio-processing
   - workflow-automation
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/en/owm/qwen3-omni-audio-captioner-w
 lang: en
 permalink: /en/owm/qwen3-omni-audio-captioner-workflow-automation/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

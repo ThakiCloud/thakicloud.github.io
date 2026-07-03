@@ -5,8 +5,6 @@ seo_title: "تظليل المهارات: لماذا تجعل المكتبات ا
 seo_description: "استنادًا إلى arXiv 2605.24050، يفصل هذا المقال بين تظليل المهارات وعبء السياق، ويوضح كيف يوقف Skill Harness في Paxis من ThakiCloud عنق زجاجة الاختيار عبر استرجاع BM25 وبوابة امتناع، مدعومًا بأرقام قياس حقيقية."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - research
 tags:
   - agent-skills
   - skill-retrieval
@@ -19,6 +17,8 @@ toc_label: "المحتويات"
 toc_icon: "layer-group"
 published: true
 canonical_url: "https://thakicloud.github.io/ar/research/agent-skill-shadowing-library-selection/"
+categories:
+  - research
 ---
 
 ## نظرة عامة

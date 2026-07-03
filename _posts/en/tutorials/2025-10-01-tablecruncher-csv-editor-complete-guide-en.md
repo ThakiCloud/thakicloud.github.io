@@ -4,8 +4,6 @@ excerpt: "Learn how to open 2GB files with 16 million rows in just 32 seconds us
 seo_title: "Tablecruncher CSV Editor Complete Guide - Large File Processing"
 seo_description: "Master Tablecruncher's powerful CSV editing capabilities, JavaScript macros, and advanced data processing techniques for handling massive datasets efficiently."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - Tablecruncher
   - CSV
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/tablecruncher-csv-edit
 lang: en
 permalink: /en/tutorials/tablecruncher-csv-editor-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 15 minutes

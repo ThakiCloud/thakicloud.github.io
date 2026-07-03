@@ -5,8 +5,6 @@ date: 2025-06-15
 lang: ar
 permalink: /ar/news/kent-beck-tdd-ai-agents-coding-evolution/
 canonical_url: "https://thakicloud.github.io/ar/news/kent-beck-tdd-ai-agents-coding-evolution/"
-categories: 
-  - news
 tags: 
   - TDD
   - الذكاء الاصطناعي
@@ -20,6 +18,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - news
 ---
 
 {% include video id="aSXaxOdVtAQ" provider="youtube" %}

@@ -2,8 +2,6 @@
 title: "البرمجيات في عصر الذكاء الاصطناعي: نماذج البرمجة الثلاثة لأندريه كارباثي"
 excerpt: "مدير الذكاء الاصطناعي السابق في تسلا أندريه كارباثي: من البرمجيات 1.0 إلى 3.0، رؤية LLMs كأنظمة تشغيل، مستقبل التطبيقات المستقلة جزئياً، وعصر يصبح فيه الجميع مبرمجين"
 date: 2025-06-19
-categories:
-  - dev
 tags:
   - أندريه كارباثي
   - هندسة البرمجيات
@@ -18,6 +16,9 @@ lang: ar
 permalink: /ar/news/karpathy-software-era-ai-programming-paradigms/
 canonical_url: "https://thakicloud.github.io/ar/news/karpathy-software-era-ai-programming-paradigms/"
 published: false
+categories:
+  - news
+  - dev
 ---
 
 {% include video id="LCEmiRjPEtQ" provider="youtube" %}

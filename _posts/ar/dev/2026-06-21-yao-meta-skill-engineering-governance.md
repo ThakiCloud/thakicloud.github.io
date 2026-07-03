@@ -5,8 +5,6 @@ seo_title: "تقرير التحقّق من yao-meta-skill v1.1.0 - Thaki Cloud"
 seo_description: "تقرير مقيس باستنساخ yao-meta-skill (YAO) والتحقّق منها مباشرةً. نفكّك تمثيل Skill IR المحايد للمنصّات وOutput Eval Lab وبوابات حوكمة Review Studio 2.0 على مقياس 632 ملفًّا و77 اختبارًا، ونطبّقها على تشغيل ThakiCloud .claude/skills."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - claude-skills
   - meta-skill
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ![صورة تجريدية لكتل وحدوية تُشكّل خط تجميع دقيقًا مع بوابات حوكمة متوهّجة](/assets/images/yao-meta-skill-hero.png)

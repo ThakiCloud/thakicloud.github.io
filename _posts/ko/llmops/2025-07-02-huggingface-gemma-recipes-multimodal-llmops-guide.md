@@ -5,8 +5,6 @@ seo_title: "Hugging Face Gemma Recipes 멀티모달 LLMOps 가이드 - Thaki Clo
 seo_description: "Google Gemma 3n 모델을 활용한 멀티모달 AI 애플리케이션 개발 및 운영을 위한 Hugging Face 공식 레시피 가이드. 무료 Colab 파인튜닝부터 프로덕션 배포까지 완벽 정리."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - llmops
 tags:
   - huggingface
   - gemma
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/huggingface-gemma-recipes-multimodal-llmops-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

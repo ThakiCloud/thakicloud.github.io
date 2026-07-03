@@ -5,8 +5,6 @@ seo_title: "NVIDIA Nemotron-3-Ultra-550B LatentMoE 온프렘 서빙 가이드 - 
 seo_description: "Nemotron-3-Ultra 550B의 LatentMoE 아키텍처(Mamba-2+MoE+Attention), 벤치마크(SWE-Bench Verified 70.7%, MMLU-Pro 86.8%), vLLM/SGLang/TRT-LLM 서빙과 B200 최소 요구사항을 분석했다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - nemotron-3-ultra
   - nvidia
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/nemotron-3-ultra-latentmoe-onprem/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -5,8 +5,6 @@ seo_title: "دليل البقاء في عصر الإبداع بالذكاء ال
 seo_description: "في عصر الذكاء الاصطناعي الذي غزا أولمبياد الرياضيات، استراتيجيات البقاء البشري المقترحة من Po-Shen Loh من Carnegie Mellon والاتجاهات التعليمية المستقبلية"
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - news
 tags:
   - الذكاء الاصطناعي
   - الإبداع
@@ -24,6 +22,8 @@ reading_time: true
 lang: ar
 permalink: /ar/news/po-shen-loh-ai-creative-supremacy-era-insights/
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

@@ -4,8 +4,6 @@ excerpt: "Ollama App을 사용하여 로컬 AI 모델과 대화하는 방법을 
 seo_title: "Ollama App 완전 가이드 - 로컬 AI 모델 클라이언트 사용법"
 seo_description: "Ollama App으로 로컬 AI 모델과 대화하는 방법을 배우세요. 설치, 설정, 사용법까지 완벽한 가이드를 제공합니다."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - ollama
   - ai
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/ollama-app-complete-gu
 lang: ko
 permalink: /ko/tutorials/ollama-app-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

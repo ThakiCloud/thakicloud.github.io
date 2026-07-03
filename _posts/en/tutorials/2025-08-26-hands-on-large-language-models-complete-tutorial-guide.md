@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to the O'Reilly book 'Hands-On Large Language Mode
 seo_title: "Hands-On Large Language Models Tutorial Guide - Complete Review | Thaki Cloud"
 seo_description: "Master LLMs with this complete tutorial guide covering Jay Alammar & Maarten Grootendorst's O'Reilly book. Includes practical examples, code implementations, and chapter-by-chapter breakdown."
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - LLM
   - Large-Language-Models
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/hands-on-large-language-models-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/hands-on-large-language-models-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء أنظمة وكلاء ذكية متعدد
 seo_title: "دليل نماذج Google ADK: بناء تطبيقات الوكلاء المتعددة - Thaki Cloud"
 seo_description: "إتقان Google Agent Development Kit (ADK) مع دليلنا الشامل الذي يغطي التثبيت ونماذج الوكلاء وأمثلة التنفيذ العملي لأنظمة الوكلاء المتعددة."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - google-adk
   - أنظمة-الوكلاء-المتعددة
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/google-adk-samples-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/google-adk-samples-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

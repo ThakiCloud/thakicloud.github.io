@@ -5,9 +5,6 @@ seo_title: "CrewAI AI Real Estate Agent System Analysis - Multi-Agent Collaborat
 seo_description: "Code analysis, architecture design, user flow, and Mermaid diagrams of an AI real estate agent team system built with CrewAI and LangChain"
 date: 2025-08-20
 last_modified_at: 2025-08-20
-categories:
-  - agentops
-  - llmops
 tags:
   - CrewAI
   - LangChain
@@ -25,7 +22,10 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/ai-real-estate-agent-team-crewai-analysis/"
 reading_time: true
 lang: en
-published: true
+categories:
+  - agentops
+  - llmops
+published: false
 ---
 
 ![Key concept illustration](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)

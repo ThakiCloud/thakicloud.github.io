@@ -5,8 +5,6 @@ seo_title: "Stanford STORM 리서치 자동화 워크플로 분석 - Thaki Cloud
 seo_description: "STORM(NAACL 2024) 지식 큐레이션 방법론을 4단계 프롬프트 워크플로로 구현하는 방법과 멀티에이전트 리서치 파이프라인 적용 관점"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - storm
   - research-automation
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
+categories:
+  - research
 ---
 
 리서치는 시간이 많이 드는 일입니다. 한 주제를 제대로 파려면 질문을 세우고, 여러 관점에서 자료를 모으고, 구조를 잡고, 인용을 단 결과물을 써야 합니다. 스탠퍼드 OVAL 연구실이 발표한 STORM(Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking)은 이 과정을 LLM으로 자동화하는 지식 큐레이션 시스템입니다. NAACL 2024에서 발표되었고, 위키피디아 수준의 긴 글을 인용과 함께 처음부터 생성하는 것을 목표로 합니다.

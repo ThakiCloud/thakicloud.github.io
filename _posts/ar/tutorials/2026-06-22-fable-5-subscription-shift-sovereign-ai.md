@@ -5,8 +5,6 @@ seo_title: "انتهاء اشتراك Fable 5 واستراتيجية الحصو�
 seo_description: "ما الذي يعنيه إنهاء Anthropic للوصول المجاني إلى Fable 5 في 22 يونيو والانتقال إلى الدفع حسب الاستخدام، وتحليل ThakiCloud لاقتصاديات طاقة النماذج الحدية واستراتيجية التحوّط بالذكاء الاصطناعي المحلي."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - tutorials
 tags:
   - fable-5
   - llm-sourcing
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/tutorials/fable-5-subscription-shift-sovereign-ai/"
 reading_time: true
 lang: ar
+categories:
+  - tutorials
 ---
 
 ![صورة مجرّدة تتعارض فيها السحابة العامة المتلاشية مع بنية تحتية خاصة راسخة في الصخر](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.png)

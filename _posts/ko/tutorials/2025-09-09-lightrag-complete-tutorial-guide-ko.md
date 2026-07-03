@@ -4,8 +4,6 @@ excerpt: "GraphRAG를 뛰어넘는 성능의 LightRAG 구현 방법을 완전 �
 seo_title: "LightRAG 완전 가이드: 고성능 RAG 시스템 구축 - Thaki Cloud"
 seo_description: "LightRAG 설치, 사용법, 실전 예제까지 완벽 가이드. 지식 그래프 기반 RAG 시스템으로 AI 성능을 극대화하세요."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - LightRAG
   - RAG
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/lightrag-complete-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/lightrag-complete-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

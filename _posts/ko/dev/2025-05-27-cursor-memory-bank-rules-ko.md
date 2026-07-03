@@ -2,8 +2,6 @@
 title: "Cursor Memory Bank 완전 가이드: AI 개발 도구의 컨텍스트 관리 마스터하기"
 excerpt: "Cursor AI의 세션 리셋 문제를 해결하는 Memory Bank 시스템 완전 분석. 프로젝트 컨텍스트 유지, 문서화 전략, .cursorrules 활용법까지"
 date: 2025-05-27
-categories:
-  - dev
 tags:
   - Cursor
   - MemoryBank
@@ -18,6 +16,8 @@ toc: true
 toc_label: "Memory Bank 가이드"
 # comments: true
 published: false
+categories:
+  - dev
 ---
 
 # 커서(CURSOR)의 메모리 뱅크

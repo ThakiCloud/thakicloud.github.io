@@ -6,8 +6,6 @@ seo_title: "docker-android K8s Emulator - مزرعة أجهزة أندرويد �
 seo_description: "كيفية تشغيل محاكي أندرويد كحاوية بلا واجهة رسومية باستخدام docker-android. دليل عملي لـ KVM passthrough وتسريع GPU والتحكم عن بُعد عبر scrcpy وأتمتة اختبارات CI/CD على Kubernetes."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - dev
 tags:
   - docker
   - android
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/docker-android-k8s-emulator/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ```mermaid

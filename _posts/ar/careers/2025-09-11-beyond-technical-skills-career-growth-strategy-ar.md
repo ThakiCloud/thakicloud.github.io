@@ -4,8 +4,6 @@ excerpt: "بينما تُعد التميز التقني أساس أي مسار �
 seo_title: "استراتيجية نمو المسار المهني: ما وراء المهارات التقنية - Thaki Cloud"
 seo_description: "اكتشف لماذا الكفاءة التقنية وحدها ليست كافية للتقدم المهني وتعرف على المهارات الأربع الأساسية التي تميز المحترفين عالي الأداء."
 date: 2025-09-11
-categories:
-  - careers
 tags:
   - تطوير-المسار-المهني
   - النمو-المهني
@@ -18,6 +16,8 @@ toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/careers/beyond-technical-skills-career-growth-strategy/
 canonical_url: "https://thakicloud.github.io/ar/careers/beyond-technical-skills-career-growth-strategy/"
+categories:
+  - careers
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 8 دقائق

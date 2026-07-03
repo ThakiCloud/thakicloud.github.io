@@ -9,11 +9,12 @@ last_modified_at: 2025-08-21
 lang: ar
 dir: rtl
 canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-nemo-rl-comprehensive-analysis-reinforcement-learning-framework/"
-categories: [llmops]
 tags: [NVIDIA, NeMo-RL, 강화학습, RLHF, DPO, GRPO, SFT, 분산처리, Ray, Megatron, LLM, 포스트트레이닝]
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق

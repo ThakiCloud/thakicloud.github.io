@@ -5,8 +5,6 @@ seo_title: "Metabase Dataset Generator - LLM 합성 데이터 생성 도구 - Th
 seo_description: "OpenAI GPT-4o와 Faker를 활용한 Metabase Dataset Generator로 현실적인 합성 데이터를 생성하는 방법. CSV/SQL 내보내기, 실시간 미리보기, 스키마 설계까지 완벽 가이드."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - datasets
 tags:
   - Metabase
   - Dataset Generator
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/metabase-dataset-generator-llm-synthetic-data-guide/"
 reading_time: true
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

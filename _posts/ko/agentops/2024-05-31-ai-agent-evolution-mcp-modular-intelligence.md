@@ -1,8 +1,6 @@
 ---
 title: "AI 에이전트의 진화 — MCP가 여는 모듈러 지능 시대"
 date: 2024-05-31
-categories: 
-  - agentops
 tags: 
   - AI에이전트
   - MCP
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - agentops
 ---
 
 > "코드는 더 이상 한 몸이 아니다.

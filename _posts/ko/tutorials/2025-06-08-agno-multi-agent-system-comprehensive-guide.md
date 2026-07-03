@@ -1,8 +1,6 @@
 ---
 title: "Agno 멀티 에이전트 시스템 구축 완전 가이드"
 date: 2025-06-08
-categories: 
-  - tutorials
 tags: 
   - AI
   - MultiAgent
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "Agno 완전 가이드"
 published: false
+categories:
+  - tutorials
 ---
 
 Agno는 메모리, 지식, 추론 기능을 갖춘 멀티 에이전트 시스템을 구축하기 위한 풀스택 프레임워크입니다. 27.9k GitHub 스타를 보유한 이 프레임워크는 5단계 에이전틱 시스템을 지원하며, 뛰어난 성능과 확장성을 제공합니다.

@@ -1,9 +1,6 @@
 ---
 title: "LLM Tool Calling 완전 정복 - Claude & GPT-4 실전 가이드"
 date: 2025-06-10
-categories: 
-  - llmops
-  - AI Engineering
 tags: 
   - Tool Calling
   - Claude
@@ -17,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - llmops
 ---
 
 AI 모델이 단순한 텍스트 생성을 넘어 실제 도구를 사용하여 복잡한 작업을 수행할 수 있게 하는 Tool Calling은 현대 AI 시스템의 핵심 기능입니다. Claude와 GPT-4의 Tool Calling 활용법부터 IDE 통합, 데스크톱 자동화까지 실전에서 바로 적용할 수 있는 완전한 가이드를 제공합니다.

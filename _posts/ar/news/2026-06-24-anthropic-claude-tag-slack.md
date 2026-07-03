@@ -6,8 +6,6 @@ seo_description: "تحليل إطلاق Anthropic Claude Tag (وكيل Slack م�
 date: 2026-06-24
 last_modified_at: 2026-06-24
 lang: ar
-categories:
-  - news
 tags:
   - anthropic
   - claude-tag
@@ -22,6 +20,8 @@ toc_icon: "users"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/news/anthropic-claude-tag-slack/"
 reading_time: true
+categories:
+  - news
 ---
 
 ![مرئي تجريدي لشبكة تعاون تربط عقدة ذكاء اصطناعي مركزية بعقد متعددة للأشخاص في قناة مشتركة واحدة](/assets/images/anthropic-claude-tag-slack-hero.png)

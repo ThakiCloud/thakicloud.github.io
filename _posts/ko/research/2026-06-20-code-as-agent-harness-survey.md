@@ -5,8 +5,6 @@ seo_title: "코드 기반 AI 에이전트 하네스 아키텍처 서베이 분�
 seo_description: "arXiv 2605.18747 Code as Agent Harness 서베이: 에이전트 인프라 3계층, 계획 및 적응 제어, 멀티에이전트 조율, 안전성 과제에 대한 심층 분석"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - agent-harness
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/code-as-agent-harness-survey/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

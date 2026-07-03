@@ -5,9 +5,6 @@ seo_title: "Firecracker MicroVM 튜토리얼 - AWS 서버리스 가상화 완전
 seo_description: "Firecracker MicroVM 설치, 설정, 실행까지 상세한 단계별 튜토리얼. AWS Lambda의 핵심 기술을 직접 체험해보세요."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - tutorials
-  - llmops
 tags:
   - firecracker
   - microvm
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/firecracker-microvm-comprehensive-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -4,8 +4,6 @@ excerpt: "AutoScraper هي مكتبة Python تستخدم التعلم الآل�
 seo_title: "دليل AutoScraper لأتمتة استخراج البيانات من الويب في Python - Thaki Cloud"
 seo_description: "دليل شامل لـ AutoScraper لأتمتة استخراج البيانات من الويب في Python. تعلم قواعد الاستخراج القائمة على التعلم الآلي مع أمثلة عملية ومشاريع حقيقية."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - python
   - web-scraping
@@ -17,6 +15,8 @@ toc: true
 toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/tutorials/autoscraper-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

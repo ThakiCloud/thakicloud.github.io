@@ -5,8 +5,6 @@ seo_title: "دليل AnyCrawl الشامل لزاحف الويب بالذكاء 
 seo_description: "كيفية تنفيذ استخراج الويب وزحف SERP وجمع البيانات متعدد الخيوط باستخدام AnyCrawl من Any4AI. دليل تفصيلي من تثبيت Docker إلى الاستخدام الفعلي."
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - datasets
 tags:
   - anycrawl
   - web-crawler
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 lang: ar
 reading_time: true
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق

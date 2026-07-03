@@ -2,9 +2,6 @@
 title: "AceReason vs Evalchemy 평가 시스템 완전 비교 - LLM 평가 도구 선택 가이드"
 excerpt: "NVIDIA AceReason과 Evalchemy 평가 시스템의 접근 방법, 기술적 차이점, 장단점을 종합 비교 분석합니다. 코딩/수학 평가 방식, Think 태그 처리, 성능 최적화 전략부터 사용 사례별 권장사항까지 완벽 가이드."
 date: 2025-06-19
-categories: 
-  - llmops
-  - research
 tags: 
   - AceReason
   - Evalchemy
@@ -20,6 +17,9 @@ author_profile: true
 toc: true
 toc_label: 평가 시스템 비교 가이드
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ## 📋 문서 개요

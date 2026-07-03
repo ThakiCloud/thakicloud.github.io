@@ -2,9 +2,6 @@
 title: "EVAlchemy 평가 시스템 완전 가이드 - LLM 성능 평가의 모든 것"
 excerpt: "언어 모델의 성능을 체계적으로 평가하기 위한 종합적인 EVAlchemy 시스템의 전체 동작 과정을 단계별로 상세히 설명합니다. 수학, 코딩, 주관식 문제 채점부터 분산 처리까지 완벽 가이드."
 date: 2025-06-19
-categories: 
-  - llmops
-  - dev
 tags: 
   - LLM평가
   - 벤치마크
@@ -19,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: EVAlchemy 가이드
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 개요

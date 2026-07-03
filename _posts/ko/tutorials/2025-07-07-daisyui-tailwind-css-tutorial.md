@@ -5,8 +5,6 @@ seo_title: "daisyUI 튜토리얼: Tailwind CSS 컴포넌트 활용 가이드 - T
 seo_description: "Vite, React 환경에서 Tailwind CSS와 daisyUI를 함께 사용하는 방법을 단계별로 안내합니다. 설치부터 기본 컴포넌트, 테마 커스터마이징까지 실습 예제를 통해 빠르게 배워보세요."
 date: 2025-07-07
 last_modified_at: 2025-07-07
-categories:
-  - tutorials
 tags:
   - daisyUI
   - Tailwind CSS
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/daisyui-tailwind-css-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -2,9 +2,6 @@
 title: "사카나 AI의 RLT: 컴퓨터가 가르치는 방법을 배우다"
 excerpt: "기존 AI는 문제를 푸는 방법을 배웠다면, 새로운 RLT 방법은 가르치는 방법을 배워서 더 작고 빠른 AI로도 큰 성과를 낼 수 있게 되었습니다. 마치 좋은 선생님처럼 말이죠!"
 date: 2025-06-23
-categories: 
-  - research
-  - tutorials
 tags: 
   - reinforcement-learning
   - sakana-ai
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "RLT 가이드"
 published: false
+categories:
+  - research
+  - tutorials
 ---
 
 ## 들어가며

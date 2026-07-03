@@ -5,8 +5,6 @@ seo_title: "Big Tech GPU Overinvestment: Asymmetric Insurance and the AI Tollgat
 seo_description: "Is big tech's ~$725B AI capex in 2026 (+77%) a bubble? This analysis applies two structural lenses: asymmetric insurance and the intent-router tollgate. It draws on METR task horizon data (~7-month doubling, accelerating to ~4 months) and reliability step-function math. Implications for sovereign AI demand and ThakiCloud's K8s/Kueue agent infrastructure are discussed."
 date: 2026-06-28
 last_modified_at: 2026-06-28
-categories:
-  - news
 tags:
   - ai-capex
   - hyperscaler
@@ -21,6 +19,8 @@ toc_label: "Contents"
 toc_icon: "chart-line"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/news/gpu-overinvestment-ai-agents-sovereign-ai/"
+categories:
+  - news
 ---
 
 Big tech and frontier AI labs are buying up GPUs at a pace that requires issuing bonds. The combined capex estimate for four hyperscalers (Microsoft, Google, Meta, Amazon) in 2026 is roughly $725 billion, up 77% from the prior year. At this scale, it is natural to ask whether this qualifies as overinvestment. In an era when latecomers can close the performance gap through distillation at a fraction of the cost, does burning hundreds of billions of dollars for a model that is only marginally better for a few months make sense?

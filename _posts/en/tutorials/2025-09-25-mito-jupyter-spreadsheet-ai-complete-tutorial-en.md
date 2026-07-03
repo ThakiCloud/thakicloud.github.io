@@ -4,8 +4,6 @@ excerpt: "Learn how to use Mito AI and Spreadsheet extensions to accelerate Pyth
 seo_title: "Mito Jupyter AI Tutorial - Spreadsheet & AI Chat Guide - Thaki Cloud"
 seo_description: "Complete Mito tutorial: Install AI-powered Jupyter extensions for spreadsheet editing, context-aware AI chat, and automatic Python code generation. Step-by-step guide."
 date: 2025-09-25
-categories:
-  - tutorials
 tags:
   - mito
   - jupyter
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/mito-jupyter-spreadsheet-ai-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mito-jupyter-spreadsheet-ai-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

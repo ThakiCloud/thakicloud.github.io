@@ -5,8 +5,6 @@ seo_title: "Hassabis Huang Amodei AI Futures Compared - Thaki Cloud"
 seo_description: "Compare how Hassabis, Huang, and Amodei see AI's future across AGI, infrastructure, and labor, and what builder orgs should take from each."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - AGI
   - Demis-Hassabis
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/culture/three-giants-ai-futures-compared/"
+categories:
+  - culture
 ---
 
 ## Three People Reading the Same Wave Differently

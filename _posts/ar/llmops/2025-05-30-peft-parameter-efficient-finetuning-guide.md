@@ -4,8 +4,6 @@ excerpt: "وفر 80% من الذاكرة مع الحفاظ على الأداء �
 seo_title: "PEFT الضبط الدقيق الفعال للمعاملات - دليل شامل للتدريب الفعال للذاكرة"
 seo_description: "أتقن تقنيات PEFT للتدريب الفعال للنماذج اللغوية الكبيرة. تعلم LoRA وAdaLoRA وIA3 والمزيد لتحقيق أداء الضبط الدقيق الكامل بموارد قليلة"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - PEFT
   - LoRA
@@ -23,6 +21,8 @@ lang: ar
 permalink: /ar/llmops/peft-parameter-efficient-finetuning-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/peft-parameter-efficient-finetuning-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 14 دقيقة

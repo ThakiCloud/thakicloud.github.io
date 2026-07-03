@@ -5,8 +5,6 @@ seo_title: "Chain of Agents: LLM 멀티에이전트 협업으로 긴 컨텍스�
 seo_description: "Google과 Penn State가 개발한 Chain-of-Agents는 멀티에이전트 협업을 통해 RAG와 Full-Context 방식보다 최대 10% 향상된 성능으로 긴 컨텍스트 작업을 처리하는 새로운 프레임워크입니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - llm
   - multiagent
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/chain-of-agents-llm-collaboration-long-context-tasks/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

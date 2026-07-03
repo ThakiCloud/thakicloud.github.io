@@ -5,8 +5,6 @@ seo_title: "مقارنة تشكيلة Gemma 4 - دليل التشغيل المح
 seo_description: "تشكيلة Gemma 4 (E2B، E4B، 12B Unified، 26B A4B MoE، 31B Dense): المعاملات والسياق وتعدد الوسائط والمعايير (MMLU-Pro 85.2%، GPQA 84.3%) والخدمة عبر vLLM/SGLang/Ollama ورخصة Apache 2.0."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - owm
 tags:
   - gemma-4
   - google-deepmind
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/gemma-4-open-weight-lineup/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

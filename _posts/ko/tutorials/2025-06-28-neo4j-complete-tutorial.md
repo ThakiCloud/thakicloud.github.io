@@ -4,9 +4,6 @@ excerpt: "Neo4j 설치부터 Cypher 쿼리까지, 실제 테스트를 통한 완
 seo_title: "Neo4j 완전 가이드 - macOS 설치와 Cypher 쿼리 튜토리얼 - Thaki Cloud"
 seo_description: "Neo4j 그래프 데이터베이스를 macOS에서 설치하고 사용하는 완전한 가이드. Homebrew 설치, Cypher 쿼리, 실전 예제 포함 (150자)"
 date: 2025-06-28
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Neo4j
   - 그래프데이터베이스
@@ -19,6 +16,9 @@ toc: true
 toc_label: "Neo4j 튜토리얼"
 canonical_url: "https://thakicloud.github.io/tutorials/neo4j-complete-tutorial/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 Neo4j는 세계에서 가장 인기 있는 그래프 데이터베이스입니다. 관계형 데이터베이스와 달리 노드(Node)와 관계(Relationship)로 데이터를 저장하여, 복잡한 관계를 직관적으로 표현하고 빠르게 탐색할 수 있습니다.

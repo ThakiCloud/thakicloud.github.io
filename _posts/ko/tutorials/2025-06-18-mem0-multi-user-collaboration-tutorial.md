@@ -2,9 +2,6 @@
 title: "Mem0 Multi-User Collaboration: AI 메모리로 구축하는 팀 협업 시스템"
 excerpt: "Mem0와 OpenAI를 활용하여 다중 사용자 협업 채팅 및 작업 관리 시스템 구축하기 - 메시지 귀속, 실시간 협업, 기여도 추적"
 date: 2025-06-18
-categories: 
-  - tutorials
-  - llmops
 tags: 
   - mem0
   - collaboration
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "Mem0 협업 시스템 가이드"
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ## 개요

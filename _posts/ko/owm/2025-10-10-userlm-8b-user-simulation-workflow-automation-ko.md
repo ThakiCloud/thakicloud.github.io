@@ -4,8 +4,6 @@ excerpt: "Microsoft의 UserLM-8b가 어시스턴트 대신 사용자 역할을 �
 seo_title: "UserLM-8b: AI 워크플로우 자동화를 위한 사용자 시뮬레이션 - Thaki Cloud"
 seo_description: "UserLM-8b가 사용자 역할 시뮬레이션을 통해 대화형 AI 테스트를 변화시키고, 어시스턴트 LLM을 위한 현실적인 테스트 자동화와 평가 워크플로우를 제공하는 방법을 알아보세요."
 date: 2025-10-10
-categories:
-  - owm
 tags:
   - UserLM
   - LLM
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/owm/userlm-8b-user-simulation-workflow-automation/
 canonical_url: "https://thakicloud.github.io/ko/owm/userlm-8b-user-simulation-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

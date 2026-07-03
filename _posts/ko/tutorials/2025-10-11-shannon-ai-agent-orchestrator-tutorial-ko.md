@@ -4,8 +4,6 @@ excerpt: "엔터프라이즈급 보안, 비용 제어, 벤더 유연성을 제�
 seo_title: "Shannon AI Agent Orchestrator 튜토리얼 - 엔터프라이즈 AI 에이전트 관리"
 seo_description: "Shannon AI Agent Orchestrator 완전 튜토리얼: 설치, 구성, 멀티 에이전트 워크플로우, 보안 기능, 엔터프라이즈 배포 가이드까지 상세히 다룹니다."
 date: 2025-10-11
-categories:
-  - tutorials
 tags:
   - AI-Agent
   - Orchestrator
@@ -21,6 +19,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/shannon-ai-agent-orchestrator-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/shannon-ai-agent-orchestrator-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

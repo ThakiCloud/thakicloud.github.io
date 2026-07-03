@@ -6,8 +6,6 @@ seo_title: "تحليل شراكة Micron Anthropic في الذاكرة - HBM و�
 seo_description: "تحليل من منظور البنية التحتية للشراكة الاستراتيجية بين Micron وAnthropic (توفير HBM/DRAM/SSD، التصميم المشترك لبنية الذاكرة، الاستثمار في Series H). لماذا تعيق عرضة النطاق الترددي للذاكرة إنتاجية استدلال LLM، وانعكاسات ذلك على منصة خدمة ThakiCloud المستندة إلى K8s."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - news
 tags:
   - micron
   - anthropic
@@ -21,6 +19,8 @@ toc_icon: "memory"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/news/micron-anthropic-ai-memory-infrastructure/"
 reading_time: true
+categories:
+  - news
 ---
 
 ## نظرة عامة

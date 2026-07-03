@@ -5,8 +5,6 @@ seo_title: "NoteGen AI 마크다운 앱 완전 가이드 - 소스 컴파일 Dock
 seo_description: "AI 기반 크로스플랫폼 마크다운 노트 앱 NoteGen 소스 컴파일, Docker 설정, AI LLM 기능 완전 가이드. Tauri Next.js 기반 앱 개발 튜토리얼"
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - notegen
   - ai
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/notegen-ai-markdown-app-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

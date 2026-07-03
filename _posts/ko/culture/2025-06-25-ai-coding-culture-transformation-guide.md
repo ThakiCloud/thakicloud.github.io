@@ -3,9 +3,6 @@ title: "AI 코딩 시대의 문화 혁신: 저항에서 협력으로의 패러�
 excerpt: "Vibe Coding과 Agentic Coding이 가져온 새로운 개발 문화를 어떻게 받아들이고 발전시킬 것인가? 과거의 관습에서 벗어나 AI와 함께하는 협업 문화 구축 가이드"
 date: 2025-06-25
 last_modified_at: 2026-06-20
-categories: 
-  - culture
-  - dev
 tags: 
   - ai-coding-culture
   - development-culture
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "AI 시대 개발 문화 혁신"
 canonical_url: "https://thakicloud.github.io/ko/culture/ai-coding-culture-transformation-guide/"
+categories:
+  - culture
+  - dev
 ---
 
 ## 논쟁의 풍경

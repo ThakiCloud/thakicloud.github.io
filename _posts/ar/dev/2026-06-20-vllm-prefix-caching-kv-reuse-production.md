@@ -5,8 +5,6 @@ seo_title: "دليل vLLM Prefix Caching KV Cache إعادة الاستخدام 
 seo_description: "طريقة تفعيل Automatic Prefix Caching في vLLM، مبدأ تجزئة كتل KV في PagedAttention، شروط تحقيق معدل إصابة 60-85%، وأنماط التطبيق الفعلي في بيئات SaaS متعددة المستأجرين."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [vllm, prefix-caching, kv-cache, llm-serving, gpu, inference, kubernetes, pagedattention]
 author_profile: true
 toc: true
@@ -16,6 +14,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/vllm-prefix-caching-kv-reuse-production/"
 reading_time: true
 lang: ar
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

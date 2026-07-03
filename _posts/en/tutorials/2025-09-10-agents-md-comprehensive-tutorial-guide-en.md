@@ -4,8 +4,6 @@ excerpt: "Learn how to create an effective AGENTS.md file that dramatically impr
 seo_title: "AGENTS.md Tutorial: Improve AI Code Output with Best Practices - Thaki Cloud"
 seo_description: "Complete guide to writing AGENTS.md files for better AI coding assistance. Includes dos/don'ts, safety rules, project structure, and real-world examples for optimal results."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - ai
   - coding
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/tutorials/agents-md-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/agents-md-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

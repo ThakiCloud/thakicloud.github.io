@@ -4,8 +4,6 @@ excerpt: "Claude 코딩 에이전트를 while 루프에 넣어 자동으로 1000
 seo_title: "코딩 에이전트 무한 루프 실험: AI가 하룻밤에 6개 저장소 완성한 방법 - Thaki Cloud"
 seo_description: "Claude 코딩 에이전트를 무한 루프로 실행하여 React→Vue, Python→TypeScript 자동 포팅에 성공한 혁신적 실험과 RepoMirror 도구 개발 과정을 자세히 알아보세요."
 date: 2025-09-09
-categories:
-  - news
 tags:
   - 코딩에이전트
   - AI자동화
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/news/coding-agents-infinite-loop-experiment-repomirror/
 canonical_url: "https://thakicloud.github.io/ko/news/coding-agents-infinite-loop-experiment-repomirror/"
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

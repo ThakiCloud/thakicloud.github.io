@@ -5,8 +5,6 @@ seo_title: "تحليل بروتوكول التطور الذاتي Autogenesis ل
 seo_description: "arXiv 2604.15034 Autogenesis Protocol: تجريد موارد العامل، حلقة التطور الذاتي، تحسين الأداء في المعيارات، وزاوية التطبيق على منصة ThakiCloud"
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - self-evolving
@@ -23,6 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/autogenesis-self-evolving-agent-protocol/"
 reading_time: true
 lang: ar
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

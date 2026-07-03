@@ -5,8 +5,6 @@ seo_title: "OpenCode AI 터미널 코딩 에이전트 완벽 설정 가이드 - 
 seo_description: "SST OpenCode AI 코딩 에이전트의 설치부터 고급 활용까지, 터미널 기반 AI 개발 환경 구축과 실무 적용 방법을 상세히 안내합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15
-categories:
-  - tutorials
 tags:
   - opencode
   - ai-coding-agent
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/opencode-ai-terminal-coding-agent-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

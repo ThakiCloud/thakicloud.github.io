@@ -4,9 +4,6 @@ excerpt: "Google의 새로운 터미널 AI 에이전트 Gemini CLI의 동작 원
 seo_title: "Google Gemini CLI 완전 분석 가이드 - AI 터미널 에이전트 - Thaki Cloud"
 seo_description: "Google Gemini CLI vs Claude Code vs OpenAI Codex 비교분석, 터미널 AI 에이전트 아키텍처와 개발자 워크플로우 혁신을 다룹니다. Thaki Cloud 기술 블로그"
 date: 2025-06-26
-categories: 
-  - tutorials
-  - dev
 tags: 
   - Gemini CLI
   - AI Agent
@@ -22,6 +19,9 @@ toc: true
 toc_label: Gemini CLI 분석 가이드
 canonical_url: "https://thakicloud.github.io/tutorials/google-gemini-cli-comprehensive-analysis/"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## 개요

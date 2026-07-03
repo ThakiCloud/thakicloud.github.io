@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to MindsDB - the AI analytics engine that transfor
 seo_title: "MindsDB Tutorial: Enterprise AI Analytics Engine Guide - Thaki Cloud"
 seo_description: "Master MindsDB AI analytics engine with this complete tutorial. Learn to connect 200+ data sources, create AI models, and build intelligent data pipelines for enterprise applications."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - MindsDB
   - AI-Analytics
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 20 minutes

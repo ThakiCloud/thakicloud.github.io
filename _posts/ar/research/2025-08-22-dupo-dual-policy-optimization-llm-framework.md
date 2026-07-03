@@ -6,8 +6,6 @@ seo_description: "تحليل مفصل لإطار تحسين السياسة ال�
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: ar
-categories:
-  - research
 tags:
   - DuPO
   - dual-policy-optimization
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
 published: true
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

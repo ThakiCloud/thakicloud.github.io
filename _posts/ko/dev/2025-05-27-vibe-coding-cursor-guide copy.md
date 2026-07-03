@@ -2,8 +2,6 @@
 title: "바이브 코딩 시대: AI 개발 도구 Cursor, 전문가처럼 활용하기 (2025년 4월 가이드)"
 excerpt: "Cursor, Windsurf, Replit 등 AI 개발 도구 비교 분석과 바이브 코딩 실전 전략. Project Rules, Edit-Test Loop를 통한 생산성 극대화 가이드"
 date: 2025-05-27
-categories:
-  - dev
 tags:
   - VibeCoding
   - Cursor
@@ -18,6 +16,8 @@ author_profile: true
 # toc_label: "Table of Contents"
 # comments: true
 published: false
+categories:
+  - dev
 ---
 
 > **핵심 메시지**  구조화와 제어가 잘 된 환경에서 **Cursor**와 생성형 AI를 결합하면, 소규모 팀도 대형 서비스 수준의 생산성을 얻을 수 있다. 이 글은 **바이브 코딩(Vibe Coding)** 문화 속에서 Cursor를 "유능한 주니어"처럼 다루는 실전 전략을 담고 있다.

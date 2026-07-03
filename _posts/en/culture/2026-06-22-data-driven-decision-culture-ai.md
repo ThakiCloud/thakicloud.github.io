@@ -5,8 +5,6 @@ seo_title: "If AI Were the Best Decision-Maker: Data-Driven Decision Culture - T
 seo_description: "How to build a decision culture where data beats intuition. Expanding on Moneyball, the data theater trap, and practical steps for organizations."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - culture
 tags:
   - data-driven
   - decision-making
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/culture/data-driven-decision-culture-ai/"
+categories:
+  - culture
 ---
 
 ## "The Best Stock Picker Who Never Picks Stocks"

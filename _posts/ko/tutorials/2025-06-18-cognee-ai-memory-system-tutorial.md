@@ -2,8 +2,6 @@
 title: "Cognee 완벽 가이드 - AI 에이전트를 위한 메모리 시스템 구축하기"
 excerpt: "5줄의 코드로 AI 에이전트에 메모리를 부여하는 혁신적인 오픈소스 프로젝트 Cognee를 활용하여 지식 그래프 기반 RAG 시스템을 구축해보세요."
 date: 2025-06-18
-categories: 
-  - tutorials
 tags: 
   - Cognee
   - AI-Memory
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "Cognee 튜토리얼"
 published: false
+categories:
+  - tutorials
 ---
 
 ## 개요

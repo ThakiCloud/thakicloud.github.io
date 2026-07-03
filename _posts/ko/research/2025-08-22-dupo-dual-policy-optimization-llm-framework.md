@@ -5,8 +5,6 @@ seo_title: "DuPO 듀얼 정책 최적화 LLM 프레임워크 연구 분석 - Tha
 seo_description: "DuPO의 듀얼 학습 기반 자기 감독 방식으로 번역, 수학적 추론에서 평균 6.4점 성능 향상을 달성한 혁신적 LLM 최적화 프레임워크 연구"
 date: 2025-08-22
 last_modified_at: 2025-08-22
-categories:
-  - research
 tags:
   - DuPO
   - 듀얼정책최적화
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

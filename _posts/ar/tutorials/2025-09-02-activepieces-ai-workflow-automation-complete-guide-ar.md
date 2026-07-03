@@ -6,8 +6,6 @@ seo_description: "إتقان منصة Activepieces مع هذا الدليل ال
 date: 2025-09-02
 lang: ar
 permalink: /ar/tutorials/activepieces-ai-workflow-automation-complete-guide/
-categories:
-  - tutorials
 tags:
   - activepieces
   - ai-workflow
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/tutorials/activepieces-ai-workflow-automation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة

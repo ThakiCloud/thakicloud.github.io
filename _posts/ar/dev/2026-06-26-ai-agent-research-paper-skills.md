@@ -5,8 +5,6 @@ seo_title: "تحليل حزمة Skill مفتوحة المصدر لكتابة ا�
 seo_description: "Research-Paper-Writing-Skills حزمة Agent Skill تجمع خبرة كتابة أوراق ML/CV/NLP وتتيحها بشكل مشترك في Codex وClaude Code وGemini. نشرح الفارق عن البرومبت، طريقة التثبيت والاستخدام، ووجهة نظر ThakiCloud وحدودها."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - dev
 tags:
   - ai-agent
   - agent-skills
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/ai-agent-research-paper-skills/"
 reading_time: true
+categories:
+  - dev
 ---
 
 كلما اقترب موعد تسليم الورقة البحثية، وجد الباحث نفسه يكرر نفس المهام: يُعيد صياغة المقدمة، ويتحقق من انسجام حجج الملخص مع أدلتها، ويُسبق المراجع إلى الجمل الإشكالية. هذه الخبرة عادةً ما تظل حبيسة ذاكرة المشرف أو موزّعة في ملاحظات متفرقة. المشروع المفتوح المصدر [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) الذي أثار اهتماماً واسعاً على X مؤخراً يُجمّع هذه الخبرة في حزمة Skill يستطيع وكيل الترميز الذكي استدعاءها مباشرةً. والأهم ليس أنها "مجموعة برومبتات أخرى"، بل أنها صيغة قابلة للنقل تُضمَّن بالتساوي في Codex وClaude Code وGemini.

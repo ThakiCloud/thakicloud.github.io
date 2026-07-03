@@ -6,9 +6,6 @@ seo_description: "تحليل مفصل لتقنية GMPO القائمة على ا
 date: 2025-08-03
 last_modified_at: 2025-08-03
 lang: ar
-categories:
-  - llmops
-  - research
 tags:
   - GMPO
   - Geometric-Mean-Policy-Optimization
@@ -28,6 +25,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/gmpo-geometric-mean-policy-optimization-stable-rlhf/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 10 دقائق

@@ -5,8 +5,6 @@ seo_title: "LLM 에이전트 관찰가능성 구축 가이드 - Thaki Cloud"
 seo_description: "MLflow, LangSmith, Arize AI를 활용한 LLM 에이전트 트레이싱과 평가 루프 구축 방법. 프로덕션 에이전트 실패의 65%가 컨텍스트 문제임을 기반으로 한 실전 가이드."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - observability
   - tracing
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/agent-observability-tracing-evaluation/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

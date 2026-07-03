@@ -4,9 +4,6 @@ excerpt: "Comprehensive analysis of NVIDIA's latest reasoning model built on Qwe
 seo_title: "NVIDIA AceReason-Nemotron-1.1-7B Mathematical Reasoning Model Guide - Thaki Cloud"
 seo_description: "Explore NVIDIA's AceReason-Nemotron-1.1-7B model achieving SOTA performance on AIME and LiveCodeBench through advanced SFT+RL training methodology with comprehensive implementation guide."
 date: 2025-06-18
-categories: 
-  - owm
-  - llmops
 tags: 
   - nvidia
   - acereason
@@ -25,6 +22,9 @@ toc_label: "AceReason-Nemotron-1.1-7B Guide"
 canonical_url: "https://thakicloud.github.io/en/owm/nvidia-acereason-nemotron-1-1-7b-model-guide/"
 lang: en
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

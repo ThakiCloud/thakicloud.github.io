@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide from installation to advanced usage of MAESTRO, an
 seo_title: "MAESTRO AI Research Platform Setup Guide - Docker, GPU, Local LLM Integration - Thaki Cloud"
 seo_description: "Complete tutorial for MAESTRO open-source AI research platform: installation, GPU optimization, SearXNG search engine integration, and local LLM configuration"
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - maestro
   - ai-research
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/maestro-ai-research-pl
 lang: en
 permalink: /en/tutorials/maestro-ai-research-platform-complete-setup-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 25 minutes

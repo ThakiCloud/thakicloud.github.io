@@ -2,8 +2,6 @@
 title: "Fable-5-traces: How to Distill Small Models Using Coding Agent Session Traces"
 excerpt: "Glint-Research released 4,665 Fable 5 (Claude Code) agent traces in AGPL-3.0 under the HF Agent Traces format, with 81% tool-use composition. A practical guide to distilling small models and building self-hosted coding agents."
 date: 2026-06-20
-categories:
-  - datasets
 tags:
   - agent-traces
   - fable-5
@@ -20,6 +18,8 @@ toc: true
 toc_label: "Fable-5-traces Guide"
 reading_time: true
 canonical_url: "https://thakicloud.github.io/en/datasets/fable-5-agent-traces/"
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated reading time**: 8 min

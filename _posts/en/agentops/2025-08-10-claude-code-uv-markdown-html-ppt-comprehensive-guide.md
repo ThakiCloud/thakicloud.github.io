@@ -6,9 +6,6 @@ seo_description: "A practical guide to researching UV package manager usage with
 date: 2025-08-10
 last_modified_at: 2025-08-10
 lang: en
-categories:
-  - agentops
-  - tutorials
 tags:
   - claude-code
   - uv-package-manager
@@ -27,6 +24,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+  - tutorials
+published: false
 ---
 
 ![Key concept illustration](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)

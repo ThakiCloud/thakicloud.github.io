@@ -5,8 +5,6 @@ seo_title: "WrenAI GenBI Agent Kubernetes 엔터프라이즈 배포 완전 가�
 seo_description: "WrenAI GenBI Agent의 Text-to-SQL, Text-to-Charts 기능과 Kubernetes 클러스터에서의 엔터프라이즈 배포 아키텍처, 고가용성, 스케일링 전략을 상세히 다룹니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29
-categories:
-  - agentops
 tags:
   - WrenAI
   - GenBI-Agent
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/wrenai-genbi-agent-kubernetes-enterprise-deployment-guide/"
 reading_time: true
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

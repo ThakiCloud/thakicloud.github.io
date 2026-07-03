@@ -5,8 +5,6 @@ seo_title: "AI-Researcher Autonomous Scientific Research System Analysis - Thaki
 seo_description: "A deep look at the AI-Researcher project architecture, key capabilities, and what fully autonomous scientific research could mean for the research community."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - AI-Researcher
   - 자율-연구-시스템
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/en/research/ai-researcher-autonomou
 reading_time: true
 lang: en
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 12 min

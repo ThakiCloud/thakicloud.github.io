@@ -4,8 +4,6 @@ excerpt: "오픈소스 인터넷 운영체제 Puter의 설치부터 활용까지
 seo_title: "Puter 인터넷 OS 설치 가이드 - 완벽 튜토리얼 2025 - Thaki Cloud"
 seo_description: "오픈소스 인터넷 운영체제 Puter 설치 및 사용법 완벽 가이드. 로컬 개발환경, Docker 배포, 셀프 호스팅까지 단계별 설명"
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - puter
   - 인터넷-os
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/puter-internet-os-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/puter-internet-os-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

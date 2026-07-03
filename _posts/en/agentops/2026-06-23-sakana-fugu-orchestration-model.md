@@ -5,8 +5,6 @@ seo_title: "Sakana Fugu Orchestration Model Analysis - Multi-Agent and Vendor Lo
 seo_description: "Sakana AI Fugu is an orchestration model that dynamically coordinates a pool of LLM agents. This post covers the architecture, the limits of self-reported benchmarks, the vendor lock-in hedge logic, and implications for ThakiCloud's K8s-based multi-tenant agent platform."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - agentops
 tags:
   - sakana-ai
   - multi-agent
@@ -21,6 +19,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/agentops/sakana-fugu-orchestration-model/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ## Overview

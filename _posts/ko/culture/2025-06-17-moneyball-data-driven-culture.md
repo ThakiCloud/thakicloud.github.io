@@ -3,8 +3,6 @@ title: "머니볼 사고로 데이터 기반 조직 문화 만들기"
 excerpt: "데이터로 숨은 가치를 발굴해 자원 대비 최대 성과를 이끄는 머니볼 전략을 개발·제품·채용에 적용하는 방법"
 date: 2025-06-17
 last_modified_at: 2026-06-20
-categories:
-  - culture
 tags:
   - Moneyball
   - Data-Driven
@@ -15,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/culture/moneyball-data-driven-culture/"
+categories:
+  - culture
 ---
 
 ## 머니볼이란 무엇인가

@@ -6,8 +6,6 @@ seo_description: "تحليل عميق لـ Refact.ai، وكيل الذكاء ا�
 date: 2025-07-17
 last_modified_at: 2025-07-17
 lang: ar
-categories:
-  - agentops
 tags:
   - ai-agent
   - refact
@@ -26,6 +24,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/agentops/refact-ai-software-development-agent-comprehensive-guide/"
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

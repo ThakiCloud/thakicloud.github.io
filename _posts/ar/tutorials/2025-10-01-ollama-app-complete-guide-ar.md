@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام Ollama App للتفاعل مع نم
 seo_title: "دليل Ollama App الشامل - تعليم استخدام عميل نماذج الذكاء الاصطناعي المحلية"
 seo_description: "أتقن استخدام Ollama App للدردشة مع نماذج الذكاء الاصطناعي المحلية. دليل شامل للتثبيت والإعداد والاستخدام مع الميزات المتقدمة وحل المشاكل."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - ollama
   - ai
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/ollama-app-complete-gu
 lang: ar
 permalink: /ar/tutorials/ollama-app-complete-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

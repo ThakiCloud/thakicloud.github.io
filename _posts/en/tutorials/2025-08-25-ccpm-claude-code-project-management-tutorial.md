@@ -4,8 +4,6 @@ excerpt: "Master the revolutionary Claude Code Project Management system that tu
 seo_title: "CCPM Tutorial: Claude Code Project Management Guide - Thaki Cloud"
 seo_description: "Learn CCPM (Claude Code Project Management) - a battle-tested system for spec-driven development using GitHub Issues, Git worktrees, and parallel AI agents."
 date: 2025-08-25
-categories:
-  - tutorials
 tags:
   - claude-code
   - project-management
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/ccpm-claude-code-project-management-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/ccpm-claude-code-project-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

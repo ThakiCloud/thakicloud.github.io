@@ -1,9 +1,6 @@
 ---
 title: "Google A2A 프로토콜로 구축하는 안전한 에이전틱 AI 시스템"
 date: 2025-06-09
-categories: 
-  - llmops
-  - AI Engineering
 tags: 
   - A2A Protocol
   - Agentic AI
@@ -14,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - llmops
 ---
 
 에이전틱 AI의 급속한 발전과 함께, 여러 에이전트가 협력하여 복잡한 작업을 수행하는 멀티 에이전트 시스템이 주목받고 있습니다. 하지만 이러한 시스템에서 가장 중요한 과제는 에이전트 간의 안전하고 표준화된 통신입니다. Google이 발표한 Agent-to-Agent(A2A) 프로토콜은 이 문제를 해결하기 위한 혁신적인 접근법을 제시합니다.

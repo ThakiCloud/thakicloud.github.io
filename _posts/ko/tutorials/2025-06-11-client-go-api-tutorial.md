@@ -1,9 +1,6 @@
 ---
 title: "client-go 완벽 가이드: Kubernetes API 서버 통신 마스터하기"
 date: 2025-06-11
-categories: 
-  - tutorials
-  - kubernetes
 tags: 
   - client-go
   - kubernetes
@@ -14,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - tutorials
 ---
 
 Kubernetes 클러스터와 프로그래밍 방식으로 상호작용하기 위한 공식 Go 클라이언트 라이브러리인 client-go에 대해 알아보겠습니다. 이 강력한 라이브러리를 통해 Pod, Service, Deployment 등 Kubernetes 리소스를 관리하는 방법을 단계별로 학습해보겠습니다.

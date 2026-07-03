@@ -2,8 +2,6 @@
 title: "리서처를 위한 ‘Learning How to Learn’ 실전 가이드"
 excerpt: "빠르게 변화하는 AI 연구 현장에서 리서처들이 논문을 읽고 구현할 때 즉시 활용할 수 있는 9가지 학습 전략을 소개해요."
 date: 2025-05-26 # 실제 발행일로 변경하세요
-categories:
-  - research
 tags:
   - learning
   - Recruitment
@@ -11,6 +9,8 @@ tags:
   - Team
 author_profile: true # 회사 계정 또는 HR 담당자로 설정 가능
 published: false
+categories:
+  - research
 --- 
 
 > **TL;DR** : 논문을 더 빨리 이해하고, 재현 실험을 단축하며, 연구 효율을 극대화할 수 있는 9가지 학습 프레임워크를 다키클라우드의 R\&D 문화에 맞게 정리했어요. 우리 팀이 지향하는 학습 문화를 경험하고 싶다면, 지금 지원해보세요!

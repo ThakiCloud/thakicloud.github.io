@@ -2,8 +2,6 @@
 title: "[Thaki Cloud Life & Career] KCD Seoul 2025"
 excerpt: "Sharing materials presented at KCD Seoul 2025. Content about Thaki Cloud, an xPU as a Service-based Agentic AI platform"
 date: 2025-05-22
-categories:
-  - careers
 tags:
   - Thaki Cloud
   - Introduction
@@ -16,6 +14,8 @@ author_profile: true
 lang: en
 permalink: /en/careers/conference-kcd-seoul-2025/
 canonical_url: "https://thakicloud.github.io/en/careers/conference-kcd-seoul-2025/"
+categories:
+  - careers
 --- 
 
 # 🎤 ThakiCloud @ KCD Seoul 2025 Presentation Information

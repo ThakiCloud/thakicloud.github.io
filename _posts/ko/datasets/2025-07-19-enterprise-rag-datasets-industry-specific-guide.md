@@ -5,8 +5,6 @@ seo_title: "RAG 챗봇 산업별 데이터셋 가이드 - 은행 보험 의료 �
 seo_description: "기업용 RAG 시스템 구축을 위한 7개 산업 분야별 공개 데이터셋 목록과 실제 구현 예시. FDIC, SEC, MIMIC-IV, CourtListener 등 검증된 데이터셋 활용법"
 date: 2025-07-19
 last_modified_at: 2025-07-19
-categories:
-  - datasets
 tags:
   - RAG
   - LLM
@@ -29,6 +27,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/enterprise-rag-datasets-industry-specific-guide/"
 reading_time: true
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

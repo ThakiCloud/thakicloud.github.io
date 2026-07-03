@@ -4,8 +4,6 @@ excerpt: "Master FinePDFs, the 4.7M document dataset from Hugging Face. Learn ex
 seo_title: "FinePDFs Tutorial: Complete Guide to PDF Dataset Processing - Thaki Cloud"
 seo_description: "Learn to use FinePDFs dataset effectively with practical examples, optimization tips, and real-world applications for AI training and research."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - FinePDFs
   - HuggingFace
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/finepdfs-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/finepdfs-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

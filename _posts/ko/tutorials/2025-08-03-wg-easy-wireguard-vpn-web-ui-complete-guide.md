@@ -5,9 +5,6 @@ seo_title: "WireGuard Easy VPN 서버 구축 완전 가이드 - 웹 UI 관리 - 
 seo_description: "wg-easy로 Docker 기반 WireGuard VPN 서버 구축, 클라이언트 관리, QR 코드 생성, 원격 접속까지 실무에서 바로 사용할 수 있는 완전한 튜토리얼입니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - WireGuard
   - wg-easy
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/wg-easy-wireguard-vpn-web-ui-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

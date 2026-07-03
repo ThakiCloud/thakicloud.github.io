@@ -5,9 +5,6 @@ seo_title: "Google Finance AI 활용 가이드 - 스마트 투자 분석 완전 
 seo_description: "AI 중심으로 재구성된 Google Finance의 시장 트렌드 분석, 포트폴리오 관리, 워치리스트 최적화 등 핵심 기능 완벽 활용법. 실전 투자 전략과 AI 인사이트 활용 팁 포함"
 date: 2025-08-10
 last_modified_at: 2025-08-10
-categories:
-  - tutorials
-  - news
 tags:
   - google-finance
   - ai-investing
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/google-finance-ai-powered-investment-analysis-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

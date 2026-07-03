@@ -2,8 +2,6 @@
 title: "Software in the AI Era: Andrej Karpathy's 3 Programming Paradigms"
 excerpt: "Former Tesla AI Director Andrej Karpathy's insights: From Software 1.0 to 3.0, viewing LLMs as operating systems, the future of partially autonomous apps, and the era where everyone becomes a programmer"
 date: 2025-06-19
-categories:
-  - dev
 tags:
   - Andrej Karpathy
   - Software Engineering
@@ -18,6 +16,9 @@ lang: en
 permalink: /en/news/karpathy-software-era-ai-programming-paradigms/
 canonical_url: "https://thakicloud.github.io/en/news/karpathy-software-era-ai-programming-paradigms/"
 published: false
+categories:
+  - news
+  - dev
 ---
 
 {% include video id="LCEmiRjPEtQ" provider="youtube" %}

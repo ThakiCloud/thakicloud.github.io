@@ -5,8 +5,6 @@ seo_title: "Unlimited OCR R-SWA ذاكرة KV ثابتة لتحليل المست
 seo_description: "تحليل نموذج Baidu Unlimited OCR (arXiv 2606.23050) وآلية Reference Sliding Window Attention. ذاكرة KV ثابتة تعالج سياق 32K في تمريرة واحدة، 93.23% على OmniDocBench v1.5. منظور استدلال المستندات متعدد المستأجرين على كوبرنيتس في ThakiCloud."
 date: 2026-06-25
 last_modified_at: 2026-06-25
-categories:
-  - research
 tags:
   - unlimited-ocr
   - document-parsing
@@ -21,6 +19,8 @@ toc_icon: "file-text"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/unlimited-ocr-rswa/"
 reading_time: true
+categories:
+  - research
 ---
 
 ## نظرة عامة

@@ -7,8 +7,6 @@ date: 2025-09-09
 lang: ko
 permalink: /ko/tutorials/maxkb-enterprise-agent-platform-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
-categories:
-  - tutorials
 tags:
   - MaxKB
   - AI-에이전트
@@ -22,6 +20,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

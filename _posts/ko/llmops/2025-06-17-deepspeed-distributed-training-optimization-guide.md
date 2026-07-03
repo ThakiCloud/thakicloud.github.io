@@ -2,8 +2,6 @@
 title: "DeepSpeed: 대규모 분산 훈련 최적화 라이브러리 완전 가이드"
 excerpt: "분산 훈련과 추론을 쉽고 효율적으로 만드는 DeepSpeed 라이브러리의 핵심 기능, ZeRO 최적화, 실무 적용 가이드"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - DeepSpeed
   - ZeRO
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

@@ -5,8 +5,6 @@ seo_title: "Chunkr Document Intelligence Data Processing Platform Complete Guide
 seo_description: "How to process document data using Chunkr's layout analysis, OCR, and semantic chunking. A practical guide to converting PDF, PPT, and Word documents into RAG/LLM-friendly structured data."
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - datasets
 tags:
   - chunkr
   - document-intelligence
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/en/datasets/chunkr-document-intelli
 reading_time: true
 lang: en
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **Estimated reading time**: 18 min

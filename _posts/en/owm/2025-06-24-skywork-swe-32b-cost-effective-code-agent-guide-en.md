@@ -4,10 +4,6 @@ excerpt: "Comprehensive analysis of Skywork-SWE-32B achieving 38% performance on
 seo_title: "Skywork-SWE-32B Cost-Effective Code Agent Guide - SWE-bench Performance - Thaki Cloud"
 seo_description: "Discover Skywork-SWE-32B's 38% SWE-bench performance, cost-effective deployment strategies, and practical implementation guide for software engineering AI agents with vLLM and OpenHands integration."
 date: 2025-06-24
-categories: 
-  - owm
-  - llmops
-  - tutorials
 tags: 
   - skywork-swe
   - code-agent
@@ -24,6 +20,10 @@ toc_label: "Skywork-SWE-32B Guide"
 canonical_url: "https://thakicloud.github.io/en/owm/skywork-swe-32b-cost-effective-code-agent-guide/"
 lang: en
 published: false
+categories:
+  - owm
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 10 minutes

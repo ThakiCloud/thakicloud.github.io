@@ -4,8 +4,6 @@ excerpt: "회사/개인 프로젝트 완전 분리, GitHub Projects v2 자동화
 seo_title: "GitHub CLI 프로젝트 관리 자동화 3편 - 회사/개인 분리 - Thaki Cloud"
 seo_description: "GitHub CLI로 회사와 개인 프로젝트를 완전 분리하고, Projects v2 자동화, 팀 협업 워크플로우를 구축하는 전문가 가이드"
 date: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - project-management
@@ -16,6 +14,9 @@ tags:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/dev/github-cli-project-management-automation/"
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

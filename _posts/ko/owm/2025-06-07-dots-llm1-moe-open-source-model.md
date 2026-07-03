@@ -1,9 +1,6 @@
 ---
 title: "dots.llm1 - 오픈소스 MoE 모델의 새로운 지평"
 date: 2025-06-07
-categories: 
-  - owm
-  - large-language-model
 tags: 
   - dots-llm1
   - mixture-of-experts
@@ -16,6 +13,8 @@ author_profile: true
 toc: true
 toc_label: "dots.llm1 완전 가이드"
 published: false
+categories:
+  - owm
 ---
 
 ## dots.llm1 소개

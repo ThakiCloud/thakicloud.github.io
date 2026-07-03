@@ -2,9 +2,6 @@
 title: "오픈소스 기반 완전한 LLMOps 파이프라인 구축 가이드"
 excerpt: "오픈소스 기반 더욱 유연하고 비용 효율적인 LLMOps 파이프라인을 구축하는 실전 가이드"
 date: 2025-06-25
-categories: 
-  - llmops
-  - dev
 tags: 
   - llmops
   - open-source
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "오픈소스 LLMOps 파이프라인"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 개요

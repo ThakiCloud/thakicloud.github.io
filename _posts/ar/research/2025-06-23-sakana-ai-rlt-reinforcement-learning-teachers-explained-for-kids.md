@@ -2,9 +2,6 @@
 title: "RLT من Sakana AI: الحواسيب تتعلم كيف تُعلِّم"
 excerpt: "بينما كانت أنظمة الذكاء الاصطناعي السابقة تتعلم حل المسائل، تتعلم طريقة RLT الجديدة كيف تُعلِّم، مما يُمكّن حتى النماذج الأصغر والأسرع من تحقيق نتائج مذهلة، تماماً مثل المعلم المتميز."
 date: 2025-06-23
-categories:
-  - research
-  - tutorials
 tags:
   - reinforcement-learning
   - sakana-ai
@@ -17,6 +14,9 @@ toc_label: "دليل RLT"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/sakana-ai-rlt-reinforcement-learning-teachers-explained-for-kids/"
 published: false
+categories:
+  - research
+  - tutorials
 ---
 
 ## مقدمة

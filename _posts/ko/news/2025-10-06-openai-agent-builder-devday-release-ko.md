@@ -4,8 +4,6 @@ excerpt: "OpenAI가 Zapier와 n8n에 직접 경쟁하는 드래그 앤 드롭 AI
 seo_title: "OpenAI Agent Builder DevDay 2025 출시 - 시각적 AI 워크플로우 도구"
 seo_description: "OpenAI가 DevDay 2025에서 Agent Builder를 출시했습니다. MCP 통합, 템플릿, 시각적 캔버스를 통한 드래그 앤 드롭 AI 워크플로우 생성 도구입니다."
 date: 2025-10-06
-categories:
-  - news
 tags:
   - OpenAI
   - Agent Builder
@@ -20,6 +18,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/news/openai-agent-builder-devday-release/
 canonical_url: "https://thakicloud.github.io/ko/news/openai-agent-builder-devday-release/"
+categories:
+  - news
 ---
 
 ⏱️ **예상 읽기 시간**: 4분

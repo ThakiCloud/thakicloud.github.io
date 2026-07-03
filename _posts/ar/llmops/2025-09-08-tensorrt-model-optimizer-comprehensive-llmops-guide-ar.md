@@ -4,8 +4,6 @@ excerpt: "إتقان NVIDIA TensorRT Model Optimizer لنشر LLM على مست�
 seo_title: "دليل TensorRT Model Optimizer الكامل: أفضل ممارسات LLMOps 2025"
 seo_description: "تعلم كيفية تحسين استنتاج LLM باستخدام NVIDIA TensorRT Model Optimizer. دليل شامل يغطي التكميم والتقليم والتقطير لنشر الذكاء الاصطناعي في الإنتاج."
 date: 2025-09-08
-categories:
-  - llmops
 tags:
   - tensorrt
   - تحسين-النماذج
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-ar/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

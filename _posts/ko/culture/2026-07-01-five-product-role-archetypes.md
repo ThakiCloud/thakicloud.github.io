@@ -3,8 +3,6 @@ title: "직무가 녹아내린 자리에 남는 다섯 가지 원형: 프로토�
 excerpt: "엔지니어링·제품·디자인·데이터가 한 덩어리로 녹아드는 지금, Claude Code를 만든 보리스 체르니가 제안한 다섯 가지 역할 원형과 제품 생애주기별 팀 구성 공식을 살펴봅니다."
 date: 2026-07-01
 last_modified_at: 2026-07-01
-categories:
-  - culture
 tags:
   - 일의미래
   - 조직문화
@@ -18,6 +16,8 @@ toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/five-product-role-archetypes/"
 header:
   image: /assets/images/five-product-role-archetypes-hero.png
+categories:
+  - culture
 ---
 
 ![직무의 경계가 흐려지고 새로운 역할 원형이 떠오르는 모습을 담은 추상 비주얼](/assets/images/five-product-role-archetypes-hero.png)

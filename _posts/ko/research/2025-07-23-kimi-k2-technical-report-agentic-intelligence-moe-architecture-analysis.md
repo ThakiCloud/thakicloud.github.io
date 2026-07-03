@@ -5,9 +5,6 @@ seo_title: "Kimi K2 기술 보고서 완전 분석 - 에이전틱 AI MoE 아키�
 seo_description: "MoonshotAI Kimi K2의 1조 파라미터 MoE 모델, MuonClip 옵티마이저, 15.5조 토큰 사전훈련, 에이전틱 데이터 합성 파이프라인의 기술적 혁신을 심층 분석합니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23
-categories:
-  - research
-  - llmops
 tags:
   - KimiK2
   - 에이전틱AI
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
 reading_time: true
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

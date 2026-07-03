@@ -5,8 +5,6 @@ seo_title: "Devin.cursorrules 완벽 가이드 - Cursor AI 어시스턴트 향�
 seo_description: "월 $20 Cursor를 $25 Devin급 AI 어시스턴트로 변환하는 devin.cursorrules 프로젝트. 자동 계획, 자기 진화, 웹 브라우징, 멀티 에이전트 협업 기능까지 완벽 가이드."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - dev
 tags:
   - devin.cursorrules
   - Cursor
@@ -23,6 +21,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/dev/devin-cursorrules-cursor-windsurf-ai-assistant-guide/"
 reading_time: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

@@ -1,10 +1,6 @@
 ---
 title: "무료로 LLM 파인튜닝하기: Unsloth Notebooks 완전 가이드"
 date: 2025-06-11
-categories: 
-  - dev
-  - llmops
-  - tutorials
 tags: 
   - LLM
   - 파인튜닝
@@ -18,6 +14,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
+  - tutorials
 ---
 
 LLM(Large Language Model) 파인튜닝을 무료로, 그리고 쉽게 시작할 수 있는 방법을 찾고 계신가요? **Unsloth Notebooks**는 100개 이상의 Jupyter 노트북을 통해 다양한 LLM을 Google Colab과 Kaggle에서 무료로 파인튜닝할 수 있는 완벽한 솔루션을 제공합니다.

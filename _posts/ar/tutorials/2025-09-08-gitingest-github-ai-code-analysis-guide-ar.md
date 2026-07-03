@@ -4,8 +4,6 @@ excerpt: "حوّل مستودعات GitHub إلى تنسيق صديق للذكا
 seo_title: "دليل شامل لأداة GitIngest لتحليل أكواد GitHub بالذكاء الاصطناعي - ثاكي كلاود"
 seo_description: "تعلم كيفية استخدام GitIngest لتحويل مشاريع GitHub إلى تنسيق صديق للذكاء الاصطناعي. دليل خطوة بخطوة من الاستخدام الأساسي إلى أتمتة حزمة Python"
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - GitIngest
   - GitHub
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/gitingest-github-ai-co
 lang: ar
 permalink: /ar/tutorials/gitingest-github-ai-code-analysis-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

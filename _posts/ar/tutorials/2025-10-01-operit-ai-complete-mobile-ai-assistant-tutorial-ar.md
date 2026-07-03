@@ -4,8 +4,6 @@ excerpt: "اكتشف Operit AI، مساعد الذكاء الاصطناعي ال
 seo_title: "دليل Operit AI للمساعد المحمول - دليل الإعداد الكامل"
 seo_description: "تعلم كيفية إعداد واستخدام Operit AI، أقوى وكيل ذكاء اصطناعي لـ Android مع Ubuntu VM، وأكثر من 40 أداة، وقدرات أتمتة متقدمة."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - operit-ai
   - android-ai
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/operit-ai-complete-mob
 lang: ar
 permalink: /ar/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

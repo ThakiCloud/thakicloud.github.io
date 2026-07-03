@@ -6,9 +6,6 @@ seo_description: "Learn proven context engineering strategies from the Manus bui
 date: 2025-07-23
 last_modified_at: 2025-07-23
 lang: en
-categories:
-  - agentops
-  - llmops
 tags:
   - AI에이전트
   - 컨텍스트엔지니어링
@@ -25,6 +22,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/context-engineering-ai-agents-manus-lessons/"
 reading_time: true
+categories:
+  - agentops
+  - llmops
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 12 min

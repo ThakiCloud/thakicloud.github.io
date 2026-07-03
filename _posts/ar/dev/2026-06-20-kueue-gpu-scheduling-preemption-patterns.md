@@ -5,8 +5,6 @@ seo_title: "أنماط جدولة GPU باستباق Kueue وتصميم ClusterQ
 seo_description: "شرح تصميم ClusterQueue في Kueue، أولويات أعباء العمل، سياسات استباق GPU، quota borrowing، وأنماط النشر متعدد الكتل مع MultiKueue بأمثلة تطبيقية."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [kueue, kubernetes, gpu-scheduling, preemption, clusterqueue, ai-platform, kueue-v1beta1, mlops]
 author_profile: true
 toc: true
@@ -16,6 +14,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/kueue-gpu-scheduling-preemption-patterns/"
 reading_time: true
 lang: ar
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

@@ -2,9 +2,6 @@
 title: "NVIDIA TensorRT-LLM 완전 가이드: Docker 최적화부터 Kubernetes 배포까지"
 excerpt: "NVIDIA TensorRT-LLM을 활용하여 고성능 LLM 추론 서비스를 구축하고, 최소 Docker 이미지 생성부터 Helm을 통한 Kubernetes 배포까지 단계별로 구현하는 실전 가이드입니다."
 date: 2025-06-21
-categories: 
-  - tutorials
-  - llmops
 tags: 
   - TensorRT-LLM
   - NVIDIA
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "TensorRT-LLM 배포 가이드"
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ## 개요

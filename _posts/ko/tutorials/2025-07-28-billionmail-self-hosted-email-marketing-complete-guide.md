@@ -5,8 +5,6 @@ seo_title: "BillionMail 완벽 가이드 - 오픈소스 이메일 마케팅 플�
 seo_description: "BillionMail 설치, 설정, 도메인 연결, 이메일 캠페인 생성까지 완전 자체 호스팅 이메일 마케팅 플랫폼 구축 가이드"
 date: 2025-07-28
 last_modified_at: 2025-07-28
-categories:
-  - tutorials
 tags:
   - billionmail
   - email-marketing
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/billionmail-self-hosted-email-marketing-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

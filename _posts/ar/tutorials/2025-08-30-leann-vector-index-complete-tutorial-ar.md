@@ -4,8 +4,6 @@ excerpt: "إتقان LEANN، نظام الفهرسة الثوري الذي يح�
 seo_title: "دليل LEANN للفهرسة الشعاعية - نظام RAG بتوفير 97% من التخزين"
 seo_description: "تعلم LEANN، نظام الفهرسة الشعاعية الثوري الذي يوفر 97% من مساحة التخزين. دليل شامل يغطي التثبيت والاستخدام والميزات المتقدمة لتطبيقات RAG فعالة"
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - LEANN
   - الفهرسة-الشعاعية
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/leann-vector-index-com
 lang: ar
 permalink: /ar/tutorials/leann-vector-index-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

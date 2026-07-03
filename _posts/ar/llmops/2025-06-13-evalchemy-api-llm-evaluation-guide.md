@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تقييم أكثر من 100 نموذج API بما
 seo_title: "تقييم Evalchemy API للنماذج اللغوية الكبيرة - دليل المعايير بدون تثبيت"
 seo_description: "دليل شامل لتقييم أكثر من 100 نموذج لغوي كبير عبر استدعاءات API باستخدام Evalchemy وCurator وLiteLLM. لا حاجة للتثبيت لتقييم GPT-4o وClaude-3 وGemini"
 date: 2025-06-13
-categories: 
-  - llmops
 tags: 
   - Evalchemy
   - تقييم-النماذج-اللغوية-الكبيرة
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/llmops/evalchemy-api-llm-evaluation-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/evalchemy-api-llm-evaluation-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء ونشر وكلاء LLM مؤتمتين ب
 seo_title: "دليل AutoAgent: إطار عمل LLM بدون كود - Thaki Cloud"
 seo_description: "إتقان إطار عمل AutoAgent لبناء وكلاء LLM مؤتمتين بدون برمجة. دليل تعليمي خطوة بخطوة يغطي التثبيت وإعداد Docker ونشر الوكلاء."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - AutoAgent
   - LLM
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/autoagent-zero-code-llm-framework/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/autoagent-zero-code-llm-framework/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

@@ -5,8 +5,6 @@ seo_title: "دليل شامل لإدارة مجموعات GPU باستخدام N
 seo_description: "استراتيجية إدارة بنية تحتية لمجموعات GPU المؤسسية باستخدام NVIDIA DeepOps. تحليل شامل يغطي تحسين أنظمة Kubernetes و Slurm و DGX، وصولا الى بيئات LLMOps."
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - llmops
 tags:
   - nvidia-deepops
   - gpu-cluster
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-deepops-gpu-cluste
 reading_time: true
 lang: ar
 published: false
+categories:
+  - llmops
 ---
 
 > ⏱️ **وقت القراءة المقدر**: 22 دقائق

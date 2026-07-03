@@ -6,8 +6,6 @@ seo_description: "يحوّل مشروع devin.cursorrules اشتراك Cursor ب
 date: 2025-07-04
 last_modified_at: 2025-07-04
 lang: ar
-categories:
-  - dev
 tags:
   - devin.cursorrules
   - Cursor
@@ -24,6 +22,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/2025-07-04-devin-cursorrules-cursor-windsurf-ai-assistant-guide/"
 reading_time: true
+categories:
+  - dev
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

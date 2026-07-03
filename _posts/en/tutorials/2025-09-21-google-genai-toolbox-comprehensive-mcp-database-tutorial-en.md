@@ -4,8 +4,6 @@ excerpt: "Master Google's GenAI Toolbox for seamless database operations with MC
 seo_title: "Google GenAI Toolbox MCP Database Tutorial - Complete Integration Guide"
 seo_description: "Comprehensive tutorial on Google GenAI Toolbox for MCP server database integration. Learn setup, configuration, and framework integration with practical examples."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - GenAI-Toolbox
   - MCP
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

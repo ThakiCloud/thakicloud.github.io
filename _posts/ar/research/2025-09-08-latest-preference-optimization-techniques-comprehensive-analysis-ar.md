@@ -5,8 +5,6 @@ seo_title: "أحدث تقنيات تحسين التفضيلات 2025 - تحلي�
 seo_description: "تحليل مفصل لطرق تحسين السياسة الحديثة: Pref-GRPO، PVPO، DCPO، ARPO، و GRPO-RoC. رؤى بحثية في تقدم التعلم المعزز"
 date: 2025-09-08
 lang: ar
-categories:
-  - research
 tags:
   - تحسين-التفضيلات
   - التعلم-المعزز
@@ -20,6 +18,8 @@ toc: true
 toc_label: "المحتويات"
 permalink: /ar/research/latest-preference-optimization-techniques-comprehensive-analysis/
 canonical_url: "https://thakicloud.github.io/ar/research/latest-preference-optimization-techniques-comprehensive-analysis/"
+categories:
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

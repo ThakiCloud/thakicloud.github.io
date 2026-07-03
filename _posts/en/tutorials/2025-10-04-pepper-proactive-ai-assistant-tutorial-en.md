@@ -4,8 +4,6 @@ excerpt: "A comprehensive guide to setting up and using Pepper, an open-source p
 seo_title: "Pepper AI Assistant Tutorial: Real-Time Event-Driven Personal Assistant - Thaki Cloud"
 seo_description: "Learn how to set up Pepper, a proactive AI assistant from Berkeley Sky Computing Lab. Complete guide covering installation, Gmail integration, and event-driven architecture with Feeds, Scheduler, and Workers."
 date: 2025-10-04
-categories:
-  - tutorials
 tags:
   - AI-Assistant
   - Event-Driven-Architecture
@@ -19,6 +17,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/pepper-proactive-ai-assistant-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/pepper-proactive-ai-assistant-tutorial/"
+categories:
+  - tutorials
 ---
 
 ![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)

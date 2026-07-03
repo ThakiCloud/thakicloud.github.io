@@ -2,9 +2,6 @@
 title: "STOCHASTOK: LLM의 서브워드 이해 능력을 혁신하는 확률적 토크나이제이션"
 excerpt: "옥스포드 대학교 연구진이 제안한 STOCHASTOK은 기존 토크나이저의 한계를 극복하고 LLM의 서브워드 레벨 이해 능력을 획기적으로 향상시키는 새로운 접근법입니다."
 date: 2025-06-23
-categories: 
-  - research
-  - llmops
 tags: 
   - STOCHASTOK
   - tokenization
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "STOCHASTOK 연구 분석"
 published: false
+categories:
+  - research
+  - llmops
 ---
 
 옥스포드 대학교 연구진이 발표한 이 논문은 대규모 언어 모델(LLM)의 서브워드 레벨 이해 능력을 획기적으로 향상시키는 새로운 토크나이제이션 방법인 **STOCHASTOK**을 제안합니다.

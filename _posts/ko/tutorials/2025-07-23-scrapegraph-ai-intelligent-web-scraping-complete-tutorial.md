@@ -5,9 +5,6 @@ seo_title: "ScrapeGraphAI AI 웹 스크래핑 튜토리얼 - LLM 기반 데이�
 seo_description: "ScrapeGraphAI를 사용한 AI 기반 웹 스크래핑 방법을 실전 예제와 함께 상세히 알아보세요. OpenAI, Ollama 연동부터 고급 파이프라인까지 포함된 완전한 가이드입니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23
-categories:
-  - tutorials
-  - dev
 tags:
   - ScrapeGraphAI
   - AI스크래핑
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/scrapegraph-ai-intelligent-web-scraping-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

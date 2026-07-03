@@ -4,8 +4,6 @@ excerpt: "멀티 클러스터 지원, 실시간 모니터링, 직관적인 UI를
 seo_title: "Kite Kubernetes 대시보드 튜토리얼 - 최신 K8s 관리 도구 - Thaki Cloud"
 seo_description: "Kite Kubernetes 대시보드 완벽 튜토리얼: Helm/kubectl을 통한 설치, 멀티 클러스터 설정, 리소스 관리, Prometheus 모니터링, 보안 기능 설정까지 상세 가이드"
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - kubernetes
   - dashboard
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/tutorials/kite-kubernetes-dashboard-complete-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/kite-kubernetes-dashboard-complete-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

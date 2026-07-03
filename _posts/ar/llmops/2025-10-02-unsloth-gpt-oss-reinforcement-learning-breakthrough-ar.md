@@ -4,8 +4,6 @@ excerpt: "اكتشف كيف جعلت Unsloth التعلم التعزيزي لـ 
 seo_title: "تدريب Unsloth gpt-oss RL: أسرع 3 مرات على GPU المجاني - Thaki Cloud"
 seo_description: "تعلم كيفية تدريب gpt-oss-20b بالتعلم التعزيزي على Colab المجاني باستخدام تحسينات Unsloth الثورية: سرعة 3 أضعاف، VRAM أقل 50%، وتقنيات منع اختراق المكافآت."
 date: 2025-10-02
-categories:
-  - llmops
 tags:
   - التعلم-التعزيزي
   - gpt-oss
@@ -18,6 +16,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/
 canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/"
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

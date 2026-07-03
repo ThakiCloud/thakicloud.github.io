@@ -4,8 +4,6 @@ excerpt: "Learn how to use MCPStore, an elegant open-source MCP service manageme
 seo_title: "MCPStore Tutorial: MCP Service Management for AI Agents - Thaki Cloud"
 seo_description: "Complete tutorial on MCPStore - open-source MCP service management tool with LangChain integration, multi-agent isolation, and RESTful API for AI development."
 date: 2025-09-28
-categories:
-  - tutorials
 tags:
   - MCP
   - AI-Agents
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/mcpstore-mcp-service-management-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcpstore-mcp-service-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

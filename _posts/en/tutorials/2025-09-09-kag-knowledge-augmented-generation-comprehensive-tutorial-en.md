@@ -4,8 +4,6 @@ excerpt: "Explore KAG (Knowledge Augmented Generation), a revolutionary framewor
 seo_title: "KAG Tutorial: Knowledge Augmented Generation Framework Guide - Thaki Cloud"
 seo_description: "Learn about KAG framework features, architecture, installation, and implementation. Complete tutorial for knowledge graph reasoning and Q&A solutions."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - knowledge-graph
   - llm
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/tutorials/kag-knowledge-augmented-generation-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/kag-knowledge-augmented-generation-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

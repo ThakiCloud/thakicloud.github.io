@@ -5,9 +5,6 @@ seo_title: "AI 워크로드 스케줄러 비교: Volcano vs Koordinator vs KAI S
 seo_description: "클라우드 업체를 위한 AI 워크로드 스케줄러 완벽 비교 가이드. Volcano, Koordinator, KAI Scheduler의 GPU 최적화 기능, 운영 복잡성, 비용 효율성을 심층 분석하고 도입 시나리오별 선택 전략을 제시합니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09
-categories:
-  - llmops
-  - tutorials
 tags:
   - AI워크로드
   - 스케줄러
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/ai-workload-scheduler-comparison-volcano-koordinator-kai/"
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

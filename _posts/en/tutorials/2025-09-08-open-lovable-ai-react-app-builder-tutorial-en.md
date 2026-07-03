@@ -4,8 +4,6 @@ excerpt: "Learn how to build React applications instantly using AI with Open Lov
 seo_title: "Open Lovable Tutorial: AI React App Builder Guide - Thaki Cloud"
 seo_description: "Complete tutorial on Open Lovable, the AI-powered React app builder. Learn to set up, use, and build applications with AI assistance using this open-source tool."
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - AI
   - React
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/open-lovable-ai-react-app-builder-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/open-lovable-ai-react-app-builder-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

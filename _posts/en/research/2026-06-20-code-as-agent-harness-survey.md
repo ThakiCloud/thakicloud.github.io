@@ -5,8 +5,6 @@ seo_title: "Code-Based AI Agent Harness Architecture Survey Analysis - Thaki Clo
 seo_description: "arXiv 2605.18747 Code as Agent Harness survey: deep analysis of the three-layer agent infrastructure framework, planning and adaptive control, multi-agent coordination, and open safety challenges."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - research
 tags:
   - ai-agent
   - agent-harness
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/code-as-agent-harness-survey/"
 lang: en
 reading_time: true
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 8 min

@@ -4,8 +4,6 @@ excerpt: "دليل شامل لـ SkyPilot - المنصة الموحدة لتشغ
 seo_title: "دليل منصة SkyPilot لإدارة أحمال عمل الذكاء الاصطناعي - LLMOps متعدد السحابات"
 seo_description: "دليل كامل لـ SkyPilot لإدارة أحمال عمل الذكاء الاصطناعي/التعلم الآلي عبر السحابات. تعلم النشر وتحسين التكلفة وأفضل الممارسات لبنية LLMOps التحتية."
 date: 2025-09-02
-categories:
-  - llmops
 tags:
   - SkyPilot
   - متعدد السحابات
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/skypilot-comprehensive-ai
 lang: ar
 permalink: /ar/llmops/skypilot-comprehensive-ai-workload-management-platform/
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة

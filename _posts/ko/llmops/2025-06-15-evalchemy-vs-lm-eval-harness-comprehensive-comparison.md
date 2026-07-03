@@ -2,9 +2,6 @@
 title: "Evalchemy vs LM-Eval-Harness: 현대적 LLM 평가 프레임워크 심층 분석"
 excerpt: "LLM 평가의 두 축, Evalchemy와 LM-Eval-Harness를 아키텍처, 사용자 경험, 비용 효율성, 엔터프라이즈 관점에서 종합 비교 분석합니다."
 date: 2025-06-15
-categories: 
-  - llmops
-  - dev
 tags: 
   - evalchemy
   - lm-eval-harness
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 서론

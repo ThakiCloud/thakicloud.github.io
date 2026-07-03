@@ -2,8 +2,6 @@
 title: "애플 AI 혁신의 새 장: WWDC 2025 'Liquid Glass' 시대 개막"
 excerpt: "iOS 26부터 시작되는 통합 연도 명명 체계, 개발자 AI SDK 개방, Live Translation, Workout Buddy까지 - 애플이 제시한 차세대 인공지능 생태계 전략 분석"
 date: 2025-06-09
-categories:
-  - news
 tags:
   - Tech News
   - Apple
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 published: false
+categories:
+  - news
 ---
 
 <figure class="video-container">

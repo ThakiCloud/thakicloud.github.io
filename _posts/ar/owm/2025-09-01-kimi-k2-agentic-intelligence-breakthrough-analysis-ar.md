@@ -7,8 +7,6 @@ date: 2025-09-01
 lang: ar
 permalink: /ar/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/
 canonical_url: "https://thakicloud.github.io/ar/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/"
-categories:
-  - owm
 tags:
   - الذكاء-العميل
   - خليط-الخبراء
@@ -20,6 +18,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

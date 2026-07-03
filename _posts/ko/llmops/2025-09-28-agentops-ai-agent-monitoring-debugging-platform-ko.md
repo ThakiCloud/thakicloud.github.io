@@ -4,8 +4,6 @@ excerpt: "AI 에이전트의 성능 모니터링, 비용 추적, 벤치마킹, �
 seo_title: "AgentOps: AI 에이전트 모니터링 및 디버깅 플랫폼 - Thaki Cloud"
 seo_description: "AgentOps를 통해 AI 에이전트를 모니터링, 디버깅, 최적화하는 방법을 알아보세요. 포괄적인 추적, 비용 관리, 보안 기능을 제공합니다."
 date: 2025-09-28
-categories:
-  - llmops
 tags:
   - AgentOps
   - AI-에이전트
@@ -19,6 +17,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agentops-ai-agent-monitoring-debugging-platform/
 canonical_url: "https://thakicloud.github.io/ko/llmops/agentops-ai-agent-monitoring-debugging-platform/"
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

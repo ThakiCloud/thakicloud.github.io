@@ -5,9 +5,6 @@ seo_title: "Claude Code Reverse Engineering Part 2: Agent Loop and Tool Executio
 seo_description: "An in-depth practical analysis of the agent loop system, 6-stage tool execution framework, security architecture, and monitoring system discovered through Claude Code reverse engineering for production LLMOps."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - llmops
-  - research
 tags:
   - claude-code
   - reverse-engineering
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-reverse-engin
 reading_time: true
 lang: en
 published: false
+categories:
+  - llmops
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 18 min

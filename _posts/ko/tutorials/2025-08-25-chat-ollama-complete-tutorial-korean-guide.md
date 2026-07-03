@@ -4,8 +4,6 @@ excerpt: "오픈소스 AI 챗봇 플랫폼 Chat-Ollama의 설치부터 고급 �
 seo_title: "Chat-Ollama 완전 가이드 - 프라이빗 AI 챗봇 구축 튜토리얼 - Thaki Cloud"
 seo_description: "Chat-Ollama 설치, 설정, MCP 통합, 지식베이스 구축까지 단계별 실습 가이드. Ollama, OpenAI, Anthropic 모델 통합 방법 포함"
 date: 2025-08-25
-categories:
-  - tutorials
 tags:
   - chat-ollama
   - ollama
@@ -22,6 +20,8 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/chat-ollama-complete-tutorial-korean-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

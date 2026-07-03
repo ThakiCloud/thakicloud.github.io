@@ -5,8 +5,6 @@ seo_title: "ثقافة مونيبول القائمة على البيانات ل�
 seo_description: "حوّل مؤسستك بتفكير مونيبول. ابن ثقافة قائمة على البيانات في التطوير وإدارة المنتجات والتوظيف لأقصى عائد استثمار."
 date: 2025-06-17
 lang: ar
-categories:
-  - culture
 tags:
   - مونيبول
   - قائم-على-البيانات
@@ -18,6 +16,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/moneyball-data-driven-culture/
 canonical_url: "https://thakicloud.github.io/ar/culture/moneyball-data-driven-culture/"
+categories:
+  - culture
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

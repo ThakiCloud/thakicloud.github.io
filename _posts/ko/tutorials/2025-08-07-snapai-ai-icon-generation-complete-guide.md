@@ -5,8 +5,6 @@ seo_title: "SnapAI AI 아이콘 생성 CLI 완전 가이드 - macOS 설치 및 �
 seo_description: "SnapAI CLI로 AI 기반 앱 아이콘 자동 생성. OpenAI GPT-Image-1, DALL-E 3, DALL-E 2 모델 비교, 비용 최적화, React Native Expo 개발자용 완전 가이드"
 date: 2025-08-07
 last_modified_at: 2025-08-07
-categories:
-  - tutorials
 tags:
   - snapai
   - ai-icon-generation
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/snapai-ai-icon-generation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

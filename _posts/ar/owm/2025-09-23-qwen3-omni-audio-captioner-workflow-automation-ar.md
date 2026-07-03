@@ -4,8 +4,6 @@ excerpt: "استكشف كيف يحول Qwen3-Omni-30B-A3B-Captioner سير عم�
 seo_title: "Qwen3-Omni للتعليق الصوتي: دليل أتمتة سير العمل المؤسسي - Thaki Cloud"
 seo_description: "دليل شامل لتنفيذ Qwen3-Omni-30B-A3B-Captioner لسير عمل معالجة الصوت الآلي. تعلم استراتيجيات النشر وأنماط التكامل وحالات الاستخدام المؤسسي."
 date: 2025-09-23
-categories:
-  - owm
 tags:
   - معالجة-الصوت
   - أتمتة-سير-العمل
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-omni-audio-captioner-w
 lang: ar
 permalink: /ar/owm/qwen3-omni-audio-captioner-workflow-automation/
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

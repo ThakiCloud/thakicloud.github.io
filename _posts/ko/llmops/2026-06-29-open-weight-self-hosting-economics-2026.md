@@ -5,8 +5,6 @@ seo_title: "오픈웨이트 모델 전성기와 self-hosting 경제학 2026 - Th
 seo_description: "DeepSeek V4 Flash, GLM-5.2, MiniMax M3, Nemotron 3 Ultra로 본 2026년 오픈웨이트 지형과 프로프라이어터리 대비 self-hosting 비용 손익분기, ThakiCloud K8s 서빙 관점 분석"
 date: 2026-06-29
 last_modified_at: 2026-06-29
-categories:
-  - llmops
 tags:
   - open-weight
   - self-hosting
@@ -23,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/open-weight-self-hosting-
 reading_time: true
 header:
   image: /assets/images/open-weight-self-hosting-economics-2026-hero.png
+categories:
+  - llmops
 ---
 
 ![오픈웨이트 모델과 self-hosting 경제학을 표현한 추상 비주얼](/assets/images/open-weight-self-hosting-economics-2026-hero.png)

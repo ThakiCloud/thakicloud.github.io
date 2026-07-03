@@ -4,8 +4,6 @@ excerpt: "Learn how to translate books, EPUB files, and subtitles using local LL
 seo_title: "TranslateBook LLM Tutorial: AI Book Translation Tool Guide - Thaki Cloud"
 seo_description: "Complete guide to TranslateBookWithLLM - translate books, EPUBs, and SRT subtitles using Ollama, Gemini API with web interface and CLI. Step-by-step setup tutorial."
 date: 2025-09-23
-categories:
-  - tutorials
 tags:
   - llm
   - translation
@@ -21,6 +19,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/translatebook-llm-comp
 lang: en
 permalink: /en/tutorials/translatebook-llm-comprehensive-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

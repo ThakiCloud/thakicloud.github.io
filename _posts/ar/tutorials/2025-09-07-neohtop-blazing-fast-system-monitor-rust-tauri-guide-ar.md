@@ -4,8 +4,6 @@ excerpt: "إتقان NeoHtop، مراقب النظام الحديث متعدد �
 seo_title: "NeoHtop مراقب النظام Rust Tauri دليل تعليمي شامل - Thaki Cloud"
 seo_description: "دليل شامل لـ NeoHtop، مراقب النظام الحديث المبني بـ Rust و Tauri و Svelte. التثبيت والبحث المتقدم وإدارة العمليات وأفضل الممارسات."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - neohtop
   - rust
@@ -24,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/neohtop-blazing-fast-s
 lang: ar
 permalink: /ar/tutorials/neohtop-blazing-fast-system-monitor-rust-tauri-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

@@ -5,8 +5,6 @@ seo_title: "أتمتة GitHub CLI الكاملة على macOS - الجزء ال�
 seo_description: "كيفية أتمتة GitHub CLI بالكامل على macOS: دليل خطوة بخطوة من تثبيت Homebrew إلى نصوص zshrc المتقدمة والاختصارات المخصصة لبناء بيئة تطوير احترافية"
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - macos
@@ -29,6 +27,8 @@ canonical_url: "https://thakicloud.github.io/ar/dev/2025-07-02-macos-github-cli-
 lang: ar
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **وقت القراءة المقدر**: 20 دقيقة

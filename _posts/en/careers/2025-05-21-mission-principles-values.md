@@ -2,8 +2,6 @@
 title: "[Thaki Cloud Life & Career] Mission, Principles, Values"
 excerpt: "Sharing Thaki Cloud's mission, principles, and values."
 date: 2025-05-21
-categories:
-  - careers
 tags:
   - Company Culture
   - Careers
@@ -14,6 +12,8 @@ author_profile: true
 lang: en
 permalink: /en/careers/mission-principles-values/
 canonical_url: "https://thakicloud.github.io/en/careers/mission-principles-values/"
+categories:
+  - careers
 --- 
 
 Thaki Cloud aims to contribute to society by enabling people to beneficially use the innovations brought by technology.

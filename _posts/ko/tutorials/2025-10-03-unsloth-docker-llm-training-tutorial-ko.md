@@ -4,8 +4,6 @@ excerpt: "Unsloth Docker 컨테이너를 사용하여 대규모 언어 모델을
 seo_title: "Unsloth Docker LLM 파인튜닝 튜토리얼 - 완벽 가이드 2025"
 seo_description: "Unsloth Docker로 LLM 파인튜닝을 마스터하세요. 설치, GPU 설정, Jupyter Lab 접근, 실전 훈련 예제를 포함한 단계별 튜토리얼로 효율적인 모델 커스터마이징을 배워보세요."
 date: 2025-10-03
-categories:
-  - tutorials
 tags:
   - unsloth
   - docker
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/unsloth-docker-llm-training-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/unsloth-docker-llm-training-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

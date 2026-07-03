@@ -5,9 +5,6 @@ seo_title: "Webiny 서버리스 CMS 튜토리얼 - AWS 기반 완벽 가이드 -
 seo_description: "Webiny 오픈소스 서버리스 CMS를 활용하여 AWS에서 헤드리스 CMS, 페이지 빌더, 파일 매니저를 구축하는 실전 가이드"
 date: 2025-08-12
 last_modified_at: 2025-08-12
-categories:
-  - tutorials
-  - dev
 tags:
   - webiny
   - serverless
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/webiny-serverless-enterprise-cms-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

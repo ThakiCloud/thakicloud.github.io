@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية تشغيل Claude Code وGemini ووكلاء ال�
 seo_title: "دليل VibeKit: بيئة آمنة لوكلاء البرمجة بالذكاء الاصطناعي مع تحرير البيانات - Thaki Cloud"
 seo_description: "دليل شامل لـ VibeKit - تشغيل وكلاء البرمجة بالذكاء الاصطناعي مثل Claude Code وGemini في حاويات Docker معزولة مع تحرير البيانات الحساسة التلقائي والمراقبة الفورية"
 date: 2025-10-05
-categories:
-  - tutorials
 tags:
   - vibekit
   - ai-agents
@@ -21,6 +19,8 @@ toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

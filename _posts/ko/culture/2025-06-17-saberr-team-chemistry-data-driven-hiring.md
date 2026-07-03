@@ -3,8 +3,6 @@ title: "Saberr로 팀 케미를 데이터화하는 채용·조직 운영 전략"
 excerpt: "15분 설문과 행동 데이터로 팀 궁합을 정량화해 채용부터 온보딩까지 전 과정을 최적화하는 Saberr 알고리즘 활용법"
 date: 2025-06-17
 last_modified_at: 2026-06-20
-categories:
-  - culture
 tags:
   - Team Chemistry
   - Data-Driven Hiring
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/culture/saberr-team-chemistry-data-driven-hiring/"
+categories:
+  - culture
 ---
 
 ## 왜 '케미'를 데이터로 보려 하는가

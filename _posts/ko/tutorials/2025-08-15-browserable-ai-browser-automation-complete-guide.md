@@ -5,9 +5,6 @@ seo_title: "Browserable AI 브라우저 자동화 라이브러리 튜토리얼 -
 seo_description: "Browserable을 활용한 AI 브라우저 에이전트 구축 가이드. Docker 설치, JavaScript SDK 사용법, 실제 예제까지 포함한 완전 튜토리얼"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
-  - dev
 tags:
   - browserable
   - browser-automation
@@ -24,6 +21,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/browserable-ai-browser-automation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

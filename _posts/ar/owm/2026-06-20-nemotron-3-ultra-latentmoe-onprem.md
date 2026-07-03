@@ -5,8 +5,6 @@ seo_title: "دليل خدمة NVIDIA Nemotron-3-Ultra-550B LatentMoE محليً�
 seo_description: "نحلل بنية Nemotron-3-Ultra 550B LatentMoE (Mamba-2+MoE+Attention)، والمعايير (SWE-Bench Verified 70.7%، MMLU-Pro 86.8%)، والخدمة عبر vLLM/SGLang/TRT-LLM، ومتطلبات B200 الدنيا."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - nemotron-3-ultra
   - nvidia
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/owm/nemotron-3-ultra-latentmoe-onprem/"
 lang: ar
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

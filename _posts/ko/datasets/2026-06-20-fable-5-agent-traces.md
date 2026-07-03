@@ -2,8 +2,6 @@
 title: "Fable-5-traces: 코딩 에이전트 세션 trace로 소형 모델을 蒸溜하는 방법"
 excerpt: "Glint-Research가 공개한 Fable 5(Claude Code) 에이전트 trace 4,665개. AGPL-3.0, HF Agent Traces 포맷, tool-use 81% 구성. 소형 모델 distillation과 자가호스팅 코드 에이전트 구축에 활용하는 실전 가이드."
 date: 2026-06-20
-categories:
-  - datasets
 tags:
   - agent-traces
   - fable-5
@@ -19,6 +17,8 @@ toc: true
 toc_label: "Fable-5-traces 가이드"
 reading_time: true
 canonical_url: https://thakicloud.github.io/datasets/fable-5-agent-traces/
+categories:
+  - datasets
 ---
 
 ![Fable 5 에이전트 trace 개념도](/assets/images/fable-5-agent-traces-hero.png)

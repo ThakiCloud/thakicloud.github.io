@@ -5,8 +5,6 @@ seo_title: "docker-android K8s 에뮬레이터 - 컨테이너 Android 디바이�
 seo_description: "docker-android로 Android 에뮬레이터를 헤드리스 컨테이너로 띄우는 방법. KVM 패스스루, GPU 가속, scrcpy 원격 제어, CI/CD 테스트 자동화를 ThakiCloud Kubernetes 기반으로 운용하는 실전 가이드."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - dev
 tags:
   - docker
   - android
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/dev/docker-android-k8s-emulator/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ```mermaid

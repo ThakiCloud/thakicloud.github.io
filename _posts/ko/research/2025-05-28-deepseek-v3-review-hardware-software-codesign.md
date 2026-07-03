@@ -1,8 +1,6 @@
 ---
 title: "DeepSeek-V3 리뷰: 하드웨어-소프트웨어 협업이 이끈 비용 효율적 초대규모 모델 학습 전략"
 date: 2025-05-28
-categories: 
-  - research
 tags: 
   - DeepSeek
   - Large Language Model
@@ -14,6 +12,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - research
 ---
 
 2024년은 GPT-4o, LLaMA 3, Claude 3.5 Sonnet, Grok-2 등 굵직한 LLM이 잇달아 등장하며 '스케일의 시대'가 한층 가속화되었습니다. 그 흐름 속에서 **DeepSeek-AI**가 공개한 **DeepSeek-V3**는 단 2,048대의 **NVIDIA H800** GPU만으로 SOTA 성능을 달성해 업계의 이목을 집중시켰습니다. 본 리뷰에서는 논문의 기술적 기여와 하드웨어-소프트웨어(Co-Design) 관점에서의 시사점을 정리하고, 실제 PaaS / AI 인프라 설계 시 고려할 요소를 제안합니다.

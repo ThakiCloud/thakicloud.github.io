@@ -5,8 +5,6 @@ seo_title: "الذاكرة الإجرائية للوكيل: تخزين المه�
 seo_description: "تستعرض هذه المقالة أبحاث الذاكرة الإجرائية لعملاء LLM بالتركيز على Memp (arXiv 2508.06433) ومعيار AFTER (arXiv 2606.23127)، وتتناول بنية البناء والاسترجاع والتحديث، والتحول نحو النماذج البارامترية، وتطبيق بيئة مهارات Paxis التابعة لـThakiCloud."
 date: 2026-07-02
 last_modified_at: 2026-07-02
-categories:
-  - research
 tags:
   - agent-memory
   - procedural-memory
@@ -19,6 +17,8 @@ toc_label: "المحتويات"
 toc_icon: "brain"
 published: true
 canonical_url: "https://thakicloud.github.io/ar/research/agent-procedural-memory-beyond-retrieval/"
+categories:
+  - research
 ---
 
 ## نظرة عامة

@@ -5,8 +5,6 @@ seo_title: "Chunkr 문서 지능형 데이터 처리 플랫폼 완전 가이드 
 seo_description: "Chunkr의 레이아웃 분석, OCR, 시맨틱 청킹을 활용한 문서 데이터 처리 방법. PDF, PPT, Word 문서를 RAG/LLM 친화적 구조화 데이터로 변환하는 실전 가이드"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - datasets
 tags:
   - chunkr
   - document-intelligence
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/chunkr-document-intelligence-rag-data-processing/"
 reading_time: true
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

@@ -4,9 +4,6 @@ excerpt: "Comprehensive analysis of OmniGen2, the open-source unified multimodal
 seo_title: "OmniGen2 Multimodal Generation Model Complete Guide - Beyond GPT-4o - Thaki Cloud"
 seo_description: "Discover OmniGen2's groundbreaking multimodal capabilities including in-context generation and advanced image editing that surpass GPT-4o, with complete implementation guide and creative applications."
 date: 2025-06-25
-categories: 
-  - owm
-  - research
 tags: 
   - omnigen2
   - multimodal
@@ -22,6 +19,9 @@ toc_label: "OmniGen2 Complete Analysis"
 canonical_url: "https://thakicloud.github.io/en/owm/omnigen2-multimodal-generation-comprehensive-guide/"
 lang: en
 published: false
+categories:
+  - owm
+  - research
 ---
 
 ⏱️ **Estimated Reading Time**: 14 minutes

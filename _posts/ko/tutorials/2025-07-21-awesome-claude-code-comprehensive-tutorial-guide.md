@@ -5,9 +5,6 @@ seo_title: "Awesome Claude Code 완전 가이드 - Thaki Cloud"
 seo_description: "Claude Code 프롬프트, 도구, 워크플로우 완전 정리. AI 기반 개발 환경 구축과 생산성 향상을 위한 실전 가이드"
 date: 2025-07-21
 last_modified_at: 2025-07-21
-categories:
-  - tutorials
-  - dev
 tags:
   - Claude-Code
   - AI-개발도구
@@ -23,6 +20,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/awesome-claude-code-comprehensive-tutorial-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

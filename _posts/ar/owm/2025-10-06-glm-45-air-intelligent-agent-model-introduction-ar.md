@@ -4,8 +4,6 @@ excerpt: "اكتشف GLM-4.5-Air، النموذج الثوري من Z.ai بـ 10
 seo_title: "دليل نموذج GLM-4.5-Air: تطوير الوكلاء الذكيين - Thaki Cloud"
 seo_description: "دليل شامل لـ GLM-4.5-Air: نموذج 106 مليار معامل مع الاستدلال المختلط واستخدام الأدوات ورخصة MIT التجارية لتطبيقات الوكلاء الذكيين."
 date: 2025-10-06
-categories:
-  - owm
 tags:
   - GLM-4.5-Air
   - الوكلاء-الذكيين
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/owm/glm-45-air-intelligent-agent-model-introduction/
 canonical_url: "https://thakicloud.github.io/ar/owm/glm-45-air-intelligent-agent-model-introduction/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

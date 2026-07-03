@@ -4,8 +4,6 @@ excerpt: "استكشف Logics-Parsing من Alibaba، نموذج قوي لتحل�
 seo_title: "سير عمل Alibaba Logics-Parsing للمستندات بالذكاء الاصطناعي - معالجة VLM متقدمة"
 seo_description: "اكتشف كيف يحدث Logics-Parsing من Alibaba ثورة في سير عمل معالجة المستندات بتقنية VLM الشاملة، محققاً أداءً فائقاً على التخطيطات المعقدة."
 date: 2025-09-30
-categories:
-  - owm
 tags:
   - تحليل-المستندات
   - نموذج-الرؤية-واللغة
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/owm/alibaba-logics-parsing-document-ai-workflow/
 canonical_url: "https://thakicloud.github.io/ar/owm/alibaba-logics-parsing-document-ai-workflow/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

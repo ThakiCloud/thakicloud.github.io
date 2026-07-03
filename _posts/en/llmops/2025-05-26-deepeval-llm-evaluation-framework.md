@@ -4,8 +4,6 @@ excerpt: "DeepEval revolutionizes LLM system evaluation with comprehensive metri
 seo_title: "DeepEval LLM Evaluation Framework - Complete Guide for AI Testing"
 seo_description: "Discover DeepEval, the powerful open-source framework for evaluating LLM applications with built-in metrics, benchmarking, and production-ready testing capabilities"
 date: 2025-05-26
-categories:
-  - llmops
 tags:
   - MLOps
   - LLMOps
@@ -19,6 +17,8 @@ toc: true
 toc_label: "DeepEval Guide"
 canonical_url: "https://thakicloud.github.io/en/llmops/deepeval-llm-evaluation-framework/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

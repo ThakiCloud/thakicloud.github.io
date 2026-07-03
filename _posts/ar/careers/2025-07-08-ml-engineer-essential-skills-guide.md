@@ -5,8 +5,6 @@ seo_title: "دليل المهارات الأساسية لمهندس التعلم
 seo_description: "دليل التوظيف المبني على Made-With-ML لكفاءات مهندس التعلم الآلي الأساسية والمجموعة التقنية ومتطلبات الخبرة العملية"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - careers
 tags:
   - مهندس-التعلم-الآلي
   - دليل-المهنة
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/ar/careers/ml-engineer-essential-sk
 reading_time: true
 lang: ar
 permalink: /ar/careers/ml-engineer-essential-skills-guide/
+categories:
+  - careers
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 12 دقيقة

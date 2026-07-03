@@ -4,9 +4,6 @@ excerpt: "تحليل شامل لـ OmniGen2، النموذج الموحد متع
 seo_title: "دليل نموذج OmniGen2 متعدد الوسائط الشامل - يتجاوز GPT-4o - Thaki Cloud"
 seo_description: "اكتشف قدرات OmniGen2 متعددة الوسائط الرائدة بما في ذلك التوليد السياقي وتحرير الصور المتقدم الذي يتفوق على GPT-4o، مع دليل تنفيذ شامل وتطبيقات إبداعية."
 date: 2025-06-25
-categories: 
-  - owm
-  - research
 tags: 
   - omnigen2
   - multimodal
@@ -22,6 +19,9 @@ toc_label: "تحليل OmniGen2 الشامل"
 canonical_url: "https://thakicloud.github.io/ar/owm/omnigen2-multimodal-generation-comprehensive-guide/"
 lang: ar
 published: false
+categories:
+  - owm
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 14 دقيقة

@@ -5,8 +5,6 @@ seo_title: "استراتيجية التوظيف القائمة على البيا
 seo_description: "حوّل التوظيف وإدارة الفريق بنهج سابر القائم على البيانات لكيمياء الفريق. اقيس التوافق وحسّن الأداء التنظيمي."
 date: 2025-06-17
 lang: ar
-categories:
-  - culture
 tags:
   - كيمياء-الفريق
   - التوظيف-القائم-على-البيانات
@@ -19,6 +17,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/saberr-team-chemistry-data-driven-hiring/
 canonical_url: "https://thakicloud.github.io/ar/culture/saberr-team-chemistry-data-driven-hiring/"
+categories:
+  - culture
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 10 دقائق

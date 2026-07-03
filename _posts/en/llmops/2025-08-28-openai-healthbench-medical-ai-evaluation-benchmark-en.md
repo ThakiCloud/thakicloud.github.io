@@ -4,8 +4,6 @@ excerpt: "Discover how OpenAI's HealthBench transforms medical AI evaluation wit
 seo_title: "OpenAI HealthBench: Medical AI Evaluation & LLMOps Best Practices"
 seo_description: "Explore OpenAI HealthBench's revolutionary approach to medical AI evaluation. Learn how 262 doctors from 60 countries created 5,000 realistic medical conversations to benchmark AI safety in healthcare."
 date: 2025-08-28
-categories:
-  - llmops
 tags:
   - OpenAI
   - HealthBench
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/llmops/openai-healthbench-medical-ai-evaluation/
 canonical_url: "https://thakicloud.github.io/en/llmops/openai-healthbench-medical-ai-evaluation/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

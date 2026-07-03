@@ -5,8 +5,6 @@ seo_title: "Spiced Self-Play 논문 분석 (arXiv 2606.19370) - 사람 30분 데
 seo_description: "data-regularized self-play로 사람과 협응하는 운전 정책을 학습하는 방법. on-policy KL 정규화, 30분 사람 데이터, 소비자 GPU 15시간, 2500배 데이터 효율을 ThakiCloud 멀티에이전트·RL 인프라 관점에서 분석합니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - research
 tags:
   - self-play
   - reinforcement-learning
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/spiced-self-play-human-driving/"
 reading_time: true
+categories:
+  - research
 ---
 
 ## 개요

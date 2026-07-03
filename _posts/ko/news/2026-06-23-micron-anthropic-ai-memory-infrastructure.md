@@ -5,8 +5,6 @@ seo_title: "Micron Anthropic 메모리 협약 분석 - HBM과 AI 추론 병목 -
 seo_description: "Micron과 Anthropic의 전략적 협약(HBM·DRAM·SSD 공급, 메모리 아키텍처 공동 설계, 시리즈 H 투자)을 AI 인프라 관점에서 분석합니다. 메모리 대역폭이 LLM 추론 처리량의 병목인 이유와 ThakiCloud K8s 기반 서빙 플랫폼 시사점."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - news
 tags:
   - micron
   - anthropic
@@ -20,6 +18,8 @@ toc_icon: "memory"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/news/micron-anthropic-ai-memory-infrastructure/"
 reading_time: true
+categories:
+  - news
 ---
 
 ## 개요

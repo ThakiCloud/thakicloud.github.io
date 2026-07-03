@@ -4,8 +4,6 @@ excerpt: "AI 에이전트의 성능을 극적으로 향상시키는 효과적인
 seo_title: "AGENTS.md 튜토리얼: AI 코드 품질 향상 모범 사례 - Thaki Cloud"
 seo_description: "더 나은 AI 코딩 지원을 위한 AGENTS.md 파일 작성 완벽 가이드. 실제 예제와 함께 배우는 규칙 설정, 안전 권한, 프로젝트 구조 정의 방법."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - ai
   - 코딩
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/tutorials/agents-md-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/agents-md-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

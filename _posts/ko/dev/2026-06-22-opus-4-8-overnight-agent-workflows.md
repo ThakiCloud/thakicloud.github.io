@@ -5,8 +5,6 @@ seo_title: "Opus 4.8 동적 워크플로와 병렬 서브에이전트 분석 - T
 seo_description: "‘자는 동안 돈 버는 AI’ 바이럴 아티클의 과장과 실체를 분리하고, Opus 4.8 동적 워크플로·병렬 서브에이전트 팬아웃·검증 게이트의 실제 엔지니어링과 무인 장기 실행 에이전트가 만드는 GPU 서빙 수요를 ThakiCloud 쿠버네티스 관점에서 정리했습니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - dev
 tags:
   - ai-agents
   - claude-opus
@@ -19,6 +17,8 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 canonical_url: "https://thakicloud.github.io/ko/dev/opus-4-8-overnight-agent-workflows/"
+categories:
+  - dev
 ---
 
 ## 개요

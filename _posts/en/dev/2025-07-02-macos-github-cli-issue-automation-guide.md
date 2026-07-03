@@ -5,8 +5,6 @@ seo_title: "macOS GitHub CLI Automation Part 2 - Issue Management Automation - T
 seo_description: "How to fully automate GitHub CLI workflows from issue creation and classification to labeling, assignee allocation, and sprint planning. A complete guide to building an intelligent issue management system."
 date: 2025-07-02
 last_modified_at: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - issue-management
@@ -26,6 +24,8 @@ canonical_url: "https://thakicloud.github.io/en/dev/macos-github-cli-issue-autom
 lang: en
 reading_time: true
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 25 min

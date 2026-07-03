@@ -4,8 +4,6 @@ excerpt: "Learn how to deploy and use ConvertX, a powerful self-hosted file conv
 seo_title: "ConvertX Self-Hosted File Converter Tutorial - Complete Guide - Thaki Cloud"
 seo_description: "Step-by-step guide to deploy ConvertX with Docker. Self-hosted file converter supporting 1000+ formats including images, videos, documents, and 3D assets."
 date: 2025-09-25
-categories:
-  - tutorials
 tags:
   - docker
   - file-converter
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/tutorials/convertx-self-hosted-file-converter-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/convertx-self-hosted-file-converter-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

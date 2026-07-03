@@ -5,9 +5,6 @@ seo_title: "Amazon S3 Vectors RAG 애플리케이션 구축 완전 가이드 - T
 seo_description: "AWS S3 Vectors를 활용한 RAG 시스템 구축. 벡터 임베딩 생성부터 의미적 검색까지 실무 중심 튜토리얼"
 date: 2025-07-16
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
-  - llmops
 tags:
   - amazon-s3-vectors
   - aws
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/amazon-s3-vectors-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

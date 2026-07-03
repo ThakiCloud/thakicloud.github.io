@@ -2,9 +2,6 @@
 title: "Evalchemy로 API 호출만으로 100+ LLM 모델 평가하기: 설치 없는 벤치마크 완벽 가이드"
 excerpt: "Evalchemy + Curator + LiteLLM 조합으로 GPT-4o, Claude-3, Gemini 등 100여 종 API 모델을 설치 없이 평가하는 방법을 단계별로 알아봅니다."
 date: 2025-06-13
-categories: 
-  - llmops
-  - dev
 tags: 
   - Evalchemy
   - LLM 평가
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 한눈에 보는 핵심 요약

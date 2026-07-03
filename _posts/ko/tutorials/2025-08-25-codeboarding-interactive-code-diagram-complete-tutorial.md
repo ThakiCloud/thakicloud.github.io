@@ -5,9 +5,6 @@ seo_title: "CodeBoarding 튜토리얼: 코드 다이어그램 자동 생성 도�
 seo_description: "CodeBoarding으로 복잡한 코드베이스를 Mermaid 다이어그램으로 자동 변환하는 방법. VS Code 확장, GitHub Action, 실무 활용법까지 상세히 알아보세요."
 date: 2025-08-25
 last_modified_at: 2025-08-25
-categories:
-  - tutorials
-  - dev
 tags:
   - CodeBoarding
   - 코드시각화
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/codeboarding-interactive-code-diagram-complete-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

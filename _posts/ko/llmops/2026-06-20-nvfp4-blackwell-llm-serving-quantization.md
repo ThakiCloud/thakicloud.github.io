@@ -5,8 +5,6 @@ seo_title: "NVFP4 Blackwell LLM 서빙 양자화 가이드 - Thaki Cloud"
 seo_description: "NVIDIA Blackwell GPU의 NVFP4 양자화를 활용해 LLM 서빙 처리량을 높이고 GPU 메모리 비용을 줄이는 실전 전략. vLLM과 TensorRT-LLM 적용 방법 포함."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - nvfp4
   - quantization
@@ -23,6 +21,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/nvfp4-blackwell-llm-serving-quantization/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

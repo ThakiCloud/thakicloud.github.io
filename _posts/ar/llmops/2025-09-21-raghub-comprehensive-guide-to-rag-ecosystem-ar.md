@@ -4,8 +4,6 @@ excerpt: "اكتشف RAGHub، مجموعة شاملة من أطر العمل و�
 seo_title: "دليل RAGHub: أطر العمل وأدوات RAG 2025 - Thaki Cloud"
 seo_description: "استكشف مجموعة RAGHub المنتقاة من أطر عمل RAG وأدوات التقييم والمشاريع الناشئة. ابق محدثاً مع أحدث الاتجاهات في النظام البيئي للتوليد المُعزز بالاسترجاع."
 date: 2025-09-21
-categories:
-  - llmops
 tags:
   - RAG
   - LLM
@@ -19,7 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/raghub-comprehensive-guide-to-rag-ecosystem/
 canonical_url: "https://thakicloud.github.io/ar/llmops/raghub-comprehensive-guide-to-rag-ecosystem-ar/"
-published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

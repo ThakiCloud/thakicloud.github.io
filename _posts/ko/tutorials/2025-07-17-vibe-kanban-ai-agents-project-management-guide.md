@@ -5,9 +5,6 @@ seo_title: "Vibe Kanban 튜토리얼 - AI 에이전트 프로젝트 관리 완�
 seo_description: "BloopAI Vibe Kanban으로 Claude Code, Gemini CLI 등 AI 에이전트를 관리하고 GitHub 프로젝트와 통합하는 실무 가이드. Apache-2.0 라이선스 분석 포함."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
-  - agentops
 tags:
   - Vibe-Kanban
   - BloopAI
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/vibe-kanban-ai-agents-project-management-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - agentops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

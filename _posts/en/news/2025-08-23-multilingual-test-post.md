@@ -6,8 +6,6 @@ seo_description: "Introducing the launch of Thaki Cloud tech blog's multilingual
 date: 2025-08-23
 lang: en
 permalink: /en/news/multilingual-test-post/
-categories:
-  - news
 tags:
   - multilingual
   - blog
@@ -18,6 +16,8 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/news/multilingual-test-post/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **Estimated reading time**: 3 min read

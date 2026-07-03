@@ -4,8 +4,6 @@ excerpt: "Discover how Unsloth democratizes frontier AI model training by enabli
 seo_title: "Unsloth gpt-oss RL Training: 3x Faster on Free GPUs - Thaki Cloud"
 seo_description: "Learn how Unsloth enables gpt-oss-20b reinforcement learning training on free Colab with revolutionary optimizations: 3x speed, 50% less VRAM, and reward hacking prevention techniques."
 date: 2025-10-02
-categories:
-  - llmops
 tags:
   - reinforcement-learning
   - gpt-oss
@@ -18,6 +16,8 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/
 canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/"
+categories:
+  - llmops
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

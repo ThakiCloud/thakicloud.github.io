@@ -6,8 +6,6 @@ seo_description: "How to fine-tune and serve a healthcare LLM on-premises withou
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
-categories:
-  - llmops
 tags:
   - healthcare
   - fine-tuning
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/healthcare-onprem-llm-finetuning/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![Fine-tuning healthcare LLMs on-premises without exporting patient data](/assets/images/healthcare-onprem-llm-finetuning-hero.png)

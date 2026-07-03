@@ -5,9 +5,6 @@ seo_title: "Rowfill 비정형 데이터 처리 플랫폼 가이드 - OCR AI 문�
 seo_description: "오픈소스 Rowfill로 PDF, 이미지, 오디오를 구조화된 데이터로 변환하는 방법. AI OCR, 자동 스키마 생성, 로컬 LLM 지원까지 상세 분석"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - datasets
-  - tutorials
 tags:
   - rowfill
   - 비정형데이터
@@ -26,6 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/datasets/rowfill-unstructured-data-processing-platform/"
 reading_time: true
+categories:
+  - datasets
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

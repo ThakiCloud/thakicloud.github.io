@@ -5,8 +5,6 @@ seo_title: "GoTTY vs ttyd vs Wetty: 웹 터미널 비교 튜토리얼 - Thaki Cl
 seo_description: "GoTTY, ttyd, Wetty의 아키텍처·보안·성능·운영 관점 비교와 macOS 설치·실행·스모크 테스트 스크립트, zsh alias 설정까지 한 번에 정리했습니다."
 date: 2025-08-13
 last_modified_at: 2025-08-13
-categories:
-  - tutorials
 tags:
   - Web Terminal
   - GoTTY
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/web-terminal-gotty-ttyd-wetty-comparison/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

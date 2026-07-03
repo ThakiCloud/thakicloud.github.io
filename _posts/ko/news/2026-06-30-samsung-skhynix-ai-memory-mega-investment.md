@@ -6,8 +6,6 @@ seo_description: "삼성 2655조·SK 2100조 합계 4755조 원 국내 투자 �
 date: 2026-06-30
 last_modified_at: 2026-06-30
 disable_mathjax: true
-categories:
-  - news
 tags:
   - samsung
   - sk-hynix
@@ -23,6 +21,8 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 canonical_url: "https://thakicloud.github.io/ko/news/samsung-skhynix-ai-memory-mega-investment/"
+categories:
+  - news
 ---
 
 2026년 6월 29일 청와대 영빈관에서 큰 숫자가 하나 나왔습니다. 삼성전자와 SK하이닉스가 앞으로 10년간 국내에 합산 4,755조 원을 투자하겠다는 계획입니다. 이재명 대통령이 주재한 "대한민국 대도약 3대 메가프로젝트 국민보고회" 자리에서 이재용 회장과 최태원 회장이 직접 선언했습니다.

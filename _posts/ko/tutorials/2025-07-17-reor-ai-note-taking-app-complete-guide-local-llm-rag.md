@@ -5,8 +5,6 @@ seo_title: "Reor 설치 가이드 - 로컬 AI 노트 앱 RAG 지식 관리 - Tha
 seo_description: "Reor AI 노트 앱으로 완전 프라이빗 지식 관리하기. Ollama 통합, 벡터 DB, RAG 기반 의미적 검색과 자동 노트 연결. 설치부터 활용까지 완벽 가이드"
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
 tags:
   - reor
   - ai-note-taking
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/reor-ai-note-taking-app-complete-guide-local-llm-rag/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

@@ -5,8 +5,6 @@ seo_title: "MCP Agent Tool Integration and Security Guide - Thaki Cloud"
 seo_description: "Security vulnerabilities and production operational patterns for MCP-based agent tool integration. Covers Tool Poisoning attack defense, privilege minimization, and MCP gateway configuration."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - mcp
   - tool-integration
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
+categories:
+  - agentops
 ---
 
 ⏱️ **Estimated reading time**: 10 min

@@ -2,10 +2,6 @@
 title: "AI 에이전트 시대의 노동 시장: WORKBank 연구가 제시하는 인간-AI 협업의 미래"
 excerpt: "스탠퍼드 연구진이 1,500명의 노동자와 52명의 AI 전문가를 대상으로 진행한 대규모 연구를 통해 AI 에이전트 시대의 노동 시장 변화와 인간-AI 협업의 실상을 분석합니다."
 date: 2025-06-21
-categories: 
-  - research
-  - careers
-  - ai-application
 tags: 
   - AI에이전트
   - 노동시장
@@ -18,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "AI 에이전트와 노동 시장"
 published: false
+categories:
+  - research
+  - careers
 ---
 
 ## AI 시대, 진짜 궁금한 것은 '노동자의 목소리'

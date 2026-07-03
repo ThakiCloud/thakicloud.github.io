@@ -2,8 +2,6 @@
 title: "DeepSeek-R1 → Qwen 지식 증류 완전 가이드: 11개 오픈소스 파이프라인 총정리"
 excerpt: "교사-학생 모델 증류의 실전 구현체들. MIT/Apache 2.0 라이선스로 자유롭게 활용 가능한 DeepSeek-R1 → Qwen 계열 지식 증류 파이프라인 11선"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - DeepSeek-R1
   - Qwen
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 지식 증류 가이드"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** DeepSeek-R1의 추론 능력을 Qwen 계열 모델로 증류하는 **11개 오픈소스 파이프라인**을 완전 정리했다. 공식 참조부터 미니멀 구현체, 커뮤니티 확장 버전까지 **MIT/Apache 2.0 라이선스**로 자유롭게 활용 가능하다. **A100 1장으로도 재현 가능한** 실전 가이드다.

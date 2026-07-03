@@ -4,8 +4,6 @@ excerpt: "Master LEANN, the groundbreaking vector index system that delivers 97%
 seo_title: "LEANN Vector Index Tutorial - 97% Storage Savings RAG System"
 seo_description: "Learn LEANN, the revolutionary vector index system offering 97% storage savings. Complete tutorial covering installation, usage, and advanced features for efficient RAG applications"
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - LEANN
   - vector-index
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/leann-vector-index-com
 lang: en
 permalink: /en/tutorials/leann-vector-index-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

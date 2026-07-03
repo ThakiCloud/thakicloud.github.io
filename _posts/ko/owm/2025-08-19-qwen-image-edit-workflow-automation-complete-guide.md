@@ -5,9 +5,6 @@ seo_title: "Qwen-Image-Edit 워크플로우 자동화 가이드 - 이미지 편�
 seo_description: "Qwen-Image-Edit을 활용한 이미지 편집 워크플로우 자동화 완전 가이드. 20B 파라미터 모델로 구현하는 지능형 콘텐츠 제작 파이프라인과 실제 구현 방법을 상세히 다룹니다."
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - owm
-  - tutorials
 tags:
   - qwen-image-edit
   - 이미지편집
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/qwen-image-edit-workflow-automation-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 17분

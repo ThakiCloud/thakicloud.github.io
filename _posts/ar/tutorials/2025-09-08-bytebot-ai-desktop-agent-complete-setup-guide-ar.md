@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية إعداد واستخدام Bytebot، وكيل س�
 seo_title: "دليل إعداد وكيل سطح المكتب الذكي Bytebot - دليل شامل 2025"
 seo_description: "دليل شامل لإعداد وكيل سطح المكتب الذكي Bytebot. تعلم التثبيت والتكوين وأتمتة مهام الكمبيوتر بالأوامر الطبيعية."
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - bytebot
   - ai-agent
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

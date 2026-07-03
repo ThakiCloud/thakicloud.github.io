@@ -5,8 +5,6 @@ seo_title: "Data Formulator 튜토리얼: AI 시각화 입문 - Thaki Cloud"
 seo_description: "GitHub의 Data Formulator를 macOS에서 설치하고 OpenAI·Anthropic·Ollama 모델과 연동해 AI 기반 데이터 변환·시각화를 만드는 방법을 단계별로 소개합니다."
 date: 2025-08-13
 last_modified_at: 2025-08-13
-categories:
-  - tutorials
 tags:
   - Data Formulator
   - 데이터 시각화
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/data-formulator-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

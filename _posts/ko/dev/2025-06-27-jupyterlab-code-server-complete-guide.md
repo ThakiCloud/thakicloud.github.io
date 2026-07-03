@@ -4,9 +4,6 @@ excerpt: "JupyterLab 4에서 VS Code를 브라우저로 사용하는 방법부�
 seo_title: "JupyterLab 4 code-server 완전 가이드 - 맥북부터 GPU 서버까지 - Thaki Cloud"
 seo_description: "JupyterLab 4에서 jupyter-codeserver-proxy로 VS Code를 브라우저에서 사용하는 방법, 도커 환경 구성, GPU 서버 개발 환경까지 완전 정리"
 date: 2025-06-27
-categories: 
-  - dev
-  - tutorials
 tags: 
   - jupyterlab
   - code-server
@@ -20,6 +17,9 @@ toc: true
 toc_label: 개발 환경 가이드
 canonical_url: "https://thakicloud.github.io/dev/jupyterlab-code-server-complete-guide/"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 VS Code를 웹 브라우저에서 사용할 수 있다면 얼마나 편할까요? JupyterLab 4에서 `jupyter-codeserver-proxy`를 사용하면 클릭 한 번으로 VS Code Web을 띄울 수 있습니다. 이 글에서는 맥북 로컬 환경부터 도커 컨테이너, GPU 서버까지 모든 개발 시나리오를 다루겠습니다.

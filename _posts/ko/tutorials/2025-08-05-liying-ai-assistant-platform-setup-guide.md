@@ -5,8 +5,6 @@ seo_title: "LiYing AI 어시스턴트 플랫폼 완전 설정 가이드 - Thaki 
 seo_description: "오픈소스 LiYing AI 어시스턴트 플랫폼 구축 방법. 음성 인식, NLP, 작업 자동화, 플러그인 시스템을 활용한 맞춤형 AI 어시스턴트 개발 가이드"
 date: 2025-08-05
 last_modified_at: 2025-08-05
-categories:
-  - tutorials
 tags:
   - liying
   - ai-assistant
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/liying-ai-assistant-platform-setup-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 19분

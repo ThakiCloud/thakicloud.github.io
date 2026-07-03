@@ -5,9 +5,6 @@ seo_title: "جوجل تكشف عن استهلاك طاقة Gemini AI: تقرير
 seo_description: "بيانات مفصلة من أول إفصاح علني لجوجل عن استهلاك طاقة Gemini AI: 0.24 واط-ساعة لكل طلب، 0.03 غرام CO2، تحسن الكفاءة 33 ضعفاً في عام، وتحليل الأثر على الصناعة."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - news
-  - research
 tags:
   - GoogleAI
   - Gemini
@@ -28,6 +25,9 @@ lang: ar
 canonical_url: "https://thakicloud.github.io/ar/news/google-gemini-ai-energy-consumption-transparency-report/"
 reading_time: true
 published: false
+categories:
+  - news
+  - research
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

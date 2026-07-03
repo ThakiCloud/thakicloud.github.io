@@ -4,8 +4,6 @@ excerpt: "Explore how inclusionAI's Ring-1T-FP8, a trillion-parameter thinking m
 seo_title: "Ring-1T-FP8 Trillion-Parameter AI Model for Workflow Automation - Thaki Cloud"
 seo_description: "Discover Ring-1T-FP8's integration into workflow automation systems with AWorld framework, SGLang deployment, and ASystem RL training for enterprise AI operations."
 date: 2025-10-14
-categories:
-  - owm
 tags:
   - Ring-1T
   - AI-Model
@@ -19,6 +17,8 @@ lang: en
 permalink: /en/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/
 canonical_url: "https://thakicloud.github.io/en/owm/ring-1t-fp8-trillion-parameter-ai-model-workflow-automation/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

@@ -4,8 +4,6 @@ excerpt: "أعلنت OpenAI عن AgentKit، مجموعة أدوات شاملة �
 seo_title: "إطلاق OpenAI AgentKit: منصة تطوير وكلاء الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "اكتشف منصة AgentKit الجديدة من OpenAI التي تحدث ثورة في تطوير وكلاء الذكاء الاصطناعي مع تصميم سير العمل المرئي وسجل الموصلات وChatKit للنشر السريع."
 date: 2025-10-08
-categories:
-  - news
 tags:
   - OpenAI
   - AgentKit
@@ -18,6 +16,8 @@ toc_label: "المحتويات"
 lang: ar
 permalink: /ar/news/openai-agentkit-introduction/
 canonical_url: "https://thakicloud.github.io/ar/news/openai-agentkit-introduction/"
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 4 دقائق

@@ -6,8 +6,6 @@ seo_title: "Micron Anthropic Memory Partnership Analysis - HBM and AI Inference 
 seo_description: "An infrastructure-focused analysis of the Micron-Anthropic strategic partnership (HBM/DRAM/SSD supply, co-designed memory architecture, Series H investment). Why memory bandwidth bottlenecks LLM inference throughput and implications for ThakiCloud's K8s-based serving platform."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - news
 tags:
   - micron
   - anthropic
@@ -21,6 +19,8 @@ toc_icon: "memory"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/news/micron-anthropic-ai-memory-infrastructure/"
 reading_time: true
+categories:
+  - news
 ---
 
 ## Overview

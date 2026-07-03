@@ -5,8 +5,6 @@ seo_title: "Pake 웹앱 데스크톱 변환 튜토리얼 - Rust Tauri 가이드 
 seo_description: "Pake CLI 도구로 웹사이트를 macOS, Windows, Linux 데스크톱 앱으로 변환하는 방법. 설치부터 고급 설정까지 완전 가이드."
 date: 2025-07-05
 last_modified_at: 2025-07-05
-categories:
-  - tutorials
 tags:
   - rust
   - tauri
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/pake-webapp-to-desktop-app-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

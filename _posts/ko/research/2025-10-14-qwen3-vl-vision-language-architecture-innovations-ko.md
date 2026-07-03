@@ -4,8 +4,6 @@ excerpt: "Interleaved-MRoPE, DeepStack 특징 융합, 텍스트-타임스탬프 
 seo_title: "Qwen3-VL 아키텍처 혁신 - 고급 비전-언어 모델 - Thaki Cloud"
 seo_description: "Interleaved-MRoPE 위치 임베딩, DeepStack 다층 특징 융합, 235B 파라미터 규모를 특징으로 하는 Qwen3-VL의 획기적인 아키텍처에 대한 종합 분석"
 date: 2025-10-14
-categories:
-  - research
 tags:
   - qwen3-vl
   - 비전-언어
@@ -21,6 +19,8 @@ toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/research/qwen3-vl-vision-language-architecture-innovations/"
 lang: ko
 permalink: /ko/research/qwen3-vl-vision-language-architecture-innovations/
+categories:
+  - research
 ---
 
 ![개념 다이어그램](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.png)

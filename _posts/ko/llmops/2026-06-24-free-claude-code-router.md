@@ -5,8 +5,6 @@ seo_title: "free-claude-code 자체호스팅 라우팅 - Claude Code 멀티프�
 seo_description: "free-claude-code로 Claude Code를 Ollama·vLLM 등 자체호스팅 모델로 라우팅하는 실전 기록. Anthropic 호환 FastAPI 프록시 구조, 로컬 Ollama 레이턴시 실측, Python 3.14 하드 요구가 만든 배포 리스크를 ThakiCloud K8s 환경 관점에서 분석합니다."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - free-claude-code
   - Claude Code
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/llmops/free-claude-code-router/"
+categories:
+  - llmops
 ---
 
 ## 개요

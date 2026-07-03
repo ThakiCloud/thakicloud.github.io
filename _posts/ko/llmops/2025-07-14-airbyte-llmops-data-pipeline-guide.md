@@ -5,8 +5,6 @@ seo_title: "Airbyte LLMOps 데이터 파이프라인 구축 가이드 - Thaki Cl
 seo_description: "오픈소스 데이터 통합 플랫폼 Airbyte를 활용한 LLM 데이터 파이프라인 구축 방법, 실제 운영 사례, 성능 최적화 전략을 다룹니다."
 date: 2025-07-14
 last_modified_at: 2025-07-14
-categories:
-  - llmops
 tags:
   - Airbyte
   - DataPipeline
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/airbyte-llmops-data-pipeline-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,8 +5,6 @@ seo_title: "Apple DiffuCoder-7B-cpGRPO 디퓨전 모델 MLX-LM 지원 가이드 
 seo_description: "Apple DiffuCoder-7B-cpGRPO 코드 생성 디퓨전 모델의 특징과 성능, MLX-LM 프로젝트 지원 현황 및 Dream Architecture 구현 상태를 상세히 분석합니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06
-categories:
-  - owm
 tags:
   - apple
   - diffucoder
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/apple-diffucoder-7b-cpgrpo-mlx-lm-support-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

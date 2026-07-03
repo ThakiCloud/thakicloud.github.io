@@ -4,8 +4,6 @@ excerpt: "97% 저장공간 절약과 빠르고 정확한 검색을 동시에 제
 seo_title: "LEANN 벡터 인덱스 튜토리얼 - 97% 저장공간 절약 RAG 시스템"
 seo_description: "97% 저장공간 절약을 제공하는 혁신적인 벡터 인덱스 시스템 LEANN을 배워보세요. 설치, 사용법, 고급 기능까지 효율적인 RAG 애플리케이션 구축 완전 가이드"
 date: 2025-08-30
-categories:
-  - tutorials
 tags:
   - LEANN
   - 벡터인덱스
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/leann-vector-index-com
 lang: ko
 permalink: /ko/tutorials/leann-vector-index-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

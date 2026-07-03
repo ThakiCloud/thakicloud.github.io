@@ -4,8 +4,6 @@ excerpt: "Step-by-step guide to building and customizing professional resumes wi
 seo_title: "Magic Resume Tutorial: AI Resume Editor Setup & Guide - Thaki Cloud"
 seo_description: "Learn how to use Magic Resume, an open-source AI-powered resume editor built with Next.js. Includes installation, customization, and deployment guide."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - magic-resume
   - nextjs
@@ -20,6 +18,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/magic-resume-ai-powere
 lang: en
 permalink: /en/tutorials/magic-resume-ai-powered-editor-complete-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

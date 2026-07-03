@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 753B on RTX 4090 On-Premise Serving Analysis - Thaki Cloud"
 seo_description: "Running GLM-5.2 753B open weights on an RTX 4090, porting the DSA sparse-attention kernel, and the economics of on-premise large-LLM serving."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - llmops
 tags:
   - glm
   - open-weight
@@ -22,6 +20,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-rtx4090-on-premise-serving/"
 reading_time: true
 lang: en
+categories:
+  - llmops
 ---
 
 Running a 753B-parameter model on a single consumer GPU would have been hard to imagine a few years ago. A recently shared case reports running the SOTA open-weight model GLM-5.2 (753B, FP8) on an **RTX 4090** consumer GPU for the first time. It manages roughly 10 tok/s, but the point is not throughput. The point is that it runs at all.

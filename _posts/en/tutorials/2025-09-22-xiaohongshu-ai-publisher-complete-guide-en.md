@@ -4,8 +4,6 @@ excerpt: "Master the xhs_ai_publisher tool for automated Xiaohongshu content cre
 seo_title: "Xiaohongshu AI Publisher Tutorial: Complete Automation Guide - Thaki Cloud"
 seo_description: "Learn to automate Xiaohongshu content creation and publishing with xhs_ai_publisher. Step-by-step tutorial with installation, configuration, and best practices for social media automation."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - xiaohongshu
   - ai-automation
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/xiaohongshu-ai-publisher-complete-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/xiaohongshu-ai-publisher-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

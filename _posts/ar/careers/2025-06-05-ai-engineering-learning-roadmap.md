@@ -1,9 +1,6 @@
 ---
 title: "خريطة طريق تعلم هندسة الذكاء الاصطناعي"
 date: 2025-06-05
-categories: 
-  - careers
-  - ai
 tags: 
   - الذكاء-الاصطناعي
   - الهندسة
@@ -15,6 +12,8 @@ toc_label: "خريطة طريق هندسة الذكاء الاصطناعي"
 lang: ar
 permalink: /ar/careers/ai-engineering-learning-roadmap/
 canonical_url: "https://thakicloud.github.io/ar/careers/ai-engineering-learning-roadmap/"
+categories:
+  - careers
 ---
 
 نحن نشارك خريطة طريق التعلم لأولئك الذين يريدون بدء هندسة الذكاء الاصطناعي. هذه الخريطة منظمة للسماح بالتعلم التدريجي للمجالات الأساسية لهندسة الذكاء الاصطناعي.

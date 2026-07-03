@@ -5,8 +5,6 @@ seo_title: "Local LLM Inference Engine Guide Analysis - Thaki Cloud"
 seo_description: "Ahmad Osman's local LLM inference guide, scenario-based selection across llama.cpp, MLX, vLLM, SGLang, TensorRT-LLM, and NVIDIA Dynamo, and on-premise serving economics from ThakiCloud's perspective."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - local-llm
   - inference-engine
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/local-llm-inference-stack-guide/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 The first question anyone hits when starting with local LLM inference is "which engine should I use?" Names like llama.cpp, vLLM, SGLang, and TensorRT-LLM pour in, but there is little clear guidance on what to base the choice on. Ahmad Osman (@TheAhmadOsman), the GPU moderator of r/LocalLLaMA, recently published a free comprehensive guide that fills this gap.

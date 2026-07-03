@@ -2,8 +2,6 @@
 title: "gRPC 완전 가이드: 초보자를 위한 단계별 마스터 튜토리얼"
 excerpt: "gRPC를 처음 시작하는 개발자를 위한 완전한 가이드. 설치부터 고급 기능까지 모든 과정을 실습으로 학습합니다."
 date: 2025-06-15
-categories: 
-  - tutorials
 tags: 
   - gRPC
   - Protocol Buffers
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ## gRPC 개요

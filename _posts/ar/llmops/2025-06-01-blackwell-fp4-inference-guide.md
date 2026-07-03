@@ -4,8 +4,6 @@ excerpt: "عظّم أداء الذكاء الاصطناعي وقلل التكا�
 seo_title: "دليل استنتاج Blackwell FP4 - تحسين GPU 4-بت للذكاء الاصطناعي"
 seo_description: "أتقن استنتاج NVIDIA Blackwell FP4 لأقصى أداء وكفاءة تكلفة للذكاء الاصطناعي. دليل تنفيذ شامل مع أمثلة عملية ونصائح تحسين"
 date: 2025-06-01
-categories:
-  - llmops
 tags:
   - NVIDIA-Blackwell
   - FP4-Inference
@@ -23,6 +21,8 @@ lang: ar
 permalink: /ar/llmops/blackwell-fp4-inference-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/blackwell-fp4-inference-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 10 دقائق

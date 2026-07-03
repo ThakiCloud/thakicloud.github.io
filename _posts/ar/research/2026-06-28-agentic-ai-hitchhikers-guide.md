@@ -6,8 +6,6 @@ seo_description: "ملخص arXiv:2606.24937 'The Hitchhiker's Guide to Agentic A
 date: 2026-06-28
 last_modified_at: 2026-06-28
 lang: ar
-categories:
-  - research
 tags:
   - agentic-ai
   - llm
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/agentic-ai-hitchhikers-guide/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![هيكل مجرد من أربع طبقات مضيئة تتراكم من الأسفل إلى الأعلى وتترابط فيما بينها](/assets/images/agentic-ai-hitchhikers-guide-hero.png)

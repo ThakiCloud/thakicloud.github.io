@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 753B MoE 1M 컨텍스트 온프렘 서빙 가이드 - Thaki 
 seo_description: "GLM-5.2의 DSA 아키텍처, 벤치마크(HLE 40.5, AIME 2026 99.2, SWE-bench Pro 62.1), vLLM/SGLang/KTransformers 서빙 방법과 온프렘 요구사항을 정리했다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - glm-5-2
   - z-ai
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/glm-5-2-1m-context-moe-self-hosting/"
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

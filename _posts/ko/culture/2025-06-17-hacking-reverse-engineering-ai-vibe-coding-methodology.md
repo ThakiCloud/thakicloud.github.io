@@ -3,8 +3,6 @@ title: "해킹과 역엔지니어링: AI 바이브 코딩 시대의 새로운 �
 excerpt: "AI 시대의 개발자는 모든 것을 알 필요 없다. 해킹 마인드셋과 역엔지니어링 정신으로 무지를 강점으로 전환하는 새로운 패러다임을 탐구한다."
 date: 2025-06-17
 last_modified_at: 2026-06-20
-categories: 
-  - culture
 tags: 
   - AI
   - 해킹
@@ -16,6 +14,8 @@ author_profile: true
 toc: true
 toc_label: 목차
 canonical_url: "https://thakicloud.github.io/ko/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
+categories:
+  - culture
 ---
 
 ## 모르는 것이 부끄러웠던 시절

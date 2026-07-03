@@ -5,8 +5,6 @@ seo_title: "헤지펀드 시계열 모델링 인프라 구축 가이드 - Ray Ku
 seo_description: "GARCH, Transformer, XGBoost 등 헤지펀드 시계열 모델부터 Kubernetes Ray 기반 수천 개 모델 학습 인프라까지, 실전 트레이딩 시스템 완전 가이드"
 date: 2025-01-25
 last_modified_at: 2025-07-16
-categories:
-  - tutorials
 tags:
   - timeseries
   - hedge-fund
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/hedge-fund-timeseries-models-infrastructure-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

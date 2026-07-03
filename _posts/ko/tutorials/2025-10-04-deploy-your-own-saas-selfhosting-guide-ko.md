@@ -4,8 +4,6 @@ excerpt: "VPN, 파일 저장소, 분석 도구, 비밀번호 관리자 등을 �
 seo_title: "나만의 SaaS 구축: 프라이버시 중심 자체 호스팅 서비스 가이드"
 seo_description: "VPN, 클라우드 스토리지, 분석, 비밀번호 관리자 등 30개 이상의 서비스를 직접 배포하는 방법. 프라이버시와 데이터 통제를 위한 완벽한 자체 호스팅 가이드."
 date: 2025-10-04
-categories:
-  - tutorials
 tags:
   - 자체-호스팅
   - 프라이버시
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/deploy-your-own-saas-selfhosting-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/deploy-your-own-saas-selfhosting-guide/"
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

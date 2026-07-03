@@ -5,8 +5,6 @@ seo_title: "DeepAgents 완전 가이드 - 심층 AI 에이전트 구축 프레�
 seo_description: "DeepAgents로 Claude Code 스타일의 심층 AI 에이전트 구축. 계획 도구, 서브에이전트, 가상 파일시스템, MCP 연동을 통한 고급 에이전트 개발 완전 가이드"
 date: 2025-08-07
 last_modified_at: 2025-08-07
-categories:
-  - tutorials
 tags:
   - deepagents
   - ai-agents
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/deepagents-comprehensive-deep-ai-agents-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

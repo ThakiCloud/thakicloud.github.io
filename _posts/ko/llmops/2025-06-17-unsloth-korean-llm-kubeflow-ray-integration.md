@@ -2,8 +2,6 @@
 title: "Unsloth+TRL 한국어 LLM 학습 자동화 - 5편: Kubeflow + Ray 통합 엔터프라이즈 MLOps 시스템"
 excerpt: "Kubeflow Pipelines를 워크플로 오케스트레이터로, Ray를 분산 실행 엔진으로 활용한 완전한 MLOps 시스템 구축"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - Kubeflow
   - Ray
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 1. 아키텍처 설계 및 설치

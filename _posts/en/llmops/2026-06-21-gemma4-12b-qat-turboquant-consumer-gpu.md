@@ -5,8 +5,6 @@ seo_title: "Gemma 4 12B QAT TurboQuant Consumer GPU Inference Analysis - Thaki C
 seo_description: "An analysis of Gemma 4 12B QAT, TurboQuant quantization, and a local RTX 4060 8GB benchmark, covering on-premises inference economics and the consumer-GPU serving angle"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - llmops
 tags:
   - gemma4
   - quantization
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/gemma4-12b-qat-turboquant-consumer-gpu/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 The biggest barrier to on-premises LLM serving has always been VRAM. Running a 12B model has usually meant reaching for an expensive datacenter GPU. A recent community benchmark tells a different story. It runs Gemma 4 12B with QAT (Quantization-Aware Training) and TurboQuant quantization on an **RTX 4060 8GB**, and claims to hit strong prefill throughput while still supporting long context.

@@ -5,8 +5,6 @@ seo_title: "دليل EAGLE 3.1 + vLLM الفك الترميز التخميني �
 seo_description: "مبدأ عمل الفك الترميز التخميني المدمج في vLLM مع EAGLE 3.1، طريقة الإعداد، واستراتيجية التشغيل الفعلي في بيئات K8s متعددة المستأجرين من منظور مهندس بنية ML."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - vllm
   - speculative-decoding
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
 lang: ar
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق

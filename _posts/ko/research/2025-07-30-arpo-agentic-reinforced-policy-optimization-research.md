@@ -5,8 +5,6 @@ seo_title: "ARPO 강화학습 알고리즘 분석 멀티턴 LLM 에이전트 연
 seo_description: "ARPO(Agentic Reinforced Policy Optimization) 논문 분석. 엔트로피 기반 적응적 롤아웃과 어드밴티지 귀속으로 멀티턴 LLM 에이전트 성능을 50% 적은 리소스로 향상시키는 혁신적 연구"
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - research
 tags:
   - ARPO
   - Reinforcement-Learning
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/arpo-agentic-reinforced-policy-optimization-research/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

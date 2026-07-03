@@ -5,9 +5,6 @@ seo_title: "Google MedSigLIP-448 의료 AI 모델 완전 가이드 - Thaki Cloud
 seo_description: "Google Health AI Developer Foundation의 MedSigLIP-448 모델로 의료 이미지 분석, 제로샷 분류, 의미론적 검색을 구현하는 실전 가이드. 흉부 X-ray, 피부과, 안과, 병리학 분야 적용"
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - owm
-  - llmops
 tags:
   - MedSigLIP-448
   - Google-Health-AI
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/google-medsiglip-448-medical-ai-comprehensive-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

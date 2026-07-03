@@ -6,8 +6,6 @@ seo_description: "كثرة المهارات لا تعني وكيلاً أفضل.
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - dev
 tags:
   - skill-routing
   - ai-agents
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/dev/skill-ecosystem-routing-sra/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ![صورة غلاف توجيه منظومة المهارات SRA](/assets/images/skill-ecosystem-routing-sra-hero.png)

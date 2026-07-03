@@ -2,9 +2,6 @@
 title: "MultiTalk 맥북 완전 가이드: 오디오 기반 다중 인물 대화 비디오 생성"
 excerpt: "MultiTalk를 맥북에서 설치하고 사용하는 단계별 튜토리얼과 실전 응용 프로그램 개발 가이드"
 date: 2025-06-23
-categories: 
-  - tutorials
-  - dev
 tags: 
   - MultiTalk
   - AI Video Generation
@@ -16,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "MultiTalk 맥북 가이드"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## MultiTalk 소개

@@ -2,8 +2,6 @@
 title: "AI Engineering Hub: 실전 AI 에이전트 및 RAG 튜토리얼 컬렉션"
 excerpt: "10.7k 스타를 받은 AI Engineering Hub 저장소의 다양한 AI 에이전트, RAG, LLM 튜토리얼을 소개하고 실무에 활용하는 방법을 안내합니다."
 date: 2025-06-21
-categories: 
-  - agentops
 tags: 
   - AI-Engineering-Hub
   - Multi-Agent
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "AI Engineering Hub 가이드"
 published: false
+categories:
+  - agentops
 ---
 
 ## 개요

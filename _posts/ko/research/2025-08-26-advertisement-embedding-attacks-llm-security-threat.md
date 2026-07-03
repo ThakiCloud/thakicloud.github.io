@@ -4,8 +4,6 @@ excerpt: "대형 언어 모델(LLM)을 대상으로 한 광고 임베딩 공격(
 seo_title: "LLM 광고 임베딩 공격: 새로운 AI 보안 취약점 분석 - Thaki Cloud"
 seo_description: "대형 언어 모델을 대상으로 한 광고 임베딩 공격(AEA)의 메커니즘, 공격 벡터, 피해자 그룹, 그리고 방어 전략에 대한 심층 분석을 제공합니다."
 date: 2025-08-26
-categories:
-  - research
 tags:
   - LLM-보안
   - AI-안전성
@@ -18,6 +16,8 @@ toc_label: "목차"
 lang: ko
 permalink: /ko/research/advertisement-embedding-attacks-llm-security-threat/
 canonical_url: "https://thakicloud.github.io/ko/research/advertisement-embedding-attacks-llm-security-threat/"
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

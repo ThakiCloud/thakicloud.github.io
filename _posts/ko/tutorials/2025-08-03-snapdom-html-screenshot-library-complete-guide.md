@@ -5,9 +5,6 @@ seo_title: "SnapDOM HTML 스크린샷 라이브러리 완전 가이드 - 웹페�
 seo_description: "SnapDOM JavaScript 라이브러리로 HTML 요소를 PNG/JPEG 이미지로 변환하는 방법, E2E 테스팅, 자동화, 실무 활용 사례를 상세히 설명합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03
-categories:
-  - tutorials
-  - dev
 tags:
   - SnapDOM
   - HTML-to-Image
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/snapdom-html-screenshot-library-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 13분

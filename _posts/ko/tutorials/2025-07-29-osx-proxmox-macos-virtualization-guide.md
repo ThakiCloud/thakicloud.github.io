@@ -5,8 +5,6 @@ seo_title: "OSX-PROXMOX macOS 가상화 교육 튜토리얼 - Thaki Cloud"
 seo_description: "Proxmox VE에서 OpenCore 기반 macOS 가상화를 구현하는 OSX-PROXMOX 프로젝트의 기술적 원리, 법적 고려사항, 교육적 활용 방안 완전 가이드"
 date: 2025-07-29
 last_modified_at: 2025-07-29
-categories:
-  - tutorials
 tags:
   - Proxmox
   - 가상화
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/osx-proxmox-macos-virtualization-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

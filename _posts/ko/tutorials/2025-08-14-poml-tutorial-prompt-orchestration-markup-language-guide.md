@@ -5,9 +5,6 @@ seo_title: "POML 튜토리얼: 프롬프트 오케스트레이션 마크업 언�
 seo_description: "Microsoft POML로 LLM 프롬프트를 구조화하세요. VS Code 확장, Node.js/Python SDK, 템플릿 엔진, 데이터 통합까지 실전 예제와 함께 완전 정리한 튜토리얼."
 date: 2025-08-14
 last_modified_at: 2025-08-14
-categories:
-  - tutorials
-  - llmops
 tags:
   - POML
   - Microsoft
@@ -24,6 +21,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/poml-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

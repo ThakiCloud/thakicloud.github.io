@@ -4,9 +4,6 @@ excerpt: "Yandex가 공개한 대규모 음악 청취 행동 데이터셋으로 
 seo_title: "Yandex Yambda 음악 추천 데이터셋 완전 가이드 - 50억 청취 데이터 분석 - Thaki Cloud"
 seo_description: "Yandex Yambda 음악 추천시스템 데이터셋 완전 가이드. 50억 청취 데이터, 오디오 임베딩, 사용자 행동 분석까지 상세 튜토리얼"
 date: 2025-06-28
-categories:
-  - datasets
-  - research
 tags:
   - Yandex
   - Yambda
@@ -23,6 +20,9 @@ toc: true
 toc_label: "Yambda 데이터셋 가이드"
 canonical_url: "https://thakicloud.github.io/yandex-yambda-music-recommendation-dataset-guide/"
 published: false
+categories:
+  - datasets
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

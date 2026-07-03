@@ -2,9 +2,6 @@
 title: "Strudel: JavaScript로 음악을 코딩하는 혁신적인 라이브 코딩 플랫폼"
 excerpt: "Tidal Cycles의 JavaScript 포트인 Strudel로 코드만으로 실시간 음악을 만드는 방법과 알고리즘 작곡의 새로운 가능성을 탐구합니다."
 date: 2025-06-15
-categories: 
-  - dev
-  - tutorials
 tags: 
   - Strudel
   - Live Coding
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - dev
+  - tutorials
 ---
 
 ## Strudel: 코드로 음악을 만드는 새로운 패러다임

@@ -5,8 +5,6 @@ seo_title: "AI-Researcher 완전 자율 과학 연구 시스템 분석 - 연구 
 seo_description: "AI-Researcher 프로젝트의 시스템 아키텍처, 핵심 기능, 그리고 완전 자율 과학 연구의 미래를 종합 분석합니다. 문헌 조사부터 논문 출간까지 AI가 독립적으로 수행하는 혁신적 연구 시스템을 깊이 있게 탐구합니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21
-categories:
-  - research
 tags:
   - AI-Researcher
   - 자율-연구-시스템
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/ai-researcher-autonomous-scientific-innovation-analysis/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

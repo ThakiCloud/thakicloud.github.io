@@ -2,8 +2,6 @@
 title: "DeepSeek-R1 완전 재현 가이드: 2단계 RL + 2단계 SFT + Distillation 파이프라인"
 excerpt: "DeepSeek-R1의 공식 학습 파이프라인을 단계별로 완전 재현. 강화학습부터 지식 증류까지 전체 과정의 실전 구현 가이드"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - DeepSeek-R1
   - Reinforcement-Learning
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 학습 파이프라인"
 published: false
+categories:
+  - llmops
 ---
 
 > **TL;DR** DeepSeek-R1의 **2단계 RL + 2단계 SFT + Distillation** 파이프라인을 완전 재현하는 실전 가이드다. 공식 저장소의 스크립트와 설정을 바탕으로 **단계별 구현 방법**을 상세히 설명한다. **MIT 라이선스**로 상업적 활용이 가능하다.

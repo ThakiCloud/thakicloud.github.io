@@ -5,8 +5,6 @@ seo_title: "دليل إعداد عالم الذكاء الاصطناعي Docker 
 seo_description: "برنامج تعليمي كامل حول إعداد عالم الذكاء الاصطناعي من SakanaAI مع OrbStack Docker و Ollama و LM Studio للبحث الآلي. يتضمن إدارة الطوابير والمراقبة وأمثلة التشغيل على مدار 24/7 مع أدلة التنفيذ العملية."
 date: 2025-09-02
 last_modified_at: 2025-09-02
-categories:
-  - tutorials
 tags:
   - عالم-الذكاء-الاصطناعي
   - Docker
@@ -25,6 +23,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-scientist-docker-ol
 lang: ar
 permalink: /ar/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة

@@ -6,8 +6,6 @@ seo_description: "More skills does not mean a better agent. We share the routing
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
-categories:
-  - dev
 tags:
   - skill-routing
   - ai-agents
@@ -21,6 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/skill-ecosystem-routing-sra/"
 reading_time: true
+categories:
+  - dev
 ---
 
 ![Skill Ecosystem Routing SRA Hero Image](/assets/images/skill-ecosystem-routing-sra-hero.png)

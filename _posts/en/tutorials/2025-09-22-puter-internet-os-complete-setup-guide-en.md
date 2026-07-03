@@ -4,8 +4,6 @@ excerpt: "Learn how to install and use Puter, an advanced open-source internet o
 seo_title: "Puter Internet OS Setup Guide - Complete Tutorial 2025 - Thaki Cloud"
 seo_description: "Comprehensive guide to installing and using Puter, the open-source internet operating system. Learn local development, Docker deployment, and self-hosting."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - puter
   - internet-os
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/puter-internet-os-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/puter-internet-os-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

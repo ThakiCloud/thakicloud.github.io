@@ -4,8 +4,6 @@ excerpt: "إتقان أداة xhs_ai_publisher لأتمتة إنشاء ونشر 
 seo_title: "دروس ناشر شاوهونغشو بالذكاء الاصطناعي: دليل الأتمتة الشامل - Thaki Cloud"
 seo_description: "تعلم كيفية أتمتة إنشاء ونشر محتوى شاوهونغشو باستخدام xhs_ai_publisher. دروس تعليمية خطوة بخطوة مع التثبيت والتكوين وأفضل الممارسات لأتمتة وسائل التواصل الاجتماعي."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - شاوهونغشو
   - أتمتة-الذكاء-الاصطناعي
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/xiaohongshu-ai-publisher-complete-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/xiaohongshu-ai-publisher-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

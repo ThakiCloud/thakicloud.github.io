@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية الاستفادة من حاويات MCP لتطو�
 seo_title: "دورة حاويات MCP: دليل تطوير وكلاء الذكاء الاصطناعي بـ Docker"
 seo_description: "دورة شاملة حول استخدام حاويات MCP لتطوير وكلاء الذكاء الاصطناعي. تعلم دمج مئات خوادم MCP مع Docker لبناء تدفقات عمل ذكية."
 date: 2025-09-19
-categories:
-  - tutorials
 tags:
   - mcp
   - docker
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/mcp-containers-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-containers-comprehensive-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

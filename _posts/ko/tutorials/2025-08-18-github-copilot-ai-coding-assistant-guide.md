@@ -5,9 +5,6 @@ seo_title: "GitHub Copilot AI 코딩 어시스턴트 설정 및 활용 가이드
 seo_description: "GitHub Copilot을 활용한 AI 코딩 지원 설정 방법과 IDE 연동, 실전 활용 팁까지 완벽 가이드로 개발 생산성을 극대화하세요"
 date: 2025-08-18
 last_modified_at: 2025-08-18
-categories:
-  - tutorials
-  - dev
 tags:
   - GitHub-Copilot
   - AI
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/github-copilot-ai-coding-assistant-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

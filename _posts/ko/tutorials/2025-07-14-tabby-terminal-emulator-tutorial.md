@@ -5,8 +5,6 @@ seo_title: "Tabby 터미널 에뮬레이터 완벽 가이드 - 설치, 설정, �
 seo_description: "Tabby 터미널 에뮬레이터의 설치부터 고급 설정까지 완벽 가이드. macOS, Windows, Linux 설치 방법, SSH 연결 설정, 플러그인 활용법을 실전 예제와 함께 제공합니다."
 date: 2025-07-14
 last_modified_at: 2025-07-14
-categories:
-  - tutorials
 tags:
   - tabby
   - terminal
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/tabby-terminal-emulator-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

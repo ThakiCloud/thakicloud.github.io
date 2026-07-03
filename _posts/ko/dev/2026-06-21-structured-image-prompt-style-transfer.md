@@ -5,8 +5,6 @@ seo_title: "구조화 이미지 프롬프트 스타일 변환 기법 분석 - Th
 seo_description: "5섹션 계층형 이미지 프롬프트, 원본 보존 앵커링, 스타일 레이어링 기법과 이미지 서빙 프롬프트 템플릿 제품화 관점"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - prompt-engineering
   - image-generation
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/dev/structured-image-prompt-style-transfer/"
 reading_time: true
+categories:
+  - dev
 ---
 
 "여행 사진을 지브리 스타일로 바꿔줘"라고 한 줄 던지면, 결과는 매번 다릅니다. 어떤 건 원본 구도를 잃고, 어떤 건 스타일이 약하고, 어떤 건 인물이 뭉개집니다. 최근 공유된 GPT Image 2 활용 사례는 이 문제를 **구조화 프롬프트**로 해결합니다. 자유 서술 대신 5개 섹션으로 계층을 나눠 변환을 제어하는 기법입니다.

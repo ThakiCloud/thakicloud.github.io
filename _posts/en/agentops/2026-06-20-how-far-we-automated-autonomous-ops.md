@@ -5,8 +5,6 @@ seo_title: "Autonomous Ops Inventory: launchd, Hooks, Nightly Loops - ThakiCloud
 seo_description: "ThakiCloud's complete running automation inventory: launchd scheduled jobs, UserPromptSubmit and Stop hooks, nightly self-evolution loops, and memkraft memory pipeline, classified by deterministic ($0) vs LLM cost."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - automation
   - autonomous-ops
@@ -22,6 +20,8 @@ header:
   teaser: /assets/images/autonomous-ops-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
 ---
 
 ![Unattended operations topology where time-axis schedules and event hooks mesh together](/assets/images/autonomous-ops-hero.png)

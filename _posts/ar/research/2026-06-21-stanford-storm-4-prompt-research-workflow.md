@@ -5,8 +5,6 @@ seo_title: "تحليل سير عمل أتمتة البحث Stanford STORM - Thak
 seo_description: "كيفية تنفيذ منهجية تنسيق المعرفة STORM (NAACL 2024) كسير عمل موجِّهات من أربع خطوات، وكيفية تطبيقها على خط أنابيب بحث متعدد الوكلاء"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - storm
   - research-automation
@@ -22,6 +20,8 @@ toc_sticky: true
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
+categories:
+  - research
 ---
 
 البحث عمل يستهلك وقتًا كبيرًا. فلكي تتعمّق في موضوع ما كما ينبغي، عليك أن تصوغ الأسئلة، وتجمع المواد من زوايا متعددة، وتبني هيكلًا، ثم تكتب ناتجًا مرفقًا بالاستشهادات. إن STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking)، الذي أصدره مختبر OVAL في جامعة ستانفورد، هو نظام لتنسيق المعرفة يؤتمت هذه العملية باستخدام نموذج لغة كبير. وقد عُرض في مؤتمر NAACL 2024، وهدفه توليد مقالات طويلة بمستوى ويكيبيديا، مرفقة بالاستشهادات، من الصفر.

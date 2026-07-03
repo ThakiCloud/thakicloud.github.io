@@ -5,8 +5,6 @@ seo_title: "nature-skills 학술 그림·교열 스킬 실측 리포트 - Thaki 
 seo_description: "nature-skills(Yuan1z0825) Claude 스킬 패키지를 직접 실행한 리포트. nature-figure의 rcParams·PALETTE로 제출 등급 matplotlib 2패널 그림을 600dpi로 렌더링하고, 편집 가능한 SVG와 학술 버티컬 마켓플레이스 시사점을 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - claude-skills
   - academic-writing
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ![다중 패널 데이터 곡선과 그림판이 학술적 분위기로 떠 있는 추상 이미지](/assets/images/nature-skills-hero.png)

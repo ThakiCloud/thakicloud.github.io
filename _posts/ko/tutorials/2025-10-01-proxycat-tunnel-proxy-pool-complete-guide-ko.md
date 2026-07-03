@@ -4,8 +4,6 @@ excerpt: "ProxyCat을 활용한 고성능 터널 프록시 풀 구축 방법과 
 seo_title: "ProxyCat 터널 프록시 풀 완전 가이드 - Thaki Cloud"
 seo_description: "ProxyCat으로 고성능 터널 프록시 풀을 구축하고 운영하는 방법을 단계별로 설명하는 완전 가이드입니다."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - ProxyCat
   - 프록시풀
@@ -17,6 +15,8 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

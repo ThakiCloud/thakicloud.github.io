@@ -5,8 +5,6 @@ seo_title: "의료 LLM 파인튜닝 온프렘 - 병원·제약 데이터 반출 
 seo_description: "환자 데이터를 외부로 내보내지 않고 사내에서 의료 LLM을 파인튜닝하고 서빙하는 방법. SFT, DPO, LoRA 등 6종 튜닝과 vLLM Scale-to-Zero 적용으로 도메인 특화 헬스케어 AI를 온프레미스로 구축하는 완전 가이드."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - llmops
 tags:
   - healthcare
   - fine-tuning
@@ -20,6 +18,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/llmops/healthcare-onprem-llm-finetuning/"
 reading_time: true
+categories:
+  - llmops
 ---
 
 ![환자 데이터를 외부로 내보내지 않고 사내에서 의료 LLM 파인튜닝하기](/assets/images/healthcare-onprem-llm-finetuning-hero.png)

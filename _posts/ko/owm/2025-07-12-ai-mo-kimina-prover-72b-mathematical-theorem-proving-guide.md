@@ -5,8 +5,6 @@ seo_title: "AI-MO Kimina-Prover-72B 수학 정리 증명 LLM 가이드 - Thaki C
 seo_description: "수학 정리 증명과 논리적 추론에 특화된 Kimina-Prover-72B의 완전한 활용 가이드와 수학 AI 시스템 구축 방법"
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - owm
 tags:
   - AI-MO
   - Kimina-Prover-72B
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/ai-mo-kimina-prover-72b-mathematical-theorem-proving-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 20분

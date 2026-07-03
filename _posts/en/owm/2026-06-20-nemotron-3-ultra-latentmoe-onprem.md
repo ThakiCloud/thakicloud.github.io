@@ -5,8 +5,6 @@ seo_title: "NVIDIA Nemotron-3-Ultra-550B LatentMoE Self-Hosting Guide - Thaki Cl
 seo_description: "Nemotron-3-Ultra 550B LatentMoE architecture (Mamba-2+MoE+Attention), benchmarks (SWE-Bench Verified 70.7%, MMLU-Pro 86.8%), vLLM/SGLang/TRT-LLM serving, and B200 minimum requirements analyzed."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - nemotron-3-ultra
   - nvidia
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/nemotron-3-ultra-latentmoe-onprem/"
 lang: en
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 8 min

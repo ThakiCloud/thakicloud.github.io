@@ -5,8 +5,6 @@ seo_title: "Agent-Native Memory System Analysis - A Data-Management Perspective 
 seo_description: "Analysis of arXiv 2606.24775 based on the official abstract. Covers the 4-module decomposition of Representation & Storage / Extraction / Retrieval & Routing / Maintenance, evaluation across 12 memory systems with 5 workloads and 11 datasets, workload-bottleneck alignment, cost-performance trade-offs, and implications for the ThakiCloud Kubernetes multi-tenant agent platform."
 date: 2026-06-26
 last_modified_at: 2026-06-26
-categories:
-  - research
 tags:
   - agent-memory
   - llm-agent
@@ -23,6 +21,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/agent-native-memory-system/"
 reading_time: true
+categories:
+  - research
 ---
 
 ![Abstract image of layered data flowing through a lattice of neural networks and databases, with memory cells forming and dissolving](/assets/images/agent-native-memory-system-hero.png)

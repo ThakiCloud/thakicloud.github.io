@@ -5,8 +5,6 @@ seo_title: "Menlo Jan-nano 4B MCP 통합 연구 모델 가이드 - Thaki Cloud"
 seo_description: "MCP 서버 통합과 연구 작업에 특화된 Jan-nano 4B 모델의 완전한 구현 가이드와 SimpleQA 벤치마크 성능 분석"
 date: 2025-07-12
 last_modified_at: 2025-07-12
-categories:
-  - owm
 tags:
   - Menlo
   - Jan-nano
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/menlo-jan-nano-4b-research-model-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

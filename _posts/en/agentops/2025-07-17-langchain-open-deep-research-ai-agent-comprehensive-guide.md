@@ -5,8 +5,6 @@ seo_title: "LangChain Open Deep Research Complete Guide - Multi-Agent Research S
 seo_description: "LangChain Open Deep Research comprehensive analysis. QualityFocusedAgent, MultiAgentResearchSystem, AdvancedRAGSystem implementation, domain-specific agents, and Kubernetes deployment guide for AI-powered research automation."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - agentops
 tags:
   - langchain
   - open-deep-research
@@ -26,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
 lang: en
 reading_time: true
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 20 min

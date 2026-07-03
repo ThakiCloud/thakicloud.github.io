@@ -3,8 +3,6 @@ title: "[컬처] 여기에 제목을 입력하세요"
 excerpt: "조직 문화, 개발 문화, 협업 방식 등 Thaki Cloud의 컬처와 가치를 소개하고 공유하는 글"
 date: YYYY-MM-DD # 실제 발행일로 변경하세요 (예: 2025-06-16)
 last_modified_at: 2026-06-20
-categories:
-  - culture
 tags:
   - Organizational Culture
   - Team Values
@@ -18,6 +16,8 @@ author_profile: true
 # toc_label: "Table of Contents"
 # comments: true
 published: false
+categories:
+  - culture
 ---
 
 ## [컬처] 게시물 작성 가이드

@@ -4,8 +4,6 @@ excerpt: "مجموعة بيانات تضم 4,665 أثراً لجلسات وكي�
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-categories:
-  - datasets
 tags:
   - agent-traces
   - fable-5
@@ -21,6 +19,8 @@ toc: true
 toc_label: "دليل Fable-5-traces"
 reading_time: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/fable-5-agent-traces/"
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

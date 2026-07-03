@@ -5,8 +5,6 @@ seo_title: "TensorRT-LLM LLM 추론 성능 최적화 가이드 - Thaki Cloud"
 seo_description: "NVIDIA TensorRT-LLM을 활용한 LLM 추론 벤치마킹, 성능 튜닝 기법, 실제 적용 사례까지 포함한 실무 중심 가이드"
 date: 2025-07-08
 last_modified_at: 2025-07-08
-categories:
-  - llmops
 tags:
   - TensorRT-LLM
   - LLM-Inference
@@ -24,6 +22,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/tensorrt-llm-inference-benchmarking-performance-tuning-guide/"
 reading_time: true
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

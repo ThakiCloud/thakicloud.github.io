@@ -5,8 +5,6 @@ seo_title: "Stanford STORM Complete Guide - LLM Knowledge Curation Agent System 
 seo_description: "Complete analysis of the Stanford STORM project. Automated research, Wikipedia-style report generation, collaborative AI agents, and production deployment guide. How to use the 25.4k-star open-source project."
 date: 2025-06-30
 last_modified_at: 2025-06-30
-categories:
-  - agentops
 tags:
   - stanford-storm
   - knowledge-curation
@@ -27,6 +25,8 @@ canonical_url: "https://thakicloud.github.io/en/agentops/stanford-storm-comprehe
 lang: en
 reading_time: true
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **Estimated reading time**: 10 min

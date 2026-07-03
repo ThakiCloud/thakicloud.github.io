@@ -4,8 +4,6 @@ excerpt: "Go와 Anthropic Claude API를 활용하여 Cursor, Cline, Windsurf와 
 seo_title: "AI 코딩 에이전트 개발: Go & Claude 실전 가이드 - Thaki Cloud"
 seo_description: "Cursor, Windsurf 같은 코딩 에이전트 빌딩 완전 가이드. 툴 통합, API 관리, 점진적 개발 방법론을 실습 예제로 배우는 체계적 튜토리얼"
 date: 2025-08-26
-categories:
-  - tutorials
 tags:
   - ai-agent
   - coding-agent
@@ -20,6 +18,8 @@ lang: ko
 permalink: /ko/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

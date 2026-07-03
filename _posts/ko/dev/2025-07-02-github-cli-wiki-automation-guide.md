@@ -4,8 +4,6 @@ excerpt: "코드 기반 위키 자동 생성, API 문서 동기화, 다국어 �
 seo_title: "GitHub CLI 위키 자동화 4편 - 문서 관리 완전 자동화 - Thaki Cloud"
 seo_description: "GitHub CLI로 위키 자동 생성, API 문서 동기화, 다국어 지원, 버전 관리까지 개발 문서화를 완전 자동화하는 전문가 가이드"
 date: 2025-07-02
-categories:
-  - dev
 tags:
   - github-cli
   - wiki-automation
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/ko/dev/github-cli-wiki-automation-guide/"
 published: false
+categories:
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

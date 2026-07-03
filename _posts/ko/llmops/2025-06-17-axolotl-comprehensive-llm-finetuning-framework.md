@@ -2,8 +2,6 @@
 title: "Axolotl: 통합 LLM 파인튜닝 프레임워크 완전 가이드"
 excerpt: "다양한 AI 모델의 포스트 트레이닝을 간소화하는 Axolotl 프레임워크의 기능, 설치, 사용법 및 실무 적용 가이드"
 date: 2025-06-17
-categories:
-  - llmops
 tags:
   - Axolotl
   - Fine-tuning
@@ -17,6 +15,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
 ---
 
 ## 개요

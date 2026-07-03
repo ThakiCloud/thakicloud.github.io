@@ -4,8 +4,6 @@ excerpt: "حقق Agent S3 من Simular دقة 69.9% في معيار OSWorld، م
 seo_title: "Agent S3: ابتكار وكيل الذكاء الاصطناعي لاستخدام الحاسوب بمستوى بشري - Thaki Cloud"
 seo_description: "تحليل شامل لأداء Simular Agent S3 بنسبة 69.9% في OSWorld، وتقنية Behavior Best-of-N، ودمج وكيل البرمجة الأصلي الذي يحدث ثورة في أتمتة استخدام الحاسوب."
 date: 2025-10-03
-categories:
-  - llmops
 tags:
   - Agent-S3
   - وكيل-استخدام-الحاسوب
@@ -19,6 +17,8 @@ toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/agent-s3-human-level-computer-use-breakthrough/
 canonical_url: "https://thakicloud.github.io/ar/llmops/agent-s3-human-level-computer-use-breakthrough/"
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

@@ -5,9 +5,6 @@ seo_title: "Qwen3-4B GRPO Korean Reasoning Model Training Guide - Thaki Cloud"
 seo_description: "Complete analysis of the Qwen3-4B GRPO training process. A detailed practitioner guide covering Colab notebook internals and Korean reasoning dataset usage."
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - llmops
-  - tutorials
 tags:
   - Qwen3-4B
   - GRPO
@@ -28,6 +25,9 @@ canonical_url: "https://thakicloud.github.io/en/llmops/qwen3-4b-grpo-korean-reas
 lang: en
 reading_time: true
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 8 min

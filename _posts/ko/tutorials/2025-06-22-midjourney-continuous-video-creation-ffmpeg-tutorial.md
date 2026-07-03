@@ -2,9 +2,6 @@
 title: "미드저니 이미지로 연속 동영상 제작하기 - FFmpeg 스크립트 완전 가이드"
 excerpt: "미드저니로 생성한 이미지를 동영상으로 만들고, 마지막 프레임을 추출해 연속 영상을 생성하는 완전한 워크플로우"
 date: 2025-06-22
-categories: 
-  - tutorials
-  - dev
 tags: 
   - midjourney
   - ffmpeg
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: "미드저니 연속 동영상 제작"
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ## 개요

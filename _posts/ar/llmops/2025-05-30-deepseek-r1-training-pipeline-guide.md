@@ -4,8 +4,6 @@ excerpt: "دليل خطوة بخطوة للإعادة الكاملة لخط أن
 seo_title: "خط أنابيب تدريب DeepSeek-R1 - دليل الإعادة الكاملة"
 seo_description: "أتقن منهجية تدريب DeepSeek-R1 الكاملة مع دليلنا الشامل الذي يغطي التعلم التعزيزي ثنائي المراحل وSFT ثنائي المراحل وعمليات التقطير"
 date: 2025-05-30
-categories:
-  - llmops
 tags:
   - DeepSeek-R1
   - التعلم-التعزيزي
@@ -23,6 +21,8 @@ lang: ar
 permalink: /ar/llmops/deepseek-r1-training-pipeline-guide/
 canonical_url: "https://thakicloud.github.io/ar/llmops/deepseek-r1-training-pipeline-guide/"
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

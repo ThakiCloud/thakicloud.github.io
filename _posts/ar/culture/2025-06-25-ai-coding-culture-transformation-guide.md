@@ -5,9 +5,6 @@ seo_title: "دليل تحويل ثقافة البرمجة بالذكاء الا�
 seo_description: "حوّل ثقافة التطوير لديك لعصر الذكاء الاصطناعي. دليل شامل لبناء سير عمل تعاوني بين الإنسان والذكاء الاصطناعي مع نهج البرمجة الإيقاعية والبرمجة الوكيلة."
 date: 2025-06-25
 lang: ar
-categories: 
-  - culture
-  - dev
 tags: 
   - ثقافة-البرمجة-بالذكاء-الاصطناعي
   - ثقافة-التطوير
@@ -21,6 +18,9 @@ toc: true
 toc_label: "ابتكار ثقافة التطوير في عصر الذكاء الاصطناعي"
 permalink: /ar/culture/ai-coding-culture-transformation-guide/
 canonical_url: "https://thakicloud.github.io/ar/culture/ai-coding-culture-transformation-guide/"
+categories:
+  - culture
+  - dev
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 25 دقيقة

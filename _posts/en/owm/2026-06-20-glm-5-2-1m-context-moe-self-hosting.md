@@ -5,8 +5,6 @@ seo_title: "GLM-5.2 753B MoE 1M Context Self-Hosting Guide - Thaki Cloud"
 seo_description: "GLM-5.2 DSA architecture, benchmarks (HLE 40.5, AIME 2026 99.2, SWE-bench Pro 62.1), vLLM/SGLang/KTransformers serving methods, and on-premises requirements explained."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - owm
 tags:
   - glm-5-2
   - z-ai
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/owm/glm-5-2-1m-context-moe-self-hosting/"
 lang: en
 reading_time: true
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated reading time**: 7 min

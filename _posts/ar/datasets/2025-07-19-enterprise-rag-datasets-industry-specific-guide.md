@@ -7,8 +7,6 @@ date: 2025-07-19
 last_modified_at: 2025-07-19
 lang: ar
 permalink: /ar/datasets/enterprise-rag-datasets-industry-specific-guide/
-categories:
-  - datasets
 tags:
   - RAG
   - LLM
@@ -31,6 +29,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/datasets/enterprise-rag-datasets-industry-specific-guide/"
 reading_time: true
 published: false
+categories:
+  - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 20 دقيقة

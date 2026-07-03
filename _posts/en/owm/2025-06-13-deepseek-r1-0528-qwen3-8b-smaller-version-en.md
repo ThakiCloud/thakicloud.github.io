@@ -4,8 +4,6 @@ excerpt: "Comprehensive analysis of DeepSeek's revolutionary 8B parameter model 
 seo_title: "DeepSeek-R1-0528-Qwen3-8B Open Source LLM Guide - Single GPU Performance - Thaki Cloud"
 seo_description: "Discover DeepSeek-R1-0528-Qwen3-8B, an 8B parameter open-source model achieving 76.3% on AIME 2025, outperforming larger models while running efficiently on single GPUs with MIT license."
 date: 2025-06-13
-categories: 
-  - owm
 tags: 
   - deepseek
   - qwen
@@ -22,6 +20,8 @@ toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.github.io/en/owm/deepseek-r1-0528-qwen3-8b-smaller-version/"
 lang: en
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **Estimated Reading Time**: 6 minutes

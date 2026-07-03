@@ -7,8 +7,6 @@ date: 2025-09-19
 lang: ar
 permalink: /ar/tutorials/eigent-multiagent-workforce-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/eigent-multiagent-workforce-tutorial/"
-categories:
-  - tutorials
 tags:
   - Eigent
   - متعدد الوكلاء
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "محتويات الدرس"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

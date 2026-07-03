@@ -5,9 +5,6 @@ seo_title: "RL 포스트 트레이닝 혁신: AI 에이전트 개발 새 패러�
 seo_description: "ToolRL, GMPO, mmGRPO 등 2025년 핵심 강화학습 포스트 트레이닝 연구 분석. 툴콜링 최적화부터 에이전트 체인 관리까지 실무 적용 가이드 제공"
 date: 2025-08-22
 last_modified_at: 2025-08-22
-categories:
-  - research
-  - llmops
 tags:
   - 강화학습
   - 포스트트레이닝
@@ -25,6 +22,9 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/research/post-training-revolution-rl-agent-development/"
 reading_time: true
+categories:
+  - research
+  - llmops
 ---
 
 ![핵심 개념 일러스트](/assets/images/post-training-revolution-rl-agent-development-hero.png)

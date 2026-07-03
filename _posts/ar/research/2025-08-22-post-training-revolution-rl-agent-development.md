@@ -6,8 +6,6 @@ seo_description: "تحليل شامل للأوراق البحثية العشر �
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: ar
-categories:
-  - research
 tags:
   - reinforcement-learning
   - post-training
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/research/post-training-revolution-rl-agent-development/"
 reading_time: true
 published: true
+categories:
+  - research
 ---
 
 ![رسم توضيحي للمفهوم](/assets/images/post-training-revolution-rl-agent-development-hero.png)

@@ -5,8 +5,6 @@ seo_title: "vLLM Prefix Caching KV Cache Reuse Production Guide - Thaki Cloud"
 seo_description: "How to enable vLLM Automatic Prefix Caching, how PagedAttention KV block hashing works, conditions for achieving 60-85% hit rates, and practical patterns for multi-tenant SaaS."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - dev
 tags: [vllm, prefix-caching, kv-cache, llm-serving, gpu, inference, kubernetes, pagedattention]
 author_profile: true
 toc: true
@@ -16,6 +14,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/dev/vllm-prefix-caching-kv-reuse-production/"
 reading_time: true
 lang: en
+categories:
+  - dev
 ---
 
 ⏱️ **Estimated reading time**: 7 min

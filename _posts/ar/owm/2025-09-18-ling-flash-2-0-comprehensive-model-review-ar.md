@@ -4,8 +4,6 @@ excerpt: "اكتشف Ling-flash-2.0، أحدث معمارية MoE من inclusion
 seo_title: "مراجعة نموذج Ling-flash-2.0: معمارية MoE بـ 100 مليار معامل - Thaki Cloud"
 seo_description: "تحليل شامل لمعمارية MoE الخاصة بـ Ling-flash-2.0، معايير الأداء، خيارات النشر مع vLLM/SGLang، ودليل التنفيذ العملي لسير العمل المؤسسي."
 date: 2025-09-18
-categories:
-  - owm
 tags:
   - ling-flash-2.0
   - معمارية-moe
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/owm/ling-flash-2-0-comprehensive-model-review/
 canonical_url: "https://thakicloud.github.io/ar/owm/ling-flash-2-0-comprehensive-model-review/"
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

@@ -2,9 +2,6 @@
 title: "Hugging Face Kernel Hub 완벽 가이드: 모델 성능을 5분 만에 향상시키기"
 excerpt: "Kernel Hub를 활용해 FlashAttention·GELU·RMSNorm 등 고성능 커널을 즉시 적용하여 LLM 추론·학습 속도를 높이는 방법을 단계별로 소개합니다."
 date: 2025-06-16
-categories:
-  - llmops
-  - tutorials
 tags:
   - huggingface
   - kernel-hub
@@ -15,6 +12,9 @@ author_profile: true
 toc: true
 toc_label: HF Kernel Hub Guide
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ## 서론

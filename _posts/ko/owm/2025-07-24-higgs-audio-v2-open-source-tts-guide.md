@@ -5,9 +5,6 @@ seo_title: "Higgs Audio V2 오픈소스 TTS 모델 완벽 가이드 - Thaki Clou
 seo_description: "BosonAI Higgs Audio V2 설치부터 활용까지. 1천만 시간 데이터로 훈련된 오픈소스 음성 생성 모델의 기술적 특징과 실제 구현 방법을 상세히 알아보세요."
 date: 2025-07-24
 last_modified_at: 2025-07-24
-categories:
-  - owm
-  - llmops
 tags:
   - Higgs-Audio-V2
   - BosonAI
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/higgs-audio-v2-open-source-tts-guide/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

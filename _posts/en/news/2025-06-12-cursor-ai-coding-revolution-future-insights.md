@@ -5,8 +5,6 @@ date: 2025-06-12
 lang: en
 permalink: /en/news/cursor-ai-coding-revolution-future-insights/
 canonical_url: "https://thakicloud.github.io/en/news/cursor-ai-coding-revolution-future-insights/"
-categories: 
-  - news
 tags: 
   - Cursor
   - AI Coding
@@ -19,6 +17,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 published: false
+categories:
+  - news
 ---
 
 ## Cursor Achieves $300M ARR in 21 Months Since Launch

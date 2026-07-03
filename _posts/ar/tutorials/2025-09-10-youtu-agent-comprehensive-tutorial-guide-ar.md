@@ -4,8 +4,6 @@ excerpt: "إتقان Youtu-Agent، إطار عمل الوكلاء مفتوح ا�
 seo_title: "دليل Youtu-Agent: بناء وكلاء الذكاء الاصطناعي بالنماذج مفتوحة المصدر - Thaki Cloud"
 seo_description: "دليل شامل لإطار عمل Youtu-Agent: التثبيت والإعداد والأمثلة والمعايرة. بناء وكلاء ذكاء اصطناعي قوية مع البحث الويب والأتمتة ومعالجة غير متزامنة."
 date: 2025-09-10
-categories:
-  - tutorials
 tags:
   - youtu-agent
   - ai-agents
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/youtu-agent-comprehensive-tutorial-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/youtu-agent-comprehensive-tutorial-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

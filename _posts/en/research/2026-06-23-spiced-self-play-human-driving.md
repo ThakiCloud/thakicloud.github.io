@@ -5,8 +5,6 @@ seo_title: "Spiced Self-Play Analysis (arXiv 2606.19370) - Human-Compatible Driv
 seo_description: "How data-regularized self-play learns driving policies that coordinate with humans. We analyze on-policy KL regularization, 30 minutes of human data, 15 hours on a consumer GPU, and 2500x data efficiency through ThakiCloud's multi-agent and RL infrastructure lens."
 date: 2026-06-23
 last_modified_at: 2026-06-23
-categories:
-  - research
 tags:
   - self-play
   - reinforcement-learning
@@ -25,6 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/spiced-self-play-human-driving/"
 reading_time: true
+categories:
+  - research
 ---
 
 ## Overview

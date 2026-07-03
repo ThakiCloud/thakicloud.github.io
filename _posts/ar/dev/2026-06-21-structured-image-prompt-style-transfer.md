@@ -7,8 +7,6 @@ date: 2026-06-21
 last_modified_at: 2026-06-21
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/dev/structured-image-prompt-style-transfer/"
-categories:
-  - dev
 tags:
   - prompt-engineering
   - image-generation
@@ -21,6 +19,8 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 reading_time: true
+categories:
+  - dev
 ---
 
 إذا ألقيت سطرًا واحدًا مثل "حوِّل صورة السفر هذه إلى أسلوب غيبلي"، فإن النتيجة تختلف في كل مرة. مرة تفقد التكوين الأصلي، ومرة يكون الأسلوب ضعيفًا، ومرة تتشوَّه ملامح الشخص. تحلّ حالة استخدام GPT Image 2 التي جرت مشاركتها مؤخرًا هذه المشكلة عبر **المطالبة المنظَّمة**. فبدلًا من الوصف الحر، تقسّم الطبقات عبر خمسة أقسام للتحكم في التحويل.

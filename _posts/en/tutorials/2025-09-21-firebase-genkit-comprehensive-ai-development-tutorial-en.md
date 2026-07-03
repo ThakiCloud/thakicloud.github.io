@@ -4,8 +4,6 @@ excerpt: "Master Firebase Genkit to build, deploy, and monitor AI-powered applic
 seo_title: "Firebase Genkit Tutorial: Build Production AI Apps - Thaki Cloud"
 seo_description: "Learn Firebase Genkit for building production AI applications. Complete guide covering installation, development, deployment, and monitoring with practical examples."
 date: 2025-09-21
-categories:
-  - tutorials
 tags:
   - firebase
   - genkit
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

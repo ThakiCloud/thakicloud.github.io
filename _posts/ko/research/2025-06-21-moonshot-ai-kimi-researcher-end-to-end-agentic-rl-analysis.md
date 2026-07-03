@@ -2,8 +2,6 @@
 title: "Moonshot AI Kimi-Researcher 완전 분석: End-to-End 에이전트 강화학습의 새로운 패러다임"
 excerpt: "Moonshot AI의 Kimi-Researcher가 보여주는 End-to-End 에이전트 강화학습의 혁신적 접근법과 26.9% HLE 성능을 달성한 핵심 기술을 심층 분석합니다."
 date: 2025-06-21
-categories: 
-  - research
 tags: 
   - Kimi-Researcher
   - Moonshot-AI
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Kimi-Researcher 분석"
 published: false
+categories:
+  - research
 ---
 
 ## 개요

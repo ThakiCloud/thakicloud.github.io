@@ -5,8 +5,6 @@ seo_title: "Screego 스크린 공유 서버 구축 가이드 - WebRTC 개발자 
 seo_description: "Screego를 활용한 개발자 전용 스크린 공유 서버 구축 방법. Docker 설치부터 WebRTC 설정, TURN 서버 구성까지 실무 중심의 완벽 가이드. 고품질 화면 공유 솔루션"
 date: 2025-08-19
 last_modified_at: 2025-08-19
-categories:
-  - tutorials
 tags:
   - screego
   - screen-sharing
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/screego-developer-screen-sharing-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

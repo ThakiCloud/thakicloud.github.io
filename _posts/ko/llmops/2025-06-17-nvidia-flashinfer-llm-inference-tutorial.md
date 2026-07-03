@@ -2,8 +2,6 @@
 title: "NVIDIA FlashInfer로 고성능 LLM 추론 최적화하기"
 excerpt: "NVIDIA의 FlashInfer 라이브러리를 활용해 LLM 추론 성능을 극대화하는 방법과 실제 구현 가이드"
 date: 2025-06-17
-categories:
-  - tutorials
 tags:
   - NVIDIA
   - FlashInfer
@@ -15,6 +13,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ## FlashInfer 개요

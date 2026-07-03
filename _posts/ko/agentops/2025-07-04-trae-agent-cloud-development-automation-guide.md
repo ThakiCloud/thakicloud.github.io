@@ -5,8 +5,6 @@ seo_title: "TRAE-agent 완벽 가이드 - ByteDance AI 개발 자동화 도구 -
 seo_description: "ByteDance TRAE-agent를 활용한 클라우드 개발 자동화 전략. 인프라 코드 생성, CI/CD 파이프라인 구축, 모니터링 시스템 개발까지 실전 사례와 함께 제공."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - agentops
 tags:
   - TRAE-agent
   - ByteDance
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/agentops/trae-agent-cloud-development-automation-guide/"
 reading_time: true
 published: false
+categories:
+  - agentops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

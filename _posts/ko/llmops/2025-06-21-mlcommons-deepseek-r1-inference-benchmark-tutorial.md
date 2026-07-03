@@ -2,9 +2,6 @@
 title: "MLCommons Inference DeepSeek-R1 벤치마크 완전 가이드"
 excerpt: "MLCommons Inference 프레임워크를 활용하여 DeepSeek-R1 모델의 성능을 정확하고 체계적으로 평가하는 실전 튜토리얼입니다."
 date: 2025-06-21
-categories: 
-  - tutorials
-  - llmops
 tags: 
   - MLCommons
   - DeepSeek-R1
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "MLCommons DeepSeek-R1 벤치마크"
 published: false
+categories:
+  - llmops
+  - tutorials
 ---
 
 ## 개요

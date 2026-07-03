@@ -5,8 +5,6 @@ seo_title: "nature-skills Academic Figure and Polishing Skill Hands-On Report - 
 seo_description: "A hands-on report running the nature-skills (Yuan1z0825) Claude skill package. We render a submission-grade matplotlib two-panel figure at 600dpi using nature-figure's rcParams and PALETTE, and analyze editable SVG output plus academic vertical marketplace implications."
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - dev
 tags:
   - claude-skills
   - academic-writing
@@ -18,6 +16,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "cog"
+categories:
+  - dev
 ---
 
 ![Abstract image of multi-panel data curves and figure plates floating in an academic atmosphere](/assets/images/nature-skills-hero.png)

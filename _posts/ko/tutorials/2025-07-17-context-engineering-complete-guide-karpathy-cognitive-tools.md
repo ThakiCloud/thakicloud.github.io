@@ -5,9 +5,6 @@ seo_title: "Context Engineering 완전 가이드 - Karpathy 이론부터 IBM 인
 seo_description: "프롬프트 엔지니어링을 넘어선 차세대 기술 Context Engineering. Andrej Karpathy 정의부터 IBM/Princeton/MIT 최신 연구까지 생물학적 메타포와 실습으로 완벽 마스터"
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - llmops
-  - tutorials
 tags:
   - context-engineering
   - andrej-karpathy
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/llmops/context-engineering-complete-guide-karpathy-cognitive-tools/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 22분

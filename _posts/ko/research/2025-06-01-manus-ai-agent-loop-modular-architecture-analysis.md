@@ -1,8 +1,6 @@
 ---
 title: "Manus AI 시스템 분석: 에이전트 루프와 모듈식 구조의 혁신"
 date: 2025-06-01
-categories: 
-  - research
 tags: 
   - manus-ai
   - agent-loop
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - research
 ---
 
 AI 시스템의 발전과 함께 단순한 질의응답을 넘어선 복합적 작업 수행 능력이 주목받고 있습니다. 이번 포스트에서는 Manus AI 시스템의 독특한 에이전트 루프 메커니즘과 모듈식 아키텍처를 심층 분석해보겠습니다.

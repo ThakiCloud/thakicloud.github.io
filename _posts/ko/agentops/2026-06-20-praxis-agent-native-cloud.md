@@ -5,8 +5,6 @@ seo_title: "Paxis Agent-Native Cloud: 거버넌스·CostRouter·진화하는 스
 seo_description: "ThakiCloud Paxis는 자율 AI 에이전트를 안전하게 운영하는 Agent-Native Cloud입니다. L0-L3 자율도 거버넌스, 멀티-LLM CostRouter 비용 최적화, Git 기반 HKE 지식엔진, 849 스킬 하니스를 실제 코드와 함께 소개합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - agentops
 tags:
   - agent-native-cloud
   - praxis
@@ -22,6 +20,9 @@ header:
   teaser: /assets/images/praxis-architecture-hero.png
 toc: true
 toc_sticky: true
+categories:
+  - agentops
+published: false
 ---
 
 ![Paxis 계층 아키텍처: Cloud 인프라 위에 Paxis Core, 그 위에 849 스킬·14 도메인 에이전트 능력 계층](/assets/images/praxis-architecture-hero.png)

@@ -5,9 +5,6 @@ seo_title: "Llama Nemotron Super 49B v1.5 오픈소스 추론 모델 완전 분�
 seo_description: "NVIDIA의 최신 오픈소스 추론 모델 Llama Nemotron Super 49B v1.5의 핵심 기술, 성능 벤치마크, 그리고 AI 에이전트 구축에서의 실용적 활용 방법을 종합 분석합니다."
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - owm
-  - llmops
 tags:
   - Llama-Nemotron
   - 오픈소스-AI
@@ -24,6 +21,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/owm/llama-nemotron-super-49b-v15-breakthrough-open-reasoning-model/"
 reading_time: true
 published: false
+categories:
+  - owm
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

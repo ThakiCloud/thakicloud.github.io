@@ -2,8 +2,6 @@
 title: "Backend·Infrastructure Engineer Hiring: **10 Must-Read Books** and the People We're Looking For"
 excerpt: "Introducing the ideal candidate profile and hiring criteria through 10 must-read books for backend·infrastructure engineer recruitment and practical application cases."
 date: 2025-05-27
-categories:
-  - careers
 tags:
   - MLOps
   - ThreeVs
@@ -14,6 +12,8 @@ author_profile: true
 lang: en
 permalink: /en/careers/backend-infrastructure-engineer-hiring-10-must-read-books/
 canonical_url: "https://thakicloud.github.io/en/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+categories:
+  - careers
 ---
 
 > **TL;DR**  

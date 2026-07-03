@@ -5,8 +5,6 @@ seo_title: "دليل مراقبة خدمة LLM بـ vLLM Prometheus Kueue - Thak
 seo_description: "تصميم منظومة مراقبة خدمة LLM على K8s بربط نقطة /metrics في vLLM مع DCGM Exporter ومقاييس Kueue. رصد معدل استخدام GPU وتكاليف الاستدلال في الوقت الفعلي."
 date: 2026-06-20
 last_modified_at: 2026-06-20
-categories:
-  - llmops
 tags:
   - observability
   - prometheus
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/llm-inference-observability-prometheus-kueue/"
 reading_time: true
 lang: ar
+categories:
+  - llmops
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

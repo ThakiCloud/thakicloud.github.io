@@ -4,8 +4,6 @@ excerpt: "AWS Labs의 Agent Squad 프레임워크 완벽 가이드 - 기본 설�
 seo_title: "AWS Agent Squad 튜토리얼: 멀티 에이전트 오케스트레이션 프레임워크 가이드"
 seo_description: "멀티 에이전트 AI 오케스트레이션을 위한 AWS Agent Squad 프레임워크 학습. Python/TypeScript 예제, Bedrock 통합, 실무 구현을 포함한 완전한 튜토리얼."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - aws
   - agent-squad
@@ -22,6 +20,8 @@ lang: ko
 permalink: /ko/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

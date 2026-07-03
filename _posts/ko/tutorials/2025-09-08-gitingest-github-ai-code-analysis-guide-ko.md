@@ -4,8 +4,6 @@ excerpt: "GitHub URL만으로 AI가 이해하기 쉬운 코드 추출하기. Git
 seo_title: "GitIngest GitHub 코드 AI 분석 도구 완벽 가이드 - Thaki Cloud"
 seo_description: "GitIngest로 GitHub 프로젝트를 AI 친화적으로 변환하는 방법. 코드베이스 분석부터 Python 패키지 활용까지 단계별 튜토리얼"
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - GitIngest
   - GitHub
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ko/tutorials/gitingest-github-ai-co
 lang: ko
 permalink: /ko/tutorials/gitingest-github-ai-code-analysis-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

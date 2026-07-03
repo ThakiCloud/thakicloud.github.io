@@ -2,9 +2,6 @@
 title: "NVIDIA OpenMathReasoning: Large-Scale Mathematical Reasoning Dataset Behind AIMO-2 Winning Model"
 excerpt: "Complete analysis of OpenMathReasoning dataset with 306K math problems and 5.68M solutions - CoT, TIR, GenSelect methodologies and OpenMath-Nemotron series performance"
 date: 2025-06-18
-categories: 
-  - datasets
-  - llmops
 tags: 
   - nvidia
   - openmathReasoning
@@ -21,6 +18,9 @@ author_profile: true
 toc: true
 toc_label: "OpenMathReasoning Guide"
 published: false
+categories:
+  - datasets
+  - llmops
 ---
 
 ## Overview

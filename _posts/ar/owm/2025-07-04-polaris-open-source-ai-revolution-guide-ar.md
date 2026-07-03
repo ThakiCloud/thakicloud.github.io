@@ -4,8 +4,6 @@ excerpt: "تحليل ثوري لكيفية تحقيق Polaris 4B لمستوى أ
 seo_title: "ثورة Polaris 4B للذكاء الاصطناعي مفتوح المصدر - تجاوز أداء Claude - دليل - Thaki Cloud"
 seo_description: "اكتشف كيف يحقق نهج Polaris 4B مفتوح المصدر 100% أداء Claude-4-Opus بموارد أكاديمية، مع التدريب اللاحق بالتعلم التعزيزي وتحليل شامل لمتطلبات الموارد."
 date: 2025-07-04
-categories:
-  - owm
 tags:
   - polaris
   - open-source-ai
@@ -25,6 +23,8 @@ toc_label: "جدول المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/owm/polaris-open-source-ai-revolution-guide/"
 lang: ar
 published: false
+categories:
+  - owm
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة

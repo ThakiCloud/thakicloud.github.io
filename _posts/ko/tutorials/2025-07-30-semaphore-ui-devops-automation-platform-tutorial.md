@@ -5,8 +5,6 @@ seo_title: "Semaphore UI DevOps 자동화 플랫폼 튜토리얼 macOS - Thaki C
 seo_description: "Semaphore UI로 Ansible, Terraform, OpenTofu 등 DevOps 도구를 웹 인터페이스로 관리하는 방법. Docker 설치, 프로젝트 설정, 작업 템플릿 생성부터 스케줄링까지 완전 가이드"
 date: 2025-07-30
 last_modified_at: 2025-07-30
-categories:
-  - tutorials
 tags:
   - Semaphore-UI
   - DevOps
@@ -25,6 +23,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/semaphore-ui-devops-automation-platform-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -5,9 +5,6 @@ date: 2025-06-16
 lang: en
 permalink: /en/news/chinese-ai-human-cognition-breakthrough/
 canonical_url: "https://thakicloud.github.io/en/news/chinese-ai-human-cognition-breakthrough/"
-categories:
-  - news
-  - research
 tags:
   - ai-cognition
   - chinese-research
@@ -18,6 +15,9 @@ author_profile: true
 toc: true
 toc_label: "AI Cognitive Breakthrough"
 published: false
+categories:
+  - news
+  - research
 ---
 
 ## Research Overview

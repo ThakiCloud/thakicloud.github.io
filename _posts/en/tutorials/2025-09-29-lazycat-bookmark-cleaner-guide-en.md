@@ -4,8 +4,6 @@ excerpt: "Learn how to intelligently organize and manage your browser bookmarks 
 seo_title: "LazyCat Bookmark Cleaner Automated Bookmark Management Guide - Thaki Cloud"
 seo_description: "Complete guide to using LazyCat Bookmark Cleaner for smart browser bookmark organization. Learn duplicate removal, invalid link cleanup, and bookmark profile generation with this comprehensive tutorial."
 date: 2025-09-29
-categories:
-  - tutorials
 tags:
   - bookmark-management
   - browser-extension
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/en/tutorials/lazycat-bookmark-clean
 lang: en
 permalink: /en/tutorials/lazycat-bookmark-cleaner-guide/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated reading time**: 8 minutes

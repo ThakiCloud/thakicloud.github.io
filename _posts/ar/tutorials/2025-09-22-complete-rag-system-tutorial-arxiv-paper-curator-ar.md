@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية بناء نظام RAG (الجيل المعزز ب�
 seo_title: "دليل نظام RAG: بناء ذكاء اصطناعي للإنتاج باستخدام أوراق ArXiv - Thaki Cloud"
 seo_description: "دليل خطوة بخطوة لبناء نظام RAG كامل باستخدام ArXiv Paper Curator. تعلم جمع البيانات، OpenSearch، التضمينات، وتكامل النماذج اللغوية الكبيرة لتطبيقات الذكاء الاصطناعي الإنتاجية."
 date: 2025-09-22
-categories:
-  - tutorials
 tags:
   - RAG
   - الذكاء الاصطناعي
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

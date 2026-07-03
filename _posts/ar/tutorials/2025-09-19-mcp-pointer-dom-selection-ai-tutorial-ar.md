@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام وظيفة Option+Click في MCP Po
 seo_title: "دليل MCP Pointer: اختيار عناصر DOM لأدوات الذكاء الاصطناعي - Thaki Cloud"
 seo_description: "أتقن إضافة Chrome وخادم MCP في MCP Pointer لتمكين مساعدي الذكاء الاصطناعي مثل Claude Code و Cursor من تحليل عناصر DOM في المتصفح باستخدام Option+Click."
 date: 2025-09-19
-categories:
-  - tutorials
 tags:
   - mcp-pointer
   - dom-selection
@@ -22,6 +20,8 @@ lang: ar
 permalink: /ar/tutorials/mcp-pointer-dom-selection-ai-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-pointer-dom-selection-ai-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

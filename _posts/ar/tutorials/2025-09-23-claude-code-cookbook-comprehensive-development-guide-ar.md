@@ -4,8 +4,6 @@ excerpt: "دليل شامل لاستخدام Claude Code Cookbook بأكثر م�
 seo_title: "دليل Claude Code Cookbook الشامل - تعليم أدوات التطوير بالذكاء الاصطناعي"
 seo_description: "إتقان Claude Code Cookbook: أكثر من 60 أمراً لأتمتة PR ومراجعة الكود والتعديل والعوامل متعددة الأدوار وخطافات التطوير لثورة في سير العمل بالذكاء الاصطناعي."
 date: 2025-09-23
-categories:
-  - tutorials
 tags:
   - claude-code
   - أدوات-التطوير
@@ -21,6 +19,8 @@ lang: ar
 permalink: /ar/tutorials/claude-code-cookbook-comprehensive-guide/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/claude-code-cookbook-comprehensive-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 18 دقيقة

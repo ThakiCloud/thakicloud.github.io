@@ -4,8 +4,6 @@ excerpt: "Comprehensive analysis of Anthropic's Claude Code SDK demo featuring a
 seo_title: "Claude Code SDK Email Agent Analysis - AI Email Assistant Tutorial"
 seo_description: "In-depth review of Anthropic's Claude Code SDK email agent demo: IMAP integration, AI-powered search, WebSocket streaming, and SQLite caching implementation."
 date: 2025-09-22
-categories:
-  - agentops
 tags:
   - claude-code-sdk
   - email-automation
@@ -21,6 +19,9 @@ toc_label: "Table of Contents"
 lang: en
 permalink: /en/agentops/claude-code-sdk-email-agent-analysis/
 canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-sdk-email-agent-analysis/"
+categories:
+  - agentops
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

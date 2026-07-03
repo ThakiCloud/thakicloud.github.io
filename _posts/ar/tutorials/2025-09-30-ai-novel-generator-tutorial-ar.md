@@ -4,8 +4,6 @@ excerpt: "تعلم كيفية استخدام أدوات الذكاء الاصط�
 seo_title: "دليل مولد الروايات بالذكاء الاصطناعي - كتابة الروايات التلقائية"
 seo_description: "أتقن إنشاء الروايات بالذكاء الاصطناعي مع دليلنا الشامل. تعلم الإعداد والتكوين وأفضل الممارسات لإنشاء روايات طويلة ومتسقة باستخدام تقنية الذكاء الاصطناعي."
 date: 2025-09-30
-categories:
-  - tutorials
 tags:
   - الذكاء الاصطناعي
   - إنشاء الروايات
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-novel-generator-tut
 lang: ar
 permalink: /ar/tutorials/ai-novel-generator-tutorial-ar/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

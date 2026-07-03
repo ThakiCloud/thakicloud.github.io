@@ -5,8 +5,6 @@ seo_title: "Ollama Qwen AI 커밋 메시지 자동화: macOS Cursor 연동 가�
 seo_description: "macOS Ollama Qwen3 모델로 AI 커밋 메시지 자동 생성. Cursor IDE 완벽 연동, 로컬 프라이버시 보호, API 비용 없이 개발 생산성 향상하는 실전 가이드."
 date: 2025-07-17
 last_modified_at: 2025-07-17
-categories:
-  - tutorials
 tags:
   - ollama
   - qwen3
@@ -27,6 +25,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/ollama-qwen-ai-commit-message-cursor-integration-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

@@ -4,8 +4,6 @@ excerpt: "AutoScraper는 머신러닝을 활용해 웹 스크래핑 규칙을 �
 seo_title: "AutoScraper Python 웹 스크래핑 자동화 튜토리얼 - Thaki Cloud"
 seo_description: "AutoScraper를 사용한 Python 웹 스크래핑 자동화 가이드. 머신러닝 기반 스크래핑 규칙 학습과 실전 예제를 포함한 완전한 튜토리얼입니다."
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - python
   - web-scraping
@@ -17,6 +15,8 @@ toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.github.io/ko/tutorials/autoscraper-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

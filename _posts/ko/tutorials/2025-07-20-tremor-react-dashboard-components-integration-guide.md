@@ -5,9 +5,6 @@ seo_title: "Tremor React 대시보드 컴포넌트 완벽 가이드 - 통합 전
 seo_description: "Tremor React 컴포넌트 라이브러리를 활용한 모던 대시보드 구축 방법과 서로 다른 컴포넌트를 자연스럽게 통합하는 실무 전략을 상세히 설명합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20
-categories:
-  - tutorials
-  - dev
 tags:
   - Tremor
   - React
@@ -25,6 +22,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/tremor-react-dashboard-components-integration-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

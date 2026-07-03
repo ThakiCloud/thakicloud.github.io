@@ -4,8 +4,6 @@ excerpt: "A comprehensive analysis of aiXiv, the groundbreaking platform that in
 seo_title: "aiXiv Platform Analysis: AI-Native Scientific Publishing Revolution - Thaki Cloud"
 seo_description: "In-depth research analysis of aiXiv's multi-agent architecture, structured peer review systems, and iterative improvement pipelines that transform scientific publishing for AI-generated research content."
 date: 2025-08-26
-categories:
-  - research
 tags:
   - ai-scientists
   - scientific-publishing
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/research/aixiv-next-generation-open-access-platform-ai-scientists-analysis/
 canonical_url: "https://thakicloud.github.io/en/research/aixiv-next-generation-open-access-platform-ai-scientists-analysis/"
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

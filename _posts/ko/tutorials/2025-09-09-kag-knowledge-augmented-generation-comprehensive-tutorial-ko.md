@@ -4,8 +4,6 @@ excerpt: "전문 도메인 지식 베이스에서 논리적 추론과 검색을 
 seo_title: "KAG 튜토리얼: 지식 증강 생성 프레임워크 가이드 - Thaki Cloud"
 seo_description: "KAG 프레임워크의 특징, 아키텍처, 설치 및 구현 방법을 학습하세요. 지식 그래프 추론과 Q&A 솔루션을 위한 완전한 튜토리얼입니다."
 date: 2025-09-09
-categories:
-  - tutorials
 tags:
   - 지식그래프
   - 대형언어모델
@@ -19,6 +17,8 @@ lang: ko
 permalink: /ko/tutorials/kag-knowledge-augmented-generation-tutorial/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/kag-knowledge-augmented-generation-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

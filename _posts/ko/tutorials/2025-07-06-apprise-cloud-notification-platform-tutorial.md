@@ -5,8 +5,6 @@ seo_title: "Apprise 클라우드 알림 플랫폼 Python BSD 라이센스 완벽
 seo_description: "Python 기반 Apprise 프레임워크로 클라우드 기업의 인프라 모니터링, CI/CD, 보안 알림 시스템을 구축하는 방법을 BSD 라이센스 분석과 함께 상세히 알아봅니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06
-categories:
-  - tutorials
 tags:
   - apprise
   - notification
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/apprise-cloud-notification-platform-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

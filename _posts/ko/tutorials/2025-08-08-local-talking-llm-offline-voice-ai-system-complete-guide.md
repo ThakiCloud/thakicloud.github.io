@@ -5,9 +5,6 @@ seo_title: "Local Talking LLM 오프라인 음성 AI 시스템 구축 완전 가
 seo_description: "Whisper, LLaMA, TTS를 활용한 완전 오프라인 음성 AI 시스템 구축 방법. 데이터 프라이버시를 보장하면서 로컬에서 동작하는 AI 어시스턴트 개발 튜토리얼을 제공합니다."
 date: 2025-08-08
 last_modified_at: 2025-08-08
-categories:
-  - tutorials
-  - llmops
 tags:
   - local-llm
   - whisper
@@ -28,6 +25,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/local-talking-llm-offline-voice-ai-system-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 18분

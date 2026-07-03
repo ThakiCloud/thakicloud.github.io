@@ -4,8 +4,6 @@ excerpt: "자연어 명령으로 컴퓨터 작업을 자동화하는 오픈소�
 seo_title: "Bytebot AI 데스크톱 에이전트 설정 가이드 - 완전 튜토리얼 2025"
 seo_description: "Bytebot AI 데스크톱 에이전트 완전 설정 가이드. 설치, 구성, 자연어 명령을 통한 컴퓨터 작업 자동화 방법을 상세히 설명합니다."
 date: 2025-09-08
-categories:
-  - tutorials
 tags:
   - bytebot
   - ai-agent
@@ -21,6 +19,8 @@ lang: ko
 permalink: /ko/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

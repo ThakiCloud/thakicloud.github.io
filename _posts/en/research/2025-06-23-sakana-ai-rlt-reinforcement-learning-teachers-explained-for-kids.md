@@ -2,9 +2,6 @@
 title: "Sakana AI's RLT: Computers Learn How to Teach"
 excerpt: "While earlier AI learned how to solve problems, the new RLT method learns how to teach, enabling even smaller and faster AI to achieve impressive results, much like a great teacher."
 date: 2025-06-23
-categories:
-  - research
-  - tutorials
 tags:
   - reinforcement-learning
   - sakana-ai
@@ -17,6 +14,9 @@ toc_label: "RLT Guide"
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/sakana-ai-rlt-reinforcement-learning-teachers-explained-for-kids/"
 published: false
+categories:
+  - research
+  - tutorials
 ---
 
 ## Introduction

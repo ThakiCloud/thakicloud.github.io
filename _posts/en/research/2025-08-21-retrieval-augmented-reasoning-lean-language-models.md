@@ -6,8 +6,6 @@ seo_description: "The Alan Turing Institute's latest research on integrating rea
 date: 2025-08-21
 last_modified_at: 2025-08-21
 lang: en
-categories:
-  - research
 tags:
   - RAG
   - lean-language-models
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/retrieval-augmented-reasoning-lean-language-models/"
 reading_time: true
 published: false
+categories:
+  - research
 ---
 
 ⏱️ **Estimated reading time**: 15 min

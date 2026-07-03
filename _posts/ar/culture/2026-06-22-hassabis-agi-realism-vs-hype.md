@@ -6,8 +6,6 @@ seo_description: "لماذا يجب على منظمات الذكاء الاصط�
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-categories:
-  - culture
 tags:
   - ديميس-هاسابيس
   - الذكاء-الاصطناعي-العام
@@ -20,6 +18,8 @@ toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/hassabis-agi-realism-vs-hype/
 canonical_url: "https://thakicloud.github.io/ar/culture/hassabis-agi-realism-vs-hype/"
+categories:
+  - culture
 ---
 
 ## "حل مسائل إيردوش لا يعني بلوغ الذكاء الاصطناعي العام"

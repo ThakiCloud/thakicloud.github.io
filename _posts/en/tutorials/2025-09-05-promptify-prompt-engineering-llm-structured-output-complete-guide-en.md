@@ -4,8 +4,6 @@ excerpt: "Master prompt engineering and get structured outputs from GPT, PaLM, a
 seo_title: "Promptify Tutorial: LLM Prompt Engineering for Structured Output - Complete Guide"
 seo_description: "Learn how to use Promptify for prompt engineering with GPT and other LLMs. Get structured outputs for NER, classification, QA, and more NLP tasks without training data."
 date: 2025-09-05
-categories:
-  - tutorials
 tags:
   - prompt-engineering
   - llm
@@ -21,6 +19,8 @@ lang: en
 permalink: /en/tutorials/promptify-prompt-engineering-guide/
 canonical_url: "https://thakicloud.github.io/en/tutorials/promptify-prompt-engineering-guide/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

@@ -4,8 +4,6 @@ excerpt: "Comprehensive guide to AWS Labs' Agent Squad framework - from basic se
 seo_title: "AWS Agent Squad Tutorial: Multi-Agent Orchestration Framework Guide"
 seo_description: "Learn AWS Agent Squad framework for multi-agent AI orchestration. Complete tutorial with Python/TypeScript examples, Bedrock integration, and real-world implementations."
 date: 2025-09-07
-categories:
-  - tutorials
 tags:
   - aws
   - agent-squad
@@ -22,6 +20,8 @@ lang: en
 permalink: /en/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/aws-agent-squad-multi-agent-orchestration-framework-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

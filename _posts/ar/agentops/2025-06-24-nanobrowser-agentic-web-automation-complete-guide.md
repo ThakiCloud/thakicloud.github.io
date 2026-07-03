@@ -3,10 +3,6 @@ title: "الدليل الشامل لـ Nanobrowser: أتمتة الويب الم
 excerpt: "نظرة تفصيلية على تطبيق أتمتة الويب متعددة الوكلاء باستخدام إضافة Chrome مفتوحة المصدر Nanobrowser، مع حالات الاستخدام العملية واستراتيجيات النشر."
 date: 2025-06-24
 last_modified_at: 2025-06-24
-categories: 
-  - agentops
-  - tutorials
-  - llmops
 tags: 
   - nanobrowser
   - web-automation
@@ -21,6 +17,10 @@ toc_label: "جدول المحتويات"
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/agentops/nanobrowser-agentic-web-automation-complete-guide/"
 published: false
+categories:
+  - agentops
+  - tutorials
+  - llmops
 ---
 
 ## نظرة عامة

@@ -5,8 +5,6 @@ seo_title: "free-claude-code Self-Hosted Routing - Claude Code Multi-Provider Pr
 seo_description: "A hands-on record of routing Claude Code to self-hosted models such as Ollama and vLLM using free-claude-code. Covers the Anthropic-compatible FastAPI proxy architecture, local Ollama latency measurements, and the deployment risk from a hard Python 3.14 requirement, analyzed from the perspective of ThakiCloud's Kubernetes environment."
 date: 2026-06-24
 last_modified_at: 2026-06-24
-categories:
-  - llmops
 tags:
   - free-claude-code
   - Claude Code
@@ -21,6 +19,8 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 canonical_url: "https://thakicloud.github.io/en/llmops/free-claude-code-router/"
+categories:
+  - llmops
 ---
 
 ## Overview

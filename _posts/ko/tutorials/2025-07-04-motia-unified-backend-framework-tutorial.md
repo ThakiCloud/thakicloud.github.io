@@ -5,9 +5,6 @@ seo_title: "Motia 프레임워크 완벽 가이드 - 통합 백엔드 개발 - T
 seo_description: "Motia 프레임워크로 API, 이벤트, AI 에이전트를 통합 구축하는 방법을 배우고, GitHub Agent와 Gmail Manager 실제 예시를 통해 실무 적용 가이드를 제공합니다."
 date: 2025-07-04
 last_modified_at: 2025-07-04
-categories:
-  - tutorials
-  - dev
 tags:
   - Motia
   - 백엔드프레임워크
@@ -27,6 +24,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/motia-unified-backend-framework-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - dev
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

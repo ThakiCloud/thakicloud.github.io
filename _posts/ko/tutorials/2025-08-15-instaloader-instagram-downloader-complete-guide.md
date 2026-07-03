@@ -5,8 +5,6 @@ seo_title: "Instaloader Instagram 다운로더 완전 가이드 - Python 자동�
 seo_description: "Instaloader로 Instagram 사진, 동영상, 스토리, 메타데이터를 자동 다운로드하는 방법. 설치부터 고급 활용까지 완전한 튜토리얼 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15
-categories:
-  - tutorials
 tags:
   - instaloader
   - instagram
@@ -26,6 +24,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/instaloader-instagram-downloader-complete-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 16분

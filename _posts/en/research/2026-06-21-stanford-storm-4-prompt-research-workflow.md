@@ -5,8 +5,6 @@ seo_title: "Stanford STORM Research Automation Workflow Analysis - Thaki Cloud"
 seo_description: "How to implement the STORM (NAACL 2024) knowledge-curation method as a 4-step prompt workflow, and how it applies to a multi-agent research pipeline"
 date: 2026-06-21
 last_modified_at: 2026-06-21
-categories:
-  - research
 tags:
   - storm
   - research-automation
@@ -22,6 +20,8 @@ toc_sticky: true
 lang: en
 canonical_url: "https://thakicloud.github.io/en/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
+categories:
+  - research
 ---
 
 Research is time-consuming work. To dig into a topic properly, you have to formulate questions, gather material from several angles, build a structure, and then write a result with citations attached. STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking), released by Stanford's OVAL Lab, is a knowledge-curation system that automates this process with an LLM. It was presented at NAACL 2024, and its goal is to generate Wikipedia-grade long-form articles, complete with citations, from scratch.

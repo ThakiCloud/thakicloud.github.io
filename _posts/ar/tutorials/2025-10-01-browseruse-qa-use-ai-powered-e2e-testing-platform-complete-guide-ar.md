@@ -4,8 +4,6 @@ excerpt: "دليل شامل لمنصة اختبار تطبيقات الويب ا
 seo_title: "دليل BrowserUse QA-Use لمنصة اختبار E2E بالذكاء الاصطناعي - Thaki Cloud"
 seo_description: "تعلم كيفية أتمتة اختبار تطبيقات الويب بوكلاء BrowserUse AI. دليل شامل يغطي التثبيت بـ Docker وإنشاء مجموعات الاختبار والجدولة"
 date: 2025-10-01
-categories:
-  - tutorials
 tags:
   - BrowserUse
   - AI Testing
@@ -19,6 +17,8 @@ canonical_url: "https://thakicloud.github.io/ar/tutorials/browseruse-qa-use-tuto
 lang: ar
 permalink: /ar/tutorials/browseruse-qa-use-tutorial/
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **الوقت المقدر للقراءة**: 15 دقيقة

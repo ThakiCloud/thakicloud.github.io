@@ -5,9 +5,6 @@ seo_title: "Google Opal AI 미니 앱 빌더 튜토리얼 - 코드 없이 AI 워
 seo_description: "Google Opal로 AI 미니 앱을 만드는 완벽 가이드. 자연어로 프롬프트 체이닝하고, 비주얼 에디터로 워크플로우를 구축하며, AI 앱을 공유하는 방법을 상세히 설명합니다."
 date: 2025-07-25
 last_modified_at: 2025-07-25
-categories:
-  - tutorials
-  - llmops
 tags:
   - Google Labs
   - Opal
@@ -26,6 +23,9 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/google-opal-ai-mini-app-builder-tutorial/"
 reading_time: true
 published: false
+categories:
+  - tutorials
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 12분

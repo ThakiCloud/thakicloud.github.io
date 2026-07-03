@@ -2,9 +2,6 @@
 title: "LM-Evaluation-Harness 완전 가이드: 언어 모델 평가의 표준 프레임워크"
 excerpt: "EleutherAI의 LM-Evaluation-Harness로 GPT, Claude, Llama 등 다양한 언어 모델을 체계적으로 평가하는 방법을 단계별로 알아봅니다."
 date: 2025-06-14
-categories: 
-  - llmops
-  - dev
 tags: 
   - lm-evaluation-harness
   - language-model-evaluation
@@ -17,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - llmops
+  - dev
 ---
 
 ## 소개

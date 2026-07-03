@@ -4,8 +4,6 @@ excerpt: "اكتشف RepomMirror، الأداة المبتكرة التي تؤت
 seo_title: "أداة RepomMirror لتخزين Git مؤقتاً - تحسين النطاق الترددي للمطورين"
 seo_description: "تعرف على RepomMirror، حل قوي لتخزين مستودعات Git مؤقتاً ينشئ مرايا محلية لتحسين استخدام النطاق الترددي وتسريع عمليات repo لفرق التطوير."
 date: 2025-08-26
-categories:
-  - news
 tags:
   - git
   - إدارة-المستودعات
@@ -19,6 +17,8 @@ lang: ar
 permalink: /ar/news/repomirror-git-caching-revolutionary-tool/
 canonical_url: "https://thakicloud.github.io/ar/news/repomirror-git-caching-revolutionary-tool/"
 published: false
+categories:
+  - news
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق

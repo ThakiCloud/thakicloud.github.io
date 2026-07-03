@@ -5,8 +5,6 @@ seo_title: "Fable 5 구독 종료와 LLM 소싱 전략 - Thaki Cloud"
 seo_description: "Anthropic Fable 5의 구독 무료 종료(6월 22일)와 종량제 전환이 의미하는 것, 프런티어 모델 용량 경제학과 온프레미스 소버린 AI 헤지 전략을 ThakiCloud가 분석합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22
-categories:
-  - tutorials
 tags:
   - fable-5
   - llm-sourcing
@@ -24,6 +22,8 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/tutorials/fable-5-subscription-shift-sovereign-ai/"
 reading_time: true
+categories:
+  - tutorials
 ---
 
 ![순간적으로 흩어지는 퍼블릭 클라우드와 암반에 뿌리내린 프라이빗 인프라가 대비되는 추상 이미지](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.png)

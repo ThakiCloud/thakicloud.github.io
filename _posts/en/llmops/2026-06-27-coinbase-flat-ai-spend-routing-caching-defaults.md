@@ -5,8 +5,6 @@ seo_title: "Coinbase's AI Cost Strategy: Routing, Caching, Defaults - Thaki Clou
 seo_description: "Coinbase cut AI spend nearly in half even as token usage grew exponentially. The keys were model routing, aggressive caching, and open-weight defaults. We analyze the data that 91% of employees never hit caps and the LLM gateway strategy, then map it to multi-tenant low-cost serving on ThakiCloud's ai-platform."
 date: 2026-06-27
 last_modified_at: 2026-06-27
-categories:
-  - llmops
 tags:
   - llmops
   - model-routing
@@ -19,6 +17,8 @@ toc: true
 toc_label: "Contents"
 toc_icon: "coins"
 canonical_url: "https://thakicloud.github.io/en/llmops/coinbase-flat-ai-spend-routing-caching-defaults/"
+categories:
+  - llmops
 ---
 
 ## Overview

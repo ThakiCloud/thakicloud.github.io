@@ -4,8 +4,6 @@ excerpt: "NVIDIA GPU 아키텍처부터 네트워킹, 대규모 언어 모델 �
 seo_title: "GPU 스케일링 가이드: H100/B200 아키텍처와 LLM 훈련 최적화 - Thaki Cloud"
 seo_description: "Google DeepMind의 GPU 스케일링 가이드를 바탕으로 NVIDIA H100, B200의 하드웨어 구조부터 네트워킹, 대규모 언어 모델 병렬 처리까지 심층 분석"
 date: 2025-08-26
-categories:
-  - llmops
 tags:
   - GPU스케일링
   - NVIDIA-H100
@@ -22,6 +20,8 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/gpu-scaling-comprehensive
 lang: ko
 permalink: /ko/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/
 published: false
+categories:
+  - llmops
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

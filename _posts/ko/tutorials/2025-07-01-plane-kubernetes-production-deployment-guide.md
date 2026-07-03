@@ -5,8 +5,6 @@ seo_title: "Plane 쿠버네티스 운영 완전 가이드 - OrbStack Production 
 seo_description: "Plane 쿠버네티스 배포 가이드. macOS OrbStack 테스트부터 AWS EKS GCP GKE 운영까지. Helm Monitoring CI/CD 보안 설정 완전 정복"
 date: 2025-07-01
 last_modified_at: 2025-07-01
-categories:
-  - tutorials
 tags:
   - plane
   - kubernetes
@@ -28,6 +26,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/tutorials/plane-kubernetes-production-deployment-guide/"
 reading_time: true
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 25분

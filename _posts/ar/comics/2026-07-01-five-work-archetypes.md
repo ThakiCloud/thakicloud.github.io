@@ -2,8 +2,6 @@
 title: "مستقبل العمل: خمسة أنماط، لا مسميات وظيفية"
 excerpt: "تذوب الأدوار في المُنمذِج والبنّاء والمُنظِّف والمُنمّي والصائن، ولا أحد يريد النمط السادس."
 date: 2026-07-01
-categories:
-  - comics
 tags:
   - future-of-work
   - engineering-roles
@@ -14,7 +12,8 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/five-work-archetypes/strip.png
 canonical_url: "https://thakicloud.github.io/ar/comics/five-work-archetypes/"
-published: false
+categories:
+  - comics
 ---
 
 يُفترض أن مستقبل العمل يذيب المسميات الوظيفية في خمسة أنماط. المُنمذِج (prototyper) يطرح أفكاراً جديدة بسرعة. البنّاء (builder) يحوّل تلك الأفكار إلى منتجات حقيقية جاهزة للإطلاق. المُنظِّف (sweeper) ينظّف الشيفرة وواجهة المستخدم ويبسّط الأنظمة. المُنمّي (grower) يطوّر منتجاً مُطلَقاً نحو ملاءمة المنتج للسوق. الصائن (maintainer) يبقي النظام الناضج مستقراً وآمناً. الجميع يريد هذه الخمسة. لا أحد يرفع يده للسادس، ذلك العمل غير اللامع المتكرر الذي يبقي الأضواء مشتعلة. يجسّد Paxis وMetis ما يحدث لذلك الكرسي الفارغ.

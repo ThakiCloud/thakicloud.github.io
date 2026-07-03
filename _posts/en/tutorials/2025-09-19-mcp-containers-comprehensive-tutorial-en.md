@@ -4,8 +4,6 @@ excerpt: "Learn how to leverage MCP Containers for seamless AI agent development
 seo_title: "MCP Containers Tutorial: Docker-based AI Agent Development Guide"
 seo_description: "Complete tutorial on using MCP Containers for AI agent development. Learn to integrate hundreds of MCP servers with Docker for seamless AI workflows."
 date: 2025-09-19
-categories:
-  - tutorials
 tags:
   - mcp
   - docker
@@ -20,6 +18,8 @@ lang: en
 permalink: /en/tutorials/mcp-containers-comprehensive-tutorial/
 canonical_url: "https://thakicloud.github.io/en/tutorials/mcp-containers-comprehensive-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

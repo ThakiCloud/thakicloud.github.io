@@ -7,8 +7,6 @@ date: 2025-10-02
 lang: ko
 permalink: /ko/tutorials/deep-chat-ai-chatbot-complete-guide/
 canonical_url: "https://thakicloud.github.io/ko/tutorials/deep-chat-ai-chatbot-complete-guide/"
-categories:
-  - tutorials
 tags:
   - deep-chat
   - ai-챗봇
@@ -22,6 +20,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **예상 읽기 시간**: 15분

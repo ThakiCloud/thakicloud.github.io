@@ -1,8 +1,6 @@
 ---
 title: "PaperCoder 튜토리얼: 머신러닝 논문을 즉시 실행 코드 리포지토리로 변환하기"
 date: 2025-05-28
-categories: 
-  - tutorials
 tags: 
   - Machine Learning
   - Code Generation
@@ -13,6 +11,8 @@ author_profile: true
 toc: true
 toc_label: "목차"
 published: false
+categories:
+  - tutorials
 ---
 
 머신러닝 논문은 매주 쏟아지지만, 실제 구현 코드가 공개되지 않아 **재현‧확장**이 어려운 경우가 많습니다.

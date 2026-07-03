@@ -4,8 +4,6 @@ excerpt: "إتقان نظام إدارة مشاريع Claude Code الثوري �
 seo_title: "دليل CCPM: إدارة مشاريع Claude Code الكاملة - Thaki Cloud"
 seo_description: "تعلم CCMP (Claude Code Project Management) - نظام مختبر للتطوير المُوجّه بالمواصفات باستخدام GitHub Issues، Git worktrees، ووكلاء AI متوازيين."
 date: 2025-08-25
-categories:
-  - tutorials
 tags:
   - claude-code
   - إدارة-المشاريع
@@ -20,6 +18,8 @@ lang: ar
 permalink: /ar/tutorials/ccpm-claude-code-project-management-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/ccpm-claude-code-project-management-tutorial/"
 published: false
+categories:
+  - tutorials
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة
