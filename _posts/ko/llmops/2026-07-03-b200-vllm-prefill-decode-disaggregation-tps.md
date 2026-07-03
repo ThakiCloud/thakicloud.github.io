@@ -1,6 +1,6 @@
 ---
 title: "B200 두 장으로 vLLM Prefill/Decode를 분리하면 정말 빨라질까"
-excerpt: "NVIDIA B200 두 장에서 Qwen3.6-27B-NVFP4와 gemma-4-26B-A4B를 대상으로 텐서병렬, 데이터병렬, Prefill/Decode 분리(1P1D)의 초당 생성 토큰을 실제로 측정했습니다. 결론부터 말하면, 두 장뿐일 때 총 처리량의 승자는 분리가 아니라 데이터병렬이었고 분리는 지연을 고르게 만드는 쪽에서 값을 했습니다."
+excerpt: "NVIDIA B200 두 장에서 Qwen3.6-27B-NVFP4와 gemma-4-26B-A4B를 대상으로 텐서병렬, 데이터병렬, Prefill/Decode 분리(1P1D)의 초당 생성 토큰을 실제로 측정했습니다. 두 장뿐일 때 총 처리량의 승자는 분리가 아니라 데이터병렬이었고, 이 결과는 DistServe·Mooncake·DeepSeek·NVIDIA Dynamo 같은 대규모 사례와 모순되지 않습니다. 언제 분리하고 언제 그냥 DP/TP인지, 근거와 함께 판정 가이드를 정리합니다."
 seo_title: "B200 2-GPU vLLM Prefill/Decode 분리 TPS 실측 - Qwen3.6-NVFP4 / gemma-4-FP8 | Thaki Cloud"
 seo_description: "NVIDIA B200 2장에서 vLLM 0.24로 텐서병렬(TP=2), 데이터병렬(DP=2), Prefill/Decode 분리(1P1D, NIXL)의 TPS와 TPOT를 실측했습니다. NVFP4와 하이브리드 어텐션, MoE 서빙의 실전 gotcha까지 ThakiCloud GPU 서빙 운영 관점으로 정리합니다."
 date: 2026-07-03
@@ -30,7 +30,7 @@ categories:
 
 "GPU가 두 장 있으니 Prefill과 Decode를 따로 태우면 더 빠르지 않을까"는 서빙을 만지는 사람이라면 한 번쯤 떠올리는 생각입니다. 저희도 그 가설을 실제 하드웨어에서 검증했습니다. NVIDIA B200 두 장 위에서 vLLM 0.24로 세 가지 배치를 같은 워크로드로 돌려 초당 생성 토큰(TPS)을 쟀습니다. 대상 모델은 NVIDIA가 공개한 `Qwen3.6-27B-NVFP4`와 RedHat이 공개한 `gemma-4-26B-A4B-it-FP8-Dynamic` 두 가지입니다.
 
-결론을 먼저 말씀드리면, 두 장뿐인 환경에서 총 처리량의 승자는 Prefill/Decode 분리가 아니었습니다. 분리는 오히려 총 TPS가 가장 낮았고, 대신 입력이 길고 출력이 짧은 트래픽에서 토큰 간 지연을 서너 배 낮추는 데서 값을 했습니다. 이 글은 그 수치와, 맨바닥 B200 박스를 실제로 돌게 만들기까지 부딪힌 벽들을 함께 정리합니다.
+결론을 먼저 말씀드리면, 두 장뿐인 환경에서 총 처리량의 승자는 Prefill/Decode 분리가 아니었습니다. 분리는 오히려 총 TPS가 가장 낮았고, 대신 입력이 길고 출력이 짧은 트래픽에서 토큰 간 지연을 서너 배 낮추는 데서 값을 했습니다. 그런데 이 결과는 NVIDIA나 중국 대규모 서빙 사례가 보고하는 큰 성능 향상과 모순되지 않습니다. 분리의 이득은 규모와 SLO에 달린 최적화이고, 우리는 그 곡선의 작은 끝을 잰 것이기 때문입니다. 그래서 이 글은 우리 실측 수치와 맨바닥 B200를 돌게 만든 과정에 더해, DistServe와 Splitwise, Mooncake, DeepSeek, NVIDIA Dynamo의 근거를 놓고 언제 분리하고 언제 그냥 데이터병렬이나 텐서병렬로 가야 하는지를 판정하는 가이드까지 함께 정리합니다.
 
 ## 왜 이 실험을 했나
 
@@ -110,6 +110,37 @@ vllm serve $MODEL --port 8200 --tensor-parallel-size 1 \
 
 gemma는 MoE 모델이라 서빙 스택이 dense 모델보다 까다로웠습니다. 텐서병렬과 분리는 정상 측정됐지만, 데이터병렬은 두 번 시도했는데 모두 vLLM 0.24의 MoE와 데이터병렬을 함께 쓰는 경로에서 기동에 실패했습니다. 첫 시도는 CUTLASS MoE 워밍업 단정에서, 배치 토큰 상한을 낮춘 두 번째 시도는 KV 캐시 메모리 프로파일링의 MoE 순전파에서 죽었습니다. 즉 이 버전에서 gemma를 데이터병렬로 띄우는 것은 현재 지원되지 않으며, 그 자체가 유의미한 발견입니다. MoE 모델은 데이터병렬 안정성이 dense 모델보다 낮습니다. 측정 가능한 두 구성만 비교하면, 총 TPS는 텐서병렬이 분리보다 높다는 패턴이 gemma에서도 그대로 유지됩니다. 그리고 분리의 Prefill TPOT가 8.7ms로 텐서병렬 40.9ms를 압도하는 점도 Qwen과 동일합니다.
 
+## 그래서 언제 분리하고, 언제 그냥 DP/TP인가
+
+여기서 자연스러운 의문이 생깁니다. NVIDIA 블로그도, 중국의 대규모 서빙 시스템들도 분리로 큰 성능 향상을 보고하는데, 왜 우리 결과는 반대일까요. 문헌을 실제로 뒤져 보면 답은 분명합니다. 우리 결과는 그들과 모순되지 않습니다. 분리의 이득은 규모와 SLO에 의존하는 최적화이지 보편적 승리가 아니며, 우리는 그 곡선의 작은 끝을 측정한 것뿐입니다.
+
+이 크로스오버를 정면으로 연구한 논문이 있습니다. "Beyond the Buzz: A Pragmatic Take on Inference Disaggregation"([arXiv:2506.05508](https://arxiv.org/html/2506.05508))는 분리의 이점이 prefill이 무거운 트래픽에서 가장 크고, 반대로 출력이 긴 decode 중심 트래픽이나 느슨한 SLO, 작은 모델에서는 오히려 같은 GPU에 얹는 편(piggybacking)이 앞선다고 정리합니다. 8B급 작은 모델은 매핑되는 GPU 수가 적어 prefill과 decode를 나눌 여지 자체가 좁고, KV 캐시도 HBM에 여유롭게 들어가 굳이 옮길 이유가 없다는 것입니다. 두 장에서 27B 모델을 돌린 우리 상황이 정확히 그 구간입니다.
+
+### 분리가 이기는 조건
+
+분리로 큰 이득을 보고한 사례들은 공통 조건을 공유합니다. 첫째, GPU가 매우 많습니다. UCSD Hao AI Lab의 회고는 분리가 필요해지는 지점을 수백에서 수천 장 규모로 설명합니다([회고 글](https://haoailab.com/blogs/distserve-retro/)). 둘째, 지연 SLO가 빡셉니다. 분리의 대표 논문 DistServe(OSDI 2024)의 핵심 지표는 원시 처리량이 아니라 SLO를 90% 넘게 지키면서 몇 배의 요청을 소화하느냐, 즉 goodput입니다. OPT 13B에서 175B를 NVLink로 묶은 A100 클러스터에서 훨씬 빡센 SLO를 견뎠다고 보고합니다([USENIX](https://www.usenix.org/conference/osdi24/presentation/zhong-yinmin), [arXiv:2401.09670](https://arxiv.org/abs/2401.09670)). 셋째, 대형 또는 MoE 모델을 비대칭 병렬로 태웁니다. DeepSeek-V3/R1 계열은 prefill을 좁은 전문가 병렬로, decode를 넓은 전문가 병렬로 나눠 텐서병렬 대비 decode 처리량이 크게 올랐다고 공개했는데, 그 설정이 96장 H100에 prefill 4노드와 decode 9노드를 나눠 얹는 규모였습니다([LMSYS](https://www.lmsys.org/blog/2025-05-05-large-scale-ep/)). 넷째, 긴 컨텍스트로 KV 캐시가 크고 재사용됩니다. Mooncake는 KV 캐시 중심 분리로 긴 컨텍스트에서 강점을 보고합니다([arXiv:2407.00079](https://arxiv.org/abs/2407.00079)). 다섯째, KV를 싸게 옮길 고속 패브릭이 있습니다. Splitwise는 InfiniBand로, Mooncake는 수백 Gbps급 RDMA로 KV를 넘겨 전송 부담을 낮췄습니다([Microsoft Research](https://www.microsoft.com/en-us/research/blog/splitwise-improves-gpu-usage-by-splitting-llm-inference-phases/)). NVIDIA가 Dynamo와 GB200 NVL72로 보고하는 큰 배수도 671B급 초대형 모델을 수십 장 규모 랙에서 돌린 결과입니다([NVIDIA](https://developer.nvidia.com/blog/introducing-nvidia-dynamo-a-low-latency-distributed-inference-framework-for-scaling-reasoning-ai-models/)).
+
+### DP/TP가 나은 조건
+
+반대로 아래 조건에서는 그냥 데이터병렬이나 텐서병렬로 복제하는 편이 낫습니다. 모델이 GPU 한두 장에 들어갈 만큼 작을 때, 출력이 길어 decode가 지배하는 트래픽일 때, 지연 SLO가 느슨할 때, GPU가 소수여서 prefill 풀과 decode 풀을 따로 놀지 않게 채울 여유가 없을 때, 개발이나 저QPS 일회성 워크로드라 분리 운영의 복잡도가 정당화되지 않을 때, 그리고 노드 간 대역폭이 NVLink나 InfiniBand급이 아니라 PCIe급이라 KV 전송이 오히려 병목이 될 때입니다. 우리 실험의 2×B200 환경은 이 목록의 여러 항목에 정확히 해당합니다. 27B 모델이 한 장에 들어가고, GPU가 둘뿐이며, 총 처리량이 목표였습니다.
+
+### 판정을 가르는 네 변수
+
+결국 선택은 네 가지 변수의 조합으로 결정됩니다. prefill과 decode의 연산 비율(prefill이 무거울수록 분리 유리), 지연 SLO의 빡셈(빡셀수록 분리 유리), GPU 규모(클수록 분리 유리), 그리고 KV 전송 비용 대비 절감량(캐시가 크고 재사용되거나 패브릭이 빠를수록 분리 유리)입니다. 어느 하나라도 반대쪽이면 분리의 이득은 줄고, 소수 GPU에 작은 모델에 느슨한 SLO가 겹치면 분리는 손해입니다.
+
+### 근거 요약
+
+| 시스템 | 보고된 이득 | 측정된 규모 | 출처 |
+|---|---|---|---|
+| DistServe (OSDI'24) | SLO 준수하 7.4배 요청 또는 12.6배 빡센 SLO | OPT 13B~175B, A100 NVLink 클러스터 | [arXiv:2401.09670](https://arxiv.org/abs/2401.09670) |
+| Splitwise (ISCA'24) | 1.4배 처리량(비용 20%↓) 또는 2.35배 처리량 | prompt/token 풀 분리, InfiniBand KV 전송 | [MS Research](https://www.microsoft.com/en-us/research/blog/splitwise-improves-gpu-usage-by-splitting-llm-inference-phases/) |
+| Mooncake (Kimi) | 시뮬레이션 SLO하 최대 525% 처리량 | 최대 800Gbps RDMA, 긴 컨텍스트 중심 | [arXiv:2407.00079](https://arxiv.org/abs/2407.00079) |
+| DeepSeek-V3/R1 | TP 대비 decode 처리량 5.2배 | 96장 H100, prefill 4노드 / decode 9~18노드 | [LMSYS](https://www.lmsys.org/blog/2025-05-05-large-scale-ep/) |
+| NVIDIA Dynamo + NVL72 | DeepSeek-R1에서 최대 수십 배 | 671B, GB200 NVL72 랙 | [NVIDIA](https://developer.nvidia.com/blog/introducing-nvidia-dynamo-a-low-latency-distributed-inference-framework-for-scaling-reasoning-ai-models/) |
+| Beyond the Buzz (크로스오버 연구) | 작은 모델·decode 중심·느슨한 SLO에서 이득 축소/역전 | 모델·규모 교차 체계 연구 | [arXiv:2506.05508](https://arxiv.org/html/2506.05508) |
+
+즉 분리는 "초대형 모델을 많은 GPU에 걸쳐 얹고, 빡센 지연 목표를 고속 패브릭 위에서 맞추는" 케이스의 기술입니다. 두 장에서 중형 모델을 돌리며 총 처리량을 노린다면 데이터병렬이 정답이고, 이것이 우리 실측과 문헌이 함께 가리키는 결론입니다. 위 배수들은 각 논문이 측정한 특정 규모의 값이며 일부(Mooncake 실측치, TensorRT-LLM 자체 수치)는 원문 간 표현이 엇갈려 그대로 인용하기 전 재확인이 필요합니다.
+
 ## 맨바닥 B200를 돌게 만들기까지
 
 수치만큼 값진 것이 "어떻게 돌게 만들었나"입니다. 이 호스트는 드라이버만 있고 추론 스택이 없는 상태였고, 아래 벽들을 차례로 넘었습니다.
@@ -124,9 +155,11 @@ gemma는 MoE 모델이라 서빙 스택이 dense 모델보다 까다로웠습니
 
 ## ThakiCloud 관점에서
 
-저희는 쿠버네티스 위에서 GPU 추론을 서빙하는 주권형 AI 플랫폼을 만듭니다. 이 실험이 저희 운영에 주는 시사점은 분명합니다. 소수 GPU 환경에서 "분리가 최신이니까 분리하자"는 유행 추종은 오히려 처리량을 깎을 수 있다는 것입니다. 분리는 GPU가 충분히 많아 Prefill 풀과 Decode 풀을 독립적으로 스케일할 수 있고, 서비스 목표가 낮고 고른 토큰 지연일 때 값을 합니다. 반대로 GPU가 빠듯하고 목표가 총 처리량이라면 데이터병렬 복제가 더 나은 기본값입니다.
+저희는 쿠버네티스 위에서 GPU 추론을 서빙하는 주권형 AI 플랫폼을 만듭니다. 이 실험이 저희 운영에 주는 시사점은 분명합니다. "분리가 최신이니까 분리하자"는 유행 추종은 소수 GPU 환경에서 오히려 처리량을 깎을 수 있고, 반대로 대규모 고QPS 서비스에서 분리를 안 쓰는 것은 지연 SLO를 놓치는 일이라는 것입니다. 정답은 하나로 고정되지 않고, 앞 절의 네 변수, 곧 GPU 규모와 모델 크기, 트래픽의 prefill과 decode 비율, 지연 SLO, 그리고 패브릭 속도가 함께 정합니다.
 
-그래서 저희 플랫폼은 서빙 토폴로지를 하나로 고정하지 않고, 워크로드 모양과 GPU 예산에 따라 데이터병렬과 분리 사이를 고를 수 있도록 설계 방향을 잡고 있습니다. 그리고 이런 결정을 감이 아니라 측정으로 내리기 위해, 이번처럼 실제 하드웨어에서 토폴로지별 수치를 뽑는 벤치 파이프라인 자체를 재사용 가능한 자산으로 관리합니다.
+문제는 그 크로스오버가 회사마다, 워크로드마다 다르다는 점입니다. 같은 27B 모델이라도 2장에서는 데이터병렬이 답이지만, 같은 모델을 수십 장에 얹어 긴 컨텍스트를 빡센 SLO로 서빙한다면 분리가 답이 됩니다. 그 경계를 감으로 찍으면 GPU 예산을 태우거나 SLO를 놓칩니다. 저희가 하는 일이 바로 이것입니다. 고객의 실제 하드웨어와 실제 트래픽 위에서 이번 글처럼 토폴로지별 수치를 뽑아 그 경계를 측정으로 찾고, 데이터병렬과 텐서병렬과 분리 사이를 워크로드에 맞춰 전환하는 서빙 플랫폼을 함께 구축합니다. 이번 실험에 쓴 벤치 파이프라인과 접속 자동화도 재사용 가능한 자산으로 관리해, 다음 모델과 다음 하드웨어에서 같은 판단을 며칠이 아니라 몇 시간에 내릴 수 있게 합니다.
+
+그래서 B200이든 H200이든 새 가속기를 도입하며 "우리 워크로드에는 어떤 토폴로지가 맞는가"를 정해야 하는 팀이라면, 저희와 함께 그 답을 측정으로 내리는 것이 가장 빠른 길이라고 생각합니다. 유행이 아니라 여러분의 숫자로 결정하도록 돕는 것, 그것이 ThakiCloud가 추론 최적화에서 제공하는 가치입니다.
 
 ## 결론과 한계
 
@@ -139,3 +172,10 @@ gemma는 MoE 모델이라 서빙 스택이 dense 모델보다 까다로웠습니
 - 모델 A: [nvidia/Qwen3.6-27B-NVFP4](https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4)
 - 모델 B: [RedHatAI/gemma-4-26B-A4B-it-FP8-Dynamic](https://huggingface.co/RedHatAI/gemma-4-26B-A4B-it-FP8-Dynamic)
 - vLLM 분산 서빙 문서: [docs.vllm.ai](https://docs.vllm.ai/en/latest/features/disagg_prefill.html)
+- DistServe (OSDI 2024): [arXiv:2401.09670](https://arxiv.org/abs/2401.09670)
+- Splitwise (ISCA 2024): [Microsoft Research](https://www.microsoft.com/en-us/research/blog/splitwise-improves-gpu-usage-by-splitting-llm-inference-phases/)
+- Mooncake (Kimi/Moonshot): [arXiv:2407.00079](https://arxiv.org/abs/2407.00079)
+- DeepSeek 대규모 전문가 병렬: [LMSYS 블로그](https://www.lmsys.org/blog/2025-05-05-large-scale-ep/)
+- NVIDIA Dynamo: [NVIDIA 개발자 블로그](https://developer.nvidia.com/blog/introducing-nvidia-dynamo-a-low-latency-distributed-inference-framework-for-scaling-reasoning-ai-models/)
+- 크로스오버 연구 (Beyond the Buzz): [arXiv:2506.05508](https://arxiv.org/html/2506.05508)
+- 분리 서빙 18개월 회고: [Hao AI Lab](https://haoailab.com/blogs/distserve-retro/)
