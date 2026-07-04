@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/own-your-stack-world-changing/strip.png
 canonical_url: "https://thakicloud.github.io/ar/comics/own-your-stack-world-changing/"
+published: false
 ---
 
 جلس أحد الرؤساء التنفيذيين لشركة صواريخ مع Y Combinator خمساً وأربعين دقيقة يشرح كيف تُبنى شركة تُغيّر العالم. نادراً ما يتغيّر جوهر الوصفة: فكّر من المبادئ الأولى، واحذف كل جزء لا تحتاجه، وامتلك ما يهمّ بدل أن تستأجره. يدوّن Paxis وMetis الملاحظات في قاع المحيط، حتى يتوقّفا عند القاعدة الأخيرة. فقد تبيّن أن "امتلك حزمتك" تعني في النهاية "اخرج من سحابة غيرك".

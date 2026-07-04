@@ -14,6 +14,7 @@ image: /assets/images/posts/comics/five-work-archetypes/strip.png
 canonical_url: "https://thakicloud.github.io/ar/comics/five-work-archetypes/"
 categories:
   - comics
+published: false
 ---
 
 يُفترض أن مستقبل العمل يذيب المسميات الوظيفية في خمسة أنماط. المُنمذِج (prototyper) يطرح أفكاراً جديدة بسرعة. البنّاء (builder) يحوّل تلك الأفكار إلى منتجات حقيقية جاهزة للإطلاق. المُنظِّف (sweeper) ينظّف الشيفرة وواجهة المستخدم ويبسّط الأنظمة. المُنمّي (grower) يطوّر منتجاً مُطلَقاً نحو ملاءمة المنتج للسوق. الصائن (maintainer) يبقي النظام الناضج مستقراً وآمناً. الجميع يريد هذه الخمسة. لا أحد يرفع يده للسادس، ذلك العمل غير اللامع المتكرر الذي يبقي الأضواء مشتعلة. يجسّد Paxis وMetis ما يحدث لذلك الكرسي الفارغ.
