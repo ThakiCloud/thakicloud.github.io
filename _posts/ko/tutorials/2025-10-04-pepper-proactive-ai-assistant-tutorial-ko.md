@@ -16,9 +16,10 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/pepper-proactive-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-assistant-tutorial/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-assistant-tutorial-ko/"
 categories:
   - tutorials
+published: false
 ---
 
 ![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)
@@ -722,4 +723,15 @@ Pepper는 **Berkeley Sky Computing Lab**의 일환으로 **Agentica 팀**이 개
 
 즐거운 개발 되세요! 🚀
 
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.png)
+
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.png)
+
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.png)
+
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.png)
 

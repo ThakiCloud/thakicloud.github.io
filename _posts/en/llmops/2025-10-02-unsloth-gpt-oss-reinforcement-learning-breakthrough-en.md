@@ -15,9 +15,10 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/
-canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/"
+canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough-en/"
 categories:
   - llmops
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

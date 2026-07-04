@@ -16,9 +16,10 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/agentops-ai-agent-monitoring-debugging-platform/
-canonical_url: "https://thakicloud.github.io/en/llmops/agentops-ai-agent-monitoring-debugging-platform/"
+canonical_url: "https://thakicloud.github.io/en/llmops/agentops-ai-agent-monitoring-debugging-platform-en/"
 categories:
   - llmops
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes

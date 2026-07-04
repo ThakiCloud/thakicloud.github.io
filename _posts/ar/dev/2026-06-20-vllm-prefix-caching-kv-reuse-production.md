@@ -16,6 +16,7 @@ reading_time: true
 lang: ar
 categories:
   - dev
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

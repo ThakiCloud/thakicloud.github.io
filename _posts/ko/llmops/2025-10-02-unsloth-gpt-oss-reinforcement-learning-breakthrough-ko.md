@@ -15,9 +15,10 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/
-canonical_url: "https://thakicloud.github.io/ko/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough-ko/"
 categories:
   - llmops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

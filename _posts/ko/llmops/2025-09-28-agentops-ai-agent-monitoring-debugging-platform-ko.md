@@ -21,6 +21,7 @@ categories:
   - llmops
 audiobook: /assets/audio/posts/agentops-ai-agent-monitoring-debugging-platform-ko/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
@@ -389,3 +390,16 @@ AI 에이전트를 막 시작하든 복잡한 프로덕션 배포를 관리하�
 ---
 
 *AI 에이전트 워크플로우에서 AgentOps 구현에 대한 질문이 있으신가요? 아래 댓글에 의견을 공유하거나 개인화된 가이드를 위해 저희 팀에 문의하세요.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 1](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-01.png)
+
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 2](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-02.png)
+
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 3](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-03.png)
+
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 4](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-04.png)
+

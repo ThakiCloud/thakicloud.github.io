@@ -11,10 +11,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/dev/vllm-prefix-caching-kv-reuse-production/"
+canonical_url: "https://thakicloud.github.io/ko/dev/vllm-prefix-caching-kv-reuse-production/"
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 7분
@@ -120,3 +121,16 @@ Prefix Caching을 쓸 때 `--enable-chunked-prefill`을 함께 켜면 처리량�
 ## 정리
 
 vLLM Prefix Caching은 플래그 하나로 켜지는 무료 최적화입니다. 히트율 60% 이상이 나오는 워크로드에서는 GPU 비용을 절반 이하로 줄일 수 있습니다. 시스템 프롬프트 고정, 에이전트 루프 컨텍스트 누적, RAG 문서 앞배치가 히트율을 높이는 세 가지 패턴입니다. 켜두지 않을 이유가 없습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
+
+![vllm-prefix-caching-kv-reuse-production 슬라이드 1](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.png)
+
+![vllm-prefix-caching-kv-reuse-production 슬라이드 2](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.png)
+
+![vllm-prefix-caching-kv-reuse-production 슬라이드 3](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.png)
+
+![vllm-prefix-caching-kv-reuse-production 슬라이드 4](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.png)
+
