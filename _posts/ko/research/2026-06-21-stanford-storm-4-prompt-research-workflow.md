@@ -17,10 +17,12 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/stanford-storm-4-prompt-research-workflow/"
+canonical_url: "https://thakicloud.github.io/ko/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/stanford-storm-4-prompt-research-workflow/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 리서치는 시간이 많이 드는 일입니다. 한 주제를 제대로 파려면 질문을 세우고, 여러 관점에서 자료를 모으고, 구조를 잡고, 인용을 단 결과물을 써야 합니다. 스탠퍼드 OVAL 연구실이 발표한 STORM(Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking)은 이 과정을 LLM으로 자동화하는 지식 큐레이션 시스템입니다. NAACL 2024에서 발표되었고, 위키피디아 수준의 긴 글을 인용과 함께 처음부터 생성하는 것을 목표로 합니다.

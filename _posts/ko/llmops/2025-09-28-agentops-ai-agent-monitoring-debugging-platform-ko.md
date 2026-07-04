@@ -16,9 +16,11 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agentops-ai-agent-monitoring-debugging-platform/
-canonical_url: "https://thakicloud.github.io/ko/llmops/agentops-ai-agent-monitoring-debugging-platform/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/agentops-ai-agent-monitoring-debugging-platform-ko/"
 categories:
   - llmops
+audiobook: /assets/audio/posts/agentops-ai-agent-monitoring-debugging-platform-ko/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

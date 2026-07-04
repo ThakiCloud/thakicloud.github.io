@@ -19,6 +19,8 @@ toc_icon: "shield-alt"
 canonical_url: "https://thakicloud.github.io/ko/agentops/ai-coding-agent-skill-guardrails/"
 categories:
   - agentops
+audiobook: /assets/audio/posts/ai-coding-agent-skill-guardrails/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 개요
@@ -72,6 +74,19 @@ ThakiCloud의 스택은 이 격리를 인프라 계층에서 강제하도록 구
 둘째, 가드레일도 완벽하지 않습니다. 화이트리스트는 등록된 스킬 내부의 악의는 잡지 못하고, 이그레스 통제는 허용된 엔드포인트를 경유한 우회까지 막지는 못합니다. 그래서 단일 방어선에 의존하지 않고 네 겹을 겹쳐 두는 것입니다. 한 겹이 뚫려도 다음 겹이 피해 범위를 줄이도록 설계하는 심층 방어가 현실적인 목표입니다.
 
 셋째, 이 사건을 특정 도구의 문제로 좁혀 보는 시각에 반대합니다. 문제의 본질은 그 도구가 아니라, 스킬과 설정으로 에이전트의 행동을 런타임에 재정의할 수 있게 된 구조 전체입니다. 그 구조는 정당한 생산성의 원천이기도 합니다. 따라서 답은 능력을 막는 것이 아니라, 그 능력이 미칠 수 있는 범위를 시스템으로 경계 짓는 것입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-coding-agent-skill-guardrails 슬라이드 1](/assets/images/ai-coding-agent-skill-guardrails-slide-01.png)
+
+![ai-coding-agent-skill-guardrails 슬라이드 2](/assets/images/ai-coding-agent-skill-guardrails-slide-02.png)
+
+![ai-coding-agent-skill-guardrails 슬라이드 3](/assets/images/ai-coding-agent-skill-guardrails-slide-03.png)
+
+![ai-coding-agent-skill-guardrails 슬라이드 4](/assets/images/ai-coding-agent-skill-guardrails-slide-04.png)
 
 ## 출처
 

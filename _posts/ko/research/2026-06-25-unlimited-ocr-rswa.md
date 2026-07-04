@@ -21,6 +21,8 @@ canonical_url: "https://thakicloud.github.io/ko/research/unlimited-ocr-rswa/"
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/unlimited-ocr-rswa/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 개요

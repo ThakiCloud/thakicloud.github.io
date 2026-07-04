@@ -15,9 +15,11 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/research/llm-overthinking-reasoning-completion-point-analysis/
-canonical_url: "https://thakicloud.github.io/ko/research/llm-overthinking-reasoning-completion-point-analysis/"
+canonical_url: "https://thakicloud.github.io/ko/research/llm-overthinking-reasoning-completion-point-analysis-ko/"
 categories:
   - research
+audiobook: /assets/audio/posts/llm-overthinking-reasoning-completion-point-analysis-ko/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
