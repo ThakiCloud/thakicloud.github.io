@@ -22,6 +22,7 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+published: false
 ---
 
 ![طبولوجيا العمليات المستقلة حيث تتشابك الجداول الزمنية وخطافات الأحداث](/assets/images/autonomous-ops-hero.png)

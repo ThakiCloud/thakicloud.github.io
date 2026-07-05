@@ -18,6 +18,7 @@ permalink: /ar/research/advertisement-embedding-attacks-llm-security-threat/
 canonical_url: "https://thakicloud.github.io/ar/research/advertisement-embedding-attacks-llm-security-threat/"
 categories:
   - research
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
