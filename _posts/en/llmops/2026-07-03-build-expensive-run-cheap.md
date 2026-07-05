@@ -14,6 +14,8 @@ categories:
   - llmops
 ---
 
+![Key concept illustration](/assets/images/build-expensive-run-cheap-hero.png)
+
 If you run agents in production, you've seen the same pattern in your monthly bill. Most of the token spend comes from frontier models, and most of what those models are actually doing isn't hard reasoning at all. It's sorting email, matching news items, rendering tables, and checking whether an output followed spec. This post is for engineering leaders and AI teams who want a concrete answer to two questions: how do you decide whether a skill built on an expensive model can be run on a cheap one without losing quality, and how do you automate that decision so it runs every night instead of once?
 
 Here's the short version. Expensive models earn their keep while you're **building** a skill. Once the skill's format has been pushed down into code, actually **running** it is a job for a much cheaper model. And "cheap enough" should never be a matter of gut feel. It has to be a verdict that code measures.
@@ -23,6 +25,11 @@ Here's the short version. Expensive models earn their keep while you're **buildi
 Break down what an agent handles in a given day and the work splits into two very different buckets. One bucket holds genuinely hard reasoning: ambiguous architecture calls, subtle debugging, decomposing a problem nobody has framed before. The other bucket holds routine, repetitive work: routing, classification, summarization, rendering, spec checking. The trouble starts when both buckets get handed to the same frontier model and billed at the same top rate every time.
 
 Quality on the routine side isn't actually driven by model intelligence. It's driven by **guardrails**. When output format wobbles, it's not because the model is dumb, it's because the format was requested in prose instead of enforced. Once length caps, allowed enums, rendering rules, and pass criteria are owned by code, that same task comes out reliably even on a cheap model. What protects quality here isn't a pricier model, it's the code gate around it.
+
+
+![Concept diagram](/assets/images/build-expensive-run-cheap-diagram.svg)
+
+*Concept diagram*
 
 ## Build expensive, push the format into code, run cheap
 
@@ -44,7 +51,7 @@ The sales CRM briefing follows the same structure. Below is real output from a r
 
 ```
 $ sales_crm_render_brief.py --data brief.json --print-slack
-:sunny: *ThakiCloud Sales Daily Brief* — 2026-07-03 (Thu)
+:sunny: *ThakiCloud Sales Daily Brief* - 2026-07-03 (Thu)
 *③ Urgent Actions*
 1. [Company A] GPU expansion RFP deadline approaching <Electronic Times 2026-07-02>
 ...
@@ -77,7 +84,7 @@ A one-time manual optimization pass doesn't stay useful for long. Skills keep mu
 This is live today. Here's an actual candidate report from the last few days, unedited.
 
 ```
-# cost-evolve candidates — 2026-07-03
+# cost-evolve candidates - 2026-07-03
 10 candidate(s), ranked by est. savings.
 | lever            | target   | action                              |
 | model-deescalate | sod-ship | opus -> sonnet, apply only if PASS  |
@@ -114,3 +121,10 @@ If your team wants to combine recent open-weight models like GLM 5.2 and Kimi K2
 If your team has any local GPU capacity, we recommend our Metis inference platform. It optimizes inference for the hardware you already own, so small open-weight models run as efficiently as possible on your own infrastructure.
 
 A structure where cheap models are the default and expensive models are the exception doesn't stay that way after a single setup pass. It needs a loop that measures every night, downgrades only when it's safe, and rolls back the moment something slips. Paxis provides that loop as a system.
+
+## References
+
+The licenses and agentic tool-use performance of the open-weight models mentioned above can be verified in the sources below.
+
+- [Best Open-Source LLM Models in 2026 (Hugging Face Blog)](https://huggingface.co/blog/daya-shankar/open-source-llms)
+- [GLM 5.2 vs Kimi K2.7 Code: Two Open-Weight Bets on Agentic Coding (Groundy)](https://groundy.com/articles/glm-5-2-vs-kimi-k2-7-code-two-open-weight-bets-on-agentic-coding/)

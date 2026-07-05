@@ -19,11 +19,17 @@ toc_label: "목차"
 toc_icon: "flask"
 categories:
   - research
+canonical_url: "https://thakicloud.github.io/ko/research/sovereign-speculative-serving/"
 ---
 
 ## 이 글을 누가 읽으면 좋은가
 
 이 글은 사내외에서 LLM 추론 서빙을 직접 운영하는 엔지니어, 특히 여러 고객이나 모델을 하나의 GPU 클러스터에 함께 태우는 멀티테넌트 환경을 다루는 분들을 위해 씁니다. 스펙큘레이티브 디코딩을 이미 알고 있고, "우리 클러스터에 적용했을 때 실제로 이득이 날까"를 판단해야 하는 실무자를 염두에 두었습니다. 결론부터 말하면, 답은 하드웨어가 얼마나 비어 있는지에 달려 있고, 그 판단은 드래프트 모델이 아니라 스케줄러가 내려야 합니다.
+
+
+![개념 다이어그램](/assets/images/sovereign-speculative-serving-diagram.svg)
+
+*개념 다이어그램*
 
 ## 문제의식: 성공 사례가 전제하는 조건이 우리 조건과 다르다
 

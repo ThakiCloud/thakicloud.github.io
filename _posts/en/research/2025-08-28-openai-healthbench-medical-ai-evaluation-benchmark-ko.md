@@ -17,10 +17,10 @@ toc_label: "Contents"
 lang: en
 permalink: /en/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/
 canonical_url: "https://thakicloud.github.io/en/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/"
-published: true
 categories:
   - research
   - llmops
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 min

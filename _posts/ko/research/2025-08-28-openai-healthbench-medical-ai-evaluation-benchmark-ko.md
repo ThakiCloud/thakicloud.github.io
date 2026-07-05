@@ -16,10 +16,11 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/openai-healthbench-medical-ai-evaluation/
-canonical_url: "https://thakicloud.github.io/ko/llmops/openai-healthbench-medical-ai-evaluation/"
+canonical_url: "https://thakicloud.github.io/ko/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/"
 categories:
   - research
   - llmops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
