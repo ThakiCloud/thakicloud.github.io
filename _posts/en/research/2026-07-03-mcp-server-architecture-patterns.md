@@ -21,8 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/research/mcp-server-architecture-patterns/"
 reading_time: true
 header:
-  image: /assets/images/mcp-server-architecture-patterns-hero.png
-  teaser: /assets/images/mcp-server-architecture-patterns-hero.png
+  image: /assets/images/mcp-server-architecture-patterns-hero.webp
+  teaser: /assets/images/mcp-server-architecture-patterns-hero.webp
 categories:
   - research
 ---

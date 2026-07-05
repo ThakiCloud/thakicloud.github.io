@@ -23,7 +23,7 @@ categories:
   - research
 ---
 
-![개념 다이어그램](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.png)
+![개념 다이어그램](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 15분
 

@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 7분
 
-![MiniMax-M2.7 자기진화 에이전트 팀 개념도](/assets/images/minimax-m2-7-hero.png)
+![MiniMax-M2.7 자기진화 에이전트 팀 개념도](/assets/images/minimax-m2-7-hero.webp)
 
 ## MiniMax-M2.7 개요
 

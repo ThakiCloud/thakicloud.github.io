@@ -25,7 +25,7 @@ categories:
   - research
 ---
 
-![Abstract image of layered data flowing through a lattice of neural networks and databases, with memory cells forming and dissolving](/assets/images/agent-native-memory-system-hero.png)
+![Abstract image of layered data flowing through a lattice of neural networks and databases, with memory cells forming and dissolving](/assets/images/agent-native-memory-system-hero.webp)
 
 ## Overview
 

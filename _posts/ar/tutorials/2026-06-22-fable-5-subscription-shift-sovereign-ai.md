@@ -13,8 +13,8 @@ tags:
   - vendor-risk
   - cost
 header:
-  image: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.png
-  teaser: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.png
+  image: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp
+  teaser: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp
 author_profile: true
 toc: true
 toc_label: "المحتويات"
@@ -27,7 +27,7 @@ categories:
   - tutorials
 ---
 
-![صورة مجرّدة تتعارض فيها السحابة العامة المتلاشية مع بنية تحتية خاصة راسخة في الصخر](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.png)
+![صورة مجرّدة تتعارض فيها السحابة العامة المتلاشية مع بنية تحتية خاصة راسخة في الصخر](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp)
 
 اليوم هو الموعد النهائي. نموذج Fable 5، وهو النموذج الأعلى مستوى من Anthropic، مُدرَج في خطط الاشتراك مجاناً حتى 22 يونيو فقط، ثم يُستثنى من الحصة المشمولة ابتداءً من 23 يونيو. بعد ذلك، يستلزم استخدام Fable 5 شراء رصيد منفصل بنظام الدفع حسب الاستخدام. انتشر هذا الخبر بسرعة في مجتمعات المطوّرين، ورأينا فيه إشارة لا يمكن تجاهلها.
 

@@ -22,7 +22,7 @@ categories:
   - dev
 ---
 
-![1인 AI 엔지니어 풀스택 운영 전경](/assets/images/solo-ai-team-fullstack-ops-hero.png)
+![1인 AI 엔지니어 풀스택 운영 전경](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
 
 ## 개요: 1인이 이 규모를 어떻게?
 

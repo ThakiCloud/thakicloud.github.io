@@ -131,7 +131,7 @@ ThakiCloud는 모델카드 수치를 그대로 옮기는 데 그치지 않고, �
 | IFBench | 62.3 | 62.8 | +0.5 |
 | MMMU PRO | 74.1 | 74.5 | +0.4 |
 
-![BF16 대비 NVFP4 정확도 비교 막대 그래프](/assets/images/nvidia-qwen36-nvfp4-results.png)
+![BF16 대비 NVFP4 정확도 비교 막대 그래프](/assets/images/nvidia-qwen36-nvfp4-results.webp)
 
 모델카드 공개 수치를 시각화한 그래프입니다. 4비트 양자화 후에도 정확도 차이가 대부분 1점 미만에 머뭅니다.
 

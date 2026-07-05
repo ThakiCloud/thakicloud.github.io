@@ -22,7 +22,7 @@ categories:
 published: false
 ---
 
-![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)
+![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
 

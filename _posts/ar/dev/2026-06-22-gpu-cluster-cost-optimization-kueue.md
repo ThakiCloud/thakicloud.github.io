@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![تحسين تكاليف مجموعة GPU - معمارية Kueue Fair-Share و Gang Scheduling و Scale-to-Zero](/assets/images/gpu-cluster-cost-optimization-kueue-hero.png)
+![تحسين تكاليف مجموعة GPU - معمارية Kueue Fair-Share و Gang Scheduling و Scale-to-Zero](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
 
 ## نظرة عامة
 

@@ -29,7 +29,7 @@ categories:
 published: false
 ---
 
-![개념 다이어그램](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.png)
+![개념 다이어그램](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 20분
 

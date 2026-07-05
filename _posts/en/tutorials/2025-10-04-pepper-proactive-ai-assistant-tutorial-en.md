@@ -22,7 +22,7 @@ categories:
 published: false
 ---
 
-![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)
+![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
 
 ⏱️ **Estimated Reading Time**: 12 minutes
 

@@ -26,7 +26,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 6분
 
-![Claude Code 세미나](/assets/images/claude-code-seminar-hero.png)
+![Claude Code 세미나](/assets/images/claude-code-seminar-hero.webp)
 
 AI 코딩 도구를 도입하는 팀은 많습니다. 그런데 그 도구를 팀 전체가 제대로 쓰는 팀은 훨씬 적습니다. ThakiCloud는 Claude Code를 단순히 설치하는 것으로 끝내지 않았습니다. 직접 세미나를 열어 환경설정부터 실무 활용 패턴까지 다듬었고, 그 자료를 오늘 공개합니다.
 

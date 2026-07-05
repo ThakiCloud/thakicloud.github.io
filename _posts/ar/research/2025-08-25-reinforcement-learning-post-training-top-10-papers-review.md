@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![رسم توضيحي للمفهوم](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)
+![رسم توضيحي للمفهوم](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp)
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة
 

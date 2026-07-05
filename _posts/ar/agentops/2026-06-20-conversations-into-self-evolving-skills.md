@@ -17,7 +17,7 @@ tags:
   - agentops
   - thakicloud
 header:
-  teaser: /assets/images/self-evolving-skills-hero.png
+  teaser: /assets/images/self-evolving-skills-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![المحادثات السابقة تتبلور في مهارات قابلة لإعادة الاستخدام](/assets/images/self-evolving-skills-hero.png)
+![المحادثات السابقة تتبلور في مهارات قابلة لإعادة الاستخدام](/assets/images/self-evolving-skills-hero.webp)
 
 ## إذا كنت تشرح الشيء ذاته مراراً وتكراراً
 

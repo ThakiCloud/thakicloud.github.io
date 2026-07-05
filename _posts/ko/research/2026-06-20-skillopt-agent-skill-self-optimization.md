@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.github.io/ko/research/skillopt-agent-skill-se
 reading_time: true
 categories:
   - research
-audiobook: /assets/audio/posts/skillopt-agent-skill-self-optimization/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1x9WLryiK2lcCi-AXZsdkV732W3SwHuzb/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 

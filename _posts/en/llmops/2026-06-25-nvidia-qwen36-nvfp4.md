@@ -132,7 +132,7 @@ The accuracy table below is **NVIDIA's official evaluation published on the mode
 | IFBench | 62.3 | 62.8 | +0.5 |
 | MMMU PRO | 74.1 | 74.5 | +0.4 |
 
-![Bar chart comparing NVFP4 accuracy against BF16](/assets/images/nvidia-qwen36-nvfp4-results.png)
+![Bar chart comparing NVFP4 accuracy against BF16](/assets/images/nvidia-qwen36-nvfp4-results.webp)
 
 A visualization of the model card's published numbers (axis labels in Korean). Even after 4-bit quantization, most accuracy differences stay below one point.
 

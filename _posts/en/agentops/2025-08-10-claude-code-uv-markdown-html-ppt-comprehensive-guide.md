@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)
+![Key concept illustration](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp)
 
 ⏱️ **Estimated reading time**: 25 min
 

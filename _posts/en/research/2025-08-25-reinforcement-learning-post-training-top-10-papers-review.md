@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)
+![Key concept illustration](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp)
 
 ⏱️ **Estimated reading time**: 25 min
 

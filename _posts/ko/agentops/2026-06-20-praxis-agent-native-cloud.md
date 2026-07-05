@@ -17,7 +17,7 @@ tags:
   - skill-harness
   - thakicloud
 header:
-  teaser: /assets/images/praxis-architecture-hero.png
+  teaser: /assets/images/praxis-architecture-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Paxis 계층 아키텍처: Cloud 인프라 위에 Paxis Core, 그 위에 849 스킬·14 도메인 에이전트 능력 계층](/assets/images/praxis-architecture-hero.png)
+![Paxis 계층 아키텍처: Cloud 인프라 위에 Paxis Core, 그 위에 849 스킬·14 도메인 에이전트 능력 계층](/assets/images/praxis-architecture-hero.webp)
 
 ## 클라우드의 다음 질문은 "에이전트를 어떻게 운영하나"
 
@@ -33,7 +33,7 @@ published: false
 
 Paxis는 이 빈자리를 겨냥합니다. 기존 클라우드가 컴퓨트·데이터베이스·네트워크를 일급 자원으로 다뤘다면, Paxis는 AI 에이전트의 능력(Skill)·도구(Tool)·정책(Policy)·감사(Audit)를 일급 자원으로 다룹니다. 고객은 "AI 직원 한 팀"을 코드 없이 채용하고, 관리하고, 감사하게 됩니다. 우리는 이 범주를 Agent-Native Cloud라고 부릅니다.
 
-![전통 클라우드는 Compute·DB·Network를, Paxis는 Skills·Tools·Policies·Audit Logs를 일급 자원으로 다룬다](/assets/images/praxis-cloud-analogy.png)
+![전통 클라우드는 Compute·DB·Network를, Paxis는 Skills·Tools·Policies·Audit Logs를 일급 자원으로 다룬다](/assets/images/praxis-cloud-analogy.webp)
 
 이 글은 마케팅 슬로건이 아니라 실제로 기동한 PoC를 코드와 함께 설명합니다. 아래 수치는 모두 실제 서버(`localhost:8080`)에서 확인한 값입니다.
 

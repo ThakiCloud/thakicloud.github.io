@@ -20,14 +20,14 @@ tags:
   - kubernetes
   - thakicloud
 header:
-  teaser: /assets/images/llm-d-heterogeneous-hero.png
+  teaser: /assets/images/llm-d-heterogeneous-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - llmops
 ---
 
-![مجموعة GPU ومجموعة NPU تعملان معاً في نفس الكلستر لتقديم الاستدلال](/assets/images/llm-d-heterogeneous-hero.png)
+![مجموعة GPU ومجموعة NPU تعملان معاً في نفس الكلستر لتقديم الاستدلال](/assets/images/llm-d-heterogeneous-hero.webp)
 
 ## شراء المزيد من GPU لن يسرّع الاستدلال
 

@@ -22,7 +22,7 @@ categories:
   - tutorials
 ---
 
-![Abstract representation of an automated video production pipeline](/assets/images/claude-code-video-toolkit-hero.png)
+![Abstract representation of an automated video production pipeline](/assets/images/claude-code-video-toolkit-hero.webp)
 *An automated video pipeline, rendered as light particles assembling into ordered frames.*
 
 ## Overview
@@ -93,7 +93,7 @@ In the render step, Remotion downloads Chrome Headless Shell once on the first r
 
 From a cold state, the wall-clock time for `npm run render`, including the download, bundling, rendering, and encoding, was 18.4 seconds. The final output was an h264 video at 1920x1080 resolution, 30fps, 25.0 seconds long, and 2.15MB (2,152,829 bytes), including an AAC audio track. Not a single API key was used.
 
-![Per-stage measured times for the hello-world render pipeline](/assets/images/claude-code-video-toolkit-results.png)
+![Per-stage measured times for the hello-world render pipeline](/assets/images/claude-code-video-toolkit-results.webp)
 *Per-stage wall-clock time of the hello-world 1080p render pipeline, measured with zero API keys.*
 
 In short, with no separate setup, a single 1080p video was in hand within about 30 seconds of cloning. That was even faster than the example's "renders in 2 minutes" description, but since this can vary with hardware and network conditions, you should not take the number as absolute. What matters is that the barrier to entry is that low.

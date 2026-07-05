@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![Abstract visualization of light beams converging on a central node before branching hierarchically outward](/assets/images/claude-code-project-anatomy-complete-map-hero.png)
+![Abstract visualization of light beams converging on a central node before branching hierarchically outward](/assets/images/claude-code-project-anatomy-complete-map-hero.webp)
 *An abstract representation of Claude Code project structure, showing how rules, skills, agents, and memory branch outward from a single project brain.*
 
 ## Overview
@@ -112,7 +112,7 @@ With the map in hand, we measured the `.claude` directory of our `ai-platform-st
 | .mcp.json | present (166 bytes) | on server connect |
 | .claude/settings.json | present (5 KB) | every session |
 
-![Bar chart of ThakiCloud .claude components grouped by load timing](/assets/images/claude-code-project-anatomy-complete-map-results.png)
+![Bar chart of ThakiCloud .claude components grouped by load timing](/assets/images/claude-code-project-anatomy-complete-map-results.webp)
 *The 40 rules and 94-line CLAUDE.md are fixed overhead that arrives every turn. The 1,655 skills and 54 agents are on-demand assets that only appear when needed.*
 
 These numbers prove the map's central point. If all 1,655 skills had been packed into `CLAUDE.md` or rules files, the context limit would blow on the very first session. In practice, those 1,655 skills load on-demand only, and a separate router narrows the candidate set on every turn before any skill is loaded. The always-on side of the ledger -- rules -- is intentionally kept at 40 files. That number is the result of a hygiene rule: keep each rules file under 2 KB, and demote anything larger to a skill.

@@ -19,14 +19,14 @@ tags:
   - moe
   - thakicloud
 header:
-  teaser: /assets/images/llm-quant-vllm-hero.png
+  teaser: /assets/images/llm-quant-vllm-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - llmops
 ---
 
-![Map of quantization formats served by vLLM](/assets/images/llm-quant-vllm-hero.png)
+![Map of quantization formats served by vLLM](/assets/images/llm-quant-vllm-hero.webp)
 
 ## Why Quantization Again
 

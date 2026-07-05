@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.github.io/ko/research/stanford-storm-4-prompt
 reading_time: true
 categories:
   - research
-audiobook: /assets/audio/posts/stanford-storm-4-prompt-research-workflow/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1g3_ynCIGI1XwMkBsh-TLwC87rTtH0qNY/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 

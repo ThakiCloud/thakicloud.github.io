@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![데이터가 응축되는 추상 이미지](/assets/images/headroom-reversible-context-compression-hero.png)
+![데이터가 응축되는 추상 이미지](/assets/images/headroom-reversible-context-compression-hero.webp)
 *컨텍스트는 공짜가 아닙니다. 흩어진 토큰을 무손실로 응축하는 것이 Headroom의 일입니다.*
 
 ## 개요
@@ -112,7 +112,7 @@ print(result.tokens_before, "->", result.tokens_after, result.transforms_applied
 | twitter-timeline (레코드 배열) | 399,926 | 192,465 | **51.9%** | 57.0% | 0.24s |
 | seedance-prompts (프롬프트 카탈로그) | 1,085,592 | 713,210 | **34.3%** | 38.5% | 0.57s |
 
-![실측 압축률 차트](/assets/images/headroom-reversible-context-compression-results.png)
+![실측 압축률 차트](/assets/images/headroom-reversible-context-compression-results.webp)
 *ThakiCloud repo의 JSON 도구 출력 3종에 대한 실측 절감률. 바이트와 토큰을 함께 표기했습니다.*
 
 수치를 읽는 방법이 중요합니다. **반복 구조가 강할수록 절감이 큽니다.** skill_index는 동일 스키마 레코드가 빽빽하게 반복되는 인덱스라 SmartCrusher의 키 폴딩 효과가 극대화되어 토큰을 71.2%나 줄였습니다. twitter timeline도 균일한 객체 배열이라 절반 이상 절감했습니다. 반면 seedance-prompts는 자연어 프롬프트 텍스트가 레코드의 대부분을 차지해, 구조 압축으로 깎을 여지가 상대적으로 적어 34.3%에 그쳤습니다. 이 차이가 바로 "JSON 경로에서 가장 효과가 크다"는 설계 의도를 그대로 보여줍니다.

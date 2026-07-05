@@ -15,8 +15,8 @@ tags:
   - sovereign-ai
   - gpu-serving
 header:
-  image: /assets/images/glm-5-2-sovereign-serving-hero.png
-  teaser: /assets/images/glm-5-2-sovereign-serving-hero.png
+  image: /assets/images/glm-5-2-sovereign-serving-hero.webp
+  teaser: /assets/images/glm-5-2-sovereign-serving-hero.webp
 author_profile: true
 toc: true
 toc_label: "Contents"

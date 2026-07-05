@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![Concept diagram](/assets/images/claude-code-router-onprem-routing-hero.png)
+![Concept diagram](/assets/images/claude-code-router-onprem-routing-hero.webp)
 
 ```mermaid
 flowchart LR

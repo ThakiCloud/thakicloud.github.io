@@ -30,7 +30,7 @@ published: false
 
 هذا هو الجزء الأخير من سلسلة GitHub CLI. سنغطي تقنيات الأتمتة المتقدمة التي ترفع إنتاجية الفرق إلى المستوى الاحترافي.
 
-![رسم تخطيطي: يحمّل zshrc وحدات الأتمتة إلى موزّع gh موحّد يتحكم في GitHub](/assets/images/github-cli-advanced-workflows-hero.png)
+![رسم تخطيطي: يحمّل zshrc وحدات الأتمتة إلى موزّع gh موحّد يتحكم في GitHub](/assets/images/github-cli-advanced-workflows-hero.webp)
 
 ## نظام التحكم الرئيسي
 

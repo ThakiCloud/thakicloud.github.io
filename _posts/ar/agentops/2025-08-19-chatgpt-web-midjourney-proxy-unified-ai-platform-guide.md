@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![توضيح للمفهوم الأساسي](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.png)
+![توضيح للمفهوم الأساسي](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.webp)
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
 

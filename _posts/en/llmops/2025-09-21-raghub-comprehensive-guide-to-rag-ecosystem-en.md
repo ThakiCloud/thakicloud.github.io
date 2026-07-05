@@ -30,7 +30,7 @@ The field of Retrieval-Augmented Generation (RAG) is experiencing unprecedented 
 
 RAGHub represents a community-driven initiative that serves as a comprehensive directory of tools, frameworks, and resources for Retrieval-Augmented Generation systems. Born from the recognition that the RAG landscape changes so rapidly that frameworks from just three months ago might already be obsolete, RAGHub aims to help practitioners, researchers, and organizations navigate this ever-evolving terrain with confidence.
 
-![Conceptual view of modular framework blocks connected around a central vector index in the RAG ecosystem](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.png)
+![Conceptual view of modular framework blocks connected around a central vector index in the RAG ecosystem](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.webp)
 
 ## Understanding RAGHub: A Community-Powered Resource
 

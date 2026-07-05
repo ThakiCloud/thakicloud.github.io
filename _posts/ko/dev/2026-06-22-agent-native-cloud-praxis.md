@@ -22,7 +22,7 @@ categories:
   - dev
 ---
 
-![에이전트 네이티브 클라우드 Paxis 개요](/assets/images/agent-native-cloud-praxis-hero.png)
+![에이전트 네이티브 클라우드 Paxis 개요](/assets/images/agent-native-cloud-praxis-hero.webp)
 
 ## 개요
 

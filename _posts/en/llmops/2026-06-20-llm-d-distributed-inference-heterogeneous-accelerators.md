@@ -20,14 +20,14 @@ tags:
   - kubernetes
   - thakicloud
 header:
-  teaser: /assets/images/llm-d-heterogeneous-hero.png
+  teaser: /assets/images/llm-d-heterogeneous-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - llmops
 ---
 
-![Heterogeneous cluster where a GPU pool and NPU pool jointly serve inference workloads](/assets/images/llm-d-heterogeneous-hero.png)
+![Heterogeneous cluster where a GPU pool and NPU pool jointly serve inference workloads](/assets/images/llm-d-heterogeneous-hero.webp)
 
 ## Buying More GPUs Won't Speed Up Inference
 

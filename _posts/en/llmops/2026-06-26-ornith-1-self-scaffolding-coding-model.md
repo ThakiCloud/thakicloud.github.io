@@ -26,7 +26,7 @@ categories:
   - llmops
 ---
 
-![Abstract image depicting a self-scaffolding structure building its own foundation layer by layer](/assets/images/ornith-1-self-scaffolding-coding-model-hero.png)
+![Abstract image depicting a self-scaffolding structure building its own foundation layer by layer](/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp)
 *An abstract representation of self-scaffolding reinforcement learning, where a model constructs its own training scaffold from the ground up.*
 
 Competition among open-weight coding models has moved beyond "what benchmark score did you hit?" toward "what training method produced that score?" `Ornith-1.0`, released by DeepReinforce on June 25, 2026, is a model where the methodology itself is the headline. The reinforcement learning design lets the model **write the training scaffold that guides its own solutions** at the same time it generates those solutions.

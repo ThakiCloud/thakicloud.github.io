@@ -22,12 +22,12 @@ categories:
   - research
   - llmops
 header:
-  teaser: /assets/images/finetuning-survival-strategy-2026-hero.png
-  overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.png
+  teaser: /assets/images/finetuning-survival-strategy-2026-hero.webp
+  overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.webp
   overlay_filter: 0.5
 ---
 
-![파인튜닝 생존 전략 히어로 이미지](/assets/images/finetuning-survival-strategy-2026-hero.png)
+![파인튜닝 생존 전략 히어로 이미지](/assets/images/finetuning-survival-strategy-2026-hero.webp)
 
 ## 들어가며: "이제 파인튜닝 안 해도 되는 것 아닌가요"
 

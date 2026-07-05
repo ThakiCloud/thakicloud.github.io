@@ -25,7 +25,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لآثار وكيل Fable 5](/assets/images/fable-5-agent-traces-hero.png)
+![مخطط مفاهيمي لآثار وكيل Fable 5](/assets/images/fable-5-agent-traces-hero.webp)
 
 ## نظرة عامة على مجموعة البيانات
 

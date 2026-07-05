@@ -18,13 +18,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 header:
-  image: /assets/images/inference-engine-hardware-strategy-hero.png
+  image: /assets/images/inference-engine-hardware-strategy-hero.webp
 canonical_url: "https://thakicloud.github.io/en/technique/inference-engine-hardware-strategy/"
 categories:
   - llmops
 ---
 
-![Abstract image of hardware foundations determining the shape of software above them](/assets/images/inference-engine-hardware-strategy-hero.png)
+![Abstract image of hardware foundations determining the shape of software above them](/assets/images/inference-engine-hardware-strategy-hero.webp)
 *Foundations of different sizes (hardware) determining the shape of the software that flows on top of them.*
 
 ## Overview

@@ -29,7 +29,7 @@ With the advancement of AI systems, the ability to perform complex tasks beyond 
 
 Manus AI is a comprehensive AI system that transcends the limitations of traditional large language models, offering the following core functions:
 
-![System Functions and Language Processing](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_2-1.jpg)
+![System Functions and Language Processing](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_2-1.webp)
 
 ### System Capabilities
 
@@ -47,7 +47,7 @@ The system can perform information gathering and fact-checking, data analysis an
 
 The core of Manus AI is a unique task processing mechanism called the "agent loop."
 
-![Agent Loop Six Stages](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_3-1.jpg)
+![Agent Loop Six Stages](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_3-1.webp)
 
 ### Six-Stage Circular Structure
 
@@ -57,7 +57,7 @@ This circular structure is designed to decompose complex tasks into manageable s
 
 ## Core Modules: Triangular Structure of Intelligent System
 
-![Core Module Structure](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_4-1.jpg)
+![Core Module Structure](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_4-1.webp)
 
 Manus AI adopts a modular architecture consisting of three core modules.
 
@@ -75,7 +75,7 @@ The Datasource module prioritizes the use of reliable data APIs, saves search re
 
 ## Tool Sets and Usage Rules
 
-![Tool Set Configuration](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_5-1.jpg)
+![Tool Set Configuration](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_5-1.webp)
 
 ### Six Tool Groups
 
@@ -87,7 +87,7 @@ The system follows tool selection priority by automatically choosing the most su
 
 ## Differentiation from Existing AI Systems
 
-![Features and Comparative Analysis](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_6-1.jpg)
+![Features and Comparative Analysis](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_6-1.webp)
 
 ### Core Strengths
 
@@ -103,31 +103,31 @@ The system shows potential for specialized module segmentation through domain-sp
 
 ## System Architecture Visualization
 
-![System Diagram Collection](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_7-1.jpg)
+![System Diagram Collection](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_7-1.webp)
 
 To understand Manus AI's complex structure, various diagrams are provided including overall architecture showing relationships between system components, agent loop flowcharts illustrating task processing flow, and sequence diagrams depicting temporal interaction patterns.
 
 ## Component Interaction Analysis
 
-![Component Interaction Diagram](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_8-1.jpg)
+![Component Interaction Diagram](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_8-1.webp)
 
 The component interactions represented in network graph form show several characteristics: a centralized structure with the Agent Loop at the center of all components, organic connections between modules including Planner, Knowledge, and Datasource, systematic tool integration with various tools connected systematically, and intuitive user interface supporting straightforward user interactions.
 
 ## Detailed Flowchart Analysis
 
-![Agent Loop Detailed Flowchart](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_9-1.jpg)
+![Agent Loop Detailed Flowchart](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_9-1.webp)
 
 The detailed flowchart reveals technical characteristics including single tool execution where only one tool is executed at a time to ensure stability, module integration through organic cooperation of necessary modules at each step, and autonomous task completion judgment where the system determines task completion independently.
 
 ## Tool Structure and Proportion Analysis
 
-![Tool Structure Treemap](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_10-1.jpg)
+![Tool Structure Treemap](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_10-1.webp)
 
 Through treemap analysis, we can confirm that browser tools occupy the largest proportion as core tools, balanced composition with appropriate tool distribution across each category, and execution flow following the Agent Loop's selection-execution-result repetition pattern as needed.
 
 ## Sequence Diagram: Temporal Interactions
 
-![Sequence Diagram](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_11-1.jpg)
+![Sequence Diagram](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_11-1.webp)
 
 The sequence diagram shows the temporal flow of interactions within the system, involving participants from user to Agent Loop to Planner to Knowledge to Datasource to tool systems. Message types include solid lines for commands, dotted lines for responses, and parallel arrows for asynchronous operations, demonstrating systematic and predictable communication flow interaction patterns.
 

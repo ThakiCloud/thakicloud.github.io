@@ -21,12 +21,12 @@ lang: en
 canonical_url: "https://thakicloud.github.io/en/research/paddleocr-vl-09b-multilingual-document-parsing/"
 reading_time: true
 header:
-  image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png
+  image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp
 categories:
   - research
 ---
 
-![Abstract image showing translucent documents transforming into a structured node grid](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.png)
+![Abstract image showing translucent documents transforming into a structured node grid](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp)
 *An abstract representation of many documents being organized into structured data.*
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1aFDms1DJR0iMABZcOX3kxPw23SSlOchT/view).
@@ -43,7 +43,7 @@ At ThakiCloud, we operate multi-tenant inference and document processing workloa
 
 The core design philosophy of PaddleOCR-VL is: **do not handle everything with a single large end-to-end VLM**. End-to-end approaches rely on long autoregressive decoding, which is costly in latency and memory, and they are prone to hallucinations and instability on multi-column or mixed layouts. PaddleOCR-VL separates the work into two stages instead.
 
-![PaddleOCR-VL two-stage pipeline diagram](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-diagram.png)
+![PaddleOCR-VL two-stage pipeline diagram](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-diagram.webp)
 *Two-stage structure separating layout analysis from element recognition.*
 
 **Stage 1, Layout Analysis (PP-DocLayoutV2)**: A lightweight dedicated model locates and classifies semantic regions in the document, then predicts reading order. It uses RT-DETR for object detection and a pointer network with 6 transformer layers for reading order prediction. By offloading layout reasoning from the heavy VLM into a separate module, the pipeline achieves stable results even on complex multi-column layouts.
@@ -113,12 +113,12 @@ One finding worth reporting honestly: the Arabic line in our synthetic image was
 
 Let us also look at the benchmark numbers the paper reports on public datasets. The chart below shows per-language line-level text recognition edit distances reported in the base paper (arXiv:2510.14528) for a subset of the 109 supported languages (lower is better).
 
-![PaddleOCR-VL multilingual text recognition edit distance chart](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-results.png)
+![PaddleOCR-VL multilingual text recognition edit distance chart](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-results.webp)
 *Korean and Arabic highlighted as ThakiCloud's core market languages. Source: arXiv:2510.14528.*
 
 Korean achieves 0.052 and Arabic achieves 0.122 -- solid edit distances for both languages ThakiCloud targets. At the page level, the base paper reports an OmniDocBench v1.5 aggregate score of 92.86, ahead of the next-best MinerU2.5-1.2B (90.67).
 
-![OmniDocBench v1.5 aggregate score comparison chart](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-bench.png)
+![OmniDocBench v1.5 aggregate score comparison chart](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-bench.webp)
 *A 0.9B model beating a 1.2B model on aggregate score. Source: arXiv:2510.14528 Table 2.*
 
 When citing these numbers, version clarity matters. The base paper (2510.14528) reports 92.86 on OmniDocBench v1.5. The subsequent release PaddleOCR-VL-1.5 reports 94.5% on v1.5, and PaddleOCR-VL-1.6 reports 96.33% on v1.6 as an [estimated] figure (based on a separate report for the later version). The 96.33% seen on social media is the score from the latest 1.6 release. It is also worth keeping in mind that the inference throughput figures in the paper were measured on a single NVIDIA A100 with batch sizes of 512 PDFs and high-performance serving engines like vLLM, SGLang, and FastDeploy. Our CPU-measured 32.65s per page is a reference point for an unaccelerated environment -- not a production throughput figure.

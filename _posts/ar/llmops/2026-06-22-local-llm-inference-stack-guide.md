@@ -13,8 +13,8 @@ tags:
   - on-premise
   - gpu-serving
 header:
-  image: /assets/images/local-llm-inference-stack-guide-hero.png
-  teaser: /assets/images/local-llm-inference-stack-guide-hero.png
+  image: /assets/images/local-llm-inference-stack-guide-hero.webp
+  teaser: /assets/images/local-llm-inference-stack-guide-hero.webp
 author_profile: true
 toc: true
 toc_label: "المحتويات"

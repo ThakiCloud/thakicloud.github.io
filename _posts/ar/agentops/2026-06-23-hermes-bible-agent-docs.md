@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![تمثيل تجريدي لمكتبة معرفة مفهرسة](/assets/images/hermes-bible-agent-docs-hero.png)
+![تمثيل تجريدي لمكتبة معرفة مفهرسة](/assets/images/hermes-bible-agent-docs-hero.webp)
 *بحث مفهرس، مصوّر كعقد مستندات كثيرة تتقارب نحو نقطة مضيئة واحدة.*
 
 ## نظرة عامة

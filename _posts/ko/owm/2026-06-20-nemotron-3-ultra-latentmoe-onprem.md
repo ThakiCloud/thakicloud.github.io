@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![Nemotron-3-Ultra 하이브리드 아키텍처 개념도](/assets/images/nemotron-3-ultra-hero.png)
+![Nemotron-3-Ultra 하이브리드 아키텍처 개념도](/assets/images/nemotron-3-ultra-hero.webp)
 
 ## Nemotron-3-Ultra-550B 개요
 

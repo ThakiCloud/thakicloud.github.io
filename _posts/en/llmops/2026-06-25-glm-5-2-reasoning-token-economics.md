@@ -57,7 +57,7 @@ The first is IndexShare. In standard DeepSeek Sparse Attention (DSA), every tran
 
 The lever that users interact with directly is the effort setting. GLM-5.2 offers two levels, High and Max, and Z.ai recommends Max for coding tasks. New sessions default to High. Published measurements show that Max effort draws up to about 85,000 output tokens per task to reach peak intelligence, while High effort sacrifices a few benchmark points in exchange for roughly half the output token volume. In other words, token consumption is not set automatically inside the model: it is a knob that operators can explicitly adjust. That knob is the central variable in the cost analysis that follows.
 
-![Cost structure comparison between closed cloud API path and ThakiCloud on-premises self-hosting path](/assets/images/glm-5-2-reasoning-token-economics-diagram.png)
+![Cost structure comparison between closed cloud API path and ThakiCloud on-premises self-hosting path](/assets/images/glm-5-2-reasoning-token-economics-diagram.webp)
 
 ## What /teach Revealed: Reasoning Consumes Tokens
 
@@ -80,7 +80,7 @@ In self-hosting, the cost structure is time-based rather than token-based. From 
 
 There is a genuine barrier to entry. The 744B weights have to live somewhere. Memory footprint derived from the published parameter count is as follows (KV cache excluded, pure arithmetic `[est.]`):
 
-![Memory footprint by precision for 744B weights and per-task output cost curves](/assets/images/glm-5-2-reasoning-token-economics-results.png)
+![Memory footprint by precision for 744B weights and per-task output cost curves](/assets/images/glm-5-2-reasoning-token-economics-results.webp)
 
 BF16 requires roughly 1,488 GB; FP8 roughly 744 GB; FP4/NVFP4 roughly 372 GB. Eight H100s at 80 GB each give 640 GB total; eight H200s at 141 GB each give 1,128 GB. FP8-quantized weights fit comfortably in a single H200 node and are tight on an H100 node once KV cache headroom is considered. Dropping to FP4 leaves room on a single H100 node. Running a frontier-class reasoning model on a single GPU node is no longer impractical.
 

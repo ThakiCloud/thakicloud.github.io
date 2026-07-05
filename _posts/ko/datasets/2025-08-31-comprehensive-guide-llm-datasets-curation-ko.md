@@ -25,7 +25,7 @@ categories:
 
 대규모 언어 모델(LLM) 개발 환경은 극적으로 진화했으며, 데이터 품질이 모델 성능을 결정하는 가장 중요한 요소로 부상했습니다. 사전 훈련된 모델을 유능한 어시스턴트로 변환하는 후훈련 단계에서 데이터셋의 선택과 큐레이션은 무엇보다 중요합니다. 이 포괄적인 가이드는 현대 LLM 훈련 관행을 정의하는 필수 데이터셋, 방법론, 그리고 도구들을 탐구합니다.
 
-![다양한 출처의 데이터가 필터링 계층을 거쳐 정제된 단일 학습 데이터 코어로 모이는 개념도](/assets/images/comprehensive-guide-llm-datasets-curation-hero.png)
+![다양한 출처의 데이터가 필터링 계층을 거쳐 정제된 단일 학습 데이터 코어로 모이는 개념도](/assets/images/comprehensive-guide-llm-datasets-curation-hero.webp)
 
 ## 데이터셋 품질 이해: 우수성의 기초
 

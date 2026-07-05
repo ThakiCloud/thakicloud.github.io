@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![Fine-tuning healthcare LLMs on-premises without exporting patient data](/assets/images/healthcare-onprem-llm-finetuning-hero.png)
+![Fine-tuning healthcare LLMs on-premises without exporting patient data](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
 
 ## Overview
 

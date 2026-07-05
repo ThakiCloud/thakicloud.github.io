@@ -26,7 +26,7 @@ categories:
   - research
 ---
 
-![هيكل مجرد من أربع طبقات مضيئة تتراكم من الأسفل إلى الأعلى وتترابط فيما بينها](/assets/images/agentic-ai-hitchhikers-guide-hero.png)
+![هيكل مجرد من أربع طبقات مضيئة تتراكم من الأسفل إلى الأعلى وتترابط فيما بينها](/assets/images/agentic-ai-hitchhikers-guide-hero.webp)
 
 ## نظرة عامة
 

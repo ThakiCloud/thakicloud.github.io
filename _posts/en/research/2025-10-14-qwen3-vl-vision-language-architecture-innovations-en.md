@@ -23,7 +23,7 @@ categories:
   - research
 ---
 
-![Concept diagram](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.png)
+![Concept diagram](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)
 
 ⏱️ **Estimated Reading Time**: 15 minutes
 

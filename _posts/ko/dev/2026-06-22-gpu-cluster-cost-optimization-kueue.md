@@ -22,7 +22,7 @@ categories:
   - dev
 ---
 
-![GPU 클러스터 비용 최적화 - Kueue 페어셰어, Gang Scheduling, Scale-to-Zero 아키텍처](/assets/images/gpu-cluster-cost-optimization-kueue-hero.png)
+![GPU 클러스터 비용 최적화 - Kueue 페어셰어, Gang Scheduling, Scale-to-Zero 아키텍처](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
 
 ## 개요
 

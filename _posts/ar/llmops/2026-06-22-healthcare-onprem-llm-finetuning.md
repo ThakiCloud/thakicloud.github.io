@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى](/assets/images/healthcare-onprem-llm-finetuning-hero.png)
+![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
 
 ## نظرة عامة
 

@@ -17,7 +17,7 @@ tags:
   - headless-agent
   - thakicloud
 header:
-  teaser: /assets/images/autonomous-ops-hero.png
+  teaser: /assets/images/autonomous-ops-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![طبولوجيا العمليات المستقلة حيث تتشابك الجداول الزمنية وخطافات الأحداث](/assets/images/autonomous-ops-hero.png)
+![طبولوجيا العمليات المستقلة حيث تتشابك الجداول الزمنية وخطافات الأحداث](/assets/images/autonomous-ops-hero.webp)
 
 ## تعريف صادق لمفهوم "الأتمتة"
 

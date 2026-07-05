@@ -17,7 +17,7 @@ toc_label: "목차"
 toc_icon: "layer-group"
 published: true
 canonical_url: "https://thakicloud.github.io/ko/research/agent-skill-shadowing-library-selection/"
-audiobook: /assets/audio/posts/agent-skill-shadowing-library-selection/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1dpp3fHV3LJfzDdEbUoR5rtgeBvolAVng/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:
   - research
@@ -83,13 +83,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-skill-shadowing-library-selection 슬라이드 1](/assets/images/agent-skill-shadowing-library-selection-slide-01.png)
+![agent-skill-shadowing-library-selection 슬라이드 1](/assets/images/agent-skill-shadowing-library-selection-slide-01.webp)
 
-![agent-skill-shadowing-library-selection 슬라이드 2](/assets/images/agent-skill-shadowing-library-selection-slide-02.png)
+![agent-skill-shadowing-library-selection 슬라이드 2](/assets/images/agent-skill-shadowing-library-selection-slide-02.webp)
 
-![agent-skill-shadowing-library-selection 슬라이드 3](/assets/images/agent-skill-shadowing-library-selection-slide-03.png)
+![agent-skill-shadowing-library-selection 슬라이드 3](/assets/images/agent-skill-shadowing-library-selection-slide-03.webp)
 
-![agent-skill-shadowing-library-selection 슬라이드 4](/assets/images/agent-skill-shadowing-library-selection-slide-04.png)
+![agent-skill-shadowing-library-selection 슬라이드 4](/assets/images/agent-skill-shadowing-library-selection-slide-04.webp)
 
 ## 출처
 

@@ -22,7 +22,7 @@ categories:
   - dev
 ---
 
-![스킬 생태계 라우팅 SRA 히어로 이미지](/assets/images/skill-ecosystem-routing-sra-hero.png)
+![스킬 생태계 라우팅 SRA 히어로 이미지](/assets/images/skill-ecosystem-routing-sra-hero.webp)
 
 ## 개요: 스킬 폭증이 만들어낸 문제
 

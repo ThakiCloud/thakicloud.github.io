@@ -126,11 +126,11 @@ vLLM Prefix Caching은 플래그 하나로 켜지는 무료 최적화입니다. 
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 1](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.png)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 1](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.webp)
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 2](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.png)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 2](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.webp)
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 3](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.png)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 3](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.webp)
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 4](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.png)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 4](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.webp)
 

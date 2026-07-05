@@ -22,7 +22,7 @@ categories:
   - llmops
 ---
 
-![LLM 비용 라우팅 가드레일 실전기](/assets/images/llm-cost-routing-guardrails-hero.png)
+![LLM 비용 라우팅 가드레일 실전기](/assets/images/llm-cost-routing-guardrails-hero.webp)
 
 ## 개요: $705 청구서로 시작된 이야기
 

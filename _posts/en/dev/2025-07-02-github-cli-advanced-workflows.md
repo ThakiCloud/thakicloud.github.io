@@ -26,7 +26,7 @@ published: false
 
 This is the final installment of the **macOS GitHub CLI Complete Automation Series**. We will integrate all the systems built so far and create a complete workflow ready for immediate production use. This part covers CI/CD integration, team onboarding automation, and performance optimization.
 
-![Conceptual view of zshrc loading automation modules into a unified gh dispatcher that drives GitHub](/assets/images/github-cli-advanced-workflows-hero.png)
+![Conceptual view of zshrc loading automation modules into a unified gh dispatcher that drives GitHub](/assets/images/github-cli-advanced-workflows-hero.webp)
 
 ## Integrated System Architecture
 

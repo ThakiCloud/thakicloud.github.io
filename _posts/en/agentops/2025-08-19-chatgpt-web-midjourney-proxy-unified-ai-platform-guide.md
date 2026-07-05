@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.png)
+![Key concept illustration](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.webp)
 
 ⏱️ **Estimated reading time**: 15 min
 

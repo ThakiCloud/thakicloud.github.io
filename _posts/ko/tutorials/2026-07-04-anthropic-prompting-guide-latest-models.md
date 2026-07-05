@@ -14,7 +14,7 @@ categories:
   - tutorials
 ---
 
-![구조화된 지시가 층층이 쌓여 하나의 정돈된 출력으로 수렴하는 추상 이미지](/assets/images/anthropic-prompting-guide-latest-models-hero.png)
+![구조화된 지시가 층층이 쌓여 하나의 정돈된 출력으로 수렴하는 추상 이미지](/assets/images/anthropic-prompting-guide-latest-models-hero.webp)
 *명료한 지시와 구조가 모여 예측 가능한 출력으로 수렴하는 프롬프팅의 원리를 형상화했습니다.*
 
 ## 개요

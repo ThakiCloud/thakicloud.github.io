@@ -23,7 +23,7 @@ published: true
 canonical_url: "https://thakicloud.github.io/ar/research/nvidia-aspire-agentic-skill-discovery/"
 ---
 
-![شبكة مجرّدة من العقد المتوهّجة تتراكم في بنية كثيفة قابلة لإعادة الاستخدام](/assets/images/nvidia-aspire-agentic-skill-discovery-hero.png)
+![شبكة مجرّدة من العقد المتوهّجة تتراكم في بنية كثيفة قابلة لإعادة الاستخدام](/assets/images/nvidia-aspire-agentic-skill-discovery-hero.webp)
 
 ## نظرة عامة
 

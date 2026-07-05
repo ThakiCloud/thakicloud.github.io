@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![صورة غلاف توجيه منظومة المهارات SRA](/assets/images/skill-ecosystem-routing-sra-hero.png)
+![صورة غلاف توجيه منظومة المهارات SRA](/assets/images/skill-ecosystem-routing-sra-hero.webp)
 
 ## نظرة عامة: المشكلة التي خلقها تكاثر المهارات
 

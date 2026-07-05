@@ -68,7 +68,7 @@ categories:
 2. **"Download for macOS"** 버튼 클릭
 3. `.dmg` 파일 다운로드 완료 대기
 
-![LM Studio Download](/assets/images/posts/tutorial/lm-studio-download.jpg)
+![LM Studio Download](/assets/images/posts/tutorial/lm-studio-download.webp)
 
 *LM Studio 공식 웹사이트에서 macOS 버전 다운로드*
 
@@ -109,7 +109,7 @@ LM Studio에서 DeepSeek R1 모델을 찾아보겠습니다:
    deepseek r1 0528
    ```
 
-![Model Search](/assets/images/posts/tutorial/deepseek-search.jpg)
+![Model Search](/assets/images/posts/tutorial/deepseek-search.webp)
 
 *LM Studio에서 DeepSeek R1 모델 검색*
 

@@ -26,7 +26,7 @@ categories:
   - llmops
 ---
 
-![Abstract image of a 16-bit neural network lattice condensing into a compact 4-bit core](/assets/images/nvidia-glm-5-2-nvfp4-hero.png)
+![Abstract image of a 16-bit neural network lattice condensing into a compact 4-bit core](/assets/images/nvidia-glm-5-2-nvfp4-hero.webp)
 *A conceptual visualization of 16-bit weights being compressed down to 4-bit.*
 
 For teams trying to serve a frontier-class reasoning model on their own infrastructure, the first obstacle is almost always GPU memory. Loading 753B parameters at 16-bit requires close to 1.5 TB of memory, which translates directly to multiple GPU nodes. `nvidia/GLM-5.2-NVFP4`, released on Hugging Face on June 25, 2026, is NVIDIA's attempt to lower that barrier by quantizing ZAI's (zai-org) GLM-5.2 to 4-bit precision.
@@ -53,7 +53,7 @@ NVFP4 is a 4-bit floating-point data type defined by NVIDIA. The key distinction
 
 ## The core design decision: selective quantization
 
-![Diagram of GLM-5.2-NVFP4 selective quantization strategy and serving paths](/assets/images/nvidia-glm-5-2-nvfp4-diagram.png)
+![Diagram of GLM-5.2-NVFP4 selective quantization strategy and serving paths](/assets/images/nvidia-glm-5-2-nvfp4-diagram.webp)
 *Only the linear operators inside MoE routing experts are quantized to NVFP4; shared experts and attention remain in BF16.*
 
 The most important design decision in this model is what was left unquantized. Quoting the model card directly: "only the weights and activations of linear operators inside transformer blocks within MoE experts are quantized; shared experts are not quantized." Concretely:
@@ -67,7 +67,7 @@ Quantization calibration used NVIDIA's Nemotron-family datasets. The model card 
 
 ## Public benchmarks: accuracy vs. FP8
 
-![Bar chart comparing benchmark scores between the FP8 baseline and NVFP4](/assets/images/nvidia-glm-5-2-nvfp4-results.png)
+![Bar chart comparing benchmark scores between the FP8 baseline and NVFP4](/assets/images/nvidia-glm-5-2-nvfp4-results.webp)
 *Official measurements from the nvidia/GLM-5.2-NVFP4 model card. The baseline is GLM-5.2-FP8.*
 
 The accuracy comparison published in the model card is shown below. The baseline is not BF16 but the already-compressed `GLM-5.2-FP8`, making this a more demanding comparison: not "how much does 4-bit lose vs. the original" but "how much does 4-bit lose vs. 8-bit."

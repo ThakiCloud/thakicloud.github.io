@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.github.io/ko/research/skillweaver-composition
 reading_time: true
 categories:
   - research
-audiobook: /assets/audio/posts/skillweaver-compositional-skill-routing/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1uWSeG-73f0fnkuJfIpGB4l_K-mlB_9sL/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
@@ -79,11 +79,11 @@ SkillWeaver의 메시지는 명확합니다. 복합 작업에서 라우팅 품�
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![skillweaver-compositional-skill-routing 슬라이드 1](/assets/images/skillweaver-compositional-skill-routing-slide-01.png)
+![skillweaver-compositional-skill-routing 슬라이드 1](/assets/images/skillweaver-compositional-skill-routing-slide-01.webp)
 
-![skillweaver-compositional-skill-routing 슬라이드 2](/assets/images/skillweaver-compositional-skill-routing-slide-02.png)
+![skillweaver-compositional-skill-routing 슬라이드 2](/assets/images/skillweaver-compositional-skill-routing-slide-02.webp)
 
-![skillweaver-compositional-skill-routing 슬라이드 3](/assets/images/skillweaver-compositional-skill-routing-slide-03.png)
+![skillweaver-compositional-skill-routing 슬라이드 3](/assets/images/skillweaver-compositional-skill-routing-slide-03.webp)
 
-![skillweaver-compositional-skill-routing 슬라이드 4](/assets/images/skillweaver-compositional-skill-routing-slide-04.png)
+![skillweaver-compositional-skill-routing 슬라이드 4](/assets/images/skillweaver-compositional-skill-routing-slide-04.webp)
 

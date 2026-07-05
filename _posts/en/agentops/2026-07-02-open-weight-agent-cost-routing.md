@@ -21,12 +21,12 @@ lang: en
 canonical_url: "https://thakicloud.github.io/en/agentops/open-weight-agent-cost-routing/"
 reading_time: true
 header:
-  image: /assets/images/open-weight-agent-cost-routing-hero.png
+  image: /assets/images/open-weight-agent-cost-routing-hero.webp
 categories:
   - agentops
 ---
 
-![Abstract image of a task flow passing through a prism and splitting into multiple cost lanes](/assets/images/open-weight-agent-cost-routing-hero.png)
+![Abstract image of a task flow passing through a prism and splitting into multiple cost lanes](/assets/images/open-weight-agent-cost-routing-hero.webp)
 
 Most teams that open their agent billing statement share the same misconception: "Our agents do a lot of hard reasoning, so we need the top-tier model." Look at actual production traffic, though, and the picture is different. The overwhelming majority of requests are repetitive work: translating natural language into API calls, classifying logs, chaining pipeline steps, summarizing results. None of that requires world-class reasoning. Running all of it through a frontier premium model means paying a premium price for capability you are not using.
 
@@ -125,7 +125,7 @@ The 15.3-second average latency is measured on a free shared endpoint with think
 
 Now for the cost. Using the measured token profile as a starting point, we modeled a realistic single turn at 1,000 input tokens and 300 output tokens (accounting for system prompt, tool schema, and context), run at 10,000 tasks per day for 30 days. Frontier prices come from the actual values in Paxis `models.yaml`. Open-weight prices come from representative mid-2026 managed inference estimates.
 
-![Bar chart comparing monthly API costs by model tier](/assets/images/open-weight-agent-cost-routing-results.png)
+![Bar chart comparing monthly API costs by model tier](/assets/images/open-weight-agent-cost-routing-results.webp)
 
 | Tier | Cost per task | Monthly cost (10k/day, 30 days) | vs. Premium |
 |---|---|---|---|

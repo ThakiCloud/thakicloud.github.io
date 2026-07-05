@@ -24,7 +24,7 @@ categories:
   - llmops
 ---
 
-![مرئية تجريدية لكتل رموز متوازية تنطلق للأمام دفعة واحدة](/assets/images/dflash-speculative-decoding-vllm-hero.png)
+![مرئية تجريدية لكتل رموز متوازية تنطلق للأمام دفعة واحدة](/assets/images/dflash-speculative-decoding-vllm-hero.webp)
 
 صورة تجسّد مفهوم DFlash: تحويل مرحلة الصياغة في الفك التخميني من نهج تسلسلي إلى نهج متوازي.
 
@@ -104,7 +104,7 @@ output = draft.spec_generate(
 
 أولاً، **التسريع الخالي من الخسارة في التدفق المفرد**. يُرجع بحث UCSD متوسط 4.86× لـQwen3-8B بالفك الجشع (Transformers backend)، وأعلى قيمة 6.08× على MATH-500. في نفس الظروف، يُحقق EAGLE-3 متوسط 1.76× بحجم شجرة 16، و2.02× بحجم 60. أرقام كل مهمة موضحة في الرسم البياني أدناه.
 
-![رسم بياني شريطي لمقارنة التسريع الخالٍ من الخسارة لـDFlash وEAGLE-3 على Qwen3-8B عبر المهام](/assets/images/dflash-speculative-decoding-vllm-results.png)
+![رسم بياني شريطي لمقارنة التسريع الخالٍ من الخسارة لـDFlash وEAGLE-3 على Qwen3-8B عبر المهام](/assets/images/dflash-speculative-decoding-vllm-results.webp)
 
 الرسم البياني أعلاه يُمثّل بيانياً الأرقام الرسمية من ورقة UCSD حول DFlash، وليس قياسات مباشرة من ThakiCloud. GSM8K: 5.15×، MATH-500: 6.08×، AIME25: 5.62×، HumanEval: 5.14×، LiveCodeBench: 5.51×، وهي قيم مرتفعة بشكل خاص في مهام الاستدلال الرياضي والبرمجي. في المقابل، تبلغ قيمة MT-Bench للمحادثات المفتوحة 2.75× فقط، وهو أمر متوقع لأن مكاسب الفك التخميني تتناسب مع إمكانية التنبؤ بالمخرجات (معدل القبول).
 

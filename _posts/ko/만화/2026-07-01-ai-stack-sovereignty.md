@@ -10,16 +10,16 @@ tags:
   - AI
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/ai-stack-sovereignty/strip.png
+image: /assets/images/posts/만화/ai-stack-sovereignty/strip.webp
 categories:
   - 만화
-audiobook: /assets/audio/posts/ai-stack-sovereignty/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1u60CUwh3vVjeKtn3WKbapFq0FfDO2LpD/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 어느 날 정신을 차려 보니 모델도, 추론 엔진도, 벡터 DB도 전부 남의 나라 회사 것이었습니다. 잘 돌아가긴 합니다. 문제는 스택의 어느 층도 제가 직접 통제하지 못한다는 점입니다. 약관이 바뀌거나 수출 규제가 걸리면 그날로 서비스가 멈출 수 있습니다. 여기서 '주권(sovereignty)'이란 모델과 데이터, 인프라를 남의 손이 아니라 내 통제 아래 두는 것을 뜻합니다. 파시스와 메티스가 이 상황을 어떻게 받아치는지 여섯 컷에 담았습니다.
 
-![내 AI 스택이 다 중국산이 됐다](/assets/images/posts/만화/ai-stack-sovereignty/strip.png)
+![내 AI 스택이 다 중국산이 됐다](/assets/images/posts/만화/ai-stack-sovereignty/strip.webp)
 
 > 원 뉴스: [My entire AI stack is now Chinese](https://x.com/hjguyhan/status/2071779159391793563) · twitter
 

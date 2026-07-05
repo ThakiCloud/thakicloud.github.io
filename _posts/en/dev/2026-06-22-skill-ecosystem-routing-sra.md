@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![Skill Ecosystem Routing SRA Hero Image](/assets/images/skill-ecosystem-routing-sra-hero.png)
+![Skill Ecosystem Routing SRA Hero Image](/assets/images/skill-ecosystem-routing-sra-hero.webp)
 
 ## Overview: The Problem Created by Skill Proliferation
 

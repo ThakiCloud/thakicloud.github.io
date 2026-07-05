@@ -23,7 +23,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![무한 루프 속에서 서로를 비추며 포팅되는 두 저장소를 형상화한 추상 이미지](/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.png)
+![무한 루프 속에서 서로를 비추며 포팅되는 두 저장소를 형상화한 추상 이미지](/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.webp)
 *무한 루프 안에서 소스 저장소를 타깃 형태로 반복 변환하는 RepoMirror의 미러링 구조를 형상화한 이미지입니다.*
 
 ## 서론: AI 코딩 자동화의 새로운 패러다임
@@ -143,13 +143,13 @@ RepoMirror와 같은 도구의 등장은 이러한 자동화 기술이 점차 �
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 1](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-01.png)
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 1](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-01.webp)
 
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 2](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-02.png)
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 2](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-02.webp)
 
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 3](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-03.png)
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 3](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-03.webp)
 
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 4](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-04.png)
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 4](/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-04.webp)
 
 ## 출처
 

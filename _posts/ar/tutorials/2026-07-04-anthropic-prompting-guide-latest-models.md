@@ -14,7 +14,7 @@ categories:
   - tutorials
 ---
 
-![صورة تجريدية لتعليمات مبنيّة تتراكم وتتجمّع في مخرَج واحد مرتّب](/assets/images/anthropic-prompting-guide-latest-models-hero.png)
+![صورة تجريدية لتعليمات مبنيّة تتراكم وتتجمّع في مخرَج واحد مرتّب](/assets/images/anthropic-prompting-guide-latest-models-hero.webp)
 *تصوير لكيفية تجمّع التعليمات الواضحة والبنية في مخرَج يمكن التنبّؤ به.*
 
 ## نظرة عامة

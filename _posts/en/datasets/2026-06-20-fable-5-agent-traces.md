@@ -24,7 +24,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Fable 5 agent trace overview](/assets/images/fable-5-agent-traces-hero.png)
+![Fable 5 agent trace overview](/assets/images/fable-5-agent-traces-hero.webp)
 
 ## Dataset Overview
 

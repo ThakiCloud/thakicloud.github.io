@@ -22,7 +22,7 @@ categories:
   - llmops
 ---
 
-![환자 데이터를 외부로 내보내지 않고 사내에서 의료 LLM 파인튜닝하기](/assets/images/healthcare-onprem-llm-finetuning-hero.png)
+![환자 데이터를 외부로 내보내지 않고 사내에서 의료 LLM 파인튜닝하기](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
 
 ## 개요
 

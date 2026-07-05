@@ -22,13 +22,13 @@ published: true
 canonical_url: "https://thakicloud.github.io/ko/research/nvidia-aspire-agentic-skill-discovery/"
 ---
 
-![행동의 보관소: 실패를 스킬로 증류하는 에이전트 아키텍처](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-01.png)
+![행동의 보관소: 실패를 스킬로 증류하는 에이전트 아키텍처](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-01.webp)
 
 ## 개요
 
 로봇을 오래 굴려 본 사람은 익숙한 낭비를 봅니다. 로봇이 어떤 과제를 힘들게 성공시켜도, 그 과정에서 얻은 시행착오는 대부분 버려집니다. 다음 과제에서는 또 처음부터 더듬습니다. 실패를 딛고 만든 미세한 노하우, 이를테면 그리퍼가 미끄러졌을 때의 복구 방법이나 특정 물체를 다룰 때의 접근 각도 같은 것들이 시스템 어디에도 남지 않습니다. 사람이라면 한 번 배운 요령을 다음에 다시 쓰는데, 로봇은 그러지 못합니다.
 
-![잊혀진 실패들의 낭비: 인간은 실패에서 요령을 배우지만 로봇은 매번 처음부터 다시 더듬습니다](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-02.png)
+![잊혀진 실패들의 낭비: 인간은 실패에서 요령을 배우지만 로봇은 매번 처음부터 다시 더듬습니다](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-02.webp)
 
 NVIDIA GEAR 연구진이 2026년 6월 30일 공개한 **ASPIRE**(Agentic /Skills Discovery for Robotics, arXiv 2607.00272)는 정확히 이 지점을 겨냥합니다. ASPIRE의 발상은 단순하지만 강력합니다. 로봇에게 미리 정해진 정책을 주입하는 대신, 대형 언어 모델(LLM)이 로봇 제어 코드를 **직접 작성**하고, 그 코드를 실제 실행 환경에서 돌려 실패를 관찰하며, 반복적으로 수리한 뒤, 검증된 수리 경험을 **재사용 가능한 스킬(Skill)** 로 증류합니다. 경험이 버려지지 않고 복리처럼 쌓입니다.
 
@@ -40,7 +40,7 @@ ASPIRE는 **code-as-policy** 패러다임 위에 지속 학습(continual learnin
 
 ASPIRE는 정책을 신경망 가중치가 아니라 **실행 가능한 코드**로 표현합니다. LLM이 과제를 받아 제어 프로그램을 작성하면, 그 프로그램이 시뮬레이션 또는 실제 로봇에서 실행됩니다. 실행이 실패하면 ASPIRE는 실행 궤적을 기록하고, 실패 원인을 분석하며, 프로그램을 고쳐 다시 시도합니다. 이 반복이 성공에 도달하면, 그 과정에서 검증된 수리 지식이 스킬 라이브러리에 저장됩니다. 다음 과제는 빈손이 아니라 이 라이브러리를 참조해 시작합니다.
 
-![패러다임의 전환: 대규모 시연 데이터로 학습하는 블랙박스 신경망 정책에서, 실패를 연료 삼아 사람이 읽을 수 있는 코드로 스킬을 쌓는 code-as-policy로](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-03.png)
+![패러다임의 전환: 대규모 시연 데이터로 학습하는 블랙박스 신경망 정책에서, 실패를 연료 삼아 사람이 읽을 수 있는 코드로 스킬을 쌓는 code-as-policy로](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-03.webp)
 
 ```mermaid
 flowchart TB
@@ -69,7 +69,7 @@ ASPIRE를 다른 로봇 학습과 구분하는 지점은 실패를 다루는 방
 
 논문과 프로젝트 페이지가 보고한 수치는 이 루프가 단순한 개념 이상임을 보여 줍니다. 가장 인상적인 결과는 Robosuite의 양팔 물체 핸드오버(bimanual object handover) 과제입니다. 기본 성공률 **20%**에서 시작해, 반복적 디버깅만으로 **92%**까지 올랐습니다. 추가 시연 데이터를 전혀 넣지 않고, 실행-수리 루프만으로 도달한 수치입니다.
 
-![추가 데이터 없는 성능의 도약: Robosuite 양팔 핸드오버 20%에서 92%로, LIBERO-Pro 최대 77%·Robosuite 72%·BEHAVIOR-1K 최대 32% 향상](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-05.png)
+![추가 데이터 없는 성능의 도약: Robosuite 양팔 핸드오버 20%에서 92%로, LIBERO-Pro 최대 77%·Robosuite 72%·BEHAVIOR-1K 최대 32% 향상](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-05.webp)
 
 과제 유형을 넓혀도 이점이 유지됩니다. 논문은 ASPIRE가 선행 방법 대비 다음과 같은 향상을 보였다고 보고합니다. 교란(perturbation)이 가해진 조작 과제인 LIBERO-Pro에서 **최대 77%**, Robosuite 양팔 핸드오버에서 **72%**, 장기 지평(long-horizon) 가사 과제인 BEHAVIOR-1K에서 **최대 32%**의 성능 우위입니다. 특히 장기 과제 일반화 실험에서는 스킬 라이브러리가 커질수록 성공률이 꾸준히 올랐다고 합니다. 라이브러리의 성장과 성능의 상승이 함께 간다는 점은, 경험이 실제로 복리로 쌓인다는 이 시스템의 핵심 주장을 뒷받침합니다.
 
@@ -81,17 +81,17 @@ ASPIRE의 대상은 로봇 팔이지만, 그 아키텍처가 던지는 메시지
 
 Paxis는 Skills·Tools·Policies·Audit Logs를 일급 리소스로 다룹니다. ASPIRE의 스킬 라이브러리가 Paxis에서는 BM25로 선택되는 960여 개의 스킬 하니스에 해당하고, ASPIRE의 code-as-policy 실행은 Paxis의 격리 샌드박스 실행에 대응합니다. ASPIRE가 실패 궤적을 기록하고 분석하듯, Paxis는 모든 에이전트 행동을 정책 게이트와 감사 로그로 통과시켜 무엇이 왜 실패했는지 소급 추적할 수 있게 합니다. 그리고 ASPIRE의 증류 루프가 지향하는 자기 개선은 Paxis의 자가진화 스킬로 구현됩니다. 실행에서 얻은 교훈이 새 스킬이나 스킬 개정으로 되돌아가, 다음 실행이 빈손에서 시작하지 않게 만드는 흐름입니다.
 
-![물리적 로봇에서 클라우드 에이전트로: ASPIRE의 스킬 라이브러리·코드 실행·실패 궤적 추적·증류가 각각 Paxis의 BM25 스킬 하니스·격리 샌드박스·감사 로그·자가진화 스킬에 대응](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-06.png)
+![물리적 로봇에서 클라우드 에이전트로: ASPIRE의 스킬 라이브러리·코드 실행·실패 궤적 추적·증류가 각각 Paxis의 BM25 스킬 하니스·격리 샌드박스·감사 로그·자가진화 스킬에 대응](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-06.webp)
 
 인프라 관점에서는 ThakiCloud의 **ai-platform**이 이 루프의 토대를 제공합니다. ASPIRE류의 반복 실행-수리 루프는 시뮬레이션과 추론을 대량으로 돌려야 하므로 GPU 자원의 탄력적 스케줄링이 전제됩니다. ai-platform은 Kueue 기반 GPU 스케줄링과 멀티테넌트 격리 위에서 이런 반복 워크로드를 비용 효율적으로 수용하도록 설계되어 있습니다. 저비용 서빙이 에이전트의 실행-수리 반복을 경제적으로 만들고, 그렇게 쌓인 스킬이 다시 에이전트의 자율성을 높이는 선순환입니다. 온프레미스와 소버린 환경을 요구하는 고객에게는 이 전체 루프를 자체 인프라 안에서 돌릴 수 있다는 점이 특히 의미가 있습니다.
 
-![루프를 가동하는 인프라 엔진: ai-platform의 Kueue 기반 탄력적 GPU 할당, 멀티테넌트 격리, 온프레미스·소버린을 지원하는 저비용 서빙](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-07.png)
+![루프를 가동하는 인프라 엔진: ai-platform의 Kueue 기반 탄력적 GPU 할당, 멀티테넌트 격리, 온프레미스·소버린을 지원하는 저비용 서빙](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-07.webp)
 
 ## 한계 및 반론
 
 ASPIRE의 결과가 인상적이더라도 몇 가지 유보가 필요합니다. 첫째, 보고된 수치는 대부분 시뮬레이션 벤치마크(Robosuite, LIBERO-Pro, BEHAVIOR-1K)에서 나온 것입니다. 시뮬레이션에서의 반복 디버깅은 값싸고 안전하지만, 실제 하드웨어에서는 매 시도가 시간과 마모, 안전 리스크를 수반합니다. 실행-실패-수리 루프의 경제성이 실물 로봇에서도 유지되는지는 별도의 검증이 필요합니다.
 
-![한계점과 경계선: 시뮬레이션과 현실의 간극, 저수준 제어의 한계, 스킬 라이브러리 비대화](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-08.png)
+![한계점과 경계선: 시뮬레이션과 현실의 간극, 저수준 제어의 한계, 스킬 라이브러리 비대화](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-08.webp)
 
 둘째, code-as-policy는 LLM이 유효한 제어 코드를 쓸 수 있는 과제에서 강하지만, 정밀한 연속 제어나 고빈도 피드백이 필요한 동작에서는 코드로 표현하기 어려운 영역이 남습니다. ASPIRE는 이런 저수준 제어를 기존 스킬이나 프리미티브에 위임하는 것으로 보이며, 그 프리미티브의 품질이 전체 성능의 상한을 정할 수 있습니다.
 

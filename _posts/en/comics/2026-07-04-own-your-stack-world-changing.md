@@ -13,13 +13,13 @@ tags:
   - satire
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/own-your-stack-world-changing/strip.png
+image: /assets/images/posts/comics/own-your-stack-world-changing/strip.webp
 published: false
 ---
 
 A rocket-CEO sat down with Y Combinator for 45 minutes on how to build a world-changing company. The playbook rarely changes: reason from first principles, delete every part you do not need, and own the things that matter instead of renting them. Paxis and Metis take notes on the ocean floor, right up until the final rule. 'Own your stack' turns out to mean 'get off someone else's cloud.'
 
-![How to Build a World-Changing Company](/assets/images/posts/comics/own-your-stack-world-changing/strip.png)
+![How to Build a World-Changing Company](/assets/images/posts/comics/own-your-stack-world-changing/strip.webp)
 
 > Source: [RT @WaldronLewis: Elon Musk literally sat down for a 45-minute talk with Y Combinator that explains how to build world-c](https://x.com/hjguyhan/status/2073024331979051353) · twitter
 

@@ -23,7 +23,7 @@ categories:
   - research
 ---
 
-![الحزام الذكي الذي يتطور ذاتياً كل ليلة](/assets/images/self-evolving-harness-nightly-hero.png)
+![الحزام الذكي الذي يتطور ذاتياً كل ليلة](/assets/images/self-evolving-harness-nightly-hero.webp)
 
 ## نظرة عامة: نظام يتحسن كل ليلة
 

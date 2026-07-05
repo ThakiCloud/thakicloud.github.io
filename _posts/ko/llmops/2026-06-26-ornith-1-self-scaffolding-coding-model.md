@@ -25,7 +25,7 @@ categories:
   - llmops
 ---
 
-![스스로 발판을 쌓아 올리는 자가-스캐폴딩 구조를 형상화한 추상 이미지](/assets/images/ornith-1-self-scaffolding-coding-model-hero.png)
+![스스로 발판을 쌓아 올리는 자가-스캐폴딩 구조를 형상화한 추상 이미지](/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp)
 *스스로 훈련 발판을 쌓아 올리는 자가-스캐폴딩 강화학습을 형상화한 이미지입니다.*
 
 오픈웨이트 코딩 모델의 경쟁은 이제 "벤치마크 점수가 몇 점이냐"를 넘어 "그 점수를 어떤 훈련 방법으로 끌어냈느냐"로 옮겨가고 있습니다. DeepReinforce가 2026년 6월 25일 공개한 `Ornith-1.0`은 그 방법론 자체가 헤드라인인 모델입니다. 모델이 풀이를 생성하는 동시에, 그 풀이를 유도하는 **훈련 스캐폴드(scaffold)를 스스로 작성**하도록 강화학습을 설계했습니다.
@@ -139,13 +139,13 @@ ai-platform 관점에서도 시사점은 분명합니다. self-scaffolding 방�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 1](/assets/images/ornith-1-self-scaffolding-coding-model-slide-01.png)
+![ornith-1-self-scaffolding-coding-model 슬라이드 1](/assets/images/ornith-1-self-scaffolding-coding-model-slide-01.webp)
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 2](/assets/images/ornith-1-self-scaffolding-coding-model-slide-02.png)
+![ornith-1-self-scaffolding-coding-model 슬라이드 2](/assets/images/ornith-1-self-scaffolding-coding-model-slide-02.webp)
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 3](/assets/images/ornith-1-self-scaffolding-coding-model-slide-03.png)
+![ornith-1-self-scaffolding-coding-model 슬라이드 3](/assets/images/ornith-1-self-scaffolding-coding-model-slide-03.webp)
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 4](/assets/images/ornith-1-self-scaffolding-coding-model-slide-04.png)
+![ornith-1-self-scaffolding-coding-model 슬라이드 4](/assets/images/ornith-1-self-scaffolding-coding-model-slide-04.webp)
 
 ## 출처
 

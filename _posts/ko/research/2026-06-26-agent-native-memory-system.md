@@ -24,7 +24,7 @@ categories:
   - research
 ---
 
-![계층화된 데이터가 신경망과 데이터베이스가 섞인 격자 구조를 흐르며 기억 셀이 맺혔다 사라지는 추상 이미지](/assets/images/agent-native-memory-system-hero.png)
+![계층화된 데이터가 신경망과 데이터베이스가 섞인 격자 구조를 흐르며 기억 셀이 맺혔다 사라지는 추상 이미지](/assets/images/agent-native-memory-system-hero.webp)
 
 ## 개요
 

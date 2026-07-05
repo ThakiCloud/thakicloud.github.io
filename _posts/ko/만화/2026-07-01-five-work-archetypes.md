@@ -10,8 +10,8 @@ tags:
   - ThakiCloud
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/five-work-archetypes/strip.png
-audiobook: /assets/audio/posts/five-work-archetypes/audiobook-ko.mp3
+image: /assets/images/posts/만화/five-work-archetypes/strip.webp
+audiobook: https://drive.google.com/file/d/1hsRLFO-BzV5vdzZ488rNiisLMJ5jFZIm/view
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 categories:
   - 만화
@@ -19,7 +19,7 @@ categories:
 
 미래에는 직무 이름이 사라지고 일하는 방식이 다섯 가지 '원형'으로 나뉜다고 합니다. 프로토타이퍼는 새 아이디어를 빠르게 던지는 사람이고, 빌더는 그 아이디어를 실제 제품으로 완성하는 사람입니다. 스위퍼는 코드와 화면을 정리하고 단순하게 다듬는 사람, 그로워는 이미 나온 제품을 지표로 키우는 사람입니다. 메인테이너는 성숙한 시스템을 안정적으로 지키는 사람이고요. 그런데 이 다섯은 다들 하고 싶어 하는 사이, 아무도 손들지 않는 여섯 번째 자리가 남습니다. 불 꺼지지 않게 지키는, 티 안 나는 반복 노동 말입니다. 그 빈 의자를 두고 파시스와 메티스가 벌이는 촌극입니다.
 
-![미래의 일, 직무 대신 5가지 '원형'](/assets/images/posts/만화/five-work-archetypes/strip.png)
+![미래의 일, 직무 대신 5가지 '원형'](/assets/images/posts/만화/five-work-archetypes/strip.webp)
 
 > 원 뉴스: [Boris Cherny on the five archetypes of future roles](https://x.com/bcherny) · twitter
 

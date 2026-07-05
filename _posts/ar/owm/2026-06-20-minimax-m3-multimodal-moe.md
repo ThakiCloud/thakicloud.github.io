@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لـ MiniMax-M3](/assets/images/minimax-m3-multimodal-moe-hero.png)
+![مخطط مفاهيمي لـ MiniMax-M3](/assets/images/minimax-m3-multimodal-moe-hero.webp)
 
 ## ما الجديد؟
 

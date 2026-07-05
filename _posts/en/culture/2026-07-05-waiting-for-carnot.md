@@ -16,12 +16,12 @@ toc: true
 toc_label: Contents
 canonical_url: "https://thakicloud.github.io/en/culture/waiting-for-carnot/"
 header:
-  image: /assets/images/waiting-for-carnot-hero.png
+  image: /assets/images/waiting-for-carnot-hero.webp
 categories:
   - culture
 ---
 
-![Abstract visual of steam and wave energy crossing into interference patterns](/assets/images/waiting-for-carnot-hero.png)
+![Abstract visual of steam and wave energy crossing into interference patterns](/assets/images/waiting-for-carnot-hero.webp)
 
 ## The 20-Watt Question
 

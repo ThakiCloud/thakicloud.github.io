@@ -17,14 +17,14 @@ tags:
   - moe
   - thakicloud
 header:
-  teaser: /assets/images/llm-quant-vllm-hero.png
+  teaser: /assets/images/llm-quant-vllm-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - llmops
 ---
 
-![vLLM이 서빙하는 양자화 포맷 지도](/assets/images/llm-quant-vllm-hero.png)
+![vLLM이 서빙하는 양자화 포맷 지도](/assets/images/llm-quant-vllm-hero.webp)
 
 ## 왜 또 양자화인가
 

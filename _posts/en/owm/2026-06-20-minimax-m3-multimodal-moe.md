@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![MiniMax-M3 architecture diagram](/assets/images/minimax-m3-multimodal-moe-hero.png)
+![MiniMax-M3 architecture diagram](/assets/images/minimax-m3-multimodal-moe-hero.webp)
 
 ## What Is New
 

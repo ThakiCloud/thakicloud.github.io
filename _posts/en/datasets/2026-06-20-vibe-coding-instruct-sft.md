@@ -24,7 +24,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 7 min
 
-![Vibe Coding Instruct SFT overview](/assets/images/vibe-coding-instruct-sft-hero.png)
+![Vibe Coding Instruct SFT overview](/assets/images/vibe-coding-instruct-sft-hero.webp)
 
 ## Dataset Overview
 

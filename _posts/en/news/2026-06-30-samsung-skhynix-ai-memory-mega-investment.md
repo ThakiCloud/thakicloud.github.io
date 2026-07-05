@@ -29,7 +29,7 @@ On June 29, 2026, a landmark figure emerged at the Cheongwadae State Guest House
 
 This post calmly unpacks what was announced that day: what will be built, where, and at what scale; the industrial trends and policies behind the numbers; and what it all means for operators of AI infrastructure.
 
-![Bar chart comparing Samsung and SK's 10-year domestic investment plan against the government's annual budget](/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.png)
+![Bar chart comparing Samsung and SK's 10-year domestic investment plan against the government's annual budget](/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.webp)
 
 ## What Was Announced
 

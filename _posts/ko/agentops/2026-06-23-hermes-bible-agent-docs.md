@@ -21,7 +21,7 @@ categories:
   - agentops
 ---
 
-![색인된 지식 라이브러리를 추상적으로 표현한 이미지](/assets/images/hermes-bible-agent-docs-hero.png)
+![색인된 지식 라이브러리를 추상적으로 표현한 이미지](/assets/images/hermes-bible-agent-docs-hero.webp)
 *수많은 문서 노드가 하나의 밝은 검색 지점으로 수렴하는 모습으로 표현한 색인 검색.*
 
 ## 개요

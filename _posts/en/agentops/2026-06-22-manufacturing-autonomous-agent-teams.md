@@ -23,7 +23,7 @@ categories:
   - agentops
 ---
 
-![Manufacturing Operations Autonomous Agent Teams Header Image](/assets/images/manufacturing-autonomous-agent-teams-hero.png)
+![Manufacturing Operations Autonomous Agent Teams Header Image](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
 
 ## Overview
 

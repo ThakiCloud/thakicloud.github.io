@@ -19,14 +19,14 @@ tags:
   - moe
   - thakicloud
 header:
-  teaser: /assets/images/llm-quant-vllm-hero.png
+  teaser: /assets/images/llm-quant-vllm-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - llmops
 ---
 
-![خريطة صيغ الضغط الكمّي التي تخدمها vLLM](/assets/images/llm-quant-vllm-hero.png)
+![خريطة صيغ الضغط الكمّي التي تخدمها vLLM](/assets/images/llm-quant-vllm-hero.webp)
 
 ## لماذا الضغط الكمّي مرّة أخرى
 

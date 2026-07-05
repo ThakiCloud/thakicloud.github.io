@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![رسم توضيحي للمفهوم](/assets/images/post-training-revolution-rl-agent-development-hero.png)
+![رسم توضيحي للمفهوم](/assets/images/post-training-revolution-rl-agent-development-hero.webp)
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة
 

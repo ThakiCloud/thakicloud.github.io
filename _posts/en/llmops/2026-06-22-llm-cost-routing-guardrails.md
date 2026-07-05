@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![LLM Cost Routing Guardrails in Practice](/assets/images/llm-cost-routing-guardrails-hero.png)
+![LLM Cost Routing Guardrails in Practice](/assets/images/llm-cost-routing-guardrails-hero.webp)
 
 ## Overview: A Story That Began with a $705 Bill
 

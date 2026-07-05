@@ -25,7 +25,7 @@ reading_time: true
 published: false
 categories:
   - research
-audiobook: /assets/audio/posts/retool-reinforcement-learning-strategic-tool-use-llms/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1e6fxLPU870Ml1Hs-RZeTBky-4i0yKLa4/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 

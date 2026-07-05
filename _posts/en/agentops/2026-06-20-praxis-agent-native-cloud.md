@@ -19,7 +19,7 @@ tags:
   - skill-harness
   - thakicloud
 header:
-  teaser: /assets/images/praxis-architecture-hero.png
+  teaser: /assets/images/praxis-architecture-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top](/assets/images/praxis-architecture-hero.png)
+![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top](/assets/images/praxis-architecture-hero.webp)
 
 ## The Next Question in Cloud: How Do You Operate Agents?
 
@@ -35,7 +35,7 @@ Over the past decade, cloud generations have been defined by what they manage. F
 
 Paxis targets that gap. Traditional cloud treated compute, databases, and networking as first-class resources. Paxis treats AI agent capabilities (Skills), tools (Tools), policies (Policies), and audit logs (Audit) as first-class resources. Customers hire, manage, and audit "a full team of AI employees" without writing code. We call this category Agent-Native Cloud.
 
-![Traditional cloud manages Compute, DB, and Network as first-class resources; Paxis manages Skills, Tools, Policies, and Audit Logs](/assets/images/praxis-cloud-analogy.png)
+![Traditional cloud manages Compute, DB, and Network as first-class resources; Paxis manages Skills, Tools, Policies, and Audit Logs](/assets/images/praxis-cloud-analogy.webp)
 
 This post is not a marketing tagline -- it walks through a working PoC with real code. Every number below was verified against an actual server (`localhost:8080`).
 

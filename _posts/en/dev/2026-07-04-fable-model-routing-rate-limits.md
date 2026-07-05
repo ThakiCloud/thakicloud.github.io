@@ -14,7 +14,7 @@ categories:
   - dev
 ---
 
-![Abstract image of multiple sized processing streams converging into one conductor node then branching out again](/assets/images/fable-model-routing-rate-limits-hero.png)
+![Abstract image of multiple sized processing streams converging into one conductor node then branching out again](/assets/images/fable-model-routing-rate-limits-hero.webp)
 *A visualization of routing, where heavy and light work flow to different models.*
 
 ## Overview

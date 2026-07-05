@@ -23,7 +23,7 @@ categories:
   - research
 ---
 
-![مخطط مفاهيمي](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.png)
+![مخطط مفاهيمي](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
 

@@ -24,7 +24,7 @@ categories:
   - research
 ---
 
-![Abstract image of light pulses rippling in rhythm across a subtle data grid, evoking daily cadence](/assets/images/anthropic-economic-index-cadences-hero.png)
+![Abstract image of light pulses rippling in rhythm across a subtle data grid, evoking daily cadence](/assets/images/anthropic-economic-index-cadences-hero.webp)
 
 ## Overview
 
@@ -42,7 +42,7 @@ But as Claude Code and Cowork grew rapidly, a large share of sessions shifted to
 
 One more track is added. Anthropic admits it has lacked visibility into impact **outside** user sessions, that is, how people perceive AI. So it presents initial results from the [Economic Index Survey](https://www.anthropic.com/research/economic-index-survey-announcement) launched in April 2026. In short, the report is built on three axes: **hourly cadences**, **artifact classification**, and **perception survey**.
 
-![Diagram showing the expansion from a seven-day sample to a three-axis mixed-method approach (hourly cadences, artifact classification, perception survey) connected to ThakiCloud's ROI measurement framework](/assets/images/anthropic-economic-index-cadences-diagram.png)
+![Diagram showing the expansion from a seven-day sample to a three-axis mixed-method approach (hourly cadences, artifact classification, perception survey) connected to ThakiCloud's ROI measurement framework](/assets/images/anthropic-economic-index-cadences-diagram.webp)
 
 ## Axis 1: Hourly Cadences
 

@@ -28,7 +28,7 @@ What an AI coding agent can actually do is increasingly determined not by the un
 
 This post is not about that tool and does not explain how to use it. It is the opposite: an examination of the structural problem the incident exposed. The fact that "a single skill pack can change an agent's character" carries significant implications for enterprise environments, and it raises the question of how to defend against it. For that reason, neither attack techniques nor the location of the project are included here. ThakiCloud operates agent workloads for multiple customers simultaneously on a Kubernetes-based AI/ML SaaS platform, which means governance questions like this are not abstract concerns but concrete design challenges the platform faces every day.
 
-![Conceptual image of enterprise AI agent guardrails](/assets/images/ai-coding-agent-skill-guardrails-hero.png)
+![Conceptual image of enterprise AI agent guardrails](/assets/images/ai-coding-agent-skill-guardrails-hero.webp)
 
 ## What Happened: The Controversy a Single Skill Pack Sparked
 

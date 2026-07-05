@@ -18,12 +18,12 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 header:
-  image: /assets/images/b200-vllm-pd-disaggregation-hero.png
+  image: /assets/images/b200-vllm-pd-disaggregation-hero.webp
 categories:
   - llmops
 ---
 
-![B200 두 장이 Prefill과 Decode를 나눠 맡는 구조를 형상화한 이미지](/assets/images/b200-vllm-pd-disaggregation-hero.png)
+![B200 두 장이 Prefill과 Decode를 나눠 맡는 구조를 형상화한 이미지](/assets/images/b200-vllm-pd-disaggregation-hero.webp)
 *한 장은 Prefill, 한 장은 Decode를 맡고 KV 캐시가 NVLink로 건너가는 분리 서빙 구조를 형상화했습니다.*
 
 ## 개요

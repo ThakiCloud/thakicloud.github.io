@@ -45,7 +45,7 @@ The defining characteristic is that **a single model simulates 7 domains**: MCP,
 
 Another key design choice is the **native world model** approach. Environment modeling is not a capability bolted on at the end of training -- it is the objective from the very first stage (CPT), with more than 10 million real-world interaction trajectories used to instill that ability from the ground up. As the authors put it, LLMs have been trained to act well in environments but never to model the environments themselves. Qwen-AgentWorld targets exactly that gap.
 
-![Diagram showing the Qwen-AgentWorld training pipeline and two downstream usage paths](/assets/images/qwen-agentworld-language-world-models-diagram.png)
+![Diagram showing the Qwen-AgentWorld training pipeline and two downstream usage paths](/assets/images/qwen-agentworld-language-world-models-diagram.webp)
 *Architectural overview of the three-stage training pipeline (CPT/SFT/RL) and two downstream application paths for Qwen-AgentWorld.*
 
 ## Three-Stage Training Pipeline
@@ -64,7 +64,7 @@ How do you evaluate a language world model? The Qwen team released **AgentWorldB
 
 The table below shows the Overall scores (average of the 5-axis rubric per domain, normalized 0-100) from the official GitHub repository.
 
-![Bar chart comparing Qwen-AgentWorld and frontier models on AgentWorldBench overall scores](/assets/images/qwen-agentworld-language-world-models-results.png)
+![Bar chart comparing Qwen-AgentWorld and frontier models on AgentWorldBench overall scores](/assets/images/qwen-agentworld-language-world-models-results.webp)
 *AgentWorldBench Overall scores. This measures environment simulation fidelity, not agent task success rate. Source: QwenLM/Qwen-AgentWorld official README.*
 
 By the numbers:

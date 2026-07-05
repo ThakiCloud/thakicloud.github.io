@@ -36,7 +36,7 @@ As speech AI technology advances rapidly, high-quality speech datasets that supp
 
 Granary is a large-scale multilingual dataset providing a total of 640,000 hours of audio across 25 European languages. It supports not only automatic speech recognition (ASR) but also automatic speech translation (AST), giving researchers and developers a rich foundation for building next-generation multilingual speech AI models.
 
-![Conceptual image of speech data in 25 European languages converging into a single multilingual speech-AI foundation](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.png)
+![Conceptual image of speech data in 25 European languages converging into a single multilingual speech-AI foundation](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp)
 
 ## Overview of the NVIDIA Granary Dataset
 

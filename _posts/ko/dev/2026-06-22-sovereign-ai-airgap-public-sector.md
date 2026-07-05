@@ -22,7 +22,7 @@ categories:
   - dev
 ---
 
-![망분리 공공기관 주권 AI 구축 레퍼런스](/assets/images/sovereign-ai-airgap-public-sector-hero.png)
+![망분리 공공기관 주권 AI 구축 레퍼런스](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)
 
 ## 개요: 왜 지금 공공기관 주권 AI가 중요한가
 

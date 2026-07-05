@@ -70,7 +70,7 @@ flowchart TB
 
 계산된 VRAM 요구량을 세 빌드 구성의 용량선과 겹쳐 보면 그림이 선명해집니다.
 
-![모델 규모와 양자화별 필요 VRAM, 그리고 세 빌드 구성의 용량선](/assets/images/personal-ai-computer-onprem-vram-results.png)
+![모델 규모와 양자화별 필요 VRAM, 그리고 세 빌드 구성의 용량선](/assets/images/personal-ai-computer-onprem-vram-results.webp)
 
 용량선 위에 막대가 걸치지 않아야 그 모델이 해당 구성에서 실행됩니다. 정리하면 이렇습니다.
 

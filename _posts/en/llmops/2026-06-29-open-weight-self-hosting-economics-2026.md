@@ -20,12 +20,12 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/en/llmops/open-weight-self-hosting-economics-2026/"
 reading_time: true
 header:
-  image: /assets/images/open-weight-self-hosting-economics-2026-hero.png
+  image: /assets/images/open-weight-self-hosting-economics-2026-hero.webp
 categories:
   - llmops
 ---
 
-![Abstract visual representing open-weight models and self-hosting economics](/assets/images/open-weight-self-hosting-economics-2026-hero.png)
+![Abstract visual representing open-weight models and self-hosting economics](/assets/images/open-weight-self-hosting-economics-2026-hero.webp)
 
 The mid-2026 open-weight landscape can be summarized in a single sentence: **the gap has narrowed, and it is no longer widening.** OpenRouter's June roundup finds that open-weight models maintain roughly a 3-to-6-month capability lag behind frontier labs, yet that interval is not growing. If that assessment holds, the real organizational decision is no longer "which model is the most capable?" It is "where should this workload run, and at what cost?"
 

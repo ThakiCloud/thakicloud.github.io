@@ -11,7 +11,7 @@ tags:
   - ThakiCloud
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.png
+image: /assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.webp
 categories:
   - comics
 published: false
@@ -19,7 +19,7 @@ published: false
 
 A founder went viral bragging that swapping his entire AI stack to Chinese open models cut costs 87% with revenue untouched. The reasoning brain moved off Opus onto a Kimi-class model, and each task got routed to whatever was cheapest. On the spreadsheet, it's a clean win. But something quietly gets blurred. Sovereignty means the models, the data, and the infrastructure sit under your control, and on-prem means running all of it inside your own walls rather than someone else's cloud. Trading a US API for a Chinese one lowered the invoice. The keys still belong to somebody else.
 
-![My Whole AI Stack Went Chinese](/assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.png)
+![My Whole AI Stack Went Chinese](/assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.webp)
 
 > Source: [RT @DeRonin_: My entire AI stack is now Chinese 🇨🇳](https://x.com/hjguyhan/status/2071779159391793563) · twitter
 

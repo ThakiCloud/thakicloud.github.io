@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لـ Kimi K2.6](/assets/images/kimi-k2-6-hero.png)
+![مخطط مفاهيمي لـ Kimi K2.6](/assets/images/kimi-k2-6-hero.webp)
 
 ## نظرة عامة على Kimi K2.6
 

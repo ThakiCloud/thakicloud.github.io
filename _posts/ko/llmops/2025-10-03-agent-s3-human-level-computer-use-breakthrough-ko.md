@@ -20,7 +20,7 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/agent-s3-human-level-comp
 categories:
   - llmops
 published: false
-audiobook: /assets/audio/posts/agent-s3-human-level-computer-use-breakthrough-ko/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1R6_Sw5RkTxnv_cv2k49zXE-fEADnK3tN/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
@@ -497,11 +497,11 @@ Agent S3의 성공은 컴퓨터 사용 자동화 분야의 밝은 미래를 보�
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.png)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.webp)
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.png)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.webp)
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.png)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.webp)
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.png)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.webp)
 

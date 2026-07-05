@@ -18,13 +18,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "graduation-cap"
 header:
-  image: /assets/images/academic-research-skills-claude-code-hero.png
+  image: /assets/images/academic-research-skills-claude-code-hero.webp
 canonical_url: "https://thakicloud.github.io/ar/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
 ---
 
-![صورة مجردة لخط تجميع بحثي](/assets/images/academic-research-skills-claude-code-hero.png)
+![صورة مجردة لخط تجميع بحثي](/assets/images/academic-research-skills-claude-code-hero.webp)
 *خط أنابيب متدرج يتدفق من البحث حتى المخطوطة، عابراً بوابات التحقق في كل مرحلة.*
 
 ## نظرة عامة

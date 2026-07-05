@@ -25,7 +25,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لـ Vibe Coding Instruct SFT](/assets/images/vibe-coding-instruct-sft-hero.png)
+![مخطط مفاهيمي لـ Vibe Coding Instruct SFT](/assets/images/vibe-coding-instruct-sft-hero.webp)
 
 ## نظرة عامة على مجموعة البيانات
 

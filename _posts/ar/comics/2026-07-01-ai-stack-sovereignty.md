@@ -10,7 +10,7 @@ tags:
   - AI
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/ai-stack-sovereignty/strip.png
+image: /assets/images/posts/comics/ai-stack-sovereignty/strip.webp
 categories:
   - comics
 published: false
@@ -18,7 +18,7 @@ published: false
 
 تستيقظ ذات صباح لتجد أن الحزمة كلها صارت ملكاً لغيرك. النموذج ومحرك الاستدلال وقاعدة بيانات المتجهات، جميعها مستأجرة من شركة عبر المحيط. تعمل الأمور بشكل جيد. المشكلة أنك لا تتحكم في أي طبقة منها، فيوم تتغير الشروط أو يصدر قيد على التصدير ينتهي كل شيء. السيادة هنا تعني إبقاء نماذجك وبياناتك وبنيتك التحتية تحت سيطرتك أنت لا سيطرة غيرك. ست لوحات يتدبر فيها Paxis وMetis ما ينبغي فعله.
 
-![أصبحت حزمة الذكاء الاصطناعي لديّ صينية بالكامل](/assets/images/posts/comics/ai-stack-sovereignty/strip.png)
+![أصبحت حزمة الذكاء الاصطناعي لديّ صينية بالكامل](/assets/images/posts/comics/ai-stack-sovereignty/strip.webp)
 
 > المصدر: [My entire AI stack is now Chinese](https://x.com/hjguyhan/status/2071779159391793563) · twitter
 

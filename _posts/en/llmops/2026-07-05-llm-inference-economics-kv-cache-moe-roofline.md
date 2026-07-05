@@ -21,10 +21,10 @@ canonical_url: "https://thakicloud.github.io/en/llmops/llm-inference-economics-k
 categories:
   - llmops
 header:
-  teaser: /assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.png
+  teaser: /assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp
 ---
 
-![LLM inference cost structure](/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.png)
+![LLM inference cost structure](/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp)
 
 ## Overview: The Paradox of an 8x Larger Model Being 5x Cheaper
 
@@ -100,7 +100,7 @@ At 1M, Qwen must read 10GB per request at every step, dropping it to about 1.2k 
 
 Converted to dollars, at 32K it's Qwen $0.18/M versus DeepSeek V4 Flash $0.06/M; at 1M it's Qwen $4.6/M versus DeepSeek V4 Flash $0.5/M. Across the tens-to-hundreds-of-K range that is the average depth for agentic workloads, the cost gap widens to 3-10x, which lands in exactly the same order of magnitude as the observed API price difference (roughly 5x).
 
-![Throughput and cost comparison by context depth](/assets/images/llm-inference-economics-kv-cache-moe-roofline-results.png)
+![Throughput and cost comparison by context depth](/assets/images/llm-inference-economics-kv-cache-moe-roofline-results.webp)
 
 One thing worth stating honestly: there is up to a 40x discrepancy across public sources on DeepSeek V4 Flash's stored KV per token (the vLLM recipes' claim of "10% versus V3.2" conflicts with the KV table in some deployment guides). The calculation above adopts the former, which is closer to a primary source, and we want to stress that the conclusion rests on the direction of scaling, the structure by which the gap widens with depth, rather than on the absolute values.
 

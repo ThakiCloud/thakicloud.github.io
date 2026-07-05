@@ -23,7 +23,7 @@ published: true
 canonical_url: "https://thakicloud.github.io/en/research/nvidia-aspire-agentic-skill-discovery/"
 ---
 
-![An abstract lattice of glowing nodes compounding into a dense, reusable structure](/assets/images/nvidia-aspire-agentic-skill-discovery-hero.png)
+![An abstract lattice of glowing nodes compounding into a dense, reusable structure](/assets/images/nvidia-aspire-agentic-skill-discovery-hero.webp)
 
 ## Overview
 

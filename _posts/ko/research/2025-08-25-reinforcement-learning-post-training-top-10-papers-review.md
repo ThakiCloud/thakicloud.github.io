@@ -26,7 +26,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.png)
+![핵심 개념 일러스트](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 25분
 

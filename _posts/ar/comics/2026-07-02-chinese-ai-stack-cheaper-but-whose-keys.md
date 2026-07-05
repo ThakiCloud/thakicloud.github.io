@@ -11,7 +11,7 @@ tags:
   - ThakiCloud
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.png
+image: /assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.webp
 categories:
   - comics
 published: false
@@ -19,7 +19,7 @@ published: false
 
 انتشر منشور لأحد المؤسِّسين يتباهى بأن تبديل حزمة الذكاء الاصطناعي كاملةً إلى نماذج صينية مفتوحة خفّض التكاليف 87% دون أن يمسّ الإيرادات. انتقل دماغ الاستدلال من Opus إلى نموذج من فئة Kimi، ووُجِّهت كل مهمة إلى الأرخص أياً كان. على جدول البيانات يبدو الأمر انتصاراً نظيفاً. لكن شيئاً ما يُطمَس بهدوء. تعني السيادة أن النماذج والبيانات والبنية التحتية تحت سيطرتك، ويعني التشغيل داخل المنشأة (on-prem) تشغيلها كلها داخل جدرانك أنت لا في سحابة غيرك. تبديل واجهة برمجية أمريكية بأخرى صينية خفّض الفاتورة. لكن المفاتيح ما زالت ملكاً لغيرك.
 
-![أصبحت حزمة الذكاء الاصطناعي لديّ صينية بالكامل](/assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.png)
+![أصبحت حزمة الذكاء الاصطناعي لديّ صينية بالكامل](/assets/images/posts/comics/chinese-ai-stack-cheaper-but-whose-keys/strip.webp)
 
 > المصدر: [RT @DeRonin_: My entire AI stack is now Chinese 🇨🇳](https://x.com/hjguyhan/status/2071779159391793563) · twitter
 

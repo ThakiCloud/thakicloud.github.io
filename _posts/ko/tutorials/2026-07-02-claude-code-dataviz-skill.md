@@ -82,13 +82,13 @@ Slack으로 공유하는 차트에도 같은 지침이 적용된다는 점은 �
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-dataviz-skill 슬라이드 1](/assets/images/claude-code-dataviz-skill-slide-01.png)
+![claude-code-dataviz-skill 슬라이드 1](/assets/images/claude-code-dataviz-skill-slide-01.webp)
 
-![claude-code-dataviz-skill 슬라이드 2](/assets/images/claude-code-dataviz-skill-slide-02.png)
+![claude-code-dataviz-skill 슬라이드 2](/assets/images/claude-code-dataviz-skill-slide-02.webp)
 
-![claude-code-dataviz-skill 슬라이드 3](/assets/images/claude-code-dataviz-skill-slide-03.png)
+![claude-code-dataviz-skill 슬라이드 3](/assets/images/claude-code-dataviz-skill-slide-03.webp)
 
-![claude-code-dataviz-skill 슬라이드 4](/assets/images/claude-code-dataviz-skill-slide-04.png)
+![claude-code-dataviz-skill 슬라이드 4](/assets/images/claude-code-dataviz-skill-slide-04.webp)
 
 ## 출처
 

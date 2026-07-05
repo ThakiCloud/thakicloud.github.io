@@ -23,7 +23,7 @@ categories:
   - agentops
 ---
 
-![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي](/assets/images/finance-ai-governance-audit-automation-hero.png)
+![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي](/assets/images/finance-ai-governance-audit-automation-hero.webp)
 
 ## نظرة عامة
 

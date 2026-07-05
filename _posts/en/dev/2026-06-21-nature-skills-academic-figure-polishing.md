@@ -20,7 +20,7 @@ categories:
   - dev
 ---
 
-![Abstract image of multi-panel data curves and figure plates floating in an academic atmosphere](/assets/images/nature-skills-hero.png)
+![Abstract image of multi-panel data curves and figure plates floating in an academic atmosphere](/assets/images/nature-skills-hero.webp)
 *Capturing the spirit of an academic figure skill that treats a figure not as a "pretty plot" but as a "visual argument."*
 
 ## Overview
@@ -95,7 +95,7 @@ SVG_FONTTYPE=none
 
 There are three key results. First, rendering the two-panel figure finished in about 195 milliseconds. Second, the 600dpi PNG was about 254KB and the SVG about 24KB, both lightweight. Third, and the most important verification: the generated SVG contained **36 `<text>` tags**. This is direct evidence that the "editable text" the skill promises was actually upheld. Had it been converted to outlines, the `<text>` tag count would be 0.
 
-![A Nature-style two-panel figure comparing FP16 and INT8 inference latency and throughput](/assets/images/nature-skills-results.png)
+![A Nature-style two-panel figure comparing FP16 and INT8 inference latency and throughput](/assets/images/nature-skills-results.webp)
 *The actual output rendered by applying nature-figure's rcParams and PALETTE. Left (a) shows latency by batch size, right (b) shows throughput. The serving-curve values are example data.*
 
 These numbers were all captured to stdout by running it myself, not quoted externally. The key point is that the skill proves quality with execution evidence rather than claiming in prose that it "drew something pretty."

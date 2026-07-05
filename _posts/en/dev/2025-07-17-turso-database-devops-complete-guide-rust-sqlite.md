@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![Concept diagram](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.png)
+![Concept diagram](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp)
 
 ⏱️ **Estimated reading time**: 20 min
 

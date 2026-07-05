@@ -18,7 +18,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/technique/ai-agent-memory-context-engineering/"
 reading_time: true
-audiobook: /assets/audio/posts/ai-agent-memory-context-engineering/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/193SGbK-XbseE5RHN3soLHZHWBRiEUrud/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:
   - agentops
@@ -109,13 +109,13 @@ Anthropic은 Sonnet 4.5 출시와 함께 Claude 개발자 플랫폼에 메모리
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-agent-memory-context-engineering 슬라이드 1](/assets/images/ai-agent-memory-context-engineering-slide-01.png)
+![ai-agent-memory-context-engineering 슬라이드 1](/assets/images/ai-agent-memory-context-engineering-slide-01.webp)
 
-![ai-agent-memory-context-engineering 슬라이드 2](/assets/images/ai-agent-memory-context-engineering-slide-02.png)
+![ai-agent-memory-context-engineering 슬라이드 2](/assets/images/ai-agent-memory-context-engineering-slide-02.webp)
 
-![ai-agent-memory-context-engineering 슬라이드 3](/assets/images/ai-agent-memory-context-engineering-slide-03.png)
+![ai-agent-memory-context-engineering 슬라이드 3](/assets/images/ai-agent-memory-context-engineering-slide-03.webp)
 
-![ai-agent-memory-context-engineering 슬라이드 4](/assets/images/ai-agent-memory-context-engineering-slide-04.png)
+![ai-agent-memory-context-engineering 슬라이드 4](/assets/images/ai-agent-memory-context-engineering-slide-04.webp)
 
 ## 출처
 

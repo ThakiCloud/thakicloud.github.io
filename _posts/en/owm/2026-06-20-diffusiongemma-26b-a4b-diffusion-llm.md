@@ -31,7 +31,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 9 min
 
-![DiffusionGemma 26B-A4B architecture overview](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.png)
+![DiffusionGemma 26B-A4B architecture overview](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
 
 ## What Is New
 

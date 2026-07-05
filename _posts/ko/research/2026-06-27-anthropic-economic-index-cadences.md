@@ -22,11 +22,11 @@ canonical_url: "https://thakicloud.github.io/ko/research/anthropic-economic-inde
 reading_time: true
 categories:
   - research
-audiobook: /assets/audio/posts/anthropic-economic-index-cadences/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1d6-X2wJWBGnFoMFvuQ4bNQIHnWro5_Cs/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![시간의 흐름을 따라 빛의 파동이 리듬을 그리며 데이터 격자 위를 흐르는 추상 이미지](/assets/images/anthropic-economic-index-cadences-hero.png)
+![시간의 흐름을 따라 빛의 파동이 리듬을 그리며 데이터 격자 위를 흐르는 추상 이미지](/assets/images/anthropic-economic-index-cadences-hero.webp)
 
 ## 개요
 
@@ -44,7 +44,7 @@ Anthropic은 2023년부터 Economic Index를 통해 Claude 사용 양상을 분�
 
 여기에 한 축이 더 붙습니다. 그동안 Anthropic은 사용자 세션 **바깥**의 영향, 즉 사람들이 AI를 어떻게 체감하는지에 대한 가시성이 부족했다고 인정합니다. 그래서 2026년 4월에 시작한 [경제지수 설문(Economic Index Survey)](https://www.anthropic.com/research/economic-index-survey-announcement)의 초기 결과를 함께 내놓습니다. 정리하면 이 보고서는 세 개의 축, 즉 **시간 단위 케이던스**, **산출물 분류**, **인식 설문**으로 짜여 있습니다.
 
-![기존 7일 샘플에서 시간 단위 케이던스·산출물 분류·인식 설문 세 축으로 확장되는 다층 혼합 방법론과 ThakiCloud ROI 측정 프레임워크 연결 구조도](/assets/images/anthropic-economic-index-cadences-diagram.png)
+![기존 7일 샘플에서 시간 단위 케이던스·산출물 분류·인식 설문 세 축으로 확장되는 다층 혼합 방법론과 ThakiCloud ROI 측정 프레임워크 연결 구조도](/assets/images/anthropic-economic-index-cadences-diagram.webp)
 
 ## 첫 번째 축: 시간 단위 케이던스
 
@@ -93,13 +93,13 @@ ai-platform은 Paxis 위에서 작동하는 에이전트들이 사용하는 추�
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![anthropic-economic-index-cadences 슬라이드 1](/assets/images/anthropic-economic-index-cadences-slide-01.png)
+![anthropic-economic-index-cadences 슬라이드 1](/assets/images/anthropic-economic-index-cadences-slide-01.webp)
 
-![anthropic-economic-index-cadences 슬라이드 2](/assets/images/anthropic-economic-index-cadences-slide-02.png)
+![anthropic-economic-index-cadences 슬라이드 2](/assets/images/anthropic-economic-index-cadences-slide-02.webp)
 
-![anthropic-economic-index-cadences 슬라이드 3](/assets/images/anthropic-economic-index-cadences-slide-03.png)
+![anthropic-economic-index-cadences 슬라이드 3](/assets/images/anthropic-economic-index-cadences-slide-03.webp)
 
-![anthropic-economic-index-cadences 슬라이드 4](/assets/images/anthropic-economic-index-cadences-slide-04.png)
+![anthropic-economic-index-cadences 슬라이드 4](/assets/images/anthropic-economic-index-cadences-slide-04.webp)
 
 ## 출처
 

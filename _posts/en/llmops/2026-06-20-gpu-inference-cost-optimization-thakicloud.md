@@ -17,7 +17,7 @@ tags:
   - on-premise
   - thakicloud
 header:
-  teaser: /assets/images/cost-opt-hero.png
+  teaser: /assets/images/cost-opt-hero.webp
 toc: true
 toc_sticky: true
 lang: en
@@ -26,7 +26,7 @@ categories:
   - llmops
 ---
 
-![Compute costs flowing through a GPU data center](/assets/images/cost-opt-hero.png)
+![Compute costs flowing through a GPU data center](/assets/images/cost-opt-hero.webp)
 
 ## You Cannot Cut What You Cannot See
 
@@ -65,7 +65,7 @@ There is one more adjustment specific to the Korean market: import duties, logis
 
 Once you run this formula, you get a single hourly cost per GPU. From there, "what does it cost per token to serve this model at this throughput?" becomes arithmetic rather than guesswork. That is what makes optimization concrete.
 
-![Layered breakdown of GPU cost components](/assets/images/cost-opt-amortization.png)
+![Layered breakdown of GPU cost components](/assets/images/cost-opt-amortization.webp)
 
 ## 2. Self-Hosted vs. API: Anatomy of the Gap
 
@@ -115,7 +115,7 @@ flowchart LR
 
 The efficiency goal of this structure is **bin packing** -- fitting smaller jobs densely onto GPUs to minimize fragmentation. The tighter the packing, the more work a fixed hardware budget produces, and the lower the cost per token. The 50x self-hosting advantage is only real when your scheduler is filling GPUs well.
 
-![Bin packing smaller jobs densely onto GPU resources](/assets/images/cost-opt-binpacking.png)
+![Bin packing smaller jobs densely onto GPU resources](/assets/images/cost-opt-binpacking.webp)
 
 ## 4. Squeezing More from the Serving Layer
 
@@ -143,7 +143,7 @@ Three levers drive cost down here.
 
 There is one more layer that cuts external API calls themselves. Our **Agent Tool Gateway (ATG)** applies caching, deduplication, and compression to outbound tool calls. When an agent repeats the same external call, the result is reused -- reducing not just token spend but the external API charges themselves.
 
-![Scale-to-zero: active servers collapsing to zero replicas](/assets/images/cost-opt-scale-to-zero.png)
+![Scale-to-zero: active servers collapsing to zero replicas](/assets/images/cost-opt-scale-to-zero.webp)
 
 ## 5. Routing and Observability: The Last 30% of Spend
 

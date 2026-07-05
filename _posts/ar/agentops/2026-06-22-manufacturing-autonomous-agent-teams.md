@@ -23,7 +23,7 @@ categories:
   - agentops
 ---
 
-![صورة رأسية لفرق العملاء الذكيين المستقلين في العمليات التصنيعية](/assets/images/manufacturing-autonomous-agent-teams-hero.png)
+![صورة رأسية لفرق العملاء الذكيين المستقلين في العمليات التصنيعية](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
 
 ## نظرة عامة
 

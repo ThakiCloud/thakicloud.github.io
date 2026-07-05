@@ -18,7 +18,7 @@ categories:
   - research
 ---
 
-![SkillRet 2단계 스킬 검색 파이프라인](/assets/images/skillret-hero.png)
+![SkillRet 2단계 스킬 검색 파이프라인](/assets/images/skillret-hero.webp)
 
 ## 스킬이 많아질수록 에이전트는 길을 잃는다
 

@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![Solo AI Engineer Full-Stack Operations Overview](/assets/images/solo-ai-team-fullstack-ops-hero.png)
+![Solo AI Engineer Full-Stack Operations Overview](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
 
 ## Overview: How Can One Person Handle This Scale?
 

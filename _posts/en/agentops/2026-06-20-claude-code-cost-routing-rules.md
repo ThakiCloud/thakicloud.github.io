@@ -17,14 +17,14 @@ tags:
   - llm-ops
   - thakicloud
 header:
-  teaser: /assets/images/cost-routing-hero.png
+  teaser: /assets/images/cost-routing-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - agentops
 ---
 
-![Agent tasks branching across model tiers as costs fold down](/assets/images/cost-routing-hero.png)
+![Agent tasks branching across model tiers as costs fold down](/assets/images/cost-routing-hero.webp)
 
 ## The Day We Burned $705
 

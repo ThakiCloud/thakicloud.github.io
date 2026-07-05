@@ -17,7 +17,7 @@ tags:
   - headless-agent
   - thakicloud
 header:
-  teaser: /assets/images/autonomous-ops-hero.png
+  teaser: /assets/images/autonomous-ops-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Unattended operations topology where time-axis schedules and event hooks mesh together](/assets/images/autonomous-ops-hero.png)
+![Unattended operations topology where time-axis schedules and event hooks mesh together](/assets/images/autonomous-ops-hero.webp)
 
 ## An Honest Definition of "Automated"
 

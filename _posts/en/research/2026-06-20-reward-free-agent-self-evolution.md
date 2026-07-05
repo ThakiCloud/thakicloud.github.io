@@ -28,7 +28,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Conceptual diagram of world knowledge-based reward-free self-evolution pipeline](/assets/images/reward-free-agent-hero.png)
+![Conceptual diagram of world knowledge-based reward-free self-evolution pipeline](/assets/images/reward-free-agent-hero.webp)
 
 ## The Bottleneck in Reinforcement Learning
 

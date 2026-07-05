@@ -25,7 +25,7 @@ categories:
 
 OpenRouter is the platform where millions of developers pick and call multiple LLMs through a single API. Because it reflects real usage by cost-sensitive developers, it gets cited often as a leading indicator for the broader market. On that platform, US model token share dropped from roughly 70% to roughly 30% in a single year.
 
-![Conceptual image showing token flows being redistributed across multiple model nodes](/assets/images/openrouter-china-model-share-vendor-neutral-hero.png)
+![Conceptual image showing token flows being redistributed across multiple model nodes](/assets/images/openrouter-china-model-share-vendor-neutral-hero.webp)
 
 This post verifies that data, surfaces the second layer the headline tends to obscure, and draws out what it means for ThakiCloud and Paxis strategy.
 

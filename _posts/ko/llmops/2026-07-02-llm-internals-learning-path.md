@@ -22,13 +22,13 @@ categories:
   - llmops
 ---
 
-![LLM 서빙의 블랙박스를 열다: 토큰화부터 추론 최적화까지, 인프라 엔지니어를 위한 멘탈 모델](/assets/images/llm-internals-learning-path-slide-01.png)
+![LLM 서빙의 블랙박스를 열다: 토큰화부터 추론 최적화까지, 인프라 엔지니어를 위한 멘탈 모델](/assets/images/llm-internals-learning-path-slide-01.webp)
 
 ## 개요
 
 LLM 서빙을 운영하다 보면 이상한 지점에 도달합니다. vLLM을 배포하고, GPU 사용률을 모니터링하고, 배치 크기를 조정하면서도 정작 "왜 이 요청이 KV 캐시를 이만큼 점유하는가", "GQA가 정확히 무엇을 줄여서 메모리 대역폭을 아끼는가"를 문장으로 설명하지 못하는 순간이 옵니다. 도구는 다룰 줄 알지만 그 아래의 원리는 흐릿한 상태입니다. 이 간극은 최적화를 감에 의존하게 만들고, 장애가 났을 때 원인을 추론하지 못하게 합니다.
 
-![도구는 다루지만 그 아래의 원리를 모르는 상태: KV 캐시 점유와 GQA를 설명하지 못하는 간극](/assets/images/llm-internals-learning-path-slide-02.png)
+![도구는 다루지만 그 아래의 원리를 모르는 상태: KV 캐시 점유와 GQA를 설명하지 못하는 간극](/assets/images/llm-internals-learning-path-slide-02.webp)
 
 이 문제를 정면으로 겨냥한 학습 리소스가 [amitshekhariitbhu/llm-internals](https://github.com/amitshekhariitbhu/llm-internals)입니다. 토큰화에서 시작해 어텐션, 트랜스포머 구조, KV 캐시, 그리고 추론 최적화까지 이어지는 순서로 블로그와 영상을 엮은 단계별 학습 리포지토리입니다. 원저자는 Amit Shekhar이며, 흩어진 일회성 튜토리얼 대신 하나의 정돈된 멘탈 모델을 세우도록 주제를 배열했습니다.
 
@@ -38,7 +38,7 @@ ThakiCloud는 K8s 위에서 다양한 고객 환경에 모델을 서빙하는 ai
 
 llm-internals는 코드를 실행하는 프레임워크가 아니라 **학습 경로(learning path)** 입니다. LLM이 입력을 받아 다음 토큰을 내놓기까지의 파이프라인을 따라가면서, 각 단계에 필요한 개념을 외부 자료와 함께 순서대로 제시합니다. 핵심은 "무엇을 어떤 순서로 이해해야 전체 그림이 맞춰지는가"라는 커리큘럼 설계에 있습니다.
 
-![Amit Shekhar의 llm-internals는 뒤 주제가 앞 주제 없이는 이해되지 않도록 설계된 순차적 학습 경로입니다](/assets/images/llm-internals-learning-path-slide-04.png)
+![Amit Shekhar의 llm-internals는 뒤 주제가 앞 주제 없이는 이해되지 않도록 설계된 순차적 학습 경로입니다](/assets/images/llm-internals-learning-path-slide-04.webp)
 
 리포지토리가 다루는 주요 주제는 다음과 같은 흐름을 따릅니다.
 
@@ -64,7 +64,7 @@ flowchart TB
 
 LLM은 글자나 단어를 직접 다루지 않고 토큰 단위로 처리합니다. 현대 모델 대부분은 BPE(Byte Pair Encoding) 계열을 씁니다. 자주 함께 등장하는 바이트 쌍을 반복적으로 병합해 어휘를 구성하는 방식입니다. 토큰화는 사소해 보이지만 서빙 관점에서 직접적인 비용 요소입니다. 같은 문장이라도 언어와 토크나이저에 따라 토큰 수가 크게 달라지고, 토큰 수는 곧 KV 캐시 점유량과 연산량으로 이어집니다. 한국어·아랍어 같은 비영어 텍스트가 영어보다 토큰을 더 많이 소모하는 현상은 서빙 비용 산정에서 반드시 고려해야 하는 지점입니다.
 
-![모든 서빙 비용의 출발점은 토큰 분할에 있습니다: BPE와 비영어 텍스트의 토큰 소모](/assets/images/llm-internals-learning-path-slide-06.png)
+![모든 서빙 비용의 출발점은 토큰 분할에 있습니다: BPE와 비영어 텍스트의 토큰 소모](/assets/images/llm-internals-learning-path-slide-06.webp)
 
 ### 어텐션: Query, Key, Value
 
@@ -82,13 +82,13 @@ Attention(Q, K, V) = softmax( (Q · Kᵀ) / √d_k ) · V
 
 문제는 이 캐시가 메모리를 먹는다는 점입니다. 캐시 크기는 대략 `2 × 층 수 × KV 헤드 수 × 헤드 차원 × 시퀀스 길이 × 배치 크기`에 비례합니다. 긴 컨텍스트와 많은 동시 요청은 이 값을 폭발적으로 키웁니다. vLLM의 PagedAttention이 KV 캐시를 페이지 단위로 관리해 단편화를 줄이는 이유가 바로 이 구조적 압박 때문입니다.
 
-![생성 속도를 얻는 대신 거대한 메모리 장벽을 만납니다: KV 캐시 크기 공식과 PagedAttention](/assets/images/llm-internals-learning-path-slide-08.png)
+![생성 속도를 얻는 대신 거대한 메모리 장벽을 만납니다: KV 캐시 크기 공식과 PagedAttention](/assets/images/llm-internals-learning-path-slide-08.webp)
 
 ### MoE와 GQA: 효율을 위한 구조 변화
 
 **Mixture of Experts(MoE)** 는 FFN을 여러 개의 전문가(expert)로 나누고, 라우터가 토큰마다 일부 전문가만 활성화합니다. 파라미터 총량은 크지만 토큰당 실제 연산량은 작아지는 구조입니다. 대신 서빙에서는 전문가 병렬화, 라우팅 불균형, 메모리 배치라는 새로운 과제를 안깁니다.
 
-![MoE는 파라미터 총량은 늘리고 토큰당 연산량은 줄입니다: 라우터가 일부 전문가만 선택적으로 활성화](/assets/images/llm-internals-learning-path-slide-10.png)
+![MoE는 파라미터 총량은 늘리고 토큰당 연산량은 줄입니다: 라우터가 일부 전문가만 선택적으로 활성화](/assets/images/llm-internals-learning-path-slide-10.webp)
 
 **Grouped-Query Attention(GQA)** 는 멀티헤드 어텐션(MHA)과 멀티쿼리 어텐션(MQA)의 절충안입니다. MHA는 모든 헤드가 각자의 Key/Value를 가지고, MQA는 모든 헤드가 하나의 Key/Value를 공유합니다. GQA는 헤드를 몇 개의 그룹으로 묶어 그룹 단위로 KV를 공유합니다. 결과적으로 **KV 캐시 크기와 메모리 대역폭이 줄어들면서** 품질 손실은 최소화됩니다. GQA를 이해하면 왜 최신 오픈웨이트 모델이 이 구조를 채택하는지, 그리고 서빙 시 메모리 예산이 왜 달라지는지가 선명해집니다.
 
@@ -102,7 +102,7 @@ Attention(Q, K, V) = softmax( (Q · Kᵀ) / √d_k ) · V
 
 ThakiCloud의 **ai-platform**은 Kubernetes와 Kueue GPU 스케줄링 위에서 vLLM 기반 추론을 멀티테넌트로 제공합니다. 이 글에서 정리한 내부 구조는 그대로 운영 레버로 이어집니다.
 
-![K8s 환경에서 이 지식은 멀티테넌트 운영의 무기가 됩니다: KV 캐시 예측, GQA와 양자화, MoE 병렬화](/assets/images/llm-internals-learning-path-slide-12.png)
+![K8s 환경에서 이 지식은 멀티테넌트 운영의 무기가 됩니다: KV 캐시 예측, GQA와 양자화, MoE 병렬화](/assets/images/llm-internals-learning-path-slide-12.webp)
 
 - **KV 캐시**: PagedAttention과 KV 캐시 크기 공식을 근거로, 테넌트별 컨텍스트 길이 상한과 동시성 예산을 설정합니다. 캐시 점유를 예측하면 GPU 메모리 오버커밋 없이 처리량을 끌어올릴 수 있습니다.
 - **GQA·양자화**: 같은 하드웨어에서 더 많은 요청을 담기 위해 GQA를 채택한 오픈웨이트 모델을 우선 후보로 검토하고, 양자화와 결합해 온프레미스·소버린 환경의 낮은 서빙 비용을 목표로 합니다.

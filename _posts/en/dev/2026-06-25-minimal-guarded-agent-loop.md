@@ -37,7 +37,7 @@ The skeleton of a ReAct loop is simple. A policy looks at the current state and 
 
 Guardrails add three stopping conditions to this loop. The step limit (max_steps) forces the loop to stop after a set number of iterations. The time budget (wall_budget) constrains wall-clock time per task. Repeat detection (repeat_guard) cuts the loop when the same action repeats, judging it a loop trap. Every task ends with exactly one termination reason: finished, max_steps, wall_budget, repeat_guard, or no_action.
 
-![Agent loop with guardrails: after a policy decision, the loop must pass step limit, time budget, and repeat detection before executing a tool. If any guardrail trips, the loop stops with an explicit termination reason](/assets/images/minimal-guarded-agent-loop-diagram.png)
+![Agent loop with guardrails: after a policy decision, the loop must pass step limit, time budget, and repeat detection before executing a tool. If any guardrail trips, the loop stops with an explicit termination reason](/assets/images/minimal-guarded-agent-loop-diagram.webp)
 
 The key point in this diagram is that guardrail checks happen before every tool execution. Placing guardrails outside the loop or checking them after the fact means runaway behavior has already started. Checking on every iteration, immediately before each action, is what guarantees a stop.
 
@@ -100,7 +100,7 @@ Here are the real results from running five tasks. Guardrails were set to step l
 
 The key is the termination reason distribution. Four tasks finished normally and one was blocked by repeat detection. The deliberately planted "loop forever please" task kept trying the same lookup and was stopped at exactly step 2 by repeat detection. The moment the same action exceeded the limit, the loop cut off. Without guardrails, this task would never have ended, with the policy insisting on the same action forever.
 
-![Steps per task and termination reason distribution: four normally completing tasks finish in 1 to 2 steps, and only the single loop-trap task stops via repeat detection](/assets/images/minimal-guarded-agent-loop-results.png)
+![Steps per task and termination reason distribution: four normally completing tasks finish in 1 to 2 steps, and only the single loop-trap task stops via repeat detection](/assets/images/minimal-guarded-agent-loop-results.webp)
 
 The left bar shows steps taken to termination per task. Normal tasks finished in 1 or 2 steps, and only the task requiring both calculation and lookup needed 2 steps. The right side shows the termination reason distribution, confirming that one of five tasks was stopped by a guardrail. Total processing time was 0.115 milliseconds - since there are no LLM calls, the cost of loop control itself is essentially zero. This reveals something important: the cost of adding guardrails is negligible, and the cost of omitting them is the entire runaway loop.
 

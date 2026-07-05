@@ -110,7 +110,7 @@ curl http://localhost:8000/v1/completions \
 
 10명 동시에서 이미 vLLM이 약 3.3배, 50명에서는 약 6배 처리량을 냅니다. Ollama는 FIFO 큐로 사실상 순차 처리하기 때문에 동시성이 올라가도 총처리량이 거의 늘지 않고 평평해집니다. 반면 vLLM은 연속 배칭으로 동시 요청을 흡수해 비례에 가깝게 확장합니다.
 
-![Ollama vs vLLM 동시 사용자 수에 따른 토큰 총처리량 비교 차트](/assets/images/vllm-vs-ollama-local-inference-results.png)
+![Ollama vs vLLM 동시 사용자 수에 따른 토큰 총처리량 비교 차트](/assets/images/vllm-vs-ollama-local-inference-results.webp)
 
 지연시간도 같은 이야기를 다른 각도로 보여줍니다. 단일 사용자에서 첫 응답까지 시간(TTFR)은 Ollama가 약 45ms, vLLM이 약 82ms로 Ollama가 더 빠릅니다. 그러나 50명 동시에서는 위치가 뒤집힙니다. Ollama의 TTFR은 요청이 큐에서 대기하면서 약 3,200ms까지 치솟고, vLLM은 연속 배칭 덕에 약 145ms를 유지합니다. 혼자 쓸 때 더 빠른 도구가 부하에서 가장 느려지는 역전이 일어납니다.
 

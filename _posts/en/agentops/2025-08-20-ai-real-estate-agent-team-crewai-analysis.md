@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)
+![Key concept illustration](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.webp)
 
 ⏱️ **Estimated reading time**: 15 min
 

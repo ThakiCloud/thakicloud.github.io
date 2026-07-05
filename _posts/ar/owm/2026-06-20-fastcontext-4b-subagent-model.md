@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-![مخطط مفاهيمي لـ FastContext-1.0-4B-SFT](/assets/images/fastcontext-4b-subagent-model-hero.png)
+![مخطط مفاهيمي لـ FastContext-1.0-4B-SFT](/assets/images/fastcontext-4b-subagent-model-hero.webp)
 
 ## ما الجديد
 

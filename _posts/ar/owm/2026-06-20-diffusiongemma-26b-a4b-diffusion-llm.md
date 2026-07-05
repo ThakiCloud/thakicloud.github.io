@@ -31,7 +31,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق
 
-![مخطط مفاهيمي لـ DiffusionGemma 26B-A4B](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.png)
+![مخطط مفاهيمي لـ DiffusionGemma 26B-A4B](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
 
 ## ما الجديد
 

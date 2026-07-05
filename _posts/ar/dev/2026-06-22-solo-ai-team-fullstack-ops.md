@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![نظرة عامة على تشغيل مهندس الذكاء الاصطناعي المنفرد](/assets/images/solo-ai-team-fullstack-ops-hero.png)
+![نظرة عامة على تشغيل مهندس الذكاء الاصطناعي المنفرد](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
 
 ## نظرة عامة: كيف يتمكن شخص واحد من إدارة هذا الحجم؟
 

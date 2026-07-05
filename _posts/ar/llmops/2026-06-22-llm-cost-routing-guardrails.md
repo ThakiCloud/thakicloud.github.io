@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![ضمانات توجيه تكاليف LLM في الممارسة العملية](/assets/images/llm-cost-routing-guardrails-hero.png)
+![ضمانات توجيه تكاليف LLM في الممارسة العملية](/assets/images/llm-cost-routing-guardrails-hero.webp)
 
 ## نظرة عامة: قصة بدأت بفاتورة بقيمة $705
 

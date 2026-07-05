@@ -16,12 +16,12 @@ toc: true
 toc_label: المحتويات
 canonical_url: "https://thakicloud.github.io/ar/culture/five-product-role-archetypes/"
 header:
-  image: /assets/images/five-product-role-archetypes-hero.png
+  image: /assets/images/five-product-role-archetypes-hero.webp
 categories:
   - culture
 ---
 
-![تصور تجريدي يجسد تلاشي حدود الوظائف وبروز نماذج أصيلة جديدة للأدوار](/assets/images/five-product-role-archetypes-hero.png)
+![تصور تجريدي يجسد تلاشي حدود الوظائف وبروز نماذج أصيلة جديدة للأدوار](/assets/images/five-product-role-archetypes-hero.webp)
 
 ## نظرة عامة
 

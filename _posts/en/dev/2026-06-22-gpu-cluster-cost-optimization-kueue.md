@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture](/assets/images/gpu-cluster-cost-optimization-kueue-hero.png)
+![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
 
 ## Overview
 

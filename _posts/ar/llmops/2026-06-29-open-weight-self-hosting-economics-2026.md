@@ -20,12 +20,12 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ar/llmops/open-weight-self-hosting-economics-2026/"
 reading_time: true
 header:
-  image: /assets/images/open-weight-self-hosting-economics-2026-hero.png
+  image: /assets/images/open-weight-self-hosting-economics-2026-hero.webp
 categories:
   - llmops
 ---
 
-![صورة تجريدية تعبر عن النماذج مفتوحة الأوزان واقتصاديات self-hosting](/assets/images/open-weight-self-hosting-economics-2026-hero.png)
+![صورة تجريدية تعبر عن النماذج مفتوحة الأوزان واقتصاديات self-hosting](/assets/images/open-weight-self-hosting-economics-2026-hero.webp)
 
 يمكن تلخيص مشهد النماذج مفتوحة الأوزان في منتصف 2026 بجملة واحدة: **الفجوة ضاقت، ولم تتسع من جديد.** يرى التقرير الذي أصدره OpenRouter في يونيو أن النماذج مفتوحة الأوزان باتت تحافظ على فجوة قدرة لا تتجاوز ثلاثة إلى ستة أشهر عن مختبرات الحدود الأمامية، دون أن تتسع. إذا صح هذا الافتراض، فالقرار الحقيقي الذي يجب على المؤسسات اتخاذه لم يعد "أي النماذج أذكى؟"، بل أصبح "أين نشغّل هذا الحِمل، وبأي تكلفة؟"
 

@@ -23,7 +23,7 @@ categories:
   - research
 ---
 
-![The AI Harness That Evolves Itself Every Night](/assets/images/self-evolving-harness-nightly-hero.png)
+![The AI Harness That Evolves Itself Every Night](/assets/images/self-evolving-harness-nightly-hero.webp)
 
 ## Overview: A System That Gets Better Every Night
 

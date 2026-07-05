@@ -17,7 +17,7 @@ tags:
   - agentops
   - thakicloud
 header:
-  teaser: /assets/images/self-evolving-skills-hero.png
+  teaser: /assets/images/self-evolving-skills-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![과거 대화가 재사용 가능한 스킬로 응결되는 모습](/assets/images/self-evolving-skills-hero.png)
+![과거 대화가 재사용 가능한 스킬로 응결되는 모습](/assets/images/self-evolving-skills-hero.webp)
 
 ## 매번 같은 것을 다시 설명하고 있다면
 

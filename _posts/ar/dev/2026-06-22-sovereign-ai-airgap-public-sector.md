@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![بنية مرجعية للذكاء الاصطناعي السيادي للقطاع العام المعزول](/assets/images/sovereign-ai-airgap-public-sector-hero.png)
+![بنية مرجعية للذكاء الاصطناعي السيادي للقطاع العام المعزول](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)
 
 ## نظرة عامة: لماذا يهم الذكاء الاصطناعي السيادي للقطاع العام الآن
 

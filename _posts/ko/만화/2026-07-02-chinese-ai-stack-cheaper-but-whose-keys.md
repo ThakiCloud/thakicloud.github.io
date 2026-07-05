@@ -11,8 +11,8 @@ tags:
   - ThakiCloud
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/chinese-ai-stack-cheaper-but-whose-keys/strip.png
-audiobook: /assets/audio/posts/chinese-ai-stack-cheaper-but-whose-keys/audiobook-ko.mp3
+image: /assets/images/posts/만화/chinese-ai-stack-cheaper-but-whose-keys/strip.webp
+audiobook: https://drive.google.com/file/d/1i999-mIOpDM1baGgyNxugdU65mKmgYBI/view
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 categories:
   - 만화
@@ -20,7 +20,7 @@ categories:
 
 한 창업자가 AI 스택을 통째로 중국 오픈모델로 갈아탔더니 비용이 87% 줄고 매출은 그대로라는 자랑이 화제였습니다. 추론용 두뇌를 Opus에서 Kimi 계열로 바꾸고, 작업마다 값싼 모델을 배정하는 방식이었죠. 숫자만 보면 분명 통쾌한 절감입니다. 다만 여기서 한 가지가 흐려집니다. 주권은 모델과 데이터, 인프라를 내 통제 아래 두는 것을 뜻하고, 온프렘은 그걸 남의 클라우드가 아니라 내 시설 안에서 돌리는 방식을 말합니다. 미국 API를 중국 API로 바꾼 건 요금을 낮췄을 뿐, 열쇠는 여전히 남이 쥐고 있습니다.
 
-![내 AI 스택 전부 중국산이요](/assets/images/posts/만화/chinese-ai-stack-cheaper-but-whose-keys/strip.png)
+![내 AI 스택 전부 중국산이요](/assets/images/posts/만화/chinese-ai-stack-cheaper-but-whose-keys/strip.webp)
 
 > 원 뉴스: [RT @DeRonin_: My entire AI stack is now Chinese 🇨🇳](https://x.com/hjguyhan/status/2071779159391793563) · twitter
 

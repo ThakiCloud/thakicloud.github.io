@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![MiniMax-M3 개념도](/assets/images/minimax-m3-multimodal-moe-hero.png)
+![MiniMax-M3 개념도](/assets/images/minimax-m3-multimodal-moe-hero.webp)
 
 ## 무엇이 새로운가
 

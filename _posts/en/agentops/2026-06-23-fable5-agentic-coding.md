@@ -28,7 +28,7 @@ A quote recently spread fast across developer communities: the creator of Claude
 
 ThakiCloud operates a Kubernetes-based AI/ML SaaS platform, and our own development relies heavily on agentic coding tools. The trend of "frontier models writing most of the code" is therefore not someone else's story for us. It is a daily operational design problem. The goal of this post is to look calmly at what this shift demands of cost and governance, without getting swept up in inflated numbers.
 
-![Conceptual image of agentic coding](/assets/images/fable5-agentic-coding-hero.png)
+![Conceptual image of agentic coding](/assets/images/fable5-agentic-coding-hero.webp)
 
 ## Separating Confirmed Facts From the Quote
 

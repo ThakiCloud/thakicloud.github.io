@@ -185,7 +185,7 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-![Illustration 변환 결과](/assets/images/posts/tutorial/children-illustration.jpg)
+![Illustration 변환 결과](/assets/images/posts/tutorial/children-illustration.webp)
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 일러스트레이션으로 변환하려면 다음 프롬프트를 사용하세요:
@@ -241,7 +241,7 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-![pixel patch 변환 결과](/assets/images/posts/tutorial/pixel-patch.png)
+![pixel patch 변환 결과](/assets/images/posts/tutorial/pixel-patch.webp)
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 pixel patch 변환하려면 다음 프롬프트를 사용하세요:
@@ -303,7 +303,7 @@ Apply the following JSON-based texture to the provided image.
 
 ```
 
-![animal minimalism 변환 결과](/assets/images/posts/tutorial/animal-minimalism.png)
+![animal minimalism 변환 결과](/assets/images/posts/tutorial/animal-minimalism.webp)
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 animal minimalism 변환하려면 다음 프롬프트를 사용하세요:
@@ -364,7 +364,7 @@ Apply the following JSON-based texture to the provided image.
 
 ```
 
-![Nimbus Minimal Modernism 변환 결과](/assets/images/posts/tutorial/nimbus-minimal-modernism.png)
+![Nimbus Minimal Modernism 변환 결과](/assets/images/posts/tutorial/nimbus-minimal-modernism.webp)
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 Nimbus Minimal Modernism 변환하려면 다음 프롬프트를 사용하세요:

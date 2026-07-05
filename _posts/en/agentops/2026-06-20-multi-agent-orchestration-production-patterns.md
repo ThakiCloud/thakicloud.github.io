@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Orchestrator-Worker structure where an orchestrator (Sonnet) classifies and decomposes the request, distributes it to researcher (Haiku), coder (Sonnet), and reviewer (Opus, gate only) workers, then merges the results into the final output](/assets/images/multi-agent-orchestration-production-patterns-diagram.png)
+![Orchestrator-Worker structure where an orchestrator (Sonnet) classifies and decomposes the request, distributes it to researcher (Haiku), coder (Sonnet), and reviewer (Opus, gate only) workers, then merges the results into the final output](/assets/images/multi-agent-orchestration-production-patterns-diagram.webp)
 
 ## Why This Topic Now
 

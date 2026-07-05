@@ -17,14 +17,14 @@ tags:
   - llm-ops
   - thakicloud
 header:
-  teaser: /assets/images/cost-routing-hero.png
+  teaser: /assets/images/cost-routing-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - agentops
 ---
 
-![에이전트 작업이 모델 티어별로 분기되며 비용이 접히는 모습](/assets/images/cost-routing-hero.png)
+![에이전트 작업이 모델 티어별로 분기되며 비용이 접히는 모습](/assets/images/cost-routing-hero.webp)
 
 ## 하루에 705달러를 태운 날
 

@@ -24,7 +24,7 @@ reading_time: true
 published: false
 categories:
   - research
-audiobook: /assets/audio/posts/arpo-agentic-reinforced-policy-optimization-research/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1XJwgU5Jaw4xTsdj2IoOlKgn9LjWuOb1g/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
@@ -510,11 +510,11 @@ ARPO의 등장은 AI 에이전트 개발에서 다음과 같은 변화를 가져
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.png)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.webp)
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.png)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.webp)
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.png)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.webp)
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.png)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.webp)
 

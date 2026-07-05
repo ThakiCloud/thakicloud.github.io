@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/post-training-revolution-rl-agent-development-hero.png)
+![핵심 개념 일러스트](/assets/images/post-training-revolution-rl-agent-development-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 15분
 

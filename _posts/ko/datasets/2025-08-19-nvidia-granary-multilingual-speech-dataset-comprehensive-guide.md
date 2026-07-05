@@ -35,7 +35,7 @@ categories:
 
 Granary는 25개 유럽 언어에 걸쳐 총 64만 시간에 달하는 방대한 음성 데이터를 제공하는 대규모 다언어 데이터셋입니다. 단순히 음성 인식(ASR)뿐만 아니라 음성 번역(AST) 작업까지 지원하여, 연구자와 개발자들이 차세대 다언어 음성 AI 모델을 구축할 수 있는 풍부한 토대를 마련했습니다.
 
-![25개 유럽 언어 음성 데이터가 하나의 다언어 음성 AI 토대로 모이는 개념도](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.png)
+![25개 유럽 언어 음성 데이터가 하나의 다언어 음성 AI 토대로 모이는 개념도](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp)
 
 ## NVIDIA Granary 데이터셋 개요
 

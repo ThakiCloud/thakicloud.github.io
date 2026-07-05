@@ -22,7 +22,7 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 reading_time: true
-audiobook: /assets/audio/posts/qwen3-6-27b-nvfp4-onprem-serving/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1KfD7pjbIrnA-wY6kc2je_tyHPwu5s9Lx/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:
   - owm
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 11분
 
-![Qwen3.6-27B NVFP4 4비트 양자화 개념도](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.png)
+![Qwen3.6-27B NVFP4 4비트 양자화 개념도](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp)
 
 ## 개요
 

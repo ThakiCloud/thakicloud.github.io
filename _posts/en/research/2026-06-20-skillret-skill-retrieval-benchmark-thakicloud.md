@@ -21,7 +21,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 6 min
 
-![SkillRet two-stage skill retrieval pipeline](/assets/images/skillret-hero.png)
+![SkillRet two-stage skill retrieval pipeline](/assets/images/skillret-hero.webp)
 
 ## The More Skills an Agent Has, the Easier It Gets Lost
 

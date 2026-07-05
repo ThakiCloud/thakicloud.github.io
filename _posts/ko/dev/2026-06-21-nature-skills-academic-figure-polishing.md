@@ -20,7 +20,7 @@ categories:
   - dev
 ---
 
-![다중 패널 데이터 곡선과 그림판이 학술적 분위기로 떠 있는 추상 이미지](/assets/images/nature-skills-hero.png)
+![다중 패널 데이터 곡선과 그림판이 학술적 분위기로 떠 있는 추상 이미지](/assets/images/nature-skills-hero.webp)
 *그림을 '예쁜 플롯'이 아니라 '시각적 논증'으로 다루는 학술 그림 스킬의 분위기를 담았습니다.*
 
 ## 개요
@@ -95,7 +95,7 @@ SVG_FONTTYPE=none
 
 핵심 결과는 세 가지입니다. 첫째, 2패널 그림 렌더링이 약 195밀리초로 끝났습니다. 둘째, 600dpi PNG는 약 254KB, SVG는 약 24KB로 가벼웠습니다. 셋째, 그리고 가장 중요한 검증인데, **생성된 SVG 안에 `<text>` 태그가 36개** 존재했습니다. 이는 스킬이 약속한 "편집 가능한 텍스트"가 실제로 지켜졌다는 직접 증거입니다. 외곽선으로 변환됐다면 `<text>` 태그가 0개여야 합니다.
 
-![FP16과 INT8의 추론 지연과 처리량을 비교한 Nature 스타일 2패널 그림](/assets/images/nature-skills-results.png)
+![FP16과 INT8의 추론 지연과 처리량을 비교한 Nature 스타일 2패널 그림](/assets/images/nature-skills-results.webp)
 *nature-figure의 rcParams와 PALETTE를 적용해 렌더링한 실제 결과물입니다. 왼쪽(a)은 배치 크기별 지연, 오른쪽(b)은 처리량을 보여 줍니다. 서빙 곡선 값은 예시 데이터입니다.*
 
 이 수치들은 모두 제가 직접 실행해 stdout으로 캡처한 값이며, 외부 인용이 아닙니다. 스킬이 산문으로 "예쁘게 그렸습니다"라고 주장하는 대신, 실행 증거로 품질을 증명한다는 점이 핵심입니다.

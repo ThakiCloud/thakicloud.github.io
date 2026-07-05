@@ -18,7 +18,7 @@ permalink: /ko/research/advertisement-embedding-attacks-llm-security-threat/
 canonical_url: "https://thakicloud.github.io/ko/research/advertisement-embedding-attacks-llm-security-threat/"
 categories:
   - research
-audiobook: /assets/audio/posts/advertisement-embedding-attacks-llm-security-threat/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1HtnHaVWO4Ta19nxtzQbVvT9qrCRf11vG/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 published: false
 ---
@@ -453,11 +453,11 @@ AI 커뮤니티가 이러한 도전과 씨름하면서, AEA의 등장은 AI 시�
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 1](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.png)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 1](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.webp)
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 2](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.png)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 2](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.webp)
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 3](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.png)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 3](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.webp)
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 4](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.png)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 4](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.webp)
 

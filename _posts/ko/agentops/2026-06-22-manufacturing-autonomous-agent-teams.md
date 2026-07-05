@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![제조 운영 자율 에이전트팀 헤더 이미지](/assets/images/manufacturing-autonomous-agent-teams-hero.png)
+![제조 운영 자율 에이전트팀 헤더 이미지](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
 
 ## 개요
 

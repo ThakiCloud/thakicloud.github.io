@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Kimi K2.6 agent swarm concept](/assets/images/kimi-k2-6-hero.png)
+![Kimi K2.6 agent swarm concept](/assets/images/kimi-k2-6-hero.webp)
 
 ## Kimi K2.6 Overview
 

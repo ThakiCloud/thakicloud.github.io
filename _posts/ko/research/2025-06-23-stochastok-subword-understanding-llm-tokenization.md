@@ -15,7 +15,7 @@ published: false
 categories:
   - research
   - llmops
-audiobook: /assets/audio/posts/stochastok-subword-understanding-llm-tokenization/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1ElhQF3MpnD0cj7yrFTTWnvF5wHl4Ka9g/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.github.io/ko/research/stochastok-subword-understanding-llm-tokenization/"
 ---
@@ -229,11 +229,11 @@ STOCHASTOK은 최소한의 변경으로 LLM의 서브워드 이해 능력을 획
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 1](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.png)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 1](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.webp)
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 2](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.png)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 2](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.webp)
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 3](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.png)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 3](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.webp)
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 4](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.png)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 4](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.webp)
 

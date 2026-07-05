@@ -10,7 +10,7 @@ tags:
   - AI
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/ai-stack-sovereignty/strip.png
+image: /assets/images/posts/comics/ai-stack-sovereignty/strip.webp
 categories:
   - comics
 published: false
@@ -18,7 +18,7 @@ published: false
 
 You wake up and the whole stack belongs to someone else. The model, the inference engine, the vector DB, all rented from a company across the ocean. It runs fine. The catch is that you control none of it, so the day the terms change or an export rule lands, it's over. Sovereignty here means keeping your models, data, and infrastructure under your own control instead of someone else's. Six panels of Paxis and Metis working out what to do.
 
-![My Whole AI Stack Went Chinese](/assets/images/posts/comics/ai-stack-sovereignty/strip.png)
+![My Whole AI Stack Went Chinese](/assets/images/posts/comics/ai-stack-sovereignty/strip.webp)
 
 > Source: [My entire AI stack is now Chinese](https://x.com/hjguyhan/status/2071779159391793563) · twitter
 

@@ -13,8 +13,8 @@ tags:
   - vendor-risk
   - cost
 header:
-  image: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.png
-  teaser: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.png
+  image: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp
+  teaser: /assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -27,7 +27,7 @@ categories:
   - tutorials
 ---
 
-![Abstract image contrasting a dispersing public cloud with a private infrastructure anchored in bedrock](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.png)
+![Abstract image contrasting a dispersing public cloud with a private infrastructure anchored in bedrock](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp)
 
 Today is the deadline. Anthropic's flagship model, Fable 5, is included free in subscription plans only through June 22 -- from June 23, it comes out of the included allowance. After that, using Fable 5 requires purchasing separate pay-per-use credits. The news spread quickly through developer communities, and we saw it as a signal worth paying attention to.
 

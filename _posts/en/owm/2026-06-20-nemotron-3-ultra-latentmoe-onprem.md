@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Nemotron-3-Ultra hybrid architecture concept](/assets/images/nemotron-3-ultra-hero.png)
+![Nemotron-3-Ultra hybrid architecture concept](/assets/images/nemotron-3-ultra-hero.webp)
 
 ## Nemotron-3-Ultra-550B Overview
 

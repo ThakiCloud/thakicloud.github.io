@@ -23,7 +23,7 @@ categories:
   - agentops
 ---
 
-![AI Governance and Audit Automation in Financial Services](/assets/images/finance-ai-governance-audit-automation-hero.png)
+![AI Governance and Audit Automation in Financial Services](/assets/images/finance-ai-governance-audit-automation-hero.webp)
 
 ## Overview
 

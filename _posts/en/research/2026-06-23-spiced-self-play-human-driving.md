@@ -45,7 +45,7 @@ Prior fixes meant carefully engineering rewards or deploying domain randomizatio
 
 The full structure is shown below. A cheap self-play engine is the main driver, and a 30-minute human anchor pulls the policy gently toward people through the thin string of KL regularization.
 
-![Spiced self-play architecture: a self-play engine and a human anchor combined through on-policy KL regularization to learn a human-compatible policy, evaluated in three environments](/assets/images/spiced-self-play-human-driving-diagram.png)
+![Spiced self-play architecture: a self-play engine and a human anchor combined through on-policy KL regularization to learn a human-compatible policy, evaluated in three environments](/assets/images/spiced-self-play-human-driving-diagram.webp)
 
 One design decision deserves emphasis. This KL term pulls the policy toward the anchor not on the offline logged data distribution but on the states the policy actually visits, which is on-policy regularization. If you regularize only on the offline BC distribution, you cannot prevent the policy from drifting away from the closed-loop state distribution it sees in practice. An on-policy KL, by contrast, draws the anchor in exactly at that distribution-shift point. It looks minor but it governs closed-loop stability.
 
@@ -65,7 +65,7 @@ The dataset is the Waymo Open Motion Dataset (WOMD). For the human-replay evalua
 
 The core results are summarized in the chart below. Every figure is reported by the paper; none are invented.
 
-![at-fault collision rate comparison: spiced self-play (30 min human data) 0.65%, SMART-tiny-CLSFT (full Waymo, 52 days) 1.6%, pure self-play 2.1%](/assets/images/spiced-self-play-human-driving-results.png)
+![at-fault collision rate comparison: spiced self-play (30 min human data) 0.65%, SMART-tiny-CLSFT (full Waymo, 52 days) 1.6%, pure self-play 2.1%](/assets/images/spiced-self-play-human-driving-results.webp)
 
 The key points are as follows.
 

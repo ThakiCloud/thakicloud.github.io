@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![금융권 AI 거버넌스와 감사 자동화](/assets/images/finance-ai-governance-audit-automation-hero.png)
+![금융권 AI 거버넌스와 감사 자동화](/assets/images/finance-ai-governance-audit-automation-hero.webp)
 
 ## 개요
 

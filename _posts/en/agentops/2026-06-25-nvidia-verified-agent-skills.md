@@ -24,7 +24,7 @@ categories:
   - agentops
 ---
 
-![Abstract image showing modular skill blocks sealed with cryptographic stamps, linked into a chain of trust](/assets/images/nvidia-verified-agent-skills-hero.png)
+![Abstract image showing modular skill blocks sealed with cryptographic stamps, linked into a chain of trust](/assets/images/nvidia-verified-agent-skills-hero.webp)
 
 ## Overview
 

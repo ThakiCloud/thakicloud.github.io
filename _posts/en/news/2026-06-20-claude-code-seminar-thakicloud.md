@@ -27,7 +27,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 6 min
 
-![Claude Code Seminar](/assets/images/claude-code-seminar-hero.png)
+![Claude Code Seminar](/assets/images/claude-code-seminar-hero.webp)
 
 Many teams adopt AI coding tools. Far fewer teams use those tools well across the whole team. ThakiCloud did not stop at installing Claude Code. We ran an internal seminar to refine everything from environment setup to practical usage patterns, and today we are sharing those materials publicly.
 

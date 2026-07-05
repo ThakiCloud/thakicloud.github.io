@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![توضيح للمفهوم الأساسي](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)
+![توضيح للمفهوم الأساسي](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp)
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة
 

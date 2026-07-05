@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/post-training-revolution-rl-agent-development-hero.png)
+![Key concept illustration](/assets/images/post-training-revolution-rl-agent-development-hero.webp)
 
 ⏱️ **Estimated reading time**: 18 min
 

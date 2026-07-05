@@ -45,7 +45,7 @@ categories:
 
 تصميم جوهري آخر هو كون النموذج **نموذج عالم أصيل (Native World Model)**. فنمذجة البيئة ليست ميزة أُلحقت في نهاية التدريب، بل كانت هدفاً تدريبياً منذ المرحلة الأولى (CPT). اعتمد النموذج على أكثر من عشرة ملايين مسار تفاعل من العالم الحقيقي لغرس "قدرة نمذجة البيئة" من الصفر. بعبارة المؤلفين: دُرِّبت النماذج اللغوية الكبيرة على التصرف الجيد في البيئات، لكنها لم تُدرَّب قط على نمذجة البيئات ذاتها — وهذا هو الفراغ الذي يسعى Qwen-AgentWorld إلى ملئه.
 
-![مخطط هيكلي يوضح خط أنابيب تدريب Qwen-AgentWorld ومساري الاستخدام](/assets/images/qwen-agentworld-language-world-models-diagram.png)
+![مخطط هيكلي يوضح خط أنابيب تدريب Qwen-AgentWorld ومساري الاستخدام](/assets/images/qwen-agentworld-language-world-models-diagram.webp)
 *مخطط يلخّص خط أنابيب التدريب ثلاثي المراحل (CPT/SFT/RL) ومساري الاستخدام اللاحق لـ Qwen-AgentWorld.*
 
 ## خط أنابيب التدريب ثلاثي المراحل
@@ -64,7 +64,7 @@ categories:
 
 فيما يلي نتائج الدرجة الإجمالية (Overall) وهي متوسط درجات المحاور الخمسة الموحَّدة (0-100) عبر النطاقات، كما نُشرت في المستودع الرسمي على GitHub:
 
-![مخطط أعمدة يقارن درجات Qwen-AgentWorld والنماذج الحدودية في AgentWorldBench](/assets/images/qwen-agentworld-language-world-models-results.png)
+![مخطط أعمدة يقارن درجات Qwen-AgentWorld والنماذج الحدودية في AgentWorldBench](/assets/images/qwen-agentworld-language-world-models-results.webp)
 *الدرجة الإجمالية في AgentWorldBench. تقيس دقة محاكاة البيئة، وهي مؤشر مختلف عن معدل نجاح الوكيل في إنجاز المهام. المصدر: QwenLM/Qwen-AgentWorld README الرسمي.*
 
 إليك الأرقام:

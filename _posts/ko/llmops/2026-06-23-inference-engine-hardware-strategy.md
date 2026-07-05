@@ -17,13 +17,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 header:
-  image: /assets/images/inference-engine-hardware-strategy-hero.png
+  image: /assets/images/inference-engine-hardware-strategy-hero.webp
 canonical_url: "https://thakicloud.github.io/ko/technique/inference-engine-hardware-strategy/"
 categories:
   - llmops
 ---
 
-![하드웨어가 소프트웨어를 결정하는 개념을 형상화한 이미지](/assets/images/inference-engine-hardware-strategy-hero.png)
+![하드웨어가 소프트웨어를 결정하는 개념을 형상화한 이미지](/assets/images/inference-engine-hardware-strategy-hero.webp)
 *서로 다른 크기의 토대(하드웨어)가 그 위를 흐르는 소프트웨어의 모양을 결정한다는 개념을 형상화했습니다.*
 
 ## 개요
@@ -97,13 +97,13 @@ NVIDIA에서 최대 성능이 절실할 때        → TensorRT-LLM (컴파일 �
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![inference-engine-hardware-strategy 슬라이드 1](/assets/images/inference-engine-hardware-strategy-slide-01.png)
+![inference-engine-hardware-strategy 슬라이드 1](/assets/images/inference-engine-hardware-strategy-slide-01.webp)
 
-![inference-engine-hardware-strategy 슬라이드 2](/assets/images/inference-engine-hardware-strategy-slide-02.png)
+![inference-engine-hardware-strategy 슬라이드 2](/assets/images/inference-engine-hardware-strategy-slide-02.webp)
 
-![inference-engine-hardware-strategy 슬라이드 3](/assets/images/inference-engine-hardware-strategy-slide-03.png)
+![inference-engine-hardware-strategy 슬라이드 3](/assets/images/inference-engine-hardware-strategy-slide-03.webp)
 
-![inference-engine-hardware-strategy 슬라이드 4](/assets/images/inference-engine-hardware-strategy-slide-04.png)
+![inference-engine-hardware-strategy 슬라이드 4](/assets/images/inference-engine-hardware-strategy-slide-04.webp)
 
 ## 출처
 

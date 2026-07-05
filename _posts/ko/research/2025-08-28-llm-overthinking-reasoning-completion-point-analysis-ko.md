@@ -18,7 +18,7 @@ permalink: /ko/research/llm-overthinking-reasoning-completion-point-analysis/
 canonical_url: "https://thakicloud.github.io/ko/research/llm-overthinking-reasoning-completion-point-analysis-ko/"
 categories:
   - research
-audiobook: /assets/audio/posts/llm-overthinking-reasoning-completion-point-analysis-ko/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1HORbSzy12Q0REdnAEHosuYRcL-1EL8Vd/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 

@@ -18,13 +18,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "graduation-cap"
 header:
-  image: /assets/images/academic-research-skills-claude-code-hero.png
+  image: /assets/images/academic-research-skills-claude-code-hero.webp
 canonical_url: "https://thakicloud.github.io/en/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
 ---
 
-![Abstract image of a research assembly line](/assets/images/academic-research-skills-claude-code-hero.png)
+![Abstract image of a research assembly line](/assets/images/academic-research-skills-claude-code-hero.webp)
 *A staged pipeline flowing from research to manuscript, passing through gates at each transition.*
 
 ## Overview

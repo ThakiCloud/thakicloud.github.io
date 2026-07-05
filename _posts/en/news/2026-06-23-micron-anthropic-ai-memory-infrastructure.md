@@ -51,7 +51,7 @@ Micron's stock rose roughly 5.5% immediately after the announcement. The focus o
 
 Inference for large language models is fundamentally a memory-bound workload. Every time a token is generated, the model's full set of weights must be read from memory. No matter how fast the compute units are, if weights cannot be supplied quickly enough, the GPU sits idle waiting for data. As a result, inference throughput is often determined by memory bandwidth rather than compute capacity.
 
-![AI inference server memory hierarchy: HBM is closest to the GPU and is the fastest bottleneck point](/assets/images/micron-anthropic-ai-memory-infrastructure-diagram.png)
+![AI inference server memory hierarchy: HBM is closest to the GPU and is the fastest bottleneck point](/assets/images/micron-anthropic-ai-memory-infrastructure-diagram.webp)
 
 The memory hierarchy of an AI inference server is structured as shown in the diagram above.
 

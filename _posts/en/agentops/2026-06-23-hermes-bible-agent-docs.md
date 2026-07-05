@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![Abstract representation of an indexed knowledge library](/assets/images/hermes-bible-agent-docs-hero.png)
+![Abstract representation of an indexed knowledge library](/assets/images/hermes-bible-agent-docs-hero.webp)
 *Indexed search, rendered as many document nodes converging into a single bright point.*
 
 ## Overview

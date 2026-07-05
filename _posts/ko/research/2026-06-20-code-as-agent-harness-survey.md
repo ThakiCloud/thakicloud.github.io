@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.github.io/ko/research/code-as-agent-harness-s
 reading_time: true
 categories:
   - research
-audiobook: /assets/audio/posts/code-as-agent-harness-survey/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1jrZDyEtTFKYNmx8_0TRwXFI_Y_ezagzF/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 

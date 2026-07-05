@@ -13,7 +13,7 @@ toc_label: "목차"
 published: false
 categories:
   - research
-audiobook: /assets/audio/posts/manus-ai-agent-loop-modular-architecture-analysis/audiobook-ko.mp3
+audiobook: https://drive.google.com/file/d/1TrKBdzv_IJySdaAli-LfoaOdYPBqODnn/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.github.io/ko/research/manus-ai-agent-loop-modular-architecture-analysis/"
 ---
@@ -26,7 +26,7 @@ AI 시스템의 발전과 함께 단순한 질의응답을 넘어선 복합적 �
 
 Manus AI는 기존 LLM의 한계를 뛰어넘는 포괄적인 AI 시스템으로, 다음과 같은 핵심 기능을 제공합니다.
 
-![시스템 기능 및 언어 처리](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_2-1.jpg)
+![시스템 기능 및 언어 처리](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_2-1.webp)
 
 ### 시스템 기능
 
@@ -53,7 +53,7 @@ Manus AI는 기존 LLM의 한계를 뛰어넘는 포괄적인 AI 시스템으로
 
 Manus AI의 핵심은 **에이전트 루프**라는 독특한 작업 처리 메커니즘입니다.
 
-![에이전트 루프 6단계](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_3-1.jpg)
+![에이전트 루프 6단계](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_3-1.webp)
 
 ### 6단계 순환 구조
 
@@ -68,7 +68,7 @@ Manus AI의 핵심은 **에이전트 루프**라는 독특한 작업 처리 메�
 
 ## 핵심 모듈: 삼각 구조의 지능형 시스템
 
-![핵심 모듈 구조](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_4-1.jpg)
+![핵심 모듈 구조](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_4-1.webp)
 
 Manus AI는 세 가지 핵심 모듈로 구성된 모듈식 아키텍처를 채택했습니다.
 
@@ -92,7 +92,7 @@ Manus AI는 세 가지 핵심 모듈로 구성된 모듈식 아키텍처를 채�
 
 ## 도구 세트와 사용 규칙
 
-![도구 세트 구성](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_5-1.jpg)
+![도구 세트 구성](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_5-1.webp)
 
 ### 6개 도구 그룹
 
@@ -116,7 +116,7 @@ Manus AI는 세 가지 핵심 모듈로 구성된 모듈식 아키텍처를 채�
 
 ## 기존 AI 시스템과의 차별점
 
-![특장점 및 비교 분석](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_6-1.jpg)
+![특장점 및 비교 분석](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_6-1.webp)
 
 ### 핵심 강점
 
@@ -142,7 +142,7 @@ Manus AI는 세 가지 핵심 모듈로 구성된 모듈식 아키텍처를 채�
 
 ## 시스템 아키텍처 시각화
 
-![시스템 다이어그램 모음](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_7-1.jpg)
+![시스템 다이어그램 모음](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_7-1.webp)
 
 Manus AI의 복잡한 구조를 이해하기 위해 다양한 다이어그램이 제공됩니다:
 
@@ -152,7 +152,7 @@ Manus AI의 복잡한 구조를 이해하기 위해 다양한 다이어그램이
 
 ## 컴포넌트 상호작용 분석
 
-![컴포넌트 상호작용 다이어그램](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_8-1.jpg)
+![컴포넌트 상호작용 다이어그램](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_8-1.webp)
 
 네트워크 그래프 형태로 표현된 컴포넌트 상호작용은 다음과 같은 특징을 보입니다:
 
@@ -163,7 +163,7 @@ Manus AI의 복잡한 구조를 이해하기 위해 다양한 다이어그램이
 
 ## 상세 플로우차트 분석
 
-![에이전트 루프 상세 플로우차트](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_9-1.jpg)
+![에이전트 루프 상세 플로우차트](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_9-1.webp)
 
 상세 플로우차트는 다음과 같은 기술적 특징을 보여줍니다:
 
@@ -173,7 +173,7 @@ Manus AI의 복잡한 구조를 이해하기 위해 다양한 다이어그램이
 
 ## 도구 구조 및 비중 분석
 
-![도구 구조 트리맵](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_10-1.jpg)
+![도구 구조 트리맵](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_10-1.webp)
 
 트리맵 분석을 통해 다음을 확인할 수 있습니다:
 
@@ -183,7 +183,7 @@ Manus AI의 복잡한 구조를 이해하기 위해 다양한 다이어그램이
 
 ## 시퀀스 다이어그램: 시간적 상호작용
 
-![시퀀스 다이어그램](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_11-1.jpg)
+![시퀀스 다이어그램](/assets/images/posts/research/manusai/manus_ai_analysis_20250601085334_11-1.webp)
 
 시퀀스 다이어그램은 시스템 내 상호작용의 시간적 흐름을 보여줍니다:
 

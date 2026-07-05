@@ -88,13 +88,13 @@ ThakiCloud는 쿠버네티스 위에서 Kueue로 GPU 작업을 큐잉하고, 테
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-tag-slack-agentic-collaboration 슬라이드 1](/assets/images/claude-tag-slack-agentic-collaboration-slide-01.png)
+![claude-tag-slack-agentic-collaboration 슬라이드 1](/assets/images/claude-tag-slack-agentic-collaboration-slide-01.webp)
 
-![claude-tag-slack-agentic-collaboration 슬라이드 2](/assets/images/claude-tag-slack-agentic-collaboration-slide-02.png)
+![claude-tag-slack-agentic-collaboration 슬라이드 2](/assets/images/claude-tag-slack-agentic-collaboration-slide-02.webp)
 
-![claude-tag-slack-agentic-collaboration 슬라이드 3](/assets/images/claude-tag-slack-agentic-collaboration-slide-03.png)
+![claude-tag-slack-agentic-collaboration 슬라이드 3](/assets/images/claude-tag-slack-agentic-collaboration-slide-03.webp)
 
-![claude-tag-slack-agentic-collaboration 슬라이드 4](/assets/images/claude-tag-slack-agentic-collaboration-slide-04.png)
+![claude-tag-slack-agentic-collaboration 슬라이드 4](/assets/images/claude-tag-slack-agentic-collaboration-slide-04.webp)
 
 ## 출처
 

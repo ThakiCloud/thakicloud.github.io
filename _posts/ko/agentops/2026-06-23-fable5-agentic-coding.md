@@ -27,7 +27,7 @@ categories:
 
 ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하고, 내부 개발 역시 에이전트형 코딩 도구를 적극적으로 활용합니다. 그래서 "프런티어 모델이 코드의 대부분을 쓴다"는 흐름은 우리에게 남의 이야기가 아니라 매일의 운영 설계 과제입니다. 과장된 수치에 휩쓸리지 않으면서도 이 변화가 비용과 거버넌스에 무엇을 요구하는지를 침착하게 보는 것이 이 글의 목적입니다.
 
-![에이전트형 코딩 개념 이미지](/assets/images/fable5-agentic-coding-hero.png)
+![에이전트형 코딩 개념 이미지](/assets/images/fable5-agentic-coding-hero.webp)
 
 ## 검증되는 사실과 인용을 분리합니다
 

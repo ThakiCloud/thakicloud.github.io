@@ -11,7 +11,7 @@ date: 2026-07-02
 lang: en
 canonical_url: "https://thakicloud.github.io/en/technique/prompting-claude-fable-5/"
 header:
-  image: /assets/images/prompting-claude-fable-5-hero.png
+  image: /assets/images/prompting-claude-fable-5-hero.webp
 categories:
   - llmops
 ---

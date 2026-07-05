@@ -97,13 +97,13 @@ docker run --gpus all -p 8000:8000 \
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 1](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-01.png)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 1](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-01.webp)
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 2](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-02.png)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 2](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-02.webp)
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 3](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-03.png)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 3](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-03.webp)
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 4](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-04.png)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 4](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-04.webp)
 
 ## 출처
 

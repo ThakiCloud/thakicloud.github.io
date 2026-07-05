@@ -17,14 +17,14 @@ tags:
   - llm-ops
   - thakicloud
 header:
-  teaser: /assets/images/cost-routing-hero.png
+  teaser: /assets/images/cost-routing-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - agentops
 ---
 
-![مهام الوكيل تتفرع عبر مستويات النماذج بينما تنخفض التكاليف](/assets/images/cost-routing-hero.png)
+![مهام الوكيل تتفرع عبر مستويات النماذج بينما تنخفض التكاليف](/assets/images/cost-routing-hero.webp)
 
 ## اليوم الذي أحرقنا فيه 705 دولارات
 

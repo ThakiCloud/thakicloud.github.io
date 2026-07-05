@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.png)
+![핵심 개념 일러스트](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 15분
 

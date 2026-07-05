@@ -20,12 +20,12 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/agentops/open-weight-agent-cost-routing/"
 reading_time: true
 header:
-  image: /assets/images/open-weight-agent-cost-routing-hero.png
+  image: /assets/images/open-weight-agent-cost-routing-hero.webp
 categories:
   - agentops
 ---
 
-![작업 흐름이 프리즘을 지나 여러 비용 레인으로 갈라지는 추상 이미지](/assets/images/open-weight-agent-cost-routing-hero.png)
+![작업 흐름이 프리즘을 지나 여러 비용 레인으로 갈라지는 추상 이미지](/assets/images/open-weight-agent-cost-routing-hero.webp)
 
 에이전트 운영비 청구서를 열어 보면 대부분의 팀이 같은 착각을 합니다. "우리 에이전트가 어려운 추론을 많이 하니까 최상위 모델을 써야 한다"는 것입니다. 그런데 실제 트래픽을 뜯어보면 그림이 다릅니다. 자연어 요청을 API 호출로 바꾸고, 로그를 분류하고, 파이프라인을 잇고, 결과를 요약하는 반복 작업이 압도적으로 많습니다. 이 작업들은 세계 최고 수준의 추론이 필요 없습니다. 그런데도 전부 프런티어 프리미엄 모델로 처리하면, 비싼 값을 치르고 오버스펙을 사는 셈입니다.
 
@@ -124,7 +124,7 @@ def call(prompt):
 
 이제 비용입니다. 실측 토큰 프로파일을 바탕으로, 작업 하나가 입력 1,000 토큰과 출력 300 토큰을 쓴다고 잡고(시스템 프롬프트와 도구 스키마, 문맥을 포함한 현실적인 한 턴), 하루 1만 건을 30일 돌리는 에이전트 함대를 가정했습니다. 프런티어 단가는 Paxis `models.yaml`의 실제 값을 쓰고, 오픈 가중치 단가는 2026년 중반 관리형 추론의 대표 추정치를 썼습니다.
 
-![티어별 월간 API 비용 비교 차트](/assets/images/open-weight-agent-cost-routing-results.png)
+![티어별 월간 API 비용 비교 차트](/assets/images/open-weight-agent-cost-routing-results.webp)
 
 | 티어 | 작업당 비용 | 월간 비용(1만/일·30일) | 프리미엄 대비 |
 |---|---|---|---|

@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط معماري لـ Nemotron-3-Ultra](/assets/images/nemotron-3-ultra-hero.png)
+![مخطط معماري لـ Nemotron-3-Ultra](/assets/images/nemotron-3-ultra-hero.webp)
 
 ## نظرة عامة على Nemotron-3-Ultra-550B
 

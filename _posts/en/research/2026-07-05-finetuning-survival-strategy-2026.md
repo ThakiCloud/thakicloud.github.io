@@ -23,12 +23,12 @@ categories:
   - research
   - llmops
 header:
-  teaser: /assets/images/finetuning-survival-strategy-2026-hero.png
-  overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.png
+  teaser: /assets/images/finetuning-survival-strategy-2026-hero.webp
+  overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.webp
   overlay_filter: 0.5
 ---
 
-![Fine-tuning survival strategy hero image](/assets/images/finetuning-survival-strategy-2026-hero.png)
+![Fine-tuning survival strategy hero image](/assets/images/finetuning-survival-strategy-2026-hero.webp)
 
 ## Introduction: "Don't we not need fine-tuning anymore?"
 

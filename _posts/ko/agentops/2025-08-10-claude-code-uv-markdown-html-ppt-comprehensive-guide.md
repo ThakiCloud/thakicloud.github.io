@@ -29,7 +29,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.png)
+![핵심 개념 일러스트](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 25분
 

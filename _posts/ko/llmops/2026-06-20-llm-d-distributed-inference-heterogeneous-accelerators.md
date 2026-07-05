@@ -20,14 +20,14 @@ tags:
   - kubernetes
   - thakicloud
 header:
-  teaser: /assets/images/llm-d-heterogeneous-hero.png
+  teaser: /assets/images/llm-d-heterogeneous-hero.webp
 toc: true
 toc_sticky: true
 categories:
   - llmops
 ---
 
-![GPU 풀과 국산 NPU 풀이 한 클러스터에서 함께 추론을 처리하는 이기종 구성](/assets/images/llm-d-heterogeneous-hero.png)
+![GPU 풀과 국산 NPU 풀이 한 클러스터에서 함께 추론을 처리하는 이기종 구성](/assets/images/llm-d-heterogeneous-hero.webp)
 
 ## GPU를 더 사도 추론이 안 빨라진다
 

@@ -22,7 +22,7 @@ categories:
 published: false
 ---
 
-![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.png)
+![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
 
 ⏱️ **예상 읽기 시간**: 12분
 
@@ -727,11 +727,11 @@ Pepper는 **Berkeley Sky Computing Lab**의 일환으로 **Agentica 팀**이 개
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.png)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.webp)
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.png)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.webp)
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.png)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.webp)
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.png)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.webp)
 

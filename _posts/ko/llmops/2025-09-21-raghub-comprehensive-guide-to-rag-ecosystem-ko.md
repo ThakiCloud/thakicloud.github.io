@@ -30,7 +30,7 @@ published: false
 
 RAGHub는 검색 증강 생성 시스템을 위한 도구, 프레임워크, 리소스의 포괄적인 디렉토리 역할을 하는 커뮤니티 기반 이니셔티브를 대표합니다. 불과 3개월 전의 프레임워크가 이미 구식이 될 수 있을 정도로 RAG 환경이 빠르게 변화한다는 인식에서 출발하여, RAGHub는 실무자, 연구자, 조직이 끊임없이 진화하는 이 영역을 자신감 있게 탐색할 수 있도록 돕는 것을 목표로 합니다.
 
-![모듈형 프레임워크 블록이 중앙 벡터 인덱스를 둘러싸고 연결되는 RAG 생태계 개념도](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.png)
+![모듈형 프레임워크 블록이 중앙 벡터 인덱스를 둘러싸고 연결되는 RAG 생태계 개념도](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.webp)
 
 ## RAGHub 이해하기: 커뮤니티 기반 리소스
 

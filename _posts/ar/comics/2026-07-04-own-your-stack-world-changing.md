@@ -13,14 +13,14 @@ tags:
   - satire
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/own-your-stack-world-changing/strip.png
+image: /assets/images/posts/comics/own-your-stack-world-changing/strip.webp
 canonical_url: "https://thakicloud.github.io/ar/comics/own-your-stack-world-changing/"
 published: false
 ---
 
 جلس أحد الرؤساء التنفيذيين لشركة صواريخ مع Y Combinator خمساً وأربعين دقيقة يشرح كيف تُبنى شركة تُغيّر العالم. نادراً ما يتغيّر جوهر الوصفة: فكّر من المبادئ الأولى، واحذف كل جزء لا تحتاجه، وامتلك ما يهمّ بدل أن تستأجره. يدوّن Paxis وMetis الملاحظات في قاع المحيط، حتى يتوقّفا عند القاعدة الأخيرة. فقد تبيّن أن "امتلك حزمتك" تعني في النهاية "اخرج من سحابة غيرك".
 
-![كيف تبني شركة تُغيّر العالم](/assets/images/posts/comics/own-your-stack-world-changing/strip.png)
+![كيف تبني شركة تُغيّر العالم](/assets/images/posts/comics/own-your-stack-world-changing/strip.webp)
 
 > المصدر: [RT @WaldronLewis: Elon Musk literally sat down for a 45-minute talk with Y Combinator that explains how to build world-c](https://x.com/hjguyhan/status/2073024331979051353) · twitter
 

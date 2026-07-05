@@ -23,12 +23,12 @@ categories:
   - research
   - llmops
 header:
-  teaser: /assets/images/finetuning-survival-strategy-2026-hero.png
-  overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.png
+  teaser: /assets/images/finetuning-survival-strategy-2026-hero.webp
+  overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.webp
   overlay_filter: 0.5
 ---
 
-![صورة توضيحية لاستراتيجية بقاء الضبط الدقيق](/assets/images/finetuning-survival-strategy-2026-hero.png)
+![صورة توضيحية لاستراتيجية بقاء الضبط الدقيق](/assets/images/finetuning-survival-strategy-2026-hero.webp)
 
 ## مدخل: "ألا يكفي الآن أن نستغني عن الضبط الدقيق؟"
 

@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![مخطط مفاهيمي](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.png)
+![مخطط مفاهيمي](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp)
 
 ⏱️ **وقت القراءة المقدر**: 20 دقيقة
 

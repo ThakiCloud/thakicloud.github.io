@@ -21,8 +21,8 @@ toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/research/mcp-server-architecture-patterns/"
 reading_time: true
 header:
-  image: /assets/images/mcp-server-architecture-patterns-hero.png
-  teaser: /assets/images/mcp-server-architecture-patterns-hero.png
+  image: /assets/images/mcp-server-architecture-patterns-hero.webp
+  teaser: /assets/images/mcp-server-architecture-patterns-hero.webp
 categories:
   - research
 ---
@@ -102,13 +102,13 @@ Proxy Aggregator의 위험도 같은 렌즈로 관리합니다. Paxis의 MCP 커
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![mcp-server-architecture-patterns 슬라이드 1](/assets/images/mcp-server-architecture-patterns-slide-01.png)
+![mcp-server-architecture-patterns 슬라이드 1](/assets/images/mcp-server-architecture-patterns-slide-01.webp)
 
-![mcp-server-architecture-patterns 슬라이드 2](/assets/images/mcp-server-architecture-patterns-slide-02.png)
+![mcp-server-architecture-patterns 슬라이드 2](/assets/images/mcp-server-architecture-patterns-slide-02.webp)
 
-![mcp-server-architecture-patterns 슬라이드 3](/assets/images/mcp-server-architecture-patterns-slide-03.png)
+![mcp-server-architecture-patterns 슬라이드 3](/assets/images/mcp-server-architecture-patterns-slide-03.webp)
 
-![mcp-server-architecture-patterns 슬라이드 4](/assets/images/mcp-server-architecture-patterns-slide-04.png)
+![mcp-server-architecture-patterns 슬라이드 4](/assets/images/mcp-server-architecture-patterns-slide-04.webp)
 
 ## 출처
 

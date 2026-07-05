@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 9분
 
-![DiffusionGemma 26B-A4B 개념도](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.png)
+![DiffusionGemma 26B-A4B 개념도](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
 
 ## 무엇이 새로운가
 

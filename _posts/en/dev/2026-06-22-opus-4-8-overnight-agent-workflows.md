@@ -28,7 +28,7 @@ In June 2026, an X article titled "40 Claude Opus 4.8 Workflows That Make Money 
 
 This post separates two things. First, it distinguishes what is marketing and what is real in the "earn money while you sleep" claim. Then it examines the real part - the infrastructure demand created by long-running unattended agent fan-out. ThakiCloud operates a Kubernetes-based AI/ML SaaS platform with GPU workload serving as a core product, so we are more interested in the billing structure of the inference workloads running underneath the viral headline than in the headline itself. All factual claims here are limited to what was confirmed from publicly available article metadata; unverified revenue claims have not been reproduced.
 
-![Conceptual view of unattended long-running agent fan-out generating concurrent inference load absorbed by ThakiCloud](/assets/images/opus-4-8-overnight-agent-workflows-hero.png)
+![Conceptual view of unattended long-running agent fan-out generating concurrent inference load absorbed by ThakiCloud](/assets/images/opus-4-8-overnight-agent-workflows-hero.webp)
 
 ## What the Overnight Workflow Actually Is: Hype vs. Reality
 

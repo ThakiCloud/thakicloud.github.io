@@ -19,7 +19,7 @@ tags:
   - skill-harness
   - thakicloud
 header:
-  teaser: /assets/images/praxis-architecture-hero.png
+  teaser: /assets/images/praxis-architecture-hero.webp
 toc: true
 toc_sticky: true
 categories:
@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![البنية الطبقية لـ Paxis: البنية التحتية السحابية في القاعدة، ثم Paxis Core فوقها، ثم طبقة قدرات 849 مهارة و14 وكيل نطاق في الأعلى](/assets/images/praxis-architecture-hero.png)
+![البنية الطبقية لـ Paxis: البنية التحتية السحابية في القاعدة، ثم Paxis Core فوقها، ثم طبقة قدرات 849 مهارة و14 وكيل نطاق في الأعلى](/assets/images/praxis-architecture-hero.webp)
 
 ## السؤال التالي في السحابة: كيف تُشغّل الوكلاء؟
 
@@ -35,7 +35,7 @@ published: false
 
 Paxis يستهدف هذا الفراغ. تعامَلت السحابة التقليدية مع الحوسبة وقواعد البيانات والشبكات باعتبارها موارد من الدرجة الأولى. Paxis يعامل قدرات وكلاء الذكاء الاصطناعي (Skills) وأدواتهم (Tools) وسياساتهم (Policies) وسجلات التدقيق (Audit) باعتبارها موارد من الدرجة الأولى. يستطيع العملاء توظيف "فريق كامل من موظفي الذكاء الاصطناعي" وإدارته ومراجعته دون كتابة أي كود. نُسمّي هذه الفئة Agent-Native Cloud.
 
-![السحابة التقليدية تُدير Compute وDB وNetwork كموارد درجة أولى؛ Paxis يُدير Skills وTools وPolicies وAudit Logs](/assets/images/praxis-cloud-analogy.png)
+![السحابة التقليدية تُدير Compute وDB وNetwork كموارد درجة أولى؛ Paxis يُدير Skills وTools وPolicies وAudit Logs](/assets/images/praxis-cloud-analogy.webp)
 
 هذه المقالة ليست شعارات تسويقية، بل شرح لـ PoC عامل مع كود حقيقي. كل رقم أدناه تحقّق من خلال خادم فعلي (`localhost:8080`).
 

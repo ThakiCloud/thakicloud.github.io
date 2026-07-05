@@ -21,7 +21,7 @@ categories:
   - datasets
 ---
 
-![Fable 5 에이전트 trace 개념도](/assets/images/fable-5-agent-traces-hero.png)
+![Fable 5 에이전트 trace 개념도](/assets/images/fable-5-agent-traces-hero.webp)
 
 ## 데이터셋 개요
 
