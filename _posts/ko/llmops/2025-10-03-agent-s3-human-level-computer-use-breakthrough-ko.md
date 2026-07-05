@@ -16,10 +16,12 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agent-s3-human-level-computer-use-breakthrough/
-canonical_url: "https://thakicloud.github.io/ko/llmops/agent-s3-human-level-computer-use-breakthrough/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/agent-s3-human-level-computer-use-breakthrough-ko/"
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/agent-s3-human-level-computer-use-breakthrough-ko/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
@@ -490,3 +492,16 @@ Agent S3의 성공은 컴퓨터 사용 자동화 분야의 밝은 미래를 보�
 - [컴퓨터 사용 에이전트의 진화: Agent S에서 S3까지](/ko/llmops/computer-use-agent-evolution/)
 - [AI 자동화 도구 비교 분석](/ko/tutorials/ai-automation-tools-comparison/)
 - [LLMOps에서의 에이전트 활용 전략](/ko/llmops/agent-utilization-strategies/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.png)
+
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.png)
+
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.png)
+
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.png)
+
