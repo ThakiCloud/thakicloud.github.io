@@ -23,6 +23,7 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/vllm-eagle-speculative-de
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
