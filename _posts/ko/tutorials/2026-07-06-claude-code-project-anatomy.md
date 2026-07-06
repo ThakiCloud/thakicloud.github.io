@@ -12,6 +12,8 @@ lang: ko
 canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-project-anatomy/"
 categories:
   - tutorials
+audiobook: https://drive.google.com/file/d/1Yl3DzGVQAUbt4tVeUGul-TyyR2FWibh6/view
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![층층이 쌓인 설정 레이어가 하나의 정돈된 에이전트 실행으로 수렴하는 추상 이미지](/assets/images/claude-code-project-anatomy-hero.webp)
