@@ -6,7 +6,7 @@ seo_description: "تحليل أكاديمي مفصل لمستودع awesome-ai-e
 date: 2025-09-08
 lang: ar
 permalink: /ar/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/"
+canonical_url: "https://thakicloud.github.io/ar/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ar/"
 tags:
   - كفاءة-الذكاء-الاصطناعي
   - تحسين-النماذج
@@ -19,6 +19,7 @@ toc: true
 toc_label: "جدول المحتويات"
 categories:
   - research
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 15 دقيقة

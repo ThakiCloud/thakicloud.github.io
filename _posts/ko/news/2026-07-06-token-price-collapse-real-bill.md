@@ -16,9 +16,12 @@ tags:
   - thakicloud
 categories:
   - news
+canonical_url: "https://thakicloud.github.io/ko/news/token-price-collapse-real-bill/"
 ---
 
-100만 토큰에 0.11달러입니다. 즈닷에이아이의 GLM-4.5가 입력 토큰에 매긴 가격입니다. 출력은 100만 토큰당 0.28달러입니다. 미니맥스, 딥시크, 큐웬, 키미도 입력은 0.1달러대, 출력은 0.2에서 0.3달러대에서 경쟁하고 있습니다. 2025년 초만 해도 10퍼센트에 못 미치던 중국 모델의 글로벌 토큰 소비 점유율이 2026년 중반 50퍼센트 수준까지 올라왔다는 집계가 나올 정도입니다. 숫자만 보면 결론은 단순합니다. 모델은 상품이 되었고, 값은 0을 향해 달려간다는 이야기입니다.
+![핵심 개념 일러스트](/assets/images/token-price-collapse-real-bill-hero.png)
+
+캐시된 입력 100만 토큰에 0.11달러입니다. 즈닷에이아이의 GLM-4.5가 자주 반복되는 입력에 매긴 값이고, 표준 입력은 100만 토큰당 0.6달러, 출력은 2.2달러입니다. 프론티어 미국 모델의 입력 단가가 여전히 수 달러대인 것과 견주면 확연히 낮은 수준입니다. 미니맥스, 딥시크, 큐웬, 키미 같은 중국계 모델도 입력을 0.1달러대의 초저가 구간에서 매기며 같은 흐름에 올라타 있습니다. 2025년 초만 해도 10퍼센트에 못 미치던 중국 모델의 글로벌 토큰 소비 점유율이 2026년 중반 50퍼센트 수준까지 올라왔다는 집계가 나올 정도입니다. 숫자만 보면 결론은 단순합니다. 모델은 상품이 되었고, 값은 0을 향해 달려간다는 이야기입니다.
 
 그런데 같은 날 아침, 정확히 반대 방향을 가리키는 소식이 하나 더 도착했습니다. 엔비디아가 블랙웰 GPU의 기밀 컴퓨팅 기술을 내세우며, 추론 중인 기업 데이터와 독점 모델 가중치를 하드웨어 수준에서 지킨다고 밝힌 것입니다. 한쪽에서는 모델을 돌리는 값이 붕괴하는데, 다른 쪽에서는 그 모델을 안전하게 돌리는 데 새로운 값이 붙습니다. 이 어긋남이 오늘 다이제스트가 던지는 진짜 질문입니다.
 
@@ -29,6 +32,11 @@ categories:
 기밀 컴퓨팅 소식은 이 그림에 균열을 냅니다. 엔비디아의 방식은 원격 검증 서비스가 GPU 하드웨어 보고서와 CPU 신뢰 실행 환경의 측정값을 참조 무결성 매니페스트와 대조하고, 검증되지 않은 실행 환경에서는 모델 복호화 키나 민감 데이터를 아예 쓰지 못하게 막는 구조입니다. AMD와 인텔이 CPU 쪽에서 먼저 제공하던 기밀 컴퓨팅을 GPU까지 확장한 흐름이고, 미국의 코르벡스는 이미 HGX B200 시스템에서 실운영에 적용했습니다. 실험 단계를 지나 상용화 국면으로 들어섰다는 신호입니다. 여기서 중요한 대목은 처리량 저하가 거의 없다는 평가입니다. 성능을 깎지 않고도 신뢰를 증명하는 장치가 붙었다는 뜻입니다.
 
 두 소식을 나란히 놓으면 하나의 문장으로 정리됩니다. 모델을 부르는 값은 내려가지만, 그 모델을 믿고 쓰는 값은 그대로거나 오히려 올라갑니다. 값은 증발하지 않았습니다. 자리를 옮겼을 뿐입니다.
+
+
+![값의 이동 개념 다이어그램](/assets/images/token-price-collapse-real-bill-diagram.svg)
+
+*토큰값은 0으로 수렴하지만, 값은 실행 계층의 세 청구서(비용 통제, 안전한 실행, 감사 가능성)로 자리를 옮깁니다.*
 
 ## 값은 사라지지 않고 자리를 옮깁니다
 
@@ -67,3 +75,14 @@ categories:
 ## 닫으며
 
 가격표 하나에서 시작한 이야기입니다. 100만 토큰에 0.11달러라는 숫자는 모델의 값이 얼마나 빠르게 무너지는지를 보여줍니다. 하지만 같은 날 도착한 기밀 컴퓨팅과 라벨링 종료 소식은, 그 붕괴가 값의 소멸이 아니라 값의 이동임을 말해 줍니다. 기업이 앞으로 지불할 청구서는 어떤 모델을 부르느냐가 아니라, 그 모델을 어떻게 실행하느냐에 적힙니다. 오늘 뉴스를 그 이동 경로의 지도로 읽으면, 다음에 무엇을 준비해야 할지가 조금 더 또렷해집니다.
+
+## 참고 자료
+
+- GLM-4.5 API 토큰 가격(표준 입력 0.6달러, 출력 2.2달러, 캐시된 입력 0.11달러): [z.ai 가격 문서](https://docs.z.ai/guides/overview/pricing)
+- 엔비디아 블랙웰 기밀 컴퓨팅과 원격 검증(near-zero 오버헤드): [NVIDIA Developer Blog](https://developer.nvidia.com/blog/hardware-rooted-ai-security-that-wont-slow-you-down)
+- 코르벡스, NVIDIA HGX B200에서 기밀 컴퓨팅 실운영 검증: [PR Newswire](https://www.prnewswire.com/news-releases/corvex-among-the-first-companies-to-achieve-verified-production-deployment-of-confidential-computing-for-ai-on-nvidia-hgx-b200-systems-302702992.html)
+- 아마존 메커니컬 터크, 2026년 7월 30일부터 신규 고객 중단: [TechCrunch](https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/)
+- 메커니컬 터크 작업자의 33~46%가 LLM 사용(2023년 연구): [arXiv:2306.07899](https://arxiv.org/abs/2306.07899)
+- 모건스탠리, 2028년까지 글로벌 AI 데이터센터 자본지출 누적 약 2조9000억 달러 추정: [Crypto Briefing 보도](https://cryptobriefing.com/morgan-stanley-data-center-capex-2028/)
+- 데이터 라벨링 시장 2026년 약 26억 달러 규모: [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/data-labeling-market)
+- 버티브, 말레이시아 조호르 신규 제조시설로 AI 데이터센터 전력·냉각 공급 확대: [Vertiv 뉴스룸](https://www.vertiv.com/en-us/about/news-and-events/corporate-news/2026/vertiv-increases-manufacturing-capacity-with-new-facility-in-malaysia-to-support-growing-demand-for-ai-and-digital-infrastructure-across-asia/)

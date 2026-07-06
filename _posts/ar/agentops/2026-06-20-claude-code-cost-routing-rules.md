@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+published: false
+canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-cost-routing-rules/"
 ---
 
 ![مهام الوكيل تتفرع عبر مستويات النماذج بينما تنخفض التكاليف](/assets/images/cost-routing-hero.webp)

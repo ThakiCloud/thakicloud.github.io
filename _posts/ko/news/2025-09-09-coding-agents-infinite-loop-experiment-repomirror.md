@@ -19,6 +19,7 @@ permalink: /ko/news/coding-agents-infinite-loop-experiment-repomirror/
 canonical_url: "https://thakicloud.github.io/ko/news/coding-agents-infinite-loop-experiment-repomirror/"
 categories:
   - news
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

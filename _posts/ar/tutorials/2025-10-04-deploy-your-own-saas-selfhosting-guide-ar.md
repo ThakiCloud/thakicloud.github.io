@@ -15,9 +15,10 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/deploy-your-own-saas-selfhosting-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/deploy-your-own-saas-selfhosting-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/deploy-your-own-saas-selfhosting-guide-ar/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
