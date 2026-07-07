@@ -21,6 +21,7 @@ lang: ko
 permalink: /ko/research/qwen3-vl-vision-language-architecture-innovations/
 categories:
   - research
+published: false
 ---
 
 ![개념 다이어그램](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)

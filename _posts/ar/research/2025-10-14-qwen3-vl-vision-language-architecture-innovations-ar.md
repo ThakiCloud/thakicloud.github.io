@@ -21,6 +21,7 @@ lang: ar
 permalink: /ar/research/qwen3-vl-vision-language-architecture-innovations/
 categories:
   - research
+published: false
 ---
 
 ![مخطط مفاهيمي](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)

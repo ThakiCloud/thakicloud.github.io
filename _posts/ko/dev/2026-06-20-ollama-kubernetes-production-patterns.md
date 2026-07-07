@@ -15,6 +15,7 @@ canonical_url: "https://thakicloud.github.io/dev/ollama-kubernetes-production-pa
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
