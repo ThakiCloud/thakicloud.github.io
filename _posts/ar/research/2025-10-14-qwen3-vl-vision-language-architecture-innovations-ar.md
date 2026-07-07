@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/research/qwen3-vl-vision-language-architecture-innovations/"
+canonical_url: "https://thakicloud.github.io/ar/research/qwen3-vl-vision-language-architecture-innovations-ar/"
 lang: ar
 permalink: /ar/research/qwen3-vl-vision-language-architecture-innovations/
 categories:

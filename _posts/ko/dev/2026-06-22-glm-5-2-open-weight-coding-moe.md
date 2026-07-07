@@ -18,6 +18,7 @@ toc_label: "목차"
 toc_icon: "cog"
 categories:
   - dev
+canonical_url: "https://thakicloud.github.io/ko/dev/glm-5-2-open-weight-coding-moe/"
 ---
 
 ## 개요
@@ -34,22 +35,15 @@ GLM-5.2는 중국의 Z.ai(zai-org)가 2026년 6월 13일 공개한 대규모 Mix
 
 라이선스는 MIT입니다. 상업적 사용에 제약이 거의 없는 가장 관대한 오픈소스 라이선스 중 하나이며, 이는 비상업 조항이 붙은 일부 오픈웨이트 모델과 결정적으로 다른 지점입니다. 가중치는 허깅페이스에 공개돼 있고(zai-org/GLM-5.2-FP8), 소스와 레시피는 깃허브 저장소(zai-org/GLM-5)에서, 간편 실행은 Ollama 라이브러리(glm-5.2)를 통해 받을 수 있습니다.
 
-```text
-GLM-5.2  (744B 전체 파라미터, MoE)
-        │
-        ▼
-   MoE 라우팅 ── 토큰당 활성 약 40B 전문가만 계산
-        │
-        ├── 1M 토큰 컨텍스트 (GLM-5.1 대비 약 5배)
-        └── 코딩 우선 학습
-                │
-                ▼
-        장기 호흡 코딩 워크로드
-                │
-                ▼
-   SWE-bench Pro 62.1 · Terminal-Bench 2.1 81.0
-
-라이선스: MIT 오픈웨이트 · 자체 호스팅: FP8 · 8x H200 · vLLM / SGLang
+```mermaid
+flowchart TD
+    A["GLM-5.2<br/>744B 전체 파라미터 · MoE"] --> B["MoE 라우팅<br/>토큰당 활성 약 40B 전문가만 계산"]
+    B --> C["1M 토큰 컨텍스트<br/>GLM-5.1 대비 약 5배"]
+    B --> D["코딩 우선 학습"]
+    C --> E["장기 호흡 코딩 워크로드"]
+    D --> E
+    E --> F["SWE-bench Pro 62.1<br/>Terminal-Bench 2.1 81.0"]
+    F --> G["MIT 오픈웨이트 · 자체 호스팅<br/>FP8 · 8x H200 · vLLM / SGLang"]
 ```
 *전체 744B 용량 중 토큰당 약 40B만 활성화하는 MoE 라우팅과, 1M 컨텍스트·코딩 특화 학습이 장기 호흡 코딩 성능으로 연결되는 구조입니다.*
 

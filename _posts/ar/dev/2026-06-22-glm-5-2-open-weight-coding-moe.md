@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/dev/glm-5-2-open-weight-coding-moe/
+canonical_url: "https://thakicloud.github.io/ar/dev/glm-5-2-open-weight-coding-moe/"
 categories:
   - dev
 ---
@@ -36,22 +36,15 @@ GLM-5.2 نموذج Mixture-of-Experts ضخم أصدرته Z.ai (zai-org)، وه�
 
 الرخصة MIT، وهي من أكثر رخص المصدر المفتوح تساهلاً مع أدنى قيود على الاستخدام التجاري. يُعدّ هذا تمييزاً جوهرياً عن بعض نماذج الأوزان المفتوحة التي تحمل بنوداً تحظر الاستخدام التجاري. الأوزان متاحة على Hugging Face (zai-org/GLM-5.2-FP8)، والمصدر والوصفات في مستودع GitHub (zai-org/GLM-5)، وطريق بدء سريع متاح عبر مكتبة Ollama (glm-5.2).
 
-```text
-GLM-5.2  (744B total parameters, MoE)
-        │
-        ▼
-   MoE Routing ── Only ~40B active experts computed per token
-        │
-        ├── 1M token context (approx. 5x vs GLM-5.1)
-        └── Coding-first training
-                │
-                ▼
-        Long-horizon coding workloads
-                │
-                ▼
-   SWE-bench Pro 62.1 · Terminal-Bench 2.1 81.0
-
-License: MIT open-weight · Self-hosting: FP8 · 8x H200 · vLLM / SGLang
+```mermaid
+flowchart TD
+    A["GLM-5.2<br/>744B total parameters · MoE"] --> B["MoE routing<br/>~40B active experts per token"]
+    B --> C["1M token context<br/>approx. 5x vs GLM-5.1"]
+    B --> D["Coding-first training"]
+    C --> E["Long-horizon coding workloads"]
+    D --> E
+    E --> F["SWE-bench Pro 62.1<br/>Terminal-Bench 2.1 81.0"]
+    F --> G["MIT open-weight · Self-hosting<br/>FP8 · 8x H200 · vLLM / SGLang"]
 ```
 *من إجمالي الطاقة البالغة 744B، لا يُفعَّل سوى نحو 40B معاملة لكل رمز عبر توجيه MoE. يتضافر السياق البالغ 1M والتدريب المتخصص في الكودينج لتحقيق أداء متميز في مهام الكودينج طويلة الأفق.*
 

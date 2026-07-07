@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 lang: en
-canonical_url: https://thakicloud.github.io/en/dev/glm-5-2-open-weight-coding-moe/
+canonical_url: "https://thakicloud.github.io/en/dev/glm-5-2-open-weight-coding-moe/"
 categories:
   - dev
 ---
@@ -36,22 +36,15 @@ The most striking change is the context window. GLM-5.2 supports one million (1M
 
 The license is MIT, one of the most permissive open-source licenses with essentially no commercial restrictions. This is a meaningful distinction from certain open-weight models that carry non-commercial clauses. Weights are available on Hugging Face (zai-org/GLM-5.2-FP8), source and recipes are in the GitHub repository (zai-org/GLM-5), and a quick-start path is available via the Ollama library (glm-5.2).
 
-```text
-GLM-5.2  (744B total parameters, MoE)
-        │
-        ▼
-   MoE Routing ── Only ~40B active experts computed per token
-        │
-        ├── 1M token context (approx. 5x vs GLM-5.1)
-        └── Coding-first training
-                │
-                ▼
-        Long-horizon coding workloads
-                │
-                ▼
-   SWE-bench Pro 62.1 · Terminal-Bench 2.1 81.0
-
-License: MIT open-weight · Self-hosting: FP8 · 8x H200 · vLLM / SGLang
+```mermaid
+flowchart TD
+    A["GLM-5.2<br/>744B total parameters · MoE"] --> B["MoE routing<br/>~40B active experts per token"]
+    B --> C["1M token context<br/>approx. 5x vs GLM-5.1"]
+    B --> D["Coding-first training"]
+    C --> E["Long-horizon coding workloads"]
+    D --> E
+    E --> F["SWE-bench Pro 62.1<br/>Terminal-Bench 2.1 81.0"]
+    F --> G["MIT open-weight · Self-hosting<br/>FP8 · 8x H200 · vLLM / SGLang"]
 ```
 *Of the total 744B capacity, MoE routing activates only roughly 40B parameters per token. The 1M context and coding-focused training combine to drive strong performance on long-horizon coding tasks.*
 
