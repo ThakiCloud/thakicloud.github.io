@@ -16,6 +16,7 @@ toc: true
 toc_sticky: true
 categories:
   - research
+published: false
 ---
 
 ![SkillRet 2단계 스킬 검색 파이프라인](/assets/images/skillret-hero.webp)
