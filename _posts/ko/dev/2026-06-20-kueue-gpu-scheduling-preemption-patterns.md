@@ -11,11 +11,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/dev/kueue-gpu-scheduling-preemption-patterns/"
+canonical_url: "https://thakicloud.github.io/ko/dev/kueue-gpu-scheduling-preemption-patterns/"
 reading_time: true
 categories:
   - dev
 published: false
+audiobook: /assets/audio/posts/kueue-gpu-scheduling-preemption-patterns/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
@@ -220,3 +222,16 @@ signal.signal(signal.SIGTERM, checkpoint_and_exit)
 ## 정리
 
 Kueue는 Kubernetes 위에서 GPU 쿼터를 관리하는 몇 안 되는 프로덕션급 도구입니다. ClusterQueue-Cohort-Preemption 조합으로 팀 간 공정한 GPU 분배를 코드로 표현할 수 있습니다. 선점 정책은 반드시 실제 워크로드로 검증하고, 체크포인트 저장 시간을 terminationGracePeriodSeconds 안에 맞춰야 손실 없는 선점이 됩니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 1](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.png)
+
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 2](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.png)
+
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 3](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.png)
+
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 4](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.png)
+
