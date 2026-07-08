@@ -21,6 +21,8 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.github.io/ko/research/platonic-representation-hypothesis/"
+audiobook: /assets/audio/posts/platonic-representation-hypothesis/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 이 글을 누가 읽으면 좋은가
