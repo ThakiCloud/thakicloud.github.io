@@ -3,7 +3,7 @@ title: "세상 바꾸는 회사 만드는 법ㅋ"
 excerpt: "로켓 CEO의 창업 특강, 마지막 원칙이 곧 온프렘이었다."
 date: 2026-07-04
 categories:
-  - comics
+  - 만화
 tags:
   - startup-advice
   - first-principles

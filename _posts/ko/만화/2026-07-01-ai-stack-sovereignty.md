@@ -12,7 +12,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/ai-stack-sovereignty/strip.webp
 categories:
-  - comics
+  - 만화
 audiobook: https://drive.google.com/file/d/1u60CUwh3vVjeKtn3WKbapFq0FfDO2LpD/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
