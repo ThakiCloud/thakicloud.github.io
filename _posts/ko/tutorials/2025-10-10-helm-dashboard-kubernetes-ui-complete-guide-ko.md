@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide-ko/"
 categories:
   - tutorials
 ---
@@ -40,6 +40,25 @@ Helm Dashboard는 Komodor에서 개발한 오픈소스 도구로, Helm 차트 �
 - **손쉬운 작업**: 확신을 가지고 롤백 및 업그레이드 수행
 - **멀티 클러스터 지원**: 여러 Kubernetes 클러스터 간 전환
 - **독립 실행**: Helm이나 kubectl 설치 불필요
+
+아래 그림은 Helm Dashboard가 브라우저와 여러 Kubernetes 클러스터 사이에서 어떻게 동작하는지 보여 줍니다. 단일 서버가 kubeconfig 컨텍스트로 클러스터에 접속해 릴리스 시크릿에 저장된 리비전 히스토리를 읽고, 조회부터 롤백까지의 기능을 한 화면에 모읍니다.
+
+```mermaid
+flowchart TB
+    USER["운영자 브라우저"] --> UI["Helm Dashboard 웹 UI"]
+    UI --> SRV["Helm Dashboard 서버<br/>단일 Go 바이너리·kubectl 불필요"]
+    SRV -->|"kubeconfig 컨텍스트"| K1["Kubernetes 클러스터 A"]
+    SRV -->|"멀티 클러스터 전환"| K2["Kubernetes 클러스터 B"]
+    K1 --> REL["Helm 릴리스 시크릿<br/>리비전 히스토리 저장"]
+    subgraph FEAT["대시보드 주요 기능"]
+        direction LR
+        F1["차트·리비전 조회"]
+        F2["매니페스트 비교"]
+        F3["롤백·업그레이드"]
+        F4["리소스 탐색"]
+    end
+    SRV --> FEAT
+```
 
 ### Helm Dashboard를 사용해야 하는 이유
 

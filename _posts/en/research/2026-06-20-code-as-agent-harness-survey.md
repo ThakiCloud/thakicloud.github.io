@@ -36,6 +36,21 @@ arXiv:2605.18747, "Code as Agent Harness," brings these patterns under one frame
 
 ## The Three-Layer Framework
 
+The diagram below summarizes how code acts as the harness between the reasoning engine and the environment, with mechanism and coordination layered on top.
+
+```mermaid
+flowchart TB
+    LLM["Reasoning engine LLM"] -->|"I/O and tool signatures"| L1
+    subgraph HARNESS["Code as agent harness"]
+        direction TB
+        L1["Layer 1 Harness interface<br/>Two-way LLM and environment"]
+        L2["Layer 2 Harness mechanism<br/>Planning plus adaptive control"]
+        L3["Layer 3 Multi-agent coordination<br/>Distribute, aggregate, dependencies"]
+        L1 --> L2 --> L3
+    end
+    L1 -->|"Execution layer"| ENV["Environment<br/>Filesystem, API, DB, GUI, services"]
+```
+
 ### Layer 1: Harness Interface
 
 The first layer deals with how an agent is positioned between its reasoning engine (the LLM) and the environment. Code here defines interfaces in two directions simultaneously.

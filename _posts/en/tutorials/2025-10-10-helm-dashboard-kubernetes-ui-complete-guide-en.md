@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/helm-dashboard-kubernetes-ui-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/helm-dashboard-kubernetes-ui-complete-guide/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/helm-dashboard-kubernetes-ui-complete-guide-en/"
 categories:
   - tutorials
 ---
@@ -40,6 +40,25 @@ Helm Dashboard is an open-source tool developed by Komodor that offers a UI-driv
 - **Easy operations**: Perform rollbacks and upgrades with confidence
 - **Multi-cluster support**: Switch between different Kubernetes clusters
 - **Standalone operation**: Works without requiring Helm or kubectl installed
+
+The diagram below shows how Helm Dashboard sits between the browser and multiple Kubernetes clusters. A single server connects to clusters through kubeconfig contexts, reads the revision history stored in release secrets, and gathers everything from viewing to rollback into one screen.
+
+```mermaid
+flowchart TB
+    USER["Operator browser"] --> UI["Helm Dashboard web UI"]
+    UI --> SRV["Helm Dashboard server<br/>Single Go binary, no kubectl needed"]
+    SRV -->|"kubeconfig contexts"| K1["Kubernetes cluster A"]
+    SRV -->|"Multi-cluster switching"| K2["Kubernetes cluster B"]
+    K1 --> REL["Helm release secrets<br/>Revision history storage"]
+    subgraph FEAT["Dashboard core features"]
+        direction LR
+        F1["View charts and revisions"]
+        F2["Compare manifests"]
+        F3["Rollback and upgrade"]
+        F4["Explore resources"]
+    end
+    SRV --> FEAT
+```
 
 ### Why Use Helm Dashboard?
 

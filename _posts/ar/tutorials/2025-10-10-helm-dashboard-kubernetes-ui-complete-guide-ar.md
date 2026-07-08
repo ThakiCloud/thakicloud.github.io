@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/helm-dashboard-kubernetes-ui-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/helm-dashboard-kubernetes-ui-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/helm-dashboard-kubernetes-ui-complete-guide-ar/"
 categories:
   - tutorials
 ---
@@ -40,6 +40,25 @@ Helm Dashboard هو أداة مفتوحة المصدر طورتها Komodor تو
 - **عمليات سهلة**: إجراء الاستعادة أو الترقية بثقة واضحة ومقارنة بيان سهلة
 - **دعم متعدد الكتل**: التبديل بين كتل Kubernetes المختلفة
 - **تشغيل مستقل**: يعمل دون الحاجة لتثبيت Helm أو kubectl
+
+يوضح الرسم التالي كيف يقع Helm Dashboard بين المتصفح وعدة عناقيد Kubernetes. يتصل خادم واحد بالعناقيد عبر سياقات kubeconfig، ويقرأ سجل المراجعات المخزن في أسرار الإصدارات، ويجمع كل شيء من العرض إلى التراجع في شاشة واحدة.
+
+```mermaid
+flowchart TB
+    USER["متصفح المشغل"] --> UI["واجهة Helm Dashboard"]
+    UI --> SRV["خادم Helm Dashboard<br/>ملف Go واحد، لا حاجة إلى kubectl"]
+    SRV -->|"سياقات kubeconfig"| K1["عنقود Kubernetes A"]
+    SRV -->|"التبديل بين العناقيد"| K2["عنقود Kubernetes B"]
+    K1 --> REL["أسرار إصدارات Helm<br/>تخزين سجل المراجعات"]
+    subgraph FEAT["الميزات الأساسية للوحة"]
+        direction LR
+        F1["عرض المخططات والمراجعات"]
+        F2["مقارنة الملفات"]
+        F3["التراجع والترقية"]
+        F4["استكشاف الموارد"]
+    end
+    SRV --> FEAT
+```
 
 ### لماذا تستخدم Helm Dashboard؟
 
