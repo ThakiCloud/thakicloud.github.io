@@ -17,9 +17,10 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/news/openai-agent-builder-devday-release/
-canonical_url: "https://thakicloud.github.io/ar/news/openai-agent-builder-devday-release/"
+canonical_url: "https://thakicloud.github.io/ar/news/openai-agent-builder-devday-release-ar/"
 categories:
   - news
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 4 دقائق

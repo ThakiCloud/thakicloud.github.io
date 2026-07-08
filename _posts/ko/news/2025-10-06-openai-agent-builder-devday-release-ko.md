@@ -17,9 +17,10 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/news/openai-agent-builder-devday-release/
-canonical_url: "https://thakicloud.github.io/ko/news/openai-agent-builder-devday-release/"
+canonical_url: "https://thakicloud.github.io/ko/news/openai-agent-builder-devday-release-ko/"
 categories:
   - news
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 4분
