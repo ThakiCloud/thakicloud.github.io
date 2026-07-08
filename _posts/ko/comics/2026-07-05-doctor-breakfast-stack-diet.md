@@ -3,7 +3,7 @@ title: "의사 추천 아침식사로 스택 짜기ㅋ"
 excerpt: "몸에 좋은 조합만 골라 담았는데, 냉장고 열쇠는 왜 쟤가 쥐고 있냐."
 date: 2026-07-05
 categories:
-  - 만화
+  - comics
 tags:
   - 온프렘
   - 주권AI
