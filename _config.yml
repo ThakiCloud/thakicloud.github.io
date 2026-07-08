@@ -83,9 +83,9 @@ baidu_site_verification  :
 
 # Analytics (Primary configuration)
 analytics:
-  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom", "umami"
+  provider: false # GA gtag(G-0J1T66RGFD) is injected directly in _includes/head/custom.html; keep theme provider off to avoid double-firing. Old id G-H3R0WGN0LF replaced.
   google:
-    tracking_id: "G-H3R0WGN0LF"
+    tracking_id: "G-0J1T66RGFD"
     anonymize_ip: false
   umami:
     script_url: "" # Your Umami tracking script URL (will be added after setup)
