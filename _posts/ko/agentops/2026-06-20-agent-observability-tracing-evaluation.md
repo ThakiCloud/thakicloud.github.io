@@ -23,6 +23,7 @@ canonical_url: "https://thakicloud.github.io/ko/agentops/agent-observability-tra
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
@@ -211,3 +212,16 @@ MLflow는 이 목적으로 에이전트 리플레이 기능을 제공합니다. 
 - [LangSmith](https://docs.langchain.com/langsmith)
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix)
 - [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions-genai)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-observability-tracing-evaluation 슬라이드 1](/assets/images/agent-observability-tracing-evaluation-slide-01.png)
+
+![agent-observability-tracing-evaluation 슬라이드 2](/assets/images/agent-observability-tracing-evaluation-slide-02.png)
+
+![agent-observability-tracing-evaluation 슬라이드 3](/assets/images/agent-observability-tracing-evaluation-slide-03.png)
+
+![agent-observability-tracing-evaluation 슬라이드 4](/assets/images/agent-observability-tracing-evaluation-slide-04.png)
+

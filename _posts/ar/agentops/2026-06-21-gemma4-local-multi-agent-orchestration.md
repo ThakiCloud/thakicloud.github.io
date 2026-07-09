@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/gemma4-local-multi-agen
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 عادة ما يستحضر تنسيق الوكلاء المتعددين في الذهن واجهات برمجة السحابة. لكن عرضاً تجريبياً شارعه المجتمع مؤخراً يشير إلى اتجاه مختلف. فقد شغّل نموذج Gemma 4 26B **على جهاز محلي** لتنسيق 10 وكلاء فرعيين متوازيين يكتبون معرض فن بصيغة SVG، وحقق حسب التقارير معدل معالجة تجاوز 100 رمز في الثانية.

@@ -17,10 +17,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/gemma4-local-multi-agent-orchestration/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/gemma4-local-multi-agent-orchestration/"
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 멀티에이전트 오케스트레이션이라고 하면 보통 클라우드 API를 떠올립니다. 그런데 최근 커뮤니티에서 공유된 데모는 다른 방향을 보여줍니다. Gemma 4 26B를 **로컬 머신에서 띄워** 10개의 병렬 서브에이전트로 SVG 아트 갤러리를 코딩하고, 100 tokens/sec 이상의 처리량을 달성했다는 것입니다.
@@ -57,3 +58,16 @@ Gemma 4 26B 로컬 멀티에이전트 데모는 "온프레미스 추론이 실�
 ---
 
 출처: Gemma 4 26B 로컬 멀티에이전트 오케스트레이션 커뮤니티 데모. Gemma 모델 정보: https://ai.google.dev/gemma (처리량 수치는 작성자 로컬 벤치 자가 보고 [추정])
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![gemma4-local-multi-agent-orchestration 슬라이드 1](/assets/images/gemma4-local-multi-agent-orchestration-slide-01.png)
+
+![gemma4-local-multi-agent-orchestration 슬라이드 2](/assets/images/gemma4-local-multi-agent-orchestration-slide-02.png)
+
+![gemma4-local-multi-agent-orchestration 슬라이드 3](/assets/images/gemma4-local-multi-agent-orchestration-slide-03.png)
+
+![gemma4-local-multi-agent-orchestration 슬라이드 4](/assets/images/gemma4-local-multi-agent-orchestration-slide-04.png)
+
