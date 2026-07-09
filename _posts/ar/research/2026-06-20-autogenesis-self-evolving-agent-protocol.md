@@ -23,6 +23,7 @@ reading_time: true
 lang: ar
 categories:
   - research
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق

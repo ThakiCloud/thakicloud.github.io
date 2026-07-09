@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/news/claude-code-seminar-thakicloud
 reading_time: true
 categories:
   - news
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 6분

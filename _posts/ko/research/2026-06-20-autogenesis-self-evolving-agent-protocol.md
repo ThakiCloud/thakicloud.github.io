@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/research/autogenesis-self-evolving-
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 7분
