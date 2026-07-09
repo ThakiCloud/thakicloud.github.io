@@ -22,6 +22,7 @@ toc: true
 toc_sticky: true
 categories:
   - llmops
+published: false
 ---
 
 ![vLLM이 서빙하는 양자화 포맷 지도](/assets/images/llm-quant-vllm-hero.webp)
