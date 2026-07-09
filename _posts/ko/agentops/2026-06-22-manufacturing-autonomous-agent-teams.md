@@ -21,6 +21,8 @@ reading_time: true
 categories:
   - agentops
 published: false
+audiobook: /assets/audio/posts/manufacturing-autonomous-agent-teams/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![제조 운영 자율 에이전트팀 헤더 이미지](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
@@ -167,3 +169,16 @@ HanTek 사례에서 얻을 수 있는 실제 적용 시사점은 다음과 같�
 ---
 
 제조 AI 운영의 인력 병목은 단순히 채용으로 해결되지 않습니다. 자율 에이전트팀이 반복 운영 업무를 맡고, 멀티클러스터 중앙관리가 GPU 리소스 낭비를 줄이며, 사람은 더 복잡한 판단과 개선에 집중하는 구조가 지속 가능한 제조 AI 운영의 방향입니다. ThakiCloud AI Platform과 Paxis는 이 구조를 기술적으로 구현하는 구체적인 수단을 제공합니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![manufacturing-autonomous-agent-teams 슬라이드 1](/assets/images/manufacturing-autonomous-agent-teams-slide-01.png)
+
+![manufacturing-autonomous-agent-teams 슬라이드 2](/assets/images/manufacturing-autonomous-agent-teams-slide-02.png)
+
+![manufacturing-autonomous-agent-teams 슬라이드 3](/assets/images/manufacturing-autonomous-agent-teams-slide-03.png)
+
+![manufacturing-autonomous-agent-teams 슬라이드 4](/assets/images/manufacturing-autonomous-agent-teams-slide-04.png)
+

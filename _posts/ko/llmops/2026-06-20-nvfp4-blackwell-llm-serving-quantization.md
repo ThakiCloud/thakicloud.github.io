@@ -19,11 +19,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/nvfp4-blackwell-llm-serving-quantization/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/nvfp4-blackwell-llm-serving-quantization/"
 reading_time: true
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/nvfp4-blackwell-llm-serving-quantization/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
@@ -128,3 +130,16 @@ Blackwell 하드웨어에 대한 접근이 생기기 시작했다면 NVFP4 전�
 - [TensorRT-LLM - Quantization 문서](https://nvidia.github.io/TensorRT-LLM/latest/features/quantization.html)
 - [vLLM 공식 문서](https://docs.vllm.ai/)
 - [Kueue - Kubernetes 작업 큐잉](https://kueue.sigs.k8s.io/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 1](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.png)
+
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 2](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.png)
+
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 3](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.png)
+
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 4](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.png)
+
