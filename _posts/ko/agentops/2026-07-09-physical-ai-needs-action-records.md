@@ -16,6 +16,7 @@ tags:
   - thakicloud
 categories:
   - agentops
+canonical_url: "https://thakicloud.github.io/ko/agentops/physical-ai-needs-action-records/"
 ---
 
 ## 화면 밖으로 나온 AI, 오답의 무게가 달라졌습니다
@@ -68,4 +69,20 @@ categories:
 
 정리하면 오늘 다이제스트가 드러낸 기업의 통증은 네 갈래입니다. 규제와 내부 통제에 답할 감사, 데이터가 회사 밖으로 새지 않게 할 주권, 물리 세계에서 사고를 부르지 않을 안전한 실행, 그리고 모델값이 출렁여도 흔들리지 않을 비용 구조입니다. 이 네 가지는 각각 다른 뉴스에서 튀어나왔지만, 실제 도입 현장에서는 하나의 운영 계층에서 동시에 요구됩니다. Paxis가 Audit Logs와 소버린 K8s, 정책 게이트와 CostRouter를 같은 플랫폼 위에 올려둔 이유가 여기에 있습니다. 마침 세계 최대 머신러닝 학회인 ICML 2026이 서울에서 열리며 국내 연구 생태계에 모멘텀이 실리는 지금, 연구의 성과를 현장에 실제로 태우는 마지막 한 뼘은 결국 이 운영의 성숙도가 채운다고 봅니다.
 
+![개념 다이어그램](/assets/images/physical-ai-needs-action-records-diagram.svg)
+
+*서로 다른 뉴스에서 튀어나온 감사·주권·안전한 실행·비용 안정이라는 네 가지 통증이, 실제 도입 현장에서는 Paxis라는 하나의 운영 계층으로 수렴합니다.*
+
 오늘 뉴스는 AI에게 더 좋은 눈과 더 많은 손을 주는 이야기로 가득했습니다. 그 흐름은 분명히 옳습니다. 다만 그 눈과 손을 실제 현장에 들일 수 있느냐를 가르는 것은, 성능이 한 뼘 더 좋아지는 순간이 아니라 "방금 네가 뭘 했는지 보여줘"라는 질문에 즉시 답할 수 있느냐입니다. 감각과 행동이 커지는 만큼 증거의 무게도 커집니다. 그 증거를 기본값으로 갖춘 운영 계층을 먼저 준비한 기업이, 피지컬 AI 시대의 도입 경쟁에서 앞설 겁니다.
+
+## 참고 자료
+
+- [앤트그룹, '유리'까지 인식하는 차세대 비전 AI 공개...12개 벤치마크서 SOTA](https://www.aitimes.com/news/articleView.html?idxno=212542) · AI타임스
+- [산업 하프타임 ⑩ 中 '3개월 1만 대' 물량…'K-피지컬 AI' 민관 20조원 엔진 가동](https://www.ddaily.co.kr/page/view/2026070814294049428) · 디지털데일리
+- [울산, 제조업 AI 전환 시동…민관 AX 협의체 출범](https://www.busan.com/view/busan/view.php?code=2026070914013553590) · 부산일보
+- [리얼월드, 글로벌 진출 리더로 AWS 출신 '카르틱 크리슈나무르티' 영입](https://www.irobotnews.com/news/articleView.html?idxno=47319) · 로봇신문
+- [오픈AI·앤트로픽, 무료 토큰으로 스타트업 쟁탈전 본격화](https://zdnet.co.kr/view/?no=20260708094228) · ZDNet Korea
+- [KT, 통신 본업에 AI 성장 더한다…1GW 데이터센터 확장 기대](https://www.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02522326645512880) · 이데일리
+- [2026년 1월 시행 앞둔 'AI 기본법'…한국, 세계 첫 전면 적용 국가 되나](https://www.mstoday.co.kr/news/articleView.html?idxno=99963) · MS투데이
+- [하나금융, 금융 AI 자체 개발…기업여신·내부통제에 활용](https://www.ddaily.co.kr/page/view/2026070809351979061) · 디지털데일리
+- [네이버클라우드, 미스트랄AI와 제조 특화 소버린 AI '동맹'](https://zdnet.co.kr/view/?no=20260708132926) · ZDNet Korea

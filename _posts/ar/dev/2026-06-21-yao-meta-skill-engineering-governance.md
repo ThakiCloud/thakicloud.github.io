@@ -18,6 +18,8 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 categories:
   - dev
+published: false
+canonical_url: "https://thakicloud.github.io/ar/dev/yao-meta-skill-engineering-governance/"
 ---
 
 ![صورة تجريدية لكتل وحدوية تُشكّل خط تجميع دقيقًا مع بوابات حوكمة متوهّجة](/assets/images/yao-meta-skill-hero.webp)

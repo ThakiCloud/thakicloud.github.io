@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arw2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#7aa2f7"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" fill="#1a1b26"/>
+
+  <!-- column headers -->
+  <text x="208" y="56" fill="#f7768e" font-size="15" font-weight="700" text-anchor="middle">Four enterprise pains</text>
+  <text x="208" y="76" fill="#565f89" font-size="11" text-anchor="middle">each from a different headline</text>
+  <text x="692" y="56" fill="#7aa2f7" font-size="15" font-weight="700" text-anchor="middle">Paxis operating layer</text>
+  <text x="692" y="76" fill="#565f89" font-size="11" text-anchor="middle">one platform, same altitude</text>
+
+  <!-- left: pains -->
+  <rect x="48" y="100" width="320" height="60" rx="10" fill="#24283b" stroke="#f7768e" stroke-width="1.5"/>
+  <text x="208" y="126" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Audit</text>
+  <text x="208" y="146" fill="#9aa5ce" font-size="11.5" text-anchor="middle">prove what the agent actually did</text>
+
+  <rect x="48" y="196" width="320" height="60" rx="10" fill="#24283b" stroke="#f7768e" stroke-width="1.5"/>
+  <text x="208" y="222" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Sovereignty</text>
+  <text x="208" y="242" fill="#9aa5ce" font-size="11.5" text-anchor="middle">data must stay inside the company</text>
+
+  <rect x="48" y="292" width="320" height="60" rx="10" fill="#24283b" stroke="#f7768e" stroke-width="1.5"/>
+  <text x="208" y="318" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Safe execution</text>
+  <text x="208" y="338" fill="#9aa5ce" font-size="11.5" text-anchor="middle">physical mistakes cannot be undone</text>
+
+  <rect x="48" y="388" width="320" height="60" rx="10" fill="#24283b" stroke="#f7768e" stroke-width="1.5"/>
+  <text x="208" y="414" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Cost stability</text>
+  <text x="208" y="434" fill="#9aa5ce" font-size="11.5" text-anchor="middle">survive swings in model pricing</text>
+
+  <!-- right: paxis components -->
+  <rect x="532" y="100" width="320" height="60" rx="10" fill="#1f2937" stroke="#e0af68" stroke-width="1.5"/>
+  <text x="692" y="126" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Audit Logs</text>
+  <text x="692" y="146" fill="#9aa5ce" font-size="11.5" text-anchor="middle">first-class, written as it runs</text>
+
+  <rect x="532" y="196" width="320" height="60" rx="10" fill="#1f2937" stroke="#9ece6a" stroke-width="1.5"/>
+  <text x="692" y="222" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Sovereign on-prem Kubernetes</text>
+  <text x="692" y="242" fill="#9aa5ce" font-size="11.5" text-anchor="middle">trail stays on your infrastructure</text>
+
+  <rect x="532" y="292" width="320" height="60" rx="10" fill="#1f2937" stroke="#bb9af7" stroke-width="1.5"/>
+  <text x="692" y="318" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Policy Gate and Sandbox</text>
+  <text x="692" y="338" fill="#9aa5ce" font-size="11.5" text-anchor="middle">L0 to L3 autonomy, isolated tools</text>
+
+  <rect x="532" y="388" width="320" height="60" rx="10" fill="#1f2937" stroke="#7dcfff" stroke-width="1.5"/>
+  <text x="692" y="414" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">CostRouter</text>
+  <text x="692" y="434" fill="#9aa5ce" font-size="11.5" text-anchor="middle">per-task model choice</text>
+
+  <!-- mapping arrows -->
+  <line x1="368" y1="130" x2="530" y2="130" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw2)"/>
+  <line x1="368" y1="226" x2="530" y2="226" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw2)"/>
+  <line x1="368" y1="322" x2="530" y2="322" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw2)"/>
+  <line x1="368" y1="418" x2="530" y2="418" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw2)"/>
+
+  <!-- bottom caption -->
+  <rect x="120" y="488" width="660" height="46" rx="10" fill="#16161e" stroke="#414868" stroke-width="1.2"/>
+  <text x="450" y="516" fill="#a9b1d6" font-size="12.5" text-anchor="middle">Four separate headlines, but in a real deployment they converge on one operating layer.</text>
+</svg>

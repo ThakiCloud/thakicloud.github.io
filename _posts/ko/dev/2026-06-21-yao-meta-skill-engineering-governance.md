@@ -18,6 +18,8 @@ toc_label: "목차"
 toc_icon: "cog"
 categories:
   - dev
+published: false
+canonical_url: "https://thakicloud.github.io/ko/dev/yao-meta-skill-engineering-governance/"
 ---
 
 ![모듈형 블록이 정밀 조립 라인을 이루고 거버넌스 게이트가 빛나는 추상 이미지](/assets/images/yao-meta-skill-hero.webp)
