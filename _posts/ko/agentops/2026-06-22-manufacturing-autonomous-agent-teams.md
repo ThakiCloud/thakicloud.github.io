@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.github.io/ko/agentops/manufacturing-autonomou
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![제조 운영 자율 에이전트팀 헤더 이미지](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)

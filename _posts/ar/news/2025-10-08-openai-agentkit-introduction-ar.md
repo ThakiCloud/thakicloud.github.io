@@ -18,6 +18,7 @@ permalink: /ar/news/openai-agentkit-introduction/
 canonical_url: "https://thakicloud.github.io/ar/news/openai-agentkit-introduction/"
 categories:
   - news
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 4 دقائق

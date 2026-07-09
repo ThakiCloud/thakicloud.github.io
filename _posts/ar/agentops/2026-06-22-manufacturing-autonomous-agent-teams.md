@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/manufacturing-autonomou
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![صورة رأسية لفرق العملاء الذكيين المستقلين في العمليات التصنيعية](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
