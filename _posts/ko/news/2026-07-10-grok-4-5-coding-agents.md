@@ -16,6 +16,8 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/ko/news/grok-4-5-coding-agents/"
+audiobook: /assets/audio/posts/grok-4-5-coding-agents/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트로 코드를 짜 본 팀이라면 한 가지 벽을 압니다. 긴 작업 하나를 에이전트에게 맡기면, 모델은 파일을 읽고 도구를 호출하고 다시 생각하기를 수십 번 반복합니다. 이 과정에서 토큰이 빠르게 쌓이고, 성능 좋은 모델일수록 그 비용이 뼈아프게 다가옵니다. 지금까지 "가장 똑똑한 코딩 모델"과 "실제로 하루 종일 굴릴 만한 모델"은 서로 다른 이야기였습니다. SpaceXAI가 공개한 Grok 4.5는 바로 이 간극을 겨냥합니다.

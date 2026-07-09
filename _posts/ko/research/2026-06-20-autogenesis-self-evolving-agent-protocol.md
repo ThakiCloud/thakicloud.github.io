@@ -18,11 +18,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/autogenesis-self-evolving-agent-protocol/"
+canonical_url: "https://thakicloud.github.io/ko/research/autogenesis-self-evolving-agent-protocol/"
 reading_time: true
 categories:
   - research
 published: false
+audiobook: /assets/audio/posts/autogenesis-self-evolving-agent-protocol/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 7분
@@ -78,3 +80,16 @@ AGP는 에이전트 시스템을 "코드처럼" 다루는 접근입니다. 코�
 아직 해결해야 할 질문들이 많습니다. 자기진화 루프가 수렴하는 조건은 무엇인가, 발산하거나 오염된 방향으로 진화하는 것을 어떻게 막는가, 큰 규모의 멀티에이전트 환경에서 리소스 버전 관리가 어떻게 작동하는가. 이 질문들에 대한 답이 후속 연구에서 나오길 기대합니다.
 
 원문: [https://arxiv.org/abs/2604.15034](https://arxiv.org/abs/2604.15034)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![autogenesis-self-evolving-agent-protocol 슬라이드 1](/assets/images/autogenesis-self-evolving-agent-protocol-slide-01.png)
+
+![autogenesis-self-evolving-agent-protocol 슬라이드 2](/assets/images/autogenesis-self-evolving-agent-protocol-slide-02.png)
+
+![autogenesis-self-evolving-agent-protocol 슬라이드 3](/assets/images/autogenesis-self-evolving-agent-protocol-slide-03.png)
+
+![autogenesis-self-evolving-agent-protocol 슬라이드 4](/assets/images/autogenesis-self-evolving-agent-protocol-slide-04.png)
+
