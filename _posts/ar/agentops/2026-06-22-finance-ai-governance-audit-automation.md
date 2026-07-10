@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/finance-ai-governance-a
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي](/assets/images/finance-ai-governance-audit-automation-hero.webp)

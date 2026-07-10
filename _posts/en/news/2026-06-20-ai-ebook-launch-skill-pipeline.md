@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.github.io/en/news/ai-ebook-launch-skill-pipel
 reading_time: true
 categories:
   - news
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 7 min

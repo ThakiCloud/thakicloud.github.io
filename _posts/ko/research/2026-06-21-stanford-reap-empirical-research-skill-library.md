@@ -17,10 +17,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/stanford-reap-empirical-research-skill-library/"
+canonical_url: "https://thakicloud.github.io/ko/research/stanford-reap-empirical-research-skill-library/"
 reading_time: true
 categories:
   - research
+published: false
+audiobook: /assets/audio/posts/stanford-reap-empirical-research-skill-library/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 "AI가 20분 만에 톱저널 논문을 쓴다"는 주장은 솔깃하지만, 그대로 믿으면 위험합니다. 스탠퍼드 REAP에서 유지하는 CoPaper.AI가 공개한 에이전트 스킬 라이브러리(brycewang-stanford/Auto-Empirical-Research-Skills)는 8개 사회과학 분야에 걸친 23,000개 이상의 실증 연구 에이전트 스킬을 모았습니다. 규모는 인상적이지만, 그 의미를 정직하게 분리하는 것이 데이터 과학자의 일입니다.
@@ -62,3 +65,16 @@ categories:
 ---
 
 출처: brycewang-stanford/Auto-Empirical-Research-Skills (Stanford REAP / CoPaper.AI 유지). GitHub: https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![stanford-reap-empirical-research-skill-library 슬라이드 1](/assets/images/stanford-reap-empirical-research-skill-library-slide-01.png)
+
+![stanford-reap-empirical-research-skill-library 슬라이드 2](/assets/images/stanford-reap-empirical-research-skill-library-slide-02.png)
+
+![stanford-reap-empirical-research-skill-library 슬라이드 3](/assets/images/stanford-reap-empirical-research-skill-library-slide-03.png)
+
+![stanford-reap-empirical-research-skill-library 슬라이드 4](/assets/images/stanford-reap-empirical-research-skill-library-slide-04.png)
+

@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/stanford-storm-4-prompt
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 البحث عمل يستهلك وقتًا كبيرًا. فلكي تتعمّق في موضوع ما كما ينبغي، عليك أن تصوغ الأسئلة، وتجمع المواد من زوايا متعددة، وتبني هيكلًا، ثم تكتب ناتجًا مرفقًا بالاستشهادات. إن STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking)، الذي أصدره مختبر OVAL في جامعة ستانفورد، هو نظام لتنسيق المعرفة يؤتمت هذه العملية باستخدام نموذج لغة كبير. وقد عُرض في مؤتمر NAACL 2024، وهدفه توليد مقالات طويلة بمستوى ويكيبيديا، مرفقة بالاستشهادات، من الصفر.

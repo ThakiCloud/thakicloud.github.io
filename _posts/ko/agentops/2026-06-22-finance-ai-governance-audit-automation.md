@@ -16,10 +16,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/finance-ai-governance-audit-automation/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/finance-ai-governance-audit-automation/"
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![금융권 AI 거버넌스와 감사 자동화](/assets/images/finance-ai-governance-audit-automation-hero.webp)
@@ -180,3 +181,16 @@ ThakiCloud AI Platform은 K8s 기반으로 금융기관 전산 센터 내부망�
 ---
 
 금융권의 AI 에이전트 도입은 기술 문제가 아니라 거버넌스 문제입니다. 데이터가 어디에 저장되는지, 에이전트가 어디까지 자율적으로 행동할 수 있는지, 그 모든 행동이 검증 가능한 방식으로 기록되는지가 핵심입니다. 정책엔진과 해시체인 감사 로그는 이 세 가지 질문에 대한 기술적 답변을 제공하지만, 그것이 규제 준수의 전부가 아니라는 점을 함께 기억해야 합니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![finance-ai-governance-audit-automation 슬라이드 1](/assets/images/finance-ai-governance-audit-automation-slide-01.png)
+
+![finance-ai-governance-audit-automation 슬라이드 2](/assets/images/finance-ai-governance-audit-automation-slide-02.png)
+
+![finance-ai-governance-audit-automation 슬라이드 3](/assets/images/finance-ai-governance-audit-automation-slide-03.png)
+
+![finance-ai-governance-audit-automation 슬라이드 4](/assets/images/finance-ai-governance-audit-automation-slide-04.png)
+

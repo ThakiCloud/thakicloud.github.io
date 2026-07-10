@@ -23,6 +23,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1g3_ynCIGI1XwMkBsh-TLwC87rTtH0qNY/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 리서치는 시간이 많이 드는 일입니다. 한 주제를 제대로 파려면 질문을 세우고, 여러 관점에서 자료를 모으고, 구조를 잡고, 인용을 단 결과물을 써야 합니다. 스탠퍼드 OVAL 연구실이 발표한 STORM(Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking)은 이 과정을 LLM으로 자동화하는 지식 큐레이션 시스템입니다. NAACL 2024에서 발표되었고, 위키피디아 수준의 긴 글을 인용과 함께 처음부터 생성하는 것을 목표로 합니다.
@@ -70,3 +71,16 @@ STORM의 메시지는 분명합니다. 좋은 리서치 자동화는 "더 똑똑
 ---
 
 출처: STORM(Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking), Stanford OVAL Lab (NAACL 2024). GitHub: https://github.com/stanford-oval/storm
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![stanford-storm-4-prompt-research-workflow 슬라이드 1](/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.png)
+
+![stanford-storm-4-prompt-research-workflow 슬라이드 2](/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.png)
+
+![stanford-storm-4-prompt-research-workflow 슬라이드 3](/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.png)
+
+![stanford-storm-4-prompt-research-workflow 슬라이드 4](/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.png)
+

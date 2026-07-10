@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.github.io/ko/news/micron-anthropic-ai-memory-
 reading_time: true
 categories:
   - news
+published: false
 ---
 
 ## 개요
@@ -97,6 +98,19 @@ AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 결론적으로 Micron-Anthropic 협약은 AI 인프라 경쟁이 연산을 넘어 메모리 계층 전체로 확장되고 있음을 보여 주는 의미 있는 신호입니다. ThakiCloud는 이 흐름을 메모리 효율적 서빙과 온프레미스 경제성이라는 우리의 강점을 강화하는 근거로 삼고자 합니다.
 
 ---
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![micron-anthropic-ai-memory-infrastructure 슬라이드 1](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.png)
+
+![micron-anthropic-ai-memory-infrastructure 슬라이드 2](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.png)
+
+![micron-anthropic-ai-memory-infrastructure 슬라이드 3](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.png)
+
+![micron-anthropic-ai-memory-infrastructure 슬라이드 4](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.png)
 
 ## 출처
 

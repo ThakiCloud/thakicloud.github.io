@@ -19,10 +19,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/news/ai-ebook-launch-skill-pipeline/"
+canonical_url: "https://thakicloud.github.io/ko/news/ai-ebook-launch-skill-pipeline/"
 reading_time: true
 categories:
   - news
+published: false
+audiobook: /assets/audio/posts/ai-ebook-launch-skill-pipeline/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 7분
@@ -91,3 +94,16 @@ PDF 크기가 216 KB에서 2.9 MB까지 벌어집니다. 챕터 수와 이미지
 우리가 이 스킬을 흥미롭게 보는 이유는 책 자체가 아니라 파이프라인의 모양입니다. 리서치, 생성, 검증, 배포를 단계로 끊고 각 단계의 포맷을 코드가 쥐는 구조는 우리가 사내 배치 스킬에 적용하는 원칙과 같습니다. 챕터마다 서브에이전트를 띄워 컨텍스트를 갈아 끼우는 방식, 모델에는 본문만 맡기고 표지 글자와 조립은 결정론 스크립트로 빼는 방식, 품질 게이트가 평균과 최저선을 동시에 보는 방식. 콘텐츠 종류는 달라도 이 골격은 그대로 옮겨집니다.
 
 자동화가 사람을 지웠다는 이야기는 아닙니다. 주제를 고르고, 품질 게이트의 기준선을 정하고, 라이선스와 면책을 챙기는 판단은 여전히 사람 몫입니다. 스킬이 한 일은 그 사이의 반복 노동을 6일에 5권 속도로 밀어준 것입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-ebook-launch-skill-pipeline 슬라이드 1](/assets/images/ai-ebook-launch-skill-pipeline-slide-01.png)
+
+![ai-ebook-launch-skill-pipeline 슬라이드 2](/assets/images/ai-ebook-launch-skill-pipeline-slide-02.png)
+
+![ai-ebook-launch-skill-pipeline 슬라이드 3](/assets/images/ai-ebook-launch-skill-pipeline-slide-03.png)
+
+![ai-ebook-launch-skill-pipeline 슬라이드 4](/assets/images/ai-ebook-launch-skill-pipeline-slide-04.png)
+

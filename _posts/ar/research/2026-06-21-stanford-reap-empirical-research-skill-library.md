@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/stanford-reap-empirical
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 الادعاء بأن "الذكاء الاصطناعي يكتب ورقة بحثية في مجلة مرموقة خلال 20 دقيقة" مغرٍ، لكن تصديقه كما هو أمر خطير. مكتبة مهارات الوكلاء التي أصدرتها CoPaper.AI، والتي تُدار تحت مظلة Stanford REAP (brycewang-stanford/Auto-Empirical-Research-Skills)، تجمع أكثر من 23,000 مهارة وكيلة للبحث التجريبي موزعة على ثمانية مجالات في العلوم الاجتماعية. الحجم مثير للإعجاب، لكن مهمة عالم البيانات هي أن يفصل بأمانة ما يعنيه هذا الحجم فعلياً.
