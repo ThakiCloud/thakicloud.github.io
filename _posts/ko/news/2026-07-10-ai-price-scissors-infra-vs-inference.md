@@ -19,7 +19,10 @@ tags:
   - tco
 categories:
   - news
+canonical_url: "https://thakicloud.github.io/ko/news/ai-price-scissors-infra-vs-inference/"
 ---
+
+![위로 치솟는 랙 값과 아래로 무너지는 추론 값 사이에 낀 기업을 나타낸 AI 가위 개념도](/assets/images/ai-price-scissors-infra-vs-inference-hero.webp)
 
 ## 같은 날, 두 숫자가 서로를 등지고 걸어갔습니다
 
@@ -57,6 +60,36 @@ categories:
 
 ThakiCloud가 Agent-Native Cloud로 만든 Paxis는 바로 이 네 손잡이를 한 손에 쥐도록 설계했습니다. 작업마다 알맞은 모델을 고르는 CostRouter는 딥시크류 저가 모델과 고성능 모델을 워크로드에 따라 갈라 태워 아래층의 가격 붕괴를 비용 절감으로 되받습니다. 격리 샌드박스 실행과 멀티테넌시는 확보한 GPU의 유휴 시간을 줄여 위층의 자본비용을 흡수합니다. 소버린과 온프렘 쿠버네티스 기반은 오픈 웨이트 모델을 국내 규제 안에서 직접 서빙하게 해, 싼 값과 데이터 주권을 동시에 가져갑니다. 그리고 Skills, Tools, Policies, Audit Logs를 일급 리소스로 두고 L0부터 L3까지 자율도를 나눈 거버넌스는, 레드티밍 가이드가 요구하는 정책 게이트와 감사 로그를 처음부터 제품 안에 심어둡니다.
 
+```mermaid
+flowchart TB
+    U["위층 · 인프라 자본비용 상승<br/>HBM4 GB당 53달러 · 랙 2100만 달러 · 전력 병목"]
+    D["아래층 · 추론 가격 붕괴<br/>딥시크 34배 인하 · 메타 4분의 1 가격"]
+    U -->|같은 수요에서 갈라진 쌍둥이| E
+    D -->|같은 수요에서 갈라진 쌍둥이| E
+    E["가위 한가운데 · 기업<br/>비싼 인프라 · 남의 가격정책 · 데이터 주권 리스크"]
+    E --> H1
+    E --> H2
+    E --> H3
+    E --> H4
+    H1["손잡이 1 · 스케줄링<br/>유휴 GPU 제거"] --> P1["Paxis 격리 샌드박스·멀티테넌시"]
+    H2["손잡이 2 · 라우팅<br/>난이도별 모델 배분"] --> P2["Paxis CostRouter"]
+    H3["손잡이 3 · 온프렘·소버린<br/>오픈 웨이트 직접 서빙"] --> P3["Paxis 소버린 쿠버네티스"]
+    H4["손잡이 4 · 정책·감사<br/>실행을 안전하게 가둠"] --> P4["Paxis 거버넌스 L0~L3"]
+```
+
 ## 가위는 벌어질수록 손잡이가 중요해집니다
 
 오늘의 두 숫자는 앞으로도 더 멀리 벌어질 가능성이 큽니다. 메모리 공급이 2028년까지 타이트하고 전력 병목은 몇 년의 인허가를 요구하니 위층은 쉽게 내려오지 않습니다. 반대로 자체 칩과 초저가 모델의 물결은 아래층을 계속 끌어내립니다. 이럴수록 승부는 두 날 자체가 아니라 그 사이를 쥐는 손잡이에서 갈립니다. 랙 값과 추론 값이라는 두 개의 숫자를 읽을 때, 그 사이에 놓인 스케줄링과 라우팅과 주권과 안전을 함께 읽어야 하는 이유입니다. 오늘의 뉴스는 어느 모델이 이겼는지를 묻지 않았습니다. 대신 그 모델을 굴리는 비용과 그 비용을 다루는 방식을 물었습니다. 가위의 한가운데에서 흔들리지 않으려면, 먼저 손잡이를 어디에 두었는지부터 확인해야 합니다.
+
+## 참고 자료
+
+- [엔비디아 루빈 울트라 랙 예상 판매가 2100만 달러](https://tech.ifeng.com/c/8uco339RORc) · 펑황망
+- [번스타인, 엔비디아 베라 루빈 랙 910만 달러 전망…HBM4 가격 급등이 원가 압박](https://www.weeklypost.kr/news/articleView.html?idxno=11422) · 위클리포스트
+- ['40조 잭팟' SK하이닉스, 알리바바도 넘었다…역대급 기록](https://www.hankyung.com/article/2026071072846) · 한국경제
+- [마이크론, 미국 반도체 투자 2500억 달러로 확대…뉴욕 팹 착공](https://www.thelec.net/news/articleView.html?idxno=12157) · 디일렉
+- [삼성전자 "HBM·로직·실리콘포토닉스 묶는 2.xD 개발 중"](http://inews24.com/view/1984212) · 아이뉴스24
+- [딥시크, 75% 인하를 영구화하다…AI 가격 전쟁 격화](https://thenextweb.com/news/deepseek-v4-pro-75-percent-price-cut-permanent) · TheNextWeb
+- [메타, 뮤즈 스파크 1.1 API 100만 토큰당 1.25/4.25달러 책정](https://aiweekly.co/alerts/meta-prices-muse-spark-11-api-at-125425-per-m-tokens) · AI Weekly
+- [메타의 새 AI 칩, 9월부터 양산 시작](https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/) · TechCrunch
+- [스타트업 린디, 클로드를 버리고 딥시크로 전환해 수백만 달러 절감](https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/) · The Decoder
+- [과기정통부·KISA, 'AI 보안 레드티밍 가이드' 발간](https://www.digitaltoday.co.kr/news/articleView.html?idxno=682799) · 디지털투데이
