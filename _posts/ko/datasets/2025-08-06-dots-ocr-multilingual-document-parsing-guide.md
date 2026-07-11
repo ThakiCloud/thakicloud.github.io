@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/dots-ocr-multilingual-document-parsing-guide/"
+canonical_url: "https://thakicloud.github.io/ko/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 categories:
   - datasets
@@ -27,6 +27,8 @@ categories:
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
+
+![dots.ocr 통합 문서 파싱 개요](/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png)
 
 ## 서론
 
@@ -46,6 +48,22 @@ dots.ocr의 가장 큰 혁신은 **단일 비전-언어 모델**로 다음 작�
 - **포맷 변환**: Markdown, HTML, LaTeX 등 적절한 형식으로 출력
 
 기존의 복잡한 멀티모델 파이프라인을 단순한 프롬프트 변경만으로 다양한 작업 모드로 전환할 수 있습니다.
+
+```mermaid
+flowchart LR
+    IN[Image or PDF input] --> VLM[dots.ocr 1.7B VLM]
+    VLM --> L[Layout Detection]
+    VLM --> O[Text Recognition OCR]
+    VLM --> R[Reading Order]
+    VLM --> F[Format Conversion]
+    L --> J[Structured JSON with bbox and 11 categories]
+    O --> J
+    R --> J
+    F --> OUT[Markdown or HTML tables or LaTeX formulas]
+    J --> OUT
+```
+
+위 구조에서 보듯 하나의 VLM이 레이아웃 감지부터 포맷 변환까지 전 과정을 담당하며, 프롬프트만 바꾸면 레이아웃 전용, OCR 전용, 특정 영역 분석 등으로 모드가 전환됩니다.
 
 ### 2. 뛰어난 다국어 지원
 

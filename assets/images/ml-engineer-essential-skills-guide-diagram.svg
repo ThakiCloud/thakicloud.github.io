@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <rect width="1200" height="520" fill="#f7f9fc"/>
+  <text x="600" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#1B4F72">Made-With-ML Lifecycle: Design, Develop, Deploy, Iterate</text>
+
+  <!-- Stage cards -->
+  <g>
+    <rect x="70" y="120" width="240" height="150" rx="14" fill="#e8f1fb" stroke="#1B4F72" stroke-width="2"/>
+    <text x="190" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#1B4F72">1. Design</text>
+    <text x="190" y="192" text-anchor="middle" font-size="14" fill="#2E4057">Problem framing</text>
+    <text x="190" y="214" text-anchor="middle" font-size="14" fill="#2E4057">Success metrics</text>
+    <text x="190" y="236" text-anchor="middle" font-size="14" fill="#2E4057">Data and constraints</text>
+  </g>
+
+  <g>
+    <rect x="360" y="120" width="240" height="150" rx="14" fill="#e6f6f3" stroke="#0e8a76" stroke-width="2"/>
+    <text x="480" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#0e8a76">2. Develop</text>
+    <text x="480" y="192" text-anchor="middle" font-size="14" fill="#2E4057">Data pipeline</text>
+    <text x="480" y="214" text-anchor="middle" font-size="14" fill="#2E4057">Model training</text>
+    <text x="480" y="236" text-anchor="middle" font-size="14" fill="#2E4057">Testing and eval</text>
+  </g>
+
+  <g>
+    <rect x="650" y="120" width="240" height="150" rx="14" fill="#fef3e2" stroke="#c77d0a" stroke-width="2"/>
+    <text x="770" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#c77d0a">3. Deploy</text>
+    <text x="770" y="192" text-anchor="middle" font-size="14" fill="#2E4057">Serving and API</text>
+    <text x="770" y="214" text-anchor="middle" font-size="14" fill="#2E4057">CI CD pipelines</text>
+    <text x="770" y="236" text-anchor="middle" font-size="14" fill="#2E4057">Monitoring</text>
+  </g>
+
+  <g>
+    <rect x="940" y="120" width="200" height="150" rx="14" fill="#efeafc" stroke="#5b4bc4" stroke-width="2"/>
+    <text x="1040" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#5b4bc4">4. Iterate</text>
+    <text x="1040" y="192" text-anchor="middle" font-size="14" fill="#2E4057">Feedback loops</text>
+    <text x="1040" y="214" text-anchor="middle" font-size="14" fill="#2E4057">Retraining</text>
+    <text x="1040" y="236" text-anchor="middle" font-size="14" fill="#2E4057">Drift detection</text>
+  </g>
+
+  <!-- Arrows between stages -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <line x1="310" y1="195" x2="356" y2="195" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="195" x2="646" y2="195" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="890" y1="195" x2="936" y2="195" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Feedback loop arrow: Iterate back to Design -->
+  <path d="M1040,270 L1040,340 L190,340 L190,274" fill="none" stroke="#5b4bc4" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+  <text x="600" y="365" text-anchor="middle" font-size="14" font-style="italic" fill="#5b4bc4">Continuous feedback: production signals return to design</text>
+
+  <!-- Foundation band -->
+  <rect x="70" y="410" width="1070" height="70" rx="12" fill="#eef2f7" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="605" y="440" text-anchor="middle" font-size="15" font-weight="700" fill="#1B4F72">Cross-cutting foundations</text>
+  <text x="605" y="464" text-anchor="middle" font-size="14" fill="#2E4057">Python and software engineering  .  Data engineering  .  MLOps and infrastructure  .  Collaboration</text>
+</svg>

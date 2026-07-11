@@ -29,6 +29,8 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
+![نظرة عامة على تحليل المستندات الموحد في dots.ocr](/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png)
+
 ## مقدمة
 
 يشهد مجال تحليل المستندات تحولات جذرية. تقليديا، كانت عملية اكتشاف تخطيط المستند والتعرف على النصوص تتطلب تشغيل عدة نماذج مستقلة مرتبطة في شكل خط أنابيب متسلسل. غير أن **dots.ocr** الذي أصدره فريق بحث RedNote يدمج كل هذه المهام في نموذج بصري لغوي (VLM) واحد محققا أداء SOTA (State-of-the-Art) في الوقت ذاته.
@@ -47,6 +49,22 @@ categories:
 - **تحويل الصيغة**: إخراج النتائج بصيغ ملائمة مثل Markdown وHTML وLaTeX
 
 يمكن التبديل بين أوضاع المهام المختلفة لخطوط الأنابيب متعددة النماذج المعقدة بمجرد تغيير الموجه (prompt).
+
+```mermaid
+flowchart LR
+    IN[Image or PDF input] --> VLM[dots.ocr 1.7B VLM]
+    VLM --> L[Layout Detection]
+    VLM --> O[Text Recognition OCR]
+    VLM --> R[Reading Order]
+    VLM --> F[Format Conversion]
+    L --> J[Structured JSON with bbox and 11 categories]
+    O --> J
+    R --> J
+    F --> OUT[Markdown or HTML tables or LaTeX formulas]
+    J --> OUT
+```
+
+كما هو موضح أعلاه، يتولى نموذج بصري لغوي واحد كل شيء بدءا من اكتشاف التخطيط وصولا إلى تحويل الصيغة، ويؤدي تغيير الموجه إلى تبديل الوضع إلى اكتشاف التخطيط فقط أو التعرف الضوئي على الحروف فقط أو تحليل منطقة محددة، وما إلى ذلك.
 
 ### 2. دعم ممتاز للغات متعددة
 

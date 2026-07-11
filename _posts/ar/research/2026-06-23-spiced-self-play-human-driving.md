@@ -25,6 +25,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/spiced-self-play-human-
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ## نظرة عامة

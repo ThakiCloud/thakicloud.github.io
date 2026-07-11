@@ -30,6 +30,8 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق
 
+![نظرة عامة على خط جمع البيانات الملائمة للنماذج اللغوية الكبيرة في AnyCrawl](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
+
 ## نظرة عامة
 
 [AnyCrawl](https://github.com/any4ai/AnyCrawl) هو **زاحف ويب عالي الأداء** طوّرته شركة Any4AI، يحوّل مواقع الويب إلى بيانات محسّنة للنماذج اللغوية الكبيرة (LLMs) ويستخرج صفحات نتائج محركات البحث (SERP) المنظّمة من Google و Bing و Baidu وغيرها.
@@ -52,6 +54,19 @@ categories:
 
 ```
 محتوى الويب -> معالجة AnyCrawl -> بيانات جاهزة للنماذج اللغوية -> تدريب/استنتاج نموذج AI
+```
+
+يوضح المخطط أدناه سير العمل الكامل: تمر عناوين URL واستعلامات البحث عبر محركات الاستخراج ومحركات SERP، ثم تُعالج بواسطة عمّال متعددي الخيوط، وأخيراً تُطبّع إلى بيانات ملائمة للنماذج اللغوية الكبيرة:
+
+```mermaid
+flowchart LR
+    U[URLs and search queries] --> API[AnyCrawl API]
+    API --> SCRAPE[Scrape engines Cheerio Playwright Puppeteer]
+    API --> SERP[SERP engines Google Bing Baidu]
+    SCRAPE --> WORK[Multithreaded multiprocess workers]
+    SERP --> WORK
+    WORK --> NORM[Normalize to LLM friendly Markdown and JSON]
+    NORM --> AI[LLM training and inference]
 ```
 
 ### بنية معمارية حديثة

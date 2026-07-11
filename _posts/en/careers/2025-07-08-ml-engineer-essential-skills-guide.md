@@ -61,6 +61,10 @@ production_requirements = {
 
 [Made-With-ML](https://github.com/GokuMohandas/Made-With-ML) presents how to build ML systems in actual production environments through a 4-stage process: **Design · Develop · Deploy · Iterate**.
 
+![Made-With-ML lifecycle: Design-Develop-Deploy-Iterate loop with cross-cutting foundations](/assets/images/ml-engineer-essential-skills-guide-diagram.svg)
+
+As the diagram shows, the four stages form a loop rather than a straight line: production signals flow back into design, while cross-cutting foundations of programming, data engineering, MLOps, and collaboration support every stage.
+
 ## Core Competency Checklist
 
 ### 1. Basic Programming & Development Environment (Foundation)

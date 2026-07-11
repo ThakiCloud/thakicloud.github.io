@@ -15,12 +15,14 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ar/datasets/awesome-public-datasets-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/ar/datasets/awesome-public-datasets-comprehensive-guide-ar/"
 categories:
   - datasets
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق
+
+![نظرة عامة على فئات مجموعات البيانات العامة الرائعة](/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png)
 
 ## مقدمة
 
@@ -45,6 +47,20 @@ categories:
 ## التغطية الشاملة للفئات
 
 واحد من أكثر الجوانب إثارة للإعجاب في مجموعات البيانات العامة الرائعة هو اتساع تغطيتها. ينظم المستودع مجموعات البيانات إلى أكثر من 30 فئة متميزة، كل منها تتناول مجالات وحالات استخدام محددة:
+
+يوضح المخطط أدناه كيف تتجمع هذه الفئات التي يزيد عددها عن 30 فئة تقريباً ضمن مجموعات مجالية:
+
+```mermaid
+flowchart TB
+    ROOT[Awesome Public Datasets 30+ categories 64.3k stars] --> SCI[Science and Research]
+    ROOT --> TECH[Technology and Computing]
+    ROOT --> SOC[Social and Economic Science]
+    ROOT --> ENT[Entertainment and Sports]
+    SCI --> S1[Agriculture Biology Chemistry Climate Physics]
+    TECH --> T1[Machine Learning Networks Software Image Processing]
+    SOC --> O1[Economics Social Science Government Healthcare]
+    ENT --> E1[Sports Entertainment eSports]
+```
 
 ### المجالات العلمية والبحثية
 

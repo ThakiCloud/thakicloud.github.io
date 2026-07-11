@@ -15,12 +15,14 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ko/datasets/awesome-public-datasets-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/ko/datasets/awesome-public-datasets-comprehensive-guide-ko/"
 categories:
   - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
+
+![Awesome Public Datasets 카테고리 구성 개요](/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png)
 
 ## 서론
 
@@ -44,7 +46,19 @@ Awesome Public Datasets는 블로그, 커뮤니티 답변, 사용자 응답으�
 
 ## 포괄적인 카테고리 범위
 
-Awesome Public Datasets의 가장 인상적인 측면 중 하나는 범위의 광범위함입니다. 리포지토리는 데이터셋을 30개 이상의 별개 카테고리로 구성하며, 각각은 특정 도메인과 사용 사례를 다룹니다:
+Awesome Public Datasets의 가장 인상적인 측면 중 하나는 범위의 광범위함입니다. 리포지토리는 데이터셋을 30개 이상의 별개 카테고리로 구성하며, 각각은 특정 도메인과 사용 사례를 다룹니다. 아래 다이어그램은 이 30여 개 카테고리가 크게 어떤 도메인 그룹으로 묶이는지 보여줍니다:
+
+```mermaid
+flowchart TB
+    ROOT[Awesome Public Datasets 30+ categories 64.3k stars] --> SCI[Science and Research]
+    ROOT --> TECH[Technology and Computing]
+    ROOT --> SOC[Social and Economic Science]
+    ROOT --> ENT[Entertainment and Sports]
+    SCI --> S1[Agriculture Biology Chemistry Climate Physics]
+    TECH --> T1[Machine Learning Networks Software Image Processing]
+    SOC --> O1[Economics Social Science Government Healthcare]
+    ENT --> E1[Sports Entertainment eSports]
+```
 
 ### 과학 및 연구 도메인
 

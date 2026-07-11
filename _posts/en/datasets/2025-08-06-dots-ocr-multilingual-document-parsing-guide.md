@@ -29,6 +29,8 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
+![dots.ocr unified document parsing overview](/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png)
+
 ## Introduction
 
 A significant shift is taking place in the field of document parsing. Traditionally, document layout detection and text recognition required multiple independent models chained together in a pipeline. However, **dots.ocr**, released by the RedNote research team, integrates all of these tasks into a single vision-language model (VLM) while achieving state-of-the-art (SOTA) performance.
@@ -47,6 +49,22 @@ The most significant innovation in dots.ocr is that a **single vision-language m
 - **Format conversion**: Producing output in appropriate formats such as Markdown, HTML, and LaTeX
 
 What once required a complex multi-model pipeline can now be switched between different task modes by simply changing a prompt.
+
+```mermaid
+flowchart LR
+    IN[Image or PDF input] --> VLM[dots.ocr 1.7B VLM]
+    VLM --> L[Layout Detection]
+    VLM --> O[Text Recognition OCR]
+    VLM --> R[Reading Order]
+    VLM --> F[Format Conversion]
+    L --> J[Structured JSON with bbox and 11 categories]
+    O --> J
+    R --> J
+    F --> OUT[Markdown or HTML tables or LaTeX formulas]
+    J --> OUT
+```
+
+As shown above, a single VLM handles everything from layout detection to format conversion, and switching the prompt changes the mode to layout-only, OCR-only, region-specific analysis, and so on.
 
 ### 2. Strong Multilingual Support
 

@@ -30,6 +30,8 @@ categories:
 
 ⏱️ **Estimated reading time**: 15 min
 
+![AnyCrawl LLM-friendly data collection pipeline overview](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
+
 ## Overview
 
 [AnyCrawl](https://github.com/any4ai/AnyCrawl) is a **high-performance web crawler** developed by Any4AI that transforms websites into data optimized for large language models (LLMs) and extracts structured search engine results pages (SERPs) from Google, Bing, Baidu, and other major search engines.
@@ -52,6 +54,19 @@ AnyCrawl goes beyond a simple web crawler -- it is an **AI-powered data collecti
 
 ```
 Web content -> AnyCrawl processing -> LLM-ready data -> AI model training/inference
+```
+
+The diagram below shows the full flow: URLs and search queries pass through the scraping engines and SERP engines, are processed by multithreaded workers, and are finally normalized into LLM-friendly data:
+
+```mermaid
+flowchart LR
+    U[URLs and search queries] --> API[AnyCrawl API]
+    API --> SCRAPE[Scrape engines Cheerio Playwright Puppeteer]
+    API --> SERP[SERP engines Google Bing Baidu]
+    SCRAPE --> WORK[Multithreaded multiprocess workers]
+    SERP --> WORK
+    WORK --> NORM[Normalize to LLM friendly Markdown and JSON]
+    NORM --> AI[LLM training and inference]
 ```
 
 ### Modern Architecture

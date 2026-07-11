@@ -15,12 +15,14 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/en/datasets/awesome-public-datasets-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/en/datasets/awesome-public-datasets-comprehensive-guide-en/"
 categories:
   - datasets
 ---
 
 ⏱️ **Expected Reading Time**: 8 minutes
+
+![Awesome Public Datasets category overview](/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png)
 
 ## Introduction
 
@@ -45,6 +47,20 @@ The repository stands out for several key reasons:
 ## Comprehensive Category Coverage
 
 One of the most impressive aspects of Awesome Public Datasets is its breadth of coverage. The repository organizes datasets into over 30 distinct categories, each addressing specific domains and use cases:
+
+The diagram below shows how these 30-plus categories roughly group into domain clusters:
+
+```mermaid
+flowchart TB
+    ROOT[Awesome Public Datasets 30+ categories 64.3k stars] --> SCI[Science and Research]
+    ROOT --> TECH[Technology and Computing]
+    ROOT --> SOC[Social and Economic Science]
+    ROOT --> ENT[Entertainment and Sports]
+    SCI --> S1[Agriculture Biology Chemistry Climate Physics]
+    TECH --> T1[Machine Learning Networks Software Image Processing]
+    SOC --> O1[Economics Social Science Government Healthcare]
+    ENT --> E1[Sports Entertainment eSports]
+```
 
 ### Scientific and Research Domains
 

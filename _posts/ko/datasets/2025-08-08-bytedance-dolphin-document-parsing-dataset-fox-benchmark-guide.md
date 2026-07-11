@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
+canonical_url: "https://thakicloud.github.io/ko/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
 reading_time: true
 categories:
   - datasets
@@ -29,6 +29,8 @@ categories:
 ---
 
 ⏱️ **예상 읽기 시간**: 18분
+
+![ByteDance Dolphin Analyze-then-Parse 파이프라인 개요](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
 
 ## 서론
 
@@ -85,7 +87,25 @@ dolphin_paradigm = {
 
 ### 🏗️ 모델 아키텍처
 
-Dolphin은 Vision-Encoder-Decoder 구조를 기반으로 합니다:
+Dolphin은 Vision-Encoder-Decoder 구조를 기반으로 합니다. 아래 다이어그램은 문서 이미지가 2단계 Analyze-then-Parse 흐름을 거쳐 구조화된 출력으로 변환되는 과정을 보여줍니다:
+
+```mermaid
+flowchart TB
+    IMG[Document image] --> ENC[Vision Encoder Swin Transformer]
+    ENC --> S1[Stage 1 Layout Analysis]
+    S1 --> SEQ[Element sequence in reading order]
+    SEQ --> S2[Stage 2 Parallel Element Parsing]
+    S2 --> T[Text blocks]
+    S2 --> TB[Tables]
+    S2 --> FM[Formulas]
+    S2 --> FG[Figures]
+    T --> DEC[Text Decoder MBart with anchor prompts]
+    TB --> DEC
+    FM --> DEC
+    FG --> DEC
+    DEC --> OUT[Structured JSON and Markdown]
+```
+
 
 #### 비전 인코더
 - **백본**: Swin Transformer

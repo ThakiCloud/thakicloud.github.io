@@ -32,6 +32,8 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق
 
+![نظرة عامة على خط معالجة Analyze-then-Parse في ByteDance Dolphin](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+
 ## مقدمة
 
 تحليل صور المستندات (Document Image Parsing) هو تقنية ذكاء اصطناعي محورية لاستخراج معلومات منظمة من المستندات الممسوحة ضوئيا أو ملفات PDF أو المستندات الملتقطة بالكاميرا. يقدم مشروع Dolphin الذي طورته ByteDance نهجا مبتكرا في هذا المجال، وقد نشر الفريق مجموعة بيانات Fox واختباراتها المرجعية استنادا إلى نتائج البحث المنشور في [ACL 2025](https://arxiv.org/abs/2505.14059).
@@ -88,6 +90,25 @@ dolphin_paradigm = {
 ### 🏗️ البنية المعمارية للنموذج
 
 يستند Dolphin إلى بنية Vision-Encoder-Decoder:
+
+يوضح المخطط أدناه كيف يتم تحويل صورة المستند إلى مخرجات منظمة من خلال مسار التحليل ثم التحويل (Analyze-then-Parse) ذي المرحلتين:
+
+```mermaid
+flowchart TB
+    IMG[Document image] --> ENC[Vision Encoder Swin Transformer]
+    ENC --> S1[Stage 1 Layout Analysis]
+    S1 --> SEQ[Element sequence in reading order]
+    SEQ --> S2[Stage 2 Parallel Element Parsing]
+    S2 --> T[Text blocks]
+    S2 --> TB[Tables]
+    S2 --> FM[Formulas]
+    S2 --> FG[Figures]
+    T --> DEC[Text Decoder MBart with anchor prompts]
+    TB --> DEC
+    FM --> DEC
+    FG --> DEC
+    DEC --> OUT[Structured JSON and Markdown]
+```
 
 #### مشفر الرؤية (Vision Encoder)
 - **العمود الفقري**: Swin Transformer

@@ -21,13 +21,15 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/ko/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 reading_time: true
 categories:
   - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 15분
+
+![AnyCrawl LLM 친화적 데이터 수집 파이프라인 개요](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
 
 ## 개요
 
@@ -51,6 +53,19 @@ AnyCrawl은 단순한 웹 크롤러를 넘어선 **AI 기반 데이터 수집 �
 
 ```
 웹 콘텐츠 → AnyCrawl 처리 → LLM 친화적 데이터 → AI 모델 학습/추론
+```
+
+아래 다이어그램은 URL과 검색 질의가 스크래핑 엔진과 SERP 엔진을 거쳐 멀티스레드 워커에서 처리되고, 최종적으로 LLM 친화적 데이터로 정규화되는 전체 흐름을 보여줍니다:
+
+```mermaid
+flowchart LR
+    U[URLs and search queries] --> API[AnyCrawl API]
+    API --> SCRAPE[Scrape engines Cheerio Playwright Puppeteer]
+    API --> SERP[SERP engines Google Bing Baidu]
+    SCRAPE --> WORK[Multithreaded multiprocess workers]
+    SERP --> WORK
+    WORK --> NORM[Normalize to LLM friendly Markdown and JSON]
+    NORM --> AI[LLM training and inference]
 ```
 
 ### 🏗️ 현대적 아키텍처

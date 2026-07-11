@@ -32,6 +32,8 @@ categories:
 
 ⏱️ **Estimated reading time**: 18 min
 
+![ByteDance Dolphin Analyze-then-Parse pipeline overview](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+
 ## Introduction
 
 Document image parsing is a core AI technology for extracting structured information from scanned documents, PDFs, or photographed pages. ByteDance's Dolphin project proposes an innovative approach in this space, and building on research published at [ACL 2025](https://arxiv.org/abs/2505.14059), the team has released the Fox dataset and benchmark.
@@ -88,6 +90,25 @@ dolphin_paradigm = {
 ### 🏗️ Model Architecture
 
 Dolphin is built on a Vision-Encoder-Decoder structure:
+
+The diagram below shows how a document image is transformed into structured output through the two-stage Analyze-then-Parse flow:
+
+```mermaid
+flowchart TB
+    IMG[Document image] --> ENC[Vision Encoder Swin Transformer]
+    ENC --> S1[Stage 1 Layout Analysis]
+    S1 --> SEQ[Element sequence in reading order]
+    SEQ --> S2[Stage 2 Parallel Element Parsing]
+    S2 --> T[Text blocks]
+    S2 --> TB[Tables]
+    S2 --> FM[Formulas]
+    S2 --> FG[Figures]
+    T --> DEC[Text Decoder MBart with anchor prompts]
+    TB --> DEC
+    FM --> DEC
+    FG --> DEC
+    DEC --> OUT[Structured JSON and Markdown]
+```
 
 #### Vision Encoder
 - **Backbone**: Swin Transformer
