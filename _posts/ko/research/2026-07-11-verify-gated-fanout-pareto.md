@@ -8,6 +8,9 @@ tags: [멀티에이전트, LLM오케스트레이션, 적대적검증, 모델라�
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/verify-gated-fanout-pareto/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.github.io/ko/research/verify-gated-fanout-pareto/"
 ---
 
 여러 에이전트를 병렬로 실행해 결과를 취합하는 fan-out 파이프라인을 운영하거나 도입을 검토하는 클라우드·AI 엔지니어라면, 검증 단계에 어떤 모델을 얼마나 붙일지 한 번쯤 관행적으로 정해본 경험이 있을 것입니다. 이 글은 그 관행이 실제로는 어떤 비용을 치르고 어떤 안전을 사는지 실측한 연구를 소개합니다. 결론부터 말하면, 더 비싼 모델을 더 많이 투입하는 쪽이 항상 안전한 것은 아니었습니다.
@@ -50,3 +53,16 @@ ThakiCloud는 "fan-out은 검증으로 닫는다"는 원칙을 이미 하우스�
 연구진은 이 결과의 한계를 명확히 밝히고 있습니다. 벤치마크 자체가 12개 finding, 단일 draw를 기반으로 한 소규모 실험이라, 백분율이 6분의 1 단위로 거칠게 움직입니다. 특히 N=3과 N=5 조건은 별도로 재추출한 독립 시행이 아니라 동일한 5회 draw를 사후에 잘라 구성한 것이기 때문에, 이상치 하나가 여러 셀에 동시에 영향을 줄 수 있고, 이런 이유로 통계적 유의성 검정도 표본 크기상 수행하지 않았습니다. Claude 계열의 Haiku·Sonnet·Opus 세 등급만 테스트했으므로 이 등급 간 서열이 다른 모델 패밀리에도 그대로 적용된다고 볼 근거는 없으며, 비용 수치는 2026년 7월 10일 시점의 API 단가를 반영한 것이라 가격이 바뀌면 어떤 설정이 지배적인지도 달라질 수 있습니다. 연구진은 콩도르세 희석 메커니즘 자체는 수학적으로 확실하지만, 실제 운영 환경에서 어려운 항목이 스켑틱 정답률 50% 미만 구간에 얼마나 자주 놓이는지는 이번 소규모 벤치마크만으로는 답할 수 없다고 못 박으며, 더 큰 규모의 seeded 벤치마크와 셀마다 독립적으로 재추출하는 후속 실험을 다음 과제로 제시합니다.
 
 논문 상세 정보는 Hugging Face 데이터셋 페이지에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![verify-gated-fanout-pareto 슬라이드 1](/assets/images/verify-gated-fanout-pareto-slide-01.png)
+
+![verify-gated-fanout-pareto 슬라이드 2](/assets/images/verify-gated-fanout-pareto-slide-02.png)
+
+![verify-gated-fanout-pareto 슬라이드 3](/assets/images/verify-gated-fanout-pareto-slide-03.png)
+
+![verify-gated-fanout-pareto 슬라이드 4](/assets/images/verify-gated-fanout-pareto-slide-04.png)
+
