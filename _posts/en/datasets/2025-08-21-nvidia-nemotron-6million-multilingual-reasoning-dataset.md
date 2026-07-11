@@ -65,6 +65,21 @@ This balanced strategy maximizes the use of English knowledge acquired during pr
 
 NVIDIA introduced several quality-control mechanisms to overcome the limitations of machine translation:
 
+```mermaid
+flowchart TD
+    A[English reasoning data<br/>prompt · response · reasoning chain] --> B{Split translation targets}
+    B -->|prompt · response| C[Translate into 5 languages<br/>fr · es · de · it · ja]
+    B -->|reasoning chain| D[Keep English original]
+    C --> E[Translation models<br/>German Qwen2.5-32B-Instruct-AWQ<br/>other 4 languages Qwen2.5-14B-Instruct]
+    E --> F[QC 1<br/>line-by-line translation · skip code blocks]
+    F --> G[QC 2<br/>bracket format enforced · malformed auto-dropped]
+    G --> H[QC 3<br/>fastText language ID<br/>55,567 examples · 1.1% dropped]
+    D --> I[6M multilingual reasoning dataset<br/>nvidia-open-model-license]
+    H --> I
+```
+
+*The translation quality-control pipeline. Only prompts and responses are translated into 5 languages while the reasoning chain stays in English, and three filters (line-by-line translation, bracket-format enforcement, fastText language ID) yield 6 million examples.*
+
 #### 1. Line-by-Line Translation Processing
 
 ```python

@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/self-evolving-harness-n
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ![الحزام الذكي الذي يتطور ذاتياً كل ليلة](/assets/images/self-evolving-harness-nightly-hero.webp)

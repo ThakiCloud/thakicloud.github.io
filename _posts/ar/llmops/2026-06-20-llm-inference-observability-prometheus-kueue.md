@@ -25,6 +25,7 @@ reading_time: true
 lang: ar
 categories:
   - llmops
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق

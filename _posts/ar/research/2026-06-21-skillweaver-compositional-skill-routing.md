@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/skillweaver-composition
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 أصبح اعتماد وكلاء النماذج اللغوية الكبيرة على المهارات الخارجية (مواصفات الأدوات القابلة لإعادة الاستخدام) أمرًا شائعًا الآن. لكنّ العمل في الواقع ليس مشكلة "اختيار" مهارة واحدة بل مشكلة "تركيب" عدة مهارات. فالطلب المركّب مثل "شغّل بحثًا معمّقًا، ثم تحقّق من الحقائق، ثم حوّله إلى تقرير docx، وانشره على Slack" لا يمكن حلّه عبر بحث عن مهارة واحدة. وبحث SkillWeaver (arXiv:2606.18051، بعنوان "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose")، الذي نُشر على arXiv في 16 يونيو 2026، يُعرّف هذه المشكلة تعريفًا رسميًا، والأهم أنه يحدّد **أين يكمن عنق الزجاجة الحقيقي** بالاستناد إلى البيانات.

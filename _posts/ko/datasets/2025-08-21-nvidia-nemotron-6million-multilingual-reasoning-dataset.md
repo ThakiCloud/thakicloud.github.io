@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "database"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
+canonical_url: "https://thakicloud.github.io/ko/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
 reading_time: true
 categories:
   - datasets
@@ -63,6 +63,21 @@ NVIDIA는 단순한 번역을 넘어선 혁신적인 접근법을 채택했습�
 ### 고품질 번역을 위한 메커니즘
 
 NVIDIA는 기계 번역의 한계를 극복하기 위해 여러 품질 관리 메커니즘을 도입했습니다:
+
+```mermaid
+flowchart TD
+    A[영어 추론 데이터<br/>프롬프트 · 응답 · 추론 체인] --> B{번역 대상 분리}
+    B -->|프롬프트 · 응답| C[5개 언어로 번역<br/>fr · es · de · it · ja]
+    B -->|추론 체인| D[영어 원본 유지]
+    C --> E[번역 모델<br/>독일어 Qwen2.5-32B-Instruct-AWQ<br/>그 외 4개 언어 Qwen2.5-14B-Instruct]
+    E --> F[품질 관리 1<br/>문장 단위 번역 · 코드 블록 제외]
+    F --> G[품질 관리 2<br/>브래킷 형식 강제 · 미준수 자동 제외]
+    G --> H[품질 관리 3<br/>fastText 언어 식별<br/>55,567개 · 전체 1.1% 제외]
+    D --> I[6백만 다국어 추론 데이터셋<br/>nvidia-open-model-license]
+    H --> I
+```
+
+*번역 품질 관리 파이프라인입니다. 프롬프트와 응답만 5개 언어로 번역하고 추론 체인은 영어 원본을 유지하며, 문장 단위 번역과 브래킷 형식 강제, fastText 언어 식별의 세 단계 필터를 거쳐 6백만 예제를 구성합니다.*
 
 #### 1. 문장 단위 번역 처리
 

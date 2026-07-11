@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/en/research/skillweaver-composition
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 The pattern of LLM agents relying on external skills (reusable tool specifications) is now ubiquitous. Yet real-world work is not the problem of "picking" one skill but of "composing" several. A composite request such as "run deep research, fact-check it, turn it into a docx report, and post it to Slack" cannot be solved by a single skill search. The paper SkillWeaver (arXiv:2606.18051, "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose"), released on arXiv on June 16, 2026, formally defines this problem and, more importantly, pinpoints **where the real bottleneck lies** with data.

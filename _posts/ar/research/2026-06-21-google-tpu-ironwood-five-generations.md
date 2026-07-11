@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/google-tpu-ironwood-fiv
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 كيف تطورت البنية التحتية المستخدمة في تدريب نماذج الذكاء الاصطناعي واسعة النطاق. تتتبع ورقة بحثية نشرتها Google على arXiv بعنوان "Google's Training Supercomputers from TPU v2 to Ironwood" (arXiv:2606.15870، قُدمت في 14 يونيو 2026) تطور خمسة أجيال من TPU عبر خمسة محاور: الاستقرار المعماري، والحجم، والمرونة، وكفاءة الطاقة، والاستدامة. ولأن الورقة تتناول كيفية توسيع **النظام بأكمله** بدلًا من أداء الشريحة الواحدة، فإنها تقدّم دروسًا مباشرة للفرق التي تدير بنية تحتية للذكاء الاصطناعي.

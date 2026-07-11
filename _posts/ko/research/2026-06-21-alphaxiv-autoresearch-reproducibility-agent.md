@@ -17,10 +17,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/alphaxiv-autoresearch-reproducibility-agent/"
+canonical_url: "https://thakicloud.github.io/ko/research/alphaxiv-autoresearch-reproducibility-agent/"
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 AI 연구의 재현성 문제는 오래된 골칫거리입니다. 논문은 인상적인 결과를 보고하지만, 막상 코드를 돌려보려면 환경 설정에서 막히고, GPU가 부족하고, 의존성이 깨집니다. alphaXiv가 소개한 autoresearch 기능은 이 마찰을 에이전트로 자동화하려는 시도입니다. arXiv URL에서 `arxiv`를 `autoarxiv`로 바꾸기만 하면, 에이전트가 코드베이스 환경을 설정하고, 최소 재현을 실행하며, GPU 복제 비용까지 추정합니다.

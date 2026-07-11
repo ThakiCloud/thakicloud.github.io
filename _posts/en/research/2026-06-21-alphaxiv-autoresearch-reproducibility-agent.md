@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/en/research/alphaxiv-autoresearch-r
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 Reproducibility has long been a headache in AI research. Papers report impressive results, but when you actually try to run the code you get stuck on environment setup, run short on GPUs, or hit broken dependencies. The autoresearch feature that alphaXiv introduced is an attempt to automate this friction away with an agent. Just swap `arxiv` for `autoarxiv` in an arXiv URL, and an agent sets up the codebase environment, runs a minimal reproduction, and even estimates the GPU cost of full replication.

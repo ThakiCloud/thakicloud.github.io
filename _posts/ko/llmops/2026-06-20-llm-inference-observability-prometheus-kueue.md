@@ -20,10 +20,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/llm-inference-observability-prometheus-kueue/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/llm-inference-observability-prometheus-kueue/"
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 10분

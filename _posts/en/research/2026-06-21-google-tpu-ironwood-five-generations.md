@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/en/research/google-tpu-ironwood-fiv
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 How has the infrastructure for training large-scale AI models evolved. A paper Google published on arXiv, "Google's Training Supercomputers from TPU v2 to Ironwood" (arXiv:2606.15870, submitted June 14, 2026), traces five generations of TPUs along five axes: architectural stability, scale, resilience, power efficiency, and sustainability. Because it covers how the **entire system** was scaled rather than single-chip performance, it offers direct lessons for teams that operate AI infrastructure.

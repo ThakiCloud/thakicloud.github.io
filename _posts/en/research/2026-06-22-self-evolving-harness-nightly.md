@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/en/research/self-evolving-harness-n
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ![The AI Harness That Evolves Itself Every Night](/assets/images/self-evolving-harness-nightly-hero.webp)
