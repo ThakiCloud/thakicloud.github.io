@@ -23,6 +23,7 @@ header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp
 categories:
   - research
+published: false
 ---
 
 ![반투명한 문서가 구조화된 노드 격자로 변환되는 모습을 추상적으로 표현한 이미지](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp)

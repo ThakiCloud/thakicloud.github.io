@@ -20,7 +20,6 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/agentops/distill-skill-fleet-small-models/"
 categories:
   - agentops
-published: false
 ---
 
 ## 개요

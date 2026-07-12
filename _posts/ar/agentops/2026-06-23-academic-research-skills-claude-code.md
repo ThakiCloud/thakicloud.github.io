@@ -22,6 +22,7 @@ header:
 canonical_url: "https://thakicloud.github.io/ar/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
+published: false
 ---
 
 ![صورة مجردة لخط تجميع بحثي](/assets/images/academic-research-skills-claude-code-hero.webp)

@@ -24,6 +24,7 @@ header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp
 categories:
   - research
+published: false
 ---
 
 ![تصوير مجرد يوضح تحول المستندات الشفافة إلى شبكة منظمة من العقد](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp)

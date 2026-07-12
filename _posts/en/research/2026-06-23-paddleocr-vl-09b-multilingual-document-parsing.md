@@ -24,6 +24,7 @@ header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp
 categories:
   - research
+published: false
 ---
 
 ![Abstract image showing translucent documents transforming into a structured node grid](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp)
