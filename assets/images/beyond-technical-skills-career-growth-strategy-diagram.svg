@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <rect width="1200" height="560" fill="#f7f9fc"/>
+  <text x="600" y="46" text-anchor="middle" font-size="25" font-weight="700" fill="#1B4F72">영향력을 만드는 네 가지 역량과 주도성</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- Foundation: technical -->
+  <rect x="120" y="96" width="960" height="66" rx="12" fill="#e8f1fb" stroke="#1B4F72" stroke-width="2"/>
+  <text x="600" y="126" text-anchor="middle" font-size="18" font-weight="700" fill="#1B4F72">기술적 역량 · 기반이자 입장권</text>
+  <text x="600" y="149" text-anchor="middle" font-size="13" fill="#2E4057">측정 가능하고 연습으로 키운다. 있어야 대화가 되지만, 그것만으로는 차별화되지 않는다.</text>
+
+  <line x1="290" y1="162" x2="290" y2="196" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="162" x2="600" y2="196" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="910" y1="162" x2="910" y2="196" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Three pillars -->
+  <g>
+    <rect x="120" y="200" width="300" height="130" rx="14" fill="#e6f6f3" stroke="#0e8a76" stroke-width="2"/>
+    <text x="270" y="236" text-anchor="middle" font-size="17" font-weight="700" fill="#0e8a76">제품 사고</text>
+    <text x="270" y="266" text-anchor="middle" font-size="13" fill="#2E4057">무엇이 가치 있는지 판단</text>
+    <text x="270" y="288" text-anchor="middle" font-size="13" fill="#2E4057">올바른 문제를 선택</text>
+    <text x="270" y="310" text-anchor="middle" font-size="13" fill="#2E4057">필요 · 우선순위 · 시장을 읽기</text>
+  </g>
+
+  <g>
+    <rect x="450" y="200" width="300" height="130" rx="14" fill="#fef3e2" stroke="#c77d0a" stroke-width="2"/>
+    <text x="600" y="236" text-anchor="middle" font-size="17" font-weight="700" fill="#c77d0a">프로젝트 실행</text>
+    <text x="600" y="266" text-anchor="middle" font-size="13" fill="#2E4057">계획을 결과로 전환</text>
+    <text x="600" y="288" text-anchor="middle" font-size="13" fill="#2E4057">구조화 · 타임라인 · 모멘텀</text>
+    <text x="600" y="310" text-anchor="middle" font-size="13" fill="#2E4057">장애물 앞에서도 밀고 간다</text>
+  </g>
+
+  <g>
+    <rect x="780" y="200" width="300" height="130" rx="14" fill="#efeafc" stroke="#5b4bc4" stroke-width="2"/>
+    <text x="930" y="236" text-anchor="middle" font-size="17" font-weight="700" fill="#5b4bc4">인간관계 기술</text>
+    <text x="930" y="266" text-anchor="middle" font-size="13" fill="#2E4057">함께 일하고 영향을 미친다</text>
+    <text x="930" y="288" text-anchor="middle" font-size="13" fill="#2E4057">소통 · 설득 · 갈등 해결</text>
+    <text x="930" y="310" text-anchor="middle" font-size="13" fill="#2E4057">이해관계자를 정렬하고 지지 확보</text>
+  </g>
+
+  <line x1="270" y1="330" x2="560" y2="372" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="330" x2="600" y2="372" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="930" y1="330" x2="640" y2="372" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Convergence: meaningful achievement -->
+  <rect x="360" y="378" width="480" height="60" rx="12" fill="#1B4F72"/>
+  <text x="600" y="405" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">의미 있는 성취</text>
+  <text x="600" y="427" text-anchor="middle" font-size="12.5" fill="#dbe7f5">네 역량이 모두 함께 작동한다</text>
+
+  <!-- Agency band -->
+  <rect x="120" y="470" width="600" height="62" rx="12" fill="#eef2f7" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="420" y="497" text-anchor="middle" font-size="15" font-weight="700" fill="#1B4F72">주도성이 구동한다</text>
+  <text x="420" y="519" text-anchor="middle" font-size="12.5" fill="#2E4057">기다리지 않고 소유권을 잡는 선택. 지금 당장 결정할 수 있다.</text>
+
+  <!-- Feedback loop -->
+  <rect x="760" y="470" width="320" height="62" rx="12" fill="#e6f6f3" stroke="#0e8a76" stroke-width="1.5"/>
+  <text x="920" y="497" text-anchor="middle" font-size="15" font-weight="700" fill="#0e8a76">피드백 루프</text>
+  <text x="920" y="519" text-anchor="middle" font-size="12.5" fill="#2E4057">가장 약한 고리를 찾아 먼저 고친다</text>
+  <path d="M920,470 L920,340 L620,330" fill="none" stroke="#0e8a76" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+</svg>

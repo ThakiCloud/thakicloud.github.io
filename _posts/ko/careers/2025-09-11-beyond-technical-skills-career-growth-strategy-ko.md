@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/careers/beyond-technical-skills-career-growth-strategy/
-canonical_url: "https://thakicloud.github.io/ko/careers/beyond-technical-skills-career-growth-strategy/"
+canonical_url: "https://thakicloud.github.io/ko/careers/beyond-technical-skills-career-growth-strategy-ko/"
 categories:
   - careers
 ---
@@ -58,6 +58,8 @@ categories:
 **인간관계 기술**은 다른 사람들과 함께 일하고 영향을 미치는 능력입니다. 의사소통, 설득, 갈등 해결, 팀 이끌기. 가시적인 성과 대부분은 혼자서 이루어지지 않습니다. 이해관계자를 정렬하고, 지지를 모으고, 사람들이 공유된 목표에 최선을 다하도록 만드는 능력이 결국 크기를 결정합니다.
 
 이 네 가지는 독립적이지 않습니다. 같이 작동합니다. 어떤 의미 있는 성취든 되짚어보면 네 가지가 모두 거기 있습니다. 기술적 실행, 올바른 문제 선택, 효과적인 조정, 필요한 지지 확보.
+
+![영향력을 만드는 네 가지 역량과 주도성. 기술적 역량이라는 기반 위에 제품 사고, 프로젝트 실행, 인간관계 기술 세 기둥이 올라서고, 네 역량이 함께 의미 있는 성취로 수렴하며, 주도성이 이를 구동하고 피드백 루프가 가장 약한 고리를 고치는 구조를 요약한 도식](/assets/images/beyond-technical-skills-career-growth-strategy-diagram.svg)
 
 ## 어떻게 개발할 것인가
 
