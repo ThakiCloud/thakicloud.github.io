@@ -16,9 +16,12 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/technique/hermes-bible-agent-docs/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/hermes-bible-agent-docs/"
 categories:
   - agentops
+published: false
+audiobook: /assets/audio/posts/hermes-bible-agent-docs/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![색인된 지식 라이브러리를 추상적으로 표현한 이미지](/assets/images/hermes-bible-agent-docs-hero.webp)
