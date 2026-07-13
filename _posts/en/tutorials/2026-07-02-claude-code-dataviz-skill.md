@@ -9,7 +9,7 @@ tags:
   - skill
 date: 2026-07-02
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/claude-code-dataviz-skill/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/claude-code-dataviz-skill/"
 header:
   image: /assets/images/claude-code-dataviz-skill-hero.png
 categories:
@@ -81,5 +81,5 @@ The fact that the default palette is brand-neutral is also a double-edged sword.
 
 ## Sources
 
-- Claude Code CLI 2.1.198 changelog (ClaudeCodeLog, X)
+- [Claude Code CLI 2.1.198 changelog (ClaudeCodeLog, X)](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
 - Claude Code's built-in `dataviz` skill description and `references/palette.md`

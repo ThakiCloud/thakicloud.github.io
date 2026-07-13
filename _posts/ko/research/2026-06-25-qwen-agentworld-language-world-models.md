@@ -23,6 +23,8 @@ reading_time: true
 categories:
   - research
 published: false
+audiobook: /assets/audio/posts/qwen-agentworld-language-world-models/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 14분

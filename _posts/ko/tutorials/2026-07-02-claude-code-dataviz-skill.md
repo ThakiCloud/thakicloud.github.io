@@ -9,7 +9,7 @@ tags:
   - skill
 date: 2026-07-02
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/technique/claude-code-dataviz-skill/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-dataviz-skill/"
 categories:
   - tutorials
 ---
@@ -92,5 +92,5 @@ Slack으로 공유하는 차트에도 같은 지침이 적용된다는 점은 �
 
 ## 출처
 
-- Claude Code CLI 2.1.198 체인지로그 (ClaudeCodeLog, X)
+- [Claude Code CLI 2.1.198 체인지로그 (ClaudeCodeLog, X)](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
 - Claude Code 내장 `dataviz` 스킬 설명 및 `references/palette.md`

@@ -9,7 +9,7 @@ tags:
   - anthropic
 date: 2026-07-02
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/prompting-claude-fable-5/"
+canonical_url: "https://thakicloud.github.io/en/llmops/prompting-claude-fable-5/"
 header:
   image: /assets/images/prompting-claude-fable-5-hero.webp
 categories:
@@ -99,5 +99,5 @@ Finally, there is a paradox: the more autonomous a model becomes, the harder it 
 
 ## Sources
 
-- Prompting Claude Fable 5, Anthropic official documentation (platform.claude.com)
-- Redeploying Claude Fable 5, Anthropic News
+- [Prompting Claude Fable 5, Anthropic official documentation (platform.claude.com)](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5)
+- [Redeploying Claude Fable 5, Anthropic News](https://www.anthropic.com/news/redeploying-fable-5)

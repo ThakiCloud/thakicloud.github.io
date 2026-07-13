@@ -9,7 +9,7 @@ tags:
   - anthropic
 date: 2026-07-02
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/prompting-claude-fable-5/"
+canonical_url: "https://thakicloud.github.io/ar/llmops/prompting-claude-fable-5/"
 header:
   image: /assets/images/prompting-claude-fable-5-hero.webp
 categories:
@@ -99,5 +99,5 @@ they mattered.
 
 ## المصادر
 
-- Prompting Claude Fable 5، الوثائق الرسمية لشركة Anthropic (platform.claude.com)
-- Redeploying Claude Fable 5، أخبار Anthropic
+- [Prompting Claude Fable 5، الوثائق الرسمية لشركة Anthropic (platform.claude.com)](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5)
+- [Redeploying Claude Fable 5، أخبار Anthropic](https://www.anthropic.com/news/redeploying-fable-5)

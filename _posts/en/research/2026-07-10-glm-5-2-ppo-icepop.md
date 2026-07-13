@@ -95,6 +95,6 @@ Finally, the technical explanation in this post is a synthesis of publicly avail
 
 ## Sources
 
-- arXiv, "GLM-5: from Vibe Coding to Agentic Engineering" (arXiv:2602.15763)
-- "Why is GLM-5.2 So Good: The GRPO to PPO Switch", Medium (Coding Nexus)
-- "Zhipu's GLM-5.2: A Usability Breakthrough for Chinese Open-Source Models?", Weijin Research
+- [arXiv, "GLM-5: from Vibe Coding to Agentic Engineering" (arXiv:2602.15763)](https://arxiv.org/abs/2602.15763)
+- ["Why is GLM-5.2 So Good: The GRPO to PPO Switch", Medium (Coding Nexus)](https://medium.com/coding-nexus/why-is-glm-5-2-so-gooood-the-grpo-to-ppo-switch-5b3b7d613ace)
+- ["Zhipu's GLM-5.2: A Usability Breakthrough for Chinese Open-Source Models?", Weijin Research](https://weijinresearch.substack.com/p/zhipus-glm-52-a-usability-breakthrough)

@@ -11,7 +11,7 @@ date: 2026-07-02
 lang: ko
 audiobook: https://drive.google.com/file/d/1SC2JUwlVjspyMUJTkxIJroLGohmbRwGQ/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/technique/prompting-claude-fable-5/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/prompting-claude-fable-5/"
 categories:
   - llmops
 ---
@@ -112,5 +112,5 @@ they mattered.
 
 ## 출처
 
-- Prompting Claude Fable 5, 앤트로픽 공식 문서 (platform.claude.com)
-- Redeploying Claude Fable 5, 앤트로픽 뉴스
+- [Prompting Claude Fable 5, 앤트로픽 공식 문서 (platform.claude.com)](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5)
+- [Redeploying Claude Fable 5, 앤트로픽 뉴스](https://www.anthropic.com/news/redeploying-fable-5)

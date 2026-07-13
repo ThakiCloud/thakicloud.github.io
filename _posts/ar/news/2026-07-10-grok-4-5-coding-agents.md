@@ -78,6 +78,6 @@ flowchart TB
 
 ## المصادر
 
-- Axios, "Scoop: SpaceXAI launches new model, Grok 4.5"
-- TechCrunch, "SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'"
-- The Decoder, "Grok 4.5 is so cheap compared to Fable 5 and GPT 5.5 that benchmark gaps may not matter much"
+- [Axios, "Scoop: SpaceXAI launches new model, Grok 4.5"](https://www.axios.com/2026/07/08/spacexai-grok-new-model)
+- [TechCrunch, "SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'"](https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/)
+- [The Decoder, "Grok 4.5 is so cheap compared to Fable 5 and GPT 5.5 that benchmark gaps may not matter much"](https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/)
