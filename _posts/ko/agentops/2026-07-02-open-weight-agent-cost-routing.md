@@ -163,3 +163,5 @@ def call(prompt):
 - 실험 코드·결과 로그: 본문의 Gemma 4 tool-call 실험(6/6 성공)은 `outputs/blog-impl/open-weight-agent-cost-routing/`의 실측 로그 기반입니다.
 - 프런티어 단가: Paxis `models.yaml` (costInput/costOutput, USD per 1M tokens).
 - 오픈 가중치 단가: 2026년 중반 관리형 추론 대표 추정치([추정]).
+- [Gemma 4 26B-A4B-it 모델 카드 (Hugging Face)](https://huggingface.co/google/gemma-4-26B-A4B-it): MoE 아키텍처, 사고 토큰, 네이티브 함수 호출(tool-call) 지원을 공식 확인.
+- [Claude API 가격 정책 (Anthropic)](https://platform.claude.com/docs/en/about-claude/pricing): Claude Opus 4.8, Sonnet 5 입출력 단가 공식 페이지.

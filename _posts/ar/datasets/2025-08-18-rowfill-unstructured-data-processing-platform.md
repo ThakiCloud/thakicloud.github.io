@@ -30,6 +30,8 @@ categories:
   - tutorials
 ---
 
+![مخطط لتحويل أجزاء البيانات غير المنظمة إلى بيانات صفوف منظمة](/assets/images/rowfill-unstructured-data-processing-platform-hero.webp)
+
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
 
 ## مقدمة

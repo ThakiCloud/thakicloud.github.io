@@ -164,3 +164,5 @@ Finally, latency. Fifteen seconds on a free shared endpoint is a burden for real
 - Experiment code and result logs: The Gemma 4 tool-call experiment (6/6 success) described in this post is based on measured logs in `outputs/blog-impl/open-weight-agent-cost-routing/`.
 - Frontier unit prices: Paxis `models.yaml` (costInput/costOutput, USD per 1M tokens).
 - Open-weight unit prices: Representative mid-2026 managed inference estimates [estimated].
+- [Gemma 4 26B-A4B-it model card (Hugging Face)](https://huggingface.co/google/gemma-4-26B-A4B-it) - official confirmation of the MoE architecture, thinking tokens, and native function-calling (tool-call) support.
+- [Claude API pricing (Anthropic)](https://platform.claude.com/docs/en/about-claude/pricing) - official page for Claude Opus 4.8 and Sonnet 5 input/output unit prices.

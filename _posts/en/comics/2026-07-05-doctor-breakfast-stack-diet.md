@@ -14,6 +14,8 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/doctor-breakfast-stack-diet/strip.webp
+published: false
+canonical_url: "https://thakicloud.github.io/en/comics/doctor-breakfast-stack-diet/"
 ---
 
 A "doctor-recommended breakfast" list made the rounds this week: warm water, a boiled egg, unsweetened milk, cabbage, blueberries, a tomato. A validated combo you just follow. Paxis and Metis take it somewhere odd — what if you specced your AI stack the same way, only the healthy parts? The catch was never the ingredients. It's who owns the fridge. Sovereignty means keeping your models, data, and infrastructure under your own control instead of a landlord's, and on-prem means running that stack inside your own facility rather than renting someone else's.

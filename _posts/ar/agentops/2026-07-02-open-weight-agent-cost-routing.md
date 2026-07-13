@@ -164,3 +164,5 @@ def call(prompt):
 - كود التجربة وسجلات النتائج: تجربة Gemma 4 لاستدعاء الأدوات (6/6 نجاح) موثقة في سجلات قياسية حقيقية ضمن `outputs/blog-impl/open-weight-agent-cost-routing/`.
 - أسعار نماذج الحدود: Paxis `models.yaml` (costInput/costOutput، USD لكل مليون رمز مميز).
 - أسعار النماذج مفتوحة الأوزان: تقديرات تمثيلية للاستدلال المُدار في منتصف عام 2026 [تقديري].
+- [بطاقة نموذج Gemma 4 26B-A4B-it (Hugging Face)](https://huggingface.co/google/gemma-4-26B-A4B-it): تأكيد رسمي لبنية MoE ورموز التفكير ودعم استدعاء الأدوات (tool-call) المدمج.
+- [أسعار Claude API (Anthropic)](https://platform.claude.com/docs/en/about-claude/pricing): الصفحة الرسمية لأسعار الإدخال والإخراج لنموذجي Claude Opus 4.8 وSonnet 5.

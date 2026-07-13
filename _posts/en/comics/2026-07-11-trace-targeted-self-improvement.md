@@ -16,6 +16,8 @@ toc: false
 image: /assets/images/posts/comics/trace-targeted-self-improvement/strip.png
 audiobook: /assets/audio/posts/trace-targeted-self-improvement/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
+canonical_url: "https://thakicloud.github.io/en/comics/trace-targeted-self-improvement/"
 ---
 
 The talk of the week is TRACE, a paper that just picked up a Spotlight at an ICML workshop. The idea is refreshingly plain: instead of an agent grinding away at everything, it reads back its own failure logs, figures out the one capability those failures point to, and trains exactly that. Turns out this targeted approach beats blunt reinforcement learning, prompt-shuffling, and dumping in synthetic data. Knowing your weak spot, it seems, beats brute force.
