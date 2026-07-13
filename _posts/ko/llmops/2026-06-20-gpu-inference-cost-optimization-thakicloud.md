@@ -24,6 +24,8 @@ categories:
   - llmops
 published: false
 canonical_url: "https://thakicloud.github.io/ko/llmops/gpu-inference-cost-optimization-thakicloud/"
+audiobook: /assets/audio/posts/gpu-inference-cost-optimization-thakicloud/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![GPU 데이터센터에서 흐르는 컴퓨트 비용](/assets/images/cost-opt-hero.webp)
