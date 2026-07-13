@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/en/llmops/slime-rl-post-training-in
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 Reinforcement learning post-training has become a critical quality step for large LLMs. Running RL post-training at scale is infrastructure-intensive in ways that inference or supervised fine-tuning simply are not. Rollout generation, reward computation, and policy updates are tightly coupled, and that coupling makes GPU resource management genuinely complex. **slime**, open-sourced by Z.ai (THUDM), tackles this problem head-on as an "LLM post-training framework for RL scaling." It reportedly powered the post-training of GLM-5.2.

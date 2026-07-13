@@ -21,9 +21,10 @@ header:
 toc: true
 toc_sticky: true
 lang: en
-canonical_url: https://thakicloud.github.io/en/llmops/gpu-inference-cost-optimization-thakicloud/
+canonical_url: "https://thakicloud.github.io/en/llmops/gpu-inference-cost-optimization-thakicloud/"
 categories:
   - llmops
+published: false
 ---
 
 ![Compute costs flowing through a GPU data center](/assets/images/cost-opt-hero.webp)

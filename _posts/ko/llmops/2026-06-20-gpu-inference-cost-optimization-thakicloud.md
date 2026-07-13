@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 categories:
   - llmops
+published: false
+canonical_url: "https://thakicloud.github.io/ko/llmops/gpu-inference-cost-optimization-thakicloud/"
 ---
 
 ![GPU 데이터센터에서 흐르는 컴퓨트 비용](/assets/images/cost-opt-hero.webp)
