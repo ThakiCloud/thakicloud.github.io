@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/unlimited-ocr-rswa/"
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ## نظرة عامة

@@ -17,10 +17,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "shield-alt"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/technique/nvidia-verified-agent-skills/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/nvidia-verified-agent-skills/"
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![모듈형 스킬 블록마다 암호 봉인이 찍혀 신뢰의 사슬로 이어지는 추상 이미지](/assets/images/nvidia-verified-agent-skills-hero.webp)

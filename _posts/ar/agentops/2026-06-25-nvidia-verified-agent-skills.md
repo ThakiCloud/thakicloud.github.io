@@ -18,10 +18,11 @@ toc_label: "المحتويات"
 toc_icon: "shield-alt"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/nvidia-verified-agent-skills/"
+canonical_url: "https://thakicloud.github.io/ar/agentops/nvidia-verified-agent-skills/"
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![صورة تجريدية لكتل مهارات نمطية يحمل كل منها ختم تشفيري يربطها في سلسلة ثقة](/assets/images/nvidia-verified-agent-skills-hero.webp)

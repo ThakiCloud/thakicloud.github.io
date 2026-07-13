@@ -18,10 +18,11 @@ toc_label: "Contents"
 toc_icon: "shield-alt"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/nvidia-verified-agent-skills/"
+canonical_url: "https://thakicloud.github.io/en/agentops/nvidia-verified-agent-skills/"
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![Abstract image showing modular skill blocks sealed with cryptographic stamps, linked into a chain of trust](/assets/images/nvidia-verified-agent-skills-hero.webp)
