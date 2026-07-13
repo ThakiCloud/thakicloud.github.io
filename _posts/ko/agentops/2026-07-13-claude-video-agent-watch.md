@@ -21,6 +21,8 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ko/agentops/claude-video-agent-watch/"
 categories:
   - agentops
+audiobook: /assets/audio/posts/claude-video-agent-watch/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 개요
