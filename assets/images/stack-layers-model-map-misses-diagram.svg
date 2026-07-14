@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#565f89"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" fill="#1a1b26"/>
+
+  <!-- header -->
+  <text x="40" y="42" fill="#7aa2f7" font-size="15" font-weight="700">Five layers below the model</text>
+  <text x="40" y="60" fill="#565f89" font-size="11">the model map shows what exists; these layers decide who takes the margin</text>
+
+  <!-- model map (muted, top) -->
+  <rect x="230" y="78" width="440" height="46" rx="10" fill="#1f2335" stroke="#565f89" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="450" y="106" fill="#a9b1d6" font-size="13" font-weight="600" text-anchor="middle">The model map: frontier / mid-tier / ultra-cheap / on-device</text>
+  <line x1="450" y1="124" x2="450" y2="150" stroke="#565f89" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- Layer 1 (ThakiCloud) -->
+  <rect x="150" y="150" width="600" height="52" rx="10" fill="#24283b" stroke="#7aa2f7" stroke-width="1.8"/>
+  <rect x="150" y="150" width="8" height="52" rx="4" fill="#7aa2f7"/>
+  <text x="176" y="175" fill="#c0caf5" font-size="13.5" font-weight="700" text-anchor="start">Layer 1  ·  Inference silicon</text>
+  <text x="176" y="192" fill="#a9b1d6" font-size="11" text-anchor="start">cheap, fast tokens: Cerebras, Groq, TensorRT-LLM, Ascend</text>
+
+  <!-- Layer 2 (ThakiCloud) -->
+  <rect x="150" y="212" width="600" height="52" rx="10" fill="#24283b" stroke="#7aa2f7" stroke-width="1.8"/>
+  <rect x="150" y="212" width="8" height="52" rx="4" fill="#7aa2f7"/>
+  <text x="176" y="237" fill="#c0caf5" font-size="13.5" font-weight="700" text-anchor="start">Layer 2  ·  Serving economics</text>
+  <text x="176" y="254" fill="#a9b1d6" font-size="11" text-anchor="start">where margin lives: PD split, KV offload, continuous batching</text>
+
+  <!-- Layer 3 (ThakiCloud) -->
+  <rect x="150" y="274" width="600" height="52" rx="10" fill="#24283b" stroke="#7aa2f7" stroke-width="1.8"/>
+  <rect x="150" y="274" width="8" height="52" rx="4" fill="#7aa2f7"/>
+  <text x="176" y="299" fill="#c0caf5" font-size="13.5" font-weight="700" text-anchor="start">Layer 3  ·  Eval and observability</text>
+  <text x="176" y="316" fill="#a9b1d6" font-size="11" text-anchor="start">the floor under routing: regression, tracing, OpenTelemetry</text>
+
+  <!-- Layer 4 (muted) -->
+  <rect x="150" y="336" width="600" height="48" rx="10" fill="#1a1b26" stroke="#414868" stroke-width="1.3"/>
+  <text x="176" y="359" fill="#a9b1d6" font-size="13" font-weight="600" text-anchor="start">Layer 4  ·  Open-weight license</text>
+  <text x="176" y="375" fill="#565f89" font-size="11" text-anchor="start">who is allowed to build a moat: MIT vs Apache vs Community</text>
+
+  <!-- Layer 5 (muted) -->
+  <rect x="150" y="396" width="600" height="48" rx="10" fill="#1a1b26" stroke="#414868" stroke-width="1.3"/>
+  <text x="176" y="419" fill="#a9b1d6" font-size="13" font-weight="600" text-anchor="start">Layer 5  ·  Agent harness</text>
+  <text x="176" y="435" fill="#565f89" font-size="11" text-anchor="start">the moat that compounds: interaction-data flywheel, RL signal</text>
+
+  <!-- arrows between layers -->
+  <line x1="450" y1="202" x2="450" y2="210" stroke="#565f89" stroke-width="1.6"/>
+  <line x1="450" y1="264" x2="450" y2="272" stroke="#565f89" stroke-width="1.6"/>
+  <line x1="450" y1="326" x2="450" y2="334" stroke="#565f89" stroke-width="1.6"/>
+  <line x1="450" y1="384" x2="450" y2="394" stroke="#565f89" stroke-width="1.6"/>
+
+  <!-- ThakiCloud seat bracket -->
+  <path d="M770,152 L784,152 L784,324 L770,324" fill="none" stroke="#9ece6a" stroke-width="1.6"/>
+  <text x="792" y="245" fill="#9ece6a" font-size="12" font-weight="700" transform="rotate(90 792 245)" text-anchor="middle">ThakiCloud's seat</text>
+
+  <!-- footer -->
+  <text x="450" y="500" fill="#565f89" font-size="12" text-anchor="middle" font-style="italic">The map ranks models. The stack below decides who wins.</text>
+</svg>

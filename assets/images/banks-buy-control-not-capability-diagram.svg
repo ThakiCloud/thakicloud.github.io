@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#7aa2f7"/>
+    </marker>
+    <marker id="arwGrey" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#565f89"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="620" fill="#1a1b26"/>
+
+  <!-- sovereign k8s container -->
+  <rect x="16" y="16" width="868" height="588" rx="16" fill="#16161e" stroke="#414868" stroke-width="1.5"/>
+  <text x="40" y="46" fill="#7aa2f7" font-size="15" font-weight="700">Sovereign on-prem Kubernetes (ai-platform)</text>
+  <text x="40" y="64" fill="#565f89" font-size="11">control and audit trail are first-class, not add-ons</text>
+
+  <!-- business task -->
+  <rect x="300" y="86" width="300" height="46" rx="10" fill="#24283b" stroke="#7dcfff" stroke-width="1.5"/>
+  <text x="450" y="114" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Business task: finance, HR, supply chain</text>
+  <line x1="450" y1="132" x2="450" y2="160" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- policy gate -->
+  <rect x="300" y="160" width="300" height="48" rx="10" fill="#24283b" stroke="#e0af68" stroke-width="1.5"/>
+  <text x="450" y="189" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Policy Gate: who approves, how far</text>
+
+  <!-- cost router -->
+  <rect x="648" y="158" width="212" height="52" rx="10" fill="#1f2335" stroke="#565f89" stroke-width="1.2"/>
+  <text x="754" y="182" fill="#a9b1d6" font-size="13" font-weight="600" text-anchor="middle">CostRouter</text>
+  <text x="754" y="199" fill="#565f89" font-size="10.5" text-anchor="middle">best model per task, no lock-in</text>
+  <line x1="648" y1="184" x2="604" y2="184" stroke="#565f89" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arwGrey)"/>
+
+  <!-- dial caption -->
+  <text x="450" y="238" fill="#565f89" font-size="11.5" text-anchor="middle">Autonomy dial: turn up only as trust grows</text>
+
+  <!-- dial L0..L3 -->
+  <rect x="72" y="250" width="180" height="60" rx="10" fill="#24283b" stroke="#565f89" stroke-width="1.4"/>
+  <text x="162" y="276" fill="#c0caf5" font-size="13" font-weight="700" text-anchor="middle">L0</text>
+  <text x="162" y="295" fill="#a9b1d6" font-size="10.5" text-anchor="middle">human approves every step</text>
+
+  <rect x="264" y="250" width="180" height="60" rx="10" fill="#24283b" stroke="#7aa2f7" stroke-width="1.4"/>
+  <text x="354" y="276" fill="#c0caf5" font-size="13" font-weight="700" text-anchor="middle">L1</text>
+  <text x="354" y="295" fill="#a9b1d6" font-size="10.5" text-anchor="middle">assisted execution</text>
+
+  <rect x="456" y="250" width="180" height="60" rx="10" fill="#24283b" stroke="#7dcfff" stroke-width="1.4"/>
+  <text x="546" y="276" fill="#c0caf5" font-size="13" font-weight="700" text-anchor="middle">L2</text>
+  <text x="546" y="295" fill="#a9b1d6" font-size="10.5" text-anchor="middle">supervised autonomy</text>
+
+  <rect x="648" y="250" width="180" height="60" rx="10" fill="#243b34" stroke="#9ece6a" stroke-width="1.6"/>
+  <text x="738" y="276" fill="#c0caf5" font-size="13" font-weight="700" text-anchor="middle">L3</text>
+  <text x="738" y="295" fill="#a9b1d6" font-size="10.5" text-anchor="middle">trusted, runs on its own</text>
+
+  <line x1="252" y1="280" x2="262" y2="280" stroke="#565f89" stroke-width="2" marker-end="url(#arwGrey)"/>
+  <line x1="444" y1="280" x2="454" y2="280" stroke="#565f89" stroke-width="2" marker-end="url(#arwGrey)"/>
+  <line x1="636" y1="280" x2="646" y2="280" stroke="#565f89" stroke-width="2" marker-end="url(#arwGrey)"/>
+
+  <line x1="450" y1="208" x2="450" y2="244" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- down to sandbox -->
+  <line x1="450" y1="316" x2="450" y2="352" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- sandbox -->
+  <rect x="250" y="352" width="400" height="48" rx="10" fill="#24283b" stroke="#bb9af7" stroke-width="1.5"/>
+  <text x="450" y="381" fill="#c0caf5" font-size="14" font-weight="600" text-anchor="middle">Isolated sandbox: limits the blast radius</text>
+  <line x1="450" y1="400" x2="450" y2="432" stroke="#7aa2f7" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- audit logs -->
+  <rect x="250" y="432" width="400" height="58" rx="10" fill="#1f2335" stroke="#9ece6a" stroke-width="1.6"/>
+  <text x="450" y="457" fill="#c0caf5" font-size="14" font-weight="700" text-anchor="middle">Audit Logs</text>
+  <text x="450" y="476" fill="#9ece6a" font-size="11" text-anchor="middle">every step recorded, replayable after the fact</text>
+
+  <!-- bottom line -->
+  <text x="450" y="558" fill="#565f89" font-size="12" text-anchor="middle" font-style="italic">Regulated buyers order the order first: control, then capability.</text>
+</svg>

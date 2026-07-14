@@ -16,9 +16,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/technique/loop-engineering-design-before-run/"
+canonical_url: "https://thakicloud.github.io/ko/agentops/loop-engineering-design-before-run/"
 categories:
   - agentops
+published: false
 ---
 
 ## 개요

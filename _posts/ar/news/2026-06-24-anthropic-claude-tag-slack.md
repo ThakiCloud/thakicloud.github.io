@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/ar/news/anthropic-claude-tag-slack/
 reading_time: true
 categories:
   - news
+published: false
 ---
 
 ![مرئي تجريدي لشبكة تعاون تربط عقدة ذكاء اصطناعي مركزية بعقد متعددة للأشخاص في قناة مشتركة واحدة](/assets/images/anthropic-claude-tag-slack-hero.webp)
