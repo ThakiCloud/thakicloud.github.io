@@ -98,3 +98,11 @@ Let me add one last thing. This is not a time for discouragement. The physics st
 ThakiCloud builds GPU clusters and AI platforms. You could say our trade is building the boilers of this era. Which is exactly why we keep telling ourselves that boilers are not the whole story. Infrastructure does not ask the questions for you. Good infrastructure only lets a person with good questions experiment faster and at lower cost. Our obsession with platform efficiency and energy cost returns, in the end, to the same place: measured against the standard set by a 20-watt brain, today's computing still has a great deal to be humble about.
 
 The age of steam engines waited for Carnot, and the waiting was not in vain. Somewhere right now, someone is prying open the box, asking about principles instead of benchmarks, perhaps still a student. I hope this essay reaches that next Carnot as a small cheer. The engines are already running. What we need now is the courage to ask why they work.
+
+## References
+
+- [Sadi Carnot, Reflections on the Motive Power of Fire (1824), the starting point of thermodynamics](https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire)
+- [Lord Kelvin's 1900 "two clouds" lecture](https://en.wikipedia.org/wiki/Lord_Kelvin)
+- [Claude Shannon, A Mathematical Theory of Communication (1948), original text](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf)
+- [Fourier series: representing signals as sums of waves](https://en.wikipedia.org/wiki/Fourier_series)
+- [The human brain runs on roughly 20 watts](https://hypertextbook.com/facts/2001/JacquelineLing.shtml)

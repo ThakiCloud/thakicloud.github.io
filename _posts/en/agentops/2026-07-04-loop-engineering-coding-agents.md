@@ -86,3 +86,5 @@ To sum up: "I don't write prompts, I write loops" is a provocative sentence, but
 
 - Miles Deutscher, post on X (formerly Twitter), commentary on coding agent loops
 - ThakiCloud's internal loop-engineering practice: pge-loop, Goal Mode (verification gate + budget ceiling)
+- [ReAct: the foundational paper on reasoning-and-acting agent loops (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629)
+- [Anthropic, Building Effective Agents: tool use, evaluator-optimizer loop, orchestrator-workers](https://www.anthropic.com/research/building-effective-agents)

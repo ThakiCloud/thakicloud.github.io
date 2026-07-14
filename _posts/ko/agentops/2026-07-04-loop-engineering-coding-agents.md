@@ -93,3 +93,5 @@ fan-out을 쓰는 경우에는 규칙이 하나 더 붙습니다. 여러 서브�
 
 - Miles Deutscher, X(구 Twitter) 게시물, 코딩 에이전트 루프에 관한 의견
 - ThakiCloud 내부 loop-engineering 실천: pge-loop, Goal Mode(검증 게이트 + 예산 상한)
+- [ReAct: 추론과 행동을 결합한 에이전트 루프의 기반 논문 (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629)
+- [Anthropic, Building Effective Agents: 도구 사용과 평가자 최적화 루프, 오케스트레이터 워커 패턴](https://www.anthropic.com/research/building-effective-agents)

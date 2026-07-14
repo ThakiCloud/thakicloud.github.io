@@ -97,3 +97,11 @@ categories:
 ThakiCloud는 GPU 클러스터와 AI 플랫폼을 만드는 회사입니다. 말하자면 이 시대의 보일러를 짓는 일을 업으로 삼고 있습니다. 그래서 더욱, 보일러가 전부가 아니라는 이야기를 우리 스스로에게 자주 합니다. 인프라는 질문을 대신해 주지 않습니다. 좋은 인프라는 좋은 질문을 가진 사람이 더 빨리, 더 적은 비용으로 실험하게 해 줄 뿐입니다. 우리가 플랫폼의 효율과 에너지 비용에 집착하는 이유도 결국 같은 자리로 돌아옵니다. 20와트의 뇌가 세운 기준 앞에서 지금의 컴퓨팅은 아직 한참 겸손해야 하기 때문입니다.
 
 증기기관의 시대는 카르노를 기다렸고, 기다림은 헛되지 않았습니다. 지금 어딘가에서 박스를 열어 보고 있을, 벤치마크 대신 원리를 묻고 있을, 어쩌면 아직 학생일 다음 카르노에게 이 글이 작은 응원이 되면 좋겠습니다. 기관은 이미 굴러가고 있습니다. 이제 필요한 것은 그 기관이 왜 작동하는지 묻는 용기입니다.
+
+## 참고
+
+- [사디 카르노, 열의 동력에 관한 성찰 (1824), 열역학의 출발점](https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire)
+- [켈빈 경의 1900년 "두 조각 구름" 강연](https://en.wikipedia.org/wiki/Lord_Kelvin)
+- [클로드 섀넌, 통신의 수학적 이론 (1948) 원문](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf)
+- [푸리에 급수: 신호를 파동의 합으로 표현하는 원리](https://en.wikipedia.org/wiki/Fourier_series)
+- [사람 뇌의 소비 전력 약 20와트 추정](https://hypertextbook.com/facts/2001/JacquelineLing.shtml)

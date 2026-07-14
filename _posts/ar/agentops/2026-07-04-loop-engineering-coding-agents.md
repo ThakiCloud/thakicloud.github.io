@@ -86,3 +86,5 @@ flowchart TB
 
 - ميلز دويتشر (Miles Deutscher)، منشور على X (تويتر سابقاً)، رأي حول حلقات وكلاء البرمجة
 - ممارسات ThakiCloud الداخلية في هندسة الحلقات: pge-loop، Goal Mode (بوابة تحقق + سقف ميزانية)
+- [ReAct: الورقة البحثية المؤسِّسة لحلقات الوكلاء القائمة على الاستدلال والفعل (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629)
+- [Anthropic, Building Effective Agents: استخدام الأدوات وحلقة المقيّم-المحسّن ونمط المنسّق-العمال](https://www.anthropic.com/research/building-effective-agents)
