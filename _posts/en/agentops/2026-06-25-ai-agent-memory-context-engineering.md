@@ -17,10 +17,11 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/ai-agent-memory-context-engineering/"
+canonical_url: "https://thakicloud.github.io/en/agentops/ai-agent-memory-context-engineering/"
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 Anyone who has run LLM agents for extended periods hits the same wall. As conversations grow longer, agents start forgetting commitments made earlier and ignoring rules established at the start. The common prescription is "a bigger context window will fix it." That diagnosis is wrong. The real problem is not the size of the window but how the tokens inside it are managed - that is context engineering. This post covers four proven techniques for helping long-running agents work beyond context limits, and shows how ThakiCloud has woven them into real agent operations.
