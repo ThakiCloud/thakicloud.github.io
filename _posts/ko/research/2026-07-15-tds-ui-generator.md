@@ -178,3 +178,12 @@ repair도, 자유 계획을 먼저 세우고 제약하는 방식도 마찬가지
 거는 쪽이 값쌌다. 이것을 모든 경우로 일반화하지는 않는다. 넷, 유효성과 충실도는 다른 축이고,
 남은 병목은 생성이 아니라 선택이며, 그 선택기는 심판이 아니라 요구사항 기반이어야 했다. 다음으로
 증명할 것은 사람이 쓴 요구사항 계약으로 선택기와 의미 정확도를 함께 끌어올리는 것이다.
+
+## 참고 문헌
+
+이 실험이 기댄 외부 기법의 원전을 남긴다.
+
+- 제약 디코딩(우리가 결국 이긴 방법)의 이론적 토대: Willard, Louf, [*Efficient Guided Generation for Large Language Models*](https://arxiv.org/abs/2307.09702). 스키마·그래머로 유효한 출력만 나오게 디코딩을 제약하는 방식이다.
+- 위 방식을 실제로 구현한 오픈소스 라이브러리: [Outlines (dottxt-ai/outlines)](https://github.com/dottxt-ai/outlines).
+- 우리가 붙였다가 실패한 파라미터 효율 파인튜닝: Hu 외, [*LoRA: Low-Rank Adaptation of Large Language Models*](https://arxiv.org/abs/2106.09685).
+- 여덟 개를 뽑아 그중 좋은 걸 고른 best-of-N과 검증기 기반 선택의 뿌리: Cobbe 외, [*Training Verifiers to Solve Math Word Problems*](https://arxiv.org/abs/2110.14168).
