@@ -17,9 +17,10 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/en/technique/claude-tag-slack-agentic-collaboration/"
+canonical_url: "https://thakicloud.github.io/en/agentops/claude-tag-slack-agentic-collaboration/"
 categories:
   - agentops
+published: false
 ---
 
 ## Overview
