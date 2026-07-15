@@ -22,6 +22,8 @@ reading_time: true
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/glm-5-2-rtx4090-on-premise-serving/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 753B 파라미터 모델을 소비자 GPU 한 장에서 돌린다는 것은 몇 년 전이라면 상상하기 어려운 일이었습니다. 최근 공유된 사례는 SOTA 오픈웨이트 모델 GLM-5.2(753B, FP8)를 **RTX 4090** 소비자 GPU에서 처음 구동했다고 보고합니다. 약 10 tok/s 수준이지만, 핵심은 처리량이 아니라 "돌아간다"는 사실 자체입니다.
