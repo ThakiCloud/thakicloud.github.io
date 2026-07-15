@@ -17,10 +17,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/dev/liteparse-model-free-pdf-parser-rag/"
+canonical_url: "https://thakicloud.github.io/ko/dev/liteparse-model-free-pdf-parser-rag/"
 reading_time: true
 categories:
   - dev
+published: false
+audiobook: /assets/audio/posts/liteparse-model-free-pdf-parser-rag/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 RAG 파이프라인의 첫 단계는 문서 인제스트입니다. 그리고 그 첫 단계에서 가장 흔히 막히는 것이 PDF 파싱입니다. 최근 LLM 기반 파서가 늘었지만, LLM을 매 문서에 돌리면 비용과 지연이 누적되고, 민감한 문서를 외부 모델에 보내는 데이터 주권 문제도 생깁니다. LlamaIndex(Jerry Liu)가 발표한 **LiteParse**는 다른 방향을 택합니다. **LLM 없이** PDF를 마크다운으로 변환하는 Apache 2.0 오픈소스 파서입니다.
