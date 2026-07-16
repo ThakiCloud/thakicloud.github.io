@@ -116,6 +116,29 @@ Phone performance numbers also need careful reading. The iPhone tok/s figures ar
 
 Finally, the core claim of avoiding collapse without retraining relies on method details in the published documentation. The license is Apache 2.0, but the license inheritance relationship with the Qwen3.6 base needs verification before commercial deployment. In summary, Bonsai 27B is a genuine practical advance in low-bit quantization, but adoption decisions should be made together with workload-specific quality requirements and independent reproduction.
 
+## ThakiCloud Independent Reproduction
+
+In the limitations above we noted that no independent reproduction existed yet. We ran one. The intended reader is an infrastructure engineer weighing a self-hosted low-bit pipeline. The short version is that PrismML's released 1-bit model genuinely works, but the compression method itself cannot be reproduced, because it was never disclosed.
+
+We first extracted and read all three whitepapers in full. What is public is the storage format, the inference kernels, and the benchmarks. The algorithm for assigning 1-bit weights without retraining while avoiding collapse appears nowhere. The 8B whitepaper explicitly calls it "proprietary Caltech intellectual property." The method is sealed.
+
+We then loaded their released `Bonsai-1.7B-unpacked` (their 1-bit weights materialized back to FP16) with stock tooling. Every 128-weight group used exactly one scale, and perplexity on a fixed passage was 3.492, essentially identical to the same base Qwen3-1.7B at FP16 (3.507). The released model is real and near lossless.
+
+By contrast, reproducing naively from the public format alone (textbook BWN binarization) collapses completely at the same 1.125 bits. A 4-bit control confirms the harness is sound.
+
+| Variant | bpw | Perplexity | vs FP16 |
+|---|---|---|---|
+| Qwen3-1.7B FP16 | 16 | 3.507 | 1.00x |
+| PrismML 1-bit (their method) | 1.125 | 3.492 | 0.995x, lossless |
+| Naive binary (public format) | 1.125 | 2,109,839 | 601,600x, collapse |
+| 4-bit control | 4.125 | 4.209 | 1.14x, intact |
+
+A sealed method can still be predicted. Because we hold their actual 1-bit weights, we paired them with the base weights and reverse-engineered a fingerprint. Their signs agreed with the base only 71.6% of the time, meaning about 28% of signs were flipped, whereas naive binarization preserves every sign. Their group scales were also 2.26x larger than the naive mean. That is the fingerprint of error compensation that minimizes layer output error rather than per-weight error, the GPTQ family. Since sign agreement is far above the 50% of chance, the base is unmodified Qwen, consistent with their "no retraining" claim.
+
+We implemented that prediction to test it. A hand-written error-compensated binary quantizer (GPTQ family) recovered about 10x of the naive collapse. The direction was right. Yet even after recovery a large gap to FP16 remained, and simply enlarging the scale by 2.26x made things worse, which tells us the larger scale only helps when coupled with sign optimization. Textbook error compensation is necessary but not sufficient. Reaching their lossless 1-bit needs salient-weight handling or residual schemes beyond it, and that is exactly the part they withheld.
+
+One caveat: this perplexity is a coarse signal on a short passage, measured on small models. Full category retention (tool use, vision) would require building their custom kernels, serving the 27B, and running the whole benchmark suite, which we leave as separate work. Still, to "does 1-bit actually work" the answer is yes, and to "can public materials reproduce that quality" the answer is no. That gap is the value of the technology.
+
 ## Sources
 
 - [prism-ml/Bonsai-27B-gguf (Hugging Face)](https://huggingface.co/prism-ml/Bonsai-27B-gguf)
