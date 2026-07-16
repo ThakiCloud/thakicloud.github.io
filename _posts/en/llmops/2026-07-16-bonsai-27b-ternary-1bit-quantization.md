@@ -139,6 +139,17 @@ We implemented that prediction to test it. A hand-written error-compensated bina
 
 One caveat: this perplexity is a coarse signal on a short passage, measured on small models. Full category retention (tool use, vision) would require building their custom kernels, serving the 27B, and running the whole benchmark suite, which we leave as separate work. Still, to "does 1-bit actually work" the answer is yes, and to "can public materials reproduce that quality" the answer is no. That gap is the value of the technology.
 
+We also pushed the latest public methods as far as they go. In recent extreme low-bit research (QuIP, BiLLM, QuaRot, SpinQuant) the biggest lever is incoherence rotation: a random orthogonal rotation spreads outlier weights into a near-Gaussian distribution that binarizes cleanly, and when paired with error compensation it revives pure 1-bit dramatically. Rotation alone actually hurts and must be combined with GPTQ, which we confirmed. Measured on the exact base they used, Qwen3-1.7B, same harness:
+
+| Method | eff bpw | Perplexity | vs FP16 | escape |
+|---|---|---|---|---|
+| FP16 | 16 | 2.027 | 1.00x | none |
+| PrismML Bonsai (their method) | 1.125 | 1.971 | 0.97x | none |
+| ours QuIP (rotation + error-comp) | 1.125 | 4.213 | 2.1x | none |
+| ours QuIP + salient 3% | 1.571 | 2.24 | 1.1x | 3% |
+
+The public stack (QuIP + salient) reaches 2.24, nearly matching their 1.971 in quality. But a decisive gap remains: they hit that quality at pure 1.125 bpw with no escape hatch, whereas we needed 1.57 bpw and 3% high-precision, and at the same pure-1-bit point we land at 4.21 versus their 1.97. Quality nearly converges, yet they hold a better efficiency Pareto point. One striking observation is that rotation helps far more as the model grows: the gain was small at 0.6B and large at 1.7B, which partly explains how they reach lossless at 27B. These numbers are a coarse short-passage signal, so firm claims need full benchmark evaluation. The full reproduction code is open-sourced.
+
 ## Sources
 
 - [prism-ml/Bonsai-27B-gguf (Hugging Face)](https://huggingface.co/prism-ml/Bonsai-27B-gguf)
