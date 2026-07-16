@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/en/research/anthropic-economic-inde
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ![Abstract image of light pulses rippling in rhythm across a subtle data grid, evoking daily cadence](/assets/images/anthropic-economic-index-cadences-hero.webp)

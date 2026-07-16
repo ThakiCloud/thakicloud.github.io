@@ -17,9 +17,10 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "robot"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/hermes-agent-learn-skills/"
+canonical_url: "https://thakicloud.github.io/ar/agentops/hermes-agent-learn-skills/"
 categories:
   - agentops
+published: false
 ---
 
 ![عملية تأليف المهارات ممثَّلة بتقارب شظايا معرفية متفرقة إلى بنية متبلورة واحدة](/assets/images/hermes-agent-learn-skills-hero.webp)

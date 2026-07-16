@@ -15,9 +15,10 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/ytdownloader-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/ytdownloader-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/ytdownloader-complete-installation-usage-guide-ar/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة

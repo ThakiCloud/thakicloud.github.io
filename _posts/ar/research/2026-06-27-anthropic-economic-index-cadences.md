@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/anthropic-economic-inde
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 ![صورة تجريدية لنبضات ضوئية تتموّج بإيقاع عبر شبكة بيانات خفيفة توحي بالإيقاع اليومي](/assets/images/anthropic-economic-index-cadences-hero.webp)

@@ -15,9 +15,10 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/ytdownloader-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/ytdownloader-complete-guide/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/ytdownloader-complete-installation-usage-guide-en/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

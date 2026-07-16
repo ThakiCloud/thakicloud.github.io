@@ -24,6 +24,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1d6-X2wJWBGnFoMFvuQ4bNQIHnWro5_Cs/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![시간의 흐름을 따라 빛의 파동이 리듬을 그리며 데이터 격자 위를 흐르는 추상 이미지](/assets/images/anthropic-economic-index-cadences-hero.webp)

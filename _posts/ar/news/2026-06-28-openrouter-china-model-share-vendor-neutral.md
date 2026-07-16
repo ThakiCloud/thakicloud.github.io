@@ -21,6 +21,7 @@ lang: ar
 canonical_url: "https://thakicloud.github.io/ar/news/openrouter-china-model-share-vendor-neutral/"
 categories:
   - news
+published: false
 ---
 
 OpenRouter منصة يستخدمها ملايين المطورين للوصول إلى نماذج لغوية متعددة عبر واجهة برمجية موحدة. ولأنها تعكس الاستخدام الفعلي من قِبَل مطورين حساسين للتكلفة، يُستشهد بها كثيرًا مؤشرًا متقدمًا على السوق. وفي هذه المنصة، انخفضت حصة توكن النماذج الأمريكية من نحو 70% إلى نحو 30% خلال عام واحد.
