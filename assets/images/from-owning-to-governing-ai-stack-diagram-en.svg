@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="transparent"/>
+
+  <!-- title -->
+  <text x="480" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#1B4F72">The axis shift of the AI era: from owning to governing</text>
+
+  <!-- axis labels -->
+  <text x="150" y="60" text-anchor="middle" font-size="12" font-weight="600" fill="#64748b">How well you govern what you hold</text>
+
+  <!-- Layer 1: intelligence (borrowed) -->
+  <rect x="60" y="78" width="840" height="96" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="82" y="104" font-size="14" font-weight="700" fill="#1e293b">Intelligence layer: you borrow it</text>
+  <text x="82" y="126" font-size="12" fill="#334155">Models and tools are objects of combination, not ownership. You mix several and swap them to fit the moment.</text>
+  <rect x="82" y="138" width="230" height="26" rx="6" fill="#dbeafe"/>
+  <text x="197" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a">Apple: Gemini in the US, Qwen in China</text>
+  <rect x="322" y="138" width="200" height="26" rx="6" fill="#dbeafe"/>
+  <text x="422" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a">AI for All: 80% domestic model mix</text>
+  <rect x="532" y="138" width="230" height="26" rx="6" fill="#dbeafe"/>
+  <text x="647" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a">Construction/MSP: combining outside robots and models</text>
+
+  <!-- Layer 2: governance (the new capability) -->
+  <rect x="60" y="192" width="840" height="122" rx="12" fill="#1B4F72" stroke="#12395a" stroke-width="1.5"/>
+  <text x="82" y="218" font-size="14" font-weight="700" fill="#ffffff">Governance layer: the new capability</text>
+  <text x="82" y="238" font-size="11.5" fill="#cfe0ee">The moment you borrow, three questions follow. The ability to answer them is the competitive edge.</text>
+
+  <rect x="82" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="208" y="270" text-anchor="middle" font-size="11.5" fill="#475569">Which model for which task</text>
+  <text x="208" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">CostRouter</text>
+
+  <rect x="354" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="480" y="270" text-anchor="middle" font-size="11.5" fill="#475569">Who guards the line it must not cross</text>
+  <text x="480" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">Policy gate + isolated sandbox</text>
+
+  <rect x="626" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="752" y="270" text-anchor="middle" font-size="11.5" fill="#475569">Proving what happened and why</text>
+  <text x="752" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">Audit logs</text>
+
+  <!-- Layer 3: physical (owned) -->
+  <rect x="60" y="332" width="840" height="96" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="82" y="358" font-size="14" font-weight="700" fill="#1e293b">Physical layer: you own it</text>
+  <text x="82" y="380" font-size="12" fill="#334155">Power, land, and GPUs are still a contest of who secures how much.</text>
+  <rect x="82" y="392" width="230" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="197" y="409" text-anchor="middle" font-size="11.5" fill="#334155">SKT: from 5GW to 15GW</text>
+  <rect x="322" y="392" width="200" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="422" y="409" text-anchor="middle" font-size="11.5" fill="#334155">AI for All: up to 512 B200s</text>
+  <rect x="532" y="392" width="230" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="647" y="409" text-anchor="middle" font-size="11.5" fill="#334155">Azure: 3M optical links ease the bottleneck</text>
+
+  <!-- binding note -->
+  <text x="480" y="448" text-anchor="middle" font-size="11.5" font-style="italic" fill="#64748b">Stack the owned layer as thick as you like: if you cannot govern the heterogeneous stack above it, control still disappears. The foundation is sovereign, on-prem K8s.</text>
+</svg>

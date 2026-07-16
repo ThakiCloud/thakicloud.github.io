@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="transparent"/>
+
+  <!-- title -->
+  <text x="480" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#1B4F72">AI 시대의 축 이동: 소유에서 통치로</text>
+
+  <!-- axis labels -->
+  <text x="150" y="60" text-anchor="middle" font-size="12" font-weight="600" fill="#64748b">가진 것을 얼마나 잘 다스리나</text>
+
+  <!-- Layer 1: intelligence (borrowed) -->
+  <rect x="60" y="78" width="840" height="96" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="82" y="104" font-size="14" font-weight="700" fill="#1e293b">지능 계층 · 빌려 씁니다</text>
+  <text x="82" y="126" font-size="12" fill="#334155">모델과 도구는 소유가 아니라 조합의 대상입니다. 여럿을 섞고 상황에 맞게 갈아 끼웁니다.</text>
+  <rect x="82" y="138" width="230" height="26" rx="6" fill="#dbeafe"/>
+  <text x="197" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a">애플: 미국 제미나이 · 중국 큐원</text>
+  <rect x="322" y="138" width="200" height="26" rx="6" fill="#dbeafe"/>
+  <text x="422" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a">모두의 AI: 국산 모델 80% 혼합</text>
+  <rect x="532" y="138" width="230" height="26" rx="6" fill="#dbeafe"/>
+  <text x="647" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a">건설·MSP: 외부 로봇·모델 결합</text>
+
+  <!-- Layer 2: governance (the new capability) -->
+  <rect x="60" y="192" width="840" height="122" rx="12" fill="#1B4F72" stroke="#12395a" stroke-width="1.5"/>
+  <text x="82" y="218" font-size="14" font-weight="700" fill="#ffffff">통치 계층 · 새로운 역량입니다</text>
+  <text x="82" y="238" font-size="11.5" fill="#cfe0ee">빌려 쓰는 순간 세 질문이 따라옵니다. 답하는 능력 자체가 경쟁력입니다.</text>
+
+  <rect x="82" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="208" y="270" text-anchor="middle" font-size="11.5" fill="#475569">어떤 작업에 어떤 모델을</text>
+  <text x="208" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">CostRouter</text>
+
+  <rect x="354" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="480" y="270" text-anchor="middle" font-size="11.5" fill="#475569">넘지 말아야 할 선은 누가</text>
+  <text x="480" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">정책 게이트 · 격리 샌드박스</text>
+
+  <rect x="626" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="752" y="270" text-anchor="middle" font-size="11.5" fill="#475569">무엇이 왜 일어났는지 증명</text>
+  <text x="752" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">감사 로그</text>
+
+  <!-- Layer 3: physical (owned) -->
+  <rect x="60" y="332" width="840" height="96" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="82" y="358" font-size="14" font-weight="700" fill="#1e293b">물리 계층 · 소유합니다</text>
+  <text x="82" y="380" font-size="12" fill="#334155">전력과 부지와 GPU는 여전히 누가 얼마나 확보하느냐의 소유 싸움입니다.</text>
+  <rect x="82" y="392" width="230" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="197" y="409" text-anchor="middle" font-size="11.5" fill="#334155">SKT: 5GW 에서 15GW 로</text>
+  <rect x="322" y="392" width="200" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="422" y="409" text-anchor="middle" font-size="11.5" fill="#334155">모두의 AI: B200 최대 512장</text>
+  <rect x="532" y="392" width="230" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="647" y="409" text-anchor="middle" font-size="11.5" fill="#334155">애저: 3M 광연결로 병목 해소</text>
+
+  <!-- binding note -->
+  <text x="480" y="448" text-anchor="middle" font-size="11.5" font-style="italic" fill="#64748b">소유 계층을 두껍게 쌓아도, 그 위 이종 스택을 다스리지 못하면 통제력은 사라집니다. 기반은 소버린 온프렘 K8s.</text>
+</svg>

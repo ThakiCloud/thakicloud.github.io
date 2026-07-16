@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="Inter, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="transparent"/>
+
+  <!-- title -->
+  <text x="480" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#1B4F72" direction="rtl">تحول محور عصر الذكاء الاصطناعي: من الملكية إلى الحوكمة</text>
+
+  <!-- axis labels -->
+  <text x="150" y="60" text-anchor="middle" font-size="12" font-weight="600" fill="#64748b" direction="rtl">إلى أي مدى تُحسن إدارة ما تملكه</text>
+
+  <!-- Layer 1: intelligence (borrowed) -->
+  <rect x="60" y="78" width="840" height="96" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="82" y="104" font-size="14" font-weight="700" fill="#1e293b" direction="rtl">طبقة الذكاء · تُستأجر</text>
+  <text x="82" y="126" font-size="12" fill="#334155" direction="rtl">النماذج والأدوات ليست ملكاً بل عناصر تُركَّب. تُمزج عدة عناصر وتُستبدل بحسب الموقف.</text>
+  <rect x="82" y="138" width="230" height="26" rx="6" fill="#dbeafe"/>
+  <text x="197" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a" direction="rtl">آبل: جيميناي في أمريكا، كوين في الصين</text>
+  <rect x="322" y="138" width="200" height="26" rx="6" fill="#dbeafe"/>
+  <text x="422" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a" direction="rtl">AI للجميع: مزيج 80% من النماذج المحلية</text>
+  <rect x="532" y="138" width="230" height="26" rx="6" fill="#dbeafe"/>
+  <text x="647" y="155" text-anchor="middle" font-size="11.5" fill="#1e3a8a" direction="rtl">البناء وMSP: دمج روبوتات ونماذج خارجية</text>
+
+  <!-- Layer 2: governance (the new capability) -->
+  <rect x="60" y="192" width="840" height="122" rx="12" fill="#1B4F72" stroke="#12395a" stroke-width="1.5"/>
+  <text x="82" y="218" font-size="14" font-weight="700" fill="#ffffff" direction="rtl">طبقة الحوكمة · قدرة جديدة</text>
+  <text x="82" y="238" font-size="11.5" fill="#cfe0ee" direction="rtl">بمجرد الاستئجار، تُطرح ثلاثة أسئلة. والقدرة على الإجابة عنها هي الميزة التنافسية بحد ذاتها.</text>
+
+  <rect x="82" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="208" y="270" text-anchor="middle" font-size="11.5" fill="#475569" direction="rtl">أي نموذج لأي مهمة</text>
+  <text x="208" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72">CostRouter</text>
+
+  <rect x="354" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="480" y="270" text-anchor="middle" font-size="11.5" fill="#475569" direction="rtl">من يحرس الحدود التي لا يجوز تجاوزها</text>
+  <text x="480" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72" direction="rtl">بوابات السياسات · صناديق العزل الآمنة</text>
+
+  <rect x="626" y="250" width="252" height="52" rx="8" fill="#ffffff"/>
+  <text x="752" y="270" text-anchor="middle" font-size="11.5" fill="#475569" direction="rtl">إثبات ما حدث ولماذا</text>
+  <text x="752" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4F72" direction="rtl">سجلات التدقيق</text>
+
+  <!-- Layer 3: physical (owned) -->
+  <rect x="60" y="332" width="840" height="96" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="82" y="358" font-size="14" font-weight="700" fill="#1e293b" direction="rtl">الطبقة الفيزيائية · تُمتلك</text>
+  <text x="82" y="380" font-size="12" fill="#334155" direction="rtl">الطاقة والأراضي ووحدات معالجة الرسوميات لا تزال معركة ملكية، من يؤمّن أكثر.</text>
+  <rect x="82" y="392" width="230" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="197" y="409" text-anchor="middle" font-size="11.5" fill="#334155" direction="rtl">SKT: من 5 جيجاواط إلى 15 جيجاواط</text>
+  <rect x="322" y="392" width="200" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="422" y="409" text-anchor="middle" font-size="11.5" fill="#334155" direction="rtl">AI للجميع: حتى 512 وحدة B200</text>
+  <rect x="532" y="392" width="230" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="647" y="409" text-anchor="middle" font-size="11.5" fill="#334155" direction="rtl">Azure: حل الاختناقات بترابط 3M الضوئي</text>
+
+  <!-- binding note -->
+  <text x="480" y="448" text-anchor="middle" font-size="11.5" font-style="italic" fill="#64748b" direction="rtl">مهما تراكمت طبقة الملكية، إذا تعذّرت إدارة المكدس غير المتجانس فوقها، تتلاشى السيطرة. الأساس هو K8s السيادي في الموقع.</text>
+</svg>
