@@ -150,6 +150,8 @@ We also pushed the latest public methods as far as they go. In recent extreme lo
 
 The public stack (QuIP + salient) reaches 2.24, nearly matching their 1.971 in quality. But a decisive gap remains: they hit that quality at pure 1.125 bpw with no escape hatch, whereas we needed 1.57 bpw and 3% high-precision, and at the same pure-1-bit point we land at 4.21 versus their 1.97. Quality nearly converges, yet they hold a better efficiency Pareto point. One striking observation is that rotation helps far more as the model grows: the gain was small at 0.6B and large at 1.7B, which partly explains how they reach lossless at 27B. These numbers are a coarse short-passage signal, so firm claims need full benchmark evaluation. The full reproduction code is open-sourced.
 
+One point to state plainly. This entire study runs under the post-training quantization constraint, to follow their "no retraining" claim on equal terms. If you are willing to train, near-lossless low-bit is already an established path. BitNet and BitNet b1.58 train binary and ternary weights from scratch and match FP16 quality at scale, and quantization-aware training and distillation reach the same end by other means. So the answer to "can a lossless 1-bit model exist" is an obvious yes if you train for it. The hard and valuable problem is reaching that quality after the fact, on an already-trained model, without retraining, which is exactly what PrismML did. Turned around, for an organization that controls its own training, native low-bit training in the BitNet style sidesteps this post-hoc gap entirely, trading GPU cost for quality.
+
 ## Sources
 
 - [prism-ml/Bonsai-27B-gguf (Hugging Face)](https://huggingface.co/prism-ml/Bonsai-27B-gguf)
