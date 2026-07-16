@@ -25,6 +25,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1Ux2j1A6u8wE_CMdSKRn8q8vqXdM_pmAb/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![빛으로 이루어진 네 개의 층이 아래에서 위로 쌓이며 서로 연결되는 추상 구조](/assets/images/agentic-ai-hitchhikers-guide-hero.webp)
