@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/comics/trace-targeted-self-improvement/strip.png
 audiobook: /assets/audio/posts/trace-targeted-self-improvement/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 canonical_url: "https://thakicloud.github.io/en/comics/trace-targeted-self-improvement/"
 ---
 

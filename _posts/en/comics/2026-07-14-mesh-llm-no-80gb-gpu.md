@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/comics/mesh-llm-no-80gb-gpu/strip.png
 audiobook: /assets/audio/posts/mesh-llm-no-80gb-gpu/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 canonical_url: "https://thakicloud.github.io/en/comics/mesh-llm-no-80gb-gpu/"
 ---
 

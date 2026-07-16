@@ -13,7 +13,6 @@ toc: false
 image: /assets/images/posts/comics/ai-stack-sovereignty/strip.webp
 categories:
   - comics
-published: false
 canonical_url: "https://thakicloud.github.io/en/comics/ai-stack-sovereignty/"
 ---
 

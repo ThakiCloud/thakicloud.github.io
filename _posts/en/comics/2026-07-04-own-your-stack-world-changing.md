@@ -14,7 +14,6 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/own-your-stack-world-changing/strip.webp
-published: false
 canonical_url: "https://thakicloud.github.io/en/comics/own-your-stack-world-changing/"
 ---
 
