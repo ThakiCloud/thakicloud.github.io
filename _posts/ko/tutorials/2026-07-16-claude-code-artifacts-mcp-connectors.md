@@ -18,6 +18,8 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-artifacts-mcp-connectors/"
+audiobook: /assets/audio/posts/claude-code-artifacts-mcp-connectors/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 지금까지 Claude Code의 아티팩트는 세션의 작업 결과를 붙잡아 하나의 공유 가능한 웹 페이지로 굳혀
