@@ -21,6 +21,7 @@ permalink: /ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/
 canonical_url: "https://thakicloud.github.io/ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
