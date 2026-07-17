@@ -72,7 +72,7 @@ The mention of MTP fits into this context too. Multi-token prediction proposes a
 Since these are llama.cpp-based GGUF files, the serving flow itself is familiar. You fetch the GGUF, load it with llama.cpp, enable the MTP option, and expose it as an OpenAI-compatible server. Conceptually the structure looks like this.
 
 ```bash
-# Load the 1-bit GGUF build (conceptual example — check the release repo for exact filenames/flags)
+# Load the 1-bit GGUF build (conceptual example, check the release repo for exact filenames/flags)
 ./llama-server \
   --model hy3-295b-1bit.gguf \
   --ctx-size 262144 \
