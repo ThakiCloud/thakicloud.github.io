@@ -26,6 +26,7 @@ canonical_url: "https://thakicloud.github.io/ar/owm/minimax-m3-multimodal-moe/"
 reading_time: true
 categories:
   - owm
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق

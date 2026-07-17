@@ -21,6 +21,9 @@ toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.github.io/ko/owm/kimi-k3-two-axis-frontier-and-small-models/"
+published: false
+audiobook: /assets/audio/posts/kimi-k3-two-axis-frontier-and-small-models/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 이 글을 누가 읽어야 하나

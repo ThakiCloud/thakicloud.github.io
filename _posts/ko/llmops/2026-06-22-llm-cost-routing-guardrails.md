@@ -16,10 +16,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/llm-cost-routing-guardrails/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/llm-cost-routing-guardrails/"
 reading_time: true
 categories:
   - llmops
+published: false
+audiobook: /assets/audio/posts/llm-cost-routing-guardrails/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![LLM 비용 라우팅 가드레일 실전기](/assets/images/llm-cost-routing-guardrails-hero.webp)

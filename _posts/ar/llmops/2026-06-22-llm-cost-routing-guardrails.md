@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/llm-cost-routing-guardrai
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![ضمانات توجيه تكاليف LLM في الممارسة العملية](/assets/images/llm-cost-routing-guardrails-hero.webp)
