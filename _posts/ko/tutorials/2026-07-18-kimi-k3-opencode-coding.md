@@ -198,8 +198,11 @@ Paxis 위에서 도는 에이전트의 단가를 낮춥니다. 두 렌즈가 한
 
 ## 출처
 
-- VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever"
-- MarkTechPost, "Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context" (2026-07-16)
-- Fortune, "Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory" (2026-07-16)
-- Kimi API Platform, "Use Kimi Models in OpenCode" (platform.kimi.ai)
+- [MarkTechPost, "Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context" (2026-07-16)](https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/)
+- [Fortune, "Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory" (2026-07-16)](https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/)
+- [Artificial Analysis, "Kimi K3" 모델 페이지 (본문 GDPval-AA v2·AA-Briefcase 벤치마크 수치의 출처)](https://artificialanalysis.ai/models/kimi-k3)
+- [Kimi API Platform, "Use Kimi Models in OpenCode"](https://platform.kimi.ai/docs/guide/open-code)
+- [OpenCode (sst/opencode), v1.18.3 릴리스](https://github.com/sst/opencode)
+- [Simon Willison, "Kimi K3, and what we can still learn from the pelican benchmark" (2026-07-16)](https://simonwillison.net/2026/Jul/16/kimi-k3/)
+- VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever" (기사 존재는 확인, 이번 세션에서 URL 응답은 미확인)
 - OpenCode 1.18.3 (`npm install -g opencode-ai`): 본문 명령과 버전은 직접 재현 캡처값

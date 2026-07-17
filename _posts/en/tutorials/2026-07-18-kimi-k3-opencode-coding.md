@@ -204,8 +204,11 @@ independently is a stronger long-term position than being locked to a single ven
 
 ## Sources
 
-- VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever"
-- MarkTechPost, "Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context" (2026-07-16)
-- Fortune, "Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory" (2026-07-16)
-- Kimi API Platform, "Use Kimi Models in OpenCode" (platform.kimi.ai)
+- [MarkTechPost, "Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context" (2026-07-16)](https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/)
+- [Fortune, "Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory" (2026-07-16)](https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/)
+- [Artificial Analysis, "Kimi K3" model page (source for the GDPval-AA v2 and AA-Briefcase benchmark figures in this post)](https://artificialanalysis.ai/models/kimi-k3)
+- [Kimi API Platform, "Use Kimi Models in OpenCode"](https://platform.kimi.ai/docs/guide/open-code)
+- [OpenCode (sst/opencode), v1.18.3 release](https://github.com/sst/opencode)
+- [Simon Willison, "Kimi K3, and what we can still learn from the pelican benchmark" (2026-07-16)](https://simonwillison.net/2026/Jul/16/kimi-k3/)
+- VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever" (article exists; URL response not confirmed this session)
 - OpenCode 1.18.3 (`npm install -g opencode-ai`): commands and version are directly captured reproduction values
