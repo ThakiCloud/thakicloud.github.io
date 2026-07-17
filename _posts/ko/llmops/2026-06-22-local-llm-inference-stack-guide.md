@@ -20,11 +20,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/local-llm-inference-stack-guide/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/local-llm-inference-stack-guide/"
 reading_time: true
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/local-llm-inference-stack-guide/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 로컬 LLM 추론을 처음 시작하는 사람이 가장 먼저 부딪히는 질문은 "어떤 엔진을 써야 하나"입니다. llama.cpp, vLLM, SGLang, TensorRT-LLM 같은 이름이 쏟아지지만, 무엇을 기준으로 골라야 하는지는 잘 정리되어 있지 않습니다. r/LocalLLaMA의 GPU 모더레이터인 Ahmad Osman(@TheAhmadOsman)이 최근 이 공백을 메우는 종합 가이드를 무료로 공개했습니다.
