@@ -18,10 +18,12 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial-ko/"
 categories:
   - tutorials
 published: false
+audiobook: /assets/audio/posts/vibekit-secure-ai-coding-agent-sandbox-tutorial-ko/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
