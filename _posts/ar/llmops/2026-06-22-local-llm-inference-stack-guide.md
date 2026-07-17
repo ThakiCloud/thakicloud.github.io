@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/local-llm-inference-stack
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 أول سؤال يواجه من يبدأ بالاستدلال المحلي لنماذج LLM هو "أي محرّك يجب أن أستخدم؟" تنهمر أسماء مثل llama.cpp وvLLM وSGLang وTensorRT-LLM، لكن لا يوجد توجيه واضح حول الأساس الذي يُبنى عليه الاختيار. نشر Ahmad Osman (@TheAhmadOsman)، مشرف GPU في r/LocalLLaMA، مؤخراً دليلاً شاملاً مجانياً يسدّ هذه الفجوة.

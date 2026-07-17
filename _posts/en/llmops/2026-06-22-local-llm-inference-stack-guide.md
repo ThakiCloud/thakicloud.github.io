@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.github.io/en/llmops/local-llm-inference-stack
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 The first question anyone hits when starting with local LLM inference is "which engine should I use?" Names like llama.cpp, vLLM, SGLang, and TensorRT-LLM pour in, but there is little clear guidance on what to base the choice on. Ahmad Osman (@TheAhmadOsman), the GPU moderator of r/LocalLLaMA, recently published a free comprehensive guide that fills this gap.

@@ -15,6 +15,7 @@ canonical_url: "https://thakicloud.github.io/ar/dev/headroom-reversible-context-
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![صورة تجريدية لتكثّف البيانات](/assets/images/headroom-reversible-context-compression-hero.webp)
