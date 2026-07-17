@@ -64,15 +64,3 @@ canonical_url: "https://thakicloud.github.io/ar/research/atomic-binary-judge-eva
 يوضّح البحث بنفسه قيوده بصراحة. هذا العمل يقدّم فقط المعمارية والبراهين النظرية الثلاثة ونموذج التكلفة التحليلي وبروتوكولاً مسجّلاً مسبقاً للتحقق من تلك الحدود مقابل تصنيفات بشرية، ولا يتضمن أرقام دقة مقاسة فعلياً. يؤكد المؤلفون صراحة أن الإبلاغ عن أرقام دون تشغيل البروتوكول فعلياً هو بحد ذاته تلفيق، وقد تركوا الأرقام فارغة عن قصد. إلى جانب ذلك، يذكر البحث صراحة كقيود أن صياغة الأسئلة الثنائية نفسها قابلة للخداع، وأن دالة المعايرة يمكن أن تنحرف تحت عائلات نماذج جديدة أو هجمات عدائية متطورة، وأن الاستدلال الذي يكتفي بفحص بقاء الرابط حياً يفوّت فشلاً أكثر تعقيداً مثل صفحات 404 الناعمة، وأن حجة تقليل التباين نفسها تنهار حين تكون المعايير متشابكة. كما يقرّ بأن نماذج العمّال الصغيرة المحلية أضعف أصلاً من الحكّام بمستوى طليعي، بحيث أن مقابل الحصول على قابلية التفسير والمعايرة وإعادة الإنتاج وحدود التكلفة، يتنازل النظام عن جزء من الدقة كحكم مستقل.
 
 تفاصيل البحث الكاملة متاحة على Hugging Face: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-07-atomic-binary-judge-eval-service](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-07-atomic-binary-judge-eval-service)
-
-## شرائح ذات صلة
-
-هذه الشرائح تلخّص محتوى هذا المقال باستخدام NotebookLM (نمط `neo_swiss`).
-
-![atomic-binary-judge-eval-service slide 1](/assets/images/atomic-binary-judge-eval-service-slide-01.png)
-
-![atomic-binary-judge-eval-service slide 2](/assets/images/atomic-binary-judge-eval-service-slide-02.png)
-
-![atomic-binary-judge-eval-service slide 3](/assets/images/atomic-binary-judge-eval-service-slide-03.png)
-
-![atomic-binary-judge-eval-service slide 4](/assets/images/atomic-binary-judge-eval-service-slide-04.png)

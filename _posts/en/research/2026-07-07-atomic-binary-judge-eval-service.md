@@ -64,15 +64,3 @@ From the company's perspective, this paper consolidates a binary-decomposed judg
 The paper is explicit about its own limitations. This work presents only the architecture, three theoretical proofs, an analytical cost model, and a pre-registered protocol for validating that frontier against human labels; it does not contain measured accuracy figures. The authors state plainly that reporting numbers without having actually run the protocol would itself be fabrication, and they have deliberately left the figures blank. Beyond that, the paper explicitly names as limitations the fact that the wording of the binary questions themselves can be gamed, that the calibration function can drift under new model families or evolving adversarial attacks, that a heuristic that only checks whether a link is alive misses more sophisticated failures such as soft 404s, and that the variance-reduction argument itself breaks down when criteria are entangled with one another. It also acknowledges that on-prem small worker models inherently perform below frontier-grade judges, so that in exchange for gaining interpretability, calibration, reproducibility, and cost bounds, the system gives up some accuracy as a standalone judge.
 
 Full paper details are available on Hugging Face: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-07-atomic-binary-judge-eval-service](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-07-atomic-binary-judge-eval-service)
-
-## Related slides
-
-These slides summarize the body of this post using NotebookLM (`neo_swiss` style).
-
-![atomic-binary-judge-eval-service slide 1](/assets/images/atomic-binary-judge-eval-service-slide-01.png)
-
-![atomic-binary-judge-eval-service slide 2](/assets/images/atomic-binary-judge-eval-service-slide-02.png)
-
-![atomic-binary-judge-eval-service slide 3](/assets/images/atomic-binary-judge-eval-service-slide-03.png)
-
-![atomic-binary-judge-eval-service slide 4](/assets/images/atomic-binary-judge-eval-service-slide-04.png)

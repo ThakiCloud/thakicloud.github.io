@@ -50,15 +50,3 @@ More broadly, this study demonstrates that even small teams without a generous v
 The researchers are explicit about the limits of these results. The benchmark itself is a small-scale experiment based on 12 findings and a single draw, so percentages move in coarse sixths. In particular, the N=3 and N=5 conditions are not separately resampled independent trials but were constructed by slicing the same 5-draw set post-hoc, meaning a single outlier can affect multiple cells at once, and for this reason no statistical significance testing was performed given the sample size. Only three tiers within the Claude family, Haiku, Sonnet, and Opus, were tested, so there is no basis for assuming this tier ordering transfers to other model families, and the cost figures reflect API pricing as of July 10, 2026, so which configuration dominates could change if prices shift. The researchers note that while the Condorcet dilution mechanism itself is mathematically sound, this small-scale benchmark alone cannot answer how often hard items fall into the sub-50-percent skeptic accuracy regime in real operating conditions, and they propose a larger-scale seeded benchmark with independent resampling per cell as the next step.
 
 Full paper details are available on the Hugging Face dataset page: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto)
-
-## Related slides
-
-These slides summarize the content of this post using NotebookLM's `cinematic_infographic` style.
-
-![verify-gated-fanout-pareto slide 1](/assets/images/verify-gated-fanout-pareto-slide-01.png)
-
-![verify-gated-fanout-pareto slide 2](/assets/images/verify-gated-fanout-pareto-slide-02.png)
-
-![verify-gated-fanout-pareto slide 3](/assets/images/verify-gated-fanout-pareto-slide-03.png)
-
-![verify-gated-fanout-pareto slide 4](/assets/images/verify-gated-fanout-pareto-slide-04.png)

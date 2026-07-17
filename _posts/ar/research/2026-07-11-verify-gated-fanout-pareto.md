@@ -50,15 +50,3 @@ toc: true
 يوضح الباحثون بصراحة حدود هذه النتائج. المعيار المرجعي نفسه تجربة صغيرة النطاق قائمة على 12 نتيجة وعينة واحدة، لذا تتحرك النسب المئوية بخطوات خشنة من الأسداس. وعلى وجه الخصوص، فإن حالتي N=3 وN=5 ليستا تجربتين مستقلتين أُعيد سحبهما بشكل منفصل، بل بُنيتا عبر تقطيع العينة نفسها المكوّنة من 5 محاولات لاحقاً، ما يعني أن قيمة شاذة واحدة قد تؤثر في عدة خلايا في آن واحد، ولهذا السبب لم يُجرَ أي اختبار دلالة إحصائية بسبب حجم العينة. اختُبِرت فقط ثلاثة مستويات ضمن عائلة Claude، وهي Haiku وSonnet وOpus، لذا لا يوجد أساس لافتراض أن هذا الترتيب بين المستويات ينتقل إلى عائلات نماذج أخرى، كما تعكس أرقام التكلفة أسعار واجهة برمجة التطبيقات كما كانت في 10 يوليو 2026، وقد تتغير التهيئة المسيطرة إذا تغيرت الأسعار. يشدد الباحثون على أن آلية تخفيف كوندورسيه نفسها سليمة رياضياً، لكن هذا المعيار المرجعي الصغير وحده لا يمكنه الإجابة عن مدى تكرار وقوع العناصر الصعبة في نطاق دقة مشكك أقل من 50 بالمئة في ظروف التشغيل الفعلية، ويقترحون كخطوة تالية معياراً مرجعياً أكبر حجماً ذا بذور محددة (seeded) مع إعادة سحب مستقلة لكل خلية.
 
 يمكن الاطلاع على تفاصيل الورقة البحثية كاملة على صفحة مجموعة بيانات Hugging Face: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto)
-
-## شرائح ذات صلة
-
-هذه الشرائح تلخّص محتوى هذا المقال باستخدام نمط `cinematic_infographic` في NotebookLM.
-
-![verify-gated-fanout-pareto slide 1](/assets/images/verify-gated-fanout-pareto-slide-01.png)
-
-![verify-gated-fanout-pareto slide 2](/assets/images/verify-gated-fanout-pareto-slide-02.png)
-
-![verify-gated-fanout-pareto slide 3](/assets/images/verify-gated-fanout-pareto-slide-03.png)
-
-![verify-gated-fanout-pareto slide 4](/assets/images/verify-gated-fanout-pareto-slide-04.png)
