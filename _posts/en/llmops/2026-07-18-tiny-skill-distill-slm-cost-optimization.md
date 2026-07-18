@@ -18,6 +18,7 @@ published: true
 categories:
   - llmops
   - dev
+canonical_url: "https://thakicloud.github.io/en/llmops/tiny-skill-distill-slm-cost-optimization/"
 ---
 
 ## The bottom line first
@@ -37,6 +38,22 @@ Here is the key. When you break down what your AI actually does, most of it is *
 The method has three steps. First, design the workflow with a large model. Second, freeze whatever can be reduced to rules as code. Third, take only the **narrow repetitive decisions that genuinely need a language model and train a small specialized model (under one billion parameters, 4-bit)** for them. That work then runs on a single commodity on-prem GPU, and the top-tier model is spent only on what truly matters.
 
 The ThakiCloud platform productizes exactly this workflow. It **fine-tunes the small specialized model as a managed service** (without you having to wrangle GPU infrastructure) and **serves it on your own on-premises hardware**. The experiment in this post is the evidence that the pattern works; the platform is what makes it repeatable and operable.
+
+```mermaid
+flowchart TD
+    A[AI workflow requests] --> B{Repetitive narrow judgment?}
+    B -->|Yes: safety check, doc class, tone check| C[Small specialized SLM<br/>under 1B params, 4-bit<br/>~5MB LoRA adapter per task]
+    B -->|No: genuine judgment| D[Top-tier external model<br/>reserved for the few]
+    C --> E[On-prem GPU<br/>data never leaves your walls]
+    E --> F[~3.6x cheaper per 1k calls<br/>tone accuracy 38.6% to 99.1%]
+    D --> G[Higher per-call cost<br/>used sparingly]
+    subgraph BUILD [Build pipeline]
+        H[1. Design flow with top model] --> I[2. Freeze rules as code]
+        I --> J[3. Fine-tune small SLM<br/>for narrow judgments]
+    end
+    J -. provisions .-> C
+```
+*Route repetitive narrow judgments to a small on-prem specialized model to cut per-call cost and keep data in-house, and reserve the top-tier model for the few tasks that need real judgment. Each specialized model is a ~5MB attachment per task, so multiple tasks swap onto one shared base model.*
 
 ## What we measured
 

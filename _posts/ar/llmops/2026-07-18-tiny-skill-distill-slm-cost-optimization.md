@@ -18,6 +18,7 @@ published: true
 categories:
   - llmops
   - dev
+canonical_url: "https://thakicloud.github.io/ar/llmops/tiny-skill-distill-slm-cost-optimization/"
 ---
 
 ## الخلاصة أولًا
@@ -37,6 +38,22 @@ categories:
 للطريقة ثلاث خطوات. أولًا، صمّم سير العمل بنموذج كبير. ثانيًا، ثبّت ما يمكن اختزاله إلى قواعد كشيفرة. ثالثًا، خذ فقط **القرارات المتكررة الضيقة التي تحتاج فعلًا إلى نموذج لغوي ودرّب نموذجًا صغيرًا متخصّصًا (أقل من مليار معامل، 4 بت)** لها. عندها يعمل ذلك العمل على وحدة معالجة رسومية محلية شائعة واحدة، ويُنفَق النموذج الأعلى على ما يهم فعلًا فقط.
 
 تحوّل منصّة ThakiCloud هذا السير بالضبط إلى منتج. فهي **تُدرّب النموذج الصغير المتخصّص كخدمة مُدارة** (دون أن تضطر للتعامل مع بنية وحدات المعالجة الرسومية) و**تخدّمه على عتادك المحلي الخاص**. التجربة في هذا المقال دليل على أن النمط يعمل؛ والمنصّة هي ما يجعله قابلًا للتكرار والتشغيل.
+
+```mermaid
+flowchart TD
+    A[AI workflow requests] --> B{Repetitive narrow judgment?}
+    B -->|Yes: safety check, doc class, tone check| C[Small specialized SLM<br/>under 1B params, 4-bit<br/>~5MB LoRA adapter per task]
+    B -->|No: genuine judgment| D[Top-tier external model<br/>reserved for the few]
+    C --> E[On-prem GPU<br/>data never leaves your walls]
+    E --> F[~3.6x cheaper per 1k calls<br/>tone accuracy 38.6% to 99.1%]
+    D --> G[Higher per-call cost<br/>used sparingly]
+    subgraph BUILD [Build pipeline]
+        H[1. Design flow with top model] --> I[2. Freeze rules as code]
+        I --> J[3. Fine-tune small SLM<br/>for narrow judgments]
+    end
+    J -. provisions .-> C
+```
+*وجّه القرارات المتكررة الضيقة إلى نموذج صغير متخصّص محلي لخفض التكلفة لكل استدعاء وإبقاء البيانات داخليًا، واحتفظ بالنموذج الأعلى للمهام القليلة التي تحتاج حكمًا فعليًا. كل نموذج متخصّص مُرفق بنحو 5 ميغابايت لكل مهمة، فتتبدّل عدة مهام على نموذج أساس واحد مشترك.*
 
 ## ما الذي قِسناه
 

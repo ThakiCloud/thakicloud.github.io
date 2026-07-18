@@ -18,6 +18,7 @@ published: true
 categories:
   - llmops
   - dev
+canonical_url: "https://thakicloud.github.io/ko/llmops/tiny-skill-distill-slm-cost-optimization/"
 ---
 
 ## 결론부터 말씀드립니다
@@ -37,6 +38,22 @@ AI 도입 비용의 상당 부분은 모델이 똑똑한 판단을 하기 때문
 방법은 세 단계입니다. 첫째, 업무 흐름은 최상위 모델로 설계합니다. 둘째, 규칙으로 굳힐 수 있는 부분은 코드로 고정합니다. 셋째, 언어모델이 실제로 필요한 좁은 반복 판정만 작은 모델(파라미터 10억 개 이하, 4비트)로 특화 학습하여 연결합니다. 그러면 그 작업은 흔한 온프레미스 GPU 한 장에서 처리되고, 최상위 모델은 정말 중요한 판단에만 투입됩니다.
 
 타키클라우드 플랫폼은 바로 이 워크플로를 제품으로 제공합니다. 작은 전용 모델을 관리형으로 파인튜닝하고(고객사가 GPU 인프라를 직접 다룰 필요가 없습니다), 그 결과를 고객사의 온프레미스 환경에서 서빙합니다. 이 글의 실험은 그 패턴이 작동한다는 증거이며, 플랫폼은 그 패턴을 반복 가능하고 운영 가능한 형태로 만들어 드립니다.
+
+```mermaid
+flowchart TD
+    A[AI workflow requests] --> B{Repetitive narrow judgment?}
+    B -->|Yes: safety check, doc class, tone check| C[Small specialized SLM<br/>under 1B params, 4-bit<br/>~5MB LoRA adapter per task]
+    B -->|No: genuine judgment| D[Top-tier external model<br/>reserved for the few]
+    C --> E[On-prem GPU<br/>data never leaves your walls]
+    E --> F[~3.6x cheaper per 1k calls<br/>tone accuracy 38.6% to 99.1%]
+    D --> G[Higher per-call cost<br/>used sparingly]
+    subgraph BUILD [Build pipeline]
+        H[1. Design flow with top model] --> I[2. Freeze rules as code]
+        I --> J[3. Fine-tune small SLM<br/>for narrow judgments]
+    end
+    J -. provisions .-> C
+```
+*반복적이고 좁은 판정은 온프레미스의 작은 전용 모델로 보내 호출당 비용을 낮추고 데이터를 내부에 두며, 진짜 판단이 필요한 소수 업무만 최상위 모델에 맡깁니다. 전용 모델은 작업당 약 5메가바이트 부착 파일로 만들어져 하나의 기본 모델 위에 여러 작업을 바꿔 끼울 수 있습니다.*
 
 ## 실측: 무엇을 확인했는가
 
