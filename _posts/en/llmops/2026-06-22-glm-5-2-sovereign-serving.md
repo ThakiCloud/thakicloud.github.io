@@ -26,6 +26,7 @@ canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-sovereign-serving
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 Over the past year, skepticism about open-weight models has been persistent: they always seem to lag closed models by one or two generations, and for real frontier work, people assumed you had to rely on APIs like GPT or Claude. GLM-5.2, released by China's Z.ai (formerly Zhipu) in June 2026, challenges that assumption directly. It outperforms GPT-5.5 on SWE-bench Pro, ships under the permissive MIT license, and can be downloaded in full and run on your own infrastructure.

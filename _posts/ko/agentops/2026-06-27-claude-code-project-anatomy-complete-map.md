@@ -19,6 +19,7 @@ toc_icon: "sitemap"
 canonical_url: "https://thakicloud.github.io/ko/technique/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
+published: false
 ---
 
 ![여러 갈래의 빛줄기가 하나의 중심 노드로 수렴했다가 다시 계층적으로 갈라지는 추상 구조](/assets/images/claude-code-project-anatomy-complete-map-hero.webp)

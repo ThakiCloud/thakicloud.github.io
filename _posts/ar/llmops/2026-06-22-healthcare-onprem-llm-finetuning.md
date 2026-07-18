@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/llmops/healthcare-onprem-llm-fin
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)

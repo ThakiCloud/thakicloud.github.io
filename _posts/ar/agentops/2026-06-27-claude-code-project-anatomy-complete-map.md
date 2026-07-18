@@ -20,6 +20,7 @@ lang: ar
 canonical_url: "https://thakicloud.github.io/ar/technique/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
+published: false
 ---
 
 ![بنية تجريدية لخطوط ضوئية متعددة تتقارب نحو عقدة مركزية ثم تتفرع من جديد بشكل هرمي](/assets/images/claude-code-project-anatomy-complete-map-hero.webp)

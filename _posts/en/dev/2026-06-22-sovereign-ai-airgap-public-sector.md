@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/en/saas/sovereign-ai-airgap-public-
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![Sovereign AI Reference Architecture for Air-Gapped Public Sector](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)

@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.github.io/ko/saas/sovereign-ai-airgap-public-
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![망분리 공공기관 주권 AI 구축 레퍼런스](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)

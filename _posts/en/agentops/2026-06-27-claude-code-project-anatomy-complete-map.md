@@ -20,6 +20,7 @@ lang: en
 canonical_url: "https://thakicloud.github.io/en/technique/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
+published: false
 ---
 
 ![Abstract visualization of light beams converging on a central node before branching hierarchically outward](/assets/images/claude-code-project-anatomy-complete-map-hero.webp)
