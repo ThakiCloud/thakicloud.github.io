@@ -16,6 +16,7 @@ tags:
   - thakicloud
 categories:
   - agentops
+canonical_url: "https://thakicloud.github.io/ko/agentops/benchmark-wins-trust-gap-execution-layer/"
 ---
 
 리더보드 화면을 캡처하는 순간이 있습니다. 어느 신생 모델이 익숙한 1등의 이름을 밀어내고 맨 위에 올라선 장면입니다. 2026년 7월, 중국 문샷AI의 오픈웨이트 모델 키미 K3가 바로 그 캡처를 만들어냈습니다. AI 평가 플랫폼 아레나의 프런트엔드 코딩 리더보드에서 앤스로픽 클로드 페이블 5를 제치고 1위에 올랐고, 매개변수 2조8000억개로 지금까지 공개된 오픈웨이트 모델 중 가장 큽니다. API 가격도 절반 이하입니다. 디지털투데이가 전한 실리콘밸리의 반응은 그런데 환호가 아니라 한 문장이었습니다. "벤치마크는 이겼는데 글쎄."
@@ -61,6 +62,28 @@ categories:
 ## 모델을 고르는 시대에서 실행 계층을 소유하는 시대로
 
 메타가 광고 대신 자사 컴퓨팅을 앤트로픽에 100억 달러 규모로 임대하려는 협상까지 겹쳐 보면 그림이 선명해집니다. 컴퓨팅은 상품이 되고, 모델은 반값으로 흔해지고, 리더보드 1위는 매주 바뀝니다. 이렇게 능력이 원자재가 되는 세계에서 값어치는 능력 위가 아니라 능력을 감싸는 실행 계층으로 옮겨갑니다. 어떤 모델을 고르느냐가 아니라 그 모델을 누구의 통제 아래 돌리느냐가 경쟁력이 됩니다.
+
+아래 그림은 이 전환을 한 장으로 요약합니다. 상품이 된 능력이 왜 그 자체로는 배포되지 못하고, 실행 계층이라는 관문을 지나야 기업이 지불하는 통제된 배포가 되는지를 보여줍니다.
+
+```mermaid
+flowchart TB
+    subgraph CAP[Capability is now a commodity]
+        M1[Kimi K3 tops the coding leaderboard at half-price API]
+        M2[GPT-5.6 and Muse Spark up to 12x cheaper]
+        M3[The rank-1 model changes almost weekly]
+    end
+    CAP -->|a benchmark score is not deployment trust| GAP{Can we run it safely, controlled and audited on our own data}
+    GAP -->|without governance| RISK[Adopted but not trusted, re-verification fatigue]
+    GAP -->|through an execution layer| EXEC
+    subgraph EXEC[Paxis Agent-Native execution layer]
+        P1[Policy gate and isolated sandbox]
+        P2[Audit logs on every agent run]
+        P3[L0 to L3 autonomy with human in the loop]
+        P4[CostRouter picks a model per task]
+        P5[On-prem Kubernetes for sovereignty]
+    end
+    EXEC --> VALUE[What enterprises actually pay for is controlled deployment]
+```
 
 ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-Native Cloud입니다. 스킬과 툴, 정책, 감사 로그를 일급 리소스로 두어, 뤼튼 대표가 겪은 재확인의 피로와 딜로이트가 권고한 휴먼 인 더 루프를 L0에서 L3까지의 자율도 거버넌스로 설계합니다. 사람이 어디까지 손을 떼도 되는지를 감으로 정하지 않고 정책과 게이트로 정합니다. 지란지교소프트가 판 감사 기능은 Paxis에서 모든 에이전트 실행에 붙는 기본값이고, 정책 게이트와 격리 샌드박스는 반값 오픈웨이트 모델을 도입하면서도 기밀이 새지 않게 막는 틀이 됩니다. 가성비로 넘어간 모델 경쟁은 작업마다 다른 모델을 붙이는 CostRouter로 흡수하고, 소버린 AI가 부르는 주권의 요구는 온프렘 쿠버네티스 기반 ai-platform이 받습니다.
 
