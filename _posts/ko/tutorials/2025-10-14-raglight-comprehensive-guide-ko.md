@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/raglight-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/raglight-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/raglight-comprehensive-guide-ko/"
 categories:
   - tutorials
 ---
@@ -146,6 +146,27 @@ EOF
 1. **문서 수집(Document Ingestion)**: 문서를 청크로 분할하고 임베딩으로 변환
 2. **벡터 저장(Vector Storage)**: 임베딩을 벡터 데이터베이스(ChromaDB, FAISS 등)에 저장
 3. **검색 및 생성(Retrieval & Generation)**: 쿼리 시 관련 문서를 검색하여 LLM에 전달
+
+**그림 1. RAGLight 파이프라인 아키텍처 (기본 RAG · Agentic RAG · RAT).**
+
+```mermaid
+flowchart TD
+    D[Documents] --> C[Chunk and Embed]
+    C --> VS[(Vector Store: ChromaDB / FAISS / Qdrant)]
+    Q[User Query] --> MODE{Pipeline Mode}
+    VS -. retrieve .-> MODE
+    MODE -->|Basic RAG| B1[Retrieve top-k]
+    B1 --> B2[LLM Generate]
+    MODE -->|Agentic RAG| A1[Agent Loop: reason then retrieve]
+    A1 -->|iterate| A1
+    A1 --> A2[LLM Generate]
+    MODE -->|RAT| T1[Retrieve]
+    T1 --> T2[Reasoning LLM: thinking steps]
+    T2 --> T3[Generation LLM]
+    B2 --> ANS[Answer]
+    A2 --> ANS
+    T3 --> ANS
+```
 
 ### 구현
 

@@ -19,7 +19,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/raglight-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/raglight-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/raglight-comprehensive-guide-ar/"
 categories:
   - tutorials
 ---
@@ -146,6 +146,27 @@ EOF
 1. **استيعاب المستندات (Document Ingestion)**: يتم تقسيم مستنداتك إلى أجزاء وتحويلها إلى تضمينات
 2. **التخزين المتجه (Vector Storage)**: يتم تخزين التضمينات في قاعدة بيانات متجهات (ChromaDB، FAISS، إلخ)
 3. **الاسترجاع والتوليد (Retrieval & Generation)**: عند الاستعلام، يتم استرجاع المستندات ذات الصلة وتمريرها إلى LLM
+
+**الشكل 1. معمارية خط أنابيب RAGLight (RAG الأساسي، RAG الوكيل، RAT).**
+
+```mermaid
+flowchart TD
+    D[Documents] --> C[Chunk and Embed]
+    C --> VS[(Vector Store: ChromaDB / FAISS / Qdrant)]
+    Q[User Query] --> MODE{Pipeline Mode}
+    VS -. retrieve .-> MODE
+    MODE -->|Basic RAG| B1[Retrieve top-k]
+    B1 --> B2[LLM Generate]
+    MODE -->|Agentic RAG| A1[Agent Loop: reason then retrieve]
+    A1 -->|iterate| A1
+    A1 --> A2[LLM Generate]
+    MODE -->|RAT| T1[Retrieve]
+    T1 --> T2[Reasoning LLM: thinking steps]
+    T2 --> T3[Generation LLM]
+    B2 --> ANS[Answer]
+    A2 --> ANS
+    T3 --> ANS
+```
 
 ### التنفيذ
 

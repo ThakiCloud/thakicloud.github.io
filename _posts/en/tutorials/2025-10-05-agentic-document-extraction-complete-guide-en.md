@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/agentic-document-extraction-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/agentic-document-extraction-complete-guide/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/agentic-document-extraction-complete-guide-en/"
 categories:
   - tutorials
 ---
@@ -40,6 +40,19 @@ LandingAI's Agentic Document Extraction is an AI-powered document processing lib
 - **Structured Output**: Returns hierarchical JSON with exact element locations
 - **Visual Grounding**: Provides bounding box information for extracted content
 - **Batch Processing**: Handles multiple documents simultaneously with parallel processing
+
+**Figure 1. Agentic Document Extraction processing pipeline.**
+
+```mermaid
+flowchart TD
+    IN[Input: PDF / Image / URL, any length] --> SPLIT[Auto-split 100+ pages]
+    SPLIT --> BATCH[Parallel Batch Processing]
+    BATCH --> PARSE[Layout Parser: tables, figures, charts]
+    PARSE --> JSON[Hierarchical JSON + Bounding Boxes]
+    JSON --> MD[Render-ready Markdown]
+    JSON --> VIS[Visual Grounding and Debug]
+    PARSE -. retry with backoff .-> PARSE
+```
 
 ### Key Features
 

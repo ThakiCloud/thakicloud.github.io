@@ -70,6 +70,19 @@ VibeKit은 AI 코딩 에이전트를 위해 특별히 설계된 오픈소스 보
 - 로컬 머신에서 완전히 작동
 - 완전한 프라이버시 및 데이터 주권
 
+**그림 1. VibeKit 보안 샌드박스 아키텍처.**
+
+```mermaid
+flowchart TD
+    AGENT[AI Coding Agent: Claude Code / Gemini CLI / Grok CLI / Codex CLI] --> VK[VibeKit Security Layer]
+    VK --> BOX[Isolated Docker Sandbox: filesystem isolation]
+    VK --> RED[Data Redaction: scan API keys and secrets]
+    VK --> LOG[Observability: logs and audit trail]
+    BOX --> SAFE[Protected Local Dev Environment]
+    RED --> SAFE
+    LOG --> SAFE
+```
+
 ## 사전 요구사항
 
 시작하기 전에 시스템에 다음이 설치되어 있는지 확인하세요:

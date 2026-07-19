@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/agentic-document-extraction-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/agentic-document-extraction-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/agentic-document-extraction-complete-guide-ko/"
 categories:
   - tutorials
 ---
@@ -40,6 +40,19 @@ LandingAI의 Agentic Document Extraction은 다음과 같은 기능에 뛰어난
 - **구조화된 출력**: 정확한 요소 위치와 함께 계층적 JSON 반환
 - **시각적 그라운딩**: 추출된 콘텐츠에 대한 바운딩 박스 정보 제공
 - **배치 처리**: 병렬 처리로 여러 문서 동시 처리
+
+**그림 1. Agentic Document Extraction 처리 파이프라인.**
+
+```mermaid
+flowchart TD
+    IN[Input: PDF / Image / URL, any length] --> SPLIT[Auto-split 100+ pages]
+    SPLIT --> BATCH[Parallel Batch Processing]
+    BATCH --> PARSE[Layout Parser: tables, figures, charts]
+    PARSE --> JSON[Hierarchical JSON + Bounding Boxes]
+    JSON --> MD[Render-ready Markdown]
+    JSON --> VIS[Visual Grounding and Debug]
+    PARSE -. retry with backoff .-> PARSE
+```
 
 ### 주요 기능
 

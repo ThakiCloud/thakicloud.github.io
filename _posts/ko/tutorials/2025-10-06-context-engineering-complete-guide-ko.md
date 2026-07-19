@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/context-engineering-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/context-engineering-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/context-engineering-complete-guide-ko/"
 categories:
   - tutorials
 ---
@@ -178,6 +178,22 @@ PRP는 요구사항과 코드 사이의 격차를 메우는 포괄적인 구현 
 4. **검증**: 각 단계에서 테스트와 린팅 실행
 5. **반복**: 발견된 문제를 자동으로 수정
 6. **완료**: 모든 성공 기준이 충족되었는지 확인
+
+**그림 1. PRP 워크플로우 (generate-prp에서 execute-prp까지).**
+
+```mermaid
+flowchart TD
+    F[Feature Request + Examples + Docs] --> R[generate-prp: Research codebase patterns]
+    R --> DOC[Gather API docs and pitfalls]
+    DOC --> BP[Blueprint: plan + validation gates + tests]
+    BP --> SCORE[Score confidence 1-10]
+    SCORE --> L[execute-prp: Load full context]
+    L --> PLAN[Plan tasks]
+    PLAN --> IMPL[Implement]
+    IMPL --> VAL{Validate: test and lint}
+    VAL -->|fail: auto-fix| IMPL
+    VAL -->|pass| DONE[Success criteria met]
+```
 
 ## 컨텍스트 엔지니어링 설정
 

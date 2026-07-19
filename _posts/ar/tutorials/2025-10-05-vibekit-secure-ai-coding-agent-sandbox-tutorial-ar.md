@@ -18,7 +18,7 @@ toc: true
 toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial-ar/"
 categories:
   - tutorials
 published: false
@@ -67,6 +67,19 @@ VibeKit هو إطار عمل أمني مفتوح المصدر مصمم خصيص�
 - لا يتطلب اعتماديات سحابية
 - يعمل بالكامل على جهازك المحلي
 - خصوصية كاملة وسيادة البيانات
+
+**الشكل 1. معمارية بيئة الحماية الأمنية لـ VibeKit.**
+
+```mermaid
+flowchart TD
+    AGENT[AI Coding Agent: Claude Code / Gemini CLI / Grok CLI / Codex CLI] --> VK[VibeKit Security Layer]
+    VK --> BOX[Isolated Docker Sandbox: filesystem isolation]
+    VK --> RED[Data Redaction: scan API keys and secrets]
+    VK --> LOG[Observability: logs and audit trail]
+    BOX --> SAFE[Protected Local Dev Environment]
+    RED --> SAFE
+    LOG --> SAFE
+```
 
 ## المتطلبات المسبقة
 

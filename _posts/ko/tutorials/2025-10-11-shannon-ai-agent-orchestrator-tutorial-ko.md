@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/shannon-ai-agent-orchestrator-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/shannon-ai-agent-orchestrator-tutorial/"
+canonical_url: "https://thakicloud.github.io/ko/tutorials/shannon-ai-agent-orchestrator-tutorial-ko/"
 categories:
   - tutorials
 ---
@@ -136,6 +136,18 @@ Shannon은 세 가지 주요 구성 요소로 이루어진 마이크로서비스
 1. **Go 오케스트레이터**: 워크플로우, 세션, 에이전트 조정 관리
 2. **Rust 에이전트 코어**: 에이전트 실행, 메모리 관리, 도구 통합 처리
 3. **Python LLM 서비스**: 여러 LLM 공급자에 대한 통합 인터페이스 제공
+
+**그림 1. Shannon 오케스트레이터 아키텍처 (Go 오케스트레이터 · Rust 에이전트 코어 · Python LLM 서비스).**
+
+```mermaid
+flowchart TD
+    Client[Client / REST API] --> GO[Go Orchestrator: workflows, sessions, agent coordination]
+    GO --> RUST[Rust Agent Core: execution, memory, tools]
+    RUST --> PY[Python LLM Service: unified provider interface]
+    PY --> LLM[LLM Providers: OpenAI / Anthropic / others]
+    RUST -. patterns .-> PAT[ReAct / Tree-of-Thoughts / Chain-of-Thought / Debate / Reflection]
+    RUST --> MEM[(Session Memory)]
+```
 
 ### 에이전트 패턴
 

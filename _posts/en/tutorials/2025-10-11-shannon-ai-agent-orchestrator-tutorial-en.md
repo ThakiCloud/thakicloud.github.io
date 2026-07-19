@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/shannon-ai-agent-orchestrator-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/shannon-ai-agent-orchestrator-tutorial/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/shannon-ai-agent-orchestrator-tutorial-en/"
 categories:
   - tutorials
 ---
@@ -136,6 +136,18 @@ Shannon follows a microservices architecture with three main components:
 1. **Go Orchestrator**: Manages workflows, sessions, and agent coordination
 2. **Rust Agent-Core**: Handles agent execution, memory management, and tool integration
 3. **Python LLM Service**: Provides unified interface to multiple LLM providers
+
+**Figure 1. Shannon orchestrator architecture (Go orchestrator, Rust agent core, Python LLM service).**
+
+```mermaid
+flowchart TD
+    Client[Client / REST API] --> GO[Go Orchestrator: workflows, sessions, agent coordination]
+    GO --> RUST[Rust Agent Core: execution, memory, tools]
+    RUST --> PY[Python LLM Service: unified provider interface]
+    PY --> LLM[LLM Providers: OpenAI / Anthropic / others]
+    RUST -. patterns .-> PAT[ReAct / Tree-of-Thoughts / Chain-of-Thought / Debate / Reflection]
+    RUST --> MEM[(Session Memory)]
+```
 
 ### Agent Patterns
 

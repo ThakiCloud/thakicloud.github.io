@@ -18,7 +18,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/agentic-document-extraction-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/agentic-document-extraction-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/agentic-document-extraction-complete-guide-ar/"
 categories:
   - tutorials
 ---
@@ -40,6 +40,19 @@ categories:
 - **الإخراج المنظم**: إرجاع JSON هرمي مع مواقع العناصر الدقيقة
 - **التأسيس البصري**: توفير معلومات الصندوق المحيط للمحتوى المستخرج
 - **المعالجة المجمعة**: التعامل مع مستندات متعددة بشكل متزامن مع المعالجة المتوازية
+
+**الشكل 1. خط معالجة Agentic Document Extraction.**
+
+```mermaid
+flowchart TD
+    IN[Input: PDF / Image / URL, any length] --> SPLIT[Auto-split 100+ pages]
+    SPLIT --> BATCH[Parallel Batch Processing]
+    BATCH --> PARSE[Layout Parser: tables, figures, charts]
+    PARSE --> JSON[Hierarchical JSON + Bounding Boxes]
+    JSON --> MD[Render-ready Markdown]
+    JSON --> VIS[Visual Grounding and Debug]
+    PARSE -. retry with backoff .-> PARSE
+```
 
 ### الميزات الرئيسية
 

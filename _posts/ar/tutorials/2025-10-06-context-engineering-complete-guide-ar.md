@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/context-engineering-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/context-engineering-complete-guide/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/context-engineering-complete-guide-ar/"
 categories:
   - tutorials
 ---
@@ -178,6 +178,22 @@ PRPs هي مخططات تنفيذ شاملة تسد الفجوة بين المت
 4. **التحقق**: تشغيل الاختبارات والفحص في كل خطوة
 5. **التكرار**: إصلاح أي مشاكل موجودة تلقائياً
 6. **الإكمال**: التأكد من استيفاء جميع معايير النجاح
+
+**الشكل 1. سير عمل PRP (من generate-prp إلى execute-prp).**
+
+```mermaid
+flowchart TD
+    F[Feature Request + Examples + Docs] --> R[generate-prp: Research codebase patterns]
+    R --> DOC[Gather API docs and pitfalls]
+    DOC --> BP[Blueprint: plan + validation gates + tests]
+    BP --> SCORE[Score confidence 1-10]
+    SCORE --> L[execute-prp: Load full context]
+    L --> PLAN[Plan tasks]
+    PLAN --> IMPL[Implement]
+    IMPL --> VAL{Validate: test and lint}
+    VAL -->|fail: auto-fix| IMPL
+    VAL -->|pass| DONE[Success criteria met]
+```
 
 ## إعداد هندسة السياق
 

@@ -18,7 +18,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/shannon-ai-agent-orchestrator-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/shannon-ai-agent-orchestrator-tutorial/"
+canonical_url: "https://thakicloud.github.io/ar/tutorials/shannon-ai-agent-orchestrator-tutorial-ar/"
 categories:
   - tutorials
 ---
@@ -136,6 +136,18 @@ curl http://localhost:8082/health
 1. **منسق Go**: يدير سير العمل والجلسات وتنسيق الوكلاء
 2. **نواة الوكيل Rust**: يتعامل مع تنفيذ الوكيل وإدارة الذاكرة وتكامل الأدوات
 3. **خدمة LLM Python**: توفر واجهة موحدة لموفري LLM متعددين
+
+**الشكل 1. هندسة منسق Shannon (منسق Go، نواة الوكيل Rust، خدمة LLM Python).**
+
+```mermaid
+flowchart TD
+    Client[Client / REST API] --> GO[Go Orchestrator: workflows, sessions, agent coordination]
+    GO --> RUST[Rust Agent Core: execution, memory, tools]
+    RUST --> PY[Python LLM Service: unified provider interface]
+    PY --> LLM[LLM Providers: OpenAI / Anthropic / others]
+    RUST -. patterns .-> PAT[ReAct / Tree-of-Thoughts / Chain-of-Thought / Debate / Reflection]
+    RUST --> MEM[(Session Memory)]
+```
 
 ### أنماط الوكيل
 

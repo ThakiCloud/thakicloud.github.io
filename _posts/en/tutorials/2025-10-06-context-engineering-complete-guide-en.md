@@ -15,7 +15,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/context-engineering-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/context-engineering-complete-guide/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/context-engineering-complete-guide-en/"
 categories:
   - tutorials
 ---
@@ -178,6 +178,22 @@ The `/execute-prp` command follows this process:
 4. **Validate**: Runs tests and linting at each step
 5. **Iterate**: Fixes any issues found automatically
 6. **Complete**: Ensures all success criteria are met
+
+**Figure 1. PRP workflow (from generate-prp to execute-prp).**
+
+```mermaid
+flowchart TD
+    F[Feature Request + Examples + Docs] --> R[generate-prp: Research codebase patterns]
+    R --> DOC[Gather API docs and pitfalls]
+    DOC --> BP[Blueprint: plan + validation gates + tests]
+    BP --> SCORE[Score confidence 1-10]
+    SCORE --> L[execute-prp: Load full context]
+    L --> PLAN[Plan tasks]
+    PLAN --> IMPL[Implement]
+    IMPL --> VAL{Validate: test and lint}
+    VAL -->|fail: auto-fix| IMPL
+    VAL -->|pass| DONE[Success criteria met]
+```
 
 ## Setting Up Context Engineering
 

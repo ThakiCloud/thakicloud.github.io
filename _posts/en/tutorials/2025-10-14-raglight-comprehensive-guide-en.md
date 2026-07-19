@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/raglight-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/raglight-comprehensive-guide/"
+canonical_url: "https://thakicloud.github.io/en/tutorials/raglight-comprehensive-guide-en/"
 categories:
   - tutorials
 ---
@@ -146,6 +146,27 @@ The basic RAG pipeline consists of three main components:
 1. **Document Ingestion**: Your documents are split into chunks and converted to embeddings
 2. **Vector Storage**: Embeddings are stored in a vector database (ChromaDB, FAISS, etc.)
 3. **Retrieval & Generation**: When queried, relevant documents are retrieved and passed to the LLM
+
+**Figure 1. RAGLight pipeline architecture (Basic RAG, Agentic RAG, RAT).**
+
+```mermaid
+flowchart TD
+    D[Documents] --> C[Chunk and Embed]
+    C --> VS[(Vector Store: ChromaDB / FAISS / Qdrant)]
+    Q[User Query] --> MODE{Pipeline Mode}
+    VS -. retrieve .-> MODE
+    MODE -->|Basic RAG| B1[Retrieve top-k]
+    B1 --> B2[LLM Generate]
+    MODE -->|Agentic RAG| A1[Agent Loop: reason then retrieve]
+    A1 -->|iterate| A1
+    A1 --> A2[LLM Generate]
+    MODE -->|RAT| T1[Retrieve]
+    T1 --> T2[Reasoning LLM: thinking steps]
+    T2 --> T3[Generation LLM]
+    B2 --> ANS[Answer]
+    A2 --> ANS
+    T3 --> ANS
+```
 
 ### Implementation
 
