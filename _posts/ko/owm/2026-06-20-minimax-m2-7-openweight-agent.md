@@ -21,10 +21,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/minimax-m2-7-openweight-agent/"
+canonical_url: "https://thakicloud.github.io/ko/owm/minimax-m2-7-openweight-agent/"
 reading_time: true
 categories:
   - owm
+published: false
+audiobook: /assets/audio/posts/minimax-m2-7-openweight-agent/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

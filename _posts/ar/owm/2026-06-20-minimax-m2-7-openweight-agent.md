@@ -26,6 +26,7 @@ lang: ar
 reading_time: true
 categories:
   - owm
+published: false
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
