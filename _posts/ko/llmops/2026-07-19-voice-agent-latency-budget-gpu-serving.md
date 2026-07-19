@@ -53,6 +53,19 @@ LLM 첫 토큰이 500밀리초를 쓰면 이미 예산이 초과됩니다. 어�
 일반 범위가 붙어 있고, 병목이 그 범위를 넘으면 처방을 띄웁니다. 프리셋으로 시작점을 잡고,
 비교 모드로 두 구성을 겹쳐 보고, 부하가 걸렸을 때의 대략적인 p95도 함께 보여줍니다.
 
+일곱 단계는 사슬처럼 이어지고, 이 지연들의 총합이 목표 예산 안에 들어와야 대화가 자연스럽게 느껴집니다. 아래 흐름에서 실제로 예산을 가장 크게 잡아먹는 병목은 비스트리밍 TTS였습니다.
+
+```mermaid
+flowchart LR
+    A["End of utterance<br/>detection"] --> B["Network<br/>round-trip"]
+    B --> C["STT<br/>Qwen3-ASR ~133ms"]
+    C --> D["LLM<br/>first token"]
+    D --> E["First sentence<br/>ready"]
+    E --> F["TTS synthesis<br/>the bottleneck"]
+    F --> G["Playback<br/>buffer"]
+    G --> H["First audio out<br/>target under 800ms"]
+```
+
 ## 자가호스팅이라면 숫자가 어떻게 바뀌나
 
 관리형 스트리밍 API의 지연 범위는 문서로 어느 정도 알 수 있습니다. 그러나 "우리가 실제로 쓰는

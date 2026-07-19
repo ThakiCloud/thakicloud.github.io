@@ -16,6 +16,7 @@ tags:
   - thakicloud
 categories:
   - news
+canonical_url: "https://thakicloud.github.io/ko/news/two-price-tags-moving-opposite-utilization-war/"
 ---
 
 오늘 아침 뉴스를 훑다가 한 가지가 눈에 걸렸습니다. 같은 날짜에 정반대 방향으로 움직이는 두 개의 가격표가 나란히 놓여 있었기 때문입니다. 한쪽에서는 AI를 돌릴 장비를 사들이는 값이 사상 최고로 치솟고 있었고, 다른 한쪽에서는 AI를 한 번 굴리는 값이 사상 최저로 무너지고 있었습니다. 보통 원가가 오르면 판매가도 오릅니다. 그런데 지금은 밑재료 값과 완성품 값이 서로 등을 돌린 채 벌어지는 중입니다. 이 벌어짐이 오늘 이야기의 전부입니다.
@@ -43,6 +44,21 @@ categories:
 두 가격표를 겹쳐 놓으면 그림이 선명해집니다. 장비를 소유하는 값은 위로, AI를 쓰는 값은 아래로 벌어지는 가위입니다. 여기서 흔한 오해 하나를 짚고 싶습니다. 모델이 흔하고 싸졌으니 이제 인프라는 중요하지 않다는 결론입니다. 정반대입니다. 완성품이 헐값이 될수록, 그 완성품을 찍어내는 설비의 원가율이 수익의 전부를 결정합니다.
 
 한국경제가 인용한 투자자 개빈 베이커의 말이 이 지점을 정확히 찌릅니다. 그는 저가 모델의 확산이 오히려 'AI 인프라에 대한 가장 강력한 초강세 시나리오'라고 봤습니다. 토큰이 싸지면 사람들은 토큰을 더 씁니다. 싸진 만큼 덜 쓰는 게 아니라, 싸졌기 때문에 훨씬 많이 씁니다. 제번스가 석탄에서 봤던 역설이 지금 GPU 위에서 반복되는 중입니다. 그렇다면 승부처는 '누가 더 좋은 모델을 가졌나'가 아니라 '가진 GPU에서 토큰을 얼마나 많이 짜내느냐', 즉 활용률로 옮겨갑니다.
+
+벌어지는 두 가격표가 어떻게 승부처를 옮기는지를 한 장으로 정리하면 다음과 같습니다.
+
+```mermaid
+flowchart TD
+    A["Cost to OWN AI infra rising<br/>memory shock, +70% servers"] --> C["Widening price scissors"]
+    B["Cost to USE AI falling<br/>Kimi K3, Chinese open-weight"] --> C
+    C --> D["Battleground shifts to<br/>GPU utilization"]
+    D --> E["Model routing:<br/>cheap vs top-tier"]
+    D --> F["Scheduling:<br/>no idle cards"]
+    D --> G["Control and audit:<br/>policy gate, logs"]
+    E --> H["Paxis agent-native cloud"]
+    F --> H
+    G --> H
+```
 
 디지털데일리의 '모두의AI' 기사가 이 문제를 국가 규모로 보여줍니다. 정부는 전 국민 대상 AI 챗봇에 엔비디아 B200 512장을 투입하면서, 사업자를 두세 곳으로 나눌지 한 곳에 몰아줄지를 두고 딜레마에 빠졌습니다. 나누면 각 서비스가 최대 트래픽을 못 견디고, 몰면 생태계 다양성을 잃습니다. 흥미로운 대목은 정부가 월간활성이용자수와 토큰 사용량을 근거로 임차 물량을 매달 사후 조정하겠다고 한 부분입니다. 카드가 한정된 곳에서는 결국 사용량에 맞춰 자원을 동적으로 재배분하는 통제 능력이 승패를 가릅니다. 512장이든 5만 장이든 본질은 같습니다.
 

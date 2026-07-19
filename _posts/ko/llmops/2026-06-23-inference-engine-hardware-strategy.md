@@ -18,9 +18,10 @@ toc_label: "목차"
 toc_icon: "microchip"
 header:
   image: /assets/images/inference-engine-hardware-strategy-hero.webp
-canonical_url: "https://thakicloud.github.io/ko/technique/inference-engine-hardware-strategy/"
+canonical_url: "https://thakicloud.github.io/ko/llmops/inference-engine-hardware-strategy/"
 categories:
   - llmops
+published: false
 ---
 
 ![하드웨어가 소프트웨어를 결정하는 개념을 형상화한 이미지](/assets/images/inference-engine-hardware-strategy-hero.webp)

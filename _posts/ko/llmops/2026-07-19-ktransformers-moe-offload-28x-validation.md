@@ -96,6 +96,18 @@ AMX 커널은 AVX2보다 1.38배 빨랐습니다. 분명한 이득이지만, 28�
 
 먼저 이 세 가지를 모두 만족하는지 봅니다. 이미 보유한(또는 값싸게 확보한) 대형 AMX 서버와 대용량 RAM이 있는가. 돌리려는 모델이 GPU VRAM을 실제로 넘치는 대형 MoE(V3, R1 급)인가. 그리고 그 작업이 실시간 응답이 아니라 배치나 오프라인, 에이전트처럼 지연에 둔감한가. 세 가지가 다 맞으면 ktransformers는 값비싼 다중 GPU를 사지 않고도 그 모델을 돌리는 유일한 현실적 경로가 됩니다. 하나라도 어긋나면 답은 달라집니다. 실시간 대화가 필요하면 오프로드의 한 자릿수 tok/s로는 부족하고, 모델이 GPU에 들어간다면 고민 없이 그냥 GPU에 통째로 올리는 편이 수십 배 빠릅니다.
 
+이 판단을 하나의 결정 흐름으로 정리하면 다음과 같습니다.
+
+```mermaid
+flowchart TD
+    A["Large MoE model<br/>overflows GPU VRAM?"] -->|No| B["Load fully on GPU<br/>tens of times faster"]
+    A -->|Yes| C["Own an AMX server<br/>with large RAM?"]
+    C -->|No| D["Rent economics lose<br/>5 to 17x pricier per token"]
+    C -->|Yes| E["Workload batch or offline<br/>latency tolerant?"]
+    E -->|No, real-time| F["Single-digit tok/s<br/>too slow for chat"]
+    E -->|Yes| G["ktransformers fits<br/>the only realistic path"]
+```
+
 우리 관점에서 ktransformers의 진짜 가치는 "28배"도 "싸게 서빙"도 아닙니다. 다중 GPU를 사거나 빌릴 수 없는 팀이, 이미 가진 대형 서버와 GPU 한 장으로 671B급 MoE를 아예 돌릴 수 있게 된다는 접근성 하나입니다. 속도 챔피언도 비용 절감기도 아니고, 진입 장벽을 낮추는 배치용 도구로 읽어야 맞습니다.
 
 ## 재현 정보
