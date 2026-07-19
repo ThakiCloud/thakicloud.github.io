@@ -21,6 +21,7 @@ toc_label: "المحتويات"
 canonical_url: "https://thakicloud.github.io/ar/llmops/free-claude-code-router/"
 categories:
   - llmops
+published: false
 ---
 
 ## نظرة عامة
