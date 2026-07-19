@@ -73,10 +73,10 @@ Second, the overbilling figures cited in this piece are not settled facts. Vaudi
 
 ## Sources
 
-- ZDNet Korea, "Korean User Hit With 25 Billion Won Payment Request, Anthropic Billing Error Controversy" (2026-07-09)
-- ZDNet Korea, "Anthropic's 25 Billion Won Charge Turns Out to Be an Auto-Recharge Configuration Error" (2026-07-16)
-- AI Times, "Anthropic Faces 'AI Overbilling' Controversy, Charged for Failed Jobs Too" (2026-06)
-- The Information, report on enterprises adopting AI cost controls and model diversification (2026-06-23)
-- Financial Times, "Companies turn to Chinese AI models to cut costs" (2026-07)
-- Business Insider, "Anthropic Official Warns Against 'Wrong' AI Cost Response" (2026-07-15)
-- The Wall Street Journal, "Meet the Companies Shelling Out for Top AI Models" (2026-07)
+- [ZDNet Korea, "Korean User Hit With 25 Billion Won Payment Request, Anthropic Billing Error Controversy" (2026-07-09)](https://zdnet.co.kr/view/?no=20260709165452)
+- [ZDNet Korea, "Anthropic's 25 Billion Won Charge Turns Out to Be an Auto-Recharge Configuration Error" (2026-07-16)](https://zdnet.co.kr/view/?no=20260716093004)
+- [AI Times, "Anthropic Faces 'AI Overbilling' Controversy, Charged for Failed Jobs Too" (2026-06)](https://www.aitimes.com/news/articleView.html?idxno=212155)
+- [The Information, report on enterprises adopting AI cost controls and model diversification (2026-06-23)](https://www.theinformation.com/titv/fedld)
+- [Financial Times, "Companies turn to Chinese AI models to cut costs" (2026-07)](https://www.ft.com/content/9c8ff45b-7c20-4c2e-93c9-c52339ffdcee)
+- [Business Insider, "Anthropic Official Warns Against 'Wrong' AI Cost Response" (2026-07-15)](https://www.businessinsider.com/anthropic-ai-costs-responses-routers-2026-7)
+- [The Wall Street Journal, "Meet the Companies Shelling Out for Top AI Models" (2026-07)](https://www.wsj.com/cio-journal/meet-the-companies-shelling-out-for-top-ai-models-e1fe3375)

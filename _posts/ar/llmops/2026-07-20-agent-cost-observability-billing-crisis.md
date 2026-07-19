@@ -73,10 +73,10 @@ flowchart TB
 
 ## المصادر
 
-- ZDNet Korea، "مستخدم محلي تلقى طلب دفع بقيمة 25 مليار وون... جدل حول خطأ فوترة أنثروبيك" (2026-07-09)
-- ZDNet Korea، "أنثروبيك التي طالبت بـ25 مليار وون: تبين أنه خطأ في إعداد الشحن التلقائي" (2026-07-16)
-- AI Times، "أنثروبيك في جدل 'الفوترة الزائدة للذكاء الاصطناعي': تحصيل رسوم حتى على المهام الفاشلة" (2026-06)
-- The Information، تقرير عن سيطرة الشركات على تكلفة الذكاء الاصطناعي وتوزيع النماذج (2026-06-23)
-- Financial Times، "Companies turn to Chinese AI models to cut costs" (2026-07)
-- Business Insider، "Anthropic Official Warns Against 'Wrong' AI Cost Response" (2026-07-15)
-- The Wall Street Journal، "Meet the Companies Shelling Out for Top AI Models" (2026-07)
+- [ZDNet Korea، "مستخدم محلي تلقى طلب دفع بقيمة 25 مليار وون... جدل حول خطأ فوترة أنثروبيك" (2026-07-09)](https://zdnet.co.kr/view/?no=20260709165452)
+- [ZDNet Korea، "أنثروبيك التي طالبت بـ25 مليار وون: تبين أنه خطأ في إعداد الشحن التلقائي" (2026-07-16)](https://zdnet.co.kr/view/?no=20260716093004)
+- [AI Times، "أنثروبيك في جدل 'الفوترة الزائدة للذكاء الاصطناعي': تحصيل رسوم حتى على المهام الفاشلة" (2026-06)](https://www.aitimes.com/news/articleView.html?idxno=212155)
+- [The Information، تقرير عن سيطرة الشركات على تكلفة الذكاء الاصطناعي وتوزيع النماذج (2026-06-23)](https://www.theinformation.com/titv/fedld)
+- [Financial Times، "Companies turn to Chinese AI models to cut costs" (2026-07)](https://www.ft.com/content/9c8ff45b-7c20-4c2e-93c9-c52339ffdcee)
+- [Business Insider، "Anthropic Official Warns Against 'Wrong' AI Cost Response" (2026-07-15)](https://www.businessinsider.com/anthropic-ai-costs-responses-routers-2026-7)
+- [The Wall Street Journal، "Meet the Companies Shelling Out for Top AI Models" (2026-07)](https://www.wsj.com/cio-journal/meet-the-companies-shelling-out-for-top-ai-models-e1fe3375)

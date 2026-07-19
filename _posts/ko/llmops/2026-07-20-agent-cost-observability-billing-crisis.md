@@ -73,10 +73,10 @@ flowchart TB
 
 ## 출처
 
-- 지디넷코리아, "250억원 결제 요청 받은 국내 이용자…앤트로픽 빌링 오류 논란" (2026-07-09)
-- 지디넷코리아, "250억원 청구한 앤트로픽, 알고 보니 자동 충전 설정 오류" (2026-07-16)
-- AI타임스, "앤트로픽, 'AI 비용 과다 청구' 논란…실패한 작업도 돈 받았다" (2026-06)
-- The Information, 기업의 AI 비용 통제와 모델 분산 도입 보도 (2026-06-23)
-- Financial Times, "Companies turn to Chinese AI models to cut costs" (2026-07)
-- Business Insider, "Anthropic Official Warns Against 'Wrong' AI Cost Response" (2026-07-15)
-- The Wall Street Journal, "Meet the Companies Shelling Out for Top AI Models" (2026-07)
+- [지디넷코리아, "250억원 결제 요청 받은 국내 이용자…앤트로픽 빌링 오류 논란" (2026-07-09)](https://zdnet.co.kr/view/?no=20260709165452)
+- [지디넷코리아, "250억원 청구한 앤트로픽, 알고 보니 자동 충전 설정 오류" (2026-07-16)](https://zdnet.co.kr/view/?no=20260716093004)
+- [AI타임스, "앤트로픽, 'AI 비용 과다 청구' 논란…실패한 작업도 돈 받았다" (2026-06)](https://www.aitimes.com/news/articleView.html?idxno=212155)
+- [The Information, 기업의 AI 비용 통제와 모델 분산 도입 보도 (2026-06-23)](https://www.theinformation.com/titv/fedld)
+- [Financial Times, "Companies turn to Chinese AI models to cut costs" (2026-07)](https://www.ft.com/content/9c8ff45b-7c20-4c2e-93c9-c52339ffdcee)
+- [Business Insider, "Anthropic Official Warns Against 'Wrong' AI Cost Response" (2026-07-15)](https://www.businessinsider.com/anthropic-ai-costs-responses-routers-2026-7)
+- [The Wall Street Journal, "Meet the Companies Shelling Out for Top AI Models" (2026-07)](https://www.wsj.com/cio-journal/meet-the-companies-shelling-out-for-top-ai-models-e1fe3375)
