@@ -79,4 +79,4 @@ AMX 커널은 AVX2보다 1.38배 빨랐습니다. 분명한 이득이지만, 28�
 
 ## 재현 정보
 
-두 실험 모두 RunPod에서 진행했고, GPU 총 사용 비용은 약 5달러였습니다. 대리 모델 Qwen3-30B-A3B, 벤치 하네스(llama.cpp `--n-cpu-moe`, kt_kernel MoE 커널 비교), 원시 결과는 사내 research-lab 저장소에 함께 남겼습니다. 다음 검증 후보는 AMX INT8 서빙 경로의 실제 종단 디코딩 속도와, 진짜 ktransformers balance_serve 스택을 Sapphire Rapids 위에서 끝까지 세워보는 것입니다.
+두 실험 모두 RunPod에서 진행했고, GPU 총 사용 비용은 약 5달러였습니다. 벤치 하네스(llama.cpp `--n-cpu-moe`, kt_kernel MoE 커널 비교)와 원시 결과 JSON은 전부 공개했습니다. 직접 재현하거나 숫자를 검증하고 싶다면 [github.com/sylvanus4/ktransformers-moe-offload-bench](https://github.com/sylvanus4/ktransformers-moe-offload-bench)(Apache-2.0)를 보시면 됩니다. 다음 검증 후보는 AMX INT8 서빙 경로의 실제 종단 디코딩 속도와, 진짜 ktransformers balance_serve 스택을 Sapphire Rapids 위에서 끝까지 세워보는 것입니다.
