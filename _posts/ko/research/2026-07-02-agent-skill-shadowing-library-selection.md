@@ -15,12 +15,12 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "layer-group"
-published: true
 canonical_url: "https://thakicloud.github.io/ko/research/agent-skill-shadowing-library-selection/"
 audiobook: https://drive.google.com/file/d/1dpp3fHV3LJfzDdEbUoR5rtgeBvolAVng/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:
   - research
+published: false
 ---
 
 ## 개요

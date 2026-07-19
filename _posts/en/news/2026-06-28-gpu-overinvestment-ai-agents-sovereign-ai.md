@@ -21,6 +21,7 @@ lang: en
 canonical_url: "https://thakicloud.github.io/en/news/gpu-overinvestment-ai-agents-sovereign-ai/"
 categories:
   - news
+published: false
 ---
 
 Big tech and frontier AI labs are buying up GPUs at a pace that requires issuing bonds. The combined capex estimate for four hyperscalers (Microsoft, Google, Meta, Amazon) in 2026 is roughly $725 billion, up 77% from the prior year. At this scale, it is natural to ask whether this qualifies as overinvestment. In an era when latecomers can close the performance gap through distillation at a fraction of the cost, does burning hundreds of billions of dollars for a model that is only marginally better for a few months make sense?
