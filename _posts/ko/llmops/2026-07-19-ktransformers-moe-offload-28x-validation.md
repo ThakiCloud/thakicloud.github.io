@@ -17,7 +17,6 @@ toc_label: 28배의 해부
 published: true
 categories:
   - llmops
-  - research
 canonical_url: "https://thakicloud.github.io/ko/llmops/ktransformers-moe-offload-28x-validation/"
 ---
 
