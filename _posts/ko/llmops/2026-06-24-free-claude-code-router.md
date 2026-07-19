@@ -22,6 +22,8 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/free-claude-code-router/"
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/free-claude-code-router/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 개요
