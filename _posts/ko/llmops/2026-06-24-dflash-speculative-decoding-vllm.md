@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/dflash-speculative-decodi
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![병렬 토큰 블록이 한 번에 앞으로 뻗어 나가는 추상 비주얼](/assets/images/dflash-speculative-decoding-vllm-hero.webp)

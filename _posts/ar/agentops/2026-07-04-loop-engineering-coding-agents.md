@@ -20,6 +20,7 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.github.io/ar/agentops/loop-engineering-coding-agents/"
 categories:
   - agentops
+published: false
 ---
 
 ## نظرة عامة
