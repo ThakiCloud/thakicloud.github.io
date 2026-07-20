@@ -22,6 +22,8 @@ categories:
   - agentops
 ---
 
+![نواة هيكل رفيعة متصلة بوحدات مهارات متعددة](/assets/images/everything-claude-code-agent-harness-hero.png)
+
 ## نظرة عامة
 
 أي مطوّر يستخدم أداة برمجة بالذكاء الاصطناعي بجدية لبضعة أيام يصطدم بالجدار نفسه. بالأمس أخبرتها بوضوح "هذا المشروع يُلتزَم به هكذا، لا تلمس ذلك المجلد، شغّل الاختبارات بهذا الأمر"، ومع ذلك اليوم، عند فتح جلسة جديدة، لا تتذكر الأداة أيًّا من ذلك. تلصق القواعد نفسها من جديد، وتتراجع عن الكود المخالف للأعراف من جديد. وكلما ازداد النموذج ذكاءً، ازدادت هذه الفجوة إحباطًا: القدرة موجودة، لكن لا يوجد هيكل يجعل تلك القدرة تطبّق قواعدك باتساق.
@@ -110,6 +112,6 @@ cp -r rules/web ~/.claude/rules/ecc/
 
 ## المصادر
 
-- everything-claude-code (affaan-m/everything-claude-code)، GitHub
-- ملف المؤلف المتعلق بـ zenith.chat، الفائز بهاكاثون Anthropic x Forum Ventures
+- [everything-claude-code (affaan-m/everything-claude-code)، GitHub](https://github.com/affaan-m/everything-claude-code)
+- ملف المؤلف المتعلق بـ [zenith.chat](https://zenith.chat/)، الفائز بهاكاثون Anthropic x Forum Ventures
 - التغريدة الأصلية: ‎@Ryrenz (RT @hjguyhan)، 2026-07-20

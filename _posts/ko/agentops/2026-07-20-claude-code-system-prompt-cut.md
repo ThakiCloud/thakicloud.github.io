@@ -24,6 +24,8 @@ audiobook: /assets/audio/posts/claude-code-system-prompt-cut/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
+![두꺼운 시스템 프롬프트가 얇은 하네스로 얇아지는 흐름](/assets/images/claude-code-system-prompt-cut-hero.png)
+
 ## 개요
 
 최근 개발자 커뮤니티에서 짧은 소식 하나가 유독 많이 인용됐습니다. Anthropic이 Claude Code의 시스템 프롬프트를 약 80% 걷어냈다는 이야기입니다. 흥미로운 부분은 삭감 자체보다 그 이유였습니다. Anthropic의 Tariq Shihipar(@trq212)는 새 Fable 5 계열 모델이 "더 작은 시스템 프롬프트를 원한다"고 말했고, 지침과 예시를 많이 넣는 것이 오히려 모델의 발목을 잡을 수 있다고 설명했습니다. 모델이 우리가 적어 준 규칙보다 더 상상력이 풍부하기 때문이라는 것입니다.
@@ -99,6 +101,6 @@ Paxis의 스킬 하네스는 960개가 넘는 스킬을 상시 시스템 프롬�
 
 ## 출처
 
-- Anthropic, Tariq Shihipar(@trq212) 공개 발언 정리 보도, the-decoder.com
-- "Anthropic Slashes Claude Code System Prompt by 80%", ClaudeAINews
-- "More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding", arXiv 2605.05716
+- Anthropic, Tariq Shihipar(@trq212) 공개 발언 정리 보도, [the-decoder.com](https://the-decoder.com/anthropic-says-it-cut-80-percent-of-claude-codes-system-prompt-because-fable-5-models-want-a-smaller-system-prompt/)
+- ["Anthropic Slashes Claude Code System Prompt by 80%", ClaudeAINews](https://www.claudeainews.com/news/anthropic-cuts-claude-code-system-prompt-80-percent)
+- ["More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding", arXiv 2605.05716](https://arxiv.org/abs/2605.05716)

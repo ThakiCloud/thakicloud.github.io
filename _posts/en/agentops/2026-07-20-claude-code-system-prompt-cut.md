@@ -23,6 +23,8 @@ categories:
 lang: en
 ---
 
+![A thick system prompt thinning into a slim harness](/assets/images/claude-code-system-prompt-cut-hero.png)
+
 ## Overview
 
 A short piece of news has been getting quoted a lot lately in developer circles: Anthropic apparently cut Claude Code's system prompt by roughly 80 percent. What made it interesting wasn't the size of the cut so much as the reasoning behind it. Anthropic's Tariq Shihipar (@trq212) said the new Fable 5 family of models "wants a smaller system prompt," and that loading it up with instructions and examples can actually work against the model. His explanation: the model is often more imaginative than the rules we write for it.
@@ -98,6 +100,6 @@ To sum up, this cut is one data point showing that the center of gravity in prom
 
 ## Sources
 
-- Anthropic, summarized public remarks from Tariq Shihipar (@trq212), reported by the-decoder.com
-- "Anthropic Slashes Claude Code System Prompt by 80%", ClaudeAINews
-- "More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding", arXiv 2605.05716
+- Anthropic, summarized public remarks from Tariq Shihipar (@trq212), reported by [the-decoder.com](https://the-decoder.com/anthropic-says-it-cut-80-percent-of-claude-codes-system-prompt-because-fable-5-models-want-a-smaller-system-prompt/)
+- ["Anthropic Slashes Claude Code System Prompt by 80%", ClaudeAINews](https://www.claudeainews.com/news/anthropic-cuts-claude-code-system-prompt-80-percent)
+- ["More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding", arXiv 2605.05716](https://arxiv.org/abs/2605.05716)

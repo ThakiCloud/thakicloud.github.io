@@ -22,6 +22,8 @@ categories:
   - agentops
 ---
 
+![A thin harness core connected to many skill modules](/assets/images/everything-claude-code-agent-harness-hero.png)
+
 ## Overview
 
 Any developer who uses an AI coding tool seriously for a few days hits the same wall. Yesterday you clearly told it "this project commits like this, do not touch that folder, run tests with this command," yet today, when you open a new session, the tool remembers none of it. You paste the same rules again, and you revert the same convention-breaking code again. The smarter the model gets, the more frustrating this gap becomes: the capability is there, but there is no skeleton to make that capability apply your rules consistently.
@@ -110,6 +112,6 @@ Even so, ECC's value is clear. Quality problems in AI coding tools usually arise
 
 ## Sources
 
-- everything-claude-code (affaan-m/everything-claude-code), GitHub
-- Author profile related to zenith.chat, the Anthropic x Forum Ventures hackathon winner
+- [everything-claude-code (affaan-m/everything-claude-code), GitHub](https://github.com/affaan-m/everything-claude-code)
+- Author profile related to [zenith.chat](https://zenith.chat/), the Anthropic x Forum Ventures hackathon winner
 - Original tweet: @Ryrenz (RT @hjguyhan), 2026-07-20

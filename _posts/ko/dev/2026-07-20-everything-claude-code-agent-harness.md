@@ -21,6 +21,8 @@ categories:
 canonical_url: "https://thakicloud.github.io/ko/dev/everything-claude-code-agent-harness/"
 ---
 
+![얇은 하네스 코어에 연결된 여러 스킬 모듈](/assets/images/everything-claude-code-agent-harness-hero.png)
+
 ## 개요
 
 AI 코딩 도구를 며칠만 진지하게 써 본 개발자라면 곧 같은 벽에 부딪힙니다. 어제 분명히 "이 프로젝트는 이렇게 커밋하고, 이 폴더는 건드리지 말고, 테스트는 이 명령으로 돌린다"고 알려 줬는데, 오늘 새 세션을 열면 도구는 그 약속을 하나도 기억하지 못합니다. 매번 같은 규칙을 다시 붙여 넣고, 매번 컨벤션을 어긴 코드를 되돌리는 작업이 반복됩니다. 모델이 똑똑해질수록 이 격차는 더 답답해집니다. 능력은 충분한데, 그 능력을 우리 규칙 안에서 일관되게 쓰게 만드는 골격이 없기 때문입니다.
@@ -109,6 +111,6 @@ ECC가 던지는 설계 원칙은 타키클라우드가 만드는 것과 놀랄 
 
 ## 출처
 
-- everything-claude-code (affaan-m/everything-claude-code), GitHub
-- Anthropic x Forum Ventures 해커톤 우승작 zenith.chat 관련 저자 소개
+- [everything-claude-code (affaan-m/everything-claude-code), GitHub](https://github.com/affaan-m/everything-claude-code)
+- Anthropic x Forum Ventures 해커톤 우승작 [zenith.chat](https://zenith.chat/) 관련 저자 소개
 - 원 트윗: @Ryrenz (RT @hjguyhan), 2026-07-20

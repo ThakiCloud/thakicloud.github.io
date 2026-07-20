@@ -23,6 +23,8 @@ categories:
   - agentops
 ---
 
+![تحوّل موجّه نظام سميك إلى هيكل رفيع](/assets/images/claude-code-system-prompt-cut-hero.png)
+
 ## نظرة عامة
 
 في الآونة الأخيرة، تداول مجتمع المطورين خبرا قصيرا بشكل لافت. وهو أن أنثروبيك أزالت نحو 80 بالمئة من التعليمات النظامية في Claude Code. والجزء المثير للاهتمام لم يكن التقليص بحد ذاته، بل السبب وراءه. فقد قال طارق شيهيبار (@trq212) من أنثروبيك إن سلسلة النماذج الجديدة Fable 5 "تريد تعليمات نظامية أصغر"، وأوضح أن إدراج الكثير من التعليمات والأمثلة قد يعيق النموذج فعليا. والسبب، بحسب قوله، أن النموذج أكثر خيالا من القواعد التي نكتبها له.
@@ -98,6 +100,6 @@ flowchart TB
 
 ## المصادر
 
-- تصريح علني منسوب لطارق شيهيبار (@trq212) من أنثروبيك، نقلا عن موقع the-decoder.com
-- "Anthropic Slashes Claude Code System Prompt by 80%", ClaudeAINews
-- "More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding", arXiv 2605.05716
+- تصريح علني منسوب لطارق شيهيبار (@trq212) من أنثروبيك، نقلا عن موقع [the-decoder.com](https://the-decoder.com/anthropic-says-it-cut-80-percent-of-claude-codes-system-prompt-because-fable-5-models-want-a-smaller-system-prompt/)
+- ["Anthropic Slashes Claude Code System Prompt by 80%", ClaudeAINews](https://www.claudeainews.com/news/anthropic-cuts-claude-code-system-prompt-80-percent)
+- ["More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding", arXiv 2605.05716](https://arxiv.org/abs/2605.05716)
