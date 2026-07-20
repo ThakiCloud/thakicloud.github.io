@@ -18,8 +18,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-published: true
 canonical_url: "https://thakicloud.github.io/ko/research/nvidia-aspire-agentic-skill-discovery/"
+published: false
+audiobook: /assets/audio/posts/nvidia-aspire-agentic-skill-discovery/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![행동의 보관소: 실패를 스킬로 증류하는 에이전트 아키텍처](/assets/images/nvidia-aspire-agentic-skill-discovery-slide-01.webp)

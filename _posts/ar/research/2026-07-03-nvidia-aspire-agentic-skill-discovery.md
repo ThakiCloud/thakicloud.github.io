@@ -19,8 +19,8 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
-published: true
 canonical_url: "https://thakicloud.github.io/ar/research/nvidia-aspire-agentic-skill-discovery/"
+published: false
 ---
 
 ![شبكة مجرّدة من العقد المتوهّجة تتراكم في بنية كثيفة قابلة لإعادة الاستخدام](/assets/images/nvidia-aspire-agentic-skill-discovery-hero.webp)
