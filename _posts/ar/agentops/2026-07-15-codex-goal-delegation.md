@@ -89,5 +89,5 @@ Paxis هي سحابة ThakiCloud الأصيلة للوكلاء (Agent-Native Clo
 
 ## المصادر
 
-- OpenAI Cookbook, "Using Goals in Codex" (developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
-- التغريدة الأصلية: nickbaumann_ (أُعيد نشرها في x.com/hjguyhan/status/2077331299648635303)
+- OpenAI Cookbook، ["Using Goals in Codex"](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
+- التغريدة الأصلية: nickbaumann_، منشور نصيحة حول تفويض أهداف Codex (تعذر التحقق الآلي بسبب قيود جلب X/Twitter، المصدر غير موثق آليا)

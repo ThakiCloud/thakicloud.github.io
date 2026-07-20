@@ -104,6 +104,6 @@ The one thing we can reliably take from this clip is this. Automation is real as
 ## Sources
 
 - Source video: A clip of Elon Musk in conversation with BlackRock CEO Larry Fink at the World Economic Forum in Davos. The quotes in this piece were transcribed directly from that video.
-- Cross-checked remarks: Musk's five-year predictions (digital intelligence exceeding the sum of human intelligence, 100 million to 1 billion humanoid robots, the economy doubling within five to seven years) were reported by multiple outlets as Davos remarks.
+- Cross-checked remarks: Musk's five-year predictions (digital intelligence exceeding the sum of human intelligence, 100 million to 1 billion humanoid robots, the economy doubling within five to seven years) were reported by multiple outlets as Davos remarks. Related coverage: [Elon Musk predicts robot-majority future in first Davos appearance, Euronews](https://www.euronews.com/2026/01/22/elon-musk-predicts-robot-majority-future-in-first-davos-appearance)
 - The viral phrase "three years" is the framing of the author who quoted the clip, not Musk's own statement.
-- Roy Amara's observation (short-run overestimation, long-run underestimation) is a widely cited rule of thumb in technology forecasting.
+- Roy Amara's observation (short-run overestimation, long-run underestimation) is a widely cited rule of thumb in technology forecasting. Reference: [Roy Amara, Wikipedia](https://en.wikipedia.org/wiki/Roy_Amara)

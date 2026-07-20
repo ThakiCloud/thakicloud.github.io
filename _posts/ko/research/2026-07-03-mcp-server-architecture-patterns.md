@@ -25,6 +25,7 @@ header:
   teaser: /assets/images/mcp-server-architecture-patterns-hero.webp
 categories:
   - research
+published: false
 ---
 
 ## 개요

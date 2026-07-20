@@ -89,5 +89,5 @@ In sum, "on hard tasks, write the goal first" is not a prompting knack but struc
 
 ## Sources
 
-- OpenAI Cookbook, "Using Goals in Codex" (developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
-- Original tweet: nickbaumann_ (reposted at x.com/hjguyhan/status/2077331299648635303)
+- OpenAI Cookbook, ["Using Goals in Codex"](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
+- Original tweet: nickbaumann_, tip post on delegating Codex goals (X/Twitter fetch restrictions prevent automated verification, source not machine-verified)

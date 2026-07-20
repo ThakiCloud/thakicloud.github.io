@@ -104,6 +104,6 @@ flowchart TB
 ## 출처
 
 - 원 영상: 일론 머스크가 세계경제포럼(다보스)에서 블랙록 CEO 래리 핑크와 나눈 대담 클립. 본문의 발언은 이 영상을 직접 받아 적어 확인한 것입니다.
-- 발언 요지 교차 확인: 머스크의 5년 예측(디지털 지능이 인류 지능 총합을 넘어섬, 휴머노이드 로봇 1억~10억 대, 경제 5~7년 내 배증)은 다보스 발언으로 여러 매체가 보도했습니다.
+- 발언 요지 교차 확인: 머스크의 5년 예측(디지털 지능이 인류 지능 총합을 넘어섬, 휴머노이드 로봇 1억~10억 대, 경제 5~7년 내 배증)은 다보스 발언으로 여러 매체가 보도했습니다. 관련 보도: [Elon Musk predicts robot-majority future in first Davos appearance, Euronews](https://www.euronews.com/2026/01/22/elon-musk-predicts-robot-majority-future-in-first-davos-appearance)
 - 화제가 된 "3년" 표현은 해당 클립을 인용한 게시글 작성자의 해석이며, 머스크 본인의 발언이 아닙니다.
-- 로이 아마라의 관찰(단기 과대평가·장기 과소평가)은 기술 예측을 다룰 때 널리 인용되는 경험칙입니다.
+- 로이 아마라의 관찰(단기 과대평가·장기 과소평가)은 기술 예측을 다룰 때 널리 인용되는 경험칙입니다. 참고: [Roy Amara, Wikipedia](https://en.wikipedia.org/wiki/Roy_Amara)

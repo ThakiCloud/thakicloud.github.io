@@ -90,5 +90,5 @@ Paxis는 ThakiCloud의 Agent-Native Cloud로, 스킬과 도구와 정책과 감�
 
 ## 출처
 
-- OpenAI Cookbook, "Using Goals in Codex" (developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
-- 원 트윗: nickbaumann_ (x.com/hjguyhan/status/2077331299648635303 재게시)
+- OpenAI Cookbook, ["Using Goals in Codex"](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
+- 원 트윗: nickbaumann_, Codex goal 위임 팁 게시글 (X/Twitter 특성상 자동 페치 검증 불가, 원문 확인 불가)
