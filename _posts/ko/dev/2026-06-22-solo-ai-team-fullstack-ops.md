@@ -16,10 +16,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/devops/solo-ai-team-fullstack-ops/"
+canonical_url: "https://thakicloud.github.io/ko/dev/solo-ai-team-fullstack-ops/"
 reading_time: true
 categories:
   - dev
+published: false
+audiobook: /assets/audio/posts/solo-ai-team-fullstack-ops/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![1인 AI 엔지니어 풀스택 운영 전경](/assets/images/solo-ai-team-fullstack-ops-hero.webp)

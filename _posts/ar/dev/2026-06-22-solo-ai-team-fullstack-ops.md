@@ -17,10 +17,11 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/devops/solo-ai-team-fullstack-ops/"
+canonical_url: "https://thakicloud.github.io/ar/dev/solo-ai-team-fullstack-ops/"
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![نظرة عامة على تشغيل مهندس الذكاء الاصطناعي المنفرد](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
