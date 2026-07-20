@@ -24,6 +24,7 @@ header:
   image: /assets/images/open-weight-agent-cost-routing-hero.webp
 categories:
   - agentops
+published: false
 ---
 
 ![صورة مجردة لتدفق المهام عبر منشور ضوئي ينقسم إلى مسارات تكلفة متعددة](/assets/images/open-weight-agent-cost-routing-hero.webp)
