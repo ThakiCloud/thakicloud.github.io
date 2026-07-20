@@ -22,6 +22,7 @@ tags:
   - thakicloud
 categories:
   - agentops
+published: false
 ---
 
 ## من العرض التوضيحي إلى المناوبة الليلية

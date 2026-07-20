@@ -21,6 +21,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.github.io/ko/agentops/enterprise-agents-need-control-plane/"
+published: false
 ---
 
 ## 데모에서 당직으로

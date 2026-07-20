@@ -23,6 +23,7 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 자체 인프라에서 큰 모델을 돌리려는 팀이 가장 먼저 부딪히는 벽은 언제나 메모리입니다. 프런티어급 모델을 외부 API로 부르면 데이터가 회사 밖으로 나가고, 직접 호스팅하려면 수백 GB에서 1TB가 넘는 가중치를 어딘가에 올려야 합니다. Unsloth가 2026년 6월 공개한 `unsloth/GLM-5.2-GGUF`는 이 벽을 양자화로 낮춘 사례입니다. 약 744B 파라미터의 MoE 오픈 모델 GLM-5.2를, 원본 BF16 기준 1.51TB에 달하던 가중치를 1비트 Dynamic GGUF로 176GB까지 줄였습니다. 이 글의 모든 수치는 Unsloth와 Hugging Face가 공개한 측정치이며, 744B 모델은 본 분석 환경에서 직접 실행이 불가능해 자체 재현 대신 공개 벤치마크를 인용하고 그 한계를 분명히 밝힙니다.
