@@ -18,6 +18,7 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.github.io/ko/news/gpt-5-6-sol-terra-luna/"
+published: false
 ---
 
 ![세 개의 궤도를 도는 추상 개념 일러스트](/assets/images/gpt-5-6-sol-terra-luna-hero.png)

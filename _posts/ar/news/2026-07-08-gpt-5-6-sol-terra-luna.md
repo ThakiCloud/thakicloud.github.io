@@ -19,6 +19,7 @@ categories:
   - news
 lang: ar
 canonical_url: "https://thakicloud.github.io/ar/news/gpt-5-6-sol-terra-luna/"
+published: false
 ---
 
 ![رسم تجريدي لثلاثة مدارات تدور حول فكرة واحدة](/assets/images/gpt-5-6-sol-terra-luna-hero.png)
