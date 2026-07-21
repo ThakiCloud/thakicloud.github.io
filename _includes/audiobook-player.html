@@ -7,41 +7,87 @@
   Legacy local paths (/assets/audio/...) still render an inline <audio> player for
   backward compatibility, but new posts must use Drive links.
 
+  All visible UI text is localized by `page.lang` (ko/en/ar), set via _config.yml
+  path-scope defaults. The Korean `audiobook_note` authored on ko posts is NOT printed
+  verbatim on en/ar pages; a localized caption (comic vs regular, detected via the note)
+  is used instead. This keeps one source of truth in the include rather than editing
+  every translated post.
+
   Front-matter:
     audiobook:          https://drive.google.com/file/d/<ID>/view   (required to show)
     audiobook_en:       https://drive.google.com/file/d/<ID>/view   (optional 2nd track)
-    audiobook_label:    "AI 내레이션으로 듣기"                        (optional heading)
-    audiobook_note:     "Qwen3-TTS 로컬 합성"                        (optional caption)
+    audiobook_label:    "..."                                       (optional heading override)
+    audiobook_note:     "..."                                       (optional caption; ko honored verbatim)
 {% endcomment %}
 {% if page.audiobook %}
-<div class="audiobook-player" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid #d7dde3;border-left:4px solid #1B4F72;border-radius:8px;background:#f7f9fb;">
+{% assign ab_lang = page.lang | default: "ko" %}
+{% case ab_lang %}
+{% when "en" %}
+  {% assign ab_label = "Listen to this post as an audiobook" %}
+  {% assign ab_play = "▶ Play audiobook (Google Drive)" %}
+  {% assign ab_fallback = "Your browser does not support audio playback." %}
+  {% assign ab_download = "Download MP3" %}
+  {% assign ab_en_track = "English narration" %}
+  {% assign ab_note_comic = "Audiobook in comic character voices (Qwen3-TTS, local)" %}
+  {% assign ab_note_default = "Locally synthesized AI audiobook (Qwen3-TTS)" %}
+{% when "ar" %}
+  {% assign ab_label = "استمع إلى هذه التدوينة ككتاب صوتي" %}
+  {% assign ab_play = "▶ تشغيل الكتاب الصوتي (Google Drive)" %}
+  {% assign ab_fallback = "متصفحك لا يدعم تشغيل الصوت." %}
+  {% assign ab_download = "تنزيل MP3" %}
+  {% assign ab_en_track = "سرد بالإنجليزية" %}
+  {% assign ab_note_comic = "كتاب صوتي بأصوات شخصيات القصص المصوّرة (Qwen3-TTS، محلي)" %}
+  {% assign ab_note_default = "كتاب صوتي مُركَّب محلياً بالذكاء الاصطناعي (Qwen3-TTS)" %}
+{% else %}
+  {% assign ab_label = "이 글을 오디오북으로 듣기" %}
+  {% assign ab_play = "▶ 오디오북 재생 (Google Drive)" %}
+  {% assign ab_fallback = "브라우저가 오디오 재생을 지원하지 않습니다." %}
+  {% assign ab_download = "MP3 다운로드" %}
+  {% assign ab_en_track = "영어 내레이션" %}
+  {% assign ab_note_comic = "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)" %}
+  {% assign ab_note_default = "AI 로컬 합성 오디오북 (Qwen3-TTS)" %}
+{% endcase %}
+{% comment %} Resolve the caption. ko: honor the authored note verbatim. en/ar: use a
+   localized caption, choosing the comic variant when the authored note is the comic one. {% endcomment %}
+{% assign ab_note = "" %}
+{% if page.audiobook_note %}
+  {% if ab_lang == "ko" %}
+    {% assign ab_note = page.audiobook_note %}
+  {% elsif page.audiobook_note contains "만화" %}
+    {% assign ab_note = ab_note_comic %}
+  {% else %}
+    {% assign ab_note = ab_note_default %}
+  {% endif %}
+{% endif %}
+{% assign ab_heading = page.audiobook_label | default: ab_label %}
+<div class="audiobook-player" dir="{% if ab_lang == 'ar' %}rtl{% else %}ltr{% endif %}" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid #d7dde3;border-left:4px solid #1B4F72;border-radius:8px;background:#f7f9fb;">
   <div style="font-weight:600;color:#1B4F72;margin-bottom:0.5em;">
-    🎧 {{ page.audiobook_label | default: "이 글을 오디오북으로 듣기" }}
+    🎧 {{ ab_heading }}
   </div>
   {% if page.audiobook contains "://" %}
   <a href="{{ page.audiobook }}" target="_blank" rel="noopener" style="display:inline-block;padding:0.45em 1em;background:#1B4F72;color:#ffffff;border-radius:6px;text-decoration:none;font-size:0.9em;">
-    ▶ 오디오북 재생 (Google Drive)
+    {{ ab_play }}
   </a>
   {% if page.audiobook_en %}
   <a href="{{ page.audiobook_en }}" target="_blank" rel="noopener" style="display:inline-block;margin-left:0.5em;padding:0.45em 1em;background:#2E4057;color:#ffffff;border-radius:6px;text-decoration:none;font-size:0.9em;">
-    ▶ English narration
+    ▶ {{ ab_en_track }}
   </a>
   {% endif %}
   {% else %}
   <audio controls preload="none" style="width:100%;">
     <source src="{{ page.audiobook | relative_url }}" type="audio/mpeg">
-    브라우저가 오디오 재생을 지원하지 않습니다. <a href="{{ page.audiobook | relative_url }}">MP3 다운로드</a>
+    {{ ab_fallback }} <a href="{{ page.audiobook | relative_url }}">{{ ab_download }}</a>
   </audio>
   {% if page.audiobook_en %}
-  <div style="font-size:0.85em;color:#2E4057;margin-top:0.6em;">English narration</div>
+  <div style="font-size:0.85em;color:#2E4057;margin-top:0.6em;">{{ ab_en_track }}</div>
   <audio controls preload="none" style="width:100%;">
     <source src="{{ page.audiobook_en | relative_url }}" type="audio/mpeg">
-    <a href="{{ page.audiobook_en | relative_url }}">Download MP3</a>
+    <a href="{{ page.audiobook_en | relative_url }}">{{ ab_download }}</a>
   </audio>
   {% endif %}
   {% endif %}
-  {% if page.audiobook_note %}
-  <div style="font-size:0.78em;color:#6B7280;margin-top:0.5em;">{{ page.audiobook_note }}</div>
+  {% if ab_note != "" %}
+  <div style="font-size:0.78em;color:#6B7280;margin-top:0.5em;">{{ ab_note }}</div>
   {% endif %}
 </div>
 {% endif %}
