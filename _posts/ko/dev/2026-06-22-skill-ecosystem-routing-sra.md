@@ -21,6 +21,8 @@ reading_time: true
 categories:
   - dev
 published: false
+audiobook: /assets/audio/posts/skill-ecosystem-routing-sra/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![스킬 생태계 라우팅 SRA 히어로 이미지](/assets/images/skill-ecosystem-routing-sra-hero.webp)
