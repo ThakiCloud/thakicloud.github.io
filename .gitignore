@@ -260,3 +260,6 @@ hedge_fund_env/
 meetily-test/
 
 .DS_Store_site_*
+
+# runtime state from thaki-secretary tool (not site content)
+.thaki-secretary/
