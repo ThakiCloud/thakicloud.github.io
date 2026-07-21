@@ -17,6 +17,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.github.io/ko/agentops/sovereign-ai-execution-layer/"
+published: false
 ---
 
 ![핵심 개념 일러스트](/assets/images/sovereign-ai-execution-layer-hero.png)

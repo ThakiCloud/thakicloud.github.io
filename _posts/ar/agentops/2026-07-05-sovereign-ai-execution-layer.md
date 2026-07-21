@@ -18,6 +18,7 @@ tags:
   - thakicloud
 categories:
   - agentops
+published: false
 ---
 
 ![رسم توضيحي للمفهوم](/assets/images/sovereign-ai-execution-layer-hero.png)
