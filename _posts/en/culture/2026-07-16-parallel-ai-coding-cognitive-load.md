@@ -98,6 +98,8 @@ Second, orchestration itself creates a new cognitive load. To delegate well you 
 
 Third, gates are not omnipotent. There are clearly kinds of defects a verification gate cannot catch. If a gate filters out nothing, that is not a sign of perfection but a sign that the gate is powerless. Moving verification to code does not make human judgment disappear; rather, pouring human judgment fully into the few results the gate has filtered is the heart of this structure. Automation should be a tool that gathers thinking where it is most needed, not one that replaces thinking.
 
+## Conclusion
+
 The sensation of your brain melting from hitting enter is not a reason to blame the tool, but a signal to redesign the structure in which we work with it. Whether you remain a watcher or become an orchestrator depends, in the end, not on individual will but on a design decision: where you place the responsibility for verification.
 
 ## Sources

@@ -93,6 +93,8 @@ Second, the finding that top-tier models benefit less from an external harness c
 
 Third, for an organization like ours that already practices "evolve cheap, gate expensive," this study reads less like a new direction and more like quantitative backing for an existing discipline. For a team that has been reflexively raising the evolver model's tier whenever self-evolution performance stalls, on the other hand, this data is a clear signal to reallocate budget.
 
+## Conclusion
+
 In the end, this study leaves us with one practical rule. Don't look at a self-evolving harness's performance as a single score. **Decompose it into two axes, updating and benefit, and measure each separately.** Only once you separate them does it become clear where your capability budget should actually go.
 
 ## Sources

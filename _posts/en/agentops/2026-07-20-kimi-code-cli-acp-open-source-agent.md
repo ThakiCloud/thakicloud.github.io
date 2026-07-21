@@ -139,6 +139,8 @@ Through the ai-platform lens, openness translates directly into deployment freed
 
 A few things deserve a colder look. First, some third-party deep dives reference internal engine names or layer structures that don't appear in the official documentation, which suggests they may be the product of reverse engineering. It is safer to treat the official docs as the source of truth before citing those as fact. Second, there are community reports that the ACP path produces better response quality than other connection methods, but this is anecdotal rather than benchmarked, and we don't treat it as verified data. Third, even with open weights, actually serving a 2.8 trillion parameter class model on-premise requires substantial GPU resources. Openness does not automatically mean easy self-hosting, and the API route remains the practical choice for small teams. Fourth, the maturity and stability of the tooling ecosystem may still favor Claude Code or Codex CLI. Being open source does not by itself mean production ready.
 
+## Conclusion
+
 Even so, the direction toward agents and editors loosely coupled through open standards is a clear trend. A world where developers aren't locked into a single vendor's CLI, and can swap out the model and the editor independently, is a better world for developers. Kimi Code CLI is one of the pieces bringing that world closer.
 
 ## Sources
