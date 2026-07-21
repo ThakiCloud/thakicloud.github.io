@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.github.io/ko/dev/skill-ecosystem-routing-sra/
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![스킬 생태계 라우팅 SRA 히어로 이미지](/assets/images/skill-ecosystem-routing-sra-hero.webp)

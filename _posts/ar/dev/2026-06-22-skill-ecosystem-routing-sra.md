@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.github.io/ar/dev/skill-ecosystem-routing-sra/
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![صورة غلاف توجيه منظومة المهارات SRA](/assets/images/skill-ecosystem-routing-sra-hero.webp)
