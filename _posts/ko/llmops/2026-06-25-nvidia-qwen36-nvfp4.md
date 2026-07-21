@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-qwen36-nvfp4/"
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 대규모 모델을 자체 인프라에서 서빙하려는 팀에게 가장 큰 벽은 GPU 메모리입니다. 같은 GPU에 더 큰 모델을 올리거나, 같은 모델을 더 싼 GPU에 올리는 일은 곧바로 서빙 단가와 직결됩니다. NVIDIA가 2026년 5월 28일 Hugging Face에 공개한 `nvidia/Qwen3.6-35B-A3B-NVFP4`는 이 벽을 4비트 양자화로 낮추려는 시도입니다. 이 글의 정확도·메모리 수치는 NVIDIA가 모델카드에 공개한 공식 측정치이며, ThakiCloud는 같은 베이스 모델을 RunPod GPU에서 직접 NVFP4로 양자화해 그 재현 결과를 본문 "실제 실험 결과"에 함께 싣습니다.

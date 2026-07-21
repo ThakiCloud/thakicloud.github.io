@@ -12,6 +12,7 @@ lang: ko
 canonical_url: "https://thakicloud.github.io/ko/news/gpt-live-full-duplex-voice/"
 categories:
   - news
+published: false
 ---
 
 음성 어시스턴트를 써 본 사람이라면 익숙한 어색함이 있습니다. 내가 말을 끝낼 때까지 기다렸다가, 잠깐의 정적 뒤에 한꺼번에 대답이 돌아오는 그 리듬입니다. 2026년 7월 8일 OpenAI가 공개한 GPT-Live는 바로 이 리듬을 바꾸려는 시도입니다. 이 글은 음성 인터페이스와 실시간 추론 인프라에 관심 있는 개발자와 AI 팀을 위한 것입니다. GPT-Live가 기술적으로 무엇을 바꿨는지, 그리고 이런 풀듀플렉스 음성이 서빙 인프라와 에이전트 설계에 어떤 요구를 던지는지 살펴봅니다.

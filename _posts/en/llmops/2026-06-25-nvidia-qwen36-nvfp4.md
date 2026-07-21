@@ -23,6 +23,7 @@ toc_sticky: true
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 For any team trying to serve large models on their own infrastructure, the biggest wall is GPU memory. Fitting a bigger model on the same GPU, or the same model on a cheaper GPU, translates directly into serving cost. `nvidia/Qwen3.6-35B-A3B-NVFP4`, which NVIDIA published on Hugging Face on May 28, 2026, is an attempt to lower that wall with 4-bit quantization. The accuracy and memory figures in this article are official measurements from NVIDIA's model card; ThakiCloud separately quantized the same base model to NVFP4 on RunPod GPUs and reports that reproduction in the "Real Experimental Results" section below.
