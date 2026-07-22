@@ -20,6 +20,7 @@ toc_icon: "flask"
 canonical_url: "https://thakicloud.com/tech-blog/ar/research/google-pat-automated-scientific-review/"
 categories:
   - research
+published: false
 ---
 
 ## نظرة عامة

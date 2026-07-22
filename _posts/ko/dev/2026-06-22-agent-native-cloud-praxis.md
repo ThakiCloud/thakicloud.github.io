@@ -16,10 +16,11 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.com/tech-blog/paas/agent-native-cloud-praxis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/agent-native-cloud-praxis/"
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![에이전트 네이티브 클라우드 Paxis 개요]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})
