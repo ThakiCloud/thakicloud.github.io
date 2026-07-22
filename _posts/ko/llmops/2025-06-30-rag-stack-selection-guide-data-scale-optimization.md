@@ -24,8 +24,6 @@ toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
 header:
-  teaser: "/assets/images/thumbnails/rag-stack-guide.jpg"
-  overlay_image: "/assets/images/headers/rag-architecture.jpg"
   overlay_filter: 0.5
 canonical_url: "https://thakicloud.com/tech-blog/llmops/rag-stack-selection-guide-data-scale-optimization/"
 reading_time: true

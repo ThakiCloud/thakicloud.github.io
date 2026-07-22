@@ -24,7 +24,6 @@ toc_icon: "cog"
 toc_sticky: true
 header:
   teaser: ""
-  overlay_image: "/assets/images/headers/post-header.jpg"
   overlay_filter: 0.5
 canonical_url: "https://thakicloud.com/tech-blog/tutorials/supabase-complete-fullstack-tutorial-macos/"
 reading_time: true

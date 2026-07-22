@@ -102,6 +102,14 @@ jobs:
           # baseurl. Rewrite body refs to relative_url. Idempotent.
           python3 scripts/fix_asset_baseurl.py --apply
 
+      - name: Strip references to missing images (prevent broken <img>)
+        run: |
+          # If a generator emitted a hero/figure reference but failed to produce
+          # the file, drop the dangling reference so no broken image ships.
+          # Logs exactly what was stripped; deploy stays resilient (one missing
+          # image never blocks the whole site).
+          python3 scripts/check_missing_assets.py --strip
+
       - name: Build with Jekyll (baseurl=/tech-blog from _config)
         run: |
           bundle exec jekyll build --trace
