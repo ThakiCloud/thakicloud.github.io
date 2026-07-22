@@ -26,5 +26,5 @@ AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 �
 
 ### 🌐 다른 언어로 보기
 
-- [🇺🇸 English](/en/)
-- [🇸🇦 العربية](/ar/)
+- [🇺🇸 English]({{ '/en/' | relative_url }})
+- [🇸🇦 العربية]({{ '/ar/' | relative_url }})

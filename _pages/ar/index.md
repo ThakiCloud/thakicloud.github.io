@@ -26,5 +26,5 @@ author_profile: true
 
 ### 🌐 عرض بلغات أخرى
 
-- [🇰🇷 한국어](/ko/)
-- [🇺🇸 English](/en/)
+- [🇰🇷 한국어]({{ '/ko/' | relative_url }})
+- [🇺🇸 English]({{ '/en/' | relative_url }})
