@@ -21,6 +21,7 @@ lang: ar
 canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/anthropic-fable5-prompting-guide/"
 categories:
   - agentops
+published: false
 ---
 
 ## نظرة عامة
