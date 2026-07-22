@@ -16,10 +16,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/iaas/gpu-cluster-cost-optimization-kueue/"
+canonical_url: "https://thakicloud.github.io/ko/dev/gpu-cluster-cost-optimization-kueue/"
 reading_time: true
 categories:
   - dev
+published: false
+audiobook: /assets/audio/posts/gpu-cluster-cost-optimization-kueue/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![GPU 클러스터 비용 최적화 - Kueue 페어셰어, Gang Scheduling, Scale-to-Zero 아키텍처](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
@@ -274,3 +277,16 @@ DCGM Exporter가 수집하는 `GPU_UTIL` 수치는 SM(Streaming Multiprocessor) 
 ---
 
 GPU 클러스터는 그 자체로 거대한 자원이지만, 스케줄링 정책 없이는 그 잠재력을 다 쓰지 못합니다. Kueue 페어셰어로 큐 경합을 해소하고, Gang Scheduling으로 분산 학습 대기를 제거하고, Scale-to-Zero로 유휴 추론 비용을 차단하는 세 가지 조합이 K8s 네이티브 GPU 비용 최적화의 실질적인 출발점입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![gpu-cluster-cost-optimization-kueue 슬라이드 1](/assets/images/gpu-cluster-cost-optimization-kueue-slide-01.png)
+
+![gpu-cluster-cost-optimization-kueue 슬라이드 2](/assets/images/gpu-cluster-cost-optimization-kueue-slide-02.png)
+
+![gpu-cluster-cost-optimization-kueue 슬라이드 3](/assets/images/gpu-cluster-cost-optimization-kueue-slide-03.png)
+
+![gpu-cluster-cost-optimization-kueue 슬라이드 4](/assets/images/gpu-cluster-cost-optimization-kueue-slide-04.png)
+

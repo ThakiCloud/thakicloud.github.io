@@ -17,10 +17,11 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/iaas/gpu-cluster-cost-optimization-kueue/"
+canonical_url: "https://thakicloud.github.io/ar/dev/gpu-cluster-cost-optimization-kueue/"
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![تحسين تكاليف مجموعة GPU - معمارية Kueue Fair-Share و Gang Scheduling و Scale-to-Zero](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)

@@ -20,6 +20,7 @@ lang: en
 canonical_url: "https://thakicloud.github.io/en/dev/glm-5-2-open-weight-coding-moe/"
 categories:
   - dev
+published: false
 ---
 
 ## Overview

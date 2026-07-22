@@ -19,6 +19,9 @@ toc_icon: "cog"
 categories:
   - dev
 canonical_url: "https://thakicloud.github.io/ko/dev/glm-5-2-open-weight-coding-moe/"
+published: false
+audiobook: /assets/audio/posts/glm-5-2-open-weight-coding-moe/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 개요
@@ -99,6 +102,19 @@ ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로�
 자체 호스팅의 진입 장벽도 현실적입니다. 8x H200급 노드는 도입과 운영 모두 만만치 않은 비용이며, 1M 컨텍스트를 실제로 활용하면 KV 캐시 압박으로 동시 처리 가능한 요청 수가 빠르게 줄어듭니다. "1M 컨텍스트 지원"과 "1M 컨텍스트를 멀티테넌트로 동시 서빙"은 전혀 다른 난이도의 문제입니다. 또한 중국 연구소가 공개한 모델이라는 점에서, 일부 고객은 공급망과 거버넌스 관점의 검토를 요구할 수 있습니다. 오픈웨이트라 가중치를 직접 검증하고 격리 환경에서 운영할 수 있다는 점이 이 우려를 상당 부분 완화하지만, 도입 의사결정에서 명시적으로 다뤄야 할 항목입니다.
 
 결론적으로 GLM-5.2는 "폐쇄형을 무조건 대체한다"가 아니라, "온프렘·소버린·비용 통제가 중요한 워크로드에서 폐쇄형 API의 강력한 대안이 생겼다"로 읽는 것이 정확합니다. 그리고 그 워크로드야말로 ThakiCloud가 가장 잘하는 영역입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![glm-5-2-open-weight-coding-moe 슬라이드 1](/assets/images/glm-5-2-open-weight-coding-moe-slide-01.png)
+
+![glm-5-2-open-weight-coding-moe 슬라이드 2](/assets/images/glm-5-2-open-weight-coding-moe-slide-02.png)
+
+![glm-5-2-open-weight-coding-moe 슬라이드 3](/assets/images/glm-5-2-open-weight-coding-moe-slide-03.png)
+
+![glm-5-2-open-weight-coding-moe 슬라이드 4](/assets/images/glm-5-2-open-weight-coding-moe-slide-04.png)
 
 ## 출처
 
