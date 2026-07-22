@@ -17,7 +17,7 @@ toc: true
 toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/bytebot-ai-desktop-agent-complete-setup-guide/"
 published: false
 categories:
   - tutorials

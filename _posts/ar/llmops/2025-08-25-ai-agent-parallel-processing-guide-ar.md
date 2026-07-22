@@ -19,7 +19,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/ai-agent-parallel-processing-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/ai-agent-parallel-processing-guide/"
 reading_time: true
 published: false
 categories:

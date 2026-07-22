@@ -14,7 +14,7 @@ tags:
   - dev
 date: 2026-07-17
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/dev/claude-code-review-effort-levels/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/claude-code-review-effort-levels/"
 categories:
   - dev
 ---

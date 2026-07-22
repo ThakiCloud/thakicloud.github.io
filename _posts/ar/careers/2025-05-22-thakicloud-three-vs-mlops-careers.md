@@ -11,7 +11,7 @@ tags:
 author_profile: true
 lang: ar
 permalink: /ar/careers/thakicloud-three-vs-mlops-careers/
-canonical_url: "https://thakicloud.github.io/ar/careers/thakicloud-three-vs-mlops-careers/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/thakicloud-three-vs-mlops-careers/"
 categories:
   - careers
 ---

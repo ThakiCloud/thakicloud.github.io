@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 permalink: /ar/research/latest-preference-optimization-techniques-comprehensive-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/latest-preference-optimization-techniques-comprehensive-analysis-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/latest-preference-optimization-techniques-comprehensive-analysis-ar/"
 categories:
   - research
 published: false

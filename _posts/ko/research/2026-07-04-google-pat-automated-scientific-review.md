@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ko/research/google-pat-automated-scientific-review/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/google-pat-automated-scientific-review/"
 categories:
   - research
 audiobook: https://drive.google.com/file/d/1RRxN4VNT8s_Rp3F8oFHRwpsxk8kw3aiM/view

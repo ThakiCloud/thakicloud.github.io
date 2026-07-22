@@ -19,7 +19,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/nvfp4-blackwell-llm-serving-quantization/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvfp4-blackwell-llm-serving-quantization/"
 reading_time: true
 lang: ar
 categories:

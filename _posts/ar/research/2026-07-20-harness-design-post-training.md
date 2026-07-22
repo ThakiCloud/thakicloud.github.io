@@ -5,7 +5,7 @@ seo_title: "التفاعل بين تصميم الـ harness والـ post-traini
 seo_description: "ملخص لورقة The Interplay of Harness Design and Post-Training in LLM Agents (arXiv:2606.25447). نتناول اكتشاف أن مقدار المعلومات في الـ harness يرفع أداء zero-shot والـ post-training معاً، وأن الـ post-training الواعي بالـ harness وحده هو ما يُعمِّم بمتانة عند تغيّر بيئة الأدوات (OOD)، من منظور السحابة الأصيلة للوكلاء (agent-native cloud) وبنية الاستدلال والتدريب التحتية."
 date: 2026-07-20
 last_modified_at: 2026-07-20
-canonical_url: "https://thakicloud.github.io/ar/research/harness-design-post-training/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/harness-design-post-training/"
 lang: ar
 reading_time: true
 tags:

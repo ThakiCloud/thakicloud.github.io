@@ -6,7 +6,7 @@ seo_description: "نحلل من منظور منصة ThakiCloud على Kubernetes
 date: 2026-06-24
 last_modified_at: 2026-06-24
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/dflash-speculative-decoding-vllm/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/dflash-speculative-decoding-vllm/"
 tags:
   - speculative-decoding
   - dflash

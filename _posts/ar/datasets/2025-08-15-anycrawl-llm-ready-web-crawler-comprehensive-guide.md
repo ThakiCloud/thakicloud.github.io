@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 lang: ar
 reading_time: true
 categories:
@@ -568,6 +568,6 @@ AnyCrawl منصة قادرة على تلبية **متطلبات جمع البي�
 ---
 
 **مقالات ذات صلة:**
-- [الدليل الشامل لاستخراج الويب](https://thakicloud.github.io/tutorials/web-scraping-guide/)
-- [منهجيات معالجة بيانات النماذج اللغوية الكبيرة](https://thakicloud.github.io/datasets/llm-data-preprocessing/)
-- [بناء بنية تحتية لـ AI قائمة على Docker](https://thakicloud.github.io/tutorials/docker-ai-infrastructure/)
+- [الدليل الشامل لاستخراج الويب](https://thakicloud.com/tech-blog/tutorials/web-scraping-guide/)
+- [منهجيات معالجة بيانات النماذج اللغوية الكبيرة](https://thakicloud.com/tech-blog/datasets/llm-data-preprocessing/)
+- [بناء بنية تحتية لـ AI قائمة على Docker](https://thakicloud.com/tech-blog/tutorials/docker-ai-infrastructure/)

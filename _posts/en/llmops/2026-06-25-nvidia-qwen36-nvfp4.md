@@ -6,7 +6,7 @@ seo_description: "Analysis of NVIDIA Qwen3.6-35B-A3B-NVFP4 (NVFP4 4-bit quantiza
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-qwen36-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvidia-qwen36-nvfp4/"
 tags:
   - nvfp4
   - quantization

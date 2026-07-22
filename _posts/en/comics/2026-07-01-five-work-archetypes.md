@@ -11,7 +11,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/five-work-archetypes/strip.webp
-canonical_url: "https://thakicloud.github.io/en/comics/five-work-archetypes/"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/five-work-archetypes/"
 categories:
   - comics
 ---

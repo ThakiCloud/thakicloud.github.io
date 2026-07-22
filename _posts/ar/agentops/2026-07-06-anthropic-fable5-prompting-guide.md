@@ -18,7 +18,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/anthropic-fable5-prompting-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/anthropic-fable5-prompting-guide/"
 categories:
   - agentops
 ---

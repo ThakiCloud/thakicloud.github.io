@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/strix-ai-security-testing-complete-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/strix-ai-security-testing-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/strix-ai-security-testing-complete-tutorial/"
 published: false
 categories:
   - tutorials

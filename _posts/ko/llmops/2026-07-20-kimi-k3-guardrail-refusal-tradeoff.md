@@ -19,7 +19,7 @@ tags:
   - thakicloud
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ko/llmops/kimi-k3-guardrail-refusal-tradeoff/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kimi-k3-guardrail-refusal-tradeoff/"
 ---
 
 보안 담당자가 침투 테스트 스크립트를 검토받으려고 챗봇에 코드를 붙여 넣었더니 "이 요청은 도울 수 없습니다"라는 답만 돌아온 경험, 한 번쯤 있으실 겁니다. 취약점을 찾아 고치려는 정당한 방어 작업인데도 모델이 "사이버 보안" 키워드에 반응해 문을 닫아 버리는 일입니다. 2026년 7월, 오픈웨이트 진영의 새 모델 Kimi K3가 공개되면서 바로 이 지점이 다시 뜨거운 논쟁거리가 되었습니다. 한 투자자는 K3가 폐쇄형 코딩 도구들이 "사이버 가드레일" 때문에 거부한 보안 버그 여러 건을 대신 고쳐 주었다고 주장했습니다. 이 주장 자체는 검증되지 않았지만, 그 밑에 깔린 질문은 진짜입니다. **모델이 무엇을 거부할지, 그 권한을 누가 가져야 하는가.**
@@ -38,7 +38,7 @@ canonical_url: "https://thakicloud.github.io/ko/llmops/kimi-k3-guardrail-refusal
 
 ## Kimi K3가 만든 논쟁
 
-Kimi K3는 Moonshot AI가 2026년 7월 16일 공개한 대규모 Mixture-of-Experts 모델입니다. 전체 2.8조 파라미터로 오픈웨이트로 공개되는 모델 가운데 처음으로 3조 파라미터 급에 들어섰고, 100만 토큰 컨텍스트와 네이티브 멀티모달을 지원합니다. 완전한 가중치는 7월 27일 공개될 예정이며, 도입 검증에 필요한 아키텍처와 벤치마크 신뢰성 문제는 [별도 글](https://thakicloud.github.io/ko/llmops/kimi-k3-benchmark-trust-overfit/)에서 자세히 다뤘습니다.
+Kimi K3는 Moonshot AI가 2026년 7월 16일 공개한 대규모 Mixture-of-Experts 모델입니다. 전체 2.8조 파라미터로 오픈웨이트로 공개되는 모델 가운데 처음으로 3조 파라미터 급에 들어섰고, 100만 토큰 컨텍스트와 네이티브 멀티모달을 지원합니다. 완전한 가중치는 7월 27일 공개될 예정이며, 도입 검증에 필요한 아키텍처와 벤치마크 신뢰성 문제는 [별도 글](https://thakicloud.com/tech-blog/ko/llmops/kimi-k3-benchmark-trust-overfit/)에서 자세히 다뤘습니다.
 
 이 글의 초점은 다른 곳에 있습니다. 여러 매체가 공통으로 짚은 K3의 특징은, 콘텐츠 필터링이나 쿼리 우회가 없다는 점입니다. 표현 그대로 "당신이 호출한 모델이 곧 당신이 받는 모델"입니다. 민감한 주제를 감지했다고 성능을 낮추거나 다른 모델로 넘기지 않습니다. 연구자 입장에서는 의료, 법률, 보안에 인접한 작업에서도 성능이 일관되게 유지된다는 뜻입니다.
 

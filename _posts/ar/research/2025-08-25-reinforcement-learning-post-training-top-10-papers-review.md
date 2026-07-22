@@ -7,7 +7,7 @@ date: 2025-08-25
 last_modified_at: 2025-08-25
 lang: ar
 permalink: /ar/research/reinforcement-learning-post-training-top-10-papers-review/
-canonical_url: "https://thakicloud.github.io/ar/research/reinforcement-learning-post-training-top-10-papers-review/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/reinforcement-learning-post-training-top-10-papers-review/"
 tags:
   - تعلم-معزز
   - نماذج-لغوية-كبيرة

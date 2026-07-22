@@ -17,7 +17,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/claude-code-cookbook-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/claude-code-cookbook-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/claude-code-cookbook-comprehensive-guide/"
 published: false
 categories:
   - tutorials

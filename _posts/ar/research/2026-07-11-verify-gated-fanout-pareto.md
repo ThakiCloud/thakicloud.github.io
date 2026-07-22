@@ -4,7 +4,7 @@ excerpt: "مبدأ إغلاق كل عملية fan-out بتحقق عدائي أص
 tags: [multi-agent, llm-orchestration, adversarial-verification, model-routing, cost-optimization, hallucination-detection, ai-agents, skill-orchestration]
 date: 2026-07-11
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/verify-gated-fanout-pareto/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/verify-gated-fanout-pareto/"
 categories: [research]
 author_profile: true
 toc: true

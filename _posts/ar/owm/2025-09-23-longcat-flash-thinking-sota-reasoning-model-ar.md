@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "فهرس المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/owm/longcat-flash-thinking-sota-reasoning-model/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/longcat-flash-thinking-sota-reasoning-model/"
 lang: ar
 permalink: /ar/owm/longcat-flash-thinking-sota-reasoning-model/
 published: false

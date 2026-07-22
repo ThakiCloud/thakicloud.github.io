@@ -18,7 +18,7 @@ categories:
   - tutorials
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/tutorials/kimi-k3-opencode-coding/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/kimi-k3-opencode-coding/"
 ---
 
 For the past few days, developer timelines have been full of "how to code with Kimi K3" threads.

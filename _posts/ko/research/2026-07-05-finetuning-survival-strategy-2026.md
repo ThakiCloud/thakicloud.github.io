@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ko/research/finetuning-survival-strategy-2026/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/finetuning-survival-strategy-2026/"
 categories:
   - research
   - llmops

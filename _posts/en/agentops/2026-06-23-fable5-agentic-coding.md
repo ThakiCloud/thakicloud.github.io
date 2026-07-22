@@ -6,7 +6,7 @@ seo_description: "We separate the confirmed facts about Fable 5 (pricing of $10 
 date: 2026-06-23
 last_modified_at: 2026-06-23
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/fable5-agentic-coding/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/fable5-agentic-coding/"
 tags:
   - ai-coding
   - agentic

@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/news/multilingual-test-post/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/multilingual-test-post/"
 published: false
 categories:
   - news

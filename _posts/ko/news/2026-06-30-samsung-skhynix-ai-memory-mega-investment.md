@@ -20,7 +20,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "microchip"
-canonical_url: "https://thakicloud.github.io/ko/news/samsung-skhynix-ai-memory-mega-investment/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/samsung-skhynix-ai-memory-mega-investment/"
 categories:
   - news
 published: false

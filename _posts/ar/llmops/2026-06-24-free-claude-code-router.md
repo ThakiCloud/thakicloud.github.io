@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/llmops/free-claude-code-router/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/free-claude-code-router/"
 categories:
   - llmops
 published: false

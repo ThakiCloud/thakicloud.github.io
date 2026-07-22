@@ -19,7 +19,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/cosmos3-agent-skills-posttraining/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/cosmos3-agent-skills-posttraining/"
 ---
 
 지난주 우리는 디자인시스템 UI 생성 실험에서 "모델보다 게이트를 먼저 만들어야 한다"는 결론에

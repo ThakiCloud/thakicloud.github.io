@@ -22,7 +22,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/tutorials/activepieces-ai-workflow-automation-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/activepieces-ai-workflow-automation-complete-guide/"
 reading_time: true
 published: false
 categories:

@@ -5,7 +5,7 @@ seo_title: "Controlling Reasoning Effort - How LLMs Learn Low/Medium/High Reason
 seo_description: "What is reasoning effort and how is it trained? From effort-conditioned SFT and RLVR length penalties to the training recipes and inference-time budget controls of six open-weight models (DeepSeek V4, Nemotron 3 Ultra, Kimi K2.5, GLM-5, Qwen3, Inkling), we summarize Sebastian Raschka's analysis from a cloud and inference serving perspective."
 date: 2026-07-19
 last_modified_at: 2026-07-19
-canonical_url: "https://thakicloud.github.io/en/research/controlling-reasoning-effort-in-llms/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/controlling-reasoning-effort-in-llms/"
 lang: en
 reading_time: true
 tags:

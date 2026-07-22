@@ -6,7 +6,7 @@ seo_description: "Master Podman Desktop installation and configuration on macOS,
 date: 2025-09-05
 lang: en
 permalink: /en/tutorials/podman-desktop-complete-setup-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/podman-desktop-complete-setup-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/podman-desktop-complete-setup-guide/"
 tags:
   - podman
   - docker

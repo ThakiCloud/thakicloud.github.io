@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/local-llm-inference-stack-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/local-llm-inference-stack-guide/"
 reading_time: true
 categories:
   - llmops

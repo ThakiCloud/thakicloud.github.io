@@ -5,7 +5,7 @@ excerpt: "فهم نموذجي برمجة الذكاء الاصطناعي است�
 date: 2025-06-25
 tags: [vibe-coding, agentic-coding, chatgpt, cursor-ai, ai-assisted-development, prompt-engineering]
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/vibe-coding-vs-agentic-coding-practical-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/vibe-coding-vs-agentic-coding-practical-guide/"
 toc: true
 toc_sticky: true
 toc_label: "الدليل العملي لنماذج برمجة الذكاء الاصطناعي"

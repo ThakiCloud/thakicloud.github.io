@@ -6,7 +6,7 @@ seo_description: "تحليل لـ Unsloth GLM-5.2 Dynamic GGUF (من 1.51 تير
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-glm-5-2-1bit-gguf/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/unsloth-glm-5-2-1bit-gguf/"
 tags:
   - gguf
   - quantization

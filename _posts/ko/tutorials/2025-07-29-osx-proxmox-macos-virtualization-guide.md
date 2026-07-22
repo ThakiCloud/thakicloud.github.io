@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/osx-proxmox-macos-virtualization-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/osx-proxmox-macos-virtualization-guide/"
 reading_time: true
 published: false
 categories:

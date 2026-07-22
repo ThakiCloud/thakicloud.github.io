@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/deepcode-ai-research-paper-to-code-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/deepcode-ai-research-paper-to-code-complete-guide/"
 reading_time: true
 published: false
 categories:

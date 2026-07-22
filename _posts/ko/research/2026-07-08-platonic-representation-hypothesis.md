@@ -20,7 +20,7 @@ toc_label: "목차"
 toc_icon: "flask"
 categories:
   - research
-canonical_url: "https://thakicloud.github.io/ko/research/platonic-representation-hypothesis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/platonic-representation-hypothesis/"
 audiobook: /assets/audio/posts/platonic-representation-hypothesis/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

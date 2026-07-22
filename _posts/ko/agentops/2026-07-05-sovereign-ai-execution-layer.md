@@ -16,7 +16,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/sovereign-ai-execution-layer/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/sovereign-ai-execution-layer/"
 published: false
 audiobook: /assets/audio/posts/sovereign-ai-execution-layer/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"

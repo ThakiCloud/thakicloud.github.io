@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/serve-sim-ios-simulator-web/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/serve-sim-ios-simulator-web/"
 ---
 
 Ask an AI coding agent to build an iOS app and you run into one fundamental wall. The agent can write code and even build it, but it cannot actually see what happens on screen. The problem gets worse once you move your development environment to a Mac Mini in the cloud, because on a headless server with no GUI the Xcode Simulator window never even appears.

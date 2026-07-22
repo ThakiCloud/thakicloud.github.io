@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "PEFT Complete Guide"
-canonical_url: "https://thakicloud.github.io/en/llmops/peft-parameter-efficient-finetuning-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/peft-parameter-efficient-finetuning-guide/"
 published: false
 categories:
   - llmops

@@ -10,7 +10,7 @@ tags:
   - Recruitment
   - Thaki Cloud
 author_profile: true
-canonical_url: "https://thakicloud.github.io/ko/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
 categories:
   - careers
 ---

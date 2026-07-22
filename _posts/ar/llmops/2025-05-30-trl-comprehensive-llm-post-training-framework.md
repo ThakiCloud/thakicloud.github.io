@@ -20,7 +20,7 @@ toc: true
 toc_label: "دليل TRL الشامل"
 lang: ar
 permalink: /ar/llmops/trl-comprehensive-llm-post-training-framework/
-canonical_url: "https://thakicloud.github.io/ar/llmops/trl-comprehensive-llm-post-training-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/trl-comprehensive-llm-post-training-framework/"
 published: false
 categories:
   - llmops

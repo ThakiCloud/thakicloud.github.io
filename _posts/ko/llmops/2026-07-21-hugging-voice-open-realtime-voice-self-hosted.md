@@ -20,7 +20,7 @@ published: true
 lang: ko
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
 ---
 
 ![직접 돌리는 오픈 실시간 음성 파이프라인](/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png)

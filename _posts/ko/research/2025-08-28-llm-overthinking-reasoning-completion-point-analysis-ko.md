@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/research/llm-overthinking-reasoning-completion-point-analysis/
-canonical_url: "https://thakicloud.github.io/ko/research/llm-overthinking-reasoning-completion-point-analysis-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/llm-overthinking-reasoning-completion-point-analysis-ko/"
 categories:
   - research
 audiobook: https://drive.google.com/file/d/1HORbSzy12Q0REdnAEHosuYRcL-1EL8Vd/view

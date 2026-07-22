@@ -14,7 +14,7 @@ tags:
   - versioning
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/dev/github-cli-wiki-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/github-cli-wiki-automation-guide/"
 published: false
 categories:
   - dev

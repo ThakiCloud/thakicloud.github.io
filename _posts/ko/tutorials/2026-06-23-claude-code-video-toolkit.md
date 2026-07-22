@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/technique/claude-code-video-toolkit/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/technique/claude-code-video-toolkit/"
 categories:
   - tutorials
 ---

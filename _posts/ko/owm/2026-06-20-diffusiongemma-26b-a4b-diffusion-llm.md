@@ -22,7 +22,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/diffusiongemma-26b-a4b-diffusion-llm/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/diffusiongemma-26b-a4b-diffusion-llm/"
 reading_time: true
 categories:
   - owm

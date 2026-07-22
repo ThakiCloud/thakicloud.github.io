@@ -22,7 +22,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/minimax-m3-multimodal-moe/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/minimax-m3-multimodal-moe/"
 reading_time: true
 categories:
   - owm

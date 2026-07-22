@@ -6,7 +6,7 @@ seo_description: "OpenAI 연구진이 700만 사용자와 180억 메시지를 �
 date: 2025-09-16
 lang: ko
 permalink: /ko/research/chatgpt-usage-patterns-research-analysis/
-canonical_url: "https://thakicloud.github.io/ko/research/chatgpt-usage-patterns-research-analysis-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/chatgpt-usage-patterns-research-analysis-ko/"
 tags:
   - ChatGPT
   - 사용자행동분석

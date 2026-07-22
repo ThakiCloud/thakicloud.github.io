@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/tutorials/jekyll-multilingual-blog-transformation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/jekyll-multilingual-blog-transformation-guide/"
 reading_time: true
 published: false
 categories:
@@ -359,9 +359,9 @@ Conflict: The following destination is shared by multiple files.
 
 ```
 # 언어별 사이트맵 등록
-Sitemap: https://thakicloud.github.io/sitemap-ko.xml
-Sitemap: https://thakicloud.github.io/sitemap-en.xml
-Sitemap: https://thakicloud.github.io/sitemap-ar.xml
+Sitemap: https://thakicloud.com/tech-blog/sitemap-ko.xml
+Sitemap: https://thakicloud.com/tech-blog/sitemap-en.xml
+Sitemap: https://thakicloud.com/tech-blog/sitemap-ar.xml
 ```
 
 ## 8단계: 자동화 도구 개발 - 개발자 경험 개선

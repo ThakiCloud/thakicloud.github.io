@@ -18,7 +18,7 @@ published: true
 categories:
   - dev
   - agentops
-canonical_url: "https://thakicloud.github.io/ar/dev/agent-plugin-158-skills-deterministic-flow/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/agent-plugin-158-skills-deterministic-flow/"
 ---
 
 ![تصور تجريدي لوحدات مهارات عديدة تتقارب في خط أنابيب عمودي مرتّب واحد](/assets/images/agent-plugin-158-skills-deterministic-flow-hero.png)

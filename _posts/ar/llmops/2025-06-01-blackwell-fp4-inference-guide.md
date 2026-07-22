@@ -19,7 +19,7 @@ toc: true
 toc_label: "دليل استنتاج Blackwell FP4"
 lang: ar
 permalink: /ar/llmops/blackwell-fp4-inference-guide/
-canonical_url: "https://thakicloud.github.io/ar/llmops/blackwell-fp4-inference-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/blackwell-fp4-inference-guide/"
 published: false
 categories:
   - llmops

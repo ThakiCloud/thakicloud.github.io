@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-glm-5-2-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
 categories:
   - llmops
@@ -30,7 +30,7 @@ categories:
 
 프런티어급 추론 모델을 자체 인프라에서 서빙하려는 팀에게 가장 먼저 부딪히는 벽은 GPU 메모리입니다. 753B 파라미터를 16비트로 그대로 올리면 1.5TB에 가까운 메모리가 필요하고, 이는 곧 GPU 노드 여러 대를 의미합니다. NVIDIA가 2026년 6월 25일 Hugging Face에 공개한 `nvidia/GLM-5.2-NVFP4`는 ZAI(zai-org)의 GLM-5.2를 4비트로 양자화해 이 벽을 낮추려는 시도입니다.
 
-이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 이 모델의 추론 토큰 길이가 자가호스팅 비용 셈법을 어떻게 바꾸는지는 [추론 토큰 경제성 글](https://thakicloud.github.io/ko/llmops/glm-5-2-reasoning-token-economics/)에서, 컨슈머 하드웨어용 1비트 GGUF 양자화는 [Unsloth GGUF 글](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 데이터센터 트랙입니다. NVIDIA가 직접 공개한 NVFP4 양자화가 어떤 구조를 택했고, 어떤 하드웨어에서 어떻게 서빙되며, 멀티테넌트 서빙을 운영하는 입장에서 무엇을 의미하는가입니다.
+이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 이 모델의 추론 토큰 길이가 자가호스팅 비용 셈법을 어떻게 바꾸는지는 [추론 토큰 경제성 글](https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-reasoning-token-economics/)에서, 컨슈머 하드웨어용 1비트 GGUF 양자화는 [Unsloth GGUF 글](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 데이터센터 트랙입니다. NVIDIA가 직접 공개한 NVFP4 양자화가 어떤 구조를 택했고, 어떤 하드웨어에서 어떻게 서빙되며, 멀티테넌트 서빙을 운영하는 입장에서 무엇을 의미하는가입니다.
 
 본문의 정확도 수치는 모두 NVIDIA가 모델카드에 공개한 공식 측정치입니다. 753B 모델은 NVIDIA Blackwell 전용에 8-way 텐서 병렬을 요구하므로 ThakiCloud의 개발 환경에서는 직접 재현하지 못했습니다. 따라서 이 글은 공개 자료에 기반한 분석이며, 재현 수치를 임의로 만들어 넣지 않았습니다. 출처가 갈리는 값은 `[추정]`으로 표시합니다.
 

@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/sao-single-rollout-async-agentic-rl/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/sao-single-rollout-async-agentic-rl/"
 ---
 
 Training agents with reinforcement learning is no longer a lab-only phrase. Models that excel at tasks like fixing a codebase over dozens of turns on SWE-Bench, or working through a multi-step math proof, are mostly not the product of pretraining alone. The post-training stage, where the model actually calls tools, interacts with an environment through rollouts, and gets rewarded for it, is what makes the difference. But as those rollouts grow longer, the training method that has stood as the standard begins to break down.

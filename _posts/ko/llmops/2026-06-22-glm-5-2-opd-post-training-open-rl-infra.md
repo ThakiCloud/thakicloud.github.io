@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-opd-post-training-open-rl-infra/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
 categories:
   - llmops
@@ -28,7 +28,7 @@ published: false
 
 저희 ThakiCloud는 K8s 기반 AI/ML SaaS 플랫폼에서 학습 워크로드와 GPU 오케스트레이션을 다룹니다. "프론티어 모델을 어떻게 학습했는가"가 통째로 공개된 사례는 온프레미스 학습 인프라를 설계하는 입장에서 귀한 레퍼런스입니다. 이 글은 OPD 사후학습이라는 방식과, RL 스택 전체가 오픈된다는 사실이 무엇을 바꾸는지 짚어보겠습니다.
 
-> RL 사후학습 프레임워크 slime 자체에 대한 개괄은 별도 글 [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/)에서 다뤘습니다. 이 글은 그 위에서 돌아가는 OPD 사후학습과 전문가 모델 병합에 초점을 맞춥니다.
+> RL 사후학습 프레임워크 slime 자체에 대한 개괄은 별도 글 [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/)에서 다뤘습니다. 이 글은 그 위에서 돌아가는 OPD 사후학습과 전문가 모델 병합에 초점을 맞춥니다.
 
 
 ![GLM-5.2 OPD 사후학습과 오픈 RL 스택 개요](/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-01.webp)
@@ -115,4 +115,4 @@ OPD와 slime이 보여주는 그림은 저희가 K8s 위에서 다루는 학습 
 - [THUDM/slime: RL 사후학습 프레임워크 (GitHub)](https://github.com/THUDM/slime)
 - [zai-org/GLM-5 (HuggingFace)](https://huggingface.co/zai-org/GLM-5)
 - [z.ai's open source GLM-5 and the slime RL technique (VentureBeat)](https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages)
-- 관련 글: [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/)
+- 관련 글: [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/)

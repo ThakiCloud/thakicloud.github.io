@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/xpander-ai-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/xpander-ai-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/xpander-ai-complete-guide/"
 published: false
 categories:
   - tutorials

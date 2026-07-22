@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/human-llm-research-idea-gap/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/human-llm-research-idea-gap/"
 ---
 
 Say "research agent" and most people picture the same loop: read papers, spot a gap, propose an idea, run experiments, write it up. Researchers at Yale and the University of Chicago pushed one level deeper. How different are the research ideas an LLM generates from the ideas human researchers actually turned into published papers, and how big is that difference?

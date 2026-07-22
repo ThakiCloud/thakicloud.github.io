@@ -18,7 +18,7 @@ toc_label: "목차"
 toc_icon: "microchip"
 header:
   image: /assets/images/inference-engine-hardware-strategy-hero.webp
-canonical_url: "https://thakicloud.github.io/ko/llmops/inference-engine-hardware-strategy/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/inference-engine-hardware-strategy/"
 categories:
   - llmops
 published: false

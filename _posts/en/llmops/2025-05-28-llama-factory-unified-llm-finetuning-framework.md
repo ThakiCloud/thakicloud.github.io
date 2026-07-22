@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "LLaMA Factory Guide"
-canonical_url: "https://thakicloud.github.io/en/llmops/llama-factory-unified-llm-finetuning-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llama-factory-unified-llm-finetuning-framework/"
 published: false
 categories:
   - llmops

@@ -16,7 +16,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/gpt-5-6-sol-arc-agi-3/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/gpt-5-6-sol-arc-agi-3/"
 audiobook: /assets/audio/posts/gpt-5-6-sol-arc-agi-3/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

@@ -19,7 +19,7 @@ categories:
   - llmops
   - owm
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/llmops/kimi-k3-open-weight-frontier-serving/
+canonical_url: https://thakicloud.com/tech-blog/ar/llmops/kimi-k3-open-weight-frontier-serving/
 ---
 
 ## نظرة عامة

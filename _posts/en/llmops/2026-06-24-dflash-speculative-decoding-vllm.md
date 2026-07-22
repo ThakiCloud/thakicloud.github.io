@@ -6,7 +6,7 @@ seo_description: "How DFlash block diffusion speculative decoding plugs into vLL
 date: 2026-06-24
 last_modified_at: 2026-06-24
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/dflash-speculative-decoding-vllm/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/dflash-speculative-decoding-vllm/"
 tags:
   - speculative-decoding
   - dflash

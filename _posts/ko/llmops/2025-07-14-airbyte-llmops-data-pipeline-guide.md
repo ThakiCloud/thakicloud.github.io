@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/airbyte-llmops-data-pipeline-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/airbyte-llmops-data-pipeline-guide/"
 reading_time: true
 published: false
 categories:
@@ -450,10 +450,10 @@ Airbyte는 LLMOps의 핵심 구성 요소인 데이터 파이프라인을 효과
 **참고 자료:**
 - [Airbyte 공식 문서](https://docs.airbyte.io/)
 - [Airbyte GitHub 저장소](https://github.com/airbytehq/airbyte)
-- [LLMOps 모범 사례 가이드](https://thakicloud.github.io/llmops/)
-- [데이터 파이프라인 아키텍처 패턴](https://thakicloud.github.io/tutorials/)
+- [LLMOps 모범 사례 가이드](https://thakicloud.com/tech-blog/llmops/)
+- [데이터 파이프라인 아키텍처 패턴](https://thakicloud.com/tech-blog/tutorials/)
 
 **관련 글:**
-- [LLMOps 기초: 데이터 파이프라인 구축](https://thakicloud.github.io/llmops/data-pipeline-basics/)
-- [벡터 데이터베이스 완전 가이드](https://thakicloud.github.io/tutorials/vector-database-guide/)
-- [실시간 데이터 스트리밍 아키텍처](https://thakicloud.github.io/dev/streaming-architecture/) 
+- [LLMOps 기초: 데이터 파이프라인 구축](https://thakicloud.com/tech-blog/llmops/data-pipeline-basics/)
+- [벡터 데이터베이스 완전 가이드](https://thakicloud.com/tech-blog/tutorials/vector-database-guide/)
+- [실시간 데이터 스트리밍 아키텍처](https://thakicloud.com/tech-blog/dev/streaming-architecture/) 

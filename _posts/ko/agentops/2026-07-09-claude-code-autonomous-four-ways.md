@@ -15,7 +15,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-autonomous-four-ways/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-autonomous-four-ways/"
 audiobook: /assets/audio/posts/claude-code-autonomous-four-ways/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

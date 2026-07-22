@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: المحتويات
-canonical_url: "https://thakicloud.github.io/ar/culture/parallel-ai-coding-cognitive-load/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/parallel-ai-coding-cognitive-load/"
 categories:
   - culture
 ---

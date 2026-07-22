@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/ai-agent-memory-context-engineering/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/ai-agent-memory-context-engineering/"
 reading_time: true
 audiobook: https://drive.google.com/file/d/193SGbK-XbseE5RHN3soLHZHWBRiEUrud/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"

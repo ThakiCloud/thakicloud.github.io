@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "database"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/nvidia-nemotron-6million-multilingual-reasoning-dataset/"
 lang: en
 reading_time: true
 categories:

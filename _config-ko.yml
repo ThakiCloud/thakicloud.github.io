@@ -5,8 +5,8 @@ description: "AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실�
 lang: "ko"
 
 # 언어별 URL 설정
-url: "https://thakicloud.github.io"
-baseurl: ""
+url: "https://thakicloud.com"
+baseurl: "/tech-blog"
 
 # 검색 설정
 search: true

@@ -14,7 +14,7 @@ tags:
   - self-improving-pipelines
 date: 2026-07-17
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/skill-graveyard-safe-deprecation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/skill-graveyard-safe-deprecation/"
 categories:
   - research
 author_profile: true

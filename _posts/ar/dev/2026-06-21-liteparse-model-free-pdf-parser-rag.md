@@ -18,7 +18,7 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/liteparse-model-free-pdf-parser-rag/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/liteparse-model-free-pdf-parser-rag/"
 reading_time: true
 categories:
   - dev

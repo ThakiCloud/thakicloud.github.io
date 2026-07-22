@@ -15,7 +15,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/research/advertisement-embedding-attacks-llm-security-threat/
-canonical_url: "https://thakicloud.github.io/en/research/advertisement-embedding-attacks-llm-security-threat/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/advertisement-embedding-attacks-llm-security-threat/"
 categories:
   - research
 published: false

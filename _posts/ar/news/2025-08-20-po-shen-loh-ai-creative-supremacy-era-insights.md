@@ -17,7 +17,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/po-shen-loh-ai-creative-supremacy-era-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/po-shen-loh-ai-creative-supremacy-era-insights/"
 reading_time: true
 lang: ar
 permalink: /ar/news/po-shen-loh-ai-creative-supremacy-era-insights/

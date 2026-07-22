@@ -22,7 +22,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1fwQ50G8ud3JLNnOD74OOh3_JCj4a0SyK/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/deepmind-agi-to-asi-pathways/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/deepmind-agi-to-asi-pathways/"
 ---
 
 ## 이 글을 누가 읽으면 좋은가

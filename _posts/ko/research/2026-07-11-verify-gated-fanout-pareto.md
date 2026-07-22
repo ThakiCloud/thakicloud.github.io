@@ -10,7 +10,7 @@ author_profile: true
 toc: true
 audiobook: /assets/audio/posts/verify-gated-fanout-pareto/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/verify-gated-fanout-pareto/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/verify-gated-fanout-pareto/"
 ---
 
 여러 에이전트를 병렬로 실행해 결과를 취합하는 fan-out 파이프라인을 운영하거나 도입을 검토하는 클라우드·AI 엔지니어라면, 검증 단계에 어떤 모델을 얼마나 붙일지 한 번쯤 관행적으로 정해본 경험이 있을 것입니다. 이 글은 그 관행이 실제로는 어떤 비용을 치르고 어떤 안전을 사는지 실측한 연구를 소개합니다. 결론부터 말하면, 더 비싼 모델을 더 많이 투입하는 쪽이 항상 안전한 것은 아니었습니다.

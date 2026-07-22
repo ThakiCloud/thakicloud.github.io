@@ -4,7 +4,7 @@ excerpt: "هل يتفوق عميل (agent) يراقب قياسات وحدة مع
 tags: [vllm, kueue, gpu-scheduling, multi-tenant-serving, llm-agents, dynamic-batching, inference-cost-optimization, h200, queuing-simulation, control-loop]
 date: 2026-07-21
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/agent-dynamic-batch-tuning-vllm/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/agent-dynamic-batch-tuning-vllm/"
 categories: [research]
 author_profile: true
 toc: true

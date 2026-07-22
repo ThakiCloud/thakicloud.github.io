@@ -11,7 +11,7 @@ tags:
 author_profile: true
 lang: ar
 permalink: /ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/
-canonical_url: "https://thakicloud.github.io/ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
 categories:
   - careers
 ---

@@ -18,7 +18,7 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/slime-rl-post-training-infrastructure/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/slime-rl-post-training-infrastructure/"
 reading_time: true
 categories:
   - llmops

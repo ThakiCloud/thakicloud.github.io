@@ -18,7 +18,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/proxycat-tunnel-proxy-pool-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/proxycat-tunnel-proxy-pool-complete-guide/"
 published: false
 categories:
   - tutorials

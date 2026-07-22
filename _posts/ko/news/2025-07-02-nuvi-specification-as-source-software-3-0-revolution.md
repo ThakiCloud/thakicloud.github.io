@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/news/nuvi-specification-as-source-software-3-0-revolution/"
+canonical_url: "https://thakicloud.com/tech-blog/news/nuvi-specification-as-source-software-3-0-revolution/"
 reading_time: true
 published: false
 categories:

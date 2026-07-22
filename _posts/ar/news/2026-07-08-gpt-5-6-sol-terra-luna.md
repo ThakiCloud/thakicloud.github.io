@@ -18,7 +18,7 @@ tags:
 categories:
   - news
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/gpt-5-6-sol-terra-luna/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/gpt-5-6-sol-terra-luna/"
 published: false
 ---
 

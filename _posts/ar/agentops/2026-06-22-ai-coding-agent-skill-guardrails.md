@@ -6,7 +6,7 @@ seo_description: "في عصر باتت فيه حزمة مهارة واحدة ق�
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/ai-coding-agent-skill-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/ai-coding-agent-skill-guardrails/"
 tags:
   - ai-agents
   - security

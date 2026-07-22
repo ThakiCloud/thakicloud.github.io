@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/raglight-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/raglight-comprehensive-guide-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/raglight-comprehensive-guide-en/"
 categories:
   - tutorials
 ---

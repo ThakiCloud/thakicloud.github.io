@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/openai-healthbench-medical-ai-evaluation/
-canonical_url: "https://thakicloud.github.io/ko/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/"
 categories:
   - research
   - llmops

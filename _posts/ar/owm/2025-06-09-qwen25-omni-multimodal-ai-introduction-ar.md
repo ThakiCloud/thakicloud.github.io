@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/owm/qwen25-omni-multimodal-ai-introduction/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/qwen25-omni-multimodal-ai-introduction/"
 lang: ar
 published: false
 categories:

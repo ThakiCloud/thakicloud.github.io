@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/agentic-ai-hitchhikers-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/agentic-ai-hitchhikers-guide/"
 reading_time: true
 categories:
   - research

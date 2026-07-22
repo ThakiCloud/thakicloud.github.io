@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/kimi-k2-6-1t-moe-agent-swarm/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/kimi-k2-6-1t-moe-agent-swarm/"
 lang: ar
 reading_time: true
 categories:

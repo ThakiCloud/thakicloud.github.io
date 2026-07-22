@@ -4,7 +4,7 @@ excerpt: "The principle that every fan-out should close with adversarial verific
 tags: [multi-agent, llm-orchestration, adversarial-verification, model-routing, cost-optimization, hallucination-detection, ai-agents, skill-orchestration]
 date: 2026-07-11
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/verify-gated-fanout-pareto/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/verify-gated-fanout-pareto/"
 categories: [research]
 author_profile: true
 toc: true

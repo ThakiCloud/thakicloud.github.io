@@ -18,7 +18,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/open-weight-agent-cost-routing/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/open-weight-agent-cost-routing/"
 reading_time: true
 header:
   image: /assets/images/open-weight-agent-cost-routing-hero.webp

@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/shannon-ai-agent-orchestrator-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/shannon-ai-agent-orchestrator-tutorial-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/shannon-ai-agent-orchestrator-tutorial-ko/"
 categories:
   - tutorials
 ---

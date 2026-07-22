@@ -5,7 +5,7 @@ seo_title: "Calculating the Safety Boundary for Autonomous K8s GPU Incident Reme
 seo_description: "We introduce a paper that quantifies, using a 176-incident benchmark, the threshold separating autonomous remediation from human escalation for LLM agents handling Kubernetes GPU incidents. It shows how much more per-incident-type threshold calibration reduces MTTR compared to a single global threshold."
 date: 2026-07-16
 last_modified_at: 2026-07-16
-canonical_url: "https://thakicloud.github.io/en/research/safe-autonomy-k8s-remediation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/safe-autonomy-k8s-remediation/"
 lang: en
 reading_time: true
 tags:

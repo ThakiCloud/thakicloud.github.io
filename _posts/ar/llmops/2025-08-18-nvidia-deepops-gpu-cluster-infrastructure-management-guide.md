@@ -21,7 +21,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-deepops-gpu-cluster-infrastructure-management-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvidia-deepops-gpu-cluster-infrastructure-management-guide/"
 reading_time: true
 lang: ar
 published: false

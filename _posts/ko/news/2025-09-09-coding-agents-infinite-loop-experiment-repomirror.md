@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/news/coding-agents-infinite-loop-experiment-repomirror/
-canonical_url: "https://thakicloud.github.io/ko/news/coding-agents-infinite-loop-experiment-repomirror/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/coding-agents-infinite-loop-experiment-repomirror/"
 categories:
   - news
 published: false

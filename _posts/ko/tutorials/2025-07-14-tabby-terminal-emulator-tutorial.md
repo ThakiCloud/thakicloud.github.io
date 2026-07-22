@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "terminal"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/tabby-terminal-emulator-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/tabby-terminal-emulator-tutorial/"
 reading_time: true
 published: false
 categories:

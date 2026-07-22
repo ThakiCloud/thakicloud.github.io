@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "robot"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-autonomous-four-ways/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-autonomous-four-ways/"
 ---
 
 If you have used a coding agent, one scene is familiar: you enter a prompt, read the response, enter the next instruction, and wait again. That back-and-forth is powerful, but it keeps a human tethered. Recent Anthropic materials organize a direction that cuts through this loop, making Claude Code run without someone watching. This post breaks that down into four axes, headless mode, hooks, subagents, and skills, and verifies how each actually works using pipelines ThakiCloud operates.

@@ -6,7 +6,7 @@ seo_description: "A survey of first-half-2026 SLM agent and on-policy skill dist
 date: 2026-07-12
 last_modified_at: 2026-07-12
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/distill-skill-fleet-small-models/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/distill-skill-fleet-small-models/"
 tags:
   - agentops
   - distillation

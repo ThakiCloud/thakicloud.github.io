@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/
-canonical_url: "https://thakicloud.github.io/en/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/complete-rag-system-tutorial-arxiv-paper-curator/"
 published: false
 categories:
   - tutorials

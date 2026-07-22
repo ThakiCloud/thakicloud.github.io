@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/autoagent-zero-code-llm-framework/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/autoagent-zero-code-llm-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/autoagent-zero-code-llm-framework/"
 published: false
 categories:
   - tutorials

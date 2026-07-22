@@ -15,7 +15,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-multiplayer-collaborative-agents/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-multiplayer-collaborative-agents/"
 lang: en
 ---
 

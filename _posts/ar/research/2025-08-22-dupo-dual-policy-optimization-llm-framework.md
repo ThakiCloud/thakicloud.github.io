@@ -19,7 +19,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/dupo-dual-policy-optimization-llm-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
 categories:
   - research

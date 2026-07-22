@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/gemma4-12b-qat-turboquant-consumer-gpu/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gemma4-12b-qat-turboquant-consumer-gpu/"
 reading_time: true
 categories:
   - llmops

@@ -16,7 +16,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/autoagent-zero-code-llm-framework/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/autoagent-zero-code-llm-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/autoagent-zero-code-llm-framework/"
 published: false
 categories:
   - tutorials

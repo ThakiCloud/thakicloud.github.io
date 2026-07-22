@@ -15,7 +15,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-skill-oneshot-landing-pages/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-skill-oneshot-landing-pages/"
 ---
 
 شارك مطوّر مؤخرًا على منصة X أنه "بنى مهارة تجعل Claude Code ينشئ صفحات هبوط احترافية بضربة واحدة"، مدّعيًا أن المواقع الثلاثة في الفيديو كانت جميعها من إنتاج ضربة واحدة ([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). كان التفاعل قويًا بسبب مستوى إتقان النتائج، لكن النقطة الأكثر إثارة للاهتمام بالنسبة للمهندس تكمن في مكان آخر. أعطِ النموذج نفسه الطلب نفسه، "ابنِ لي صفحة هبوط"، فتحصل على شيء عادي؛ أضف مهارة واحدة فتخرج صفحة بمستوى وكالة تصميم في مسار واحد. يفكّك هذا المقال آلية عمل تلك المهارة فعليًا، ويتحقق منها من منظور تشغيل ThakiCloud حيث تُعامَل المهارات كموارد من الدرجة الأولى.

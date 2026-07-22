@@ -4,7 +4,7 @@ excerpt: "تحليل شامل لآلية حلقة الوكيل الفريدة و
 date: 2025-06-01
 lang: ar
 permalink: /ar/research/manus-ai-agent-loop-modular-architecture-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/manus-ai-agent-loop-modular-architecture-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/manus-ai-agent-loop-modular-architecture-analysis/"
 tags: 
   - manus-ai
   - agent-loop

@@ -9,7 +9,7 @@ tags:
   - paxis
 date: 2026-07-04
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/fable-model-routing-rate-limits/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/fable-model-routing-rate-limits/"
 categories:
   - dev
 ---

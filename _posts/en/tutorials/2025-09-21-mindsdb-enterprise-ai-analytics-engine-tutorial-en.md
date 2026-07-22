@@ -18,7 +18,7 @@ toc: true
 toc_label: "Tutorial Contents"
 lang: en
 permalink: /en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/mindsdb-enterprise-ai-analytics-engine-tutorial/"
 published: false
 categories:
   - tutorials

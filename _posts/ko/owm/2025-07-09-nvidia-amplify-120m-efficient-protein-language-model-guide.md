@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/nvidia-amplify-120m-efficient-protein-language-model-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/nvidia-amplify-120m-efficient-protein-language-model-guide/"
 reading_time: true
 published: false
 categories:

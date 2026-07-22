@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Seamless Interaction 가이드"
-canonical_url: "https://thakicloud.github.io/facebook-seamless-interaction-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/facebook-seamless-interaction-dataset-comprehensive-guide/"
 published: false
 categories:
   - datasets

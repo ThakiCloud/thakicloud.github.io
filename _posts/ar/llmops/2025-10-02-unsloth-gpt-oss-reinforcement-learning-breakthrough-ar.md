@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough/
-canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/unsloth-gpt-oss-reinforcement-learning-breakthrough-ar/"
 categories:
   - llmops
 published: false

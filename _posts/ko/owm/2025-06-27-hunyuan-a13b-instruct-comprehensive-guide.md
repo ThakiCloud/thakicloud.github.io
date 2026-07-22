@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: Hunyuan-A13B 가이드
-canonical_url: "https://thakicloud.github.io/owm/llmops/hunyuan-a13b-instruct-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/llmops/hunyuan-a13b-instruct-comprehensive-guide/"
 published: false
 categories:
   - owm

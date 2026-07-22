@@ -16,7 +16,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/tutorials/open-lovable-ai-react-app-builder-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/open-lovable-ai-react-app-builder-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/open-lovable-ai-react-app-builder-tutorial/"
 published: false
 categories:
   - tutorials

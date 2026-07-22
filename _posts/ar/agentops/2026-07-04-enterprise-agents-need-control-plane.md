@@ -7,7 +7,7 @@ date: 2026-07-04
 last_modified_at: 2026-07-04
 author_profile: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/enterprise-agents-need-control-plane/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/enterprise-agents-need-control-plane/"
 toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"

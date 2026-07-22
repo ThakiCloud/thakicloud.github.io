@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/metabase-dataset-generator-llm-synthetic-data-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/datasets/metabase-dataset-generator-llm-synthetic-data-guide/"
 reading_time: true
 published: false
 categories:

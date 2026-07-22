@@ -6,7 +6,7 @@ seo_description: "Goclone 웹사이트 클로너 완벽 가이드. Go 기반 도
 date: 2025-10-15
 lang: ko
 permalink: /ko/tutorials/goclone-website-cloner-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/goclone-website-cloner-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/goclone-website-cloner-tutorial/"
 tags:
   - goclone
   - 웹스크래핑

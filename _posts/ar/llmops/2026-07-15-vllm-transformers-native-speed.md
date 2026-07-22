@@ -13,7 +13,7 @@ tags:
   - paxis
 date: 2026-07-15
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/vllm-transformers-native-speed/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/vllm-transformers-native-speed/"
 categories:
   - llmops
 ---

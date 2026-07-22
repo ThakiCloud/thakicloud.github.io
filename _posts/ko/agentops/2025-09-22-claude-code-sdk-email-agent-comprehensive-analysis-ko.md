@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/agentops/claude-code-sdk-email-agent-analysis/
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-sdk-email-agent-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-sdk-email-agent-analysis/"
 categories:
   - agentops
 published: false

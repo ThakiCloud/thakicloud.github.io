@@ -6,7 +6,7 @@ seo_description: "Learn how to improve NVIDIA TensorRT-LLM inference performance
 date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-tensorrt-llm-performance-optimization-deployment-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvidia-tensorrt-llm-performance-optimization-deployment-guide/"
 tags: [tensorrt-llm, nvidia, llm-optimization, gpu-inference, performance-tuning, h100, h200, tensor-parallelism, flashattention]
 toc_label: "Table of Contents"
 published: false

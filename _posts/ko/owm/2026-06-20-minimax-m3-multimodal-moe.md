@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/minimax-m3-multimodal-moe/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/minimax-m3-multimodal-moe/"
 reading_time: true
 categories:
   - owm

@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ar/datasets/awesome-public-datasets-comprehensive-guide-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/awesome-public-datasets-comprehensive-guide-ar/"
 categories:
   - datasets
 ---

@@ -26,7 +26,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/enterprise-rag-datasets-industry-specific-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/enterprise-rag-datasets-industry-specific-guide/"
 reading_time: true
 published: false
 categories:

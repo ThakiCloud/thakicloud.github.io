@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "ابتكار ثقافة التطوير في عصر الذكاء الاصطناعي"
 permalink: /ar/culture/ai-coding-culture-transformation-guide/
-canonical_url: "https://thakicloud.github.io/ar/culture/ai-coding-culture-transformation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/ai-coding-culture-transformation-guide/"
 categories:
   - culture
   - dev

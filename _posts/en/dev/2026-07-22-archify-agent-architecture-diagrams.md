@@ -19,7 +19,7 @@ categories:
   - dev
   - agentops
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/archify-agent-architecture-diagrams/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/archify-agent-architecture-diagrams/"
 ---
 
 ![An abstract image depicting many boxes and connecting lines converging into a single tidy grid structure](/assets/images/archify-agent-architecture-diagrams-hero.png)

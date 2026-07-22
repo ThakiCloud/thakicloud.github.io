@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/en/research/attested-confidential-sovereign-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/attested-confidential-sovereign-inference/"
 lang: en
 categories:
   - research

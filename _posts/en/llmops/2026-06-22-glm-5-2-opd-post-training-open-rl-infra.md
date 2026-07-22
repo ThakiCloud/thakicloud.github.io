@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-opd-post-training-open-rl-infra/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
 categories:
   - llmops
@@ -29,7 +29,7 @@ A frontier-grade lab releasing only model weights is no longer unusual. Z.ai (TH
 
 At ThakiCloud, we run training workloads and GPU orchestration on a K8s-based AI/ML SaaS platform. A case where the full "how the frontier model was trained" is published is a rare reference for anyone designing on-premise training infrastructure. This post examines what OPD post-training is, and what changes when the whole RL stack becomes open.
 
-> A general overview of the slime RL post-training framework itself is covered in a separate post, [RL Post-Training as Infrastructure: the slime Open-Source Framework and RL Scaling](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/). This post focuses on the OPD post-training and expert-model merging that run on top of it.
+> A general overview of the slime RL post-training framework itself is covered in a separate post, [RL Post-Training as Infrastructure: the slime Open-Source Framework and RL Scaling](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/). This post focuses on the OPD post-training and expert-model merging that run on top of it.
 
 ![Abstract: distributed RL post-training and model merging](/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.webp)
 
@@ -109,4 +109,4 @@ Even so, the direction is clear. The trend of frontier model training procedures
 - [THUDM/slime: RL post-training framework (GitHub)](https://github.com/THUDM/slime)
 - [zai-org/GLM-5 (HuggingFace)](https://huggingface.co/zai-org/GLM-5)
 - [z.ai's open source GLM-5 and the slime RL technique (VentureBeat)](https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages)
-- Related post: [RL Post-Training as Infrastructure: the slime Open-Source Framework and RL Scaling](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/)
+- Related post: [RL Post-Training as Infrastructure: the slime Open-Source Framework and RL Scaling](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/)

@@ -20,7 +20,7 @@ toc_label: "Contents"
 toc_icon: "robot"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/glm52-slime-rl-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm52-slime-rl-framework/"
 reading_time: true
 categories:
   - llmops

@@ -18,7 +18,7 @@ toc_label: "목차"
 toc_icon: "graduation-cap"
 header:
   image: /assets/images/academic-research-skills-claude-code-hero.webp
-canonical_url: "https://thakicloud.github.io/ko/technique/academic-research-skills-claude-code/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
 published: false

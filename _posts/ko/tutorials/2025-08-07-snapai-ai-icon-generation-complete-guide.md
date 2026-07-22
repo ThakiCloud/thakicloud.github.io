@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "magic"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/snapai-ai-icon-generation-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/snapai-ai-icon-generation-complete-guide/"
 reading_time: true
 published: false
 categories:
@@ -627,9 +627,9 @@ SnapAI와 함께 **AI 시대의 모바일 앱 개발**을 경험해보세요. �
 ### 추가 학습 자료
 
 블로그에서 더 많은 AI 개발 도구 가이드를 확인해보세요:
-- [Claude Code 완전 가이드](https://thakicloud.github.io/tutorials/claude-code-complete-guide/)
-- [Crush AI 코딩 에이전트 가이드](https://thakicloud.github.io/tutorials/crush-ai-coding-agent-comprehensive-tutorial/)
-- [Autoselll AI 마켓플레이스 가이드](https://thakicloud.github.io/tutorials/autoselll-ai-marketplace-listing-generator-guide/)
+- [Claude Code 완전 가이드](https://thakicloud.com/tech-blog/tutorials/claude-code-complete-guide/)
+- [Crush AI 코딩 에이전트 가이드](https://thakicloud.com/tech-blog/tutorials/crush-ai-coding-agent-comprehensive-tutorial/)
+- [Autoselll AI 마켓플레이스 가이드](https://thakicloud.com/tech-blog/tutorials/autoselll-ai-marketplace-listing-generator-guide/)
 
 ---
 

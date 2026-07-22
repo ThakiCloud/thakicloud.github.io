@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "chart-line"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/gpu-overinvestment-ai-agents-sovereign-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/gpu-overinvestment-ai-agents-sovereign-ai/"
 categories:
   - news
 published: false

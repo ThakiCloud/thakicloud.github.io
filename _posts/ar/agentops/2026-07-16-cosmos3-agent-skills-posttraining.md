@@ -20,7 +20,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/cosmos3-agent-skills-posttraining/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/cosmos3-agent-skills-posttraining/"
 ---
 
 في الأسبوع الماضي توصلنا، في تجربة توليد واجهات نظام التصميم، إلى استنتاج مفاده أن "البوابة يجب

@@ -4,7 +4,7 @@ excerpt: "شرح مفصل من الرئيس التنفيذي لـ NVIDIA جنس�
 date: 2025-05-28
 lang: ar
 permalink: /ar/news/jensen-huang-ai-industrial-revolution-insights/
-canonical_url: "https://thakicloud.github.io/ar/news/jensen-huang-ai-industrial-revolution-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/jensen-huang-ai-industrial-revolution-insights/"
 tags: 
   - جنسن هوانغ
   - الثورة الصناعية للذكاء الاصطناعي

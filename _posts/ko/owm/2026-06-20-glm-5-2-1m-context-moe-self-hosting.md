@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/glm-5-2-1m-context-moe-self-hosting/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/glm-5-2-1m-context-moe-self-hosting/"
 reading_time: true
 categories:
   - owm

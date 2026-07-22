@@ -19,7 +19,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/en/research/nvidia-aspire-agentic-skill-discovery/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/nvidia-aspire-agentic-skill-discovery/"
 published: false
 ---
 

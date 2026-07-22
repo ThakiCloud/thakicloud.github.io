@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/prompt-tools-desktop-app-complete-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/prompt-tools-desktop-app-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/prompt-tools-desktop-app-complete-tutorial/"
 published: false
 categories:
   - tutorials

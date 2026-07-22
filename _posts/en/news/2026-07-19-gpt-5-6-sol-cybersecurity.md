@@ -19,7 +19,7 @@ tags:
 categories:
   - news
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/gpt-5-6-sol-cybersecurity/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/gpt-5-6-sol-cybersecurity/"
 ---
 
 A single sentence lingered on my timeline this morning. OpenAI, introducing its new flagship model GPT-5.6 Sol, stated that it had set a new high score on "The Last Ones," a cyber range used for security evaluation. What matters here isn't the score itself but the implication of that sentence. It signals that AI is moving beyond helping humans find vulnerabilities and toward completing multi-step attack scenarios entirely on its own, without a human in the loop.

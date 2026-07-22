@@ -5,7 +5,7 @@ seo_title: "DeepMind From AGI to ASI: Four Pathways Explained - Thaki Cloud"
 seo_description: "Google DeepMind's From AGI to ASI (arXiv 2606.12683) lays out four pathways from AGI to superintelligence, scaling, an algorithmic paradigm shift, recursive self-improvement, and multi-agent group formation, and discusses fundamental limits like the speed of light, thermodynamics, complexity theory, and Godel incompleteness. We draw implications from the perspective of ThakiCloud Paxis, which runs self-evolving skills and DAG multi-agent orchestration."
 date: 2026-07-06
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/deepmind-agi-to-asi-pathways/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/deepmind-agi-to-asi-pathways/"
 tags:
   - research
   - agi

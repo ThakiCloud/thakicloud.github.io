@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "memory"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/micron-anthropic-ai-memory-infrastructure/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/micron-anthropic-ai-memory-infrastructure/"
 reading_time: true
 categories:
   - news

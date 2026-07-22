@@ -5,7 +5,7 @@ seo_title: "The Interplay of Harness Design and Post-Training in LLM Agents - Th
 seo_description: "A summary of The Interplay of Harness Design and Post-Training in LLM Agents (arXiv:2606.25447). We interpret the finding that harness informativeness lifts both zero-shot and post-trained performance, and that only harness-aware post-training generalizes robustly under tool environment shifts (OOD), through the lens of an agent-native cloud and inference/training infrastructure."
 date: 2026-07-20
 last_modified_at: 2026-07-20
-canonical_url: "https://thakicloud.github.io/en/research/harness-design-post-training/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/harness-design-post-training/"
 lang: en
 reading_time: true
 tags:

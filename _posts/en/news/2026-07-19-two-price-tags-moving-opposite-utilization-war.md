@@ -17,7 +17,7 @@ tags:
 categories:
   - news
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/two-price-tags-moving-opposite-utilization-war/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/two-price-tags-moving-opposite-utilization-war/"
 published: true
 ---
 

@@ -6,7 +6,7 @@ seo_description: "من نموذج الرؤية الخفيف لدى Ant Group إ�
 date: 2026-07-09
 last_modified_at: 2026-07-09
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/agent-trust-is-built-on-audit-trails/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/agent-trust-is-built-on-audit-trails/"
 author_profile: true
 toc: true
 toc_label: "المحتويات"

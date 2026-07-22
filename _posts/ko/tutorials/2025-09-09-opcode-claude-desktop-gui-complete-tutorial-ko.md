@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/opcode-claude-desktop-gui-complete-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/opcode-claude-desktop-gui-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/opcode-claude-desktop-gui-complete-tutorial/"
 published: false
 categories:
   - tutorials

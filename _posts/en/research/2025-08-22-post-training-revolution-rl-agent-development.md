@@ -20,7 +20,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/post-training-revolution-rl-agent-development/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/post-training-revolution-rl-agent-development/"
 reading_time: true
 categories:
   - research

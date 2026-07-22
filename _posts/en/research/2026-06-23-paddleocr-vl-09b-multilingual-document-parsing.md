@@ -18,7 +18,7 @@ toc_label: "Table of Contents"
 toc_icon: "file-text"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/paddleocr-vl-09b-multilingual-document-parsing/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/paddleocr-vl-09b-multilingual-document-parsing/"
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp

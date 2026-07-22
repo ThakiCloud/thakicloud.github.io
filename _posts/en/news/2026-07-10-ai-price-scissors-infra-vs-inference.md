@@ -6,7 +6,7 @@ seo_description: "HBM4 rack price surges and DeepSeek-driven inference price col
 date: 2026-07-10
 last_modified_at: 2026-07-10
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/ai-price-scissors-infra-vs-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/ai-price-scissors-infra-vs-inference/"
 author_profile: true
 toc: true
 toc_label: "Contents"

@@ -5,7 +5,7 @@ seo_title: "حساب الحدود الآمنة للمعالجة الذاتية �
 seo_description: "نقدم ورقة بحثية قامت بقياس العتبة التي تفصل بين المعالجة الذاتية لحوادث GPU في Kubernetes بواسطة عملاء LLM وبين تصعيدها إلى الإنسان، وذلك عبر معيار قياس يضم 176 حادثة. تتناول الورقة مدى تحسن معايرة العتبة لكل نوع حادثة في تقليل MTTR مقارنة بعتبة عالمية واحدة."
 date: 2026-07-16
 last_modified_at: 2026-07-16
-canonical_url: "https://thakicloud.github.io/ar/research/safe-autonomy-k8s-remediation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/safe-autonomy-k8s-remediation/"
 lang: ar
 reading_time: true
 tags:

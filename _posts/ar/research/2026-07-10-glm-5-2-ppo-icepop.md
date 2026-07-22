@@ -17,7 +17,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/glm-5-2-ppo-icepop/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/glm-5-2-ppo-icepop/"
 ---
 
 أي فريق خاض تجربة تشغيل التعلم المعزز (RL) الفعلي كتدريب لاحق للنماذج اللغوية الكبيرة يعرف أن اتجاه العام أو العامين الماضيين كان منحازًا لجهة واحدة. منذ أن كشفت DeepSeek عن GRPO، أصبح التخلص من نموذج القيمة (critic) المنفصل وتقدير الأفضلية (advantage) بالاعتماد فقط على المكافأة النسبية داخل المجموعة أشبه بالمعيار الفعلي. بما أن الـ critic لم يعد بحاجة إلى تدريب، توفَّرت الذاكرة والحوسبة، وأصبح التنفيذ أبسط. وقد شاع القول بأن «الـ critic لم يعد ضروريًا» كأنه حقيقة شبه مسلَّم بها.

@@ -15,7 +15,7 @@ categories:
   - dev
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/dev/serve-sim-ios-simulator-web/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/serve-sim-ios-simulator-web/"
 ---
 
 AI 코딩 에이전트에게 iOS 앱을 만들어 달라고 하면 한 가지 근본적인 벽에 부딪힙니다. 에이전트는 코드를 쓰고 빌드까지는 할 수 있지만, 화면에서 실제로 무슨 일이 벌어지는지 볼 수 없습니다. 특히 개발 환경을 클라우드의 Mac Mini에 올려 두면 문제가 더 커집니다. GUI가 없는 헤드리스 서버에서는 Xcode 시뮬레이터 창 자체가 뜨지 않기 때문입니다.

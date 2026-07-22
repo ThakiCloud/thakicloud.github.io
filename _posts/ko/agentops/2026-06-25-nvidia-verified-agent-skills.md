@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "shield-alt"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/nvidia-verified-agent-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/nvidia-verified-agent-skills/"
 reading_time: true
 categories:
   - agentops

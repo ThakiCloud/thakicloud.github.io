@@ -18,7 +18,7 @@ published: true
 categories:
   - dev
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/dev/agent-plugin-158-skills-deterministic-flow/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/agent-plugin-158-skills-deterministic-flow/"
 audiobook: /assets/audio/posts/agent-plugin-158-skills-deterministic-flow/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

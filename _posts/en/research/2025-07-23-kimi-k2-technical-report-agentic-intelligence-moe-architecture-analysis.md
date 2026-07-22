@@ -7,7 +7,7 @@ date: 2025-07-23
 last_modified_at: 2025-07-23
 lang: en
 permalink: /en/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/
-canonical_url: "https://thakicloud.github.io/en/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
 tags:
   - KimiK2
   - AgenticAI

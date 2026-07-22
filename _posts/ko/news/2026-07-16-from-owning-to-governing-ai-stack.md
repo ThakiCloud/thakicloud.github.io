@@ -19,7 +19,7 @@ tags:
   - multi-model-orchestration
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/ko/news/from-owning-to-governing-ai-stack/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/from-owning-to-governing-ai-stack/"
 ---
 
 ## 시리는 지금 구글의 GPU 위에서 돌아갑니다

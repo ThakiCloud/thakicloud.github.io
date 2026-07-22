@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "database"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/datasets/nvidia-nemotron-post-training-dataset-v1-comprehensive-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/datasets/nvidia-nemotron-post-training-dataset-v1-comprehensive-analysis/"
 reading_time: true
 published: false
 categories:

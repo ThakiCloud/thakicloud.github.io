@@ -6,7 +6,7 @@ seo_description: "Analysis of the DnD LLMs technique developed by NUS and UT Aus
 date: 2025-07-29
 last_modified_at: 2025-07-29
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/drag-and-drop-llms-zero-shot-prompt-to-weights-research/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/drag-and-drop-llms-zero-shot-prompt-to-weights-research/"
 tags:
   - LLM
   - 파라미터 생성

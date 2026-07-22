@@ -20,7 +20,7 @@ toc_label: "المحتويات"
 toc_icon: "flask"
 categories:
   - research
-canonical_url: "https://thakicloud.github.io/ar/research/platonic-representation-hypothesis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/platonic-representation-hypothesis/"
 ---
 
 ## لمن هذه المقالة

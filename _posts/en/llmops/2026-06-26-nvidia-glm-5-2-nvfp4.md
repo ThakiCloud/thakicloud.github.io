@@ -20,7 +20,7 @@ toc_label: "Contents"
 toc_icon: "microchip"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-glm-5-2-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
 categories:
   - llmops
@@ -31,7 +31,7 @@ categories:
 
 For teams trying to serve a frontier-class reasoning model on their own infrastructure, the first obstacle is almost always GPU memory. Loading 753B parameters at 16-bit requires close to 1.5 TB of memory, which translates directly to multiple GPU nodes. `nvidia/GLM-5.2-NVFP4`, released on Hugging Face on June 25, 2026, is NVIDIA's attempt to lower that barrier by quantizing ZAI's (zai-org) GLM-5.2 to 4-bit precision.
 
-This post is not an introduction to GLM-5.2 as a model. How the model's long reasoning token lengths change the economics of self-hosting is covered in the [reasoning token economics post](https://thakicloud.github.io/en/llmops/glm-5-2-reasoning-token-economics/), and the 1-bit GGUF quantization for consumer hardware is covered in the [Unsloth GGUF post](https://thakicloud.github.io/en/llmops/unsloth-glm-5-2-1bit-gguf/). The focus here is the datacenter track: what architectural choices NVIDIA's NVFP4 quantization makes, what hardware it targets, how serving is set up, and what it means for teams running multi-tenant inference.
+This post is not an introduction to GLM-5.2 as a model. How the model's long reasoning token lengths change the economics of self-hosting is covered in the [reasoning token economics post](https://thakicloud.com/tech-blog/en/llmops/glm-5-2-reasoning-token-economics/), and the 1-bit GGUF quantization for consumer hardware is covered in the [Unsloth GGUF post](https://thakicloud.com/tech-blog/en/llmops/unsloth-glm-5-2-1bit-gguf/). The focus here is the datacenter track: what architectural choices NVIDIA's NVFP4 quantization makes, what hardware it targets, how serving is set up, and what it means for teams running multi-tenant inference.
 
 All accuracy figures in this post are official measurements published by NVIDIA in the model card. Because the 753B model requires NVIDIA Blackwell with 8-way tensor parallelism, we were not able to reproduce results in ThakiCloud's development environment. This post is therefore an analysis based on public information; no numbers have been fabricated. Values that could not be independently verified are marked `[estimated]`.
 

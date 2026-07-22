@@ -19,7 +19,7 @@ toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/qwen-agentworld-language-world-models/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/qwen-agentworld-language-world-models/"
 reading_time: true
 categories:
   - research

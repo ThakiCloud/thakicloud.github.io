@@ -5,7 +5,7 @@ seo_title: "스킬 그레이브야드 - 에이전트 스킬 코퍼스 자율 폐
 seo_description: "2,164개 등록 유닛을 가진 프로덕션 Claude Code 하네스에서 코퍼스 성장에 따른 라우팅 정확도 붕괴를 스킬 반감기로 정식화하고, 사용 텔레메트리와 의미적 중복성 신호에 안전장치를 더한 자율 폐기 정책으로 7.39% 코퍼스 축소를 회귀 없이 달성한 논문을 소개합니다."
 date: 2026-07-17
 last_modified_at: 2026-07-17
-canonical_url: "https://thakicloud.github.io/ko/research/skill-graveyard-safe-deprecation/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/skill-graveyard-safe-deprecation/"
 lang: ko
 reading_time: true
 tags:

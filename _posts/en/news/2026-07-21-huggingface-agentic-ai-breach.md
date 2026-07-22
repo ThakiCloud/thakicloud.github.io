@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/en/news/huggingface-agentic-ai-breach/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/huggingface-agentic-ai-breach/"
 ---
 
 ![Abstract image of an autonomous agent swarm infiltrating a data pipeline](/assets/images/huggingface-agentic-ai-breach-hero.png)

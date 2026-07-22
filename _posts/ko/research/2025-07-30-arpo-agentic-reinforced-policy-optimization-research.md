@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/arpo-agentic-reinforced-policy-optimization-research/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/arpo-agentic-reinforced-policy-optimization-research/"
 reading_time: true
 published: false
 categories:

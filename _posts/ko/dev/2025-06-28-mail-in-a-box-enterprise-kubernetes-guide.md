@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Mail-in-a-Box 기업 가이드"
-canonical_url: "https://thakicloud.github.io/mail-in-a-box-enterprise-kubernetes-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/mail-in-a-box-enterprise-kubernetes-guide/"
 categories:
   - dev
   - tutorials

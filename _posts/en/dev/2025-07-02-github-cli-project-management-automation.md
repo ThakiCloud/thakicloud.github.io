@@ -14,7 +14,7 @@ tags:
 lang: en
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/dev/github-cli-project-management-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/github-cli-project-management-automation/"
 categories:
   - dev
 published: false

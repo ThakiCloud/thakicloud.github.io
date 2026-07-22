@@ -15,7 +15,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/human-llm-research-idea-gap/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/human-llm-research-idea-gap/"
 ---
 
 "연구 에이전트"라는 말을 들으면 대개 이런 그림을 떠올립니다. 논문을 읽고, 빈틈(gap)을 찾고, 아이디어를 내고, 실험을 돌리고, 논문을 쓴다. 그런데 예일대와 시카고대 연구진이 던진 질문은 한 단계 더 깊습니다. LLM이 만든 연구 아이디어는 인간 연구자가 실제로 논문으로 만들어 낸 아이디어와 무엇이, 얼마나 다른가.

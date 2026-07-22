@@ -19,7 +19,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/dots-ocr-multilingual-document-parsing-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 lang: ar
 categories:

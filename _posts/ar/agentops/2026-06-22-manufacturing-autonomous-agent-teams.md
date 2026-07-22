@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/manufacturing-autonomous-agent-teams/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/manufacturing-autonomous-agent-teams/"
 reading_time: true
 categories:
   - agentops

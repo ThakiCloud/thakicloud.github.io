@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/ai-researcher-autonomous-scientific-innovation-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/ai-researcher-autonomous-scientific-innovation-analysis/"
 reading_time: true
 lang: en
 published: false

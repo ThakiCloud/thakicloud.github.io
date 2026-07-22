@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/research/nvidia-aspire-agentic-skill-discovery/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/nvidia-aspire-agentic-skill-discovery/"
 published: false
 audiobook: /assets/audio/posts/nvidia-aspire-agentic-skill-discovery/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"

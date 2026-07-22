@@ -20,7 +20,7 @@ toc_label: "목차"
 toc_icon: "flask"
 categories:
   - research
-canonical_url: "https://thakicloud.github.io/ko/research/atomic-binary-judge-eval-service/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/atomic-binary-judge-eval-service/"
 ---
 
 ## 이 글을 누가 읽으면 좋은가

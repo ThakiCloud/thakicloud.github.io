@@ -7,7 +7,7 @@ date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: ar
 dir: rtl
-canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-tensorrt-llm-performance-optimization-deployment-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvidia-tensorrt-llm-performance-optimization-deployment-guide/"
 tags: [tensorrt-llm, nvidia, llm-optimization, gpu-inference, performance-tuning, h100, h200, tensor-parallelism, flashattention]
 toc_label: "المحتويات"
 published: false

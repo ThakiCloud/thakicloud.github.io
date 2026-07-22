@@ -17,7 +17,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/saas/sovereign-ai-airgap-public-sector/"
+canonical_url: "https://thakicloud.com/tech-blog/en/saas/sovereign-ai-airgap-public-sector/"
 reading_time: true
 categories:
   - dev

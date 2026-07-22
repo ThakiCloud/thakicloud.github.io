@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-multiplayer-collaborative-agents/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-multiplayer-collaborative-agents/"
 ---
 
 ![من العوامل المعزولة إلى شبكة مترابطة من عوامل التعاون](/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp)

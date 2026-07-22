@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "robot"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/claude-code-video-toolkit/"
+canonical_url: "https://thakicloud.com/tech-blog/en/technique/claude-code-video-toolkit/"
 categories:
   - tutorials
 ---

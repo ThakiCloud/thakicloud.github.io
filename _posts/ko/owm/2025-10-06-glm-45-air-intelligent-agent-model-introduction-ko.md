@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/owm/glm-45-air-intelligent-agent-model-introduction/
-canonical_url: "https://thakicloud.github.io/ko/owm/glm-45-air-intelligent-agent-model-introduction/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/glm-45-air-intelligent-agent-model-introduction/"
 published: false
 categories:
   - owm

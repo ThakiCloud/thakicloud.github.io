@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/multi-agent-orchestration-production-patterns/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
 categories:
   - agentops

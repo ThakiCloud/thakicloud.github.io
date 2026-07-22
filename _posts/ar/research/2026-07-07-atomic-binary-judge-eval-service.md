@@ -21,7 +21,7 @@ toc_icon: "flask"
 categories:
   - research
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/atomic-binary-judge-eval-service/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/atomic-binary-judge-eval-service/"
 ---
 
 ## لمن هذا المقال

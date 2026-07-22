@@ -4,7 +4,7 @@ excerpt: "تحليل محاضرة إريك شميت في TED: ظاهرة الت�
 date: 2025-05-27
 lang: ar
 permalink: /ar/news/eric-schmidt-ted-ai-revolution-underhyped/
-canonical_url: "https://thakicloud.github.io/ar/news/eric-schmidt-ted-ai-revolution-underhyped/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/eric-schmidt-ted-ai-revolution-underhyped/"
 tags:
   - أخبار التقنية
   - الذكاء الاصطناعي

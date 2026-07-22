@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/datasets/comprehensive-guide-llm-datasets-curation/
-canonical_url: "https://thakicloud.github.io/ar/datasets/comprehensive-guide-llm-datasets-curation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/comprehensive-guide-llm-datasets-curation/"
 categories:
   - datasets
 ---

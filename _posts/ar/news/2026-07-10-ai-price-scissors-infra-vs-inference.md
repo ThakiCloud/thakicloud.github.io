@@ -6,7 +6,7 @@ seo_description: "ارتفاع أسعار رفوف HBM4 وانهيار أسعا�
 date: 2026-07-10
 last_modified_at: 2026-07-10
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/ai-price-scissors-infra-vs-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/ai-price-scissors-infra-vs-inference/"
 author_profile: true
 toc: true
 toc_label: "المحتويات"

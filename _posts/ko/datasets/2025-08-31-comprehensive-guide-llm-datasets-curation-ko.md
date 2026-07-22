@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/comprehensive-guide-llm-datasets-curation/
-canonical_url: "https://thakicloud.github.io/ko/datasets/comprehensive-guide-llm-datasets-curation/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/comprehensive-guide-llm-datasets-curation/"
 categories:
   - datasets
 ---

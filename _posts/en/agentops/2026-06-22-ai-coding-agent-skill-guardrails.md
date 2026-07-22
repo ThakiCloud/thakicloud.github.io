@@ -6,7 +6,7 @@ seo_description: "In an era where a skill pack can redefine an agent's behavior 
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-coding-agent-skill-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-coding-agent-skill-guardrails/"
 tags:
   - ai-agents
   - security

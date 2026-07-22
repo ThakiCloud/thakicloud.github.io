@@ -17,7 +17,7 @@ toc_label: "Contents"
 toc_icon: "sitemap"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/sakana-fugu-orchestration-model/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/sakana-fugu-orchestration-model/"
 reading_time: true
 categories:
   - agentops

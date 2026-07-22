@@ -4,7 +4,7 @@ excerpt: "A comprehensive analysis of Manus AI's unique agent loop mechanism and
 date: 2025-06-01
 lang: en
 permalink: /en/research/manus-ai-agent-loop-modular-architecture-analysis/
-canonical_url: "https://thakicloud.github.io/en/research/manus-ai-agent-loop-modular-architecture-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/manus-ai-agent-loop-modular-architecture-analysis/"
 tags: 
   - manus-ai
   - agent-loop

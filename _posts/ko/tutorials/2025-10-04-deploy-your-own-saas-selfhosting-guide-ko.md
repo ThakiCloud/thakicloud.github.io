@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/deploy-your-own-saas-selfhosting-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/deploy-your-own-saas-selfhosting-guide-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/deploy-your-own-saas-selfhosting-guide-ko/"
 categories:
   - tutorials
 published: false

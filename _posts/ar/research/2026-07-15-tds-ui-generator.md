@@ -17,7 +17,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/tds-ui-generator/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/tds-ui-generator/"
 ---
 
 هذا المقال سجل لما تعلّمه فريق المنصة لدينا أثناء بناء نموذج يُولّد تلقائيًا واجهات لوحة تحكم لسطح المكتب باستخدام نظام تصميم THAKI (`@thaki/tds`). الجمهور المستهدف هو مهندسو الواجهة الأمامية وتعلّم الآلة الذين يحاولون استخلاص واجهات مستخدم من نموذج لغوي كبير. ولنبدأ بالخلاصة مباشرة: جودة توليد الشاشات لم يحددها حجم النموذج، بل **البوابة التي تُترجم المخرجات فعليًا إلى كود وتتحقق منها**.

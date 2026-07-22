@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/hermes-agent-learn-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/hermes-agent-learn-skills/"
 audiobook: https://drive.google.com/file/d/1ssbIC8_8trrvaUvSiRBwsUdjzZxX_Vmo/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:

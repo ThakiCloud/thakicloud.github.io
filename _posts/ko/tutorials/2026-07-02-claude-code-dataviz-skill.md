@@ -9,7 +9,7 @@ tags:
   - skill
 date: 2026-07-02
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-dataviz-skill/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/claude-code-dataviz-skill/"
 categories:
   - tutorials
 ---

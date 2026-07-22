@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/tensorrt-llm-inference-benchmarking-performance-tuning-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/tensorrt-llm-inference-benchmarking-performance-tuning-guide/"
 reading_time: true
 published: false
 categories:

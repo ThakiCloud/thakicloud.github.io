@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/devops/2025-07-17-turso-database-devops-complete-guide-rust-sqlite/"
+canonical_url: "https://thakicloud.com/tech-blog/en/devops/2025-07-17-turso-database-devops-complete-guide-rust-sqlite/"
 reading_time: true
 lang: en
 categories:

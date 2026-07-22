@@ -23,7 +23,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/rowfill-unstructured-data-processing-platform/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/rowfill-unstructured-data-processing-platform/"
 reading_time: true
 categories:
   - datasets

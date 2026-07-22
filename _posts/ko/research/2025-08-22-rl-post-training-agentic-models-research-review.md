@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/rl-post-training-agentic-models-research-review/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/rl-post-training-agentic-models-research-review/"
 reading_time: true
 published: false
 categories:

@@ -17,7 +17,7 @@ tags:
 categories:
   - agentops
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/physical-ai-needs-action-records/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/physical-ai-needs-action-records/"
 ---
 
 ## AI Steps Outside the Screen, and the Weight of a Wrong Answer Changes

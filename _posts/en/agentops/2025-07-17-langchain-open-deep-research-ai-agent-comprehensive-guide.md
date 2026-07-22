@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
 lang: en
 reading_time: true
 categories:

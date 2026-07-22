@@ -6,7 +6,7 @@ seo_description: "Deep dive into OpenAI research analyzing 7 million users and 1
 date: 2025-09-16
 lang: en
 permalink: /en/research/chatgpt-usage-patterns-research-analysis/
-canonical_url: "https://thakicloud.github.io/en/research/chatgpt-usage-patterns-research-analysis-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/chatgpt-usage-patterns-research-analysis-en/"
 tags:
   - ChatGPT
   - user-behavior-analysis

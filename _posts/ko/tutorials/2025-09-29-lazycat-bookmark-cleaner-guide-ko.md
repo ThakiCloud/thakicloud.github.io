@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/lazycat-bookmark-cleaner-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/lazycat-bookmark-cleaner-guide/"
 lang: ko
 permalink: /ko/tutorials/lazycat-bookmark-cleaner-guide/
 published: false
@@ -384,7 +384,7 @@ LazyCat Bookmark Cleaner를 통해 더욱 체계적이고 효율적인 북마크
 **🔗 관련 링크**
 - [LazyCat Bookmark Cleaner GitHub](https://github.com/Alanrk/LazyCat-Bookmark-Cleaner)
 - [Chrome 웹 스토어](https://chrome.google.com/webstore)
-- [북마크 관리 모범 사례](https://thakicloud.github.io/ko/tutorials/bookmark-management-best-practices/)
+- [북마크 관리 모범 사례](https://thakicloud.com/tech-blog/ko/tutorials/bookmark-management-best-practices/)
 
 **📝 참고 자료**
 - Chrome Extensions API 문서

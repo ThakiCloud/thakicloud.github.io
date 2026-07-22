@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/"
 reading_time: true
 published: false
 categories:

@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/code-as-agent-harness-survey/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/code-as-agent-harness-survey/"
 lang: en
 reading_time: true
 categories:

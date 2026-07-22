@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/github-spec-kit-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/github-spec-kit-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/github-spec-kit-tutorial/"
 published: false
 categories:
   - tutorials

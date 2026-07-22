@@ -6,7 +6,7 @@ seo_description: "ملخص لأبحاث النصف الأول من عام 2026 �
 date: 2026-07-12
 last_modified_at: 2026-07-12
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/distill-skill-fleet-small-models/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/distill-skill-fleet-small-models/"
 tags:
   - agentops
   - distillation

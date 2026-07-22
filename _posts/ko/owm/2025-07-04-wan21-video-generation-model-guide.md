@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/wan21-video-generation-model-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/wan21-video-generation-model-guide/"
 reading_time: true
 published: false
 categories:
@@ -625,6 +625,6 @@ Wan2.1과 같은 오픈소스 모델의 등장으로 비디오 생성 기술이 
 ---
 
 **관련 글:**
-- [Stable Video Diffusion 완벽 가이드](https://thakicloud.github.io/owm/stable-video-diffusion-guide/)
-- [AI 기반 콘텐츠 제작 워크플로우](https://thakicloud.github.io/tutorials/ai-content-creation-workflow/)
-- [GPU 최적화 기법 실무 가이드](https://thakicloud.github.io/dev/gpu-optimization-guide/) 
+- [Stable Video Diffusion 완벽 가이드](https://thakicloud.com/tech-blog/owm/stable-video-diffusion-guide/)
+- [AI 기반 콘텐츠 제작 워크플로우](https://thakicloud.com/tech-blog/tutorials/ai-content-creation-workflow/)
+- [GPU 최적화 기법 실무 가이드](https://thakicloud.com/tech-blog/dev/gpu-optimization-guide/) 

@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "دليل AceReason-1.1-SFT"
-canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-acereason-1-1-sft-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/nvidia-acereason-1-1-sft-dataset-comprehensive-guide/"
 published: false
 categories:
   - datasets

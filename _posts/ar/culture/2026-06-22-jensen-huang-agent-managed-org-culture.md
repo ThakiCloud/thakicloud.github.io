@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/jensen-huang-agent-managed-org-culture/
-canonical_url: "https://thakicloud.github.io/ar/culture/jensen-huang-agent-managed-org-culture/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/jensen-huang-agent-managed-org-culture/"
 categories:
   - culture
 ---

@@ -16,7 +16,7 @@ lang: en
 author_profile: true
 toc: true
 toc_label: "Development Environment Guide"
-canonical_url: "https://thakicloud.github.io/en/dev/jupyterlab-code-server-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/jupyterlab-code-server-complete-guide/"
 published: false
 categories:
   - dev

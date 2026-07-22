@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/claude-code-cd-prompt-cache/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/claude-code-cd-prompt-cache/"
 reading_time: true
 categories:
   - dev

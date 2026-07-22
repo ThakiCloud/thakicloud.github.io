@@ -5,7 +5,7 @@ seo_title: "리즈닝 노력 조절 - LLM 저·중·고 추론 모드 학습법 
 seo_description: "reasoning effort는 무엇이고 어떻게 학습시키는가. effort-conditioned SFT와 RLVR 길이 페널티부터 DeepSeek V4·Nemotron 3 Ultra·Kimi K2.5·GLM-5·Qwen3·Inkling 6개 오픈웨이트 모델의 학습 레시피와 추론 시점 예산 제어까지, Sebastian Raschka의 분석을 클라우드·추론 서빙 관점에서 정리했습니다."
 date: 2026-07-19
 last_modified_at: 2026-07-19
-canonical_url: "https://thakicloud.github.io/ko/research/controlling-reasoning-effort-in-llms/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/controlling-reasoning-effort-in-llms/"
 lang: ko
 reading_time: true
 tags:

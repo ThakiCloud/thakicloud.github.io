@@ -16,7 +16,7 @@ toc: false
 image: /assets/images/posts/comics/mesh-llm-no-80gb-gpu/strip.png
 audiobook: /assets/audio/posts/mesh-llm-no-80gb-gpu/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-canonical_url: "https://thakicloud.github.io/en/comics/mesh-llm-no-80gb-gpu/"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/mesh-llm-no-80gb-gpu/"
 ---
 
 To run a 70B-plus model, the going wisdom says you need a single 80GB GPU that costs a fortune. Mesh LLM flips that assumption: slice the inference into pieces and spread them across the devices you already own. Instead of buying one monster, you gang up the small stuff and make it act like one. Paxis and Metis take the idea for a ThakiCloud-flavored spin.

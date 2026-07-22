@@ -15,7 +15,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/agentic-memory-action-space/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-memory-action-space/"
 audiobook: /assets/audio/posts/agentic-memory-action-space/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

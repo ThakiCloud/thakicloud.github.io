@@ -11,7 +11,7 @@ tags:
   - paxis
 date: 2026-07-11
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/gguf-quantization-internals/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/gguf-quantization-internals/"
 categories:
   - llmops
 ---

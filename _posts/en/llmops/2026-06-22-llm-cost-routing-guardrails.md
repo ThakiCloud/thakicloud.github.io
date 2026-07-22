@@ -17,7 +17,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/llm-cost-routing-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-cost-routing-guardrails/"
 reading_time: true
 categories:
   - llmops

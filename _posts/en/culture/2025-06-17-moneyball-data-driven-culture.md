@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/culture/moneyball-data-driven-culture/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/moneyball-data-driven-culture/"
 categories:
   - culture
 ---

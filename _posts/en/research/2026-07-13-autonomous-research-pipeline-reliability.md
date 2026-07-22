@@ -9,7 +9,7 @@ categories: [research]
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/autonomous-research-pipeline-reliability/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/autonomous-research-pipeline-reliability/"
 ---
 
 This article will be useful if you operate, or are considering adopting, an autonomous agent pipeline that generates papers unattended every night, or if you are part of a team that cannot be fully confident an automation system is actually running reliably just by inspecting its final outputs. The paper introduced today is a case study in which the authors audit their own nightly autonomous paper-generation pipeline (nightly-paper-factory) using eight days of real operational logs. Rather than looking at the final papers themselves, they examine the gate pass records, topic duplication checks, and language purity flags generated along the way, and independently recompute the dashboard figures the pipeline itself reports from the raw logs.

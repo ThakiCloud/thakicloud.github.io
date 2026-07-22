@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/
-canonical_url: "https://thakicloud.github.io/ar/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/liquid-ai-lfm2-8b-a1b-edge-ai-model/"
 published: false
 categories:
   - owm

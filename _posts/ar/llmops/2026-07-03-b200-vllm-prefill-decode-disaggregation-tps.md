@@ -6,7 +6,7 @@ seo_description: "قسنا TPS وTPOT للتوازي على مستوى المُ�
 date: 2026-07-03
 last_modified_at: 2026-07-03
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
 tags:
   - vllm
   - b200

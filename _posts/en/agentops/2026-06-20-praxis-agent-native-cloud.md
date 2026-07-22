@@ -4,7 +4,7 @@ excerpt: "Just as traditional clouds treat servers as first-class resources, Pax
 seo_title: "Paxis Agent-Native Cloud: Governance, CostRouter, and Evolving Skills - Thaki Cloud"
 seo_description: "ThakiCloud Paxis is an Agent-Native Cloud for running autonomous AI agents safely. It features L0-L3 autonomy governance, multi-LLM CostRouter cost optimization, a Git-based HKE knowledge engine, and an 849-skill harness. Explained with real code."
 lang: en
-canonical_url: https://thakicloud.github.io/en/agentops/praxis-agent-native-cloud/
+canonical_url: https://thakicloud.com/tech-blog/en/agentops/praxis-agent-native-cloud/
 date: 2026-06-20
 last_modified_at: 2026-06-20
 tags:

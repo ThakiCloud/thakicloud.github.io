@@ -10,7 +10,7 @@ tags:
   - open-weights
 date: 2026-07-04
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/llmops/personal-ai-computer-onprem-vram/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/personal-ai-computer-onprem-vram/"
 categories:
   - llmops
 ---

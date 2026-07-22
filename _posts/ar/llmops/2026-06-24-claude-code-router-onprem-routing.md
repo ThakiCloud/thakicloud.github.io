@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/claude-code-router-onprem-routing/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/claude-code-router-onprem-routing/"
 reading_time: true
 categories:
   - llmops

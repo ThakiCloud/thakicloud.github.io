@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "sitemap"
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-project-anatomy-complete-map/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
 published: false

@@ -23,7 +23,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/polaris-open-source-ai-revolution-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/polaris-open-source-ai-revolution-guide/"
 reading_time: true
 published: false
 categories:

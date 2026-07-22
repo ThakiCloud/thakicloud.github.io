@@ -19,7 +19,7 @@ categories:
   - dev
   - agentops
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/archify-agent-architecture-diagrams/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/archify-agent-architecture-diagrams/"
 ---
 
 ![صورة تجريدية تصوّر صناديق وخطوط ربط عديدة تتقارب في بنية شبكية واحدة مرتّبة](/assets/images/archify-agent-architecture-diagrams-hero.png)

@@ -19,7 +19,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/agent-native-memory-system/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/agent-native-memory-system/"
 reading_time: true
 categories:
   - research

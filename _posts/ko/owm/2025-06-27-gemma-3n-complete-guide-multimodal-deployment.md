@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Gemma 3n 완전 가이드"
-canonical_url: "https://thakicloud.github.io/owm/tutorials/gemma-3n-complete-guide-multimodal-deployment/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/tutorials/gemma-3n-complete-guide-multimodal-deployment/"
 published: false
 categories:
   - owm

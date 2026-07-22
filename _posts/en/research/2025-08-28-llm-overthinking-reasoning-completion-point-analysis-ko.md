@@ -15,7 +15,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/research/llm-overthinking-reasoning-completion-point-analysis/
-canonical_url: "https://thakicloud.github.io/en/research/llm-overthinking-reasoning-completion-point-analysis-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/llm-overthinking-reasoning-completion-point-analysis-ko/"
 categories:
   - research
 published: false

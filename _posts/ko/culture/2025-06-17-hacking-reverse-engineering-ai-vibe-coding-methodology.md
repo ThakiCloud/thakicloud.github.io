@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
 categories:
   - culture
 ---

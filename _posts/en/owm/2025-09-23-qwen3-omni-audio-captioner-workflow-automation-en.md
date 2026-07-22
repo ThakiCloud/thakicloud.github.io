@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-canonical_url: "https://thakicloud.github.io/en/owm/qwen3-omni-audio-captioner-workflow-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/qwen3-omni-audio-captioner-workflow-automation/"
 lang: en
 permalink: /en/owm/qwen3-omni-audio-captioner-workflow-automation/
 published: false

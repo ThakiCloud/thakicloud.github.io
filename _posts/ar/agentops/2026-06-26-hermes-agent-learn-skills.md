@@ -17,7 +17,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "robot"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/hermes-agent-learn-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/hermes-agent-learn-skills/"
 categories:
   - agentops
 published: false

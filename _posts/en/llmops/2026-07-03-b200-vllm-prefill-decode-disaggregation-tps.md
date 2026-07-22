@@ -6,7 +6,7 @@ seo_description: "We measured TPS and TPOT for tensor parallelism (TP=2), data p
 date: 2026-07-03
 last_modified_at: 2026-07-03
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
 tags:
   - vllm
   - b200

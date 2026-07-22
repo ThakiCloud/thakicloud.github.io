@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/memory-becomes-an-action-space/strip.png
-canonical_url: "https://thakicloud.github.io/en/comics/memory-becomes-an-action-space/"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/memory-becomes-an-action-space/"
 audiobook: /assets/audio/posts/memory-becomes-an-action-space/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---

@@ -17,7 +17,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/from-owning-to-governing-ai-stack/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/from-owning-to-governing-ai-stack/"
 ---
 
 ## سيري تعمل الآن فوق وحدات معالجة رسوميات جوجل

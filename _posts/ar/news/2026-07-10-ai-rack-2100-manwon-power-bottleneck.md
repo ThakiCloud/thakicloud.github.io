@@ -6,7 +6,7 @@ seo_description: "المحور الذي يجمع أخبار 10 يوليو 2026 �
 date: 2026-07-10
 last_modified_at: 2026-07-10
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/ai-rack-2100-manwon-power-bottleneck/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/ai-rack-2100-manwon-power-bottleneck/"
 author_profile: true
 toc: true
 toc_label: "المحتويات"

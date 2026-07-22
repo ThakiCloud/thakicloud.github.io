@@ -21,7 +21,7 @@ header:
 toc: true
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/gpu-inference-cost-optimization-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/gpu-inference-cost-optimization-thakicloud/"
 categories:
   - llmops
 published: false
@@ -212,4 +212,4 @@ flowchart LR
 
 ---
 
-*ThakiCloud منصة AI/ML مبنية على Kubernetes توفّر جدولة GPU واستدلالاً فعّالاً ونشراً محلياً لتحسين التكاليف. إن أثارك منتجنا أو فرص العمل لدينا، زر [ThakiCloud](https://thakicloud.github.io).*
+*ThakiCloud منصة AI/ML مبنية على Kubernetes توفّر جدولة GPU واستدلالاً فعّالاً ونشراً محلياً لتحسين التكاليف. إن أثارك منتجنا أو فرص العمل لدينا، زر [ThakiCloud](https://thakicloud.com/tech-blog).*

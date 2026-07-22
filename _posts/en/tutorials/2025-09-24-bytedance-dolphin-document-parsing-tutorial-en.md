@@ -16,7 +16,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/bytedance-dolphin-document-parsing-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/bytedance-dolphin-document-parsing-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/bytedance-dolphin-document-parsing-tutorial/"
 published: false
 categories:
   - tutorials

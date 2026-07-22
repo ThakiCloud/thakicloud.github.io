@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/anteon-kubernetes-monitoring-performance-testing-tutorial/"
 published: false
 categories:
   - tutorials

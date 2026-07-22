@@ -6,7 +6,7 @@ seo_description: "غوص عميق في بحث OpenAI الذي يحلل 7 ملي�
 date: 2025-09-16
 lang: ar
 permalink: /ar/research/chatgpt-usage-patterns-research-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/chatgpt-usage-patterns-research-analysis-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/chatgpt-usage-patterns-research-analysis-ar/"
 tags:
   - ChatGPT
   - تحليل-سلوك-المستخدمين

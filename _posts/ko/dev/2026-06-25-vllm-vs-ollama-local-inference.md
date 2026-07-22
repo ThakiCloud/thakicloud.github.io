@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/dev/vllm-vs-ollama-local-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/vllm-vs-ollama-local-inference/"
 reading_time: true
 categories:
   - dev

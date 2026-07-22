@@ -17,7 +17,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-agent-memory-context-engineering/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-agent-memory-context-engineering/"
 reading_time: true
 categories:
   - agentops

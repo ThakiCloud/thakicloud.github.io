@@ -4,7 +4,7 @@ excerpt: "الحائز على جائزة نوبل جيفري هينتون في �
 date: 2025-06-17
 lang: ar
 permalink: /ar/news/hinton-ai-godfather-interview-key-insights/
-canonical_url: "https://thakicloud.github.io/ar/news/hinton-ai-godfather-interview-key-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/hinton-ai-godfather-interview-key-insights/"
 tags:
   - أمان الذكاء الاصطناعي
   - جيفري هينتون

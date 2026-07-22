@@ -6,7 +6,7 @@ seo_description: "A 5-section layered image prompt, original-preservation anchor
 date: 2026-06-21
 last_modified_at: 2026-06-21
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/structured-image-prompt-style-transfer/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/structured-image-prompt-style-transfer/"
 tags:
   - prompt-engineering
   - image-generation

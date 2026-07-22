@@ -6,7 +6,7 @@ seo_description: "من خارطة طريق تبني الذكاء الاصطنا�
 date: 2026-07-14
 last_modified_at: 2026-07-15
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/banks-buy-control-not-capability/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/banks-buy-control-not-capability/"
 tags:
   - agent-governance
   - sovereign-ai

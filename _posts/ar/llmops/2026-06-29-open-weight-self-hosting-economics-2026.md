@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/open-weight-self-hosting-economics-2026/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/open-weight-self-hosting-economics-2026/"
 reading_time: true
 header:
   image: /assets/images/open-weight-self-hosting-economics-2026-hero.webp

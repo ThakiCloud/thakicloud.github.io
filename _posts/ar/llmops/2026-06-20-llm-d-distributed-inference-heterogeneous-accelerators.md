@@ -26,7 +26,7 @@ toc_sticky: true
 categories:
   - llmops
 published: false
-canonical_url: "https://thakicloud.github.io/ar/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
 ---
 
 ![مجموعة GPU ومجموعة NPU تعملان معاً في نفس الكلستر لتقديم الاستدلال](/assets/images/llm-d-heterogeneous-hero.webp)

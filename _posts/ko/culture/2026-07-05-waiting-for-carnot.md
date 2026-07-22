@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/waiting-for-carnot/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/waiting-for-carnot/"
 header:
   image: /assets/images/waiting-for-carnot-hero.webp
 categories:

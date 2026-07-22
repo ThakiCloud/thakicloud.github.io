@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/enterprise-agents-need-control-plane/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/enterprise-agents-need-control-plane/"
 published: false
 audiobook: /assets/audio/posts/enterprise-agents-need-control-plane/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"

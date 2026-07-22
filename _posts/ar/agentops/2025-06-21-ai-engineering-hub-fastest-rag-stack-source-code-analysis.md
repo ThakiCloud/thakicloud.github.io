@@ -3,7 +3,7 @@ title: "تحليل شامل لكود المصدر لـ AI Engineering Hub Fastes
 excerpt: "تحليل معمّق على مستوى كود المصدر لمشروع Fastest RAG Stack من AI Engineering Hub الحاصل على 10.7 ألف نجمة، مع إرشادات عملية لبناء نظام RAG فائق السرعة باستخدام Binary Quantization."
 date: 2025-06-21
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/ai-engineering-hub-fastest-rag-stack-source-code-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/ai-engineering-hub-fastest-rag-stack-source-code-analysis/"
 tags: 
   - Fastest-RAG-Stack
   - Binary-Quantization

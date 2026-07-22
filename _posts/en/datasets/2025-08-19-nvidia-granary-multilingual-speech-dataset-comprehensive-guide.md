@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 lang: en
 reading_time: true
 categories:

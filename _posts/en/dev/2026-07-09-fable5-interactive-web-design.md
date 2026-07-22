@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/fable5-interactive-web-design/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/fable5-interactive-web-design/"
 reading_time: true
 categories:
   - dev

@@ -9,7 +9,7 @@ categories: [research]
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/confidence-gated-ocr-vlm-cascade/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/confidence-gated-ocr-vlm-cascade/"
 ---
 
 Any engineer who has hooked a VLM into a document parsing pipeline has probably faced the same fork in the road at some point. A model with well under a billion parameters can read most documents just fine, yet the moment a scan is degraded or written in an unfamiliar script, that same small model confidently produces the wrong answer. Routing every document to an expensive, large VLM instead isn't affordable either. The paper introduced in this post formalizes that fork in the road as a cascade governed by a single confidence threshold, and points out that the very moment the confidence signal itself becomes least trustworthy happens to coincide with the moment the cascade needs it most. It's worth a read for any cloud or AI engineer in Korea designing document OCR or VLM serving costs.

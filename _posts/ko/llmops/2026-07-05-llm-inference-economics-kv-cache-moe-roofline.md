@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/llm-inference-economics-kv-cache-moe-roofline/
-canonical_url: "https://thakicloud.github.io/ko/llmops/llm-inference-economics-kv-cache-moe-roofline/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/llm-inference-economics-kv-cache-moe-roofline/"
 categories:
   - llmops
 header:

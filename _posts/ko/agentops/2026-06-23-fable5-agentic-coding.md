@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/fable5-agentic-coding/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable5-agentic-coding/"
 categories:
   - agentops
 published: false

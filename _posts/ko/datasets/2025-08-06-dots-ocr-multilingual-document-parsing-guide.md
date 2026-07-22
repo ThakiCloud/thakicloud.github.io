@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/datasets/dots-ocr-multilingual-document-parsing-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 categories:
   - datasets

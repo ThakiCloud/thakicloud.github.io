@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/en/agentops/codex-goal-delegation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/codex-goal-delegation/"
 categories:
   - agentops
 ---

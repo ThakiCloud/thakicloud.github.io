@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/kimi-k2-tool-calling-workflow-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/kimi-k2-tool-calling-workflow-automation-guide/"
 reading_time: true
 published: false
 categories:

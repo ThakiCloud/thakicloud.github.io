@@ -20,7 +20,7 @@ published: true
 lang: ko
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ko/llmops/llm-legal-grounding-korean-law-api/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/llm-legal-grounding-korean-law-api/"
 ---
 
 ![검증된 원문에 답을 묶는 근거 기반 파이프라인](/assets/images/llm-legal-grounding-korean-law-api-hero.png)

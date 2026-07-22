@@ -15,7 +15,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/news/repomirror-git-caching-revolutionary-tool/
-canonical_url: "https://thakicloud.github.io/ar/news/repomirror-git-caching-revolutionary-tool/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/repomirror-git-caching-revolutionary-tool/"
 published: false
 categories:
   - news

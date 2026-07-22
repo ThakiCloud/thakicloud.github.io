@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
 reading_time: true
 published: false
 categories:
@@ -33,7 +33,7 @@ categories:
 
 ## 서론: 프로덕션 LLMOps의 핵심 구성 요소
 
-[Part 1](https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)에서 실시간 Steering 기술과 지능형 컨텍스트 관리를 다뤘다면, Part 2에서는 **프로덕션 환경에서 LLM 시스템을 안정적으로 운영하기 위한 핵심 구성 요소들**을 심층 분석합니다.
+[Part 1](https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)에서 실시간 Steering 기술과 지능형 컨텍스트 관리를 다뤘다면, Part 2에서는 **프로덕션 환경에서 LLM 시스템을 안정적으로 운영하기 위한 핵심 구성 요소들**을 심층 분석합니다.
 
 Claude Code 역공학을 통해 발견된 나머지 핵심 기술들은 다음과 같습니다:
 
@@ -1301,7 +1301,7 @@ Claude Code 역공학을 통해 발견된 이러한 기술들은 **차세대 LLM
 
 ### 📚 시리즈 링크
 
-- **Part 1**: [실시간 Steering과 지능형 컨텍스트 관리](https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)
+- **Part 1**: [실시간 Steering과 지능형 컨텍스트 관리](https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)
 - **Part 2**: Agent 루프와 도구 실행 프레임워크 (현재 글)
 
 ---

@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/daisyui-tailwind-css-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/daisyui-tailwind-css-tutorial/"
 reading_time: true
 published: false
 categories:

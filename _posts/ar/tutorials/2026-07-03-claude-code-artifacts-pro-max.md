@@ -9,7 +9,7 @@ tags:
   - paxis
 date: 2026-07-03
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/claude-code-artifacts-pro-max/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/technique/claude-code-artifacts-pro-max/"
 categories:
   - tutorials
 ---

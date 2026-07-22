@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agent-s3-human-level-computer-use-breakthrough/
-canonical_url: "https://thakicloud.github.io/ko/llmops/agent-s3-human-level-computer-use-breakthrough-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agent-s3-human-level-computer-use-breakthrough-ko/"
 categories:
   - llmops
 published: false

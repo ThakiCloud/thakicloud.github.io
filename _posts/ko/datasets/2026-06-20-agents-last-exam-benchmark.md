@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "Agents Last Exam 가이드"
 reading_time: true
-canonical_url: https://thakicloud.github.io/datasets/agents-last-exam-benchmark/
+canonical_url: https://thakicloud.com/tech-blog/datasets/agents-last-exam-benchmark/
 categories:
   - datasets
 ---

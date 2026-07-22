@@ -6,7 +6,7 @@ seo_description: "تحليل شامل لأحدث نماذج الذكاء الا�
 date: 2025-09-01
 lang: ar
 permalink: /ar/owm/claude-opus4-sonnet4-system-card-analysis/
-canonical_url: "https://thakicloud.github.io/ar/owm/claude-opus4-sonnet4-system-card-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/claude-opus4-sonnet4-system-card-analysis/"
 tags:
   - Claude-Opus-4
   - Claude-Sonnet-4

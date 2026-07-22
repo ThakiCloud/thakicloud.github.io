@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/illa-helper-immersive-language-learning-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/illa-helper-immersive-language-learning-complete-guide/"
 reading_time: true
 published: false
 categories:
@@ -562,6 +562,6 @@ Illa Helper는 단순한 번역 도구를 넘어서 **진정한 몰입형 언어
 ---
 
 **관련 글 보기**:
-- [AI 기반 언어 학습 도구 비교 분석](https://thakicloud.github.io/reviews/ai-language-learning-tools-comparison/)
-- [OpenAI API 활용 가이드](https://thakicloud.github.io/llmops/openai-api-complete-guide/)
-- [브라우저 확장 프로그램 개발 입문](https://thakicloud.github.io/dev/browser-extension-development-guide/)
+- [AI 기반 언어 학습 도구 비교 분석](https://thakicloud.com/tech-blog/reviews/ai-language-learning-tools-comparison/)
+- [OpenAI API 활용 가이드](https://thakicloud.com/tech-blog/llmops/openai-api-complete-guide/)
+- [브라우저 확장 프로그램 개발 입문](https://thakicloud.com/tech-blog/dev/browser-extension-development-guide/)

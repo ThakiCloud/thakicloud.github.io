@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/culture/saberr-team-chemistry-data-driven-hiring/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/saberr-team-chemistry-data-driven-hiring/"
 categories:
   - culture
 ---

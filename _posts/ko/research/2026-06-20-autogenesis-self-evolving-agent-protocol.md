@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/autogenesis-self-evolving-agent-protocol/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/autogenesis-self-evolving-agent-protocol/"
 reading_time: true
 categories:
   - research

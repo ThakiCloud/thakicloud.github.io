@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/pepper-proactive-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/pepper-proactive-ai-assistant-tutorial-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/pepper-proactive-ai-assistant-tutorial-en/"
 categories:
   - tutorials
 published: false

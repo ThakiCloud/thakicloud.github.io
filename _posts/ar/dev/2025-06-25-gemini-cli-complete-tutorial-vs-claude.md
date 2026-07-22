@@ -5,7 +5,7 @@ excerpt: "استكشاف شامل لميزات Gemini CLI الثورية ومق�
 date: 2025-06-25
 tags: [gemini-cli, google-gemini, ai-agent, multimodal-ai, tool-calling, mcp-servers, claude-comparison]
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/gemini-cli-complete-tutorial-vs-claude/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/gemini-cli-complete-tutorial-vs-claude/"
 toc: true
 toc_sticky: true
 toc_label: "الدليل الشامل لـ Gemini CLI"

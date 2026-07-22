@@ -9,7 +9,7 @@ tags:
   - agentops
 date: 2026-07-06
 lang: en
-canonical_url: "https://thakicloud.github.io/en/tutorials/claude-code-project-anatomy/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/claude-code-project-anatomy/"
 categories:
   - tutorials
 ---

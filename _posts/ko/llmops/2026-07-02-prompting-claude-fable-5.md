@@ -11,7 +11,7 @@ date: 2026-07-02
 lang: ko
 audiobook: https://drive.google.com/file/d/1SC2JUwlVjspyMUJTkxIJroLGohmbRwGQ/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/llmops/prompting-claude-fable-5/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/prompting-claude-fable-5/"
 categories:
   - llmops
 ---

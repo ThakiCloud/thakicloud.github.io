@@ -17,7 +17,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/fable-advisor-multi-model-orchestration/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/fable-advisor-multi-model-orchestration/"
 ---
 
 عند استخدام وكلاء البرمجة، يطرأ سؤال طبيعي على الذهن. كتابة المواصفات بدقة ومراجعة الفروقات (diff) الناتجة بعين ثاقبة عمل يختلف في طبيعته عن كتابة الشيفرة سطراً سطراً، فلماذا إذن يتوجب على نموذج واحد أن يقوم بالمهمتين معاً؟ إضافة `fable-advisor` التي طُرحت مؤخراً وأثارت اهتماماً واسعاً تجيب على هذا السؤال مباشرة. إنها سير عمل متعدد الموردين حيث **يقتصر دور Claude Fable 5 على القيادة، بينما يتولى Grok 4.5 وحده التنفيذ الفعلي**. يحلل هذا المقال تلك البنية، ويتحقق مما تعنيه هذه الهندسة من منظور تشغيل ThakiCloud الذي يتعامل مع الوكلاء المتعددين وتوجيه النماذج كمورد أساسي من الدرجة الأولى.

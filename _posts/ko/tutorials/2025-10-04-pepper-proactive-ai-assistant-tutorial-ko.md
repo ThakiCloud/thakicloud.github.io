@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/pepper-proactive-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-assistant-tutorial-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/pepper-proactive-ai-assistant-tutorial-ko/"
 categories:
   - tutorials
 published: false

@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/magic-resume-ai-powered-editor-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/magic-resume-ai-powered-editor-complete-tutorial/"
 lang: en
 permalink: /en/tutorials/magic-resume-ai-powered-editor-complete-tutorial/
 published: false

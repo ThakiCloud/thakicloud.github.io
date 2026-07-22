@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/tutorials/fable-5-subscription-shift-sovereign-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/fable-5-subscription-shift-sovereign-ai/"
 reading_time: true
 categories:
   - tutorials

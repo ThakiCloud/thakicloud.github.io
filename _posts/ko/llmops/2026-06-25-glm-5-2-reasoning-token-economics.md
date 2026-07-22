@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-reasoning-token-economics/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
 categories:
   - llmops
@@ -27,7 +27,7 @@ categories:
 
 루빅스 큐브 하나를 풀게 하는 데 모델이 22만 토큰을 생각한다면, 그 비용은 누가 냅니까. 개발자 도구를 만드는 Matt Pocock(@mattpocockuk)이 자신의 `/teach` 스킬과 `pi`로 GLM-5.2에 루빅스 큐브 풀이를 시키면서 남긴 첫인상이 바로 이 질문을 던집니다. 가장 낮은 effort 설정(High)에서도 3턴에 약 22만 토큰의 사고 트레이스가 쌓였다는 관찰입니다. 추론 모델이 강해진다는 말은 곧 토큰을 많이 쓴다는 말이고, 토큰을 많이 쓴다는 말은 누군가 그만큼의 청구서를 받는다는 뜻입니다.
 
-이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 가중치를 1비트로 줄여 작은 하드웨어에 올리는 양자화 이야기는 [별도 글](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 한 단계 위입니다. 장황하게 생각하는 오픈웨이트 추론 모델이 등장했을 때, **토큰당 과금하는 클라우드 API와 GPU 시간을 상각하는 온프레미스 자가호스팅의 비용 셈법이 어떻게 갈라지는가**입니다. 결론을 먼저 말하면, 추론이 길어질수록 자가호스팅 쪽이 유리해지는 구간이 분명히 존재하며, 이 지점이 ThakiCloud가 K8s 기반 멀티테넌트 플랫폼에서 주목하는 곳입니다.
+이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 가중치를 1비트로 줄여 작은 하드웨어에 올리는 양자화 이야기는 [별도 글](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 한 단계 위입니다. 장황하게 생각하는 오픈웨이트 추론 모델이 등장했을 때, **토큰당 과금하는 클라우드 API와 GPU 시간을 상각하는 온프레미스 자가호스팅의 비용 셈법이 어떻게 갈라지는가**입니다. 결론을 먼저 말하면, 추론이 길어질수록 자가호스팅 쪽이 유리해지는 구간이 분명히 존재하며, 이 지점이 ThakiCloud가 K8s 기반 멀티테넌트 플랫폼에서 주목하는 곳입니다.
 
 본문의 모든 수치는 Z.ai와 여러 매체가 공개한 측정치이거나, 공개 파라미터 수에서 도출한 산수입니다. 744B 모델은 본 분석 환경에서 직접 실행할 수 없어 자체 벤치마크 대신 공개 수치를 인용하며, 산수로 도출한 추정치는 모두 `[추정]`으로 표시합니다.
 
@@ -121,4 +121,4 @@ ThakiCloud는 K8s 기반 멀티테넌트 AI/ML SaaS 플랫폼을 운영하면서
 - GLM-5.2 분석: [felloai: GLM 5.2: Zhipu's 1M-Context Open-Source Model Explained](https://felloai.com/glm-5-2/)
 - GLM-5.2 벤치·단가: [labellerr: GLM-5.2 Just Beat GPT-5.5 at a Sixth of the Cost](https://www.labellerr.com/blog/glm-5-2-open-weight-ai-model/)
 - 공식 가중치: [GitHub: zai-org/GLM-5](https://github.com/zai-org/GLM-5)
-- 관련 글(양자화): [Unsloth GLM-5.2 1비트 Dynamic GGUF 온프레미스 분석](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)
+- 관련 글(양자화): [Unsloth GLM-5.2 1비트 Dynamic GGUF 온프레미스 분석](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)

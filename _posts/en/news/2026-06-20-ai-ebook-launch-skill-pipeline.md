@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/news/ai-ebook-launch-skill-pipeline/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/ai-ebook-launch-skill-pipeline/"
 reading_time: true
 categories:
   - news

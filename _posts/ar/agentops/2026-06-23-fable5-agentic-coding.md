@@ -6,7 +6,7 @@ seo_description: "نفصل الحقائق المؤكَّدة عن Fable 5 (تس�
 date: 2026-06-23
 last_modified_at: 2026-06-23
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/fable5-agentic-coding/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/fable5-agentic-coding/"
 tags:
   - ai-coding
   - agentic

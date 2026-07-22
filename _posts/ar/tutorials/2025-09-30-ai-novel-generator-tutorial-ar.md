@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-novel-generator-tutorial-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/ai-novel-generator-tutorial-ar/"
 lang: ar
 permalink: /ar/tutorials/ai-novel-generator-tutorial-ar/
 published: false

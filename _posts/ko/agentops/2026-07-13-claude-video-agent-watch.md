@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-video-agent-watch/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-video-agent-watch/"
 categories:
   - agentops
 audiobook: /assets/audio/posts/claude-video-agent-watch/audiobook-ko.mp3

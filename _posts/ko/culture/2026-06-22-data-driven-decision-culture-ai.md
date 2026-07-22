@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/data-driven-decision-culture-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/data-driven-decision-culture-ai/"
 categories:
   - culture
 ---
@@ -36,7 +36,7 @@ categories:
 
 ## Moneyball 계승: 직관의 시대는 끝났는가
 
-[이전 글(머니볼 사고로 데이터 기반 조직 문화 만들기)](https://thakicloud.github.io/culture/moneyball-data-driven-culture/)에서 우리는 2002년 오클랜드 어슬레틱스 이야기를 했습니다. 빌리 빈이 출루율이라는 저평가 지표를 발굴해 예산의 3분의 1로 103승을 만든 사례였습니다.
+[이전 글(머니볼 사고로 데이터 기반 조직 문화 만들기)](https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/)에서 우리는 2002년 오클랜드 어슬레틱스 이야기를 했습니다. 빌리 빈이 출루율이라는 저평가 지표를 발굴해 예산의 3분의 1로 103승을 만든 사례였습니다.
 
 그 글의 핵심 명제는 두 가지였습니다. 기존에 쓰던 지표가 틀렸을 수 있다. 데이터로 찾은 저평가 자원이 최대 효율을 만든다.
 
@@ -188,4 +188,4 @@ Moneyball의 빌리 빈은 스카우터의 직관을 버리지 않았습니다. 
 - "Jensen Huang might be the best stock picker on Wall Street and he does not even pick stocks.", 시장 관찰자 외부 평가 (Huang 본인 발언 아님). @InTheAssembly X 스레드: [https://x.com/InTheAssembly/status/2053801122632958342](https://x.com/InTheAssembly/status/2053801122632958342)
 - Jensen Huang, NVIDIA 엔지니어 토큰 예산 발언, GTC Taipei Computex 2026 키노트 트랜스크립트. Semiconalpha Substack: [https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)
 - Nebius, Applied Digital, TSMC, Micron 주가 데이터, @InTheAssembly X 스레드 (위 동일 출처)
-- ThakiCloud 블로그, "머니볼 사고로 데이터 기반 조직 문화 만들기" (계승 원문): [https://thakicloud.github.io/culture/moneyball-data-driven-culture/](https://thakicloud.github.io/culture/moneyball-data-driven-culture/)
+- ThakiCloud 블로그, "머니볼 사고로 데이터 기반 조직 문화 만들기" (계승 원문): [https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/](https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/)

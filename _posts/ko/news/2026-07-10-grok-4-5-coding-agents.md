@@ -15,7 +15,7 @@ categories:
   - news
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/news/grok-4-5-coding-agents/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/grok-4-5-coding-agents/"
 audiobook: /assets/audio/posts/grok-4-5-coding-agents/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

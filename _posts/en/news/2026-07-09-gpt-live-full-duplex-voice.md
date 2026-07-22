@@ -9,7 +9,7 @@ tags:
   - news
 date: 2026-07-09
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/gpt-live-full-duplex-voice/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/gpt-live-full-duplex-voice/"
 categories:
   - news
 published: false

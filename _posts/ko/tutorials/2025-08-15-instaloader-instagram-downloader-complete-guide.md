@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/instaloader-instagram-downloader-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/instaloader-instagram-downloader-complete-guide/"
 reading_time: true
 published: false
 categories:
@@ -842,6 +842,6 @@ Instaloader는 강력한 도구인 만큼 **윤리적이고 법적인 사용**�
 ---
 
 **관련 글:**
-- [Python 웹 스크래핑 완전 가이드](https://thakicloud.github.io/tutorials/python-web-scraping-guide/)
-- [소셜 미디어 데이터 분석 방법론](https://thakicloud.github.io/datasets/social-media-data-analysis/)
-- [OSINT 도구 모음집](https://thakicloud.github.io/tutorials/osint-tools-collection/)
+- [Python 웹 스크래핑 완전 가이드](https://thakicloud.com/tech-blog/tutorials/python-web-scraping-guide/)
+- [소셜 미디어 데이터 분석 방법론](https://thakicloud.com/tech-blog/datasets/social-media-data-analysis/)
+- [OSINT 도구 모음집](https://thakicloud.com/tech-blog/tutorials/osint-tools-collection/)

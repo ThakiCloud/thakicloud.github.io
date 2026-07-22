@@ -4,7 +4,7 @@ excerpt: "NVIDIA CEO Jensen Huang's detailed explanation of the AI industrial re
 date: 2025-05-28
 lang: en
 permalink: /en/news/jensen-huang-ai-industrial-revolution-insights/
-canonical_url: "https://thakicloud.github.io/en/news/jensen-huang-ai-industrial-revolution-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/jensen-huang-ai-industrial-revolution-insights/"
 tags: 
   - Jensen Huang
   - AI Industrial Revolution

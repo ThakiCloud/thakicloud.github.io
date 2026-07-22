@@ -17,7 +17,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/noscribe-ai-audio-transcription-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/noscribe-ai-audio-transcription-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/noscribe-ai-audio-transcription-tutorial/"
 published: false
 categories:
   - tutorials

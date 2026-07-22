@@ -14,7 +14,7 @@ tags:
   - paxis
 date: 2026-07-15
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/collective-communication-clusters/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/collective-communication-clusters/"
 categories:
   - dev
 ---

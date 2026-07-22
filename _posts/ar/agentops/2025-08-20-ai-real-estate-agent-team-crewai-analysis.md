@@ -19,7 +19,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/ai-real-estate-agent-team-crewai-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/ai-real-estate-agent-team-crewai-analysis/"
 reading_time: true
 lang: ar
 categories:

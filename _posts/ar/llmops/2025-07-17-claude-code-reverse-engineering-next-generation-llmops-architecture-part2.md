@@ -21,7 +21,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
 reading_time: true
 lang: ar
 published: false
@@ -34,7 +34,7 @@ categories:
 
 ## مقدمة: المكونات الأساسية لـ LLMOps في بيئة الإنتاج
 
-إذا كان [الجزء الأول](https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/) قد تناول تقنية التوجيه الفوري وإدارة السياق الذكي، فإن الجزء الثاني يقدّم تحليلاً معمّقاً لـ **المكونات الأساسية اللازمة لتشغيل أنظمة LLM باستقرار في بيئات الإنتاج**.
+إذا كان [الجزء الأول](https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/) قد تناول تقنية التوجيه الفوري وإدارة السياق الذكي، فإن الجزء الثاني يقدّم تحليلاً معمّقاً لـ **المكونات الأساسية اللازمة لتشغيل أنظمة LLM باستقرار في بيئات الإنتاج**.
 
 التقنيات الجوهرية المتبقية التي كشفتها الهندسة العكسية لـ Claude Code هي:
 
@@ -1302,7 +1302,7 @@ class PerformanceOptimizer:
 
 ### روابط السلسلة
 
-- **الجزء الأول**: [التوجيه الفوري وإدارة السياق الذكي](https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)
+- **الجزء الأول**: [التوجيه الفوري وإدارة السياق الذكي](https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)
 - **الجزء الثاني**: حلقة Agent وإطار تنفيذ الأدوات (المقال الحالي)
 
 ---

@@ -19,7 +19,7 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/ko/news/qwen3-8-2-4t-open-weight-preview/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/qwen3-8-2-4t-open-weight-preview/"
 ---
 
 일요일 저녁 타임라인에 알리바바 Qwen 팀의 짧은 예고가 올라왔습니다. Qwen3.8을 곧 출시하며 오픈웨이트로 공개하겠다는 내용이었고, 파라미터 규모로 2.4조라는 숫자가 함께 붙었습니다. 며칠 전 Moonshot이 2.8조 파라미터의 Kimi K3를 실제로 공개한 직후라, 이번 예고는 "초대형 오픈 모델 경쟁이 주 단위로 벌어지고 있다"는 인상을 더 강하게 남겼습니다.

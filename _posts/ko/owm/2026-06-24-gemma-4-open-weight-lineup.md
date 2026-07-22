@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/gemma-4-open-weight-lineup/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/gemma-4-open-weight-lineup/"
 reading_time: true
 categories:
   - owm

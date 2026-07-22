@@ -15,7 +15,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/sao-single-rollout-async-agentic-rl/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/sao-single-rollout-async-agentic-rl/"
 audiobook: /assets/audio/posts/sao-single-rollout-async-agentic-rl/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

@@ -17,7 +17,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/gpt-5-6-sol-arc-agi-3/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/gpt-5-6-sol-arc-agi-3/"
 ---
 
 الفرق التي شغّلت عملاء ذكاء اصطناعي فعلياً في الإنتاج لا تتحمّس بسهولة لرقم واحد في اختبار قياسي. رأينا حالات كثيرة لنموذج يتجاوز 90% في حل مسائل ثابتة، ثم يفقد اتجاهه أمام أداة غير مألوفة، أو واجهة مستخدم يراها لأول مرة، أو بيئة بلا أي تعليمات. لذلك حين أعلنت ARC Prize أنها تحقّقت من نتائج GPT-5.6 Sol على ARC-AGI-3، لم يكن الرقم نفسه هو الأمر اللافت، بل الطريقة التي تحقق بها هذا الرقم.

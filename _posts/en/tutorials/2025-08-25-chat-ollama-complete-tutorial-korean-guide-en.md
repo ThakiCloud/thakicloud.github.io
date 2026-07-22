@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/chat-ollama-complete-tutorial-korean-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/chat-ollama-complete-tutorial-korean-guide/"
 published: false
 categories:
   - tutorials

@@ -6,7 +6,7 @@ seo_description: "From Ant Group's lightweight vision AI to OpenAI's free tokens
 date: 2026-07-09
 last_modified_at: 2026-07-09
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/agent-trust-is-built-on-audit-trails/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-trust-is-built-on-audit-trails/"
 author_profile: true
 toc: true
 toc_label: "Contents"

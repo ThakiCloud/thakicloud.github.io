@@ -17,7 +17,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/microsoft-vibevoice-frontier-conversational-tts-guide/
-canonical_url: "https://thakicloud.github.io/en/owm/microsoft-vibevoice-frontier-conversational-tts-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/microsoft-vibevoice-frontier-conversational-tts-guide/"
 published: false
 categories:
   - owm

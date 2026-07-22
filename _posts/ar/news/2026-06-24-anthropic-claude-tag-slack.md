@@ -18,7 +18,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "users"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/anthropic-claude-tag-slack/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/anthropic-claude-tag-slack/"
 reading_time: true
 categories:
   - news

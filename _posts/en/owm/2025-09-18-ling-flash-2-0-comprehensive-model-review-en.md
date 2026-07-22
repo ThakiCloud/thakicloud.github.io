@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/owm/ling-flash-2-0-comprehensive-model-review/
-canonical_url: "https://thakicloud.github.io/en/owm/ling-flash-2-0-comprehensive-model-review/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/ling-flash-2-0-comprehensive-model-review/"
 published: false
 categories:
   - owm

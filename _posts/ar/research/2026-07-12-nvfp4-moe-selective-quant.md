@@ -9,7 +9,7 @@ categories: [research]
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/nvfp4-moe-selective-quant/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/nvfp4-moe-selective-quant/"
 ---
 
 ستفيد هذه المقالة مهندسي الحوسبة السحابية والذكاء الاصطناعي الذين يشغّلون نماذج Mixture-of-Experts (MoE) على عناقيد من فئة H200 أو Blackwell، أو من يدرسون تبنّي سياسة تكميم. تُصيغ الورقة البحثية المقدَّمة اليوم سياسة تحمي بشكل انتقائي الموجّه (router أو الشبكة البوابية) والخبراء "النادرين" منخفضي حركة المرور بدقة كاملة، بينما تُكمّم البقية فقط إلى 4 بت، بدلاً من ضغط نموذج MoE بأكمله بشكل موحّد إلى دقة NVFP4 4 بت. كما تُبلغ الورقة، دون إخفاء، بأن التجارب التجريبية المخطَّط لها تعذّر تنفيذها بسبب عطل في البنية التحتية.

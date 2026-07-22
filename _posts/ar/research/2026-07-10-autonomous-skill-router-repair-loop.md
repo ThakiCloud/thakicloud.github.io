@@ -4,7 +4,7 @@ excerpt: "بعد أن توصل تشخيص سابق إلى أن السبب الح
 tags: [skill-routing, agent-harness, autonomous-repair-loop, loop-engineering, bm25, information-retrieval, self-healing, ai-agent]
 date: 2026-07-10
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/autonomous-skill-router-repair-loop/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/autonomous-skill-router-repair-loop/"
 categories: [research]
 seo_title: "حلقة إصلاح موجّه المهارات ذاتية التشغيل: إغلاق اختناق البحث بحلقة ليلية بلا نموذج لغوي، مقاسة تجريبياً"
 seo_description: "في نظام تشغيل وكلاء حقيقي يضم أكثر من 1600 مهارة، تقدم هذه الدراسة حلقة حتمية تُصلح قاموس المرادفات من الكورية إلى الإنجليزية الخاص بمحرك الاسترجاع دون أي تدخل بشري، وتقيس التحسن الناتج في دقة توجيه المهارات."

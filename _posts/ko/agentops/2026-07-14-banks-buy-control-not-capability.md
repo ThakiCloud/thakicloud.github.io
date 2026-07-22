@@ -19,7 +19,7 @@ tags:
   - regulated-industry
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/banks-buy-control-not-capability/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/banks-buy-control-not-capability/"
 ---
 
 ## 발주 공고 한 줄을 현미경으로 보면

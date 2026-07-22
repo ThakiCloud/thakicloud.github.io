@@ -18,7 +18,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-opd-post-training-open-rl-infra/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
 categories:
   - llmops
@@ -29,7 +29,7 @@ published: false
 
 في ThakiCloud نشغّل أحمال التدريب وتنسيق وحدات معالجة الرسومات على منصة SaaS للذكاء الاصطناعي وتعلّم الآلة قائمة على K8s. إن نشر "كيف دُرّب النموذج الرائد" بالكامل مرجع نادر لمن يصمم بنية تدريب داخل المؤسسة. يفحص هذا المقال ما هو التدريب اللاحق OPD، وما الذي يتغيّر حين يصبح مكدّس RL بأكمله مفتوحاً.
 
-> تناولنا نظرة عامة على إطار التدريب اللاحق slime نفسه في مقال منفصل، [التدريب اللاحق بوصفه بنية تحتية: إطار slime مفتوح المصدر وتوسيع التعلّم المعزّز](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/). يركّز هذا المقال على التدريب اللاحق OPD ودمج النماذج الخبيرة الذي يعمل فوقه.
+> تناولنا نظرة عامة على إطار التدريب اللاحق slime نفسه في مقال منفصل، [التدريب اللاحق بوصفه بنية تحتية: إطار slime مفتوح المصدر وتوسيع التعلّم المعزّز](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/). يركّز هذا المقال على التدريب اللاحق OPD ودمج النماذج الخبيرة الذي يعمل فوقه.
 
 ![تجريدي: التدريب اللاحق الموزّع بالتعلم المعزز ودمج النماذج](/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.webp)
 
@@ -109,4 +109,4 @@ OPD هو طريقة التدريب والدمج المتوازي المستخد�
 - [THUDM/slime: إطار التدريب اللاحق بالتعلّم المعزّز (GitHub)](https://github.com/THUDM/slime)
 - [zai-org/GLM-5 (HuggingFace)](https://huggingface.co/zai-org/GLM-5)
 - [GLM-5 مفتوح المصدر من z.ai وتقنية slime للتعلّم المعزّز (VentureBeat)](https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages)
-- مقال ذو صلة: [التدريب اللاحق بوصفه بنية تحتية: إطار slime مفتوح المصدر وتوسيع التعلّم المعزّز](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/)
+- مقال ذو صلة: [التدريب اللاحق بوصفه بنية تحتية: إطار slime مفتوح المصدر وتوسيع التعلّم المعزّز](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/)

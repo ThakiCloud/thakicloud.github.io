@@ -16,7 +16,7 @@ toc: true
 toc_label: "Tutorial Contents"
 lang: en
 permalink: /en/tutorials/ccpm-claude-code-project-management-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/ccpm-claude-code-project-management-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/ccpm-claude-code-project-management-tutorial/"
 published: false
 categories:
   - tutorials

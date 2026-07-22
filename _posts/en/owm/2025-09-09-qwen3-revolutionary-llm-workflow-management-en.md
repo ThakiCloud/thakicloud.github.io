@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/owm/qwen3-revolutionary-llm-workflow-management/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/qwen3-revolutionary-llm-workflow-management/"
 lang: en
 permalink: /en/owm/qwen3-revolutionary-llm-workflow-management/
 published: false

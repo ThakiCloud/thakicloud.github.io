@@ -17,7 +17,7 @@ toc_label: 접근성 모드 해부
 published: true
 categories:
   - dev
-canonical_url: "https://thakicloud.github.io/ko/dev/claude-code-screen-reader-accessibility/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/claude-code-screen-reader-accessibility/"
 ---
 
 ![순수한 선형 텍스트 흐름으로 재구성된 터미널을 형상화한 추상 이미지](/assets/images/claude-code-screen-reader-accessibility-hero.png)

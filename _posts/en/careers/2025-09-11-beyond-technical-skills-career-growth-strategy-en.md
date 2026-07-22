@@ -15,7 +15,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/careers/beyond-technical-skills-career-growth-strategy/
-canonical_url: "https://thakicloud.github.io/en/careers/beyond-technical-skills-career-growth-strategy-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/careers/beyond-technical-skills-career-growth-strategy-en/"
 categories:
   - careers
 ---

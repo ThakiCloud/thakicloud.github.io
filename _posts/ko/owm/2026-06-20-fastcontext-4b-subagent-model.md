@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/fastcontext-4b-subagent-model/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/fastcontext-4b-subagent-model/"
 reading_time: true
 categories:
   - owm

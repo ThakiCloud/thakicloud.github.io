@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/cursor-agent-swarm-sqlite-rust/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/cursor-agent-swarm-sqlite-rust/"
 ---
 
 Cursor가 지난 주말 흥미로운 데모 하나를 공개했습니다. 에이전트 여러 대를 묶은 스웜(swarm)에게 SQLite를 처음부터 다시 만들라고 시켰습니다. 소스코드도, 기존 테스트 스위트도, 인터넷도 주지 않았습니다. 준 것은 SQLite의 835쪽짜리 공식 문서 하나뿐이었습니다. 스웜은 이 문서만 읽고 Rust로 SQLite 복제본을 짰고, 그 복제본은 따로 숨겨둔 홀드아웃 테스트 스위트(sqllogictest)를 100% 통과했습니다.

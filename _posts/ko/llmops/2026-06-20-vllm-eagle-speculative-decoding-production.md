@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/vllm-eagle-speculative-decoding-production/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
 categories:
   - llmops

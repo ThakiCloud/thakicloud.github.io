@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/yank-note-markdown-editor-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/yank-note-markdown-editor-complete-guide/"
 reading_time: true
 published: false
 categories:
@@ -1061,6 +1061,6 @@ Yank Note의 지속적인 발전과 활발한 오픈소스 커뮤니티를 바�
 ---
 
 **관련 글:**
-- [마크다운 완전 가이드](https://thakicloud.github.io/tutorials/markdown-complete-guide/)
-- [VSCode 확장 프로그램 개발](https://thakicloud.github.io/dev/vscode-extension-development/)
-- [Electron 앱 개발 가이드](https://thakicloud.github.io/tutorials/electron-app-development/)
+- [마크다운 완전 가이드](https://thakicloud.com/tech-blog/tutorials/markdown-complete-guide/)
+- [VSCode 확장 프로그램 개발](https://thakicloud.com/tech-blog/dev/vscode-extension-development/)
+- [Electron 앱 개발 가이드](https://thakicloud.com/tech-blog/tutorials/electron-app-development/)

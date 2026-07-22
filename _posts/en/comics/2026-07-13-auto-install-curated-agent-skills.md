@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/auto-install-curated-agent-skills/strip.png
-canonical_url: "https://thakicloud.github.io/en/comics/auto-install-curated-agent-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/auto-install-curated-agent-skills/"
 ---
 
 A tool now scans your project, figures out which tech stack you're on, and auto-installs a curated set of AI agent skills to match. A skill is just a prepackaged bundle of ability that makes an agent good at some task, and instead of hand-picking each one, the tool reads your stack and picks for you.

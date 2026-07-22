@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/self-evolving-harness-nightly/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/self-evolving-harness-nightly/"
 reading_time: true
 categories:
   - research

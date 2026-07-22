@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/news/claude-code-seminar-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/claude-code-seminar-thakicloud/"
 reading_time: true
 categories:
   - news

@@ -9,7 +9,7 @@ tags:
   - paxis
 date: 2026-07-03
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/build-expensive-run-cheap/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/build-expensive-run-cheap/"
 categories:
   - llmops
 ---

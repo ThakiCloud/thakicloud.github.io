@@ -6,7 +6,7 @@ seo_description: "Carbon ERP/MES 시스템을 마스터하세요. 제조업, 복
 date: 2025-09-09
 lang: ko
 permalink: /ko/tutorials/carbon-erp-mes-complete-setup-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/carbon-erp-mes-complete-setup-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/carbon-erp-mes-complete-setup-tutorial/"
 tags:
   - carbon
   - erp

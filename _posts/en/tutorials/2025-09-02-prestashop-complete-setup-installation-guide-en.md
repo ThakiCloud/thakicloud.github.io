@@ -16,7 +16,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/prestashop-complete-setup-installation-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/prestashop-complete-setup-installation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/prestashop-complete-setup-installation-guide/"
 published: false
 categories:
   - tutorials

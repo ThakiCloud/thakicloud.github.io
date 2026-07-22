@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Unsloth Complete Guide"
-canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-ultrafast-llm-finetuning/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/unsloth-ultrafast-llm-finetuning/"
 published: false
 categories:
   - llmops

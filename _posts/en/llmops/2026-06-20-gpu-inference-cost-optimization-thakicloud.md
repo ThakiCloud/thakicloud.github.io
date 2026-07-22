@@ -21,7 +21,7 @@ header:
 toc: true
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/gpu-inference-cost-optimization-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/gpu-inference-cost-optimization-thakicloud/"
 categories:
   - llmops
 published: false
@@ -212,4 +212,4 @@ Costs only fall as far as you can see. That is why we always start with measurem
 
 ---
 
-*ThakiCloud is a Kubernetes-based AI/ML platform that provides cost optimization through GPU scheduling, efficient inference serving, and on-premises deployment. If you are interested in the platform or open roles, visit [ThakiCloud](https://thakicloud.github.io).*
+*ThakiCloud is a Kubernetes-based AI/ML platform that provides cost optimization through GPU scheduling, efficient inference serving, and on-premises deployment. If you are interested in the platform or open roles, visit [ThakiCloud](https://thakicloud.com/tech-blog).*

@@ -6,7 +6,7 @@ seo_description: "Comprehensive analysis of Kimi K2's revolutionary approach to 
 date: 2025-09-01
 lang: en
 permalink: /en/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/
-canonical_url: "https://thakicloud.github.io/en/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/"
 tags:
   - agentic-intelligence
   - mixture-of-experts

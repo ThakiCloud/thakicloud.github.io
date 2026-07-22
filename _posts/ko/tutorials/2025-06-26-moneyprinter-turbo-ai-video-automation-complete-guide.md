@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/tutorials/llmops/moneyprinter-turbo-ai-video-automation-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/llmops/moneyprinter-turbo-ai-video-automation-complete-guide/"
 published: false
 categories:
   - tutorials

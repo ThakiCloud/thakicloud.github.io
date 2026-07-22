@@ -20,7 +20,7 @@ dir: rtl
 author_profile: true
 toc: true
 toc_label: "سير العمل المتقدمة"
-canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-advanced-workflows/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/github-cli-advanced-workflows/"
 categories:
   - dev
 published: false

@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "layer-group"
-canonical_url: "https://thakicloud.github.io/ar/research/agent-skill-shadowing-library-selection/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/agent-skill-shadowing-library-selection/"
 categories:
   - research
 published: false

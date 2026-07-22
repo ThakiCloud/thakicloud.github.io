@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: Contents
-canonical_url: "https://thakicloud.github.io/en/culture/five-product-role-archetypes/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/five-product-role-archetypes/"
 header:
   image: /assets/images/five-product-role-archetypes-hero.webp
 categories:

@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/anthropic-fable5-prompting-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/anthropic-fable5-prompting-guide/"
 categories:
   - agentops
 audiobook: https://drive.google.com/file/d/1RiPCBx18whGJJWlhZ6cVaKUr2m9C4iBk/view

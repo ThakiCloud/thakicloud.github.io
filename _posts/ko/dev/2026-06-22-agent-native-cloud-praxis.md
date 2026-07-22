@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/paas/agent-native-cloud-praxis/"
+canonical_url: "https://thakicloud.com/tech-blog/paas/agent-native-cloud-praxis/"
 reading_time: true
 categories:
   - dev

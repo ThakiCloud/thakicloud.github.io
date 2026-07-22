@@ -12,7 +12,7 @@ tags:
   - paxis
 date: 2026-07-14
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-aws-quantization-deploy/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/unsloth-aws-quantization-deploy/"
 categories:
   - llmops
 ---

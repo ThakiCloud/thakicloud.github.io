@@ -9,7 +9,7 @@ tags:
   - paxis
 date: 2026-07-11
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/research/demem-agent-memory/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/demem-agent-memory/"
 categories:
   - research
 audiobook: /assets/audio/posts/demem-agent-memory/audiobook-ko.mp3

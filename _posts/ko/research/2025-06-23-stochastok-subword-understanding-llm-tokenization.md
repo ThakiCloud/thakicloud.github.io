@@ -17,7 +17,7 @@ categories:
   - llmops
 audiobook: https://drive.google.com/file/d/1ElhQF3MpnD0cj7yrFTTWnvF5wHl4Ka9g/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/stochastok-subword-understanding-llm-tokenization/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/stochastok-subword-understanding-llm-tokenization/"
 ---
 
 옥스포드 대학교 연구진이 발표한 이 논문은 대규모 언어 모델(LLM)의 서브워드 레벨 이해 능력을 획기적으로 향상시키는 새로운 토크나이제이션 방법인 **STOCHASTOK**을 제안합니다.

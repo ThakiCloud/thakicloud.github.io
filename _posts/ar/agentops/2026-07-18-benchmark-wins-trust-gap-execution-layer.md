@@ -6,7 +6,7 @@ seo_description: "تصدر كيمي K3 لوحة الصدارة وتأخر جيم
 date: 2026-07-18
 last_modified_at: 2026-07-19
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/benchmark-wins-trust-gap-execution-layer/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/benchmark-wins-trust-gap-execution-layer/"
 tags:
   - agentops
   - paxis

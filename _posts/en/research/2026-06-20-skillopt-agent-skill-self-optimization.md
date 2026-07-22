@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/skillopt-agent-skill-self-optimization/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/skillopt-agent-skill-self-optimization/"
 lang: en
 reading_time: true
 categories:

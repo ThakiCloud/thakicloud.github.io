@@ -10,7 +10,7 @@ tags:
   - paxis
 date: 2026-07-10
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/ai-cost-war-migration-frontier-to-open/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ai-cost-war-migration-frontier-to-open/"
 categories:
   - llmops
 ---

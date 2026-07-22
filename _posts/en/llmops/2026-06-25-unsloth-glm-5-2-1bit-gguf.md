@@ -6,7 +6,7 @@ seo_description: "Analysis of Unsloth GLM-5.2 Dynamic GGUF (1.51TB→176GB, 1-bi
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-glm-5-2-1bit-gguf/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/unsloth-glm-5-2-1bit-gguf/"
 tags:
   - gguf
   - quantization

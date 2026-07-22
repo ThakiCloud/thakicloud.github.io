@@ -6,7 +6,7 @@ seo_description: "أتقن نظام Carbon ERP/MES مع دليلنا الشام�
 date: 2025-09-09
 lang: ar
 permalink: /ar/tutorials/carbon-erp-mes-complete-setup-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/carbon-erp-mes-complete-setup-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/carbon-erp-mes-complete-setup-tutorial/"
 tags:
   - carbon
   - erp

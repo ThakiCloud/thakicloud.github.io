@@ -12,7 +12,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/dev/reverse-engineering-history-modern-methodologies/
+canonical_url: https://thakicloud.com/tech-blog/ar/dev/reverse-engineering-history-modern-methodologies/
 published: false
 categories:
   - dev
@@ -378,4 +378,4 @@ class FutureReverseEngineer:
 
 ---
 
-*إذا وجدت هذه المقالة مفيدة، يسعدنا زيارتك لـ [ThakiCloud](https://thakicloud.github.io) للاطلاع على المزيد من المحتوى في مجالي الذكاء الاصطناعي والتطوير.*
+*إذا وجدت هذه المقالة مفيدة، يسعدنا زيارتك لـ [ThakiCloud](https://thakicloud.com/tech-blog) للاطلاع على المزيد من المحتوى في مجالي الذكاء الاصطناعي والتطوير.*

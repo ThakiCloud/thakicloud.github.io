@@ -4,7 +4,7 @@ excerpt: "كما تعامل السحابة التقليدية الخوادم م�
 seo_title: "Paxis Agent-Native Cloud: الحوكمة وCostRouter والمهارات المتطورة - Thaki Cloud"
 seo_description: "ThakiCloud Paxis هو Agent-Native Cloud لتشغيل وكلاء الذكاء الاصطناعي المستقلة بأمان. يضمّ حوكمة استقلالية L0-L3، وتحسين تكاليف CostRouter متعدد النماذج، ومحرك معرفة HKE مبني على Git، وحزمة 849 مهارة. مع شرح بكود حقيقي."
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/agentops/praxis-agent-native-cloud/
+canonical_url: https://thakicloud.com/tech-blog/ar/agentops/praxis-agent-native-cloud/
 date: 2026-06-20
 last_modified_at: 2026-06-20
 tags:

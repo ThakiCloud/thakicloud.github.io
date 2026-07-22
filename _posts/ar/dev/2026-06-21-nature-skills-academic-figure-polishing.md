@@ -19,7 +19,7 @@ toc_icon: "cog"
 categories:
   - dev
 published: false
-canonical_url: "https://thakicloud.github.io/ar/dev/nature-skills-academic-figure-polishing/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/nature-skills-academic-figure-polishing/"
 ---
 
 ![صورة تجريدية لمنحنيات بيانات متعددة اللوحات وألواح أشكال تطفو بأجواء أكاديمية](/assets/images/nature-skills-hero.webp)

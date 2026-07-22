@@ -5,7 +5,7 @@ seo_title: "신뢰도 기반 VLM 캐스케이드 OCR 비용 최적화 실측 - T
 seo_description: "SmolVLM-256M과 Qwen2-VL-2B로 만든 신뢰도 기반 OCR 캐스케이드를 H200에서 실측했습니다. 임계값 0.85~0.95 구간에서 대형 모델 정확도를 약 60~67% 비용에 얻는 원리와 그 한계를 데이터로 정리합니다."
 date: 2026-07-14
 last_modified_at: 2026-07-21
-canonical_url: "https://thakicloud.github.io/ko/research/confidence-gated-ocr-vlm-cascade/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/confidence-gated-ocr-vlm-cascade/"
 lang: ko
 reading_time: true
 tags:

@@ -16,7 +16,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/en/agentops/token-price-war-jevons-paradox-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/token-price-war-jevons-paradox-inference/"
 lang: en
 ---
 

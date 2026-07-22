@@ -3,7 +3,7 @@ title: "everything-claude-code: تشريح هيكل برمجة بالذكاء ا
 excerpt: "أدوات البرمجة بالذكاء الاصطناعي تنسى قواعدك مع كل جلسة جديدة. حلّ أحد الفائزين بهاكاثون Anthropic هذه المشكلة بنشر إعداداته مفتوحة المصدر بعد صقلها ستة أشهر على خدمة TypeScript مصغّرة حقيقية. نشرّح تصميم everything-claude-code القائم على هيكل رفيع ومهارات ثقيلة، ونبيّن كيف يحوّل Paxis من ThakiCloud المبدأ نفسه إلى منتج."
 date: 2026-07-20
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/everything-claude-code-agent-harness/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/everything-claude-code-agent-harness/"
 tags:
   - ClaudeCode
   - 에이전트하네스

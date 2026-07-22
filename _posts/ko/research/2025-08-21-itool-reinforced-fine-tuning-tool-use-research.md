@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/itool-reinforced-fine-tuning-tool-use-research/"
+canonical_url: "https://thakicloud.com/tech-blog/research/itool-reinforced-fine-tuning-tool-use-research/"
 reading_time: true
 published: false
 categories:

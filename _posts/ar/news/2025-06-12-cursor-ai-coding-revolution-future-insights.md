@@ -4,7 +4,7 @@ excerpt: "أداة البرمجة بالذكاء الاصطناعي Cursor حق�
 date: 2025-06-12
 lang: ar
 permalink: /ar/news/cursor-ai-coding-revolution-future-insights/
-canonical_url: "https://thakicloud.github.io/ar/news/cursor-ai-coding-revolution-future-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/cursor-ai-coding-revolution-future-insights/"
 tags: 
   - Cursor
   - البرمجة بالذكاء الاصطناعي

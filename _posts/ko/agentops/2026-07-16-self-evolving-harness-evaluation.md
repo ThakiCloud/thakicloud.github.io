@@ -17,7 +17,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/self-evolving-harness-evaluation/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/self-evolving-harness-evaluation/"
 ---
 
 에이전트를 오래 굴린 사람이라면 한 번쯤 이런 그래프를 봤을 겁니다. 에이전트가 스스로 프롬프트와

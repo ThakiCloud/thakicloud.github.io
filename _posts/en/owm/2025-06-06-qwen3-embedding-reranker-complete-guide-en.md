@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/owm/qwen3-embedding-reranker-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/qwen3-embedding-reranker-complete-guide/"
 lang: en
 published: false
 categories:

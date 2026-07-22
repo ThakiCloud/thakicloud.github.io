@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "دليل Vibe-Coding-Instruct"
 reading_time: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/vibe-coding-instruct-sft/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/vibe-coding-instruct-sft/"
 categories:
   - datasets
 ---

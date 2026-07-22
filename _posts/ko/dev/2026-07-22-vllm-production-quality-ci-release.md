@@ -17,7 +17,7 @@ toc_label: 품질 유지의 해부
 published: true
 categories:
   - dev
-canonical_url: "https://thakicloud.github.io/ko/dev/vllm-production-quality-ci-release/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/vllm-production-quality-ci-release/"
 audiobook: /assets/audio/posts/vllm-production-quality-ci-release/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

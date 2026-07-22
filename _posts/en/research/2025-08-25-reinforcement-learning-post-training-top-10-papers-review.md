@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/reinforcement-learning-post-training-top-10-papers-review/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/reinforcement-learning-post-training-top-10-papers-review/"
 lang: en
 permalink: /en/research/reinforcement-learning-post-training-top-10-papers-review/
 reading_time: true

@@ -20,7 +20,7 @@ toc_label: "Table of Contents"
 toc_icon: "flask"
 categories:
   - research
-canonical_url: "https://thakicloud.github.io/en/research/tokenizer-asymmetry-covert-channels/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/tokenizer-asymmetry-covert-channels/"
 ---
 
 ## Who should read this

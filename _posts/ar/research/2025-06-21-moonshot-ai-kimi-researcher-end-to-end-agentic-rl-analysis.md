@@ -4,7 +4,7 @@ excerpt: "تحليل متعمق لـ Kimi-Researcher من Moonshot AI، الذي
 date: 2025-06-21
 lang: ar
 permalink: /ar/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
 tags: 
   - Kimi-Researcher
   - Moonshot-AI

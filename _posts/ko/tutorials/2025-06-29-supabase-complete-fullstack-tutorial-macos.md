@@ -26,7 +26,7 @@ header:
   teaser: ""
   overlay_image: "/assets/images/headers/post-header.jpg"
   overlay_filter: 0.5
-canonical_url: "https://thakicloud.github.io/tutorials/supabase-complete-fullstack-tutorial-macos/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/supabase-complete-fullstack-tutorial-macos/"
 reading_time: true
 published: false
 categories:

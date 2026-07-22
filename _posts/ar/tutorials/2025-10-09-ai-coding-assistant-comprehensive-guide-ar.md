@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/ai-coding-assistant-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-coding-assistant-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/ai-coding-assistant-guide/"
 categories:
   - tutorials
 ---

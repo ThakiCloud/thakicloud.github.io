@@ -16,7 +16,7 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/en/news/token-price-collapse-real-bill/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/token-price-collapse-real-bill/"
 published: false
 ---
 

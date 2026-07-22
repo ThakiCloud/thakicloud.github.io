@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "cog"
-canonical_url: "https://thakicloud.github.io/ko/dev/opus-4-8-overnight-agent-workflows/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/opus-4-8-overnight-agent-workflows/"
 categories:
   - dev
 published: false

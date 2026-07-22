@@ -3,7 +3,7 @@ title: "How vLLM Works, and How It's Used in Production"
 excerpt: "When you put an LLM into real service, most of the cost is decided not by the model itself but by the inference engine. Here's how vLLM cuts GPU waste with PagedAttention and continuous batching, and how ThakiCloud runs it in production from a serving perspective."
 date: 2026-07-18
 lang: en
-canonical_url: https://thakicloud.github.io/en/dev/vllm-production-inference-engineering/
+canonical_url: https://thakicloud.com/tech-blog/en/dev/vllm-production-inference-engineering/
 tags:
   - vLLM
   - 추론엔진

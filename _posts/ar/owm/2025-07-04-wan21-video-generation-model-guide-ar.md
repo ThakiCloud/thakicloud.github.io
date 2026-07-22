@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/owm/wan21-video-generation-model-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/wan21-video-generation-model-guide/"
 lang: ar
 published: false
 categories:

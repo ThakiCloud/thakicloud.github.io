@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/"
 reading_time: true
 lang: en
 permalink: /en/news/github-ceo-thomas-dohmke-developers-reinvented-ai-transformation/

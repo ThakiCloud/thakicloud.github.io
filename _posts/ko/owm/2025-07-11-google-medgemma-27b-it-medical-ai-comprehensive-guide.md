@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/google-medgemma-27b-it-medical-ai-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/google-medgemma-27b-it-medical-ai-comprehensive-guide/"
 reading_time: true
 published: false
 categories:

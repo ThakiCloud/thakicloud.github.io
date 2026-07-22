@@ -6,7 +6,7 @@ seo_description: "برنامج MaxKB التعليمي الشامل يغطي ال
 date: 2025-09-09
 lang: ar
 permalink: /ar/tutorials/maxkb-enterprise-agent-platform-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
 tags:
   - MaxKB
   - عملاء-الذكاء-الاصطناعي
@@ -834,4 +834,4 @@ class OptimizedVectorSearch:
 
 ---
 
-*هذا البرنامج التعليمي جزء من سلسلة الذكاء الاصطناعي والأتمتة الشاملة. لمزيد من البرامج التعليمية المتقدمة وحلول الذكاء الاصطناعي للمؤسسات، قم بزيارة [Thaki Cloud](https://thakicloud.github.io/).*
+*هذا البرنامج التعليمي جزء من سلسلة الذكاء الاصطناعي والأتمتة الشاملة. لمزيد من البرامج التعليمية المتقدمة وحلول الذكاء الاصطناعي للمؤسسات، قم بزيارة [Thaki Cloud](https://thakicloud.com/tech-blog/).*

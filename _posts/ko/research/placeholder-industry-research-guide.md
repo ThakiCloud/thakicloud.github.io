@@ -55,7 +55,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1a6_O3fzwf2mW7V5AdhDBFkol36iYy-jg/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/placeholder-industry-research-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/placeholder-industry-research-guide/"
 ---
 
 ## 여기에 실제 [산업 리서치 & 분석] 관련 내용을 작성하세요

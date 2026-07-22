@@ -6,7 +6,7 @@ seo_description: "مقارنة شاملة لأساليب الضغط الكمّي
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/llmops/llm-quantization-vllm-serving-unsloth/
+canonical_url: https://thakicloud.com/tech-blog/ar/llmops/llm-quantization-vllm-serving-unsloth/
 tags:
   - quantization
   - vllm

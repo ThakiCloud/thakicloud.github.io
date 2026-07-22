@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/mcpstore-mcp-service-management-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/mcpstore-mcp-service-management-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/mcpstore-mcp-service-management-tutorial/"
 published: false
 categories:
   - tutorials
@@ -515,7 +515,7 @@ MCPStore هو مشروع مفتوح المصدر نشط يرحب بمساهما�
 
 ---
 
-*لمزيد من الدروس وموارد تطوير الذكاء الاصطناعي، قم بزيارة [Thaki Cloud](https://thakicloud.github.io).*
+*لمزيد من الدروس وموارد تطوير الذكاء الاصطناعي، قم بزيارة [Thaki Cloud](https://thakicloud.com/tech-blog).*
 
 
 

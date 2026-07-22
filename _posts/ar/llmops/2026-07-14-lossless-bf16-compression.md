@@ -12,7 +12,7 @@ tags:
   - paxis
 date: 2026-07-14
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/lossless-bf16-compression/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/lossless-bf16-compression/"
 categories:
   - llmops
 ---

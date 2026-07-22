@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
 published: false
 categories:
   - tutorials

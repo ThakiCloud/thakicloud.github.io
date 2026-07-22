@@ -6,7 +6,7 @@ seo_description: "An analysis of claude-video (bradautomates): the /watch skill'
 date: 2026-07-13
 last_modified_at: 2026-07-13
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-video-agent-watch/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-video-agent-watch/"
 tags:
   - agentops
   - claude-code

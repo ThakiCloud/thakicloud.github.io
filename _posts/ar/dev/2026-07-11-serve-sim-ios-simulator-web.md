@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/serve-sim-ios-simulator-web/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/serve-sim-ios-simulator-web/"
 ---
 
 عندما تطلب من وكيل برمجة يعمل بالذكاء الاصطناعي بناء تطبيق iOS، يصطدم بحائط أساسي. يستطيع الوكيل كتابة الكود بل وحتى بناء المشروع، لكنه لا يستطيع رؤية ما يحدث فعلاً على الشاشة. وتتفاقم المشكلة أكثر عندما تكون بيئة التطوير مستضافة على جهاز Mac Mini في السحابة، لأن نافذة محاكي Xcode نفسها لا تظهر أصلاً على خادم بدون واجهة رسومية (headless).

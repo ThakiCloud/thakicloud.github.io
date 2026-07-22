@@ -9,7 +9,7 @@ tags:
   - paxis
 date: 2026-07-04
 lang: en
-canonical_url: "https://thakicloud.github.io/en/tutorials/anthropic-prompting-guide-latest-models/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/anthropic-prompting-guide-latest-models/"
 categories:
   - tutorials
 ---

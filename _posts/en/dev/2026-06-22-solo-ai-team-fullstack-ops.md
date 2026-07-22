@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/solo-ai-team-fullstack-ops/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/solo-ai-team-fullstack-ops/"
 reading_time: true
 categories:
   - dev

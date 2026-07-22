@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/sensenova-u1-neo-unify-unified-multimodal/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/sensenova-u1-neo-unify-unified-multimodal/"
 reading_time: true
 categories:
   - owm

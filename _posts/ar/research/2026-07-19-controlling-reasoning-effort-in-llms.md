@@ -5,7 +5,7 @@ seo_title: "التحكم في جهد الاستدلال - كيف تتعلم نم
 seo_description: "ما هو جهد الاستدلال وكيف يتم تدريبه؟ من SFT المشروط بالجهد وعقوبات الطول في RLVR إلى وصفات التدريب والتحكم في الميزانية وقت الاستدلال لستة نماذج مفتوحة الأوزان (DeepSeek V4 وNemotron 3 Ultra وKimi K2.5 وGLM-5 وQwen3 وInkling)، نلخص تحليل Sebastian Raschka من منظور السحابة وخدمة الاستدلال."
 date: 2026-07-19
 last_modified_at: 2026-07-19
-canonical_url: "https://thakicloud.github.io/ar/research/controlling-reasoning-effort-in-llms/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/controlling-reasoning-effort-in-llms/"
 lang: ar
 reading_time: true
 tags:

@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/agentic-document-extraction-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/agentic-document-extraction-complete-guide-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/agentic-document-extraction-complete-guide-en/"
 categories:
   - tutorials
 ---

@@ -17,7 +17,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/minimal-guarded-agent-loop/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/minimal-guarded-agent-loop/"
 reading_time: true
 categories:
   - dev

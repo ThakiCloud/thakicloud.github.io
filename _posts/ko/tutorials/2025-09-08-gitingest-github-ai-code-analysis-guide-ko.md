@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/gitingest-github-ai-code-analysis-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gitingest-github-ai-code-analysis-guide/"
 lang: ko
 permalink: /ko/tutorials/gitingest-github-ai-code-analysis-guide/
 published: false

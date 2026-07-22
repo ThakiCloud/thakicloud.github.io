@@ -4,7 +4,7 @@ excerpt: "Nobel Prize winner and Google DeepMind CEO Demis Hassabis reveals stun
 date: 2025-06-12
 lang: en
 permalink: /en/news/demis-hassabis-agi-radical-abundance-vision/
-canonical_url: "https://thakicloud.github.io/en/news/demis-hassabis-agi-radical-abundance-vision/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/demis-hassabis-agi-radical-abundance-vision/"
 tags: 
   - AGI
   - DeepMind

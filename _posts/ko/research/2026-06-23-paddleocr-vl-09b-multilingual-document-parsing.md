@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "file-text"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/paddleocr-vl-09b-multilingual-document-parsing/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/paddleocr-vl-09b-multilingual-document-parsing/"
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp

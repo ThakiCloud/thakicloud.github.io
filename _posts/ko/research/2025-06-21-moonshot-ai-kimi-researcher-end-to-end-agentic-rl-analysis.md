@@ -20,7 +20,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/11C6QuzImumRIl683NxsmsH-4GKEkckqI/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
 ---
 
 ## 개요

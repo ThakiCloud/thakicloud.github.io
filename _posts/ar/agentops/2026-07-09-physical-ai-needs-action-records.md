@@ -17,7 +17,7 @@ tags:
 categories:
   - agentops
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/physical-ai-needs-action-records/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/physical-ai-needs-action-records/"
 ---
 
 ## حين يخرج الذكاء الاصطناعي من الشاشة، يتغير وزن الخطأ

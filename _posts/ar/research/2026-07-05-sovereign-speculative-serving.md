@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ar/research/sovereign-speculative-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/sovereign-speculative-serving/"
 categories:
   - research
 ---

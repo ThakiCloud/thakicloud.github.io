@@ -4,7 +4,7 @@ excerpt: "كيف يمكن لحاضنة عميل ذاتية (agent harness) تع�
 tags: [canary-deployment, agent-harness, skill-evolution, automatic-rollback, span-tracing, regression-detection, self-improving-pipelines, observability, cost-latency-monitoring, autonomous-agents]
 date: 2026-07-20
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/canary-gated-skill-rollout/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/canary-gated-skill-rollout/"
 categories: [research]
 author_profile: true
 toc: true

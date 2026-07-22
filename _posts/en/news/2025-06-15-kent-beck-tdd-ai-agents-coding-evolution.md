@@ -4,7 +4,7 @@ excerpt: "Extreme Programming creator and Agile Manifesto co-author Kent Beck sh
 date: 2025-06-15
 lang: en
 permalink: /en/news/kent-beck-tdd-ai-agents-coding-evolution/
-canonical_url: "https://thakicloud.github.io/en/news/kent-beck-tdd-ai-agents-coding-evolution/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/kent-beck-tdd-ai-agents-coding-evolution/"
 tags: 
   - TDD
   - AI

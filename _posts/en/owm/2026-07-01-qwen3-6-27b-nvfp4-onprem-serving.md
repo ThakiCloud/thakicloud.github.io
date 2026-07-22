@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/qwen3-6-27b-nvfp4-onprem-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 lang: en
 reading_time: true
 categories:
@@ -141,4 +141,4 @@ Even so, the combination of Apache 2.0, 4-bit acceleration that now reaches Hopp
 - [NVIDIA TensorRT Model Optimizer](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
 - [Introducing NVFP4 (NVIDIA Developer)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
 - [vLLM documentation](https://docs.vllm.ai/)
-- [Gemma-4-26B-NVFP4 DGX Spark review (ThakiCloud blog)](https://thakicloud.github.io/en/owm/gemma-4-26b-nvfp4-dgx-spark/)
+- [Gemma-4-26B-NVFP4 DGX Spark review (ThakiCloud blog)](https://thakicloud.com/tech-blog/en/owm/gemma-4-26b-nvfp4-dgx-spark/)

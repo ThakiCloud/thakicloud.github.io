@@ -19,7 +19,7 @@ toc: true
 toc_label: "دليل PEFT الشامل"
 lang: ar
 permalink: /ar/llmops/peft-parameter-efficient-finetuning-guide/
-canonical_url: "https://thakicloud.github.io/ar/llmops/peft-parameter-efficient-finetuning-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/peft-parameter-efficient-finetuning-guide/"
 published: false
 categories:
   - llmops

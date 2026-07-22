@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "دليل Fable-5-traces"
 reading_time: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/fable-5-agent-traces/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/fable-5-agent-traces/"
 categories:
   - datasets
 ---

@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/kite-kubernetes-dashboard-complete-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/kite-kubernetes-dashboard-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/kite-kubernetes-dashboard-complete-tutorial/"
 published: false
 categories:
   - tutorials

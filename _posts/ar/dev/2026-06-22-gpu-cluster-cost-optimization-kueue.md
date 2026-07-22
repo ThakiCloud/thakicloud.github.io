@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/dev/gpu-cluster-cost-optimization-kueue/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/gpu-cluster-cost-optimization-kueue/"
 reading_time: true
 categories:
   - dev

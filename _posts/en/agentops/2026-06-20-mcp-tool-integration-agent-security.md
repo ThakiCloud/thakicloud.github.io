@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/mcp-tool-integration-agent-security/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
 categories:
   - agentops

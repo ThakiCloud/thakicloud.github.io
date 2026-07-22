@@ -6,7 +6,7 @@ seo_description: "Complete MaxKB tutorial covering installation, configuration, 
 date: 2025-09-09
 lang: en
 permalink: /en/tutorials/maxkb-enterprise-agent-platform-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
 tags:
   - MaxKB
   - AI-agents
@@ -834,4 +834,4 @@ MaxKB empowers organizations to harness the full potential of AI agents while ma
 
 ---
 
-*This tutorial is part of our comprehensive AI and automation series. For more advanced tutorials and enterprise AI solutions, visit [Thaki Cloud](https://thakicloud.github.io/).*
+*This tutorial is part of our comprehensive AI and automation series. For more advanced tutorials and enterprise AI solutions, visit [Thaki Cloud](https://thakicloud.com/tech-blog/).*

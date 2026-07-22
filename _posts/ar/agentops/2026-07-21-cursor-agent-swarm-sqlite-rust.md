@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ar/agentops/cursor-agent-swarm-sqlite-rust/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/cursor-agent-swarm-sqlite-rust/"
 ---
 
 نشرت Cursor نهاية الأسبوع عرضًا لافتًا. أعطت سربًا من الوكلاء مهمة إعادة بناء SQLite من الصفر. لا شيفرة مصدرية، ولا مجموعة اختبارات قائمة، ولا إنترنت. كان المُدخل الوحيد هو دليل SQLite الرسمي المؤلف من 835 صفحة. قرأ السرب هذا المستند وكتب نسخة من SQLite بلغة Rust، واجتازت تلك النسخة مجموعة اختبارات محجوزة بشكل منفصل (sqllogictest) بنسبة 100%.

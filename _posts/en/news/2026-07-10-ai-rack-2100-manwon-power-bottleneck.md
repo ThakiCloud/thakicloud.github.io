@@ -6,7 +6,7 @@ seo_description: "The thread running through the July 10, 2026 news is capital a
 date: 2026-07-10
 last_modified_at: 2026-07-10
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/ai-rack-2100-manwon-power-bottleneck/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/ai-rack-2100-manwon-power-bottleneck/"
 author_profile: true
 toc: true
 toc_label: "Contents"

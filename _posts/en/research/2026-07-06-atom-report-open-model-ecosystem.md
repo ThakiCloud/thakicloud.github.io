@@ -5,7 +5,7 @@ seo_title: "Reading the Open Model Ecosystem Through the ATOM Report - Thaki Clo
 seo_description: "The ATOM Report (arXiv 2604.07190) measures both Hugging Face downloads and OpenRouter inference usage to map the open language model ecosystem. We summarize its key findings, Qwen's billion downloads, the mid-2025 Chinese overtake, DeepSeek's inference lead, and the rise of GPT-OSS, then draw implications for ThakiCloud's ai-platform, which serves open models in on-prem multi-tenant clusters."
 date: 2026-07-06
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/atom-report-open-model-ecosystem/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/atom-report-open-model-ecosystem/"
 tags:
   - research
   - open-weight

@@ -4,7 +4,7 @@ excerpt: "الحائز على جائزة نوبل والرئيس التنفيذ�
 date: 2025-06-12
 lang: ar
 permalink: /ar/news/demis-hassabis-agi-radical-abundance-vision/
-canonical_url: "https://thakicloud.github.io/ar/news/demis-hassabis-agi-radical-abundance-vision/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/demis-hassabis-agi-radical-abundance-vision/"
 tags: 
   - الذكاء العام الاصطناعي
   - DeepMind

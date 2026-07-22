@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 published: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
 categories:
   - llmops
 ---

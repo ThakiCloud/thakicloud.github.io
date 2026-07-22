@@ -20,7 +20,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/stanford-storm-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/stanford-storm-comprehensive-guide/"
 lang: ar
 published: false
 categories:

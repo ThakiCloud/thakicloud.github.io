@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/lemonai-complete-setup-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/lemonai-complete-setup-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/lemonai-complete-setup-guide/"
 published: false
 categories:
   - tutorials

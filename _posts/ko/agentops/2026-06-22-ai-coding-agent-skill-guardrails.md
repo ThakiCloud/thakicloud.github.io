@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "shield-alt"
-canonical_url: "https://thakicloud.github.io/ko/agentops/ai-coding-agent-skill-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/ai-coding-agent-skill-guardrails/"
 categories:
   - agentops
 audiobook: https://drive.google.com/file/d/1i55U5I6EIkowQyR97-i5MQL8Wj0Asisv/view

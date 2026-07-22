@@ -16,7 +16,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/research/glm-5-2-ppo-icepop/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/glm-5-2-ppo-icepop/"
 lang: en
 ---
 

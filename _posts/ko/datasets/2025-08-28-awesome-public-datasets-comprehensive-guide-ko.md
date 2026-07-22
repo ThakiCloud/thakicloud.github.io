@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ko/datasets/awesome-public-datasets-comprehensive-guide-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/awesome-public-datasets-comprehensive-guide-ko/"
 categories:
   - datasets
 ---

@@ -22,7 +22,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/quickpiper-audiobook-tts-piper-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/quickpiper-audiobook-tts-piper-complete-guide/"
 reading_time: true
 published: false
 categories:

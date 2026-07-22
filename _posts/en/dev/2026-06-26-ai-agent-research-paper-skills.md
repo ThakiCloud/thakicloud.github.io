@@ -6,7 +6,7 @@ seo_description: "Research-Paper-Writing-Skills packages ML/CV/NLP paper-writing
 date: 2026-06-26
 last_modified_at: 2026-06-26
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/ai-agent-research-paper-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/ai-agent-research-paper-skills/"
 tags:
   - ai-agent
   - agent-skills

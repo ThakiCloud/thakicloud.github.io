@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agentops-ai-agent-monitoring-debugging-platform/
-canonical_url: "https://thakicloud.github.io/ko/llmops/agentops-ai-agent-monitoring-debugging-platform-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agentops-ai-agent-monitoring-debugging-platform-ko/"
 categories:
   - llmops
 audiobook: https://drive.google.com/file/d/1EF2P2I3FCIHPZpEVgLHBvxvo9rHPh3C3/view

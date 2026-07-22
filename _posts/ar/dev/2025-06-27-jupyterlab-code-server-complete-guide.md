@@ -7,7 +7,7 @@ seo_description: "كيفية استخدام VS Code في المتصفح عبر j
 date: 2025-06-27
 tags: [jupyterlab, code-server, vscode, docker, gpu-server, 개발환경, jupyter-codeserver-proxy]
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/jupyterlab-code-server-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/jupyterlab-code-server-complete-guide/"
 toc: true
 toc_sticky: true
 toc_label: "دليل بيئة التطوير"

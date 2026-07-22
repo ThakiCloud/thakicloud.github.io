@@ -4,7 +4,7 @@ excerpt: "How should an agent harness that rewrites its own code overnight safel
 tags: [canary-deployment, agent-harness, skill-evolution, automatic-rollback, span-tracing, regression-detection, self-improving-pipelines, observability, cost-latency-monitoring, autonomous-agents]
 date: 2026-07-20
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/canary-gated-skill-rollout/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/canary-gated-skill-rollout/"
 categories: [research]
 author_profile: true
 toc: true

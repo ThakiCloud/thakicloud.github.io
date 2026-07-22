@@ -11,7 +11,7 @@ toc: true
 toc_label: "خريطة طريق هندسة الذكاء الاصطناعي"
 lang: ar
 permalink: /ar/careers/ai-engineering-learning-roadmap/
-canonical_url: "https://thakicloud.github.io/ar/careers/ai-engineering-learning-roadmap/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/ai-engineering-learning-roadmap/"
 categories:
   - careers
 ---

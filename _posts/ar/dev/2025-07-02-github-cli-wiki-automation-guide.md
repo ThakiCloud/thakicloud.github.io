@@ -19,7 +19,7 @@ dir: rtl
 author_profile: true
 toc: true
 toc_label: "أتمتة Wiki"
-canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-wiki-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/github-cli-wiki-automation-guide/"
 published: false
 categories:
   - dev

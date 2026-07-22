@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/unregistry-enterprise-deployment-cost-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/unregistry-enterprise-deployment-cost-analysis/"
 reading_time: true
 published: false
 categories:
@@ -916,12 +916,12 @@ cd ~/work/thakicloud/thakicloud.github.io
 ### 관련 리소스
 
 - **공식 문서**: [Unregistry GitHub](https://github.com/psviderski/unregistry)
-- **커뮤니티**: [Docker 배포 최적화 전략](https://thakicloud.github.io/tutorials/)
-- **다음 단계**: [Kubernetes와 Unregistry 통합](https://thakicloud.github.io/tutorials/kubernetes-unregistry-integration/)
+- **커뮤니티**: [Docker 배포 최적화 전략](https://thakicloud.com/tech-blog/tutorials/)
+- **다음 단계**: [Kubernetes와 Unregistry 통합](https://thakicloud.com/tech-blog/tutorials/kubernetes-unregistry-integration/)
 
 ### 이 시리즈의 다른 글
 
 - **1편**: Unregistry 기업용 배포 시스템 구축 (현재 글)
-- **2편**: [Docker Swarm과 Unregistry 고가용성 구성](https://thakicloud.github.io/tutorials/docker-swarm-unregistry-ha/)
-- **3편**: [Kubernetes 환경에서 Unregistry 활용](https://thakicloud.github.io/tutorials/kubernetes-unregistry-integration/)
-- **4편**: [CI/CD 파이프라인 Unregistry 최적화](https://thakicloud.github.io/tutorials/cicd-unregistry-optimization/) 
+- **2편**: [Docker Swarm과 Unregistry 고가용성 구성](https://thakicloud.com/tech-blog/tutorials/docker-swarm-unregistry-ha/)
+- **3편**: [Kubernetes 환경에서 Unregistry 활용](https://thakicloud.com/tech-blog/tutorials/kubernetes-unregistry-integration/)
+- **4편**: [CI/CD 파이프라인 Unregistry 최적화](https://thakicloud.com/tech-blog/tutorials/cicd-unregistry-optimization/) 

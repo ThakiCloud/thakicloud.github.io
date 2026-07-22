@@ -18,7 +18,7 @@ published: true
 categories:
   - dev
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/dev/archify-agent-architecture-diagrams/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/archify-agent-architecture-diagrams/"
 ---
 
 ![여러 개의 상자와 연결선이 하나의 정돈된 격자 구조로 수렴하는 모습을 형상화한 추상 이미지](/assets/images/archify-agent-architecture-diagrams-hero.png)

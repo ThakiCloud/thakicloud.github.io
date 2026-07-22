@@ -14,7 +14,7 @@ lang: en
 author_profile: true
 toc: true
 toc_label: "AI Coding Paradigm Practical Guide"
-canonical_url: "https://thakicloud.github.io/en/dev/vibe-coding-vs-agentic-coding-practical-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/vibe-coding-vs-agentic-coding-practical-guide/"
 published: false
 categories:
   - dev

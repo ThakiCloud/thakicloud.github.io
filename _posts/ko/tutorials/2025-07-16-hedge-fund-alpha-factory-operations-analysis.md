@@ -22,7 +22,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "industry"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/hedge-fund-alpha-factory-operations-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/hedge-fund-alpha-factory-operations-analysis/"
 reading_time: true
 published: false
 categories:

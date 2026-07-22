@@ -23,7 +23,7 @@ toc_sticky: true
 categories:
   - llmops
 published: false
-canonical_url: "https://thakicloud.github.io/ko/llmops/gpu-inference-cost-optimization-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gpu-inference-cost-optimization-thakicloud/"
 audiobook: /assets/audio/posts/gpu-inference-cost-optimization-thakicloud/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -213,4 +213,4 @@ flowchart LR
 
 ---
 
-*ThakiCloud는 Kubernetes 기반 AI/ML 플랫폼으로 GPU 스케줄링, 효율적 추론 서빙, 온프레미스 배포를 통한 비용 최적화를 제공합니다. 플랫폼이나 채용에 관심이 있다면 [ThakiCloud](https://thakicloud.github.io)를 방문해 주세요.*
+*ThakiCloud는 Kubernetes 기반 AI/ML 플랫폼으로 GPU 스케줄링, 효율적 추론 서빙, 온프레미스 배포를 통한 비용 최적화를 제공합니다. 플랫폼이나 채용에 관심이 있다면 [ThakiCloud](https://thakicloud.com/tech-blog)를 방문해 주세요.*

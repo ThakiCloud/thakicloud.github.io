@@ -6,7 +6,7 @@ seo_description: "From the Bank Federation's AI adoption roadmap to the National
 date: 2026-07-14
 last_modified_at: 2026-07-15
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/banks-buy-control-not-capability/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/banks-buy-control-not-capability/"
 tags:
   - agent-governance
   - sovereign-ai

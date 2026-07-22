@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/
-canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/qwen3-next-revolutionary-ai-architecture-transforming-future/"
 published: false
 categories:
   - owm

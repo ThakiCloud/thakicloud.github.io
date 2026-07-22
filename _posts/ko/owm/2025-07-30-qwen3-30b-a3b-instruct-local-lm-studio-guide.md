@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/qwen3-30b-a3b-instruct-local-lm-studio-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/qwen3-30b-a3b-instruct-local-lm-studio-guide/"
 reading_time: true
 published: false
 categories:

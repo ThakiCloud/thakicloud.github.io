@@ -6,7 +6,7 @@ seo_description: "تحليل ورقة ARPO (Agentic Reinforced Policy Optimizati
 date: 2025-07-30
 last_modified_at: 2025-07-30
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/arpo-agentic-reinforced-policy-optimization-research/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/arpo-agentic-reinforced-policy-optimization-research/"
 tags:
   - ARPO
   - Reinforcement-Learning

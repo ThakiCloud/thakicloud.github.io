@@ -18,7 +18,7 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/stanford-storm-4-prompt-research-workflow/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
 categories:
   - research

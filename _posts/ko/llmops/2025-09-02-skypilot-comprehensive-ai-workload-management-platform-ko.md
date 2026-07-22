@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/llmops/skypilot-comprehensive-ai-workload-management-platform-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skypilot-comprehensive-ai-workload-management-platform-ko/"
 lang: ko
 permalink: /ko/llmops/skypilot-comprehensive-ai-workload-management-platform/
 published: false

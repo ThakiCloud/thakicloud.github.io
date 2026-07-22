@@ -6,7 +6,7 @@ seo_description: "تحليل تفصيلي لآلية الاستدلال الهر
 date: 2025-08-03
 last_modified_at: 2025-08-03
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/hierarchical-reasoning-model-brain-inspired-ai-architecture/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/hierarchical-reasoning-model-brain-inspired-ai-architecture/"
 tags:
   - Hierarchical-Reasoning-Model
   - HRM

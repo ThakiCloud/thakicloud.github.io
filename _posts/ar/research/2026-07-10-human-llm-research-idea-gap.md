@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/human-llm-research-idea-gap/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/human-llm-research-idea-gap/"
 ---
 
 عندما نسمع عبارة "وكيل بحثي"، يتخيل معظمنا المشهد نفسه: قراءة الأوراق البحثية، اكتشاف ثغرة، اقتراح فكرة، تشغيل تجارب، ثم كتابة ورقة بحثية. لكن الباحثين في جامعتي Yale وChicago طرحوا سؤالاً أعمق من ذلك. ما مدى الاختلاف بين الأفكار البحثية التي يولّدها LLM وتلك التي حوّلها الباحثون البشريون فعلاً إلى أوراق منشورة، وما حجم هذا الاختلاف؟

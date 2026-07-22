@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/userlm-8b-user-simulation-workflow-automation/
-canonical_url: "https://thakicloud.github.io/en/owm/userlm-8b-user-simulation-workflow-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/userlm-8b-user-simulation-workflow-automation/"
 published: false
 categories:
   - owm

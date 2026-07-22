@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/"
 reading_time: true
 categories:
   - llmops

@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/stanford-reap-empirical-research-skill-library/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/stanford-reap-empirical-research-skill-library/"
 reading_time: true
 categories:
   - research

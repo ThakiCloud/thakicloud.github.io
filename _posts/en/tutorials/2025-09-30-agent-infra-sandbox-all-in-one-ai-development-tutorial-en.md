@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/"
 lang: en
 permalink: /en/tutorials/agent-infra-sandbox-all-in-one-ai-development-tutorial/
 published: false

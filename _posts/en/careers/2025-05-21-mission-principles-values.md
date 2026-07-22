@@ -11,7 +11,7 @@ tags:
 author_profile: true
 lang: en
 permalink: /en/careers/mission-principles-values/
-canonical_url: "https://thakicloud.github.io/en/careers/mission-principles-values/"
+canonical_url: "https://thakicloud.com/tech-blog/en/careers/mission-principles-values/"
 categories:
   - careers
 --- 

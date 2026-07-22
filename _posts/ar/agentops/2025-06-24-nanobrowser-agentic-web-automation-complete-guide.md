@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/nanobrowser-agentic-web-automation-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/nanobrowser-agentic-web-automation-complete-guide/"
 published: false
 categories:
   - agentops

@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/nemotron-3-ultra-latentmoe-onprem/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/nemotron-3-ultra-latentmoe-onprem/"
 reading_time: true
 categories:
   - owm

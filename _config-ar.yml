@@ -20,8 +20,8 @@ breadcrumbs: true
 words_per_minute: 200
 
 # URL Settings
-url: "https://thakicloud.github.io"
-baseurl: ""
+url: "https://thakicloud.com"
+baseurl: "/tech-blog"
 
 # Comments
 comments:

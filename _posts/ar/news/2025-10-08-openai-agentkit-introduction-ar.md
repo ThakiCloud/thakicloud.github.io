@@ -15,7 +15,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/news/openai-agentkit-introduction/
-canonical_url: "https://thakicloud.github.io/ar/news/openai-agentkit-introduction/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/openai-agentkit-introduction/"
 categories:
   - news
 published: false

@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/vibe-kanban-ai-agents-project-management-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/vibe-kanban-ai-agents-project-management-guide/"
 reading_time: true
 published: false
 categories:

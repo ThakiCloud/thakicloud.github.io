@@ -18,7 +18,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/generative-models-prompt-adaptation-study/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/generative-models-prompt-adaptation-study/"
 reading_time: true
 lang: ar
 published: false

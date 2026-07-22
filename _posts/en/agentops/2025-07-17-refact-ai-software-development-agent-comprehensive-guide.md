@@ -22,7 +22,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/refact-ai-software-development-agent-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/refact-ai-software-development-agent-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops

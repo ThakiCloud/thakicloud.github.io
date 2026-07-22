@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/tablecruncher-csv-editor-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/tablecruncher-csv-editor-complete-guide/"
 lang: en
 permalink: /en/tutorials/tablecruncher-csv-editor-complete-guide/
 published: false

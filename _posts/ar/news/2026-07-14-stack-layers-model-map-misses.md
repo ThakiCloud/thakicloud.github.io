@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/stack-layers-model-map-misses/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/stack-layers-model-map-misses/"
 ---
 
 حين نتحدث عن سوق الذكاء الاصطناعي، عادة ما نصطف النماذج في قائمة. توجد النماذج الطليعية، ثم النماذج الصينية بنصف السعر، ثم نماذج فائقة الرخص لا يُصدَّق سعرها، ثم نماذج داخلية تبنيها شركات الخدمات، ونماذج تعمل على الجهاز نفسه. هذه الخريطة دقيقة. إنها تُظهر بوضوح أي النماذج موجودة.

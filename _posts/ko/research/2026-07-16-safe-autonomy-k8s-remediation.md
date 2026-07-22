@@ -5,7 +5,7 @@ seo_title: "K8s GPU 인시던트 자율 원격조치 안전 경계 계산 - Thak
 seo_description: "LLM 에이전트의 Kubernetes GPU 인시던트 자율 원격조치와 사람 에스컬레이션을 가르는 임계값을 176개 인시던트 벤치마크로 정량화한 논문을 소개합니다. 인시던트 유형별 임계값 보정이 단일 전역 임계값보다 MTTR을 얼마나 더 줄이는지 다룹니다."
 date: 2026-07-16
 last_modified_at: 2026-07-16
-canonical_url: "https://thakicloud.github.io/ko/research/safe-autonomy-k8s-remediation/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/safe-autonomy-k8s-remediation/"
 lang: ko
 reading_time: true
 tags:

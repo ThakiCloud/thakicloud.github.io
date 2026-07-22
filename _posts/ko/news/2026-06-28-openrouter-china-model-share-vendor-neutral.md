@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "chart-bar"
-canonical_url: "https://thakicloud.github.io/ko/news/openrouter-china-model-share-vendor-neutral/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/openrouter-china-model-share-vendor-neutral/"
 categories:
   - news
 published: false

@@ -4,7 +4,7 @@ excerpt: "Former OpenAI Chief Scientist Ilya Sutskever's ambitious vision for AI
 date: 2025-06-10
 lang: en
 permalink: /en/news/ilya-sutskever-ai-capability-prediction-analysis/
-canonical_url: "https://thakicloud.github.io/en/news/ilya-sutskever-ai-capability-prediction-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/ilya-sutskever-ai-capability-prediction-analysis/"
 tags: 
   - Ilya Sutskever
   - OpenAI

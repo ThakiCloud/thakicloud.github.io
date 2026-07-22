@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "sitemap"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/claude-code-project-anatomy-complete-map/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/technique/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
 published: false

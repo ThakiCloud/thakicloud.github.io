@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "Agentic RAG Source Code Analysis"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-engineering-hub-agentic-rag-source-code-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-engineering-hub-agentic-rag-source-code-analysis/"
 published: false
 categories:
   - agentops

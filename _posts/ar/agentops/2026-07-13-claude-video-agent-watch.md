@@ -6,7 +6,7 @@ seo_description: "تحليل لـ claude-video (bradautomates): مسار yt-dlp 
 date: 2026-07-13
 last_modified_at: 2026-07-13
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/claude-video-agent-watch/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-video-agent-watch/"
 tags:
   - agentops
   - claude-code

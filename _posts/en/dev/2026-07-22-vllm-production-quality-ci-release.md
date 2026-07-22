@@ -17,7 +17,7 @@ toc_label: Anatomy of Quality
 published: true
 categories:
   - dev
-canonical_url: "https://thakicloud.github.io/en/dev/vllm-production-quality-ci-release/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/vllm-production-quality-ci-release/"
 ---
 
 ![Abstract image of thousands of streams converging through a single narrow gate and aligning into stable orbital tracks](/assets/images/vllm-production-quality-ci-release-hero.png)

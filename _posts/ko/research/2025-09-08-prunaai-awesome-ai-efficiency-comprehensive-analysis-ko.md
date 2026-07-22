@@ -6,7 +6,7 @@ seo_description: "PrunaAI의 awesome-ai-efficiency 리포지토리에 대한 상
 date: 2025-09-08
 lang: ko
 permalink: /ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis/
-canonical_url: "https://thakicloud.github.io/ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ko/"
 tags:
   - ai-효율성
   - 모델-최적화

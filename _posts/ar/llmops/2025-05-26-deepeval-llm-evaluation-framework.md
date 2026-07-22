@@ -17,7 +17,7 @@ toc: true
 toc_label: "دليل DeepEval"
 lang: ar
 permalink: /ar/llmops/deepeval-llm-evaluation-framework/
-canonical_url: "https://thakicloud.github.io/ar/llmops/deepeval-llm-evaluation-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/deepeval-llm-evaluation-framework/"
 published: false
 categories:
   - llmops

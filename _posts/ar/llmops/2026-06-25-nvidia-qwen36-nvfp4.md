@@ -6,7 +6,7 @@ seo_description: "تحليل لنموذج NVIDIA Qwen3.6-35B-A3B-NVFP4 (تكمي
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-qwen36-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvidia-qwen36-nvfp4/"
 tags:
   - nvfp4
   - quantization

@@ -19,7 +19,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "دليل Mail-in-a-Box للمؤسسات"
-canonical_url: "https://thakicloud.github.io/ar/iaas/2025-06-28-mail-in-a-box-enterprise-kubernetes-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/iaas/2025-06-28-mail-in-a-box-enterprise-kubernetes-guide/"
 categories:
   - dev
   - tutorials

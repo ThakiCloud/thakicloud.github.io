@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/three-giants-ai-futures-compared/
-canonical_url: "https://thakicloud.github.io/ar/culture/three-giants-ai-futures-compared/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/three-giants-ai-futures-compared/"
 categories:
   - culture
 ---

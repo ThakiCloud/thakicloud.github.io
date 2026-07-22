@@ -6,7 +6,7 @@ seo_description: "Detailed analysis of HRM's hierarchical reasoning mechanism th
 date: 2025-08-03
 last_modified_at: 2025-08-03
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/hierarchical-reasoning-model-brain-inspired-ai-architecture/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/hierarchical-reasoning-model-brain-inspired-ai-architecture/"
 tags:
   - Hierarchical-Reasoning-Model
   - HRM

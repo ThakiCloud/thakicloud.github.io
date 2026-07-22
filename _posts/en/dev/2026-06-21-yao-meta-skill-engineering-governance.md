@@ -19,7 +19,7 @@ toc_icon: "cog"
 categories:
   - dev
 published: false
-canonical_url: "https://thakicloud.github.io/en/dev/yao-meta-skill-engineering-governance/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/yao-meta-skill-engineering-governance/"
 ---
 
 ![Abstract modular blocks forming a precision assembly line with glowing governance gates](/assets/images/yao-meta-skill-hero.webp)

@@ -4,7 +4,7 @@ excerpt: "OpenAI CEO Sam Altman published 'The Gentle Singularity' on his blog, 
 date: 2025-06-11
 lang: en
 permalink: /en/news/sam-altman-gentle-singularity-ai-future/
-canonical_url: "https://thakicloud.github.io/en/news/sam-altman-gentle-singularity-ai-future/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/sam-altman-gentle-singularity-ai-future/"
 tags: 
   - Sam Altman
   - OpenAI

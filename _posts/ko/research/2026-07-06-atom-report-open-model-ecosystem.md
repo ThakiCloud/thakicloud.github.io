@@ -20,7 +20,7 @@ toc_label: "목차"
 toc_icon: "flask"
 categories:
   - research
-canonical_url: "https://thakicloud.github.io/ko/research/atom-report-open-model-ecosystem/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/atom-report-open-model-ecosystem/"
 ---
 
 ## 이 글을 누가 읽으면 좋은가

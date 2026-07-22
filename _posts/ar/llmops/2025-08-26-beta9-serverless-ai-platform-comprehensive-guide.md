@@ -16,7 +16,7 @@ toc: true
 toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/llmops/beta9-serverless-ai-platform-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ar/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
 published: false
 categories:
   - llmops

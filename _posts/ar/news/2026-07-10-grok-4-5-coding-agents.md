@@ -15,7 +15,7 @@ categories:
   - news
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ar/news/grok-4-5-coding-agents/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/grok-4-5-coding-agents/"
 lang: ar
 ---
 

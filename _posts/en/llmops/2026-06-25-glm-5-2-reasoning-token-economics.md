@@ -20,7 +20,7 @@ toc_label: "Contents"
 toc_icon: "microchip"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-reasoning-token-economics/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
 categories:
   - llmops
@@ -28,7 +28,7 @@ categories:
 
 When a model needs 220,000 tokens just to think through a Rubik's cube, who pays for that? That is the question Matt Pocock (@mattpocockuk) surfaced while using his `/teach` skill and `pi` to have GLM-5.2 work through a cube solution. Even at the lowest effort setting (High), three turns produced roughly 220,000 tokens of thinking traces. A more capable reasoning model means a model that thinks longer, and a model that thinks longer means someone receives a larger invoice.
 
-This is not an introduction to GLM-5.2 as a model. The story of compressing its weights to 1-bit for smaller hardware is covered in a [separate post](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/). What this post examines is one level up: **when a verbose open-weight reasoning model arrives, how do the cost structures of per-token cloud APIs and GPU-time-amortizing on-premises hosting diverge?** The short answer is that there is a clear crossover point where longer reasoning favors self-hosting, and that crossover is exactly what ThakiCloud's K8s-based multi-tenant platform is designed to exploit.
+This is not an introduction to GLM-5.2 as a model. The story of compressing its weights to 1-bit for smaller hardware is covered in a [separate post](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/). What this post examines is one level up: **when a verbose open-weight reasoning model arrives, how do the cost structures of per-token cloud APIs and GPU-time-amortizing on-premises hosting diverge?** The short answer is that there is a clear crossover point where longer reasoning favors self-hosting, and that crossover is exactly what ThakiCloud's K8s-based multi-tenant platform is designed to exploit.
 
 All figures in this post come from measurements published by Z.ai and various outlets, or from arithmetic derived from publicly stated parameter counts. The 744B model cannot be run directly in this analysis environment, so published benchmarks are cited rather than original measurements. Estimates derived from arithmetic are marked `[est.]` throughout.
 
@@ -116,4 +116,4 @@ The core argument holds regardless. In an era where powerful open-weight reasoni
 - GLM-5.2 analysis: [felloai: GLM 5.2: Zhipu's 1M-Context Open-Source Model Explained](https://felloai.com/glm-5-2/)
 - GLM-5.2 benchmarks and pricing: [labellerr: GLM-5.2 Just Beat GPT-5.5 at a Sixth of the Cost](https://www.labellerr.com/blog/glm-5-2-open-source-ai-model/)
 - Official weights: [GitHub: zai-org/GLM-5](https://github.com/zai-org/GLM-5)
-- Related post (quantization): [Unsloth GLM-5.2 1-bit Dynamic GGUF On-Premises Analysis](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)
+- Related post (quantization): [Unsloth GLM-5.2 1-bit Dynamic GGUF On-Premises Analysis](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)

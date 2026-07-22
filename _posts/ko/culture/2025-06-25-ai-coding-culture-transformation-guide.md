@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AI 시대 개발 문화 혁신"
-canonical_url: "https://thakicloud.github.io/ko/culture/ai-coding-culture-transformation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/ai-coding-culture-transformation-guide/"
 categories:
   - culture
   - dev

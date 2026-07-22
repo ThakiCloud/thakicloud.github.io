@@ -13,7 +13,7 @@ tags:
   - workflow-separation
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/dev/github-cli-project-management-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/dev/github-cli-project-management-automation/"
 categories:
   - dev
 published: false

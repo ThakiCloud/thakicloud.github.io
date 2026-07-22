@@ -19,7 +19,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/gspo-group-sequence-policy-optimization-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/gspo-group-sequence-policy-optimization-comprehensive-guide/"
 reading_time: true
 lang: ar
 published: false
