@@ -26,7 +26,7 @@ published: false
 canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-cost-routing-rules/"
 ---
 
-![مهام الوكيل تتفرع عبر مستويات النماذج بينما تنخفض التكاليف](/assets/images/cost-routing-hero.webp)
+![مهام الوكيل تتفرع عبر مستويات النماذج بينما تنخفض التكاليف]({{ '/assets/images/cost-routing-hero.webp' | relative_url }})
 
 ## اليوم الذي أحرقنا فيه 705 دولارات
 

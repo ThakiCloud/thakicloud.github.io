@@ -25,7 +25,7 @@ audiobook: /assets/audio/posts/llm-cost-routing-guardrails/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![LLM 비용 라우팅 가드레일 실전기](/assets/images/llm-cost-routing-guardrails-hero.webp)
+![LLM 비용 라우팅 가드레일 실전기]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})
 
 ## 개요: $705 청구서로 시작된 이야기
 

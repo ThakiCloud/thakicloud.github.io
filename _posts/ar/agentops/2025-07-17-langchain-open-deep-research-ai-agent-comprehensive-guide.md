@@ -35,7 +35,7 @@ published: false
 
 يتناول هذا الدليل المعمارية الكاملة من المفاهيم الجوهرية إلى النشر الإنتاجي، بما في ذلك تصميم الوكيل المركز على الجودة، وأنماط تنسيق الوكلاء المتعددة، وRAG المتقدم، والتكيفات الخاصة بالمجالات للبحث المالي والطبي.
 
-![مخطط مفاهيمي](/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

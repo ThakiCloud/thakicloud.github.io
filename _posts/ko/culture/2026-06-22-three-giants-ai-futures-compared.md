@@ -28,7 +28,7 @@ categories:
 
 ---
 
-![개념 다이어그램](/assets/images/three-giants-ai-futures-compared-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/three-giants-ai-futures-compared-diagram.svg' | relative_url }})
 
 *세 거인의 미래관 비교*
 

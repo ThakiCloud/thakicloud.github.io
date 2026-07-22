@@ -20,7 +20,7 @@ categories:
   - datasets
 ---
 
-![Agents Last Exam 에이전트 평가 개념도](/assets/images/agents-last-exam-benchmark-hero.webp)
+![Agents Last Exam 에이전트 평가 개념도]({{ '/assets/images/agents-last-exam-benchmark-hero.webp' | relative_url }})
 
 ## 데이터셋 개요
 

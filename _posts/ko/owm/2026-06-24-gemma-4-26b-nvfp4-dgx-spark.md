@@ -28,7 +28,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 12분
 
-![Gemma 4 26B NVFP4 병렬 추론 개념도](/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp)
+![Gemma 4 26B NVFP4 병렬 추론 개념도]({{ '/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp' | relative_url }})
 
 ## 개요
 

@@ -35,7 +35,7 @@ The issue isn't whether to use AI or not, but rather how to use it effectively. 
 
 Vibe Coding positions developers as Creative Directors with AI serving as high-speed copilots. Agentic Coding establishes developers as Strategic Supervisors with AI functioning as autonomous colleagues. This change represents not merely a tool transition but a complete paradigm shift in development culture.
 
-![Vibe Coding vs Agentic Coding: developer and AI roles and where each fits](/assets/images/ai-coding-culture-transformation-guide-diagram.svg)
+![Vibe Coding vs Agentic Coding: developer and AI roles and where each fits]({{ '/assets/images/ai-coding-culture-transformation-guide-diagram.svg' | relative_url }})
 
 ## Current Development Culture Dilemma
 

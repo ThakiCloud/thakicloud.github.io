@@ -28,7 +28,7 @@ audiobook: /assets/audio/posts/gpu-inference-cost-optimization-thakicloud/audiob
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![GPU 데이터센터에서 흐르는 컴퓨트 비용](/assets/images/cost-opt-hero.webp)
+![GPU 데이터센터에서 흐르는 컴퓨트 비용]({{ '/assets/images/cost-opt-hero.webp' | relative_url }})
 
 ## 비용이 안 보이면 줄일 수 없다
 
@@ -67,7 +67,7 @@ ThakiCloud는 Kubernetes 기반 AI/ML 플랫폼을 운영하면서 이 문제를
 
 이 산식을 실제로 돌리면 GPU 한 장의 시간당 원가가 한 숫자로 떨어지고, 그 위에서 비로소 "이 모델을 이 처리량으로 서빙하면 토큰당 얼마"가 계산됩니다. 원가가 식으로 고정되면, 최적화는 추측이 아니라 산수가 됩니다.
 
-![GPU 원가를 층층이 분해한 개념도](/assets/images/cost-opt-amortization.webp)
+![GPU 원가를 층층이 분해한 개념도]({{ '/assets/images/cost-opt-amortization.webp' | relative_url }})
 
 ## 2. 자가호스팅 vs API: 격차의 해부
 
@@ -117,7 +117,7 @@ flowchart LR
 
 이 구조의 핵심은 **빈 패킹(bin packing)**입니다. 작은 작업들을 GPU에 촘촘히 끼워 넣어 단편화를 줄이면, 같은 하드웨어로 더 많은 일을 처리하고 토큰당 원가가 떨어집니다. 스케줄러가 잘 채울수록 자가호스팅의 50배 우위가 현실이 됩니다.
 
-![작은 작업들을 GPU에 촘촘히 빈 패킹하는 개념도](/assets/images/cost-opt-binpacking.webp)
+![작은 작업들을 GPU에 촘촘히 빈 패킹하는 개념도]({{ '/assets/images/cost-opt-binpacking.webp' | relative_url }})
 
 ## 4. 서빙 레이어에서 더 짜내기
 
@@ -145,7 +145,7 @@ flowchart TB
 
 여기에 외부 API 호출까지 줄이는 레이어가 하나 더 있습니다. 우리 **Agent Tool Gateway(ATG)**는 외부 도구 호출에 캐싱·중복 제거·압축을 적용합니다. 에이전트가 같은 외부 호출을 반복할 때 결과를 재사용해, 토큰뿐 아니라 외부 API 청구 자체를 줄입니다.
 
-![활성 서버가 0으로 축소되는 scale-to-zero 개념도](/assets/images/cost-opt-scale-to-zero.webp)
+![활성 서버가 0으로 축소되는 scale-to-zero 개념도]({{ '/assets/images/cost-opt-scale-to-zero.webp' | relative_url }})
 
 ## 5. 라우팅과 관측: 운영비를 잡는 마지막 30%
 

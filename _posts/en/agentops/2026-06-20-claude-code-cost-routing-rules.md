@@ -26,7 +26,7 @@ published: false
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-cost-routing-rules/"
 ---
 
-![Agent tasks branching across model tiers as costs fold down](/assets/images/cost-routing-hero.webp)
+![Agent tasks branching across model tiers as costs fold down]({{ '/assets/images/cost-routing-hero.webp' | relative_url }})
 
 ## The Day We Burned $705
 

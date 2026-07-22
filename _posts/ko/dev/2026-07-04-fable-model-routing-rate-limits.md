@@ -14,7 +14,7 @@ categories:
   - dev
 ---
 
-![여러 크기의 처리 경로가 하나의 지휘 노드로 모였다가 다시 갈래로 흩어지는 추상 이미지](/assets/images/fable-model-routing-rate-limits-hero.webp)
+![여러 크기의 처리 경로가 하나의 지휘 노드로 모였다가 다시 갈래로 흩어지는 추상 이미지]({{ '/assets/images/fable-model-routing-rate-limits-hero.webp' | relative_url }})
 *무거운 작업과 가벼운 작업을 서로 다른 모델로 흘려보내는 라우팅의 개념을 형상화했습니다.*
 
 ## 개요

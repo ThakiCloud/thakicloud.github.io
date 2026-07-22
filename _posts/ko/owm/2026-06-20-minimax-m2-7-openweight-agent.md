@@ -32,7 +32,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ⏱️ **예상 읽기 시간**: 7분
 
-![MiniMax-M2.7 자기진화 에이전트 팀 개념도](/assets/images/minimax-m2-7-hero.webp)
+![MiniMax-M2.7 자기진화 에이전트 팀 개념도]({{ '/assets/images/minimax-m2-7-hero.webp' | relative_url }})
 
 ## MiniMax-M2.7 개요
 

@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق
 
-![مخطط مفاهيمي لتشكيلة Gemma 4](/assets/images/gemma-4-open-weight-lineup-hero.webp)
+![مخطط مفاهيمي لتشكيلة Gemma 4]({{ '/assets/images/gemma-4-open-weight-lineup-hero.webp' | relative_url }})
 
 ## نظرة عامة على Gemma 4
 

@@ -110,13 +110,13 @@ Anthropic은 Sonnet 4.5 출시와 함께 Claude 개발자 플랫폼에 메모리
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-agent-memory-context-engineering 슬라이드 1](/assets/images/ai-agent-memory-context-engineering-slide-01.webp)
+![ai-agent-memory-context-engineering 슬라이드 1]({{ '/assets/images/ai-agent-memory-context-engineering-slide-01.webp' | relative_url }})
 
-![ai-agent-memory-context-engineering 슬라이드 2](/assets/images/ai-agent-memory-context-engineering-slide-02.webp)
+![ai-agent-memory-context-engineering 슬라이드 2]({{ '/assets/images/ai-agent-memory-context-engineering-slide-02.webp' | relative_url }})
 
-![ai-agent-memory-context-engineering 슬라이드 3](/assets/images/ai-agent-memory-context-engineering-slide-03.webp)
+![ai-agent-memory-context-engineering 슬라이드 3]({{ '/assets/images/ai-agent-memory-context-engineering-slide-03.webp' | relative_url }})
 
-![ai-agent-memory-context-engineering 슬라이드 4](/assets/images/ai-agent-memory-context-engineering-slide-04.webp)
+![ai-agent-memory-context-engineering 슬라이드 4]({{ '/assets/images/ai-agent-memory-context-engineering-slide-04.webp' | relative_url }})
 
 ## 출처
 

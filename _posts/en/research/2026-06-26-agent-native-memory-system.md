@@ -26,7 +26,7 @@ categories:
 published: false
 ---
 
-![Abstract image of layered data flowing through a lattice of neural networks and databases, with memory cells forming and dissolving](/assets/images/agent-native-memory-system-hero.webp)
+![Abstract image of layered data flowing through a lattice of neural networks and databases, with memory cells forming and dissolving]({{ '/assets/images/agent-native-memory-system-hero.webp' | relative_url }})
 
 ## Overview
 

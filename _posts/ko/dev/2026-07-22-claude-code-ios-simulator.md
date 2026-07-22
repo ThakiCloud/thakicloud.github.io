@@ -21,7 +21,7 @@ audiobook: /assets/audio/posts/claude-code-ios-simulator/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![실행 화면과 코드가 하나의 빛 고리로 이어지는 닫힌 루프를 형상화한 추상 이미지](/assets/images/claude-code-ios-simulator-hero.png)
+![실행 화면과 코드가 하나의 빛 고리로 이어지는 닫힌 루프를 형상화한 추상 이미지]({{ '/assets/images/claude-code-ios-simulator-hero.png' | relative_url }})
 
 ## 왜 읽어야 하나
 
@@ -104,13 +104,13 @@ Claude Code의 iOS 시뮬레이터 연동은 작아 보이지만 방향은 분�
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-ios-simulator 슬라이드 1](/assets/images/claude-code-ios-simulator-slide-01.png)
+![claude-code-ios-simulator 슬라이드 1]({{ '/assets/images/claude-code-ios-simulator-slide-01.png' | relative_url }})
 
-![claude-code-ios-simulator 슬라이드 2](/assets/images/claude-code-ios-simulator-slide-02.png)
+![claude-code-ios-simulator 슬라이드 2]({{ '/assets/images/claude-code-ios-simulator-slide-02.png' | relative_url }})
 
-![claude-code-ios-simulator 슬라이드 3](/assets/images/claude-code-ios-simulator-slide-03.png)
+![claude-code-ios-simulator 슬라이드 3]({{ '/assets/images/claude-code-ios-simulator-slide-03.png' | relative_url }})
 
-![claude-code-ios-simulator 슬라이드 4](/assets/images/claude-code-ios-simulator-slide-04.png)
+![claude-code-ios-simulator 슬라이드 4]({{ '/assets/images/claude-code-ios-simulator-slide-04.png' | relative_url }})
 
 ## 출처
 

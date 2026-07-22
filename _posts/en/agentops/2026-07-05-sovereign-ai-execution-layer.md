@@ -21,7 +21,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/sovereign-ai-execution-layer-hero.png)
+![Key concept illustration]({{ '/assets/images/sovereign-ai-execution-layer-hero.png' | relative_url }})
 
 One sentence from an interview made us reread this morning's entire digest. Adjunct Professor Choi Yoon-seong, who teaches at Korea University and Kyonggi University, pointed to Anthropic's next-generation model "Mythos" as an example and warned that once AI becomes a strategic asset, even an ally's access to a model can be cut off at any time. He summed it up this way: "What you can control is not someone else's model, but the infrastructure that lets you verify and block the supply chain no matter which model you use."
 
@@ -36,7 +36,7 @@ Seen only this far, the sovereignty question looks like a model question. But to
 To put it plainly: the model is the flashy signage, but sovereignty is actually decided where that model lives and breathes, the execution layer. The choices made by several companies in today's news all point, as if by agreement, to exactly this spot.
 
 
-![Concept diagram](/assets/images/sovereign-ai-execution-layer-diagram.svg)
+![Concept diagram]({{ '/assets/images/sovereign-ai-execution-layer-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

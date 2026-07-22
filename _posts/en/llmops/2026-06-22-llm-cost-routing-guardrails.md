@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![LLM Cost Routing Guardrails in Practice](/assets/images/llm-cost-routing-guardrails-hero.webp)
+![LLM Cost Routing Guardrails in Practice]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})
 
 ## Overview: A Story That Began with a $705 Bill
 

@@ -164,11 +164,11 @@ Chain-of-Agents는 긴 컨텍스트 처리라는 LLM의 근본적 한계를 해�
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 1](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-01.webp)
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 1]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-01.webp' | relative_url }})
 
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 2](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-02.webp)
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 2]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-02.webp' | relative_url }})
 
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 3](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-03.webp)
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 3]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-03.webp' | relative_url }})
 
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 4](/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-04.webp)
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 4]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-04.webp' | relative_url }})
 

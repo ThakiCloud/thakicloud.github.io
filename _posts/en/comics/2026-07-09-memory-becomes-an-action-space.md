@@ -21,7 +21,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 A paper making the rounds this week reframes long-term memory for agents. Memory used to be a quiet warehouse you dumped things into. The paper treats it as an action space instead: the agent doesn't just store memory, it reads it, rewrites it, and decides its next move from it. Memory stops being a drawer and becomes a workbench. The catch is that once memory is always working, where it runs suddenly matters a great deal.
 
-![An Agent That Never Forgets (Especially the Bill)](/assets/images/posts/comics/memory-becomes-an-action-space/strip.png)
+![An Agent That Never Forgets (Especially the Bill)]({{ '/assets/images/posts/comics/memory-becomes-an-action-space/strip.png' | relative_url }})
 
 > Source: [RT @omarsar0: // Memory becomes an action space //](https://x.com/hjguyhan/status/2074985812002050273) · twitter
 

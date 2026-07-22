@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![نظرة عامة على Paxis للسحابة الأصيلة للوكلاء](/assets/images/agent-native-cloud-praxis-hero.webp)
+![نظرة عامة على Paxis للسحابة الأصيلة للوكلاء]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

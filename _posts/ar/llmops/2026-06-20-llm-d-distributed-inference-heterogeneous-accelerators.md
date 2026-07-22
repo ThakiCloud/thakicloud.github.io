@@ -29,7 +29,7 @@ published: false
 canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
 ---
 
-![مجموعة GPU ومجموعة NPU تعملان معاً في نفس الكلستر لتقديم الاستدلال](/assets/images/llm-d-heterogeneous-hero.webp)
+![مجموعة GPU ومجموعة NPU تعملان معاً في نفس الكلستر لتقديم الاستدلال]({{ '/assets/images/llm-d-heterogeneous-hero.webp' | relative_url }})
 
 ## شراء المزيد من GPU لن يسرّع الاستدلال
 

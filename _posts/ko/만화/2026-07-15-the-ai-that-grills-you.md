@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 이번 화제는 '/grill-me'입니다. 답을 대신 써주는 도구가 아니라, 꼬리에 꼬리를 무는 되물음으로 상대가 정말 이해했는지 캐묻는 스킬이에요. 아는 척은 두세 번만 '왜요?'를 던지면 밑천이 드러납니다. 그런데 이걸 기술 면접에 가져다 쓰는 사람이 생겼습니다. 정답을 맞혔는지가 아니라 압박 속에서 후보가 어떻게 생각을 풀어가는지를 옆에서 구경하는 거죠. 파시스와 메티스가 이 취조기를 손에 넣었고, 결국 서로에게 겨눕니다.
 
-![AI한테 취조당하는 면접ㅋ](/assets/images/posts/만화/the-ai-that-grills-you/strip.png)
+![AI한테 취조당하는 면접ㅋ]({{ '/assets/images/posts/만화/the-ai-that-grills-you/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @mattpocockuk: Someone DM'd me saying they're using /grill-me in technical interviews](https://x.com/hjguyhan/status/2077017688761938198) · twitter
 

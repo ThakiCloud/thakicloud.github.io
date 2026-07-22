@@ -35,7 +35,7 @@ categories:
 
 يقوم TRAE Agent على فلسفة تتجاوز مجرد توليد الكود: فهو يعمل كوكيل ذكي يفهم مهام التطوير بعمق، ويخطط بشكل منهجي، وينفّذ من البداية إلى النهاية.
 
-![مخطط مفاهيمي](/assets/images/trae-agent-cloud-development-automation-guide-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/trae-agent-cloud-development-automation-guide-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

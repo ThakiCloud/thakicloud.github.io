@@ -18,10 +18,10 @@ OpenAI GPT-4o의 강력한 이미지 생성 기능을 활용하여 실사 이미
 
 ## 변환 결과 미리보기
 
-![원본 토스터 이미지](/assets/images/posts/tutorial/toast.jpg)
+![원본 토스터 이미지]({{ '/assets/images/posts/tutorial/toast.jpg' | relative_url }})
 *원본 실사 토스터 이미지*
 
-![3D 스타일 변환 결과](/assets/images/posts/tutorial/3d-toast.jpg)
+![3D 스타일 변환 결과]({{ '/assets/images/posts/tutorial/3d-toast.jpg' | relative_url }})
 *3D 이모지 스타일로 변환된 결과*
 
 ## GPT-4o 이미지 변환 프롬프트
@@ -77,7 +77,7 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-![Blue icons 변환 결과](/assets/images/posts/tutorial/blueicon.jpg)
+![Blue icons 변환 결과]({{ '/assets/images/posts/tutorial/blueicon.jpg' | relative_url }})
 *3D 이모지 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 blue icons으로 변환하려면 다음 프롬프트를 사용하세요:
@@ -129,7 +129,7 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-![Paper Cutout 변환 결과](/assets/images/posts/tutorial/paper-cutout.jpg)
+![Paper Cutout 변환 결과]({{ '/assets/images/posts/tutorial/paper-cutout.jpg' | relative_url }})
 *Pop-Up Paper Cutout 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 Pop-Up Paper Cutout으로 변환하려면 다음 프롬프트를 사용하세요:
@@ -185,7 +185,7 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-![Illustration 변환 결과](/assets/images/posts/tutorial/children-illustration.webp)
+![Illustration 변환 결과]({{ '/assets/images/posts/tutorial/children-illustration.webp' | relative_url }})
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 일러스트레이션으로 변환하려면 다음 프롬프트를 사용하세요:
@@ -241,7 +241,7 @@ Apply the following JSON-based texture to the provided image.
 }
 ```
 
-![pixel patch 변환 결과](/assets/images/posts/tutorial/pixel-patch.webp)
+![pixel patch 변환 결과]({{ '/assets/images/posts/tutorial/pixel-patch.webp' | relative_url }})
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 pixel patch 변환하려면 다음 프롬프트를 사용하세요:
@@ -303,7 +303,7 @@ Apply the following JSON-based texture to the provided image.
 
 ```
 
-![animal minimalism 변환 결과](/assets/images/posts/tutorial/animal-minimalism.webp)
+![animal minimalism 변환 결과]({{ '/assets/images/posts/tutorial/animal-minimalism.webp' | relative_url }})
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 animal minimalism 변환하려면 다음 프롬프트를 사용하세요:
@@ -364,7 +364,7 @@ Apply the following JSON-based texture to the provided image.
 
 ```
 
-![Nimbus Minimal Modernism 변환 결과](/assets/images/posts/tutorial/nimbus-minimal-modernism.webp)
+![Nimbus Minimal Modernism 변환 결과]({{ '/assets/images/posts/tutorial/nimbus-minimal-modernism.webp' | relative_url }})
 *일러스트레이션 스타일로 변환된 결과*
 
 OpenAI GPT-4o에서 실사 이미지를 Nimbus Minimal Modernism 변환하려면 다음 프롬프트를 사용하세요:

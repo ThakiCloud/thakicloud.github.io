@@ -30,7 +30,7 @@ categories:
 
 ---
 
-![개념 다이어그램](/assets/images/data-driven-decision-culture-ai-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/data-driven-decision-culture-ai-diagram.svg' | relative_url }})
 
 *결정을 기록하고 예측과 대조해 직관의 편향을 데이터로 교정하는 순환*
 

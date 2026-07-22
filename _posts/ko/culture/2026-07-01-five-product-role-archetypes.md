@@ -20,7 +20,7 @@ categories:
   - culture
 ---
 
-![직무의 경계가 흐려지고 새로운 역할 원형이 떠오르는 모습을 담은 추상 비주얼](/assets/images/five-product-role-archetypes-hero.webp)
+![직무의 경계가 흐려지고 새로운 역할 원형이 떠오르는 모습을 담은 추상 비주얼]({{ '/assets/images/five-product-role-archetypes-hero.webp' | relative_url }})
 
 ## 개요
 

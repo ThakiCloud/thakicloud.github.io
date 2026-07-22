@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 이번 주 화제는 'TRACE'라는 연구입니다. ICML 워크숍에서 스포트라이트로 뽑혔는데요, 핵심은 의외로 단순합니다. 에이전트가 아무거나 마구 학습하는 대신, 자기가 실패한 기록을 되짚어 '지금 나에게 부족한 능력이 정확히 뭔가'를 먼저 진단하고, 딱 그 부분만 골라 훈련합니다. 무작정 강화학습을 돌리거나(direct RL), 프롬프트를 갈아끼우거나(GEPA), 가짜 데이터를 붓는 방식보다 이 '약점 조준' 방식이 더 잘 나왔다고 합니다. 힘으로 밀어붙이는 것보다, 어디가 약한지 아는 게 이긴 셈이죠.
 
-![실패만 파던 AI가 상 받음ㄷㄷ](/assets/images/posts/만화/trace-targeted-self-improvement/strip.png)
+![실패만 파던 AI가 상 받음ㄷㄷ]({{ '/assets/images/posts/만화/trace-targeted-self-improvement/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @hangoo_kang: “TRACE: Capability-Targeted Agentic Training” got Spotlight @ ICML AIWILD 🎉](https://x.com/hjguyhan/status/2075500035207565421) · twitter
 

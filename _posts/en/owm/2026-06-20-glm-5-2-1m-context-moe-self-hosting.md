@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 7 min
 
-![GLM-5.2 sparse MoE and 1M context concept](/assets/images/glm-5-2-hero.webp)
+![GLM-5.2 sparse MoE and 1M context concept]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
 ## What Makes GLM-5.2 Different
 

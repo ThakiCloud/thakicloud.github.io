@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 15분
 
-![SenseNova U1 NEO-Unify 통합 멀티모달 개념 비주얼](/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp)
+![SenseNova U1 NEO-Unify 통합 멀티모달 개념 비주얼]({{ '/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp' | relative_url }})
 
 ## 개요
 

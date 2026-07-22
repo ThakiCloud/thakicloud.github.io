@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![رسم لبنية Orchestrator-Worker حيث يصنّف المنسّق (Sonnet) الطلب ويفككه ثم يوزعه على عمال الباحث (Haiku) والمبرمج (Sonnet) والمراجع (Opus، بوابة فقط)، ثم يدمج النتائج في المخرج النهائي](/assets/images/multi-agent-orchestration-production-patterns-diagram.webp)
+![رسم لبنية Orchestrator-Worker حيث يصنّف المنسّق (Sonnet) الطلب ويفككه ثم يوزعه على عمال الباحث (Haiku) والمبرمج (Sonnet) والمراجع (Opus، بوابة فقط)، ثم يدمج النتائج في المخرج النهائي]({{ '/assets/images/multi-agent-orchestration-production-patterns-diagram.webp' | relative_url }})
 
 ## لماذا هذا الموضوع الآن
 

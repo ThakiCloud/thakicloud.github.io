@@ -14,7 +14,7 @@ categories:
   - tutorials
 ---
 
-![Abstract image of structured instructions layering and converging into one ordered output](/assets/images/anthropic-prompting-guide-latest-models-hero.webp)
+![Abstract image of structured instructions layering and converging into one ordered output]({{ '/assets/images/anthropic-prompting-guide-latest-models-hero.webp' | relative_url }})
 *A visualization of how clear instructions and structure converge into predictable output.*
 
 ## Overview

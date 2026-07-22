@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/news/huggingface-agentic-ai-breach/"
 ---
 
-![صورة تجريدية لسرب من الوكلاء الذاتيين يتسلل إلى خط بيانات](/assets/images/huggingface-agentic-ai-breach-hero.png)
+![صورة تجريدية لسرب من الوكلاء الذاتيين يتسلل إلى خط بيانات]({{ '/assets/images/huggingface-agentic-ai-breach-hero.png' | relative_url }})
 
 الخبر الذي هزّ التسلسلات الزمنية في نهاية الأسبوع لم يكن نموذجًا جديدًا ولا معيارًا جديدًا، بل إشعارًا بأن Hugging Face، مركز منظومة الذكاء الاصطناعي المفتوحة، قد اُخترق. وما لفت الانتباه أكثر هو من فعل ذلك. فبحسب الشركة، لم يجلس قرصان بشري ليكتب الأوامر طوال الليل، بل قاد إطار وكيل ذكاء اصطناعي ذاتي الهجوم من أوله إلى آخره.
 

@@ -37,7 +37,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/hassabis-agi-realism-vs-hype-diagram.svg' | relative_url }})
 
 *ثلاثة معايير واقعية تصفّي المبالغة حول الذكاء الاصطناعي العام*
 

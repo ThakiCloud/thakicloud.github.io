@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![صورة مجردة لأسسٍ من الأجهزة تحدد شكل البرمجيات فوقها](/assets/images/inference-engine-hardware-strategy-hero.webp)
+![صورة مجردة لأسسٍ من الأجهزة تحدد شكل البرمجيات فوقها]({{ '/assets/images/inference-engine-hardware-strategy-hero.webp' | relative_url }})
 *أسسٌ بأحجام مختلفة (الأجهزة) تحدد شكل البرمجيات التي تتدفق فوقها.*
 
 ## نظرة عامة

@@ -22,7 +22,7 @@ audiobook: /assets/audio/posts/token-price-collapse-real-bill/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![핵심 개념 일러스트](/assets/images/token-price-collapse-real-bill-hero.png)
+![핵심 개념 일러스트]({{ '/assets/images/token-price-collapse-real-bill-hero.png' | relative_url }})
 
 캐시된 입력 100만 토큰에 0.11달러입니다. 즈닷에이아이의 GLM-4.5가 자주 반복되는 입력에 매긴 값이고, 표준 입력은 100만 토큰당 0.6달러, 출력은 2.2달러입니다. 프론티어 미국 모델의 입력 단가가 여전히 수 달러대인 것과 견주면 확연히 낮은 수준입니다. 미니맥스, 딥시크, 큐웬, 키미 같은 중국계 모델도 입력을 0.1달러대의 초저가 구간에서 매기며 같은 흐름에 올라타 있습니다. 2025년 초만 해도 10퍼센트에 못 미치던 중국 모델의 글로벌 토큰 소비 점유율이 2026년 중반 50퍼센트 수준까지 올라왔다는 집계가 나올 정도입니다. 숫자만 보면 결론은 단순합니다. 모델은 상품이 되었고, 값은 0을 향해 달려간다는 이야기입니다.
 
@@ -37,7 +37,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 두 소식을 나란히 놓으면 하나의 문장으로 정리됩니다. 모델을 부르는 값은 내려가지만, 그 모델을 믿고 쓰는 값은 그대로거나 오히려 올라갑니다. 값은 증발하지 않았습니다. 자리를 옮겼을 뿐입니다.
 
 
-![값의 이동 개념 다이어그램](/assets/images/token-price-collapse-real-bill-diagram.svg)
+![값의 이동 개념 다이어그램]({{ '/assets/images/token-price-collapse-real-bill-diagram.svg' | relative_url }})
 
 *토큰값은 0으로 수렴하지만, 값은 실행 계층의 세 청구서(비용 통제, 안전한 실행, 감사 가능성)로 자리를 옮깁니다.*
 

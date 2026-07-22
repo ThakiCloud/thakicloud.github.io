@@ -28,7 +28,7 @@ categories:
 
 ---
 
-![개념 다이어그램](/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg' | relative_url }})
 
 *엔지니어 한 명이 수백 개 에이전트를 지휘할 때의 거버넌스 구조*
 

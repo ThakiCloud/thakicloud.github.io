@@ -26,7 +26,7 @@ categories:
 published: false
 ---
 
-![صورة تجريدية تُظهر بيانات طبقية تتدفق عبر بنية شبكية تجمع بين الشبكات العصبية وقواعد البيانات، مع خلايا ذاكرة تتشكل وتتلاشى](/assets/images/agent-native-memory-system-hero.webp)
+![صورة تجريدية تُظهر بيانات طبقية تتدفق عبر بنية شبكية تجمع بين الشبكات العصبية وقواعد البيانات، مع خلايا ذاكرة تتشكل وتتلاشى]({{ '/assets/images/agent-native-memory-system-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

@@ -37,7 +37,7 @@ published: false
 
 [**Refact.ai**](https://github.com/smallcloudai/refact) مشروع مفتوح المصدر نشط يمتلك 3k نجمة و248 تفرعاً. يُوزَّع تحت رخصة BSD-3-Clause، ويوفر حلاً على مستوى المؤسسات مع إمكانية الاستضافة الذاتية.
 
-![مخطط مفاهيمي](/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

@@ -25,7 +25,7 @@ categories:
 
 Research consistently confirms that approximately sixty-five percent of startup failures stem from people problems. Traditional capability and experience evaluations struggle to predict team dynamics and conflict points. Saberr takes an approach that quantifies value alignment and behavioral diversity to proactively reduce risks.
 
-![Saberr data flow: from collecting surveys, behavior, and interactions to hiring, onboarding, and reshaping teams](/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg)
+![Saberr data flow: from collecting surveys, behavior, and interactions to hiring, onboarding, and reshaping teams]({{ '/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg' | relative_url }})
 
 ## Input Data and Feature Engineering
 

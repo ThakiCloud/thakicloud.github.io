@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **وقت القراءة المتوقع**: 11 دقيقة
 
-![مخطط مفاهيمي لتكميم Qwen3.6-27B NVFP4 رباعي البت](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp)
+![مخطط مفاهيمي لتكميم Qwen3.6-27B NVFP4 رباعي البت]({{ '/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

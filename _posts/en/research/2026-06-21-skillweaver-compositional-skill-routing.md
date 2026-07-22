@@ -41,7 +41,7 @@ The paper formalizes composite skill routing in three stages.
 
 The SkillWeaver framework implements these three stages as, respectively, an LLM task decomposer, a FAISS-indexed bi-encoder skill retriever, and a dependency-aware DAG planner. For evaluation, the authors also propose a benchmark composed of composite queries built on top of real MCP server skills collected from the public MCP ecosystem.
 
-![SkillWeaver compositional skill routing pipeline](/assets/images/skillweaver-compositional-skill-routing-diagram.svg)
+![SkillWeaver compositional skill routing pipeline]({{ '/assets/images/skillweaver-compositional-skill-routing-diagram.svg' | relative_url }})
 
 ## The Key Finding: The Bottleneck Is Not the Retriever but "Decomposition"
 

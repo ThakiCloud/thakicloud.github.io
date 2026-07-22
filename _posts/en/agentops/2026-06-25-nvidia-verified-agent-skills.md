@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Abstract image showing modular skill blocks sealed with cryptographic stamps, linked into a chain of trust](/assets/images/nvidia-verified-agent-skills-hero.webp)
+![Abstract image showing modular skill blocks sealed with cryptographic stamps, linked into a chain of trust]({{ '/assets/images/nvidia-verified-agent-skills-hero.webp' | relative_url }})
 
 ## Overview
 

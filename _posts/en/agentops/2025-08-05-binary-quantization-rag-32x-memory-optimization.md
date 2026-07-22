@@ -38,7 +38,7 @@ As RAG (Retrieval-Augmented Generation) systems establish themselves as the core
 
 This article covers everything needed to optimize a RAG system using Binary Quantization, from the core principles through to a working implementation.
 
-![Concept diagram](/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg)
+![Concept diagram]({{ '/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

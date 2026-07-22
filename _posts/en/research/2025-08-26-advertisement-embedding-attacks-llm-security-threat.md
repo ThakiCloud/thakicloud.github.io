@@ -47,7 +47,7 @@ $$P_{AEA}(y|x, \theta) = \prod_{i=1}^{n} P(y_i|y_{<i}, M(x), M(\theta))$$
 
 This manipulation ensures that certain predetermined content appears in the output with high probability while maintaining the overall coherence and naturalness of the response. The sophistication of AEA lies in making this manipulation imperceptible to standard evaluation metrics and human reviewers.
 
-![Advertisement Embedding Attack (AEA) threat model: attack vectors, compromised LLM, ad-injected output, and defense layer](/assets/images/advertisement-embedding-attacks-diagram.svg)
+![Advertisement Embedding Attack (AEA) threat model: attack vectors, compromised LLM, ad-injected output, and defense layer]({{ '/assets/images/advertisement-embedding-attacks-diagram.svg' | relative_url }})
 
 The attack methodology operates on two primary vectors: input manipulation and model parameter manipulation. Input manipulation involves crafting prompts or system messages that encourage the model to include specific content in its responses. This can be achieved through carefully designed prompt injections that exploit the model's instruction-following capabilities. Model parameter manipulation, on the other hand, involves training or fine-tuning models with poisoned datasets that create backdoors for content injection.
 

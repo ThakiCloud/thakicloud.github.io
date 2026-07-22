@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![AI Governance and Audit Automation in Financial Services](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+![AI Governance and Audit Automation in Financial Services]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
 ## Overview
 

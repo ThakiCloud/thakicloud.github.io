@@ -70,7 +70,7 @@ flowchart TB
 
 بمطابقة متطلبات VRAM المحسوبة على خطوط السعة للتكوينات الثلاثة، تتضح الصورة.
 
-![ذاكرة VRAM المطلوبة حسب حجم النموذج والتكميم، مع خطوط سعة التكوينات الثلاثة](/assets/images/personal-ai-computer-onprem-vram-results.webp)
+![ذاكرة VRAM المطلوبة حسب حجم النموذج والتكميم، مع خطوط سعة التكوينات الثلاثة]({{ '/assets/images/personal-ai-computer-onprem-vram-results.webp' | relative_url }})
 
 يعمل النموذج على تكوين معيّن حين يقع عموده تحت خط سعة ذلك التكوين. وباختصار:
 

@@ -19,7 +19,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/dev/claude-code-screen-reader-accessibility/"
 ---
 
-![تصور تجريدي لطرفية أُعيد تنظيمها إلى تدفق خطي نظيف من النص](/assets/images/claude-code-screen-reader-accessibility-hero.png)
+![تصور تجريدي لطرفية أُعيد تنظيمها إلى تدفق خطي نظيف من النص]({{ '/assets/images/claude-code-screen-reader-accessibility-hero.png' | relative_url }})
 
 ## نظرة عامة
 

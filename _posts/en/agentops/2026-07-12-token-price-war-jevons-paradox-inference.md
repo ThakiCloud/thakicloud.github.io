@@ -20,7 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/token-price-war-jev
 lang: en
 ---
 
-![A conceptual diagram showing that the more cheap tokens flood the market, the higher the valuation of the inference infrastructure underneath climbs](/assets/images/token-price-war-jevons-paradox-inference-hero.webp)
+![A conceptual diagram showing that the more cheap tokens flood the market, the higher the valuation of the inference infrastructure underneath climbs]({{ '/assets/images/token-price-war-jevons-paradox-inference-hero.webp' | relative_url }})
 
 ## Two Opposite Pieces of News, Arriving in the Same Week
 

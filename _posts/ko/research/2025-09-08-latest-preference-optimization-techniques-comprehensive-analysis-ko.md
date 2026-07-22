@@ -38,7 +38,7 @@ $$J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]$$
 현대 선호도 최적화의 도전과제들은 여러 근본적인 문제들로부터 발생합니다: 모델이 보상 함수의 허점을 악용하는 보상 해킹; 불량한 기울기 추정으로 인한 훈련 불안정성; 샘플링과 비교 과정에서의 계산 비효율성; 그리고 복잡한 다중 모달 작업으로의 확장 어려움 등입니다. 이러한 도전과제들은 현재 이 분야의 최첨단 기술을 대표하는 다섯 가지 혁신적인 접근법의 개발을 촉진하였습니다.
 
 
-![개념 다이어그램](/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

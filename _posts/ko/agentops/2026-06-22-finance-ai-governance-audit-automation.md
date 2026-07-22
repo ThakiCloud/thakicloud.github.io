@@ -23,7 +23,7 @@ categories:
 published: false
 ---
 
-![금융권 AI 거버넌스와 감사 자동화](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+![금융권 AI 거버넌스와 감사 자동화]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
 ## 개요
 
@@ -186,11 +186,11 @@ ThakiCloud AI Platform은 K8s 기반으로 금융기관 전산 센터 내부망�
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![finance-ai-governance-audit-automation 슬라이드 1](/assets/images/finance-ai-governance-audit-automation-slide-01.png)
+![finance-ai-governance-audit-automation 슬라이드 1]({{ '/assets/images/finance-ai-governance-audit-automation-slide-01.png' | relative_url }})
 
-![finance-ai-governance-audit-automation 슬라이드 2](/assets/images/finance-ai-governance-audit-automation-slide-02.png)
+![finance-ai-governance-audit-automation 슬라이드 2]({{ '/assets/images/finance-ai-governance-audit-automation-slide-02.png' | relative_url }})
 
-![finance-ai-governance-audit-automation 슬라이드 3](/assets/images/finance-ai-governance-audit-automation-slide-03.png)
+![finance-ai-governance-audit-automation 슬라이드 3]({{ '/assets/images/finance-ai-governance-audit-automation-slide-03.png' | relative_url }})
 
-![finance-ai-governance-audit-automation 슬라이드 4](/assets/images/finance-ai-governance-audit-automation-slide-04.png)
+![finance-ai-governance-audit-automation 슬라이드 4]({{ '/assets/images/finance-ai-governance-audit-automation-slide-04.png' | relative_url }})
 

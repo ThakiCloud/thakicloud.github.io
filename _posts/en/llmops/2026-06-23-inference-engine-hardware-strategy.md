@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Abstract image of hardware foundations determining the shape of software above them](/assets/images/inference-engine-hardware-strategy-hero.webp)
+![Abstract image of hardware foundations determining the shape of software above them]({{ '/assets/images/inference-engine-hardware-strategy-hero.webp' | relative_url }})
 *Foundations of different sizes (hardware) determining the shape of the software that flows on top of them.*
 
 ## Overview

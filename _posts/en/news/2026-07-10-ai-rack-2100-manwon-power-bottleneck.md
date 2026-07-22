@@ -23,7 +23,7 @@ categories:
   - news
 ---
 
-![Concept diagram of the power bottleneck narrowing into a server rack, with the software layer above it](/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp)
+![Concept diagram of the power bottleneck narrowing into a server rack, with the software layer above it]({{ '/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp' | relative_url }})
 
 Picture a single invoice. The line item is one server rack, and the price is 21 million dollars, about 31.6 billion won in our currency. That is the expected unit price for Nvidia's next generation Rubin Ultra rack, reported today by Global Economic. Just one generation earlier, a Blackwell rack cost 3 to 4 million dollars, so this is a jump of five to seven times. The largest item on this bill is not the compute chip but memory. The HBM4e loaded into a single rack alone comes to 82,944 gigabytes, and at 18.49 dollars per gigabyte, the memory component alone tops 1.53 million dollars. An amount that used to approach the price of an entire previous generation server rack is now the price of a single part. The story running through today's digest starts here. The unit of AI competition has shifted from performance benchmarks to money and power.
 

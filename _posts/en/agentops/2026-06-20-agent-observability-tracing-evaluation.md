@@ -56,7 +56,7 @@ A 2025 analysis found that approximately 65% of agent failures originate from co
 ---
 
 
-![Concept diagram](/assets/images/agent-observability-tracing-evaluation-diagram.svg)
+![Concept diagram]({{ '/assets/images/agent-observability-tracing-evaluation-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 15 min
 
-![SenseNova U1 NEO-Unify unified multimodal concept visual](/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp)
+![SenseNova U1 NEO-Unify unified multimodal concept visual]({{ '/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp' | relative_url }})
 
 ## Overview
 

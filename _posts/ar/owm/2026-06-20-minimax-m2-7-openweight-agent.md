@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-![مخطط مفاهيمي لـ MiniMax-M2.7](/assets/images/minimax-m2-7-hero.webp)
+![مخطط مفاهيمي لـ MiniMax-M2.7]({{ '/assets/images/minimax-m2-7-hero.webp' | relative_url }})
 
 ## نظرة عامة على MiniMax-M2.7
 

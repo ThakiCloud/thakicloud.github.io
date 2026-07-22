@@ -32,7 +32,7 @@ That is the starting point for this article. The substance behind seemingly intu
 
 ---
 
-![Concept diagram](/assets/images/data-driven-decision-culture-ai-diagram.svg)
+![Concept diagram]({{ '/assets/images/data-driven-decision-culture-ai-diagram.svg' | relative_url }})
 
 *Logging decisions and comparing them to predictions, so data can correct intuition bias*
 

@@ -97,13 +97,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![personal-monorepo-template-agent-memory 슬라이드 1](/assets/images/personal-monorepo-template-agent-memory-slide-01.png)
+![personal-monorepo-template-agent-memory 슬라이드 1]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-01.png' | relative_url }})
 
-![personal-monorepo-template-agent-memory 슬라이드 2](/assets/images/personal-monorepo-template-agent-memory-slide-02.png)
+![personal-monorepo-template-agent-memory 슬라이드 2]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-02.png' | relative_url }})
 
-![personal-monorepo-template-agent-memory 슬라이드 3](/assets/images/personal-monorepo-template-agent-memory-slide-03.png)
+![personal-monorepo-template-agent-memory 슬라이드 3]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-03.png' | relative_url }})
 
-![personal-monorepo-template-agent-memory 슬라이드 4](/assets/images/personal-monorepo-template-agent-memory-slide-04.png)
+![personal-monorepo-template-agent-memory 슬라이드 4]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-04.png' | relative_url }})
 
 ## 출처
 

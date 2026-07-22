@@ -32,7 +32,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 그날 발표된 내용을 차분히 정리합니다. 무엇을, 어디에, 얼마나 짓겠다는 것인지, 그 배경에 어떤 산업 흐름과 정책이 있는지, 그리고 이것이 AI 인프라를 운용하는 사업자에게 무엇을 의미하는지 순서대로 짚겠습니다.
 
-![삼성·SK 10년 국내 투자 계획 규모를 정부 연간 예산과 비교한 막대 그래프](/assets/images/samsung-skhynix-ai-memory-mega-investment-results.webp)
+![삼성·SK 10년 국내 투자 계획 규모를 정부 연간 예산과 비교한 막대 그래프]({{ '/assets/images/samsung-skhynix-ai-memory-mega-investment-results.webp' | relative_url }})
 
 ## 무엇을 발표했나
 

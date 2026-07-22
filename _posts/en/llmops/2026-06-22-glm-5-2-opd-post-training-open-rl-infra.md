@@ -31,7 +31,7 @@ At ThakiCloud, we run training workloads and GPU orchestration on a K8s-based AI
 
 > A general overview of the slime RL post-training framework itself is covered in a separate post, [RL Post-Training as Infrastructure: the slime Open-Source Framework and RL Scaling](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/). This post focuses on the OPD post-training and expert-model merging that run on top of it.
 
-![Abstract: distributed RL post-training and model merging](/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.webp)
+![Abstract: distributed RL post-training and model merging]({{ '/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.webp' | relative_url }})
 
 ## What kind of model is GLM-5.2
 

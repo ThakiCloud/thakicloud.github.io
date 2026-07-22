@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp)
+![Key concept illustration]({{ '/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp' | relative_url }})
 
 ⏱️ **Estimated reading time**: 25 min
 
@@ -41,7 +41,7 @@ This article provides a deep analysis of the ten most important papers on reinfo
 By examining the core ideas and practical implications of each paper, we explore how reinforcement learning is forging a new paradigm that pushes past the limitations of current LLMs.
 
 
-![Concept diagram](/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg)
+![Concept diagram]({{ '/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

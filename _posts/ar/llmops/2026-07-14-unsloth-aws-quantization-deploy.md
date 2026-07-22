@@ -17,7 +17,7 @@ categories:
   - llmops
 ---
 
-![رسم توضيحي تجريدي لنموذج كبير يُقطَّر إلى طبقات مضغوطة تتدفق نحو بنية خدمة سحابية](/assets/images/unsloth-aws-quantization-deploy-hero.png)
+![رسم توضيحي تجريدي لنموذج كبير يُقطَّر إلى طبقات مضغوطة تتدفق نحو بنية خدمة سحابية]({{ '/assets/images/unsloth-aws-quantization-deploy-hero.png' | relative_url }})
 
 ## نظرة عامة
 

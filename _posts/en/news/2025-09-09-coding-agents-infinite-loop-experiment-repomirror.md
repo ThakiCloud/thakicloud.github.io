@@ -24,7 +24,7 @@ published: false
 
 ⏱️ **Estimated Reading Time**: 8 minutes
 
-![Abstract illustration of two repositories mirroring each other while being ported inside an infinite loop](/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.webp)
+![Abstract illustration of two repositories mirroring each other while being ported inside an infinite loop]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.webp' | relative_url }})
 *An abstract depiction of RepoMirror's mirroring structure, repeatedly transforming a source repository into its target form inside an infinite loop.*
 
 ## Introduction: A New Paradigm in AI-Driven Development Automation

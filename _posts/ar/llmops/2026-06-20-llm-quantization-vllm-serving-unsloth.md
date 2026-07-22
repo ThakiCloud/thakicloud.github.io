@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![خريطة صيغ الضغط الكمّي التي تخدمها vLLM](/assets/images/llm-quant-vllm-hero.webp)
+![خريطة صيغ الضغط الكمّي التي تخدمها vLLM]({{ '/assets/images/llm-quant-vllm-hero.webp' | relative_url }})
 
 ## لماذا الضغط الكمّي مرّة أخرى
 

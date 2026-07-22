@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![هيكل مجرد من أربع طبقات مضيئة تتراكم من الأسفل إلى الأعلى وتترابط فيما بينها](/assets/images/agentic-ai-hitchhikers-guide-hero.webp)
+![هيكل مجرد من أربع طبقات مضيئة تتراكم من الأسفل إلى الأعلى وتترابط فيما بينها]({{ '/assets/images/agentic-ai-hitchhikers-guide-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

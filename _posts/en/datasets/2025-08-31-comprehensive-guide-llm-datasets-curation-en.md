@@ -25,7 +25,7 @@ categories:
 
 The landscape of Large Language Model (LLM) development has evolved dramatically, with data quality emerging as the most critical factor determining model performance. In the post-training phase, where pre-trained models are transformed into capable assistants, the selection and curation of datasets becomes paramount. This comprehensive guide explores the essential datasets, methodologies, and tools that define modern LLM training practices.
 
-![Conceptual view of data from many sources passing through filtering layers and converging into a single refined training-data core](/assets/images/comprehensive-guide-llm-datasets-curation-hero.webp)
+![Conceptual view of data from many sources passing through filtering layers and converging into a single refined training-data core]({{ '/assets/images/comprehensive-guide-llm-datasets-curation-hero.webp' | relative_url }})
 
 ## Understanding Dataset Quality: The Foundation of Excellence
 
@@ -157,7 +157,7 @@ Understanding dataset characteristics and identifying potential issues requires 
 
 **Autolabel** addresses the challenge of data annotation by automatically labeling data using popular language models. This approach can significantly reduce the manual effort required for dataset preparation while maintaining labeling consistency across large volumes of data. The tool's integration with established language models ensures that labeling quality reflects current best practices in the field.
 
-![LLM post-training data curation pipeline diagram, from collection through preference alignment and validation](/assets/images/comprehensive-guide-llm-datasets-curation-diagram.svg)
+![LLM post-training data curation pipeline diagram, from collection through preference alignment and validation]({{ '/assets/images/comprehensive-guide-llm-datasets-curation-diagram.svg' | relative_url }})
 
 ## Future Directions and Emerging Trends
 

@@ -63,11 +63,11 @@ Gemma 4 26B 로컬 멀티에이전트 데모는 "온프레미스 추론이 실�
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![gemma4-local-multi-agent-orchestration 슬라이드 1](/assets/images/gemma4-local-multi-agent-orchestration-slide-01.png)
+![gemma4-local-multi-agent-orchestration 슬라이드 1]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-01.png' | relative_url }})
 
-![gemma4-local-multi-agent-orchestration 슬라이드 2](/assets/images/gemma4-local-multi-agent-orchestration-slide-02.png)
+![gemma4-local-multi-agent-orchestration 슬라이드 2]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-02.png' | relative_url }})
 
-![gemma4-local-multi-agent-orchestration 슬라이드 3](/assets/images/gemma4-local-multi-agent-orchestration-slide-03.png)
+![gemma4-local-multi-agent-orchestration 슬라이드 3]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-03.png' | relative_url }})
 
-![gemma4-local-multi-agent-orchestration 슬라이드 4](/assets/images/gemma4-local-multi-agent-orchestration-slide-04.png)
+![gemma4-local-multi-agent-orchestration 슬라이드 4]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-04.png' | relative_url }})
 

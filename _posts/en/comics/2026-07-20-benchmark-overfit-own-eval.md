@@ -19,7 +19,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 The talk of the week: a Chinese open model posted a top-tier score on an internal cybersecurity eval. Almost immediately, the timeline pushed back — chatter that Moonshot may have benchmark-overfit. Benchmark-overfitting is when a model memorizes the shape of the test: great scores, shaky on problems it hasn't seen. An eval, meanwhile, is just the exam that measures whether a model can actually do the work. This strip pokes at the gap between a leaderboard rank and whether the thing works on your own job.
 
-![Aced the Exam, Blanked on the Job](/assets/images/posts/comics/benchmark-overfit-own-eval/strip.png)
+![Aced the Exam, Blanked on the Job]({{ '/assets/images/posts/comics/benchmark-overfit-own-eval/strip.png' | relative_url }})
 
 > Source: [RT @rauchg: Based on internal evals:](https://x.com/hjguyhan/status/2078968936440422525) · twitter
 

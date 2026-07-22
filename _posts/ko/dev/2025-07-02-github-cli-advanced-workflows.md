@@ -25,7 +25,7 @@ published: false
 
 **macOS GitHub CLI 완전 자동화 시리즈**의 최종편입니다. 지금까지 구축한 모든 시스템을 통합하고, 실무에서 바로 활용할 수 있는 완성형 워크플로우를 만들어보겠습니다. CI/CD 연동, 팀 온보딩 자동화, 성능 최적화까지 다룹니다.
 
-![zshrc가 자동화 모듈을 로드해 통합 gh 디스패처로 GitHub을 제어하는 개념도](/assets/images/github-cli-advanced-workflows-hero.webp)
+![zshrc가 자동화 모듈을 로드해 통합 gh 디스패처로 GitHub을 제어하는 개념도]({{ '/assets/images/github-cli-advanced-workflows-hero.webp' | relative_url }})
 
 ## 통합 시스템 아키텍처
 
@@ -734,7 +734,7 @@ EOF
 chmod +x ~/scripts/github-cli/utils/deployment-checklist.sh
 ```
 
-![GitHub CLI 통합 자동화 시스템 아키텍처: zshrc 로드 → 모듈 → 통합 gh 디스패처 → GitHub 다이어그램](/assets/images/github-cli-advanced-workflows-diagram.svg)
+![GitHub CLI 통합 자동화 시스템 아키텍처: zshrc 로드 → 모듈 → 통합 gh 디스패처 → GitHub 다이어그램]({{ '/assets/images/github-cli-advanced-workflows-diagram.svg' | relative_url }})
 
 ## 시리즈 완결
 

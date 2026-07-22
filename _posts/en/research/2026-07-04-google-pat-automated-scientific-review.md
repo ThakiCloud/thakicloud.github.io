@@ -28,7 +28,7 @@ Peer review has been a bottleneck for a long time. Submissions keep growing ever
 
 What makes this research interesting is that it goes well beyond "summarizing a paper with an LLM." PAT is built around the idea that single-shot prompting and simple sampling have real limits, and it is designed instead to scale reasoning itself. ThakiCloud already runs an internal pipeline that automates paper review on top of a Kubernetes-based AI/ML SaaS platform, so this work is not an abstract case study for us. It speaks directly to how we design our own verification loops. This post covers what PAT does and how, what it actually caught in real deployments, and what its design implies for ThakiCloud's products.
 
-![Concept image of an agent reviewing a scientific paper](/assets/images/google-pat-automated-scientific-review-hero.webp)
+![Concept image of an agent reviewing a scientific paper]({{ '/assets/images/google-pat-automated-scientific-review-hero.webp' | relative_url }})
 
 ## What This Research Is
 

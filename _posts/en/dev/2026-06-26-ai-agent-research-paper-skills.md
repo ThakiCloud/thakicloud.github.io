@@ -25,7 +25,7 @@ categories:
 
 As a paper deadline approaches, researchers repeat the same tasks: polish the introduction, verify that the abstract's claims and evidence align, and preemptively fix any sentence a reviewer might target. That expertise typically lives inside an advisor's head or scattered across notes. [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills), a recently trending open-source project on X, packages exactly that expertise into a Skill package that AI coding agents can call directly. The key distinction is that this is not yet another collection of prompts -- it is a portable format that plugs the same capability into Codex, Claude Code, and Gemini alike.
 
-![Abstract image of a modular knowledge unit in the center sending three data streams to three different tools](/assets/images/ai-agent-research-paper-skills-hero.webp)
+![Abstract image of a modular knowledge unit in the center sending three data streams to three different tools]({{ '/assets/images/ai-agent-research-paper-skills-hero.webp' | relative_url }})
 
 ## Overview
 
@@ -39,7 +39,7 @@ An Agent Skill is a package that tells an agent how to perform a specific task. 
 
 The third property best explains the value of this project. Models keep changing, and CLI tools keep changing. But "how to write a strong introduction" as task knowledge outlasts both by a wide margin. Accumulating capability in the Skill rather than in the tool means that expertise does not have to be rebuilt every time the tool changes. Internally, we call this the "thin harness, fat Skills" principle: keep the model loop, permissions, and file I/O thin; pack domain knowledge, judgment, and failure cases thickly into the Skill.
 
-![Diagram showing a single portable Skill package containing a SKILL.md instruction file and reference materials, plugged equally into Claude Code, Codex, and Gemini to perform paper-writing tasks](/assets/images/ai-agent-research-paper-skills-diagram.webp)
+![Diagram showing a single portable Skill package containing a SKILL.md instruction file and reference materials, plugged equally into Claude Code, Codex, and Gemini to perform paper-writing tasks]({{ '/assets/images/ai-agent-research-paper-skills-diagram.webp' | relative_url }})
 
 The central point of the diagram is that there is exactly one Skill package in the middle. The three tools are not each carrying separate prompts -- they share the same task knowledge. That is the fundamental difference from pasting a one-liner prompt into a chat window.
 

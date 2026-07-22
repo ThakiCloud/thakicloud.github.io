@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![صورة مجردة لخط تجميع بحثي](/assets/images/academic-research-skills-claude-code-hero.webp)
+![صورة مجردة لخط تجميع بحثي]({{ '/assets/images/academic-research-skills-claude-code-hero.webp' | relative_url }})
 *خط أنابيب متدرج يتدفق من البحث حتى المخطوطة، عابراً بوابات التحقق في كل مرحلة.*
 
 ## نظرة عامة

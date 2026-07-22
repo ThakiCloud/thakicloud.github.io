@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![Concept diagram](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp)
+![Concept diagram]({{ '/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp' | relative_url }})
 
 ⏱️ **Estimated reading time**: 20 min
 
@@ -45,7 +45,7 @@ Turso overcomes the limitations of traditional SQLite while providing a familiar
 This article takes a DevOps perspective and systematically covers Turso Database from core features through real-world production deployment.
 
 
-![Concept diagram](/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg)
+![Concept diagram]({{ '/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

@@ -29,7 +29,7 @@ A single sentence recently made the rounds among developers: "I don't type promp
 
 This shift has little to do with models getting smarter. Even the strongest model, faced with a one-shot request, can't push a complex task all the way through in a single pass. But wire that same model into a repeating structure, one where it calls tools, takes the results back as input, and decides its next move, and the picture changes. ThakiCloud runs a Kubernetes-based AI/ML SaaS platform, and we run exactly this kind of loop in our own internal development. So for us, "writing a loop" isn't a trend to comment on; it's a daily engineering concern. This post lays out what that loop actually consists of, and what makes it trustworthy.
 
-![Conceptual illustration of loop engineering for coding agents](/assets/images/loop-engineering-coding-agents-hero.webp)
+![Conceptual illustration of loop engineering for coding agents]({{ '/assets/images/loop-engineering-coding-agents-hero.webp' | relative_url }})
 
 ## From Prompts to Loops: What Actually Changes
 

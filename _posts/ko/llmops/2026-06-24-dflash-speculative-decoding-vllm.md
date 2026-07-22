@@ -26,7 +26,7 @@ audiobook: /assets/audio/posts/dflash-speculative-decoding-vllm/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![병렬 토큰 블록이 한 번에 앞으로 뻗어 나가는 추상 비주얼](/assets/images/dflash-speculative-decoding-vllm-hero.webp)
+![병렬 토큰 블록이 한 번에 앞으로 뻗어 나가는 추상 비주얼]({{ '/assets/images/dflash-speculative-decoding-vllm-hero.webp' | relative_url }})
 
 추측 디코딩의 드래프팅 단계를 순차에서 병렬로 바꾼 DFlash의 개념을 형상화한 이미지입니다.
 
@@ -106,7 +106,7 @@ DFlash의 가속 수치는 두 가지로 나뉘며, 측정 방식이 다르므�
 
 첫째, **단일 스트림 무손실 가속**입니다. UCSD 논문은 Qwen3-8B 그리디 디코딩(Transformers 백엔드) 기준 평균 4.86배, MATH-500에서 최고 6.08배를 보고합니다. 같은 조건에서 EAGLE-3는 트리 크기 16에서 평균 1.76배, 60에서 2.02배입니다. 작업별 수치는 아래 차트와 같습니다.
 
-![DFlash와 EAGLE-3의 Qwen3-8B 작업별 무손실 가속 비교 막대 그래프](/assets/images/dflash-speculative-decoding-vllm-results.webp)
+![DFlash와 EAGLE-3의 Qwen3-8B 작업별 무손실 가속 비교 막대 그래프]({{ '/assets/images/dflash-speculative-decoding-vllm-results.webp' | relative_url }})
 
 위 그래프는 UCSD DFlash 논문의 공식 수치를 시각화한 것이며 ThakiCloud의 직접 측정이 아닙니다. GSM8K 5.15배, MATH-500 6.08배, AIME25 5.62배, HumanEval 5.14배, LiveCodeBench 5.51배처럼 수학·코드 추론 작업에서 가속폭이 특히 큽니다. 반면 다양한 응답이 가능한 대화형 MT-Bench는 2.75배로 상대적으로 낮습니다. 추측 디코딩 가속이 "출력이 예측 가능할수록(수용률이 높을수록) 커진다"는 일반 원리와 일치합니다.
 

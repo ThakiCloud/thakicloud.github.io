@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/post-training-revolution-rl-agent-development-hero.webp)
+![핵심 개념 일러스트]({{ '/assets/images/post-training-revolution-rl-agent-development-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 15분
 
@@ -39,7 +39,7 @@ published: false
 이 글에서는 2025년 4월 이후 arXiv에 공개된 강화학습 기반 포스트 트레이닝 분야의 핵심 논문 10편을 GitHub 스타 수 기준으로 정리하고, 각 연구의 실무 적용 가능성을 심도 있게 분석해보겠습니다. 특히 에이전트 네이티브 런타임(Agent-Native Runtime) 관점에서 이들 연구가 가져올 변화를 조망해보겠습니다.
 
 
-![개념 다이어그램](/assets/images/post-training-revolution-rl-agent-development-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/post-training-revolution-rl-agent-development-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

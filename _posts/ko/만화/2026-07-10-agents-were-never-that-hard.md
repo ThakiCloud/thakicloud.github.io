@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 AI 에이전트는 스스로 계획을 세우고 도구를 불러다 일을 대신 처리하는 프로그램을 말합니다. 이번에 화제가 된 트윗의 요지는 간단합니다. 다들 '에이전트 직접 만들기'를 언젠가 할 일 목록에 올려두고 미룬다는 겁니다. 읽는 글마다 무슨 대형 연구 프로젝트처럼 겁을 줬으니까요.
 그런데 막상 손을 대본 사람의 반응이 '이게 된다고?'였습니다. 어려웠던 건 만드는 과정이 아니라 어렵다고 믿었던 마음이었던 셈이죠. 파시스와 메티스가 그 1년짜리 공포를 대신 겪어 봅니다.
 
-![언젠가 만들려던 그거ㅋ](/assets/images/posts/만화/agents-were-never-that-hard/strip.png)
+![언젠가 만들려던 그거ㅋ]({{ '/assets/images/posts/만화/agents-were-never-that-hard/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @KanikaBK: Omg.. this can't be true...](https://x.com/hjguyhan/status/2075361180093391174) · twitter
 

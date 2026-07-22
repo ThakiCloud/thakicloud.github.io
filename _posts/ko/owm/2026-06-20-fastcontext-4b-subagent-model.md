@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 7분
 
-![FastContext-1.0-4B-SFT 개념도](/assets/images/fastcontext-4b-subagent-model-hero.webp)
+![FastContext-1.0-4B-SFT 개념도]({{ '/assets/images/fastcontext-4b-subagent-model-hero.webp' | relative_url }})
 
 ## 무엇이 새로운가
 

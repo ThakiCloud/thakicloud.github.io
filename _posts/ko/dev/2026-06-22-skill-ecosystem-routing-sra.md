@@ -25,7 +25,7 @@ audiobook: /assets/audio/posts/skill-ecosystem-routing-sra/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![스킬 생태계 라우팅 SRA 히어로 이미지](/assets/images/skill-ecosystem-routing-sra-hero.webp)
+![스킬 생태계 라우팅 SRA 히어로 이미지]({{ '/assets/images/skill-ecosystem-routing-sra-hero.webp' | relative_url }})
 
 AI 에이전트에 스킬을 계속 추가하고 있는 운영자라면 이 글이 도움이 됩니다. 결론부터 말하면, 스킬이 많을수록 에이전트가 강해진다는 직관은 틀렸고 라우팅이 없으면 스킬은 그냥 세금입니다.
 

@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق
 
-![نظرة عامة على خط جمع البيانات الملائمة للنماذج اللغوية الكبيرة في AnyCrawl](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
+![نظرة عامة على خط جمع البيانات الملائمة للنماذج اللغوية الكبيرة في AnyCrawl]({{ '/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png' | relative_url }})
 
 ## نظرة عامة
 

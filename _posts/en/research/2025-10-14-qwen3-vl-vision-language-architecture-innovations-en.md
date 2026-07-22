@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![Concept diagram](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)
+![Concept diagram]({{ '/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp' | relative_url }})
 
 ⏱️ **Estimated Reading Time**: 15 minutes
 
@@ -37,7 +37,7 @@ Qwen3-VL introduces three pivotal architectural innovations that collectively re
 The significance of these innovations becomes apparent when examining the model's capabilities. Scaled to 235 billion parameters in its most powerful configuration, with an active parameter count of 22 billion through Mixture-of-Experts architecture, Qwen3-VL achieves native support for 256,000-token contexts expandable to one million tokens. This dramatic expansion in context length enables entirely new applications, from analyzing hours-long videos with frame-level precision to processing entire books while maintaining detailed understanding. The introduction of specialized editions, including the reasoning-enhanced Thinking variant, demonstrates how architectural flexibility can be leveraged to serve different cognitive demands, from rapid inference to deep analytical reasoning.
 
 
-![Concept diagram](/assets/images/qwen3-vl-vision-language-architecture-innovations-diagram.svg)
+![Concept diagram]({{ '/assets/images/qwen3-vl-vision-language-architecture-innovations-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

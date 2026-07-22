@@ -33,7 +33,7 @@ Anthropic은 이메일 에이전트를 통해 Claude Code SDK의 인상적인 �
 [Claude Code SDK 데모 리포지토리](https://github.com/anthropics/claude-code-sdk-demos)는 대규모 언어 모델을 정교한 도구 및 상호작용 패턴과 함께 실제 애플리케이션에 통합하는 방법을 보여주는 중요한 진전을 나타냅니다.
 
 
-![개념 다이어그램](/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

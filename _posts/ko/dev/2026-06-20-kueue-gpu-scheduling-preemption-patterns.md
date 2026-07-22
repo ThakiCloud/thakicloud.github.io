@@ -227,11 +227,11 @@ Kueue는 Kubernetes 위에서 GPU 쿼터를 관리하는 몇 안 되는 프로�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 1](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.png)
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 1]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.png' | relative_url }})
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 2](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.png)
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 2]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.png' | relative_url }})
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 3](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.png)
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 3]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.png' | relative_url }})
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 4](/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.png)
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 4]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.png' | relative_url }})
 

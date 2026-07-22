@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![Manufacturing Operations Autonomous Agent Teams Header Image](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
+![Manufacturing Operations Autonomous Agent Teams Header Image]({{ '/assets/images/manufacturing-autonomous-agent-teams-hero.webp' | relative_url }})
 
 ## Overview
 

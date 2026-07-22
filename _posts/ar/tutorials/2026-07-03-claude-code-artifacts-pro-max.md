@@ -14,7 +14,7 @@ categories:
   - tutorials
 ---
 
-![صورة تجريدية لمخرجات جلسة تتجمع في صفحة حية واحدة بطبقات متعددة](/assets/images/claude-code-artifacts-pro-max-hero.webp)
+![صورة تجريدية لمخرجات جلسة تتجمع في صفحة حية واحدة بطبقات متعددة]({{ '/assets/images/claude-code-artifacts-pro-max-hero.webp' | relative_url }})
 *يتكثّف تقدّم الجلسة البرمجية في صفحة واحدة قابلة للمشاركة تتحدّث في الوقت الفعلي.*
 
 ## نظرة عامة

@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![Sovereign AI Reference Architecture for Air-Gapped Public Sector](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)
+![Sovereign AI Reference Architecture for Air-Gapped Public Sector]({{ '/assets/images/sovereign-ai-airgap-public-sector-hero.webp' | relative_url }})
 
 ## Overview: Why Sovereign AI Matters for the Public Sector Now
 

@@ -21,7 +21,7 @@ categories:
   - culture
 ---
 
-![صورة تجريدية لبخار وطاقة موجية تتقاطع في أنماط تداخل](/assets/images/waiting-for-carnot-hero.webp)
+![صورة تجريدية لبخار وطاقة موجية تتقاطع في أنماط تداخل]({{ '/assets/images/waiting-for-carnot-hero.webp' | relative_url }})
 
 ## سؤال العشرين واط
 

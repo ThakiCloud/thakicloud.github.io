@@ -30,7 +30,7 @@ published: false
 يمثل دمج الذكاء الاصطناعي في الرعاية الصحية أحد أكثر المجالات الواعدة والتحدي في التكنولوجيا الحديثة. مع تزايد تطبيقات النماذج اللغوية الكبيرة (LLMs) في السياقات الطبية، تصبح الحاجة إلى أطر تقييم قوية أمرًا بالغ الأهمية. يظهر OpenAI HealthBench كحل مبتكر، حيث يضع معايير جديدة لتقييم الذكاء الاصطناعي الطبي من خلال منهجيات LLMOps المبتكرة.
 
 
-![مخطط مفاهيمي](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![رسم توضيحي للمفهوم](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp)
+![رسم توضيحي للمفهوم]({{ '/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة
 
@@ -39,7 +39,7 @@ published: false
 يتناول هذا المقال بالتحليل المعمّق أبرز 10 أوراق بحثية في مجال التدريب اللاحق بالتعلم المعزز، صدرت منذ أبريل 2025 حتى الآن. تقدم هذه الأبحاث ابتكارات متنوعة، تمتد من منهجيات عملية ترفع قدرات النماذج المفتوحة ذات الحجم 7B-13B إلى مستوى GPT-4، وصولاً إلى تطبيقات متخصصة في مجالات كالطب والقانون.
 
 
-![مخطط مفاهيمي](/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

@@ -65,7 +65,7 @@ The learning cycle of AI vibe coding follows this pattern: Discovery leads to Ex
 
 In the Discovery phase, you accidentally encounter interesting code or techniques. During Experimentation, you try using them even without complete understanding. Through Observation, you see what works and what fails. In Abstraction, you generalize successful patterns. Finally, in Application, you adapt and apply these patterns to other problems. The key is not to hesitate at the Experimentation step - trying things before fully understanding them is the point. Understanding follows during and after experimentation.
 
-![AI vibe coding learning loop: discover, experiment, observe, abstract, apply - then repeat](/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg)
+![AI vibe coding learning loop: discover, experiment, observe, abstract, apply - then repeat]({{ '/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg' | relative_url }})
 
 This resembles a scientist's research methodology of forming hypotheses, conducting experiments, and observing results.
 

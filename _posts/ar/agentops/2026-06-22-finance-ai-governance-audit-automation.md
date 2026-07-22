@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

@@ -21,7 +21,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 The CEO behind Kimi made a point that stuck: pushing one agent to be ever smarter hits a wall fast, so instead you wire up many agents and let them collaborate. An agent here is a small AI worker that decides and uses tools on its own, and multi-agent just means a crowd of those workers splitting the job.
 It sounds visionary. For Paxis and Metis it's Tuesday. The catch: a swarm may clear the wall, but the invoice grows right along with it.
 
-![One Genius vs. a Whole Crowd](/assets/images/posts/comics/one-smart-agent-hits-a-wall-send-a-crowd/strip.png)
+![One Genius vs. a Whole Crowd]({{ '/assets/images/posts/comics/one-smart-agent-hits-a-wall-send-a-crowd/strip.png' | relative_url }})
 
 > Source: [RT @Serantych: Kimi's CEO Zhilin Yang: (build many agents, not one smarter one)](https://x.com/hjguyhan/status/2078398449716994270) · twitter
 

@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/comics/samsung-foundry-first
 
 Samsung's foundry business posted its first monthly profit in June, the first time it has been in the black in years. A foundry makes chips other people designed, and this one bled money for a long stretch before the numbers finally turned. The strip runs that moment through the ThakiCloud lens: own the fab, and the upside stays yours. Paxis and Metis push the logic until Hyper, invoice in hand, starts to sweat.
 
-![The Fab Finally Made Money. For Whom, Exactly?](/assets/images/posts/comics/samsung-foundry-first-profit-own-the-fab/strip.png)
+![The Fab Finally Made Money. For Whom, Exactly?]({{ '/assets/images/posts/comics/samsung-foundry-first-profit-own-the-fab/strip.png' | relative_url }})
 
 > Source: [RT @jukan05: According to Korean media reports, Samsung Foundry turned profitable on a monthly basis in June. This marks](https://x.com/hjguyhan/status/2074073652283519076) · twitter
 

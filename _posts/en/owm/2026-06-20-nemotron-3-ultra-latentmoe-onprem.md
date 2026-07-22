@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Nemotron-3-Ultra hybrid architecture concept](/assets/images/nemotron-3-ultra-hero.webp)
+![Nemotron-3-Ultra hybrid architecture concept]({{ '/assets/images/nemotron-3-ultra-hero.webp' | relative_url }})
 
 ## Nemotron-3-Ultra-550B Overview
 

@@ -31,7 +31,7 @@ So the direction becomes obvious. Take the skills a company has already validate
 
 The intended audience is clear: platform and MLOps engineers who run many agent skills and are weighing frontier API costs against automation in their design. If you're a different kind of reader, say someone who needs a management-level cost verdict, the last section alone gets you there.
 
-![Hybrid architecture diagram showing the four-stage pipeline from validated skill fleet to per-skill teacher to on-policy distillation to small local worker, alongside hybrid routing that keeps the conductor and downgrades only the worker, plus retro-driven escalation](/assets/images/distill-skill-fleet-small-models-diagram-en.svg)
+![Hybrid architecture diagram showing the four-stage pipeline from validated skill fleet to per-skill teacher to on-policy distillation to small local worker, alongside hybrid routing that keeps the conductor and downgrades only the worker, plus retro-driven escalation]({{ '/assets/images/distill-skill-fleet-small-models-diagram-en.svg' | relative_url }})
 
 ## Why Now: Small Models Have Become the Default for Agents
 

@@ -32,7 +32,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ⏱️ **예상 읽기 시간**: 14분
 
-![Kimi K3와 Thinking Machines Inkling 오픈웨이트 비교 개념도](/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp)
+![Kimi K3와 Thinking Machines Inkling 오픈웨이트 비교 개념도]({{ '/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp' | relative_url }})
 
 ## 개요
 

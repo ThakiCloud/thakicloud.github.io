@@ -29,7 +29,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 여러 종류의 파운데이션 모델을 한 플랫폼에서 서빙하거나, 임베딩 기반 검색·추천·멀티모달 파이프라인을 설계하는 엔지니어와 데이터 과학자를 위해 씁니다. "왜 서로 다른 모델의 임베딩을 억지로 정렬하려는 시도가 생각보다 잘 통할까", "모델을 바꿔도 다운스트림 성능이 크게 흔들리지 않는 이유는 무엇일까" 같은 실무 질문의 밑바탕에 깔린 이론을 다룹니다. MIT 연구진이 2024년 ICML에서 발표한 플라토닉 표현 가설을 근거와 함께 읽고, 그 주장이 실제 플랫폼 설계에서 어떤 의미를 갖는지까지 이어 봅니다.
 
-![서로 다른 색의 입자 흐름이 중심의 빛나는 결정 구조로 수렴하는 추상 이미지](/assets/images/platonic-representation-hypothesis-hero.png)
+![서로 다른 색의 입자 흐름이 중심의 빛나는 결정 구조로 수렴하는 추상 이미지]({{ '/assets/images/platonic-representation-hypothesis-hero.png' | relative_url }})
 
 ## 개요
 
@@ -43,7 +43,7 @@ Minyoung Huh, Brian Cheung, Tongzhou Wang, Phillip Isola가 쓴 「The Platonic 
 
 여기서 "표현이 같다"는 말은 가중치가 같다거나 뉴런이 일대일 대응한다는 뜻이 아닙니다. 표현이 유도하는 데이터 사이의 거리 구조, 즉 어떤 샘플들이 서로 이웃이고 어떤 샘플들이 먼지를 규정하는 커널(kernel)이 같아진다는 의미입니다. 두 표현이 서로 다른 좌표계를 쓰더라도, 데이터 포인트들의 상대적 관계가 같다면 두 표현은 본질적으로 같은 기하학을 담고 있는 것입니다.
 
-![기존 직관(발산)과 플라토닉 가설(수렴)의 대비](/assets/images/platonic-representation-hypothesis-slide-04.png)
+![기존 직관(발산)과 플라토닉 가설(수렴)의 대비]({{ '/assets/images/platonic-representation-hypothesis-slide-04.png' | relative_url }})
 
 이 가설은 표현 학습의 오래된 직관을 뒤집습니다. 흔히 우리는 데이터가 많아지고 모델이 커지면 표현이 더 다양해지고 특화될 것이라고 기대합니다. 가설은 반대로 말합니다. 규모가 커질수록 유효한 표현의 후보 공간이 좁아지고, 결국 하나의 최적 표현으로 눌린다는 것입니다.
 
@@ -51,7 +51,7 @@ Minyoung Huh, Brian Cheung, Tongzhou Wang, Phillip Isola가 쓴 「The Platonic 
 
 주장이 흥미로운 것과 그 주장이 참인 것은 다릅니다. 저자들은 수렴을 정량적으로 측정할 수 있는 지표를 세우고, 여러 모델 계열에 걸쳐 그 지표가 실제로 올라가는지를 확인합니다.
 
-![상호 최근접 이웃 정렬, 78개 비전 모델, 모달리티 교차라는 수렴의 정량적 증거](/assets/images/platonic-representation-hypothesis-slide-05.png)
+![상호 최근접 이웃 정렬, 78개 비전 모델, 모달리티 교차라는 수렴의 정량적 증거]({{ '/assets/images/platonic-representation-hypothesis-slide-05.png' | relative_url }})
 
 핵심 측정 도구는 상호 최근접 이웃(mutual nearest-neighbor) 정렬입니다. 같은 데이터 집합을 두 모델에 통과시켜 각각 임베딩을 얻은 뒤, 한 샘플의 최근접 이웃 집합이 두 표현 공간에서 얼마나 겹치는지를 셉니다. 겹침이 클수록 두 모델은 데이터의 이웃 관계를 같은 방식으로 본다는 뜻이고, 정렬 점수가 높습니다. 이 지표 외에도 중심 커널 정렬(CKA)이나 모델 스티칭(model stitching) 같은 보완적 방법이 같은 결론을 가리킵니다.
 
@@ -86,13 +86,13 @@ flowchart TB
 
 이것이 왜 모달리티를 건너뛰는지가 여기서 설명됩니다. 이미지든 텍스트든 같은 현실을 다른 창문으로 본 것이라면, 그 창문 너머의 공동 발생 구조는 하나입니다. 충분히 유능한 모델은 어느 창문으로 들어오든 같은 구조에 도달합니다. 플라토닉 표현이라는 이름은 관측 뒤에 있는 이 공통된 통계적 실재를 가리킵니다.
 
-![점별 상호정보량으로 수렴하는 현실의 통계 모델](/assets/images/platonic-representation-hypothesis-slide-07.png)
+![점별 상호정보량으로 수렴하는 현실의 통계 모델]({{ '/assets/images/platonic-representation-hypothesis-slide-07.png' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
 이 가설은 추상적으로 들리지만, 여러 모델을 실제로 서빙하는 플랫폼 입장에서는 매우 구체적인 함의를 갖습니다. ThakiCloud의 ai-platform은 Kubernetes와 Kueue 기반 GPU 스케줄링 위에서 다양한 고객 환경에 여러 종류의 모델을 서빙합니다. 서로 다른 비전 인코더, 서로 다른 임베딩 모델, 서로 다른 세대의 LLM이 한 플랫폼에서 공존합니다.
 
-![임베딩 격리 완화, 경량 정렬 계층, 저비용 진단 신호라는 플랫폼 적용 시사점](/assets/images/platonic-representation-hypothesis-slide-08.png)
+![임베딩 격리 완화, 경량 정렬 계층, 저비용 진단 신호라는 플랫폼 적용 시사점]({{ '/assets/images/platonic-representation-hypothesis-slide-08.png' | relative_url }})
 
 플라토닉 표현 가설이 시사하는 첫 번째 지점은 모델 간 상호운용성입니다. 유능한 모델들의 표현이 공통 기하학으로 수렴한다면, 임베딩 공간을 모델마다 완전히 격리해 관리할 필요가 줄어듭니다. 한 임베딩 모델로 색인한 벡터 저장소를 다른 세대 모델로 교체할 때, 두 표현이 근본적으로 같은 이웃 구조를 공유한다면 재색인 비용과 다운스트림 성능 저하를 예측 가능한 범위로 관리할 수 있습니다. 모델 교체가 곧 임베딩 파이프라인 전면 재구축이라는 통념은, 수렴이 강한 영역에서는 완화됩니다.
 
@@ -104,7 +104,7 @@ flowchart TB
 
 가설이 매력적일수록 반대 방향의 논거를 정직하게 세워야 합니다.
 
-![사회학적 동형화, 환원 불가능한 모달리티 차이, 측정 지표 해석 의존성이라는 한계](/assets/images/platonic-representation-hypothesis-slide-09.png)
+![사회학적 동형화, 환원 불가능한 모달리티 차이, 측정 지표 해석 의존성이라는 한계]({{ '/assets/images/platonic-representation-hypothesis-slide-09.png' | relative_url }})
 
 첫 번째 반론은 수렴이 플라톤적 실재 때문이 아니라 사회학적 동형화 때문일 수 있다는 것입니다. 오늘날의 모델들은 상당 부분 같은 웹 규모 데이터, 같은 트랜스포머 계열 아키텍처, 같은 최적화 관행을 공유합니다. 표현이 닮는 이유가 근원적 실재로의 수렴이 아니라 단지 모두가 같은 재료로 요리하기 때문일 가능성을 배제하기 어렵습니다.
 

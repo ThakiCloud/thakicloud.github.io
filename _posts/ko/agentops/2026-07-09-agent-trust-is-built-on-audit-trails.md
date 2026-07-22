@@ -58,7 +58,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-trust-is-buil
 
 그렇다면 처음부터 실행 계층이 기록을 소유하도록 설계된 플랫폼은 어떤 모습이어야 할까요. ThakiCloud의 Agent-Native Cloud인 Paxis는 이 질문을 제품의 뼈대로 삼았습니다. Paxis에서 Skills와 Tools, Policies, Audit Logs는 나중에 얹는 옵션이 아니라 일급 리소스입니다. 에이전트가 스킬을 호출하는 순간과 도구를 실행하는 순간이 곧 감사 로그로 남고, 정책 게이트가 그 실행을 사전에 승인하거나 차단합니다. MCP 표준 커넥터로 외부 시스템과 연동하는 지점까지 같은 궤적 위에 얹히기 때문에, 시스템 경계를 넘나드는 행동도 하나의 기록으로 이어집니다. 무엇을 했는지를 사후에 복원하는 것이 아니라, 하는 동안 기록이 함께 자라는 구조입니다.
 
-![개념 다이어그램](/assets/images/agent-trust-is-built-on-audit-trails-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/agent-trust-is-built-on-audit-trails-diagram.svg' | relative_url }})
 
 *정책 게이트를 지난 에이전트의 모든 실행 단계가 감사 로그로 함께 기록되고, 그 궤적이 소버린 온프렘 쿠버네티스 안에 남아 사후에 되짚을 수 있는 구조입니다.*
 

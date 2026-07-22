@@ -38,21 +38,21 @@ toc: true
 
 카나리는 장애 반경(blast fraction)을 1.0에서 0.1로, 즉 90퍼센트 줄였습니다. 하지만 저자들은 이 숫자를 헤드라인으로 내세우지 않습니다. 카나리 가중치를 0.1로 정하고 탐지가 항상 성공한다면 장애 비율이 대략 0.1에 수렴하는 것은 설계상 거의 당연한 결과이기 때문입니다. 세 심각도 모두에서 장애 반경 감소율이 정확히 90.0퍼센트로 똑같이 나온 것 자체가, 이 숫자가 측정치가 아니라 라우팅 가중치의 구조적 산물이라는 증거라고 논문은 스스로 지적합니다.
 
-![Blast Fraction by Rollout Policy and Regression Severity](/assets/images/posts/research/canary-gated-skill-rollout/blast-fraction-by-severity.png)
+![Blast Fraction by Rollout Policy and Regression Severity]({{ '/assets/images/posts/research/canary-gated-skill-rollout/blast-fraction-by-severity.png' | relative_url }})
 *카나리(가중치 0.1)는 전면배포(가중치 1.0) 대비 세 심각도 모두에서 장애 반경을 0.1로 낮춘다. 다만 논문은 이 90퍼센트 감소를 실증적 발견이 아니라 카나리 가중치 설계에 따른 구조적 결과로 명시한다. 시뮬레이션 데이터를 시각화한 분석용 그림이다.*
 
 ## 결과 2: 버그 버전에 실제로 노출된 호출 수
 
 측정치로서 의미가 더 큰 것은 v2에 실제로 노출된 절대 호출 건수입니다. 전면배포에서는 회귀가 발생한 뒤 평균 2,012에서 2,160건의 요청이 버그 있는 버전을 그대로 맞았습니다. 카나리에서는 그 수가 212에서 378건으로 줄었습니다. 심각도별로 82.5퍼센트(오류율 0.15)에서 89.5퍼센트(오류율 0.6)까지 감소했는데, 감소폭이 가장 작은 쪽이 오히려 완만한 회귀라는 점이 눈에 띕니다. 카나리는 완만한 회귀를 탐지하는 데 시간이 더 걸리고, 그만큼 v2 노출이 더 쌓이기 때문입니다.
 
-![v2-Exposed Invocation Count by Policy and Severity](/assets/images/posts/research/canary-gated-skill-rollout/v2-exposed-invocations.png)
+![v2-Exposed Invocation Count by Policy and Severity]({{ '/assets/images/posts/research/canary-gated-skill-rollout/v2-exposed-invocations.png' | relative_url }})
 *전면배포는 약 2,000건의 호출을 버그 버전에 그대로 노출시키지만 카나리는 212에서 378건으로 줄인다. 감소폭이 가장 작은 쪽은 완만한 회귀로, 탐지 시간이 길어질수록 노출이 함께 늘어난다는 것을 보여준다. 저장소 자체의 로컬 벤치(2026년 7월 19일 측정)에서 나온 결과다.*
 
 ## 진짜 발견: 심각도가 커질수록 좁혀지는 MTTR 격차
 
 이 논문이 실제로 "발견"이라 부를 만한 대목은 따로 있습니다. 카나리는 모든 심각도에서 전면배포보다 롤백까지 더 오래 걸렸지만, 그 격차는 회귀가 심할수록 급격히 좁혀졌습니다. 완만한 회귀(오류율 0.15)에서는 전면배포가 30,864.6밀리초 만에 롤백한 반면 카나리는 53,841.7밀리초가 걸려 약 74.5퍼센트 더 느렸습니다. 중간 심각도(오류율 0.35)에서는 그 격차가 8.86퍼센트로, 심한 회귀(오류율 0.6)에서는 4.82퍼센트로 줄었습니다. 원인은 게이트의 작동 방식에 있습니다. 게이트는 최소 30개의 v2 호출 결과를 모으고 그중 8개 이상이 오류여야 발동합니다. 전면배포는 매 틱이 v2 호출이라 이 30개를 거의 즉시 채우지만, 카나리는 열 틱 중 한 틱만 v2로 가기 때문에 같은 30개를 채우려면 전체 시스템 틱이 약 열 배 더 필요합니다. 완만한 회귀는 애초에 창을 여러 번 검사해야 임계값을 넘기 때문에 여기에 카나리의 트래픽 희석이 곱해져 지연이 크게 벌어집니다. 반대로 심한 회귀는 회귀가 시작된 직후 첫 창 검사에서 바로 임계값을 넘기 때문에, 두 정책의 차이는 그 첫 창 하나를 채우는 시간 차이로 줄어듭니다.
 
-![Canary MTTR Penalty Relative to Full Rollout by Severity](/assets/images/posts/research/canary-gated-skill-rollout/mttr-penalty-by-severity.png)
+![Canary MTTR Penalty Relative to Full Rollout by Severity]({{ '/assets/images/posts/research/canary-gated-skill-rollout/mttr-penalty-by-severity.png' | relative_url }})
 *카나리의 MTTR 페널티는 완만한 회귀에서 약 74.5퍼센트에 달하지만 심한 회귀에서는 9퍼센트 아래로 줄어든다. 이 심각도별 격차가 논문이 실제로 새롭게 측정한 결과다. MTTR 수치는 이 저장소 자체의 관측성 스팬 로그에서 뽑은 실측 지연시간 6개(12.705, 35.029, 25.011, 6.271, 6.458, 0.004밀리초)를 시드 샘플링해 합산한 값이다.*
 
 한 가지 더 눈여겨볼 지점은 이 MTTR 수치가 상상으로 만든 숫자가 아니라는 것입니다. 저장소 안 관측성 파이프라인(`scripts/harness/span.py`의 스모크 테스트)이 실제로 남긴 스팬 로그 6개를 지연시간 풀로 삼아 시드 고정 샘플링했습니다. 표본이 여섯 개뿐이라는 한계는 저자들도 곧바로 인정합니다.

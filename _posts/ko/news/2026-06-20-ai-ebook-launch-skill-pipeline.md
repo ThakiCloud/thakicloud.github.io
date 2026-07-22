@@ -30,7 +30,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ⏱️ **예상 읽기 시간**: 7분
 
-![주제 한 줄에서 판매용 이북까지 자동화 파이프라인 개념도](/assets/images/ai-ebook-pipeline-hero.webp)
+![주제 한 줄에서 판매용 이북까지 자동화 파이프라인 개념도]({{ '/assets/images/ai-ebook-pipeline-hero.webp' | relative_url }})
 
 이번 글은 책 내용 소개가 아닙니다. 책 한 권을 만드는 과정 전체를 스킬 하나로 묶으면 어디까지 자동화되는지에 대한 기록입니다. 지난 6일간 `ai-ebook-launch` 스킬로 한국어 이북 5권이 나왔습니다. 흥미로운 지점은 "무슨 책을 썼나"가 아니라 "주제 한 줄에서 판매 직전 상태까지 어떤 단계가 사람 손 없이 굴러갔나"에 있습니다.
 
@@ -99,11 +99,11 @@ PDF 크기가 216 KB에서 2.9 MB까지 벌어집니다. 챕터 수와 이미지
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-ebook-launch-skill-pipeline 슬라이드 1](/assets/images/ai-ebook-launch-skill-pipeline-slide-01.png)
+![ai-ebook-launch-skill-pipeline 슬라이드 1]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-01.png' | relative_url }})
 
-![ai-ebook-launch-skill-pipeline 슬라이드 2](/assets/images/ai-ebook-launch-skill-pipeline-slide-02.png)
+![ai-ebook-launch-skill-pipeline 슬라이드 2]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-02.png' | relative_url }})
 
-![ai-ebook-launch-skill-pipeline 슬라이드 3](/assets/images/ai-ebook-launch-skill-pipeline-slide-03.png)
+![ai-ebook-launch-skill-pipeline 슬라이드 3]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-03.png' | relative_url }})
 
-![ai-ebook-launch-skill-pipeline 슬라이드 4](/assets/images/ai-ebook-launch-skill-pipeline-slide-04.png)
+![ai-ebook-launch-skill-pipeline 슬라이드 4]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-04.png' | relative_url }})
 

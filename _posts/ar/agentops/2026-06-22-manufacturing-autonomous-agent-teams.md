@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![صورة رأسية لفرق العملاء الذكيين المستقلين في العمليات التصنيعية](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
+![صورة رأسية لفرق العملاء الذكيين المستقلين في العمليات التصنيعية]({{ '/assets/images/manufacturing-autonomous-agent-teams-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

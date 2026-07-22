@@ -21,7 +21,7 @@ categories:
   - culture
 ---
 
-![Abstract visual depicting the blurring of role boundaries and the emergence of new archetypes](/assets/images/five-product-role-archetypes-hero.webp)
+![Abstract visual depicting the blurring of role boundaries and the emergence of new archetypes]({{ '/assets/images/five-product-role-archetypes-hero.webp' | relative_url }})
 
 ## Overview
 

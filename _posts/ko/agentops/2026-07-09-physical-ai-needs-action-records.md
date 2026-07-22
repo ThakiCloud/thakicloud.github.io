@@ -69,7 +69,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/physical-ai-needs-a
 
 정리하면 오늘 다이제스트가 드러낸 기업의 통증은 네 갈래입니다. 규제와 내부 통제에 답할 감사, 데이터가 회사 밖으로 새지 않게 할 주권, 물리 세계에서 사고를 부르지 않을 안전한 실행, 그리고 모델값이 출렁여도 흔들리지 않을 비용 구조입니다. 이 네 가지는 각각 다른 뉴스에서 튀어나왔지만, 실제 도입 현장에서는 하나의 운영 계층에서 동시에 요구됩니다. Paxis가 Audit Logs와 소버린 K8s, 정책 게이트와 CostRouter를 같은 플랫폼 위에 올려둔 이유가 여기에 있습니다. 마침 세계 최대 머신러닝 학회인 ICML 2026이 서울에서 열리며 국내 연구 생태계에 모멘텀이 실리는 지금, 연구의 성과를 현장에 실제로 태우는 마지막 한 뼘은 결국 이 운영의 성숙도가 채운다고 봅니다.
 
-![개념 다이어그램](/assets/images/physical-ai-needs-action-records-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/physical-ai-needs-action-records-diagram.svg' | relative_url }})
 
 *서로 다른 뉴스에서 튀어나온 감사·주권·안전한 실행·비용 안정이라는 네 가지 통증이, 실제 도입 현장에서는 Paxis라는 하나의 운영 계층으로 수렴합니다.*
 

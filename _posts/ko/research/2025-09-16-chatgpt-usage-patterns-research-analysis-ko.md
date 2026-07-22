@@ -32,7 +32,7 @@ published: false
 연구진은 개인정보 보호를 위한 자동화된 파이프라인을 통해 ChatGPT 대화의 대표적인 샘플을 분석했으며, 이를 통해 업무 관련 메시지와 비업무 관련 메시지의 사용 패턴을 추적했습니다. 그 결과 업무 관련 메시지는 꾸준히 증가하고 있지만, 비업무 관련 메시지가 더 빠르게 증가하여 현재 전체 사용량의 70% 이상을 차지하고 있다는 것을 발견했습니다. 이는 AI 기술이 단순히 생산성 도구를 넘어서 일상생활의 다양한 영역에서 의사결정 지원 역할을 하고 있음을 보여주는 중요한 지표입니다.
 
 
-![개념 다이어그램](/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

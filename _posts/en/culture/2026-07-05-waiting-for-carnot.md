@@ -21,7 +21,7 @@ categories:
   - culture
 ---
 
-![Abstract visual of steam and wave energy crossing into interference patterns](/assets/images/waiting-for-carnot-hero.webp)
+![Abstract visual of steam and wave energy crossing into interference patterns]({{ '/assets/images/waiting-for-carnot-hero.webp' | relative_url }})
 
 ## The 20-Watt Question
 

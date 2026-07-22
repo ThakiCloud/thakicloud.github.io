@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![개념 다이어그램](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)
+![개념 다이어그램]({{ '/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 15분
 
@@ -37,7 +37,7 @@ Qwen3-VL은 비전-언어 모델의 능력을 집단적으로 재정의하는 �
 이러한 혁신의 중요성은 모델의 능력을 살펴볼 때 명확해집니다. 가장 강력한 구성에서 2350억 개의 파라미터로 확장되었으며, 전문가 혼합(Mixture-of-Experts) 아키텍처를 통해 220억 개의 활성 파라미터를 사용하는 Qwen3-VL은 256,000 토큰 컨텍스트를 기본적으로 지원하며 백만 토큰까지 확장 가능합니다. 이러한 극적인 컨텍스트 길이 확장은 프레임 수준의 정밀도로 수 시간 길이의 비디오를 분석하는 것부터 상세한 이해를 유지하면서 전체 책을 처리하는 것까지 완전히 새로운 응용 분야를 가능하게 합니다. 추론 강화 Thinking 변형을 포함한 특화된 에디션의 도입은 아키텍처 유연성을 어떻게 활용하여 빠른 추론부터 심층 분석 추론까지 다양한 인지적 요구를 충족할 수 있는지 보여줍니다.
 
 
-![개념 다이어그램](/assets/images/qwen3-vl-vision-language-architecture-innovations-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/qwen3-vl-vision-language-architecture-innovations-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

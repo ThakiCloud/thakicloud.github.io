@@ -30,7 +30,7 @@ All three stand at the AI frontier. Yet looking at the same phenomenon, they dra
 
 ---
 
-![Concept diagram](/assets/images/three-giants-ai-futures-compared-diagram.svg)
+![Concept diagram]({{ '/assets/images/three-giants-ai-futures-compared-diagram.svg' | relative_url }})
 
 *Comparing the three giants' views of the future*
 

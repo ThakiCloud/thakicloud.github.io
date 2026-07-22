@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![رسم توضيحي للمفهوم](/assets/images/post-training-revolution-rl-agent-development-hero.webp)
+![رسم توضيحي للمفهوم]({{ '/assets/images/post-training-revolution-rl-agent-development-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المقدر**: 18 دقيقة
 
@@ -38,7 +38,7 @@ published: false
 في هذا المقال، نحلل بشكل شامل الأوراق البحثية العشر الأعلى نجومًا على GitHub في التدريب اللاحق القائم على RL لتطوير الوكلاء. من الأساليب التأسيسية لـ GRPO وGMPO إلى الأفكار المبتكرة في تعلم استخدام الأدوات وتحسين السياسة المزدوجة، سنتناول الوضع الراهن ومستقبل تقنية تدريب الوكلاء.
 
 
-![مخطط مفاهيمي](/assets/images/post-training-revolution-rl-agent-development-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/post-training-revolution-rl-agent-development-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

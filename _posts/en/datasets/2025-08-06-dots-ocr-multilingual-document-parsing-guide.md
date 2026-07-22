@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![dots.ocr unified document parsing overview](/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png)
+![dots.ocr unified document parsing overview]({{ '/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png' | relative_url }})
 
 ## Introduction
 

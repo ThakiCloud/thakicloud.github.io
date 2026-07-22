@@ -102,13 +102,13 @@ they mattered.
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![prompting-claude-fable-5 슬라이드 1](/assets/images/prompting-claude-fable-5-slide-01.webp)
+![prompting-claude-fable-5 슬라이드 1]({{ '/assets/images/prompting-claude-fable-5-slide-01.webp' | relative_url }})
 
-![prompting-claude-fable-5 슬라이드 2](/assets/images/prompting-claude-fable-5-slide-02.webp)
+![prompting-claude-fable-5 슬라이드 2]({{ '/assets/images/prompting-claude-fable-5-slide-02.webp' | relative_url }})
 
-![prompting-claude-fable-5 슬라이드 3](/assets/images/prompting-claude-fable-5-slide-03.webp)
+![prompting-claude-fable-5 슬라이드 3]({{ '/assets/images/prompting-claude-fable-5-slide-03.webp' | relative_url }})
 
-![prompting-claude-fable-5 슬라이드 4](/assets/images/prompting-claude-fable-5-slide-04.webp)
+![prompting-claude-fable-5 슬라이드 4]({{ '/assets/images/prompting-claude-fable-5-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -24,7 +24,7 @@ header:
   teaser: /assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp
 ---
 
-![LLM 추론 비용 구조](/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp)
+![LLM 추론 비용 구조]({{ '/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp' | relative_url }})
 
 ## 개요: 8배 큰 모델이 5배 싸다는 역설
 
@@ -100,7 +100,7 @@ roofline 계산 결과입니다(실제 달성치는 통상 이 값의 50~60%이�
 
 달러로 환산하면 32K에서 Qwen $0.18/M vs DeepSeek V4 Flash $0.06/M, 1M에서 Qwen $4.6/M vs DeepSeek V4 Flash $0.5/M입니다. 에이전틱 워크로드의 평균 깊이인 수십에서 수백 K 구간에서 원가 격차가 3~10배로 벌어지는데, 이것이 관측된 API 가격 차이(약 5배)와 정확히 같은 자리수입니다.
 
-![컨텍스트 깊이별 처리량과 원가 비교](/assets/images/llm-inference-economics-kv-cache-moe-roofline-results.webp)
+![컨텍스트 깊이별 처리량과 원가 비교]({{ '/assets/images/llm-inference-economics-kv-cache-moe-roofline-results.webp' | relative_url }})
 
 한 가지 정직하게 밝혀둘 부분이 있습니다. DeepSeek V4 Flash의 토큰당 저장 KV에 대해 공개 자료 간 최대 40배의 모순이 존재합니다(vLLM recipes의 "V3.2 대비 10%" 주장과 일부 배포 가이드의 KV 표가 충돌). 위 계산은 1차 소스에 가까운 전자를 채택했고, 절대값보다 스케일링 방향(깊이에 따라 격차가 벌어지는 구조)이 결론이라는 점을 강조합니다.
 

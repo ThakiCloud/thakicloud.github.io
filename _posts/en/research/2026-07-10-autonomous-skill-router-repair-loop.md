@@ -24,17 +24,17 @@ This paper asks whether the single lever identified by that prior diagnosis, nam
 
 The results were clear. Step coverage rose from 57.1% to 71.2%, a gain of 14.1 points, and full chain completion rate doubled from 25.0% to 50.0%. The loop converged in exactly two iterations: of the 11 misses found in round 1, patches were applied to 9 of them, and in round 2 none of the remaining 6 misses could be newly patched, so the loop naturally stopped under the "zero new patches" condition. It never came close to the maximum iteration limit of 5.
 
-![Step Coverage: Baseline vs Final](/assets/images/posts/research/autonomous-skill-router-repair-loop/step-coverage-improvement.png)
+![Step Coverage: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/step-coverage-improvement.png' | relative_url }})
 *Measured step coverage before and after applying the loop on the compositional benchmark (n=12, SINGLE strategy, top_k=8). It rose from 57.1% to 71.2%, a gain of 14.1 points, with no human involvement.*
 
 The loop also comes with a built-in safeguard: a "first-write-wins" policy that never overwrites a dictionary key if a given Korean token is already registered as pointing to a different target. In this run, 19 raw collision events were consolidated into 11 distinct (token, competing target) pairs, one of which involved a within-case ambiguity that a flat dictionary structure cannot resolve at all: the single word "논문" (paper) needed to point to two different skills, academic-paper and academic-paper-reviewer, within the same case. Thanks to this conservative policy, all five metrics of an independent 63-case regression benchmark (recall, gated recall, top-1 accuracy, hallucination rate, and refusal-avoidance rate) were bit-for-bit identical before and after the loop ran. Because the dictionary only gains entries and never touches existing mappings, the possibility of breaking a query that already worked well is structurally blocked.
 
-![Chain Completion: Baseline vs Final](/assets/images/posts/research/autonomous-skill-router-repair-loop/chain-completion-doubling.png)
+![Chain Completion: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/chain-completion-doubling.png' | relative_url }})
 *Measured full chain completion rate on the same benchmark (the share of cases where every correct skill is retrieved at once with no misses), which doubled from 25.0% to 50.0% after just two loop iterations.*
 
 The paper's sharpest finding lies elsewhere. Six misses remained even after convergence, and two of them still did not make it into the top 8 despite receiving exactly the correct patch: the correct Korean token, the correct English target, and the correct answer skill. For example, the sub-task "아이디어 딥리서치" (idea deep research) had its one and only patchable token correctly patched to deep-research with no collisions at all, yet it still did not appear in the retrieval results. This is because BM25/IDF-based ranking is determined by the score distribution of the entire corpus, not by the presence or absence of any single token. In other words, vocabulary coverage is a necessary condition but not a sufficient one, which reconfirms the prior study's diagnosis that the retriever itself is a joint bottleneck.
 
-![Convergence Trace: Step Coverage Across Iterations](/assets/images/posts/research/autonomous-skill-router-repair-loop/convergence-trace.png)
+![Convergence Trace: Step Coverage Across Iterations]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/convergence-trace.png' | relative_url }})
 *Measured convergence trace showing step coverage across iterations. All improvement happened in round 1, and round 2 halted under the stopping condition without applying a single new patch.*
 
 ## Contribution to Business, Society, and Science

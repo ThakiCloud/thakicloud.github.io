@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/comics/agents-were-never-tha
 An AI agent is just a program that plans on its own and calls tools to get work done for you. The tweet everyone shared this week makes a small, embarrassing point: people park "build an agent" on their someday list and never touch it, because every post they read framed it as a moon-landing-grade project.
 Then someone actually tries it and their reaction is a stunned "wait, that's it?" The hard part was never the building. It was believing it was hard. Paxis and Metis live through that year of dread so you don't have to.
 
-![The Agent You Kept For Someday](/assets/images/posts/comics/agents-were-never-that-hard/strip.png)
+![The Agent You Kept For Someday]({{ '/assets/images/posts/comics/agents-were-never-that-hard/strip.png' | relative_url }})
 
 > Source: [RT @KanikaBK: Omg.. this can't be true...](https://x.com/hjguyhan/status/2075361180093391174) · twitter
 

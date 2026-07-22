@@ -23,7 +23,7 @@ categories:
 lang: en
 ---
 
-![A thick system prompt thinning into a slim harness](/assets/images/claude-code-system-prompt-cut-hero.png)
+![A thick system prompt thinning into a slim harness]({{ '/assets/images/claude-code-system-prompt-cut-hero.png' | relative_url }})
 
 ## Overview
 

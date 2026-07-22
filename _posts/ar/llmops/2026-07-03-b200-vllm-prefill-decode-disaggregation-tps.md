@@ -25,7 +25,7 @@ categories:
   - llmops
 ---
 
-![صورة تجسّد بنية يتقاسم فيها معالجا B200 مهام Prefill وDecode](/assets/images/b200-vllm-pd-disaggregation-hero.webp)
+![صورة تجسّد بنية يتقاسم فيها معالجا B200 مهام Prefill وDecode]({{ '/assets/images/b200-vllm-pd-disaggregation-hero.webp' | relative_url }})
 *تجسيد لبنية خدمة مفصولة حيث يتولى معالج واحد Prefill والآخر Decode، بينما تنتقل ذاكرة KV المؤقتة عبر NVLink.*
 
 ## نظرة عامة

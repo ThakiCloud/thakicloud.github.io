@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر: 15 دقيقة**
 
-![رؤية مفاهيمية لنموذج SenseNova U1 NEO-Unify للوسائط المتعددة الموحدة](/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp)
+![رؤية مفاهيمية لنموذج SenseNova U1 NEO-Unify للوسائط المتعددة الموحدة]({{ '/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

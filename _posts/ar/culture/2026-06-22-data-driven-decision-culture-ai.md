@@ -34,7 +34,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/data-driven-decision-culture-ai-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/data-driven-decision-culture-ai-diagram.svg' | relative_url }})
 
 *تسجيل القرارات ومقارنتها بالتنبؤات، كي تصحّح البيانات انحياز الحدس*
 

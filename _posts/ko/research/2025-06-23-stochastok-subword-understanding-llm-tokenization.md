@@ -49,7 +49,7 @@ STOCHASTOK은 기존 토크나이제이션 과정을 수정하는 대신, **토�
 
 ### 동작 원리
 
-![image](/assets/images/posts/research/stochastok/figure_stochastok_resize.jpg)
+![image]({{ '/assets/images/posts/research/stochastok/figure_stochastok_resize.jpg' | relative_url }})
 
 STOCHASTOK은 **2단계 과정**으로 작동합니다:
 
@@ -229,11 +229,11 @@ STOCHASTOK은 최소한의 변경으로 LLM의 서브워드 이해 능력을 획
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 1](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.webp)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 1]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.webp' | relative_url }})
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 2](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.webp)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 2]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.webp' | relative_url }})
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 3](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.webp)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 3]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.webp' | relative_url }})
 
-![stochastok-subword-understanding-llm-tokenization 슬라이드 4](/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.webp)
+![stochastok-subword-understanding-llm-tokenization 슬라이드 4]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.webp' | relative_url }})
 

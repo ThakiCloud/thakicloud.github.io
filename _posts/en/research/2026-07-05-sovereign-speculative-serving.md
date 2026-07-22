@@ -28,7 +28,7 @@ categories:
 This piece is written for engineers who operate LLM inference serving themselves, inside or outside the company, and especially for those dealing with multi-tenant environments where several customers or models share a single GPU cluster. It assumes you already know what speculative decoding is and need to answer a practical question: will it actually pay off once we apply it to our own cluster. The short answer is that it depends on how empty your hardware really is, and that call needs to be made by the scheduler, not by the draft model.
 
 
-![Concept diagram](/assets/images/sovereign-speculative-serving-diagram.svg)
+![Concept diagram]({{ '/assets/images/sovereign-speculative-serving-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

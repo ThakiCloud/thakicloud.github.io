@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![The AI Harness That Evolves Itself Every Night](/assets/images/self-evolving-harness-nightly-hero.webp)
+![The AI Harness That Evolves Itself Every Night]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})
 
 ## Overview: A System That Gets Better Every Night
 

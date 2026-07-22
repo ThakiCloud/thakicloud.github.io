@@ -133,11 +133,11 @@ AI 기반 워크플로우를 구현하려는 개발자와 기업에게 Agent Bui
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![openai-agent-builder-devday-release-ko 슬라이드 1](/assets/images/openai-agent-builder-devday-release-ko-slide-01.png)
+![openai-agent-builder-devday-release-ko 슬라이드 1]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-01.png' | relative_url }})
 
-![openai-agent-builder-devday-release-ko 슬라이드 2](/assets/images/openai-agent-builder-devday-release-ko-slide-02.png)
+![openai-agent-builder-devday-release-ko 슬라이드 2]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-02.png' | relative_url }})
 
-![openai-agent-builder-devday-release-ko 슬라이드 3](/assets/images/openai-agent-builder-devday-release-ko-slide-03.png)
+![openai-agent-builder-devday-release-ko 슬라이드 3]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-03.png' | relative_url }})
 
-![openai-agent-builder-devday-release-ko 슬라이드 4](/assets/images/openai-agent-builder-devday-release-ko-slide-04.png)
+![openai-agent-builder-devday-release-ko 슬라이드 4]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-04.png' | relative_url }})
 

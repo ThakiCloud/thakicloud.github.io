@@ -25,7 +25,7 @@ audiobook: /assets/audio/posts/gpu-cluster-cost-optimization-kueue/audiobook-ko.
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![GPU 클러스터 비용 최적화 - Kueue 페어셰어, Gang Scheduling, Scale-to-Zero 아키텍처](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
+![GPU 클러스터 비용 최적화 - Kueue 페어셰어, Gang Scheduling, Scale-to-Zero 아키텍처]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp' | relative_url }})
 
 ## 개요
 
@@ -282,11 +282,11 @@ GPU 클러스터는 그 자체로 거대한 자원이지만, 스케줄링 정책
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![gpu-cluster-cost-optimization-kueue 슬라이드 1](/assets/images/gpu-cluster-cost-optimization-kueue-slide-01.png)
+![gpu-cluster-cost-optimization-kueue 슬라이드 1]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-01.png' | relative_url }})
 
-![gpu-cluster-cost-optimization-kueue 슬라이드 2](/assets/images/gpu-cluster-cost-optimization-kueue-slide-02.png)
+![gpu-cluster-cost-optimization-kueue 슬라이드 2]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-02.png' | relative_url }})
 
-![gpu-cluster-cost-optimization-kueue 슬라이드 3](/assets/images/gpu-cluster-cost-optimization-kueue-slide-03.png)
+![gpu-cluster-cost-optimization-kueue 슬라이드 3]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-03.png' | relative_url }})
 
-![gpu-cluster-cost-optimization-kueue 슬라이드 4](/assets/images/gpu-cluster-cost-optimization-kueue-slide-04.png)
+![gpu-cluster-cost-optimization-kueue 슬라이드 4]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-04.png' | relative_url }})
 

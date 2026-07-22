@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Abstract visual of a collaboration network with a central AI node connected to multiple people nodes in a shared channel](/assets/images/anthropic-claude-tag-slack-hero.webp)
+![Abstract visual of a collaboration network with a central AI node connected to multiple people nodes in a shared channel]({{ '/assets/images/anthropic-claude-tag-slack-hero.webp' | relative_url }})
 
 An image depicting the multiplayer structure in which a single Claude works with everyone in a channel.
 

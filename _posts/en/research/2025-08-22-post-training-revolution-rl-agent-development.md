@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/post-training-revolution-rl-agent-development-hero.webp)
+![Key concept illustration]({{ '/assets/images/post-training-revolution-rl-agent-development-hero.webp' | relative_url }})
 
 ⏱️ **Estimated reading time**: 18 min
 
@@ -38,7 +38,7 @@ Reinforcement learning (RL) post-training is rapidly evolving as the core techno
 In this article, we comprehensively analyze the top 10 papers by GitHub stars in RL post-training for agent development. From the foundational approaches of GRPO and GMPO to the novel ideas of tool use learning and dual-policy optimization, we will look at the current state and future of agent training technology.
 
 
-![Concept diagram](/assets/images/post-training-revolution-rl-agent-development-diagram.svg)
+![Concept diagram]({{ '/assets/images/post-training-revolution-rl-agent-development-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

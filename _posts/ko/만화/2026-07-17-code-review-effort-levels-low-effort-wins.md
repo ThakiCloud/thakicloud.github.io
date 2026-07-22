@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 클로드 코드의 /code-review에 '노력 레벨'이 생겼습니다. 리뷰를 대충 볼지 빡세게 볼지를 눈금으로 고를 수 있고, 레벨을 바꿀 때마다 리뷰 자체가 처음부터 다시 쓰인다는 이야기입니다. 여기서 재미있는 대목은 가장 낮은 노력으로 돌린 리뷰조차 다른 코드 리뷰 도구들을 이겼다는 점입니다. 그런데 노력을 올린다는 건 결국 추론을 더 돌린다는 뜻이고, 남의 클라우드 위에서는 그 추론 한 번이 그대로 계량기 숫자로 찍힙니다. 파시스와 메티스가 눈금을 끝까지 밀어 올려 봤습니다.
 
-![저노력 리뷰가 다 이겼다ㅋ](/assets/images/posts/만화/code-review-effort-levels-low-effort-wins/strip.png)
+![저노력 리뷰가 다 이겼다ㅋ]({{ '/assets/images/posts/만화/code-review-effort-levels-low-effort-wins/strip.png' | relative_url }})
 
 > 원 뉴스: [Claude Code's /code-review now has effort levels, with the review rewritten at every one.](https://x.com/hjguyhan/status/2077894748183097710) · twitter
 

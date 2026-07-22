@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.webp)
+![Key concept illustration]({{ '/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.webp' | relative_url }})
 
 ⏱️ **Estimated reading time**: 15 min
 
@@ -40,7 +40,7 @@ As AI services proliferate, managing multiple separate platforms has become a se
 
 This guide covers everything you need to know -- from environment setup to production deployment and advanced AgentOps strategies.
 
-![Architecture diagram](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-diagram.svg)
+![Architecture diagram]({{ '/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-diagram.svg' | relative_url }})
 
 *Architecture diagram*
 

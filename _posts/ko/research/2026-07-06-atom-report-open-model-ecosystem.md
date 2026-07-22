@@ -91,13 +91,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![atom-report-open-model-ecosystem 슬라이드 1](/assets/images/atom-report-open-model-ecosystem-slide-01.png)
+![atom-report-open-model-ecosystem 슬라이드 1]({{ '/assets/images/atom-report-open-model-ecosystem-slide-01.png' | relative_url }})
 
-![atom-report-open-model-ecosystem 슬라이드 2](/assets/images/atom-report-open-model-ecosystem-slide-02.png)
+![atom-report-open-model-ecosystem 슬라이드 2]({{ '/assets/images/atom-report-open-model-ecosystem-slide-02.png' | relative_url }})
 
-![atom-report-open-model-ecosystem 슬라이드 3](/assets/images/atom-report-open-model-ecosystem-slide-03.png)
+![atom-report-open-model-ecosystem 슬라이드 3]({{ '/assets/images/atom-report-open-model-ecosystem-slide-03.png' | relative_url }})
 
-![atom-report-open-model-ecosystem 슬라이드 4](/assets/images/atom-report-open-model-ecosystem-slide-04.png)
+![atom-report-open-model-ecosystem 슬라이드 4]({{ '/assets/images/atom-report-open-model-ecosystem-slide-04.png' | relative_url }})
 
 ## 출처
 

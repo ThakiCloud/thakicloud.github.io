@@ -49,7 +49,7 @@ Even without running the entire STORM codebase (stanford-oval/storm), you can po
 - **Step 3, outline synthesis**: synthesize the collected evidence into a hierarchical outline. At this point, remove duplication and settle the logical order.
 - **Step 4, cited body writing**: write the body following the outline, but link every claim to evidence.
 
-![STORM four-step research workflow](/assets/images/stanford-storm-4-prompt-research-workflow-diagram.svg)
+![STORM four-step research workflow]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-diagram.svg' | relative_url }})
 
 Separating the stages lets you verify the intermediate products. If the outline is sloppy, the body will be sloppy too, so stopping at Step 3 and fixing it is far cheaper than throwing away the entire Step 4 result.
 

@@ -20,7 +20,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/vllm-production-quality-ci-release/"
 ---
 
-![Abstract image of thousands of streams converging through a single narrow gate and aligning into stable orbital tracks](/assets/images/vllm-production-quality-ci-release-hero.png)
+![Abstract image of thousands of streams converging through a single narrow gate and aligning into stable orbital tracks]({{ '/assets/images/vllm-production-quality-ci-release-hero.png' | relative_url }})
 
 ## Why Read This
 

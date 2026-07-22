@@ -32,7 +32,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/cosmos3-agent-skill
 البطل الحقيقي في هذه الحالة ليس النموذج ولا وحدات GPU، بل **الحاضنة (harness) التي تُجمّد معرفة
 سير العمل في شكل مهارة يكررها الوكيل تلقائياً**.
 
-![رسم توضيحي مجرد لعقدة تنسيق مركزية تقود أسطولاً من خوادم GPU](/assets/images/cosmos3-agent-skills-posttraining-hero.png)
+![رسم توضيحي مجرد لعقدة تنسيق مركزية تقود أسطولاً من خوادم GPU]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.png' | relative_url }})
 *تقود مهارات الوكيل العمل المتكرر في تدريب GPU وتقييمه وضبطه. أما الإنسان فيقدّم الهدف فقط عبر مطالبة.*
 
 ## ما هو Cosmos 3، وما هي مهارات الوكيل (TAO Agent Skills)؟
@@ -118,7 +118,7 @@ curl -fsSL https://raw.githubusercontent.com/NVIDIA-TAO/tao-skills-bank/main/scr
 
 ارتفع الأداء بوضوح. جميع الأرقام أدناه هي قيم أعلنتها NVIDIA، وليست نتائج أعدنا إنتاجها بأنفسنا.
 
-![رسم بياني شريطي لدقة التحقق في مهمة أسئلة وأجوبة فيديو WTS عبر ثلاث مراحل لنموذج Cosmos 3 Nano: الأساس وLoRA وAutoML](/assets/images/cosmos3-agent-skills-posttraining-results.png)
+![رسم بياني شريطي لدقة التحقق في مهمة أسئلة وأجوبة فيديو WTS عبر ثلاث مراحل لنموذج Cosmos 3 Nano: الأساس وLoRA وAutoML]({{ '/assets/images/cosmos3-agent-skills-posttraining-results.png' | relative_url }})
 *ارتفعت دقة التحقق من 54.41% إلى 93.35% بمطالبتين فقط. أرقام معلنة من NVIDIA.*
 
 بلغ الأساس بأسلوب zero-shot نسبة 54.41%، ورفعته مطالبة LoRA الواحدة إلى 87.14%، أي بزيادة قدرها

@@ -22,7 +22,7 @@ categories:
 published: false
 ---
 
-![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
+![مخطط مفاهيمي]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
 
@@ -56,7 +56,7 @@ published: false
 ✅ **تصميم غير محظور**: يستجيب فورًا أثناء المعالجة في الخلفية
 
 
-![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

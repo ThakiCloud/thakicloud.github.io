@@ -17,7 +17,7 @@ categories:
   - llmops
 ---
 
-![Abstract illustration of a large model distilled into compact layers flowing into cloud serving infrastructure](/assets/images/unsloth-aws-quantization-deploy-hero.png)
+![Abstract illustration of a large model distilled into compact layers flowing into cloud serving infrastructure]({{ '/assets/images/unsloth-aws-quantization-deploy-hero.png' | relative_url }})
 
 ## Overview
 

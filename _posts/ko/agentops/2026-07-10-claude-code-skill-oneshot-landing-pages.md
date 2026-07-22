@@ -84,13 +84,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 1](/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 1]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.png' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 2](/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 2]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.png' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 3](/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 3]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.png' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 4](/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 4]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.png' | relative_url }})
 
 ## 출처
 

@@ -33,7 +33,7 @@ published: false
 يمثل [مستودع Claude Code SDK Demos](https://github.com/anthropics/claude-code-sdk-demos) خطوة مهمة إلى الأمام في توضيح كيفية دمج نماذج اللغة الكبيرة في تطبيقات العالم الحقيقي مع أدوات وأنماط تفاعل متطورة.
 
 
-![مخطط مفاهيمي](/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

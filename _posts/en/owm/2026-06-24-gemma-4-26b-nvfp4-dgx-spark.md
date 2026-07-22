@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 12 min
 
-![Gemma 4 26B NVFP4 parallel inference concept diagram](/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp)
+![Gemma 4 26B NVFP4 parallel inference concept diagram]({{ '/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp' | relative_url }})
 
 ## Overview
 

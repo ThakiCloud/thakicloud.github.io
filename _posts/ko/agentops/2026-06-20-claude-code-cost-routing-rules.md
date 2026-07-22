@@ -26,7 +26,7 @@ published: false
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-cost-routing-rules/"
 ---
 
-![에이전트 작업이 모델 티어별로 분기되며 비용이 접히는 모습](/assets/images/cost-routing-hero.webp)
+![에이전트 작업이 모델 티어별로 분기되며 비용이 접히는 모습]({{ '/assets/images/cost-routing-hero.webp' | relative_url }})
 
 ## 하루에 705달러를 태운 날
 

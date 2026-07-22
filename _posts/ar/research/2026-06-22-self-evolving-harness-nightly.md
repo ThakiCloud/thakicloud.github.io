@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![الحزام الذكي الذي يتطور ذاتياً كل ليلة](/assets/images/self-evolving-harness-nightly-hero.webp)
+![الحزام الذكي الذي يتطور ذاتياً كل ليلة]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})
 
 ## نظرة عامة: نظام يتحسن كل ليلة
 

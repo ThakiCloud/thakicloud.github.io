@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Abstract visual of parallel token blocks propagating forward in a single pass](/assets/images/dflash-speculative-decoding-vllm-hero.webp)
+![Abstract visual of parallel token blocks propagating forward in a single pass]({{ '/assets/images/dflash-speculative-decoding-vllm-hero.webp' | relative_url }})
 
 An illustration of the DFlash concept: the drafting step shifts from sequential token generation to parallel block proposal.
 
@@ -105,7 +105,7 @@ DFlash's speedup numbers fall into two categories, measured differently, and sho
 
 **Lossless single-stream speedup.** The UCSD paper reports an average of 4.86x and a peak of 6.08x on MATH-500 for Qwen3-8B greedy decoding on the Transformers backend. Under the same conditions, EAGLE-3 achieves an average of 1.76x at tree size 16 and 2.02x at tree size 60. Task-level figures are shown in the chart below.
 
-![Bar chart comparing DFlash vs EAGLE-3 lossless speedup on Qwen3-8B across tasks](/assets/images/dflash-speculative-decoding-vllm-results.webp)
+![Bar chart comparing DFlash vs EAGLE-3 lossless speedup on Qwen3-8B across tasks]({{ '/assets/images/dflash-speculative-decoding-vllm-results.webp' | relative_url }})
 
 The chart visualizes official numbers from the UCSD DFlash paper and does not represent direct ThakiCloud measurements. GSM8K 5.15x, MATH-500 6.08x, AIME25 5.62x, HumanEval 5.14x, and LiveCodeBench 5.51x show particularly large gains on math and code reasoning tasks. MT-Bench, which allows more varied responses, is comparatively lower at 2.75x. This is consistent with the general principle that speculative decoding gains more as output becomes more predictable (higher acceptance rate).
 

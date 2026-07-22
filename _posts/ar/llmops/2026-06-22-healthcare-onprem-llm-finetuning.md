@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
+![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى]({{ '/assets/images/healthcare-onprem-llm-finetuning-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

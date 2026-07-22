@@ -32,7 +32,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg' | relative_url }})
 
 *بنية الحوكمة حين يدير مهندس واحد مئات الوكلاء*
 

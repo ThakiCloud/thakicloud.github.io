@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/nvidia-aspire-agent
 published: false
 ---
 
-![An abstract lattice of glowing nodes compounding into a dense, reusable structure](/assets/images/nvidia-aspire-agentic-skill-discovery-hero.webp)
+![An abstract lattice of glowing nodes compounding into a dense, reusable structure]({{ '/assets/images/nvidia-aspire-agentic-skill-discovery-hero.webp' | relative_url }})
 
 ## Overview
 

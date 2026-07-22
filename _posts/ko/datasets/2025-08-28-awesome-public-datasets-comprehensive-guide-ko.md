@@ -22,7 +22,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![Awesome Public Datasets 카테고리 구성 개요](/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png)
+![Awesome Public Datasets 카테고리 구성 개요]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png' | relative_url }})
 
 ## 서론
 

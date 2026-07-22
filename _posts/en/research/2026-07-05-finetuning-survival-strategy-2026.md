@@ -28,7 +28,7 @@ header:
   overlay_filter: 0.5
 ---
 
-![Fine-tuning survival strategy hero image](/assets/images/finetuning-survival-strategy-2026-hero.webp)
+![Fine-tuning survival strategy hero image]({{ '/assets/images/finetuning-survival-strategy-2026-hero.webp' | relative_url }})
 
 ## Introduction: "Don't we not need fine-tuning anymore?"
 

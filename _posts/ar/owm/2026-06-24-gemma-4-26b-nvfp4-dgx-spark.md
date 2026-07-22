@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
 
-![مخطط مفاهيمي للاستدلال المتوازي لـ Gemma 4 26B NVFP4](/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp)
+![مخطط مفاهيمي للاستدلال المتوازي لـ Gemma 4 26B NVFP4]({{ '/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

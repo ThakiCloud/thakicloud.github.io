@@ -30,7 +30,7 @@ This essay examines what questions that transition poses for organizational cult
 
 ---
 
-![Concept diagram](/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg)
+![Concept diagram]({{ '/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg' | relative_url }})
 
 *Governance structure when one engineer orchestrates hundreds of agents*
 

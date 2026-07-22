@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 15분
 
-![AnyCrawl LLM 친화적 데이터 수집 파이프라인 개요](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
+![AnyCrawl LLM 친화적 데이터 수집 파이프라인 개요]({{ '/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png' | relative_url }})
 
 ## 개요
 

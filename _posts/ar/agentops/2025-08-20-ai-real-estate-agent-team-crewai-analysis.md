@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![توضيح للمفهوم الأساسي](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.webp)
+![توضيح للمفهوم الأساسي]({{ '/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المقدر**: 15 دقائق
 

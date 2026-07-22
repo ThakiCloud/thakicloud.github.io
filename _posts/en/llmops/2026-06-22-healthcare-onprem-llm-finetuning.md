@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![Fine-tuning healthcare LLMs on-premises without exporting patient data](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
+![Fine-tuning healthcare LLMs on-premises without exporting patient data]({{ '/assets/images/healthcare-onprem-llm-finetuning-hero.webp' | relative_url }})
 
 ## Overview
 

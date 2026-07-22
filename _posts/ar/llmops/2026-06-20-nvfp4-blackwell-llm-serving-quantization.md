@@ -47,7 +47,7 @@ published: false
 
 NVFP4 حصري لـ Blackwell، أما H100/A100 فلا تزال FP8 الخيار الأمثل لها.
 
-![مخطط بصمة ذاكرة Llama-3.1-70B حسب الدقة وتوجيه التكميم لكل تجمّع عُقد في Kueue](/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg)
+![مخطط بصمة ذاكرة Llama-3.1-70B حسب الدقة وتوجيه التكميم لكل تجمّع عُقد في Kueue]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg' | relative_url }})
 
 ## حالة دعم أطر العمل (يونيو 2026)
 

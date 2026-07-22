@@ -38,7 +38,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/amodei-free-software-engineer-value-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/amodei-free-software-engineer-value-diagram.svg' | relative_url }})
 
 *إلى أين تنتقل قيمة الهندسة حين تقترب التكلفة الحدية من الصفر*
 

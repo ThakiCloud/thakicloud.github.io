@@ -23,7 +23,7 @@ categories:
   - agentops
 ---
 
-![تحوّل موجّه نظام سميك إلى هيكل رفيع](/assets/images/claude-code-system-prompt-cut-hero.png)
+![تحوّل موجّه نظام سميك إلى هيكل رفيع]({{ '/assets/images/claude-code-system-prompt-cut-hero.png' | relative_url }})
 
 ## نظرة عامة
 

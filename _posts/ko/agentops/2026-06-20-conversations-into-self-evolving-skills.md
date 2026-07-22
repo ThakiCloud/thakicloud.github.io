@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![과거 대화가 재사용 가능한 스킬로 응결되는 모습](/assets/images/self-evolving-skills-hero.webp)
+![과거 대화가 재사용 가능한 스킬로 응결되는 모습]({{ '/assets/images/self-evolving-skills-hero.webp' | relative_url }})
 
 ## 매번 같은 것을 다시 설명하고 있다면
 

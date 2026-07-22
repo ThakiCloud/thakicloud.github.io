@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![하나의 공유 채널에서 중앙 AI 노드가 여러 사람 노드와 연결된 협업 네트워크 추상 비주얼](/assets/images/anthropic-claude-tag-slack-hero.webp)
+![하나의 공유 채널에서 중앙 AI 노드가 여러 사람 노드와 연결된 협업 네트워크 추상 비주얼]({{ '/assets/images/anthropic-claude-tag-slack-hero.webp' | relative_url }})
 
 채널마다 하나의 Claude가 모두와 함께 일하는 멀티플레이어 구조를 형상화한 이미지입니다.
 

@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **وقت القراءة المتوقع**: 14 دقيقة
 
-![مخطط مفاهيمي يقارن نموذجي Kimi K3 وInkling مفتوحي الأوزان](/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp)
+![مخطط مفاهيمي يقارن نموذجي Kimi K3 وInkling مفتوحي الأوزان]({{ '/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

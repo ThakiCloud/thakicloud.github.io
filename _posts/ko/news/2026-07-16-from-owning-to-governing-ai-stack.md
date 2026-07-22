@@ -42,7 +42,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/from-owning-to-governin
 
 인프라 계층에서도 같은 신호가 읽힙니다. 마이크로소프트는 3M과 손잡고 애저 데이터센터에 차세대 광연결 기술을 도입하기로 했습니다. GPU 클러스터를 아무리 크게 쌓아도 내부 대역폭에서 병목이 생기면 소유한 자원이 제 성능을 못 냅니다. 결국 물리 계층의 승부조차 '얼마나 많이 가졌나'에서 '가진 것을 얼마나 잘 잇고 다루나'로 옮겨가고 있습니다. 규모를 소유하는 일과 그 규모를 다스리는 일은 이제 별개의 역량입니다.
 
-![소유에서 통치로 넘어가는 AI 스택의 세 계층: 빌려 쓰는 지능 계층, 새로운 역량인 통치 계층, 소유하는 물리 계층](/assets/images/from-owning-to-governing-ai-stack-diagram.svg)
+![소유에서 통치로 넘어가는 AI 스택의 세 계층: 빌려 쓰는 지능 계층, 새로운 역량인 통치 계층, 소유하는 물리 계층]({{ '/assets/images/from-owning-to-governing-ai-stack-diagram.svg' | relative_url }})
 
 ## 현장으로 내려온 AI는 저마다 남의 능력을 빌립니다
 

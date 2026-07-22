@@ -23,7 +23,7 @@ categories:
 published: false
 ---
 
-![تمثيل تجريدي لمكتبة معرفة مفهرسة](/assets/images/hermes-bible-agent-docs-hero.webp)
+![تمثيل تجريدي لمكتبة معرفة مفهرسة]({{ '/assets/images/hermes-bible-agent-docs-hero.webp' | relative_url }})
 *بحث مفهرس، مصوّر كعقد مستندات كثيرة تتقارب نحو نقطة مضيئة واحدة.*
 
 ## نظرة عامة

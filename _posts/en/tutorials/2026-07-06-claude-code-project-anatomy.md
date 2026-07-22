@@ -14,7 +14,7 @@ categories:
   - tutorials
 ---
 
-![An abstract image of layered configuration levels converging into a single, well-ordered agent execution](/assets/images/claude-code-project-anatomy-hero.webp)
+![An abstract image of layered configuration levels converging into a single, well-ordered agent execution]({{ '/assets/images/claude-code-project-anatomy-hero.webp' | relative_url }})
 *Scattered instructions, rules, and tools become predictable agent behavior once they're organized into a folder structure.*
 
 ## Overview

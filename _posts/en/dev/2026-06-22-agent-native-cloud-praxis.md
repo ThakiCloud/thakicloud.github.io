@@ -23,7 +23,7 @@ categories:
   - dev
 ---
 
-![Agent-Native Cloud Paxis Overview](/assets/images/agent-native-cloud-praxis-hero.webp)
+![Agent-Native Cloud Paxis Overview]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})
 
 ## Overview
 

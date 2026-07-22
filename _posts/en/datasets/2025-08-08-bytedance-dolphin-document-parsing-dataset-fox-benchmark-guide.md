@@ -32,7 +32,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 18 min
 
-![ByteDance Dolphin Analyze-then-Parse pipeline overview](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+![ByteDance Dolphin Analyze-then-Parse pipeline overview]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png' | relative_url }})
 
 ## Introduction
 

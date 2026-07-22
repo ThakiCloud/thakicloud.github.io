@@ -20,7 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/claude-code-ios-simulato
 lang: en
 ---
 
-![An abstract image depicting a closed loop where a running screen and code are joined into a single ring of light](/assets/images/claude-code-ios-simulator-hero.png)
+![An abstract image depicting a closed loop where a running screen and code are joined into a single ring of light]({{ '/assets/images/claude-code-ios-simulator-hero.png' | relative_url }})
 
 ## Why this is worth reading
 

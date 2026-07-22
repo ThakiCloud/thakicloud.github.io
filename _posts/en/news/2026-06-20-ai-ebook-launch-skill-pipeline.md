@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 7 min
 
-![Conceptual diagram of the one-line topic to sellable ebook automation pipeline](/assets/images/ai-ebook-pipeline-hero.webp)
+![Conceptual diagram of the one-line topic to sellable ebook automation pipeline]({{ '/assets/images/ai-ebook-pipeline-hero.webp' | relative_url }})
 
 This post is not about what the books say. It is a record of how far automation goes when the entire process of producing a book is wrapped into a single skill. Over the past 6 days, the `ai-ebook-launch` skill produced 5 Korean ebooks. The interesting part is not "what books were written" but "which steps between a one-line topic and a sales-ready state ran without human hands."
 

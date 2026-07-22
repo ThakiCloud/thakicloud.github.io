@@ -28,7 +28,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 published: false
 ---
 
-![빛으로 이루어진 네 개의 층이 아래에서 위로 쌓이며 서로 연결되는 추상 구조](/assets/images/agentic-ai-hitchhikers-guide-hero.webp)
+![빛으로 이루어진 네 개의 층이 아래에서 위로 쌓이며 서로 연결되는 추상 구조]({{ '/assets/images/agentic-ai-hitchhikers-guide-hero.webp' | relative_url }})
 
 ## 개요
 
@@ -38,7 +38,7 @@ published: false
 
 ThakiCloud처럼 에이전트를 일급 리소스로 다루는 플랫폼을 운영하는 입장에서 이 가이드는 남의 이야기가 아닙니다. 우리가 Paxis(Agent-Native Cloud)에서 매일 다루는 스킬, 도구, 메모리, 멀티에이전트 오케스트레이션이 이 문서의 후반부 절반을 그대로 차지하기 때문입니다. 이 글은 가이드의 구조를 네 개 층위로 정리하고, 우리 제품 관점에서 무엇을 취할 수 있는지를 함께 짚습니다.
 
-![파편화된 지식에서 단일 시스템으로 정리한 도식](/assets/images/agentic-ai-hitchhikers-guide-slide-02.webp)
+![파편화된 지식에서 단일 시스템으로 정리한 도식]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-02.webp' | relative_url }})
 *흩어진 에이전트 AI 지식을 하나의 시스템으로 묶는 것이 이 가이드의 출발점입니다.*
 
 ## 이 가이드는 무엇인가
@@ -64,7 +64,7 @@ flowchart TB
 
 이 순서가 의미하는 바가 있습니다. 에이전트의 행동 품질은 결국 기반 모델의 능력에 묶여 있고, 그 모델을 실제로 굴리는 비용은 압축과 추론 최적화에서 갈립니다. 추론 비용을 낮추지 못하면 에이전트가 도구를 여러 번 호출하고 긴 궤적을 밟는 순간 경제성이 무너집니다. 즉 가장 아래 층의 효율이 가장 위 층의 실현 가능성을 결정합니다.
 
-![기반 모델 압축·최적화와 추론 비용의 관계를 정리한 슬라이드](/assets/images/agentic-ai-hitchhikers-guide-slide-04.webp)
+![기반 모델 압축·최적화와 추론 비용의 관계를 정리한 슬라이드]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-04.webp' | relative_url }})
 *가장 아래 층의 효율이 가장 위 층의 실현 가능성을 결정합니다.*
 
 ## 정렬과 추론 층
@@ -73,7 +73,7 @@ flowchart TB
 
 여기서 중요한 전환이 일어납니다. 단순히 "사람이 좋아하는 답"을 내도록 맞추는 단계에서, "스스로 더 오래 생각해 더 나은 답에 도달하는" 추론 능력으로 무게 중심이 옮겨갑니다. 에이전트가 여러 단계를 계획하고 중간 결과를 검증하려면 이 추론 층이 탄탄해야 합니다. 정렬이 안전을 책임진다면, 추론은 자율성을 책임집니다.
 
-![정렬에서 추론으로 넘어가는 3단계를 정리한 슬라이드](/assets/images/agentic-ai-hitchhikers-guide-slide-05.webp)
+![정렬에서 추론으로 넘어가는 3단계를 정리한 슬라이드]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-05.webp' | relative_url }})
 *정렬이 안전을 책임진다면, 추론은 자율성을 책임집니다.*
 
 ## 에이전트 시스템: MCP, 스킬, 메모리, 멀티에이전트
@@ -89,7 +89,7 @@ flowchart TB
 
 이 목록은 사실상 Agent-Native 플랫폼의 부품 명세서와 같습니다. 스킬을 어떻게 고르고, 도구를 어떻게 안전하게 호출하며, 메모리를 어떻게 라우팅하고, 여러 에이전트의 작업을 어떻게 DAG로 묶는가. 가이드는 이 질문들을 흩어진 기법이 아니라 하나의 시스템 설계 문제로 다룹니다.
 
-![에이전트 시스템 부품 명세서: 메모리·MCP·스킬·멀티에이전트](/assets/images/agentic-ai-hitchhikers-guide-slide-06.webp)
+![에이전트 시스템 부품 명세서: 메모리·MCP·스킬·멀티에이전트]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-06.webp' | relative_url }})
 *이 부품 목록은 사실상 Agent-Native 플랫폼의 명세서와 같습니다.*
 
 ## 배포와 평가
@@ -98,7 +98,7 @@ flowchart TB
 
 평가가 별도 층으로 분리되어 있다는 점이 인상적입니다. 단일 응답의 정확도만 보던 시절의 지표로는 도구를 여러 번 호출하고 여러 단계를 밟는 에이전트를 측정할 수 없습니다. 궤적의 성공률, 중간 단계의 안전성, 비용 대비 효용을 함께 봐야 합니다. 가이드가 평가를 구현의 부록이 아니라 독립된 주제로 둔 것은, 에이전트 시스템에서 "잘 돌아가는지 어떻게 아는가"가 그만큼 어려운 문제이기 때문입니다.
 
-![단일 응답 정확도를 넘어 궤적 기반 평가로 전환하는 슬라이드](/assets/images/agentic-ai-hitchhikers-guide-slide-07.webp)
+![단일 응답 정확도를 넘어 궤적 기반 평가로 전환하는 슬라이드]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-07.webp' | relative_url }})
 *단일 응답 정확도만 보던 지표로는 다단계 에이전트를 측정할 수 없습니다.*
 
 ## ThakiCloud 제품 적용 시사점
@@ -113,7 +113,7 @@ flowchart TB
 
 기반 층의 시사점도 빼놓을 수 없습니다. 가이드 첫 층의 추론 최적화·압축은 그대로 **ai-platform**의 과제입니다. ThakiCloud의 ai-platform은 쿠버네티스와 Kueue 기반 GPU 스케줄링, vLLM 서빙, 멀티테넌트 격리를 통해 에이전트가 도구를 여러 번 호출해도 경제성이 유지되는 추론 기반을 제공합니다. 낮은 서빙 비용(ai-platform)이 곧 에이전트의 경제성(Paxis)을 만든다는 점에서, 이 가이드의 가장 아래 층과 가장 위 층은 우리 제품에서 한 줄로 이어집니다.
 
-![가이드의 이론을 ThakiCloud Paxis 레이어에 매핑한 표](/assets/images/agentic-ai-hitchhikers-guide-slide-08.webp)
+![가이드의 이론을 ThakiCloud Paxis 레이어에 매핑한 표]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-08.webp' | relative_url }})
 *가이드의 부품 명세가 Paxis의 실제 레이어와 거의 1:1로 대응합니다.*
 
 ## 한계 및 반론
@@ -122,7 +122,7 @@ flowchart TB
 
 둘째, "전부 다룬다"는 것은 곧 "어느 것도 끝까지 깊게 파지 못한다"는 뜻이기도 합니다. 한 권으로 전 계층을 묶으면 폭은 얻지만, 특정 기법을 실제 프로덕션 수준으로 끌어올리려면 결국 전용 문헌과 실험이 필요합니다. 이 가이드의 진짜 가치는 답을 주는 데 있다기보다, 흩어진 조각들이 한 시스템 안에서 어디에 놓이는지를 보여주는 지도에 있습니다. 지도와 실제 주행은 다른 일입니다.
 
-![가이드는 지도이고 실제 구현은 주행이라는 한계를 정리한 슬라이드](/assets/images/agentic-ai-hitchhikers-guide-slide-09.webp)
+![가이드는 지도이고 실제 구현은 주행이라는 한계를 정리한 슬라이드]({{ '/assets/images/agentic-ai-hitchhikers-guide-slide-09.webp' | relative_url }})
 *지도와 실제 주행은 다릅니다. 구현 디테일은 늘 1차 출처로 다시 확인해야 합니다.*
 
 ## 출처

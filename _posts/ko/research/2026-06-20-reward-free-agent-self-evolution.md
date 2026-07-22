@@ -30,7 +30,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![World Knowledge 기반 보상 없는 자기진화 파이프라인 개념도](/assets/images/reward-free-agent-hero.webp)
+![World Knowledge 기반 보상 없는 자기진화 파이프라인 개념도]({{ '/assets/images/reward-free-agent-hero.webp' | relative_url }})
 
 ## 강화학습의 병목
 
@@ -96,11 +96,11 @@ ThakiCloud의 AI 플랫폼은 다양한 고객 환경에서 에이전트를 운�
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![reward-free-agent-self-evolution 슬라이드 1](/assets/images/reward-free-agent-self-evolution-slide-01.webp)
+![reward-free-agent-self-evolution 슬라이드 1]({{ '/assets/images/reward-free-agent-self-evolution-slide-01.webp' | relative_url }})
 
-![reward-free-agent-self-evolution 슬라이드 2](/assets/images/reward-free-agent-self-evolution-slide-02.webp)
+![reward-free-agent-self-evolution 슬라이드 2]({{ '/assets/images/reward-free-agent-self-evolution-slide-02.webp' | relative_url }})
 
-![reward-free-agent-self-evolution 슬라이드 3](/assets/images/reward-free-agent-self-evolution-slide-03.webp)
+![reward-free-agent-self-evolution 슬라이드 3]({{ '/assets/images/reward-free-agent-self-evolution-slide-03.webp' | relative_url }})
 
-![reward-free-agent-self-evolution 슬라이드 4](/assets/images/reward-free-agent-self-evolution-slide-04.webp)
+![reward-free-agent-self-evolution 슬라이드 4]({{ '/assets/images/reward-free-agent-self-evolution-slide-04.webp' | relative_url }})
 

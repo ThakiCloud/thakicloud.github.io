@@ -95,6 +95,13 @@ jobs:
           bundler-cache: true
           cache-version: 0
 
+      - name: Fix baseurl-aware asset paths (prevent broken images on subpath)
+        run: |
+          # Auto-generated posts (news-comic, nightly-paper, tech-blog-manager)
+          # emit root-absolute ](/assets/..) which breaks under the /tech-blog
+          # baseurl. Rewrite body refs to relative_url. Idempotent.
+          python3 scripts/fix_asset_baseurl.py --apply
+
       - name: Build with Jekyll (baseurl=/tech-blog from _config)
         run: |
           bundle exec jekyll build --trace

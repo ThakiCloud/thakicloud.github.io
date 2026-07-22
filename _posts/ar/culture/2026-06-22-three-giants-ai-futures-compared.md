@@ -32,7 +32,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/three-giants-ai-futures-compared-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/three-giants-ai-futures-compared-diagram.svg' | relative_url }})
 
 *مقارنة رؤى العمالقة الثلاثة للمستقبل*
 

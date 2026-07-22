@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 14 min
 
-![Conceptual comparison of Kimi K3 and Thinking Machines Inkling open-weight models](/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp)
+![Conceptual comparison of Kimi K3 and Thinking Machines Inkling open-weight models]({{ '/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp' | relative_url }})
 
 ## Overview
 

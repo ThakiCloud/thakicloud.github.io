@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 7 min
 
-![FastContext-1.0-4B-SFT architecture overview](/assets/images/fastcontext-4b-subagent-model-hero.webp)
+![FastContext-1.0-4B-SFT architecture overview]({{ '/assets/images/fastcontext-4b-subagent-model-hero.webp' | relative_url }})
 
 ## What Is New
 

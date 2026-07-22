@@ -29,7 +29,7 @@ published: false
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
 ---
 
-![GPU 풀과 국산 NPU 풀이 한 클러스터에서 함께 추론을 처리하는 이기종 구성](/assets/images/llm-d-heterogeneous-hero.webp)
+![GPU 풀과 국산 NPU 풀이 한 클러스터에서 함께 추론을 처리하는 이기종 구성]({{ '/assets/images/llm-d-heterogeneous-hero.webp' | relative_url }})
 
 ## GPU를 더 사도 추론이 안 빨라진다
 

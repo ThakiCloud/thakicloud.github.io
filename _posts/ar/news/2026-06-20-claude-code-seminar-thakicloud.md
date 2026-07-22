@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 6 دقائق
 
-![سيمنار Claude Code](/assets/images/claude-code-seminar-hero.webp)
+![سيمنار Claude Code]({{ '/assets/images/claude-code-seminar-hero.webp' | relative_url }})
 
 كثير من الفرق تعتمد أدوات الترميز بالذكاء الاصطناعي. لكن الفرق التي يستخدمها جميع أعضائها بشكل صحيح أقل بكثير. في ThakiCloud لم نكتفِ بتثبيت Claude Code؛ أقمنا سيمناراً خاصاً لصقل إعداد البيئة وأنماط الاستخدام العملي، وننشر اليوم تلك المواد.
 

@@ -70,7 +70,7 @@ This calculation is not an arbitrary invention; it cross-checks against publishe
 
 Overlay the computed VRAM requirements on the capacity lines of the three build configurations and the picture sharpens.
 
-![Required VRAM by model size and quantization, with the capacity lines of the three build configurations](/assets/images/personal-ai-computer-onprem-vram-results.webp)
+![Required VRAM by model size and quantization, with the capacity lines of the three build configurations]({{ '/assets/images/personal-ai-computer-onprem-vram-results.webp' | relative_url }})
 
 A model runs on a given configuration when its bar sits below that configuration's capacity line. In summary:
 

@@ -27,7 +27,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/platonic-representa
 
 This post is for engineers and data scientists who serve many kinds of foundation models on one platform, or who design embedding-based search, recommendation, and multimodal pipelines. It covers the theory underneath practical questions like "why does forcing two models' embeddings into alignment work better than expected?" and "why doesn't downstream performance collapse when we swap models?" We read the Platonic Representation Hypothesis, presented by MIT researchers at ICML 2024, alongside its evidence and follow it through to what it means for real platform design.
 
-![Streams of particles in different colors converging into a single luminous crystalline structure](/assets/images/platonic-representation-hypothesis-hero.png)
+![Streams of particles in different colors converging into a single luminous crystalline structure]({{ '/assets/images/platonic-representation-hypothesis-hero.png' | relative_url }})
 
 ## Overview
 

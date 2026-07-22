@@ -38,7 +38,7 @@ This post analyzes Fugu's architecture from the perspective of ThakiCloud, an op
 
 Sakana Fugu is a multi-agent system that behaves like a single model. When a user sends a request to a single endpoint, Fugu decides how to handle it. Simple requests it handles directly; more complex tasks it routes to a coordinated team of specialist models. Model selection, delegation, verification, and synthesis all happen internally, so the complexity of a multi-agent system never surfaces in user code.
 
-![Sakana Fugu orchestration architecture: behind a single API, Fugu dynamically coordinates a pool of agents](/assets/images/sakana-fugu-orchestration-model-diagram.webp)
+![Sakana Fugu orchestration architecture: behind a single API, Fugu dynamically coordinates a pool of agents]({{ '/assets/images/sakana-fugu-orchestration-model-diagram.webp' | relative_url }})
 
 This is possible because Fugu is not a set of routing rules but **a language model trained on orchestration itself**. Fugu is specialized to understand when to delegate, how agents should communicate, and how to synthesize their outputs into a single trustworthy answer. The approach draws on two Sakana AI papers accepted at ICLR 2026: TRINITY (arXiv:2512.04695), which introduces an evolved LLM coordinator, and Conductor (arXiv:2512.04388), which studies learning to orchestrate agents in natural language.
 

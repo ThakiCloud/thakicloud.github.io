@@ -38,7 +38,7 @@ where $D$ represents the data distribution, $R(x, y)$ denotes the reward functio
 The contemporary challenges in preference optimization arise from several fundamental issues: reward hacking, where models exploit loopholes in reward functions; training instability caused by poor gradient estimates; computational inefficiency in sampling and comparison processes; and the difficulty of scaling to complex, multi-modal tasks. These challenges have motivated the development of five innovative approaches that represent the current state-of-the-art in the field.
 
 
-![Concept diagram](/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg)
+![Concept diagram]({{ '/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

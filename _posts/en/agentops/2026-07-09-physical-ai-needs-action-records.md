@@ -70,7 +70,7 @@ On top of this sits autonomy governance ranging from L0 to L3. Even for the same
 
 To sum up, the pain points enterprises revealed across today's digest branch into four. Auditability to answer regulation and internal controls, sovereignty to keep data from leaking outside the company, safe execution that avoids causing accidents in the physical world, and a cost structure that does not waver even as model prices swing. Each of these four surfaced from a different piece of news, but on the actual adoption floor they are all demanded at once, from a single operational layer. That is exactly why Paxis places Audit Logs, sovereign K8s, policy gates, and CostRouter on the same platform. Right now, with ICML 2026, the world's largest machine learning conference, being held in Seoul and lending momentum to the domestic research ecosystem, we believe the final stretch that actually carries research achievements onto the factory floor will ultimately be filled by the maturity of this kind of operations.
 
-![Concept diagram](/assets/images/physical-ai-needs-action-records-diagram.svg)
+![Concept diagram]({{ '/assets/images/physical-ai-needs-action-records-diagram.svg' | relative_url }})
 
 *Four pain points, auditability, sovereignty, safe execution, and cost stability, each surfacing from a different piece of news, converge on the actual adoption floor into a single operational layer called Paxis.*
 

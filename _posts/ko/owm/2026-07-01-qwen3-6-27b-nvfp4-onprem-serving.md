@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 11분
 
-![Qwen3.6-27B NVFP4 4비트 양자화 개념도](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp)
+![Qwen3.6-27B NVFP4 4비트 양자화 개념도]({{ '/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp' | relative_url }})
 
 ## 개요
 

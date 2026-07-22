@@ -36,7 +36,7 @@ One of the hardest choices in AI agent development is deciding between model tra
 
 Having witnessed the shift from the BERT era to GPT-3, the Manus team arrived at their current optimization strategy through an empirical approach they call "Stochastic Graduate Descent," rebuilding their framework four times in the process.
 
-![Concept diagram](/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg)
+![Concept diagram]({{ '/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

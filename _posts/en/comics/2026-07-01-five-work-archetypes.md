@@ -18,7 +18,7 @@ categories:
 
 The future of work supposedly dissolves job titles into five archetypes. The prototyper throws out new ideas fast. The builder turns those ideas into real, shipped products. The sweeper cleans up code and UI and simplifies systems. The grower iterates a shipped product toward product-market fit. The maintainer keeps a mature system stable and secure. Everyone wants those five. Nobody raises a hand for the sixth, the unglamorous, repetitive work of keeping the lights on. Paxis and Metis act out what happens to that empty chair.
 
-![The Future of Work: Five Archetypes, Not Job Titles](/assets/images/posts/comics/five-work-archetypes/strip.webp)
+![The Future of Work: Five Archetypes, Not Job Titles]({{ '/assets/images/posts/comics/five-work-archetypes/strip.webp' | relative_url }})
 
 > Source: [Boris Cherny on the five archetypes of future roles](https://x.com/bcherny) · twitter
 

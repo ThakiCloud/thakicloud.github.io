@@ -23,7 +23,7 @@ categories:
 published: false
 ---
 
-![Abstract representation of an indexed knowledge library](/assets/images/hermes-bible-agent-docs-hero.webp)
+![Abstract representation of an indexed knowledge library]({{ '/assets/images/hermes-bible-agent-docs-hero.webp' | relative_url }})
 *Indexed search, rendered as many document nodes converging into a single bright point.*
 
 ## Overview

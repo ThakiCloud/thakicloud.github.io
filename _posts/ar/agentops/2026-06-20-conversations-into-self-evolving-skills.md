@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![المحادثات السابقة تتبلور في مهارات قابلة لإعادة الاستخدام](/assets/images/self-evolving-skills-hero.webp)
+![المحادثات السابقة تتبلور في مهارات قابلة لإعادة الاستخدام]({{ '/assets/images/self-evolving-skills-hero.webp' | relative_url }})
 
 ## إذا كنت تشرح الشيء ذاته مراراً وتكراراً
 

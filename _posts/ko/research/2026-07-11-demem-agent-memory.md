@@ -16,7 +16,7 @@ audiobook: /assets/audio/posts/demem-agent-memory/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![서로 다른 결정으로 이어지는 기억들이 분리된 경로로 갈라지는 모습을 표현한 추상 일러스트](/assets/images/demem-agent-memory-hero.png)
+![서로 다른 결정으로 이어지는 기억들이 분리된 경로로 갈라지는 모습을 표현한 추상 일러스트]({{ '/assets/images/demem-agent-memory-hero.png' | relative_url }})
 
 > 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1oxsADQALTfdn7I_mmZbaZfMnmqoCMF9o/view)할 수 있습니다.
 
@@ -110,13 +110,13 @@ DeMem은 전체 점수에서 최고를 기록했고, 특히 먼 상호작용 사
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![demem-agent-memory 슬라이드 1](/assets/images/demem-agent-memory-slide-01.png)
+![demem-agent-memory 슬라이드 1]({{ '/assets/images/demem-agent-memory-slide-01.png' | relative_url }})
 
-![demem-agent-memory 슬라이드 2](/assets/images/demem-agent-memory-slide-02.png)
+![demem-agent-memory 슬라이드 2]({{ '/assets/images/demem-agent-memory-slide-02.png' | relative_url }})
 
-![demem-agent-memory 슬라이드 3](/assets/images/demem-agent-memory-slide-03.png)
+![demem-agent-memory 슬라이드 3]({{ '/assets/images/demem-agent-memory-slide-03.png' | relative_url }})
 
-![demem-agent-memory 슬라이드 4](/assets/images/demem-agent-memory-slide-04.png)
+![demem-agent-memory 슬라이드 4]({{ '/assets/images/demem-agent-memory-slide-04.png' | relative_url }})
 
 ## 출처
 

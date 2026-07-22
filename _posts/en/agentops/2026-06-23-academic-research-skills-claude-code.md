@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Abstract image of a research assembly line](/assets/images/academic-research-skills-claude-code-hero.webp)
+![Abstract image of a research assembly line]({{ '/assets/images/academic-research-skills-claude-code-hero.webp' | relative_url }})
 *A staged pipeline flowing from research to manuscript, passing through gates at each transition.*
 
 ## Overview

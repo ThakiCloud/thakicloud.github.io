@@ -51,7 +51,7 @@ AI 경쟁의 무게 중심이 모델에서 인프라로, 다시 인프라 안에
 
 대규모 언어 모델의 추론은 본질적으로 메모리 대역폭에 묶인(memory-bound) 작업입니다. 토큰을 하나 생성할 때마다 모델의 가중치 전체를 메모리에서 읽어 와야 하기 때문입니다. 연산 유닛이 아무리 빨라도, 가중치를 충분히 빠르게 공급하지 못하면 GPU는 데이터를 기다리며 놀게 됩니다. 그래서 추론 처리량은 흔히 연산 능력이 아니라 메모리 대역폭에 의해 결정됩니다.
 
-![AI 추론 서버의 메모리 계층: HBM이 GPU와 가장 가깝고 가장 빠른 병목 지점이다](/assets/images/micron-anthropic-ai-memory-infrastructure-diagram.webp)
+![AI 추론 서버의 메모리 계층: HBM이 GPU와 가장 가깝고 가장 빠른 병목 지점이다]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-diagram.webp' | relative_url }})
 
 AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 
@@ -104,13 +104,13 @@ AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 1](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.png)
+![micron-anthropic-ai-memory-infrastructure 슬라이드 1]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.png' | relative_url }})
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 2](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.png)
+![micron-anthropic-ai-memory-infrastructure 슬라이드 2]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.png' | relative_url }})
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 3](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.png)
+![micron-anthropic-ai-memory-infrastructure 슬라이드 3]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.png' | relative_url }})
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 4](/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.png)
+![micron-anthropic-ai-memory-infrastructure 슬라이드 4]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.png' | relative_url }})
 
 ## 출처
 

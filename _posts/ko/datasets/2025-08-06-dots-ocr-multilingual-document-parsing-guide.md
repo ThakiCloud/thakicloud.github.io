@@ -28,7 +28,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![dots.ocr 통합 문서 파싱 개요](/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png)
+![dots.ocr 통합 문서 파싱 개요]({{ '/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png' | relative_url }})
 
 ## 서론
 

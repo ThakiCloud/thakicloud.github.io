@@ -25,7 +25,7 @@ categories:
   - llmops
 ---
 
-![An image depicting two B200 GPUs splitting Prefill and Decode duties](/assets/images/b200-vllm-pd-disaggregation-hero.webp)
+![An image depicting two B200 GPUs splitting Prefill and Decode duties]({{ '/assets/images/b200-vllm-pd-disaggregation-hero.webp' | relative_url }})
 *A depiction of a disaggregated serving setup where one GPU handles Prefill and the other handles Decode, with the KV cache crossing over NVLink.*
 
 ## Overview

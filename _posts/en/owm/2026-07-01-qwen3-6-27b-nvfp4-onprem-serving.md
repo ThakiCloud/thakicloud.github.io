@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 11 min
 
-![Qwen3.6-27B NVFP4 4-bit quantization concept diagram](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp)
+![Qwen3.6-27B NVFP4 4-bit quantization concept diagram]({{ '/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp' | relative_url }})
 
 ## Overview
 

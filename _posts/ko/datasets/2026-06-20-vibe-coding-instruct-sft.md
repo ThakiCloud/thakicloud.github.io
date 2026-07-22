@@ -21,7 +21,7 @@ categories:
   - datasets
 ---
 
-![Vibe Coding Instruct SFT 개념도](/assets/images/vibe-coding-instruct-sft-hero.webp)
+![Vibe Coding Instruct SFT 개념도]({{ '/assets/images/vibe-coding-instruct-sft-hero.webp' | relative_url }})
 
 ## 데이터셋 개요
 

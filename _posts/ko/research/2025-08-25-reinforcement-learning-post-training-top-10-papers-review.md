@@ -26,7 +26,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp)
+![핵심 개념 일러스트]({{ '/assets/images/reinforcement-learning-post-training-top-10-papers-review-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 25분
 
@@ -39,7 +39,7 @@ published: false
 각 논문이 제시하는 핵심 아이디어와 실무적 시사점을 통해, 강화학습이 어떻게 LLM의 한계를 뛰어넘는 새로운 패러다임을 만들어가고 있는지 살펴보겠습니다.
 
 
-![개념 다이어그램](/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/reinforcement-learning-post-training-top-10-papers-review-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

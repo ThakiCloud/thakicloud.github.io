@@ -122,13 +122,13 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![loop-engineering-design-before-run 슬라이드 1](/assets/images/loop-engineering-design-before-run-slide-01.webp)
+![loop-engineering-design-before-run 슬라이드 1]({{ '/assets/images/loop-engineering-design-before-run-slide-01.webp' | relative_url }})
 
-![loop-engineering-design-before-run 슬라이드 2](/assets/images/loop-engineering-design-before-run-slide-02.webp)
+![loop-engineering-design-before-run 슬라이드 2]({{ '/assets/images/loop-engineering-design-before-run-slide-02.webp' | relative_url }})
 
-![loop-engineering-design-before-run 슬라이드 3](/assets/images/loop-engineering-design-before-run-slide-03.webp)
+![loop-engineering-design-before-run 슬라이드 3]({{ '/assets/images/loop-engineering-design-before-run-slide-03.webp' | relative_url }})
 
-![loop-engineering-design-before-run 슬라이드 4](/assets/images/loop-engineering-design-before-run-slide-04.webp)
+![loop-engineering-design-before-run 슬라이드 4]({{ '/assets/images/loop-engineering-design-before-run-slide-04.webp' | relative_url }})
 
 ## 출처
 

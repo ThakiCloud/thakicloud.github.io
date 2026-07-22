@@ -14,7 +14,7 @@ categories:
   - tutorials
 ---
 
-![Abstract image of session outputs assembling into a single living page in layered depth](/assets/images/claude-code-artifacts-pro-max-hero.webp)
+![Abstract image of session outputs assembling into a single living page in layered depth]({{ '/assets/images/claude-code-artifacts-pro-max-hero.webp' | relative_url }})
 *The progress of a coding session condenses into one shareable page that updates in real time.*
 
 ## Overview

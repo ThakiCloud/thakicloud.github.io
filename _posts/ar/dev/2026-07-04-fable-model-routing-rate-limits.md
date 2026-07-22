@@ -14,7 +14,7 @@ categories:
   - dev
 ---
 
-![صورة تجريدية لتدفقات معالجة بأحجام متعددة تتجمع في عقدة قائد واحدة ثم تتفرّع من جديد](/assets/images/fable-model-routing-rate-limits-hero.webp)
+![صورة تجريدية لتدفقات معالجة بأحجام متعددة تتجمع في عقدة قائد واحدة ثم تتفرّع من جديد]({{ '/assets/images/fable-model-routing-rate-limits-hero.webp' | relative_url }})
 *تصوير للتوجيه، حيث يتدفّق العمل الثقيل والخفيف إلى نماذج مختلفة.*
 
 ## نظرة عامة

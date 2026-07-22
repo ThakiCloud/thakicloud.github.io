@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط معماري لـ Nemotron-3-Ultra](/assets/images/nemotron-3-ultra-hero.webp)
+![مخطط معماري لـ Nemotron-3-Ultra]({{ '/assets/images/nemotron-3-ultra-hero.webp' | relative_url }})
 
 ## نظرة عامة على Nemotron-3-Ultra-550B
 

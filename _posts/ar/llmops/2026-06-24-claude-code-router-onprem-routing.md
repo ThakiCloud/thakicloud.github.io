@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![مخطط مفاهيمي](/assets/images/claude-code-router-onprem-routing-hero.webp)
+![مخطط مفاهيمي]({{ '/assets/images/claude-code-router-onprem-routing-hero.webp' | relative_url }})
 
 ```mermaid
 flowchart LR
@@ -47,7 +47,7 @@ flowchart LR
 ---
 
 
-![مخطط مفاهيمي](/assets/images/claude-code-router-onprem-routing-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/claude-code-router-onprem-routing-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

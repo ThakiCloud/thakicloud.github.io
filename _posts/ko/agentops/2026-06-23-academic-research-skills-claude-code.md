@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![연구 조립 라인을 추상화한 이미지](/assets/images/academic-research-skills-claude-code-hero.webp)
+![연구 조립 라인을 추상화한 이미지]({{ '/assets/images/academic-research-skills-claude-code-hero.webp' | relative_url }})
 *연구에서 원고까지, 게이트를 통과하며 흐르는 단계형 파이프라인을 형상화했습니다.*
 
 ## 개요

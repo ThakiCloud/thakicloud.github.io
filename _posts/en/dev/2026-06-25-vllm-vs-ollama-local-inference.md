@@ -111,7 +111,7 @@ The picture changes entirely under concurrency. The table below shows aggregate 
 
 At 10 concurrent users vLLM is already roughly 3.3x ahead; at 50 users it is roughly 6x. Ollama processes through a FIFO queue - effectively sequential - so aggregate throughput barely grows as concurrency increases. vLLM absorbs concurrent requests through continuous batching and scales close to linearly.
 
-![Aggregate token throughput comparison chart by concurrent user count - Ollama vs vLLM](/assets/images/vllm-vs-ollama-local-inference-results.webp)
+![Aggregate token throughput comparison chart by concurrent user count - Ollama vs vLLM]({{ '/assets/images/vllm-vs-ollama-local-inference-results.webp' | relative_url }})
 
 Latency tells the same story from a different angle. At one user, time to first response (TTFR) is roughly 45ms for Ollama and roughly 82ms for vLLM - Ollama is faster. At 50 concurrent users the positions reverse. Ollama's TTFR climbs to roughly 3,200ms as requests stack in the queue, while vLLM holds around 145ms thanks to continuous batching. The tool that is faster in isolation becomes the slowest under load.
 

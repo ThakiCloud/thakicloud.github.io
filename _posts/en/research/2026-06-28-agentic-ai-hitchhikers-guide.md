@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Abstract structure of four luminous layers stacked from bottom to top, connected to each other](/assets/images/agentic-ai-hitchhikers-guide-hero.webp)
+![Abstract structure of four luminous layers stacked from bottom to top, connected to each other]({{ '/assets/images/agentic-ai-hitchhikers-guide-hero.webp' | relative_url }})
 
 ## Overview
 

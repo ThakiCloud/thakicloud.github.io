@@ -47,7 +47,7 @@ For Llama-3.1-70B: BF16 is roughly 140 GB, FP8 is roughly 70 GB, and NVFP4 is ro
 
 NVFP4 is Blackwell-only. FP8 remains the right choice for H100 and A100 environments.
 
-![Llama-3.1-70B memory footprint by precision and per-node-pool quantization routing in Kueue](/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg)
+![Llama-3.1-70B memory footprint by precision and per-node-pool quantization routing in Kueue]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg' | relative_url }})
 
 ## Framework Support Status (as of June 2026)
 

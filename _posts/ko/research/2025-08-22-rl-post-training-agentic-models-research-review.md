@@ -35,7 +35,7 @@ categories:
 
 이번 리뷰에서는 커뮤니티에서 가장 주목받고 있는 10편의 핵심 논문들을 통해, 강화학습이 어떻게 대규모 언어 모델을 진정한 에이전트로 변화시키고 있는지 살펴보겠습니다. 멀티모달 도구 사용부터 다중 에이전트 협업, 효율적인 커리큘럼 학습까지, 각 연구가 제시하는 핵심 아이디어와 그것이 실무 AI 시스템 개발에 미치는 함의를 깊이 있게 분석해보겠습니다.
 
-![RL 기반 에이전트 post-training 기법 지형: 10개 논문을 4개 테마로 묶은 지도](/assets/images/rl-post-training-agentic-models-diagram.svg)
+![RL 기반 에이전트 post-training 기법 지형: 10개 논문을 4개 테마로 묶은 지도]({{ '/assets/images/rl-post-training-agentic-models-diagram.svg' | relative_url }})
 
 ## 1. Visual-ARFT: 멀티모달 에이전트의 도구 사용 학습
 

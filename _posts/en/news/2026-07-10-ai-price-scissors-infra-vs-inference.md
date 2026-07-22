@@ -23,7 +23,7 @@ categories:
   - news
 ---
 
-![Concept diagram of the AI scissors showing an enterprise caught between soaring rack prices above and collapsing inference prices below](/assets/images/ai-price-scissors-infra-vs-inference-hero.webp)
+![Concept diagram of the AI scissors showing an enterprise caught between soaring rack prices above and collapsing inference prices below]({{ '/assets/images/ai-price-scissors-infra-vs-inference-hero.webp' | relative_url }})
 
 ## On the Same Day, Two Numbers Walked Away From Each Other
 

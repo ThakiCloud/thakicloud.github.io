@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/comics/ai-tutors-ai-recursiv
 
 NVIDIA showed off a neat little experiment: hand the coding agent Codex two prompts, and it post-trained a small model, Cosmos 3 Nano, from 54.41% to 93.35% accuracy in a single day. One AI, quietly tutoring another into competence. That loop, an AI making an AI better, is what people call recursive self-improvement, and post-training just means taking a finished model and sharpening it a bit more. Paxis and Metis watch the whole self-improvement marathon unfold beside a waterfall.
 
-![The AI That Tutored Another AI Overnight](/assets/images/posts/comics/ai-tutors-ai-recursive-self-improvement/strip.png)
+![The AI That Tutored Another AI Overnight]({{ '/assets/images/posts/comics/ai-tutors-ai-recursive-self-improvement/strip.png' | relative_url }})
 
 > Source: [RT @kimmonismus: NVIDIA says Codex post-trained Cosmos 3 Nano from 54.41% to 93.35% accuracy in one day - with two prompts](https://x.com/hjguyhan/status/2077521669154132233) · twitter
 

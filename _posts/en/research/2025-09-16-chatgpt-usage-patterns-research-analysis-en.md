@@ -34,7 +34,7 @@ The research team employed a privacy-preserving automated pipeline to analyze re
 The study's methodology represents a significant advancement in AI research ethics, demonstrating how large-scale user behavior analysis can be conducted while maintaining strict privacy protections. By implementing automated classification systems that prevent human exposure to actual message content, the research establishes new standards for responsible AI research that could influence future studies in this rapidly evolving field.
 
 
-![Concept diagram](/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg)
+![Concept diagram]({{ '/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

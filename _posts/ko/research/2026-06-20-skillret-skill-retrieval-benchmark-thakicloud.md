@@ -19,7 +19,7 @@ categories:
 published: false
 ---
 
-![SkillRet 2단계 스킬 검색 파이프라인](/assets/images/skillret-hero.webp)
+![SkillRet 2단계 스킬 검색 파이프라인]({{ '/assets/images/skillret-hero.webp' | relative_url }})
 
 ## 스킬이 많아질수록 에이전트는 길을 잃는다
 

@@ -24,7 +24,7 @@ Teams that have actually run agents in production do not get excited over a sing
 
 Here is the core fact. GPT-5.6 Sol scored 7.78% on the ARC-AGI-3 semi-private set, setting a new SOTA, and became the first verified frontier model to actually finish an ARC-AGI-3 game from start to end. What stands out is ARC Prize's explanation for why. Sol did not succeed because it executed each action more precisely. It succeeded because it was better at orientation, the ability to figure out its own direction in a situation it had never seen before.
 
-![Abstract image depicting an agent orienting itself inside an unfamiliar grid world and converging on a single path](/assets/images/gpt-5-6-sol-arc-agi-3-hero.png)
+![Abstract image depicting an agent orienting itself inside an unfamiliar grid world and converging on a single path]({{ '/assets/images/gpt-5-6-sol-arc-agi-3-hero.png' | relative_url }})
 *It depicts the moment of orientation, where scattered chaos in an unfamiliar, instructionless environment converges into a single direction.*
 
 ## Overview

@@ -130,7 +130,7 @@ The conclusion is clear: **in environments without a stable Python 3.14, this pr
 
 Although the proxy itself was blocked at boot, the **mechanism** this tool uses to call the `ollama` provider is the OpenAI-compatible endpoint. I therefore measured this path by calling local Ollama directly. These are the backend's own routing performance numbers without the proxy overhead that fcc would add. The results of mapping Claude's three tiers to local models are as follows (Apple Silicon, identical prompt, 64-token cap):
 
-![Self-hosted routing measurement results](/assets/images/free-claude-code-router-results.webp)
+![Self-hosted routing measurement results]({{ '/assets/images/free-claude-code-router-results.webp' | relative_url }})
 *Figure 2. Latency and throughput when routing Claude tiers to local Ollama models. qwen3:8b placed on the opus path is a thinking model that outputs extended reasoning tokens, significantly increasing the time.*
 
 | Routing | Model | Latency | Completion Tokens | Throughput |

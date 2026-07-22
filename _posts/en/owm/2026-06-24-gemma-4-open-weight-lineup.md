@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 10 min
 
-![Gemma 4 lineup concept](/assets/images/gemma-4-open-weight-lineup-hero.webp)
+![Gemma 4 lineup concept]({{ '/assets/images/gemma-4-open-weight-lineup-hero.webp' | relative_url }})
 
 ## Gemma 4 Overview
 

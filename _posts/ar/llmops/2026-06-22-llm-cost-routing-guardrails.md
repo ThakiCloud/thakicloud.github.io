@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![ضمانات توجيه تكاليف LLM في الممارسة العملية](/assets/images/llm-cost-routing-guardrails-hero.webp)
+![ضمانات توجيه تكاليف LLM في الممارسة العملية]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})
 
 ## نظرة عامة: قصة بدأت بفاتورة بقيمة $705
 

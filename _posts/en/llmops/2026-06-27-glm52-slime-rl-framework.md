@@ -26,7 +26,7 @@ categories:
   - llmops
 ---
 
-![An abstract image depicting a generation cluster and a training cluster exchanging data asynchronously through a central buffer](/assets/images/glm52-slime-rl-framework-hero.webp)
+![An abstract image depicting a generation cluster and a training cluster exchanging data asynchronously through a central buffer]({{ '/assets/images/glm52-slime-rl-framework-hero.webp' | relative_url }})
 *An image evoking slime's asynchronous RL design, which decouples rollout from training to raise throughput.*
 
 ## Overview

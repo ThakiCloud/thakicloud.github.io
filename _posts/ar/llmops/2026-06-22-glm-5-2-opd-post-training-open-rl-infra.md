@@ -31,7 +31,7 @@ published: false
 
 > تناولنا نظرة عامة على إطار التدريب اللاحق slime نفسه في مقال منفصل، [التدريب اللاحق بوصفه بنية تحتية: إطار slime مفتوح المصدر وتوسيع التعلّم المعزّز](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/). يركّز هذا المقال على التدريب اللاحق OPD ودمج النماذج الخبيرة الذي يعمل فوقه.
 
-![تجريدي: التدريب اللاحق الموزّع بالتعلم المعزز ودمج النماذج](/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.webp)
+![تجريدي: التدريب اللاحق الموزّع بالتعلم المعزز ودمج النماذج]({{ '/assets/images/glm-5-2-opd-post-training-open-rl-infra-hero.webp' | relative_url }})
 
 ## ما نوع نموذج GLM-5.2
 

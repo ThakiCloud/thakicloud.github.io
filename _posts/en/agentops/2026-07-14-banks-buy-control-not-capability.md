@@ -67,7 +67,7 @@ If you understand sovereignty only as a question of location, keeping data withi
 
 If you tie today's news into a single line, it reads like this: regulated industries buy control before capability, proof before location, and sequence before deployment. Paxis, ThakiCloud's Agent-Native Cloud, is a shipping product designed precisely to treat these requirements as first class resources, and it formally launched as v1.1 last month.
 
-![The Paxis execution layer architecture, which treats autonomy as a dial rather than a switch](/assets/images/banks-buy-control-not-capability-diagram.svg)
+![The Paxis execution layer architecture, which treats autonomy as a dial rather than a switch]({{ '/assets/images/banks-buy-control-not-capability-diagram.svg' | relative_url }})
 
 *Tasks first pass through a policy gate, and the autonomy dial is turned up from L0 to L3 only as far as trust has accumulated. Execution happens inside an isolated sandbox, every step is recorded in an audit log, and all of this runs inside a sovereign, on premises Kubernetes boundary. CostRouter picks the optimal model for each task without being locked into any single vendor.*
 

@@ -34,7 +34,7 @@ categories:
 
 ---
 
-![개념 다이어그램](/assets/images/amodei-free-software-engineer-value-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/amodei-free-software-engineer-value-diagram.svg' | relative_url }})
 
 *코드 한계비용이 0에 수렴할 때 엔지니어 가치가 이동하는 방향*
 

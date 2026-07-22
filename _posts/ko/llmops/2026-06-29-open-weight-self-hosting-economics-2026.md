@@ -25,7 +25,7 @@ categories:
   - llmops
 ---
 
-![오픈웨이트 모델과 self-hosting 경제학을 표현한 추상 비주얼](/assets/images/open-weight-self-hosting-economics-2026-hero.webp)
+![오픈웨이트 모델과 self-hosting 경제학을 표현한 추상 비주얼]({{ '/assets/images/open-weight-self-hosting-economics-2026-hero.webp' | relative_url }})
 
 2026년 중반의 오픈웨이트 모델 지형을 한 문장으로 요약하면 이렇습니다. **격차는 좁혀졌고, 더 벌어지지 않고 있습니다.** OpenRouter가 6월에 정리한 라운드업은 오픈웨이트 모델이 프런티어 랩과 3~6개월 정도의 능력 격차를 유지하면서도 그 간격이 확대되지 않는다고 봅니다. 이 명제가 맞다면, 조직이 내려야 할 진짜 결정은 더 이상 "어떤 모델이 가장 똑똑한가"가 아닙니다. "이 워크로드를 어디서, 어떤 비용으로 돌릴 것인가"입니다.
 

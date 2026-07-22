@@ -28,7 +28,7 @@ categories:
   - tutorials
 ---
 
-![Unstructured data fragments transforming into structured rows](/assets/images/rowfill-unstructured-data-processing-platform-hero.webp)
+![Unstructured data fragments transforming into structured rows]({{ '/assets/images/rowfill-unstructured-data-processing-platform-hero.webp' | relative_url }})
 
 ⏱️ **Estimated Reading Time**: 12 minutes
 

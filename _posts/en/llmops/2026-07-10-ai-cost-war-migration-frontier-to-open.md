@@ -15,7 +15,7 @@ categories:
   - llmops
 ---
 
-![Abstract illustration depicting a migration flow from frontier APIs to open models](/assets/images/ai-cost-war-migration-frontier-to-open-hero.png)
+![Abstract illustration depicting a migration flow from frontier APIs to open models]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-hero.png' | relative_url }})
 
 Over the past few weeks, the conversation in the AI industry has shifted from "who is smarter" to "who is cheaper." The most telling scene came from Microsoft. The very company that put OpenAI on the trajectory it now rides has started routing the tens of thousands of weekly AI requests inside Excel and Outlook to its own models instead of OpenAI's and Anthropic's. Microsoft's AI chief Mustafa Suleyman did not hide the reasoning. "Anthropic is extremely expensive. Our goal is to reduce that cost and eventually eliminate it," he said.
 

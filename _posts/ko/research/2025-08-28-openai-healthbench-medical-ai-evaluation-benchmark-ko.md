@@ -30,7 +30,7 @@ published: false
 인공지능과 의료 분야의 융합은 현대 기술에서 가장 유망하면서도 도전적인 영역 중 하나입니다. 대규모 언어 모델(LLM)이 의료 분야에서 점점 더 많이 활용되면서, 견고한 평가 프레임워크의 필요성이 그 어느 때보다 중요해지고 있습니다. OpenAI의 HealthBench는 혁신적인 LLMOps 방법론을 통해 의료 AI 평가의 새로운 표준을 확립하는 획기적인 솔루션으로 등장했습니다.
 
 
-![개념 다이어그램](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

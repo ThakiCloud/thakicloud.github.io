@@ -32,7 +32,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق
 
-![نظرة عامة على خط معالجة Analyze-then-Parse في ByteDance Dolphin](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+![نظرة عامة على خط معالجة Analyze-then-Parse في ByteDance Dolphin]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png' | relative_url }})
 
 ## مقدمة
 

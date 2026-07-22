@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-price-scissors-infra-vs-inference/"
 ---
 
-![위로 치솟는 랙 값과 아래로 무너지는 추론 값 사이에 낀 기업을 나타낸 AI 가위 개념도](/assets/images/ai-price-scissors-infra-vs-inference-hero.webp)
+![위로 치솟는 랙 값과 아래로 무너지는 추론 값 사이에 낀 기업을 나타낸 AI 가위 개념도]({{ '/assets/images/ai-price-scissors-infra-vs-inference-hero.webp' | relative_url }})
 
 ## 같은 날, 두 숫자가 서로를 등지고 걸어갔습니다
 

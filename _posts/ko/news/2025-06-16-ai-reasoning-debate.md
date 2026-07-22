@@ -20,39 +20,39 @@ categories:
 
 아래 이미지는 토론 과정에서 공유된 주요 슬라이드 및 시각 자료로, 각 인사이트를 한눈에 확인할 수 있습니다.  
 
-<iframe src="/assets/pdf/ai_reasoning_debate_apple_lawsen_20250615224622.pdf#toolbar=0" width="100%" height="800px" title="AI Reasoning Debate PDF"></iframe>
+<iframe src="{{ '/assets/pdf/ai_reasoning_debate_apple_lawsen_20250615224622.pdf#toolbar=0' | relative_url }}" width="100%" height="800px" title="AI Reasoning Debate PDF"></iframe>
 
 ## 이미지 자료
 
-![AI Reasoning Debate 01](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_001.jpg)
+![AI Reasoning Debate 01]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_001.jpg' | relative_url }})
 
-![AI Reasoning Debate 02](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_002.jpg)
+![AI Reasoning Debate 02]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_002.jpg' | relative_url }})
 
-![AI Reasoning Debate 03](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_003.webp)
+![AI Reasoning Debate 03]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_003.webp' | relative_url }})
 
-![AI Reasoning Debate 04](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_004.webp)
+![AI Reasoning Debate 04]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_004.webp' | relative_url }})
 
-![AI Reasoning Debate 05](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_005.webp)
+![AI Reasoning Debate 05]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_005.webp' | relative_url }})
 
-![AI Reasoning Debate 06](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_006.webp)
+![AI Reasoning Debate 06]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_006.webp' | relative_url }})
 
-![AI Reasoning Debate 07](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_007.webp)
+![AI Reasoning Debate 07]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_007.webp' | relative_url }})
 
-![AI Reasoning Debate 08](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_008.webp)
+![AI Reasoning Debate 08]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_008.webp' | relative_url }})
 
-![AI Reasoning Debate 09](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_009.webp)
+![AI Reasoning Debate 09]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_009.webp' | relative_url }})
 
-![AI Reasoning Debate 10](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_010.webp)
+![AI Reasoning Debate 10]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_010.webp' | relative_url }})
 
-![AI Reasoning Debate 11](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_011.webp)
+![AI Reasoning Debate 11]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_011.webp' | relative_url }})
 
-![AI Reasoning Debate 12](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_012.webp)
+![AI Reasoning Debate 12]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_012.webp' | relative_url }})
 
-![AI Reasoning Debate 13](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_013.webp)
+![AI Reasoning Debate 13]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_013.webp' | relative_url }})
 
-![AI Reasoning Debate 14](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_014.webp)
+![AI Reasoning Debate 14]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_014.webp' | relative_url }})
 
-![AI Reasoning Debate 15](/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_015.webp)
+![AI Reasoning Debate 15]({{ '/assets/images/posts/research/ai_reasoning_debate/ai_reasoning_debate_apple_lawsen_20250615224622_015.webp' | relative_url }})
 
 ## 결론
 

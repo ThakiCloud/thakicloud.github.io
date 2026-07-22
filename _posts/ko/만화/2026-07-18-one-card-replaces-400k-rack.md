@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 칭화대의 한 연구실이 깃허브에 올린 프로젝트가 화제입니다. 4억 원 가까이 나가는 H100 랙이 하던 일을, 24기가 그래픽카드 한 장으로 대신했다는 내용입니다. 비결은 양자화입니다. 큰 모델을 더 낮은 정밀도로 눌러 담아, 작은 메모리에도 욱여넣는 기술이죠. 값비싼 랙을 빌려야만 큰 모델을 굴린다는 상식이, 서랍 속 카드 한 장에 흔들린 셈입니다. 파리 에펠탑 앞 카페에 앉은 파시스와 메티스가, 이 소식을 두고 티격태격합니다.
 
-![4억짜리 랙, 카드 한 장이 이겼다ㅋ](/assets/images/posts/만화/one-card-replaces-400k-rack/strip.png)
+![4억짜리 랙, 카드 한 장이 이겼다ㅋ]({{ '/assets/images/posts/만화/one-card-replaces-400k-rack/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @dunik_7: a Tsinghua University lab just put a project on GitHub that replaces a $400,000 H100 rack with a single 24GB graphics card](https://x.com/hjguyhan/status/2078236409031520582) · twitter
 

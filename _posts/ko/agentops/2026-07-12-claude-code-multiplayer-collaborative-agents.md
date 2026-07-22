@@ -18,7 +18,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-multiplayer-collaborative-agents/"
 ---
 
-![고립된 에이전트에서 연결된 협업 에이전트 네트워크로 향하는 개념도](/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp)
+![고립된 에이전트에서 연결된 협업 에이전트 네트워크로 향하는 개념도]({{ '/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp' | relative_url }})
 
 코딩 에이전트를 팀에서 쓰다 보면 이상한 벽에 부딪힙니다. 에이전트는 나 혼자만의 것입니다. 옆자리 동료가 같은 저장소를 만지고 있어도, 각자의 Claude는 서로의 존재를 모릅니다. 사람은 슬랙과 화면 공유로 협업하는데, 정작 우리를 대신해 코드를 만지는 에이전트들은 각자의 섬에 갇혀 있습니다. 최근 공개되어 화제가 된 **멀티플레이어 Claude Code**는 바로 이 벽을 겨냥합니다. 같은 터미널을 여러 사람이 함께 쓰고, 각자의 Claude를 서로 연결해 에이전트끼리 대화하게 만드는 실험입니다. 이 글은 이 시도를 계기로 협업 코딩 에이전트가 풀어야 할 설계 과제를 분해하고, 멀티에이전트와 정책을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 방향이 무엇을 시사하는지 검증합니다.
 

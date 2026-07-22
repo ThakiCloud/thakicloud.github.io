@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-![مخطط مفاهيمي لـ GLM-5.2](/assets/images/glm-5-2-hero.webp)
+![مخطط مفاهيمي لـ GLM-5.2]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
 ## ما الذي يميز GLM-5.2؟
 

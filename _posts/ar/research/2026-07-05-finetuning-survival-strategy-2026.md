@@ -28,7 +28,7 @@ header:
   overlay_filter: 0.5
 ---
 
-![صورة توضيحية لاستراتيجية بقاء الضبط الدقيق](/assets/images/finetuning-survival-strategy-2026-hero.webp)
+![صورة توضيحية لاستراتيجية بقاء الضبط الدقيق]({{ '/assets/images/finetuning-survival-strategy-2026-hero.webp' | relative_url }})
 
 ## مدخل: "ألا يكفي الآن أن نستغني عن الضبط الدقيق؟"
 

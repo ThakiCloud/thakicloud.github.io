@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![نظرة عامة على تشغيل مهندس الذكاء الاصطناعي المنفرد](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
+![نظرة عامة على تشغيل مهندس الذكاء الاصطناعي المنفرد]({{ '/assets/images/solo-ai-team-fullstack-ops-hero.webp' | relative_url }})
 
 ## نظرة عامة: كيف يتمكن شخص واحد من إدارة هذا الحجم؟
 

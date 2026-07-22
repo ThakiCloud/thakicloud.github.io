@@ -29,7 +29,7 @@ This paper matters right now because the cost bottleneck in training has shifted
 
 ThakiCloud also runs five post-training techniques (SFT, CPT, DPO, GRPO, GKD) on our kubeflow-based LLM training system. So the price GRPO's group sampling pays on long rollouts, and the new risks that arise from the alternative that removes that price, are not someone else's problem. This post lays out what SAO changed, and what that change means for organizations like ours trying to train agents on multi-tenant GPU clusters.
 
-![An abstract image contrasting a stream of rollouts arriving one at a time asynchronously against rollouts frozen in a queue waiting for a group to fill](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+![An abstract image contrasting a stream of rollouts arriving one at a time asynchronously against rollouts frozen in a queue waiting for a group to fill]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.png' | relative_url }})
 *A visualization contrasting single rollouts arriving continuously, one after another, against rollouts frozen in a queue while waiting for the rest of a group to arrive.*
 
 ## What Is This Technology

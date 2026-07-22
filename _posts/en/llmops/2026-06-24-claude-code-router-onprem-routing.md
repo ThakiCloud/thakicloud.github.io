@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![Concept diagram](/assets/images/claude-code-router-onprem-routing-hero.webp)
+![Concept diagram]({{ '/assets/images/claude-code-router-onprem-routing-hero.webp' | relative_url }})
 
 ```mermaid
 flowchart LR
@@ -47,7 +47,7 @@ The governing principle, stated up front: **every model routed through CCR is on
 ---
 
 
-![Concept diagram](/assets/images/claude-code-router-onprem-routing-diagram.svg)
+![Concept diagram]({{ '/assets/images/claude-code-router-onprem-routing-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

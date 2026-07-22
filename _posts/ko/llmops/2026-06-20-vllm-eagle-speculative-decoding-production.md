@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 9분
 
-![투기적 디코딩의 드래프트-검증 파이프라인을 형상화한 추상 이미지](/assets/images/vllm-eagle-speculative-decoding-production-hero.webp)
+![투기적 디코딩의 드래프트-검증 파이프라인을 형상화한 추상 이미지]({{ '/assets/images/vllm-eagle-speculative-decoding-production-hero.webp' | relative_url }})
 *드래프트 모델이 토큰을 미리 생성하고 타깃 모델이 병렬로 검증하는 투기적 디코딩 구조를 형상화한 이미지입니다.*
 
 투기적 디코딩(speculative decoding)은 드래프트 모델이 토큰을 빠르게 미리 생성하고 타깃 모델이 병렬로 검증하는 방식으로 레이턴시를 줄입니다. 이론은 2022년부터 있었지만 프로덕션 도입을 망설이게 만든 이유가 있었습니다. 드래프트 모델 관리 오버헤드, 배치 크기가 커지면 사라지는 이득, 그리고 프레임워크 지원 미흡이었습니다. 2026년 5월 EAGLE 3.1이 vLLM 메인 브랜치에 머지되면서 상황이 바뀌었습니다.
@@ -124,13 +124,13 @@ EAGLE 3.1의 vLLM 통합은 드래프트 모델 관리 부담을 크게 줄였�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![vllm-eagle-speculative-decoding-production 슬라이드 1](/assets/images/vllm-eagle-speculative-decoding-production-slide-01.webp)
+![vllm-eagle-speculative-decoding-production 슬라이드 1]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-01.webp' | relative_url }})
 
-![vllm-eagle-speculative-decoding-production 슬라이드 2](/assets/images/vllm-eagle-speculative-decoding-production-slide-02.webp)
+![vllm-eagle-speculative-decoding-production 슬라이드 2]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-02.webp' | relative_url }})
 
-![vllm-eagle-speculative-decoding-production 슬라이드 3](/assets/images/vllm-eagle-speculative-decoding-production-slide-03.webp)
+![vllm-eagle-speculative-decoding-production 슬라이드 3]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-03.webp' | relative_url }})
 
-![vllm-eagle-speculative-decoding-production 슬라이드 4](/assets/images/vllm-eagle-speculative-decoding-production-slide-04.webp)
+![vllm-eagle-speculative-decoding-production 슬라이드 4]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-04.webp' | relative_url }})
 
 ## 출처
 

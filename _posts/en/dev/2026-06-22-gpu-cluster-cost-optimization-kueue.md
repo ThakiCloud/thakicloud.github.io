@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
+![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp' | relative_url }})
 
 ## Overview
 

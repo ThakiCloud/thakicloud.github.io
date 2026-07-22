@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 8 min
 
-![MiniMax-M3 architecture diagram](/assets/images/minimax-m3-multimodal-moe-hero.webp)
+![MiniMax-M3 architecture diagram]({{ '/assets/images/minimax-m3-multimodal-moe-hero.webp' | relative_url }})
 
 ## What Is New
 

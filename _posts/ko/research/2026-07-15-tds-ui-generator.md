@@ -26,7 +26,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 프론트엔드·ML 엔지니어입니다. 결론부터 말하면, 화면 생성의 품질은 모델 크기가 아니라 **생성물을
 실제로 컴파일하고 검증하는 게이트**가 결정했습니다.
 
-![파인튜닝 0/40에서 제약 디코딩 39/40으로 뒤집힌 TDS UI 생성기 실험 결과 배너](/assets/images/posts/research/tds-ui-generator/hero.png)
+![파인튜닝 0/40에서 제약 디코딩 39/40으로 뒤집힌 TDS UI 생성기 실험 결과 배너]({{ '/assets/images/posts/research/tds-ui-generator/hero.png' | relative_url }})
 *학습으로 문법을 가르치는 대신, 규칙으로 유효한 출력만 나오게 강제했습니다.*
 
 ## 왜 코드를 직접 생성하지 않았나
@@ -123,7 +123,7 @@ teacher-forced 토큰 정확도도, LoRA를 붙였을 때의 토큰 정확도 �
 (95% 신뢰구간 86.8%에서 99.9%).
 
 
-![기본·파인튜닝·repair·제약 디코딩 네 방법의 게이트 통과율 막대그래프](/assets/images/posts/research/tds-ui-generator/fig1-reversal.png)
+![기본·파인튜닝·repair·제약 디코딩 네 방법의 게이트 통과율 막대그래프]({{ '/assets/images/posts/research/tds-ui-generator/fig1-reversal.png' | relative_url }})
 *네 갈래 비교: 학습 없이 제약만으로 게이트 통과율이 39/40까지 올랐습니다. 측정값(n=40).*
 
 이 세 갈래 비교가 이 프로젝트의 결론입니다. 아무 처치 없는 기본 모델도, 파인튜닝한 모델도 0/40이었고,
@@ -164,7 +164,7 @@ repair도, 자유 계획을 먼저 세우고 제약하는 방식도 마찬가지
 
 그래서 정답을 모르는 선택기를 만들어 그 천장의 얼마를 실제로 잡는지 쟀습니다.
 
-![Top-1·구조·심판·요구사항·Oracle 선택기의 컴포넌트 F1 비교 막대그래프](/assets/images/posts/research/tds-ui-generator/fig2-verifier.png)
+![Top-1·구조·심판·요구사항·Oracle 선택기의 컴포넌트 F1 비교 막대그래프]({{ '/assets/images/posts/research/tds-ui-generator/fig2-verifier.png' | relative_url }})
 *정답을 모르는 선택기 중 요구사항 predicate가 헤드룸의 27%를 회수했고, LLM 심판은 무선택보다 나빴습니다. 측정값(n=40).*
 
 구조가 풍부한 후보를

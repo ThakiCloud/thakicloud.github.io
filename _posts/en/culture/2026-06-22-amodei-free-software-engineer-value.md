@@ -36,7 +36,7 @@ The future of engineering teams hangs between those two statements.
 
 ---
 
-![Concept diagram](/assets/images/amodei-free-software-engineer-value-diagram.svg)
+![Concept diagram]({{ '/assets/images/amodei-free-software-engineer-value-diagram.svg' | relative_url }})
 
 *Where engineering value migrates as code's marginal cost approaches zero*
 

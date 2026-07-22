@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![Solo AI Engineer Full-Stack Operations Overview](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
+![Solo AI Engineer Full-Stack Operations Overview]({{ '/assets/images/solo-ai-team-fullstack-ops-hero.webp' | relative_url }})
 
 ## Overview: How Can One Person Handle This Scale?
 

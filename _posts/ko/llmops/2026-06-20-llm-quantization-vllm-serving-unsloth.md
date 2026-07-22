@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![vLLM이 서빙하는 양자화 포맷 지도](/assets/images/llm-quant-vllm-hero.webp)
+![vLLM이 서빙하는 양자화 포맷 지도]({{ '/assets/images/llm-quant-vllm-hero.webp' | relative_url }})
 
 ## 왜 또 양자화인가
 

@@ -23,7 +23,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Agents Last Exam agent evaluation overview](/assets/images/agents-last-exam-benchmark-hero.webp)
+![Agents Last Exam agent evaluation overview]({{ '/assets/images/agents-last-exam-benchmark-hero.webp' | relative_url }})
 
 ## Dataset Overview
 

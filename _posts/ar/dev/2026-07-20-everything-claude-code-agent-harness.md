@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![نواة هيكل رفيعة متصلة بوحدات مهارات متعددة](/assets/images/everything-claude-code-agent-harness-hero.png)
+![نواة هيكل رفيعة متصلة بوحدات مهارات متعددة]({{ '/assets/images/everything-claude-code-agent-harness-hero.png' | relative_url }})
 
 ## نظرة عامة
 

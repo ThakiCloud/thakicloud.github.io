@@ -81,7 +81,7 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 | IFBench | 62.3 | 62.8 | +0.5 |
 | MMMU PRO | 74.1 | 74.5 | +0.4 |
 
-![BF16 대비 NVFP4 정확도 비교 막대 그래프](/assets/images/nvidia-qwen36-nvfp4-results.webp)
+![BF16 대비 NVFP4 정확도 비교 막대 그래프]({{ '/assets/images/nvidia-qwen36-nvfp4-results.webp' | relative_url }})
 
 8개 벤치마크 중 손실이 가장 큰 것이 τ²-Bench Telecom의 0.8점이고, GPQA Diamond는 0.1점, AA-LCR은 동률입니다. IFBench와 MMMU PRO는 오히려 NVFP4가 BF16을 소폭 앞서는데, 이는 양자화가 성능을 올린다는 뜻이 아니라 미세한 분포 변화가 일부 태스크에서 우연히 유리하게 작용한 것으로 읽어야 합니다. 요컨대 가중치를 4분의 1로 줄였는데도 추론, 수학, 코딩, 도구 사용 능력이 사실상 보존됩니다. 평가 조건은 SciCode가 temperature 0.6, top_p 0.95, 최대 131072 토큰이며 나머지는 temperature 1.0에 동일한 top_p와 토큰 상한을 씁니다. 메모리 쪽에서는 패킹된 체크포인트가 약 18.7B 규모로 집계되어 35B BF16 대비 크게 줄어드는데, 정확한 파일 크기는 저장소 사이드바를 확인해야 하며 이를 베이스 모델의 아키텍처 파라미터와 혼동하지 말라고 모델카드가 경고합니다.
 

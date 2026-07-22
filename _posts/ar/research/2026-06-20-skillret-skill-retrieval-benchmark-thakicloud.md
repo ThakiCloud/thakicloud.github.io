@@ -22,7 +22,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 6 دقائق
 
-![خط أنابيب البحث عن المهارات ذو المرحلتين في SkillRet](/assets/images/skillret-hero.webp)
+![خط أنابيب البحث عن المهارات ذو المرحلتين في SkillRet]({{ '/assets/images/skillret-hero.webp' | relative_url }})
 
 ## كلما ازدادت المهارات، ضاع الوكيل في الطريق
 

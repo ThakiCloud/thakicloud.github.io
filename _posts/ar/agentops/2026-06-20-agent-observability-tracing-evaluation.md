@@ -56,7 +56,7 @@ graph TD
 ---
 
 
-![مخطط مفاهيمي](/assets/images/agent-observability-tracing-evaluation-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/agent-observability-tracing-evaluation-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

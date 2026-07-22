@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Map of quantization formats served by vLLM](/assets/images/llm-quant-vllm-hero.webp)
+![Map of quantization formats served by vLLM]({{ '/assets/images/llm-quant-vllm-hero.webp' | relative_url }})
 
 ## Why Quantization Again
 

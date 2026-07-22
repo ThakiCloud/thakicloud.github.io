@@ -21,7 +21,7 @@ categories:
   - culture
 ---
 
-![تصور تجريدي يجسد تلاشي حدود الوظائف وبروز نماذج أصيلة جديدة للأدوار](/assets/images/five-product-role-archetypes-hero.webp)
+![تصور تجريدي يجسد تلاشي حدود الوظائف وبروز نماذج أصيلة جديدة للأدوار]({{ '/assets/images/five-product-role-archetypes-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

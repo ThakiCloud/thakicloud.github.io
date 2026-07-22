@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 10 min
 
-![Security architecture where an MCP gateway centrally handles authentication, tool allowlisting, audit logging, and rate limiting before routing requests to the GitHub, Slack, and Database MCP servers](/assets/images/mcp-tool-integration-agent-security-diagram.webp)
+![Security architecture where an MCP gateway centrally handles authentication, tool allowlisting, audit logging, and rate limiting before routing requests to the GitHub, Slack, and Database MCP servers]({{ '/assets/images/mcp-tool-integration-agent-security-diagram.webp' | relative_url }})
 
 ## How MCP Became the Production Standard
 

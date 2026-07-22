@@ -24,7 +24,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لتقييم وكيل Agents Last Exam](/assets/images/agents-last-exam-benchmark-hero.webp)
+![مخطط مفاهيمي لتقييم وكيل Agents Last Exam]({{ '/assets/images/agents-last-exam-benchmark-hero.webp' | relative_url }})
 
 ## نظرة عامة على مجموعة البيانات
 

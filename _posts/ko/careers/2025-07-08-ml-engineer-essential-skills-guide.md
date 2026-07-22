@@ -45,7 +45,7 @@ GitHub에서 40.6k stars를 받은 [Made-With-ML](https://github.com/GokuMohanda
 
 Design, Develop, Deploy, Iterate. 네 단계를 순환하면서 실제 프로덕션 환경에서 ML 시스템을 만드는 방법을 제시합니다. 이 가이드도 그 흐름을 따릅니다.
 
-![Made-With-ML 라이프사이클: Design-Develop-Deploy-Iterate 순환과 교차 기반 역량](/assets/images/ml-engineer-essential-skills-guide-diagram.svg)
+![Made-With-ML 라이프사이클: Design-Develop-Deploy-Iterate 순환과 교차 기반 역량]({{ '/assets/images/ml-engineer-essential-skills-guide-diagram.svg' | relative_url }})
 
 위 다이어그램처럼 네 단계는 한 번 지나가고 끝나는 직선이 아니라 프로덕션 신호가 다시 설계로 돌아오는 순환 구조이며, 그 아래에는 프로그래밍·데이터 엔지니어링·MLOps·협업이라는 교차 기반 역량이 모든 단계를 떠받칩니다.
 

@@ -35,7 +35,7 @@ This question is the starting point of this post. It isn't only a conversation f
 
 ---
 
-![Concept diagram](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+![Concept diagram]({{ '/assets/images/hassabis-agi-realism-vs-hype-diagram.svg' | relative_url }})
 
 *Three realism checks that filter AGI hype*
 

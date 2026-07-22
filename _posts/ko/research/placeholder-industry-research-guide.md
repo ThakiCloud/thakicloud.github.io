@@ -74,11 +74,11 @@ _이 파일은 '산업 리서치 & 분석' 카테고리 게시물 작성 가이�
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![placeholder-industry-research-guide 슬라이드 1](/assets/images/placeholder-industry-research-guide-slide-01.webp)
+![placeholder-industry-research-guide 슬라이드 1]({{ '/assets/images/placeholder-industry-research-guide-slide-01.webp' | relative_url }})
 
-![placeholder-industry-research-guide 슬라이드 2](/assets/images/placeholder-industry-research-guide-slide-02.webp)
+![placeholder-industry-research-guide 슬라이드 2]({{ '/assets/images/placeholder-industry-research-guide-slide-02.webp' | relative_url }})
 
-![placeholder-industry-research-guide 슬라이드 3](/assets/images/placeholder-industry-research-guide-slide-03.webp)
+![placeholder-industry-research-guide 슬라이드 3]({{ '/assets/images/placeholder-industry-research-guide-slide-03.webp' | relative_url }})
 
-![placeholder-industry-research-guide 슬라이드 4](/assets/images/placeholder-industry-research-guide-slide-04.webp)
+![placeholder-industry-research-guide 슬라이드 4]({{ '/assets/images/placeholder-industry-research-guide-slide-04.webp' | relative_url }})
 

@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![مرئي تجريدي لشبكة تعاون تربط عقدة ذكاء اصطناعي مركزية بعقد متعددة للأشخاص في قناة مشتركة واحدة](/assets/images/anthropic-claude-tag-slack-hero.webp)
+![مرئي تجريدي لشبكة تعاون تربط عقدة ذكاء اصطناعي مركزية بعقد متعددة للأشخاص في قناة مشتركة واحدة]({{ '/assets/images/anthropic-claude-tag-slack-hero.webp' | relative_url }})
 
 صورة تجسّد هيكل متعدد اللاعبين حيث يعمل Claude واحد في كل قناة Slack مع جميع أعضاء الفريق.
 

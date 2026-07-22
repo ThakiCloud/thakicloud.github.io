@@ -24,7 +24,7 @@ categories:
 
 The Oakland Athletics, operating with a limited budget, revolutionized baseball by discovering and utilizing hidden metrics like on-base percentage instead of relying on intuition. The essence lies in redefining true performance through data and strategically combining undervalued resources to achieve maximum results relative to available resources.
 
-![Moneyball thinking: shifting from traditional metrics to value-linked metrics across engineering, product, and hiring](/assets/images/moneyball-data-driven-culture-diagram.svg)
+![Moneyball thinking: shifting from traditional metrics to value-linked metrics across engineering, product, and hiring]({{ '/assets/images/moneyball-data-driven-culture-diagram.svg' | relative_url }})
 
 ## Implications for Developers
 
