@@ -23,6 +23,8 @@ reading_time: true
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/nvidia-qwen36-nvfp4/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 이 글은 Blackwell이나 Hopper GPU로 대형 언어 모델을 자체 인프라에서 서빙하려는 팀을 위한 것입니다. 핵심 한 줄은, NVIDIA가 공개한 `nvidia/Qwen3.6-35B-A3B-NVFP4`가 35B 규모의 MoE 모델을 4비트로 눌러 GPU 메모리를 약 3.06배 줄이면서도 정확도 손실을 대부분 1점 미만으로 막아 준다는 것입니다.
@@ -100,6 +102,19 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 그럼에도 네 가지 유보가 필요합니다. 첫째, 하드웨어 종속이 강합니다. NVFP4 Tensor Core는 Blackwell과 Hopper에만 있어 A100이나 V100에서는 가속되지 않으므로, 기존 자산이 이전 세대라면 노드 교체 비용을 감수하거나 INT8, FP8 같은 다른 경로를 택해야 합니다. 둘째, 메모리 절감과 처리량 향상은 별개입니다. 모델카드는 3.06배 메모리 절감만 명시할 뿐 처리량은 제시하지 않으며, 실제 처리량은 배치 크기와 컨텍스트 길이, KV 캐시 설정에 따라 달라집니다. 이번 재현도 B200 재고를 확보하지 못해 Hopper에서 양자화만 검증했고, native FP4 서빙 처리량은 별도 벤치마크로 남겨 두었습니다. 셋째, 양자화는 베이스 모델의 한계를 그대로 물려받습니다. 편향이나 부정확한 답변을 양자화가 해결하지는 않으므로 출력 필터링과 모니터링은 여전히 별도로 필요합니다. 넷째, 정확도 손실이 0은 아닙니다. τ²-Bench Telecom의 0.8점처럼 도구 사용과 정책 준수가 핵심인 시나리오에서는 상대적으로 큰 손실이 관찰되므로, 금융이나 의료처럼 작은 차이가 비용으로 직결되는 도메인에서는 BF16, FP8, NVFP4 중 무엇을 쓸지 테넌트별로 따지는 정책이 필요합니다.
 
 정리하면, `nvidia/Qwen3.6-35B-A3B-NVFP4`는 Blackwell이나 Hopper 기반 인프라를 가진 팀에게 거의 손실 없이 메모리를 4분의 1로 줄이는 실용적 선택지입니다. 그 이점은 하드웨어 전제와 도메인별 정확도 검증 위에서만 성립하며, ThakiCloud는 자체 서빙 벤치마크로 처리량과 테넌트별 적합성을 확인한 뒤 노드 풀 정책에 반영할 계획입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![nvidia-qwen36-nvfp4 슬라이드 1](/assets/images/nvidia-qwen36-nvfp4-slide-01.png)
+
+![nvidia-qwen36-nvfp4 슬라이드 2](/assets/images/nvidia-qwen36-nvfp4-slide-02.png)
+
+![nvidia-qwen36-nvfp4 슬라이드 3](/assets/images/nvidia-qwen36-nvfp4-slide-03.png)
+
+![nvidia-qwen36-nvfp4 슬라이드 4](/assets/images/nvidia-qwen36-nvfp4-slide-04.png)
 
 ## 출처 (Sources)
 

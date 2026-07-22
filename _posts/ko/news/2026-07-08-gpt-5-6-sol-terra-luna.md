@@ -19,6 +19,8 @@ categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/gpt-5-6-sol-terra-luna/"
 published: false
+audiobook: /assets/audio/posts/gpt-5-6-sol-terra-luna/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![세 개의 궤도를 도는 추상 개념 일러스트]({{ '/assets/images/gpt-5-6-sol-terra-luna-hero.png' | relative_url }})

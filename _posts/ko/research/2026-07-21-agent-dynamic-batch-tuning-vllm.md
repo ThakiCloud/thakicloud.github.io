@@ -18,6 +18,9 @@ tags:
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/agent-dynamic-batch-tuning-vllm/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.github.io/ko/research/agent-dynamic-batch-tuning-vllm/"
 ---
 
 여러 테넌트가 H200 같은 공유 GPU 한 장 위에서 vLLM 추론 서버를 나눠 쓰는 환경을 운영하고 있다면 이 글이 바로 여러분을 위한 것입니다. 핵심 결론은 한 문장으로 요약됩니다. 테넌트들의 트래픽이 버스트성을 띨 때, 고정된 어드미션 예산을 수요가 있는 쪽으로 실시간 재분배하는 동적 컨트롤러는 예산을 반반으로 얼려 둔 정적 분배보다 총 처리량을 14% 더 냅니다. 이 수치는 실제 H200 한 장에서 측정한 값입니다.
@@ -72,3 +75,16 @@ ThakiCloud 입장에서 이 연구가 남기는 실무적 사실은 명확합니
 이 수치는 시뮬레이션이 아니라 실제 H200에서 vLLM을 띄워 측정한 값입니다.
 
 논문 상세 페이지는 다음에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-21-agent-dynamic-batch-tuning-vllm](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-21-agent-dynamic-batch-tuning-vllm)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-dynamic-batch-tuning-vllm 슬라이드 1](/assets/images/agent-dynamic-batch-tuning-vllm-slide-01.png)
+
+![agent-dynamic-batch-tuning-vllm 슬라이드 2](/assets/images/agent-dynamic-batch-tuning-vllm-slide-02.png)
+
+![agent-dynamic-batch-tuning-vllm 슬라이드 3](/assets/images/agent-dynamic-batch-tuning-vllm-slide-03.png)
+
+![agent-dynamic-batch-tuning-vllm 슬라이드 4](/assets/images/agent-dynamic-batch-tuning-vllm-slide-04.png)
+

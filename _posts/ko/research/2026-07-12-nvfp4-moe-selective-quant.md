@@ -8,6 +8,9 @@ tags: [NVFP4, MixtureOfExperts, OLMoE, 양자화, PTQ, 추론비용최적화, H2
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/nvfp4-moe-selective-quant/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.github.io/ko/research/nvfp4-moe-selective-quant/"
 ---
 
 MoE(Mixture-of-Experts) 모델을 H200이나 Blackwell급 클러스터에서 서빙하면서 NVFP4 4비트 양자화 도입을 저울질하고 있다면, 이 글의 결론 한 줄이 바로 실무 지침이 됩니다. 모델의 모든 전문가를 똑같이 4비트로 누르는 대신 일부만 전정밀도로 지킬 수 있을 때, 지켜야 할 대상은 트래픽이 많은 "핫" 전문가입니다. 실제 디코더 MoE인 `allenai/OLMoE-1B-7B-0924`(전문가 1024개, top-8 라우팅)를 H200에서 측정한 결과, 핫 전문가를 지키는 정책은 같은 저장 공간을 쓰는 무작위 배분을 모든 저장 예산에서 파레토 지배했습니다. 가장 뜨거운 10퍼센트만 지켜도(균일 4비트 대비 약 24퍼센트 저장 프리미엄) 정확도 격차의 46.9퍼센트가 돌아왔습니다.
@@ -60,3 +63,16 @@ Kueue 같은 배치 스케줄러 입장에서 이 결과는 유리하지만 경�
 정리하면, 방법군은 옳았고 이전 버전의 구현이 틀렸던 것입니다. 방향을 뒤집고 지표를 고치자 결과가 양으로 돌아섰습니다. 이제 남은 일은 프록시가 아닌 실제 NVFP4, 정적 저장이 아닌 측정 대역폭, 그리고 더 큰 여러 MoE로 이 경계를 좁히는 것이며, 재현 가능한 프로토콜이 바로 그 도구입니다. 가리키는 방향은 분명합니다. 핫 전문가를 지키십시오.
 
 논문 상세 페이지: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-12-nvfp4-moe-selective-quant](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-12-nvfp4-moe-selective-quant)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![nvfp4-moe-selective-quant 슬라이드 1](/assets/images/nvfp4-moe-selective-quant-slide-01.png)
+
+![nvfp4-moe-selective-quant 슬라이드 2](/assets/images/nvfp4-moe-selective-quant-slide-02.png)
+
+![nvfp4-moe-selective-quant 슬라이드 3](/assets/images/nvfp4-moe-selective-quant-slide-03.png)
+
+![nvfp4-moe-selective-quant 슬라이드 4](/assets/images/nvfp4-moe-selective-quant-slide-04.png)
+
