@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       S3_BUCKET: thakicloud-portal-com
-      CF_DISTRIBUTION_ID: E1H34PDKGRZSSG
+      CF_DISTRIBUTION_ID: E1RQ006X2589V5   # thakicloud.com 서빙 배포(무효화 대상)
       AWS_REGION: ap-northeast-2
       DEST_PREFIX: tech-blog
     steps:

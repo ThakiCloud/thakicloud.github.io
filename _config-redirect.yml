@@ -1,0 +1,6 @@
+# github.io → thakicloud.com/tech-blog 리디렉션 빌드 전용 오버레이 (dormant, 수동 발동).
+# 사용: bundle exec jekyll build --config _config.yml,_config-redirect.yml
+# CloudFront Function(index.html 부착) 수정 확인 후에만 gh-pages-redirect 워크플로를 수동 실행한다.
+redirect_mode: true
+baseurl: ""
+url: "https://thakicloud.github.io"

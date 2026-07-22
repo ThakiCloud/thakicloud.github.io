@@ -1,4 +1,10 @@
 <meta charset="utf-8">
+{%- comment -%} 301-유사 리디렉션: redirect_mode 빌드(github.io)에서만 활성. thakicloud.com/tech-blog로 이관. {%- endcomment -%}
+{%- if site.redirect_mode -%}
+<link rel="canonical" href="https://thakicloud.com/tech-blog{{ page.url }}">
+<meta http-equiv="refresh" content="0; url=https://thakicloud.com/tech-blog{{ page.url }}">
+<script>location.replace('https://thakicloud.com/tech-blog'+location.pathname+location.search+location.hash);</script>
+{%- endif -%}
 
 {% include seo.html %}
 
