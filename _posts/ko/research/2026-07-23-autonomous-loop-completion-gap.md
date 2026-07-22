@@ -8,6 +8,9 @@ tags: [autonomous-agents, agentic-loops, verification, checkpoint-rollback, reli
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/autonomous-loop-completion-gap/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/autonomous-loop-completion-gap/"
 ---
 
 야간에 사람 없이 돌아가는 에이전트 파이프라인을 운영하거나 설계하는 엔지니어라면 이 글이 도움이 됩니다. 결론부터 말하면, 루프가 "완료했다"고 스스로 보고하는 작업 수와 실제로 끝까지 검증된 작업 수 사이의 간극을 줄이는 데는 검증 게이트, 체크포인트 롤백, 정체 감지 세 메커니즘 중 하나가 압도적으로 크게 기여하고, 나머지는 그 뒤를 받쳐주는 역할에 가깝습니다. 다만 압도적인 메커니즘을 혼자 켜두면 오히려 다른 방식으로 작업이 실패하는 함정이 있다는 점이 이 연구의 진짜 요점입니다.
@@ -62,3 +65,16 @@ ThakiCloud 입장에서 이 결과는 자사의 쿠버네티스·에이전트 �
 세 메커니즘은 ThakiCloud 자체 하네스(`verify_gate.py`, `hermes-checkpoint-rollback`, `loop-trigger-gate`)의 판단 로직을 그대로 옮긴 것이라, 결정론적 게이트가 아니라 확률적 게이트를 쓰거나 되돌리기가 아니라 분기 기반으로 롤백을 구현하는 다른 하네스에는 방법론은 그대로 옮겨가도 구체적인 수치는 재측정이 필요합니다. 마지막으로 이 연구는 완료 여부, 거짓 성공, 소진, 반복 횟수, 낭비된 반복만을 측정 대상으로 삼았고, 실제 소요 시간이나 토큰 비용, 이진 완료를 넘어선 작업 품질의 단계적 차이는 다루지 않았습니다.
 
 논문 상세 페이지는 [Hugging Face 데이터셋](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-23-autonomous-loop-completion-gap)에서 확인할 수 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![autonomous-loop-completion-gap 슬라이드 1](/assets/images/autonomous-loop-completion-gap-slide-01.png)
+
+![autonomous-loop-completion-gap 슬라이드 2](/assets/images/autonomous-loop-completion-gap-slide-02.png)
+
+![autonomous-loop-completion-gap 슬라이드 3](/assets/images/autonomous-loop-completion-gap-slide-03.png)
+
+![autonomous-loop-completion-gap 슬라이드 4](/assets/images/autonomous-loop-completion-gap-slide-04.png)
+

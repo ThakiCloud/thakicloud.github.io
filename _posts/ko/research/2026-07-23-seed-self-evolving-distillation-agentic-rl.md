@@ -19,6 +19,8 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/seed-self-evolving-distillation-agentic-rl/"
+audiobook: /assets/audio/posts/seed-self-evolving-distillation-agentic-rl/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 멀티턴 도구 사용과 환경 피드백으로 움직이는 LLM 에이전트를 강화학습으로 훈련하고 있다면, 이 글이 바로 여러분을 위한 것입니다. 핵심 결론을 먼저 적겠습니다. 에이전트 RL이 잘 안 되는 가장 흔한 이유는 모델이 약해서가 아니라 보상이 궤적 끝에 딱 한 번만 오기 때문이며, SEED는 에이전트가 자기 궤적을 스스로 분석해 만든 자연어 스킬을 다시 자기에게 되먹이는 방식으로 그 희소한 신호를 토큰 단위의 촘촘한 신호로 바꿉니다. 이 방법은 텍스트 기반과 비전 기반 에이전트 과제 모두에서 성능과 샘플 효율을 함께 끌어올렸습니다.
@@ -88,3 +90,16 @@ SEED의 자기진화 구조는 강력하지만, 정책 자신이 분석가를 �
 에이전트 강화학습의 병목이 모델 능력이 아니라 감독의 공백이라는 진단은, 모델을 더 키우기 전에 신호를 더 촘촘하게 만들라는 방향을 가리킵니다. SEED는 그 촘촘한 신호를 외부에서 사 오지 않고, 에이전트가 이미 만들어 낸 궤적 안에서 자연어 스킬의 형태로 캐내 자기 자신에게 되먹이는 길을 보여 줍니다. 여러분이 에이전트 RL 파이프라인을 운용한다면 오늘 가져갈 한 가지는 분명합니다. 결과 하나로만 보상을 주고 있다면, 그 궤적을 버리지 말고 사후 스킬을 뽑아 토큰 단위 감독으로 재활용할 여지가 있는지 먼저 점검해 보십시오. 그것이 더 큰 모델이나 더 강한 교사보다 먼저 시도할 값싼 레버일 수 있습니다.
 
 출처: [SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning (arXiv:2607.14777)](https://arxiv.org/abs/2607.14777)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![seed-self-evolving-distillation-agentic-rl 슬라이드 1](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-01.png)
+
+![seed-self-evolving-distillation-agentic-rl 슬라이드 2](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-02.png)
+
+![seed-self-evolving-distillation-agentic-rl 슬라이드 3](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-03.png)
+
+![seed-self-evolving-distillation-agentic-rl 슬라이드 4](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-04.png)
+

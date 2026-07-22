@@ -17,6 +17,8 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/generate-audit-runtime-accountability-gap/"
+audiobook: /assets/audio/posts/generate-audit-runtime-accountability-gap/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 우연이라기엔 대칭이 너무 정확합니다. 2026년 7월 22일, 성격이 정반대인 오픈웨이트 모델 두 개가 같은 날 세상에 나왔습니다. 하나는 코드를 씁니다. 다른 하나는 코드의 취약점을 찾습니다. 풀사이드는 셀프호스팅 코딩 에이전트용 모델 라구나 S 2.1을 공개했고, 시스코는 코드 취약점 탐지에 특화된 소형 오픈웨이트 모델 안타레스를 내놨습니다. 창과 방패가 같은 진열장에 나란히 걸린 셈입니다.
@@ -104,4 +106,16 @@ ThakiCloud의 Paxis는 바로 이 비어 있는 계층을 다룹니다. Paxis는
 - EBN, [이재용·최태원·이해진, 美서 젠슨 황 만난다…AI 공급망 동맹 재가동](https://www.ebn.co.kr/news/articleView.html?idxno=1717215)
 - 디지털투데이, [시스코, 코드 취약점 탐지 특화 오픈웨이트 소형 모델 '안타레스' 공개](https://www.digitaltoday.co.kr/news/articleView.html?idxno=685800)
 - 뉴스저널리즘, [AI가 바꾼 보안 공식…에스원 '현장 데이터'로 승부](https://www.ngetnews.com/news/articleView.html?idxno=551683)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![generate-audit-runtime-accountability-gap 슬라이드 1](/assets/images/generate-audit-runtime-accountability-gap-slide-01.png)
+
+![generate-audit-runtime-accountability-gap 슬라이드 2](/assets/images/generate-audit-runtime-accountability-gap-slide-02.png)
+
+![generate-audit-runtime-accountability-gap 슬라이드 3](/assets/images/generate-audit-runtime-accountability-gap-slide-03.png)
+
+![generate-audit-runtime-accountability-gap 슬라이드 4](/assets/images/generate-audit-runtime-accountability-gap-slide-04.png)
 
