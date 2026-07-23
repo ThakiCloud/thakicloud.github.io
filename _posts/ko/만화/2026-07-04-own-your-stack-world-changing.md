@@ -1,5 +1,5 @@
 ---
-title: "세상 바꾸는 회사 만드는 법ㅋ"
+title: "세상 바꾸는 회사 만드는 법"
 excerpt: "로켓 CEO의 창업 특강, 마지막 원칙이 곧 온프렘이었다."
 date: 2026-07-04
 categories:
@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 한 로켓 CEO가 Y Combinator에서 45분 동안 '세상 바꾸는 회사 만드는 법'을 풀었습니다. 골자는 늘 비슷합니다. 근본부터 다시 계산하는 제1원리로 따지고, 필요 없는 부품은 지우고, 핵심은 남한테 빌리지 말고 직접 소유하라는 것이죠. 파시스와 메티스가 바다 밑에서 그 조언을 받아적다가 마지막 원칙에서 멈칫합니다. '스택을 직접 소유하라'는 말이, 결국 남의 클라우드에서 벗어나라는 뜻이었거든요.
 
-![세상 바꾸는 회사 만드는 법ㅋ]({{ '/assets/images/posts/만화/own-your-stack-world-changing/strip.webp' | relative_url }})
+![세상 바꾸는 회사 만드는 법]({{ '/assets/images/posts/만화/own-your-stack-world-changing/strip.webp' | relative_url }})
 
 > 원 뉴스: [RT @WaldronLewis: Elon Musk literally sat down for a 45-minute talk with Y Combinator that explains how to build world-c](https://x.com/hjguyhan/status/2073024331979051353) · twitter
 

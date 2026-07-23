@@ -475,8 +475,18 @@ html[data-theme="dark"] {
 
 .masthead__inner-wrap { max-width: 1300px; }   /* nav shell matches content */
 
-/* content reading column ~1000 (MM reserves the left author sidebar) */
-.page__content { max-width: 1000px; }
+/* right-rail TOC was moved inline → drop MM's 300px right reservation so the
+   article isn't squished (was 1300 - 300 sidebar - 300 TOC = ~700). Keep the
+   left author-sidebar width reservation (calc(100% - 300)). */
+.page { padding-right: 0; }
+
+/* center the post title (body text stays left-aligned for reading) */
+.page__title { text-align: center; }
+.page__title + .page__meta { text-align: center; }
+
+/* content reading column ~1000, centered (fills the column with a sidebar,
+   centers on sidebarless pages so it never sits left with a big right gap) */
+.page__content { max-width: 1000px; margin-left: auto; margin-right: auto; }
 
 /* wide elements fit the column; very wide tables scroll instead of overflowing */
 .page__content > table { display: block; overflow-x: auto; max-width: 100%; }

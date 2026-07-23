@@ -39,8 +39,10 @@ layout: default
 
       <section class="page__content e-content" itemprop="text">
         {% if page.toc %}
+          {% assign _toc_label = page.toc_label %}
+          {% unless _toc_label %}{% if page.lang == 'en' %}{% assign _toc_label = 'On this page' %}{% elsif page.lang == 'ar' %}{% assign _toc_label = 'المحتويات' %}{% else %}{% assign _toc_label = '목차' %}{% endif %}{% endunless %}
           <details class="toc-inline" open>
-            <summary><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</summary>
+            <summary><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ _toc_label }}</summary>
             <nav class="toc">
               {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>

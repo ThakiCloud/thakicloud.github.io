@@ -1,6 +1,6 @@
 ---
-title: "스킬 깔아주는 스킬이 또 스킬을 깔았다ㅋ"
-excerpt: "프로젝트만 던졌더니 알아서 다 깔아줌 — 근데 취향은 남의 취향이었다ㅋ"
+title: "스킬 깔아주는 스킬이 또 스킬을 깔았다"
+excerpt: "프로젝트만 던졌더니 알아서 다 깔아줌 — 근데 취향은 남의 취향이었다"
 date: 2026-07-13
 categories:
   - 만화
@@ -22,7 +22,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 손이 안 가서 편한 건 맞습니다. 다만 '큐레이션'은 누군가의 취향이라, 무엇을 깔지 정한 주체가 내가 아니라는 점이 슬쩍 걸립니다. 파시스와 메티스가 이걸 신나게 깔다가 어디까지 가는지 지켜봤습니다.
 
-![스킬 깔아주는 스킬이 또 스킬을 깔았다ㅋ]({{ '/assets/images/posts/만화/auto-install-curated-agent-skills/strip.png' | relative_url }})
+![스킬 깔아주는 스킬이 또 스킬을 깔았다]({{ '/assets/images/posts/만화/auto-install-curated-agent-skills/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @tom_doerr: Scans your project to detect your tech stack and automatically installs curated AI agent skills.](https://x.com/hjguyhan/status/2076427252771020925) · twitter
 
