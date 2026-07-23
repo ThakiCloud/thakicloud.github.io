@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/retool-reinforcement-learning-strategic-tool-use-llms/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/retool-reinforcement-learning-strategic-tool-use-llms/"
 reading_time: true
 published: false
 categories:

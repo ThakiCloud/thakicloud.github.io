@@ -16,7 +16,7 @@ tags:
   - paxis
 date: 2026-07-17
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/on-device-tiny-llm-finetune-agents/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/on-device-tiny-llm-finetune-agents/"
 categories:
   - llmops
 ---

@@ -10,12 +10,12 @@ tags:
   - paxis
 date: 2026-07-10
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/ai-cost-war-migration-frontier-to-open/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/ai-cost-war-migration-frontier-to-open/"
 categories:
   - llmops
 ---
 
-![رسم تخيلي مجرد يعبر عن الانتقال من واجهات النماذج المتقدمة إلى النماذج المفتوحة](/assets/images/ai-cost-war-migration-frontier-to-open-hero.png)
+![رسم تخيلي مجرد يعبر عن الانتقال من واجهات النماذج المتقدمة إلى النماذج المفتوحة]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-hero.png' | relative_url }})
 
 في الأسابيع الأخيرة، تحول حديث صناعة الذكاء الاصطناعي من سؤال "من الأذكى" إلى سؤال "من الأرخص". وجاء المشهد الأكثر دلالة من مايكروسوفت. فالشركة ذاتها التي وضعت OpenAI على المسار الذي تسير عليه اليوم، بدأت بتوجيه عشرات آلاف الطلبات الأسبوعية للذكاء الاصطناعي داخل Excel وOutlook إلى نماذجها الخاصة بدلاً من نماذج OpenAI وAnthropic. ولم يُخفِ مصطفى سليمان، مسؤول الذكاء الاصطناعي في مايكروسوفت، هذا التوجه، إذ قال: "Anthropic باهظة الثمن للغاية. هدفنا هو خفض هذه التكلفة والقضاء عليها في نهاية المطاف."
 

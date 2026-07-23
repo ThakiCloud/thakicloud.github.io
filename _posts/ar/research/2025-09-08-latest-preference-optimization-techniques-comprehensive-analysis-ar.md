@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 permalink: /ar/research/latest-preference-optimization-techniques-comprehensive-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/latest-preference-optimization-techniques-comprehensive-analysis-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/latest-preference-optimization-techniques-comprehensive-analysis-ar/"
 categories:
   - research
 published: false
@@ -38,7 +38,7 @@ $$J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y)]$$
 تنشأ التحديات المعاصرة في تحسين التفضيلات من عدة قضايا جوهرية: اختراق المكافآت، حيث تستغل النماذج الثغرات في دوال المكافآت؛ عدم استقرار التدريب الناجم عن تقديرات التدرج الضعيفة؛ عدم الكفاءة الحاسوبية في عمليات أخذ العينات والمقارنة؛ وصعوبة التوسع للمهام المعقدة متعددة الوسائط. هذه التحديات حفزت تطوير خمسة مناهج مبتكرة تمثل الحالة الراهنة للفن في هذا المجال.
 
 
-![مخطط مفاهيمي](/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/latest-preference-optimization-techniques-comprehensive-analysis-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

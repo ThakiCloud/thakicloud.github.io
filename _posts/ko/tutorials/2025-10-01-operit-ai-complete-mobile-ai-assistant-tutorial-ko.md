@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/"
 lang: ko
 permalink: /ko/tutorials/operit-ai-complete-mobile-ai-assistant-tutorial/
 published: false

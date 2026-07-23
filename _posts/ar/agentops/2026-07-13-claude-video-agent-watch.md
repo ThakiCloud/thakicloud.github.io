@@ -6,7 +6,7 @@ seo_description: "تحليل لـ claude-video (bradautomates): مسار yt-dlp 
 date: 2026-07-13
 last_modified_at: 2026-07-13
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/claude-video-agent-watch/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-video-agent-watch/"
 tags:
   - agentops
   - claude-code
@@ -32,7 +32,7 @@ categories:
 
 جمهور هذا المقال واضح. المطورون ومهندسو المنصات الذين يستخدمون وكلاء البرمجة مثل Claude Code وCursor وCopilot وGemini CLI في العمل الفعلي ويتساءلون كيف يدخلون المواد المرئية إلى خطوط أنابيبهم. وكل من يتساءل عن معنى هذه التقنية لتصميم منصات الوكلاء بما يتجاوز مجرد الراحة. الجواب المختصر: يعدّ claude-video مثالا جيدا على كيفية إضافة حاسة جديدة (البصر) إلى الوكيل عبر "إطار مُشغّل رقيق مع تركيبة من أدوات مُثبتة"، وهو ينسجم تماما مع الاتجاه الذي تنتهجه ThakiCloud في Paxis.
 
-![صورة تجريدية تصوّر وكيلا يكتسب البصر بينما تتدفق إطارات الفيديو وموجات الصوت نحو عدسة واحدة](/assets/images/claude-video-agent-watch-hero.png)
+![صورة تجريدية تصوّر وكيلا يكتسب البصر بينما تتدفق إطارات الفيديو وموجات الصوت نحو عدسة واحدة]({{ '/assets/images/claude-video-agent-watch-hero.png' | relative_url }})
 
 ## ما هذه الأداة
 

@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/
-canonical_url: "https://thakicloud.github.io/en/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/s3fs-fuse-complete-tutorial-for-cloud-companies/"
 published: false
 categories:
   - tutorials

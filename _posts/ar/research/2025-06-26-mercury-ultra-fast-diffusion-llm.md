@@ -12,7 +12,7 @@ author_profile: true
 toc: true
 toc_label: "تحليل بحث Mercury"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/mercury-ultra-fast-diffusion-llm/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/mercury-ultra-fast-diffusion-llm/"
 published: false
 categories:
   - research

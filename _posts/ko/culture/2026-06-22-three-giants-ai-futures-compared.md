@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/three-giants-ai-futures-compared/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/three-giants-ai-futures-compared/"
 categories:
   - culture
 ---
@@ -28,7 +28,7 @@ categories:
 
 ---
 
-![개념 다이어그램](/assets/images/three-giants-ai-futures-compared-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/three-giants-ai-futures-compared-diagram.svg' | relative_url }})
 
 *세 거인의 미래관 비교*
 

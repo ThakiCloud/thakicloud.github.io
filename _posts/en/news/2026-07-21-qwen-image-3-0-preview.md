@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/en/news/qwen-image-3-0-preview/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/qwen-image-3-0-preview/"
 lang: en
 ---
 

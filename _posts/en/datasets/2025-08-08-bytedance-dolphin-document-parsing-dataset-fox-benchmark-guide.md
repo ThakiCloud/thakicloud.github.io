@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
 reading_time: true
 lang: en
 published: true
@@ -32,7 +32,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 18 min
 
-![ByteDance Dolphin Analyze-then-Parse pipeline overview](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+![ByteDance Dolphin Analyze-then-Parse pipeline overview]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png' | relative_url }})
 
 ## Introduction
 

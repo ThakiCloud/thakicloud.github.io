@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "TRL Complete Guide"
-canonical_url: "https://thakicloud.github.io/en/llmops/trl-comprehensive-llm-post-training-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/trl-comprehensive-llm-post-training-framework/"
 published: false
 categories:
   - llmops

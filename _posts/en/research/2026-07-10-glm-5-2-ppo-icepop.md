@@ -16,7 +16,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/research/glm-5-2-ppo-icepop/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/glm-5-2-ppo-icepop/"
 lang: en
 ---
 
@@ -24,7 +24,7 @@ Any team that has actually run reinforcement learning (RL) post-training on larg
 
 Zhipu's GLM-5.2, however, runs directly against this trend. The model abandons the group-relative approach and goes back to PPO with a trained value model, while addressing RL's chronic instability problem, the train-inference distribution mismatch, with a technique called IcePop. What makes this interesting is that the choice is not a simple regression. It amounts to an empirical rebuttal of the recent conventional wisdom that "GRPO is universally superior."
 
-![An abstract image depicting the reinforcement learning path returning from GRPO to PPO](/assets/images/glm-5-2-ppo-icepop-hero.png)
+![An abstract image depicting the reinforcement learning path returning from GRPO to PPO]({{ '/assets/images/glm-5-2-ppo-icepop-hero.png' | relative_url }})
 *Depicting the directional shift in RL post-training: dropping the critic, then bringing it back.*
 
 ## Overview

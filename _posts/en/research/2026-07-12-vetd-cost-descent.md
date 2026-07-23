@@ -6,7 +6,7 @@ seo_description: "An operating method for defining company work as skills, judgi
 lang: en
 date: 2026-07-12
 last_modified_at: 2026-07-12
-canonical_url: "https://thakicloud.github.io/en/research/vetd-cost-descent/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/vetd-cost-descent/"
 reading_time: true
 tags:
   - LLM-cost-optimization

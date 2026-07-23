@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/llmops/skypilot-comprehensive-ai-workload-management-platform-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/skypilot-comprehensive-ai-workload-management-platform-en/"
 lang: en
 permalink: /en/llmops/skypilot-comprehensive-ai-workload-management-platform/
 published: false

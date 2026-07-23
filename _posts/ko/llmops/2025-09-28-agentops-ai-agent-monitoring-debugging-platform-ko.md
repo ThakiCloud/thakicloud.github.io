@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agentops-ai-agent-monitoring-debugging-platform/
-canonical_url: "https://thakicloud.github.io/ko/llmops/agentops-ai-agent-monitoring-debugging-platform-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agentops-ai-agent-monitoring-debugging-platform-ko/"
 categories:
   - llmops
 audiobook: https://drive.google.com/file/d/1EF2P2I3FCIHPZpEVgLHBvxvo9rHPh3C3/view
@@ -395,11 +395,11 @@ AI 에이전트를 막 시작하든 복잡한 프로덕션 배포를 관리하�
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 1](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-01.webp)
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 1]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-01.webp' | relative_url }})
 
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 2](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-02.webp)
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 2]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-02.webp' | relative_url }})
 
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 3](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-03.webp)
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 3]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-03.webp' | relative_url }})
 
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 4](/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-04.webp)
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 4]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-04.webp' | relative_url }})
 

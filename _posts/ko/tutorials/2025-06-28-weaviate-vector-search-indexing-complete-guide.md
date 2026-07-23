@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Weaviate 벡터 검색 가이드"
-canonical_url: "https://thakicloud.github.io/tutorials/weaviate-vector-search-indexing-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/weaviate-vector-search-indexing-complete-guide/"
 published: false
 categories:
   - tutorials

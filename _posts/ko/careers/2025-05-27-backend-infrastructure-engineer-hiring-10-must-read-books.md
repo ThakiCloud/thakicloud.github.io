@@ -10,7 +10,7 @@ tags:
   - Recruitment
   - Thaki Cloud
 author_profile: true
-canonical_url: "https://thakicloud.github.io/ko/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
 categories:
   - careers
 ---
@@ -22,7 +22,7 @@ categories:
 ---
 
 <!-- evolve-diagram -->
-![채용 역량 영역별 필독서 개념 다이어그램](/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg)
+![채용 역량 영역별 필독서 개념 다이어그램]({{ '/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg' | relative_url }})
 
 *개념 다이어그램: 백엔드·인프라 엔지니어의 네 역량 영역(코드 품질, 분산 시스템과 API, 인프라와 쿠버네티스, GPU 병렬 처리)과 열 권의 필독서 매핑*
 

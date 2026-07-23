@@ -18,7 +18,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/skillweaver-compositional-skill-routing/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/skillweaver-compositional-skill-routing/"
 reading_time: true
 categories:
   - research
@@ -41,7 +41,7 @@ published: false
 
 يُنفّذ إطار SkillWeaver هذه المراحل الثلاث على التوالي بوصفها مُفكّكًا للمهام يعتمد على نموذج لغوي كبير، ومُسترجِعًا للمهارات من نوع bi-encoder قائمًا على فهرسة FAISS، ومُخطّطًا من نوع DAG واعيًا بالتبعيات. ولأغراض التقييم، يقترح المؤلفون أيضًا معيارًا مرجعيًا (benchmark) مكوّنًا من استعلامات مركّبة مبنية فوق مهارات خوادم MCP حقيقية جُمعت من منظومة MCP العامة.
 
-![مسار توجيه المهارات التركيبي في SkillWeaver](/assets/images/skillweaver-compositional-skill-routing-diagram.svg)
+![مسار توجيه المهارات التركيبي في SkillWeaver]({{ '/assets/images/skillweaver-compositional-skill-routing-diagram.svg' | relative_url }})
 
 ## الاكتشاف الجوهري: عنق الزجاجة ليس في المُسترجِع بل في "التفكيك"
 

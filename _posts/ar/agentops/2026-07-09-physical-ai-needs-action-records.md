@@ -17,7 +17,7 @@ tags:
 categories:
   - agentops
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/physical-ai-needs-action-records/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/physical-ai-needs-action-records/"
 ---
 
 ## حين يخرج الذكاء الاصطناعي من الشاشة، يتغير وزن الخطأ
@@ -70,7 +70,7 @@ canonical_url: "https://thakicloud.github.io/ar/agentops/physical-ai-needs-actio
 
 باختصار، تنقسم آلام الشركات التي كشفتها نشرة اليوم إلى أربعة محاور. التدقيق للاستجابة للتنظيم والرقابة الداخلية، والسيادة لمنع تسرب البيانات خارج الشركة، والتنفيذ الآمن الذي يتجنب التسبب في حوادث في العالم الفيزيائي، وبنية تكلفة لا تتزعزع حتى مع تقلب أسعار النماذج. برزت هذه المحاور الأربعة من أخبار مختلفة، لكنها تُطلب جميعا في آن واحد في ميدان التبني الفعلي، من طبقة تشغيل واحدة. من هنا يأتي سبب وضع Paxis لسجلات التدقيق وKubernetes السيادي وبوابات السياسة وCostRouter على المنصة نفسها. والآن، مع انعقاد ICML 2026، أكبر مؤتمر لتعلم الآلة في العالم، في سيول، وما يمنحه ذلك من زخم لمنظومة البحث المحلية، نرى أن آخر خطوة تحمل نتائج البحث فعليا إلى الميدان تُستكمل في نهاية المطاف بنضج هذا النوع من التشغيل.
 
-![رسم توضيحي للمفهوم](/assets/images/physical-ai-needs-action-records-diagram.svg)
+![رسم توضيحي للمفهوم]({{ '/assets/images/physical-ai-needs-action-records-diagram.svg' | relative_url }})
 
 *تتقارب أربعة آلام برزت من أخبار مختلفة، التدقيق والسيادة والتنفيذ الآمن واستقرار التكلفة، في ميدان التبني الفعلي ضمن طبقة تشغيل واحدة تحمل اسم Paxis.*
 

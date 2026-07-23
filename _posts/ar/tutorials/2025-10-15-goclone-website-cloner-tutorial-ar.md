@@ -6,7 +6,7 @@ seo_description: "دليل شامل لأداة Goclone لاستنساخ المو
 date: 2025-10-15
 lang: ar
 permalink: /ar/tutorials/goclone-website-cloner-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/goclone-website-cloner-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/goclone-website-cloner-tutorial/"
 tags:
   - goclone
   - استخراج-الويب

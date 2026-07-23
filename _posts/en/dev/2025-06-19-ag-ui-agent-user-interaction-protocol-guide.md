@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "AG-UI Protocol Guide"
 lang: en
-canonical_url: https://thakicloud.github.io/en/dev/ag-ui-agent-user-interaction-protocol-guide/
+canonical_url: https://thakicloud.com/tech-blog/en/dev/ag-ui-agent-user-interaction-protocol-guide/
 published: false
 categories:
   - dev

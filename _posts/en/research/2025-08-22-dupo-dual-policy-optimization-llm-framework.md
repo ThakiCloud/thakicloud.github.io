@@ -19,7 +19,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/dupo-dual-policy-optimization-llm-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
 categories:
   - research
@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 12 min
 
-![Abstract illustration of symmetric primal-dual flows reconstructing each other](/assets/images/dupo-dual-policy-optimization-llm-framework-hero.webp)
+![Abstract illustration of symmetric primal-dual flows reconstructing each other]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-hero.webp' | relative_url }})
 *An abstract depiction of DuPO's duality structure, where a primal task and a dual task reconstruct each other's outputs to form a self-supervised signal.*
 
 > **Source note**: The official DuPO paper (arXiv:2508.14460) is titled "Dual **Preference** Optimization." It frames the method as a primal task paired with a dual reconstruction task that yields a self-supervised verification signal, rather than two literal exploration/exploitation policies. The framing below is a simplification; consult the linked source for the precise mechanism.

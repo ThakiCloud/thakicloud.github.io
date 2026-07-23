@@ -19,7 +19,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/rag-llmops-production-implementation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/rag-llmops-production-implementation-guide/"
 reading_time: true
 lang: en
 published: false

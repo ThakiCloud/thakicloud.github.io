@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/owm/granite-docling-258m-document-conversion-workflow-automation/
-canonical_url: "https://thakicloud.github.io/en/owm/granite-docling-258m-document-conversion-workflow-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/granite-docling-258m-document-conversion-workflow-automation/"
 published: false
 categories:
   - owm

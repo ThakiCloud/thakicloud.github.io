@@ -4,7 +4,7 @@ excerpt: "AI coding tool Cursor achieved $300M ARR in just 21 months since launc
 date: 2025-06-12
 lang: en
 permalink: /en/news/cursor-ai-coding-revolution-future-insights/
-canonical_url: "https://thakicloud.github.io/en/news/cursor-ai-coding-revolution-future-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/cursor-ai-coding-revolution-future-insights/"
 tags: 
   - Cursor
   - AI Coding

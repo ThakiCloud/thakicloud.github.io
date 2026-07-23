@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/diagrams-kubernetes-agentic-rag-architecture-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/diagrams-kubernetes-agentic-rag-architecture-guide/"
 published: false
 categories:
   - tutorials

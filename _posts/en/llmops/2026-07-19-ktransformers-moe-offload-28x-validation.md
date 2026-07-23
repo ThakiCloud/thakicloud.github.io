@@ -17,7 +17,7 @@ toc_label: "Anatomy of the 28x"
 published: true
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/en/llmops/ktransformers-moe-offload-28x-validation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ktransformers-moe-offload-28x-validation/"
 ---
 
 This post is for engineers weighing whether to self-host an MoE model, and for infrastructure leads who have to decide how far to trust the current wave of tweets claiming "run a giant model on a single GPU." The short version: the ktransformers trick is real and it works. But the viral phrases "28x" and "a $400K rack on a single 24GB card" each rest on a hidden assumption. Here is what those assumptions are, based on measurements from two separate GPU rentals on RunPod.

@@ -19,7 +19,7 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/en/news/qwen3-8-2-4t-open-weight-preview/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/qwen3-8-2-4t-open-weight-preview/"
 ---
 
 On Sunday evening, a short teaser from Alibaba's Qwen team appeared in the timeline. It announced that Qwen3.8 would be released soon as open weight, accompanied by a parameter count of 2.4 trillion. Coming just days after Moonshot actually released the 2.8-trillion-parameter Kimi K3, this teaser reinforced the impression that "the race among massive open models is now playing out on a weekly basis."

@@ -17,13 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/iaas/gpu-cluster-cost-optimization-kueue/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/gpu-cluster-cost-optimization-kueue/"
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
-![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture](/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp)
+![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp' | relative_url }})
 
 ## Overview
 

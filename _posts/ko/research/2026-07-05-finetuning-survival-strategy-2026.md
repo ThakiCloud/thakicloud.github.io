@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ko/research/finetuning-survival-strategy-2026/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/finetuning-survival-strategy-2026/"
 categories:
   - research
   - llmops
@@ -27,7 +27,7 @@ header:
   overlay_filter: 0.5
 ---
 
-![파인튜닝 생존 전략 히어로 이미지](/assets/images/finetuning-survival-strategy-2026-hero.webp)
+![파인튜닝 생존 전략 히어로 이미지]({{ '/assets/images/finetuning-survival-strategy-2026-hero.webp' | relative_url }})
 
 ## 들어가며: "이제 파인튜닝 안 해도 되는 것 아닌가요"
 

@@ -17,7 +17,7 @@ tags:
 categories:
   - news
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/from-owning-to-governing-ai-stack/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/from-owning-to-governing-ai-stack/"
 ---
 
 ## Siri now runs on Google's GPUs
@@ -40,7 +40,7 @@ The two directions look contradictory but are really the front and back of one p
 
 The same signal shows up in infrastructure. Microsoft has partnered with 3M to bring next-generation optical interconnects into Azure data centers, because no matter how large a GPU cluster you stack, a bandwidth bottleneck keeps owned resources from performing. Even the physical-layer contest is shifting from "how much do you have" to "how well do you connect and handle it." Owning scale and governing it are now separate capabilities.
 
-![Three layers of an AI stack moving from owning to governing: a borrowed intelligence layer, a governance layer that is the new capability, and an owned physical layer](/assets/images/from-owning-to-governing-ai-stack-diagram-en.svg)
+![Three layers of an AI stack moving from owning to governing: a borrowed intelligence layer, a governance layer that is the new capability, and an owned physical layer]({{ '/assets/images/from-owning-to-governing-ai-stack-diagram-en.svg' | relative_url }})
 
 *The intelligence layer on top is borrowed. The governance layer in the middle, cost routing, policy gates, audit logs, is the new capability. The physical layer at the bottom, power, land, GPUs, is still owned outright.*
 

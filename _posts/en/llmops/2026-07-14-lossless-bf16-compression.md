@@ -12,12 +12,12 @@ tags:
   - paxis
 date: 2026-07-14
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/lossless-bf16-compression/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/lossless-bf16-compression/"
 categories:
   - llmops
 ---
 
-![Abstract illustration of densely packed glass cubes being losslessly compacted into a smaller cluster](/assets/images/lossless-bf16-compression-hero.png)
+![Abstract illustration of densely packed glass cubes being losslessly compacted into a smaller cluster]({{ '/assets/images/lossless-bf16-compression-hero.png' | relative_url }})
 
 ## Overview
 
@@ -80,7 +80,7 @@ The exponent field can express 256 values, but only 38 actually appeared, and th
 
 Removing that waste losslessly drops bits per weight from 16 to 10.64, keeping the 8 bits of sign and mantissa intact while compressing the exponent to its entropy bound. As a saving, that is 33.5 percent.
 
-![Chart of the Qwen2.5-0.5B measurement showing the BF16 exponent field uses only 2.64 bits in practice, and losslessly compressing it shrinks GLM-5.2 from 1403GB to about 980GB](/assets/images/lossless-bf16-compression-results.png)
+![Chart of the Qwen2.5-0.5B measurement showing the BF16 exponent field uses only 2.64 bits in practice, and losslessly compressing it shrinks GLM-5.2 from 1403GB to about 980GB]({{ '/assets/images/lossless-bf16-compression-results.png' | relative_url }})
 
 Projecting this 33.5 percent onto GLM-5.2 (753B) scale, 1403GB becomes about 933GB. The value the original author achieved with a real codec was 980GB, a 30.17 percent saving. The roughly 3 percentage point gap between our theoretical bound (33.5 percent) and the actual implementation (30.17 percent) is no accident. Real entropy coders do not fully reach the Shannon bound, rare exponent values must be stored in full form, and codes must be fixed-width to allow random access on the GPU, all of which add slight overhead. That theory and implementation landed this close is strong evidence that the original claim is true and the approach is sound.
 

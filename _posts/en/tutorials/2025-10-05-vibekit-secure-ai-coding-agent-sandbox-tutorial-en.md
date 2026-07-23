@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/vibekit-secure-ai-coding-agent-sandbox-tutorial-en/"
 categories:
   - tutorials
 published: false

@@ -6,7 +6,7 @@ seo_description: "A survey of first-half-2026 SLM agent and on-policy skill dist
 date: 2026-07-12
 last_modified_at: 2026-07-12
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/distill-skill-fleet-small-models/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/distill-skill-fleet-small-models/"
 tags:
   - agentops
   - distillation
@@ -31,7 +31,7 @@ So the direction becomes obvious. Take the skills a company has already validate
 
 The intended audience is clear: platform and MLOps engineers who run many agent skills and are weighing frontier API costs against automation in their design. If you're a different kind of reader, say someone who needs a management-level cost verdict, the last section alone gets you there.
 
-![Hybrid architecture diagram showing the four-stage pipeline from validated skill fleet to per-skill teacher to on-policy distillation to small local worker, alongside hybrid routing that keeps the conductor and downgrades only the worker, plus retro-driven escalation](/assets/images/distill-skill-fleet-small-models-diagram-en.svg)
+![Hybrid architecture diagram showing the four-stage pipeline from validated skill fleet to per-skill teacher to on-policy distillation to small local worker, alongside hybrid routing that keeps the conductor and downgrades only the worker, plus retro-driven escalation]({{ '/assets/images/distill-skill-fleet-small-models-diagram-en.svg' | relative_url }})
 
 ## Why Now: Small Models Have Become the Default for Agents
 

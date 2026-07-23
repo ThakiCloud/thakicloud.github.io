@@ -17,7 +17,7 @@ toc: true
 toc_label: "فهرس المحتويات"
 lang: ar
 permalink: /ar/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/firebase-genkit-comprehensive-ai-development-tutorial/"
 published: false
 categories:
   - tutorials

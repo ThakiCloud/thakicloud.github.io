@@ -4,7 +4,7 @@ excerpt: "Just as traditional clouds treat servers as first-class resources, Pax
 seo_title: "Paxis Agent-Native Cloud: Governance, CostRouter, and Evolving Skills - Thaki Cloud"
 seo_description: "ThakiCloud Paxis is an Agent-Native Cloud for running autonomous AI agents safely. It features L0-L3 autonomy governance, multi-LLM CostRouter cost optimization, a Git-based HKE knowledge engine, and an 849-skill harness. Explained with real code."
 lang: en
-canonical_url: https://thakicloud.github.io/en/agentops/praxis-agent-native-cloud/
+canonical_url: https://thakicloud.com/tech-blog/en/agentops/praxis-agent-native-cloud/
 date: 2026-06-20
 last_modified_at: 2026-06-20
 tags:
@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top](/assets/images/praxis-architecture-hero.webp)
+![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top]({{ '/assets/images/praxis-architecture-hero.webp' | relative_url }})
 
 ## The Next Question in Cloud: How Do You Operate Agents?
 
@@ -35,7 +35,7 @@ Over the past decade, cloud generations have been defined by what they manage. F
 
 Paxis targets that gap. Traditional cloud treated compute, databases, and networking as first-class resources. Paxis treats AI agent capabilities (Skills), tools (Tools), policies (Policies), and audit logs (Audit) as first-class resources. Customers hire, manage, and audit "a full team of AI employees" without writing code. We call this category Agent-Native Cloud.
 
-![Traditional cloud manages Compute, DB, and Network as first-class resources; Paxis manages Skills, Tools, Policies, and Audit Logs](/assets/images/praxis-cloud-analogy.webp)
+![Traditional cloud manages Compute, DB, and Network as first-class resources; Paxis manages Skills, Tools, Policies, and Audit Logs]({{ '/assets/images/praxis-cloud-analogy.webp' | relative_url }})
 
 This post is not a marketing tagline -- it walks through a working PoC with real code. Every number below was verified against an actual server (`localhost:8080`).
 

@@ -10,7 +10,7 @@ tags:
   - fine-tuning
   - llmops
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-nemo-reasoning-llm-weekend-training-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvidia-nemo-reasoning-llm-weekend-training-guide/"
 toc: true
 toc_label: "جدول المحتويات"
 seo_title: "دليل شامل لتدريب نموذج لغوي كبير للاستدلال باستخدام NVIDIA NeMo: التنفيذ في 48 ساعة - Thaki Cloud"

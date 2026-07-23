@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/finance-ai-governance-audit-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/finance-ai-governance-audit-automation/"
 reading_time: true
 categories:
   - agentops
 published: false
 ---
 
-![AI Governance and Audit Automation in Financial Services](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+![AI Governance and Audit Automation in Financial Services]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
 ## Overview
 

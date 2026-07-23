@@ -14,12 +14,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/three-year-window-labor-to-assets/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/three-year-window-labor-to-assets/"
 categories:
   - culture
 ---
 
-![소멸하는 인간의 시간이 휴머노이드와 데이터센터의 빛으로 흘러 들어가는 추상 이미지](/assets/images/three-year-window-labor-to-assets-hero.png)
+![소멸하는 인간의 시간이 휴머노이드와 데이터센터의 빛으로 흘러 들어가는 추상 이미지]({{ '/assets/images/three-year-window-labor-to-assets-hero.png' | relative_url }})
 
 ## 개요
 

@@ -4,7 +4,7 @@ excerpt: "نشر الرئيس التنفيذي لـ OpenAI سام ألتمان '
 date: 2025-06-11
 lang: ar
 permalink: /ar/news/sam-altman-gentle-singularity-ai-future/
-canonical_url: "https://thakicloud.github.io/ar/news/sam-altman-gentle-singularity-ai-future/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/sam-altman-gentle-singularity-ai-future/"
 tags: 
   - سام ألتمان
   - OpenAI

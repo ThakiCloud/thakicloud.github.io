@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 FP4 Guide"
-canonical_url: "https://thakicloud.github.io/en/owm/nvidia-deepseek-r1-fp4-quantized-model-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/nvidia-deepseek-r1-fp4-quantized-model-guide/"
 lang: en
 published: false
 categories:

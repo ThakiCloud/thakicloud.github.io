@@ -11,14 +11,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/dev/headroom-reversible-context-compression/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/headroom-reversible-context-compression/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![صورة تجريدية لتكثّف البيانات](/assets/images/headroom-reversible-context-compression-hero.webp)
+![صورة تجريدية لتكثّف البيانات]({{ '/assets/images/headroom-reversible-context-compression-hero.webp' | relative_url }})
 *السياق ليس مجانيًا. تكثيف الرموز المبعثرة بلا فقدان هو ما يفعله Headroom.*
 
 ## نظرة عامة
@@ -107,7 +107,7 @@ print(result.tokens_before, "->", result.tokens_after, result.transforms_applied
 | twitter-timeline (مصفوفة سجلات) | 399,926 | 192,465 | **51.9%** | 57.0% | 0.24s |
 | seedance-prompts (كتالوج موجّهات) | 1,085,592 | 713,210 | **34.3%** | 38.5% | 0.57s |
 
-![مخطط الضغط المقاس](/assets/images/headroom-reversible-context-compression-results.webp)
+![مخطط الضغط المقاس]({{ '/assets/images/headroom-reversible-context-compression-results.webp' | relative_url }})
 *نسب الخفض المقاسة لثلاثة مخرجات أدوات JSON من مستودع ThakiCloud. البايتات والرموز معروضة معًا.*
 
 طريقة قراءة الأرقام مهمة. **كلما زاد تكرار البنية زاد التوفير.** skill_index فهرس لسجلات متطابقة المخطط مكتظة، فبلغ طي المفاتيح في SmartCrusher ذروته وخفض الرموز 71.2% كاملة. وخط twitter الزمني، وهو أيضًا مصفوفة كائنات منتظمة، اختُصر بأكثر من النصف. في المقابل seedance-prompts، حيث يشكّل نص الموجّهات الطبيعي معظم كل سجل، لم يكن أمامه إلا مجال ضيق للاختصار البنيوي فاستقر عند 34.3%. هذا الفرق يبرهن مباشرةً على نية التصميم بأن "JSON هو حيث يعمل أفضل ما يكون."

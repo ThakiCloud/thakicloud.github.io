@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/convertx-self-hosted-file-converter-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/convertx-self-hosted-file-converter-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/convertx-self-hosted-file-converter-complete-guide/"
 published: false
 categories:
   - tutorials

@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/dots-ocr-multilingual-document-parsing-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/dots-ocr-multilingual-document-parsing-guide/"
 reading_time: true
 lang: en
 categories:
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 8 min
 
-![dots.ocr unified document parsing overview](/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png)
+![dots.ocr unified document parsing overview]({{ '/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png' | relative_url }})
 
 ## Introduction
 

@@ -6,7 +6,7 @@ seo_description: "Kimi K3 taking the leaderboard's top spot and Gemini 3.5's del
 date: 2026-07-18
 last_modified_at: 2026-07-19
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/benchmark-wins-trust-gap-execution-layer/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/benchmark-wins-trust-gap-execution-layer/"
 tags:
   - agentops
   - paxis

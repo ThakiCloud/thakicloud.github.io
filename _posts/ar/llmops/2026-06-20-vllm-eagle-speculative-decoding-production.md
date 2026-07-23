@@ -19,7 +19,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/vllm-eagle-speculative-decoding-production/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
 lang: ar
 categories:
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق
 
-![رسم تجريدي يجسّد خط أنابيب المسودة والتحقق في الفك الترميز التخميني](/assets/images/vllm-eagle-speculative-decoding-production-hero.webp)
+![رسم تجريدي يجسّد خط أنابيب المسودة والتحقق في الفك الترميز التخميني]({{ '/assets/images/vllm-eagle-speculative-decoding-production-hero.webp' | relative_url }})
 *تجسيد تجريدي للفك الترميز التخميني، حيث يولّد نموذج المسودة الرموز مسبقاً ويتحقق منها النموذج المستهدف بشكل متوازٍ.*
 
 يُقلص الفك الترميز التخميني (speculative decoding) زمن الاستجابة عبر نموذج مسودة يُولّد رموزاً مسبقاً بسرعة، فيما يتحقق النموذج المستهدف من صحتها بشكل متوازٍ. النظرية متاحة منذ 2022، لكن ثمة أسباب جعلت التبني الإنتاجي مترددًا: تكلفة إدارة نموذج المسودة، تضاؤل الفائدة مع تزايد حجم الدُفعة، وعدم اكتمال دعم أطر العمل. تغير الوضع في مايو 2026 حين اندمج EAGLE 3.1 في الفرع الرئيسي لـ vLLM.

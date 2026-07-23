@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/sensenova-u1-neo-unify-unified-multimodal/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/sensenova-u1-neo-unify-unified-multimodal/"
 reading_time: true
 categories:
   - owm
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 15분
 
-![SenseNova U1 NEO-Unify 통합 멀티모달 개념 비주얼](/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp)
+![SenseNova U1 NEO-Unify 통합 멀티모달 개념 비주얼]({{ '/assets/images/sensenova-u1-neo-unify-unified-multimodal-hero.webp' | relative_url }})
 
 ## 개요
 

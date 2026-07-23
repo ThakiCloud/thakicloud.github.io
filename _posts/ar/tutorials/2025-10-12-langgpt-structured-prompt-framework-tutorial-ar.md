@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/langgpt-structured-prompt-framework-tutorial-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/langgpt-structured-prompt-framework-tutorial-ar/"
 lang: ar
 permalink: /ar/tutorials/langgpt-structured-prompt-framework-tutorial/
 categories:

@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/refact-ai-software-development-agent-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/agentops/refact-ai-software-development-agent-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops
@@ -36,7 +36,7 @@ published: false
 
 [**Refact.ai**](https://github.com/smallcloudai/refact)는 3k개의 스타와 248개의 포크를 보유한 활발한 오픈소스 프로젝트입니다. BSD-3-Clause 라이선스 하에 배포되며, 자체 호스팅이 가능한 엔터프라이즈급 솔루션을 제공합니다.
 
-![개념 다이어그램](/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

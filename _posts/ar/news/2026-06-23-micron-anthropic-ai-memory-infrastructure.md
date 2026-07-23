@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "memory"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/micron-anthropic-ai-memory-infrastructure/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/micron-anthropic-ai-memory-infrastructure/"
 reading_time: true
 categories:
   - news
@@ -52,7 +52,7 @@ published: false
 
 يُعدّ الاستدلال في نماذج اللغة الكبيرة عملًا مقيَّدًا بالذاكرة في جوهره. في كل مرة يُولَّد فيها رمز (token)، يجب قراءة المجموعة الكاملة لأوزان النموذج من الذاكرة. مهما بلغت سرعة وحدات المعالجة، فإن GPU ستقف مكتوفة تنتظر البيانات إن لم تُسَدَّ بالأوزان بسرعة كافية. لذا تتحدد إنتاجية الاستدلال في الغالب بعرضة النطاق الترددي للذاكرة لا بطاقة المعالجة.
 
-![التسلسل الهرمي لذاكرة خادم استدلال الذكاء الاصطناعي: تقع ذاكرة HBM الأقرب إلى GPU وهي أسرع نقطة عنق زجاجة](/assets/images/micron-anthropic-ai-memory-infrastructure-diagram.webp)
+![التسلسل الهرمي لذاكرة خادم استدلال الذكاء الاصطناعي: تقع ذاكرة HBM الأقرب إلى GPU وهي أسرع نقطة عنق زجاجة]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-diagram.webp' | relative_url }})
 
 يتضح التسلسل الهرمي لذاكرة خادم استدلال الذكاء الاصطناعي في المخطط أعلاه.
 

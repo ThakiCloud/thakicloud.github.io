@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/autoscraper-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/autoscraper-tutorial/"
 published: false
 categories:
   - tutorials

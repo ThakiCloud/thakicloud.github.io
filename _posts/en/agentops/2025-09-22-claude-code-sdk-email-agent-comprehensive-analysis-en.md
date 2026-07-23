@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/agentops/claude-code-sdk-email-agent-analysis/
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-sdk-email-agent-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-sdk-email-agent-analysis/"
 categories:
   - agentops
 published: false
@@ -33,7 +33,7 @@ Anthropic has released an impressive demonstration of their Claude Code SDK capa
 The [Claude Code SDK Demos repository](https://github.com/anthropics/claude-code-sdk-demos) represents a significant step forward in demonstrating how large language models can be integrated into real-world applications with sophisticated tooling and interaction patterns.
 
 
-![Concept diagram](/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg)
+![Concept diagram]({{ '/assets/images/claude-code-sdk-email-agent-comprehensive-analysis-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

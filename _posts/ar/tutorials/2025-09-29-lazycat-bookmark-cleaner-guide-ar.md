@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/lazycat-bookmark-cleaner-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/lazycat-bookmark-cleaner-guide/"
 lang: ar
 permalink: /ar/tutorials/lazycat-bookmark-cleaner-guide/
 published: false
@@ -384,7 +384,7 @@ LazyCat Bookmark Cleaner يتجاوز كونه أداة تنظيف علامات 
 **🔗 الروابط ذات الصلة**
 - [LazyCat Bookmark Cleaner GitHub](https://github.com/Alanrk/LazyCat-Bookmark-Cleaner)
 - [متجر Chrome](https://chrome.google.com/webstore)
-- [أفضل ممارسات إدارة العلامات](https://thakicloud.github.io/ar/tutorials/bookmark-management-best-practices/)
+- [أفضل ممارسات إدارة العلامات](https://thakicloud.com/tech-blog/ar/tutorials/bookmark-management-best-practices/)
 
 **📝 المراجع**
 - وثائق Chrome Extensions API

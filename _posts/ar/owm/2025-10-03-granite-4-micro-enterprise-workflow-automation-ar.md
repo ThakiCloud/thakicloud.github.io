@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/owm/granite-4-micro-enterprise-workflow-automation/
-canonical_url: "https://thakicloud.github.io/ar/owm/granite-4-micro-enterprise-workflow-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/granite-4-micro-enterprise-workflow-automation/"
 published: false
 categories:
   - owm

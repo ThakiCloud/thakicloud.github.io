@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/raghub-comprehensive-guide-to-rag-ecosystem/
-canonical_url: "https://thakicloud.github.io/ko/llmops/raghub-comprehensive-guide-to-rag-ecosystem-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/raghub-comprehensive-guide-to-rag-ecosystem-ko/"
 categories:
   - llmops
 published: false
@@ -30,7 +30,7 @@ published: false
 
 RAGHub는 검색 증강 생성 시스템을 위한 도구, 프레임워크, 리소스의 포괄적인 디렉토리 역할을 하는 커뮤니티 기반 이니셔티브를 대표합니다. 불과 3개월 전의 프레임워크가 이미 구식이 될 수 있을 정도로 RAG 환경이 빠르게 변화한다는 인식에서 출발하여, RAGHub는 실무자, 연구자, 조직이 끊임없이 진화하는 이 영역을 자신감 있게 탐색할 수 있도록 돕는 것을 목표로 합니다.
 
-![모듈형 프레임워크 블록이 중앙 벡터 인덱스를 둘러싸고 연결되는 RAG 생태계 개념도](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.webp)
+![모듈형 프레임워크 블록이 중앙 벡터 인덱스를 둘러싸고 연결되는 RAG 생태계 개념도]({{ '/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.webp' | relative_url }})
 
 ## RAGHub 이해하기: 커뮤니티 기반 리소스
 
@@ -78,7 +78,7 @@ RAG 시스템 출력의 품질은 근본적으로 기반 데이터의 품질과 
 
 이 카테고리의 일부 프레임워크는 또한 멀티모달 데이터 처리의 도전을 해결하여 RAG 시스템이 텍스트, 이미지, 테이블 및 기타 데이터 유형을 포함하는 문서와 작업할 수 있게 합니다. 이 기능은 다양한 문서 형식을 처리하고 복잡한 레이아웃에서 의미 있는 정보를 추출해야 하는 엔터프라이즈 RAG 시스템에 특히 중요합니다.
 
-![RAGHub 프레임워크 분류(핵심·엔진·데이터준비·평가)와 RAG 파이프라인 단계 매핑 다이어그램](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-diagram.svg)
+![RAGHub 프레임워크 분류(핵심·엔진·데이터준비·평가)와 RAG 파이프라인 단계 매핑 다이어그램]({{ '/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-diagram.svg' | relative_url }})
 
 ## 신흥 트렌드와 혁신
 

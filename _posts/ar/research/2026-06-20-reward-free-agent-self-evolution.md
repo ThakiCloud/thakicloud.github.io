@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/reward-free-agent-self-evolution/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/reward-free-agent-self-evolution/"
 reading_time: true
 categories:
   - research
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لخط أنابيب التطور الذاتي بلا مكافأة قائم على المعرفة العالمية](/assets/images/reward-free-agent-hero.webp)
+![مخطط مفاهيمي لخط أنابيب التطور الذاتي بلا مكافأة قائم على المعرفة العالمية]({{ '/assets/images/reward-free-agent-hero.webp' | relative_url }})
 
 ## عنق الزجاجة في التعلم بالتعزيز
 

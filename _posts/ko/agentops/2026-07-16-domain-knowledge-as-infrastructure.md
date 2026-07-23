@@ -17,7 +17,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/domain-knowledge-as-infrastructure/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/domain-knowledge-as-infrastructure/"
 ---
 
 ## 개요

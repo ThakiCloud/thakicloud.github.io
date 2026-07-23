@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/vllm-eagle-speculative-decoding-production/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/vllm-eagle-speculative-decoding-production/"
 reading_time: true
 lang: en
 categories:
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 9 min
 
-![Abstract illustration of the draft-and-verify pipeline in speculative decoding](/assets/images/vllm-eagle-speculative-decoding-production-hero.webp)
+![Abstract illustration of the draft-and-verify pipeline in speculative decoding]({{ '/assets/images/vllm-eagle-speculative-decoding-production-hero.webp' | relative_url }})
 *An abstract depiction of speculative decoding, where a draft model generates tokens ahead of time and the target model verifies them in parallel.*
 
 Speculative decoding reduces latency by having a draft model generate tokens quickly while the target model verifies them in parallel. The idea has existed since 2022, but several barriers slowed production adoption: draft model management overhead, gains that disappeared at large batch sizes, and inadequate framework support. EAGLE 3.1 merging into the vLLM main branch in May 2026 changed that picture.

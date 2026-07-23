@@ -5,7 +5,7 @@ seo_title: "VETD - طريقة خفض تكلفة نماذج اللغة عبر ا�
 seo_description: "طريقة تشغيلية تُعرّف مهام الشركة كمهارات، وتستخدم opus للحكم على الجودة، ثم تترك بوابة كود تقرر إمكانية الانحدار إلى sonnet. Validate-Expensive-Then-Descend. نكشف هنا عن قرارات الخفض والتعليق الفعلية وحالات الفشل في أسطول من 16 مهارة."
 date: 2026-07-12
 last_modified_at: 2026-07-12
-canonical_url: "https://thakicloud.github.io/ar/research/vetd-cost-descent/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/vetd-cost-descent/"
 lang: ar
 reading_time: true
 tags:

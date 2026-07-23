@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/xiaohongshu-ai-publisher-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/xiaohongshu-ai-publisher-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/xiaohongshu-ai-publisher-complete-guide/"
 published: false
 categories:
   - tutorials

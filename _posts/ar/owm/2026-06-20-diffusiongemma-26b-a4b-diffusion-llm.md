@@ -23,7 +23,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/diffusiongemma-26b-a4b-diffusion-llm/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/diffusiongemma-26b-a4b-diffusion-llm/"
 reading_time: true
 categories:
   - owm
@@ -31,7 +31,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق
 
-![مخطط مفاهيمي لـ DiffusionGemma 26B-A4B](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
+![مخطط مفاهيمي لـ DiffusionGemma 26B-A4B]({{ '/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp' | relative_url }})
 
 ## ما الجديد
 

@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/ai-researcher-autonomous-scientific-innovation-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/ai-researcher-autonomous-scientific-innovation-analysis/"
 reading_time: true
 published: false
 categories:
@@ -379,11 +379,11 @@ AI-Researcher가 제시하는 미래는 인간과 AI가 협력하여 **더 창�
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 1](/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-01.webp)
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 1]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-01.webp' | relative_url }})
 
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 2](/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-02.webp)
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 2]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-02.webp' | relative_url }})
 
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 3](/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-03.webp)
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 3]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-03.webp' | relative_url }})
 
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 4](/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-04.webp)
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 4]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-04.webp' | relative_url }})
 

@@ -16,13 +16,13 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/pepper-proactive-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/pepper-proactive-ai-assistant-tutorial-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/pepper-proactive-ai-assistant-tutorial-en/"
 categories:
   - tutorials
 published: false
 ---
 
-![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
+![Concept diagram]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp' | relative_url }})
 
 ⏱️ **Estimated Reading Time**: 12 minutes
 
@@ -56,7 +56,7 @@ Developed by the **Agentica team** at **Berkeley Sky Computing Lab**, Pepper rep
 ✅ **Non-Blocking Design**: Responds immediately while processing in background
 
 
-![Concept diagram](/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg)
+![Concept diagram]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

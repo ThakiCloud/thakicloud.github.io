@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/minimax-m2-7-openweight-agent/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/minimax-m2-7-openweight-agent/"
 lang: en
 reading_time: true
 categories:
@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 7 min
 
-![MiniMax-M2.7 self-evolving agent teams concept](/assets/images/minimax-m2-7-hero.webp)
+![MiniMax-M2.7 self-evolving agent teams concept]({{ '/assets/images/minimax-m2-7-hero.webp' | relative_url }})
 
 ## MiniMax-M2.7 Overview
 

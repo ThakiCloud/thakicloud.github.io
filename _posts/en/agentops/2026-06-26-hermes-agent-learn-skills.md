@@ -17,13 +17,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/hermes-agent-learn-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/hermes-agent-learn-skills/"
 categories:
   - agentops
 published: false
 ---
 
-![Skill authoring process depicted as scattered document fragments converging into a single structured crystal](/assets/images/hermes-agent-learn-skills-hero.webp)
+![Skill authoring process depicted as scattered document fragments converging into a single structured crystal]({{ '/assets/images/hermes-agent-learn-skills-hero.webp' | relative_url }})
 *The concept of /learn expressed as scattered knowledge fragments from multiple directions crystallizing into a single structured output.*
 
 ## Overview
@@ -38,7 +38,7 @@ ThakiCloud runs multi-tenant agents on a Kubernetes-based AI/ML SaaS platform. T
 
 `/learn` is not a separate ingestion engine. The key insight is that it constructs a standard-guided prompt and hands it to the agent as an ordinary single turn. Source collection therefore uses the tools the agent already has. Local directories are read with `read_file` and `search_files`; online documentation is fetched with `web_extract`; workflows carried out together in the current conversation are captured directly from conversation context.
 
-![The full /learn path: from source description through agent tool collection, standard SKILL.md authoring, the write_approval gate, and curator](/assets/images/hermes-agent-learn-skills-diagram.webp)
+![The full /learn path: from source description through agent tool collection, standard SKILL.md authoring, the write_approval gate, and curator]({{ '/assets/images/hermes-agent-learn-skills-diagram.webp' | relative_url }})
 *The complete /learn path: starting from a source description, collecting via agent tools, authoring a standard SKILL.md, and passing through the write_approval gate and curator.*
 
 Four source types are accepted. The following examples are taken verbatim from the official documentation:

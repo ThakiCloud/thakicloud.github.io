@@ -19,7 +19,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/dupo-dual-policy-optimization-llm-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
 categories:
   - research
@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
 
-![رسم تجريدي لتدفقات بدائية-مزدوجة متناظرة يعيد كل منها بناء الآخر](/assets/images/dupo-dual-policy-optimization-llm-framework-hero.webp)
+![رسم تجريدي لتدفقات بدائية-مزدوجة متناظرة يعيد كل منها بناء الآخر]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-hero.webp' | relative_url }})
 *تجسيد تجريدي لبنية الازدواجية في DuPO، حيث تعيد المهمة البدائية والمهمة المزدوجة بناء مخرجات بعضهما لتكوين إشارة إشراف ذاتي.*
 
 > **ملاحظة مصدرية**: عنوان بحث DuPO الرسمي (arXiv:2508.14460) هو "Dual **Preference** Optimization". يصف البحث الطريقة كمهمة بدائية مقترنة بمهمة إعادة بناء مزدوجة تنتج إشارة تحقق ذاتي، لا كسياستي استكشاف واستغلال حرفيتين. الصياغة أدناه تبسيط؛ يُرجى الرجوع إلى المصدر للآلية الدقيقة.

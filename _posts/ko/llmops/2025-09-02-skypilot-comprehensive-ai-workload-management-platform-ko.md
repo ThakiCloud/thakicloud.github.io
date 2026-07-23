@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/llmops/skypilot-comprehensive-ai-workload-management-platform-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skypilot-comprehensive-ai-workload-management-platform-ko/"
 lang: ko
 permalink: /ko/llmops/skypilot-comprehensive-ai-workload-management-platform/
 published: false
@@ -782,11 +782,11 @@ SkyPilot은 단순한 도구가 아니라 진정으로 이식 가능하고 효�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 1](/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-01.webp)
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 1]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-01.webp' | relative_url }})
 
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 2](/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-02.webp)
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 2]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-02.webp' | relative_url }})
 
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 3](/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-03.webp)
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 3]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-03.webp' | relative_url }})
 
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 4](/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-04.webp)
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 4]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-04.webp' | relative_url }})
 

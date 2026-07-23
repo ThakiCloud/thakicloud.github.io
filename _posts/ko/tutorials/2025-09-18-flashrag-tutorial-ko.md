@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/flashrag-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/flashrag-tutorial/"
 lang: ko
 permalink: /ko/tutorials/flashrag-tutorial/
 published: false

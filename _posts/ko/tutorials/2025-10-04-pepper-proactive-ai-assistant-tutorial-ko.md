@@ -16,13 +16,13 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/pepper-proactive-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/pepper-proactive-ai-assistant-tutorial-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/pepper-proactive-ai-assistant-tutorial-ko/"
 categories:
   - tutorials
 published: false
 ---
 
-![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
+![개념 다이어그램]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 12분
 
@@ -56,7 +56,7 @@ published: false
 ✅ **논블로킹 설계**: 백그라운드 처리 중에도 즉시 응답
 
 
-![개념 다이어그램](/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 
@@ -727,11 +727,11 @@ Pepper는 **Berkeley Sky Computing Lab**의 일환으로 **Agentica 팀**이 개
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.webp)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.webp' | relative_url }})
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.webp)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.webp' | relative_url }})
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.webp)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.webp' | relative_url }})
 
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4](/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.webp)
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.webp' | relative_url }})
 

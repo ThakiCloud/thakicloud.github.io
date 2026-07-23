@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/google-opal-ai-mini-app-builder-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/google-opal-ai-mini-app-builder-tutorial/"
 reading_time: true
 published: false
 categories:
@@ -514,6 +514,6 @@ AI의 민주화가 가속화되는 이 시점에서, Opal과 같은 도구는 �
 **관련 링크:**
 - [Google Opal 공식 사이트](https://developers.googleblog.com/en/introducing-opal/)
 - [Google Labs](https://labs.google.com/)
-- [AI 프롬프트 엔지니어링 가이드](https://thakicloud.github.io/tutorials/prompt-engineering-guide/)
+- [AI 프롬프트 엔지니어링 가이드](https://thakicloud.com/tech-blog/tutorials/prompt-engineering-guide/)
 
 **태그**: #GoogleOpal #AI앱빌더 #노코드 #프롬프트체이닝 #워크플로우자동화 #GoogleLabs #AI도구 #튜토리얼 

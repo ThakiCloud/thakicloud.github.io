@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/amazon-q-developer-cli-setup-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/amazon-q-developer-cli-setup-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/amazon-q-developer-cli-setup-guide/"
 published: false
 categories:
   - tutorials

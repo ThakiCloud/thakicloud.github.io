@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/helm-dashboard-kubernetes-ui-complete-guide-ko/"
 categories:
   - tutorials
 ---

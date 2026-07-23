@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![طبولوجيا العمليات المستقلة حيث تتشابك الجداول الزمنية وخطافات الأحداث](/assets/images/autonomous-ops-hero.webp)
+![طبولوجيا العمليات المستقلة حيث تتشابك الجداول الزمنية وخطافات الأحداث]({{ '/assets/images/autonomous-ops-hero.webp' | relative_url }})
 
 ## تعريف صادق لمفهوم "الأتمتة"
 

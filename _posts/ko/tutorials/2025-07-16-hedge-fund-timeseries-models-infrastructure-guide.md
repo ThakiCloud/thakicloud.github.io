@@ -22,7 +22,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "chart-line"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/hedge-fund-timeseries-models-infrastructure-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/hedge-fund-timeseries-models-infrastructure-guide/"
 reading_time: true
 published: false
 categories:
@@ -1764,7 +1764,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "chart-line"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/hedge-fund-timeseries-models-infrastructure-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/hedge-fund-timeseries-models-infrastructure-guide/"
 reading_time: true
 ---
 

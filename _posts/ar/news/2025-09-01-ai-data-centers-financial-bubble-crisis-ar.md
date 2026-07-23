@@ -15,7 +15,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/news/ai-data-centers-financial-bubble-crisis/
-canonical_url: "https://thakicloud.github.io/ar/news/ai-data-centers-financial-bubble-crisis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/ai-data-centers-financial-bubble-crisis/"
 published: false
 categories:
   - news

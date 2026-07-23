@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/agent-s3-human-level-computer-use-breakthrough/
-canonical_url: "https://thakicloud.github.io/ko/llmops/agent-s3-human-level-computer-use-breakthrough-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agent-s3-human-level-computer-use-breakthrough-ko/"
 categories:
   - llmops
 published: false
@@ -497,11 +497,11 @@ Agent S3의 성공은 컴퓨터 사용 자동화 분야의 밝은 미래를 보�
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.webp)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.webp' | relative_url }})
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.webp)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.webp' | relative_url }})
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.webp)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.webp' | relative_url }})
 
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4](/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.webp)
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.webp' | relative_url }})
 

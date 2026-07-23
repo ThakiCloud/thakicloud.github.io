@@ -20,8 +20,8 @@ breadcrumbs: true
 words_per_minute: 200
 
 # URL Settings
-url: "https://thakicloud.github.io"
-baseurl: ""
+url: "https://thakicloud.com"
+baseurl: "/tech-blog"
 
 # Comments
 comments:
@@ -36,7 +36,7 @@ google_site_verification: vTtIRRz5XMsZ10-HAT-4-xuTZEmXG-zUCArAl3ANtAI
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "G-H3R0WGN0LF"
+    tracking_id: "G-78BFTNGGJX"
     anonymize_ip: false
 
 # Social Sharing

@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/multi-agent-orchestration-production-patterns/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
 categories:
   - agentops
@@ -27,7 +27,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![오케스트레이터(Sonnet)가 요청을 분류하고 분해해 리서처(Haiku), 코더(Sonnet), 리뷰어(Opus, 게이트 전용) 워커로 분배한 뒤 결과를 병합해 최종 출력을 만드는 Orchestrator-Worker 구조도](/assets/images/multi-agent-orchestration-production-patterns-diagram.webp)
+![오케스트레이터(Sonnet)가 요청을 분류하고 분해해 리서처(Haiku), 코더(Sonnet), 리뷰어(Opus, 게이트 전용) 워커로 분배한 뒤 결과를 병합해 최종 출력을 만드는 Orchestrator-Worker 구조도]({{ '/assets/images/multi-agent-orchestration-production-patterns-diagram.webp' | relative_url }})
 
 ## 왜 지금 이 주제인가
 

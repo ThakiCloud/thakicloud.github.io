@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/multi-agent-orchestration-production-patterns/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/multi-agent-orchestration-production-patterns/"
 reading_time: true
 categories:
   - agentops
@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Orchestrator-Worker structure where an orchestrator (Sonnet) classifies and decomposes the request, distributes it to researcher (Haiku), coder (Sonnet), and reviewer (Opus, gate only) workers, then merges the results into the final output](/assets/images/multi-agent-orchestration-production-patterns-diagram.webp)
+![Orchestrator-Worker structure where an orchestrator (Sonnet) classifies and decomposes the request, distributes it to researcher (Haiku), coder (Sonnet), and reviewer (Opus, gate only) workers, then merges the results into the final output]({{ '/assets/images/multi-agent-orchestration-production-patterns-diagram.webp' | relative_url }})
 
 ## Why This Topic Now
 

@@ -17,7 +17,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/
-canonical_url: "https://thakicloud.github.io/ar/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-ar/"
 published: false
 categories:
   - llmops

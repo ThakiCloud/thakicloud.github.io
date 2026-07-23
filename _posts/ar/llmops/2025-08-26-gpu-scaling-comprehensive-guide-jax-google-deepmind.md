@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/"
 lang: ar
 permalink: /ar/llmops/gpu-scaling-comprehensive-guide-jax-google-deepmind/
 published: false

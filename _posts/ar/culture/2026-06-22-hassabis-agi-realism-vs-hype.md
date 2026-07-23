@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/hassabis-agi-realism-vs-hype/
-canonical_url: "https://thakicloud.github.io/ar/culture/hassabis-agi-realism-vs-hype/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/hassabis-agi-realism-vs-hype/"
 categories:
   - culture
 ---
@@ -37,7 +37,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/hassabis-agi-realism-vs-hype-diagram.svg' | relative_url }})
 
 *ثلاثة معايير واقعية تصفّي المبالغة حول الذكاء الاصطناعي العام*
 

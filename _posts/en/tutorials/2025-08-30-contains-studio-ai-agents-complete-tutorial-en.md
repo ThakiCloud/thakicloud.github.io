@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Tutorial Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/contains-studio-ai-agents-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/contains-studio-ai-agents-complete-tutorial/"
 published: false
 categories:
   - tutorials

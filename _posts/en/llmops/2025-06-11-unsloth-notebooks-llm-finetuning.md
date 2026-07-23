@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-notebooks-llm-finetuning/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/unsloth-notebooks-llm-finetuning/"
 published: false
 categories:
   - llmops

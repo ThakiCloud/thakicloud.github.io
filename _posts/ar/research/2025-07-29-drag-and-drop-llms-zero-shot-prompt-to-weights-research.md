@@ -6,7 +6,7 @@ seo_description: "تحليل تقنية DnD LLMs التي طوّرها باحث�
 date: 2025-07-29
 last_modified_at: 2025-07-29
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/drag-and-drop-llms-zero-shot-prompt-to-weights-research/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/drag-and-drop-llms-zero-shot-prompt-to-weights-research/"
 tags:
   - LLM
   - 파라미터 생성

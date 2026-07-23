@@ -6,7 +6,7 @@ seo_description: "From Ant Group's lightweight vision AI to OpenAI's free tokens
 date: 2026-07-09
 last_modified_at: 2026-07-09
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/agent-trust-is-built-on-audit-trails/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-trust-is-built-on-audit-trails/"
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -59,7 +59,7 @@ The problem is that today's agents do not move only within themselves. They quer
 
 So what should a platform look like if it is designed from the start so the execution layer owns the record. ThakiCloud's Agent-Native Cloud, Paxis, made this question the backbone of the product. In Paxis, Skills, Tools, Policies, and Audit Logs are not options bolted on later, they are first class resources. The moment an agent calls a skill and the moment it runs a tool become an audit log in themselves, and a policy gate approves or blocks that execution beforehand. Integration points with external systems through MCP standard connectors sit on the same trail, so even behavior that crosses system boundaries stays connected as a single record. It is not a structure that reconstructs what happened after the fact, it is one where the record grows alongside the work as it happens.
 
-![Concept diagram](/assets/images/agent-trust-is-built-on-audit-trails-diagram.svg)
+![Concept diagram]({{ '/assets/images/agent-trust-is-built-on-audit-trails-diagram.svg' | relative_url }})
 
 *Every execution step an agent takes after passing the policy gate is recorded together as an audit log, and that trail stays inside a sovereign, on premises Kubernetes environment where it can be retraced later.*
 

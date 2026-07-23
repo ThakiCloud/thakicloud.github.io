@@ -7,7 +7,7 @@ date: 2026-07-04
 last_modified_at: 2026-07-04
 author_profile: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/enterprise-agents-need-control-plane/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/enterprise-agents-need-control-plane/"
 toc: true
 toc_label: "Contents"
 toc_icon: "robot"
@@ -57,7 +57,7 @@ The premise Paxis chose is simple: the first-class resources of the agent era ar
 
 Skills treats an agent's capabilities as versioned resources. Registering, verifying, and revoking a capability happens at the platform level, not inside an individual project. Tools defines tool access declaratively. Which agent may call which tool and when is judged by policy up front. Policies specifies autonomy explicitly. Because execution proceeds only through a defined approval gate, the line an agent must not cross is embedded in the execution path rather than in a document. Audit Logs is the default gateway every action passes through. Reconstruction after the fact is the default, not the exception.
 
-![A control-plane structure in which every agent action passes a policy gate and audit log and runs on top of sovereign Kubernetes](/assets/images/enterprise-agents-need-control-plane-diagram.svg)
+![A control-plane structure in which every agent action passes a policy gate and audit log and runs on top of sovereign Kubernetes]({{ '/assets/images/enterprise-agents-need-control-plane-diagram.svg' | relative_url }})
 
 *Every agent action is checked at the policy gate against autonomy and approval rules; only allowed execution proceeds through skills, tools, and an isolated sandbox. Regardless of the outcome, every action is recorded in the audit log, and the whole process runs on top of sovereign Kubernetes that is on-prem and air-gapped.*
 

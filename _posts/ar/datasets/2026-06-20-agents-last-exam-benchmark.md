@@ -17,14 +17,14 @@ author_profile: true
 toc: true
 toc_label: "دليل Agents Last Exam"
 reading_time: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/agents-last-exam-benchmark/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/agents-last-exam-benchmark/"
 categories:
   - datasets
 ---
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![مخطط مفاهيمي لتقييم وكيل Agents Last Exam](/assets/images/agents-last-exam-benchmark-hero.webp)
+![مخطط مفاهيمي لتقييم وكيل Agents Last Exam]({{ '/assets/images/agents-last-exam-benchmark-hero.webp' | relative_url }})
 
 ## نظرة عامة على مجموعة البيانات
 

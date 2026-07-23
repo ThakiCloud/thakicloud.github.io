@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/llmops/free-claude-code-router/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/free-claude-code-router/"
 categories:
   - llmops
 published: false
@@ -132,7 +132,7 @@ free-claude-code==2.3.14 cannot be used ... your requirements are unsatisfiable.
 
 프록시 자체는 부팅에 막혔지만, 이 도구가 `ollama` 프로바이더에서 실제로 호출하는 **메커니즘**은 OpenAI 호환 엔드포인트입니다. 그래서 그 경로를 로컬 Ollama에 직접 호출해 측정했습니다. fcc가 더하는 프록시 오버헤드는 빠진, 백엔드 자체의 라우팅 성능입니다. Claude의 세 티어를 로컬 모델로 매핑한 결과는 다음과 같습니다(Apple Silicon, 동일 프롬프트, 64토큰 상한).
 
-![자체호스팅 라우팅 실측 결과](/assets/images/free-claude-code-router-results.webp)
+![자체호스팅 라우팅 실측 결과]({{ '/assets/images/free-claude-code-router-results.webp' | relative_url }})
 *그림 2. Claude 티어를 로컬 Ollama 모델로 라우팅했을 때의 레이턴시와 처리 속도. opus 경로에 둔 qwen3:8b는 thinking 모델이라 추론 토큰을 길게 내보내 시간이 크게 늘어납니다.*
 
 | 라우팅 | 모델 | 레이턴시 | 완성 토큰 | 처리 속도 |

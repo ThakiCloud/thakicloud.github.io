@@ -21,10 +21,8 @@ toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
 header:
-  teaser: "/assets/images/thumbnails/mcp-supabase-agentic-ai-thumbnail.jpg"
-  overlay_image: "/assets/images/headers/mcp-supabase-agentic-ai-header.jpg"
   overlay_filter: 0.5
-canonical_url: "https://thakicloud.github.io/tutorials/mcp-supabase-local-development-agentic-ai-platform/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/mcp-supabase-local-development-agentic-ai-platform/"
 reading_time: true
 published: false
 categories:

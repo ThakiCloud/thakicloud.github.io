@@ -7,7 +7,7 @@ date: 2025-07-30
 last_modified_at: 2025-07-30
 lang: en
 permalink: /en/research/arpo-agentic-reinforced-policy-optimization-research/
-canonical_url: "https://thakicloud.github.io/en/research/arpo-agentic-reinforced-policy-optimization-research/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/arpo-agentic-reinforced-policy-optimization-research/"
 tags:
   - ARPO
   - Reinforcement-Learning

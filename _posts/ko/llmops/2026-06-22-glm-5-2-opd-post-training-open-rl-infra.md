@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-opd-post-training-open-rl-infra/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-opd-post-training-open-rl-infra/"
 reading_time: true
 categories:
   - llmops
@@ -28,10 +28,10 @@ published: false
 
 저희 ThakiCloud는 K8s 기반 AI/ML SaaS 플랫폼에서 학습 워크로드와 GPU 오케스트레이션을 다룹니다. "프론티어 모델을 어떻게 학습했는가"가 통째로 공개된 사례는 온프레미스 학습 인프라를 설계하는 입장에서 귀한 레퍼런스입니다. 이 글은 OPD 사후학습이라는 방식과, RL 스택 전체가 오픈된다는 사실이 무엇을 바꾸는지 짚어보겠습니다.
 
-> RL 사후학습 프레임워크 slime 자체에 대한 개괄은 별도 글 [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/)에서 다뤘습니다. 이 글은 그 위에서 돌아가는 OPD 사후학습과 전문가 모델 병합에 초점을 맞춥니다.
+> RL 사후학습 프레임워크 slime 자체에 대한 개괄은 별도 글 [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/)에서 다뤘습니다. 이 글은 그 위에서 돌아가는 OPD 사후학습과 전문가 모델 병합에 초점을 맞춥니다.
 
 
-![GLM-5.2 OPD 사후학습과 오픈 RL 스택 개요](/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-01.webp)
+![GLM-5.2 OPD 사후학습과 오픈 RL 스택 개요]({{ '/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-01.webp' | relative_url }})
 
 ## GLM-5.2는 어떤 모델인가
 
@@ -43,7 +43,7 @@ published: false
 
 ## OPD 사후학습이란 무엇인가
 
-![OPD 병렬 병합 기반 사후학습 메커니즘: 10개+ 전문가를 48시간에 병합](/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-04.webp)
+![OPD 병렬 병합 기반 사후학습 메커니즘: 10개+ 전문가를 48시간에 병합]({{ '/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-04.webp' | relative_url }})
 
 OPD는 GLM-5.2 사후학습 단계에서 쓰인 병렬 학습 및 병합 방식입니다. 핵심 아이디어는 단순하지만 인프라적으로는 까다롭습니다. 하나의 거대한 모델을 모든 능력에 대해 한 번에 RL로 학습하는 대신, 능력별로 여러 전문가 모델을 따로 RL 학습한 뒤 이들을 하나의 최종 모델로 합치는 것입니다.
 
@@ -73,7 +73,7 @@ slime이 강조하는 설계 원칙은 비동기와 디커플링입니다. Megat
 
 ## 전체 RL 스택이 오픈된다는 것의 의미
 
-![가중치 공개 vs 인프라 전체 공개 비교](/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-07.webp)
+![가중치 공개 vs 인프라 전체 공개 비교]({{ '/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-07.webp' | relative_url }})
 
 가중치 공개와 학습 인프라 공개는 무게가 다릅니다. 가중치만 있으면 추론은 할 수 있지만, 그 모델을 우리 도메인에 맞게 다시 RL로 사후학습하는 길은 막혀 있습니다. 반대로 학습 인프라가 함께 열리면 다음이 가능해집니다.
 
@@ -97,7 +97,7 @@ OPD와 slime이 보여주는 그림은 저희가 K8s 위에서 다루는 학습 
 
 ## 한계 및 반론
 
-![한계와 과제: 리소스 장벽과 병합 리스크](/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-09.webp)
+![한계와 과제: 리소스 장벽과 병합 리스크]({{ '/assets/images/glm-5-2-opd-post-training-open-rl-infra-slide-09.webp' | relative_url }})
 
 균형을 위해 약점도 짚겠습니다.
 
@@ -115,4 +115,4 @@ OPD와 slime이 보여주는 그림은 저희가 K8s 위에서 다루는 학습 
 - [THUDM/slime: RL 사후학습 프레임워크 (GitHub)](https://github.com/THUDM/slime)
 - [zai-org/GLM-5 (HuggingFace)](https://huggingface.co/zai-org/GLM-5)
 - [z.ai's open source GLM-5 and the slime RL technique (VentureBeat)](https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages)
-- 관련 글: [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.github.io/llmops/slime-rl-post-training-infrastructure/)
+- 관련 글: [RL 사후학습을 인프라로: slime 오픈소스 프레임워크와 RL 스케일링](https://thakicloud.com/tech-blog/llmops/slime-rl-post-training-infrastructure/)

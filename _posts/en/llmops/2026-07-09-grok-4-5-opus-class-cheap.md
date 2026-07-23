@@ -9,7 +9,7 @@ tags:
   - llmops
 date: 2026-07-09
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/grok-4-5-opus-class-cheap/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/grok-4-5-opus-class-cheap/"
 categories:
   - llmops
 ---

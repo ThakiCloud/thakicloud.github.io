@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/research/jet-nemotron-hybrid-architecture-language-model-postnas-analysis/
-canonical_url: "https://thakicloud.github.io/ar/llmops/jet-nemotron-hybrid-architecture-language-model-postnas-analysis-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/jet-nemotron-hybrid-architecture-language-model-postnas-analysis-ar/"
 published: false
 categories:
   - llmops

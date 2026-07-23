@@ -4,7 +4,7 @@ excerpt: "Analyzing Cursor's success formula and what 'Cursor for X' means for A
 date: 2025-06-13
 lang: en
 permalink: /en/news/cursor-for-x/
-canonical_url: "https://thakicloud.github.io/en/news/cursor-for-x/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/cursor-for-x/"
 tags:
   - Tech News
   - AI

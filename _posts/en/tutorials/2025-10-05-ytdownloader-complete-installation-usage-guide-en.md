@@ -15,7 +15,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/ytdownloader-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/ytdownloader-complete-installation-usage-guide-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/ytdownloader-complete-installation-usage-guide-en/"
 categories:
   - tutorials
 published: false

@@ -14,12 +14,12 @@ tags:
 author_profile: true
 toc: true
 toc_label: Contents
-canonical_url: "https://thakicloud.github.io/en/culture/three-year-window-labor-to-assets/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/three-year-window-labor-to-assets/"
 categories:
   - culture
 ---
 
-![Abstract image of human time dissolving into the light of humanoids and data centers](/assets/images/three-year-window-labor-to-assets-hero.png)
+![Abstract image of human time dissolving into the light of humanoids and data centers]({{ '/assets/images/three-year-window-labor-to-assets-hero.png' | relative_url }})
 
 ## Overview
 

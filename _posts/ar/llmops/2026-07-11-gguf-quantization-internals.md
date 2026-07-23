@@ -11,12 +11,12 @@ tags:
   - paxis
 date: 2026-07-11
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/gguf-quantization-internals/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/gguf-quantization-internals/"
 categories:
   - llmops
 ---
 
-![رسم توضيحي تجريدي لأوزان شبكة عصبية مكممة يعاد ترتيبها إلى كتل بأحجام مختلفة](/assets/images/gguf-quantization-internals-hero.png)
+![رسم توضيحي تجريدي لأوزان شبكة عصبية مكممة يعاد ترتيبها إلى كتل بأحجام مختلفة]({{ '/assets/images/gguf-quantization-internals-hero.png' | relative_url }})
 
 ## نظرة عامة
 
@@ -109,7 +109,7 @@ print(dict(hist))
 | Q4_K | 12 | 4.5 | 6.1% |
 | F32 (norm/bias) | 121 | 32.0 | 0.1% |
 
-![مخطط يظهر أحجام الملفات عبر مستويات التكميم لنموذج Qwen2.5-0.5B، وتكوين أنواع المصفوفات الفعلي داخل Q4_K_M. عرض البت الفعلي لـ Q4_K_M هو 6.16، بعيدا كثيرا عن رقم التسمية 4.0](/assets/images/gguf-quantization-internals-results.png)
+![مخطط يظهر أحجام الملفات عبر مستويات التكميم لنموذج Qwen2.5-0.5B، وتكوين أنواع المصفوفات الفعلي داخل Q4_K_M. عرض البت الفعلي لـ Q4_K_M هو 6.16، بعيدا كثيرا عن رقم التسمية 4.0]({{ '/assets/images/gguf-quantization-internals-results.png' | relative_url }})
 
 على الرغم من تسمية `Q4_K_M`، لم يشكل تكميم K الحقيقي رباعي البت (Q4_K) سوى **6.1 بالمئة** من إجمالي سعة الأوزان. وبدلا من ذلك، استحوذ النوع القديم Q5_0 ذو 5.5 بت على أكثر من النصف (54.9 بالمئة)، واستهلك Q8_0 ذو 8.5 بت نسبة 30 بالمئة. وعند حساب عرض البت الفعلي لكامل الملف، نحصل على **6.16 بت**، أي أكثر من 1.5 ضعف الـ4 بت التي توحي بها التسمية.
 

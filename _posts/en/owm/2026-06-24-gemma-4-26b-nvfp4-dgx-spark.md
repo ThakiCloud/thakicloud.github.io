@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/gemma-4-26b-nvfp4-dgx-spark/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/gemma-4-26b-nvfp4-dgx-spark/"
 lang: en
 reading_time: true
 categories:
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 12 min
 
-![Gemma 4 26B NVFP4 parallel inference concept diagram](/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp)
+![Gemma 4 26B NVFP4 parallel inference concept diagram]({{ '/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp' | relative_url }})
 
 ## Overview
 
@@ -201,7 +201,7 @@ Even with these caveats, the combination of Apache 2.0, single-box large-MoE ser
 
 - [Gemma-4-26B-A4B-NVFP4 model card (Hugging Face)](https://huggingface.co/nvidia/Gemma-4-26B-A4B-NVFP4)
 - [Original demo tweet (Google Gemma)](https://x.com/googlegemma/status/2069452783523401804)
-- [Full Gemma 4 lineup overview (ThakiCloud blog)](https://thakicloud.github.io/owm/gemma-4-open-weight-lineup/)
+- [Full Gemma 4 lineup overview (ThakiCloud blog)](https://thakicloud.com/tech-blog/owm/gemma-4-open-weight-lineup/)
 - [NVIDIA TensorRT Model Optimizer](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
 - [Introducing NVFP4 (NVIDIA Developer)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
 - [flashinfer NVFP4 GEMM SM120 issue #2577](https://github.com/flashinfer-ai/flashinfer/issues/2577)

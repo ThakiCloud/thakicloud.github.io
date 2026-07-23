@@ -6,7 +6,7 @@ seo_description: "Learn how to eliminate HoL blocking and save 31–42% of GPU t
 date: 2026-07-01
 last_modified_at: 2026-07-01
 lang: en
-canonical_url: "https://thakicloud.github.io/en/technique/dual-pool-token-budget-routing-vllm-kueue/"
+canonical_url: "https://thakicloud.com/tech-blog/en/technique/dual-pool-token-budget-routing-vllm-kueue/"
 tags:
   - vllm
   - llm-inference

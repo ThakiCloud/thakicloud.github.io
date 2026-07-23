@@ -18,7 +18,7 @@ toc: true
 toc_label: "دليل NeMo QAT الشامل"
 lang: ar
 permalink: /ar/llmops/nemo-qat-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ar/llmops/nemo-qat-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nemo-qat-comprehensive-guide/"
 published: false
 categories:
   - llmops

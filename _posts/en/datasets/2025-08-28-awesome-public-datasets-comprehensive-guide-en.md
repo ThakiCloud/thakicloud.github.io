@@ -15,14 +15,14 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/en/datasets/awesome-public-datasets-comprehensive-guide-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/awesome-public-datasets-comprehensive-guide-en/"
 categories:
   - datasets
 ---
 
 ⏱️ **Expected Reading Time**: 8 minutes
 
-![Awesome Public Datasets category overview](/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png)
+![Awesome Public Datasets category overview]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png' | relative_url }})
 
 ## Introduction
 

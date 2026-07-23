@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "chart-line"
-canonical_url: "https://thakicloud.github.io/ko/news/gpu-overinvestment-ai-agents-sovereign-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/gpu-overinvestment-ai-agents-sovereign-ai/"
 categories:
   - news
 published: false
@@ -25,7 +25,7 @@ published: false
 
 빅테크와 AI 프런티어 랩이 채권까지 발행하며 GPU를 쓸어담고 있습니다. 2026년 하이퍼스케일러 네 곳(마이크로소프트·구글·메타·아마존)의 합산 캐펙스 추정치는 약 7,250억 달러로, 전년 대비 77% 늘어난 규모입니다. 이쯤 되면 "이게 과잉투자 아니냐"는 의문이 나오는 게 당연합니다. 후발 주자가 증류(distillation)로 훨씬 적은 비용에 비슷한 성능을 따라잡는 시대에, 몇 달 먼저 좋아지는 모델 하나를 위해 수천억 달러를 태우는 게 합리적이냐는 것입니다.
 
-![대규모 GPU 데이터센터 게이트웨이와 비대칭 저울을 형상화한 개념 이미지](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-hero.webp)
+![대규모 GPU 데이터센터 게이트웨이와 비대칭 저울을 형상화한 개념 이미지]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-hero.webp' | relative_url }})
 
 이 글은 그 의문에 "거품이다 / 아니다"로 답하지 않습니다. 대신 빅테크의 지출을 움직이는 구조적 논리 두 가지를 짚고, 그것이 우리 같은 인프라 사업자와 엔터프라이즈 고객에게 무엇을 의미하는지 정리합니다. 출발점은 X에서 활발히 논의된 한 분석([@Tesla_Teslaway 스레드](https://x.com/Tesla_Teslaway/status/2070414320631173429))이었고, 핵심 수치는 직접 1차 출처로 검증했습니다.
 
@@ -88,13 +88,13 @@ published: false
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 1](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-01.webp)
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 1]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-01.webp' | relative_url }})
 
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 2](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-02.webp)
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 2]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-02.webp' | relative_url }})
 
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 3](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-03.webp)
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 3]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-03.webp' | relative_url }})
 
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 4](/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-04.webp)
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 4]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-04.webp' | relative_url }})
 
 ## 출처
 

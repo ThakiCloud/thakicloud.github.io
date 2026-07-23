@@ -6,7 +6,7 @@ seo_description: "Complete guide to Goclone website cloner. Learn installation, 
 date: 2025-10-15
 lang: en
 permalink: /en/tutorials/goclone-website-cloner-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/goclone-website-cloner-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/goclone-website-cloner-tutorial/"
 tags:
   - goclone
   - web-scraping

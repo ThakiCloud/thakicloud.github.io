@@ -4,7 +4,7 @@ excerpt: "Analysis of Eric Schmidt's TED talk: AI underestimation phenomenon, en
 date: 2025-05-27
 lang: en
 permalink: /en/news/eric-schmidt-ted-ai-revolution-underhyped/
-canonical_url: "https://thakicloud.github.io/en/news/eric-schmidt-ted-ai-revolution-underhyped/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/eric-schmidt-ted-ai-revolution-underhyped/"
 tags:
   - Tech News
   - AI

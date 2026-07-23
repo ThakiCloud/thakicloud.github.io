@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/manufacturing-autonomous-agent-teams/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/manufacturing-autonomous-agent-teams/"
 reading_time: true
 categories:
   - agentops
 published: false
 ---
 
-![Manufacturing Operations Autonomous Agent Teams Header Image](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
+![Manufacturing Operations Autonomous Agent Teams Header Image]({{ '/assets/images/manufacturing-autonomous-agent-teams-hero.webp' | relative_url }})
 
 ## Overview
 

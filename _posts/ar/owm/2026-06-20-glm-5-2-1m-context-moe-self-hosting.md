@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/glm-5-2-1m-context-moe-self-hosting/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/glm-5-2-1m-context-moe-self-hosting/"
 lang: ar
 reading_time: true
 categories:
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-![مخطط مفاهيمي لـ GLM-5.2](/assets/images/glm-5-2-hero.webp)
+![مخطط مفاهيمي لـ GLM-5.2]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
 ## ما الذي يميز GLM-5.2؟
 

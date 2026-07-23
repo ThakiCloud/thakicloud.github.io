@@ -12,7 +12,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/culture/moneyball-data-driven-culture/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/moneyball-data-driven-culture/"
 categories:
   - culture
 ---
@@ -27,7 +27,7 @@ categories:
 
 이 논리는 야구에만 적용되지 않습니다.
 
-![머니볼 사고: 개발·PM·채용에서 전통 지표를 가치에 연결된 지표로 전환](/assets/images/moneyball-data-driven-culture-diagram.svg)
+![머니볼 사고: 개발·PM·채용에서 전통 지표를 가치에 연결된 지표로 전환]({{ '/assets/images/moneyball-data-driven-culture-diagram.svg' | relative_url }})
 
 ---
 

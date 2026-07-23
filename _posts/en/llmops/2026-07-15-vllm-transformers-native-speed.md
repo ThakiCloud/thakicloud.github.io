@@ -13,7 +13,7 @@ tags:
   - paxis
 date: 2026-07-15
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/vllm-transformers-native-speed/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/vllm-transformers-native-speed/"
 categories:
   - llmops
 ---
@@ -91,7 +91,7 @@ This environment is macOS (Apple Silicon), so it cannot run vLLM's CUDA kernels,
 
 The measurements were as follows. Tracing this small decoder of 2.902M parameters produced a torch.fx graph with a total of **178 nodes**. By op type there were 80 function calls, 60 method calls, 28 module calls, and 8 attribute lookups. Among these, the function-level patterns the backend can immediately swap for fusion kernels were 16 RMSNorm reductions, 8 attention-related matmuls, 4 softmaxes, and 4 SwiGLU activations, for 32 in total, plus 28 module calls carrying the QKV/output/MLP projections and normalizations. Forward latency at sequence length 64 averaged 1.4ms, measured on torch 2.13.0.
 
-![Bar chart showing the distribution of fusion-target nodes in the torch.fx graph](/assets/images/vllm-transformers-native-speed-results.png)
+![Bar chart showing the distribution of fusion-target nodes in the torch.fx graph]({{ '/assets/images/vllm-transformers-native-speed-results.png' | relative_url }})
 
 What these numbers show is clear. Even in a single small block of 178 nodes, well-formed patterns of attention, normalization, and MLP activation recur, and these are exactly the points the backend targets to replace with vLLM kernels. In a real model with dozens of layers this pattern multiplies by the layer count, so a single graph analysis lets the backend fuse the bottleneck operations across the whole model at once. According to Hugging Face, this approach let the Transformers backend match or beat native vLLM throughput from 4B to 235B, including tensor-parallel and MoE setups. Our experiment did not reproduce those throughput figures; it confirmed by measurement the **skeleton of the mechanism** that produces them.
 

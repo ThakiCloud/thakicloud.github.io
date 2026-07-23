@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/gemma-4-26b-nvfp4-dgx-spark/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/gemma-4-26b-nvfp4-dgx-spark/"
 reading_time: true
 categories:
   - owm
@@ -28,7 +28,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 12분
 
-![Gemma 4 26B NVFP4 병렬 추론 개념도](/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp)
+![Gemma 4 26B NVFP4 병렬 추론 개념도]({{ '/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp' | relative_url }})
 
 ## 개요
 
@@ -200,7 +200,7 @@ ThakiCloud의 스킬·에이전트 생태계는 대부분 Opus/Sonnet 같은 상
 
 - [Gemma-4-26B-A4B-NVFP4 모델카드 (Hugging Face)](https://huggingface.co/nvidia/Gemma-4-26B-A4B-NVFP4)
 - [원본 데모 트윗 (Google Gemma)](https://x.com/googlegemma/status/2069452783523401804)
-- [Gemma 4 전체 라인업 정리 (ThakiCloud 블로그)](https://thakicloud.github.io/owm/gemma-4-open-weight-lineup/)
+- [Gemma 4 전체 라인업 정리 (ThakiCloud 블로그)](https://thakicloud.com/tech-blog/owm/gemma-4-open-weight-lineup/)
 - [NVIDIA TensorRT Model Optimizer](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
 - [NVFP4 소개 (NVIDIA Developer)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
 - [flashinfer NVFP4 GEMM SM120 이슈 #2577](https://github.com/flashinfer-ai/flashinfer/issues/2577)

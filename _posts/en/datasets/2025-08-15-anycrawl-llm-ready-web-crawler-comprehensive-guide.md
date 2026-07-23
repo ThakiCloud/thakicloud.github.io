@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 lang: en
 reading_time: true
 categories:
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 15 min
 
-![AnyCrawl LLM-friendly data collection pipeline overview](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
+![AnyCrawl LLM-friendly data collection pipeline overview]({{ '/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png' | relative_url }})
 
 ## Overview
 
@@ -568,6 +568,6 @@ Start exploring AI-powered data collection with Any4AI's [AnyCrawl](https://gith
 ---
 
 **Related posts:**
-- [Complete Guide to Web Scraping](https://thakicloud.github.io/tutorials/web-scraping-guide/)
-- [LLM Data Preprocessing Methods](https://thakicloud.github.io/datasets/llm-data-preprocessing/)
-- [Building Docker-Based AI Infrastructure](https://thakicloud.github.io/tutorials/docker-ai-infrastructure/)
+- [Complete Guide to Web Scraping](https://thakicloud.com/tech-blog/tutorials/web-scraping-guide/)
+- [LLM Data Preprocessing Methods](https://thakicloud.com/tech-blog/datasets/llm-data-preprocessing/)
+- [Building Docker-Based AI Infrastructure](https://thakicloud.com/tech-blog/tutorials/docker-ai-infrastructure/)

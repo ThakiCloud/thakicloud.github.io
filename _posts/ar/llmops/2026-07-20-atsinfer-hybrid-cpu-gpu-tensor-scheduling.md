@@ -17,7 +17,7 @@ toc_label: تشريح الجدولة على مستوى الموتّر
 published: true
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ar/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
 ---
 
 هذه المقالة موجّهة للمهندسين الذين يوازنون إمكانية تشغيل نموذج كبير ذاتياً على بطاقة GPU استهلاكية واحدة، ولمسؤولي البنية التحتية الذين يقرّرون مدى تصديق تغريدات "شغّل 120B على 24GB". بدايةً: فكرة ATSInfer الأساسية (arXiv:2607.10183)، الصادرة عن باحثين في جامعة نانجينغ، بسيطة ومقنعة. حيث كان الإنزال (offloading) السابق ينقل الأشياء كتلاً على مستوى "الطبقة" أو "الخبير"، يقسّم ATSInfer وصولاً إلى **الموتّرات (tensors) فرادى**. ومع ذلك، فإن الرقم البارز "حتى 3.29 ضعفاً" يقوم على عدة افتراضات، والشيفرة لم تُنشر بعد. لم نُعِد إنتاج بطاقة RTX 4090 تشغّل نموذجاً بحجم 120B هنا، لذا فإن كل رقم في هذه المقالة هو **قيمة أبلغت عنها الورقة**، مذكورة على هذا الأساس.
@@ -56,7 +56,7 @@ flowchart TB
 
 عنوان الورقة العريض: مقابل الأنظمة الهجينة الحالية (بما فيها إنزال llama.cpp على مستوى الطبقة)، يتحسّن الـ prefill (الإنتاجية حتى أول رمز) حتى 1.94 ضعفاً، والـ decode (الرموز المولّدة في الثانية) حتى 3.29 ضعفاً.
 
-![أقصى تسارع تبلّغ عنه الورقة لـ ATSInfer](/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png)
+![أقصى تسارع تبلّغ عنه الورقة لـ ATSInfer]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png' | relative_url }})
 
 الإعداد هو نظام RTX 4090 (24GB) وRTX 3060 مع 64GB من الـ RAM، والنماذج المُتحقَّق منها هي:
 

@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/rl-post-training-top-10-research-2025/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/rl-post-training-top-10-research-2025/"
 reading_time: true
 published: false
 categories:

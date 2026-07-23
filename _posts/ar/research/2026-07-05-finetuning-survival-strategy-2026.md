@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ar/research/finetuning-survival-strategy-2026/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/finetuning-survival-strategy-2026/"
 categories:
   - research
   - llmops
@@ -28,7 +28,7 @@ header:
   overlay_filter: 0.5
 ---
 
-![صورة توضيحية لاستراتيجية بقاء الضبط الدقيق](/assets/images/finetuning-survival-strategy-2026-hero.webp)
+![صورة توضيحية لاستراتيجية بقاء الضبط الدقيق]({{ '/assets/images/finetuning-survival-strategy-2026-hero.webp' | relative_url }})
 
 ## مدخل: "ألا يكفي الآن أن نستغني عن الضبط الدقيق؟"
 

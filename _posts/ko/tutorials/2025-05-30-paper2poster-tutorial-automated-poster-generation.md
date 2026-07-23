@@ -20,7 +20,7 @@ categories:
 
 ## Paper2Poster 개요
 
-![Paper2Poster Overview](/assets/images/posts/tutorial/paper2poster-overall.jpg)
+![Paper2Poster Overview]({{ '/assets/images/posts/tutorial/paper2poster-overall.jpg' | relative_url }})
 
 *Paper2Poster 시스템 개요: 논문 PDF에서 완성된 포스터까지의 전체 프로세스*
 
@@ -38,7 +38,7 @@ Paper2Poster는 두 가지 핵심 질문에 답합니다:
 
 ## PosterAgent 아키텍처
 
-![PosterAgent Architecture](/assets/images/posts/tutorial/paperagent.webp)
+![PosterAgent Architecture]({{ '/assets/images/posts/tutorial/paperagent.webp' | relative_url }})
 *PosterAgent의 3단계 파이프라인: Parser → Planner → Painter-Commenter*
 
 PosterAgent는 **top-down, visual-in-the-loop** 멀티에이전트 시스템으로 구성됩니다:

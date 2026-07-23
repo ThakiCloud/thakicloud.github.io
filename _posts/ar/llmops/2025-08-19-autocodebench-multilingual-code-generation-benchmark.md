@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/autocodebench-multilingual-code-generation-benchmark/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/autocodebench-multilingual-code-generation-benchmark/"
 lang: ar
 dir: rtl
 reading_time: true

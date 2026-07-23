@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/comprehensive-guide-llm-datasets-curation/
-canonical_url: "https://thakicloud.github.io/ko/datasets/comprehensive-guide-llm-datasets-curation/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/comprehensive-guide-llm-datasets-curation/"
 categories:
   - datasets
 ---
@@ -25,7 +25,7 @@ categories:
 
 대규모 언어 모델(LLM) 개발 환경은 극적으로 진화했으며, 데이터 품질이 모델 성능을 결정하는 가장 중요한 요소로 부상했습니다. 사전 훈련된 모델을 유능한 어시스턴트로 변환하는 후훈련 단계에서 데이터셋의 선택과 큐레이션은 무엇보다 중요합니다. 이 포괄적인 가이드는 현대 LLM 훈련 관행을 정의하는 필수 데이터셋, 방법론, 그리고 도구들을 탐구합니다.
 
-![다양한 출처의 데이터가 필터링 계층을 거쳐 정제된 단일 학습 데이터 코어로 모이는 개념도](/assets/images/comprehensive-guide-llm-datasets-curation-hero.webp)
+![다양한 출처의 데이터가 필터링 계층을 거쳐 정제된 단일 학습 데이터 코어로 모이는 개념도]({{ '/assets/images/comprehensive-guide-llm-datasets-curation-hero.webp' | relative_url }})
 
 ## 데이터셋 품질 이해: 우수성의 기초
 
@@ -157,7 +157,7 @@ categories:
 
 **Autolabel**은 인기 있는 언어 모델을 사용하여 데이터를 자동으로 라벨링함으로써 데이터 주석의 도전을 다룹니다. 이 접근법은 대량의 데이터에 걸쳐 라벨링 일관성을 유지하면서 데이터셋 준비에 필요한 수동 노력을 크게 줄일 수 있습니다. 확립된 언어 모델과의 도구 통합은 라벨링 품질이 이 분야의 현재 최선의 관행을 반영하도록 보장합니다.
 
-![수집부터 선호도 정렬·검증까지 LLM 후훈련 데이터 큐레이션 파이프라인 다이어그램](/assets/images/comprehensive-guide-llm-datasets-curation-diagram.svg)
+![수집부터 선호도 정렬·검증까지 LLM 후훈련 데이터 큐레이션 파이프라인 다이어그램]({{ '/assets/images/comprehensive-guide-llm-datasets-curation-diagram.svg' | relative_url }})
 
 ## 미래 방향과 새로운 트렌드
 

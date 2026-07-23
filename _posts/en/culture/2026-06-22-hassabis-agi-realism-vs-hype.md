@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/culture/hassabis-agi-realism-vs-hype/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/hassabis-agi-realism-vs-hype/"
 categories:
   - culture
 ---
@@ -35,7 +35,7 @@ This question is the starting point of this post. It isn't only a conversation f
 
 ---
 
-![Concept diagram](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+![Concept diagram]({{ '/assets/images/hassabis-agi-realism-vs-hype-diagram.svg' | relative_url }})
 
 *Three realism checks that filter AGI hype*
 

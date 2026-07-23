@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-11
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/demem-agent-memory/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/demem-agent-memory/"
 categories:
   - research
 ---
 
-![Abstract illustration of memories branching into separate paths that lead to different decisions](/assets/images/demem-agent-memory-hero.png)
+![Abstract illustration of memories branching into separate paths that lead to different decisions]({{ '/assets/images/demem-agent-memory-hero.png' | relative_url }})
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1oxsADQALTfdn7I_mmZbaZfMnmqoCMF9o/view).
 

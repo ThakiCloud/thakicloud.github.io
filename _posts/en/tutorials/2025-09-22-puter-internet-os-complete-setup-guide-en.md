@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/puter-internet-os-complete-setup-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/puter-internet-os-complete-setup-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/puter-internet-os-complete-setup-guide/"
 published: false
 categories:
   - tutorials

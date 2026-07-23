@@ -22,7 +22,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/fastcontext-4b-subagent-model/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/fastcontext-4b-subagent-model/"
 reading_time: true
 categories:
   - owm
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 7 min
 
-![FastContext-1.0-4B-SFT architecture overview](/assets/images/fastcontext-4b-subagent-model-hero.webp)
+![FastContext-1.0-4B-SFT architecture overview]({{ '/assets/images/fastcontext-4b-subagent-model-hero.webp' | relative_url }})
 
 ## What Is New
 

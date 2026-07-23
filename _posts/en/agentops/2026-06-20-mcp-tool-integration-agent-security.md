@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/mcp-tool-integration-agent-security/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
 categories:
   - agentops
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 10 min
 
-![Security architecture where an MCP gateway centrally handles authentication, tool allowlisting, audit logging, and rate limiting before routing requests to the GitHub, Slack, and Database MCP servers](/assets/images/mcp-tool-integration-agent-security-diagram.webp)
+![Security architecture where an MCP gateway centrally handles authentication, tool allowlisting, audit logging, and rate limiting before routing requests to the GitHub, Slack, and Database MCP servers]({{ '/assets/images/mcp-tool-integration-agent-security-diagram.webp' | relative_url }})
 
 ## How MCP Became the Production Standard
 

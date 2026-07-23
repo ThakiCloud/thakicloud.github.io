@@ -17,14 +17,14 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/llm-cost-routing-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/llm-cost-routing-guardrails/"
 reading_time: true
 categories:
   - llmops
 published: false
 ---
 
-![ضمانات توجيه تكاليف LLM في الممارسة العملية](/assets/images/llm-cost-routing-guardrails-hero.webp)
+![ضمانات توجيه تكاليف LLM في الممارسة العملية]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})
 
 ## نظرة عامة: قصة بدأت بفاتورة بقيمة $705
 

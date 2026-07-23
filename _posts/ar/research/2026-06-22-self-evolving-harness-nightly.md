@@ -17,14 +17,14 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/self-evolving-harness-nightly/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/self-evolving-harness-nightly/"
 reading_time: true
 categories:
   - research
 published: false
 ---
 
-![الحزام الذكي الذي يتطور ذاتياً كل ليلة](/assets/images/self-evolving-harness-nightly-hero.webp)
+![الحزام الذكي الذي يتطور ذاتياً كل ليلة]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})
 
 ## نظرة عامة: نظام يتحسن كل ليلة
 

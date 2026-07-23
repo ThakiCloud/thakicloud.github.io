@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/saberr-team-chemistry-data-driven-hiring/
-canonical_url: "https://thakicloud.github.io/ar/culture/saberr-team-chemistry-data-driven-hiring/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/saberr-team-chemistry-data-driven-hiring/"
 categories:
   - culture
 ---
@@ -27,7 +27,7 @@ categories:
 
 تؤكد الأبحاث باستمرار أن حوالي خمسة وستين بالمائة من فشل الشركات الناشئة ينبع من مشاكل الأشخاص. تقييمات القدرة والخبرة التقليدية تكافح للتنبؤ بديناميكيات الفريق ونقاط الصراع. سابر يتخذ نهجاً يقيس توافق القيم والتنوع السلوكي لتقليل المخاطر بشكل استباقي.
 
-![تدفق بيانات Saberr: من جمع الاستبيانات والسلوك والتفاعلات إلى التوظيف والإعداد وإعادة تشكيل الفرق](/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg)
+![تدفق بيانات Saberr: من جمع الاستبيانات والسلوك والتفاعلات إلى التوظيف والإعداد وإعادة تشكيل الفرق]({{ '/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg' | relative_url }})
 
 ## بيانات الإدخال وهندسة الميزات
 

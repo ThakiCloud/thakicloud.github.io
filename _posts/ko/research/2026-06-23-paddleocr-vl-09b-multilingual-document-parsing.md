@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "file-text"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/paddleocr-vl-09b-multilingual-document-parsing/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/paddleocr-vl-09b-multilingual-document-parsing/"
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp
@@ -26,7 +26,7 @@ categories:
 published: false
 ---
 
-![반투명한 문서가 구조화된 노드 격자로 변환되는 모습을 추상적으로 표현한 이미지](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp)
+![반투명한 문서가 구조화된 노드 격자로 변환되는 모습을 추상적으로 표현한 이미지]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp' | relative_url }})
 *수많은 문서가 구조화된 데이터로 정리되는 과정을 추상적으로 표현했습니다.*
 
 > 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1aFDms1DJR0iMABZcOX3kxPw23SSlOchT/view)할 수 있습니다.
@@ -43,7 +43,7 @@ PaddlePaddle 팀(Baidu)이 공개한 **PaddleOCR-VL**은 이 구도를 흔드는
 
 PaddleOCR-VL의 핵심 설계 사상은 "거대한 종단간(end-to-end) VLM 하나로 모든 걸 처리하지 않는다"입니다. 종단간 방식은 긴 자기회귀 디코딩에 의존하기 때문에 지연과 메모리 비용이 크고, 다단·혼합 레이아웃에서 환각과 불안정성이 두드러집니다. 그래서 PaddleOCR-VL은 작업을 두 단계로 분리합니다.
 
-![PaddleOCR-VL 2단계 파이프라인 다이어그램](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-diagram.webp)
+![PaddleOCR-VL 2단계 파이프라인 다이어그램]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-diagram.webp' | relative_url }})
 *레이아웃 분석과 요소 인식을 분리한 2단계 구조입니다.*
 
 **1단계, 레이아웃 분석(PP-DocLayoutV2)**: 가벼운 전용 모델이 문서에서 의미 영역을 찾고 분류한 뒤 읽기 순서를 예측합니다. 객체 검출에는 RT-DETR을, 읽기 순서 예측에는 6개 트랜스포머 레이어로 구성된 포인터 네트워크를 씁니다. 무거운 VLM에 레이아웃 추론까지 떠넘기지 않고 분리함으로써, 다단 레이아웃에서도 안정적인 결과를 얻습니다.
@@ -102,23 +102,23 @@ for res in out:
 ```markdown
 ## ThakiCloud Document Intelligence
 Kubernetes AI/ML SaaS Platform - Invoice No. 2026-0623
-타키클라우드 멀티테넌트 추론 비용 보고서
+다키클라우드 멀티테넌트 추론 비용 보고서
 GPU hours: 1,284 Total: $9,640.00
 E = mc^2 sum_{i=1}^{n} x_i
 ```
 
-주목할 점은, 영어 제목을 Markdown 헤딩(`##`)으로 잡아내고, 한국어 문장 "타키클라우드 멀티테넌트 추론 비용 보고서"를 정확히 인식했으며, 숫자와 통화 표기($9,640.00, GPU hours 1,284)도 오차 없이 읽었다는 것입니다. 0.9B 모델치고 한국어 인식 품질이 상당히 안정적이었습니다.
+주목할 점은, 영어 제목을 Markdown 헤딩(`##`)으로 잡아내고, 한국어 문장 "다키클라우드 멀티테넌트 추론 비용 보고서"를 정확히 인식했으며, 숫자와 통화 표기($9,640.00, GPU hours 1,284)도 오차 없이 읽었다는 것입니다. 0.9B 모델치고 한국어 인식 품질이 상당히 안정적이었습니다.
 
 한 가지 정직하게 기록할 부분이 있습니다. 제가 만든 합성 이미지의 아랍어 줄은 텍스트로 전사되지 않고 이미지 영역으로 분류됐습니다. 이는 모델 결함이라기보다 테스트 이미지 쪽 문제입니다. PIL로 아랍어를 렌더링할 때 글자 연결(shaping)과 양방향(bidi) 처리가 제대로 되지 않아 글자가 분리된 형태로 그려졌고, 레이아웃 단계가 이를 그림으로 판단한 것으로 보입니다. 논문이 보고하는 아랍어 라인 인식 편집 거리는 0.122로 충분히 낮으므로, 실제 아랍어 문서라면 다른 결과가 나옵니다. 이 경험 자체가 "전처리·렌더링 품질이 결과를 좌우한다"는 운영상의 교훈을 줍니다.
 
 논문이 공개 벤치마크에서 보고한 수치도 함께 봅니다. 아래는 기반 논문(arXiv:2510.14528)이 109개 언어 중 일부에 대해 보고한 라인 단위 텍스트 인식 편집 거리입니다(낮을수록 좋음).
 
-![PaddleOCR-VL 다국어 텍스트 인식 편집 거리 차트](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-results.webp)
+![PaddleOCR-VL 다국어 텍스트 인식 편집 거리 차트]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-results.webp' | relative_url }})
 *ThakiCloud의 핵심 시장 언어인 한국어와 아랍어를 강조했습니다. 출처: arXiv:2510.14528.*
 
 한국어는 0.052, 아랍어는 0.122로, ThakiCloud가 주목하는 두 시장 언어 모두 양호한 편집 거리를 보입니다. 페이지 단위 종합 성능에서도 기반 논문은 OmniDocBench v1.5 종합 점수 92.86으로 차순위 MinerU2.5-1.2B(90.67)를 앞섰다고 보고합니다.
 
-![OmniDocBench v1.5 종합 점수 비교 차트](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-bench.webp)
+![OmniDocBench v1.5 종합 점수 비교 차트]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-bench.webp' | relative_url }})
 *0.9B 모델이 1.2B 모델을 앞선 종합 점수입니다. 출처: arXiv:2510.14528 Table 2.*
 
 수치를 인용할 때는 버전을 분명히 해야 합니다. 기반 논문(2510.14528)은 OmniDocBench v1.5에서 92.86을 보고했고, 이후 후속 버전인 PaddleOCR-VL-1.5는 v1.5에서 94.5%, PaddleOCR-VL-1.6은 v1.6에서 96.33%를 [추정]치로 보고합니다(후속 버전 수치는 별도 리포트 기준). 트위터에서 본 96.33%는 가장 최신 1.6 버전의 점수입니다. 한편 논문이 측정한 추론 속도는 단일 NVIDIA A100에서 PDF를 512개씩 배치 처리하고 vLLM·SGLang·FastDeploy 같은 고성능 서빙 엔진을 쓴 환경 기준이라는 점도 함께 기억해야 합니다. 저희가 CPU에서 잰 32.65초/페이지는 가속 없는 환경의 참고치이며, 프로덕션 처리량과는 다릅니다.

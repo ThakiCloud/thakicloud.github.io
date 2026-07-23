@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-04
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/tutorials/anthropic-prompting-guide-latest-models/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/anthropic-prompting-guide-latest-models/"
 categories:
   - tutorials
 ---
 
-![구조화된 지시가 층층이 쌓여 하나의 정돈된 출력으로 수렴하는 추상 이미지](/assets/images/anthropic-prompting-guide-latest-models-hero.webp)
+![구조화된 지시가 층층이 쌓여 하나의 정돈된 출력으로 수렴하는 추상 이미지]({{ '/assets/images/anthropic-prompting-guide-latest-models-hero.webp' | relative_url }})
 *명료한 지시와 구조가 모여 예측 가능한 출력으로 수렴하는 프롬프팅의 원리를 형상화했습니다.*
 
 ## 개요

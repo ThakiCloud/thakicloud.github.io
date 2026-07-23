@@ -15,14 +15,14 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/datasets/awesome-public-datasets-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ko/datasets/awesome-public-datasets-comprehensive-guide-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/awesome-public-datasets-comprehensive-guide-ko/"
 categories:
   - datasets
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![Awesome Public Datasets 카테고리 구성 개요](/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png)
+![Awesome Public Datasets 카테고리 구성 개요]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png' | relative_url }})
 
 ## 서론
 

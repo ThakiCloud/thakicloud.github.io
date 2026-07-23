@@ -20,7 +20,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/11C6QuzImumRIl683NxsmsH-4GKEkckqI/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
 ---
 
 ## 개요
@@ -747,11 +747,11 @@ Kimi-Researcher는 단순히 성능이 우수한 AI 모델을 넘어, **AI 에�
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 1](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-01.webp)
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 1]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-01.webp' | relative_url }})
 
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 2](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-02.webp)
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 2]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-02.webp' | relative_url }})
 
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 3](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-03.webp)
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 3]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-03.webp' | relative_url }})
 
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 4](/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-04.webp)
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 4]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-04.webp' | relative_url }})
 

@@ -7,7 +7,7 @@ date: 2025-08-21
 last_modified_at: 2025-08-21
 lang: en
 permalink: /en/research/chain-of-agents-llm-collaboration-long-context-tasks/
-canonical_url: "https://thakicloud.github.io/en/research/chain-of-agents-llm-collaboration-long-context-tasks/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/chain-of-agents-llm-collaboration-long-context-tasks/"
 tags:
   - llm
   - multiagent

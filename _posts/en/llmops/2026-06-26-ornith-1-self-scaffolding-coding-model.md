@@ -6,7 +6,7 @@ seo_description: "Analysis of DeepReinforce Ornith-1.0 (MIT, 9B/31B/35B/397B): s
 date: 2026-06-26
 last_modified_at: 2026-06-26
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/ornith-1-self-scaffolding-coding-model/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ornith-1-self-scaffolding-coding-model/"
 tags:
   - ornith
   - deepreinforce
@@ -26,7 +26,7 @@ categories:
   - llmops
 ---
 
-![Abstract image depicting a self-scaffolding structure building its own foundation layer by layer](/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp)
+![Abstract image depicting a self-scaffolding structure building its own foundation layer by layer]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp' | relative_url }})
 *An abstract representation of self-scaffolding reinforcement learning, where a model constructs its own training scaffold from the ground up.*
 
 Competition among open-weight coding models has moved beyond "what benchmark score did you hit?" toward "what training method produced that score?" `Ornith-1.0`, released by DeepReinforce on June 25, 2026, is a model where the methodology itself is the headline. The reinforcement learning design lets the model **write the training scaffold that guides its own solutions** at the same time it generates those solutions.
@@ -70,7 +70,7 @@ flowchart LR
     S1 -. "Co-evolve" .- S2
 ```
 
-This structure matters for two reasons. First, the bottleneck of humans hand-tuning scaffolds disappears. When the task distribution shifts, the model re-builds its scaffold on its own. Second, because the scaffold is exposed directly to the reward signal, the common failure mode of "the policy is fine but the scaffold is bad so the score never climbs" becomes correctable inside the training loop. This is in the same family as the [Loop Engineering pattern](https://thakicloud.github.io/en/llmops/) that uses external tools (compilers, tests) as reward signals, but goes one step further by adding **the scaffold itself** to the set of things receiving that reward.
+This structure matters for two reasons. First, the bottleneck of humans hand-tuning scaffolds disappears. When the task distribution shifts, the model re-builds its scaffold on its own. Second, because the scaffold is exposed directly to the reward signal, the common failure mode of "the policy is fine but the scaffold is bad so the score never climbs" becomes correctable inside the training loop. This is in the same family as the [Loop Engineering pattern](https://thakicloud.com/tech-blog/en/llmops/) that uses external tools (compilers, tests) as reward signals, but goes one step further by adding **the scaffold itself** to the set of things receiving that reward.
 
 ## Public Benchmarks
 

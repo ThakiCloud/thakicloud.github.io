@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/stanford-storm-4-prompt-research-workflow/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
 categories:
   - research
@@ -50,7 +50,7 @@ STORM의 파이프라인은 크게 두 단계입니다.
 - **3단계, 개요 합성**: 수집된 근거를 종합해 계층적 개요를 만듭니다. 이때 중복을 제거하고 논리 순서를 잡습니다.
 - **4단계, 인용 본문 작성**: 개요를 따라 본문을 작성하되, 모든 주장에 근거를 연결합니다.
 
-![STORM 4단계 리서치 워크플로](/assets/images/stanford-storm-4-prompt-research-workflow-diagram.svg)
+![STORM 4단계 리서치 워크플로]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-diagram.svg' | relative_url }})
 
 각 단계를 분리하면 중간 산출물을 검증할 수 있습니다. 개요가 엉성하면 본문도 엉성하므로, 3단계에서 멈추고 고치는 것이 4단계 결과를 통째로 버리는 것보다 훨씬 쌉니다.
 
@@ -76,11 +76,11 @@ STORM의 메시지는 분명합니다. 좋은 리서치 자동화는 "더 똑똑
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 1](/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.png)
+![stanford-storm-4-prompt-research-workflow 슬라이드 1]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.png' | relative_url }})
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 2](/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.png)
+![stanford-storm-4-prompt-research-workflow 슬라이드 2]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.png' | relative_url }})
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 3](/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.png)
+![stanford-storm-4-prompt-research-workflow 슬라이드 3]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.png' | relative_url }})
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 4](/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.png)
+![stanford-storm-4-prompt-research-workflow 슬라이드 4]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.png' | relative_url }})
 

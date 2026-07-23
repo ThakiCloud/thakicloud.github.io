@@ -16,12 +16,12 @@ Usage (inside a sitemap <url> block): {% include hreflang-alternates.html url=po
     {%- if p.lang == 'ar' -%}{%- assign _ar = p.url -%}{%- endif -%}
   {%- endif -%}
 {%- endfor -%}
-{%- if _ko != '' %}      <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}{{ _ko }}" />
+{%- if _ko != '' %}      <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}{{ site.baseurl }}{{ _ko }}" />
 {% endif -%}
-{%- if _en != '' %}      <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ _en }}" />
+{%- if _en != '' %}      <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}{{ _en }}" />
 {% endif -%}
-{%- if _ar != '' %}      <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}{{ _ar }}" />
+{%- if _ar != '' %}      <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}{{ site.baseurl }}{{ _ar }}" />
 {% endif -%}
 {%- if _ko != '' -%}{%- assign _xdef = _ko -%}{%- elsif _en != '' -%}{%- assign _xdef = _en -%}{%- else -%}{%- assign _xdef = _ar -%}{%- endif -%}
-{%- if _xdef != '' %}      <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ _xdef }}" />
+{%- if _xdef != '' %}      <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ _xdef }}" />
 {% endif -%}

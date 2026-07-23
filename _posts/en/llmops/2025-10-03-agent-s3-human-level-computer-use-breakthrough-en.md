@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/agent-s3-human-level-computer-use-breakthrough/
-canonical_url: "https://thakicloud.github.io/en/llmops/agent-s3-human-level-computer-use-breakthrough/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/agent-s3-human-level-computer-use-breakthrough/"
 categories:
   - llmops
 published: false

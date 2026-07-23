@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/qwen3-coder-480b-agent-coding-revolution-workflow-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/qwen3-coder-480b-agent-coding-revolution-workflow-automation/"
 reading_time: true
 published: false
 categories:

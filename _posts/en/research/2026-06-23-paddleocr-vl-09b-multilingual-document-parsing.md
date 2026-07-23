@@ -18,7 +18,7 @@ toc_label: "Table of Contents"
 toc_icon: "file-text"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/paddleocr-vl-09b-multilingual-document-parsing/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/paddleocr-vl-09b-multilingual-document-parsing/"
 reading_time: true
 header:
   image: /assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp
@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Abstract image showing translucent documents transforming into a structured node grid](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp)
+![Abstract image showing translucent documents transforming into a structured node grid]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-hero.webp' | relative_url }})
 *An abstract representation of many documents being organized into structured data.*
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1aFDms1DJR0iMABZcOX3kxPw23SSlOchT/view).
@@ -44,7 +44,7 @@ At ThakiCloud, we operate multi-tenant inference and document processing workloa
 
 The core design philosophy of PaddleOCR-VL is: **do not handle everything with a single large end-to-end VLM**. End-to-end approaches rely on long autoregressive decoding, which is costly in latency and memory, and they are prone to hallucinations and instability on multi-column or mixed layouts. PaddleOCR-VL separates the work into two stages instead.
 
-![PaddleOCR-VL two-stage pipeline diagram](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-diagram.webp)
+![PaddleOCR-VL two-stage pipeline diagram]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-diagram.webp' | relative_url }})
 *Two-stage structure separating layout analysis from element recognition.*
 
 **Stage 1, Layout Analysis (PP-DocLayoutV2)**: A lightweight dedicated model locates and classifies semantic regions in the document, then predicts reading order. It uses RT-DETR for object detection and a pointer network with 6 transformer layers for reading order prediction. By offloading layout reasoning from the heavy VLM into a separate module, the pipeline achieves stable results even on complex multi-column layouts.
@@ -103,23 +103,23 @@ The recognized Markdown output was as follows:
 ```markdown
 ## ThakiCloud Document Intelligence
 Kubernetes AI/ML SaaS Platform - Invoice No. 2026-0623
-타키클라우드 멀티테넌트 추론 비용 보고서
+다키클라우드 멀티테넌트 추론 비용 보고서
 GPU hours: 1,284 Total: $9,640.00
 E = mc^2 sum_{i=1}^{n} x_i
 ```
 
-Notable observations: the model captured the English heading as a Markdown heading (`##`), correctly recognized the Korean sentence "타키클라우드 멀티테넌트 추론 비용 보고서" verbatim, and read the numeric and currency values ($9,640.00, GPU hours 1,284) without error. Korean recognition quality was surprisingly stable for a 0.9B model.
+Notable observations: the model captured the English heading as a Markdown heading (`##`), correctly recognized the Korean sentence "다키클라우드 멀티테넌트 추론 비용 보고서" verbatim, and read the numeric and currency values ($9,640.00, GPU hours 1,284) without error. Korean recognition quality was surprisingly stable for a 0.9B model.
 
 One finding worth reporting honestly: the Arabic line in our synthetic image was classified as an image region rather than transcribed as text. This appears to be an issue with our test image rather than a model defect. When rendering Arabic with PIL, character joining (shaping) and bidirectional (bidi) text handling were not applied correctly, causing the characters to render in an unconnected form. The layout stage likely interpreted this as a graphic. The Arabic line-level edit distance reported in the paper is 0.122, which is low enough to suggest that real Arabic documents would yield very different results. The experience itself is an operational lesson: preprocessing and rendering quality drive outcomes.
 
 Let us also look at the benchmark numbers the paper reports on public datasets. The chart below shows per-language line-level text recognition edit distances reported in the base paper (arXiv:2510.14528) for a subset of the 109 supported languages (lower is better).
 
-![PaddleOCR-VL multilingual text recognition edit distance chart](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-results.webp)
+![PaddleOCR-VL multilingual text recognition edit distance chart]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-results.webp' | relative_url }})
 *Korean and Arabic highlighted as ThakiCloud's core market languages. Source: arXiv:2510.14528.*
 
 Korean achieves 0.052 and Arabic achieves 0.122 -- solid edit distances for both languages ThakiCloud targets. At the page level, the base paper reports an OmniDocBench v1.5 aggregate score of 92.86, ahead of the next-best MinerU2.5-1.2B (90.67).
 
-![OmniDocBench v1.5 aggregate score comparison chart](/assets/images/paddleocr-vl-09b-multilingual-document-parsing-bench.webp)
+![OmniDocBench v1.5 aggregate score comparison chart]({{ '/assets/images/paddleocr-vl-09b-multilingual-document-parsing-bench.webp' | relative_url }})
 *A 0.9B model beating a 1.2B model on aggregate score. Source: arXiv:2510.14528 Table 2.*
 
 When citing these numbers, version clarity matters. The base paper (2510.14528) reports 92.86 on OmniDocBench v1.5. The subsequent release PaddleOCR-VL-1.5 reports 94.5% on v1.5, and PaddleOCR-VL-1.6 reports 96.33% on v1.6 as an [estimated] figure (based on a separate report for the later version). The 96.33% seen on social media is the score from the latest 1.6 release. It is also worth keeping in mind that the inference throughput figures in the paper were measured on a single NVIDIA A100 with batch sizes of 512 PDFs and high-performance serving engines like vLLM, SGLang, and FastDeploy. Our CPU-measured 32.65s per page is a reference point for an unaccelerated environment -- not a production throughput figure.

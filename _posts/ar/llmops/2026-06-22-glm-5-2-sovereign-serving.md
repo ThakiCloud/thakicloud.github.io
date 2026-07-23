@@ -22,7 +22,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-sovereign-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/glm-5-2-sovereign-serving/"
 reading_time: true
 categories:
   - llmops

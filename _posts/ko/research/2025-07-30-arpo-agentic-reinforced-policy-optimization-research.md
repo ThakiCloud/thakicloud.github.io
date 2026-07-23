@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/arpo-agentic-reinforced-policy-optimization-research/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/arpo-agentic-reinforced-policy-optimization-research/"
 reading_time: true
 published: false
 categories:
@@ -510,11 +510,11 @@ ARPO의 등장은 AI 에이전트 개발에서 다음과 같은 변화를 가져
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.webp)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.webp' | relative_url }})
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.webp)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.webp' | relative_url }})
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.webp)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.webp' | relative_url }})
 
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4](/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.webp)
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.webp' | relative_url }})
 

@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/ai-ebook-launch-skill-pipeline/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/ai-ebook-launch-skill-pipeline/"
 reading_time: true
 categories:
   - news
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-![مخطط مفاهيمي لخط أنابيب تأليف الكتب الإلكترونية الآلي](/assets/images/ai-ebook-pipeline-hero.webp)
+![مخطط مفاهيمي لخط أنابيب تأليف الكتب الإلكترونية الآلي]({{ '/assets/images/ai-ebook-pipeline-hero.webp' | relative_url }})
 
 هذا المقال ليس عرضاً لمحتوى كتاب. إنه سجل حول مدى التشغيل الآلي الممكن حين تجمع عملية صنع الكتاب بأكملها في مهارة واحدة. أنتجت مهارة `ai-ebook-launch` 5 كتب إلكترونية كورية خلال 6 أيام. ما يستحق الانتباه ليس "ما الكتب التي كُتبت" بل "أي مراحل سارت من الفكرة إلى الكتاب الجاهز للبيع بلا تدخل بشري".
 

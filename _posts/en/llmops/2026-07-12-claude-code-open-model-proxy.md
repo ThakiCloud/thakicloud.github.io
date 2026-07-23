@@ -12,7 +12,7 @@ tags:
   - paxis
 date: 2026-07-12
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-open-model-proxy/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/claude-code-open-model-proxy/"
 categories:
   - llmops
 ---

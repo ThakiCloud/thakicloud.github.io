@@ -13,14 +13,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/waiting-for-carnot/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/waiting-for-carnot/"
 header:
   image: /assets/images/waiting-for-carnot-hero.webp
 categories:
   - culture
 ---
 
-![증기와 파동, 에너지의 흐름이 교차하는 추상 비주얼](/assets/images/waiting-for-carnot-hero.webp)
+![증기와 파동, 에너지의 흐름이 교차하는 추상 비주얼]({{ '/assets/images/waiting-for-carnot-hero.webp' | relative_url }})
 
 ## 20와트의 질문
 

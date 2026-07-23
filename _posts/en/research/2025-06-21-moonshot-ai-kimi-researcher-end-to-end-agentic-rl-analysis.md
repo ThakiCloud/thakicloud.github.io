@@ -4,7 +4,7 @@ excerpt: "In-depth analysis of Moonshot AI's Kimi-Researcher, which achieved 26.
 date: 2025-06-21
 lang: en
 permalink: /en/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/
-canonical_url: "https://thakicloud.github.io/en/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis/"
 tags: 
   - Kimi-Researcher
   - Moonshot-AI

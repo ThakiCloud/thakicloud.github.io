@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "coins"
-canonical_url: "https://thakicloud.github.io/ko/llmops/coinbase-flat-ai-spend-routing-caching-defaults/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/coinbase-flat-ai-spend-routing-caching-defaults/"
 categories:
   - llmops
 ---

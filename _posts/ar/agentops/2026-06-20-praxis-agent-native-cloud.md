@@ -4,7 +4,7 @@ excerpt: "كما تعامل السحابة التقليدية الخوادم م�
 seo_title: "Paxis Agent-Native Cloud: الحوكمة وCostRouter والمهارات المتطورة - Thaki Cloud"
 seo_description: "ThakiCloud Paxis هو Agent-Native Cloud لتشغيل وكلاء الذكاء الاصطناعي المستقلة بأمان. يضمّ حوكمة استقلالية L0-L3، وتحسين تكاليف CostRouter متعدد النماذج، ومحرك معرفة HKE مبني على Git، وحزمة 849 مهارة. مع شرح بكود حقيقي."
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/agentops/praxis-agent-native-cloud/
+canonical_url: https://thakicloud.com/tech-blog/ar/agentops/praxis-agent-native-cloud/
 date: 2026-06-20
 last_modified_at: 2026-06-20
 tags:
@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![البنية الطبقية لـ Paxis: البنية التحتية السحابية في القاعدة، ثم Paxis Core فوقها، ثم طبقة قدرات 849 مهارة و14 وكيل نطاق في الأعلى](/assets/images/praxis-architecture-hero.webp)
+![البنية الطبقية لـ Paxis: البنية التحتية السحابية في القاعدة، ثم Paxis Core فوقها، ثم طبقة قدرات 849 مهارة و14 وكيل نطاق في الأعلى]({{ '/assets/images/praxis-architecture-hero.webp' | relative_url }})
 
 ## السؤال التالي في السحابة: كيف تُشغّل الوكلاء؟
 
@@ -35,7 +35,7 @@ published: false
 
 Paxis يستهدف هذا الفراغ. تعامَلت السحابة التقليدية مع الحوسبة وقواعد البيانات والشبكات باعتبارها موارد من الدرجة الأولى. Paxis يعامل قدرات وكلاء الذكاء الاصطناعي (Skills) وأدواتهم (Tools) وسياساتهم (Policies) وسجلات التدقيق (Audit) باعتبارها موارد من الدرجة الأولى. يستطيع العملاء توظيف "فريق كامل من موظفي الذكاء الاصطناعي" وإدارته ومراجعته دون كتابة أي كود. نُسمّي هذه الفئة Agent-Native Cloud.
 
-![السحابة التقليدية تُدير Compute وDB وNetwork كموارد درجة أولى؛ Paxis يُدير Skills وTools وPolicies وAudit Logs](/assets/images/praxis-cloud-analogy.webp)
+![السحابة التقليدية تُدير Compute وDB وNetwork كموارد درجة أولى؛ Paxis يُدير Skills وTools وPolicies وAudit Logs]({{ '/assets/images/praxis-cloud-analogy.webp' | relative_url }})
 
 هذه المقالة ليست شعارات تسويقية، بل شرح لـ PoC عامل مع كود حقيقي. كل رقم أدناه تحقّق من خلال خادم فعلي (`localhost:8080`).
 

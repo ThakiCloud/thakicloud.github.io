@@ -11,7 +11,7 @@ toc: true
 toc_label: "AI Engineering Roadmap"
 lang: en
 permalink: /en/careers/ai-engineering-learning-roadmap/
-canonical_url: "https://thakicloud.github.io/en/careers/ai-engineering-learning-roadmap/"
+canonical_url: "https://thakicloud.com/tech-blog/en/careers/ai-engineering-learning-roadmap/"
 categories:
   - careers
 ---

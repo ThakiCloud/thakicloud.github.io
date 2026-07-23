@@ -3,7 +3,7 @@ title: "AI Engineering Hub Fastest RAG Stack Complete Source Code Analysis: 40x 
 excerpt: "An in-depth source-code-level analysis of the Fastest RAG Stack project from the 10.7k-star AI Engineering Hub, with practical guidance for building an ultra-fast RAG system using Binary Quantization."
 date: 2025-06-21
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-engineering-hub-fastest-rag-stack-source-code-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-engineering-hub-fastest-rag-stack-source-code-analysis/"
 tags: 
   - Fastest-RAG-Stack
   - Binary-Quantization

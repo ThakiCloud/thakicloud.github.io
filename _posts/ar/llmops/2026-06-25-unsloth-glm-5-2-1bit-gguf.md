@@ -6,7 +6,7 @@ seo_description: "تحليل لـ Unsloth GLM-5.2 Dynamic GGUF (من 1.51 تير
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-glm-5-2-1bit-gguf/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/unsloth-glm-5-2-1bit-gguf/"
 tags:
   - gguf
   - quantization
@@ -103,7 +103,7 @@ huggingface-cli download unsloth/GLM-5.2-GGUF \
 | ثلاثة بتات | UD-Q3_K_XL | 332 جيجابايت | أصغر بنحو 78% |
 | أربعة بتات | Q4_K_M | 456 جيجابايت | أصغر بنحو 70% |
 
-![حجم ملف GLM-5.2 لكل مستوى تكميم ونسبة الضغط مقابل BF16](/assets/images/unsloth-glm-5-2-1bit-gguf-results.webp)
+![حجم ملف GLM-5.2 لكل مستوى تكميم ونسبة الضغط مقابل BF16]({{ '/assets/images/unsloth-glm-5-2-1bit-gguf-results.webp' | relative_url }})
 
 أما الدقة، فيذكر Unsloth أن التكميم الديناميكي يفقد أقل من التكميم الساذج عند المتوسط نفسه من البتات. وتشير المواد العامة إلى أن نسخة البِت الواحد الديناميكية تحتفظ بنحو 76% [تقديري] على مقياس دقتها الداخلي، ونسخة البِتين بنحو 82%، مع كونها أصغر بأكثر من 80% من الأصل. يختلف المقياس الدقيق ومجموعة البيانات حسب النسخة ومجموعة التقييم، لذا اقرأ هذه الأرقام كاتجاه أكثر من كونها قيمًا مطلقة: يزداد الفقد تدريجيًا مع انخفاض البتات، لكن حتى البِت الواحد يبقى في نطاق قابل للاستخدام. كما ينشر Unsloth نتائج GGUF الديناميكي على معيار Aider Polyglot للبرمجة، ما يتيح التحقق المتقاطع لجودة كل مستوى في مهام البرمجة.
 

@@ -19,19 +19,20 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-reasoning-token-economics/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 루빅스 큐브 하나를 풀게 하는 데 모델이 22만 토큰을 생각한다면, 그 비용은 누가 냅니까. 개발자 도구를 만드는 Matt Pocock(@mattpocockuk)이 자신의 `/teach` 스킬과 `pi`로 GLM-5.2에 루빅스 큐브 풀이를 시키면서 남긴 첫인상이 바로 이 질문을 던집니다. 가장 낮은 effort 설정(High)에서도 3턴에 약 22만 토큰의 사고 트레이스가 쌓였다는 관찰입니다. 추론 모델이 강해진다는 말은 곧 토큰을 많이 쓴다는 말이고, 토큰을 많이 쓴다는 말은 누군가 그만큼의 청구서를 받는다는 뜻입니다.
 
-이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 가중치를 1비트로 줄여 작은 하드웨어에 올리는 양자화 이야기는 [별도 글](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 한 단계 위입니다. 장황하게 생각하는 오픈웨이트 추론 모델이 등장했을 때, **토큰당 과금하는 클라우드 API와 GPU 시간을 상각하는 온프레미스 자가호스팅의 비용 셈법이 어떻게 갈라지는가**입니다. 결론을 먼저 말하면, 추론이 길어질수록 자가호스팅 쪽이 유리해지는 구간이 분명히 존재하며, 이 지점이 ThakiCloud가 K8s 기반 멀티테넌트 플랫폼에서 주목하는 곳입니다.
+이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 가중치를 1비트로 줄여 작은 하드웨어에 올리는 양자화 이야기는 [별도 글](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 한 단계 위입니다. 장황하게 생각하는 오픈웨이트 추론 모델이 등장했을 때, **토큰당 과금하는 클라우드 API와 GPU 시간을 상각하는 온프레미스 자가호스팅의 비용 셈법이 어떻게 갈라지는가**입니다. 결론을 먼저 말하면, 추론이 길어질수록 자가호스팅 쪽이 유리해지는 구간이 분명히 존재하며, 이 지점이 ThakiCloud가 K8s 기반 멀티테넌트 플랫폼에서 주목하는 곳입니다.
 
 본문의 모든 수치는 Z.ai와 여러 매체가 공개한 측정치이거나, 공개 파라미터 수에서 도출한 산수입니다. 744B 모델은 본 분석 환경에서 직접 실행할 수 없어 자체 벤치마크 대신 공개 수치를 인용하며, 산수로 도출한 추정치는 모두 `[추정]`으로 표시합니다.
 
-![루빅스 큐브 한 문제에 22만 토큰을 생각하는 추론 모델, 토큰당 청구되는 비용 구조](/assets/images/glm-5-2-reasoning-token-economics-slide-01.webp)
+![루빅스 큐브 한 문제에 22만 토큰을 생각하는 추론 모델, 토큰당 청구되는 비용 구조]({{ '/assets/images/glm-5-2-reasoning-token-economics-slide-01.webp' | relative_url }})
 
 ## 개요
 
@@ -58,7 +59,7 @@ SWE-bench Pro에서 62.1로 GPT-5.5(58.6)와 전 세대 GLM-5.1(58.4)을 앞서�
 
 그리고 사용자에게 직접 노출되는 레버가 effort 설정입니다. GLM-5.2는 High와 Max 두 단계의 effort를 제공하고, Z.ai는 코딩 과제에 Max를 권합니다. 새 세션의 기본값은 High입니다. 공개된 측정에 따르면 Max effort는 과제당 약 8만 5천 출력 토큰까지 쓰며 최고 지능을 끌어내고, High effort는 성능을 몇 점만 양보하는 대신 출력 토큰을 사실상 절반으로 줄입니다. 다시 말해, 토큰 사용량이 모델 내부에서 자동으로 결정되는 것이 아니라 운영자가 명시적으로 조절할 수 있는 손잡이라는 뜻입니다. 이 손잡이가 뒤에서 다룰 비용 셈법의 핵심 변수입니다.
 
-![폐쇄형 클라우드 API 경로와 ThakiCloud 온프레미스 자가호스팅 경로의 비용 구조 대비](/assets/images/glm-5-2-reasoning-token-economics-diagram.webp)
+![폐쇄형 클라우드 API 경로와 ThakiCloud 온프레미스 자가호스팅 경로의 비용 구조 대비]({{ '/assets/images/glm-5-2-reasoning-token-economics-diagram.webp' | relative_url }})
 
 ## /teach가 드러낸 것: 추론은 토큰을 먹는다
 
@@ -81,7 +82,7 @@ Matt Pocock의 관찰로 돌아가 봅니다. 가장 낮은 effort에서도 루�
 
 물론 자가호스팅에는 진입 장벽이 있습니다. 744B 가중치를 어딘가에 올려야 합니다. 공개 파라미터 수에서 도출한 가중치 메모리는 다음과 같습니다(KV 캐시 제외, 순수 산수 `[추정]`).
 
-![744B 가중치의 정밀도별 메모리 풋프린트와 과제당 출력 비용 곡선](/assets/images/glm-5-2-reasoning-token-economics-results.webp)
+![744B 가중치의 정밀도별 메모리 풋프린트와 과제당 출력 비용 곡선]({{ '/assets/images/glm-5-2-reasoning-token-economics-results.webp' | relative_url }})
 
 BF16 기준 약 1,488GB, FP8 약 744GB, FP4/NVFP4 약 372GB입니다. 8장의 H100(80GB)을 묶으면 640GB, 8장의 H200(141GB)을 묶으면 1,128GB이므로, FP8 양자화 가중치는 H200 한 노드에 충분히 들어가고 H100 노드에는 KV 캐시 여유를 보면 빠듯합니다. FP4까지 내리면 H100 한 노드에도 여유가 생깁니다. 즉 프런티어급 추론 모델을 단일 GPU 노드에서 자가호스팅하는 것이 더 이상 비현실적이지 않습니다.
 
@@ -91,7 +92,7 @@ BF16 기준 약 1,488GB, FP8 약 744GB, FP4/NVFP4 약 372GB입니다. 8장의 H1
 
 ThakiCloud는 K8s 기반 멀티테넌트 AI/ML SaaS 플랫폼을 운영하면서, 고객 데이터를 외부로 내보내지 않는 온프레미스·VPC 서빙을 다룹니다. GLM-5.2 같은 강한 오픈웨이트 추론 모델은 우리 플랫폼의 가치 제안과 정확히 맞물립니다.
 
-![Kueue 기반 GPU 큐잉으로 effort 단계와 큐 우선순위를 연동하고, 데이터·모델 주권과 vLLM 서빙 통합을 함께 제공하는 구조](/assets/images/glm-5-2-reasoning-token-economics-slide-06.webp)
+![Kueue 기반 GPU 큐잉으로 effort 단계와 큐 우선순위를 연동하고, 데이터·모델 주권과 vLLM 서빙 통합을 함께 제공하는 구조]({{ '/assets/images/glm-5-2-reasoning-token-economics-slide-06.webp' | relative_url }})
 
 첫째, **수출통제 회피가 아니라 주권 확보의 문제**입니다. 폐쇄형 미국 모델의 해외 접근이 정책으로 막히는 상황에서, MIT 라이선스 가중치를 고객 클러스터 안에서 직접 서빙하면 외부 정책 변화에 흔들리지 않는 모델 주권을 확보합니다. 데이터도, 모델도 테넌트 경계를 벗어나지 않습니다.
 
@@ -105,7 +106,7 @@ ThakiCloud는 K8s 기반 멀티테넌트 AI/ML SaaS 플랫폼을 운영하면서
 
 이 분석에는 정직하게 밝혀야 할 약점이 있습니다.
 
-![자가호스팅이 유리한 성공 조건(긴 추론 트레이스·높은 호출 빈도·24시간 가동)과 불리한 실패 조건(간헐적 소규모 호출·유휴 방치)](/assets/images/glm-5-2-reasoning-token-economics-slide-07.webp)
+![자가호스팅이 유리한 성공 조건(긴 추론 트레이스·높은 호출 빈도·24시간 가동)과 불리한 실패 조건(간헐적 소규모 호출·유휴 방치)]({{ '/assets/images/glm-5-2-reasoning-token-economics-slide-07.webp' | relative_url }})
 
 자가호스팅이 항상 싼 것은 아닙니다. 비용 셈법이 뒤집히는 구간은 "긴 트레이스 × 높은 빈도"이지, 가끔 호출하는 소규모 워크로드가 아닙니다. 호출 빈도가 낮으면 GPU 노드의 고정비를 상각할 분모가 작아, 토큰당 과금 API가 오히려 쌉니다. 8장 GPU 노드를 유휴 상태로 두는 것만큼 비싼 일도 없습니다. 손익분기는 워크로드 프로파일에 전적으로 달려 있습니다.
 
@@ -121,4 +122,4 @@ ThakiCloud는 K8s 기반 멀티테넌트 AI/ML SaaS 플랫폼을 운영하면서
 - GLM-5.2 분석: [felloai: GLM 5.2: Zhipu's 1M-Context Open-Source Model Explained](https://felloai.com/glm-5-2/)
 - GLM-5.2 벤치·단가: [labellerr: GLM-5.2 Just Beat GPT-5.5 at a Sixth of the Cost](https://www.labellerr.com/blog/glm-5-2-open-weight-ai-model/)
 - 공식 가중치: [GitHub: zai-org/GLM-5](https://github.com/zai-org/GLM-5)
-- 관련 글(양자화): [Unsloth GLM-5.2 1비트 Dynamic GGUF 온프레미스 분석](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)
+- 관련 글(양자화): [Unsloth GLM-5.2 1비트 Dynamic GGUF 온프레미스 분석](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)

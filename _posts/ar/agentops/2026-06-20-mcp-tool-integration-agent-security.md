@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/mcp-tool-integration-agent-security/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
 categories:
   - agentops
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق
 
-![رسم لبنية أمنية تعالج فيها بوابة MCP المصادقة وقائمة الأدوات المسموح بها وتسجيل التدقيق وتحديد المعدل مركزياً قبل توجيه الطلبات إلى خوادم MCP الخاصة بـ GitHub وSlack وقاعدة البيانات](/assets/images/mcp-tool-integration-agent-security-diagram.webp)
+![رسم لبنية أمنية تعالج فيها بوابة MCP المصادقة وقائمة الأدوات المسموح بها وتسجيل التدقيق وتحديد المعدل مركزياً قبل توجيه الطلبات إلى خوادم MCP الخاصة بـ GitHub وSlack وقاعدة البيانات]({{ '/assets/images/mcp-tool-integration-agent-security-diagram.webp' | relative_url }})
 
 ## كيف أصبح MCP معيار الإنتاج
 

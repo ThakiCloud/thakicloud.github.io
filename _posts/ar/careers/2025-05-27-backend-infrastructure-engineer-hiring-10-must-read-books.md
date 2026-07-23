@@ -11,7 +11,7 @@ tags:
 author_profile: true
 lang: ar
 permalink: /ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/
-canonical_url: "https://thakicloud.github.io/ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
 categories:
   - careers
 ---
@@ -23,7 +23,7 @@ categories:
 ---
 
 <!-- evolve-diagram -->
-![رسم تخطيطي يربط مجالات مهارات التوظيف بالكتب الأساسية](/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg)
+![رسم تخطيطي يربط مجالات مهارات التوظيف بالكتب الأساسية]({{ '/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg' | relative_url }})
 
 *رسم تخطيطي توضيحي: مجالات المهارات الأربعة لمهندس الواجهة الخلفية والبنية التحتية (جودة الشيفرة، الأنظمة الموزعة وواجهات البرمجة، البنية التحتية وKubernetes، الحوسبة المتوازية على GPU) مرتبطة بالكتب العشرة الأساسية.*
 

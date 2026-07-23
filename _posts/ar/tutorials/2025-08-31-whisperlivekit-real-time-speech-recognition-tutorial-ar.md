@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/"
 lang: ar
 permalink: /ar/tutorials/whisperlivekit-real-time-speech-recognition-tutorial/
 published: false

@@ -22,7 +22,7 @@ toc_label: "جدول المحتويات"
 toc_icon: "leaf"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/google-gemini-ai-energy-consumption-transparency-report/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/google-gemini-ai-energy-consumption-transparency-report/"
 reading_time: true
 published: false
 categories:

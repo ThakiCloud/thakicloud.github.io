@@ -6,7 +6,7 @@ seo_description: "من خارطة طريق تبني الذكاء الاصطنا�
 date: 2026-07-14
 last_modified_at: 2026-07-15
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/banks-buy-control-not-capability/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/banks-buy-control-not-capability/"
 tags:
   - agent-governance
   - sovereign-ai
@@ -67,7 +67,7 @@ categories:
 
 إذا جمعنا أخبار اليوم في سطر واحد، يصبح كالتالي: الصناعات الخاضعة للتنظيم تشتري التحكم قبل القدرة، والإثبات قبل الموقع، والترتيب قبل النشر. وباكسيس، السحابة الأصيلة للوكلاء من ThakiCloud، منتج فعلي مصمم خصيصا لمعاملة هذه المتطلبات كموارد من الدرجة الأولى، وقد أُطلق رسميا بالإصدار v1.1 الشهر الماضي.
 
-![بنية طبقة تنفيذ باكسيس التي تعامل الاستقلالية كمقياس متدرج لا كمفتاح](/assets/images/banks-buy-control-not-capability-diagram.svg)
+![بنية طبقة تنفيذ باكسيس التي تعامل الاستقلالية كمقياس متدرج لا كمفتاح]({{ '/assets/images/banks-buy-control-not-capability-diagram.svg' | relative_url }})
 
 *تمر المهام أولا عبر بوابة السياسات، ويُدار مقياس الاستقلالية من L0 إلى L3 بقدر ما تراكمت الثقة فقط. ويجري التنفيذ داخل صندوق عزل معزول، وتُسجَّل كل مرحلة في سجل تدقيق، ويعمل هذا كله داخل حدود سيادية محلية على بنية كوبرنيتيس. ويختار CostRouter النموذج الأمثل لكل مهمة من دون ارتباط بأي مورّد.*
 

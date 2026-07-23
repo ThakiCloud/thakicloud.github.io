@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "eye"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/ollama-ocr-comprehensive-vision-model-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/ollama-ocr-comprehensive-vision-model-guide/"
 reading_time: true
 published: false
 categories:
@@ -2523,8 +2523,8 @@ print('🚀 Ollama-OCR 준비 완료!')
 ### 추가 학습 자료
 
 더 많은 AI 도구 가이드는 블로그에서 확인하세요:
-- [DeepAgents 심층 AI 에이전트 가이드](https://thakicloud.github.io/tutorials/deepagents-comprehensive-deep-ai-agents-guide/)
-- [SnapAI AI 아이콘 생성 가이드](https://thakicloud.github.io/tutorials/snapai-ai-icon-generation-complete-guide/)
+- [DeepAgents 심층 AI 에이전트 가이드](https://thakicloud.com/tech-blog/tutorials/deepagents-comprehensive-deep-ai-agents-guide/)
+- [SnapAI AI 아이콘 생성 가이드](https://thakicloud.com/tech-blog/tutorials/snapai-ai-icon-generation-complete-guide/)
 
 ---
 

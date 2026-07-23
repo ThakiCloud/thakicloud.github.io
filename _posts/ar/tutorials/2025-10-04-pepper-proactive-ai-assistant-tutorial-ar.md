@@ -16,13 +16,13 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/pepper-proactive-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/pepper-proactive-ai-assistant-tutorial-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/pepper-proactive-ai-assistant-tutorial-ar/"
 categories:
   - tutorials
 published: false
 ---
 
-![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp)
+![مخطط مفاهيمي]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
 
@@ -56,7 +56,7 @@ published: false
 ✅ **تصميم غير محظور**: يستجيب فورًا أثناء المعالجة في الخلفية
 
 
-![مخطط مفاهيمي](/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

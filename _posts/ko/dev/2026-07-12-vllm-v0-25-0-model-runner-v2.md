@@ -12,7 +12,7 @@ tags:
   - paxis
 date: 2026-07-12
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/dev/vllm-v0-25-0-model-runner-v2/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/vllm-v0-25-0-model-runner-v2/"
 categories:
   - dev
 audiobook: /assets/audio/posts/vllm-v0-25-0-model-runner-v2/audiobook-ko.mp3

@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/context-engineering-complete-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/context-engineering-complete-guide-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/context-engineering-complete-guide-ar/"
 categories:
   - tutorials
 ---

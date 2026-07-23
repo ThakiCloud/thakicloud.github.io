@@ -11,7 +11,7 @@ tags:
   - benchmark
   - thakicloud
   - qwen3-embedding
-canonical_url: "https://thakicloud.github.io/ar/research/skillret-skill-retrieval-benchmark-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/skillret-skill-retrieval-benchmark-thakicloud/"
 reading_time: true
 toc: true
 toc_sticky: true
@@ -22,7 +22,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 6 دقائق
 
-![خط أنابيب البحث عن المهارات ذو المرحلتين في SkillRet](/assets/images/skillret-hero.webp)
+![خط أنابيب البحث عن المهارات ذو المرحلتين في SkillRet]({{ '/assets/images/skillret-hero.webp' | relative_url }})
 
 ## كلما ازدادت المهارات، ضاع الوكيل في الطريق
 

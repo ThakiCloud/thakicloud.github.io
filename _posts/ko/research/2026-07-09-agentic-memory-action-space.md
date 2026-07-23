@@ -15,14 +15,14 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/agentic-memory-action-space/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-memory-action-space/"
 audiobook: /assets/audio/posts/agentic-memory-action-space/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트를 실제 제품 수준으로 오래 굴려 본 팀이라면 기억(memory) 문제에서 한 번쯤 벽에 부딪힙니다. 대화가 길어지고 작업이 여러 세션에 걸쳐 이어지면, 방금 나눈 대화를 붙들어 두는 단기 기억과 며칠 전 사용자가 알려 준 사실을 다시 꺼내 오는 장기 기억을 동시에 다뤄야 합니다. 지금까지 대부분의 시스템은 이 둘을 별개의 부품으로 취급했습니다. 단기 기억은 컨텍스트 윈도우 관리 로직이, 장기 기억은 벡터 검색과 요약 파이프라인이 각각 맡고, 그 사이를 사람이 설계한 휴리스틱과 컨트롤러가 이어 붙였습니다. AgeMem(Agentic Memory, arXiv:2601.01885)은 이 분업 구조 자체를 문제로 지목하며, 기억을 관리하는 행위를 에이전트가 스스로 선택하는 하나의 행동 공간으로 통합하자고 제안합니다.
 
-![메모리를 행동 공간으로 통합하는 개념을 형상화한 추상 이미지](/assets/images/agentic-memory-action-space-hero.png)
+![메모리를 행동 공간으로 통합하는 개념을 형상화한 추상 이미지]({{ '/assets/images/agentic-memory-action-space-hero.png' | relative_url }})
 *저장·검색·요약·폐기가 하나의 행동 공간으로 수렴하는 통합 기억 관리를 형상화했습니다.*
 
 ## 개요
@@ -65,7 +65,7 @@ flowchart TB
 
 *AgeMem에서 기억 조작은 별도 파이프라인이 아니라 정책이 선택하는 행동으로 통합됩니다. 저장·검색·갱신·요약·폐기가 하나의 행동 공간을 이루고, 작업 성공 보상이 정책으로 되돌아옵니다.*
 
-![기존 휴리스틱 파이프라인과 AgeMem 통합 정책을 아키텍처·의사결정·최적화·확장성 축으로 비교한 표](/assets/images/agentic-memory-action-space-slide-03.png)
+![기존 휴리스틱 파이프라인과 AgeMem 통합 정책을 아키텍처·의사결정·최적화·확장성 축으로 비교한 표]({{ '/assets/images/agentic-memory-action-space-slide-03.png' | relative_url }})
 *기존 방식은 단기·장기를 분리된 파이프라인으로 두고 사람이 설계한 고정 규칙에 의존하지만, AgeMem은 단일 행동 공간으로 통합해 작업 성공 보상 기반 강화학습으로 다중 도메인에 적응합니다.*
 
 이렇게 통합하면 얻는 이점이 분명합니다. 단기와 장기가 같은 정책 아래 놓이므로, 에이전트는 지금 눈앞의 대화에 집중하면서도 그 내용을 장기 기억으로 언제 넘길지를 일관된 판단으로 처리할 수 있습니다. 요약 행동이 곧 단기에서 장기로 넘어가는 다리 역할을 하고, 폐기 행동이 컨텍스트를 가볍게 유지하는 역할을 합니다. 무엇보다 이 모든 선택이 작업 성공이라는 하나의 목표를 향해 정렬됩니다.
@@ -76,7 +76,7 @@ flowchart TB
 
 AgeMem은 두 가지 장치로 이 문제에 대응합니다. 첫째는 3단계 점진 강화학습(three-stage progressive reinforcement learning) 전략으로, 통합된 기억 행동을 한 번에 학습시키지 않고 단계적으로 끌어올립니다. 둘째는 step-wise GRPO입니다. GRPO(Group Relative Policy Optimization)를 스텝 단위로 설계해, 기억 조작이 유발하는 드물고 불연속적인 보상 문제를 정면으로 다룹니다. 지연된 보상을 각 스텝의 기여로 분해해 학습 신호를 촘촘하게 만드는 접근으로 이해할 수 있습니다.
 
-![희소하고 불연속적인 보상 문제를 3단계 점진 강화학습과 step-wise GRPO로 해결하는 구조를 도식화한 슬라이드](/assets/images/agentic-memory-action-space-slide-05.png)
+![희소하고 불연속적인 보상 문제를 3단계 점진 강화학습과 step-wise GRPO로 해결하는 구조를 도식화한 슬라이드]({{ '/assets/images/agentic-memory-action-space-slide-05.png' | relative_url }})
 *기억 조작의 적절성은 먼 미래에야 판명되는 희소·불연속 보상이 문제입니다. AgeMem은 3단계 점진 강화학습으로 복잡도를 낮추고, step-wise GRPO로 지연된 보상을 개별 스텝의 기여로 분해합니다.*
 
 이 대목은 ThakiCloud 관점에서도 흥미롭습니다. RL 후처리(post-training) 인프라를 직접 운용하는 입장에서 보면, 이런 커스텀 GRPO 변형은 학습 프레임워크가 보상 성형(reward shaping)과 스텝 단위 어드밴티지 계산을 유연하게 지원해야 굴러갑니다. 즉 논문의 방법론은 곧 학습 파이프라인에 대한 요구사항으로 번역됩니다.
@@ -93,7 +93,7 @@ AgeMem은 두 가지 장치로 이 문제에 대응합니다. 첫째는 3단계 
 
 이 논문은 인프라 렌즈와 에이전트 렌즈 양쪽에서 시사점을 줍니다. 주제가 에이전트 기억이므로 Paxis 렌즈가 중심이지만, RL 학습 인프라 측면에서 ai-platform 렌즈도 함께 맞습니다.
 
-![AgeMem 논문의 세 요구사항을 Paxis 제어 평면·ai-platform Kueue GPU·vLLM 저비용 서빙에 매핑한 다이어그램](/assets/images/agentic-memory-action-space-slide-07.png)
+![AgeMem 논문의 세 요구사항을 Paxis 제어 평면·ai-platform Kueue GPU·vLLM 저비용 서빙에 매핑한 다이어그램]({{ '/assets/images/agentic-memory-action-space-slide-07.png' | relative_url }})
 *행동 공간으로서의 기억은 Paxis 제어 평면에, 커스텀 강화학습 프레임워크는 ai-platform의 Kueue 기반 GPU 스케줄링과 보상 성형에, 컨텍스트 효율성 증대는 vLLM 저비용 서빙에 각각 대응합니다.*
 
 Paxis는 ThakiCloud의 Agent-Native Cloud 제어 평면으로, Skills·Tools·Policies·Audit Logs를 일급 리소스로 다룹니다. 이 가운데 지식 엔진(HKE 위키)과 메모리 계층이 정확히 AgeMem이 건드리는 문제 위에 서 있습니다. 현재 많은 에이전트 플랫폼처럼 Paxis도 기억을 계층으로 나눠 관리하는데, AgeMem이 던지는 질문은 명확합니다. 그 계층 사이의 이동, 즉 무엇을 세션 메모리에서 장기 지식으로 승격시키고 무엇을 폐기할지를 고정 규칙이 아니라 학습된 판단으로 처리할 수 있는가입니다. 저장·검색·요약·폐기를 도구 행동으로 노출하는 설계는, 이미 스킬과 도구를 일급 리소스로 다루는 Paxis 구조와 자연스럽게 맞물립니다. 기억 조작을 또 하나의 정책 게이트와 감사 로그 대상 행동으로 취급하면, 에이전트가 무엇을 기억하고 잊었는지 추적 가능성까지 확보됩니다.
@@ -102,7 +102,7 @@ ai-platform 렌즈에서는 학습 인프라가 핵심입니다. step-wise GRPO 
 
 ## 한계 및 반론
 
-![논문의 세 한계점(학습 복잡도·프로덕션 일반화·블랙박스 불투명성)과 ThakiCloud 인프라 방어 전략을 대응시킨 표](/assets/images/agentic-memory-action-space-slide-08.png)
+![논문의 세 한계점(학습 복잡도·프로덕션 일반화·블랙박스 불투명성)과 ThakiCloud 인프라 방어 전략을 대응시킨 표]({{ '/assets/images/agentic-memory-action-space-slide-08.png' | relative_url }})
 *세 한계점은 각각 ai-platform의 자동화된 RL 후처리, 실제 트래픽 기반 지속 파인튜닝, Paxis 감사 로그를 통한 저장·폐기 결정의 추적 가능성으로 상당 부분 완화됩니다.*
 
 균형을 위해 반대 방향의 질문도 던져야 합니다. 첫째, 기억 조작을 정책에 통합하면 학습 복잡도가 크게 올라갑니다. 드물고 불연속적인 보상을 다루기 위해 3단계 학습과 커스텀 GRPO가 필요했다는 사실 자체가, 이 접근이 결코 값싸지 않다는 방증입니다. 잘 튜닝된 규칙 기반 파이프라인이 특정 도메인에서는 여전히 더 안정적이고 예측 가능할 수 있습니다.

@@ -17,14 +17,14 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/self-evolving-harness-nightly/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/self-evolving-harness-nightly/"
 reading_time: true
 categories:
   - research
 published: false
 ---
 
-![The AI Harness That Evolves Itself Every Night](/assets/images/self-evolving-harness-nightly-hero.webp)
+![The AI Harness That Evolves Itself Every Night]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})
 
 ## Overview: A System That Gets Better Every Night
 

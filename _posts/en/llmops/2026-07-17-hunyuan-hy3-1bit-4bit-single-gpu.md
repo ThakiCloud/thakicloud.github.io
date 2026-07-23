@@ -18,7 +18,7 @@ tags:
   - ai-platform
 date: 2026-07-17
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/hunyuan-hy3-1bit-4bit-single-gpu/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/hunyuan-hy3-1bit-4bit-single-gpu/"
 categories:
   - llmops
 ---

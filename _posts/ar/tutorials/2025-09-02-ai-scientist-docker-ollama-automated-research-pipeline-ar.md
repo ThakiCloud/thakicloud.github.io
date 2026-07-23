@@ -19,7 +19,7 @@ toc: true
 toc_label: "فهرس المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/"
 lang: ar
 permalink: /ar/tutorials/ai-scientist-docker-ollama-automated-research-pipeline/
 published: false

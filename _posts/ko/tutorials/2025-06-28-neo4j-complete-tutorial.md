@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Neo4j 튜토리얼"
-canonical_url: "https://thakicloud.github.io/tutorials/neo4j-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/neo4j-complete-tutorial/"
 published: false
 categories:
   - tutorials

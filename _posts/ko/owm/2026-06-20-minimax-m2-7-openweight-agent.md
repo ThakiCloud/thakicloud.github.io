@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/minimax-m2-7-openweight-agent/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/minimax-m2-7-openweight-agent/"
 reading_time: true
 categories:
   - owm
@@ -32,7 +32,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ⏱️ **예상 읽기 시간**: 7분
 
-![MiniMax-M2.7 자기진화 에이전트 팀 개념도](/assets/images/minimax-m2-7-hero.webp)
+![MiniMax-M2.7 자기진화 에이전트 팀 개념도]({{ '/assets/images/minimax-m2-7-hero.webp' | relative_url }})
 
 ## MiniMax-M2.7 개요
 

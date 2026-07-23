@@ -1,4 +1,4 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Build Jekyll and Deploy to S3 (/tech-blog)
 
 on:
   push:
@@ -7,19 +7,24 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  id-token: write   # OIDC로 AWS 역할 assume
 
 concurrency:
-  group: "pages"
+  group: "tech-blog-s3-deploy"
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
+    env:
+      S3_BUCKET: thakicloud-portal-com
+      CF_DISTRIBUTION_ID: E1RQ006X2589V5   # thakicloud.com 서빙 배포(무효화 대상)
+      AWS_REGION: ap-northeast-2
+      DEST_PREFIX: tech-blog
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       
       - name: 📊 Filter posts by category (limit large categories)
         run: |
@@ -82,33 +87,59 @@ jobs:
               fi
             done
           done
-      
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
           cache-version: 0
-      
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: Fix baseurl-aware asset paths (prevent broken images on subpath)
+        run: |
+          # Auto-generated posts (news-comic, nightly-paper, tech-blog-manager)
+          # emit root-absolute ](/assets/..) which breaks under the /tech-blog
+          # baseurl. Rewrite body refs to relative_url. Idempotent.
+          python3 scripts/fix_asset_baseurl.py --apply
+
+      - name: Strip references to missing images (prevent broken <img>)
+        run: |
+          # If a generator emitted a hero/figure reference but failed to produce
+          # the file, drop the dangling reference so no broken image ships.
+          # Logs exactly what was stripped; deploy stays resilient (one missing
+          # image never blocks the whole site).
+          python3 scripts/check_missing_assets.py --strip
+
+      - name: Enforce KO brand/typo guardrail (다키클라우드)
+        run: |
+          # Deterministic guardrail: never ship the wrong brand name. Corrects
+          # 타키클라우드 / 타키 클라우드 -> 다키클라우드 plus a small curated KO typo map.
+          # Fixes prose/titles/front-matter; protects code blocks and URLs.
+          # Every deploy runs this, so no post can ship with the wrong brand.
+          python3 scripts/blog_fix_typos.py --apply
+
+      - name: Build with Jekyll (baseurl=/tech-blog from _config)
+        run: |
+          bundle exec jekyll build --trace
+          test -f _site/index.html || { echo "❌ _site/index.html 없음 — 빌드 실패"; exit 1; }
+          grep -q 'href="/tech-blog/' _site/index.html || { echo "❌ /tech-blog 접두어 미적용"; exit 1; }
         env:
           JEKYLL_ENV: production
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync _site/ to S3 /tech-blog/
+        run: |
+          aws s3 sync _site/ "s3://${S3_BUCKET}/${DEST_PREFIX}/" \
+            --delete \
+            --cache-control "public,max-age=3600"
+
+      - name: Invalidate CloudFront /tech-blog/*
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${CF_DISTRIBUTION_ID}" \
+            --paths "/${DEST_PREFIX}/*"

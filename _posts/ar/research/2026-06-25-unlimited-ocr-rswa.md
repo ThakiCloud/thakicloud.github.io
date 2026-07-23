@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "file-text"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/unlimited-ocr-rswa/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/unlimited-ocr-rswa/"
 reading_time: true
 categories:
   - research

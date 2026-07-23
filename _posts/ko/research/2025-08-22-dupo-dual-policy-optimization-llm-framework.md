@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/dupo-dual-policy-optimization-llm-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/dupo-dual-policy-optimization-llm-framework/"
 reading_time: true
 categories:
   - research
@@ -30,7 +30,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 15분
 
-![서로를 재구성하며 대칭을 이루는 프라이멀-듀얼 흐름을 형상화한 추상 이미지](/assets/images/dupo-dual-policy-optimization-llm-framework-hero.webp)
+![서로를 재구성하며 대칭을 이루는 프라이멀-듀얼 흐름을 형상화한 추상 이미지]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-hero.webp' | relative_url }})
 *프라이멀 작업과 듀얼 작업이 서로의 결과를 재구성하며 자기 감독 신호를 만드는 DuPO의 듀얼리티 구조를 형상화한 이미지입니다.*
 
 > **표기 정정**: DuPO의 공식 논문(arXiv:2508.14460) 제목은 "Dual **Preference** Optimization"입니다. 본문에서 사용한 "Dual-Policy Optimization"은 약어 DuPO의 의미를 풀어 쓴 통칭이며, 정확한 명칭은 듀얼 선호 최적화입니다. 메커니즘 설명은 동일합니다.
@@ -262,13 +262,13 @@ DuPO는 AI 연구 분야에서 자기 감독 학습의 새로운 가능성을 �
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![dupo-dual-policy-optimization-llm-framework 슬라이드 1](/assets/images/dupo-dual-policy-optimization-llm-framework-slide-01.webp)
+![dupo-dual-policy-optimization-llm-framework 슬라이드 1]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-01.webp' | relative_url }})
 
-![dupo-dual-policy-optimization-llm-framework 슬라이드 2](/assets/images/dupo-dual-policy-optimization-llm-framework-slide-02.webp)
+![dupo-dual-policy-optimization-llm-framework 슬라이드 2]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-02.webp' | relative_url }})
 
-![dupo-dual-policy-optimization-llm-framework 슬라이드 3](/assets/images/dupo-dual-policy-optimization-llm-framework-slide-03.webp)
+![dupo-dual-policy-optimization-llm-framework 슬라이드 3]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-03.webp' | relative_url }})
 
-![dupo-dual-policy-optimization-llm-framework 슬라이드 4](/assets/images/dupo-dual-policy-optimization-llm-framework-slide-04.webp)
+![dupo-dual-policy-optimization-llm-framework 슬라이드 4]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -20,7 +20,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/2025-07-04-devin-cursorrules-cursor-windsurf-ai-assistant-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/2025-07-04-devin-cursorrules-cursor-windsurf-ai-assistant-guide/"
 reading_time: true
 categories:
   - dev

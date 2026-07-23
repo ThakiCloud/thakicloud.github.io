@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/llama-nemotron-super-49b-v15-breakthrough-open-reasoning-model/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/llama-nemotron-super-49b-v15-breakthrough-open-reasoning-model/"
 reading_time: true
 published: false
 categories:

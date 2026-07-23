@@ -15,7 +15,7 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/sao-single-rollout-async-agentic-rl/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/sao-single-rollout-async-agentic-rl/"
 audiobook: /assets/audio/posts/sao-single-rollout-async-agentic-rl/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -30,7 +30,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ThakiCloud도 kubeflow 기반의 LLM 학습 시스템에서 SFT·CPT·DPO·GRPO·GKD 다섯 가지 사후학습 기법을 운용합니다. 그래서 GRPO의 그룹 샘플링이 긴 롤아웃에서 어떤 대가를 치르는지, 그리고 그 대가를 없애는 대안이 어떤 새로운 위험을 부르는지는 남의 이야기가 아닙니다. 이 글은 SAO가 무엇을 바꿨고, 그 변경이 우리처럼 멀티테넌트 GPU 클러스터에서 에이전트를 학습하려는 조직에 무엇을 의미하는지를 정리합니다.
 
-![비동기로 하나씩 흘러 들어오는 롤아웃 스트림과, 그룹으로 묶여 대기하는 롤아웃을 대비시킨 추상 이미지](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+![비동기로 하나씩 흘러 들어오는 롤아웃 스트림과, 그룹으로 묶여 대기하는 롤아웃을 대비시킨 추상 이미지]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.png' | relative_url }})
 *연속적으로 하나씩 도착하는 단일 롤아웃과, 그룹이 다 찰 때까지 큐에서 얼어붙어 기다리는 롤아웃을 대비해 형상화했습니다.*
 
 ## 이 기술은 무엇인가
@@ -111,13 +111,13 @@ SAO의 교훈은 알고리즘 논문 한 편을 넘어, GPU 클러스터를 운�
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![sao-single-rollout-async-agentic-rl 슬라이드 1](/assets/images/sao-single-rollout-async-agentic-rl-slide-01.png)
+![sao-single-rollout-async-agentic-rl 슬라이드 1]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-01.png' | relative_url }})
 
-![sao-single-rollout-async-agentic-rl 슬라이드 2](/assets/images/sao-single-rollout-async-agentic-rl-slide-02.png)
+![sao-single-rollout-async-agentic-rl 슬라이드 2]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-02.png' | relative_url }})
 
-![sao-single-rollout-async-agentic-rl 슬라이드 3](/assets/images/sao-single-rollout-async-agentic-rl-slide-03.png)
+![sao-single-rollout-async-agentic-rl 슬라이드 3]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-03.png' | relative_url }})
 
-![sao-single-rollout-async-agentic-rl 슬라이드 4](/assets/images/sao-single-rollout-async-agentic-rl-slide-04.png)
+![sao-single-rollout-async-agentic-rl 슬라이드 4]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-04.png' | relative_url }})
 
 ## 출처
 

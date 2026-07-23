@@ -15,14 +15,14 @@ categories:
   - research
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/research/human-llm-research-idea-gap/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/human-llm-research-idea-gap/"
 ---
 
 "연구 에이전트"라는 말을 들으면 대개 이런 그림을 떠올립니다. 논문을 읽고, 빈틈(gap)을 찾고, 아이디어를 내고, 실험을 돌리고, 논문을 쓴다. 그런데 예일대와 시카고대 연구진이 던진 질문은 한 단계 더 깊습니다. LLM이 만든 연구 아이디어는 인간 연구자가 실제로 논문으로 만들어 낸 아이디어와 무엇이, 얼마나 다른가.
 
 논문 "Measuring the Gap Between Human and LLM Research Ideas"(arXiv 2607.01233)의 결론은 직관과 어긋납니다. LLM 아이디어의 약점은 흔히 말하는 "품질"이 아니었습니다. 진짜 격차는 폭(range)에 있었습니다. LLM은 인간 연구자보다 훨씬 좁은 영역에서 생각했고, 그 좁음은 한 가지 패턴, 즉 "기존 연구를 연결한다"는 발상에 심하게 쏠려 있었습니다.
 
-![넓게 퍼진 아이디어 성좌와 한 점에 좁게 뭉친 성좌를 대비시킨 추상 이미지](/assets/images/human-llm-research-idea-gap-hero.png)
+![넓게 퍼진 아이디어 성좌와 한 점에 좁게 뭉친 성좌를 대비시킨 추상 이미지]({{ '/assets/images/human-llm-research-idea-gap-hero.png' | relative_url }})
 *폭 넓게 흩어진 인간의 아이디어 분포와, 한 패턴에 좁게 뭉친 LLM의 아이디어 분포를 대비해 형상화했습니다.*
 
 ## 개요
@@ -94,13 +94,13 @@ ThakiCloud가 야간 연구 루프에서 가설을 뽑을 때 이 원칙은 실�
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![human-llm-research-idea-gap 슬라이드 1](/assets/images/human-llm-research-idea-gap-slide-01.png)
+![human-llm-research-idea-gap 슬라이드 1]({{ '/assets/images/human-llm-research-idea-gap-slide-01.png' | relative_url }})
 
-![human-llm-research-idea-gap 슬라이드 2](/assets/images/human-llm-research-idea-gap-slide-02.png)
+![human-llm-research-idea-gap 슬라이드 2]({{ '/assets/images/human-llm-research-idea-gap-slide-02.png' | relative_url }})
 
-![human-llm-research-idea-gap 슬라이드 3](/assets/images/human-llm-research-idea-gap-slide-03.png)
+![human-llm-research-idea-gap 슬라이드 3]({{ '/assets/images/human-llm-research-idea-gap-slide-03.png' | relative_url }})
 
-![human-llm-research-idea-gap 슬라이드 4](/assets/images/human-llm-research-idea-gap-slide-04.png)
+![human-llm-research-idea-gap 슬라이드 4]({{ '/assets/images/human-llm-research-idea-gap-slide-04.png' | relative_url }})
 
 ## 출처
 

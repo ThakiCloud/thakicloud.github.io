@@ -12,7 +12,7 @@ tags:
   - paxis
 date: 2026-07-12
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/vllm-v0-25-0-model-runner-v2/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/vllm-v0-25-0-model-runner-v2/"
 categories:
   - dev
 ---

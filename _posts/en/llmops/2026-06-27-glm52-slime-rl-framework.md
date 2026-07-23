@@ -20,13 +20,13 @@ toc_label: "Contents"
 toc_icon: "robot"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/glm52-slime-rl-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm52-slime-rl-framework/"
 reading_time: true
 categories:
   - llmops
 ---
 
-![An abstract image depicting a generation cluster and a training cluster exchanging data asynchronously through a central buffer](/assets/images/glm52-slime-rl-framework-hero.webp)
+![An abstract image depicting a generation cluster and a training cluster exchanging data asynchronously through a central buffer]({{ '/assets/images/glm52-slime-rl-framework-hero.webp' | relative_url }})
 *An image evoking slime's asynchronous RL design, which decouples rollout from training to raise throughput.*
 
 ## Overview

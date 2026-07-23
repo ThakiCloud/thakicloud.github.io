@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ar/agentops/kimi-code-cli-acp-open-source-agent/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/kimi-code-cli-acp-open-source-agent/"
 ---
 
 في الأسبوع الماضي، تصدرت Moonshot AI قوائم الترتيب في البرمجة بعد إطلاق نموذجها المفتوح الأوزان Kimi K3. لكن ما رافق هذا الإطلاق بهدوء كان أداة أقرب إلى سير عمل المطورين من النموذج نفسه، وهي Kimi Code CLI، وكيل برمجة طرفي مفتوح المصدر أطلقته Moonshot برخصة MIT. تداول مستخدمو LinkedIn تعريفاً يقول إن هذه الأداة تقدم ميزات غير موجودة في Claude Code. لم ننقل هذه العبارة كما هي، بل تحققنا مباشرة من المستودع الرسمي والوثائق. والخلاصة أن نصف هذا التعريف صحيح ونصفه الآخر مبالغ فيه. والنقطة الأكثر إثارة للاهتمام كانت في موضع لم تبرزه مواد الترويج.

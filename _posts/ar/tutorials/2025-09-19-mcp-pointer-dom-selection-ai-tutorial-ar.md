@@ -18,7 +18,7 @@ toc: true
 toc_label: "محتويات الدليل"
 lang: ar
 permalink: /ar/tutorials/mcp-pointer-dom-selection-ai-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-pointer-dom-selection-ai-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/mcp-pointer-dom-selection-ai-tutorial/"
 published: false
 categories:
   - tutorials

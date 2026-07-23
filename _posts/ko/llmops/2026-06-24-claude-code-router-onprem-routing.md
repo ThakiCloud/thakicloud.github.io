@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/claude-code-router-onprem-routing/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/claude-code-router-onprem-routing/"
 reading_time: true
 categories:
   - llmops
@@ -26,7 +26,7 @@ audiobook: /assets/audio/posts/claude-code-router-onprem-routing/audiobook-ko.mp
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![개념 다이어그램](/assets/images/claude-code-router-onprem-routing-hero.webp)
+![개념 다이어그램]({{ '/assets/images/claude-code-router-onprem-routing-hero.webp' | relative_url }})
 
 ```mermaid
 flowchart LR
@@ -49,7 +49,7 @@ Claude Code는 터미널에서 동작하는 에이전트형 코딩 도구입니�
 ---
 
 
-![개념 다이어그램](/assets/images/claude-code-router-onprem-routing-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/claude-code-router-onprem-routing-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

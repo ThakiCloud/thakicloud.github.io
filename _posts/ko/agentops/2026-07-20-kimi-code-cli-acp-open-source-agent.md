@@ -20,7 +20,7 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/kimi-code-cli-acp-open-source-agent/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/kimi-code-cli-acp-open-source-agent/"
 ---
 
 터미널에서 코딩 에이전트를 쓰는 개발자, 특히 코드를 외부로 내보낼 수 없는 조직에서 일하는 분들을 위한 글입니다. 결론부터 말하면 **Kimi Code CLI**의 진짜 무기는 세간에 도는 "클로드 코드에 없는 기능"이 아니라, 개방 표준 ACP 네이티브 지원과 온프렘 서빙까지 열어 둔 모델 개방성입니다.

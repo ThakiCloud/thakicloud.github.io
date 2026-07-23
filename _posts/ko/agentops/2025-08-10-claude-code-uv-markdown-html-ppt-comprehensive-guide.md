@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops
@@ -29,7 +29,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp)
+![핵심 개념 일러스트]({{ '/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 25분
 
@@ -43,7 +43,7 @@ AI와 자동화 도구가 발전하면서 개발 워크플로우도 크게 변�
 - Markdown에서 HTML PPT로의 변환 기술
 - 효과적인 프레젠테이션 디자인 원칙
 
-![워크플로우 다이어그램](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg)
+![워크플로우 다이어그램]({{ '/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg' | relative_url }})
 
 *워크플로우 다이어그램*
 

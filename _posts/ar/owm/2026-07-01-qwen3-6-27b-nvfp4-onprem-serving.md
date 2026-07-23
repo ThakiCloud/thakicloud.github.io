@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/qwen3-6-27b-nvfp4-onprem-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 lang: ar
 reading_time: true
 categories:
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **وقت القراءة المتوقع**: 11 دقيقة
 
-![مخطط مفاهيمي لتكميم Qwen3.6-27B NVFP4 رباعي البت](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp)
+![مخطط مفاهيمي لتكميم Qwen3.6-27B NVFP4 رباعي البت]({{ '/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp' | relative_url }})
 
 ## نظرة عامة
 
@@ -141,4 +141,4 @@ vllm serve nvidia/Qwen3.6-27B-NVFP4 \
 - [NVIDIA TensorRT Model Optimizer](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
 - [التعريف بـ NVFP4 (NVIDIA Developer)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
 - [توثيق vLLM](https://docs.vllm.ai/)
-- [مراجعة Gemma-4-26B-NVFP4 على DGX Spark (مدونة ThakiCloud)](https://thakicloud.github.io/ar/owm/gemma-4-26b-nvfp4-dgx-spark/)
+- [مراجعة Gemma-4-26B-NVFP4 على DGX Spark (مدونة ThakiCloud)](https://thakicloud.com/tech-blog/ar/owm/gemma-4-26b-nvfp4-dgx-spark/)

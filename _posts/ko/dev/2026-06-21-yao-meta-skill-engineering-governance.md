@@ -19,10 +19,10 @@ toc_icon: "cog"
 categories:
   - dev
 published: false
-canonical_url: "https://thakicloud.github.io/ko/dev/yao-meta-skill-engineering-governance/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/yao-meta-skill-engineering-governance/"
 ---
 
-![모듈형 블록이 정밀 조립 라인을 이루고 거버넌스 게이트가 빛나는 추상 이미지](/assets/images/yao-meta-skill-hero.webp)
+![모듈형 블록이 정밀 조립 라인을 이루고 거버넌스 게이트가 빛나는 추상 이미지]({{ '/assets/images/yao-meta-skill-hero.webp' | relative_url }})
 *스킬을 일회성 프롬프트가 아니라 버전·검증·거버넌스가 붙은 '재사용 자산'으로 다루는 메타스킬의 개념도입니다.*
 
 ## 개요
@@ -69,7 +69,7 @@ VIRTUAL_ENV="$REPO_ROOT/.venv" uv pip install "PyYAML==6.0.3"
 
 저장소를 클론한 직후 측정한 실제 구성은 다음과 같습니다. 추적 파일 632개, 테스트 77개, 평가(evals) 29개, 스킬 아틀라스 항목 10개, 스키마 3개, 템플릿 2개입니다. 단일 "스킬 하나"가 아니라, 스킬을 생산·검증·거버넌스하는 작은 공장(factory)에 가깝습니다.
 
-![yao-meta-skill 리포지토리 구성과 로컬 검증 게이트 결과 차트](/assets/images/yao-meta-skill-results.webp)
+![yao-meta-skill 리포지토리 구성과 로컬 검증 게이트 결과 차트]({{ '/assets/images/yao-meta-skill-results.webp' | relative_url }})
 *왼쪽은 저장소의 실측 구성(로그 스케일), 오른쪽은 로컬 검증 게이트 4종이 모두 통과한 결과입니다.*
 
 ## 실제 검증 결과

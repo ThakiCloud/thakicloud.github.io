@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-11
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/demem-agent-memory/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/demem-agent-memory/"
 categories:
   - research
 ---
 
-![رسم تجريدي يصوّر ذكريات تتفرّع إلى مسارات منفصلة تؤدي إلى قرارات مختلفة](/assets/images/demem-agent-memory-hero.png)
+![رسم تجريدي يصوّر ذكريات تتفرّع إلى مسارات منفصلة تؤدي إلى قرارات مختلفة]({{ '/assets/images/demem-agent-memory-hero.png' | relative_url }})
 
 > 📄 **المراجعة المتعمقة الكاملة (DOCX)**: [نزّل المراجعة التفصيلية من Google Drive](https://drive.google.com/file/d/1oxsADQALTfdn7I_mmZbaZfMnmqoCMF9o/view).
 

@@ -9,12 +9,12 @@ tags:
   - agentops
 date: 2026-07-06
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/tutorials/claude-code-project-anatomy/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/claude-code-project-anatomy/"
 categories:
   - tutorials
 ---
 
-![صورة تجريدية لطبقات إعداد متراكمة تتقارب في تنفيذ واحد منظم لعميل ذكي](/assets/images/claude-code-project-anatomy-hero.webp)
+![صورة تجريدية لطبقات إعداد متراكمة تتقارب في تنفيذ واحد منظم لعميل ذكي]({{ '/assets/images/claude-code-project-anatomy-hero.webp' | relative_url }})
 *عندما تُنظَّم التعليمات والقواعد والأدوات المتناثرة ضمن بنية مجلدات واضحة، يصبح سلوك العميل الذكي قابلًا للتنبؤ.*
 
 ## نظرة عامة

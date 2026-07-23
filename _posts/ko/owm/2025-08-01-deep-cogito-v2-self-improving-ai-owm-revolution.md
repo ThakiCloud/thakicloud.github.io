@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/deep-cogito-v2-self-improving-ai-owm-revolution/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/deep-cogito-v2-self-improving-ai-owm-revolution/"
 reading_time: true
 published: false
 categories:

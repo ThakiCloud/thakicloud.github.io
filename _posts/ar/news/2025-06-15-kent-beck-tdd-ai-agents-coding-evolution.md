@@ -4,7 +4,7 @@ excerpt: "منشئ البرمجة المتطرفة والمؤلف المشارك
 date: 2025-06-15
 lang: ar
 permalink: /ar/news/kent-beck-tdd-ai-agents-coding-evolution/
-canonical_url: "https://thakicloud.github.io/ar/news/kent-beck-tdd-ai-agents-coding-evolution/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/kent-beck-tdd-ai-agents-coding-evolution/"
 tags: 
   - TDD
   - الذكاء الاصطناعي

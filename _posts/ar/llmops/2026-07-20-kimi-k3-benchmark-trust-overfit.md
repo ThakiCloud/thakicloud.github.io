@@ -19,7 +19,7 @@ tags:
   - thakicloud
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ar/llmops/kimi-k3-benchmark-trust-overfit/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/kimi-k3-benchmark-trust-overfit/"
 ---
 
 في كل مرة يظهر فيها نموذج جديد، أول ما يلفت انتباهنا هو جدول واحد. ننظر إلى نتائج المعايير القياسية المصفوفة جنباً إلى جنب، فنستنتج بسرعة أن "هذا النموذج أفضل من ذاك". لكن في يوليو 2026، بمجرد أن أطلقت Moonshot AI نموذج Kimi K3، أكبر نموذج مفتوح الأوزان في التاريخ، اندلع جدل يضع فرملة على هذه العادة. النتائج واضحة في القمة، لكن شكوكاً بأنه "ربما تم الإفراط في تكييفه مع المعايير القياسية" رافقتها على الفور.

@@ -4,7 +4,7 @@ excerpt: "Stanford researchers conducted a large-scale study with 1,500 workers 
 date: 2025-06-21
 lang: en
 permalink: /en/research/ai-agent-job-integration-workbank-human-agency-scale/
-canonical_url: "https://thakicloud.github.io/en/research/ai-agent-job-integration-workbank-human-agency-scale/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/ai-agent-job-integration-workbank-human-agency-scale/"
 tags: 
   - AI-Agents
   - Labor-Market

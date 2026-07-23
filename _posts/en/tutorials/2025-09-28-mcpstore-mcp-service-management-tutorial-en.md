@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/mcpstore-mcp-service-management-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/mcpstore-mcp-service-management-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/mcpstore-mcp-service-management-tutorial/"
 published: false
 categories:
   - tutorials
@@ -515,7 +515,7 @@ Start your MCPStore journey today and experience the future of MCP service manag
 
 ---
 
-*For more tutorials and AI development resources, visit [Thaki Cloud](https://thakicloud.github.io).*
+*For more tutorials and AI development resources, visit [Thaki Cloud](https://thakicloud.com/tech-blog).*
 
 
 

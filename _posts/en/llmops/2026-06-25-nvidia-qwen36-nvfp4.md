@@ -6,7 +6,7 @@ seo_description: "Analysis of NVIDIA Qwen3.6-35B-A3B-NVFP4 (NVFP4 4-bit quantiza
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-qwen36-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvidia-qwen36-nvfp4/"
 tags:
   - nvfp4
   - quantization
@@ -133,7 +133,7 @@ The accuracy table below is **NVIDIA's official evaluation published on the mode
 | IFBench | 62.3 | 62.8 | +0.5 |
 | MMMU PRO | 74.1 | 74.5 | +0.4 |
 
-![Bar chart comparing NVFP4 accuracy against BF16](/assets/images/nvidia-qwen36-nvfp4-results.webp)
+![Bar chart comparing NVFP4 accuracy against BF16]({{ '/assets/images/nvidia-qwen36-nvfp4-results.webp' | relative_url }})
 
 A visualization of the model card's published numbers (axis labels in Korean). Even after 4-bit quantization, most accuracy differences stay below one point.
 

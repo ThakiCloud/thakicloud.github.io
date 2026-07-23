@@ -6,7 +6,7 @@ seo_description: "Analysis of Unsloth GLM-5.2 Dynamic GGUF (1.51TB→176GB, 1-bi
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/unsloth-glm-5-2-1bit-gguf/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/unsloth-glm-5-2-1bit-gguf/"
 tags:
   - gguf
   - quantization
@@ -103,7 +103,7 @@ From here on these are figures published by Unsloth and Hugging Face. The 744B m
 | 3-bit | UD-Q3_K_XL | 332GB | ~78% smaller |
 | 4-bit | Q4_K_M | 456GB | ~70% smaller |
 
-![GLM-5.2 file size per quant level and compression vs BF16](/assets/images/unsloth-glm-5-2-1bit-gguf-results.webp)
+![GLM-5.2 file size per quant level and compression vs BF16]({{ '/assets/images/unsloth-glm-5-2-1bit-gguf-results.webp' | relative_url }})
 
 On accuracy, Unsloth reports that Dynamic quantization loses less than naive quantization at the same average bit count. Public material indicates the Dynamic 1-bit build retains roughly 76% [estimated] on its internal accuracy metric, and the Dynamic 2-bit build around 82%, while being more than 80% smaller than the original. The exact metric and dataset vary by version and eval set, so read these less as absolute values and more as a trend: loss grows gradually as bits drop, but even 1-bit stays in a usable range. Unsloth also publishes Dynamic GGUF results on the Aider Polyglot coding benchmark, letting you cross-check per-level quality on coding tasks.
 

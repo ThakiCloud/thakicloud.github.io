@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/agents-md-comprehensive-tutorial-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/agents-md-comprehensive-tutorial-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/agents-md-comprehensive-tutorial-guide/"
 published: false
 categories:
   - tutorials

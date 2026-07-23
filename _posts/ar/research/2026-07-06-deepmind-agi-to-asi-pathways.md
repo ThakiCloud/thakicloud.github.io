@@ -5,7 +5,7 @@ seo_title: "DeepMind From AGI to ASI: شرح المسارات الأربعة - T
 seo_description: "يعرض تقرير Google DeepMind بعنوان From AGI to ASI (arXiv 2606.12683) أربعة مسارات من الذكاء العام إلى الذكاء الفائق، التوسّع وتحوّل النموذج الخوارزمي والتحسين الذاتي التكراري وتشكّل مجموعات متعددة الوكلاء، ويناقش حدودًا جوهرية كسرعة الضوء والديناميكا الحرارية ونظرية التعقيد وعدم اكتمال غودل. نستخلص الدلالات من منظور ThakiCloud Paxis التي تُشغّل مهارات ذاتية التطوّر وتنسيق وكلاء على شكل DAG."
 date: 2026-07-06
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/deepmind-agi-to-asi-pathways/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/deepmind-agi-to-asi-pathways/"
 tags:
   - research
   - agi

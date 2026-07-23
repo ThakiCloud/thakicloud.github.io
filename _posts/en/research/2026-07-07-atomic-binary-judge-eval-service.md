@@ -21,7 +21,7 @@ toc_icon: "flask"
 categories:
   - research
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/atomic-binary-judge-eval-service/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/atomic-binary-judge-eval-service/"
 ---
 
 ## Who should read this
@@ -40,19 +40,19 @@ The trouble is that both camps are almost always validated only on offline bench
 
 Building on these three real-world constraints, ThakiCloud AI Research proposes **ABJ-Gate**, an architecture that binds the two research streams into one. Its core idea is that each evaluation criterion is broken down into an atomic binary question that a small on-prem worker model answers, while aggregating those answers, normalizing their format, calibrating them, and keeping an audit log is left entirely to deterministic code rather than to a model. Any item that falls on a contested boundary or triggers a suspicion signal is always sent to an odd number of independent skeptic workers instructed to "try to refute this" and put to a vote; the verdict survives only when the majority fails to refute it. And the budget for every one of these LLM calls is allocated by a Kueue/GPU-based scheduler within per-tenant cost and tail-latency caps.
 
-![Sampling rate versus relative cost under the analytical cost model (Eq. 8)](/assets/images/posts/research/atomic-binary-judge-eval-service/fig1_cost_frontier.png)
+![Sampling rate versus relative cost under the analytical cost model (Eq. 8)]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig1_cost_frontier.png' | relative_url }})
 *A computed result from the analytical model assuming 5 binary criteria, a 10% flag rate, and 3 skeptics. Running every item through full binary judgment (k=1) pushes cost to roughly 5.3x that of a scalar judge, but conformal calibration that reduces escalations and lowers the sampling rate k to 0.2 brings cost down to roughly 1.06x the scalar judge's cost while preserving interpretability and calibration. This is a computation from Eq. 8, not a measured benchmark.*
 
 This design is also the promotion, into a formal product surface shared by multiple tenants, of two disciplines the company already enforces at all times in its internal harness: the principle that "code owns format, the model owns content," and the principle that fanned-out verification results must always be closed with an adversarial vote. No matter how plausibly a worker model self-reports its own answer length, count, or an "overall score out of however many points," that value is discarded and recomputed by code, so minor wobbles on the worker side cannot contaminate the final result.
 
 The promises this architecture actually has to keep are formalized and proven as three properties. First, reproducibility: given the same set of binary answers, the aggregate score always produces the same value regardless of random seed or request order. Second, a risk-control guarantee: calibrating how often the cheap first-stage judgment and the expensive second-stage verification disagree, using conformal risk control, bounds that disagreement rate below a target level distribution-free, no matter what distribution the items are drawn from. Third, a property whereby, if an admission policy keeps each tenant's utilization below a certain threshold, queueing theory bounds that tenant's evaluation latency to a finite value.
 
-![Conceptual diagram of tenant utilization versus expected queueing delay (Prop. 3)](/assets/images/posts/research/atomic-binary-judge-eval-service/fig2_latency_bound.png)
+![Conceptual diagram of tenant utilization versus expected queueing delay (Prop. 3)]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig2_latency_bound.png' | relative_url }})
 *An illustrative conceptual curve showing how delay spikes as utilization approaches 1 in an M/G/c queueing model. It visualizes the argument of Proposition 3, that admission control can manage tail latency by tuning the sampling rate to keep utilization under a target threshold, and is not measured latency data.*
 
 The paper also spells out quantitatively when binary decomposition actually helps. When each criterion can be answered by a human more reliably than a scalar score and the criteria are weakly correlated so that they carry independent information from one another, binary decomposition combined with majority-vote verification is shown to produce strictly lower variance than a scalar judge. Conversely, the paper is equally clear that if the criteria are entangled with one another, or the binary questions themselves are easy to game, decomposition does not help and can even add bias.
 
-![Conditions under which criterion decomposition reduces variance](/assets/images/posts/research/atomic-binary-judge-eval-service/fig3_variance_reduction.png)
+![Conditions under which criterion decomposition reduces variance]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig3_variance_reduction.png' | relative_url }})
 *A conceptual diagram visualizing the analytical argument in Section 4.4 of the paper. The variance of the aggregate score decreases roughly in proportion to the per-criterion error variance divided by the number of effectively independent criteria, shown as a relative reduction trend against a baseline of the scalar judge at 1x. These are not experimentally measured figures.*
 
 ## What it leaves for the company, society, and science

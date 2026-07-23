@@ -23,14 +23,14 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/rowfill-unstructured-data-processing-platform/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/rowfill-unstructured-data-processing-platform/"
 reading_time: true
 categories:
   - datasets
   - tutorials
 ---
 
-![مخطط لتحويل أجزاء البيانات غير المنظمة إلى بيانات صفوف منظمة](/assets/images/rowfill-unstructured-data-processing-platform-hero.webp)
+![مخطط لتحويل أجزاء البيانات غير المنظمة إلى بيانات صفوف منظمة]({{ '/assets/images/rowfill-unstructured-data-processing-platform-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
 

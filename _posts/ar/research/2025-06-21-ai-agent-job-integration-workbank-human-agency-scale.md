@@ -4,7 +4,7 @@ excerpt: "أجرى باحثو ستانفورد دراسة واسعة النطا�
 date: 2025-06-21
 lang: ar
 permalink: /ar/research/ai-agent-job-integration-workbank-human-agency-scale/
-canonical_url: "https://thakicloud.github.io/ar/research/ai-agent-job-integration-workbank-human-agency-scale/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/ai-agent-job-integration-workbank-human-agency-scale/"
 tags: 
   - AI-Agents
   - Labor-Market

@@ -4,7 +4,7 @@ excerpt: "Alphabet Chief Scientist Jeff Dean discusses the evolution of large-sc
 date: 2025-06-05
 lang: en
 permalink: /en/news/jeff-dean-bill-coughran-talk/
-canonical_url: "https://thakicloud.github.io/en/news/jeff-dean-bill-coughran-talk/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/jeff-dean-bill-coughran-talk/"
 tags:
   - AI Infrastructure
   - Large Models

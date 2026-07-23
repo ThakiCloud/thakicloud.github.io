@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/agent-observability-tracing-evaluation/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-observability-tracing-evaluation/"
 reading_time: true
 categories:
   - agentops
@@ -55,7 +55,7 @@ graph TD
 ---
 
 
-![개념 다이어그램](/assets/images/agent-observability-tracing-evaluation-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/agent-observability-tracing-evaluation-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 
@@ -217,11 +217,11 @@ MLflow는 이 목적으로 에이전트 리플레이 기능을 제공합니다. 
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-observability-tracing-evaluation 슬라이드 1](/assets/images/agent-observability-tracing-evaluation-slide-01.png)
+![agent-observability-tracing-evaluation 슬라이드 1]({{ '/assets/images/agent-observability-tracing-evaluation-slide-01.png' | relative_url }})
 
-![agent-observability-tracing-evaluation 슬라이드 2](/assets/images/agent-observability-tracing-evaluation-slide-02.png)
+![agent-observability-tracing-evaluation 슬라이드 2]({{ '/assets/images/agent-observability-tracing-evaluation-slide-02.png' | relative_url }})
 
-![agent-observability-tracing-evaluation 슬라이드 3](/assets/images/agent-observability-tracing-evaluation-slide-03.png)
+![agent-observability-tracing-evaluation 슬라이드 3]({{ '/assets/images/agent-observability-tracing-evaluation-slide-03.png' | relative_url }})
 
-![agent-observability-tracing-evaluation 슬라이드 4](/assets/images/agent-observability-tracing-evaluation-slide-04.png)
+![agent-observability-tracing-evaluation 슬라이드 4]({{ '/assets/images/agent-observability-tracing-evaluation-slide-04.png' | relative_url }})
 

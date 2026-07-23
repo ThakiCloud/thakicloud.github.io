@@ -22,7 +22,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/minimax-m3-multimodal-moe/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/minimax-m3-multimodal-moe/"
 reading_time: true
 categories:
   - owm
@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 8 min
 
-![MiniMax-M3 architecture diagram](/assets/images/minimax-m3-multimodal-moe-hero.webp)
+![MiniMax-M3 architecture diagram]({{ '/assets/images/minimax-m3-multimodal-moe-hero.webp' | relative_url }})
 
 ## What Is New
 

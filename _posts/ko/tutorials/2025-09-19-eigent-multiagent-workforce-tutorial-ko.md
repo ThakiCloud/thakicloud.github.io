@@ -6,7 +6,7 @@ seo_description: "세계 최초 멀티에이전트 워크포스 플랫폼 Eigent
 date: 2025-09-19
 lang: ko
 permalink: /ko/tutorials/eigent-multiagent-workforce-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/eigent-multiagent-workforce-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/eigent-multiagent-workforce-tutorial/"
 tags:
   - Eigent
   - 멀티에이전트
@@ -780,4 +780,4 @@ Eigent와 함께하는 여정을 시작하면서, 플랫폼의 진정한 힘은 
 
 ---
 
-*더 많은 튜토리얼과 고급 가이드는 [문서](https://thakicloud.github.io)를 방문하거나 커뮤니티 토론에 참여하세요.*
+*더 많은 튜토리얼과 고급 가이드는 [문서](https://thakicloud.com/tech-blog)를 방문하거나 커뮤니티 토론에 참여하세요.*

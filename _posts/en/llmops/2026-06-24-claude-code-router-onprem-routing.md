@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-router-onprem-routing/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/claude-code-router-onprem-routing/"
 reading_time: true
 categories:
   - llmops
 published: false
 ---
 
-![Concept diagram](/assets/images/claude-code-router-onprem-routing-hero.webp)
+![Concept diagram]({{ '/assets/images/claude-code-router-onprem-routing-hero.webp' | relative_url }})
 
 ```mermaid
 flowchart LR
@@ -47,7 +47,7 @@ The governing principle, stated up front: **every model routed through CCR is on
 ---
 
 
-![Concept diagram](/assets/images/claude-code-router-onprem-routing-diagram.svg)
+![Concept diagram]({{ '/assets/images/claude-code-router-onprem-routing-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

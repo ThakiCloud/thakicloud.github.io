@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/gemma-4-open-weight-lineup/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/gemma-4-open-weight-lineup/"
 lang: ar
 reading_time: true
 categories:
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 10 دقائق
 
-![مخطط مفاهيمي لتشكيلة Gemma 4](/assets/images/gemma-4-open-weight-lineup-hero.webp)
+![مخطط مفاهيمي لتشكيلة Gemma 4]({{ '/assets/images/gemma-4-open-weight-lineup-hero.webp' | relative_url }})
 
 ## نظرة عامة على Gemma 4
 

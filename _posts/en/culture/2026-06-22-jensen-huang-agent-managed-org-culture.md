@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/culture/jensen-huang-agent-managed-org-culture/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/jensen-huang-agent-managed-org-culture/"
 categories:
   - culture
 ---
@@ -30,7 +30,7 @@ This essay examines what questions that transition poses for organizational cult
 
 ---
 
-![Concept diagram](/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg)
+![Concept diagram]({{ '/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg' | relative_url }})
 
 *Governance structure when one engineer orchestrates hundreds of agents*
 

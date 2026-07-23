@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/chinese-ai-models-owm-agentic-intelligence-revolution/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/chinese-ai-models-owm-agentic-intelligence-revolution/"
 reading_time: true
 published: false
 categories:

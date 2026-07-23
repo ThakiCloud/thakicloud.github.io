@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Open WebUI 분석 가이드"
-canonical_url: "https://thakicloud.github.io/tutorials/open-webui-comprehensive-platform-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/open-webui-comprehensive-platform-analysis/"
 published: false
 categories:
   - tutorials

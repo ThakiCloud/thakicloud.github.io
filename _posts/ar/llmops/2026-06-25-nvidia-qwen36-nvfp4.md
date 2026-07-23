@@ -6,7 +6,7 @@ seo_description: "تحليل لنموذج NVIDIA Qwen3.6-35B-A3B-NVFP4 (تكمي
 date: 2026-06-25
 last_modified_at: 2026-06-25
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/nvidia-qwen36-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvidia-qwen36-nvfp4/"
 tags:
   - nvfp4
   - quantization
@@ -133,7 +133,7 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 | IFBench | 62.3 | 62.8 | +0.5 |
 | MMMU PRO | 74.1 | 74.5 | +0.4 |
 
-![مخطط أعمدة يقارن دقة NVFP4 بـ BF16](/assets/images/nvidia-qwen36-nvfp4-results.webp)
+![مخطط أعمدة يقارن دقة NVFP4 بـ BF16]({{ '/assets/images/nvidia-qwen36-nvfp4-results.webp' | relative_url }})
 
 تمثيل بصري للأرقام المنشورة في بطاقة النموذج (تسميات المحاور بالكورية). حتى بعد التكميم بأربع بتات، تبقى معظم فروق الدقة دون نقطة واحدة.
 

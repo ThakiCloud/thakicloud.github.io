@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/hassabis-agi-realism-vs-hype/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/hassabis-agi-realism-vs-hype/"
 categories:
   - culture
 ---
@@ -33,7 +33,7 @@ categories:
 
 ---
 
-![개념 다이어그램](/assets/images/hassabis-agi-realism-vs-hype-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/hassabis-agi-realism-vs-hype-diagram.svg' | relative_url }})
 
 *AGI 과대평가를 현실 점검으로 거르는 세 가지 기준*
 

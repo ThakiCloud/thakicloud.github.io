@@ -16,22 +16,23 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ko/research/google-pat-automated-scientific-review/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/google-pat-automated-scientific-review/"
 categories:
   - research
 audiobook: https://drive.google.com/file/d/1RRxN4VNT8s_Rp3F8oFHRwpsxk8kw3aiM/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 개요
 
 과학 논문의 동료 심사(peer review)는 오래전부터 병목이었습니다. 투고량은 매년 폭증하는데 심사할 사람의 시간은 늘지 않습니다. 그 결과 중요한 오류가 심사를 통과해 게재되고, 나중에야 정정되거나 철회되는 일이 반복됩니다. 구글이 최근 공개한 Paper Assistant Tool(PAT)은 이 문제를 정면으로 겨냥합니다. PAT는 완성된 과학 논문을 통째로 입력받아 이론적 결과를 점검하고, 실험을 검증하며, 개선점을 제안하고, 잠재적 결함을 짚어내는 에이전트형 리뷰 프레임워크입니다.
 
-![투고량은 폭증하지만 심사위원 시간은 고정된 동료 심사의 병목 구조](/assets/images/google-pat-automated-scientific-review-slide-02.webp)
+![투고량은 폭증하지만 심사위원 시간은 고정된 동료 심사의 병목 구조]({{ '/assets/images/google-pat-automated-scientific-review-slide-02.webp' | relative_url }})
 
 이 연구가 흥미로운 이유는 단순히 "LLM으로 논문을 요약한다"는 수준을 넘어서기 때문입니다. PAT는 단발 프롬프트나 단순 샘플링의 한계를 인정하고, 추론 자체를 확장하는 방향으로 설계되었습니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 논문 리뷰를 자동화하는 내부 파이프라인을 이미 돌리고 있습니다. 그래서 이 연구는 우리에게 남의 이야기가 아니라, 우리가 매일 다루는 검증 루프 설계에 직접 참고가 되는 사례입니다. 이 글은 PAT가 무엇을 어떻게 하는지, 실제 배포에서 무엇을 잡아냈는지, 그리고 그 설계가 ThakiCloud의 제품에 무엇을 시사하는지를 정리합니다.
 
-![자동 과학 논문 심사 에이전트 개념 이미지](/assets/images/google-pat-automated-scientific-review-hero.webp)
+![자동 과학 논문 심사 에이전트 개념 이미지]({{ '/assets/images/google-pat-automated-scientific-review-hero.webp' | relative_url }})
 
 ## 이 연구는 무엇인가
 
@@ -57,7 +58,7 @@ flowchart TB
 
 PAT의 성능은 SPOT 벤치마크에서 측정되었습니다. SPOT은 철회되었거나 오류가 확인된 과학 논문들로 구성된 데이터셋입니다. 이 벤치마크에서 PAT는 수학적·논리적 오류에 대해 89.7%의 검출 정확도를 기록했고, 이는 제로샷 기준선 대비 약 34% 향상된 수치입니다. 단발 프롬프트로는 놓치던 오류를 추론 스케일링이 상당 부분 잡아냈다는 의미입니다.
 
-![추론 스케일링으로 SPOT 벤치마크 검출 정확도가 제로샷 대비 34% 향상되어 89.7%에 도달](/assets/images/google-pat-automated-scientific-review-slide-05.webp)
+![추론 스케일링으로 SPOT 벤치마크 검출 정확도가 제로샷 대비 34% 향상되어 89.7%에 도달]({{ '/assets/images/google-pat-automated-scientific-review-slide-05.webp' | relative_url }})
 
 더 인상적인 것은 실제 배포 결과입니다. PAT는 STOC 2026과 ICML 2026의 파일럿에 투입되어 4,700편이 넘는 투고를 검토했습니다. 이 과정에서 ICML 논문의 3분의 1이 넘는 곳에서 유의미한 이론적 오류를 찾아냈고, 저자의 31%가 새로운 실험을 수행하도록 유도했다고 보고됩니다[추정: 논문 발표 기준]. 이 수치가 사실이라면, 자동 심사가 이미 실험실 데모 단계를 넘어 실제 학회 프로세스에 영향을 미치기 시작했다는 뜻입니다.
 
@@ -67,7 +68,7 @@ PAT의 성능은 SPOT 벤치마크에서 측정되었습니다. SPOT은 철회�
 
 이 연구가 제안하는 또 하나의 기여는 과학 평가에서 AI와 인간이 협업하는 방식을 네 개의 점진적 단계로 나눈 분류 체계입니다. 각 단계는 AI에게 얼마나 많은 판단을 위임하는가에 따라 나뉘고, 저자들은 각 단계의 장단점(trade-off)을 함께 논의합니다.
 
-![AI-인간 협업을 보조·초안점검·권고·결정 4단계로 나눈 자동화 스펙트럼 분류](/assets/images/google-pat-automated-scientific-review-slide-07.webp)
+![AI-인간 협업을 보조·초안점검·권고·결정 4단계로 나눈 자동화 스펙트럼 분류]({{ '/assets/images/google-pat-automated-scientific-review-slide-07.webp' | relative_url }})
 
 현재 파일럿이 놓인 위치는 비교적 보수적인 단계입니다. AI가 투고 전 논문의 명확성을 높이고 버그를 잡는 사전 보조자로, 그리고 심사위원을 위해 요약을 작성하고 잠재적 결함을 지목하되 최종 결정권은 사람에게 남겨 두는 보조자로 동작합니다. 이 분류가 유용한 이유는, 자동 심사를 "전부 아니면 전무"의 이분법이 아니라 위임 수준을 조절하는 스펙트럼으로 보게 해 주기 때문입니다. 위험이 큰 최종 판단은 사람에게 남기고, 반복적이고 기계적인 확인은 AI에게 넘기는 식으로 단계를 설계할 수 있습니다.
 
@@ -75,7 +76,7 @@ PAT의 성능은 SPOT 벤치마크에서 측정되었습니다. SPOT은 철회�
 
 이 연구의 설계 철학은 ThakiCloud의 Paxis와 곧바로 연결됩니다. Paxis는 ai-platform 위에서 도는 Agent-Native Cloud 제어 평면으로, 검증으로 닫는 fan-out을 핵심 원리로 삼습니다. PAT가 단발 프롬프트를 거부하고 추론 스케일링으로 오류 검출률을 끌어올린 것은, Paxis가 병렬 서브에이전트의 결과를 그대로 합치지 않고 적대적 검증 스테이지로 걸러내는 방식과 같은 문제의식에서 나옵니다. 여러 회의적 검증자를 서로 다른 시각으로 띄워 표결로 결함을 가려내는 구조는, PAT가 여러 추론 단계로 증명과 실험을 교차 점검하는 것과 정확히 대응됩니다.
 
-![PAT의 다단계 추론과 Paxis의 적대적 검증 fan-out 아키텍처의 구조적 대응](/assets/images/google-pat-automated-scientific-review-slide-08.webp)
+![PAT의 다단계 추론과 Paxis의 적대적 검증 fan-out 아키텍처의 구조적 대응]({{ '/assets/images/google-pat-automated-scientific-review-slide-08.webp' | relative_url }})
 
 실무적으로 ThakiCloud는 이미 논문 리뷰 자동화 파이프라인을 운용합니다. arXiv 논문을 입력받아 심층 피어리뷰를 생성하고, 그 결과를 문서로 만들어 팀이 열람할 수 있게 하며, 리뷰에서 도출된 실행 항목을 시스템 개선 과제로 연결합니다. PAT의 결과는 이 파이프라인에 두 가지 방향을 제시합니다. 첫째, 검출 품질을 높이려면 모델 등급을 올리기 전에 추론 단계를 늘리는 편이 효과적일 수 있다는 것입니다. 둘째, 자동 심사의 산출은 통과/불통과 판정이 아니라 구체적 결함 지목과 개선 제안이어야 실제로 쓸모가 있다는 것입니다.
 
@@ -85,7 +86,7 @@ PAT의 성능은 SPOT 벤치마크에서 측정되었습니다. SPOT은 철회�
 
 이 연구를 낙관적으로만 읽는 것은 위험합니다. 첫째, 보고된 수치의 대부분이 저자 측 발표에 기반합니다. 89.7% 검출률이나 ICML 3분의 1 오류 검출 같은 수치는 독립적 재현으로 확인되기 전까지는 상한선으로 이해하는 편이 안전합니다. 특히 SPOT 벤치마크가 철회·오류 논문으로 구성되었다는 점은, 실제 투고 분포와 다를 수 있어 일반화에 주의가 필요합니다.
 
-![위양성 위험, 인지적 태만 경계, 최종 책임은 인간이라는 한계점과 가드레일](/assets/images/google-pat-automated-scientific-review-slide-10.webp)
+![위양성 위험, 인지적 태만 경계, 최종 책임은 인간이라는 한계점과 가드레일]({{ '/assets/images/google-pat-automated-scientific-review-slide-10.webp' | relative_url }})
 
 둘째, 자동 심사의 위양성(false positive) 위험입니다. AI가 오류라고 지목한 것이 실제로는 정당한 방법인 경우, 저자에게 불필요한 부담을 지우거나 정당한 연구를 위축시킬 수 있습니다. 그래서 최종 판단을 사람에게 남기는 설계가 필수적이며, 이 경계가 무너지면 자동화가 오히려 심사의 질을 떨어뜨릴 수 있습니다.
 

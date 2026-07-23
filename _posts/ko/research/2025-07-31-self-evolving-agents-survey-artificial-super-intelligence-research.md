@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "dna"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
+canonical_url: "https://thakicloud.com/tech-blog/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
 reading_time: true
 published: false
 categories:

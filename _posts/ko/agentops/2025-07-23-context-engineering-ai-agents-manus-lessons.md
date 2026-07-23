@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/context-engineering-ai-agents-manus-lessons/"
+canonical_url: "https://thakicloud.com/tech-blog/agentops/context-engineering-ai-agents-manus-lessons/"
 reading_time: true
 categories:
   - agentops
@@ -35,7 +35,7 @@ AI 에이전트 개발에서 가장 어려운 선택 중 하나는 모델 훈련
 
 BERT 시대부터 GPT-3까지의 변화를 경험한 Manus팀은 "확률적 대학원생 하강법(Stochastic Graduate Descent)"이라고 불리는 경험적 접근법을 통해 4번의 프레임워크 재구축을 거쳐 현재의 최적화 전략에 도달했습니다.
 
-![개념 다이어그램](/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

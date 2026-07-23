@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/technique/gemini-seedance-cinematic-web/
+canonical_url: https://thakicloud.com/tech-blog/ar/technique/gemini-seedance-cinematic-web/
 categories:
   - tutorials
 ---

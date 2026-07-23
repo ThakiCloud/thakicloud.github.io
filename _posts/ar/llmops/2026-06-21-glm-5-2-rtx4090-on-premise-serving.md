@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/glm-5-2-rtx4090-on-premise-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/glm-5-2-rtx4090-on-premise-serving/"
 reading_time: true
 lang: ar
 categories:

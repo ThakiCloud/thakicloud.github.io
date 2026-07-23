@@ -9,7 +9,7 @@ tags:
   - skill
 date: 2026-07-02
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-dataviz-skill/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/claude-code-dataviz-skill/"
 categories:
   - tutorials
 ---
@@ -82,13 +82,13 @@ Slack으로 공유하는 차트에도 같은 지침이 적용된다는 점은 �
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-dataviz-skill 슬라이드 1](/assets/images/claude-code-dataviz-skill-slide-01.webp)
+![claude-code-dataviz-skill 슬라이드 1]({{ '/assets/images/claude-code-dataviz-skill-slide-01.webp' | relative_url }})
 
-![claude-code-dataviz-skill 슬라이드 2](/assets/images/claude-code-dataviz-skill-slide-02.webp)
+![claude-code-dataviz-skill 슬라이드 2]({{ '/assets/images/claude-code-dataviz-skill-slide-02.webp' | relative_url }})
 
-![claude-code-dataviz-skill 슬라이드 3](/assets/images/claude-code-dataviz-skill-slide-03.webp)
+![claude-code-dataviz-skill 슬라이드 3]({{ '/assets/images/claude-code-dataviz-skill-slide-03.webp' | relative_url }})
 
-![claude-code-dataviz-skill 슬라이드 4](/assets/images/claude-code-dataviz-skill-slide-04.webp)
+![claude-code-dataviz-skill 슬라이드 4]({{ '/assets/images/claude-code-dataviz-skill-slide-04.webp' | relative_url }})
 
 ## 출처
 

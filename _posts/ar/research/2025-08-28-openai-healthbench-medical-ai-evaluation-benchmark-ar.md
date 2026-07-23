@@ -16,7 +16,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/llmops/openai-healthbench-medical-ai-evaluation/
-canonical_url: "https://thakicloud.github.io/ar/research/openai-healthbench-medical-ai-evaluation-benchmark-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/openai-healthbench-medical-ai-evaluation-benchmark-ar/"
 categories:
   - research
   - llmops
@@ -30,7 +30,7 @@ published: false
 يمثل دمج الذكاء الاصطناعي في الرعاية الصحية أحد أكثر المجالات الواعدة والتحدي في التكنولوجيا الحديثة. مع تزايد تطبيقات النماذج اللغوية الكبيرة (LLMs) في السياقات الطبية، تصبح الحاجة إلى أطر تقييم قوية أمرًا بالغ الأهمية. يظهر OpenAI HealthBench كحل مبتكر، حيث يضع معايير جديدة لتقييم الذكاء الاصطناعي الطبي من خلال منهجيات LLMOps المبتكرة.
 
 
-![مخطط مفاهيمي](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

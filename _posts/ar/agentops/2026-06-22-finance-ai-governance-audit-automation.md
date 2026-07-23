@@ -17,14 +17,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/finance-ai-governance-audit-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/finance-ai-governance-audit-automation/"
 reading_time: true
 categories:
   - agentops
 published: false
 ---
 
-![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+![حوكمة الذكاء الاصطناعي وأتمتة التدقيق في القطاع المالي]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

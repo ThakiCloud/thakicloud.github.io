@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "sitemap"
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-project-anatomy-complete-map/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
 published: false
@@ -24,7 +24,7 @@ audiobook: /assets/audio/posts/claude-code-project-anatomy-complete-map/audioboo
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![여러 갈래의 빛줄기가 하나의 중심 노드로 수렴했다가 다시 계층적으로 갈라지는 추상 구조](/assets/images/claude-code-project-anatomy-complete-map-hero.webp)
+![여러 갈래의 빛줄기가 하나의 중심 노드로 수렴했다가 다시 계층적으로 갈라지는 추상 구조]({{ '/assets/images/claude-code-project-anatomy-complete-map-hero.webp' | relative_url }})
 *하나의 프로젝트 브레인에서 규칙, 스킬, 에이전트, 메모리로 갈라지는 Claude Code 프로젝트 구조를 추상화한 이미지.*
 
 ## 개요
@@ -114,7 +114,7 @@ flowchart TB
 | .mcp.json | 존재 (166바이트) | 서버 연결 시 |
 | .claude/settings.json | 존재 (5KB) | 매 세션 |
 
-![ThakiCloud 레포의 .claude 구성요소를 로드 타이밍별로 집계한 막대 그래프](/assets/images/claude-code-project-anatomy-complete-map-results.webp)
+![ThakiCloud 레포의 .claude 구성요소를 로드 타이밍별로 집계한 막대 그래프]({{ '/assets/images/claude-code-project-anatomy-complete-map-results.webp' | relative_url }})
 *규칙 40개와 CLAUDE.md 94줄은 매 턴 들어오는 상시 비용이고, 스킬 1655개와 에이전트 54개는 필요할 때만 들어오는 온디맨드 자산입니다.*
 
 이 숫자가 말해주는 것이 지도의 핵심을 그대로 증명합니다. 스킬 1655개를 전부 `CLAUDE.md`나 규칙에 넣었다면 매 세션이 즉시 컨텍스트 한계를 넘었을 것입니다. 실제로 이 1655개는 온디맨드로만 로드되고, 어떤 스킬을 띄울지는 별도의 라우터가 매 턴 후보를 좁혀 결정합니다. 반대로 상시 비용 영역인 규칙은 40개로 의도적으로 억제하고 있습니다. 규칙 파일당 2KB 이하를 목표로 하고, 그 이상이 되면 스킬로 강등하는 위생 규칙을 둔 결과입니다.

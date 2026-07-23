@@ -11,7 +11,7 @@ date: 2026-07-02
 lang: ko
 audiobook: https://drive.google.com/file/d/1SC2JUwlVjspyMUJTkxIJroLGohmbRwGQ/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/llmops/prompting-claude-fable-5/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/prompting-claude-fable-5/"
 categories:
   - llmops
 ---
@@ -102,13 +102,13 @@ they mattered.
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![prompting-claude-fable-5 슬라이드 1](/assets/images/prompting-claude-fable-5-slide-01.webp)
+![prompting-claude-fable-5 슬라이드 1]({{ '/assets/images/prompting-claude-fable-5-slide-01.webp' | relative_url }})
 
-![prompting-claude-fable-5 슬라이드 2](/assets/images/prompting-claude-fable-5-slide-02.webp)
+![prompting-claude-fable-5 슬라이드 2]({{ '/assets/images/prompting-claude-fable-5-slide-02.webp' | relative_url }})
 
-![prompting-claude-fable-5 슬라이드 3](/assets/images/prompting-claude-fable-5-slide-03.webp)
+![prompting-claude-fable-5 슬라이드 3]({{ '/assets/images/prompting-claude-fable-5-slide-03.webp' | relative_url }})
 
-![prompting-claude-fable-5 슬라이드 4](/assets/images/prompting-claude-fable-5-slide-04.webp)
+![prompting-claude-fable-5 슬라이드 4]({{ '/assets/images/prompting-claude-fable-5-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/data-driven-decision-culture-ai/
-canonical_url: "https://thakicloud.github.io/ar/culture/data-driven-decision-culture-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/data-driven-decision-culture-ai/"
 categories:
   - culture
 ---
@@ -34,13 +34,13 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/data-driven-decision-culture-ai-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/data-driven-decision-culture-ai-diagram.svg' | relative_url }})
 
 *تسجيل القرارات ومقارنتها بالتنبؤات، كي تصحّح البيانات انحياز الحدس*
 
 ## وراثة Moneyball: هل انتهى عصر الحدس؟
 
-في [مقالنا السابق (بناء ثقافة تنظيمية قائمة على البيانات بتفكير Moneyball)](https://thakicloud.github.io/culture/moneyball-data-driven-culture/)، أوردنا قصة فريق أوكلاند أتلتيكس عام 2002. استخرج بيلي بين المؤشر المهمَل، نسبة الوصول إلى القاعدة، وحقق 103 انتصارات بثلث ميزانية الفريق المعتادة.
+في [مقالنا السابق (بناء ثقافة تنظيمية قائمة على البيانات بتفكير Moneyball)](https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/)، أوردنا قصة فريق أوكلاند أتلتيكس عام 2002. استخرج بيلي بين المؤشر المهمَل، نسبة الوصول إلى القاعدة، وحقق 103 انتصارات بثلث ميزانية الفريق المعتادة.
 
 ارتكز ذلك المقال على مقدمتين أساسيتين: المقاييس التي تستخدمها الآن ربما تكون خاطئة؛ والموارد المقيَّمة بأقل من قيمتها التي تكتشفها عبر البيانات تمنحك أقصى كفاءة.
 
@@ -192,4 +192,4 @@ categories:
 - "Jensen Huang might be the best stock picker on Wall Street and he does not even pick stocks."، تقييم خارجي من مراقبي السوق (ليس تصريحاً لهوانغ نفسه). سلسلة تغريدات @InTheAssembly على X: [https://x.com/InTheAssembly/status/2053801122632958342](https://x.com/InTheAssembly/status/2053801122632958342)
 - Jensen Huang، تصريحات عن ميزانية الرموز الحسابية لمهندسي NVIDIA، نسخة كلمة GTC Taipei Computex 2026. Semiconalpha Substack: [https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)
 - بيانات أسعار أسهم Nebius وApplied Digital وTSMC وMicron، سلسلة تغريدات @InTheAssembly على X (نفس المصدر أعلاه)
-- مدونة ThakiCloud، "بناء ثقافة تنظيمية قائمة على البيانات بتفكير Moneyball" (المقال الأصل الذي يتابعه هذا): [https://thakicloud.github.io/culture/moneyball-data-driven-culture/](https://thakicloud.github.io/culture/moneyball-data-driven-culture/)
+- مدونة ThakiCloud، "بناء ثقافة تنظيمية قائمة على البيانات بتفكير Moneyball" (المقال الأصل الذي يتابعه هذا): [https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/](https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/)

@@ -20,7 +20,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/owm/polaris-open-source-ai-revolution-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/polaris-open-source-ai-revolution-guide/"
 lang: en
 published: false
 categories:

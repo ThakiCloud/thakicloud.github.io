@@ -17,9 +17,10 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/glm-5-2-open-weight-coding-moe/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/glm-5-2-open-weight-coding-moe/"
 categories:
   - dev
+published: false
 ---
 
 ## Overview

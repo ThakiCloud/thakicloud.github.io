@@ -16,6 +16,9 @@ tags:
   - thakicloud
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/generate-audit-runtime-accountability-gap/"
+audiobook: /assets/audio/posts/generate-audit-runtime-accountability-gap/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 우연이라기엔 대칭이 너무 정확합니다. 2026년 7월 22일, 성격이 정반대인 오픈웨이트 모델 두 개가 같은 날 세상에 나왔습니다. 하나는 코드를 씁니다. 다른 하나는 코드의 취약점을 찾습니다. 풀사이드는 셀프호스팅 코딩 에이전트용 모델 라구나 S 2.1을 공개했고, 시스코는 코드 취약점 탐지에 특화된 소형 오픈웨이트 모델 안타레스를 내놨습니다. 창과 방패가 같은 진열장에 나란히 걸린 셈입니다.
@@ -54,6 +57,27 @@ categories:
 
 ## 실행 계층에서 답을 맞춥니다
 
+생성과 감사, 그리고 그 사이에 남는 공백을 하나의 그림으로 정리하면 이렇습니다.
+
+```mermaid
+flowchart TB
+    G1["코드를 작성하는 에이전트<br/>라구나 S 2.1"]
+    A1["취약점을 찾는 에이전트<br/>안타레스"]
+    GAP["비어 있는 질문<br/>누구의 자원 위에서<br/>어떤 권한으로<br/>무엇을 기록하며 실행되는가"]
+    subgraph PAXIS["ThakiCloud Paxis · 실행 계층"]
+        P1["정책 게이트<br/>L0-L3 자율도 거버넌스"]
+        P2["격리 샌드박스 실행"]
+        P3["감사 로그"]
+        P4["CostRouter · 소버린 쿠버네티스"]
+    end
+    G1 --> GAP
+    A1 --> GAP
+    GAP --> P1
+    P1 --> P2
+    P2 --> P3
+    P1 --> P4
+```
+
 ThakiCloud의 Paxis는 바로 이 비어 있는 계층을 다룹니다. Paxis는 에이전트를 위한 클라우드로, Skills와 Tools, Policies, Audit Logs를 일급 리소스로 취급하는 정식 제품입니다. 라구나 S 2.1 같은 코딩 에이전트를 백엔드에 붙이든 안타레스 같은 감사 모델을 스캔 전단에 붙이든, 그 에이전트는 결국 정책 게이트를 통과해 격리된 샌드박스에서 실행되고 모든 행위가 감사 로그에 남습니다. 아임웹 사례의 무승인 자동 롤백이 불안하게 읽혔다면, Paxis의 L0에서 L3까지 이어지는 자율도 거버넌스가 그 불안의 반대편입니다. 어떤 작업은 완전 자율로 두고 어떤 작업은 사람 승인을 강제하는 경계를 코드가 아니라 정책으로 선언할 수 있습니다.
 
 소버린 요구도 같은 계층에서 만납니다. 안타레스가 소스코드 반출 없이 로컬에서 돌아야 의미가 있듯, Paxis는 소버린·온프렘 쿠버네티스 위에서 동작하며 작업별로 모델을 고르는 CostRouter를 갖췄습니다. 저비용 로컬 모델로 의심 파일을 좁힌 뒤 필요할 때만 큰 모델을 부르는 방식은, 시스코가 안타레스를 초기 필터로 위치시키라고 권한 그 설계를 인프라 차원에서 그대로 구현한 것입니다. MCP 커넥터와 스킬 마켓을 통해 새 모델과 도구를 얹더라도 실행과 기록의 규칙은 바뀌지 않습니다. 예금보험공사가 모델보다 먼저 세우려 했던 데이터 거버넌스와 리스크 관리 체계 역시, 개별 프로젝트마다 새로 짜는 것이 아니라 플랫폼이 기본으로 제공하는 정책과 감사 계층으로 흡수됩니다.
@@ -82,4 +106,16 @@ ThakiCloud의 Paxis는 바로 이 비어 있는 계층을 다룹니다. Paxis는
 - EBN, [이재용·최태원·이해진, 美서 젠슨 황 만난다…AI 공급망 동맹 재가동](https://www.ebn.co.kr/news/articleView.html?idxno=1717215)
 - 디지털투데이, [시스코, 코드 취약점 탐지 특화 오픈웨이트 소형 모델 '안타레스' 공개](https://www.digitaltoday.co.kr/news/articleView.html?idxno=685800)
 - 뉴스저널리즘, [AI가 바꾼 보안 공식…에스원 '현장 데이터'로 승부](https://www.ngetnews.com/news/articleView.html?idxno=551683)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![generate-audit-runtime-accountability-gap 슬라이드 1](/assets/images/generate-audit-runtime-accountability-gap-slide-01.png)
+
+![generate-audit-runtime-accountability-gap 슬라이드 2](/assets/images/generate-audit-runtime-accountability-gap-slide-02.png)
+
+![generate-audit-runtime-accountability-gap 슬라이드 3](/assets/images/generate-audit-runtime-accountability-gap-slide-03.png)
+
+![generate-audit-runtime-accountability-gap 슬라이드 4](/assets/images/generate-audit-runtime-accountability-gap-slide-04.png)
 

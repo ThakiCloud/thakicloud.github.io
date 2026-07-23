@@ -15,7 +15,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/deploy-your-own-saas-selfhosting-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/deploy-your-own-saas-selfhosting-guide-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/deploy-your-own-saas-selfhosting-guide-en/"
 categories:
   - tutorials
 published: false

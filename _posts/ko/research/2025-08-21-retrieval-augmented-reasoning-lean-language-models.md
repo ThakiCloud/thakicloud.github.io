@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/retrieval-augmented-reasoning-lean-language-models/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/retrieval-augmented-reasoning-lean-language-models/"
 reading_time: true
 published: false
 categories:
@@ -575,11 +575,11 @@ DeepSeek-R1 모델을 활용한 추론 트레이스 생성에 사용된 프롬�
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 1](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-01.webp)
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 1]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-01.webp' | relative_url }})
 
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 2](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-02.webp)
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 2]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-02.webp' | relative_url }})
 
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 3](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-03.webp)
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 3]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-03.webp' | relative_url }})
 
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 4](/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-04.webp)
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 4]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-04.webp' | relative_url }})
 

@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/convertx-self-hosted-file-converter-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/convertx-self-hosted-file-converter-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/convertx-self-hosted-file-converter-complete-guide/"
 published: false
 categories:
   - tutorials

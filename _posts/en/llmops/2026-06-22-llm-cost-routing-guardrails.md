@@ -17,14 +17,14 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/llm-cost-routing-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-cost-routing-guardrails/"
 reading_time: true
 categories:
   - llmops
 published: false
 ---
 
-![LLM Cost Routing Guardrails in Practice](/assets/images/llm-cost-routing-guardrails-hero.webp)
+![LLM Cost Routing Guardrails in Practice]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})
 
 ## Overview: A Story That Began with a $705 Bill
 

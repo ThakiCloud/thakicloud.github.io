@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/self-evolving-harness-nightly/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/self-evolving-harness-nightly/"
 reading_time: true
 categories:
   - research
@@ -25,7 +25,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 published: false
 ---
 
-![매일 밤 스스로 진화하는 AI 하네스](/assets/images/self-evolving-harness-nightly-hero.webp)
+![매일 밤 스스로 진화하는 AI 하네스]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})
 
 ## 개요: 밤마다 더 나아지는 시스템
 
@@ -173,11 +173,11 @@ Self-Harness 논문(arXiv:2606.09498)과 Paxis 플랫폼에 관심 있으시다�
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![self-evolving-harness-nightly 슬라이드 1](/assets/images/self-evolving-harness-nightly-slide-01.webp)
+![self-evolving-harness-nightly 슬라이드 1]({{ '/assets/images/self-evolving-harness-nightly-slide-01.webp' | relative_url }})
 
-![self-evolving-harness-nightly 슬라이드 2](/assets/images/self-evolving-harness-nightly-slide-02.webp)
+![self-evolving-harness-nightly 슬라이드 2]({{ '/assets/images/self-evolving-harness-nightly-slide-02.webp' | relative_url }})
 
-![self-evolving-harness-nightly 슬라이드 3](/assets/images/self-evolving-harness-nightly-slide-03.webp)
+![self-evolving-harness-nightly 슬라이드 3]({{ '/assets/images/self-evolving-harness-nightly-slide-03.webp' | relative_url }})
 
-![self-evolving-harness-nightly 슬라이드 4](/assets/images/self-evolving-harness-nightly-slide-04.webp)
+![self-evolving-harness-nightly 슬라이드 4]({{ '/assets/images/self-evolving-harness-nightly-slide-04.webp' | relative_url }})
 

@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/dev/minimal-guarded-agent-loop/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/minimal-guarded-agent-loop/"
 reading_time: true
 categories:
   - dev
@@ -36,7 +36,7 @@ ReAct 루프의 골격은 단순합니다. 정책(policy)이 현재 상태를 �
 
 가드레일은 이 루프에 세 가지 멈춤 조건을 추가합니다. 단계 상한(max_steps)은 루프가 정해진 횟수를 넘기면 강제로 중단합니다. 시간 예산(wall_budget)은 작업당 벽시계 시간을 제한합니다. 반복 탐지(repeat_guard)는 같은 행동이 반복되면 루프 함정으로 판단해 끊습니다. 모든 작업은 정확히 하나의 종료 사유로 끝납니다. 정상 종료(finished), 단계 초과(max_steps), 시간 초과(wall_budget), 반복 차단(repeat_guard), 행동 없음(no_action) 중 하나입니다.
 
-![가드레일이 붙은 에이전트 루프: 정책 결정 후 단계 상한, 시간 예산, 반복 탐지를 통과해야 도구를 실행하고, 어느 가드레일이든 걸리면 명시적 종료 사유로 멈춥니다](/assets/images/minimal-guarded-agent-loop-diagram.webp)
+![가드레일이 붙은 에이전트 루프: 정책 결정 후 단계 상한, 시간 예산, 반복 탐지를 통과해야 도구를 실행하고, 어느 가드레일이든 걸리면 명시적 종료 사유로 멈춥니다]({{ '/assets/images/minimal-guarded-agent-loop-diagram.webp' | relative_url }})
 
 이 그림의 핵심은 도구를 실행하기 전에 반드시 가드레일 검사를 거친다는 점입니다. 가드레일을 루프 바깥에 두거나 사후에 검사하면 이미 폭주가 시작된 뒤입니다. 매 반복마다 행동 직전에 검사해야 멈춤이 보장됩니다.
 
@@ -99,7 +99,7 @@ def run_task(task: str, g: Guards) -> Trace:
 
 핵심은 종료 사유 분포입니다. 정상 종료가 네 건, 반복 차단이 한 건입니다. 의도적으로 심은 "loop forever please" 작업은 같은 조회를 계속 시도하다가 정확히 2단계에서 반복 탐지에 걸려 멈췄습니다. 같은 행동이 한도를 넘는 순간 루프가 끊긴 것입니다. 가드레일이 없었다면 이 작업은 정책이 영원히 같은 행동을 고집하며 끝나지 않았을 것입니다.
 
-![작업별 루프 단계와 종료 사유 분포: 정상 종료 네 건은 1에서 2단계 만에 끝나고, 루프 함정 작업 한 건만 반복 차단으로 멈춥니다](/assets/images/minimal-guarded-agent-loop-results.webp)
+![작업별 루프 단계와 종료 사유 분포: 정상 종료 네 건은 1에서 2단계 만에 끝나고, 루프 함정 작업 한 건만 반복 차단으로 멈춥니다]({{ '/assets/images/minimal-guarded-agent-loop-results.webp' | relative_url }})
 
 왼쪽 막대는 작업별로 종료까지 걸린 단계 수입니다. 정상 작업은 1단계 또는 2단계 만에 끝났고, 계산과 조회를 모두 요구한 작업만 2단계가 필요했습니다. 오른쪽은 종료 사유 분포로, 다섯 작업 중 하나가 가드레일에 의해 멈췄음을 보여 줍니다. 전체 처리 시간은 0.115밀리초로, LLM 호출이 없기 때문에 루프 제어 자체의 비용은 사실상 0에 가깝습니다. 이는 중요한 사실을 말해 줍니다. 가드레일을 추가하는 비용은 무시할 수 있는 수준이고, 빠지는 비용은 폭주하는 루프 전체라는 점입니다.
 

@@ -5,7 +5,7 @@ seo_title: "하네스 설계와 사후학습의 상호작용 - LLM 에이전트 
 seo_description: "The Interplay of Harness Design and Post-Training in LLM Agents(arXiv:2606.25447) 정리. 하네스 정보량이 제로샷과 사후학습 성능을 함께 끌어올리고, 도구 환경 변화(OOD)에서 하네스 인지 사후학습만이 견고하게 일반화한다는 발견을, 에이전트 네이티브 클라우드와 추론·학습 인프라 관점에서 해석합니다."
 date: 2026-07-20
 last_modified_at: 2026-07-20
-canonical_url: "https://thakicloud.github.io/ko/research/harness-design-post-training/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/harness-design-post-training/"
 lang: ko
 reading_time: true
 tags:

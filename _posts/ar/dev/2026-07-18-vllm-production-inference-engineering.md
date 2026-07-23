@@ -3,7 +3,7 @@ title: "كيف يعمل vLLM، وكيف يُستخدم في بيئة الإنت�
 excerpt: "عند نشر نموذج لغوي كبير في خدمة حقيقية، تتحدد معظم التكلفة ليس باختيار النموذج، بل بمحرك الاستدلال الذي يشغّله. نستعرض كيف يقلل vLLM من هدر GPU عبر PagedAttention والتجميع المستمر (continuous batching)، وكيف تشغّله ThakiCloud في بيئة الإنتاج من منظور تشغيلي."
 date: 2026-07-18
 lang: ar
-canonical_url: https://thakicloud.github.io/ar/dev/vllm-production-inference-engineering/
+canonical_url: https://thakicloud.com/tech-blog/ar/dev/vllm-production-inference-engineering/
 tags:
   - vLLM
   - 추론엔진

@@ -17,13 +17,13 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "robot"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/hermes-agent-learn-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/hermes-agent-learn-skills/"
 categories:
   - agentops
 published: false
 ---
 
-![عملية تأليف المهارات ممثَّلة بتقارب شظايا معرفية متفرقة إلى بنية متبلورة واحدة](/assets/images/hermes-agent-learn-skills-hero.webp)
+![عملية تأليف المهارات ممثَّلة بتقارب شظايا معرفية متفرقة إلى بنية متبلورة واحدة]({{ '/assets/images/hermes-agent-learn-skills-hero.webp' | relative_url }})
 *مفهوم /learn مُجسَّدًا بتبلور شظايا معرفية متناثرة من اتجاهات شتى في مخرج واحد منظّم.*
 
 ## نظرة عامة
@@ -38,7 +38,7 @@ published: false
 
 `/learn` ليس محرك استيعاب مستقلًا. جوهره أنه "يبني موجّهًا يرشد الوكيل عبر المعايير ثم يُمرره كدورة عادية واحدة." لذلك تظل عملية جمع المصادر تعمل بالأدوات التي يمتلكها الوكيل بالفعل: الأدلة المحلية تُقرأ عبر `read_file` و`search_files`، والوثائق الإلكترونية تُجلب عبر `web_extract`، وسير العمل التي أُنجزت معًا في المحادثة تُلتقط من سياق الحوار مباشرةً.
 
-![مسار /learn من جمع المصادر إلى تأليف SKILL.md معياري ثم العبور عبر البوابة ليصبح أمر slash](/assets/images/hermes-agent-learn-skills-diagram.webp)
+![مسار /learn من جمع المصادر إلى تأليف SKILL.md معياري ثم العبور عبر البوابة ليصبح أمر slash]({{ '/assets/images/hermes-agent-learn-skills-diagram.webp' | relative_url }})
 *المسار الكامل لـ /learn: من وصف المصدر، إلى الجمع بأدوات الوكيل، ثم تأليف SKILL.md معياري، ثم العبور عبر بوابة write_approval وcurator.*
 
 المصادر المقبولة أربعة أنواع. فيما يلي الأمثلة المأخوذة مباشرةً من التوثيق الرسمي:

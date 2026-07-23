@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
 reading_time: true
 lang: ar
 published: true
@@ -32,7 +32,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 18 دقائق
 
-![نظرة عامة على خط معالجة Analyze-then-Parse في ByteDance Dolphin](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+![نظرة عامة على خط معالجة Analyze-then-Parse في ByteDance Dolphin]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png' | relative_url }})
 
 ## مقدمة
 

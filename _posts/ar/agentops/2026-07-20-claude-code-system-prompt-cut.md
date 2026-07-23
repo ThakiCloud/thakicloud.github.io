@@ -18,12 +18,12 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-system-prompt-cut/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-system-prompt-cut/"
 categories:
   - agentops
 ---
 
-![تحوّل موجّه نظام سميك إلى هيكل رفيع](/assets/images/claude-code-system-prompt-cut-hero.png)
+![تحوّل موجّه نظام سميك إلى هيكل رفيع]({{ '/assets/images/claude-code-system-prompt-cut-hero.png' | relative_url }})
 
 ## نظرة عامة
 

@@ -6,7 +6,7 @@ seo_description: "In an era where a skill pack can redefine an agent's behavior 
 date: 2026-06-22
 last_modified_at: 2026-06-22
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-coding-agent-skill-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-coding-agent-skill-guardrails/"
 tags:
   - ai-agents
   - security
@@ -29,7 +29,7 @@ What an AI coding agent can actually do is increasingly determined not by the un
 
 This post is not about that tool and does not explain how to use it. It is the opposite: an examination of the structural problem the incident exposed. The fact that "a single skill pack can change an agent's character" carries significant implications for enterprise environments, and it raises the question of how to defend against it. For that reason, neither attack techniques nor the location of the project are included here. ThakiCloud operates agent workloads for multiple customers simultaneously on a Kubernetes-based AI/ML SaaS platform, which means governance questions like this are not abstract concerns but concrete design challenges the platform faces every day.
 
-![Conceptual image of enterprise AI agent guardrails](/assets/images/ai-coding-agent-skill-guardrails-hero.webp)
+![Conceptual image of enterprise AI agent guardrails]({{ '/assets/images/ai-coding-agent-skill-guardrails-hero.webp' | relative_url }})
 
 ## What Happened: The Controversy a Single Skill Pack Sparked
 
@@ -41,7 +41,7 @@ What deserves attention here is not the ethics of any individual tool. The real 
 
 The attack surface of traditional software is relatively static. Code is fixed, and what that code does is determined before deployment. Agents are different. Even with the same model and the same binary, agent behavior can change at runtime depending on which skills are loaded and which tools are accessible. The attack surface is dynamic.
 
-![Dynamic attack surface and four guardrail layers](/assets/images/ai-coding-agent-skill-guardrails-diagram.svg)
+![Dynamic attack surface and four guardrail layers]({{ '/assets/images/ai-coding-agent-skill-guardrails-diagram.svg' | relative_url }})
 
 *The dynamic attack surface and four guardrail layers: user intent flows through the agent to filesystem, shell, egress, and external tools, with each boundary gated by one of four guardrails.*
 

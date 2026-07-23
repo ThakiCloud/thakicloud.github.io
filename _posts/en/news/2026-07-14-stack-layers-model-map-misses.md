@@ -16,14 +16,14 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/news/stack-layers-model-map-misses/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/stack-layers-model-map-misses/"
 ---
 
 When we talk about the AI market, we usually line up the models. There's the frontier tier, then Chinese models at half the price, then absurdly cheap ultra-low-cost models, then in-house models built by service companies, and on-device models running on the hardware itself. This map is accurate. It shows clearly which models exist.
 
 But this map cannot answer one question: who wins, and who captures the margin. The answer to that question isn't above the model, it's below it. What silicon it runs on, how it's served, what it's evaluated and observed with, what license it was released under, and what product harness wraps around it. These five layers are where the real contest happens. This piece maps the five layers a model-listing map skips, using real data from mid-2026, and points out that three of these five layers are exactly where our platform stands.
 
-![The five stack layers beneath the model and the three where ThakiCloud stands](/assets/images/stack-layers-model-map-misses-diagram.svg)
+![The five stack layers beneath the model and the three where ThakiCloud stands]({{ '/assets/images/stack-layers-model-map-misses-diagram.svg' | relative_url }})
 
 *A model map only shows what exists. Of the five layers beneath it, inference silicon, serving economics, and evaluation and observability are the ones that decide margin and the contest, and that is precisely where ThakiCloud stands. Licensing and harness decide who builds a moat on top.*
 

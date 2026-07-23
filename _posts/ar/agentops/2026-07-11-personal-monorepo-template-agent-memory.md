@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/personal-monorepo-template-agent-memory/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/personal-monorepo-template-agent-memory/"
 ---
 
 عند استخدام عامل البرمجة يوميًا، يصطدم المرء مرارًا بحائط واحد. القرارات التي اتُّخذت أمس، الأعراف التي حُدّدت الأسبوع الماضي، أسلوب عمل زميل معيّن، كل هذا يعيد العامل سؤاله عنه في كل جلسة وكأنه يسمعه للمرة الأولى. ظهر مؤخرًا مستودع يحل هذه المشكلة دون قاعدة بيانات متجهية باهظة أو بنية تحتية منفصلة للذاكرة، بل عبر **بنية مجلدات عادية وملف ماركداون واحد فقط**، وأثار ضجة بين المطورين. إنه `personal-monorepo-template` الذي كشف عنه jxnl (جيسون ليو)، صانع مكتبة `Instructor`. يفكك هذا المقال تلك البنية، ويتحقق من دلالات هذا التصميم من منظور تشغيل ThakiCloud الذي يتعامل مع المهارات والمعرفة كموارد من الدرجة الأولى.

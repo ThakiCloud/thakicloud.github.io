@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "shield-alt"
-canonical_url: "https://thakicloud.github.io/ko/agentops/ai-coding-agent-skill-guardrails/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/ai-coding-agent-skill-guardrails/"
 categories:
   - agentops
 audiobook: https://drive.google.com/file/d/1i55U5I6EIkowQyR97-i5MQL8Wj0Asisv/view
@@ -30,7 +30,7 @@ AI 코딩 에이전트가 어디까지 할 수 있는지는 점점 모델 자체
 
 이 글의 목적은 그 도구를 소개하거나 사용법을 설명하는 것이 아닙니다. 그 반대입니다. 이 사건이 드러낸 구조적 문제, 즉 "스킬팩 한 장으로 에이전트의 성격이 바뀐다"는 사실이 엔터프라이즈 환경에서 무엇을 의미하는지, 그리고 그것을 어떻게 방어하는지를 다룹니다. 따라서 공격 기법이나 해당 프로젝트의 위치는 의도적으로 싣지 않습니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼에서 여러 고객의 에이전트 워크로드를 동시에 운영하기 때문에, 이런 거버넌스 문제는 추상적 우려가 아니라 플랫폼이 매일 다루는 설계 과제입니다.
 
-![엔터프라이즈 AI 에이전트 가드레일 개념 이미지](/assets/images/ai-coding-agent-skill-guardrails-hero.webp)
+![엔터프라이즈 AI 에이전트 가드레일 개념 이미지]({{ '/assets/images/ai-coding-agent-skill-guardrails-hero.webp' | relative_url }})
 
 ## 무슨 일이 있었나: 스킬팩 한 장이 일으킨 논쟁
 
@@ -42,7 +42,7 @@ AI 코딩 에이전트가 어디까지 할 수 있는지는 점점 모델 자체
 
 전통적인 소프트웨어의 공격면은 비교적 정적입니다. 코드가 정해져 있고, 그 코드가 무엇을 하는지는 배포 전에 고정됩니다. 에이전트는 다릅니다. 같은 모델, 같은 바이너리라도 어떤 스킬을 로드하고 어떤 도구에 접근할 수 있느냐에 따라 행동이 런타임에 달라집니다. 즉 공격면이 동적입니다.
 
-![동적 공격면과 네 겹의 가드레일](/assets/images/ai-coding-agent-skill-guardrails-diagram.svg)
+![동적 공격면과 네 겹의 가드레일]({{ '/assets/images/ai-coding-agent-skill-guardrails-diagram.svg' | relative_url }})
 
 *동적 공격면과 네 겹의 가드레일: 사용자 의도가 에이전트를 거쳐 파일시스템·셸·이그레스·외부 도구로 이어지고, 네 겹의 가드레일이 각 경계를 통제한다*
 
@@ -81,13 +81,13 @@ ThakiCloud의 스택은 이 격리를 인프라 계층에서 강제하도록 구
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-coding-agent-skill-guardrails 슬라이드 1](/assets/images/ai-coding-agent-skill-guardrails-slide-01.webp)
+![ai-coding-agent-skill-guardrails 슬라이드 1]({{ '/assets/images/ai-coding-agent-skill-guardrails-slide-01.webp' | relative_url }})
 
-![ai-coding-agent-skill-guardrails 슬라이드 2](/assets/images/ai-coding-agent-skill-guardrails-slide-02.webp)
+![ai-coding-agent-skill-guardrails 슬라이드 2]({{ '/assets/images/ai-coding-agent-skill-guardrails-slide-02.webp' | relative_url }})
 
-![ai-coding-agent-skill-guardrails 슬라이드 3](/assets/images/ai-coding-agent-skill-guardrails-slide-03.webp)
+![ai-coding-agent-skill-guardrails 슬라이드 3]({{ '/assets/images/ai-coding-agent-skill-guardrails-slide-03.webp' | relative_url }})
 
-![ai-coding-agent-skill-guardrails 슬라이드 4](/assets/images/ai-coding-agent-skill-guardrails-slide-04.webp)
+![ai-coding-agent-skill-guardrails 슬라이드 4]({{ '/assets/images/ai-coding-agent-skill-guardrails-slide-04.webp' | relative_url }})
 
 ## 출처
 

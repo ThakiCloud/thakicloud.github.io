@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-04
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/tutorials/anthropic-prompting-guide-latest-models/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/anthropic-prompting-guide-latest-models/"
 categories:
   - tutorials
 ---
 
-![صورة تجريدية لتعليمات مبنيّة تتراكم وتتجمّع في مخرَج واحد مرتّب](/assets/images/anthropic-prompting-guide-latest-models-hero.webp)
+![صورة تجريدية لتعليمات مبنيّة تتراكم وتتجمّع في مخرَج واحد مرتّب]({{ '/assets/images/anthropic-prompting-guide-latest-models-hero.webp' | relative_url }})
 *تصوير لكيفية تجمّع التعليمات الواضحة والبنية في مخرَج يمكن التنبّؤ به.*
 
 ## نظرة عامة

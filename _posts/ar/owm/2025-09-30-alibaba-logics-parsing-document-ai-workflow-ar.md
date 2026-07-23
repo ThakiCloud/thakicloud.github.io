@@ -15,7 +15,7 @@ toc: true
 toc_label: "المحتويات"
 lang: ar
 permalink: /ar/owm/alibaba-logics-parsing-document-ai-workflow/
-canonical_url: "https://thakicloud.github.io/ar/owm/alibaba-logics-parsing-document-ai-workflow/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/alibaba-logics-parsing-document-ai-workflow/"
 published: false
 categories:
   - owm

@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "OpenHands 튜토리얼"
-canonical_url: "https://thakicloud.github.io/openhands-ai-software-development-agent-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/openhands-ai-software-development-agent-tutorial/"
 published: false
 categories:
   - tutorials

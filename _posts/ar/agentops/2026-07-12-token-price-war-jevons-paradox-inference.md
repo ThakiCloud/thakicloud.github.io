@@ -17,10 +17,10 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ar/agentops/token-price-war-jevons-paradox-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/token-price-war-jevons-paradox-inference/"
 ---
 
-![مخطط مفاهيمي يوضح أنه كلما تدفقت التوكنات الرخيصة كالفيضان، ارتفعت قيمة البنية التحتية للاستدلال أسفلها نحو الأعلى](/assets/images/token-price-war-jevons-paradox-inference-hero.webp)
+![مخطط مفاهيمي يوضح أنه كلما تدفقت التوكنات الرخيصة كالفيضان، ارتفعت قيمة البنية التحتية للاستدلال أسفلها نحو الأعلى]({{ '/assets/images/token-price-war-jevons-paradox-inference-hero.webp' | relative_url }})
 
 ## خبران متناقضان وصلا في الأسبوع نفسه
 

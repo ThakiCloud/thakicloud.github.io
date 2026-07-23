@@ -17,7 +17,7 @@ tags:
   - paxis
 date: 2026-07-16
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/bonsai-27b-ternary-1bit-quantization/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/bonsai-27b-ternary-1bit-quantization/"
 categories:
   - llmops
 ---

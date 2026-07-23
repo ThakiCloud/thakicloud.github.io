@@ -18,9 +18,10 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ar/research/sovereign-speculative-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/sovereign-speculative-serving/"
 categories:
   - research
+published: false
 ---
 
 ## لمن هذا المقال
@@ -28,7 +29,7 @@ categories:
 نكتب هذا المقال للمهندسين الذين يشغّلون بأنفسهم خدمة استدلال نماذج اللغة الكبيرة، سواء داخل الشركة أو خارجها، ولا سيما من يتعامل منهم مع بيئات متعددة المستأجرين يشترك فيها عدة عملاء أو نماذج داخل عنقود GPU واحد. نفترض أن القارئ يعرف بالفعل ما هو الترميز التخميني، ونحاول هنا مساعدته على الإجابة عن سؤال عملي: هل سيحقق هذا الأسلوب فائدة حقيقية عند تطبيقه على عنقودنا نحن. الجواب المختصر هو أن الأمر يتوقف على مدى خلو العتاد فعلا من الحمل، وأن هذا القرار يجب أن تتخذه الجدولة لا النموذج المسودة.
 
 
-![مخطط مفاهيمي](/assets/images/sovereign-speculative-serving-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/sovereign-speculative-serving-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

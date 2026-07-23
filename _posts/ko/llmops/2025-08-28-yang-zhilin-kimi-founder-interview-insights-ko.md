@@ -1,12 +1,12 @@
 ---
 title: "양지린의 비전: Kimi와 장문맥 언어모델로 구축하는 AI의 미래"
 excerpt: "자연어 처리 연구자에서 Kimi Chat으로 중국의 장문맥 LLM 혁명을 이끄는 문샷AI 창업자 양지린의 여정을 심도 있게 탐구합니다."
-seo_title: "양지린 Kimi 창업자 인터뷰 - 문샷AI LLMOps 인사이트 - 타키 클라우드"
+seo_title: "양지린 Kimi 창업자 인터뷰 - 문샷AI LLMOps 인사이트 - 다키클라우드"
 seo_description: "양지린의 창업 여정, Kimi Chat에 대한 비전, 그리고 문샷AI가 경쟁 치열한 AI 환경에서 장문맥 언어모델을 혁신하는 방법을 알아보세요."
 date: 2025-08-28
 lang: ko
 permalink: /ko/llmops/yang-zhilin-kimi-founder-interview-insights/
-canonical_url: "https://thakicloud.github.io/ko/llmops/yang-zhilin-kimi-founder-interview-insights-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/yang-zhilin-kimi-founder-interview-insights-ko/"
 tags:
   - 양지린
   - Kimi Chat

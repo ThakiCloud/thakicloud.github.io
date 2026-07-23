@@ -19,10 +19,10 @@ toc_icon: "cog"
 categories:
   - dev
 published: false
-canonical_url: "https://thakicloud.github.io/ar/dev/yao-meta-skill-engineering-governance/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/yao-meta-skill-engineering-governance/"
 ---
 
-![صورة تجريدية لكتل وحدوية تُشكّل خط تجميع دقيقًا مع بوابات حوكمة متوهّجة](/assets/images/yao-meta-skill-hero.webp)
+![صورة تجريدية لكتل وحدوية تُشكّل خط تجميع دقيقًا مع بوابات حوكمة متوهّجة]({{ '/assets/images/yao-meta-skill-hero.webp' | relative_url }})
 *رسم مفاهيمي للميتا-سكيل التي تتعامل مع المهارة لا كموجّه لمرّة واحدة، بل كـ"أصل قابل لإعادة الاستخدام" مرفق بالإصدار والتحقّق والحوكمة.*
 
 ## نظرة عامة
@@ -69,7 +69,7 @@ VIRTUAL_ENV="$REPO_ROOT/.venv" uv pip install "PyYAML==6.0.3"
 
 والتركيب الفعلي الذي قِسته فور الاستنساخ كان كالآتي: 632 ملفًّا متتبَّعًا، و77 اختبارًا، و29 تقييمًا (evals)، و10 مدخلات في أطلس المهارات (skill_atlas)، و3 مخطّطات (schemas)، وقالبَين (templates). فهذه ليست "مهارة" واحدة، بل أقرب إلى مصنع صغير ينتج المهارات ويتحقّق منها ويحوكمها.
 
-![مخطّط لتركيب مستودع yao-meta-skill ونتائج بوابات التحقّق المحلية](/assets/images/yao-meta-skill-results.webp)
+![مخطّط لتركيب مستودع yao-meta-skill ونتائج بوابات التحقّق المحلية]({{ '/assets/images/yao-meta-skill-results.webp' | relative_url }})
 *إلى اليسار: التركيب المقيس للمستودع (مقياس لوغاريتمي). وإلى اليمين: اجتياز بوابات التحقّق المحلية الأربع جميعها.*
 
 ## نتائج التحقّق الفعلية

@@ -17,14 +17,14 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/saas/sovereign-ai-airgap-public-sector/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/saas/sovereign-ai-airgap-public-sector/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![بنية مرجعية للذكاء الاصطناعي السيادي للقطاع العام المعزول](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)
+![بنية مرجعية للذكاء الاصطناعي السيادي للقطاع العام المعزول]({{ '/assets/images/sovereign-ai-airgap-public-sector-hero.webp' | relative_url }})
 
 ## نظرة عامة: لماذا يهم الذكاء الاصطناعي السيادي للقطاع العام الآن
 

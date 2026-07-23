@@ -19,24 +19,24 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/nvidia-glm-5-2-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
 categories:
   - llmops
 ---
 
-![16비트 신경망 격자가 4비트의 압축된 코어로 응축되는 추상 이미지](/assets/images/nvidia-glm-5-2-nvfp4-hero.webp)
+![16비트 신경망 격자가 4비트의 압축된 코어로 응축되는 추상 이미지]({{ '/assets/images/nvidia-glm-5-2-nvfp4-hero.webp' | relative_url }})
 *16비트 가중치가 4비트로 응축되는 개념을 시각화한 이미지입니다.*
 
 프런티어급 추론 모델을 자체 인프라에서 서빙하려는 팀에게 가장 먼저 부딪히는 벽은 GPU 메모리입니다. 753B 파라미터를 16비트로 그대로 올리면 1.5TB에 가까운 메모리가 필요하고, 이는 곧 GPU 노드 여러 대를 의미합니다. NVIDIA가 2026년 6월 25일 Hugging Face에 공개한 `nvidia/GLM-5.2-NVFP4`는 ZAI(zai-org)의 GLM-5.2를 4비트로 양자화해 이 벽을 낮추려는 시도입니다.
 
-이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 이 모델의 추론 토큰 길이가 자가호스팅 비용 셈법을 어떻게 바꾸는지는 [추론 토큰 경제성 글](https://thakicloud.github.io/ko/llmops/glm-5-2-reasoning-token-economics/)에서, 컨슈머 하드웨어용 1비트 GGUF 양자화는 [Unsloth GGUF 글](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 데이터센터 트랙입니다. NVIDIA가 직접 공개한 NVFP4 양자화가 어떤 구조를 택했고, 어떤 하드웨어에서 어떻게 서빙되며, 멀티테넌트 서빙을 운영하는 입장에서 무엇을 의미하는가입니다.
+이 글은 GLM-5.2라는 모델 자체의 소개글이 아닙니다. 이 모델의 추론 토큰 길이가 자가호스팅 비용 셈법을 어떻게 바꾸는지는 [추론 토큰 경제성 글](https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-reasoning-token-economics/)에서, 컨슈머 하드웨어용 1비트 GGUF 양자화는 [Unsloth GGUF 글](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)에서 이미 다뤘습니다. 이 글이 보려는 것은 데이터센터 트랙입니다. NVIDIA가 직접 공개한 NVFP4 양자화가 어떤 구조를 택했고, 어떤 하드웨어에서 어떻게 서빙되며, 멀티테넌트 서빙을 운영하는 입장에서 무엇을 의미하는가입니다.
 
 본문의 정확도 수치는 모두 NVIDIA가 모델카드에 공개한 공식 측정치입니다. 753B 모델은 NVIDIA Blackwell 전용에 8-way 텐서 병렬을 요구하므로 ThakiCloud의 개발 환경에서는 직접 재현하지 못했습니다. 따라서 이 글은 공개 자료에 기반한 분석이며, 재현 수치를 임의로 만들어 넣지 않았습니다. 출처가 갈리는 값은 `[추정]`으로 표시합니다.
 
 ## 개요
 
-![753B 파라미터를 16비트로 올리면 1.5TB에 달하는 GPU 메모리 벽](/assets/images/nvidia-glm-5-2-nvfp4-slide-02.webp)
+![753B 파라미터를 16비트로 올리면 1.5TB에 달하는 GPU 메모리 벽]({{ '/assets/images/nvidia-glm-5-2-nvfp4-slide-02.webp' | relative_url }})
 *프런티어급 모델을 자체 인프라에 서빙할 때 가장 먼저 부딪히는 벽은 GPU 메모리입니다.*
 
 `nvidia/GLM-5.2-NVFP4`는 ZAI의 `zai-org/GLM-5.2`를 NVIDIA Model Optimizer(ModelOpt)로 양자화한 버전입니다. 베이스 모델은 추론과 코딩을 위한 Mixture-of-Experts(MoE) 구조로, 총 753B 파라미터 중 토큰당 40B만 활성화됩니다. 네트워크 아키텍처는 `GlmMoeDsaForCausalLM`이며, IndexShare 인덱서를 사용하는 희소 어텐션(sparse attention)으로 최대 1M 토큰의 긴 컨텍스트를 지원합니다. 라이선스는 베이스 모델과 동일한 MIT로, 상업·비상업 모두 사용 가능합니다.
@@ -47,7 +47,7 @@ categories:
 
 ## 이 모델은 무엇인가
 
-![지식 용량은 753B, 토큰당 연산은 40B 활성 전문가로 분리하는 MoE 희소성](/assets/images/nvidia-glm-5-2-nvfp4-slide-03.webp)
+![지식 용량은 753B, 토큰당 연산은 40B 활성 전문가로 분리하는 MoE 희소성]({{ '/assets/images/nvidia-glm-5-2-nvfp4-slide-03.webp' | relative_url }})
 *MoE 희소성과 어텐션 희소성이 결합해 지식 용량과 연산량을 분리합니다.*
 
 GLM-5.2는 ZAI가 공개한 MoE 추론·코딩 모델입니다. 일반적인 밀집(dense) 모델과 달리, 트랜스포머 블록 안에 여러 개의 전문가(expert) 네트워크를 두고 입력 토큰마다 일부만 활성화합니다. GLM-5.2는 총 753B 파라미터를 가지지만 토큰 하나를 생성할 때 실제로 계산에 참여하는 것은 40B 활성 파라미터뿐입니다. 즉 모델의 "지식 용량"은 753B급이지만, 추론 시 연산 비용은 40B 밀집 모델에 가깝습니다.
@@ -58,7 +58,7 @@ NVFP4는 NVIDIA가 정의한 4비트 부동소수점 데이터 타입입니다. 
 
 ## 핵심은 "선택적" 양자화입니다
 
-![GLM-5.2-NVFP4 선택적 양자화 전략과 서빙 경로 도식](/assets/images/nvidia-glm-5-2-nvfp4-diagram.webp)
+![GLM-5.2-NVFP4 선택적 양자화 전략과 서빙 경로 도식]({{ '/assets/images/nvidia-glm-5-2-nvfp4-diagram.webp' | relative_url }})
 *MoE 라우팅 전문가의 선형 연산자만 NVFP4로 양자화하고, 공유 전문가와 어텐션은 BF16으로 남깁니다.*
 
 이 모델에서 가장 중요한 설계 결정은 "무엇을 양자화하지 않았는가"입니다. 모델카드의 표현을 그대로 옮기면, "MoE 전문가 안 트랜스포머 블록 내부 선형 연산자의 가중치와 활성값만 양자화하며, 공유 전문가는 양자화하지 않는다"입니다. 정리하면 다음과 같습니다.
@@ -72,7 +72,7 @@ NVFP4는 NVIDIA가 정의한 4비트 부동소수점 데이터 타입입니다. 
 
 ## 공개 벤치마크: FP8 대비 정확도
 
-![FP8 기준선과 NVFP4의 벤치마크 점수 비교 막대 그래프](/assets/images/nvidia-glm-5-2-nvfp4-results.webp)
+![FP8 기준선과 NVFP4의 벤치마크 점수 비교 막대 그래프]({{ '/assets/images/nvidia-glm-5-2-nvfp4-results.webp' | relative_url }})
 *nvidia/GLM-5.2-NVFP4 모델카드의 공개 측정치입니다. 기준선은 GLM-5.2-FP8입니다.*
 
 NVIDIA가 모델카드에 공개한 정확도 비교는 아래와 같습니다. 기준선은 BF16이 아니라 한 단계 압축된 `GLM-5.2-FP8`이라는 점이 특징입니다. 즉 "압축 안 한 원본 대비"가 아니라 "이미 8비트로 줄인 버전 대비 4비트가 얼마나 손해인가"를 묻는, 더 까다로운 비교입니다.
@@ -91,7 +91,7 @@ NVIDIA가 모델카드에 공개한 정확도 비교는 아래와 같습니다. 
 
 ## 배포: vLLM과 SGLang
 
-![Runtime vLLM/SGLang, 8-way 텐서 병렬, Blackwell 8-GPU 노드로 구성되는 배포 스택](/assets/images/nvidia-glm-5-2-nvfp4-slide-06.webp)
+![Runtime vLLM/SGLang, 8-way 텐서 병렬, Blackwell 8-GPU 노드로 구성되는 배포 스택]({{ '/assets/images/nvidia-glm-5-2-nvfp4-slide-06.webp' | relative_url }})
 *런타임·텐서 병렬·하드웨어 요구를 한 화면에 정리한 배포 스택입니다.*
 
 이 체크포인트는 SGLang과 vLLM 두 런타임을 공식 지원하며, 하드웨어는 NVIDIA Blackwell, 운영체제는 Linux를 요구합니다. NVFP4 텐서 코어가 Blackwell 세대에만 존재하기 때문에, 이전 세대 GPU에서는 이 4비트 경로를 그대로 활용할 수 없다는 점이 중요한 제약입니다. 모델카드가 제시하는 SGLang 서빙 명령은 다음과 같습니다.
@@ -115,7 +115,7 @@ python3 -m sglang.launch_server \
 
 ## ThakiCloud 제품 적용 시사점
 
-![멀티테넌트 SaaS 플랫폼에서의 전략적 가치: 데이터 주권, 엔지니어링 오버헤드 소거, 도입 표준](/assets/images/nvidia-glm-5-2-nvfp4-slide-07.webp)
+![멀티테넌트 SaaS 플랫폼에서의 전략적 가치: 데이터 주권, 엔지니어링 오버헤드 소거, 도입 표준]({{ '/assets/images/nvidia-glm-5-2-nvfp4-slide-07.webp' | relative_url }})
 *멀티테넌트 SaaS 운영 관점에서 이 체크포인트가 갖는 전략적 가치입니다.*
 
 ThakiCloud ai-platform은 Kueue로 GPU를 스케줄링하고 vLLM으로 모델을 서빙하는 K8s 멀티테넌트 플랫폼입니다. 이 환경에서 `nvidia/GLM-5.2-NVFP4`는 서빙 후보의 폭을 실질적으로 넓힙니다. 753B 파라미터가 4비트로 내려와 단일 Blackwell 8-GPU 노드에 들어오면, Kueue ResourceFlavor로 해당 노드 풀을 NVFP4 전용으로 분리할 수 있고, 양자화로 확보한 GPU 메모리 여유는 곧 동시 처리 테넌트 수 증가로 이어집니다. 데이터를 외부 API로 내보낼 수 없는 공공·금융 고객에게 온프렘에서 프런티어 추론을 제공하는 것은 그 자체로 플랫폼 차별점입니다. NVIDIA가 ModelOpt로 직접 검증한 체크포인트를 그대로 쓸 수 있으므로, 내부 팀은 753B 양자화 파이프라인 대신 멀티테넌트 라우팅과 비용 관측에 집중할 수 있습니다. GLM-5.2에 적용된 "라우팅 전문가 4비트, 공유 전문가와 어텐션 BF16" 레시피는 사내 MoE 양자화 기준으로도 바로 활용할 수 있습니다.

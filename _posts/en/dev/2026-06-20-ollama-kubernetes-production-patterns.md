@@ -11,7 +11,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/ollama-kubernetes-production-patterns/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/ollama-kubernetes-production-patterns/"
 reading_time: true
 lang: en
 categories:

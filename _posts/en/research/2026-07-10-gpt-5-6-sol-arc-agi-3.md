@@ -17,14 +17,14 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/gpt-5-6-sol-arc-agi-3/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/gpt-5-6-sol-arc-agi-3/"
 ---
 
 Teams that have actually run agents in production do not get excited over a single benchmark score. We have seen too many cases of a model that clears 90% on static problem sets still losing its footing in front of an unfamiliar tool, a UI it has never seen, or an environment with no instructions. So when ARC Prize announced that it had verified GPT-5.6 Sol's ARC-AGI-3 results, what caught our attention was not the number itself but how that number came about.
 
 Here is the core fact. GPT-5.6 Sol scored 7.78% on the ARC-AGI-3 semi-private set, setting a new SOTA, and became the first verified frontier model to actually finish an ARC-AGI-3 game from start to end. What stands out is ARC Prize's explanation for why. Sol did not succeed because it executed each action more precisely. It succeeded because it was better at orientation, the ability to figure out its own direction in a situation it had never seen before.
 
-![Abstract image depicting an agent orienting itself inside an unfamiliar grid world and converging on a single path](/assets/images/gpt-5-6-sol-arc-agi-3-hero.png)
+![Abstract image depicting an agent orienting itself inside an unfamiliar grid world and converging on a single path]({{ '/assets/images/gpt-5-6-sol-arc-agi-3-hero.png' | relative_url }})
 *It depicts the moment of orientation, where scattered chaos in an unfamiliar, instructionless environment converges into a single direction.*
 
 ## Overview

@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "تحليل OmniGen2 الشامل"
-canonical_url: "https://thakicloud.github.io/ar/owm/omnigen2-multimodal-generation-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/omnigen2-multimodal-generation-comprehensive-guide/"
 lang: ar
 published: false
 categories:

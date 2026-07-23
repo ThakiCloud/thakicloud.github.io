@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/sao-single-rollout-async-agentic-rl/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/sao-single-rollout-async-agentic-rl/"
 ---
 
 لم يعد الحديث عن صقل الوكلاء عبر التعلّم المعزز مصطلحاً مختبرياً بحتاً. فالنماذج التي تُتقن مهاماً مثل إصلاح قواعد الأكواد على مدى عشرات الجولات كما في SWE-Bench، أو حل البراهين الرياضية عبر خطوات متعددة، لا تُبنى في الغالب بالتدريب المسبق وحده. جوهر الأمر يكمن في مرحلة ما بعد التدريب (post-training)، حيث يُشغَّل الوكيل فعلياً باستخدام الأدوات والتفاعل مع البيئة عبر rollout يُمنح على أساسه المكافأة. لكن كلما طال هذا الـ rollout، بدأ أسلوب التدريب الذي كان يُستخدم كمعيار قياسي حتى الآن في الانهيار.
@@ -29,7 +29,7 @@ canonical_url: "https://thakicloud.github.io/ar/research/sao-single-rollout-asyn
 
 تُشغّل ThakiCloud أيضاً خمس تقنيات لما بعد التدريب، هي SFT وCPT وDPO وGRPO وGKD، ضمن نظام تدريب نماذج اللغة الكبيرة المبني على kubeflow. لذلك فإن الثمن الذي يدفعه أخذ العينات الجماعي في GRPO عند التعامل مع rollouts طويلة، والمخاطر الجديدة التي قد يجلبها أي بديل يُزيل هذا الثمن، ليست قضية بعيدة عنا. يستعرض هذا المقال ما غيّرته SAO، وما تعنيه هذه التغييرات لمؤسسة مثلنا تسعى لتدريب وكلاء على عناقيد GPU متعددة المستأجرين (multi-tenant).
 
-![صورة تجريدية تقابل بين تدفق rollouts يصل واحداً تلو الآخر بشكل غير متزامن وrollouts تنتظر مجمّعة في مجموعة](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+![صورة تجريدية تقابل بين تدفق rollouts يصل واحداً تلو الآخر بشكل غير متزامن وrollouts تنتظر مجمّعة في مجموعة]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.png' | relative_url }})
 *تصوير تخيلي يقابل بين rollout واحد يصل تباعاً بشكل مستمر، وrollouts تتجمّد في قائمة الانتظار إلى أن تكتمل المجموعة بأكملها.*
 
 ## ما هي هذه التقنية؟

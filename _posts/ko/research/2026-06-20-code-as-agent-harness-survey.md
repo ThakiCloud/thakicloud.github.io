@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/code-as-agent-harness-survey/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/code-as-agent-harness-survey/"
 reading_time: true
 categories:
   - research
@@ -123,11 +123,11 @@ LLM 방향으로는 모델이 받아야 할 입력 형식, 생성해야 할 출�
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![code-as-agent-harness-survey 슬라이드 1](/assets/images/code-as-agent-harness-survey-slide-01.png)
+![code-as-agent-harness-survey 슬라이드 1]({{ '/assets/images/code-as-agent-harness-survey-slide-01.png' | relative_url }})
 
-![code-as-agent-harness-survey 슬라이드 2](/assets/images/code-as-agent-harness-survey-slide-02.png)
+![code-as-agent-harness-survey 슬라이드 2]({{ '/assets/images/code-as-agent-harness-survey-slide-02.png' | relative_url }})
 
-![code-as-agent-harness-survey 슬라이드 3](/assets/images/code-as-agent-harness-survey-slide-03.png)
+![code-as-agent-harness-survey 슬라이드 3]({{ '/assets/images/code-as-agent-harness-survey-slide-03.png' | relative_url }})
 
-![code-as-agent-harness-survey 슬라이드 4](/assets/images/code-as-agent-harness-survey-slide-04.png)
+![code-as-agent-harness-survey 슬라이드 4]({{ '/assets/images/code-as-agent-harness-survey-slide-04.png' | relative_url }})
 

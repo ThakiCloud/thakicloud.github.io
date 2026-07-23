@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/google-tpu-ironwood-five-generations/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/google-tpu-ironwood-five-generations/"
 reading_time: true
 categories:
   - research

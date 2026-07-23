@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/neohtop-blazing-fast-system-monitor-rust-tauri-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/neohtop-blazing-fast-system-monitor-rust-tauri-guide/"
 lang: ar
 permalink: /ar/tutorials/neohtop-blazing-fast-system-monitor-rust-tauri-guide/
 published: false

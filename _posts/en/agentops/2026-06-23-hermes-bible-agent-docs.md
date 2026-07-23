@@ -17,13 +17,13 @@ toc: true
 toc_label: "Contents"
 toc_icon: "robot"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/hermes-bible-agent-docs/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/hermes-bible-agent-docs/"
 categories:
   - agentops
 published: false
 ---
 
-![Abstract representation of an indexed knowledge library](/assets/images/hermes-bible-agent-docs-hero.webp)
+![Abstract representation of an indexed knowledge library]({{ '/assets/images/hermes-bible-agent-docs-hero.webp' | relative_url }})
 *Indexed search, rendered as many document nodes converging into a single bright point.*
 
 ## Overview

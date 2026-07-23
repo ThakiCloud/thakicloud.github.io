@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/tremor-react-dashboard-components-integration-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/tremor-react-dashboard-components-integration-guide/"
 reading_time: true
 published: false
 categories:

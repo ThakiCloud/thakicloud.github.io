@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-03
 lang: ko
-canonical_url: "https://thakicloud.github.io/ko/llmops/build-expensive-run-cheap/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/build-expensive-run-cheap/"
 categories:
   - llmops
 ---
 
-![핵심 개념 일러스트](/assets/images/build-expensive-run-cheap-hero.png)
+![핵심 개념 일러스트]({{ '/assets/images/build-expensive-run-cheap-hero.png' | relative_url }})
 
 에이전트를 운영하는 팀이라면 매달 청구서에서 같은 장면을 봅니다. 토큰 비용의 대부분이 프론티어 모델에서 나오는데, 정작 그 모델이 하는 일의 상당수는 창의적 난제가 아닙니다. 메일을 분류하고, 뉴스를 매칭하고, 표를 렌더링하고, 출력이 규격을 지켰는지 검사하는 일이 대부분입니다. 이 글은 엔지니어링 리더와 AI 팀을 위한 것입니다. 스킬을 비싼 모델로 만든 뒤 싼 모델로 내려도 품질이 유지되는지 어떻게 판단하고, 그 판단을 어떻게 매일 밤 자동으로 돌리는지를 실제 측정치와 함께 다룹니다.
 
@@ -27,7 +27,7 @@ categories:
 정형화된 작업의 품질은 사실 모델 지능보다 **가드레일**이 좌우합니다. 출력 포맷이 흔들리는 이유는 모델이 멍청해서가 아니라, 포맷을 산문으로 "부탁"했기 때문입니다. 길이 상한, 허용 enum, 렌더링 규격, 통과 기준을 코드가 강제하면 그 작업은 값싼 모델로도 안정적으로 나옵니다. 품질을 지키는 것은 더 비싼 모델이 아니라 코드 게이트입니다.
 
 
-![개념 다이어그램](/assets/images/build-expensive-run-cheap-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/build-expensive-run-cheap-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

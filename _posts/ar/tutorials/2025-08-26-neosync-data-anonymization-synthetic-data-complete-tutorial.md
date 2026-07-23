@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/"
 lang: ar
 permalink: /ar/tutorials/neosync-data-anonymization-synthetic-data-complete-tutorial/
 published: false

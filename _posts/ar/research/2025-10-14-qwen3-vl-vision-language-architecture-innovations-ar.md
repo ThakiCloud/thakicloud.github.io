@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/research/qwen3-vl-vision-language-architecture-innovations-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/qwen3-vl-vision-language-architecture-innovations-ar/"
 lang: ar
 permalink: /ar/research/qwen3-vl-vision-language-architecture-innovations/
 categories:
@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![مخطط مفاهيمي](/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp)
+![مخطط مفاهيمي]({{ '/assets/images/qwen3-vl-vision-language-architecture-innovations-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المقدر**: 15 دقيقة
 
@@ -37,7 +37,7 @@ published: false
 تصبح أهمية هذه الابتكارات واضحة عند فحص قدرات النموذج. تم توسيع نطاقه إلى 235 مليار معامل في تكوينه الأكثر قوة، مع عدد معاملات نشطة يبلغ 22 مليارًا من خلال بنية خليط الخبراء، يحقق Qwen3-VL دعمًا أصليًا لسياقات تبلغ 256000 رمز قابلة للتوسع إلى مليون رمز. يتيح هذا التوسع الكبير في طول السياق تطبيقات جديدة تمامًا، من تحليل مقاطع الفيديو التي تستغرق ساعات بدقة على مستوى الإطار إلى معالجة كتب كاملة مع الحفاظ على فهم مفصل. يوضح إدخال إصدارات متخصصة، بما في ذلك متغير Thinking المحسّن بالتفكير، كيف يمكن الاستفادة من المرونة المعمارية لتلبية المتطلبات الإدراكية المختلفة، من الاستدلال السريع إلى التفكير التحليلي العميق.
 
 
-![مخطط مفاهيمي](/assets/images/qwen3-vl-vision-language-architecture-innovations-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/qwen3-vl-vision-language-architecture-innovations-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

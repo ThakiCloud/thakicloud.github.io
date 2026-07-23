@@ -19,7 +19,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/careers/ml-engineer-essential-skills-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/careers/ml-engineer-essential-skills-guide/"
 reading_time: true
 lang: en
 permalink: /en/careers/ml-engineer-essential-skills-guide/
@@ -61,7 +61,7 @@ production_requirements = {
 
 [Made-With-ML](https://github.com/GokuMohandas/Made-With-ML) presents how to build ML systems in actual production environments through a 4-stage process: **Design · Develop · Deploy · Iterate**.
 
-![Made-With-ML lifecycle: Design-Develop-Deploy-Iterate loop with cross-cutting foundations](/assets/images/ml-engineer-essential-skills-guide-diagram.svg)
+![Made-With-ML lifecycle: Design-Develop-Deploy-Iterate loop with cross-cutting foundations]({{ '/assets/images/ml-engineer-essential-skills-guide-diagram.svg' | relative_url }})
 
 As the diagram shows, the four stages form a loop rather than a straight line: production signals flow back into design, while cross-cutting foundations of programming, data engineering, MLOps, and collaboration support every stage.
 

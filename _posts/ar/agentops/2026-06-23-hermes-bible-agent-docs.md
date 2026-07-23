@@ -17,13 +17,13 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/hermes-bible-agent-docs/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/hermes-bible-agent-docs/"
 categories:
   - agentops
 published: false
 ---
 
-![تمثيل تجريدي لمكتبة معرفة مفهرسة](/assets/images/hermes-bible-agent-docs-hero.webp)
+![تمثيل تجريدي لمكتبة معرفة مفهرسة]({{ '/assets/images/hermes-bible-agent-docs-hero.webp' | relative_url }})
 *بحث مفهرس، مصوّر كعقد مستندات كثيرة تتقارب نحو نقطة مضيئة واحدة.*
 
 ## نظرة عامة

@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/ollm-large-context-llm-inference-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/ollm-large-context-llm-inference-guide/"
 lang: ar
 permalink: /ar/tutorials/ollm-large-context-llm-inference-guide/
 published: false

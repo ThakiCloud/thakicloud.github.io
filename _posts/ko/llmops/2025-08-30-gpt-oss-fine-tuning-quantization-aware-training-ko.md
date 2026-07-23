@@ -6,7 +6,7 @@ seo_description: "양자화 인식 훈련을 통한 gpt-oss 파인튜닝 완전 
 date: 2025-08-30
 lang: ko
 permalink: /ko/llmops/gpt-oss-fine-tuning-quantization-aware-training/
-canonical_url: "https://thakicloud.github.io/ko/llmops/gpt-oss-fine-tuning-quantization-aware-training/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gpt-oss-fine-tuning-quantization-aware-training/"
 tags:
   - gpt-oss
   - 양자화

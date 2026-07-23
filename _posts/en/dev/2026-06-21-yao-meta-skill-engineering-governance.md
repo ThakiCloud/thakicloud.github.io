@@ -19,10 +19,10 @@ toc_icon: "cog"
 categories:
   - dev
 published: false
-canonical_url: "https://thakicloud.github.io/en/dev/yao-meta-skill-engineering-governance/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/yao-meta-skill-engineering-governance/"
 ---
 
-![Abstract modular blocks forming a precision assembly line with glowing governance gates](/assets/images/yao-meta-skill-hero.webp)
+![Abstract modular blocks forming a precision assembly line with glowing governance gates]({{ '/assets/images/yao-meta-skill-hero.webp' | relative_url }})
 *A conceptual view of treating skills not as one-off prompts but as reusable assets carrying versioning, verification, and governance.*
 
 ## Overview
@@ -69,7 +69,7 @@ The dependencies are surprisingly light. The CI requirements (`requirements-ci.t
 
 The actual composition I measured right after cloning was: 632 tracked files, 77 tests, 29 evals, 10 skill-atlas entries, 3 schemas, and 2 templates. This is not a single "skill" but closer to a small factory that produces, verifies, and governs skills.
 
-![Chart of the yao-meta-skill repository composition and local verification gate results](/assets/images/yao-meta-skill-results.webp)
+![Chart of the yao-meta-skill repository composition and local verification gate results]({{ '/assets/images/yao-meta-skill-results.webp' | relative_url }})
 *Left: the repository's measured composition (log scale). Right: all four local verification gates passing.*
 
 ## Real Verification Results

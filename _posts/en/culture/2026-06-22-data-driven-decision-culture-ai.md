@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/culture/data-driven-decision-culture-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/data-driven-decision-culture-ai/"
 categories:
   - culture
 ---
@@ -32,13 +32,13 @@ That is the starting point for this article. The substance behind seemingly intu
 
 ---
 
-![Concept diagram](/assets/images/data-driven-decision-culture-ai-diagram.svg)
+![Concept diagram]({{ '/assets/images/data-driven-decision-culture-ai-diagram.svg' | relative_url }})
 
 *Logging decisions and comparing them to predictions, so data can correct intuition bias*
 
 ## Inheriting Moneyball: Is the Age of Intuition Over?
 
-In [our previous post (Building a Data-Driven Organizational Culture with Moneyball Thinking)](https://thakicloud.github.io/culture/moneyball-data-driven-culture/), we told the story of the 2002 Oakland Athletics. Billy Beane unearthed the undervalued metric of on-base percentage and produced 103 wins on one-third of a typical payroll.
+In [our previous post (Building a Data-Driven Organizational Culture with Moneyball Thinking)](https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/), we told the story of the 2002 Oakland Athletics. Billy Beane unearthed the undervalued metric of on-base percentage and produced 103 wins on one-third of a typical payroll.
 
 That post rested on two core propositions: the metrics you have been using may be wrong; and undervalued resources found through data yield maximum efficiency.
 
@@ -190,4 +190,4 @@ A decision culture where data beats intuition is one that creates a loop in an o
 - "Jensen Huang might be the best stock picker on Wall Street and he does not even pick stocks.", External market-observer assessment (not a statement by Huang himself). @InTheAssembly X thread: [https://x.com/InTheAssembly/status/2053801122632958342](https://x.com/InTheAssembly/status/2053801122632958342)
 - Jensen Huang, NVIDIA engineer token budget remarks, GTC Taipei Computex 2026 keynote transcript. Semiconalpha Substack: [https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key](https://semiconalpha.substack.com/p/nvidia-keynote-computex-2026-key)
 - Nebius, Applied Digital, TSMC, Micron stock price data, @InTheAssembly X thread (same source as above)
-- ThakiCloud blog, "Building a Data-Driven Organizational Culture with Moneyball Thinking" (the article this one continues): [https://thakicloud.github.io/culture/moneyball-data-driven-culture/](https://thakicloud.github.io/culture/moneyball-data-driven-culture/)
+- ThakiCloud blog, "Building a Data-Driven Organizational Culture with Moneyball Thinking" (the article this one continues): [https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/](https://thakicloud.com/tech-blog/culture/moneyball-data-driven-culture/)

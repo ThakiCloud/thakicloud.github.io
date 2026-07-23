@@ -6,7 +6,7 @@ seo_description: "اكتشف رحلة يانغ زيلين في ريادة الأ
 date: 2025-08-28
 lang: ar
 permalink: /ar/llmops/yang-zhilin-kimi-founder-interview-insights/
-canonical_url: "https://thakicloud.github.io/ar/llmops/yang-zhilin-kimi-founder-interview-insights-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/yang-zhilin-kimi-founder-interview-insights-ar/"
 tags:
   - يانغ زيلين
   - Kimi Chat

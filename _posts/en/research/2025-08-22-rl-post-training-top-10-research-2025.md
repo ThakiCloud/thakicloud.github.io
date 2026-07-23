@@ -7,7 +7,7 @@ date: 2025-08-22
 last_modified_at: 2025-08-22
 lang: en
 permalink: /en/research/rl-post-training-top-10-research-2025/
-canonical_url: "https://thakicloud.github.io/en/research/rl-post-training-top-10-research-2025/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/rl-post-training-top-10-research-2025/"
 tags:
   - Reinforcement-Learning
   - Post-Training

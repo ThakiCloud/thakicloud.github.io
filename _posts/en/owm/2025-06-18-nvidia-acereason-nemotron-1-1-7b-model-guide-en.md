@@ -19,7 +19,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AceReason-Nemotron-1.1-7B Guide"
-canonical_url: "https://thakicloud.github.io/en/owm/nvidia-acereason-nemotron-1-1-7b-model-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/nvidia-acereason-nemotron-1-1-7b-model-guide/"
 lang: en
 published: false
 categories:

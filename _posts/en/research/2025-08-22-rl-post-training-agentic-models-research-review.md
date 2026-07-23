@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/rl-post-training-agentic-models-research-review/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/rl-post-training-agentic-models-research-review/"
 reading_time: true
 published: false
 categories:
@@ -36,7 +36,7 @@ categories:
 
 In this review, we examine 10 key papers that have received the most attention in the community to explore how reinforcement learning is transforming large language models into genuine agents. From multi-modal tool use to multi-agent collaboration and efficient curriculum learning, we deeply analyze the core ideas each research presents and their implications for practical AI system development.
 
-![Landscape of RL-based agentic post-training techniques: 10 papers grouped into four themes](/assets/images/rl-post-training-agentic-models-diagram.svg)
+![Landscape of RL-based agentic post-training techniques: 10 papers grouped into four themes]({{ '/assets/images/rl-post-training-agentic-models-diagram.svg' | relative_url }})
 
 ## 1. Visual-ARFT: Teaching Tool Use to Multimodal Agents
 

@@ -15,7 +15,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/careers/beyond-technical-skills-career-growth-strategy/
-canonical_url: "https://thakicloud.github.io/en/careers/beyond-technical-skills-career-growth-strategy-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/careers/beyond-technical-skills-career-growth-strategy-en/"
 categories:
   - careers
 ---
@@ -72,7 +72,7 @@ Understanding how to increase your impact beyond technical excellence requires e
 
 The power of these four disciplines lies not in their individual application but in their integration. Every successful endeavor requires elements of all four working together synergistically. Consider any significant professional accomplishment: it likely involved technical competence to ensure quality execution, product thinking to identify the right opportunity, project management to coordinate efforts effectively, and people skills to build necessary support and collaboration.
 
-![Diagram showing technical skill as the foundation, three pillars of product thinking, project execution, and interpersonal skill rising above it, converging into meaningful achievement, driven by agency with a feedback loop that fixes the weakest link first](/assets/images/beyond-technical-skills-career-growth-strategy-diagram-en.svg)
+![Diagram showing technical skill as the foundation, three pillars of product thinking, project execution, and interpersonal skill rising above it, converging into meaningful achievement, driven by agency with a feedback loop that fixes the weakest link first]({{ '/assets/images/beyond-technical-skills-career-growth-strategy-diagram-en.svg' | relative_url }})
 
 When these disciplines work together, they create what can be described as the fundamental value proposition of professional work: making stuff that matters actually happen. This integration transforms you from someone who can complete technical tasks into someone who can identify important problems, devise effective solutions, and mobilize resources to implement those solutions successfully.
 

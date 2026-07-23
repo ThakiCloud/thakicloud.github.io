@@ -6,7 +6,7 @@ seo_description: "We measured TPS and TPOT for tensor parallelism (TP=2), data p
 date: 2026-07-03
 last_modified_at: 2026-07-03
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
 tags:
   - vllm
   - b200
@@ -25,7 +25,7 @@ categories:
   - llmops
 ---
 
-![An image depicting two B200 GPUs splitting Prefill and Decode duties](/assets/images/b200-vllm-pd-disaggregation-hero.webp)
+![An image depicting two B200 GPUs splitting Prefill and Decode duties]({{ '/assets/images/b200-vllm-pd-disaggregation-hero.webp' | relative_url }})
 *A depiction of a disaggregated serving setup where one GPU handles Prefill and the other handles Decode, with the KV cache crossing over NVLink.*
 
 ## Overview

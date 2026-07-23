@@ -19,7 +19,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/agent-leaderboard-v2-comprehensive-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/agent-leaderboard-v2-comprehensive-tutorial/"
 reading_time: true
 lang: en
 published: false

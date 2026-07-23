@@ -15,7 +15,7 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-skill-oneshot-landing-pages/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-skill-oneshot-landing-pages/"
 audiobook: /assets/audio/posts/claude-code-skill-oneshot-landing-pages/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -84,13 +84,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 1](/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 1]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.png' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 2](/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 2]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.png' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 3](/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 3]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.png' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 4](/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.png)
+![claude-code-skill-oneshot-landing-pages 슬라이드 4]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.png' | relative_url }})
 
 ## 출처
 

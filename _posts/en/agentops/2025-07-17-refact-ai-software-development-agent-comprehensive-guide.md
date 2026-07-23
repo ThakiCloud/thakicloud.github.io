@@ -22,7 +22,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/refact-ai-software-development-agent-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/refact-ai-software-development-agent-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops
@@ -37,7 +37,7 @@ AI agents that raise software development productivity are receiving significant
 
 [**Refact.ai**](https://github.com/smallcloudai/refact) is an active open-source project with 3k stars and 248 forks. Distributed under the BSD-3-Clause license, it provides an enterprise-grade solution capable of self-hosting.
 
-![Concept diagram](/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg)
+![Concept diagram]({{ '/assets/images/refact-ai-software-development-agent-comprehensive-guide-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

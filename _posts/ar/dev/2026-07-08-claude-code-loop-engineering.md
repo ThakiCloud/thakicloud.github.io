@@ -17,7 +17,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/dev/claude-code-loop-engineering/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/claude-code-loop-engineering/"
 reading_time: true
 categories:
   - dev
@@ -27,7 +27,7 @@ categories:
 
 هذه المقالة موجَّهة للمطوّرين ومهندسي المنصّات الذين يريدون تشغيل وكيل الترميز لا كأداة لمرة واحدة بل كنظام أتمتة طويل الأمد. تتناول أسئلة عملية مثل: "ما الذي يجب أن أحدّده كي يكرّر الوكيل من تلقاء نفسه بدلًا من أن أكتب كل أمر؟" و"كيف أمنع الحلقات اللانهائية وانفلات التكلفة؟". نقرأ وثيقة الحلقات الرسمية من Anthropic ونضعها فوق خبرتنا التشغيلية في توصيل هذه الأنماط في خطوط أنابيب غير مراقَبة فعلية.
 
-![حلقة من مقاطع متشابكة تشكّل حلقة تغذية راجعة لا نهائية مع أسهم متوهّجة وبوابة تحقّق في مركزها](/assets/images/claude-code-loop-engineering-hero.png)
+![حلقة من مقاطع متشابكة تشكّل حلقة تغذية راجعة لا نهائية مع أسهم متوهّجة وبوابة تحقّق في مركزها]({{ '/assets/images/claude-code-loop-engineering-hero.png' | relative_url }})
 
 ## نظرة عامة
 

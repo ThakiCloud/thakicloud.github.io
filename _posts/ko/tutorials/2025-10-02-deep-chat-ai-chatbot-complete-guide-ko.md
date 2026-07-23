@@ -6,7 +6,7 @@ seo_description: "Deep Chat 완벽 가이드 - OpenAI, HuggingFace, 커스텀 AP
 date: 2025-10-02
 lang: ko
 permalink: /ko/tutorials/deep-chat-ai-chatbot-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/deep-chat-ai-chatbot-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/deep-chat-ai-chatbot-complete-guide/"
 tags:
   - deep-chat
   - ai-챗봇

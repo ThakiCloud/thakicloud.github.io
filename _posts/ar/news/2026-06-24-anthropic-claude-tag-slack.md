@@ -18,14 +18,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "users"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/anthropic-claude-tag-slack/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/anthropic-claude-tag-slack/"
 reading_time: true
 categories:
   - news
 published: false
 ---
 
-![مرئي تجريدي لشبكة تعاون تربط عقدة ذكاء اصطناعي مركزية بعقد متعددة للأشخاص في قناة مشتركة واحدة](/assets/images/anthropic-claude-tag-slack-hero.webp)
+![مرئي تجريدي لشبكة تعاون تربط عقدة ذكاء اصطناعي مركزية بعقد متعددة للأشخاص في قناة مشتركة واحدة]({{ '/assets/images/anthropic-claude-tag-slack-hero.webp' | relative_url }})
 
 صورة تجسّد هيكل متعدد اللاعبين حيث يعمل Claude واحد في كل قناة Slack مع جميع أعضاء الفريق.
 

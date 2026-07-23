@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/gemma4-local-multi-agent-orchestration/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/gemma4-local-multi-agent-orchestration/"
 reading_time: true
 categories:
   - agentops

@@ -21,7 +21,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/rl-post-training-agentic-models-research-review/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/rl-post-training-agentic-models-research-review/"
 reading_time: true
 published: false
 categories:
@@ -36,7 +36,7 @@ categories:
 
 في هذه المراجعة، ندرس 10 أوراق بحثية جوهرية استقطبت أكبر اهتمام مجتمعي لاستكشاف كيف يحوّل التعلم المعزز النماذج اللغوية الكبيرة إلى وكلاء حقيقيين. من استخدام الأدوات متعدد الوسائط إلى التعاون متعدد الوكلاء وتعلم المناهج الفعّال، نحلل بعمق الأفكار الجوهرية في كل بحث وانعكاساتها على تطوير أنظمة الذكاء الاصطناعي العملية.
 
-![خريطة تقنيات التدريب اللاحق الوكيلة القائمة على التعلم المعزز: 10 أوراق ضمن أربعة محاور](/assets/images/rl-post-training-agentic-models-diagram.svg)
+![خريطة تقنيات التدريب اللاحق الوكيلة القائمة على التعلم المعزز: 10 أوراق ضمن أربعة محاور]({{ '/assets/images/rl-post-training-agentic-models-diagram.svg' | relative_url }})
 
 ## 1. Visual-ARFT: تعليم الوكلاء متعددي الوسائط استخدام الأدوات
 

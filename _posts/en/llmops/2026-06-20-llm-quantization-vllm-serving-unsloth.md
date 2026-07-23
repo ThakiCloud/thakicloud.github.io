@@ -6,7 +6,7 @@ seo_description: "Compare LLM quantization methods for vLLM serving. Covers llm-
 date: 2026-06-20
 last_modified_at: 2026-06-20
 lang: en
-canonical_url: https://thakicloud.github.io/en/llmops/llm-quantization-vllm-serving-unsloth/
+canonical_url: https://thakicloud.com/tech-blog/en/llmops/llm-quantization-vllm-serving-unsloth/
 tags:
   - quantization
   - vllm
@@ -27,7 +27,7 @@ categories:
 published: false
 ---
 
-![Map of quantization formats served by vLLM](/assets/images/llm-quant-vllm-hero.webp)
+![Map of quantization formats served by vLLM]({{ '/assets/images/llm-quant-vllm-hero.webp' | relative_url }})
 
 ## Why Quantization Again
 

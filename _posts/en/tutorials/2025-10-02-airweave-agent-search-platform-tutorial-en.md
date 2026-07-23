@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/airweave-agent-search-platform-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/airweave-agent-search-platform-tutorial/"
 lang: en
 permalink: /en/tutorials/airweave-agent-search-platform-tutorial/
 published: false

@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/culture/amodei-free-software-engineer-value/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/amodei-free-software-engineer-value/"
 categories:
   - culture
 ---
@@ -36,7 +36,7 @@ The future of engineering teams hangs between those two statements.
 
 ---
 
-![Concept diagram](/assets/images/amodei-free-software-engineer-value-diagram.svg)
+![Concept diagram]({{ '/assets/images/amodei-free-software-engineer-value-diagram.svg' | relative_url }})
 
 *Where engineering value migrates as code's marginal cost approaches zero*
 

@@ -23,7 +23,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/markitdown-vs-docling-document-conversion-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/markitdown-vs-docling-document-conversion-tutorial/"
 reading_time: true
 published: false
 categories:
@@ -813,10 +813,10 @@ def parallel_document_processing(file_list, max_workers=4):
 **참고 자료:**
 - [Microsoft MarkItDown GitHub](https://github.com/microsoft/markitdown)
 - [IBM Docling 문서](https://github.com/DS4SD/docling)
-- [문서 변환 최적화 가이드](https://thakicloud.github.io/tutorials/)
-- [LLMOps 데이터 전처리 패턴](https://thakicloud.github.io/llmops/)
+- [문서 변환 최적화 가이드](https://thakicloud.com/tech-blog/tutorials/)
+- [LLMOps 데이터 전처리 패턴](https://thakicloud.com/tech-blog/llmops/)
 
 **관련 글:**
-- [PDF 텍스트 변환 완벽 가이드](https://thakicloud.github.io/tutorials/pdf-text-conversion/)
-- [LLM 데이터 전처리 파이프라인](https://thakicloud.github.io/llmops/data-preprocessing/)
-- [문서 AI 처리 아키텍처](https://thakicloud.github.io/dev/document-ai-architecture/) 
+- [PDF 텍스트 변환 완벽 가이드](https://thakicloud.com/tech-blog/tutorials/pdf-text-conversion/)
+- [LLM 데이터 전처리 파이프라인](https://thakicloud.com/tech-blog/llmops/data-preprocessing/)
+- [문서 AI 처리 아키텍처](https://thakicloud.com/tech-blog/dev/document-ai-architecture/) 

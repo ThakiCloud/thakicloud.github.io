@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/dev/claude-code-loop-engineering/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/claude-code-loop-engineering/"
 reading_time: true
 categories:
   - dev
@@ -27,7 +27,7 @@ categories:
 
 이 글은 코딩 에이전트를 단발 도구가 아니라 오래 돌아가는 자동화 시스템으로 운영하려는 개발자와 플랫폼 엔지니어를 위해 씁니다. "매번 프롬프트를 치는 대신 에이전트가 스스로 반복하게 하려면 무엇을 정해 줘야 하는가", "무한 반복과 비용 폭주를 어떻게 막는가"라는 실무 질문을 다룹니다. Anthropic이 공개한 공식 루프 문서를 읽고, 그 개념을 실제 무인 파이프라인에 배선한 우리 운영 경험과 겹쳐 봅니다.
 
-![빛나는 화살표가 순환하는 피드백 루프 고리와 그 중심의 검증 게이트를 표현한 추상 이미지](/assets/images/claude-code-loop-engineering-hero.png)
+![빛나는 화살표가 순환하는 피드백 루프 고리와 그 중심의 검증 게이트를 표현한 추상 이미지]({{ '/assets/images/claude-code-loop-engineering-hero.png' | relative_url }})
 
 ## 개요
 
@@ -39,7 +39,7 @@ Anthropic은 2026년 7월 7일 「Getting started with loops」라는 공식 문
 
 루프 엔지니어링은 프롬프트 엔지니어링의 다음 단계입니다. 프롬프트 엔지니어링이 "한 번의 응답을 잘 받아내는 지시문"을 다듬는 일이라면, 루프 엔지니어링은 "관찰하고 판단하고 실행하고 다시 관찰하는 반복 구조" 자체를 설계하는 일입니다. 좋은 루프의 품질을 결정하는 것은 모델의 능력만이 아니라 루프가 매 회차마다 받는 피드백의 질입니다.
 
-![프롬프트 엔지니어링(과거)과 루프 엔지니어링(미래)의 작동 방식 비교](/assets/images/claude-code-loop-engineering-slide-02.png)
+![프롬프트 엔지니어링(과거)과 루프 엔지니어링(미래)의 작동 방식 비교]({{ '/assets/images/claude-code-loop-engineering-slide-02.png' | relative_url }})
 
 가장 신뢰할 수 있는 피드백은 테스트, 타입 체커, 린터처럼 통과와 실패를 객관적으로 돌려주는 결정론적 검증입니다. "완료된 것 같습니다"라는 모델의 자기 보고는 루프의 종료 조건이 될 수 없습니다. 루프가 언제 멈춰야 하는지는 모델의 주장이 아니라 도구의 판정이 결정해야 합니다.
 
@@ -69,7 +69,7 @@ flowchart TB
 
 루프의 성패는 성공 기준을 얼마나 잘 정의하느냐에 달려 있습니다. 공식 문서는 좋은 성공 기준의 세 가지 성질을 강조합니다.
 
-![검증 가능성, 범위 경계, 성공 지표, 턴 캡이라는 네 가지 성공 기준](/assets/images/claude-code-loop-engineering-slide-04.png)
+![검증 가능성, 범위 경계, 성공 지표, 턴 캡이라는 네 가지 성공 기준]({{ '/assets/images/claude-code-loop-engineering-slide-04.png' | relative_url }})
 
 첫째는 검증 가능성입니다. Claude가 프로그램적으로 또는 명시적 관찰로 완료를 확인할 수 있어야 합니다. "모든 유닛 테스트가 통과한다"는 검증 가능한 기준입니다. 반면 "코드를 개선한다"는 검증 불가능합니다.
 
@@ -83,7 +83,7 @@ flowchart TB
 
 문서가 반복해서 짚는 원칙은 피드백의 질이 루프의 질을 결정한다는 것입니다. 그래서 스킬이 등장합니다. 스킬은 루프가 매 회차마다 실행하는 검증 절차를 재사용 가능한 형태로 묶어, 에이전트가 자기 출력을 스스로 검증할 방법을 갖게 합니다. 루프가 아무것도 거르지 못하고 항상 통과만 시킨다면, 그것은 검증기가 고장 났다는 신호입니다.
 
-![검증 게이트가 있으면 품질이 복리로 쌓이고, 없으면 환각이 복리로 누적된다](/assets/images/claude-code-loop-engineering-slide-05.png)
+![검증 게이트가 있으면 품질이 복리로 쌓이고, 없으면 환각이 복리로 누적된다]({{ '/assets/images/claude-code-loop-engineering-slide-05.png' | relative_url }})
 
 이 지점이 실무적으로 가장 중요합니다. 병렬로 여러 하위 작업을 펼치는 팬아웃 루프는 검증 스테이지 없이 결과를 합치면 환각을 누적합니다. 코드 작업이면 테스트의 종료 코드가, 리서치나 콘텐츠 작업이면 적대적 반증 표결이 결과를 감사한 뒤에야 다음 단계로 넘어가야 합니다. 품질이 안 나올 때 흔한 오해는 모델을 더 비싼 등급으로 올리는 것이지만, 더 흔한 원인은 검증 스테이지의 부재입니다.
 
@@ -93,11 +93,11 @@ flowchart TB
 
 우리 저장소에는 세 가지 층의 루프가 돌고 있습니다. 첫째, 컴파일러와 테스트 러너를 보상 신호로 삼아 코드 변환을 테스트 통과까지 반복하는 pge-loop가 있습니다. 이것은 문서의 `/goal`이 말하는 "검증 가능한 완료 조건"을 `make test-short`의 종료 코드로 구현한 것입니다. 둘째, 목표를 달성 상태까지 자율적으로 추구하는 Goal Mode가 있습니다. 상태 파일과 예산 상한, `check_cmd` 게이트를 갖춰 문서의 턴 캡과 성공 지표 원칙을 그대로 따릅니다. 셋째, 정해진 시각에 사람 없이 반복되는 launchd cron 러너들이 문서의 `/schedule` 루틴에 해당합니다. 모니터링과 콘텐츠 생성처럼 매 틱마다 사람의 판단이 필요 없는 작업은 Claude를 상주시키지 않고 cron으로 돌려 비용을 0으로 유지합니다.
 
-![L1 pge-loop, L2 Goal Mode, L3 launchd cron으로 구성된 ThakiCloud 무인 파이프라인의 3계층 루프 아키텍처](/assets/images/claude-code-loop-engineering-slide-06.png)
+![L1 pge-loop, L2 Goal Mode, L3 launchd cron으로 구성된 ThakiCloud 무인 파이프라인의 3계층 루프 아키텍처]({{ '/assets/images/claude-code-loop-engineering-slide-06.png' | relative_url }})
 
 이 운영 규율이 곧 Paxis의 설계 철학입니다. Paxis는 ThakiCloud의 Agent-Native Cloud 제어 평면으로, 스킬과 도구, 정책, 감사 로그를 일급 리소스로 다룹니다. 루프 엔지니어링의 관점에서 Paxis가 제공하는 것은 네 가지입니다. 자연어 Cron으로 스케줄 루틴을 선언하고, DAG 멀티에이전트로 팬아웃과 검증 스테이지를 조립하며, 960개가 넘는 스킬을 BM25로 선택해 격리 샌드박스에서 실행하고, 모든 루프의 행동을 정책 게이트와 감사 로그로 통과시킵니다. 문서가 강조하는 "검증 없는 팬아웃은 위험하다"는 원칙이, Paxis에서는 정책 게이트라는 인프라 기능으로 강제됩니다.
 
-![자연어 Cron, DAG 멀티에이전트, 960개 이상 격리 샌드박스 스킬, 정책 게이트와 감사 로그로 구성된 Paxis 통제 평면](/assets/images/claude-code-loop-engineering-slide-07.png)
+![자연어 Cron, DAG 멀티에이전트, 960개 이상 격리 샌드박스 스킬, 정책 게이트와 감사 로그로 구성된 Paxis 통제 평면]({{ '/assets/images/claude-code-loop-engineering-slide-07.png' | relative_url }})
 
 그 아래에서 ai-platform 렌즈도 함께 작동합니다. 오래 돌아가는 루프는 결국 추론 비용의 문제입니다. Kubernetes와 Kueue 기반 GPU 스케줄링 위에서 낮은 서빙 비용을 유지하는 것이, 스케줄 루틴을 지속 가능하게 만드는 경제적 토대가 됩니다. 저비용 서빙이 에이전트 루프의 경제성을 만들고, 그 위에서 Paxis가 루프의 안전과 조립을 책임지는 구조입니다.
 
@@ -105,7 +105,7 @@ flowchart TB
 
 루프 엔지니어링을 만능으로 받아들이면 오히려 위험합니다.
 
-![세션 길이에 따른 누적 비용 곡선과 검증 불가·비용 폭주·인지적 항복이라는 3대 한계](/assets/images/claude-code-loop-engineering-slide-08.png)
+![세션 길이에 따른 누적 비용 곡선과 검증 불가·비용 폭주·인지적 항복이라는 3대 한계]({{ '/assets/images/claude-code-loop-engineering-slide-08.png' | relative_url }})
 
 첫 번째 한계는 검증 불가능한 작업입니다. 성공을 결정론적으로 판정할 수 없는 작업을 루프로 돌리면, 에이전트는 종료 조건 없이 예산만 태웁니다. 게이트를 먼저 정의할 수 없다면 루프가 아니라 단발 실행이 옳습니다.
 
@@ -115,7 +115,7 @@ flowchart TB
 
 이 세 한계는 모두 하나의 원칙으로 요약됩니다. 루프를 시작하기 전에 종료 게이트를 먼저 정의하라. 게이트가 있으면 루프는 복리로 품질을 쌓고, 게이트가 없으면 루프는 환각을 복리로 쌓습니다.
 
-![루프를 시작하기 전에 종료 게이트를 먼저 정의하라](/assets/images/claude-code-loop-engineering-slide-09.png)
+![루프를 시작하기 전에 종료 게이트를 먼저 정의하라]({{ '/assets/images/claude-code-loop-engineering-slide-09.png' | relative_url }})
 
 ## 출처
 

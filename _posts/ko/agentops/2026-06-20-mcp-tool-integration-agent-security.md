@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/mcp-tool-integration-agent-security/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/mcp-tool-integration-agent-security/"
 reading_time: true
 categories:
   - agentops
@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 10분
 
-![MCP 게이트웨이가 인증, 도구 허용목록, 감사 로깅, 레이트 리미팅을 중앙에서 처리하고 GitHub, Slack, Database MCP 서버로 요청을 분기하는 보안 아키텍처 구조도](/assets/images/mcp-tool-integration-agent-security-diagram.webp)
+![MCP 게이트웨이가 인증, 도구 허용목록, 감사 로깅, 레이트 리미팅을 중앙에서 처리하고 GitHub, Slack, Database MCP 서버로 요청을 분기하는 보안 아키텍처 구조도]({{ '/assets/images/mcp-tool-integration-agent-security-diagram.webp' | relative_url }})
 
 ## MCP가 프로덕션 표준이 된 배경
 

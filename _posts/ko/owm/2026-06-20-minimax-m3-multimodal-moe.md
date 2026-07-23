@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/minimax-m3-multimodal-moe/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/minimax-m3-multimodal-moe/"
 reading_time: true
 categories:
   - owm
@@ -30,7 +30,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![MiniMax-M3 개념도](/assets/images/minimax-m3-multimodal-moe-hero.webp)
+![MiniMax-M3 개념도]({{ '/assets/images/minimax-m3-multimodal-moe-hero.webp' | relative_url }})
 
 ## 무엇이 새로운가
 

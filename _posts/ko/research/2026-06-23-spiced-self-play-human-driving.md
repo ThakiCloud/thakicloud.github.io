@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/spiced-self-play-human-driving/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/spiced-self-play-human-driving/"
 reading_time: true
 categories:
   - research
@@ -46,7 +46,7 @@ NYU와 프린스턴 등이 함께 낸 논문 "Human-like autonomy emerges from s
 
 전체 구조는 아래 도표와 같습니다. 값싼 self-play 엔진이 주 동력이고, 30분짜리 사람 앵커는 KL 정규화라는 가는 끈으로 정책을 사람 쪽으로 살짝 당겨 줍니다.
 
-![Spiced self-play 아키텍처: self-play 엔진과 사람 앵커, on-policy KL 정규화로 사람 호환 정책을 학습하고 3종 환경에서 평가하는 구조](/assets/images/spiced-self-play-human-driving-diagram.webp)
+![Spiced self-play 아키텍처: self-play 엔진과 사람 앵커, on-policy KL 정규화로 사람 호환 정책을 학습하고 3종 환경에서 평가하는 구조]({{ '/assets/images/spiced-self-play-human-driving-diagram.webp' | relative_url }})
 
 여기서 가장 중요한 설계 결정 하나를 짚어야 합니다. 이 KL 항은 로그로 저장된 오프라인 데이터 분포가 아니라, 정책이 실제로 방문하는 상태(visited states)에서 정책을 앵커 쪽으로 당깁니다. 이른바 on-policy 정규화입니다. 오프라인 BC 분포에서만 정규화를 걸면, 정책이 실제로 굴러갈 때의 closed-loop 상태 분포에서 벗어나는 것을 막지 못합니다. 반면 방문 상태에서 거는 KL은 바로 그 분포 시프트 지점에서 앵커를 끌어옵니다. 사소해 보이지만 closed-loop 안정성을 좌우하는 선택입니다.
 
@@ -66,7 +66,7 @@ NYU와 프린스턴 등이 함께 낸 논문 "Human-like autonomy emerges from s
 
 핵심 결과는 아래 차트로 요약됩니다. 모든 수치는 논문이 보고한 값이며, 임의로 만든 숫자는 없습니다.
 
-![at-fault 충돌률 비교: spiced self-play(사람 30분) 0.65%, SMART-tiny-CLSFT(전체 Waymo 52일치) 1.6%, 순수 self-play 2.1%](/assets/images/spiced-self-play-human-driving-results.webp)
+![at-fault 충돌률 비교: spiced self-play(사람 30분) 0.65%, SMART-tiny-CLSFT(전체 Waymo 52일치) 1.6%, 순수 self-play 2.1%]({{ '/assets/images/spiced-self-play-human-driving-results.webp' | relative_url }})
 
 요점을 정리하면 다음과 같습니다.
 

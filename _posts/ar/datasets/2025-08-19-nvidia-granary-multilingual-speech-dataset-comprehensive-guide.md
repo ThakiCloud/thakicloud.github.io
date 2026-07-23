@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 lang: ar
 reading_time: true
 categories:
@@ -36,7 +36,7 @@ categories:
 
 Granary مجموعة بيانات متعددة اللغات على نطاق واسع، توفر ما مجموعه 640,000 ساعة من البيانات الصوتية موزعة على 25 لغة أوروبية. وهي تدعم مهمتي التعرف التلقائي على الكلام (ASR) والترجمة التلقائية للكلام (AST)، مما يوفر للباحثين والمطورين أساساً متيناً لبناء نماذج ذكاء اصطناعي صوتية متعددة اللغات من الجيل التالي.
 
-![صورة مفاهيمية لبيانات الكلام بـ25 لغة أوروبية تتجمع في أساس واحد للذكاء الاصطناعي الصوتي متعدد اللغات](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp)
+![صورة مفاهيمية لبيانات الكلام بـ25 لغة أوروبية تتجمع في أساس واحد للذكاء الاصطناعي الصوتي متعدد اللغات]({{ '/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp' | relative_url }})
 
 ## نظرة عامة على مجموعة بيانات NVIDIA Granary
 
@@ -80,7 +80,7 @@ Granary مجموعة بيانات متعددة اللغات على نطاق وا
 
 أما بيانات الترجمة الصوتية، فقد جرى إنتاجها بجودة عالية باستخدام نموذج EuroLLM-9B والتحقق منها عبر تحقق متقاطع بين اللغات، إضافةً إلى إجراءات إضافية لضبط الجودة كاكتشاف الهلوسة وفلترة معدلات الحروف.
 
-![خط أنابيب بيانات NVIDIA Granary: من أربع مجموعات عبر مراقبة الجودة إلى Granary و NeMo](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg)
+![خط أنابيب بيانات NVIDIA Granary: من أربع مجموعات عبر مراقبة الجودة إلى Granary و NeMo]({{ '/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg' | relative_url }})
 
 ## هيكل البيانات وطرق الوصول
 

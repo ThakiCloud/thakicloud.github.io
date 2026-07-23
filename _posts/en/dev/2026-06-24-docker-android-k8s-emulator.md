@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/docker-android-k8s-emulator/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/docker-android-k8s-emulator/"
 reading_time: true
 categories:
   - dev

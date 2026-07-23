@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/mcp-ui-complete-tutorial-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/mcp-ui-complete-tutorial-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/mcp-ui-complete-tutorial-guide/"
 published: false
 categories:
   - tutorials

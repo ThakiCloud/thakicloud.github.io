@@ -20,13 +20,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/tutorials/fable-5-subscription-shift-sovereign-ai/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/fable-5-subscription-shift-sovereign-ai/"
 reading_time: true
 categories:
   - tutorials
 ---
 
-![순간적으로 흩어지는 퍼블릭 클라우드와 암반에 뿌리내린 프라이빗 인프라가 대비되는 추상 이미지](/assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp)
+![순간적으로 흩어지는 퍼블릭 클라우드와 암반에 뿌리내린 프라이빗 인프라가 대비되는 추상 이미지]({{ '/assets/images/fable-5-subscription-shift-sovereign-ai-hero.webp' | relative_url }})
 
 오늘이 마감입니다. Anthropic의 최상위 모델인 Fable 5가 6월 22일까지만 구독 플랜에 무료로 포함되고, 23일부터는 포함 한도에서 빠집니다. 이후로 Fable 5를 쓰려면 종량제 크레딧을 따로 사야 합니다. 개발자 커뮤니티에서 이 소식이 빠르게 퍼졌고, 저희도 그냥 지나칠 수 없는 신호로 봤습니다.
 

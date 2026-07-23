@@ -6,7 +6,7 @@ seo_description: "المحور الذي يجمع أخبار 10 يوليو 2026 �
 date: 2026-07-10
 last_modified_at: 2026-07-10
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/ai-rack-2100-manwon-power-bottleneck/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/ai-rack-2100-manwon-power-bottleneck/"
 author_profile: true
 toc: true
 toc_label: "المحتويات"
@@ -23,7 +23,7 @@ categories:
   - news
 ---
 
-![رسم توضيحي لمفهوم اختناق الطاقة يضيق نحو رف الخادم، مع الطبقة البرمجية فوقه](/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp)
+![رسم توضيحي لمفهوم اختناق الطاقة يضيق نحو رف الخادم، مع الطبقة البرمجية فوقه]({{ '/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp' | relative_url }})
 
 تخيل فاتورة واحدة. البند رف خادم واحد، والسعر 21 مليون دولار، أي نحو 31.6 مليار وون بعملتنا. هذا هو السعر المتوقع لوحدة رف Rubin Ultra الجديد من Nvidia، كما نقلت اليوم Global Economic. فقط قبل جيل واحد، كان سعر رف Blackwell يتراوح بين 3 و4 ملايين دولار، أي أن القفزة تراوحت بين خمس وسبع مرات. أكبر بند في هذه الفاتورة ليس شريحة المعالجة بل الذاكرة. تصل كمية HBM4e المحمّلة في رف واحد وحدها إلى 82,944 غيغابايت، وبحساب 18.49 دولارا لكل غيغابايت، يتجاوز سعر الذاكرة وحدها 1.53 مليون دولار. مبلغ كان يقترب من سعر رف خادم كامل من الجيل السابق أصبح الآن سعر قطعة واحدة فقط. القصة التي تجري عبر ملخص اليوم تبدأ من هنا، وحدة قياس المنافسة في الذكاء الاصطناعي انتقلت من مؤشرات الأداء إلى المال والطاقة.
 

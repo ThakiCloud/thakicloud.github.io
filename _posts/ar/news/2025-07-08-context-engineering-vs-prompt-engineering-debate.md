@@ -18,7 +18,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/news/context-engineering-vs-prompt-engineering-debate/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/context-engineering-vs-prompt-engineering-debate/"
 reading_time: true
 lang: ar
 permalink: /ar/news/context-engineering-vs-prompt-engineering-debate/

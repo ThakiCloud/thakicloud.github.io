@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/agentops/agno-llmops-automation-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agno-llmops-automation-complete-guide/"
 published: false
 categories:
   - agentops

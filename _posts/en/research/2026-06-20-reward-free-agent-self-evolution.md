@@ -20,7 +20,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/reward-free-agent-self-evolution/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/reward-free-agent-self-evolution/"
 reading_time: true
 categories:
   - research
@@ -29,7 +29,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Conceptual diagram of world knowledge-based reward-free self-evolution pipeline](/assets/images/reward-free-agent-hero.webp)
+![Conceptual diagram of world knowledge-based reward-free self-evolution pipeline]({{ '/assets/images/reward-free-agent-hero.webp' | relative_url }})
 
 ## The Bottleneck in Reinforcement Learning
 

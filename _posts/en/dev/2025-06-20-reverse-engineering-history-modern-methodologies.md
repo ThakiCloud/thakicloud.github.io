@@ -12,7 +12,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 lang: en
-canonical_url: https://thakicloud.github.io/en/dev/reverse-engineering-history-modern-methodologies/
+canonical_url: https://thakicloud.com/tech-blog/en/dev/reverse-engineering-history-modern-methodologies/
 published: false
 categories:
   - dev
@@ -378,4 +378,4 @@ As AI technology continues to develop, reverse engineering is expected to become
 
 ---
 
-*If you found this article helpful, please leave a star on GitHub. For more AI and development content, visit [ThakiCloud](https://thakicloud.github.io).*
+*If you found this article helpful, please leave a star on GitHub. For more AI and development content, visit [ThakiCloud](https://thakicloud.com/tech-blog).*

@@ -7,7 +7,7 @@ date: 2026-07-04
 last_modified_at: 2026-07-04
 author_profile: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/enterprise-agents-need-control-plane/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/enterprise-agents-need-control-plane/"
 toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
@@ -57,7 +57,7 @@ published: false
 
 تعامل Skills قدرات الوكيل كموارد خاضعة لإدارة الإصدارات. فتسجيل القدرة والتحقّق منها وسحبها يجري على مستوى المنصّة لا داخل مشروع فردي. وتعرّف Tools الوصول إلى الأدوات تعريفاً تصريحياً؛ فأيّ وكيل يمكنه استدعاء أيّ أداة ومتى تحكم فيه السياسة سلفاً. وتحدّد Policies درجة الاستقلالية تحديداً صريحاً؛ ولأنّ التنفيذ لا يمضي إلّا عبر بوّابة موافقة محدّدة، يصير الخطّ الذي يجب ألّا يتجاوزه الوكيل مغروساً في مسار التنفيذ لا في وثيقة. وتُعدّ Audit Logs البوّابة الافتراضية التي يمرّ عبرها كلّ فعل؛ فإعادة البناء لاحقاً هي الأصل لا الاستثناء.
 
-![بنية مستوى تحكّم يمرّ فيها كلّ فعل للوكيل عبر بوّابة السياسة وسجلّ التدقيق ويعمل فوق Kubernetes سيادي](/assets/images/enterprise-agents-need-control-plane-diagram.svg)
+![بنية مستوى تحكّم يمرّ فيها كلّ فعل للوكيل عبر بوّابة السياسة وسجلّ التدقيق ويعمل فوق Kubernetes سيادي]({{ '/assets/images/enterprise-agents-need-control-plane-diagram.svg' | relative_url }})
 
 *يُفحَص كلّ فعل للوكيل عند بوّابة السياسة وفق قواعد الاستقلالية والموافقة؛ ولا يمضي سوى التنفيذ المسموح به عبر المهارات والأدوات وصندوق رمليّ معزول. وبصرف النظر عن النتيجة، يُسجَّل كلّ فعل في سجلّ التدقيق، وتجري العملية كاملةً فوق Kubernetes سيادي داخل المؤسسة ومعزول عن الشبكة.*
 

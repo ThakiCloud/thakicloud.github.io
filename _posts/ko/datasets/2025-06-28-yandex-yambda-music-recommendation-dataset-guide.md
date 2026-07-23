@@ -18,7 +18,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Yambda 데이터셋 가이드"
-canonical_url: "https://thakicloud.github.io/yandex-yambda-music-recommendation-dataset-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/yandex-yambda-music-recommendation-dataset-guide/"
 published: false
 categories:
   - datasets

@@ -20,7 +20,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/trae-agent-cloud-development-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/trae-agent-cloud-development-automation-guide/"
 lang: ar
 published: false
 categories:
@@ -35,7 +35,7 @@ categories:
 
 يقوم TRAE Agent على فلسفة تتجاوز مجرد توليد الكود: فهو يعمل كوكيل ذكي يفهم مهام التطوير بعمق، ويخطط بشكل منهجي، وينفّذ من البداية إلى النهاية.
 
-![مخطط مفاهيمي](/assets/images/trae-agent-cloud-development-automation-guide-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/trae-agent-cloud-development-automation-guide-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

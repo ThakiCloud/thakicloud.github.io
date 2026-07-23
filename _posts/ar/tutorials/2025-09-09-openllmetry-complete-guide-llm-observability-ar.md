@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/openllmetry-complete-guide-llm-observability/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/openllmetry-complete-guide-llm-observability/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/openllmetry-complete-guide-llm-observability/"
 published: false
 categories:
   - tutorials

@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "DeepSeek-R1 Training Pipeline"
-canonical_url: "https://thakicloud.github.io/en/llmops/deepseek-r1-training-pipeline-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/deepseek-r1-training-pipeline-guide/"
 published: false
 categories:
   - llmops

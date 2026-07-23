@@ -3,7 +3,7 @@ title: "everything-claude-code: Dissecting an AI Coding Harness Battle-Tested Ov
 excerpt: "AI coding tools forget your rules every new session. An Anthropic hackathon winner solved this by open-sourcing the config they refined over six months on a real TypeScript microservice. We dissect everything-claude-code's thin-harness, fat-skills design and show how ThakiCloud's Paxis productizes the same principle."
 date: 2026-07-20
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/everything-claude-code-agent-harness/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/everything-claude-code-agent-harness/"
 tags:
   - ClaudeCode
   - 에이전트하네스
@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![A thin harness core connected to many skill modules](/assets/images/everything-claude-code-agent-harness-hero.png)
+![A thin harness core connected to many skill modules]({{ '/assets/images/everything-claude-code-agent-harness-hero.png' | relative_url }})
 
 ## Overview
 

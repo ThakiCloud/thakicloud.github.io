@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/chunkr-document-intelligence-rag-data-processing/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/chunkr-document-intelligence-rag-data-processing/"
 reading_time: true
 lang: en
 published: false

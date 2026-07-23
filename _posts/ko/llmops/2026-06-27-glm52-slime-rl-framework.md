@@ -19,13 +19,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/glm52-slime-rl-framework/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm52-slime-rl-framework/"
 reading_time: true
 categories:
   - llmops
 ---
 
-![생성 클러스터와 학습 클러스터가 중앙 버퍼를 통해 비동기로 데이터를 주고받는 모습을 형상화한 추상 이미지](/assets/images/glm52-slime-rl-framework-hero.webp)
+![생성 클러스터와 학습 클러스터가 중앙 버퍼를 통해 비동기로 데이터를 주고받는 모습을 형상화한 추상 이미지]({{ '/assets/images/glm52-slime-rl-framework-hero.webp' | relative_url }})
 *롤아웃과 학습을 분리해 처리량을 끌어올리는 slime의 비동기 RL 구조를 형상화한 이미지입니다.*
 
 ## 개요

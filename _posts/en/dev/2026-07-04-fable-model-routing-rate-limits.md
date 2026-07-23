@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-04
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/fable-model-routing-rate-limits/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/fable-model-routing-rate-limits/"
 categories:
   - dev
 ---
 
-![Abstract image of multiple sized processing streams converging into one conductor node then branching out again](/assets/images/fable-model-routing-rate-limits-hero.webp)
+![Abstract image of multiple sized processing streams converging into one conductor node then branching out again]({{ '/assets/images/fable-model-routing-rate-limits-hero.webp' | relative_url }})
 *A visualization of routing, where heavy and light work flow to different models.*
 
 ## Overview

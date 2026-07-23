@@ -6,7 +6,7 @@ seo_description: "From core concepts of Self-Evolving Agents to ASI implementati
 date: 2025-07-31
 last_modified_at: 2025-07-31
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/self-evolving-agents-survey-artificial-super-intelligence-research/"
 tags:
   - Self-Evolving-Agents
   - 인공초지능

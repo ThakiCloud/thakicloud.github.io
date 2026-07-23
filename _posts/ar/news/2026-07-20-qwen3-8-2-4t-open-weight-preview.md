@@ -19,7 +19,7 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/ar/news/qwen3-8-2-4t-open-weight-preview/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/qwen3-8-2-4t-open-weight-preview/"
 ---
 
 مساء يوم الأحد، ظهر إعلان قصير من فريق Qwen التابع لعلي بابا على الخط الزمني. تضمن الإعلان أن Qwen3.8 سيصدر قريبا وسيُطرح كأوزان مفتوحة، مع رقم حجم المعلمات المرافق وهو 2.4 تريليون. وبما أن هذا الإعلان جاء بعد أيام قليلة فقط من إصدار Moonshot الفعلي لنموذج Kimi K3 بحجم 2.8 تريليون معلمة، فقد عزز هذا الإعلان الانطباع بأن "سباق النماذج المفتوحة الضخمة بات يحدث على أساس أسبوعي".

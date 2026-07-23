@@ -6,7 +6,7 @@ seo_description: "MaxKB 설치, 구성, 기업 AI 에이전트 구축을 위한 
 date: 2025-09-09
 lang: ko
 permalink: /ko/tutorials/maxkb-enterprise-agent-platform-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/maxkb-enterprise-agent-platform-complete-guide/"
 tags:
   - MaxKB
   - AI-에이전트
@@ -834,4 +834,4 @@ MaxKB는 조직이 제어, 보안, 유연성을 유지하면서 AI 에이전트�
 
 ---
 
-*이 튜토리얼은 포괄적인 AI 및 자동화 시리즈의 일부입니다. 더 고급 튜토리얼과 기업 AI 솔루션은 [Thaki Cloud](https://thakicloud.github.io/)를 방문하세요.*
+*이 튜토리얼은 포괄적인 AI 및 자동화 시리즈의 일부입니다. 더 고급 튜토리얼과 기업 AI 솔루션은 [Thaki Cloud](https://thakicloud.com/tech-blog/)를 방문하세요.*

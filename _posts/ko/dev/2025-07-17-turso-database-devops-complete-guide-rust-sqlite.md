@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/devops/turso-database-devops-complete-guide-rust-sqlite/"
+canonical_url: "https://thakicloud.com/tech-blog/devops/turso-database-devops-complete-guide-rust-sqlite/"
 reading_time: true
 categories:
   - dev
@@ -29,7 +29,7 @@ categories:
 published: false
 ---
 
-![개념 다이어그램](/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp)
+![개념 다이어그램]({{ '/assets/images/turso-database-devops-complete-guide-rust-sqlite-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 20분
 
@@ -44,7 +44,7 @@ published: false
 이 글에서는 DevOps 관점에서 Turso Database의 핵심 기능부터 실제 프로덕션 배포까지 체계적으로 다뤄보겠습니다.
 
 
-![개념 다이어그램](/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/turso-database-devops-complete-guide-rust-sqlite-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

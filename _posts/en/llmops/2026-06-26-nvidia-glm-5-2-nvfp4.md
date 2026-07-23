@@ -20,18 +20,18 @@ toc_label: "Contents"
 toc_icon: "microchip"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/nvidia-glm-5-2-nvfp4/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvidia-glm-5-2-nvfp4/"
 reading_time: true
 categories:
   - llmops
 ---
 
-![Abstract image of a 16-bit neural network lattice condensing into a compact 4-bit core](/assets/images/nvidia-glm-5-2-nvfp4-hero.webp)
+![Abstract image of a 16-bit neural network lattice condensing into a compact 4-bit core]({{ '/assets/images/nvidia-glm-5-2-nvfp4-hero.webp' | relative_url }})
 *A conceptual visualization of 16-bit weights being compressed down to 4-bit.*
 
 For teams trying to serve a frontier-class reasoning model on their own infrastructure, the first obstacle is almost always GPU memory. Loading 753B parameters at 16-bit requires close to 1.5 TB of memory, which translates directly to multiple GPU nodes. `nvidia/GLM-5.2-NVFP4`, released on Hugging Face on June 25, 2026, is NVIDIA's attempt to lower that barrier by quantizing ZAI's (zai-org) GLM-5.2 to 4-bit precision.
 
-This post is not an introduction to GLM-5.2 as a model. How the model's long reasoning token lengths change the economics of self-hosting is covered in the [reasoning token economics post](https://thakicloud.github.io/en/llmops/glm-5-2-reasoning-token-economics/), and the 1-bit GGUF quantization for consumer hardware is covered in the [Unsloth GGUF post](https://thakicloud.github.io/en/llmops/unsloth-glm-5-2-1bit-gguf/). The focus here is the datacenter track: what architectural choices NVIDIA's NVFP4 quantization makes, what hardware it targets, how serving is set up, and what it means for teams running multi-tenant inference.
+This post is not an introduction to GLM-5.2 as a model. How the model's long reasoning token lengths change the economics of self-hosting is covered in the [reasoning token economics post](https://thakicloud.com/tech-blog/en/llmops/glm-5-2-reasoning-token-economics/), and the 1-bit GGUF quantization for consumer hardware is covered in the [Unsloth GGUF post](https://thakicloud.com/tech-blog/en/llmops/unsloth-glm-5-2-1bit-gguf/). The focus here is the datacenter track: what architectural choices NVIDIA's NVFP4 quantization makes, what hardware it targets, how serving is set up, and what it means for teams running multi-tenant inference.
 
 All accuracy figures in this post are official measurements published by NVIDIA in the model card. Because the 753B model requires NVIDIA Blackwell with 8-way tensor parallelism, we were not able to reproduce results in ThakiCloud's development environment. This post is therefore an analysis based on public information; no numbers have been fabricated. Values that could not be independently verified are marked `[estimated]`.
 
@@ -53,7 +53,7 @@ NVFP4 is a 4-bit floating-point data type defined by NVIDIA. The key distinction
 
 ## The core design decision: selective quantization
 
-![Diagram of GLM-5.2-NVFP4 selective quantization strategy and serving paths](/assets/images/nvidia-glm-5-2-nvfp4-diagram.webp)
+![Diagram of GLM-5.2-NVFP4 selective quantization strategy and serving paths]({{ '/assets/images/nvidia-glm-5-2-nvfp4-diagram.webp' | relative_url }})
 *Only the linear operators inside MoE routing experts are quantized to NVFP4; shared experts and attention remain in BF16.*
 
 The most important design decision in this model is what was left unquantized. Quoting the model card directly: "only the weights and activations of linear operators inside transformer blocks within MoE experts are quantized; shared experts are not quantized." Concretely:
@@ -67,7 +67,7 @@ Quantization calibration used NVIDIA's Nemotron-family datasets. The model card 
 
 ## Public benchmarks: accuracy vs. FP8
 
-![Bar chart comparing benchmark scores between the FP8 baseline and NVFP4](/assets/images/nvidia-glm-5-2-nvfp4-results.webp)
+![Bar chart comparing benchmark scores between the FP8 baseline and NVFP4]({{ '/assets/images/nvidia-glm-5-2-nvfp4-results.webp' | relative_url }})
 *Official measurements from the nvidia/GLM-5.2-NVFP4 model card. The baseline is GLM-5.2-FP8.*
 
 The accuracy comparison published in the model card is shown below. The baseline is not BF16 but the already-compressed `GLM-5.2-FP8`, making this a more demanding comparison: not "how much does 4-bit lose vs. the original" but "how much does 4-bit lose vs. 8-bit."

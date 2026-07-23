@@ -20,7 +20,7 @@ dir: rtl
 author_profile: true
 toc: true
 toc_label: "دليل سير عمل n8n"
-canonical_url: "https://thakicloud.github.io/ar/dev/n8n-workflows-ai-platform-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/n8n-workflows-ai-platform-automation-guide/"
 published: false
 categories:
   - dev

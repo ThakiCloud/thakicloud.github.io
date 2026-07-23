@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/glm-5-2-1m-context-moe-self-hosting/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/glm-5-2-1m-context-moe-self-hosting/"
 lang: en
 reading_time: true
 categories:
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 7 min
 
-![GLM-5.2 sparse MoE and 1M context concept](/assets/images/glm-5-2-hero.webp)
+![GLM-5.2 sparse MoE and 1M context concept]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
 ## What Makes GLM-5.2 Different
 

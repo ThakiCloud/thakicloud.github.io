@@ -15,11 +15,11 @@ categories:
   - agentops
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-multiplayer-collaborative-agents/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-multiplayer-collaborative-agents/"
 lang: en
 ---
 
-![From isolated agents to a connected network of collaborative agents](/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp)
+![From isolated agents to a connected network of collaborative agents]({{ '/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp' | relative_url }})
 
 Anyone who has used a coding agent on a team runs into an odd wall. The agent belongs to you alone. Even when a colleague sitting next to you is working in the same repository, your Claude has no idea theirs exists. People collaborate through Slack and screen sharing, but the agents that actually touch the code on our behalf sit isolated on their own islands. **Multiplayer Claude Code**, recently released and widely discussed, takes direct aim at this wall. It is an experiment in letting multiple people share the same terminal and connecting each person's Claude so the agents can talk to each other. This post uses that release as a starting point to break down the design challenges collaborative coding agents need to solve, and examines what this direction implies from ThakiCloud's operational perspective, where multi-agent systems and policy are treated as first-class resources.
 

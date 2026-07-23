@@ -5,7 +5,7 @@ excerpt: "12 استراتيجية أساسية لاستخدام Cursor AI باح
 date: 2025-06-25
 tags: [cursor-ai, ai-assisted-development, productivity, development-workflow, coding-efficiency]
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/cursor-ai-mastery-guide-2025/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/cursor-ai-mastery-guide-2025/"
 toc: true
 toc_sticky: true
 toc_label: "دليل إتقان Cursor AI"

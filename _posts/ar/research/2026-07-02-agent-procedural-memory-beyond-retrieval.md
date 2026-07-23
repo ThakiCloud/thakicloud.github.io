@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "brain"
-canonical_url: "https://thakicloud.github.io/ar/research/agent-procedural-memory-beyond-retrieval/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/agent-procedural-memory-beyond-retrieval/"
 categories:
   - research
 published: false

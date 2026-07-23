@@ -18,7 +18,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/awesome-llm-apps-collection/
-canonical_url: "https://thakicloud.github.io/ar/llmops/awesome-llm-apps-collection/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/awesome-llm-apps-collection/"
 published: false
 categories:
   - llmops

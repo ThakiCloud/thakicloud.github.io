@@ -6,7 +6,7 @@ seo_description: "تعلم كيفية إعداد واستخدام Eigent، من�
 date: 2025-09-19
 lang: ar
 permalink: /ar/tutorials/eigent-multiagent-workforce-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/eigent-multiagent-workforce-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/eigent-multiagent-workforce-tutorial/"
 tags:
   - Eigent
   - متعدد الوكلاء
@@ -780,4 +780,4 @@ class AccessControlManager:
 
 ---
 
-*لمزيد من الدروس والأدلة المتقدمة، زر [وثائقنا](https://thakicloud.github.io) أو انضم إلى مناقشات مجتمعنا.*
+*لمزيد من الدروس والأدلة المتقدمة، زر [وثائقنا](https://thakicloud.com/tech-blog) أو انضم إلى مناقشات مجتمعنا.*

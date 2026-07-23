@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/qwen3-6-27b-nvfp4-onprem-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/qwen3-6-27b-nvfp4-onprem-serving/"
 reading_time: true
 audiobook: https://drive.google.com/file/d/1KfD7pjbIrnA-wY6kc2je_tyHPwu5s9Lx/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 11분
 
-![Qwen3.6-27B NVFP4 4비트 양자화 개념도](/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp)
+![Qwen3.6-27B NVFP4 4비트 양자화 개념도]({{ '/assets/images/qwen3-6-27b-nvfp4-onprem-serving-hero.webp' | relative_url }})
 
 ## 개요
 
@@ -142,4 +142,4 @@ ThakiCloud는 Kueue로 GPU 쿼터를 관리하고 vLLM으로 모델을 멀티테
 - [NVIDIA TensorRT Model Optimizer](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
 - [NVFP4 소개 (NVIDIA Developer)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
 - [vLLM 공식 문서](https://docs.vllm.ai/)
-- [Gemma-4-26B-NVFP4 DGX Spark 리뷰 (ThakiCloud 블로그)](https://thakicloud.github.io/ko/owm/gemma-4-26b-nvfp4-dgx-spark/)
+- [Gemma-4-26B-NVFP4 DGX Spark 리뷰 (ThakiCloud 블로그)](https://thakicloud.com/tech-blog/ko/owm/gemma-4-26b-nvfp4-dgx-spark/)

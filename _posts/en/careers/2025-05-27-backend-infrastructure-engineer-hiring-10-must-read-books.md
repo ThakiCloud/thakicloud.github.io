@@ -11,7 +11,7 @@ tags:
 author_profile: true
 lang: en
 permalink: /en/careers/backend-infrastructure-engineer-hiring-10-must-read-books/
-canonical_url: "https://thakicloud.github.io/en/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
+canonical_url: "https://thakicloud.com/tech-blog/en/careers/backend-infrastructure-engineer-hiring-10-must-read-books/"
 categories:
   - careers
 ---
@@ -23,7 +23,7 @@ categories:
 ---
 
 <!-- evolve-diagram -->
-![Conceptual diagram mapping hiring skill areas to must-read books](/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg)
+![Conceptual diagram mapping hiring skill areas to must-read books]({{ '/assets/images/backend-infrastructure-engineer-hiring-10-must-read-books-diagram.svg' | relative_url }})
 
 *Conceptual diagram: the four skill areas of a backend/infra engineer (code quality, distributed systems and APIs, infrastructure and Kubernetes, GPU parallel compute) mapped to the ten must-read books.*
 

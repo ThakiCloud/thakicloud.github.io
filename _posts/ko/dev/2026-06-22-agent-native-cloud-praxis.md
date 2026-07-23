@@ -16,13 +16,16 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/paas/agent-native-cloud-praxis/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/agent-native-cloud-praxis/"
 reading_time: true
 categories:
   - dev
+published: false
+audiobook: /assets/audio/posts/agent-native-cloud-praxis/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![에이전트 네이티브 클라우드 Paxis 개요](/assets/images/agent-native-cloud-praxis-hero.webp)
+![에이전트 네이티브 클라우드 Paxis 개요]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})
 
 ## 개요
 
@@ -157,3 +160,16 @@ Paxis는 **AI Platform(ai-suite)**과 연계하여 동작합니다. AI Platform�
 Q4 2026에는 스킬 마켓플레이스를, Q2 2027 이후에는 SOC2 인증과 에어갭 배포를 [추정] 로드맵에 포함하고 있는 Paxis의 여정도 그 흐름의 일부입니다. 플랫폼이 성숙할수록 개발자는 에이전트의 능력 설계에 집중하고, 실행 안전성과 비용 최적화는 인프라가 담당하는 분업이 가능해질 것입니다.
 
 에이전트 네이티브 클라우드는 아직 완성된 개념이 아닙니다. 그러나 다음 세대의 소프트웨어 운영이 어떤 문제를 인프라 레이어에서 해결해야 하는지는, 지금 이 시점에 설계 원칙으로 자리를 잡아 가고 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-native-cloud-praxis 슬라이드 1](/assets/images/agent-native-cloud-praxis-slide-01.png)
+
+![agent-native-cloud-praxis 슬라이드 2](/assets/images/agent-native-cloud-praxis-slide-02.png)
+
+![agent-native-cloud-praxis 슬라이드 3](/assets/images/agent-native-cloud-praxis-slide-03.png)
+
+![agent-native-cloud-praxis 슬라이드 4](/assets/images/agent-native-cloud-praxis-slide-04.png)
+

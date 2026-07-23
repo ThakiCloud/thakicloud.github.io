@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture-part2/"
 reading_time: true
 lang: en
 published: false
@@ -34,7 +34,7 @@ categories:
 
 ## Introduction: Core Components of Production LLMOps
 
-Where [Part 1](https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/) examined real-time steering and intelligent context management, Part 2 provides an in-depth analysis of **the core components needed to operate LLM systems reliably in production environments**.
+Where [Part 1](https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/) examined real-time steering and intelligent context management, Part 2 provides an in-depth analysis of **the core components needed to operate LLM systems reliably in production environments**.
 
 The remaining core technologies discovered through Claude Code reverse engineering are:
 
@@ -1302,7 +1302,7 @@ The technologies discovered through Claude Code reverse engineering are expected
 
 ### Series Links
 
-- **Part 1**: [Real-Time Steering and Intelligent Context Management](https://thakicloud.github.io/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)
+- **Part 1**: [Real-Time Steering and Intelligent Context Management](https://thakicloud.com/tech-blog/llmops/claude-code-reverse-engineering-next-generation-llmops-architecture/)
 - **Part 2**: Agent Loop and Tool Execution Framework (current article)
 
 ---

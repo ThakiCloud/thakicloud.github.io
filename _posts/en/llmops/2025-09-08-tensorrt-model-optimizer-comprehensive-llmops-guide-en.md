@@ -17,7 +17,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide/
-canonical_url: "https://thakicloud.github.io/en/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/tensorrt-model-optimizer-comprehensive-llmops-guide-en/"
 published: false
 categories:
   - llmops

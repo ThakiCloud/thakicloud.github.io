@@ -17,14 +17,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/dev/skill-ecosystem-routing-sra/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/skill-ecosystem-routing-sra/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![صورة غلاف توجيه منظومة المهارات SRA](/assets/images/skill-ecosystem-routing-sra-hero.webp)
+![صورة غلاف توجيه منظومة المهارات SRA]({{ '/assets/images/skill-ecosystem-routing-sra-hero.webp' | relative_url }})
 
 ## نظرة عامة: المشكلة التي خلقها تكاثر المهارات
 

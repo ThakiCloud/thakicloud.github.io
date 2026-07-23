@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/binary-quantization-rag-32x-memory-optimization/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/binary-quantization-rag-32x-memory-optimization/"
 reading_time: true
 categories:
   - agentops
@@ -38,7 +38,7 @@ As RAG (Retrieval-Augmented Generation) systems establish themselves as the core
 
 This article covers everything needed to optimize a RAG system using Binary Quantization, from the core principles through to a working implementation.
 
-![Concept diagram](/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg)
+![Concept diagram]({{ '/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

@@ -4,7 +4,7 @@ excerpt: "فريق بحثي من الأكاديمية الصينية للعلو�
 date: 2025-06-16
 lang: ar
 permalink: /ar/news/chinese-ai-human-cognition-breakthrough/
-canonical_url: "https://thakicloud.github.io/ar/news/chinese-ai-human-cognition-breakthrough/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/chinese-ai-human-cognition-breakthrough/"
 tags:
   - إدراك الذكاء الاصطناعي
   - البحث الصيني

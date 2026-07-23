@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/nemotron-3-ultra-latentmoe-onprem/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/nemotron-3-ultra-latentmoe-onprem/"
 reading_time: true
 categories:
   - owm
@@ -30,7 +30,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![Nemotron-3-Ultra 하이브리드 아키텍처 개념도](/assets/images/nemotron-3-ultra-hero.webp)
+![Nemotron-3-Ultra 하이브리드 아키텍처 개념도]({{ '/assets/images/nemotron-3-ultra-hero.webp' | relative_url }})
 
 ## Nemotron-3-Ultra-550B 개요
 

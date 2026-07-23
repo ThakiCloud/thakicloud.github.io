@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/anycrawl-llm-ready-web-crawler-comprehensive-guide/"
 reading_time: true
 categories:
   - datasets
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 15분
 
-![AnyCrawl LLM 친화적 데이터 수집 파이프라인 개요](/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png)
+![AnyCrawl LLM 친화적 데이터 수집 파이프라인 개요]({{ '/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png' | relative_url }})
 
 ## 개요
 
@@ -567,6 +567,6 @@ Any4AI의 [AnyCrawl](https://github.com/any4ai/AnyCrawl)로 AI 기반 데이터 
 ---
 
 **관련 글:**
-- [웹 스크래핑 완전 가이드](https://thakicloud.github.io/tutorials/web-scraping-guide/)
-- [LLM 데이터 전처리 방법론](https://thakicloud.github.io/datasets/llm-data-preprocessing/)
-- [Docker 기반 AI 인프라 구축](https://thakicloud.github.io/tutorials/docker-ai-infrastructure/)
+- [웹 스크래핑 완전 가이드](https://thakicloud.com/tech-blog/tutorials/web-scraping-guide/)
+- [LLM 데이터 전처리 방법론](https://thakicloud.com/tech-blog/datasets/llm-data-preprocessing/)
+- [Docker 기반 AI 인프라 구축](https://thakicloud.com/tech-blog/tutorials/docker-ai-infrastructure/)

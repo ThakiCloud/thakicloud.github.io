@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/keep-aiops-alert-management-platform-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/keep-aiops-alert-management-platform-tutorial/"
 reading_time: true
 published: false
 categories:
@@ -1297,6 +1297,6 @@ Keep과 같은 AIOps 플랫폼의 도입은 단순한 도구 사용을 넘어서
 ---
 
 **관련 글:**
-- [Prometheus 모니터링 완벽 가이드](https://thakicloud.github.io/tutorials/prometheus-monitoring-guide/)
-- [Grafana 대시보드 구축하기](https://thakicloud.github.io/tutorials/grafana-dashboard-guide/)
-- [Kubernetes 모니터링 최적화](https://thakicloud.github.io/dev/kubernetes-monitoring-optimization/) 
+- [Prometheus 모니터링 완벽 가이드](https://thakicloud.com/tech-blog/tutorials/prometheus-monitoring-guide/)
+- [Grafana 대시보드 구축하기](https://thakicloud.com/tech-blog/tutorials/grafana-dashboard-guide/)
+- [Kubernetes 모니터링 최적화](https://thakicloud.com/tech-blog/dev/kubernetes-monitoring-optimization/) 

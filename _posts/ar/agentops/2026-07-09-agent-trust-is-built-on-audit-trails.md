@@ -6,7 +6,7 @@ seo_description: "من نموذج الرؤية الخفيف لدى Ant Group إ�
 date: 2026-07-09
 last_modified_at: 2026-07-09
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/agent-trust-is-built-on-audit-trails/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/agent-trust-is-built-on-audit-trails/"
 author_profile: true
 toc: true
 toc_label: "المحتويات"
@@ -59,7 +59,7 @@ categories:
 
 إذن كيف ينبغي أن تبدو منصة صُممت منذ البداية بحيث تمتلك طبقة التنفيذ ذاتها زمام السجل. جعلت ThakiCloud من هذا السؤال العمود الفقري لمنتجها Paxis، وهو Agent-Native Cloud الخاص بها. في Paxis، لا تُعد Skills وTools وPolicies وAudit Logs خيارات تُضاف لاحقا، بل موارد من الدرجة الأولى. لحظة استدعاء الوكيل لمهارة، ولحظة تشغيله لأداة، تتحولان بذاتهما إلى سجل تدقيق، وتقوم بوابة سياسات بالموافقة على ذلك التنفيذ أو منعه مسبقا. حتى نقاط الربط مع الأنظمة الخارجية عبر موصلات MCP المعيارية تقع على المسار نفسه، بحيث يبقى السلوك الذي يعبر حدود الأنظمة متصلا في سجل واحد. ليست هذه بنية تعيد بناء ما حدث بعد وقوعه، بل بنية ينمو فيها السجل مع العمل أثناء حدوثه.
 
-![رسم توضيحي للمفهوم](/assets/images/agent-trust-is-built-on-audit-trails-diagram.svg)
+![رسم توضيحي للمفهوم]({{ '/assets/images/agent-trust-is-built-on-audit-trails-diagram.svg' | relative_url }})
 
 *تُسجَّل كل خطوة تنفيذية يتخذها الوكيل بعد تجاوز بوابة السياسات كسجل تدقيق مرافق، ويبقى ذلك المسار داخل بنية Kubernetes سيادية محلية، بحيث يمكن إعادة تتبعه لاحقا.*
 

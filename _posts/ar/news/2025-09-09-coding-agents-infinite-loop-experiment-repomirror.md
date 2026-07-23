@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/news/coding-agents-infinite-loop-experiment-repomirror/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/coding-agents-infinite-loop-experiment-repomirror/"
 permalink: /ar/news/coding-agents-infinite-loop-experiment-repomirror/
 categories:
   - news
@@ -24,7 +24,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![رسم تجريدي لمستودعين يعكس كل منهما الآخر أثناء النقل داخل حلقة لانهائية](/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.webp)
+![رسم تجريدي لمستودعين يعكس كل منهما الآخر أثناء النقل داخل حلقة لانهائية]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-hero.webp' | relative_url }})
 *تجسيد تجريدي لبنية المرآة في RepoMirror، التي تحوّل المستودع المصدر إلى صيغته الهدف بشكل متكرر داخل حلقة لانهائية.*
 
 ## مقدمة: نموذج جديد في أتمتة التطوير المدفوعة بالذكاء الاصطناعي

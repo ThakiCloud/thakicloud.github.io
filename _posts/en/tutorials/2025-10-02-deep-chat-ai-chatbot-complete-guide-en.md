@@ -6,7 +6,7 @@ seo_description: "Comprehensive guide to Deep Chat - integrate AI chatbots with 
 date: 2025-10-02
 lang: en
 permalink: /en/tutorials/deep-chat-ai-chatbot-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/deep-chat-ai-chatbot-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/deep-chat-ai-chatbot-complete-guide/"
 tags:
   - deep-chat
   - ai-chatbot

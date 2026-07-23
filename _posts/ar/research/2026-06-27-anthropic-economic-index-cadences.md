@@ -18,14 +18,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/anthropic-economic-index-cadences/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/anthropic-economic-index-cadences/"
 reading_time: true
 categories:
   - research
 published: false
 ---
 
-![صورة تجريدية لنبضات ضوئية تتموّج بإيقاع عبر شبكة بيانات خفيفة توحي بالإيقاع اليومي](/assets/images/anthropic-economic-index-cadences-hero.webp)
+![صورة تجريدية لنبضات ضوئية تتموّج بإيقاع عبر شبكة بيانات خفيفة توحي بالإيقاع اليومي]({{ '/assets/images/anthropic-economic-index-cadences-hero.webp' | relative_url }})
 
 ## نظرة عامة
 
@@ -43,7 +43,7 @@ published: false
 
 ويُضاف مسار آخر. تُقرّ Anthropic بأنها افتقرت إلى رؤية الأثر **خارج** جلسات المستخدم، أي كيف يُدرك الناس الذكاء الاصطناعي. لذا تعرض النتائج الأولية لـ [استبيان المؤشر الاقتصادي](https://www.anthropic.com/research/economic-index-survey-announcement) الذي أُطلق في أبريل 2026. باختصار، يقوم التقرير على ثلاثة محاور: **الإيقاعات بالساعة**، و**تصنيف المخرجات**، و**استبيان الإدراك**.
 
-![رسم بياني يوضّح التوسّع من عيّنة سبعة أيام إلى منهجية مختلطة بثلاثة محاور (الإيقاعات بالساعة، تصنيف المخرجات، استبيان الإدراك) متّصلة بإطار قياس العائد لدى ThakiCloud](/assets/images/anthropic-economic-index-cadences-diagram.webp)
+![رسم بياني يوضّح التوسّع من عيّنة سبعة أيام إلى منهجية مختلطة بثلاثة محاور (الإيقاعات بالساعة، تصنيف المخرجات، استبيان الإدراك) متّصلة بإطار قياس العائد لدى ThakiCloud]({{ '/assets/images/anthropic-economic-index-cadences-diagram.webp' | relative_url }})
 
 ## المحور الأول: الإيقاعات بالساعة
 

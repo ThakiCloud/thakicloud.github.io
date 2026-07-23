@@ -4,7 +4,7 @@ excerpt: "كبير علماء Alphabet جيف دين يناقش تطور نما�
 date: 2025-06-05
 lang: ar
 permalink: /ar/news/jeff-dean-bill-coughran-talk/
-canonical_url: "https://thakicloud.github.io/ar/news/jeff-dean-bill-coughran-talk/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/jeff-dean-bill-coughran-talk/"
 tags:
   - البنية التحتية للذكاء الاصطناعي
   - النماذج الكبيرة

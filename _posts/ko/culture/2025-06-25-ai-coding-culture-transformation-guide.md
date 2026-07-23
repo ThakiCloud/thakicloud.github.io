@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "AI 시대 개발 문화 혁신"
-canonical_url: "https://thakicloud.github.io/ko/culture/ai-coding-culture-transformation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/ai-coding-culture-transformation-guide/"
 categories:
   - culture
   - dev
@@ -46,7 +46,7 @@ GitHub Octoverse 2024 보고서에 따르면 오픈소스 설문 응답자의 73
 
 이 두 패러다임의 공통점은 개발자의 역할이 없어진다는 게 아니라 달라진다는 점입니다. 코드를 한 줄씩 타이핑하는 사람에서, 품질을 판단하고 방향을 제시하는 사람으로의 전환입니다.
 
-![Vibe Coding과 Agentic Coding 두 패러다임 비교: 개발자와 AI의 역할, 적합한 단계](/assets/images/ai-coding-culture-transformation-guide-diagram.svg)
+![Vibe Coding과 Agentic Coding 두 패러다임 비교: 개발자와 AI의 역할, 적합한 단계]({{ '/assets/images/ai-coding-culture-transformation-guide-diagram.svg' | relative_url }})
 
 ---
 

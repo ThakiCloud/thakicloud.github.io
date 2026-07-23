@@ -6,7 +6,7 @@ seo_description: "مراجعة شاملة لـ Ring-flash-2.0، نموذج MoE �
 date: 2025-09-21
 lang: ar
 permalink: /ar/owm/ring-flash-2-0-breakthrough-thinking-moe-model/
-canonical_url: "https://thakicloud.github.io/ar/owm/ring-flash-2-0-breakthrough-thinking-moe-model/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/ring-flash-2-0-breakthrough-thinking-moe-model/"
 tags:
   - ring-flash-2.0
   - نماذج-moe

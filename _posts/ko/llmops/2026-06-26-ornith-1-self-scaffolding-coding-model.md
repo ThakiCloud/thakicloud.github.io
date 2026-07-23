@@ -19,13 +19,13 @@ toc: true
 toc_label: "목차"
 toc_icon: "robot"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/ornith-1-self-scaffolding-coding-model/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ornith-1-self-scaffolding-coding-model/"
 reading_time: true
 categories:
   - llmops
 ---
 
-![스스로 발판을 쌓아 올리는 자가-스캐폴딩 구조를 형상화한 추상 이미지](/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp)
+![스스로 발판을 쌓아 올리는 자가-스캐폴딩 구조를 형상화한 추상 이미지]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp' | relative_url }})
 *스스로 훈련 발판을 쌓아 올리는 자가-스캐폴딩 강화학습을 형상화한 이미지입니다.*
 
 오픈웨이트 코딩 모델의 경쟁은 이제 "벤치마크 점수가 몇 점이냐"를 넘어 "그 점수를 어떤 훈련 방법으로 끌어냈느냐"로 옮겨가고 있습니다. DeepReinforce가 2026년 6월 25일 공개한 `Ornith-1.0`은 그 방법론 자체가 헤드라인인 모델입니다. 모델이 풀이를 생성하는 동시에, 그 풀이를 유도하는 **훈련 스캐폴드(scaffold)를 스스로 작성**하도록 강화학습을 설계했습니다.
@@ -69,7 +69,7 @@ flowchart LR
     S1 -. "공진화" .- S2
 ```
 
-이 구조가 중요한 이유는 두 가지입니다. 첫째, 사람이 손으로 스캐폴드를 튜닝하는 병목이 사라집니다. 작업 분포가 바뀌어도 모델이 스스로 발판을 다시 짭니다. 둘째, 스캐폴드가 보상 신호에 직접 노출되므로, "정책은 멀쩡한데 발판이 나빠서 점수가 안 나오는" 흔한 실패 모드를 학습 루프 안에서 교정할 수 있습니다. 이는 [Loop Engineering 패턴](https://thakicloud.github.io/ko/llmops/)에서 외부 도구(컴파일러·테스트)를 보상 신호로 쓰는 발상과 같은 계열이되, 보상을 받는 대상에 **발판 자체**를 추가했다는 점에서 한 걸음 더 나아간 설계입니다.
+이 구조가 중요한 이유는 두 가지입니다. 첫째, 사람이 손으로 스캐폴드를 튜닝하는 병목이 사라집니다. 작업 분포가 바뀌어도 모델이 스스로 발판을 다시 짭니다. 둘째, 스캐폴드가 보상 신호에 직접 노출되므로, "정책은 멀쩡한데 발판이 나빠서 점수가 안 나오는" 흔한 실패 모드를 학습 루프 안에서 교정할 수 있습니다. 이는 [Loop Engineering 패턴](https://thakicloud.com/tech-blog/ko/llmops/)에서 외부 도구(컴파일러·테스트)를 보상 신호로 쓰는 발상과 같은 계열이되, 보상을 받는 대상에 **발판 자체**를 추가했다는 점에서 한 걸음 더 나아간 설계입니다.
 
 ## 공개 벤치마크
 
@@ -139,13 +139,13 @@ ai-platform 관점에서도 시사점은 분명합니다. self-scaffolding 방�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 1](/assets/images/ornith-1-self-scaffolding-coding-model-slide-01.webp)
+![ornith-1-self-scaffolding-coding-model 슬라이드 1]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-01.webp' | relative_url }})
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 2](/assets/images/ornith-1-self-scaffolding-coding-model-slide-02.webp)
+![ornith-1-self-scaffolding-coding-model 슬라이드 2]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-02.webp' | relative_url }})
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 3](/assets/images/ornith-1-self-scaffolding-coding-model-slide-03.webp)
+![ornith-1-self-scaffolding-coding-model 슬라이드 3]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-03.webp' | relative_url }})
 
-![ornith-1-self-scaffolding-coding-model 슬라이드 4](/assets/images/ornith-1-self-scaffolding-coding-model-slide-04.webp)
+![ornith-1-self-scaffolding-coding-model 슬라이드 4]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-04.webp' | relative_url }})
 
 ## 출처
 

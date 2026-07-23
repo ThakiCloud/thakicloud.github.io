@@ -20,7 +20,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/deepwiki-open-ai-powered-repository-wiki-generator-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/deepwiki-open-ai-powered-repository-wiki-generator-tutorial/"
 reading_time: true
 published: false
 categories:

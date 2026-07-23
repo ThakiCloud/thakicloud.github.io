@@ -22,7 +22,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/openpipe-art-agent-reinforcement-trainer-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/openpipe-art-agent-reinforcement-trainer-guide/"
 reading_time: true
 lang: ar
 published: false

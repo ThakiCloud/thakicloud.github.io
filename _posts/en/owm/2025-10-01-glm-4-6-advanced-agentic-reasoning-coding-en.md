@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/owm/glm-4-6-advanced-agentic-reasoning-coding/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/glm-4-6-advanced-agentic-reasoning-coding/"
 lang: en
 permalink: /en/owm/glm-4-6-advanced-agentic-reasoning-coding/
 published: false

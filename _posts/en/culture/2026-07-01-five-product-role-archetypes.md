@@ -14,14 +14,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: Contents
-canonical_url: "https://thakicloud.github.io/en/culture/five-product-role-archetypes/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/five-product-role-archetypes/"
 header:
   image: /assets/images/five-product-role-archetypes-hero.webp
 categories:
   - culture
 ---
 
-![Abstract visual depicting the blurring of role boundaries and the emergence of new archetypes](/assets/images/five-product-role-archetypes-hero.webp)
+![Abstract visual depicting the blurring of role boundaries and the emergence of new archetypes]({{ '/assets/images/five-product-role-archetypes-hero.webp' | relative_url }})
 
 ## Overview
 

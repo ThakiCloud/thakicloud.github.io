@@ -6,7 +6,7 @@ seo_description: "An analysis of claude-video (bradautomates): the /watch skill'
 date: 2026-07-13
 last_modified_at: 2026-07-13
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-video-agent-watch/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-video-agent-watch/"
 tags:
   - agentops
   - claude-code
@@ -32,7 +32,7 @@ Coding agents have read only text until now. Source files, logs, docs, API respo
 
 The audience for this post is clear. Developers and platform engineers who use coding agents like Claude Code, Cursor, Copilot, and Gemini CLI in real work and wonder how to get video material into their pipeline. And anyone curious about what this technique means for agent platform design beyond mere convenience. The short answer: claude-video is a fine example of how "a thin harness plus a combination of proven tools" attaches a new sense (sight) to an agent, and it lines up exactly with the direction ThakiCloud pursues in Paxis.
 
-![An abstract image depicting an agent gaining sight as video frames and audio waveforms flow into a single lens](/assets/images/claude-video-agent-watch-hero.png)
+![An abstract image depicting an agent gaining sight as video frames and audio waveforms flow into a single lens]({{ '/assets/images/claude-video-agent-watch-hero.png' | relative_url }})
 
 ## What This Tool Is
 

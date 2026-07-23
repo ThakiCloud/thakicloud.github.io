@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/spiced-self-play-human-driving/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/spiced-self-play-human-driving/"
 reading_time: true
 categories:
   - research
@@ -46,7 +46,7 @@ published: false
 
 البنية الكاملة موضّحة أدناه. محرّك self-play رخيص هو القوة الدافعة الرئيسية، ومرساة بشرية مدتها 30 دقيقة تسحب السياسة بلطف نحو البشر عبر خيط رفيع من تنظيم KL.
 
-![معمارية spiced self-play: محرّك self-play ومرساة بشرية يندمجان عبر تنظيم KL على المسار لتعلّم سياسة متوافقة مع البشر، تُقيَّم في ثلاث بيئات](/assets/images/spiced-self-play-human-driving-diagram.webp)
+![معمارية spiced self-play: محرّك self-play ومرساة بشرية يندمجان عبر تنظيم KL على المسار لتعلّم سياسة متوافقة مع البشر، تُقيَّم في ثلاث بيئات]({{ '/assets/images/spiced-self-play-human-driving-diagram.webp' | relative_url }})
 
 يستحق قرار تصميمي واحد التأكيد. فحدّ KL هذا يسحب السياسة نحو المرساة لا على توزيع البيانات المسجّلة دون اتصال (offline) بل على الحالات التي تزورها السياسة فعلًا، وهو تنظيم على المسار (on-policy). فإن نظّمت فقط على توزيع BC غير المتصل، لا تستطيع منع السياسة من الانحراف عن توزيع الحالة في الحلقة المغلقة الذي تراه عمليًا. أما KL على المسار فيستدعي المرساة عند نقطة انزياح التوزيع تلك بالضبط. يبدو الأمر طفيفًا لكنه يحكم استقرار الحلقة المغلقة.
 
@@ -66,7 +66,7 @@ published: false
 
 تُلخَّص النتائج الأساسية في المخطط أدناه. كل رقم مُبلَّغ عنه في الورقة؛ ولا شيء مُختلَق.
 
-![مقارنة معدل الاصطدام بخطأ ذاتي: spiced self-play (30 دقيقة بيانات بشرية) 0.65%، وSMART-tiny-CLSFT (Waymo الكامل، 52 يومًا) 1.6%، وself-play النقي 2.1%](/assets/images/spiced-self-play-human-driving-results.webp)
+![مقارنة معدل الاصطدام بخطأ ذاتي: spiced self-play (30 دقيقة بيانات بشرية) 0.65%، وSMART-tiny-CLSFT (Waymo الكامل، 52 يومًا) 1.6%، وself-play النقي 2.1%]({{ '/assets/images/spiced-self-play-human-driving-results.webp' | relative_url }})
 
 النقاط الأساسية كما يلي.
 

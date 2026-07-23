@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/hermes-agent-learn-skills/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/hermes-agent-learn-skills/"
 audiobook: https://drive.google.com/file/d/1ssbIC8_8trrvaUvSiRBwsUdjzZxX_Vmo/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:
@@ -24,7 +24,7 @@ categories:
 published: false
 ---
 
-![흩어진 문서 조각이 하나의 구조화된 결정체로 수렴하는 모습으로 표현한 스킬 저작 과정](/assets/images/hermes-agent-learn-skills-hero.webp)
+![흩어진 문서 조각이 하나의 구조화된 결정체로 수렴하는 모습으로 표현한 스킬 저작 과정]({{ '/assets/images/hermes-agent-learn-skills-hero.webp' | relative_url }})
 *여러 방향에서 흩어진 지식 조각이 하나의 구조화된 산출물로 결정화되는 모습으로 표현한 /learn의 개념.*
 
 ## 개요
@@ -39,7 +39,7 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼에서 멀티테넌트 
 
 `/learn`은 별도의 인제스천 엔진이 아닙니다. 핵심은 "표준을 안내하는 프롬프트를 만들어 에이전트에게 평범한 한 턴으로 넘긴다"는 점입니다. 그래서 소스를 수집하는 일도 에이전트가 이미 가진 도구로 처리합니다. 로컬 디렉터리는 `read_file`과 `search_files`로 읽고, 온라인 문서는 `web_extract`로 가져오며, 방금 대화에서 함께 진행한 워크플로는 대화 컨텍스트 그대로 캡처합니다.
 
-![/learn이 소스를 수집해 표준 SKILL.md를 저작하고 게이트를 거쳐 슬래시 명령이 되기까지의 흐름](/assets/images/hermes-agent-learn-skills-diagram.webp)
+![/learn이 소스를 수집해 표준 SKILL.md를 저작하고 게이트를 거쳐 슬래시 명령이 되기까지의 흐름]({{ '/assets/images/hermes-agent-learn-skills-diagram.webp' | relative_url }})
 *소스 설명에서 시작해 에이전트 도구로 수집하고, 표준 SKILL.md를 저작한 뒤 write_approval 게이트와 curator를 거치는 /learn의 전체 경로.*
 
 받아들이는 소스는 네 종류입니다. 공식 문서에 실린 예시를 그대로 옮기면 다음과 같습니다.
@@ -207,13 +207,13 @@ progressive disclosure의 약 3,000토큰 인덱스도 서빙 비용 관점에�
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![hermes-agent-learn-skills 슬라이드 1](/assets/images/hermes-agent-learn-skills-slide-01.webp)
+![hermes-agent-learn-skills 슬라이드 1]({{ '/assets/images/hermes-agent-learn-skills-slide-01.webp' | relative_url }})
 
-![hermes-agent-learn-skills 슬라이드 2](/assets/images/hermes-agent-learn-skills-slide-02.webp)
+![hermes-agent-learn-skills 슬라이드 2]({{ '/assets/images/hermes-agent-learn-skills-slide-02.webp' | relative_url }})
 
-![hermes-agent-learn-skills 슬라이드 3](/assets/images/hermes-agent-learn-skills-slide-03.webp)
+![hermes-agent-learn-skills 슬라이드 3]({{ '/assets/images/hermes-agent-learn-skills-slide-03.webp' | relative_url }})
 
-![hermes-agent-learn-skills 슬라이드 4](/assets/images/hermes-agent-learn-skills-slide-04.webp)
+![hermes-agent-learn-skills 슬라이드 4]({{ '/assets/images/hermes-agent-learn-skills-slide-04.webp' | relative_url }})
 
 ## 출처 (Sources)
 

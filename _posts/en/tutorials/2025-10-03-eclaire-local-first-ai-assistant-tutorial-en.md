@@ -18,7 +18,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/eclaire-local-first-ai-assistant-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/eclaire-local-first-ai-assistant-tutorial-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/eclaire-local-first-ai-assistant-tutorial-en/"
 published: false
 categories:
   - tutorials

@@ -20,14 +20,14 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/en/agentops/cursor-agent-swarm-sqlite-rust/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/cursor-agent-swarm-sqlite-rust/"
 ---
 
 Over the weekend Cursor published a striking demo. It handed a swarm of agents the task of rebuilding SQLite from scratch. No source code, no existing test suite, no internet. The only input was SQLite's 835-page official manual. The swarm read that document and wrote a SQLite replica in Rust, and that replica passed a separately held-out test suite (sqllogictest) at 100%.
 
 The numbers grab attention, but the point of this post is not the spectacle of the demo. LinkedIn and X timelines carried a single sentence: "AI rewrote SQLite." We did not just repeat it. We checked Cursor's official blog and the original announcement directly. The real story is not "it worked" versus "it failed," but that **the same result cost up to 15x more depending on how the models were composed**. For anyone actually operating multi-agent systems, what that 15x means is the heart of this article.
 
-![Abstract image of an agent swarm of autonomous nodes converging into a single branching tree structure](/assets/images/cursor-agent-swarm-sqlite-rust-hero.png)
+![Abstract image of an agent swarm of autonomous nodes converging into a single branching tree structure]({{ '/assets/images/cursor-agent-swarm-sqlite-rust-hero.png' | relative_url }})
 
 ## What happened
 

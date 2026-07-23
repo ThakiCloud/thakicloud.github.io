@@ -17,9 +17,10 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/ar/research/google-pat-automated-scientific-review/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/google-pat-automated-scientific-review/"
 categories:
   - research
+published: false
 ---
 
 ## نظرة عامة
@@ -28,7 +29,7 @@ categories:
 
 ما يجعل هذا البحث مثيرا للاهتمام هو أنه يتجاوز مجرد "تلخيص الورقة بواسطة نموذج لغوي كبير". فقد صُممت PAT وهي تدرك حدود الطلب الواحد أو أخذ العينات البسيط، واختارت التوجه نحو توسيع الاستدلال نفسه. تُشغّل ThakiCloud منصة SaaS للذكاء الاصطناعي وتعلم الآلة قائمة على كوبرنيتس، ولديها بالفعل خط أنابيب داخلي لأتمتة مراجعة الأبحاث. لذلك فإن هذا البحث ليس شأنا خارجيا بالنسبة لنا، بل مرجع مباشر لتصميم حلقات التحقق التي نتعامل معها يوميا. يستعرض هذا المقال ماهية PAT وكيفية عملها، وما الذي اكتشفته فعليا في النشر الحقيقي، وما الذي يعنيه هذا التصميم لمنتجات ThakiCloud.
 
-![صورة توضيحية لعميل مراجعة الأبحاث العلمية آليا](/assets/images/google-pat-automated-scientific-review-hero.webp)
+![صورة توضيحية لعميل مراجعة الأبحاث العلمية آليا]({{ '/assets/images/google-pat-automated-scientific-review-hero.webp' | relative_url }})
 
 ## ما هو هذا البحث
 

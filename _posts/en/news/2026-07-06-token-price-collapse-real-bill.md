@@ -16,11 +16,11 @@ tags:
   - thakicloud
 categories:
   - news
-canonical_url: "https://thakicloud.github.io/en/news/token-price-collapse-real-bill/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/token-price-collapse-real-bill/"
 published: false
 ---
 
-![Illustration of the core concept](/assets/images/token-price-collapse-real-bill-hero.png)
+![Illustration of the core concept]({{ '/assets/images/token-price-collapse-real-bill-hero.png' | relative_url }})
 
 $0.11 per million cached input tokens. That is the price z.ai set for its GLM-4.5 model on frequently repeated inputs, with standard input priced at $0.6 per million tokens and output at $2.2. Compare that to frontier US models, whose input pricing still sits in the several-dollar range, and the gap is stark. Chinese models such as MiniMax, DeepSeek, Qwen, and Kimi have joined the same trend, pricing input in the ultra-low $0.1 range. Some tallies now show that Chinese models' share of global token consumption, which stood at under 10 percent in early 2025, had climbed to around 50 percent by mid-2026. Looking at the numbers alone, the conclusion seems simple: models have become commodities, and prices are racing toward zero.
 
@@ -35,7 +35,7 @@ The confidential computing news cracks that picture. NVIDIA's approach works by 
 Put the two pieces of news side by side and they collapse into a single sentence. The price of calling a model is falling, but the price of trusting and using that model safely stays the same, or even rises. Value has not evaporated. It has simply moved.
 
 
-![Diagram of the shift in value](/assets/images/token-price-collapse-real-bill-diagram.svg)
+![Diagram of the shift in value]({{ '/assets/images/token-price-collapse-real-bill-diagram.svg' | relative_url }})
 
 *Token prices converge toward zero, but value migrates to three bills in the execution layer: cost control, safe execution, and auditability.*
 

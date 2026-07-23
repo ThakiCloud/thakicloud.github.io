@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide/"
 reading_time: true
 categories:
   - datasets
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 18분
 
-![ByteDance Dolphin Analyze-then-Parse 파이프라인 개요](/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png)
+![ByteDance Dolphin Analyze-then-Parse 파이프라인 개요]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png' | relative_url }})
 
 ## 서론
 

@@ -17,7 +17,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/xpander-ai-complete-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/xpander-ai-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/xpander-ai-complete-guide/"
 published: false
 categories:
   - tutorials

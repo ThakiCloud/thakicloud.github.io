@@ -16,7 +16,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/
-canonical_url: "https://thakicloud.github.io/en/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/openai-healthbench-medical-ai-evaluation-benchmark-ko/"
 categories:
   - research
   - llmops
@@ -30,7 +30,7 @@ published: false
 The convergence of artificial intelligence and medicine is one of the most promising yet demanding areas in modern technology. As large language models (LLMs) find growing application in healthcare, the need for robust evaluation frameworks has never been more urgent. OpenAI HealthBench has emerged as a landmark solution that establishes a new standard for medical AI evaluation through an innovative LLMOps methodology.
 
 
-![Concept diagram](/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg)
+![Concept diagram]({{ '/assets/images/openai-healthbench-medical-ai-evaluation-benchmark-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

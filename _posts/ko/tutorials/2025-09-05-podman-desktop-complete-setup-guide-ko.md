@@ -6,7 +6,7 @@ seo_description: "macOS, Windows, Linux에서 Podman Desktop 설치 및 구성 �
 date: 2025-09-05
 lang: ko
 permalink: /ko/tutorials/podman-desktop-complete-setup-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/podman-desktop-complete-setup-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/podman-desktop-complete-setup-guide/"
 tags:
   - podman
   - docker

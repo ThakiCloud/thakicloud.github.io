@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/nginx-ignition-web-ui-management-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/nginx-ignition-web-ui-management-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/nginx-ignition-web-ui-management-tutorial/"
 published: false
 categories:
   - tutorials

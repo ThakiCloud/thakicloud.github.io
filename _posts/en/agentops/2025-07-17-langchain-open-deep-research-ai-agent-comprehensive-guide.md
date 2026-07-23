@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
 lang: en
 reading_time: true
 categories:
@@ -37,7 +37,7 @@ published: false
 
 This guide covers the full architecture from core concepts to production deployment, including the quality-focused agent design, multi-agent orchestration patterns, advanced RAG, and domain-specific adaptations for financial and medical research.
 
-![Concept diagram](/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg)
+![Concept diagram]({{ '/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg' | relative_url }})
 
 *Concept diagram*
 

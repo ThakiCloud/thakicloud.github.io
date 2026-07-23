@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 published: true
-canonical_url: "https://thakicloud.github.io/ko/technique/dual-pool-token-budget-routing-vllm-kueue/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/technique/dual-pool-token-budget-routing-vllm-kueue/"
 categories:
   - llmops
 ---

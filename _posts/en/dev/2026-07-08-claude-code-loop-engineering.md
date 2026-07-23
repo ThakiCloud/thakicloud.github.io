@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/claude-code-loop-engineering/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/claude-code-loop-engineering/"
 reading_time: true
 categories:
   - dev
@@ -27,7 +27,7 @@ categories:
 
 This post is for developers and platform engineers who want to run a coding agent not as a one-shot tool but as a long-running automation system. It addresses practical questions like "what do I have to define so the agent repeats on its own instead of me typing every prompt?" and "how do I prevent infinite loops and runaway cost?" We read Anthropic's official loops document and overlay it with our own operational experience wiring these patterns into real unattended pipelines.
 
-![A ring of interlocking segments forming an endless feedback loop with glowing arrows and a verification gate at its center](/assets/images/claude-code-loop-engineering-hero.png)
+![A ring of interlocking segments forming an endless feedback loop with glowing arrows and a verification gate at its center]({{ '/assets/images/claude-code-loop-engineering-hero.png' | relative_url }})
 
 ## Overview
 

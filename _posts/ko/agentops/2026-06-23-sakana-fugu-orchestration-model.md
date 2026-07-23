@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "sitemap"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/sakana-fugu-orchestration-model/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/sakana-fugu-orchestration-model/"
 reading_time: true
 categories:
   - agentops
@@ -37,7 +37,7 @@ published: false
 
 Sakana Fugu는 단일 모델처럼 동작하는 멀티에이전트 시스템입니다. 사용자가 하나의 엔드포인트로 요청을 보내면 Fugu가 처리 방식을 스스로 결정합니다. 혼자 풀어도 충분한 요청은 직접 처리하고, 더 복잡한 작업은 전문 모델들로 구성된 팀을 꾸려 조율합니다. 모델 선택, 위임, 검증, 합성이 모두 내부에서 일어나기 때문에, 멀티에이전트 시스템의 복잡성이 사용자 코드까지 노출되지 않습니다.
 
-![Sakana Fugu 오케스트레이션 아키텍처: 단일 API 뒤에서 Fugu가 에이전트 풀을 동적으로 조율한다](/assets/images/sakana-fugu-orchestration-model-diagram.webp)
+![Sakana Fugu 오케스트레이션 아키텍처: 단일 API 뒤에서 Fugu가 에이전트 풀을 동적으로 조율한다]({{ '/assets/images/sakana-fugu-orchestration-model-diagram.webp' | relative_url }})
 
 이 구조가 가능한 이유는 Fugu가 단순한 라우팅 규칙이 아니라 **오케스트레이션 자체를 학습한 언어 모델**이기 때문입니다. Fugu는 언제 위임해야 하는지, 에이전트들이 어떻게 소통해야 하는지, 그리고 그 결과를 어떻게 하나의 신뢰할 수 있는 답으로 합성하는지를 이해하도록 특화되어 있습니다. 이 접근은 Sakana AI가 ICLR 2026에 발표한 두 편의 연구, 즉 진화적 LLM 코디네이터를 다룬 TRINITY(arXiv:2512.04695)와 자연어로 에이전트를 조율하는 법을 학습한 Conductor(arXiv:2512.04388)에 기반을 두고 있습니다.
 

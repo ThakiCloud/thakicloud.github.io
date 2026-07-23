@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/binary-quantization-rag-32x-memory-optimization/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/binary-quantization-rag-32x-memory-optimization/"
 reading_time: true
 categories:
   - agentops
@@ -38,7 +38,7 @@ published: false
 
 تغطي هذه المقالة كل ما يلزم لتحسين نظام RAG باستخدام Binary Quantization، من المبادئ الأساسية وحتى التنفيذ الفعلي.
 
-![مخطط مفاهيمي](/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/binary-quantization-rag-32x-memory-optimization-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

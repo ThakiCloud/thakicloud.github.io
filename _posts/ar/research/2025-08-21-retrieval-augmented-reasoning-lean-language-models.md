@@ -21,7 +21,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/research/retrieval-augmented-reasoning-lean-language-models/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/retrieval-augmented-reasoning-lean-language-models/"
 reading_time: true
 published: false
 categories:

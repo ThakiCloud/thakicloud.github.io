@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 lang: en
 reading_time: true
 categories:
@@ -36,7 +36,7 @@ As speech AI technology advances rapidly, high-quality speech datasets that supp
 
 Granary is a large-scale multilingual dataset providing a total of 640,000 hours of audio across 25 European languages. It supports not only automatic speech recognition (ASR) but also automatic speech translation (AST), giving researchers and developers a rich foundation for building next-generation multilingual speech AI models.
 
-![Conceptual image of speech data in 25 European languages converging into a single multilingual speech-AI foundation](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp)
+![Conceptual image of speech data in 25 European languages converging into a single multilingual speech-AI foundation]({{ '/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp' | relative_url }})
 
 ## Overview of the NVIDIA Granary Dataset
 
@@ -80,7 +80,7 @@ Each corpus went through a rigorous quality control process. For speech recognit
 
 For speech translation data, high-quality translations were produced using the EuroLLM-9B model and verified through cross-lingual validation. Further quality control measures including hallucination detection and character-rate filtering were also applied.
 
-![NVIDIA Granary data pipeline: from four corpora through quality control to Granary and NeMo](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg)
+![NVIDIA Granary data pipeline: from four corpora through quality control to Granary and NeMo]({{ '/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg' | relative_url }})
 
 ## Data Structure and Access
 

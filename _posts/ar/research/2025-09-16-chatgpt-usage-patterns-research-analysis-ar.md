@@ -6,7 +6,7 @@ seo_description: "غوص عميق في بحث OpenAI الذي يحلل 7 ملي�
 date: 2025-09-16
 lang: ar
 permalink: /ar/research/chatgpt-usage-patterns-research-analysis/
-canonical_url: "https://thakicloud.github.io/ar/research/chatgpt-usage-patterns-research-analysis-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/chatgpt-usage-patterns-research-analysis-ar/"
 tags:
   - ChatGPT
   - تحليل-سلوك-المستخدمين
@@ -34,7 +34,7 @@ published: false
 تمثل منهجية الدراسة تقدماً كبيراً في أخلاقيات بحوث الذكاء الاصطناعي، موضحة كيف يمكن إجراء تحليل سلوك المستخدمين واسع النطاق مع الحفاظ على حماية صارمة للخصوصية. من خلال تنفيذ أنظمة تصنيف آلية تمنع التعرض البشري لمحتوى الرسائل الفعلي، يضع البحث معايير جديدة للبحث المسؤول في الذكاء الاصطناعي والذي يمكن أن يؤثر على الدراسات المستقبلية في هذا المجال سريع التطور.
 
 
-![مخطط مفاهيمي](/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/chatgpt-usage-patterns-research-analysis-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

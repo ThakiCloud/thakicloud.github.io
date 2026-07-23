@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/ai-workload-scheduler-comparison-volcano-koordinator-kai/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/ai-workload-scheduler-comparison-volcano-koordinator-kai/"
 reading_time: true
 published: false
 categories:

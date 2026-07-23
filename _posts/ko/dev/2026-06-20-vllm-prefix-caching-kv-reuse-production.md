@@ -11,7 +11,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/dev/vllm-prefix-caching-kv-reuse-production/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/vllm-prefix-caching-kv-reuse-production/"
 reading_time: true
 categories:
   - dev
@@ -126,11 +126,11 @@ vLLM Prefix Caching은 플래그 하나로 켜지는 무료 최적화입니다. 
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 1](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.webp)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 1]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.webp' | relative_url }})
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 2](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.webp)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 2]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.webp' | relative_url }})
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 3](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.webp)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 3]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.webp' | relative_url }})
 
-![vllm-prefix-caching-kv-reuse-production 슬라이드 4](/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.webp)
+![vllm-prefix-caching-kv-reuse-production 슬라이드 4]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.webp' | relative_url }})
 

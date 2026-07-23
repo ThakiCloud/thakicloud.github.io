@@ -11,7 +11,7 @@ tags:
 author_profile: true
 lang: ar
 permalink: /ar/careers/thaki-cloud-life-and-careers-guide/
-canonical_url: "https://thakicloud.github.io/ar/careers/thaki-cloud-life-and-careers-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/thaki-cloud-life-and-careers-guide/"
 categories:
   - careers
 ---

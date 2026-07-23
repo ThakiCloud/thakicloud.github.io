@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/dyad-local-ai-app-builder-comprehensive-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/dyad-local-ai-app-builder-comprehensive-tutorial/"
 reading_time: true
 published: false
 categories:
@@ -580,6 +580,6 @@ dyad는 개인정보 보호와 데이터 주권을 중시하는 개발자들에�
 **다음 글에서는**: dyad를 사용한 실제 프로젝트 개발 사례와 고급 커스터마이징 방법을 다룰 예정입니다.
 
 **관련 글**:
-- [AI 기반 개발 도구 비교 가이드](https://thakicloud.github.io/dev/ai-development-tools-comparison/)
-- [로컬 AI 개발 환경 구축하기](https://thakicloud.github.io/tutorials/local-ai-development-setup/)
-- [Electron 앱 개발 완전 가이드](https://thakicloud.github.io/tutorials/electron-app-development-guide/) 
+- [AI 기반 개발 도구 비교 가이드](https://thakicloud.com/tech-blog/dev/ai-development-tools-comparison/)
+- [로컬 AI 개발 환경 구축하기](https://thakicloud.com/tech-blog/tutorials/local-ai-development-setup/)
+- [Electron 앱 개발 완전 가이드](https://thakicloud.com/tech-blog/tutorials/electron-app-development-guide/) 

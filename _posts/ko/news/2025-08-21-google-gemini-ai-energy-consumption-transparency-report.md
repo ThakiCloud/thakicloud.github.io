@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "leaf"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/news/google-gemini-ai-energy-consumption-transparency-report/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/google-gemini-ai-energy-consumption-transparency-report/"
 reading_time: true
 published: false
 categories:

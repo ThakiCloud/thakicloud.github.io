@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/lightrag-complete-tutorial-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/lightrag-complete-tutorial-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/lightrag-complete-tutorial-guide/"
 published: false
 categories:
   - tutorials

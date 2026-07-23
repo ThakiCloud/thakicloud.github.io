@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/nvfp4-blackwell-llm-serving-quantization/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvfp4-blackwell-llm-serving-quantization/"
 reading_time: true
 categories:
   - llmops
@@ -48,7 +48,7 @@ Llama-3.1-70B를 기준으로 BF16은 약 140GB, FP8은 약 70GB, NVFP4는 약 3
 
 다만 NVFP4는 Blackwell 전용입니다. H100/A100 환경에서는 FP8이 여전히 최선입니다.
 
-![정밀도별 Llama-3.1-70B 메모리 풋프린트와 Kueue 노드풀별 양자화 분기 다이어그램](/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg)
+![정밀도별 Llama-3.1-70B 메모리 풋프린트와 Kueue 노드풀별 양자화 분기 다이어그램]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-diagram.svg' | relative_url }})
 
 ## 프레임워크 지원 현황 (2026년 6월 기준)
 
@@ -135,11 +135,11 @@ Blackwell 하드웨어에 대한 접근이 생기기 시작했다면 NVFP4 전�
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 1](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.png)
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 1]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.png' | relative_url }})
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 2](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.png)
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 2]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.png' | relative_url }})
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 3](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.png)
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 3]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.png' | relative_url }})
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 4](/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.png)
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 4]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.png' | relative_url }})
 

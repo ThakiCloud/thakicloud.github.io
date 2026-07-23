@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/cali-ai-agent-react-native-development-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/cali-ai-agent-react-native-development-complete-guide/"
 reading_time: true
 published: false
 categories:
@@ -560,6 +560,6 @@ Callstack의 지속적인 개발과 활발한 오픈소스 커뮤니티를 바�
 ---
 
 **관련 글:**
-- [React Native CLI 완전 가이드](https://thakicloud.github.io/tutorials/react-native-cli-guide/)
-- [AI 기반 개발 도구 비교 분석](https://thakicloud.github.io/dev/ai-development-tools-comparison/)
-- [MCP 서버 구축 가이드](https://thakicloud.github.io/tutorials/mcp-server-guide/)
+- [React Native CLI 완전 가이드](https://thakicloud.com/tech-blog/tutorials/react-native-cli-guide/)
+- [AI 기반 개발 도구 비교 분석](https://thakicloud.com/tech-blog/dev/ai-development-tools-comparison/)
+- [MCP 서버 구축 가이드](https://thakicloud.com/tech-blog/tutorials/mcp-server-guide/)

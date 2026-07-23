@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/llmops/kubernetes-default-scheduler-limitations-ai-workload-cases/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/kubernetes-default-scheduler-limitations-ai-workload-cases/"
 reading_time: true
 published: false
 categories:

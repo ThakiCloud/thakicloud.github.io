@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/owm/tiny-reasoning-language-model-trl-135m-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/tiny-reasoning-language-model-trl-135m-guide/"
 lang: ko
 permalink: /ko/owm/tiny-reasoning-language-model-trl-135m-guide/
 published: false

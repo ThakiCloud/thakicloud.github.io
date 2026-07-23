@@ -17,14 +17,14 @@ toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/saas/sovereign-ai-airgap-public-sector/"
+canonical_url: "https://thakicloud.com/tech-blog/en/saas/sovereign-ai-airgap-public-sector/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![Sovereign AI Reference Architecture for Air-Gapped Public Sector](/assets/images/sovereign-ai-airgap-public-sector-hero.webp)
+![Sovereign AI Reference Architecture for Air-Gapped Public Sector]({{ '/assets/images/sovereign-ai-airgap-public-sector-hero.webp' | relative_url }})
 
 ## Overview: Why Sovereign AI Matters for the Public Sector Now
 

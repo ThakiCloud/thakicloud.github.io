@@ -17,7 +17,7 @@ toc_label: Anatomy of Tensor-Level Scheduling
 published: true
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/en/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
 ---
 
 This post is for engineers weighing whether to self-serve a large model on a single consumer GPU, and for infra owners deciding how much to trust the "run 120B on 24GB" tweets going around. Up front: the core idea of ATSInfer (arXiv:2607.10183), released by researchers at Nanjing University, is simple and persuasive. Where prior offloading moved things in chunks at the granularity of a "layer" or an "expert," ATSInfer slices down to **individual tensors**. That said, the headline "up to 3.29x" rests on a few premises, and the code is not yet public. We did not reproduce an RTX 4090 running a 120B-class model here, so every number in this post is a **value reported by the paper**, stated as such.
@@ -56,7 +56,7 @@ Again: the numbers below are **values reported by the paper**, not something we 
 
 The paper's headline: versus existing hybrid systems (including llama.cpp's layer-level offloading), prefill (throughput to first token) improves by up to 1.94x, and decode (tokens generated per second) by up to 3.29x.
 
-![Max speedup ATSInfer reports in the paper](/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png)
+![Max speedup ATSInfer reports in the paper]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png' | relative_url }})
 
 The setup is an RTX 4090 (24GB) and RTX 3060 system with 64GB RAM, and the validated models are:
 

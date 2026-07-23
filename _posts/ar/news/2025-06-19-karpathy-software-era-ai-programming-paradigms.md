@@ -14,7 +14,7 @@ toc: true
 toc_label: "المحتويات الرئيسية"
 lang: ar
 permalink: /ar/news/karpathy-software-era-ai-programming-paradigms/
-canonical_url: "https://thakicloud.github.io/ar/news/karpathy-software-era-ai-programming-paradigms/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/karpathy-software-era-ai-programming-paradigms/"
 published: false
 categories:
   - news

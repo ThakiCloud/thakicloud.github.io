@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 published: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
 categories:
   - llmops
 ---
@@ -97,13 +97,13 @@ docker run --gpus all -p 8000:8000 \
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 1](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-01.webp)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 1]({{ '/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-01.webp' | relative_url }})
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 2](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-02.webp)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 2]({{ '/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-02.webp' | relative_url }})
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 3](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-03.webp)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 3]({{ '/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-03.webp' | relative_url }})
 
-![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 4](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-04.webp)
+![qwen3-6-27b-nvfp4-vllm-blackwell 슬라이드 4]({{ '/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-slide-04.webp' | relative_url }})
 
 ## 출처
 

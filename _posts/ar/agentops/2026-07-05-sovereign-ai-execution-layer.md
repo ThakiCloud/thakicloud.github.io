@@ -7,7 +7,7 @@ date: 2026-07-05
 last_modified_at: 2026-07-05
 author_profile: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/agentops/sovereign-ai-execution-layer/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/sovereign-ai-execution-layer/"
 toc: true
 toc_label: "المحتويات"
 toc_icon: "robot"
@@ -21,7 +21,7 @@ categories:
 published: false
 ---
 
-![رسم توضيحي للمفهوم](/assets/images/sovereign-ai-execution-layer-hero.png)
+![رسم توضيحي للمفهوم]({{ '/assets/images/sovereign-ai-execution-layer-hero.png' | relative_url }})
 
 جملة واحدة من مقابلة صحفية جعلتنا نعيد قراءة موجز أخبار هذا الصباح بأكمله. أشار الأستاذ المساعد تشوي يون سونغ، الذي يُدرّس في جامعة كوريا وجامعة كيونغي، إلى نموذج "ميثوس" الجديد من أنثروبيك كمثال، محذراً من أنه بمجرد أن يصبح الذكاء الاصطناعي أصلاً استراتيجياً، فإن وصول حتى الحليف إلى نموذج ما يمكن أن يُقطع في أي لحظة. ولخّص الأمر بهذه العبارة: "ما يمكن التحكم فيه ليس نموذج شخص آخر، بل البنية التحتية التي تتيح لك التحقق من سلسلة التوريد وحجبها مهما كان النموذج المستخدم."
 
@@ -36,7 +36,7 @@ published: false
 خلاصة الأمر أن النموذج هو اللافتة البرّاقة، لكن السيادة تُحسم فعلياً في المكان الذي يعيش فيه ذلك النموذج ويعمل، أي طبقة التنفيذ. وخيارات عدة شركات في أخبار اليوم تشير جميعها، وكأنها اتفقت على ذلك، إلى هذه النقطة بالذات.
 
 
-![مخطط مفاهيمي](/assets/images/sovereign-ai-execution-layer-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/sovereign-ai-execution-layer-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

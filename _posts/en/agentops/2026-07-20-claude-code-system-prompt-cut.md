@@ -17,13 +17,13 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-system-prompt-cut/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-system-prompt-cut/"
 categories:
   - agentops
 lang: en
 ---
 
-![A thick system prompt thinning into a slim harness](/assets/images/claude-code-system-prompt-cut-hero.png)
+![A thick system prompt thinning into a slim harness]({{ '/assets/images/claude-code-system-prompt-cut-hero.png' | relative_url }})
 
 ## Overview
 

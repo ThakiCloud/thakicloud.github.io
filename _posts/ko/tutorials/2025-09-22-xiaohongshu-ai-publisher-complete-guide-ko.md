@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/xiaohongshu-ai-publisher-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/xiaohongshu-ai-publisher-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/xiaohongshu-ai-publisher-complete-guide/"
 published: false
 categories:
   - tutorials

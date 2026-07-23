@@ -6,7 +6,7 @@ seo_description: "Learn how to set up and use Eigent, the world's first multi-ag
 date: 2025-09-19
 lang: en
 permalink: /en/tutorials/eigent-multiagent-workforce-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/eigent-multiagent-workforce-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/eigent-multiagent-workforce-tutorial/"
 tags:
   - Eigent
   - Multi-agent
@@ -780,4 +780,4 @@ The future of work is here with Eigent - embrace the power of intelligent automa
 
 ---
 
-*For more tutorials and advanced guides, visit our [documentation](https://thakicloud.github.io) or join our community discussions.*
+*For more tutorials and advanced guides, visit our [documentation](https://thakicloud.com/tech-blog) or join our community discussions.*

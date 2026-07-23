@@ -21,7 +21,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/langwatch-comprehensive-llmops-platform-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/langwatch-comprehensive-llmops-platform-guide/"
 lang: ar
 dir: rtl
 reading_time: true

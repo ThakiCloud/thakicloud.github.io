@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/mcp-containers-comprehensive-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/mcp-containers-comprehensive-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/mcp-containers-comprehensive-tutorial/"
 published: false
 categories:
   - tutorials

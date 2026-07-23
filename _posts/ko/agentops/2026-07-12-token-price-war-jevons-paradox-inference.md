@@ -16,10 +16,10 @@ tags:
   - thakicloud
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/token-price-war-jevons-paradox-inference/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jevons-paradox-inference/"
 ---
 
-![값싼 토큰이 홍수처럼 쏟아질수록 그 아래 추론 인프라의 몸값은 위로 치솟는 구조를 나타낸 개념도](/assets/images/token-price-war-jevons-paradox-inference-hero.webp)
+![값싼 토큰이 홍수처럼 쏟아질수록 그 아래 추론 인프라의 몸값은 위로 치솟는 구조를 나타낸 개념도]({{ '/assets/images/token-price-war-jevons-paradox-inference-hero.webp' | relative_url }})
 
 ## 같은 주에 도착한 두 개의 정반대 뉴스
 

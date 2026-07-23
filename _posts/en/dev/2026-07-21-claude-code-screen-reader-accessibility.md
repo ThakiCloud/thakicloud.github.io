@@ -16,10 +16,10 @@ toc_label: Accessibility mode
 published: true
 categories:
   - dev
-canonical_url: "https://thakicloud.github.io/en/dev/claude-code-screen-reader-accessibility/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/claude-code-screen-reader-accessibility/"
 ---
 
-![Abstract visualization of a terminal reorganized into a clean linear stream of text](/assets/images/claude-code-screen-reader-accessibility-hero.png)
+![Abstract visualization of a terminal reorganized into a clean linear stream of text]({{ '/assets/images/claude-code-screen-reader-accessibility-hero.png' | relative_url }})
 
 ## Overview
 

@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/langgpt-structured-prompt-framework-tutorial-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/langgpt-structured-prompt-framework-tutorial-ko/"
 lang: ko
 permalink: /ko/tutorials/langgpt-structured-prompt-framework-tutorial/
 categories:

@@ -17,13 +17,13 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "sitemap"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/claude-code-project-anatomy-complete-map/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/technique/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
 published: false
 ---
 
-![بنية تجريدية لخطوط ضوئية متعددة تتقارب نحو عقدة مركزية ثم تتفرع من جديد بشكل هرمي](/assets/images/claude-code-project-anatomy-complete-map-hero.webp)
+![بنية تجريدية لخطوط ضوئية متعددة تتقارب نحو عقدة مركزية ثم تتفرع من جديد بشكل هرمي]({{ '/assets/images/claude-code-project-anatomy-complete-map-hero.webp' | relative_url }})
 *صورة تجريدية لبنية مشروع Claude Code التي تتشعب من دماغ مشروع واحد إلى قواعد ومهارات ووكلاء وذاكرة.*
 
 ## نظرة عامة
@@ -113,7 +113,7 @@ flowchart TB
 | .mcp.json | موجود (166 بايت) | عند اتصال الخادم |
 | .claude/settings.json | موجود (5KB) | مع كل جلسة |
 
-![رسم بياني شريطي يجمع مكوّنات .claude في مستودع ThakiCloud مُرتَّبةً حسب توقيت التحميل](/assets/images/claude-code-project-anatomy-complete-map-results.webp)
+![رسم بياني شريطي يجمع مكوّنات .claude في مستودع ThakiCloud مُرتَّبةً حسب توقيت التحميل]({{ '/assets/images/claude-code-project-anatomy-complete-map-results.webp' | relative_url }})
 *40 قاعدة و94 سطراً من CLAUDE.md هي تكلفة دائمة تدخل السياق مع كل دورة، بينما 1655 مهارة و54 وكيلاً أصول يدخلون السياق عند الطلب فحسب.*
 
 هذه الأرقام تُثبت جوهر الخريطة بنفسها. لو أُدرجت الـ 1655 مهارة كلها في `CLAUDE.md` أو في القواعد، لتجاوزت كل جلسة حدّ السياق فوراً. في الواقع، تُحمَّل هذه المهارات الـ 1655 عند الطلب فحسب، ويُضيّق موجّه مستقل المرشحين في كل دورة. في المقابل، تُضبط تكلفة الحضور الدائم إرادياً عند 40 قاعدة، وهو نتاج ضبط نظافة يستهدف أقل من 2KB لكل ملف قاعدة مع تخفيض أي ملف يتجاوز ذلك إلى مهارة.

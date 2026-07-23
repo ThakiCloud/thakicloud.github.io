@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/agno-reasoning-tools-comprehensive-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/agno-reasoning-tools-comprehensive-analysis/"
 published: false
 categories:
   - agentops

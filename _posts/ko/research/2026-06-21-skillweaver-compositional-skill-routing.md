@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/skillweaver-compositional-skill-routing/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/skillweaver-compositional-skill-routing/"
 reading_time: true
 categories:
   - research
@@ -42,7 +42,7 @@ LLM 에이전트가 외부 스킬(재사용 가능한 도구 명세)에 의존�
 
 SkillWeaver 프레임워크는 이 세 단계를 각각 LLM 태스크 분해기, FAISS 인덱싱 기반 바이인코더(bi-encoder) 스킬 검색기, 의존성 인식 DAG 플래너로 구현합니다. 평가를 위해 저자들은 공개 MCP 생태계에서 수집한 실제 MCP 서버 스킬 위에서 복합 쿼리로 구성된 벤치마크를 함께 제안합니다.
 
-![SkillWeaver 컴포지셔널 스킬 라우팅 파이프라인](/assets/images/skillweaver-compositional-skill-routing-diagram.svg)
+![SkillWeaver 컴포지셔널 스킬 라우팅 파이프라인]({{ '/assets/images/skillweaver-compositional-skill-routing-diagram.svg' | relative_url }})
 
 ## 핵심 발견: 병목은 검색기가 아니라 "분해"다
 
@@ -80,11 +80,11 @@ SkillWeaver의 메시지는 명확합니다. 복합 작업에서 라우팅 품�
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![skillweaver-compositional-skill-routing 슬라이드 1](/assets/images/skillweaver-compositional-skill-routing-slide-01.webp)
+![skillweaver-compositional-skill-routing 슬라이드 1]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-01.webp' | relative_url }})
 
-![skillweaver-compositional-skill-routing 슬라이드 2](/assets/images/skillweaver-compositional-skill-routing-slide-02.webp)
+![skillweaver-compositional-skill-routing 슬라이드 2]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-02.webp' | relative_url }})
 
-![skillweaver-compositional-skill-routing 슬라이드 3](/assets/images/skillweaver-compositional-skill-routing-slide-03.webp)
+![skillweaver-compositional-skill-routing 슬라이드 3]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-03.webp' | relative_url }})
 
-![skillweaver-compositional-skill-routing 슬라이드 4](/assets/images/skillweaver-compositional-skill-routing-slide-04.webp)
+![skillweaver-compositional-skill-routing 슬라이드 4]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-04.webp' | relative_url }})
 

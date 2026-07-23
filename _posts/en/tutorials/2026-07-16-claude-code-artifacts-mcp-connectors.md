@@ -18,7 +18,7 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/tutorials/claude-code-artifacts-mcp-connectors/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/claude-code-artifacts-mcp-connectors/"
 ---
 
 Until now, Claude Code artifacts were a way to capture the work from a session and freeze it into a single shareable web page. A pull request description with an annotated diff, an incident summary, a checklist: all static outputs that preserved the state of the moment they were created. This update pushes artifacts a step further. Artifacts can now **call MCP connectors directly** to fetch data and even perform actions. In other words, instead of a page fossilized at creation time, you get a **living app that re-queries connectors every time it opens and shows the current state**. This piece is for developers who are tired of hand-coding the same internal dashboards and ops tools over and over. The short version: you can now replace a good chunk of those dashboards with a single artifact, no frontend deployment required.

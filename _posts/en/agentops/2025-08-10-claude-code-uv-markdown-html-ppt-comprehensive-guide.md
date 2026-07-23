@@ -22,7 +22,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops
@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp)
+![Key concept illustration]({{ '/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp' | relative_url }})
 
 ⏱️ **Estimated reading time**: 25 min
 
@@ -44,7 +44,7 @@ By following this process you will learn:
 - Techniques for converting Markdown to HTML slides
 - Effective presentation design principles
 
-![Workflow diagram](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg)
+![Workflow diagram]({{ '/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg' | relative_url }})
 
 *Workflow diagram*
 

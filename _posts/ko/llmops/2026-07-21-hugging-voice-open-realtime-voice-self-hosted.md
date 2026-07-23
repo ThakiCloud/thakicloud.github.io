@@ -20,10 +20,10 @@ published: true
 lang: ko
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
 ---
 
-![직접 돌리는 오픈 실시간 음성 파이프라인](/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png)
+![직접 돌리는 오픈 실시간 음성 파이프라인]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png' | relative_url }})
 
 이 글은 음성 에이전트를 붙이려다 OpenAI Realtime API의 종속과 비용 앞에서 멈칫한 엔지니어, 그리고 대화형 음성 기능을 자체 인프라에서 서빙할 수 있을지 저울질하는 인프라 담당자를 위해 썼습니다. 결론부터 말하면, 허깅페이스가 공개한 데모 [hugging-voice](https://huggingface.co/spaces/HuggingFaceM4/hugging-voice)와 그 밑에서 돌아가는 라이브러리 [speech-to-speech](https://github.com/huggingface/speech-to-speech)의 설계는 단순하면서도 실용적입니다. 실시간 음성을 위한 네 단계 파이프라인을 그대로 오픈소스로 열어 두되, 바깥쪽은 OpenAI Realtime과 똑같은 인터페이스로 감쌌습니다. 그래서 이미 OpenAI 실시간 클라이언트로 짜 둔 코드가 있다면, 서버를 가리키는 주소 한 줄만 바꿔 자체 스택으로 옮겨올 수 있습니다. 다만 성능에 관한 수치는 프로젝트가 공개한 범위에서만 인용하고, 저희가 직접 벤치마크한 값이 아님을 먼저 분명히 해 둡니다.
 

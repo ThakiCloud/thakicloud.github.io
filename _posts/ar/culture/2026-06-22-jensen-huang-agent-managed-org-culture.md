@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/jensen-huang-agent-managed-org-culture/
-canonical_url: "https://thakicloud.github.io/ar/culture/jensen-huang-agent-managed-org-culture/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/jensen-huang-agent-managed-org-culture/"
 categories:
   - culture
 ---
@@ -32,7 +32,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/jensen-huang-agent-managed-org-culture-diagram.svg' | relative_url }})
 
 *بنية الحوكمة حين يدير مهندس واحد مئات الوكلاء*
 

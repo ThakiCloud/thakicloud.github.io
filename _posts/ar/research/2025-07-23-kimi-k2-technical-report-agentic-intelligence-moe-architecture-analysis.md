@@ -6,7 +6,7 @@ seo_description: "تحليل معمّق لابتكارات Kimi K2 من Moonshot
 date: 2025-07-23
 last_modified_at: 2025-07-23
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
 tags:
   - KimiK2
   - 에이전틱AI

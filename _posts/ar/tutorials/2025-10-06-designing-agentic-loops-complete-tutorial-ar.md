@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/designing-agentic-loops-complete-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/designing-agentic-loops-complete-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/designing-agentic-loops-complete-tutorial/"
 categories:
   - tutorials
 ---

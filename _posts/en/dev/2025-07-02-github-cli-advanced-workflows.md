@@ -14,7 +14,7 @@ tags:
 lang: en
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/en/dev/github-cli-advanced-workflows/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/github-cli-advanced-workflows/"
 categories:
   - dev
 published: false
@@ -26,7 +26,7 @@ published: false
 
 This is the final installment of the **macOS GitHub CLI Complete Automation Series**. We will integrate all the systems built so far and create a complete workflow ready for immediate production use. This part covers CI/CD integration, team onboarding automation, and performance optimization.
 
-![Conceptual view of zshrc loading automation modules into a unified gh dispatcher that drives GitHub](/assets/images/github-cli-advanced-workflows-hero.webp)
+![Conceptual view of zshrc loading automation modules into a unified gh dispatcher that drives GitHub]({{ '/assets/images/github-cli-advanced-workflows-hero.webp' | relative_url }})
 
 ## Integrated System Architecture
 
@@ -733,7 +733,7 @@ EOF
 chmod +x ~/scripts/github-cli/utils/deployment-checklist.sh
 ```
 
-![GitHub CLI integrated automation system architecture: zshrc load to modules to unified gh dispatcher to GitHub](/assets/images/github-cli-advanced-workflows-diagram.svg)
+![GitHub CLI integrated automation system architecture: zshrc load to modules to unified gh dispatcher to GitHub]({{ '/assets/images/github-cli-advanced-workflows-diagram.svg' | relative_url }})
 
 ## Series Complete
 

@@ -16,7 +16,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/llmops/raghub-comprehensive-guide-to-rag-ecosystem/
-canonical_url: "https://thakicloud.github.io/en/llmops/raghub-comprehensive-guide-to-rag-ecosystem-en/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/raghub-comprehensive-guide-to-rag-ecosystem-en/"
 categories:
   - llmops
 published: false
@@ -30,7 +30,7 @@ The field of Retrieval-Augmented Generation (RAG) is experiencing unprecedented 
 
 RAGHub represents a community-driven initiative that serves as a comprehensive directory of tools, frameworks, and resources for Retrieval-Augmented Generation systems. Born from the recognition that the RAG landscape changes so rapidly that frameworks from just three months ago might already be obsolete, RAGHub aims to help practitioners, researchers, and organizations navigate this ever-evolving terrain with confidence.
 
-![Conceptual view of modular framework blocks connected around a central vector index in the RAG ecosystem](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.webp)
+![Conceptual view of modular framework blocks connected around a central vector index in the RAG ecosystem]({{ '/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-hero.webp' | relative_url }})
 
 ## Understanding RAGHub: A Community-Powered Resource
 
@@ -78,7 +78,7 @@ Modern data preparation frameworks go far beyond simple text splitting and embed
 
 Some frameworks in this category also address the challenge of multimodal data processing, enabling RAG systems to work with documents that contain text, images, tables, and other data types. This capability is particularly important for enterprise RAG systems that need to process diverse document formats and extract meaningful information from complex layouts.
 
-![Diagram mapping RAGHub framework categories (core, engines, data prep, evaluation) onto the RAG pipeline stages](/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-diagram.svg)
+![Diagram mapping RAGHub framework categories (core, engines, data prep, evaluation) onto the RAG pipeline stages]({{ '/assets/images/raghub-comprehensive-guide-to-rag-ecosystem-diagram.svg' | relative_url }})
 
 ## Emerging Trends and Innovations
 

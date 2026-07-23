@@ -17,14 +17,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/llmops/healthcare-onprem-llm-finetuning/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/healthcare-onprem-llm-finetuning/"
 reading_time: true
 categories:
   - llmops
 published: false
 ---
 
-![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
+![الضبط الدقيق للنماذج اللغوية الكبيرة الصحية داخليًا دون تصدير بيانات المرضى]({{ '/assets/images/healthcare-onprem-llm-finetuning-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

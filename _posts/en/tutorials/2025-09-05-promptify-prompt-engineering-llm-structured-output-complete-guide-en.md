@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/promptify-prompt-engineering-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/promptify-prompt-engineering-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/promptify-prompt-engineering-guide/"
 published: false
 categories:
   - tutorials

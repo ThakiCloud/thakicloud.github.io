@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/llmops/healthcare-onprem-llm-finetuning/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/healthcare-onprem-llm-finetuning/"
 reading_time: true
 categories:
   - llmops
 published: false
 ---
 
-![Fine-tuning healthcare LLMs on-premises without exporting patient data](/assets/images/healthcare-onprem-llm-finetuning-hero.webp)
+![Fine-tuning healthcare LLMs on-premises without exporting patient data]({{ '/assets/images/healthcare-onprem-llm-finetuning-hero.webp' | relative_url }})
 
 ## Overview
 

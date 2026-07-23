@@ -6,7 +6,7 @@ seo_description: "تحليل شامل للنهج الثوري لكيمي K2 في
 date: 2025-09-01
 lang: ar
 permalink: /ar/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/
-canonical_url: "https://thakicloud.github.io/ar/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/kimi-k2-agentic-intelligence-breakthrough-analysis/"
 tags:
   - الذكاء-العميل
   - خليط-الخبراء

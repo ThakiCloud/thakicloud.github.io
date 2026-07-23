@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/amodei-free-software-engineer-value/
-canonical_url: "https://thakicloud.github.io/ar/culture/amodei-free-software-engineer-value/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/amodei-free-software-engineer-value/"
 categories:
   - culture
 ---
@@ -38,7 +38,7 @@ categories:
 
 ---
 
-![مخطط مفاهيمي](/assets/images/amodei-free-software-engineer-value-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/amodei-free-software-engineer-value-diagram.svg' | relative_url }})
 
 *إلى أين تنتقل قيمة الهندسة حين تقترب التكلفة الحدية من الصفر*
 

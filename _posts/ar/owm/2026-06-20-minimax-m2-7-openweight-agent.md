@@ -21,7 +21,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/minimax-m2-7-openweight-agent/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/minimax-m2-7-openweight-agent/"
 lang: ar
 reading_time: true
 categories:
@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
-![مخطط مفاهيمي لـ MiniMax-M2.7](/assets/images/minimax-m2-7-hero.webp)
+![مخطط مفاهيمي لـ MiniMax-M2.7]({{ '/assets/images/minimax-m2-7-hero.webp' | relative_url }})
 
 ## نظرة عامة على MiniMax-M2.7
 

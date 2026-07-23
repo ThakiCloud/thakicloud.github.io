@@ -21,7 +21,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/news/google-ph-llm-personal-health-ai-breakthrough/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/google-ph-llm-personal-health-ai-breakthrough/"
 reading_time: true
 lang: en
 permalink: /en/news/google-ph-llm-personal-health-ai-breakthrough/

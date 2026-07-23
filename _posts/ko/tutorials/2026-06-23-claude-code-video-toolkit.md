@@ -16,12 +16,12 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/technique/claude-code-video-toolkit/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/technique/claude-code-video-toolkit/"
 categories:
   - tutorials
 ---
 
-![자동화된 영상 제작 파이프라인을 추상적으로 표현한 이미지](/assets/images/claude-code-video-toolkit-hero.webp)
+![자동화된 영상 제작 파이프라인을 추상적으로 표현한 이미지]({{ '/assets/images/claude-code-video-toolkit-hero.webp' | relative_url }})
 *빛 입자가 정렬된 프레임으로 조립되는 모습으로 표현한 자동 영상 파이프라인.*
 
 ## 개요
@@ -92,7 +92,7 @@ npm run render
 
 콜드 상태에서 다운로드와 번들링, 렌더링, 인코딩을 모두 포함한 `npm run render`의 벽시계 시간은 18.4초였습니다. 최종 산출물은 1920x1080 해상도, 30fps, 길이 25.0초, 용량 2.15MB(2,152,829바이트)의 h264 영상이었고 AAC 오디오 트랙을 포함했습니다. API 키는 하나도 쓰지 않았습니다.
 
-![hello-world 렌더 파이프라인 단계별 실측 시간 차트](/assets/images/claude-code-video-toolkit-results.webp)
+![hello-world 렌더 파이프라인 단계별 실측 시간 차트]({{ '/assets/images/claude-code-video-toolkit-results.webp' | relative_url }})
 *API 키 없이 측정한 hello-world 1080p 렌더 파이프라인의 단계별 벽시계 시간.*
 
 정리하면, 별도 환경 구성 없이 클론 직후 약 30초 안에 1080p 영상 한 편이 손에 들어왔습니다. "2분 안에 렌더된다"는 예제 설명보다 오히려 빠른 결과였는데, 이는 하드웨어와 네트워크 상황에 따라 달라질 수 있으므로 절대적인 수치로 받아들일 필요는 없습니다. 중요한 것은 진입 장벽이 그만큼 낮다는 사실입니다.

@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/agentops/chatgpt-web-midjourney-proxy-unified-ai-platform-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/chatgpt-web-midjourney-proxy-unified-ai-platform-guide/"
 reading_time: true
 categories:
   - agentops
@@ -29,7 +29,7 @@ categories:
 published: false
 ---
 
-![핵심 개념 일러스트](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.webp)
+![핵심 개념 일러스트]({{ '/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-hero.webp' | relative_url }})
 
 ⏱️ **예상 읽기 시간**: 15분
 
@@ -39,7 +39,7 @@ published: false
 
 이 가이드에서는 macOS 환경에서 Docker를 활용하여 통합 AI 플랫폼을 구축하고 운영하는 방법을 단계별로 설명합니다.
 
-![아키텍처 다이어그램](/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-diagram.svg)
+![아키텍처 다이어그램]({{ '/assets/images/chatgpt-web-midjourney-proxy-unified-ai-platform-guide-diagram.svg' | relative_url }})
 
 *아키텍처 다이어그램*
 

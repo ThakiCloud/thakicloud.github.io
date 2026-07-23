@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-real-estate-agent-team-crewai-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-real-estate-agent-team-crewai-analysis/"
 reading_time: true
 lang: en
 categories:
@@ -28,7 +28,7 @@ categories:
 published: false
 ---
 
-![Key concept illustration](/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.webp)
+![Key concept illustration]({{ '/assets/images/ai-real-estate-agent-team-crewai-analysis-hero.webp' | relative_url }})
 
 ⏱️ **Estimated reading time**: 15 min
 

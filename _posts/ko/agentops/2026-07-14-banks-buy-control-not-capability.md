@@ -19,7 +19,7 @@ tags:
   - regulated-industry
 categories:
   - agentops
-canonical_url: "https://thakicloud.github.io/ko/agentops/banks-buy-control-not-capability/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/banks-buy-control-not-capability/"
 ---
 
 ## 발주 공고 한 줄을 현미경으로 보면
@@ -66,7 +66,7 @@ canonical_url: "https://thakicloud.github.io/ko/agentops/banks-buy-control-not-c
 
 오늘의 뉴스를 한 줄로 묶으면 이렇습니다. 규제 산업은 능력보다 통제를, 위치보다 증명을, 배포보다 순서를 먼저 삽니다. ThakiCloud의 Agent-Native Cloud인 Paxis는 정확히 이 요구를 일급 리소스로 다루도록 설계된 정식 제품이며, 지난달 v1.1으로 정식 출시됐습니다.
 
-![자율을 스위치가 아니라 다이얼로 다루는 Paxis 실행 계층 구조](/assets/images/banks-buy-control-not-capability-diagram.svg)
+![자율을 스위치가 아니라 다이얼로 다루는 Paxis 실행 계층 구조]({{ '/assets/images/banks-buy-control-not-capability-diagram.svg' | relative_url }})
 
 *업무는 먼저 정책 게이트를 지나고, 자율도는 L0에서 L3까지 신뢰가 쌓인 만큼만 위로 돌립니다. 실행은 격리된 샌드박스 안에서 이뤄지고 모든 단계가 감사 로그로 남으며, 이 모든 것이 소버린 온프렘 쿠버네티스 경계 안에서 돌아갑니다. CostRouter는 작업별로 최적 모델을 고르되 어느 벤더에도 묶이지 않습니다.*
 

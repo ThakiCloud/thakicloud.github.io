@@ -6,7 +6,7 @@ seo_description: "1000억 파라미터의 고성능 사고형 MoE 모델 Ring-fl
 date: 2025-09-21
 lang: ko
 permalink: /ko/owm/ring-flash-2-0-breakthrough-thinking-moe-model/
-canonical_url: "https://thakicloud.github.io/ko/owm/ring-flash-2-0-breakthrough-thinking-moe-model/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/ring-flash-2-0-breakthrough-thinking-moe-model/"
 tags:
   - ring-flash-2.0
   - moe-모델

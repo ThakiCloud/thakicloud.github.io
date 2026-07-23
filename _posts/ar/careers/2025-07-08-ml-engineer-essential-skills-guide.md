@@ -19,7 +19,7 @@ toc: true
 toc_label: "جدول المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/careers/ml-engineer-essential-skills-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/ml-engineer-essential-skills-guide/"
 reading_time: true
 lang: ar
 permalink: /ar/careers/ml-engineer-essential-skills-guide/
@@ -61,7 +61,7 @@ production_requirements = {
 
 يقدم [Made-With-ML](https://github.com/GokuMohandas/Made-With-ML) كيفية بناء أنظمة التعلم الآلي في بيئات الإنتاج الفعلية من خلال عملية من 4 مراحل: **التصميم · التطوير · النشر · التكرار**.
 
-![دورة حياة Made-With-ML: حلقة التصميم-التطوير-النشر-التكرار مع الأسس الشاملة](/assets/images/ml-engineer-essential-skills-guide-diagram.svg)
+![دورة حياة Made-With-ML: حلقة التصميم-التطوير-النشر-التكرار مع الأسس الشاملة]({{ '/assets/images/ml-engineer-essential-skills-guide-diagram.svg' | relative_url }})
 
 كما يوضح الرسم البياني، تشكل المراحل الأربع حلقة وليس خطاً مستقيماً: تعود إشارات الإنتاج لتغذي مرحلة التصميم من جديد، بينما تدعم الأسس الشاملة المتمثلة في البرمجة وهندسة البيانات وعمليات MLOps والتعاون كل مرحلة.
 

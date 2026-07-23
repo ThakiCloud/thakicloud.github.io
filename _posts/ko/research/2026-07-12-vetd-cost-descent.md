@@ -5,7 +5,7 @@ seo_title: "VETD - 비싼 모델로 검증 후 싼 모델로 강등하는 LLM �
 seo_description: "회사 업무를 스킬로 정의하고, opus로 품질을 판정한 뒤 코드 게이트로 sonnet 강등 여부를 결정하는 Validate-Expensive-Then-Descend 운영 방법. 16개 스킬 함대의 실측 강등/보류 결정과 실패 사례를 공개합니다."
 date: 2026-07-12
 last_modified_at: 2026-07-12
-canonical_url: "https://thakicloud.github.io/ko/research/vetd-cost-descent/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/vetd-cost-descent/"
 lang: ko
 reading_time: true
 tags:

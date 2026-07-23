@@ -19,7 +19,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/research/kimi-k2-technical-report-agentic-intelligence-moe-architecture-analysis/"
 reading_time: true
 published: false
 categories:

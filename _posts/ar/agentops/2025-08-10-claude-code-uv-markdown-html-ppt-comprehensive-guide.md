@@ -22,7 +22,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-uv-markdown-html-ppt-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops
@@ -30,7 +30,7 @@ categories:
 published: false
 ---
 
-![توضيح للمفهوم الأساسي](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp)
+![توضيح للمفهوم الأساسي]({{ '/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-hero.webp' | relative_url }})
 
 ⏱️ **وقت القراءة المقدر**: 25 دقيقة
 
@@ -44,7 +44,7 @@ published: false
 - تقنيات تحويل Markdown إلى شرائح HTML
 - مبادئ تصميم العروض التقديمية الفعّالة
 
-![مخطط سير العمل](/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg)
+![مخطط سير العمل]({{ '/assets/images/claude-code-uv-markdown-html-ppt-comprehensive-guide-diagram.svg' | relative_url }})
 
 *مخطط سير العمل*
 

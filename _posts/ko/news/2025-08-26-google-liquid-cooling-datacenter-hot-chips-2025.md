@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/news/google-liquid-cooling-datacenter-hot-chips-2025/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/google-liquid-cooling-datacenter-hot-chips-2025/"
 permalink: /ko/news/google-liquid-cooling-datacenter-hot-chips-2025/
 published: false
 categories:
@@ -92,11 +92,11 @@ GPU 클라우드 서비스 업계에게 이러한 냉각 기술 진보의 시사
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 1](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-01.webp)
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 1]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-01.webp' | relative_url }})
 
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 2](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-02.webp)
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 2]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-02.webp' | relative_url }})
 
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 3](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-03.webp)
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 3]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-03.webp' | relative_url }})
 
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 4](/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-04.webp)
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 4]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-04.webp' | relative_url }})
 

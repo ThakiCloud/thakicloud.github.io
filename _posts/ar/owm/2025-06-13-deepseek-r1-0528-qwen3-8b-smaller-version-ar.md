@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/owm/deepseek-r1-0528-qwen3-8b-smaller-version/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/deepseek-r1-0528-qwen3-8b-smaller-version/"
 lang: ar
 published: false
 categories:

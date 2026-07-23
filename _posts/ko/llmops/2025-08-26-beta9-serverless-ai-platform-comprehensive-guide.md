@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/llmops/beta9-serverless-ai-platform-comprehensive-guide/
-canonical_url: "https://thakicloud.github.io/ko/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/beta9-serverless-ai-platform-comprehensive-guide/"
 published: false
 categories:
   - llmops

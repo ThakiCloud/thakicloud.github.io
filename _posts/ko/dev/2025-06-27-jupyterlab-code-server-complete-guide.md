@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 개발 환경 가이드
-canonical_url: "https://thakicloud.github.io/dev/jupyterlab-code-server-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/dev/jupyterlab-code-server-complete-guide/"
 published: false
 categories:
   - dev

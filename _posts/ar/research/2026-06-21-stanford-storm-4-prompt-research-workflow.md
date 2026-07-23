@@ -18,7 +18,7 @@ toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/stanford-storm-4-prompt-research-workflow/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/stanford-storm-4-prompt-research-workflow/"
 reading_time: true
 categories:
   - research
@@ -49,7 +49,7 @@ published: false
 - **الخطوة 3، تركيب المخطط**: ركِّب الأدلة المجموعة في مخطط هرمي. وعند هذه المرحلة، أزِل التكرار وثبِّت الترتيب المنطقي.
 - **الخطوة 4، كتابة المتن مع الاستشهادات**: اكتب المتن متبعًا المخطط، لكن اربط كل ادّعاء بدليل.
 
-![سير عمل البحث المكوّن من أربع خطوات في STORM](/assets/images/stanford-storm-4-prompt-research-workflow-diagram.svg)
+![سير عمل البحث المكوّن من أربع خطوات في STORM]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-diagram.svg' | relative_url }})
 
 فصل الخطوات يتيح لك التحقق من النواتج الوسيطة. فإذا كان المخطط رديئًا كان المتن رديئًا أيضًا، ومن ثَمّ فإن التوقف عند الخطوة 3 وإصلاحها أرخص بكثير من رمي ناتج الخطوة 4 بأكمله.
 

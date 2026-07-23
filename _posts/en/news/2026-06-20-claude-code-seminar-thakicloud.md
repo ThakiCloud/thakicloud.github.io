@@ -19,7 +19,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/news/claude-code-seminar-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/claude-code-seminar-thakicloud/"
 reading_time: true
 categories:
   - news
@@ -28,7 +28,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 6 min
 
-![Claude Code Seminar](/assets/images/claude-code-seminar-hero.webp)
+![Claude Code Seminar]({{ '/assets/images/claude-code-seminar-hero.webp' | relative_url }})
 
 Many teams adopt AI coding tools. Far fewer teams use those tools well across the whole team. ThakiCloud did not stop at installing Claude Code. We ran an internal seminar to refine everything from environment setup to practical usage patterns, and today we are sharing those materials publicly.
 

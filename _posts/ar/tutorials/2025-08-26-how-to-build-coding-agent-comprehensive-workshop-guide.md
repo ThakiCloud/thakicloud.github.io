@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/how-to-build-coding-agent-comprehensive-workshop-guide/"
 published: false
 categories:
   - tutorials

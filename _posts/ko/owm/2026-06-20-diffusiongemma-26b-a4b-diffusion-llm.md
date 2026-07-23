@@ -22,7 +22,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/diffusiongemma-26b-a4b-diffusion-llm/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/diffusiongemma-26b-a4b-diffusion-llm/"
 reading_time: true
 categories:
   - owm
@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 9분
 
-![DiffusionGemma 26B-A4B 개념도](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
+![DiffusionGemma 26B-A4B 개념도]({{ '/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp' | relative_url }})
 
 ## 무엇이 새로운가
 

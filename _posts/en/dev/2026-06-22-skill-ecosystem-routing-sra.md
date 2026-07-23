@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/skill-ecosystem-routing-sra/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/skill-ecosystem-routing-sra/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![Skill Ecosystem Routing SRA Hero Image](/assets/images/skill-ecosystem-routing-sra-hero.webp)
+![Skill Ecosystem Routing SRA Hero Image]({{ '/assets/images/skill-ecosystem-routing-sra-hero.webp' | relative_url }})
 
 ## Overview: The Problem Created by Skill Proliferation
 

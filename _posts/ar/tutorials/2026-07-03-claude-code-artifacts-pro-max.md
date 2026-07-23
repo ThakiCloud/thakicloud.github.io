@@ -9,12 +9,12 @@ tags:
   - paxis
 date: 2026-07-03
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/claude-code-artifacts-pro-max/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/technique/claude-code-artifacts-pro-max/"
 categories:
   - tutorials
 ---
 
-![صورة تجريدية لمخرجات جلسة تتجمع في صفحة حية واحدة بطبقات متعددة](/assets/images/claude-code-artifacts-pro-max-hero.webp)
+![صورة تجريدية لمخرجات جلسة تتجمع في صفحة حية واحدة بطبقات متعددة]({{ '/assets/images/claude-code-artifacts-pro-max-hero.webp' | relative_url }})
 *يتكثّف تقدّم الجلسة البرمجية في صفحة واحدة قابلة للمشاركة تتحدّث في الوقت الفعلي.*
 
 ## نظرة عامة

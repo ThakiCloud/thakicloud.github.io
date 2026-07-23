@@ -6,7 +6,7 @@ seo_description: "Comprehensive analysis of Anthropic's latest AI models Claude 
 date: 2025-09-01
 lang: en
 permalink: /en/owm/claude-opus4-sonnet4-system-card-analysis/
-canonical_url: "https://thakicloud.github.io/en/owm/claude-opus4-sonnet4-system-card-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/claude-opus4-sonnet4-system-card-analysis/"
 tags:
   - Claude-Opus-4
   - Claude-Sonnet-4

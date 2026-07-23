@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/kimi-k2-6-1t-moe-agent-swarm/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/kimi-k2-6-1t-moe-agent-swarm/"
 reading_time: true
 categories:
   - owm
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![Kimi K2.6 에이전트 스웜 개념도](/assets/images/kimi-k2-6-hero.webp)
+![Kimi K2.6 에이전트 스웜 개념도]({{ '/assets/images/kimi-k2-6-hero.webp' | relative_url }})
 
 ## Kimi K2.6 개요
 

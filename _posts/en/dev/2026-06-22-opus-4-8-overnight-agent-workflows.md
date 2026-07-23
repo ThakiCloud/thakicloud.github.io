@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/dev/opus-4-8-overnight-agent-workflows/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/opus-4-8-overnight-agent-workflows/"
 categories:
   - dev
 published: false
@@ -29,7 +29,7 @@ In June 2026, an X article titled "40 Claude Opus 4.8 Workflows That Make Money 
 
 This post separates two things. First, it distinguishes what is marketing and what is real in the "earn money while you sleep" claim. Then it examines the real part - the infrastructure demand created by long-running unattended agent fan-out. ThakiCloud operates a Kubernetes-based AI/ML SaaS platform with GPU workload serving as a core product, so we are more interested in the billing structure of the inference workloads running underneath the viral headline than in the headline itself. All factual claims here are limited to what was confirmed from publicly available article metadata; unverified revenue claims have not been reproduced.
 
-![Conceptual view of unattended long-running agent fan-out generating concurrent inference load absorbed by ThakiCloud](/assets/images/opus-4-8-overnight-agent-workflows-hero.webp)
+![Conceptual view of unattended long-running agent fan-out generating concurrent inference load absorbed by ThakiCloud]({{ '/assets/images/opus-4-8-overnight-agent-workflows-hero.webp' | relative_url }})
 
 ## What the Overnight Workflow Actually Is: Hype vs. Reality
 
@@ -54,7 +54,7 @@ The skeleton of a dynamic workflow is straightforward. A single orchestrator rec
 [ Collect ] --> [ Verification Gate ] --> [ Synthesize ] --> 1 clean result
 ```
 
-![Dynamic workflow diagram: orchestrator fan-out closed by an adversarial verification gate](/assets/images/opus-4-8-overnight-agent-workflows-diagram.svg)
+![Dynamic workflow diagram: orchestrator fan-out closed by an adversarial verification gate]({{ '/assets/images/opus-4-8-overnight-agent-workflows-diagram.svg' | relative_url }})
 
 A common misconception here: parallelism is not unconditionally good. It only pays off when the branches are truly independent. If a downstream step must see all upstream results before it can proceed, that is a barrier, and a barrier forces everyone to wait for the slowest branch. A well-designed workflow minimizes barriers and lets each item flow through the pipeline at its own pace. This is the same principle ThakiCloud applies repeatedly in skill and pipeline design: constrain free-form composition to a validated skeleton to lift average quality.
 

@@ -26,10 +26,10 @@ toc_sticky: true
 categories:
   - llmops
 published: false
-canonical_url: "https://thakicloud.github.io/en/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
 ---
 
-![Heterogeneous cluster where a GPU pool and NPU pool jointly serve inference workloads](/assets/images/llm-d-heterogeneous-hero.webp)
+![Heterogeneous cluster where a GPU pool and NPU pool jointly serve inference workloads]({{ '/assets/images/llm-d-heterogeneous-hero.webp' | relative_url }})
 
 ## Buying More GPUs Won't Speed Up Inference
 

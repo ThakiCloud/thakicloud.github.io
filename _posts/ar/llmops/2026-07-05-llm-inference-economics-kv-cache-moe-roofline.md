@@ -17,14 +17,14 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/llm-inference-economics-kv-cache-moe-roofline/
-canonical_url: "https://thakicloud.github.io/ar/llmops/llm-inference-economics-kv-cache-moe-roofline/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/llm-inference-economics-kv-cache-moe-roofline/"
 categories:
   - llmops
 header:
   teaser: /assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp
 ---
 
-![بنية تكلفة استدلال النماذج اللغوية الكبيرة](/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp)
+![بنية تكلفة استدلال النماذج اللغوية الكبيرة]({{ '/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp' | relative_url }})
 
 ## نظرة عامة: مفارقة أن يكون نموذج أكبر بثمانية أضعاف أرخص بخمسة أضعاف
 
@@ -100,7 +100,7 @@ flowchart TB
 
 وبتحويل ذلك إلى دولارات، عند 32K يكون السعر 0.18 دولار لكل مليون رمز لـ Qwen مقابل 0.06 دولار لكل مليون رمز لـ DeepSeek V4 Flash؛ وعند 1M يكون 4.6 دولار لكل مليون رمز لـ Qwen مقابل 0.5 دولار لكل مليون رمز لـ DeepSeek V4 Flash. وفي النطاق من عشرات إلى مئات الآلاف من الرموز، وهو متوسط العمق لأحمال العمل الوكيلية (agentic)، تتسع فجوة التكلفة إلى 3-10 أضعاف، وهو ما يقع بالضبط في نفس رتبة حجم فارق أسعار واجهة برمجة التطبيقات الملحوظ (نحو خمسة أضعاف).
 
-![مقارنة الإنتاجية والتكلفة حسب عمق السياق](/assets/images/llm-inference-economics-kv-cache-moe-roofline-results.webp)
+![مقارنة الإنتاجية والتكلفة حسب عمق السياق]({{ '/assets/images/llm-inference-economics-kv-cache-moe-roofline-results.webp' | relative_url }})
 
 وهناك أمر يجدر الإفصاح عنه بأمانة: يوجد تباين يصل إلى 40 ضعفاً بين المصادر العامة بخصوص ذاكرة KV المخزَّنة لكل رمز في DeepSeek V4 Flash (إذ يتعارض ادعاء وثائق vLLM recipes بنسبة "10% مقارنة بـ V3.2" مع جدول ذاكرة KV في بعض أدلة النشر). وقد اعتمد الحساب أعلاه على الادعاء الأول، الأقرب إلى مصدر أولي، ونشدد على أن الاستنتاج يستند إلى اتجاه التوسع (بنية اتساع الفجوة مع تزايد العمق) لا إلى القيم المطلقة.
 

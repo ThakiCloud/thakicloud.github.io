@@ -14,7 +14,7 @@ tags:
   - self-improving-pipelines
 date: 2026-07-17
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/skill-graveyard-safe-deprecation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/skill-graveyard-safe-deprecation/"
 categories:
   - research
 author_profile: true
@@ -37,7 +37,7 @@ toc: true
 
 يصوغ المؤلفون هذه الظاهرة في مفهوم "نصف عمر المهارة" (skill half-life). فإذا عرّفنا نصف عمر أي مقياس بأنه حجم المجموعة الذي يهبط عنده هذا المقياس إلى أقل من نصف قيمته المرجعية عند مجموعة صغيرة، فإن نصف عمر مقياس أفضل نتيجة يقع بالفعل ضمن نطاق أحجام المجموعة المستخدمة حالياً في الإنتاج. في المقابل، لم تبلغ مقاييس من نوع Recall@5 نصف عمرها بعد ضمن نطاق هذا القياس.
 
-![Skill Half-Life: Retrieval Accuracy vs. Corpus Size](/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-growth-curve.png)
+![Skill Half-Life: Retrieval Accuracy vs. Corpus Size]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-growth-curve.png' | relative_url }})
 *نتائج تجربة أخذ العينات الفرعية بحسب حجم المجموعة، مقيسة على بيئة تشغيل Claude Code الإنتاجية لدى ThakiCloud (مجموعة اختبار من 63 حالة). بينما تنهار دقة أفضل نتيجة بمقدار 42.2 نقطة مئوية عبر نطاق نمو المجموعة 21.6 ضعفاً، يبقى مقياس Recall@5 الذي اجتاز بوابة التحقق ثابتاً نسبياً.*
 
 ## أعِد البحث دائماً قبل الحذف
@@ -50,7 +50,7 @@ toc: true
 
 عُثر في المجموعة الفعلية على 131 عنقوداً من التكرار الدلالي، وحدَّدت كلتا السياستين، بوجود الضمانة أو بدونها، المهارات الـ160 نفسها كمرشحين للإلغاء. ولو نُفِّذ الحذف دون الضمانة، لكانت 4 من هذه المهارات ستُحذف خطأً، لأنها قليلة الاستخدام لكنها المهارة الوحيدة في عنقودها التي تغطي حالة إيجابية أو أصلية معيَّنة. وبتفعيل الضمانة، ينخفض عدد الحذوفات الخاطئة هذه من 4 إلى صفر. والمثير للاهتمام أن الضمانة تبدّل فقط أي مهارة داخل العنقود تُحذف دون أن تقلّل من إجمالي هدف الحذف، لذلك تبقى نسبة تقليص المجموعة ثابتة تماماً عند 7.39% (160 من أصل 2,164) سواء وُجدت الضمانة أم لا.
 
-![False Deprecations: Naive vs. Guarded Policy](/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-guard-comparison.png)
+![False Deprecations: Naive vs. Guarded Policy]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-guard-comparison.png' | relative_url }})
 *مقارنة بين سياستين تقلّصان المجموعة بالنسبة ذاتها 7.39%. يؤدي التنفيذ بلا ضمانة أمان إلى 4 حذوفات خاطئة، بينما تُخفّض الضمانة هذه الحذوفات الخاطئة إلى صفر عبر استبدال المهارة المكرَّرة التالية الأقل استخداماً داخل العنقود.*
 
 بعد تطبيق الضمانة وإزالة المهارات الـ160، أعيد التقييم على مجموعة الاختبار المعيارية نفسها المكوَّنة من 63 حالة، فجاءت جميع المقاييس الخمسة مطابقة تماماً لما كانت عليه قبل الإزالة: Recall@5 (0.822)، وRecall@5 عند بوابة التحقق (0.667)، وأفضل نتيجة (Top-1) (0.378)، ومعدل الهلوسة (hallucination rate) (0.0)، ومعدل تجنّب الحالات السلبية (0.375). بعبارة أخرى، أُزيل 7.39% من المجموعة دون أي تراجع قابل للقياس على الإطلاق.

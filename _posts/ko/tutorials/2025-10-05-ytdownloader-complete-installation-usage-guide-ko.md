@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/ytdownloader-complete-guide/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/ytdownloader-complete-installation-usage-guide-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/ytdownloader-complete-installation-usage-guide-ko/"
 categories:
   - tutorials
 published: false

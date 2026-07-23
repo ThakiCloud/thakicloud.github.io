@@ -55,7 +55,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1a6_O3fzwf2mW7V5AdhDBFkol36iYy-jg/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/placeholder-industry-research-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/placeholder-industry-research-guide/"
 ---
 
 ## 여기에 실제 [산업 리서치 & 분석] 관련 내용을 작성하세요
@@ -74,11 +74,11 @@ _이 파일은 '산업 리서치 & 분석' 카테고리 게시물 작성 가이�
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![placeholder-industry-research-guide 슬라이드 1](/assets/images/placeholder-industry-research-guide-slide-01.webp)
+![placeholder-industry-research-guide 슬라이드 1]({{ '/assets/images/placeholder-industry-research-guide-slide-01.webp' | relative_url }})
 
-![placeholder-industry-research-guide 슬라이드 2](/assets/images/placeholder-industry-research-guide-slide-02.webp)
+![placeholder-industry-research-guide 슬라이드 2]({{ '/assets/images/placeholder-industry-research-guide-slide-02.webp' | relative_url }})
 
-![placeholder-industry-research-guide 슬라이드 3](/assets/images/placeholder-industry-research-guide-slide-03.webp)
+![placeholder-industry-research-guide 슬라이드 3]({{ '/assets/images/placeholder-industry-research-guide-slide-03.webp' | relative_url }})
 
-![placeholder-industry-research-guide 슬라이드 4](/assets/images/placeholder-industry-research-guide-slide-04.webp)
+![placeholder-industry-research-guide 슬라이드 4]({{ '/assets/images/placeholder-industry-research-guide-slide-04.webp' | relative_url }})
 

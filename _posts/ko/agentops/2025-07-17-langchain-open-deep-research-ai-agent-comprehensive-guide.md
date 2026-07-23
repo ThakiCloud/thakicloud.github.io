@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/agentops/langchain-open-deep-research-ai-agent-comprehensive-guide/"
 reading_time: true
 categories:
   - agentops
@@ -36,7 +36,7 @@ published: false
 
 [**LangChain Open Deep Research**](https://github.com/langchain-ai/open_deep_research)는 4.6k개의 스타와 673개의 포크를 보유한 활발한 오픈소스 프로젝트입니다. MIT 라이선스 하에 배포되며, 연구자부터 비즈니스 애널리스트까지 다양한 전문가들이 활용할 수 있는 포괄적인 연구 자동화 솔루션을 제공합니다.
 
-![개념 다이어그램](/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg)
+![개념 다이어그램]({{ '/assets/images/langchain-open-deep-research-ai-agent-comprehensive-guide-diagram.svg' | relative_url }})
 
 *개념 다이어그램*
 

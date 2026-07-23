@@ -16,12 +16,12 @@ author_profile: true
 toc: true
 toc_label: "Vibe-Coding-Instruct 가이드"
 reading_time: true
-canonical_url: https://thakicloud.github.io/datasets/vibe-coding-instruct-sft/
+canonical_url: https://thakicloud.com/tech-blog/datasets/vibe-coding-instruct-sft/
 categories:
   - datasets
 ---
 
-![Vibe Coding Instruct SFT 개념도](/assets/images/vibe-coding-instruct-sft-hero.webp)
+![Vibe Coding Instruct SFT 개념도]({{ '/assets/images/vibe-coding-instruct-sft-hero.webp' | relative_url }})
 
 ## 데이터셋 개요
 

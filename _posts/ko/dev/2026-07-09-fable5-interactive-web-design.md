@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/dev/fable5-interactive-web-design/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/fable5-interactive-web-design/"
 reading_time: true
 categories:
   - dev
@@ -29,7 +29,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 AI 코딩 도구로 실제 제품 화면을 만드는 프런트엔드 개발자와 디자인 엔지니어, 그리고 코딩 에이전트를 팀의 워크플로에 배선하려는 플랫폼 엔지니어를 위해 씁니다. "AI가 그럴듯한 랜딩 페이지 목업을 뽑는다"는 이야기는 이미 흔합니다. 여기서 다루려는 질문은 한 단계 더 들어갑니다. 스크롤에 반응하는 3D 씬이나 셰이더 기반 배경처럼, 손으로 짜면 며칠 걸리는 인터랙션을 모델이 어디까지 실제로 만들어 내는가, 그리고 그 결과물을 프로덕션 파이프라인에 어떻게 얹을 것인가입니다. 결정을 앞둔 분이라면, 이 글은 과장 없이 현재 가능한 것과 아직 사람이 붙어야 하는 것을 구분해 드리는 데 목적이 있습니다.
 
-![빛과 유리 표면이 겹치며 깊이감을 만드는 추상적인 3D 인터랙션의 이미지](/assets/images/fable5-interactive-web-design-hero.png)
+![빛과 유리 표면이 겹치며 깊이감을 만드는 추상적인 3D 인터랙션의 이미지]({{ '/assets/images/fable5-interactive-web-design-hero.png' | relative_url }})
 
 ## 개요
 
@@ -102,13 +102,13 @@ Paxis 관점에서 위 워크플로를 다시 보면 각 단계가 제어 평면
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![fable5-interactive-web-design 슬라이드 1](/assets/images/fable5-interactive-web-design-slide-01.png)
+![fable5-interactive-web-design 슬라이드 1]({{ '/assets/images/fable5-interactive-web-design-slide-01.png' | relative_url }})
 
-![fable5-interactive-web-design 슬라이드 2](/assets/images/fable5-interactive-web-design-slide-02.png)
+![fable5-interactive-web-design 슬라이드 2]({{ '/assets/images/fable5-interactive-web-design-slide-02.png' | relative_url }})
 
-![fable5-interactive-web-design 슬라이드 3](/assets/images/fable5-interactive-web-design-slide-03.png)
+![fable5-interactive-web-design 슬라이드 3]({{ '/assets/images/fable5-interactive-web-design-slide-03.png' | relative_url }})
 
-![fable5-interactive-web-design 슬라이드 4](/assets/images/fable5-interactive-web-design-slide-04.png)
+![fable5-interactive-web-design 슬라이드 4]({{ '/assets/images/fable5-interactive-web-design-slide-04.png' | relative_url }})
 
 ## 출처
 

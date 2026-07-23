@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "NeMo-Skills 가이드"
-canonical_url: "https://thakicloud.github.io/nvidia-nemo-skills-llm-workflow-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/nvidia-nemo-skills-llm-workflow-automation-guide/"
 published: false
 categories:
   - llmops

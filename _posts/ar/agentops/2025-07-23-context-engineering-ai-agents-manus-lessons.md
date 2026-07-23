@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/agentops/context-engineering-ai-agents-manus-lessons/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/context-engineering-ai-agents-manus-lessons/"
 reading_time: true
 categories:
   - agentops
@@ -36,7 +36,7 @@ published: false
 
 شهد فريق Manus التحوّل من حقبة BERT إلى GPT-3، وتوصّل إلى استراتيجية التحسين الحالية عبر نهج تجريبي يسمّونه "Stochastic Graduate Descent"، بعد إعادة بناء إطارهم أربع مرات.
 
-![مخطط مفاهيمي](/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg)
+![مخطط مفاهيمي]({{ '/assets/images/context-engineering-ai-agents-manus-lessons-diagram.svg' | relative_url }})
 
 *مخطط مفاهيمي*
 

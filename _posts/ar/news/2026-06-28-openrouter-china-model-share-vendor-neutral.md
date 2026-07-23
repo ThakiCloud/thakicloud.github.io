@@ -18,7 +18,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "chart-bar"
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/news/openrouter-china-model-share-vendor-neutral/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/openrouter-china-model-share-vendor-neutral/"
 categories:
   - news
 published: false
@@ -26,7 +26,7 @@ published: false
 
 OpenRouter منصة يستخدمها ملايين المطورين للوصول إلى نماذج لغوية متعددة عبر واجهة برمجية موحدة. ولأنها تعكس الاستخدام الفعلي من قِبَل مطورين حساسين للتكلفة، يُستشهد بها كثيرًا مؤشرًا متقدمًا على السوق. وفي هذه المنصة، انخفضت حصة توكن النماذج الأمريكية من نحو 70% إلى نحو 30% خلال عام واحد.
 
-![صورة مفاهيمية تجسّد إعادة توزيع تدفقات التوكن بين عقد نماذج متعددة](/assets/images/openrouter-china-model-share-vendor-neutral-hero.webp)
+![صورة مفاهيمية تجسّد إعادة توزيع تدفقات التوكن بين عقد نماذج متعددة]({{ '/assets/images/openrouter-china-model-share-vendor-neutral-hero.webp' | relative_url }})
 
 يتناول هذا المقال التحقق من هذه البيانات، ثم يكشف طبقةً ثانيةً يسهل إغفالها من العنوان وحده، قبل أن يستعرض ما يعنيه ذلك لاستراتيجية ThakiCloud وPaxis.
 

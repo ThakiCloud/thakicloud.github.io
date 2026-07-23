@@ -20,7 +20,7 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 toc_icon: "microchip"
-canonical_url: "https://thakicloud.github.io/ar/news/samsung-skhynix-ai-memory-mega-investment/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/samsung-skhynix-ai-memory-mega-investment/"
 categories:
   - news
 published: false
@@ -30,7 +30,7 @@ published: false
 
 يستعرض هذا المقال تفاصيل ما أُعلن في ذلك اليوم بشكل منهجي: ما الذي سيُبنى، وأين، وبأي تكلفة، وما السياق الصناعي والسياسي وراء ذلك، وما الذي يعنيه هذا لمشغلي البنية التحتية للذكاء الاصطناعي.
 
-![رسم بياني مقارن بين حجم الاستثمارات المحلية لـSamsung وSK على مدى عشر سنوات والميزانية السنوية الحكومية](/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.webp)
+![رسم بياني مقارن بين حجم الاستثمارات المحلية لـSamsung وSK على مدى عشر سنوات والميزانية السنوية الحكومية]({{ '/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.webp' | relative_url }})
 
 ## ما الذي أُعلن؟
 

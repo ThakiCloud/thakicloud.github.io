@@ -15,7 +15,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/tutorials/github-spec-kit-tutorial/
-canonical_url: "https://thakicloud.github.io/ar/tutorials/github-spec-kit-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/github-spec-kit-tutorial/"
 published: false
 categories:
   - tutorials

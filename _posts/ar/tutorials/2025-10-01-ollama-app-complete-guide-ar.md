@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
-canonical_url: "https://thakicloud.github.io/ar/tutorials/ollama-app-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/ollama-app-complete-guide/"
 lang: ar
 permalink: /ar/tutorials/ollama-app-complete-guide/
 published: false

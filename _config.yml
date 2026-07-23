@@ -22,8 +22,8 @@ title_separator          : "-"
 subtitle                 : "AI/ML Engineering & DevOps 전문 기술 블로그"
 name   : "Thaki Cloud"
 description              : "Thaki Cloud (ThakiCloud, 다키클라우드, thaki cloud, THAKI CLOUD, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. 머신러닝 모델 운영, 쿠버네티스, 클라우드 인프라, AI 엔지니어링 커리어, 인공지능 기술 블로그, 다키클라우드 개발 팀의 깊이 있는 인사이트를 제공합니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
-url    : "https://thakicloud.github.io"
-baseurl: ""
+url    : "https://thakicloud.com"
+baseurl: "/tech-blog"
 repository               : "ThakiCloud/thakicloud.github.io"
 teaser : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo   : "/assets/images/thaki-logo-mark.webp" # masthead diamond mark (left of title)
@@ -83,9 +83,9 @@ baidu_site_verification  :
 
 # Analytics (Primary configuration)
 analytics:
-  provider: false # GA gtag(G-0J1T66RGFD) is injected directly in _includes/head/custom.html; keep theme provider off to avoid double-firing. Old id G-H3R0WGN0LF replaced.
+  provider: false # GA gtag(G-78BFTNGGJX, Taki website tag) is injected directly in _includes/head/custom.html; keep theme provider off to avoid double-firing. Old ids G-0J1T66RGFD / G-H3R0WGN0LF replaced 2026-07-22.
   google:
-    tracking_id: "G-0J1T66RGFD"
+    tracking_id: "G-78BFTNGGJX"
     anonymize_ip: false
   umami:
     script_url: "" # Your Umami tracking script URL (will be added after setup)

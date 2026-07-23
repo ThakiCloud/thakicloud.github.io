@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/moneyball-data-driven-culture/
-canonical_url: "https://thakicloud.github.io/ar/culture/moneyball-data-driven-culture/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/moneyball-data-driven-culture/"
 categories:
   - culture
 ---
@@ -26,7 +26,7 @@ categories:
 
 فريق أوكلاند أثلتيكس، الذي يعمل بميزانية محدودة، ثوّر لعبة البيسبول باكتشاف واستخدام مقاييس مخفية مثل نسبة الوصول للقاعدة بدلاً من الاعتماد على الحدس. الجوهر يكمن في إعادة تعريف الأداء الحقيقي من خلال البيانات والجمع الاستراتيجي للموارد المقللة القيمة لتحقيق أقصى النتائج نسبة إلى الموارد المتاحة.
 
-![تفكير Moneyball: التحول من المقاييس التقليدية إلى مقاييس مرتبطة بالقيمة في الهندسة والمنتج والتوظيف](/assets/images/moneyball-data-driven-culture-diagram.svg)
+![تفكير Moneyball: التحول من المقاييس التقليدية إلى مقاييس مرتبطة بالقيمة في الهندسة والمنتج والتوظيف]({{ '/assets/images/moneyball-data-driven-culture-diagram.svg' | relative_url }})
 
 ## الآثار على المطورين
 

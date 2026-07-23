@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Terminalizer 가이드"
-canonical_url: "https://thakicloud.github.io/tutorials/dev/terminalizer-macos-terminal-recording-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/dev/terminalizer-macos-terminal-recording-guide/"
 published: false
 categories:
   - tutorials

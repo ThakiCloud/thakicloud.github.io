@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/culture/saberr-team-chemistry-data-driven-hiring/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/saberr-team-chemistry-data-driven-hiring/"
 categories:
   - culture
 ---
@@ -26,7 +26,7 @@ categories:
 
 Saberr는 이 문제에 다른 방식으로 접근했습니다. 팀 케미를 직관이 아니라 데이터로 다루는 것입니다. 가치관 정합성과 행동 다양성을 측정해서 채용 전에 리스크를 예측하고, 팀 운영에서도 지속적으로 모니터링하는 방식입니다.
 
-![Saberr 데이터 흐름: 설문·행동·상호작용 수집에서 채용·온보딩·재편까지](/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg)
+![Saberr 데이터 흐름: 설문·행동·상호작용 수집에서 채용·온보딩·재편까지]({{ '/assets/images/saberr-team-chemistry-data-driven-hiring-diagram.svg' | relative_url }})
 
 ---
 

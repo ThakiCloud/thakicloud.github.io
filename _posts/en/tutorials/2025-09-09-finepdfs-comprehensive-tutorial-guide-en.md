@@ -17,7 +17,7 @@ toc: true
 toc_label: "Contents"
 lang: en
 permalink: /en/tutorials/finepdfs-comprehensive-tutorial-guide/
-canonical_url: "https://thakicloud.github.io/en/tutorials/finepdfs-comprehensive-tutorial-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/finepdfs-comprehensive-tutorial-guide/"
 published: false
 categories:
   - tutorials

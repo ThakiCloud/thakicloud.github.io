@@ -20,15 +20,16 @@ toc_label: "Contents"
 toc_icon: "microchip"
 toc_sticky: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/glm-5-2-reasoning-token-economics/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm-5-2-reasoning-token-economics/"
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 When a model needs 220,000 tokens just to think through a Rubik's cube, who pays for that? That is the question Matt Pocock (@mattpocockuk) surfaced while using his `/teach` skill and `pi` to have GLM-5.2 work through a cube solution. Even at the lowest effort setting (High), three turns produced roughly 220,000 tokens of thinking traces. A more capable reasoning model means a model that thinks longer, and a model that thinks longer means someone receives a larger invoice.
 
-This is not an introduction to GLM-5.2 as a model. The story of compressing its weights to 1-bit for smaller hardware is covered in a [separate post](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/). What this post examines is one level up: **when a verbose open-weight reasoning model arrives, how do the cost structures of per-token cloud APIs and GPU-time-amortizing on-premises hosting diverge?** The short answer is that there is a clear crossover point where longer reasoning favors self-hosting, and that crossover is exactly what ThakiCloud's K8s-based multi-tenant platform is designed to exploit.
+This is not an introduction to GLM-5.2 as a model. The story of compressing its weights to 1-bit for smaller hardware is covered in a [separate post](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/). What this post examines is one level up: **when a verbose open-weight reasoning model arrives, how do the cost structures of per-token cloud APIs and GPU-time-amortizing on-premises hosting diverge?** The short answer is that there is a clear crossover point where longer reasoning favors self-hosting, and that crossover is exactly what ThakiCloud's K8s-based multi-tenant platform is designed to exploit.
 
 All figures in this post come from measurements published by Z.ai and various outlets, or from arithmetic derived from publicly stated parameter counts. The 744B model cannot be run directly in this analysis environment, so published benchmarks are cited rather than original measurements. Estimates derived from arithmetic are marked `[est.]` throughout.
 
@@ -57,7 +58,7 @@ The first is IndexShare. In standard DeepSeek Sparse Attention (DSA), every tran
 
 The lever that users interact with directly is the effort setting. GLM-5.2 offers two levels, High and Max, and Z.ai recommends Max for coding tasks. New sessions default to High. Published measurements show that Max effort draws up to about 85,000 output tokens per task to reach peak intelligence, while High effort sacrifices a few benchmark points in exchange for roughly half the output token volume. In other words, token consumption is not set automatically inside the model: it is a knob that operators can explicitly adjust. That knob is the central variable in the cost analysis that follows.
 
-![Cost structure comparison between closed cloud API path and ThakiCloud on-premises self-hosting path](/assets/images/glm-5-2-reasoning-token-economics-diagram.webp)
+![Cost structure comparison between closed cloud API path and ThakiCloud on-premises self-hosting path]({{ '/assets/images/glm-5-2-reasoning-token-economics-diagram.webp' | relative_url }})
 
 ## What /teach Revealed: Reasoning Consumes Tokens
 
@@ -80,7 +81,7 @@ In self-hosting, the cost structure is time-based rather than token-based. From 
 
 There is a genuine barrier to entry. The 744B weights have to live somewhere. Memory footprint derived from the published parameter count is as follows (KV cache excluded, pure arithmetic `[est.]`):
 
-![Memory footprint by precision for 744B weights and per-task output cost curves](/assets/images/glm-5-2-reasoning-token-economics-results.webp)
+![Memory footprint by precision for 744B weights and per-task output cost curves]({{ '/assets/images/glm-5-2-reasoning-token-economics-results.webp' | relative_url }})
 
 BF16 requires roughly 1,488 GB; FP8 roughly 744 GB; FP4/NVFP4 roughly 372 GB. Eight H100s at 80 GB each give 640 GB total; eight H200s at 141 GB each give 1,128 GB. FP8-quantized weights fit comfortably in a single H200 node and are tight on an H100 node once KV cache headroom is considered. Dropping to FP4 leaves room on a single H100 node. Running a frontier-class reasoning model on a single GPU node is no longer impractical.
 
@@ -116,4 +117,4 @@ The core argument holds regardless. In an era where powerful open-weight reasoni
 - GLM-5.2 analysis: [felloai: GLM 5.2: Zhipu's 1M-Context Open-Source Model Explained](https://felloai.com/glm-5-2/)
 - GLM-5.2 benchmarks and pricing: [labellerr: GLM-5.2 Just Beat GPT-5.5 at a Sixth of the Cost](https://www.labellerr.com/blog/glm-5-2-open-source-ai-model/)
 - Official weights: [GitHub: zai-org/GLM-5](https://github.com/zai-org/GLM-5)
-- Related post (quantization): [Unsloth GLM-5.2 1-bit Dynamic GGUF On-Premises Analysis](https://thakicloud.github.io/ko/llmops/unsloth-glm-5-2-1bit-gguf/)
+- Related post (quantization): [Unsloth GLM-5.2 1-bit Dynamic GGUF On-Premises Analysis](https://thakicloud.com/tech-blog/ko/llmops/unsloth-glm-5-2-1bit-gguf/)

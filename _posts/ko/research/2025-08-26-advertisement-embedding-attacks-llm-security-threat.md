@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/research/advertisement-embedding-attacks-llm-security-threat/
-canonical_url: "https://thakicloud.github.io/ko/research/advertisement-embedding-attacks-llm-security-threat/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/advertisement-embedding-attacks-llm-security-threat/"
 categories:
   - research
 audiobook: https://drive.google.com/file/d/1HtnHaVWO4Ta19nxtzQbVvT9qrCRf11vG/view
@@ -49,7 +49,7 @@ $$P_{AEA}(y|x, \theta) = \prod_{i=1}^{n} P(y_i|y_{<i}, M(x), M(\theta))$$
 
 이러한 조작은 전체적인 일관성과 자연스러움을 유지하면서 특정 미리 결정된 콘텐츠가 높은 확률로 출력에 나타나도록 보장합니다. AEA의 정교함은 이러한 조작을 표준 평가 지표와 인간 검토자에게 감지되지 않도록 만드는 데 있습니다.
 
-![광고 임베딩 공격(AEA) 위협 모델: 공격 벡터, 감염된 LLM, 광고 삽입 출력, 방어 계층](/assets/images/advertisement-embedding-attacks-diagram.svg)
+![광고 임베딩 공격(AEA) 위협 모델: 공격 벡터, 감염된 LLM, 광고 삽입 출력, 방어 계층]({{ '/assets/images/advertisement-embedding-attacks-diagram.svg' | relative_url }})
 
 공격 방법론은 주로 두 가지 벡터에서 작동합니다: 입력 조작과 모델 매개변수 조작. 입력 조작은 모델이 응답에 특정 콘텐츠를 포함하도록 장려하는 프롬프트나 시스템 메시지를 작성하는 것을 포함합니다. 이는 모델의 지시 따르기 능력을 악용하는 신중히 설계된 프롬프트 주입을 통해 달성할 수 있습니다. 반면 모델 매개변수 조작은 콘텐츠 주입을 위한 백도어를 생성하는 독성 데이터셋으로 모델을 훈련하거나 미세 조정하는 것을 포함합니다.
 
@@ -453,11 +453,11 @@ AI 커뮤니티가 이러한 도전과 씨름하면서, AEA의 등장은 AI 시�
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 1](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.webp)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 1]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.webp' | relative_url }})
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 2](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.webp)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 2]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.webp' | relative_url }})
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 3](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.webp)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 3]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.webp' | relative_url }})
 
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 4](/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.webp)
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 4]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.webp' | relative_url }})
 

@@ -14,14 +14,14 @@ tags:
 author_profile: true
 toc: true
 toc_label: Contents
-canonical_url: "https://thakicloud.github.io/en/culture/waiting-for-carnot/"
+canonical_url: "https://thakicloud.com/tech-blog/en/culture/waiting-for-carnot/"
 header:
   image: /assets/images/waiting-for-carnot-hero.webp
 categories:
   - culture
 ---
 
-![Abstract visual of steam and wave energy crossing into interference patterns](/assets/images/waiting-for-carnot-hero.webp)
+![Abstract visual of steam and wave energy crossing into interference patterns]({{ '/assets/images/waiting-for-carnot-hero.webp' | relative_url }})
 
 ## The 20-Watt Question
 

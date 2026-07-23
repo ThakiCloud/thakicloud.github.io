@@ -18,9 +18,10 @@ toc: true
 toc_label: "Contents"
 toc_icon: "robot"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/anthropic-fable5-prompting-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/anthropic-fable5-prompting-guide/"
 categories:
   - agentops
+published: false
 ---
 
 ## Overview
@@ -29,7 +30,7 @@ There is a document worth reading before you open Claude Fable 5 again. Anthropi
 
 Let's start with the least intuitive point. The guide's throughline is not "write better," it is closer to "write less." Detailed instructions you stacked up to get good results from earlier models can actually degrade quality on Fable 5. Fable 5 is designed to take on work complex, long, and ambiguous enough that a person would need hours, days, or even weeks to finish it, and a model built for that kind of delegation gets in its own way when it is handed too many controls. ThakiCloud runs a Kubernetes-based AI/ML SaaS infrastructure and the agent platform on top of it, and we deal with these long-running autonomous agents every day, so each recommendation in this guide is, for us, a question of operating rules. This post walks through the four shifts the guide lays out with their documented evidence, and looks at how they land on our product.
 
-![Abstract image representing a prompting shift for long-running autonomous agents](/assets/images/anthropic-fable5-prompting-guide-hero.webp)
+![Abstract image representing a prompting shift for long-running autonomous agents]({{ '/assets/images/anthropic-fable5-prompting-guide-hero.webp' | relative_url }})
 
 ## What This Guide Is
 

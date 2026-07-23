@@ -22,7 +22,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/glm-5-2-slime-rl-posttraining/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/glm-5-2-slime-rl-posttraining/"
 reading_time: true
 published: false
 categories:

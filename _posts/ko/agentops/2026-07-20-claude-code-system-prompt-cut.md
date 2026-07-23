@@ -17,14 +17,14 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-code-system-prompt-cut/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-system-prompt-cut/"
 categories:
   - agentops
 audiobook: /assets/audio/posts/claude-code-system-prompt-cut/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![두꺼운 시스템 프롬프트가 얇은 하네스로 얇아지는 흐름](/assets/images/claude-code-system-prompt-cut-hero.png)
+![두꺼운 시스템 프롬프트가 얇은 하네스로 얇아지는 흐름]({{ '/assets/images/claude-code-system-prompt-cut-hero.png' | relative_url }})
 
 ## 개요
 

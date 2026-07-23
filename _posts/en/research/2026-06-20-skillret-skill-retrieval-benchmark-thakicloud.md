@@ -10,7 +10,7 @@ tags:
   - benchmark
   - thakicloud
   - qwen3-embedding
-canonical_url: "https://thakicloud.github.io/en/research/skillret-skill-retrieval-benchmark-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/skillret-skill-retrieval-benchmark-thakicloud/"
 lang: en
 reading_time: true
 toc: true
@@ -22,7 +22,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 6 min
 
-![SkillRet two-stage skill retrieval pipeline](/assets/images/skillret-hero.webp)
+![SkillRet two-stage skill retrieval pipeline]({{ '/assets/images/skillret-hero.webp' | relative_url }})
 
 ## The More Skills an Agent Has, the Easier It Gets Lost
 

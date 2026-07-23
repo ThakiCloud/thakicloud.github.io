@@ -7,21 +7,21 @@ lang: ko
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Korean Homepage -->
   <url>
-    <loc>{{ site.url }}/ko/</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}/ko/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}/ko/" />
-    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}/ar/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/ko/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}{{ site.baseurl }}/ko/" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}/en/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}{{ site.baseurl }}/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}/ko/" />
   </url>
 
   <!-- Korean Posts -->
   {% for post in site.posts %}
     {% if post.lang == "ko" %}
     <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
       <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -34,7 +34,7 @@ lang: ko
     {% if page.lang == "ko" %}
       {% unless page.sitemap == false %}
       <url>
-        <loc>{{ site.url }}{{ page.url }}</loc>
+        <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
         <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -46,7 +46,7 @@ lang: ko
   <!-- Korean Categories -->
   {% for category in site.categories %}
   <url>
-    <loc>{{ site.url }}/ko/categories/#{{ category[0] | slugify }}</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}/ko/categories/#{{ category[0] | slugify }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

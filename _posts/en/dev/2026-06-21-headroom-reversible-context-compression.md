@@ -11,14 +11,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/headroom-reversible-context-compression/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/headroom-reversible-context-compression/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![Abstract image of data condensing](/assets/images/headroom-reversible-context-compression-hero.webp)
+![Abstract image of data condensing]({{ '/assets/images/headroom-reversible-context-compression-hero.webp' | relative_url }})
 *Context is not free. Condensing scattered tokens losslessly is what Headroom does.*
 
 ## Overview
@@ -107,7 +107,7 @@ Token counts were measured with the `cl100k_base` tokenizer. We recorded both by
 | twitter-timeline (record array) | 399,926 | 192,465 | **51.9%** | 57.0% | 0.24s |
 | seedance-prompts (prompt catalog) | 1,085,592 | 713,210 | **34.3%** | 38.5% | 0.57s |
 
-![Measured compression chart](/assets/images/headroom-reversible-context-compression-results.webp)
+![Measured compression chart]({{ '/assets/images/headroom-reversible-context-compression-results.webp' | relative_url }})
 *Measured reduction rates for three JSON tool outputs from the ThakiCloud repo. Bytes and tokens are shown together.*
 
 How to read the numbers matters. **The more repetitive the structure, the larger the savings.** skill_index is an index of densely repeating identical-schema records, so SmartCrusher's key folding maximizes and cut tokens by a full 71.2%. The twitter timeline, also a uniform object array, was reduced by more than half. By contrast seedance-prompts, where natural-language prompt text makes up most of each record, had little room to trim via structural compression and landed at 34.3%. This difference directly demonstrates the design intent that "JSON is where it works best."

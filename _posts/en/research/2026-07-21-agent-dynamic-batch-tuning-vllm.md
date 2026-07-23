@@ -4,7 +4,7 @@ excerpt: "Does an agent that observes GPU telemetry and adjusts batch size and c
 tags: [vllm, kueue, gpu-scheduling, multi-tenant-serving, llm-agents, dynamic-batching, inference-cost-optimization, h200, queuing-simulation, control-loop]
 date: 2026-07-21
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/agent-dynamic-batch-tuning-vllm/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/agent-dynamic-batch-tuning-vllm/"
 categories: [research]
 author_profile: true
 toc: true
@@ -22,7 +22,7 @@ The paper raises the question that naturally follows from this setup. In a multi
 
 The paper formalizes online per-tenant batch and concurrency tuning as a discrete-time closed-loop control problem with a structure similar to a Markov decision process. The state consists of per-tenant queue depth, GPU memory utilization, recent latency percentiles (p50/p95/p99), and the current concurrency cap. The action is a bounded-width per-tenant increment or decrement to concurrency. The reward function subtracts a penalty for p99 latency that exceeds the SLO and a cost term from throughput, and is designed to jointly optimize throughput, latency, and cost within a safe range. Building on this formalization, the authors also propose how the agent would integrate into an actual deployment. The agent does not replace Kueue's job admission; it operates as a sidecar inside it, adjusting only how already-admitted jobs divide the engine's capacity. The key point is that the lever being pulled is not the vLLM engine's internal `max_num_seqs`, but client-side per-tenant admission concurrency. Production vLLM does not expose engine parameters as a knob that can be changed in real time without a restart, so this design reflects the practical constraint that the only point actually adjustable is the number of concurrent requests arriving at the server.
 
-![Control Loop: Agent-Driven Tuning Architecture](/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-control-loop.png)
+![Control Loop: Agent-Driven Tuning Architecture]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-control-loop.png' | relative_url }})
 *The control-loop structure in which an LLM agent observes GPU telemetry and per-tenant queue depth, produces a bounded-width concurrency adjustment, and thereby re-tunes the batch configuration. This is a conceptual architecture diagram, not a result measured on hardware.*
 
 ## The Warning the Simulation Raised: Naive Dynamic Control Was Worse Than Static
@@ -31,10 +31,10 @@ To fill the gap left by the unexecuted empirical protocol, the authors built a s
 
 The results defied expectations. The static policy was best on both throughput (0.686 req/s) and drop count (an average of 1.9 requests), while the naive dynamic policy's throughput fell to 0.515 req/s and it dropped an average of 309.5 requests. The differentiated agent surrogate model did better than the naive dynamic policy (throughput 0.601 req/s, 154.7 drops) but still could not catch up to the static policy, and p99 latency was also higher for both dynamic variants than for the static policy (11.75 seconds), at 12.79 and 13.25 seconds respectively.
 
-![Throughput vs. Dropped Requests by Policy](/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-throughput-dropped.png)
+![Throughput vs. Dropped Requests by Policy]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-throughput-dropped.png' | relative_url }})
 *The static policy recorded the highest throughput and fewest drops, while both dynamic variants underperformed in the simulation. These are results from a deterministic queuing simulation averaged over 20 seeds, not values measured on an actual GPU.*
 
-![p99 Latency by Policy](/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-p99-latency.png)
+![p99 Latency by Policy]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-p99-latency.png' | relative_url }})
 *The static policy had the lowest p99 latency, and neither dynamic controller reduced tail latency in this simulation regime. These are simulation results averaged over 20 seeds, not figures measured on hardware.*
 
 The authors verify that this result is the model's actual dynamics rather than a simple bug, and trace the cause through four steps. First, because service time follows an exponential distribution, the tail is inherently heavy. An exponential distribution with a mean of 2.5 seconds forms a p99 around 11.5 seconds even with zero queuing at all, which is barely different from the 11.75 seconds the static policy recorded. In other words, most of the observed tail latency comes not from congestion but from the variance of the service time itself. Second, the throttle threshold is set at 6 seconds, twice the 3-second window, which is far below this intrinsic p99 of 11.5 seconds. The short-window p99, estimated from only a handful of completed requests, is noisy and biased toward this intrinsic tail, so it frequently crosses the threshold even under genuinely light load. Third, because the resulting false-positive throttles lower both tenants together, even a non-congested tenant gets restricted along with the congested one, and under a 3-second hard timeout, every unnecessary throttle converts directly into a drop. Fourth, while the scaling rule does allow recovery, the throttle-drop cost is asymmetrically larger than the scaling gain, so net throughput falls.

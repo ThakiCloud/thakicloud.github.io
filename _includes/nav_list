@@ -10,11 +10,11 @@
       {% comment %} Filter posts by language for accurate counts {% endcomment %}
       {% if page.lang %}
         {% assign filtered_posts = site.posts | where: "lang", page.lang %}
-        {% assign lang_prefix = '/' | append: page.lang %}
+        {% assign lang_prefix = site.baseurl | append: '/' | append: page.lang %}
       {% else %}
         {% comment %} For Korean main site, filter by path containing _posts/ko/ {% endcomment %}
         {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains '_posts/ko/'" %}
-        {% assign lang_prefix = '' %}
+        {% assign lang_prefix = site.baseurl %}
       {% endif %}
 
       {% comment %} Calculate language-specific category counts {% endcomment %}
@@ -97,7 +97,7 @@
             {% for i in (1..tags_max) reversed %}
               {% for tag in site.tags %}
                 {% if tag[1].size == i %}
-                  <li><a href="/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
+                  <li><a href="{{ site.baseurl }}/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
                 {% endif %}
               {% endfor %}
             {% endfor %}

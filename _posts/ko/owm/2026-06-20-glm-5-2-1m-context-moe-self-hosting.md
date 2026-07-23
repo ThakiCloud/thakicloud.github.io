@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/owm/glm-5-2-1m-context-moe-self-hosting/"
+canonical_url: "https://thakicloud.com/tech-blog/owm/glm-5-2-1m-context-moe-self-hosting/"
 reading_time: true
 categories:
   - owm
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 7분
 
-![GLM-5.2 희소 MoE와 1M 컨텍스트 개념도](/assets/images/glm-5-2-hero.webp)
+![GLM-5.2 희소 MoE와 1M 컨텍스트 개념도]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
 ## GLM-5.2는 무엇이 다른가
 

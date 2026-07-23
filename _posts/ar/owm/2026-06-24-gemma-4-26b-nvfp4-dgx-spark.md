@@ -20,7 +20,7 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/owm/gemma-4-26b-nvfp4-dgx-spark/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/gemma-4-26b-nvfp4-dgx-spark/"
 lang: ar
 reading_time: true
 categories:
@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
 
-![مخطط مفاهيمي للاستدلال المتوازي لـ Gemma 4 26B NVFP4](/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp)
+![مخطط مفاهيمي للاستدلال المتوازي لـ Gemma 4 26B NVFP4]({{ '/assets/images/gemma-4-26b-nvfp4-dgx-spark-hero.webp' | relative_url }})
 
 ## نظرة عامة
 
@@ -201,7 +201,7 @@ flowchart LR
 
 - [بطاقة نموذج Gemma-4-26B-A4B-NVFP4 (Hugging Face)](https://huggingface.co/nvidia/Gemma-4-26B-A4B-NVFP4)
 - [تغريدة العرض الأصلي (Google Gemma)](https://x.com/googlegemma/status/2069452783523401804)
-- [ملخص تشكيلة Gemma 4 الكاملة (مدونة ThakiCloud)](https://thakicloud.github.io/owm/gemma-4-open-weight-lineup/)
+- [ملخص تشكيلة Gemma 4 الكاملة (مدونة ThakiCloud)](https://thakicloud.com/tech-blog/owm/gemma-4-open-weight-lineup/)
 - [NVIDIA TensorRT Model Optimizer](https://github.com/NVIDIA/TensorRT-Model-Optimizer)
 - [مقدمة NVFP4 (NVIDIA Developer)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
 - [مشكلة NVFP4 GEMM على SM120 في flashinfer #2577](https://github.com/flashinfer-ai/flashinfer/issues/2577)

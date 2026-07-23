@@ -17,7 +17,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "دليل Skywork-SWE-32B"
-canonical_url: "https://thakicloud.github.io/ar/owm/skywork-swe-32b-cost-effective-code-agent-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/owm/skywork-swe-32b-cost-effective-code-agent-guide/"
 lang: ar
 published: false
 categories:

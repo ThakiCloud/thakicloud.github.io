@@ -18,7 +18,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/research/qwen-agentworld-language-world-models/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/qwen-agentworld-language-world-models/"
 reading_time: true
 categories:
   - research
@@ -35,7 +35,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 요즘 에이전트는 대부분 같은 방식으로 일합니다. 과제를 받고, 일단 시도하고, 틀리면 고칩니다. 실제 환경에서 시행착오를 반복하는 구조입니다. 이 방식은 직관적이지만 비쌉니다. 환경이 실제 터미널이거나 실제 브라우저이거나 실제 안드로이드 기기라면, 매 시도마다 진짜 비용과 진짜 위험이 발생합니다.
 
-![에이전트의 시행착오 방식이 가진 숨겨진 비용을 정리한 슬라이드](/assets/images/qwen-agentworld-language-world-models-slide-02.webp)
+![에이전트의 시행착오 방식이 가진 숨겨진 비용을 정리한 슬라이드]({{ '/assets/images/qwen-agentworld-language-world-models-slide-02.webp' | relative_url }})
 
 2026년 6월 24일 Alibaba의 Qwen 팀이 공개한 **Qwen-AgentWorld**는 이 전제를 뒤집습니다. 에이전트를 "행동을 더 잘하도록" 학습시키는 대신, 모델이 **환경 자체를 예측하도록** 학습시킵니다. 즉 현재 관측과 행동이 주어졌을 때 다음 환경 상태가 무엇이 될지를 머릿속에서 먼저 그려보는 언어 월드 모델(Language World Model, LWM)입니다. 체스 선수가 수를 두기 전에 세 수 앞을 읽는 것과 같은 발상입니다.
 
@@ -49,7 +49,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 또 하나 중요한 설계는 **네이티브 월드 모델**이라는 점입니다. 환경 모델링을 학습 후반에 덧붙인 부가 기능이 아니라, 학습 첫 단계(CPT)부터 학습 목표로 삼았습니다. 1천만 건이 넘는 실세계 상호작용 궤적을 활용해 처음부터 "환경을 모델링하는 능력"을 주입한 것입니다. 저자들의 표현을 빌리면, LLM은 환경에서 잘 행동하도록 학습되어 왔지만 환경 자체를 모델링하도록 학습된 적은 없었고, Qwen-AgentWorld가 그 빈 자리를 노립니다.
 
-![Qwen-AgentWorld 학습 파이프라인과 두 가지 활용 경로를 나타낸 구조도](/assets/images/qwen-agentworld-language-world-models-diagram.webp)
+![Qwen-AgentWorld 학습 파이프라인과 두 가지 활용 경로를 나타낸 구조도]({{ '/assets/images/qwen-agentworld-language-world-models-diagram.webp' | relative_url }})
 *Qwen-AgentWorld의 3단계 학습 파이프라인(CPT/SFT/RL)과 두 가지 다운스트림 활용 경로를 정리한 구조도입니다.*
 
 ## 세 단계 학습 파이프라인
@@ -66,12 +66,12 @@ Qwen-AgentWorld는 세 단계 학습으로 만들어집니다. 각 단계가 맡
 
 언어 월드 모델을 어떻게 평가할까요? Qwen 팀은 **AgentWorldBench**라는 전용 벤치마크를 함께 공개했습니다. 5개 프런티어 모델이 9개 기존 벤치마크에서 만들어낸 실제 상호작용을 모아 구성했고, 예측된 환경 관측을 **Format(형식), Factuality(사실성), Consistency(일관성), Realism(현실성), Quality(품질)** 다섯 축으로 채점합니다. 채점에는 별도 심판 모델(gpt-5.2)을 씁니다.
 
-![AgentWorldBench의 5개 평가축을 정리한 슬라이드](/assets/images/qwen-agentworld-language-world-models-slide-06.webp)
+![AgentWorldBench의 5개 평가축을 정리한 슬라이드]({{ '/assets/images/qwen-agentworld-language-world-models-slide-06.webp' | relative_url }})
 *예측된 환경 관측을 형식·사실성·일관성·현실성·품질 다섯 축으로 채점합니다.*
 
 아래는 공식 깃허브 저장소에 공개된 도메인별 5축 루브릭 평균(0~100 정규화)의 전체(Overall) 점수입니다.
 
-![AgentWorldBench에서 Qwen-AgentWorld와 프런티어 모델의 전체 점수 비교 막대그래프](/assets/images/qwen-agentworld-language-world-models-results.webp)
+![AgentWorldBench에서 Qwen-AgentWorld와 프런티어 모델의 전체 점수 비교 막대그래프]({{ '/assets/images/qwen-agentworld-language-world-models-results.webp' | relative_url }})
 *AgentWorldBench Overall 점수. 환경 시뮬레이션 충실도를 측정하며, 에이전트 과제 성공률과는 다른 지표입니다. 출처: QwenLM/Qwen-AgentWorld 공식 README.*
 
 숫자로 정리하면 이렇습니다.
@@ -79,7 +79,7 @@ Qwen-AgentWorld는 세 단계 학습으로 만들어집니다. 각 단계가 맡
 - **Qwen-AgentWorld-397B-A17B: 58.71**, 전체 1위입니다. GPT-5.4(58.25), Claude Opus 4.8(56.59), Gemini 3.1 Pro(54.57)를 모두 앞섭니다.
 - **Qwen-AgentWorld-35B-A3B: 56.39**, 같은 크기의 베이스 모델 Qwen3.5-35B-A3B(47.73) 대비 **+8.66** 향상입니다. 월드 모델 학습만으로 8점 이상 오른 셈입니다.
 
-![공개된 35B와 비공개 397B의 성능 간극을 짚는 슬라이드](/assets/images/qwen-agentworld-language-world-models-slide-07.webp)
+![공개된 35B와 비공개 397B의 성능 간극을 짚는 슬라이드]({{ '/assets/images/qwen-agentworld-language-world-models-slide-07.webp' | relative_url }})
 *프런티어를 제친 모델과 실제로 내려받을 수 있는 모델이 다르다는 점을 구분합니다.*
 
 여기서 두 가지를 분명히 해야 합니다. 첫째, 이 벤치마크가 재는 것은 "에이전트가 과제를 잘 푸는가"가 아니라 "모델이 환경의 다음 상태를 얼마나 정확히 예측하는가", 즉 시뮬레이터로서의 충실도입니다. 둘째, 프런티어 모델을 모두 제친 것은 397B이고, 공개된 35B는 56.39로 GPT-5.4와 Claude Opus 4.8보다는 살짝 아래입니다. 향상 폭은 인상적이지만 "공개 모델이 모든 폐쇄 모델을 이겼다"는 식의 단순화는 정확하지 않습니다.
@@ -136,7 +136,7 @@ AgentWorldBench 평가도 공개되어 있어, 도메인별 JSONL(`mcp_test.json
 
 저희 ThakiCloud는 쿠버네티스 위에서 Kueue로 GPU 워크로드를 스케줄링하고, vLLM으로 멀티테넌트 추론을 서빙하며, 고객별로 격리된 에이전트를 운영합니다. 이 관점에서 Qwen-AgentWorld가 던지는 시사점은 세 가지입니다.
 
-![ThakiCloud 플랫폼 적용 시사점 세 가지를 정리한 슬라이드](/assets/images/qwen-agentworld-language-world-models-slide-11.webp)
+![ThakiCloud 플랫폼 적용 시사점 세 가지를 정리한 슬라이드]({{ '/assets/images/qwen-agentworld-language-world-models-slide-11.webp' | relative_url }})
 
 첫째, **환경 시뮬레이션은 에이전트 학습의 비용 구조를 바꿀 수 있습니다.** 고객 환경에서 에이전트를 강화학습시키려면 실제 환경을 수천 개 띄워야 하는데, 이는 GPU만이 아니라 환경 인프라(브라우저 풀, 샌드박스 터미널, 모바일 에뮬레이터)까지 함께 운영해야 한다는 뜻입니다. 월드 모델이 그 환경을 대체하면, 강화학습 루프를 모델 서빙 한 종류로 압축할 수 있습니다. Kueue 큐 하나로 통제되는 시뮬레이션 RL은 멀티테넌트 환경에서 운영 복잡도를 크게 낮춥니다.
 
@@ -148,7 +148,7 @@ AgentWorldBench 평가도 공개되어 있어, 도메인별 JSONL(`mcp_test.json
 
 ## 한계 및 반론
 
-![시뮬레이터의 한계와 운영 리스크를 정리한 슬라이드](/assets/images/qwen-agentworld-language-world-models-slide-12.webp)
+![시뮬레이터의 한계와 운영 리스크를 정리한 슬라이드]({{ '/assets/images/qwen-agentworld-language-world-models-slide-12.webp' | relative_url }})
 
 가장 먼저 짚을 것은 **홍보 문구와 공개 범위의 간극**입니다. 소셜미디어에서는 "Alibaba가 모든 폐쇄 모델을 이긴 에이전트 모델을 공개했고, 지금 로컬에서 돌려보라"는 식으로 퍼졌습니다. 그러나 프런티어를 제친 것은 공개되지 않은 397B이고, 실제로 내려받아 돌릴 수 있는 35B는 GPT-5.4·Claude Opus 4.8보다 약간 아래입니다. "이겼다"와 "공개했다"가 같은 모델을 가리키지 않는다는 점은 분명히 해야 합니다.
 

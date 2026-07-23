@@ -6,7 +6,7 @@ seo_description: "قسنا TPS وTPOT للتوازي على مستوى المُ�
 date: 2026-07-03
 last_modified_at: 2026-07-03
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/b200-vllm-prefill-decode-disaggregation-tps/"
 tags:
   - vllm
   - b200
@@ -25,7 +25,7 @@ categories:
   - llmops
 ---
 
-![صورة تجسّد بنية يتقاسم فيها معالجا B200 مهام Prefill وDecode](/assets/images/b200-vllm-pd-disaggregation-hero.webp)
+![صورة تجسّد بنية يتقاسم فيها معالجا B200 مهام Prefill وDecode]({{ '/assets/images/b200-vllm-pd-disaggregation-hero.webp' | relative_url }})
 *تجسيد لبنية خدمة مفصولة حيث يتولى معالج واحد Prefill والآخر Decode، بينما تنتقل ذاكرة KV المؤقتة عبر NVLink.*
 
 ## نظرة عامة

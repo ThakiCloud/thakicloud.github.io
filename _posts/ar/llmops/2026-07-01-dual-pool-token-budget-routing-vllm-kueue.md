@@ -6,7 +6,7 @@ seo_description: "تعرّف على كيفية التخلص من HoL Blocking و
 date: 2026-07-01
 last_modified_at: 2026-07-01
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/technique/dual-pool-token-budget-routing-vllm-kueue/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/technique/dual-pool-token-budget-routing-vllm-kueue/"
 tags:
   - vllm
   - llm-inference

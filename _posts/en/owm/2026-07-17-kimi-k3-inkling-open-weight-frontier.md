@@ -21,7 +21,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/owm/kimi-k3-inkling-open-weight-frontier/"
+canonical_url: "https://thakicloud.com/tech-blog/en/owm/kimi-k3-inkling-open-weight-frontier/"
 lang: en
 reading_time: true
 categories:
@@ -31,7 +31,7 @@ published: false
 
 ⏱️ **Estimated reading time**: 14 min
 
-![Conceptual comparison of Kimi K3 and Thinking Machines Inkling open-weight models](/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp)
+![Conceptual comparison of Kimi K3 and Thinking Machines Inkling open-weight models]({{ '/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp' | relative_url }})
 
 ## Overview
 

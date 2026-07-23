@@ -13,7 +13,7 @@ tags:
 author_profile: true
 lang: ar
 permalink: /ar/careers/conference-kcd-seoul-2025/
-canonical_url: "https://thakicloud.github.io/ar/careers/conference-kcd-seoul-2025/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/careers/conference-kcd-seoul-2025/"
 categories:
   - careers
 --- 

@@ -17,7 +17,7 @@ toc_label: "تشريح الـ 28 ضعفاً"
 published: true
 categories:
   - llmops
-canonical_url: "https://thakicloud.github.io/ar/llmops/ktransformers-moe-offload-28x-validation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/ktransformers-moe-offload-28x-validation/"
 ---
 
 كُتب هذا المقال للمهندسين الذين يفكرون في استضافة نموذج MoE بأنفسهم، وكذلك لمسؤولي البنية التحتية الذين عليهم أن يقرروا إلى أي مدى يثقون بموجة التغريدات الحالية التي تقول "شغّل نموذجاً ضخماً على GPU واحدة". باختصار: حيلة ktransformers حقيقية وتعمل فعلاً. لكن عبارتي "28 ضعفاً" و"خزانة بقيمة 400 ألف دولار على بطاقة واحدة بسعة 24 جيجابايت" اللتين انتشرتا تقومان كل منهما على افتراض خفي. إليكم ما هي هذه الافتراضات، بناءً على قياسات من عمليتي استئجار GPU منفصلتين على RunPod.

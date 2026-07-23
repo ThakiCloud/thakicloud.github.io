@@ -4,7 +4,7 @@ excerpt: "رؤية طموحة لكبير علماء OpenAI السابق إيلي
 date: 2025-06-10
 lang: ar
 permalink: /ar/news/ilya-sutskever-ai-capability-prediction-analysis/
-canonical_url: "https://thakicloud.github.io/ar/news/ilya-sutskever-ai-capability-prediction-analysis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/ilya-sutskever-ai-capability-prediction-analysis/"
 tags: 
   - إيليا سوتسكيفر
   - OpenAI

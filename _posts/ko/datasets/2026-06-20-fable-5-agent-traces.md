@@ -16,12 +16,12 @@ author_profile: true
 toc: true
 toc_label: "Fable-5-traces 가이드"
 reading_time: true
-canonical_url: https://thakicloud.github.io/datasets/fable-5-agent-traces/
+canonical_url: https://thakicloud.com/tech-blog/datasets/fable-5-agent-traces/
 categories:
   - datasets
 ---
 
-![Fable 5 에이전트 trace 개념도](/assets/images/fable-5-agent-traces-hero.webp)
+![Fable 5 에이전트 trace 개념도]({{ '/assets/images/fable-5-agent-traces-hero.webp' | relative_url }})
 
 ## 데이터셋 개요
 

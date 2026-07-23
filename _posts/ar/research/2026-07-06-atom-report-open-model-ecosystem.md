@@ -5,7 +5,7 @@ seo_title: "قراءة منظومة النماذج المفتوحة عبر تق�
 seo_description: "يقيس تقرير ATOM (arXiv 2604.07190) تنزيلات Hugging Face واستخدام الاستدلال على OpenRouter معًا لرسم خريطة منظومة النماذج اللغوية المفتوحة. نلخّص أبرز نتائجه، مليار تنزيل لـ Qwen، وتجاوز الصين منتصف 2025، وتصدّر DeepSeek في الاستدلال، وصعود GPT-OSS، ثم نستخلص الدلالات لمنصة ai-platform من ThakiCloud التي تخدم النماذج المفتوحة في عناقيد متعددة المستأجرين داخل المؤسسة."
 date: 2026-07-06
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/research/atom-report-open-model-ecosystem/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/research/atom-report-open-model-ecosystem/"
 tags:
   - research
   - open-weight

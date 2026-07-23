@@ -15,7 +15,7 @@ author_profile: true
 toc: true
 toc_label: "AI Engineering Hub Guide"
 lang: en
-canonical_url: "https://thakicloud.github.io/en/agentops/ai-engineering-hub-comprehensive-tutorial-collection/"
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/ai-engineering-hub-comprehensive-tutorial-collection/"
 published: false
 categories:
   - agentops

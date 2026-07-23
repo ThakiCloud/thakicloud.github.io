@@ -4,7 +4,7 @@ excerpt: "تحليل صيغة نجاح Cursor وما يعنيه 'Cursor لـ X' 
 date: 2025-06-13
 lang: ar
 permalink: /ar/news/cursor-for-x/
-canonical_url: "https://thakicloud.github.io/ar/news/cursor-for-x/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/news/cursor-for-x/"
 tags:
   - أخبار التقنية
   - الذكاء الاصطناعي

@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/claude-video-agent-watch/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-video-agent-watch/"
 categories:
   - agentops
 audiobook: /assets/audio/posts/claude-video-agent-watch/audiobook-ko.mp3
@@ -33,7 +33,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글을 읽는 대상은 명확합니다. Claude Code, Cursor, Copilot, Gemini CLI 같은 코딩 에이전트를 실무에 쓰면서 "영상 자료를 어떻게 파이프라인에 넣을까"를 고민하는 개발자와 플랫폼 엔지니어입니다. 그리고 이 기법이 단순한 편의 도구를 넘어 에이전트 플랫폼 설계에 어떤 의미인지 궁금한 분입니다. 결론부터 말하면, claude-video는 "얇은 하네스 + 검증된 도구 조합"이 어떻게 새로운 감각(視覺)을 에이전트에 붙이는지 보여 주는 좋은 사례이며, ThakiCloud가 Paxis에서 추구하는 방향과 정확히 겹칩니다.
 
-![영상 프레임과 음성 파형이 하나의 렌즈로 흘러 들어가 시각을 얻는 에이전트를 형상화한 추상 이미지](/assets/images/claude-video-agent-watch-hero.png)
+![영상 프레임과 음성 파형이 하나의 렌즈로 흘러 들어가 시각을 얻는 에이전트를 형상화한 추상 이미지]({{ '/assets/images/claude-video-agent-watch-hero.png' | relative_url }})
 
 ## 이 도구는 무엇인가
 

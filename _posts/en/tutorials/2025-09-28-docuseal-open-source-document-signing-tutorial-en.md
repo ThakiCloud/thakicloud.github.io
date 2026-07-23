@@ -17,7 +17,7 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/docuseal-open-source-document-signing-tutorial/
-canonical_url: "https://thakicloud.github.io/en/tutorials/docuseal-open-source-document-signing-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/docuseal-open-source-document-signing-tutorial/"
 published: false
 categories:
   - tutorials

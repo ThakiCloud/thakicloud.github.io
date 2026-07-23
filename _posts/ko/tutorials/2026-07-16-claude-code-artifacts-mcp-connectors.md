@@ -17,7 +17,7 @@ categories:
   - tutorials
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/tutorials/claude-code-artifacts-mcp-connectors/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/claude-code-artifacts-mcp-connectors/"
 audiobook: /assets/audio/posts/claude-code-artifacts-mcp-connectors/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

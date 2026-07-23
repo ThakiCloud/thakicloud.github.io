@@ -18,7 +18,7 @@ dir: rtl
 author_profile: true
 toc: true
 toc_label: "أتمتة إدارة المشاريع"
-canonical_url: "https://thakicloud.github.io/ar/dev/github-cli-project-management-automation/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/github-cli-project-management-automation/"
 categories:
   - dev
 published: false

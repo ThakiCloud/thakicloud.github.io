@@ -18,7 +18,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/asktoact-llm-tool-use-self-correcting-clarification/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/asktoact-llm-tool-use-self-correcting-clarification/"
 reading_time: true
 lang: en
 published: false

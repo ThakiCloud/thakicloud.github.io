@@ -17,11 +17,12 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "robot"
-canonical_url: "https://thakicloud.github.io/ko/agentops/anthropic-fable5-prompting-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/anthropic-fable5-prompting-guide/"
 categories:
   - agentops
 audiobook: https://drive.google.com/file/d/1RiPCBx18whGJJWlhZ6cVaKUr2m9C4iBk/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 개요
@@ -30,7 +31,7 @@ Claude Fable 5를 다시 열기 전에 봐야 할 문서가 하나 생겼습니�
 
 가장 반직관적인 지점부터 짚겠습니다. 이 가이드의 관통하는 메시지는 "더 잘 쓰라"가 아니라 "덜 쓰라"에 가깝습니다. 이전 모델에서 좋은 결과를 뽑기 위해 쌓아 올린 상세한 지시가 Fable 5에서는 오히려 품질을 떨어뜨릴 수 있다는 것입니다. Fable 5는 사람이 몇 시간, 며칠, 길게는 몇 주에 걸쳐 처리할 만큼 복잡하고 길고 모호한 작업을 위임하는 모델로 설계됐고, 그런 모델에는 과도한 손잡이가 방해가 됩니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 인프라와 그 위에서 도는 에이전트 플랫폼을 운영하며 이런 장기 자율 에이전트를 매일 다루기 때문에, 이 가이드의 권고 하나하나가 우리에게는 곧 운용 규칙의 문제입니다. 이 글은 가이드가 제시한 네 가지 전환을 문서 근거와 함께 정리하고, 그것이 우리 제품에 어떻게 내려앉는지를 짚습니다.
 
-![장기 자율 에이전트를 위한 프롬프팅 전환을 표현한 추상 이미지](/assets/images/anthropic-fable5-prompting-guide-hero.webp)
+![장기 자율 에이전트를 위한 프롬프팅 전환을 표현한 추상 이미지]({{ '/assets/images/anthropic-fable5-prompting-guide-hero.webp' | relative_url }})
 
 ## 이 가이드는 무엇인가
 
@@ -110,13 +111,13 @@ Anthropic은 이 지시가 자사 테스트에서, 심지어 환각성 보고를
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![anthropic-fable5-prompting-guide 슬라이드 1](/assets/images/anthropic-fable5-prompting-guide-slide-01.png)
+![anthropic-fable5-prompting-guide 슬라이드 1]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-01.png' | relative_url }})
 
-![anthropic-fable5-prompting-guide 슬라이드 2](/assets/images/anthropic-fable5-prompting-guide-slide-02.png)
+![anthropic-fable5-prompting-guide 슬라이드 2]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-02.png' | relative_url }})
 
-![anthropic-fable5-prompting-guide 슬라이드 3](/assets/images/anthropic-fable5-prompting-guide-slide-03.png)
+![anthropic-fable5-prompting-guide 슬라이드 3]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-03.png' | relative_url }})
 
-![anthropic-fable5-prompting-guide 슬라이드 4](/assets/images/anthropic-fable5-prompting-guide-slide-04.png)
+![anthropic-fable5-prompting-guide 슬라이드 4]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-04.png' | relative_url }})
 
 ## 출처
 

@@ -20,14 +20,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/research/agentic-ai-hitchhikers-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/agentic-ai-hitchhikers-guide/"
 reading_time: true
 categories:
   - research
 published: false
 ---
 
-![Abstract structure of four luminous layers stacked from bottom to top, connected to each other](/assets/images/agentic-ai-hitchhikers-guide-hero.webp)
+![Abstract structure of four luminous layers stacked from bottom to top, connected to each other]({{ '/assets/images/agentic-ai-hitchhikers-guide-hero.webp' | relative_url }})
 
 ## Overview
 

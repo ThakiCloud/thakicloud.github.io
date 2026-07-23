@@ -4,7 +4,7 @@ excerpt: "Nobel Prize winner Geoffrey Hinton's in-depth interview: From existent
 date: 2025-06-17
 lang: en
 permalink: /en/news/hinton-ai-godfather-interview-key-insights/
-canonical_url: "https://thakicloud.github.io/en/news/hinton-ai-godfather-interview-key-insights/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/hinton-ai-godfather-interview-key-insights/"
 tags:
   - AI Safety
   - Geoffrey Hinton

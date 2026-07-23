@@ -9,7 +9,7 @@ tags:
   - anthropic
 date: 2026-07-02
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/prompting-claude-fable-5/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/prompting-claude-fable-5/"
 header:
   image: /assets/images/prompting-claude-fable-5-hero.webp
 categories:

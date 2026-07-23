@@ -16,7 +16,7 @@ categories:
 author_profile: true
 toc: true
 lang: en
-canonical_url: "https://thakicloud.github.io/en/research/sao-single-rollout-async-agentic-rl/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/sao-single-rollout-async-agentic-rl/"
 ---
 
 Training agents with reinforcement learning is no longer a lab-only phrase. Models that excel at tasks like fixing a codebase over dozens of turns on SWE-Bench, or working through a multi-step math proof, are mostly not the product of pretraining alone. The post-training stage, where the model actually calls tools, interacts with an environment through rollouts, and gets rewarded for it, is what makes the difference. But as those rollouts grow longer, the training method that has stood as the standard begins to break down.
@@ -29,7 +29,7 @@ This paper matters right now because the cost bottleneck in training has shifted
 
 ThakiCloud also runs five post-training techniques (SFT, CPT, DPO, GRPO, GKD) on our kubeflow-based LLM training system. So the price GRPO's group sampling pays on long rollouts, and the new risks that arise from the alternative that removes that price, are not someone else's problem. This post lays out what SAO changed, and what that change means for organizations like ours trying to train agents on multi-tenant GPU clusters.
 
-![An abstract image contrasting a stream of rollouts arriving one at a time asynchronously against rollouts frozen in a queue waiting for a group to fill](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+![An abstract image contrasting a stream of rollouts arriving one at a time asynchronously against rollouts frozen in a queue waiting for a group to fill]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.png' | relative_url }})
 *A visualization contrasting single rollouts arriving continuously, one after another, against rollouts frozen in a queue while waiting for the rest of a group to arrive.*
 
 ## What Is This Technology

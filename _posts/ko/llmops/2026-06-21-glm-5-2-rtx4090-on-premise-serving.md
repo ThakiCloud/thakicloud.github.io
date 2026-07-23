@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/llmops/glm-5-2-rtx4090-on-premise-serving/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-rtx4090-on-premise-serving/"
 reading_time: true
 categories:
   - llmops
@@ -62,13 +62,13 @@ GLM-5.2를 RTX 4090에서 돌린 사례는 "대형 SOTA 모델의 온프레미�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 1](/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-01.webp)
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 1]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-01.webp' | relative_url }})
 
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 2](/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-02.webp)
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 2]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-02.webp' | relative_url }})
 
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 3](/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-03.webp)
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 3]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-03.webp' | relative_url }})
 
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 4](/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-04.webp)
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 4]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -16,7 +16,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/mdream-html-to-markdown-conversion-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/mdream-html-to-markdown-conversion-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/mdream-html-to-markdown-conversion-tutorial/"
 published: false
 categories:
   - tutorials

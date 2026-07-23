@@ -12,12 +12,12 @@ tags:
   - paxis
 date: 2026-07-14
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/llmops/unsloth-aws-quantization-deploy/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/unsloth-aws-quantization-deploy/"
 categories:
   - llmops
 ---
 
-![رسم توضيحي تجريدي لنموذج كبير يُقطَّر إلى طبقات مضغوطة تتدفق نحو بنية خدمة سحابية](/assets/images/unsloth-aws-quantization-deploy-hero.png)
+![رسم توضيحي تجريدي لنموذج كبير يُقطَّر إلى طبقات مضغوطة تتدفق نحو بنية خدمة سحابية]({{ '/assets/images/unsloth-aws-quantization-deploy-hero.png' | relative_url }})
 
 ## نظرة عامة
 

@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "جدول المحتويات"
 permalink: /ar/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/
-canonical_url: "https://thakicloud.github.io/ar/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
 categories:
   - culture
 ---
@@ -67,7 +67,7 @@ categories:
 
 في مرحلة الاكتشاف، تواجه بالصدفة كوداً أو تقنيات مثيرة للاهتمام. أثناء التجريب، تحاول استخدامها حتى دون فهم كامل. من خلال الملاحظة، ترى ما يعمل وما يفشل. في التجريد، تعمم الأنماط الناجحة. أخيراً، في التطبيق، تكيف وتطبق هذه الأنماط على مشاكل أخرى. المهم ألا تتردد في مرحلة التجريب - المحاولة قبل الفهم الكامل هي جوهر الأمر، إذ يأتي الفهم أثناء التجريب وبعده.
 
-![حلقة تعلّم البرمجة بالحدس مع الذكاء الاصطناعي: اكتشاف، تجربة، ملاحظة، تجريد، تطبيق ثم التكرار](/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg)
+![حلقة تعلّم البرمجة بالحدس مع الذكاء الاصطناعي: اكتشاف، تجربة، ملاحظة، تجريد، تطبيق ثم التكرار]({{ '/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg' | relative_url }})
 
 هذا يشبه منهجية بحث العالم في تكوين الفرضيات وإجراء التجارب ومراقبة النتائج.
 

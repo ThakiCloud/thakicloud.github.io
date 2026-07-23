@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Deep Research API 전문가 분석"
-canonical_url: "https://thakicloud.github.io/llmops/openai-deep-research-api-expert-analysis-agentic-research/"
+canonical_url: "https://thakicloud.com/tech-blog/llmops/openai-deep-research-api-expert-analysis-agentic-research/"
 published: false
 categories:
   - llmops

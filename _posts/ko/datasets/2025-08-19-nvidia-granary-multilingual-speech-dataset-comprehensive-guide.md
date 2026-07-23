@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/datasets/nvidia-granary-multilingual-speech-dataset-comprehensive-guide/"
 reading_time: true
 categories:
   - datasets
@@ -35,7 +35,7 @@ categories:
 
 Granary는 25개 유럽 언어에 걸쳐 총 64만 시간에 달하는 방대한 음성 데이터를 제공하는 대규모 다언어 데이터셋입니다. 단순히 음성 인식(ASR)뿐만 아니라 음성 번역(AST) 작업까지 지원하여, 연구자와 개발자들이 차세대 다언어 음성 AI 모델을 구축할 수 있는 풍부한 토대를 마련했습니다.
 
-![25개 유럽 언어 음성 데이터가 하나의 다언어 음성 AI 토대로 모이는 개념도](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp)
+![25개 유럽 언어 음성 데이터가 하나의 다언어 음성 AI 토대로 모이는 개념도]({{ '/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-hero.webp' | relative_url }})
 
 ## NVIDIA Granary 데이터셋 개요
 
@@ -79,7 +79,7 @@ Granary의 강력함은 서로 다른 특성을 가진 4개의 주요 음성 코
 
 음성 번역 데이터의 경우, EuroLLM-9B 모델을 사용한 고품질 번역과 교차 언어 검증을 통해 번역 품질을 보장했습니다. 환각(hallucination) 탐지와 문자율 필터링 등의 추가적인 품질 관리 과정도 적용되었습니다.
 
-![NVIDIA Granary 데이터 파이프라인: 4개 코퍼스에서 품질 관리를 거쳐 Granary와 NeMo로](/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg)
+![NVIDIA Granary 데이터 파이프라인: 4개 코퍼스에서 품질 관리를 거쳐 Granary와 NeMo로]({{ '/assets/images/nvidia-granary-multilingual-speech-dataset-comprehensive-guide-diagram.svg' | relative_url }})
 
 ## 데이터 구조와 접근 방법
 

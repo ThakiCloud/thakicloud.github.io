@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/tutorials/motia-unified-backend-framework-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/tutorials/motia-unified-backend-framework-tutorial/"
 reading_time: true
 published: false
 categories:
@@ -890,6 +890,6 @@ Motia의 생태계는 계속해서 발전하고 있으며, 커뮤니티의 활�
 ---
 
 **관련 글:**
-- [Node.js 백엔드 아키텍처 설계 가이드](https://thakicloud.github.io/dev/nodejs-backend-architecture-guide/)
-- [이벤트 기반 아키텍처 완벽 가이드](https://thakicloud.github.io/dev/event-driven-architecture-guide/)
-- [마이크로서비스 통신 패턴 분석](https://thakicloud.github.io/dev/microservices-communication-patterns/) 
+- [Node.js 백엔드 아키텍처 설계 가이드](https://thakicloud.com/tech-blog/dev/nodejs-backend-architecture-guide/)
+- [이벤트 기반 아키텍처 완벽 가이드](https://thakicloud.com/tech-blog/dev/event-driven-architecture-guide/)
+- [마이크로서비스 통신 패턴 분석](https://thakicloud.com/tech-blog/dev/microservices-communication-patterns/) 

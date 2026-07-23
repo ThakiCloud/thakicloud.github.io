@@ -17,7 +17,7 @@ author_profile: true
 toc: true
 toc_label: "ابتكار ثقافة التطوير في عصر الذكاء الاصطناعي"
 permalink: /ar/culture/ai-coding-culture-transformation-guide/
-canonical_url: "https://thakicloud.github.io/ar/culture/ai-coding-culture-transformation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/culture/ai-coding-culture-transformation-guide/"
 categories:
   - culture
   - dev
@@ -37,7 +37,7 @@ categories:
 
 تضع البرمجة الإيقاعية المطورين كمديرين إبداعيين مع الذكاء الاصطناعي كطيارين مساعدين عاليي السرعة. تؤسس البرمجة الوكيلة المطورين كمشرفين استراتيجيين مع الذكاء الاصطناعي كزملاء مستقلين. هذا التغيير لا يمثل مجرد انتقال في الأدوات بل تحولاً نموذجياً كاملاً في ثقافة التطوير.
 
-![مقارنة بين Vibe Coding و Agentic Coding: أدوار المطور والذكاء الاصطناعي والمراحل المناسبة](/assets/images/ai-coding-culture-transformation-guide-diagram.svg)
+![مقارنة بين Vibe Coding و Agentic Coding: أدوار المطور والذكاء الاصطناعي والمراحل المناسبة]({{ '/assets/images/ai-coding-culture-transformation-guide-diagram.svg' | relative_url }})
 
 ## معضلة ثقافة التطوير الحالية
 

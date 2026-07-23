@@ -1,6 +1,6 @@
 ---
 title: "월 2,000 커밋에도 vLLM이 무너지지 않는 법: CI·벤치마크·릴리스의 세 가지 장치"
-excerpt: "vLLM은 매달 약 2,000개의 커밋을 main에 병합하면서도 프로덕션 품질을 지킵니다. 그 비결은 '더 많은 테스트'가 아니라 벤치마크 게이트, 릴리스 브랜치 고정, 커밋 단위 이등분이라는 세 가지 결정론적 장치입니다. vLLM 유지관리팀이 공개한 운영기를 타키클라우드 서빙 관점에서 뜯어봤습니다."
+excerpt: "vLLM은 매달 약 2,000개의 커밋을 main에 병합하면서도 프로덕션 품질을 지킵니다. 그 비결은 '더 많은 테스트'가 아니라 벤치마크 게이트, 릴리스 브랜치 고정, 커밋 단위 이등분이라는 세 가지 결정론적 장치입니다. vLLM 유지관리팀이 공개한 운영기를 다키클라우드 서빙 관점에서 뜯어봤습니다."
 date: 2026-07-22
 tags:
   - vLLM
@@ -17,18 +17,18 @@ toc_label: 품질 유지의 해부
 published: true
 categories:
   - dev
-canonical_url: "https://thakicloud.github.io/ko/dev/vllm-production-quality-ci-release/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/vllm-production-quality-ci-release/"
 audiobook: /assets/audio/posts/vllm-production-quality-ci-release/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![수천 개의 흐름이 하나의 좁은 게이트를 통과해 안정된 궤도로 정렬되는 모습을 형상화한 추상 이미지](/assets/images/vllm-production-quality-ci-release-hero.png)
+![수천 개의 흐름이 하나의 좁은 게이트를 통과해 안정된 궤도로 정렬되는 모습을 형상화한 추상 이미지]({{ '/assets/images/vllm-production-quality-ci-release-hero.png' | relative_url }})
 
 ## 왜 읽어야 하나
 
 이 글은 vLLM으로 LLM을 서빙하거나, 빠르게 움직이는 오픈소스에 프로덕션을 의존하는 플랫폼 엔지니어와 MLOps 실무자를 위해 씁니다. "우리가 쓰는 추론 엔진이 매주 수백 개씩 바뀌는데, 어느 버전을 언제 올려야 안전한가"를 결정해야 하는 사람이 읽을 글입니다.
 
-핵심 결론을 먼저 말씀드리겠습니다. 월 2,000 커밋이라는 속도에서도 프로덕션 품질을 지키는 열쇠는 테스트를 무한정 늘리는 것이 아닙니다. **벤치마크 게이트로 성능 회귀를 막고, 릴리스 브랜치를 가장 건강한 커밋에 고정하며, 회귀가 생기면 커밋 단위로 이등분해 원인을 특정하는** 세 가지 결정론적 장치입니다. 이 셋은 타키클라우드가 vLLM을 K8s 위에서 멀티테넌트로 서빙할 때 그대로 차용할 수 있는 운영 패턴이기도 합니다.
+핵심 결론을 먼저 말씀드리겠습니다. 월 2,000 커밋이라는 속도에서도 프로덕션 품질을 지키는 열쇠는 테스트를 무한정 늘리는 것이 아닙니다. **벤치마크 게이트로 성능 회귀를 막고, 릴리스 브랜치를 가장 건강한 커밋에 고정하며, 회귀가 생기면 커밋 단위로 이등분해 원인을 특정하는** 세 가지 결정론적 장치입니다. 이 셋은 다키클라우드가 vLLM을 K8s 위에서 멀티테넌트로 서빙할 때 그대로 차용할 수 있는 운영 패턴이기도 합니다.
 
 ## 개요
 
@@ -36,7 +36,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 속도가 왜 문제가 되는지는 추론 엔진의 특성에서 나옵니다. 일반적인 웹 서비스라면 "테스트가 통과하면 대체로 안전하다"는 가정이 통합니다. 그러나 LLM 추론 엔진에서는 **모든 테스트를 통과하고도 특정 모델이 느려지거나, 출력이 미묘하게 틀어지는** 일이 벌어집니다. 커널 하나가 바뀌면 특정 GPU 아키텍처에서만 처리량이 절반으로 떨어질 수 있고, 그런 회귀는 단위 테스트의 통과/실패로는 절대 잡히지 않습니다.
 
-타키클라우드처럼 vLLM을 프로덕션 서빙의 핵심 의존성으로 쓰는 조직에게 이 운영기는 단순한 남의 집 이야기가 아닙니다. 우리가 올리는 vLLM 버전 하나하나가 고객 워크로드의 지연 시간과 처리량을 좌우하기 때문입니다. 그래서 vLLM이 스스로를 어떻게 지키는지 이해하면, 우리가 그 위에서 무엇을 게이트로 삼아야 하는지가 보입니다.
+다키클라우드처럼 vLLM을 프로덕션 서빙의 핵심 의존성으로 쓰는 조직에게 이 운영기는 단순한 남의 집 이야기가 아닙니다. 우리가 올리는 vLLM 버전 하나하나가 고객 워크로드의 지연 시간과 처리량을 좌우하기 때문입니다. 그래서 vLLM이 스스로를 어떻게 지키는지 이해하면, 우리가 그 위에서 무엇을 게이트로 삼아야 하는지가 보입니다.
 
 ## 이 기술은 무엇인가
 
@@ -113,9 +113,9 @@ pip install https://wheels.vllm.ai/<commit-hash>/vllm-<version>-cp38-abi3-manyli
 
 이 수치가 말하는 바는 단순합니다. 이 정도 속도에서 품질을 지키려면 검증을 **사람의 리뷰에 의존해서는 안 되며**, 결정론적 게이트와 자동 측정으로 대체해야 한다는 것입니다.
 
-## 타키클라우드 제품 적용 시사점
+## 다키클라우드 제품 적용 시사점
 
-타키클라우드의 **ai-platform**은 K8s와 Kueue GPU 스케줄링 위에서 다양한 고객 환경에 모델을 서빙합니다. vLLM은 그 서빙 경로의 핵심 엔진이며, 따라서 vLLM의 품질 유지 방식은 곧 우리의 릴리스 정책 설계에 직접 반영됩니다.
+다키클라우드의 **ai-platform**은 K8s와 Kueue GPU 스케줄링 위에서 다양한 고객 환경에 모델을 서빙합니다. vLLM은 그 서빙 경로의 핵심 엔진이며, 따라서 vLLM의 품질 유지 방식은 곧 우리의 릴리스 정책 설계에 직접 반영됩니다.
 
 첫째, **버전 고정과 벤치마크 게이트를 분리**합니다. vLLM의 교훈대로 기능 테스트 통과만으로 새 버전을 프로덕션에 올리지 않습니다. 대표 고객 워크로드(모델·GPU 조합)에 대한 처리량·지연 시간 벤치마크를 롤아웃 전에 자동으로 돌리고, 회귀가 감지되면 승격을 차단하는 게이트를 둡니다. 이것은 vLLM의 연속 벤치마킹 층을 우리 배포 파이프라인의 게이트로 옮겨 오는 것입니다.
 
@@ -139,20 +139,20 @@ vLLM의 접근이 모든 조직에 그대로 이식되지는 않습니다. 몇 �
 
 빠르게 움직이는 오픈소스 위에서 프로덕션을 지키는 문제로 돌아오겠습니다. vLLM이 월 2,000 커밋 속도에서도 무너지지 않는 이유는 테스트를 무한정 늘려서가 아니라, **성능 회귀를 막는 벤치마크 게이트, 가장 건강한 커밋을 고르는 릴리스 브랜치 고정, 원인을 좁히는 커밋 단위 이등분**이라는 세 가지 결정론적 장치를 갖췄기 때문입니다.
 
-타키클라우드처럼 vLLM을 서빙 핵심으로 쓰는 조직이 오늘 당장 할 수 있는 행동은 분명합니다. 새 vLLM 버전을 올릴 때 기능 테스트 통과에만 의존하지 말고, 대표 고객 워크로드에 대한 벤치마크를 롤아웃 게이트로 세우십시오. 그리고 main을 따라가는 대신 vLLM이 검증한 릴리스 태그를 GitOps values에 고정하십시오. 이 두 가지만 배포 파이프라인에 넣어도, 상류의 속도를 그대로 흡수하면서 하류의 안정성을 지킬 수 있습니다. 품질은 더 많은 테스트가 아니라, 옳은 곳에 놓인 게이트에서 나옵니다.
+다키클라우드처럼 vLLM을 서빙 핵심으로 쓰는 조직이 오늘 당장 할 수 있는 행동은 분명합니다. 새 vLLM 버전을 올릴 때 기능 테스트 통과에만 의존하지 말고, 대표 고객 워크로드에 대한 벤치마크를 롤아웃 게이트로 세우십시오. 그리고 main을 따라가는 대신 vLLM이 검증한 릴리스 태그를 GitOps values에 고정하십시오. 이 두 가지만 배포 파이프라인에 넣어도, 상류의 속도를 그대로 흡수하면서 하류의 안정성을 지킬 수 있습니다. 품질은 더 많은 테스트가 아니라, 옳은 곳에 놓인 게이트에서 나옵니다.
 
 
 ## 관련 슬라이드
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![vllm-production-quality-ci-release 슬라이드 1](/assets/images/vllm-production-quality-ci-release-slide-01.png)
+![vllm-production-quality-ci-release 슬라이드 1]({{ '/assets/images/vllm-production-quality-ci-release-slide-01.png' | relative_url }})
 
-![vllm-production-quality-ci-release 슬라이드 2](/assets/images/vllm-production-quality-ci-release-slide-02.png)
+![vllm-production-quality-ci-release 슬라이드 2]({{ '/assets/images/vllm-production-quality-ci-release-slide-02.png' | relative_url }})
 
-![vllm-production-quality-ci-release 슬라이드 3](/assets/images/vllm-production-quality-ci-release-slide-03.png)
+![vllm-production-quality-ci-release 슬라이드 3]({{ '/assets/images/vllm-production-quality-ci-release-slide-03.png' | relative_url }})
 
-![vllm-production-quality-ci-release 슬라이드 4](/assets/images/vllm-production-quality-ci-release-slide-04.png)
+![vllm-production-quality-ci-release 슬라이드 4]({{ '/assets/images/vllm-production-quality-ci-release-slide-04.png' | relative_url }})
 
 ## 출처
 

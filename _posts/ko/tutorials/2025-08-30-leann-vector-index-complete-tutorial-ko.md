@@ -16,7 +16,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "LEANN 튜토리얼"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/leann-vector-index-complete-tutorial-ko/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/leann-vector-index-complete-tutorial-ko/"
 lang: ko
 permalink: /ko/tutorials/leann-vector-index-complete-tutorial/
 published: false

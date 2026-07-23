@@ -21,7 +21,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ko/owm/kimi-k3-inkling-open-weight-frontier/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/kimi-k3-inkling-open-weight-frontier/"
 reading_time: true
 categories:
   - owm
@@ -32,7 +32,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ⏱️ **예상 읽기 시간**: 14분
 
-![Kimi K3와 Thinking Machines Inkling 오픈웨이트 비교 개념도](/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp)
+![Kimi K3와 Thinking Machines Inkling 오픈웨이트 비교 개념도]({{ '/assets/images/kimi-k3-inkling-open-weight-frontier-hero.webp' | relative_url }})
 
 ## 개요
 

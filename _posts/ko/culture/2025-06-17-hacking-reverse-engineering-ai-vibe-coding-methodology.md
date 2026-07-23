@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: 목차
-canonical_url: "https://thakicloud.github.io/ko/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/culture/hacking-reverse-engineering-ai-vibe-coding-methodology/"
 categories:
   - culture
 ---
@@ -114,7 +114,7 @@ AI 바이브 코딩에서 학습이 일어나는 방식은 교과서 순서와 �
 
 이 루프에서 중요한 것은 2번에서 주저하지 않는 것입니다. 완전히 이해하기 전에 실험하는 것이 핵심입니다. 이해는 실험 중에, 실험 후에 따라옵니다.
 
-![AI 바이브 코딩 학습 루프: 발견·실험·관찰·추상화·응용의 반복](/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg)
+![AI 바이브 코딩 학습 루프: 발견·실험·관찰·추상화·응용의 반복]({{ '/assets/images/hacking-reverse-engineering-ai-vibe-coding-methodology-diagram.svg' | relative_url }})
 
 이 방식은 과학자들이 실제로 연구하는 방법과 닮아있습니다. 교과서에 실린 깔끔한 과학적 방법론과 달리, 실제 연구는 우연한 관찰, 반복 실험, 사후 이론화의 연속입니다. 페니실린이 우연히 발견된 것도 이 논리로 설명됩니다.
 

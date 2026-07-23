@@ -15,7 +15,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
-canonical_url: "https://thakicloud.github.io/en/tutorials/translatebook-llm-comprehensive-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/translatebook-llm-comprehensive-tutorial/"
 lang: en
 permalink: /en/tutorials/translatebook-llm-comprehensive-tutorial/
 published: false

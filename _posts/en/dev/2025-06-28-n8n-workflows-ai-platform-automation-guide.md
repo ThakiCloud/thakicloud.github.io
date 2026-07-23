@@ -19,7 +19,7 @@ lang: en
 author_profile: true
 toc: true
 toc_label: "n8n Workflow Guide"
-canonical_url: "https://thakicloud.github.io/en/dev/n8n-workflows-ai-platform-automation-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/n8n-workflows-ai-platform-automation-guide/"
 published: false
 categories:
   - dev

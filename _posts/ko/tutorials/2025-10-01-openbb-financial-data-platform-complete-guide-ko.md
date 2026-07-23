@@ -13,7 +13,7 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
-canonical_url: "https://thakicloud.github.io/ko/tutorials/openbb-financial-data-platform-complete-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/openbb-financial-data-platform-complete-guide/"
 lang: ko
 permalink: /ko/tutorials/openbb-financial-data-platform-complete-guide/
 published: false

@@ -15,14 +15,14 @@ categories:
   - news
 author_profile: true
 toc: true
-canonical_url: "https://thakicloud.github.io/ko/news/stack-layers-model-map-misses/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/stack-layers-model-map-misses/"
 ---
 
 AI 시장을 이야기할 때 우리는 보통 모델을 줄 세웁니다. 프론티어가 있고, 그 절반 값의 중국 상위 모델이 있고, 말이 안 되게 싼 초저비용 모델이 있고, 서비스 기업이 만든 자체 모델과 기기 위에서 도는 온디바이스 모델이 있다는 식입니다. 이 지도는 정확합니다. 어떤 모델이 존재하는지를 잘 보여 줍니다.
 
 그런데 이 지도는 한 가지 질문에 답하지 못합니다. 누가 이기고, 누가 마진을 가져가는가. 이 질문의 답은 모델 위가 아니라 모델 아래에 있습니다. 어떤 실리콘 위에서 도는지, 어떻게 서빙되는지, 무엇으로 평가되고 관측되는지, 어떤 라이선스로 풀렸는지, 그리고 그 모델을 감싼 제품 하니스가 무엇인지. 이 다섯 개의 층이 실제 승부처입니다. 이 글은 모델을 나열하는 지도가 건너뛴 그 다섯 층을 2026년 중반의 실제 데이터로 지도화합니다. 그리고 이 중 셋이 정확히 우리 플랫폼이 서는 자리라는 점을 짚습니다.
 
-![모델 아래 다섯 개의 스택 층과 ThakiCloud가 서는 세 자리](/assets/images/stack-layers-model-map-misses-diagram.svg)
+![모델 아래 다섯 개의 스택 층과 ThakiCloud가 서는 세 자리]({{ '/assets/images/stack-layers-model-map-misses-diagram.svg' | relative_url }})
 
 *모델 지도는 무엇이 존재하는지만 보여 줍니다. 그 아래 다섯 층 가운데 추론 실리콘, 서빙 경제학, 평가와 관측이라는 세 층이 마진과 승부를 가르는 자리이고, 정확히 ThakiCloud가 서는 곳입니다. 라이선스와 하니스는 그 위에 누가 해자를 쌓을지를 결정합니다.*
 

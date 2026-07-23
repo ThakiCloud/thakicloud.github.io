@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/en/dev/solo-ai-team-fullstack-ops/"
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/solo-ai-team-fullstack-ops/"
 reading_time: true
 categories:
   - dev
 published: false
 ---
 
-![Solo AI Engineer Full-Stack Operations Overview](/assets/images/solo-ai-team-fullstack-ops-hero.webp)
+![Solo AI Engineer Full-Stack Operations Overview]({{ '/assets/images/solo-ai-team-fullstack-ops-hero.webp' | relative_url }})
 
 ## Overview: How Can One Person Handle This Scale?
 

@@ -15,7 +15,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/news/repomirror-git-caching-revolutionary-tool/
-canonical_url: "https://thakicloud.github.io/ko/news/repomirror-git-caching-revolutionary-tool/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/repomirror-git-caching-revolutionary-tool/"
 published: false
 categories:
   - news
@@ -79,11 +79,11 @@ RepomMirror는 일반적인 개발 도전과제에 적용된 사려 깊은 엔�
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![repomirror-git-caching-revolutionary-tool 슬라이드 1](/assets/images/repomirror-git-caching-revolutionary-tool-slide-01.webp)
+![repomirror-git-caching-revolutionary-tool 슬라이드 1]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-01.webp' | relative_url }})
 
-![repomirror-git-caching-revolutionary-tool 슬라이드 2](/assets/images/repomirror-git-caching-revolutionary-tool-slide-02.webp)
+![repomirror-git-caching-revolutionary-tool 슬라이드 2]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-02.webp' | relative_url }})
 
-![repomirror-git-caching-revolutionary-tool 슬라이드 3](/assets/images/repomirror-git-caching-revolutionary-tool-slide-03.webp)
+![repomirror-git-caching-revolutionary-tool 슬라이드 3]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-03.webp' | relative_url }})
 
-![repomirror-git-caching-revolutionary-tool 슬라이드 4](/assets/images/repomirror-git-caching-revolutionary-tool-slide-04.webp)
+![repomirror-git-caching-revolutionary-tool 슬라이드 4]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-04.webp' | relative_url }})
 

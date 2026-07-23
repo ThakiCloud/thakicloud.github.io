@@ -17,7 +17,7 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/
-canonical_url: "https://thakicloud.github.io/ko/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/google-genai-toolbox-comprehensive-mcp-database-tutorial/"
 published: false
 categories:
   - tutorials

@@ -20,7 +20,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "microchip"
-canonical_url: "https://thakicloud.github.io/en/news/samsung-skhynix-ai-memory-mega-investment/"
+canonical_url: "https://thakicloud.com/tech-blog/en/news/samsung-skhynix-ai-memory-mega-investment/"
 categories:
   - news
 published: false
@@ -30,7 +30,7 @@ On June 29, 2026, a landmark figure emerged at the Cheongwadae State Guest House
 
 This post calmly unpacks what was announced that day: what will be built, where, and at what scale; the industrial trends and policies behind the numbers; and what it all means for operators of AI infrastructure.
 
-![Bar chart comparing Samsung and SK's 10-year domestic investment plan against the government's annual budget](/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.webp)
+![Bar chart comparing Samsung and SK's 10-year domestic investment plan against the government's annual budget]({{ '/assets/images/samsung-skhynix-ai-memory-mega-investment-results-en.webp' | relative_url }})
 
 ## What Was Announced
 

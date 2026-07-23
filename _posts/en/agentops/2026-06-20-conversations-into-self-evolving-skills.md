@@ -25,7 +25,7 @@ categories:
 published: false
 ---
 
-![Past conversations crystallizing into reusable skills](/assets/images/self-evolving-skills-hero.webp)
+![Past conversations crystallizing into reusable skills]({{ '/assets/images/self-evolving-skills-hero.webp' | relative_url }})
 
 ## If You Keep Explaining the Same Thing Over and Over
 

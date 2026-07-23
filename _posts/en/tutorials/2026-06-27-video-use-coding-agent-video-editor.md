@@ -16,7 +16,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "film"
-canonical_url: "https://thakicloud.github.io/en/technique/video-use-coding-agent-video-editor/"
+canonical_url: "https://thakicloud.com/tech-blog/en/technique/video-use-coding-agent-video-editor/"
 categories:
   - tutorials
 ---

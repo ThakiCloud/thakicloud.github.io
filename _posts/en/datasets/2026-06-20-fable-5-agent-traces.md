@@ -17,14 +17,14 @@ author_profile: true
 toc: true
 toc_label: "Fable-5-traces Guide"
 reading_time: true
-canonical_url: "https://thakicloud.github.io/en/datasets/fable-5-agent-traces/"
+canonical_url: "https://thakicloud.com/tech-blog/en/datasets/fable-5-agent-traces/"
 categories:
   - datasets
 ---
 
 ⏱️ **Estimated reading time**: 8 min
 
-![Fable 5 agent trace overview](/assets/images/fable-5-agent-traces-hero.webp)
+![Fable 5 agent trace overview]({{ '/assets/images/fable-5-agent-traces-hero.webp' | relative_url }})
 
 ## Dataset Overview
 

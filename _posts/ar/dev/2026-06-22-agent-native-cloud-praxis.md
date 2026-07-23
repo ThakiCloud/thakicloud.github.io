@@ -17,13 +17,14 @@ toc: true
 toc_label: "المحتويات"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.github.io/ar/paas/agent-native-cloud-praxis/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/agent-native-cloud-praxis/"
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
-![نظرة عامة على Paxis للسحابة الأصيلة للوكلاء](/assets/images/agent-native-cloud-praxis-hero.webp)
+![نظرة عامة على Paxis للسحابة الأصيلة للوكلاء]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

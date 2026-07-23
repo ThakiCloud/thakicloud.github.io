@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 알리바바가 이미지 생성 모델 Qwen-Image-3.0을 공개했습니다. 이번 판의 자랑은 그림 안 글자를 또렷하게 써주는 능력, 이른바 텍스트 렌더링입니다. 그동안 이미지 AI는 간판이나 포스터 글씨를 삐뚤빼뚤한 외계어로 뭉개기 일쑤였죠. 이제 픽셀 단위로 또박또박 찍어내니, 에이전트에게 포스터 한 장 시키면 오타 없이 돌아옵니다. 다만 이 좋은 붓이 남의 클라우드에 얹혀 있다는 사실은 그림 어디에도 안 그려집니다.
 
-![그림 글자 완벽, 붓은 누구 거임ㅋ](/assets/images/posts/만화/qwen-image-3-text-rendering-sovereignty/strip.png)
+![그림 글자 완벽, 붓은 누구 거임ㅋ]({{ '/assets/images/posts/만화/qwen-image-3-text-rendering-sovereignty/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @Lentils80: 🚨 Alibaba released Qwen-Image-3.0 today](https://x.com/hjguyhan/status/2079503700859732463) · twitter
 

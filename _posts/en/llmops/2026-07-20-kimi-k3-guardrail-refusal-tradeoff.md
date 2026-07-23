@@ -20,12 +20,12 @@ tags:
 categories:
   - llmops
 lang: en
-canonical_url: "https://thakicloud.github.io/en/llmops/kimi-k3-guardrail-refusal-tradeoff/"
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-guardrail-refusal-tradeoff/"
 ---
 
 Most security practitioners have had this experience at least once: you paste a penetration-testing script into a chatbot to get it reviewed, and all you get back is "I can't help with this request." Even though the work is a legitimate defensive effort to find and fix a vulnerability, the model shuts the door the moment it hears "cybersecurity." In July 2026, the release of Kimi K3, a new model from the open-weight camp, put this exact issue back at the center of debate. One investor claimed K3 fixed several security bugs that closed coding tools had refused to touch because of their "cyber guardrails." That specific claim is unverified, but the question underneath it is real: **who should hold the power to decide what a model refuses?**
 
-![Abstract image contrasting a flow of light passing through a controlled checkpoint with a blocked barrier](/assets/images/kimi-k3-guardrail-refusal-tradeoff-hero.png)
+![Abstract image contrasting a flow of light passing through a controlled checkpoint with a blocked barrier]({{ '/assets/images/kimi-k3-guardrail-refusal-tradeoff-hero.png' | relative_url }})
 
 This piece works through that question using Kimi K3 as a concrete case. We start with the phenomenon of over-refusal, lay out the confirmed facts about the design choice that put K3 at the center of this debate, then move to what open weights actually hand off to operators, and finally to how a company like ThakiCloud, serving models across many customer environments, should handle that burden. The conclusion up front: a model without guardrails doesn't eliminate the problem. It **hands the problem to you.**
 
@@ -39,7 +39,7 @@ There's another layer on top of this. Some closed services, when they detect a s
 
 ## The Debate Kimi K3 Started
 
-Kimi K3 is a large-scale Mixture-of-Experts model that Moonshot AI released on July 16, 2026. At 2.8 trillion total parameters, it's the first open-weight model to cross the 3-trillion-parameter class, and it supports a one-million-token context window along with native multimodality. The full weights are scheduled for release on July 27; we covered the architecture and the benchmark-trust issues that matter for adoption in more depth in [a separate post](https://thakicloud.github.io/en/llmops/kimi-k3-benchmark-trust-overfit/).
+Kimi K3 is a large-scale Mixture-of-Experts model that Moonshot AI released on July 16, 2026. At 2.8 trillion total parameters, it's the first open-weight model to cross the 3-trillion-parameter class, and it supports a one-million-token context window along with native multimodality. The full weights are scheduled for release on July 27; we covered the architecture and the benchmark-trust issues that matter for adoption in more depth in [a separate post](https://thakicloud.com/tech-blog/en/llmops/kimi-k3-benchmark-trust-overfit/).
 
 This piece focuses elsewhere. What multiple outlets flagged as K3's defining feature is that it ships with no content filtering and no query routing. As it's been put, "the model you call is the model you get." It doesn't quietly downgrade performance or hand you off to a different model when it detects a sensitive topic. For researchers, that means consistent performance even on work adjacent to medicine, law, and security.
 
@@ -47,7 +47,7 @@ What actually lit the fuse was a social-media claim that K3 fixed security bugs 
 
 On raw capability, K3 is rated as being close to the top closed models. Moonshot's own coding-agent benchmark numbers are shown below. These are all vendor-reported figures, offered here as reference pending third-party reproduction.
 
-![Kimi K3 coding agent benchmark scores as reported by Moonshot](/assets/images/kimi-k3-guardrail-refusal-tradeoff-results.png)
+![Kimi K3 coding agent benchmark scores as reported by Moonshot]({{ '/assets/images/kimi-k3-guardrail-refusal-tradeoff-results.png' | relative_url }})
 
 Judging by the scores alone, K3 has the capability to stand in for closed tools. The issue isn't capability. It's the responsibility that comes attached to that capability.
 

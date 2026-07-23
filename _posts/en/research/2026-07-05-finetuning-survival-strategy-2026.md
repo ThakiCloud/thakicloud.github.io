@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "flask"
-canonical_url: "https://thakicloud.github.io/en/research/finetuning-survival-strategy-2026/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/finetuning-survival-strategy-2026/"
 categories:
   - research
   - llmops
@@ -28,7 +28,7 @@ header:
   overlay_filter: 0.5
 ---
 
-![Fine-tuning survival strategy hero image](/assets/images/finetuning-survival-strategy-2026-hero.webp)
+![Fine-tuning survival strategy hero image]({{ '/assets/images/finetuning-survival-strategy-2026-hero.webp' | relative_url }})
 
 ## Introduction: "Don't we not need fine-tuning anymore?"
 

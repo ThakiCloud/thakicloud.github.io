@@ -16,7 +16,7 @@ toc: true
 toc_label: "جدول المحتويات"
 lang: ar
 permalink: /ar/llmops/agentops-ai-agent-monitoring-debugging-platform/
-canonical_url: "https://thakicloud.github.io/ar/llmops/agentops-ai-agent-monitoring-debugging-platform-ar/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/agentops-ai-agent-monitoring-debugging-platform-ar/"
 categories:
   - llmops
 published: false

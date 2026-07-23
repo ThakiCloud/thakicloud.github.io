@@ -6,7 +6,7 @@ seo_description: "مطالبة صورة طبقية من خمسة أقسام، و
 date: 2026-06-21
 last_modified_at: 2026-06-21
 lang: ar
-canonical_url: "https://thakicloud.github.io/ar/dev/structured-image-prompt-style-transfer/"
+canonical_url: "https://thakicloud.com/tech-blog/ar/dev/structured-image-prompt-style-transfer/"
 tags:
   - prompt-engineering
   - image-generation
