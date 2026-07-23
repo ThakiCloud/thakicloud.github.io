@@ -83,7 +83,7 @@ AI 에이전트가 데이터베이스를 직접 제어하고, 자연어 지시�
   .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
 
   .d3-arch .diagram-scroll { overflow-x: auto; }
-  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
 
   /* Group boxes */
   .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
@@ -196,6 +196,7 @@ AI 에이전트가 데이터베이스를 직접 제어하고, 자연어 지시�
           .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('role', 'img')
           .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
 
         const defs = svg.append('defs');
         const mkMarker = (id, color) => {
@@ -564,7 +565,7 @@ GROUP BY customer_id;
   .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
 
   .d3-arch .diagram-scroll { overflow-x: auto; }
-  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
 
   /* Group boxes */
   .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
@@ -677,6 +678,7 @@ GROUP BY customer_id;
           .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('role', 'img')
           .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
 
         const defs = svg.append('defs');
         const mkMarker = (id, color) => {
@@ -1150,7 +1152,7 @@ CREATE TRIGGER high_value_order_trigger
   .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
 
   .d3-arch .diagram-scroll { overflow-x: auto; }
-  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
 
   /* Group boxes */
   .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
@@ -1263,6 +1265,7 @@ CREATE TRIGGER high_value_order_trigger
           .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('role', 'img')
           .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
 
         const defs = svg.append('defs');
         const mkMarker = (id, color) => {

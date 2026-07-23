@@ -464,7 +464,7 @@ YN --> User: 실시간 미리보기
   .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
 
   .d3-arch .diagram-scroll { overflow-x: auto; }
-  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
 
   /* Group boxes */
   .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
@@ -577,6 +577,7 @@ YN --> User: 실시간 미리보기
           .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('role', 'img')
           .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
 
         const defs = svg.append('defs');
         const mkMarker = (id, color) => {
@@ -1082,7 +1083,7 @@ cat > "04-다이어그램-테스트.md" << 'EOF'
   .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
 
   .d3-arch .diagram-scroll { overflow-x: auto; }
-  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
 
   /* Group boxes */
   .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
@@ -1195,6 +1196,7 @@ cat > "04-다이어그램-테스트.md" << 'EOF'
           .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('role', 'img')
           .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
 
         const defs = svg.append('defs');
         const mkMarker = (id, color) => {
