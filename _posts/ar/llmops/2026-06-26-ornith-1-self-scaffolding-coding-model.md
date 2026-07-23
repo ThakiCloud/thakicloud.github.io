@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/ornith-1-self-scaffol
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![صورة تجريدية تجسّد بنية التسقيل الذاتي التي تبني سقالاتها بنفسها]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp' | relative_url }})
