@@ -1,167 +1,42 @@
 ---
-layout: default
-title: "Thaki Cloud | ThakiCloud 기술 블로그 - AI/ML Engineering & DevOps"
-description: "Thaki Cloud(ThakiCloud, 다키클라우드, ثاكي كلاود)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. مدونة تقنية متخصصة في هندسة الذكاء الاصطناعي والحوسبة السحابية."
-keywords: "Thaki Cloud, ThakiCloud, 다키클라우드, ثاكي كلاود, AI/ML Engineering, LLMOps, DevOps, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, الذكاء الاصطناعي, تعلم الآلة, الحوسبة السحابية, مدونة تقنية"
+layout: null
+sitemap: false
 ---
-
-<div class="lang-hero">
-  <p class="lang-hero__eyebrow">// AI·ML Engineering · LLMOps · DevOps · Kubernetes</p>
-  <h1 class="lang-hero__wordmark">
-    <img src="{{ site.baseurl }}/assets/images/thaki-logo-wordmark.webp" alt="ThakiCloud" class="lang-hero__logo">
-  </h1>
-  <div class="lang-hero__taglines">
-    <span class="t-ko">클라우드와 AI 인프라를 깊게 다루는 기술 블로그</span>
-    <span class="t-en">Engineering notes on AI/ML infrastructure, in depth.</span>
-  </div>
-  <nav class="lang-hero__enter" aria-label="Select language / 언어 선택">
-    <a href="{{ site.baseurl }}/ko/" class="lang-enter is-primary" data-lang="ko">한국어</a>
-    <a href="{{ site.baseurl }}/en/" class="lang-enter" data-lang="en">English</a>
-    <a href="{{ site.baseurl }}/ar/" class="lang-enter" data-lang="ar">العربية</a>
-  </nav>
-  <p class="lang-hero__redirect" id="redirect-message">Redirecting by browser language · 브라우저 언어로 이동 중</p>
-</div>
-
-<script>
-(function() {
-    // 브라우저 언어 감지 및 자동 리디렉션
-    const userLang = navigator.language || navigator.userLanguage;
-    
-    // Jekyll 변수를 사용하여 안전한 baseURL 설정
-    const rawBaseUrl = '{{ site.baseurl }}';
-    const siteUrl = '{{ site.url }}';
-    
-    // baseUrl 정규화 (빈 문자열 또는 슬래시 처리)
-    const baseUrl = rawBaseUrl === '' ? '' : rawBaseUrl;
-    
-    // 디버깅 정보
-    console.log('🏠 Site URL:', siteUrl);
-    console.log('📁 Raw Base URL:', rawBaseUrl);
-    console.log('📁 Normalized Base URL:', baseUrl);
-    console.log('🌐 Current Location:', window.location.href);
-    
-    // 안전한 URL 생성 함수
-    function buildUrl(lang) {
-        if (baseUrl === '' || baseUrl === '/') {
-            return '/' + lang + '/';
-        }
-        return baseUrl + '/' + lang + '/';
-    }
-    
-    const supportedLangs = {
-        'ko': buildUrl('ko'),
-        'en': buildUrl('en'),
-        'ar': buildUrl('ar')
-    };
-    
-    // 언어 코드 매핑
-    let targetLang = 'ko'; // 기본값
-    
-    if (userLang.startsWith('en')) {
-        targetLang = 'en';
-    } else if (userLang.startsWith('ar')) {
-        targetLang = 'ar';
-    } else if (userLang.startsWith('ko')) {
-        targetLang = 'ko';
-    }
-    
-    // 쿠키에서 사용자 선택 언어 확인
-    const savedLang = getCookie('preferred_language');
-    if (savedLang && supportedLangs[savedLang]) {
-        targetLang = savedLang;
-    }
-    
-    // 리디렉션 메시지 표시
-    setTimeout(function() {
-        const redirectMessage = document.getElementById('redirect-message');
-        if (redirectMessage) {
-            redirectMessage.style.opacity = '1';
-        }
-    }, 1000);
-    
-    // 디버깅 정보 출력
-    console.log('🔧 Debug Info:');
-    console.log('  Base URL:', baseUrl);
-    console.log('  User Language:', userLang);
-    console.log('  Target Language:', targetLang);
-    console.log('  Target URL:', supportedLangs[targetLang]);
-    console.log('  Current Path:', window.location.pathname);
-    console.log('  Supported URLs:', supportedLangs);
-    
-    // 3초 후 자동 리디렉션 (사용자가 수동 선택할 시간 제공)
-    setTimeout(function() {
-        const currentPath = window.location.pathname;
-        if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html')) {
-            console.log('🚀 Redirecting to:', supportedLangs[targetLang]);
-            window.location.href = supportedLangs[targetLang];
-        }
-    }, 3000);
-    
-    // 쿠키 헬퍼 함수
-    function getCookie(name) {
-        const value = "; " + document.cookie;
-        const parts = value.split("; " + name + "=");
-        if (parts.length == 2) return parts.pop().split(";").shift();
-    }
-    
-    function setCookie(name, value, days) {
-        const expires = new Date();
-        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
-    }
-    
-    // 언어 선택 버튼에 이벤트 리스너 추가
-    document.addEventListener('DOMContentLoaded', function() {
-        const langButtons = document.querySelectorAll('.lang-enter');
-        
-        // 초기화: 모든 버튼의 URL을 올바르게 설정
-        langButtons.forEach(button => {
-            const lang = button.getAttribute('data-lang');
-            const correctUrl = supportedLangs[lang];
-            if (correctUrl) {
-                const oldHref = button.getAttribute('href');
-                button.setAttribute('href', correctUrl);
-                console.log(`🔄 Updated ${lang} button URL:`, oldHref, '→', correctUrl);
-            }
-        });
-        
-        // 언어별 페이지 접근성 테스트 (선택적)
-        async function testLanguagePages() {
-            console.log('🧪 Testing language page accessibility...');
-            for (const [lang, url] of Object.entries(supportedLangs)) {
-                try {
-                    const response = await fetch(url, { method: 'HEAD' });
-                    console.log(`${lang.toUpperCase()}: ${response.status} - ${url}`);
-                } catch (error) {
-                    console.warn(`❌ ${lang.toUpperCase()} page test failed:`, error.message);
-                }
-            }
-        }
-        
-        // 페이지 테스트 실행 (5초 후)
-        setTimeout(testLanguagePages, 5000);
-        
-        langButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                const lang = this.getAttribute('data-lang');
-                console.log('🖱️ Button clicked:', { href, lang });
-                
-                // 동적으로 올바른 URL 생성
-                const correctUrl = supportedLangs[lang];
-                if (correctUrl && href !== correctUrl) {
-                    console.log('🔧 Correcting URL from', href, 'to', correctUrl);
-                    this.setAttribute('href', correctUrl);
-                }
-                
-                if (['ko', 'en', 'ar'].includes(lang)) {
-                    setCookie('preferred_language', lang, 365);
-                    console.log('✅ Language preference saved:', lang);
-                } else {
-                    console.warn('⚠️ Invalid language:', lang);
-                }
-            });
-        });
-    });
-})();
-</script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Thaki Cloud | ThakiCloud 기술 블로그</title>
+  <link rel="canonical" href="{{ site.url }}/ko/">
+  <meta name="robots" content="noindex, follow">
+  <!-- No-JS fallback: send crawlers/older clients to the Korean home. -->
+  <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/ko/">
+  <script>
+    (function () {
+      var supported = { ko: 1, en: 1, ar: 1 };
+      function cookie(name) {
+        var v = "; " + document.cookie;
+        var parts = v.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+      var lang = (navigator.language || navigator.userLanguage || "ko").toLowerCase();
+      var target = "ko";
+      if (lang.indexOf("en") === 0) target = "en";
+      else if (lang.indexOf("ar") === 0) target = "ar";
+      // A previously chosen language wins over browser detection.
+      var saved = cookie("preferred_language");
+      if (saved && supported[saved]) target = saved;
+      location.replace("{{ site.baseurl }}/" + target + "/");
+    })();
+  </script>
+</head>
+<body>
+  <noscript>
+    <p>Redirecting… choose a language:
+      <a href="{{ site.baseurl }}/ko/">한국어</a> ·
+      <a href="{{ site.baseurl }}/en/">English</a> ·
+      <a href="{{ site.baseurl }}/ar/">العربية</a>
+    </p>
+  </noscript>
+</body>
+</html>

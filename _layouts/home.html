@@ -2,27 +2,78 @@
 layout: archive
 ---
 
-{{ content }}
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
+{% comment %} Filter posts by the page language (falls back to Korean). {% endcomment %}
+{% if page.lang %}
+  {% assign posts = site.posts | where: "lang", page.lang %}
 {% else %}
-  {% comment %} Filter posts by language {% endcomment %}
-  {% if page.lang %}
-    {% assign posts = site.posts | where: "lang", page.lang %}
-  {% else %}
-    {% comment %} Default to Korean if no language specified {% endcomment %}
-    {% assign posts = site.posts | where: "lang", "ko" %}
-  {% endif %}
+  {% assign posts = site.posts | where: "lang", "ko" %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
+{% assign featured = posts | first %}
+{% comment %} `limit`/`offset` are for-loop params, not filters — applied in the loops below. {% endcomment %}
 
-{% include paginator.html %}
+<div class="toss-home">
+
+  {% comment %} ── Featured hero (newest post) ───────────────────────────── {% endcomment %}
+  {% if featured %}
+    {% assign fimg = featured.image | default: featured.header.teaser %}
+    <section class="toss-hero{% unless fimg %} toss-hero--noimg{% endunless %}">
+      <div class="toss-hero__text">
+        {% if featured.categories %}<span class="toss-chip toss-chip--accent">{{ featured.categories | first }}</span>{% endif %}
+        <h2 class="toss-hero__title"><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
+        {% if featured.excerpt %}<p class="toss-hero__excerpt">{{ featured.excerpt | markdownify | strip_html | truncate: 120 }}</p>{% endif %}
+        <p class="toss-hero__meta">{{ featured.date | date: "%Y. %m. %d." }}</p>
+      </div>
+      {% if fimg %}
+        <a class="toss-hero__media" href="{{ featured.url | relative_url }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ fimg | relative_url }}" alt="{{ featured.title | escape }}">
+        </a>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  <div class="toss-home__grid">
+    {% comment %} ── Main column: all articles ───────────────────────────── {% endcomment %}
+    <div class="toss-home__main">
+      <h3 class="toss-section-title">{{ site.data.ui-text[site.locale].recent_posts | default: "전체 아티클" }}</h3>
+      <div class="toss-list">
+        {% for post in posts offset:1 %}
+          {% assign pimg = post.image | default: post.header.teaser %}
+          <article class="toss-card">
+            <div class="toss-card__body">
+              {% if post.categories %}
+                <div class="toss-card__chips">
+                  {% for cat in post.categories limit: 2 %}<span class="toss-chip">{{ cat }}</span>{% endfor %}
+                </div>
+              {% endif %}
+              <h2 class="toss-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+              {% if post.excerpt %}<p class="toss-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 130 }}</p>{% endif %}
+              <p class="toss-card__meta">{{ post.date | date: "%Y. %m. %d." }}</p>
+            </div>
+            {% if pimg %}
+              <a class="toss-card__media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+                <img src="{{ pimg | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+              </a>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% comment %} ── Right rail: popular / recent ────────────────────────── {% endcomment %}
+    <aside class="toss-home__side">
+      <div class="toss-rail">
+        <h4 class="toss-rail__title">인기 있는 글</h4>
+        <ol class="toss-rail__list">
+          {% for post in posts limit:5 %}
+            <li class="toss-rail__item">
+              <span class="toss-rail__rank">{{ forloop.index }}</span>
+              <a href="{{ post.url | relative_url }}" class="toss-rail__link">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+</div>

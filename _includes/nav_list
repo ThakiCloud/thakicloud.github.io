@@ -1,31 +1,8 @@
 {% comment %} Original navigation assignment - now replaced with custom logic {% endcomment %}
 {% comment %} {% assign navigation = site.data.navigation[include.nav] %} {% endcomment %}
 
-<nav class="nav__list">
-  {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
-  <ul class="nav__items">
-    {% for nav in navigation %}
-      <li>
-        {% if nav.url %}
-          <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
-        {% else %}
-          <span class="nav__sub-title">{{ nav.title }}</span>
-        {% endif %}
-
-        {% if nav.children != null %}
-        <ul>
-          {% for child in nav.children %}
-            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav> -->
-
+{% comment %} Category/tag sidebar menu (the generic nav block above was dead
+   code — its unmatched `-->` leaked into the sidebar — so it was removed). {% endcomment %}
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
@@ -89,21 +66,23 @@
         {% endif %}
       {% endfor %}
 
+      {% comment %} Comics category value differs by language: en/ar use 'comics', ko uses '만화'. {% endcomment %}
+      {% if page.lang == 'en' or page.lang == 'ar' %}{% assign comics_cat = 'comics' %}{% else %}{% assign comics_cat = '만화' %}{% endif %}
       <li>
-        <span class="nav__sub-title" v-on:click='togglec()'>📂 Total Posts: {{ filtered_posts.size }}</span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/">📂 Total Posts: {{ filtered_posts.size }}</a></span>
       </li>
       <li>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/dev/">🚀 DevOps ({{ lang_dev_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/owm/">📀 OWM ({{ lang_owm_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/llmops/">🤖 LLMOps ({{ lang_llmops_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/agentops/">🏗️ AgentOps ({{ lang_agentops_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/tutorials/">💻 Tutorials ({{ lang_tutorials_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/careers/">🤝 Careers ({{ lang_careers_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/culture/">🎨 Culture ({{ lang_culture_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/news/">🌐 News ({{ lang_news_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/research/">📒 Research ({{ lang_research_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/datasets/">☁️ Datasets ({{ lang_datasets_count }})</a></span>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/categories/comics/">💬 Comics ({{ lang_comics_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=dev">🚀 DevOps ({{ lang_dev_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=owm">📀 OWM ({{ lang_owm_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=llmops">🤖 LLMOps ({{ lang_llmops_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=agentops">🏗️ AgentOps ({{ lang_agentops_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=tutorials">💻 Tutorials ({{ lang_tutorials_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=careers">🤝 Careers ({{ lang_careers_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=culture">🎨 Culture ({{ lang_culture_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=news">🌐 News ({{ lang_news_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=research">📒 Research ({{ lang_research_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=datasets">☁️ Datasets ({{ lang_datasets_count }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category={{ comics_cat | uri_escape }}">💬 Comics ({{ lang_comics_count }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">

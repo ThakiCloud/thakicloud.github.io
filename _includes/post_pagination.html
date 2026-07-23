@@ -1,14 +1,21 @@
+{% comment %}
+  Prev/next post links: plain text links with a Tabler chevron rather than MM's
+  bordered box buttons.
+{% endcomment %}
 {% if page.previous or page.next %}
-  <nav class="pagination">
+  <nav class="postnav" aria-label="Post navigation">
     {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% endif %}
+      <a href="{{ page.previous.url | relative_url }}" class="postnav__link postnav__link--prev" title="{{ page.previous.title | markdownify | strip_html }}">
+        <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6l6 6"/></svg>
+        <span>{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
+      </a>
+    {% else %}<span></span>{% endif %}
+
     {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% endif %}
+      <a href="{{ page.next.url | relative_url }}" class="postnav__link postnav__link--next" title="{{ page.next.title | markdownify | strip_html }}">
+        <span>{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span>
+        <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+      </a>
+    {% else %}<span></span>{% endif %}
   </nav>
 {% endif %}

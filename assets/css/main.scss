@@ -136,41 +136,71 @@ search: false
    ========================================================================= */
 
 :root {
+  /* Light palette = Figma design tokens (Tailwind slate scale) */
   --bg: #ffffff;
-  --bg-elevated: #f5f5f7;      /* Apple light gray section */
+  --bg-elevated: #f8fafc;      /* slate50 */
   --surface: #ffffff;
-  --surface-hover: #f5f5f7;
-  --text: #1d1d1f;            /* Apple near-black */
-  --text-muted: #6e6e73;     /* Apple secondary gray */
-  --border: #d2d2d7;         /* Apple hairline */
-  --border-strong: #c7c7cc;
-  --accent: #0071e3;         /* Apple blue */
-  --accent-hover: #0077ed;
-  --code-bg: #f5f5f7;
-  --code-text: #1d1d1f;
-  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
-  --masthead-bg: rgba(255,255,255,0.72);
-  --masthead-border: rgba(0,0,0,0.10);
+  --surface-hover: #f1f5f9;    /* slate100 — active chip / pager */
+  --text: #0f172a;             /* slate900 */
+  --text-muted: #475569;       /* slate600 */
+  --text-subtle: #64748b;      /* slate500 */
+  --border: #e2e8f0;           /* slate200 hairline */
+  --border-strong: #cbd5e1;    /* slate300 */
+  --divider: #e2e8f0;          /* slate200 — masthead + article rules */
+  --toc-idle: #94a3b8;         /* slate400 — inactive TOC entries */
+  --rule: #cbd5e1;             /* slate300 — post-page horizontal rules */
+  --tagchip-active-bg: #eff6ff;      /* blue50  */
+  --tagchip-active-border: #3b82f6;  /* blue500 */
+  --accent: #3182f6;          /* Toss blue */
+  --accent-hover: #1b64da;    /* Toss blue-700 */
+  --accent-soft: #e8f3ff;     /* Toss blue-50 chip bg */
+  --code-bg: #f2f4f6;
+  --code-text: #191f28;
+  --shadow-card: 0 1px 4px rgba(0,27,55,0.06), 0 8px 24px rgba(0,27,55,0.05);
+  --masthead-bg: rgba(255,255,255,0.80);
+  --masthead-border: rgba(0,0,0,0.06);
+  /* thakicloud accent-dot palette for category chips */
+  --dot-1: #3b82f6; --dot-2: #34d399; --dot-3: #fb923c; --dot-4: #818cf8; --dot-5: #6aace0;
+  /* High-contrast inverted pill CTA (thakicloud "Contact us"): dark on light */
+  --btn-solid-bg: #191f28; --btn-solid-text: #ffffff;
+  /* Mona Sans (thakicloud.com display face) for Latin; Pretendard picks up
+     Korean per-glyph since Mona Sans has no Hangul coverage. */
+  --font-sans: "Mona Sans", "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
 html[data-theme="dark"] {
-  --bg: #0a0a0a;             /* refined near-black */
-  --bg-elevated: #161617;
-  --surface: #161617;
-  --surface-hover: #1d1d1f;
-  --text: #f5f5f7;
-  --text-muted: #a1a1a6;
-  --border: #2a2a2c;
-  --border-strong: #38383a;
-  --accent: #2997ff;         /* brighter blue for dark contrast */
-  --accent-hover: #47a3ff;
-  --code-bg: #161617;
-  --code-text: #f5f5f7;
-  --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3);
-  --masthead-bg: rgba(10,10,10,0.72);
-  --masthead-border: rgba(255,255,255,0.10);
+  --bg: #000000;             /* thakicloud.com pure black */
+  --bg-elevated: #0a0a0a;
+  --surface: #0a0a0a;
+  --surface-hover: #141414;
+  --text: #ffffff;
+  --text-muted: #9ca3af;     /* gray-400 body */
+  --text-subtle: #6b7280;    /* gray-500 */
+  --border: #1e293b;                  /* slate800 hairline (chip outlines) */
+  --border-strong: rgba(255,255,255,0.20);
+  --divider: #334155;                 /* slate700 — brighter rules on black */
+  --toc-idle: #94a3b8;                /* slate400 reads well on black too */
+  --rule: #334155;                    /* slate700 */
+  --tagchip-active-bg: rgba(96,165,250,0.15);
+  --tagchip-active-border: #60a5fa;
+  --accent: #60a5fa;         /* bright blue for contrast on black */
+  --accent-hover: #93c5fd;
+  --accent-soft: rgba(96,165,250,0.15);
+  --code-bg: #0a0a0a;
+  --code-text: #ffffff;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.6), 0 12px 32px rgba(0,0,0,0.5);
+  --masthead-bg: rgba(0,0,0,0.80);
+  --masthead-border: rgba(255,255,255,0.08);
+  /* thakicloud accent-dot palette for category chips */
+  --dot-1: #3b82f6; --dot-2: #34d399; --dot-3: #fb923c; --dot-4: #818cf8; --dot-5: #6aace0;
+  /* Inverted pill CTA on black → white pill with dark text (thakicloud). */
+  --btn-solid-bg: #ffffff; --btn-solid-text: #111827;
 }
+
+/* Toss uses Pretendard as its primary face. */
+body { font-family: var(--font-sans); }
 
 /* Base surfaces ----------------------------------------------------------- */
 html { background-color: var(--bg); }
@@ -190,7 +220,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-.page__title, .page__title a, .archive__item-title, .page__content h1, .page__content h2 {
+.page__title, .page__title a, .archive__item-title, .page__content h1, .page__content h2,
+.site-title, .greedy-nav a, .toss-hero__title, .toss-card__title, .toss-section-title {
+  font-family: var(--font-sans);   /* Mona Sans display; Pretendard for Hangul */
   color: var(--text);
   letter-spacing: -0.02em;         /* tight display tracking */
   font-weight: 700;
@@ -199,6 +231,37 @@ h1, h2, h3, h4, h5, h6,
    <a>); that dark-ish value made the title near-invisible in dark mode. */
 .page__title a:hover { color: var(--text); }
 .page__content h1, .page__content h2 { line-height: 1.18; }
+/* MM sets .page__title to line-height:1, which is very tight on a wrapping
+   two-line post title. */
+.page__title { line-height: 1.3; }
+
+/* Post-footer taxonomy (tags / category) — Mona Sans rather than MM's mono. */
+.page__taxonomy,
+.page__taxonomy strong,
+.page__taxonomy-item {
+  font-family: var(--font-sans);
+}
+.page__taxonomy-item {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+/* tags are plain text now — keep them visually calm, not link-styled */
+span.page__taxonomy-item { color: var(--text-muted); }
+
+/* 4px between tags. The comma separators are dropped, since as separate
+   inline items they'd sit inside the gap rather than hug the preceding tag. */
+.page__taxonomy [itemprop="keywords"] {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  vertical-align: middle;
+}
+.page__taxonomy .sep { display: none; }
+
+/* Breadcrumbs: MM bolds the current crumb; keep the whole trail at 500. */
+.breadcrumbs ol,
+.breadcrumbs ol a,
+.breadcrumbs .current { font-weight: 500; }
 
 p, li, .page__content { color: var(--text); }
 .page__content { font-size: 1.0625em; line-height: 1.7; }  /* ~17px, airy */
@@ -228,8 +291,8 @@ a:hover, a:focus { color: var(--accent-hover); text-decoration: none; }
   height: 2rem; width: auto; max-width: none; display: block;
   transition: filter 0.2s ease;
 }
-/* gradient mark goes invisible on near-black — render as clean white in dark */
-html[data-theme="dark"] .site-logo img { filter: brightness(0) invert(1); }
+/* dark mode now swaps to the dedicated dark SVG (see .logo-light/.logo-dark),
+   so no filter inversion is needed here anymore. */
 
 /* Archive / post list — quiet cards with hairline + lift on hover --------- */
 .archive__item {
@@ -267,11 +330,11 @@ html[data-theme="dark"] .site-logo img { filter: brightness(0) invert(1); }
   transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
 }
 .btn--primary {
-  background-color: var(--accent);
+  background-color: var(--btn-solid-bg);
   border: 0;
-  color: #fff;
+  color: var(--btn-solid-text);
 }
-.btn--primary:hover { background-color: var(--accent-hover); transform: scale(1.02); }
+.btn--primary:hover { background-color: var(--btn-solid-bg); color: var(--btn-solid-text); opacity: 0.88; transform: scale(1.02); }
 .btn--primary:active { transform: scale(0.98); }
 
 /* Code — calm surfaces, mono ---------------------------------------------- */
@@ -306,29 +369,48 @@ hr { border-color: var(--border); }
 .page__footer a, .page__footer-copyright a { color: var(--text-muted); }
 .page__footer a:hover { color: var(--accent); }
 
-/* Table of contents (목차) — MM bakes a single light palette ($gray /
-   $background-color / $primary-color); repaint onto vars so it follows the
-   dark/light toggle instead of staying light in dark mode. */
+/* Table of contents — Figma 17958-164.
+   A flat list rather than MM's boxed card: no background, border, radius,
+   shadow or title bar. Items are 14px Medium slate400, 16px apart; the active
+   one is SemiBold in the primary text colour. */
 .toc {
-  color: var(--text-muted);
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow-card);
+  color: var(--toc-idle);
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
-.toc .nav__title {
-  color: #fff;
-  background: var(--accent);
+.toc .nav__title { display: none; }
+
+.toc__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.toc__menu a {
-  color: var(--text-muted);
-  border-bottom-color: var(--border);
+.toc__menu li { margin: 0; border: 0; }
+.toc__menu li a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 0;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--toc-idle);
+  transition: color .15s ease;
 }
-.toc__menu a:hover { color: var(--text); }
-.toc__menu .active a,
+.toc__menu li a:hover { background: transparent; color: var(--text); }
+.toc__menu li.active a,
 .toc .active a {
-  background-color: var(--accent);
-  color: #fff;
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
 }
 
 /* =========================================================================
@@ -383,8 +465,8 @@ html[data-theme="dark"] .lang-hero__logo { filter: brightness(0) invert(1); }
   transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
 .lang-hero__enter a:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); }
-.lang-hero__enter a.is-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-.lang-hero__enter a.is-primary:hover { background: var(--accent-hover); color: #fff; }
+.lang-hero__enter a.is-primary { background: var(--btn-solid-bg); color: var(--btn-solid-text); border-color: var(--btn-solid-bg); }
+.lang-hero__enter a.is-primary:hover { background: var(--btn-solid-bg); color: var(--btn-solid-text); opacity: 0.88; }
 .lang-hero__redirect { margin-top: 2rem; font-size: 0.82rem; color: var(--text-muted); opacity: 0; transition: opacity 0.5s ease; }
 
 /* Respect reduced motion -------------------------------------------------- */
@@ -466,49 +548,882 @@ html[data-theme="dark"] {
   @include breakpoint($large)  { max-height: 440px; }  /* ≥1024px */
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   Focused layout (2026-07-23, revised): keep the left author sidebar + a ~1000px
-   read column + inline TOC. Container 1300 (skin $max-width) holds ~300 sidebar +
-   ~1000 content. The right-rail TOC stays removed (inline at top) — that is the
-   real space win vs the original 3-column. Wide tables/diagrams fit the column;
-   very wide tables scroll. Light/dark tokens + mobile single-column preserved. */
+/* =========================================================================
+   Toss-tech inspired home layout (redesign)
+   Reference: https://toss.tech — featured hero, category chips, article rows
+   with thumbnails and hairline dividers, popular rail. Applies to the
+   language home pages (layout: home → body.layout--home).
+   ========================================================================= */
 
-.masthead__inner-wrap { max-width: 1300px; }   /* nav shell matches content */
+/* Full-bleed the home: hide MM sidebar + page title + breadcrumb, widen. */
+.layout--home .sidebar,
+.layout--home .breadcrumbs,
+.layout--home #page-title { display: none; }
+.layout--home #main {
+  max-width: 1180px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.layout--home .archive {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: none;
+}
 
-/* right-rail TOC was moved inline → drop MM's 300px right reservation so the
-   article isn't squished (was 1300 - 300 sidebar - 300 TOC = ~700). Keep the
-   left author-sidebar width reservation (calc(100% - 300)). */
-.page { padding-right: 0; }
+.toss-home { padding: 1rem 0 4rem; }
 
-/* center the post title (body text stays left-aligned for reading) */
-.page__title { text-align: center; }
-.page__title + .page__meta { text-align: center; }
+/* Shared category chip — thakicloud.com pill: near-black surface, hairline
+   border, and a small colored accent dot before the label. -----------------*/
+.toss-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.5em 0.85em;
+  border-radius: 9999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.toss-chip::before {
+  content: "";
+  width: 0.5em; height: 0.5em;
+  border-radius: 50%;
+  background: var(--dot-1);
+  flex: 0 0 auto;
+}
+/* Rotate dot hues so a row of chips reads like thakicloud's feature pills. */
+.toss-chip:nth-of-type(5n+2)::before { background: var(--dot-2); }
+.toss-chip:nth-of-type(5n+3)::before { background: var(--dot-3); }
+.toss-chip:nth-of-type(5n+4)::before { background: var(--dot-4); }
+.toss-chip:nth-of-type(5n+5)::before { background: var(--dot-5); }
+.toss-chip--accent {
+  color: var(--text);
+}
+.toss-chip--accent::before { background: var(--dot-1); }
+.toss-card__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
 
-/* content reading column ~1000, centered (fills the column with a sidebar,
-   centers on sidebarless pages so it never sits left with a big right gap) */
-.page__content { max-width: 1000px; margin-left: auto; margin-right: auto; }
+/* Featured hero ------------------------------------------------------------*/
+.toss-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.toss-hero--noimg { grid-template-columns: 1fr; }
+.toss-hero__text { min-width: 0; }
+.toss-hero__title {
+  margin: 0.9rem 0 0.7rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+}
+.toss-hero__title a { color: var(--text); border-bottom: 0; }
+.toss-hero__title a:hover { color: var(--accent); }
+.toss-hero__excerpt {
+  margin: 0 0 1.1rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.toss-hero__meta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+}
+.toss-hero__media {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--surface-hover);
+  border: 0;
+}
+.toss-hero__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.toss-hero:hover .toss-hero__media img { transform: scale(1.03); }
 
-/* wide elements fit the column; very wide tables scroll instead of overflowing */
+/* Two-column body: articles + popular rail --------------------------------*/
+.toss-home__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 3rem;
+  align-items: start;
+}
+.toss-section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.5rem;
+}
+
+/* Article rows -------------------------------------------------------------*/
+.toss-list { display: flex; flex-direction: column; }
+.toss-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+  /* Reset MM's .archive__item card chrome so rows read as a Toss list. */
+  border-radius: 0;
+  background: transparent;
+}
+.toss-card:first-child { padding-top: 0; }
+.toss-card__body { min-width: 0; flex: 1; }
+.toss-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.toss-card__title a { color: var(--text); border-bottom: 0; }
+.toss-card__title a:hover { color: var(--accent); }
+.toss-card__excerpt {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.toss-card__meta {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-subtle);
+  margin: 0;
+}
+.toss-card__media {
+  flex: 0 0 168px;
+  width: 168px;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface-hover);
+  border: 0;
+}
+.toss-card__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.toss-card:hover .toss-card__media img { transform: scale(1.04); }
+
+/* Popular rail -------------------------------------------------------------*/
+.toss-home__side { position: sticky; top: 84px; }
+.toss-rail {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+.toss-rail__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.1rem;
+}
+.toss-rail__list { list-style: none; margin: 0; padding: 0; counter-reset: none; }
+.toss-rail__item { display: flex; gap: 0.85rem; align-items: baseline; padding: 0.55rem 0; }
+.toss-rail__rank {
+  flex: 0 0 auto;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--accent);
+  min-width: 1ch;
+}
+.toss-rail__link {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  border-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.toss-rail__link:hover { color: var(--accent); }
+
+/* Responsive ---------------------------------------------------------------*/
+@media (max-width: 900px) {
+  .toss-home__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .toss-home__side { position: static; }
+}
+@media (max-width: 680px) {
+  .toss-hero { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1.5rem; }
+  .toss-hero__media { order: -1; }
+  .toss-card { gap: 1rem; }
+  .toss-card__media { flex-basis: 108px; width: 108px; border-radius: 10px; }
+  .toss-card__title { font-size: 1.08rem; }
+  .toss-card__excerpt { -webkit-line-clamp: 2; }
+}
+
+/* RTL (Arabic) tweaks ------------------------------------------------------*/
+html[lang="ar"] .toss-rail__rank { }
+
+/* =========================================================================
+   Tagify tags-filter (tags page) — bind to theme vars so the input box and
+   the suggestions dropdown follow the dark/light toggle. Tagify's CDN CSS
+   reads these custom properties via var(--x, default), and loads after our
+   stylesheet, so we drive it through its own variables plus direct overrides.
+   ========================================================================= */
+.tagify {
+  --tags-border-color: var(--border);
+  --tags-hover-border-color: var(--border-strong);
+  --tags-focus-border-color: var(--accent);
+  --tag-bg: var(--surface-hover);
+  --tag-hover: var(--surface-hover);
+  --tag-text-color: var(--text);
+  --tag-remove-btn-color: var(--text-muted);
+  --tag-remove-bg: var(--accent-soft);
+  --placeholder-color: var(--text-subtle);
+  --placeholder-color-focus: var(--text-muted);
+  --tag-border-radius: 8px;
+
+  background: var(--surface);
+  border-radius: 12px;
+  min-height: 3rem;
+}
+.tagify__input { color: var(--text); }
+.tagify__input::before { color: var(--text-subtle); }              /* placeholder */
+.tagify__input:empty::before { color: var(--text-subtle); }
+.tagify__tag > div { color: var(--text); }
+.tagify__tag__removeBtn { color: var(--text-muted); }
+.tagify__tag__removeBtn:hover { color: #fff; }
+
+/* Suggestions dropdown panel. Tagify's CDN CSS loads after this stylesheet
+   (it's <link>-ed in the tags page body) and hard-codes a white wrapper, so
+   override with !important to win regardless of source order. */
+.tagify__dropdown {
+  --tagify-dd-bg-color: var(--surface);
+  --tagify-dd-color-primary: var(--accent);
+  --tagify-dd-text-color: var(--text);
+}
+.tagify__dropdown__wrapper {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+  box-shadow: var(--shadow-card) !important;
+}
+
+/* Author sidebar: social links (Website/GitHub/LinkedIn/X/Email) + follow
+   button moved to the site footer — hide the sidebar block, keep the category
+   nav list (a separate .nav__list) intact. */
+.sidebar .author__urls-wrapper { display: none; }
+
+/* Combined All-Posts filter UI (category chip + count) */
+.posts-filter { margin: 0 0 0.5rem; }
+.active-category { margin-top: 0.75rem; }
+.active-category .toss-chip { font-size: 0.85rem; padding: 0.55em 0.6em 0.55em 0.9em; }
+.active-category__clear {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: none; border: 0; color: inherit; cursor: pointer;
+  font-size: 1.15em; line-height: 1; padding: 0; margin-left: 0.15em;
+  opacity: 0.7;
+}
+.active-category__clear:hover { opacity: 1; }
+.posts-count {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+}
+
+/* =========================================================================
+   Figma "Posts" layout (node 17936:138)
+   Centered single column (948px), category chips instead of a left sidebar,
+   hairline post rows, client-side pagination. All colors come from the theme
+   variables so LIGHT and DARK both render correctly.
+   ========================================================================= */
+
+/* Post pages: drop the category sidebar (it duplicated the chip filters on the
+   Posts page) and centre the article in the same 948px column. */
+.layout--single .sidebar { display: none; }
+.layout--single #main {
+  max-width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  float: none;
+}
+.layout--single .page,
+.layout--single .page__inner-wrap {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  float: none;
+}
+/* MM indents the breadcrumb list to clear the (now removed) left sidebar. */
+.layout--single .breadcrumbs {
+  max-width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+/* MM floats the crumb list right at `calc(100% - 300px)` to sit beside the
+   sidebar — reset it so the crumbs align with the article. */
+.layout--single .breadcrumbs ol {
+  float: none;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Related posts: MM floats/narrows it to sit beside the old sidebar — let it
+   fill the article column. */
+.layout--single .page__related {
+  float: none;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  clear: both;
+}
+/* Even grid + clamped text so every card is the same height regardless of how
+   long its title/excerpt is (MM floats these, so heights were ragged). */
+.layout--single .page__related .grid__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+.layout--single .page__related .grid__item {
+  width: 100%;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.layout--single .page__related .archive__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.layout--single .page__related .archive__item-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 0.4rem;
+}
+.layout--single .page__related .archive__item-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Prev/next post links — plain links with a chevron, no box buttons. */
+.postnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  /* must clear the floated (sticky) TOC, otherwise it gets squeezed into the
+     sliver of space beside it and wraps one character per line */
+  clear: both;
+}
+/* `clear` can absorb .postnav's margin-top into the float clearance, leaving
+   the rule sitting tight under the date — put the space on the meta block so
+   it can't be swallowed. */
+.layout--single .page__meta { padding-bottom: 1.5rem; }
+/* MM zeroes the margins on .page__meta p, so the date sits flush against the
+   category line above it. */
+.layout--single .page__date { padding-top: 1rem; }
+
+/* One rule colour across the post page. MM hardcodes #d2d2d7 for the h2
+   underline and the related-posts divider (not theme-aware), while prev/next
+   used the lighter slate200 — unify them all on --rule. */
+.layout--single .page__content h2,
+.layout--single .page__related { border-color: var(--rule); }
+.postnav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);            /* slate900 in light, white in dark */
+  border-bottom: 0;
+  background: none;
+  padding: 0;
+}
+.postnav__link:hover { color: var(--accent); border-bottom: 0; }
+.postnav__link .tbi { flex: 0 0 auto; }
+
+/* Date meta icon (Tabler calendar-event) */
+.page__date-icon { vertical-align: -2px; margin-right: 2px; }
+
+/* Table of contents.
+   Wide screens: lift it out of the text column into the right margin so it
+   doesn't eat into the article measure. Needs ~244px of clear space beside the
+   948px column, i.e. 948 + 2×244 ≈ 1440px.
+   Narrower: stack it above the article instead of floating into the copy. */
+.layout--single .page__inner-wrap { position: relative; }
+
+@media (min-width: 1440px) {
+  /* Floated so it leaves the text flow, pulled into the right margin with a
+     negative margin (so copy doesn't wrap around it), and sticky so the card
+     follows the scroll. Sticky can't be combined with absolute positioning,
+     hence float rather than `left: 100%`. */
+  .layout--single .sidebar__right {
+    float: right;
+    position: sticky;
+    top: 88px;
+    width: 220px;
+    margin-left: 24px;
+    margin-right: -244px;
+    margin-bottom: 2rem;
+    clear: none;
+  }
+  .layout--single .sidebar__right .toc {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    /* keep it scrollable when the entries are long, but without the visible
+       scrollbar track appearing beside the list */
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* legacy Edge */
+  }
+  .layout--single .sidebar__right .toc::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+@media (max-width: 1439px) {
+  .layout--single .sidebar__right {
+    float: none;
+    width: 100%;
+    margin: 0 0 2rem;
+  }
+}
+
+/* Layout — drop the sidebar, center the column at the design's 948px */
+.layout--posts .sidebar,
+.layout--posts .breadcrumbs { display: none; }
+.layout--posts #main {
+  max-width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  float: none;
+}
+.layout--posts .archive { width: 100%; padding: 0; margin: 0; float: none; }
+
+/* "Posts" heading — 24px bold, left aligned */
+.layout--posts .page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin: 2.5rem 0 1.25rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.postspage { padding-bottom: 4rem; }
+
+/* ---- Search box (Tagify restyled to the design's input) ---- */
+.postspage__search { position: relative; margin-bottom: 2rem; }
+.postspage__search .tagify {
+  --tags-border-color: var(--border);
+  --tags-hover-border-color: var(--border-strong);
+  --tags-focus-border-color: var(--border-strong);
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  padding: 3px 52px 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+/* Once a tag chip is present it brings its own margin, so tighten the
+   container's left padding. The placeholder-only state keeps the 10px. */
+.postspage__search .tagify:not(.tagify--noTags) { padding-left: 3px; }
+.postspage__search .tagify__input {
+  margin: 0;
+  padding: 8px;
+  font-size: 0.875rem;          /* 14px, bodyLg */
+  line-height: 20px;
+  color: var(--text);
+}
+.postspage__search .tagify__input::before,
+.postspage__search .tagify__input:empty::before { color: var(--text-subtle); }
+.postspage__search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-subtle);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+/* =========================================================================
+   Tag chips — Figma 17944-454 (selected tag in the input) and 17944-657
+   (suggestions dropdown). White pill, slate200 hairline, 6px radius,
+   4px/8px padding; the highlighted suggestion is blue50 on blue500.
+   ========================================================================= */
+
+/* Tagify paints its tag background with an inset box-shadow; make that
+   transparent so a real border/background can be used instead. */
+.postspage__search .tagify {
+  --tag-bg: transparent;
+  --tag-hover: transparent;
+  --tag-remove-bg: transparent;
+  --tag-text-color: var(--text);
+  --tag-border-radius: 6px;
+}
+.postspage__search .tagify__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 2px;              /* 2px each side → 4px gap between chips */
+  padding: 4px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+}
+.postspage__search .tagify__tag > div { padding: 0; margin: 0; }
+.postspage__search .tagify__tag > div::before { display: none; }
+.postspage__search .tagify__tag .tagify__tag-text { color: var(--text); }
+/* the design places the ✕ after the label */
+.postspage__search .tagify__tag__removeBtn {
+  order: 2;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 12px;
+  color: var(--text-muted);
+  background: transparent;
+  border-radius: 0;
+  opacity: 1;
+}
+.postspage__search .tagify__tag__removeBtn:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+/* Suggestions dropdown — detached from the input by 4px, hairline all round.
+   Tagify defaults to a blue primary colour and drops the top border so the
+   panel looks fused to the input; both are overridden here. */
+.tagify__dropdown {
+  --tagify-dd-color-primary: transparent;
+  margin-top: 6px;              /* Tagify seats the panel ~2px up → 4px visual gap */
+  /* the outer element carries its own square border, which showed as a line
+     under the input and peeked past the wrapper's rounded corners */
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.tagify__dropdown .tagify__dropdown__wrapper {
+  border: 1px solid var(--border) !important;
+  border-top-width: 1px !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+/* Flex + gap rather than inline-block + margins: the newlines between Tagify's
+   generated items would otherwise render as whitespace, adding a stray space
+   to the left of every chip. Gaps are the design's 4px column / 8px row. */
+.tagify__dropdown.tags-look .tagify__dropdown__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 4px;
+  padding: 8px;
+}
+.tags-look .tagify__dropdown__item {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;                  /* spacing comes from the wrapper's gap */
+  padding: 4px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  transition: background-color .12s ease, border-color .12s ease;
+}
+/* keyboard-highlighted / hovered = neutral, so blue can mean "selected" */
+.tags-look .tagify__dropdown__item--active,
+.tags-look .tagify__dropdown__item:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+/* already-selected tag stays in the list, marked blue (Figma's blue chip).
+   Colour alone signals it — Tagify's ✓ ::before is suppressed. */
+.tags-look .tagify__dropdown__item--selected {
+  background: var(--tagchip-active-bg);
+  border-color: var(--tagchip-active-border);
+  color: var(--text);
+}
+/* includeSelectedTags draws a ✓ on the selected item and indents EVERY item to
+   make room for it:
+     .tagify__dropdown:has(...--selected) .tagify__dropdown__item{text-indent:1em}
+   We show selection by colour instead, so drop both the glyph and the indent —
+   otherwise chips gain 1em (14px) of phantom space once a tag is picked. */
+.tags-look .tagify__dropdown__item::before,
+.tags-look .tagify__dropdown__item--selected::before {
+  content: none !important;
+  display: none !important;
+}
+.tags-look .tagify__dropdown__item { text-indent: 0 !important; }
+
+/* Post-row calendar icon (Tabler calendar-event) */
+.postrow__meta .postrow__cal { width: 16px; height: 16px; flex: 0 0 auto; }
+
+/* ---- Category chips (replaces the sidebar category list) ---- */
+.catchips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 12px;
+  row-gap: 0;                 /* row spacing comes from .catchips__break */
+  margin: 0 0 2.5rem;
+}
+/* Row break after the 6th chip → the design's 6 + 6 layout. The break forms
+   its own flex line, so row-gap is zeroed here and the 12px row spacing comes
+   from the break's own height (otherwise it'd collect 12px on both sides = 24). */
+.catchips__break { flex-basis: 100%; height: 12px; margin: 0; }
+@media (max-width: 900px) {
+  .catchips__break { display: none; }
+  .catchips { row-gap: 12px; }   /* natural wrapping once the break is gone */
+}
+.catchip {
+  font-family: var(--font-sans);
+  font-size: 1rem;              /* 16px Mona Sans Medium */
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.catchip:hover { background: var(--surface-hover); border-color: var(--border-strong); }
+.catchip.is-active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+/* Kill the browser focus ring that drew a blue outline inside the chip on
+   click; keep a visible (outside) ring for keyboard users only. */
+.catchip:focus { outline: none; box-shadow: none; }
+.catchip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- Post rows — no cards, hairline dividers (32px above/below) ---- */
+.postrow {
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--divider);
+}
+.postrow[hidden] { display: none; }
+.postrow__title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+.postrow__title a { color: var(--text); border-bottom: 0; }
+.postrow__title a:hover { color: var(--accent); }
+.postrow__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: var(--text-subtle);
+}
+.postrow__excerpt {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.postspage__empty {
+  text-align: center;
+  color: var(--text-subtle);
+  padding: 3rem 0;
+}
+
+/* ---- Pagination ---- */
+.pager { display: flex; justify-content: center; gap: 8px; margin-top: 2.5rem; }
+.pager__item {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+.pager__item:hover:not(:disabled) { background: var(--surface-hover); }
+.pager__item.is-active { background: var(--surface-hover); font-weight: 600; }
+.pager__item:disabled { opacity: .35; cursor: default; }
+.pager__item:focus { outline: none; box-shadow: none; }
+.pager__item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- Light/dark logo assets: swap the artwork instead of filter-inverting.
+   Needs `img.` + parent to outrank `.site-logo img { display:block }`. ---- */
+.site-logo img.logo-dark,
+.site-footer__brand img.logo-dark { display: none; }
+html[data-theme="dark"] .site-logo img.logo-light,
+html[data-theme="dark"] .site-footer__brand img.logo-light { display: none; }
+html[data-theme="dark"] .site-logo img.logo-dark,
+html[data-theme="dark"] .site-footer__brand img.logo-dark { display: block; }
+
+/* ---- Footer surface: white (follows --bg, so black in dark mode) ---- */
+.page__footer { background-color: var(--bg); }
+
+/* ---- Masthead icon cluster spacing, per Figma: 24 / 24 / 16 ---- */
+.greedy-nav .visible-links .dropdown-toggle { margin: 0; font-weight: 500; }
+.greedy-nav .search__toggle,
+.greedy-nav .theme-toggle {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+/* Icons are 16px inside 24px buttons → 4px slack per side, so the button gap
+   is 8px to land a 16px icon-to-icon gap, and the divider offset is 20px. */
+.greedy-nav .search__toggle { margin-left: 44px; }
+.greedy-nav .theme-toggle  { margin-left: 8px; }
+.greedy-nav .search__toggle::before { left: -20px; }
+
+/* Nav links: weight 500, and no colour-change / underline on hover.
+   The underline is a ::before bar the theme scales in on hover — kill it.
+   Scoped to .visible-links so the search toggle's ::before divider survives. */
+.greedy-nav .visible-links a::before,
+.greedy-nav .visible-links a:hover::before { display: none; }
+.greedy-nav a { font-weight: 500; }
+/* Brand title stays heavier than the nav links */
+.greedy-nav .site-title { font-weight: 600; }
+.greedy-nav a:hover,
+.greedy-nav a:focus,
+.greedy-nav .dropdown-toggle:hover,
+.greedy-nav .dropdown-toggle:focus {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* ---- Tabler icons (inline SVG, stroke = currentColor so themes inherit) ---- */
+.tbi { display: inline-block; vertical-align: middle; flex: 0 0 auto; }
+.dropdown-toggle .tbi--caret { margin-left: 2px; }
+/* 16x16 icons kept inside 24x24 buttons (so the tap target stays accessible).
+   The 4px of slack each side is subtracted from the theme-toggle margin below
+   to preserve the 16px icon-to-icon gap from the design. */
+.search__toggle .tbi,
+.theme-toggle .tbi { width: 16px; height: 16px; }
+/* the sun/moon swap is driven by data-theme — keep SVGs in that flow */
+.theme-toggle .icon-moon { display: none; }
+.theme-toggle .icon-sun { display: inline-block; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
+
+/* ---- Masthead: short title, divider before the icon group ---- */
+.site-subtitle { display: none; }
+/* Figma spacing: Language →24px→ divider →24px→ search icon.
+   44px + the icon's 4px inset inside the 24px button = 48px to the glyph. */
+.greedy-nav .search__toggle { margin-left: 44px; position: relative; }
+.greedy-nav .search__toggle::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 16px;
+  background: var(--divider);
+}
+
+/* ---- Footer: wordmark left, icon-only socials right ---- */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.site-footer__brand { display: inline-flex; align-items: center; gap: 10px; }
+.site-footer__brand img { display: block; width: auto; }
+.site-footer__mark { height: 28px; }
+.site-footer__wordmark { height: 18px; }
+.site-footer__logo { height: 28px; }   /* dark svg = mark + wordmark in one */
+.site-footer__right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.site-footer__social { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.site-footer__social li { margin: 0; }
+.site-footer__social a { color: var(--text-muted); font-size: 1.05rem; line-height: 1; }
+.site-footer__social a:hover { color: var(--accent); }
+.site-footer__copy { margin: 0; font-size: 0.875rem; line-height: 18px; color: var(--text-subtle); }
+
+@media (max-width: 600px) {
+  .site-footer { justify-content: center; text-align: center; }
+  .site-footer__right { align-items: center; }
+  .catchips { gap: 8px; }
+  .catchip { font-size: 0.875rem; padding: 6px 14px; }
+}
+
+
+/* ── Wide-content safety (kept from main's 2026-07-23 layout pass) ──────────
+   Orthogonal to the TOC placement, so these survive the merge: very wide
+   tables scroll rather than overflow, and diagrams/images fit the column. */
 .page__content > table { display: block; overflow-x: auto; max-width: 100%; }
 .page__content .mermaid svg { max-width: 100%; width: 100%; height: auto; }
 .page__content img { max-width: 100%; height: auto; }
-
-/* inline collapsible TOC at top (replaces the removed right rail) */
-.toc-inline {
-  max-width: 1000px; margin: 0 auto 2rem; padding: 0.35rem 1.1rem;
-  border: 1px solid var(--border); border-radius: 12px; background: var(--bg-elevated);
-}
-.toc-inline > summary {
-  cursor: pointer; list-style: none; padding: 0.55rem 0; font-weight: 600; color: var(--text);
-}
-.toc-inline > summary::-webkit-details-marker { display: none; }
-.toc-inline > summary::before { content: "\25B8  "; color: var(--text-muted); }
-.toc-inline[open] > summary::before { content: "\25BE  "; }
-.toc-inline .toc__menu { margin: 0.2rem 0 0.4rem; }
-.toc-inline .toc__menu a { color: var(--text-muted); }
-.toc-inline .toc__menu a:hover { color: var(--accent); }
-
-/* mobile: single column, full width */
-@media (max-width: 900px) {
-  .page__content, .toc-inline { max-width: 100%; }
-}

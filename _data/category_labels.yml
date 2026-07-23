@@ -1,0 +1,18 @@
+# Display labels for category values — the single source of truth shared by the
+# Posts page filter chips (_layouts/posts.html) and the post footer taxonomy
+# (_includes/category-list.html), so the two can't drift apart.
+#
+# Keys are the raw category values used in post front matter. Korean posts use
+# 만화 for comics while en/ar use "comics"; both map to the same label.
+dev: DevOps
+owm: OWM
+llmops: LLMOps
+agentops: Agent Ops
+tutorials: Tutorials
+careers: Careers
+culture: Culture
+news: News
+research: Research
+datasets: Datasets
+comics: Comics
+만화: Comics

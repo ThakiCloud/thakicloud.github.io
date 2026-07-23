@@ -334,23 +334,26 @@ body {
 
 .tags-look .tagify__dropdown__item{
   display: inline-block;
-  border-radius: 3px;
-  padding: .3em .5em;
-  border: 1px solid $border-color;
-  background: $form-background-color;
+  border-radius: 8px;
+  padding: .3em .6em;
+  border: 1px solid var(--border, #{$border-color});
+  background: var(--surface-hover, #{$form-background-color});
   margin: .2em;
   font-size: .85em;
-  color: $text-color;
-  transition: 0s;
+  color: var(--text, #{$text-color});
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
 }
 
 .tags-look .tagify__dropdown__item--active{
-  color: $text-color;
+  background: var(--accent-soft, #{$form-background-color});
+  border-color: var(--accent, #{$primary-color});
+  color: var(--accent, #{$text-color});
 }
 
 .tags-look .tagify__dropdown__item:hover{
-  background: $primary-color;
-  border-color: $primary-color;
+  background: var(--accent, #{$primary-color});
+  border-color: var(--accent, #{$primary-color});
+  color: #fff;
 }
 
 .page__taxonomy {

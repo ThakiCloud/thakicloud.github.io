@@ -27,7 +27,7 @@ baseurl: "/tech-blog"
 repository               : "ThakiCloud/thakicloud.github.io"
 teaser : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo   : "/assets/images/thaki-logo-mark.webp" # masthead diamond mark (left of title)
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Thaki Cloud Tech Blog" # masthead-only title (site.title stays full for SEO)
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -120,7 +120,7 @@ author:
   name             : 
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : 
-  location         : "Seoul, Korea"
+  location         :
   email            : "info@thakicloud.co.kr"
   uri              :
   home             :
@@ -138,21 +138,24 @@ author:
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/thakicloud"
 
-# Site Footer
+# Site Footer — social links (moved here from the author sidebar)
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://thakicloud.co.kr"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      url: "https://github.com/thakicloud"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/company/thakicloud"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/thakicloud"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:info@thakicloud.co.kr"
 
 
 # Reading Files

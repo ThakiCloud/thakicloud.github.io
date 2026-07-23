@@ -1,13 +1,10 @@
+# Single combined browse page (the home) + language switcher.
+# Categories / Tags / Comics were merged into the home page, which filters in
+# place via ?category= and ?tags=. The "Posts" nav item was removed since the
+# whole site is one page and the masthead logo already links to it.
+
 # main links (default - Korean)
 main:
-  - title: "포스트"
-    url: /ko/posts/
-  - title: "카테고리"
-    url: /ko/categories/
-  - title: "태그"
-    url: /ko/tags/
-  - title: "만화"
-    url: /ko/categories/comics/
   - title: "언어"
     children:
       - title: "🇰🇷 한국어"
@@ -19,14 +16,6 @@ main:
 
 # 한국어 네비게이션
 ko:
-  - title: "포스트"
-    url: /ko/posts/
-  - title: "카테고리"
-    url: /ko/categories/
-  - title: "태그"
-    url: /ko/tags/
-  - title: "만화"
-    url: /ko/categories/comics/
   - title: "언어"
     children:
       - title: "🇰🇷 한국어"
@@ -38,14 +27,6 @@ ko:
 
 # 영어 네비게이션
 en:
-  - title: "Posts"
-    url: /en/posts/
-  - title: "Categories"
-    url: /en/categories/
-  - title: "Tags"
-    url: /en/tags/
-  - title: "Comics"
-    url: /en/categories/comics/
   - title: "Language"
     children:
       - title: "🇰🇷 한국어"
@@ -57,12 +38,6 @@ en:
 
 # 아랍어 네비게이션
 ar:
-  - title: "المشاركات"
-    url: /ar/posts/
-  - title: "الفئات"
-    url: /ar/categories/
-  - title: "العلامات"
-    url: /ar/tags/
   - title: "اللغة"
     children:
       - title: "🇰🇷 한국어"
