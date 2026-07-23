@@ -147,6 +147,8 @@ search: false
   --border: #e2e8f0;           /* slate200 hairline */
   --border-strong: #cbd5e1;    /* slate300 */
   --divider: #e2e8f0;          /* slate200 — masthead + article rules */
+  --toc-idle: #94a3b8;         /* slate400 — inactive TOC entries */
+  --rule: #cbd5e1;             /* slate300 — post-page horizontal rules */
   --tagchip-active-bg: #eff6ff;      /* blue50  */
   --tagchip-active-border: #3b82f6;  /* blue500 */
   --accent: #3182f6;          /* Toss blue */
@@ -179,6 +181,8 @@ html[data-theme="dark"] {
   --border: #1e293b;                  /* slate800 hairline (chip outlines) */
   --border-strong: rgba(255,255,255,0.20);
   --divider: #334155;                 /* slate700 — brighter rules on black */
+  --toc-idle: #94a3b8;                /* slate400 reads well on black too */
+  --rule: #334155;                    /* slate700 */
   --tagchip-active-bg: rgba(96,165,250,0.15);
   --tagchip-active-border: #60a5fa;
   --accent: #60a5fa;         /* bright blue for contrast on black */
@@ -227,6 +231,37 @@ h1, h2, h3, h4, h5, h6,
    <a>); that dark-ish value made the title near-invisible in dark mode. */
 .page__title a:hover { color: var(--text); }
 .page__content h1, .page__content h2 { line-height: 1.18; }
+/* MM sets .page__title to line-height:1, which is very tight on a wrapping
+   two-line post title. */
+.page__title { line-height: 1.3; }
+
+/* Post-footer taxonomy (tags / category) — Mona Sans rather than MM's mono. */
+.page__taxonomy,
+.page__taxonomy strong,
+.page__taxonomy-item {
+  font-family: var(--font-sans);
+}
+.page__taxonomy-item {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+/* tags are plain text now — keep them visually calm, not link-styled */
+span.page__taxonomy-item { color: var(--text-muted); }
+
+/* 4px between tags. The comma separators are dropped, since as separate
+   inline items they'd sit inside the gap rather than hug the preceding tag. */
+.page__taxonomy [itemprop="keywords"] {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  vertical-align: middle;
+}
+.page__taxonomy .sep { display: none; }
+
+/* Breadcrumbs: MM bolds the current crumb; keep the whole trail at 500. */
+.breadcrumbs ol,
+.breadcrumbs ol a,
+.breadcrumbs .current { font-weight: 500; }
 
 p, li, .page__content { color: var(--text); }
 .page__content { font-size: 1.0625em; line-height: 1.7; }  /* ~17px, airy */
@@ -334,29 +369,48 @@ hr { border-color: var(--border); }
 .page__footer a, .page__footer-copyright a { color: var(--text-muted); }
 .page__footer a:hover { color: var(--accent); }
 
-/* Table of contents (목차) — MM bakes a single light palette ($gray /
-   $background-color / $primary-color); repaint onto vars so it follows the
-   dark/light toggle instead of staying light in dark mode. */
+/* Table of contents — Figma 17958-164.
+   A flat list rather than MM's boxed card: no background, border, radius,
+   shadow or title bar. Items are 14px Medium slate400, 16px apart; the active
+   one is SemiBold in the primary text colour. */
 .toc {
-  color: var(--text-muted);
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow-card);
+  color: var(--toc-idle);
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
-.toc .nav__title {
-  color: #fff;
-  background: var(--accent);
+.toc .nav__title { display: none; }
+
+.toc__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.toc__menu a {
-  color: var(--text-muted);
-  border-bottom-color: var(--border);
+.toc__menu li { margin: 0; border: 0; }
+.toc__menu li a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 0;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--toc-idle);
+  transition: color .15s ease;
 }
-.toc__menu a:hover { color: var(--text); }
-.toc__menu .active a,
+.toc__menu li a:hover { background: transparent; color: var(--text); }
+.toc__menu li.active a,
 .toc .active a {
-  background-color: var(--accent);
-  color: #fff;
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
 }
 
 /* =========================================================================
@@ -801,6 +855,177 @@ html[lang="ar"] .toss-rail__rank { }
    hairline post rows, client-side pagination. All colors come from the theme
    variables so LIGHT and DARK both render correctly.
    ========================================================================= */
+
+/* Post pages: drop the category sidebar (it duplicated the chip filters on the
+   Posts page) and centre the article in the same 948px column. */
+.layout--single .sidebar { display: none; }
+.layout--single #main {
+  max-width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  float: none;
+}
+.layout--single .page,
+.layout--single .page__inner-wrap {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  float: none;
+}
+/* MM indents the breadcrumb list to clear the (now removed) left sidebar. */
+.layout--single .breadcrumbs {
+  max-width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+/* MM floats the crumb list right at `calc(100% - 300px)` to sit beside the
+   sidebar — reset it so the crumbs align with the article. */
+.layout--single .breadcrumbs ol {
+  float: none;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Related posts: MM floats/narrows it to sit beside the old sidebar — let it
+   fill the article column. */
+.layout--single .page__related {
+  float: none;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  clear: both;
+}
+/* Even grid + clamped text so every card is the same height regardless of how
+   long its title/excerpt is (MM floats these, so heights were ragged). */
+.layout--single .page__related .grid__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+.layout--single .page__related .grid__item {
+  width: 100%;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.layout--single .page__related .archive__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.layout--single .page__related .archive__item-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 0.4rem;
+}
+.layout--single .page__related .archive__item-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Prev/next post links — plain links with a chevron, no box buttons. */
+.postnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  /* must clear the floated (sticky) TOC, otherwise it gets squeezed into the
+     sliver of space beside it and wraps one character per line */
+  clear: both;
+}
+/* `clear` can absorb .postnav's margin-top into the float clearance, leaving
+   the rule sitting tight under the date — put the space on the meta block so
+   it can't be swallowed. */
+.layout--single .page__meta { padding-bottom: 1.5rem; }
+/* MM zeroes the margins on .page__meta p, so the date sits flush against the
+   category line above it. */
+.layout--single .page__date { padding-top: 1rem; }
+
+/* One rule colour across the post page. MM hardcodes #d2d2d7 for the h2
+   underline and the related-posts divider (not theme-aware), while prev/next
+   used the lighter slate200 — unify them all on --rule. */
+.layout--single .page__content h2,
+.layout--single .page__related { border-color: var(--rule); }
+.postnav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);            /* slate900 in light, white in dark */
+  border-bottom: 0;
+  background: none;
+  padding: 0;
+}
+.postnav__link:hover { color: var(--accent); border-bottom: 0; }
+.postnav__link .tbi { flex: 0 0 auto; }
+
+/* Date meta icon (Tabler calendar-event) */
+.page__date-icon { vertical-align: -2px; margin-right: 2px; }
+
+/* Table of contents.
+   Wide screens: lift it out of the text column into the right margin so it
+   doesn't eat into the article measure. Needs ~244px of clear space beside the
+   948px column, i.e. 948 + 2×244 ≈ 1440px.
+   Narrower: stack it above the article instead of floating into the copy. */
+.layout--single .page__inner-wrap { position: relative; }
+
+@media (min-width: 1440px) {
+  /* Floated so it leaves the text flow, pulled into the right margin with a
+     negative margin (so copy doesn't wrap around it), and sticky so the card
+     follows the scroll. Sticky can't be combined with absolute positioning,
+     hence float rather than `left: 100%`. */
+  .layout--single .sidebar__right {
+    float: right;
+    position: sticky;
+    top: 88px;
+    width: 220px;
+    margin-left: 24px;
+    margin-right: -244px;
+    margin-bottom: 2rem;
+    clear: none;
+  }
+  .layout--single .sidebar__right .toc {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    /* keep it scrollable when the entries are long, but without the visible
+       scrollbar track appearing beside the list */
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* legacy Edge */
+  }
+  .layout--single .sidebar__right .toc::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+@media (max-width: 1439px) {
+  .layout--single .sidebar__right {
+    float: none;
+    width: 100%;
+    margin: 0 0 2rem;
+  }
+}
 
 /* Layout — drop the sidebar, center the column at the design's 948px */
 .layout--posts .sidebar,

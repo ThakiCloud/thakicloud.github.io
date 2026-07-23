@@ -16,7 +16,8 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
     {% for category_word in categories_sorted %}
-      <a href="{{ lang_posts_path | append: '?category=' | append: category_word | downcase | uri_escape | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      {% comment %} Label from _data/category_labels.yml so it matches the Posts page chips. {% endcomment %}
+      <a href="{{ lang_posts_path | append: '?category=' | append: category_word | downcase | uri_escape | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ site.data.category_labels[category_word] | default: category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>

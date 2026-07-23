@@ -29,21 +29,19 @@ classes: wide
   </div>
 
   {% comment %} ── Category chips (replaces the old sidebar list) ──────── {% endcomment %}
+  {% comment %}
+    Labels come from _data/category_labels.yml so the chips and the post-footer
+    taxonomy always show the same name (e.g. 'dev' → 'DevOps').
+  {% endcomment %}
+  {% assign chip_values = 'dev,owm,llmops,agentops,tutorials,careers,culture,news,research,datasets' | split: ',' %}
   <nav class="catchips" aria-label="Filter by category">
     <button type="button" class="catchip is-active" data-cat="">All</button>
-    <button type="button" class="catchip" data-cat="dev">DevOps</button>
-    <button type="button" class="catchip" data-cat="owm">OWM</button>
-    <button type="button" class="catchip" data-cat="llmops">LLMOps</button>
-    <button type="button" class="catchip" data-cat="agentops">Agent Ops</button>
-    <button type="button" class="catchip" data-cat="tutorials">Tutorials</button>
-    {% comment %} Forces the 6+6 split from the design; collapses on narrow screens. {% endcomment %}
-    <span class="catchips__break" aria-hidden="true"></span>
-    <button type="button" class="catchip" data-cat="careers">Careers</button>
-    <button type="button" class="catchip" data-cat="culture">Culture</button>
-    <button type="button" class="catchip" data-cat="news">News</button>
-    <button type="button" class="catchip" data-cat="research">Research</button>
-    <button type="button" class="catchip" data-cat="datasets">Datasets</button>
-    <button type="button" class="catchip" data-cat="{{ comics_cat }}">Comics</button>
+    {% for v in chip_values %}
+      <button type="button" class="catchip" data-cat="{{ v }}">{{ site.data.category_labels[v] | default: v }}</button>
+      {% comment %} Forces the 6+6 split from the design; collapses on narrow screens. {% endcomment %}
+      {% if forloop.index == 5 %}<span class="catchips__break" aria-hidden="true"></span>{% endif %}
+    {% endfor %}
+    <button type="button" class="catchip" data-cat="{{ comics_cat }}">{{ site.data.category_labels[comics_cat] | default: 'Comics' }}</button>
   </nav>
 
   {% comment %} ── Post list ───────────────────────────────────────────── {% endcomment %}
