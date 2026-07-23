@@ -467,50 +467,25 @@ html[data-theme="dark"] {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   Wide layout (2026-07-23): full-width post + readable prose + full-bleed figs.
-   Shell widened to 1600 (skin $max-width). Author sidebar off + TOC inline →
-   content uses full width. Prose capped ~1120 for KO readability; tables/code/
-   diagrams/images go wide. Fixes: narrow column, wide-element overflow, wasted
-   screen. Light/dark tokens + mobile single-column preserved. */
+   Focused layout (2026-07-23, revised): keep the left author sidebar + a ~1000px
+   read column + inline TOC. Container 1300 (skin $max-width) holds ~300 sidebar +
+   ~1000 content. The right-rail TOC stays removed (inline at top) — that is the
+   real space win vs the original 3-column. Wide tables/diagrams fit the column;
+   very wide tables scroll. Light/dark tokens + mobile single-column preserved. */
 
-.masthead__inner-wrap { max-width: 1600px; }   /* nav shell matches content */
+.masthead__inner-wrap { max-width: 1300px; }   /* nav shell matches content */
 
-/* single post: drop the author-sidebar reservation, use full width */
-.layout--single .sidebar { display: none; }
-.layout--single .page,
-.page { float: none; width: 100%; clear: both; padding-right: 0; margin-right: 0; }
+/* content reading column ~1000 (MM reserves the left author sidebar) */
+.page__content { max-width: 1000px; }
 
-/* wide content shell, centered in the 1600 container */
-.page__content { max-width: 1560px; margin-left: auto; margin-right: auto; }
-
-/* readable prose measure — cap text blocks, keep centered */
-.page__content > p,
-.page__content > ul,
-.page__content > ol,
-.page__content > dl,
-.page__content > h1, .page__content > h2, .page__content > h3,
-.page__content > h4, .page__content > h5, .page__content > h6,
-.page__content > blockquote {
-  max-width: 1120px; margin-left: auto; margin-right: auto;
-}
-
-/* image-only paragraphs escape the prose cap (full-bleed) */
-.page__content > p:has(> img:only-child),
-.page__content > p:has(> a:only-child > img) { max-width: 1560px; }
-
-/* wide elements use full content width; very wide tables scroll inside */
-.page__content > figure,
-.page__content > table,
-.page__content > pre,
-.page__content > .highlighter-rouge,
-.page__content > .highlight,
-.page__content .mermaid { max-width: 100%; }
-.page__content > table { display: block; overflow-x: auto; }
+/* wide elements fit the column; very wide tables scroll instead of overflowing */
+.page__content > table { display: block; overflow-x: auto; max-width: 100%; }
 .page__content .mermaid svg { max-width: 100%; width: 100%; height: auto; }
+.page__content img { max-width: 100%; height: auto; }
 
-/* inline collapsible TOC at top (replaces the right rail) */
+/* inline collapsible TOC at top (replaces the removed right rail) */
 .toc-inline {
-  max-width: 1120px; margin: 0 auto 2rem; padding: 0.35rem 1.1rem;
+  max-width: 1000px; margin: 0 auto 2rem; padding: 0.35rem 1.1rem;
   border: 1px solid var(--border); border-radius: 12px; background: var(--bg-elevated);
 }
 .toc-inline > summary {
@@ -523,11 +498,7 @@ html[data-theme="dark"] {
 .toc-inline .toc__menu a { color: var(--text-muted); }
 .toc-inline .toc__menu a:hover { color: var(--accent); }
 
-/* mobile: single column, everything full width */
+/* mobile: single column, full width */
 @media (max-width: 900px) {
-  .page__content,
-  .page__content > p, .page__content > ul, .page__content > ol,
-  .page__content > h1, .page__content > h2, .page__content > h3,
-  .page__content > h4, .page__content > blockquote,
-  .toc-inline { max-width: 100%; }
+  .page__content, .toc-inline { max-width: 100%; }
 }
