@@ -17,6 +17,11 @@ $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 $caption-font-family: $sans-serif;
 
+/* Layout width — widen the shell from MM's 1280 default. Set here (before
+   minimal-mistakes/variables, no !default) so it wins. Prose is re-capped to a
+   readable measure and wide elements go full-bleed in main.scss. */
+$max-width: 1600px;
+
 /* Type scale — larger, tighter display (Apple) vs MM's modest default ------ */
 $type-size-1: 2.75em !default; // ~44px  page/archive titles
 $type-size-2: 2em !default;    // ~32px
