@@ -54,7 +54,8 @@ classes: wide
         data-categories="{% if post.categories %}{{ post.categories | join: '||' | downcase }}{% endif %}">
         <h2 class="postrow__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p class="postrow__meta">
-          <i class="far fa-calendar" aria-hidden="true"></i>
+          {% comment %} stroke-width 1.5 on a 24 viewBox rendered at 16px = a true 1px stroke {% endcomment %}
+          <svg class="tbi postrow__cal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 15h2v2h-2z"/></svg>
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
         </p>
         {% if post.excerpt %}<p class="postrow__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
@@ -84,7 +85,9 @@ classes: wide
       enforceWhitelist: true,
       whitelist: whitelist,
       maxTags: 10,
-      dropdown: { maxItems: 30, classname: 'tags-look', enabled: 0, closeOnSelect: true }
+      // includeSelectedTags keeps already-picked tags visible in the list
+      // (styled blue) instead of removing them.
+      dropdown: { maxItems: 30, classname: 'tags-look', enabled: 0, closeOnSelect: true, includeSelectedTags: true }
     });
     tagify.on('add', function (e) {
       selects.push(e.detail.data.value.toLowerCase().replaceAll(' ', '-'));

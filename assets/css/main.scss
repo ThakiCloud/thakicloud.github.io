@@ -147,6 +147,8 @@ search: false
   --border: #e2e8f0;           /* slate200 hairline */
   --border-strong: #cbd5e1;    /* slate300 */
   --divider: #e2e8f0;          /* slate200 — masthead + article rules */
+  --tagchip-active-bg: #eff6ff;      /* blue50  */
+  --tagchip-active-border: #3b82f6;  /* blue500 */
   --accent: #3182f6;          /* Toss blue */
   --accent-hover: #1b64da;    /* Toss blue-700 */
   --accent-soft: #e8f3ff;     /* Toss blue-50 chip bg */
@@ -177,6 +179,8 @@ html[data-theme="dark"] {
   --border: #1e293b;                  /* slate800 hairline (chip outlines) */
   --border-strong: rgba(255,255,255,0.20);
   --divider: #334155;                 /* slate700 — brighter rules on black */
+  --tagchip-active-bg: rgba(96,165,250,0.15);
+  --tagchip-active-border: #60a5fa;
   --accent: #60a5fa;         /* bright blue for contrast on black */
   --accent-hover: #93c5fd;
   --accent-soft: rgba(96,165,250,0.15);
@@ -838,6 +842,9 @@ html[lang="ar"] .toss-rail__rank { }
   border-radius: 8px;
   background: var(--surface);
 }
+/* Once a tag chip is present it brings its own margin, so tighten the
+   container's left padding. The placeholder-only state keeps the 10px. */
+.postspage__search .tagify:not(.tagify--noTags) { padding-left: 3px; }
 .postspage__search .tagify__input {
   margin: 0;
   padding: 8px;
@@ -856,6 +863,127 @@ html[lang="ar"] .toss-rail__rank { }
   font-size: 0.95rem;
   pointer-events: none;
 }
+
+/* =========================================================================
+   Tag chips — Figma 17944-454 (selected tag in the input) and 17944-657
+   (suggestions dropdown). White pill, slate200 hairline, 6px radius,
+   4px/8px padding; the highlighted suggestion is blue50 on blue500.
+   ========================================================================= */
+
+/* Tagify paints its tag background with an inset box-shadow; make that
+   transparent so a real border/background can be used instead. */
+.postspage__search .tagify {
+  --tag-bg: transparent;
+  --tag-hover: transparent;
+  --tag-remove-bg: transparent;
+  --tag-text-color: var(--text);
+  --tag-border-radius: 6px;
+}
+.postspage__search .tagify__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 2px;              /* 2px each side → 4px gap between chips */
+  padding: 4px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+}
+.postspage__search .tagify__tag > div { padding: 0; margin: 0; }
+.postspage__search .tagify__tag > div::before { display: none; }
+.postspage__search .tagify__tag .tagify__tag-text { color: var(--text); }
+/* the design places the ✕ after the label */
+.postspage__search .tagify__tag__removeBtn {
+  order: 2;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 12px;
+  color: var(--text-muted);
+  background: transparent;
+  border-radius: 0;
+  opacity: 1;
+}
+.postspage__search .tagify__tag__removeBtn:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+/* Suggestions dropdown — detached from the input by 4px, hairline all round.
+   Tagify defaults to a blue primary colour and drops the top border so the
+   panel looks fused to the input; both are overridden here. */
+.tagify__dropdown {
+  --tagify-dd-color-primary: transparent;
+  margin-top: 6px;              /* Tagify seats the panel ~2px up → 4px visual gap */
+  /* the outer element carries its own square border, which showed as a line
+     under the input and peeked past the wrapper's rounded corners */
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.tagify__dropdown .tagify__dropdown__wrapper {
+  border: 1px solid var(--border) !important;
+  border-top-width: 1px !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+/* Flex + gap rather than inline-block + margins: the newlines between Tagify's
+   generated items would otherwise render as whitespace, adding a stray space
+   to the left of every chip. Gaps are the design's 4px column / 8px row. */
+.tagify__dropdown.tags-look .tagify__dropdown__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 4px;
+  padding: 8px;
+}
+.tags-look .tagify__dropdown__item {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;                  /* spacing comes from the wrapper's gap */
+  padding: 4px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  transition: background-color .12s ease, border-color .12s ease;
+}
+/* keyboard-highlighted / hovered = neutral, so blue can mean "selected" */
+.tags-look .tagify__dropdown__item--active,
+.tags-look .tagify__dropdown__item:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+/* already-selected tag stays in the list, marked blue (Figma's blue chip).
+   Colour alone signals it — Tagify's ✓ ::before is suppressed. */
+.tags-look .tagify__dropdown__item--selected {
+  background: var(--tagchip-active-bg);
+  border-color: var(--tagchip-active-border);
+  color: var(--text);
+}
+/* includeSelectedTags draws a ✓ on the selected item and indents EVERY item to
+   make room for it:
+     .tagify__dropdown:has(...--selected) .tagify__dropdown__item{text-indent:1em}
+   We show selection by colour instead, so drop both the glyph and the indent —
+   otherwise chips gain 1em (14px) of phantom space once a tag is picked. */
+.tags-look .tagify__dropdown__item::before,
+.tags-look .tagify__dropdown__item--selected::before {
+  content: none !important;
+  display: none !important;
+}
+.tags-look .tagify__dropdown__item { text-indent: 0 !important; }
+
+/* Post-row calendar icon (Tabler calendar-event) */
+.postrow__meta .postrow__cal { width: 16px; height: 16px; flex: 0 0 auto; }
 
 /* ---- Category chips (replaces the sidebar category list) ---- */
 .catchips {
