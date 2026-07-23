@@ -1,7 +1,7 @@
 ---
 title: "Carbon ERP/MES 완벽 가이드: 오픈소스 제조업 관리 시스템"
 excerpt: "복잡한 조립, HMLV, 주문제작 제조업에 최적화된 강력한 오픈소스 ERP/MES/QMS 시스템인 Carbon의 설치와 사용법을 완벽하게 학습해보세요."
-seo_title: "Carbon ERP/MES 완벽 튜토리얼: 제조업 관리 시스템 설치 가이드 - 타키 클라우드"
+seo_title: "Carbon ERP/MES 완벽 튜토리얼: 제조업 관리 시스템 설치 가이드 - 다키클라우드"
 seo_description: "Carbon ERP/MES 시스템을 마스터하세요. 제조업, 복잡한 조립, HMLV 운영, 주문제작 프로세스에 완벽한 종합 튜토리얼입니다."
 date: 2025-09-09
 lang: ko

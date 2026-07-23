@@ -103,12 +103,12 @@ The recognized Markdown output was as follows:
 ```markdown
 ## ThakiCloud Document Intelligence
 Kubernetes AI/ML SaaS Platform - Invoice No. 2026-0623
-타키클라우드 멀티테넌트 추론 비용 보고서
+다키클라우드 멀티테넌트 추론 비용 보고서
 GPU hours: 1,284 Total: $9,640.00
 E = mc^2 sum_{i=1}^{n} x_i
 ```
 
-Notable observations: the model captured the English heading as a Markdown heading (`##`), correctly recognized the Korean sentence "타키클라우드 멀티테넌트 추론 비용 보고서" verbatim, and read the numeric and currency values ($9,640.00, GPU hours 1,284) without error. Korean recognition quality was surprisingly stable for a 0.9B model.
+Notable observations: the model captured the English heading as a Markdown heading (`##`), correctly recognized the Korean sentence "다키클라우드 멀티테넌트 추론 비용 보고서" verbatim, and read the numeric and currency values ($9,640.00, GPU hours 1,284) without error. Korean recognition quality was surprisingly stable for a 0.9B model.
 
 One finding worth reporting honestly: the Arabic line in our synthetic image was classified as an image region rather than transcribed as text. This appears to be an issue with our test image rather than a model defect. When rendering Arabic with PIL, character joining (shaping) and bidirectional (bidi) text handling were not applied correctly, causing the characters to render in an unconnected form. The layout stage likely interpreted this as a graphic. The Arabic line-level edit distance reported in the paper is 0.122, which is low enough to suggest that real Arabic documents would yield very different results. The experience itself is an operational lesson: preprocessing and rendering quality drive outcomes.
 

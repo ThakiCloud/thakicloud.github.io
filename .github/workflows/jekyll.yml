@@ -110,6 +110,14 @@ jobs:
           # image never blocks the whole site).
           python3 scripts/check_missing_assets.py --strip
 
+      - name: Enforce KO brand/typo guardrail (다키클라우드)
+        run: |
+          # Deterministic guardrail: never ship the wrong brand name. Corrects
+          # 타키클라우드 / 타키 클라우드 -> 다키클라우드 plus a small curated KO typo map.
+          # Fixes prose/titles/front-matter; protects code blocks and URLs.
+          # Every deploy runs this, so no post can ship with the wrong brand.
+          python3 scripts/blog_fix_typos.py --apply
+
       - name: Build with Jekyll (baseurl=/tech-blog from _config)
         run: |
           bundle exec jekyll build --trace
