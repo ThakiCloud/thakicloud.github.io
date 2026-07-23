@@ -1,9 +1,9 @@
 {% case site.tag_archive.type %}
   {% when "liquid" %}
     {% if page.lang %}
-      {% assign path_type = page.lang | append: "/posts?tags=" | prepend: "/" %}
+      {% assign path_type = page.lang | append: "/?tags=" | prepend: "/" %}
     {% else %}
-      {% assign path_type = "posts?tags=" %}
+      {% assign path_type = "?tags=" %}
     {% endif %}
   {% when "jekyll-archives" %}
     {% assign path_type = nil %}

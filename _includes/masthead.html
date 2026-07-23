@@ -8,7 +8,10 @@
         {% assign main_home_url = '/' %}
         
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ main_home_url | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ main_home_url | relative_url }}">
+            <img class="logo-light" src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}">
+            <img class="logo-dark" src="{{ '/assets/images/thaki-icon-dark.svg' | relative_url }}" alt="{{ site.masthead_title | default: site.title }}">
+          </a>
         {% endunless %}
         <a class="site-title" href="{{ main_home_url | relative_url }}">
           {{ site.masthead_title | default: site.title }}
@@ -29,7 +32,7 @@
           {%- for link in navigation_data -%}
             <li class="masthead__menu-item">
               {% if link.children %}
-                <a href="#" class="dropdown-toggle">{{ link.title }} <i class="fas fa-caret-down"></i></a>
+                <a href="#" class="dropdown-toggle">{{ link.title }} <svg class="tbi tbi--caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg></a>
                 <ul class="dropdown-menu">
                   {%- for child in link.children -%}
                     <li><a href="{{ child.url | relative_url }}"{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a></li>
@@ -53,11 +56,11 @@
         
         <a href="{{ search_url | relative_url }}" class="search__toggle" title="{% if page.lang == 'en' %}Search{% elsif page.lang == 'ar' %}البحث{% else %}검색{% endif %}">
           <span class="visually-hidden">{% if page.lang == 'en' %}Search{% elsif page.lang == 'ar' %}البحث{% else %}검색{% endif %}</span>
-          <i class="fas fa-search"></i>
+          <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
         </a>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Light / Dark">
-          <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
-          <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+          <svg class="tbi icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg>
+          <svg class="tbi icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg>
         </button>
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>

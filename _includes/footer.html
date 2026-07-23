@@ -1,21 +1,46 @@
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
+{% comment %}
+  Footer per the Figma design: THAKI Cloud wordmark on the left, icon-only
+  social links on the right with the copyright beneath them.
+{% endcomment %}
+<div class="site-footer">
+  {% comment %}
+    Light: the wordmark asset is text-only, so the diamond mark is composed
+    beside it. Dark: thaki-logo-dark.svg already contains mark + wordmark.
+  {% endcomment %}
+  <a class="site-footer__brand" href="{{ '/' | relative_url }}">
+    <img class="site-footer__mark logo-light" src="{{ '/assets/images/thaki-logo-mark.webp' | relative_url }}" alt="">
+    <img class="site-footer__wordmark logo-light" src="{{ '/assets/images/thaki-logo-wordmark.webp' | relative_url }}"
+         alt="{{ site.name | default: site.title }}">
+    <img class="site-footer__logo logo-dark" src="{{ '/assets/images/thaki-logo-dark.svg' | relative_url }}"
+         alt="{{ site.name | default: site.title }}">
+  </a>
 
-    {% if site.footer.links %}
-      {% for link in site.footer.links %}
-        {% if link.label and link.url %}
-          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+  <div class="site-footer__right">
+    <ul class="site-footer__social">
+      {% if site.footer.links %}
+        {% for link in site.footer.links %}
+          {% if link.label and link.url %}
+            <li>
+              <a href="{{ link.url }}" rel="nofollow noopener noreferrer"
+                 title="{{ link.label }}" aria-label="{{ link.label }}">
+                <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
 
-    {% unless site.atom_feed.hide %}
-      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endunless %}
-  </ul>
+      {% unless site.atom_feed.hide %}
+        {% assign feed_label = site.data.ui-text[site.locale].feed_label | default: "Feed" %}
+        <li>
+          <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"
+             title="{{ feed_label }}" aria-label="{{ feed_label }}">
+            <i class="fas fa-rss" aria-hidden="true"></i>
+          </a>
+        </li>
+      {% endunless %}
+    </ul>
+
+    <p class="site-footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</p>
+  </div>
 </div>
-
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>

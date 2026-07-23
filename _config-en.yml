@@ -15,7 +15,7 @@ lang: "en"
 repository: "ThakiCloud/thakicloud.github.io"
 teaser: # path of fallback teaser image
 logo: "/assets/images/thaki-logo-mark.webp"
-masthead_title: # overrides the website title displayed in the masthead
+masthead_title: "Thaki Cloud Tech Blog" # masthead-only title (site.title stays full for SEO)
 breadcrumbs: true
 words_per_minute: 200
 
@@ -49,7 +49,7 @@ author:
   name: "Thaki Cloud"
   avatar: # path of avatar image
   bio: "AI/ML Engineering & DevOps Expert"
-  location: "Seoul, Korea"
+  location:
   email: "info@thakicloud.co.kr"
   uri:
   home:
@@ -67,15 +67,24 @@ author:
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/thakicloud"
 
-# Site Footer
+# Site Footer — social links (moved here from the author sidebar)
 footer:
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/thakicloud"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://thakicloud.co.kr"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thakicloud"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/company/thakicloud"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/thakicloud"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:info@thakicloud.co.kr"
 
 # Search Settings
 search: true
