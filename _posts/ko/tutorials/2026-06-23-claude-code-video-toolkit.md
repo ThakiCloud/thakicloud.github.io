@@ -42,20 +42,330 @@ claude-code-video-toolkit은 Claude Code를 영상 제작 워크스테이션으�
 
 셋째는 템플릿과 브랜드 층입니다. `templates/`에는 sprint-review, sprint-review-v2, product-demo, 그리고 9:16 세로형 숏폼을 위한 concept-explainer-short가 들어 있습니다. `brands/`에는 색상과 폰트, 보이스 설정을 담은 브랜드 프로필을 정의해 두고, `/video`로 프로젝트를 만들 때 자동으로 적용합니다. 아래 그림은 이 세 층이 어떻게 하나의 파이프라인으로 연결되는지를 보여줍니다.
 
-```mermaid
-flowchart LR
-  A["프롬프트 / 스크립트"] --> B["/video 명령"]
-  B --> C["브랜드 프로필<br/>brand.json · voice.json"]
-  C --> D["Remotion 컴포지션<br/>React 비디오"]
-  D --> E["AI 스킬 레이어"]
-  E --> E1["Qwen3-TTS<br/>보이스·클론"]
-  E --> E2["FLUX.2 · Ideogram4<br/>이미지·타이틀카드"]
-  E --> E3["ACE-Step<br/>음악"]
-  E --> E4["LTX-2<br/>b-roll"]
-  D --> F["remotion render<br/>h264 · 1080p · 6x"]
-  F --> G["out/video.mp4"]
-  G --> H["/publish → YouTube"]
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="23claudecodevideotoolkit-1"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 931, "height": 910, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 314, "y": 24, "w": 120, "h": 46, "title": "프롬프트 / 스크립트"}, {"id": "B", "x": 314, "y": 148, "w": 120, "h": 46, "title": "/video 명령"}, {"id": "C", "x": 278, "y": 272, "w": 191, "h": 62, "title": ["브랜드 프로필", "brand.json · voice.json"]}, {"id": "D", "x": 313, "y": 412, "w": 121, "h": 62, "title": ["Remotion 컴포지션", "React 비디오"]}, {"id": "E", "x": 489, "y": 560, "w": 120, "h": 46, "title": "AI 스킬 레이어"}, {"id": "E1", "x": 779, "y": 692, "w": 120, "h": 62, "title": ["Qwen3-TTS", "보이스·클론"]}, {"id": "E2", "x": 568, "y": 692, "w": 156, "h": 62, "title": ["FLUX.2 · Ideogram4", "이미지·타이틀카드"]}, {"id": "E3", "x": 393, "y": 692, "w": 120, "h": 62, "title": ["ACE-Step", "음악"]}, {"id": "E4", "x": 218, "y": 692, "w": 120, "h": 62, "title": ["LTX-2", "b-roll"]}, {"id": "F", "x": 28, "y": 552, "w": 149, "h": 62, "title": ["remotion render", "h264 · 1080p · 6x"]}, {"id": "G", "x": 42, "y": 700, "w": 121, "h": 46, "title": "out/video.mp4"}, {"id": "H", "x": 24, "y": 832, "w": 156, "h": 46, "title": "/publish → YouTube"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [374, 70, 374, 148]}, {"src": "B", "dst": "C", "kind": "data", "line": [374, 194, 374, 272]}, {"src": "C", "dst": "D", "kind": "data", "line": [374, 334, 374, 412]}, {"src": "D", "dst": "E", "kind": "data", "curve": [[434, 467], [549, 513], [549, 513], [549, 560]]}, {"src": "E", "dst": "E1", "kind": "data", "curve": [[609, 598], [839, 653], [839, 653], [839, 692]]}, {"src": "E", "dst": "E2", "kind": "data", "curve": [[581, 606], [646, 653], [646, 653], [646, 692]]}, {"src": "E", "dst": "E3", "kind": "data", "curve": [[517, 606], [453, 653], [453, 653], [453, 692]]}, {"src": "E", "dst": "E4", "kind": "data", "curve": [[489, 598], [278, 653], [278, 653], [278, 692]]}, {"src": "D", "dst": "F", "kind": "data", "curve": [[313, 459], [102, 513], [102, 513], [102, 552]]}, {"src": "F", "dst": "G", "kind": "data", "line": [102, 614, 102, 700]}, {"src": "G", "dst": "H", "kind": "data", "line": [102, 746, 102, 832]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('23claudecodevideotoolkit-1')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = '23claudecodevideotoolkit-1';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 특히 눈에 띄는 점은 비용 구조입니다. toolkit은 보이스(Qwen3-TTS), 이미지(FLUX.2), 음악(ACE-Step) 같은 생성형 자산을 상용 API가 아니라 오픈소스 모델에 의존하도록 설계했습니다. 사용자가 자신의 클라우드 GPU 계정에 모델을 배포해 원가로 돌리는 방식입니다. 저장소로는 Cloudflare R2의 무료 구간(10GB, 이그레스 무료)을, 컴퓨팅으로는 Modal의 스타터 플랜 월 30달러 무료 크레딧을 활용할 수 있다고 안내합니다. 자체 호스팅을 전제로 한 이 선택은 뒤에서 다룰 플랫폼 관점과 정확히 맞닿아 있습니다.
 

@@ -1420,3 +1420,10 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
   .catchip { font-size: 0.875rem; padding: 6px 14px; }
 }
 
+
+/* ── Wide-content safety (kept from main's 2026-07-23 layout pass) ──────────
+   Orthogonal to the TOC placement, so these survive the merge: very wide
+   tables scroll rather than overflow, and diagrams/images fit the column. */
+.page__content > table { display: block; overflow-x: auto; max-width: 100%; }
+.page__content .mermaid svg { max-width: 100%; width: 100%; height: auto; }
+.page__content img { max-width: 100%; height: auto; }

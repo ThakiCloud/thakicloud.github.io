@@ -42,18 +42,330 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agent-cost-observabil
 
 세 갈래의 뉴스를 관통하는 공통 원인은 결국 하나입니다. 에이전트 워크로드에서는 사용자가 보는 것과 청구서가 기록하는 것 사이의 거리가 너무 멀어졌습니다. 전통적인 API 호출은 요청 한 번에 응답 한 번, 비용 한 줄이었습니다. 반면 코딩 에이전트나 에이전트 SDK는 한 번의 지시가 계획 수립, 도구 호출, 파일 편집, 검증, 실패 시 재시도로 확장됩니다. 이 확장은 사용자에게 보이지 않는 곳에서 일어나고, 청구서에는 그 총합만 한 줄로 찍힙니다.
 
-```mermaid
-flowchart TB
-    U["사용자 요청 1건"] --> P["에이전트 계획 수립"]
-    P --> L["실행 루프"]
-    L --> T["도구 호출 · 모델 호출<br/>수십~수백 회"]
-    T --> R{"성공 여부"}
-    R -->|"실패"| RS["자동 재시도<br/>(리트라이 스톰)"]
-    RS --> T
-    R -->|"성공"| ACC["토큰 · 캐시 · tool call<br/>누적 집계"]
-    ACC --> INV["청구서: 최종 금액 한 줄"]
-    INV -.관측 공백.-> U
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="servabilitybillingcrisis-1"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 457, "height": 898, "legendTitle": "Legend", "legend": {"data": "Flow", "event": "Dotted / alternate path"}, "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "U", "x": 138, "y": 24, "w": 120, "h": 46, "title": "사용자 요청 1건"}, {"id": "P", "x": 296, "y": 148, "w": 120, "h": 46, "title": "에이전트 계획 수립"}, {"id": "L", "x": 296, "y": 272, "w": 120, "h": 46, "title": "실행 루프"}, {"id": "T", "x": 295, "y": 396, "w": 121, "h": 62, "title": ["도구 호출 · 모델 호출", "수십~수백 회"]}, {"id": "R", "x": 287, "y": 536, "w": 138, "h": 52, "title": "성공 여부"}, {"id": "RS", "x": 296, "y": 680, "w": 120, "h": 62, "title": ["자동 재시도", "(리트라이 스톰)"]}, {"id": "ACC", "x": 78, "y": 680, "w": 163, "h": 62, "title": ["토큰 · 캐시 · tool call", "누적 집계"]}, {"id": "INV", "x": 36, "y": 820, "w": 128, "h": 46, "title": "청구서: 최종 금액 한 줄"}], "edges": [{"src": "U", "dst": "P", "kind": "data", "curve": [[256, 70], [356, 109], [356, 109], [356, 148]]}, {"src": "P", "dst": "L", "kind": "data", "line": [356, 194, 356, 272]}, {"src": "L", "dst": "T", "kind": "data", "line": [356, 318, 356, 396]}, {"src": "T", "dst": "R", "kind": "data", "line": [356, 458, 356, 536]}, {"src": "R", "dst": "RS", "kind": "data", "label": "\"실패\"", "curve": [[374, 588], [406, 634], [406, 634], [376, 680]], "off": "50%"}, {"src": "RS", "dst": "T", "kind": "data", "curve": [[296, 692], [107, 634], [107, 497], [295, 444]]}, {"src": "R", "dst": "ACC", "kind": "data", "label": "\"성공\"", "curve": [[303, 588], [210, 634], [210, 634], [179, 680]], "off": "50%"}, {"src": "ACC", "dst": "INV", "kind": "data", "curve": [[159, 742], [159, 781], [159, 781], [122, 820]]}, {"src": "INV", "dst": "U", "kind": "event", "label": "관측 공백", "curve": [[77, 820], [40, 562], [40, 295], [139, 70]], "off": "50%"}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('servabilitybillingcrisis-1')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'servabilitybillingcrisis-1';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 이 구조에서 비용이 새는 지점은 대부분 사용자의 시야 밖에 있습니다. 재시도 루프가 조용히 돌면서 호출 수를 부풀리고, 중간 클라우드 사업자를 거치면서 실제 모델 사용량과 최종 청구 내역이 어긋나며, 자동 충전 같은 설정 하나가 잘못되면 카드 승인 단계까지 비정상 금액이 흘러갑니다. 세 뉴스는 서로 다른 사건처럼 보이지만, 전부 이 관측 공백의 다른 얼굴입니다. 그래서 개인별 월 한도를 거는 것만으로는 부족합니다. 필요한 것은 모델별 비용, 세션별 토큰, 캐시 토큰, 도구 호출 횟수, 실패와 재시도 비용, 일별 이상 증가율을 **호출이 일어나는 그 순간에** 중앙에서 붙잡는 계측 계층입니다. 관측이 없으면 통제도 없고, 통제가 없으면 청구서는 늘 사후에 놀라는 서류가 됩니다.
 

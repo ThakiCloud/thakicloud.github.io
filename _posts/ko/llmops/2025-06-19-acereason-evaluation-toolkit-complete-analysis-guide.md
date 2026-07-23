@@ -164,24 +164,330 @@ def apply_qwen_template(problem):
 
 #### 2.1 답안 추출 프로세스
 
-```mermaid
-graph TD
-    A[모델 생성 텍스트] --> B[패턴 매칭 시도]
-    B --> C{\\boxed{} 패턴}
-    C -->|발견| D[LaTeX 박스 내용 추출]
-    C -->|미발견| E{**답** 패턴}
-    E -->|발견| F[강조 텍스트 추출]
-    E -->|미발견| G{\\[...\\] 패턴}
-    G -->|발견| H[수식 환경 추출]
-    G -->|미발견| I{is \\(...\\) 패턴}
-    I -->|발견| J[인라인 수식 추출]
-    I -->|미발견| K[추출 실패]
-    
-    D --> L[답안 정규화]
-    F --> L
-    H --> L
-    J --> L
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-1"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 884, "height": 1050, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 376, "y": 24, "w": 120, "h": 46, "title": "모델 생성 텍스트"}, {"id": "B", "x": 376, "y": 148, "w": 120, "h": 46, "title": "패턴 매칭 시도"}, {"id": "C", "x": 367, "y": 272, "w": 138, "h": 52, "title": "\\\\boxed{"}, {"id": "D", "x": 724, "y": 848, "w": 128, "h": 46, "title": "LaTeX 박스 내용 추출"}, {"id": "E", "x": 278, "y": 416, "w": 138, "h": 52, "title": "**답** 패턴"}, {"id": "F", "x": 549, "y": 848, "w": 120, "h": 46, "title": "강조 텍스트 추출"}, {"id": "G", "x": 190, "y": 560, "w": 138, "h": 52, "title": "\\\\[...\\\\] 패턴"}, {"id": "H", "x": 374, "y": 848, "w": 120, "h": 46, "title": "수식 환경 추출"}, {"id": "I", "x": 95, "y": 704, "w": 153, "h": 52, "title": "is \\\\(...\\\\) 패턴"}, {"id": "J", "x": 199, "y": 848, "w": 120, "h": 46, "title": "인라인 수식 추출"}, {"id": "K", "x": 24, "y": 848, "w": 120, "h": 46, "title": "추출 실패"}, {"id": "L", "x": 462, "y": 972, "w": 120, "h": 46, "title": "답안 정규화"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [436, 70, 436, 148]}, {"src": "B", "dst": "C", "kind": "data", "line": [436, 194, 436, 272]}, {"src": "C", "dst": "D", "kind": "data", "label": "발견", "curve": [[505, 312], [788, 514], [788, 730], [788, 848]], "off": "50%"}, {"src": "C", "dst": "E", "kind": "data", "label": "미발견", "curve": [[404, 324], [347, 370], [347, 370], [347, 416]], "off": "50%"}, {"src": "E", "dst": "F", "kind": "data", "label": "발견", "curve": [[416, 461], [609, 586], [609, 730], [609, 848]], "off": "50%"}, {"src": "E", "dst": "G", "kind": "data", "label": "미발견", "curve": [[315, 468], [259, 514], [259, 514], [259, 560]], "off": "50%"}, {"src": "G", "dst": "H", "kind": "data", "label": "발견", "curve": [[322, 612], [434, 658], [434, 802], [434, 848]], "off": "50%"}, {"src": "G", "dst": "I", "kind": "data", "label": "미발견", "curve": [[227, 612], [172, 658], [172, 658], [172, 704]], "off": "50%"}, {"src": "I", "dst": "J", "kind": "data", "label": "발견", "curve": [[203, 756], [259, 802], [259, 802], [259, 848]], "off": "50%"}, {"src": "I", "dst": "K", "kind": "data", "label": "미발견", "curve": [[140, 756], [84, 802], [84, 802], [84, 848]], "off": "50%"}, {"src": "D", "dst": "L", "kind": "data", "curve": [[788, 894], [788, 933], [788, 933], [582, 981]]}, {"src": "F", "dst": "L", "kind": "data", "curve": [[609, 894], [609, 933], [609, 933], [554, 972]]}, {"src": "H", "dst": "L", "kind": "data", "curve": [[434, 894], [434, 933], [434, 933], [489, 972]]}, {"src": "J", "dst": "L", "kind": "data", "curve": [[259, 894], [259, 933], [259, 933], [462, 981]]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-1')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-1';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 **패턴 매칭 순서:**
 
@@ -223,25 +529,330 @@ def math_answer_cleaning(answer):
 
 #### 2.3 수학적 동치성 검증
 
-```mermaid
-graph TD
-    A[정규화된 답안] --> B{문자열 완전 일치}
-    B -->|일치| C[True 반환]
-    B -->|불일치| D{숫자 형식 검사}
-    D -->|둘 다 숫자| E[수치적 동치성 검사]
-    D -->|문자 포함| F{SymPy 파싱 가능}
-    F -->|가능| G[기호적 동치성 검사]
-    F -->|불가능| H[False 반환]
-    
-    E --> I{오차 범위 내 일치}
-    I -->|일치| C
-    I -->|불일치| H
-    
-    G --> J[SymPy simplify 적용]
-    J --> K{차이가 0인가}
-    K -->|0| C
-    K -->|0 아님| H
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-2"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 493, "height": 1050, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 184, "y": 24, "w": 120, "h": 46, "title": "정규화된 답안"}, {"id": "B", "x": 175, "y": 148, "w": 138, "h": 52, "title": "문자열 완전 일치"}, {"id": "C", "x": 328, "y": 972, "w": 120, "h": 46, "title": "True 반환"}, {"id": "D", "x": 122, "y": 292, "w": 138, "h": 52, "title": "숫자 형식 검사"}, {"id": "E", "x": 288, "y": 704, "w": 120, "h": 46, "title": "수치적 동치성 검사"}, {"id": "F", "x": 25, "y": 436, "w": 138, "h": 52, "title": "SymPy 파싱 가능"}, {"id": "G", "x": 95, "y": 580, "w": 120, "h": 46, "title": "기호적 동치성 검사"}, {"id": "H", "x": 51, "y": 972, "w": 120, "h": 46, "title": "False 반환"}, {"id": "I", "x": 279, "y": 828, "w": 138, "h": 52, "title": "오차 범위 내 일치"}, {"id": "J", "x": 81, "y": 704, "w": 149, "h": 46, "title": "SymPy simplify 적용"}, {"id": "K", "x": 86, "y": 828, "w": 138, "h": 52, "title": "차이가 0인가"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [244, 70, 244, 148]}, {"src": "B", "dst": "C", "kind": "data", "label": "일치", "curve": [[313, 198], [455, 462], [455, 727], [410, 972]], "off": "50%"}, {"src": "B", "dst": "D", "kind": "data", "label": "불일치", "curve": [[225, 200], [191, 246], [191, 246], [191, 292]], "off": "50%"}, {"src": "D", "dst": "E", "kind": "data", "label": "둘 다 숫자", "curve": [[248, 344], [348, 462], [348, 603], [348, 704]], "off": "50%"}, {"src": "D", "dst": "F", "kind": "data", "label": "문자 포함", "curve": [[156, 344], [94, 390], [94, 390], [94, 436]], "off": "50%"}, {"src": "F", "dst": "G", "kind": "data", "label": "가능", "curve": [[116, 488], [155, 534], [155, 534], [155, 580]], "off": "50%"}, {"src": "F", "dst": "H", "kind": "data", "label": "불가능", "curve": [[72, 488], [34, 665], [34, 854], [85, 972]], "off": "50%"}, {"src": "E", "dst": "I", "kind": "data", "line": [348, 750, 348, 828]}, {"src": "I", "dst": "C", "kind": "data", "label": "일치", "curve": [[363, 880], [388, 926], [388, 926], [388, 972]], "off": "50%"}, {"src": "I", "dst": "H", "kind": "data", "label": "불일치", "curve": [[319, 880], [269, 926], [269, 926], [163, 972]], "off": "50%"}, {"src": "G", "dst": "J", "kind": "data", "line": [155, 626, 155, 704]}, {"src": "J", "dst": "K", "kind": "data", "line": [155, 750, 155, 828]}, {"src": "K", "dst": "C", "kind": "data", "label": "0", "curve": [[184, 880], [235, 926], [235, 926], [337, 972]], "off": "50%"}, {"src": "K", "dst": "H", "kind": "data", "label": "0 아님", "curve": [[139, 880], [111, 926], [111, 926], [111, 972]], "off": "50%"}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-2')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-2';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 **수치적 동치성 검사:**
 
@@ -308,18 +919,330 @@ for (( gpu=0; gpu<GPUS; gpu++ )); do
 done
 ```
 
-```mermaid
-graph LR
-    A[1055개 문제] --> B[8개 GPU로 분할]
-    B --> C[GPU 0: 0-131]
-    B --> D[GPU 1: 132-263]
-    B --> E[GPU 2: 264-395]
-    B --> F[GPU 3: 396-527]
-    B --> G[GPU 4: 528-659]
-    B --> H[GPU 5: 660-791]
-    B --> I[GPU 6: 792-923]
-    B --> J[GPU 7: 924-1055]
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-3"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 587, "height": 809, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 24, "y": 378, "w": 120, "h": 46, "title": "1055개 문제"}, {"id": "B", "x": 222, "y": 378, "w": 120, "h": 46, "title": "8개 GPU로 분할"}, {"id": "C", "x": 428, "y": 731, "w": 120, "h": 46, "title": "GPU 0: 0-131"}, {"id": "D", "x": 424, "y": 630, "w": 128, "h": 46, "title": "GPU 1: 132-263"}, {"id": "E", "x": 424, "y": 529, "w": 128, "h": 46, "title": "GPU 2: 264-395"}, {"id": "F", "x": 424, "y": 428, "w": 128, "h": 46, "title": "GPU 3: 396-527"}, {"id": "G", "x": 424, "y": 327, "w": 128, "h": 46, "title": "GPU 4: 528-659"}, {"id": "H", "x": 424, "y": 226, "w": 128, "h": 46, "title": "GPU 5: 660-791"}, {"id": "I", "x": 424, "y": 125, "w": 128, "h": 46, "title": "GPU 6: 792-923"}, {"id": "J", "x": 420, "y": 24, "w": 135, "h": 46, "title": "GPU 7: 924-1055"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [144, 401, 222, 401]}, {"src": "B", "dst": "C", "kind": "data", "curve": [[288, 424], [381, 754], [381, 754], [428, 754]]}, {"src": "B", "dst": "D", "kind": "data", "curve": [[291, 424], [381, 653], [381, 653], [424, 653]]}, {"src": "B", "dst": "E", "kind": "data", "curve": [[297, 424], [381, 552], [381, 552], [424, 552]]}, {"src": "B", "dst": "F", "kind": "data", "curve": [[327, 424], [381, 451], [381, 451], [424, 451]]}, {"src": "B", "dst": "G", "kind": "data", "curve": [[327, 378], [381, 350], [381, 350], [424, 350]]}, {"src": "B", "dst": "H", "kind": "data", "curve": [[297, 378], [381, 249], [381, 249], [424, 249]]}, {"src": "B", "dst": "I", "kind": "data", "curve": [[291, 378], [381, 148], [381, 148], [424, 148]]}, {"src": "B", "dst": "J", "kind": "data", "curve": [[288, 378], [381, 47], [381, 47], [420, 47]]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-3')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-3';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 #### 1.2 코드 생성 프로세스
 
@@ -515,28 +1438,330 @@ def run_test(problem, timeout=5):
 
 ### 1. 병렬 처리 최적화
 
-```mermaid
-graph TD
-    A[마스터 프로세스] --> B[GPU 0 작업자]
-    A --> C[GPU 1 작업자]
-    A --> D[GPU 2 작업자]
-    A --> E[GPU 3 작업자]
-    A --> F[GPU 4 작업자]
-    A --> G[GPU 5 작업자]
-    A --> H[GPU 6 작업자]
-    A --> I[GPU 7 작업자]
-    
-    B --> J[VLLM 추론 엔진]
-    C --> J
-    D --> J
-    E --> J
-    F --> J
-    G --> J
-    H --> J
-    I --> J
-    
-    J --> K[결과 수집 및 집계]
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-4"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 770, "height": 809, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 24, "y": 378, "w": 120, "h": 46, "title": "마스터 프로세스"}, {"id": "B", "x": 222, "y": 731, "w": 120, "h": 46, "title": "GPU 0 작업자"}, {"id": "C", "x": 222, "y": 630, "w": 120, "h": 46, "title": "GPU 1 작업자"}, {"id": "D", "x": 222, "y": 529, "w": 120, "h": 46, "title": "GPU 2 작업자"}, {"id": "E", "x": 222, "y": 428, "w": 120, "h": 46, "title": "GPU 3 작업자"}, {"id": "F", "x": 222, "y": 327, "w": 120, "h": 46, "title": "GPU 4 작업자"}, {"id": "G", "x": 222, "y": 226, "w": 120, "h": 46, "title": "GPU 5 작업자"}, {"id": "H", "x": 222, "y": 125, "w": 120, "h": 46, "title": "GPU 6 작업자"}, {"id": "I", "x": 222, "y": 24, "w": 120, "h": 46, "title": "GPU 7 작업자"}, {"id": "J", "x": 420, "y": 378, "w": 120, "h": 46, "title": "VLLM 추론 엔진"}, {"id": "K", "x": 618, "y": 378, "w": 120, "h": 46, "title": "결과 수집 및 집계"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "curve": [[90, 424], [183, 754], [183, 754], [222, 754]]}, {"src": "A", "dst": "C", "kind": "data", "curve": [[93, 424], [183, 653], [183, 653], [222, 653]]}, {"src": "A", "dst": "D", "kind": "data", "curve": [[99, 424], [183, 552], [183, 552], [222, 552]]}, {"src": "A", "dst": "E", "kind": "data", "curve": [[129, 424], [183, 451], [183, 451], [222, 451]]}, {"src": "A", "dst": "F", "kind": "data", "curve": [[129, 378], [183, 350], [183, 350], [222, 350]]}, {"src": "A", "dst": "G", "kind": "data", "curve": [[99, 378], [183, 249], [183, 249], [222, 249]]}, {"src": "A", "dst": "H", "kind": "data", "curve": [[93, 378], [183, 148], [183, 148], [222, 148]]}, {"src": "A", "dst": "I", "kind": "data", "curve": [[90, 378], [183, 47], [183, 47], [222, 47]]}, {"src": "B", "dst": "J", "kind": "data", "curve": [[342, 754], [381, 754], [381, 754], [474, 424]]}, {"src": "C", "dst": "J", "kind": "data", "curve": [[342, 653], [381, 653], [381, 653], [471, 424]]}, {"src": "D", "dst": "J", "kind": "data", "curve": [[342, 552], [381, 552], [381, 552], [465, 424]]}, {"src": "E", "dst": "J", "kind": "data", "curve": [[342, 451], [381, 451], [381, 451], [435, 424]]}, {"src": "F", "dst": "J", "kind": "data", "curve": [[342, 350], [381, 350], [381, 350], [435, 378]]}, {"src": "G", "dst": "J", "kind": "data", "curve": [[342, 249], [381, 249], [381, 249], [465, 378]]}, {"src": "H", "dst": "J", "kind": "data", "curve": [[342, 148], [381, 148], [381, 148], [471, 378]]}, {"src": "I", "dst": "J", "kind": "data", "curve": [[342, 47], [381, 47], [381, 47], [474, 378]]}, {"src": "J", "dst": "K", "kind": "data", "line": [540, 401, 618, 401]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-4')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-4';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 ### 2. 메모리 효율성
 

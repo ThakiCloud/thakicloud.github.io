@@ -1,6 +1,6 @@
 ---
-title: "천재 한 명 vs 떼거리ㅋ"
-excerpt: "똑똑한 한 놈은 벽에서 막힌대. 그래서 파시스가 떼로 풀었다ㅋ"
+title: "천재 한 명 vs 떼거리"
+excerpt: "똑똑한 한 놈은 벽에서 막힌대. 그래서 파시스가 떼로 풀었다"
 date: 2026-07-19
 categories:
   - 만화
@@ -21,7 +21,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 Kimi를 만든 회사 대표가 이런 말을 남겼습니다. 하나의 에이전트를 더 똑똑하게 키우면 금세 벽에 부딪힌다, 그러니 대신 여러 에이전트를 붙여 협업시키라는 겁니다. 여기서 에이전트란 스스로 판단하고 도구를 쓰는 작은 AI 일꾼이고, 멀티에이전트란 그 일꾼 여럿이 역할을 나눠 함께 문제를 푸는 방식입니다.
 말은 근사한데, 파시스와 메티스에게는 그저 하던 일이 뉴스가 된 셈입니다. 문제는 떼로 풀면 벽은 넘을지 몰라도 청구서가 같이 불어난다는 데 있습니다.
 
-![천재 한 명 vs 떼거리ㅋ]({{ '/assets/images/posts/만화/one-smart-agent-hits-a-wall-send-a-crowd/strip.png' | relative_url }})
+![천재 한 명 vs 떼거리]({{ '/assets/images/posts/만화/one-smart-agent-hits-a-wall-send-a-crowd/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @Serantych: Kimi's CEO Zhilin Yang: (build many agents, not one smarter one)](https://x.com/hjguyhan/status/2078398449716994270) · twitter
 

@@ -1,6 +1,6 @@
 ---
-title: "62만 앱 화면 다 베끼면 생기는 일ㅋ"
-excerpt: "62만 개 화면을 다 참고했더니, 세상 앱이 다 한 앱이 됐다ㅋ"
+title: "62만 앱 화면 다 베끼면 생기는 일"
+excerpt: "62만 개 화면을 다 참고했더니, 세상 앱이 다 한 앱이 됐다"
 date: 2026-07-12
 categories:
   - 만화
@@ -20,7 +20,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 iOS 화면을 짤 때 참고할 곳이 없어 막막했던 분들에게, 62만 장이 넘는 앱 화면을 통째로 모아둔 도구가 화제입니다. 비슷한 앱이 어떤 동선으로 흘러가는지, 화면과 화면 사이가 어떻게 전환되는지, 작은 애니메이션 하나까지 그대로 들여다볼 수 있다고 합니다. 여기서 화면 전환이란 버튼을 눌렀을 때 다음 화면으로 넘어가는 흐름을 말합니다. 문제는 참고가 쉬워질수록 다들 인기 있는 상위 화면만 베껴, 세상 앱이 점점 한 얼굴이 된다는 데 있죠. 참고는 무한대인데 개성은 어디서 나오느냐는 이야기입니다.
 
-![62만 앱 화면 다 베끼면 생기는 일ㅋ]({{ '/assets/images/posts/만화/app-screen-library-all-the-same/strip.png' | relative_url }})
+![62만 앱 화면 다 베끼면 생기는 일]({{ '/assets/images/posts/만화/app-screen-library-all-the-same/strip.png' | relative_url }})
 
 > 원 뉴스: [RT @protoduct_ai: iOS開発でUI実装する人、絶対これ使った方がいい](https://x.com/hjguyhan/status/2076093695162822954) · twitter
 

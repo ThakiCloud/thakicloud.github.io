@@ -25,9 +25,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/archify-agent-architectu
 
 ## 왜 읽어야 하나
 
-이 글은 **아키텍처 다이어그램을 자주 그리지만 Mermaid 문법이나 그리기 도구에 시간을 빼앗기는 개발자와 플랫폼 엔지니어**를 위한 것입니다. 도구를 하나 고르기 위한 판단 근거가 필요한 사람에게 도움이 됩니다.
+이 글은 **아키텍처 다이어그램을 자주 그리지만 Mermaid 문법이나 그리기 도구에 시간을 빼앗기는 개발자와 플랫폼 엔지니어**를 위해 썼습니다. 도구를 하나 고르려는 판단 근거가 필요하다면 참고할 만합니다.
 
-먼저 결론부터 말씀드리겠습니다. Archify의 진짜 가치는 "말로 그림을 그려 준다"는 편의가 아니라, **에이전트가 만든 배치를 렌더러가 강제로 검증해 어긋난 그림을 아예 만들지 못하게 막는다**는 점에 있습니다. 실제로 돌려 보니 첫 시도는 렌더가 거부당했고, 그 거부가 이 도구를 쓸 만하게 만드는 핵심이었습니다.
+결론부터 말하면, Archify의 진짜 가치는 "말로 그림을 그려 준다"는 편의가 아니라, **에이전트가 만든 배치를 렌더러가 강제로 검증해 어긋난 그림을 아예 만들지 못하게 막는다**는 데 있습니다. 실제로 돌려 보니 첫 시도는 렌더가 거부당했고, 그 거부야말로 이 도구를 쓸 만하게 만드는 핵심이었습니다.
 
 ## 개요
 
@@ -35,7 +35,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/archify-agent-architectu
 
 최근 중국 개발자 커뮤니티에서 화제가 된 **Archify**는 이 지점을 겨냥합니다. "이 저장소 몇 개를 읽고 아키텍처 비교도를 그려 줘" 같은 평범한 문장을 Claude Code나 Codex에 던지면, 브라우저에서 바로 열리는 자기완결형 HTML 다이어그램 한 장이 나옵니다. 다크·라이트 테마를 토글할 수 있고, PNG·SVG로 내보낼 수도 있습니다.
 
-여기까지는 흔한 홍보 문구입니다. 그래서 저희는 문구를 믿는 대신 실제로 설치해 돌려 보고, 다키클라우드의 ai-platform 구조를 직접 그려 봤습니다. 그 과정에서 이 도구가 왜 단순한 "AI 그림 생성기"와 다른지가 드러났습니다. 이 글은 그 실험 기록이자, 다키클라우드가 만드는 에이전트 플랫폼 Paxis의 설계 철학과 어떻게 맞닿는지에 대한 정리입니다.
+여기까지는 흔한 홍보 문구입니다. 그래서 저희는 문구를 믿는 대신 실제로 설치해 돌려 보고, 다키클라우드의 ai-platform 구조를 직접 그려 봤습니다. 그 과정에서 이 도구가 왜 단순한 "AI 그림 생성기"와 다른지가 드러났습니다. 이 글은 그 실험 기록이며, 다키클라우드가 만드는 에이전트 플랫폼 Paxis의 설계 철학과 어떻게 맞닿는지 함께 짚어 봅니다.
 
 ## 이 도구는 무엇인가
 
@@ -47,19 +47,334 @@ Archify는 `tt-a1i`가 MIT 라이선스로 공개한 오픈소스 에이전트 �
 
 ![Archify의 다섯 가지 렌더링 스키마: architecture, workflow, sequence, dataflow, lifecycle]({{ '/assets/images/archify-agent-architecture-diagrams-slide-05.png' | relative_url }})
 
-이 역할 분담이 Mermaid와의 결정적 차이를 만듭니다. Mermaid는 문법을 파싱해 자동 배치(dagre)로 그림을 뽑지만, 선이 상자를 가로지르거나 라벨이 겹쳐도 그대로 그려 냅니다. Archify는 반대로 배치 좌표를 명시하게 하고, 렌더 직전에 **레이아웃 규칙을 강제로 검사**합니다. 규칙을 어기면 그림을 만들지 않고 오류를 냅니다.
+이 역할 분담이 Mermaid와의 결정적 차이를 만듭니다. Mermaid는 문법을 파싱해 자동 배치(dagre)로 그림을 뽑지만, 선이 상자를 가로지르거나 라벨이 겹쳐도 그대로 그려 냅니다. Archify는 반대로 배치 좌표를 명시하게 하고, 렌더 직전에 **레이아웃 규칙을 강제로 검사**합니다. 규칙을 어기면 아예 그림을 만들지 않고 오류로 멈춥니다.
 
 전체 흐름은 다음과 같습니다.
 
-```mermaid
-flowchart TB
-    A["자연어 요청<br/>(저장소를 읽고 아키텍처를 그려 줘)"] --> B["에이전트<br/>Claude Code / Codex"]
-    B --> C["JSON-IR 작성<br/>components · connections · boundaries"]
-    C --> D["타입 렌더러<br/>architecture / workflow / sequence / dataflow / lifecycle"]
-    D --> E{"레이아웃 검증<br/>선-노드 교차 · 라벨 겹침"}
-    E -.검증 실패 + 수정 제안.-> C
-    E -->|통과| F["자기완결형 HTML<br/>다크·라이트 테마 · PNG/SVG 내보내기"]
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="gentarchitecturediagrams-1"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  .d3-arch svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 382, "height": 886, "legendTitle": "Legend", "legend": {"data": "Flow", "event": "Dotted / alternate path"}, "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 71, "y": 24, "w": 170, "h": 62, "title": ["자연어 요청", "(저장소를 읽고 아키텍처를 그려 줘)"]}, {"id": "B", "x": 75, "y": 164, "w": 163, "h": 62, "title": ["에이전트", "Claude Code / Codex"]}, {"id": "C", "x": 50, "y": 304, "w": 212, "h": 78, "title": ["JSON-IR 작성", "components · connections ·", "boundaries"]}, {"id": "D", "x": 145, "y": 460, "w": 205, "h": 94, "title": ["타입 렌더러", "architecture / workflow /", "sequence / dataflow /", "lifecycle"]}, {"id": "E", "x": 80, "y": 632, "w": 153, "h": 68, "title": ["레이아웃 검증", "선-노드 교차 · 라벨 겹침"]}, {"id": "F", "x": 57, "y": 792, "w": 198, "h": 62, "title": ["자기완결형 HTML", "다크·라이트 테마 · PNG/SVG 내보내기"]}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [156, 86, 156, 164]}, {"src": "B", "dst": "C", "kind": "data", "line": [156, 226, 156, 304]}, {"src": "C", "dst": "D", "kind": "data", "curve": [[202, 382], [247, 421], [247, 421], [247, 460]]}, {"src": "D", "dst": "E", "kind": "data", "curve": [[247, 554], [247, 593], [247, 593], [199, 632]]}, {"src": "E", "dst": "C", "kind": "event", "label": "검증 실패 + 수정 제안", "curve": [[114, 632], [66, 593], [66, 421], [111, 382]], "off": "50%"}, {"src": "E", "dst": "F", "kind": "data", "label": "통과", "line": [156, 700, 156, 792], "lx": 156, "ly": 742}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('gentarchitecturediagrams-1')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'gentarchitecturediagrams-1';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 ## 설치 및 통합
 
@@ -73,7 +388,7 @@ npx skills add tt-a1i/archify -g
 npx skills use tt-a1i/archify@archify --agent codex
 ```
 
-저장소를 직접 클론해 CLI로 검증하고 예제를 뽑아 볼 수도 있습니다. 실제로 저희가 실행한 명령과 출력은 다음과 같습니다. 실험 환경은 Node.js v24.1.0이었고, Archify가 요구하는 런타임은 Node 18 이상, 런타임 의존성은 사실상 없었습니다(개발 의존성으로 스키마 검증용 ajv 하나만 있습니다).
+저장소를 직접 클론해 CLI로 검증하고 예제를 뽑아 볼 수도 있습니다. 실제로 저희가 실행한 명령과 출력은 다음과 같습니다. 실험 환경은 Node.js v24.1.0이었고, Archify가 요구하는 런타임은 Node 18 이상이며 런타임 의존성은 사실상 없었습니다(개발 의존성으로 스키마 검증용 ajv 하나만 있습니다).
 
 ```bash
 git clone --depth 1 https://github.com/tt-a1i/archify.git
@@ -128,7 +443,7 @@ JSON-IR은 사람이 읽고 쓰기에도 어렵지 않았습니다. 구성 요�
 }
 ```
 
-첫 렌더 시도는 **실패했습니다.** 그리고 이 실패가 이 글에서 가장 중요한 대목입니다. 렌더러는 그림을 그리는 대신 다음과 같은 구체적인 문제를 세 가지 짚어 냈습니다.
+첫 렌더 시도는 **실패했습니다.** 그리고 이 실패에 Archify가 하는 일이 고스란히 담겨 있습니다. 렌더러는 그림을 그리는 대신 다음과 같은 구체적인 문제를 세 가지 짚어 냈습니다.
 
 ```text
 Error: Architecture layout validation failed:
@@ -140,7 +455,7 @@ Error: Architecture layout validation failed:
   Suggested fix: labelDy +24 (below); or labelAt [350, 374]
 ```
 
-즉 Kueue에서 GPU 풀로 가는 연결선이 관계없는 vLLM과 ArgoCD 상자를 관통했고, "publish" 라벨이 게이트웨이 상자와 겹쳤습니다. 주목할 점은 렌더러가 문제만 지적한 게 아니라 **어떻게 고치라는 제안까지** 함께 줬다는 것입니다. 라벨을 얼마나 내리라는 좌표까지 계산해 줬습니다.
+즉 Kueue에서 GPU 풀로 가는 연결선이 관계없는 vLLM과 ArgoCD 상자를 관통했고, "publish" 라벨이 게이트웨이 상자와 겹쳤습니다. 렌더러는 문제만 짚지 않고 **어떻게 고치라는 제안까지** 함께 줬습니다. 라벨을 얼마나 내리면 되는지 좌표까지 계산해 줬습니다.
 
 제안대로 연결선에 우회 경로(via)를 주고 라벨 위치를 조정한 뒤 다시 렌더링하니 이번에는 통과했습니다. 실측 결과는 다음과 같습니다.
 
@@ -154,15 +469,15 @@ Error: Architecture layout validation failed:
 
 ![다키클라우드 스택 실측 결과: 렌더 0.073초, 단일 HTML 508KB, 외부 참조 1건, 테마 변수 27곳]({{ '/assets/images/archify-agent-architecture-diagrams-slide-07.png' | relative_url }})
 
-정리하면, 렌더 자체는 73밀리초로 사실상 즉시입니다. 결과물은 이미지 서버나 CDN에 의존하지 않는 자기완결형 HTML 한 장이며, 유일한 외부 참조는 코드용 웹폰트 하나뿐이라 오프라인에서도 시스템 폰트로 깨지지 않고 열립니다. 다크·라이트 테마는 장식이 아니라 실제 CSS 변수와 `prefers-color-scheme`로 구현되어 있었습니다.
+숫자로 보면, 렌더 자체는 73밀리초로 사실상 즉시입니다. 결과물은 이미지 서버나 CDN에 의존하지 않는 자기완결형 HTML 한 장이며, 유일한 외부 참조는 코드용 웹폰트 하나뿐이라 오프라인에서도 시스템 폰트로 깨지지 않고 열립니다. 다크·라이트 테마는 장식이 아니라 실제 CSS 변수와 `prefers-color-scheme`로 구현돼 있었습니다.
 
-여기서 얻은 교훈은 분명합니다. Archify의 검증기는 "예쁜 그림"을 만드는 장치가 아니라, **선이 엉키거나 라벨이 겹치는 나쁜 다이어그램을 배포 단계에서 원천 차단하는 게이트**입니다. 사람이 손으로 그렸다면 그냥 넘어갔을 시각적 결함을, 코드가 매번 같은 기준으로 잡아냈습니다.
+이 실험이 남긴 교훈은 분명합니다. Archify의 검증기는 "예쁜 그림"을 만드는 장치가 아니라, **선이 엉키거나 라벨이 겹치는 나쁜 다이어그램을 배포 단계에서 원천 차단하는 게이트**입니다. 사람이 손으로 그렸다면 그냥 넘어갔을 시각적 결함을, 코드가 매번 같은 기준으로 잡아냈습니다.
 
 ## 다키클라우드 제품 적용 시사점
 
 이 도구의 설계는 다키클라우드가 두 제품에서 지키는 원칙과 정확히 맞닿습니다.
 
-**Paxis 렌즈(에이전트·스킬).** Paxis는 다키클라우드의 Agent-Native Cloud로, 스킬을 일급 리소스로 다룹니다. 960개가 넘는 스킬을 BM25로 선택해 격리된 샌드박스에서 실행하고, 모든 행동을 정책 게이트와 감사 로그로 통과시킵니다. Archify는 정확히 이런 스킬 하니스가 선택해 실행하기 좋은 형태의 도구입니다. 더 중요한 것은 그 내부 설계입니다. Archify는 **모델이 내용(JSON-IR)을 만들고, 코드가 포맷과 검증을 소유**합니다. 이는 다키클라우드가 배치 산출물에서 반복해 강조하는 원칙, 즉 자유도가 높은 생성 단계와 결정론적 검증 단계를 분리하라는 원칙과 같습니다. 모델에게 "예쁘게 그려 줘"라고 부탁하는 대신, 구조화된 표현을 만들게 하고 그 표현이 규칙을 지키는지는 코드가 강제하는 방식입니다. 저희의 첫 렌더가 거부당한 경험이 바로 이 원칙이 실제로 작동한 순간이었습니다.
+**Paxis 렌즈(에이전트·스킬).** Paxis는 다키클라우드의 Agent-Native Cloud로, 스킬을 일급 리소스로 다룹니다. 960개가 넘는 스킬을 BM25로 선택해 격리된 샌드박스에서 실행하고, 모든 행동을 정책 게이트와 감사 로그로 통과시킵니다. Archify는 정확히 이런 스킬 하니스가 선택해 실행하기 좋은 형태의 도구입니다. 정작 눈여겨볼 곳은 그 내부 설계입니다. Archify는 **모델이 내용(JSON-IR)을 만들고, 코드가 포맷과 검증을 소유**합니다. 이는 다키클라우드가 배치 산출물에서 반복해 강조하는 원칙, 즉 자유도가 높은 생성 단계와 결정론적 검증 단계를 분리하라는 원칙과 같습니다. 모델에게 "예쁘게 그려 줘"라고 부탁하는 대신, 구조화된 표현을 만들게 하고 그 표현이 규칙을 지키는지는 코드가 강제하는 방식입니다. 저희의 첫 렌더가 거부당한 경험이 바로 이 원칙이 실제로 작동한 순간이었습니다.
 
 **ai-platform 렌즈(인프라·문서화).** 자기완결형 HTML은 온프렘·소버린 환경에서 특히 유용합니다. 외부 다이어그램 SaaS에 내부 아키텍처를 올릴 수 없는 고객에게, 렌더가 로컬에서 끝나고 결과가 단일 파일로 남는 방식은 그대로 반입 가능한 산출물이 됩니다. 또한 JSON-IR은 텍스트라 Git으로 버전 관리되고 diff가 됩니다. ArgoCD로 매니페스트를 관리하듯 아키텍처 다이어그램도 코드로 관리하며, 변경 이력을 추적하고 리뷰할 수 있습니다. 신입 온보딩 문서나 고객용 배포 구조도를 매번 손으로 다시 그리는 대신, 구조가 바뀔 때 JSON만 고쳐 다시 렌더하면 됩니다.
 
@@ -184,7 +499,7 @@ Error: Architecture layout validation failed:
 
 ## 정리
 
-Archify를 직접 설치해 다키클라우드 스택을 그려 본 결론은 이렇습니다. 이 도구의 핵심은 "말로 그림을 그린다"는 편의가 아니라, **에이전트가 만든 배치를 렌더러가 매번 같은 기준으로 검증해 나쁜 다이어그램을 배포 전에 막는다**는 규율입니다. 서론에서 말씀드린 그대로, 저희 첫 렌더가 거부당한 경험이 이 도구를 신뢰하게 만든 지점이었습니다.
+Archify를 직접 설치해 다키클라우드 스택을 그려 본 결론은 이렇습니다. 이 도구의 핵심은 "말로 그림을 그린다"는 편의가 아니라, **에이전트가 만든 배치를 렌더러가 매번 같은 기준으로 검증해 나쁜 다이어그램을 배포 전에 막는다**는 규율입니다. 서론에서 짚은 그대로, 저희 첫 렌더가 거부당한 경험이 이 도구를 신뢰하게 만든 지점이었습니다.
 
 그래서 다음 행동은 명확합니다. 아키텍처 다이어그램을 자주 그리고, 그 그림을 문서나 저장소에 코드처럼 남기고 싶다면 Archify를 한 번 돌려 볼 값어치가 있습니다. 반대로 빠른 스케치나 페이지에 여러 장을 얹는 용도라면 Mermaid가 여전히 가볍습니다. 판단 기준은 "이 그림을 재현 가능하고 검증된 자산으로 관리할 것인가"입니다. 그렇다면 Archify가, 그리고 같은 원리를 제품으로 만드는 Paxis의 스킬 하니스가 답이 됩니다.
 
