@@ -1469,17 +1469,17 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
 .site-footer__logo { height: 20px; }   /* both svgs = mark + wordmark in one */
 .site-footer__social { display: flex; align-items: flex-end; gap: 16px; list-style: none; margin: 0; padding: 0; }
 .site-footer__social li { margin: 0; display: flex; align-items: flex-end; }
-/* 18×18 box per icon, glyph sitting on the bottom edge so all three line up */
+/* 14×14 box per icon, glyph sitting on the bottom edge so all three line up */
 .site-footer__social a {
   color: var(--footer-icon);
   display: inline-flex;
   align-items: flex-end;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
 }
 .site-footer__social a:hover { color: var(--text); }
-.site-footer__social i { font-size: 18px; line-height: 1; }
+.site-footer__social i { font-size: 14px; line-height: 1; }
 .site-footer__info { text-align: right; }
 /* Mona Sans / 11px / 500 / 1.625 (17.875px) / gray-500 */
 .site-footer__info p {
