@@ -17,6 +17,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/physical-ai-needs-action-records/"
+published: false
 ---
 
 ## 화면 밖으로 나온 AI, 오답의 무게가 달라졌습니다
