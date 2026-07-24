@@ -899,6 +899,8 @@ html[lang="ar"] .toss-rail__rank { }
 }
 /* Match the title/meta header to the 680px reading measure. */
 .layout--single .page__inner-wrap > header { max-width: 680px; }
+/* 24px gap between the title and the hero image below it. */
+.layout--single .page__title { margin-bottom: 24px; }
 /* MM indents the breadcrumb list to clear the (now removed) left sidebar. */
 .layout--single .breadcrumbs {
   max-width: 948px;
