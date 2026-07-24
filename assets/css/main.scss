@@ -1307,11 +1307,43 @@ html[lang="ar"] .toss-rail__rank { }
 
 /* ---- Post rows — no cards, hairline dividers (32px above/below) ---- */
 .postrow {
+  display: flex;
+  align-items: stretch;   /* thumb runs the full height of the text block */
+  gap: 20px;
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid var(--divider);
 }
-.postrow[hidden] { display: none; }
+.postrow[hidden] { display: none; }   /* must still beat the flex above */
+.postrow__body { flex: 1 1 auto; min-width: 0; }
+/* Hero thumbnail on the right: height fills the row, width follows the
+   image's own aspect ratio (no cropping). */
+/* 16:9 box matching the source ratio, so the hero is never cropped. Width is
+   definite and the height follows from it — flexbox resolves an item's width
+   before the cross-axis stretch, so a stretched height can't drive the width.
+   190px ≈ 107px tall, which lines up with a typical title+date+description. */
+.postrow__thumb {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: 190px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border-bottom: 0;
+  background: var(--surface-hover);
+}
+.postrow__thumb img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 560px) {
+  .postrow__thumb { max-width: 34vw; }
+}
 .postrow__title {
   font-size: 1rem;
   font-weight: 700;
