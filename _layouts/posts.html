@@ -22,12 +22,6 @@ classes: wide
 
 <div class="postspage">
 
-  {% comment %} ── Search (tag filter) ─────────────────────────────────── {% endcomment %}
-  <div class="postspage__search">
-    <input name="tags" placeholder="Search posts by tags" value="">
-    <svg class="tbi postspage__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
-  </div>
-
   {% comment %} ── Category chips (replaces the old sidebar list) ──────── {% endcomment %}
   {% comment %}
     Labels come from _data/category_labels.yml so the chips and the post-footer
@@ -38,25 +32,77 @@ classes: wide
     <button type="button" class="catchip is-active" data-cat="">All</button>
     {% for v in chip_values %}
       <button type="button" class="catchip" data-cat="{{ v }}">{{ site.data.category_labels[v] | default: v }}</button>
-      {% comment %} Forces the 6+6 split from the design; collapses on narrow screens. {% endcomment %}
-      {% if forloop.index == 5 %}<span class="catchips__break" aria-hidden="true"></span>{% endif %}
     {% endfor %}
     <button type="button" class="catchip" data-cat="{{ comics_cat }}">{{ site.data.category_labels[comics_cat] | default: 'Comics' }}</button>
   </nav>
 
+  {% comment %} ── Search (tag filter) ─────────────────────────────────── {% endcomment %}
+  <div class="postspage__search">
+    <input name="tags" placeholder="Search posts by tags" value="">
+    <svg class="tbi postspage__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+  </div>
+
   {% comment %} ── Post list ───────────────────────────────────────────── {% endcomment %}
   <div class="postspage__list">
     {% for post in filtered_posts %}
+      {%- comment %}
+        Posts carry no front-matter thumbnail, so the hero is the first <img>
+        in the rendered body. Splitting the rendered content gives the final
+        src (baseurl already applied).
+      {% endcomment -%}
+      {%- assign _thumb = '' -%}
+      {%- assign _img_parts = post.content | split: '<img ' -%}
+      {%- if _img_parts.size > 1 -%}
+        {%- assign _img_tag = _img_parts[1] | split: '>' | first -%}
+        {%- assign _src_parts = _img_tag | split: 'src="' -%}
+        {%- if _src_parts.size > 1 -%}
+          {%- assign _thumb = _src_parts[1] | split: '"' | first -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- comment %}
+        post.content holds the raw markdown path (/assets/...), not the
+        baseurl'd one, so prefix it unless it's absolute or already prefixed.
+      {% endcomment -%}
+      {%- unless _thumb == '' or _thumb contains '://' -%}
+        {%- if site.baseurl and site.baseurl != '' and _thumb contains site.baseurl -%}
+        {%- else -%}
+          {%- assign _thumb = _thumb | relative_url -%}
+        {%- endif -%}
+      {%- endunless -%}
       <article class="postrow"
         {% if post.tags %}{% for tag in post.tags %} data-{{ tag | slugify }}{% endfor %}{% endif %}
         data-categories="{% if post.categories %}{{ post.categories | join: '||' | downcase }}{% endif %}">
-        <h2 class="postrow__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p class="postrow__meta">
-          {% comment %} stroke-width 1.5 on a 24 viewBox rendered at 16px = a true 1px stroke {% endcomment %}
-          <svg class="tbi postrow__cal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 15h2v2h-2z"/></svg>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-        </p>
-        {% if post.excerpt %}<p class="postrow__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+        <div class="postrow__body">
+          <h2 class="postrow__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="postrow__meta">
+            {% comment %} stroke-width 1.5 on a 24 viewBox rendered at 16px = a true 1px stroke {% endcomment %}
+            <svg class="tbi postrow__cal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 15h2v2h-2z"/></svg>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          </p>
+          {%- comment %}
+            One-sentence description, never mid-word truncated:
+            `summary:` in front matter wins; otherwise take the first sentence
+            of `excerpt` (556/557 posts already write one). Splitting on ". "
+            (period + space) leaves decimals like "0.9" intact; the period is
+            re-appended since split drops it.
+          {% endcomment -%}
+          {%- assign _desc = post.summary -%}
+          {%- if _desc == nil or _desc == '' -%}
+            {%- assign _ex = post.excerpt | markdownify | strip_html | strip -%}
+            {%- if _ex != '' -%}
+              {%- assign _sentences = _ex | split: '. ' -%}
+              {%- assign _desc = _sentences | first | strip -%}
+              {%- if _sentences.size > 1 -%}{%- assign _desc = _desc | append: '.' -%}{%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+          {% if _desc and _desc != '' %}<p class="postrow__excerpt">{{ _desc }}</p>{% endif %}
+        </div>
+        {%- if _thumb != '' -%}
+          {%- comment %} aria-hidden/tabindex: the title above is already the link {% endcomment -%}
+          <a class="postrow__thumb" href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ _thumb }}" alt="" loading="lazy">
+          </a>
+        {%- endif -%}
       </article>
     {% endfor %}
   </div>

@@ -8,9 +8,10 @@
 {% endcomment %}
 {% if page.tags[0] %}
   {% assign tags_sorted = page.tags | sort_natural %}
+  {%- assign _loc = 'ko-KR' -%}{%- if page.lang == 'en' -%}{%- assign _loc = 'en-US' -%}{%- elsif page.lang == 'ar' -%}{%- assign _loc = 'ar-SA' -%}{%- endif -%}
 
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label | default: "Tags:" }} </strong>
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[_loc].tags_label | default: "Tags:" }} </strong>
     <span itemprop="keywords">
     {% for tag_word in tags_sorted %}
       <span class="page__taxonomy-item p-category">{{ tag_word }}</span>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}

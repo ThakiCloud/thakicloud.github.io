@@ -7,42 +7,42 @@
 main:
   - title: "언어"
     children:
-      - title: "🇰🇷 한국어"
+      - title: "한국어"
         url: /ko/
-      - title: "🇺🇸 English"
+      - title: "English"
         url: /en/
-      - title: "🇸🇦 العربية"
+      - title: "العربية"
         url: /ar/
 
 # 한국어 네비게이션
 ko:
   - title: "언어"
     children:
-      - title: "🇰🇷 한국어"
+      - title: "한국어"
         url: /ko/
-      - title: "🇺🇸 English"
+      - title: "English"
         url: /en/
-      - title: "🇸🇦 العربية"
+      - title: "العربية"
         url: /ar/
 
 # 영어 네비게이션
 en:
   - title: "Language"
     children:
-      - title: "🇰🇷 한국어"
+      - title: "한국어"
         url: /ko/
-      - title: "🇺🇸 English"
+      - title: "English"
         url: /en/
-      - title: "🇸🇦 العربية"
+      - title: "العربية"
         url: /ar/
 
 # 아랍어 네비게이션
 ar:
   - title: "اللغة"
     children:
-      - title: "🇰🇷 한국어"
+      - title: "한국어"
         url: /ko/
-      - title: "🇺🇸 English"
+      - title: "English"
         url: /en/
-      - title: "🇸🇦 العربية"
+      - title: "العربية"
         url: /ar/

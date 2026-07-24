@@ -32,10 +32,16 @@
           {%- for link in navigation_data -%}
             <li class="masthead__menu-item">
               {% if link.children %}
-                <a href="#" class="dropdown-toggle">{{ link.title }} <svg class="tbi tbi--caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg></a>
+                <a href="#" class="dropdown-toggle" aria-label="{{ link.title }}" title="{{ link.title }}">
+                  <span class="visually-hidden">{{ link.title }}</span>
+                  <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></svg>
+                </a>
+                {%- assign cur_lang = page.lang | default: 'ko' -%}
                 <ul class="dropdown-menu">
                   {%- for child in link.children -%}
-                    <li><a href="{{ child.url | relative_url }}"{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a></li>
+                    {%- comment %} Mark the current page's language as selected (child urls are /ko/ /en/ /ar/). {% endcomment -%}
+                    {%- assign child_lang = child.url | remove: '/' -%}
+                    <li><a href="{{ child.url | relative_url }}"{% if child_lang == cur_lang %} class="is-active" aria-current="page"{% endif %}{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a></li>
                   {%- endfor -%}
                 </ul>
               {% else %}
@@ -56,11 +62,11 @@
         
         <a href="{{ search_url | relative_url }}" class="search__toggle" title="{% if page.lang == 'en' %}Search{% elsif page.lang == 'ar' %}البحث{% else %}검색{% endif %}">
           <span class="visually-hidden">{% if page.lang == 'en' %}Search{% elsif page.lang == 'ar' %}البحث{% else %}검색{% endif %}</span>
-          <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+          <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
         </a>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Light / Dark">
-          <svg class="tbi icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg>
-          <svg class="tbi icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg>
+          <svg class="tbi icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg>
+          <svg class="tbi icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg>
         </button>
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>

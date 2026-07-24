@@ -35,19 +35,17 @@ search: false
 
 .dropdown-menu a {
   display: block;
+  margin: 0;                 /* fill the row so the hover fill spans full width */
   padding: 8px 16px;
   color: #333;
+  font-size: 14px;
+  font-weight: 400;
   text-decoration: none;
-  border-bottom: 1px solid #eee;
 }
 
 .dropdown-menu a:hover {
   background-color: #f5f5f5;
   color: #000;
-}
-
-.dropdown-menu li:last-child a {
-  border-bottom: none;
 }
 
 .masthead__menu-item:hover .dropdown-menu {
@@ -146,6 +144,8 @@ search: false
   --text-subtle: #64748b;      /* slate500 */
   --border: #e2e8f0;           /* slate200 hairline */
   --border-strong: #cbd5e1;    /* slate300 */
+  --footer-link: #374151;      /* gray700 on the light footer */
+  --footer-icon: #6b7280;      /* gray500 social icons */
   --divider: #e2e8f0;          /* slate200 — masthead + article rules */
   --toc-idle: #94a3b8;         /* slate400 — inactive TOC entries */
   --rule: #cbd5e1;             /* slate300 — post-page horizontal rules */
@@ -180,6 +180,8 @@ html[data-theme="dark"] {
   --text-subtle: #6b7280;    /* gray-500 */
   --border: #1e293b;                  /* slate800 hairline (chip outlines) */
   --border-strong: rgba(255,255,255,0.20);
+  --footer-link: #d1d5db;      /* gray300 on the black footer */
+  --footer-icon: #9ca3af;      /* gray400 social icons */
   --divider: #334155;                 /* slate700 — brighter rules on black */
   --toc-idle: #94a3b8;                /* slate400 reads well on black too */
   --rule: #334155;                    /* slate700 */
@@ -231,6 +233,9 @@ h1, h2, h3, h4, h5, h6,
    <a>); that dark-ish value made the title near-invisible in dark mode. */
 .page__title a:hover { color: var(--text); }
 .page__content h1, .page__content h2 { line-height: 1.18; }
+/* Post section headings: 20px / 600 (smaller & lighter than the h1 title),
+   no underline divider. */
+.layout--single .page__content h2 { font-size: 1.25rem; font-weight: 600; border-bottom: 0; padding-bottom: 0; }
 /* MM sets .page__title to line-height:1, which is very tight on a wrapping
    two-line post title. */
 .page__title { line-height: 1.3; }
@@ -244,18 +249,28 @@ h1, h2, h3, h4, h5, h6,
 .page__taxonomy-item {
   font-weight: 500;
   letter-spacing: 0;
+  margin: 0;              /* MM adds right/bottom margins — gap handles spacing */
+  padding: 4px 8px;       /* was 5px 10px */
+  border-radius: 8px;     /* was $border-radius (12px) */
 }
 /* tags are plain text now — keep them visually calm, not link-styled */
 span.page__taxonomy-item { color: var(--text-muted); }
 
-/* 4px between tags. The comma separators are dropped, since as separate
-   inline items they'd sit inside the gap rather than hug the preceding tag. */
-.page__taxonomy [itemprop="keywords"] {
-  display: inline-flex;
+/* Lay the label + badges out as one wrapping row so the tags sit next to the
+   label (like the single category badge), rather than the whole tag group
+   dropping below it. `display:contents` lets the individual badges become flex
+   items of the row. */
+.page__taxonomy {
+  display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  vertical-align: middle;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
 }
+/* 8px between the tags row and the category row */
+.page__taxonomy + .page__taxonomy { margin-top: 8px; }
+.page__taxonomy strong { flex: none; }
+.page__taxonomy [itemprop="keywords"] { display: contents; }
 .page__taxonomy .sep { display: none; }
 
 /* Breadcrumbs: MM bolds the current crumb; keep the whole trail at 500. */
@@ -361,13 +376,20 @@ div.highlighter-rouge, figure.highlight, pre.highlight {
 
 /* Borders / rules --------------------------------------------------------- */
 hr { border-color: var(--border); }
+/* Footer: thakicloud.com's dark bar in dark mode, light surface in light mode.
+   The gray-500 body copy reads on both, so only the surface, border, links and
+   logo artwork swap. */
 .page__footer {
-  background-color: var(--bg-elevated);
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  color: #6b7280;                                  /* gray-500 */
+  border-top: 1px solid var(--divider);            /* slate200 / slate700 on black */
+  font-family: var(--font-sans);                   /* Mona Sans */
 }
-.page__footer a, .page__footer-copyright a { color: var(--text-muted); }
+.page__footer a, .page__footer-copyright a { color: var(--footer-link); }
 .page__footer a:hover { color: var(--accent); }
+html[data-theme="dark"] .page__footer { background-color: #000; }
+/* Symmetric 24px vertical padding (MM ships 0 top / 2em bottom + a 2em margin). */
+.page__footer footer { margin-top: 0; padding: 24px 2rem; max-width: 1280px; }
 
 /* Table of contents — Figma 17958-164.
    A flat list rather than MM's boxed card: no background, border, radius,
@@ -477,8 +499,11 @@ html[data-theme="dark"] .lang-hero__logo { filter: brightness(0) invert(1); }
 
 /* Dropdown menu re-themed onto vars (replaces hardcoded prefers-color-scheme) */
 .dropdown-menu { background-color: var(--surface); border-color: var(--border); box-shadow: var(--shadow-card); }
-.dropdown-menu a { color: var(--text); border-bottom-color: var(--border); }
-.dropdown-menu a:hover { background-color: var(--surface-hover); color: var(--accent); }
+.dropdown-menu a { color: var(--text); }
+.greedy-nav .dropdown-menu a:hover,
+.greedy-nav .dropdown-menu a:focus,
+.greedy-nav .dropdown-menu a.is-active,
+.greedy-nav .dropdown-menu a[aria-current] { background-color: var(--bg-elevated); color: var(--accent); }
 
 /* =========================================================================
    Syntax highlighting — themed for BOTH light & dark (GitHub-style dual
@@ -876,6 +901,17 @@ html[lang="ar"] .toss-rail__rank { }
   margin-right: 0;
   float: none;
 }
+/* Reading measure: cap the body copy at 680px (the TOC still floats out into
+   the right margin, so #main stays 948px). */
+.layout--single .page__content {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Match the title/meta header to the 680px reading measure. */
+.layout--single .page__inner-wrap > header { max-width: 680px; }
+/* 24px gap between the title and the hero image below it. */
+.layout--single .page__title { margin-bottom: 24px; }
 /* MM indents the breadcrumb list to clear the (now removed) left sidebar. */
 .layout--single .breadcrumbs {
   max-width: 948px;
@@ -898,16 +934,28 @@ html[lang="ar"] .toss-rail__rank { }
 .layout--single .page__related {
   float: none;
   width: 100%;
+  max-width: 680px;
   margin-left: 0;
+  margin-top: 2.5rem;   /* match the date→nav gap (uniform section spacing) */
   padding-left: 0;
+  padding-top: 0;    /* MM adds 1em top padding above the related block */
+  border-top: 0;     /* divider below the bottom nav */
   clear: both;
 }
+/* MM uppercases this heading — keep it in sentence case. */
+.layout--single .page__related-title { text-transform: none; }
+/* Related-card date: Mona Sans (not the mono meta font), calendar-event icon. */
+.layout--single .page__related .page__meta { font-family: var(--font-sans); }
+.layout--single .page__related .card-date-icon { vertical-align: -2px; margin-right: 2px; }
 /* Even grid + clamped text so every card is the same height regardless of how
    long its title/excerpt is (MM floats these, so heights were ragged). */
 .layout--single .page__related .grid__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(2, 1fr);   /* 2×2 with the 4 related posts */
   gap: 1.5rem;
+}
+@media (max-width: 560px) {
+  .layout--single .page__related .grid__wrapper { grid-template-columns: 1fr; }
 }
 .layout--single .page__related .grid__item {
   width: 100%;
@@ -945,9 +993,8 @@ html[lang="ar"] .toss-rail__rank { }
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin: 2.5rem 0 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
+  max-width: 680px;
+  margin: 0;
   /* must clear the floated (sticky) TOC, otherwise it gets squeezed into the
      sliver of space beside it and wraps one character per line */
   clear: both;
@@ -955,10 +1002,19 @@ html[lang="ar"] .toss-rail__rank { }
 /* `clear` can absorb .postnav's margin-top into the float clearance, leaving
    the rule sitting tight under the date — put the space on the meta block so
    it can't be swallowed. */
-.layout--single .page__meta { padding-bottom: 1.5rem; }
+.layout--single .page__meta { max-width: 680px; padding-bottom: 2.5rem; }
 /* MM zeroes the margins on .page__meta p, so the date sits flush against the
    category line above it. */
-.layout--single .page__date { padding-top: 1rem; }
+.layout--single .page__date {
+  padding-top: 1rem;
+  font-size: 12px;
+  font-family: var(--font-sans);   /* Mona Sans, not the mono meta font */
+  display: flex;
+  align-items: center;             /* vertically center the icon with the text */
+  gap: 4px;
+}
+.layout--single .page__date strong { display: inline-flex; align-items: center; gap: 4px; }
+.layout--single .page__date .page__date-icon { vertical-align: 0; margin-right: 0; }
 
 /* One rule colour across the post page. MM hardcodes #d2d2d7 for the h2
    underline and the related-posts divider (not theme-aware), while prev/next
@@ -977,6 +1033,10 @@ html[lang="ar"] .toss-rail__rank { }
   background: none;
   padding: 0;
 }
+/* Pin the colour for visited links too — otherwise a browser that has the
+   prev/next post in history paints them with its visited-link colour (blue). */
+.postnav__link:link,
+.postnav__link:visited { color: var(--text); }
 .postnav__link:hover { color: var(--accent); border-bottom: 0; }
 .postnav__link .tbi { flex: 0 0 auto; }
 
@@ -1019,19 +1079,20 @@ html[lang="ar"] .toss-rail__rank { }
     display: none;
   }
 }
+/* Below the width where the TOC can sit out in the right margin, hide it
+   rather than stacking it above the article. */
 @media (max-width: 1439px) {
   .layout--single .sidebar__right {
-    float: none;
-    width: 100%;
-    margin: 0 0 2rem;
+    display: none;
   }
 }
 
-/* Layout — drop the sidebar, center the column at the design's 948px */
+/* Layout — drop the sidebar, center the column. 728px outer − 2×1.5rem padding
+   = 680px content, matching the post-page reading measure. */
 .layout--posts .sidebar,
 .layout--posts .breadcrumbs { display: none; }
 .layout--posts #main {
-  max-width: 948px;
+  max-width: 728px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -1214,22 +1275,14 @@ html[lang="ar"] .toss-rail__rank { }
 .catchips {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;   /* left-aligned, wraps naturally to the width */
   column-gap: 12px;
-  row-gap: 0;                 /* row spacing comes from .catchips__break */
+  row-gap: 12px;
   margin: 0 0 2.5rem;
-}
-/* Row break after the 6th chip → the design's 6 + 6 layout. The break forms
-   its own flex line, so row-gap is zeroed here and the 12px row spacing comes
-   from the break's own height (otherwise it'd collect 12px on both sides = 24). */
-.catchips__break { flex-basis: 100%; height: 12px; margin: 0; }
-@media (max-width: 900px) {
-  .catchips__break { display: none; }
-  .catchips { row-gap: 12px; }   /* natural wrapping once the break is gone */
 }
 .catchip {
   font-family: var(--font-sans);
-  font-size: 1rem;              /* 16px Mona Sans Medium */
+  font-size: 0.875rem;          /* 14px Mona Sans Medium */
   font-weight: 500;
   line-height: 1.4;
   padding: 8px 20px;
@@ -1254,13 +1307,45 @@ html[lang="ar"] .toss-rail__rank { }
 
 /* ---- Post rows — no cards, hairline dividers (32px above/below) ---- */
 .postrow {
+  display: flex;
+  align-items: stretch;   /* thumb runs the full height of the text block */
+  gap: 20px;
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid var(--divider);
 }
-.postrow[hidden] { display: none; }
+.postrow[hidden] { display: none; }   /* must still beat the flex above */
+.postrow__body { flex: 1 1 auto; min-width: 0; }
+/* Hero thumbnail on the right: height fills the row, width follows the
+   image's own aspect ratio (no cropping). */
+/* 16:9 box matching the source ratio, so the hero is never cropped. Width is
+   definite and the height follows from it — flexbox resolves an item's width
+   before the cross-axis stretch, so a stretched height can't drive the width.
+   190px ≈ 107px tall, which lines up with a typical title+date+description. */
+.postrow__thumb {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: 190px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border-bottom: 0;
+  background: var(--surface-hover);
+}
+.postrow__thumb img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 560px) {
+  .postrow__thumb { max-width: 34vw; }
+}
 .postrow__title {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.45;
   letter-spacing: -0.01em;
@@ -1322,11 +1407,8 @@ html[data-theme="dark"] .site-footer__brand img.logo-light { display: none; }
 html[data-theme="dark"] .site-logo img.logo-dark,
 html[data-theme="dark"] .site-footer__brand img.logo-dark { display: block; }
 
-/* ---- Footer surface: white (follows --bg, so black in dark mode) ---- */
-.page__footer { background-color: var(--bg); }
-
 /* ---- Masthead icon cluster spacing, per Figma: 24 / 24 / 16 ---- */
-.greedy-nav .visible-links .dropdown-toggle { margin: 0; font-weight: 500; }
+.greedy-nav .visible-links .dropdown-toggle { margin: 0; font-weight: 500; display: inline-flex; align-items: center; height: 1.5rem; }
 .greedy-nav .search__toggle,
 .greedy-nav .theme-toggle {
   width: 24px;
@@ -1350,6 +1432,7 @@ html[data-theme="dark"] .site-footer__brand img.logo-dark { display: block; }
 .greedy-nav .visible-links a::before,
 .greedy-nav .visible-links a:hover::before { display: none; }
 .greedy-nav a { font-weight: 500; }
+.greedy-nav .dropdown-menu a { font-weight: 400; }   /* language items: 14px / 400 */
 /* Brand title stays heavier than the nav links */
 .greedy-nav .site-title { font-weight: 600; }
 .greedy-nav a:hover,
@@ -1394,28 +1477,59 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
 }
 
 /* ---- Footer: wordmark left, icon-only socials right ---- */
+/* thakicloud.com footer: logo + social left, company info right, on black. */
 .site-footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;   /* social row bottom-aligns with the copyright line */
   justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-.site-footer__brand { display: inline-flex; align-items: center; gap: 10px; }
+/* Full row height so the logo sits at the top and the social row at the
+   bottom (level with the first info line / the copyright respectively). */
+.site-footer__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 14px;
+}
+.site-footer__brand { display: inline-flex; align-items: center; }
 .site-footer__brand img { display: block; width: auto; }
-.site-footer__mark { height: 28px; }
-.site-footer__wordmark { height: 18px; }
-.site-footer__logo { height: 28px; }   /* dark svg = mark + wordmark in one */
-.site-footer__right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-.site-footer__social { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }
-.site-footer__social li { margin: 0; }
-.site-footer__social a { color: var(--text-muted); font-size: 1.05rem; line-height: 1; }
-.site-footer__social a:hover { color: var(--accent); }
-.site-footer__copy { margin: 0; font-size: 0.875rem; line-height: 18px; color: var(--text-subtle); }
+.site-footer__logo { height: 20px; }   /* both svgs = mark + wordmark in one */
+.site-footer__social { display: flex; align-items: flex-end; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.site-footer__social li { margin: 0; display: flex; align-items: flex-end; }
+/* 14×14 box per icon, glyph sitting on the bottom edge so all three line up */
+.site-footer__social a {
+  color: var(--footer-icon);
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+.site-footer__social a:hover { color: var(--text); }
+.site-footer__social i { font-size: 14px; line-height: 1; }
+.site-footer__info { text-align: right; }
+/* Mona Sans / 11px / 500 / 1.625 (17.875px) / gray-500 */
+.site-footer__info p {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.625;
+  color: rgb(107, 114, 128);
+}
+.site-footer__info a { color: var(--footer-link); text-decoration: underline; border-bottom: 0; }
+.site-footer__info a:hover { color: var(--accent); }
+.site-footer__info .site-footer__copy { margin: 8px 0 0; font-size: 12px; }
 
 @media (max-width: 600px) {
   .site-footer { justify-content: center; text-align: center; }
-  .site-footer__right { align-items: center; }
+  .site-footer__left { align-items: center; }
+  .site-footer__info { text-align: center; }
   .catchips { gap: 8px; }
   .catchip { font-size: 0.875rem; padding: 6px 14px; }
 }

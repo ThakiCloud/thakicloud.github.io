@@ -60,8 +60,8 @@
   {% endif %}
 {% endif %}
 {% assign ab_heading = page.audiobook_label | default: ab_label %}
-<div class="audiobook-player" dir="{% if ab_lang == 'ar' %}rtl{% else %}ltr{% endif %}" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid #d7dde3;border-left:4px solid #1B4F72;border-radius:8px;background:#f7f9fb;">
-  <div style="font-weight:600;color:#1B4F72;margin-bottom:0.5em;">
+<div class="audiobook-player" dir="{% if ab_lang == 'ar' %}rtl{% else %}ltr{% endif %}" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid #d7dde3;border-radius:8px;background:#ffffff;">
+  <div style="font-weight:600;color:#0f172a;margin-bottom:0.5em;">
     🎧 {{ ab_heading }}
   </div>
   {% if page.audiobook contains "://" %}
