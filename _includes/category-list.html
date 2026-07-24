@@ -11,9 +11,10 @@
   {% else %}
     {% assign lang_posts_path = '/ko/' %}
   {% endif %}
+  {%- assign _loc = 'ko-KR' -%}{%- if page.lang == 'en' -%}{%- assign _loc = 'en-US' -%}{%- elsif page.lang == 'ar' -%}{%- assign _loc = 'ar-SA' -%}{%- endif -%}
 
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[_loc].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
     {% for category_word in categories_sorted %}
       {% comment %} Label from _data/category_labels.yml so it matches the Posts page chips. {% endcomment %}
