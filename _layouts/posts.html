@@ -22,12 +22,6 @@ classes: wide
 
 <div class="postspage">
 
-  {% comment %} ── Search (tag filter) ─────────────────────────────────── {% endcomment %}
-  <div class="postspage__search">
-    <input name="tags" placeholder="Search posts by tags" value="">
-    <svg class="tbi postspage__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
-  </div>
-
   {% comment %} ── Category chips (replaces the old sidebar list) ──────── {% endcomment %}
   {% comment %}
     Labels come from _data/category_labels.yml so the chips and the post-footer
@@ -38,11 +32,15 @@ classes: wide
     <button type="button" class="catchip is-active" data-cat="">All</button>
     {% for v in chip_values %}
       <button type="button" class="catchip" data-cat="{{ v }}">{{ site.data.category_labels[v] | default: v }}</button>
-      {% comment %} Forces the 6+6 split from the design; collapses on narrow screens. {% endcomment %}
-      {% if forloop.index == 5 %}<span class="catchips__break" aria-hidden="true"></span>{% endif %}
     {% endfor %}
     <button type="button" class="catchip" data-cat="{{ comics_cat }}">{{ site.data.category_labels[comics_cat] | default: 'Comics' }}</button>
   </nav>
+
+  {% comment %} ── Search (tag filter) ─────────────────────────────────── {% endcomment %}
+  <div class="postspage__search">
+    <input name="tags" placeholder="Search posts by tags" value="">
+    <svg class="tbi postspage__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+  </div>
 
   {% comment %} ── Post list ───────────────────────────────────────────── {% endcomment %}
   <div class="postspage__list">

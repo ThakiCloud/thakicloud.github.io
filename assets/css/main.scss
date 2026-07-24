@@ -35,19 +35,17 @@ search: false
 
 .dropdown-menu a {
   display: block;
+  margin: 0;                 /* fill the row so the hover fill spans full width */
   padding: 8px 16px;
   color: #333;
+  font-size: 14px;
+  font-weight: 400;
   text-decoration: none;
-  border-bottom: 1px solid #eee;
 }
 
 .dropdown-menu a:hover {
   background-color: #f5f5f5;
   color: #000;
-}
-
-.dropdown-menu li:last-child a {
-  border-bottom: none;
 }
 
 .masthead__menu-item:hover .dropdown-menu {
@@ -477,8 +475,11 @@ html[data-theme="dark"] .lang-hero__logo { filter: brightness(0) invert(1); }
 
 /* Dropdown menu re-themed onto vars (replaces hardcoded prefers-color-scheme) */
 .dropdown-menu { background-color: var(--surface); border-color: var(--border); box-shadow: var(--shadow-card); }
-.dropdown-menu a { color: var(--text); border-bottom-color: var(--border); }
-.dropdown-menu a:hover { background-color: var(--surface-hover); color: var(--accent); }
+.dropdown-menu a { color: var(--text); }
+.greedy-nav .dropdown-menu a:hover,
+.greedy-nav .dropdown-menu a:focus,
+.greedy-nav .dropdown-menu a.is-active,
+.greedy-nav .dropdown-menu a[aria-current] { background-color: var(--bg-elevated); color: var(--accent); }
 
 /* =========================================================================
    Syntax highlighting — themed for BOTH light & dark (GitHub-style dual
@@ -876,6 +877,13 @@ html[lang="ar"] .toss-rail__rank { }
   margin-right: 0;
   float: none;
 }
+/* Reading measure: cap the body copy at 680px (the TOC still floats out into
+   the right margin, so #main stays 948px). */
+.layout--single .page__content {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* MM indents the breadcrumb list to clear the (now removed) left sidebar. */
 .layout--single .breadcrumbs {
   max-width: 948px;
@@ -1027,11 +1035,12 @@ html[lang="ar"] .toss-rail__rank { }
   }
 }
 
-/* Layout — drop the sidebar, center the column at the design's 948px */
+/* Layout — drop the sidebar, center the column. 728px outer − 2×1.5rem padding
+   = 680px content, matching the post-page reading measure. */
 .layout--posts .sidebar,
 .layout--posts .breadcrumbs { display: none; }
 .layout--posts #main {
-  max-width: 948px;
+  max-width: 728px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -1214,22 +1223,14 @@ html[lang="ar"] .toss-rail__rank { }
 .catchips {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;   /* left-aligned, wraps naturally to the width */
   column-gap: 12px;
-  row-gap: 0;                 /* row spacing comes from .catchips__break */
+  row-gap: 12px;
   margin: 0 0 2.5rem;
-}
-/* Row break after the 6th chip → the design's 6 + 6 layout. The break forms
-   its own flex line, so row-gap is zeroed here and the 12px row spacing comes
-   from the break's own height (otherwise it'd collect 12px on both sides = 24). */
-.catchips__break { flex-basis: 100%; height: 12px; margin: 0; }
-@media (max-width: 900px) {
-  .catchips__break { display: none; }
-  .catchips { row-gap: 12px; }   /* natural wrapping once the break is gone */
 }
 .catchip {
   font-family: var(--font-sans);
-  font-size: 1rem;              /* 16px Mona Sans Medium */
+  font-size: 0.875rem;          /* 14px Mona Sans Medium */
   font-weight: 500;
   line-height: 1.4;
   padding: 8px 20px;
@@ -1326,7 +1327,7 @@ html[data-theme="dark"] .site-footer__brand img.logo-dark { display: block; }
 .page__footer { background-color: var(--bg); }
 
 /* ---- Masthead icon cluster spacing, per Figma: 24 / 24 / 16 ---- */
-.greedy-nav .visible-links .dropdown-toggle { margin: 0; font-weight: 500; }
+.greedy-nav .visible-links .dropdown-toggle { margin: 0; font-weight: 500; display: inline-flex; align-items: center; height: 1.5rem; }
 .greedy-nav .search__toggle,
 .greedy-nav .theme-toggle {
   width: 24px;
@@ -1350,6 +1351,7 @@ html[data-theme="dark"] .site-footer__brand img.logo-dark { display: block; }
 .greedy-nav .visible-links a::before,
 .greedy-nav .visible-links a:hover::before { display: none; }
 .greedy-nav a { font-weight: 500; }
+.greedy-nav .dropdown-menu a { font-weight: 400; }   /* language items: 14px / 400 */
 /* Brand title stays heavier than the nav links */
 .greedy-nav .site-title { font-weight: 600; }
 .greedy-nav a:hover,
