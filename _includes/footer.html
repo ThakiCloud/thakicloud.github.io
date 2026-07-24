@@ -1,46 +1,27 @@
 {% comment %}
-  Footer per the Figma design: THAKI Cloud wordmark on the left, icon-only
-  social links on the right with the copyright beneath them.
+  Footer matching thakicloud.com: THAKI Cloud logo + social on the left,
+  right-aligned company info + copyright on the right, on a dark bar.
 {% endcomment %}
 <div class="site-footer">
-  {% comment %}
-    Light: the wordmark asset is text-only, so the diamond mark is composed
-    beside it. Dark: thaki-logo-dark.svg already contains mark + wordmark.
-  {% endcomment %}
-  <a class="site-footer__brand" href="{{ '/' | relative_url }}">
-    <img class="site-footer__mark logo-light" src="{{ '/assets/images/thaki-logo-mark.webp' | relative_url }}" alt="">
-    <img class="site-footer__wordmark logo-light" src="{{ '/assets/images/thaki-logo-wordmark.webp' | relative_url }}"
-         alt="{{ site.name | default: site.title }}">
-    <img class="site-footer__logo logo-dark" src="{{ '/assets/images/thaki-logo-dark.svg' | relative_url }}"
-         alt="{{ site.name | default: site.title }}">
-  </a>
-
-  <div class="site-footer__right">
+  <div class="site-footer__left">
+    {% comment %} Both SVGs are a full mark + wordmark lockup. {% endcomment %}
+    <a class="site-footer__brand" href="{{ '/' | relative_url }}">
+      <img class="site-footer__logo logo-light" src="{{ '/assets/images/thaki-logo.svg' | relative_url }}"
+           alt="{{ site.name | default: site.title }}">
+      <img class="site-footer__logo logo-dark" src="{{ '/assets/images/thaki-logo-dark.svg' | relative_url }}"
+           alt="{{ site.name | default: site.title }}">
+    </a>
     <ul class="site-footer__social">
-      {% if site.footer.links %}
-        {% for link in site.footer.links %}
-          {% if link.label and link.url %}
-            <li>
-              <a href="{{ link.url }}" rel="nofollow noopener noreferrer"
-                 title="{{ link.label }}" aria-label="{{ link.label }}">
-                <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-
-      {% unless site.atom_feed.hide %}
-        {% assign feed_label = site.data.ui-text[site.locale].feed_label | default: "Feed" %}
-        <li>
-          <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"
-             title="{{ feed_label }}" aria-label="{{ feed_label }}">
-            <i class="fas fa-rss" aria-hidden="true"></i>
-          </a>
-        </li>
-      {% endunless %}
+      <li><a href="https://github.com/thakicloud" rel="nofollow noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.linkedin.com/company/thakicloud" rel="nofollow noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="https://x.com/thakicloud" rel="nofollow noopener noreferrer" title="X" aria-label="X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
     </ul>
+  </div>
 
-    <p class="site-footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</p>
+  <div class="site-footer__info">
+    <p>Company : Thaki Cloud Korea, Inc. | Address : 8, Teheran-ro 38-gil, Gangnam-gu, Seoul (4F)</p>
+    <p>CEO : Soryun Kang | Business Reg. No. : 525-87-03114 | Email : <a href="mailto:info@thakicloud.co.kr">info@thakicloud.co.kr</a></p>
+    <p>Privacy Officer : Choonghoon Lee (<a href="mailto:privacy@thakicloud.co.kr">privacy@thakicloud.co.kr</a>) | <a href="https://thakicloud.com/privacy-statement/privacy/privacy" rel="noopener noreferrer">Privacy Policy</a> | <a href="https://thakicloud.com/privacy-statement" rel="noopener noreferrer">Privacy Policy Notice</a></p>
+    <p class="site-footer__copy">&copy; {{ site.time | date: '%Y' }} Thaki Cloud. AI Agent Cloud — deployed your way.</p>
   </div>
 </div>

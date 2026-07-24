@@ -144,6 +144,8 @@ search: false
   --text-subtle: #64748b;      /* slate500 */
   --border: #e2e8f0;           /* slate200 hairline */
   --border-strong: #cbd5e1;    /* slate300 */
+  --footer-link: #374151;      /* gray700 on the light footer */
+  --footer-icon: #6b7280;      /* gray500 social icons */
   --divider: #e2e8f0;          /* slate200 — masthead + article rules */
   --toc-idle: #94a3b8;         /* slate400 — inactive TOC entries */
   --rule: #cbd5e1;             /* slate300 — post-page horizontal rules */
@@ -178,6 +180,8 @@ html[data-theme="dark"] {
   --text-subtle: #6b7280;    /* gray-500 */
   --border: #1e293b;                  /* slate800 hairline (chip outlines) */
   --border-strong: rgba(255,255,255,0.20);
+  --footer-link: #d1d5db;      /* gray300 on the black footer */
+  --footer-icon: #9ca3af;      /* gray400 social icons */
   --divider: #334155;                 /* slate700 — brighter rules on black */
   --toc-idle: #94a3b8;                /* slate400 reads well on black too */
   --rule: #334155;                    /* slate700 */
@@ -372,13 +376,20 @@ div.highlighter-rouge, figure.highlight, pre.highlight {
 
 /* Borders / rules --------------------------------------------------------- */
 hr { border-color: var(--border); }
+/* Footer: thakicloud.com's dark bar in dark mode, light surface in light mode.
+   The gray-500 body copy reads on both, so only the surface, border, links and
+   logo artwork swap. */
 .page__footer {
-  background-color: var(--bg-elevated);
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  color: #6b7280;                                  /* gray-500 */
+  border-top: 1px solid var(--divider);            /* slate200 / slate700 on black */
+  font-family: var(--font-sans);                   /* Mona Sans */
 }
-.page__footer a, .page__footer-copyright a { color: var(--text-muted); }
+.page__footer a, .page__footer-copyright a { color: var(--footer-link); }
 .page__footer a:hover { color: var(--accent); }
+html[data-theme="dark"] .page__footer { background-color: #000; }
+/* Symmetric 24px vertical padding (MM ships 0 top / 2em bottom + a 2em margin). */
+.page__footer footer { margin-top: 0; padding: 24px 2rem; max-width: 1280px; }
 
 /* Table of contents — Figma 17958-164.
    A flat list rather than MM's boxed card: no background, border, radius,
@@ -1364,9 +1375,6 @@ html[data-theme="dark"] .site-footer__brand img.logo-light { display: none; }
 html[data-theme="dark"] .site-logo img.logo-dark,
 html[data-theme="dark"] .site-footer__brand img.logo-dark { display: block; }
 
-/* ---- Footer surface: white (follows --bg, so black in dark mode) ---- */
-.page__footer { background-color: var(--bg); }
-
 /* ---- Masthead icon cluster spacing, per Figma: 24 / 24 / 16 ---- */
 .greedy-nav .visible-links .dropdown-toggle { margin: 0; font-weight: 500; display: inline-flex; align-items: center; height: 1.5rem; }
 .greedy-nav .search__toggle,
@@ -1437,28 +1445,59 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
 }
 
 /* ---- Footer: wordmark left, icon-only socials right ---- */
+/* thakicloud.com footer: logo + social left, company info right, on black. */
 .site-footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;   /* social row bottom-aligns with the copyright line */
   justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-.site-footer__brand { display: inline-flex; align-items: center; gap: 10px; }
+/* Full row height so the logo sits at the top and the social row at the
+   bottom (level with the first info line / the copyright respectively). */
+.site-footer__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 14px;
+}
+.site-footer__brand { display: inline-flex; align-items: center; }
 .site-footer__brand img { display: block; width: auto; }
-.site-footer__mark { height: 28px; }
-.site-footer__wordmark { height: 18px; }
-.site-footer__logo { height: 28px; }   /* dark svg = mark + wordmark in one */
-.site-footer__right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-.site-footer__social { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }
-.site-footer__social li { margin: 0; }
-.site-footer__social a { color: var(--text-muted); font-size: 1.05rem; line-height: 1; }
-.site-footer__social a:hover { color: var(--accent); }
-.site-footer__copy { margin: 0; font-size: 0.875rem; line-height: 18px; color: var(--text-subtle); }
+.site-footer__logo { height: 20px; }   /* both svgs = mark + wordmark in one */
+.site-footer__social { display: flex; align-items: flex-end; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.site-footer__social li { margin: 0; display: flex; align-items: flex-end; }
+/* 18×18 box per icon, glyph sitting on the bottom edge so all three line up */
+.site-footer__social a {
+  color: var(--footer-icon);
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+.site-footer__social a:hover { color: var(--text); }
+.site-footer__social i { font-size: 18px; line-height: 1; }
+.site-footer__info { text-align: right; }
+/* Mona Sans / 11px / 500 / 1.625 (17.875px) / gray-500 */
+.site-footer__info p {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.625;
+  color: rgb(107, 114, 128);
+}
+.site-footer__info a { color: var(--footer-link); text-decoration: underline; border-bottom: 0; }
+.site-footer__info a:hover { color: var(--accent); }
+.site-footer__info .site-footer__copy { margin: 8px 0 0; font-size: 12px; }
 
 @media (max-width: 600px) {
   .site-footer { justify-content: center; text-align: center; }
-  .site-footer__right { align-items: center; }
+  .site-footer__left { align-items: center; }
+  .site-footer__info { text-align: center; }
   .catchips { gap: 8px; }
   .catchip { font-size: 0.875rem; padding: 6px 14px; }
 }
