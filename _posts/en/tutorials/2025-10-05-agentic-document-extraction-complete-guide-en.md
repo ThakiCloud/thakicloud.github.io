@@ -21,6 +21,7 @@ permalink: /en/tutorials/agentic-document-extraction-complete-guide/
 canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/agentic-document-extraction-complete-guide-en/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes

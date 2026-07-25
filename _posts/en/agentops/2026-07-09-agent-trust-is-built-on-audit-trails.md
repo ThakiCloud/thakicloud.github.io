@@ -21,6 +21,7 @@ tags:
   - agentops
 categories:
   - agentops
+published: false
 ---
 
 An agent ran a credit review support task last week. The results looked reasonable. But when the person in charge asked why the agent had reached that particular judgment, no one could retrace the process. The model was smart enough, yet there was no record of which evidence it used, which tools it called, or where it stopped. That gap is exactly what several unrelated news items pointed at today, July 9, 2026, each in its own language.

@@ -18,6 +18,7 @@ permalink: /ar/tutorials/designing-agentic-loops-complete-tutorial/
 canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/designing-agentic-loops-complete-tutorial/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **وقت القراءة المتوقع**: 12 دقيقة
