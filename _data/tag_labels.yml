@@ -1182,3 +1182,33 @@
   "ko": "훈련데이터"
   "en": "Training Data"
   "ar": "بيانات التدريب"
+
+# --- appended: gate-detected unmapped tags (2026-07-25) ---
+"아키텍처다이어그램":
+  "ko": "아키텍처다이어그램"
+  "en": "Architecture Diagram"
+  "ar": "مخطط معماري"
+"Architecture Diagram":
+  "ko": "아키텍처다이어그램"
+  "en": "Architecture Diagram"
+  "ar": "مخطط معماري"
+"멀티스텝":
+  "ko": "멀티스텝"
+  "en": "Multi-step"
+  "ar": "متعدد الخطوات"
+"벤치마크":
+  "ko": "벤치마크"
+  "en": "Benchmark"
+  "ar": "قياس الأداء"
+"Benchmark":
+  "ko": "벤치마크"
+  "en": "Benchmark"
+  "ar": "قياس الأداء"
+"라우터robustness":
+  "ko": "라우터robustness"
+  "en": "Router Robustness"
+  "ar": "متانة الموجّه"
+"Router Robustness":
+  "ko": "라우터robustness"
+  "en": "Router Robustness"
+  "ar": "متانة الموجّه"
