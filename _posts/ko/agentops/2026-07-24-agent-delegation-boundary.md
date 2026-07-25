@@ -33,7 +33,7 @@ header:
 
 ![단편영화 「요원들」 썸네일]({{ '/assets/images/agent-delegation-the-agents.webp' | relative_url }})
 
-<iframe src="https://drive.google.com/file/d/1kaM-bYLqeLCNsb7jZcy_axyq7NvpO1wr/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/188WqN0OnHbcJsCvUZrkoCxqccB-Itti8/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
 
 「요원들」의 설정은 이렇습니다. 소개팅을 앞둔 두 사람이 있고, 각자의 에이전트가 먼저 만나 대화를 나눕니다. 두 에이전트는 서로의 취향, 스케줄, 최근 관심사를 맞춰 보다가 합이 맞지 않는다고 판단하고, 사람에게 묻지 않은 채 약속을 대신 취소합니다. 당사자들은 자신들이 만나기도 전에 상황이 끝났다는 사실을 나중에야 알게 됩니다.
 
@@ -43,7 +43,7 @@ header:
 
 ![단편영화 「잔소리 프로토콜」 썸네일]({{ '/assets/images/agent-delegation-nagging-protocol.webp' | relative_url }})
 
-<iframe src="https://drive.google.com/file/d/1bl3yHDfB-sEBWkJaHOW3TugZDJ5hSPGn/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1yWy09_3ZGTTLtlHGWB70g63fIxPNwmWr/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
 
 두 번째 영화 「잔소리 프로토콜」은 반대 방향으로 갑니다. 엄마의 에이전트가 아들의 에이전트에게 밥은 챙겨 먹는지, 연락은 왜 없는지 잔소리를 쏟아냅니다. 아들의 에이전트는 대부분의 메시지를 알아서 받아넘기다가, 어느 순간 이건 자기가 대신 처리할 일이 아니라고 판단하고 아들에게 그대로 넘깁니다. 제목 그대로, 어떤 트래픽은 사람이 받아야 합니다.
 
@@ -418,4 +418,4 @@ ThakiCloud가 에이전트 운영에서 중요하게 보는 축이 바로 이 �
 
 ---
 
-두 단편영화는 ThakiCloud가 직접 제작했습니다. 「요원들」([영상](https://drive.google.com/file/d/1kaM-bYLqeLCNsb7jZcy_axyq7NvpO1wr/view))과 「잔소리 프로토콜」([영상](https://drive.google.com/file/d/1bl3yHDfB-sEBWkJaHOW3TugZDJ5hSPGn/view))은 각각 30초 분량이며, 위 임베드로 바로 재생하실 수 있습니다.
+두 단편영화는 ThakiCloud가 직접 제작했습니다. 「요원들」([영상](https://drive.google.com/file/d/188WqN0OnHbcJsCvUZrkoCxqccB-Itti8/view))과 「잔소리 프로토콜」([영상](https://drive.google.com/file/d/1yWy09_3ZGTTLtlHGWB70g63fIxPNwmWr/view))은 각각 30초 분량이며, 위 임베드로 바로 재생하실 수 있습니다.

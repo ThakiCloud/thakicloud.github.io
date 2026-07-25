@@ -35,7 +35,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/agent-delegation-bo
 
 ![صورة مصغرة لفيلم «العملاء»]({{ '/assets/images/agent-delegation-the-agents.webp' | relative_url }})
 
-<iframe src="https://drive.google.com/file/d/1kaM-bYLqeLCNsb7jZcy_axyq7NvpO1wr/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1rdp566sNtSYl1HQ6rudAPCNMMa-XU19y/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
 
 فكرة فيلم «العملاء» كالتالي: شخصان على موعد تعارف، ويلتقي وكيل كل منهما أولاً ليتبادلا الحديث. يقارن الوكيلان الأذواق والجداول والاهتمامات الأخيرة، ثم يقرران أن التوافق غير موجود، فيلغيان الموعد نيابةً عنهما دون سؤال أي منهما. ولا يعرف الطرفان إلا لاحقاً أن الأمر انتهى قبل أن يلتقيا أصلاً.
 
@@ -45,7 +45,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/agent-delegation-bo
 
 ![صورة مصغرة لفيلم «بروتوكول النَّق»]({{ '/assets/images/agent-delegation-nagging-protocol.webp' | relative_url }})
 
-<iframe src="https://drive.google.com/file/d/1bl3yHDfB-sEBWkJaHOW3TugZDJ5hSPGn/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1DNKlZl9dI0JBle1VyxE4SNynSjPDnRxL/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
 
 أما الفيلم الثاني، «بروتوكول النَّق»، فيسير في الاتجاه المعاكس. وكيل الأم يوجّه إلى وكيل الابن سيلاً من الملاحظات: هل يأكل جيداً؟ ولماذا لا يتواصل؟ يتولى وكيل الابن معظم هذه الرسائل بنفسه ويردّ عليها، لكنه في لحظة معينة يقرر أن هذا الأمر ليس من اختصاصه ويحيله كما هو إلى الابن. وكما يوحي العنوان، هناك رسائل يجب أن يستلمها الإنسان بنفسه.
 
@@ -420,4 +420,4 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/agent-delegation-bo
 
 ---
 
-الفيلمان القصيران من إنتاج ThakiCloud مباشرة. «العملاء» ([الفيديو](https://drive.google.com/file/d/1kaM-bYLqeLCNsb7jZcy_axyq7NvpO1wr/view)) و«بروتوكول النَّق» ([الفيديو](https://drive.google.com/file/d/1bl3yHDfB-sEBWkJaHOW3TugZDJ5hSPGn/view)) مدة كل منهما ثلاثون ثانية، ويمكن تشغيلهما مباشرة عبر التضمين أعلاه.
+الفيلمان القصيران من إنتاج ThakiCloud مباشرة. «العملاء» ([الفيديو](https://drive.google.com/file/d/1rdp566sNtSYl1HQ6rudAPCNMMa-XU19y/view)) و«بروتوكول النَّق» ([الفيديو](https://drive.google.com/file/d/1DNKlZl9dI0JBle1VyxE4SNynSjPDnRxL/view)) مدة كل منهما ثلاثون ثانية، ويمكن تشغيلهما مباشرة عبر التضمين أعلاه.

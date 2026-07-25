@@ -35,7 +35,7 @@ Let's look at that boundary through two scenes first: two 30-second short films 
 
 ![Thumbnail for the short film The Agents]({{ '/assets/images/agent-delegation-the-agents.webp' | relative_url }})
 
-<iframe src="https://drive.google.com/file/d/1kaM-bYLqeLCNsb7jZcy_axyq7NvpO1wr/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1-zncnbikancS554gr-HadGPK4IR9EfSq/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
 
 The premise of The Agents ("요원들") is simple. Two people are about to go on a blind date, and their agents meet first to talk. The two agents compare tastes, schedules, and recent interests, decide they are not a good match, and cancel the date on their own, without asking either person. The two humans only find out afterward that everything ended before they ever met.
 
@@ -45,7 +45,7 @@ It is a funny scene, but underneath it are problems the industry is actually wre
 
 ![Thumbnail for the short film The Nagging Protocol]({{ '/assets/images/agent-delegation-nagging-protocol.webp' | relative_url }})
 
-<iframe src="https://drive.google.com/file/d/1bl3yHDfB-sEBWkJaHOW3TugZDJ5hSPGn/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1Dw96sWyupmnPuHmZRAjB7Upy1Egiyc4f/preview" width="100%" height="440" allow="autoplay" style="border:0; aspect-ratio:16/9;" loading="lazy"></iframe>
 
 The second film, The Nagging Protocol ("잔소리 프로토콜"), goes the opposite direction. A mother's agent nags her son's agent about whether he is eating properly and why he never calls. The son's agent fields most of the messages on its own, but at some point it decides this is not something it should handle, and passes it straight to the son. True to the title, some traffic belongs to a human.
 
@@ -420,4 +420,4 @@ The world The Agents and The Nagging Protocol sketch out for the next three year
 
 ---
 
-Both short films were produced in-house by ThakiCloud. The Agents ([watch](https://drive.google.com/file/d/1kaM-bYLqeLCNsb7jZcy_axyq7NvpO1wr/view)) and The Nagging Protocol ([watch](https://drive.google.com/file/d/1bl3yHDfB-sEBWkJaHOW3TugZDJ5hSPGn/view)) each run about 30 seconds, and you can play them directly from the embeds above.
+Both short films were produced in-house by ThakiCloud. The Agents ([watch](https://drive.google.com/file/d/1-zncnbikancS554gr-HadGPK4IR9EfSq/view)) and The Nagging Protocol ([watch](https://drive.google.com/file/d/1Dw96sWyupmnPuHmZRAjB7Upy1Egiyc4f/view)) each run about 30 seconds, and you can play them directly from the embeds above.

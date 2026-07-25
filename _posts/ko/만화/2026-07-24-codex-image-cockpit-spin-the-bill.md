@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.png
-video: /assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.mp4
+video: /assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.ko.mp4
 audiobook: /assets/audio/posts/codex-image-cockpit-spin-the-bill/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
@@ -25,10 +25,10 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: [RT @dreiachse: Image Cockpit for Codex Workflows v0.1.7 を公開しました！](https://x.com/hjguyhan/status/2080249200890237270) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.png" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.mp4" type="video/mp4">
+  <source src="/assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.ko.mp4" type="video/mp4">
 </video>
 
 ## ThakiCloud 제품 적용 시사점

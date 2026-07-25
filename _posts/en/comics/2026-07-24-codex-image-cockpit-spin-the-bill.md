@@ -14,7 +14,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/codex-image-cockpit-spin-the-bill/strip.png
-video: /assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.mp4
+video: /assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.en.mp4
 audiobook: /assets/audio/posts/codex-image-cockpit-spin-the-bill/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
@@ -25,10 +25,10 @@ A tidy image cockpit for Codex workflows just shipped. Pick a direction, front, 
 
 > Source: [RT @dreiachse: Image Cockpit for Codex Workflows v0.1.7 を公開しました！](https://x.com/hjguyhan/status/2080249200890237270) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/codex-image-cockpit-spin-the-bill/strip.png" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.mp4" type="video/mp4">
+  <source src="/assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.en.mp4" type="video/mp4">
 </video>
 
 ## What this means for ThakiCloud

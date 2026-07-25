@@ -12,7 +12,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/만화/vibe-coded-all-look-the-same/strip.png
-video: /assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.mp4
+video: /assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.ko.mp4
 ---
 
 바이브 코딩으로 뚝딱 만든 프로젝트들이 묘하게 다 닮았다는 이야기가 돌고 있습니다. 같은 템플릿, 같은 보라색 그라데이션, 같은 히어로 섹션이 반복되는 탓이죠. 그래서 요즘은 이 티를 벗겨 줄 디자인 리소스 모음이 인기입니다. 오늘 만화는 정글 한가운데서 그 쌍둥이 앱들을 마주친 유진이네 팀 이야기입니다.
@@ -21,10 +21,10 @@ video: /assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.mp4
 
 > 원 뉴스: [These will instantly make your vibe-coded projects look less generic](https://x.com/hjguyhan/status/2080564601637470553) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/vibe-coded-all-look-the-same/strip.png" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.mp4" type="video/mp4">
+  <source src="/assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.ko.mp4" type="video/mp4">
 </video>
 
 ## ThakiCloud 제품 적용 시사점
