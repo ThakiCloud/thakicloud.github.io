@@ -1,0 +1,1184 @@
+# Locale-aware display labels for post-footer tags — consumed by
+# _includes/tag-list.html so a tag written in one language's frontmatter
+# (e.g. Korean tags on an EN/AR post) still displays in the reading
+# post's own language (page.lang).
+#
+# Keys are the raw tag strings used in post front matter (any of the
+# surface forms a concept appears as, e.g. both the Korean phrase for
+# "context engineering" and the English slug "context-engineering"
+# map to the same {ko, en, ar} triple). Each
+# key's own-language value equals the key itself (self-mapping
+# invariant), so map[tag_word][page.lang] always resolves correctly
+# regardless of which language's frontmatter the tag came from.
+#
+# Proper nouns and established technical terms (Claude Code, LLM, GPU,
+# Kubernetes, vLLM, agentops, thakicloud, ...) are intentionally NOT
+# listed here: they render identically in every language already, so
+# the renderer's default fallback (raw tag_word) is correct without an
+# entry. Only tags whose displayed label should actually change by
+# language are mapped.
+#
+# Generated from a full scan of _posts/{ko,en,ar}/**/*.md frontmatter
+# tags (see thakicloud.github.io tag-i18n build notes). Unmapped tags
+# fall back to the raw tag_word — nothing breaks if a tag is missing.
+
+"AI 코딩":
+  "ko": "AI 코딩"
+  "en": "AI Coding"
+  "ar": "برمجة بالذكاء الاصطناعي"
+"AI-Agent":
+  "ko": "AI 에이전트"
+  "en": "AI-Agent"
+  "ar": "وكيل الذكاء الاصطناعي"
+"AI-Agents":
+  "ko": "AI 에이전트"
+  "en": "AI-Agents"
+  "ar": "وكيل الذكاء الاصطناعي"
+"AI-안전성":
+  "ko": "AI-안전성"
+  "en": "AI Safety"
+  "ar": "سلامة الذكاء الاصطناعي"
+"AI디자인":
+  "ko": "AI디자인"
+  "en": "AI Design"
+  "ar": "تصميم بالذكاء الاصطناعي"
+"AI에이전트":
+  "ko": "AI에이전트"
+  "en": "AI Agent"
+  "ar": "وكيل الذكاء الاصطناعي"
+"AI연구":
+  "ko": "AI연구"
+  "en": "AI Research"
+  "ar": "أبحاث الذكاء الاصطناعي"
+"AI인프라":
+  "ko": "AI인프라"
+  "en": "AI Infrastructure"
+  "ar": "بنية تحتية للذكاء الاصطناعي"
+"AI주권":
+  "ko": "AI주권"
+  "en": "AI Sovereignty"
+  "ar": "سيادة الذكاء الاصطناعي"
+"AI코딩":
+  "ko": "AI코딩"
+  "en": "AI Coding"
+  "ar": "برمجة بالذكاء الاصطناعي"
+"AI플랫폼":
+  "ko": "AI플랫폼"
+  "en": "AI Platform"
+  "ar": "منصة الذكاء الاصطناعي"
+"API호출":
+  "ko": "API호출"
+  "en": "API Call"
+  "ar": "استدعاء API"
+"ARC-벤치마크":
+  "ko": "ARC-벤치마크"
+  "en": "ARC Benchmark"
+  "ar": "معيار ARC"
+"Agent진화":
+  "ko": "Agent진화"
+  "en": "Agent Evolution"
+  "ar": "تطور الوكلاء"
+"Automation":
+  "ko": "자동화"
+  "en": "Automation"
+  "ar": "الأتمتة"
+"GPU비용":
+  "ko": "GPU비용"
+  "en": "GPU Cost"
+  "ar": "تكلفة GPU"
+"KV캐시":
+  "ko": "KV캐시"
+  "en": "KV Cache"
+  "ar": "ذاكرة KV المؤقتة"
+"LLM 에이전트":
+  "ko": "LLM 에이전트"
+  "en": "LLM Agent"
+  "ar": "وكيل LLM"
+"LLM 학습":
+  "ko": "LLM 학습"
+  "en": "LLM Training"
+  "ar": "تدريب LLM"
+"LLM모니터링":
+  "ko": "LLM모니터링"
+  "en": "LLM Monitoring"
+  "ar": "مراقبة LLM"
+"LLM서빙":
+  "ko": "LLM서빙"
+  "en": "LLM Serving"
+  "ar": "خدمة LLM"
+"LLM연구자동화":
+  "ko": "LLM연구자동화"
+  "en": "LLM Research Automation"
+  "ar": "أتمتة أبحاث LLM"
+"LLM최적화":
+  "ko": "LLM최적화"
+  "en": "LLM Optimization"
+  "ar": "تحسين LLM"
+"LLM한계":
+  "ko": "LLM한계"
+  "en": "LLM Limitations"
+  "ar": "قيود LLM"
+"LLM훈련":
+  "ko": "LLM훈련"
+  "en": "LLM Training"
+  "ar": "تدريب LLM"
+"Machine-Learning":
+  "ko": "머신러닝"
+  "en": "Machine-Learning"
+  "ar": "تعلم الآلة"
+"MoE아키텍처":
+  "ko": "MoE아키텍처"
+  "en": "MoE Architecture"
+  "ar": "بنية MoE"
+"Multi-Agent":
+  "ko": "멀티에이전트"
+  "en": "Multi-Agent"
+  "ar": "متعدد الوكلاء"
+"Open Source":
+  "ko": "오픈소스"
+  "en": "Open Source"
+  "ar": "مفتوح المصدر"
+"Open-Source":
+  "ko": "오픈소스"
+  "en": "Open-Source"
+  "ar": "مفتوح المصدر"
+"Pareto프론티어":
+  "ko": "Pareto프론티어"
+  "en": "Pareto Frontier"
+  "ar": "حدود باريتو"
+"Reinforcement-Learning":
+  "ko": "강화학습"
+  "en": "Reinforcement-Learning"
+  "ar": "التعلم المعزز"
+"UI참고":
+  "ko": "UI참고"
+  "en": "UI Reference"
+  "ar": "مرجع واجهة المستخدم"
+"agent":
+  "ko": "에이전트"
+  "en": "agent"
+  "ar": "وكيل"
+"agent-governance":
+  "ko": "에이전트 거버넌스"
+  "en": "agent-governance"
+  "ar": "حوكمة الوكلاء"
+"agent-harness":
+  "ko": "에이전트 하네스"
+  "en": "agent-harness"
+  "ar": "إطار عمل الوكيل"
+"agent-memory":
+  "ko": "에이전트 메모리"
+  "en": "agent-memory"
+  "ar": "ذاكرة الوكيل"
+"agent-native":
+  "ko": "에이전트 네이티브"
+  "en": "agent-native"
+  "ar": "أصلي للوكلاء"
+"agent-native-cloud":
+  "ko": "에이전트 네이티브 클라우드"
+  "en": "agent-native-cloud"
+  "ar": "سحابة أصلية للوكلاء"
+"agentic":
+  "ko": "에이전틱 AI"
+  "en": "agentic"
+  "ar": "الذكاء الاصطناعي الوكيلي"
+"agentic-ai":
+  "ko": "에이전틱 AI"
+  "en": "agentic-ai"
+  "ar": "الذكاء الاصطناعي الوكيلي"
+"ai-agent":
+  "ko": "AI 에이전트"
+  "en": "ai-agent"
+  "ar": "وكيل الذكاء الاصطناعي"
+"ai-agents":
+  "ko": "AI 에이전트"
+  "en": "ai-agents"
+  "ar": "وكيل الذكاء الاصطناعي"
+"ai-application":
+  "ko": "AI 활용"
+  "en": "ai-application"
+  "ar": "تطبيق الذكاء الاصطناعي"
+"ai-coding":
+  "ko": "AI 코딩"
+  "en": "ai-coding"
+  "ar": "برمجة بالذكاء الاصطناعي"
+"ai-infrastructure":
+  "ko": "AI 인프라"
+  "en": "ai-infrastructure"
+  "ar": "بنية تحتية للذكاء الاصطناعي"
+"ai-platform":
+  "ko": "AI 플랫폼"
+  "en": "ai-platform"
+  "ar": "منصة الذكاء الاصطناعي"
+"ai-research":
+  "ko": "AI 연구"
+  "en": "ai-research"
+  "ar": "أبحاث الذكاء الاصطناعي"
+"ai-tools":
+  "ko": "AI 도구"
+  "en": "ai-tools"
+  "ar": "أدوات الذكاء الاصطناعي"
+"arXiv-논문":
+  "ko": "arXiv-논문"
+  "en": "arXiv Paper"
+  "ar": "ورقة arXiv"
+"automation":
+  "ko": "자동화"
+  "en": "automation"
+  "ar": "الأتمتة"
+"autonomous-agents":
+  "ko": "자율 에이전트"
+  "en": "autonomous-agents"
+  "ar": "وكيل ذاتي"
+"browser-automation":
+  "ko": "브라우저 자동화"
+  "en": "browser-automation"
+  "ar": "أتمتة المتصفح"
+"coding-agent":
+  "ko": "코딩 에이전트"
+  "en": "coding-agent"
+  "ar": "وكيل برمجة"
+"context-engineering":
+  "ko": "컨텍스트 엔지니어링"
+  "en": "context-engineering"
+  "ar": "هندسة السياق"
+"cost-optimization":
+  "ko": "비용 최적화"
+  "en": "cost-optimization"
+  "ar": "تحسين التكلفة"
+"dashboard":
+  "ko": "대시보드"
+  "en": "dashboard"
+  "ar": "لوحة المعلومات"
+"delegation":
+  "ko": "위임"
+  "en": "delegation"
+  "ar": "تفويض"
+"developer-experience":
+  "ko": "개발자 경험"
+  "en": "developer-experience"
+  "ar": "تجربة المطور"
+"developer-tools":
+  "ko": "개발 도구"
+  "en": "developer-tools"
+  "ar": "أدوات المطورين"
+"distillation":
+  "ko": "지식 증류"
+  "en": "distillation"
+  "ar": "التقطير المعرفي"
+"document-parsing":
+  "ko": "문서 파싱"
+  "en": "document-parsing"
+  "ar": "تحليل المستندات"
+"edge-ai":
+  "ko": "엣지 AI"
+  "en": "edge-ai"
+  "ar": "الذكاء الاصطناعي الطرفي"
+"embedding":
+  "ko": "임베딩"
+  "en": "embedding"
+  "ar": "التضمين"
+"enterprise-ai":
+  "ko": "엔터프라이즈 AI"
+  "en": "enterprise-ai"
+  "ar": "الذكاء الاصطناعي المؤسسي"
+"evaluation":
+  "ko": "평가"
+  "en": "evaluation"
+  "ar": "التقييم"
+"fine-tuning":
+  "ko": "파인튜닝"
+  "en": "fine-tuning"
+  "ar": "الضبط الدقيق"
+"governance":
+  "ko": "거버넌스"
+  "en": "governance"
+  "ar": "الحوكمة"
+"gpu-scheduling":
+  "ko": "GPU 스케줄링"
+  "en": "gpu-scheduling"
+  "ar": "جدولة GPU"
+"gpu-serving":
+  "ko": "GPU 서빙"
+  "en": "gpu-serving"
+  "ar": "تقديم عبر GPU"
+"image-generation":
+  "ko": "이미지 생성"
+  "en": "image-generation"
+  "ar": "توليد الصور"
+"inference-cost":
+  "ko": "추론 비용"
+  "en": "inference-cost"
+  "ar": "تكلفة الاستدلال"
+"inference-optimization":
+  "ko": "추론 최적화"
+  "en": "inference-optimization"
+  "ar": "تحسين الاستدلال"
+"infrastructure":
+  "ko": "인프라"
+  "en": "infrastructure"
+  "ar": "البنية التحتية"
+"kv-cache":
+  "ko": "KV 캐시"
+  "en": "kv-cache"
+  "ar": "ذاكرة KV المؤقتة"
+"llm-agent":
+  "ko": "LLM 에이전트"
+  "en": "llm-agent"
+  "ar": "وكيل LLM"
+"llm-agents":
+  "ko": "LLM 에이전트"
+  "en": "llm-agents"
+  "ar": "وكيل LLM"
+"llm-evaluation":
+  "ko": "LLM 평가"
+  "en": "llm-evaluation"
+  "ar": "تقييم LLM"
+"llm-inference":
+  "ko": "LLM 추론"
+  "en": "llm-inference"
+  "ar": "استدلال LLM"
+"llm-serving":
+  "ko": "LLM 서빙"
+  "en": "llm-serving"
+  "ar": "خدمة LLM"
+"llm-training":
+  "ko": "LLM 학습"
+  "en": "llm-training"
+  "ar": "تدريب LLM"
+"local-ai":
+  "ko": "로컬 AI"
+  "en": "local-ai"
+  "ar": "ذكاء اصطناعي محلي"
+"local-llm":
+  "ko": "로컬 LLM"
+  "en": "local-llm"
+  "ar": "LLM محلي"
+"long-context":
+  "ko": "롱컨텍스트"
+  "en": "long-context"
+  "ar": "سياق طويل"
+"long-term-memory":
+  "ko": "장기 기억"
+  "en": "long-term-memory"
+  "ar": "الذاكرة طويلة المدى"
+"loop-engineering":
+  "ko": "루프 엔지니어링"
+  "en": "loop-engineering"
+  "ar": "هندسة الحلقات"
+"machine-learning":
+  "ko": "머신러닝"
+  "en": "machine-learning"
+  "ar": "تعلم الآلة"
+"mixture-of-experts":
+  "ko": "전문가 혼합"
+  "en": "mixture-of-experts"
+  "ar": "مزيج الخبراء"
+"model-optimization":
+  "ko": "모델 최적화"
+  "en": "model-optimization"
+  "ar": "تحسين النموذج"
+"model-routing":
+  "ko": "모델 라우팅"
+  "en": "model-routing"
+  "ar": "توجيه النماذج"
+"monitoring":
+  "ko": "모니터링"
+  "en": "monitoring"
+  "ar": "المراقبة"
+"multi-agent":
+  "ko": "멀티에이전트"
+  "en": "multi-agent"
+  "ar": "متعدد الوكلاء"
+"multi-tenancy":
+  "ko": "멀티테넌시"
+  "en": "multi-tenancy"
+  "ar": "تعدد المستأجرين"
+"multimodal":
+  "ko": "멀티모달"
+  "en": "multimodal"
+  "ar": "متعدد الوسائط"
+"multimodal-ai":
+  "ko": "멀티모달 AI"
+  "en": "multimodal-ai"
+  "ar": "ذكاء اصطناعي متعدد الوسائط"
+"news":
+  "ko": "뉴스"
+  "en": "news"
+  "ar": "الأخبار"
+"observability":
+  "ko": "관찰성"
+  "en": "observability"
+  "ar": "قابلية الملاحظة"
+"on-prem":
+  "ko": "온프레미스"
+  "en": "on-prem"
+  "ar": "محلي (On-Premise)"
+"on-premise":
+  "ko": "온프레미스"
+  "en": "on-premise"
+  "ar": "محلي (On-Premise)"
+"open-source":
+  "ko": "오픈소스"
+  "en": "open-source"
+  "ar": "مفتوح المصدر"
+"open-weight":
+  "ko": "오픈 웨이트"
+  "en": "open-weight"
+  "ar": "أوزان مفتوحة"
+"open-weights":
+  "ko": "오픈 웨이트"
+  "en": "open-weights"
+  "ar": "أوزان مفتوحة"
+"orchestration":
+  "ko": "오케스트레이션"
+  "en": "orchestration"
+  "ar": "التنسيق"
+"platform-engineering":
+  "ko": "플랫폼 엔지니어링"
+  "en": "platform-engineering"
+  "ar": "هندسة المنصات"
+"post-training":
+  "ko": "포스트트레이닝"
+  "en": "post-training"
+  "ar": "التدريب اللاحق"
+"privacy":
+  "ko": "프라이버시"
+  "en": "privacy"
+  "ar": "الخصوصية"
+"productivity":
+  "ko": "생산성"
+  "en": "productivity"
+  "ar": "الإنتاجية"
+"project-management":
+  "ko": "프로젝트 관리"
+  "en": "project-management"
+  "ar": "إدارة المشاريع"
+"prompt-engineering":
+  "ko": "프롬프트 엔지니어링"
+  "en": "prompt-engineering"
+  "ar": "هندسة الموجهات"
+"quantization":
+  "ko": "양자화"
+  "en": "quantization"
+  "ar": "التكميم"
+"real-time":
+  "ko": "실시간"
+  "en": "real-time"
+  "ar": "الوقت الفعلي"
+"reasoning":
+  "ko": "추론"
+  "en": "reasoning"
+  "ar": "الاستدلال"
+"reinforcement-learning":
+  "ko": "강화학습"
+  "en": "reinforcement-learning"
+  "ar": "التعلم المعزز"
+"research":
+  "ko": "연구"
+  "en": "research"
+  "ar": "البحث"
+"research-automation":
+  "ko": "연구 자동화"
+  "en": "research-automation"
+  "ar": "أتمتة البحث"
+"security":
+  "ko": "보안"
+  "en": "security"
+  "ar": "الأمن"
+"self-hosted":
+  "ko": "셀프 호스팅"
+  "en": "self-hosted"
+  "ar": "الاستضافة الذاتية"
+"self-hosting":
+  "ko": "셀프 호스팅"
+  "en": "self-hosting"
+  "ar": "الاستضافة الذاتية"
+"self-improvement":
+  "ko": "자가 개선"
+  "en": "self-improvement"
+  "ar": "التحسين الذاتي"
+"skill-routing":
+  "ko": "스킬 라우팅"
+  "en": "skill-routing"
+  "ar": "توجيه المهارات"
+"sovereign-ai":
+  "ko": "소버린 AI"
+  "en": "sovereign-ai"
+  "ar": "الذكاء الاصطناعي السيادي"
+"sovereignty":
+  "ko": "주권"
+  "en": "sovereignty"
+  "ar": "السيادة"
+"speculative-decoding":
+  "ko": "추측 디코딩"
+  "en": "speculative-decoding"
+  "ar": "فك الترميز التخميني"
+"survey":
+  "ko": "서베이"
+  "en": "survey"
+  "ar": "مسح استقصائي"
+"text-to-image":
+  "ko": "텍스트-이미지 변환"
+  "en": "text-to-image"
+  "ar": "من النص إلى الصورة"
+"tool-calling":
+  "ko": "도구 호출"
+  "en": "tool-calling"
+  "ar": "استدعاء الأدوات"
+"tool-use":
+  "ko": "도구 사용"
+  "en": "tool-use"
+  "ar": "استخدام الأدوات"
+"vector-database":
+  "ko": "벡터 데이터베이스"
+  "en": "vector-database"
+  "ar": "قاعدة بيانات متجهية"
+"verification":
+  "ko": "검증"
+  "en": "verification"
+  "ar": "التحقق"
+"vibe-coding":
+  "ko": "바이브 코딩"
+  "en": "vibe-coding"
+  "ar": "البرمجة الحدسية"
+"vision-language-model":
+  "ko": "비전-언어 모델"
+  "en": "vision-language-model"
+  "ar": "نموذج الرؤية واللغة"
+"web-scraping":
+  "ko": "웹 스크래핑"
+  "en": "web-scraping"
+  "ar": "استخراج بيانات الويب"
+"workflow":
+  "ko": "워크플로"
+  "en": "workflow"
+  "ar": "سير العمل"
+"workflow-automation":
+  "ko": "워크플로 자동화"
+  "en": "workflow-automation"
+  "ar": "أتمتة سير العمل"
+"강화학습":
+  "ko": "강화학습"
+  "en": "Reinforcement Learning"
+  "ar": "التعلم المعزز"
+"개발 생산성":
+  "ko": "개발 생산성"
+  "en": "Developer Productivity"
+  "ar": "إنتاجية المطورين"
+"개발도구":
+  "ko": "개발도구"
+  "en": "Developer Tools"
+  "ar": "أدوات المطورين"
+"개발생산성":
+  "ko": "개발생산성"
+  "en": "Developer Productivity"
+  "ar": "إنتاجية المطورين"
+"개발환경":
+  "ko": "개발환경"
+  "en": "Development Environment"
+  "ar": "بيئة التطوير"
+"검색증강생성":
+  "ko": "검색증강생성"
+  "en": "Retrieval-Augmented Generation"
+  "ar": "التوليد المعزز بالاسترجاع"
+"검증 가능 보상":
+  "ko": "검증 가능 보상"
+  "en": "Verifiable Reward"
+  "ar": "المكافأة القابلة للتحقق"
+"계층적-추론":
+  "ko": "계층적-추론"
+  "en": "Hierarchical Reasoning"
+  "ar": "الاستدلال الهرمي"
+"고가용성":
+  "ko": "고가용성"
+  "en": "High Availability"
+  "ar": "التوافر العالي"
+"과학-혁신":
+  "ko": "과학-혁신"
+  "en": "Scientific Innovation"
+  "ar": "الابتكار العلمي"
+"관찰성":
+  "ko": "관찰성"
+  "en": "Observability"
+  "ar": "قابلية الملاحظة"
+"기업메일서버":
+  "ko": "기업메일서버"
+  "en": "Enterprise Mail Server"
+  "ar": "خادم البريد المؤسسي"
+"뇌-구조-영감":
+  "ko": "뇌-구조-영감"
+  "en": "Brain-Inspired Architecture"
+  "ar": "بنية مستوحاة من الدماغ"
+"다국어":
+  "ko": "다국어"
+  "en": "Multilingual"
+  "ar": "متعدد اللغات"
+"다국어데이터셋":
+  "ko": "다국어데이터셋"
+  "en": "Multilingual Dataset"
+  "ar": "مجموعة بيانات متعددة اللغات"
+"다언어":
+  "ko": "다언어"
+  "en": "Multilingual"
+  "ar": "متعدد اللغات"
+"다중턴대화":
+  "ko": "다중턴대화"
+  "en": "Multi-Turn Conversation"
+  "ar": "محادثة متعددة الأدوار"
+"대규모언어모델":
+  "ko": "대규모언어모델"
+  "en": "Large Language Model"
+  "ar": "نموذج لغوي كبير"
+"데이터셋":
+  "ko": "데이터셋"
+  "en": "Dataset"
+  "ar": "مجموعة بيانات"
+"데이터주권":
+  "ko": "데이터주권"
+  "en": "Data Sovereignty"
+  "ar": "سيادة البيانات"
+"도구관리":
+  "ko": "도구관리"
+  "en": "Tool Management"
+  "ar": "إدارة الأدوات"
+"도구학습":
+  "ko": "도구학습"
+  "en": "Tool Learning"
+  "ar": "تعلم استخدام الأدوات"
+"딥러닝":
+  "ko": "딥러닝"
+  "en": "Deep Learning"
+  "ar": "التعلم العميق"
+"롱컨텍스트":
+  "ko": "롱컨텍스트"
+  "en": "Long Context"
+  "ar": "سياق طويل"
+"만화":
+  "ko": "만화"
+  "en": "Comic"
+  "ar": "قصة مصورة"
+"머신러닝":
+  "ko": "머신러닝"
+  "en": "Machine Learning"
+  "ar": "تعلم الآلة"
+"멀티에이전트":
+  "ko": "멀티에이전트"
+  "en": "Multi-Agent"
+  "ar": "متعدد الوكلاء"
+"메일보안":
+  "ko": "메일보안"
+  "en": "Email Security"
+  "ar": "أمن البريد الإلكتروني"
+"메일서버운영":
+  "ko": "메일서버운영"
+  "en": "Mail Server Operations"
+  "ar": "تشغيل خادم البريد"
+"메티스":
+  "ko": "메티스"
+  "en": "Metis"
+  "ar": "Metis"
+"모델 라우팅":
+  "ko": "모델 라우팅"
+  "en": "Model Routing"
+  "ar": "توجيه النماذج"
+"모델 오케스트레이션":
+  "ko": "모델 오케스트레이션"
+  "en": "Model Orchestration"
+  "ar": "تنسيق النماذج"
+"반도체 자립":
+  "ko": "반도체 자립"
+  "en": "Semiconductor Independence"
+  "ar": "استقلالية أشباه الموصلات"
+"번역데이터":
+  "ko": "번역데이터"
+  "en": "Translation Data"
+  "ar": "بيانات الترجمة"
+"베스트 프랙티스":
+  "ko": "베스트 프랙티스"
+  "en": "Best Practices"
+  "ar": "أفضل الممارسات"
+"벡터데이터베이스":
+  "ko": "벡터데이터베이스"
+  "en": "Vector Database"
+  "ar": "قاعدة بيانات متجهية"
+"벤더락인":
+  "ko": "벤더락인"
+  "en": "Vendor Lock-in"
+  "ar": "الارتباط بمورد واحد"
+"병맛":
+  "ko": "병맛"
+  "en": "Absurdist Humor"
+  "ar": "فكاهة عبثية"
+"보안자동화":
+  "ko": "보안자동화"
+  "en": "Security Automation"
+  "ar": "أتمتة الأمن"
+"부동산-AI":
+  "ko": "부동산-AI"
+  "en": "Real Estate AI"
+  "ar": "الذكاء الاصطناعي العقاري"
+"분산처리":
+  "ko": "분산처리"
+  "en": "Distributed Processing"
+  "ar": "المعالجة الموزعة"
+"분산훈련":
+  "ko": "분산훈련"
+  "en": "Distributed Training"
+  "ar": "التدريب الموزع"
+"비용":
+  "ko": "비용"
+  "en": "Cost"
+  "ar": "التكلفة"
+"비용 최적화":
+  "ko": "비용 최적화"
+  "en": "Cost Optimization"
+  "ar": "تحسين التكلفة"
+"비용절감":
+  "ko": "비용절감"
+  "en": "Cost Reduction"
+  "ar": "خفض التكلفة"
+"사고능력":
+  "ko": "사고능력"
+  "en": "Reasoning Ability"
+  "ar": "القدرة على الاستدلال"
+"사용자적응":
+  "ko": "사용자적응"
+  "en": "User Adaptation"
+  "ar": "التكيف مع المستخدم"
+"사전학습":
+  "ko": "사전학습"
+  "en": "Pretraining"
+  "ar": "التدريب المسبق"
+"사전훈련":
+  "ko": "사전훈련"
+  "en": "Pretraining"
+  "ar": "التدريب المسبق"
+"사후학습":
+  "ko": "사후학습"
+  "en": "Post-Training"
+  "ar": "التدريب اللاحق"
+"생성형AI":
+  "ko": "생성형AI"
+  "en": "Generative AI"
+  "ar": "الذكاء الاصطناعي التوليدي"
+"서빙":
+  "ko": "서빙"
+  "en": "Serving"
+  "ar": "الخدمة"
+"소버린AI":
+  "ko": "소버린AI"
+  "en": "Sovereign AI"
+  "ar": "الذكاء الاصطناعي السيادي"
+"스케일링":
+  "ko": "스케일링"
+  "en": "Scaling"
+  "ar": "التوسع"
+"스케일링 법칙":
+  "ko": "스케일링 법칙"
+  "en": "Scaling Laws"
+  "ar": "قوانين التوسع"
+"시각화":
+  "ko": "시각화"
+  "en": "Visualization"
+  "ar": "التصور المرئي"
+"시뮬레이터":
+  "ko": "시뮬레이터"
+  "en": "Simulator"
+  "ar": "محاكي"
+"시스템 프롬프트":
+  "ko": "시스템 프롬프트"
+  "en": "System Prompt"
+  "ar": "موجه النظام"
+"실무AI":
+  "ko": "실무AI"
+  "en": "Practical AI"
+  "ar": "الذكاء الاصطناعي العملي"
+"실험연구":
+  "ko": "실험연구"
+  "en": "Experimental Research"
+  "ar": "البحث التجريبي"
+"알리바바":
+  "ko": "알리바바"
+  "en": "Alibaba"
+  "ar": "علي بابا"
+"양자화":
+  "ko": "양자화"
+  "en": "Quantization"
+  "ar": "التكميم"
+"업무자동화":
+  "ko": "업무자동화"
+  "en": "Work Automation"
+  "ar": "أتمتة العمل"
+"에이전트":
+  "ko": "에이전트"
+  "en": "Agent"
+  "ar": "وكيل"
+"에이전트 루프":
+  "ko": "에이전트 루프"
+  "en": "Agent Loop"
+  "ar": "حلقة الوكيل"
+"에이전트 하네스":
+  "ko": "에이전트 하네스"
+  "en": "Agent Harness"
+  "ar": "إطار عمل الوكيل"
+"에이전트-시스템":
+  "ko": "에이전트-시스템"
+  "en": "Agent System"
+  "ar": "نظام الوكلاء"
+"에이전트-오케스트레이션":
+  "ko": "에이전트-오케스트레이션"
+  "en": "Agent Orchestration"
+  "ar": "تنسيق الوكلاء"
+"에이전트-협업":
+  "ko": "에이전트-협업"
+  "en": "Agent Collaboration"
+  "ar": "تعاون الوكلاء"
+"에이전트루프":
+  "ko": "에이전트루프"
+  "en": "Agent Loop"
+  "ar": "حلقة الوكيل"
+"에이전트프레임워크":
+  "ko": "에이전트프레임워크"
+  "en": "Agent Framework"
+  "ar": "إطار عمل الوكلاء"
+"에이전트하네스":
+  "ko": "에이전트하네스"
+  "en": "Agent Harness"
+  "ar": "إطار عمل الوكيل"
+"에이전트하네스평가":
+  "ko": "에이전트하네스평가"
+  "en": "Agent Harness Evaluation"
+  "ar": "تقييم إطار عمل الوكيل"
+"에이전틱AI":
+  "ko": "에이전틱AI"
+  "en": "Agentic AI"
+  "ar": "الذكاء الاصطناعي الوكيلي"
+"엔터프라이즈":
+  "ko": "엔터프라이즈"
+  "en": "Enterprise"
+  "ar": "المؤسسات"
+"엔터프라이즈AI":
+  "ko": "엔터프라이즈AI"
+  "en": "Enterprise AI"
+  "ar": "الذكاء الاصطناعي المؤسسي"
+"연구-자동화":
+  "ko": "연구-자동화"
+  "en": "Research Automation"
+  "ar": "أتمتة البحث"
+"연구진실성":
+  "ko": "연구진실성"
+  "en": "Research Integrity"
+  "ar": "نزاهة البحث"
+"연속배칭":
+  "ko": "연속배칭"
+  "en": "Continuous Batching"
+  "ar": "التجميع المستمر"
+"오픈모델":
+  "ko": "오픈모델"
+  "en": "Open Model"
+  "ar": "نموذج مفتوح"
+"오픈소스":
+  "ko": "오픈소스"
+  "en": "Open Source"
+  "ar": "مفتوح المصدر"
+"오픈웨이트":
+  "ko": "오픈웨이트"
+  "en": "Open Weights"
+  "ar": "أوزان مفتوحة"
+"온프레미스":
+  "ko": "온프레미스"
+  "en": "On-Premise"
+  "ar": "محلي (On-Premise)"
+"온프렘":
+  "ko": "온프렘"
+  "en": "On-Premise"
+  "ar": "محلي (On-Premise)"
+"음성번역":
+  "ko": "음성번역"
+  "en": "Voice Translation"
+  "ar": "الترجمة الصوتية"
+"음성인식":
+  "ko": "음성인식"
+  "en": "Speech Recognition"
+  "ar": "التعرف على الصوت"
+"의도명확화":
+  "ko": "의도명확화"
+  "en": "Intent Clarification"
+  "ar": "توضيح النية"
+"의료-AI":
+  "ko": "의료-AI"
+  "en": "Healthcare AI"
+  "ar": "الذكاء الاصطناعي الطبي"
+"인간-AI상호작용":
+  "ko": "인간-AI상호작용"
+  "en": "Human-AI Interaction"
+  "ar": "تفاعل الإنسان مع الذكاء الاصطناعي"
+"인공지능-연구":
+  "ko": "인공지능-연구"
+  "en": "AI Research"
+  "ar": "أبحاث الذكاء الاصطناعي"
+"인공초지능":
+  "ko": "인공초지능"
+  "en": "Artificial Superintelligence"
+  "ar": "الذكاء الخارق الاصطناعي"
+"인프라":
+  "ko": "인프라"
+  "en": "Infrastructure"
+  "ar": "البنية التحتية"
+"인프라보안":
+  "ko": "인프라보안"
+  "en": "Infrastructure Security"
+  "ar": "أمن البنية التحتية"
+"임베딩":
+  "ko": "임베딩"
+  "en": "Embedding"
+  "ar": "التضمين"
+"자가개선":
+  "ko": "자가개선"
+  "en": "Self-Improvement"
+  "ar": "التحسين الذاتي"
+"자기개선파이프라인":
+  "ko": "자기개선파이프라인"
+  "en": "Self-Improvement Pipeline"
+  "ar": "خط أنابيب التحسين الذاتي"
+"자기교정":
+  "ko": "자기교정"
+  "en": "Self-Correction"
+  "ar": "التصحيح الذاتي"
+"자동화":
+  "ko": "자동화"
+  "en": "Automation"
+  "ar": "الأتمتة"
+"자율-연구-시스템":
+  "ko": "자율-연구-시스템"
+  "en": "Autonomous Research System"
+  "ar": "نظام بحث ذاتي"
+"자율에이전트":
+  "ko": "자율에이전트"
+  "en": "Autonomous Agent"
+  "ar": "وكيل ذاتي"
+"재귀적자기개선":
+  "ko": "재귀적자기개선"
+  "en": "Recursive Self-Improvement"
+  "ar": "التحسين الذاتي التكراري"
+"재현성":
+  "ko": "재현성"
+  "en": "Reproducibility"
+  "ar": "قابلية إعادة الإنتاج"
+"적응형AI":
+  "ko": "적응형AI"
+  "en": "Adaptive AI"
+  "ar": "الذكاء الاصطناعي التكيفي"
+"정책최적화":
+  "ko": "정책최적화"
+  "en": "Policy Optimization"
+  "ar": "تحسين السياسة"
+"제로샷 학습":
+  "ko": "제로샷 학습"
+  "en": "Zero-Shot Learning"
+  "ar": "التعلم بدون أمثلة"
+"주권":
+  "ko": "주권"
+  "en": "Sovereignty"
+  "ar": "السيادة"
+"주권 AI":
+  "ko": "주권 AI"
+  "en": "Sovereign AI"
+  "ar": "الذكاء الاصطناعي السيادي"
+"주권AI":
+  "ko": "주권AI"
+  "en": "Sovereign AI"
+  "ar": "الذكاء الاصطناعي السيادي"
+"주제다양성":
+  "ko": "주제다양성"
+  "en": "Topic Diversity"
+  "ar": "تنوع المواضيع"
+"지속학습":
+  "ko": "지속학습"
+  "en": "Continual Learning"
+  "ar": "التعلم المستمر"
+"체스":
+  "ko": "체스"
+  "en": "Chess"
+  "ar": "الشطرنج"
+"추론":
+  "ko": "추론"
+  "en": "Reasoning"
+  "ar": "الاستدلال"
+"추론 경제성":
+  "ko": "추론 경제성"
+  "en": "Inference Economics"
+  "ar": "اقتصاديات الاستدلال"
+"추론-아키텍처":
+  "ko": "추론-아키텍처"
+  "en": "Reasoning Architecture"
+  "ar": "بنية الاستدلال"
+"추론데이터":
+  "ko": "추론데이터"
+  "en": "Reasoning Data"
+  "ar": "بيانات الاستدلال"
+"추론모델":
+  "ko": "추론모델"
+  "en": "Reasoning Model"
+  "ar": "نموذج الاستدلال"
+"추론비용":
+  "ko": "추론비용"
+  "en": "Inference Cost"
+  "ar": "تكلفة الاستدلال"
+"추론비용최적화":
+  "ko": "추론비용최적화"
+  "en": "Inference Cost Optimization"
+  "ar": "تحسين تكلفة الاستدلال"
+"추론엔진":
+  "ko": "추론엔진"
+  "en": "Inference Engine"
+  "ar": "محرك الاستدلال"
+"취약점스캐너":
+  "ko": "취약점스캐너"
+  "en": "Vulnerability Scanner"
+  "ar": "ماسح الثغرات"
+"컨테이너보안":
+  "ko": "컨테이너보안"
+  "en": "Container Security"
+  "ar": "أمن الحاويات"
+"컨텍스트 엔지니어링":
+  "ko": "컨텍스트 엔지니어링"
+  "en": "Context Engineering"
+  "ar": "هندسة السياق"
+"컨텍스트엔지니어링":
+  "ko": "컨텍스트엔지니어링"
+  "en": "Context Engineering"
+  "ar": "هندسة السياق"
+"컴퓨트 배분":
+  "ko": "컴퓨트 배분"
+  "en": "Compute Allocation"
+  "ar": "توزيع الحوسبة"
+"코드생성":
+  "ko": "코드생성"
+  "en": "Code Generation"
+  "ar": "توليد الكود"
+"코드평가":
+  "ko": "코드평가"
+  "en": "Code Evaluation"
+  "ar": "تقييم الكود"
+"쿠버네티스":
+  "ko": "쿠버네티스"
+  "en": "Kubernetes"
+  "ar": "Kubernetes"
+"클라우드":
+  "ko": "클라우드"
+  "en": "Cloud"
+  "ar": "الحوسبة السحابية"
+"클라우드보안":
+  "ko": "클라우드보안"
+  "en": "Cloud Security"
+  "ar": "أمن السحابة"
+"텐센트":
+  "ko": "텐센트"
+  "en": "Tencent"
+  "ar": "تينسنت"
+"파라미터 생성":
+  "ko": "파라미터 생성"
+  "en": "Parameter Generation"
+  "ar": "توليد المعاملات"
+"파레토 프론티어":
+  "ko": "파레토 프론티어"
+  "en": "Pareto Frontier"
+  "ar": "حدود باريتو"
+"파시스":
+  "ko": "파시스"
+  "en": "Paxis"
+  "ar": "Paxis"
+"파인튜닝":
+  "ko": "파인튜닝"
+  "en": "Fine-Tuning"
+  "ar": "الضبط الدقيق"
+"평가시스템":
+  "ko": "평가시스템"
+  "en": "Evaluation System"
+  "ar": "نظام التقييم"
+"평가자":
+  "ko": "평가자"
+  "en": "Evaluator"
+  "ar": "المقيّم"
+"포스트트레이닝":
+  "ko": "포스트트레이닝"
+  "en": "Post-Training"
+  "ar": "التدريب اللاحق"
+"품질게이트":
+  "ko": "품질게이트"
+  "en": "Quality Gate"
+  "ar": "بوابة الجودة"
+"프런티어 모델":
+  "ko": "프런티어 모델"
+  "en": "Frontier Model"
+  "ar": "نموذج طليعي"
+"프로덕션 에이전트":
+  "ko": "프로덕션 에이전트"
+  "en": "Production Agent"
+  "ar": "وكيل إنتاجي"
+"프로덕션AI":
+  "ko": "프로덕션AI"
+  "en": "Production AI"
+  "ar": "الذكاء الاصطناعي الإنتاجي"
+"프로덕션배포":
+  "ko": "프로덕션배포"
+  "en": "Production Deployment"
+  "ar": "النشر الإنتاجي"
+"프론트엔드코딩":
+  "ko": "프론트엔드코딩"
+  "en": "Frontend Coding"
+  "ar": "برمجة الواجهة الأمامية"
+"프롬프트 설계":
+  "ko": "프롬프트 설계"
+  "en": "Prompt Design"
+  "ar": "تصميم الموجه"
+"프롬프트 엔지니어링":
+  "ko": "프롬프트 엔지니어링"
+  "en": "Prompt Engineering"
+  "ar": "هندسة الموجهات"
+"프롬프트엔지니어링":
+  "ko": "프롬프트엔지니어링"
+  "en": "Prompt Engineering"
+  "ar": "هندسة الموجهات"
+"프롬프트최적화":
+  "ko": "프롬프트최적화"
+  "en": "Prompt Optimization"
+  "ar": "تحسين الموجه"
+"하네스":
+  "ko": "하네스"
+  "en": "Harness"
+  "ar": "إطار العمل"
+"하이퍼네트워크":
+  "ko": "하이퍼네트워크"
+  "en": "Hypernetwork"
+  "ar": "شبكة فائقة"
+"한국어추론":
+  "ko": "한국어추론"
+  "en": "Korean Reasoning"
+  "ar": "الاستدلال باللغة الكورية"
+"합성데이터":
+  "ko": "합성데이터"
+  "en": "Synthetic Data"
+  "ar": "بيانات اصطناعية"
+"허깅페이스":
+  "ko": "허깅페이스"
+  "en": "Hugging Face"
+  "ar": "Hugging Face"
+"헬스케어-기술":
+  "ko": "헬스케어-기술"
+  "en": "Healthcare Technology"
+  "ar": "تقنية الرعاية الصحية"
+"홍콩대학교":
+  "ko": "홍콩대학교"
+  "en": "University of Hong Kong"
+  "ar": "جامعة هونغ كونغ"
+"후처리":
+  "ko": "후처리"
+  "en": "Post-Processing"
+  "ar": "المعالجة اللاحقة"
+"훈련데이터":
+  "ko": "훈련데이터"
+  "en": "Training Data"
+  "ar": "بيانات التدريب"
