@@ -19,6 +19,8 @@ published: true
 categories:
   - dev
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/local-voice-agent-stack/"
+audiobook: /assets/audio/posts/local-voice-agent-stack/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![완전 로컬 음성 에이전트 지연 시간 실측 리포트 표지 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-01.png' | relative_url }})
