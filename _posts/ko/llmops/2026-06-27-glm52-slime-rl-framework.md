@@ -23,6 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm52-slime-rl-framew
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![생성 클러스터와 학습 클러스터가 중앙 버퍼를 통해 비동기로 데이터를 주고받는 모습을 형상화한 추상 이미지]({{ '/assets/images/glm52-slime-rl-framework-hero.webp' | relative_url }})
