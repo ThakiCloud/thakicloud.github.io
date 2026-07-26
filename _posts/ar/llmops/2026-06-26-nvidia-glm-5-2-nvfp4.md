@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/nvidia-glm-5-2-nvfp4/
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![صورة تجريدية لشبكة عصبية بدقة 16 بت تتكثّف في نواة مدمجة بدقة 4 بت]({{ '/assets/images/nvidia-glm-5-2-nvfp4-hero.webp' | relative_url }})
