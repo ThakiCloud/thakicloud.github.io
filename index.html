@@ -13,7 +13,7 @@ sitemap: false
   <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/ko/">
   <script>
     (function () {
-      var supported = { ko: 1, en: 1, ar: 1 };
+      var supported = { ko: 1, en: 1 };
       function cookie(name) {
         var v = "; " + document.cookie;
         var parts = v.split("; " + name + "=");
@@ -22,7 +22,6 @@ sitemap: false
       var lang = (navigator.language || navigator.userLanguage || "ko").toLowerCase();
       var target = "ko";
       if (lang.indexOf("en") === 0) target = "en";
-      else if (lang.indexOf("ar") === 0) target = "ar";
       // A previously chosen language wins over browser detection.
       var saved = cookie("preferred_language");
       if (saved && supported[saved]) target = saved;
@@ -34,8 +33,7 @@ sitemap: false
   <noscript>
     <p>Redirecting… choose a language:
       <a href="{{ site.baseurl }}/ko/">한국어</a> ·
-      <a href="{{ site.baseurl }}/en/">English</a> ·
-      <a href="{{ site.baseurl }}/ar/">العربية</a>
+      <a href="{{ site.baseurl }}/en/">English</a>
     </p>
   </noscript>
 </body>

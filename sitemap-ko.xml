@@ -13,7 +13,6 @@ lang: ko
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="{{ site.url }}{{ site.baseurl }}/ko/" />
     <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}/en/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="{{ site.url }}{{ site.baseurl }}/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}/ko/" />
   </url>
 

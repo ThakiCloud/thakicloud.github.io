@@ -13,8 +13,4 @@ sitemap: false
     <loc>{{ site.url }}{{ site.baseurl }}/sitemap-en.xml</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </sitemap>
-  <sitemap>
-    <loc>{{ site.url }}{{ site.baseurl }}/sitemap-ar.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-  </sitemap>
 </sitemapindex>

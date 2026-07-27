@@ -194,6 +194,13 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  # Arabic (ar) is disabled — not built, not deployed. Re-enable by removing
+  # these four lines (posts/pages/config/sitemap are kept in the repo).
+  - _posts/ar
+  - _pages/ar
+  - _config-ar.yml
+  - sitemap-ar.xml
+  - feed-ar.xml
 keep_files:
   - .git
   - .svn

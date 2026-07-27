@@ -36,7 +36,7 @@ jobs:
           LIMIT_CATEGORIES=("agentops" "tutorials" "dev" "owm" "research" "llmops")
           KEEP_COUNT=40
           
-          for lang in ko en ar; do
+          for lang in ko en; do
             for category in "${LIMIT_CATEGORIES[@]}"; do
               dir="_posts/$lang/$category"
               if [ -d "$dir" ]; then
@@ -75,7 +75,7 @@ jobs:
           # 최종 통계
           echo ""
           echo "=== Final post count by category ==="
-          for lang in ko en ar; do
+          for lang in ko en; do
             echo "Language: $lang"
             for cat_dir in _posts/$lang/*/; do
               if [ -d "$cat_dir" ]; then

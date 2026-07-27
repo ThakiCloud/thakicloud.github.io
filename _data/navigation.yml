@@ -2,6 +2,10 @@
 # Categories / Tags / Comics were merged into the home page, which filters in
 # place via ?category= and ?tags=. The "Posts" nav item was removed since the
 # whole site is one page and the masthead logo already links to it.
+#
+# Arabic (ar) is disabled site-wide — the العربية option was removed from every
+# switcher. Re-enable by restoring the `العربية / /ar/` child in each list and
+# the `ar:` block, plus removing the ar excludes in _config.yml.
 
 # main links (default - Korean)
 main:
@@ -11,8 +15,6 @@ main:
         url: /ko/
       - title: "English"
         url: /en/
-      - title: "العربية"
-        url: /ar/
 
 # 한국어 네비게이션
 ko:
@@ -22,8 +24,6 @@ ko:
         url: /ko/
       - title: "English"
         url: /en/
-      - title: "العربية"
-        url: /ar/
 
 # 영어 네비게이션
 en:
@@ -33,16 +33,3 @@ en:
         url: /ko/
       - title: "English"
         url: /en/
-      - title: "العربية"
-        url: /ar/
-
-# 아랍어 네비게이션
-ar:
-  - title: "اللغة"
-    children:
-      - title: "한국어"
-        url: /ko/
-      - title: "English"
-        url: /en/
-      - title: "العربية"
-        url: /ar/
