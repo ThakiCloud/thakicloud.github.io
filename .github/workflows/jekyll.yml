@@ -23,7 +23,7 @@ jobs:
       DEST_PREFIX: tech-blog
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       
       - name: 📊 Filter posts by category (limit large categories)
