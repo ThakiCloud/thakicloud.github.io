@@ -1115,6 +1115,41 @@ html[lang="ar"] .toss-rail__rank { }
 .postspage { padding-bottom: 4rem; }
 
 /* ---- Search box (Tagify restyled to the design's input) ---- */
+/* Plain text search (title + summary + tags). */
+.postsearch { position: relative; margin: 0 0 2rem; }
+.postsearch__input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 0 44px 0 16px;        /* room for the right-side icon */
+  margin: 0;                     /* MM ships margin-bottom: 0.5em on inputs */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 44px;             /* text vertically centered in the box */
+  box-shadow: none;              /* MM adds a resting inset shadow */
+  -webkit-appearance: none;
+  appearance: none;
+}
+.postsearch__input::placeholder { color: var(--text-subtle); }
+.postsearch__input:focus,
+.postsearch__input:focus-visible {
+  outline: none;
+  border-color: var(--border-strong);
+  box-shadow: none;              /* kill MM's blue focus glow */
+}
+.postsearch__icon {
+  position: absolute;
+  right: 16px;                   /* right-aligned */
+  top: 50%;
+  transform: translateY(-50%);   /* centered with the text */
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
 .postspage__search { position: relative; margin-bottom: 2rem; }
 .postspage__search .tagify {
   --tags-border-color: var(--border);

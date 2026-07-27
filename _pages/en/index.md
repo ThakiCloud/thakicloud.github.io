@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Tech Blog"
 layout: posts
 permalink: /en/
 lang: en
