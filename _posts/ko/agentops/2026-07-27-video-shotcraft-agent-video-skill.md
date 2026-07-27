@@ -19,6 +19,8 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/video-shotcraft-agent-video-skill/"
+audiobook: /assets/audio/posts/video-shotcraft-agent-video-skill/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트에게 제품 홍보 영상을 맡길 수 있느냐는 질문에, 이번에는 직접 렌더해 본 수치로 답을 드리겠습니다. 결론부터 말씀드리면 1920x1080 해상도에 36.17초 길이인 완성형 홍보 영상이 12코어 맥북에서 22.76초 만에 나왔습니다. 실시간 재생 시간보다 빠릅니다. 그런데 이 글에서 정말 눈여겨볼 대목은 렌더 속도가 아니라, 그 결과를 만들어 내는 스킬이 어떤 구조로 포장되어 있느냐입니다.
