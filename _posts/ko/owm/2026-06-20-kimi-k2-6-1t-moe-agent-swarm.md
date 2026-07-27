@@ -21,21 +21,31 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.com/tech-blog/owm/kimi-k2-6-1t-moe-agent-swarm/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/kimi-k2-6-1t-moe-agent-swarm/"
 reading_time: true
 categories:
   - owm
+audiobook: "https://drive.google.com/file/d/1gKXs9xnaKsiQs7_BPOasiYZL9cnxZeKO/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
 
 ![Kimi K2.6 에이전트 스웜 개념도]({{ '/assets/images/kimi-k2-6-hero.webp' | relative_url }})
 
+![Kimi K2.6: 1T MoE, 32B Active, 300 서브에이전트 스웜 아키텍처 분석 개념을 형상화한 이미지](/assets/images/kimi-k2-6-1t-moe-agent-swarm-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## Kimi K2.6 개요
 
-Moonshot AI가 공개한 Kimi K2.6은 `moonshotai/Kimi-K2.6` 저장소에서 확인할 수 있습니다. 라이선스는 Modified MIT입니다. 총 1조(1T) 파라미터이지만 추론 시 활성화되는 파라미터는 32B에 불과합니다.
+Moonshot AI가 공개한 Kimi K2.6은 [`moonshotai/Kimi-K2.6`](https://huggingface.co/moonshotai/Kimi-K2.6) 저장소에서 확인할 수 있습니다. 라이선스는 Modified MIT입니다. 총 1조(1T) 파라미터이지만 추론 시 활성화되는 파라미터는 32B에 불과합니다.
 
 이 3.2% 활성화율이 실용적 의미를 가지는 이유는 명확합니다. GPU 메모리에 가중치를 올리는 데는 전체 1T가 필요하지만, 토큰 하나를 처리하는 FLOPs는 dense 32B 모델과 비슷합니다. 스토리지 요구사항과 추론 속도가 분리되는 구조입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/kimi-k2-6-1t-moe-agent-swarm/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 아키텍처 상세
 
@@ -95,7 +105,7 @@ BrowseComp 83.2는 웹 탐색 기반 정보 검색 태스크로, 에이전트 �
 
 ### 양자화
 
-Native INT4를 포함해 39개 양자화 변형이 제공됩니다. llama.cpp, Ollama, LM Studio, Jan 등에서 바로 쓸 수 있는 형태입니다.
+Native INT4를 포함해 수십 종의 양자화 변형이 제공됩니다(정확한 개수는 커뮤니티 기여로 계속 늘어나므로 모델 카드에서 확인하세요). llama.cpp, Ollama, LM Studio, Jan 등에서 바로 쓸 수 있는 형태입니다.
 
 ### 요구사항
 
@@ -111,4 +121,16 @@ Transformers 버전 제약(`>=4.57.1,<5`)이 있으니 환경 구성 시 반드�
 
 **300 서브에이전트 스웜과 K8s 멀티테넌트 연결.** Kimi K2.6이 표방하는 300 서브에이전트 동시 운용은 K8s 상에서 에이전트 파드를 배치하는 아키텍처와 자연스럽게 맞닿습니다. 각 서브에이전트를 독립된 워크로드로 스케줄링하고 Kueue로 우선순위를 조율하는 구성을 떠올릴 수 있습니다. 실제로 모델이 이 수준의 에이전트 조율을 어떻게 구현하는지는 레포 코드와 예제를 직접 확인해야 알 수 있지만, 멀티테넌트 에이전트 데모를 구성하려는 팀에게 참고 아키텍처가 됩니다.
 
-39개 양자화 변형과 KTransformers 지원이 있어서, H100 풀 클러스터 없이도 기능 검증 단계에서 RTX 계열 GPU로 시작할 수 있습니다. 다만 Modified MIT 라이선스의 세부 조건은 원문을 직접 확인하고 사용 시나리오에 맞는지 검토해야 합니다.
+폭넓은 양자화 변형과 KTransformers 지원이 있어서, H100 풀 클러스터 없이도 기능 검증 단계에서 RTX 계열 GPU로 시작할 수 있습니다. 다만 Modified MIT 라이선스의 세부 조건은 원문을 직접 확인하고 사용 시나리오에 맞는지 검토해야 합니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/kimi-k2-6-1t-moe-agent-swarm/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 참고 자료
+
+- **모델 카드**: [Hugging Face - moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)
+- **공식 블로그**: [Moonshot AI - Kimi K2.6 발표](https://kimi.com/blog/kimi-k2-6)
+- **vLLM 서빙 가이드**: [vLLM Recipes - moonshotai/Kimi-K2.6](https://recipes.vllm.ai/moonshotai/Kimi-K2.6)
+- **SGLang 서빙 가이드**: [SGLang Cookbook - Kimi-K2.6](https://docs.sglang.io/cookbook/autoregressive/Moonshotai/Kimi-K2.6)
+- **KTransformers 저장소**: [GitHub - kvcache-ai/ktransformers](https://github.com/kvcache-ai/ktransformers)
