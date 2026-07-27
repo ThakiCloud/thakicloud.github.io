@@ -16,7 +16,8 @@
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
-    {% include masthead.html %}
+    {% comment %} Top nav removed: the tech blog is embedded in the thakicloud.com
+       shell, which provides the header, language switcher and theme. {% endcomment %}
 
     <div class="initial-content">
       {{ content }}

@@ -10,17 +10,10 @@
   gtag('config', 'G-78BFTNGGJX');
 </script>
 
-<!-- No-flash theme: set light/dark before first paint (toggle + OS default) -->
+<!-- Dark-only: the blog is embedded in the dark thakicloud.com shell and no
+     longer ships a theme toggle, so pin dark before first paint. -->
 <script>
-  (function () {
-    try {
-      var t = localStorage.getItem('theme');
-      if (t !== 'light' && t !== 'dark') {
-        t = 'dark';   /* dark-first, to match the thakicloud.com corporate site */
-      }
-      document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
-  })();
+  document.documentElement.setAttribute('data-theme', 'dark');
 </script>
 
 <!-- Typefaces: Pretendard (KO/EN), JetBrains Mono (code), IBM Plex Sans Arabic (ar) -->
@@ -37,7 +30,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#0a0a0a">
 
 <!-- Mermaid.js — library only; init + light/dark theme handled in scripts.html -->
 <link rel="stylesheet" href="{{ '/assets/css/mermaid-custom.css' | relative_url }}">
