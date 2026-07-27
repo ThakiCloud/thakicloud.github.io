@@ -28,7 +28,7 @@ repository               : "ThakiCloud/thakicloud.github.io"
 teaser : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo   : "/assets/images/thaki-logo-mark.webp" # masthead diamond mark (left of title)
 masthead_title           : "Thaki Cloud Tech Blog" # masthead-only title (site.title stays full for SEO)
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"

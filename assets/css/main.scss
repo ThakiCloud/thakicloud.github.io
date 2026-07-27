@@ -881,6 +881,12 @@ html[lang="ar"] .toss-rail__rank { }
    variables so LIGHT and DARK both render correctly.
    ========================================================================= */
 
+/* Top breathing room so content clears the embedding site's top nav bar
+   (the blog's own masthead was removed). The listing already gets this from
+   `.layout--posts .page__title { margin-top: 2.5rem }`; mirror it on posts so
+   the article title doesn't sit tight against the top. */
+.layout--single #main { padding-top: 2.5rem; }
+
 /* Post pages: drop the category sidebar (it duplicated the chip filters on the
    Posts page) and centre the article in the same 948px column. */
 .layout--single .sidebar { display: none; }
