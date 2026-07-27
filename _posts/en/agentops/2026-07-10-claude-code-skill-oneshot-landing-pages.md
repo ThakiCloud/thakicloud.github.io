@@ -16,6 +16,7 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-skill-oneshot-landing-pages/"
+published: false
 ---
 
 Recently a developer shared on X that they "built a skill so Claude Code creates premium landing pages in one shot," claiming all three sites in the video were one-shot outputs ([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). The reaction was strong because of how polished the results looked, but the more interesting point for an engineer is elsewhere. Give the same model the same prompt, "build me a landing page," and you get something ordinary; add one skill and an agency-grade page comes out in a single pass. This post takes apart how that skill actually works and validates it from the operating perspective of ThakiCloud, where skills are treated as first-class resources.

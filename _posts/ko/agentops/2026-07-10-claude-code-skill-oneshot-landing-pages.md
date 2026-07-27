@@ -18,6 +18,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-skill-oneshot-landing-pages/"
 audiobook: /assets/audio/posts/claude-code-skill-oneshot-landing-pages/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 최근 X에서 한 개발자가 "Claude Code가 프리미엄 랜딩페이지를 한 번에 만들도록 스킬을 만들었다"며 영상 속 세 개의 사이트를 모두 원샷으로 뽑았다고 공유했습니다([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). 반응이 뜨거웠던 이유는 결과물의 완성도 때문이지만, 엔지니어 입장에서 더 흥미로운 지점은 따로 있습니다. 똑같은 모델에 똑같이 "랜딩페이지 만들어줘"라고 해도 평범한 결과가 나오는데, 스킬 하나를 얹었더니 에이전시급 페이지가 한 번에 나온다는 사실입니다. 이 글은 그 스킬이 실제로 어떤 구조로 동작하는지 분해하고, 스킬을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 검증합니다.
