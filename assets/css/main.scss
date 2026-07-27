@@ -204,6 +204,24 @@ html[data-theme="dark"] {
 /* Toss uses Pretendard as its primary face. */
 body { font-family: var(--font-sans); }
 
+/* Overlay-style scrollbars: thin, semi-transparent thumb over a transparent
+   track so the bar floats over the content instead of sitting in a gutter.
+   Dark-only site, so the thumb is a light translucent white. */
+* {
+  scrollbar-width: thin;                                   /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border: 2px solid transparent;      /* inset so the thumb looks like an overlay pill */
+  border-radius: 8px;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); background-clip: content-box; }
+::-webkit-scrollbar-corner { background: transparent; }
+
 /* Base surfaces ----------------------------------------------------------- */
 html { background-color: var(--bg); }
 body {
