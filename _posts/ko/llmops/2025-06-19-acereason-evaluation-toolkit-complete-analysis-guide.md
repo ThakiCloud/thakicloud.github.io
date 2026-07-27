@@ -41,27 +41,336 @@ AceReason Evaluation Toolkit은 다음 두 가지 주요 평가를 수행합니�
 
 ## 🏗️ 전체 아키텍처 플로우
 
-```mermaid
-graph TB
-    A[사용자 실행 요청] --> B{평가 유형 선택}
-    B -->|AIME| C[run_aime.sh]
-    B -->|LiveCodeBench| D[run_livecodebench.sh]
-    
-    C --> E[generate_aime.sh 실행]
-    D --> F[generate_livecodebench.sh 실행]
-    
-    E --> G[AIME 다중 시드 병렬 추론]
-    F --> H[LiveCodeBench 다중 GPU 분할 추론]
-    
-    G --> I[evaluate_aime.py 채점]
-    H --> J[evaluate_livecodebench.py 채점]
-    
-    I --> K[AIME 결과 집계]
-    J --> L[LiveCodeBench 결과 집계]
-    
-    K --> M[최종 정확도 리포트]
-    L --> M
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-1"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  /* Size to the spec's natural canvas: JS caps max-width at the spec width so a
+     narrow/portrait diagram is never stretched to the article column (blur + giant
+     vertical figures); wide diagrams scale down but keep min-width 760 + scroll. */
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 483, "height": 1022, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 190, "y": 24, "w": 120, "h": 46, "title": "사용자 실행 요청"}, {"id": "B", "x": 181, "y": 148, "w": 138, "h": 52, "title": "평가 유형 선택"}, {"id": "C", "x": 309, "y": 292, "w": 120, "h": 46, "title": "run_aime.sh"}, {"id": "D", "x": 45, "y": 292, "w": 170, "h": 46, "title": "run_livecodebench.sh"}, {"id": "E", "x": 288, "y": 424, "w": 163, "h": 46, "title": "generate_aime.sh 실행"}, {"id": "F", "x": 28, "y": 416, "w": 205, "h": 62, "title": ["generate_livecodebench.sh", "실행"]}, {"id": "G", "x": 298, "y": 556, "w": 142, "h": 46, "title": "AIME 다중 시드 병렬 추론"}, {"id": "H", "x": 24, "y": 556, "w": 212, "h": 46, "title": "LiveCodeBench 다중 GPU 분할 추론"}, {"id": "I", "x": 288, "y": 688, "w": 163, "h": 46, "title": "evaluate_aime.py 채점"}, {"id": "J", "x": 28, "y": 680, "w": 205, "h": 62, "title": ["evaluate_livecodebench.py", "채점"]}, {"id": "K", "x": 309, "y": 820, "w": 120, "h": 46, "title": "AIME 결과 집계"}, {"id": "L", "x": 49, "y": 820, "w": 163, "h": 46, "title": "LiveCodeBench 결과 집계"}, {"id": "M", "x": 190, "y": 944, "w": 120, "h": 46, "title": "최종 정확도 리포트"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [250, 70, 250, 148]}, {"src": "B", "dst": "C", "kind": "data", "label": "AIME", "curve": [[293, 200], [369, 246], [369, 246], [369, 292]], "off": "50%"}, {"src": "B", "dst": "D", "kind": "data", "label": "LiveCodeBench", "curve": [[206, 200], [130, 246], [130, 246], [130, 292]], "off": "50%"}, {"src": "C", "dst": "E", "kind": "data", "line": [369, 338, 369, 424]}, {"src": "D", "dst": "F", "kind": "data", "line": [130, 338, 130, 416]}, {"src": "E", "dst": "G", "kind": "data", "line": [369, 470, 369, 556]}, {"src": "F", "dst": "H", "kind": "data", "line": [130, 478, 130, 556]}, {"src": "G", "dst": "I", "kind": "data", "line": [369, 602, 369, 688]}, {"src": "H", "dst": "J", "kind": "data", "line": [130, 602, 130, 680]}, {"src": "I", "dst": "K", "kind": "data", "line": [369, 734, 369, 820]}, {"src": "J", "dst": "L", "kind": "data", "line": [130, 742, 130, 820]}, {"src": "K", "dst": "M", "kind": "data", "curve": [[369, 866], [369, 905], [369, 905], [294, 944]]}, {"src": "L", "dst": "M", "kind": "data", "curve": [[130, 866], [130, 905], [130, 905], [205, 944]]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-1')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-1';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        // Never upscale past the spec's natural width; keep 760px readability
+        // floor (with horizontal scroll) only for diagrams that are actually wide.
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 ---
 
@@ -96,30 +405,336 @@ fi
 
 #### 1.2 병렬 추론 실행
 
-```mermaid
-graph LR
-    A[generate_aime.sh] --> B[GPU 수 설정: 8개]
-    B --> C[데이터 분할: 30문제 전체]
-    C --> D[시드별 병렬 실행]
-    
-    D --> E[GPU 0: seed+0]
-    D --> F[GPU 1: seed+1]
-    D --> G[GPU 2: seed+2]
-    D --> H[GPU 3: seed+3]
-    D --> I[GPU 4: seed+4]
-    D --> J[GPU 5: seed+5]
-    D --> K[GPU 6: seed+6]
-    D --> L[GPU 7: seed+7]
-    
-    E --> M[VLLM 추론 엔진]
-    F --> M
-    G --> M
-    H --> M
-    I --> M
-    J --> M
-    K --> M
-    L --> M
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-2"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  /* Size to the spec's natural canvas: JS caps max-width at the spec width so a
+     narrow/portrait diagram is never stretched to the article column (blur + giant
+     vertical figures); wide diagrams scale down but keep min-width 760 + scroll. */
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 1204, "height": 809, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 24, "y": 378, "w": 142, "h": 46, "title": "generate_aime.sh"}, {"id": "B", "x": 244, "y": 378, "w": 120, "h": 46, "title": "GPU 수 설정: 8개"}, {"id": "C", "x": 442, "y": 378, "w": 135, "h": 46, "title": "데이터 분할: 30문제 전체"}, {"id": "D", "x": 655, "y": 378, "w": 120, "h": 46, "title": "시드별 병렬 실행"}, {"id": "E", "x": 853, "y": 731, "w": 121, "h": 46, "title": "GPU 0: seed+0"}, {"id": "F", "x": 853, "y": 630, "w": 121, "h": 46, "title": "GPU 1: seed+1"}, {"id": "G", "x": 853, "y": 529, "w": 121, "h": 46, "title": "GPU 2: seed+2"}, {"id": "H", "x": 853, "y": 428, "w": 121, "h": 46, "title": "GPU 3: seed+3"}, {"id": "I", "x": 853, "y": 327, "w": 121, "h": 46, "title": "GPU 4: seed+4"}, {"id": "J", "x": 853, "y": 226, "w": 121, "h": 46, "title": "GPU 5: seed+5"}, {"id": "K", "x": 853, "y": 125, "w": 121, "h": 46, "title": "GPU 6: seed+6"}, {"id": "L", "x": 853, "y": 24, "w": 121, "h": 46, "title": "GPU 7: seed+7"}, {"id": "M", "x": 1052, "y": 378, "w": 120, "h": 46, "title": "VLLM 추론 엔진"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [166, 401, 244, 401]}, {"src": "B", "dst": "C", "kind": "data", "line": [364, 401, 442, 401]}, {"src": "C", "dst": "D", "kind": "data", "line": [577, 401, 655, 401]}, {"src": "D", "dst": "E", "kind": "data", "curve": [[721, 424], [814, 754], [814, 754], [853, 754]]}, {"src": "D", "dst": "F", "kind": "data", "curve": [[724, 424], [814, 653], [814, 653], [853, 653]]}, {"src": "D", "dst": "G", "kind": "data", "curve": [[730, 424], [814, 552], [814, 552], [853, 552]]}, {"src": "D", "dst": "H", "kind": "data", "curve": [[760, 424], [814, 451], [814, 451], [853, 451]]}, {"src": "D", "dst": "I", "kind": "data", "curve": [[760, 378], [814, 350], [814, 350], [853, 350]]}, {"src": "D", "dst": "J", "kind": "data", "curve": [[730, 378], [814, 249], [814, 249], [853, 249]]}, {"src": "D", "dst": "K", "kind": "data", "curve": [[724, 378], [814, 148], [814, 148], [853, 148]]}, {"src": "D", "dst": "L", "kind": "data", "curve": [[721, 378], [814, 47], [814, 47], [853, 47]]}, {"src": "E", "dst": "M", "kind": "data", "curve": [[974, 754], [1013, 754], [1013, 754], [1106, 424]]}, {"src": "F", "dst": "M", "kind": "data", "curve": [[974, 653], [1013, 653], [1013, 653], [1103, 424]]}, {"src": "G", "dst": "M", "kind": "data", "curve": [[974, 552], [1013, 552], [1013, 552], [1097, 424]]}, {"src": "H", "dst": "M", "kind": "data", "curve": [[974, 451], [1013, 451], [1013, 451], [1067, 424]]}, {"src": "I", "dst": "M", "kind": "data", "curve": [[974, 350], [1013, 350], [1013, 350], [1067, 378]]}, {"src": "J", "dst": "M", "kind": "data", "curve": [[974, 249], [1013, 249], [1013, 249], [1097, 378]]}, {"src": "K", "dst": "M", "kind": "data", "curve": [[974, 148], [1013, 148], [1013, 148], [1103, 378]]}, {"src": "L", "dst": "M", "kind": "data", "curve": [[974, 47], [1013, 47], [1013, 47], [1106, 378]]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-2')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-2';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        // Never upscale past the spec's natural width; keep 760px readability
+        // floor (with horizontal scroll) only for diagrams that are actually wide.
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 **추론 파라미터:**
 
@@ -1284,25 +1899,336 @@ def has_code(response):
 
 #### 2.2 테스트 케이스 실행 파이프라인
 
-```mermaid
-graph TD
-    A[생성된 코드] --> B[코드 추출 및 정리]
-    B --> C[스타터 코드와 병합]
-    C --> D[안전성 검사]
-    D --> E{안전한 코드인가}
-    E -->|위험| F[실행 거부]
-    E -->|안전| G[샌드박스 환경 구성]
-    G --> H[테스트 케이스 압축 해제]
-    H --> I[각 테스트 케이스 실행]
-    I --> J{시간 제한 내 완료}
-    J -->|시간 초과| K[타임아웃 처리]
-    J -->|정상 완료| L[출력 결과 비교]
-    L --> M{모든 테스트 통과}
-    M -->|통과| N[정답 처리]
-    M -->|실패| O[오답 처리]
-    K --> O
-    F --> O
-```
+{% raw %}
+<!--
+  animated-architecture-diagram — self-contained D3 embed template.
+  HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
+  data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
+  along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
+  light/dark aware. The renderer injects window.__ARCH_SPEC__ at the marker.
+  Format (D3 machinery + CSS) is owned by this committed template; the model
+  only authors the JSON spec (content). See references/spec-schema.md.
+-->
+<div class="d3-arch" data-arch-root id="kitcompleteanalysisguide-3"></div>
+<style>
+  /* ---- Theme tokens (standalone; light default + dark override) ---- */
+  .d3-arch {
+    --page-bg: #ffffff;
+    --surface-bg: #f7f8fa;
+    --text-color: #1a1d21;
+    --muted-color: #6b7280;
+    --border-color: #d5d9e0;
+    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) {
+    .d3-arch {
+      --page-bg: #0f1115;
+      --surface-bg: #171a21;
+      --text-color: #e6e8eb;
+      --muted-color: #9aa3af;
+      --border-color: #2a2f3a;
+      --primary-color: hsl(217 91% 62%);
+    }
+  }
+  .d3-arch[data-theme="light"] { --page-bg:#fff; --surface-bg:#f7f8fa; --text-color:#1a1d21; --muted-color:#6b7280; --border-color:#d5d9e0; --primary-color:hsl(217 91% 55%); }
+  .d3-arch[data-theme="dark"]  { --page-bg:#0f1115; --surface-bg:#171a21; --text-color:#e6e8eb; --muted-color:#9aa3af; --border-color:#2a2f3a; --primary-color:hsl(217 91% 62%); }
+
+  .d3-arch .diagram-scroll { overflow-x: auto; }
+  /* Size to the spec's natural canvas: JS caps max-width at the spec width so a
+     narrow/portrait diagram is never stretched to the article column (blur + giant
+     vertical figures); wide diagrams scale down but keep min-width 760 + scroll. */
+  .d3-arch svg { display: block; width: 100%; max-width: 100%; height: auto; font-family: inherit; }
+
+  /* Group boxes */
+  .d3-arch .group rect { fill: none; stroke: var(--border-color); stroke-dasharray: 3 3; rx: 12px; }
+  .d3-arch .group text { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-color); }
+
+  /* Nodes */
+  .d3-arch .node rect { fill: var(--surface-bg); stroke: var(--border-color); stroke-width: 1; transition: stroke 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .node .node-title { font-size: 12px; font-weight: 600; fill: var(--text-color); }
+  .d3-arch .node .node-sub { font-size: 9.5px; fill: var(--muted-color); }
+  .d3-arch .node { cursor: default; transition: opacity 0.15s ease; }
+
+  /* Edges */
+  .d3-arch .edge { transition: opacity 0.15s ease; }
+  .d3-arch .edge path.main { fill: none; stroke-width: 1.5; }
+  .d3-arch .edge.data path.main { stroke: var(--primary-color); }
+  .d3-arch .edge.event path.main { stroke: var(--muted-color); stroke-dasharray: 5 4; }
+  .d3-arch .edge text { font-size: 9.5px; fill: var(--muted-color); paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; stroke-linejoin: round; }
+
+  /* Hover highlighting */
+  .d3-arch.hovering .edge:not(.hl) { opacity: 0.12; }
+  .d3-arch.hovering .node:not(.hl):not(.nb) { opacity: 0.25; }
+  .d3-arch .node.hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+
+  /* Flow animation */
+  .d3-arch .flow-dot.data { fill: var(--primary-color); stroke: var(--page-bg); stroke-width: 1.5; }
+  .d3-arch .flow-dot.event { fill: var(--page-bg); stroke: var(--muted-color); stroke-width: 1.5; }
+  .d3-arch .node.anim-hl rect { stroke: var(--primary-color); stroke-width: 1.5; }
+  .d3-arch .replay-btn { font: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-bg); color: var(--text-color); cursor: pointer; transition: border-color 0.15s ease, opacity 0.15s ease; }
+  .d3-arch .replay-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+  .d3-arch .replay-btn:disabled { opacity: 0.45; cursor: default; }
+  .d3-arch .replay-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 1px; }
+
+  /* Legend */
+  .d3-arch .legend { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 10px; }
+  .d3-arch .legend-title { font-size: 12px; font-weight: 700; color: var(--text-color); }
+  .d3-arch .legend .items { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .d3-arch .legend .item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; color: var(--text-color); }
+  .d3-arch .legend .swatch { width: 22px; height: 0; }
+  .d3-arch .legend .swatch.data-line { border-top: 2.5px solid var(--primary-color); }
+  .d3-arch .legend .swatch.event-line { border-top: 2.5px dashed var(--muted-color); }
+  .d3-arch .legend .hint { font-size: 11px; font-style: italic; color: var(--muted-color); }
+</style>
+<script>
+  (() => {
+    const SPEC = ({"title": "", "ariaLabel": "", "width": 551, "height": 1526, "legendTitle": "Legend", "hint": "Hover a node to trace its connections.", "groups": [], "nodes": [{"id": "A", "x": 220, "y": 24, "w": 120, "h": 46, "title": "생성된 코드"}, {"id": "B", "x": 220, "y": 148, "w": 120, "h": 46, "title": "코드 추출 및 정리"}, {"id": "C", "x": 220, "y": 272, "w": 120, "h": 46, "title": "스타터 코드와 병합"}, {"id": "D", "x": 220, "y": 396, "w": 120, "h": 46, "title": "안전성 검사"}, {"id": "E", "x": 211, "y": 520, "w": 138, "h": 52, "title": "안전한 코드인가"}, {"id": "F", "x": 399, "y": 1307, "w": 120, "h": 46, "title": "실행 거부"}, {"id": "G", "x": 132, "y": 664, "w": 120, "h": 46, "title": "샌드박스 환경 구성"}, {"id": "H", "x": 132, "y": 788, "w": 121, "h": 46, "title": "테스트 케이스 압축 해제"}, {"id": "I", "x": 132, "y": 912, "w": 120, "h": 46, "title": "각 테스트 케이스 실행"}, {"id": "J", "x": 123, "y": 1036, "w": 138, "h": 52, "title": "시간 제한 내 완료"}, {"id": "K", "x": 224, "y": 1307, "w": 120, "h": 46, "title": "타임아웃 처리"}, {"id": "L", "x": 40, "y": 1180, "w": 120, "h": 46, "title": "출력 결과 비교"}, {"id": "M", "x": 31, "y": 1304, "w": 138, "h": 52, "title": "모든 테스트 통과"}, {"id": "N", "x": 24, "y": 1448, "w": 120, "h": 46, "title": "정답 처리"}, {"id": "O", "x": 224, "y": 1448, "w": 120, "h": 46, "title": "오답 처리"}], "edges": [{"src": "A", "dst": "B", "kind": "data", "line": [280, 70, 280, 148]}, {"src": "B", "dst": "C", "kind": "data", "line": [280, 194, 280, 272]}, {"src": "C", "dst": "D", "kind": "data", "line": [280, 318, 280, 396]}, {"src": "D", "dst": "E", "kind": "data", "line": [280, 442, 280, 520]}, {"src": "E", "dst": "F", "kind": "data", "label": "위험", "curve": [[345, 572], [459, 811], [459, 1062], [459, 1307]], "off": "50%"}, {"src": "E", "dst": "G", "kind": "data", "label": "안전", "curve": [[248, 572], [192, 618], [192, 618], [192, 664]], "off": "50%"}, {"src": "G", "dst": "H", "kind": "data", "line": [192, 710, 192, 788]}, {"src": "H", "dst": "I", "kind": "data", "line": [192, 834, 192, 912]}, {"src": "I", "dst": "J", "kind": "data", "line": [192, 958, 192, 1036]}, {"src": "J", "dst": "K", "kind": "data", "label": "시간 초과", "curve": [[226, 1088], [284, 1134], [284, 1265], [284, 1307]], "off": "50%"}, {"src": "J", "dst": "L", "kind": "data", "label": "정상 완료", "curve": [[159, 1088], [100, 1134], [100, 1134], [100, 1180]], "off": "50%"}, {"src": "L", "dst": "M", "kind": "data", "line": [100, 1226, 100, 1304]}, {"src": "M", "dst": "N", "kind": "data", "label": "통과", "line": [94, 1356, 84, 1448], "lx": 84, "ly": 1398}, {"src": "M", "dst": "O", "kind": "data", "label": "실패", "curve": [[129, 1356], [179, 1402], [179, 1402], [249, 1448]], "off": "50%"}, {"src": "K", "dst": "O", "kind": "data", "line": [284, 1353, 284, 1448]}, {"src": "F", "dst": "O", "kind": "data", "curve": [[459, 1353], [459, 1402], [459, 1402], [343, 1448]]}]});
+    const ensureD3 = (cb) => {
+      if (window.d3 && typeof window.d3.select === 'function') return cb();
+      let s = document.getElementById('d3-cdn-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'd3-cdn-script';
+        s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+        document.head.appendChild(s);
+      }
+      const onReady = () => { if (window.d3 && typeof window.d3.select === 'function') cb(); };
+      s.addEventListener('load', onReady, { once: true });
+      if (window.d3) onReady();
+    };
+
+    const bootstrap = () => {
+      const container = document.getElementById('kitcompleteanalysisguide-3')
+        || document.querySelector('.d3-arch[data-arch-root]:not([data-mounted])');
+      if (!container || (container.dataset && container.dataset.mounted === 'true')) return;
+      if (container.dataset) container.dataset.mounted = 'true';
+
+      try {
+        const uid = 'kitcompleteanalysisguide-3';
+        const NODES = SPEC.nodes || [];
+        const EDGES = SPEC.edges || [];
+        const GROUPS = SPEC.groups || [];
+        const HOP = SPEC.hop || 800;
+        const legendCfg = SPEC.legend || {};
+        const dataLabel = legendCfg.data || 'Data path';
+        const eventLabel = legendCfg.event || 'Event side-channel';
+
+        const byId = Object.fromEntries(NODES.map((n) => [n.id, n]));
+        const cx = (n) => n.x + n.w / 2;
+        const asTitle = (t) => Array.isArray(t) ? t : [t];
+
+        // Canvas: explicit, else auto from node/group extents + padding
+        let W = SPEC.width, H = SPEC.height;
+        if (!W || !H) {
+          const xs = [], ys = [];
+          NODES.forEach((n) => { xs.push(n.x + n.w); ys.push(n.y + n.h); });
+          GROUPS.forEach((g) => { xs.push(g.x + g.w); ys.push(g.y + g.h); });
+          W = W || Math.max(760, Math.ceil(Math.max(...xs, 0) + 24));
+          H = H || Math.ceil(Math.max(...ys, 0) + 20);
+        }
+
+        // Tooltip
+        container.style.position = container.style.position || 'relative';
+        const tip = document.createElement('div');
+        Object.assign(tip.style, {
+          position: 'absolute', top: '0px', left: '0px',
+          transform: 'translate(-9999px, -9999px)', pointerEvents: 'none',
+          padding: '8px 10px', borderRadius: '8px', fontSize: '12px', lineHeight: '1.4',
+          border: '1px solid var(--border-color)', background: 'var(--surface-bg)',
+          color: 'var(--text-color)', boxShadow: '0 4px 24px rgba(0,0,0,.18)',
+          opacity: '0', transition: 'opacity .12s ease', maxWidth: '260px', zIndex: '3'
+        });
+        const tipInner = document.createElement('div');
+        tip.appendChild(tipInner);
+
+        const scroll = document.createElement('div');
+        scroll.className = 'diagram-scroll';
+        container.appendChild(scroll);
+
+        const svg = d3.select(scroll).append('svg')
+          .attr('viewBox', `0 0 ${W} ${H}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('role', 'img')
+          .attr('aria-label', SPEC.ariaLabel || SPEC.title || 'Architecture diagram');
+        // Never upscale past the spec's natural width; keep 760px readability
+        // floor (with horizontal scroll) only for diagrams that are actually wide.
+        svg.style('max-width', W + 'px').style('min-width', Math.min(W, 760) + 'px').style('margin', '0 auto');
+
+        const defs = svg.append('defs');
+        const mkMarker = (id, color) => {
+          defs.append('marker')
+            .attr('id', id).attr('viewBox', '0 0 10 10')
+            .attr('refX', 9).attr('refY', 5)
+            .attr('markerWidth', 6.5).attr('markerHeight', 6.5)
+            .attr('orient', 'auto-start-reverse')
+            .append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').style('fill', color);
+        };
+        mkMarker(`${uid}-arrow-data`, 'var(--primary-color)');
+        mkMarker(`${uid}-arrow-event`, 'var(--muted-color)');
+
+        // Groups
+        const groups = svg.append('g');
+        GROUPS.forEach((gr) => {
+          const g = groups.append('g').attr('class', 'group');
+          g.append('rect').attr('x', gr.x).attr('y', gr.y).attr('width', gr.w).attr('height', gr.h).attr('rx', 12);
+          if (gr.label) g.append('text').attr('x', gr.lx != null ? gr.lx : gr.x + 12).attr('y', gr.ly != null ? gr.ly : gr.y + 18).text(gr.label);
+        });
+
+        // Edges (under nodes)
+        const edgeLayer = svg.append('g');
+        const curvePath = (p) => `M ${p[0][0]} ${p[0][1]} C ${p[1][0]} ${p[1][1]}, ${p[2][0]} ${p[2][1]}, ${p[3][0]} ${p[3][1]}`;
+        EDGES.forEach((e, i) => {
+          const kind = e.kind === 'event' ? 'event' : 'data';
+          const g = edgeLayer.append('g').attr('class', `edge ${kind}`).attr('data-src', e.src).attr('data-dst', e.dst);
+          const marker = `url(#${uid}-arrow-${kind})`;
+          if (e.line) {
+            const [x1, y1, x2, y2] = e.line;
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', `M ${x1} ${y1} L ${x2} ${y2}`).attr('marker-end', marker).node();
+            if (e.label) g.append('text').attr('x', e.lx != null ? e.lx : (x1 + x2) / 2).attr('y', e.ly != null ? e.ly : (y1 + y2) / 2 - 6).attr('text-anchor', e.anchor || 'middle').text(e.label);
+          } else if (e.curve) {
+            e.pathEl = g.append('path').attr('class', 'main').attr('d', curvePath(e.curve)).attr('marker-end', marker).node();
+            if (e.label && e.off) {
+              const p = e.curve;
+              const lp = p[3][0] < p[0][0] ? [p[3], p[2], p[1], p[0]] : p;
+              const lpId = `${uid}-lbl-${i}`;
+              g.append('path').attr('id', lpId).attr('d', curvePath(lp)).attr('fill', 'none').attr('stroke', 'none');
+              g.append('text').attr('dy', -5).append('textPath').attr('href', `#${lpId}`).attr('startOffset', e.off).attr('text-anchor', 'middle').text(e.label);
+            } else if (e.label) {
+              g.append('text').attr('x', e.lx).attr('y', e.ly).attr('text-anchor', e.anchor || 'start').text(e.label);
+            }
+          }
+        });
+
+        // Nodes (over edges)
+        const nodeLayer = svg.append('g');
+        NODES.forEach((n) => {
+          const g = nodeLayer.append('g').attr('class', 'node').attr('data-id', n.id);
+          g.append('rect').attr('x', n.x).attr('y', n.y).attr('width', n.w).attr('height', n.h).attr('rx', 9);
+          const title = asTitle(n.title);
+          const lines = title.length;
+          const baseY = n.y + n.h / 2 - (lines - 1) * 7 - (n.sub ? 5 : -4);
+          title.forEach((t, li) => {
+            g.append('text').attr('class', 'node-title').attr('x', cx(n)).attr('y', baseY + li * 14).attr('text-anchor', 'middle').text(t);
+          });
+          if (n.sub) g.append('text').attr('class', 'node-sub').attr('x', cx(n)).attr('y', baseY + (lines - 1) * 14 + 15).attr('text-anchor', 'middle').text(n.sub);
+        });
+
+        // Hover highlighting
+        const edgeSel = svg.selectAll('.edge');
+        const nodeSel = svg.selectAll('.node');
+        nodeSel
+          .on('mouseenter', function () {
+            const id = this.getAttribute('data-id');
+            const n = byId[id];
+            container.classList.add('hovering');
+            const nb = new Set([id]);
+            edgeSel.classed('hl', function () {
+              const hit = this.getAttribute('data-src') === id || this.getAttribute('data-dst') === id;
+              if (hit) { nb.add(this.getAttribute('data-src')); nb.add(this.getAttribute('data-dst')); }
+              return hit;
+            });
+            nodeSel.classed('hl', function () { return this.getAttribute('data-id') === id; })
+                   .classed('nb', function () { return nb.has(this.getAttribute('data-id')); });
+            if (n && n.desc) { tipInner.innerHTML = `<strong>${asTitle(n.title).join('')}</strong><br>${n.desc}`; tip.style.opacity = '1'; }
+          })
+          .on('mousemove', function (event) {
+            const [mx, my] = d3.pointer(event, container);
+            const flip = mx > container.clientWidth - 280;
+            tip.style.transform = `translate(${flip ? mx - 270 : mx + 14}px, ${my + 14}px)`;
+          })
+          .on('mouseleave', function () {
+            container.classList.remove('hovering');
+            edgeSel.classed('hl', false);
+            nodeSel.classed('hl', false).classed('nb', false);
+            tip.style.opacity = '0';
+            tip.style.transform = 'translate(-9999px, -9999px)';
+          });
+
+        // Flow animation sequence: explicit SEQ, else auto forward-cascade of data edges
+        const resolveEdge = (s) => {
+          if (typeof s.e === 'number') return s.e;
+          if (s.from && s.to) return EDGES.findIndex((e) => e.src === s.from && e.dst === s.to);
+          return -1;
+        };
+        let SEQ = (SPEC.seq || []).map((s) => ({ e: resolveEdge(s), t0: s.t0 })).filter((s) => s.e >= 0);
+        if (!SEQ.length) {
+          let t = 0;
+          EDGES.forEach((e, i) => { if ((e.kind || 'data') === 'data') { SEQ.push({ e: i, t0: t }); t += HOP; } });
+        }
+        const TOTAL = SPEC.total || (Math.max(0, ...SEQ.map((s) => s.t0)) + HOP + 800);
+
+        let playing = false, replayBtn = null;
+        const pulseNode = (id) => {
+          const sel = nodeSel.filter(function () { return this.getAttribute('data-id') === id; });
+          sel.classed('anim-hl', true);
+          setTimeout(() => sel.classed('anim-hl', false), 550);
+        };
+        const play = () => {
+          if (playing) return;
+          playing = true;
+          if (replayBtn) replayBtn.disabled = true;
+          const layer = svg.append('g');
+          const steps = SEQ.map((s) => {
+            const edge = EDGES[s.e];
+            return { ...s, edge, len: edge.pathEl.getTotalLength(), dot: null, arrived: false };
+          });
+          const start = performance.now();
+          const frame = (now) => {
+            const t = now - start;
+            steps.forEach((s) => {
+              if (t < s.t0) return;
+              const f = Math.min(1, (t - s.t0) / HOP);
+              if (f >= 1) { if (s.dot) { s.dot.remove(); s.dot = null; } if (!s.arrived) { s.arrived = true; pulseNode(s.edge.dst); } return; }
+              if (!s.dot) s.dot = layer.append('circle').attr('class', `flow-dot ${s.edge.kind || 'data'}`).attr('r', (s.edge.kind === 'event') ? 4 : 5);
+              const p = s.edge.pathEl.getPointAtLength(d3.easeCubicInOut(f) * s.len);
+              s.dot.attr('cx', p.x).attr('cy', p.y);
+            });
+            if (t < TOTAL) requestAnimationFrame(frame);
+            else { layer.remove(); playing = false; if (replayBtn) replayBtn.disabled = false; }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        // Legend
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = `
+          <div class="legend-title">${SPEC.legendTitle || 'Legend'}</div>
+          <div class="items">
+            <span class="item"><span class="swatch data-line"></span><span>${dataLabel}</span></span>
+            <span class="item"><span class="swatch event-line"></span><span>${eventLabel}</span></span>
+            <button class="replay-btn" type="button" aria-label="Replay the flow animation">&#9654; Replay</button>
+            <span class="hint">${SPEC.hint || 'Hover a component to trace its connections.'}</span>
+          </div>`;
+        container.appendChild(legend);
+        container.appendChild(tip);
+        replayBtn = legend.querySelector('.replay-btn');
+        replayBtn.addEventListener('click', play);
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && window.IntersectionObserver) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { io.disconnect(); play(); } });
+          }, { threshold: 0.5 });
+          io.observe(container);
+        }
+      } catch (err) {
+        const pre = document.createElement('pre');
+        pre.style.color = '#c0392b';
+        pre.style.fontSize = '12px';
+        pre.textContent = 'Failed to render architecture diagram: ' + (err && err.message ? err.message : err);
+        container.appendChild(pre);
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => ensureD3(bootstrap), { once: true });
+    else ensureD3(bootstrap);
+  })();
+</script>
+{% endraw %}
 
 #### 2.3 안전성 검증 (code_verifier.py)
 

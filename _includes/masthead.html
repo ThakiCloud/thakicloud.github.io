@@ -37,11 +37,33 @@
                   <svg class="tbi" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></svg>
                 </a>
                 {%- assign cur_lang = page.lang | default: 'ko' -%}
+                {%- comment %}
+                  Language switcher: resolve the SAME post's URL in each language.
+                  Translation key = page.url minus the /ko//en//ar/ prefix (same logic as
+                  hreflang-alternates.html: same category + slug across languages). Only fall
+                  back to the language root (/ko/ /en/ /ar/) when no translation exists.
+                {% endcomment -%}
+                {%- assign _key = page.url | remove_first: '/ko/' | remove_first: '/en/' | remove_first: '/ar/' -%}
+                {%- assign _tr_ko = '' -%}{%- assign _tr_en = '' -%}{%- assign _tr_ar = '' -%}
+                {%- if page.url contains '/ko/' or page.url contains '/en/' or page.url contains '/ar/' -%}
+                  {%- for p in site.posts -%}
+                    {%- assign _k2 = p.url | remove_first: '/ko/' | remove_first: '/en/' | remove_first: '/ar/' -%}
+                    {%- if _k2 == _key -%}
+                      {%- if p.lang == 'ko' -%}{%- assign _tr_ko = p.url -%}{%- endif -%}
+                      {%- if p.lang == 'en' -%}{%- assign _tr_en = p.url -%}{%- endif -%}
+                      {%- if p.lang == 'ar' -%}{%- assign _tr_ar = p.url -%}{%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
                 <ul class="dropdown-menu">
                   {%- for child in link.children -%}
-                    {%- comment %} Mark the current page's language as selected (child urls are /ko/ /en/ /ar/). {% endcomment -%}
+                    {%- comment %} child urls are /ko/ /en/ /ar/; child_lang = ko|en|ar. {% endcomment -%}
                     {%- assign child_lang = child.url | remove: '/' -%}
-                    <li><a href="{{ child.url | relative_url }}"{% if child_lang == cur_lang %} class="is-active" aria-current="page"{% endif %}{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a></li>
+                    {%- assign _target = child.url -%}
+                    {%- if child_lang == 'ko' and _tr_ko != '' -%}{%- assign _target = _tr_ko -%}{%- endif -%}
+                    {%- if child_lang == 'en' and _tr_en != '' -%}{%- assign _target = _tr_en -%}{%- endif -%}
+                    {%- if child_lang == 'ar' and _tr_ar != '' -%}{%- assign _target = _tr_ar -%}{%- endif -%}
+                    <li><a href="{{ _target | relative_url }}"{% if child_lang == cur_lang %} class="is-active" aria-current="page"{% endif %}{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a></li>
                   {%- endfor -%}
                 </ul>
               {% else %}

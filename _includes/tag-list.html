@@ -5,6 +5,12 @@
   page — and the previous markup piped the whole URL through `slugify`
   (`path_type | append: tag_word | slugify`), which mangled "/en/?tags=vllm"
   into dead paths like "/en-tags-vllm". Plain text removes the broken links.
+
+  Tags are looked up in site.data.tag_labels so a tag written in one
+  language's frontmatter (e.g. Korean tags on an EN/AR post) still displays
+  in the reading post's own language. Tags with no entry fall back to the
+  raw tag_word unchanged — see _data/tag_labels.yml for the mapping and its
+  rationale.
 {% endcomment %}
 {% if page.tags[0] %}
   {% assign tags_sorted = page.tags | sort_natural %}
@@ -14,7 +20,8 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[_loc].tags_label | default: "Tags:" }} </strong>
     <span itemprop="keywords">
     {% for tag_word in tags_sorted %}
-      <span class="page__taxonomy-item p-category">{{ tag_word }}</span>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      {%- assign _tl = site.data.tag_labels[tag_word] -%}
+      <span class="page__taxonomy-item p-category">{%- if _tl -%}{{ _tl[page.lang] | default: tag_word }}{%- else -%}{{ tag_word }}{%- endif -%}</span>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>

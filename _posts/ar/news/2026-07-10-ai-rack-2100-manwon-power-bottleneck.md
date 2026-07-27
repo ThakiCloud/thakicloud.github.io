@@ -21,6 +21,7 @@ tags:
   - cost-routing
 categories:
   - news
+published: false
 ---
 
 ![رسم توضيحي لمفهوم اختناق الطاقة يضيق نحو رف الخادم، مع الطبقة البرمجية فوقه]({{ '/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp' | relative_url }})

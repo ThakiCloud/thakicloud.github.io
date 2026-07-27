@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.303
+Look — spin the character in the cockpit and it renders front, side, back, all of it.
+
+00:00:05.303 --> 00:00:08.721
+But every single one of those frames is an inference call.
+
+00:00:08.721 --> 00:00:12.138
+The more you spin, the more smoothly your bill grows too.
+
+00:00:12.138 --> 00:00:15.674
+Wait — is the meter spinning faster than the propeller right now?
+
+00:00:15.674 --> 00:00:18.856
+And crucially, this cockpit only flies on someone else's engine.
+
+00:00:18.856 --> 00:00:21.213
+So just plug the engine into our own rack?
+
+00:00:21.213 --> 00:00:24.041
+Now what's spinning is our GPU, not the meter.
+

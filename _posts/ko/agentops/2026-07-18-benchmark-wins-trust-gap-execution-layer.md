@@ -17,11 +17,17 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/benchmark-wins-trust-gap-execution-layer/"
+audiobook: "https://drive.google.com/file/d/1cwH-1XNXm0a_ZambJZqwji-d90Dwbvzb/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 리더보드 화면을 캡처하는 순간이 있습니다. 어느 신생 모델이 익숙한 1등의 이름을 밀어내고 맨 위에 올라선 장면입니다. 2026년 7월, 중국 문샷AI의 오픈웨이트 모델 키미 K3가 바로 그 캡처를 만들어냈습니다. AI 평가 플랫폼 아레나의 프런트엔드 코딩 리더보드에서 앤스로픽 클로드 페이블 5를 제치고 1위에 올랐고, 매개변수 2조8000억개로 지금까지 공개된 오픈웨이트 모델 중 가장 큽니다. API 가격도 절반 이하입니다. 디지털투데이가 전한 실리콘밸리의 반응은 그런데 환호가 아니라 한 문장이었습니다. "벤치마크는 이겼는데 글쎄."
 
 이 냉담함이 오늘의 진짜 뉴스입니다. 그리고 같은 주에 정반대 방향의 장면이 하나 더 겹쳤습니다.
+
+![리더보드 1위가 아무도 안 사는 이유: 벤치마크가 사주지 못하는 것 개념을 형상화한 이미지](/assets/images/benchmark-wins-trust-gap-execution-layer-hero.png)
+*이번 주 뉴스의 핵심 흐름을 형상화했습니다.*
 
 ## 정상에서 멈칫한 두 장면
 
@@ -30,6 +36,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/benchmark-wins-trus
 뉴스로드는 지연의 배경으로 기술 난이도만 지목하지 않았습니다. 구글 클라우드와 딥마인드, 안드로이드 등 여러 조직이 각자 별도의 AI 코딩 도구를 만들며 자원을 중복 투입하는 구조, 그리고 중요한 코드는 사람이 직접 작성해야 한다는 내부 엔지니어링 문화가 속도를 늦췄다는 지적입니다. 성능의 최전선에서조차 사람이 어디까지 개입하고 무엇을 자동화에 맡길지가 아직 정리되지 않았다는 뜻입니다.
 
 한쪽에서는 신생 오픈웨이트 모델이 리더보드 정상을 찍었는데 시장은 지갑을 열지 않고, 다른 한쪽에서는 프런티어 선두조차 다음 버전을 세 번이나 미룹니다. 두 장면은 모순처럼 보이지만 같은 이야기를 합니다. 성능 곡선의 정점에서, 벤치마크 숫자와 실제 배포 사이의 간극이 그 어느 때보다 크게 벌어졌다는 이야기입니다.
+
+<!-- nlm-visual -->
+![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/benchmark-wins-trust-gap-execution-layer/nlm-infographic-1.png)
+*NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 값이 내려갈수록 질문이 바뀝니다
 
@@ -394,6 +404,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/benchmark-wins-trus
 ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-Native Cloud입니다. 스킬과 툴, 정책, 감사 로그를 일급 리소스로 두어, 뤼튼 대표가 겪은 재확인의 피로와 딜로이트가 권고한 휴먼 인 더 루프를 L0에서 L3까지의 자율도 거버넌스로 설계합니다. 사람이 어디까지 손을 떼도 되는지를 감으로 정하지 않고 정책과 게이트로 정합니다. 지란지교소프트가 판 감사 기능은 Paxis에서 모든 에이전트 실행에 붙는 기본값이고, 정책 게이트와 격리 샌드박스는 반값 오픈웨이트 모델을 도입하면서도 기밀이 새지 않게 막는 틀이 됩니다. 가성비로 넘어간 모델 경쟁은 작업마다 다른 모델을 붙이는 CostRouter로 흡수하고, 소버린 AI가 부르는 주권의 요구는 온프렘 쿠버네티스 기반 ai-platform이 받습니다.
 
 리더보드 1위가 안 팔리는 이유를 다시 뒤집으면 답이 됩니다. 기업이 사는 것은 정점의 점수가 아니라 통제된 실행입니다. 벤치마크가 사주지 못하는 그 신뢰를, 실행 계층이 대신 만듭니다.
+
+<!-- nlm-visual -->
+![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/benchmark-wins-trust-gap-execution-layer/nlm-infographic-2.png)
+*NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료
 
