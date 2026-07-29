@@ -16,6 +16,9 @@ tags:
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/kv-cache-tiering-pd-disagg-cost/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/kv-cache-tiering-pd-disagg-cost/"
 ---
 
 프리필과 디코드를 분리해 서빙하는 팀, 그리고 LMCache 같은 도구로 KV 캐시를 GPU 밖으로 계층화해 재사용률을 높이려는 팀 모두에게 도움이 되는 글입니다. 두 기법은 각자 따로 검증된 최적화지만, 같이 쓰면 무슨 일이 벌어지는지는 거의 다뤄진 적이 없습니다. 이 글에서 소개하는 논문은 그 결합 효과를 수식으로 구조화하고, 실제로 H200 클러스터에서 측정을 시도했다가 vLLM 엔진이 두 번 죽어버린 경험까지 감추지 않고 보고합니다. 결론을 미리 말하면, 두 기법을 합치는 게 항상 이득은 아니고, 어느 쪽이 이기는지는 하드웨어가 아니라 워크로드의 재사용 패턴이 정합니다.
@@ -65,3 +68,16 @@ LLM 서빙 비용은 성격이 전혀 다른 두 단계에서 결정됩니다. �
 다음 단계는 논문이 순서까지 구체적으로 제시합니다. 먼저 하네스가 엔진의 자식 프로세스 로그까지 전부 캡처하도록 고치고 이미지 태그도 고정해 재현성을 확보해야 합니다. 그 다음 KV 블록 예산 옵션과 LMCache 커넥터 활성화 여부를 교차한 2x2 실험으로 이번 실패의 진짜 원인을 좁히고, 계층별 고정 오버헤드를 프리픽스 길이를 바꿔가며 실측하고, 실제 프로덕션 프롬프트 트레이스를 캐시 시뮬레이터에 흘려 재사용 분포의 꼬리 지수를 GPU 없이 오프라인으로 추정합니다. 이 네 단계가 끝난 뒤에야 비로소 실제 MoE 모델과 멀티 노드 구성으로 프리필-디코드 비율과 계층 구성을 조합한 스윕을 돌려 지연시간-비용 프론티어를 얻고, 그 실측 결과를 이 논문의 분석 공식과 대조해 어긋난 정도를 보고하는 순서입니다.
 
 논문 상세 페이지는 여기에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-28-kv-cache-tiering-pd-disagg-cost](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-28-kv-cache-tiering-pd-disagg-cost)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
+
+![kv-cache-tiering-pd-disagg-cost 슬라이드 1](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-01.png)
+
+![kv-cache-tiering-pd-disagg-cost 슬라이드 2](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-02.png)
+
+![kv-cache-tiering-pd-disagg-cost 슬라이드 3](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-03.png)
+
+![kv-cache-tiering-pd-disagg-cost 슬라이드 4](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-04.png)
+

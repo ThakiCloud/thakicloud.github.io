@@ -1212,3 +1212,43 @@
   "ko": "라우터robustness"
   "en": "Router Robustness"
   "ar": "متانة الموجّه"
+"CoT-모니터링":
+  "ko": "CoT-모니터링"
+  "en": "CoT Monitoring"
+  "ar": "مراقبة سلسلة التفكير"
+"필러토큰":
+  "ko": "필러토큰"
+  "en": "Filler Tokens"
+  "ar": "رموز الحشو"
+"잠재추론":
+  "ko": "잠재추론"
+  "en": "Latent Reasoning"
+  "ar": "الاستدلال الكامن"
+"해석가능성":
+  "ko": "해석가능성"
+  "en": "Interpretability"
+  "ar": "قابلية التفسير"
+"활성화패칭":
+  "ko": "활성화패칭"
+  "en": "Activation Patching"
+  "ar": "ترقيع التنشيطات"
+"LLM-감사":
+  "ko": "LLM-감사"
+  "en": "LLM Auditing"
+  "ar": "تدقيق نماذج اللغة"
+"온프레미스-서빙":
+  "ko": "온프레미스-서빙"
+  "en": "On-Premises Serving"
+  "ar": "التقديم داخل المقرّ"
+"에이전트-도구설계":
+  "ko": "에이전트-도구설계"
+  "en": "Agent Tool Design"
+  "ar": "تصميم أدوات الوكلاء"
+"최소권한":
+  "ko": "최소권한"
+  "en": "Least Privilege"
+  "ar": "أقل امتياز"
+"데스크톱-에이전트":
+  "ko": "데스크톱-에이전트"
+  "en": "Desktop Agent"
+  "ar": "وكيل سطح المكتب"

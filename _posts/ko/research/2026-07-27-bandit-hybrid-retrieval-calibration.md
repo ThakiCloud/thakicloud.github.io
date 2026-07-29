@@ -16,6 +16,9 @@ tags:
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/bandit-hybrid-retrieval-calibration/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/bandit-hybrid-retrieval-calibration/"
 ---
 
 에이전트 하네스에서 수백에서 수천 개의 스킬이나 도구를 검색으로 라우팅하고 있고, 그 검색기의 하이퍼파라미터를 사람이 주기적으로 손으로 재튜닝하는 데 지쳐본 엔지니어라면 이 글이 도움이 될 것입니다. 온라인 밴딧으로 검색 파라미터를 자동 보정하면 그 재튜닝 루프를 없앨 수 있지 않을까 하는 질문에, 이번 연구는 실제 프로덕션 검색기 위에서 직접 답을 구했습니다. 결론은 단순한 승패가 아니라 훨씬 더 실용적인 경고에 가깝습니다.
@@ -78,3 +81,16 @@ ThakiCloud 입장에서 결론은 명확합니다. `retrieve.py`의 하이브리
 저자들이 제시하는 다음 단계는 명확합니다. 보상 범위를 네이티브·부정 질의까지 넓히고, 정적 기본값보다 나빠지지 않도록 보장하는 제약을 추가하며, 정적 기본값 자체를 움직일 만큼 강한 드리프트 일정을 먼저 설계한 뒤에야 드리프트 적응형 밴딧을 시험하고, 마지막으로 애초에 계획했던 `skill_retro`와 `verify_fanout` 같은 진짜 실시간 신호를 실제로 연결해보는 것입니다. 그때까지는 사람이 트리거하는 오프라인 벤치마크 루프가 안전망으로, 그리고 최소한 온라인 보정의 필수 보완재로 남아야 한다는 것이 이 논문의 결론입니다.
 
 논문 상세 페이지는 [Hugging Face에서 확인할 수 있습니다](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-27-bandit-hybrid-retrieval-calibration).
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![bandit-hybrid-retrieval-calibration 슬라이드 1](/assets/images/bandit-hybrid-retrieval-calibration-slide-01.png)
+
+![bandit-hybrid-retrieval-calibration 슬라이드 2](/assets/images/bandit-hybrid-retrieval-calibration-slide-02.png)
+
+![bandit-hybrid-retrieval-calibration 슬라이드 3](/assets/images/bandit-hybrid-retrieval-calibration-slide-03.png)
+
+![bandit-hybrid-retrieval-calibration 슬라이드 4](/assets/images/bandit-hybrid-retrieval-calibration-slide-04.png)
+
