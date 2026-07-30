@@ -18,6 +18,7 @@ permalink: /en/tutorials/context-engineering-complete-guide/
 canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/context-engineering-complete-guide-en/"
 categories:
   - tutorials
+published: false
 ---
 
 ⏱️ **Estimated Reading Time**: 15 minutes

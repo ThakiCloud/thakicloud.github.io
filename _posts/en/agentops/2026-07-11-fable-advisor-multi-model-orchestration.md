@@ -18,6 +18,7 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/fable-advisor-multi-model-orchestration/"
+published: false
 ---
 
 Anyone who has used a coding agent for a while eventually arrives at a natural question. Writing a precise spec and sharply reviewing a resulting diff is a different kind of work from actually typing out code line by line, so why should the same single model have to do both? The recently released and widely discussed `fable-advisor` plugin answers this question head on. It is a cross-vendor workflow in which **Claude Fable 5 does nothing but conduct, while Grok 4.5 handles all of the actual implementation**. This post breaks down that structure and examines what this design suggests from ThakiCloud's operational perspective, where multi-agent systems and model routing are treated as first-class resources.

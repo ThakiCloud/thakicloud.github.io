@@ -18,6 +18,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-memory-action-space/"
 audiobook: /assets/audio/posts/agentic-memory-action-space/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 에이전트를 실제 제품 수준으로 오래 굴려 본 팀이라면 기억(memory) 문제에서 한 번쯤 벽에 부딪힙니다. 대화가 길어지고 작업이 여러 세션에 걸쳐 이어지면, 방금 나눈 대화를 붙들어 두는 단기 기억과 며칠 전 사용자가 알려 준 사실을 다시 꺼내 오는 장기 기억을 동시에 다뤄야 합니다. 지금까지 대부분의 시스템은 이 둘을 별개의 부품으로 취급했습니다. 단기 기억은 컨텍스트 윈도우 관리 로직이, 장기 기억은 벡터 검색과 요약 파이프라인이 각각 맡고, 그 사이를 사람이 설계한 휴리스틱과 컨트롤러가 이어 붙였습니다. AgeMem(Agentic Memory, arXiv:2601.01885)은 이 분업 구조 자체를 문제로 지목하며, 기억을 관리하는 행위를 에이전트가 스스로 선택하는 하나의 행동 공간으로 통합하자고 제안합니다.

@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/retriever-vs-decomposition-skill-routing/"
+published: false
 ---
 
 If you operate an agent harness that manages hundreds or thousands of skills as individual files and routes natural language requests to whichever skill fits, or you are planning to build such a system, the question this paper tackles will feel familiar. When routing quality falls short of what you expect, should your next investment go into a decomposition layer that breaks a complex request into smaller pieces, or into fixing the retriever and the index that surface candidates in the first place. This paper offers a way to decide which side deserves investment first, using only two numbers, without having to build an expensive new LLM decomposition pipeline. And when the authors actually ran that diagnostic on their own corpus, the answer turned out to be neither decomposition nor the retriever.
