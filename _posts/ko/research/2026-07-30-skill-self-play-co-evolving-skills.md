@@ -17,6 +17,8 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/skill-self-play-co-evolving-skills/"
+audiobook: /assets/audio/posts/skill-self-play-co-evolving-skills/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 모델이 스스로 문제를 만들어 스스로 풀며 늘어나는 방식은 매력적이지만 오래된 약점이 하나 있습니다. 채점을 믿을 수 없다는 것입니다. 2026년 7월 24일에 arXiv에 올라온 Alibaba Qwen 팀의 논문은 이 약점을 정면으로 다루면서, 해법을 조금 예상 밖의 곳에서 가져옵니다. 에이전트 스킬입니다.

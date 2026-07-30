@@ -15,6 +15,9 @@ tags:
 categories: [research]
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/agent-memory-tiering-recall-cost/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tiering-recall-cost/"
 ---
 
 몇 주씩 쉬지 않고 돌아가는 자율 코딩 에이전트를 직접 운영하면서, 매 세션 시작 때 주입하는 메모리 브리핑이 자꾸 예산을 넘긴다는 느낌을 받아본 엔지니어라면 이 글이 다루는 문제가 낯설지 않을 것입니다. 이 논문은 그 브리핑에 무엇을 남기고 무엇을 걷어낼지 정하는 세 가지 정책을 실제 프로덕션 메모리 코퍼스에 대고 직접 재보고, "최신 것을 남긴다"는 가장 흔한 직관이 왜 최선이 아닌지를 숫자로 보여줍니다.
@@ -65,3 +68,16 @@ toc: true
 가장 중요한 한계는 평가 질의(query) 자체가 실제 미래의 회수 이벤트가 아니라는 점입니다. 45개의 평가 질의는 각 항목의 토큰 시퀀스에서 짝수 번째 위치만 뽑아 만든 결정론적 부분열이라, 모든 항목이 최소 하나의 질의로 회수될 수 있도록 설계돼 있습니다. 이는 정책 비교의 노이즈를 없애 준다는 장점이 있는 동시에, 이 측정이 "예산 안에서 얼마나 많은 항목을 담아내는가"를 재는 것이지 "미래에 실제로 필요한 항목을 얼마나 잘 골라내는가"를 재는 것은 아니라는 뜻이기도 합니다. 코퍼스도 한 저장소, 5주치, 45건으로 규모가 작고 단일합니다. 또한 중복 클러스터링 임계값(0.5)과 질의 매칭 임계값(0.3)은 한 번 정해 고정했을 뿐 민감도를 스윕하지 않았고, 길이 우선(shortest-first)이나 집합 커버 기반 정책 같은 더 단순한 대안 기준선과도 비교하지 않았습니다. 그래서 이 논문이 보여주는 건 "이 모양의 코퍼스에서, 이 방식으로 잰 회수율 기준으로는 중복 제거가 이긴다"는 정밀한 한 장면이지, 계층화 정책 전반에 대한 보편적인 서열은 아닙니다.
 
 논문 상세 페이지: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-30-agent-memory-tiering-recall-cost](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-30-agent-memory-tiering-recall-cost)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-memory-tiering-recall-cost 슬라이드 1](/assets/images/agent-memory-tiering-recall-cost-slide-01.png)
+
+![agent-memory-tiering-recall-cost 슬라이드 2](/assets/images/agent-memory-tiering-recall-cost-slide-02.png)
+
+![agent-memory-tiering-recall-cost 슬라이드 3](/assets/images/agent-memory-tiering-recall-cost-slide-03.png)
+
+![agent-memory-tiering-recall-cost 슬라이드 4](/assets/images/agent-memory-tiering-recall-cost-slide-04.png)
+
