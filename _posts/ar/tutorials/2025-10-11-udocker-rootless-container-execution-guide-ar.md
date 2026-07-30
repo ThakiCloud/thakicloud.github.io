@@ -19,15 +19,25 @@ permalink: /ar/tutorials/udocker-rootless-container-execution-guide/
 canonical_url: "https://thakicloud.com/tech-blog/ar/tutorials/udocker-rootless-container-execution-guide/"
 categories:
   - tutorials
+audiobook: "https://drive.google.com/file/d/1EW1H44wu4n6A2SISk6Y1hAqTnmTCWlqI/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
+
+![udocker: دليل شامل لتشغيل حاويات Docker بدون صلاحيات الجذر 개념을 형상화한 이미지](/assets/images/udocker-rootless-container-execution-guide-ar-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## مقدمة
 
 هل واجهت حاجة لتشغيل حاويات Docker على نظام لا تملك فيه صلاحيات الجذر؟ سواء كنت تعمل على مجموعة حوسبة عالية الأداء، أو بيئة حوسبة مشتركة، أو منظمة تهتم بالأمان، فإن **udocker** هو الحل المثالي لتشغيل حاويات Docker بدون الحاجة إلى وصول إداري.
 
 udocker هو أداة أساسية للمستخدم تمكن من تشغيل حاويات Docker البسيطة في أنظمة المعالجة المجمعة أو التفاعلية بدون صلاحيات الجذر. تم تطويره من قبل مشروع INDIGO-DataCloud، ويوفر طريقة آمنة وعملية لتشغيل التطبيقات المحتواة في بيئات حيث Docker التقليدي غير متاح أو غير مسموح.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/udocker-rootless-container-execution-guide-ar/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ما هو udocker؟
 
@@ -45,6 +55,27 @@ udocker هو أداة مبنية على Python تسمح للمستخدمين ب�
 - **توافق مع Docker**: يعمل مع صور وسجلات Docker القياسية
 - **مركز على الأمان**: يوفر العزل دون المساس بأمان النظام
 - **محسن للحوسبة عالية الأداء**: مصمم لبيئات الحوسبة عالية الأداء
+
+### نظرة سريعة على آلية العمل
+
+لا يشغّل udocker أي خدمة خلفية. فهو يفكّ طبقات الصورة التي يسحبها من السجل إلى نظام ملفات جذر داخل مجلد المستخدم، ثم يختار عند التشغيل أحد أربعة محركات لبدء العملية داخل نظام الملفات ذاك. يوضح الرسم التالي المسار من السحب إلى التشغيل، وموضع تفرّع أوضاع التنفيذ.
+
+```mermaid
+flowchart TD
+    R["Docker Registry<br/>docker.io"] -->|"udocker pull"| L["Image layers<br/>~/.udocker/layers"]
+    L -->|"udocker create"| C["Container rootfs<br/>~/.udocker/containers"]
+    C -->|"udocker setup --execmode"| M{"Execution mode"}
+    M -->|"P1 fast / P2 compatible"| P["PRoot<br/>ptrace interception"]
+    M -->|"F1 to F4"| F["Fakechroot<br/>LD_PRELOAD"]
+    M -->|"R1 runC / R2 crun"| N["runC or crun<br/>rootless namespaces"]
+    M -->|"S1"| S["Singularity<br/>external install"]
+    P --> U["udocker run<br/>user process, no daemon, no root"]
+    F --> U
+    N --> U
+    S --> U
+```
+
+*يفصل udocker بين جلب الصورة وتشغيلها، لذا يكفي تبديل محرك التنفيذ لتشغيل الحاوية نفسها بأسلوب عزل مختلف.*
 
 ## دليل التثبيت
 
@@ -433,6 +464,10 @@ udocker commit my-container my-custom-image
 | محسن للحوسبة عالية الأداء | نعم | لا | نعم | لا |
 | محركات متعددة | نعم | لا | لا | لا |
 | مساحات أسماء المستخدم | اختياري | نعم | نعم | نعم |
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/udocker-rootless-container-execution-guide-ar/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## الخلاصة
 

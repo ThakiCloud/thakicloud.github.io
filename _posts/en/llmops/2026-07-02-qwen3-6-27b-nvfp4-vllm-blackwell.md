@@ -15,11 +15,14 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 toc_icon: "microchip"
-published: true
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
 categories:
   - llmops
+published: false
 ---
+
+![Illustration of the core idea of Qwen3.6-27B in NVFP4: The Economics of Single-GPU Blackwell Serving](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-hero.png)
+*A visual metaphor for the article's key idea.*
 
 ## Overview
 
@@ -394,7 +397,7 @@ What makes this checkpoint interesting is less the benchmark numbers themselves 
 
 From a multi-tenant view, this saving compounds. When a model drops from 2 GPUs to 1, the cluster's concurrent serving slots nearly double. Under Kueue-based GPU allocation, that translates directly into shorter wait queues and easier fair sharing across tenants. It matters especially for customers with strong on-premises and sovereign requirements, because the sheer number of GPUs to procure falls, lowering the barrier of upfront investment and operating cost.
 
-The mixed-precision design also aligns with our operating philosophy. Rather than lowering precision indiscriminately, the approach of keeping the quality-sensitive parts and aggressively cutting only the heavy parts fits the goal of "cost efficiency and quality at once." It is why, when adopting a new quantized checkpoint on ai-platform, we review not just the benchmark score but which layers were treated at which precision. NVFP4 re-quantization is a good reference case for that review, and once we secure measured throughput we plan a follow-up post on its cost-quality profile in our serving stack.
+The mixed-precision design also aligns with our operating philosophy. Rather than lowering precision indiscriminately, the approach of keeping the quality-sensitive parts and aggressively cutting only the heavy parts fits the goal of "cost efficiency and quality at once." It is why, when adopting a new quantized checkpoint on ai-platform, we review not just the benchmark score but which layers were treated at which precision. NVFP4 re-quantization is a good reference case for that review.
 
 ## Limitations and Counterpoints
 
