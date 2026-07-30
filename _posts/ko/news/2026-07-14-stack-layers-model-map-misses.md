@@ -16,6 +16,7 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/stack-layers-model-map-misses/"
+published: false
 ---
 
 AI 시장을 이야기할 때 우리는 보통 모델을 줄 세웁니다. 프론티어가 있고, 그 절반 값의 중국 상위 모델이 있고, 말이 안 되게 싼 초저비용 모델이 있고, 서비스 기업이 만든 자체 모델과 기기 위에서 도는 온디바이스 모델이 있다는 식입니다. 이 지도는 정확합니다. 어떤 모델이 존재하는지를 잘 보여 줍니다.
