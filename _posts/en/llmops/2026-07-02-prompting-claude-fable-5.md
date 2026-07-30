@@ -14,6 +14,7 @@ header:
   image: /assets/images/prompting-claude-fable-5-hero.webp
 categories:
   - llmops
+published: false
 ---
 
 ## Overview

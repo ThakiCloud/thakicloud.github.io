@@ -14,6 +14,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/prompting-claude-fable-5/"
 categories:
   - llmops
+published: false
 ---
 
 ## 개요
