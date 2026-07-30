@@ -168,14 +168,16 @@ search: false
   --font-sans: "Mona Sans", "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  /* Long-form reading serif (Latin); Pretendard carries Hangul per-glyph. */
+  --font-serif: "Source Serif 4", Georgia, Cambria, "Pretendard Variable", Pretendard, serif;
 }
 
 html[data-theme="dark"] {
-  --bg: #000000;             /* thakicloud.com pure black */
-  --bg-elevated: #0a0a0a;
-  --surface: #0a0a0a;
-  --surface-hover: #141414;
-  --text: #ffffff;
+  --bg: #0a0a0a;             /* near-black, not pure #000 — less halation on long reads */
+  --bg-elevated: #141414;
+  --surface: #141414;
+  --surface-hover: #1f1f1f;
+  --text: #e6e6e6;           /* off-white body/headings, softer than pure #fff */
   --text-muted: #9ca3af;     /* gray-400 body */
   --text-subtle: #6b7280;    /* gray-500 */
   --border: #1e293b;                  /* slate800 hairline (chip outlines) */
@@ -190,8 +192,8 @@ html[data-theme="dark"] {
   --accent: #60a5fa;         /* bright blue for contrast on black */
   --accent-hover: #93c5fd;
   --accent-soft: rgba(96,165,250,0.15);
-  --code-bg: #0a0a0a;
-  --code-text: #ffffff;
+  --code-bg: #141414;
+  --code-text: #e6e6e6;
   --shadow-card: 0 1px 3px rgba(0,0,0,0.6), 0 12px 32px rgba(0,0,0,0.5);
   --masthead-bg: rgba(0,0,0,0.80);
   --masthead-border: rgba(255,255,255,0.08);
@@ -253,7 +255,7 @@ h1, h2, h3, h4, h5, h6,
 .page__content h1, .page__content h2 { line-height: 1.18; }
 /* Post section headings: 20px / 600 (smaller & lighter than the h1 title),
    no underline divider. */
-.layout--single .page__content h2 { font-size: 1.25rem; font-weight: 600; border-bottom: 0; padding-bottom: 0; }
+.layout--single .page__content h2 { font-size: 1.5rem; font-weight: 600; border-bottom: 0; padding-bottom: 0; }
 /* MM sets .page__title to line-height:1, which is very tight on a wrapping
    two-line post title. */
 .page__title { line-height: 1.3; }
@@ -931,7 +933,24 @@ html[lang="ar"] .toss-rail__rank { }
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
+  /* Long-form reading face (Adobe Source Serif). Latin uses the serif; Hangul
+     falls through to Pretendard per-glyph since Source Serif has no CJK. */
+  font-family: var(--font-serif);
+  font-size: 1.25rem;      /* 20px body */
+  font-weight: 400;
+  line-height: 1.6;        /* tighter, article-like rhythm (was 1.7) */
+  letter-spacing: normal;  /* undo the body's -0.011em display tracking */
 }
+/* Body prose is serif, but every heading (title + section headings) stays in
+   the Mona Sans brand face for a sans-display / serif-body split. */
+.layout--single .page__title,
+.layout--single .page__title a,
+.layout--single .page__content h1,
+.layout--single .page__content h2,
+.layout--single .page__content h3,
+.layout--single .page__content h4,
+.layout--single .page__content h5,
+.layout--single .page__content h6 { font-family: var(--font-sans); letter-spacing: -0.01em; }
 /* Match the title/meta header to the 680px reading measure. */
 .layout--single .page__inner-wrap > header { max-width: 680px; }
 /* 24px gap between the title and the hero image below it. */
