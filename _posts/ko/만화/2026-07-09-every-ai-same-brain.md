@@ -16,6 +16,7 @@ toc: false
 image: /assets/images/posts/만화/every-ai-same-brain/strip.png
 audiobook: /assets/audio/posts/every-ai-same-brain/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 MIT 논문 하나가 소란입니다. 지구상의 모든 AI 모델이 학습을 거듭할수록 속으로는 같은 '뇌', 그러니까 같은 내부 표현으로 수렴한다는 주장입니다. 여기서 내부 표현이란 모델이 세상을 머릿속에 그려 넣는 방식을 말합니다. 만든 회사도 학습 데이터도 다른데 머릿속 지도가 점점 닮아간다는 이야기죠. 그렇다면 질문이 하나 남습니다. 뇌가 어차피 비슷해진다면, 남의 비싼 뇌를 매달 빌려 쓸 이유가 있을까요.
