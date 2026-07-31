@@ -21,6 +21,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/cosmos3-agent-skills-posttraining/"
+published: false
 ---
 
 Last week, our design-system UI generation experiment led us to the conclusion that you need to
