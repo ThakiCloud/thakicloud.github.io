@@ -17,6 +17,8 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/arc-agi-3-harness-settings-context-memory/"
+audiobook: /assets/audio/posts/arc-agi-3-harness-settings-context-memory/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트를 여러 스텝 돌려 본 팀이라면 익숙한 증상이 있습니다. 첫 몇 스텝은 똑똑한데 뒤로 갈수록 앞에서 알아낸 것을 잊고 같은 실수를 반복합니다. 모델을 상위 등급으로 올려도 잘 낫지 않습니다. 2026년 7월 OpenAI가 공개한 ARC-AGI-3 재측정 보고는 이 증상의 원인이 모델이 아니라 그 바깥에 있을 수 있다는 것을 꽤 극적인 숫자로 보여줍니다.
@@ -131,6 +133,19 @@ Responses API를 쓰지 않는 환경, 예를 들어 vLLM이나 SGLang으로 오
 이 사건에서 가져갈 것은 리더보드 순위가 아닙니다. **같은 모델이 하네스 설정 하나로 정확도 세 배와 출력 토큰 6분의 1을 동시에 오갔다는 사실**입니다. 다중 스텝 에이전트에서 성능은 모델 안에만 있지 않고, 스텝 사이의 기억을 누가 어떻게 관리하느냐에 상당 부분 걸려 있습니다.
 
 당장 해 볼 일은 단순합니다. 운영 중인 에이전트 루프를 열어서 스텝 사이에 무엇이 버려지는지 확인하십시오. 도구 호출 결과만 남기고 그 선택의 이유를 버리고 있다면, 그리고 컨텍스트가 찰 때 오래된 것부터 잘라내고 있다면, 이 글의 표준 하네스와 같은 구조입니다. 모델 등급을 올리기 전에 그 두 지점을 먼저 고쳐 보는 편이 비용 대비 효과가 큽니다. 벤치마크 수치를 볼 때도 모델 이름 옆에 어떤 하네스였는지를 함께 읽는 습관이 필요합니다. 그 정보 없이는 두 숫자가 같은 것을 재고 있는지조차 알 수 없습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![arc-agi-3-harness-settings-context-memory 슬라이드 1](/assets/images/arc-agi-3-harness-settings-context-memory-slide-01.png)
+
+![arc-agi-3-harness-settings-context-memory 슬라이드 2](/assets/images/arc-agi-3-harness-settings-context-memory-slide-02.png)
+
+![arc-agi-3-harness-settings-context-memory 슬라이드 3](/assets/images/arc-agi-3-harness-settings-context-memory-slide-03.png)
+
+![arc-agi-3-harness-settings-context-memory 슬라이드 4](/assets/images/arc-agi-3-harness-settings-context-memory-slide-04.png)
 
 ## 출처
 

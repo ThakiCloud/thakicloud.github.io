@@ -17,6 +17,8 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/mastra-trace-intelligence-agent-traces/"
+audiobook: /assets/audio/posts/mastra-trace-intelligence-agent-traces/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트를 프로덕션에 올린 팀이 공통으로 마주치는 벽이 있습니다. 트레이스는 잘 쌓이는데 그걸 읽을 사람이 없다는 것입니다. 하루에 수천 건이 들어오고, 사람이 열어 볼 수 있는 것은 실패 알림이 뜬 몇 건뿐입니다. 나머지는 저장 비용만 내면서 조용히 쌓입니다. Mastra가 2026년 7월에 프라이빗 베타로 공개한 Trace Intelligence는 정확히 이 지점을 겨냥한 기능입니다.
@@ -138,6 +140,19 @@ Trace Intelligence가 하는 일은 그 축을 사후에 만들어 내는 것입
 에이전트 관측성의 다음 단계는 트레이스를 더 잘 보여 주는 것이 아니라 **트레이스를 덜 보게 만드는 것**입니다. Trace Intelligence가 택한 방향이 그렇습니다. 사람이 개별 세션을 읽는 대신 목표와 결과와 행동과 감정이라는 네 축으로 분해된 테마를 읽고, 그중 큰 덩어리부터 손보는 구조입니다.
 
 에이전트를 운영하고 계신다면, 초대를 기다리기 전에 지금 쌓이는 트레이스에 이 네 축을 붙일 수 있는지부터 확인해 보시길 권합니다. 목표와 감정은 보통 기록되지 않는 축입니다. 그 두 개가 없으면 어떤 분석 도구를 붙여도 "기술적으로는 성공했는데 사용자는 떠난" 구간을 찾아낼 수 없습니다. 도구 도입보다 스키마 설계가 먼저입니다. 그리고 트레이스를 어디서 분석할 것인가는 기능 비교가 아니라 데이터 주권의 문제로 다뤄야 합니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
+
+![mastra-trace-intelligence-agent-traces 슬라이드 1](/assets/images/mastra-trace-intelligence-agent-traces-slide-01.png)
+
+![mastra-trace-intelligence-agent-traces 슬라이드 2](/assets/images/mastra-trace-intelligence-agent-traces-slide-02.png)
+
+![mastra-trace-intelligence-agent-traces 슬라이드 3](/assets/images/mastra-trace-intelligence-agent-traces-slide-03.png)
+
+![mastra-trace-intelligence-agent-traces 슬라이드 4](/assets/images/mastra-trace-intelligence-agent-traces-slide-04.png)
 
 ## 출처
 
