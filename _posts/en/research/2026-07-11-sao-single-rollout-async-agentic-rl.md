@@ -17,11 +17,15 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/sao-single-rollout-async-agentic-rl/"
+published: false
 ---
 
 Training agents with reinforcement learning is no longer a lab-only phrase. Models that excel at tasks like fixing a codebase over dozens of turns on SWE-Bench, or working through a multi-step math proof, are mostly not the product of pretraining alone. The post-training stage, where the model actually calls tools, interacts with an environment through rollouts, and gets rewarded for it, is what makes the difference. But as those rollouts grow longer, the training method that has stood as the standard begins to break down.
 
 A paper released on July 8, 2026 by researchers at Tsinghua University and Z AI, "Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning" (arXiv 2607.07508), confronts exactly this problem. The short version: the authors dropped "group sampling," the core mechanism behind the widely used GRPO. And they did not leave this idea confined to a paper's experiments section. They put it into the actual pipeline used to train GLM-5.2, a 750B-scale open model.
+
+![Illustration of the core idea of Agentic RL Stops Waiting for the Group and Learns from One Rollout at a Time](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+*A visual metaphor for the article's key idea.*
 
 ## Overview
 
