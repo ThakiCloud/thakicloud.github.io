@@ -22,6 +22,8 @@ toc: true
 categories:
   - research
 published: false
+audiobook: /assets/audio/posts/vetd-cost-descent/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 문제는 모델이 아니라 배정입니다
@@ -109,3 +111,16 @@ VETD는 모델 비용 절감을 모델링 문제가 아니라 측정과 게이�
 ---
 
 *이 글의 방법과 수치는 ThakiCloud 자동화 함대의 실제 운영 기록입니다. 정리한 논문 초안은 [PDF]({{ '/assets/papers/vetd-cost-descent-2026-07-12.pdf' | relative_url }})로 함께 공개합니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![vetd-cost-descent 슬라이드 1](/assets/images/vetd-cost-descent-slide-01.png)
+
+![vetd-cost-descent 슬라이드 2](/assets/images/vetd-cost-descent-slide-02.png)
+
+![vetd-cost-descent 슬라이드 3](/assets/images/vetd-cost-descent-slide-03.png)
+
+![vetd-cost-descent 슬라이드 4](/assets/images/vetd-cost-descent-slide-04.png)
+
