@@ -18,7 +18,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/gpt-5-6-sol-arc-agi-3/"
-published: false
 ---
 
 Teams that have actually run agents in production do not get excited over a single benchmark score. We have seen too many cases of a model that clears 90% on static problem sets still losing its footing in front of an unfamiliar tool, a UI it has never seen, or an environment with no instructions. So when ARC Prize announced that it had verified GPT-5.6 Sol's ARC-AGI-3 results, what caught our attention was not the number itself but how that number came about.

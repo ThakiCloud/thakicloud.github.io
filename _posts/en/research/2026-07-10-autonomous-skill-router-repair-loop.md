@@ -10,7 +10,6 @@ seo_title: "Autonomous Skill Router Repair Loop: Closing a Search Bottleneck wit
 seo_description: "In a real agent harness with more than 1,600 skills, this study introduces a deterministic loop that fixes the retriever's Korean-to-English synonym dictionary without any human involvement, and measures the resulting improvement in skill-routing accuracy."
 author_profile: true
 toc: true
-published: false
 audiobook: "https://drive.google.com/file/d/19T5yQEscZGIOXZUFDvXaDV4k74iMS2xo/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"

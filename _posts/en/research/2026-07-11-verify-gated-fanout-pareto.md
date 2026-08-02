@@ -8,7 +8,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/verify-gated-fanout
 categories: [research]
 author_profile: true
 toc: true
-published: false
 audiobook: "https://drive.google.com/file/d/1KtL3fNDCDT1c0OZyxlMc8E0SJ5FBummf/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"

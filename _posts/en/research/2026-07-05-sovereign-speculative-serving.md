@@ -21,7 +21,6 @@ toc_icon: "flask"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/sovereign-speculative-serving/"
 categories:
   - research
-published: false
 ---
 
 ## Who should read this

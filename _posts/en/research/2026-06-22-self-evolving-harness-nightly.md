@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/self-evolving-harne
 reading_time: true
 categories:
   - research
-published: false
 ---
 
 ![The AI Harness That Evolves Itself Every Night]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})

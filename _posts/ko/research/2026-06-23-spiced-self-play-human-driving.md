@@ -25,7 +25,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/spiced-self-play-hu
 reading_time: true
 categories:
   - research
-published: false
 ---
 
 ## 개요

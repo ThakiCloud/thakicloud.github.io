@@ -21,7 +21,6 @@ author_profile: true
 toc: true
 categories:
   - research
-published: false
 audiobook: /assets/audio/posts/vetd-cost-descent/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

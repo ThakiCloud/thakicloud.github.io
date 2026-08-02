@@ -19,7 +19,6 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/gpt-5-6-sol-arc-agi-3/"
 audiobook: /assets/audio/posts/gpt-5-6-sol-arc-agi-3/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 에이전트를 실제로 운용해 본 팀이라면 벤치마크 점수 한 줄에 쉽게 흥분하지 않습니다. 정적인 문제 풀이에서 90%를 넘긴 모델이 막상 낯선 도구, 처음 보는 UI, 설명서 없는 환경 앞에서는 갈피를 못 잡는 경우를 너무 많이 봤기 때문입니다. 그래서 ARC Prize가 GPT-5.6 Sol의 ARC-AGI-3 결과를 검증했다고 발표했을 때, 숫자 자체보다 그 숫자가 만들어진 방식이 훨씬 흥미로웠습니다.

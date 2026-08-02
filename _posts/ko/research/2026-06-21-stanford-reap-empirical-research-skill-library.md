@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/stanford-reap-empir
 reading_time: true
 categories:
   - research
-published: false
 audiobook: /assets/audio/posts/stanford-reap-empirical-research-skill-library/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

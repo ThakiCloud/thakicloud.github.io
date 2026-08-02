@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/google-tpu-ironwood
 reading_time: true
 categories:
   - research
-published: false
 ---
 
 대규모 AI 모델을 학습시키는 인프라는 어떻게 진화해왔을까요. 구글이 arXiv에 공개한 논문 "Google's Training Supercomputers from TPU v2 to Ironwood"(arXiv:2606.15870, 2026년 6월 14일 제출)는 TPU 5세대의 진화를 아키텍처 안정성, 규모, 회복탄력성, 전력 효율, 지속가능성이라는 다섯 축으로 정리합니다. 단일 칩 성능이 아니라 **시스템 전체**를 어떻게 키워왔는지를 다룬다는 점에서, AI 인프라를 운영하는 팀에게 직접적인 교훈을 줍니다.

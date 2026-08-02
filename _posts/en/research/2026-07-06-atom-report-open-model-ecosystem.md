@@ -21,7 +21,6 @@ toc_label: "Contents"
 toc_icon: "flask"
 categories:
   - research
-published: false
 ---
 
 ## Who Should Read This

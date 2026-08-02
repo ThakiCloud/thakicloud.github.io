@@ -21,7 +21,6 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/en/research/platonic-representation-hypothesis/"
-published: false
 ---
 
 ## Who Should Read This
