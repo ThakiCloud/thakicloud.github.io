@@ -21,15 +21,21 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.com/tech-blog/owm/glm-5-2-1m-context-moe-self-hosting/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/owm/glm-5-2-1m-context-moe-self-hosting/"
 reading_time: true
 categories:
   - owm
+audiobook: "https://drive.google.com/file/d/1GDNnty8mJQocYEbyK2OCRtOKcLVgX51s/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **예상 읽기 시간**: 7분
 
 ![GLM-5.2 희소 MoE와 1M 컨텍스트 개념도]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
+
+![GLM-5.2: 753B MoE, 1M 컨텍스트, MIT 라이선스 온프렘 서빙 가이드 개념을 형상화한 이미지](/assets/images/glm-5-2-1m-context-moe-self-hosting-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## GLM-5.2는 무엇이 다른가
 
@@ -98,3 +104,7 @@ GLM-5.2에서 ThakiCloud 관점으로 가장 의미 있는 세 가지를 꼽으�
 **GGUF 29종 + KTransformers 경로.** 온프렘 GPU가 H100 급이 아닌 RTX 계열이라면 KTransformers와 GGUF 양자화 조합이 현실적인 서빙 경로입니다. 29종 양자화 변형이 HF에 이미 올라와 있어서 별도 변환 작업 없이 바로 쓸 수 있습니다. 소규모 팀이 제한된 하드웨어로 1M 컨텍스트 기능을 테스트하려는 경우 진입 장벽이 낮습니다.
 
 긴 컨텍스트 long-horizon 태스크(계약서 전체 분석, 대형 코드베이스 이해, 장문 레포트 생성)에 온프렘 모델을 투입하려는 조직에게 GLM-5.2는 검토할 가치가 있습니다. 다만 풀 BF16 753B 서빙은 여전히 대형 GPU 클러스터를 전제로 하므로, 실사용 규모에 맞는 양자화 전략 선택이 중요합니다.
+
+## 출처
+
+- [zai-org/GLM-5.2 모델 카드 (Hugging Face)](https://huggingface.co/zai-org/GLM-5.2)

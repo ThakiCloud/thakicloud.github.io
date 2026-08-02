@@ -26,17 +26,27 @@ lang: ar
 reading_time: true
 categories:
   - owm
+audiobook: "https://drive.google.com/file/d/1Qxfua9IglhqeciY38ND8660zUDbf-Meq/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **وقت القراءة المقدر**: 7 دقائق
 
 ![مخطط مفاهيمي لـ GLM-5.2]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
+![GLM-5.2: دليل خدمة النشر المحلي لنموذج MoE بحجم 753B وسياق مليون رمز ورخصة MIT 개념을 형상화한 이미지](/assets/images/glm-5-2-1m-context-moe-self-hosting-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## ما الذي يميز GLM-5.2؟
 
 GLM-5.2 هو نموذج MoE بحجم إجمالي 753B معامل، أصدرته Z.ai (المعروفة سابقًا بـ Zhipu AI). يمكن الوصول إليه عبر مستودع HuggingFace `zai-org/GLM-5.2`، وترخيصه MIT.
 
 أبرز ما يميز هذا النموذج هو قدرته على معالجة سياق بطول مليون رمز بتكلفة FLOPs عملية. ثمة نماذج كثيرة تدّعي دعم سياق مليون رمز، إلا أن تكلفة الاستدلال الفعلية تصبح عائقًا حقيقيًا. يعالج GLM-5.2 هذه المعضلة مباشرة عبر آلية انتباه تُعرف بـ DSA (Dynamic Sparse Attention).
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/glm-5-2-1m-context-moe-self-hosting/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## البنية المعمارية: DSA وIndexShare
 
@@ -99,3 +109,11 @@ HLE (Humanity's Last Exam) بدون أدوات 40.5 يقفز إلى 54.7 مع ا
 **مسار 29 نسخة GGUF مع KTransformers.** إذا كانت وحدات GPU المحلية من فئة RTX لا H100، فإن الجمع بين KTransformers والتكميم بصيغة GGUF يمثل مسارًا خدميًا واقعيًا. وجود 29 نسخة مكممة مرفوعة مسبقًا على HF يُغني عن إجراء تحويلات إضافية. يُخفّض ذلك الحاجز أمام الفرق الصغيرة التي تعمل على أجهزة محدودة وتريد اختبار قدرة السياق مليون رمز.
 
 تستحق GLM-5.2 دراسة جادة من المؤسسات الراغبة في نشر نماذج محلية لمهام طويلة الأفق (تحليل عقود كاملة، وفهم قواعد كود ضخمة، وإنشاء تقارير مطولة). مع ذلك، تظل خدمة النموذج كاملًا بصيغة BF16 753B رهينةً بتوافر مجموعة GPU كبيرة، لذا يبقى اختيار استراتيجية التكميم الملائمة لحجم الاستخدام الفعلي أمرًا بالغ الأهمية.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/glm-5-2-1m-context-moe-self-hosting/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## المصادر
+
+- [بطاقة نموذج zai-org/GLM-5.2 (Hugging Face)](https://huggingface.co/zai-org/GLM-5.2)

@@ -27,11 +27,17 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/owm/diffusiongemma-26b-a4b-d
 reading_time: true
 categories:
   - owm
+audiobook: "https://drive.google.com/file/d/1SFfOfwSmU_3JXZDXZBqLEx5vFOeT9eys/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **وقت القراءة المقدر**: 9 دقائق
 
 ![مخطط مفاهيمي لـ DiffusionGemma 26B-A4B]({{ '/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp' | relative_url }})
+
+![DiffusionGemma 26B-A4B: تجربة Google في توليد 15 إلى 20 رمزاً دفعةً واحدة عبر الانتشار النصي المتقطع 개념을 형상화한 이미지](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## ما الجديد
 
@@ -40,6 +46,10 @@ categories:
 من حيث سرعة التوليد الفعلية، يُنتج النموذج 15 إلى 20 رمزاً في وقت واحد خلال تمرير أمامي واحد. تشير بطاقة النموذج إلى تجاوز 1,100 رمز في الثانية على H100 FP8 مع دُفعات صغيرة، وهذه الأرقام صادرة عن Google وتتفاوت بحسب تكوين الأجهزة وحجم الدُّفعة.
 
 الرخصة Apache-2.0، مما يتيح الاستخدام التجاري وتوزيع النماذج المشتقة.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## البنية
 
@@ -107,3 +117,11 @@ vllm serve google/diffusiongemma-26B-A4B-it \
 **السياق 256K ومتعدد الأوضاع.** يتيح سياق 256K ودعم إدخال الصور والفيديو معالجة المستندات الطويلة وتحليل قواعد الشفرات الضخمة. كما أن رخصة Apache-2.0 لا تفرض قيوداً على الاستخدام التجاري وتطوير النماذج المشتقة، وهو ما يصبّ في مصلحة التكامل داخل البنية التحتية الخاصة.
 
 لا يزال نظام بيئة الانتشار للنماذج اللغوية أقل نضجاً مقارنةً بالنماذج التلقائية التسلسلية. تبقى مرحلة التحقق المباشر من وضع دعم أطر التقديم لنماذج الانتشار، وفعالية التكميم، واستقرار النشر الفعلي ضرورةً لا غنى عنها.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## المصادر
+
+- [بطاقة نموذج google/diffusiongemma-26B-A4B-it (Hugging Face)](https://huggingface.co/google/diffusiongemma-26B-A4B-it)

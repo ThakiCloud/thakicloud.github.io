@@ -21,6 +21,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/from-owning-to-governin
 published: false
 ---
 
+![Illustration of the core idea of The Day Apple's Crown Sat on Someone Else's Chips: The AI Era Moves From Owning to Governing](/assets/images/from-owning-to-governing-ai-stack-hero.png)
+*A visual metaphor for the article's key idea.*
+
 ## Siri now runs on Google's GPUs
 
 According to a report by The Information, Apple's next-generation Siri runs not on its own servers but on Nvidia chips leased from Google Cloud. Its in-house M2 Ultra chip underperformed, and the launch of its successor, the server chip codenamed "Baltra," has slipped too. More striking still, the brain sharpening Siri isn't an Apple model at all, it's Google's Gemini. The flagship service of the company that has designed its own silicon more closed off than anyone else on earth is now running on a rival's chip with a rival's model.
