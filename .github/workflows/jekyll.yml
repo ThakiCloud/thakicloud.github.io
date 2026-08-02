@@ -32,9 +32,12 @@ jobs:
           
           # 빌드 크기 백스톱. 실제 게이트는 front-matter published:false
           # (tech-blog-manager의 250/lang cap). 여기선 파일 수만 넉넉히 제한.
-          # KEEP_COUNT는 카테고리별 published 상한(research 30 등)보다 커야 한다.
+          # KEEP_COUNT는 카테고리별 published 상한보다 커야 한다. research는 no-drop
+          # (cap None)이라 300/lang 백스톱까지 자랄 수 있으므로 그보다 넉넉히 크게 둔다.
+          # 이 필터는 날짜순 파일 수만 제한한다(published 플래그 무시) — 너무 낮으면 오래된
+          # published 글이 빌드에서 누락돼 404가 된다(2026-08-03 tokenizer 사고).
           LIMIT_CATEGORIES=("agentops" "tutorials" "dev" "owm" "research" "llmops")
-          KEEP_COUNT=40
+          KEEP_COUNT=500
           
           for lang in ko en; do
             for category in "${LIMIT_CATEGORIES[@]}"; do
