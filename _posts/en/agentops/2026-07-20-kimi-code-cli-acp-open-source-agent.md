@@ -21,6 +21,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/kimi-code-cli-acp-open-source-agent/"
+published: false
 ---
 
 Last week Moonshot AI released the open-weight model Kimi K3 and took the top spot on the coding leaderboards. But something that touches developer workflows even more directly slipped out quietly alongside it: **Kimi Code CLI**, an open source terminal coding agent that Moonshot released under the MIT license. LinkedIn timelines were full of posts framing it as "features Claude Code doesn't have." We didn't take that line at face value and instead checked the official repository and documentation ourselves. The short version: half of the pitch holds up, and half is overstated. The genuinely interesting part turned out to be something the marketing didn't emphasize at all.

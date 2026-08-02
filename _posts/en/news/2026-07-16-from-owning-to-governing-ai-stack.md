@@ -18,6 +18,7 @@ categories:
   - news
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/from-owning-to-governing-ai-stack/"
+published: false
 ---
 
 ## Siri now runs on Google's GPUs

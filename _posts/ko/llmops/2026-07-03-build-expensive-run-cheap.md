@@ -12,6 +12,7 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/build-expensive-run-cheap/"
 categories:
   - llmops
+published: false
 ---
 
 ![핵심 개념 일러스트]({{ '/assets/images/build-expensive-run-cheap-hero.png' | relative_url }})
