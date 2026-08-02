@@ -25,7 +25,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/owm/minimax-m2-7-openweight-
 reading_time: true
 categories:
   - owm
-published: false
 audiobook: /assets/audio/posts/minimax-m2-7-openweight-agent/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

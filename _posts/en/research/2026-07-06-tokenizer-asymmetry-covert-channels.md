@@ -21,7 +21,6 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/en/research/tokenizer-asymmetry-covert-channels/"
-published: false
 ---
 
 ## Who should read this
