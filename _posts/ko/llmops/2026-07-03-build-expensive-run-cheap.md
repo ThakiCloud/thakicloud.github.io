@@ -13,6 +13,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/build-expensive-run-c
 categories:
   - llmops
 published: false
+audiobook: /assets/audio/posts/build-expensive-run-cheap/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![핵심 개념 일러스트]({{ '/assets/images/build-expensive-run-cheap-hero.png' | relative_url }})
@@ -129,3 +131,16 @@ GLM 5.2와 Kimi K2.7-Code 같은 최신 오픈웨이트 모델을 조합해 비�
 
 - [2026년 오픈소스 LLM 정리 (Hugging Face Blog)](https://huggingface.co/blog/daya-shankar/open-source-llms)
 - [GLM 5.2 vs Kimi K2.7 Code: 오픈웨이트 에이전트 코딩 비교 (Groundy)](https://groundy.com/articles/glm-5-2-vs-kimi-k2-7-code-two-open-weight-bets-on-agentic-coding/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![build-expensive-run-cheap 슬라이드 1](/assets/images/build-expensive-run-cheap-slide-01.png)
+
+![build-expensive-run-cheap 슬라이드 2](/assets/images/build-expensive-run-cheap-slide-02.png)
+
+![build-expensive-run-cheap 슬라이드 3](/assets/images/build-expensive-run-cheap-slide-03.png)
+
+![build-expensive-run-cheap 슬라이드 4](/assets/images/build-expensive-run-cheap-slide-04.png)
+
