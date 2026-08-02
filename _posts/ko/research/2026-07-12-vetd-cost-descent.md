@@ -21,6 +21,7 @@ author_profile: true
 toc: true
 categories:
   - research
+published: false
 ---
 
 ## 문제는 모델이 아니라 배정입니다
