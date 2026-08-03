@@ -20,7 +20,6 @@ audiobook: https://drive.google.com/file/d/1dpp3fHV3LJfzDdEbUoR5rtgeBvolAVng/vie
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 categories:
   - research
-published: false
 ---
 
 ## 개요

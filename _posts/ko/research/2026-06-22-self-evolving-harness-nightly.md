@@ -22,7 +22,6 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1ts2x6g23o7rkcvP4RyYXy8ko7PE1MF4z/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![매일 밤 스스로 진화하는 AI 하네스]({{ '/assets/images/self-evolving-harness-nightly-hero.webp' | relative_url }})

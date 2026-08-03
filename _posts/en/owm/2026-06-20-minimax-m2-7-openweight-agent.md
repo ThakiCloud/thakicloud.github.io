@@ -26,7 +26,6 @@ lang: en
 reading_time: true
 categories:
   - owm
-published: false
 ---
 
 ⏱️ **Estimated reading time**: 7 min

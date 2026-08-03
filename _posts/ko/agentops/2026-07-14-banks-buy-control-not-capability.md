@@ -23,7 +23,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/banks-buy-control-n
 audiobook: "https://drive.google.com/file/d/1qOAObpT4rNlFFeE4sSkqDspI39KsVI6V/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 ![자율은 스위치가 아니라 다이얼입니다: 은행이 능력보다 먼저 사는 것 개념을 형상화한 이미지](/assets/images/banks-buy-control-not-capability-hero.png)

@@ -16,7 +16,6 @@ toc: true
 toc_sticky: true
 categories:
   - research
-published: false
 audiobook: /assets/audio/posts/skillret-skill-retrieval-benchmark-thakicloud/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

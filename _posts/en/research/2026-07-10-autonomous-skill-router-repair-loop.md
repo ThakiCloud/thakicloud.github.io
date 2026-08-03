@@ -13,7 +13,6 @@ toc: true
 audiobook: "https://drive.google.com/file/d/19T5yQEscZGIOXZUFDvXaDV4k74iMS2xo/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 If you have ever operated a production agent harness that routes more than 1,600 skills and subagents through search, or if you are designing a structure that serves a large skill or tool library with a single retriever, the problem this post addresses will feel familiar. In what is called "compositional skill routing," where a user request is split into several sub-tasks and each sub-task is matched to the right skill to form a chain, the prevailing assumption has been that "if decomposition is done well, retrieval is almost always correct." This paper picks up where a prior study left off, a study that showed this assumption breaks down in a real mixed Korean-English production environment, and empirically tests whether that problem can actually be fixed by an unattended loop that runs overnight rather than by a human.

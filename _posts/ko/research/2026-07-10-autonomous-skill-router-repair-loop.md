@@ -8,7 +8,6 @@ tags: [스킬라우팅, 에이전트하네스, 자율복구루프, 루프엔지�
 categories: [research]
 author_profile: true
 toc: true
-published: false
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/autonomous-skill-router-repair-loop/"
 audiobook: /assets/audio/posts/autonomous-skill-router-repair-loop/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"

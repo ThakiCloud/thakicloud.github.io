@@ -27,7 +27,6 @@ categories:
   - owm
 audiobook: /assets/audio/posts/minimax-m2-7-openweight-agent/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

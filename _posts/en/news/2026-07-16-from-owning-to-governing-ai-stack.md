@@ -18,7 +18,6 @@ categories:
   - news
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/from-owning-to-governing-ai-stack/"
-published: false
 ---
 
 ![Illustration of the core idea of The Day Apple's Crown Sat on Someone Else's Chips: The AI Era Moves From Owning to Governing](/assets/images/from-owning-to-governing-ai-stack-hero.png)

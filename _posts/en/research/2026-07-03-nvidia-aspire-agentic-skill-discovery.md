@@ -20,7 +20,6 @@ toc: true
 toc_label: "Contents"
 toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/nvidia-aspire-agentic-skill-discovery/"
-published: false
 ---
 
 ![An abstract lattice of glowing nodes compounding into a dense, reusable structure]({{ '/assets/images/nvidia-aspire-agentic-skill-discovery-hero.webp' | relative_url }})

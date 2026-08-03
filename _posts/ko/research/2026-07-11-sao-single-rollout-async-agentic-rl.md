@@ -18,7 +18,6 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/sao-single-rollout-async-agentic-rl/"
 audiobook: /assets/audio/posts/sao-single-rollout-async-agentic-rl/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 에이전트를 강화학습으로 다듬는다는 말은 이제 실험실 용어가 아닙니다. SWE-Bench처럼 코드베이스를 수십 턴에 걸쳐 고치는 작업, 수학 증명을 여러 단계로 풀어 가는 작업을 잘하는 모델은 대부분 사전학습만으로 만들어지지 않습니다. 사후학습(post-training) 단계에서 실제로 도구를 쓰고 환경과 상호작용하는 롤아웃(rollout)을 돌려 보상을 주는 방식이 핵심입니다. 그런데 이 롤아웃이 길어질수록, 지금까지 표준처럼 쓰이던 학습 방식이 무너지기 시작합니다.

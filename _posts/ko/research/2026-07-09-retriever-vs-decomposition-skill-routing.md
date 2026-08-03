@@ -17,7 +17,6 @@ categories:
   - research
 author_profile: true
 toc: true
-published: false
 audiobook: /assets/audio/posts/retriever-vs-decomposition-skill-routing/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/retriever-vs-decomposition-skill-routing/"
