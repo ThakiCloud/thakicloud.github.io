@@ -21,11 +21,21 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/tokenizer-asymmetry-covert-channels/"
+audiobook: "https://drive.google.com/file/d/1Zv9sONC0tLR2W6BZ-RdoKxmPfhg-lGpm/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
+
+![감시 모델이 읽지 못하는 글자들: 토크나이저 비대칭이 여는 AI 통제의 은닉 채널 개념을 형상화한 이미지](/assets/images/tokenizer-asymmetry-covert-channels-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 이 글을 누가 읽으면 좋은가
 
 이 글은 온프렘·멀티테넌트 환경에서 LLM 서빙 인프라를 운영하거나, 신뢰할 수 없는 모델의 출력을 별도 감시 모델로 검사하는 파이프라인을 설계하는 엔지니어를 위해 씁니다. 프롬프트 인젝션이나 가드레일 우회 같은 표층 공격은 익숙해도, "감시 모델과 정책 모델이 같은 토크나이저를 쓰지 않는다"는 사실 자체가 보안 구멍이 될 수 있다는 점은 낯설 수 있습니다. 이 논문은 바로 그 지점을 정면으로 다룹니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/tokenizer-asymmetry-covert-channels/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 문제의식: 감시자와 정책 모델이 같은 글자를 읽는다는 착각
 
@@ -60,6 +70,10 @@ ThakiCloud 입장에서 이 연구는 서로 다른 테넌트와 모델이 이�
 사회적으로 이 연구는 '신뢰 못 하는 강한 모델을 약한 감시로 통제한다'는 AI 안전의 핵심 축이 토크나이저 층이라는 뜻밖의 지점에서 새고 있었다는 사실을 드러냅니다. 그리고 그 새는 지점을 막는 방법이 모델 가중치 접근이나 대규모 재학습 없이도 적용 가능한 결정론적 게이트라는 점이 중요합니다. 값비싼 학습된 방어가 아니라 누구나 구현할 수 있는 인프라 레벨 조치로 안전장치를 넓힐 수 있다는 뜻이기 때문입니다.
 
 과학적으로는 접근하는 지점 자체가 새롭습니다. 의미론적 스테가노그래피, 즉 패러프레이징을 견디는 개념적 은닉은 이미 여러 연구가 다뤘습니다. 이 논문은 그와는 완전히 다른 층위인 '토크나이저 정규화 비대칭'이라는, 측정 가능하고 정보이론적으로 정의되는 은닉 채널 용량 지표를 새로 세우고, 감시-정책 토크나이저 쌍에 대한 채널 상한을 최근의 언트러스티드 모니터링 문헌 위에 추가합니다. 스테가노그래피 능력이 아니라 인프라 구성 자체가 채널을 여는 소스라는 점을 짚어낸 것이 기존 문헌과 구별되는 지점입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/tokenizer-asymmetry-covert-channels/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 한계와 다음 단계
 

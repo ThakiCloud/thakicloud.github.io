@@ -20,7 +20,6 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/banks-buy-control-not-capability/"
-published: false
 audiobook: "https://drive.google.com/file/d/1qOAObpT4rNlFFeE4sSkqDspI39KsVI6V/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"

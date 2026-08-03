@@ -18,7 +18,6 @@ toc_label: "Contents"
 toc_icon: "robot"
 categories:
   - agentops
-published: false
 audiobook: "https://drive.google.com/file/d/1GpkmWlGhnmDnSg0Z5_k1ZwQCfulCmhWn/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"

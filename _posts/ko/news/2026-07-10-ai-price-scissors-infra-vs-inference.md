@@ -20,7 +20,6 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-price-scissors-infra-vs-inference/"
-published: false
 audiobook: "https://drive.google.com/file/d/1gSpJ4N7oAw9vrpZpgK46X0F6abZzsU-k/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"

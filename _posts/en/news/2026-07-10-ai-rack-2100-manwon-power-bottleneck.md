@@ -21,7 +21,6 @@ tags:
   - cost-routing
 categories:
   - news
-published: false
 ---
 
 ![Concept diagram of the power bottleneck narrowing into a server rack, with the software layer above it]({{ '/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp' | relative_url }})
