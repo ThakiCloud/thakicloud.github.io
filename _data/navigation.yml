@@ -1,33 +1,118 @@
-# Single combined browse page (the home) + language switcher.
-# Categories / Tags / Comics were merged into the home page, which filters in
-# place via ?category= and ?tags=. The "Posts" nav item was removed since the
-# whole site is one page and the masthead logo already links to it.
+# Masthead navigation — mirrors the thakicloud.com website menu so the blog
+# reads as the same site (Product ▾ / Tech Blog / Company / Contact + language).
 #
-# Arabic (ar) is disabled site-wide — the العربية option was removed from every
-# switcher. Re-enable by restoring the `العربية / /ar/` child in each list and
-# the `ar:` block, plus removing the ar excludes in _config.yml.
+# Item shapes the masthead understands:
+#   • plain link      -> title + url            (url may be absolute to thakicloud.com)
+#   • dropdown        -> title + children[]     (each child: title [+ description] [+ url])
+#                        a child WITHOUT url renders as a section header
+#   • language toggle -> title + type: language + children[] of /ko/ /en/ (+ /ar/)
+#                        (special-cased: resolves the SAME post's URL per language)
+#
+# Product links are absolute (https://thakicloud.com/...) because those pages
+# live on the main site, not the blog. "Tech Blog" points to the blog home.
+#
+# Arabic (ar) is disabled site-wide. Re-enable by restoring the العربية child in
+# each language switcher and the `ar:` block, plus the ar excludes in _config.yml.
 
-# main links (default - Korean)
+# ------- shared building blocks (YAML anchors) -------------------------------
+_product_children_en: &product_children_en
+  - title: "On-Prem AI Cloud"
+  - title: "Aegis"
+    description: "Private Cloud Platform"
+    url: "https://thakicloud.com/aegis"
+  - title: "Metis"
+    description: "AI Inference Platform"
+    url: "https://thakicloud.com/metis"
+  - title: "Maxis"
+    description: "AI Training Platform"
+    url: "https://thakicloud.com/maxis"
+  - title: "Paxis"
+    description: "Enterprise Agent Platform"
+    url: "https://thakicloud.com/paxis"
+  - title: "Capsis"
+    description: "Container Platform"
+    url: "https://thakicloud.com/capsis"
+  - title: "AI Cloud"
+  - title: "Velox"
+    description: "Bare Metal Cloud"
+    url: "https://thakicloud.com/velox"
+  - title: "Telox"
+    description: "AI Native Cloud"
+    url: "https://thakicloud.com/telox"
+
+_product_children_ko: &product_children_ko
+  - title: "On-Prem AI Cloud"
+  - title: "Aegis"
+    description: "프라이빗 클라우드 플랫폼"
+    url: "https://thakicloud.com/aegis"
+  - title: "Metis"
+    description: "AI 추론 플랫폼"
+    url: "https://thakicloud.com/metis"
+  - title: "Maxis"
+    description: "AI 학습 플랫폼"
+    url: "https://thakicloud.com/maxis"
+  - title: "Paxis"
+    description: "엔터프라이즈 에이전트 플랫폼"
+    url: "https://thakicloud.com/paxis"
+  - title: "Capsis"
+    description: "컨테이너 플랫폼"
+    url: "https://thakicloud.com/capsis"
+  - title: "AI Cloud"
+  - title: "Velox"
+    description: "베어메탈 클라우드"
+    url: "https://thakicloud.com/velox"
+  - title: "Telox"
+    description: "AI Native 클라우드"
+    url: "https://thakicloud.com/telox"
+
+# ------- main links (default - Korean) ---------------------------------------
 main:
+  - title: "제품"
+    children: *product_children_ko
+  - title: "Tech Blog"
+    url: /ko/
+  - title: "회사 소개"
+    url: "https://thakicloud.com/company"
+  - title: "문의하기"
+    url: "https://thakicloud.com/contact"
   - title: "언어"
+    type: language
     children:
       - title: "한국어"
         url: /ko/
       - title: "English"
         url: /en/
 
-# 한국어 네비게이션
+# ------- 한국어 네비게이션 -----------------------------------------------------
 ko:
+  - title: "제품"
+    children: *product_children_ko
+  - title: "Tech Blog"
+    url: /ko/
+  - title: "회사 소개"
+    url: "https://thakicloud.com/company"
+  - title: "문의하기"
+    url: "https://thakicloud.com/contact"
   - title: "언어"
+    type: language
     children:
       - title: "한국어"
         url: /ko/
       - title: "English"
         url: /en/
 
-# 영어 네비게이션
+# ------- 영어 네비게이션 -------------------------------------------------------
 en:
+  - title: "Product"
+    children: *product_children_en
+  - title: "Tech Blog"
+    url: /en/
+  - title: "Company"
+    url: "https://thakicloud.com/company"
+  - title: "Contact"
+    url: "https://thakicloud.com/contact"
   - title: "Language"
+    type: language
     children:
       - title: "한국어"
         url: /ko/
