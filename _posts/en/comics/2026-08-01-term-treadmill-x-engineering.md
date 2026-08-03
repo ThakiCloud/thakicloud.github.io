@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/term-treadmill-x-engineering/strip.png
+video: /assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4
 ---
 
 Every season, AI coding coins a new discipline. It started with prompt engineering, then context, harness, loop, and now graph engineering. Each one gets crowned the next big thing, though half the time it is the same idea wearing a new badge. Eugene, Paxis and Metis decide to chase the parade of terms on a treadmill.
@@ -20,6 +21,15 @@ Every season, AI coding coins a new discipline. It started with prompt engineeri
 ![One More Word to Learn](/assets/images/posts/comics/term-treadmill-x-engineering/strip.png)
 
 > Source: [from prompt → context → harness → loop → graph engineering (via @akshay_pachaar)](https://x.com/hjguyhan/status/2082589434772681072) · twitter
+
+**▶ Animated edition — the characters speak for themselves (Korean audio)**
+
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/term-treadmill-x-engineering/strip.png" style="width:100%;border-radius:8px;">
+  <source src="/assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4" type="video/mp4">
+  <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/term-treadmill-x-engineering/comic.en.vtt" default>
+</video>
+
+[Download video](/assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4)
 
 ## What this means for ThakiCloud
 

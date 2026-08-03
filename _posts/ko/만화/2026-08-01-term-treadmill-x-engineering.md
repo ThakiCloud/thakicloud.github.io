@@ -13,6 +13,7 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/만화/term-treadmill-x-engineering/strip.png
+video: /assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4
 ---
 
 AI 코딩판에는 새 용어가 계절마다 하나씩 튀어나옵니다. 프롬프트 엔지니어링으로 시작해서 컨텍스트 엔지니어링, 하네스 엔지니어링, 루프 엔지니어링, 이번엔 그래프 엔지니어링까지 붙었죠. 다들 '이게 진짜 다음 물결'이라고 외치지만, 이름표만 갈아 끼운 경우도 많습니다. 유진과 파시스, 메티스가 러닝머신 위에서 그 용어 행렬을 따라잡아 보기로 했습니다.
@@ -20,6 +21,15 @@ AI 코딩판에는 새 용어가 계절마다 하나씩 튀어나옵니다. 프�
 ![용어가 또 하나 늘었다](/assets/images/posts/만화/term-treadmill-x-engineering/strip.png)
 
 > 원 뉴스: [from prompt → context → harness → loop → graph engineering (via @akshay_pachaar)](https://x.com/hjguyhan/status/2082589434772681072) · twitter
+
+**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/term-treadmill-x-engineering/strip.png" style="width:100%;border-radius:8px;">
+  <source src="/assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4" type="video/mp4">
+  <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/term-treadmill-x-engineering/comic.ko.vtt" default>
+</video>
+
+[영상 다운로드](/assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4)
 
 ## ThakiCloud 제품 적용 시사점
 
