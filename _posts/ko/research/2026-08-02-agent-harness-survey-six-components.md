@@ -17,6 +17,9 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-harness-survey-six-components/"
+audiobook: "https://drive.google.com/file/d/133SLW8FJSiNu8q5oATYjBJkP_AA3t2kK/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 에이전트가 기대만큼 안 움직이면 대부분 모델부터 의심합니다. 등급을 올리고, 프롬프트를 다시 쓰고, 그래도 안 되면 다음 모델을 기다립니다. 그런데 2026년 들어 쌓인 보고들은 다른 곳을 가리킵니다. 같은 모델을 서로 다른 껍데기에 넣었더니 점수가 몇 배씩 벌어졌다는 관찰이 반복해서 나왔습니다. 그 껍데기를 부르는 이름이 하네스입니다. 이번에 정리된 서베이 한 편은 이 껍데기에 처음으로 형식과 부품 목록을 붙였습니다.
@@ -28,6 +31,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-harness-surve
 ## 왜 읽어야 하나
 
 이 글은 에이전트를 데모가 아니라 프로덕션에 올려야 하는 플랫폼 엔지니어와, 성능이 안 나올 때 모델 등급을 올릴지 하네스를 고칠지 결정해야 하는 팀 리드를 위해 썼습니다. 결론을 먼저 말씀드리면, **이 서베이의 진짜 기여는 "하네스가 중요하다"는 주장이 아니라 하네스를 여섯 개 부품으로 쪼개서 무엇이 비었는지 셀 수 있게 만든 완전성 행렬입니다.** 주장은 이미 업계 상식에 가까웠고, 없던 것은 측정 도구였습니다. 이 글에서는 그 여섯 축이 무엇인지 짚고, 같은 자로 ThakiCloud가 실제로 돌리는 하네스를 재서 나온 숫자와 그 과정에서 발견한 구멍 두 곳까지 그대로 공개합니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-harness-survey-six-components/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 개요
 
@@ -167,6 +174,10 @@ python3 scripts/loops/build_loop_registry.py --check
 서두에서 말씀드린 결론을 다시 확인하면, 이 논문의 값어치는 주장이 아니라 측정 도구에 있습니다. 실제로 우리도 같은 자를 대보고 나서야 루프 레지스트리에 실행 스크립트가 빠진 항목 두 개와 경고 두 건을 발견했습니다. 그 전까지 그 구멍은 아무 증상도 내지 않고 있었습니다.
 
 다음에 에이전트 파이프라인이 기대만큼 안 나올 때, 모델 카탈로그를 열기 전에 여섯 축을 한 줄씩 적어보시길 권합니다. 어느 칸이 비었는지 세는 데는 오 분이면 충분하고, 그 오 분이 모델 등급 하나보다 더 큰 차이를 만드는 경우가 생각보다 많습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-harness-survey-six-components/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

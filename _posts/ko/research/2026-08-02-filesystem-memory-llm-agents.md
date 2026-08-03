@@ -17,6 +17,9 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/filesystem-memory-llm-agents/"
+audiobook: "https://drive.google.com/file/d/1b1T603SPbnMBaZ2CVND8l33luD-MFPoq/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 지금 실제로 돌아가는 LLM 에이전트의 장기 기억을 열어보면 대개 특별한 것이 없습니다. 마크다운 파일이 담긴 폴더 트리 하나입니다. 에이전트가 일반 파일 도구로 읽고, 쓰고, 가끔 스스로 재배치합니다. 벡터 데이터베이스도, 전용 메모리 엔진도 아닙니다. 그런데 이 기본값이 어떤 성질을 갖는지는 지금까지 거의 측정된 적이 없습니다.
@@ -28,6 +31,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/filesystem-memory-l
 ## 왜 읽어야 하나
 
 이 글은 에이전트에게 장기 기억을 붙여 운영하는 플랫폼 엔지니어와, 메모리 계층에 돈과 시간을 얼마나 쓸지 결정해야 하는 팀 리드를 위해 썼습니다. 결론을 먼저 말씀드리면, **정리는 검색 비용을 확실히 사지만 정답률은 사지 못합니다.** 저장소를 폴더로 잘 정리해 두면 검색에 드는 비용이 자료가 많을수록 크게 줄어드는데, 정리 그 자체를 더 나은 답으로 바꾼 에이전트는 이 연구에서 하나도 관측되지 않았습니다. 이 글에서는 그 근거가 된 다섯 개 질문을 짚고, 같은 자를 ThakiCloud가 실제로 굴리는 메모리 저장소에 대봤을 때 나온 숫자와 거기서 드러난 구조적 편중까지 그대로 공개합니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/filesystem-memory-llm-agents/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 개요
 
@@ -161,6 +168,10 @@ wc -c memory/HOT_MEMORY.md                    # 4256
 서두에서 말씀드린 결론을 다시 확인하면, 정리는 품질 투자가 아니라 비용 투자입니다. 우리 저장소를 재봤을 때도 같은 그림이 나왔습니다. 파일 1878개 중 1789개가 원문 로그였고, 정돈된 계층은 5퍼센트가 되지 않았습니다. 커지는 쪽은 부채이고 멈춰 있는 쪽은 자산이었습니다.
 
 다음에 에이전트 메모리 계층을 손볼 일이 생기면, 정리 알고리즘을 고치기 전에 두 가지를 먼저 정하시길 권합니다. 이 저장소를 읽는 것이 강한 에이전트인지 약한 에이전트인지, 그리고 지금 아픈 것이 정답률인지 검색 비용인지입니다. 이 논문에 따르면 후자만이 정리로 고쳐집니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/filesystem-memory-llm-agents/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 
