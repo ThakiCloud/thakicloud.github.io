@@ -34,7 +34,10 @@
     </div>
     <script>
       (function () {
-        if (window.top !== window.self) { document.documentElement.classList.add("is-embedded"); return; }
+        // Inside the homepage iframe shell the parent provides the nav, so hide
+        // the injected nav (html.is-embedded). The footer still renders in both
+        // views — the homepage /blog iframe has no footer of its own.
+        if (window.top !== window.self) { document.documentElement.classList.add("is-embedded"); }
         var s = document.createElement("script");
         s.src = "{{ '/assets/js/thaki-chrome.js' | relative_url }}";
         s.defer = true;
@@ -53,10 +56,10 @@
     {% endif %}
 
     <div id="footer" class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include_cached footer.html %}
-      </footer>
+      {%- comment %} Site footer: the embed (thaki-chrome.js) mounts the REAL
+         thakicloud.com Footer into #thaki-footer (Shadow DOM), so it's identical
+         to the main site. Shown in both standalone and embedded views. {% endcomment -%}
+      <div id="thaki-footer"></div>
     </div>
 
     {% include scripts.html %}
