@@ -16,7 +16,6 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-template-agent-memory/"
-published: false
 ---
 
 코딩 에이전트를 매일 쓰다 보면 한 가지 벽에 반복해서 부딪힙니다. 어제 나눈 결정, 지난주에 정한 컨벤션, 특정 동료의 업무 스타일을 에이전트가 매 세션마다 처음 듣는 것처럼 다시 물어봅니다. 이 문제를 값비싼 벡터 데이터베이스나 별도 메모리 인프라 없이, 그냥 **평범한 폴더 구조와 마크다운 파일 하나로** 풀어낸 저장소가 최근 공개되어 개발자들 사이에서 화제가 되었습니다. `Instructor` 라이브러리를 만든 jxnl(Jason Liu)이 공개한 `personal-monorepo-template`입니다. 이 글은 그 구조를 분해하고, 스킬과 지식을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 설계가 무엇을 시사하는지 검증합니다.

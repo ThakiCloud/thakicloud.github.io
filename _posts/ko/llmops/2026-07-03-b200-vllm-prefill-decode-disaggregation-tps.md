@@ -21,7 +21,6 @@ header:
   image: /assets/images/b200-vllm-pd-disaggregation-hero.webp
 categories:
   - llmops
-published: false
 ---
 
 ![B200 두 장이 Prefill과 Decode를 나눠 맡는 구조를 형상화한 이미지]({{ '/assets/images/b200-vllm-pd-disaggregation-hero.webp' | relative_url }})

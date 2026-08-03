@@ -16,7 +16,6 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-multiplayer-collaborative-agents/"
-published: false
 ---
 
 ![고립된 에이전트에서 연결된 협업 에이전트 네트워크로 향하는 개념도]({{ '/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp' | relative_url }})

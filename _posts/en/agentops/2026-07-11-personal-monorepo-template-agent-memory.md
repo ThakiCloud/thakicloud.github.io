@@ -17,7 +17,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/personal-monorepo-template-agent-memory/"
-published: false
 ---
 
 Anyone who uses a coding agent daily runs into the same wall over and over. Decisions made yesterday, conventions set last week, a particular colleague's way of working: the agent asks about all of it again every session, as if hearing it for the first time. A repository that solves this problem without an expensive vector database or dedicated memory infrastructure, using nothing more than **a plain folder structure and a single markdown file**, has recently gone public and stirred up developers. It is `personal-monorepo-template`, released by jxnl (Jason Liu), the creator of the `Instructor` library. This post breaks down that structure and examines what this design implies from ThakiCloud's operational standpoint, where we treat skills and knowledge as first-class resources.

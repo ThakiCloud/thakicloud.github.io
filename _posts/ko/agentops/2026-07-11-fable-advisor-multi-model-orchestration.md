@@ -17,7 +17,6 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable-advisor-multi-model-orchestration/"
-published: false
 ---
 
 코딩 에이전트를 쓰다 보면 자연스럽게 드는 생각이 있습니다. 스펙을 정교하게 쓰고 결과 diff를 날카롭게 리뷰하는 일과, 실제로 코드를 한 줄 한 줄 타이핑하는 일은 성격이 다른 작업인데, 왜 같은 모델 하나가 둘을 다 해야 하는가입니다. 최근 공개되어 화제가 된 `fable-advisor` 플러그인은 이 질문에 정면으로 답합니다. **Claude Fable 5는 지휘만 하고, 실제 구현은 Grok 4.5가 전담**하는 크로스벤더 워크플로입니다. 이 글은 그 구조를 분해하고, 멀티에이전트와 모델 라우팅을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 설계가 무엇을 시사하는지 검증합니다.
