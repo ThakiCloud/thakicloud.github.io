@@ -17,6 +17,7 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/glm-5-2-ppo-icepop/"
+published: false
 ---
 
 대규모 언어 모델의 강화학습(RL) 포스트트레이닝을 실제로 돌려 본 팀이라면, 지난 1~2년의 흐름이 한 방향으로 쏠려 있었다는 사실을 압니다. DeepSeek이 GRPO를 공개한 이후, 별도의 value model(critic)을 없애고 그룹 내부의 상대 보상만으로 advantage를 추정하는 방식이 사실상 표준처럼 자리 잡았습니다. critic을 학습시키지 않아도 되니 메모리와 연산이 절약되고, 구현도 단순해집니다. "critic은 이제 필요 없다"는 이야기가 반쯤은 정설처럼 통했습니다.

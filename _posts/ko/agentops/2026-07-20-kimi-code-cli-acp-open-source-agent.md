@@ -21,6 +21,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/kimi-code-cli-acp-open-source-agent/"
+published: false
 ---
 
 터미널에서 코딩 에이전트를 쓰는 개발자, 특히 코드를 외부로 내보낼 수 없는 조직에서 일하는 분들을 위한 글입니다. 결론부터 말하면 **Kimi Code CLI**의 진짜 무기는 세간에 도는 "클로드 코드에 없는 기능"이 아니라, 개방 표준 ACP 네이티브 지원과 온프렘 서빙까지 열어 둔 모델 개방성입니다.
@@ -407,6 +408,19 @@ macOS는 `brew install kimi-code`, 윈도우는 파워셸 스크립트도 제공
 이 개방성은 셀프호스팅 관점에서 의미가 큽니다. 오픈웨이트 K 시리즈를 사내 GPU 클러스터에 올리고 CLI를 내부 엔드포인트로 라우팅하면, 외부 API 의존이나 데이터 반출 없이 사내 코딩 에이전트를 구축할 수 있습니다. 코드가 밖으로 나가면 안 되는 금융이나 공공 영역의 온프렘 보안 요건과 정합합니다. 다만 개방성이 곧 손쉬운 셀프호스팅을 뜻하지는 않습니다. 2조8000억 매개변수급 모델을 실제로 서빙하려면 상당한 GPU 자원이 필요하고, 작은 팀에는 API 경로가 여전히 현실적입니다. 도구 생태계의 성숙도와 안정성도 클로드 코드나 코덱스 CLI가 앞설 수 있습니다. 오픈소스라는 사실이 곧 프로덕션 준비 완료는 아닙니다.
 
 그럼에도 개방 표준 위에서 에이전트와 에디터가 느슨하게 결합되는 방향은 분명한 흐름입니다. 특정 벤더 CLI에 종속되지 않고 모델과 에디터를 각각 갈아 끼울 수 있는 세계가 개발자에게 더 유리하며, Kimi Code CLI는 그 세계를 앞당기는 조각 중 하나입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 1](/assets/images/kimi-code-cli-acp-open-source-agent-slide-01.png)
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 2](/assets/images/kimi-code-cli-acp-open-source-agent-slide-02.png)
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 3](/assets/images/kimi-code-cli-acp-open-source-agent-slide-03.png)
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 4](/assets/images/kimi-code-cli-acp-open-source-agent-slide-04.png)
 
 ## 출처
 

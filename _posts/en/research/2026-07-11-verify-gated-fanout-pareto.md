@@ -11,6 +11,7 @@ toc: true
 audiobook: "https://drive.google.com/file/d/1KtL3fNDCDT1c0OZyxlMc8E0SJ5FBummf/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you operate or are considering adopting a fan-out pipeline where multiple agents run in parallel and their results get aggregated, you have probably picked a verifier model and a headcount for the verification step by convention at some point. This post introduces a study that measures what that convention actually costs and what safety it actually buys. The short answer: throwing more expensive models and more of them at verification does not always make the pipeline safer.

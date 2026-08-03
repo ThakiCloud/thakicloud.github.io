@@ -24,6 +24,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1fDt0LLtdJKsiNnLqMuQvWYZH4Y6ldUbL/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 ![Illustration of the core idea of Autonomy Is Not a Switch, It Is a Dial: What Banks Buy Before Capability](/assets/images/banks-buy-control-not-capability-hero.png)

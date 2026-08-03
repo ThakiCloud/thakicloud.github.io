@@ -8,6 +8,10 @@ tags: [스킬라우팅, 에이전트하네스, 자율복구루프, 루프엔지�
 categories: [research]
 author_profile: true
 toc: true
+published: false
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/autonomous-skill-router-repair-loop/"
+audiobook: /assets/audio/posts/autonomous-skill-router-repair-loop/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 1,600개가 넘는 스킬과 서브에이전트를 검색 기반으로 라우팅하는 실전 에이전트 하네스를 운영해 본 적이 있거나, 대규모 스킬·툴 라이브러리를 검색기 하나로 서비스하는 구조를 설계 중인 클라우드·AI 엔지니어라면 이 글이 다루는 문제가 낯설지 않을 것입니다. 사용자 요청을 여러 개의 하위 작업으로 쪼개고, 각 하위 작업에 맞는 스킬을 찾아 체인으로 엮는 이른바 "compositional skill routing"에서 지금까지의 통념은 "분해(decomposition)만 잘하면 검색은 거의 다 맞는다"였습니다. 이 논문은 그 통념이 한국어·영어가 섞인 실전 환경에서는 틀렸다는 직전 연구의 진단을 이어받아, 그 문제를 사람이 아니라 밤새 도는 무인 루프가 실제로 고칠 수 있는지를 실측으로 검증합니다.

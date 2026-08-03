@@ -23,6 +23,7 @@ categories:
   - research
 audiobook: /assets/audio/posts/vetd-cost-descent/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 문제는 모델이 아니라 배정입니다

@@ -23,6 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/atomic-binary-judge-eval-service/"
 audiobook: /assets/audio/posts/atomic-binary-judge-eval-service/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 이 글을 누가 읽으면 좋은가

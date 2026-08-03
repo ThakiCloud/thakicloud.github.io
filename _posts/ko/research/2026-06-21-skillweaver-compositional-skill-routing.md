@@ -23,6 +23,7 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1uWSeG-73f0fnkuJfIpGB4l_K-mlB_9sL/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 LLM 에이전트가 외부 스킬(재사용 가능한 도구 명세)에 의존하는 흐름은 이제 보편적입니다. 그런데 현실의 작업은 스킬을 하나 "고르는" 문제가 아니라 여러 개를 "조합하는" 문제입니다. "딥리서치를 돌리고, 팩트체크한 뒤, 보고서를 docx로 만들고, 슬랙에 올려라" 같은 복합 요청은 단일 스킬 검색으로 풀리지 않습니다. 2026년 6월 16일 arXiv에 공개된 논문 SkillWeaver(arXiv:2606.18051, "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose")는 이 문제를 정식으로 정의하고, 더 중요하게는 **진짜 병목이 어디에 있는지**를 데이터로 짚어냅니다.
