@@ -225,7 +225,10 @@ body { font-family: var(--font-sans); }
 ::-webkit-scrollbar-corner { background: transparent; }
 
 /* Base surfaces ----------------------------------------------------------- */
-html { background-color: var(--bg); }
+/* Always reserve the scrollbar gutter (matches thakicloud.com's `overflow-y:
+   scroll`). Without this the bar appears only after content loads, shifting the
+   centered site nav a few px on navigation ("jank") vs the main site. */
+html { background-color: var(--bg); overflow-y: scroll; }
 body {
   background-color: var(--bg);
   color: var(--text);
