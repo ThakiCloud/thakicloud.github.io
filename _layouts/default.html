@@ -16,8 +16,31 @@
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
-    {% comment %} Top nav removed: the tech blog is embedded in the thakicloud.com
-       shell, which provides the header, language switcher and theme. {% endcomment %}
+
+    {%- comment %} Standalone site nav: inject the REAL thakicloud.com Navbar (built
+       from the homepage source, hosted here at /assets/js/thaki-chrome.js) so the
+       blog reads pixel-identically to the main site. Skipped inside the homepage
+       iframe shell, which already provides the nav. The 57px slot reserves the
+       fixed nav's height; the fallback link keeps a home link before/without JS. {% endcomment -%}
+    <style>
+      #thaki-nav { height: 57px; }
+      html.is-embedded #thaki-nav { display: none; }
+      #thaki-nav .thaki-nav-fallback { position: fixed; top: 0; left: 0; right: 0; height: 57px;
+        display: flex; align-items: center; padding: 0 20px; background: #000; z-index: 40;
+        color: #fff; font-family: "Mona Sans", sans-serif; font-weight: 700; text-decoration: none; }
+    </style>
+    <div id="thaki-nav">
+      <a class="thaki-nav-fallback" href="https://thakicloud.com/">THAKI Cloud</a>
+    </div>
+    <script>
+      (function () {
+        if (window.top !== window.self) { document.documentElement.classList.add("is-embedded"); return; }
+        var s = document.createElement("script");
+        s.src = "{{ '/assets/js/thaki-chrome.js' | relative_url }}";
+        s.defer = true;
+        document.head.appendChild(s);
+      })();
+    </script>
 
     <div class="initial-content">
       {{ content }}
