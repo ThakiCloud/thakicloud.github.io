@@ -45,7 +45,6 @@ I want to stress the second lesson here. This is not free. Those two months were
 
 What the classifier keys on is the hardest part of the design. Request text alone is not enough. Whether the task is generation, edit, or lookup; how large and structured the target codebase is; how deep the expected tool-call chain runs; how similar past requests were handled; these signals together decide whether a request is standardizable. And this judgment cannot be left to the model's self-report. Not the model's claim that "this is an easy request," but a gate where code deterministically measures whether the output passes the same bar as the frontier model, is what earns the router trust. A classifier that quietly passes failures on the cheap lane does not reduce cost; it defers a quality incident.
 
-<figure style="max-width:720px;margin:0 auto">
 ```mermaid
 flowchart TB
     A["User request<br/>(agent action)"] --> B{"Complexity<br/>classifier"}
@@ -56,8 +55,8 @@ flowchart TB
     E --> F["Return response"]
     G["Agent spend & identity layer<br/>wallet · limit · metering"] -. "runaway-loop guard" .-> A
 ```
-<figcaption>Complexity-based routing sends the standardizable many to the cheap lane and only the hard few to the premium lane. Without a quality-parity gate, the cost saving turns into churn.</figcaption>
-</figure>
+
+*Complexity-based routing sends the standardizable many to the cheap lane and only the hard few to the premium lane. Without a quality-parity gate, the cost saving turns into churn.*
 
 ## Not one case, but a whole layer forming
 
