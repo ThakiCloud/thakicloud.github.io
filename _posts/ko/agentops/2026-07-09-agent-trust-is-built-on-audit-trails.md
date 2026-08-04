@@ -20,6 +20,8 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-trust-is-built-on-audit-trails/"
+audiobook: /assets/audio/posts/agent-trust-is-built-on-audit-trails/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 어떤 에이전트가 지난주 여신 심사 보조 업무를 돌렸습니다. 결과는 그럴듯했습니다. 그런데 담당자가 "이 판단을 왜 이렇게 내렸느냐"고 물었을 때, 아무도 그 과정을 되짚지 못했습니다. 모델은 충분히 똑똑했지만, 무엇을 근거로 어떤 도구를 호출했고 어디서 멈췄는지가 남아 있지 않았기 때문입니다. 이 장면이 2026년 7월 9일 오늘, 여러 뉴스가 각자 다른 언어로 가리킨 공통의 빈칸이었습니다.
@@ -84,3 +86,16 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-trust-is-buil
 - [세계 1만5천 AI 석학들 서울 총집결…ICML 2026, 한국 AI 위상 높인다](https://www.aitimes.kr/news/articleView.html?idxno=40833) · 인공지능신문
 - [KT, 'AX연결 허브' 도약…수요 기반 AI 인프라 확충](https://zdnet.co.kr/view/?no=20260706160957) · ZDNet Korea
 - [SKT, 15GW 규모 AI 데이터센터 구축…"아시아 AI 인프라 허브될 것"](https://news.sktelecom.com/227469) · SK텔레콤 뉴스룸
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-trust-is-built-on-audit-trails 슬라이드 1](/assets/images/agent-trust-is-built-on-audit-trails-slide-01.png)
+
+![agent-trust-is-built-on-audit-trails 슬라이드 2](/assets/images/agent-trust-is-built-on-audit-trails-slide-02.png)
+
+![agent-trust-is-built-on-audit-trails 슬라이드 3](/assets/images/agent-trust-is-built-on-audit-trails-slide-03.png)
+
+![agent-trust-is-built-on-audit-trails 슬라이드 4](/assets/images/agent-trust-is-built-on-audit-trails-slide-04.png)
+
