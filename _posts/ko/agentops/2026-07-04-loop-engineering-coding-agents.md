@@ -19,6 +19,7 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/loop-engineering-coding-agents/"
 categories:
   - agentops
+published: false
 ---
 
 ## 개요

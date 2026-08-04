@@ -22,6 +22,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1S80U2C1gCHJ4vvwkIX4TKrIQ6RFhRFEw/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
