@@ -21,6 +21,8 @@ categories:
   - agentops
 header:
   teaser: /assets/images/agentic-software-architecture-design-hero.webp
+audiobook: /assets/audio/posts/agentic-software-architecture-design/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![에이전틱 소프트웨어 설계]({{ '/assets/images/agentic-software-architecture-design-hero.webp' | relative_url }})
