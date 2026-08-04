@@ -21,6 +21,9 @@ categories:
   - dev
 header:
   teaser: /assets/images/local-first-ai-software-development-hero.webp
+ebook: /assets/ebooks/local-first-ai-software-development.pdf
+ebook_title: "로컬 우선 AI 소프트웨어 개발"
+ebook_pages: 27
 ---
 
 ![로컬 우선 AI 소프트웨어 개발]({{ '/assets/images/local-first-ai-software-development-hero.webp' | relative_url }})

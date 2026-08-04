@@ -1619,3 +1619,66 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
 .page__content > table { display: block; overflow-x: auto; max-width: 100%; }
 .page__content .mermaid svg { max-width: 100%; width: 100%; height: auto; }
 .page__content img { max-width: 100%; height: auto; }
+
+
+/* ── Ebook reader (posts that set `ebook:` in front-matter) ────────────────
+   The PDF is the primary artifact these posts were written from, so the card
+   sits above the fold with the reader open rather than hidden behind a link.
+   Tokens only — inherits the data-theme toggle with no dark-mode override. */
+.ebook-reader {
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+.ebook-reader__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.ebook-reader__meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ebook-reader__heading { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+.ebook-reader__title { font-size: 0.78rem; color: var(--text-subtle); }
+.ebook-reader__actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+.ebook-reader__btn {
+  display: inline-block;
+  padding: 0.4em 0.9em;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-decoration: none;
+  border-bottom: 0;
+  transition: background 150ms ease-out, transform 150ms ease-out;
+}
+.ebook-reader__btn:hover { background: var(--accent-hover); transform: translateY(-1px); color: #fff; }
+.ebook-reader__btn:active { transform: scale(0.97); }
+.ebook-reader__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ebook-reader__btn--ghost {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+.ebook-reader__btn--ghost:hover { background: var(--surface-hover); color: var(--accent-hover); }
+.ebook-reader__frame { display: block; width: 100%; height: 70vh; min-height: 420px; border: 0; }
+.ebook-reader__fallback { padding: 1.5rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+.ebook-reader__note {
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+/* Phones have no usable inline PDF viewer (iOS Safari renders nothing at all),
+   so the frame is dropped and the buttons carry the whole card. */
+@media (max-width: 640px) {
+  .ebook-reader__frame { display: none; }
+  .ebook-reader__actions { width: 100%; }
+  .ebook-reader__btn { flex: 1; text-align: center; }
+}

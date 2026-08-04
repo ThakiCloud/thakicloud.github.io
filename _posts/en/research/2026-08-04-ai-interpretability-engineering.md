@@ -21,6 +21,9 @@ categories:
   - research
 header:
   teaser: /assets/images/ai-interpretability-engineering-hero.webp
+ebook: /assets/ebooks/ai-interpretability-engineering.pdf
+ebook_title: "AI Interpretability Engineering"
+ebook_pages: 29
 ---
 
 ![AI Interpretability Engineering]({{ '/assets/images/ai-interpretability-engineering-hero.webp' | relative_url }})

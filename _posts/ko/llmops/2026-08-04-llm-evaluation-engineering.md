@@ -22,6 +22,9 @@ categories:
   - llmops
 header:
   teaser: /assets/images/llm-evaluation-engineering-hero.webp
+ebook: /assets/ebooks/llm-evaluation-engineering.pdf
+ebook_title: "LLM 평가 엔지니어링"
+ebook_pages: 23
 ---
 
 ![LLM 평가 엔지니어링]({{ '/assets/images/llm-evaluation-engineering-hero.webp' | relative_url }})

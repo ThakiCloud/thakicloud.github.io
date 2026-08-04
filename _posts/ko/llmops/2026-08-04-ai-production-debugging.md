@@ -20,6 +20,9 @@ categories:
   - llmops
 header:
   teaser: /assets/images/ai-production-debugging-hero.webp
+ebook: /assets/ebooks/ai-production-debugging.pdf
+ebook_title: "AI 프로덕션 디버깅"
+ebook_pages: 23
 ---
 
 ![AI 프로덕션 디버깅]({{ '/assets/images/ai-production-debugging-hero.webp' | relative_url }})

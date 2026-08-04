@@ -21,6 +21,9 @@ categories:
   - tutorials
 header:
   teaser: /assets/images/ai-native-cicd-one-person-team-hero.webp
+ebook: /assets/ebooks/ai-native-cicd-for-one-person-team.pdf
+ebook_title: "1인 개발자를 위한 AI 네이티브 CI/CD"
+ebook_pages: 21
 ---
 
 ![AI-Native CI/CD for Solo Developers]({{ '/assets/images/ai-native-cicd-one-person-team-hero.webp' | relative_url }})

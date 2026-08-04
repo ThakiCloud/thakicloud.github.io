@@ -21,6 +21,9 @@ categories:
   - agentops
 header:
   teaser: /assets/images/agentic-software-architecture-design-hero.webp
+ebook: /assets/ebooks/agentic-software-architecture.pdf
+ebook_title: "에이전틱 소프트웨어 설계"
+ebook_pages: 21
 ---
 
 ![Agentic software design]({{ '/assets/images/agentic-software-architecture-design-hero.webp' | relative_url }})

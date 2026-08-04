@@ -22,6 +22,9 @@ categories:
   - llmops
 header:
   teaser: /assets/images/ai-cost-engineering-model-routing-hero.webp
+ebook: /assets/ebooks/ai-cost-engineering.pdf
+ebook_title: "AI 비용 공학"
+ebook_pages: 21
 ---
 
 ![AI 비용 공학과 모델 라우팅]({{ '/assets/images/ai-cost-engineering-model-routing-hero.webp' | relative_url }})

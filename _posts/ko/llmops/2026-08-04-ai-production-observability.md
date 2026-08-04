@@ -22,6 +22,9 @@ categories:
   - llmops
 header:
   teaser: /assets/images/ai-production-observability-hero.webp
+ebook: /assets/ebooks/ai-production-observability.pdf
+ebook_title: "AI 프로덕션 옵저버빌리티"
+ebook_pages: 23
 ---
 
 ![AI 프로덕션 옵저버빌리티]({{ '/assets/images/ai-production-observability-hero.webp' | relative_url }})

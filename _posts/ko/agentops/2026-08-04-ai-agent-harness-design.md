@@ -21,6 +21,9 @@ categories:
   - agentops
 header:
   teaser: /assets/images/ai-agent-harness-design-hero.webp
+ebook: /assets/ebooks/ai-agent-harness-design.pdf
+ebook_title: "AI 에이전트 핸스 설계"
+ebook_pages: 22
 ---
 
 ![AI 에이전트 하네스 설계]({{ '/assets/images/ai-agent-harness-design-hero.webp' | relative_url }})
