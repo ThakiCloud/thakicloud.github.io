@@ -25,7 +25,7 @@ All five are useful, and we use all five. But five names do not make five proble
 
 > Source: [RT @akshay_pachaar: from prompt → context → harness → loop → graph engineering.](https://x.com/hjguyhan/status/2082589434772681072) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition, the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/engineering-buzzword-shelf/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4" type="video/mp4">
@@ -37,8 +37,8 @@ All five are useful, and we use all five. But five names do not make five proble
 ## What this means for ThakiCloud
 
 One lesson stuck with us: what survives a renaming cycle is not the label, it's owning the wiring underneath it.
-Paxis is the orchestrator that fans work out to many agents and closes each result with a verification gate. Harness, loop, graph — under every one of those words, that is the actual job: attach tools, catch failures, retry. Metis is the platform that wiring runs on, and we run it inside the customer's own facility. On-prem means it executes on hardware you own; sovereignty means the model, the data, and the infrastructure stay under your control.
-This comic is a product of that same wiring. Picking the story, drafting the script, rendering the panels, cutting the video — all of it runs in our pipeline. So when a sixth name shows up next quarter, we won't be moving house for it.
+Paxis is the orchestrator that fans work out to many agents and closes each result with a verification gate. Harness, loop, graph: under every one of those words, that is the actual job, namely attach tools, catch failures, retry. Metis is the platform that wiring runs on, and we run it inside the customer's own facility. On-prem means it executes on hardware you own; sovereignty means the model, the data, and the infrastructure stay under your control.
+This comic is a product of that same wiring. Picking the story, drafting the script, rendering the panels, cutting the video: all of it runs in our pipeline. So when a sixth name shows up next quarter, we won't be moving house for it.
 
 ---
 

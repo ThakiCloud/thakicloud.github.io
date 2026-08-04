@@ -22,7 +22,7 @@ video: /assets/videos/posts/만화/askchem-claim-grounded-literature/comic.mp4
 
 > 원 뉴스: [AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis](https://huggingface.co/papers/2607.28618) · hf-trending
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/askchem-claim-grounded-literature/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/askchem-claim-grounded-literature/comic.mp4" type="video/mp4">

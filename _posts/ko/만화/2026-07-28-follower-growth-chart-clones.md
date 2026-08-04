@@ -22,7 +22,7 @@ video: /assets/videos/posts/만화/follower-growth-chart-clones/comic.ko.mp4
 
 > 원 뉴스: [RT @benln: Pulled the fastest-growing startups on X by follower growth over last 90 days: https://t.co/RTy5umq7QO](https://x.com/hjguyhan/status/2081867551878070739) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/follower-growth-chart-clones/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/follower-growth-chart-clones/comic.ko.mp4" type="video/mp4">

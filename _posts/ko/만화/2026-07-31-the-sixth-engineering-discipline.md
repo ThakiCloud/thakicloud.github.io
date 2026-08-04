@@ -22,7 +22,7 @@ video: /assets/videos/posts/만화/the-sixth-engineering-discipline/comic.mp4
 
 > 원 뉴스: [RT @akshay_pachaar: from prompt → context → harness → loop → graph engineering.](https://x.com/hjguyhan/status/2082589434772681072) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/the-sixth-engineering-discipline/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/the-sixth-engineering-discipline/comic.mp4" type="video/mp4">

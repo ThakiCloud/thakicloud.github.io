@@ -25,7 +25,7 @@ video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in
 
 > 원 뉴스: [Kimi K3: Open Frontier Intelligence](https://huggingface.co/papers/2607.24653) · hf-trending
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4" type="video/mp4">

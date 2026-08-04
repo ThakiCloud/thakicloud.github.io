@@ -23,7 +23,7 @@ The label started at prompt engineering, went through context, harness, loop, an
 
 > Source: [RT @akshay_pachaar: from prompt → context → harness → loop → graph engineering.](https://x.com/hjguyhan/status/2082589434772681072) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition, the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/the-sixth-engineering-discipline/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/the-sixth-engineering-discipline/comic.mp4" type="video/mp4">

@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png
 video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/downloaded-the-frontier-nowhere-to-plug-it-in/"
 ---
 
 A frontier-grade model just published its full weights. Weights are the billions of numbers a model learned during training, which is to say the brain itself. Publishing them moves you from renting answers through somebody's API to holding the actual thing on disk.
@@ -25,7 +26,7 @@ That is where the fun starts. Anyone can hit download. Far fewer people have som
 
 > Source: [Kimi K3: Open Frontier Intelligence](https://huggingface.co/papers/2607.24653) · hf-trending
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition, the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4" type="video/mp4">

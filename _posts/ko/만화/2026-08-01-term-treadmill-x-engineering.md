@@ -22,7 +22,7 @@ AI 코딩판에는 새 용어가 계절마다 하나씩 튀어나옵니다. 프�
 
 > 원 뉴스: [from prompt → context → harness → loop → graph engineering (via @akshay_pachaar)](https://x.com/hjguyhan/status/2082589434772681072) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/term-treadmill-x-engineering/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4" type="video/mp4">
