@@ -25,6 +25,8 @@ header:
 ebook: /assets/ebooks/ai-api-engineering.pdf
 ebook_title: "AI API 엔지니어링"
 ebook_pages: 40
+audiobook: /assets/audio/posts/llm-api-production-integration-patterns/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![LLM API 프로덕션 통합]({{ '/assets/images/llm-api-production-integration-patterns-hero.webp' | relative_url }})
