@@ -15,6 +15,7 @@ toc: false
 image: /assets/images/posts/만화/benchmark-overfit-own-eval/strip.png
 audiobook: /assets/audio/posts/benchmark-overfit-own-eval/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 이번 주 업계를 달군 소식은 한 중국산 오픈모델이 보안 분야 내부 평가에서 최상위 점수를 받았다는 것입니다. 그런데 발표가 나오기 무섭게 X 타임라인엔 반대 목소리가 돌았어요. 벤치마크에 과적합된 것 아니냐는 의심입니다. 벤치마크 과적합이란 모델이 시험 문제 유형만 달달 외워 점수는 높지만, 처음 보는 실전 문제에는 힘을 못 쓰는 상태를 말합니다. 여기서 평가(eval)는 모델이 실제로 얼마나 일을 잘하는지 재는 시험이고요. 이 만화는 리더보드 1등 점수와 '내 일에서 진짜 되는가'가 전혀 다른 문제라는 지점을 병맛으로 비틀었습니다.
