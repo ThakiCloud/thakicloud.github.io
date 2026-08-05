@@ -14,6 +14,8 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/rented-lifeline-si-cloud/strip.png
 video: /assets/videos/posts/만화/rented-lifeline-si-cloud/comic.mp4
+audiobook: /assets/audio/posts/rented-lifeline-si-cloud/audiobook-ko.mp3
+audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 국내 시스템 통합(SI) 대형 4개사가 클라우드로 실적을 방어했다는 소식입니다. SI는 원래 남의 회사 전산 시스템을 설계하고 지어주던 업이죠. 그 자리를 지금은 퍼블릭 클라우드를 떼다 파는 재판매와 운영 대행이 채웁니다. 매출은 지켰는데 원가표는 남이 씁니다. 밥줄이라는 그 넝쿨이 정확히 누구 나무에 달려 있는지, 정글에서 한번 따라가 봅니다.

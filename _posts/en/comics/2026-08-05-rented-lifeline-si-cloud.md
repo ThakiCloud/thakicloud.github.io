@@ -14,6 +14,8 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/rented-lifeline-si-cloud/strip.png
 video: /assets/videos/posts/만화/rented-lifeline-si-cloud/comic.mp4
+audiobook: /assets/audio/posts/rented-lifeline-si-cloud/audiobook-en.mp3
+audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 Korea's four largest IT integrators just reported that cloud is what saved the quarter. These are firms that used to design and build other companies' systems from scratch. That work has quietly been replaced by reselling and operating someone else's public cloud. Revenue held. The cost sheet is written by a landlord. So we followed the vine up to see whose tree it actually hangs from.
