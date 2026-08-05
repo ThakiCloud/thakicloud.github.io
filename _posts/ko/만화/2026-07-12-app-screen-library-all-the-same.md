@@ -31,3 +31,16 @@ iOS 화면을 짤 때 참고할 곳이 없어 막막했던 분들에게, 62만 �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![app-screen-library-all-the-same 슬라이드 1](/assets/images/app-screen-library-all-the-same-slide-01.png)
+
+![app-screen-library-all-the-same 슬라이드 2](/assets/images/app-screen-library-all-the-same-slide-02.png)
+
+![app-screen-library-all-the-same 슬라이드 3](/assets/images/app-screen-library-all-the-same-slide-03.png)
+
+![app-screen-library-all-the-same 슬라이드 4](/assets/images/app-screen-library-all-the-same-slide-04.png)
+
