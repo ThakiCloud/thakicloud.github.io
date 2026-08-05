@@ -2,13 +2,13 @@
 title: "Thank You in Seven Languages"
 date: 2026-08-04
 categories:
-  - education
+  - comics
 tags:
-  - education
+  - comics
 author_profile: true
 toc: false
-image: /assets/images/posts/교육/thank-you-in-7-languages/recap.png
-video: /assets/videos/posts/교육/thank-you-in-7-languages/edu.en.mp4
+image: /assets/images/posts/만화/thank-you-in-7-languages/recap.png
+video: /assets/videos/posts/만화/thank-you-in-7-languages/edu.en.mp4
 published: false
 ---
 
@@ -18,12 +18,12 @@ This short video teaches thank you in Korean, English, Japanese, Chinese, French
 
 Every word is spoken twice by a native voice, with English subtitles.
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/교육/thank-you-in-7-languages/recap.png" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/교육/thank-you-in-7-languages/edu.en.mp4" type="video/mp4">
-  <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/교육/thank-you-in-7-languages/edu.en.vtt" default>
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/thank-you-in-7-languages/recap.png" style="width:100%;border-radius:8px;">
+  <source src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.en.mp4" type="video/mp4">
+  <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.en.vtt" default>
 </video>
 
-[Download video](/assets/videos/posts/교육/thank-you-in-7-languages/edu.en.mp4)
+[Download video](/assets/videos/posts/만화/thank-you-in-7-languages/edu.en.mp4)
 
 | Language | Word | Pronunciation |
 |---|---|---|

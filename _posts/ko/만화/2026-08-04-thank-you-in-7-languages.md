@@ -2,13 +2,13 @@
 title: "고마워를 일곱 나라 말로"
 date: 2026-08-04
 categories:
-  - 교육
+  - 만화
 tags:
-  - 교육
+  - 만화
 author_profile: true
 toc: false
-image: /assets/images/posts/교육/thank-you-in-7-languages/recap.png
-video: /assets/videos/posts/교육/thank-you-in-7-languages/edu.ko.mp4
+image: /assets/images/posts/만화/thank-you-in-7-languages/recap.png
+video: /assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.mp4
 ---
 
 이 영상은 한국어, 영어, 일본어, 중국어, 프랑스어, 러시아어, 아랍어 일곱 가지 말로 고맙다는 인사를 배우는 아이용 짧은 수업입니다. 각 언어는 그 나라 원어민 목소리로 두 번씩 천천히 들려줘서 따라 말하기 쉽습니다. 아이 옆에 앉아 한 마디씩 같이 따라 해 보면 좋습니다. 하루 만에 일곱 나라 인사말이 입에 붙습니다.
@@ -17,12 +17,12 @@ video: /assets/videos/posts/교육/thank-you-in-7-languages/edu.ko.mp4
 
 각 언어는 원어민 음성으로 두 번씩 나오고, 한국어 자막이 함께 나갑니다.
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/교육/thank-you-in-7-languages/recap.png" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/교육/thank-you-in-7-languages/edu.ko.mp4" type="video/mp4">
-  <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/교육/thank-you-in-7-languages/edu.ko.vtt" default>
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/thank-you-in-7-languages/recap.png" style="width:100%;border-radius:8px;">
+  <source src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.mp4" type="video/mp4">
+  <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.vtt" default>
 </video>
 
-[영상 다운로드](/assets/videos/posts/교육/thank-you-in-7-languages/edu.ko.mp4)
+[영상 다운로드](/assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.mp4)
 
 | 언어 | 표기 | 발음 |
 |---|---|---|
