@@ -9,7 +9,6 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/thank-you-in-7-languages/recap.png
 video: /assets/videos/posts/만화/thank-you-in-7-languages/edu.en.mp4
-published: false
 ---
 
 This short video teaches thank you in Korean, English, Japanese, Chinese, French, Russian and Arabic. Each word is spoken twice, slowly, in a native voice. Watch it with a child and repeat each word out loud once. By the end, a child can say thank you in seven languages.
