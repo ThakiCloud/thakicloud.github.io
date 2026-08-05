@@ -16,6 +16,9 @@ tags:
   - thakicloud
 categories:
   - news
+audiobook: /assets/audio/posts/lead-time-gap-concrete-and-agents/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-and-agents/"
 ---
 
 ![2030년에 도착하는 콘크리트, 16일 만에 일을 끝낸 에이전트 개념을 형상화한 이미지](/assets/images/lead-time-gap-concrete-and-agents-hero.png)
@@ -108,4 +111,16 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 정의한 이유가 여기 있습�
 - 머니투데이방송, [내가 'K-팔란티어'…국방 AI에 뛰어드는 ICT 기업들](https://news.mtn.co.kr/news-detail/2026080414200039433)
 - 중앙일보, ['한국판 팔란티어' 꿈꾸는 네이버, 김선호 전 국방차관 영입](https://www.joongang.co.kr/article/25450803)
 - 디지털데일리, [래블업·제논·셀렉트스타·인이지… AI 스타트업 상장 러시](https://www.ddaily.co.kr/page/view/2026080418165387449)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![lead-time-gap-concrete-and-agents 슬라이드 1](/assets/images/lead-time-gap-concrete-and-agents-slide-01.png)
+
+![lead-time-gap-concrete-and-agents 슬라이드 2](/assets/images/lead-time-gap-concrete-and-agents-slide-02.png)
+
+![lead-time-gap-concrete-and-agents 슬라이드 3](/assets/images/lead-time-gap-concrete-and-agents-slide-03.png)
+
+![lead-time-gap-concrete-and-agents 슬라이드 4](/assets/images/lead-time-gap-concrete-and-agents-slide-04.png)
 

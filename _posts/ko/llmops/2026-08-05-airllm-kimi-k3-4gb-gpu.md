@@ -17,6 +17,8 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/airllm-kimi-k3-4gb-gpu/"
+audiobook: /assets/audio/posts/airllm-kimi-k3-4gb-gpu/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 타임라인에 이런 문장이 돌면 일단 클릭하게 됩니다. 누군가 Kimi K3 2.8조 파라미터를 4GB GPU에서 공짜로 돌렸다. 사실이었습니다. AirLLM이 현존 최대 오픈웨이트 모델 지원을 추가했고, 공개된 측정 로그에는 VRAM 3.72GB라는 숫자가 찍혀 있습니다. 그런데 같은 로그에 토큰 하나를 뽑는 데 약 292초가 걸린다는 숫자도 함께 있습니다. 이 두 숫자를 같이 읽어야 이 기술이 실제로 무엇인지가 보입니다.
