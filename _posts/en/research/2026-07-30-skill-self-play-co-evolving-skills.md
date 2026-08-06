@@ -17,9 +17,15 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/skill-self-play-co-evolving-skills/"
+audiobook: "https://drive.google.com/file/d/1wGOouqrUL9v0qVX2eck6w_L_D-SMg9fR/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 Letting a model invent its own problems and improve by solving them is appealing, but it carries an old weakness: you cannot trust the grading. A paper from Alibaba's Qwen team, posted to arXiv on 24 July 2026, confronts that weakness directly, and finds its remedy somewhere slightly unexpected. Agent skills.
+
+![Illustration of the core idea of Skills as Curriculum: How Qwen's Skill Self-Play Solves the Verification Problem](/assets/images/skill-self-play-co-evolving-skills-hero.png)
+*A visual metaphor for the article's key idea.*
 
 ## Why this is worth reading
 

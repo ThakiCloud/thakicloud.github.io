@@ -16,12 +16,17 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-multiplayer-collaborative-agents/"
-published: false
+audiobook: "https://drive.google.com/file/d/1t1I-rJW8Ke6Fdfn7Nd8BDoCpYJfQxa1s/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![고립된 에이전트에서 연결된 협업 에이전트 네트워크로 향하는 개념도]({{ '/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp' | relative_url }})
 
-코딩 에이전트를 팀에서 쓰다 보면 이상한 벽에 부딪힙니다. 에이전트는 나 혼자만의 것입니다. 옆자리 동료가 같은 저장소를 만지고 있어도, 각자의 Claude는 서로의 존재를 모릅니다. 사람은 슬랙과 화면 공유로 협업하는데, 정작 우리를 대신해 코드를 만지는 에이전트들은 각자의 섬에 갇혀 있습니다. 최근 공개되어 화제가 된 **멀티플레이어 Claude Code**는 바로 이 벽을 겨냥합니다. 같은 터미널을 여러 사람이 함께 쓰고, 각자의 Claude를 서로 연결해 에이전트끼리 대화하게 만드는 실험입니다. 이 글은 이 시도를 계기로 협업 코딩 에이전트가 풀어야 할 설계 과제를 분해하고, 멀티에이전트와 정책을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 방향이 무엇을 시사하는지 검증합니다.
+코딩 에이전트를 팀에서 쓰다 보면 이상한 벽에 부딪힙니다. 에이전트는 나 혼자만의 것입니다. 옆자리 동료가 같은 저장소를 만지고 있어도, 각자의 Claude는 서로의 존재를 모릅니다. 사람은 슬랙과 화면 공유로 협업하는데, 정작 우리를 대신해 코드를 만지는 에이전트들은 각자의 섬에 갇혀 있습니다. 최근 공개되어 화제가 된 **멀티플레이어 Claude Code**는 바로 이 벽을 겨냥합니다. 같은 터미널을 여러 사람이 함께 쓰고, 각자의 Claude를 서로 연결해 에이전트끼리 대화하게 만드는 실험입니다. 팀 단위로 코딩 에이전트를 도입하려는 입장이라면, 에이전트를 연결하는 순간 따라오는 충돌·권한·감사 문제를 미리 가늠해 볼 수 있습니다.
+
+![코딩 에이전트가 서로 대화하기 시작할 때: 멀티플레이어 Claude Code와 협업 에이전트의 설계 개념을 형상화한 이미지](/assets/images/claude-code-multiplayer-collaborative-agents-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -39,7 +44,7 @@ published: false
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -56,7 +61,7 @@ published: false
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -365,7 +370,7 @@ published: false
 
 기존 구조에서 두 개발자의 에이전트는 같은 저장소를 만지더라도 서로를 인식하지 못합니다. 각자 자기 컨텍스트 안에서만 판단하므로, A의 Claude가 리팩터한 인터페이스를 B의 Claude가 모른 채 예전 시그니처로 호출하는 일이 벌어집니다. 협업 구조에서는 세션과 상태가 공유되고, 에이전트끼리 메시지를 주고받기 때문에 이 어긋남을 실시간에 가깝게 줄일 여지가 생깁니다.
 
-다만 발표된 정보만으로는 이 연결이 어느 수준까지 구현되었는지 단정하기 어렵습니다. 공유 터미널이 화면 스트리밍 수준인지, 아니면 에이전트가 실제로 서로의 계획과 편집 의도를 구조화된 형태로 교환하는지에 따라 실용성은 크게 갈립니다. 이 글은 공개된 개념을 근거로 설계 과제를 짚는 데 초점을 맞추며, 검증되지 않은 내부 동작은 단정하지 않습니다.
+다만 발표된 정보만으로는 이 연결이 어느 수준까지 구현되었는지 단정하기 어렵습니다. 공유 터미널이 화면 스트리밍 수준인지, 아니면 에이전트가 실제로 서로의 계획과 편집 의도를 구조화된 형태로 교환하는지에 따라 실용성은 크게 갈립니다. 따라서 아래 설계 과제는 공개된 개념을 근거로 한 것이며, 검증되지 않은 내부 동작을 단정하지는 않습니다.
 
 ## 왜 지금 이 방향인가
 
@@ -397,7 +402,7 @@ published: false
 
 그 아래에서 실행 자원을 받쳐주는 것은 **ai-platform**입니다. 여러 사람과 여러 에이전트가 동시에 격리된 샌드박스에서 코드를 실행하려면 멀티테넌트 격리와 탄력적인 컴퓨트가 필요합니다. K8s와 Kueue 기반 GPU 스케줄링, 멀티테넌트 격리는 협업 에이전트가 실제로 돌아갈 토대를 제공합니다. 온프레미스와 소버린 환경에서도 이 협업 구조를 안전하게 세울 수 있다는 점은, 데이터 유출을 우려하는 조직에 특히 의미가 있습니다.
 
-정리하면, 멀티플레이어 Claude Code가 개인 도구 층에서 실험하는 협업 개념을, Paxis는 제어 평면 층에서 정책과 감사와 오케스트레이션으로 구조화합니다. 두 층은 경쟁이 아니라 보완입니다. 협업 에이전트가 재미있는 데모에서 신뢰할 수 있는 운영으로 넘어가려면, 결국 정책 게이트와 감사 로그와 자원 격리를 갖춘 제어 평면이 필요하기 때문입니다.
+멀티플레이어 Claude Code가 개인 도구 층에서 실험하는 협업 개념을, Paxis는 제어 평면 층에서 정책과 감사와 오케스트레이션으로 구조화합니다. 두 층은 경쟁이 아니라 보완입니다. 협업 에이전트가 재미있는 데모에서 신뢰할 수 있는 운영으로 넘어가려면, 결국 정책 게이트와 감사 로그와 자원 격리를 갖춘 제어 평면이 필요하기 때문입니다.
 
 ## 한계 및 반론
 
@@ -408,6 +413,19 @@ published: false
 셋째, 지금 공개된 멀티플레이어 도구가 실제로 어느 수준의 상태 교환을 구현했는지는 아직 검증되지 않았습니다. 공유 터미널이 화면 공유에 가까운 것인지, 진짜 구조화된 에이전트 간 프로토콜인지에 따라 실용성은 크게 달라집니다. 개념의 방향성은 분명하지만, 프로덕션에 올리기 전에는 신뢰 경계와 감사 추적을 반드시 확인해야 합니다. 흥미로운 데모와 신뢰할 수 있는 인프라 사이에는 여전히 상당한 거리가 있습니다.
 
 그럼에도 방향 자체는 되돌리기 어렵다고 봅니다. 소프트웨어가 팀 작업인 한, 그 팀을 대신하는 에이전트들도 결국 서로 대화해야 합니다. 관건은 협업을 켜느냐 마느냐가 아니라, 그 협업을 **정책과 검증과 감사가 받쳐주는 구조 위에 세우느냐**입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![claude-code-multiplayer-collaborative-agents 슬라이드 1](/assets/images/claude-code-multiplayer-collaborative-agents-slide-01.png)
+
+![claude-code-multiplayer-collaborative-agents 슬라이드 2](/assets/images/claude-code-multiplayer-collaborative-agents-slide-02.png)
+
+![claude-code-multiplayer-collaborative-agents 슬라이드 3](/assets/images/claude-code-multiplayer-collaborative-agents-slide-03.png)
+
+![claude-code-multiplayer-collaborative-agents 슬라이드 4](/assets/images/claude-code-multiplayer-collaborative-agents-slide-04.png)
 
 ## 출처
 

@@ -15,6 +15,7 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/claude-code-open-model-proxy/"
 categories:
   - llmops
+published: false
 ---
 
 ## 개요

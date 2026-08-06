@@ -3,45 +3,151 @@ name: Auto-merge approved PRs
 on:
   pull_request_review:
     types: [submitted]
+  # Manual path: re-run the gate for a PR that was approved while this
+  # workflow was broken, and a way to actually exercise the job end to end.
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: PR number to merge (must already be approved)
+        required: true
 
 permissions:
   contents: write
   pull-requests: write
+  checks: read
+  actions: write   # dispatch the deploy the merge itself cannot trigger
+
+concurrency:
+  group: auto-merge-pr-${{ github.event.pull_request.number || github.event.inputs.pr }}
+  cancel-in-progress: false
 
 jobs:
   auto-merge:
     name: 🤖 Auto-merge approved PRs
     runs-on: ubuntu-latest
-    if: github.event.review.state == 'approved'
+    timeout-minutes: 30
+    # Skip the noise of non-approving reviews; every real gate is re-checked
+    # in the resolve step below, against live state rather than the payload.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.review.state == 'approved'
+
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      # This job posts its own check run against the PR head; excluded when
+      # polling so it never waits on itself.
+      SELF_CHECK_NAME: 🤖 Auto-merge approved PRs
 
     steps:
-      - name: 🤖 Enable auto-merge for approved PRs
-        uses: actions/github-script@v8
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { owner, repo } = context.repo;
-            const pull_number = context.payload.pull_request.number;
-            
-            try {
-              // Enable auto-merge with squash
-              await github.rest.pulls.enableAutoMerge({
-                owner,
-                repo,
-                pull_number,
-                merge_method: 'squash'
-              });
-              
-              console.log(`Auto-merge enabled for PR #${pull_number}`);
-              
-              // Add auto-merge label
-              await github.rest.issues.addLabels({
-                issue_number: pull_number,
-                owner,
-                repo,
-                labels: ['auto-merge']
-              });
-              
-            } catch (error) {
-              console.error('Failed to enable auto-merge:', error.message);
-            } 
+      - name: 🔍 Resolve the PR and confirm it is still mergeable
+        id: resolve
+        env:
+          PR: ${{ github.event.pull_request.number || github.event.inputs.pr }}
+        run: |
+          set -euo pipefail
+
+          # Read live state instead of trusting the event payload: an approval
+          # can be dismissed by a later push (dismiss_stale_reviews_on_push),
+          # and a dispatch carries no review information at all.
+          pr_json=$(gh pr view "$PR" --json \
+            state,isDraft,reviewDecision,headRefName,headRefOid,headRepository,headRepositoryOwner)
+
+          field() { printf '%s' "$pr_json" | jq -r "$1"; }
+          state=$(field '.state')
+          draft=$(field '.isDraft | tostring')
+          decision=$(field '.reviewDecision // "NONE"')
+          head_sha=$(field '.headRefOid')
+          head_ref=$(field '.headRefName')
+          head_repo=$(field '"\(.headRepositoryOwner.login)/\(.headRepository.name)"')
+
+          echo "PR #${PR}: state=${state} draft=${draft} review=${decision} head=${head_ref}@${head_sha:0:7}"
+
+          # `exit 0` only ends this step, not the job, so nothing-to-do has to
+          # be published as an output that the later steps gate on.
+          skip() { echo "$1"; echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0; }
+
+          [ "$state" = "OPEN" ]  || skip "PR is ${state}; nothing to do."
+          [ "$draft" = "false" ] || skip "PR is a draft; nothing to do."
+          # The review gate is enforced here, not bypassed by workflow_dispatch.
+          [ "$decision" = "APPROVED" ] || {
+            echo "::error::PR #${PR} is not approved (reviewDecision=${decision})."; exit 1; }
+
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+          {
+            echo "PR=$PR"
+            echo "HEAD_SHA=$head_sha"
+            echo "HEAD_REF=$head_ref"
+            echo "HEAD_REPO=$head_repo"
+          } >> "$GITHUB_ENV"
+
+      - name: ⏳ Wait for the other checks on the PR head
+        if: steps.resolve.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          deadline=$(( SECONDS + 20 * 60 ))
+
+          while :; do
+            runs=$(gh api "repos/${GH_REPO}/commits/${HEAD_SHA}/check-runs" \
+              --paginate --jq '.check_runs[] | select(.name != env.SELF_CHECK_NAME)
+                               | "\(.status)\t\(.conclusion // "")\t\(.name)"')
+
+            # Any hard failure ends this immediately - never merge a red PR.
+            # skipped and neutral are pass-equivalent and do not block.
+            if failed=$(printf '%s\n' "$runs" \
+              | awk -F'\t' '$2 ~ /^(failure|cancelled|timed_out|startup_failure)$/ {print "  - " $3 " (" $2 ")"}' \
+              | grep .); then
+              echo "::error::PR #${PR} has failing checks; refusing to merge."
+              printf '%s\n' "$failed"
+              exit 1
+            fi
+
+            pending=$(printf '%s\n' "$runs" \
+              | awk -F'\t' '$1 != "completed" && NF {print "  - " $3 " (" $1 ")"}' || true)
+
+            if [ -z "$pending" ]; then
+              echo "All checks on ${HEAD_SHA} are complete."
+              break
+            fi
+
+            if [ "$SECONDS" -ge "$deadline" ]; then
+              echo "::error::Timed out after 20m waiting for checks on PR #${PR}."
+              printf '%s\n' "$pending"
+              exit 1
+            fi
+
+            echo "Waiting on:"
+            printf '%s\n' "$pending"
+            sleep 15
+          done
+
+      - name: 🔀 Squash-merge the approved PR
+        if: steps.resolve.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          # Squash matches the ruleset's allowed_merge_methods. gh exits
+          # non-zero on unresolved review threads, conflicts, or a dismissed
+          # approval - that failure is the point, so it is not swallowed.
+          gh pr merge "$PR" --squash
+
+      - name: 🚀 Trigger the deploy that the merge cannot
+        if: steps.resolve.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          # A merge made with GITHUB_TOKEN raises no `push` event, so jekyll.yml
+          # never sees it and the site silently goes stale - which is exactly
+          # what happened to #117, #120 and #123. workflow_dispatch is not
+          # subject to that recursion guard (verified: GITHUB_TOKEN created a
+          # real dispatch run), so ask for the deploy explicitly.
+          gh workflow run jekyll.yml --ref main
+
+      - name: 🧹 Tidy up after the merge
+        if: success() && steps.resolve.outputs.skip != 'true'
+        continue-on-error: true
+        run: |
+          # Cosmetic only: never fail a completed merge over a label, or over
+          # a branch living in a fork we have no write access to.
+          gh pr edit "$PR" --add-label auto-merge || true
+          if [ "$HEAD_REPO" = "$GH_REPO" ]; then
+            gh api -X DELETE "repos/${GH_REPO}/git/refs/heads/${HEAD_REF}" || true
+          fi

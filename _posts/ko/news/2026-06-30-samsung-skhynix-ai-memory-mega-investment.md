@@ -23,7 +23,6 @@ toc_icon: "microchip"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/samsung-skhynix-ai-memory-mega-investment/"
 categories:
   - news
-published: false
 audiobook: /assets/audio/posts/samsung-skhynix-ai-memory-mega-investment/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

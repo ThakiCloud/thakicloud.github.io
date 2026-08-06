@@ -19,7 +19,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/self-evolving-harness-evaluation/"
-published: false
 ---
 
 Anyone who has run agents for a while has probably seen a graph like this: an agent revises its own prompts, skills, and memory over time, the benchmark score climbs, and the team concludes that "the self-evolving harness works." A recently published study argues that a large part of that graph may be an illusion. Until now, evaluation methods could not tell whether the rising score reflected a genuinely better harness or simply a model that was already good at following instructions. This piece is written for ML and platform engineers who run agents and evolve their skill libraries and harnesses in production. The bottom line up front: the reflex of saying "let's move up a model tier" whenever performance stalls turns out to be only half right, once you look at this study's data.

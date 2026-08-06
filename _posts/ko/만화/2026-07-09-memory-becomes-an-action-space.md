@@ -31,3 +31,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![memory-becomes-an-action-space 슬라이드 1](/assets/images/memory-becomes-an-action-space-slide-01.png)
+
+![memory-becomes-an-action-space 슬라이드 2](/assets/images/memory-becomes-an-action-space-slide-02.png)
+
+![memory-becomes-an-action-space 슬라이드 3](/assets/images/memory-becomes-an-action-space-slide-03.png)
+
+![memory-becomes-an-action-space 슬라이드 4](/assets/images/memory-becomes-an-action-space-slide-04.png)
+

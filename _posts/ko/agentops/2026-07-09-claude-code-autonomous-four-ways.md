@@ -18,7 +18,6 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-autonomous-four-ways/"
 audiobook: /assets/audio/posts/claude-code-autonomous-four-ways/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 코딩 에이전트를 써 본 분이라면 익숙한 장면이 있습니다. 프롬프트를 넣고, 응답을 읽고, 다음 지시를 넣고, 다시 기다리는 왕복입니다. 이 왕복은 강력하지만 사람을 계속 붙들어 둡니다. 최근 Anthropic이 공개한 자료들은 이 왕복을 끊어 내는 방향, 즉 Claude Code가 사람이 지켜보지 않아도 스스로 돌아가게 만드는 방법을 정리하고 있습니다. 이 글은 그 방법을 헤드리스 모드·훅·서브에이전트·스킬이라는 네 가지 축으로 나눠 설명하고, 각 축이 실제로 어떻게 작동하는지 ThakiCloud가 운용 중인 파이프라인으로 검증합니다.

@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/benchmark-wins-trus
 audiobook: "https://drive.google.com/file/d/1cwH-1XNXm0a_ZambJZqwji-d90Dwbvzb/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 리더보드 화면을 캡처하는 순간이 있습니다. 어느 신생 모델이 익숙한 1등의 이름을 밀어내고 맨 위에 올라선 장면입니다. 2026년 7월, 중국 문샷AI의 오픈웨이트 모델 키미 K3가 바로 그 캡처를 만들어냈습니다. AI 평가 플랫폼 아레나의 프런트엔드 코딩 리더보드에서 앤스로픽 클로드 페이블 5를 제치고 1위에 올랐고, 매개변수 2조8000억개로 지금까지 공개된 오픈웨이트 모델 중 가장 큽니다. API 가격도 절반 이하입니다. 디지털투데이가 전한 실리콘밸리의 반응은 그런데 환호가 아니라 한 문장이었습니다. "벤치마크는 이겼는데 글쎄."
@@ -432,4 +431,16 @@ ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-
 - 뉴스로드, [車 두뇌 잡는 마이크론, 현대모비스·퀄컴과 '3~5년짜리' 메모리 동맹](http://www.newsroad.co.kr/news/articleView.html?idxno=61704)
 - 디지털투데이, [AI 메모리 수요 여파에 인도 스마트폰 출하 10% 감소…6년 만에 최대 낙폭](https://www.digitaltoday.co.kr/news/articleView.html?idxno=685002)
 - 매일일보, ['AI 보안기술기반 중소기업 정보유출 예방'…지란지교소프트, AI 보안](https://www.m-i.kr/news/articleView.html?idxno=1392577)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 1](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-01.png)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 2](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-02.png)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 3](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-03.png)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 4](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-04.png)
 

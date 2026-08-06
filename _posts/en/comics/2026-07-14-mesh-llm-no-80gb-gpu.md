@@ -27,7 +27,7 @@ To run a 70B-plus model, the going wisdom says you need a single 80GB GPU that c
 
 ## What this means for ThakiCloud
 
-Metis was built to train and infer on the hardware you already have, instead of renting someone else's giant GPU by the month. The Mesh LLM lesson — wire the small pieces together to run the big thing — lands right in that lane. Paxis carves the distributed work into agents and orchestrates it, and on-prem means neither the data nor the model ever leaves the building. Before the GPU invoice unrolls to the floor, maybe start with what's already plugged in.
+Metis was built to train and infer on the hardware you already have, instead of renting someone else's giant GPU by the month. The Mesh LLM lesson, wire the small pieces together to run the big thing, lands right in that lane. Paxis carves the distributed work into agents and orchestrates it, and on-prem means neither the data nor the model ever leaves the building. Before the GPU invoice unrolls to the floor, maybe start with what's already plugged in.
 
 ---
 

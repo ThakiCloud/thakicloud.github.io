@@ -21,6 +21,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/alphaxiv-autoresear
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/alphaxiv-autoresearch-reproducibility-agent/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 AI 연구의 재현성 문제는 오래된 골칫거리입니다. 논문은 인상적인 결과를 보고하지만, 막상 코드를 돌려보려면 환경 설정에서 막히고, GPU가 부족하고, 의존성이 깨집니다. alphaXiv가 소개한 autoresearch 기능은 이 마찰을 에이전트로 자동화하려는 시도입니다. arXiv URL에서 `arxiv`를 `autoarxiv`로 바꾸기만 하면, 에이전트가 코드베이스 환경을 설정하고, 최소 재현을 실행하며, GPU 복제 비용까지 추정합니다.

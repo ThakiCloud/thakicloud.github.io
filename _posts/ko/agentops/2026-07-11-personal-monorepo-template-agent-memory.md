@@ -16,10 +16,12 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-template-agent-memory/"
-published: false
 ---
 
-코딩 에이전트를 매일 쓰다 보면 한 가지 벽에 반복해서 부딪힙니다. 어제 나눈 결정, 지난주에 정한 컨벤션, 특정 동료의 업무 스타일을 에이전트가 매 세션마다 처음 듣는 것처럼 다시 물어봅니다. 이 문제를 값비싼 벡터 데이터베이스나 별도 메모리 인프라 없이, 그냥 **평범한 폴더 구조와 마크다운 파일 하나로** 풀어낸 저장소가 최근 공개되어 개발자들 사이에서 화제가 되었습니다. `Instructor` 라이브러리를 만든 jxnl(Jason Liu)이 공개한 `personal-monorepo-template`입니다. 이 글은 그 구조를 분해하고, 스킬과 지식을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 설계가 무엇을 시사하는지 검증합니다.
+코딩 에이전트를 매일 쓰다 보면 한 가지 벽에 반복해서 부딪힙니다. 어제 나눈 결정, 지난주에 정한 컨벤션, 특정 동료의 업무 스타일을 에이전트가 매 세션마다 처음 듣는 것처럼 다시 물어봅니다. 이 문제를 값비싼 벡터 데이터베이스나 별도 메모리 인프라 없이, 그냥 **평범한 폴더 구조와 마크다운 파일 하나로** 풀어낸 저장소가 최근 공개되어 개발자들 사이에서 화제가 되었습니다. `Instructor` 라이브러리를 만든 jxnl(Jason Liu)이 공개한 `personal-monorepo-template`입니다. 에이전트에 기억을 붙이려다 인프라부터 고민하고 있었다면, 폴더 구조만으로 어디까지 갈 수 있고 어디서 한계가 오는지가 여기서 확인할 지점입니다.
+
+![벡터DB 없이 폴더로 기억하는 코딩 에이전트: personal-monorepo-template 분석 개념을 형상화한 이미지](/assets/images/personal-monorepo-template-agent-memory-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -43,7 +45,7 @@ published: false
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -60,7 +62,7 @@ published: false
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -379,7 +381,7 @@ published: false
 
 ## 이 설계가 실제로 어떻게 동작하는가
 
-이 저장소는 벤치마크 수치를 내세우는 도구가 아니라 **워크플로 패턴**이므로, 여기서는 설계가 실제로 어떤 효과를 내는지 구조적으로 짚습니다. 재현 가능한 성능 수치는 저장소가 제시하지 않으며, 저자 본인도 정량 지표가 아니라 일상 워크플로의 개선을 근거로 제시합니다. 따라서 이 글에서도 수치를 지어내지 않고 구조적 이점만 다룹니다.
+이 저장소는 벤치마크 수치를 내세우는 도구가 아니라 **워크플로 패턴**입니다. 재현 가능한 성능 수치는 저장소가 제시하지 않으며, 저자 본인도 정량 지표가 아니라 일상 워크플로의 개선을 근거로 제시합니다. 그래서 판단 기준도 수치가 아니라 설계가 만들어 내는 구조적 효과여야 합니다.
 
 가장 큰 효과는 **컨텍스트 복원 비용의 제거**입니다. 벡터DB 접근은 매 질의마다 임베딩 계산과 유사도 검색을 거치지만, 폴더 경로 접근은 파일 읽기 한 번입니다. 사람이 "지난번 그 프로젝트"라고 말하면 에이전트가 해당 프로젝트 패킷을 직접 읽고, 근사 검색의 오탐 없이 정확한 맥락을 복원합니다. 기억의 정밀도가 검색 품질이 아니라 폴더 설계 품질에 달리게 됩니다.
 

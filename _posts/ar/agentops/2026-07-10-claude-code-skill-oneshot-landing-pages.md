@@ -16,15 +16,25 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-skill-oneshot-landing-pages/"
+audiobook: "https://drive.google.com/file/d/1GkVP3mH4wvRyJR_M3TrOF32VyLAVAf0G/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-شارك مطوّر مؤخرًا على منصة X أنه "بنى مهارة تجعل Claude Code ينشئ صفحات هبوط احترافية بضربة واحدة"، مدّعيًا أن المواقع الثلاثة في الفيديو كانت جميعها من إنتاج ضربة واحدة ([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). كان التفاعل قويًا بسبب مستوى إتقان النتائج، لكن النقطة الأكثر إثارة للاهتمام بالنسبة للمهندس تكمن في مكان آخر. أعطِ النموذج نفسه الطلب نفسه، "ابنِ لي صفحة هبوط"، فتحصل على شيء عادي؛ أضف مهارة واحدة فتخرج صفحة بمستوى وكالة تصميم في مسار واحد. يفكّك هذا المقال آلية عمل تلك المهارة فعليًا، ويتحقق منها من منظور تشغيل ThakiCloud حيث تُعامَل المهارات كموارد من الدرجة الأولى.
+شارك مطوّر مؤخرًا على منصة X أنه "بنى مهارة تجعل Claude Code ينشئ صفحات هبوط احترافية بضربة واحدة"، مدّعيًا أن المواقع الثلاثة في الفيديو كانت جميعها من إنتاج ضربة واحدة ([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). كان التفاعل قويًا بسبب مستوى إتقان النتائج، لكن النقطة الأكثر إثارة للاهتمام بالنسبة للمهندس تكمن في مكان آخر. أعطِ النموذج نفسه الطلب نفسه، "ابنِ لي صفحة هبوط"، فتحصل على شيء عادي؛ أضف مهارة واحدة فتخرج صفحة بمستوى وكالة تصميم في مسار واحد. بالنسبة إلى المهندس الذي يُسند المهام المتكررة إلى عملاء الذكاء الاصطناعي، فإن الاستنتاج الذي يمكن أخذه من هنا هو أن الرافعة التي ترفع الجودة تكمن في تصميم المهارة لا في استبدال النموذج.
+
+![كيف تبني مهارة Claude Code صفحات هبوط احترافية بضربة واحدة 개념을 형상화한 이미지](/assets/images/claude-code-skill-oneshot-landing-pages-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## نظرة عامة
 
 مهارة Claude Code ليست سحرًا بل **إجراء تشغيل معياري (SOP)**. هي لا تجعل النموذج أذكى، بل تقيّد بقوة قدراتٍ يمتلكها النموذج أصلًا نحو اتجاه محدد، فترفع متوسط الجودة. في حالة مهارة صفحات الهبوط، هذا القيد هو تحديدًا مبادئ التصميم وقواعد التخطيط وصيغة المخرجات.
 
 يتوافق هذا المنظور تمامًا مع طريقة تشغيل ThakiCloud للوكلاء. جودة الوكيل لا تأتي من فئة النموذج بل من بنية العقد التي تغلّف النموذج. مهارة صفحات الهبوط مثال جيد على تركيز بنية العقد هذه في مجال ضيّق هو تصميم الواجهة الأمامية. وهي أيضًا تصميم مهارة نموذجي: قلّل درجات الحرية لترفع المتوسط.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/claude-code-skill-oneshot-landing-pages/nlm-infographic-1.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ما هذه التقنية
 
@@ -34,7 +44,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-skill-o
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -51,7 +61,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-skill-o
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -390,7 +400,11 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/claude-code-skill-o
 
 كذلك، الذوق التصميمي المخبوز في المهارة هو سقف النتيجة. إن كانت مهارة مُحسَّنة لجمالية معينة، فستقاوم الطلبات التي تخرج عنها. هذا ليس خللًا بل مقايضة مصمّمة. تخلّت عن الأطراف مقابل رفع المتوسط عبر تقليل الحرية، لذا فالفريق الذي يتعامل مع علامات كثيرة أفضل له أن يقسّم المهارات حسب الجمالية بدل إبقاء مهارة واحدة.
 
-خلاصة القول، القيمة الحقيقية لهذه الحالة ليست "تخرج صفحة جميلة بضربة واحدة" بل أنها أثبتت بوضوح المبدأ القائل إن **جودة الوكيل تأتي من تصميم المهارة لا من النموذج**. وPaxis هي بالضبط تحويل ذلك المبدأ إلى منتج قابل للتشغيل على مستوى المنصة.
+القيمة الحقيقية لهذه الحالة ليست "تخرج صفحة جميلة بضربة واحدة" بل أنها أثبتت بوضوح المبدأ القائل إن **جودة الوكيل تأتي من تصميم المهارة لا من النموذج**. وPaxis هي بالضبط تحويل ذلك المبدأ إلى منتج قابل للتشغيل على مستوى المنصة.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/claude-code-skill-oneshot-landing-pages/nlm-infographic-2.png)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## المصادر
 

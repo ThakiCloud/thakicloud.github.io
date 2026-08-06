@@ -21,7 +21,7 @@ video: /assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.ko.mp4
 
 > 원 뉴스: [These will instantly make your vibe-coded projects look less generic](https://x.com/hjguyhan/status/2080564601637470553) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/vibe-coded-all-look-the-same/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/vibe-coded-all-look-the-same/comic.ko.mp4" type="video/mp4">

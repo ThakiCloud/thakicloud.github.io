@@ -20,7 +20,6 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/banks-buy-control-not-capability/"
-published: false
 audiobook: "https://drive.google.com/file/d/1qOAObpT4rNlFFeE4sSkqDspI39KsVI6V/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
@@ -94,3 +93,16 @@ SAP가 자율형 기업의 그림을 그리고 은행이 그 그림을 들일 �
 - [ITU AI for Good Global Summit](https://aiforgood.itu.int/): 규제 산업의 AI 도입이 능력이 아니라 거버넌스와 표준을 통과한다는 국제기구 맥락
 - [EU 인공지능법 (Regulation (EU) 2024/1689), EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj): 자율을 단계별 위험 등급으로 성문화한 교차 관할 사례
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework): 능력보다 거버넌스 프레임워크를 먼저 세우는 규제 선례
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![banks-buy-control-not-capability 슬라이드 1](/assets/images/banks-buy-control-not-capability-slide-01.png)
+
+![banks-buy-control-not-capability 슬라이드 2](/assets/images/banks-buy-control-not-capability-slide-02.png)
+
+![banks-buy-control-not-capability 슬라이드 3](/assets/images/banks-buy-control-not-capability-slide-03.png)
+
+![banks-buy-control-not-capability 슬라이드 4](/assets/images/banks-buy-control-not-capability-slide-04.png)
+

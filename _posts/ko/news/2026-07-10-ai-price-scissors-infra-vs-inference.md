@@ -20,7 +20,6 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-price-scissors-infra-vs-inference/"
-published: false
 audiobook: "https://drive.google.com/file/d/1gSpJ4N7oAw9vrpZpgK46X0F6abZzsU-k/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
@@ -417,3 +416,16 @@ ThakiCloud가 Agent-Native Cloud로 만든 Paxis는 바로 이 네 손잡이를 
 - [메타의 새 AI 칩, 9월부터 양산 시작](https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/) · TechCrunch
 - [스타트업 린디, 클로드를 버리고 딥시크로 전환해 수백만 달러 절감](https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/) · The Decoder
 - [과기정통부·KISA, 'AI 보안 레드티밍 가이드' 발간](https://www.digitaltoday.co.kr/news/articleView.html?idxno=682799) · 디지털투데이
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-price-scissors-infra-vs-inference 슬라이드 1](/assets/images/ai-price-scissors-infra-vs-inference-slide-01.png)
+
+![ai-price-scissors-infra-vs-inference 슬라이드 2](/assets/images/ai-price-scissors-infra-vs-inference-slide-02.png)
+
+![ai-price-scissors-infra-vs-inference 슬라이드 3](/assets/images/ai-price-scissors-infra-vs-inference-slide-03.png)
+
+![ai-price-scissors-infra-vs-inference 슬라이드 4](/assets/images/ai-price-scissors-infra-vs-inference-slide-04.png)
+

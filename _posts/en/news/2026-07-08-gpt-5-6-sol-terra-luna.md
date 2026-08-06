@@ -19,7 +19,6 @@ categories:
   - news
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/gpt-5-6-sol-terra-luna/"
-published: false
 ---
 
 ![Abstract illustration of three orbiting concepts]({{ '/assets/images/gpt-5-6-sol-terra-luna-hero.png' | relative_url }})

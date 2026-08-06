@@ -20,7 +20,6 @@ toc_icon: "chart-bar"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/openrouter-china-model-share-vendor-neutral/"
 categories:
   - news
-published: false
 audiobook: /assets/audio/posts/openrouter-china-model-share-vendor-neutral/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

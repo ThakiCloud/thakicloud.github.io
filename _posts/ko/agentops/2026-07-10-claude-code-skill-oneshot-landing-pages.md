@@ -18,10 +18,12 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-skill-oneshot-landing-pages/"
 audiobook: /assets/audio/posts/claude-code-skill-oneshot-landing-pages/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
-최근 X에서 한 개발자가 "Claude Code가 프리미엄 랜딩페이지를 한 번에 만들도록 스킬을 만들었다"며 영상 속 세 개의 사이트를 모두 원샷으로 뽑았다고 공유했습니다([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). 반응이 뜨거웠던 이유는 결과물의 완성도 때문이지만, 엔지니어 입장에서 더 흥미로운 지점은 따로 있습니다. 똑같은 모델에 똑같이 "랜딩페이지 만들어줘"라고 해도 평범한 결과가 나오는데, 스킬 하나를 얹었더니 에이전시급 페이지가 한 번에 나온다는 사실입니다. 이 글은 그 스킬이 실제로 어떤 구조로 동작하는지 분해하고, 스킬을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 검증합니다.
+최근 X에서 한 개발자가 "Claude Code가 프리미엄 랜딩페이지를 한 번에 만들도록 스킬을 만들었다"며 영상 속 세 개의 사이트를 모두 원샷으로 뽑았다고 공유했습니다([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). 반응이 뜨거웠던 이유는 결과물의 완성도 때문이지만, 엔지니어 입장에서 더 흥미로운 지점은 따로 있습니다. 똑같은 모델에 똑같이 "랜딩페이지 만들어줘"라고 해도 평범한 결과가 나오는데, 스킬 하나를 얹었더니 에이전시급 페이지가 한 번에 나온다는 사실입니다. 에이전트에게 반복 작업을 맡기는 엔지니어라면, 품질을 끌어올리는 지렛대가 모델 교체가 아니라 스킬 설계에 있다는 것이 여기서 가져갈 결론입니다.
+
+![한 번에 프리미엄 랜딩페이지를 만드는 Claude Code 스킬의 구조 개념을 형상화한 이미지](/assets/images/claude-code-skill-oneshot-landing-pages-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -37,7 +39,7 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -54,7 +56,7 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -393,7 +395,7 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
 
 또한 스킬이 담은 디자인 취향이 곧 결과의 상한입니다. 스킬이 특정 미감에 최적화되어 있으면 그 미감에서 벗어난 요구에는 오히려 저항합니다. 이것은 버그가 아니라 설계된 트레이드오프입니다. 자유도를 줄여 평균을 올린 대가로 극단값을 포기한 것이며, 다양한 브랜드를 다뤄야 하는 팀이라면 스킬을 하나로 두지 않고 미감별로 나누는 편이 낫습니다.
 
-결론적으로 이 사례의 진짜 가치는 "예쁜 페이지가 한 번에 나온다"가 아니라, **에이전트 품질은 모델이 아니라 스킬 설계에서 나온다**는 원칙을 눈에 보이게 증명했다는 데 있습니다. 그리고 그 원칙을 플랫폼 차원에서 운용 가능한 형태로 제품화한 것이 바로 Paxis입니다.
+이 사례의 진짜 가치는 "예쁜 페이지가 한 번에 나온다"가 아니라, **에이전트 품질은 모델이 아니라 스킬 설계에서 나온다**는 원칙을 눈에 보이게 증명했다는 데 있습니다. 그리고 그 원칙을 플랫폼 차원에서 운용 가능한 형태로 제품화한 것이 바로 Paxis입니다.
 
 
 ## 관련 슬라이드

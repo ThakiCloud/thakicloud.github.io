@@ -19,9 +19,9 @@ toc_icon: "sitemap"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
-published: false
 audiobook: /assets/audio/posts/claude-code-project-anatomy-complete-map/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![여러 갈래의 빛줄기가 하나의 중심 노드로 수렴했다가 다시 계층적으로 갈라지는 추상 구조]({{ '/assets/images/claude-code-project-anatomy-complete-map-hero.webp' | relative_url }})
