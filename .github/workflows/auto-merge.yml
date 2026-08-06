@@ -7,41 +7,94 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  checks: read
+
+concurrency:
+  group: auto-merge-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
 
 jobs:
   auto-merge:
     name: 🤖 Auto-merge approved PRs
     runs-on: ubuntu-latest
-    if: github.event.review.state == 'approved'
+    timeout-minutes: 30
+    if: >-
+      github.event.review.state == 'approved' &&
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.state == 'open'
+
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      PR: ${{ github.event.pull_request.number }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+      # This job posts its own check run against HEAD_SHA; excluded when polling
+      # so it never waits on itself.
+      SELF_CHECK_NAME: 🤖 Auto-merge approved PRs
 
     steps:
-      - name: 🤖 Enable auto-merge for approved PRs
-        uses: actions/github-script@v8
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { owner, repo } = context.repo;
-            const pull_number = context.payload.pull_request.number;
-            
-            try {
-              // Enable auto-merge with squash
-              await github.rest.pulls.enableAutoMerge({
-                owner,
-                repo,
-                pull_number,
-                merge_method: 'squash'
-              });
-              
-              console.log(`Auto-merge enabled for PR #${pull_number}`);
-              
-              // Add auto-merge label
-              await github.rest.issues.addLabels({
-                issue_number: pull_number,
-                owner,
-                repo,
-                labels: ['auto-merge']
-              });
-              
-            } catch (error) {
-              console.error('Failed to enable auto-merge:', error.message);
-            } 
+      - name: ⏳ Wait for the other checks on the PR head
+        run: |
+          set -euo pipefail
+          deadline=$(( SECONDS + 20 * 60 ))
+
+          while :; do
+            runs=$(gh api "repos/${GH_REPO}/commits/${HEAD_SHA}/check-runs" \
+              --paginate --jq '.check_runs[] | select(.name != env.SELF_CHECK_NAME)
+                               | "\(.status)\t\(.conclusion // "")\t\(.name)"')
+
+            # Any hard failure ends this immediately - do not merge a red PR.
+            if failed=$(printf '%s\n' "$runs" \
+              | awk -F'\t' '$2 ~ /^(failure|cancelled|timed_out|startup_failure)$/ {print "  - " $3 " (" $2 ")"}' \
+              | grep .); then
+              echo "::error::PR #${PR} has failing checks; refusing to merge."
+              printf '%s\n' "$failed"
+              exit 1
+            fi
+
+            pending=$(printf '%s\n' "$runs" \
+              | awk -F'\t' '$1 != "completed" && NF {print "  - " $3 " (" $1 ")"}' || true)
+
+            if [ -z "$pending" ]; then
+              echo "All checks on ${HEAD_SHA} are complete."
+              break
+            fi
+
+            if [ "$SECONDS" -ge "$deadline" ]; then
+              echo "::error::Timed out after 20m waiting for checks on PR #${PR}."
+              printf '%s\n' "$pending"
+              exit 1
+            fi
+
+            echo "Waiting on:"
+            printf '%s\n' "$pending"
+            sleep 15
+          done
+
+      - name: 🔀 Squash-merge the approved PR
+        run: |
+          set -euo pipefail
+          # Re-read state: the review that triggered us may be stale by now
+          # (a push dismisses reviews, someone may have merged or closed it).
+          state=$(gh pr view "$PR" --json state --jq .state)
+          if [ "$state" != "OPEN" ]; then
+            echo "PR #${PR} is ${state}; nothing to merge."
+            exit 0
+          fi
+
+          # gh exits non-zero on unresolved review threads, conflicts, or a
+          # dismissed approval. That failure is the point - surface it.
+          gh pr merge "$PR" --squash
+
+      - name: 🧹 Tidy up after the merge
+        if: success()
+        continue-on-error: true
+        run: |
+          # Cosmetic only: never fail a completed merge over a label or a
+          # branch that lives in a fork we cannot delete.
+          gh pr edit "$PR" --add-label auto-merge || true
+          if [ "$HEAD_REPO" = "$GH_REPO" ]; then
+            gh api -X DELETE "repos/${GH_REPO}/git/refs/heads/${HEAD_REF}" || true
+          fi
