@@ -15,6 +15,7 @@ permissions:
   contents: write
   pull-requests: write
   checks: read
+  actions: write   # dispatch the deploy the merge itself cannot trigger
 
 concurrency:
   group: auto-merge-pr-${{ github.event.pull_request.number || github.event.inputs.pr }}
@@ -128,6 +129,17 @@ jobs:
           # non-zero on unresolved review threads, conflicts, or a dismissed
           # approval - that failure is the point, so it is not swallowed.
           gh pr merge "$PR" --squash
+
+      - name: 🚀 Trigger the deploy that the merge cannot
+        if: steps.resolve.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          # A merge made with GITHUB_TOKEN raises no `push` event, so jekyll.yml
+          # never sees it and the site silently goes stale - which is exactly
+          # what happened to #117, #120 and #123. workflow_dispatch is not
+          # subject to that recursion guard (verified: GITHUB_TOKEN created a
+          # real dispatch run), so ask for the deploy explicitly.
+          gh workflow run jekyll.yml --ref main
 
       - name: 🧹 Tidy up after the merge
         if: success() && steps.resolve.outputs.skip != 'true'
