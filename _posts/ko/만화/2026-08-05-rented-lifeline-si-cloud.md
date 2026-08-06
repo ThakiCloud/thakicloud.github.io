@@ -24,7 +24,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: ["클라우드가 밥줄"…SI 빅4, AI 타고 실적 방어](https://n.news.naver.com/mnews/article/008/0005394916?sid=105) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/rented-lifeline-si-cloud/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/rented-lifeline-si-cloud/comic.mp4" type="video/mp4">
@@ -40,3 +40,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![rented-lifeline-si-cloud 슬라이드 1](/assets/images/rented-lifeline-si-cloud-slide-01.png)
+
+![rented-lifeline-si-cloud 슬라이드 2](/assets/images/rented-lifeline-si-cloud-slide-02.png)
+
+![rented-lifeline-si-cloud 슬라이드 3](/assets/images/rented-lifeline-si-cloud-slide-03.png)
+
+![rented-lifeline-si-cloud 슬라이드 4](/assets/images/rented-lifeline-si-cloud-slide-04.png)
+

@@ -33,3 +33,16 @@ Kimi를 만든 회사 대표가 이런 말을 남겼습니다. 하나의 에이�
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![one-smart-agent-hits-a-wall-send-a-crowd 슬라이드 1](/assets/images/one-smart-agent-hits-a-wall-send-a-crowd-slide-01.png)
+
+![one-smart-agent-hits-a-wall-send-a-crowd 슬라이드 2](/assets/images/one-smart-agent-hits-a-wall-send-a-crowd-slide-02.png)
+
+![one-smart-agent-hits-a-wall-send-a-crowd 슬라이드 3](/assets/images/one-smart-agent-hits-a-wall-send-a-crowd-slide-03.png)
+
+![one-smart-agent-hits-a-wall-send-a-crowd 슬라이드 4](/assets/images/one-smart-agent-hits-a-wall-send-a-crowd-slide-04.png)
+
