@@ -432,3 +432,15 @@ ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-
 - 디지털투데이, [AI 메모리 수요 여파에 인도 스마트폰 출하 10% 감소…6년 만에 최대 낙폭](https://www.digitaltoday.co.kr/news/articleView.html?idxno=685002)
 - 매일일보, ['AI 보안기술기반 중소기업 정보유출 예방'…지란지교소프트, AI 보안](https://www.m-i.kr/news/articleView.html?idxno=1392577)
 
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 1](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-01.png)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 2](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-02.png)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 3](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-03.png)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 4](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-04.png)
+

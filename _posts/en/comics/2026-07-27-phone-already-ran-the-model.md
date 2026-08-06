@@ -24,7 +24,7 @@ That's on-device inference. Instead of hauling your data to where the model live
 
 > Source: [RT @hank_aibtc: 还在为端侧AI推理又慢又耗电、隐私还担心云端上传而头疼吗？  ](https://x.com/hjguyhan/status/2081393928230838346) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition, the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/phone-already-ran-the-model/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4" type="video/mp4">

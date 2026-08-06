@@ -21,6 +21,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/google-tpu-ironwood
 reading_time: true
 categories:
   - research
+audiobook: /assets/audio/posts/google-tpu-ironwood-five-generations/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 대규모 AI 모델을 학습시키는 인프라는 어떻게 진화해왔을까요. 구글이 arXiv에 공개한 논문 "Google's Training Supercomputers from TPU v2 to Ironwood"(arXiv:2606.15870, 2026년 6월 14일 제출)는 TPU 5세대의 진화를 아키텍처 안정성, 규모, 회복탄력성, 전력 효율, 지속가능성이라는 다섯 축으로 정리합니다. 단일 칩 성능이 아니라 **시스템 전체**를 어떻게 키워왔는지를 다룬다는 점에서, AI 인프라를 운영하는 팀에게 직접적인 교훈을 줍니다.
@@ -62,3 +64,16 @@ categories:
 출처: "Google's Training Supercomputers from TPU v2 to Ironwood: Architectural Stability, Scale, Resilience, Power Efficiency, and Sustainability Across Five Generations", arXiv:2606.15870 (2026-06-14). https://arxiv.org/abs/2606.15870
 
 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/10SsDPZB1CV-x4LzzzQQdhnY8m_PfWzG8/view)할 수 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![google-tpu-ironwood-five-generations 슬라이드 1](/assets/images/google-tpu-ironwood-five-generations-slide-01.png)
+
+![google-tpu-ironwood-five-generations 슬라이드 2](/assets/images/google-tpu-ironwood-five-generations-slide-02.png)
+
+![google-tpu-ironwood-five-generations 슬라이드 3](/assets/images/google-tpu-ironwood-five-generations-slide-03.png)
+
+![google-tpu-ironwood-five-generations 슬라이드 4](/assets/images/google-tpu-ironwood-five-generations-slide-04.png)
+

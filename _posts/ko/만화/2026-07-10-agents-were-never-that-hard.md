@@ -32,3 +32,16 @@ AI 에이전트는 스스로 계획을 세우고 도구를 불러다 일을 대�
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![agents-were-never-that-hard 슬라이드 1](/assets/images/agents-were-never-that-hard-slide-01.png)
+
+![agents-were-never-that-hard 슬라이드 2](/assets/images/agents-were-never-that-hard-slide-02.png)
+
+![agents-were-never-that-hard 슬라이드 3](/assets/images/agents-were-never-that-hard-slide-03.png)
+
+![agents-were-never-that-hard 슬라이드 4](/assets/images/agents-were-never-that-hard-slide-04.png)
+

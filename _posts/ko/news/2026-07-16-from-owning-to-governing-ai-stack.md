@@ -20,6 +20,8 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/from-owning-to-governing-ai-stack/"
+audiobook: /assets/audio/posts/from-owning-to-governing-ai-stack/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 시리는 지금 구글의 GPU 위에서 돌아갑니다
@@ -92,3 +94,16 @@ SKT가 15GW를 향해 달리고 정부가 512장의 GPU를 나누는 소유의 �
 - [경향신문: 상하이 세계인공지능대회 개막, 미중 AI 경쟁 속 중국 자립 과시](https://www.khan.co.kr/article/202607131607001/)
 - [벤처스퀘어: 리콘랩스 젠프레소 전면 개편 · 스킬 · C2PA · 사람 승인](https://www.venturesquare.net/1098814)
 - [Forbes: OpenAI vs Anthropic IPO 비교 · 앤트로픽의 경쟁 우위](https://www.forbes.com/sites/investor-hub/article/openai-vs-anthropic-ipo-comparison/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![from-owning-to-governing-ai-stack 슬라이드 1](/assets/images/from-owning-to-governing-ai-stack-slide-01.png)
+
+![from-owning-to-governing-ai-stack 슬라이드 2](/assets/images/from-owning-to-governing-ai-stack-slide-02.png)
+
+![from-owning-to-governing-ai-stack 슬라이드 3](/assets/images/from-owning-to-governing-ai-stack-slide-03.png)
+
+![from-owning-to-governing-ai-stack 슬라이드 4](/assets/images/from-owning-to-governing-ai-stack-slide-04.png)
+

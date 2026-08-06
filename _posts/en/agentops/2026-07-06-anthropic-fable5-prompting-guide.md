@@ -21,13 +21,19 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/anthropic-fable5-prompting-guide/"
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1xwYTXGqsB_N6EcHv5EDxic3wzSIRsiEu/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
+
+![Illustration of the core idea of Fable 5 Prompts Differently: Four Shifts From Anthropic's Official Guide](/assets/images/anthropic-fable5-prompting-guide-hero.png)
+*A visual metaphor for the article's key idea.*
 
 ## Overview
 
 There is a document worth reading before you open Claude Fable 5 again. Anthropic quietly added an official prompting guide for Claude Fable 5 and Claude Mythos 5 inside its prompt engineering docs. It arrived as a single documentation page rather than a headline announcement, so many people missed it, but the content asks you to reverse a lot of the habits you built for handling previous generations of models, so it is not something to skim past.
 
-Let's start with the least intuitive point. The guide's throughline is not "write better," it is closer to "write less." Detailed instructions you stacked up to get good results from earlier models can actually degrade quality on Fable 5. Fable 5 is designed to take on work complex, long, and ambiguous enough that a person would need hours, days, or even weeks to finish it, and a model built for that kind of delegation gets in its own way when it is handed too many controls. ThakiCloud runs a Kubernetes-based AI/ML SaaS infrastructure and the agent platform on top of it, and we deal with these long-running autonomous agents every day, so each recommendation in this guide is, for us, a question of operating rules. This post walks through the four shifts the guide lays out with their documented evidence, and looks at how they land on our product.
+Let's start with the least intuitive point. The guide's throughline is not "write better," it is closer to "write less." Detailed instructions you stacked up to get good results from earlier models can actually degrade quality on Fable 5. Fable 5 is designed to take on work complex, long, and ambiguous enough that a person would need hours, days, or even weeks to finish it, and a model built for that kind of delegation gets in its own way when it is handed too many controls. ThakiCloud runs a Kubernetes-based AI/ML SaaS infrastructure and the agent platform on top of it, and we deal with these long-running autonomous agents every day, so each recommendation in this guide is, for us, a question of operating rules. If you operate long-running agents, the practical payoff of this guide is knowing what to strip out of your prompts and what has to stay.
 
 ![Abstract image representing a prompting shift for long-running autonomous agents]({{ '/assets/images/anthropic-fable5-prompting-guide-hero.webp' | relative_url }})
 
@@ -39,7 +45,7 @@ The premise running through it is a capability jump. Fable 5 is built to handle 
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -56,7 +62,7 @@ The premise running through it is a capability jump. Fable 5 is built to handle 
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -411,9 +417,9 @@ Before taking this guide as gospel, a few things need to be clear. First, this d
 
 Second, the advice to "delete your prompt" is easy to misapply. There are instructions that must remain regardless of model performance: safety constraints, domain regulations, organizational policy. Deletion should not be indiscriminate cleanup, it should be an audit that distinguishes clauses patching an older model's flaws from constraints intrinsic to the task. The guide itself says to add verification instructions explicitly, so its actual message is closer to "write less, but keep what needs to stay clearly."
 
-Third, the figure claiming near-elimination of hallucinated progress reports is Anthropic's own internal test result, not something we reproduced independently in this piece. We agree with the direction that verification instructions are effective, but each organization should measure its own actual failure rate on its own workloads before deciding how much to trust this. Finally, the recommendation to default effort to high raises both cost and latency together, so teams on tight budgets need to actively push well-defined tasks down to medium and low to find their own balance.
+Third, the figure claiming near-elimination of hallucinated progress reports is Anthropic's own internal test result, not independently reproduced outside Anthropic. We agree with the direction that verification instructions are effective, but each organization should measure its own actual failure rate on its own workloads before deciding how much to trust this. Finally, the recommendation to default effort to high raises both cost and latency together, so teams on tight budgets need to actively push well-defined tasks down to medium and low to find their own balance.
 
-To sum up, the value of this guide is not a new magic phrase, it is a shift in attitude toward handling a more capable model. Instead of adding control, give it room to judge, and keep that judgment from running off the rails by verifying with evidence and parallelizing through delegation. For anyone actually operating long-running autonomous agents, this is not a trend statement, it is a realignment of operating rules.
+The value of this guide is not a new magic phrase, it is a shift in attitude toward handling a more capable model. Instead of adding control, give it room to judge, and keep that judgment from running off the rails by verifying with evidence and parallelizing through delegation. For anyone actually operating long-running autonomous agents, this is not a trend statement, it is a realignment of operating rules.
 
 ## Sources
 

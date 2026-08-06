@@ -31,3 +31,16 @@ MIT 논문 하나가 소란입니다. 지구상의 모든 AI 모델이 학습을
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![every-ai-same-brain 슬라이드 1](/assets/images/every-ai-same-brain-slide-01.png)
+
+![every-ai-same-brain 슬라이드 2](/assets/images/every-ai-same-brain-slide-02.png)
+
+![every-ai-same-brain 슬라이드 3](/assets/images/every-ai-same-brain-slide-03.png)
+
+![every-ai-same-brain 슬라이드 4](/assets/images/every-ai-same-brain-slide-04.png)
+

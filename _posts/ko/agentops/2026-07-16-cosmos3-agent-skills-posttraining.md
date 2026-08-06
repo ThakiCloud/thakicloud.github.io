@@ -490,6 +490,19 @@ Kueue로 GPU를 나누고 vLLM으로 어댑터를 서빙하는 경로를 제공�
 자기 보고가 아니라 측정된 게이트로 확인하는 구조는 특정 벤더의 전략이 아니라 에이전트 시대의 공통
 설계입니다. 우리가 Paxis와 ai-platform으로 만들려는 것도 바로 그 구조입니다.
 
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![cosmos3-agent-skills-posttraining 슬라이드 1](/assets/images/cosmos3-agent-skills-posttraining-slide-01.png)
+
+![cosmos3-agent-skills-posttraining 슬라이드 2](/assets/images/cosmos3-agent-skills-posttraining-slide-02.png)
+
+![cosmos3-agent-skills-posttraining 슬라이드 3](/assets/images/cosmos3-agent-skills-posttraining-slide-03.png)
+
+![cosmos3-agent-skills-posttraining 슬라이드 4](/assets/images/cosmos3-agent-skills-posttraining-slide-04.png)
+
 ## 출처
 
 - NVIDIA Developer Blog, "Post-Train NVIDIA Cosmos 3 in One Day Using Agent Skills" (<https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-in-one-day-using-agent-skills/>)

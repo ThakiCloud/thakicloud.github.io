@@ -1,0 +1,57 @@
+{% comment %}
+  Ebook reader — rendered on posts that set `ebook:` in front-matter.
+
+  The post is a reader-first rewrite; the PDF is the full book it came from, so the
+  card carries both an inline reader and a download. Unlike audio, these PDFs live in
+  the repo: the whole 18-book set is ~3.6MB, which is noise against the Pages artifact
+  budget that the audio files blow through.
+
+  <object> is used rather than <iframe> because it degrades properly: a browser with no
+  built-in PDF viewer (notably iOS Safari, which refuses to render PDFs inline) shows the
+  fallback children instead of a blank grey box. Mobile therefore gets the buttons, not a
+  broken frame, which is why the reader is height-capped and hidden under 640px.
+
+  Front-matter:
+    ebook:        /assets/ebooks/<slug>.pdf   (required to show)
+    ebook_title:  "..."                       (optional; defaults to the post title)
+    ebook_pages:  40                          (optional; shown as a hint)
+{% endcomment %}
+{% if page.ebook %}
+{% assign eb_lang = page.lang | default: "ko" %}
+{% if eb_lang == "en" %}
+  {% assign eb_heading = "Read the full ebook" %}
+  {% assign eb_open = "Open in new tab" %}
+  {% assign eb_download = "Download PDF" %}
+  {% assign eb_note = "This post is a condensed rewrite. The PDF is the full book." %}
+  {% assign eb_pages_unit = "pages" %}
+  {% assign eb_fallback = "Your browser cannot display PDFs inline." %}
+{% else %}
+  {% assign eb_heading = "전자책 전문 읽기" %}
+  {% assign eb_open = "새 탭에서 열기" %}
+  {% assign eb_download = "PDF 내려받기" %}
+  {% assign eb_note = "이 글은 요약해 다시 쓴 것이고, PDF가 전문입니다." %}
+  {% assign eb_pages_unit = "쪽" %}
+  {% assign eb_fallback = "브라우저가 PDF를 바로 표시하지 못합니다." %}
+{% endif %}
+{% assign eb_title = page.ebook_title | default: page.title %}
+{% assign eb_url = page.ebook | relative_url %}
+<div class="ebook-reader">
+  <div class="ebook-reader__bar">
+    <div class="ebook-reader__meta">
+      <span class="ebook-reader__heading">📕 {{ eb_heading }}</span>
+      <span class="ebook-reader__title">{{ eb_title }}{% if page.ebook_pages %} · {{ page.ebook_pages }}{{ eb_pages_unit }}{% endif %}</span>
+    </div>
+    <div class="ebook-reader__actions">
+      <a class="ebook-reader__btn" href="{{ eb_url }}" target="_blank" rel="noopener">{{ eb_open }}</a>
+      <a class="ebook-reader__btn ebook-reader__btn--ghost" href="{{ eb_url }}" download>{{ eb_download }}</a>
+    </div>
+  </div>
+  <object class="ebook-reader__frame" data="{{ eb_url }}#view=FitH" type="application/pdf">
+    <div class="ebook-reader__fallback">
+      {{ eb_fallback }}
+      <a href="{{ eb_url }}" target="_blank" rel="noopener">{{ eb_open }}</a>
+    </div>
+  </object>
+  <div class="ebook-reader__note">{{ eb_note }}</div>
+</div>
+{% endif %}

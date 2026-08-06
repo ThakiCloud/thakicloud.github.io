@@ -102,3 +102,16 @@ DeepSeek와 GLM처럼 순수 MIT로 풀린 모델은 베이스 계층을 사실�
 ---
 
 *이 글의 모델명, 가격, 라이선스, 출시 시점은 2026년 7월 14일 기준 공개 자료로 검증했습니다. 벤더 자체 보고 수치(추론 속도, PR 병합률, 화웨이 비용 절감 주장)와 제3자 미검증 항목은 본문에 명시했습니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![stack-layers-model-map-misses 슬라이드 1](/assets/images/stack-layers-model-map-misses-slide-01.png)
+
+![stack-layers-model-map-misses 슬라이드 2](/assets/images/stack-layers-model-map-misses-slide-02.png)
+
+![stack-layers-model-map-misses 슬라이드 3](/assets/images/stack-layers-model-map-misses-slide-03.png)
+
+![stack-layers-model-map-misses 슬라이드 4](/assets/images/stack-layers-model-map-misses-slide-04.png)
+

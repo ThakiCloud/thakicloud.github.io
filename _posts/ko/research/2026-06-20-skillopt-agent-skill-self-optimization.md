@@ -90,3 +90,16 @@ SkillOpt의 한계도 있습니다. 스킬 편집이 제어되더라도 누적 �
 SkillOpt는 에이전트 스킬을 "배포하고 끝나는 아티팩트"에서 "지속적으로 개선되는 살아있는 컴포넌트"로 전환하는 접근입니다. +23.5 포인트라는 수치와 크로스 모델 전이성은 검토할 가치가 있습니다. 스킬 기반 에이전트 시스템을 운용하는 팀이라면 논문 전문을 읽어볼 만합니다.
 
 원문: [https://arxiv.org/abs/2605.23904](https://arxiv.org/abs/2605.23904)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![skillopt-agent-skill-self-optimization 슬라이드 1](/assets/images/skillopt-agent-skill-self-optimization-slide-01.png)
+
+![skillopt-agent-skill-self-optimization 슬라이드 2](/assets/images/skillopt-agent-skill-self-optimization-slide-02.png)
+
+![skillopt-agent-skill-self-optimization 슬라이드 3](/assets/images/skillopt-agent-skill-self-optimization-slide-03.png)
+
+![skillopt-agent-skill-self-optimization 슬라이드 4](/assets/images/skillopt-agent-skill-self-optimization-slide-04.png)
+

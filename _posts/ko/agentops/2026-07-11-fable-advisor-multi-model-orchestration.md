@@ -17,9 +17,15 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable-advisor-multi-model-orchestration/"
+audiobook: "https://drive.google.com/file/d/1e7KfUD_JzGgMZVfqDCp78f4G_Yc-Pj6k/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-코딩 에이전트를 쓰다 보면 자연스럽게 드는 생각이 있습니다. 스펙을 정교하게 쓰고 결과 diff를 날카롭게 리뷰하는 일과, 실제로 코드를 한 줄 한 줄 타이핑하는 일은 성격이 다른 작업인데, 왜 같은 모델 하나가 둘을 다 해야 하는가입니다. 최근 공개되어 화제가 된 `fable-advisor` 플러그인은 이 질문에 정면으로 답합니다. **Claude Fable 5는 지휘만 하고, 실제 구현은 Grok 4.5가 전담**하는 크로스벤더 워크플로입니다. 이 글은 그 구조를 분해하고, 멀티에이전트와 모델 라우팅을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 설계가 무엇을 시사하는지 검증합니다.
+코딩 에이전트를 쓰다 보면 자연스럽게 드는 생각이 있습니다. 스펙을 정교하게 쓰고 결과 diff를 날카롭게 리뷰하는 일과, 실제로 코드를 한 줄 한 줄 타이핑하는 일은 성격이 다른 작업인데, 왜 같은 모델 하나가 둘을 다 해야 하는가입니다. 최근 공개되어 화제가 된 `fable-advisor` 플러그인은 이 질문에 정면으로 답합니다. **Claude Fable 5는 지휘만 하고, 실제 구현은 Grok 4.5가 전담**하는 크로스벤더 워크플로입니다. 코딩 에이전트의 비용과 품질을 함께 고민하는 팀이라면, 역할별로 모델을 갈라 배치하는 이 구조에서 당장 옮겨 쓸 만한 설계 원칙을 얻을 수 있습니다.
+
+![Fable 5가 지휘하고 Grok 4.5가 구현하는 크로스벤더 워크플로: fable-advisor 개념을 형상화한 이미지](/assets/images/fable-advisor-multi-model-orchestration-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -45,7 +51,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable-advisor-multi
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -62,7 +68,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable-advisor-multi
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -383,7 +389,7 @@ claude plugin marketplace add DannyMac180/fable-advisor
 
 ## 이 설계가 실제로 어떻게 동작하는가
 
-`fable-advisor`는 벤치마크 수치를 내세우는 도구가 아니라 워크플로 패턴이므로, 여기서는 재현 가능한 성능 수치 대신 설계가 만들어 내는 구조적 효과를 짚습니다. 저장소가 정량 지표를 제시하지 않으므로, 이 글에서도 수치를 지어내지 않고 구조적 이점만 다룹니다.
+`fable-advisor`는 벤치마크 수치를 내세우는 도구가 아니라 워크플로 패턴입니다. 저장소가 정량 지표를 제시하지 않으므로, 성능 수치가 아니라 설계가 만들어 내는 구조적 효과를 기준으로 봐야 합니다.
 
 가장 큰 효과는 **비용과 품질의 분리**입니다. 판단이 필요한 오케스트레이션은 지휘자에게, 처리량이 필요한 구현은 저비용 구현자에게 배치하면, 전체 워크플로의 단가는 낮아지면서도 판단 품질은 유지됩니다. "지휘자는 싸게 자주 부르지 않고, 구현자는 비싸지 않게 많이 부른다"는 배치가 자연스럽게 성립합니다.
 

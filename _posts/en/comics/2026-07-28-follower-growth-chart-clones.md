@@ -23,7 +23,7 @@ A chart ranking startups by 90-day X follower growth made the rounds this week. 
 
 > Source: [RT @benln: Pulled the fastest-growing startups on X by follower growth over last 90 days: https://t.co/RTy5umq7QO](https://x.com/hjguyhan/status/2081867551878070739) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition, the characters speak for themselves (Korean audio, English subtitles included)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/follower-growth-chart-clones/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/follower-growth-chart-clones/comic.en.mp4" type="video/mp4">

@@ -23,7 +23,7 @@ video: /assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4
 
 > 원 뉴스: [RT @hank_aibtc: 还在为端侧AI推理又慢又耗电、隐私还担心云端上传而头疼吗？  ](https://x.com/hjguyhan/status/2081393928230838346) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/phone-already-ran-the-model/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4" type="video/mp4">
