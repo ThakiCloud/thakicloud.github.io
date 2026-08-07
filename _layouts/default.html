@@ -18,7 +18,8 @@
     {% include_cached skip-links.html %}
 
     {%- comment %} Standalone site nav: inject the REAL thakicloud.com Navbar (built
-       from the homepage source, hosted here at /assets/js/thaki-chrome.js) so the
+       from the homepage source, served by the homepage deploy at
+       https://thakicloud.com/assets/thaki-chrome.js -- same origin as this blog) so the
        blog reads pixel-identically to the main site. Skipped inside the homepage
        iframe shell, which already provides the nav. The 57px slot reserves the
        fixed nav's height; the fallback link keeps a home link before/without JS. {% endcomment -%}
@@ -39,7 +40,7 @@
         // views — the homepage /blog iframe has no footer of its own.
         if (window.top !== window.self) { document.documentElement.classList.add("is-embedded"); }
         var s = document.createElement("script");
-        s.src = "{{ '/assets/js/thaki-chrome.js' | relative_url }}";
+        s.src = "https://thakicloud.com/assets/thaki-chrome.js";
         s.defer = true;
         document.head.appendChild(s);
       })();
