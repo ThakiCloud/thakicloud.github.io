@@ -14,11 +14,11 @@ tags:
 author_profile: true
 toc: true
 toc_label: Cost Study
-published: true
 categories:
   - llmops
   - dev
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/tiny-skill-distill-slm-cost-optimization/"
+published: false
 ---
 
 ## The bottom line first
