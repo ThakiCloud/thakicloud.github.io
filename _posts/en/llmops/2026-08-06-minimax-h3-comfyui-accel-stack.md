@@ -25,6 +25,16 @@ If you use video generation models, you have seen this shape of tip in the commu
 
 *The measured range is shorter than you think, and the real work happens outside it.*
 
+> **License note (added 2026-08-09).** The MiniMax H3 Community License, effective
+> 2026-08-02, excludes the Republic of Korea, the United States, the European Union
+> and the United Kingdom from its Applicable Territory. In those regions the license
+> does not grant the right to download and run the open weights locally, to modify
+> them, or to use or distribute their outputs. This post was written before we
+> confirmed that. Please read the installation and execution steps below as applying
+> to readers inside the Applicable Territory; elsewhere, consider the vendor's hosted
+> API or a separate license request to MiniMax. The clause-by-clause comparison is in
+> [our open video model license audit](/tech-blog/en/llmops/open-video-model-license-territory-audit/).
+
 ## Why read this
 
 This is for people running MiniMax-H3 in ComfyUI who want shorter generation times, and for people deciding whether to put a video generation workload on their own GPUs. The conclusion first: the real gain from this acceleration stack is not the 1.44x the kernel benchmark shows but 1.11x at the pipeline level, and even that is measured at a sequence length shorter than what you actually render. Wiring the nodes takes five minutes, but if you get the order wrong, nothing happens at all.

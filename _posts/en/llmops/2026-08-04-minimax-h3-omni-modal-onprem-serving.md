@@ -25,6 +25,16 @@ When an open-weight model ships, the first sentence going around is usually some
 
 *Producing picture and sound from one sequence rather than making them separately and stitching them is where H3's design starts.*
 
+> **License note (added 2026-08-09).** The MiniMax H3 Community License, effective
+> 2026-08-02, excludes the Republic of Korea, the United States, the European Union
+> and the United Kingdom from its Applicable Territory. In those regions the license
+> does not grant the right to download and run the open weights locally, to modify
+> them, or to use or distribute their outputs. This post was written before we
+> confirmed that. Please read the installation and execution steps below as applying
+> to readers inside the Applicable Territory; elsewhere, consider the vendor's hosted
+> API or a separate license request to MiniMax. The clause-by-clause comparison is in
+> [our open video model license audit](/tech-blog/en/llmops/open-video-model-license-territory-audit/).
+
 ## Why This Matters
 
 This is for people running an in-house GPU cluster who must decide whether to self-host a video generation model or call an API. The conclusion first: H3-Base is a 33B-parameter single-stream transformer, so on paper it resembles LLM serving, but the real bottleneck is not the weights, it is sequence length. A single 15-second 2K clip produces a sequence of over 325,000 tokens, and the initial release ships without the sparse attention implementation that would make it affordable.

@@ -25,6 +25,16 @@ When an open-weight model ships, a quantized version follows within days. MiniMa
 
 *Compression is half the story. The other half is in feeding it through one piece at a time.*
 
+> **License note (added 2026-08-09).** The MiniMax H3 Community License, effective
+> 2026-08-02, excludes the Republic of Korea, the United States, the European Union
+> and the United Kingdom from its Applicable Territory. In those regions the license
+> does not grant the right to download and run the open weights locally, to modify
+> them, or to use or distribute their outputs. This post was written before we
+> confirmed that. Please read the installation and execution steps below as applying
+> to readers inside the Applicable Territory; elsewhere, consider the vendor's hosted
+> API or a separate license request to MiniMax. The clause-by-clause comparison is in
+> [our open video model license audit](/tech-blog/en/llmops/open-video-model-license-territory-audit/).
+
 ## Why read this
 
 This is for people who want to run a video generation model on a consumer GPU or a Mac, and for people evaluating quantized builds as serving candidates. The conclusion first: NF4 quantization takes the deduplicated 196GiB of unique weights down to 48GiB, and that 48GiB is still six times the 8GB of VRAM. The reason it runs in 8GB is not quantization but DiffSynth-Studio's VRAM management, which loads tensors from disk one at a time in computation order. Miss that distinction and you will get both your capacity plan and your performance expectations wrong.
