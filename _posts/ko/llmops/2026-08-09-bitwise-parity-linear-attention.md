@@ -20,6 +20,8 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/bitwise-parity-linear-attention/"
+audiobook: /assets/audio/posts/bitwise-parity-linear-attention/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 왜 읽어야 하나
@@ -125,6 +127,19 @@ RuntimeError: VLLM batch_invariant mode is not supported for GDN_ATTN.
 훈련과 추론이 다른 커널을 쓰면 온폴리시 RL의 전제는 조용히 깨져 있습니다. vLLM과 TorchTitan은 순전파 커널을 공유하고 역전파를 직접 붙이는 방식으로 이 간극을 없앴고, KL 발산이 0이 된 조건에서 학습은 더 적은 스텝에 더 높은 보상으로 갔습니다. 값은 2.4배의 속도 저하와 두 벌로 갈라진 모델 코드입니다. 그리고 이 정합은 아직 선형 어텐션을 덮지 못합니다. GDN의 상태 재귀는 청크 병렬화 전략이 결과를 바꿀 수 있는 구조라, 백엔드 플래그를 켜는 것만으로 끝나지 않습니다.
 
 지금 RL 후처리 학습을 운영 중이라면 한 가지를 먼저 확인해보시길 권합니다. 트레이너가 계산한 로그 확률과 샘플러가 보고한 로그 확률의 차이를 스텝마다 기록하고 있는지입니다. 그 값이 0이 아니면서 학습이 흔들린다면, 다음에 조정할 것은 학습률이 아니라 커널입니다. 그리고 혼합 선형 어텐션 모델을 후보에 올려두셨다면, 서빙 효율이 좋다는 이유만으로 학습 계획까지 그 아키텍처에 태우기 전에 위 이슈의 현재 상태를 한 번 확인하시는 편이 좋습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![bitwise-parity-linear-attention 슬라이드 1](/assets/images/bitwise-parity-linear-attention-slide-01.png)
+
+![bitwise-parity-linear-attention 슬라이드 2](/assets/images/bitwise-parity-linear-attention-slide-02.png)
+
+![bitwise-parity-linear-attention 슬라이드 3](/assets/images/bitwise-parity-linear-attention-slide-03.png)
+
+![bitwise-parity-linear-attention 슬라이드 4](/assets/images/bitwise-parity-linear-attention-slide-04.png)
 
 ## 출처
 
