@@ -21,9 +21,9 @@ categories:
 author_profile: true
 toc: true
 toc_label: Contents
-published: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/voice-agent-latency-budget-gpu-serving/"
+published: false
 ---
 
 Anyone who has built a real-time voice agent runs into the same wall. Once the delay between the user stopping speaking and the agent making its first sound grows even a little, the conversation starts to feel off. Yet the moment you ask "which stage of my stack is slow," the answer does not come easily. End-of-utterance detection, network round-trip, speech-to-text (STT), the LLM's first token, and text-to-speech (TTS) are chained together, and each vendor's SDK only shows you the numbers for its own segment. This post covers an open tool we built, voice-latency-budget, to diagnose that entire chain at a glance, along with the results of measuring its self-hosting scenario on actual GPUs. This post is written for infrastructure and AI engineers who want to serve a real-time voice agent themselves. The short version: in GPU self-hosting, the latency bottleneck was not the LLM, as one might commonly assume, but concurrency design and TTS choice.

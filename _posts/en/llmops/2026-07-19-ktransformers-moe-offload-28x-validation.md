@@ -14,10 +14,10 @@ tags:
 author_profile: true
 toc: true
 toc_label: "Anatomy of the 28x"
-published: true
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ktransformers-moe-offload-28x-validation/"
+published: false
 ---
 
 This post is for infrastructure engineers weighing whether they can self-serve a large MoE model on a single GPU. The short answer: ktransformers' offload trick is real, and with the INT4 AMX kernel properly enabled, a 671B-class model runs at roughly 16 tok/s — quasi-interactive speed.
