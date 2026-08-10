@@ -14,10 +14,10 @@ tags:
 author_profile: true
 toc: true
 toc_label: Anatomy of Tensor-Level Scheduling
-published: true
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
+published: false
 ---
 
 This post is for engineers weighing whether to self-serve a large model on a single consumer GPU, and for infra owners deciding how much to trust the "run 120B on 24GB" tweets going around. Up front: the core idea of ATSInfer (arXiv:2607.10183), released by researchers at Nanjing University, is simple and persuasive. Where prior offloading moved things in chunks at the granularity of a "layer" or an "expert," ATSInfer slices down to **individual tensors**. That said, the headline "up to 3.29x" rests on a few premises, and the code is not yet public. We did not reproduce an RTX 4090 running a 120B-class model here, so every number in this post is a **value reported by the paper**, stated as such.
