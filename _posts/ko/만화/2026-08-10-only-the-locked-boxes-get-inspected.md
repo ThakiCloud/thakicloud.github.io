@@ -15,6 +15,8 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/only-the-locked-boxes-get-inspected/strip.png
 video: /assets/videos/posts/만화/only-the-locked-boxes-get-inspected/comic.mp4
+audiobook: /assets/audio/posts/only-the-locked-boxes-get-inspected/audiobook-ko.mp3
+audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 미국 정부가 출시 전 안전성 검사를 붙이겠다고 한 대상은 '폐쇄형 첨단 AI'입니다. 폐쇄형이란 모델 가중치를 공개하지 않고 API로만 빌려 쓰게 하는 방식이고, 반대로 가중치를 그대로 풀어 놓은 오픈웨이트 모델은 이번 검사 대상에서 빠졌습니다.

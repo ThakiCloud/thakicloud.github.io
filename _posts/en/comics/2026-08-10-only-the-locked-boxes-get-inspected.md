@@ -15,6 +15,8 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/only-the-locked-boxes-get-inspected/strip.png
 video: /assets/videos/posts/만화/only-the-locked-boxes-get-inspected/comic.mp4
+audiobook: /assets/audio/posts/only-the-locked-boxes-get-inspected/audiobook-en.mp3
+audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 Washington's pre-release safety review lands on closed frontier AI: models whose weights stay private and reach you only through an API. Open-weight models, the ones anyone can download and crack open, sit this round out.
