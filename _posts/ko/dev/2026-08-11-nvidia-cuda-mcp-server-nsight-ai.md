@@ -17,6 +17,8 @@ categories: [dev]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/nvidia-cuda-mcp-server-nsight-ai/"
+audiobook: /assets/audio/posts/nvidia-cuda-mcp-server-nsight-ai/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![흩어진 문서 조각들이 하나의 광원으로 빨려 들어가 정렬되는 추상 표지 이미지](/assets/images/nvidia-cuda-mcp-server-nsight-ai-hero.png)
@@ -164,6 +166,19 @@ GET https://api.copilot.nsight.ngc.nvidia.com/mcp/cuda-docs
 조직 단위 판단은 다릅니다. 서두에서 말씀드린 결론을 다시 가져오면, 이 서버는 그냥 붙이는 것이 아니라 커넥터 단위 정책과 함께 붙여야 합니다. 질의가 외부로 나가고 인증이 대화형이라는 두 가지 성질이 워크로드에 따라 결정적으로 달라지기 때문입니다. 민감한 코드를 다룬다면 NVIDIA 스스로 안내하는 대로 Apache-2.0 자체 호스팅 경로를 검토하시고, 그 경우 GPU와 디스크 요구 사항을 먼저 확인하시기 바랍니다.
 
 다음 행동을 한 줄로 제안하면, 개인 노트북에는 오늘 붙여 보시고 사내 배포는 커넥터 허용 정책을 정한 뒤에 하시는 것입니다. 순서를 바꾸면 되돌리는 데 훨씬 큰 비용이 듭니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 1](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-01.png)
+
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 2](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-02.png)
+
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 3](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-03.png)
+
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 4](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-04.png)
 
 ## 출처
 
