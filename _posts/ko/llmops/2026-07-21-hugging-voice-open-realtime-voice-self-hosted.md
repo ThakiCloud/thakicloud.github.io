@@ -16,11 +16,11 @@ tags:
 author_profile: true
 toc: true
 toc_label: 실시간 음성 스택 해부
-published: true
 lang: ko
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
+published: false
 ---
 
 ![직접 돌리는 오픈 실시간 음성 파이프라인]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png' | relative_url }})
