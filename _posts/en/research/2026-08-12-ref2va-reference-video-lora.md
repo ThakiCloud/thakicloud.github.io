@@ -45,6 +45,11 @@ First, the Diffusers Wan transformer takes per-token timesteps, not per-frame: o
 
 To keep the experiment publishable, both subjects are fully synthetic personas. From one generated clip per persona we extracted six stills, then animated those stills with image-to-video into eight training clips each. Everything ran on our internal platform and no real person appears anywhere. The training data's own identity self-similarity measures 0.712 and 0.606 in ArcFace terms, which becomes the ceiling reference for what training can reach.
 
+These are the actual reference stills the model was conditioned on. Every generated result below should be judged against these faces.
+
+![The four reference stills per persona fed into training]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-refs.jpg)
+*Reference stills for the two synthetic personas. Both training and inference receive these four images as conditioning.*
+
 ```mermaid
 flowchart TD
     A["1 synthetic persona clip"] --> B["extract 6 stills"]
@@ -62,7 +67,14 @@ Evaluation used 20 held-out prompts in contexts absent from training: beaches, l
 
 ![Identity per operating point and the measured tradeoff frontier]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-results.png)
 
-The recipe kept its headline promise. The main run (p=0.9, 800 steps) reached 0.487 identity against a 0.286 baseline, a 70 percent gain and twice the pre-registered bar. The per-frame worst case moved from negative to positive: the baseline sometimes loses the subject entirely, the conditioned model does not. You can see it directly below; baseline on the left, reference-conditioned on the right.
+The recipe kept its headline promise. The main run (p=0.9, 800 steps) reached 0.487 identity against a 0.286 baseline, a 70 percent gain and twice the pre-registered bar. The per-frame worst case moved from negative to positive: the baseline sometimes loses the subject entirely, the conditioned model does not.
+
+One picture is faster than the numbers. Below, the reference still (input), the baseline output, and the conditioned output sit side by side on the same held-out prompts.
+
+![Before/after comparison: reference input vs baseline vs conditioned output]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-before-after.jpg)
+*Left: the reference fed into training. Middle: baseline. Right: the conditioned model. The baseline follows the prompt (beach, park) but the face becomes someone else; the conditioned model keeps the face and lets the background get pulled toward the training data. The tradeoff discussed below is visible in this single figure.*
+
+You can also watch it in motion; baseline on the left, reference-conditioned on the right.
 
 <video controls muted playsinline style="max-width:100%">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/ref2va-compare-pa.mp4" type="video/mp4">
@@ -78,8 +90,22 @@ The p sweep explains the mechanism. At p=1.0, with no unconditioned steps at all
 
 The bottom line: on a 16-clip synthetic dataset, this recipe delivers subject consistency and charges a measurable prompt-following cost for it. Whether that trade is acceptable depends on the use case, and the frontier chart above is the decision surface. Untested mitigations remain, listed honestly as unmeasured: text-side guidance scaling, retraining at p=0.85, expert-balanced MoE training.
 
+## Where this technique is actually used
+
+The demand for this technique comes from anywhere one person or character must keep appearing across many clips. The clearest market is virtual influencers and brand mascots: train the identity once from a dozen stills, and the same person survives changes of scene and wardrobe. Virtual-influencer platforms already document this LoRA-training route as their standard workflow. As a campaign grows to dozens or hundreds of clips, the cost of identity wobble compounds, and locking it in once through training pays for itself.
+
+Episodic content has the same structure: adapting a webtoon or a series to video means keeping a character identical across a hundred-plus episodes, and pipelines there combine character sheets with LoRA anchoring. The technique also extends beyond faces. Products, logos, a specific art style, even a character's signature motion can be bound by training, which is exactly where face-embedding-oriented zero-shot methods are weakest. And one practical advantage is easy to miss: a trained adapter needs no reference images at inference. In a volume production pipeline that removes the overhead of attaching and managing reference assets per clip, and it composes freely with style or motion LoRAs.
+
+## In an era of training-free reference, why train at all
+
+To be honest about the state of the art: the latest video models in 2026 hold a person's identity rather well from reference images alone, with no training. Kling has moved past reference stills to extracting face and body from a short reference video; Runway Gen-4 References and Vidu's reference-to-video point the same way. Open weights are no different: zero-shot methods such as VACE on the Wan family and ByteDance's Phantom and MAGREF now score on par with mid-tier commercial models on the public OpenS2V-Eval benchmark. The impression that "reference-only generation gets faces right these days" is close to fact.
+
+So the accurate reading is division of labor, not competition. One-off clips, fast iteration, a new subject with no time to train, and multi-subject scenes favor zero-shot. Training remains where one identity must hold across a hundred-clip campaign, where side and back views and action poses exceed what a single reference explains, where the subject is a product or a style or a motion rather than a face, and where inference cost and asset management are computed at production volume. Licensing is a variable too: the zero-shot customization models of the MiniMax H3 and Tencent Hunyuan families exclude South Korea from their community-license territory, so a self-hostable comparison arm in Korea has to be an Apache-licensed model like the Wan family.
+
+The interesting fact is that no public study has compared these two routes under control, on the same base model, the same subjects, and the same evaluation. Leaderboards across methods exist; the curve for "how much does training add over zero-shot" is empty. And we happen to be in a rare position to measure it: an official zero-shot reference checkpoint (VACE) is published under Apache license on exactly the Wan2.2 base we trained our LoRA on, so both routes can be scored by the same harness.
+
 ## The ThakiCloud angle: a pipeline where data never leaves
 
 What this experiment proves, from the company's perspective, is a path rather than a single number. Dataset creation (synthetic persona I2V), LoRA training (including the MoE porting contracts), evaluation (ArcFace and CLIP-T gates), and sample generation all closed as jobs on our internal GPU cluster. A customer's subject footage never needs to leave for an external API. Maxis is the layer that offers this training pipeline inside the customer's data sovereignty, and Metis is where the trained adapter is served. The practical conclusion of this reproduction is a third option between commercial-API convenience and data sovereignty: you no longer have to choose.
 
-Every measurement was pinned by pre-registered gates and deterministic evaluation code, and the failed gate is reported as-is. The next experiment checks whether a different architecture family (LTX) exhibits the same frontier.
+Every measurement was pinned by pre-registered gates and deterministic evaluation code, and the failed gate is reported as-is. The next experiment is the comparison just described: on the same Wan2.2 base, zero-shot reference conditioning (VACE), the trained LoRA, and the hybrid of the two that only a shared base makes possible, all scored head-to-head on the same held-out prompts and the same gates, to fill in the empty curve of how much training adds over zero-shot.
