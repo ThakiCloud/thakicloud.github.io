@@ -21,6 +21,8 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/codex-imagegen-skill-procedure/"
+audiobook: /assets/audio/posts/codex-imagegen-skill-procedure/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![흐릿한 빛 구름이 기하학적 관문을 통과해 선명한 결정으로 바뀌는 추상 이미지](/assets/images/codex-imagegen-skill-procedure-hero.png)
