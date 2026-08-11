@@ -32,9 +32,12 @@ If you're an engineer who has to build AI features in an environment where data 
 
 The phrase "local-first" often gets mistaken for a story about performance optimization. In practice, though, what forces this choice is usually not speed or cost but a regulation or contract term that data cannot leave the device. That difference in starting point is what makes the whole design different.
 
+![Illustration of the core idea of Local-First AI: How the Constraint That Data Never Leaves the Device Reshapes Design](/assets/images/local-first-ai-software-development-hero.png)
+*A visual metaphor for the article's key idea.*
+
 ## The Constraint That Data Never Leaves the Device
 
-If you've ever built an app that handles medical records, a service that summarizes financial consultations, or a public-sector system running inside a closed network, you know this problem. The moment a user's input goes to a cloud API, that data has already reached the service provider's server. It might get kept in a log, reused to train a model, or leaked in a security incident. As regulations like personal data protection laws or GDPR tighten, this risk stops being a matter of choice and becomes a condition you have to comply with.
+If you've ever built an app that handles medical records, a service that summarizes financial consultations, or a public-sector system running inside a closed network, you know this problem. The moment a user's input goes to a cloud API, that data has already reached the service provider's server. It might get kept in a log, reused to train a model, or leaked in a security incident. As regulations like [personal data protection laws](https://pipc.go.kr/eng/index.do) or [GDPR](https://gdpr-info.eu/) tighten, this risk stops being a matter of choice and becomes a condition you have to comply with.
 
 Local-first design solves this problem in a fundamentally different way. Instead of worrying about how to transmit data safely, it makes sure the data never needs to leave the device in the first place. If inference finishes inside the user's phone, laptop, or an in-house server, the leak path itself disappears. This difference can end up being the practical line between passing and failing a security audit.
 
@@ -58,11 +61,11 @@ The first wall you hit is memory. On a phone or laptop, the OS and other applica
 
 The problem is that quantization isn't free. The lower you drop the bit count, the smaller the model gets, but the subtle expressiveness the original model had gets shaved off along with it. Compress lightly and the quality loss is barely noticeable, but the memory savings are small too. Compress aggressively, on the other hand, and you get more memory headroom, but responses can start sounding unnatural, or the model can start generating factually wrong content more often. There's no single fixed answer here. You have to measure and decide, on your own, how much quality degradation your specific task can actually tolerate.
 
-Hardware acceleration paths aren't uniform across devices either. The latest Apple silicon comes with a dedicated neural engine that enables efficient inference at low power, but older Android devices often either don't properly support a neural acceleration layer or support it with unstable behavior. That's why, when designing a local-first product, you need to build in a fallback path from the start that quietly drops to CPU inference whenever the acceleration path fails. Without this fallback, a feature that runs smoothly on the latest devices can stop entirely, or become noticeably slower, on older ones.
+Hardware acceleration paths aren't uniform across devices either. The latest Apple silicon comes with a [dedicated neural engine](https://machinelearning.apple.com/research/neural-engine-transformers) that enables efficient inference at low power, but older Android devices often either don't properly support a neural acceleration layer or support it with unstable behavior. That's why, when designing a local-first product, you need to build in a fallback path from the start that quietly drops to CPU inference whenever the acceleration path fails. Without this fallback, a feature that runs smoothly on the latest devices can stop entirely, or become noticeably slower, on older ones.
 
 Device heat is another variable you can't ignore. Sustained inference on a mobile chip triggers thermal throttling that lowers processing speed on its own to manage heat. A number you get from running a benchmark briefly, just once, tends to overestimate real-world performance. You only find out about the degradation you'll actually hit after deployment if you validate performance under continuous-use scenarios too.
 
-The sheer size of the model file itself is also an obstacle in app distribution. App stores and Play Store often cap initial install size, and users don't readily download an app that's several gigabytes either. That's why many teams don't bundle the model into the app and instead have it download separately the first time the app runs. In that case, you also need to design a retry path for when the download stalls or fails, and what to show the user while the model isn't ready yet.
+The sheer size of the model file itself is also an obstacle in app distribution. [App stores](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/) and [Play Store](https://developer.android.com/topic/performance/reduce-apk-size) often cap initial install size, and users don't readily download an app that's several gigabytes either. That's why many teams don't bundle the model into the app and instead have it download separately the first time the app runs. In that case, you also need to design a retry path for when the download stalls or fails, and what to show the user while the model isn't ready yet.
 
 ## When to Use Local and When to Hand Off to the Cloud
 
@@ -129,3 +132,11 @@ The model-update problem repeats the same way too. The concern of safely updatin
 Local-first AI isn't a cure-all. You can't expect the same level of reasoning capability as a large cloud model, the performance gap between devices is large, and you have to carry the real-world constraints of battery and heat as well. But the structural advantage that data never needs to leave the device in the first place, and the instant response you get without a network round trip, are hard to replace any other way. Admitting that trade honestly, and spelling out in code a judgment structure that checks sensitivity, performance, and network status in that order, is the practical starting point for local-first design.
 
 This post is adapted for the blog from a section of our internal ebook, Local-First AI Software Development.
+
+## Sources
+
+- [GDPR full regulation text (gdpr-info.eu)](https://gdpr-info.eu/)
+- [Personal Information Protection Commission official site (PIPC)](https://pipc.go.kr/eng/index.do)
+- [Deploying Transformers on the Apple Neural Engine (Apple Machine Learning Research)](https://machinelearning.apple.com/research/neural-engine-transformers)
+- [Maximum Build File Sizes (App Store Connect Help)](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/)
+- [Reduce your app size (Android Developers)](https://developer.android.com/topic/performance/reduce-apk-size)

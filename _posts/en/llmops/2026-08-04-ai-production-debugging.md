@@ -29,6 +29,9 @@ ebook_pages: 23
 
 This post is for engineers who've hit an AI feature outage with no stack trace to work from. If you've reentered the same input only to have it not reproduce, watched error logs stay clean while user complaints pile up, this should help. We cover how to capture a failure that won't reproduce, the order for narrowing the cause across three branches, input distribution, model changes, and code changes, how to notice quality that's quietly degrading during an incident investigation, and the criteria for deciding on a rollback.
 
+![Illustration of the core idea of An AI Outage You Can't Reproduce: What to Suspect First](/assets/images/ai-production-debugging-hero.png)
+*A visual metaphor for the article's key idea.*
+
 ## The Fact That It Won't Reproduce Is Itself the First Clue
 
 Ordinary software debugging assumes reproducibility. Feed it the same input, get the same output, plant a breakpoint somewhere in between, and the cause reveals itself. In AI systems, that assumption breaks down often. With a sampling temperature in play, the same input yields a different output every time. During batch processing, subtle differences in GPU kernel execution order can shift floating-point results. In a retrieval-augmented setup, the reference documents themselves can change out from under you when the index refreshes. And above all, models served through an API get swapped behind the scenes without our knowing.
@@ -153,3 +156,9 @@ Session-level snapshots carry particular value in an on-prem environment, too. S
 Faced with an AI outage that won't reproduce, the first move is not to try to reproduce it but to capture the entire context of that moment intact. Next, overlay the three timelines, input, model, and code, to find the change that lines up in time, then narrow it down with falsification tests that roll back one variable at a time. Quality that degrades quietly without errors gets caught with a blind comparison, using signals that are already stockpiled as material. And rollback gets decided not by full certainty but by comparing the cost of leaving it in place against the cost of rolling back. Without this order, a team can spend hours hunting for the cause and still end up leaving the outage unaddressed, unable to reach a decision.
 
 This post is a blog rewrite of a section from our ebook 『AI Production Debugging』, compiled while we operated our internal automation pipelines.
+
+## References
+
+- [Kueue: Kubernetes-native job queueing system](https://kueue.sigs.k8s.io/)
+- [Defeating Nondeterminism in LLM Inference (Thinking Machines Lab)](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/)
+- [How Is ChatGPT's Behavior Changing over Time? (arXiv:2307.09009)](https://arxiv.org/abs/2307.09009)

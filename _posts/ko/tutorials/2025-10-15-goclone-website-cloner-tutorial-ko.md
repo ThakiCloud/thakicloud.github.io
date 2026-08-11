@@ -6,7 +6,7 @@ seo_description: "Goclone 웹사이트 클로너 완벽 가이드. Go 기반 도
 date: 2025-10-15
 lang: ko
 permalink: /ko/tutorials/goclone-website-cloner-tutorial/
-canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/goclone-website-cloner-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/goclone-website-cloner-tutorial-ko/"
 tags:
   - goclone
   - 웹스크래핑
@@ -21,6 +21,9 @@ categories:
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
+
+![Goclone: 웹사이트를 몇 초 만에 컴퓨터로 복제하기 개념을 형상화한 이미지](/assets/images/goclone-website-cloner-tutorial-ko-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 소개
 
@@ -45,6 +48,25 @@ Goclone은 인터넷에서 완전한 웹사이트를 로컬 디렉토리로 다�
 - 🌐 **프록시 지원**: HTTP 및 SOCKS5 프록시와 호환
 - 🍪 **쿠키 관리**: 인증된 세션을 위한 사전 설정 쿠키 지원
 - 🖥️ **로컬 서버**: 복제된 사이트 미리보기를 위한 내장 서버
+
+복제가 실제로 어떤 순서로 일어나는지 알아 두면 뒤에 나오는 옵션들이 훨씬 쉽게 읽힙니다.
+
+<div class="mermaid">
+flowchart TB
+    URL["대상 URL"] --> FETCH["HTML 문서 요청"]
+    FETCH --> PARSE["문서 파싱<br/>자산 링크 수집"]
+    PARSE --> POOL["고루틴 동시 다운로드"]
+    POOL --> CSS["CSS 스타일시트"]
+    POOL --> JS["JavaScript 파일"]
+    POOL --> IMG["이미지 및 미디어"]
+    CSS --> KEEP["상대 링크 구조 보존"]
+    JS --> KEEP
+    IMG --> KEEP
+    KEEP --> DIR["로컬 디렉터리에 저장"]
+    DIR --> SERVE["내장 서버로 미리보기"]
+</div>
+
+*Goclone은 문서를 먼저 읽어 내려받을 자산 목록을 만든 뒤, 고루틴으로 동시에 가져오고 상대 링크를 그대로 유지한 채 로컬에 저장합니다.*
 
 ## 사전 요구사항
 
@@ -373,4 +395,16 @@ Goclone은 웹사이트를 로컬 머신에 복제하기 위한 강력하고 빠
 ---
 
 **이 튜토리얼이 도움이 되셨나요?** Goclone의 혜택을 받을 수 있는 다른 사람들과 공유해주세요! 질문이나 제안이 있으시면 아래에 댓글을 남기거나 GitHub에서 이슈를 열어주세요.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![goclone-website-cloner-tutorial-ko 슬라이드 1](/assets/images/goclone-website-cloner-tutorial-ko-slide-01.png)
+
+![goclone-website-cloner-tutorial-ko 슬라이드 2](/assets/images/goclone-website-cloner-tutorial-ko-slide-02.png)
+
+![goclone-website-cloner-tutorial-ko 슬라이드 3](/assets/images/goclone-website-cloner-tutorial-ko-slide-03.png)
+
+![goclone-website-cloner-tutorial-ko 슬라이드 4](/assets/images/goclone-website-cloner-tutorial-ko-slide-04.png)
 

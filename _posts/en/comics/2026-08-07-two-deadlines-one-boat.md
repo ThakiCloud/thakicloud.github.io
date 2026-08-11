@@ -17,6 +17,7 @@ image: /assets/images/posts/comics/two-deadlines-one-boat/strip.png
 video: /assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4
 audiobook: /assets/audio/posts/two-deadlines-one-boat/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/two-deadlines-one-boat/"
 ---
 
 Compliance gets messy the moment there is more than one clock. One authority decided to delay and give firms a preparation window. The other said it is going ahead on schedule. Congratulations: you now maintain two calendars.
@@ -29,7 +30,7 @@ So today's strip happens on one wooden boat in the middle of a lake. No oars, pl
 
 > Source: [금융위는 유예·준비 택했는데…개보위는 "예정대로"](https://n.news.naver.com/mnews/article/018/0006345443) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/two-deadlines-one-boat/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4" type="video/mp4">

@@ -27,7 +27,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: [구글 AI 지휘봉 다시 잡은 브린…허사비스는 장기 연구에 전념](https://n.news.naver.com/mnews/article/005/0001865545) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/baton-back-hall-still-rented/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/baton-back-hall-still-rented/comic.mp4" type="video/mp4">

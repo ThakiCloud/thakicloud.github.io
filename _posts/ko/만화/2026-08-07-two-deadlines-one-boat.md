@@ -29,7 +29,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: [금융위는 유예·준비 택했는데…개보위는 "예정대로"](https://n.news.naver.com/mnews/article/018/0006345443) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/two-deadlines-one-boat/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4" type="video/mp4">
@@ -47,3 +47,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![two-deadlines-one-boat 슬라이드 1](/assets/images/two-deadlines-one-boat-slide-01.png)
+
+![two-deadlines-one-boat 슬라이드 2](/assets/images/two-deadlines-one-boat-slide-02.png)
+
+![two-deadlines-one-boat 슬라이드 3](/assets/images/two-deadlines-one-boat-slide-03.png)
+
+![two-deadlines-one-boat 슬라이드 4](/assets/images/two-deadlines-one-boat-slide-04.png)
+

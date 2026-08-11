@@ -17,6 +17,7 @@ image: /assets/images/posts/comics/baton-back-hall-still-rented/strip.png
 video: /assets/videos/posts/만화/baton-back-hall-still-rented/comic.mp4
 audiobook: /assets/audio/posts/baton-back-hall-still-rented/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/baton-back-hall-still-rented/"
 ---
 
 A Google co-founder is back at the helm of the AI org, while the researcher who led it shifts toward long horizon work. Leadership reshuffles at that scale are normal.
@@ -27,7 +28,7 @@ Sovereignty sounds heavy, but it means something plain: keeping your models, dat
 
 > Source: [구글 AI 지휘봉 다시 잡은 브린…허사비스는 장기 연구에 전념](https://n.news.naver.com/mnews/article/005/0001865545) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/baton-back-hall-still-rented/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/baton-back-hall-still-rented/comic.mp4" type="video/mp4">

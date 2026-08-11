@@ -32,9 +32,12 @@ ebook_pages: 27
 
 로컬 우선이라는 표현은 종종 성능 최적화 이야기로 오해받습니다. 하지만 실무에서 이 선택을 강제하는 이유는 대부분 속도나 비용이 아니라 데이터가 기기를 벗어날 수 없다는 규정이나 계약 조건입니다. 그 출발점의 차이가 설계 전체를 다르게 만듭니다.
 
+![로컬 우선 AI: 데이터가 기기를 떠나지 않는다는 제약이 설계를 바꾸는 방식 개념을 형상화한 이미지](/assets/images/local-first-ai-software-development-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 데이터가 기기를 떠나지 않는다는 제약
 
-의료 기록을 다루는 앱, 금융 상담을 요약하는 서비스, 폐쇄망 안에서 운영되는 공공기관 시스템을 만들어본 적이 있다면 이 문제를 압니다. 사용자의 입력을 클라우드 API로 보내는 순간, 그 데이터는 이미 서비스 제공자의 서버에 도달한 상태입니다. 로그로 남을 수도 있고, 모델 학습에 재사용될 수도 있고, 보안 사고로 유출될 수도 있습니다. 개인정보보호법이나 GDPR 같은 규제가 강화될수록 이 위험은 선택지가 아니라 준수해야 할 조건으로 바뀝니다.
+의료 기록을 다루는 앱, 금융 상담을 요약하는 서비스, 폐쇄망 안에서 운영되는 공공기관 시스템을 만들어본 적이 있다면 이 문제를 압니다. 사용자의 입력을 클라우드 API로 보내는 순간, 그 데이터는 이미 서비스 제공자의 서버에 도달한 상태입니다. 로그로 남을 수도 있고, 모델 학습에 재사용될 수도 있고, 보안 사고로 유출될 수도 있습니다. [개인정보보호법](https://pipc.go.kr/eng/index.do)이나 [GDPR](https://gdpr-info.eu/) 같은 규제가 강화될수록 이 위험은 선택지가 아니라 준수해야 할 조건으로 바뀝니다.
 
 로컬 우선 설계는 이 문제를 근본적으로 다르게 풉니다. 데이터를 안전하게 전송하는 방법을 고민하는 대신, 데이터가 애초에 기기를 떠날 필요가 없도록 만듭니다. 추론이 사용자의 스마트폰이나 노트북, 혹은 사내 서버 안에서 끝나면 유출 경로 자체가 사라집니다. 이 차이는 보안 감사를 통과하느냐 마느냐를 가르는 실질적인 기준이 되기도 합니다.
 
@@ -58,11 +61,11 @@ ebook_pages: 27
 
 문제는 양자화가 공짜가 아니라는 점입니다. 비트 수를 낮출수록 크기는 줄지만 원본 모델이 갖고 있던 미묘한 표현력도 함께 깎여 나갑니다. 압축을 조금만 하면 품질 손실은 거의 느껴지지 않지만 메모리 절감 폭도 작습니다. 반대로 공격적으로 압축하면 메모리에는 여유가 생기지만 답변이 부자연스러워지거나 드물게 사실과 다른 내용을 만들어내는 빈도가 늘어날 수 있습니다. 이 지점에서 정답은 하나로 정해지지 않습니다. 자신의 태스크에서 실제로 감내할 수 있는 품질 저하 수준을 직접 측정하고 정해야 합니다.
 
-하드웨어 가속 경로도 기기마다 균일하지 않습니다. 최신 애플 실리콘은 전용 신경망 엔진을 갖추고 있어 적은 전력으로도 효율적인 추론이 가능하지만, 구형 안드로이드 기기는 신경망 가속 레이어를 제대로 지원하지 않거나 지원하더라도 동작이 불안정한 경우가 많습니다. 그래서 로컬 우선 제품을 설계할 때는 가속 경로가 실패했을 때 CPU 추론으로 조용히 넘어가는 폴백 경로를 처음부터 함께 짜야 합니다. 이 폴백이 없으면 최신 기기에서는 매끄럽게 동작하던 기능이 구형 기기에서는 아예 멈추거나 눈에 띄게 느려집니다.
+하드웨어 가속 경로도 기기마다 균일하지 않습니다. 최신 애플 실리콘은 [전용 신경망 엔진](https://machinelearning.apple.com/research/neural-engine-transformers)을 갖추고 있어 적은 전력으로도 효율적인 추론이 가능하지만, 구형 안드로이드 기기는 신경망 가속 레이어를 제대로 지원하지 않거나 지원하더라도 동작이 불안정한 경우가 많습니다. 그래서 로컬 우선 제품을 설계할 때는 가속 경로가 실패했을 때 CPU 추론으로 조용히 넘어가는 폴백 경로를 처음부터 함께 짜야 합니다. 이 폴백이 없으면 최신 기기에서는 매끄럽게 동작하던 기능이 구형 기기에서는 아예 멈추거나 눈에 띄게 느려집니다.
 
 기기 발열도 무시할 수 없는 변수입니다. 모바일 칩에서 추론을 오래 지속하면 발열 제어를 위해 처리 속도가 스스로 낮아지는 현상이 나타납니다. 벤치마크를 짧게 한 번만 돌려서 얻은 숫자는 실제 사용 환경의 성능을 과대평가하기 쉽습니다. 연속 사용 시나리오까지 포함해 성능을 검증해야 실제 배포 후에 겪을 저하를 미리 알 수 있습니다.
 
-모델 파일 자체의 용량도 앱 배포 과정에서 걸림돌이 됩니다. 앱스토어나 플레이스토어는 초기 설치 용량에 제한을 두는 경우가 많고, 사용자도 수 기가바이트짜리 앱을 선뜻 내려받지 않습니다. 그래서 모델을 앱 번들에 포함하지 않고 최초 실행 시점에 별도로 내려받게 하는 구조를 많이 씁니다. 이때는 다운로드가 끊기거나 실패했을 때의 재시도 경로, 그리고 모델이 준비되지 않은 동안 사용자에게 무엇을 보여줄지도 함께 설계해야 합니다.
+모델 파일 자체의 용량도 앱 배포 과정에서 걸림돌이 됩니다. [앱스토어](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/)나 [플레이스토어](https://developer.android.com/topic/performance/reduce-apk-size)는 초기 설치 용량에 제한을 두는 경우가 많고, 사용자도 수 기가바이트짜리 앱을 선뜻 내려받지 않습니다. 그래서 모델을 앱 번들에 포함하지 않고 최초 실행 시점에 별도로 내려받게 하는 구조를 많이 씁니다. 이때는 다운로드가 끊기거나 실패했을 때의 재시도 경로, 그리고 모델이 준비되지 않은 동안 사용자에게 무엇을 보여줄지도 함께 설계해야 합니다.
 
 ## 언제 로컬을 쓰고 언제 클라우드로 넘길 것인가
 
@@ -129,3 +132,24 @@ def choose_inference_path(is_sensitive: bool, device_ram_mb: int,
 로컬 우선 AI는 만능 해법이 아닙니다. 클라우드 대형 모델과 같은 수준의 추론 능력을 기대할 수 없고, 기기마다 성능 편차도 크며, 배터리와 발열이라는 현실적인 제약도 함께 짊어져야 합니다. 하지만 데이터가 애초에 기기를 벗어날 필요가 없다는 구조적 이점과 네트워크 왕복 없이 얻는 즉각적인 응답은 다른 방식으로는 대체하기 어렵습니다. 이 거래를 정직하게 인정하고, 민감도와 성능과 네트워크 상태를 순서대로 따지는 판단 구조를 코드로 명시해두는 것이 로컬 우선 설계의 실질적인 출발점입니다.
 
 이 글의 내용은 저희가 사내에서 정리한 전자책 『로컬 우선 AI 소프트웨어 개발』의 일부를 블로그용으로 다시 쓴 것입니다.
+
+## 참고 자료
+
+- [GDPR 공식 규정 전문 (gdpr-info.eu)](https://gdpr-info.eu/)
+- [개인정보보호위원회 공식 사이트 (PIPC)](https://pipc.go.kr/eng/index.do)
+- [Deploying Transformers on the Apple Neural Engine (Apple Machine Learning Research)](https://machinelearning.apple.com/research/neural-engine-transformers)
+- [Maximum Build File Sizes (App Store Connect Help)](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/)
+- [Reduce your app size (Android Developers)](https://developer.android.com/topic/performance/reduce-apk-size)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![local-first-ai-software-development 슬라이드 1](/assets/images/local-first-ai-software-development-slide-01.png)
+
+![local-first-ai-software-development 슬라이드 2](/assets/images/local-first-ai-software-development-slide-02.png)
+
+![local-first-ai-software-development 슬라이드 3](/assets/images/local-first-ai-software-development-slide-03.png)
+
+![local-first-ai-software-development 슬라이드 4](/assets/images/local-first-ai-software-development-slide-04.png)
+

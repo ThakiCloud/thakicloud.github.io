@@ -29,6 +29,9 @@ ebook_pages: 23
 
 AI 기능에서 장애가 터졌는데 스택트레이스가 없는 상황을 겪어본 엔지니어를 위한 글입니다. 같은 입력을 다시 넣어도 재현되지 않고, 에러 로그는 깨끗한데 사용자 불만은 쌓이는 경험을 해보셨다면 이 글이 도움이 될 겁니다. 재현되지 않는 실패를 붙잡는 방법, 원인을 입력 분포와 모델 변경과 코드 변경 세 갈래로 좁혀가는 순서, 조용히 나빠지는 품질을 사고 조사 과정에서 알아채는 법, 그리고 롤백을 결정하는 기준을 다룹니다.
 
+![재현되지 않는 AI 장애, 무엇부터 의심해야 할까요 개념을 형상화한 이미지](/assets/images/ai-production-debugging-hero.png)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 재현이 안 되는 것 자체가 첫 번째 단서입니다
 
 일반적인 소프트웨어 디버깅은 재현을 전제로 합니다. 같은 입력을 넣으면 같은 출력이 나오고, 그 사이 어딘가에 브레이크포인트를 걸면 원인이 보입니다. AI 시스템은 이 전제가 자주 무너집니다. 샘플링 온도가 있으면 같은 입력도 매번 다른 출력을 냅니다. 배치 처리 과정에서 GPU 커널의 실행 순서가 미묘하게 달라지면 부동소수점 연산 결과가 흔들립니다. 검색 증강 구조라면 참조 문서 자체가 색인 갱신으로 바뀌어 버립니다. 무엇보다 API로 제공되는 모델은 우리가 모르는 사이 뒤에서 교체됩니다.
@@ -153,3 +156,24 @@ def should_rollback(time_overlap, impact_per_hour, rollback_cost_min, elapsed_mi
 재현되지 않는 AI 장애 앞에서 가장 먼저 할 일은 재현 시도가 아니라 그 순간의 맥락을 통째로 붙잡는 것입니다. 그다음은 입력과 모델과 코드 세 타임라인을 하나로 겹쳐 시간이 일치하는 변경을 찾고, 한 번에 하나씩 되돌리는 반증 실험으로 좁혀갑니다. 에러 없이 조용히 나빠지는 품질은 이미 쌓인 신호를 재료로 삼아 눈가림 비교로 잡습니다. 그리고 롤백은 완전한 확신이 아니라 방치 비용과 롤백 비용의 비교로 결정합니다. 이 순서가 없으면 팀은 원인을 찾는 데 몇 시간을 쓰고도 결정을 내리지 못한 채 장애를 방치하게 됩니다.
 
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『AI 프로덕션 디버깅』의 일부를 블로그용으로 다시 쓴 것입니다.
+
+## 참고 자료
+
+본문에서 언급한 도구와 연구 결과는 아래 자료로 확인할 수 있습니다.
+
+- [Kueue: Kubernetes 기반 잡 큐잉 시스템](https://kueue.sigs.k8s.io/)
+- [Defeating Nondeterminism in LLM Inference (Thinking Machines Lab)](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/)
+- [How Is ChatGPT's Behavior Changing over Time? (arXiv:2307.09009)](https://arxiv.org/abs/2307.09009)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-production-debugging 슬라이드 1](/assets/images/ai-production-debugging-slide-01.png)
+
+![ai-production-debugging 슬라이드 2](/assets/images/ai-production-debugging-slide-02.png)
+
+![ai-production-debugging 슬라이드 3](/assets/images/ai-production-debugging-slide-03.png)
+
+![ai-production-debugging 슬라이드 4](/assets/images/ai-production-debugging-slide-04.png)
+

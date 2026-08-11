@@ -17,6 +17,7 @@ image: /assets/images/posts/comics/only-the-locked-boxes-get-inspected/strip.png
 video: /assets/videos/posts/만화/only-the-locked-boxes-get-inspected/comic.mp4
 audiobook: /assets/audio/posts/only-the-locked-boxes-get-inspected/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/only-the-locked-boxes-get-inspected/"
 ---
 
 Washington's pre-release safety review lands on closed frontier AI: models whose weights stay private and reach you only through an API. Open-weight models, the ones anyone can download and crack open, sit this round out.
@@ -27,7 +28,7 @@ Which leaves the third case. A model that runs only inside your own building nev
 
 > Source: [美정부, 폐쇄형 첨단 AI만 출시 전 안전성 검사](https://biz.chosun.com/it-science/ict/2026/08/06/TTMYRYEVSNFDPATPGIZTXRPVM4/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/only-the-locked-boxes-get-inspected/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/only-the-locked-boxes-get-inspected/comic.mp4" type="video/mp4">
