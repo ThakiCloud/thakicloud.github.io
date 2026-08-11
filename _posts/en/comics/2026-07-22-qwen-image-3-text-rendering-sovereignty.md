@@ -17,6 +17,7 @@ image: /assets/images/posts/comics/qwen-image-3-text-rendering-sovereignty/strip
 audiobook: /assets/audio/posts/qwen-image-3-text-rendering-sovereignty/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/qwen-image-3-text-rendering-sovereignty/"
+published: false
 ---
 
 Alibaba dropped Qwen-Image-3.0, and the headline feature is text rendering: the model writes legible words inside the picture. For years image models mangled any sign or poster into squiggly alien runes. Now the letters come out crisp, so an agent can hand back a flawless poster on the first try. What the image never shows you is whose cloud the brush is bolted to.

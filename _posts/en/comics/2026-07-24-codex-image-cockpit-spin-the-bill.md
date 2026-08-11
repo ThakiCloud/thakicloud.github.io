@@ -18,6 +18,7 @@ video: /assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.en.mp
 audiobook: /assets/audio/posts/codex-image-cockpit-spin-the-bill/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/codex-image-cockpit-spin-the-bill/"
+published: false
 ---
 
 A tidy image cockpit for Codex workflows just shipped. Pick a direction, front, three-quarter, side, three-quarter back, back, and it animates your character turning that way, now with experimental 16- and 20-frame takes. Handy. The catch hides in the word render: every frame is one image inference, which is to say one metered call. More angles, more frames, a smoother sprite, and a meter that spins right along with it. And the whole cockpit only flies on someone else's engine.
