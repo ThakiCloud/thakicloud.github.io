@@ -16,6 +16,7 @@ image: /assets/images/posts/comics/government-ai-goes-agent/strip.webp
 video: /assets/videos/posts/만화/government-ai-goes-agent/comic.mp4
 audiobook: /assets/audio/posts/government-ai-goes-agent/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/government-ai-goes-agent/"
 ---
 
 Korea's whole-of-government AI platform is a shared foundation: build the AI once, let every ministry draw on it. The news is that the foundation is moving past chatbots and into agents. A chatbot answers you. An agent opens the file, checks the record, and pushes the case to the next step. The plan also folds in the newest commercial models. Capability goes up. The release schedule stays on someone else's calendar.
@@ -24,7 +25,7 @@ Korea's whole-of-government AI platform is a shared foundation: build the AI onc
 
 > Source: [범정부 AI 공통기반, 챗봇 넘어 에이전트로…최신 민간 모델 품는다](https://n.news.naver.com/mnews/article/092/0002433460) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition, the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/government-ai-goes-agent/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/government-ai-goes-agent/comic.mp4" type="video/mp4">

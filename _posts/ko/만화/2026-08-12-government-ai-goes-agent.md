@@ -24,7 +24,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: [범정부 AI 공통기반, 챗봇 넘어 에이전트로…최신 민간 모델 품는다](https://n.news.naver.com/mnews/article/092/0002433460) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/government-ai-goes-agent/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/government-ai-goes-agent/comic.mp4" type="video/mp4">

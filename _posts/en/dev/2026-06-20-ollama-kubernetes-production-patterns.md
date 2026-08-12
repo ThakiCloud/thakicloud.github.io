@@ -20,7 +20,33 @@ categories:
 
 ⏱️ **Estimated reading time**: 9 min
 
-Ollama recorded 52 million downloads in Q1 2026. It has moved well beyond a personal experimentation tool and is being used as team-level infrastructure. Running `ollama run` on a local Mac and operating a serving layer for an entire team on a Kubernetes cluster are architecturally different problems. This post covers the latter.
+Ollama has moved well beyond a personal experimentation tool and is being used as team-level infrastructure. Running `ollama run` on a local Mac and operating a serving layer for an entire team on a Kubernetes cluster are architecturally different problems. This post covers the latter.
+
+Seeing the full picture first makes it easier to place the pieces that follow.
+
+```mermaid
+flowchart TB
+    CLIENT[Internal dev team<br/>OpenAI-compatible API calls]
+    CLIENT --> ING[Ingress or LoadBalancer]
+    ING --> AUTH[Auth proxy<br/>OAuth2 Proxy or Nginx API key<br/>Ollama has no native auth]
+    AUTH --> SVC[Service ollama<br/>ClusterIP 11434]
+    SVC --> POD[Ollama Deployment<br/>OLLAMA_NUM_PARALLEL 4<br/>OLLAMA_MAX_LOADED_MODELS 2]
+    POD --> GPU[GPU node<br/>nvidia.com/gpu toleration<br/>limits 1 GPU]
+    POD --> PVC[(PVC ollama-models 500Gi<br/>no re-download on restart)]
+
+    GPU -->|GPU utilization| DCGM[DCGM Exporter]
+    POD -.eval_count and eval_duration in the response body.-> SIDE[Sidecar or proxy exporter<br/>Ollama has no native metrics]
+    DCGM --> PROM[Prometheus]
+    SIDE --> PROM
+    PROM --> HPA[HPA v2 custom metric<br/>min 1 max 4]
+    HPA -.scale out.-> POD
+    HPA -.Pending if nodes are short.-> CA[Cluster Autoscaler or Karpenter]
+```
+
+The dotted paths are not provided out of the box and have to be built by hand. The monitoring section below covers this part in detail.
+
+![Illustration of the core idea of Running Ollama on Kubernetes in Production](/assets/images/ollama-kubernetes-production-patterns-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Why Ollama: Positioning Against vLLM
 
@@ -202,38 +228,32 @@ Include no text outside the JSON structure.
 
 In practice, even with `format: "json"` enabled, the model does not always respect the schema fully. A validation layer that parses and checks the schema after each response is necessary.
 
-## Prometheus Monitoring
+## Monitoring: Ollama Has No Native `/metrics`
 
-Ollama exposes Prometheus metrics at the `/metrics` endpoint:
+There is something worth flagging up front here. **Ollama does not expose a Prometheus `/metrics` endpoint.** There is an open issue asking for one, and the linked PR still has not merged. If you wire up a ServiceMonitor pointing at `path: /metrics`, the scrape fails quietly and the dashboard stays empty. It is the kind of problem you tend to discover on a high-traffic day, not right after deployment.
+
+There are three paths that actually work, and all three have to be built by hand.
+
+**First, the timing fields in the response body.** The `/api/generate` and `/api/chat` responses include fields such as `eval_count`, `eval_duration`, and `prompt_eval_count`. You can compute token throughput and latency from these. The catch is that these values land on the caller, so turning them into metrics means the client or the proxy has to aggregate and emit them.
+
+**Second, a proxy exporter.** Since there is already an auth proxy sitting in front, measuring request count and latency at that same point is the cheapest option. There are also third-party exporters that sit in front of Ollama and expose their own metrics on a separate port. Either way, the metric names are defined by that exporter, not by Ollama, so dashboards and alerts need to be written against whatever exporter you actually deployed.
+
+**Third, the GPU level is covered by DCGM Exporter.** This one works fine independent of Ollama. Deploy it as a DaemonSet on GPU nodes and it ships utilization and memory numbers to Prometheus. Most of the signal that actually matters for scaling decisions in model serving lives on the GPU side anyway, so if you are only going to wire up one thing first, this is the one to pick.
 
 ```yaml
+# ServiceMonitor pointed at DCGM Exporter. It scrapes the GPU exporter, not the Ollama Pod.
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: ollama
+  name: dcgm-exporter
   namespace: ollama
 spec:
   selector:
     matchLabels:
-      app: ollama
+      app: dcgm-exporter
   endpoints:
-  - port: http
-    path: /metrics
+  - port: metrics
     interval: 30s
-```
-
-Key metrics:
-
-```promql
-# number of requests currently being processed
-ollama_request_duration_seconds_count
-
-# average processing time
-rate(ollama_request_duration_seconds_sum[5m])
-/ rate(ollama_request_duration_seconds_count[5m])
-
-# number of loaded models
-ollama_loaded_model_count
 ```
 
 ## HPA Autoscaling
@@ -262,6 +282,8 @@ spec:
         type: AverageValue
         averageValue: "10"
 ```
+
+`ollama_queue_depth` is just an example name. As the previous section covered, Ollama does not emit this metric itself, so it needs to be renamed to whatever the proxy exporter actually exposes. An HPA pointing at a metric that does not exist does not scale, it just sits there quietly. You also need to confirm the metric is registered with the custom metrics API through an adapter such as Prometheus Adapter.
 
 When GPU nodes are insufficient, HPA scale-out attempts leave Pods in Pending state. Node-level scaling requires Cluster Autoscaler or Karpenter in addition to HPA.
 
@@ -292,4 +314,15 @@ Integrating with an IdP such as Keycloak allows per-team access control.
 
 ## Summary
 
-Running Ollama properly on Kubernetes requires four things: a model PVC, GPU tolerations, an auth proxy, and monitoring. Using Modelfile to configure team-specific models puts the system prompt and parameters under version control. For internal tool serving where operational simplicity matters more than throughput, Ollama is a good choice relative to its setup cost.
+Running Ollama properly on Kubernetes requires four things: a model PVC, GPU tolerations, an auth proxy, and monitoring. The first three are just manifests once you write them. The last one is a different story. Since Ollama does not emit metrics, you have to assemble observability yourself out of DCGM and a proxy exporter, and if you skip that and only wire up a ServiceMonitor, you end up operating under the impression that monitoring is in place when it is not. Using Modelfile to configure team-specific models puts the system prompt and parameters under version control. For internal tool serving where operational simplicity matters more than throughput, Ollama is a good choice relative to its setup cost.
+
+## Sources
+
+- Ollama, [FAQ](https://docs.ollama.com/faq): default value of 1 for `OLLAMA_NUM_PARALLEL`, `OLLAMA_MAX_LOADED_MODELS`, `OLLAMA_MODELS`
+- Ollama, [Modelfile Reference](https://docs.ollama.com/modelfile): `FROM`, `SYSTEM`, `PARAMETER temperature`, `num_ctx`
+- Ollama, [Structured Outputs](https://docs.ollama.com/capabilities/structured-outputs): the `format` parameter
+- Ollama, [Troubleshooting](https://docs.ollama.com/troubleshooting): `OLLAMA_DEBUG`
+- ollama/ollama, [add /metrics endpoint (issue #3144)](https://github.com/ollama/ollama/issues/3144): the native Prometheus endpoint remains an open, unimplemented request
+- Kubernetes, [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/) and [HPA v2 API Reference](https://kubernetes.io/docs/reference/kubernetes-api/autoscaling/horizontal-pod-autoscaler-v2/)
+- NVIDIA, [dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter): GPU metrics DaemonSet
+- vLLM, [Documentation](https://docs.vllm.ai/en/latest/): PagedAttention and continuous batching
