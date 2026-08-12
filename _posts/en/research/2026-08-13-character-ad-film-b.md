@@ -12,6 +12,17 @@ tags:
 author_profile: true
 ---
 
+> **Correction, 2026-08-13.** After publishing, we ran paired significance tests on this same
+> data. The numbers in the table below stand, but **the ordering between methods does not.**
+> At n=8 prompts the only significant contrasts are that all four methods beat the baseline,
+> and that adapter scale 1.0 beats 0.7. The 0.866 vs 0.839 gap between Bernini and the trained
+> LoRA is **p=0.28**. So "Bernini beat training" is not supported, and neither is the title's
+> claim that training lost, as a matter of measurement.
+> **The decision to ship the zero-shot cut still stands**, because that decision rested on the
+> background collapse you can see in the frames below, not on the scores. Collapse is an
+> observation, not a hypothesis test.
+> One lesson: never turn a difference in means into a ranking without testing it.
+
 If you need a brand mascot to appear across many videos, this post gives you two conclusions. First, **which zero-shot method you pick** separates the results more than the decision to train at all. Second, if you choose a method by looking at how closely the subject resembles the reference, you will probably choose wrong. We nearly did, and what changed our final film was not a number but a frame.
 
 ## The result first
