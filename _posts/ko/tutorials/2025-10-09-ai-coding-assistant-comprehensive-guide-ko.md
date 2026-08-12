@@ -27,7 +27,7 @@ published: false
 
 ⏱️ **예상 읽기 시간**: 12분
 
-![AI 코딩 어시스턴트: 개발 생산성을 극대화하는 완벽 가이드 개념을 형상화한 이미지](/assets/images/ai-coding-assistant-comprehensive-guide-ko-hero.png)
+![AI 코딩 어시스턴트: 개발 생산성을 극대화하는 완벽 가이드 개념을 형상화한 이미지](/assets/images/ai-coding-assistant-comprehensive-guide-ko-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 서론

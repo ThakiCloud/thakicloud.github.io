@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-dspark-bs1-de
 
 Most serving benchmarks brag about throughput. Raise the batch, add concurrent requests, report total tokens per second. That number lands poorly with anyone attaching a coding agent or a reasoning model, because the user is waiting on exactly one response and the next tool call cannot start until it finishes. The figure vLLM just published aims squarely at that spot: 464 tok/s at batch size 1.
 
-![Abstract art of a single beam of light outrunning a slower dense cluster, with seven sparks fanning out in parallel and merging back](/assets/images/kimi-k3-dspark-bs1-decode-hero.png)
+![Abstract art of a single beam of light outrunning a slower dense cluster, with seven sparks fanning out in parallel and merging back](/assets/images/kimi-k3-dspark-bs1-decode-hero.webp)
 
 ## Why read this
 
@@ -83,7 +83,7 @@ p implied by 3.93x        0.8129   E[accepted]/step 4.33
 
 Behind 3.14x sits a per-token acceptance of 0.73 and 3.45 committed tokens per step. Seven proposals, roughly three and a half kept. The 3.93x corresponding to 464 tok/s implies acceptance of 0.81 and 4.33 tokens per step. In other words, two days of work is explained by roughly 0.07 of acceptance. In this regime, whether the work happens in the draft model or the kernels, it is a fight for a few percentage points of acceptance.
 
-![Chart of bs=1 throughput against acceptance rate with the published anchors marked](/assets/images/kimi-k3-dspark-bs1-decode-results.png)
+![Chart of bs=1 throughput against acceptance rate with the published anchors marked](/assets/images/kimi-k3-dspark-bs1-decode-results.webp)
 
 Unrolling the sensitivity makes it obvious why vLLM specified a low-entropy reasoning workload.
 

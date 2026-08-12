@@ -36,7 +36,7 @@ Sonnet에서 Opus로 모델을 올렸는데 처음 며칠만 안정적이고 다
 
 모델을 올렸을 때 좋아지는 것처럼 보이는 경우는 대개 두 가지입니다. 하나는 기존 하네스의 빈틈을 강한 모델의 추론력이 잠시 메워준 경우입니다. 이때는 구조 자체가 고쳐진 게 아니라서 시간이 지나면 빈틈이 다시 드러납니다. 다른 하나는 모델 등급과 함께 하네스도 실제로 개선된 경우인데, 이때만 효과가 지속됩니다. 대부분의 팀이 모델만 바꾸고 하네스는 그대로 두는 바람에, 처음 두 주는 잘 되다가 다시 무너지는 패턴을 반복해서 겪습니다. 모델은 엔진이고 방향을 트는 건 하네스입니다. 엔진만 바꾸고 조향 장치를 그대로 두면 속도는 빨라져도 같은 곳에서 같은 방식으로 벗어납니다. 아래 네 절은 그 조향 장치를 이루는 네 층, 시스템 프롬프트, 도구 정의, 출력 검증, 라우팅을 차례로 뜯어봅니다.
 
-![AI 에이전트 하네스 설계: 프롬프트와 도구 정의를 넘어서 개념을 형상화한 이미지](/assets/images/ai-agent-harness-design-hero.png)
+![AI 에이전트 하네스 설계: 프롬프트와 도구 정의를 넘어서 개념을 형상화한 이미지](/assets/images/ai-agent-harness-design-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 시스템 프롬프트는 지시문이 아니라 계약입니다
@@ -151,15 +151,15 @@ flowchart TB
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-agent-harness-design 슬라이드 1](/assets/images/ai-agent-harness-design-slide-01.png)
+![ai-agent-harness-design 슬라이드 1](/assets/images/ai-agent-harness-design-slide-01.webp)
 
-![ai-agent-harness-design 슬라이드 2](/assets/images/ai-agent-harness-design-slide-02.png)
+![ai-agent-harness-design 슬라이드 2](/assets/images/ai-agent-harness-design-slide-02.webp)
 
-![ai-agent-harness-design 슬라이드 3](/assets/images/ai-agent-harness-design-slide-03.png)
+![ai-agent-harness-design 슬라이드 3](/assets/images/ai-agent-harness-design-slide-03.webp)
 
-![ai-agent-harness-design 슬라이드 4](/assets/images/ai-agent-harness-design-slide-04.png)
+![ai-agent-harness-design 슬라이드 4](/assets/images/ai-agent-harness-design-slide-04.webp)
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/ai-agent-harness-design/ch01.png)
-![3장 삽화](/assets/images/books/ai-agent-harness-design/ch03.png)
+![1장 삽화](/assets/images/books/ai-agent-harness-design/ch01.webp)
+![3장 삽화](/assets/images/books/ai-agent-harness-design/ch03.webp)
 

@@ -22,7 +22,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/jaxbench-tpu-pallas-context-over-scale/"
 ---
 
-![Cover image of light beams threading through a vast systolic lattice](/assets/images/jaxbench-tpu-pallas-context-over-scale-hero.png)
+![Cover image of light beams threading through a vast systolic lattice](/assets/images/jaxbench-tpu-pallas-context-over-scale-hero.webp)
 
 Anyone who has pointed an agent at an internal API or an unfamiliar DSL knows the scene. The model writes confident code against an API that does not exist. You hand back the compiler error and the next attempt hallucinates something similar. The usual prescription is to switch to a better model. JAXBench (arXiv 2607.20466) shows, with numbers, that the prescription is mostly wrong, using TPU kernel generation as an extreme case.
 

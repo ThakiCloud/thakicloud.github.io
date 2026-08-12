@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/minimax-h3-director-c
 
 영상 생성 모델을 자체 인프라에 올릴지 검토 중이거나 ComfyUI 파이프라인을 운영하는 분들을 위한 글입니다. 결론부터 말씀드리면, MiniMax H3는 가중치와 오디오까지 함께 열린 드문 릴리스이고 Director 노드 덕분에 멀티샷 저작이 실무 수준으로 올라왔지만, 한국은 커뮤니티 라이선스의 적용 지역에서 빠져 있어 국내 팀이 이 가중치를 내려받아 자체 서빙하는 경로는 지금 막혀 있습니다. 기술 검토와 법무 검토를 같은 주에 시작하셔야 하는 사안입니다.
 
-![여러 장의 유리 패널이 타임라인처럼 이어지고 그 아래로 오디오 파형이 흐르는 이미지](/assets/images/minimax-h3-director-comfyui-hero.png)
+![여러 장의 유리 패널이 타임라인처럼 이어지고 그 아래로 오디오 파형이 흐르는 이미지](/assets/images/minimax-h3-director-comfyui-hero.webp)
 *샷이 순서를 이루고 오디오가 같은 축 위에서 함께 흐르는 구조를 형상화했습니다.*
 
 ## 개요

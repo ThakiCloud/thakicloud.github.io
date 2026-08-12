@@ -20,7 +20,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/research/cognitive-commons-expertise-regeneration/"
 ---
 
-![Concept art of a shared reservoir draining while the springs that refill it run dry](/assets/images/cognitive-commons-expertise-regeneration-hero.png)
+![Concept art of a shared reservoir draining while the springs that refill it run dry](/assets/images/cognitive-commons-expertise-regeneration-hero.webp)
 *Individually rational choices, added up, drain a shared reservoir.*
 
 ## Why This Matters to You

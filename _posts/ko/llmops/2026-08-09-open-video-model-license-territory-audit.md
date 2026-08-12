@@ -28,7 +28,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/open-video-model-lice
 
 결론부터 말하겠습니다. 적용 지역에서 한국을 빼는 관행은 최근에 시작된 것이 아니라 2024년 12월부터 이어져 온 흐름입니다. 그리고 오늘 기준으로 널리 쓰이는 오픈 영상 모델 가운데 지역 제한과 규모 제한을 모두 피해 가는 것은 손에 꼽습니다. 아래에서는 라이선스 원문 여섯 개를 직접 열어 확인한 내용을 근거로 이 주장을 논증하고 다음 모델을 고를 때 그대로 쓸 수 있는 일곱 문항의 점검 순서를 정리합니다.
 
-![오픈 영상 모델 라이선스의 지역 제한을 형상화한 이미지](/assets/images/open-video-model-license-territory-audit-hero.png)
+![오픈 영상 모델 라이선스의 지역 제한을 형상화한 이미지](/assets/images/open-video-model-license-territory-audit-hero.webp)
 *모델을 받을 수 있다는 것과 쓸 수 있다는 것은 다른 문제가 됐습니다.*
 
 ## 텐센트는 2024년 12월부터 한국을 빼고 있었습니다
@@ -85,7 +85,7 @@ flowchart TD
 ```
 *앞의 세 문항이 도입 가능 여부를, 뒤의 문항이 운영 비용을 결정합니다.*
 
-![오픈 영상 모델의 지역 제외 시점과 규모 게이트 임계를 비교한 그래프](/assets/images/open-video-model-license-territory-audit-results.png)
+![오픈 영상 모델의 지역 제외 시점과 규모 게이트 임계를 비교한 그래프](/assets/images/open-video-model-license-territory-audit-results.webp)
 *왼쪽은 한국을 적용 지역에서 제외한 시점이고, 오른쪽은 유료 전환이나 사전 승인이 걸리는 임계입니다.*
 
 ## 지역 제한이 없다고 해서 자유로운 것도 아닙니다

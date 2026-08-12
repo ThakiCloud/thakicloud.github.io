@@ -163,8 +163,8 @@ A single final probability value left in a log can't tell you "why" a model answ
 This post is adapted for the blog from a section of our ebook, AI Interpretability Engineering: Reading the Decisions of Production Models.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-interpretability-engineering/ch01.png)
-![Chapter 2 illustration](/assets/images/books/ai-interpretability-engineering/ch02.png)
-![Chapter 3 illustration](/assets/images/books/ai-interpretability-engineering/ch03.png)
-![Chapter 4 illustration](/assets/images/books/ai-interpretability-engineering/ch04.png)
+![Chapter 1 illustration](/assets/images/books/ai-interpretability-engineering/ch01.webp)
+![Chapter 2 illustration](/assets/images/books/ai-interpretability-engineering/ch02.webp)
+![Chapter 3 illustration](/assets/images/books/ai-interpretability-engineering/ch03.webp)
+![Chapter 4 illustration](/assets/images/books/ai-interpretability-engineering/ch04.webp)
 

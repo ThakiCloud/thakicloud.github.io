@@ -22,7 +22,7 @@ categories:
 
 ⏱️ **Expected Reading Time**: 8 minutes
 
-![Awesome Public Datasets category overview]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png' | relative_url }})
+![Awesome Public Datasets category overview]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.webp' | relative_url }})
 
 ## Introduction
 

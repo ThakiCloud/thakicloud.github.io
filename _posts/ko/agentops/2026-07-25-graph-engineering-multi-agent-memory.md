@@ -427,13 +427,13 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![graph-engineering-multi-agent-memory 슬라이드 1](/assets/images/graph-engineering-multi-agent-memory-slide-01.png)
+![graph-engineering-multi-agent-memory 슬라이드 1](/assets/images/graph-engineering-multi-agent-memory-slide-01.webp)
 
-![graph-engineering-multi-agent-memory 슬라이드 2](/assets/images/graph-engineering-multi-agent-memory-slide-02.png)
+![graph-engineering-multi-agent-memory 슬라이드 2](/assets/images/graph-engineering-multi-agent-memory-slide-02.webp)
 
-![graph-engineering-multi-agent-memory 슬라이드 3](/assets/images/graph-engineering-multi-agent-memory-slide-03.png)
+![graph-engineering-multi-agent-memory 슬라이드 3](/assets/images/graph-engineering-multi-agent-memory-slide-03.webp)
 
-![graph-engineering-multi-agent-memory 슬라이드 4](/assets/images/graph-engineering-multi-agent-memory-slide-04.png)
+![graph-engineering-multi-agent-memory 슬라이드 4](/assets/images/graph-engineering-multi-agent-memory-slide-04.webp)
 
 ## 출처
 

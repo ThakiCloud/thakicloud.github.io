@@ -20,7 +20,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/dev/claude-code-ios-simulator/"
 ---
 
-![صورة تجريدية تجسّد حلقة مغلقة تتصل فيها شاشة التنفيذ والكود معًا كحلقة ضوء واحدة]({{ '/assets/images/claude-code-ios-simulator-hero.png' | relative_url }})
+![صورة تجريدية تجسّد حلقة مغلقة تتصل فيها شاشة التنفيذ والكود معًا كحلقة ضوء واحدة]({{ '/assets/images/claude-code-ios-simulator-hero.webp' | relative_url }})
 
 ## لماذا تستحق هذه المقالة القراءة
 

@@ -29,7 +29,7 @@ ebook_pages: 23
 
 AI 기능에서 장애가 터졌는데 스택트레이스가 없는 상황을 겪어본 엔지니어를 위한 글입니다. 같은 입력을 다시 넣어도 재현되지 않고, 에러 로그는 깨끗한데 사용자 불만은 쌓이는 경험을 해보셨다면 이 글이 도움이 될 겁니다. 재현되지 않는 실패를 붙잡는 방법, 원인을 입력 분포와 모델 변경과 코드 변경 세 갈래로 좁혀가는 순서, 조용히 나빠지는 품질을 사고 조사 과정에서 알아채는 법, 그리고 롤백을 결정하는 기준을 다룹니다.
 
-![재현되지 않는 AI 장애, 무엇부터 의심해야 할까요 개념을 형상화한 이미지](/assets/images/ai-production-debugging-hero.png)
+![재현되지 않는 AI 장애, 무엇부터 의심해야 할까요 개념을 형상화한 이미지](/assets/images/ai-production-debugging-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 재현이 안 되는 것 자체가 첫 번째 단서입니다
@@ -169,16 +169,16 @@ def should_rollback(time_overlap, impact_per_hour, rollback_cost_min, elapsed_mi
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-production-debugging 슬라이드 1](/assets/images/ai-production-debugging-slide-01.png)
+![ai-production-debugging 슬라이드 1](/assets/images/ai-production-debugging-slide-01.webp)
 
-![ai-production-debugging 슬라이드 2](/assets/images/ai-production-debugging-slide-02.png)
+![ai-production-debugging 슬라이드 2](/assets/images/ai-production-debugging-slide-02.webp)
 
-![ai-production-debugging 슬라이드 3](/assets/images/ai-production-debugging-slide-03.png)
+![ai-production-debugging 슬라이드 3](/assets/images/ai-production-debugging-slide-03.webp)
 
-![ai-production-debugging 슬라이드 4](/assets/images/ai-production-debugging-slide-04.png)
+![ai-production-debugging 슬라이드 4](/assets/images/ai-production-debugging-slide-04.webp)
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/ai-production-debugging/ch01.png)
-![3장 삽화](/assets/images/books/ai-production-debugging/ch03.png)
-![5장 삽화](/assets/images/books/ai-production-debugging/ch05.png)
+![1장 삽화](/assets/images/books/ai-production-debugging/ch01.webp)
+![3장 삽화](/assets/images/books/ai-production-debugging/ch03.webp)
+![5장 삽화](/assets/images/books/ai-production-debugging/ch05.webp)
 

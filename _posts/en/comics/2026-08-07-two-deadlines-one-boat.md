@@ -13,7 +13,7 @@ tags:
   - 컴플라이언스
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/two-deadlines-one-boat/strip.png
+image: /assets/images/posts/comics/two-deadlines-one-boat/strip.webp
 video: /assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4
 audiobook: /assets/audio/posts/two-deadlines-one-boat/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -26,13 +26,13 @@ The trap is the word 'delay.' It rarely means 'skip it.' It usually means 'prove
 
 So today's strip happens on one wooden boat in the middle of a lake. No oars, plenty of documents, and the boat still moves.
 
-![One Regulator Blinked. The Other Didn't.](/assets/images/posts/comics/two-deadlines-one-boat/strip.png)
+![One Regulator Blinked. The Other Didn't.](/assets/images/posts/comics/two-deadlines-one-boat/strip.webp)
 
 > Source: [금융위는 유예·준비 택했는데…개보위는 "예정대로"](https://n.news.naver.com/mnews/article/018/0006345443) · bespin
 
 **▶ Animated edition: the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/two-deadlines-one-boat/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/two-deadlines-one-boat/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/two-deadlines-one-boat/comic.en.vtt" default>
 </video>

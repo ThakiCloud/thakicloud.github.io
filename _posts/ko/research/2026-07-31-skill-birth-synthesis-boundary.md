@@ -36,12 +36,12 @@ toc: true
 
 그런데 재사용이 일어난 스킬만 놓고 첫 재사용까지 걸린 시간을 보면 이야기가 완전히 달라집니다. 개별 저작 스킬은 중앙값 1.2일 만에 다시 손이 갔지만 대량 임포트 스킬은 29.0일이 걸렸습니다. 약 24배 차이입니다. 수정 강도로 봐도 개별 저작 스킬은 탄생 이후 평균 1.11회 수정된 반면 대량 임포트 스킬은 0.54회에 그쳤습니다. 이 평균은 한 번도 재사용되지 않은 스킬의 0회까지 포함한 값이라 표본 편향으로 설명되지 않습니다.
 
-![코호트별 재사용률 비교 막대그래프](/assets/images/posts/research/skill-birth-synthesis-boundary/fig_reuse_rate_by_cohort.png)
+![코호트별 재사용률 비교 막대그래프](/assets/images/posts/research/skill-birth-synthesis-boundary/fig_reuse_rate_by_cohort.webp)
 *출처 코호트별 재사용률입니다. 의도적으로 저작된 deliberate_feat 코호트가 45.1%로 가장 높고, 대량 임포트는 이보다 낮습니다.*
 
 코호트별로 쪼개면 격차는 더 뚜렷합니다. 의도적으로 저작된 deliberate_feat 코호트가 45.1%로 재사용률이 가장 높았고, 아무 의도 표현 없이 딸려 들어온 other_singleton은 28.2%로 가장 낮았습니다. 배치 크기가 비슷한 단건 추가인데도 커밋 메시지에 "이건 새 기능이다"라는 의도가 담겼는지 여부만으로 재사용률이 17%포인트 벌어졌습니다.
 
-![코호트별 첫 재사용까지 걸린 중앙값 일수, 로그 스케일](/assets/images/posts/research/skill-birth-synthesis-boundary/fig_median_days_reuse.png)
+![코호트별 첫 재사용까지 걸린 중앙값 일수, 로그 스케일](/assets/images/posts/research/skill-birth-synthesis-boundary/fig_median_days_reuse.webp)
 *재사용이 일어난 경우로 한정하면, 개별 저작 스킬은 대량 임포트보다 24배 빠르게 첫 재사용에 도달합니다(중앙값 1.2일 대 29.0일).*
 
 연구팀은 이 결과를 경제적으로 해석합니다. 재사용까지 29일이 걸리는 스킬은 그 한 달 동안 순수한 부채로 라이브러리에 얹혀 있습니다. 검색 노이즈를 더하고 인덱스 공간을 차지하며, 실제로 쓰이는 다른 스킬과 라우터의 관심을 두고 경쟁합니다. 그런데 이번 데이터에서 대량 임포트는 전체 탄생의 75.2%(1,482건)를 차지하는, 코퍼스를 가장 빠르게 불리는 채널이면서 동시에 재사용 신호는 가장 약하고 느린 채널이기도 합니다. 대량 임포트가 항상 틀렸다는 뜻은 아니지만, "들여오는 게 싸다"는 직관은 저작 비용만 계산하고 검색 성능 저하라는 상시 비용은 빼먹고 있다는 뜻입니다.
@@ -50,7 +50,7 @@ toc: true
 
 이 논문에서 가장 반직관적인 대목은 자율 파이프라인이 스스로 새 스킬을 합성하는 pipeline_autonomous 코호트입니다. 사람 개입 없이 스케줄러가 자동으로 만든 스킬이 노이즈만 늘리는 스킬 난립의 주범이라는 우려는 관련 문헌에서 자주 제기됩니다. 그런데 실제 데이터는 정반대 그림을 보여줍니다.
 
-![코호트별 탄생 이후 평균 수정 횟수 막대그래프](/assets/images/posts/research/skill-birth-synthesis-boundary/fig_mean_modifications.png)
+![코호트별 탄생 이후 평균 수정 횟수 막대그래프](/assets/images/posts/research/skill-birth-synthesis-boundary/fig_mean_modifications.webp)
 *pipeline_autonomous 코호트가 평균 2.83회로 재사용 강도가 가장 높습니다. 다른 어떤 코호트보다 두 배 이상 높은 값이며, 표본은 30건으로 가장 작습니다.*
 
 자율 합성 코호트는 전체 1,972건 중 단 30건, 1.5%에 불과할 만큼 가장 드뭅니다. 그런데 수정 강도는 평균 2.83회로 다른 어떤 코호트보다 두 배 이상 높습니다. 다음으로 높은 sync_import(1.36회)나 deliberate_feat(1.26회)를 크게 앞섭니다. 한 번도 재사용되지 않은 비율도 56.7%로 deliberate_feat(54.9%)에 이어 두 번째로 낮습니다. 자율 합성으로 태어난 스킬은 버려지는 비율도 낮고 일단 쓰이면 활발하게 계속 쓰인다는 뜻입니다. 문제는 품질이 아니라 양이었습니다. deliberate_feat가 255건 태어나는 동안 자율 합성은 30건만 태어났고, 격차는 8.5배입니다.

@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/jcode-rust-agent-ha
 
 حين تقرأ أن وكيل برمجة يُقلع أسرع من Claude Code بمقدار 245 ضعفاً، يأتيك شعوران معاً: الفضول والشك. لذلك نزّلنا الملف التنفيذي الرسمي، وتحققنا من بصمته، وقِسناه على أحد حواسيب MacBook لدينا. الخلاصة أن رقم 245 ضعفاً صحيح، ورقم 5.8 أضعاف الذي قِسناه صحيح أيضاً، لأن الرقمين يقيسان شيئين مختلفين.
 
-![صورة تجريدية تقابل بين نموذجَي تشغيل مختلفَين في كلفة الإقلاع](/assets/images/jcode-rust-agent-harness-hero.png)
+![صورة تجريدية تقابل بين نموذجَي تشغيل مختلفَين في كلفة الإقلاع](/assets/images/jcode-rust-agent-harness-hero.webp)
 
 ## لماذا يعنيك هذا
 
@@ -126,7 +126,7 @@ jcode --provider-profile my-api auth-test --prompt 'Reply exactly JCODE_PROVIDER
 
 البيئة كانت Darwin 25.5.0، معمارية arm64، حاسوب MacBook بـ 12 نواة. في شجرة عمل معزولة جلبنا الملف التنفيذي وتحققنا منه، ثم قِسنا الزمن من بدء العملية حتى خرج `--version` عبر 12 تشغيلاً، مع استبعاد الأولين بوصفهما تسخيناً لذاكرة القرص. وقِست ذروة الذاكرة المقيمة لكل عملية على حدة بأداة `/usr/bin/time -l` بثلاثة تشغيلات لكل منهما.
 
-![نتائج قياس زمن الإقلاع وذروة الذاكرة المقيمة لـ jcode وأداة Claude Code](/assets/images/jcode-rust-agent-harness-results.png)
+![نتائج قياس زمن الإقلاع وذروة الذاكرة المقيمة لـ jcode وأداة Claude Code](/assets/images/jcode-rust-agent-harness-results.webp)
 
 | المؤشر | jcode v0.61.0 | Claude Code CLI | النسبة |
 |---|---:|---:|---:|

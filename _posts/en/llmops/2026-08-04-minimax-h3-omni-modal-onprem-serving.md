@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/minimax-h3-omni-modal
 
 When an open-weight model ships, the first sentence going around is usually some version of this: now anyone can run it on their own servers. MiniMax H3, released on 31 July 2026, got the same sentence. It understands text, images, video, and audio in one context, and generates video up to 2K resolution for as long as 15 seconds with native stereo audio. But between the fact that weights are public and the fact that it runs on your cluster lies a distance you only learn by opening the file listing and doing the arithmetic.
 
-![Abstract illustration of layered frame ribbons and a waveform band braided into a single strand](/assets/images/minimax-h3-omni-modal-onprem-serving-hero.png)
+![Abstract illustration of layered frame ribbons and a waveform band braided into a single strand](/assets/images/minimax-h3-omni-modal-onprem-serving-hero.webp)
 
 *Producing picture and sound from one sequence rather than making them separately and stitching them is where H3's design starts.*
 
@@ -119,7 +119,7 @@ The 33.14B derived from bytes matches the 33B the model card states, which confi
 
 One sentence in the model card becomes important here. Of the transformer's 33B, roughly 13B sits in AdaLN-related branches, and because AdaLN modulation outputs can be precomputed and cached, those parameters do not need to be loaded for inference-only deployment. The full weights were released to support downstream development including fine-tuning. So if you only plan to run inference, the transformer side drops to about 20B, or 37.5 GiB in bf16.
 
-![Chart of per-module weights measured from the manifest and token sequence lengths per clip configuration](/assets/images/minimax-h3-omni-modal-onprem-serving-results.png)
+![Chart of per-module weights measured from the manifest and token sequence lengths per clip configuration](/assets/images/minimax-h3-omni-modal-onprem-serving-results.webp)
 
 *Left is per-module weights summed from the file manifest; right is sequence length derived from the VAE compression factors.*
 

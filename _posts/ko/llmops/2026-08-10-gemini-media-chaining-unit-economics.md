@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gemini-media-chaining-unit-economics/"
 ---
 
-![빠른 입자의 흐름과 무거운 구체의 흐름이 저울 위에서 만나는 추상 이미지](/assets/images/gemini-media-chaining-unit-economics-hero.png)
+![빠른 입자의 흐름과 무거운 구체의 흐름이 저울 위에서 만나는 추상 이미지](/assets/images/gemini-media-chaining-unit-economics-hero.webp)
 
 ## 왜 읽어야 하나
 
@@ -43,7 +43,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gemini-media-chaining
 
 Nano Banana 2 Lite는 속도와 비용이 우선인 자리에 놓으라고 만든 모델입니다. 구글이 제시한 수치는 텍스트에서 이미지까지 4초, 1K 해상도 이미지 한 장에 0.034달러입니다. 기존 나노 바나나 1세대인 `gemini-2.5-flash-image`를 쓰고 있다면 지금 바로 갈아 끼우라고 권합니다. 계열 안에서 위치를 정리하면 Lite가 속도, `gemini-3.1-flash-image`인 Nano Banana 2가 균형 잡힌 범용, `gemini-3-pro-image`인 Nano Banana Pro가 정확도가 속도보다 중요한 전문 작업을 맡습니다.
 
-![장당 과금 이미지 모델과 초당 과금 영상 모델의 역할과 단가 비교](/assets/images/gemini-media-chaining-unit-economics-slide-03.png)
+![장당 과금 이미지 모델과 초당 과금 영상 모델의 역할과 단가 비교](/assets/images/gemini-media-chaining-unit-economics-slide-03.webp)
 
 Gemini Omni Flash는 영상 쪽입니다. 텍스트와 이미지, 영상을 섞어 입력으로 받고 자연어로 결과를 고칠 수 있습니다. 가격은 출력 영상 1초당 0.10달러로, 구글은 이 값이 Veo 3.1 Fast와 같다고 밝혔습니다. 현재 한 번에 만들 수 있는 길이는 10초이고 더 긴 길이는 준비 중이라고 되어 있습니다.
 
@@ -68,7 +68,7 @@ flowchart TB
 
 밝혀 둘 것이 있습니다. 이 글은 두 모델을 직접 호출해 보지 않았습니다. 지연이나 화질에 대한 주장은 하나도 하지 않으며, 구글이 발표에서 공개한 두 개의 가격만 가져와 나눗셈과 곱셈을 했습니다. 계산 스크립트와 결과 JSON은 저장소에 남겨 두었습니다.
 
-![초안 장수에 따른 클립당 비용과 시간당 단가 대비 손익분기](/assets/images/gemini-media-chaining-unit-economics-results.png)
+![초안 장수에 따른 클립당 비용과 시간당 단가 대비 손익분기](/assets/images/gemini-media-chaining-unit-economics-results.webp)
 
 가장 먼저 보이는 것은 두 단가의 비율입니다. 영상 1초가 0.10달러이고 이미지 한 장이 0.034달러이므로, 10초 클립 한 개는 이미지 초안 29.4장과 같은 값입니다. 이 한 문장이 이 파이프라인의 최적화 우선순위를 거의 다 정합니다.
 
@@ -88,7 +88,7 @@ flowchart TB
 
 Paxis는 ThakiCloud의 Enterprise Agent Platform으로 스킬을 검색해 격리 샌드박스에서 실행하고 모든 행동을 정책 게이트와 감사 로그로 통과시킵니다. 생성형 미디어를 업무 자동화에 넣을 때 이 구조가 필요한 이유는 품질 때문이 아니라 초당 과금 때문입니다. 문서를 만드는 스킬은 잘못 돌아도 토큰 몇 개가 낭비되지만, 영상 스킬이 루프에 빠지면 분당 6달러가 나갑니다. 에이전트가 부르는 미디어 호출에는 예산 상한과 호출 횟수 상한이 스킬 계약 안에 박혀 있어야 하고, 확정 전 단계에서 사람이 한 번 승인하는 지점이 필요합니다. Omni Flash가 편집을 세 번으로 묶어 둔 것은 같은 문제에 대한 제공자 쪽 답이며, 우리가 워크플로에 넣을 상한도 그보다 느슨해서는 안 됩니다.
 
-![통제되지 않은 미디어 스킬의 분당 비용과 Paxis 가드레일 세 가지](/assets/images/gemini-media-chaining-unit-economics-slide-06.png)
+![통제되지 않은 미디어 스킬의 분당 비용과 Paxis 가드레일 세 가지](/assets/images/gemini-media-chaining-unit-economics-slide-06.webp)
 
 상한을 거는 것만으로는 부족하고 실제로 얼마가 나갔는지 되짚을 수 있어야 합니다. 초당 과금에서는 어느 워크플로가 비용을 만들었는지를 사후에 특정하지 못하면 다음 달 청구서를 줄일 방법이 없습니다. Paxis가 남기는 실행 Trace와 비용 측정이 이 자리에 필요하고, 미디어 호출은 특히 클립 하나 단위로 어떤 스킬이 몇 초를 만들었는지까지 붙여 두는 편이 좋습니다.
 
@@ -114,7 +114,7 @@ Metis는 이 계산의 반대편을 맡습니다. 위에서 구한 손익분기�
 
 그래서 워크플로는 이렇게 잡으시면 됩니다. 이미지 단계는 넉넉하게 열어 두고 사람이 확실히 고르게 한 다음, 영상 호출은 확정된 키프레임에서만 한 번 나가도록 막습니다. 에이전트가 이 호출을 부른다면 예산 상한과 횟수 상한을 스킬 계약에 박아 둡니다.
 
-![반복은 이미지 단계로, 상한은 스킬 계약으로, 전환 시점은 초당 단가로 정리한 설계 지침](/assets/images/gemini-media-chaining-unit-economics-slide-08.png)
+![반복은 이미지 단계로, 상한은 스킬 계약으로, 전환 시점은 초당 단가로 정리한 설계 지침](/assets/images/gemini-media-chaining-unit-economics-slide-08.webp)
 
 자체 서빙으로 가져올지는 시간당 단가를 0.10으로 나눈 값 하나로 시작할 수 있습니다. 그 시간 동안 카드가 그만큼의 영상을 뽑아내는지 재 보시고, 재 본 숫자에 운영 인력의 시간과 가동률을 얹으시기 바랍니다. 그 표가 나오기 전까지는 호스티드가 기본값이라고 보는 편이 정확합니다.
 

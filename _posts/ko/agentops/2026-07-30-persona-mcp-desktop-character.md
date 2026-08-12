@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/persona-mcp-desktop
 
 에이전트에게 새로운 능력을 열어 줄 때 가장 흔한 실수는 도구를 너무 많이 노출하는 것입니다. 파일을 읽고 쓰고 프로세스를 띄우는 범용 도구를 하나 던져 주면 당장은 편하지만, 그 순간부터 무엇이 가능한지 아무도 설명할 수 없게 됩니다. 2026년 7월 28일에 공개된 오픈소스 프로젝트 Persona는 정확히 반대 방향을 골랐습니다. 데스크톱 위에서 도는 3D 캐릭터에 에이전트를 연결하면서, 노출한 MCP 도구는 세 개뿐입니다.
 
-![투명한 유리 상자 안에 놓인 발광하는 형상에서 가는 빛줄기가 뻗어 나가는 추상 이미지](/assets/images/persona-mcp-desktop-character-hero.png)
+![투명한 유리 상자 안에 놓인 발광하는 형상에서 가는 빛줄기가 뻗어 나가는 추상 이미지](/assets/images/persona-mcp-desktop-character-hero.webp)
 
 ## 왜 읽어야 하나
 
@@ -133,13 +133,13 @@ Persona에서 가져갈 것은 캐릭터가 아니라 좁힘의 방법입니다.
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![persona-mcp-desktop-character 슬라이드 1](/assets/images/persona-mcp-desktop-character-slide-01.png)
+![persona-mcp-desktop-character 슬라이드 1](/assets/images/persona-mcp-desktop-character-slide-01.webp)
 
-![persona-mcp-desktop-character 슬라이드 2](/assets/images/persona-mcp-desktop-character-slide-02.png)
+![persona-mcp-desktop-character 슬라이드 2](/assets/images/persona-mcp-desktop-character-slide-02.webp)
 
-![persona-mcp-desktop-character 슬라이드 3](/assets/images/persona-mcp-desktop-character-slide-03.png)
+![persona-mcp-desktop-character 슬라이드 3](/assets/images/persona-mcp-desktop-character-slide-03.webp)
 
-![persona-mcp-desktop-character 슬라이드 4](/assets/images/persona-mcp-desktop-character-slide-04.png)
+![persona-mcp-desktop-character 슬라이드 4](/assets/images/persona-mcp-desktop-character-slide-04.webp)
 
 ## 출처
 

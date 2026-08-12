@@ -75,11 +75,11 @@ STORM의 메시지는 분명합니다. 좋은 리서치 자동화는 "더 똑똑
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 1]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.png' | relative_url }})
+![stanford-storm-4-prompt-research-workflow 슬라이드 1]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.webp' | relative_url }})
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 2]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.png' | relative_url }})
+![stanford-storm-4-prompt-research-workflow 슬라이드 2]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.webp' | relative_url }})
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 3]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.png' | relative_url }})
+![stanford-storm-4-prompt-research-workflow 슬라이드 3]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.webp' | relative_url }})
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 4]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.png' | relative_url }})
+![stanford-storm-4-prompt-research-workflow 슬라이드 4]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.webp' | relative_url }})
 

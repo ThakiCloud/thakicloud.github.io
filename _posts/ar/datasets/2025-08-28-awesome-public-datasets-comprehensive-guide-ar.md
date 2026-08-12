@@ -22,7 +22,7 @@ categories:
 
 ⏱️ **وقت القراءة المتوقع**: 8 دقائق
 
-![نظرة عامة على فئات مجموعات البيانات العامة الرائعة]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.png' | relative_url }})
+![نظرة عامة على فئات مجموعات البيانات العامة الرائعة]({{ '/assets/images/awesome-public-datasets-comprehensive-guide-ko-hero.webp' | relative_url }})
 
 ## مقدمة
 

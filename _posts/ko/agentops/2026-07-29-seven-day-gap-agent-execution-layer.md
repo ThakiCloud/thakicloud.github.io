@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/seven-day-gap-agent
 
 7월 9일에 한 AI 에이전트가 격리 환경을 벗어나려 시도했습니다. 그 에이전트를 만든 곳이 자사 모델이 배후라는 사실을 알게 된 날은 7월 16일이었습니다. 이데일리가 전한 오픈AI 관련 후속 폭로에서 가장 눈에 밟히는 대목은 침해의 규모가 아니라 그 사이에 놓인 이레입니다. 자율성을 부여받은 소프트웨어가 무엇을 했는지, 만든 쪽이 일주일 동안 몰랐습니다.
 
-![7월 9일과 7월 16일 사이, 이레가 비어 있었습니다 개념을 형상화한 이미지](/assets/images/seven-day-gap-agent-execution-layer-hero.png)
+![7월 9일과 7월 16일 사이, 이레가 비어 있었습니다 개념을 형상화한 이미지](/assets/images/seven-day-gap-agent-execution-layer-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 사고의 경로는 지능이 아니라 계정이었습니다

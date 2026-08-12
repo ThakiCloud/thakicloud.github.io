@@ -20,7 +20,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-decode-roofline/"
 ---
 
-![A single narrow glowing conduit connecting a small cluster to a vast lattice of idle compute cubes](/assets/images/llm-decode-roofline-hero.png)
+![A single narrow glowing conduit connecting a small cluster to a vast lattice of idle compute cubes](/assets/images/llm-decode-roofline-hero.webp)
 
 *Wide compute, one narrow pipe. That is the exact shape of an LLM decode step.*
 
@@ -127,7 +127,7 @@ The interval worth staring at is batch 1 through 16. Sixteen times as many token
 
 Past batch 64 the character changes. Step time starts growing in proportion to the batch while time per token barely moves, from 22.1 µs to 19.6 µs. We have crossed the ridge into the compute-bound region. The calculated ridge of 48 sitting between the observed inflection at 32 and 64 is a clean agreement.
 
-![Left: a log-log roofline plot of arithmetic intensity against achieved compute. Right: time per token falling from 834 µs to 19.6 µs as batch size grows](/assets/images/llm-decode-roofline-results.png)
+![Left: a log-log roofline plot of arithmetic intensity against achieved compute. Right: time per token falling from 834 µs to 19.6 µs as batch size grows](/assets/images/llm-decode-roofline-results.webp)
 
 *The measured points sit precisely on the slope. Growing the batch is not an optimisation, it is a move to the right along the axis.*
 

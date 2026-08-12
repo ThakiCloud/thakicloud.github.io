@@ -22,7 +22,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/papersgpt-zotero-local-rag/"
 ---
 
-![Cover image of a translucent glass shell revealing dense layered machinery inside](/assets/images/papersgpt-zotero-local-rag-hero.png)
+![Cover image of a translucent glass shell revealing dense layered machinery inside](/assets/images/papersgpt-zotero-local-rag-hero.webp)
 
 A Zotero plugin that claims to index 1,000 papers in minutes went around Korean tech timelines this week, and a reasonable objection travelled with it. The vendor says the plugin runs on a native C++ engine, yet the GitHub repository reports only JavaScript and TypeScript. Here is the answer up front: the C++ engine is real. It simply ships as prebuilt binaries inside the release artifact rather than as source in the repository, so the language statistics never see it. We downloaded the 131MB artifact and classified all 55 entries inside it.
 

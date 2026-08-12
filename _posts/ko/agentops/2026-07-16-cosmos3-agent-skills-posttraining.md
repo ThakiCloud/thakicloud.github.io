@@ -30,7 +30,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/cosmos3-agent-skill
 이 사례의 진짜 주인공은 모델도 GPU도 아니라 **워크플로 지식을 스킬로 굳혀 에이전트가 반복 실행하게
 만든 하네스**입니다.
 
-![중앙 오케스트레이션 노드가 GPU 서버 무리를 지휘하는 추상 일러스트]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.png' | relative_url }})
+![중앙 오케스트레이션 노드가 GPU 서버 무리를 지휘하는 추상 일러스트]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.webp' | relative_url }})
 *에이전트 스킬은 GPU 학습·평가·튜닝의 반복 노동을 지휘합니다. 사람은 프롬프트로 목적만 줍니다.*
 
 ## Cosmos 3와 에이전트 스킬은 무엇인가
@@ -423,7 +423,7 @@ curl -fsSL https://raw.githubusercontent.com/NVIDIA-TAO/tao-skills-bank/main/scr
 
 성능은 명확하게 올랐습니다. 아래 수치는 전부 NVIDIA가 공개한 값이며, 우리가 재현한 결과가 아닙니다.
 
-![Cosmos 3 Nano 베이스라인·LoRA·AutoML 세 단계의 WTS 영상 QA 검증 정확도 막대그래프]({{ '/assets/images/cosmos3-agent-skills-posttraining-results.png' | relative_url }})
+![Cosmos 3 Nano 베이스라인·LoRA·AutoML 세 단계의 WTS 영상 QA 검증 정확도 막대그래프]({{ '/assets/images/cosmos3-agent-skills-posttraining-results.webp' | relative_url }})
 *프롬프트 두 개로 검증 정확도가 54.41%에서 93.35%까지 올랐습니다. NVIDIA 공개 수치.*
 
 zero-shot 베이스라인은 54.41%였고, 단일 프롬프트 LoRA가 87.14%로 32.73포인트 올렸습니다. 여기에
@@ -495,13 +495,13 @@ Kueue로 GPU를 나누고 vLLM으로 어댑터를 서빙하는 경로를 제공�
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![cosmos3-agent-skills-posttraining 슬라이드 1](/assets/images/cosmos3-agent-skills-posttraining-slide-01.png)
+![cosmos3-agent-skills-posttraining 슬라이드 1](/assets/images/cosmos3-agent-skills-posttraining-slide-01.webp)
 
-![cosmos3-agent-skills-posttraining 슬라이드 2](/assets/images/cosmos3-agent-skills-posttraining-slide-02.png)
+![cosmos3-agent-skills-posttraining 슬라이드 2](/assets/images/cosmos3-agent-skills-posttraining-slide-02.webp)
 
-![cosmos3-agent-skills-posttraining 슬라이드 3](/assets/images/cosmos3-agent-skills-posttraining-slide-03.png)
+![cosmos3-agent-skills-posttraining 슬라이드 3](/assets/images/cosmos3-agent-skills-posttraining-slide-03.webp)
 
-![cosmos3-agent-skills-posttraining 슬라이드 4](/assets/images/cosmos3-agent-skills-posttraining-slide-04.png)
+![cosmos3-agent-skills-posttraining 슬라이드 4](/assets/images/cosmos3-agent-skills-posttraining-slide-04.webp)
 
 ## 출처
 

@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/research/agent-harness-surve
 
 حين يقصّر الوكيل عن التوقّعات يشكّ معظم الفرق في النموذج أولًا. ترفع الفئة، وتعيد كتابة الموجّه، وإن لم ينفع ذلك تنتظر الإصدار التالي. غير أنّ التقارير المتراكمة خلال 2026 تشير إلى مكان آخر. ضع النموذج نفسه داخل قشور مختلفة وستتباعد النتائج بمضاعفات. لهذه القشرة اسم: الحزام. ومسح صدر حديثًا هو أوّل عمل يمنحه شكلًا رسميًا وقائمة أجزاء.
 
-![صورة تجريدية لستة وحدات متشابكة تشكّل هيكلًا خارجيًا حول مركز مضيء فارغ](/assets/images/agent-harness-survey-six-components-hero.png)
+![صورة تجريدية لستة وحدات متشابكة تشكّل هيكلًا خارجيًا حول مركز مضيء فارغ](/assets/images/agent-harness-survey-six-components-hero.webp)
 
 *يمكن أن يبقى المركز فارغًا ويظلّ الهيكل هو ما يحدّد الشكل. هذه هي حجّة الحزام في صورة واحدة.*
 
@@ -99,7 +99,7 @@ python3 scripts/loops/build_loop_registry.py --check
 # loops=51 edges=12 missing_run_script=2 warnings=2
 ```
 
-![مخطّط أعمدة يقارن كثافة كلّ جزء من أجزاء الحزام الستّة](/assets/images/agent-harness-survey-six-components-results-en.png)
+![مخطّط أعمدة يقارن كثافة كلّ جزء من أجزاء الحزام الستّة](/assets/images/agent-harness-survey-six-components-results-en.webp)
 
 *خمسة من المحاور الستّة سميكة، ومحور التحقّق وحده رفيع.*
 

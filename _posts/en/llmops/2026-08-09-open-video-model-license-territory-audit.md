@@ -28,7 +28,7 @@ This is for engineering leads and technical decision makers in Korea who need to
 
 Here is the conclusion up front. Excluding Korea from a model's licensed territory is not a new habit that started this month. It has been going on since December 2024, and among the open video models in wide use today, very few clear both the territory restriction and the scale restriction at once. What follows walks through six license files we opened directly, and closes with a seven question checklist you can reuse the next time you evaluate a model.
 
-![An illustration evoking territorial restrictions in open video model licenses](/assets/images/open-video-model-license-territory-audit-hero.png)
+![An illustration evoking territorial restrictions in open video model licenses](/assets/images/open-video-model-license-territory-audit-hero.webp)
 *Being able to download a model and being allowed to use it turned out to be two different things.*
 
 ## Tencent Has Been Excluding Korea Since December 2024
@@ -85,7 +85,7 @@ flowchart TD
 ```
 *The first three questions decide whether adoption is possible at all; the rest decide what it costs to run.*
 
-![A chart comparing the territory exclusion date and scale-gate threshold across open video model licenses, with Korean labels](/assets/images/open-video-model-license-territory-audit-results.png)
+![A chart comparing the territory exclusion date and scale-gate threshold across open video model licenses, with Korean labels](/assets/images/open-video-model-license-territory-audit-results.webp)
 *The chart labels are in Korean, so here is what the two panels show. The left panel plots when each license began excluding Korea from its territory: Tencent's HunyuanVideo excluded Korea from December 2024 onward, and MiniMax H3 added the United States to that same exclusion in August 2026. The right panel plots the revenue or user threshold that triggers a paid tier or requires prior written approval, and LTX-2.3's USD 10 million threshold sits below MiniMax H3's USD 20 million.*
 
 ## No Territory Restriction Does Not Mean No Restriction

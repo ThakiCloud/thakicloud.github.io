@@ -22,7 +22,7 @@ audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![여러 갈래의 토큰 흐름이 넓은 저비용 레인과 얇은 프리미엄 레인으로 분류되고 비용 곡선이 급격히 꺾여 내려가는 추상 이미지](/assets/images/agentic-inference-cost-tiered-routing-hero.png)
+![여러 갈래의 토큰 흐름이 넓은 저비용 레인과 얇은 프리미엄 레인으로 분류되고 비용 곡선이 급격히 꺾여 내려가는 추상 이미지](/assets/images/agentic-inference-cost-tiered-routing-hero.webp)
 
 *대부분의 트래픽은 싼 레인으로, 소수만 프리미엄 레인으로. 에이전트 제품의 비용 구조는 이 분류에서 갈립니다.*
 

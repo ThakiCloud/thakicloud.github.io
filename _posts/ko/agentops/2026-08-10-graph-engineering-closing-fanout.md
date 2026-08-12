@@ -22,7 +22,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-closing-fanout/"
 ---
 
-![여러 갈래로 퍼진 노드가 좁은 관문을 거쳐 다시 하나로 모이는 그래프 개념도](/assets/images/graph-engineering-closing-fanout-hero.png)
+![여러 갈래로 퍼진 노드가 좁은 관문을 거쳐 다시 하나로 모이는 그래프 개념도](/assets/images/graph-engineering-closing-fanout-hero.webp)
 *팬아웃은 쉽고, 다시 하나로 모으는 관문이 어렵습니다.*
 
 ## 왜 읽어야 하나
@@ -219,13 +219,13 @@ Graph Engineering이라는 이름이 새로운지는 중요하지 않습니다. 
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![graph-engineering-closing-fanout 슬라이드 1](/assets/images/graph-engineering-closing-fanout-slide-01.png)
+![graph-engineering-closing-fanout 슬라이드 1](/assets/images/graph-engineering-closing-fanout-slide-01.webp)
 
-![graph-engineering-closing-fanout 슬라이드 2](/assets/images/graph-engineering-closing-fanout-slide-02.png)
+![graph-engineering-closing-fanout 슬라이드 2](/assets/images/graph-engineering-closing-fanout-slide-02.webp)
 
-![graph-engineering-closing-fanout 슬라이드 3](/assets/images/graph-engineering-closing-fanout-slide-03.png)
+![graph-engineering-closing-fanout 슬라이드 3](/assets/images/graph-engineering-closing-fanout-slide-03.webp)
 
-![graph-engineering-closing-fanout 슬라이드 4](/assets/images/graph-engineering-closing-fanout-slide-04.png)
+![graph-engineering-closing-fanout 슬라이드 4](/assets/images/graph-engineering-closing-fanout-slide-04.webp)
 
 ## 출처
 

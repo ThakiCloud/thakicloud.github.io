@@ -27,7 +27,7 @@ This is for platform engineers and architects weighing whether to bring multimod
 
 Here's the conclusion up front. Loading the video model and the audio specialists together on one NVIDIA H200 takes 72.37 GiB, 51.8% of the card. Loading the video model and the omni model together takes 130.29 GiB, 93.2% of the card, which leaves 9.5 GiB for everything generation needs at run time. Video generation alone reaches 3.57 GiB above its resident footprint, so that pairing does not realistically fit. What the omni model bought for that footprint was a 1.34 percentage point drop in transcription error.
 
-![An image evoking memory occupancy across a chain of models feeding into one another next to a single model](/assets/images/omni-vs-pipeline-videogen-hero.png)
+![An image evoking memory occupancy across a chain of models feeding into one another next to a single model](/assets/images/omni-vs-pipeline-videogen-hero.webp)
 *Add stages and the problem stops being compute. It becomes a fight for space.*
 
 ## Same Card, Same Waveform, Two Approaches
@@ -80,7 +80,7 @@ We fixed generation at 480x832 resolution and 20 steps and varied only the frame
 
 Reproducibility was solid. Repeating the same settings varied by under 0.09 seconds, and even the warmup run we planned to throw away landed almost identically to the real ones. Diffusion works through a fixed number of steps honestly every time, so there's little room for it to wander. Unlike a language model, where generation time swings with token count, that makes capacity planning easier here, not harder.
 
-![Resident VRAM and latency comparison between the omni model and the specialist pipeline](/assets/images/omni-vs-pipeline-videogen-results.png)
+![Resident VRAM and latency comparison between the omni model and the specialist pipeline](/assets/images/omni-vs-pipeline-videogen-results.webp)
 *On the left, latency and resident memory for the two approaches to transcribing the same waveform. On the right, what fills one card once you add the video stage. Both panels are measured on the same single H200.*
 
 ## So the Arithmetic Ends Like This

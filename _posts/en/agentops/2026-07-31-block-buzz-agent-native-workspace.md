@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/block-buzz-agent-na
 
 Any organization that has put agents into a real team workflow has hit the same wall. The model works fine, but the agent has no defined identity in the Slack channel. You share one bot token, or borrow a human account, or hide behind a webhook. Then the question "who approved this commit" has no answer. Buzz, which Block released on July 21, 2026, starts from exactly that question.
 
-![Abstract visualization of humans and agents each carrying their own signed identity and converging into a single ledger](/assets/images/block-buzz-agent-native-workspace-hero.png)
+![Abstract visualization of humans and agents each carrying their own signed identity and converging into a single ledger](/assets/images/block-buzz-agent-native-workspace-hero.webp)
 
 *Humans and agents sign with their own identities in the same channel, and every trace accumulates in one ledger.*
 

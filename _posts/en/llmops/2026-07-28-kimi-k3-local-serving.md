@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-local-serving
 
 When an open-weight model drops, posts about running it locally usually appear within half a day. Kimi K3 is a different case. Summing every published weight file through the HuggingFace API gives 1,453.7GiB across 96 shards. That takes eleven 141GB H200s just to hold the weights, and that figure includes neither KV cache nor activations.
 
-![Abstract image contrasting an immense layered structure with a small light source](/assets/images/kimi-k3-local-serving-hero.png)
+![Abstract image contrasting an immense layered structure with a small light source](/assets/images/kimi-k3-local-serving-hero.webp)
 
 ## Why this matters
 
@@ -107,7 +107,7 @@ One more thing to check is the license. The previous generation, `moonshotai/Kim
 
 We measured by summing every LFS blob size for each repository through the HuggingFace model API, restricted to weight file extensions. Nothing was downloaded, so the network cost was a handful of API calls.
 
-![Measured weight footprint and GPU requirements for Kimi K3](/assets/images/kimi-k3-local-serving-results.png)
+![Measured weight footprint and GPU requirements for Kimi K3](/assets/images/kimi-k3-local-serving-results.webp)
 
 | Repository | Weight files | Total size | Downloads |
 |---|---:|---:|---:|

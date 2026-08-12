@@ -12,19 +12,19 @@ tags:
   - agents
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/follower-growth-chart-clones/strip.png
+image: /assets/images/posts/만화/follower-growth-chart-clones/strip.webp
 video: /assets/videos/posts/만화/follower-growth-chart-clones/comic.ko.mp4
 ---
 
 지난 90일 동안 X 팔로워가 얼마나 늘었는지로 스타트업 순위를 매긴 표가 타임라인을 돌았습니다. 이런 숫자를 흔히 허영 지표라고 부릅니다. 보기에는 근사한데 매출이나 재방문율 같은 실제 사업 체력과는 연결이 헐거운 지표라는 뜻이죠. 문제는 순위표가 뜨는 순간 모두가 그 숫자를 올리는 쪽으로 뛴다는 데 있습니다. 그래서 유진과 파시스, 메티스도 만리장성 위에 올라가 우리 곡선을 세워보기로 합니다. 성벽이 오르막만 있는 게 아니라는 사실은 뛰기 시작한 다음에 알게 됩니다.
 
-![팔로워 1등 했더니 전부 내 클론](/assets/images/posts/만화/follower-growth-chart-clones/strip.png)
+![팔로워 1등 했더니 전부 내 클론](/assets/images/posts/만화/follower-growth-chart-clones/strip.webp)
 
 > 원 뉴스: [RT @benln: Pulled the fastest-growing startups on X by follower growth over last 90 days: https://t.co/RTy5umq7QO](https://x.com/hjguyhan/status/2081867551878070739) · twitter
 
 **▶ 만화 영상판, 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/follower-growth-chart-clones/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/follower-growth-chart-clones/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/follower-growth-chart-clones/comic.ko.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/follower-growth-chart-clones/comic.ko.vtt" default>
 </video>

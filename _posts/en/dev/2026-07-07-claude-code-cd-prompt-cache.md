@@ -25,7 +25,7 @@ categories:
 
 Anyone who works with a coding agent long enough eventually has to switch directories. The classic case is a monorepo: you fix something in a core module inside a shared library, then move to the service that consumes it to verify the integration. Until now, that meant closing the session and reopening it in the new directory, or clearing the context with `/clear`. Either way, all the conversation context you had built up disappeared, and a less visible cost kicked in as well: the prompt cache was invalidated entirely, so the next request got billed at the cache-write rate all over again. The `/cd` command, quietly added in Claude Code v2.1.169, prevents both of these losses at once. This post looks at why that one line is not just a convenience feature but a real question of coding agent operating cost, using the rates Anthropic has published.
 
-![Abstract concept of a continuous data stream forking into two paths, one expensively rebuilding blocks and the other letting the lattice flow onward intact]({{ '/assets/images/claude-code-cd-prompt-cache-hero.png' | relative_url }})
+![Abstract concept of a continuous data stream forking into two paths, one expensively rebuilding blocks and the other letting the lattice flow onward intact]({{ '/assets/images/claude-code-cd-prompt-cache-hero.webp' | relative_url }})
 
 ## Overview
 
@@ -421,7 +421,7 @@ To be honest, `/cd` is an interactive slash command, so it wasn't possible to sp
 
 Let's compare how the two paths bill the cached prefix on the first request right after switching directories. On the restart or `/clear` path, the prefix is rewritten to the cache at the write rate (1.25x). On the `/cd` path, the same prefix is reused at the read rate (0.1x). Assuming the prefix size is identical in both cases, the ratio of what you pay for the prefix right after the switch is 1.25 divided by 0.1, or 12.5x. In other words, the restart path costs roughly 12.5 times more than the `/cd` path for re-billing the prefix.
 
-![Comparison of cached-prefix cost when switching directories: the restart/re-cache path pays the 1.25x write rate, while the /cd path pays the 0.1x read rate, a roughly 12.5x difference by the documented rates]({{ '/assets/images/claude-code-cd-prompt-cache-results.png' | relative_url }})
+![Comparison of cached-prefix cost when switching directories: the restart/re-cache path pays the 1.25x write rate, while the /cd path pays the 0.1x read rate, a roughly 12.5x difference by the documented rates]({{ '/assets/images/claude-code-cd-prompt-cache-results.webp' | relative_url }})
 
 This ratio holds regardless of the prefix's absolute token count. The absolute savings, however, grow larger as the prefix grows. In large projects it's common [estimated] for the combined prefix of system prompt, tool definitions, and a hefty `CLAUDE.md` to reach tens of thousands of tokens, and in sessions like that, moving between directories several times a day makes the re-caching cost add up fast. `/cd` compresses that 12.5x premium per switch down to the read rate.
 

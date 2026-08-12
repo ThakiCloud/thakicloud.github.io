@@ -21,7 +21,7 @@ audiobook: /assets/audio/posts/token-price-collapse-real-bill/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![핵심 개념 일러스트]({{ '/assets/images/token-price-collapse-real-bill-hero.png' | relative_url }})
+![핵심 개념 일러스트]({{ '/assets/images/token-price-collapse-real-bill-hero.webp' | relative_url }})
 
 캐시된 입력 100만 토큰에 0.11달러입니다. 즈닷에이아이의 GLM-4.5가 자주 반복되는 입력에 매긴 값이고, 표준 입력은 100만 토큰당 0.6달러, 출력은 2.2달러입니다. 프론티어 미국 모델의 입력 단가가 여전히 수 달러대인 것과 견주면 확연히 낮은 수준입니다. 미니맥스, 딥시크, 큐웬, 키미 같은 중국계 모델도 입력을 0.1달러대의 초저가 구간에서 매기며 같은 흐름에 올라타 있습니다. 2025년 초만 해도 10퍼센트에 못 미치던 중국 모델의 글로벌 토큰 소비 점유율이 2026년 중반 50퍼센트 수준까지 올라왔다는 집계가 나올 정도입니다. 숫자만 보면 결론은 단순합니다. 모델은 상품이 되었고, 값은 0을 향해 달려간다는 이야기입니다.
 

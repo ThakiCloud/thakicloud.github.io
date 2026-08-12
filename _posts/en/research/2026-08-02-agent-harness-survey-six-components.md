@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 When an agent underperforms, most teams suspect the model first. Bump the tier, rewrite the prompt, and if that fails, wait for the next release. Yet the reports piling up through 2026 point somewhere else. Put the same model inside different shells and the scores separate by multiples. That shell has a name: the harness. A newly consolidated survey is the first work to give it a formal shape and a parts list.
 
-![Abstract image of six interlocking modules forming an exoskeleton frame around a hollow glowing center](/assets/images/agent-harness-survey-six-components-hero.png)
+![Abstract image of six interlocking modules forming an exoskeleton frame around a hollow glowing center](/assets/images/agent-harness-survey-six-components-hero.webp)
 
 *The center can be empty and the frame still decides the shape. That is the harness argument in one picture.*
 
@@ -101,7 +101,7 @@ python3 scripts/loops/build_loop_registry.py --check
 # loops=51 edges=12 missing_run_script=2 warnings=2
 ```
 
-![Bar chart comparing how thickly each of the six harness parts is populated](/assets/images/agent-harness-survey-six-components-results-en.png)
+![Bar chart comparing how thickly each of the six harness parts is populated](/assets/images/agent-harness-survey-six-components-results-en.webp)
 
 *Five of the six axes are thick. Only the verification axis is thin.*
 

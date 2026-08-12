@@ -39,7 +39,7 @@ ThakiCloud의 에이전트 하네스는 사용자 요청을 약 천 개에 이�
 
 드리프트는 여덟 라운드에 걸쳐 미리 정해진 일정대로 주입됩니다. 2라운드에서 스킬 두 개 이름 변경, 4라운드에서 폐기 하나와 이름 변경 둘, 6라운드에서 폐기 하나가 추가로 발생해 총 네 번의 이름 변경과 두 번의 폐기가 쌓입니다. 63개 벤치마크 사례 중 정답 스킬이 있는 45개 긍정 질의만 온라인 보상 루프에 들어가고, 아무 스킬도 뜨면 안 되는 10개 네이티브 질의와 적대적으로 헷갈리는 8개 부정 질의는 온라인 루프에서 완전히 배제된 채 마지막에 딱 한 번만 평가에 쓰입니다. 이 구분이 왜 중요한지는 뒤의 결과에서 그대로 드러납니다.
 
-![Per-Round Top-1 Hits: Bandit vs Static Default vs Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-rounds-hits.png)
+![Per-Round Top-1 Hits: Bandit vs Static Default vs Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-rounds-hits.webp)
 *여덟 라운드 동안 밴딧, 정적 기본값, 라운드별 오라클의 1위 적중 횟수를 비교한 그래프입니다. 로컬 벤치 하네스 위에서 측정했습니다.*
 
 ## 352번 관측한 결과, 정확히 192 대 192
@@ -50,7 +50,7 @@ ThakiCloud의 에이전트 하네스는 사용자 요청을 약 천 개에 이�
 
 라운드별로 보면 밴딧이 뭔가를 배우기는 합니다. 1라운드에는 탐색 과정에서 24대22로 정적 기본값에 뒤졌다가 2라운드는 동률, 3·4·6라운드에서는 한 번씩 앞섭니다. 하지만 그 학습이 수렴으로 이어지지는 않습니다. 선호하는 팔은 4라운드까지 (0.5, 0.7)에 대한 선택 비중이 51.1%에서 88.6%까지 단조롭게 올라가다가, 드리프트가 전혀 새로 주입되지 않은 5라운드에서 갑자기 (0.6, 0.3)으로 무너지고 23대24로 역전당합니다. 이후 6라운드는 (0.5, 0.3), 7·8라운드는 다시 (0.5, 0.7)로 돌아오지만 4라운드의 정점을 다시는 회복하지 못합니다. 저자들은 이 진동을 드리프트 때문이 아니라, 라운드당 43에서 45개뿐인 질의 수에서 한 번의 적중이 약 2.2%포인트를 좌우하는 상황에서 α를 1.0으로 고정해 두고 감쇠시키지 않은 LinUCB의 탐색 잡음으로 설명합니다.
 
-![Cumulative Regret of LinUCB Bandit Against Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-regret-trajectory.png)
+![Cumulative Regret of LinUCB Bandit Against Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-regret-trajectory.webp)
 *여덟 라운드에 걸쳐 오라클 대비 누적 후회가 16회(상대치 7.7%)까지 쌓이는 과정을 보여줍니다. 초반 탐색과 중반의 진동이 원인입니다. 로컬 벤치 하네스 위에서 측정했습니다.*
 
 ## 표면 아래에서 새고 있던 것: 보상이 보지 못한 안전성 비용
@@ -61,7 +61,7 @@ ThakiCloud의 에이전트 하네스는 사용자 요청을 약 천 개에 이�
 
 원인을 더 정확히 짚으면, 이 환각 비용은 밴딧이라는 학습 과정 자체의 문제가 아니라 τ 값 자체에 달려 있었습니다. 사후적으로 가장 좋았던 고정 팔도 τ=0.50을 쓰기 때문에 밴딧의 선호 팔과 똑같이 0.4의 환각률을 냅니다. 표에서 유일하게 τ=0.60을 쓰는 설정, 즉 지금의 정적 기본값만 환각률이 0입니다. 다시 말해 긍정 질의만 보는 보상 함수를 극대화하는 어떤 절차든, 밴딧이든 오프라인 그리드 서치든 심지어 긍정 지표만 읽는 사람이든, 결국 낮은 τ로 수렴하고 같은 비용을 떠안게 됩니다. 사람이 오프라인 벤치마크 전체를 돌리면 환각률 열까지 보고 이 거래를 거절할 수 있지만, 긍정 지표만 보는 온라인 루프에는 애초에 그 선택지가 없습니다.
 
-![Final Three-Way Comparison: Positive Metrics vs Hallucination Rate](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-threeway-comparison.png)
+![Final Three-Way Comparison: Positive Metrics vs Hallucination Rate](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-threeway-comparison.webp)
 *밴딧이 최종적으로 선호한 팔(τ=0.50, w=0.70)은 보상받은 지표에서는 정적 기본값을 이기지만, 네이티브 질의 환각률을 0.0에서 0.4로 끌어올립니다. 로컬 벤치 하네스 위에서 측정했습니다.*
 
 ## 이 실험이 회사와 업계에 던지는 의미
@@ -86,11 +86,11 @@ ThakiCloud 입장에서 결론은 명확합니다. `retrieve.py`의 하이브리
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![bandit-hybrid-retrieval-calibration 슬라이드 1](/assets/images/bandit-hybrid-retrieval-calibration-slide-01.png)
+![bandit-hybrid-retrieval-calibration 슬라이드 1](/assets/images/bandit-hybrid-retrieval-calibration-slide-01.webp)
 
-![bandit-hybrid-retrieval-calibration 슬라이드 2](/assets/images/bandit-hybrid-retrieval-calibration-slide-02.png)
+![bandit-hybrid-retrieval-calibration 슬라이드 2](/assets/images/bandit-hybrid-retrieval-calibration-slide-02.webp)
 
-![bandit-hybrid-retrieval-calibration 슬라이드 3](/assets/images/bandit-hybrid-retrieval-calibration-slide-03.png)
+![bandit-hybrid-retrieval-calibration 슬라이드 3](/assets/images/bandit-hybrid-retrieval-calibration-slide-03.webp)
 
-![bandit-hybrid-retrieval-calibration 슬라이드 4](/assets/images/bandit-hybrid-retrieval-calibration-slide-04.png)
+![bandit-hybrid-retrieval-calibration 슬라이드 4](/assets/images/bandit-hybrid-retrieval-calibration-slide-04.webp)
 

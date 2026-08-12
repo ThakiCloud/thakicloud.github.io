@@ -44,7 +44,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/retriever-vs-decomp
 
 그렇다면 리트리버를 바꾸면 될까요. 이 지점이 초판과 가장 크게 달라진 부분입니다. 규칙 기반 분해(SAD 35.0퍼센트), 재분할 개선판(ISAD 37.1퍼센트), 정답 분해에 게이트를 적용한 버전(SAD-AGENT 41.9퍼센트)은 전부 SINGLE보다 낮았고, 라우터를 다국어 임베딩 검색기로 바꾸자 ORACLE이 오히려 45.4퍼센트로 떨어졌으며, BM25와 dense를 합친 하이브리드(RRF)도 64.0퍼센트로 기존 BM25의 63.6퍼센트와 사실상 같았습니다. 더 나은 검색 모델이 천장을 올리지 못한 것입니다.
 
-![Neither decomposition nor a better retriever raises the ceiling]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-strategies-retrievers.png' | relative_url }})
+![Neither decomposition nor a better retriever raises the ceiling]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-strategies-retrievers.webp' | relative_url }})
 *왼쪽은 모든 분해 전략이 SINGLE(점선) 아래에 있음을, 오른쪽은 dense·hybrid 검색기가 라이브 BM25를 넘지 못함을 보여줍니다. 어느 레버도 ORACLE 천장을 올리지 못했습니다.*
 
 ## 진짜 병목: 스킬 코퍼스 중복
@@ -57,7 +57,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/retriever-vs-decomp
 
 라이브 라우터의 교차언어 능력은 전적으로 수작업 한국어-영어 동의어 사전에 얹혀 있습니다. 이 사전을 제거하자 ORACLE은 63.6퍼센트에서 20.8퍼센트로, SINGLE은 52.9퍼센트에서 18.8퍼센트로 무너졌습니다. 측정된 커버리지의 약 3분의 2가 검색 알고리즘이 아니라 손으로 유지하는 사전에서 나온 셈입니다.
 
-![Removing the hand-curated synonym dictionary collapses coverage]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-synonym-artifact.png' | relative_url }})
+![Removing the hand-curated synonym dictionary collapses coverage]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-synonym-artifact.webp' | relative_url }})
 *수작업 한국어-영어 동의어 사전을 제거하면 커버리지가 무너집니다(ORACLE 63.6에서 20.8로). 교차언어 능력은 검색기의 속성이 아니라 큐레이션의 산물입니다.*
 
 이 사실은 해석을 바꿉니다. 내부 로그를 보면 과거 스냅샷에서 분해 로직을 전혀 건드리지 않고 동의어 사전을 한 차례 확장한 것만으로 ORACLE 상한선이 42.5퍼센트에서 63.6퍼센트로 21.1포인트 뛰었습니다. 초판은 이를 "분해가 아니라 리트리버 작업이 성과를 냈다"는 긍정적 증거로 제시했습니다. 그러나 그 확장은 벤치마크 gold가 필요로 하는 바로 그 한국어 용어들(딥리서치, 팩트체크, 슬랙 등)을 추가한 것이었습니다. 그 미스가 확장을 유도했으니, 21.1포인트는 같은 사례에서 측정된 것, 즉 테스트셋에 학습한 결과입니다. 개정판은 이 수치를 증거에서 철회합니다. 교차언어 능력이 벤치마크에 맞춰 튜닝된 사전인 리트리버는 일반화되는 천장도, 일반화되는 개선도 주지 못합니다.
@@ -66,7 +66,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/retriever-vs-decomp
 
 step coverage는 분해가 실제로 제공하는 가치를 못 봅니다. 전략들이 gold 스킬을 내놓는 순서를 gold 실행 순서와 대조하면(커버된 쌍에 대한 Kendall τ), SAD-AGENT는 τ=1.0(커버 gold가 2개 이상인 4개 사례)으로 완벽한 순서를 회복한 반면, SINGLE의 점수 순서는 τ=-0.22(6개 사례)로 오히려 역상관이었습니다. 단일 검색은 실행 의미가 없는 관련도 뭉치를 돌려주지만, 분해는 스킬이 실행돼야 하는 순서를 복원합니다. 즉 이 레짐에서 분해는 커버리지를 올리지는 못해도, 순서를 되살리는 유일한 전략입니다.
 
-![Decomposition recovers execution ordering]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ordering.png' | relative_url }})
+![Decomposition recovers execution ordering]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ordering.webp' | relative_url }})
 *분해의 진짜 기여는 실행 순서 회복입니다(τ=1.0). 단일 랭킹 검색은 오히려 역순(τ=-0.22)이며, 커버리지 지표로는 이 차이가 보이지 않습니다.*
 
 ## 회사·사회·과학에 대한 기여
@@ -77,7 +77,7 @@ step coverage는 분해가 실제로 제공하는 가치를 못 봅니다. 전�
 
 과학적으로는 "리트리벌은 사실상 해결됐다"거나 "분해가 유일한 병목"이라는 최근 통념 어느 쪽으로도 단순 이전되지 않는 사례를 제시합니다. 덜 정제되고 한국어-영어가 뒤섞인 실제 코퍼스에서는 병목이 분해와 검색의 상류인 코퍼스 위생으로 옮겨간다는 것을 보여줌으로써, 어느 레버가 지배적인지는 리트리벌이나 분해 자체의 속성이 아니라 코퍼스와 인덱스의 속성이라는 점을 드러냅니다. 그리고 SINGLE 대비 ORACLE의 절대 수준과 격차를 함께 읽는 ceiling-gap 진단 절차 자체는 라우팅 연구 전반에 적용 가능한 형태로 일반화된다고 주장합니다.
 
-![Bootstrap confidence intervals at n=12]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ceiling-gap-ci.png' | relative_url }})
+![Bootstrap confidence intervals at n=12]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ceiling-gap-ci.webp' | relative_url }})
 *표본이 12개뿐이라 신뢰구간이 넓고 ceiling gap의 부호도 겨우 유의합니다. 모든 수치는 사례 연구 측정치로 읽어야 합니다.*
 
 ## 한계

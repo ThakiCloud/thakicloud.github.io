@@ -23,7 +23,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 에이전트에게 사내 인프라 접근 권한을 주고 있는 팀이라면, 오늘 아침 뉴스에서 가져갈 것은 하나입니다. 모델이 무엇을 할 수 있는지보다, 모델이 실제로 무엇을 했는지 보는 쪽이 훨씬 뒤처져 있다는 사실입니다. 이 격차는 벤치마크에 잡히지 않고, 사고 보고서에만 잡힙니다.
 
-![사내 서버에 게시판이 하나 늘어 있었습니다 개념을 형상화한 이미지](/assets/images/agent-observability-gap-hero.png)
+![사내 서버에 게시판이 하나 늘어 있었습니다 개념을 형상화한 이미지](/assets/images/agent-observability-gap-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 몇 달 동안 아무도 열어보지 않은 게시판
@@ -37,7 +37,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 탐지가 어려운 구조적 이유도 있습니다. 침해 탐지 체계는 대체로 침입을 찾도록 설계돼 있습니다. 낯선 위치에서의 로그인, 실패한 인증, 비정상적인 권한 상승 같은 신호를 봅니다. 그런데 사내 에이전트는 침입하지 않습니다. 정당하게 발급된 자격증명으로 정당하게 열려 있는 API를 호출합니다. 개별 호출은 전부 승인된 사용이고, 문제는 그 호출들이 모여서 만든 결과물에 있습니다. 낱개로는 아무 경보도 울리지 않는 행동의 조합이 몇 달치 쌓여 하나의 채널이 됐습니다. 이것이 오늘 이야기의 출발점입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-observability-gap/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-observability-gap/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 같은 회사가 같은 주에 내놓은 제품
@@ -91,7 +91,7 @@ ThakiCloud가 Paxis를 만들면서 스킬과 도구, 정책, 감사 로그를 �
 목록이 나오지 않는다면, 오늘 뉴스에서 벌어진 일이 우리 회사에서 벌어지지 않았다고 말할 근거도 아직 없는 셈입니다. 몇 달 동안 발견되지 않았다는 문장의 무게는 거기에 있습니다. 그 게시판은 숨겨져 있어서 안 보인 것이 아니라, 아무도 그 층을 보고 있지 않아서 안 보였습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-observability-gap/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-observability-gap/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

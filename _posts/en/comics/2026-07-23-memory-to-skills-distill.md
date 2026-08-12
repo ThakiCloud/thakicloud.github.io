@@ -13,7 +13,7 @@ tags:
   - ai-coding
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/memory-to-skills-distill/strip.png
+image: /assets/images/posts/comics/memory-to-skills-distill/strip.webp
 audiobook: /assets/audio/posts/memory-to-skills-distill/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/memory-to-skills-distill/"
@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/comics/memory-to-skills-dist
 
 Agent memory usually stays a passive footnote: past traces you pull up and glance at when needed. The idea making the rounds is to stop glancing and start distilling — turn that memory into a skill, a reusable ability the agent can just call. So instead of re-reading what worked, you promote it into a capability. The catch is that the wins aren't the only thing that distills cleanly.
 
-![We Turned Memory Into Skills. Bad Habits Included.](/assets/images/posts/comics/memory-to-skills-distill/strip.png)
+![We Turned Memory Into Skills. Bad Habits Included.](/assets/images/posts/comics/memory-to-skills-distill/strip.webp)
 
 > Source: [RT @dair_ai: Very cool idea to convert memory to skills.](https://x.com/hjguyhan/status/2079862770787610655) · twitter
 

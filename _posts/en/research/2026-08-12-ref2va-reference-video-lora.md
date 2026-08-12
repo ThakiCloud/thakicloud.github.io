@@ -14,7 +14,7 @@ author_profile: true
 
 If you are an engineer who wants to fine-tune a video model so a brand mascot or virtual presenter stays recognizably itself in every clip, this post gives you two things: a concrete route for porting the reference-conditioned training recipe that commercial trainers keep behind their API onto an open-weight model, and a measured curve of how much identity that recipe buys and how much prompt following it costs.
 
-![Illustration of the core idea of Porting a Reference-Conditioned Video LoRA Recipe to Our Own GPUs: What Identity Costs](/assets/images/ref2va-reference-video-lora-hero.png)
+![Illustration of the core idea of Porting a Reference-Conditioned Video LoRA Recipe to Our Own GPUs: What Identity Costs](/assets/images/ref2va-reference-video-lora-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Why this experiment
@@ -65,7 +65,7 @@ flowchart TD
 
 Evaluation used 20 held-out prompts in contexts absent from training: beaches, libraries, subways. ArcFace scores whether the persona survives the new context; CLIP-T scores whether the prompt is followed. Gates were registered before the runs: identity must rise at least 0.10 over baseline (G1), and prompt following may drop at most 5 percent (G2).
 
-![Identity per operating point and the measured tradeoff frontier]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-results.png)
+![Identity per operating point and the measured tradeoff frontier]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-results.webp)
 
 The recipe kept its headline promise. The main run (p=0.9, 800 steps) reached 0.487 identity against a 0.286 baseline, a 70 percent gain and twice the pre-registered bar. The per-frame worst case moved from negative to positive: the baseline sometimes loses the subject entirely, the conditioned model does not.
 

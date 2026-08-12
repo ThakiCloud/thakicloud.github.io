@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ⏱️ **예상 읽기 시간**: 12분
 
-![udocker: 루트 권한 없이 Docker 컨테이너 실행하는 완벽 가이드 개념을 형상화한 이미지](/assets/images/udocker-rootless-container-execution-guide-ko-hero.png)
+![udocker: 루트 권한 없이 Docker 컨테이너 실행하는 완벽 가이드 개념을 형상화한 이미지](/assets/images/udocker-rootless-container-execution-guide-ko-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 소개

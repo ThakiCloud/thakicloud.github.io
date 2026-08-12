@@ -18,7 +18,7 @@ categories:
   - agentops
 ---
 
-![7일을 사는 에이전트는 자기 기억을 어디에 둡니까 개념을 형상화한 이미지](/assets/images/where-does-a-seven-day-agent-keep-its-memory-hero.png)
+![7일을 사는 에이전트는 자기 기억을 어디에 둡니까 개념을 형상화한 이미지](/assets/images/where-does-a-seven-day-agent-keep-its-memory-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 같은 날, 두 층에서 기억 이야기가 나왔습니다

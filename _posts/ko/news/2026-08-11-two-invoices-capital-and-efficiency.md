@@ -18,7 +18,7 @@ categories:
   - news
 ---
 
-![710조원과 H200 두 장, 같은 날 도착한 두 장의 계산서 개념을 형상화한 이미지](/assets/images/two-invoices-capital-and-efficiency-hero.png)
+![710조원과 H200 두 장, 같은 날 도착한 두 장의 계산서 개념을 형상화한 이미지](/assets/images/two-invoices-capital-and-efficiency-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 같은 날 도착한 두 장의 계산서

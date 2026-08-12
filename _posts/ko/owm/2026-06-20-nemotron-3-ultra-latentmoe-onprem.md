@@ -110,11 +110,11 @@ OpenMDW-1.1 라이선스는 NVIDIA가 설계한 오픈 모델 라이선스입니
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![nemotron-3-ultra-latentmoe-onprem 슬라이드 1](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-01.png)
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 1](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-01.webp)
 
-![nemotron-3-ultra-latentmoe-onprem 슬라이드 2](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-02.png)
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 2](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-02.webp)
 
-![nemotron-3-ultra-latentmoe-onprem 슬라이드 3](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-03.png)
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 3](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-03.webp)
 
-![nemotron-3-ultra-latentmoe-onprem 슬라이드 4](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-04.png)
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 4](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-04.webp)
 

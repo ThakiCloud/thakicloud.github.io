@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/minimax-h3-nf4-low-vr
 
 When an open-weight model ships, a quantized version follows within days. MiniMax-H3 was no exception. ModelScope published a 4-bit version bundled with DiffSynth-Studio, announced that a minimum of 8GB VRAM is enough, and added that it works on a Mac too. A video generation model fitting on a gaming graphics card is worth a look. So we opened the file listing and measured the actual sizes. Once the numbers lined up, it turned out quantization is not the protagonist of this story.
 
-![Abstract image of a massive layered structure compressing through a narrow passage into a small crystal](/assets/images/minimax-h3-nf4-low-vram-hero.png)
+![Abstract image of a massive layered structure compressing through a narrow passage into a small crystal](/assets/images/minimax-h3-nf4-low-vram-hero.webp)
 
 *Compression is half the story. The other half is in feeding it through one piece at a time.*
 
@@ -153,7 +153,7 @@ The most natural reading is that `FL2VA` and `Ref2VA` are self-contained bundles
 
 The quantized repository `DiffSynth-Studio/MiniMax-H3-NF4` holds 48.01GiB across 5 safetensors, and the file names show it maps to the individual components rather than the bundles.
 
-![Chart of per-role bf16 versus NF4 sizes and the gap against 8GB VRAM](/assets/images/minimax-h3-nf4-low-vram-results-en.png)
+![Chart of per-role bf16 versus NF4 sizes and the gap against 8GB VRAM](/assets/images/minimax-h3-nf4-low-vram-results-en.webp)
 
 *Left is deduplicated per-role measured size; right is the distance remaining between the quantized build and the required VRAM.*
 

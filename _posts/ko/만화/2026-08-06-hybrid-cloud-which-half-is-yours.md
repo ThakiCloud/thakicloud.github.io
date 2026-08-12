@@ -12,7 +12,7 @@ tags:
   - 파시스
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/hybrid-cloud-which-half-is-yours/strip.png
+image: /assets/images/posts/만화/hybrid-cloud-which-half-is-yours/strip.webp
 video: /assets/videos/posts/만화/hybrid-cloud-which-half-is-yours/comic.mp4
 audiobook: /assets/audio/posts/hybrid-cloud-which-half-is-yours/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 신세계아이앤씨와 KT가 뉴타닉스와 손잡고 하이브리드 클라우드 공동 영업에 나섰다는 소식이 나왔습니다. 하이브리드 클라우드란 우리 전산실 안에 둔 서버(온프렘)와 바깥 퍼블릭 클라우드를 한 관리 화면에서 같이 굴리는 방식을 말합니다. 말은 반반인데, 정작 계약서에는 그 반의 비율을 누가 정하는지가 적혀 있지 않은 경우가 많습니다. 비율을 남이 쥐면 하이브리드는 시간이 갈수록 한쪽으로 기웁니다. 워크로드가 옮겨가기 쉬운 방향이 이미 정해져 있으니까요. 오늘 만화는 그 저울 위에 올라탄 네 살짜리들의 이야기입니다.
 
-![반반이라며 왜 내 반만 줄어](/assets/images/posts/만화/hybrid-cloud-which-half-is-yours/strip.png)
+![반반이라며 왜 내 반만 줄어](/assets/images/posts/만화/hybrid-cloud-which-half-is-yours/strip.webp)
 
 > 원 뉴스: [신세계I&C·KT, 뉴타닉스 손잡고 하이브리드 클라우드 공동 영업](https://www.sedaily.com/article/20075714) · bespin
 
 **▶ 만화 영상판: 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/hybrid-cloud-which-half-is-yours/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/hybrid-cloud-which-half-is-yours/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/hybrid-cloud-which-half-is-yours/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/hybrid-cloud-which-half-is-yours/comic.ko.vtt" default>
 </video>
@@ -45,11 +45,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![hybrid-cloud-which-half-is-yours 슬라이드 1](/assets/images/hybrid-cloud-which-half-is-yours-slide-01.png)
+![hybrid-cloud-which-half-is-yours 슬라이드 1](/assets/images/hybrid-cloud-which-half-is-yours-slide-01.webp)
 
-![hybrid-cloud-which-half-is-yours 슬라이드 2](/assets/images/hybrid-cloud-which-half-is-yours-slide-02.png)
+![hybrid-cloud-which-half-is-yours 슬라이드 2](/assets/images/hybrid-cloud-which-half-is-yours-slide-02.webp)
 
-![hybrid-cloud-which-half-is-yours 슬라이드 3](/assets/images/hybrid-cloud-which-half-is-yours-slide-03.png)
+![hybrid-cloud-which-half-is-yours 슬라이드 3](/assets/images/hybrid-cloud-which-half-is-yours-slide-03.webp)
 
-![hybrid-cloud-which-half-is-yours 슬라이드 4](/assets/images/hybrid-cloud-which-half-is-yours-slide-04.png)
+![hybrid-cloud-which-half-is-yours 슬라이드 4](/assets/images/hybrid-cloud-which-half-is-yours-slide-04.webp)
 

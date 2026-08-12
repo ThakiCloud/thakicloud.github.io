@@ -15,7 +15,7 @@ categories:
   - llmops
 ---
 
-![프론티어 API에서 오픈 모델로 이전하는 흐름을 표현한 추상 일러스트]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-hero.png' | relative_url }})
+![프론티어 API에서 오픈 모델로 이전하는 흐름을 표현한 추상 일러스트]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-hero.webp' | relative_url }})
 
 지난 몇 주 사이 AI 업계의 화제는 "누가 더 똑똑한가"에서 "누가 더 싼가"로 옮겨갔습니다. 가장 상징적인 장면은 마이크로소프트에서 나왔습니다. 오픈AI를 현대 AI 산업의 궤도에 올려놓은 바로 그 회사가, 엑셀과 아웃룩 안에서 매주 수만 건씩 발생하는 AI 요청을 오픈AI와 앤트로픽 대신 자사 모델로 돌리기 시작했습니다. 마이크로소프트 AI 책임자 무스타파 술레이만은 이를 감추지 않았습니다. "앤트로픽은 극도로 비쌉니다. 우리 목표는 그 비용을 줄이고 궁극적으로는 없애는 것입니다"라고 그는 말했습니다.
 
@@ -37,13 +37,13 @@ categories:
 
 가격 자체도 빠르게 내려가고 있습니다. 오픈AI가 최근 공개한 GPT-5.6 Sol은 100만 토큰당 입력 5달러, 출력 30달러 수준으로, 직전 세대보다 토큰당 비용이 큰 폭으로 떨어졌습니다({% raw %}[CNBC 보도](https://www.cnbc.com/2026/07/08/openai-expanding-gpt-5point6-ai-model-release-ending-government-limits.html){% endraw %}). 프론티어 연구소들끼리도 가격 전쟁에 들어갔다는 뜻입니다. 최전선은 더 이상 지능 전쟁이 아니라 가치 전쟁으로 바뀌었습니다.
 
-![시장의 붕괴 신호를 정리한 슬라이드. 중국 오픈 모델 60에서 90퍼센트 저렴, GPT-5.6 Sol 100만 토큰당 입력 5달러 출력 30달러, 반도체와 AI 주식에서 1조 달러 규모 증발]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-03.png' | relative_url }})
+![시장의 붕괴 신호를 정리한 슬라이드. 중국 오픈 모델 60에서 90퍼센트 저렴, GPT-5.6 Sol 100만 토큰당 입력 5달러 출력 30달러, 반도체와 AI 주식에서 1조 달러 규모 증발]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-03.webp' | relative_url }})
 
 ## 왜 지금인가
 
 비용 전쟁이 지금 터진 이유는 워크로드의 분포에 있습니다.
 
-![워크로드를 어려운 추론과 정형화된 대량 작업이라는 두 세계로 나눈 구조적 진단 슬라이드]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-04.png' | relative_url }})
+![워크로드를 어려운 추론과 정형화된 대량 작업이라는 두 세계로 나눈 구조적 진단 슬라이드]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-04.webp' | relative_url }})
 
 에이전트가 하루에 처리하는 일을 뜯어보면 성격이 뚜렷하게 갈립니다. 한쪽에는 진짜 어려운 추론이 있습니다. 애매한 설계 결정, 미묘한 디버깅, 처음 보는 문제의 분해 같은 것입니다. 다른 한쪽에는 정형화된 대량 작업이 있습니다. 분류, 라우팅, 요약, 규격 검사, 정해진 양식의 답장이 여기 속합니다. 건수로 보면 후자가 압도적으로 많습니다.
 
@@ -55,7 +55,7 @@ categories:
 
 그렇다면 이 강물을 어떻게 옮길까요. 즉흥적으로 모델을 바꾸는 것은 위험합니다. 신뢰할 수 있는 이전은 다음 다섯 단계를 거칩니다.
 
-![프론티어에서 오픈으로 넘어가는 이전 플레이북의 다섯 단계. 분류, 평가, 라우팅, 자체 호스팅, 검증]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-05.png' | relative_url }})
+![프론티어에서 오픈으로 넘어가는 이전 플레이북의 다섯 단계. 분류, 평가, 라우팅, 자체 호스팅, 검증]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-05.webp' | relative_url }})
 
 먼저 워크로드를 분류합니다. 각 요청을 난이도와 민감도 두 축으로 나눕니다. 어렵거나 민감한 작업은 프론티어에 남기고, 정형화된 대량 작업만 이전 대상으로 표시합니다.
 
@@ -395,13 +395,13 @@ categories:
 
 X상에서 한 개발자는 이 방식으로 월 6만 달러의 API 지출을 오픈 모델로 옮겨 1만 2천 달러까지, 약 80퍼센트 줄였다고 공유했습니다. 원문 게시물은 접근이 제한되어 독립적으로 검증하지는 못했으므로 수치는 참고용입니다([추정]). 다만 절감의 크기 자체는 검증된 자료와 결이 같습니다. 중국 오픈 모델의 60에서 90퍼센트 저렴한 단가, 그리고 프론티어 연구소들끼리 벌어지는 가격 인하가 같은 방향을 가리킵니다.
 
-![안전망을 갖춘 이전이 약 80퍼센트의 비용 절감으로 이어지는 구조를 표현한 슬라이드]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-08.png' | relative_url }})
+![안전망을 갖춘 이전이 약 80퍼센트의 비용 절감으로 이어지는 구조를 표현한 슬라이드]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-08.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
 이 플레이북은 개념으로는 명료하지만 실제로 굴리려면 두 가지가 필요합니다. 하나는 오픈 모델을 싸게 서빙하는 인프라이고, 다른 하나는 작업마다 모델을 고르고 정책과 감사로 안전을 보장하는 제어 평면입니다. ThakiCloud는 두 제품으로 이 두 축을 함께 제공합니다.
 
-![이전을 굴리는 두 개의 기둥. 저비용 서빙 인프라 ai-platform과 에이전트 네이티브 제어 평면 Paxis]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-09.png' | relative_url }})
+![이전을 굴리는 두 개의 기둥. 저비용 서빙 인프라 ai-platform과 에이전트 네이티브 제어 평면 Paxis]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-09.webp' | relative_url }})
 
 ### ai-platform: 저비용 서빙 인프라
 
@@ -411,7 +411,7 @@ ai-platform은 쿠버네티스 기반의 AI/ML 서빙 인프라입니다. Kueue�
 
 Paxis는 ai-platform 위에서 도는 에이전트 네이티브 제어 평면입니다. 기존 클라우드가 가상 머신과 데이터베이스를 일급 리소스로 다루듯, Paxis는 스킬과 도구, 정책, 감사 로그를 일급 리소스로 다룹니다. 이전 플레이북의 관점에서 가장 중요한 부분은 모델 라우팅입니다. Paxis는 `models.yaml`을 단일 진실 공급원으로 삼아 Claude, OpenAI, Ollama, Kimi, MiniMax, 그리고 ai-platform의 vLLM 서빙(Metis)을 한곳에서 교차 라우팅합니다. 앞서 정리한 플레이북의 3단계와 5단계가 여기에 그대로 대응합니다. 작업 유형별로 모델을 지정하고, 품질이 흔들리면 그 작업만 프론티어로 되돌리는 판단이 이 계층에서 이뤄집니다.
 
-![Paxis가 models.yaml을 단일 진실 공급원으로 Claude, OpenAI, Ollama, Kimi, MiniMax, Metis를 교차 라우팅하는 제어 평면 슬라이드]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-11.png' | relative_url }})
+![Paxis가 models.yaml을 단일 진실 공급원으로 Claude, OpenAI, Ollama, Kimi, MiniMax, Metis를 교차 라우팅하는 제어 평면 슬라이드]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-11.webp' | relative_url }})
 
 여기에 더해 Paxis는 960개가 넘는 스킬을 BM25로 선택하는 스킬 하네스, 격리 샌드박스 실행, 위키 기반 지식 엔진, DAG 멀티에이전트 오케스트레이션, OAuth 자동 재연결을 갖춘 MCP 커넥터를 제공합니다. 그리고 모든 에이전트 행동은 정책 게이트와 감사 로그를 통과합니다. 모델을 싸게 바꾸면서도 무엇이 어떤 모델로 처리됐는지 추적할 수 있다는 뜻입니다.
 
@@ -421,7 +421,7 @@ Paxis는 ai-platform 위에서 도는 에이전트 네이티브 제어 평면입
 
 이 이야기를 낙관 일변도로 끝내는 것은 정직하지 않습니다. 반대편의 논거도 분명합니다.
 
-![한계와 반론을 정리한 슬라이드. 품질 격차, 자체 호스팅 비용, 벤치마크 신뢰성, 라우팅 복잡도]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-13.png' | relative_url }})
+![한계와 반론을 정리한 슬라이드. 품질 격차, 자체 호스팅 비용, 벤치마크 신뢰성, 라우팅 복잡도]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-slide-13.webp' | relative_url }})
 
 첫째, 품질 격차는 여전히 존재합니다. 오픈 모델이 좁힌 것은 정형화된 작업과 일부 에이전트 벤치마크에서입니다. 처음 보는 문제의 분해나 긴 맥락의 미묘한 추론에서는 프론티어가 여전히 앞섭니다. 모든 작업을 오픈 모델로 옮기려는 시도는 대량 작업에서 아낀 돈을 어려운 작업의 실패 비용으로 토해내게 만듭니다. 이전의 핵심은 전면 교체가 아니라 정밀한 분류입니다.
 

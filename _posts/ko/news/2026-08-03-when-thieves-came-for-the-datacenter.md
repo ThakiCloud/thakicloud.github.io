@@ -23,7 +23,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 AI 데이터센터를 운영하거나 그 위에 서비스를 올리는 분이라면, 2026년 상반기의 가장 값비싼 위험은 어떤 모델을 고르느냐가 아니라 인프라 그 자체를 어떻게 지키느냐로 옮겨왔습니다. 올해 뉴스가 조용히 말해준 결론은 하나입니다. AI의 값어치가 모델에서 인프라로 내려오자, 그 인프라를 노리는 도둑도 함께 도착했습니다.
 
-![GB200 한 대에 구리 3.2킬로미터, 도둑이 데이터센터로 온 이유 개념을 형상화한 이미지](/assets/images/when-thieves-came-for-the-datacenter-hero.png)
+![GB200 한 대에 구리 3.2킬로미터, 도둑이 데이터센터로 온 이유 개념을 형상화한 이미지](/assets/images/when-thieves-came-for-the-datacenter-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 케이블 한 가닥이 전략 자원이 되기까지
@@ -37,7 +37,7 @@ AI 데이터센터를 운영하거나 그 위에 서비스를 올리는 분이�
 국내라고 예외가 아닙니다. 데이터센터와 전력망 확충이 몰리면서 물리 보안이라는, 그동안 잘 챙기지 않던 항목이 다시 수면 위로 올라왔습니다. 케이블 매설 구간의 물리적 침입 감지, 스크랩 구리의 유통 이력 추적, 변전소와 기지국 주변의 센서와 CCTV 강화 같은 대책이 실제로 논의되기 시작했습니다. 특히 신규 데이터센터가 몰리는 지방 산업단지나 수도권 외곽 부지는 상대적으로 보안 인력이 얇아, 해외에서 벌어진 산업형 절도의 표적이 될 개연성이 있습니다. 구리 가격 급등 자체도 건설 원가를 밀어 올려 GPU 클러스터 증설 일정에 영향을 줍니다. 다시 말해 물리 자산의 도난 위험이 이제는 서비스 가용성과 원가, 두 가지 모두를 흔드는 변수가 됐습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/when-thieves-came-for-the-datacenter/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/when-thieves-came-for-the-datacenter/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 값어치는 왜 인프라로 내려왔나
@@ -75,7 +75,7 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 설계하면서 일급 리소스로
 올해의 신호를 한 문장으로 줄이면 이렇습니다. AI가 값나가는 물건이 되자 도둑이 왔고, 그 도둑은 케이블도 트래픽도 가리지 않았습니다. 앞으로의 경쟁력은 더 큰 모델을 부르는 데서 갈리지 않습니다. 자기 실행 환경을 금고처럼 다룰 줄 아는 기업과 그렇지 못한 기업 사이에서 갈립니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/when-thieves-came-for-the-datacenter/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/when-thieves-came-for-the-datacenter/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

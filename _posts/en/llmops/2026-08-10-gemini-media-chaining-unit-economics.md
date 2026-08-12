@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/gemini-media-chaining-unit-economics/"
 ---
 
-![Abstract image of a stream of fast particles and a stream of heavy orbs meeting on a balance](/assets/images/gemini-media-chaining-unit-economics-hero.png)
+![Abstract image of a stream of fast particles and a stream of heavy orbs meeting on a balance](/assets/images/gemini-media-chaining-unit-economics-hero.webp)
 
 ## Why read this
 
@@ -66,7 +66,7 @@ flowchart TB
 
 A disclosure first. This article did not call either model. It makes no claim about latency or quality. We took the two prices Google published in the announcement and did multiplication and division. The calculation script and the resulting JSON are kept in the repository.
 
-![Per-clip cost by draft count, and break-even against an hourly rate](/assets/images/gemini-media-chaining-unit-economics-results.png)
+![Per-clip cost by draft count, and break-even against an hourly rate](/assets/images/gemini-media-chaining-unit-economics-results.webp)
 
 The first thing that stands out is the ratio between the two prices. A second of video is $0.10 and an image is $0.034, so one 10-second clip is worth 29.4 image drafts. That single sentence sets nearly the whole optimization priority for this pipeline.
 

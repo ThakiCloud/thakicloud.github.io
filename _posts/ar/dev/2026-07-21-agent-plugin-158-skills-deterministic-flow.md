@@ -21,7 +21,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/dev/agent-plugin-158-skills-deterministic-flow/"
 ---
 
-![تصور تجريدي لوحدات مهارات عديدة تتقارب في خط أنابيب عمودي مرتّب واحد]({{ '/assets/images/agent-plugin-158-skills-deterministic-flow-hero.png' | relative_url }})
+![تصور تجريدي لوحدات مهارات عديدة تتقارب في خط أنابيب عمودي مرتّب واحد]({{ '/assets/images/agent-plugin-158-skills-deterministic-flow-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

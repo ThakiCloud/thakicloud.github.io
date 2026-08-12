@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 Anyone who has used a coding agent on a team runs into an odd wall. The agent belongs to you alone. Even when a colleague sitting next to you is working in the same repository, your Claude has no idea theirs exists. People collaborate through Slack and screen sharing, but the agents that actually touch the code on our behalf sit isolated on their own islands. **Multiplayer Claude Code**, recently released and widely discussed, takes direct aim at this wall. It is an experiment in letting multiple people share the same terminal and connecting each person's Claude so the agents can talk to each other. If you are considering rolling out coding agents at the team level, this lets you gauge ahead of time the conflict, permission, and audit problems that arrive the moment you connect agents together.
 
-![Illustration of the core idea of When Coding Agents Start Talking to Each Other: Designing Multiplayer Claude Code and Collaborative Agents](/assets/images/claude-code-multiplayer-collaborative-agents-hero.png)
+![Illustration of the core idea of When Coding Agents Start Talking to Each Other: Designing Multiplayer Claude Code and Collaborative Agents](/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Overview

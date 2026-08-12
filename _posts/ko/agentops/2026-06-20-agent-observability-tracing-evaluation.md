@@ -529,11 +529,11 @@ MLflow는 이 목적으로 에이전트 리플레이 기능을 제공합니다. 
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-observability-tracing-evaluation 슬라이드 1]({{ '/assets/images/agent-observability-tracing-evaluation-slide-01.png' | relative_url }})
+![agent-observability-tracing-evaluation 슬라이드 1]({{ '/assets/images/agent-observability-tracing-evaluation-slide-01.webp' | relative_url }})
 
-![agent-observability-tracing-evaluation 슬라이드 2]({{ '/assets/images/agent-observability-tracing-evaluation-slide-02.png' | relative_url }})
+![agent-observability-tracing-evaluation 슬라이드 2]({{ '/assets/images/agent-observability-tracing-evaluation-slide-02.webp' | relative_url }})
 
-![agent-observability-tracing-evaluation 슬라이드 3]({{ '/assets/images/agent-observability-tracing-evaluation-slide-03.png' | relative_url }})
+![agent-observability-tracing-evaluation 슬라이드 3]({{ '/assets/images/agent-observability-tracing-evaluation-slide-03.webp' | relative_url }})
 
-![agent-observability-tracing-evaluation 슬라이드 4]({{ '/assets/images/agent-observability-tracing-evaluation-slide-04.png' | relative_url }})
+![agent-observability-tracing-evaluation 슬라이드 4]({{ '/assets/images/agent-observability-tracing-evaluation-slide-04.webp' | relative_url }})
 

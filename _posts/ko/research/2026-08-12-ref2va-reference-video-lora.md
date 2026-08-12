@@ -14,7 +14,7 @@ author_profile: true
 
 영상 생성 모델을 파인튜닝해 브랜드 마스코트나 가상 인물을 일관되게 등장시키고 싶은 엔지니어라면, 이 글에서 두 가지를 얻어 가실 수 있습니다. 상용 트레이너가 API 뒤에 감춰 둔 레퍼런스 조건 학습 레시피를 오픈 가중치 모델에 이식하는 구체적인 방법, 그리고 그 레시피가 identity를 얼마나 올리고 프롬프트 추종을 얼마나 깎는지에 대한 실측 곡선입니다.
 
-![레퍼런스 조건 영상 LoRA를 사내 GPU로 재현하기: identity는 얻었고, 무엇을 내줬는가 개념을 형상화한 이미지](/assets/images/ref2va-reference-video-lora-hero.png)
+![레퍼런스 조건 영상 LoRA를 사내 GPU로 재현하기: identity는 얻었고, 무엇을 내줬는가 개념을 형상화한 이미지](/assets/images/ref2va-reference-video-lora-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 왜 이 실험을 했는가
@@ -65,7 +65,7 @@ flowchart TD
 
 평가는 학습에 없던 낯선 맥락의 홀드아웃 프롬프트 20개로 했습니다. 해변, 도서관, 지하철 같은 새 배경에서 같은 인물이 유지되는지를 ArcFace로, 프롬프트를 따르는지를 CLIP-T로 쟀습니다. 게이트는 실험 전에 등록해 뒀습니다. identity가 베이스라인보다 0.10 이상 오를 것(G1), 프롬프트 추종 하락은 5% 이내일 것(G2)입니다.
 
-![운용점별 identity와 실측 트레이드오프 전선]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-results.png)
+![운용점별 identity와 실측 트레이드오프 전선]({{ site.url }}{{ site.baseurl }}/assets/images/ref2va-reference-video-lora-results.webp)
 
 레시피는 identity 약속을 지켰습니다. 본 실험(p=0.9, 800스텝)의 identity는 0.487로 베이스라인 0.286 대비 70% 상승했고, 사전 등록 기준의 두 배를 넘겼습니다. 프레임별 최악값도 마이너스에서 플러스로 올라왔습니다. 베이스라인은 가끔 인물을 아예 놓치지만 조건화 모델은 그러지 않습니다.
 

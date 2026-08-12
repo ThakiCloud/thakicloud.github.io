@@ -19,7 +19,7 @@ categories:
   - culture
 ---
 
-![소멸하는 인간의 시간이 휴머노이드와 데이터센터의 빛으로 흘러 들어가는 추상 이미지]({{ '/assets/images/three-year-window-labor-to-assets-hero.png' | relative_url }})
+![소멸하는 인간의 시간이 휴머노이드와 데이터센터의 빛으로 흘러 들어가는 추상 이미지]({{ '/assets/images/three-year-window-labor-to-assets-hero.webp' | relative_url }})
 
 ## 개요
 

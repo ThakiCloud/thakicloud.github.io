@@ -11,7 +11,7 @@ author_profile: true
 toc: true
 ---
 
-![Abstract image of a translucent state record floating above a long chain of execution nodes](/assets/images/longhorizon-harness-hero.png)
+![Abstract image of a translucent state record floating above a long chain of execution nodes](/assets/images/longhorizon-harness-hero.webp)
 *Execution stretches out like a chain, and the state lives in a record outside that chain. That is the core idea behind LongHorizon-Harness.*
 
 ## Why this matters to you
@@ -28,7 +28,7 @@ LongHorizon-Harness treats that premise as the bug. Conversation history records
 
 So the paper reframes long-horizon execution as a **state management problem**. Task state is held as an explicit record outside execution, that record is updated only with facts confirmed directly from the environment, and the next subtask is derived again from the record plus the original goal. The reported numbers suggest the reframing works. With the same Qwen 3.7-Plus, WeaveBench went from 51.8% to 80.7%, Terminal-Bench 2.1 from 69.7% to 77.2%, and OSWorld 2.0 from 2.8% to 8.3%. Claude Opus 4.7 rose from 20.0% to 34.3% on an OSWorld 2.0 subset.
 
-![Paper-reported benchmark deltas alongside our locally measured install footprint](/assets/images/longhorizon-harness-results.png)
+![Paper-reported benchmark deltas alongside our locally measured install footprint](/assets/images/longhorizon-harness-results.webp)
 *Left: figures reported in the paper (arXiv:2608.01964), not reproduced by us. Right: install footprint we measured directly in a local sandbox.*
 
 What stands out is that the model did not change. Only the harness did.

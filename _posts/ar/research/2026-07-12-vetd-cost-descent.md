@@ -26,7 +26,7 @@ audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![التحقق أولا بنموذج مكلف ثم الانحدار إلى نموذج أرخص: كيف نخفض تكلفة النماذج في أسطول المهارات عبر بوابة كود 개념을 형상화한 이미지](/assets/images/vetd-cost-descent-hero.png)
+![التحقق أولا بنموذج مكلف ثم الانحدار إلى نموذج أرخص: كيف نخفض تكلفة النماذج في أسطول المهارات عبر بوابة كود 개념을 형상화한 이미지](/assets/images/vetd-cost-descent-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## المشكلة ليست في النموذج بل في التخصيص
@@ -42,7 +42,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 نقدم هنا الطريقة التي نستخدمها في أسطولنا. اسمها **VETD، أي Validate-Expensive-Then-Descend**. تتحقق أولا بالنموذج المكلف، ثم تنحدر فقط إلى المستوى الأرخص الذي يسمح به الكود.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/vetd-cost-descent/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/vetd-cost-descent/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## أربعة التزامات
@@ -61,7 +61,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 يتكون التدفق الكامل من خمس مراحل.
 
-![حلقة VETD]({{ '/assets/images/vetd-cost-descent-loop.png' | relative_url }})
+![حلقة VETD]({{ '/assets/images/vetd-cost-descent-loop.webp' | relative_url }})
 
 أولا هناك أسطول المهارات، وهو وحدة التحسين. المهارة الواحدة هي دليل يضم عقد النص التوجيهي والسكربتات والقوالب ومُشغّل الجدولة. يحتفظ سجل سياسات مركزي لكل مهارة بمستواها الحالي، وحالة التثبيت، وعدد مرات الفشل المتتالية، والسبب المقروء للبشر وراء ذلك المستوى.
 
@@ -79,7 +79,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ## كيف انقسم الأسطول
 
-![تكوين الأسطول وبوابة الخفض بعد تطبيق VETD]({{ '/assets/images/vetd-cost-descent-fleet-gate.png' | relative_url }})
+![تكوين الأسطول وبوابة الخفض بعد تطبيق VETD]({{ '/assets/images/vetd-cost-descent-fleet-gate.webp' | relative_url }})
 
 بعد تطبيق VETD، أصبحت 10 من أصل 16 مهارة تعمل عند مستوى متوسط. أما المهارات الست التي بقيت عند المستوى الطليعي فهي بالضبط تلك التي يكون المحتوى نفسه فيها هو الناتج النهائي، لا الصيغة. الفكاهة والحكم التحريري والنثر البحثي والزاوية الإبداعية أمثلة على ذلك. النمط الذي يكشفه VETD هنا هو أن التنسيق والمهام المرتكزة على الصيغة تنحدر، بينما تبقى مهام جودة المحتوى التي لا يمكن اختزالها.
 
@@ -120,7 +120,7 @@ VETD يعامل خفض تكلفة النماذج كمسألة قياس وبوا�
 *منهجية هذا المقال وأرقامه مأخوذة من سجل تشغيلي حقيقي لأسطول أتمتة ThakiCloud. نُصدر مسودة الورقة البحثية المرتبة كـ[PDF]({{ '/assets/papers/vetd-cost-descent-2026-07-12.pdf' | relative_url }}) مرفقة مع هذا المقال.*
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/vetd-cost-descent/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/vetd-cost-descent/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## المصادر

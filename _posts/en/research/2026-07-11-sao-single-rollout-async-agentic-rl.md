@@ -23,7 +23,7 @@ Training agents with reinforcement learning is no longer a lab-only phrase. Mode
 
 A paper released on July 8, 2026 by researchers at Tsinghua University and Z AI, "Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning" (arXiv 2607.07508), confronts exactly this problem. The short version: the authors dropped "group sampling," the core mechanism behind the widely used GRPO. And they did not leave this idea confined to a paper's experiments section. They put it into the actual pipeline used to train GLM-5.2, a 750B-scale open model.
 
-![Illustration of the core idea of Agentic RL Stops Waiting for the Group and Learns from One Rollout at a Time](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+![Illustration of the core idea of Agentic RL Stops Waiting for the Group and Learns from One Rollout at a Time](/assets/images/sao-single-rollout-async-agentic-rl-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Overview
@@ -32,7 +32,7 @@ This paper matters right now because the cost bottleneck in training has shifted
 
 ThakiCloud also runs five post-training techniques (SFT, CPT, DPO, GRPO, GKD) on our kubeflow-based LLM training system. So the price GRPO's group sampling pays on long rollouts, and the new risks that arise from the alternative that removes that price, are not someone else's problem. This post lays out what SAO changed, and what that change means for organizations like ours trying to train agents on multi-tenant GPU clusters.
 
-![An abstract image contrasting a stream of rollouts arriving one at a time asynchronously against rollouts frozen in a queue waiting for a group to fill]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.png' | relative_url }})
+![An abstract image contrasting a stream of rollouts arriving one at a time asynchronously against rollouts frozen in a queue waiting for a group to fill]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.webp' | relative_url }})
 *A visualization contrasting single rollouts arriving continuously, one after another, against rollouts frozen in a queue while waiting for the rest of a group to arrive.*
 
 ## What Is This Technology

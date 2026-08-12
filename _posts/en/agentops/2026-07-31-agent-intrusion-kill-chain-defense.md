@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 If you run a platform that loads and processes data other people upload, on Kubernetes, this incident is not somebody else's story. The takeaway fits in one line. The defenses worked as designed, but the attacker simply did not perform the action those defenses inspect, and a single path from a pod to cloud metadata decided everything that followed.
 
-![Abstract visualization of an attack path spreading across nested trust boundaries](/assets/images/agent-intrusion-kill-chain-defense-hero.png)
+![Abstract visualization of an attack path spreading across nested trust boundaries](/assets/images/agent-intrusion-kill-chain-defense-hero.webp)
 
 *There were several boundaries, but the cost of crossing each one was not independent of the others.*
 

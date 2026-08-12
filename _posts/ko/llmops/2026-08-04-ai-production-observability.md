@@ -168,5 +168,5 @@ def should_retain(latency_ms: float, p95_ms: float,
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『AI 프로덕션 옵저버빌리티』의 일부를 블로그용으로 다시 쓴 것입니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/ai-production-observability/ch01.png)
+![1장 삽화](/assets/images/books/ai-production-observability/ch01.webp)
 

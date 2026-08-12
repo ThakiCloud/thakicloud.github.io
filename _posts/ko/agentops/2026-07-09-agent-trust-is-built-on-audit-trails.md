@@ -91,11 +91,11 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-trust-is-built-on-audit-trails 슬라이드 1](/assets/images/agent-trust-is-built-on-audit-trails-slide-01.png)
+![agent-trust-is-built-on-audit-trails 슬라이드 1](/assets/images/agent-trust-is-built-on-audit-trails-slide-01.webp)
 
-![agent-trust-is-built-on-audit-trails 슬라이드 2](/assets/images/agent-trust-is-built-on-audit-trails-slide-02.png)
+![agent-trust-is-built-on-audit-trails 슬라이드 2](/assets/images/agent-trust-is-built-on-audit-trails-slide-02.webp)
 
-![agent-trust-is-built-on-audit-trails 슬라이드 3](/assets/images/agent-trust-is-built-on-audit-trails-slide-03.png)
+![agent-trust-is-built-on-audit-trails 슬라이드 3](/assets/images/agent-trust-is-built-on-audit-trails-slide-03.webp)
 
-![agent-trust-is-built-on-audit-trails 슬라이드 4](/assets/images/agent-trust-is-built-on-audit-trails-slide-04.png)
+![agent-trust-is-built-on-audit-trails 슬라이드 4](/assets/images/agent-trust-is-built-on-audit-trails-slide-04.webp)
 

@@ -151,5 +151,5 @@ Standing up an agentic system isn't a matter of writing good prompts, it's a mat
 This post is a blog rewrite of a section from our ebook 『Agentic Software Design』.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/agentic-software-architecture/ch01.png)
+![Chapter 1 illustration](/assets/images/books/agentic-software-architecture/ch01.webp)
 

@@ -107,11 +107,11 @@ M2.7에서 가장 실용적으로 눈에 들어오는 두 가지를 꼽으면 �
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![minimax-m2-7-openweight-agent 슬라이드 1](/assets/images/minimax-m2-7-openweight-agent-slide-01.png)
+![minimax-m2-7-openweight-agent 슬라이드 1](/assets/images/minimax-m2-7-openweight-agent-slide-01.webp)
 
-![minimax-m2-7-openweight-agent 슬라이드 2](/assets/images/minimax-m2-7-openweight-agent-slide-02.png)
+![minimax-m2-7-openweight-agent 슬라이드 2](/assets/images/minimax-m2-7-openweight-agent-slide-02.webp)
 
-![minimax-m2-7-openweight-agent 슬라이드 3](/assets/images/minimax-m2-7-openweight-agent-slide-03.png)
+![minimax-m2-7-openweight-agent 슬라이드 3](/assets/images/minimax-m2-7-openweight-agent-slide-03.webp)
 
-![minimax-m2-7-openweight-agent 슬라이드 4](/assets/images/minimax-m2-7-openweight-agent-slide-04.png)
+![minimax-m2-7-openweight-agent 슬라이드 4](/assets/images/minimax-m2-7-openweight-agent-slide-04.webp)
 

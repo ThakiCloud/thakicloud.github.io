@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/phone-harness-agent
 
 This is for platform engineers and security owners weighing whether to let an agent touch something hard to undo, such as a real device or an internal system. The short version: the technical barrier is already low, and everything left is approval design. phone-harness, published on August 7 and sitting at 850 stars three days later, needs 792 lines of code to drive an iPhone, and cloning, installing and running its check took us minutes. Yet the largest share of its documentation and skill definition is not about how to operate the phone. It is about what not to do and when to stop and ask a person. The four checks that failed when we ran `--doctor` were, without exception, things only a human can clear. This project is worth looking at because it treated that fact as a design premise instead of routing around it.
 
-![A thin thread passing through a translucent gate toward eye and hand glyphs and a standing screen panel](/assets/images/phone-harness-agent-ios-hero.png)
+![A thin thread passing through a translucent gate toward eye and hand glyphs and a standing screen panel](/assets/images/phone-harness-agent-ios-hero.webp)
 *What stands between the agent and the device is the actual subject of this tool.*
 
 ## Overview
@@ -117,7 +117,7 @@ phone-harness skill > ~/.claude/skills/phone-harness/SKILL.md
 
 After installation, `--doctor` exited with code 1. Two of six checks passed and four failed.
 
-![Horizontal bar chart showing two of six checks cleared by code and four that only a human can clear](/assets/images/phone-harness-agent-ios-results-en.png)
+![Horizontal bar chart showing two of six checks cleared by code and four that only a human can clear](/assets/images/phone-harness-agent-ios-results-en.webp)
 *Every remaining failure right after install waits on a physical human action.*
 
 The two that passed were the pyobjc framework imports and the presence of the iPhone Mirroring app. The four that failed were the Accessibility permission, the Screen Recording permission, iPhone Mirroring running, and a paired mirroring window. Our environment has no paired iPhone, and being a headless session we cannot flip permission toggles in System Settings either. So we did not reproduce the stage where a screen is actually captured and a tap is sent. Everything in this article about operating the phone comes from reading the repository's documentation and code; what we measured directly stops at installation and the check.

@@ -22,7 +22,7 @@ categories:
 
 ⏱️ **Estimated Reading Time**: 8 minutes
 
-![Illustration of the core idea of Goclone: Clone Any Website to Your Computer in Seconds](/assets/images/goclone-website-cloner-tutorial-en-hero.png)
+![Illustration of the core idea of Goclone: Clone Any Website to Your Computer in Seconds](/assets/images/goclone-website-cloner-tutorial-en-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Introduction

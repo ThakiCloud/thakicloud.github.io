@@ -15,7 +15,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 GPU 고대역폭 메모리보다 파드의 호스트 RAM이 먼저 바닥나는 상황을 겪어본 인프라 엔지니어라면, 이 논문이 정확히 그 지점을 다룬다는 걸 바로 알아볼 것입니다. ThakiCloud AI Research는 단일 NVIDIA H200 GPU와 32GiB 호스트 RAM만 있는 파드 위에서, 610억 파라미터급 체크포인트인 Qwen3-Coder-30B-A3B를 구조적으로 프루닝하고 4비트로 양자화한 실측 결과를 내놓았습니다. 대형 MoE(Mixture-of-Experts) 모델을 서빙 비용을 줄이려고 압축해야 하는데, 정작 압축 작업 자체가 메모리 부족으로 막히는 경험을 해본 분이라면 이 글이 바로 그 해법을 다룹니다.
 
-![32GiB 호스트 메모리 안에서 30B MoE를 4비트로 압축하기 개념을 형상화한 이미지](/assets/images/moe-w4a16-pruned-30b-single-gpu-hero.png)
+![32GiB 호스트 메모리 안에서 30B MoE를 4비트로 압축하기 개념을 형상화한 이미지](/assets/images/moe-w4a16-pruned-30b-single-gpu-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 문제의식: GPU가 아니라 압축 파이프라인 자체가 메모리에 막힌다
@@ -27,7 +27,7 @@ MoE 아키텍처는 각 토큰을 여러 전문가(expert) 서브네트워크 �
 이 논문이 던지는 질문은 명확합니다. 전체 모델을 CPU 메모리에 한 번도 통째로 올리지 않으면서, 30B급 MoE 모델을 구조적으로 프루닝하고 W4A16으로 양자화하는 작업을 고정된 소규모 호스트 RAM 예산 안에서 끝까지 해낼 수 있는가 하는 것입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/moe-w4a16-pruned-30b-single-gpu/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/moe-w4a16-pruned-30b-single-gpu/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 방법: 프로파일링, 선택, 샤드 스트리밍, 레이어별 양자화
@@ -40,7 +40,7 @@ MoE 아키텍처는 각 토큰을 여러 전문가(expert) 서브네트워크 �
 
 가장 중요한 두 단계는 슬라이스와 양자화입니다. 슬라이스 단계는 전체 프루닝 안 된 체크포인트를 호스트 RAM에 올린 뒤 전문가를 제거하는 대신, 체크포인트를 샤드 단위로 읽어서 그 샤드에서 선택되지 않은 전문가를 버리고 곧바로 프루닝된 샤드를 써냅니다. 이 과정 어디에서도 61.0GB짜리 전체 모델이나 그 중간 사본이 호스트 RAM에 통째로 조립되는 순간이 없습니다. 양자화 단계도 마찬가지로, 스트리밍되는 각 샤드에 그룹 크기 128의 레이어별 RTN(round-to-nearest) W4A16 양자화를 곧바로 적용합니다. 슬라이스 단계에서 지킨 스트리밍 불변식이 양자화 단계에서도 그대로 유지되는 셈입니다. 결과적으로 파이프라인 전체의 최대 호스트 RAM 사용량은, 61.0GB짜리 기반 모델 크기가 아니라 활성 샤드 크기에 묶이도록 설계로 보장됩니다.
 
-![Pipeline Stage Wall-Clock Time by Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-pipeline.png)
+![Pipeline Stage Wall-Clock Time by Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-pipeline.webp)
 *네 가지 프루닝 변형별 슬라이스·양자화 단계 소요 시간(H200 파드 실측). 양자화 시간은 프루닝이 강할수록 줄어들지만, 슬라이스 시간은 남긴 전문가 수에 단순 비례하지 않습니다.*
 
 ## 결과: 네 변형 모두 성공, 3.6배에서 4.8배까지 압축
@@ -56,7 +56,7 @@ MoE 아키텍처는 각 토큰을 여러 전문가(expert) 서브네트워크 �
 
 기반 모델(bf16)의 WikiText-2 테스트셋(29만 6815토큰) 퍼플렉시티는 9.0524입니다. 아티팩트 크기는 프루닝 강도에 정확히 비례해 16.9GB에서 12.7GB까지, 61.0GB 기반 모델 대비 3.6배에서 4.8배 작아졌습니다. 흥미로운 점은 양자화 소요 시간과 슬라이스 소요 시간이 다르게 움직인다는 것입니다. 양자화 시간은 남길 전문가 수가 줄어들수록 267.7초에서 202~204초로 줄어드는데, 이는 양자화할 대상 자체가 줄어드니 자연스러운 결과입니다. 반면 슬라이스 시간은 422.3초, 613.2초, 546.0초, 483.6초로 프루닝 강도와 단조롭게 비례하지 않습니다. 저자들은 샤드 입출력과 캘리브레이션 부기 작업의 오버헤드가 남은 전문가 수에 선형으로 비례하지 않을 가능성을 조심스럽게 제시하면서도, 실제 원인을 프로파일링하지는 않았다고 정직하게 밝히고 있습니다.
 
-![W4A16 Artifact Size by Pruning Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-compression-size.png)
+![W4A16 Artifact Size by Pruning Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-compression-size.webp)
 *Qwen3-Coder-30B-A3B-Instruct 네 변형 모두 61.0GB 기반 모델 대비 12.7GB~16.9GB, 3.6배~4.8배로 압축됐습니다(H200 파드 실측).*
 
 이 결과의 진짜 핵심은 크기나 시간이 아니라 호스트 RAM이 32GiB를 넘지 않았다는 시스템적 사실 그 자체입니다. 논문은 전체 모델을 먼저 메모리에 올리는 방식이라면 61.0GB에 작업 사본 오버헤드까지 더해져 32GiB 한도 안에 애초에 들어갈 수 없다는 점을 분석적으로 짚습니다. 이 naive 방식을 실제로 돌려 비교하지는 않았으므로 OOM이 났을 것이라는 실측 주장은 아니지만, 기반 모델 크기가 한도의 거의 두 배라는 사실만으로도 왜 샤드 스트리밍이 필요한지는 분명해집니다. 네 가지 변형 전부가 한도 아래에서 성공적으로 끝났다는 사실 자체가 이 설계가 실제로 작동한다는 경험적 증거입니다.
@@ -69,7 +69,7 @@ MoE 아키텍처는 각 토큰을 여러 전문가(expert) 서브네트워크 �
 
 다만 이 퍼플렉시티는 어디까지나 언어모델링 품질 신호이지, 코드 과제 정확도가 아닙니다. 기반 모델이 코더(Coder) 모델인데도 HumanEval이나 MBPP 같은 다운스트림 코드 벤치마크는 이 논문에서 측정하지 않았습니다. 10~20% 스위트스팟이 코드 생성 정확도에도 그대로 적용될지는 이 논문만으로는 알 수 없고, 저자들도 이를 향후 과제로 명시적으로 남겨두고 있습니다.
 
-![WikiText-2 Perplexity vs. Compression Factor](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-ppl-vs-compression.png)
+![WikiText-2 Perplexity vs. Compression Factor](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-ppl-vs-compression.webp)
 *압축 배율이 커질수록 퍼플렉시티 악화는 초선형적으로 커집니다. 10~20% 프루닝 구간은 거의 손실이 없거나 완만하게만 나빠지는 방어 가능한 스위트스팟입니다.*
 
 ## 이 결과가 남기는 것: 회사, 사회, 과학 세 층위
@@ -81,7 +81,7 @@ MoE 아키텍처는 각 토큰을 여러 전문가(expert) 서브네트워크 �
 과학적으로 가장 흥미로운 대목은, 샤드 단위 스트리밍 구현과 레이어별 RTN 양자화를 결합하면, 로드 후 이동 방식으로는 구조적으로 불가능한 고정된 소규모 호스트 RAM 상한 안에서도 대형 MoE의 W4A16 압축이 가능해진다는 걸 보여줬다는 점입니다. 서빙 시점에서만 논의되던 전문가 스트리밍·페이징 개념을, 압축 파이프라인 자체로 앞당겨 적용할 수 있다는 것을 실측으로 증명한 셈입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/moe-w4a16-pruned-30b-single-gpu/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/moe-w4a16-pruned-30b-single-gpu/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 한계: 코드 정확도, 라우터 보존 정제, 균일 프루닝은 아직 미검증

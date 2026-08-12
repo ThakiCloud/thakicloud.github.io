@@ -21,7 +21,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-and-agents/"
 ---
 
-![2030년에 도착하는 콘크리트, 16일 만에 일을 끝낸 에이전트 개념을 형상화한 이미지](/assets/images/lead-time-gap-concrete-and-agents-hero.png)
+![2030년에 도착하는 콘크리트, 16일 만에 일을 끝낸 에이전트 개념을 형상화한 이미지](/assets/images/lead-time-gap-concrete-and-agents-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 2030년과 16일
@@ -116,11 +116,11 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 정의한 이유가 여기 있습�
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![lead-time-gap-concrete-and-agents 슬라이드 1](/assets/images/lead-time-gap-concrete-and-agents-slide-01.png)
+![lead-time-gap-concrete-and-agents 슬라이드 1](/assets/images/lead-time-gap-concrete-and-agents-slide-01.webp)
 
-![lead-time-gap-concrete-and-agents 슬라이드 2](/assets/images/lead-time-gap-concrete-and-agents-slide-02.png)
+![lead-time-gap-concrete-and-agents 슬라이드 2](/assets/images/lead-time-gap-concrete-and-agents-slide-02.webp)
 
-![lead-time-gap-concrete-and-agents 슬라이드 3](/assets/images/lead-time-gap-concrete-and-agents-slide-03.png)
+![lead-time-gap-concrete-and-agents 슬라이드 3](/assets/images/lead-time-gap-concrete-and-agents-slide-03.webp)
 
-![lead-time-gap-concrete-and-agents 슬라이드 4](/assets/images/lead-time-gap-concrete-and-agents-slide-04.png)
+![lead-time-gap-concrete-and-agents 슬라이드 4](/assets/images/lead-time-gap-concrete-and-agents-slide-04.webp)
 

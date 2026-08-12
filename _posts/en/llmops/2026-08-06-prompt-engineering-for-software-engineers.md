@@ -31,7 +31,7 @@ The core claim is simple. What separates prompt engineering projects that keep b
 
 Many teams still treat prompts like marketing copy: edit sentences until the output feels right, ship when the demo looks convincing, then go back to tweaking wording whenever something odd shows up later. That approach survives the demo stage. The moment user volume grows and inputs diversify, it starts producing failures that never reproduce the same way twice.
 
-![Illustration of the core idea of Prompts Are Contracts: Bringing Software Engineering Discipline to Prompt Design](/assets/images/prompt-engineering-for-software-engineers-hero.png)
+![Illustration of the core idea of Prompts Are Contracts: Bringing Software Engineering Discipline to Prompt Design](/assets/images/prompt-engineering-for-software-engineers-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Reframing the Prompt as a Function
@@ -111,8 +111,8 @@ None of this is a novel idea. It is simply the discipline software engineers alr
 For deeper worked examples and the full code, the companion ebook is available in full.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch01.png)
-![Chapter 2 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch02.png)
-![Chapter 3 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch03.png)
-![Chapter 4 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch04.png)
+![Chapter 1 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch01.webp)
+![Chapter 2 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch02.webp)
+![Chapter 3 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch03.webp)
+![Chapter 4 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch04.webp)
 

@@ -168,5 +168,5 @@ That makes cardinality and sampling design a near-necessity for us, not an optio
 This post is a blog rewrite of part of our internal ebook, *AI Production Observability*, compiled while operating our internal automation pipelines.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-production-observability/ch01.png)
+![Chapter 1 illustration](/assets/images/books/ai-production-observability/ch01.webp)
 

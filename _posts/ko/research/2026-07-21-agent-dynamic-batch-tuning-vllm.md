@@ -47,19 +47,19 @@ canonical_url: "https://thakicloud.github.io/ko/research/agent-dynamic-batch-tun
 
 결과부터 적습니다. 실제 하드웨어에서 부하가 실린 상태로 측정했을 때, 수요 반응형 동적 컨트롤러가 정적 균등 분배를 이겼습니다. 총 완료 처리량은 초당 9,894토큰에서 11,274토큰으로 14.0% 올랐고, 상시 배치 테넌트 B의 처리량은 초당 6,557토큰에서 7,736토큰으로 18.0% 올랐습니다. 완료 요청 수도 9,063건에서 9,811건으로 7.6% 늘어(초당 96.7건에서 104.0건), 처리량 이득이 지연을 대가로 산 것이 아닙니다. 오히려 p99 꼬리 지연은 4.15초에서 4.08초로 1.6% 더 나았습니다.
 
-![Dynamic reallocation beats static split]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-throughput-gain.png' | relative_url }})
+![Dynamic reallocation beats static split]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-throughput-gain.webp' | relative_url }})
 *실제 H200에서 측정한 총 처리량과 배치 테넌트 처리량입니다. 고정 예산을 수요 쪽으로 옮기자 총 처리량이 14.0%, 배치 처리량이 18.0% 올랐습니다.*
 
 이 이득이 어디서 나오는지는 컨트롤러의 궤적이 그대로 말해 줍니다. 컨트롤러는 A로 15번, B로 19번 슬롯을 옮기고 11번은 유지를 택했으며, 최종 상한은 {A:4, B:92}로 끝났습니다. 이 마지막 배치가 이야기의 전부입니다. 대화형 테넌트 A는 버스트형이라 구간의 상당 부분을 놀며 보내는데, 정적 균등 분배에서는 A의 예약된 48슬롯이 그 시간 내내 놀고 상시 배치 테넌트 B는 자기 몫 48에 묶여 굶습니다. 동적 컨트롤러는 A가 놀고 있음을 감지해 예산의 거의 전부를 B에게 넘기고, 백프레셔로 밀린 일감이 끝없이 쌓여 있는 B는 그 여유 용량을 곧바로 완료된 작업으로 바꿉니다. A가 다시 몰아치면 컨트롤러는 테넌트별 하한을 지키며 슬롯을 되돌릴 수 있습니다. 정적 분배는 이걸 못 하고, 예약해 둔 놀고 있는 절반은 바로 옆 테넌트가 용량에 굶주릴 때 순수한 낭비가 됩니다.
 
-![Where the fixed budget ends up]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-controller-reallocation.png' | relative_url }})
+![Where the fixed budget ends up]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-controller-reallocation.webp' | relative_url }})
 *정적 정책은 {A:48, B:48}을 끝까지 유지하지만, 동적 컨트롤러는 A가 노는 동안 예산의 거의 전부를 상시 배치 테넌트로 옮겨 {A:4, B:92}로 끝납니다.*
 
 ## 정직한 한계: 사용률 67%, 목표 90%에는 못 미쳤다
 
 이 숫자가 함께 짊어진 조건도 그대로 밝힙니다. 정상 구간의 평균 GPU 사용률은 정적 67.2%, 동적 66.3%였습니다. 순간 최고치는 각각 99%와 87%까지 올랐지만, 평균은 우리가 목표로 삼았던 90% 지속에 못 미쳤습니다. 이유는 모델 크기입니다. 3B 모델은 버스트형 테넌트가 쉬는 골 구간에서 H200을 다 채우지 못하고, 그래서 버스트 사이사이 사용률이 주저앉아 평균을 끌어내립니다.
 
-![GPU utilization: peak vs steady]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-gpu-util.png' | relative_url }})
+![GPU utilization: peak vs steady]({{ '/assets/images/posts/research/agent-dynamic-batch-tuning-vllm/fig-gpu-util.webp' | relative_url }})
 *정적과 동적 정책의 GPU 사용률 정상 구간 평균과 최고치입니다. 최고치는 90%대에 닿지만 평균은 67% 안팎으로, 3B 모델이 골 구간에서 H200을 다 채우지 못한 결과입니다.*
 
 평균을 90% 위로 끌어올리려면 7B 이상 모델이 필요한데, 약 15GB에 달하는 그 가중치를 이날 데모 클러스터의 제한된 Hugging Face 이그레스로는 파드의 시간 창 안에 안정적으로 내려받지 못했습니다. 그래서 정직하게 말하면, 처리량 이득은 실제로 측정됐고 그 메커니즘도 짚을 수 있지만, 그 이득은 완전 포화가 아니라 67% 평균 사용률에서 얻은 것입니다. 이득의 방향과 크기는 믿을 만하되, 90% 지속이라는 목표 자체는 달성하지 못했으며 그렇다고 주장하지도 않습니다.
@@ -80,11 +80,11 @@ ThakiCloud 입장에서 이 연구가 남기는 실무적 사실은 명확합니
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-dynamic-batch-tuning-vllm 슬라이드 1](/assets/images/agent-dynamic-batch-tuning-vllm-slide-01.png)
+![agent-dynamic-batch-tuning-vllm 슬라이드 1](/assets/images/agent-dynamic-batch-tuning-vllm-slide-01.webp)
 
-![agent-dynamic-batch-tuning-vllm 슬라이드 2](/assets/images/agent-dynamic-batch-tuning-vllm-slide-02.png)
+![agent-dynamic-batch-tuning-vllm 슬라이드 2](/assets/images/agent-dynamic-batch-tuning-vllm-slide-02.webp)
 
-![agent-dynamic-batch-tuning-vllm 슬라이드 3](/assets/images/agent-dynamic-batch-tuning-vllm-slide-03.png)
+![agent-dynamic-batch-tuning-vllm 슬라이드 3](/assets/images/agent-dynamic-batch-tuning-vllm-slide-03.webp)
 
-![agent-dynamic-batch-tuning-vllm 슬라이드 4](/assets/images/agent-dynamic-batch-tuning-vllm-slide-04.png)
+![agent-dynamic-batch-tuning-vllm 슬라이드 4](/assets/images/agent-dynamic-batch-tuning-vllm-slide-04.webp)
 

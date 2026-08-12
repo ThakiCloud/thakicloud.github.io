@@ -25,7 +25,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 If you run an agent harness that routes hundreds or thousands of skills or tools through retrieval, and you're tired of periodically re-tuning that retriever's hyperparameters by hand, this piece is for you. This study sought a direct answer, on a real production retriever, to the question of whether an online bandit could eliminate that re-tuning loop by auto-calibrating the retrieval parameters. The conclusion isn't a simple win or loss; it's closer to a far more practical warning.
 
-![Illustration of the core idea of We Auto-Tuned Retrieval Weights with a Bandit: Performance Held Steady, But Something Else Was Leaking](/assets/images/bandit-hybrid-retrieval-calibration-hero.png)
+![Illustration of the core idea of We Auto-Tuned Retrieval Weights with a Bandit: Performance Held Steady, But Something Else Was Leaking](/assets/images/bandit-hybrid-retrieval-calibration-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## The Two Numbers We Kept Re-Tuning by Hand
@@ -44,7 +44,7 @@ This is where the study particularly earns trust. The original research question
 
 Drift is injected on a predetermined schedule across eight rounds: two skill renames in round 2, one deprecation plus two renames in round 4, and one more deprecation in round 6, accumulating to four renames and two deprecations in total. Of the 63 benchmark cases, only the 45 positive queries that have a correct skill enter the online reward loop; the 10 native queries that should surface no skill at all and the 8 adversarially confusing negative queries are entirely excluded from the online loop and used only once, at the very end, for evaluation. Why this distinction matters becomes clear in the results below.
 
-![Per-Round Top-1 Hits: Bandit vs Static Default vs Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-rounds-hits.png)
+![Per-Round Top-1 Hits: Bandit vs Static Default vs Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-rounds-hits.webp)
 *A chart comparing top-1 hit counts for the bandit, the static default, and the per-round oracle across eight rounds. Measured on a local bench harness.*
 
 ## 352 Observations, Exactly 192 to 192
@@ -55,7 +55,7 @@ More striking is that this figure of 16 wasn't a bandit-specific flaw. The stati
 
 Round by round, the bandit does learn something. In round 1 it trails the static default 24 to 22 during exploration, ties in round 2, and pulls ahead once each in rounds 3, 4, and 6. But that learning never converges. Its preferred-arm share for (0.5, 0.7) climbs monotonically from 51.1% to 88.6% through round 4, then suddenly collapses to (0.6, 0.3) in round 5, when no new drift was injected at all, and it gets overtaken 23 to 24. It settles on (0.5, 0.3) in round 6 and returns to (0.5, 0.7) in rounds 7 and 8, but never recovers its round-4 peak. The authors attribute this oscillation not to drift but to exploration noise from LinUCB's α held fixed at 1.0 with no decay, in a setting where each round has only 43 to 45 queries and a single hit swings the result by about 2.2 percentage points.
 
-![Cumulative Regret of LinUCB Bandit Against Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-regret-trajectory.png)
+![Cumulative Regret of LinUCB Bandit Against Per-Round Oracle](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-regret-trajectory.webp)
 *Shows cumulative regret against the oracle building up to 16 hits (7.7% relative) over eight rounds, driven by early exploration and mid-run oscillation. Measured on a local bench harness.*
 
 ## What Was Leaking Beneath the Surface: A Safety Cost the Reward Never Saw
@@ -66,7 +66,7 @@ But looking at the other two metrics together flips the picture. That same arm d
 
 Pinning down the cause more precisely, this hallucination cost isn't a problem of the bandit's learning process itself; it traces directly to the τ value. Even the best fixed arm in hindsight uses τ=0.50, so it produces the exact same 0.4 hallucination rate as the bandit's preferred arm. The only configuration in the table using τ=0.60, the current static default, is also the only one with a hallucination rate of zero. In other words, any procedure that maximizes a reward function that only looks at positive queries, whether that's a bandit, an offline grid search, or even a human reading only the positive metrics, converges to a low τ and inherits the same cost. A human running the full offline benchmark can see the hallucination-rate column and reject that trade; an online loop that only sees the positive metrics never has that option to begin with.
 
-![Final Three-Way Comparison: Positive Metrics vs Hallucination Rate](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-threeway-comparison.png)
+![Final Three-Way Comparison: Positive Metrics vs Hallucination Rate](/assets/images/posts/research/bandit-hybrid-retrieval-calibration/fig-threeway-comparison.webp)
 *The bandit's final preferred arm (τ=0.50, w=0.70) beats the static default on the rewarded metrics but drives native-query hallucination rate from 0.0 to 0.4. Measured on a local bench harness.*
 
 ## What This Experiment Means for the Company and the Field

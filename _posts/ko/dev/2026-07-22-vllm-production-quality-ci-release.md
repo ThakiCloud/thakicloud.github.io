@@ -22,7 +22,7 @@ audiobook: /assets/audio/posts/vllm-production-quality-ci-release/audiobook-ko.m
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![수천 개의 흐름이 하나의 좁은 게이트를 통과해 안정된 궤도로 정렬되는 모습을 형상화한 추상 이미지]({{ '/assets/images/vllm-production-quality-ci-release-hero.png' | relative_url }})
+![수천 개의 흐름이 하나의 좁은 게이트를 통과해 안정된 궤도로 정렬되는 모습을 형상화한 추상 이미지]({{ '/assets/images/vllm-production-quality-ci-release-hero.webp' | relative_url }})
 
 ## 왜 읽어야 하나
 
@@ -457,13 +457,13 @@ vLLM의 접근이 모든 조직에 그대로 이식되지는 않습니다. 몇 �
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![vllm-production-quality-ci-release 슬라이드 1]({{ '/assets/images/vllm-production-quality-ci-release-slide-01.png' | relative_url }})
+![vllm-production-quality-ci-release 슬라이드 1]({{ '/assets/images/vllm-production-quality-ci-release-slide-01.webp' | relative_url }})
 
-![vllm-production-quality-ci-release 슬라이드 2]({{ '/assets/images/vllm-production-quality-ci-release-slide-02.png' | relative_url }})
+![vllm-production-quality-ci-release 슬라이드 2]({{ '/assets/images/vllm-production-quality-ci-release-slide-02.webp' | relative_url }})
 
-![vllm-production-quality-ci-release 슬라이드 3]({{ '/assets/images/vllm-production-quality-ci-release-slide-03.png' | relative_url }})
+![vllm-production-quality-ci-release 슬라이드 3]({{ '/assets/images/vllm-production-quality-ci-release-slide-03.webp' | relative_url }})
 
-![vllm-production-quality-ci-release 슬라이드 4]({{ '/assets/images/vllm-production-quality-ci-release-slide-04.png' | relative_url }})
+![vllm-production-quality-ci-release 슬라이드 4]({{ '/assets/images/vllm-production-quality-ci-release-slide-04.webp' | relative_url }})
 
 ## 출처
 

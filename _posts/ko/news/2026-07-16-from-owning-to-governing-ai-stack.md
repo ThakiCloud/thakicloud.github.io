@@ -99,11 +99,11 @@ SKT가 15GW를 향해 달리고 정부가 512장의 GPU를 나누는 소유의 �
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![from-owning-to-governing-ai-stack 슬라이드 1](/assets/images/from-owning-to-governing-ai-stack-slide-01.png)
+![from-owning-to-governing-ai-stack 슬라이드 1](/assets/images/from-owning-to-governing-ai-stack-slide-01.webp)
 
-![from-owning-to-governing-ai-stack 슬라이드 2](/assets/images/from-owning-to-governing-ai-stack-slide-02.png)
+![from-owning-to-governing-ai-stack 슬라이드 2](/assets/images/from-owning-to-governing-ai-stack-slide-02.webp)
 
-![from-owning-to-governing-ai-stack 슬라이드 3](/assets/images/from-owning-to-governing-ai-stack-slide-03.png)
+![from-owning-to-governing-ai-stack 슬라이드 3](/assets/images/from-owning-to-governing-ai-stack-slide-03.webp)
 
-![from-owning-to-governing-ai-stack 슬라이드 4](/assets/images/from-owning-to-governing-ai-stack-slide-04.png)
+![from-owning-to-governing-ai-stack 슬라이드 4](/assets/images/from-owning-to-governing-ai-stack-slide-04.webp)
 

@@ -12,7 +12,7 @@ tags:
   - 감사추적
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/government-ai-goes-agent/strip.png
+image: /assets/images/posts/만화/government-ai-goes-agent/strip.webp
 video: /assets/videos/posts/만화/government-ai-goes-agent/comic.mp4
 audiobook: /assets/audio/posts/government-ai-goes-agent/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 범정부 AI 공통기반은 부처마다 따로 만들던 AI를 한 번 지어 같이 쓰자는 정부 공용 토대입니다. 이번 소식의 핵심은 그 토대가 챗봇 단계를 지나 에이전트 단계로 넘어간다는 것이고요. 챗봇은 물어보면 답만 했지만, 에이전트는 서류를 열고 조회하고 다음 절차를 실제로 밟습니다. 여기에 최신 민간 모델까지 얹기로 했다는 대목이 흥미롭습니다. 성능은 확실히 올라가는데, 그 성능의 소유권과 갱신 주기는 밖에 있습니다.
 
-![챗봇은 말만 했지, 에이전트는 눌러](/assets/images/posts/만화/government-ai-goes-agent/strip.png)
+![챗봇은 말만 했지, 에이전트는 눌러](/assets/images/posts/만화/government-ai-goes-agent/strip.webp)
 
 > 원 뉴스: [범정부 AI 공통기반, 챗봇 넘어 에이전트로…최신 민간 모델 품는다](https://n.news.naver.com/mnews/article/092/0002433460) · bespin
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/government-ai-goes-agent/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/government-ai-goes-agent/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/government-ai-goes-agent/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/government-ai-goes-agent/comic.ko.vtt" default>
 </video>

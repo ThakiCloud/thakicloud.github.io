@@ -20,7 +20,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/dev/vllm-production-quality-ci-release/"
 ---
 
-![صورة تجريدية لآلاف التدفقات تتقارب عبر بوابة ضيقة واحدة وتصطف في مسارات مدارية مستقرة]({{ '/assets/images/vllm-production-quality-ci-release-hero.png' | relative_url }})
+![صورة تجريدية لآلاف التدفقات تتقارب عبر بوابة ضيقة واحدة وتصطف في مسارات مدارية مستقرة]({{ '/assets/images/vllm-production-quality-ci-release-hero.webp' | relative_url }})
 
 ## لماذا تقرأ هذا
 

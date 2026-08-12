@@ -26,7 +26,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/transformer-attenti
 published: true
 ---
 
-![여러 겹의 키·값 평면이 하나의 잠재 벡터로 수렴하는 추상 이미지](/assets/images/transformer-attention-kv-cache-math-hero.png)
+![여러 겹의 키·값 평면이 하나의 잠재 벡터로 수렴하는 추상 이미지](/assets/images/transformer-attention-kv-cache-math-hero.webp)
 *여러 헤드가 각자 들고 있던 키·값 캐시가 하나의 공유 잠재 벡터로 압축되는 과정을 표현했습니다.*
 
 ## 왜 읽어야 하나
@@ -63,14 +63,14 @@ flowchart TB
 
 *논문 표 1과 표 2를 흐름으로 옮긴 것입니다. 세 갈래 모두 마지막에는 레이어 수를 곱한 값이 토큰당 캐시가 됩니다.*
 
-![MHA에서 GQA를 거쳐 MLA로 이어지는 어텐션 아키텍처 진화](/assets/images/transformer-attention-kv-cache-math-slide-04.png)
+![MHA에서 GQA를 거쳐 MLA로 이어지는 어텐션 아키텍처 진화](/assets/images/transformer-attention-kv-cache-math-slide-04.webp)
 *세 방식의 차이를 한 장으로 정리하면 이렇습니다. 헤드마다 키와 값을 들던 것을 공유로, 다시 토큰당 잠재 벡터 하나로 줄여 온 흐름입니다.*
 
 ## 논문 공식을 코드로 옮기기
 
 논문의 표 1은 멀티헤드 어텐션이 메모리에 남기는 텐서를, 표 2는 잠재 어텐션의 텐서를 정리합니다. 캐시에 해당하는 항만 뽑으면 이렇게 됩니다. MHA와 GQA는 토큰당 레이어당 `N_KV헤드 × (d_QK + d_head)` 개의 float을, MLA는 `d_L` 개의 float을 남깁니다. 논문은 GQA에 대해 "캐시 항과 W^K, W^V의 `N_heads`를 KV 헤드 수로 바꾸면 된다"고 명시합니다.
 
-![토큰당 KV 캐시를 결정하는 공식: 레이어 수 곱하기 KV 헤드 수 곱하기 헤드 차원](/assets/images/transformer-attention-kv-cache-math-slide-03.png)
+![토큰당 KV 캐시를 결정하는 공식: 레이어 수 곱하기 KV 헤드 수 곱하기 헤드 차원](/assets/images/transformer-attention-kv-cache-math-slide-03.webp)
 *식에 등장하는 항은 세 개뿐이고, 파라미터 수는 어디에도 들어가지 않습니다.*
 
 여기에 논문 표 3이 제시하는 세 모델의 스펙을 넣으면 바로 숫자가 나옵니다. 계산은 다음과 같이 짧은 스크립트로 옮겼습니다.
@@ -104,10 +104,10 @@ url = f"https://huggingface.co/{repo}/raw/main/config.json"
 | Llama 3 70B | GQA | 80 | 8 | 320 KiB | 40 GiB |
 | DeepSeek V2 | MLA | 60 | 잠재 512 | 60 KiB | 7.5 GiB |
 
-![세 모델의 토큰당 KV 캐시 비교 막대 그래프](/assets/images/transformer-attention-kv-cache-math-results.png)
+![세 모델의 토큰당 KV 캐시 비교 막대 그래프](/assets/images/transformer-attention-kv-cache-math-results.webp)
 *논문 표 1·표 2의 공식에 표 3의 모델 스펙을 넣어 계산한 값입니다. 128k 컨텍스트는 모델 간 비교를 위해 통일한 가정값이며, 각 모델이 실제로 지원하는 최대 컨텍스트와는 다릅니다.*
 
-![파라미터가 더 작은 Gemma 3 27B가 Llama 3 70B보다 토큰당 캐시를 1.55배 더 쓴다는 비교](/assets/images/transformer-attention-kv-cache-math-slide-02.png)
+![파라미터가 더 작은 Gemma 3 27B가 Llama 3 70B보다 토큰당 캐시를 1.55배 더 쓴다는 비교](/assets/images/transformer-attention-kv-cache-math-slide-02.webp)
 *모델 크기 순서와 캐시 크기 순서가 뒤집히는 지점입니다.*
 
 가장 눈에 띄는 결과는 Gemma 3 27B가 Llama 3 70B보다 토큰당 캐시를 1.55배 더 쓴다는 사실입니다. 파라미터로는 Llama 쪽이 2.6배 가까이 큰데도 그렇습니다. 이유는 공식에 그대로 드러납니다. 캐시를 정하는 것은 `레이어 수 × KV 헤드 수`이고, Gemma 3 27B는 62 × 16 = 992인 반면 Llama 3 70B는 80 × 8 = 640입니다. Llama 쪽이 레이어는 더 많지만 KV 헤드를 8개로 더 공격적으로 줄였고, 그 차이가 파라미터 수의 차이를 뒤집었습니다.
@@ -134,7 +134,7 @@ H200 4장(HBM 합계 약 564GB) 노드를 예로 들어 보겠습니다. Llama 3
 
 논문 자체의 한계도 분명합니다. 13쪽짜리 워크숍 발표 자료이고 저자도 서두에서 "간단한 소개"라고 밝힙니다. 새로운 기법을 제안하지 않으며 실험도 없습니다. 표 3의 모델 세 개는 예시일 뿐 최신 모델을 망라하지 않고, Llama 3와 Gemma 3, DeepSeek V2 모두 2026년 8월 기준으로는 이미 여러 세대 뒤입니다. 다만 여기서 유용한 것은 특정 모델의 숫자가 아니라 공식이며, 공식은 새 모델의 `config.json`에도 그대로 적용됩니다.
 
-![RoPE 위치 인코딩과 잠재 어텐션의 충돌, 그리고 비잠재 절충안](/assets/images/transformer-attention-kv-cache-math-slide-06.png)
+![RoPE 위치 인코딩과 잠재 어텐션의 충돌, 그리고 비잠재 절충안](/assets/images/transformer-attention-kv-cache-math-slide-06.webp)
 *위치 인코딩이 개입하는 순간 잠재 어텐션의 수학적 등가성이 깨지고, 실제 구현은 절충안을 택합니다.*
 
 잠재 어텐션이 언제나 우월하다는 결론도 성급합니다. 논문은 중요한 단서를 답니다. 위치 인코딩이 없으면 잠재 어텐션은 저랭크 분해를 통해 GQA나 MHA와 정확히 등가로 표현되지만, RoPE 같은 위치 인코딩을 적용하는 순간 그 등가성이 깨집니다. RoPE는 키를 만든 뒤에 적용되는데 잠재 형식에서는 그 순서 때문에 행렬 병합이 불가능해지고, 오히려 매 평가마다 위치 인코딩을 다시 계산하는 오버헤드가 생깁니다. 그래서 실제 구현은 키와 질의에 위치 인코딩을 적용할 "비잠재" 부분을 따로 이어붙이는 절충을 택합니다. 계산 이득은 지키지만 수학적 등가성은 포기하는 셈입니다. 캐시 크기만 보고 아키텍처를 고를 수 없는 이유입니다.
@@ -145,7 +145,7 @@ H200 4장(HBM 합계 약 564GB) 노드를 예로 들어 보겠습니다. Llama 3
 
 토큰당 KV 캐시는 `레이어 수 × KV 헤드 수 × (d_QK + d_head)`로 결정되고, 파라미터 수는 이 식에 등장하지 않습니다. 그래서 Gemma 3 27B가 Llama 3 70B보다 토큰당 1.55배 더 쓰고, 잠재 어텐션을 쓰는 DeepSeek V2는 8.3배 적게 씁니다. 서두에서 말씀드린 "캐시는 모델 크기를 따라가지 않는다"는 결론이 세 모델 모두에서 그대로 확인됐습니다.
 
-![서빙 모델 선정 전 5분 계산법 3단계](/assets/images/transformer-attention-kv-cache-math-slide-08.png)
+![서빙 모델 선정 전 5분 계산법 3단계](/assets/images/transformer-attention-kv-cache-math-slide-08.webp)
 *모델을 고르기 전에 거치면 좋은 세 단계입니다.*
 
 다음에 서빙할 모델을 고르실 때 할 일은 간단합니다. `config.json`을 열어 `num_hidden_layers`와 `num_key_value_heads`, `head_dim`을 곱하고 2를 곱한 뒤 dtype 바이트 수를 곱하십시오. 그 값이 토큰당 캐시이고, 목표 컨텍스트 길이와 동시 세션 수를 곱하면 필요한 HBM이 나옵니다. GPU 견적을 뽑기 전에 5분이면 끝나는 계산이며, 이 논문은 그 5분이 왜 타당한지를 수식으로 설명해 줍니다.

@@ -413,13 +413,13 @@ macOS는 `brew install kimi-code`, 윈도우는 파워셸 스크립트도 제공
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![kimi-code-cli-acp-open-source-agent 슬라이드 1](/assets/images/kimi-code-cli-acp-open-source-agent-slide-01.png)
+![kimi-code-cli-acp-open-source-agent 슬라이드 1](/assets/images/kimi-code-cli-acp-open-source-agent-slide-01.webp)
 
-![kimi-code-cli-acp-open-source-agent 슬라이드 2](/assets/images/kimi-code-cli-acp-open-source-agent-slide-02.png)
+![kimi-code-cli-acp-open-source-agent 슬라이드 2](/assets/images/kimi-code-cli-acp-open-source-agent-slide-02.webp)
 
-![kimi-code-cli-acp-open-source-agent 슬라이드 3](/assets/images/kimi-code-cli-acp-open-source-agent-slide-03.png)
+![kimi-code-cli-acp-open-source-agent 슬라이드 3](/assets/images/kimi-code-cli-acp-open-source-agent-slide-03.webp)
 
-![kimi-code-cli-acp-open-source-agent 슬라이드 4](/assets/images/kimi-code-cli-acp-open-source-agent-slide-04.png)
+![kimi-code-cli-acp-open-source-agent 슬라이드 4](/assets/images/kimi-code-cli-acp-open-source-agent-slide-04.webp)
 
 ## 출처
 

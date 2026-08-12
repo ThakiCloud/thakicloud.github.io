@@ -35,7 +35,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ![DiffusionGemma 26B-A4B 개념도]({{ '/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp' | relative_url }})
 
-![DiffusionGemma 26B-A4B: 이산 텍스트 확산으로 15~20 토큰을 한 번에 생성하는 Google의 실험 개념을 형상화한 이미지](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.png)
+![DiffusionGemma 26B-A4B: 이산 텍스트 확산으로 15~20 토큰을 한 번에 생성하는 Google의 실험 개념을 형상화한 이미지](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇이 새로운가
@@ -47,7 +47,7 @@ Google DeepMind가 `google/diffusiongemma-26B-A4B-it`를 공개했습니다. 이
 라이선스는 Apache-2.0입니다. 상업적 사용과 파생 모델 배포가 가능한 표준 오픈소스 라이선스입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 아키텍처
@@ -118,7 +118,7 @@ thinking 모드를 설정 가능하며 system prompt와 function calling을 네�
 확산 LLM은 아직 생태계가 autoregressive 모델만큼 성숙하지 않습니다. 서빙 프레임워크의 확산 모델 지원 현황, 양자화 효과, 실제 배포 안정성을 직접 검증하는 단계가 필요합니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

@@ -36,11 +36,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![doctor-breakfast-stack-diet 슬라이드 1](/assets/images/doctor-breakfast-stack-diet-slide-01.png)
+![doctor-breakfast-stack-diet 슬라이드 1](/assets/images/doctor-breakfast-stack-diet-slide-01.webp)
 
-![doctor-breakfast-stack-diet 슬라이드 2](/assets/images/doctor-breakfast-stack-diet-slide-02.png)
+![doctor-breakfast-stack-diet 슬라이드 2](/assets/images/doctor-breakfast-stack-diet-slide-02.webp)
 
-![doctor-breakfast-stack-diet 슬라이드 3](/assets/images/doctor-breakfast-stack-diet-slide-03.png)
+![doctor-breakfast-stack-diet 슬라이드 3](/assets/images/doctor-breakfast-stack-diet-slide-03.webp)
 
-![doctor-breakfast-stack-diet 슬라이드 4](/assets/images/doctor-breakfast-stack-diet-slide-04.png)
+![doctor-breakfast-stack-diet 슬라이드 4](/assets/images/doctor-breakfast-stack-diet-slide-04.webp)
 

@@ -35,12 +35,12 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/effort-routing-mult
 
 논문의 핵심 도구는 하나의 회계 항등식입니다. 고정 정책과 라우팅 정책의 비용 차이 Δ를, 저자들은 두 항으로 정확히 분해합니다. 하나는 쉬운 서브태스크를 낮은 티어로 내려서 회수한 절감분이고, 다른 하나는 라우팅이 너무 낮게 매긴 서브태스크가 실패해 재시도를 태워야 하는 비용입니다.
 
-![티어별 비용·품질 곡선의 개념도](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-cost-quality-curves.png)
+![티어별 비용·품질 곡선의 개념도](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-cost-quality-curves.webp)
 *티어가 오를수록 기대 비용 C(e)는 늘고, 성공 확률 Q(d,e)는 충분 티어 e*(d)에 도달한 뒤 포화됩니다. 실측 데이터가 아니라 논문이 세운 분석 모델의 개념도입니다.*
 
 이 분해에서 두 가지 조건이 따라 나옵니다. 첫째는 필요조건인데, 고정 티어가 실제로 과잉 제공하는 서브태스크 집합(논문 표기로 O)이 하나도 없다면 라우팅은 절대 이길 수 없습니다. 아무리 좋은 분류기를 써도 내려 매길 대상 자체가 없기 때문입니다. 둘째는 충분조건으로, 분류기가 잘못 낮춰 매기는 서브태스크의 개수가 올바르게 낮춰 매겨 회수한 절감분보다 작아야 한다는 부등식입니다. 이 부등식을 두 개의 실측 가능한 양, 즉 잘못 낮춘 서브태스크 개수와 올바르게 낮춘 서브태스크들의 절감 합으로 바꿔 놓은 것이 이 명제의 실질적인 기여입니다.
 
-![절감 분해: 다운티어링 회수분과 정정 재실행 비용](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-savings-decomposition.png)
+![절감 분해: 다운티어링 회수분과 정정 재실행 비용](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-savings-decomposition.webp)
 *Δ는 올바른 다운티어링에서 회수한 절감분에서 미달 티어로 인한 재실행 비용을 뺀 값으로 정확히 쪼개집니다. 이 또한 측정값이 아니라 분석 모델의 그림입니다.*
 
 저자들은 이것이 지배성 정리가 아니라고 못 박습니다. 필요조건 자체가 라우팅이 질 수 있는 경우를 명시적으로 남겨 둡니다. 절감 곡선이 볼록하면 다운티어링 회수분이 더 커진다는 부가 논증도 있지만, 이 역시 벤더의 티어 가격 정책에 달린 경험적 성질이지 증명된 사실은 아니라고 선을 긋습니다.
@@ -51,7 +51,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/effort-routing-mult
 
 측정 프로토콜은 로그 트리아지, 스펙 조정, 쿼리 리페어라는 세 개의 작은 의존성 워크플로에 12개 서브태스크를 배치합니다. 독립된 문제 12개를 그냥 늘어놓지 않고 실제 데이터 의존성이 있는 워크플로로 묶은 이유는, 이 논문의 주장이 애초에 '분해된 워크플로 안에서의 서브태스크 단위 라우팅'이기 때문입니다. 흩어진 단일 문제 벤치마크로는 이 setting을 검증할 수 없습니다.
 
-![세 워크플로에 걸친 12개 서브태스크 구성](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-benchmark-structure.png)
+![세 워크플로에 걸친 12개 서브태스크 구성](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-benchmark-structure.webp)
 *로그 트리아지, 스펙 조정, 쿼리 리페어 세 워크플로가 자명한 것부터 어려운 것까지 서브태스크 12개에 걸쳐 있습니다. 벤치마크 설계도이며 실측 결과가 아닙니다.*
 
 비교할 정책 팔은 여섯 개입니다. 항상 high로 고정하는 순진한 기준선, 사후에 봤을 때 가장 저렴한 단일 고정 티어, low로 시작해 실패하면 한 번만 재시도하는 분류기 없는 경쟁자, 실제 충분 티어를 그대로 매기는 오라클, 분류기가 실현한 티어 분포와 맞춘 무작위 라우팅, 그리고 마지막이 이 논문이 제안하는 분류기 라우팅입니다. 저자들이 무작위 라우팅을 넣은 이유가 특히 눈에 띕니다. 난이도와 상관된 특징에서 나온 절감인지, 그저 평균 티어가 낮아져서 생긴 절감인지를 갈라내지 못하면 분류기는 자기 몫을 증명한 것이 아니라는 뜻입니다.

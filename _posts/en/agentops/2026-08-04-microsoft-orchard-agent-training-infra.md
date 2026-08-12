@@ -20,7 +20,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/microsoft-orchard-agent-training-infra/"
 ---
 
-![Abstract cover image of layered lattice structures with light branching through them](/assets/images/microsoft-orchard-agent-training-infra-hero.png)
+![Abstract cover image of layered lattice structures with light branching through them](/assets/images/microsoft-orchard-agent-training-infra-hero.webp)
 
 The first wall a team hits when it decides to train agents is not the model. It is spinning up hundreds of isolated environments at once where an agent can actually run commands, edit files, and fail. [Orchard](https://github.com/microsoft/Orchard), which Microsoft released on August 3, 2026, is the framework that carves out exactly that environment layer and ships it under the MIT license.
 

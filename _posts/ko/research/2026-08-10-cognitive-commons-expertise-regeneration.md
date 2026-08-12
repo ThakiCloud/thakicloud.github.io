@@ -20,7 +20,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/cognitive-commons-expertise-regeneration/"
 ---
 
-![공유 저수지의 물이 빠져나가는데 다시 채우는 샘이 말라가는 개념도](/assets/images/cognitive-commons-expertise-regeneration-hero.png)
+![공유 저수지의 물이 빠져나가는데 다시 채우는 샘이 말라가는 개념도](/assets/images/cognitive-commons-expertise-regeneration-hero.webp)
 *각자의 합리적 선택이 모여 공유 저수지를 마르게 합니다.*
 
 ## 왜 읽어야 하나
@@ -122,13 +122,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![cognitive-commons-expertise-regeneration 슬라이드 1](/assets/images/cognitive-commons-expertise-regeneration-slide-01.png)
+![cognitive-commons-expertise-regeneration 슬라이드 1](/assets/images/cognitive-commons-expertise-regeneration-slide-01.webp)
 
-![cognitive-commons-expertise-regeneration 슬라이드 2](/assets/images/cognitive-commons-expertise-regeneration-slide-02.png)
+![cognitive-commons-expertise-regeneration 슬라이드 2](/assets/images/cognitive-commons-expertise-regeneration-slide-02.webp)
 
-![cognitive-commons-expertise-regeneration 슬라이드 3](/assets/images/cognitive-commons-expertise-regeneration-slide-03.png)
+![cognitive-commons-expertise-regeneration 슬라이드 3](/assets/images/cognitive-commons-expertise-regeneration-slide-03.webp)
 
-![cognitive-commons-expertise-regeneration 슬라이드 4](/assets/images/cognitive-commons-expertise-regeneration-slide-04.png)
+![cognitive-commons-expertise-regeneration 슬라이드 4](/assets/images/cognitive-commons-expertise-regeneration-slide-04.webp)
 
 ## 출처
 

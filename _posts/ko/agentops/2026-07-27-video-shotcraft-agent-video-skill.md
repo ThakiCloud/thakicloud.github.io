@@ -25,7 +25,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 에이전트에게 제품 홍보 영상을 맡길 수 있느냐는 질문에, 이번에는 직접 렌더해 본 수치로 답을 드리겠습니다. 결론부터 말씀드리면 1920x1080 해상도에 36.17초 길이인 완성형 홍보 영상이 12코어 맥북에서 22.76초 만에 나왔습니다. 실시간 재생 시간보다 빠릅니다. 그런데 이 글에서 정말 눈여겨볼 대목은 렌더 속도가 아니라, 그 결과를 만들어 내는 스킬이 어떤 구조로 포장되어 있느냐입니다.
 
-![video-shotcraft 실측 리포트 표지 슬라이드](/assets/images/video-shotcraft-agent-video-skill-slide-01.png)
+![video-shotcraft 실측 리포트 표지 슬라이드](/assets/images/video-shotcraft-agent-video-skill-slide-01.webp)
 
 ## 왜 읽어야 하나
 
@@ -49,7 +49,7 @@ video-shotcraft의 뼈대는 촬영 레시피 카드입니다. 카드 한 장이
 
 여기서 구조가 흥미로워집니다. 저장소 전체는 92MB이고, 참조 문서만 111개 파일에 454,668바이트, 데모 구현은 905,392바이트입니다. 문서와 구현을 합치면 1.3MB가 넘습니다. 그런데 에이전트가 처음 읽는 진입점인 SKILL.md는 203줄, 15,238바이트에 불과합니다. 전체 지식 묶음의 약 1.1퍼센트만 상시 노출되고, 나머지는 필요할 때 경로로 찾아 들어가는 구조입니다.
 
-![전체 1.3MB 지식 묶음 중 진입점 SKILL.md 15KB만 상시 노출되는 점진적 공개 구조](/assets/images/video-shotcraft-agent-video-skill-slide-06.png)
+![전체 1.3MB 지식 묶음 중 진입점 SKILL.md 15KB만 상시 노출되는 점진적 공개 구조](/assets/images/video-shotcraft-agent-video-skill-slide-06.webp)
 
 상시 노출되는 진입점과 전체 지식 묶음의 비율입니다.
 
@@ -150,7 +150,7 @@ npx remotion render src/index.ts AiflPromo out/promo.mp4
 # real  0m22.758s
 ```
 
-![video-shotcraft 렌더 단계별 실측 시간과 처리량 그래프](/assets/images/video-shotcraft-agent-video-skill-results.png)
+![video-shotcraft 렌더 단계별 실측 시간과 처리량 그래프](/assets/images/video-shotcraft-agent-video-skill-results.webp)
 
 측정한 파이프라인 단계별 소요 시간과 렌더 처리량입니다. 붉은 점선은 30fps 실시간 기준선입니다.
 
@@ -170,7 +170,7 @@ ai-platform 렌즈에서도 볼 대목이 있습니다. 이 워크로드는 GPU�
 
 ## 한계 및 반론
 
-![도입 전 확인해야 할 세 가지 함정: 헤드리스 제약, 라이선스 경계, 데이터 익명화](/assets/images/video-shotcraft-agent-video-skill-slide-09.png)
+![도입 전 확인해야 할 세 가지 함정: 헤드리스 제약, 라이선스 경계, 데이터 익명화](/assets/images/video-shotcraft-agent-video-skill-slide-09.webp)
 
 도입을 검토하실 때 먼저 확인하셔야 할 세 가지입니다.
 

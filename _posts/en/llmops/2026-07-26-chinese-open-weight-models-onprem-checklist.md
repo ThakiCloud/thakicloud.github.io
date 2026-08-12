@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![Concept image of a neural lattice inside a sealed transparent vault surrounded by inspection rings](/assets/images/chinese-open-weight-models-onprem-checklist-hero.png)
+![Concept image of a neural lattice inside a sealed transparent vault surrounded by inspection rings](/assets/images/chinese-open-weight-models-onprem-checklist-hero.webp)
 *A depiction of the idea that safety is decided by the intake procedure wrapped around the weights rather than by the weights themselves.*
 
 ## Why This Is Worth Reading

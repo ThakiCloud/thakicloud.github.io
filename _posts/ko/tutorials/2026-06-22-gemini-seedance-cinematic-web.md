@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gemini-seedance-cinematic-web/"
 ---
 
-![한 사람이 시네마틱 웹사이트를 만드는 시대: Gemini 3.1 + Seedance 2.0 워크플로를 뜯어봤습니다 개념을 형상화한 이미지](/assets/images/gemini-seedance-cinematic-web-hero.png)
+![한 사람이 시네마틱 웹사이트를 만드는 시대: Gemini 3.1 + Seedance 2.0 워크플로를 뜯어봤습니다 개념을 형상화한 이미지](/assets/images/gemini-seedance-cinematic-web-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
@@ -37,7 +37,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gemini-seedance-ci
 *빅터 오디의 16분 튜토리얼 영상입니다. Gemini 3.1로 구조를 짜고 Seedance 2.0으로 영상을 입히는 전체 과정을 보여줍니다.*
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 보여주는 튜토리얼인가
@@ -99,16 +99,16 @@ ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로�
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![gemini-seedance-cinematic-web 슬라이드 1](/assets/images/gemini-seedance-cinematic-web-slide-01.png)
+![gemini-seedance-cinematic-web 슬라이드 1](/assets/images/gemini-seedance-cinematic-web-slide-01.webp)
 
-![gemini-seedance-cinematic-web 슬라이드 2](/assets/images/gemini-seedance-cinematic-web-slide-02.png)
+![gemini-seedance-cinematic-web 슬라이드 2](/assets/images/gemini-seedance-cinematic-web-slide-02.webp)
 
-![gemini-seedance-cinematic-web 슬라이드 3](/assets/images/gemini-seedance-cinematic-web-slide-03.png)
+![gemini-seedance-cinematic-web 슬라이드 3](/assets/images/gemini-seedance-cinematic-web-slide-03.webp)
 
-![gemini-seedance-cinematic-web 슬라이드 4](/assets/images/gemini-seedance-cinematic-web-slide-04.png)
+![gemini-seedance-cinematic-web 슬라이드 4](/assets/images/gemini-seedance-cinematic-web-slide-04.webp)
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

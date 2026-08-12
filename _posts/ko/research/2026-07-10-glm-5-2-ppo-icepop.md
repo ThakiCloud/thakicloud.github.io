@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/glm-5-2-ppo-icepop/
 
 그런데 Zhipu가 공개한 GLM-5.2는 이 흐름을 정면으로 거스릅니다. 이 모델은 그룹 상대 방식을 버리고 학습된 value model을 다시 쓰는 PPO로 돌아갔고, 대신 RL의 고질적 불안정 요인인 학습-추론 분포 불일치를 IcePop이라는 기법으로 잡았습니다. 흥미로운 점은 이 선택이 단순한 회귀가 아니라, "GRPO가 만능"이라는 최근의 통념을 실측으로 반박하는 성격을 띤다는 것입니다.
 
-![GRPO에서 PPO로 되돌아가는 강화학습 경로를 형상화한 추상 이미지]({{ '/assets/images/glm-5-2-ppo-icepop-hero.png' | relative_url }})
+![GRPO에서 PPO로 되돌아가는 강화학습 경로를 형상화한 추상 이미지]({{ '/assets/images/glm-5-2-ppo-icepop-hero.webp' | relative_url }})
 *critic을 버렸다가 다시 불러오는 RL 포스트트레이닝의 방향 전환을 형상화했습니다.*
 
 ## 개요
@@ -32,7 +32,7 @@ GLM-5.2는 100만 토큰 컨텍스트 윈도우를 갖고 장기 호흡의 코�
 
 이 주제가 ThakiCloud 관점에서 중요한 이유가 있습니다. 우리가 운용하는 LLM 훈련 파이프라인은 SFT·CPT·DPO·GRPO·GKD 같은 여러 포스트트레이닝 방법을 지원합니다. RL 방법론의 선택은 단순한 알고리즘 취향이 아니라, GPU 예산·학습 안정성·재현성에 직접 영향을 주는 인프라 결정입니다. GLM-5.2의 사례는 "무엇을 쓸 것인가"보다 "왜 그것을 쓰는가"를 다시 묻게 만듭니다.
 
-![전통적 PPO에서 GRPO를 거쳐 GLM-5.2의 PPO 회귀로 이어지는 RL 포스트트레이닝의 구조적 흐름]({{ '/assets/images/glm-5-2-ppo-icepop-slide-02.png' | relative_url }})
+![전통적 PPO에서 GRPO를 거쳐 GLM-5.2의 PPO 회귀로 이어지는 RL 포스트트레이닝의 구조적 흐름]({{ '/assets/images/glm-5-2-ppo-icepop-slide-02.webp' | relative_url }})
 *전통적 PPO에서 GRPO로, 다시 GLM-5.2의 PPO 회귀로 이어지는 RL 포스트트레이닝의 구조적 흐름입니다. 알고리즘은 한 방향으로만 진화하지 않습니다.*
 
 ## GRPO가 부딪힌 벽: critic을 버린 대가
@@ -41,19 +41,19 @@ GLM-5.2는 100만 토큰 컨텍스트 윈도우를 갖고 장기 호흡의 코�
 
 GRPO는 이 critic을 아예 없앱니다. 같은 프롬프트에 대해 여러 응답을 샘플링한 뒤, 그 그룹 안에서 보상을 정규화해 상대적 우열만으로 advantage를 만듭니다. critic이 사라지니 메모리가 줄고, value 학습의 불안정성도 함께 사라집니다. 수학적으로도 깔끔해서 빠르게 퍼졌습니다.
 
-![Actor와 Critic 두 모델을 함께 두는 PPO와 Critic을 덜어 낸 GRPO의 구조 비교]({{ '/assets/images/glm-5-2-ppo-icepop-slide-03.png' | relative_url }})
+![Actor와 Critic 두 모델을 함께 두는 PPO와 Critic을 덜어 낸 GRPO의 구조 비교]({{ '/assets/images/glm-5-2-ppo-icepop-slide-03.webp' | relative_url }})
 *GRPO는 정책과 같은 크기의 critic을 덜어 내 메모리와 연산을 절약하지만, 그 대가로 그룹 내부의 상대 우열이라는 저해상도 신호만 남습니다.*
 
 하지만 공짜 점심은 없었습니다. 그룹 상대 방식은 그룹 내부의 분산이 작을 때, 즉 응답들이 서로 비슷하게 좋거나 비슷하게 나쁠 때 advantage 신호가 뭉개집니다. 또한 긴 시퀀스에서 토큰 단위의 세밀한 credit assignment가 어렵습니다. value model이 있었다면 "이 토큰이 최종 보상에 얼마나 기여했는가"를 상태별로 추정할 수 있지만, 그룹 정규화만으로는 그 해상도가 나오지 않습니다. 장기 호흡의 코딩·에이전트 작업처럼 궤적이 길고 보상이 희소한 문제에서 이 한계가 두드러집니다. GLM-5.2가 겨냥한 영역이 바로 그런 문제였습니다.
 
-![짧은 컨텍스트에서는 GRPO가 성공하지만 긴 컨텍스트에서는 그룹 정규화의 해상도가 무너지는 모습]({{ '/assets/images/glm-5-2-ppo-icepop-slide-04.png' | relative_url }})
+![짧은 컨텍스트에서는 GRPO가 성공하지만 긴 컨텍스트에서는 그룹 정규화의 해상도가 무너지는 모습]({{ '/assets/images/glm-5-2-ppo-icepop-slide-04.webp' | relative_url }})
 *짧은 궤적에서는 그룹 정규화가 잘 작동하지만, 궤적이 길어지고 보상이 희소해질수록 토큰 단위 신호의 해상도가 무너집니다.*
 
 ## GLM-5.2의 선택: value model을 되살린 PPO
 
 GLM-5.2 팀은 여기서 학습된 value model을 다시 불러옵니다. 즉 GRPO가 버렸던 critic을 복원해, 토큰 단위의 advantage 추정 해상도를 되찾는 방향입니다. "PPO 하이프는 과장됐다"는 세간의 정서와 반대로, 이들은 오히려 잘 학습된 value model이 장기 궤적에서 더 안정적인 신호를 준다는 쪽에 베팅했습니다.
 
-![critic을 되살려 에이전트 작업의 토큰 단위 신호를 되찾는 GLM-5.2의 설계 결정]({{ '/assets/images/glm-5-2-ppo-icepop-slide-05.png' | relative_url }})
+![critic을 되살려 에이전트 작업의 토큰 단위 신호를 되찾는 GLM-5.2의 설계 결정]({{ '/assets/images/glm-5-2-ppo-icepop-slide-05.webp' | relative_url }})
 *GLM-5.2는 버려졌던 학습된 value model을 다시 불러와, 장기 호흡 에이전트 작업에서 토큰 단위의 고해상도 신호를 되찾는 쪽에 베팅했습니다.*
 
 문제는 critic을 되살리는 순간, 앞서 언급한 학습의 불안정성도 함께 돌아온다는 점입니다. 그리고 여기에 최근 RL 스택 특유의 새로운 골칫거리가 하나 더 겹칩니다. 바로 학습-추론 분포 불일치입니다.
@@ -390,14 +390,14 @@ GLM-5.2 팀은 여기서 학습된 value model을 다시 불러옵니다. 즉 GR
 
 RL은 보통 중요도 샘플링(importance sampling)으로 이 간극을 보정합니다. 추론 시 정책과 학습 시 정책의 확률 비율을 곱해 주는 방식입니다. 그런데 두 분포가 어긋난 토큰에서는 이 비율이 폭발적으로 커지거나 작아집니다. 비율이 튀는 토큰 몇 개가 그래디언트를 지배하면 학습 전체가 흔들리고, 심하면 붕괴합니다. 궤적이 길수록, 즉 토큰이 많을수록 이런 튐이 누적될 확률이 높아집니다. 장기 호흡 작업을 겨냥한 GLM-5.2에게는 특히 치명적인 문제였습니다.
 
-![학습 엔진 Megatron과 추론 엔진 SGLang의 확률 차이로 중요도 비율이 폭발하는 학습-추론 분포 불일치]({{ '/assets/images/glm-5-2-ppo-icepop-slide-07.png' | relative_url }})
+![학습 엔진 Megatron과 추론 엔진 SGLang의 확률 차이로 중요도 비율이 폭발하는 학습-추론 분포 불일치]({{ '/assets/images/glm-5-2-ppo-icepop-slide-07.webp' | relative_url }})
 *같은 가중치라도 학습 엔진(Megatron)과 추론 엔진(SGLang)의 커널·정밀도 차이로 확률이 어긋나, 중요도 비율이 폭발하며 학습을 붕괴시킵니다.*
 
 IcePop은 이 불일치를 정면으로 다룹니다. 추론 분포와 학습 분포가 크게 어긋나는 토큰을 식별해, 그 토큰의 기여를 억제하거나 마스킹하는 방식으로 그래디언트가 소수의 불안정 토큰에 끌려가지 않게 만듭니다. 결과적으로 안정적인 토큰의 신호만 살려 정책 업데이트에 반영합니다. 이렇게 하면 value model을 되살린 PPO의 이점을 취하면서도, 학습-추론 불일치가 일으키는 붕괴를 피할 수 있습니다.
 
 GLM-5.2가 원래 IcePop과 다른 지점은 KL 정규화 항을 제거했다는 것입니다. 많은 RL 레시피는 정책이 참조 정책에서 너무 멀어지지 않도록 KL 페널티를 겁니다. 이 항은 안정성을 높이지만, 동시에 정책이 개선될 수 있는 폭을 억제합니다. GLM-5.2 팀은 IcePop의 분포 불일치 마스킹이 이미 불안정성을 상당 부분 잡아 준다고 보고, KL 항을 떼어 내 정책이 더 공격적으로 개선되도록 허용했습니다. 안정성 장치를 하나 덜어 내는 대신, 그 역할을 IcePop의 토큰 선별에 맡긴 셈입니다.
 
-![불안정 토큰을 식별해 마스킹하고 KL 정규화 항까지 제거하는 IcePop의 세 단계]({{ '/assets/images/glm-5-2-ppo-icepop-slide-08.png' | relative_url }})
+![불안정 토큰을 식별해 마스킹하고 KL 정규화 항까지 제거하는 IcePop의 세 단계]({{ '/assets/images/glm-5-2-ppo-icepop-slide-08.webp' | relative_url }})
 *IcePop은 분포가 크게 어긋나는 토큰을 식별해 그 기여를 억제하고, GLM-5.2는 여기서 KL 정규화 항까지 제거해 정책 개선의 폭을 넓혔습니다.*
 
 ## 인프라: slime, Megatron, SGLang
@@ -410,7 +410,7 @@ GLM-5.2가 원래 IcePop과 다른 지점은 KL 정규화 항을 제거했다는
 
 ThakiCloud의 ai-platform은 K8s 기반의 AI/ML 인프라로, Kueue를 통한 GPU 스케줄링과 다양한 포스트트레이닝 방법(SFT·CPT·DPO·GRPO·GKD)을 지원하는 훈련 파이프라인을 운용합니다. GLM-5.2의 사례는 이 파이프라인의 설계에 직접적인 시사점을 줍니다.
 
-![ThakiCloud ai-platform 위에 slime 런타임과 Paxis Agent-Native Cloud가 쌓이는 계층 구조]({{ '/assets/images/glm-5-2-ppo-icepop-slide-09.png' | relative_url }})
+![ThakiCloud ai-platform 위에 slime 런타임과 Paxis Agent-Native Cloud가 쌓이는 계층 구조]({{ '/assets/images/glm-5-2-ppo-icepop-slide-09.webp' | relative_url }})
 *K8s·Kueue 기반의 ai-platform이 학습-추론 불일치를 방어하고, 그 위에서 모듈형 RL 런타임과 Paxis의 장기 에이전트 워크플로가 동작하는 구조입니다.*
 
 첫째, RL 방법론은 하나로 고정할 대상이 아니라 문제에 맞춰 고르는 선택지입니다. 짧은 궤적의 선호 정렬에는 critic 없는 GRPO가 여전히 경제적이지만, 긴 코딩·에이전트 궤적처럼 토큰 단위 credit assignment가 중요한 문제에서는 value model을 쓰는 PPO가 더 안정적인 신호를 줄 수 있습니다. 우리처럼 여러 방법을 한 플랫폼에서 지원하는 구조라면, 이 선택을 사용자가 문제 특성에 따라 바꿀 수 있게 노출하는 것이 실질적 가치를 만듭니다.

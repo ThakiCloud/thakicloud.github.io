@@ -32,7 +32,7 @@ If you're an engineer who has to build AI features in an environment where data 
 
 The phrase "local-first" often gets mistaken for a story about performance optimization. In practice, though, what forces this choice is usually not speed or cost but a regulation or contract term that data cannot leave the device. That difference in starting point is what makes the whole design different.
 
-![Illustration of the core idea of Local-First AI: How the Constraint That Data Never Leaves the Device Reshapes Design](/assets/images/local-first-ai-software-development-hero.png)
+![Illustration of the core idea of Local-First AI: How the Constraint That Data Never Leaves the Device Reshapes Design](/assets/images/local-first-ai-software-development-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## The Constraint That Data Never Leaves the Device
@@ -142,6 +142,6 @@ This post is adapted for the blog from a section of our internal ebook, Local-Fi
 - [Reduce your app size (Android Developers)](https://developer.android.com/topic/performance/reduce-apk-size)
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/local-first-ai-software-development/ch01.png)
-![Chapter 5 illustration](/assets/images/books/local-first-ai-software-development/ch05.png)
+![Chapter 1 illustration](/assets/images/books/local-first-ai-software-development/ch01.webp)
+![Chapter 5 illustration](/assets/images/books/local-first-ai-software-development/ch05.webp)
 

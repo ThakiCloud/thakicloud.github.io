@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/research/human-llm-research-
 
 خلاصة الورقة البحثية "Measuring the Gap Between Human and LLM Research Ideas" (arXiv 2607.01233) تتعارض مع الحدس السائد. نقطة ضعف أفكار LLM لم تكن ما نسميه عادة "الجودة". الفجوة الحقيقية كانت في الاتساع (range). فكّر LLM ضمن مساحة أضيق بكثير من الباحثين البشريين، وتركّز هذا الضيق بشكل شبه كامل في نمط واحد، وهو فكرة "ربط الأبحاث القائمة ببعضها".
 
-![صورة تجريدية تقابل بين مجموعة نجوم أفكار متناثرة على اتساع كبير ومجموعة نجوم متكتلة في نقطة ضيقة]({{ '/assets/images/human-llm-research-idea-gap-hero.png' | relative_url }})
+![صورة تجريدية تقابل بين مجموعة نجوم أفكار متناثرة على اتساع كبير ومجموعة نجوم متكتلة في نقطة ضيقة]({{ '/assets/images/human-llm-research-idea-gap-hero.webp' | relative_url }})
 *تصوير بصري يقابل بين التوزيع الواسع لأفكار البشر والتكتل الضيق لأفكار LLM حول نمط واحد.*
 
 ## نظرة عامة

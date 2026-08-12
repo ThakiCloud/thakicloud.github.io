@@ -20,7 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 
 코딩 에이전트를 매일 쓰다 보면 한 가지 벽에 반복해서 부딪힙니다. 어제 나눈 결정, 지난주에 정한 컨벤션, 특정 동료의 업무 스타일을 에이전트가 매 세션마다 처음 듣는 것처럼 다시 물어봅니다. 이 문제를 값비싼 벡터 데이터베이스나 별도 메모리 인프라 없이, 그냥 **평범한 폴더 구조와 마크다운 파일 하나로** 풀어낸 저장소가 최근 공개되어 개발자들 사이에서 화제가 되었습니다. `Instructor` 라이브러리를 만든 jxnl(Jason Liu)이 공개한 `personal-monorepo-template`입니다. 에이전트에 기억을 붙이려다 인프라부터 고민하고 있었다면, 폴더 구조만으로 어디까지 갈 수 있고 어디서 한계가 오는지가 여기서 확인할 지점입니다.
 
-![벡터DB 없이 폴더로 기억하는 코딩 에이전트: personal-monorepo-template 분석 개념을 형상화한 이미지](/assets/images/personal-monorepo-template-agent-memory-hero.png)
+![벡터DB 없이 폴더로 기억하는 코딩 에이전트: personal-monorepo-template 분석 개념을 형상화한 이미지](/assets/images/personal-monorepo-template-agent-memory-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
@@ -414,13 +414,13 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![personal-monorepo-template-agent-memory 슬라이드 1]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-01.png' | relative_url }})
+![personal-monorepo-template-agent-memory 슬라이드 1]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-01.webp' | relative_url }})
 
-![personal-monorepo-template-agent-memory 슬라이드 2]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-02.png' | relative_url }})
+![personal-monorepo-template-agent-memory 슬라이드 2]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-02.webp' | relative_url }})
 
-![personal-monorepo-template-agent-memory 슬라이드 3]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-03.png' | relative_url }})
+![personal-monorepo-template-agent-memory 슬라이드 3]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-03.webp' | relative_url }})
 
-![personal-monorepo-template-agent-memory 슬라이드 4]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-04.png' | relative_url }})
+![personal-monorepo-template-agent-memory 슬라이드 4]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-04.webp' | relative_url }})
 
 ## 출처
 

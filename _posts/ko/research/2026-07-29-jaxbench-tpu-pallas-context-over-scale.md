@@ -21,7 +21,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/jaxbench-tpu-pallas-context-over-scale/"
 ---
 
-![시스톨릭 격자를 관통하는 광선을 형상화한 표지 이미지](/assets/images/jaxbench-tpu-pallas-context-over-scale-hero.png)
+![시스톨릭 격자를 관통하는 광선을 형상화한 표지 이미지](/assets/images/jaxbench-tpu-pallas-context-over-scale-hero.webp)
 
 에이전트에게 사내 전용 API나 낯선 DSL을 다루게 해 보신 분이라면 익숙한 장면이 있습니다. 모델이 자신 있게 코드를 써 내려가는데 그 API가 존재하지 않습니다. 컴파일 에러를 돌려줘도 다음 시도에서 비슷한 환각이 반복됩니다. 이럴 때 흔히 내리는 처방은 더 좋은 모델로 갈아타는 것입니다. JAXBench(arXiv 2607.20466)는 그 처방이 대체로 틀렸다는 것을 TPU 커널 생성이라는 극단적인 사례에서 숫자로 보여 줍니다.
 

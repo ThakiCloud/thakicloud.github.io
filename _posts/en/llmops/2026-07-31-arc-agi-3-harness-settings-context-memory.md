@@ -35,7 +35,7 @@ Why GPT-5.6 Sol broke through this benchmark at all was covered in [an earlier p
 
 OpenAI treated the gap as a measurement-environment problem rather than a capability ceiling, investigated, and published [its findings](https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/) in July. The finding: the standard harness discarded the model's internal reasoning after every action, and truncated older actions once the context filled. The model remembered what it had done but had lost most of why it did it before choosing the next move.
 
-![Abstract image of a broken chain contrasted with a continuous one, evoking continuity of memory across steps](/assets/images/arc-agi-3-harness-settings-context-memory-hero.png)
+![Abstract image of a broken chain contrasted with a continuous one, evoking continuity of memory across steps](/assets/images/arc-agi-3-harness-settings-context-memory-hero.webp)
 
 *What you keep and what you drop between steps decides how a multi-step agent performs.*
 

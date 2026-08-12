@@ -37,7 +37,7 @@ The results diverged sharply by metric. Top-1 accuracy collapsed by 42.2 percent
 
 The authors formalize this phenomenon as the concept of "skill half-life." If a metric's half-life is defined as the corpus size at which the metric falls below half of its small-corpus baseline value, Top-1's half-life already falls within the range of corpus sizes currently in production use. Recall@5-type metrics, by contrast, had not yet reached their half-life within this measurement range.
 
-![Skill Half-Life: Retrieval Accuracy vs. Corpus Size]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-growth-curve.png' | relative_url }})
+![Skill Half-Life: Retrieval Accuracy vs. Corpus Size]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-growth-curve.webp' | relative_url }})
 *Results of the subsampling experiment by corpus size, measured on ThakiCloud's production Claude Code harness (63-case suite). While Top-1 accuracy collapses by 42.2 percentage points across a 21.6x corpus growth range, gated Recall@5 remains relatively robust.*
 
 ## Always Re-Search Before Deleting
@@ -50,7 +50,7 @@ Selecting low-usage, redundant skills as candidates based on these two signals a
 
 In the actual corpus, 131 semantic redundancy clusters were found, and both policies, guarded and unguarded, identified the same 160 skills as deprecation candidates. Had the deletion run without the guard, 4 of these would have been mistakenly deleted, since they were low-usage but the only skill in their cluster covering a specific positive or native case. Turning on the safeguard reduces these false deletions from 4 to 0. What's interesting is that because the guard only swaps out which skill within a cluster gets deleted rather than reducing the overall deletion target, the corpus reduction rate stays exactly the same, 7.39% (160/2,164), regardless of whether the guard is on or off.
 
-![False Deprecations: Naive vs. Guarded Policy]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-guard-comparison.png' | relative_url }})
+![False Deprecations: Naive vs. Guarded Policy]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-guard-comparison.webp' | relative_url }})
 *Comparison of two policies that each reduce the corpus by the same 7.39%. Running without the safeguard produces 4 false deletions, but the safeguard reduces false deletions to 0 by substituting the next-lowest-usage redundant skill within the cluster.*
 
 After applying the guard and removing 160 skills, re-scoring on the same 63-case standard suite produced identical results across all five metrics compared to before removal: Recall@5 (0.822), gated Recall@5 (0.667), Top-1 (0.378), hallucination rate (0.0), and negative-avoidance rate (0.375). In other words, 7.39% of the corpus was removed with no measurable regression whatsoever.

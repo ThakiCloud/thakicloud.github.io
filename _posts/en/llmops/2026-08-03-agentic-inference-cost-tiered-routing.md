@@ -19,7 +19,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/agentic-inference-cost-tiered-routing/"
 ---
 
-![Abstract image of many token streams being sorted by a branching gate into one wide low-cost lane and one thin premium lane, with a cost curve dropping sharply](/assets/images/agentic-inference-cost-tiered-routing-hero.png)
+![Abstract image of many token streams being sorted by a branching gate into one wide low-cost lane and one thin premium lane, with a cost curve dropping sharply](/assets/images/agentic-inference-cost-tiered-routing-hero.webp)
 
 *Most traffic goes to the cheap lane, a few to the premium lane. The cost structure of an agentic product is decided at that sorting step.*
 

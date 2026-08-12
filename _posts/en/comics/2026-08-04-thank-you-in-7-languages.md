@@ -7,7 +7,7 @@ tags:
   - comics
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/thank-you-in-7-languages/recap.png
+image: /assets/images/posts/만화/thank-you-in-7-languages/recap.webp
 video: /assets/videos/posts/만화/thank-you-in-7-languages/edu.en.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/thank-you-in-7-languages/"
 ---
@@ -18,7 +18,7 @@ This short video teaches thank you in Korean, English, Japanese, Chinese, French
 
 Every word is spoken twice by a native voice, with English subtitles.
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/thank-you-in-7-languages/recap.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/thank-you-in-7-languages/recap.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.en.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.en.vtt" default>
 </video>

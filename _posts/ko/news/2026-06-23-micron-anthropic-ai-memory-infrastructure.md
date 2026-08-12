@@ -103,13 +103,13 @@ AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 1]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.png' | relative_url }})
+![micron-anthropic-ai-memory-infrastructure 슬라이드 1]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.webp' | relative_url }})
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 2]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.png' | relative_url }})
+![micron-anthropic-ai-memory-infrastructure 슬라이드 2]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.webp' | relative_url }})
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 3]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.png' | relative_url }})
+![micron-anthropic-ai-memory-infrastructure 슬라이드 3]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.webp' | relative_url }})
 
-![micron-anthropic-ai-memory-infrastructure 슬라이드 4]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.png' | relative_url }})
+![micron-anthropic-ai-memory-infrastructure 슬라이드 4]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.webp' | relative_url }})
 
 ## 출처
 

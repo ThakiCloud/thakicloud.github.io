@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 글은 GPU 한 장으로 대형 MoE 모델을 자체 서빙할 수 있을지 저울질하는 인프라 담당자를 위한 것입니다. 결론만 먼저 말하면, ktransformers의 오프로드 트릭은 실재하고, INT4 AMX 커널을 제대로 켜면 671B급 모델이 약 16 tok/s의 준-인터랙티브 속도로 돌아갑니다.
 
-![40만 달러 랙을 24GB 그래픽카드로? ktransformers의 '28배'를 직접 재현해봤습니다 개념을 형상화한 이미지](/assets/images/ktransformers-moe-offload-28x-validation-hero.png)
+![40만 달러 랙을 24GB 그래픽카드로? ktransformers의 '28배'를 직접 재현해봤습니다 개념을 형상화한 이미지](/assets/images/ktransformers-moe-offload-28x-validation-hero.webp)
 *24GB GPU 한 장으로 671B급 MoE를 돌리는 오프로드 구조를 형상화했습니다.*
 
 ## 왜 화제가 되었나
@@ -32,7 +32,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 칭화대 MADSYS 연구실이 공개한 ktransformers(kvcache-ai/ktransformers, Apache 2.0, 별 1.7만 개)의 발상은 한 문장으로 끝납니다. MoE 모델에서 지금 호출되는 전문가만 GPU 근처에 두고, 대부분의 시간 놀고 있는 전문가는 CPU 메모리에 앉혀 두었다가 필요할 때만 불러옵니다. 이 배치 덕에 24GB VRAM에서 DeepSeek-V3와 R1을 139K 컨텍스트로 돌리고, 표준 설정 대비 최대 28배 빠르다는 이야기가 퍼졌습니다. 트릭이 허무할 만큼 단순해서 오히려 청구서가 어디 숨어 있는지 궁금했고, 그래서 RunPod에서 GPU를 여러 번 빌려 직접 숫자를 뽑았습니다.
 
 <!-- nlm-visual -->
-![ktransformers MoE 오프로드 요약 인포그래픽 1](/assets/images/posts/news/ktransformers-moe-offload-28x-validation/nlm-infographic-1.png)
+![ktransformers MoE 오프로드 요약 인포그래픽 1](/assets/images/posts/news/ktransformers-moe-offload-28x-validation/nlm-infographic-1.webp)
 *NotebookLM이 이 글을 종합해 생성한 인포그래픽입니다.*
 
 ## 실험 설계: 작은 모델로 메커니즘을 분리하다
@@ -74,7 +74,7 @@ INT4 커널은 같은 형상에서 BF16보다 3.9배, AVX2보다 4.2배 빨랐�
 도입 판단은 두 질문으로 좁혀집니다. 이미 확보한 대형 AMX 서버와 대용량 RAM이 있는가, 그리고 돌리려는 모델이 GPU VRAM을 실제로 넘치는 대형 MoE(V3, R1 급)인가. 둘 다 맞으면 ktransformers는 값비싼 다중 GPU 노드를 사지 않고도 그 모델을 돌리는 가장 현실적인 경로입니다. 반대로 모델이 GPU에 통째로 들어간다면 고민 없이 full-GPU가 수십 배 빠르고, 수천 tok/s의 고동시성 실시간 서빙이 목표라면 여전히 다중 GPU가 맞습니다. 오프로드의 자리는 GPU에 안 들어가는 대형 모델을 한 장으로 준-인터랙티브하게 돌린다는 좁고 분명한 지점입니다. 그래서 ktransformers의 진짜 가치는 28배도 저렴한 서빙도 아니라, 다중 GPU를 살 수 없는 팀이 이미 가진 서버와 GPU 한 장으로 671B급 MoE를 아예 돌릴 수 있게 된다는 접근성 하나입니다.
 
 <!-- nlm-visual -->
-![ktransformers MoE 오프로드 요약 인포그래픽 2](/assets/images/posts/news/ktransformers-moe-offload-28x-validation/nlm-infographic-2.png)
+![ktransformers MoE 오프로드 요약 인포그래픽 2](/assets/images/posts/news/ktransformers-moe-offload-28x-validation/nlm-infographic-2.webp)
 *NotebookLM이 이 글을 종합해 생성한 인포그래픽입니다.*
 
 ## 재현 정보

@@ -28,7 +28,7 @@ categories:
 
 This piece is for frontend developers and design engineers who build real product surfaces with AI coding tools, and for platform engineers trying to wire coding agents into a team's workflow. The claim that "AI can spit out a convincing landing page mockup" is old news by now. What we want to dig into here goes one level deeper: how far can a model actually get with interactions that used to take days to hand-code, things like a 3D scene that reacts to scroll position or a shader-driven background, and how do you actually put that output into a production pipeline. If you're weighing whether to adopt this, our goal is to draw a clean line between what's genuinely possible today and where a human still has to be in the loop, without the hype.
 
-![An abstract image of light and glass surfaces overlapping to create a sense of depth in a 3D interaction]({{ '/assets/images/fable5-interactive-web-design-hero.png' | relative_url }})
+![An abstract image of light and glass surfaces overlapping to create a sense of depth in a 3D interaction]({{ '/assets/images/fable5-interactive-web-design-hero.webp' | relative_url }})
 
 ## Overview
 

@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ktransformers-moe-off
 
 This post is for infrastructure engineers weighing whether they can self-serve a large MoE model on a single GPU. The short answer: ktransformers' offload trick is real, and with the INT4 AMX kernel properly enabled, a 671B-class model runs at roughly 16 tok/s — quasi-interactive speed.
 
-![Conceptual illustration of running a 671B-class MoE model on a single 24GB GPU via expert offload](/assets/images/ktransformers-moe-offload-28x-validation-hero.png)
+![Conceptual illustration of running a 671B-class MoE model on a single 24GB GPU via expert offload](/assets/images/ktransformers-moe-offload-28x-validation-hero.webp)
 *Running a 671B-class MoE on a single 24GB GPU through expert offload.*
 
 ## Why it went viral

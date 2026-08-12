@@ -23,7 +23,7 @@ categories:
   - llmops
 ---
 
-![صورة مفاهيمية لشبكة عصبية داخل خزانة شفافة محكمة تحيط بها حلقات فحص](/assets/images/chinese-open-weight-models-onprem-checklist-hero.png)
+![صورة مفاهيمية لشبكة عصبية داخل خزانة شفافة محكمة تحيط بها حلقات فحص](/assets/images/chinese-open-weight-models-onprem-checklist-hero.webp)
 *تجسيد لفكرة أن الأمان يحدده إجراء الإدخال المحيط بالأوزان لا الأوزان نفسها.*
 
 ## لماذا يستحق هذا المقال القراءة

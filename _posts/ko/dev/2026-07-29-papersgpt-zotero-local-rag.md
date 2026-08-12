@@ -23,7 +23,7 @@ audiobook: /assets/audio/posts/papersgpt-zotero-local-rag/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![유리 껍질 안에 겹겹이 들어찬 기계 구조를 형상화한 표지 이미지](/assets/images/papersgpt-zotero-local-rag-hero.png)
+![유리 껍질 안에 겹겹이 들어찬 기계 구조를 형상화한 표지 이미지](/assets/images/papersgpt-zotero-local-rag-hero.webp)
 
 논문 1,000개를 몇 분 만에 색인한다는 Zotero 플러그인이 최근 국내 타임라인에서 화제가 됐습니다. 동시에 합리적인 의심도 함께 돌았습니다. 개발사는 네이티브 C++ 엔진을 쓴다고 적어 놨는데, 정작 GitHub 저장소 언어 통계에는 JavaScript와 TypeScript밖에 없다는 지적이었습니다. 결론부터 말씀드리면 C++ 엔진은 실재합니다. 다만 소스가 아니라 프리빌트 바이너리로 배포 파일 안에 들어 있어서 저장소 통계에 잡히지 않을 뿐입니다. 배포본 131MB를 직접 내려받아 55개 엔트리를 전부 분류한 결과를 정리했습니다.
 

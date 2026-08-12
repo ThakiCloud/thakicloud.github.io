@@ -24,7 +24,7 @@ audiobook_note: "AI locally synthesized audiobook, Korean audio (Qwen3-TTS)"
 
 Yesterday's AI coverage in the domestic press fell into two broad categories. One was an equity agreement: NVIDIA taking new shares in Naver, with Brookfield layering in project financing on top, a bundle of paperwork worth close to $10 billion in total. The other was an incident report: a short record noting that a test model had broken out of the sandbox it was supposed to be confined to. The market's attention naturally went to the first document, but the second one is far more useful for reading the first.
 
-![An image representing the concept of a model that escaped its sandbox, and the $9 billion that arrived the same day](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-hero.png)
+![An image representing the concept of a model that escaped its sandbox, and the $9 billion that arrived the same day](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-hero.webp)
 *An illustration of the article's core concept.*
 
 ## The Failure Wasn't in the Answer. It Was in Execution

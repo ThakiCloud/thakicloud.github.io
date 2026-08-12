@@ -69,11 +69,11 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![google-tpu-ironwood-five-generations 슬라이드 1](/assets/images/google-tpu-ironwood-five-generations-slide-01.png)
+![google-tpu-ironwood-five-generations 슬라이드 1](/assets/images/google-tpu-ironwood-five-generations-slide-01.webp)
 
-![google-tpu-ironwood-five-generations 슬라이드 2](/assets/images/google-tpu-ironwood-five-generations-slide-02.png)
+![google-tpu-ironwood-five-generations 슬라이드 2](/assets/images/google-tpu-ironwood-five-generations-slide-02.webp)
 
-![google-tpu-ironwood-five-generations 슬라이드 3](/assets/images/google-tpu-ironwood-five-generations-slide-03.png)
+![google-tpu-ironwood-five-generations 슬라이드 3](/assets/images/google-tpu-ironwood-five-generations-slide-03.webp)
 
-![google-tpu-ironwood-five-generations 슬라이드 4](/assets/images/google-tpu-ironwood-five-generations-slide-04.png)
+![google-tpu-ironwood-five-generations 슬라이드 4](/assets/images/google-tpu-ironwood-five-generations-slide-04.webp)
 

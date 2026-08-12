@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kat-coder-v25-dev-onp
 
 A 35B model usually brings several GPUs to mind. KAT-Coder-V2.5-Dev, newly released by Kwaipilot, is built differently: of its 35B total parameters, only 3B activate per token. We pulled the published `config.json` and safetensors index and tallied them ourselves. Of 256 experts, 8 activate, and of the 32.2B parameters held in routed experts, only 1.007B take part in any given token. That is 3.12%.
 
-![Abstract image of hundreds of glass cubes on a dark lattice with only three lit in warm light](/assets/images/kat-coder-v25-dev-onprem-hero.png)
+![Abstract image of hundreds of glass cubes on a dark lattice with only three lit in warm light](/assets/images/kat-coder-v25-dev-onprem-hero.webp)
 
 ## Why this matters
 
@@ -176,7 +176,7 @@ The right column is theoretical and not reachable in real serving, because the r
 
 And here is the most practical number in this post.
 
-![Dual bar chart comparing agentic coding benchmark scores and 262K-token KV cache size](/assets/images/kat-coder-v25-dev-onprem-results.png)
+![Dual bar chart comparing agentic coding benchmark scores and 262K-token KV cache size](/assets/images/kat-coder-v25-dev-onprem-results.webp)
 
 A single sequence filling all 262,144 tokens holds 5.00GiB of KV cache in bf16. Had all 40 layers been full attention, the same sequence would need 20.00GiB. One attention layout decision cuts long-context cost by 75%. Coding agents routinely push whole repositories into context, which makes concurrent session count effectively equal to total KV cache, so this structure lets the same GPU carry four times as many sessions.
 

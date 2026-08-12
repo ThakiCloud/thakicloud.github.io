@@ -25,7 +25,7 @@ If your team runs in-house AI on a handful of H200s, this week's news boils down
 
 That contrast is not an abstraction. On the same day, Alibaba announced it would give away, for free, a 2.4-trillion-parameter frontier model the following week, while Anthropic signed a $10 billion contract just to secure compute. Models are getting cheaper while compute gets more expensive, and buried in that mismatch is the thread that in-house AI strategy needs to pull on.
 
-![An image depicting the concept of models becoming commoditized while compute grows scarce](/assets/images/model-commoditization-compute-scarcity-hero.png)
+![An image depicting the concept of models becoming commoditized while compute grows scarce](/assets/images/model-commoditization-compute-scarcity-hero.webp)
 *An illustration of the core idea behind this piece.*
 
 ## Two scenes that played out on the same day

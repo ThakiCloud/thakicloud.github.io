@@ -22,7 +22,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/who-owns-the-ai-datacenter/"
 ---
 
-![짓는 사람, 가진 사람, 쓰는 사람이 갈라졌습니다: 20%라는 숫자가 두 번 나온 날 개념을 형상화한 이미지](/assets/images/who-owns-the-ai-datacenter-hero.png)
+![짓는 사람, 가진 사람, 쓰는 사람이 갈라졌습니다: 20%라는 숫자가 두 번 나온 날 개념을 형상화한 이미지](/assets/images/who-owns-the-ai-datacenter-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 20이라는 숫자가 두 번 나왔습니다
@@ -34,7 +34,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/who-owns-the-ai-datacen
 오늘 다이제스트에 올라온 기사들을 이 렌즈로 다시 훑으면, 서로 무관해 보이던 소식들이 하나의 문장으로 정렬됩니다. AI 인프라 산업은 지금 소유권을 해체하는 중입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/who-owns-the-ai-datacenter/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/who-owns-the-ai-datacenter/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 대차대조표에서 사라지는 기가와트

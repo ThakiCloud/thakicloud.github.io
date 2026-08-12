@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/minimax-h3-lora-recipe-not-weights/"
 ---
 
-![Abstract image of a thread of light passing through a crystalline lattice and being rewoven](/assets/images/minimax-h3-lora-recipe-not-weights-hero.png)
+![Abstract image of a thread of light passing through a crystalline lattice and being rewoven](/assets/images/minimax-h3-lora-recipe-not-weights-hero.webp)
 *A line has appeared between what you can download and what you can learn.*
 
 ## Why read this

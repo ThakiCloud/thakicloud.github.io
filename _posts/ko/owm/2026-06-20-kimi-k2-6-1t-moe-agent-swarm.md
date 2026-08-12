@@ -34,7 +34,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ![Kimi K2.6 에이전트 스웜 개념도]({{ '/assets/images/kimi-k2-6-hero.webp' | relative_url }})
 
-![Kimi K2.6: 1T MoE, 32B Active, 300 서브에이전트 스웜 아키텍처 분석 개념을 형상화한 이미지](/assets/images/kimi-k2-6-1t-moe-agent-swarm-hero.png)
+![Kimi K2.6: 1T MoE, 32B Active, 300 서브에이전트 스웜 아키텍처 분석 개념을 형상화한 이미지](/assets/images/kimi-k2-6-1t-moe-agent-swarm-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## Kimi K2.6 개요
@@ -44,7 +44,7 @@ Moonshot AI가 공개한 Kimi K2.6은 [`moonshotai/Kimi-K2.6`](https://huggingfa
 이 3.2% 활성화율이 실용적 의미를 가지는 이유는 명확합니다. GPU 메모리에 가중치를 올리는 데는 전체 1T가 필요하지만, 토큰 하나를 처리하는 FLOPs는 dense 32B 모델과 비슷합니다. 스토리지 요구사항과 추론 속도가 분리되는 구조입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/kimi-k2-6-1t-moe-agent-swarm/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/kimi-k2-6-1t-moe-agent-swarm/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 아키텍처 상세
@@ -124,7 +124,7 @@ Transformers 버전 제약(`>=4.57.1,<5`)이 있으니 환경 구성 시 반드�
 폭넓은 양자화 변형과 KTransformers 지원이 있어서, H100 풀 클러스터 없이도 기능 검증 단계에서 RTX 계열 GPU로 시작할 수 있습니다. 다만 Modified MIT 라이선스의 세부 조건은 원문을 직접 확인하고 사용 시나리오에 맞는지 검토해야 합니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/kimi-k2-6-1t-moe-agent-swarm/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/kimi-k2-6-1t-moe-agent-swarm/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

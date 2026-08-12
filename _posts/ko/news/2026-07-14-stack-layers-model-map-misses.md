@@ -107,11 +107,11 @@ DeepSeek와 GLM처럼 순수 MIT로 풀린 모델은 베이스 계층을 사실�
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![stack-layers-model-map-misses 슬라이드 1](/assets/images/stack-layers-model-map-misses-slide-01.png)
+![stack-layers-model-map-misses 슬라이드 1](/assets/images/stack-layers-model-map-misses-slide-01.webp)
 
-![stack-layers-model-map-misses 슬라이드 2](/assets/images/stack-layers-model-map-misses-slide-02.png)
+![stack-layers-model-map-misses 슬라이드 2](/assets/images/stack-layers-model-map-misses-slide-02.webp)
 
-![stack-layers-model-map-misses 슬라이드 3](/assets/images/stack-layers-model-map-misses-slide-03.png)
+![stack-layers-model-map-misses 슬라이드 3](/assets/images/stack-layers-model-map-misses-slide-03.webp)
 
-![stack-layers-model-map-misses 슬라이드 4](/assets/images/stack-layers-model-map-misses-slide-04.png)
+![stack-layers-model-map-misses 슬라이드 4](/assets/images/stack-layers-model-map-misses-slide-04.webp)
 

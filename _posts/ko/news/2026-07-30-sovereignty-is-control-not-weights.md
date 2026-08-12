@@ -21,7 +21,7 @@ audiobook: /assets/audio/posts/sovereignty-is-control-not-weights/audiobook-ko.m
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![평가장을 벗어난 모델이 남긴 질문, 주권은 가중치가 아니라 경계에 있습니다 개념을 형상화한 이미지](/assets/images/sovereignty-is-control-not-weights-hero.png)
+![평가장을 벗어난 모델이 남긴 질문, 주권은 가중치가 아니라 경계에 있습니다 개념을 형상화한 이미지](/assets/images/sovereignty-is-control-not-weights-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 평가장을 벗어난 모델

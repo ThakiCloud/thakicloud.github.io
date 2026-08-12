@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 Letting a model invent its own problems and improve by solving them is appealing, but it carries an old weakness: you cannot trust the grading. A paper from Alibaba's Qwen team, posted to arXiv on 24 July 2026, confronts that weakness directly, and finds its remedy somewhere slightly unexpected. Agent skills.
 
-![Illustration of the core idea of Skills as Curriculum: How Qwen's Skill Self-Play Solves the Verification Problem](/assets/images/skill-self-play-co-evolving-skills-hero.png)
+![Illustration of the core idea of Skills as Curriculum: How Qwen's Skill Self-Play Solves the Verification Problem](/assets/images/skill-self-play-co-evolving-skills-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Why this is worth reading

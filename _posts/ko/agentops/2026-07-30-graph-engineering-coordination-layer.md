@@ -23,7 +23,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 프롬프트 엔지니어링으로 시작된 명명 시리즈가 또 하나 늘었습니다. 컨텍스트, 하네스, 루프를 지나 이제 그래프 엔지니어링입니다. DailyDoseOfDS의 Akshay Pachaar가 2026년 7월 26일에 올린 스레드와 아티클은 이 유행어가 밈인지 실체인지를 가르는 정리로 읽힙니다. 원문에 따르자면 7월 18일에 Peter Steinberger가 "아직 루프 이야기를 하는가, 아니면 이미 그래프로 넘어갔는가"라고 물었고, 몇 시간 뒤 Hamel Husain이 "루프 엔지니어링은 죽었다, 그래프 엔지니어링의 등장"이라는 글을 낸 것이 발단입니다. 둘 다 절반은 농담이었지만, 농담이 앉은 자리는 실제입니다. 루프가 여러 개가 되어 함께 일해야 하는 순간 조정 문제가 생기고, 공학자들이 조정을 기술해 온 도구가 그래프이기 때문입니다.
 
-![중첩된 루프와 노드, 엣지로 이루어진 그래프 조정 계층의 추상 개념도](/assets/images/graph-engineering-coordination-layer-hero.png)
+![중첩된 루프와 노드, 엣지로 이루어진 그래프 조정 계층의 추상 개념도](/assets/images/graph-engineering-coordination-layer-hero.webp)
 
 *계층이 겹쳐질수록 작업 단위가 커집니다. 하나의 입력에서 출발해 작업 전체까지.*
 
@@ -68,19 +68,19 @@ flowchart TB
     C --> P["프롬프트 엔지니어링<br/>작업 단위: 하나의 입력<br/>모델에게 보내는 말"]
 ```
 
-![다섯 계층 스택 손그림 애니메이션](/assets/images/graph-engineering-coordination-layer-layers.gif)
+![다섯 계층 스택 손그림 애니메이션](/assets/images/graph-engineering-coordination-layer-layers.webp)
 
 *같은 그림을 손그림 boil 애니메이션으로 다시 그렸습니다. 레이아웃은 고정하고 선만 프레임마다 새로 그려 움직임을 만듭니다.*
 
 각 계층은 앞 계층을 감쌉니다. 그래프는 루프로 만들어지고, 루프는 좋은 하네스를 필요로 하고, 하네스 호출은 컨텍스트 문제이고, 모든 컨텍스트는 프롬프트를 담고 있습니다. 이 구조는 디버깅 좌표이기도 합니다. 어느 계층의 작업 단위가 깨졌는지 찾아 그 계층을 고치면 됩니다. 원문의 지적대로 프롬프트는 편집이 가장 쉬운 계층이라, 실제로는 세 계층 위에 있는 실패의 책임을 자꾸 뒤집어씁니다.
 
-![프롬프트에서 그래프까지 다섯 계층의 작업 단위 확장](/assets/images/graph-engineering-coordination-layer-slide-03.png)
+![프롬프트에서 그래프까지 다섯 계층의 작업 단위 확장](/assets/images/graph-engineering-coordination-layer-slide-03.webp)
 
 *안쪽 원에서 바깥 원으로 갈수록 작업 단위가 커집니다. 입력 하나에서 작업 전체까지.*
 
 ## 네 가지 어려운 문제
 
-![그래프 시스템을 무너뜨리는 네 가지 구조적 스트레스](/assets/images/graph-engineering-coordination-layer-slide-04.png)
+![그래프 시스템을 무너뜨리는 네 가지 구조적 스트레스](/assets/images/graph-engineering-coordination-layer-slide-04.webp)
 
 *노드의 존재 자격, 공유 상태 위생, 라우팅 신뢰성, 에이전트 합의. 네 문제는 각각 다른 계층의 대응을 요구합니다.*
 
@@ -96,7 +96,7 @@ flowchart TB
 
 정직한 답은 대부분의 경우라는 것입니다. Anthropic이 공개한 수치가 비용을 구체화합니다. 단일 에이전트는 채팅 상호작용의 대략 4배 토큰을 쓰고, 멀티에이전트 시스템은 대략 15배를 씁니다. 노드를 추가할 때마다 그 배수가 곱해집니다.
 
-![단일 에이전트 4배, 멀티에이전트 15배 토큰 비용 비교](/assets/images/graph-engineering-coordination-layer-slide-06.png)
+![단일 에이전트 4배, 멀티에이전트 15배 토큰 비용 비교](/assets/images/graph-engineering-coordination-layer-slide-06.webp)
 
 *Anthropic의 공개 수치 기준입니다. 노드가 늘 때마다 배수가 곱해지므로, 그래프 도입은 비용 결정이기도 합니다.*
 
@@ -114,7 +114,7 @@ Anthropic이 멀티에이전트가 맞는 과제로 꼽은 조건은 이 규칙�
 
 이 주제는 에이전트 오케스트레이션이므로 Paxis 렌즈로 보는 것이 맞습니다. Paxis는 ThakiCloud의 Agent-Native Cloud 제어 평면으로, Skills와 Tools, Policies, Audit Logs를 일급 리소스로 다룹니다. 위의 네 가지 문제가 Paxis의 설계 결정과 일대일로 맞물립니다.
 
-![네 가지 그래프 혼란과 Paxis 제어 평면의 대응 구조](/assets/images/graph-engineering-coordination-layer-slide-09.png)
+![네 가지 그래프 혼란과 Paxis 제어 평면의 대응 구조](/assets/images/graph-engineering-coordination-layer-slide-09.webp)
 
 *노드 팽창에는 Skill Harness, 라우팅 혼란에는 정책 게이트, 상태 드리프트에는 감사 로그, 맹목적 합의에는 샌드박스가 대응합니다.*
 
@@ -136,7 +136,7 @@ Anthropic이 멀티에이전트가 맞는 과제로 꼽은 조건은 이 규칙�
 
 독자가 가져갈 행동은 셋입니다. 먼저 지금 운영하는 에이전트가 원문의 도입 기준 네 가지, 진짜 전문성 분할, 병렬 팬아웃, 단계별 다른 모델, 실패 격리와 감사 가능한 라우팅 중 어느 것에 해당하는지 점검해 보십시오. 하나도 해당하지 않으면 루프에 머무르는 것이 정답이고, 그 결정이 15배의 토큰을 아낍니다. 해당한다면 코드 전에 종이에 그래프를 그리고, 노드 하나하나에 존재 이유를 물으십시오. 마지막으로 리뷰어 노드를 다른 모델과 신선한 컨텍스트, 외부 증거로 만드는 것을 첫날의 기본값으로 삼으십시오. 조정이 엔지니어링이 되는 지점은 그래프 프레임워크를 설치하는 곳이 아니라, 누가 누구를 검사하는지를 설계하는 곳에 있습니다.
 
-![조정은 소프트웨어가 아니라 설계의 영역](/assets/images/graph-engineering-coordination-layer-slide-10.png)
+![조정은 소프트웨어가 아니라 설계의 영역](/assets/images/graph-engineering-coordination-layer-slide-10.webp)
 
 *단어에 투자하지 말고 구조적 질문에 투자하십시오. 누가 누구를 검사하는지를 설계하는 곳이 출발점입니다.*
 

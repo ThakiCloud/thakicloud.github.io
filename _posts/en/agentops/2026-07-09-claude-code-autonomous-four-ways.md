@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-autonom
 
 If you have used a coding agent, one scene is familiar: you enter a prompt, read the response, enter the next instruction, and wait again. That back-and-forth is powerful, but it keeps a human tethered. Recent Anthropic materials organize a direction that cuts through this loop, making Claude Code run without someone watching. This post breaks that down into four axes, headless mode, hooks, subagents, and skills, and verifies how each actually works using pipelines ThakiCloud operates.
 
-![An abstract image depicting an autonomous pipeline running without a human]({{ '/assets/images/claude-code-autonomous-four-ways-hero.png' | relative_url }})
+![An abstract image depicting an autonomous pipeline running without a human]({{ '/assets/images/claude-code-autonomous-four-ways-hero.webp' | relative_url }})
 *A rendering of four axes, headless, hooks, subagents, and skills, overlapping into an autonomous harness that runs without a human.*
 
 ## Overview

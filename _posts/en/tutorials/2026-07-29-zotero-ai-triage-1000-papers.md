@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/zotero-ai-triage-1
 
 Every few months the claim comes back around: bolt an AI plugin onto your reference manager and it will skim the 1,000 papers sitting in your library in a few minutes. It sounds plausible, but the compute involved swings by orders of magnitude depending on what "skim" means. So we downloaded ten real arXiv papers, timed each stage, and scaled the numbers to a 1,000-paper library.
 
-![Abstract image of stacked paper sheets with a single sheet lit and rising](/assets/images/zotero-ai-triage-1000-papers-hero.png)
+![Abstract image of stacked paper sheets with a single sheet lit and rising](/assets/images/zotero-ai-triage-1000-papers-hero.webp)
 
 ## Why this matters
 
@@ -117,7 +117,7 @@ The slowest was the 82-page `2607.16900` at 0.90 seconds; the 14-page `2607.2006
 
 We also timed downloads, and nothing interesting happened there. File sizes ranged from 0.43MB to 10.41MB, yet each download took between 0.06 and 0.73 seconds. If your library is already on disk this stage disappears entirely. The network is not the bottleneck, so the rest of this discussion drops downloads and looks only at extraction and inference.
 
-![Bar chart comparing per-paper extraction time and 1,000-paper scaling](/assets/images/zotero-ai-triage-1000-papers-results.png)
+![Bar chart comparing per-paper extraction time and 1,000-paper scaling](/assets/images/zotero-ai-triage-1000-papers-results.webp)
 
 Scaling to 1,000 papers sharpens the picture. Full-text extraction alone takes 391.9 seconds, or 6.5 minutes. That is single-process, so parallelism helps, but a good chunk of the "few minutes" budget is already gone. The real wall comes next. Feeding 1,000 full texts to a language model produces 24.38M prompt tokens. Digesting that in five minutes requires a prefill throughput of 81,266 tokens per second; ten minutes needs 40,633, thirty minutes needs 13,544, and even a full hour still needs 6,772. A small model on a laptop does not reach those numbers. That is batch inference territory on a serving cluster.
 

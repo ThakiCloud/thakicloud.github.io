@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kat-coder-v25-dev-onp
 
 35B 모델이라는 말을 들으면 보통 GPU 여러 장을 먼저 떠올립니다. 그런데 이번에 Kwaipilot이 공개한 KAT-Coder-V2.5-Dev는 총 35B 중에서 토큰 하나당 3B만 켜지는 구조입니다. 저희가 공개된 `config.json`과 safetensors 인덱스를 직접 집계해 보니 전문가 256개 가운데 8개만 활성화되고, 라우팅되는 전문가 파라미터 32.2B 중 실제로 계산에 참여하는 몫은 1.007B였습니다. 비율로 3.12%입니다.
 
-![어두운 격자 위에 놓인 수백 개의 유리 큐브 가운데 세 개만 따뜻한 빛으로 켜져 있는 추상 이미지](/assets/images/kat-coder-v25-dev-onprem-hero.png)
+![어두운 격자 위에 놓인 수백 개의 유리 큐브 가운데 세 개만 따뜻한 빛으로 켜져 있는 추상 이미지](/assets/images/kat-coder-v25-dev-onprem-hero.webp)
 
 ## 왜 읽어야 하나
 
@@ -54,7 +54,7 @@ Kwaipilot은 7월에 KAT-Coder-V2.5를 먼저 공개했고, 그 뒤 오픈웨이
 | 어휘 크기 | 248,320 |
 | 라이선스 | Apache-2.0 |
 
-![베이스 아키텍처 요약 슬라이드. 레이어 40개, 은닉 차원 2048, 컨텍스트 262,144 토큰, 어휘 248,320, Apache-2.0 라이선스](/assets/images/kat-coder-v25-dev-onprem-slide-03.png)
+![베이스 아키텍처 요약 슬라이드. 레이어 40개, 은닉 차원 2048, 컨텍스트 262,144 토큰, 어휘 248,320, Apache-2.0 라이선스](/assets/images/kat-coder-v25-dev-onprem-slide-03.webp)
 
 주목할 부분은 아래 두 줄입니다.
 
@@ -62,7 +62,7 @@ Kwaipilot은 7월에 KAT-Coder-V2.5를 먼저 공개했고, 그 뒤 오픈웨이
 
 다음은 어텐션 구성입니다. 40개 레이어가 전부 같은 어텐션을 쓰지 않고, 네 개마다 하나씩만 full attention이고 나머지는 linear attention입니다. `layer_types` 배열을 세어 보면 full attention이 10개, linear attention이 30개입니다. KV 캐시는 full attention 레이어에서만 시퀀스 길이에 비례해 늘어나므로, 이 배치가 긴 컨텍스트 비용을 직접 결정합니다.
 
-![40개 레이어 중 10개만 full attention이고 나머지 30개는 linear attention임을 레이어 스택으로 표현한 슬라이드](/assets/images/kat-coder-v25-dev-onprem-slide-05.png)
+![40개 레이어 중 10개만 full attention이고 나머지 30개는 linear attention임을 레이어 스택으로 표현한 슬라이드](/assets/images/kat-coder-v25-dev-onprem-slide-05.webp)
 
 두 요소를 합치면 아래와 같은 흐름이 됩니다.
 
@@ -165,7 +165,7 @@ tensor counts by bucket: {"backbone": 451, "embedding": 2,
 | 임베딩 + lm_head | 1.017B |
 | **전문가 희소성** | **3.12%** |
 
-![전문가 256칸 격자 중 8칸만 검게 칠해 3.12% 희소성을 표현한 슬라이드](/assets/images/kat-coder-v25-dev-onprem-slide-04.png)
+![전문가 256칸 격자 중 8칸만 검게 칠해 3.12% 희소성을 표현한 슬라이드](/assets/images/kat-coder-v25-dev-onprem-slide-04.webp)
 
 여기서 한 가지가 분명해집니다. 이 모델의 덩치는 거의 전부 전문가입니다. 그리고 그 전문가 중 3.12%만 매 토큰 계산에 참여합니다. 다만 **계산에 참여하지 않는 나머지도 메모리에는 올라가 있어야 합니다.** MoE를 두고 흔히 생기는 오해가 여기인데, 활성 파라미터가 3B라고 해서 3B짜리 모델처럼 메모리를 쓰지는 않습니다.
 
@@ -181,7 +181,7 @@ tensor counts by bucket: {"backbone": 451, "embedding": 2,
 
 그리고 이 글에서 가장 실용적인 숫자가 KV 캐시입니다.
 
-![에이전틱 코딩 벤치마크 점수 비교와 26만 토큰 KV 캐시 크기 비교를 담은 이중 막대 차트](/assets/images/kat-coder-v25-dev-onprem-results.png)
+![에이전틱 코딩 벤치마크 점수 비교와 26만 토큰 KV 캐시 크기 비교를 담은 이중 막대 차트](/assets/images/kat-coder-v25-dev-onprem-results.webp)
 
 262,144 토큰을 꽉 채운 시퀀스 하나가 잡는 KV 캐시는 bf16 기준 5.00GiB입니다. 만약 40개 레이어가 전부 full attention이었다면 같은 조건에서 20.00GiB가 필요했습니다. 하이브리드 어텐션 배치 하나로 긴 컨텍스트 비용이 75% 줄어든 것입니다. 코딩 에이전트는 저장소 전체를 컨텍스트에 밀어 넣는 일이 잦아서 동시 세션 수가 곧 KV 캐시 총량이 되는데, 이 구조에서는 같은 GPU로 네 배 많은 세션을 감당할 수 있다는 뜻이 됩니다.
 
@@ -204,7 +204,7 @@ tensor counts by bucket: {"backbone": 451, "embedding": 2,
 
 **Paxis 관점**입니다. Paxis는 ai-platform 위에서 도는 Agent-Native Cloud 제어 평면으로, Skills와 Tools와 Policies와 Audit Logs를 일급 리소스로 다룹니다. 그래서 저희가 이 모델에서 가장 눈여겨본 대목은 벤치마크 점수가 아니라 이상 행동 수치였습니다. 모델 카드는 RL 학습으로 비정상 도구 레이블이 9.34%에서 0.28%로, 단일 턴 반복 생성이 0.34%에서 0%로 줄었다고 밝힙니다. 에이전트 하네스를 운영해 보면 알 수 있듯이, 도구 호출이 100번 중 9번씩 깨지는 모델은 아무리 추론이 좋아도 자동화에 넣을 수 없습니다. 재시도와 파싱 예외 처리가 파이프라인을 잠식하기 때문입니다. Paxis가 960개가 넘는 스킬을 BM25로 골라 격리 샌드박스에서 실행하고 모든 행동을 정책 게이트와 감사 로그로 통과시키는 구조에서, 도구 호출 신뢰도는 곧 하네스 전체의 신뢰도입니다. 소수점 자리의 개선처럼 보이는 이 숫자가 실제 운영에서는 체감 차이를 만듭니다.
 
-![Paxis 제어 평면에서 도구 호출 신뢰성이 갖는 의미를 정리한 슬라이드](/assets/images/kat-coder-v25-dev-onprem-slide-11.png)
+![Paxis 제어 평면에서 도구 호출 신뢰성이 갖는 의미를 정리한 슬라이드](/assets/images/kat-coder-v25-dev-onprem-slide-11.webp)
 
 학습 레시피에도 참고할 대목이 있습니다. Kwaipilot은 하네스 실행 피드백에서 계층적 보상을 만들었다고 설명합니다. 실패한 시도라도 중간에 의미 있는 진전이 있었다면 부분 점수를 주는 방식인데, 성공과 실패만 나누는 이진 보상보다 학습 신호가 촘촘해집니다. 저희가 에이전트 루프에 검증 게이트를 붙일 때 통과와 실패만이 아니라 어디까지 갔는지를 함께 기록하는 것과 같은 발상입니다.
 

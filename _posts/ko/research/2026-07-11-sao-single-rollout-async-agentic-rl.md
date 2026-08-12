@@ -24,7 +24,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 칭화대와 Z AI 연구진이 2026년 7월 8일 공개한 논문 "Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning"(arXiv 2607.07508)은 바로 그 지점을 정면으로 다룹니다. 결론부터 말하면, 이들은 널리 쓰이는 GRPO의 핵심인 "그룹 샘플링"을 버렸습니다. 그리고 이 방식을 논문 속 실험에만 남겨 두지 않고, 750B 규모의 오픈 모델 GLM-5.2를 학습하는 실제 파이프라인에 투입했습니다.
 
-![에이전트 RL은 그룹을 기다리지 말고 롤아웃 하나로 배운다 개념을 형상화한 이미지](/assets/images/sao-single-rollout-async-agentic-rl-hero.png)
+![에이전트 RL은 그룹을 기다리지 말고 롤아웃 하나로 배운다 개념을 형상화한 이미지](/assets/images/sao-single-rollout-async-agentic-rl-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
@@ -33,7 +33,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ThakiCloud도 kubeflow 기반의 LLM 학습 시스템에서 SFT·CPT·DPO·GRPO·GKD 다섯 가지 사후학습 기법을 운용합니다. 그래서 GRPO의 그룹 샘플링이 긴 롤아웃에서 어떤 대가를 치르는지, 그리고 그 대가를 없애는 대안이 어떤 새로운 위험을 부르는지는 남의 이야기가 아닙니다. 이 글은 SAO가 무엇을 바꿨고, 그 변경이 우리처럼 멀티테넌트 GPU 클러스터에서 에이전트를 학습하려는 조직에 무엇을 의미하는지를 정리합니다.
 
-![비동기로 하나씩 흘러 들어오는 롤아웃 스트림과, 그룹으로 묶여 대기하는 롤아웃을 대비시킨 추상 이미지]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.png' | relative_url }})
+![비동기로 하나씩 흘러 들어오는 롤아웃 스트림과, 그룹으로 묶여 대기하는 롤아웃을 대비시킨 추상 이미지]({{ '/assets/images/sao-single-rollout-async-agentic-rl-hero.webp' | relative_url }})
 *연속적으로 하나씩 도착하는 단일 롤아웃과, 그룹이 다 찰 때까지 큐에서 얼어붙어 기다리는 롤아웃을 대비해 형상화했습니다.*
 
 ## 이 기술은 무엇인가
@@ -423,13 +423,13 @@ SAO의 교훈은 알고리즘 논문 한 편을 넘어, GPU 클러스터를 운�
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![sao-single-rollout-async-agentic-rl 슬라이드 1]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-01.png' | relative_url }})
+![sao-single-rollout-async-agentic-rl 슬라이드 1]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-01.webp' | relative_url }})
 
-![sao-single-rollout-async-agentic-rl 슬라이드 2]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-02.png' | relative_url }})
+![sao-single-rollout-async-agentic-rl 슬라이드 2]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-02.webp' | relative_url }})
 
-![sao-single-rollout-async-agentic-rl 슬라이드 3]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-03.png' | relative_url }})
+![sao-single-rollout-async-agentic-rl 슬라이드 3]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-03.webp' | relative_url }})
 
-![sao-single-rollout-async-agentic-rl 슬라이드 4]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-04.png' | relative_url }})
+![sao-single-rollout-async-agentic-rl 슬라이드 4]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-04.webp' | relative_url }})
 
 ## 출처
 

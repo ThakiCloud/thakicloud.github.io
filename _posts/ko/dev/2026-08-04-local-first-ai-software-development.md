@@ -32,7 +32,7 @@ ebook_pages: 27
 
 로컬 우선이라는 표현은 종종 성능 최적화 이야기로 오해받습니다. 하지만 실무에서 이 선택을 강제하는 이유는 대부분 속도나 비용이 아니라 데이터가 기기를 벗어날 수 없다는 규정이나 계약 조건입니다. 그 출발점의 차이가 설계 전체를 다르게 만듭니다.
 
-![로컬 우선 AI: 데이터가 기기를 떠나지 않는다는 제약이 설계를 바꾸는 방식 개념을 형상화한 이미지](/assets/images/local-first-ai-software-development-hero.png)
+![로컬 우선 AI: 데이터가 기기를 떠나지 않는다는 제약이 설계를 바꾸는 방식 개념을 형상화한 이미지](/assets/images/local-first-ai-software-development-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 데이터가 기기를 떠나지 않는다는 제약
@@ -145,15 +145,15 @@ def choose_inference_path(is_sensitive: bool, device_ram_mb: int,
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![local-first-ai-software-development 슬라이드 1](/assets/images/local-first-ai-software-development-slide-01.png)
+![local-first-ai-software-development 슬라이드 1](/assets/images/local-first-ai-software-development-slide-01.webp)
 
-![local-first-ai-software-development 슬라이드 2](/assets/images/local-first-ai-software-development-slide-02.png)
+![local-first-ai-software-development 슬라이드 2](/assets/images/local-first-ai-software-development-slide-02.webp)
 
-![local-first-ai-software-development 슬라이드 3](/assets/images/local-first-ai-software-development-slide-03.png)
+![local-first-ai-software-development 슬라이드 3](/assets/images/local-first-ai-software-development-slide-03.webp)
 
-![local-first-ai-software-development 슬라이드 4](/assets/images/local-first-ai-software-development-slide-04.png)
+![local-first-ai-software-development 슬라이드 4](/assets/images/local-first-ai-software-development-slide-04.webp)
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/local-first-ai-software-development/ch01.png)
-![5장 삽화](/assets/images/books/local-first-ai-software-development/ch05.png)
+![1장 삽화](/assets/images/books/local-first-ai-software-development/ch01.webp)
+![5장 삽화](/assets/images/books/local-first-ai-software-development/ch05.webp)
 

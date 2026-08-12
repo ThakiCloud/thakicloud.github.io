@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
 
-![مساعد الذكاء الاصطناعي للبرمجة: دليل شامل لتعظيم إنتاجية التطوير 개념을 형상화한 이미지](/assets/images/ai-coding-assistant-comprehensive-guide-ar-hero.png)
+![مساعد الذكاء الاصطناعي للبرمجة: دليل شامل لتعظيم إنتاجية التطوير 개념을 형상화한 이미지](/assets/images/ai-coding-assistant-comprehensive-guide-ar-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## المقدمة
@@ -36,7 +36,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 في هذا الدليل الشامل، سنستكشف أشهر مساعدي البرمجة بالذكاء الاصطناعي، ونتعلم كيفية دمجهم في سير العمل، ونكتشف أفضل الممارسات لتعظيم إمكاناتهم مع الحفاظ على جودة الكود والأمان.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-coding-assistant-comprehensive-guide-ar/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-coding-assistant-comprehensive-guide-ar/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ما هي مساعدات البرمجة بالذكاء الاصطناعي؟
@@ -476,7 +476,7 @@ cr --format json src/
 ابدأ في دمج مساعدي البرمجة بالذكاء الاصطناعي في سير عملك اليوم، ولكن افعل ذلك بتفكير ومع وضع الضمانات المناسبة. مستقبل التطوير تعاوني - بين الإبداع البشري وقدرة الذكاء الاصطناعي.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-coding-assistant-comprehensive-guide-ar/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-coding-assistant-comprehensive-guide-ar/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## موارد إضافية

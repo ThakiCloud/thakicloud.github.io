@@ -27,7 +27,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ![위로 치솟는 랙 값과 아래로 무너지는 추론 값 사이에 낀 기업을 나타낸 AI 가위 개념도]({{ '/assets/images/ai-price-scissors-infra-vs-inference-hero.webp' | relative_url }})
 
-![위로 폭발하는 랙, 아래로 무너지는 추론: 기업은 AI 가위의 한가운데 서 있습니다 개념을 형상화한 이미지](/assets/images/ai-price-scissors-infra-vs-inference-hero.png)
+![위로 폭발하는 랙, 아래로 무너지는 추론: 기업은 AI 가위의 한가운데 서 있습니다 개념을 형상화한 이미지](/assets/images/ai-price-scissors-infra-vs-inference-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 같은 날, 두 숫자가 서로를 등지고 걸어갔습니다
@@ -37,7 +37,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 한쪽에서는 AI를 굴리는 쇳덩어리가 폭등하고, 다른 한쪽에서는 그 쇳덩어리가 뱉어내는 답변의 값이 폭락합니다. 얼핏 모순처럼 보이는 이 장면이 사실은 하나의 사건입니다. 오늘 다이제스트를 관통하는 이야기는 특정 모델이 얼마나 똑똑해졌는가가 아니라, AI 경제의 위층과 아래층이 서로 반대로 벌어지고 있다는 사실입니다. 벌어지는 두 날 사이에 낀 것은 결국 이 기술을 실제로 쓰려는 기업입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-price-scissors-infra-vs-inference/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-price-scissors-infra-vs-inference/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 위층: 쇳덩어리는 점점 비싸집니다
@@ -401,7 +401,7 @@ ThakiCloud가 Agent-Native Cloud로 만든 Paxis는 바로 이 네 손잡이를 
 오늘의 두 숫자는 앞으로도 더 멀리 벌어질 가능성이 큽니다. 메모리 공급이 2028년까지 타이트하고 전력 병목은 몇 년의 인허가를 요구하니 위층은 쉽게 내려오지 않습니다. 반대로 자체 칩과 초저가 모델의 물결은 아래층을 계속 끌어내립니다. 이럴수록 승부는 두 날 자체가 아니라 그 사이를 쥐는 손잡이에서 갈립니다. 랙 값과 추론 값이라는 두 개의 숫자를 읽을 때, 그 사이에 놓인 스케줄링과 라우팅과 주권과 안전을 함께 읽어야 하는 이유입니다. 오늘의 뉴스는 어느 모델이 이겼는지를 묻지 않았습니다. 대신 그 모델을 굴리는 비용과 그 비용을 다루는 방식을 물었습니다. 가위의 한가운데에서 흔들리지 않으려면, 먼저 손잡이를 어디에 두었는지부터 확인해야 합니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-price-scissors-infra-vs-inference/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-price-scissors-infra-vs-inference/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료
@@ -421,11 +421,11 @@ ThakiCloud가 Agent-Native Cloud로 만든 Paxis는 바로 이 네 손잡이를 
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-price-scissors-infra-vs-inference 슬라이드 1](/assets/images/ai-price-scissors-infra-vs-inference-slide-01.png)
+![ai-price-scissors-infra-vs-inference 슬라이드 1](/assets/images/ai-price-scissors-infra-vs-inference-slide-01.webp)
 
-![ai-price-scissors-infra-vs-inference 슬라이드 2](/assets/images/ai-price-scissors-infra-vs-inference-slide-02.png)
+![ai-price-scissors-infra-vs-inference 슬라이드 2](/assets/images/ai-price-scissors-infra-vs-inference-slide-02.webp)
 
-![ai-price-scissors-infra-vs-inference 슬라이드 3](/assets/images/ai-price-scissors-infra-vs-inference-slide-03.png)
+![ai-price-scissors-infra-vs-inference 슬라이드 3](/assets/images/ai-price-scissors-infra-vs-inference-slide-03.webp)
 
-![ai-price-scissors-infra-vs-inference 슬라이드 4](/assets/images/ai-price-scissors-infra-vs-inference-slide-04.png)
+![ai-price-scissors-infra-vs-inference 슬라이드 4](/assets/images/ai-price-scissors-infra-vs-inference-slide-04.webp)
 

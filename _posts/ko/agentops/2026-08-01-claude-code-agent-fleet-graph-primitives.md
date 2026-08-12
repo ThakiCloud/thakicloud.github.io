@@ -18,7 +18,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-agent-fleet-graph-primitives/"
 ---
 
-![하나의 오케스트레이터 노드에서 갈라져 나온 병렬 워커들이 아래쪽 검증 게이트 하나로 다시 모이는 구조의 추상 이미지](/assets/images/claude-code-agent-fleet-graph-primitives-hero.png)
+![하나의 오케스트레이터 노드에서 갈라져 나온 병렬 워커들이 아래쪽 검증 게이트 하나로 다시 모이는 구조의 추상 이미지](/assets/images/claude-code-agent-fleet-graph-primitives-hero.webp)
 
 *갈라지는 일보다 다시 하나로 모으는 일이 어렵습니다. 그래프의 값어치는 아래쪽 게이트에서 나옵니다.*
 
@@ -42,7 +42,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-agent-f
 
 그래서 실무에서 먼저 결정해야 하는 것은 에이전트 개수가 아니라 세 가지입니다. 작업을 어디서 자를 것인가, 잘린 조각들이 무엇을 공유할 것인가, 각 조각이 끝났다는 사실을 누가 판정할 것인가입니다. 이 세 질문에 답하고 나면 노드와 엣지와 종료 조건이 정해지고, 그때부터 대수는 그저 처리량 파라미터가 됩니다.
 
-![어디서 자를 것인가, 무엇을 공유할 것인가, 누가 판정할 것인가라는 세 가지 설계 질문을 정리한 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-05.png)
+![어디서 자를 것인가, 무엇을 공유할 것인가, 누가 판정할 것인가라는 세 가지 설계 질문을 정리한 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-05.webp)
 
 *이 세 질문이 노드와 엣지와 종료 조건을 결정합니다.*
 
@@ -99,7 +99,7 @@ model: haiku
 | 상시 규칙 | 60개 | 모든 노드에 적용되는 제약 |
 | 등록된 무인 루프 | 49개 | 시간축 위의 그래프 |
 
-![스킬 1,914개, 서브에이전트 정의 80개, 상시 규칙 60개, 등록된 무인 루프 49개를 정리한 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-07.png)
+![스킬 1,914개, 서브에이전트 정의 80개, 상시 규칙 60개, 등록된 무인 루프 49개를 정리한 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-07.webp)
 
 *검증할 수 없는 남의 숫자 대신 우리 워크스페이스에서 직접 센 숫자입니다.*
 
@@ -125,7 +125,7 @@ $ python3 .claude/skills/jarvis/scripts/sra/retrieve.py \
 
 ## 비용이 그래프의 모양을 정합니다
 
-![성능 향상 90.2퍼센트와 토큰 사용량 15배를 대비시킨 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-03.png)
+![성능 향상 90.2퍼센트와 토큰 사용량 15배를 대비시킨 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-03.webp)
 
 *성능은 오른쪽 크기만큼의 비용을 지불하고 사 오는 것입니다.*
 
@@ -137,7 +137,7 @@ $ python3 .claude/skills/jarvis/scripts/sra/retrieve.py \
 
 셋째, 종료 조건을 코드가 소유합니다. 테스트 종료 코드나 정규식 카운트처럼 결정론적으로 판정되는 게이트가 있어야 루프가 멈춥니다. 모델이 스스로 완료를 선언하게 두면 그래프는 수렴하지 않고 예산만 소진합니다. 판정이 애매한 콘텐츠 작업이라면 반증을 지시받은 검증자를 홀수로 띄워 표결로 닫는 방법이 있습니다. 표 계산은 사람이나 모델이 아니라 스크립트가 합니다.
 
-![독립적 작업에만 팬아웃하라, 비용을 라우팅하라, 종료 조건을 코드가 소유하라는 세 원칙을 정리한 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-09.png)
+![독립적 작업에만 팬아웃하라, 비용을 라우팅하라, 종료 조건을 코드가 소유하라는 세 원칙을 정리한 슬라이드](/assets/images/claude-code-agent-fleet-graph-primitives-slide-09.webp)
 
 *세 원칙 모두 모델을 바꾸는 대신 그래프의 배치를 바꾸는 쪽에 있습니다.*
 

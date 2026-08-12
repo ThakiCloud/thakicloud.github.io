@@ -22,7 +22,7 @@ categories:
   - agentops
 ---
 
-![A thin harness core connected to many skill modules]({{ '/assets/images/everything-claude-code-agent-harness-hero.png' | relative_url }})
+![A thin harness core connected to many skill modules]({{ '/assets/images/everything-claude-code-agent-harness-hero.webp' | relative_url }})
 
 ## Overview
 

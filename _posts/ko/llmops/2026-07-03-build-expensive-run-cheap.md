@@ -16,7 +16,7 @@ audiobook: /assets/audio/posts/build-expensive-run-cheap/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![핵심 개념 일러스트]({{ '/assets/images/build-expensive-run-cheap-hero.png' | relative_url }})
+![핵심 개념 일러스트]({{ '/assets/images/build-expensive-run-cheap-hero.webp' | relative_url }})
 
 에이전트를 운영하는 팀이라면 매달 청구서에서 같은 장면을 봅니다. 토큰 비용의 대부분이 프론티어 모델에서 나오는데, 정작 그 모델이 하는 일의 상당수는 창의적 난제가 아닙니다. 메일을 분류하고, 뉴스를 매칭하고, 표를 렌더링하고, 출력이 규격을 지켰는지 검사하는 일이 대부분입니다. 이 글은 엔지니어링 리더와 AI 팀을 위한 것입니다. 스킬을 비싼 모델로 만든 뒤 싼 모델로 내려도 품질이 유지되는지 어떻게 판단하고, 그 판단을 어떻게 매일 밤 자동으로 돌리는지를 실제 측정치와 함께 다룹니다.
 
@@ -135,11 +135,11 @@ GLM 5.2와 Kimi K2.7-Code 같은 최신 오픈웨이트 모델을 조합해 비�
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![build-expensive-run-cheap 슬라이드 1](/assets/images/build-expensive-run-cheap-slide-01.png)
+![build-expensive-run-cheap 슬라이드 1](/assets/images/build-expensive-run-cheap-slide-01.webp)
 
-![build-expensive-run-cheap 슬라이드 2](/assets/images/build-expensive-run-cheap-slide-02.png)
+![build-expensive-run-cheap 슬라이드 2](/assets/images/build-expensive-run-cheap-slide-02.webp)
 
-![build-expensive-run-cheap 슬라이드 3](/assets/images/build-expensive-run-cheap-slide-03.png)
+![build-expensive-run-cheap 슬라이드 3](/assets/images/build-expensive-run-cheap-slide-03.webp)
 
-![build-expensive-run-cheap 슬라이드 4](/assets/images/build-expensive-run-cheap-slide-04.png)
+![build-expensive-run-cheap 슬라이드 4](/assets/images/build-expensive-run-cheap-slide-04.webp)
 

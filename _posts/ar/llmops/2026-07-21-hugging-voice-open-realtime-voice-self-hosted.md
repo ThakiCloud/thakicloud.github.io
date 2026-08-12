@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/hugging-voice-open-realtime-voice-self-hosted/"
 ---
 
-![خط معالجة صوتي لحظي مفتوح تشغّله بنفسك]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png' | relative_url }})
+![خط معالجة صوتي لحظي مفتوح تشغّله بنفسك]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.webp' | relative_url }})
 
 كُتب هذا المقال للمهندسين الذين أرادوا إضافة وكيل صوتي لكنهم ترددوا أمام الارتباط بمزوّد واحد وتكلفة واجهة OpenAI Realtime، ولمسؤولي البنية التحتية الذين يوازنون ما إذا كان الصوت الحواري قابلاً للتشغيل على حزمتهم الخاصة. باختصار، إن تصميم العرض التجريبي [hugging-voice](https://huggingface.co/spaces/HuggingFaceM4/hugging-voice) من Hugging Face والمكتبة التي تعمل تحته، [speech-to-speech](https://github.com/huggingface/speech-to-speech)، بسيط وعملي في آن معاً. فهو يفتح خط المعالجة الصوتي اللحظي بمراحله الأربع كمصدر مفتوح، بينما يغلّف الطرف الخارجي بالواجهة نفسها التي يقدمها OpenAI Realtime. لذا إن كان لديك بالفعل كود مكتوب لعميل OpenAI اللحظي، فيمكنك الانتقال إلى حزمتك الخاصة بتغيير سطر واحد فقط: العنوان الذي يشير إليه الخادم. لا نستشهد بأرقام الأداء إلا ضمن النطاق الذي نشره المشروع، ونوضّح مسبقاً أنها ليست أرقاماً قسناها بأنفسنا.
 

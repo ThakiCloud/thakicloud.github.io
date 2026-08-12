@@ -29,7 +29,7 @@ categories:
 
 ⏱️ **وقت القراءة المقدر**: 8 دقائق
 
-![نظرة عامة على تحليل المستندات الموحد في dots.ocr]({{ '/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.png' | relative_url }})
+![نظرة عامة على تحليل المستندات الموحد في dots.ocr]({{ '/assets/images/dots-ocr-multilingual-document-parsing-guide-hero.webp' | relative_url }})
 
 ## مقدمة
 

@@ -31,7 +31,7 @@ ebook_pages: 17
 
 많은 팀이 프롬프트를 마케팅 카피처럼 다룹니다. 느낌이 좋을 때까지 문장을 고치고, 결과가 그럴듯하면 배포하고, 나중에 이상한 출력이 나오면 다시 문장을 만집니다. 이 방식은 데모 단계에서는 통합니다. 하지만 사용자가 늘고 입력이 다양해지는 순간 재현되지 않는 실패가 쌓입니다. 아래에서는 이 실패를 막는 구체적인 규율을 하나씩 살펴봅니다.
 
-![프롬프트도 계약이다: 소프트웨어 엔지니어가 이미 아는 규율을 프롬프트에 적용하는 법 개념을 형상화한 이미지](/assets/images/prompt-engineering-for-software-engineers-hero.png)
+![프롬프트도 계약이다: 소프트웨어 엔지니어가 이미 아는 규율을 프롬프트에 적용하는 법 개념을 형상화한 이미지](/assets/images/prompt-engineering-for-software-engineers-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 프롬프트를 함수로 다시 보기
@@ -111,8 +111,8 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 더 깊은 예제와 코드로 확인하고 싶다면 전자책 전문을 참고하시기 바랍니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch01.png)
-![2장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch02.png)
-![3장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch03.png)
-![4장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch04.png)
+![1장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch01.webp)
+![2장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch02.webp)
+![3장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch03.webp)
+![4장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch04.webp)
 

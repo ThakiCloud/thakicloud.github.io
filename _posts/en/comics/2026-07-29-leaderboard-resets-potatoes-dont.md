@@ -13,7 +13,7 @@ tags:
   - satire
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/leaderboard-resets-potatoes-dont/strip.png
+image: /assets/images/posts/comics/leaderboard-resets-potatoes-dont/strip.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/leaderboard-resets-potatoes-dont/"
 ---
 
@@ -21,7 +21,7 @@ One leaderboard ate the timeline this week: the fastest-growing startups on X, r
 That is the whole yardstick. Not revenue, not people actually using the product. Just followers, measured on a platform none of the ranked companies own.
 Which is the awkward part. When someone else holds the ruler, your height changes on their schedule. So Eugene, Paxis and Metis went and climbed the thing, up a mountainside of Andean farming terraces.
 
-![The Leaderboard Reset. The Potatoes Didn't.](/assets/images/posts/comics/leaderboard-resets-potatoes-dont/strip.png)
+![The Leaderboard Reset. The Potatoes Didn't.](/assets/images/posts/comics/leaderboard-resets-potatoes-dont/strip.webp)
 
 > Source: [RT @benln: Pulled the fastest-growing startups on X by follower growth over last 90 days: https://t.co/RTy5umq7QO](https://x.com/hjguyhan/status/2081867551878070739) · twitter
 

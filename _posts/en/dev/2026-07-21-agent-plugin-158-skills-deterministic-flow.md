@@ -21,7 +21,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/agent-plugin-158-skills-deterministic-flow/"
 ---
 
-![Abstract visualization of many skill modules converging into one ordered vertical pipeline]({{ '/assets/images/agent-plugin-158-skills-deterministic-flow-hero.png' | relative_url }})
+![Abstract visualization of many skill modules converging into one ordered vertical pipeline]({{ '/assets/images/agent-plugin-158-skills-deterministic-flow-hero.webp' | relative_url }})
 
 ## Overview
 

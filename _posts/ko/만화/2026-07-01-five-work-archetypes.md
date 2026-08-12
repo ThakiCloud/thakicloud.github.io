@@ -35,11 +35,11 @@ categories:
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![five-work-archetypes 슬라이드 1](/assets/images/five-work-archetypes-slide-01.png)
+![five-work-archetypes 슬라이드 1](/assets/images/five-work-archetypes-slide-01.webp)
 
-![five-work-archetypes 슬라이드 2](/assets/images/five-work-archetypes-slide-02.png)
+![five-work-archetypes 슬라이드 2](/assets/images/five-work-archetypes-slide-02.webp)
 
-![five-work-archetypes 슬라이드 3](/assets/images/five-work-archetypes-slide-03.png)
+![five-work-archetypes 슬라이드 3](/assets/images/five-work-archetypes-slide-03.webp)
 
-![five-work-archetypes 슬라이드 4](/assets/images/five-work-archetypes-slide-04.png)
+![five-work-archetypes 슬라이드 4](/assets/images/five-work-archetypes-slide-04.webp)
 

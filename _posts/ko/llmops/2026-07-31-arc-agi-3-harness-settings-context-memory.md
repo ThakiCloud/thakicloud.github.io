@@ -37,7 +37,7 @@ GPT-5.6 Sol이 이 벤치마크를 처음 의미 있게 돌파한 배경 자체�
 
 OpenAI는 이 격차를 모델의 한계가 아니라 측정 환경의 문제로 보고 조사에 들어갔고, 7월에 그 결과를 [공식 블로그](https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/)로 공개했습니다. 요지는 이렇습니다. 표준 하네스가 매 행동마다 모델의 내부 추론을 폐기하고, 컨텍스트가 차면 오래된 행동 기록부터 잘라냈다는 것입니다. 모델은 자기가 무엇을 했는지는 기억하지만 왜 그렇게 했는지는 대부분 잃은 상태로 다음 수를 두고 있었습니다.
 
-![끊어진 사슬과 이어진 사슬이 대비되는 추상 이미지로 스텝 간 기억의 연속성을 형상화](/assets/images/arc-agi-3-harness-settings-context-memory-hero.png)
+![끊어진 사슬과 이어진 사슬이 대비되는 추상 이미지로 스텝 간 기억의 연속성을 형상화](/assets/images/arc-agi-3-harness-settings-context-memory-hero.webp)
 
 *스텝 사이에서 무엇을 남기고 무엇을 버리느냐가 다중 스텝 에이전트의 성능을 가릅니다.*
 
@@ -139,13 +139,13 @@ Responses API를 쓰지 않는 환경, 예를 들어 vLLM이나 SGLang으로 오
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![arc-agi-3-harness-settings-context-memory 슬라이드 1](/assets/images/arc-agi-3-harness-settings-context-memory-slide-01.png)
+![arc-agi-3-harness-settings-context-memory 슬라이드 1](/assets/images/arc-agi-3-harness-settings-context-memory-slide-01.webp)
 
-![arc-agi-3-harness-settings-context-memory 슬라이드 2](/assets/images/arc-agi-3-harness-settings-context-memory-slide-02.png)
+![arc-agi-3-harness-settings-context-memory 슬라이드 2](/assets/images/arc-agi-3-harness-settings-context-memory-slide-02.webp)
 
-![arc-agi-3-harness-settings-context-memory 슬라이드 3](/assets/images/arc-agi-3-harness-settings-context-memory-slide-03.png)
+![arc-agi-3-harness-settings-context-memory 슬라이드 3](/assets/images/arc-agi-3-harness-settings-context-memory-slide-03.webp)
 
-![arc-agi-3-harness-settings-context-memory 슬라이드 4](/assets/images/arc-agi-3-harness-settings-context-memory-slide-04.png)
+![arc-agi-3-harness-settings-context-memory 슬라이드 4](/assets/images/arc-agi-3-harness-settings-context-memory-slide-04.webp)
 
 ## 출처
 

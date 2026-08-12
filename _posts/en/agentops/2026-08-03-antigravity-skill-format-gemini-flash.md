@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/antigravity-skill-f
 published: true
 ---
 
-![Identically shaped modules slotting into three different machine housings](/assets/images/antigravity-skill-format-gemini-flash-hero.png)
+![Identically shaped modules slotting into three different machine housings](/assets/images/antigravity-skill-format-gemini-flash-hero.webp)
 *The same skill module dropping into different agent harnesses unchanged.*
 
 ## Why read this
@@ -110,7 +110,7 @@ For the Antigravity skill: `SKILL.md` is 13,735 bytes across 314 lines, of which
 
 Our own corpus, across 1911 skills, has a median of 154 lines, a mean of 189.3, and a maximum of 2063. Code share runs to a median of 18.5 percent and a mean of 19.5 percent. 1379 skills (72.2 percent) carry a "Use when" trigger in their description and 1396 (73.1 percent) keep frontmatter to just `name` and `description`. Only 154 (8.1 percent) ship a bundled `scripts/` directory.
 
-![Bar chart comparing code share of skill files](/assets/images/antigravity-skill-format-gemini-flash-results.png)
+![Bar chart comparing code share of skill files](/assets/images/antigravity-skill-format-gemini-flash-results.webp)
 *Code fence line share of SKILL.md under identical counting rules. The Antigravity skill's 54.5 percent sits well above our corpus median of 18.5 percent but below our toolkit-class skills, which prescribe execution steps most tightly.*
 
 The comparison sharpens the picture. The Antigravity skill is twice as long as our median and close to three times as code-dense. Yet within our own corpus the skills that prescribe execution most tightly run denser still: pillow-toolkit at 679 lines and 87.3 percent, exiftool-toolkit at 519 lines and 85.9 percent, vips-toolkit at 483 lines and 77.0 percent. The median sits at 18.5 percent because the corpus also holds many prose-shaped skills that describe routing rules or judgment criteria.

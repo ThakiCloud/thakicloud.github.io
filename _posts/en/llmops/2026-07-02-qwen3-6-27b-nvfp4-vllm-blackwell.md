@@ -20,7 +20,7 @@ categories:
   - llmops
 ---
 
-![Illustration of the core idea of Qwen3.6-27B in NVFP4: The Economics of Single-GPU Blackwell Serving](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-hero.png)
+![Illustration of the core idea of Qwen3.6-27B in NVFP4: The Economics of Single-GPU Blackwell Serving](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Overview

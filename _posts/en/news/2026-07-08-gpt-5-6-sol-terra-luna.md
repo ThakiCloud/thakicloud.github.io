@@ -21,7 +21,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/gpt-5-6-sol-terra-luna/"
 ---
 
-![Abstract illustration of three orbiting concepts]({{ '/assets/images/gpt-5-6-sol-terra-luna-hero.png' | relative_url }})
+![Abstract illustration of three orbiting concepts]({{ '/assets/images/gpt-5-6-sol-terra-luna-hero.webp' | relative_url }})
 
 OpenAI is rolling out GPT-5.6 this Thursday, not as a single model but as three separate tiers: Sol, Terra, and Luna. A preview is already live for a small set of trusted partners, and according to OpenAI, a broad rollout follows on July 9 after review and approval from the US Department of Commerce. The announcement itself was a short line, but the structural shift packed into it directly affects how every organization using these models makes design decisions.
 
@@ -51,7 +51,7 @@ Pricing is where the tier structure shows itself most clearly. Per million token
 | Terra | $2.50 | $15.00 | Customer support, internal tools, document analysis |
 | Luna | $1.00 | $6.00 | Summarization, drafting, repetitive automation |
 
-![Comparison of per-tier input and output pricing per million tokens]({{ '/assets/images/gpt-5-6-sol-terra-luna-results.png' | relative_url }})
+![Comparison of per-tier input and output pricing per million tokens]({{ '/assets/images/gpt-5-6-sol-terra-luna-results.webp' | relative_url }})
 
 On output pricing, Sol costs five times what Luna does. That multiplier is what creates routing economics. Send a low-difficulty task like summarization or drafting to Sol, and you're burning exactly five times the necessary cost. Send a security vulnerability analysis to Luna instead, and you save money but lose quality. In practice, the core challenge becomes the routing rule: deciding, for every incoming request, which tier it should go to.
 

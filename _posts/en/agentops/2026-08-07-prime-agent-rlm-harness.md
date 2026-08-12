@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/prime-agent-rlm-har
 
 This is for engineers building or operating long-running coding agents who keep running into context compaction and token cost. The short version: Prime Agent's idea of keeping context as a variable in a persistent kernel rather than in the prompt genuinely works, and in our reproduction the tokens the model actually consumed over the same session history dropped from 321,458 to 149. But that saving depends entirely on the kind of question being asked, and it shrinks by a factor of twenty the moment the model has to read raw text with its own eyes. Everything below lives in the gap between those two sentences.
 
-![An illustration of a persistent kernel holding a vast context while only thin queries pass in and out](/assets/images/prime-agent-rlm-harness-hero.png)
+![An illustration of a persistent kernel holding a vast context while only thin queries pass in and out](/assets/images/prime-agent-rlm-harness-hero.webp)
 *A single persistent kernel holds the whole session while the model pulls out only the fragments it needs.*
 
 ## Overview
@@ -96,7 +96,7 @@ The first run asked three aggregate questions: how many errors there were, what 
 
 Read in isolation those numbers are suspiciously good. So the second run went looking for the point where the advantage disappears. Same kernel, same tokenizer, only the nature of the question changed.
 
-![A log-scale bar chart comparing token consumption by question type](/assets/images/prime-agent-rlm-harness-results.png)
+![A log-scale bar chart comparing token consumption by question type](/assets/images/prime-agent-rlm-harness-results.webp)
 *Given the same history, the saving falls off sharply as the model needs to read more raw text.*
 
 S1, needing only aggregates, came to 149 tokens for a 2,157-fold reduction. S2, which added reading twelve lines of raw context around each of three errors, came to 717 tokens and 448-fold. S3, which had to read forty-line blocks from four files in full, rose to 3,234 tokens and settled at 99-fold.

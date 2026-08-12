@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/nvidia-nooa-agent-h
 
 This is for engineers building or operating an agent harness who are tired of prompt templates, tool schemas, callbacks, and workflow graphs living in four different places. The short version: NVIDIA's NOOA folds all of that into a single Python class and the fold holds up, but the one capability that decisively changes cost is pass-by-reference. When we reproduced it, a tool result of 3,200 pods dropped from 216,806 tokens of context to 700. The catch is that this framework executes model-generated code, and its own documentation states plainly that its validator is not a containment boundary. We checked, and that warning is accurate.
 
-![A single luminous blue polyhedron at the center with thin threads reaching out to distant glass panels](/assets/images/nvidia-nooa-agent-harness-hero.png)
+![A single luminous blue polyhedron at the center with thin threads reaching out to distant glass panels](/assets/images/nvidia-nooa-agent-harness-hero.webp)
 *The object stays live in the execution environment while only a thin reference reaches the model.*
 
 ## Overview
@@ -129,7 +129,7 @@ We chose an object we know well: a GPU pod inventory. We simulated a cluster-que
 | 800 | 216,856 | 54,214 | 2,799 | 699 | 98.71% |
 | 3,200 | 867,225 | 216,806 | 2,800 | 700 | 99.68% |
 
-![A log-scale chart where preview tokens stay flat near 700 while full serialization climbs past 200,000](/assets/images/nvidia-nooa-agent-harness-results-en.png)
+![A log-scale chart where preview tokens stay flat near 700 while full serialization climbs past 200,000](/assets/images/nvidia-nooa-agent-harness-results-en.webp)
 *Cost curves for the two ways of putting the same tool result into context. Log scale.*
 
 What the numbers show is not a reduction ratio but a slope. Full serialization grows in direct proportion to the data and reaches 216,806 tokens at 3,200 pods, which on its own exceeds a common 200k context window. The preview, by contrast, is 697 tokens at 50 pods and 700 tokens at 3,200, which is effectively flat. However large a result the tool returns, the context budget does not move. This property is why NVIDIA reported median session prompt peaks of 22k to 72k against 200k to 400k windows on SWE-bench, and why no summarization pass was needed.

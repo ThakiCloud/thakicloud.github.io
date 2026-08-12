@@ -25,7 +25,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 Anyone who has used a coding agent for a while eventually arrives at a natural question. Writing a precise spec and sharply reviewing a resulting diff is a different kind of work from actually typing out code line by line, so why should the same single model have to do both? The recently released and widely discussed `fable-advisor` plugin answers this question head on. It is a cross-vendor workflow in which **Claude Fable 5 does nothing but conduct, while Grok 4.5 handles all of the actual implementation**. If your team is weighing the cost and quality of a coding agent together, this structure of splitting models by role offers a design principle you can put to use right away.
 
-![Illustration of the core idea of A Cross-Vendor Workflow Where Fable 5 Conducts and Grok 4.5 Implements: fable-advisor](/assets/images/fable-advisor-multi-model-orchestration-hero.png)
+![Illustration of the core idea of A Cross-Vendor Workflow Where Fable 5 Conducts and Grok 4.5 Implements: fable-advisor](/assets/images/fable-advisor-multi-model-orchestration-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Overview

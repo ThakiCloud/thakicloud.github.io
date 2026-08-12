@@ -12,7 +12,7 @@ tags:
   - 비용구조
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/rented-lifeline-si-cloud/strip.png
+image: /assets/images/posts/만화/rented-lifeline-si-cloud/strip.webp
 video: /assets/videos/posts/만화/rented-lifeline-si-cloud/comic.mp4
 audiobook: /assets/audio/posts/rented-lifeline-si-cloud/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 국내 시스템 통합(SI) 대형 4개사가 클라우드로 실적을 방어했다는 소식입니다. SI는 원래 남의 회사 전산 시스템을 설계하고 지어주던 업이죠. 그 자리를 지금은 퍼블릭 클라우드를 떼다 파는 재판매와 운영 대행이 채웁니다. 매출은 지켰는데 원가표는 남이 씁니다. 밥줄이라는 그 넝쿨이 정확히 누구 나무에 달려 있는지, 정글에서 한번 따라가 봅니다.
 
-![밥줄이 남의 나무에 달렸다](/assets/images/posts/만화/rented-lifeline-si-cloud/strip.png)
+![밥줄이 남의 나무에 달렸다](/assets/images/posts/만화/rented-lifeline-si-cloud/strip.webp)
 
 > 원 뉴스: ["클라우드가 밥줄"…SI 빅4, AI 타고 실적 방어](https://n.news.naver.com/mnews/article/008/0005394916?sid=105) · bespin
 
 **▶ 만화 영상판: 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/rented-lifeline-si-cloud/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/rented-lifeline-si-cloud/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/rented-lifeline-si-cloud/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/rented-lifeline-si-cloud/comic.ko.vtt" default>
 </video>
@@ -45,11 +45,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![rented-lifeline-si-cloud 슬라이드 1](/assets/images/rented-lifeline-si-cloud-slide-01.png)
+![rented-lifeline-si-cloud 슬라이드 1](/assets/images/rented-lifeline-si-cloud-slide-01.webp)
 
-![rented-lifeline-si-cloud 슬라이드 2](/assets/images/rented-lifeline-si-cloud-slide-02.png)
+![rented-lifeline-si-cloud 슬라이드 2](/assets/images/rented-lifeline-si-cloud-slide-02.webp)
 
-![rented-lifeline-si-cloud 슬라이드 3](/assets/images/rented-lifeline-si-cloud-slide-03.png)
+![rented-lifeline-si-cloud 슬라이드 3](/assets/images/rented-lifeline-si-cloud-slide-03.webp)
 
-![rented-lifeline-si-cloud 슬라이드 4](/assets/images/rented-lifeline-si-cloud-slide-04.png)
+![rented-lifeline-si-cloud 슬라이드 4](/assets/images/rented-lifeline-si-cloud-slide-04.webp)
 

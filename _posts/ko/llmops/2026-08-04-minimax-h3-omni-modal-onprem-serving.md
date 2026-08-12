@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/minimax-h3-omni-modal
 
 오픈웨이트 모델이 공개되면 가장 먼저 도는 문장은 대개 이런 형태입니다. 이제 누구나 자기 서버에서 돌릴 수 있습니다. MiniMax가 2026년 7월 31일 공개한 H3에도 같은 문장이 붙었습니다. 텍스트와 이미지, 영상, 오디오를 한 컨텍스트에서 이해하고 최대 2K 해상도로 15초짜리 영상을 네이티브 스테레오 오디오와 함께 생성하는 모델입니다. 그런데 가중치가 공개됐다는 사실과 우리 클러스터에서 돌아간다는 사실 사이에는, 파일 목록을 열어 보고 계산해 봐야 알 수 있는 거리가 있습니다.
 
-![겹겹의 프레임 띠와 파형 띠가 하나의 가닥으로 꼬여 흐르는 모습을 형상화한 추상 이미지](/assets/images/minimax-h3-omni-modal-onprem-serving-hero.png)
+![겹겹의 프레임 띠와 파형 띠가 하나의 가닥으로 꼬여 흐르는 모습을 형상화한 추상 이미지](/assets/images/minimax-h3-omni-modal-onprem-serving-hero.webp)
 
 *영상과 소리를 따로 만들어 붙이는 대신 하나의 시퀀스에서 함께 뽑는다는 것이 H3 설계의 출발점입니다.*
 
@@ -118,7 +118,7 @@ pipe = DiffusionPipeline.from_pretrained(
 
 여기서 모델 카드의 한 문장이 중요해집니다. H3-Omni-Transformer의 33B 중 약 13B가 AdaLN 관련 분기에 있는데, AdaLN 변조 출력은 미리 계산해 캐시할 수 있으므로 추론 전용 배포에서는 이 파라미터를 로드할 필요가 없습니다. 전체 가중치를 공개한 것은 파인튜닝을 포함한 후속 개발을 지원하기 위해서입니다. 그러니 추론만 하실 계획이라면 트랜스포머 쪽은 약 20B, bf16 기준 37.5 GiB로 줄어듭니다.
 
-![모듈별 가중치 실측과 클립 설정별 토큰 시퀀스 길이 차트](/assets/images/minimax-h3-omni-modal-onprem-serving-results.png)
+![모듈별 가중치 실측과 클립 설정별 토큰 시퀀스 길이 차트](/assets/images/minimax-h3-omni-modal-onprem-serving-results.webp)
 
 *왼쪽은 파일 매니페스트에서 합산한 모듈별 가중치이고 오른쪽은 VAE 압축 계수로 유도한 시퀀스 길이입니다.*
 

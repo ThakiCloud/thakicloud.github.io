@@ -407,11 +407,11 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-pow
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 1](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-01.png)
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 1](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-01.webp)
 
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 2](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-02.png)
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 2](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-02.webp)
 
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 3](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-03.png)
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 3](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-03.webp)
 
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 4](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-04.png)
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 4](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-04.webp)
 

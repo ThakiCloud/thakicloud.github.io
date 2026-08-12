@@ -26,7 +26,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/llm-vuln-research-h
 
 This is for security engineers trying to attach an LLM to code auditing or vulnerability hunting, and for platform owners who have to decide whether a human can trust what the agent produced. The conclusion first: what separates usable output from noise in this space is not which model you picked, but **whether your pipeline contains a separate stage designed to refute its own findings**. Line up six public harnesses and you find different teams arriving independently at the same answer. Separate the stage that finds things from the stage that believes them, and make the believing stage argue the other side.
 
-![A wide beam of light narrowing into a single precise line as it passes through five successive glass gates](/assets/images/llm-vuln-research-harness-hero.png)
+![A wide beam of light narrowing into a single precise line as it passes through five successive glass gates](/assets/images/llm-vuln-research-harness-hero.webp)
 *A visual for the shape of the pipeline: broad candidates entering, a trustworthy few leaving.*
 
 ## Overview

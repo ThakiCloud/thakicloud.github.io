@@ -27,7 +27,7 @@ Over the weekend Cursor published a striking demo. It handed a swarm of agents t
 
 The numbers grab attention, but the point of this post is not the spectacle of the demo. LinkedIn and X timelines carried a single sentence: "AI rewrote SQLite." We did not just repeat it. We checked Cursor's official blog and the original announcement directly. The real story is not "it worked" versus "it failed," but that **the same result cost up to 15x more depending on how the models were composed**. For anyone actually operating multi-agent systems, what that 15x means is the heart of this article.
 
-![Abstract image of an agent swarm of autonomous nodes converging into a single branching tree structure]({{ '/assets/images/cursor-agent-swarm-sqlite-rust-hero.png' | relative_url }})
+![Abstract image of an agent swarm of autonomous nodes converging into a single branching tree structure]({{ '/assets/images/cursor-agent-swarm-sqlite-rust-hero.webp' | relative_url }})
 
 ## What happened
 

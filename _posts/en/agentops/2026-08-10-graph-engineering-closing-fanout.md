@@ -20,7 +20,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/graph-engineering-closing-fanout/"
 ---
 
-![Concept art of nodes fanning out and converging back through a narrow gate](/assets/images/graph-engineering-closing-fanout-hero.png)
+![Concept art of nodes fanning out and converging back through a narrow gate](/assets/images/graph-engineering-closing-fanout-hero.webp)
 *Fanning out is easy. The gate that merges everything back is the hard part.*
 
 ## Why This Matters to You

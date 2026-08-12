@@ -12,7 +12,7 @@ tags:
   - sovereign-ai
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/engineering-buzzword-shelf/strip.png
+image: /assets/images/posts/만화/engineering-buzzword-shelf/strip.webp
 video: /assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4
 ---
 
@@ -20,13 +20,13 @@ video: /assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4
 각각을 한 줄로 풀면 이렇습니다. 프롬프트는 무엇을 어떻게 물을지, 컨텍스트는 무엇을 얼마나 보여줄지, 하니스는 모델 주위에 붙이는 배선(도구·검증 게이트·출력 계약), 루프는 결과를 다시 넣어 통과할 때까지 반복하는 것, 그래프는 그 단계들을 노드와 간선으로 엮어 흐름을 고정하는 것입니다.
 다섯 개 다 쓸모 있는 개념이고, 저희도 매일 씁니다. 다만 이름이 다섯 개로 늘어난다고 문제가 다섯 개로 쪼개지진 않습니다. 늘어나는 건 보통 청구서의 항목 수예요.
 
-![이름만 다섯 번 바뀐 그거](/assets/images/posts/만화/engineering-buzzword-shelf/strip.png)
+![이름만 다섯 번 바뀐 그거](/assets/images/posts/만화/engineering-buzzword-shelf/strip.webp)
 
 > 원 뉴스: [RT @akshay_pachaar: from prompt → context → harness → loop → graph engineering.](https://x.com/hjguyhan/status/2082589434772681072) · twitter
 
 **▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/engineering-buzzword-shelf/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/engineering-buzzword-shelf/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/engineering-buzzword-shelf/comic.ko.vtt" default>
 </video>

@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 코딩 에이전트를 사내에 붙여 본 팀이라면 대체로 같은 벽을 만납니다. 데모에서는 잘 돌던 에이전트가 실제 저장소에 들어오는 순간 절반쯤에서 멈춥니다. 테스트를 못 돌리고, 의존성이 없고, 로컬에서만 통하던 환경 변수를 모릅니다. 그래서 사람들은 모델을 바꿔 봅니다. 2026년 7월 30일에 Cursor가 공개한 사내 구축기는 그 반사 반응이 대체로 틀렸다고 말합니다.
 
-![각자의 격리된 실행 공간을 가진 여러 에이전트가 하나의 통합 파이프라인으로 수렴하는 구조를 형상화한 추상 이미지](/assets/images/cursor-cloud-agent-environment-56-percent-prs-hero.png)
+![각자의 격리된 실행 공간을 가진 여러 에이전트가 하나의 통합 파이프라인으로 수렴하는 구조를 형상화한 추상 이미지](/assets/images/cursor-cloud-agent-environment-56-percent-prs-hero.webp)
 
 *각 에이전트가 자기 환경을 갖고 병렬로 일한 결과가 하나의 저장소로 모입니다.*
 
@@ -33,14 +33,14 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 이 글은 사내에 코딩 에이전트나 자율 실행 에이전트를 실제로 배치해야 하는 플랫폼 엔지니어, 그리고 그 실행 기반을 어디에 어떻게 놓을지 결정해야 하는 분을 위해 썼습니다. 결론을 먼저 말씀드리면, **에이전트 출력 품질을 가르는 최대 변수는 모델 등급이 아니라 에이전트가 코드를 실행하고 검증할 수 있는 개발 환경이며, 그 환경은 부수 작업이 아니라 사용자가 에이전트인 별도의 제품으로 취급해야 합니다.** Cursor는 이 판단 위에서 사내 머지 PR 중 에이전트 기여 비율을 작년 12월 10분의 1 수준에서 56%까지 끌어올렸습니다. 이 글에서는 그 구축기를 뜯어보고, 같은 문제를 푸는 우리 제품 관점에서 무엇을 가져갈 수 있는지 정리합니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/cursor-cloud-agent-environment-56-percent-prs/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/cursor-cloud-agent-environment-56-percent-prs/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 개요
 
 Cursor는 2026년 7월 30일 Mathew Hogan과 Arvind Saripalli 명의로 [How we set up our cloud agent environment](https://cursor.com/blog/cloud-agent-environment)를 공개했습니다. 같은 날 공식 계정이 X에 올린 한 문장이 이 글의 큐가 되었습니다. 작년 12월에는 Cursor 모노레포에 머지된 PR 열 건 중 한 건이 클라우드 에이전트에서 나왔는데, 지금은 그 비율이 56%라는 내용입니다. 회사 블로그의 표현으로는 "지금은 절반 이상을 에이전트가 쓴다"입니다.
 
-![2025년 12월 10%에서 2026년 7월 56%로 올라간 클라우드 에이전트 기여 비율과, 그 원인이 모델이 아니라 완전한 개발 환경이라는 정리](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-02.png)
+![2025년 12월 10%에서 2026년 7월 56%로 올라간 클라우드 에이전트 기여 비율과, 그 원인이 모델이 아니라 완전한 개발 환경이라는 정리](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-02.webp)
 
 *작년 12월 10분의 1에서 56%로. 회사가 지목한 원인은 모델 교체가 아니었습니다.*
 
@@ -54,7 +54,7 @@ Cursor가 말하는 클라우드 에이전트는 서버에 올린 로컬 에이�
 
 이 그림이 성립하려면 최소 세 가지가 필요하다는 것이 회사의 정리입니다. 내구성 있는 실행 플랫폼, 강력한 하네스, 그리고 에이전트에게 현실적인 개발 환경을 제공하는 도구와 인프라입니다.
 
-![클라우드 에이전트 인프라의 세 가지 조건인 내구 실행 플랫폼, 서브에이전트 하네스, 현실적인 개발 환경 도구를 정리한 도표](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-04.png)
+![클라우드 에이전트 인프라의 세 가지 조건인 내구 실행 플랫폼, 서브에이전트 하네스, 현실적인 개발 환경 도구를 정리한 도표](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-04.webp)
 
 *세 축 중 하나만 빠져도 나머지가 제 역할을 못 합니다.*
 
@@ -77,7 +77,7 @@ flowchart TB
 
 옮긴 뒤의 에이전트 루프는 추론 안정성이 잠깐 흔들려도, 파드가 동면했다가 깨어나도, 실행이 며칠이나 몇 주에 걸쳐도 살아남습니다. 회사는 이 마이그레이션만으로 신뢰도가 두 자리 나인을 넘었다고 밝혔습니다. 현재 Temporal은 700만 개가 넘는 고유 워크플로에 대해 하루 5천만 건 이상의 액션을 처리합니다.
 
-![Temporal 이관 이후의 고유 워크플로 700만 개, 일일 액션 5천만 건, 두 자리 나인 신뢰도 수치](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-05.png)
+![Temporal 이관 이후의 고유 워크플로 700만 개, 일일 액션 5천만 건, 두 자리 나인 신뢰도 수치](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-05.webp)
 
 *장시간 실행 에이전트는 결국 워크플로 엔진 문제로 수렴합니다.*
 
@@ -95,7 +95,7 @@ flowchart TB
 
 이 구축기에서 가장 옮겨 적을 만한 문장은 개발 환경을 그 자체로 하나의 제품으로 본다는 선언입니다. 다만 그 제품의 사용자가 사람이 아니라 에이전트입니다.
 
-![로컬과 클라우드 환경 동기화, 암묵지 제거, 지속적인 환경 건전성 관리라는 세 가지 실무 과제](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-07.png)
+![로컬과 클라우드 환경 동기화, 암묵지 제거, 지속적인 환경 건전성 관리라는 세 가지 실무 과제](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-07.webp)
 
 *환경의 사용자가 사람이 아니라 에이전트라면 요구 조건도 달라집니다.*
 
@@ -113,7 +113,7 @@ flowchart TB
 
 에이전트에게 실행 권한을 주는 순간 보안 표면이 넓어집니다. Cursor는 보안팀과 함께 네 가지를 제품에 넣었습니다. 네트워크 이그레스 제한, 범위가 제한되고 프록시를 거치는 git 원격 접근, 커밋과 커밋 메시지에 대한 시크릿 스캐닝, 그리고 도구 실행 결과에서의 시크릿 마스킹입니다.
 
-![네트워크 이그레스 제한, 프록시 기반 git 접근, 커밋 시크릿 스캐닝, 도구 결과 시크릿 마스킹으로 이루어진 최소 보안 체크리스트](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-08.png)
+![네트워크 이그레스 제한, 프록시 기반 git 접근, 커밋 시크릿 스캐닝, 도구 결과 시크릿 마스킹으로 이루어진 최소 보안 체크리스트](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-08.webp)
 
 *실행 격리만으로는 부족하고 나가는 트래픽과 자격 증명 경로를 함께 막아야 합니다.*
 
@@ -138,7 +138,7 @@ flowchart TB
 
 **Paxis 관점.** Paxis는 ThakiCloud의 Agent-Native Cloud로, Skills와 Tools, Policies, Audit Logs를 일급 리소스로 다룹니다. Cursor의 구축기는 이 설계가 향하는 방향과 상당 부분 겹칩니다. 960개가 넘는 스킬을 BM25로 선택해 격리 샌드박스에서 실행하는 Skill Harness는 Cursor가 말하는 하네스와 실행 환경의 조합에 해당합니다. 모든 행동을 정책 게이트와 감사 로그로 통과시키는 구조는 이그레스 제한과 시크릿 스캐닝이 풀려던 문제와 같은 자리에 있습니다.
 
-![Cursor의 하네스와 보안 제어가 Paxis의 Skill Harness 및 Policy Gates와 대응되는 구조 비교](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-09.png)
+![Cursor의 하네스와 보안 제어가 Paxis의 Skill Harness 및 Policy Gates와 대응되는 구조 비교](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-09.webp)
 
 *Cursor가 자체 인프라로 푼 문제를 Paxis는 일급 리소스로 다룹니다.*
 
@@ -146,7 +146,7 @@ flowchart TB
 
 **ai-platform 관점.** Cursor가 별도로 공개한 [자체 인프라 실행 옵션](https://cursor.com/blog/self-hosted-cloud-agents)은 우리 고객군과 직결됩니다. 워커 프로세스가 아웃바운드 HTTPS로만 연결되고 인바운드 포트나 방화벽 변경, VPN 터널을 요구하지 않는 구조여서, 코드와 도구 실행과 빌드 아티팩트가 고객 네트워크를 벗어나지 않습니다. 국내 공공과 금융, 제조 고객이 반복해서 요구하는 조건이 정확히 이것입니다.
 
-![고객 네트워크 안에서 추론과 실행과 빌드가 끝나고 아웃바운드 HTTPS만 나가는 구조, 그리고 Kueue 기반 GPU 스케줄링이 에이전트 경제성으로 이어지는 관계](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-10.png)
+![고객 네트워크 안에서 추론과 실행과 빌드가 끝나고 아웃바운드 HTTPS만 나가는 구조, 그리고 Kueue 기반 GPU 스케줄링이 에이전트 경제성으로 이어지는 관계](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-10.webp)
 
 *인바운드 포트 없이 아웃바운드 HTTPS만으로 경계를 유지하는 구성입니다.*
 
@@ -166,14 +166,14 @@ ai-platform은 K8s와 Kueue 기반 GPU 스케줄링, vLLM 서빙, 멀티테넌�
 
 Cursor의 구축기가 남기는 한 줄은 이것입니다. 클라우드 에이전트를 도입하는 일은 모델을 고르는 일이 아니라 에이전트가 살 환경을 만드는 일입니다. 머지 PR의 10분의 1에서 56%로 가는 구간에서 회사가 실제로 투자한 대상은 내구 실행 계층과 전용 실행 환경, 그리고 저장소의 명시성이었습니다.
 
-![저장소 명시성, 장시간 실행 엔진 자체 개발 여부, 아웃바운드 트래픽과 자격 증명 정책 게이트라는 세 가지 점검 항목](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-12.png)
+![저장소 명시성, 장시간 실행 엔진 자체 개발 여부, 아웃바운드 트래픽과 자격 증명 정책 게이트라는 세 가지 점검 항목](/assets/images/cursor-cloud-agent-environment-56-percent-prs-slide-12.webp)
 
 *모델을 한 단계 올리기 전에 점검할 세 가지입니다.*
 
 에이전트 플랫폼을 설계하고 계시다면 다음 세 가지를 이번 주 안에 점검해 볼 만합니다. 우리 저장소는 부족 지식 없이 에이전트가 빌드와 테스트를 돌릴 수 있는 상태인가, 장시간 실행을 우리가 직접 만들고 있지는 않은가, 그리고 에이전트가 나가는 트래픽과 자격 증명 경로에 정책 게이트가 걸려 있는가입니다. 이 세 항목에서 막힌다면 모델을 한 단계 올리는 것보다 그쪽을 먼저 손보는 편이 효과가 큽니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/cursor-cloud-agent-environment-56-percent-prs/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/cursor-cloud-agent-environment-56-percent-prs/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

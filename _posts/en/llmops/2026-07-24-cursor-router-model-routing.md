@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/cursor-router-model-r
 
 If your team runs a multi-model AI coding setup and keeps getting surprised by the monthly inference bill, this is for you. The conclusion up front: routing that classifies each request and assigns exactly as much intelligence as it needs is a practical lever that cuts cost by 30 to 60 percent while holding quality nearly steady. Cursor Router, which Cursor released in July 2026, proved this at scale with real usage data. And the same principle is a pattern ThakiCloud already runs every day inside its own agent stack.
 
-![An abstract image showing a request flow splitting at a fork into two paths of different thickness](/assets/images/cursor-router-model-routing-hero.png)
+![An abstract image showing a request flow splitting at a fork into two paths of different thickness](/assets/images/cursor-router-model-routing-hero.webp)
 *An illustration of routing that assigns exactly as much intelligence as each request needs.*
 
 ## Why read this

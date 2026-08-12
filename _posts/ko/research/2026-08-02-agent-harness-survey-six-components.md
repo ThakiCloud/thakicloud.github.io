@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 에이전트가 기대만큼 안 움직이면 대부분 모델부터 의심합니다. 등급을 올리고, 프롬프트를 다시 쓰고, 그래도 안 되면 다음 모델을 기다립니다. 그런데 2026년 들어 쌓인 보고들은 다른 곳을 가리킵니다. 같은 모델을 서로 다른 껍데기에 넣었더니 점수가 몇 배씩 벌어졌다는 관찰이 반복해서 나왔습니다. 그 껍데기를 부르는 이름이 하네스입니다. 이번에 정리된 서베이 한 편은 이 껍데기에 처음으로 형식과 부품 목록을 붙였습니다.
 
-![여섯 개의 부품이 하나의 골격으로 맞물리며 가운데 빈 모델 자리를 감싸는 모습을 형상화한 추상 이미지](/assets/images/agent-harness-survey-six-components-hero.png)
+![여섯 개의 부품이 하나의 골격으로 맞물리며 가운데 빈 모델 자리를 감싸는 모습을 형상화한 추상 이미지](/assets/images/agent-harness-survey-six-components-hero.webp)
 
 *가운데 자리는 비어 있어도 골격이 형태를 결정합니다. 하네스 논의를 한 장으로 옮기면 이런 그림입니다.*
 
@@ -33,7 +33,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 이 글은 에이전트를 데모가 아니라 프로덕션에 올려야 하는 플랫폼 엔지니어와, 성능이 안 나올 때 모델 등급을 올릴지 하네스를 고칠지 결정해야 하는 팀 리드를 위해 썼습니다. 결론을 먼저 말씀드리면, **이 서베이의 진짜 기여는 "하네스가 중요하다"는 주장이 아니라 하네스를 여섯 개 부품으로 쪼개서 무엇이 비었는지 셀 수 있게 만든 완전성 행렬입니다.** 주장은 이미 업계 상식에 가까웠고, 없던 것은 측정 도구였습니다. 이 글에서는 그 여섯 축이 무엇인지 짚고, 같은 자로 ThakiCloud가 실제로 돌리는 하네스를 재서 나온 숫자와 그 과정에서 발견한 구멍 두 곳까지 그대로 공개합니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-harness-survey-six-components/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-harness-survey-six-components/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 개요
@@ -42,7 +42,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 규모부터 보면 성격이 드러납니다. 논문과 블로그, 기술 보고서를 합쳐 110편이 넘는 자료를 모으고, 실제로 돌아가는 에이전트 시스템 23개를 같은 표 위에 올렸습니다. 그리고 아홉 개의 미해결 기술 과제를 남겼습니다. 새 기법을 하나 제안하는 논문이 아니라, 흩어져 있던 엔지니어링 관행에 좌표계를 씌우는 작업입니다.
 
-![프롬프트 엔지니어링에서 컨텍스트 엔지니어링을 거쳐 하네스 계층으로 차별화 지점이 이동하는 흐름을 나타낸 슬라이드](/assets/images/agent-harness-survey-six-components-slide-03.png)
+![프롬프트 엔지니어링에서 컨텍스트 엔지니어링을 거쳐 하네스 계층으로 차별화 지점이 이동하는 흐름을 나타낸 슬라이드](/assets/images/agent-harness-survey-six-components-slide-03.webp)
 
 *모델이 비슷해질수록 남는 변수는 그 바깥으로 이동합니다.*
 
@@ -50,7 +50,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 숫자로도 뒷받침이 나옵니다. [하네스 설계와 사후 학습의 상호작용을 다룬 논문(arXiv:2606.25447)](https://arxiv.org/abs/2606.25447)은 하네스를 도구 노출 방식, 도구 설명 방식, 매 스텝 관측에 따라붙는 부가 정보의 조합으로 정의하고, 설계 노력을 최소화한 하네스에서는 도구 환경이 조금만 바뀌어도 사후 학습의 이득이 급격히 무너진다는 것을 보였습니다. 관련 문헌은 하네스만 바꿔도 정확도가 최대 6배 가까이 벌어진 사례를 인용합니다. 모델 세대 하나를 건너뛰는 것과 맞먹거나 그보다 큰 폭입니다.
 
-![하네스 설계에 따라 정확도가 최대 6배까지 벌어진다는 것을 강조한 슬라이드](/assets/images/agent-harness-survey-six-components-slide-02.png)
+![하네스 설계에 따라 정확도가 최대 6배까지 벌어진다는 것을 강조한 슬라이드](/assets/images/agent-harness-survey-six-components-slide-02.webp)
 
 *모델 세대 교체를 뛰어넘는 차이가 아키텍처 계층에서 발생합니다.*
 
@@ -81,7 +81,7 @@ flowchart TB
 
 이 구분이 실무에서 왜 중요한지는 예를 들면 바로 보입니다. 에이전트가 승인 없이 배포를 실행하면 안 된다는 요구는 안전성입니다. 한 번 위반하면 그것으로 끝이고, 나중에 잘한다고 상쇄되지 않습니다. 반면 에이전트가 언젠가는 종료 조건에 도달해야 한다는 요구는 활성입니다. 무한 루프는 안전성 위반이 아니라 활성 위반이고, 둘을 같은 방식으로 방어하면 한쪽이 반드시 뚫립니다. 승인 게이트로 무한 루프를 막을 수 없고, 반복 상한으로 권한 이탈을 막을 수 없습니다. 하네스 설계 논의가 자주 겉도는 이유가 이 둘을 뭉뚱그려 "안정성"이라고 부르기 때문입니다.
 
-![안전성과 활성을 나란히 비교하고 각각을 서로 다른 방식으로 방어해야 함을 보여주는 슬라이드](/assets/images/agent-harness-survey-six-components-slide-05.png)
+![안전성과 활성을 나란히 비교하고 각각을 서로 다른 방식으로 방어해야 함을 보여주는 슬라이드](/assets/images/agent-harness-survey-six-components-slide-05.webp)
 
 *두 속성은 서로 다른 장치로 막아야 합니다. 한쪽 장치로 다른 쪽을 덮을 수 없습니다.*
 
@@ -117,7 +117,7 @@ python3 scripts/loops/build_loop_registry.py --check
 # loops=51 edges=12 missing_run_script=2 warnings=2
 ```
 
-![여섯 부품별로 채워진 정도를 비교한 막대 그래프](/assets/images/agent-harness-survey-six-components-results.png)
+![여섯 부품별로 채워진 정도를 비교한 막대 그래프](/assets/images/agent-harness-survey-six-components-results.webp)
 
 *여섯 축 중 다섯은 두껍고, 검증 축만 유독 얇습니다.*
 
@@ -131,7 +131,7 @@ python3 scripts/loops/build_loop_registry.py --check
 
 **L 루프와 라이프사이클**은 레지스트리에 51개 루프가 등록되어 있고 그중 12개의 신호 간선이 루프끼리를 잇습니다. 그런데 여기서 실제 구멍이 나왔습니다. 검증 명령이 `missing_run_script=2`를 반환했습니다. 레지스트리에 선언은 되어 있는데 실행 스크립트가 연결되지 않은 루프가 두 개 있다는 뜻입니다. 경고도 두 건 잡혔습니다. 여섯 축으로 재보지 않았다면 그냥 지나갔을 항목입니다.
 
-![루프 레지스트리에 선언만 되어 있고 실행 스크립트가 연결되지 않은 항목 두 개를 스캔이 잡아낸 화면을 형상화한 슬라이드](/assets/images/agent-harness-survey-six-components-slide-08.png)
+![루프 레지스트리에 선언만 되어 있고 실행 스크립트가 연결되지 않은 항목 두 개를 스캔이 잡아낸 화면을 형상화한 슬라이드](/assets/images/agent-harness-survey-six-components-slide-08.webp)
 
 *아무 증상도 내지 않던 구멍입니다. 진단 행렬을 대보고 나서야 드러났습니다.*
 
@@ -159,7 +159,7 @@ python3 scripts/loops/build_loop_registry.py --check
 
 둘째, 여섯 축이 서로 직교하지 않습니다. 컨텍스트 압축은 C축의 문제처럼 보이지만 무엇을 버릴지는 S축이 무엇을 보관하는지에 달려 있고, 루프 종료 조건은 L축이지만 판정은 V축이 합니다. 실제 시스템에서는 한 축을 고치면 다른 축이 흔들립니다. 표가 깔끔한 만큼 현실은 얽혀 있습니다.
 
-![여섯 축이 서로 얽혀 있어 한 축을 고치면 다른 축이 흔들린다는 점을 표현한 슬라이드](/assets/images/agent-harness-survey-six-components-slide-10.png)
+![여섯 축이 서로 얽혀 있어 한 축을 고치면 다른 축이 흔들린다는 점을 표현한 슬라이드](/assets/images/agent-harness-survey-six-components-slide-10.webp)
 
 *품질 측정 도구가 아니라 진단 도구입니다. 축들은 서로 얽혀 있습니다.*
 
@@ -176,7 +176,7 @@ python3 scripts/loops/build_loop_registry.py --check
 다음에 에이전트 파이프라인이 기대만큼 안 나올 때, 모델 카탈로그를 열기 전에 여섯 축을 한 줄씩 적어보시길 권합니다. 어느 칸이 비었는지 세는 데는 오 분이면 충분하고, 그 오 분이 모델 등급 하나보다 더 큰 차이를 만드는 경우가 생각보다 많습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-harness-survey-six-components/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-harness-survey-six-components/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

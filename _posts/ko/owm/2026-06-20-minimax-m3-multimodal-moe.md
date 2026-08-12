@@ -99,11 +99,11 @@ M2.7 기반 워크로드가 이미 있다면 M3로 업그레이드할 때 추론
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![minimax-m3-multimodal-moe 슬라이드 1](/assets/images/minimax-m3-multimodal-moe-slide-01.png)
+![minimax-m3-multimodal-moe 슬라이드 1](/assets/images/minimax-m3-multimodal-moe-slide-01.webp)
 
-![minimax-m3-multimodal-moe 슬라이드 2](/assets/images/minimax-m3-multimodal-moe-slide-02.png)
+![minimax-m3-multimodal-moe 슬라이드 2](/assets/images/minimax-m3-multimodal-moe-slide-02.webp)
 
-![minimax-m3-multimodal-moe 슬라이드 3](/assets/images/minimax-m3-multimodal-moe-slide-03.png)
+![minimax-m3-multimodal-moe 슬라이드 3](/assets/images/minimax-m3-multimodal-moe-slide-03.webp)
 
-![minimax-m3-multimodal-moe 슬라이드 4](/assets/images/minimax-m3-multimodal-moe-slide-04.png)
+![minimax-m3-multimodal-moe 슬라이드 4](/assets/images/minimax-m3-multimodal-moe-slide-04.webp)
 

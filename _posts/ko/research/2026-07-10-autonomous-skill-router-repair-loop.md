@@ -25,17 +25,17 @@ SkillWeaver로 대표되는 선행 연구는 compositional skill routing의 병�
 
 결과는 명확했습니다. 스텝 커버리지는 57.1%에서 71.2%로 14.1포인트 올랐고, 체인 전체 완료율은 25.0%에서 50.0%로 두 배가 됐습니다. 루프는 딱 두 번의 반복 만에 수렴했는데, 1회차에서 발견한 11건의 미스 중 9건에 패치를 적용했고, 2회차에서는 남은 6건의 미스 어느 것도 새로 패치하지 못해 "새 패치 0건" 조건으로 자연스럽게 멈췄습니다. 최대 반복 한도인 5회에는 전혀 도달하지 않았습니다.
 
-![Step Coverage: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/step-coverage-improvement.png' | relative_url }})
+![Step Coverage: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/step-coverage-improvement.webp' | relative_url }})
 *compositional 벤치마크(n=12, SINGLE 전략, top_k=8) 상에서 루프 적용 전후 스텝 커버리지를 나타낸 실측 결과입니다. 사람 개입 없이 57.1%에서 71.2%로 14.1포인트 상승했습니다.*
 
 이 루프에는 안전장치도 함께 설계돼 있습니다. 하나의 한글 토큰이 이미 다른 목표를 가리키는 사전 키로 등록돼 있으면 절대 덮어쓰지 않는 "선점승리(first-write-wins)" 정책입니다. 이번 실행에서는 19건의 원시 충돌 이벤트가 11개의 서로 다른 (토큰, 경합 대상) 쌍으로 정리됐는데, 그중에는 "논문"이라는 한 단어가 같은 케이스 안에서 서로 다른 두 스킬(academic-paper와 academic-paper-reviewer)을 동시에 가리켜야 하는, 평면적인 사전 구조로는 풀 수 없는 케이스 내부 모호성도 있었습니다. 이 보수적인 정책 덕분에 63개 케이스로 구성된 독립 회귀 벤치마크의 다섯 가지 지표(재현율, 게이트된 재현율, top-1 정확도, 환각률, 부정회피율)는 루프 적용 전후로 비트 단위까지 완전히 동일했습니다. 사전에 항목을 더하기만 할 뿐 기존 매핑을 건드리지 않기 때문에, 이미 잘 작동하던 질의를 망가뜨릴 가능성이 구조적으로 차단된 것입니다.
 
-![Chain Completion: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/chain-completion-doubling.png' | relative_url }})
+![Chain Completion: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/chain-completion-doubling.webp' | relative_url }})
 *같은 벤치마크에서 체인 전체 완료율(가짜 케이스 없이 모든 정답 스킬이 한 번에 검색되는 비율)이 루프 두 번 반복만으로 25.0%에서 50.0%로 두 배가 된 실측 결과입니다.*
 
 논문에서 가장 날카로운 발견은 따로 있습니다. 수렴 후에도 6건의 미스가 남았는데, 이 중 두 건은 정확히 맞는 패치(올바른 한국어 토큰, 올바른 영어 목표, 올바른 정답 스킬)가 적용됐음에도 여전히 top-8 안에 들지 못했습니다. 예를 들어 "아이디어 딥리서치"라는 하위 작업은 유일한 패치 가능 토큰이 정확히 deep-research로 패치됐고 어떤 충돌도 없었지만, 그래도 검색 결과에는 들지 못했습니다. BM25/IDF 기반 랭킹은 특정 토큰 하나의 유무가 아니라 전체 코퍼스의 점수 분포에 의해 결정되기 때문입니다. 즉 어휘 커버리지는 필요조건일 뿐 충분조건이 아니며, 이는 직전 연구가 제기한 "검색기 자체가 공동 병목"이라는 진단을 재확인하는 증거입니다.
 
-![Convergence Trace: Step Coverage Across Iterations]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/convergence-trace.png' | relative_url }})
+![Convergence Trace: Step Coverage Across Iterations]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/convergence-trace.webp' | relative_url }})
 *반복 회차별 스텝 커버리지 변화를 보여주는 실측 수렴 궤적입니다. 개선은 전부 1회차에서 일어났고, 2회차는 새 패치를 하나도 적용하지 못한 채 정지 조건으로 멈췄습니다.*
 
 ## 회사·사회·과학에 대한 기여

@@ -19,7 +19,7 @@ categories:
   - culture
 ---
 
-![صورة تجريدية لوقت الإنسان وهو يذوب في ضوء الروبوتات البشرية ومراكز البيانات]({{ '/assets/images/three-year-window-labor-to-assets-hero.png' | relative_url }})
+![صورة تجريدية لوقت الإنسان وهو يذوب في ضوء الروبوتات البشرية ومراكز البيانات]({{ '/assets/images/three-year-window-labor-to-assets-hero.webp' | relative_url }})
 
 ## نظرة عامة
 

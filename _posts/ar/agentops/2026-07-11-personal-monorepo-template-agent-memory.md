@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 عند استخدام عامل البرمجة يوميًا، يصطدم المرء مرارًا بحائط واحد. القرارات التي اتُّخذت أمس، الأعراف التي حُدّدت الأسبوع الماضي، أسلوب عمل زميل معيّن، كل هذا يعيد العامل سؤاله عنه في كل جلسة وكأنه يسمعه للمرة الأولى. ظهر مؤخرًا مستودع يحل هذه المشكلة دون قاعدة بيانات متجهية باهظة أو بنية تحتية منفصلة للذاكرة، بل عبر **بنية مجلدات عادية وملف ماركداون واحد فقط**، وأثار ضجة بين المطورين. إنه `personal-monorepo-template` الذي كشف عنه jxnl (جيسون ليو)، صانع مكتبة `Instructor`. إذا كنت تفكر في البنية التحتية قبل أن تمنح العامل ذاكرة، فهذا ما يمكنك التحقق منه هنا: إلى أي مدى يمكن أن تصل بنية المجلدات وحدها، وأين تظهر حدودها.
 
-![عامل برمجي يتذكّر عبر المجلدات بلا قاعدة بيانات متجهية: تحليل personal-monorepo-template 개념을 형상화한 이미지](/assets/images/personal-monorepo-template-agent-memory-hero.png)
+![عامل برمجي يتذكّر عبر المجلدات بلا قاعدة بيانات متجهية: تحليل personal-monorepo-template 개념을 형상화한 이미지](/assets/images/personal-monorepo-template-agent-memory-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## نظرة عامة
@@ -36,7 +36,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 خلفية صاحب المشروع تضفي ثقلًا على هذا التصميم. jxnl هو صانع مكتبة الإخراج المهيكل (structured output) المسماة `Instructor`، والتي تُحمَّل ملايين المرات شهريًا، ويُقال إن OpenAI استشهدت بها كمصدر إلهام لميزة الإخراج المهيكل الخاصة بها. وهو حاليًا مهندس تجربة المطوّرين (Developer Experience) في فريق OpenAI Codex، ما يجعل قيمة هذا المرجع كبيرة كونه أداة صنعها شخص يشغّل عوامل البرمجة يوميًا في الميدان لحل مشكلته الخاصة.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/personal-monorepo-template-agent-memory/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/personal-monorepo-template-agent-memory/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ما هذه التقنية
@@ -418,7 +418,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ومع ذلك، فإن الرسالة الجوهرية التي يطرحها هذا المستودع واضحة. ذاكرة العامل لا يجب أن تكون بالضرورة بنية تحتية ثقيلة، ويمكن تحقيق استمرارية معتبرة ببنية مجلدات جيدة وعقد يُحمَّل باستمرار فقط. وهذا يشير بالضبط إلى الاتجاه نفسه الذي تسلكه ThakiCloud في تعاملها مع المهارات والمعرفة كموارد من الدرجة الأولى.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/personal-monorepo-template-agent-memory/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/personal-monorepo-template-agent-memory/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## المصادر

@@ -23,7 +23,7 @@ categories:
   - news
 ---
 
-![Concept image of a power grid converging into a single dense computational lattice](/assets/images/sk-nvidia-500b-ai-factory-korea-hero.png)
+![Concept image of a power grid converging into a single dense computational lattice](/assets/images/sk-nvidia-500b-ai-factory-korea-hero.webp)
 *A depiction of gigawatt-scale power funneling into one computational facility.*
 
 ## Why This Is Worth Reading

@@ -95,11 +95,11 @@ SkillOpt는 에이전트 스킬을 "배포하고 끝나는 아티팩트"에서 "
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![skillopt-agent-skill-self-optimization 슬라이드 1](/assets/images/skillopt-agent-skill-self-optimization-slide-01.png)
+![skillopt-agent-skill-self-optimization 슬라이드 1](/assets/images/skillopt-agent-skill-self-optimization-slide-01.webp)
 
-![skillopt-agent-skill-self-optimization 슬라이드 2](/assets/images/skillopt-agent-skill-self-optimization-slide-02.png)
+![skillopt-agent-skill-self-optimization 슬라이드 2](/assets/images/skillopt-agent-skill-self-optimization-slide-02.webp)
 
-![skillopt-agent-skill-self-optimization 슬라이드 3](/assets/images/skillopt-agent-skill-self-optimization-slide-03.png)
+![skillopt-agent-skill-self-optimization 슬라이드 3](/assets/images/skillopt-agent-skill-self-optimization-slide-03.webp)
 
-![skillopt-agent-skill-self-optimization 슬라이드 4](/assets/images/skillopt-agent-skill-self-optimization-slide-04.png)
+![skillopt-agent-skill-self-optimization 슬라이드 4](/assets/images/skillopt-agent-skill-self-optimization-slide-04.webp)
 

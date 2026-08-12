@@ -12,7 +12,7 @@ tags:
   - 엣지추론
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/phone-already-ran-the-model/strip.png
+image: /assets/images/posts/comics/phone-already-ran-the-model/strip.webp
 video: /assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/phone-already-ran-the-model/"
 ---
@@ -20,13 +20,13 @@ canonical_url: "https://thakicloud.com/tech-blog/en/comics/phone-already-ran-the
 Most people assume that recognizing a hand or a face means uploading the video somewhere first. Google's open-source real-time ML toolkit quietly flips that assumption: face, hand, pose, gesture and object detection all run inside the phone, the browser, or a small embedded board.
 That's on-device inference. Instead of hauling your data to where the model lives, you move the model down to where the data already is. No upload, so no round trip latency, and no stranger's server holding your camera feed. 36k stars later, the idea stopped sounding exotic.
 
-![Your Phone Already Ran the Model](/assets/images/posts/comics/phone-already-ran-the-model/strip.png)
+![Your Phone Already Ran the Model](/assets/images/posts/comics/phone-already-ran-the-model/strip.webp)
 
 > Source: [RT @hank_aibtc: 还在为端侧AI推理又慢又耗电、隐私还担心云端上传而头疼吗？  ](https://x.com/hjguyhan/status/2081393928230838346) · twitter
 
 **▶ Animated edition, the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/phone-already-ran-the-model/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/phone-already-ran-the-model/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/phone-already-ran-the-model/comic.en.vtt" default>
 </video>

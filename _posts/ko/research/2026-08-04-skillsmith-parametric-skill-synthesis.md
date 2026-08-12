@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/skillsmith-parametr
 
 에이전트에 스킬을 붙이는 방법은 오랫동안 두 갈래였습니다. 하나는 글로 적어두는 쪽입니다. 태스크 설명과 예시 몇 개, 지난번에 실패한 이유를 적은 반성 노트를 문서로 남겨두고 필요할 때 컨텍스트에 얹습니다. 다른 하나는 가중치로 굽는 쪽입니다. 반복되는 하위 작업마다 LoRA나 prefix 모듈을 하나씩 학습해 어댑터 서랍에 넣어두고 꺼내 씁니다. 두 방식은 십수 년째 서로 다른 학회 세션에서 논의돼 왔고, 실무에서도 대체로 둘 중 하나를 고르는 문제로 취급됩니다. 2026년 7월 29일 arXiv에 올라온 구글 딥마인드 논문은 이 선택지 자체를 다시 봅니다.
 
-![두 갈래의 재료가 하나의 모루에서 만나 단일한 결정으로 벼려지는 모습을 형상화한 추상 이미지](/assets/images/skillsmith-parametric-skill-synthesis-hero.png)
+![두 갈래의 재료가 하나의 모루에서 만나 단일한 결정으로 벼려지는 모습을 형상화한 추상 이미지](/assets/images/skillsmith-parametric-skill-synthesis-hero.webp)
 
 *글로 적어둔 스킬과 가중치로 구워둔 스킬을 같은 화로에 넣으면 어떻게 되는가가 이 논문의 질문입니다.*
 
@@ -102,7 +102,7 @@ curl -s https://huggingface.co/unsloth/gemma-3-4b-it/raw/main/config.json | jq '
 
 텍스트 쪽은 이렇습니다. 로컬 SKILL.md 1,911개의 중앙값은 6,173자이고 4자를 1토큰으로 보수적으로 환산하면 약 1,543토큰입니다. 이 분량을 Gemma 3 4B 컨텍스트에 상주시키면 전체 34개 레이어에 K-V가 잡히므로 약 205 MiB가 됩니다. 같은 스킬 하나를 파라메트릭으로 들고 있을 때의 640 KiB와 비교하면 328배 차이입니다. 시퀀스 위치 기준으로 봐도 1,543개 위치와 32개 위치이니 48배입니다.
 
-![논문이 보고한 입력 절단 실험 Elo와 다키클라우드가 계산한 스킬 1개당 상주 비용 비교 차트](/assets/images/skillsmith-parametric-skill-synthesis-results.png)
+![논문이 보고한 입력 절단 실험 Elo와 다키클라우드가 계산한 스킬 1개당 상주 비용 비교 차트](/assets/images/skillsmith-parametric-skill-synthesis-results.webp)
 
 *왼쪽은 논문 Table 1의 절단 실험이고 오른쪽은 위 스크립트가 계산한 상주 비용입니다.*
 

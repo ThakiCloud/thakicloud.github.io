@@ -53,7 +53,7 @@ VETD의 핵심 약속은 넷입니다.
 
 전체 흐름은 다섯 단계입니다.
 
-![VETD 루프]({{ '/assets/images/vetd-cost-descent-loop.png' | relative_url }})
+![VETD 루프]({{ '/assets/images/vetd-cost-descent-loop.webp' | relative_url }})
 
 먼저 최적화 단위인 스킬 함대가 있습니다. 스킬 하나는 프롬프트 계약, 스크립트와 템플릿, 스케줄 러너를 담은 디렉터리입니다. 중앙 정책 레지스트리가 스킬별로 현재 티어, 고정 여부, 연속 실패 횟수, 그리고 그 티어를 쓰는 이유를 사람이 읽을 수 있게 기록합니다.
 
@@ -71,7 +71,7 @@ VETD의 핵심 약속은 넷입니다.
 
 ## 함대는 어떻게 갈렸나
 
-![VETD 적용 후 함대 구성과 강등 게이트]({{ '/assets/images/vetd-cost-descent-fleet-gate.png' | relative_url }})
+![VETD 적용 후 함대 구성과 강등 게이트]({{ '/assets/images/vetd-cost-descent-fleet-gate.webp' | relative_url }})
 
 VETD를 적용한 뒤 16개 스킬 중 10개가 중간 티어에서 돕니다. 프런티어 티어에 남은 6개는 정확히 형식이 아니라 콘텐츠 자체가 산출물인 스킬입니다. 유머, 편집 판단, 연구 산문, 창의적 앵글이 그렇습니다. VETD가 드러내는 패턴이 여기 있습니다. 오케스트레이션과 형식 중심 작업은 내려가고, 줄일 수 없는 콘텐츠 품질 작업은 남습니다.
 
@@ -115,11 +115,11 @@ VETD는 모델 비용 절감을 모델링 문제가 아니라 측정과 게이�
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![vetd-cost-descent 슬라이드 1](/assets/images/vetd-cost-descent-slide-01.png)
+![vetd-cost-descent 슬라이드 1](/assets/images/vetd-cost-descent-slide-01.webp)
 
-![vetd-cost-descent 슬라이드 2](/assets/images/vetd-cost-descent-slide-02.png)
+![vetd-cost-descent 슬라이드 2](/assets/images/vetd-cost-descent-slide-02.webp)
 
-![vetd-cost-descent 슬라이드 3](/assets/images/vetd-cost-descent-slide-03.png)
+![vetd-cost-descent 슬라이드 3](/assets/images/vetd-cost-descent-slide-03.webp)
 
-![vetd-cost-descent 슬라이드 4](/assets/images/vetd-cost-descent-slide-04.png)
+![vetd-cost-descent 슬라이드 4](/assets/images/vetd-cost-descent-slide-04.webp)
 

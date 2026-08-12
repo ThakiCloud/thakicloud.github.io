@@ -35,7 +35,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ![مخطط مفاهيمي لـ GLM-5.2]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
-![GLM-5.2: دليل خدمة النشر المحلي لنموذج MoE بحجم 753B وسياق مليون رمز ورخصة MIT 개념을 형상화한 이미지](/assets/images/glm-5-2-1m-context-moe-self-hosting-hero.png)
+![GLM-5.2: دليل خدمة النشر المحلي لنموذج MoE بحجم 753B وسياق مليون رمز ورخصة MIT 개념을 형상화한 이미지](/assets/images/glm-5-2-1m-context-moe-self-hosting-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## ما الذي يميز GLM-5.2؟
@@ -45,7 +45,7 @@ GLM-5.2 هو نموذج MoE بحجم إجمالي 753B معامل، أصدرته
 أبرز ما يميز هذا النموذج هو قدرته على معالجة سياق بطول مليون رمز بتكلفة FLOPs عملية. ثمة نماذج كثيرة تدّعي دعم سياق مليون رمز، إلا أن تكلفة الاستدلال الفعلية تصبح عائقًا حقيقيًا. يعالج GLM-5.2 هذه المعضلة مباشرة عبر آلية انتباه تُعرف بـ DSA (Dynamic Sparse Attention).
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/glm-5-2-1m-context-moe-self-hosting/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/glm-5-2-1m-context-moe-self-hosting/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## البنية المعمارية: DSA وIndexShare
@@ -111,7 +111,7 @@ HLE (Humanity's Last Exam) بدون أدوات 40.5 يقفز إلى 54.7 مع ا
 تستحق GLM-5.2 دراسة جادة من المؤسسات الراغبة في نشر نماذج محلية لمهام طويلة الأفق (تحليل عقود كاملة، وفهم قواعد كود ضخمة، وإنشاء تقارير مطولة). مع ذلك، تظل خدمة النموذج كاملًا بصيغة BF16 753B رهينةً بتوافر مجموعة GPU كبيرة، لذا يبقى اختيار استراتيجية التكميم الملائمة لحجم الاستخدام الفعلي أمرًا بالغ الأهمية.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/glm-5-2-1m-context-moe-self-hosting/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/glm-5-2-1m-context-moe-self-hosting/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## المصادر

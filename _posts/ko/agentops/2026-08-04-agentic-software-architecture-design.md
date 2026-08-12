@@ -153,5 +153,5 @@ class ToolError(Exception):
 이 글의 내용은 저희가 정리한 전자책 『에이전틱 소프트웨어 설계』의 일부를 블로그용으로 다시 쓴 것입니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/agentic-software-architecture/ch01.png)
+![1장 삽화](/assets/images/books/agentic-software-architecture/ch01.webp)
 

@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-plugins-spec-
 
 에이전트 스킬과 MCP 서버를 사내에 여러 개 굴리면서 클라이언트마다 설치 경로와 설정 파일이 달라 같은 자산을 두세 번 포장하고 계신 플랫폼 엔지니어를 위한 글입니다. 결론부터 말씀드리면, Agent Plugins 1.0.0은 그 중복을 없애줄 만큼 충분히 작고 실제로 오늘 적용할 수 있는 규격입니다. 다만 공식 JSON 스키마를 통과했다고 해서 규격을 지킨 플러그인이 되지는 않습니다. 저희가 규격 본문이 명시적으로 금지한 위반 8개를 공식 스키마에 그대로 먹여봤더니 그중 2개가 아무 오류 없이 통과했습니다. 둘 다 플러그인 경계를 넘어가는 종류였습니다. 그래서 이 표준을 도입하는 쪽이 진짜로 해야 할 일은 매니페스트를 쓰는 것이 아니라, 스키마가 봐주지 않는 컨테인먼트 규칙을 클라이언트 코드에 직접 넣는 일입니다.
 
-![여러 모양의 작은 블록들이 하나의 상자로 모였다가 다섯 개의 서로 다른 플랫폼으로 동일한 형태로 퍼져 나가는 추상 이미지](/assets/images/agent-plugins-spec-v1-hero.png)
+![여러 모양의 작은 블록들이 하나의 상자로 모였다가 다섯 개의 서로 다른 플랫폼으로 동일한 형태로 퍼져 나가는 추상 이미지](/assets/images/agent-plugins-spec-v1-hero.webp)
 *한 번 포장하면 여러 클라이언트가 같은 형태로 읽어 간다는 것이 이 규격의 전부입니다.*
 
 ## 개요
@@ -52,7 +52,7 @@ thaki-blog-ops/
 └── com.example.client/               # 클라이언트 전용 확장 디렉터리 (선택)
 ```
 
-![플러그인 루트에 plugin.json과 mcp.json이 놓이고 그 아래 skills 계층이 분리된 구조를 보여주는 슬라이드](/assets/images/agent-plugins-spec-v1-slide-03.png)
+![플러그인 루트에 plugin.json과 mcp.json이 놓이고 그 아래 skills 계층이 분리된 구조를 보여주는 슬라이드](/assets/images/agent-plugins-spec-v1-slide-03.webp)
 *매니페스트와 MCP 설정은 루트에, 스킬은 `skills/` 하위 디렉터리에 놓입니다. 클라이언트 전용 데이터만 역도메인 네임스페이스로 빠집니다.*
 
 규격이 정의하는 컴포넌트 타입은 스킬과 MCP 서버 딱 둘입니다. 훅이나 슬래시 커맨드처럼 특정 클라이언트가 지원하는 다른 요소들은 v1 포맷 바깥이며 적합성 판정에 영향을 주지 않습니다. 클라이언트별 데이터가 필요하면 역도메인 네임스페이스를 씁니다. 매니페스트 안에서는 `extensions` 필드 아래에, 파일이 필요하면 `com.example.client/` 같은 최상위 디렉터리에 담습니다. 자기가 모르는 네임스페이스는 검증하지 말고 무시하는 것이 클라이언트의 의무입니다.
@@ -138,14 +138,14 @@ jsonschema.validate(manifest, schema)   # 위반 시 ValidationError
 
 전체 실행은 0.45초에 끝났고 공식 스키마 두 개를 받는 데 0.20초가 걸렸습니다. 포장된 플러그인은 파일 7개에 14.3KB였습니다. 매니페스트와 MCP 설정 모두 공식 스키마 검증을 통과했습니다.
 
-![전체 실행 0.45초, 파일 7개, 패키지 14.3KB라는 실측 수치를 나란히 보여주는 슬라이드](/assets/images/agent-plugins-spec-v1-slide-05.png)
+![전체 실행 0.45초, 파일 7개, 패키지 14.3KB라는 실측 수치를 나란히 보여주는 슬라이드](/assets/images/agent-plugins-spec-v1-slide-05.webp)
 *기존 스킬 디렉터리를 옮기고 파일 두 개를 붙이는 것이 포장의 전부였습니다.*
 
 스키마를 실제로 열어보니 규격 본문과 정확히 맞아떨어졌습니다. `plugin.schema.json`의 최상위 프로퍼티는 정확히 10개였고 `required`는 `$schema`와 `name` 둘, `additionalProperties`는 `false`였습니다. `mcp.schema.json`은 프로퍼티가 `$schema`와 `mcpServers` 둘뿐이면서 `$defs`로 `server`, `stdioServer`, `streamableHttpServer`, `sseServer`, `headers`를 노출합니다. 서버를 하나씩 따로 검증할 수 있게 열어둔 구조인데, 앞서 본 항목별 실패 경계를 클라이언트가 지킬 수 있도록 배려한 설계입니다.
 
 그다음이 이 실험의 본론입니다. 규격 본문이 무효라고 못박은 케이스 8개를 공식 스키마에 먹였습니다.
 
-![위반 8개 중 6개는 스키마가 거부하고 2개는 통과시킨 결과를 보여주는 가로 막대 그래프](/assets/images/agent-plugins-spec-v1-results.png)
+![위반 8개 중 6개는 스키마가 거부하고 2개는 통과시킨 결과를 보여주는 가로 막대 그래프](/assets/images/agent-plugins-spec-v1-results.webp)
 *매니페스트 위반은 전부 걸렸지만, 플러그인 경계를 넘는 두 케이스는 스키마를 그대로 통과했습니다.*
 
 매니페스트 쪽 다섯 개는 전부 거부됐습니다. 미정의 최상위 필드 `entrypoint`는 `Additional properties are not allowed`로, 대문자가 섞인 `Thaki-Blog-Ops`와 하이픈이 연달아 붙은 `thaki--blog`는 이름 정규식으로, `$schema` 누락은 필수 필드로, `author`에 넣은 `role` 필드는 author 객체의 닫힌 스키마로 각각 걸렸습니다. 이름 규칙까지 정규식으로 스키마에 박아둔 점은 인상적이었습니다.
@@ -155,7 +155,7 @@ MCP 쪽 세 개에서 갈렸습니다. 알 수 없는 전송 방식 `grpc`는 �
 - `"command": "../bin/x"`: 플러그인 루트를 벗어나는 경로인데 스키마는 문자열로만 보고 넘겼습니다.
 - `"url": "http://deploy.example.com/mcp"`: loopback이 아닌 호스트에 평문 HTTP인데 통과했습니다.
 
-![경로 이탈과 평문 HTTP 두 케이스가 스키마를 통과한 이유를 나란히 설명하는 슬라이드](/assets/images/agent-plugins-spec-v1-slide-09.png)
+![경로 이탈과 평문 HTTP 두 케이스가 스키마를 통과한 이유를 나란히 설명하는 슬라이드](/assets/images/agent-plugins-spec-v1-slide-09.webp)
 *두 위반 모두 문법이 아니라 해석의 문제라서 JSON Schema의 격자망을 그대로 빠져나갑니다.*
 
 둘 다 규격 본문은 명확히 금지합니다. 4.1절은 플러그인이 공급한 경로가 플러그인 루트 밖으로 해석되면 클라이언트가 거부해야 한다고 적었고, 7.2.1절은 비-loopback 엔드포인트가 HTTPS를 써야 한다고 적었습니다. 그런데 이 둘은 JSON Schema로 표현할 수 있는 종류의 제약이 아닙니다. 경로 컨테인먼트는 심볼릭 링크까지 따라간 뒤의 파일시스템 해석 결과에 달려 있고, loopback 판정은 호스트가 `localhost`이거나 루프백 대역 IP 리터럴인지를 봐야 합니다. 둘 다 문법이 아니라 해석의 문제입니다.

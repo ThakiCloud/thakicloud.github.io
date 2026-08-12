@@ -23,7 +23,7 @@ audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![صورة تجسّد مفهوم انفصال الباني عن المالك عن المستخدم: اليوم الذي ظهر فيه رقم 20% مرتين](/assets/images/who-owns-the-ai-datacenter-hero.png)
+![صورة تجسّد مفهوم انفصال الباني عن المالك عن المستخدم: اليوم الذي ظهر فيه رقم 20% مرتين](/assets/images/who-owns-the-ai-datacenter-hero.webp)
 *تجسيد للمفهوم الأساسي للمقال.*
 
 ## ظهر الرقم 20 مرتين
@@ -35,7 +35,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 وإذا أعدنا قراءة أخبار اليوم من هذه الزاوية، فإن أخبارا بدت للوهلة الأولى غير مترابطة تصطف في جملة واحدة: صناعة البنية التحتية للذكاء الاصطناعي تعيد الآن تفكيك الملكية.
 
 <!-- nlm-visual -->
-![رسم بياني ملخص للمفاهيم الأساسية 1](/assets/images/posts/news/who-owns-the-ai-datacenter/nlm-infographic-1.png)
+![رسم بياني ملخص للمفاهيم الأساسية 1](/assets/images/posts/news/who-owns-the-ai-datacenter/nlm-infographic-1.webp)
 *رسم بياني أنشأه NotebookLM بتجميع المصادر.*
 
 ## الغيغاواطات التي تختفي من الميزانية العمومية

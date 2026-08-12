@@ -25,7 +25,7 @@ audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![자율은 스위치가 아니라 다이얼입니다: 은행이 능력보다 먼저 사는 것 개념을 형상화한 이미지](/assets/images/banks-buy-control-not-capability-hero.png)
+![자율은 스위치가 아니라 다이얼입니다: 은행이 능력보다 먼저 사는 것 개념을 형상화한 이미지](/assets/images/banks-buy-control-not-capability-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 발주 공고 한 줄을 현미경으로 보면
@@ -98,11 +98,11 @@ SAP가 자율형 기업의 그림을 그리고 은행이 그 그림을 들일 �
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![banks-buy-control-not-capability 슬라이드 1](/assets/images/banks-buy-control-not-capability-slide-01.png)
+![banks-buy-control-not-capability 슬라이드 1](/assets/images/banks-buy-control-not-capability-slide-01.webp)
 
-![banks-buy-control-not-capability 슬라이드 2](/assets/images/banks-buy-control-not-capability-slide-02.png)
+![banks-buy-control-not-capability 슬라이드 2](/assets/images/banks-buy-control-not-capability-slide-02.webp)
 
-![banks-buy-control-not-capability 슬라이드 3](/assets/images/banks-buy-control-not-capability-slide-03.png)
+![banks-buy-control-not-capability 슬라이드 3](/assets/images/banks-buy-control-not-capability-slide-03.webp)
 
-![banks-buy-control-not-capability 슬라이드 4](/assets/images/banks-buy-control-not-capability-slide-04.png)
+![banks-buy-control-not-capability 슬라이드 4](/assets/images/banks-buy-control-not-capability-slide-04.webp)
 

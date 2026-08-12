@@ -30,7 +30,7 @@ This is for backend engineers and product owners who are wiring AI features into
 
 Here is the claim up front: the reliability of an AI system comes from how you designed its failure handling, not from the model's benchmark score. Chasing accuracy is an open-ended project, and no matter how far you push it, production will still produce wrong answers on a regular basis. Deciding in advance what the system shows when that happens is a bounded project, and once you do it properly, the system keeps serving users no matter what specific way the model breaks. What follows walks through why AI failure behaves differently from traditional software failure, and then works through the concrete practices that follow from that difference.
 
-![Illustration of the core idea of AI Feature Reliability Comes From Failure Design, Not Model Accuracy](/assets/images/ai-reliability-engineering-hero.png)
+![Illustration of the core idea of AI Feature Reliability Comes From Failure Design, Not Model Accuracy](/assets/images/ai-reliability-engineering-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Traditional software fails in binary; AI fails on a continuum
@@ -96,5 +96,5 @@ Incident response itself becomes far less likely to miss something once you lay 
 Graceful degradation, circuit breakers, fallback ladders, feature flags, and incident severity levels look like five separate techniques, but they are really five answers to a single question: what does the user see when this fails? A system that has already answered that question quietly shows a degraded version of itself no matter how the model breaks underneath it, instead of showing a broken screen. Model accuracy will keep climbing, and it should, but it is never going to reach a hundred percent. The people who build reliable AI systems are the ones who accept that fact and put their design effort into shaping the failure, not chasing the accuracy number. The remaining checklists and code-level implementation examples for each chapter continue in the full ebook.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-reliability-engineering/ch01.png)
+![Chapter 1 illustration](/assets/images/books/ai-reliability-engineering/ch01.webp)
 

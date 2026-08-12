@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/skillsmith-parametr
 
 There have long been two ways to give an agent a skill. One is to write it down. You keep a task description, a handful of examples, and a reflection note about why the last attempt failed, then load that document into context when you need it. The other is to bake it into weights. For every recurring sub-goal you train a LoRA or prefix module, file it in an adapter drawer, and pull it out on demand. These two approaches have been discussed in separate conference tracks for over a decade, and in practice teams usually treat them as an either-or decision. A Google DeepMind paper posted to arXiv on 29 July 2026 revisits the choice itself.
 
-![Abstract illustration of two streams of material meeting at an anvil and being forged into a single crystal](/assets/images/skillsmith-parametric-skill-synthesis-hero.png)
+![Abstract illustration of two streams of material meeting at an anvil and being forged into a single crystal](/assets/images/skillsmith-parametric-skill-synthesis-hero.webp)
 
 *What happens when you put written-down skills and baked-in skills into the same forge is this paper's question.*
 
@@ -102,7 +102,7 @@ Our own budget first.
 
 On the text side: the median of 1,911 local SKILL.md files is 6,173 characters, which at a conservative 4 characters per token is roughly 1,543 tokens. Keeping that resident in a Gemma 3 4B context puts K-V on all 34 layers, about 205 MiB. Against 640 KiB for the same skill carried parametrically, that is a factor of 328. By sequence position it is 1,543 versus 32, a factor of 48.
 
-![Chart comparing the paper's input-ablation Elo with ThakiCloud's computed per-skill residency cost](/assets/images/skillsmith-parametric-skill-synthesis-results.png)
+![Chart comparing the paper's input-ablation Elo with ThakiCloud's computed per-skill residency cost](/assets/images/skillsmith-parametric-skill-synthesis-results.webp)
 
 *Left is the ablation from the paper's Table 1; right is the residency cost computed by the script above.*
 

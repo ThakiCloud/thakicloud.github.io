@@ -370,7 +370,7 @@ ATSInfer نظام استدلال هجين CPU-GPU مبنيّ كامتداد لـ
 
 عنوان الورقة العريض: مقابل الأنظمة الهجينة الحالية (بما فيها إنزال llama.cpp على مستوى الطبقة)، يتحسّن الـ prefill (الإنتاجية حتى أول رمز) حتى 1.94 ضعفاً، والـ decode (الرموز المولّدة في الثانية) حتى 3.29 ضعفاً.
 
-![أقصى تسارع تبلّغ عنه الورقة لـ ATSInfer]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png' | relative_url }})
+![أقصى تسارع تبلّغ عنه الورقة لـ ATSInfer]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.webp' | relative_url }})
 
 الإعداد هو نظام RTX 4090 (24GB) وRTX 3060 مع 64GB من الـ RAM، والنماذج المُتحقَّق منها هي:
 

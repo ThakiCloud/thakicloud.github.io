@@ -13,7 +13,7 @@ tags:
   - thakicloud
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/auto-install-curated-agent-skills/strip.png
+image: /assets/images/posts/만화/auto-install-curated-agent-skills/strip.webp
 audiobook: /assets/audio/posts/auto-install-curated-agent-skills/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
@@ -22,7 +22,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 손이 안 가서 편한 건 맞습니다. 다만 '큐레이션'은 누군가의 취향이라, 무엇을 깔지 정한 주체가 내가 아니라는 점이 슬쩍 걸립니다. 파시스와 메티스가 이걸 신나게 깔다가 어디까지 가는지 지켜봤습니다.
 
-![스킬 깔아주는 스킬이 또 스킬을 깔았다]({{ '/assets/images/posts/만화/auto-install-curated-agent-skills/strip.png' | relative_url }})
+![스킬 깔아주는 스킬이 또 스킬을 깔았다]({{ '/assets/images/posts/만화/auto-install-curated-agent-skills/strip.webp' | relative_url }})
 
 > 원 뉴스: [RT @tom_doerr: Scans your project to detect your tech stack and automatically installs curated AI agent skills.](https://x.com/hjguyhan/status/2076427252771020925) · twitter
 
@@ -40,11 +40,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
 
-![auto-install-curated-agent-skills 슬라이드 1](/assets/images/auto-install-curated-agent-skills-slide-01.png)
+![auto-install-curated-agent-skills 슬라이드 1](/assets/images/auto-install-curated-agent-skills-slide-01.webp)
 
-![auto-install-curated-agent-skills 슬라이드 2](/assets/images/auto-install-curated-agent-skills-slide-02.png)
+![auto-install-curated-agent-skills 슬라이드 2](/assets/images/auto-install-curated-agent-skills-slide-02.webp)
 
-![auto-install-curated-agent-skills 슬라이드 3](/assets/images/auto-install-curated-agent-skills-slide-03.png)
+![auto-install-curated-agent-skills 슬라이드 3](/assets/images/auto-install-curated-agent-skills-slide-03.webp)
 
-![auto-install-curated-agent-skills 슬라이드 4](/assets/images/auto-install-curated-agent-skills-slide-04.png)
+![auto-install-curated-agent-skills 슬라이드 4](/assets/images/auto-install-curated-agent-skills-slide-04.webp)
 

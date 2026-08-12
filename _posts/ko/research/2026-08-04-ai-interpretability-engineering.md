@@ -163,8 +163,8 @@ flowchart TB
 이 글의 내용은 저희가 정리한 전자책 『AI Interpretability Engineering: 프로덕션 모델의 Decision을 읽는 기술』의 일부를 블로그용으로 다시 쓴 것입니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/ai-interpretability-engineering/ch01.png)
-![2장 삽화](/assets/images/books/ai-interpretability-engineering/ch02.png)
-![3장 삽화](/assets/images/books/ai-interpretability-engineering/ch03.png)
-![4장 삽화](/assets/images/books/ai-interpretability-engineering/ch04.png)
+![1장 삽화](/assets/images/books/ai-interpretability-engineering/ch01.webp)
+![2장 삽화](/assets/images/books/ai-interpretability-engineering/ch02.webp)
+![3장 삽화](/assets/images/books/ai-interpretability-engineering/ch03.webp)
+![4장 삽화](/assets/images/books/ai-interpretability-engineering/ch04.webp)
 

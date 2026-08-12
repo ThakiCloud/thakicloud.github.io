@@ -162,6 +162,6 @@ Turning LLM evaluation into a system, in the end, comes down to repeating three 
 This post is a blog rewrite of part of our internal ebook, *LLM Evaluation Engineering*, compiled while operating our internal automation pipelines.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/llm-evaluation-engineering/ch01.png)
-![Chapter 2 illustration](/assets/images/books/llm-evaluation-engineering/ch02.png)
+![Chapter 1 illustration](/assets/images/books/llm-evaluation-engineering/ch01.webp)
+![Chapter 2 illustration](/assets/images/books/llm-evaluation-engineering/ch02.webp)
 

@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ⏱️ **وقت القراءة المقدر**: 12 دقيقة
 
-![udocker: دليل شامل لتشغيل حاويات Docker بدون صلاحيات الجذر 개념을 형상화한 이미지](/assets/images/udocker-rootless-container-execution-guide-ar-hero.png)
+![udocker: دليل شامل لتشغيل حاويات Docker بدون صلاحيات الجذر 개념을 형상화한 이미지](/assets/images/udocker-rootless-container-execution-guide-ar-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## مقدمة
@@ -36,7 +36,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 udocker هو أداة أساسية للمستخدم تمكن من تشغيل حاويات Docker البسيطة في أنظمة المعالجة المجمعة أو التفاعلية بدون صلاحيات الجذر. تم تطويره من قبل مشروع INDIGO-DataCloud، ويوفر طريقة آمنة وعملية لتشغيل التطبيقات المحتواة في بيئات حيث Docker التقليدي غير متاح أو غير مسموح.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/udocker-rootless-container-execution-guide-ar/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/udocker-rootless-container-execution-guide-ar/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ما هو udocker؟
@@ -466,7 +466,7 @@ udocker commit my-container my-custom-image
 | مساحات أسماء المستخدم | اختياري | نعم | نعم | نعم |
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/udocker-rootless-container-execution-guide-ar/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/udocker-rootless-container-execution-guide-ar/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## الخلاصة

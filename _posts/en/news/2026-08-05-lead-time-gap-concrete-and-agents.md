@@ -22,7 +22,7 @@ audiobook: /assets/audio/posts/lead-time-gap-concrete-and-agents/audiobook-ko.mp
 audiobook_note: "AI locally synthesized audiobook, Korean audio (Qwen3-TTS)"
 ---
 
-![An image visualizing the concept of concrete that arrives in 2030, and the agent that finished the job in 16 days](/assets/images/lead-time-gap-concrete-and-agents-hero.png)
+![An image visualizing the concept of concrete that arrives in 2030, and the agent that finished the job in 16 days](/assets/images/lead-time-gap-concrete-and-agents-hero.webp)
 *A visual representation of the article's core concept.*
 
 ## 2030 and 16 Days

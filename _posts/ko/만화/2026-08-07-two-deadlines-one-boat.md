@@ -13,7 +13,7 @@ tags:
   - 컴플라이언스
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/two-deadlines-one-boat/strip.png
+image: /assets/images/posts/만화/two-deadlines-one-boat/strip.webp
 video: /assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4
 audiobook: /assets/audio/posts/two-deadlines-one-boat/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -25,13 +25,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 그래서 오늘 만화는 호수 위 나무 보트 한 척에서 벌어집니다. 노는 없고 서류만 쌓이는데, 배는 계속 앞으로 가긴 합니다.
 
-![유예받았는데 숙제가 늘었다](/assets/images/posts/만화/two-deadlines-one-boat/strip.png)
+![유예받았는데 숙제가 늘었다](/assets/images/posts/만화/two-deadlines-one-boat/strip.webp)
 
 > 원 뉴스: [금융위는 유예·준비 택했는데…개보위는 "예정대로"](https://n.news.naver.com/mnews/article/018/0006345443) · bespin
 
 **▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/two-deadlines-one-boat/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/two-deadlines-one-boat/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/two-deadlines-one-boat/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/two-deadlines-one-boat/comic.ko.vtt" default>
 </video>
@@ -52,11 +52,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![two-deadlines-one-boat 슬라이드 1](/assets/images/two-deadlines-one-boat-slide-01.png)
+![two-deadlines-one-boat 슬라이드 1](/assets/images/two-deadlines-one-boat-slide-01.webp)
 
-![two-deadlines-one-boat 슬라이드 2](/assets/images/two-deadlines-one-boat-slide-02.png)
+![two-deadlines-one-boat 슬라이드 2](/assets/images/two-deadlines-one-boat-slide-02.webp)
 
-![two-deadlines-one-boat 슬라이드 3](/assets/images/two-deadlines-one-boat-slide-03.png)
+![two-deadlines-one-boat 슬라이드 3](/assets/images/two-deadlines-one-boat-slide-03.webp)
 
-![two-deadlines-one-boat 슬라이드 4](/assets/images/two-deadlines-one-boat-slide-04.png)
+![two-deadlines-one-boat 슬라이드 4](/assets/images/two-deadlines-one-boat-slide-04.webp)
 

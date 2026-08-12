@@ -74,7 +74,7 @@ OpenForge-Claw is a 30B-scale MoE model built on the Qwen3-30B-A3B-Thinking back
 
 OpenForge-GUI is an 8B model on the Qwen3-VL-8B-Thinking backbone, trained on modified Kimi-Agent and Molmo-Web harnesses. It records 37.7 on OSWorld-Verified, 63.0 on Online-Mind2Web, and 72.3 on WebVoyager. The paper reports that these results beat open baselines of similar size on nearly all benchmarks, and in the GUI setting match or surpass models several times larger.
 
-![Benchmark scores reported by OpenForgeRL and a comparison of training task budgets](/assets/images/openforgerl-harness-native-agent-rl-results.png)
+![Benchmark scores reported by OpenForgeRL and a comparison of training task budgets](/assets/images/openforgerl-harness-native-agent-rl-results.webp)
 
 Scores reported in the paper and the task budget used for GUI training. Blue marks the tool-use line, green the GUI line.
 

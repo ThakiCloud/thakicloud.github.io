@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/minimax-h3-director-c
 
 This is for teams evaluating whether to bring a video generation model onto their own infrastructure, and for anyone operating a ComfyUI pipeline. The short version: MiniMax H3 is a rare release that opened the weights and the audio path together, and the Director node lifts multi-shot authoring to a practical level, but Korea is excluded from the applicable territory of the community license, so the route where a domestic team downloads these weights and self-hosts is currently closed. This is something where the technical review and the legal review need to start in the same week.
 
-![An image of translucent glass panels linked in sequence like a timeline with an audio waveform running beneath](/assets/images/minimax-h3-director-comfyui-hero.png)
+![An image of translucent glass panels linked in sequence like a timeline with an audio waveform running beneath](/assets/images/minimax-h3-director-comfyui-hero.webp)
 *A depiction of shots forming a sequence while audio flows along the same axis.*
 
 ## Overview

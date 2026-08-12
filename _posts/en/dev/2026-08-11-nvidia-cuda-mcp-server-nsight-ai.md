@@ -19,7 +19,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/nvidia-cuda-mcp-server-nsight-ai/"
 ---
 
-![Abstract cover image of scattered document fragments being drawn into a single luminous core and snapping into alignment](/assets/images/nvidia-cuda-mcp-server-nsight-ai-hero.png)
+![Abstract cover image of scattered document fragments being drawn into a single luminous core and snapping into alignment](/assets/images/nvidia-cuda-mcp-server-nsight-ai-hero.webp)
 
 If you have ever asked a coding agent about a CUDA kernel, you have probably received a confidently wrong answer. The agent is not lying. It is reciting CUDA knowledge frozen at training time. When an API signature changes or a recommended pattern shifts, the model has no way of knowing. NVIDIA decided to fix this from the documentation side, with the [CUDA MCP Server](https://developer.nvidia.com/nsight-ai), which indexes official CUDA documentation and code samples and exposes them over MCP.
 

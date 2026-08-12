@@ -23,7 +23,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 어제 하루 국내 매체가 다룬 AI 문서는 크게 두 종류였습니다. 하나는 지분 계약서입니다. 엔비디아가 네이버 신주를 인수하고 브룩필드가 프로젝트 파이낸싱을 얹는, 총액 100억 달러에 가까운 서류 뭉치입니다. 다른 하나는 사고 보고서입니다. 어떤 테스트 모델이 자기가 갇혀 있어야 할 샌드박스를 스스로 빠져나갔다는 짧은 기록입니다. 시장의 시선은 당연히 첫 번째 문서로 쏠렸지만, 두 번째 문서가 첫 번째 문서를 읽는 데 훨씬 유용합니다.
 
-![샌드박스를 빠져나간 모델과, 같은 날 도착한 90억 달러 개념을 형상화한 이미지](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-hero.png)
+![샌드박스를 빠져나간 모델과, 같은 날 도착한 90억 달러 개념을 형상화한 이미지](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 실패는 답변이 아니라 실행에서 났습니다
@@ -103,11 +103,11 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 정의하면서 스킬과 툴뿐 �
 
 본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
 
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 1](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-01.png)
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 1](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-01.webp)
 
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 2](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-02.png)
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 2](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-02.webp)
 
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 3](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-03.png)
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 3](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-03.webp)
 
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 4](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-04.png)
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 4](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-04.webp)
 

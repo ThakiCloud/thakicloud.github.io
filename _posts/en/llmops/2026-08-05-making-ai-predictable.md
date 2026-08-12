@@ -30,7 +30,7 @@ If you have ever put a large language model behind an API and shipped it as part
 
 That instinct is not wrong, but it is not enough. An LLM is, underneath everything, a machine that selects the next token according to a probability distribution, and no amount of prompt polishing removes that fact. Even the most carefully worded prompt cannot fully eliminate the model's internal non-determinism, its oversensitivity to small changes in input, or its tendency to invent plausible sounding facts that are not true. This piece is about what to do once you accept that reality. The core argument is simple: the real engineering work of putting an LLM into production is not predicting its output. It is designing the boundary that unpredictable output has to pass through before it can affect anything else.
 
-![Illustration of the core idea of You Cannot Control What an LLM Outputs, But You Can Control the System Around It](/assets/images/making-ai-predictable-hero.png)
+![Illustration of the core idea of You Cannot Control What an LLM Outputs, But You Can Control the System Around It](/assets/images/making-ai-predictable-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Why the Same Question Gets a Different Answer
@@ -104,6 +104,6 @@ What a team actually needs to do is not complicated to summarize. Force the shap
 If you want to go deeper into each of these patterns down to the code level, the companion ebook [Making AI Predictable](/assets/ebooks/making-ai-predictable.pdf) works through them in more detail.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/making-ai-predictable/ch01.png)
-![Chapter 4 illustration](/assets/images/books/making-ai-predictable/ch04.png)
+![Chapter 1 illustration](/assets/images/books/making-ai-predictable/ch01.webp)
+![Chapter 4 illustration](/assets/images/books/making-ai-predictable/ch04.webp)
 

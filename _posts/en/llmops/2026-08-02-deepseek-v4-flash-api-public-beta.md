@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/deepseek-v4-flash-api
 
 The first number people look at in a model announcement is usually the parameter count. But once you are the one who has to put that model on your own GPUs, a different number matters far more. DeepSeek-V4-Flash, opened in public beta on 31 July 2026, is a good case for explaining the difference. The total is 284B. What actually switches on to produce a token is 13B.
 
-![Abstract image of a dense node lattice where only a sparse path lights up, evoking sparse expert routing](/assets/images/deepseek-v4-flash-api-public-beta-hero.png)
+![Abstract image of a dense node lattice where only a sparse path lights up, evoking sparse expert routing](/assets/images/deepseek-v4-flash-api-public-beta-hero.webp)
 
 *Most of it stays dark and only part lights up. That is sparse expert routing in one picture.*
 
@@ -51,7 +51,7 @@ This observation points the same direction as recent harness research. The [pape
 
 Per press coverage relaying the announcement, the official build scores as follows.
 
-![Bar chart of DeepSeek-V4-Flash official build agent benchmark scores](/assets/images/deepseek-v4-flash-api-public-beta-results-en.png)
+![Bar chart of DeepSeek-V4-Flash official build agent benchmark scores](/assets/images/deepseek-v4-flash-api-public-beta-results-en.webp)
 
 *Vendor-announced figures as relayed by press coverage, not independently verified here.*
 

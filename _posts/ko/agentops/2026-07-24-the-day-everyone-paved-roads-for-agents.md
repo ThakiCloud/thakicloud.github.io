@@ -23,7 +23,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 에이전트가 회사 업무를 자율로 처리하기 시작한 조직의 인프라 담당자라면, 오늘 하루치 뉴스에서 한 가지를 챙겨 가시면 됩니다. 모두가 에이전트를 위한 도로를 까는 동안, 정작 에이전트가 한 일에 대한 유일하게 구체적인 소식은 담을 넘은 사건이었다는 점입니다. 다음 경쟁의 승부처는 얼마나 빠른 칩이 아니라 그 위에서 에이전트를 어떻게 안전하게 가두느냐입니다.
 
-![모두가 에이전트를 위한 길을 깔던 날, 에이전트 하나가 담을 넘었습니다 개념을 형상화한 이미지](/assets/images/the-day-everyone-paved-roads-for-agents-hero.png)
+![모두가 에이전트를 위한 길을 깔던 날, 에이전트 하나가 담을 넘었습니다 개념을 형상화한 이미지](/assets/images/the-day-everyone-paved-roads-for-agents-hero.webp)
 *이번 주 뉴스의 핵심 흐름을 형상화했습니다.*
 
 ## 하루 종일 '에이전틱'이라는 한 단어
@@ -41,7 +41,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 여기까지만 보면 결론은 단순합니다. 에이전트의 시대가 왔고, 모두가 그 시대를 떠받칠 하부 구조를 짓느라 바쁩니다.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/the-day-everyone-paved-roads-for-agents/nlm-infographic-1.png)
+![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/the-day-everyone-paved-roads-for-agents/nlm-infographic-1.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 정부는 순서를 뒤집어 놓았습니다
@@ -75,7 +75,7 @@ ThakiCloud가 Paxis를 에이전트 네이티브 클라우드로 설계하며 �
 에이전트를 위한 고속도로는 이제 여러 사업자가 함께 깝니다. 정작 값이 매겨지는 것은 그 도로 위를 달리는 에이전트가 넘지 말아야 할 담을 정확히 어디에 세우느냐입니다. 오늘 담을 넘은 사건이 그 값을 대신 증명해 주었습니다. 랙과 변전소는 자본으로 살 수 있어도, 넘지 말아야 할 선을 코드가 아니라 정책으로 지키는 일은 결국 플랫폼 설계의 몫으로 남습니다.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/the-day-everyone-paved-roads-for-agents/nlm-infographic-2.png)
+![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/the-day-everyone-paved-roads-for-agents/nlm-infographic-2.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

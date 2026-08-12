@@ -17,7 +17,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 If you operate or design agent pipelines that run overnight without a human watching, this piece is worth reading. The conclusion up front: of the three mechanisms, verification gates, checkpoint rollback, and stall detection, one contributes overwhelmingly more than the other two toward closing the gap between the number of tasks a loop reports as "complete" on its own and the number actually verified through to the end, while the other two mechanisms merely support it from behind. However, turning on that one dominant mechanism alone creates a trap: tasks end up failing in a different way instead. That is the real point of this research.
 
-![Illustration of the core idea of The Completion-Rate Gap in Unattended Agent Loops: What Actually Closes It](/assets/images/autonomous-loop-completion-gap-hero.png)
+![Illustration of the core idea of The Completion-Rate Gap in Unattended Agent Loops: What Actually Closes It](/assets/images/autonomous-loop-completion-gap-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## The Completion-Rate Gap Problem
@@ -36,7 +36,7 @@ There is a point worth stating honestly here. This experiment does not rerun a p
 
 Across all eight configurations, the true success rate of the baseline with all three mechanisms off is only 26.22 percent. With all three mechanisms on, it rises to 97.59 percent, closing a completion-rate gap of 71.37 percentage points.
 
-![True-Success Rate by Mechanism Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig1_true_success_by_config.png)
+![True-Success Rate by Mechanism Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig1_true_success_by_config.webp)
 *True success rate by mechanism combination, for all eight configurations. Only the configuration with all three mechanisms on reaches the 90-percent range, and configurations with the verification gate off never exceed the 30-percent range even with rollback and escalation added. Measured with a CRN simulation of 30 seeds and 300 tasks per seed, as a CPU-only job on the ThakiCloud AI Platform Demo cluster.*
 
 Breaking down each mechanism's contribution with a two-point Shapley approximation, the verification gate accounts for 55.3 percentage points, checkpoint rollback for 15.2 percentage points, and stall escalation for 0.64 percentage points. The verification gate is also the only mechanism that drives the false-success rate to exactly zero in every configuration where it is on. Because it structurally rejects premature completion claims, a hallucinated "complete" state never occurs at all.
@@ -47,10 +47,10 @@ But this overwhelming effect comes at a cost. In the configuration where only th
 
 The effect of turning checkpoint rollback on by itself is only 10.1 percentage points, but the drop that occurs when you remove rollback alone from the full configuration is 20.3 percentage points, nearly double. This means the two mechanisms are not independent of each other but are strongly coupled. This synergy shows up most clearly in the iteration-limit exhaustion rate. Once the verification gate closes off the false-completion escape hatch, tasks pile up against the iteration limit (24.1 percent exhausted with the gate on alone), and checkpoint rollback is exactly what recovers those piled-up tasks. Turning on verification and rollback together drops the exhaustion rate to 3.0 percent. Rollback effectively converts the iteration-exhaustion cost the gate creates on its own back into completed tasks, at a cost of only about 3.4 rolled-back iterations per task.
 
-![Shapley-Style Marginal Contribution per Mechanism](/assets/images/posts/research/autonomous-loop-completion-gap/fig2_marginal_contribution.png)
+![Shapley-Style Marginal Contribution per Mechanism](/assets/images/posts/research/autonomous-loop-completion-gap/fig2_marginal_contribution.webp)
 *Of the 71.4 percentage-point gap closed by the three mechanisms, the verification gate accounts for 55.3, checkpoint rollback for 15.2, and stall escalation for 0.6 percentage points. The fact that the loss from removing rollback when the other mechanisms are present (20.3) is twice as large as rollback's standalone effect (10.1) demonstrates a superadditive synergy. This is an analytical model based on a two-point Shapley approximation, not a direct measurement.*
 
-![Mean Wasted Iterations per Task by Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig3_wasted_iterations.png)
+![Mean Wasted Iterations per Task by Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig3_wasted_iterations.webp)
 *Without the verification gate, rollback reverts about 1.9 iterations per task on average, but with the gate on, it reverts about 3.3 to 3.4 iterations. This means rollback is recovering that much more of the iteration-exhaustion cost the gate creates. Configurations with the gate on are measured values; some configurations with rollback off are analytical model values.*
 
 Stall escalation's contribution, by contrast, was only 0.64 percentage points. This is the result in the paper that most contradicts conventional wisdom. Stall and infinite-loop detection is a topic the loop-engineering community has taken seriously for a long time, but in the fault combination this experiment constructed, the dominant failure causes were hallucinated completion and silent regression, not literal infinite stalling, so escalation had almost no effect. This should not be read as a general claim that stall detection is useless. In a different fault distribution with a much higher rate of chronic stalling, escalation could become far more important, and this experimental methodology is precisely designed to answer that kind of question. In other words, this result is a scope-limited conclusion for this specific fault combination.

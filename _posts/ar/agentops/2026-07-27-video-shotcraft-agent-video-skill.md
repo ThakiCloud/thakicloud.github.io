@@ -143,7 +143,7 @@ npx remotion render src/index.ts AiflPromo out/promo.mp4
 # real  0m22.758s
 ```
 
-![الزمن المقاس لكل مرحلة إخراج ومعدل الإنتاجية في video-shotcraft](/assets/images/video-shotcraft-agent-video-skill-results.png)
+![الزمن المقاس لكل مرحلة إخراج ومعدل الإنتاجية في video-shotcraft](/assets/images/video-shotcraft-agent-video-skill-results.webp)
 
 الزمن المقاس لكل مرحلة في خط الإنتاج ومعدل إنتاجية الإخراج. يشير الخط الأحمر المتقطع إلى خط الأساس للزمن الحقيقي عند 30 إطاراً في الثانية.
 

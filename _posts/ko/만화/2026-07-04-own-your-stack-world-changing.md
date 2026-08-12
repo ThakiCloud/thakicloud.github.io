@@ -36,11 +36,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![own-your-stack-world-changing 슬라이드 1](/assets/images/own-your-stack-world-changing-slide-01.png)
+![own-your-stack-world-changing 슬라이드 1](/assets/images/own-your-stack-world-changing-slide-01.webp)
 
-![own-your-stack-world-changing 슬라이드 2](/assets/images/own-your-stack-world-changing-slide-02.png)
+![own-your-stack-world-changing 슬라이드 2](/assets/images/own-your-stack-world-changing-slide-02.webp)
 
-![own-your-stack-world-changing 슬라이드 3](/assets/images/own-your-stack-world-changing-slide-03.png)
+![own-your-stack-world-changing 슬라이드 3](/assets/images/own-your-stack-world-changing-slide-03.webp)
 
-![own-your-stack-world-changing 슬라이드 4](/assets/images/own-your-stack-world-changing-slide-04.png)
+![own-your-stack-world-changing 슬라이드 4](/assets/images/own-your-stack-world-changing-slide-04.webp)
 

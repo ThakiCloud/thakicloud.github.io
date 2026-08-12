@@ -29,7 +29,7 @@ ebook_pages: 23
 
 많은 팀이 LLM 통합 문제를 프롬프트 튜닝으로 풀려고 합니다. 응답이 이상하면 지시문을 다듬고, 형식이 깨지면 예시를 몇 개 더 넣습니다. 이 접근이 완전히 틀린 건 아니지만 근본 원인은 비껴갑니다. 모델은 함수가 아니라 원격 서비스이고, 원격 서비스는 지연되고 실패하고 때로는 형식을 어깁니다. 이 글은 프롬프트를 계속 다듬는 대신, API 경계 자체에 명시적인 계약을 세우는 다섯 가지 설계 원칙을 다룹니다.
 
-![LLM 통합이 무너지는 진짜 이유는 프롬프트가 아니라 계약의 부재입니다 개념을 형상화한 이미지](/assets/images/ai-api-contract-engineering-hero.png)
+![LLM 통합이 무너지는 진짜 이유는 프롬프트가 아니라 계약의 부재입니다 개념을 형상화한 이미지](/assets/images/ai-api-contract-engineering-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## LLM은 함수가 아니라 원격 서비스입니다
@@ -101,6 +101,6 @@ LLM 제공자는 간헐적으로 모델을 업데이트합니다. 새 버전은 
 지금 운영 중인 LLM 통합 코드를 한번 열어보길 권합니다. 모델 응답을 파싱하는 곳 바로 앞뒤에 입력 검증과 출력 폴백이 있는지, 호출 실패를 감싸는 재시도 로직에 백오프와 상한이 있는지, 토큰 사용량이 어딘가에 기록되고 있는지, 모델 버전이 명시적으로 고정되어 있는지 확인해보십시오. 이 다섯 개 질문에 모두 답할 수 있다면 계약이 있는 것이고, 하나라도 막히면 그 지점이 다음 장애가 시작될 자리입니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/ai-api-contract-engineering/ch01.png)
-![5장 삽화](/assets/images/books/ai-api-contract-engineering/ch05.png)
+![1장 삽화](/assets/images/books/ai-api-contract-engineering/ch01.webp)
+![5장 삽화](/assets/images/books/ai-api-contract-engineering/ch05.webp)
 

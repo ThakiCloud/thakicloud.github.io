@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/minimax-h3-comfyui-ac
 
 If you use video generation models, you have seen this shape of tip in the community. Add a few nodes and generation time drops. The same tip is circulating for MiniMax-H3: add EasyCache, Patch Sol-Attn, and Patch Sage Attention KJ to your workflow. The tip is correct. What a one-line tip cannot carry is how the three nodes relate to each other and how much faster they actually make things. So we opened the source code of each node and the published benchmarks and checked.
 
-![Abstract image of layered glass panes glowing sharply on the left and dissolving into haze toward the right](/assets/images/minimax-h3-comfyui-accel-stack-hero.png)
+![Abstract image of layered glass panes glowing sharply on the left and dissolving into haze toward the right](/assets/images/minimax-h3-comfyui-accel-stack-hero.webp)
 
 *The measured range is shorter than you think, and the real work happens outside it.*
 
@@ -104,7 +104,7 @@ The FeedForward chunking node operates independently of the attention backend. I
 
 This is the core of the post. We look at the kernel benchmark the repository published, and at what we calculated by placing real render settings on top of it.
 
-![Chart of Sol-Attn kernel benchmark curves with real render positions, and kernel speedup versus pipeline speedup](/assets/images/minimax-h3-comfyui-accel-stack-results-en.png)
+![Chart of Sol-Attn kernel benchmark curves with real render positions, and kernel speedup versus pipeline speedup](/assets/images/minimax-h3-comfyui-accel-stack-results-en.webp)
 
 *Left is the measured curve the repository published; right is the controlled pair the same repository recorded.*
 

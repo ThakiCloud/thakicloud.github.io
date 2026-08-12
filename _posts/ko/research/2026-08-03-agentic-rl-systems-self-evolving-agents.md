@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-rl-systems-
 
 에이전트를 프로덕션에 올린 다음 날부터 이상한 일이 벌어집니다. 사용자는 매일 그 에이전트를 쓰고, 에이전트는 매일 수천 건의 작업을 처리하는데, 정작 에이전트는 배포된 첫날에서 한 발짝도 나아가지 않습니다. 가중치도 고정이고 시스템 프롬프트도 고정이고 도구 목록도 고정입니다. 쌓이는 것은 로그뿐이고 그 로그는 대개 관측 대시보드를 한 번 지나간 뒤 사라집니다. 2026년 7월 1일 arXiv에 올라온 논문 한 편은 이 정지 상태의 범인을 조금 뜻밖의 곳에서 지목합니다. 모델도 아니고 알고리즘도 아니고, 배관입니다.
 
-![흩어진 실행 기록이 정제된 관을 지나 하나의 순환 고리로 되돌아가는 모습을 형상화한 추상 이미지](/assets/images/agentic-rl-systems-self-evolving-agents-hero.png)
+![흩어진 실행 기록이 정제된 관을 지나 하나의 순환 고리로 되돌아가는 모습을 형상화한 추상 이미지](/assets/images/agentic-rl-systems-self-evolving-agents-hero.webp)
 
 *매일 쌓이지만 어디로도 흘러가지 않는 기록이 이 논문의 출발점입니다.*
 
@@ -35,7 +35,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-rl-systems-
 
 논문의 입장은 이렇게 요약됩니다. 기업 규모에서 자기진화 에이전트를 가로막는 가장 큰 병목은 더 강력한 LLM의 부재도 아니고 더 효과적인 RL 알고리즘의 부재도 아니며, 배포된 에이전트의 경험을 통제 가능하고 크레딧 할당이 가능하며 재생 가능한 학습 재료로 바꿔 주는 시스템 기반의 부재라는 것입니다.
 
-![병목이 더 강력한 LLM도 더 나은 RL 알고리즘도 아니라 학습 재료 배관의 부재라는 논문의 입장을 정리한 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-03.png)
+![병목이 더 강력한 LLM도 더 나은 RL 알고리즘도 아니라 학습 재료 배관의 부재라는 논문의 입장을 정리한 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-03.webp)
 
 *논문이 세운 입장을 한 장으로 옮기면 이렇습니다.*
 
@@ -47,7 +47,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-rl-systems-
 
 첫째, 이기종 에이전트 패러다임을 가로질러 스텝 단위로 RL 학습 신호를 실어 나를 수 있는 표준화된 에이전트 궤적 데이터 프로토콜이 없습니다. 여기서 중요한 단어는 스텝 단위입니다. 우리가 보통 남기는 로그는 요청과 응답 수준입니다. 그런데 에이전트가 열 번의 도구 호출 끝에 틀린 답을 냈을 때 학습에 필요한 정보는 결과가 틀렸다는 사실이 아니라 열 단계 중 어느 단계에서 어긋났는가입니다. 그 정보를 담을 그릇이 표준화되어 있지 않다는 지적입니다.
 
-![결과 단위 오류 코드 대신 어느 스텝에서 어긋났는지를 담는 스텝 단위 그릇을 설명한 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-05.png)
+![결과 단위 오류 코드 대신 어느 스텝에서 어긋났는지를 담는 스텝 단위 그릇을 설명한 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-05.webp)
 
 *학습에 필요한 정보는 실패했다는 사실이 아니라 어디에서 어긋났는가입니다.*
 
@@ -55,7 +55,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-rl-systems-
 
 셋째, 궤적 통계를 근거로 정책 가중치를 갱신할지 아니면 컨텍스트 하네스를 진화시킬지를 자동으로 판단하는 통합된 에이전트 진화 제어 평면이 없습니다. 이것이 세 공백 중 가장 실전적입니다. 에이전트가 잘 안 될 때 우리가 고를 수 있는 손잡이는 여러 개입니다. 프롬프트를 고칠 수도 있고 스킬을 추가할 수도 있고 메모리를 갱신할 수도 있고 모델을 다시 학습시킬 수도 있습니다. 각각 비용이 백 배 이상 차이 납니다. 그런데 어느 손잡이를 당길지 결정하는 일은 지금 거의 전부 사람의 감으로 이뤄집니다.
 
-![프롬프트 수정과 스킬 추가, 메모리 갱신, 가중치 재학습이라는 네 손잡이의 비용 차이를 나타낸 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-07.png)
+![프롬프트 수정과 스킬 추가, 메모리 갱신, 가중치 재학습이라는 네 손잡이의 비용 차이를 나타낸 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-07.webp)
 
 *손잡이마다 비용이 다릅니다. 슬라이드의 배수는 크기 차이를 보여 주기 위한 예시이며 논문이 제시한 측정값은 아닙니다.*
 
@@ -104,7 +104,7 @@ AReaL의 핵심 설계는 생성과 학습을 완전히 분리하는 것입니�
 
 두 번째 실패는 손잡이가 하나뿐이라는 문제입니다. 정책 파일의 한 항목은 2026년 7월 11일에 상위 등급으로 승격됐는데, 그 이후로도 연속 실패 카운터가 스물한까지 올라가 있습니다. 승격이 문제를 해결하지 못했다는 뜻입니다. 우리 제어 평면이 당길 수 있는 손잡이가 모델 등급 하나뿐이었기 때문에, 원인이 다른 곳에 있었을 때 할 수 있는 일이 없었습니다. 논문이 제어 평면을 정의하면서 가중치 갱신과 컨텍스트 하네스 진화를 나란히 놓은 이유가 여기 있습니다. 손잡이가 하나면 그것은 제어 평면이 아니라 자동 승격 스위치입니다.
 
-![쿼터 소진과 21회 연속 실패라는 두 증상을 근본 원인과 결여된 기둥에 대응시킨 진단 표 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-09.png)
+![쿼터 소진과 21회 연속 실패라는 두 증상을 근본 원인과 결여된 기둥에 대응시킨 진단 표 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-09.webp)
 
 *두 실패를 논문의 기둥에 대응시키면 무엇이 비어 있었는지가 드러납니다.*
 
@@ -118,7 +118,7 @@ AReaL의 핵심 설계는 생성과 학습을 완전히 분리하는 것입니�
 
 두 렌즈는 한 방향을 가리킵니다. ai-platform이 데이터가 머무는 경계를 물리적으로 보장하고, 그 안에서 Paxis가 궤적을 학습 재료로 승격시키는 정책을 집행합니다. 논문이 세 기둥을 따로 만들지 말라고 한 이유가 이 두 계층의 관계에서도 그대로 드러납니다.
 
-![하위 계층 ai-platform이 물리적 격리와 수집을 맡고 상위 계층 Paxis가 궤적을 학습 재료로 승격시키는 두 계층 구조 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-11.png)
+![하위 계층 ai-platform이 물리적 격리와 수집을 맡고 상위 계층 Paxis가 궤적을 학습 재료로 승격시키는 두 계층 구조 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-11.webp)
 
 *두 계층은 따로 설계할 수 없습니다. 아래가 경계를 보장해야 위가 정책을 집행할 수 있습니다.*
 
@@ -144,7 +144,7 @@ AReaL의 핵심 설계는 생성과 학습을 완전히 분리하는 것입니�
 
 배포한 에이전트가 몇 달째 그대로라면, 다음 모델 릴리스 일정을 확인하기 전에 질문 하나를 먼저 던져 보시길 권합니다. 어제 그 에이전트가 만든 실행 기록은 지금 어디에 있고, 그것으로 무엇을 바꿀 수 있습니까. 답이 대시보드에서 끝난다면 병목은 모델이 아닙니다.
 
-![어제 에이전트가 만든 실행 기록이 지금 어디에 있는지 묻고 배관을 구축하라는 결론 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-13.png)
+![어제 에이전트가 만든 실행 기록이 지금 어디에 있는지 묻고 배관을 구축하라는 결론 슬라이드](/assets/images/agentic-rl-systems-self-evolving-agents-slide-13.webp)
 
 *질문 하나로 진단이 끝납니다. 답이 대시보드에서 멈추면 배관이 없는 것입니다.*
 

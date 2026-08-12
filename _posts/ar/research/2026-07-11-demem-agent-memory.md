@@ -14,7 +14,7 @@ categories:
   - research
 ---
 
-![رسم تجريدي يصوّر ذكريات تتفرّع إلى مسارات منفصلة تؤدي إلى قرارات مختلفة]({{ '/assets/images/demem-agent-memory-hero.png' | relative_url }})
+![رسم تجريدي يصوّر ذكريات تتفرّع إلى مسارات منفصلة تؤدي إلى قرارات مختلفة]({{ '/assets/images/demem-agent-memory-hero.webp' | relative_url }})
 
 > 📄 **المراجعة المتعمقة الكاملة (DOCX)**: [نزّل المراجعة التفصيلية من Google Drive](https://drive.google.com/file/d/1oxsADQALTfdn7I_mmZbaZfMnmqoCMF9o/view).
 

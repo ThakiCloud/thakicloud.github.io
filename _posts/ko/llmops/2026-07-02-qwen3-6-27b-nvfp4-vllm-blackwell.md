@@ -20,7 +20,7 @@ categories:
   - llmops
 ---
 
-![Qwen3.6-27B를 NVFP4로: Blackwell 단일 GPU 서빙의 경제학 개념을 형상화한 이미지](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-hero.png)
+![Qwen3.6-27B를 NVFP4로: Blackwell 단일 GPU 서빙의 경제학 개념을 형상화한 이미지](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 개요

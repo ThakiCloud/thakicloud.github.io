@@ -145,6 +145,6 @@ The reason an agent still wobbles even after you bump the model is, in most case
 This post is a blog rewrite of a section from our ebook 『AI Agent Harness Design』.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-agent-harness-design/ch01.png)
-![Chapter 3 illustration](/assets/images/books/ai-agent-harness-design/ch03.png)
+![Chapter 1 illustration](/assets/images/books/ai-agent-harness-design/ch01.webp)
+![Chapter 3 illustration](/assets/images/books/ai-agent-harness-design/ch03.webp)
 

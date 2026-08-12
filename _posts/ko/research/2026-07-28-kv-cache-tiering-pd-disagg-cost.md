@@ -33,7 +33,7 @@ LLM 서빙 비용은 성격이 전혀 다른 두 단계에서 결정됩니다. �
 
 핵심 관찰은 두 가지이고, 방향이 서로 반대입니다. 첫째, 분리된 프리필 풀은 서버마다 따로 있던 캐시를 하나의 논리적 도메인으로 묶습니다. 인기 있는 프리픽스를 서버마다 중복으로 들고 있을 필요가 없어지므로, 재사용 분포가 한쪽으로 쏠려 있을수록(꼬리가 무거울수록) 같은 용량에서도 적중률이 확실히 올라갑니다. 즉 분리는 계층화의 가치를 끌어올립니다. 둘째, 최초 토큰 응답 시간(TTFT)에는 서비스 수준 목표가 있고, 그 안에서 캐시 조회에 쓸 수 있는 여유 시간은 정해져 있습니다. 분리가 도입한 전송 시간은 정확히 그 여유를 갉아먹고, 계층별 대역폭 차이가 워낙 크기 때문에(아래 그림처럼 HBM과 NVMe 사이에 대략 1,600배 차이가 납니다) 가장 느린 계층부터 임계 경로에서 탈락합니다. 분리를 도입해서 캐시가 더 값어치 있어졌는데, 정작 그 값어치를 실현할 가장 느린 계층은 같은 이유로 못 쓰게 됩니다.
 
-![KV 캐시 복구 시간 계층별 비교](/assets/images/posts/research/kv-cache-tiering-pd-disagg-cost/tier-latency-comparison.png)
+![KV 캐시 복구 시간 계층별 비교](/assets/images/posts/research/kv-cache-tiering-pd-disagg-cost/tier-latency-comparison.webp)
 *H200 NVL 공개 하드웨어 스펙을 바탕으로 계산한 분석 모델(실측이 아님). 1GB의 KV 캐시를 각 계층에서 복구하는 데 걸리는 시간을 로그 스케일로 비교했습니다. HBM은 약 0.21밀리초, NVMe는 약 333밀리초로 약 1,600배 차이가 나며, 이 격차가 어떤 계층이 지연시간에 민감한 경로에 남을 수 있는지를 사실상 결정합니다.*
 
 논문은 실제 수치도 붙입니다. 어텐션 레이어 32개, KV 헤드 8개, 헤드 차원 128, 요소당 2바이트 같은 전형적인 설정에서 토큰당 KV 바이트는 약 13만 바이트로 계산되고, 이는 대략 8,000토큰의 프리픽스가 KV 캐시 1GB에 해당한다는 뜻입니다. HBM에서는 그 1GB를 밀리초 이하로 회수하지만 NVMe에서는 3분의 1초 가까이 걸리므로, 수백 밀리초 단위인 일반적인 TTFT 목표 안에서는 전송에 이미 여유를 소진한 시점에 디스크 계층이 임계 경로에서 자동으로 탈락합니다. 결과적으로 디스크 계층은 동기적으로 조회하는 대상이 아니라 미리 DRAM으로 당겨놓는 비동기 프리페치 역할로 강등해야 한다는 결론이 나옵니다. 두 관찰의 부호가 반대이므로, 최종 효과는 워크로드가 적중률에 의해 제한되는지(이 경우 시너지) 아니면 여유 시간에 의해 제한되는지(이 경우 상쇄)에 따라 갈립니다.
@@ -42,7 +42,7 @@ LLM 서빙 비용은 성격이 전혀 다른 두 단계에서 결정됩니다. �
 
 여기서 실무적으로 중요한 질문은 "DRAM이나 디스크 계층에 용량을 얼마나 투자해야 하는가"입니다. 논문은 재사용 분포가 꼬리가 무거운 멱법칙을 따른다고 가정하고, 용량을 늘릴 때마다 얻는 적중률 증가분이 체감한다는 전제 아래 손익분기 용량을 유도합니다. 매 바이트를 추가할 때 얻는 편익은 그만큼 아끼는 프리필 재계산 비용이고, 잃는 비용은 그 바이트를 유지하는 임대료입니다. 이 둘을 같게 놓으면 계층 t의 경제적으로 최적인 용량이 재사용 분포의 꼬리 지수(베타)에 대해 1/(1-베타) 승수로 나타나는데, 이 지수가 1에 가까워질수록(재사용이 고르게 퍼져 있을수록) 필요한 용량이 초선형으로 폭증합니다.
 
-![손익분기 용량과 재사용 꼬리 지수의 관계](/assets/images/posts/research/kv-cache-tiering-pd-disagg-cost/pareto-breakeven-sensitivity.png)
+![손익분기 용량과 재사용 꼬리 지수의 관계](/assets/images/posts/research/kv-cache-tiering-pd-disagg-cost/pareto-breakeven-sensitivity.webp)
 *요청률·프리필 재계산 비용·GPU 단가·저장 임대료를 예시 값으로 고정하고 계산한 분석 모델(실측이 아님). 재사용 꼬리 지수 베타가 1에 가까워질수록 손익분기 용량이 로그 스케일에서도 가파르게 치솟는 모습을 보여줍니다.*
 
 이 민감도가 뜻하는 바는 분명합니다. 계층화 용량은 하드웨어보다 워크로드의 성질에 훨씬 크게 좌우되므로, 같은 H200 클러스터라도 서비스마다 필요한 DRAM·NVMe 용량이 한 자릿수 이상 다를 수 있고, 한 배포에서 얻은 프로비저닝 가이드를 다른 배포에 그대로 옮겨 쓸 수 없습니다. 게다가 이 최적 용량은 앞서 나온 여유 시간 제약과 별개로 검증되어야 합니다. 분리를 공격적으로 해서 여유 시간이 이미 좁아진 상태라면, 손익분기 공식이 아무리 큰 용량을 정당화해도 디스크 계층은 임계 경로에 올라갈 수 없고, 남는 선택은 그 계층을 프리페치로 돌리는 두 계층 구성뿐입니다.
@@ -73,11 +73,11 @@ LLM 서빙 비용은 성격이 전혀 다른 두 단계에서 결정됩니다. �
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![kv-cache-tiering-pd-disagg-cost 슬라이드 1](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-01.png)
+![kv-cache-tiering-pd-disagg-cost 슬라이드 1](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-01.webp)
 
-![kv-cache-tiering-pd-disagg-cost 슬라이드 2](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-02.png)
+![kv-cache-tiering-pd-disagg-cost 슬라이드 2](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-02.webp)
 
-![kv-cache-tiering-pd-disagg-cost 슬라이드 3](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-03.png)
+![kv-cache-tiering-pd-disagg-cost 슬라이드 3](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-03.webp)
 
-![kv-cache-tiering-pd-disagg-cost 슬라이드 4](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-04.png)
+![kv-cache-tiering-pd-disagg-cost 슬라이드 4](/assets/images/kv-cache-tiering-pd-disagg-cost-slide-04.webp)
 

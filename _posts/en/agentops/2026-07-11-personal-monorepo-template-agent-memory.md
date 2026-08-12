@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 Anyone who uses a coding agent daily runs into the same wall over and over. Decisions made yesterday, conventions set last week, a particular colleague's way of working: the agent asks about all of it again every session, as if hearing it for the first time. A repository that solves this problem without an expensive vector database or dedicated memory infrastructure, using nothing more than **a plain folder structure and a single markdown file**, has recently gone public and stirred up developers. It is `personal-monorepo-template`, released by jxnl (Jason Liu), the creator of the `Instructor` library. If you were worrying about infrastructure before you had even wired up memory for your agent, this is worth checking to see how far a folder structure alone can take you, and where it hits a wall.
 
-![Illustration of the core idea of Coding Agents That Remember Through Folders, Not Vector Databases: A Look at personal-monorepo-template](/assets/images/personal-monorepo-template-agent-memory-hero.png)
+![Illustration of the core idea of Coding Agents That Remember Through Folders, Not Vector Databases: A Look at personal-monorepo-template](/assets/images/personal-monorepo-template-agent-memory-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Overview

@@ -18,7 +18,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-agent-fleet-graph-primitives/"
 ---
 
-![Abstract image of a single orchestrator node fanning out into parallel workers that converge back into one verification gate below](/assets/images/claude-code-agent-fleet-graph-primitives-hero.png)
+![Abstract image of a single orchestrator node fanning out into parallel workers that converge back into one verification gate below](/assets/images/claude-code-agent-fleet-graph-primitives-hero.webp)
 
 *Fanning out is the easy half. The value of a graph shows up at the gate underneath.*
 

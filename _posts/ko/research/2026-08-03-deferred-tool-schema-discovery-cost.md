@@ -30,7 +30,7 @@ toc: true
 
 비정렬 조건은 무너집니다. Recall@1은 0.0769, 26개 중 겨우 2개만 찾아냅니다. Recall@3도 똑같이 0.0769로, 검색창을 3위까지 넓혀도 추가로 찾아지는 게 없습니다. Recall@5가 돼서야 0.1154, 3개로 늘지만, 나머지 23개(88.5%)는 상위 5개 안에 한 번도 등장하지 않습니다. 그것도 코퍼스 규모와 무관하게 26개에서든 300개에서든 완전히 동일합니다.
 
-![Deferred Recall by Vocabulary Alignment and k](/assets/images/posts/research/deferred-tool-schema-discovery-cost/recall-transition.png)
+![Deferred Recall by Vocabulary Alignment and k](/assets/images/posts/research/deferred-tool-schema-discovery-cost/recall-transition.webp)
 *논문의 실측 결과를 나타낸 그림입니다. 정렬 질의는 모든 k에서 Recall@1=1.0을 유지하는 반면, 비정렬 질의는 같은 k에서 0.0769로 무너지고, 검색 범위를 k=5까지 넓혀도 추가로 회수되는 도구는 1개뿐입니다.*
 
 같은 검색기, 같은 26개 대상, 같은 코퍼스 위에서 1.000과 0.0769라는 이 간극은 성능이 조금 떨어지는 정도가 아니라 상전이에 가깝습니다. 차이를 만드는 유일한 변수는 과제 문장이 도구 이름과 어휘를 우연히 공유하느냐인데, 지연 로딩 정책 자체의 설계상 에이전트는 이 사실을 미리 알 방법이 없습니다.
@@ -41,7 +41,7 @@ toc: true
 
 더 반직관적인 관찰은 비정렬 recall이 코퍼스 규모에 완전히 무관하다는 점입니다. 26개에서든 300개에서든 Recall@1은 0.0769, Recall@5는 0.1154로 그대로입니다.
 
-![Unaligned Recall Is Flat Across Corpus Scale](/assets/images/posts/research/deferred-tool-schema-discovery-cost/corpus-scale-flatness.png)
+![Unaligned Recall Is Flat Across Corpus Scale](/assets/images/posts/research/deferred-tool-schema-discovery-cost/corpus-scale-flatness.webp)
 *논문의 실측 결과를 나타낸 그림입니다. 더미 도구 274개를 추가해도 비정렬 조건의 Recall@5는 0.1154에서 전혀 움직이지 않습니다. 실패의 원인이 건초더미 속 희석이 아니라 어휘 불일치 자체임을 보여줍니다.*
 
 BM25는 어휘가 겹치는 문서만 점수를 매기기 때문에, 어휘를 전혀 공유하지 않는 더미 도구들은 점수가 거의 0으로 수렴해 정답 도구의 순위를 밀어내지도, 경쟁하지도 않습니다. 26개 중 24위였던 도구는 더미 274개를 더 넣어도 여전히 실제로 점수가 매겨지는 도구들 사이에서 24위입니다. 즉 이 실패는 도구가 군중 속에 묻혀서 못 찾는 게 아니라, 질의와 도구가 애초에 서로 다른 어휘 공간에 살고 있어서 생기는 문제입니다. 그래서 도구 목록을 줄이는, 검색 문제에서 흔히 시도하는 첫 번째 해법은 이 실패를 완화하지 못합니다.
@@ -50,7 +50,7 @@ BM25는 어휘가 겹치는 문서만 점수를 매기기 때문에, 어휘를 �
 
 토큰 절감 자체는 과장이 아닙니다. 300개 코퍼스에서 정렬 질의는 전량 preload 대비 91.4%를 아낍니다.
 
-![Token Cost per Query vs Corpus Size](/assets/images/posts/research/deferred-tool-schema-discovery-cost/token-cost-by-scale.png)
+![Token Cost per Query vs Corpus Size](/assets/images/posts/research/deferred-tool-schema-discovery-cost/token-cost-by-scale.webp)
 *논문의 실측 결과를 나타낸 그림입니다. 300개 도구 규모에서 정렬 질의는 전량 preload 대비 91.4%의 토큰을 아끼지만, 이 절감폭은 어휘 정렬이라는 조건이 성립할 때만 유효합니다.*
 
 문제는 이 절감이 철저히 조건부라는 데 있습니다. 비정렬 조건은 검색이 실패해도 시도 자체의 토큰 비용은 그대로 발생합니다. 논문은 이걸 도구군 전체 수준의 통계값 하나로 정리합니다. 26개 도구 전부에 대해 검색을 시도한 총 토큰 비용을, 실제로 회수에 성공한 도구 수(2/26)로 나눈 값입니다. 회수 비율의 역수(13배)를 곱한 것과 같은데, 이 성공당 상각 비용은 모든 코퍼스 규모에서 전량 preload 비용을 넘어섭니다. 이건 재시도 비용이 아닙니다. 결정론적인 BM25는 같은 질의에 대해 실패하면 항상 똑같이 실패하기 때문에 다시 검색해 봐야 나아지지 않습니다. 비정렬 영역에서 지연 로딩은 할인을 사는 게 아니라 대부분 실패하는 검색에 토큰을 쓰고 있는 셈이고, 못 찾은 도구는 성능이 떨어진 게 아니라 그냥 없는 것과 같습니다.

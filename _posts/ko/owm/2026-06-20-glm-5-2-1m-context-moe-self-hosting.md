@@ -34,7 +34,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ![GLM-5.2 희소 MoE와 1M 컨텍스트 개념도]({{ '/assets/images/glm-5-2-hero.webp' | relative_url }})
 
-![GLM-5.2: 753B MoE, 1M 컨텍스트, MIT 라이선스 온프렘 서빙 가이드 개념을 형상화한 이미지](/assets/images/glm-5-2-1m-context-moe-self-hosting-hero.png)
+![GLM-5.2: 753B MoE, 1M 컨텍스트, MIT 라이선스 온프렘 서빙 가이드 개념을 형상화한 이미지](/assets/images/glm-5-2-1m-context-moe-self-hosting-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## GLM-5.2는 무엇이 다른가

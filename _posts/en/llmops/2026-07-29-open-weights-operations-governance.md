@@ -25,7 +25,7 @@ If your team runs open models on in-house infrastructure, this week's news carri
 
 For the past few years, open versus closed got treated like a tribal fight. Line up this week's statements and moves side by side, though, and both camps turn out to be converging on the same answer: release it, but keep it under control.
 
-![An image representing the concept of the open-weights debate being over while operations remain the real problem](/assets/images/open-weights-operations-governance-hero.png)
+![An image representing the concept of the open-weights debate being over while operations remain the real problem](/assets/images/open-weights-operations-governance-hero.webp)
 *A visual representation of this post's core idea.*
 
 ## From outright bans to conditional openness

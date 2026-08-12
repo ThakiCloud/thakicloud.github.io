@@ -31,30 +31,30 @@ This is for engineers who have put two differently sized VLMs into a document OC
 
 Here are the numbers behind that. The small model is the 250-million-parameter SmolVLM-256M-Instruct, the large model is the 2.2-billion-parameter Qwen2-VL-2B-Instruct, and the large model's compute cost is 8.61x the small one's. Using the small model alone gives an average CER (character error rate, lower is better) of 0.634, meaning it effectively fails to read about two-thirds of the documents; the large model alone drops CER to 0.045, but at 8.61x the cost. The cascade picks a tradeoff point between these two extremes with a single threshold tau: only documents where the small model's confidence falls below tau get escalated to the large model, so the escalation rate, expected cost, and expected error rate all become functions of tau.
 
-![Cost-accuracy Pareto frontier measured on H200]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-pareto-frontier.png' | relative_url }})
+![Cost-accuracy Pareto frontier measured on H200]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-pareto-frontier.webp' | relative_url }})
 *Measured values from an actual H200 node. The leftmost point (1.0x cost, CER 0.634) is the small model alone, and the rightmost point (8.61x cost, CER 0.045) is the large model alone. In the tau = 0.85 to 0.95 range, the cascade reaches a CER of 0.036 to 0.041, matching or slightly beating the large model alone at 5.1x to 5.8x cost.*
 
 Sweeping tau across eight points from 0 to 1.01 produces a textbook Pareto curve. At tau = 0.5, only 8.3% of documents escalate, holding CER to 0.423 at 1.63x cost. At tau = 0.7, 45.8% escalate, CER drops sharply to 0.103, and cost rises to 4.49x. At tau = 0.85, escalation reaches 54.2%, CER falls to 0.041, and cost hits 5.12x; at tau = 0.95, escalation reaches 62.5%, CER falls to 0.036, and cost reaches 5.76x. The key point is that the CER of 0.036 to 0.041 in this range is actually a bit lower than the large model's own 0.045. The cascade got large-model-level accuracy while sending only about half of the documents up to the large model, at 60 to 67 percent of its cost. The data also explains why the cascade edged out the large model: the small model read some easy documents more accurately than the large model did (the large model made small errors around things like line breaks), and because the cascade never escalates those documents, it simply keeps the small model's correct answer.
 
-![Illustration of the core idea of When Can You Trust the Cheap Model: Cutting Multilingual Document OCR Costs with a Confidence-Gated VLM Cascade](/assets/images/confidence-gated-ocr-vlm-cascade-hero.png)
+![Illustration of the core idea of When Can You Trust the Cheap Model: Cutting Multilingual Document OCR Costs with a Confidence-Gated VLM Cascade](/assets/images/confidence-gated-ocr-vlm-cascade-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Why It Worked: Confidence Honestly Flagged the Documents It Couldn't Read
 
 Breaking the gain down by language makes clear where it comes from.
 
-![Average CER by language, measured on H200: the small model collapses on Korean]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-shift-failure.png' | relative_url }})
+![Average CER by language, measured on H200: the small model collapses on Korean]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-shift-failure.webp' | relative_url }})
 *Average CER by language, measured on an actual H200. The small model comes close to the large model on English (0.084 vs. 0.027), but its CER spikes to 1.18 on Korean. Confidence drops in step, from 0.957 on English to 0.625 on Korean, which lets the gate correctly flag Korean documents for escalation.*
 
 The small model matches the large model on English but falls apart on Korean. A CER of 1.18 means its output is essentially unrelated to the ground truth, and the actual logs show the small model inventing unrelated English sentences or emitting meaningless repetition. What matters is that its confidence drops right along with it. That fall from 0.957 on English to 0.625 on Korean is the engine that makes the cascade work: because the small model loses confidence on its own whenever it can't read a document, a single threshold is enough to pick out the hard cases.
 
-![Average CER by scan quality grade, measured on H200: the small model swings, the large model stays low]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.png' | relative_url }})
+![Average CER by scan quality grade, measured on H200: the small model swings, the large model stays low]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.webp' | relative_url }})
 *Average CER by scan quality grade, measured on an actual H200. The small model's error rate is high and uneven across grades (clean 0.43, medium 0.90, degraded 0.57), while the large model stays between 0.03 and 0.06 throughout.*
 
 The scan quality axis shows the same pattern. The small model's error rate swings from 0.43 to 0.90 depending on the grade, while the large model sits quietly between 0.03 and 0.06 regardless of grade. That wide gap between the two bars is the accuracy headroom the cascade can recover, and as long as confidence picks up on that instability, the cascade captures the headroom cost-effectively.
 
 <!-- nlm-visual -->
-![Key-concept summary infographic 1](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-1.png)
+![Key-concept summary infographic 1](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-1.webp)
 *Infographic generated by NotebookLM from the sources.*
 
 ## Choosing Tau for Your Own Document Population
@@ -76,7 +76,7 @@ That is exactly where the cascade's real failure mode lives. The most dangerous 
 So the right design response isn't to abandon the cascade, it's to actually verify, per document type, the assumption the cascade depends on. In the text-LLM world, FrugalGPT already reported quality comparable to the top-performing model at up to 98% less cost, and this measurement shows, on a small scale, that the same idea can work for document OCR too. That said, the honest choices are to calibrate thresholds separately by script and scan quality, to design the confidence gate as a multi-signal system that looks at visual certainty and structural signals together rather than a single scalar probability, and to escalate everything or route to human review in the regions where confidence is known to betray you.
 
 <!-- nlm-visual -->
-![Key-concept summary infographic 2](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.png)
+![Key-concept summary infographic 2](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.webp)
 *Infographic generated by NotebookLM from the sources.*
 
 ## Sources

@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/deepseek-v4-flash-api
 
 모델 발표를 볼 때 가장 먼저 보게 되는 숫자는 보통 파라미터 수입니다. 그런데 실제로 그 모델을 우리 GPU 위에 올려야 하는 입장이 되면, 총 파라미터보다 훨씬 중요한 숫자가 따로 있습니다. 2026년 7월 31일 공개 베타로 열린 DeepSeek-V4-Flash는 그 차이를 설명하기에 좋은 사례입니다. 총 284B인데 한 토큰을 만들 때 실제로 켜지는 건 13B입니다.
 
-![거대한 노드 격자 안에서 소수의 경로만 밝게 점등되어 희소 전문가 라우팅을 형상화한 추상 이미지](/assets/images/deepseek-v4-flash-api-public-beta-hero.png)
+![거대한 노드 격자 안에서 소수의 경로만 밝게 점등되어 희소 전문가 라우팅을 형상화한 추상 이미지](/assets/images/deepseek-v4-flash-api-public-beta-hero.webp)
 
 *대부분은 꺼져 있고 일부만 켜집니다. 희소 전문가 구조를 한 장으로 옮기면 이런 그림입니다.*
 
@@ -37,7 +37,7 @@ DeepSeek이 V4-Flash 공식 API를 공개 베타로 열었다고 발표한 것�
 
 사양은 이렇습니다. 총 284B 파라미터의 Mixture-of-Experts 구조이고, 토큰당 활성 파라미터는 13B, 컨텍스트 창은 100만 토큰입니다. 공개 API 단가는 입력 100만 토큰당 0.14달러, 출력 100만 토큰당 0.28달러로 집계되어 있습니다. 종합 지표에서는 Artificial Analysis 지능 지수 50이 기록되어 있습니다.
 
-![DeepSeek-V4-Flash의 총 파라미터, 활성 파라미터, 컨텍스트 창, API 단가, 지능 지수를 정리한 사양 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-03.png)
+![DeepSeek-V4-Flash의 총 파라미터, 활성 파라미터, 컨텍스트 창, API 단가, 지능 지수를 정리한 사양 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-03.webp)
 
 *사양을 한 장에 모으면 활성 파라미터가 총 파라미터의 20분의 1 수준이라는 점이 눈에 들어옵니다.*
 
@@ -51,7 +51,7 @@ DeepSeek이 V4-Flash 공식 API를 공개 베타로 열었다고 발표한 것�
 
 이 관찰은 최근 하네스 연구가 말하는 것과 같은 방향을 가리킵니다. [하네스 설계와 사후 학습의 상호작용을 다룬 논문(arXiv:2606.25447)](https://arxiv.org/abs/2606.25447)은 도구 환경이 바뀌었을 때 성능이 얼마나 버티는지가 사후 학습이 어떤 하네스를 전제했는지에 크게 달려 있음을 보였습니다. 즉 모델 쪽에서 에이전트 성능을 올리는 작업과 하네스 쪽에서 올리는 작업은 별개가 아니라 짝입니다. 같은 맥락은 [ARC-AGI-3에서 하네스 설정이 점수를 갈랐던 사례](/tech-blog/ko/llmops/arc-agi-3-harness-settings-context-memory/)에서도 이미 확인했습니다.
 
-![모델 쪽 사후 학습과 하네스 설정이 맞물린 톱니바퀴로 표현된 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-06.png)
+![모델 쪽 사후 학습과 하네스 설정이 맞물린 톱니바퀴로 표현된 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-06.webp)
 
 *모델 쪽 개선과 하네스 쪽 개선은 별개가 아니라 맞물려 돕니다.*
 
@@ -59,7 +59,7 @@ DeepSeek이 V4-Flash 공식 API를 공개 베타로 열었다고 발표한 것�
 
 발표를 인용한 보도 기준으로 공식 빌드의 점수는 다음과 같습니다.
 
-![DeepSeek-V4-Flash 공식 빌드의 에이전트 벤치마크 점수 막대 그래프](/assets/images/deepseek-v4-flash-api-public-beta-results.png)
+![DeepSeek-V4-Flash 공식 빌드의 에이전트 벤치마크 점수 막대 그래프](/assets/images/deepseek-v4-flash-api-public-beta-results.webp)
 
 *공식 발표를 인용한 보도 기준 수치이며 자체 재측정값이 아닙니다.*
 
@@ -95,7 +95,7 @@ flowchart TB
 
 연산은 활성 파라미터가 정합니다. 토큰 하나를 만들 때 13B만 관여하므로, 순수 연산량 기준으로는 13B급 밀집 모델과 비슷한 속도 특성을 가집니다. 즉 이 모델은 메모리를 많이 먹지만 그 메모리 대비 빠릅니다.
 
-![메모리는 총 파라미터가, 연산은 활성 파라미터가 정하는 비대칭을 시소로 표현한 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-07.png)
+![메모리는 총 파라미터가, 연산은 활성 파라미터가 정하는 비대칭을 시소로 표현한 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-07.webp)
 
 *메모리 축과 연산 축이 서로 다른 숫자에 걸려 있습니다. 이 비대칭이 판단을 바꿉니다.*
 
@@ -123,7 +123,7 @@ flowchart TB
 
 **Paxis** 관점에서는 Responses API 네이티브 지원이 더 중요합니다. Paxis는 ai-platform 위에서 도는 Agent-Native Cloud 제어 평면으로 Skills와 Tools, Policies, Audit Logs를 일급 리소스로 다룹니다. 에이전트 제어 평면 입장에서 모델을 갈아 끼우는 비용은 대부분 모델 성능이 아니라 인터페이스 차이에서 발생합니다. 도구 호출 형식과 구조화 출력 스키마가 제각각이면 모델마다 어댑터를 따로 유지해야 하고, 그 어댑터가 조용히 낡습니다. 널리 쓰이는 형식을 네이티브로 지원하는 모델이 늘어날수록 제어 평면은 모델 교체를 설정 변경 수준으로 낮출 수 있습니다. 저비용 서빙이 에이전트 경제성을 만들고, 표준 인터페이스가 그 경제성을 실제로 갈아 끼울 수 있게 만듭니다.
 
-![ai-platform 렌즈와 Paxis 렌즈에서 본 적용 시사점을 두 칼럼으로 정리한 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-09.png)
+![ai-platform 렌즈와 Paxis 렌즈에서 본 적용 시사점을 두 칼럼으로 정리한 슬라이드](/assets/images/deepseek-v4-flash-api-public-beta-slide-09.webp)
 
 *인프라 렌즈는 스케줄링을, 제어 평면 렌즈는 인터페이스 교체 비용을 봅니다.*
 

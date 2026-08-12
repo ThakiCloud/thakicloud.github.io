@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/micron-meta-lpddr-kv-offload/"
 ---
 
-![Abstract image of a small bright core wrapped in wide translucent layers against a dark background](/assets/images/micron-meta-lpddr-kv-offload-hero.png)
+![Abstract image of a small bright core wrapped in wide translucent layers against a dark background](/assets/images/micron-meta-lpddr-kv-offload-hero.webp)
 *A visual for the structure at the heart of this white paper: a narrow hot HBM core and wide cool LPDDR tiers.*
 
 ## Why this matters to you
@@ -63,7 +63,7 @@ The hardware setup is unusual too. The test platform is the NVIDIA GH200 Grace H
 
 To test whether the paper's premise holds, doing the arithmetic beats reading someone else's chart. Llama 3 70B uses 80 layers, 8 KV heads, and a head dimension of 128 in its published config. Holding both keys and values in FP16 means a single token occupies 2 times 80 times 8 times 128 times 2 bytes, which is 320KiB. Multiply by context length and you have one session's footprint.
 
-![Log-scale bar chart of Llama 3 70B KV cache size by context length overlaid with memory tier capacity lines](/assets/images/micron-meta-lpddr-kv-offload-results.png)
+![Log-scale bar chart of Llama 3 70B KV cache size by context length overlaid with memory tier capacity lines](/assets/images/micron-meta-lpddr-kv-offload-results.webp)
 *One session's KV footprint plotted against tier capacity lines. At 500K tokens it already sits far above the HBM capacity of a single H100.*
 
 The results follow. At 8K context a session is a light 2.7GB. At 128K it becomes 42.9GB, and at the 500K context the paper used for its real-time test, one session demands 163.8GB. At one million tokens it is 327.7GB. Set that beside the 141.2GB of FP16 weights for the same model and the paper's claim confirms itself. At 500K context, a single user's cache is larger than the entire model.

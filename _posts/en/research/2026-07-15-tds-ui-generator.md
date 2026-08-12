@@ -26,7 +26,7 @@ frontend and ML engineers who are trying to get an LLM to produce UI. The short 
 determined the quality of the generated screens wasn't model size, it was **the gate that
 actually compiles and validates what gets generated**.
 
-![Banner showing the TDS UI generator experiment result flipping from 0/40 with fine-tuning to 39/40 with constrained decoding]({{ '/assets/images/posts/research/tds-ui-generator/hero.png' | relative_url }})
+![Banner showing the TDS UI generator experiment result flipping from 0/40 with fine-tuning to 39/40 with constrained decoding]({{ '/assets/images/posts/research/tds-ui-generator/hero.webp' | relative_url }})
 *Instead of teaching the grammar through training, we forced only valid outputs through rules.*
 
 ## Why we didn't generate code directly
@@ -132,7 +132,7 @@ that component actually has, and nested structures enforced recursively. We appl
 decoding constraint. The result was clear. On the same 40 held-out examples, with no training at
 all, the gate pass rate went from 0% to 39 out of 40, or 97.5% (95% CI 86.8% to 99.9%).
 
-![Bar chart of gate pass rates across base, fine-tuned, repair, and constrained-decoding methods]({{ '/assets/images/posts/research/tds-ui-generator/fig1-reversal.png' | relative_url }})
+![Bar chart of gate pass rates across base, fine-tuned, repair, and constrained-decoding methods]({{ '/assets/images/posts/research/tds-ui-generator/fig1-reversal.webp' | relative_url }})
 *Four-way comparison: constraint alone, without any training, pushed the gate pass rate to 39/40. Measured (n=40).*
 
 This three-way comparison is the conclusion of the project. Both the untreated base model and the
@@ -181,7 +181,7 @@ was pick the good one out of the batch. The bottleneck wasn't generation, it was
 So we built several selectors that don't know the ground truth, and measured how much of that
 ceiling they actually captured.
 
-![Bar chart comparing component F1 across Top-1, structure, judge, requirement, and oracle selectors]({{ '/assets/images/posts/research/tds-ui-generator/fig2-verifier.png' | relative_url }})
+![Bar chart comparing component F1 across Top-1, structure, judge, requirement, and oracle selectors]({{ '/assets/images/posts/research/tds-ui-generator/fig2-verifier.webp' | relative_url }})
 *Among selectors that don't know the ground truth, the requirement predicate recovered 27% of the headroom, while the LLM judge did worse than not selecting at all. Measured (n=40).*
 
 Picking the structurally richer candidate barely helped. Picking the candidate that passed the

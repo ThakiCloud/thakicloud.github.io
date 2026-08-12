@@ -29,7 +29,7 @@ ebook_pages: 23
 
 This post is for engineers who've hit an AI feature outage with no stack trace to work from. If you've reentered the same input only to have it not reproduce, watched error logs stay clean while user complaints pile up, this should help. We cover how to capture a failure that won't reproduce, the order for narrowing the cause across three branches, input distribution, model changes, and code changes, how to notice quality that's quietly degrading during an incident investigation, and the criteria for deciding on a rollback.
 
-![Illustration of the core idea of An AI Outage You Can't Reproduce: What to Suspect First](/assets/images/ai-production-debugging-hero.png)
+![Illustration of the core idea of An AI Outage You Can't Reproduce: What to Suspect First](/assets/images/ai-production-debugging-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## The Fact That It Won't Reproduce Is Itself the First Clue
@@ -164,7 +164,7 @@ This post is a blog rewrite of a section from our ebook 『AI Production Debuggi
 - [How Is ChatGPT's Behavior Changing over Time? (arXiv:2307.09009)](https://arxiv.org/abs/2307.09009)
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-production-debugging/ch01.png)
-![Chapter 3 illustration](/assets/images/books/ai-production-debugging/ch03.png)
-![Chapter 5 illustration](/assets/images/books/ai-production-debugging/ch05.png)
+![Chapter 1 illustration](/assets/images/books/ai-production-debugging/ch01.webp)
+![Chapter 3 illustration](/assets/images/books/ai-production-debugging/ch03.webp)
+![Chapter 5 illustration](/assets/images/books/ai-production-debugging/ch05.webp)
 

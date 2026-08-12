@@ -35,11 +35,11 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-stack-sovereignty 슬라이드 1](/assets/images/ai-stack-sovereignty-slide-01.png)
+![ai-stack-sovereignty 슬라이드 1](/assets/images/ai-stack-sovereignty-slide-01.webp)
 
-![ai-stack-sovereignty 슬라이드 2](/assets/images/ai-stack-sovereignty-slide-02.png)
+![ai-stack-sovereignty 슬라이드 2](/assets/images/ai-stack-sovereignty-slide-02.webp)
 
-![ai-stack-sovereignty 슬라이드 3](/assets/images/ai-stack-sovereignty-slide-03.png)
+![ai-stack-sovereignty 슬라이드 3](/assets/images/ai-stack-sovereignty-slide-03.webp)
 
-![ai-stack-sovereignty 슬라이드 4](/assets/images/ai-stack-sovereignty-slide-04.png)
+![ai-stack-sovereignty 슬라이드 4](/assets/images/ai-stack-sovereignty-slide-04.webp)
 

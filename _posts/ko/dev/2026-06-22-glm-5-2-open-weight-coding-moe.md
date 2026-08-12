@@ -422,13 +422,13 @@ ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로�
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![glm-5-2-open-weight-coding-moe 슬라이드 1]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-01.png' | relative_url }})
+![glm-5-2-open-weight-coding-moe 슬라이드 1]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-01.webp' | relative_url }})
 
-![glm-5-2-open-weight-coding-moe 슬라이드 2]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-02.png' | relative_url }})
+![glm-5-2-open-weight-coding-moe 슬라이드 2]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-02.webp' | relative_url }})
 
-![glm-5-2-open-weight-coding-moe 슬라이드 3]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-03.png' | relative_url }})
+![glm-5-2-open-weight-coding-moe 슬라이드 3]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-03.webp' | relative_url }})
 
-![glm-5-2-open-weight-coding-moe 슬라이드 4]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-04.png' | relative_url }})
+![glm-5-2-open-weight-coding-moe 슬라이드 4]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-04.webp' | relative_url }})
 
 ## 출처
 

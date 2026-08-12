@@ -43,7 +43,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/research/retriever-vs-decomp
 
 فهل يساعد استبدال المسترجِع بآخر أفضل؟ هنا يفترق هذا التنقيح بشكل حاد عن المسودة الأولى. فقد سجّل التفكيك القائم على قواعد (SAD، 35.0 بالمئة)، ونسخته المحسّنة لإعادة التقسيم (ISAD، 37.1 بالمئة)، ونسخة من التفكيك المعياري مع بوابة تصفية (SAD-AGENT، 41.9 بالمئة)، جميعها أقل من SINGLE. واستبدال الموجِّه بمسترجِع تضمين (embedding) متعدد اللغات خفض ORACLE فعلياً إلى 45.4 بالمئة، بينما وصل هجين يجمع BM25 مع الاسترجاع الكثيف (RRF) إلى 64.0 بالمئة، وهو ما لا يختلف إحصائياً عن نسبة BM25 البالغة 63.6 بالمئة. أي أن نموذج استرجاع أفضل لم يرفع السقف.
 
-![Neither decomposition nor a better retriever raises the ceiling]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-strategies-retrievers.png' | relative_url }})
+![Neither decomposition nor a better retriever raises the ceiling]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-strategies-retrievers.webp' | relative_url }})
 *يُظهر الجزء الأيسر أن جميع استراتيجيات التفكيك تقع دون SINGLE (الخط المنقّط)، بينما يُظهر الجزء الأيمن أن المسترجِعات الكثيفة والهجينة لا تتفوق على BM25 الحي. لا هذه الرافعة ولا تلك رفعت سقف ORACLE.*
 
 ## عنق الزجاجة الحقيقي: تكرار كوربَس المهارات
@@ -56,7 +56,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/research/retriever-vs-decomp
 
 تعتمد القدرة عبر-اللغوية للموجّه الحي كلياً على قاموس مرادفات كوري-إنجليزي معدّ يدوياً. وحين أُزيل هذا القاموس، انهار ORACLE من 63.6 بالمئة إلى 20.8 بالمئة، وانهار SINGLE من 52.9 بالمئة إلى 18.8 بالمئة. أي أن نحو ثلثي التغطية المقيسة لم يأتِ من خوارزمية الاسترجاع بل من قاموس يُصان يدوياً.
 
-![Removing the hand-curated synonym dictionary collapses coverage]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-synonym-artifact.png' | relative_url }})
+![Removing the hand-curated synonym dictionary collapses coverage]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-synonym-artifact.webp' | relative_url }})
 *إزالة قاموس المرادفات الكوري-الإنجليزي المُعدّ يدوياً تُنهار به التغطية (ORACLE من 63.6 إلى 20.8). القدرة عبر-اللغوية أثرٌ ناتج عن التنقيح لا خاصية متأصلة في المسترجِع.*
 
 وهذه الحقيقة تغيّر التفسير. تُظهر السجلات الداخلية أن توسيعاً واحداً سابقاً لقاموس المرادفات، دون المساس بمنطق التفكيك إطلاقاً، رفع سقف ORACLE من 42.5 بالمئة إلى 63.6 بالمئة، أي بزيادة 21.1 نقطة. وقد قدّمت المسودة الأولى هذه القفزة كدليل إيجابي على أن "عمل المسترجِع، لا التفكيك، هو ما أحدث الفرق." لكن ذلك التوسيع أضاف بالضبط المصطلحات الكورية التي احتاجها المعيار المرجعي (deep research وfact check وSlack وغيرها). ولأن سوء التطابق هذا هو ما دفع إلى ذلك التوسيع أصلاً، فإن الزيادة البالغة 21.1 نقطة قِيست على الحالات نفسها التي عُدّل القاموس على أساسها، أي أنها تعكس ملاءمة لمجموعة الاختبار نفسها (overfitting). تسحب هذه النسخة المنقّحة هذا الرقم من الأدلة. فالمسترجِع الذي تستند قدرته عبر-اللغوية إلى قاموس مضبوط على المعيار المرجعي لا يقدّم سقفاً قابلاً للتعميم ولا تحسّناً قابلاً للتعميم.
@@ -65,7 +65,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/research/retriever-vs-decomp
 
 تغفل تغطية الخطوات (step coverage) عن القيمة الفعلية التي يقدّمها التفكيك. فحين قورن الترتيب الذي تُخرج فيه كل استراتيجية المهارات المعيارية بترتيب التنفيذ المعياري (Kendall tau على الأزواج المغطاة)، استعاد SAD-AGENT ترتيباً كاملاً بقيمة tau تساوي 1.0 (عبر 4 حالات تضمّ مهارتين معياريتين مغطّاتين أو أكثر)، بينما كان ترتيب SINGLE في الواقع معكوساً بقيمة tau تساوي سالب 0.22 (عبر 6 حالات). فالاسترجاع أحادي المرور يُعيد حزمة من النتائج ذات الصلة دون أي دلالة تنفيذية، بينما يستعيد التفكيك الترتيب الذي يجب أن تُنفَّذ فيه المهارات. أي أن التفكيك في هذا النظام لا يرفع التغطية، لكنه الاستراتيجية الوحيدة التي تستعيد الترتيب.
 
-![Decomposition recovers execution ordering]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ordering.png' | relative_url }})
+![Decomposition recovers execution ordering]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ordering.webp' | relative_url }})
 *المساهمة الحقيقية للتفكيك هي استعادة ترتيب التنفيذ (tau يساوي 1.0). الاسترجاع المرتَّب أحادي المرور معكوس فعلياً (tau يساوي سالب 0.22)، وهو فرق لا تراه مقاييس التغطية وحدها.*
 
 ## المساهمة تجاه الشركات والمجتمع والعلم
@@ -76,7 +76,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/research/retriever-vs-decomp
 
 علمياً، تقدّم هذه الورقة حالة لا تنتقل بسلاسة إلى أيٍّ من الفرضيتين السائدتين مؤخراً، سواء أن "الاسترجاع قد حُلّ فعلياً" أو أن "التفكيك هو عنق الزجاجة الوحيد." فبإظهار أن عنق الزجاجة في كوربَس واقعي أقل تنقيحاً ومختلط كورياً-إنجليزياً ينتقل إلى ما هو أسبق من التفكيك والاسترجاع معاً، أي نظافة الكوربَس، تكشف الورقة أن هيمنة رافعة معينة ليست خاصية متأصلة في الاسترجاع أو التفكيك نفسهما بل خاصية في الكوربَس والفهرس. وتؤكد الورقة أن إجراء تشخيص ceiling-gap نفسه، أي قراءة المستوى المطلق لـ ORACLE إلى جانب فجوته مع SINGLE، يُعمَّم كمنهج قابل للتطبيق على أبحاث توجيه المهارات عموماً.
 
-![Bootstrap confidence intervals at n=12]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ceiling-gap-ci.png' | relative_url }})
+![Bootstrap confidence intervals at n=12]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ceiling-gap-ci.webp' | relative_url }})
 *مع 12 عينة فقط، تكون فترات الثقة واسعة وتكاد إشارة فجوة السقف تكون ذات دلالة بالكاد. يجب قراءة كل الأرقام هنا كقياسات دراسة حالة.*
 
 ## القيود

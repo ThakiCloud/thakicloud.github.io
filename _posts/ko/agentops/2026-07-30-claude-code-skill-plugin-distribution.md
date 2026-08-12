@@ -24,7 +24,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 에이전트 스킬을 늘리는 가장 쉬운 방법은 남의 저장소에서 폴더를 복사해 오는 것입니다. 저희도 그렇게 했고, 그 결과 `.claude/skills` 아래에 1,909개의 디렉터리가 쌓였습니다. 이번에 그 트리를 처음으로 제대로 감사해 봤는데, 스킬의 82.7%가 SKILL.md 한 장짜리 복사본이었고 버전을 선언한 스킬은 88개, 출처를 선언한 스킬은 33개뿐이었습니다.
 
-![수천 개의 작은 카드가 흩어지는 가운데 일부만 중심 허브와 밝은 실로 연결된 추상 이미지](/assets/images/claude-code-skill-plugin-distribution-hero.png)
+![수천 개의 작은 카드가 흩어지는 가운데 일부만 중심 허브와 밝은 실로 연결된 추상 이미지](/assets/images/claude-code-skill-plugin-distribution-hero.webp)
 
 ## 왜 읽어야 하나
 
@@ -36,7 +36,7 @@ Matt Pocock이 자신의 엔지니어링 스킬 모음을 Claude Code 플러그�
 
 이 소식 자체는 작습니다. 스킬 여덟 개짜리 저장소 하나의 배포 방식이 바뀐 것뿐입니다. 다만 저희에게는 이 변화가 미뤄 둔 질문을 다시 꺼내게 했습니다. 저희는 지난 몇 달 동안 좋아 보이는 스킬을 발견할 때마다 폴더째 복사해 왔습니다. 그렇게 모은 코퍼스가 지금 어떤 상태인지, 그중 몇 개를 원본과 대조하거나 갱신할 수 있는지 한 번도 세어 본 적이 없었습니다.
 
-![Matt Pocock이 스킬 배포 방식을 폴더 클론에서 마켓플레이스 플러그인으로 전환했다는 내용을 정리한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-02.png)
+![Matt Pocock이 스킬 배포 방식을 폴더 클론에서 마켓플레이스 플러그인으로 전환했다는 내용을 정리한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-02.webp)
 
 그래서 감상 대신 감사를 돌렸습니다. 격리된 git worktree에서 읽기 전용 스크립트로 스킬 트리 전체를 훑어, 각 스킬이 버전을 선언하는지, 출처를 선언하는지, 마지막으로 손댄 지 얼마나 됐는지를 집계했습니다. 결과는 예상보다 나빴습니다.
 
@@ -50,7 +50,7 @@ Claude Code의 플러그인은 스킬과 서브에이전트, 훅, MCP 서버를 
 
 셋째는 갱신입니다. 현재 플러그인 시스템은 기본적으로 자동 갱신을 하지 않고 재설치로 최신 버전을 받아 오는 구조입니다. 마켓플레이스별로 자동 갱신을 켜면 시작 후 백그라운드에서 갱신이 이뤄집니다. 어느 쪽이든 폴더 복사에는 아예 존재하지 않던 경로입니다.
 
-![폴더 복사 방식과 마켓플레이스 플러그인 방식을 네임스페이스·버전 고정·갱신 경로 세 축으로 비교한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-06.png)
+![폴더 복사 방식과 마켓플레이스 플러그인 방식을 네임스페이스·버전 고정·갱신 경로 세 축으로 비교한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-06.webp)
 
 Matt Pocock의 플러그인에 들어 있는 스킬은 실무 워크플로에 붙는 것들입니다. 계획이나 설계를 물고 늘어지며 캐묻는 `grill-me`, 같은 일을 하면서 ADR과 용어집까지 만들어 주는 `grill-with-docs`, 코드베이스를 훑어 개선 기회를 HTML 리포트로 뽑는 `improve-codebase-architecture`, 그리고 `tdd`와 도메인 모델링 계열이 함께 들어 있습니다. 설치 후에는 `/setup-matt-pocock-skills`를 한 번 돌려서 이슈가 어디에 있는지, 트리아지 라벨은 무엇을 쓰는지, CONTEXT.md가 하나인지 모노레포 구조인지를 알려 줘야 합니다.
 
@@ -106,7 +106,7 @@ bash scripts/blog/impl_sandbox.sh teardown claude-code-skill-plugin-distribution
 
 감사 대상은 저희 저장소의 `.claude/skills` 트리입니다. 디렉터리 1,909개 중 1,897개에 SKILL.md가 있었고, 12개는 SKILL.md 없이 껍데기만 남아 있었습니다. 아래 수치는 SKILL.md가 있는 1,897개를 모수로 합니다.
 
-![스킬 코퍼스의 출처·버전·갱신 상태를 비율로 보여 주는 가로 막대 차트](/assets/images/claude-code-skill-plugin-distribution-results.png)
+![스킬 코퍼스의 출처·버전·갱신 상태를 비율로 보여 주는 가로 막대 차트](/assets/images/claude-code-skill-plugin-distribution-results.webp)
 
 | 항목 | 개수 | 비율 |
 |---|---:|---:|
@@ -134,19 +134,19 @@ bash scripts/blog/impl_sandbox.sh teardown claude-code-skill-plugin-distribution
 | grill-with-docs | 1 | 없음 | 없음 | 17.2일 |
 | code-review | 1 | 없음 | 없음 | 17.2일 |
 
-![스킬 마지막 수정 시각 분포와 mattpocock 계열 스킬의 방치 일수를 함께 표시한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-05.png)
+![스킬 마지막 수정 시각 분포와 mattpocock 계열 스킬의 방치 일수를 함께 표시한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-05.webp)
 
 여덟 개 모두 SKILL.md 한 장이고, 버전도 출처도 없습니다. 다섯 개는 같은 날 복사된 뒤 75.6일 동안 그대로였습니다. 저자가 그 사이에 스킬을 고쳤는지 저희는 모릅니다. 지금 플러그인으로 설치하면 이 여덟 개는 네임스페이스가 붙은 별개의 스킬로 들어오고, 기존 복사본은 옆에 그대로 남아 같은 일을 하는 두 벌이 됩니다. 정리 없이 설치만 하면 코퍼스는 오히려 더 나빠집니다.
 
 한 가지 더 계산해 봤습니다. 스킬 이름과 설명을 모두 합치면 1,091,058자이고, 대략 311,000 토큰 규모입니다. 실제로 매 세션에 이 전체가 들어가지는 않습니다. 저희는 BM25 기반 라우터로 상위 후보만 뽑아 쓰고 있고, 그렇기 때문에 이 규모가 유지됩니다. 다만 설명 절반 이상이 권장 512자를 넘긴다는 사실은 인덱스 쪽에 여유가 없다는 신호입니다. 라우터 벤치에서 BM25 단독은 Recall@5 84.4%에 Top-1 33.3%였고, 임베딩을 섞은 하이브리드에서 각각 91.1%와 53.3%로 올라갔습니다. 설명이 길고 서로 겹칠수록 이 숫자를 끌어올리기가 어려워집니다.
 
-![긴 설명이 라우터 성능 저하와 컨텍스트 팽창, 테넌트별 비용 증가로 이어지는 경로를 그린 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-07.png)
+![긴 설명이 라우터 성능 저하와 컨텍스트 팽창, 테넌트별 비용 증가로 이어지는 경로를 그린 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-07.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
 이 문제는 저희가 Paxis를 만들면서 계속 부딪히는 지점과 정확히 같습니다. Paxis는 ai-platform 위에서 도는 Agent-Native Cloud 제어 평면이고, 스킬과 도구, 정책, 감사 로그를 일급 리소스로 다룹니다. 스킬을 일급 리소스로 취급한다는 말의 실제 의미가 이번 감사에서 드러났습니다. 스킬은 코드가 아니라 의존성입니다. 의존성이라면 어디서 왔고 어떤 버전이며 언제 갱신됐는지를 알 수 있어야 합니다.
 
-![플러그인이 배포를 맡고 Paxis가 선택과 통제를 맡는 역할 분담을 정리한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-08.png)
+![플러그인이 배포를 맡고 Paxis가 선택과 통제를 맡는 역할 분담을 정리한 슬라이드](/assets/images/claude-code-skill-plugin-distribution-slide-08.webp)
 
 플러그인 배포는 이 중 배포와 이름 충돌을 표준화된 방식으로 해결합니다. 저희 쪽에서 남는 몫은 그 위의 두 층입니다. 하나는 선택입니다. 스킬이 1,897개면 사람이 고를 수 없고, Skill Harness가 BM25로 후보를 좁힌 뒤 필요한 것만 컨텍스트에 올립니다. 다른 하나는 통제입니다. 외부에서 들어온 스킬이 무엇을 실행할 수 있는지는 정책 게이트가 정하고, 실제로 무엇을 했는지는 감사 로그가 남깁니다. 격리 샌드박스에서 실행하는 구조도 같은 이유에서 나왔습니다. 이번 글의 실험 자체가 격리된 worktree에서 돌아간 것이 그 축소판입니다.
 

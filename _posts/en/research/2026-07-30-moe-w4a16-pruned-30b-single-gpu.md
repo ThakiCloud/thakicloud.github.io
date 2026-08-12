@@ -17,7 +17,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 If you have ever run an infrastructure workload where the host RAM of the pod runs out before the GPU's high-bandwidth memory does, this paper is aimed directly at you. ThakiCloud AI Research measured what happens when you structurally prune and 4-bit quantize Qwen3-Coder-30B-A3B, a checkpoint with roughly 61 billion parameters, on a pod equipped with a single NVIDIA H200 GPU and only 32GiB of host RAM. If you have ever needed to compress a large Mixture-of-Experts (MoE) model to cut serving cost, only to have the compression job itself fail from lack of memory, this is the fix.
 
-![Illustration of the core idea of Compressing a 30B MoE Model to 4-Bit Precision Within 32GiB of Host Memory](/assets/images/moe-w4a16-pruned-30b-single-gpu-hero.png)
+![Illustration of the core idea of Compressing a 30B MoE Model to 4-Bit Precision Within 32GiB of Host Memory](/assets/images/moe-w4a16-pruned-30b-single-gpu-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## The problem: it is the compression pipeline, not the GPU, that runs out of memory
@@ -38,7 +38,7 @@ The second stage, selection, decides how many experts to keep based on the profi
 
 The two most important stages are slicing and quantization. Instead of loading the full, unpruned checkpoint into host RAM and then removing experts, the slicing stage reads the checkpoint shard by shard, drops the unselected experts within that shard, and writes out the pruned shard immediately. At no point in this process does the full 61.0GB model, or any intermediate copy of it, ever get assembled whole in host RAM. The quantization stage applies the same discipline: it runs layer-wise RTN (round-to-nearest) W4A16 quantization with a group size of 128 directly on each streamed shard. The streaming invariant kept during slicing carries straight through to quantization. As a result, the design guarantees that the pipeline's peak host RAM usage is bound to the active shard size, not to the 61.0GB base model size.
 
-![Pipeline Stage Wall-Clock Time by Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-pipeline.png)
+![Pipeline Stage Wall-Clock Time by Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-pipeline.webp)
 *Measured slicing and quantization stage time on the H200 pod across the four pruning variants. Quantization time falls as pruning gets more aggressive, but slicing time does not scale simply with the number of experts retained.*
 
 ## Results: all four variants succeed, at compression ratios from 3.6x to 4.8x
@@ -54,7 +54,7 @@ Running the four pruning intensities on a single H200 GPU with a 32GiB host RAM 
 
 The base model's (bf16) perplexity on the WikiText-2 test set (296,815 tokens) is 9.0524. Artifact size scales precisely with pruning intensity, from 16.9GB down to 12.7GB, a 3.6x to 4.8x reduction against the 61.0GB base model. One interesting detail is that quantization time and slicing time move differently. Quantization time falls from 267.7 seconds to somewhere between 202 and 204 seconds as fewer experts are kept, which makes sense since there is simply less to quantize. Slicing time, on the other hand, comes in at 422.3, 613.2, 546.0, and 483.6 seconds, not scaling monotonically with pruning intensity at all. The authors cautiously suggest that shard I/O and calibration bookkeeping overhead may not scale linearly with the number of experts retained, while being upfront that they did not actually profile the root cause.
 
-![W4A16 Artifact Size by Pruning Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-compression-size.png)
+![W4A16 Artifact Size by Pruning Variant](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-compression-size.webp)
 *All four Qwen3-Coder-30B-A3B-Instruct variants compress from a 61.0GB base model down to 12.7GB to 16.9GB, a 3.6x to 4.8x reduction (measured on an H200 pod).*
 
 The real headline of this result is not the size or the timing but the systemic fact that host RAM never exceeded 32GiB. The paper argues analytically that a load-the-whole-model-first approach could never fit inside the 32GiB limit in the first place, since 61.0GB plus working-copy overhead is already well past it. They did not actually run this naive approach for comparison, so this is not a measured claim that it would have OOM'd, but the fact that the base model size alone is nearly twice the limit makes clear why shard streaming is necessary. The fact that all four variants completed successfully under the limit is itself the empirical evidence that the design works.
@@ -67,7 +67,7 @@ The practical implication is clear. A quality-conscious user can remove 10 to 20
 
 That said, this perplexity is strictly a language-modeling quality signal, not code-task accuracy. Even though the base model is a Coder model, downstream code benchmarks such as HumanEval or MBPP were not measured in this paper. Whether the 10-20% sweet spot holds equally well for code-generation accuracy cannot be determined from this paper alone, and the authors explicitly leave it as future work.
 
-![WikiText-2 Perplexity vs. Compression Factor](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-ppl-vs-compression.png)
+![WikiText-2 Perplexity vs. Compression Factor](/assets/images/posts/research/moe-w4a16-pruned-30b-single-gpu/fig-ppl-vs-compression.webp)
 *As the compression ratio grows, perplexity degradation grows superlinearly. The 10-20% pruning range is a defensible sweet spot with little to only moderate loss.*
 
 ## What this result leaves behind: company, society, and science

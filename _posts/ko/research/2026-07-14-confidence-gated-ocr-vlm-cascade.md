@@ -30,30 +30,30 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 숫자로 보면 이렇습니다. 2억 5천만 파라미터급 SmolVLM-256M-Instruct를 작은 모델로, 22억 파라미터급 Qwen2-VL-2B-Instruct를 큰 모델로 두었습니다. 큰 모델의 연산량은 작은 모델의 8.61배입니다. 작은 모델만 쓰면 평균 CER(글자 오류율, 낮을수록 좋음)이 0.634로 문서의 3분의 2를 사실상 못 읽고, 큰 모델만 쓰면 CER이 0.045로 떨어지지만 비용이 8.61배가 됩니다. 캐스케이드는 이 두 극단 사이에서 임계값 τ 하나로 절충점을 고릅니다. 작은 모델의 신뢰도가 τ보다 낮은 문서만 큰 모델로 넘기므로, 에스컬레이션 비율과 기대 비용과 기대 오류율이 모두 τ의 함수가 됩니다.
 
-![H200에서 실측한 비용-정확도 파레토 프론티어]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-pareto-frontier.png' | relative_url }})
+![H200에서 실측한 비용-정확도 파레토 프론티어]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-pareto-frontier.webp' | relative_url }})
 *실제 H200 노드에서 측정한 값입니다. 가장 왼쪽 점(비용 1.0배, CER 0.634)이 소형 모델 단독, 가장 오른쪽 점(비용 8.61배, CER 0.045)이 대형 모델 단독입니다. τ가 0.85~0.95인 구간에서 캐스케이드는 CER 0.036~0.041에 도달하는데, 이는 비용 5.1~5.8배에서 대형 모델 단독과 같거나 조금 더 낮은 오류율입니다.*
 
 τ를 0에서 1.01까지 여덟 지점으로 훑으면 교과서적인 파레토 곡선이 나옵니다. τ=0.5에서는 문서의 8.3%만 올라가 CER 0.423, 비용 1.63배에 그치고, τ=0.7에서는 45.8%가 올라가며 CER이 0.103으로 급락하고 비용은 4.49배가 됩니다. 그리고 τ=0.85에서 54.2% 에스컬레이션에 CER 0.041, 비용 5.12배, τ=0.95에서 62.5% 에스컬레이션에 CER 0.036, 비용 5.76배에 이릅니다. 핵심은 이 구간의 CER 0.036~0.041이 대형 모델 단독의 0.045보다 오히려 조금 낮다는 사실입니다. 문서의 절반가량만 대형 모델로 넘기면서 대형 모델 수준의 정확도를 얻었고, 비용은 그 60~67%에 그쳤습니다. 캐스케이드가 대형 모델을 미세하게 앞선 이유도 데이터에 있습니다. 작은 모델은 일부 쉬운 문서를 대형 모델보다 더 정확히 읽었고(대형 모델은 줄바꿈 같은 데서 사소한 오차를 냈습니다), 캐스케이드는 그런 문서를 굳이 올려보내지 않고 작은 모델의 정답을 그대로 채택했기 때문입니다.
 
-![대형 VLM 정확도를 60% 비용에 사는 법: 신뢰도 기반 OCR 캐스케이드 실측 개념을 형상화한 이미지](/assets/images/confidence-gated-ocr-vlm-cascade-hero.png)
+![대형 VLM 정확도를 60% 비용에 사는 법: 신뢰도 기반 OCR 캐스케이드 실측 개념을 형상화한 이미지](/assets/images/confidence-gated-ocr-vlm-cascade-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 왜 통했나: 신뢰도가 못 읽는 문서를 정직하게 짚었다
 
 이 이득이 어디서 나오는지는 언어별로 쪼개 보면 분명해집니다.
 
-![언어별 CER 실측: 소형 모델은 한국어에서 무너진다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-shift-failure.png' | relative_url }})
+![언어별 CER 실측: 소형 모델은 한국어에서 무너진다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-shift-failure.webp' | relative_url }})
 *실제 H200에서 측정한 언어별 평균 CER입니다. 소형 모델은 영어에서 CER 0.084로 대형 모델(0.027)에 거의 근접하지만, 한국어에서는 CER이 1.18까지 치솟습니다. 신뢰도도 영어 0.957에서 한국어 0.625로 함께 떨어져, 게이트가 한국어 문서를 정확히 에스컬레이션 대상으로 지목합니다.*
 
 작은 모델은 영어에서는 대형 모델과 어깨를 나란히 하지만 한국어 앞에서는 무너집니다. CER 1.18은 정답과 거의 무관한 출력이라는 뜻이고, 실제 로그를 보면 작은 모델은 엉뚱한 영어 문장을 지어내거나 무의미한 반복을 뱉었습니다. 결정적인 것은 이때 작은 모델의 신뢰도도 함께 내려간다는 점입니다. 영어 0.957에서 한국어 0.625로 떨어진 이 신뢰도 하락이 캐스케이드의 엔진입니다. 작은 모델이 못 읽는 문서에서 스스로 확신을 잃어 주기 때문에, 임계값 하나만으로 어려운 문서를 골라낼 수 있는 것입니다.
 
-![스캔 품질별 CER 실측: 소형 모델은 흔들리고 대형 모델은 낮게 유지된다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.png' | relative_url }})
+![스캔 품질별 CER 실측: 소형 모델은 흔들리고 대형 모델은 낮게 유지된다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.webp' | relative_url }})
 *실제 H200에서 측정한 스캔 품질 등급별 평균 CER입니다. 소형 모델은 깨끗함 0.43, 중간 0.90, 손상 0.57로 등급을 가로질러 높고 고르지 못한 반면, 대형 모델은 0.03~0.06 사이에 머뭅니다.*
 
 스캔 품질 축에서도 같은 구조가 보입니다. 작은 모델의 오류율은 등급에 따라 0.43에서 0.90까지 출렁이지만 대형 모델은 어느 등급에서든 0.03~0.06에 얌전히 머뭅니다. 이 두 막대 사이의 넓은 간격이 캐스케이드가 회수하는 정확도 여유분이고, 신뢰도가 그 흔들림을 감지해 주는 한 캐스케이드는 그 여유분을 비용 효율적으로 챙깁니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 자기 문서 집단에서 τ를 고르는 법
@@ -79,16 +79,16 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![confidence-gated-ocr-vlm-cascade 슬라이드 1](/assets/images/confidence-gated-ocr-vlm-cascade-slide-01.png)
+![confidence-gated-ocr-vlm-cascade 슬라이드 1](/assets/images/confidence-gated-ocr-vlm-cascade-slide-01.webp)
 
-![confidence-gated-ocr-vlm-cascade 슬라이드 2](/assets/images/confidence-gated-ocr-vlm-cascade-slide-02.png)
+![confidence-gated-ocr-vlm-cascade 슬라이드 2](/assets/images/confidence-gated-ocr-vlm-cascade-slide-02.webp)
 
-![confidence-gated-ocr-vlm-cascade 슬라이드 3](/assets/images/confidence-gated-ocr-vlm-cascade-slide-03.png)
+![confidence-gated-ocr-vlm-cascade 슬라이드 3](/assets/images/confidence-gated-ocr-vlm-cascade-slide-03.webp)
 
-![confidence-gated-ocr-vlm-cascade 슬라이드 4](/assets/images/confidence-gated-ocr-vlm-cascade-slide-04.png)
+![confidence-gated-ocr-vlm-cascade 슬라이드 4](/assets/images/confidence-gated-ocr-vlm-cascade-slide-04.webp)
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

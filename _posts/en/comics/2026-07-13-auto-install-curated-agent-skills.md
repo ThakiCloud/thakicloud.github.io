@@ -13,7 +13,7 @@ tags:
   - thakicloud
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/auto-install-curated-agent-skills/strip.png
+image: /assets/images/posts/comics/auto-install-curated-agent-skills/strip.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/auto-install-curated-agent-skills/"
 ---
 
@@ -21,7 +21,7 @@ A tool now scans your project, figures out which tech stack you're on, and auto-
 
 Convenient, no argument there. The catch is that 'curated' means someone had an opinion, and that someone wasn't you. Paxis and Metis got very excited installing things, right up until the installs started installing themselves.
 
-![The Skill That Installs Skills, Installing Skills]({{ '/assets/images/posts/comics/auto-install-curated-agent-skills/strip.png' | relative_url }})
+![The Skill That Installs Skills, Installing Skills]({{ '/assets/images/posts/comics/auto-install-curated-agent-skills/strip.webp' | relative_url }})
 
 > Source: [RT @tom_doerr: Scans your project to detect your tech stack and automatically installs curated AI agent skills.](https://x.com/hjguyhan/status/2076427252771020925) · twitter
 

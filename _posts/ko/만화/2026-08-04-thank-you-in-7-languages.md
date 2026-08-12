@@ -7,7 +7,7 @@ tags:
   - 만화
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/thank-you-in-7-languages/recap.png
+image: /assets/images/posts/만화/thank-you-in-7-languages/recap.webp
 video: /assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.mp4
 ---
 
@@ -17,7 +17,7 @@ video: /assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.mp4
 
 각 언어는 원어민 음성으로 두 번씩 나오고, 한국어 자막이 함께 나갑니다.
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/thank-you-in-7-languages/recap.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/thank-you-in-7-languages/recap.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/thank-you-in-7-languages/edu.ko.vtt" default>
 </video>

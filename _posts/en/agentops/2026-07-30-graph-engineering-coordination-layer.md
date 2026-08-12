@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 The naming series that started with prompt engineering has gained another entry. After context, harness, and loop, we now have graph engineering. The thread and article that Akshay Pachaar of DailyDoseOfDS posted on July 26, 2026 reads like a clear attempt to separate the meme from the substance. According to the original piece, the trigger came on July 18, when Peter Steinberger asked "are we still talking loops or did we shift to graphs yet," and Hamel Husain followed a few hours later with an article titled "Loop Engineering Is Dead. Enter Graph Engineering." Both were at least half joking, but the joke landed on something real. The moment several loops have to work together, you have a coordination problem, and graphs are how engineers have always described coordination.
 
-![Abstract concept illustration of a graph coordination layer made of nested loops, nodes, and edges](/assets/images/graph-engineering-coordination-layer-hero.png)
+![Abstract concept illustration of a graph coordination layer made of nested loops, nodes, and edges](/assets/images/graph-engineering-coordination-layer-hero.webp)
 
 *The unit of work grows as layers nest. From a single input up to the whole job.*
 
@@ -69,7 +69,7 @@ flowchart TB
     C --> P["Prompt engineering<br/>Unit of work: one input<br/>the words you send the model"]
 ```
 
-![Hand-drawn boil animation of the five-layer stack](/assets/images/graph-engineering-coordination-layer-layers.gif)
+![Hand-drawn boil animation of the five-layer stack](/assets/images/graph-engineering-coordination-layer-layers.webp)
 
 *The same diagram redrawn as a hand-drawn boil animation. The layout stays fixed while the strokes are re-traced every frame.*
 

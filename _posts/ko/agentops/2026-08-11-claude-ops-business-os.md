@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-ops-business-os/"
 ---
 
-![얇은 층이 여러 겹 쌓인 구조와 두꺼운 블록 몇 개가 나란히 놓인 추상 이미지](/assets/images/claude-ops-business-os-hero.png)
+![얇은 층이 여러 겹 쌓인 구조와 두꺼운 블록 몇 개가 나란히 놓인 추상 이미지](/assets/images/claude-ops-business-os-hero.webp)
 *같은 능력을 담는 방식이 두 갈래로 갈립니다.*
 
 ## 왜 읽어야 하나
@@ -129,7 +129,7 @@ python3 scripts/blog/_exp_claude_ops_20260811.py
 
 배지는 실측과 하나 차이니 사실상 최신입니다. 문제는 아키텍처 다이어그램 쪽입니다. 22개와 12개라는 값은 실제의 3분의 1 수준이고, 하필 독자가 구조를 이해하려고 가장 먼저 보는 자리에 박혀 있습니다. 저장소가 이 글을 쓰는 날 아침에도 푸시됐다는 점을 감안하면 활발히 개발 중인 프로젝트에서 산문이 트리를 따라가지 못한 전형적인 사례입니다.
 
-![claude-ops와 ThakiCloud 하네스의 스킬 수 및 평균 스킬 문서 크기 비교 막대 그래프](/assets/images/claude-ops-business-os-results.png)
+![claude-ops와 ThakiCloud 하네스의 스킬 수 및 평균 스킬 문서 크기 비교 막대 그래프](/assets/images/claude-ops-business-os-results.webp)
 *개수와 두께를 함께 보면 두 하네스가 정반대 방향으로 서 있습니다.*
 
 더 흥미로운 값은 개수가 아니라 두께였습니다. claude-ops의 `SKILL.md` 평균 크기는 16,360바이트입니다. 에이전트 정의는 평균 6,669바이트입니다. 비교를 위해 같은 방식으로 저희 저장소를 셌더니 스킬 문서 1,946개에 평균 8,786바이트, 상시 적용 규칙 67개에 평균 3,487바이트가 나왔습니다.
@@ -185,13 +185,13 @@ claude-ops에서 가져갈 것은 기능 목록이 아니라 설계 선택입니
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-ops-business-os 슬라이드 1](/assets/images/claude-ops-business-os-slide-01.png)
+![claude-ops-business-os 슬라이드 1](/assets/images/claude-ops-business-os-slide-01.webp)
 
-![claude-ops-business-os 슬라이드 2](/assets/images/claude-ops-business-os-slide-02.png)
+![claude-ops-business-os 슬라이드 2](/assets/images/claude-ops-business-os-slide-02.webp)
 
-![claude-ops-business-os 슬라이드 3](/assets/images/claude-ops-business-os-slide-03.png)
+![claude-ops-business-os 슬라이드 3](/assets/images/claude-ops-business-os-slide-03.webp)
 
-![claude-ops-business-os 슬라이드 4](/assets/images/claude-ops-business-os-slide-04.png)
+![claude-ops-business-os 슬라이드 4](/assets/images/claude-ops-business-os-slide-04.webp)
 
 ## 출처
 

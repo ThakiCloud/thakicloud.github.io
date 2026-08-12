@@ -21,7 +21,7 @@ audiobook: /assets/audio/posts/nvidia-cuda-mcp-server-nsight-ai/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![흩어진 문서 조각들이 하나의 광원으로 빨려 들어가 정렬되는 추상 표지 이미지](/assets/images/nvidia-cuda-mcp-server-nsight-ai-hero.png)
+![흩어진 문서 조각들이 하나의 광원으로 빨려 들어가 정렬되는 추상 표지 이미지](/assets/images/nvidia-cuda-mcp-server-nsight-ai-hero.webp)
 
 CUDA 커널을 손보다가 코딩 에이전트에게 물어보신 적이 있을 겁니다. 그리고 꽤 자주 틀린 답을 받으셨을 겁니다. 에이전트가 거짓말을 하는 것이 아니라, 학습 시점에 굳어 버린 CUDA 지식을 그대로 꺼내 놓기 때문입니다. API 시그니처가 바뀌었거나 권장 패턴이 달라졌어도 모델은 그 사실을 모릅니다. NVIDIA가 이 문제를 문서 쪽에서 풀기로 했습니다. 공식 CUDA 문서와 코드 예제를 색인해 MCP 서버로 열어 둔 [CUDA MCP Server](https://developer.nvidia.com/nsight-ai)입니다.
 
@@ -172,13 +172,13 @@ GET https://api.copilot.nsight.ngc.nvidia.com/mcp/cuda-docs
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 1](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-01.png)
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 1](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-01.webp)
 
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 2](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-02.png)
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 2](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-02.webp)
 
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 3](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-03.png)
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 3](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-03.webp)
 
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 4](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-04.png)
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 4](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-04.webp)
 
 ## 출처
 

@@ -26,7 +26,7 @@ H200 몇 장으로 사내 AI를 굴리는 팀이라면 이번 주 뉴스에서 �
 
 이 대비는 추상적인 이야기가 아닙니다. 같은 날 알리바바는 2.4조 파라미터짜리 최상급 모델을 다음 주 무료로 풀겠다고 발표했고, 앤트로픽은 컴퓨팅을 확보하려고 100억 달러짜리 계약서에 서명했습니다. 모델은 내려가고 컴퓨팅은 올라가는 이 어긋남 속에 사내 AI 전략의 실마리가 들어 있습니다.
 
-![모델은 공짜가 되는데, 컴퓨팅은 왜 360억 달러를 빌리나 개념을 형상화한 이미지](/assets/images/model-commoditization-compute-scarcity-hero.png)
+![모델은 공짜가 되는데, 컴퓨팅은 왜 360억 달러를 빌리나 개념을 형상화한 이미지](/assets/images/model-commoditization-compute-scarcity-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 하루 사이에 벌어진 두 장면
@@ -36,7 +36,7 @@ H200 몇 장으로 사내 AI를 굴리는 팀이라면 이번 주 뉴스에서 �
 두 번째 장면은 정반대 방향입니다. 앤트로픽은 엔비디아가 지원하는 신생 인프라 사업자 Volta와 6년간 100억 달러 규모로 컴퓨팅을 확보하는 계약을 맺었고, 블랙스톤은 커스텀 AI 칩 사용 자금을 대려고 최소 360억 달러 규모의 두 번째 부채 패키지를 논의하고 있습니다. 직전의 350억 달러 규모를 넘어서는 액수입니다. 모델을 공짜로 나눠주는 세상에서, 정작 그 모델을 굴릴 연산에는 국가 예산급 자본이 빨려 들어가고 있습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/model-commoditization-compute-scarcity/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/model-commoditization-compute-scarcity/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 희소재가 모델에서 컴퓨팅으로 옮겨갔다
@@ -72,7 +72,7 @@ H200 몇 장으로 사내 AI를 굴리는 팀이라면 이번 주 뉴스에서 �
 ThakiCloud가 Paxis와 ai-platform을 이 세 축 위에 세운 이유가 여기 있습니다. Paxis는 정식 제품으로서 작업별 모델 선택을 담당하는 CostRouter로 값싸고 알맞은 모델을 자동으로 고르고, ai-platform은 Kueue 기반 GPU 스케줄링으로 대형 오픈 모델의 온프렘 멀티모델 서빙을 지탱합니다. 동시에 정책 게이트와 감사 로그, 격리된 샌드박스 실행이 규제와 유출 리스크에 대한 증거를 남깁니다. 모델이 흔해질수록, 그 모델을 주권적으로 그리고 값싸게 돌리는 인프라와 거버넌스가 유일하게 복제되지 않는 자산으로 남습니다. 오늘의 뉴스는 그 자산을 지금 준비해야 한다는 신호입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/model-commoditization-compute-scarcity/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/model-commoditization-compute-scarcity/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

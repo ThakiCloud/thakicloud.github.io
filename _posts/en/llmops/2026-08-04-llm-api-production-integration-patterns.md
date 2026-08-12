@@ -221,6 +221,6 @@ Turning an LLM API into a reliable component isn't about picking the right model
 This post is a blog rewrite of part of our internal ebook, *AI API Engineering*, compiled while operating our internal automation pipelines.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-api-engineering/ch01.png)
-![Chapter 2 illustration](/assets/images/books/ai-api-engineering/ch02.png)
+![Chapter 1 illustration](/assets/images/books/ai-api-engineering/ch01.webp)
+![Chapter 2 illustration](/assets/images/books/ai-api-engineering/ch02.webp)
 

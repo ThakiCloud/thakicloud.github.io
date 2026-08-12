@@ -22,7 +22,7 @@ lang: en
 
 ![A conceptual diagram showing that the more cheap tokens flood the market, the higher the valuation of the inference infrastructure underneath climbs]({{ '/assets/images/token-price-war-jevons-paradox-inference-hero.webp' | relative_url }})
 
-![Illustration of the core idea of The Week Token Prices Were Cut in Half, Inference Chip Valuations Rose Fivefold](/assets/images/token-price-war-jevons-paradox-inference-hero.png)
+![Illustration of the core idea of The Week Token Prices Were Cut in Half, Inference Chip Valuations Rose Fivefold](/assets/images/token-price-war-jevons-paradox-inference-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Two Opposite Pieces of News, Arriving in the Same Week

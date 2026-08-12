@@ -43,7 +43,7 @@ On a 12-case compound routing benchmark, SINGLE's step coverage was 52.9 percent
 
 So would swapping in a better retriever help? This is where the revised version diverges most sharply from the first draft. Rule-based decomposition (SAD, 35.0 percent), its refined re-splitting variant (ISAD, 37.1 percent), and a gated version of gold decomposition (SAD-AGENT, 41.9 percent) all scored below SINGLE. Switching the router to a multilingual embedding retriever actually dropped ORACLE to 45.4 percent, and a hybrid that combined BM25 with dense retrieval (RRF) landed at 64.0 percent, statistically indistinguishable from BM25's 63.6 percent. A better retrieval model did not raise the ceiling.
 
-![Neither decomposition nor a better retriever raises the ceiling]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-strategies-retrievers.png' | relative_url }})
+![Neither decomposition nor a better retriever raises the ceiling]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-strategies-retrievers.webp' | relative_url }})
 *The left panel shows every decomposition strategy sitting below SINGLE (dotted line); the right panel shows dense and hybrid retrievers failing to beat the live BM25 baseline. Neither lever raised the ORACLE ceiling.*
 
 ## The Real Bottleneck: Skill Corpus Redundancy
@@ -56,7 +56,7 @@ Crucially, these siblings were not disambiguated by an embedding retriever eithe
 
 The live router's cross-lingual ability rests entirely on a hand-maintained Korean-English synonym dictionary. Removing that dictionary collapsed ORACLE from 63.6 percent to 20.8 percent and SINGLE from 52.9 percent to 18.8 percent. Roughly two-thirds of the measured coverage came not from the retrieval algorithm but from a manually maintained dictionary.
 
-![Removing the hand-curated synonym dictionary collapses coverage]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-synonym-artifact.png' | relative_url }})
+![Removing the hand-curated synonym dictionary collapses coverage]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-synonym-artifact.webp' | relative_url }})
 *Removing the hand-built Korean-English synonym dictionary collapses coverage (ORACLE from 63.6 to 20.8). Cross-lingual ability is a product of curation, not a property of the retriever.*
 
 This fact changes the interpretation. A look at internal logs shows that a single past expansion of the synonym dictionary, with no change to the decomposition logic, raised the ORACLE ceiling from 42.5 percent to 63.6 percent, a jump of 21.1 points. The first draft of this paper presented that jump as positive evidence that "retriever work, not decomposition, moved the needle." But that expansion added exactly the Korean terms the benchmark's gold answers needed (deep research, fact check, Slack, and others). Because that mismatch is what drove the expansion in the first place, the 21.1-point gain was measured on the same cases it was tuned against, in other words it reflects fitting the test set. This revised version withdraws that figure as evidence. A retriever whose cross-lingual ability is a dictionary tuned to the benchmark offers neither a ceiling nor an improvement that generalizes.
@@ -65,7 +65,7 @@ This fact changes the interpretation. A look at internal logs shows that a singl
 
 Step coverage misses the value decomposition actually provides. Comparing the order in which each strategy surfaces gold skills against the gold execution order (Kendall tau over covered pairs), SAD-AGENT recovered a perfect ordering with tau of 1.0 (across 4 cases with two or more covered gold skills), while SINGLE's ranking order was actually anti-correlated at tau of negative 0.22 (across 6 cases). Single-pass retrieval returns a bundle of relevant results with no execution semantics, while decomposition restores the order in which skills need to run. In this regime, decomposition does not raise coverage, but it is the only strategy that restores order.
 
-![Decomposition recovers execution ordering]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ordering.png' | relative_url }})
+![Decomposition recovers execution ordering]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ordering.webp' | relative_url }})
 *Decomposition's real contribution is recovering execution order (tau of 1.0). Single-pass ranked retrieval is actually anti-correlated (tau of negative 0.22), a difference that coverage metrics alone cannot see.*
 
 ## Contributions to Industry, Society, and Science
@@ -76,7 +76,7 @@ Socially, this frees teams from over-engineering unnecessary decomposition layer
 
 Scientifically, this presents a case that does not transfer cleanly to either recent orthodoxy, that "retrieval is effectively solved" or that "decomposition is the sole bottleneck." By showing that in a less curated, Korean-English mixed real-world corpus the bottleneck shifts upstream of both decomposition and retrieval, to corpus hygiene, it reveals that which lever dominates is a property of the corpus and index, not an inherent property of retrieval or decomposition themselves. And the paper argues that the ceiling-gap diagnostic procedure itself, reading ORACLE's absolute level alongside its gap to SINGLE, generalizes as a method applicable across skill routing research broadly.
 
-![Bootstrap confidence intervals at n=12]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ceiling-gap-ci.png' | relative_url }})
+![Bootstrap confidence intervals at n=12]({{ '/assets/images/posts/research/retriever-vs-decomposition-skill-routing/fig-ceiling-gap-ci.webp' | relative_url }})
 *With only 12 samples, confidence intervals are wide and the ceiling gap's sign is only barely significant. Every figure here should be read as a case-study measurement.*
 
 ## Limitations

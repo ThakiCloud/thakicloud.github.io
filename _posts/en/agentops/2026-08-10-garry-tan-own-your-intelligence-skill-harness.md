@@ -27,7 +27,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/garry-tan-own-your-
 
 This is for engineers who have wired agents into real work and keep retyping the same instructions, and for engineering leads looking for a way to turn agent usage from personal knack into an organizational asset. The conclusion first: what Garry Tan put on stage at Startup School 2026 is not about model selection, it is about **the structure outside the model**. If you are giving the same instruction twice, that is not a prompt to polish, it is a signal that the work has not been written down as a file yet. And where those files accumulate decides who owns that judgment a few years from now.
 
-![Abstract image of a single glowing filament winding repeatedly around a spindle, the core thickening and brightening with each pass](/assets/images/garry-tan-own-your-intelligence-skill-harness-hero.png)
+![Abstract image of a single glowing filament winding repeatedly around a spindle, the core thickening and brightening with each pass](/assets/images/garry-tan-own-your-intelligence-skill-harness-hero.webp)
 *A rendering of work that settles into files and compounds with each repetition. The strands that never get wound simply scatter at the edges.*
 
 {% include video id="eRrc1pUY5oU" provider="youtube" %}

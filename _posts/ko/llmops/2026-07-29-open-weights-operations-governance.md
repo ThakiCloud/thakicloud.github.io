@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 지난 몇 년간 오픈이냐 클로즈냐는 진영 논쟁처럼 다뤄졌습니다. 그런데 이번 주 나온 발언과 움직임을 나란히 놓으면 양측이 사실상 같은 결론으로 수렴하고 있음이 보입니다. 공개는 하되 통제한다는 것입니다.
 
-![오픈웨이트 논쟁은 끝났고, 이제 운영의 문제가 남았다 개념을 형상화한 이미지](/assets/images/open-weights-operations-governance-hero.png)
+![오픈웨이트 논쟁은 끝났고, 이제 운영의 문제가 남았다 개념을 형상화한 이미지](/assets/images/open-weights-operations-governance-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 금지가 아니라 조건부 개방으로
@@ -38,7 +38,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 이 수렴이 실무자에게 중요한 이유는, 논쟁의 결론이 어느 쪽으로 나든 운영의 부담은 동일하게 남기 때문입니다. 오픈이 이기면 더 많은 모델을 자기 손으로 검증하고 통제해야 하고, 규제가 강화되면 그 검증을 문서로 증명해야 합니다. 어느 시나리오에서도 "그냥 가져다 쓰면 된다"는 선택지는 사라집니다. 정책 논쟁의 승패와 무관하게, 모델을 통제 가능한 상태로 운영하는 능력에 미리 투자해 둔 팀이 결국 유리한 위치에 섭니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/open-weights-operations-governance/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/open-weights-operations-governance/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 보안이 제품 밖에서 표준이 되고 있다
@@ -68,7 +68,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ThakiCloud가 Paxis를 정책, 감사 로그, 격리 실행을 일급 리소스로 설계한 배경이 여기에 있습니다. Paxis는 정식 제품으로서 모델과 스킬의 실행을 정책 게이트로 감싸고, 모든 실행에 감사 로그를 남기며, 격리된 샌드박스에서 작업을 돌립니다. 작업별 모델 선택을 담당하는 CostRouter는 검증된 여러 오픈 모델 가운데 작업에 맞는 것을 값싸게 배치해, 오픈 생태계가 넓어질수록 늘어나는 선택의 부담을 운영 자동화로 흡수합니다. ai-platform은 오픈 모델의 온프렘 서빙과 라이선스 관리가 필요한 고객에게 그 통제를 인프라 수준에서 제공합니다. 업계가 오픈을 표준으로 받아들일수록, 그 오픈을 안전하게 운영하는 역량이 결국 신뢰의 근거가 됩니다. 이번 주의 논쟁은 그 준비를 미룰 시간이 끝났음을 알려줍니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/open-weights-operations-governance/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/open-weights-operations-governance/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

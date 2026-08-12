@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 영상 한 편의 배경과 조명을 통째로 바꾸고 싶은데 등장 인물의 얼굴만은 손대고 싶지 않은 상황이 있습니다. 광고 소재를 계절별로 다시 만들거나, 교육 영상의 배경을 브랜드에 맞게 갈아 끼우거나, 촬영이 끝난 뒤 조명 설계를 바꾸는 경우입니다. 지금까지 이 작업은 재촬영이거나 프레임 단위 합성이었습니다. Eyeline Labs가 SIGGRAPH Asia 2026에 낸 ID-V2V는 편집된 첫 프레임 한 장으로 이 문제를 풀겠다고 제안합니다.
 
-![얼굴의 형태는 고정된 채 주변 장면과 조명만 다시 구성되는 모습을 형상화한 추상 이미지](/assets/images/id-v2v-identity-preserving-video-restylization-hero.png)
+![얼굴의 형태는 고정된 채 주변 장면과 조명만 다시 구성되는 모습을 형상화한 추상 이미지](/assets/images/id-v2v-identity-preserving-video-restylization-hero.webp)
 
 *형태는 잠기고 빛과 장면만 바뀝니다. 이 논문의 분해를 한 장으로 옮기면 이런 그림입니다.*
 
@@ -33,7 +33,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 이 글은 비디오 생성 모델을 실제 파이프라인에 얹어야 하는 ML 엔지니어와, 미디어 워크로드를 온프레미스 GPU 위에서 서빙할지 판단해야 하는 플랫폼 담당자를 위해 썼습니다. 결론을 먼저 말씀드리면, **ID-V2V의 진짜 기여는 새 생성 모델이 아니라 문제를 다시 정의한 방식에 있습니다. 얼굴 정체성 보존을 생성 문제가 아니라 조명 변화 문제로 강등시키고, 나머지 편집만 생성에 맡겼습니다.** 이 분해가 왜 실무적으로 중요한지, 그리고 이런 다중 제어 신호 구조가 서빙 비용과 파이프라인 설계에 어떤 부담을 주는지 함께 짚습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/id-v2v-identity-preserving-video-restylization/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/id-v2v-identity-preserving-video-restylization/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 개요
@@ -42,7 +42,7 @@ ID-V2V는 Eyeline Labs가 공개한 정체성 보존 비디오 리스타일화 �
 
 입력과 출력은 이렇습니다. 원본 영상과, 그 영상의 첫 프레임을 편집한 이미지 한 장을 넣습니다. 필요하면 추가 키프레임과 텍스트 프롬프트를 더 줄 수 있습니다. 그러면 편집된 키프레임이 지정한 장면과 조명, 스타일이 영상 전체에 전파되고, 그 과정에서 원본 인물의 정체성과 표정, 시선, 움직임은 유지됩니다. 립싱크처럼 미세한 얼굴 퍼포먼스까지 보존 대상에 포함한다는 점을 논문은 강조합니다.
 
-![원본 영상, 아티스트가 편집한 단 한 장의 키프레임, 그리고 인물의 표정은 유지된 채 배경과 조명만 바뀐 결과 영상의 3단 비교](/assets/images/id-v2v-identity-preserving-video-restylization-slide-02.png)
+![원본 영상, 아티스트가 편집한 단 한 장의 키프레임, 그리고 인물의 표정은 유지된 채 배경과 조명만 바뀐 결과 영상의 3단 비교](/assets/images/id-v2v-identity-preserving-video-restylization-slide-02.webp)
 
 *편집 지점은 첫 프레임 한 장이고, 나머지는 모델이 전파합니다.*
 
@@ -54,7 +54,7 @@ ID-V2V는 Eyeline Labs가 공개한 정체성 보존 비디오 리스타일화 �
 
 출발점이 되는 관찰은 단순합니다. 장면과 스타일을 바꿔도 사람의 얼굴 생김새와 표정 자체는 변하면 안 됩니다. 변해도 되는 것은 그 얼굴에 떨어지는 빛입니다. 배경을 밤으로 바꾸면 얼굴도 밤의 조명을 받아야 자연스럽습니다. 그래서 논문은 정체성 보존을 **비디오 리라이팅 문제**로 세웁니다. 얼굴을 새로 만드는 것이 아니라, 원본 얼굴에 새 장면의 조명을 다시 입히는 작업으로 다루는 것입니다.
 
-![얼굴의 기하는 잠그고 조명만 변경 가능하게 두어 정체성 보존을 리라이팅 문제로 강등시키는 2계층 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-03.png)
+![얼굴의 기하는 잠그고 조명만 변경 가능하게 두어 정체성 보존을 리라이팅 문제로 강등시키는 2계층 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-03.webp)
 
 *생김새와 표정은 잠그고, 빛만 다시 입힙니다.*
 
@@ -80,7 +80,7 @@ flowchart TB
 
 리라이팅된 얼굴 영역과 얼굴 노멀맵은 얼굴의 닮음과 퍼포먼스를 강하게 구속합니다. 표정과 시선, 입 모양이 흔들리지 않게 잡아 주는 축입니다. 반대로 편집된 키프레임과 깊이 시퀀스는 유연하면서도 시간적으로 일관된 생성을 가능하게 합니다. 장면이 프레임마다 튀지 않게 하는 축입니다.
 
-![리라이팅된 얼굴 영역과 얼굴 노멀맵은 정체성을 구속하고, 편집된 키프레임과 깊이 시퀀스는 편집 자유도를 담당하는 이중 제어 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-04.png)
+![리라이팅된 얼굴 영역과 얼굴 노멀맵은 정체성을 구속하고, 편집된 키프레임과 깊이 시퀀스는 편집 자유도를 담당하는 이중 제어 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-04.webp)
 
 *정체성 구속 축과 편집 자유도 축을 서로 다른 신호에 맡겼습니다.*
 
@@ -90,7 +90,7 @@ flowchart TB
 
 공개된 두 체크포인트는 같은 아키텍처를 공유합니다. Wan 2.1 이미지-투-비디오 모델에 VACE 제어를 얹은 구성입니다. 처음부터 새 비디오 생성 모델을 학습한 것이 아니라, 이미 검증된 오픈 백본 위에 제어 구조를 설계했다는 뜻입니다.
 
-![새 비디오 생성 모델을 처음부터 학습하지 않고 검증된 오픈 백본 Wan 2.1 이미지-투-비디오 위에 VACE 제어를 얹은 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-05.png)
+![새 비디오 생성 모델을 처음부터 학습하지 않고 검증된 오픈 백본 Wan 2.1 이미지-투-비디오 위에 VACE 제어를 얹은 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-05.webp)
 
 *백본은 새로 만들지 않고 제어 구조만 설계했습니다.*
 
@@ -98,7 +98,7 @@ flowchart TB
 
 여기서 실무자가 놓치면 안 되는 점은, 이 파이프라인이 단일 모델 호출이 아니라는 것입니다. 분할, 리라이팅, 노멀 추정, 깊이 추정이 모두 앞단에 붙습니다. 생성 모델 하나만 서빙하면 되는 구조가 아닙니다.
 
-![분할과 리라이팅을 거쳐 노멀과 깊이를 병렬 추정한 뒤 비디오 디퓨전으로 들어가는 4단계 파이프라인](/assets/images/id-v2v-identity-preserving-video-restylization-slide-06.png)
+![분할과 리라이팅을 거쳐 노멀과 깊이를 병렬 추정한 뒤 비디오 디퓨전으로 들어가는 4단계 파이프라인](/assets/images/id-v2v-identity-preserving-video-restylization-slide-06.webp)
 
 *앞단 전처리가 모두 성공해야 생성 단계가 동작합니다.*
 
@@ -122,7 +122,7 @@ ID-V2V는 출발점이 다릅니다. 이미 촬영된 영상이 있고, 그 안�
 
 **ai-platform 관점.** ID-V2V 같은 워크로드는 온프레미스 서빙의 필요성을 잘 보여 주는 사례입니다. 입력이 사람 얼굴이 담긴 원본 영상이기 때문입니다. 초상권과 계약이 걸린 촬영 소재를 외부 API에 올리는 선택은 광고, 방송, 교육 콘텐츠 업계에서 실제로 자주 막힙니다. 코드와 데이터가 고객 경계를 벗어나지 않아야 한다는 요구가 여기서도 그대로 나옵니다. ThakiCloud의 ai-platform은 K8s와 Kueue 기반 GPU 스케줄링 위에서 모델을 고객 환경 안에 두고 서빙하는 것을 전제로 설계되어 있어, 이런 유형의 미디어 워크로드와 요구 조건이 맞습니다.
 
-![초상권 계약이 걸린 원본 영상과 얼굴 데이터가 외부 API로 나가지 못하고 고객 클러스터 안에서 처리되어야 하는 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-07.png)
+![초상권 계약이 걸린 원본 영상과 얼굴 데이터가 외부 API로 나가지 못하고 고객 클러스터 안에서 처리되어야 하는 구조](/assets/images/id-v2v-identity-preserving-video-restylization-slide-07.webp)
 
 *원본 소재가 경계를 넘지 못하는 업계에서는 온프레미스가 전제가 됩니다.*
 
@@ -151,7 +151,7 @@ ID-V2V가 남기는 교훈은 모델 크기를 키우는 것보다 문제를 잘
 미디어 워크로드를 검토하고 계시다면 다음 순서를 권합니다. 먼저 대상 해상도와 길이에서 VRAM과 생성 시간을 직접 측정하고, 전처리 단계와 생성 단계의 GPU 큐를 분리한 뒤, 원본 소재가 외부로 나가도 되는지를 법무와 함께 확인하십시오. 세 번째 항목에서 걸린다면 온프레미스 서빙이 선택이 아니라 전제가 됩니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/id-v2v-identity-preserving-video-restylization/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/id-v2v-identity-preserving-video-restylization/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

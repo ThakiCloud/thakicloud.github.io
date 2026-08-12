@@ -115,10 +115,26 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Sync _site/ to S3 /tech-blog/
+      # 미디어/HTML 분리 sync (2026-08-12).
+      # Jekyll이 매 빌드마다 _site로 미디어를 새로 복사해 mtime이 전부 갱신되므로,
+      # 기본 sync(mtime 비교)는 안 바뀐 수 GB를 매번 재업로드했다. 미디어는 --size-only로
+      # 델타만 올린다. 그리고 미디어에는 --delete를 걸지 않는다 — png→webp 전환처럼
+      # 소스에서 사라진 옛 파일도 S3에는 남겨 외부에서 걸어둔 핫링크/og:image가 죽지 않게
+      # 한다(글 404 사고와 같은 계열의 "링크는 약속" 원칙). HTML sync의 --delete는
+      # 미디어 prefix를 제외해 미디어를 지우지 못하게 스코프한다.
+      - name: Sync media to S3 (delta only, never delete)
+        run: |
+          aws s3 sync _site/assets/ "s3://${S3_BUCKET}/${DEST_PREFIX}/assets/" \
+            --size-only \
+            --exclude "css/*" --exclude "js/*" \
+            --cache-control "public,max-age=604800"
+
+      - name: Sync HTML/CSS/JS to S3 /tech-blog/ (with scoped delete)
         run: |
           aws s3 sync _site/ "s3://${S3_BUCKET}/${DEST_PREFIX}/" \
             --delete \
+            --exclude "assets/*" \
+            --include "assets/css/*" --include "assets/js/*" \
             --cache-control "public,max-age=3600"
 
       - name: Invalidate CloudFront /tech-blog/*
@@ -126,3 +142,36 @@ jobs:
           aws cloudfront create-invalidation \
             --distribution-id "${CF_DISTRIBUTION_ID}" \
             --paths "/${DEST_PREFIX}/*"
+
+      # 내용 기반 배포 검증 (2026-08-12). 이 사이트의 CloudFront는 없는 경로에도
+      # 200 + 사이트 셸을 돌려주므로(catch-all) 상태코드로는 soft-404를 못 잡는다.
+      # 방금 빌드한 _site에서 포스트 3개를 뽑아 라이브 HTML에 그 글의 <title>이 실제로
+      # 들어있는지 비교한다. 실패 = 빌드는 됐는데 서빙이 깨진 것 → 잡 실패로 표면화.
+      - name: Verify deployed content (soft-404 guard)
+        run: |
+          python3 - <<'EOF'
+          import random, re, sys, time, urllib.request
+          from pathlib import Path
+          site = Path("_site")
+          pages = [p for p in site.rglob("index.html")
+                   if re.search(r"/(ko|en)/", str(p)) and p.parent != site]
+          random.shuffle(pages)
+          picked = pages[:3]
+          fails = []
+          for p in picked:
+              m = re.search(r"<title>([^<]+)</title>", p.read_text(encoding="utf-8", errors="ignore"))
+              if not m: continue
+              title = m.group(1).strip()
+              url = "https://thakicloud.com/tech-blog/" + str(p.parent.relative_to(site)) + "/"
+              ok = False
+              for attempt in range(4):   # CloudFront 무효화 전파 대기
+                  try:
+                      html = urllib.request.urlopen(url, timeout=20).read().decode("utf-8", "ignore")
+                      if title[:40] in html: ok = True; break
+                  except Exception: pass
+                  time.sleep(15)
+              print(("OK  " if ok else "FAIL") + f" {url}  [{title[:60]}]")
+              if not ok: fails.append(url)
+          if fails:
+              print("soft-404 detected: built page not served with its own content"); sys.exit(1)
+          EOF

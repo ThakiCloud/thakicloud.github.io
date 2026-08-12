@@ -22,7 +22,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 8분
 
-![Goclone: 웹사이트를 몇 초 만에 컴퓨터로 복제하기 개념을 형상화한 이미지](/assets/images/goclone-website-cloner-tutorial-ko-hero.png)
+![Goclone: 웹사이트를 몇 초 만에 컴퓨터로 복제하기 개념을 형상화한 이미지](/assets/images/goclone-website-cloner-tutorial-ko-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 소개
@@ -400,11 +400,11 @@ Goclone은 웹사이트를 로컬 머신에 복제하기 위한 강력하고 빠
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![goclone-website-cloner-tutorial-ko 슬라이드 1](/assets/images/goclone-website-cloner-tutorial-ko-slide-01.png)
+![goclone-website-cloner-tutorial-ko 슬라이드 1](/assets/images/goclone-website-cloner-tutorial-ko-slide-01.webp)
 
-![goclone-website-cloner-tutorial-ko 슬라이드 2](/assets/images/goclone-website-cloner-tutorial-ko-slide-02.png)
+![goclone-website-cloner-tutorial-ko 슬라이드 2](/assets/images/goclone-website-cloner-tutorial-ko-slide-02.webp)
 
-![goclone-website-cloner-tutorial-ko 슬라이드 3](/assets/images/goclone-website-cloner-tutorial-ko-slide-03.png)
+![goclone-website-cloner-tutorial-ko 슬라이드 3](/assets/images/goclone-website-cloner-tutorial-ko-slide-03.webp)
 
-![goclone-website-cloner-tutorial-ko 슬라이드 4](/assets/images/goclone-website-cloner-tutorial-ko-slide-04.png)
+![goclone-website-cloner-tutorial-ko 슬라이드 4](/assets/images/goclone-website-cloner-tutorial-ko-slide-04.webp)
 

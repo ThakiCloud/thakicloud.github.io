@@ -36,7 +36,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 ![مخطط مفاهيمي لـ DiffusionGemma 26B-A4B]({{ '/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp' | relative_url }})
 
-![DiffusionGemma 26B-A4B: تجربة Google في توليد 15 إلى 20 رمزاً دفعةً واحدة عبر الانتشار النصي المتقطع 개념을 형상화한 이미지](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.png)
+![DiffusionGemma 26B-A4B: تجربة Google في توليد 15 إلى 20 رمزاً دفعةً واحدة عبر الانتشار النصي المتقطع 개념을 형상화한 이미지](/assets/images/diffusiongemma-26b-a4b-diffusion-llm-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## ما الجديد
@@ -48,7 +48,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 الرخصة Apache-2.0، مما يتيح الاستخدام التجاري وتوزيع النماذج المشتقة.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## البنية
@@ -119,7 +119,7 @@ vllm serve google/diffusiongemma-26B-A4B-it \
 لا يزال نظام بيئة الانتشار للنماذج اللغوية أقل نضجاً مقارنةً بالنماذج التلقائية التسلسلية. تبقى مرحلة التحقق المباشر من وضع دعم أطر التقديم لنماذج الانتشار، وفعالية التكميم، واستقرار النشر الفعلي ضرورةً لا غنى عنها.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/diffusiongemma-26b-a4b-diffusion-llm/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## المصادر

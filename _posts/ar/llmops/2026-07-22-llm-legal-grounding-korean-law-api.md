@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.github.io/ar/llmops/llm-legal-grounding-korean-law-api/"
 ---
 
-![خط معالجة يربط الإجابات بنص مصدري موثّق](/assets/images/llm-legal-grounding-korean-law-api-hero.png)
+![خط معالجة يربط الإجابات بنص مصدري موثّق](/assets/images/llm-legal-grounding-korean-law-api-hero.webp)
 
 ## لماذا تقرأ هذا
 

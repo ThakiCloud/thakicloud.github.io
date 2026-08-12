@@ -25,7 +25,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 두 릴리스를 따로 읽으면 각자 흔한 뉴스입니다. 나란히 놓고 보면 이야기가 달라집니다. 소프트웨어를 만드는 쪽과 그 소프트웨어를 감사하는 쪽이 동시에 에이전트로 넘어가고 있다는 뜻이기 때문입니다. 그리고 두 모델을 모두 자기 인프라에 올려놓는 순간, 아무도 대신 답해 주지 않는 질문이 남습니다. 이 에이전트들은 실제로 누구의 자원 위에서, 어떤 권한으로, 어떤 기록을 남기며 돌아가는가.
 
-![코드를 쓰는 에이전트와 코드를 감시하는 에이전트가 같은 날 나왔습니다 개념을 형상화한 이미지](/assets/images/generate-audit-runtime-accountability-gap-hero.png)
+![코드를 쓰는 에이전트와 코드를 감시하는 에이전트가 같은 날 나왔습니다 개념을 형상화한 이미지](/assets/images/generate-audit-runtime-accountability-gap-hero.webp)
 *이번 주 뉴스의 핵심 흐름을 형상화했습니다.*
 
 ## 같은 날, 정확히 반대편에서
@@ -37,7 +37,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 두 모델은 방향이 반대인데 설계 철학이 똑같습니다. 작게 만들고, 오픈웨이트로 풀고, 남의 클라우드가 아니라 내 인프라에서 돌린다. 배포 전략마저 닮았습니다. 핵심 모델은 오픈웨이트로 공개하되 가장 성능이 좋은 버전은 자사 제품에 남겨 두는 방식은 요즘 보안 스타트업과 대형 벤더가 공통으로 택하는 문법입니다. 생성과 감사가 나란히 셀프호스팅의 규칙으로 재편되고 있는 것입니다.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/generate-audit-runtime-accountability-gap/nlm-infographic-1.png)
+![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/generate-audit-runtime-accountability-gap/nlm-infographic-1.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 오픈웨이트가 감사의 규칙을 바꾼 지점
@@ -422,18 +422,18 @@ ThakiCloud의 Paxis는 바로 이 비어 있는 계층을 다룹니다. Paxis는
 - 뉴스저널리즘, [AI가 바꾼 보안 공식…에스원 '현장 데이터'로 승부](https://www.ngetnews.com/news/articleView.html?idxno=551683)
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/generate-audit-runtime-accountability-gap/nlm-infographic-2.png)
+![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/generate-audit-runtime-accountability-gap/nlm-infographic-2.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 관련 슬라이드
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![generate-audit-runtime-accountability-gap 슬라이드 1](/assets/images/generate-audit-runtime-accountability-gap-slide-01.png)
+![generate-audit-runtime-accountability-gap 슬라이드 1](/assets/images/generate-audit-runtime-accountability-gap-slide-01.webp)
 
-![generate-audit-runtime-accountability-gap 슬라이드 2](/assets/images/generate-audit-runtime-accountability-gap-slide-02.png)
+![generate-audit-runtime-accountability-gap 슬라이드 2](/assets/images/generate-audit-runtime-accountability-gap-slide-02.webp)
 
-![generate-audit-runtime-accountability-gap 슬라이드 3](/assets/images/generate-audit-runtime-accountability-gap-slide-03.png)
+![generate-audit-runtime-accountability-gap 슬라이드 3](/assets/images/generate-audit-runtime-accountability-gap-slide-03.webp)
 
-![generate-audit-runtime-accountability-gap 슬라이드 4](/assets/images/generate-audit-runtime-accountability-gap-slide-04.png)
+![generate-audit-runtime-accountability-gap 슬라이드 4](/assets/images/generate-audit-runtime-accountability-gap-slide-04.webp)
 

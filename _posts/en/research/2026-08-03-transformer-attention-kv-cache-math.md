@@ -27,7 +27,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/transformer-attenti
 published: true
 ---
 
-![Layered key and value planes converging into a single latent vector](/assets/images/transformer-attention-kv-cache-math-hero.png)
+![Layered key and value planes converging into a single latent vector](/assets/images/transformer-attention-kv-cache-math-hero.webp)
 *Many per-head key/value caches compressing into one shared latent vector.*
 
 ## Why read this
@@ -99,7 +99,7 @@ Per-token KV cache for the three models, all fp16 and summed across every layer:
 | Llama 3 70B | GQA | 80 | 8 | 320 KiB | 40 GiB |
 | DeepSeek V2 | MLA | 60 | latent 512 | 60 KiB | 7.5 GiB |
 
-![Bar chart comparing per-token KV cache across three models](/assets/images/transformer-attention-kv-cache-math-results.png)
+![Bar chart comparing per-token KV cache across three models](/assets/images/transformer-attention-kv-cache-math-results.webp)
 *Computed by applying the Table 1 and Table 2 formulas to the Table 3 specs. The 128k context figure is a normalization for comparison and does not reflect each model's actual maximum context.*
 
 The striking result is that Gemma 3 27B holds 1.55x more cache per token than Llama 3 70B, even though Llama is nearly 2.6x larger in parameters. The formula explains it. Cache is governed by `layers × KV heads`: Gemma 3 27B gives 62 × 16 = 992, while Llama 3 70B gives 80 × 8 = 640. Llama has more layers but cut KV heads far more aggressively, and that decision outweighed the parameter gap.

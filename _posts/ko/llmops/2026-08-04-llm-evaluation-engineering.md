@@ -162,6 +162,6 @@ LLM 평가를 시스템으로 만드는 일은 결국 무엇을 측정할지 미
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『LLM 평가 엔지니어링』의 일부를 블로그용으로 다시 쓴 것입니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/llm-evaluation-engineering/ch01.png)
-![2장 삽화](/assets/images/books/llm-evaluation-engineering/ch02.png)
+![1장 삽화](/assets/images/books/llm-evaluation-engineering/ch01.webp)
+![2장 삽화](/assets/images/books/llm-evaluation-engineering/ch02.webp)
 

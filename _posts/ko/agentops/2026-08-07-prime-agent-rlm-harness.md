@@ -27,7 +27,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 장시간 도는 코딩 에이전트를 직접 만들거나 운영하면서 컨텍스트 압축과 토큰 비용에 계속 부딪히는 엔지니어를 위한 글입니다. 결론부터 말씀드리면, Prime Agent가 제안한 "컨텍스트를 프롬프트가 아니라 영속 커널의 변수로 두기"는 실제로 작동하고 직접 재현했을 때 같은 세션 히스토리에서 모델이 실제로 소비하는 토큰이 321,458개에서 149개까지 내려갔습니다. 다만 이 절감폭은 질문의 성격에 전적으로 종속되며, 모델이 원문을 눈으로 읽어야 하는 순간 이득은 20분의 1로 줄어듭니다. 이 두 문장 사이의 간격이 이 글의 내용 전부입니다.
 
-![영속 커널이 방대한 컨텍스트를 품고 가느다란 질의만 오가는 구조를 형상화한 이미지](/assets/images/prime-agent-rlm-harness-hero.png)
+![영속 커널이 방대한 컨텍스트를 품고 가느다란 질의만 오가는 구조를 형상화한 이미지](/assets/images/prime-agent-rlm-harness-hero.webp)
 *하나의 영속 커널이 세션 전체를 품고, 모델은 가느다란 질의로 필요한 조각만 꺼냅니다.*
 
 ## 개요
@@ -98,7 +98,7 @@ run("errs = [l for l in ctx.split('\\n') if l.startswith('ERROR:')]\nprint(len(e
 
 여기까지만 보면 지나치게 좋은 숫자입니다. 그래서 두 번째 실행에서는 이득이 사라지는 지점을 찾아봤습니다. 같은 커널과 같은 토크나이저로 질문의 성격만 바꿨습니다.
 
-![질문 성격에 따른 토큰 소비를 로그 스케일로 비교한 막대 차트](/assets/images/prime-agent-rlm-harness-results.png)
+![질문 성격에 따른 토큰 소비를 로그 스케일로 비교한 막대 차트](/assets/images/prime-agent-rlm-harness-results.webp)
 *같은 히스토리라도 모델이 원문을 읽어야 할수록 절감폭이 급격히 줄어듭니다.*
 
 집계만 필요한 S1은 149 토큰으로 2,157배 절감이었습니다. 집계에 더해 에러 주변 원문을 열두 줄씩 세 군데 읽어온 S2는 717 토큰으로 448배가 됐습니다. 파일 네 개의 원문 40줄 블록을 통째로 읽어야 하는 S3에서는 3,234 토큰까지 올라가 99배로 내려앉았습니다.
@@ -138,13 +138,13 @@ Prime Agent에서 가져갈 것은 벤치마크 숫자가 아니라 문제를 �
 
 본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
 
-![prime-agent-rlm-harness 슬라이드 1](/assets/images/prime-agent-rlm-harness-slide-01.png)
+![prime-agent-rlm-harness 슬라이드 1](/assets/images/prime-agent-rlm-harness-slide-01.webp)
 
-![prime-agent-rlm-harness 슬라이드 2](/assets/images/prime-agent-rlm-harness-slide-02.png)
+![prime-agent-rlm-harness 슬라이드 2](/assets/images/prime-agent-rlm-harness-slide-02.webp)
 
-![prime-agent-rlm-harness 슬라이드 3](/assets/images/prime-agent-rlm-harness-slide-03.png)
+![prime-agent-rlm-harness 슬라이드 3](/assets/images/prime-agent-rlm-harness-slide-03.webp)
 
-![prime-agent-rlm-harness 슬라이드 4](/assets/images/prime-agent-rlm-harness-slide-04.png)
+![prime-agent-rlm-harness 슬라이드 4](/assets/images/prime-agent-rlm-harness-slide-04.webp)
 
 ## 출처
 

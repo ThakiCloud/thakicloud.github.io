@@ -28,7 +28,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 온폴리시 RL로 모델을 후처리 학습시키는데 같은 설정에서 보상 곡선이 실행마다 달라져 원인을 찾고 있는 분, 그리고 훈련 스택과 서빙 스택을 따로 고르는 것이 나중에 무엇을 청구하는지 알아야 하는 플랫폼 담당자를 위한 글입니다. 결론을 먼저 드리면, 그 불안정의 상당 부분은 하이퍼파라미터가 아니라 **훈련 커널과 추론 커널이 같은 입력에 다른 비트를 내놓는다는 사실**에서 나옵니다. vLLM과 TorchTitan 팀은 순전파의 모든 커널 호출을 감사해 이 차이를 없앴고, KL 발산이 항상 0이 되자 모델은 더 적은 스텝에서 더 높은 총 보상에 도달했습니다. 다만 이 정합은 아직 전체 아키텍처를 덮지 못합니다. Gated DeltaNet 같은 선형 어텐션 계열에서는 지금도 막혀 있고, 그 이유는 게으름이 아니라 재귀 상태라는 구조 자체에 있습니다.
 
-![파란 리본과 주황 리본이 나란히 달리다 한 줄의 흰 선으로 완전히 겹쳐지는 이미지](/assets/images/bitwise-parity-linear-attention-hero.png)
+![파란 리본과 주황 리본이 나란히 달리다 한 줄의 흰 선으로 완전히 겹쳐지는 이미지](/assets/images/bitwise-parity-linear-attention-hero.webp)
 *훈련과 추론이라는 두 경로가 같은 수치로 수렴하는 상태를 형상화했습니다. 한쪽은 매끄럽고 한쪽은 청크로 끊겨 있습니다.*
 
 ## 개요
@@ -133,13 +133,13 @@ RuntimeError: VLLM batch_invariant mode is not supported for GDN_ATTN.
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![bitwise-parity-linear-attention 슬라이드 1](/assets/images/bitwise-parity-linear-attention-slide-01.png)
+![bitwise-parity-linear-attention 슬라이드 1](/assets/images/bitwise-parity-linear-attention-slide-01.webp)
 
-![bitwise-parity-linear-attention 슬라이드 2](/assets/images/bitwise-parity-linear-attention-slide-02.png)
+![bitwise-parity-linear-attention 슬라이드 2](/assets/images/bitwise-parity-linear-attention-slide-02.webp)
 
-![bitwise-parity-linear-attention 슬라이드 3](/assets/images/bitwise-parity-linear-attention-slide-03.png)
+![bitwise-parity-linear-attention 슬라이드 3](/assets/images/bitwise-parity-linear-attention-slide-03.webp)
 
-![bitwise-parity-linear-attention 슬라이드 4](/assets/images/bitwise-parity-linear-attention-slide-04.png)
+![bitwise-parity-linear-attention 슬라이드 4](/assets/images/bitwise-parity-linear-attention-slide-04.webp)
 
 ## 출처
 

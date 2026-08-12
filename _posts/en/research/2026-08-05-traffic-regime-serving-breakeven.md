@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/traffic-regime-serv
 
 If you're on a team serving MoE (Mixture-of-Experts) models on B200, you've probably validated precision (FP16, FP8, NVFP4), n-gram speculative decoding, and automatic prefix caching against a single benchmark trace and flipped them on from there. This paper shows, through a closed-form cost model, that those three switches are not actually independent, and that which one pays off is decided not by precision itself but by the character of the traffic arriving right now: its concurrency, its prompt reuse rate, and its repetitiveness. It works out mathematically why winning on one benchmark trace is no guarantee of winning in the next time window or with the next tenant, and on top of that lays out a procedure for observing traffic and deciding the three switches in order, which makes it directly useful for engineers actually tuning serving costs.
 
-![Illustration of the core idea of When Serving MoE Models on B200, When Should You Turn On Quantization, Speculative Decoding, and Prefix Caching?](/assets/images/traffic-regime-serving-breakeven-hero.png)
+![Illustration of the core idea of When Serving MoE Models on B200, When Should You Turn On Quantization, Speculative Decoding, and Prefix Caching?](/assets/images/traffic-regime-serving-breakeven-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Why the Three Switches Cannot Be Turned On Independently
@@ -42,7 +42,7 @@ From here you can derive closed-form break-even conditions for precision, specul
 
 The example numbers the paper gives (all example parameters) make this concrete. At low concurrency, FP16 already breaks even on speculative decoding once repetitiveness passes 0.06, but at NVFP4 that threshold more than doubles to 0.14. Push concurrency up into the regime where verification overhead carries more weight, and the FP16 threshold rises to 0.29 while NVFP4's rises to 0.45, widening the gap further. Lowering precision and raising concurrency push in the same direction. In this regime, turning on speculative decoding can end up a loss even on traffic that is quite repetitive.
 
-![Graph showing how the speculative decoding repetitiveness threshold r* changes with concurrency and precision](/assets/images/posts/research/traffic-regime-serving-breakeven/fig-spec-decoding-breakeven.png)
+![Graph showing how the speculative decoding repetitiveness threshold r* changes with concurrency and precision](/assets/images/posts/research/traffic-regime-serving-breakeven/fig-spec-decoding-breakeven.webp)
 *All figures are calculated from example parameters, not measurements. As precision drops from FP16 to NVFP4, and as concurrency rises, the repetitiveness threshold at which speculative decoding turns profitable rises along with them.*
 
 What makes this dangerous in practice is the order of operations. If an operator quantizes down from FP16 to capture the capacity gain but leaves speculative decoding on simply because it was validated at FP16, they have unknowingly crossed the break-even boundary in the wrong direction. An analysis that looks at only one lever at a time never surfaces this failure mode at all.
@@ -53,7 +53,7 @@ Prefix caching is a net gain only when the prefill savings exceed the cache mana
 
 This is where the second counter-intuitive coupling shows up. As concurrency rises, $B_{\mathrm{eff}}$ rises with it up to the capacity knee, so the threshold needed to justify prefix caching rises together with concurrency. But lowering precision also pushes that capacity knee further to the right, so in a concurrency range that has already passed the higher-precision knee, quantization grows $B_{\mathrm{eff}}$ a second time. The upshot is that moving from FP16 to NVFP4 makes prefix caching harder to justify on the same traffic profile, the opposite of what intuition suggests, because the extra HBM headroom bought by quantization gets spent serving more concurrent requests, which only enlarges the working set the cache has to index and evict.
 
-![Graph showing how the prefix caching break-even sharing rate rho* changes with realized batch size](/assets/images/posts/research/traffic-regime-serving-breakeven/fig-prefix-cache-breakeven.png)
+![Graph showing how the prefix caching break-even sharing rate rho* changes with realized batch size](/assets/images/posts/research/traffic-regime-serving-breakeven/fig-prefix-cache-breakeven.webp)
 *This is an example calculation using an example coefficient (γL_ctx/(c_pre L_in) = 0.002). At a realized batch size of 32, the break-even sharing rate is a low 0.06, but it climbs to about 0.51 once batch size reaches 256, which pushes even a workload with a 40 percent prefix sharing rate below break-even.*
 
 One more thing: this break-even value is inversely proportional to average prompt length. Longer prompts mean more prefill to save in absolute terms, so the break-even point drops; traffic with shorter prompts, conversely, is more prone to turning prefix caching into a tax. Output length, by contrast, enters both the numerator and the denominator equally and cancels out, so it has no effect on the break-even point itself.
@@ -62,7 +62,7 @@ One more thing: this break-even value is inversely proportional to average promp
 
 The gain from lowering precision also passes through three phases as concurrency rises. Below the capacity knee of either precision, batch size simply tracks concurrency, so the lower precision's advantage is pinned exactly at the bandwidth ratio (for example, exactly 1/4 if NVFP4 uses 1 byte for every 4 bytes FP16 uses). Once concurrency passes the higher precision's knee but not yet the lower precision's, the higher precision's batch size is capped by capacity and can no longer grow while the lower precision keeps growing its batch, so the gap widens linearly across that range. Once concurrency passes both knees, the gap stops widening and flattens out at a level that is always better than the bandwidth ratio, because the lower precision can keep more sequences resident.
 
-![Graph showing how the NVFP4-to-FP16 cost-per-token ratio changes across low, medium, and high concurrency](/assets/images/posts/research/traffic-regime-serving-breakeven/fig-precision-concurrency-advantage.png)
+![Graph showing how the NVFP4-to-FP16 cost-per-token ratio changes across low, medium, and high concurrency](/assets/images/posts/research/traffic-regime-serving-breakeven/fig-precision-concurrency-advantage.webp)
 *Calculated with example parameters (b(FP16)=2, b(NVFP4)=0.5 bytes per parameter, capacity ratio K_NVFP4/K_FP16=1.33). NVFP4's advantage grows most steeply in the range between the two knees, then flattens out at around 0.19 above that.*
 
 The operational implication is that the range between the two knees is exactly where a wrong concurrency estimate costs you the most. Outside that range, precision choice is relatively predictable, but between the two knees even a small miss on concurrency can swing the precision decision significantly.

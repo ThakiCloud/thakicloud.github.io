@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 
 몇 주씩 쉬지 않고 돌아가는 자율 코딩 에이전트를 직접 운영하면서, 매 세션 시작 때 주입하는 메모리 브리핑이 자꾸 예산을 넘긴다는 느낌을 받아본 엔지니어라면 이 글이 다루는 문제가 낯설지 않을 것입니다. 이 논문은 그 브리핑에 무엇을 남기고 무엇을 걷어낼지 정하는 세 가지 정책을 실제 프로덕션 메모리 코퍼스에 대고 직접 재보고, "최신 것을 남긴다"는 가장 흔한 직관이 왜 최선이 아닌지를 숫자로 보여줍니다.
 
-![에이전트 메모리는 순서가 아니라 중복이 문제였다 개념을 형상화한 이미지](/assets/images/agent-memory-tiering-recall-cost-hero.png)
+![에이전트 메모리는 순서가 아니라 중복이 문제였다 개념을 형상화한 이미지](/assets/images/agent-memory-tiering-recall-cost-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 문제의식: 컨텍스트는 공짜가 아니다
@@ -32,14 +32,14 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 문제는 컨텍스트가 공짜가 아니라는 데 있습니다. 세션마다 주입하는 상주 메모리 브리핑은 세션 수에 비례해서 비용이 늘어나지, 그 브리핑이 실제로 도움이 된 횟수에 비례해서 늘어나지 않습니다. 그래서 실무 하네스는 대개 브리핑에 고정된 글자 수 예산을 걸고, 어떤 항목을 남길지는 계층화(consolidation) 정책에 맡깁니다. 그리고 이 정책은 거의 항상 직관으로 정해집니다. 최신 항목을 남기거나, 자주 참조된 항목을 남기거나. 그런데 이 두 직관 중 어느 쪽도 같은 코퍼스, 같은 예산 위에서 다른 대안과 나란히 비교된 적이 없었습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-memory-tiering-recall-cost/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/agent-memory-tiering-recall-cost/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 핵심 기여: 세 가지 정책을 실제 코퍼스로 재다
 
 연구팀은 최신순 프루닝(recency pruning), 사용 빈도 유지(frequency retention), 유사도 기반 의미 중복 제거(semantic deduplication, 임베딩이 아니라 토큰 집합의 자카드 유사도 기반)라는 세 정책을, 실제로 운영 중인 프로덕션 에이전트 하네스의 메모리 코퍼스 위에서 비교했습니다. 코퍼스는 45건(교정 36건, 패턴 9건, 총 1594자)으로 2026-06-23부터 2026-07-29까지 5주간 쌓인 실제 기록입니다. 예산을 코퍼스 전체의 10%부터 100%까지 열 단계로 늘려가며 각 예산에서 "회수율(recall@budget)"을 재고, 이를 곡선 아래 면적(AUC)으로 요약했습니다.
 
-![세 계층화 정책의 예산별 회수율 곡선](/assets/images/posts/research/agent-memory-tiering-recall-cost/recall-curves.png)
+![세 계층화 정책의 예산별 회수율 곡선](/assets/images/posts/research/agent-memory-tiering-recall-cost/recall-curves.webp)
 *의미 중복 제거는 예산의 70%만으로 회수율 1.0에 도달하지만, 두 기준선 정책은 예산 100%가 되어야 도달합니다. (CPU 전용 컨테이너에서 측정)*
 
 결과는 뚜렷했습니다. 의미 중복 제거는 AUC 0.7189를 기록했고, 최신순 프루닝과 빈도 유지는 나란히 0.6122에 그쳤습니다. 절대값으로 0.1067, 상대적으로는 통합 구간을 어디로 잡느냐에 따라 17~20% 앞섰습니다(전체 구간 [0.1, 1.0]에서는 17.4%, 정책 간 차이가 실제로 드러나는 구간 [0.1, 0.7]만 놓고 보면 20.4%). 더 흥미로운 지점은 회수율 곡선의 모양입니다. 예산이 30~50%인 구간에서 중복 제거는 0.73~0.82의 회수율을 보이는 반면 최신순 정책은 0.58~0.64에 머뭅니다. 그리고 예산 70%부터 중복 제거는 회수율 1.0에 도달해 그대로 유지되는데, 두 기준선 정책은 예산을 100%까지 다 써야 같은 지점에 도달합니다. 이 코퍼스 안에 있던 항목의 약 30%가 사실상 중복이었고, 두 기준선은 그 중복을 걷어내지 못한 채 순서만 바꿔가며 자리를 차지하고 있었다는 뜻입니다.
@@ -50,7 +50,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 
 최신순 프루닝과 빈도 유지는 둘 다 "순서" 정책입니다. 항목 전체에 하나의 순서를 매기고 예산이 허용하는 만큼 앞에서부터 자릅니다. 두 항목이 사실상 같은 내용을 담고 있는지는 전혀 확인하지 않습니다. 의미 중복 제거는 딱 한 가지 연산만 추가합니다. 순서를 매기기 전에, 토큰 집합 자카드 유사도가 0.5 이상으로 연결된 항목들을 하나의 클러스터로 묶고, 각 클러스터에서 가장 최근 항목 하나만 대표로 남깁니다. 그 다음은 최신순 정책과 똑같이 정렬해서 자릅니다. 그래서 측정된 이득은 "더 나은 중요도 판단"에서 온 게 아니라, 순수하게 "중복 제거"에서 왔다고 말할 수 있습니다.
 
-![AUC 비교: 의미 중복 제거 대 두 기준선](/assets/images/posts/research/agent-memory-tiering-recall-cost/auc-comparison.png)
+![AUC 비교: 의미 중복 제거 대 두 기준선](/assets/images/posts/research/agent-memory-tiering-recall-cost/auc-comparison.webp)
 *의미 중복 제거는 AUC 0.7189로, 최신순·빈도 정책의 0.6122 대비 17.4%의 상대적 이득을 기록했습니다. (CPU 전용 컨테이너에서 측정)*
 
 같은 교정 사항을 사람이 세션마다 조금씩 다른 표현으로 반복해서 지적하는 일은 실제로 흔합니다. 사람이 보기엔 "또 같은 말"이지만, 순서 정책의 눈에는 서로 다른 세 개의 항목이고, 예산 안에서 세 자리를 나눠 차지합니다. 최신순에서 빈도순으로 바꾼다고 이 문제가 풀리지 않는 것도 같은 이유입니다. 둘 다 "이 항목이 이미 남아 있는 다른 항목과 같은 뜻인지"는 아예 보지 않기 때문입니다. 결국 예산을 더 잘 쓰는 축은 순서의 정교함이 아니라 중복을 걷어내는 한 단계였습니다.
@@ -59,7 +59,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 
 연구팀은 실제로 운영 중인 설정값도 함께 뜯어봤습니다. 이 하네스는 섹션별로 항목 개수 캡(교정 최대 12개, 패턴 최대 6개, 합쳐서 18개)과 글자 수 캡(각각 900자, 700자, 합쳐서 1600자)을 동시에 걸어 둡니다. 두 캡이 동시에 걸린 지금 설정에서는 18개 항목만 남고 회수율이 0.5778에 그쳤습니다. 그런데 개수 제한을 풀고 동일한 1600자 예산만 유지했더니 45개 항목이 전부 남았고 회수율은 1.0에 도달했습니다.
 
-![프로덕션 설정 어블레이션: 개수 캡 대 글자 캡](/assets/images/posts/research/agent-memory-tiering-recall-cost/production-ablation.png)
+![프로덕션 설정 어블레이션: 개수 캡 대 글자 캡](/assets/images/posts/research/agent-memory-tiering-recall-cost/production-ablation.webp)
 *현재 설정된 개수 캡은 45건 중 18건만 남겨 회수율 0.5778에 그치지만, 개수 캡을 풀고 글자 예산만 통합해서 적용하면 45건 전부가 남아 회수율 1.0에 도달합니다. (CPU 전용 컨테이너에서 측정)*
 
 숫자로 보면 원인이 분명합니다. 지금 코퍼스는 총 1594자로, 통합 글자 예산 1600자에 거의 딱 맞습니다. 즉 글자 캡은 지금 코퍼스 크기에서는 사실상 아무것도 자르지 않는데, 개수 캡이 27개 항목을 먼저 잘라내고 있었던 겁니다. 두 캡을 "이중 안전장치"쯤으로 여기고 함께 걸어두는 설계는 흔하지만, 이 결과는 그 전제가 틀렸다는 걸 보여줍니다. 어느 캡이 먼저 걸리는지는 코퍼스 크기가 아니라 항목의 평균 길이에 좌우됩니다. 이 코퍼스는 항목당 평균 약 35자로 짧은 편이라, 개수 캡(항목당 약 89자 허용)이 글자 캡보다 훨씬 먼저 걸립니다. 항목이 더 길고 서술적인 코퍼스였다면 이 관계는 순식간에 뒤집혔을 것입니다. 다만 이 결과는 지금 코퍼스 크기(1594자)에 국한된 것으로, 코퍼스가 자라 1600자를 넘어서면 글자 캡이 실제로 작동하기 시작할 것이라는 점도 논문은 분명히 못박고 있습니다.
@@ -77,18 +77,18 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 논문 상세 페이지: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-30-agent-memory-tiering-recall-cost](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-30-agent-memory-tiering-recall-cost)
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-memory-tiering-recall-cost/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-memory-tiering-recall-cost/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 관련 슬라이드
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-memory-tiering-recall-cost 슬라이드 1](/assets/images/agent-memory-tiering-recall-cost-slide-01.png)
+![agent-memory-tiering-recall-cost 슬라이드 1](/assets/images/agent-memory-tiering-recall-cost-slide-01.webp)
 
-![agent-memory-tiering-recall-cost 슬라이드 2](/assets/images/agent-memory-tiering-recall-cost-slide-02.png)
+![agent-memory-tiering-recall-cost 슬라이드 2](/assets/images/agent-memory-tiering-recall-cost-slide-02.webp)
 
-![agent-memory-tiering-recall-cost 슬라이드 3](/assets/images/agent-memory-tiering-recall-cost-slide-03.png)
+![agent-memory-tiering-recall-cost 슬라이드 3](/assets/images/agent-memory-tiering-recall-cost-slide-03.webp)
 
-![agent-memory-tiering-recall-cost 슬라이드 4](/assets/images/agent-memory-tiering-recall-cost-slide-04.png)
+![agent-memory-tiering-recall-cost 슬라이드 4](/assets/images/agent-memory-tiering-recall-cost-slide-04.webp)
 

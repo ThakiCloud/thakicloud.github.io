@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/jcode-rust-agent-ha
 
 코딩 에이전트가 Claude Code보다 245배 빠르게 뜬다는 문장을 보면 두 가지 반응이 동시에 옵니다. 하나는 궁금함이고 다른 하나는 의심입니다. 그래서 저희는 공식 릴리스 바이너리를 내려받아 체크섬을 확인하고, 사내 맥북에서 직접 재봤습니다. 결론부터 말씀드리면 245배도 참이고, 저희가 잰 5.8배도 참입니다. 두 숫자는 서로 다른 것을 측정했기 때문입니다.
 
-![기동 속도가 다른 두 실행 모델을 표현한 추상 이미지](/assets/images/jcode-rust-agent-harness-hero.png)
+![기동 속도가 다른 두 실행 모델을 표현한 추상 이미지](/assets/images/jcode-rust-agent-harness-hero.webp)
 
 ## 왜 읽어야 하나
 
@@ -41,7 +41,7 @@ jcode는 Rust로 작성된 오픈소스 코딩 에이전트 하네스입니다. 
 
 jcode는 모델을 만들지 않습니다. 모델 앞에 붙어서 도구 호출과 파일 편집과 세션 관리를 담당하는 실행 껍데기, 즉 하네스입니다. 사용자가 이미 구독 중인 모델을 그대로 쓰되 그 주변 살림살이를 Rust로 다시 짠 쪽에 가깝습니다.
 
-![jcode의 세 가지 축인 벡터 메모리, 동적 스웜, 네이티브 렌더링을 정리한 슬라이드](/assets/images/jcode-rust-agent-harness-slide-03.png)
+![jcode의 세 가지 축인 벡터 메모리, 동적 스웜, 네이티브 렌더링을 정리한 슬라이드](/assets/images/jcode-rust-agent-harness-slide-03.webp)
 
 구조를 단순화하면 이렇습니다.
 
@@ -127,7 +127,7 @@ jcode --provider-profile my-api auth-test --prompt 'Reply exactly JCODE_PROVIDER
 
 측정 환경은 Darwin 25.5.0, arm64, 12코어 맥북입니다. 격리된 작업 트리에서 바이너리를 받아 검증한 뒤, 프로세스 시작부터 `--version` 출력까지의 시간을 12회 반복하고 초기 2회를 디스크 캐시 예열분으로 버렸습니다. 최대 상주 메모리는 `/usr/bin/time -l`로 프로세스마다 따로 3회씩 별도 측정했습니다.
 
-![jcode와 Claude Code CLI의 기동 시간 및 최대 상주 메모리 측정 결과](/assets/images/jcode-rust-agent-harness-results.png)
+![jcode와 Claude Code CLI의 기동 시간 및 최대 상주 메모리 측정 결과](/assets/images/jcode-rust-agent-harness-results.webp)
 
 | 항목 | jcode v0.61.0 | Claude Code CLI | 배수 |
 |---|---:|---:|---:|
@@ -144,7 +144,7 @@ jcode --provider-profile my-api auth-test --prompt 'Reply exactly JCODE_PROVIDER
 
 실무에서 중요한 숫자는 사실 이 마지막 값입니다. 세션 열 개를 굴린다고 할 때 세션당 한계 비용이 10MB면 100MB 남짓이고, 210MB면 2GB를 넘어갑니다. 노트북 한 대에서 병렬 에이전트를 몇 개까지 띄울 수 있느냐는 결국 이 기울기가 정합니다.
 
-![세션 수가 늘어날 때 두 하네스의 상주 메모리 증가 기울기를 비교한 슬라이드](/assets/images/jcode-rust-agent-harness-slide-04.png)
+![세션 수가 늘어날 때 두 하네스의 상주 메모리 증가 기울기를 비교한 슬라이드](/assets/images/jcode-rust-agent-harness-slide-04.webp)
 
 저장소가 공개한 다중 세션 표를 옮기면 차이가 더 분명해집니다. 세션 하나일 때 상주 메모리는 jcode가 167.1MB, Claude Code가 386.6MB로 2.3배 차이입니다. 그런데 세션을 열 개로 늘리면 jcode가 260.8MB, Claude Code가 2,300.6MB가 되어 격차가 8.8배로 벌어집니다. 로컬 임베딩을 끈 구성은 열 세션에서도 117.0MB에 머뭅니다. 시작점의 차이보다 증가 기울기의 차이가 훨씬 크다는 뜻이고, 이것이 이 프로젝트가 실제로 최적화한 지점입니다.
 
@@ -166,7 +166,7 @@ jcode --provider-profile my-api auth-test --prompt 'Reply exactly JCODE_PROVIDER
 
 이 프로젝트를 그대로 도입하라고 권하기에는 걸리는 지점이 몇 가지 있습니다.
 
-![버전 안정성, 기여 경로, 기본 원격 측정, MCP 호환성 네 가지 도입 검토 항목을 정리한 슬라이드](/assets/images/jcode-rust-agent-harness-slide-06.png)
+![버전 안정성, 기여 경로, 기본 원격 측정, MCP 호환성 네 가지 도입 검토 항목을 정리한 슬라이드](/assets/images/jcode-rust-agent-harness-slide-06.webp)
 
 버전이 아직 0점대입니다. 나흘에 다섯 번 배포가 나가는 속도는 활력의 증거이면서 동시에 표면이 계속 움직인다는 뜻이기도 합니다. 미해결 이슈 136건도 이 단계 프로젝트로는 자연스럽지만, 사내 표준 도구로 고정하기에는 이릅니다.
 

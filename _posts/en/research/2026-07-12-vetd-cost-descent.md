@@ -51,7 +51,7 @@ Fourth, route capability that can't be descended, don't fake it. When the gate r
 
 The full flow has five stages.
 
-![VETD loop]({{ '/assets/images/vetd-cost-descent-loop.png' | relative_url }})
+![VETD loop]({{ '/assets/images/vetd-cost-descent-loop.webp' | relative_url }})
 
 First there's the skill fleet, which is the unit of optimization. A single skill is a directory holding a prompt contract, scripts and templates, and a scheduled runner. A central policy registry records, per skill, the current tier, whether it's pinned, the consecutive failure count, and a human-readable reason for that tier.
 
@@ -69,7 +69,7 @@ Before descending, we refactored the skill first. Per-item workers now emit cont
 
 ## How the fleet split
 
-![Fleet composition and the descent gate after applying VETD]({{ '/assets/images/vetd-cost-descent-fleet-gate.png' | relative_url }})
+![Fleet composition and the descent gate after applying VETD]({{ '/assets/images/vetd-cost-descent-fleet-gate.webp' | relative_url }})
 
 After applying VETD, 10 of 16 skills run on the mid tier. The 6 that remain on the frontier tier are, precisely, the ones where content itself is the deliverable rather than format: humor, editorial judgment, research prose, creative angles. That's the pattern VETD surfaces: orchestration and format-centric work descends, while irreducible content-quality work stays put.
 

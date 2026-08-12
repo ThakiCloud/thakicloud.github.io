@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/wan-animate-2-onprem-avatar-serving/"
 ---
 
-![빛의 리본이 결정 구조 속으로 직접 흘러드는 추상 이미지](/assets/images/wan-animate-2-onprem-avatar-serving-hero.png)
+![빛의 리본이 결정 구조 속으로 직접 흘러드는 추상 이미지](/assets/images/wan-animate-2-onprem-avatar-serving-hero.webp)
 
 ## 왜 읽어야 하나
 
@@ -43,7 +43,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/wan-animate-2-onprem-
 
 세 갈래 모두가 같은 자리에서 걸린다는 점을 짚어 둘 만합니다. 문제는 표현 방식의 우열이 아니라 중간 단계의 존재 자체입니다. 골격을 뽑는 순간 원본 영상이 가진 정보 중 골격으로 표현되지 않는 것은 버려집니다. 버려진 정보에는 옷이 흔들리는 방식이나 시선이 미세하게 흔들리는 습관처럼 그 인물을 그 인물로 만드는 신호가 섞여 있고, 생성 단계는 없는 정보를 복원할 수 없으니 그럴듯한 값으로 채웁니다. 프레임마다 조금씩 다르게 채워진 값이 쌓이면 몇 초 뒤 인물이 서서히 다른 사람이 됩니다. 정체성 표류라고 부르는 현상은 대개 이렇게 생깁니다.
 
-![명시적 모션 추출 과정에서 고유 신호가 사라지고 정체성이 표류하는 과정](/assets/images/wan-animate-2-onprem-avatar-serving-slide-03.png)
+![명시적 모션 추출 과정에서 고유 신호가 사라지고 정체성이 표류하는 과정](/assets/images/wan-animate-2-onprem-avatar-serving-slide-03.webp)
 
 Wan-Animate-2가 택한 길은 중간 표현을 개선하는 대신 아예 없애는 것입니다. 재설계한 확산 트랜스포머가 구동 영상을 직접 입력으로 받습니다. 모션 추출기라는 부품이 사라지면 그 부품이 만들던 오차도 함께 사라진다는 발상이고, 논문은 이 구조로 동작 충실도와 정체성 보존을 동시에 끌어올렸다고 설명합니다. 대신 부담은 모델 안으로 옮겨 옵니다. 압축된 골격 몇 개가 아니라 영상 프레임 전체를 트랜스포머가 받아야 하므로, 뒤에서 볼 상주량과 카드 요구 조건은 이 선택의 청구서에 해당합니다.
 
@@ -51,7 +51,7 @@ Wan-Animate-2가 택한 길은 중간 표현을 개선하는 대신 아예 없�
 
 실시간을 담당하는 것은 Wan-Animate-2-Lite입니다. 세 단계 학습으로 지연을 실시간 임계까지 내렸는데, 오차 버퍼를 둔 teacher forcing 사전학습과 청크 단위 역전파를 쓰는 Self-Forcing 증류가 핵심입니다. 청크 단위로 끊어 학습하기 때문에 추론에서도 청크 단위로 흘려보낼 수 있고, 이것이 스트리밍 캐릭터 애니메이션을 가능하게 합니다.
 
-![시점 제어 분리와 청크 단위 증류로 실시간 임계에 도달하는 두 가지 장치](/assets/images/wan-animate-2-onprem-avatar-serving-slide-05.png)
+![시점 제어 분리와 청크 단위 증류로 실시간 임계에 도달하는 두 가지 장치](/assets/images/wan-animate-2-onprem-avatar-serving-slide-05.webp)
 
 ```mermaid
 flowchart TB
@@ -127,7 +127,7 @@ output = pipe(
 
 먼저 정직하게 밝히겠습니다. 이 모델을 직접 돌려 보지는 못했습니다. 저장소가 밝힌 기본 설정은 720P 생성 기준 A800 8장이고 480P도 A800 2장에서 검증했다고 되어 있어서, 맥북에서 재현할 수 있는 규모가 아닙니다. 그래서 대신 확실하게 잴 수 있는 것을 쟀습니다. 허깅페이스 API가 보고하는 실제 파일 크기를 받아 체크포인트를 부품별로 분해하고, 그것을 카드 용량으로 나눴습니다. 아래 숫자는 전부 그 계산에서 나온 값이며 속도나 화질에 대한 주장은 하나도 들어 있지 않습니다.
 
-![Wan-Animate-2 체크포인트 구성과 카드별 가중치 상주 비율](/assets/images/wan-animate-2-onprem-avatar-serving-results.png)
+![Wan-Animate-2 체크포인트 구성과 카드별 가중치 상주 비율](/assets/images/wan-animate-2-onprem-avatar-serving-results.webp)
 
 DiT 본체가 30.54GiB입니다. 여기에 umT5-XXL 텍스트 인코더 10.58GiB, CLIP 비전 인코더 4.44GiB, VAE 0.73GiB가 따라붙어 한 번 돌리는 데 필요한 가중치 합계는 46.29GiB가 됩니다. 인코더 세 개가 15.76GiB로 전체의 3분의 1을 차지한다는 점이 눈에 띕니다. 여러 인스턴스를 띄울 계획이라면 인코더를 공유하는 구조가 곧바로 이득이 되는 크기입니다.
 
@@ -145,7 +145,7 @@ DiT 본체가 30.54GiB입니다. 여기에 umT5-XXL 텍스트 인코더 10.58GiB
 
 워크플로 모양도 달라집니다. 오프라인 렌더링에서는 사람이 결과를 받아 보고 다시 요청하는 반복이 자연스러웠지만, 스트리밍에서는 생성이 시작된 뒤에 되돌릴 수 없습니다. 그래서 승인 지점이 결과물 뒤가 아니라 입력 앞으로 옮겨 옵니다. 어떤 얼굴을 쓸 수 있는지, 그 자산에 동의가 붙어 있는지, 어떤 문구까지 말하게 할 수 있는지를 렌더 전에 정책 게이트가 판정해야 합니다. Paxis가 스킬 실행 앞뒤로 두는 휴먼 승인과 감사 로그가 이 자리에 그대로 들어맞습니다.
 
-![오프라인 렌더링의 사후 확인에서 스트리밍의 사전 승인 게이트로 옮겨 가는 워크플로](/assets/images/wan-animate-2-onprem-avatar-serving-slide-10.png)
+![오프라인 렌더링의 사후 확인에서 스트리밍의 사전 승인 게이트로 옮겨 가는 워크플로](/assets/images/wan-animate-2-onprem-avatar-serving-slide-10.webp)
 
 실행 경제성은 Metis가 답합니다. 46.29GiB짜리 상주량을 가진 모델은 상시 켜 두기에는 비싸고, 요청이 올 때만 깨우기에는 로딩이 깁니다. Dedicated Endpoint로 붙잡아 둘지 Serverless와 Scale-to-Zero로 흘릴지가 그대로 원가가 되는 구간이고, 인코더 15.76GiB를 여러 세션이 공유하도록 배치하는 것도 같은 층에서 결정됩니다. 실행 인프라는 필요에 따라 Telox GPU 클러스터로 버스트하거나 Velox 베어메탈에서 가상화 오버헤드를 걷어내고 돌립니다.
 

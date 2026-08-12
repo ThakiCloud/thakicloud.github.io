@@ -404,13 +404,13 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/deepmind-agi-to-asi
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![deepmind-agi-to-asi-pathways 슬라이드 1]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-01.png' | relative_url }})
+![deepmind-agi-to-asi-pathways 슬라이드 1]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-01.webp' | relative_url }})
 
-![deepmind-agi-to-asi-pathways 슬라이드 2]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-02.png' | relative_url }})
+![deepmind-agi-to-asi-pathways 슬라이드 2]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-02.webp' | relative_url }})
 
-![deepmind-agi-to-asi-pathways 슬라이드 3]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-03.png' | relative_url }})
+![deepmind-agi-to-asi-pathways 슬라이드 3]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-03.webp' | relative_url }})
 
-![deepmind-agi-to-asi-pathways 슬라이드 4]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-04.png' | relative_url }})
+![deepmind-agi-to-asi-pathways 슬라이드 4]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-04.webp' | relative_url }})
 
 ## 출처
 

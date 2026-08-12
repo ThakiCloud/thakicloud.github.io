@@ -29,7 +29,7 @@ If you have ever run a pipeline that parses an LLM response and writes it to a d
 
 Most teams treat LLM integration problems as a prompting problem. The output looks wrong, so someone rewrites the instructions. The format breaks, so someone adds another few-shot example. This instinct is not wrong exactly, it just aims at the wrong layer. A language model is not a function, it is a remote service, and remote services are slow sometimes, they fail sometimes, and they occasionally ignore the format you asked for. This post covers five design principles that put an explicit contract at that boundary instead of asking the prompt to carry all the weight.
 
-![Illustration of the core idea of Your LLM Integration Isn't Breaking Because of Bad Prompts. It's Breaking Because You Never Wrote a Contract](/assets/images/ai-api-contract-engineering-hero.png)
+![Illustration of the core idea of Your LLM Integration Isn't Breaking Because of Bad Prompts. It's Breaking Because You Never Wrote a Contract](/assets/images/ai-api-contract-engineering-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## An LLM Is a Remote Service, Not a Function
@@ -101,6 +101,6 @@ Writing a good prompt still matters. But a prompt only improves the model's aver
 It is worth opening whatever LLM integration code you are currently running in production and checking five things directly. Is there input validation immediately before the call and an output fallback immediately after the parse. Does the retry logic wrapping the call have both a backoff and a hard cap. Is token usage being logged anywhere at all. Is the model version pinned explicitly rather than tracking latest. If you can answer yes to all five, you have a contract. Wherever the answer is no, that is exactly where the next outage is going to start.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-api-contract-engineering/ch01.png)
-![Chapter 5 illustration](/assets/images/books/ai-api-contract-engineering/ch05.png)
+![Chapter 1 illustration](/assets/images/books/ai-api-contract-engineering/ch01.webp)
+![Chapter 5 illustration](/assets/images/books/ai-api-contract-engineering/ch05.webp)
 

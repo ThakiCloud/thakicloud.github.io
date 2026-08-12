@@ -25,7 +25,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 코딩 에이전트를 팀에서 쓰다 보면 이상한 벽에 부딪힙니다. 에이전트는 나 혼자만의 것입니다. 옆자리 동료가 같은 저장소를 만지고 있어도, 각자의 Claude는 서로의 존재를 모릅니다. 사람은 슬랙과 화면 공유로 협업하는데, 정작 우리를 대신해 코드를 만지는 에이전트들은 각자의 섬에 갇혀 있습니다. 최근 공개되어 화제가 된 **멀티플레이어 Claude Code**는 바로 이 벽을 겨냥합니다. 같은 터미널을 여러 사람이 함께 쓰고, 각자의 Claude를 서로 연결해 에이전트끼리 대화하게 만드는 실험입니다. 팀 단위로 코딩 에이전트를 도입하려는 입장이라면, 에이전트를 연결하는 순간 따라오는 충돌·권한·감사 문제를 미리 가늠해 볼 수 있습니다.
 
-![코딩 에이전트가 서로 대화하기 시작할 때: 멀티플레이어 Claude Code와 협업 에이전트의 설계 개념을 형상화한 이미지](/assets/images/claude-code-multiplayer-collaborative-agents-hero.png)
+![코딩 에이전트가 서로 대화하기 시작할 때: 멀티플레이어 Claude Code와 협업 에이전트의 설계 개념을 형상화한 이미지](/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
@@ -419,13 +419,13 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-multiplayer-collaborative-agents 슬라이드 1](/assets/images/claude-code-multiplayer-collaborative-agents-slide-01.png)
+![claude-code-multiplayer-collaborative-agents 슬라이드 1](/assets/images/claude-code-multiplayer-collaborative-agents-slide-01.webp)
 
-![claude-code-multiplayer-collaborative-agents 슬라이드 2](/assets/images/claude-code-multiplayer-collaborative-agents-slide-02.png)
+![claude-code-multiplayer-collaborative-agents 슬라이드 2](/assets/images/claude-code-multiplayer-collaborative-agents-slide-02.webp)
 
-![claude-code-multiplayer-collaborative-agents 슬라이드 3](/assets/images/claude-code-multiplayer-collaborative-agents-slide-03.png)
+![claude-code-multiplayer-collaborative-agents 슬라이드 3](/assets/images/claude-code-multiplayer-collaborative-agents-slide-03.webp)
 
-![claude-code-multiplayer-collaborative-agents 슬라이드 4](/assets/images/claude-code-multiplayer-collaborative-agents-slide-04.png)
+![claude-code-multiplayer-collaborative-agents 슬라이드 4](/assets/images/claude-code-multiplayer-collaborative-agents-slide-04.webp)
 
 ## 출처
 

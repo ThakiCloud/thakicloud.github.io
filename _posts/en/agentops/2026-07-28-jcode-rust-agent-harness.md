@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/jcode-rust-agent-ha
 
 Reading that a coding agent boots 245 times faster than Claude Code triggers two reactions at once: curiosity and suspicion. So we downloaded the official release binary, verified its checksum, and measured it on one of our MacBooks. The short answer is that 245x is true and the 5.8x we measured is also true, because the two numbers measure different things.
 
-![Abstract image contrasting two execution models with different startup costs](/assets/images/jcode-rust-agent-harness-hero.png)
+![Abstract image contrasting two execution models with different startup costs](/assets/images/jcode-rust-agent-harness-hero.webp)
 
 ## Why this matters
 
@@ -126,7 +126,7 @@ Configuration accumulates in `~/.jcode/config.toml`. If your endpoint does not r
 
 The environment was Darwin 25.5.0, arm64, a 12-core MacBook. In an isolated worktree we fetched and verified the binary, then timed process start to `--version` output across 12 runs, discarding the first two as disk-cache warmup. Peak resident memory was measured separately for each process with `/usr/bin/time -l`, three runs each.
 
-![Measured startup time and peak resident memory for jcode and the Claude Code CLI](/assets/images/jcode-rust-agent-harness-results.png)
+![Measured startup time and peak resident memory for jcode and the Claude Code CLI](/assets/images/jcode-rust-agent-harness-results.webp)
 
 | Metric | jcode v0.61.0 | Claude Code CLI | Ratio |
 |---|---:|---:|---:|

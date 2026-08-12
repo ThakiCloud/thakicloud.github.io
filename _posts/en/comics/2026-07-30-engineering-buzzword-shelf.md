@@ -12,7 +12,7 @@ tags:
   - sovereign-ai
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/engineering-buzzword-shelf/strip.png
+image: /assets/images/posts/comics/engineering-buzzword-shelf/strip.webp
 video: /assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/engineering-buzzword-shelf/"
 ---
@@ -21,13 +21,13 @@ A one-liner going around X yesterday landed a little too well: prompt engineerin
 In plain terms: prompting is what you ask, context is how much you show, a harness is the wiring around the model (tools, verification gates, output contracts), a loop feeds results back in until something passes, and a graph pins those steps into nodes and edges.
 All five are useful, and we use all five. But five names do not make five problems. What usually multiplies is the number of line items on your invoice.
 
-![Five New Disciplines, One Page](/assets/images/posts/comics/engineering-buzzword-shelf/strip.png)
+![Five New Disciplines, One Page](/assets/images/posts/comics/engineering-buzzword-shelf/strip.webp)
 
 > Source: [RT @akshay_pachaar: from prompt → context → harness → loop → graph engineering.](https://x.com/hjguyhan/status/2082589434772681072) · twitter
 
 **▶ Animated edition, the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/engineering-buzzword-shelf/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/engineering-buzzword-shelf/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/engineering-buzzword-shelf/comic.en.vtt" default>
 </video>

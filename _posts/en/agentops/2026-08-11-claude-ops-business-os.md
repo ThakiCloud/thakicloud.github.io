@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-ops-business-os/"
 ---
 
-![Abstract image of many thin translucent layers stacked beside a few thick solid blocks](/assets/images/claude-ops-business-os-hero.png)
+![Abstract image of many thin translucent layers stacked beside a few thick solid blocks](/assets/images/claude-ops-business-os-hero.webp)
 *Two ways to hold the same capability.*
 
 ## Why read this
@@ -129,7 +129,7 @@ The tree holds 63 directories matching `skills/<name>/SKILL.md` and 21 markdown 
 
 The badge is off by one, so it is essentially current. The architecture diagram is the problem. Its 22 and 12 are about a third of reality, and they sit exactly where a reader looks first to understand the structure. Given that the repository was pushed the same morning we wrote this, it is a textbook case of prose falling behind the tree in an actively developed project.
 
-![Bar chart comparing skill counts and average skill-document size between claude-ops and the ThakiCloud harness](/assets/images/claude-ops-business-os-results-en.png)
+![Bar chart comparing skill counts and average skill-document size between claude-ops and the ThakiCloud harness](/assets/images/claude-ops-business-os-results-en.webp)
 *Read count and thickness together and the two harnesses point in opposite directions.*
 
 The more interesting number was not the count but the thickness. The average `SKILL.md` in claude-ops is 16,360 bytes. Agent definitions average 6,669 bytes. Counting our own repository the same way gave 1,946 skill documents averaging 8,786 bytes, plus 67 always-on rules averaging 3,487 bytes.

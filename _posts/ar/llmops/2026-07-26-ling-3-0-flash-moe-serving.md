@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/ling-3-0-flash-moe-serving/"
 ---
 
-![صورة تجريدية لشبكة واسعة تضيء فيها عقد قليلة فقط وتتجمع في قناة واحدة](/assets/images/ling-3-0-flash-moe-serving-hero.png)
+![صورة تجريدية لشبكة واسعة تضيء فيها عقد قليلة فقط وتتجمع في قناة واحدة](/assets/images/ling-3-0-flash-moe-serving-hero.webp)
 *تجسيد لبنية MoE التي تحتفظ بسعة هائلة بينما تنشّط جزءًا ضئيلًا منها لكل رمز.*
 
 ## لماذا يهمك هذا
@@ -99,7 +99,7 @@ python3 scripts/skills/model_registry.py pull inclusionAI/Ling-2.6-flash /work/m
 
 كل رقم أدناه مأخوذ مباشرة من سجل التشغيل في `outputs/blog-impl/ling-3-0-flash-moe-serving/run-5.log`، والرسم البياني مُولّد بتحليل السجل نفسه.
 
-![رسم بياني يقارن حجم الأوزان المقيس لكل نقطة تحقق مع ذاكرة KV لكل جلسة](/assets/images/ling-3-0-flash-moe-serving-results.png)
+![رسم بياني يقارن حجم الأوزان المقيس لكل نقطة تحقق مع ذاكرة KV لكل جلسة](/assets/images/ling-3-0-flash-moe-serving-results.webp)
 *يسارًا: بايتات safetensors الحقيقية لكل نقطة تحقق منشورة. يمينًا: ذاكرة KV لكل جلسة وفق المعادلة المعتادة مقابل البنية الفعلية.*
 
 نبدأ بالأوزان. النسخة الأصلية bf16 تبلغ 200.2 غيبي بايت موزعة على 27 شظية. ونسخة fp8 تبلغ 101.5 غيبي بايت، ونسخة int4 تبلغ 60.4 غيبي بايت على 26 شظية. عند int4 تدخل الأوزان داخل 141 غيبي بايت لبطاقة H200 واحدة، لكن ذاكرة KV والتنشيطات يجب أن تسكن هناك أيضًا، ولذلك لا ننصح بتكوين ببطاقة واحدة.

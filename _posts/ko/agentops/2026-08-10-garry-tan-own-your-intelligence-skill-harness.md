@@ -29,7 +29,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 에이전트를 실무에 붙였는데 매번 비슷한 지시를 다시 써넣고 있는 개발자, 그리고 팀의 에이전트 사용을 개인 요령이 아니라 조직 자산으로 만들 방법을 찾는 엔지니어링 리더를 위한 글입니다. 결론을 먼저 말씀드리면, 개리 탄이 Startup School 2026에서 던진 핵심은 모델 선택이 아니라 **모델 바깥의 구조**입니다. 같은 지시를 두 번 하고 있다면 그건 프롬프트를 다듬을 문제가 아니라 그 작업이 아직 파일로 저장되지 않았다는 신호이고, 그 파일들이 어디에 쌓이느냐가 몇 년 뒤 누가 그 판단을 소유하는지를 결정합니다.
 
-![하나의 빛나는 실이 축에 반복해서 감기며 중심이 점점 두꺼워지고 밝아지는 추상 이미지](/assets/images/garry-tan-own-your-intelligence-skill-harness-hero.png)
+![하나의 빛나는 실이 축에 반복해서 감기며 중심이 점점 두꺼워지고 밝아지는 추상 이미지](/assets/images/garry-tan-own-your-intelligence-skill-harness-hero.webp)
 *같은 작업을 반복할 때마다 파일로 내려앉아 축적되는 구조를 형상화했습니다. 감기지 못한 가닥은 가장자리에서 그대로 흩어집니다.*
 
 {% include video id="eRrc1pUY5oU" provider="youtube" %}
@@ -138,13 +138,13 @@ Paxis의 Skill Harness는 요청이 들어오면 스킬 저장소를 검색해 �
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 1](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-01.png)
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 1](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-01.webp)
 
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 2](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-02.png)
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 2](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-02.webp)
 
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 3](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-03.png)
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 3](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-03.webp)
 
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 4](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-04.png)
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 4](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-04.webp)
 
 ## 출처
 

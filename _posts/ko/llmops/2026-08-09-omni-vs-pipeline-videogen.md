@@ -27,7 +27,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/omni-vs-pipeline-vide
 
 결론부터 말하겠습니다. NVIDIA H200 한 장에서 영상 모델과 음성 전문가들을 다 올리면 72.37GiB로 카드의 51.8%를 씁니다. 같은 카드에 영상 모델과 옴니 모델을 올리면 130.29GiB, 93.2%가 되어 생성 중에 쓸 여유가 9.5GiB밖에 남지 않습니다. 영상 생성만으로 상주량보다 3.57GiB를 더 쓰는 것을 감안하면 이 조합은 사실상 들어가지 않습니다. 옴니가 그 자리값으로 사 준 것은 전사 문자 오류율 1.34%p였습니다.
 
-![여러 모델을 잇는 파이프라인과 단일 모델의 메모리 점유를 형상화한 이미지](/assets/images/omni-vs-pipeline-videogen-hero.png)
+![여러 모델을 잇는 파이프라인과 단일 모델의 메모리 점유를 형상화한 이미지](/assets/images/omni-vs-pipeline-videogen-hero.webp)
 *스테이지가 늘어날수록 문제는 연산이 아니라 자리싸움이 됩니다.*
 
 ## 같은 카드, 같은 파형, 두 가지 접근
@@ -80,7 +80,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/omni-vs-pipeline-vide
 
 재현성은 좋았습니다. 같은 설정을 반복해도 편차가 0.09초 안이었고 버리려고 돌린 워밍업조차 정상 실행과 거의 같았습니다. 디퓨전은 정해진 스텝을 정직하게 다 도는 구조라 흔들릴 여지가 별로 없습니다. 토큰 수에 따라 시간이 널뛰는 언어 모델과 달리 용량 계획을 세우기가 오히려 쉽습니다.
 
-![옴니 모델과 전문가 파이프라인의 상주 VRAM 및 지연 비교](/assets/images/omni-vs-pipeline-videogen-results.png)
+![옴니 모델과 전문가 파이프라인의 상주 VRAM 및 지연 비교](/assets/images/omni-vs-pipeline-videogen-results.webp)
 *왼쪽은 같은 파형을 받아 적는 두 접근의 지연과 상주 메모리이고, 오른쪽은 영상 스테이지를 더했을 때 카드 한 장에 무엇이 들어가는지입니다. 모두 같은 H200 한 장에서 잰 값입니다.*
 
 ## 그래서 산술은 이렇게 끝납니다

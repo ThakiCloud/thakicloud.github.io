@@ -30,7 +30,7 @@ It is three in the morning, an alert fires, and the payments API has been return
 
 The short version is this. Organizations that repeat incidents are not staffed by careless people. They repeat incidents because punishment cuts off the flow of information that would have prevented the repeat. Blameless culture is not a matter of being nice, and it is not a values statement you hang on a wall. It is an information system design problem: can this organization extract the truth from its own failures, or not. Once you accept that framing, every practical question, how to run the meeting, how to write the document, how to manage the follow-up work, resolves into a single principle. Design the system so that honest disclosure never costs the person disclosing it.
 
-![Illustration of the core idea of Why Organizations Keep Repeating the Same Outage: Punishment Is a Tax on Information](/assets/images/postmortem-culture-engineering-hero.png)
+![Illustration of the core idea of Why Organizations Keep Repeating the Same Outage: Punishment Is a Tax on Information](/assets/images/postmortem-culture-engineering-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Punishment Is a Tax on Information

@@ -22,7 +22,7 @@ categories:
 
 재미있는 건 이 문장을 오늘 네이버만 쓴 게 아니라는 점입니다. 슬로건으로 쓰지 않았을 뿐, 서로 아무 관계 없는 네 곳이 같은 방향으로 움직였습니다.
 
-![탐색에서 실행으로, AI가 목적어를 갖기 시작했습니다 개념을 형상화한 이미지](/assets/images/explore-to-execute-agents-take-the-verb-hero.png)
+![탐색에서 실행으로, AI가 목적어를 갖기 시작했습니다 개념을 형상화한 이미지](/assets/images/explore-to-execute-agents-take-the-verb-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 같은 날, 서로 다른 산업에서 같은 문장

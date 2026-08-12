@@ -226,7 +226,7 @@ We serve our K8s-based AI platform in customers' on-premises environments, and w
 This post is adapted into a hands-on format from the content of our ebook, AI-Native CI/CD for Solo Developers.
 
 ## Chapter Illustrations
-![Chapter 1 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch01.png)
-![Chapter 2 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch02.png)
-![Chapter 3 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch03.png)
+![Chapter 1 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch01.webp)
+![Chapter 2 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch02.webp)
+![Chapter 3 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch03.webp)
 

@@ -13,7 +13,7 @@ tags:
   - 구글
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/baton-back-hall-still-rented/strip.png
+image: /assets/images/posts/만화/baton-back-hall-still-rented/strip.webp
 video: /assets/videos/posts/만화/baton-back-hall-still-rented/comic.mp4
 audiobook: /assets/audio/posts/baton-back-hall-still-rented/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -23,13 +23,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 재미있는 건 그다음입니다. 지휘봉이 누구 손에 있느냐는 기사 제목이 되지만, 정작 그 오케스트라가 어느 무대 위에 서 있는지는 잘 안 다뤄집니다. 여기서 무대란 모델과 데이터, 그리고 그걸 돌리는 인프라를 말합니다.
 주권이라는 말이 어렵게 들리지만 뜻은 단순합니다. 모델과 데이터와 인프라를 내 통제 아래 두는 것, 온프렘은 그걸 남의 데이터센터가 아니라 우리 시설 안에서 돌리는 방식이죠. 지휘자는 바뀔 수 있어도 무대 임대 계약은 그대로 남습니다.
 
-![지휘봉은 돌아왔는데 홀이 월세](/assets/images/posts/만화/baton-back-hall-still-rented/strip.png)
+![지휘봉은 돌아왔는데 홀이 월세](/assets/images/posts/만화/baton-back-hall-still-rented/strip.webp)
 
 > 원 뉴스: [구글 AI 지휘봉 다시 잡은 브린…허사비스는 장기 연구에 전념](https://n.news.naver.com/mnews/article/005/0001865545) · bespin
 
 **▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/baton-back-hall-still-rented/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/baton-back-hall-still-rented/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/baton-back-hall-still-rented/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/baton-back-hall-still-rented/comic.ko.vtt" default>
 </video>

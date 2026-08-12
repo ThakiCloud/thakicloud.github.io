@@ -13,14 +13,14 @@ tags:
   - AI
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/every-ai-same-brain/strip.png
+image: /assets/images/posts/만화/every-ai-same-brain/strip.webp
 audiobook: /assets/audio/posts/every-ai-same-brain/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 MIT 논문 하나가 소란입니다. 지구상의 모든 AI 모델이 학습을 거듭할수록 속으로는 같은 '뇌', 그러니까 같은 내부 표현으로 수렴한다는 주장입니다. 여기서 내부 표현이란 모델이 세상을 머릿속에 그려 넣는 방식을 말합니다. 만든 회사도 학습 데이터도 다른데 머릿속 지도가 점점 닮아간다는 이야기죠. 그렇다면 질문이 하나 남습니다. 뇌가 어차피 비슷해진다면, 남의 비싼 뇌를 매달 빌려 쓸 이유가 있을까요.
 
-![AI들 뇌가 다 똑같대]({{ '/assets/images/posts/만화/every-ai-same-brain/strip.png' | relative_url }})
+![AI들 뇌가 다 똑같대]({{ '/assets/images/posts/만화/every-ai-same-brain/strip.webp' | relative_url }})
 
 > 원 뉴스: [RT @HowToPrompt__: MIT published a paper arguing that every AI model on earth is secretly converging on the same "brain.](https://x.com/hjguyhan/status/2074777331252756567) · twitter
 
@@ -36,11 +36,11 @@ MIT 논문 하나가 소란입니다. 지구상의 모든 AI 모델이 학습을
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![every-ai-same-brain 슬라이드 1](/assets/images/every-ai-same-brain-slide-01.png)
+![every-ai-same-brain 슬라이드 1](/assets/images/every-ai-same-brain-slide-01.webp)
 
-![every-ai-same-brain 슬라이드 2](/assets/images/every-ai-same-brain-slide-02.png)
+![every-ai-same-brain 슬라이드 2](/assets/images/every-ai-same-brain-slide-02.webp)
 
-![every-ai-same-brain 슬라이드 3](/assets/images/every-ai-same-brain-slide-03.png)
+![every-ai-same-brain 슬라이드 3](/assets/images/every-ai-same-brain-slide-03.webp)
 
-![every-ai-same-brain 슬라이드 4](/assets/images/every-ai-same-brain-slide-04.png)
+![every-ai-same-brain 슬라이드 4](/assets/images/every-ai-same-brain-slide-04.webp)
 

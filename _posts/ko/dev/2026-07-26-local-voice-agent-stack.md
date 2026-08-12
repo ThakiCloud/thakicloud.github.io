@@ -23,7 +23,7 @@ audiobook: /assets/audio/posts/local-voice-agent-stack/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![완전 로컬 음성 에이전트 지연 시간 실측 리포트 표지 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-01.png' | relative_url }})
+![완전 로컬 음성 에이전트 지연 시간 실측 리포트 표지 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-01.webp' | relative_url }})
 
 ## 왜 읽어야 하나
 
@@ -119,7 +119,7 @@ bash scripts/blog/impl_sandbox.sh teardown local-voice-agent-stack
 
 **첫 번째 실행에서 이미 이상한 점이 보였습니다.** 2.72초짜리 오디오를 전사하는 데 14.42초가 걸렸는데, 4배 가까이 긴 10.52초짜리 오디오는 14.26초가 걸렸습니다. 오디오 길이가 4배로 늘었는데 처리 시간은 오히려 조금 줄었습니다. 실시간 대비 배수로 보면 5.3배에서 1.36배로 떨어집니다. 이런 모양은 추론이 아니라 **호출당 고정 비용**이 지배할 때 나옵니다.
 
-![오디오 길이가 4배로 늘어도 처리 시간은 줄어드는 이상 현상을 정리한 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-04.png' | relative_url }})
+![오디오 길이가 4배로 늘어도 처리 시간은 줄어드는 이상 현상을 정리한 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-04.webp' | relative_url }})
 
 *오디오 길이와 처리 시간이 비례하지 않으면 병목은 추론이 아니라 호출당 고정 비용입니다.*
 
@@ -138,7 +138,7 @@ bash scripts/blog/impl_sandbox.sh teardown local-voice-agent-stack
 
 **1.92배 차이입니다.** 재적재로 낭비된 시간은 발화당 5.46초였습니다. 모델도, 오디오도, 기기도 그대로이고 호출 경로만 바꿨습니다.
 
-![로컬 음성 루프 단계별 실측 지연 시간과 배치 경로 A/B 비교 막대 그래프]({{ '/assets/images/local-voice-agent-stack-results.png' | relative_url }})
+![로컬 음성 루프 단계별 실측 지연 시간과 배치 경로 A/B 비교 막대 그래프]({{ '/assets/images/local-voice-agent-stack-results.webp' | relative_url }})
 
 *왼쪽은 콜드 단발 호출과 엔진 상주 호출의 발화당 처리 시간, 오른쪽은 같은 클립 네 개를 두 배치 경로로 처리한 총 시간입니다.*
 
@@ -150,7 +150,7 @@ bash scripts/blog/impl_sandbox.sh teardown local-voice-agent-stack
 
 이 실험은 다키클라우드의 두 제품 모두에 직접 걸립니다.
 
-![ai-platform 렌즈와 Paxis 렌즈로 정리한 프로덕트 아키텍처 시사점 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-06.png' | relative_url }})
+![ai-platform 렌즈와 Paxis 렌즈로 정리한 프로덕트 아키텍처 시사점 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-06.webp' | relative_url }})
 
 **ai-platform 렌즈로 보면, 음성 워크로드는 상주 서비스로 설계해야 합니다.** 저희 ai-platform은 K8s 위에서 GPU 자원을 Kueue로 스케줄링해 모델을 멀티테넌트로 서빙합니다. 이 실험이 확인해 준 것은 음성 모델을 잡(Job) 형태로 매번 띄우는 설계가 왜 실패하는지입니다. 파드가 뜨고 가중치가 올라오는 시간이 추론 시간을 압도하기 때문에, 음성 인식과 합성은 요청마다 실행하는 배치 잡이 아니라 가중치를 물고 있는 상주 추론 서비스로 배치해야 합니다. 같은 이유로 오토스케일 정책도 요청 수가 아니라 콜드 스타트 비용을 기준으로 최소 레플리카를 잡아야 합니다.
 
@@ -162,7 +162,7 @@ bash scripts/blog/impl_sandbox.sh teardown local-voice-agent-stack
 
 이 측정에는 분명한 경계가 있습니다.
 
-![대화 조건인 1초와 현재 실측 6초의 격차, 누락된 지연과 구조적 관찰의 한계를 정리한 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-07.png' | relative_url }})
+![대화 조건인 1초와 현재 실측 6초의 격차, 누락된 지연과 구조적 관찰의 한계를 정리한 슬라이드]({{ '/assets/images/local-voice-agent-stack-slide-07.webp' | relative_url }})
 
 먼저 **응답 생성 단계가 빠져 있습니다.** 4단 루프에서 가장 무거운 단계가 보통 LLM인데, 그 단계를 재지 못했으니 이 글의 숫자를 전체 왕복 지연으로 읽으면 안 됩니다. 실제 왕복은 여기에 응답 생성 시간이 더해집니다.
 

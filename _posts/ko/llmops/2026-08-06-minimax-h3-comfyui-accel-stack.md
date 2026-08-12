@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/minimax-h3-comfyui-ac
 
 영상 생성 모델을 쓰다 보면 커뮤니티에서 이런 형태의 팁을 자주 만납니다. 노드 몇 개를 끼우면 생성 시간이 줄어든다는 이야기입니다. MiniMax-H3에 대해서도 같은 팁이 돌고 있습니다. EasyCache와 Patch Sol-Attn, Patch Sage Attention KJ를 워크플로에 추가하라는 것입니다. 팁 자체는 맞습니다. 다만 세 노드가 서로 어떤 관계이고 얼마나 빨라지는지는 한 줄짜리 팁에 담기지 않습니다. 그래서 각 노드의 소스 코드와 공개된 벤치마크를 직접 열어 확인했습니다.
 
-![겹겹의 유리판이 왼쪽에서는 선명하게 빛나다가 오른쪽으로 갈수록 흐려지며 사라지는 추상 이미지](/assets/images/minimax-h3-comfyui-accel-stack-hero.png)
+![겹겹의 유리판이 왼쪽에서는 선명하게 빛나다가 오른쪽으로 갈수록 흐려지며 사라지는 추상 이미지](/assets/images/minimax-h3-comfyui-accel-stack-hero.webp)
 
 *측정된 구간은 생각보다 짧고, 실제 작업은 그 바깥에서 벌어집니다.*
 
@@ -103,7 +103,7 @@ FeedForward 청킹 노드는 어텐션 백엔드와 독립적으로 동작합니
 
 여기서부터가 이 글의 핵심입니다. 저장소가 공개한 커널 벤치마크와, 그 벤치마크 위에 실제 렌더 설정을 얹어 저희가 계산한 결과를 함께 봅니다.
 
-![Sol-Attn 커널 벤치마크 곡선과 실제 렌더 설정의 위치, 그리고 커널 배속과 파이프라인 배속 비교 차트](/assets/images/minimax-h3-comfyui-accel-stack-results.png)
+![Sol-Attn 커널 벤치마크 곡선과 실제 렌더 설정의 위치, 그리고 커널 배속과 파이프라인 배속 비교 차트](/assets/images/minimax-h3-comfyui-accel-stack-results.webp)
 
 *왼쪽은 저장소가 공개한 실측 곡선이고, 오른쪽은 같은 저장소가 기록한 동일 조건 대조군입니다.*
 

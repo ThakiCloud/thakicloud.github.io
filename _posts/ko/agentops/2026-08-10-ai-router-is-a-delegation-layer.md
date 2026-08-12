@@ -18,7 +18,7 @@ categories:
   - agentops
 ---
 
-![청구서 때문에 붙였는데, 알고 보니 결재선이었습니다 개념을 형상화한 이미지](/assets/images/ai-router-is-a-delegation-layer-hero.png)
+![청구서 때문에 붙였는데, 알고 보니 결재선이었습니다 개념을 형상화한 이미지](/assets/images/ai-router-is-a-delegation-layer-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 이 흐름을 처음 감지한 부서는 기술팀이 아니었습니다

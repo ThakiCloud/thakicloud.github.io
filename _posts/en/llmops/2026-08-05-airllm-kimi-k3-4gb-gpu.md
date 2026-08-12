@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/airllm-kimi-k3-4gb-gp
 
 When a sentence like this crosses your timeline, you click. Someone ran Kimi K3, all 2.8 trillion parameters of it, on a 4GB GPU, for free. It was true. AirLLM added support for the largest open-weight model in existence, and the published measurement log shows 3.72GB of VRAM. The same log also shows that producing a single token takes about 292 seconds. You have to read both numbers together to understand what this technique actually is.
 
-![Abstract rendering of a single bright slab passing through a narrow frame beneath an enormous stack of layers](/assets/images/airllm-kimi-k3-4gb-gpu-hero.png)
+![Abstract rendering of a single bright slab passing through a narrow frame beneath an enormous stack of layers](/assets/images/airllm-kimi-k3-4gb-gpu-hero.webp)
 
 *Instead of pushing everything through at once, layer offloading feeds one slab at a time through a narrow door.*
 

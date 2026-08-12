@@ -226,7 +226,7 @@ on_trigger:
 이 글은 저희가 정리한 전자책 『1인 개발자를 위한 AI 네이티브 CI/CD』의 내용을 실습 가능한 형태로 다시 쓴 것입니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch01.png)
-![2장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch02.png)
-![3장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch03.png)
+![1장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch01.webp)
+![2장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch02.webp)
+![3장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch03.webp)
 

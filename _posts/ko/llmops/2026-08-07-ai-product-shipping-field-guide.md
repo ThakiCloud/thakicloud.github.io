@@ -30,7 +30,7 @@ ebook_pages: 15
 
 많은 팀이 모델을 더 좋게 만드는 데는 몇 주씩 씁니다. 그런데 그 모델이 나쁜 답을 내놓았을 때 시스템이 어떻게 반응할지는 배포 전날에야 급하게 정합니다. 순서가 뒤바뀌어 있습니다. 좋은 모델은 사고를 줄여주지만 사고를 없애주지는 않습니다. 사고가 났을 때 무엇을 멈추고 무엇을 계속할지 미리 정해두지 않으면, 아무리 정확한 모델도 프로덕션에서는 불안한 시스템일 뿐입니다.
 
-![AI 프로덕트가 무너지는 이유는 모델이 아니라 멈추는 규칙이 없어서다 개념을 형상화한 이미지](/assets/images/ai-product-shipping-field-guide-hero.png)
+![AI 프로덕트가 무너지는 이유는 모델이 아니라 멈추는 규칙이 없어서다 개념을 형상화한 이미지](/assets/images/ai-product-shipping-field-guide-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 좋은 모델이라는 착각이 서비스를 무너뜨린다
@@ -119,6 +119,6 @@ AI 시스템은 완전히 동작하거나 완전히 멈추거나 둘 중 하나�
 그래서 AI 제품을 준비하는 팀에 제안하고 싶은 순서는 이렇습니다. 모델을 고르기 전에 먼저 멈출 기준을 정하십시오. 배포 버튼을 누르기 전에 되돌릴 절차를 준비하십시오. 장애가 나기 전에 실패를 분류하는 기준을 만들어두십시오. 그리고 이 모든 것이 작동하는지 지켜볼 눈을 먼저 심어두십시오. 이 순서를 지킨 팀은 사고가 나도 몇 분 만에 회복하고, 이 순서를 건너뛴 팀은 사고가 날 때마다 처음부터 다시 배웁니다.
 
 ## 챕터 삽화
-![3장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch03.png)
-![4장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch04.png)
+![3장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch03.webp)
+![4장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch04.webp)
 

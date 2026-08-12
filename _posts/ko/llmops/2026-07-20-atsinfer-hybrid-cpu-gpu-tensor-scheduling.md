@@ -369,7 +369,7 @@ ATSInfer는 llama.cpp를 약 1만 5천 줄의 C++로 확장한 하이브리드 C
 
 논문의 헤드라인 수치는 다음과 같습니다. 기존 하이브리드 시스템(llama.cpp의 레이어 단위 오프로딩 포함) 대비, prefill(첫 토큰까지의 처리량)은 최대 1.94배, decode(초당 생성 토큰)는 최대 3.29배 빨라졌습니다.
 
-![ATSInfer가 논문에서 보고한 최대 속도 향상 비교]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png' | relative_url }})
+![ATSInfer가 논문에서 보고한 최대 속도 향상 비교]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.webp' | relative_url }})
 
 실험 환경은 RTX 4090(24GB) 및 RTX 3060 시스템에 64GB RAM 구성이며, 검증에 사용한 모델은 다음과 같습니다.
 

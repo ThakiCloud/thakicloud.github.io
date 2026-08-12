@@ -13,14 +13,14 @@ tags:
   - 메티스
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/app-screen-library-all-the-same/strip.png
+image: /assets/images/posts/만화/app-screen-library-all-the-same/strip.webp
 audiobook: /assets/audio/posts/app-screen-library-all-the-same/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 iOS 화면을 짤 때 참고할 곳이 없어 막막했던 분들에게, 62만 장이 넘는 앱 화면을 통째로 모아둔 도구가 화제입니다. 비슷한 앱이 어떤 동선으로 흘러가는지, 화면과 화면 사이가 어떻게 전환되는지, 작은 애니메이션 하나까지 그대로 들여다볼 수 있다고 합니다. 여기서 화면 전환이란 버튼을 눌렀을 때 다음 화면으로 넘어가는 흐름을 말합니다. 문제는 참고가 쉬워질수록 다들 인기 있는 상위 화면만 베껴, 세상 앱이 점점 한 얼굴이 된다는 데 있죠. 참고는 무한대인데 개성은 어디서 나오느냐는 이야기입니다.
 
-![62만 앱 화면 다 베끼면 생기는 일]({{ '/assets/images/posts/만화/app-screen-library-all-the-same/strip.png' | relative_url }})
+![62만 앱 화면 다 베끼면 생기는 일]({{ '/assets/images/posts/만화/app-screen-library-all-the-same/strip.webp' | relative_url }})
 
 > 원 뉴스: [RT @protoduct_ai: iOS開発でUI実装する人、絶対これ使った方がいい](https://x.com/hjguyhan/status/2076093695162822954) · twitter
 
@@ -36,11 +36,11 @@ iOS 화면을 짤 때 참고할 곳이 없어 막막했던 분들에게, 62만 �
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![app-screen-library-all-the-same 슬라이드 1](/assets/images/app-screen-library-all-the-same-slide-01.png)
+![app-screen-library-all-the-same 슬라이드 1](/assets/images/app-screen-library-all-the-same-slide-01.webp)
 
-![app-screen-library-all-the-same 슬라이드 2](/assets/images/app-screen-library-all-the-same-slide-02.png)
+![app-screen-library-all-the-same 슬라이드 2](/assets/images/app-screen-library-all-the-same-slide-02.webp)
 
-![app-screen-library-all-the-same 슬라이드 3](/assets/images/app-screen-library-all-the-same-slide-03.png)
+![app-screen-library-all-the-same 슬라이드 3](/assets/images/app-screen-library-all-the-same-slide-03.webp)
 
-![app-screen-library-all-the-same 슬라이드 4](/assets/images/app-screen-library-all-the-same-slide-04.png)
+![app-screen-library-all-the-same 슬라이드 4](/assets/images/app-screen-library-all-the-same-slide-04.webp)
 

@@ -20,7 +20,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ar/agentops/microsoft-orchard-agent-training-infra/"
 ---
 
-![صورة غلاف تجريدية لبنى شبكية متراصّة يتفرّع الضوء عبرها](/assets/images/microsoft-orchard-agent-training-infra-hero.png)
+![صورة غلاف تجريدية لبنى شبكية متراصّة يتفرّع الضوء عبرها](/assets/images/microsoft-orchard-agent-training-infra-hero.webp)
 
 الجدار الأول الذي يصطدم به أي فريق يقرّر تدريب الوكلاء ليس النموذج. إنه تشغيل مئات البيئات المعزولة في وقت واحد، حيث يستطيع الوكيل فعلياً تنفيذ الأوامر وتعديل الملفات والفشل. إطار [Orchard](https://github.com/microsoft/Orchard) الذي أطلقته مايكروسوفت في الثالث من أغسطس 2026 هو بالضبط اقتطاع لطبقة البيئة تلك وإتاحتها برخصة MIT.
 

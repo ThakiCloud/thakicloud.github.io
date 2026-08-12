@@ -20,7 +20,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/microsoft-orchard-agent-training-infra/"
 ---
 
-![겹겹이 쌓인 격자 구조 위로 빛이 분기되는 추상 표지 이미지](/assets/images/microsoft-orchard-agent-training-infra-hero.png)
+![겹겹이 쌓인 격자 구조 위로 빛이 분기되는 추상 표지 이미지](/assets/images/microsoft-orchard-agent-training-infra-hero.webp)
 
 에이전트를 학습시키겠다고 마음먹은 팀이 가장 먼저 부딪히는 벽은 모델이 아닙니다. 에이전트가 실제로 명령을 실행하고 파일을 고치고 실패할 수 있는 격리된 환경을 몇 백 개씩 동시에 띄우는 일입니다. 마이크로소프트가 2026년 8월 3일에 공개한 [Orchard](https://github.com/microsoft/Orchard)는 바로 그 환경 계층만 떼어내 MIT 라이선스로 내놓은 프레임워크입니다.
 
@@ -34,7 +34,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/microsoft-orchard-a
 
 지난 2년 동안 에이전트 연구에서 공개된 것은 대부분 모델과 벤치마크 점수였습니다. 정작 그 점수를 만들어 낸 인프라는 공개되지 않았습니다. 각 팀이 자체 샌드박스를 만들고, 학습 파이프라인을 사내에 가두고, 궤적 데이터셋을 비공개로 쌓았습니다. 그래서 논문의 숫자를 다른 팀이 확인하려면 인프라부터 처음부터 다시 만들어야 했습니다. 마이크로소프트 리서치가 Orchard를 내놓으면서 문제로 지목한 지점이 정확히 이것입니다.
 
-![병목이 모델 알고리즘이 아니라 격리된 실행 환경이라는 점을 대비해 보여 주는 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-02.png)
+![병목이 모델 알고리즘이 아니라 격리된 실행 환경이라는 점을 대비해 보여 주는 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-02.webp)
 
 Orchard의 접근은 조금 특이합니다. 더 좋은 학습 알고리즘을 제안하는 대신, 학습과 평가가 공통으로 필요로 하는 것이 무엇인지 되물었습니다. 답은 격리된 실행 환경이었습니다. 궤적을 모으는 단계에서도, 강화학습 롤아웃을 도는 단계에서도, 최종 평가에서도 필요한 것은 결국 명령을 안전하게 실행하고 그 결과를 관찰할 수 있는 일회용 상자입니다. 이 공통분모를 서비스로 만들어 세 단계가 나눠 쓰게 한 것이 Orchard Env입니다.
 
@@ -44,7 +44,7 @@ Orchard의 접근은 조금 특이합니다. 더 좋은 학습 알고리즘을 �
 
 Orchard의 중심에는 Orchard Env가 있습니다. 쿠버네티스 네이티브 샌드박스 서비스이고, 노출하는 기능은 의도적으로 얇습니다. 샌드박스 수명주기 관리, 명령 실행, 파일 입출력, 네트워크 정책 네 가지입니다. 여기서 중요한 것은 없는 기능 쪽입니다. 특정 에이전트 하네스에 묶이지 않고, 특정 추론 백엔드에 묶이지 않고, 특정 태스크 도메인에도 묶이지 않습니다.
 
-![Orchard Env가 노출하는 네 가지 원시 기능인 샌드박스 수명주기, 명령 실행, 파일 입출력, 네트워크 정책을 정리한 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-04.png)
+![Orchard Env가 노출하는 네 가지 원시 기능인 샌드박스 수명주기, 명령 실행, 파일 입출력, 네트워크 정책을 정리한 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-04.webp)
 
 이 결합 분리가 만드는 효과가 실무적으로 큽니다. 샌드박스 이미지에는 codex와 claude, pi, opencode, hermes 같은 주요 에이전트 하네스가 이미 PATH에 올라간 상태로 들어 있습니다. 그래서 어떤 하네스를 대상으로 학습하거나 평가할지 바꾸는 일이 이미지를 다시 굽는 작업이 아니라 실행할 명령을 바꾸는 작업이 됩니다. 하네스를 갈아 끼우는 비용이 낮아지면 비교 실험이 쉬워지고, 비교가 쉬워지면 어떤 하네스가 어떤 과제에 강한지 데이터로 말할 수 있게 됩니다.
 
@@ -71,7 +71,7 @@ flowchart TB
 
 데이터셋도 같이 나왔습니다. SWE 계열 궤적이 107,185건이고, GitHub 저장소 2,788곳에서 수집했습니다. 각 궤적에는 에이전트가 최종적으로 만든 패치가 해당 이슈의 숨겨진 테스트 스위트를 통과했는지가 라벨로 붙어 있습니다. 이 라벨 방식이 핵심입니다. 사람이 매긴 선호도 점수가 아니라 테스트 실행 결과라서, 보상 신호가 결정론적이고 재현 가능합니다.
 
-![숨겨진 테스트 통과 여부로 궤적을 결정론적으로 라벨링하는 구조를 보여 주는 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-06.png)
+![숨겨진 테스트 통과 여부로 궤적을 결정론적으로 라벨링하는 구조를 보여 주는 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-06.webp)
 
 ## 설치 및 통합
 
@@ -98,7 +98,7 @@ cd Orchard
 
 기본 모델 대비 총 45.5퍼센트포인트 상승이고, 논문은 이 결과가 비슷한 규모의 오픈소스 모델 가운데 최고 수준이라고 주장합니다.
 
-![지도 미세조정이 42.3퍼센트포인트를 올리고 강화학습이 3.2퍼센트포인트를 더한다는 상승분 배분을 보여 주는 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-07.png)
+![지도 미세조정이 42.3퍼센트포인트를 올리고 강화학습이 3.2퍼센트포인트를 더한다는 상승분 배분을 보여 주는 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-07.webp)
 
 숫자를 읽는 방식이 중요합니다. 눈에 띄는 것은 67.5라는 최종 값이 아니라 상승분의 배분입니다. 22.0에서 64.3으로 가는 구간, 즉 지도 미세조정만으로 얻은 상승이 42.3퍼센트포인트입니다. 그 위에 강화학습을 얹어 얻은 추가 상승은 3.2퍼센트포인트입니다. 전체 개선의 대부분이 좋은 궤적 데이터로 흉내 내는 단계에서 나왔다는 뜻입니다.
 
@@ -108,7 +108,7 @@ cd Orchard
 
 Orchard가 던지는 설계 메시지는 저희가 운영하는 두 제품 모두에 걸칩니다.
 
-![Orchard Env는 ai-platform의 쿠버네티스 스케줄링에, 네트워크 정책과 격리 실행은 Paxis의 정책 게이트에 대응한다는 매핑 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-09.png)
+![Orchard Env는 ai-platform의 쿠버네티스 스케줄링에, 네트워크 정책과 격리 실행은 Paxis의 정책 게이트에 대응한다는 매핑 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-09.webp)
 
 ai-platform 쪽부터 보겠습니다. ThakiCloud의 ai-platform은 쿠버네티스 위에서 Kueue로 GPU 워크로드를 스케줄링하고 vLLM으로 모델을 서빙하는 멀티테넌트 AI 인프라입니다. Orchard Env가 요구하는 것은 정확히 이 조합입니다. 즉 별도의 특수 인프라를 새로 도입하는 것이 아니라, 이미 운영 중인 클러스터에 샌드박스 서비스 계층을 하나 더 올리는 문제로 환원됩니다. 에이전트 롤아웃은 짧게 뜨고 사라지는 잡이 대량으로 발생하는 워크로드라서 큐 기반 스케줄링과 궁합이 좋습니다. 온프레미스와 소버린 환경을 요구하는 고객에게는 더 직접적인 의미가 있습니다. 학습 궤적에는 코드와 내부 문서가 그대로 남기 때문에, 에이전트 학습이야말로 외부 클라우드로 내보내기 가장 곤란한 워크로드입니다. 자체 클러스터에서 도는 오픈소스 학습 인프라는 그래서 선택지가 아니라 요건에 가깝습니다.
 
@@ -116,14 +116,14 @@ Paxis 쪽은 결이 조금 다릅니다. Paxis는 ai-platform 위에서 도는 A
 
 한 걸음 더 나가면 두 제품이 이어집니다. Paxis가 스킬을 실행하면서 남기는 감사 로그는 그 자체로 에이전트 궤적입니다. 여기에 성공과 실패를 판정하는 결정론적 게이트가 붙으면 Orchard가 요구하는 라벨된 궤적의 형태를 갖추게 됩니다. 운영에서 나온 로그가 학습 데이터로 순환하는 구조이고, 그 순환이 도는 곳이 ai-platform 클러스터라는 그림입니다.
 
-![Paxis 감사 로그가 결정론적 게이트를 거쳐 ai-platform의 학습 데이터로 순환하는 루프를 그린 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-10.png)
+![Paxis 감사 로그가 결정론적 게이트를 거쳐 ai-platform의 학습 데이터로 순환하는 루프를 그린 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-10.webp)
  마이크로소프트가 하네스를 이미지에 미리 넣어 교체 비용을 낮춘 것처럼, 스킬 하네스를 표준화해 두면 같은 종류의 이득이 생깁니다.
 
 ## 한계 및 반론
 
 기대를 정확히 조정할 필요가 있습니다.
 
-![쿠버네티스 진입 장벽, 공개 데이터 편향, 테스트 라벨의 맹점 세 가지를 정리한 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-11.png)
+![쿠버네티스 진입 장벽, 공개 데이터 편향, 테스트 라벨의 맹점 세 가지를 정리한 슬라이드](/assets/images/microsoft-orchard-agent-training-infra-slide-11.webp)
 
 먼저 진입 비용입니다. Orchard는 쿠버네티스를 전제합니다. 클러스터를 운영하지 않는 팀에게는 프레임워크 학습 비용보다 클러스터 도입 비용이 훨씬 큽니다. 노트북 한 대로 시작할 수 있는 도구가 아닙니다.
 

@@ -29,7 +29,7 @@ LLM을 API 뒤에 두고 서비스를 만들어본 엔지니어라면 한 번쯤
 
 이 접근은 근본적으로 틀린 방향은 아니지만 충분하지 않습니다. LLM이 확률적으로 다음 토큰을 선택하는 기계라는 사실은 프롬프트 튜닝으로 사라지지 않기 때문입니다. 아무리 정교한 프롬프트도 모델 내부의 비결정성, 입력에 대한 과민한 반응, 없는 사실을 그럴듯하게 지어내는 습성을 완전히 제거하지는 못합니다. 이 글은 그 사실을 받아들인 다음에 무엇을 해야 하는지에 관한 이야기입니다. 핵심 주장은 하나입니다. 프로덕션에서 LLM을 다루는 엔지니어링의 본질은 출력을 예측하는 일이 아니라, 예측 불가능한 출력이 시스템에 들어오고 나가는 경계를 설계하는 일입니다.
 
-![LLM 출력은 통제할 수 없다, 그래도 시스템은 통제할 수 있다 개념을 형상화한 이미지](/assets/images/making-ai-predictable-hero.png)
+![LLM 출력은 통제할 수 없다, 그래도 시스템은 통제할 수 있다 개념을 형상화한 이미지](/assets/images/making-ai-predictable-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 왜 같은 질문에 다른 답이 나오는가
@@ -103,6 +103,6 @@ LLM을 API 뒤에 두고 서비스를 만들어본 엔지니어라면 한 번쯤
 이 글에서 다룬 내용을 더 깊이 들여다보고 싶다면, 각 패턴을 구체적인 코드 수준까지 풀어낸 전자책 [불확실한 AI를 제어가능하게](/assets/ebooks/making-ai-predictable.pdf)를 참고하시기 바랍니다.
 
 ## 챕터 삽화
-![1장 삽화](/assets/images/books/making-ai-predictable/ch01.png)
-![4장 삽화](/assets/images/books/making-ai-predictable/ch04.png)
+![1장 삽화](/assets/images/books/making-ai-predictable/ch01.webp)
+![4장 삽화](/assets/images/books/making-ai-predictable/ch04.webp)
 

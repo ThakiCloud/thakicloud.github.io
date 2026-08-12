@@ -32,7 +32,7 @@ engineers who want to post-train foundation models on their own infrastructure. 
 conclusion: the real protagonist of this case study is neither the model nor the GPUs, but the
 **harness that hardens workflow knowledge into a skill and lets an agent run it repeatedly**.
 
-![Abstract illustration of a central orchestration node conducting a fleet of GPU servers]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.png' | relative_url }})
+![Abstract illustration of a central orchestration node conducting a fleet of GPU servers]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.webp' | relative_url }})
 *Agent skills conduct the repetitive labor of GPU training, evaluation, and tuning. The human only supplies the goal through a prompt.*
 
 ## What Cosmos 3 and Agent Skills Are
@@ -437,7 +437,7 @@ structure, road type, and traffic safety situations.
 Performance improved clearly. All the figures below are values NVIDIA published, not results we
 reproduced.
 
-![Bar chart of WTS video QA validation accuracy across the Cosmos 3 Nano baseline, LoRA, and AutoML stages]({{ '/assets/images/cosmos3-agent-skills-posttraining-results.png' | relative_url }})
+![Bar chart of WTS video QA validation accuracy across the Cosmos 3 Nano baseline, LoRA, and AutoML stages]({{ '/assets/images/cosmos3-agent-skills-posttraining-results.webp' | relative_url }})
 *Two prompts raised validation accuracy from 54.41% to 93.35%. NVIDIA published figures.*
 
 The zero-shot baseline was 54.41%, and the single-prompt LoRA run raised it by 32.73 points to

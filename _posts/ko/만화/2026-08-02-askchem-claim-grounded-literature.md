@@ -12,19 +12,19 @@ tags:
   - sovereignty
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/askchem-claim-grounded-literature/strip.png
+image: /assets/images/posts/만화/askchem-claim-grounded-literature/strip.webp
 video: /assets/videos/posts/만화/askchem-claim-grounded-literature/comic.mp4
 ---
 
 새로 뜬 연구 하나가 화학 문헌을 통째로 읽어 정리해 줍니다. 특이한 점은 문장이 아니라 '주장' 단위로 묶고, 주장마다 어느 논문 어느 대목에서 나왔는지 근거를 붙인다는 것입니다. 요약은 그럴듯한데 출처가 비면 소용없으니까요. 유진 팀이 도서관에서 그 원리를 몸으로 겪어 봅니다.
 
-![논문 산맥에서 근거 찾기](/assets/images/posts/만화/askchem-claim-grounded-literature/strip.png)
+![논문 산맥에서 근거 찾기](/assets/images/posts/만화/askchem-claim-grounded-literature/strip.webp)
 
 > 원 뉴스: [AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis](https://huggingface.co/papers/2607.28618) · hf-trending
 
 **▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/askchem-claim-grounded-literature/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/askchem-claim-grounded-literature/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/askchem-claim-grounded-literature/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/askchem-claim-grounded-literature/comic.ko.vtt" default>
 </video>

@@ -14,7 +14,7 @@ categories:
   - research
 ---
 
-![Abstract illustration of memories branching into separate paths that lead to different decisions]({{ '/assets/images/demem-agent-memory-hero.png' | relative_url }})
+![Abstract illustration of memories branching into separate paths that lead to different decisions]({{ '/assets/images/demem-agent-memory-hero.webp' | relative_url }})
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1oxsADQALTfdn7I_mmZbaZfMnmqoCMF9o/view).
 

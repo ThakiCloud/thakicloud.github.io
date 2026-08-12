@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/block-buzz-agent-na
 
 에이전트를 팀 워크플로에 넣어 본 조직이라면 비슷한 지점에서 막혔을 것입니다. 모델은 잘 돌아가는데, 그 에이전트가 슬랙 채널에서는 누구인지가 정의되지 않습니다. 봇 토큰 하나를 공유해서 쓰거나, 사람 계정을 빌려 쓰거나, 웹훅 뒤에 숨습니다. 그러면 "이 커밋은 누가 승인했나"라는 질문에 답할 수가 없습니다. 2026년 7월 21일에 Block이 공개한 Buzz는 바로 이 질문에서 출발한 제품입니다.
 
-![사람과 에이전트가 각자의 서명 신원을 갖고 하나의 원장으로 수렴하는 구조를 형상화한 추상 이미지](/assets/images/block-buzz-agent-native-workspace-hero.png)
+![사람과 에이전트가 각자의 서명 신원을 갖고 하나의 원장으로 수렴하는 구조를 형상화한 추상 이미지](/assets/images/block-buzz-agent-native-workspace-hero.webp)
 
 *사람과 에이전트가 같은 채널에서 각자의 신원으로 서명하고, 그 흔적이 하나의 원장에 쌓입니다.*
 
@@ -166,13 +166,13 @@ Buzz의 기여는 새로운 채팅 앱을 하나 더 만든 데 있지 않습니
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![block-buzz-agent-native-workspace 슬라이드 1](/assets/images/block-buzz-agent-native-workspace-slide-01.png)
+![block-buzz-agent-native-workspace 슬라이드 1](/assets/images/block-buzz-agent-native-workspace-slide-01.webp)
 
-![block-buzz-agent-native-workspace 슬라이드 2](/assets/images/block-buzz-agent-native-workspace-slide-02.png)
+![block-buzz-agent-native-workspace 슬라이드 2](/assets/images/block-buzz-agent-native-workspace-slide-02.webp)
 
-![block-buzz-agent-native-workspace 슬라이드 3](/assets/images/block-buzz-agent-native-workspace-slide-03.png)
+![block-buzz-agent-native-workspace 슬라이드 3](/assets/images/block-buzz-agent-native-workspace-slide-03.webp)
 
-![block-buzz-agent-native-workspace 슬라이드 4](/assets/images/block-buzz-agent-native-workspace-slide-04.png)
+![block-buzz-agent-native-workspace 슬라이드 4](/assets/images/block-buzz-agent-native-workspace-slide-04.webp)
 
 ## 출처
 

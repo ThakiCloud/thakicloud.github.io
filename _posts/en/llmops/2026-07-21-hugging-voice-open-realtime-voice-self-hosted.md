@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/hugging-voice-open-realtime-voice-self-hosted/"
 ---
 
-![An open realtime voice pipeline you run yourself]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png' | relative_url }})
+![An open realtime voice pipeline you run yourself]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.webp' | relative_url }})
 
 This post is for engineers who wanted to add a voice agent but hesitated at the lock-in and cost of the OpenAI Realtime API, and for infrastructure owners weighing whether conversational voice can be served on their own stack. The short version is that the design of Hugging Face's demo [hugging-voice](https://huggingface.co/spaces/HuggingFaceM4/hugging-voice) and the library beneath it, [speech-to-speech](https://github.com/huggingface/speech-to-speech), is both simple and practical. It opens the entire four-stage realtime voice pipeline as open source, while wrapping the outside in the very same interface as OpenAI Realtime. So if you already have code written against an OpenAI realtime client, you can move onto your own stack by changing a single line: the address the server points to. We only cite performance figures within the range the project has published, and we note up front that these are not numbers we benchmarked ourselves.
 

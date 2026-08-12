@@ -13,7 +13,7 @@ tags:
   - kimi-k3
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png
+image: /assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp
 video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4
 ---
 
@@ -21,13 +21,13 @@ video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in
 
 문제는 여기서부터입니다. 내려받기 버튼은 누구나 누를 수 있지만, 그 뇌를 펼쳐놓고 전기를 먹여줄 자리는 아무나 갖고 있지 않습니다. 오늘 만화는 그 어긋남을 다룹니다. 모델을 손에 넣는 것과 굴릴 수 있는 것은 완전히 다른 일이니까요.
 
-![공짜로 받았는데 켤 데가 없다](/assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png)
+![공짜로 받았는데 켤 데가 없다](/assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp)
 
 > 원 뉴스: [Kimi K3: Open Frontier Intelligence](https://huggingface.co/papers/2607.24653) · hf-trending
 
 **▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.ko.vtt" default>
 </video>

@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/invisible-reasoning
 
 Most safety controls for language models rest on one assumption: when a model makes a consequential judgment, the basis for that judgment shows up in its output tokens. Chain-of-thought monitoring stakes everything on it. "Not All LLM Reasoning is Visible in the Chain-of-Thought," posted to arXiv on 24 July 2026, offers experimental evidence that the assumption is already broken. The authors are Vatsal Baherwani of New York University, Tom Goldstein of the University of Maryland, and Ashwinee Panda of TogetherAI.
 
-![Abstract image of a translucent glass slab with a band of light passing through its interior while the outer surfaces remain unmarked](/assets/images/invisible-reasoning-filler-tokens-hero.png)
+![Abstract image of a translucent glass slab with a band of light passing through its interior while the outer surfaces remain unmarked](/assets/images/invisible-reasoning-filler-tokens-hero.webp)
 
 ## Why this matters to you
 
@@ -83,7 +83,7 @@ The 13-model comparison fixes one condition: 10-shot, counting numbers from 1 to
 
 Units are accuracy percentages, taken from Table 1 of the paper. The three models marked "no prefill" have APIs that do not permit assistant prefilling, and the authors note their results may carry selection effects. The authors also insist this table is not a model ranking. Provider serving configurations cannot be controlled, so it should be read only as a within-model comparison where filler presence is the sole change. That also explains why the spread looks wider than the abstract's "up to 13 percentage points" suggests: the largest value, Opus 4.6 at 30.0, comes from a condition with the prefill restriction attached.
 
-![Bar chart of the filler-token accuracy deltas for 13 models from Table 1, split by arithmetic and multiplication task](/assets/images/invisible-reasoning-filler-tokens-results.png)
+![Bar chart of the filler-token accuracy deltas for 13 models from Table 1, split by arithmetic and multiplication task](/assets/images/invisible-reasoning-filler-tokens-results.webp)
 
 *Redrawn directly from Table 1 of the paper. These are reported values, not measurements we reproduced.*
 

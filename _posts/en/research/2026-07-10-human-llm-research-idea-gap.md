@@ -23,7 +23,7 @@ Say "research agent" and most people picture the same loop: read papers, spot a 
 
 The paper, "Measuring the Gap Between Human and LLM Research Ideas" (arXiv 2607.01233), reaches a conclusion that cuts against intuition. The weakness in LLM ideas was not the thing people usually call "quality." The real gap was in range. LLMs thought inside a much narrower space than human researchers, and that narrowness was concentrated almost entirely in one pattern: the notion of "connecting existing research."
 
-![An abstract image contrasting a widely scattered constellation of ideas with one tightly clustered constellation]({{ '/assets/images/human-llm-research-idea-gap-hero.png' | relative_url }})
+![An abstract image contrasting a widely scattered constellation of ideas with one tightly clustered constellation]({{ '/assets/images/human-llm-research-idea-gap-hero.webp' | relative_url }})
 *A visual contrast between the wide spread of human ideas and the LLM's ideas clustered narrowly around a single pattern.*
 
 ## Overview

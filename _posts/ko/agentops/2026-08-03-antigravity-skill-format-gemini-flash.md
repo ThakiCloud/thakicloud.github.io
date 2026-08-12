@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/antigravity-skill-f
 published: true
 ---
 
-![동일한 규격의 모듈이 서로 다른 세 개의 기계에 끼워지는 추상 이미지](/assets/images/antigravity-skill-format-gemini-flash-hero.png)
+![동일한 규격의 모듈이 서로 다른 세 개의 기계에 끼워지는 추상 이미지](/assets/images/antigravity-skill-format-gemini-flash-hero.webp)
 *같은 규격의 스킬 모듈이 서로 다른 에이전트 하네스에 그대로 꽂히는 상황을 표현했습니다.*
 
 ## 왜 읽어야 하나
@@ -109,7 +109,7 @@ Antigravity 스킬의 수치입니다. `SKILL.md`는 13,735바이트에 314줄�
 
 자체 코퍼스는 스킬 1911개 기준으로 중앙값 154줄, 평균 189.3줄, 최대 2063줄입니다. 코드 비율은 중앙값 18.5퍼센트, 평균 19.5퍼센트입니다. 1379개(72.2퍼센트)가 description에 "Use when" 트리거를 갖고 있고, 1396개(73.1퍼센트)가 frontmatter를 `name`과 `description` 두 키로만 유지합니다. 번들 `scripts/` 디렉터리를 가진 스킬은 154개(8.1퍼센트)입니다.
 
-![스킬 파일의 코드 비율 비교 막대 그래프](/assets/images/antigravity-skill-format-gemini-flash-results.png)
+![스킬 파일의 코드 비율 비교 막대 그래프](/assets/images/antigravity-skill-format-gemini-flash-results.webp)
 *동일한 계수 규칙으로 잰 SKILL.md의 코드 펜스 줄 비율입니다. Antigravity 스킬 54.5퍼센트는 자체 코퍼스 중앙값 18.5퍼센트보다 훨씬 높지만, 실행 절차를 강하게 규정하는 저희 툴킷 계열보다는 낮습니다.*
 
 비교하면 그림이 분명해집니다. Antigravity 스킬은 저희 중앙값보다 두 배 길고 코드 밀도는 세 배 가까이 높습니다. 다만 저희 코퍼스에서도 실행 절차를 강하게 규정하는 계열은 훨씬 더 코드에 가깝습니다. pillow-toolkit이 679줄에 87.3퍼센트, exiftool-toolkit이 519줄에 85.9퍼센트, vips-toolkit이 483줄에 77.0퍼센트입니다. 중앙값이 18.5퍼센트로 낮은 이유는 코퍼스에 라우팅이나 판단 기준을 서술하는 산문형 스킬이 많이 섞여 있기 때문입니다.

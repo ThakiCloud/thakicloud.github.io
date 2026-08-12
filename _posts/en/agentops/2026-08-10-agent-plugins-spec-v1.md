@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-plugins-spec-
 
 This is for platform engineers running several agent skills and MCP servers in-house, who keep repackaging the same assets two or three times because every client expects a different install path and config file. The short version: Agent Plugins 1.0.0 is small enough and finished enough to adopt today. But passing the official JSON Schema does not make a plugin conformant. We fed the schema eight violations that the spec text explicitly forbids, and two of them passed with no error at all. Both were the kind that cross the plugin boundary. So the real work in adopting this standard is not writing a manifest. It is putting the containment rules the schema cannot see into your client code.
 
-![Small blocks of varied shapes converging into one container and radiating outward as identical cubes toward five platforms](/assets/images/agent-plugins-spec-v1-hero.png)
+![Small blocks of varied shapes converging into one container and radiating outward as identical cubes toward five platforms](/assets/images/agent-plugins-spec-v1-hero.webp)
 *Package once, and several clients read the same shape. That is the whole proposition.*
 
 ## Overview
@@ -139,7 +139,7 @@ Opening the schemas confirmed they line up with the spec text. `plugin.schema.js
 
 Then came the real test. We fed the official schemas eight cases the spec text declares invalid.
 
-![Horizontal bar chart showing six of eight violations rejected by the schema and two accepted](/assets/images/agent-plugins-spec-v1-results-en.png)
+![Horizontal bar chart showing six of eight violations rejected by the schema and two accepted](/assets/images/agent-plugins-spec-v1-results-en.webp)
 *Every manifest violation was caught. The two that cross the plugin boundary went straight through.*
 
 All five manifest cases were rejected. The unknown top-level field `entrypoint` failed on `Additional properties are not allowed`; `Thaki-Blog-Ops` with uppercase and `thaki--blog` with consecutive hyphens both failed the name pattern; a missing `$schema` failed as a required field; and a `role` key added to `author` failed against that object's closed schema. Encoding the name rules as a regex in the schema was a nice touch.

@@ -25,7 +25,7 @@ audiobook: /assets/audio/posts/codex-imagegen-skill-procedure/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![흐릿한 빛 구름이 기하학적 관문을 통과해 선명한 결정으로 바뀌는 추상 이미지](/assets/images/codex-imagegen-skill-procedure-hero.png)
+![흐릿한 빛 구름이 기하학적 관문을 통과해 선명한 결정으로 바뀌는 추상 이미지](/assets/images/codex-imagegen-skill-procedure-hero.webp)
 *능력을 붙이는 것과 절차를 정의하는 것은 다른 일입니다.*
 
 ## 왜 읽어야 하나
@@ -34,7 +34,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 Codex의 `imagegen` 스킬이 좋은 표본입니다. 이 스킬이 하는 일을 한 줄로 줄이면 이미지 생성인데, 정작 스킬 문서의 대부분은 이미지를 만드는 방법이 아니라 언제 어느 경로로 갈지, 결과를 어디에 저장할지, 그리고 모델이 못 하는 일을 어떤 스크립트에 넘길지를 규정합니다. 아래에서는 그 규정을 항목별로 읽은 뒤, 스킬이 외부 스크립트에 넘기는 후처리 단계를 직접 구현해서 비용과 효과를 재 보겠습니다.
 
-![능력을 덧붙이는 일과 절차를 정의하는 일의 차이를 강조한 타이포그래피 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-02.png)
+![능력을 덧붙이는 일과 절차를 정의하는 일의 차이를 강조한 타이포그래피 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-02.webp)
 *이 글이 따라가는 구분입니다.*
 
 ## 개요
@@ -49,7 +49,7 @@ Codex CLI는 2026년 4월 21일부터 gpt-image-2를 기본 이미지 모델로 
 
 스킬 문서를 읽으면 규정이 세 층으로 나뉩니다.
 
-![경로 라우팅과 결과물 처리, 투명 배경 처리라는 세 규정 층을 정리한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-06.png)
+![경로 라우팅과 결과물 처리, 투명 배경 처리라는 세 규정 층을 정리한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-06.webp)
 *세 층 모두 이미지를 어떻게 만드는지가 아니라 무엇을 언제 하는지를 정합니다.*
 
 첫째는 경로 라우팅입니다. 내장 `image_gen` 경로로 갈지 CLI 폴백으로 갈지를 가르는데, 판단 기준이 꽤 구체적입니다. 사용자가 "배치"라는 단어를 썼다는 사실만으로는 CLI 폴백 사유가 되지 않는다고 못 박습니다. 자산을 여러 개 요청했더라도 CLI나 API, 모델 제어를 명시적으로 요구한 것이 아니라면 내장 경로를 쓰고, 요청한 자산 하나당 내장 호출을 한 번씩 돌리라고 지시합니다. 이런 문장이 왜 필요한지는 겪어 보면 압니다. 모델은 "여러 장"이라는 표현을 보면 더 강력해 보이는 경로로 도망가려는 경향이 있고, 그 경로는 대개 더 느리고 더 비쌉니다.
@@ -102,7 +102,7 @@ background, no shadows on the background, no text, no labels" \
 
 후처리는 넘파이와 Pillow만으로 구현했습니다. 알파 추출은 초록 우세도, 그러니까 G 채널에서 R과 B 중 큰 값을 뺀 값을 기준으로 삼았습니다. 소프트 매트는 그 우세도를 두 임계값 사이에서 선형으로 낮춰 경계에 부분 알파를 남깁니다. 디스필은 초록이 다른 두 채널의 평균을 넘는 픽셀에서 그 평균으로 눌러 주고, 엣지 수축은 최소값 필터로 매트를 1픽셀 안쪽으로 당깁니다.
 
-![알파 추출부터 엣지 수축까지 네 단계와 각 단계의 기준값을 정리한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-08.png)
+![알파 추출부터 엣지 수축까지 네 단계와 각 단계의 기준값을 정리한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-08.webp)
 *임계값 20에서 70, 1픽셀 수축은 저희가 정한 값이며 원본이 쓰는 값은 아닙니다.*
 
 ```bash
@@ -116,14 +116,14 @@ bash scripts/blog/impl_sandbox.sh run codex-imagegen-skill-procedure -- \
 
 1536x1024, 약 157만 픽셀 이미지 한 장에 대한 실측입니다.
 
-![후처리 세 단계의 효과와 비용을 나타낸 세 개의 막대 그래프](/assets/images/codex-imagegen-skill-procedure-results.png)
+![후처리 세 단계의 효과와 비용을 나타낸 세 개의 막대 그래프](/assets/images/codex-imagegen-skill-procedure-results.webp)
 *프린지 제거 효과, 단계별 소요 시간, 출력 포맷별 크기를 나란히 놓았습니다.*
 
 가장 먼저 확인한 것은 경계 품질입니다. 임계값 하나로 자른 이진 매트는 화면에 보이는 영역 안에 초록이 남은 픽셀을 2,376개 남겼습니다. 소프트 매트와 디스필을 적용하자 이 값이 0이 됐고, 엣지 수축까지 적용해도 0을 유지했습니다. 이진 매트의 부분 알파 픽셀 수는 정의상 0인 반면 소프트 매트는 1,929개의 부분 알파 픽셀을 만들었는데, 이 1,929픽셀이 경계를 계단이 아니라 선으로 보이게 하는 실체입니다.
 
 닫힌 영역 검사에서는 75,791픽셀이 나왔습니다. 이미지 테두리와 이어지지 않은 투명 영역, 즉 손잡이 안쪽 구멍입니다. 배경을 테두리에서 확장하는 방식으로 처리했다면 이만큼이 불투명하게 남았을 것입니다. 색상 기준으로 판정하는 방식이 이 문제를 애초에 만들지 않는다는 점이 확인됐습니다.
 
-![제거된 프린지 픽셀과 보존된 닫힌 영역, 그리고 포맷별 용량을 정리한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-10.png)
+![제거된 프린지 픽셀과 보존된 닫힌 영역, 그리고 포맷별 용량을 정리한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-10.webp)
 *두 픽셀 수치가 각각 경계 품질과 구멍 처리를 말해 줍니다.*
 
 비용은 예상보다 훨씬 낮았습니다. 알파 추출과 소프트 매트가 1.14밀리초, 디스필이 6.36밀리초, 엣지 수축이 4.67밀리초로 전체 12.17밀리초입니다. 같은 이미지를 만드는 모델 호출이 수 초 단위인 것을 감안하면 후처리 전체가 생성 시간의 1퍼센트에도 미치지 않습니다.
@@ -132,7 +132,7 @@ bash scripts/blog/impl_sandbox.sh run codex-imagegen-skill-procedure -- \
 
 한 가지 솔직하게 덧붙일 숫자가 있습니다. 디스필이 손댄 픽셀은 1,033,335개, 전체의 65.7퍼센트이고 평균 감소폭은 167.23이었습니다. 큰 값처럼 보이지만 이 대부분은 배경 자체입니다. 배경은 어차피 알파가 0이 되어 사라지므로, 눈에 보이는 개선을 만든 것은 이 가운데 경계에 걸친 소수의 픽셀입니다. 이 수치를 디스필의 효과 크기로 읽으시면 안 됩니다.
 
-![투명 배경으로 분리된 파란색 머그컵 이미지](/assets/images/codex-imagegen-skill-procedure-cutout.png)
+![투명 배경으로 분리된 파란색 머그컵 이미지](/assets/images/codex-imagegen-skill-procedure-cutout.webp)
 *손잡이 안쪽까지 투명하게 처리된 최종 결과물입니다.*
 
 ## ThakiCloud 제품 적용 시사점
@@ -143,7 +143,7 @@ CLI 폴백을 사용자 확인 뒤에만 실행한다는 규정도 그냥 지나
 
 실행 경제성 관점에서는 Metis가 이 그림의 왼쪽 위 한 칸을 담당합니다. 12.17밀리초짜리 후처리와 수 초짜리 모델 호출 사이의 비율이 말해 주는 것은, 이런 워크로드의 원가가 사실상 전부 모델 호출에 몰려 있다는 사실입니다. 그래서 자산 하나당 호출을 몇 번 하느냐가 그대로 비용이 되고, `imagegen`이 "배치라는 단어만으로 다른 경로로 가지 말라"고 규정한 것도 결국 같은 이야기입니다. Metis는 이 호출을 Dedicated Endpoint로 붙잡을지 Serverless로 흘릴지를 고르는 층이며, 그 선택이 Paxis 업무 한 건당 토큰 비용으로 환산됩니다.
 
-![Paxis와 Signum, Metis가 각각 맡는 역할을 겹쳐 그린 도식](/assets/images/codex-imagegen-skill-procedure-slide-12.png)
+![Paxis와 Signum, Metis가 각각 맡는 역할을 겹쳐 그린 도식](/assets/images/codex-imagegen-skill-procedure-slide-12.webp)
 *샌드박스 실행과 승인·감사, 호출 라우팅이 서로 다른 층에서 맞물립니다.*
 
 ## 한계 및 반론
@@ -160,7 +160,7 @@ CLI 폴백을 사용자 확인 뒤에만 실행한다는 규정도 그냥 지나
 
 `imagegen` 스킬을 읽고 그 후처리를 직접 구현해 본 결과, 이 스킬의 값어치는 이미지를 만들 수 있다는 데 있지 않았습니다. 모델이 못 하는 일을 식별해서 결정론 코드로 떼어 내고, 어느 경로로 갈지와 언제 사람에게 물을지를 문장으로 확정한 부분에 있었습니다.
 
-![모델이 맡는 영역과 코드가 소유하는 영역을 좌우로 나눠 대조한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-04.png)
+![모델이 맡는 영역과 코드가 소유하는 영역을 좌우로 나눠 대조한 슬라이드](/assets/images/codex-imagegen-skill-procedure-slide-04.webp)
 *왼쪽은 비싸고 흔들리며, 오른쪽은 싸고 반복됩니다.*
 
 그 절차의 비용은 157만 픽셀 이미지 한 장에 12.17밀리초였습니다. 같은 이미지를 만드는 모델 호출의 1퍼센트에도 미치지 않는 비용으로 그린 프린지 2,376픽셀이 사라졌고, 테두리 기반 방식이었다면 놓쳤을 75,791픽셀의 닫힌 영역이 제대로 처리됐습니다. 품질과 비용의 교환비가 이 정도로 유리한 구간은 흔치 않습니다.

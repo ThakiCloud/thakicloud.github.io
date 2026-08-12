@@ -69,11 +69,11 @@ arXiv 제출은 자동화 파이프라인이 tar 패키지까지 준비해 두�
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![sovereign-speculative-serving 슬라이드 1](/assets/images/sovereign-speculative-serving-slide-01.png)
+![sovereign-speculative-serving 슬라이드 1](/assets/images/sovereign-speculative-serving-slide-01.webp)
 
-![sovereign-speculative-serving 슬라이드 2](/assets/images/sovereign-speculative-serving-slide-02.png)
+![sovereign-speculative-serving 슬라이드 2](/assets/images/sovereign-speculative-serving-slide-02.webp)
 
-![sovereign-speculative-serving 슬라이드 3](/assets/images/sovereign-speculative-serving-slide-03.png)
+![sovereign-speculative-serving 슬라이드 3](/assets/images/sovereign-speculative-serving-slide-03.webp)
 
-![sovereign-speculative-serving 슬라이드 4](/assets/images/sovereign-speculative-serving-slide-04.png)
+![sovereign-speculative-serving 슬라이드 4](/assets/images/sovereign-speculative-serving-slide-04.webp)
 

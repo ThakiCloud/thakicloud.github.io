@@ -13,7 +13,7 @@ tags:
   - kimi-k3
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png
+image: /assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp
 video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/downloaded-the-frontier-nowhere-to-plug-it-in/"
 ---
@@ -22,13 +22,13 @@ A frontier-grade model just published its full weights. Weights are the billions
 
 That is where the fun starts. Anyone can hit download. Far fewer people have somewhere to unpack the brain and feed it power. Today's strip is about that gap, because acquiring a model and being able to run one are not remotely the same problem.
 
-![Everyone Downloaded the Frontier. Nobody Could Plug It In.](/assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png)
+![Everyone Downloaded the Frontier. Nobody Could Plug It In.](/assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp)
 
 > Source: [Kimi K3: Open Frontier Intelligence](https://huggingface.co/papers/2607.24653) · hf-trending
 
 **▶ Animated edition, the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.en.vtt" default>
 </video>

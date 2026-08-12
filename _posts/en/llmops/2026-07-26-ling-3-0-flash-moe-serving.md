@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ling-3-0-flash-moe-serving/"
 ---
 
-![Abstract image of a vast lattice where only a few nodes light up and converge into a single channel](/assets/images/ling-3-0-flash-moe-serving-hero.png)
+![Abstract image of a vast lattice where only a few nodes light up and converge into a single channel](/assets/images/ling-3-0-flash-moe-serving-hero.webp)
 *A visual for the MoE pattern of holding enormous capacity while activating only a sliver of it per token.*
 
 ## Why this matters to you
@@ -99,7 +99,7 @@ python3 scripts/skills/model_registry.py pull inclusionAI/Ling-2.6-flash /work/m
 
 Every number below comes straight from the run log at `outputs/blog-impl/ling-3-0-flash-moe-serving/run-5.log`, and the chart is rendered by parsing that same log.
 
-![Chart comparing measured weight footprint per Ling-2.6-flash checkpoint and KV cache per session](/assets/images/ling-3-0-flash-moe-serving-results.png)
+![Chart comparing measured weight footprint per Ling-2.6-flash checkpoint and KV cache per session](/assets/images/ling-3-0-flash-moe-serving-results.webp)
 *Left: real safetensors bytes per published checkpoint. Right: KV cache per session under the habitual formula versus the actual structure.*
 
 Start with weights. The bf16 original is 200.2 GiB across 27 shards. The fp8 build is 101.5 GiB, and the int4 build is 60.4 GiB across 26 shards. At int4 the weights fit inside a single H200's 141 GiB, but KV cache and activations have to live there too, so we would not recommend a single-card configuration.

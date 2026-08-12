@@ -29,7 +29,7 @@ What makes serve-sim interesting is that it is not just a screen-mirroring tool.
 
 That combination matters because it completes the development loop for AI coding agents. An agent can fix code, build it, run it, look at the resulting screen, tap a button to move to the next step, and cycle through all of that without a human in the loop. This lines up exactly with what ThakiCloud's Agent-Native Cloud, Paxis, is aiming for: agents doing real work inside isolated environments. That makes it worth a closer look at how one open-source tool implements that workflow.
 
-![An abstract image of a smartphone screen on a headless cloud server dissolving into particles of light that flow through the network into a browser window]({{ '/assets/images/serve-sim-ios-simulator-web-hero.png' | relative_url }})
+![An abstract image of a smartphone screen on a headless cloud server dissolving into particles of light that flow through the network into a browser window]({{ '/assets/images/serve-sim-ios-simulator-web-hero.webp' | relative_url }})
 *A visualization of a headless server's simulator screen becoming a stream that flows into a remote browser.*
 
 ## What serve-sim Is

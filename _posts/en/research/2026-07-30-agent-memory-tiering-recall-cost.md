@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 If you run an autonomous coding agent that keeps working for weeks without a break, and you've noticed the memory briefing it injects at the start of every session keeps blowing past its budget, this post is about exactly that problem. We tested three policies for deciding what stays in that briefing and what gets cut, against a real production memory corpus, and the numbers show why the most common intuition ("keep the newest items") is not the best answer.
 
-![Illustration of the core idea of Agent Memory Wasn't an Ordering Problem, It Was a Duplication Problem](/assets/images/agent-memory-tiering-recall-cost-hero.png)
+![Illustration of the core idea of Agent Memory Wasn't an Ordering Problem, It Was a Duplication Problem](/assets/images/agent-memory-tiering-recall-cost-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## The problem: context isn't free
@@ -37,7 +37,7 @@ The catch is that context is not free. A resident memory briefing injected into 
 
 We compared three policies, recency pruning, frequency retention, and similarity-based semantic deduplication (based on Jaccard similarity over token sets, not embeddings), against the memory corpus of an actual production agent harness currently in operation. The corpus holds 45 items (36 corrections, 9 patterns, 1,594 characters total) accumulated over five weeks, from 2026-06-23 to 2026-07-29. We swept the budget from 10 percent to 100 percent of the corpus in ten steps, measured "recall at budget" at each step, and summarized the result as area under the curve (AUC).
 
-![Recall curves by budget for the three tiering policies](/assets/images/posts/research/agent-memory-tiering-recall-cost/recall-curves.png)
+![Recall curves by budget for the three tiering policies](/assets/images/posts/research/agent-memory-tiering-recall-cost/recall-curves.webp)
 *Semantic deduplication reaches a recall of 1.0 at just 70 percent of budget, while the two baseline policies need the full 100 percent to get there. (Measured on a CPU-only container.)*
 
 The result was clear. Semantic deduplication scored an AUC of 0.7189, while recency pruning and frequency retention both landed at 0.6122. That is a gap of 0.1067 in absolute terms, and depending on which integration range you pick, a relative advantage of 17 to 20 percent (17.4 percent over the full range [0.1, 1.0], and 20.4 percent over [0.1, 0.7], the range where the policies actually diverge). What's more interesting is the shape of the recall curve. In the 30 to 50 percent budget range, deduplication holds a recall of 0.73 to 0.82, while the recency policy sits at only 0.58 to 0.64. And from 70 percent budget onward, deduplication reaches a recall of 1.0 and stays there, while the two baseline policies need to spend the entire 100 percent of budget to reach the same point. That means roughly 30 percent of the items in this corpus were effectively duplicates, and the two baselines never removed them, they just kept shuffling their order while the duplicates occupied space.
@@ -48,7 +48,7 @@ Interestingly, the recency and frequency policies landed on exactly the same AUC
 
 Recency pruning and frequency retention are both "ordering" policies. They assign a single rank to every item and cut from the bottom once the budget runs out. Neither checks whether two items say effectively the same thing. Semantic deduplication adds exactly one operation on top of that. Before ranking, it clusters items connected by a token-set Jaccard similarity of 0.5 or higher, and keeps only the most recent item from each cluster as the representative. After that, it ranks and cuts exactly like the recency policy. So the measured gain is not coming from "better judgment about importance," it is coming purely from removing duplicates.
 
-![AUC comparison: semantic deduplication versus the two baselines](/assets/images/posts/research/agent-memory-tiering-recall-cost/auc-comparison.png)
+![AUC comparison: semantic deduplication versus the two baselines](/assets/images/posts/research/agent-memory-tiering-recall-cost/auc-comparison.webp)
 *Semantic deduplication scored an AUC of 0.7189, a relative gain of 17.4 percent over the 0.6122 shared by the recency and frequency policies. (Measured on a CPU-only container.)*
 
 It is common for a person to point out the same correction across several sessions, each time in slightly different wording. To a human that reads as "the same thing again," but to an ordering policy it looks like three distinct items, and it claims three separate slots inside the budget. Switching from recency to frequency does not fix this either, and for the same reason: neither policy ever checks whether an item means the same thing as another item that's already kept. In the end, the axis that actually made better use of the budget was not more refined ranking, it was a single deduplication step.
@@ -57,7 +57,7 @@ It is common for a person to point out the same correction across several sessio
 
 We also examined the configuration currently running in production. This harness applies both a per-section item-count cap (12 corrections, 6 patterns, 18 total) and a character cap (900 and 700 characters respectively, 1,600 total) at the same time. Under the current configuration, with both caps active, only 18 items survive and recall lands at 0.5778. But when we removed the item-count limit and kept only the same 1,600 character budget, all 45 items survived and recall reached 1.0.
 
-![Production configuration ablation: item-count cap versus character cap](/assets/images/posts/research/agent-memory-tiering-recall-cost/production-ablation.png)
+![Production configuration ablation: item-count cap versus character cap](/assets/images/posts/research/agent-memory-tiering-recall-cost/production-ablation.webp)
 *The item-count cap currently in place keeps only 18 of 45 items, landing at a recall of 0.5778, but removing the item-count cap and applying only the combined character budget keeps all 45 items and reaches a recall of 1.0. (Measured on a CPU-only container.)*
 
 The numbers make the cause obvious. The current corpus totals 1,594 characters, which sits almost exactly at the combined character budget of 1,600. In other words, at this corpus size the character cap is effectively cutting nothing, while the item-count cap has already trimmed 27 items before it. Treating the two caps as a kind of "double safety net" and running them together is a common design, but this result shows that assumption is wrong. Which cap binds first depends not on corpus size but on the average length of an item. This corpus runs short, at roughly 35 characters per item on average, so the item-count cap (which allows roughly 89 characters per item) binds well before the character cap does. In a corpus with longer, more descriptive items, that relationship could flip immediately. The paper is also explicit that this result is specific to the current corpus size (1,594 characters): once the corpus grows past 1,600 characters, the character cap would actually start to bind.

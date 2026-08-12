@@ -26,7 +26,7 @@ audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
-![Illustration of the core idea of Fable 5 Prompts Differently: Four Shifts From Anthropic's Official Guide](/assets/images/anthropic-fable5-prompting-guide-hero.png)
+![Illustration of the core idea of Fable 5 Prompts Differently: Four Shifts From Anthropic's Official Guide](/assets/images/anthropic-fable5-prompting-guide-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Overview

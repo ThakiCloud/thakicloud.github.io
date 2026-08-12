@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 
 ![값싼 토큰이 홍수처럼 쏟아질수록 그 아래 추론 인프라의 몸값은 위로 치솟는 구조를 나타낸 개념도]({{ '/assets/images/token-price-war-jevons-paradox-inference-hero.webp' | relative_url }})
 
-![토큰값이 반토막 나던 주에, 추론 칩 몸값은 다섯 배 뛰었습니다 개념을 형상화한 이미지](/assets/images/token-price-war-jevons-paradox-inference-hero.png)
+![토큰값이 반토막 나던 주에, 추론 칩 몸값은 다섯 배 뛰었습니다 개념을 형상화한 이미지](/assets/images/token-price-war-jevons-paradox-inference-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 같은 주에 도착한 두 개의 정반대 뉴스
@@ -404,11 +404,11 @@ ThakiCloud의 Paxis는 정확히 그 수도관을 겨냥한 정식 제품, Agent
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![token-price-war-jevons-paradox-inference 슬라이드 1](/assets/images/token-price-war-jevons-paradox-inference-slide-01.png)
+![token-price-war-jevons-paradox-inference 슬라이드 1](/assets/images/token-price-war-jevons-paradox-inference-slide-01.webp)
 
-![token-price-war-jevons-paradox-inference 슬라이드 2](/assets/images/token-price-war-jevons-paradox-inference-slide-02.png)
+![token-price-war-jevons-paradox-inference 슬라이드 2](/assets/images/token-price-war-jevons-paradox-inference-slide-02.webp)
 
-![token-price-war-jevons-paradox-inference 슬라이드 3](/assets/images/token-price-war-jevons-paradox-inference-slide-03.png)
+![token-price-war-jevons-paradox-inference 슬라이드 3](/assets/images/token-price-war-jevons-paradox-inference-slide-03.webp)
 
-![token-price-war-jevons-paradox-inference 슬라이드 4](/assets/images/token-price-war-jevons-paradox-inference-slide-04.png)
+![token-price-war-jevons-paradox-inference 슬라이드 4](/assets/images/token-price-war-jevons-paradox-inference-slide-04.webp)
 

@@ -26,7 +26,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/bitwise-parity-linear
 
 This is for anyone running on-policy RL post-training whose reward curve moves differently across runs of the same configuration, and for platform owners who need to know what picking a training stack and a serving stack separately will bill them later. The conclusion first: a large share of that instability comes not from hyperparameters but from the fact that **your training kernels and your inference kernels emit different bits for the same input**. The vLLM and TorchTitan teams audited every kernel invocation in the forward pass and closed that gap, and once KL divergence was always zero the model reached a higher total reward in fewer steps. That parity does not yet cover every architecture. It is still blocked on linear attention families like Gated DeltaNet, and the reason is not neglect. It is the recurrent state itself.
 
-![A blue ribbon and an amber ribbon running side by side and converging into a single white line](/assets/images/bitwise-parity-linear-attention-hero.png)
+![A blue ribbon and an amber ribbon running side by side and converging into a single white line](/assets/images/bitwise-parity-linear-attention-hero.webp)
 *Two paths, training and inference, converging on the same numerics. One is smooth, the other is broken into chunks.*
 
 ## Overview

@@ -25,7 +25,7 @@ Teams that ship agents to production hit a common wall. The traces pile up fine,
 
 This post is for platform engineers who run agents on real user traffic and own their quality, and for anyone designing an agent evaluation system. Conclusion first: **the point of Trace Intelligence is not a prettier trace viewer but moving the unit of observation from the individual trace to the theme.** A single trace tells you what happened in one session. Cluster several hundred and you get what users repeatedly ask for and where your agent repeatedly fails. The second question is the one that turns into a product decision. That said, it is in private beta with a minimum trace requirement, so read through the limits section before deciding to adopt.
 
-![Abstract image of many faint threads flowing downward and merging into a few thick streams](/assets/images/mastra-trace-intelligence-agent-traces-hero.png)
+![Abstract image of many faint threads flowing downward and merging into a few thick streams](/assets/images/mastra-trace-intelligence-agent-traces-hero.webp)
 
 *Individual traces are scattered lines; clustered themes are the thick flows they merge into.*
 

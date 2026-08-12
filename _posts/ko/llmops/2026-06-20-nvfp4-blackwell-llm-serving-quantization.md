@@ -134,11 +134,11 @@ Blackwell 하드웨어에 대한 접근이 생기기 시작했다면 NVFP4 전�
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 1]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.png' | relative_url }})
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 1]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.webp' | relative_url }})
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 2]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.png' | relative_url }})
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 2]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.webp' | relative_url }})
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 3]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.png' | relative_url }})
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 3]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.webp' | relative_url }})
 
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 4]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.png' | relative_url }})
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 4]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.webp' | relative_url }})
 

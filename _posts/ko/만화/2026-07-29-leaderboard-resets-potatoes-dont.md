@@ -13,14 +13,14 @@ tags:
   - satire
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/leaderboard-resets-potatoes-dont/strip.png
+image: /assets/images/posts/만화/leaderboard-resets-potatoes-dont/strip.webp
 ---
 
 이번 주 타임라인을 가장 크게 흔든 건 순위표 하나였습니다. 지난 90일 동안 X에서 팔로워가 가장 빠르게 늘어난 스타트업을 줄 세운 표였죠.
 여기서 성장의 기준은 딱 하나, 팔로워 증가율입니다. 매출도 아니고 실제로 제품을 쓰는 사람 수도 아닙니다. 이렇게 진짜 성과 대신 재기 쉬운 숫자를 세워두는 것을 대리 지표(proxy metric)라고 부릅니다.
 문제는 이 지표의 눈금을 우리가 쥐고 있지 않다는 데 있어요. 노출 알고리즘이 바뀌면 어제의 1등이 오늘 중간으로 내려앉습니다. 안데스 계단밭 위에서 유진과 파시스, 메티스가 그 눈금을 직접 올라가 봤습니다.
 
-![순위표는 리셋, 감자는 남았다](/assets/images/posts/만화/leaderboard-resets-potatoes-dont/strip.png)
+![순위표는 리셋, 감자는 남았다](/assets/images/posts/만화/leaderboard-resets-potatoes-dont/strip.webp)
 
 > 원 뉴스: [RT @benln: Pulled the fastest-growing startups on X by follower growth over last 90 days: https://t.co/RTy5umq7QO](https://x.com/hjguyhan/status/2081867551878070739) · twitter
 

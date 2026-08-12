@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/rule2drc-drc-llm-ag
 
 If you are an engineer who wants to automate the verification of the thousands of design rules a chip must satisfy before mass production, this post is for you. Here is the conclusion first. Rule2DRC (arXiv:2605.15669, from Prof. Hyun Oh Song's group at Seoul National University and Samsung AI Center, ICML 2026) is a large-scale benchmark that scores LLM agents translating natural-language design rules into executable DRC verification scripts by whether the scripts actually run and pass in a verification engine, not by how closely the code resembles a reference. On top of that, the team built a layout-native agent GUI app that can be deployed inside Samsung's secure intranet. It is worth watching as a signal that domain-specific agents are entering industrial settings where regulation and security are strict.
 
-![An abstract image depicting natural-language design rules flowing into executable verification code](/assets/images/rule2drc-drc-llm-agent-benchmark-hero.png)
+![An abstract image depicting natural-language design rules flowing into executable verification code](/assets/images/rule2drc-drc-llm-agent-benchmark-hero.webp)
 *A visualization of layout grid patterns flowing into structured verification logic.*
 
 ## Why Read This

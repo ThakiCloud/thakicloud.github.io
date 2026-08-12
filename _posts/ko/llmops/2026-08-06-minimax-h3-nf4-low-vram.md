@@ -21,7 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/minimax-h3-nf4-low-vr
 
 오픈웨이트 모델이 공개되면 며칠 안에 양자화본이 따라 나옵니다. MiniMax-H3도 그랬습니다. ModelScope가 4비트 양자화본을 DiffSynth-Studio와 묶어 공개하면서 최소 8GB VRAM으로 돌릴 수 있다고 알렸고, 맥에서도 된다는 말이 붙었습니다. 영상 생성 모델 하나가 게이밍 그래픽카드에 들어간다는 이야기라 눈길이 갑니다. 그래서 파일 목록을 열어 실제 용량을 재 봤습니다. 숫자를 맞춰 보니 이야기의 주인공이 양자화가 아니라는 것이 드러났습니다.
 
-![거대한 층상 구조가 좁은 통로를 지나 작은 결정체로 압축되는 추상 이미지](/assets/images/minimax-h3-nf4-low-vram-hero.png)
+![거대한 층상 구조가 좁은 통로를 지나 작은 결정체로 압축되는 추상 이미지](/assets/images/minimax-h3-nf4-low-vram-hero.webp)
 
 *압축은 절반의 이야기이고, 나머지 절반은 한 번에 하나씩 흘려보내는 방식에 있습니다.*
 
@@ -152,7 +152,7 @@ HuggingFace 파일 매니페스트 API로 두 저장소의 safetensors 바이트
 
 양자화본 `DiffSynth-Studio/MiniMax-H3-NF4`는 safetensors 5개에 48.01GiB이고, 파일 이름을 보면 번들이 아니라 단품에 대응합니다.
 
-![역할별 bf16 단품 대비 NF4 용량과 8GB VRAM 대비 격차를 보여 주는 차트](/assets/images/minimax-h3-nf4-low-vram-results.png)
+![역할별 bf16 단품 대비 NF4 용량과 8GB VRAM 대비 격차를 보여 주는 차트](/assets/images/minimax-h3-nf4-low-vram-results.webp)
 
 *왼쪽은 중복을 제거한 역할별 실측 용량이고, 오른쪽은 양자화본과 요구 VRAM 사이에 남은 거리입니다.*
 

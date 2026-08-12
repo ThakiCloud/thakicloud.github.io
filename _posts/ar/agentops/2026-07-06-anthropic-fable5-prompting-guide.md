@@ -27,7 +27,7 @@ audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![Fable 5 يحتاج أسلوب برمجة أوامر مختلفًا: التحولات الأربعة التي يطرحها دليل Anthropic الرسمي 개념을 형상화한 이미지](/assets/images/anthropic-fable5-prompting-guide-hero.png)
+![Fable 5 يحتاج أسلوب برمجة أوامر مختلفًا: التحولات الأربعة التي يطرحها دليل Anthropic الرسمي 개념을 형상화한 이미지](/assets/images/anthropic-fable5-prompting-guide-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## نظرة عامة
@@ -39,7 +39,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ![صورة تجريدية تعبّر عن التحول في أسلوب برمجة الأوامر للعملاء المستقلين طويلي الأمد]({{ '/assets/images/anthropic-fable5-prompting-guide-hero.webp' | relative_url }})
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/anthropic-fable5-prompting-guide/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/anthropic-fable5-prompting-guide/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ما هو هذا الدليل؟
@@ -427,7 +427,7 @@ if something is not yet verified, say so.
 قيمة هذا الدليل لا تكمن في عبارة سحرية جديدة، بل في تحوّل في الموقف تجاه التعامل مع نموذج أقوى: امنحه هامشًا للحكم بدلًا من إضافة مزيد من الضبط، ثم تحقق من ذلك الحكم بالأدلة، ووازِه عبر التفويض. ومن منظور من يُشغّل فعليًا عملاء مستقلين طويلي الأمد، هذا ليس شعارًا رائجًا، بل إعادة ترتيب لقواعد التشغيل ذاتها.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/anthropic-fable5-prompting-guide/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/anthropic-fable5-prompting-guide/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## المصادر

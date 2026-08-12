@@ -22,7 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/deepseek-v4-flash-api
 
 أوّل رقم ينظر إليه الناس في إعلان نموذج هو عدد المعاملات عادةً. لكن حين تصبح أنت من عليه وضع ذلك النموذج على وحدات المعالجة الرسومية لديك، يصير رقم آخر أهمّ بكثير. ونموذج DeepSeek-V4-Flash، الذي فُتح للتجربة العامّة في 31 يوليو 2026، مثال جيّد لشرح الفارق. الإجمالي 284 مليارًا، وما يشتغل فعليًا لإنتاج رمز واحد هو 13 مليارًا.
 
-![صورة تجريدية لشبكة عقد كثيفة لا يضيء منها إلّا مسار متفرّق يوحي بتوجيه الخبراء المتناثر](/assets/images/deepseek-v4-flash-api-public-beta-hero.png)
+![صورة تجريدية لشبكة عقد كثيفة لا يضيء منها إلّا مسار متفرّق يوحي بتوجيه الخبراء المتناثر](/assets/images/deepseek-v4-flash-api-public-beta-hero.webp)
 
 *يبقى أغلبه مطفأً ولا يضيء إلّا جزء منه. هذا هو توجيه الخبراء المتناثر في صورة واحدة.*
 
@@ -52,7 +52,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ar/llmops/deepseek-v4-flash-api
 
 بحسب التغطية الصحفية الناقلة للإعلان، جاءت نتائج الإصدار الرسمي كما يلي.
 
-![مخطّط أعمدة لنتائج معايير الوكلاء لإصدار DeepSeek-V4-Flash الرسمي](/assets/images/deepseek-v4-flash-api-public-beta-results-en.png)
+![مخطّط أعمدة لنتائج معايير الوكلاء لإصدار DeepSeek-V4-Flash الرسمي](/assets/images/deepseek-v4-flash-api-public-beta-results-en.webp)
 
 *أرقام معلنة من المطوّر كما نقلتها التغطية الصحفية، ولم تُعَد قياسًا بشكل مستقلّ.*
 

@@ -32,7 +32,7 @@ toc: true
 
 제안하는 앙상블 라우터는 기존 검색 점수를 투표자 1번으로 그대로 유지하고, 여기에 값싼 모델 티어 분류기들을 투표자 2, 3, …으로 추가하는 구조입니다. 각 투표자는 후보 스킬 집합과 "이 요청엔 스킬이 필요 없다"는 기권 옵션까지 포함한 확률분포를 반환하고, 신뢰도 신호도 함께 냅니다. 이 분포들은 신뢰도로 변조된 소프트맥스 가중치로 합쳐집니다.
 
-![Ensemble Voting Router: Architecture and Vote Flow](/assets/images/posts/research/ensemble-tier-voting-skill-router/fig-architecture.png)
+![Ensemble Voting Router: Architecture and Vote Flow](/assets/images/posts/research/ensemble-tier-voting-skill-router/fig-architecture.webp)
 *질의는 후보 집합 Cm(m=8)으로 좁혀져 들어옵니다. 투표자 1은 무료인 하이브리드 검색 신호이고, 투표자 2부터 K까지는 모델 티어 분류기입니다. 이들을 신뢰도 가중 소프트맥스로 합치고 기권 임계값을 적용합니다. 실측이 아닌 개념도로, 실제 벤치마크 결과를 반영한 그림은 아닙니다.*
 
 이 설계에서 두 가지 결정이 의도적입니다. 첫째, 검색 신호를 대체가 아니라 추가로만 씁니다. 이 신호는 이미 매 질의마다 무료로 계산되고 있고, 측정된 단일 신호 중 파레토 최적이며, LLM 투표자와 구조적으로 완전히 다른 종류의 실패 양상을 갖기 때문입니다. 무료이고 최적이고 구조적으로 다른 신호를 굳이 버리고 유료 신호로 대체할 이유가 없다는 게 논문의 판단입니다. 둘째, 균등 다수결이 아니라 신뢰도 가중을 씁니다. 훈련 데이터와 아키텍처를 공유하는 모델들을 단순 다수결로 묶으면 오류가 상쇄되지 않고 오히려 증폭된다는 반증 사례가 있기 때문에, 강한 투표자가 더 큰 가중치를 갖도록 설계했습니다. 검색 신호의 가중치는 구조적으로 0 밑으로 떨어지지 않도록 하한이 걸려 있어서, 극단적인 경우 현재 프로덕션 동작으로 되돌리는 것도 파라미터 하나만 바꾸면 됩니다.
@@ -43,10 +43,10 @@ toc: true
 
 이 비용을 정당화하려면 얼마만큼의 정확도 향상이 필요한지 계산할 수 있습니다. 오답 하나를 정답으로 되돌리는 가치를 하이쿠 호출 20회 또는 50회로 보수적으로 잡으면, 하이쿠 투표자 하나를 추가하는 방안은 Top-1 정확도가 5.0퍼센트포인트(보수적 기준) 또는 2.0퍼센트포인트(관대한 기준)만 올라도 본전을 뽑습니다. 반면 하이쿠+소네트를 상시로 붙이는 방안은 25.0퍼센트포인트가 필요한데, 이는 이 시스템에서 BM25 단일 신호를 하이브리드로 바꿨을 때 얻은 역대 최대 개선폭(20.0퍼센트포인트)보다도 큽니다. 즉 "값싼 투표자 하나 추가"는 현실적인 요구 수준이지만, "중간 티어를 상시로 붙이는" 방안은 지금까지 이 시스템에서 어떤 단일 변경도 달성하지 못한 개선을 요구하는 셈입니다.
 
-![Required Top-1 Improvement to Clear Cost Breakeven](/assets/images/posts/research/ensemble-tier-voting-skill-router/fig-breakeven.png)
+![Required Top-1 Improvement to Clear Cost Breakeven](/assets/images/posts/research/ensemble-tier-voting-skill-router/fig-breakeven.webp)
 *두 가지 오답 회복 가치 가정(감마=20, 감마=50) 아래 각 팔이 손익분기를 넘기기 위해 필요한 Top-1 정확도 향상폭입니다. 실측이 아닌 분석 모델로, 하이쿠 1배·소네트 4배·오퍼스 19배의 티어별 토큰 비용비를 식(3)에 대입해 도출했습니다. 에스컬레이션 팔(D)은 불일치율 10%를 가정합니다.*
 
-![Marginal Cost Per Query by Arm](/assets/images/posts/research/ensemble-tier-voting-skill-router/fig-cost-comparison.png)
+![Marginal Cost Per Query by Arm](/assets/images/posts/research/ensemble-tier-voting-skill-router/fig-cost-comparison.webp)
 *무료인 프로덕션 기준선 대비 각 투표 방안이 추가로 쓰는 토큰 비용(하이쿠 호출 단위)입니다. 에스컬레이션 팔(D)의 비용은 불일치율에 따라 달라지는 확률적 값이라 불일치율 10%(=2.9단위) 기준으로 표시했으며, 상시 팔 B·C와 비교됩니다. 지연시간 비용은 포함되지 않았습니다.*
 
 이 비용 모델은 동시에 이 시스템에서 이미 측정된 두 가지 위험을 명시적으로 끌어옵니다. 첫 번째는 밴딧 재보정이 보였던 실패 패턴입니다. Top-1만 최적화하도록 튜닝하면 기권 확률이 줄어들고, 그 결과 환각률이 조용히 올라갑니다. 그래서 환각률은 트레이드오프 대상이 아니라 현재 값(0.0%)에 고정된 제약으로 다뤄야 한다고 못박습니다. 두 번째는 콩도르세식 표 희석입니다. 개별 투표자의 정확도가 문턱 아래로 떨어지면 투표자를 더할수록 결과가 오히려 나빠지므로, 앙상블을 조립하기 전에 각 후보 투표자의 단독 정확도를 반드시 측정해야 한다는 사전조건을 못박습니다.

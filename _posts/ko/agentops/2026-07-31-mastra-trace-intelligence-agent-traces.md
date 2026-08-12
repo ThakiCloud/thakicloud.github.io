@@ -27,7 +27,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 에이전트를 실제 사용자 트래픽에 올려 두고 그 품질을 책임져야 하는 플랫폼 엔지니어와, 에이전트 평가 체계를 설계하고 계신 분을 위해 썼습니다. 결론부터 말씀드리면, **Trace Intelligence의 핵심은 트레이스 뷰어를 더 예쁘게 만든 것이 아니라 관측의 단위를 개별 트레이스에서 테마로 옮긴 것입니다.** 트레이스 하나는 "이 세션에서 무슨 일이 있었나"만 알려 주지만, 수백 건을 군집화하면 "사용자들이 반복해서 요구하는 것이 무엇이고 우리 에이전트가 반복해서 실패하는 지점이 어디인가"가 나옵니다. 뒤쪽 질문이 제품 결정으로 이어지는 질문입니다. 다만 프라이빗 베타이고 최소 트레이스 요구량이 있어서, 도입 판단은 이 글의 한계 절까지 읽고 하시는 편이 좋습니다.
 
-![수많은 흐릿한 실선이 아래로 흐르다 몇 개의 굵은 흐름으로 합류하는 추상 이미지](/assets/images/mastra-trace-intelligence-agent-traces-hero.png)
+![수많은 흐릿한 실선이 아래로 흐르다 몇 개의 굵은 흐름으로 합류하는 추상 이미지](/assets/images/mastra-trace-intelligence-agent-traces-hero.webp)
 
 *개별 트레이스는 흩어진 선이고, 군집화된 테마는 그 선들이 합류한 굵은 흐름입니다.*
 
@@ -146,13 +146,13 @@ Trace Intelligence가 하는 일은 그 축을 사후에 만들어 내는 것입
 
 본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
 
-![mastra-trace-intelligence-agent-traces 슬라이드 1](/assets/images/mastra-trace-intelligence-agent-traces-slide-01.png)
+![mastra-trace-intelligence-agent-traces 슬라이드 1](/assets/images/mastra-trace-intelligence-agent-traces-slide-01.webp)
 
-![mastra-trace-intelligence-agent-traces 슬라이드 2](/assets/images/mastra-trace-intelligence-agent-traces-slide-02.png)
+![mastra-trace-intelligence-agent-traces 슬라이드 2](/assets/images/mastra-trace-intelligence-agent-traces-slide-02.webp)
 
-![mastra-trace-intelligence-agent-traces 슬라이드 3](/assets/images/mastra-trace-intelligence-agent-traces-slide-03.png)
+![mastra-trace-intelligence-agent-traces 슬라이드 3](/assets/images/mastra-trace-intelligence-agent-traces-slide-03.webp)
 
-![mastra-trace-intelligence-agent-traces 슬라이드 4](/assets/images/mastra-trace-intelligence-agent-traces-slide-04.png)
+![mastra-trace-intelligence-agent-traces 슬라이드 4](/assets/images/mastra-trace-intelligence-agent-traces-slide-04.webp)
 
 ## 출처
 

@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/codex-imagegen-skill-procedure/"
 ---
 
-![Abstract image of a diffuse cloud of light funneled through geometric gates and emerging as a sharp crystal](/assets/images/codex-imagegen-skill-procedure-hero.png)
+![Abstract image of a diffuse cloud of light funneled through geometric gates and emerging as a sharp crystal](/assets/images/codex-imagegen-skill-procedure-hero.webp)
 *Attaching a capability and defining a procedure are different jobs.*
 
 ## Why read this
@@ -105,7 +105,7 @@ As a control we also computed a binary matte using a single threshold, so we cou
 
 These are measurements on one 1536x1024 image, roughly 1.57 million pixels.
 
-![Three bar charts showing fringe removal, per-stage timing, and output size by format](/assets/images/codex-imagegen-skill-procedure-results.png)
+![Three bar charts showing fringe removal, per-stage timing, and output size by format](/assets/images/codex-imagegen-skill-procedure-results.webp)
 *Fringe removal, per-stage wall time, and output size by format, side by side.*
 
 The first thing we checked was boundary quality. The binary matte cut with a single threshold left 2,376 pixels that were still green inside the visible region. Applying the soft matte and despill brought that to zero, and it stayed at zero through edge contraction. The binary matte has zero partial-alpha pixels by definition, while the soft matte produced 1,929 of them, and those 1,929 pixels are what make the boundary read as a line rather than a staircase.
@@ -118,7 +118,7 @@ We measured the output formats too. Lossless WebP came in at 457.2 KB against PN
 
 One number deserves an honest caveat. Despill touched 1,033,335 pixels, 65.7 percent of the image, with a mean reduction of 167.23. That looks dramatic, but most of it is the background itself, which gets alpha zero and disappears anyway. The visible improvement came from the small subset of those pixels sitting on the boundary. Do not read that figure as the effect size of despill.
 
-![A blue mug separated onto a transparent background](/assets/images/codex-imagegen-skill-procedure-cutout.png)
+![A blue mug separated onto a transparent background](/assets/images/codex-imagegen-skill-procedure-cutout.webp)
 *The final cutout, transparent through the inside of the handle.*
 
 ## What this means for ThakiCloud

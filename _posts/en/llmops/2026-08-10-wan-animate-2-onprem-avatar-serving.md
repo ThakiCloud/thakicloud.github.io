@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/wan-animate-2-onprem-avatar-serving/"
 ---
 
-![Abstract image of a ribbon of light flowing directly into a crystalline structure](/assets/images/wan-animate-2-onprem-avatar-serving-hero.png)
+![Abstract image of a ribbon of light flowing directly into a crystalline structure](/assets/images/wan-animate-2-onprem-avatar-serving-hero.webp)
 
 ## Why read this
 
@@ -123,7 +123,7 @@ output = pipe(
 
 Let us be straightforward first. We did not run this model. The repository states its defaults are tuned for eight A800s at 720P and that 480P was tested on two A800s, which is not something a laptop reproduces. So we measured what could be measured with certainty instead. We pulled the actual file sizes the Hugging Face API reports, broke the checkpoint down by component, and divided by card capacity. Every number below comes out of that arithmetic, and none of it claims anything about speed or quality.
 
-![Wan-Animate-2 checkpoint composition and weight residency by card](/assets/images/wan-animate-2-onprem-avatar-serving-results.png)
+![Wan-Animate-2 checkpoint composition and weight residency by card](/assets/images/wan-animate-2-onprem-avatar-serving-results.webp)
 
 The DiT itself is 30.54 GiB. Add the umT5-XXL text encoder at 10.58 GiB, the CLIP vision encoder at 4.44 GiB, and the VAE at 0.73 GiB, and one working copy needs 46.29 GiB of weights. Notice that the three encoders account for 15.76 GiB, a third of the total. If you plan to run multiple instances, sharing the encoder stack pays off immediately at that size.
 

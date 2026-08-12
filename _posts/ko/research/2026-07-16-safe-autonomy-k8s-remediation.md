@@ -40,14 +40,14 @@ categories:
 
 이 위험도 점수가 임계값 아래면 자율조치, 그 이상이면 사람에게 넘기는 단순한 결정 규칙 위에서, 파국적 방치율을 2% 이하로 묶는 안전 상한선을 걸고 임계값을 훑었습니다. 그 결과 얻어진 전역 최적 임계값(τ=0.325)은 파국적 방치가 전혀 없는 상태에서 MTTR을 41.7% 줄였고, 이는 항상 에스컬레이션과 항상 자율조치라는 두 극단을 모두 지배하는 지점이었습니다.
 
-![MTTR-vs-Safety Pareto Frontier]({{ '/assets/images/posts/research/safe-autonomy-k8s-remediation/pareto-frontier.png' | relative_url }})
+![MTTR-vs-Safety Pareto Frontier]({{ '/assets/images/posts/research/safe-autonomy-k8s-remediation/pareto-frontier.webp' | relative_url }})
 *임계값 τ가 0.35를 넘어서면 파국적 방치율(실선)이 가파르게 치솟는 반면, 불필요한 에스컬레이션율(점선)은 계속 낮아집니다. 삼각형으로 표시된 전역 최적점(τ=0.325)에서 파국적 방치 없이 MTTR을 41.7% 줄였습니다. AI Platform Demo 클러스터의 로컬 벤치마크(176개 합성 인시던트 이벤트)로 측정한 결과이며, 자율조치 지연은 40초, 에스컬레이션 지연은 1200초로 가정했습니다.*
 
 ## 진짜 핵심: 인시던트 유형별로 임계값을 따로 잡아야 한다
 
 논문의 중심 발견은 여기서 한 걸음 더 나아갑니다. 인시던트 유형마다 폭발반경과 테넌트 노출도가 크게 다르기 때문에, 하나의 전역 임계값으로는 이 차이를 담아낼 수 없다는 것입니다. 네 가지 유형별로 안전 상한선(2%)을 유지하면서 각각 최적 임계값을 따로 계산했더니, 노드 압박은 보수적인 τ=0.30(28.6% 개선), PVC 실패는 τ=0.35(43.9% 개선), 스케줄러 기아는 τ=0.45(39.5% 개선), OOM은 훨씬 관대한 τ=0.475(96.7% 개선)로 서로 크게 갈렸습니다. 이 네 유형의 개선율을 평균 내면 52.2%로, 단일 전역 임계값을 모든 유형에 똑같이 적용했을 때의 41.7%보다 약 10.4%포인트 더 높습니다. 같은 안전 상한선을 지키면서도 유형별로 임계값을 나눠 잡는 것만으로 그만큼의 자율성을 추가로 확보할 수 있다는 뜻입니다.
 
-![Per-Incident-Type MTTR Reduction Under 2% Safety Ceiling]({{ '/assets/images/posts/research/safe-autonomy-k8s-remediation/per-type-mttr-reduction.png' | relative_url }})
+![Per-Incident-Type MTTR Reduction Under 2% Safety Ceiling]({{ '/assets/images/posts/research/safe-autonomy-k8s-remediation/per-type-mttr-reduction.webp' | relative_url }})
 *인시던트 유형별로 임계값을 따로 보정하면 평균 52.2%의 MTTR 개선을 얻어, 단일 전역 임계값의 41.7%를 웃돕니다. 유형마다 폭발반경과 테넌트 노출도가 다르기 때문입니다. 같은 로컬 벤치마크에서 측정했으며, OOM은 이 기준표에서 위험 라벨이 붙은 액션이 하나도 없어 유독 관대한 임계값(τ=0.475)을 쓸 수 있었습니다.*
 
 이 격차가 생기는 이유는 명확합니다. 전역 임계값은 가장 위험한 유형(노드 압박이나 테넌트를 넘나드는 스케줄러·PVC 조치)까지 안전 상한선 안에 묶어두려다 보니 보수적으로 잡힐 수밖에 없고, 그 대가는 원래 훨씬 더 자율적으로 돌아도 괜찮았을 유순한 유형들이 함께 치르게 됩니다. 유형별 보정은 이 결합을 풀어냅니다. 실무적으로 보면, 자율 운영 플랫폼이 "위험 허용치" 하나짜리 전역 손잡이만 노출하는 대신, 각 인시던트 클래스가 가진 되돌릴 수 있는 정도와 테넌트 경계 프로필에 맞춰 에스컬레이션 임계값을 따로 잡아야 한다는 설계 시사점으로 이어집니다.

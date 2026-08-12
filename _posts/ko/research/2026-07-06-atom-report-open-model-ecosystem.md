@@ -406,13 +406,13 @@ ATOM 리포트(arXiv 2604.07190, 2026년 4월 8일 공개)는 바로 이 질문�
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![atom-report-open-model-ecosystem 슬라이드 1]({{ '/assets/images/atom-report-open-model-ecosystem-slide-01.png' | relative_url }})
+![atom-report-open-model-ecosystem 슬라이드 1]({{ '/assets/images/atom-report-open-model-ecosystem-slide-01.webp' | relative_url }})
 
-![atom-report-open-model-ecosystem 슬라이드 2]({{ '/assets/images/atom-report-open-model-ecosystem-slide-02.png' | relative_url }})
+![atom-report-open-model-ecosystem 슬라이드 2]({{ '/assets/images/atom-report-open-model-ecosystem-slide-02.webp' | relative_url }})
 
-![atom-report-open-model-ecosystem 슬라이드 3]({{ '/assets/images/atom-report-open-model-ecosystem-slide-03.png' | relative_url }})
+![atom-report-open-model-ecosystem 슬라이드 3]({{ '/assets/images/atom-report-open-model-ecosystem-slide-03.webp' | relative_url }})
 
-![atom-report-open-model-ecosystem 슬라이드 4]({{ '/assets/images/atom-report-open-model-ecosystem-slide-04.png' | relative_url }})
+![atom-report-open-model-ecosystem 슬라이드 4]({{ '/assets/images/atom-report-open-model-ecosystem-slide-04.webp' | relative_url }})
 
 ## 출처
 

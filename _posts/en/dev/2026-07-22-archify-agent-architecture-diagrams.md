@@ -22,7 +22,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/archify-agent-architecture-diagrams/"
 ---
 
-![An abstract image depicting many boxes and connecting lines converging into a single tidy grid structure]({{ '/assets/images/archify-agent-architecture-diagrams-hero.png' | relative_url }})
+![An abstract image depicting many boxes and connecting lines converging into a single tidy grid structure]({{ '/assets/images/archify-agent-architecture-diagrams-hero.webp' | relative_url }})
 
 ## Why read this
 

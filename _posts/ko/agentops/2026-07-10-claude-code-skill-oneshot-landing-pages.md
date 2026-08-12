@@ -22,7 +22,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 최근 X에서 한 개발자가 "Claude Code가 프리미엄 랜딩페이지를 한 번에 만들도록 스킬을 만들었다"며 영상 속 세 개의 사이트를 모두 원샷으로 뽑았다고 공유했습니다([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). 반응이 뜨거웠던 이유는 결과물의 완성도 때문이지만, 엔지니어 입장에서 더 흥미로운 지점은 따로 있습니다. 똑같은 모델에 똑같이 "랜딩페이지 만들어줘"라고 해도 평범한 결과가 나오는데, 스킬 하나를 얹었더니 에이전시급 페이지가 한 번에 나온다는 사실입니다. 에이전트에게 반복 작업을 맡기는 엔지니어라면, 품질을 끌어올리는 지렛대가 모델 교체가 아니라 스킬 설계에 있다는 것이 여기서 가져갈 결론입니다.
 
-![한 번에 프리미엄 랜딩페이지를 만드는 Claude Code 스킬의 구조 개념을 형상화한 이미지](/assets/images/claude-code-skill-oneshot-landing-pages-hero.png)
+![한 번에 프리미엄 랜딩페이지를 만드는 Claude Code 스킬의 구조 개념을 형상화한 이미지](/assets/images/claude-code-skill-oneshot-landing-pages-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
@@ -402,13 +402,13 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
 
 본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 1]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.png' | relative_url }})
+![claude-code-skill-oneshot-landing-pages 슬라이드 1]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.webp' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 2]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.png' | relative_url }})
+![claude-code-skill-oneshot-landing-pages 슬라이드 2]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.webp' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 3]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.png' | relative_url }})
+![claude-code-skill-oneshot-landing-pages 슬라이드 3]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.webp' | relative_url }})
 
-![claude-code-skill-oneshot-landing-pages 슬라이드 4]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.png' | relative_url }})
+![claude-code-skill-oneshot-landing-pages 슬라이드 4]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.webp' | relative_url }})
 
 ## 출처
 
