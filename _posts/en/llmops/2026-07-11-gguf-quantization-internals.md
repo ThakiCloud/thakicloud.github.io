@@ -14,7 +14,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/gguf-quantization-internals/"
 categories:
   - llmops
-published: false
 ---
 
 ![Abstract illustration of quantized neural network weights being rearranged into blocks of different sizes]({{ '/assets/images/gguf-quantization-internals-hero.png' | relative_url }})

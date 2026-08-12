@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/gpu-cluster-cost-optimiz
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 ![GPU Cluster Cost Optimization - Kueue Fair-Share, Gang Scheduling, Scale-to-Zero Architecture]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp' | relative_url }})

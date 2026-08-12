@@ -19,7 +19,6 @@ toc_icon: "microchip"
 canonical_url: "https://thakicloud.com/tech-blog/en/technique/llm-internals-learning-path/"
 categories:
   - llmops
-published: false
 ---
 
 ## Overview

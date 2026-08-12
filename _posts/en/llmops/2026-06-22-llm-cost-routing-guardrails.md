@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-cost-routing-guar
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 ![LLM Cost Routing Guardrails in Practice]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})

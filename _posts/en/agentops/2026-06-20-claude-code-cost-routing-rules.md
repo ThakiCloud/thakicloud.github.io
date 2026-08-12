@@ -22,7 +22,6 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
-published: false
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-cost-routing-rules/"
 ---
 

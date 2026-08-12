@@ -19,7 +19,6 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-tag-slack-agentic-collaboration/"
 categories:
   - agentops
-published: false
 audiobook: /assets/audio/posts/claude-tag-slack-agentic-collaboration/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

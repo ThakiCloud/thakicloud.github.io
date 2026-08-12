@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/만화/memory-to-skills-distill/strip.png
 audiobook: /assets/audio/posts/memory-to-skills-distill/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 ---
 
 에이전트의 기억은 보통 지난 작업 기록을 그때그때 꺼내 보는 참고자료에 머물렀습니다. 이번에 화제가 된 발상은 그 기억을 아예 '스킬'로 굳히자는 것입니다. 스킬이란 반복되는 일 처리 방식을 하나의 능력으로 정리해 두고 필요할 때 바로 불러 쓰는 절차를 말합니다. 매번 기록을 다시 읽는 대신, 잘 통한 방법을 능력으로 승격시켜 두는 셈이죠. 문제는 잘한 것만 스킬이 되는 게 아니라는 데 있습니다.

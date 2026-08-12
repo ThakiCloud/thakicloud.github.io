@@ -12,7 +12,6 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/build-expensive-run-cheap/"
 categories:
   - llmops
-published: false
 audiobook: /assets/audio/posts/build-expensive-run-cheap/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

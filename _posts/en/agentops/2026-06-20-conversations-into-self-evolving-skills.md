@@ -22,7 +22,6 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
-published: false
 ---
 
 ![Past conversations crystallizing into reusable skills]({{ '/assets/images/self-evolving-skills-hero.webp' | relative_url }})

@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/sakana-fugu-orchest
 reading_time: true
 categories:
   - agentops
-published: false
 ---
 
 ## 개요

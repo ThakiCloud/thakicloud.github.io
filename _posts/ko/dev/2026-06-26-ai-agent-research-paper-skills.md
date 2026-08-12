@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/ai-agent-research-paper-
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 논문 마감이 가까워지면 연구자는 같은 작업을 반복합니다. 서론을 다시 다듬고, 초록의 주장과 근거가 맞물리는지 확인하고, 리뷰어가 물고 늘어질 만한 문장을 미리 손봅니다. 이 노하우는 대개 지도교수의 머릿속이나 흩어진 메모에 있습니다. 최근 X에서 화제가 된 [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)는 바로 이 노하우를 AI 코딩 에이전트가 그대로 불러 쓸 수 있는 Skill 패키지로 묶은 오픈소스 프로젝트입니다. 핵심은 "또 하나의 프롬프트 모음"이 아니라, Codex와 Claude Code, Gemini 어디서나 같은 능력을 끼워 넣는 이식 가능한 형식이라는 점입니다.

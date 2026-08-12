@@ -20,7 +20,6 @@ toc_label: "Contents"
 toc_icon: "microchip"
 categories:
   - llmops
-published: false
 ---
 
 ## The Problem: HoL Blocking Quietly Wastes GPU Time

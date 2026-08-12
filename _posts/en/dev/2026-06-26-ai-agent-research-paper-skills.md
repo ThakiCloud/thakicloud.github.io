@@ -21,7 +21,6 @@ toc_sticky: true
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 As a paper deadline approaches, researchers repeat the same tasks: polish the introduction, verify that the abstract's claims and evidence align, and preemptively fix any sentence a reviewer might target. That expertise typically lives inside an advisor's head or scattered across notes. [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills), a recently trending open-source project on X, packages exactly that expertise into a Skill package that AI coding agents can call directly. The key distinction is that this is not yet another collection of prompts -- it is a portable format that plugs the same capability into Codex, Claude Code, and Gemini alike.

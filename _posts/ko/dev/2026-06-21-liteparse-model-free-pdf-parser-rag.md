@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/liteparse-model-free-pdf
 reading_time: true
 categories:
   - dev
-published: false
 audiobook: /assets/audio/posts/liteparse-model-free-pdf-parser-rag/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

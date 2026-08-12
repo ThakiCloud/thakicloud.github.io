@@ -13,7 +13,6 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/personal-ai-computer-onprem-vram/"
 categories:
   - llmops
-published: false
 ---
 
 지난 며칠 사이 개발자 타임라인에서 조용히 화제가 된 프로젝트가 있습니다. "Personal AI Computer", 즉 클라우드 API를 빌리는 대신 집이나 사무실에 직접 AI 컴퓨터를 조립해 오픈웨이트 모델을 온전히 내 손으로 돌리는 빌드 가이드입니다. 최대 384GB VRAM 구성까지 정리되어 있어서, "그 정도면 어떤 모델까지 로컬에서 돌아가는가"라는 실무적인 질문이 자연스럽게 따라옵니다. 이 글은 온프레미스 AI 인프라를 검토하는 엔지니어링 리더와 ML 플랫폼 팀, 그리고 로컬에서 모델을 굴려보려는 데이터 과학자를 위한 것입니다. VRAM이 실행 가능한 모델을 어떻게 결정하는지 계산으로 확인하고, 개인용 한 대를 조직 규모의 서빙으로 확장할 때 무엇이 달라지는지를 ThakiCloud의 ai-platform 관점과 함께 다룹니다.

@@ -18,7 +18,6 @@ toc_label: "목차"
 toc_icon: "cog"
 categories:
   - dev
-published: false
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/yao-meta-skill-engineering-governance/"
 ---
 

@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/gemma4-12b-qat-turboq
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 The biggest barrier to on-premises LLM serving has always been VRAM. Running a 12B model has usually meant reaching for an expensive datacenter GPU. A recent community benchmark tells a different story. It runs Gemma 4 12B with QAT (Quantization-Aware Training) and TurboQuant quantization on an **RTX 4060 8GB**, and claims to hit strong prefill throughput while still supporting long context.

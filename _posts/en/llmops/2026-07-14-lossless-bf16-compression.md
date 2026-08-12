@@ -15,7 +15,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/lossless-bf16-compression/"
 categories:
   - llmops
-published: false
 ---
 
 ![Abstract illustration of densely packed glass cubes being losslessly compacted into a smaller cluster]({{ '/assets/images/lossless-bf16-compression-hero.png' | relative_url }})

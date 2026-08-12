@@ -22,7 +22,6 @@ categories:
   - llmops
 header:
   teaser: /assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp
-published: false
 ---
 
 ![LLM inference cost structure]({{ '/assets/images/llm-inference-economics-kv-cache-moe-roofline-hero.webp' | relative_url }})

@@ -15,7 +15,6 @@ canonical_url: "https://thakicloud.com/tech-blog/dev/ollama-kubernetes-productio
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 9분

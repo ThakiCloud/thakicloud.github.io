@@ -12,7 +12,6 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/grok-4-5-opus-class-cheap/"
 categories:
   - llmops
-published: false
 ---
 
 지난 몇 분기 동안 프론티어 모델 경쟁은 벤치마크 점수 한두 점을 두고 벌어졌습니다. 그런데 2026년 7월 8일 SpaceXAI가 공개한 Grok 4.5는 질문 자체를 바꿔 놓았습니다. Opus 4.8이나 GPT-5.5와 성능이 근접한다면, 그다음에 남는 질문은 "누가 더 똑똑한가"가 아니라 "같은 일을 누가 더 싸게 끝내는가"입니다. 이 글은 인프라를 운영하며 모델 비용을 매달 결제하는 엔지니어링 리더와 AI 팀을 위한 것입니다. Grok 4.5의 공개 수치를 근거로 모델 경제학이 어떻게 이동하고 있는지, 그리고 그 흐름이 ThakiCloud 같은 멀티테넌트 추론 플랫폼에 무엇을 의미하는지 다룹니다.

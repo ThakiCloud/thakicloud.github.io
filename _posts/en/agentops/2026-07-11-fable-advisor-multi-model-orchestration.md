@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/fable-advisor-multi
 audiobook: "https://drive.google.com/file/d/1cdseXNeujQlZTRD7vIvaIpkdp7aVyFwV/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 Anyone who has used a coding agent for a while eventually arrives at a natural question. Writing a precise spec and sharply reviewing a resulting diff is a different kind of work from actually typing out code line by line, so why should the same single model have to do both? The recently released and widely discussed `fable-advisor` plugin answers this question head on. It is a cross-vendor workflow in which **Claude Fable 5 does nothing but conduct, while Grok 4.5 handles all of the actual implementation**. If your team is weighing the cost and quality of a coding agent together, this structure of splitting models by role offers a design principle you can put to use right away.

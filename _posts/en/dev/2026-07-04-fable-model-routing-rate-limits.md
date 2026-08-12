@@ -12,7 +12,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/fable-model-routing-rate-limits/"
 categories:
   - dev
-published: false
 ---
 
 ![Abstract image of multiple sized processing streams converging into one conductor node then branching out again]({{ '/assets/images/fable-model-routing-rate-limits-hero.webp' | relative_url }})

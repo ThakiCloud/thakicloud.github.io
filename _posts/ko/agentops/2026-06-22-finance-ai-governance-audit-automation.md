@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/finance-ai-governan
 reading_time: true
 categories:
   - agentops
-published: false
 ---
 
 ![금융권 AI 거버넌스와 감사 자동화]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})

@@ -19,7 +19,6 @@ toc_label: 보이지 않는 청구서의 해부
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agent-cost-observability-billing-crisis/"
-published: false
 ---
 
 이 글은 조직에 Claude Code나 AI 에이전트를 도입하려는 플랫폼·인프라 담당자, 그리고 다음 달 AI 청구서를 설명해야 하는 재무·구매 담당자를 위해 썼습니다. 결론을 먼저 말씀드리면, 최근 한 달 동안 쏟아진 AI 비용 뉴스는 "AI가 비싸다"는 이야기가 아닙니다. 진짜 문제는 **청구서가 무엇에 대한 것인지 설명해 주지 않는다**는 데 있습니다. 한 번의 사용자 요청이 수십에서 수백 번의 모델 호출과 도구 실행, 그리고 실패 시 자동 재시도로 번지는 에이전트 구조에서, 최종 금액만으로는 어느 루프에서 돈이 샜는지 알 수가 없습니다. 저희는 이 관측 공백이야말로 지금 시장이 겪는 통증의 핵심이라고 봅니다.

@@ -19,7 +19,6 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable5-agentic-coding/"
 categories:
   - agentops
-published: false
 ---
 
 ## 개요

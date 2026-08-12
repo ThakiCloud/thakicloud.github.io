@@ -20,7 +20,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/bonsai-27b-ternary-1bit-quantization/"
 categories:
   - llmops
-published: false
 ---
 
 ## Overview

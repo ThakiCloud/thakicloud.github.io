@@ -21,7 +21,6 @@ categories:
   - llmops
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-guardrail-refusal-tradeoff/"
-published: false
 ---
 
 Most security practitioners have had this experience at least once: you paste a penetration-testing script into a chatbot to get it reviewed, and all you get back is "I can't help with this request." Even though the work is a legitimate defensive effort to find and fix a vulnerability, the model shuts the door the moment it hears "cybersecurity." In July 2026, the release of Kimi K3, a new model from the open-weight camp, put this exact issue back at the center of debate. One investor claimed K3 fixed several security bugs that closed coding tools had refused to touch because of their "cyber guardrails." That specific claim is unverified, but the question underneath it is real: **who should hold the power to decide what a model refuses?**

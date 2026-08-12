@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/claude-code-router-on
 reading_time: true
 categories:
   - llmops
-published: false
 audiobook: /assets/audio/posts/claude-code-router-onprem-routing/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

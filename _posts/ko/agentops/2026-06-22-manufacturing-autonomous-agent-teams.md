@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/manufacturing-auton
 reading_time: true
 categories:
   - agentops
-published: false
 audiobook: /assets/audio/posts/manufacturing-autonomous-agent-teams/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

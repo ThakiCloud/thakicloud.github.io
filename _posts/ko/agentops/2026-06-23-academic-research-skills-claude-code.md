@@ -21,7 +21,6 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/ko/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
-published: false
 ---
 
 ![연구 조립 라인을 추상화한 이미지]({{ '/assets/images/academic-research-skills-claude-code-hero.webp' | relative_url }})

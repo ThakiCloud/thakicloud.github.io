@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-rtx4090-on-pr
 reading_time: true
 categories:
   - llmops
-published: false
 audiobook: /assets/audio/posts/glm-5-2-rtx4090-on-premise-serving/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/finance-ai-governan
 reading_time: true
 categories:
   - agentops
-published: false
 ---
 
 ![AI Governance and Audit Automation in Financial Services]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})

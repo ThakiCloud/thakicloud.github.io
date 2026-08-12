@@ -20,7 +20,6 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kimi-k3-benchmark-trust-overfit/"
-published: false
 ---
 
 새 모델이 나올 때마다 가장 먼저 눈에 들어오는 것은 표 한 장입니다. 벤치마크 점수가 나란히 찍힌 그 표를 보고 우리는 "이 모델이 그 모델보다 낫다"고 빠르게 결론을 내립니다. 그런데 2026년 7월, Moonshot AI가 오픈웨이트 역사상 가장 큰 모델인 Kimi K3를 공개하자마자 이 습관에 제동을 거는 논쟁이 함께 터졌습니다. 점수는 분명히 최상위권인데, 곧바로 "벤치마크에 과적합된 것 아니냐"는 의심이 따라붙은 것입니다.

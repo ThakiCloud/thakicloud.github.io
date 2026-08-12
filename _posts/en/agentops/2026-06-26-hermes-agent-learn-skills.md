@@ -20,7 +20,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/hermes-agent-learn-skills/"
 categories:
   - agentops
-published: false
 ---
 
 ![Skill authoring process depicted as scattered document fragments converging into a single structured crystal]({{ '/assets/images/hermes-agent-learn-skills-hero.webp' | relative_url }})

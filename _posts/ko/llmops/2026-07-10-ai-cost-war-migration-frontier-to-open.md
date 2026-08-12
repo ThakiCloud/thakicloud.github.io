@@ -13,7 +13,6 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ai-cost-war-migration-frontier-to-open/"
 categories:
   - llmops
-published: false
 ---
 
 ![프론티어 API에서 오픈 모델로 이전하는 흐름을 표현한 추상 일러스트]({{ '/assets/images/ai-cost-war-migration-frontier-to-open-hero.png' | relative_url }})

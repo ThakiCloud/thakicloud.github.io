@@ -19,7 +19,6 @@ toc_icon: "microchip"
 canonical_url: "https://thakicloud.com/tech-blog/ko/technique/dual-pool-token-budget-routing-vllm-kueue/"
 categories:
   - llmops
-published: false
 ---
 
 ## 문제: HoL 블로킹이 GPU 시간을 조용히 낭비합니다
