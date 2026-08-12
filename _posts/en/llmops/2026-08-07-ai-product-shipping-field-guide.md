@@ -117,3 +117,8 @@ Evaluation, deployment, failure handling, and observability look like four separ
 Making the model smarter still matters. It just cannot substitute for deployment safety. Every model, no matter how good, will eventually encounter an input it was not prepared for and fail in a way nobody predicted. What the system was built to do at that exact moment is what determines whether users trust it afterward.
 
 So here is the order worth proposing to any team preparing to ship an AI product. Decide your stopping criteria before you pick a model. Build a reversal procedure before you press deploy. Define your failure taxonomy before an incident forces you to invent one on the spot. And put eyes on all of it before you need them. Teams that follow this order recover from incidents in minutes. Teams that skip it relearn the same lesson, from scratch, every time something breaks.
+
+## Chapter Illustrations
+![Chapter 3 illustration](/assets/images/books/ai-product-shipping-field-guide/ch03.png)
+![Chapter 4 illustration](/assets/images/books/ai-product-shipping-field-guide/ch04.png)
+

@@ -159,3 +159,7 @@ flowchart TB
 
 ![ai-agent-harness-design 슬라이드 4](/assets/images/ai-agent-harness-design-slide-04.png)
 
+## 챕터 삽화
+![1장 삽화](/assets/images/books/ai-agent-harness-design/ch01.png)
+![3장 삽화](/assets/images/books/ai-agent-harness-design/ch03.png)
+

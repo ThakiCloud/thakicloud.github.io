@@ -153,3 +153,7 @@ def choose_inference_path(is_sensitive: bool, device_ram_mb: int,
 
 ![local-first-ai-software-development 슬라이드 4](/assets/images/local-first-ai-software-development-slide-04.png)
 
+## 챕터 삽화
+![1장 삽화](/assets/images/books/local-first-ai-software-development/ch01.png)
+![5장 삽화](/assets/images/books/local-first-ai-software-development/ch05.png)
+

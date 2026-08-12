@@ -161,3 +161,10 @@ It also matters in practice that this balance point lands differently for each c
 A single final probability value left in a log can't tell you "why" a model answered the way it did. The Logit Lens shows the process by which the answer takes shape as it passes through layers, and Direct Logit Attribution breaks down, as numbers, which layer contributed most to that answer. Attention patterns show what the model attended to, and probes show how linearly a given layer separates out a specific concept. All these tools are powerful hypothesis generators, but they carry the limitation that they don't prove causation on their own. Only when you verify hypotheses with intervention experiments and weave them into a pipeline that conditionally collects detailed data solely when there's an anomaly signal do you get a diagnostic system that's actually usable in production.
 
 This post is adapted for the blog from a section of our ebook, AI Interpretability Engineering: Reading the Decisions of Production Models.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-interpretability-engineering/ch01.png)
+![Chapter 2 illustration](/assets/images/books/ai-interpretability-engineering/ch02.png)
+![Chapter 3 illustration](/assets/images/books/ai-interpretability-engineering/ch03.png)
+![Chapter 4 illustration](/assets/images/books/ai-interpretability-engineering/ch04.png)
+

@@ -109,3 +109,10 @@ The smallest thing worth doing today is picking one prompt currently in producti
 None of this is a novel idea. It is simply the discipline software engineers already apply to designing, testing, and versioning functions, carried over unchanged to prompts. The trap is assuming that because a prompt is natural language, this discipline is optional. It is the opposite: because it is natural language, skipping the contract means nobody, including the person who wrote it, ends up knowing where its boundaries actually are.
 
 For deeper worked examples and the full code, the companion ebook is available in full.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch01.png)
+![Chapter 2 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch02.png)
+![Chapter 3 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch03.png)
+![Chapter 4 illustration](/assets/images/books/prompt-engineering-for-software-engineers/ch04.png)
+

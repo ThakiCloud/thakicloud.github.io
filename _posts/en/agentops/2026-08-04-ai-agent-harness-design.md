@@ -143,3 +143,8 @@ The routing pattern for combining multiple models also connects directly, in an 
 The reason an agent still wobbles even after you bump the model is, in most cases, that the harness simply isn't there. Design the system prompt as a single-focus contract rather than a set of instructions, narrow the model's decision space with tool names and parameters, have code outside the model own output verification across three stages, and keep routing and model selection in code rather than the prompt. Get these four layers in place and an agent's behavior stays within a predictable range even when you swap the model underneath it.
 
 This post is a blog rewrite of a section from our ebook 『AI Agent Harness Design』.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-agent-harness-design/ch01.png)
+![Chapter 3 illustration](/assets/images/books/ai-agent-harness-design/ch03.png)
+

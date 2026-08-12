@@ -140,3 +140,8 @@ This post is adapted for the blog from a section of our internal ebook, Local-Fi
 - [Deploying Transformers on the Apple Neural Engine (Apple Machine Learning Research)](https://machinelearning.apple.com/research/neural-engine-transformers)
 - [Maximum Build File Sizes (App Store Connect Help)](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/)
 - [Reduce your app size (Android Developers)](https://developer.android.com/topic/performance/reduce-apk-size)
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/local-first-ai-software-development/ch01.png)
+![Chapter 5 illustration](/assets/images/books/local-first-ai-software-development/ch05.png)
+

@@ -219,3 +219,8 @@ Tracing is no different. In on-premise environments, sending prompts out to an e
 Turning an LLM API into a reliable component isn't about picking the right model, it's about **what you put around the model.** Constrain format with a schema, chunk streaming by meaning, contain failure with circuits and bulkheads, and give cost and tracing a place from the very start. Only when all four are in place together does the failure of some requests stop shaking the whole system.
 
 This post is a blog rewrite of part of our internal ebook, *AI API Engineering*, compiled while operating our internal automation pipelines.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-api-engineering/ch01.png)
+![Chapter 2 illustration](/assets/images/books/ai-api-engineering/ch02.png)
+

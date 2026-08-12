@@ -160,3 +160,8 @@ def is_real_improvement(pre_scores, post_scores, min_effect_size):
 LLM 평가를 시스템으로 만드는 일은 결국 무엇을 측정할지 미리 정의하고, 그 정의를 뒷받침하는 케이스를 편향 없이 고르고, 개선 여부를 절차로 증명하는 반복입니다. 감으로 판단하는 대신 이 순환을 계속 돌리는 팀이 결국 더 빠르게 신뢰를 쌓습니다.
 
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『LLM 평가 엔지니어링』의 일부를 블로그용으로 다시 쓴 것입니다.
+
+## 챕터 삽화
+![1장 삽화](/assets/images/books/llm-evaluation-engineering/ch01.png)
+![2장 삽화](/assets/images/books/llm-evaluation-engineering/ch02.png)
+

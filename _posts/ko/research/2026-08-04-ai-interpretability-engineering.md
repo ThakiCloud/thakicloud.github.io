@@ -161,3 +161,10 @@ flowchart TB
 로그에 남은 최종 확률값 하나로는 모델이 "왜" 그렇게 답했는지 알 수 없습니다. Logit Lens는 레이어를 거치며 답이 만들어지는 과정을 보여주고, Direct Logit Attribution은 어느 레이어가 그 답에 가장 크게 기여했는지 숫자로 분해합니다. 어텐션 패턴은 모델이 무엇에 주목했는지를, 프로브는 그 레이어가 특정 개념을 얼마나 선형적으로 분리해서 담고 있는지를 보여줍니다. 이 도구들은 모두 강력한 가설 생성기이지만 그 자체로 인과관계를 증명하지는 못한다는 한계를 안고 있습니다. 개입 실험으로 가설을 검증하고, 이상 신호가 있을 때만 상세 데이터를 조건부로 수집하는 파이프라인으로 엮을 때 비로소 프로덕션에서 실제로 쓸 수 있는 진단 체계가 됩니다.
 
 이 글의 내용은 저희가 정리한 전자책 『AI Interpretability Engineering: 프로덕션 모델의 Decision을 읽는 기술』의 일부를 블로그용으로 다시 쓴 것입니다.
+
+## 챕터 삽화
+![1장 삽화](/assets/images/books/ai-interpretability-engineering/ch01.png)
+![2장 삽화](/assets/images/books/ai-interpretability-engineering/ch02.png)
+![3장 삽화](/assets/images/books/ai-interpretability-engineering/ch03.png)
+![4장 삽화](/assets/images/books/ai-interpretability-engineering/ch04.png)
+

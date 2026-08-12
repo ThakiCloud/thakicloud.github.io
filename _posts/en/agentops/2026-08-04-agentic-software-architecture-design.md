@@ -149,3 +149,7 @@ The memory tier is similar. On-prem environments often don't even have the optio
 Standing up an agentic system isn't a matter of writing good prompts, it's a matter of deciding, up front, **how far to allow agency and how to cut off its repetition**. Distinguish autonomy from agency to determine the system's character, design tools as collaboration contracts rather than APIs, physically split memory into short-term and long-term, and make sure loop termination is judged by deterministic code. Once these four things are in place, the system as a whole stays steady even when the agent runs into the unexpected.
 
 This post is a blog rewrite of a section from our ebook 『Agentic Software Design』.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/agentic-software-architecture/ch01.png)
+

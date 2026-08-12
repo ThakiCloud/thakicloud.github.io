@@ -177,3 +177,8 @@ def should_rollback(time_overlap, impact_per_hour, rollback_cost_min, elapsed_mi
 
 ![ai-production-debugging 슬라이드 4](/assets/images/ai-production-debugging-slide-04.png)
 
+## 챕터 삽화
+![1장 삽화](/assets/images/books/ai-production-debugging/ch01.png)
+![3장 삽화](/assets/images/books/ai-production-debugging/ch03.png)
+![5장 삽화](/assets/images/books/ai-production-debugging/ch05.png)
+

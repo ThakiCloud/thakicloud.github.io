@@ -221,3 +221,8 @@ with tracer.start_as_current_span("llm_call") as span:
 LLM API를 부품으로 만드는 일은 모델을 잘 고르는 문제가 아니라 **모델 주변에 무엇을 두느냐의 문제**입니다. 형식은 스키마로 가두고, 스트리밍은 의미 단위로 끊고, 실패는 회로와 격벽으로 가두며, 비용과 추적은 처음부터 자리를 잡아둡니다. 네 가지가 함께 있을 때에야 일부 요청이 실패해도 전체가 흔들리지 않습니다.
 
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『AI API 엔지니어링』의 일부를 블로그용으로 다시 쓴 것입니다.
+
+## 챕터 삽화
+![1장 삽화](/assets/images/books/ai-api-engineering/ch01.png)
+![2장 삽화](/assets/images/books/ai-api-engineering/ch02.png)
+

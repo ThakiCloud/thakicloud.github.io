@@ -162,3 +162,9 @@ This post is a blog rewrite of a section from our ebook 『AI Production Debuggi
 - [Kueue: Kubernetes-native job queueing system](https://kueue.sigs.k8s.io/)
 - [Defeating Nondeterminism in LLM Inference (Thinking Machines Lab)](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/)
 - [How Is ChatGPT's Behavior Changing over Time? (arXiv:2307.09009)](https://arxiv.org/abs/2307.09009)
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-production-debugging/ch01.png)
+![Chapter 3 illustration](/assets/images/books/ai-production-debugging/ch03.png)
+![Chapter 5 illustration](/assets/images/books/ai-production-debugging/ch05.png)
+

@@ -166,3 +166,7 @@ We serve a Kubernetes-based AI platform inside customer on-premise environments.
 That makes cardinality and sampling design a near-necessity for us, not an option. We have to retain only as much trace data as the internal storage can carry, and within that limit, tail sampling based on anomaly signals is almost the only answer if we want to make sure not to miss the requests that genuinely need a look. Also, since multiple teams serve different models on the same platform, letting each team define its own label schema for signals makes cross-team comparison impossible down the road. In the end, it's simpler to define a single signal schema at the platform level and let each team's dashboard sit on top of it.
 
 This post is a blog rewrite of part of our internal ebook, *AI Production Observability*, compiled while operating our internal automation pipelines.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-production-observability/ch01.png)
+

@@ -109,3 +109,10 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 이 접근이 특별히 새로운 발상은 아닙니다. 소프트웨어 엔지니어가 함수를 설계하고 테스트하고 버전을 관리해온 방식을 그대로 프롬프트에 옮겨 오는 것뿐입니다. 다만 프롬프트가 자연어라는 이유로 이 규율을 생략해도 된다고 착각하는 팀이 여전히 많습니다. 자연어이기 때문에 오히려 계약을 명시하지 않으면 아무도 그 경계를 모르게 됩니다. 이미 알고 있는 엔지니어링 규율을 프롬프트에도 똑같이 적용하는 것, 그것이 이 글에서 전하고 싶은 전부입니다.
 
 더 깊은 예제와 코드로 확인하고 싶다면 전자책 전문을 참고하시기 바랍니다.
+
+## 챕터 삽화
+![1장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch01.png)
+![2장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch02.png)
+![3장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch03.png)
+![4장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch04.png)
+

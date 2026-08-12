@@ -102,3 +102,8 @@ This shift in stance matters because it is not realistic to expect non-determini
 What a team actually needs to do is not complicated to summarize. Force the shape of every output into a contract, and always pair that contract with a validation layer. Split every failure into transient, permanent, and result categories, and respond to each one differently. Watch structural validity rate and semantic validity rate continuously, and treat drops in either one as an early warning. None of these three practices are tied to a specific framework or a specific model, which means they apply just as well no matter which LLM sits behind your API.
 
 If you want to go deeper into each of these patterns down to the code level, the companion ebook [Making AI Predictable](/assets/ebooks/making-ai-predictable.pdf) works through them in more detail.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/making-ai-predictable/ch01.png)
+![Chapter 4 illustration](/assets/images/books/making-ai-predictable/ch04.png)
+

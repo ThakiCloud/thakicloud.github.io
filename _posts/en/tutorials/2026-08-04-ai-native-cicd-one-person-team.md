@@ -224,3 +224,9 @@ The reason for this order is to start with what's easy to undo if it fails. Even
 We serve our K8s-based AI platform in customers' on-premises environments, and we've repeatedly confirmed that gates and checklists like the ones above only get followed consistently across teams once they're established as a platform-level standard rather than something buried inside each application's own code. When every team defines its own gate file in its own repository, the standard splits into as many variants as there are projects; one repo has a coverage threshold, another doesn't. Keeping deploy gates and rollback triggers as an org-wide common template, with each repository only overriding values, has worked better in actual operation. The same principle applies just as well when a single solo developer is running several projects at once.
 
 This post is adapted into a hands-on format from the content of our ebook, AI-Native CI/CD for Solo Developers.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch01.png)
+![Chapter 2 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch02.png)
+![Chapter 3 illustration](/assets/images/books/ai-native-cicd-for-one-person-team/ch03.png)
+

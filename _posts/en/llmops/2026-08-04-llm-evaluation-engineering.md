@@ -160,3 +160,8 @@ Shadow mode is the same story. On-premise, we often have to verify a new version
 Turning LLM evaluation into a system, in the end, comes down to repeating three things: define what to measure in advance, pick the cases that back up that definition without bias, and prove improvement through a procedure. Instead of judging by gut feeling, the team that keeps this loop turning ends up building trust faster.
 
 This post is a blog rewrite of part of our internal ebook, *LLM Evaluation Engineering*, compiled while operating our internal automation pipelines.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/llm-evaluation-engineering/ch01.png)
+![Chapter 2 illustration](/assets/images/books/llm-evaluation-engineering/ch02.png)
+

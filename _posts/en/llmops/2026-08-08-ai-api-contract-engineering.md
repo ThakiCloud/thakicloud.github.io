@@ -99,3 +99,8 @@ The five principles this post walked through, gating input, building output fall
 Writing a good prompt still matters. But a prompt only improves the model's average behavior. It does nothing for the tail cases, and the outages that actually wake people up almost always start in the tail. The tool that handles tail cases was never a better prompt. It was always an explicit contract.
 
 It is worth opening whatever LLM integration code you are currently running in production and checking five things directly. Is there input validation immediately before the call and an output fallback immediately after the parse. Does the retry logic wrapping the call have both a backoff and a hard cap. Is token usage being logged anywhere at all. Is the model version pinned explicitly rather than tracking latest. If you can answer yes to all five, you have a contract. Wherever the answer is no, that is exactly where the next outage is going to start.
+
+## Chapter Illustrations
+![Chapter 1 illustration](/assets/images/books/ai-api-contract-engineering/ch01.png)
+![Chapter 5 illustration](/assets/images/books/ai-api-contract-engineering/ch05.png)
+
