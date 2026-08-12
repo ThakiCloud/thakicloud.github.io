@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/own-your-stack-world-changing/strip.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/own-your-stack-world-changing/"
+published: false
 ---
 
 A rocket-CEO sat down with Y Combinator for 45 minutes on how to build a world-changing company. The playbook rarely changes: reason from first principles, delete every part you do not need, and own the things that matter instead of renting them. Paxis and Metis take notes on the ocean floor, right up until the final rule. 'Own your stack' turns out to mean 'get off someone else's cloud.'

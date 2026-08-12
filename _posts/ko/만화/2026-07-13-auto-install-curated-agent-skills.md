@@ -16,6 +16,7 @@ toc: false
 image: /assets/images/posts/만화/auto-install-curated-agent-skills/strip.png
 audiobook: /assets/audio/posts/auto-install-curated-agent-skills/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 어떤 도구가 프로젝트를 스캔해서 어떤 기술 스택을 쓰는지 알아낸 다음, 거기 맞는 '큐레이션된' AI 에이전트 스킬을 자동으로 설치해 준다고 합니다. 스킬이란 에이전트가 특정 작업을 잘하도록 미리 묶어 둔 능력 꾸러미인데, 이걸 사람이 하나씩 고르는 대신 도구가 스택을 읽고 알아서 골라 깔아주는 셈입니다.
