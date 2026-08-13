@@ -12,7 +12,7 @@ tags:
   - cost
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/it-never-read-the-book/strip.png
+image: /assets/images/posts/만화/it-never-read-the-book/strip.webp
 video: /assets/videos/posts/만화/it-never-read-the-book/comic.mp4
 audiobook: /assets/audio/posts/it-never-read-the-book/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 두꺼운 문서를 통째로 넣고 요약을 시키면 결과가 이상하게 뭉뚱그려져 나옵니다. 모델이 한 번에 받아들일 수 있는 분량, 그러니까 컨텍스트 창이 정해져 있어서 거기 안 들어간 페이지는 눈에 닿지도 않거든요. 그런데도 모델은 그 부분까지 읽은 것처럼 태연하게 정리합니다. 요즘 화제가 된 방식은 반대로 갑니다. 한 장씩만 읽히고 그때마다 메모를 남겨 지식베이스를 쌓아 올리는 거죠. 확실히 정확해지는데, 300쪽이면 읽기도 300번입니다. 그 300번이 어디서 돌아가느냐가 다음 문제고요.
 
-![책 통째로 줬더니 읽은 척함](/assets/images/posts/만화/it-never-read-the-book/strip.png)
+![책 통째로 줬더니 읽은 척함](/assets/images/posts/만화/it-never-read-the-book/strip.webp)
 
 > 원 뉴스: [RT @Ryrenz: 📖 让 AI 逐页读完一本 PDF，边读边攒知识库](https://x.com/hjguyhan/status/2087297036848902232) · twitter
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/it-never-read-the-book/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/it-never-read-the-book/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/it-never-read-the-book/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/it-never-read-the-book/comic.ko.vtt" default>
 </video>
