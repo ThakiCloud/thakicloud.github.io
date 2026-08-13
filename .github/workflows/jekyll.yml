@@ -150,7 +150,7 @@ jobs:
       - name: Verify deployed content (soft-404 guard)
         run: |
           python3 - <<'EOF'
-          import random, re, sys, time, urllib.request
+          import random, re, sys, time, urllib.parse, urllib.request
           from pathlib import Path
           site = Path("_site")
           pages = [p for p in site.rglob("index.html")
@@ -162,15 +162,29 @@ jobs:
               m = re.search(r"<title>([^<]+)</title>", p.read_text(encoding="utf-8", errors="ignore"))
               if not m: continue
               title = m.group(1).strip()
-              url = "https://thakicloud.com/tech-blog/" + str(p.parent.relative_to(site)) + "/"
-              ok = False
-              for attempt in range(4):   # CloudFront 무효화 전파 대기
+              rel = str(p.parent.relative_to(site))
+              # ⛔ 경로를 퍼센트 인코딩한다. ko 카테고리에는 한글 디렉터리(_posts/ko/만화)가
+              # 있고, urlopen 은 non-ASCII URL 에 UnicodeEncodeError 를 던진다. 예전엔 그
+              # 예외를 아래 except 가 삼켜서 "인코딩 못 함"이 "soft-404"로 둔갑했고,
+              # 만화 글이 뽑힐 때마다 배포 잡이 잘못된 이유로 빨간불이 됐다 (2026-08-13).
+              url = ("https://thakicloud.com/tech-blog/"
+                     + urllib.parse.quote(rel) + "/")
+              ok, why = False, "no attempt"
+              # 8회 × 20초 = 최대 160초. 이전 4×15초(60초)는 CloudFront 와일드카드
+              # 무효화(/tech-blog/*)가 퍼지기 전에 포기해서, 정상 배포를 soft-404 로
+              # 오판하고 잡을 빨간불로 만들었다 (2026-08-13 09:21 런).
+              for attempt in range(8):   # CloudFront 무효화 전파 대기
                   try:
                       html = urllib.request.urlopen(url, timeout=20).read().decode("utf-8", "ignore")
-                      if title[:40] in html: ok = True; break
-                  except Exception: pass
-                  time.sleep(15)
-              print(("OK  " if ok else "FAIL") + f" {url}  [{title[:60]}]")
+                      if title[:40] in html:
+                          ok = True
+                          break
+                      why = "served page lacks its own <title> (catch-all shell)"
+                  except Exception as e:            # 원인을 삼키지 말고 남긴다
+                      why = f"{type(e).__name__}: {str(e)[:80]}"
+                  time.sleep(20)
+              print(("OK   " if ok else "FAIL ") + f"{url}  [{title[:60]}]"
+                    + ("" if ok else f"  -> {why}"))
               if not ok: fails.append(url)
           if fails:
               print("soft-404 detected: built page not served with its own content"); sys.exit(1)
