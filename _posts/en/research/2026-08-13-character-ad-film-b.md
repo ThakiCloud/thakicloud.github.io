@@ -22,6 +22,19 @@ author_profile: true
 > background collapse you can see in the frames below, not on the scores. Collapse is an
 > observation, not a hypothesis test.
 > One lesson: never turn a difference in means into a ranking without testing it.
+>
+> **Second correction, 2026-08-14: we found what caused the background collapse.** Above we
+> said the collapse stands because it is an observation rather than a hypothesis test. It does,
+> but its **cause** turns out not to be training. It was the training data.
+> We reshot the mascot in twelve different locations, held every other setting fixed, and
+> retrained: the background-collapse score falls from **0.906 to 0.791, landing exactly on the
+> zero-shot arm's 0.792**, and the mascot survives intact (subject similarity moves +0.004,
+> p=0.67). So the eight scenes flattening into one wall below is a property of *that adapter*,
+> not of training. All twelve clips had been shot against the same beige studio backdrop, so
+> from the model's point of view "this mascot" and "this backdrop" were never separable. Vary
+> the backdrops and the problem disappears.
+> Which makes this post's title **wrong**. Training did not lose; we built the training set
+> badly, and that was fixable.
 
 If you need a brand mascot to appear across many videos, this post gives you two conclusions. First, **which zero-shot method you pick** separates the results more than the decision to train at all. Second, if you choose a method by looking at how closely the subject resembles the reference, you will probably choose wrong. We nearly did, and what changed our final film was not a number but a frame.
 
