@@ -14,6 +14,7 @@ image: /assets/images/posts/comics/ai-stack-sovereignty/strip.webp
 categories:
   - comics
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/ai-stack-sovereignty/"
+published: false
 ---
 
 You wake up and the whole stack belongs to someone else. The model, the inference engine, the vector DB, all rented from a company across the ocean. It runs fine. The catch is that you control none of it, so the day the terms change or an export rule lands, it's over. Sovereignty here means keeping your models, data, and infrastructure under your own control instead of someone else's. Six panels of Paxis and Metis working out what to do.

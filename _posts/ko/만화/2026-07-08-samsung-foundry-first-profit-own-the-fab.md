@@ -16,6 +16,7 @@ toc: false
 image: /assets/images/posts/만화/samsung-foundry-first-profit-own-the-fab/strip.webp
 audiobook: /assets/audio/posts/samsung-foundry-first-profit-own-the-fab/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 삼성 파운드리가 6월에 처음으로 월 단위 흑자를 냈다는 소식입니다. 파운드리는 남이 설계한 칩을 대신 찍어주는 위탁생산 사업인데, 긴 적자 구간을 지나 몇 년 만에 처음으로 돈이 남았습니다. 만화는 이 장면을 '남한테 안 빌리고 내 공장에서 찍으니 결국 이문이 내 것'이라는 다키클라우드 세계관으로 비틀었습니다. 파시스와 메티스가 그 논리를 밀어붙이자, 요금 청구서를 든 하이퍼가 슬슬 식은땀을 흘립니다.

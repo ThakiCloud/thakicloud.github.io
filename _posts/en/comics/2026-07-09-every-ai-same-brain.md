@@ -17,6 +17,7 @@ image: /assets/images/posts/comics/every-ai-same-brain/strip.webp
 audiobook: /assets/audio/posts/every-ai-same-brain/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/every-ai-same-brain/"
+published: false
 ---
 
 An MIT paper is making the rounds. The claim: every AI model on earth is quietly converging on the same internal "brain", the same way of representing the world. That inner representation is just how a model draws its mental map of everything. Different labs, different data, and yet the maps keep drifting toward one shape. Which leaves an awkward question: if the brains all end up alike, why keep renting someone else's premium one by the month?

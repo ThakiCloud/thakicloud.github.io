@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/one-card-replaces-400k-rack/strip.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/one-card-replaces-400k-rack/"
+published: false
 ---
 
 A lab at Tsinghua quietly pushed a project to GitHub, and it does something faintly absurd: it replaces a $400,000 H100 rack with a single 24GB graphics card. The trick is quantization, squeezing a large model down to lower precision so it fits in a fraction of the memory. The old rule was simple. Want to run a big model, rent a big rack. That rule just met a card sitting in somebody's drawer, while Paxis and Metis argue it out at a cafe under the Eiffel Tower.
