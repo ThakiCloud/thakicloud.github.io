@@ -165,3 +165,8 @@ LLM 평가를 시스템으로 만드는 일은 결국 무엇을 측정할지 미
 ![1장 삽화](/assets/images/books/llm-evaluation-engineering/ch01.webp)
 ![2장 삽화](/assets/images/books/llm-evaluation-engineering/ch02.webp)
 
+## 출처
+
+- [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv)](https://arxiv.org/abs/2306.05685)
+- [FastChat: MT-Bench and Chatbot Arena Official Repository (GitHub, LMSYS Org)](https://github.com/lm-sys/FastChat)
+

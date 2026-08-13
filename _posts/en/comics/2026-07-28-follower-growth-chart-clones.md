@@ -15,7 +15,6 @@ toc: false
 image: /assets/images/posts/comics/follower-growth-chart-clones/strip.webp
 video: /assets/videos/posts/만화/follower-growth-chart-clones/comic.en.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/follower-growth-chart-clones/"
-published: false
 ---
 
 A chart ranking startups by 90-day X follower growth made the rounds this week. Numbers like that are vanity metrics: they look impressive, but they sit a long way from revenue or retention. The trouble starts the moment a leaderboard exists, because everyone begins optimizing for the one number on it. So Eugene, Paxis and Metis climb the Great Wall to get their own curve pointing up. They discover the part about walls having valleys only after they start running.

@@ -170,3 +170,9 @@ This post is a blog rewrite of part of our internal ebook, *AI Production Observ
 ## Chapter Illustrations
 ![Chapter 1 illustration](/assets/images/books/ai-production-observability/ch01.webp)
 
+## Sources
+
+- [Chat Completions API Reference, finish_reason field definition (OpenAI)](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/retrieve)
+- [Sampling Concepts, Tail Sampling explanation (OpenTelemetry)](https://opentelemetry.io/docs/concepts/sampling/)
+- [Metric and Label Naming Guide, cardinality warning (Prometheus)](https://prometheus.io/docs/practices/naming/)
+

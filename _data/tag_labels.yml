@@ -806,6 +806,10 @@
   "ko": "양자화"
   "en": "Quantization"
   "ar": "التكميم"
+"캘리브레이션":
+  "ko": "캘리브레이션"
+  "en": "Calibration"
+  "ar": "المعايرة"
 "업무자동화":
   "ko": "업무자동화"
   "en": "Work Automation"

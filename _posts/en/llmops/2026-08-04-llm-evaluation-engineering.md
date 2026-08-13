@@ -165,3 +165,8 @@ This post is a blog rewrite of part of our internal ebook, *LLM Evaluation Engin
 ![Chapter 1 illustration](/assets/images/books/llm-evaluation-engineering/ch01.webp)
 ![Chapter 2 illustration](/assets/images/books/llm-evaluation-engineering/ch02.webp)
 
+## Sources
+
+- [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv)](https://arxiv.org/abs/2306.05685)
+- [FastChat: MT-Bench and Chatbot Arena Official Repository (GitHub, LMSYS Org)](https://github.com/lm-sys/FastChat)
+

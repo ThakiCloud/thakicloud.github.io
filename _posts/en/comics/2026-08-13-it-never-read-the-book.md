@@ -24,7 +24,7 @@ Hand a model a 300-page document in one go and the summary comes back suspicious
 
 > Source: [RT @Ryrenz: 📖 让 AI 逐页读完一本 PDF，边读边攒知识库](https://x.com/hjguyhan/status/2087297036848902232) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition, the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/it-never-read-the-book/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/it-never-read-the-book/comic.mp4" type="video/mp4">

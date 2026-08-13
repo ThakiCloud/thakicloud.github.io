@@ -24,7 +24,7 @@ categories:
 
 ## The Problem: HoL Blocking Quietly Wastes GPU Time
 
-Anyone who has run an LLM inference service in production has seen this: a request that generates a few dozen tokens — say, a one-liner chatbot reply — sits waiting behind a long document summarization or code generation job, wasting hundreds of milliseconds. This is Head-of-Line (HoL) blocking.
+Anyone who has run an LLM inference service in production has seen this: a request that generates a few dozen tokens, say a one-liner chatbot reply, sits waiting behind a long document summarization or code generation job, wasting hundreds of milliseconds. This is Head-of-Line (HoL) blocking.
 
 vLLM's continuous batching dramatically improves batch efficiency, but in a single-pool setup, long requests hold onto the KV cache for extended periods, forcing shorter requests to be preempted. Preempted requests pay the cost of recomputation, and overall GPU time efficiency drops.
 
@@ -34,7 +34,7 @@ The paper reports the following results:
 
 | Metric | Effect |
 |---|---|
-| GPU time savings | **31–42%** |
+| GPU time savings | **31 to 42%** |
 | Preemption rate | **5.4x reduction** |
 | P99 TTFT improvement | **6%** |
 
@@ -46,7 +46,7 @@ The concept behind Dual-Pool is straightforward. For each request, the system es
 Expected tokens = input tokens + estimated output tokens
 ```
 
-When output token count is unknown — which is most of the time in production — two approximations work well:
+When output token count is unknown, which is most of the time in production, two approximations work well:
 
 1. **Request parameters**: Use the `max_tokens` value as an upper bound.
 2. **History-based classification**: Track the length distribution of previous requests by API path or system prompt hash, then classify using the P75 or P90 value.
@@ -441,8 +441,8 @@ kind: Deployment
 metadata:
   name: vllm-short-pool
   namespace: llm-serving
-  annotations:
-    kueue.x-k8s.io/queue-name: short-pool-queue
+  labels:
+    kueue.x-k8s.io/queue-name: short-pool-queue   # label, not an annotation
 spec:
   replicas: 2
   template:
@@ -466,7 +466,7 @@ kind: Deployment
 metadata:
   name: vllm-long-pool
   namespace: llm-serving
-  annotations:
+  labels:
     kueue.x-k8s.io/queue-name: long-pool-queue
 spec:
   replicas: 2
@@ -486,6 +486,8 @@ spec:
             limits:
               nvidia.com/gpu: "1"
 ```
+
+Where you put the queue name is a quiet trap. `kueue.x-k8s.io/queue-name` must be a label. If you put it under annotations instead, Kueue's webhook selects targets by label selector, so it never picks the Deployment up at all. The workload never enters the queue and just gets scheduled normally. Nothing errors, which is exactly why this is found late.
 
 ### Step 4: Router Implementation (Python Example)
 
@@ -552,12 +554,13 @@ spec:
     - type: prometheus
       metadata:
         serverAddress: http://prometheus:9090
-        metricName: vllm_requests_waiting_short
         query: vllm:num_requests_waiting{deployment="vllm-short-pool"}
         threshold: "5"
 ```
 
 Metric-based scaling responds more directly to inference load than simple HTTP RPS scaling. A threshold of `5` means scale-up begins when more than five requests are queued.
+
+Do not copy older examples verbatim here either. `metricName` is not in the current KEDA Prometheus scaler's documented parameter list, and `query` is what actually determines what you scale on, so that is the field that has to be right.
 
 ### Model Sharing vs. Instance Separation
 
@@ -569,9 +572,9 @@ That said, **instance separation is the cleaner choice** for fully eliminating p
 
 ThakiCloud's ai-platform serves multiple tenants' inference workloads on a shared GPU cluster. Dual-Pool Routing adds two concrete benefits in this context.
 
-First, it reduces cross-tenant interference. When Tenant A's chatbot requests — short by nature — get queued behind Tenant B's long document analysis batch jobs, the result is SLO violations. Pool separation cuts off this interference at the structural level.
+First, it reduces cross-tenant interference. When Tenant A's chatbot requests, short by nature, get queued behind Tenant B's long document analysis batch jobs, the result is SLO violations. Pool separation cuts off this interference at the structural level.
 
-Second, it improves GPU budget efficiency. A 31–42% GPU time reduction means either handling more requests with the same GPU budget, or achieving the same throughput with fewer GPUs. In an on-premises environment with a fixed resource ceiling, that savings translates directly into lower serving cost.
+Second, it improves GPU budget efficiency. A 31 to 42% GPU time reduction means either handling more requests with the same GPU budget, or achieving the same throughput with fewer GPUs. In an on-premises environment with a fixed resource ceiling, that savings translates directly into lower serving cost.
 
 For ThakiCloud clusters already using Kueue LocalQueue, adding this architecture requires only two queue declarations and a lightweight router deployment. Compatibility with existing vLLM Deployment specs is high, so the adoption surface is broad.
 
@@ -579,4 +582,15 @@ For ThakiCloud clusters already using Kueue LocalQueue, adding this architecture
 
 The problem Dual-Pool Token-Budget Routing solves is simple: when short and long requests share a queue, short requests lose. Separating them at the queue level lets each type be processed at its natural pace.
 
-The results from arXiv 2604.08075 — 31–42% GPU time savings, a 5.4x reduction in preemption rate, and 6% improvement in P99 TTFT — represent a strong return for the implementation complexity involved. On Kubernetes, two Kueue LocalQueues, two vLLM Deployments, and one lightweight router are all it takes to build this structure.
+The results from arXiv 2604.08075, 31 to 42% GPU time savings, a 5.4x reduction in preemption rate, and 6% improvement in P99 TTFT, represent a strong return for the implementation complexity involved. On Kubernetes, two Kueue LocalQueues, two vLLM Deployments, and one lightweight router are all it takes to build this structure.
+
+## Sources
+
+- [Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving (arXiv)](https://arxiv.org/abs/2604.08075)
+- [Engine Arguments: max-model-len and gpu-memory-utilization (vLLM Docs)](https://docs.vllm.ai/en/latest/configuration/engine_args.html)
+- [vLLM Overview: Continuous Batching and PagedAttention (vLLM Docs)](https://docs.vllm.ai/en/latest/)
+- [Production Metrics: num_preemptions_total and num_requests_waiting (vLLM Docs v0.9.2)](https://docs.vllm.ai/en/v0.9.2/usage/metrics.html)
+- [ClusterQueue and ResourceFlavor Concepts (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/)
+- [LocalQueue Concept (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/local_queue/)
+- [Run Deployment on Kueue (Kueue Docs)](https://kueue.sigs.k8s.io/docs/tasks/run/deployment/)
+- [Prometheus Scaler Trigger Reference (KEDA Docs)](https://keda.sh/docs/latest/scalers/prometheus/)

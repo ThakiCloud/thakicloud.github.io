@@ -425,16 +425,16 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: distributed-training-llama3
+  labels:
+    kueue.x-k8s.io/queue-name: "team-a-local-queue"   # a label, not an annotation
 spec:
   parallelism: 16   # 16 worker pods running concurrently
   completions: 16
   template:
     metadata:
-      annotations:
+      labels:
         kueue.x-k8s.io/queue-name: "team-a-local-queue"
     spec:
-      schedulingGates:
-        - name: "kueue.x-k8s.io/admission"   # Scheduling gate until Kueue grants admission
       containers:
         - name: trainer
           resources:
@@ -442,7 +442,13 @@ spec:
               nvidia.com/gpu: "1"
 ```
 
-Through `schedulingGates`, the Kubernetes scheduler does not touch this job's pods until Kueue grants admission. Once Kueue confirms that space for 16 GPUs is available in the cluster and removes the gate, the KAI scheduler simultaneously places all 16 pods on optimal nodes.
+Two things are worth flagging here. First, the queue name is a **label, not an annotation**. Second, you don't need to set the Job itself to `suspend: true`. Kueue's mutating webhook suspends the Job at creation time and releases it once quota becomes available, so the admission control point for a batch/v1 Job isn't the pod, it's the Job's **`spec.suspend`**.
+
+If you've seen the `kueue.x-k8s.io/admission` scheduling gate before, that's a real mechanism too, but it belongs to Kueue's **plain Pod integration**, not the Job integration, and Kueue injects it directly rather than it being a field you hand-write into a Job manifest. Mix the two and you won't get the wait behavior you intended.
+
+One operational wrinkle we've actually hit: our cluster runs an admission policy that requires the queue label on pods too, so if you put the label only on the Job and leave it off the pod template, the Job sits there looking `Running` while it has zero pods, quietly. The reason only shows up in the events from `kubectl describe job`. That's why the example above sets the same label on both.
+
+And what actually enforces "all or nothing" is Kueue's `waitForPodsReady` setting. Turn it on and Kueue waits until every pod in the workload is ready, requeuing the workload if the timeout passes before that happens. Once quota is secured and the Job wakes up, the KAI scheduler places all 16 pods on optimal nodes at the same time.
 
 The KAI scheduler also performs topology-aware GPU placement. It preferentially selects nodes within the same InfiniBand-connected rack to minimize communication overhead for distributed training. This directly affects not only GPU utilization but also training speed.
 
@@ -480,7 +486,9 @@ spec:
 
 Inference services have different characteristics from training workloads. Training continuously consumes GPUs from start to finish, but inference does not need GPUs during periods with no requests.
 
-ThakiCloud operates inference endpoints in a serverless fashion using the vLLM + KEDA combination. KEDA's HTTP adapter monitors incoming requests to the endpoint and automatically adjusts the number of vLLM replicas based on request volume.
+ThakiCloud operates inference endpoints in a serverless fashion using the vLLM + KEDA combination. It's a structure that watches incoming request volume and automatically adjusts the number of vLLM replicas.
+
+It's worth distinguishing between KEDA's two paths here first. One is the KEDA HTTP Add-on, where its own interceptor takes the HTTP request directly and wakes things up from zero. The other is KEDA core's Prometheus scaler, which queries metrics that are already being collected to adjust replicas. The example below is the latter: we already collect vLLM metrics in VictoriaMetrics, so querying what we already have was simpler than inserting a new interceptor into the request path.
 
 ```yaml
 # Conceptual example -- not a captured execution
@@ -498,10 +506,11 @@ spec:
     - type: prometheus
       metadata:
         serverAddress: http://victoria-metrics:8428
-        metricName: http_requests_per_second
         threshold: "10"   # 10 requests per second per replica
         query: sum(rate(vllm_request_success_total[1m]))
 ```
+
+If you've seen a `metricName` field in older examples, don't include it. The current KEDA Prometheus scaler docs list only `serverAddress`, `query`, `threshold`, `activationThreshold`, `namespace`, `customHeaders`, `ignoreNullValues`, `queryParameters`, and `unsafeSsl`, and `metricName` isn't on that list. What you scale on is decided by `query`.
 
 `minReplicaCount: 0` is the key to Scale-to-Zero. When there are no requests at 2 AM, the vLLM pod scales to zero and returns the GPU. When the first request arrives at the start of business, KEDA starts the pod, vLLM loads the model into GPU memory, and the response is returned.
 
@@ -583,3 +592,18 @@ The `GPU_UTIL` value collected by DCGM Exporter represents the SM (Streaming Mul
 ---
 
 A GPU cluster is itself a vast resource, but without scheduling policy its potential goes unfulfilled. The three-way combination of Kueue fair-share to resolve queue contention, Gang Scheduling to eliminate distributed training wait time, and Scale-to-Zero to block idle inference costs is the practical starting point for Kubernetes-native GPU cost optimization.
+
+## Sources
+
+- [ClusterQueue, Cohort, Fair Sharing (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/)
+- [LocalQueue Concept (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/local_queue/)
+- [ResourceFlavor Concept (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/resource_flavor/)
+- [Gang Scheduling via waitForPodsReady (Kueue Docs)](https://kueue.sigs.k8s.io/docs/tasks/manage/setup_wait_for_pods_ready/)
+- [Preemption and Quota Reclamation (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/preemption/)
+- [KAI Scheduler: Gang Scheduling, Topology Aware Placement (NVIDIA, GitHub)](https://github.com/NVIDIA/KAI-Scheduler)
+- [KEDA HTTP Add-on (KEDA Core, GitHub)](https://github.com/kedacore/http-add-on)
+- [ScaledObject Specification (KEDA Docs)](https://keda.sh/docs/2.15/reference/scaledobject-spec/)
+- [Prometheus Scaler (KEDA Docs)](https://keda.sh/docs/2.15/scalers/prometheus/)
+- [Quantization Support (vLLM Docs)](https://docs.vllm.ai/en/latest/features/quantization/index.html)
+- [Default GPU Metrics Counters (NVIDIA dcgm-exporter, GitHub)](https://github.com/NVIDIA/dcgm-exporter/blob/main/etc/default-counters.csv)
+- [MetricsQL Query Language (VictoriaMetrics Docs)](https://docs.victoriametrics.com/metricsql/)

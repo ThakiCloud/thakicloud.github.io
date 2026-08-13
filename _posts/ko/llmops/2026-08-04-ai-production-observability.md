@@ -170,3 +170,9 @@ def should_retain(latency_ms: float, p95_ms: float,
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-production-observability/ch01.webp)
 
+## 출처
+
+- [Chat Completions API 레퍼런스, finish_reason 필드 정의 (OpenAI)](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/retrieve)
+- [Sampling 개념 문서, Tail Sampling 설명 (OpenTelemetry)](https://opentelemetry.io/docs/concepts/sampling/)
+- [메트릭 이름과 레이블 작성 가이드, 카디널리티 경고 (Prometheus)](https://prometheus.io/docs/practices/naming/)
+

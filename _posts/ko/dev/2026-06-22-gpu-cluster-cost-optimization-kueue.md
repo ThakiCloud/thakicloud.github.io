@@ -426,16 +426,16 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: distributed-training-llama3
+  labels:
+    kueue.x-k8s.io/queue-name: "team-a-local-queue"   # 라벨, 어노테이션 아님
 spec:
   parallelism: 16   # 16개 워커 파드 동시 실행
   completions: 16
   template:
     metadata:
-      annotations:
+      labels:
         kueue.x-k8s.io/queue-name: "team-a-local-queue"
     spec:
-      schedulingGates:
-        - name: "kueue.x-k8s.io/admission"   # Kueue가 입장 허가 전까지 스케줄링 게이트
       containers:
         - name: trainer
           resources:
@@ -443,7 +443,13 @@ spec:
               nvidia.com/gpu: "1"
 ```
 
-`schedulingGates`를 통해 Kueue가 입장 허가를 내리기 전까지 K8s 스케줄러는 이 작업의 파드를 건드리지 않습니다. Kueue가 클러스터에 16개 GPU 공간이 확보됨을 확인한 뒤 게이트를 제거하면, KAI 스케줄러가 16개 파드를 동시에 최적 노드에 배치합니다.
+여기서 두 가지를 짚고 갑니다. 먼저 큐 이름은 **어노테이션이 아니라 라벨**입니다. 그리고 Job을 직접 `suspend: true`로 만들 필요도 없습니다. Kueue의 뮤테이팅 웹훅이 생성 시점에 Job을 suspend 상태로 바꿔 두었다가, 쿼터가 확보되면 스스로 해제합니다. 즉 batch/v1 Job의 입장 제어 지점은 파드가 아니라 **Job의 `spec.suspend`** 입니다.
+
+`kueue.x-k8s.io/admission` 스케줄링 게이트를 본 적이 있다면 그것도 실재하는 메커니즘이 맞습니다. 다만 그건 Job 통합이 아니라 **plain Pod 통합**에서 Kueue가 직접 주입하는 게이트라, Job 매니페스트에 손으로 적어 넣는 필드가 아닙니다. 둘을 섞어 쓰면 의도한 대기 동작이 나오지 않습니다.
+
+운영에서 실제로 물린 지점을 하나 덧붙입니다. 저희 클러스터에는 파드에 큐 라벨을 요구하는 어드미션 정책이 걸려 있어서, 라벨을 Job에만 달고 파드 템플릿에 빠뜨리면 Job은 `Running`으로 보이는데 파드가 0개인 상태로 조용히 앉아 있습니다. 사유는 `kubectl describe job`의 이벤트에만 남습니다. 위 예시가 같은 라벨을 양쪽에 모두 다는 이유입니다.
+
+그리고 "전부 또는 없음"을 실제로 보장하는 것은 Kueue 쪽 `waitForPodsReady` 설정입니다. 이 값을 켜면 Kueue가 워크로드의 모든 파드가 준비될 때까지 기다리고, 타임아웃 안에 채워지지 않으면 워크로드를 되돌려 재큐잉합니다. 쿼터가 확보되어 Job이 깨어난 뒤에는 KAI 스케줄러가 16개 파드를 동시에 최적 노드에 배치합니다.
 
 KAI 스케줄러는 GPU 배치 시 토폴로지 인식도 수행합니다. InfiniBand로 연결된 동일 랙 내 노드를 우선 선택해 분산 학습의 통신 오버헤드를 최소화합니다. 이는 GPU 활용률뿐 아니라 학습 속도에도 직접적인 영향을 미칩니다.
 
@@ -481,7 +487,9 @@ spec:
 
 추론 서비스는 학습 워크로드와 다른 특성을 가집니다. 학습은 시작하면 끝날 때까지 연속적으로 GPU를 소비하지만, 추론은 요청이 없는 시간대에는 GPU가 필요하지 않습니다.
 
-ThakiCloud는 vLLM + KEDA 조합으로 추론 엔드포인트를 서버리스 방식으로 운영합니다. KEDA의 HTTP 어댑터는 엔드포인트로 들어오는 요청을 모니터링하고, 요청 수에 따라 vLLM 레플리카 수를 자동으로 조정합니다.
+ThakiCloud는 vLLM + KEDA 조합으로 추론 엔드포인트를 서버리스 방식으로 운영합니다. 요청 유입량을 보고 vLLM 레플리카 수를 자동으로 조정하는 구조입니다.
+
+여기서 KEDA의 경로가 두 갈래라는 점을 먼저 구분해 두는 편이 좋습니다. 하나는 KEDA HTTP Add-on으로, 자체 인터셉터가 HTTP 요청을 직접 받아 0에서 깨우는 방식입니다. 다른 하나는 KEDA 코어의 Prometheus 스케일러로, 이미 수집 중인 지표를 질의해 레플리카를 조정합니다. 아래 예시는 후자입니다. 저희는 vLLM 지표를 이미 VictoriaMetrics에 모으고 있어서, 인터셉터를 요청 경로에 새로 끼워 넣기보다 있는 지표를 질의하는 쪽이 단순했습니다.
 
 ```yaml
 # 개념적 예시 -- 실행 캡처 아님
@@ -499,10 +507,11 @@ spec:
     - type: prometheus
       metadata:
         serverAddress: http://victoria-metrics:8428
-        metricName: http_requests_per_second
         threshold: "10"   # 레플리카당 초당 10 요청 기준
         query: sum(rate(vllm_request_success_total[1m]))
 ```
+
+예전 예제에서 `metricName` 필드를 보셨다면 지금은 넣지 마십시오. 현재 KEDA Prometheus 스케일러 문서가 나열하는 파라미터는 `serverAddress`, `query`, `threshold`, `activationThreshold`, `namespace`, `customHeaders`, `ignoreNullValues`, `queryParameters`, `unsafeSsl` 뿐이고 `metricName`은 그 목록에 없습니다. 무엇을 보고 스케일할지는 `query`가 결정합니다.
 
 `minReplicaCount: 0`이 Scale-to-Zero의 핵심입니다. 새벽 2시에 요청이 없으면 vLLM 파드가 0으로 축소되고 GPU를 반환합니다. 오전 업무 시작과 함께 첫 요청이 들어오면 KEDA가 파드를 기동하고, vLLM이 GPU 메모리에 모델을 로드한 뒤 응답을 반환합니다.
 
@@ -584,6 +593,21 @@ DCGM Exporter가 수집하는 `GPU_UTIL` 수치는 SM(Streaming Multiprocessor) 
 ---
 
 GPU 클러스터는 그 자체로 거대한 자원이지만, 스케줄링 정책 없이는 그 잠재력을 다 쓰지 못합니다. Kueue 페어셰어로 큐 경합을 해소하고, Gang Scheduling으로 분산 학습 대기를 제거하고, Scale-to-Zero로 유휴 추론 비용을 차단하는 세 가지 조합이 K8s 네이티브 GPU 비용 최적화의 실질적인 출발점입니다.
+
+## 출처
+
+- [ClusterQueue, Cohort, Fair Sharing (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/)
+- [LocalQueue Concept (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/local_queue/)
+- [ResourceFlavor Concept (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/resource_flavor/)
+- [Gang Scheduling via waitForPodsReady (Kueue Docs)](https://kueue.sigs.k8s.io/docs/tasks/manage/setup_wait_for_pods_ready/)
+- [Preemption and Quota Reclamation (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/preemption/)
+- [KAI Scheduler: Gang Scheduling, Topology Aware Placement (NVIDIA, GitHub)](https://github.com/NVIDIA/KAI-Scheduler)
+- [KEDA HTTP Add-on (KEDA Core, GitHub)](https://github.com/kedacore/http-add-on)
+- [ScaledObject Specification (KEDA Docs)](https://keda.sh/docs/2.15/reference/scaledobject-spec/)
+- [Prometheus Scaler (KEDA Docs)](https://keda.sh/docs/2.15/scalers/prometheus/)
+- [Quantization Support (vLLM Docs)](https://docs.vllm.ai/en/latest/features/quantization/index.html)
+- [Default GPU Metrics Counters (NVIDIA dcgm-exporter, GitHub)](https://github.com/NVIDIA/dcgm-exporter/blob/main/etc/default-counters.csv)
+- [MetricsQL Query Language (VictoriaMetrics Docs)](https://docs.victoriametrics.com/metricsql/)
 
 ## 관련 슬라이드
 

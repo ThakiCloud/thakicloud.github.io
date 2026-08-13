@@ -22,6 +22,7 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-cost-routing-rules/"
 ---
 
@@ -46,7 +47,11 @@ So we fix models to task types.
 | `haiku` | Exploration, file reading, search, grep, summarization, translation | ~1x |
 | `sonnet` | Analysis, implementation, code generation, review, writing (default) | ~4x |
 | `opus` | Architecture, multi-step reasoning, complex debugging, spec writing | ~19x |
-| `fable` | Orchestrator/conductor (usage-limit savings) | Low |
+| `fable` | Orchestrator/conductor (saves subscription usage limit; per-token price is the highest of the tiers listed) | High |
+
+One caveat worth nailing down: the multipliers above reflect the model generation current when this post was written, and the price list has changed since. Under the current official price list, Haiku 4.5 runs $1 input and $5 output per million tokens, Sonnet 5 runs $2 and $10, and Opus 5 runs $5 and $25. That puts sonnet at roughly 2x haiku and opus at roughly 5x, not the 19x gap quoted above. Check the current official price list for the absolute multipliers, and take from this post only the structure: the gaps between tiers are large enough to justify mapping tiers to task types.
+
+Read the `fable` row with extra care. Claude Fable 5 runs $10 input and $50 output per million tokens, the most expensive of the tiers listed here. The reason to use it as a conductor is not that its tokens are cheap, it is to slow down how fast you burn through your subscription plan's usage limit. Porting the same setup onto metered pay-as-you-go API billing would raise cost, not lower it. These are two different axes.
 
 There is one hard rule: every subagent call must explicitly specify the `model` parameter. Omitting it defaults to the session model -- if that default is Opus, every subagent call is billed at 19x. That was the essence of the June 1 incident.
 
@@ -57,7 +62,7 @@ Agent(subagent_type="Explore", model="haiku", prompt="...")
 Agent(subagent_type="Explore", prompt="...")
 ```
 
-We add one more pattern: set the session main to fable and give it only the conductor role. Routing, branching, and aggregation are handled cheaply by fable; only stages that genuinely need heavy reasoning get a one-shot `Agent(model="opus")` call. Exploration goes to haiku. Spawn depth is capped at 2, and haiku subagents never spawn further subagents.
+We add one more pattern: set the session main to fable and give it only the conductor role. Routing, branching, and aggregation are handled by fable, and only stages that genuinely need heavy reasoning get a one-shot `Agent(model="opus")` call. As noted above, what this pattern saves is the subscription usage limit, not the per-token price. Exploration goes to haiku. Spawn depth is capped at 2, and haiku subagents never spawn further subagents.
 
 ## 2. Skill Router: Keep the Main from Wandering the Codebase
 
@@ -762,3 +767,10 @@ This discipline matters even more in on-premises environments, where token costs
 The lesson from the $705 incident was simple. The leak was in behavior, not hardware, and behavior is corrected only by rules. Match model tiers to task types, reduce exploration with the skill router, handle tokens hygienically, promote only what fails, and audit daily -- and you can do the same work at 19x lower cost.
 
 ThakiCloud is making this cost discipline a baseline feature of the product. You can learn more on our website.
+
+## Sources
+
+- [Create custom subagents (Claude Code Docs)](https://code.claude.com/docs/en/sub-agents)
+- [Hooks reference (Claude Code Docs)](https://code.claude.com/docs/en/hooks)
+- [Run Claude Code programmatically (Claude Code Docs)](https://code.claude.com/docs/en/headless)
+- [Prompt caching (Claude Platform Docs)](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)
