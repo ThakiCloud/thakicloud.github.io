@@ -194,8 +194,13 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
-  # Arabic (ar) is disabled — not built, not deployed. Re-enable by removing
-  # these four lines (posts/pages/config/sitemap are kept in the repo).
+  # Arabic (ar) is disabled — not built, not deployed (since 2026-07-27).
+  # 2026-08-13: the 558 ar posts were REMOVED from main. They were excluded from
+  # the build, so their URLs already served the site shell, yet they were 23% of
+  # all post files and were rescanned on every build. They are preserved intact
+  # on branch `archive/ar-posts-2026-08-13` — restore with:
+  #   git checkout archive/ar-posts-2026-08-13 -- _posts/ar
+  # The exclude/defaults entries below stay so re-enabling is a one-step revert.
   - _posts/ar
   - _pages/ar
   - _config-ar.yml
