@@ -1,0 +1,76 @@
+---
+title: "If Your Mascot's Eyes Look Alien, the Problem Is the Catchlight, Not the Colour"
+excerpt: "Glowing eyes are not the fault. Pure emission erases the corneal reflection and the face reads as dead. Once the eyes were fixed, the remaining awkwardness turned out to live in the training data, not the design."
+categories:
+  - research
+tags:
+  - video-generation
+  - character-consistency
+  - character-design
+  - reference-conditioning
+  - wan2
+author_profile: true
+---
+
+If you built a brand mascot and its face reads as machine-like or faintly alien, check whether the eyes carry a **corneal reflection** before you reach for a different colour. That was exactly our coffee-bean robot's problem, and once it was fixed the awkwardness that remained turned out to be a training-data problem rather than a design one.
+
+## What changed
+
+![Mascot eye redesign, before and after]({{ site.url }}{{ site.baseurl }}/assets/images/mascot-v2-eyes-before-after.jpg)
+*The previous eyes on the left, the redesigned ones on the right.*
+
+The left eyes are cyan discs laid on dark brown. No iris, no pupil, no sclera, and crucially no reflection on the surface. The right ones have an amber iris with visible striations, a dark pupil, a bright sclera, and a specular highlight in the upper left of each lens. Eyelid ridges and a mouth came along with them.
+
+## Glowing eyes were never the fault
+
+Our first theory was that emissive eyes simply read as robotic, but the counterexamples are decisive. WALL-E and Baymax convey more emotion through lens eyes alone than most CG characters manage with full faces. Emission itself is not the cause.
+
+The real cause is that **pure emission erases the corneal catchlight**. Pixar models the cornea convex and the iris concave so that a highlight forms twice, and it is that double highlight which gives an eye depth. A self-illuminated material reflects nothing, so the whole structure disappears, and a face without catchlights is repeatedly described in uncanny-valley work as reading **dead**.
+
+Our first version tripped all five triggers at once: pure emission, no catchlight, perfect bilateral symmetry, no eyelid, and saturated cyan on a dark base. That last combination is what "alien" actually meant. Dark tone plus hard edges plus high-saturation glow does not code as friendly; it codes as threatening.
+
+So the eyes moved to an amber at the same temperature as the coffee brown, glowing gently from inside a translucent lens whose surface still reflects. The eyelid curve does the job eyebrows would do on a character that has none, which adds an axis: rounded open for surprise, slightly lowered for calm.
+
+## The other two complaints were not design
+
+The expression stayed flat and the walk slid along the floor. Neither was a drawing problem.
+
+Looking again at the six reference stills, **all six were the same smiling face**. From the adapter's point of view this character has exactly one expression, so it learned one. The training clips were the same story: twelve clips of a single action, "moves cheerfully". Nothing can invent a walk cycle it has never seen.
+
+![The new reference sheet]({{ site.url }}{{ site.baseurl }}/assets/images/mascot-v2-reference-sheet.jpg)
+*The same six stills, now spent on expression and pose: neutral, smile with a wave, surprised, thinking, walk contact, three-quarter.*
+
+The walk frame took three attempts. The first kept the character but swung both arms the same way. A natural walk swings the arms **opposite** to the legs so the rotational momentum cancels, and without that counter-swing you get precisely the sliding look. The second attempt landed the pose but turned the body into glossy plastic with exposed joints, a different robot entirely. Only after pinning the material and silhouette did pose and identity hold together at once.
+
+That difficulty of getting pose and identity simultaneously is, in itself, why reference-conditioned generation exists.
+
+## Which is why we are rebuilding the training data
+
+The background axis already has an answer. Shooting all twelve training clips against one studio backdrop taught the adapter that the backdrop was part of the character; reshooting them in twelve different places and retraining made the problem disappear, and the mascot survived intact.
+
+Whether the same holds for action is the experiment now running. Two training sets share backgrounds, seeds and references, and **differ only in action**: one repeats a single verb twelve times, the other walks, waves, jumps, sits, turns, points, claps, stretches, nods, shrugs, picks something up, and dances.
+
+<video controls muted playsinline style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/mascot-v2-actions.mp4" type="video/mp4">
+</video>
+
+![The twelve-action training set]({{ site.url }}{{ site.baseurl }}/assets/images/mascot-v2-action-grid.jpg)
+*The clips generated for twelve requested actions. Raising an arm, spreading both, bending down are clearly distinct; several others converged on a standing pose.*
+
+One thing worth stating plainly: we asked for twelve different actions and the generator did not deliver twelve different results. Three or four are unmistakably distinct and the rest are variations on standing. Whether that much diversity is enough to change what the adapter learns is exactly the question the experiment answers.
+
+Judgment will come only from **actions never trained on**. Twelve were held back, including running, crouching, spinning and bowing, because replaying a learned motion is not generalization.
+
+## What this has taught us so far
+
+In a small training set, whatever the clips happen to share becomes part of the character. Shoot them all in one place and the place sticks; pick one expression and the expression sticks. A choice made for convenience arrives at the model as a rule.
+
+And separating design causes from data causes mattered more than expected. No amount of training fixes the eyes, and no amount of redrawing fixes the gait while the training data stays as it was.
+
+## The ThakiCloud angle
+
+Character design, reference generation, training-set construction, adapter training and evaluation all closed inside internal GPUs. The character, a brand asset, never left for an external API. Maxis owns the phases that need training and Metis owns generation and serving.
+
+What earns its keep is being able to **test a hypothesis against your own data**. The background hypothesis was tested and held. The action hypothesis is being tested now, and the result will be published as it lands.
+
+Every image and video in this post was generated on internal GPUs.
