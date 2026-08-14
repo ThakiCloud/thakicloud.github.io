@@ -25,6 +25,8 @@ header:
 ebook: /assets/ebooks/llm-evaluation-engineering.pdf
 ebook_title: "LLM 평가 엔지니어링"
 ebook_pages: 23
+audiobook: /assets/audio/posts/llm-evaluation-engineering/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![LLM 평가 엔지니어링]({{ '/assets/images/llm-evaluation-engineering-hero.webp' | relative_url }})
@@ -164,6 +166,19 @@ LLM 평가를 시스템으로 만드는 일은 결국 무엇을 측정할지 미
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/llm-evaluation-engineering/ch01.webp)
 ![2장 삽화](/assets/images/books/llm-evaluation-engineering/ch02.webp)
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![llm-evaluation-engineering 슬라이드 1](/assets/images/llm-evaluation-engineering-slide-01.webp)
+
+![llm-evaluation-engineering 슬라이드 2](/assets/images/llm-evaluation-engineering-slide-02.webp)
+
+![llm-evaluation-engineering 슬라이드 3](/assets/images/llm-evaluation-engineering-slide-03.webp)
+
+![llm-evaluation-engineering 슬라이드 4](/assets/images/llm-evaluation-engineering-slide-04.webp)
 
 ## 출처
 

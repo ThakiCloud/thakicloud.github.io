@@ -12,7 +12,7 @@ tags:
   - metis
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/paid-extra-to-look-worse/strip.png
+image: /assets/images/posts/comics/paid-extra-to-look-worse/strip.webp
 video: /assets/videos/posts/만화/paid-extra-to-look-worse/comic.mp4
 audiobook: /assets/audio/posts/paid-extra-to-look-worse/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -21,13 +21,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 A thirty-second gym vlog made with a text-to-video model went around the timeline this week. It runs at 480p, looks like a nineties tape camcorder, and shakes like someone is holding it. The full prompt was published, camera notes and all, so anyone can copy it.
 The interesting part is the receipt. Those thirty seconds cost $4.12. A full minute runs past eight dollars, and every retake bills again. Dropping the resolution does not drop the compute, so the grain is a taste choice rather than a saving. Prompts get shared for free. Render bills do not.
 
-![We Paid Extra to Look Worse](/assets/images/posts/comics/paid-extra-to-look-worse/strip.png)
+![We Paid Extra to Look Worse](/assets/images/posts/comics/paid-extra-to-look-worse/strip.webp)
 
 > Source: [RT @EvoLinkAi: Seedance 2.5 Korean Girl gym Vlog](https://x.com/hjguyhan/status/2087843518584951236) · twitter
 
 **▶ Animated edition — the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/paid-extra-to-look-worse/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/paid-extra-to-look-worse/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/paid-extra-to-look-worse/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/paid-extra-to-look-worse/comic.en.vtt" default>
 </video>

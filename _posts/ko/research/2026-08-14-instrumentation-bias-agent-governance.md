@@ -15,6 +15,9 @@ categories:
   - research
 author_profile: true
 toc: true
+audiobook: /assets/audio/posts/instrumentation-bias-agent-governance/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/instrumentation-bias-agent-governance/"
 ---
 
 여러 서브에이전트를 병렬로 띄우고 그 결과를 하나로 합치는 fan-out 구조를 프로덕션에 쓰고 있다면, 그리고 "병합 전에 반드시 검증 단계를 거친다"는 규칙을 어딘가에 문서로 박아뒀다면, 이 글을 읽어야 합니다. 자체 프로덕션 코딩 에이전트 하네스에서 이 규칙의 실제 준수율을 세어봤더니 5%가 나왔고, 그 수치가 개선됐는지 확인하려던 후속 실험은 데이터를 단 한 건도 반환하지 못했습니다. 두 사건 모두 규칙이 지켜지지 않아서가 아니라, 지켜진 사실을 측정할 통로 자체가 없었기 때문에 벌어졌습니다. 이 논문은 그 간극에 이름을 붙이고, 왜 조용한 대시보드가 "괜찮다"는 신호가 아니라 답이 두 개인 질문인지를 보여줍니다.
@@ -25,7 +28,7 @@ toc: true
 
 세는 방식은 단순해 보였습니다. 폐쇄가 일어날 때마다 원장에 영수증이 남고, fan-out 디스패치는 세션 트랜스크립트에 전부 기록되니 두 수를 나누면 준수율이 나옵니다. 1,877개의 프로덕션 세션을 훑자 fan-out 디스패치 이벤트 180건 중 영수증이 남은 것은 9건, 5.0%였습니다.
 
-![Baseline: 5.0% Fan-Out Closure Receipt Rate](/assets/images/posts/research/instrumentation-bias-agent-governance/fig1.png)
+![Baseline: 5.0% Fan-Out Closure Receipt Rate](/assets/images/posts/research/instrumentation-bias-agent-governance/fig1.webp)
 *프로덕션 세션 1,877개를 감사한 결과입니다. fan-out 디스패치 180건 중 영수증이 남은 것은 9건(5.0%)이었고, 나머지 171건은 준수 여부를 알 수 없는 상태로 남았습니다.*
 
 이 5%를 어떻게 읽어야 할지에는 몇 가지 해석이 있습니다. 첫 번째 해석은 규칙이 95%의 경우에 무시됐다는 것입니다. 두 번째는 검증이 실제로 자주 일어났지만 기록되지 않았다는 것입니다. 원래 흐름에서 영수증을 남기려면 JSON 검증 기록을 직접 작성하고, kill/keep 임계값을 정하고, 로깅 스크립트를 수동으로 호출하는 등 다섯 단계를 거쳐야 했는데, 이미 검증 자체는 끝났다고 느끼는 순간에 이 절차를 자발적으로 완주할 사람은 거의 없습니다. 세 번째는 측정 자체가 어디서 어떻게 봤는지에 따른 산물이라는 것입니다. 이 논문이 만든 프레임워크로 보면, 대시보드가 보여준 숫자는 이 세 가지 중 어느 것도 구분해주지 않습니다.
@@ -36,7 +39,7 @@ toc: true
 
 논문은 Δ가 벌어지는 경로를 세 가지 메커니즘으로 나눕니다. 수작업 마찰(manual-step friction)은 로깅 절차가 있다는 걸 알고 기꺼이 따르려는 의지도 있지만, 검증이 이미 끝난 시점에 그 절차가 상대적으로 너무 비싸게 느껴지는 경우를 말합니다. 도구 인지 격차(tooling-awareness gap)는 디스패치하는 순간 오케스트레이팅 모델의 주의가 본질적인 작업에 쏠려 있어 거버넌스 절차를 떠올릴 여유가 없는 경우입니다. 가장 다루기 까다로운 유형은 실행 범위 불일치(scope-parity gap)입니다. 검증도 실제로 일어났고 영수증도 정확히 남았는데, 감사 장비가 다른 호스트나 컨테이너, 네트워크 파티션에서 돌아가느라 아무것도 못 보는 경우입니다. 대시보드에 나타나는 신호가 완전한 비준수와 구분되지 않는다는 점에서 세 유형 중 가장 위험합니다.
 
-![Where Each Mechanism Suppresses the Receipt Signal](/assets/images/posts/research/instrumentation-bias-agent-governance/fig2.png)
+![Where Each Mechanism Suppresses the Receipt Signal](/assets/images/posts/research/instrumentation-bias-agent-governance/fig2.webp)
 *개념을 정리한 개략도로 수치를 담고 있지 않습니다. 행동 준수가 관측 가능해지려면 영수증이 남고(방출) 그 영수증이 감사자에게 수집돼야 하는데, 마찰과 인지 격차는 방출 단계를, 범위 불일치는 수집 단계를 각각 억제합니다.*
 
 여기서 논문이 강조하는 구분이 하나 있습니다. 계측 편향은 굿하트의 법칙(측정이 목표가 되는 순간 그 측정은 의미를 잃는다)과는 다른 문제입니다. 굿하트 현상은 지표가 계속 생산되지만 그 생산 과정 자체가 왜곡되는 타당성(validity) 문제이고, 계측 편향은 지표가 정확하게 생산됐을 때는 신뢰할 만하지만 애초에 충분히 자주 생산되지 않거나 감사자가 닿을 수 없는 곳에서 생산되는 완전성(completeness) 문제입니다. 그래서 대응 방향도 정반대입니다. 굿하트 편향에 맞설 때는 좋아 보이는 지표를 의심해야 하지만, 계측 편향에 맞설 때는 나빠 보이거나 아예 아무것도 보이지 않는 지표를 의심해야 합니다.
@@ -64,3 +67,16 @@ toc: true
 더 근본적인 한계는 자연실험 재실행이 실패하면서 개선 조치의 실제 효과를 검증된 수치로 보고하지 못했다는 점입니다. 이 논문은 개선 전 기준선과 범위 불일치라는 실패 모드의 실증만 확보했을 뿐, 두 명령 도구와 디스패치 훅이 폐쇄율을 실제로 끌어올렸다고는 아직 말할 수 없습니다. 또한 진짜 준수 여부(C_true)를 독립적으로 확인해줄 오라클이 없어서 Δ는 정의는 명확하지만 아직 추정할 수 없는 이론적 양으로 남아 있고, 전/후 비교 설계 자체도 "기록이 쉬워져서 늘어난 준수"와 "관측되는 것을 의식해서 실제로 늘어난 준수"라는 두 채널을 구분하지 못한다는 구조적 약점을 안고 있습니다. 다음 단계로는 대화형 세션과 같은 범위에서 실행되는 스캐너로 재실험을 다시 돌리고, 세션 파일을 0건 찾았을 때는 조용히 0을 보고하는 대신 크게 실패하도록 하는 생존성 검증(liveness assertion)을 추가하는 작업이 최우선 과제로 제시됩니다. 그 이후에는 다른 프로덕션 하네스로 프로토콜을 확장하고, 영수증 없는 fan-out 이벤트를 사람이 표본 추출해 직접 검토하는 오라클을 구축해 Δ를 추정치가 아닌 보정된 값으로 전환하는 것이 목표입니다.
 
 논문 상세 페이지: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-08-14-instrumentation-bias-agent-governance](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-08-14-instrumentation-bias-agent-governance)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![instrumentation-bias-agent-governance 슬라이드 1](/assets/images/instrumentation-bias-agent-governance-slide-01.webp)
+
+![instrumentation-bias-agent-governance 슬라이드 2](/assets/images/instrumentation-bias-agent-governance-slide-02.webp)
+
+![instrumentation-bias-agent-governance 슬라이드 3](/assets/images/instrumentation-bias-agent-governance-slide-03.webp)
+
+![instrumentation-bias-agent-governance 슬라이드 4](/assets/images/instrumentation-bias-agent-governance-slide-04.webp)
+

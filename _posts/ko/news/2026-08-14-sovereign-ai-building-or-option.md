@@ -16,6 +16,9 @@ tags:
   - thakicloud
 categories:
   - news
+audiobook: /assets/audio/posts/sovereign-ai-building-or-option/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/sovereign-ai-building-or-option/"
 ---
 
 ![소버린 AI는 건물입니까, 선택지입니까 개념을 형상화한 이미지](/assets/images/sovereign-ai-building-or-option-hero.webp)

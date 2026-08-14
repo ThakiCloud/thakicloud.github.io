@@ -12,7 +12,7 @@ tags:
   - metis
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/paid-extra-to-look-worse/strip.png
+image: /assets/images/posts/만화/paid-extra-to-look-worse/strip.webp
 video: /assets/videos/posts/만화/paid-extra-to-look-worse/comic.mp4
 audiobook: /assets/audio/posts/paid-extra-to-look-worse/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -21,13 +21,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 글로 지시하면 영상이 나오는 텍스트투비디오 모델로 만든 30초짜리 헬스장 브이로그가 타임라인을 돌았습니다. 해상도는 480p, 화면은 90년대 테이프 캠코더처럼 거칠고 손으로 든 것처럼 흔들립니다. 프롬프트에 카메라 항목까지 적혀 있어서 누구나 따라 만들 수 있고요.
 재미있는 건 가격입니다. 그 30초에 4달러 12센트가 붙었습니다. 1분이면 8달러가 넘고, 마음에 안 들어 다시 뽑을 때마다 같은 금액이 또 나갑니다. 해상도를 낮춘다고 계산량이 알아서 줄지도 않으니, 거친 질감은 절약이 아니라 취향에 가깝습니다. 프롬프트는 공짜로 공유되는데 렌더링 청구서는 각자 부담이라는 게 이 장르의 진짜 규칙이더군요.
 
-![화질 깎는 데 5천 원](/assets/images/posts/만화/paid-extra-to-look-worse/strip.png)
+![화질 깎는 데 5천 원](/assets/images/posts/만화/paid-extra-to-look-worse/strip.webp)
 
 > 원 뉴스: [RT @EvoLinkAi: Seedance 2.5 Korean Girl gym Vlog](https://x.com/hjguyhan/status/2087843518584951236) · twitter
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/paid-extra-to-look-worse/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/paid-extra-to-look-worse/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/paid-extra-to-look-worse/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/paid-extra-to-look-worse/comic.ko.vtt" default>
 </video>

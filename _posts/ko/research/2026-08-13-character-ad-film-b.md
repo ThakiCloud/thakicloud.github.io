@@ -10,6 +10,9 @@ tags:
   - evaluation
   - wan2
 author_profile: true
+audiobook: /assets/audio/posts/character-ad-film-b/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b/"
 ---
 
 브랜드 마스코트를 여러 영상에 반복 등장시키려고 캐릭터 어댑터를 학습했는데 요청한 장면이 자꾸 같은 배경으로 뭉개진다면, 학습이라는 방법을 의심하기 전에 학습 클립의 배경부터 보십시오. 저희는 그 순서를 반대로 밟았다가 방법 탓을 했고, 확인해 보니 원인은 저희가 만든 데이터에 있었습니다.
@@ -104,3 +107,16 @@ author_profile: true
 이번 일에서 실제로 값어치를 한 것은 어느 방법이 이겼느냐가 아니라, 틀린 결론을 자기 데이터로 다시 재서 뒤집을 수 있었다는 점입니다. 방법을 바꾸는 것이 아니라 데이터를 바꿔야 하는 문제였다는 것도, 재보지 않았다면 알 수 없었습니다.
 
 이 글의 수치는 시뮬레이션이 아니라 사내 GPU에서 측정한 값입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![character-ad-film-b 슬라이드 1](/assets/images/character-ad-film-b-slide-01.webp)
+
+![character-ad-film-b 슬라이드 2](/assets/images/character-ad-film-b-slide-02.webp)
+
+![character-ad-film-b 슬라이드 3](/assets/images/character-ad-film-b-slide-03.webp)
+
+![character-ad-film-b 슬라이드 4](/assets/images/character-ad-film-b-slide-04.webp)
+

@@ -25,6 +25,8 @@ header:
 ebook: /assets/ebooks/ai-production-observability.pdf
 ebook_title: "AI 프로덕션 옵저버빌리티"
 ebook_pages: 23
+audiobook: /assets/audio/posts/ai-production-observability/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![AI 프로덕션 옵저버빌리티]({{ '/assets/images/ai-production-observability-hero.webp' | relative_url }})
@@ -169,6 +171,19 @@ def should_retain(latency_ms: float, p95_ms: float,
 
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-production-observability/ch01.webp)
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-production-observability 슬라이드 1](/assets/images/ai-production-observability-slide-01.webp)
+
+![ai-production-observability 슬라이드 2](/assets/images/ai-production-observability-slide-02.webp)
+
+![ai-production-observability 슬라이드 3](/assets/images/ai-production-observability-slide-03.webp)
+
+![ai-production-observability 슬라이드 4](/assets/images/ai-production-observability-slide-04.webp)
 
 ## 출처
 
