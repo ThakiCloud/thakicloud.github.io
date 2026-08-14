@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/phone-already-ran-the-model/strip.webp
 video: /assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4
+published: false
 ---
 
 손이나 얼굴을 인식하는 모델을 쓰려면 영상을 어딘가로 올려야 한다고 생각하기 쉽습니다. 구글이 오픈소스로 공개한 실시간 ML 툴킷은 그 전제를 뒤집었습니다. 얼굴과 손, 자세, 제스처, 사물 인식을 휴대폰과 브라우저, 임베디드 기기 안에서 바로 처리하죠.

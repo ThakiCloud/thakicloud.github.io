@@ -16,6 +16,7 @@ image: /assets/images/posts/comics/agents-were-never-that-hard/strip.webp
 audiobook: /assets/audio/posts/agents-were-never-that-hard/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/agents-were-never-that-hard/"
+published: false
 ---
 
 An AI agent is just a program that plans on its own and calls tools to get work done for you. The tweet everyone shared this week makes a small, embarrassing point: people park "build an agent" on their someday list and never touch it, because every post they read framed it as a moon-landing-grade project.

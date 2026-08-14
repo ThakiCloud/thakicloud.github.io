@@ -17,6 +17,7 @@ image: /assets/images/posts/comics/code-review-effort-levels-low-effort-wins/str
 audiobook: /assets/audio/posts/code-review-effort-levels-low-effort-wins/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/code-review-effort-levels-low-effort-wins/"
+published: false
 ---
 
 Claude Code's /code-review just grew effort levels: a dial for how hard the review works, and the whole review gets rewritten from scratch at each setting. The funny part is that even the lowest effort setting reportedly beats other code reviewers. Cranking the dial, though, just means running more inference, and on someone else's cloud every turn of that dial ticks the meter. Naturally, Paxis and Metis pushed it to the top.

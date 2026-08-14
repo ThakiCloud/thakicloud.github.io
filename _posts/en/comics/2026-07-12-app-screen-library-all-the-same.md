@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/app-screen-library-all-the-same/strip.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/app-screen-library-all-the-same/"
+published: false
 ---
 
 A new tool has quietly indexed over 621,500 app screens, and iOS builders are hooked. You can trace how a similar app moves, how one screen hands off to the next, down to the tiniest animation. That handoff between screens is the flow, and now it is free to copy. The catch is familiar: when everyone references the same top screens, every app slowly grows the same face. Infinite reference, and somehow zero originality.
