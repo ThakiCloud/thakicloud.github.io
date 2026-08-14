@@ -18,9 +18,15 @@ permalink: /ko/llmops/nvfp4-vs-fp8-two-four-bits/
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvfp4-vs-fp8-two-four-bits/"
 categories:
   - llmops
+audiobook: "https://drive.google.com/file/d/15ymQqqV9dT0kw36rJCeFZAgJw3zsqmTl/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 Blackwell에서 MoE를 서빙하며 정밀도를 고르고 있다면, 4비트를 하나로 묶어 생각하는 것이 가장 비싼 실수입니다. 같은 모델을 W4A16으로 내리면 FP8보다 느려지고 NVFP4로 내리면 FP8보다 빨라집니다. 비트폭은 같은데 결론의 부호가 반대죠.
+
+![같은 4비트가 FP8을 사이에 두고 반대편에 섭니다 개념을 형상화한 이미지](/assets/images/nvfp4-vs-fp8-two-four-bits-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 한 모델, 네 정밀도
 
@@ -105,3 +111,25 @@ Blackwell 타깃이라면 4비트 기본값은 NVFP4입니다. 품질은 FP8과 
 W4A16이 여전히 이기는 자리도 있습니다. 파일이 조금 더 작고, Hopper에서도 돕니다. 다만 속도를 노리고 W4A16을 고른 것이라면 그 선택은 어긋났습니다. 커널을 튜닝해서 좁힐 수 있는 격차가 아니라, 활성값을 안 줄인 데서 오는 구조적 격차입니다.
 
 이 글의 수치는 단일 B200에서 vLLM 0.27.1로 잰 실측값이며 시뮬레이션이 아닙니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![nvfp4-vs-fp8-two-four-bits 슬라이드 1](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-01.webp)
+
+![nvfp4-vs-fp8-two-four-bits 슬라이드 2](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-02.webp)
+
+![nvfp4-vs-fp8-two-four-bits 슬라이드 3](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-03.webp)
+
+![nvfp4-vs-fp8-two-four-bits 슬라이드 4](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-04.webp)
+
+## 출처
+
+- vLLM Project, [Quantization 지원 개요, vLLM Docs](https://docs.vllm.ai/en/latest/features/quantization/index.html)
+- vLLM Project, [vllm-project/vllm, GitHub](https://github.com/vllm-project/vllm)
+- NVIDIA, [Blackwell Architecture](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/)
+- Qwen Team, [Qwen3-Coder-30B-A3B-Instruct 모델 카드, Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct)
+- Chen et al., [Evaluating Large Language Models Trained on Code, arXiv:2107.03374](https://arxiv.org/abs/2107.03374)
+- NVIDIA, [TensorRT Model Optimizer, GitHub](https://github.com/NVIDIA/TensorRT-Model-Optimizer)

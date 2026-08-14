@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/postmortem-culture-engin
 ebook: /assets/ebooks/postmortem-culture-engineering.pdf
 ebook_title: "실패를 자산으로 바꾸는 법"
 ebook_pages: 20
+audiobook: "https://drive.google.com/file/d/1NvxQi4KGQPrI17BjmCNlt8anvL2QhoIF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 새벽 세 시에 알람이 울리고 결제 API가 삼십 분째 오류를 뱉는 팀, 다음 날 아침 회의에서 팀장이 던지는 첫 질문 하나로 그 조직의 미래가 갈립니다. "누가 배포했죠"로 시작하는 조직과 "왜 이 배포가 막히지 않았을까요"로 시작하는 조직은 겉보기엔 같은 장애를 겪었지만, 몇 달 뒤 완전히 다른 장애 이력을 쌓게 됩니다. 이 글은 그 갈림길이 왜 생기는지, 그리고 어느 쪽으로 조직을 밀어야 같은 장애를 두 번 겪지 않는지를 다룹니다.
@@ -42,6 +45,10 @@ ebook_pages: 20
 그래서 처벌 중심 조직에서 나오는 포스트모템 문서를 읽어보면 공통된 패턴이 보입니다. 원인 분석이 이상하게 얕은 지점에서 멈춰 있습니다. 담당자가 확인 절차를 누락했다까지만 적혀 있고, 왜 그 확인 절차가 그 사람 한 명의 기억에만 의존하는 구조였는지는 묻지 않습니다. 그 질문을 던지면 결국 시스템 설계의 책임이 드러나고, 그 설계는 대개 팀 전체 혹은 리더의 결정이었기 때문입니다. 개인을 지목하는 게 조직 입장에서 가장 편한 종착점이 되는 이유입니다.
 
 이 현상을 정보의 비대칭이라고 부르는 관점도 있습니다. 장애 당사자는 진짜 원인의 상당 부분을 알고 있지만 처벌이 두려워 전부를 말하지 않습니다. 조사자는 그 절반의 정보로 결론을 내려야 하고, 그 결론은 필연적으로 표면적인 원인에서 멈춥니다. 근본 원인까지 도달하지 못한 포스트모템은 같은 장애가 형태만 바꿔 다시 일어날 씨앗을 남깁니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/postmortem-culture-engineering/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 침묵은 왜 복리로 쌓이는가
 
@@ -98,3 +105,26 @@ ebook_pages: 20
 이 관점은 실무에 구체적인 함의를 남깁니다. 포스트모템 프로세스를 도입하려는 팀이라면 문화 캠페인부터 시작하지 말고 세 가지 구조를 먼저 점검해야 합니다. 회의를 여는 사람이 매번 어떤 문장으로 시작하는지, 문서 템플릿이 사실과 판단을 구조적으로 분리하도록 강제하는지, 액션 아이템에 담당자와 완료 기준과 우선순위가 기본값으로 요구되는지입니다. 이 세 가지가 갖춰지면 블레임리스라는 단어를 한 번도 입 밖에 내지 않아도 정직한 보고가 자연스럽게 늘어납니다. 반대로 이 세 가지 없이 블레임리스를 선언만 하면, 그 선언은 다음 처벌이 일어나는 순간 즉시 무너지는 얇은 약속에 그칩니다.
 
 결국 장애를 자산으로 바꾸는 조직과 같은 장애를 반복하는 조직의 차이는 사람의 됨됨이가 아니라 설계의 차이입니다. 처벌은 정보를 죽이고, 정보가 죽으면 조직은 자기 시스템을 점점 더 모르게 됩니다. 반대로 정직한 보고가 안전한 시스템은 매 장애를 통해 실제로 더 튼튼해집니다. 이 설계를 먼저 갖추는 조직이 결국 더 적게, 그리고 더 가볍게 넘어집니다.
+
+## 참고문헌
+
+- 비난 문화가 정직한 보고를 억누르고, 고칠 대상은 사람이 아니라 시스템이라는 이 글의 출발점입니다. Google SRE Book, "Postmortem Culture: Learning from Failure". [https://sre.google/sre-book/postmortem-culture/](https://sre.google/sre-book/postmortem-culture/)
+- 액션 아이템에 명시적 담당자와 검증 가능한 완료 상태가 필요하며 "개선한다" 같은 모호한 동사는 실행되지 않는다는 근거입니다. Google SRE Workbook, "Postmortem Culture". [https://sre.google/workbook/postmortem-culture/](https://sre.google/workbook/postmortem-culture/)
+- 타임라인에는 시각과 사건만 적고 원인 해석은 별도 섹션으로 분리하는 실제 작성 예시입니다. Google SRE Book, "Example Postmortem". [https://sre.google/sre-book/example-postmortem/](https://sre.google/sre-book/example-postmortem/)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/postmortem-culture-engineering/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![postmortem-culture-engineering 슬라이드 1](/assets/images/postmortem-culture-engineering-slide-01.webp)
+
+![postmortem-culture-engineering 슬라이드 2](/assets/images/postmortem-culture-engineering-slide-02.webp)
+
+![postmortem-culture-engineering 슬라이드 3](/assets/images/postmortem-culture-engineering-slide-03.webp)
+
+![postmortem-culture-engineering 슬라이드 4](/assets/images/postmortem-culture-engineering-slide-04.webp)
+

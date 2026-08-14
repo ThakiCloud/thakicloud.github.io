@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/migration-without-downti
 ebook: /assets/ebooks/migration-without-downtime.pdf
 ebook_title: "멈추지 않고 옮기기"
 ebook_pages: 30
+audiobook: "https://drive.google.com/file/d/1vrhcr6Y0o8HChPoufBxC2JnUXMZVCJyW/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 레거시 서비스나 데이터베이스를 새 스택으로 옮겨야 하는 백엔드 엔지니어, 그리고 그 일정과 위험을 책임지는 소규모 팀의 기술 리드라면 이 글에서 하나의 답을 가져갈 수 있습니다. 마이그레이션이 무너지는 지점은 거의 항상 새 기술의 완성도가 아니라, 어느 순간에든 돌아갈 자리를 남겨두지 못했다는 사실입니다. 무중단 이전을 성공시키는 힘은 속도나 새 아키텍처의 우아함이 아니라, 매 단계마다 실패해도 되돌릴 수 있는 상태를 끝까지 유지하는 설계에서 나옵니다.
@@ -108,6 +111,25 @@ ebook_pages: 30
 
 이 표가 보여주는 흐름이 이 글 전체의 결론입니다. 이음새를 찾고 파사드를 세우고 이중 쓰기를 켜는 초반의 결정은 언제든 즉시 되돌릴 수 있는 값싼 결정이라, 완벽을 추구하기보다 빠르게 시도하고 관찰하는 태도가 맞습니다. 반대로 이중 쓰기를 끄고 옛 시스템을 종료하는 뒤쪽의 결정은 되돌릴 수 없는 비싼 결정이라, 충분한 관측 기간과 실제 호출자 확인이라는 느린 절차가 정당화됩니다.
 
+## 참고문헌
+
+- 파사드를 세워 옛 시스템을 조금씩 대체해 나가는 접근의 원전입니다. Martin Fowler, "StranglerFigApplication". [https://martinfowler.com/bliki/StranglerFigApplication.html](https://martinfowler.com/bliki/StranglerFigApplication.html)
+- 이중 쓰기 시작에서 옛 경로 종료까지의 단계 구조는 확장-이행-수축이라는 이름으로 정리돼 있습니다. Martin Fowler, "ParallelChange". [https://martinfowler.com/bliki/ParallelChange.html](https://martinfowler.com/bliki/ParallelChange.html)
+- "있으면 갱신하고 없으면 삽입"하는 멱등 백필의 실제 문법과 원자성 보장입니다. PostgreSQL 문서, "INSERT ... ON CONFLICT DO UPDATE". [https://www.postgresql.org/docs/current/sql-insert.html](https://www.postgresql.org/docs/current/sql-insert.html)
+
 마이그레이션을 어렵게 만드는 것은 기술 스택의 차이가 아니라, 이 두 종류의 결정을 같은 속도로 처리하려는 시도입니다. 값싼 결정을 지나치게 신중하게 다루면 프로젝트가 끝없이 지연되고, 비싼 결정을 서둘러 처리하면 되돌릴 수 없는 사고가 납니다. 지금 진행 중인 마이그레이션이 있다면, 각 단계를 이 표의 어느 행에 놓을 수 있는지 점검하는 것이 다음 할 일을 정하는 가장 빠른 방법입니다.
 
 더 구체적인 절차와 체크리스트가 필요하다면, 이 글이 다룬 다섯 단계를 실전 순서와 세부 항목까지 풀어놓은 전자책 《멈추지 않고 옮기기》를 참고해 보세요.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
+
+![migration-without-downtime 슬라이드 1](/assets/images/migration-without-downtime-slide-01.webp)
+
+![migration-without-downtime 슬라이드 2](/assets/images/migration-without-downtime-slide-02.webp)
+
+![migration-without-downtime 슬라이드 3](/assets/images/migration-without-downtime-slide-03.webp)
+
+![migration-without-downtime 슬라이드 4](/assets/images/migration-without-downtime-slide-04.webp)
+

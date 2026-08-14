@@ -24,6 +24,9 @@ header:
 ebook: /assets/ebooks/ai-agent-harness-design.pdf
 ebook_title: "AI 에이전트 하네스 설계"
 ebook_pages: 22
+audiobook: "https://drive.google.com/file/d/10qVjzX3zbVZ2YZW2_Zx-aKdf_I_2dtyQ/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![AI 에이전트 하네스 설계]({{ '/assets/images/ai-agent-harness-design-hero.webp' | relative_url }})
@@ -48,6 +51,10 @@ Sonnet에서 Opus로 모델을 올렸는데 처음 며칠만 안정적이고 다
 제약 조건을 표현하는 방식도 결과에 영향을 줍니다. 허용할 행동을 나열하는 방식은 예측하지 못한 상황에 취약합니다. 모델이 목록에 없는 방식으로 응답할 때마다 목록을 늘려야 하니 프롬프트는 끝없이 길어집니다. 반대로 금지할 행동을 나열하면 목록은 대개 더 짧고, 모델은 짧은 금지 목록을 더 정확히 지킵니다. 검색 결과를 그대로 옮겨 답하는 에이전트를 막을 때 "분석을 제공하라"는 허용 지시보다 "검색 결과 문장을 그대로 복사해 넣지 마라"는 금지 지시가 더 잘 통하는 이유가 여기 있습니다. 전자는 "분석"의 수준을 모델이 매번 다시 판단해야 하지만, 후자는 경계를 한 번에 그어줍니다.
 
 출력 형식을 전달할 때도 예시 하나에 기대는 대신 규칙을 명시하는 편이 안정적입니다. 예시는 입력과 출력의 쌍 하나만 보여주는데, 새로운 입력이 그 쌍과 조금만 달라져도 모델은 형식을 추측하기 시작하고 그 추측은 자주 틀립니다. "무엇이 있어야 하는가"를 규칙으로 열거하고 "어떻게 보이는가"는 모델에게 맡기지 않는 쪽이 문맥과 무관하게 형식을 지키게 만듭니다. 입력이 복잡해질수록 예시의 효용은 줄고 규칙의 효용은 늘어납니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-agent-harness-design/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 도구 이름과 파라미터가 판단을 대신합니다
 
@@ -162,4 +169,14 @@ flowchart TB
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-agent-harness-design/ch01.webp)
 ![3장 삽화](/assets/images/books/ai-agent-harness-design/ch03.webp)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-agent-harness-design/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 출처
+
+- Anthropic, [Writing effective tools for AI agents, using AI agents](https://www.anthropic.com/engineering/writing-tools-for-agents)
+- Anthropic, [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
+- Huang et al., [Large Language Models Cannot Self-Correct Reasoning Yet (arXiv:2310.01798)](https://arxiv.org/abs/2310.01798)
 

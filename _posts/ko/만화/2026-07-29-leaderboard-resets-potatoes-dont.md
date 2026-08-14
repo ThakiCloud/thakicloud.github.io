@@ -14,7 +14,6 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/만화/leaderboard-resets-potatoes-dont/strip.webp
-published: false
 ---
 
 이번 주 타임라인을 가장 크게 흔든 건 순위표 하나였습니다. 지난 90일 동안 X에서 팔로워가 가장 빠르게 늘어난 스타트업을 줄 세운 표였죠.
@@ -34,3 +33,16 @@ published: false
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![leaderboard-resets-potatoes-dont 슬라이드 1](/assets/images/leaderboard-resets-potatoes-dont-slide-01.webp)
+
+![leaderboard-resets-potatoes-dont 슬라이드 2](/assets/images/leaderboard-resets-potatoes-dont-slide-02.webp)
+
+![leaderboard-resets-potatoes-dont 슬라이드 3](/assets/images/leaderboard-resets-potatoes-dont-slide-03.webp)
+
+![leaderboard-resets-potatoes-dont 슬라이드 4](/assets/images/leaderboard-resets-potatoes-dont-slide-04.webp)
+

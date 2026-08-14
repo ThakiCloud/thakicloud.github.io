@@ -15,7 +15,6 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/leaderboard-resets-potatoes-dont/strip.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/leaderboard-resets-potatoes-dont/"
-published: false
 ---
 
 One leaderboard ate the timeline this week: the fastest-growing startups on X, ranked purely by follower growth over the last 90 days.

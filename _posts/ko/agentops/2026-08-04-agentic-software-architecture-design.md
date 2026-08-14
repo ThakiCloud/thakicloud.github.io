@@ -155,3 +155,23 @@ class ToolError(Exception):
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/agentic-software-architecture/ch01.webp)
 
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![agentic-software-architecture-design 슬라이드 1](/assets/images/agentic-software-architecture-design-slide-01.webp)
+
+![agentic-software-architecture-design 슬라이드 2](/assets/images/agentic-software-architecture-design-slide-02.webp)
+
+![agentic-software-architecture-design 슬라이드 3](/assets/images/agentic-software-architecture-design-slide-03.webp)
+
+![agentic-software-architecture-design 슬라이드 4](/assets/images/agentic-software-architecture-design-slide-04.webp)
+
+## 출처
+
+- Anthropic, [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
+- Anthropic, [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- Yao et al., [ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629)
+- Anthropic, [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
+
