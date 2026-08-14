@@ -15,7 +15,6 @@ toc: false
 image: /assets/images/posts/만화/agents-were-never-that-hard/strip.webp
 audiobook: /assets/audio/posts/agents-were-never-that-hard/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 ---
 
 AI 에이전트는 스스로 계획을 세우고 도구를 불러다 일을 대신 처리하는 프로그램을 말합니다. 이번에 화제가 된 트윗의 요지는 간단합니다. 다들 '에이전트 직접 만들기'를 언젠가 할 일 목록에 올려두고 미룬다는 겁니다. 읽는 글마다 무슨 대형 연구 프로젝트처럼 겁을 줬으니까요.

@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/만화/ai-tutors-ai-recursive-self-improvement/strip.webp
 audiobook: /assets/audio/posts/ai-tutors-ai-recursive-self-improvement/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 ---
 
 엔비디아가 흥미로운 실험 하나를 공개했습니다. 코딩 에이전트 Codex에게 프롬프트 딱 두 개를 줬더니, 작은 모델 Cosmos 3 Nano의 정확도를 하루 만에 54.41%에서 93.35%까지 끌어올렸다는 겁니다. AI가 다른 AI를 가르쳐 더 똑똑하게 만든 셈이죠. 이렇게 AI가 스스로를 개선하는 고리를 재귀적 자기개선(RSI)이라 부릅니다. 여기 쓰인 '사후학습'은 이미 만들어둔 모델을 추가로 다듬어 성능을 올리는 방법을 말합니다. 파시스와 메티스가 이 자기개선 마라톤을 폭포 앞에서 지켜봅니다.
