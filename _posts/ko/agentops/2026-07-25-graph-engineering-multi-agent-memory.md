@@ -1,6 +1,6 @@
 ---
 title: "에이전트의 기억을 영구화하는 법: 그래프 엔지니어링 5단계"
-excerpt: "에이전트의 기억은 컨텍스트 창과 함께 죽습니다. 지식 그래프를 공유 메모리로 두면 그 기억이 영구화됩니다. Anthropic 엔지니어가 정리한 Extract·Resolve·Assemble·Query·Repeat 5단계를 뜯어보고, 멀티에이전트 시스템에 어떻게 붙이는지 짚습니다."
+excerpt: "에이전트의 기억은 컨텍스트 창과 함께 죽습니다. 지식 그래프를 공유 메모리로 두면 그 기억이 영구화됩니다. 커뮤니티에서 정리된 Extract·Resolve·Assemble·Query·Repeat 5단계를 뜯어보고, 멀티에이전트 시스템에 어떻게 붙이는지 짚습니다."
 seo_title: "그래프 엔지니어링: 멀티에이전트의 영구 기억 설계 - Thaki Cloud"
 seo_description: "에이전트 메모리가 컨텍스트 창과 함께 사라지는 문제를, 지식 그래프 공유 메모리로 해결하는 그래프 엔지니어링 5단계(Extract·Resolve·Assemble·Query·Repeat)를 실무 관점에서 분석합니다. Haiku·Sonnet 모델 라우팅과 provenance, ThakiCloud Paxis 적용까지."
 date: 2026-07-25
@@ -31,7 +31,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 ## 왜 읽어야 하나
 
-멀티에이전트 시스템이나 오래 도는 에이전트 제품을 만드는 엔지니어라면, 이 글은 "모델을 더 큰 걸로 바꿔야 하나"라는 질문을 잠시 내려놓게 해드립니다. 핵심 결론부터 말씀드리면 이렇습니다. **에이전트의 기억은 컨텍스트 창과 함께 죽고, 지식 그래프를 공유 메모리로 두어야 그 기억이 영구화됩니다.** 최근 한 Anthropic 시니어 엔지니어가 멀티에이전트 시스템을 위한 그래프 엔지니어링을 12쪽짜리 문서로 정리했는데, 그 뼈대인 다섯 단계(Extract, Resolve, Assemble, Query, Repeat)가 왜 지금 중요한지, 그리고 실제 시스템에 어떻게 붙이는지를 이 글에서 풀어드립니다.
+멀티에이전트 시스템이나 오래 도는 에이전트 제품을 만드는 엔지니어라면, 이 글은 "모델을 더 큰 걸로 바꿔야 하나"라는 질문을 잠시 내려놓게 해드립니다. 핵심 결론부터 말씀드리면 이렇습니다. **에이전트의 기억은 컨텍스트 창과 함께 죽고, 지식 그래프를 공유 메모리로 두어야 그 기억이 영구화됩니다.** 최근 멀티에이전트 시스템을 위한 그래프 엔지니어링을 정리한 글이 공유되었는데, 그 뼈대인 다섯 단계(Extract, Resolve, Assemble, Query, Repeat)가 왜 지금 중요한지, 그리고 실제 시스템에 어떻게 붙이는지를 이 글에서 풀어드립니다.
 
 ## 개요
 
@@ -439,3 +439,5 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 - [Codez (@0xCodez), "Graph Engineering for multi-agentic systems" (X)](https://x.com/0xCodez/status/2080250266851463209)
 - [Anthropic Engineering, "How we built our multi-agent research system"](https://www.anthropic.com/engineering/multi-agent-research-system)
+
+출처에 관해 한 가지 밝힙니다. 위 다섯 단계에 대해 저희가 직접 확인한 것은 위 X 게시물이며, 그 바탕이 된 문서의 저자와 분량은 확인하지 못했습니다. 같은 소재를 다룬 다른 소개 글은 저자를 다르게 적고 있어, 본문에서는 확인되지 않은 귀속을 쓰지 않았습니다.
