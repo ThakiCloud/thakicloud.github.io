@@ -38,6 +38,11 @@ v3 matches v2 to four decimal places. Rewriting the entire action vocabulary bou
 ![Same prompts, different references]({{ site.url }}{{ site.baseurl }}/assets/images/mascot-action-v3-vs-v4.jpg)
 *The same six prompts at the same seed. v3 on top, v4 below. Look at whether "crouch" actually reaches the floor and whether "topple over" actually falls.*
 
+<video controls muted playsinline loop style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/mascot-ref-pose-v3-vs-v4.mp4" type="video/mp4">
+</video>
+*Still frames only tell half of it. The same six prompts at the same seed, side by side. The left arm mostly holds a standing pose; the right one leaves the ground, drops to it, and falls over.*
+
 ## References constrain pose, not just appearance
 
 Reference conditioning is usually explained as telling the model what the character looks like. It also tells the model how the character stands. When all four stills show a standing character, the model learns that this character is a standing thing. The prompt can ask for a crouch, but the references are simultaneously asking for a stand, and the references win.
@@ -110,6 +115,11 @@ essentially zero.
 *Four actions absent from both training sets, sampled at the start, middle and end of each clip.
 Neither adapter renders the requested action convincingly. What to look at is how well the
 character holds together across the three frames.*
+
+<video controls muted playsinline loop style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/mascot-e17-holdout.mp4" type="video/mp4">
+</video>
+*Five held-out prompts. Neither adapter performs the requested action. Watch the left panel for the moments where the character's design slips as the clip runs.*
 
 An adapter that has seen one motion fights the prompt when asked for something else, and that
 conflict surfaces as identity wobble. An adapter that has seen variety does not fight. Training
