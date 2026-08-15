@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/engineering-buzzword-shelf/strip.webp
 video: /assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4
+published: false
 ---
 
 어제 X에서 돌던 한 줄이 유난히 찔렸습니다. 프롬프트 엔지니어링에서 컨텍스트, 하니스, 루프, 이제 그래프 엔지니어링까지, 용어는 계속 늘어나고 새 이름마다 혁명 취급을 받는다는 이야기였죠.
