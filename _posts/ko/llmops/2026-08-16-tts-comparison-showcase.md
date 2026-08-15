@@ -24,10 +24,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showca
 ---
 
 ![다국어 TTS 비교]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.png)
-*다섯 개 모델이 같은 문장을 네 개 언어로 읽습니다*
+*여섯 개 모델이 같은 문장을 네 개 언어로 읽습니다*
 
-음성합성 모델을 고르실 때 가장 확실한 방법은 직접 들어보는 것입니다. 그래서 다섯 개 모델에게
-같은 문장을 한국어와 영어, 중국어, 일본어로 읽히고 **61개 샘플을 언어별로 나란히** 놓았습니다.
+음성합성 모델을 고르실 때 가장 확실한 방법은 직접 들어보는 것입니다. 그래서 여섯 개 모델에게
+같은 문장을 한국어와 영어, 중국어, 일본어로 읽히고 **68개 샘플을 언어별로 나란히** 놓았습니다.
 쓰실 언어 절만 보셔도 됩니다.
 
 먼저 결론부터 말씀드리면 이렇습니다.
@@ -41,7 +41,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showca
 
 ## 한국어
 
-네 모델이 지원합니다. Kokoro-82M은 한국어를 지원하지 않아 빠져 있습니다.
+다섯 모델이 지원합니다. Kokoro-82M은 한국어를 지원하지 않아 빠져 있습니다.
 
 > 오늘 회의는 오후에 삼층 회의실에서 시작합니다.
 
@@ -53,6 +53,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showca
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-chatterbox-ml.mp3"></audio></p>
 
 > 어제 회의에서 결정된 내용을 반영해 초안을 수정했지만, 검토가 아직 끝나지 않아서 오늘 배포는 어려울 것 같습니다.
 
@@ -64,6 +66,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showca
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-chatterbox-ml.mp3"></audio></p>
 
 **Supertonic-3이 가장 또렷합니다.** 자연성 하위 축에서 명료도가 63.84로 가장 높고, 다른 언어에서도 비슷한 수준을 유지합니다. 대신 RTF 2.498이라 실시간의 두 배 반이 걸리니 미리 만들어 두는 안내 음성에 맞습니다.
 
@@ -87,6 +91,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-kokoro-82m.mp3"></audio></p>
 
@@ -100,6 +106,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-kokoro-82m.mp3"></audio></p>
 
@@ -120,6 +128,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-voxcpm2.mp3"></audio></p>
 <p><strong>Zonos</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-zonos2.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-kokoro-82m.mp3"></audio></p>
 
@@ -131,6 +141,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-voxcpm2.mp3"></audio></p>
 <p><strong>Zonos</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-zonos2.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-kokoro-82m.mp3"></audio></p>
 
@@ -141,7 +153,7 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 
 ## 일본어
 
-네 모델이 지원합니다.
+다섯 모델이 지원합니다.
 
 > 会議は今日の午後、三階の会議室で始まります。
 
@@ -153,6 +165,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-chatterbox-ml.mp3"></audio></p>
 
 > 昨日の会議で決まった内容を反映して草案を修正しましたが、レビューがまだ終わっていないため、今日のリリースは難しそうです。
 
@@ -164,6 +178,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-chatterbox-ml.mp3"></audio></p>
 
 **Supertonic-3이 앞섭니다.** 자연성 종합 68.08로 가장 높고 명료도도 62.99로 가장 균형이 좋습니다. 받아쓰기 오류 중앙값도 0.008로 사실상 완벽합니다.
 
@@ -202,6 +218,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 
 > 그 사람이 방금 문을 열고 들어왔어요.
 
+표현 폭과 적중률이 함께 유의한 유일한 모델입니다. 감정마다 톤이 달라지고, 그 방향이 요청과 맞습니다.
+
 <p><strong>중립</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-neutral.mp3"></audio></p>
 <p><strong>기쁨</strong><br>
@@ -215,9 +233,49 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 <p><strong>놀람</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-surprise.mp3"></audio></p>
 
+#### Zonos
+
+> 그 사람이 방금 문을 열고 들어왔어요.
+
+가장 크게 달라집니다. 그런데 분류기에 넣으면 요청한 감정으로 가지 않습니다.
+
+<p><strong>중립</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-neutral.mp3"></audio></p>
+<p><strong>기쁨</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-happy.mp3"></audio></p>
+<p><strong>슬픔</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-sad.mp3"></audio></p>
+<p><strong>분노</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-angry.mp3"></audio></p>
+<p><strong>공포</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-fear.mp3"></audio></p>
+<p><strong>놀람</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-surprise.mp3"></audio></p>
+
+#### Chatterbox-ML
+
+> 그 사람이 방금 문을 열고 들어왔어요.
+
+Zonos와 같은 양상입니다. 소리는 확실히 흔들리는데 적중률은 우연 수준입니다.
+
+<p><strong>중립</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-neutral.mp3"></audio></p>
+<p><strong>기쁨</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-happy.mp3"></audio></p>
+<p><strong>슬픔</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-sad.mp3"></audio></p>
+<p><strong>분노</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-angry.mp3"></audio></p>
+<p><strong>공포</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-fear.mp3"></audio></p>
+<p><strong>놀람</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-surprise.mp3"></audio></p>
+
 #### Kokoro-82M
 
 > He just walked through the door a moment ago.
+
+여섯 개가 같은 소리입니다. 감정 조절 기능이 없어서 지표의 바닥 역할을 합니다.
 
 <p><strong>중립</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-neutral.mp3"></audio></p>
@@ -241,23 +299,30 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 | 모델 | 표현 폭 | 바닥 대비 | 적중률 | 우연 대비 | 감정 조건을 주는 방법 |
 |---|---|---|---|---|---|
 | **Qwen3-TTS** | 0.408 | 16.9배 | **0.403** | **2.42배** | 지시문(instruct) 텍스트 |
-| Zonos | **0.452** | 18.8배 | 0.167 | **1.00배** | 8차원 실수 벡터 직접 지정 |
+| Zonos | **0.452** | 18.8배 | 0.167 | 1.00배 | 8차원 실수 벡터 직접 지정 |
+| Chatterbox-ML | 0.445 | 18.4배 | 0.181 | 1.08배 | 과장도(exaggeration) 스칼라 |
 | Supertonic-3 | 0.255 | 10.6배 | 0.222 | 1.33배 | 인라인 스타일 태그 |
 | Kokoro-82M | 0.024 | 1.0배 | 0.167 | 1.00배 | **없음** |
 | VoxCPM2 | 측정 불가 | | | | 참조 음성과 쌍으로만 |
 
-**두 지표가 어긋나는 모델이 있다는 것이 이 표의 핵심입니다.** Zonos는 표현 폭이 0.452로 가장
-크지만 적중률이 0.167로 우연과 정확히 같습니다. 감정을 지시하면 소리는 크게 달라지는데, 그
-변화가 **요청한 감정 쪽으로 가지 않는다**는 뜻입니다.
+**표에서 눈여겨보실 곳은 위 세 줄이 표현 폭에서 사실상 붙어 있다는 점입니다.** Zonos 0.452,
+Chatterbox-ML 0.445, Qwen3-TTS 0.408로 셋 다 바닥의 열일곱 배 안팎입니다. 그런데 적중률로
+가면 앞의 둘이 우연 수준으로 주저앉고 Qwen3-TTS만 남습니다.
 
 혼동행렬을 보면 분명합니다. Zonos에게 분노를 요청하면 기쁨 3건, 역겨움 5건, 슬픔 2건으로
-분류되고 분노는 0건입니다. 기쁨을 요청하면 중립 6건, 슬픔 3건으로 갑니다. 표현 폭 하나만 봤다면
-"감정 표현력 1위"로 기록했을 텐데, 실제로는 **방향 없는 흔들림**이었습니다.
+분류되고 분노는 0건입니다. 기쁨을 요청하면 중립 6건, 슬픔 3건으로 갑니다. 소리는 확실히
+달라지는데 그 변화가 **요청한 감정 쪽으로 가지 않습니다.**
+
+Chatterbox-ML이 같은 패턴을 따로 보여 준다는 점이 중요합니다. 설계가 전혀 다른 두 모델이
+독립적으로 같은 자리에 떨어졌으니, 이건 한 모델의 결함이 아니라 **프로소디를 흔드는 일과 그
+흔들림에 방향을 주는 일이 서로 다른 문제**라는 신호입니다. 앞쪽은 여러 모델이 이미 해내고
+뒤쪽은 대부분 못 하고 있습니다.
 
 Qwen3-TTS는 두 지표가 함께 유의합니다. 표현 폭 16.9배에 적중률 2.42배로, 소리도 달라지고 그
 방향이 요청한 감정과 맞습니다. **감정 제어가 필요하시면 이 모델입니다.**
 
-지표를 하나만 봤다면 정반대 결론이 나왔을 상황이라, 감정 축은 반드시 두 축으로 보셔야 합니다.
+표현 폭만 보고 골랐다면 여섯 중 둘을 잘못 집었을 상황이라, 감정 축은 반드시 두 축으로
+보셔야 합니다.
 
 언어별로도 갈립니다. Qwen3-TTS는 네 언어에서 0.386에서 0.443 사이로 고르지만, Supertonic-3은
 영어가 0.157로 유독 낮고 일본어가 0.354로 두 배 이상입니다. 같은 모델이라도 언어에 따라 감정
@@ -272,8 +337,8 @@ VoxCPM2가 표에서 빠진 이유는 성능이 나빠서가 아닙니다. 이 �
 요청한 감정을 맞히는 비율이 0.167인데, 이 값은 여섯 감정을 균등하게 찍었을 때의 우연 확률과
 정확히 같습니다.
 
-바닥을 알고 나면 나머지가 다르게 읽힙니다. 표현 폭만 보면 Zonos가 0.452로 가장 높지만, 위에서
-보셨듯 그 변화가 요청한 감정으로 가지 않습니다. **두 지표가 함께 유의한 모델은 Qwen3-TTS
+바닥을 알고 나면 나머지가 다르게 읽힙니다. 표현 폭 상위 셋이 서로 붙어 있는데 그중 둘은
+방향이 없습니다. **여섯 모델을 다 재고 나서 두 지표가 함께 유의한 모델은 Qwen3-TTS
 하나뿐입니다.**
 
 다만 절대 수준은 낮게 보셔야 합니다. 가장 잘한 모델조차 요청한 감정이 분류기까지 전달되는
@@ -332,6 +397,7 @@ VoxCPM2가 표에서 빠진 이유는 성능이 나빠서가 아닙니다. 이 �
 | 감정이 있는 대화 | **Qwen3-TTS** | Qwen3-TTS | Qwen3-TTS | Qwen3-TTS |
 | 안내·알림 음성 | Supertonic-3 | Kokoro-82M | Qwen3-TTS | Supertonic-3 |
 | 오디오북·내레이션 | Supertonic-3 | 아무거나 | Qwen3-TTS | Supertonic-3 |
+| 네 언어를 한 모델로 | Chatterbox-ML | Chatterbox-ML | Chatterbox-ML | Chatterbox-ML |
 | 금액·코드 낭독 | 전처리 필수 | 전처리 필수 | 전처리 필수 | 전처리 + 검수 |
 
 같은 언어라도 용도가 바뀌면 답이 바뀝니다. 실시간 대화는 지연이 품질보다 우선이라 RTF가 낮은
@@ -339,9 +405,15 @@ VoxCPM2가 표에서 빠진 이유는 성능이 나빠서가 아닙니다. 이 �
 감정이 필요한 순간에는 Qwen3-TTS가 유일한 선택입니다. 실시간보다 느리다는 대가가 있지만, 요청한
 감정이 실제로 전달되는 모델이 이것뿐입니다.
 
-⛔ **어느 칸에도 "전 언어를 한 모델로"가 없다는 점**이 이번 측정의 실용적 결론입니다. 언어별로
-라우팅하는 얇은 층을 하나 두시면 영어 트래픽을 CPU로 빼내면서 각 언어에서 가장 나은 모델을 쓰실
-수 있습니다.
+마지막 줄에 Chatterbox-ML만 있는 이유는 이 모델이 네 언어를 하나로 덮으면서 RTF 0.675로
+실시간을 지키는 유일한 조합이기 때문입니다. 다만 **중앙값이 좋다고 안심하시면 안 됩니다.**
+오류율 중앙값은 한국어 0.068, 중국어 0.065로 준수한데, 상위 10퍼센트 구간에서 중국어가 0.844로
+무너집니다. 열 문장 중 한 문장은 알아듣기 어려운 수준으로 나온다는 뜻이라, 사람이 안 보는
+자동 파이프라인에 넣으실 거면 출력 검수를 함께 두셔야 합니다.
+
+언어마다 최적이 다르므로 라우팅하는 얇은 층을 하나 두시면 영어 트래픽을 CPU로 빼내면서 각
+언어에서 가장 나은 모델을 쓰실 수 있습니다. 운영 단순함이 더 중요하시면 Chatterbox-ML 한
+모델로 덮고 검수를 붙이는 쪽이 관리 비용은 낮습니다.
 
 ## 알아두실 한계
 

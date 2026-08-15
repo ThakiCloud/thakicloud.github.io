@@ -24,10 +24,10 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/tts-comparison-showca
 ---
 
 ![Multilingual TTS comparison]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.png)
-*Five models read the same sentences in four languages.*
+*Six models read the same sentences in four languages.*
 
-The most reliable way to pick a text-to-speech model is to listen to it. So we had five models
-read the same sentences in Korean, English, Chinese, and Japanese, and lined up **61 samples,
+The most reliable way to pick a text-to-speech model is to listen to it. So we had six models
+read the same sentences in Korean, English, Chinese, and Japanese, and lined up **68 samples,
 grouped by language**. You only need to open the section for the language you actually ship.
 
 Here's the short version first.
@@ -53,6 +53,8 @@ Four models support Korean. Kokoro-82M is missing because it doesn't support the
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-chatterbox-ml.mp3"></audio></p>
 
 > 어제 회의에서 결정된 내용을 반영해 초안을 수정했지만, 검토가 아직 끝나지 않아서 오늘 배포는 어려울 것 같습니다. (I revised the draft to reflect yesterday's decisions, but since review isn't finished, shipping today looks unlikely.)
 
@@ -64,6 +66,8 @@ Four models support Korean. Kokoro-82M is missing because it doesn't support the
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-chatterbox-ml.mp3"></audio></p>
 
 **Supertonic-3 is the clearest of the four.** On the intelligibility sub-axis it scores 63.84, the
 highest of the set, and it holds a similar lead in the other languages too. The cost is an RTF of
@@ -95,6 +99,8 @@ All five models support English.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-kokoro-82m.mp3"></audio></p>
 
@@ -108,6 +114,8 @@ All five models support English.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-kokoro-82m.mp3"></audio></p>
 
@@ -133,6 +141,8 @@ Four models claim to support Chinese, but only three are actually usable.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-voxcpm2.mp3"></audio></p>
 <p><strong>Zonos</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-zonos2.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-kokoro-82m.mp3"></audio></p>
 
@@ -144,6 +154,8 @@ Four models claim to support Chinese, but only three are actually usable.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-voxcpm2.mp3"></audio></p>
 <p><strong>Zonos</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-zonos2.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-chatterbox-ml.mp3"></audio></p>
 <p><strong>Kokoro-82M</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-kokoro-82m.mp3"></audio></p>
 
@@ -172,6 +184,8 @@ All four models here support Japanese.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-chatterbox-ml.mp3"></audio></p>
 
 > 昨日の会議で決まった内容を反映して草案を修正しましたが、レビューがまだ終わっていないため、今日のリリースは難しそうです。 (I revised the draft to reflect yesterday's meeting outcome, but since review isn't finished, today's release looks difficult.)
 
@@ -183,6 +197,8 @@ All four models here support Japanese.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-supertonic-3.mp3"></audio></p>
+<p><strong>Chatterbox-ML</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-chatterbox-ml.mp3"></audio></p>
 
 **Supertonic-3 leads here too.** Overall naturalness comes in at 68.08, the highest of the four,
 and its intelligibility of 62.99 is also the best-balanced of the set. Median transcription error
@@ -227,7 +243,9 @@ range, the second has no emotion control at all.
 
 #### Qwen3-TTS
 
-> 그 사람이 방금 문을 열고 들어왔어요. (That person just opened the door and walked in.)
+> 그 사람이 방금 문을 열고 들어왔어요.
+
+The only model where range and accuracy are both significant. The tone shifts, and it shifts toward what was asked for.
 
 <p><strong>Neutral</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-neutral.mp3"></audio></p>
@@ -237,14 +255,54 @@ range, the second has no emotion control at all.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-sad.mp3"></audio></p>
 <p><strong>Angry</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-angry.mp3"></audio></p>
-<p><strong>Fearful</strong><br>
+<p><strong>Fear</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-fear.mp3"></audio></p>
-<p><strong>Surprised</strong><br>
+<p><strong>Surprise</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-surprise.mp3"></audio></p>
+
+#### Zonos
+
+> 그 사람이 방금 문을 열고 들어왔어요.
+
+The largest shift of any model. Yet a classifier does not recover the requested emotion from it.
+
+<p><strong>Neutral</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-neutral.mp3"></audio></p>
+<p><strong>Happy</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-happy.mp3"></audio></p>
+<p><strong>Sad</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-sad.mp3"></audio></p>
+<p><strong>Angry</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-angry.mp3"></audio></p>
+<p><strong>Fear</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-fear.mp3"></audio></p>
+<p><strong>Surprise</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-zonos2-surprise.mp3"></audio></p>
+
+#### Chatterbox-ML
+
+> 그 사람이 방금 문을 열고 들어왔어요.
+
+The same signature as Zonos. The audio clearly moves; the accuracy sits at chance.
+
+<p><strong>Neutral</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-neutral.mp3"></audio></p>
+<p><strong>Happy</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-happy.mp3"></audio></p>
+<p><strong>Sad</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-sad.mp3"></audio></p>
+<p><strong>Angry</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-angry.mp3"></audio></p>
+<p><strong>Fear</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-fear.mp3"></audio></p>
+<p><strong>Surprise</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-chatterbox-ml-surprise.mp3"></audio></p>
 
 #### Kokoro-82M
 
 > He just walked through the door a moment ago.
+
+Six identical renditions. It has no emotion control at all, which is what makes it the noise floor.
 
 <p><strong>Neutral</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-neutral.mp3"></audio></p>
@@ -254,9 +312,9 @@ range, the second has no emotion control at all.
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-sad.mp3"></audio></p>
 <p><strong>Angry</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-angry.mp3"></audio></p>
-<p><strong>Fearful</strong><br>
+<p><strong>Fear</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-fear.mp3"></audio></p>
-<p><strong>Surprised</strong><br>
+<p><strong>Surprise</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-surprise.mp3"></audio></p>
 
 ### Emotional expressiveness by model
@@ -269,26 +327,32 @@ emotion you actually asked for.
 | Model | Expressive range | vs. floor | Hit rate | vs. chance | Emotion conditioning |
 |---|---|---|---|---|---|
 | **Qwen3-TTS** | 0.408 | 16.9x | **0.403** | **2.42x** | Instruct-style text prompt |
-| Zonos | **0.452** | 18.8x | 0.167 | **1.00x** | Direct 8-dim real-valued vector |
+| Zonos | **0.452** | 18.8x | 0.167 | 1.00x | Direct 8-dim real-valued vector |
+| Chatterbox-ML | 0.445 | 18.4x | 0.181 | 1.08x | Exaggeration scalar |
 | Supertonic-3 | 0.255 | 10.6x | 0.222 | 1.33x | Inline style tags |
 | Kokoro-82M | 0.024 | 1.0x | 0.167 | 1.00x | **None** |
 | VoxCPM2 | not measurable | | | | Reference-audio pairing only |
 
-**The point of this table is that the two metrics disagree for one model.** Zonos has the largest
-expressive range at 0.452, but its hit rate sits at 0.167, dead even with chance. When you tell
-Zonos to sound angry, the audio changes a lot, it just **doesn't change toward angry**.
+**What to notice is that the top three rows are effectively tied on expressive range.** Zonos at
+0.452, Chatterbox-ML at 0.445, Qwen3-TTS at 0.408, all roughly seventeen times the floor. Move to
+hit rate and the first two collapse to chance while only Qwen3-TTS survives.
 
 The confusion matrix makes this concrete. When we asked Zonos for anger, it was classified as
 happy 3 times, disgusted 5 times, sad 2 times, and angry zero times. Ask for happy and you get
-neutral 6 times, sad 3 times. If we'd looked only at expressive range, we'd have written it up as
-"most expressive model, ranked #1." What it actually is: **movement with no direction.**
+neutral 6 times, sad 3 times. The audio genuinely changes, it just **doesn't change toward what
+was asked for**.
+
+Chatterbox-ML landing in the same place matters more than either result alone. Two models with
+different conditioning interfaces, different training, and different authors arrived independently
+at the same signature. That points at something general: **moving prosody and aiming that movement
+are separate capabilities.** Several models have the first. Most do not have the second.
 
 Qwen3-TTS is the one model where both metrics agree and both are significant. 16.9x expressive
 range, 2.42x hit rate: the sound changes, and it changes in the direction you asked for.
 **If you need emotional control, this is the model.**
 
-If we had looked at only one of these two axes, we would have reached the opposite conclusion, so
-the emotion axis has to be read on both metrics together, never one alone.
+Picking on expressive range alone would have gotten two of six models wrong, so the emotion axis
+has to be read on both metrics together, never one alone.
 
 It splits by language too. Qwen3-TTS stays consistent, 0.386 to 0.443 across the four languages,
 but Supertonic-3 dips unusually low in English at 0.157 and more than doubles that in Japanese at
@@ -378,6 +442,7 @@ Adding the intended use case into the mix gives you this:
 | Emotionally expressive dialogue | **Qwen3-TTS** | Qwen3-TTS | Qwen3-TTS | Qwen3-TTS |
 | Prompts & notifications | Supertonic-3 | Kokoro-82M | Qwen3-TTS | Supertonic-3 |
 | Audiobooks & narration | Supertonic-3 | Any of them | Qwen3-TTS | Supertonic-3 |
+| All four languages, one model | Chatterbox-ML | Chatterbox-ML | Chatterbox-ML | Chatterbox-ML |
 | Amounts & code readout | Preprocessing required | Preprocessing required | Preprocessing required | Preprocessing + review |
 
 The answer changes even within the same language once the use case changes. Real-time
@@ -387,9 +452,16 @@ one with the highest intelligibility. Whenever emotion is actually needed, Qwen3
 option. It costs you real-time performance, but it's the only model where the requested emotion
 actually comes through.
 
-⛔ **The practical takeaway from this whole exercise is that no cell says "one model for every
-language."** Put a thin routing layer in front, keyed by language, and you can pull your English
-traffic off onto CPU while still using the best model available in each language.
+Chatterbox-ML is alone on that second-to-last row because it is the only model that covers all
+four languages while staying under real-time at RTF 0.675. **Do not let the median reassure you,
+though.** Its median error rate is a respectable 0.068 in Korean and 0.065 in Chinese, but the
+worst decile in Chinese blows out to 0.844. Roughly one sentence in ten comes back hard to follow,
+so if it is going into an unattended pipeline, pair it with output validation.
+
+Since the best choice differs per language, a thin routing layer keyed by language lets you pull
+English traffic onto CPU while still using the strongest model in each language. If operational
+simplicity matters more to you, covering all four with Chatterbox-ML and adding review is the
+cheaper thing to maintain.
 
 ## Limitations worth knowing about
 
