@@ -1,8 +1,8 @@
 ---
-title: "Four TTS Models, Measured: The Fastest One Sounded the Worst"
-excerpt: "If you're picking a text-to-speech endpoint that has to serve Korean and Japanese, the naturalness score on the model card hides something. On the same B200, the model that was 12x faster than its rival came in lowest on intelligibility. We ran four models through one harness and worked out what to pick for each language."
-seo_title: "Multilingual TTS Comparison: Speed, Power, Intelligibility, Emotion"
-seo_description: "We measured Qwen3-TTS, VoxCPM2, Supertonic-3, and Kokoro-82M in Korean, English, Chinese, and Japanese through the same harness. TTSDS2 naturalness, RTF, power draw, and emotional expressiveness, with audio samples and a per-language picking guide."
+title: "Five TTS Models, Four Languages: Which One Should You Actually Use"
+excerpt: "Qwen3-TTS, VoxCPM2, Zonos, Supertonic-3, and Kokoro-82M read the same sentences in four languages. 61 audio samples, grouped by language, so you can listen and decide for yourself which model fits your use case."
+seo_title: "Multilingual TTS Comparison: Korean, English, Chinese, Japanese Samples"
+seo_description: "Listen to Qwen3-TTS, VoxCPM2, Zonos, Supertonic-3, and Kokoro-82M synthesize Korean, English, Chinese, and Japanese speech, and decide which model to pick per language. 61 samples plus measured naturalness, speed, and emotion metrics."
 date: 2026-08-16
 last_modified_at: 2026-08-16
 author_profile: true
@@ -14,303 +14,402 @@ header:
 tags:
   - text-to-speech
   - multilingual-tts
-  - inference-serving
-  - model-selection
-  - benchmarking
   - korean-tts
+  - model-selection
+  - audio-samples
+  - inference-serving
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/tts-comparison-showcase/"
 ---
 
 ![Multilingual TTS comparison]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.png)
-*We measured four text-to-speech models under the same conditions.*
+*Five models read the same sentences in four languages.*
 
-When you're picking a TTS model for voice prompts, audiobooks, or a conversational agent, the
-first thing you probably look at is the naturalness score on the model card. That score doesn't
-tell you much about what breaks once the model is actually serving traffic. We ran four models
-through the same harness across Korean, English, Chinese, and Japanese, and **the fastest model
-came in lowest on intelligibility.** A 12x speed gap turned out not to be free.
+The most reliable way to pick a text-to-speech model is to listen to it. So we had five models
+read the same sentences in Korean, English, Chinese, and Japanese, and lined up **61 samples,
+grouped by language**. You only need to open the section for the language you actually ship.
 
-This post walks through what we measured and what it means for picking a model per language.
-Numbers only get you so far, so we've included audio samples throughout: listening is faster
-than reading a table.
+Here's the short version first.
 
-## Listen first
+| Language | If you need real-time | If you need quality | Avoid |
+|---|---|---|---|
+| Korean | VoxCPM2 (RTF 0.100) | Supertonic-3 | Kokoro (unsupported) |
+| English | Kokoro-82M (CPU is enough) | Any of them (small gap) | None |
+| Chinese | VoxCPM2 | Qwen3-TTS | **Zonos (broken)** |
+| Japanese | VoxCPM2 | Supertonic-3 | All models need review |
 
-Three models read the same Korean sentence. Same text, same conditions, same harness.
+## Korean
 
-> 오늘 회의는 오후에 삼층 회의실에서 시작합니다. (Today's meeting starts this afternoon in the third-floor conference room.)
+Four models support Korean. Kokoro-82M is missing because it doesn't support the language at all.
+
+> 오늘 회의는 오후에 삼층 회의실에서 시작합니다. (Today's meeting starts on the third floor this afternoon.)
 
 <p><strong>Qwen3-TTS</strong><br>
-<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a-ko-qwen3-tts-1.7b.mp3"></audio></p>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-qwen3-tts-1.7b.mp3"></audio></p>
 <p><strong>VoxCPM2</strong><br>
-<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a-ko-voxcpm2.mp3"></audio></p>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-zonos2.mp3"></audio></p>
 <p><strong>Supertonic-3</strong><br>
-<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a-ko-supertonic-3.mp3"></audio></p>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ko-supertonic-3.mp3"></audio></p>
 
-If those three left a different impression on you, the next section shows how that difference
-shows up in the numbers.
+> 어제 회의에서 결정된 내용을 반영해 초안을 수정했지만, 검토가 아직 끝나지 않아서 오늘 배포는 어려울 것 같습니다. (I revised the draft to reflect yesterday's decisions, but since review isn't finished, shipping today looks unlikely.)
 
-## What we measured, and how
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-zonos2.mp3"></audio></p>
+<p><strong>Supertonic-3</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ko-supertonic-3.mp3"></audio></p>
 
-We split the measurement into five axes: how fast the model runs (RTF), how much power it burns
-per second of audio produced, how closely a transcript of the synthesized speech matches the
-original text, how natural the audio sounds to a listener, and whether an emotion instruction
-actually changes the output.
+**Supertonic-3 is the clearest of the four.** On the intelligibility sub-axis it scores 63.84, the
+highest of the set, and it holds a similar lead in the other languages too. The cost is an RTF of
+2.498, two and a half times slower than real time, which puts it squarely in the pre-rendered
+announcement bucket rather than anything live.
 
-The script itself covers six categories. Alongside ordinary declaratives, questions, and
-compound sentences, we deliberately mixed in numbers, loanwords, and technical jargon, because
-that's usually where production TTS breaks in practice.
+If you need real time, VoxCPM2 wins outright at an RTF of 0.100. But its intelligibility sits at
+48.63, the lowest of the group. Qwen3-TTS lands at 61.46 in the same language, a 13-point gap. The
+voice itself sounds the most human of any model here (it tops the speaker sub-axis at 71.79), but
+that combination comes with phonemes that blur together, so if you're planning to read numbers or
+codes out loud, you need preprocessing in front of it, no exceptions.
 
-Naturalness was scored with TTSDS2, which compares the distribution of a set of synthesized
-utterances against a set of real human utterances rather than scoring each utterance against a
-predicted MOS, so it's less language-sensitive than a per-utterance MOS predictor. As the
-reference, we used 120 utterances per language from Google FLEURS's validation split.
+Zonos sits in between at an RTF of 0.592, still inside real-time bounds. It does accept emotion
+instructions, but as you'll see further down, the output doesn't actually move toward the emotion
+you asked for, so it's not one to reach for if emotional control is the point.
 
-### Why we break the naturalness score into sub-scores
 
-TTSDS2 doesn't give you one aggregate number; it reports four sub-axes, and that distinction
-turned out to be decisive here.
+## English
 
-The **SPEAKER** axis measures how close the synthesized timbre sits to the real-voice
-distribution: does the voice itself sound human. The **PROSODY** axis looks at the distribution
-of intonation, rhythm, and stress: does the sentence get read naturally. The
-**INTELLIGIBILITY** axis checks whether phonemes stay distinct: does the pronunciation stay
-crisp instead of blurring together. The last, **GENERIC**, axis captures statistical properties
-of the acoustic signal itself.
+All five models support English.
 
-Which axis matters depends on what you're serving. For an audiobook or narration, speaker and
-prosody matter most; for a voice prompt or alert where the job is conveying information,
-intelligibility comes first. Judging by the aggregate score alone erases that distinction.
+> The meeting will start this afternoon in the third floor conference room.
 
-```mermaid
-flowchart TB
-    A[Pick a TTS model] --> B{Real-time conversation?}
-    B -->|Yes| C{Emotion control needed?}
-    B -->|No| D{Which language?}
-    C -->|Needed| E[Qwen3-TTS<br/>Slow, but the best emotion response]
-    C -->|Not needed| F[VoxCPM2<br/>RTF 0.100, trade off intelligibility]
-    D -->|English or Chinese only| G[Kokoro-82M<br/>CPU is enough]
-    D -->|Korean or Japanese involved| H[Supertonic-3<br/>Best intelligibility balance]
-    F --> I[Preprocess numbers<br/>and jargon first]
-    G --> I
-    E --> I
-    H --> I
-```
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-zonos2.mp3"></audio></p>
+<p><strong>Supertonic-3</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-supertonic-3.mp3"></audio></p>
+<p><strong>Kokoro-82M</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-en-kokoro-82m.mp3"></audio></p>
 
-## Speed and intelligibility don't come together
+> I revised the draft to reflect what we decided yesterday, but since the review is not finished, shipping today seems unlikely.
 
-This is the single clearest result from the whole measurement.
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-zonos2.mp3"></audio></p>
+<p><strong>Supertonic-3</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-supertonic-3.mp3"></audio></p>
+<p><strong>Kokoro-82M</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-en-kokoro-82m.mp3"></audio></p>
 
-![Results]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-results.png)
-*Left: naturalness by language. Right: the relationship between speed and intelligibility.*
+**Quality doesn't do much to separate these five in English.** Overall naturalness clusters tightly
+between 70.09 and 76.45, and every model's median transcription error is zero. With quality this
+close, the deciding factors are speed and cost.
 
-| Model | Hardware | Languages | RTF | Naturalness (English) | Intelligibility (Korean) |
-|---|---|---|---|---|---|
-| VoxCPM2 | B200 | 4 | 0.100 | 76.45 | 48.63 |
-| Kokoro-82M | 32-core CPU | 2 | 0.640 | 73.87 | n/a |
-| Qwen3-TTS | B200 | 4 | 1.196 | 75.76 | 61.46 |
-| Supertonic-3 | 32-core CPU | 3 | 2.498 | 70.09 | 63.84 |
+On that front, **Kokoro-82M** stands out. On 32 CPU cores it runs at an RTF of 0.640, faster than
+real time, while still hitting a naturalness score of 73.87, within three points of the GPU-backed
+models. If English and Chinese are all you need, you can run the whole pipeline without touching a
+GPU.
 
-Lower RTF means faster. An RTF of 1.0 means it takes one second to generate one second of audio,
-so a real-time conversational service needs to stay below that. VoxCPM2 sits at 0.100, handling
-ten concurrent streams on a single B200, while Qwen3-TTS sits at 1.196, and it can't keep up with
-real time even for a single stream.
 
-Look only at the aggregate naturalness score, though, and the two models look about the same:
-76.45 for VoxCPM2 in English versus 75.76 for Qwen3-TTS. Stop there and you'd conclude they're
-just as good, and one happens to be faster.
+## Chinese
 
-**Open the sub-scores and the story changes.** TTSDS2 splits the aggregate into speaker
-similarity, prosody, and intelligibility, and on intelligibility VoxCPM2 falls well behind: 48.63
-in Korean, 44.48 in Japanese. Qwen3-TTS scores 61.46 and 51.57 on the same languages, not a
-small gap.
+Four models claim to support Chinese, but only three are actually usable.
 
-VoxCPM2 produces a plausible-sounding voice, but pays for it in pronunciation clarity. The
-aggregate score looks even because VoxCPM2 makes it back on the speaker and prosody axes.
+> 会议将在今天下午于三楼会议室举行。 (The meeting will be held this afternoon on the third floor.)
 
-## An ASR gate alone won't catch this
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-zonos2.mp3"></audio></p>
+<p><strong>Kokoro-82M</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-zh-kokoro-82m.mp3"></audio></p>
 
-We missed it at first, too. We ran a gate that transcribes the synthesized audio with Whisper and
-compares it to the source text, and all four models came back with a median error rate of zero
-in Korean and English. By the median, everything looks flawless.
+> 我已经按照昨天的决定修改了草稿，但因为评审还没结束，今天上线恐怕来不及。 (I revised the draft per yesterday's decision, but since review isn't finished, today's launch probably won't make it.)
 
-The problem is that errors aren't spread evenly. Look at the 90th percentile and Japanese jumps
-to 0.413 for Qwen3-TTS and 0.438 for VoxCPM2. Break it down by category and the cause is obvious:
-declaratives, questions, and compound sentences come back nearly perfect, and the model falls
-apart **only on numbers and technical terms.**
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-zonos2.mp3"></audio></p>
+<p><strong>Kokoro-82M</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-zh-kokoro-82m.mp3"></audio></p>
 
-Here's an actual failed utterance. Compare the source text to what you hear and it'll be obvious
-where it breaks.
+**Qwen3-TTS is the safe pick.** It scores 56.89 on intelligibility versus VoxCPM2's 50.00, and its
+90th-percentile transcription error comes in at 0.289 against VoxCPM2's 0.435, a noticeably
+shorter tail. Chinese is where the spread between the median and the worst cases opens up the
+most, so judging by the median alone will steer you wrong.
 
-> 자세한 내용은 docs.thakicloud.net 문서를 참고해 주세요. (For details, please refer to the docs.thakicloud.net documentation.)
+⛔ **Do not use Zonos for Chinese.** As you heard in the samples above, what comes out isn't a
+sentence, it's the same syllable repeated. The model's language list on its own repo includes
+Chinese, but our measured error rate ranged from 1.0 to 6.9. A support list is a claim, not a
+measurement.
 
-<p><strong>Qwen3-TTS (Korean, technical term)</strong><br>
-<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/b-ko-qwen3-tts-1.7b.mp3"></audio></p>
 
-For reading news articles aloud, this is harmless. But if your service has to read out amounts,
-dates, or product codes, these two categories are exactly where things go wrong. Rather than
-swapping models, the more reliable fix is a preprocessing step that spells numbers out before
-they ever reach the model.
+## Japanese
 
-## Emotion control is a dial, not a switch
+All four models here support Japanese.
 
-We synthesized the same sentence across six emotions and measured how much the audio actually
-changed between conditions. Below are the model with the strongest emotional response and the
-model with no emotion control at all.
+> 会議は今日の午後、三階の会議室で始まります。 (The meeting starts this afternoon on the third floor.)
+
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-zonos2.mp3"></audio></p>
+<p><strong>Supertonic-3</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a1-ja-supertonic-3.mp3"></audio></p>
+
+> 昨日の会議で決まった内容を反映して草案を修正しましたが、レビューがまだ終わっていないため、今日のリリースは難しそうです。 (I revised the draft to reflect yesterday's meeting outcome, but since review isn't finished, today's release looks difficult.)
+
+<p><strong>Qwen3-TTS</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-qwen3-tts-1.7b.mp3"></audio></p>
+<p><strong>VoxCPM2</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-voxcpm2.mp3"></audio></p>
+<p><strong>Zonos</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-zonos2.mp3"></audio></p>
+<p><strong>Supertonic-3</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/a2-ja-supertonic-3.mp3"></audio></p>
+
+**Supertonic-3 leads here too.** Overall naturalness comes in at 68.08, the highest of the four,
+and its intelligibility of 62.99 is also the best-balanced of the set. Median transcription error
+sits at 0.008, essentially perfect.
+
+Still, **whichever model you pick, budget time for human review.** At the 90th percentile, Qwen3-TTS
+climbs to 0.413 and VoxCPM2 to 0.438. Of the four languages, Japanese consistently had the longest
+tail.
+
+
+## What happens when you feed it numbers and code
+
+The median transcription error is close to zero for nearly every language. But the 90th
+percentile jumps hard. That's not error spread evenly across the board; it means **errors cluster
+in specific categories**. Split by category and plain statements, questions, and compound
+sentences come out nearly flawless, while numbers and technical jargon are where things fall
+apart.
+
+Here are two utterances that actually failed. Compare the source text to what you hear, and you'll
+be able to pinpoint exactly where it breaks.
+
+> (technical) API 응답 코드가 503에서 200으로 정상화되었습니다. (The API response code recovered from 503 to 200.)
+
+<p><strong>Zonos · error 14.0968</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/b-ko-zonos2.mp3"></audio></p>
+
+> (technical) モデル名は Qwen3-TTS-12Hz-1.7B で、ライセンスは Apache 2.0 です。 (The model name is Qwen3-TTS-12Hz-1.7B, licensed under Apache 2.0.)
+
+<p><strong>Zonos · error 0.973</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/b-ja-zonos2.mp3"></audio></p>
+
+For reading a news article aloud, this is harmless. For a service that has to read out amounts,
+dates, or product codes, these two categories are exactly where it will bite you. All five models
+showed the same pattern, so this isn't one model's defect, it looks like a shared trait of this
+generation of TTS. Spelling numbers out into text before synthesis is a thin, cheap preprocessing
+step, and it's a lot more reliable than switching models.
+
+## How much does emotion instruction actually change
+
+We synthesized the same sentence in six emotions. The first is a model with strong emotional
+range, the second has no emotion control at all.
+
+#### Qwen3-TTS
 
 > 그 사람이 방금 문을 열고 들어왔어요. (That person just opened the door and walked in.)
 
-<p><strong>Qwen3-TTS · Neutral</strong><br>
+<p><strong>Neutral</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-neutral.mp3"></audio></p>
-<p><strong>Qwen3-TTS · Happy</strong><br>
+<p><strong>Happy</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-happy.mp3"></audio></p>
-<p><strong>Qwen3-TTS · Angry</strong><br>
+<p><strong>Sad</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-sad.mp3"></audio></p>
+<p><strong>Angry</strong><br>
 <audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-angry.mp3"></audio></p>
+<p><strong>Fearful</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-fear.mp3"></audio></p>
+<p><strong>Surprised</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-ko-qwen3-tts-1.7b-surprise.mp3"></audio></p>
 
-Kokoro-82M comes out effectively identical across all six conditions, because the model has no
-emotion control at all: every one of the six prompts is the same input under the hood. That
-makes it a useful **floor** for the metric. On the measure of prosodic variance across
-conditions it scores 0.024, and on the measure of how often an emotion classifier matches the
-requested emotion it scores 0.167, which is exactly chance if you're guessing uniformly across
-six emotions.
+#### Kokoro-82M
 
-Once you know where the floor sits, the rest of the numbers read differently. Qwen3-TTS scores
-17x the floor on prosodic variance and 2.4x chance on emotion-classification accuracy. There's a
-real response there.
+> He just walked through the door a moment ago.
 
-At the same time, keep the absolute level in perspective. Even the best model doesn't get the
-requested emotion through to the classifier more than half the time. Emotion instructions aren't
-a switch that flips the output into that emotion; they're closer to a dial that nudges it in
-that direction. If tone matters for your service, a contact-center prompt being the obvious
-case, set expectations with that in mind.
+<p><strong>Neutral</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-neutral.mp3"></audio></p>
+<p><strong>Happy</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-happy.mp3"></audio></p>
+<p><strong>Sad</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-sad.mp3"></audio></p>
+<p><strong>Angry</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-angry.mp3"></audio></p>
+<p><strong>Fearful</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-fear.mp3"></audio></p>
+<p><strong>Surprised</strong><br>
+<audio controls preload="none" src="/assets/audio/posts/tts-comparison-showcase/c-en-kokoro-82m-surprise.mp3"></audio></p>
 
-We measured emotion along two separate questions: does the audio actually change when you change
-the condition, and does that change sound like the requested emotion. The first we measured as
-variance in prosodic features across conditions; the second with an emotion classifier.
+### Emotional expressiveness by model
 
-The fact that both metrics produced the same ranking matters. Two different measurement methods
-converging on the same conclusion makes that conclusion more trustworthy. Had they diverged,
-that would have been a signal that one of the two was measuring something wrong.
+Turning what you just heard into numbers, we measured two separate things. **Expressive range** is
+how much pitch, intensity, and pause prosody actually shift when you change the emotion.
+**Hit rate** is how often a speech-emotion classifier, fed that resulting audio, labels it with the
+emotion you actually asked for.
 
-## How to pick, language by language
+| Model | Expressive range | vs. floor | Hit rate | vs. chance | Emotion conditioning |
+|---|---|---|---|---|---|
+| **Qwen3-TTS** | 0.408 | 16.9x | **0.403** | **2.42x** | Instruct-style text prompt |
+| Zonos | **0.452** | 18.8x | 0.167 | **1.00x** | Direct 8-dim real-valued vector |
+| Supertonic-3 | 0.255 | 10.6x | 0.222 | 1.33x | Inline style tags |
+| Kokoro-82M | 0.024 | 1.0x | 0.167 | 1.00x | **None** |
+| VoxCPM2 | not measurable | | | | Reference-audio pairing only |
 
-**Korean** splits on whether you need real time. For a conversational use case, VoxCPM2's RTF of
-0.100 is tempting, but its intelligibility of 48.63 is the lowest of the four, so number
-preprocessing is mandatory. For pre-generated voice prompts, Supertonic-3 is the most reliable
-choice at an intelligibility score of 63.84. Kokoro-82M doesn't support Korean at all.
+**The point of this table is that the two metrics disagree for one model.** Zonos has the largest
+expressive range at 0.452, but its hit rate sits at 0.167, dead even with chance. When you tell
+Zonos to sound angry, the audio changes a lot, it just **doesn't change toward angry**.
 
-**English** is tight: all four models land within a 70-to-76 naturalness band, so quality alone
-won't separate them. That pushes the decision to speed and power: on GPU, VoxCPM2 leads; on CPU,
-Kokoro-82M does. Kokoro in particular hits an RTF of 0.640 on 32 CPU cores, faster than real
-time, making it **a genuine no-GPU option**. If your service only needs English and Chinese,
-it's worth serious consideration.
+The confusion matrix makes this concrete. When we asked Zonos for anger, it was classified as
+happy 3 times, disgusted 5 times, sad 2 times, and angry zero times. Ask for happy and you get
+neutral 6 times, sad 3 times. If we'd looked only at expressive range, we'd have written it up as
+"most expressive model, ranked #1." What it actually is: **movement with no direction.**
 
-**Chinese** favors Qwen3-TTS. Its intelligibility of 56.89 beats VoxCPM2's 50.0, and its 90th
-percentile transcription error of 0.289 has a shorter tail than VoxCPM2's 0.435.
+Qwen3-TTS is the one model where both metrics agree and both are significant. 16.9x expressive
+range, 2.42x hit rate: the sound changes, and it changes in the direction you asked for.
+**If you need emotional control, this is the model.**
 
-**Japanese** is the language where you should budget for review regardless of which model you
-pick. Supertonic-3 leads on aggregate naturalness at 68.08 and has the best-balanced
-intelligibility at 62.99, and even that is lower than its scores in other languages. Both GPU
-models drop as low as 51.57 and 44.48 on intelligibility.
+If we had looked at only one of these two axes, we would have reached the opposite conclusion, so
+the emotion axis has to be read on both metrics together, never one alone.
 
-### The reference corpus you choose changes the result
+It splits by language too. Qwen3-TTS stays consistent, 0.386 to 0.443 across the four languages,
+but Supertonic-3 dips unusually low in English at 0.157 and more than doubles that in Japanese at
+0.354. Same model, different language, different amount of traction on the emotion instruction, so
+if you're running a multilingual service, verify separately in whichever language you ship.
 
-Because TTSDS2 measures the distance between a set of synthesized utterances and a set of real
-human utterances, whatever you set as the human reference drives the score. We used Google
-FLEURS's validation split. It records the same sentence set across 102 languages, so conditions
-stay reasonably matched across languages, and it's CC BY 4.0, so reproducing this measurement
-has no licensing friction.
+VoxCPM2 is missing from the table above, and not because it performs badly. This model only
+accepts emotion **paired with a reference audio clip**. Ask for an emotion without a reference and
+the synthesis simply fails outright. Had we quietly substituted a neutral voice in that case, it
+would have gotten logged as "a model with no emotional variation," when in truth the condition
+never even applied, so we left it out honestly instead.
 
-FLEURS is read-aloud speech, though. The sentences are read crisply, with much less of the
-hesitation and intonation shift you'd get in conversational speech. Read these scores accurately
-as **how well each model produces read-aloud-style speech.** If your target is a conversational
-agent, the more useful move is to point the same harness at a conversational corpus and re-run
-it. We built the harness so that swapping the reference directory is the only change required.
+The six clips under Kokoro-82M above probably sounded like the same recording to you, and that's
+because the model has no emotion control, so all six requests fed it identical input. That makes
+it the **floor** for this metric. Its emotion classifier's hit rate is exactly 0.167, which is
+precisely the chance probability of landing on the right one of six emotions if you picked
+randomly.
 
-Setting the reference at 120 utterances per language was also a choice. Because it's a
-distribution comparison, too few samples makes the score unstable, and too many makes the
-computation slow. Comparing 30 synthesized utterances against 120 reference utterances took
-roughly an hour per model across all four languages.
+Once you know where the floor sits, the rest of the table reads differently. By expressive range
+alone, Zonos leads at 0.452, but as you heard, that motion doesn't land on the requested emotion.
+**Qwen3-TTS is the only model where both metrics come out significant together.**
 
-### A closer look at the per-language sub-scores
+Even so, keep the absolute numbers in perspective. Even the best-performing model doesn't get the
+requested emotion through to the classifier more than half the time. Think of emotion
+instructions less as a switch that flips a feeling on, and more as a dial that nudges the output
+slightly in that direction.
 
-In Korean, VoxCPM2 leads on the speaker axis at 71.79: the voice itself sounds the most human.
-But the same language's intelligibility is the lowest of the four at 48.63. It's a good voice
-reading indistinctly: pleasant to listen to, but a worse choice when the job is conveying
-information.
+## The numbers, all in one place
 
-Qwen3-TTS runs in the opposite direction. Its Korean speaker score of 64.43 trails VoxCPM2's, but
-its intelligibility of 61.46 leads. It reads as a model that traded vocal appeal for clarity.
+![Measurement results]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-results.png)
+*Left: naturalness by language. Right: the relationship between speed and intelligibility.*
 
-Supertonic-3 posted the most even intelligibility across three languages, ranging from 62.99 to
-70.24. Not falling apart badly in any one language is its strength, at the cost of being the
-slowest of the four at an RTF of 2.498. For pre-generated content, that trade-off works in its
-favor.
+The chart on the right is the summary of this whole post. Further left is faster, further up is
+clearer, and **nothing sits in the upper left.** VoxCPM2, the fastest, sits at the bottom.
+Supertonic-3, the clearest, sits at the far right. Speed and intelligibility didn't arrive
+together in any of these five models.
 
-## What to think about at the serving layer
+We measured naturalness with TTSDS2, which compares the distribution of a set of synthesized
+utterances against a set of real human recordings, rather than scoring each utterance one at a
+time, so it's less language-sensitive than per-utterance scoring methods. For the human reference,
+we used 120 utterances per language from Google FLEURS' validation set.
 
-Once you've picked a model, several more decisions still shape cost and quality.
+## How comparisons like this are usually done
 
-**Preprocess numbers and units.** The two categories where errors clustered in this measurement
-were numbers and technical terms. All four models showed the same pattern, so this reads as a
-property of this generation of TTS rather than a flaw in one specific model. A thin
-preprocessing layer that spells out amounts, dates, phone numbers, and product codes is more
-reliable than swapping models, and far cheaper. Pair it with a domain glossary and the
-technical-term cases get covered too.
+If you want to reproduce these results or benchmark a different model yourself, here's a rundown
+of the measurement conventions this field generally uses.
 
-**Batching design sets your unit cost.** We noted earlier that idle power accounted for 86.7% of
-draw, but that number describes what happens when the batch isn't full. If requests trickle in
-sparsely, a scale-to-zero endpoint beats a GPU that sits resident. If traffic is steady, growing
-the batch to dilute the idle share is the right move instead. The same model can end up several
-times more or less expensive per utterance depending entirely on this design choice.
+**Speed is measured as RTF (real-time factor):** generation time divided by the length of the
+synthesized audio. Below 1 means faster than real time, and streaming services usually track
+time-to-first-byte (TTFB) alongside it. Our measurement here is sentence-level batch generation.
 
-**Routing per language is a legitimate option.** In this result, no single model was the best
-choice across every language. English is covered fine by a CPU model, Japanese favors
-Supertonic-3, and Chinese was safest with Qwen3-TTS. A thin routing layer that sends each
-language to whichever model does best there also has the side effect of pulling CPU-eligible
-traffic off the GPU entirely.
+**Intelligibility is measured through transcription:** run the synthesized audio back through a
+speech recognition model and compare against the source text. For languages with clear word
+boundaries like English, word error rate (WER) is standard; for languages like Korean, Chinese,
+and Japanese without that boundary, character error rate (CER) is used instead. Whisper large-v3
+has become the de facto scoring model in this field, and we followed that convention. ⛔ Don't stop
+at the median, though. Here too, the median is mostly zero, and the real spread shows up in the
+90th percentile.
 
-**Budget for review up front.** A consistent pattern across this measurement was errors spiking
-at the 90th percentile. A median of zero doesn't mean the whole batch is safe. Japanese
-especially had a long tail regardless of model, so if you're generating at volume, building
-sample review into the pipeline is cheaper than finding out later.
+**Naturalness splits into two approaches.** One scores each utterance individually with an
+MOS-prediction model (the UTMOS family); the other compares the **entire distribution** of the
+synthesized set against a set of real human speech (TTSDS2). The former is trained mostly on
+English and produces uncalibrated scores in other languages. Multilingual comparisons need the
+latter, so we made TTSDS2 our primary metric, and we looked not just at the overall score but at
+the speaker, prosody, and intelligibility sub-axes together. Looking only at the overall score
+would have missed the point of this whole post.
 
-## Where these numbers fall short
+**Emotion still lacks a solid standard.** There's no single widely accepted metric, so we combined
+two. Prosody variance measures expressive range, and a speech-emotion recognition model measures
+hit rate. **You have to establish a floor first.** Measure a model with no emotion control
+alongside the rest and you get the value of "what it looks like when the condition never applied,"
+and every other number only means something read as a multiple of that floor. In our case, that
+floor came out to 0.024 and 0.167.
 
-Everything here ran through the same harness, and we kept a measurement ledger. Three honest
-caveats, though.
+**There's one rule that ties it all together: use the same sentences, the same seed, and the same
+hardware across every model.** Different sentence sets make results incomparable even under the
+same seed number, and that's exactly why we excluded some measurements from the comparison this
+time.
 
-First, FLEURS, the naturalness reference, is read-aloud speech. If your target is a
-conversational or broadcast register, this comparison doesn't transfer directly.
+## What to use, per language, per use case
 
-Second, don't trust the power numbers for the two CPU models. Repeating the same configuration
-three times, net incremental power swung by 178%. The cause is the idle baseline on a shared
-node: measure the baseline while the node happens to be quiet, and power from a neighboring job
-that lands mid-synthesis gets attributed to us. RTF on the same runs moved by only 7.9%, so the
-speed comparison still holds.
+Adding the intended use case into the mix gives you this:
 
-Third, of the twelve models on our roster, only four completed the full run. A good share of the
-rest were voice-cloning models with no default speaker, requiring a reference clip. Once you
-supply a reference, what you're measuring shifts from speech-synthesis quality to cloning
-fidelity, so we didn't fold them into the same table; that's a separate post.
+| Use case | Korean | English | Chinese | Japanese |
+|---|---|---|---|---|
+| Real-time conversation | VoxCPM2 + number preprocessing | Kokoro-82M (CPU) | VoxCPM2 | VoxCPM2 |
+| Emotionally expressive dialogue | **Qwen3-TTS** | Qwen3-TTS | Qwen3-TTS | Qwen3-TTS |
+| Prompts & notifications | Supertonic-3 | Kokoro-82M | Qwen3-TTS | Supertonic-3 |
+| Audiobooks & narration | Supertonic-3 | Any of them | Qwen3-TTS | Supertonic-3 |
+| Amounts & code readout | Preprocessing required | Preprocessing required | Preprocessing required | Preprocessing + review |
 
-## From ThakiCloud's perspective
+The answer changes even within the same language once the use case changes. Real-time
+conversation prioritizes latency over quality, so it goes to whichever model has the lowest RTF;
+pre-rendered announcement audio has the opposite constraint, more time to spend, so it goes to the
+one with the highest intelligibility. Whenever emotion is actually needed, Qwen3-TTS is the only
+option. It costs you real-time performance, but it's the only model where the requested emotion
+actually comes through.
 
-We ran this measurement because we had to decide which model to default to when adding a voice
-endpoint to the Metis inference platform. Two practical conclusions came out of it.
+⛔ **The practical takeaway from this whole exercise is that no cell says "one model for every
+language."** Put a thin routing layer in front, keyed by language, and you can pull your English
+traffic off onto CPU while still using the best model available in each language.
 
-First, **don't pick a model off a single aggregate score.** In this case, two models with nearly
-identical aggregate scores were 13 points apart on intelligibility, and the gap showed up exactly
-where it hurts: reading amounts and codes aloud. You need to look at the sub-axis that matches
-what your service is actually for.
+## Limitations worth knowing about
 
-Second, **idle power is most of the cost.** 86.7% of what Qwen3-TTS drew had nothing to do with
-synthesis; it was idle. When you're renting a whole GPU for serving, that idle share is real
-cost, and an endpoint that can't fill its batch is burning a full card to produce a single
-stream. Batching design matters as much as model choice for unit economics.
+FLEURS is read-speech. The utterances are recorded as clean, deliberate readings, so this
+naturalness score is accurate as a measure of **how well a model produces read-style speech**, not
+conversational speech. If your target is a conversational agent, it's worth re-measuring against a
+dialogue corpus instead.
 
-The sentence set, harness, and ledger we used for this measurement are kept in our internal
-repository and set up to be reproduced under the same conditions. The audio samples are
-unedited, unselected conversions of the files the ledger points to.
+Don't trust the power numbers from the two models we ran on CPU. Running the identical
+configuration three times back to back, net incremental power swung by 178 percent. That's a
+shared-node idle-baseline problem; the speed measurements from those same runs only moved by 7.9
+percent, so the speed comparisons still hold.
+
+Finally, only five of twelve candidate models made it into this post. Most of the rest were
+voice-cloning models with no default speaker, requiring a reference audio clip to run at all. The
+moment you feed a model a reference clip, what you're measuring shifts from speech synthesis
+quality to cloning fidelity, so we didn't mix them into the same table. That's a separate
+comparison for another post.
+
+---
+
+All 61 samples here are the actual synthesized output from this measurement run, converted
+straight from the files the ledger points to, with no post-processing or cherry-picking.
