@@ -21,6 +21,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/gemma4-local-multi-
 reading_time: true
 categories:
   - agentops
+audiobook: /assets/audio/posts/gemma4-local-multi-agent-orchestration/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 멀티에이전트 오케스트레이션이라고 하면 보통 클라우드 API를 떠올립니다. 그런데 최근 커뮤니티에서 공유된 데모는 다른 방향을 보여줍니다. Gemma 4 26B를 **로컬 머신에서 띄워** 10개의 병렬 서브에이전트로 SVG 아트 갤러리를 코딩하고, 100 tokens/sec 이상의 처리량을 달성했다는 것입니다.
