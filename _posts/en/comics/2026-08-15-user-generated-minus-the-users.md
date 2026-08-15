@@ -12,7 +12,7 @@ tags:
   - sovereignty
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/user-generated-minus-the-users/strip.png
+image: /assets/images/posts/comics/user-generated-minus-the-users/strip.webp
 video: /assets/videos/posts/만화/user-generated-minus-the-users/comic.mp4
 audiobook: /assets/audio/posts/user-generated-minus-the-users/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 A single prompt now returns a ten-second vertical ad. The format everyone wants is UGC: not a polished brand spot, but something that looks like a real customer filmed it on a phone and posted it. So the prompt asks for handheld shake, film grain and a fogged lens instead of asking for quality. You are paying, line by line, to look unpolished. The only part still unaccounted for is the satisfied customer standing in the shot.
 
-![User-Generated, Minus the Users](/assets/images/posts/comics/user-generated-minus-the-users/strip.png)
+![User-Generated, Minus the Users](/assets/images/posts/comics/user-generated-minus-the-users/strip.webp)
 
 > Source: [RT @Soaima_Ai: GPT image 2 ](https://x.com/hjguyhan/status/2088229056458396079) · twitter
 
 **▶ Animated edition — the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/user-generated-minus-the-users/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/user-generated-minus-the-users/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/user-generated-minus-the-users/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/user-generated-minus-the-users/comic.en.vtt" default>
 </video>

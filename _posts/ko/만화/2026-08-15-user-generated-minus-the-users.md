@@ -12,7 +12,7 @@ tags:
   - sovereignty
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/user-generated-minus-the-users/strip.png
+image: /assets/images/posts/만화/user-generated-minus-the-users/strip.webp
 video: /assets/videos/posts/만화/user-generated-minus-the-users/comic.mp4
 audiobook: /assets/audio/posts/user-generated-minus-the-users/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 프롬프트 한 줄이면 10초짜리 세로 광고가 나옵니다. 요즘 유행하는 형식은 UGC인데, 회사가 찍은 광고가 아니라 실제 사용자가 손으로 찍어 올린 후기처럼 보이는 영상을 말합니다. 그래서 프롬프트에는 화질을 올리는 주문 대신 손떨림, 필름 노이즈, 렌즈 김서림 같은 흠집을 일부러 적어 넣죠. 진짜처럼 보이는 값을 따로 치르는 셈입니다. 문제는 그렇게 완성된 광고 안에서, 만족한 사용자만 아직 실재하지 않는다는 점이에요.
 
-![유저 제작 콘텐츠, 유저만 없음](/assets/images/posts/만화/user-generated-minus-the-users/strip.png)
+![유저 제작 콘텐츠, 유저만 없음](/assets/images/posts/만화/user-generated-minus-the-users/strip.webp)
 
 > 원 뉴스: [RT @Soaima_Ai: GPT image 2 ](https://x.com/hjguyhan/status/2088229056458396079) · twitter
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/user-generated-minus-the-users/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/user-generated-minus-the-users/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/user-generated-minus-the-users/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/user-generated-minus-the-users/comic.ko.vtt" default>
 </video>

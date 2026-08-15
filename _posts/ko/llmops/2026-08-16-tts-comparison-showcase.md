@@ -10,7 +10,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "headphones"
 header:
-  teaser: /assets/images/tts-comparison-showcase-hero.png
+  teaser: /assets/images/tts-comparison-showcase-hero.webp
 tags:
   - text-to-speech
   - multilingual-tts
@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showcase/"
 ---
 
-![다국어 TTS 비교]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.png)
+![다국어 TTS 비교]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.webp)
 *여섯 개 모델이 같은 문장을 네 개 언어로 읽습니다*
 
 음성합성 모델을 고르실 때 가장 확실한 방법은 직접 들어보는 것입니다. 그래서 여섯 개 모델에게
@@ -347,7 +347,7 @@ VoxCPM2가 표에서 빠진 이유는 성능이 나빠서가 아닙니다. 이 �
 
 ## 숫자로 정리하면
 
-![측정 결과]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-results.png)
+![측정 결과]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-results.webp)
 *왼쪽은 언어별 자연성, 오른쪽은 속도와 명료도의 관계입니다*
 
 오른쪽 그림이 이 글의 요약입니다. 가로축 왼쪽일수록 빠르고 세로축 위쪽일수록 또렷한데, **왼쪽

@@ -10,7 +10,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "camera"
 header:
-  teaser: /assets/images/character-turnaround-hero.png
+  teaser: /assets/images/character-turnaround-hero.webp
 tags:
   - image-generation
   - prompt-engineering
@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/research/character-turnaround-view-prompting/"
 ---
 
-![Character turnaround hero image](/assets/images/character-turnaround-hero.png)
+![Character turnaround hero image](/assets/images/character-turnaround-hero.webp)
 
 If you run an image generation pipeline, it is worth checking how far you can trust the
 habit of naming a cause after seeing one failure. The short answer is: not very far. We
@@ -86,7 +86,7 @@ mean of 0.109 for the old wording and 0.113 for the new one, which does not sepa
 two conditions. And the view that originally failed sat at 0.073, outside the 0.104 to
 0.117 band that the six runs produced.
 
-![Measurements](/assets/images/character-turnaround-results.png)
+![Measurements](/assets/images/character-turnaround-results.webp)
 *Left: drift across the four final turnaround views. Right: the wording A/B. The dashed line is the single run where the camera never moved.*
 
 It was not a wording effect. It was an unlucky draw. I had been confident enough to build

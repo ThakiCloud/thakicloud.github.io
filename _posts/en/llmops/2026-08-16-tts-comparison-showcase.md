@@ -10,7 +10,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "headphones"
 header:
-  teaser: /assets/images/tts-comparison-showcase-hero.png
+  teaser: /assets/images/tts-comparison-showcase-hero.webp
 tags:
   - text-to-speech
   - multilingual-tts
@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/tts-comparison-showcase/"
 ---
 
-![Multilingual TTS comparison]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.png)
+![Multilingual TTS comparison]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.webp)
 *Six models read the same sentences in four languages.*
 
 The most reliable way to pick a text-to-speech model is to listen to it. So we had six models
@@ -382,7 +382,7 @@ slightly in that direction.
 
 ## The numbers, all in one place
 
-![Measurement results]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-results.png)
+![Measurement results]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-results.webp)
 *Left: naturalness by language. Right: the relationship between speed and intelligibility.*
 
 The chart on the right is the summary of this whole post. Further left is faster, further up is

@@ -10,7 +10,7 @@ toc: true
 toc_label: "목차"
 toc_icon: "camera"
 header:
-  teaser: /assets/images/character-turnaround-hero.png
+  teaser: /assets/images/character-turnaround-hero.webp
 tags:
   - image-generation
   - prompt-engineering
@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-turnaround-view-prompting/"
 ---
 
-![캐릭터 턴어라운드 히어로 이미지](/assets/images/character-turnaround-hero.png)
+![캐릭터 턴어라운드 히어로 이미지](/assets/images/character-turnaround-hero.webp)
 
 이미지 생성 파이프라인을 운영하고 계신다면, 실패를 한 번 보고 원인을 지목하는 습관이
 어디까지 안전한지 점검해 보실 만합니다. 결론부터 말씀드리면 대개 안전하지 않습니다.
@@ -81,7 +81,7 @@ degrees from camera"처럼 회전을 각도로 서술합니다. 각도 표현이
 실패했던 그 뷰는 0.073으로, 여섯 장이 만든 0.104에서 0.117 사이 구간 바깥에 혼자
 떨어져 있었습니다.
 
-![측정 결과](/assets/images/character-turnaround-results.png)
+![측정 결과](/assets/images/character-turnaround-results.webp)
 *왼쪽은 최종 턴어라운드 네 뷰의 변화량, 오른쪽은 문구 A/B입니다. 점선이 카메라가 움직이지 않았던 그 한 번입니다.*
 
 문구가 만든 차이가 아니라 드물게 나오는 뽑기였습니다. 저는 표를 만들 만큼 확신했는데
