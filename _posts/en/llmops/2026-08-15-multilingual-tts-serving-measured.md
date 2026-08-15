@@ -45,6 +45,8 @@ The more important number on the power side is idle share. When the Qwen3-TTS en
 
 Kokoro-82M drew the least at 7.5 J per second of audio on 32 CPU cores. If you only need English and Chinese and have latency to spare, there is a real option here that skips the GPU entirely.
 
+Do not trust the power figures on the two CPU rows, though. Repeating the same configuration three times moved Supertonic's net power to 50.4, then 44.0, then 133.6, a spread of 178%, while RTF over the same runs moved only 7.9%. The cause is the idle baseline on a shared node: measure it while the node is quiet and every watt a neighbour draws during synthesis gets attributed to you. Read the same three runs in absolute terms and they land at 1581, 1449 and 1440, inside 9.7%. On a dedicated GPU node the net figure stays stable, so the VoxCPM2 against Qwen3-TTS power comparison holds, and on CPU the honest comparison is speed alone.
+
 ## Intelligibility passed everywhere, just not by the same margin
 
 We fed the synthesized audio back through Whisper-large-v3 and compared the transcript against the source text. All four models cleared the threshold on median scores. Korean and English were effectively error free.
@@ -103,7 +105,7 @@ Eight of the twelve models on our roster did not make it to the finish line. Two
 
 ## Bottom line
 
-If you are building a real-time conversational service, VoxCPM2's RTF of 0.100 is compelling, but you have to accept alongside it that emotional conditions cannot be applied without paired reference audio. If emotional expressiveness matters, Qwen3-TTS leads at an EFI of 0.408, but it is slower than real time and burns a large idle power share. If you only need English and Chinese and have latency to spare, putting Kokoro-82M on CPU is the cheapest option on power by a wide margin.
+If you are building a real-time conversational service, VoxCPM2's RTF of 0.100 is compelling, but you have to accept alongside it that emotional conditions cannot be applied without paired reference audio. If emotional expressiveness matters, Qwen3-TTS leads at an EFI of 0.408, but it is slower than real time and burns a large idle power share. If you only need English and Chinese and have latency to spare, putting Kokoro-82M on CPU is the cheapest option on speed-per-core, though as noted the CPU power figures are not reproducible on a shared node.
 
 Whichever model you pick, check first that your scorer is actually scoring. We got fooled three times.
 
