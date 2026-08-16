@@ -14,10 +14,10 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 header:
-  teaser: /assets/images/character-identity-hero.png
+  teaser: /assets/images/character-identity-hero.webp
 ---
 
-![Character identity](/assets/images/character-identity-hero.png)
+![Character identity](/assets/images/character-identity-hero.webp)
 *One form that still reads as the same form after every transformation. That is the problem a character pipeline actually solves.*
 
 Anyone who has put a mascot through a generation pipeline knows the moment. The front render came out well, and then you ask for the same character in twelve poses and get twelve different animals back. The colours are roughly right and the mood is close, but you would not call it the same character.
@@ -30,7 +30,7 @@ The setup is simple. For each character we conditioned on four reference stills 
 
 Both arms share the prompt, the seed and the references. The only difference is whether the adapter is loaded. The score is CLIP-I: cosine similarity between the image embedding of a generated frame and that of the references. Mascots often have no face, which rules out ArcFace-style face metrics, and CLIP-I is what takes their place.
 
-![A/B results](/assets/images/character-identity-ab-results.png)
+![A/B results](/assets/images/character-identity-ab-results.webp)
 *Five characters, six unseen actions each. Grey is the base model, blue is the adapter.*
 
 The adapter beat the base model on all five, and on twenty-eight of thirty clips. But the interesting part of that chart is the grey bars, not the blue ones.

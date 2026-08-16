@@ -14,10 +14,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 header:
-  teaser: /assets/images/character-identity-hero.png
+  teaser: /assets/images/character-identity-hero.webp
 ---
 
-![캐릭터 정체성 유지](/assets/images/character-identity-hero.png)
+![캐릭터 정체성 유지](/assets/images/character-identity-hero.webp)
 *하나의 형태가 어떤 변형을 거쳐도 같은 형태로 읽히는 것, 캐릭터 파이프라인이 실제로 푸는 문제입니다.*
 
 마스코트나 캐릭터를 생성 파이프라인에 태워 보신 분이라면 익숙한 장면이 있습니다. 정면 컷 하나는 만족스럽게 나왔는데, 같은 캐릭터로 열두 가지 동작을 요청하면 열두 마리가 돌아옵니다. 색은 얼추 맞고 분위기도 비슷한데 같은 캐릭터라고 말하기는 어렵습니다.
@@ -30,7 +30,7 @@ header:
 
 두 팔은 프롬프트도 시드도 레퍼런스도 동일하고, 차이는 어댑터를 얹었는지 하나뿐입니다. 점수는 CLIP-I, 즉 생성 프레임의 이미지 임베딩과 레퍼런스 임베딩의 코사인 유사도입니다. 마스코트는 얼굴이 없는 경우가 많아 ArcFace 계열 얼굴 지표를 쓸 수 없고, 그 자리를 대신하는 것이 CLIP-I입니다.
 
-![A/B 결과](/assets/images/character-identity-ab-results.png)
+![A/B 결과](/assets/images/character-identity-ab-results.webp)
 *캐릭터 다섯 종, 학습에 없던 동작 여섯 개씩. 회색이 베이스, 파랑이 어댑터입니다.*
 
 숫자를 보시면 어댑터가 다섯 종 모두를 이겼습니다. 클립 단위로는 서른 번 중 스물여덟 번입니다. 그런데 이 표에서 정작 중요한 것은 파란 막대가 아니라 회색 막대입니다.
