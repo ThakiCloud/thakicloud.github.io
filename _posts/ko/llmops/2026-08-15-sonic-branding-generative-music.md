@@ -31,6 +31,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/sonic-branding-genera
 용역입니다. 곡당 1센트가 안 되면 브랜드 사운드 시스템 전체를 하루에 만들고, 마음에 안 들면
 다시 만듭니다. 실제로 그렇게 만든 것들을 아래에서 들어보실 수 있습니다.
 
+![브랜드 사운드를 GPU 한 장으로 만들었습니다: 곡당 0.007달러, 그리고 실행 스택이 만든 12.7배 개념을 형상화한 이미지](/assets/images/sonic-branding-generative-music-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 무엇을 어디에 올렸나
 
 MiniMax-Music3는 가사와 구조화된 캡션을 받아 32kHz 스테레오 완곡을 만드는 오픈 웨이트 모델입니다.

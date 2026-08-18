@@ -33,7 +33,7 @@ header:
 조건으로 줍니다. 시트에는 아홉 개 패널마다 타임코드와 카메라 지시가 손글씨로 적혀 있습니다.
 생김새만이 아니라 구도까지 같이 넘어갑니다.
 
-![스토리보드 시트]({{ site.url }}{{ site.baseurl }}/assets/images/cf-storyboard-sheet.jpg)
+![스토리보드 시트]({{ site.url }}{{ site.baseurl }}/assets/images/cf-storyboard-sheet.webp)
 *아홉 패널짜리 시트입니다. 각 칸 아래에 타임코드와 카메라 지시가 붙습니다.*
 
 일곱 제품 전부를 두 방법으로 만들었습니다. 시나리오와 길이, 시드와 해상도를 고정했으니 다른
