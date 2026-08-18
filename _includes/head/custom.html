@@ -10,10 +10,9 @@
   gtag('config', 'G-78BFTNGGJX');
 </script>
 
-<!-- Dark-only: the blog is embedded in the dark thakicloud.com shell and no
-     longer ships a theme toggle, so pin dark before first paint. -->
+<!-- Single-mode: no theme toggle, so pin the theme before first paint. -->
 <script>
-  document.documentElement.setAttribute('data-theme', 'dark');
+  document.documentElement.setAttribute('data-theme', 'light');
 </script>
 
 <!-- Typefaces: Pretendard (KO/EN), JetBrains Mono (code), IBM Plex Sans Arabic (ar) -->
@@ -30,7 +29,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#ffffff">
 
 <!-- Mermaid.js — library only; init + light/dark theme handled in scripts.html -->
 <link rel="stylesheet" href="{{ '/assets/css/mermaid-custom.css' | relative_url }}">
