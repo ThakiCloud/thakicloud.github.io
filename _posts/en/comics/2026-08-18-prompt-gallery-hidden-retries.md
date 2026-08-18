@@ -12,7 +12,7 @@ tags:
   - AI실험
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/prompt-gallery-hidden-retries/strip.png
+image: /assets/images/posts/comics/prompt-gallery-hidden-retries/strip.webp
 video: /assets/videos/posts/만화/prompt-gallery-hidden-retries/comic.mp4
 audiobook: /assets/audio/posts/prompt-gallery-hidden-retries/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -20,13 +20,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 A gallery collecting AI-generated videos next to the exact prompts behind them is making the rounds. A prompt is just the instruction you hand the model, and until now it was the part people kept to themselves. Now it is all public, so copy and paste should be enough. It is not. Feed the same prompt twice and you get two different things, because the random seed and the model version quietly decide the rest. What ends up in the gallery is the take that finally worked. The ones before it never get posted.
 
-![The Gallery Shows the Prompt, Not the 46 Retries](/assets/images/posts/comics/prompt-gallery-hidden-retries/strip.png)
+![The Gallery Shows the Prompt, Not the 46 Retries](/assets/images/posts/comics/prompt-gallery-hidden-retries/strip.webp)
 
 > Source: [RT @checheluna3: Seedance 2.5 쓰는 분들 이 사이트 혹시 알고 있나요? ](https://x.com/hjguyhan/status/2089321017521086865) · twitter
 
 **▶ Animated edition — the characters speak for themselves (Korean audio)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/prompt-gallery-hidden-retries/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/prompt-gallery-hidden-retries/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/prompt-gallery-hidden-retries/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/prompt-gallery-hidden-retries/comic.en.vtt" default>
 </video>
