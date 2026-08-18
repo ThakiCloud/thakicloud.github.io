@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/markovian-thinker-d
 
 추론 모델을 점점 더 길게 생각하게 만들다가 비용이 감당 안 되는 지점을 만난 적이 있다면 이 글이 그 이야기입니다. 긴 사고연쇄의 진짜 비용은 모델이 생각하는 동안 상태가 무한정 커져 비용이 사고 길이의 제곱으로 늘어나는 데서 옵니다. 마르코프 사고(Markovian Thinking)는 정책이 고정 크기 상태만 보고 추론을 이어 가게 해 이 비용을 선형으로 낮춥니다. 이 발상을 구현한 Delethink 환경에서 8K 토큰 청크로 훈련한 1.5B 모델은 24K 토큰까지 사고하면서 같은 예산의 기존 방식과 맞먹거나 앞섰고, 96K 사고 길이에서는 훈련 비용이 27 H100-월에서 7 H100-월로 줄었습니다.
 
-![고정 크기 청크를 따라 선형 궤도로 흐르는 긴 추론을 형상화한 추상 이미지](/assets/images/markovian-thinker-delethink-linear-reasoning-hero.png)
+![고정 크기 청크를 따라 선형 궤도로 흐르는 긴 추론을 형상화한 추상 이미지](/assets/images/markovian-thinker-delethink-linear-reasoning-hero.webp)
 *긴 사고를 고정 크기 청크로 끊고 짧은 상태만 다음으로 넘기는 마르코프 사고를 형상화했습니다.*
 
 ## 왜 읽어야 하나

@@ -25,7 +25,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/owm/minimax-m2-7-openweight-
 reading_time: true
 categories:
   - owm
-published: false
 audiobook: /assets/audio/posts/minimax-m2-7-openweight-agent/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -103,3 +102,16 @@ M2.7에서 가장 실용적으로 눈에 들어오는 두 가지를 꼽으면 �
 **라이선스 "other"는 온프렘 상용 배포 전 필수 확인 항목.** 오픈웨이트라는 말이 상용 무료를 의미하지 않습니다. 라이선스가 "other"로 분류되어 있다는 것은 표준 분류(MIT, Apache, Llama Community 등)와 다른 조건이 있다는 신호입니다. 상용 서비스에 붙이거나 내부 엔터프라이즈 배포를 계획한다면 LICENSE 원문을 법무팀과 함께 검토해야 합니다. 기술 평가와 라이선스 검토는 병렬로 진행하되 후자가 배포 전에 완료되어야 합니다.
 
 에이전트 팀 협업이나 자기진화 기능은 실제 사용 사례에서 직접 검증하는 것이 맞습니다. 벤치마크와 개발사 설명만으로는 실제 워크플로에서 어떻게 동작하는지 알기 어렵습니다. 프로토타입 단계에서 소규모 양자화 버전으로 먼저 검증하고 필요한 하드웨어 규모를 산정하는 접근이 현실적입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![minimax-m2-7-openweight-agent 슬라이드 1](/assets/images/minimax-m2-7-openweight-agent-slide-01.webp)
+
+![minimax-m2-7-openweight-agent 슬라이드 2](/assets/images/minimax-m2-7-openweight-agent-slide-02.webp)
+
+![minimax-m2-7-openweight-agent 슬라이드 3](/assets/images/minimax-m2-7-openweight-agent-slide-03.webp)
+
+![minimax-m2-7-openweight-agent 슬라이드 4](/assets/images/minimax-m2-7-openweight-agent-slide-04.webp)
+

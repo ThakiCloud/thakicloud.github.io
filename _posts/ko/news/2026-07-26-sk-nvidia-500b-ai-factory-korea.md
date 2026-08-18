@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/sk-nvidia-500b-ai-factory-korea/"
 ---
 
-![전력망이 하나의 조밀한 연산 격자로 수렴하는 모습을 형상화한 개념 이미지](/assets/images/sk-nvidia-500b-ai-factory-korea-hero.png)
+![전력망이 하나의 조밀한 연산 격자로 수렴하는 모습을 형상화한 개념 이미지](/assets/images/sk-nvidia-500b-ai-factory-korea-hero.webp)
 *기가와트 단위의 전력이 하나의 연산 설비로 모이는 구조를 형상화했습니다.*
 
 ## 왜 읽어야 하나
@@ -132,11 +132,11 @@ Paxis는 그 위에서 도는 에이전트 네이티브 클라우드 제어 평�
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![sk-nvidia-500b-ai-factory-korea 슬라이드 1](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-01.png)
+![sk-nvidia-500b-ai-factory-korea 슬라이드 1](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-01.webp)
 
-![sk-nvidia-500b-ai-factory-korea 슬라이드 2](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-02.png)
+![sk-nvidia-500b-ai-factory-korea 슬라이드 2](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-02.webp)
 
-![sk-nvidia-500b-ai-factory-korea 슬라이드 3](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-03.png)
+![sk-nvidia-500b-ai-factory-korea 슬라이드 3](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-03.webp)
 
-![sk-nvidia-500b-ai-factory-korea 슬라이드 4](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-04.png)
+![sk-nvidia-500b-ai-factory-korea 슬라이드 4](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-04.webp)
 

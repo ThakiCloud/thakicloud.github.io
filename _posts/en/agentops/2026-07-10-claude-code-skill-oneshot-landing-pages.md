@@ -16,10 +16,15 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-skill-oneshot-landing-pages/"
-published: false
+audiobook: "https://drive.google.com/file/d/1qwt-fLpqcYM8sneVYrghulYj_BhIjR3n/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
-Recently a developer shared on X that they "built a skill so Claude Code creates premium landing pages in one shot," claiming all three sites in the video were one-shot outputs ([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). The reaction was strong because of how polished the results looked, but the more interesting point for an engineer is elsewhere. Give the same model the same prompt, "build me a landing page," and you get something ordinary; add one skill and an agency-grade page comes out in a single pass. This post takes apart how that skill actually works and validates it from the operating perspective of ThakiCloud, where skills are treated as first-class resources.
+Recently a developer shared on X that they "built a skill so Claude Code creates premium landing pages in one shot," claiming all three sites in the video were one-shot outputs ([@the_cyw](https://x.com/the_cyw/status/2075338024406409239)). The reaction was strong because of how polished the results looked, but the more interesting point for an engineer is elsewhere. Give the same model the same prompt, "build me a landing page," and you get something ordinary; add one skill and an agency-grade page comes out in a single pass. If you are an engineer handing repetitive work to agents, the takeaway here is that the lever for raising quality is skill design, not swapping models.
+
+![Illustration of the core idea of How a Claude Code Skill Builds Premium Landing Pages in One Shot](/assets/images/claude-code-skill-oneshot-landing-pages-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Overview
 
@@ -35,7 +40,7 @@ The shape of what landing-page skills produce is consistently observed across se
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -52,7 +57,7 @@ The shape of what landing-page skills produce is consistently observed across se
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -391,7 +396,7 @@ Of course we should be wary of overstatement. The phrase "a premium page in one 
 
 Also, the design taste baked into the skill is the ceiling of the result. If a skill is optimized for a particular aesthetic, it will resist requests that stray from it. This is not a bug but a designed trade-off. It gave up the extremes in exchange for raising the average by reducing freedom, so a team that must handle many brands is better off splitting skills by aesthetic rather than keeping one.
 
-In conclusion, the real value of this case is not "a pretty page comes out in one shot" but that it visibly proved the principle that **agent quality comes from skill design, not the model**. And Paxis is precisely the productization of that principle into a form operable at the platform level.
+The real value of this case is not "a pretty page comes out in one shot" but that it visibly proved the principle that **agent quality comes from skill design, not the model**. And Paxis is precisely the productization of that principle into a form operable at the platform level.
 
 ## Sources
 

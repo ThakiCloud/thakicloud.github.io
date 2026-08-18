@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **Estimated reading time**: 15 min
 
-![AnyCrawl LLM-friendly data collection pipeline overview]({{ '/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.png' | relative_url }})
+![AnyCrawl LLM-friendly data collection pipeline overview]({{ '/assets/images/anycrawl-llm-ready-web-crawler-comprehensive-guide-hero.webp' | relative_url }})
 
 ## Overview
 

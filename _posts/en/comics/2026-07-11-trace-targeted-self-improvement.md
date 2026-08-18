@@ -13,15 +13,16 @@ tags:
   - ai-coding
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/trace-targeted-self-improvement/strip.png
+image: /assets/images/posts/comics/trace-targeted-self-improvement/strip.webp
 audiobook: /assets/audio/posts/trace-targeted-self-improvement/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/trace-targeted-self-improvement/"
+published: false
 ---
 
 The talk of the week is TRACE, a paper that just picked up a Spotlight at an ICML workshop. The idea is refreshingly plain: instead of an agent grinding away at everything, it reads back its own failure logs, figures out the one capability those failures point to, and trains exactly that. Turns out this targeted approach beats blunt reinforcement learning, prompt-shuffling, and dumping in synthetic data. Knowing your weak spot, it seems, beats brute force.
 
-![The Agent That Studied Its Own Screwups]({{ '/assets/images/posts/comics/trace-targeted-self-improvement/strip.png' | relative_url }})
+![The Agent That Studied Its Own Screwups]({{ '/assets/images/posts/comics/trace-targeted-self-improvement/strip.webp' | relative_url }})
 
 > Source: [RT @hangoo_kang: “TRACE: Capability-Targeted Agentic Training” got Spotlight @ ICML AIWILD 🎉](https://x.com/hjguyhan/status/2075500035207565421) · twitter
 

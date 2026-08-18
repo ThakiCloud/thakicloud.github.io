@@ -25,7 +25,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/owm/nemotron-3-ultra-latentm
 reading_time: true
 categories:
   - owm
-published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
@@ -106,3 +105,16 @@ MTP speculative decoding을 vLLM에서 5토큰 단위로 쓸 수 있어서 throu
 **한국어 공식 지원이 국내 엔터프라이즈 온프렘 근거가 됩니다.** 한국어가 10개 공식 지원 언어 중 하나로 명시된 것은 중요합니다. 많은 대형 모델이 한국어를 지원한다고 하지만 공식 평가 언어에 포함되는 경우는 드뭅니다. 금융, 공공, 의료 등 한국어 문서 처리가 핵심인 엔터프라이즈 온프렘 도입의 근거 자료로 쓸 수 있습니다. 다만 한국어 벤치마크 수치가 별도로 제시되지 않아서, 실제 한국어 성능 검증은 자체 평가 세트로 진행해야 합니다.
 
 OpenMDW-1.1 라이선스는 NVIDIA가 설계한 오픈 모델 라이선스입니다. 상용 온프렘 배포 전 라이선스 원문 검토는 필수입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 1](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-01.webp)
+
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 2](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-02.webp)
+
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 3](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-03.webp)
+
+![nemotron-3-ultra-latentmoe-onprem 슬라이드 4](/assets/images/nemotron-3-ultra-latentmoe-onprem-slide-04.webp)
+

@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 냉담함이 오늘의 진짜 뉴스입니다. 그리고 같은 주에 정반대 방향의 장면이 하나 더 겹쳤습니다.
 
-![리더보드 1위가 아무도 안 사는 이유: 벤치마크가 사주지 못하는 것 개념을 형상화한 이미지](/assets/images/benchmark-wins-trust-gap-execution-layer-hero.png)
+![리더보드 1위가 아무도 안 사는 이유: 벤치마크가 사주지 못하는 것 개념을 형상화한 이미지](/assets/images/benchmark-wins-trust-gap-execution-layer-hero.webp)
 *이번 주 뉴스의 핵심 흐름을 형상화했습니다.*
 
 ## 정상에서 멈칫한 두 장면
@@ -38,7 +38,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 한쪽에서는 신생 오픈웨이트 모델이 리더보드 정상을 찍었는데 시장은 지갑을 열지 않고, 다른 한쪽에서는 프런티어 선두조차 다음 버전을 세 번이나 미룹니다. 두 장면은 모순처럼 보이지만 같은 이야기를 합니다. 성능 곡선의 정점에서, 벤치마크 숫자와 실제 배포 사이의 간극이 그 어느 때보다 크게 벌어졌다는 이야기입니다.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/benchmark-wins-trust-gap-execution-layer/nlm-infographic-1.png)
+![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/benchmark-wins-trust-gap-execution-layer/nlm-infographic-1.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 값이 내려갈수록 질문이 바뀝니다
@@ -406,7 +406,7 @@ ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-
 리더보드 1위가 안 팔리는 이유를 다시 뒤집으면 답이 됩니다. 기업이 사는 것은 정점의 점수가 아니라 통제된 실행입니다. 벤치마크가 사주지 못하는 그 신뢰를, 실행 계층이 대신 만듭니다.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/benchmark-wins-trust-gap-execution-layer/nlm-infographic-2.png)
+![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/benchmark-wins-trust-gap-execution-layer/nlm-infographic-2.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료
@@ -431,4 +431,16 @@ ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-
 - 뉴스로드, [車 두뇌 잡는 마이크론, 현대모비스·퀄컴과 '3~5년짜리' 메모리 동맹](http://www.newsroad.co.kr/news/articleView.html?idxno=61704)
 - 디지털투데이, [AI 메모리 수요 여파에 인도 스마트폰 출하 10% 감소…6년 만에 최대 낙폭](https://www.digitaltoday.co.kr/news/articleView.html?idxno=685002)
 - 매일일보, ['AI 보안기술기반 중소기업 정보유출 예방'…지란지교소프트, AI 보안](https://www.m-i.kr/news/articleView.html?idxno=1392577)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 1](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-01.webp)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 2](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-02.webp)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 3](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-03.webp)
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 4](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-04.webp)
 

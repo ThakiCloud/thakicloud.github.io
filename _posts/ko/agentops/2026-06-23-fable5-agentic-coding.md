@@ -19,7 +19,8 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable5-agentic-coding/"
 categories:
   - agentops
-published: false
+audiobook: /assets/audio/posts/fable5-agentic-coding/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 개요

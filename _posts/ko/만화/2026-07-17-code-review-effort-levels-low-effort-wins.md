@@ -13,14 +13,15 @@ tags:
   - compute-cost
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/code-review-effort-levels-low-effort-wins/strip.png
+image: /assets/images/posts/만화/code-review-effort-levels-low-effort-wins/strip.webp
 audiobook: /assets/audio/posts/code-review-effort-levels-low-effort-wins/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 클로드 코드의 /code-review에 '노력 레벨'이 생겼습니다. 리뷰를 대충 볼지 빡세게 볼지를 눈금으로 고를 수 있고, 레벨을 바꿀 때마다 리뷰 자체가 처음부터 다시 쓰인다는 이야기입니다. 여기서 재미있는 대목은 가장 낮은 노력으로 돌린 리뷰조차 다른 코드 리뷰 도구들을 이겼다는 점입니다. 그런데 노력을 올린다는 건 결국 추론을 더 돌린다는 뜻이고, 남의 클라우드 위에서는 그 추론 한 번이 그대로 계량기 숫자로 찍힙니다. 파시스와 메티스가 눈금을 끝까지 밀어 올려 봤습니다.
 
-![저노력 리뷰가 다 이겼다]({{ '/assets/images/posts/만화/code-review-effort-levels-low-effort-wins/strip.png' | relative_url }})
+![저노력 리뷰가 다 이겼다]({{ '/assets/images/posts/만화/code-review-effort-levels-low-effort-wins/strip.webp' | relative_url }})
 
 > 원 뉴스: [Claude Code's /code-review now has effort levels, with the review rewritten at every one.](https://x.com/hjguyhan/status/2077894748183097710) · twitter
 
@@ -31,3 +32,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![code-review-effort-levels-low-effort-wins 슬라이드 1](/assets/images/code-review-effort-levels-low-effort-wins-slide-01.webp)
+
+![code-review-effort-levels-low-effort-wins 슬라이드 2](/assets/images/code-review-effort-levels-low-effort-wins-slide-02.webp)
+
+![code-review-effort-levels-low-effort-wins 슬라이드 3](/assets/images/code-review-effort-levels-low-effort-wins-slide-03.webp)
+
+![code-review-effort-levels-low-effort-wins 슬라이드 4](/assets/images/code-review-effort-levels-low-effort-wins-slide-04.webp)
+

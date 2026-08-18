@@ -24,7 +24,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/local-llm-inference-s
 reading_time: true
 categories:
   - llmops
-published: false
 audiobook: /assets/audio/posts/local-llm-inference-stack-guide/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

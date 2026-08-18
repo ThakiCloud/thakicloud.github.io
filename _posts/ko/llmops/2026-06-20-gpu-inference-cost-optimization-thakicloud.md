@@ -22,7 +22,6 @@ toc: true
 toc_sticky: true
 categories:
   - llmops
-published: false
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gpu-inference-cost-optimization-thakicloud/"
 audiobook: /assets/audio/posts/gpu-inference-cost-optimization-thakicloud/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"

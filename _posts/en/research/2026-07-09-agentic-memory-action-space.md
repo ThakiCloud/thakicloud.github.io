@@ -20,12 +20,11 @@ toc_label: "Contents"
 toc_icon: "robot"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/agentic-memory-action-space/"
-published: false
 ---
 
 Anyone who has run an agent at real product scale eventually hits a wall with memory. As conversations grow long and work spans multiple sessions, you have to juggle short-term memory that holds the last few exchanges and long-term memory that retrieves a fact the user mentioned days ago. Most systems so far have treated these as separate parts. Short-term memory is handled by context-window logic, long-term memory by vector search and summarization pipelines, and the seams between them are stitched together with human-designed heuristics and controllers. AgeMem (Agentic Memory, arXiv:2601.01885) points at that division of labor itself as the problem, proposing that we unify the act of managing memory into a single action space the agent chooses from.
 
-![An abstract image depicting memory unified into an action space]({{ '/assets/images/agentic-memory-action-space-hero.png' | relative_url }})
+![An abstract image depicting memory unified into an action space]({{ '/assets/images/agentic-memory-action-space-hero.webp' | relative_url }})
 *A rendering of unified memory management where store, retrieve, summarize, and discard converge into one action space.*
 
 ## Overview

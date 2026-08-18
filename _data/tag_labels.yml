@@ -806,6 +806,10 @@
   "ko": "양자화"
   "en": "Quantization"
   "ar": "التكميم"
+"캘리브레이션":
+  "ko": "캘리브레이션"
+  "en": "Calibration"
+  "ar": "المعايرة"
 "업무자동화":
   "ko": "업무자동화"
   "en": "Work Automation"
@@ -1252,3 +1256,251 @@
   "ko": "데스크톱-에이전트"
   "en": "Desktop Agent"
   "ar": "وكيل سطح المكتب"
+"무상태":
+  "ko": "무상태"
+  "en": "Stateless"
+  "ar": "عديم الحالة"
+"서버리스":
+  "ko": "서버리스"
+  "en": "Serverless"
+  "ar": "بدون خادم"
+"프라이버시":
+  "ko": "프라이버시"
+  "en": "Privacy"
+  "ar": "الخصوصية"
+"분산 학습":
+  "ko": "분산 학습"
+  "en": "Distributed Training"
+  "ar": "التدريب الموزع"
+"영상 자동화":
+  "ko": "영상 자동화"
+  "en": "Video Automation"
+  "ar": "أتمتة الفيديو"
+"에이전트 스킬":
+  "ko": "에이전트 스킬"
+  "en": "Agent Skills"
+  "ar": "مهارات الوكيل"
+"에이전트 메모리":
+  "ko": "에이전트 메모리"
+  "en": "Agent Memory"
+  "ar": "ذاكرة الوكيل"
+"벡터 데이터베이스":
+  "ko": "벡터 데이터베이스"
+  "en": "Vector Database"
+  "ar": "قاعدة بيانات المتجهات"
+"프로토콜 마이그레이션":
+  "ko": "프로토콜 마이그레이션"
+  "en": "Protocol Migration"
+  "ar": "ترحيل البروتوكول"
+"로컬 LLM":
+  "ko": "로컬 LLM"
+  "en": "Local LLM"
+  "ar": "نموذج لغوي محلي"
+"에이전트-하네스":
+  "ko": "에이전트-하네스"
+  "en": "Agent Harness"
+  "ar": "إطار الوكيل"
+"컨텍스트-엔지니어링":
+  "ko": "컨텍스트-엔지니어링"
+  "en": "Context Engineering"
+  "ar": "هندسة السياق"
+"워크플로-오케스트레이션":
+  "ko": "워크플로-오케스트레이션"
+  "en": "Workflow Orchestration"
+  "ar": "تنسيق سير العمل"
+"비용-품질-트레이드오프":
+  "ko": "비용-품질-트레이드오프"
+  "en": "Cost-Quality Tradeoff"
+  "ar": "المفاضلة بين التكلفة والجودة"
+"온디바이스AI":
+  "ko": "온디바이스AI"
+  "en": "On-Device AI"
+  "ar": "الذكاء الاصطناعي على الجهاز"
+"GPU 활용률":
+  "ko": "GPU 활용률"
+  "en": "GPU Utilization"
+  "ar": "استخدام وحدة معالجة الرسوميات"
+"GPU 용량 산정":
+  "ko": "GPU 용량 산정"
+  "en": "GPU Capacity Planning"
+  "ar": "تخطيط سعة وحدة معالجة الرسوميات"
+"GUI 에이전트":
+  "ko": "GUI 에이전트"
+  "en": "GUI Agent"
+  "ar": "وكيل الواجهة الرسومية"
+"LLM-라우팅":
+  "ko": "LLM-라우팅"
+  "en": "LLM Routing"
+  "ar": "توجيه النماذج اللغوية"
+"공급망 보안":
+  "ko": "공급망 보안"
+  "en": "Supply Chain Security"
+  "ar": "أمن سلسلة التوريد"
+"데이터 주권":
+  "ko": "데이터 주권"
+  "en": "Data Sovereignty"
+  "ar": "سيادة البيانات"
+"로컬 렌더링":
+  "ko": "로컬 렌더링"
+  "en": "Local Rendering"
+  "ar": "العرض المحلي"
+"멀티 에이전트":
+  "ko": "멀티 에이전트"
+  "en": "Multi-Agent"
+  "ar": "متعدد الوكلاء"
+"모션 그래픽":
+  "ko": "모션 그래픽"
+  "en": "Motion Graphics"
+  "ar": "الرسوم المتحركة"
+"스킬 하네스":
+  "ko": "스킬 하네스"
+  "en": "Skill Harness"
+  "ar": "إطار المهارات"
+"에이전트 인프라":
+  "ko": "에이전트 인프라"
+  "en": "Agent Infrastructure"
+  "ar": "بنية الوكلاء التحتية"
+"에이전트-메모리":
+  "ko": "에이전트-메모리"
+  "en": "Agent Memory"
+  "ar": "ذاكرة الوكيل"
+"엣지추론":
+  "ko": "엣지추론"
+  "en": "Edge Inference"
+  "ar": "الاستدلال الطرفي"
+"점진적 공개":
+  "ko": "점진적 공개"
+  "en": "Progressive Disclosure"
+  "ar": "الكشف التدريجي"
+"추론 최적화":
+  "ko": "추론 최적화"
+  "en": "Inference Optimization"
+  "ar": "تحسين الاستدلال"
+"코딩 에이전트":
+  "ko": "코딩 에이전트"
+  "en": "Coding Agent"
+  "ar": "وكيل البرمجة"
+"토큰비용":
+  "ko": "토큰비용"
+  "en": "Token Cost"
+  "ar": "تكلفة الرموز"
+"LLM-운영":
+  "ko": "LLM-운영"
+  "en": "LLM Operations"
+  "ar": "تشغيل النماذج اللغوية"
+"LLM압축":
+  "ko": "LLM압축"
+  "en": "LLM Compression"
+  "ar": "ضغط النماذج اللغوية"
+"모델 라이선스":
+  "ko": "모델 라이선스"
+  "en": "Model Licensing"
+  "ar": "ترخيص النماذج"
+"실측연구":
+  "ko": "실측연구"
+  "en": "Empirical Study"
+  "ar": "دراسة تجريبية"
+"에이전틱 코딩":
+  "ko": "에이전틱 코딩"
+  "en": "Agentic Coding"
+  "ar": "البرمجة الوكيلية"
+"전문가 병렬":
+  "ko": "전문가 병렬"
+  "en": "Expert Parallelism"
+  "ar": "توازي الخبراء"
+"전문가프루닝":
+  "ko": "전문가프루닝"
+  "en": "Expert Pruning"
+  "ar": "تقليم الخبراء"
+"정보검색":
+  "ko": "정보검색"
+  "en": "Information Retrieval"
+  "ar": "استرجاع المعلومات"
+"커널 최적화":
+  "ko": "커널 최적화"
+  "en": "Kernel Optimization"
+  "ar": "تحسين النواة"
+"컴퓨터 유즈":
+  "ko": "컴퓨터 유즈"
+  "en": "Computer Use"
+  "ar": "استخدام الحاسوب"
+"포스트 트레이닝":
+  "ko": "포스트 트레이닝"
+  "en": "Post-Training"
+  "ar": "التدريب اللاحق"
+"파일시스템-메모리":
+  "ko": "파일시스템-메모리"
+  "en": "Filesystem Memory"
+  "ar": "ذاكرة نظام الملفات"
+"LLM-에이전트":
+  "ko": "LLM-에이전트"
+  "en": "LLM Agents"
+  "ar": "وكلاء النماذج اللغوية"
+"스킬-저장소":
+  "ko": "스킬-저장소"
+  "en": "Skill Repository"
+  "ar": "مستودع المهارات"
+"비용구조":
+  "ko": "비용구조"
+  "en": "Cost Structure"
+  "ar": "هيكل التكلفة"
+"하이브리드클라우드":
+  "ko": "하이브리드클라우드"
+  "en": "Hybrid Cloud"
+  "ar": "السحابة الهجينة"
+"클라우드비용":
+  "ko": "클라우드비용"
+  "en": "Cloud Cost"
+  "ar": "تكلفة السحابة"
+"규제대응":
+  "ko": "규제대응"
+  "en": "Regulatory Compliance"
+  "ar": "الامتثال التنظيمي"
+"개인정보":
+  "ko": "개인정보"
+  "en": "Personal Data"
+  "ar": "البيانات الشخصية"
+"감사로그":
+  "ko": "감사로그"
+  "en": "Audit Log"
+  "ar": "سجل التدقيق"
+"컴플라이언스":
+  "ko": "컴플라이언스"
+  "en": "Compliance"
+  "ar": "الامتثال"
+"AI 규제":
+  "ko": "AI 규제"
+  "en": "AI Regulation"
+  "ar": "تنظيم الذكاء الاصطناعي"
+"폐쇄형 모델":
+  "ko": "폐쇄형 모델"
+  "en": "Closed Models"
+  "ar": "النماذج المغلقة"
+"감사":
+  "ko": "감사"
+  "en": "Audit"
+  "ar": "التدقيق"
+"AI 조직개편":
+  "ko": "AI 조직개편"
+  "en": "AI Reorg"
+  "ar": "إعادة هيكلة الذكاء الاصطناعي"
+"지휘체계":
+  "ko": "지휘체계"
+  "en": "Chain of Command"
+  "ar": "التسلسل القيادي"
+"구글":
+  "ko": "구글"
+  "en": "Google"
+  "ar": "جوجل"
+"정부AI":
+  "ko": "정부AI"
+  "en": "Government AI"
+  "ar": "الذكاء الاصطناعي الحكومي"
+"공공클라우드":
+  "ko": "공공클라우드"
+  "en": "Public Sector Cloud"
+  "ar": "سحابة القطاع العام"
+"감사추적":
+  "ko": "감사추적"
+  "en": "Audit Trail"
+  "ar": "مسار التدقيق"

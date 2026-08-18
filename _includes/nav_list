@@ -1,3 +1,12 @@
+{% comment %}
+  ⛔ 이 include 는 모든 페이지에 렌더된다. 안에서 site.posts 전수를 스캔하므로
+  페이지당 비용 × 페이지 수 = O(n^2) 이고, 2026-08-13 기준 CI 빌드 1,352초의
+  대부분이 여기서 나왔다(전체 1,520초의 89%가 Jekyll 빌드).
+  sidebar.html 이 include_cached 로 부르므로 (lang, nav) 조합당 한 번만 렌더된다.
+  ⛔ 그래서 page.* 를 직접 읽으면 안 된다 — 캐시된 첫 페이지 값이 전 페이지에 박힌다.
+  언어는 반드시 include.lang 으로 받는다(아래 nl_lang). 새 조건을 추가할 때도 동일.
+{% endcomment %}
+{% assign nl_lang = include.lang | default: page.lang %}
 {% comment %} Original navigation assignment - now replaced with custom logic {% endcomment %}
 {% comment %} {% assign navigation = site.data.navigation[include.nav] %} {% endcomment %}
 
@@ -8,9 +17,9 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items" id="category_tag_menu">
       {% comment %} Filter posts by language for accurate counts {% endcomment %}
-      {% if page.lang %}
-        {% assign filtered_posts = site.posts | where: "lang", page.lang %}
-        {% assign lang_prefix = site.baseurl | append: '/' | append: page.lang %}
+      {% if nl_lang %}
+        {% assign filtered_posts = site.posts | where: "lang", nl_lang %}
+        {% assign lang_prefix = site.baseurl | append: '/' | append: nl_lang %}
       {% else %}
         {% comment %} For Korean main site, filter by path containing _posts/ko/ {% endcomment %}
         {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains '_posts/ko/'" %}
@@ -67,7 +76,7 @@
       {% endfor %}
 
       {% comment %} Comics category value differs by language: en/ar use 'comics', ko uses '만화'. {% endcomment %}
-      {% if page.lang == 'en' or page.lang == 'ar' %}{% assign comics_cat = 'comics' %}{% else %}{% assign comics_cat = '만화' %}{% endif %}
+      {% if nl_lang == 'en' or nl_lang == 'ar' %}{% assign comics_cat = 'comics' %}{% else %}{% assign comics_cat = '만화' %}{% endif %}
       <li>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/">📂 Total Posts: {{ filtered_posts.size }}</a></span>
       </li>

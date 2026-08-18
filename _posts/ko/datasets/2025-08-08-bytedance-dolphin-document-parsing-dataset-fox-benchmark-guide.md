@@ -30,7 +30,7 @@ categories:
 
 ⏱️ **예상 읽기 시간**: 18분
 
-![ByteDance Dolphin Analyze-then-Parse 파이프라인 개요]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.png' | relative_url }})
+![ByteDance Dolphin Analyze-then-Parse 파이프라인 개요]({{ '/assets/images/bytedance-dolphin-document-parsing-dataset-fox-benchmark-guide-hero.webp' | relative_url }})
 
 ## 서론
 

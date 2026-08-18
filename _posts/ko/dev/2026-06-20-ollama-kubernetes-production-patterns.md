@@ -11,16 +11,41 @@ toc: true
 toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
-canonical_url: "https://thakicloud.com/tech-blog/dev/ollama-kubernetes-production-patterns/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/ollama-kubernetes-production-patterns/"
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
 
-Ollama는 2026년 1분기 기준 월 5200만 다운로드를 기록했습니다. 실험 도구 수준을 넘어 팀 단위 인프라로 쓰이는 사례가 많아졌습니다. 로컬 Mac에서 `ollama run`으로 돌리는 것과 Kubernetes 클러스터에서 팀 전체가 쓰는 서빙 레이어로 운용하는 것은 설계가 완전히 다릅니다. 이 글은 후자를 다룹니다.
+Ollama는 실험 도구 수준을 넘어 팀 단위 인프라로 쓰이는 사례가 많아졌습니다. 로컬 Mac에서 `ollama run`으로 돌리는 것과 Kubernetes 클러스터에서 팀 전체가 쓰는 서빙 레이어로 운용하는 것은 설계가 완전히 다릅니다. 이 글은 후자를 다룹니다.
+
+전체 구조를 먼저 보면 뒤에 나오는 조각들이 어디에 붙는지 잡힙니다.
+
+```mermaid
+flowchart TB
+    CLIENT[내부 개발팀<br/>OpenAI 호환 API 호출]
+    CLIENT --> ING[Ingress 또는 LoadBalancer]
+    ING --> AUTH[인증 프록시<br/>OAuth2 Proxy 또는 Nginx API 키<br/>Ollama 자체 인증 없음]
+    AUTH --> SVC[Service ollama<br/>ClusterIP 11434]
+    SVC --> POD[Ollama Deployment<br/>OLLAMA_NUM_PARALLEL 4<br/>OLLAMA_MAX_LOADED_MODELS 2]
+    POD --> GPU[GPU 노드<br/>nvidia.com/gpu toleration<br/>limits 1 GPU]
+    POD --> PVC[(PVC ollama-models 500Gi<br/>재시작해도 재다운로드 없음)]
+
+    GPU -->|GPU 가동률| DCGM[DCGM Exporter]
+    POD -.응답 본문의 eval_count와 eval_duration.-> SIDE[사이드카 또는 프록시 익스포터<br/>Ollama에 네이티브 metrics 없음]
+    DCGM --> PROM[Prometheus]
+    SIDE --> PROM
+    PROM --> HPA[HPA v2 커스텀 메트릭<br/>min 1 max 4]
+    HPA -.스케일 아웃.-> POD
+    HPA -.노드가 부족하면 Pending.-> CA[Cluster Autoscaler 또는 Karpenter]
+```
+
+점선은 기본 제공되지 않아 직접 세워야 하는 경로입니다. 아래 모니터링 절에서 이 부분을 따로 다룹니다.
+
+![Ollama를 Kubernetes에서 프로덕션으로 운용하는 법 개념을 형상화한 이미지](/assets/images/ollama-kubernetes-production-patterns-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 왜 Ollama인가: vLLM과의 포지셔닝
 
@@ -202,38 +227,32 @@ JSON 구조 외에 다른 텍스트를 포함하지 않습니다.
 
 실무에서는 `format: "json"`을 켜도 모델이 스키마를 완전히 지키지 않는 경우가 있습니다. 응답을 파싱한 뒤 스키마를 검증하는 레이어가 필요합니다.
 
-## Prometheus 모니터링
+## 모니터링: Ollama에는 네이티브 `/metrics`가 없습니다
 
-Ollama는 `/metrics` 엔드포인트로 Prometheus 메트릭을 노출합니다.
+여기서 먼저 짚고 갈 것이 있습니다. **Ollama는 Prometheus `/metrics` 엔드포인트를 제공하지 않습니다.** 이를 추가해 달라는 이슈가 열려 있고 연결된 PR도 아직 머지되지 않았습니다. ServiceMonitor를 만들어 `path: /metrics`로 붙여 두면 스크레이프가 조용히 실패하고, 대시보드는 빈 채로 남습니다. 배포 직후가 아니라 트래픽이 몰린 날 알게 되는 종류의 문제입니다.
+
+실제로 쓸 수 있는 경로는 세 가지이고, 셋 다 직접 세워야 합니다.
+
+**첫째, 응답 본문의 타이밍 필드입니다.** `/api/generate`와 `/api/chat` 응답에는 `eval_count`, `eval_duration`, `prompt_eval_count` 같은 필드가 들어 있습니다. 토큰 처리량과 지연을 여기서 계산할 수 있습니다. 다만 이건 호출자가 받는 값이라, 메트릭으로 만들려면 클라이언트나 프록시가 집계해 내보내야 합니다.
+
+**둘째, 프록시 익스포터입니다.** 앞단에 이미 인증 프록시를 두고 있으므로 같은 자리에서 요청 수와 지연을 재는 것이 가장 저렴합니다. Ollama 앞에 서서 자체 포트로 메트릭을 노출하는 서드파티 익스포터도 있습니다. 어느 쪽이든 메트릭 이름은 그 익스포터가 정하는 것이지 Ollama가 정하는 것이 아니므로, 대시보드와 알림은 실제로 배포한 익스포터의 이름을 확인하고 작성해야 합니다.
+
+**셋째, GPU 레벨은 DCGM Exporter가 덮습니다.** 이쪽은 Ollama와 무관하게 잘 동작합니다. GPU 노드에 DaemonSet으로 올리면 가동률과 메모리를 Prometheus로 보냅니다. 모델 서빙에서 정작 스케일 판단에 필요한 신호 대부분이 GPU 쪽에 있으므로, 하나만 먼저 붙인다면 이것을 붙이는 편이 낫습니다.
 
 ```yaml
+# DCGM Exporter를 향한 ServiceMonitor. Ollama Pod가 아니라 GPU 익스포터를 스크레이프합니다.
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: ollama
+  name: dcgm-exporter
   namespace: ollama
 spec:
   selector:
     matchLabels:
-      app: ollama
+      app: dcgm-exporter
   endpoints:
-  - port: http
-    path: /metrics
+  - port: metrics
     interval: 30s
-```
-
-핵심 메트릭:
-
-```promql
-# 요청 처리 중 개수
-ollama_request_duration_seconds_count
-
-# 평균 처리 시간
-rate(ollama_request_duration_seconds_sum[5m])
-/ rate(ollama_request_duration_seconds_count[5m])
-
-# 로드된 모델 수
-ollama_loaded_model_count
 ```
 
 ## HPA 오토스케일링
@@ -262,6 +281,8 @@ spec:
         type: AverageValue
         averageValue: "10"
 ```
+
+`ollama_queue_depth`는 예시 이름입니다. 앞 절에서 본 대로 Ollama가 직접 내보내는 메트릭이 아니므로, 프록시 익스포터가 실제로 노출하는 이름으로 바꿔야 합니다. 존재하지 않는 메트릭을 가리키는 HPA는 스케일하지 않고 조용히 앉아 있습니다. Prometheus Adapter 같은 어댑터로 커스텀 메트릭 API에 등록되어 있는지도 함께 확인해야 합니다.
 
 GPU 노드가 부족하면 HPA가 스케일 아웃을 시도해도 Pod가 Pending 상태에 머뭅니다. Cluster Autoscaler나 Karpenter와 함께 써야 노드 레벨 스케일도 됩니다.
 
@@ -292,4 +313,15 @@ Keycloak 같은 IdP와 연동하면 팀별 접근 권한도 관리할 수 있습
 
 ## 정리
 
-Ollama를 Kubernetes에서 제대로 운용하려면 모델 PVC, GPU toleration, 인증 프록시, 모니터링 네 가지를 갖춰야 합니다. Modelfile로 팀 전용 모델을 구성하면 시스템 프롬프트와 파라미터를 버전 관리할 수 있습니다. 처리량보다 운용 단순함이 중요한 내부 도구 서빙에서 Ollama는 설정 비용 대비 좋은 선택입니다.
+Ollama를 Kubernetes에서 제대로 운용하려면 모델 PVC, GPU toleration, 인증 프록시, 모니터링 네 가지를 갖춰야 합니다. 앞의 셋은 매니페스트를 쓰면 끝나지만 마지막 하나는 사정이 다릅니다. Ollama가 메트릭을 주지 않으므로 관측은 DCGM과 프록시 익스포터로 직접 조립해야 하고, 이 사실을 모르고 ServiceMonitor만 걸어 두면 모니터링을 갖췄다고 착각한 채로 운영하게 됩니다. Modelfile로 팀 전용 모델을 구성하면 시스템 프롬프트와 파라미터를 버전 관리할 수 있습니다. 처리량보다 운용 단순함이 중요한 내부 도구 서빙에서 Ollama는 설정 비용 대비 좋은 선택입니다.
+
+## 참고 자료
+
+- Ollama, [FAQ](https://docs.ollama.com/faq): `OLLAMA_NUM_PARALLEL` 기본값 1, `OLLAMA_MAX_LOADED_MODELS`, `OLLAMA_MODELS`
+- Ollama, [Modelfile Reference](https://docs.ollama.com/modelfile): `FROM`, `SYSTEM`, `PARAMETER temperature`, `num_ctx`
+- Ollama, [Structured Outputs](https://docs.ollama.com/capabilities/structured-outputs): `format` 파라미터
+- Ollama, [Troubleshooting](https://docs.ollama.com/troubleshooting): `OLLAMA_DEBUG`
+- ollama/ollama, [add /metrics endpoint (issue #3144)](https://github.com/ollama/ollama/issues/3144): 네이티브 Prometheus 엔드포인트는 미구현 상태의 열린 요청입니다
+- Kubernetes, [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/) 및 [HPA v2 API Reference](https://kubernetes.io/docs/reference/kubernetes-api/autoscaling/horizontal-pod-autoscaler-v2/)
+- NVIDIA, [dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter): GPU 메트릭 DaemonSet
+- vLLM, [Documentation](https://docs.vllm.ai/en/latest/): PagedAttention과 continuous batching

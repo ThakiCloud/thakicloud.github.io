@@ -18,7 +18,14 @@ toc_label: "목차"
 toc_icon: "cog"
 categories:
   - tutorials
+audiobook: "https://drive.google.com/file/d/1lpa91c-1WczFCgmBUE5WmgbG17JbE_wz/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gemini-seedance-cinematic-web/"
 ---
+
+![한 사람이 시네마틱 웹사이트를 만드는 시대: Gemini 3.1 + Seedance 2.0 워크플로를 뜯어봤습니다 개념을 형상화한 이미지](/assets/images/gemini-seedance-cinematic-web-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -28,6 +35,10 @@ categories:
 
 {% include video id="xRTTnbfT3jM" provider="youtube" %}
 *빅터 오디의 16분 튜토리얼 영상입니다. Gemini 3.1로 구조를 짜고 Seedance 2.0으로 영상을 입히는 전체 과정을 보여줍니다.*
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 보여주는 튜토리얼인가
 
@@ -41,18 +52,21 @@ categories:
 
 Gemini 3.1은 건축가입니다. 레이아웃, 반응형 디자인, 인터랙션, 그리고 이 모든 것을 묶는 코드를 담당합니다. 사이트의 구조와 동작을 책임지는 부분입니다. Seedance 2.0은 촬영감독입니다. 동적인 비주얼, 즉 사이트를 시네마틱하게 만드는 영상 콘텐츠를 생성합니다. 작업 순서는 Gemini로 구조와 코드를 만든 뒤, Seedance로 생성한 영상 콘텐츠를 그 안에 흘려 넣는 방식입니다. 결과물은 물리 기반 모션과 동기화된 오디오를 갖춘, 곧바로 쓸 수 있는 마케팅 사이트입니다.
 
-```text
-[ 기획·프롬프트 ]
-        |
-        v
-[ Gemini 3.1 ] --- 레이아웃·반응형·인터랙션·코드 ---> 사이트 골격
-        |
-        v
-[ Seedance 2.0 ] --- 멀티카메라 영상 + 네이티브 오디오 ---> 시네마틱 비주얼
-        |
-        v
-[ 통합 ] --- 영상을 사이트에 배치 ---> 배포 가능한 마케팅 사이트
+```mermaid
+flowchart TB
+    A[기획·프롬프트] --> B[Gemini 3.1<br/>레이아웃·반응형<br/>인터랙션·코드]
+    A --> C[Seedance 2.0<br/>멀티카메라 영상<br/>네이티브 오디오]
+    B --> D[사이트 골격]
+    C --> E[시네마틱 비주얼]
+    D --> F[통합<br/>배포 가능한 마케팅 사이트]
+    E --> F
+    B -.추론 요청.-> G{이 워크로드는<br/>어디서 도는가}
+    C -.추론 요청.-> G
+    G -->|공개 API| H[폐쇄형 클라우드 추론<br/>미공개 소재가 외부로 나감]
+    G -->|데이터 경계 안| I[온프렘·전용 GPU 서빙<br/>K8s 위 Kueue 스케줄링]
 ```
+
+*위쪽 실선은 튜토리얼이 보여주는 제작 경로이고, 아래쪽 점선은 그 경로가 실제로 어디에 청구서를 남기는지를 나타냅니다. 두 갈래로 갈리는 지점이 이 글 후반부의 주제입니다.*
 
 이 구조에서 중요한 것은 역할 분리가 자유도를 줄여 결과 품질을 안정시킨다는 점입니다. 한 모델에게 "멋진 영상 사이트를 만들어줘"라고 통째로 맡기는 대신, 구조는 코드 모델이, 영상은 영상 모델이 책임지도록 나눴습니다. 검증된 골격에 각 도구의 강점을 채워 넣는 방식이며, ThakiCloud가 스킬과 파이프라인 설계에서 반복적으로 강조해 온 원칙과 같은 맥락입니다.
 
@@ -79,6 +93,23 @@ ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로�
 도구 의존성도 분명한 한계입니다. 이 워크플로는 Gemini 3.1과 Seedance 2.0이라는 특정 폐쇄형 서비스에 묶여 있습니다. 가격 정책 변경, 가용성, 콘텐츠 정책에 따라 워크플로 전체가 흔들릴 수 있습니다. 또한 영상 생성은 사용량에 따라 추론 비용이 빠르게 누적되므로, "한 사람이 싸게 만든다"는 인상과 달리 실제 운영 비용은 결코 작지 않을 수 있습니다.
 
 마지막으로 이 글의 모든 도구 사양은 공개 보도와 제작자 공지에서 인용한 것이며, 직접 동일 환경에서 재현한 결과가 아닙니다. 입력 유형 수나 기능 목록 같은 사양은 제공자의 발표 기준이므로, 실제 도입 전에는 자사 요구사항으로 재검증하는 절차가 필요합니다. 그럼에도 분명한 신호는 있습니다. 생성형 멀티모달이 개인의 워크플로로 내려오고 있고, 그 수요를 안정적으로, 그리고 데이터 주권을 지키며 떠받치는 일은 인프라 사업자의 몫이라는 점입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![gemini-seedance-cinematic-web 슬라이드 1](/assets/images/gemini-seedance-cinematic-web-slide-01.webp)
+
+![gemini-seedance-cinematic-web 슬라이드 2](/assets/images/gemini-seedance-cinematic-web-slide-02.webp)
+
+![gemini-seedance-cinematic-web 슬라이드 3](/assets/images/gemini-seedance-cinematic-web-slide-03.webp)
+
+![gemini-seedance-cinematic-web 슬라이드 4](/assets/images/gemini-seedance-cinematic-web-slide-04.webp)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

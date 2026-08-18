@@ -13,15 +13,16 @@ tags:
   - metis
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/the-ai-that-grills-you/strip.png
+image: /assets/images/posts/comics/the-ai-that-grills-you/strip.webp
 audiobook: /assets/audio/posts/the-ai-that-grills-you/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/the-ai-that-grills-you/"
+published: false
 ---
 
 This one is about '/grill-me'. It doesn't hand you the answer; it keeps asking 'why' until it can tell whether you actually understand what you said. Two or three follow-ups and most bluffs quietly collapse. Now people are pointing it at candidates in technical interviews, less to check the final answer than to watch how someone reasons under pressure. Naturally, Paxis and Metis grab the thing and end up aiming it at each other.
 
-![The Interview Where the AI Does the Grilling]({{ '/assets/images/posts/comics/the-ai-that-grills-you/strip.png' | relative_url }})
+![The Interview Where the AI Does the Grilling]({{ '/assets/images/posts/comics/the-ai-that-grills-you/strip.webp' | relative_url }})
 
 > Source: [RT @mattpocockuk: Someone DM'd me saying they're using /grill-me in technical interviews](https://x.com/hjguyhan/status/2077017688761938198) · twitter
 

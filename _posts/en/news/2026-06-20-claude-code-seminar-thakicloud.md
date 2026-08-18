@@ -23,7 +23,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/claude-code-seminar-tha
 reading_time: true
 categories:
   - news
-published: false
 ---
 
 ⏱️ **Estimated reading time**: 6 min

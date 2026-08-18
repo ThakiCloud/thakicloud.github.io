@@ -12,20 +12,21 @@ tags:
   - 엣지추론
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/phone-already-ran-the-model/strip.png
+image: /assets/images/posts/만화/phone-already-ran-the-model/strip.webp
 video: /assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4
+published: false
 ---
 
 손이나 얼굴을 인식하는 모델을 쓰려면 영상을 어딘가로 올려야 한다고 생각하기 쉽습니다. 구글이 오픈소스로 공개한 실시간 ML 툴킷은 그 전제를 뒤집었습니다. 얼굴과 손, 자세, 제스처, 사물 인식을 휴대폰과 브라우저, 임베디드 기기 안에서 바로 처리하죠.
 이런 방식을 온디바이스 추론이라고 부릅니다. 데이터를 모델이 있는 곳으로 보내는 대신, 모델을 데이터가 있는 자리로 내려보내 계산을 끝내는 겁니다. 업로드가 사라지니 응답이 빨라지고, 내 사진이 남의 서버를 거칠 일도 없습니다. 별 3만 6천 개가 괜히 붙은 게 아니에요.
 
-![폰이 다 하는데 왜 파리 밖으로](/assets/images/posts/만화/phone-already-ran-the-model/strip.png)
+![폰이 다 하는데 왜 파리 밖으로](/assets/images/posts/만화/phone-already-ran-the-model/strip.webp)
 
 > 원 뉴스: [RT @hank_aibtc: 还在为端侧AI推理又慢又耗电、隐私还担心云端上传而头疼吗？  ](https://x.com/hjguyhan/status/2081393928230838346) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/phone-already-ran-the-model/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/phone-already-ran-the-model/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/phone-already-ran-the-model/comic.ko.vtt" default>
 </video>

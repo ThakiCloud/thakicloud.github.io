@@ -130,7 +130,7 @@ At that point we opened the code. The batch option in our recognition wrapper wa
 
 **That is a 1.92x difference.** The time wasted on reloading was 5.46 seconds per utterance. The model, the audio, and the machine were unchanged. Only the call path moved.
 
-![Bar charts of measured per-stage latency in the local voice loop and the A/B comparison of two batch paths]({{ '/assets/images/local-voice-agent-stack-results.png' | relative_url }})
+![Bar charts of measured per-stage latency in the local voice loop and the A/B comparison of two batch paths]({{ '/assets/images/local-voice-agent-stack-results.webp' | relative_url }})
 
 *Left: per-utterance processing time for cold one-shot calls versus resident engine calls. Right: total time for the same four clips through the two batch paths.*
 

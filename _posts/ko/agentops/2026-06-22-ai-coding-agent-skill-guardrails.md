@@ -21,7 +21,6 @@ categories:
   - agentops
 audiobook: https://drive.google.com/file/d/1i55U5I6EIkowQyR97-i5MQL8Wj0Asisv/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ## 개요

@@ -24,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kimi-k3-guardrail-ref
 
 보안 담당자가 침투 테스트 스크립트를 검토받으려고 챗봇에 코드를 붙여 넣었더니 "이 요청은 도울 수 없습니다"라는 답만 돌아온 경험, 한 번쯤 있으실 겁니다. 취약점을 찾아 고치려는 정당한 방어 작업인데도 모델이 "사이버 보안" 키워드에 반응해 문을 닫아 버리는 일입니다. 2026년 7월, 오픈웨이트 진영의 새 모델 Kimi K3가 공개되면서 바로 이 지점이 다시 뜨거운 논쟁거리가 되었습니다. 한 투자자는 K3가 폐쇄형 코딩 도구들이 "사이버 가드레일" 때문에 거부한 보안 버그 여러 건을 대신 고쳐 주었다고 주장했습니다. 이 주장 자체는 검증되지 않았지만, 그 밑에 깔린 질문은 진짜입니다. **모델이 무엇을 거부할지, 그 권한을 누가 가져야 하는가.**
 
-![통제된 검문 지점을 통과하는 빛의 흐름과 막힌 장벽을 대비한 추상 이미지]({{ '/assets/images/kimi-k3-guardrail-refusal-tradeoff-hero.png' | relative_url }})
+![통제된 검문 지점을 통과하는 빛의 흐름과 막힌 장벽을 대비한 추상 이미지]({{ '/assets/images/kimi-k3-guardrail-refusal-tradeoff-hero.webp' | relative_url }})
 
 이 글은 Kimi K3라는 구체적 사례를 통해 그 질문을 풀어 갑니다. 먼저 과잉 거부(over-refusal)라는 현상을 짚고, K3가 어떤 설계로 이 논쟁의 한복판에 섰는지 확인된 사실로 정리한 다음, 오픈웨이트가 실제로 무엇을 운영자에게 넘겨주는지, 그리고 ThakiCloud처럼 여러 고객 환경에 모델을 서빙하는 회사가 그 부담을 어떻게 다뤄야 하는지로 이어집니다. 결론을 미리 말씀드리면, 가드레일이 없는 모델은 문제를 없애 주는 것이 아니라 문제를 **당신에게 넘깁니다.**
 
@@ -46,7 +46,7 @@ Kimi K3는 Moonshot AI가 2026년 7월 16일 공개한 대규모 Mixture-of-Expe
 
 능력 면에서 K3는 폐쇄형 최상위 모델에 근접했다고 평가받습니다. Moonshot이 발표한 코딩 에이전트 벤치마크는 아래와 같습니다. 이 수치는 모두 회사 자체 발표이며 제3자 재현 전 참고치입니다.
 
-![Moonshot이 발표한 Kimi K3 코딩 에이전트 벤치마크 점수]({{ '/assets/images/kimi-k3-guardrail-refusal-tradeoff-results.png' | relative_url }})
+![Moonshot이 발표한 Kimi K3 코딩 에이전트 벤치마크 점수]({{ '/assets/images/kimi-k3-guardrail-refusal-tradeoff-results.webp' | relative_url }})
 
 점수만 놓고 보면 K3는 폐쇄형 도구를 대체할 만한 능력을 갖췄습니다. 문제는 능력이 아니라, 그 능력에 얹혀 오는 책임입니다.
 

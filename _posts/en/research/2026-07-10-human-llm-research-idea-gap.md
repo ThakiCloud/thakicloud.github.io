@@ -17,14 +17,13 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/human-llm-research-idea-gap/"
-published: false
 ---
 
 Say "research agent" and most people picture the same loop: read papers, spot a gap, propose an idea, run experiments, write it up. Researchers at Yale and the University of Chicago pushed one level deeper. How different are the research ideas an LLM generates from the ideas human researchers actually turned into published papers, and how big is that difference?
 
 The paper, "Measuring the Gap Between Human and LLM Research Ideas" (arXiv 2607.01233), reaches a conclusion that cuts against intuition. The weakness in LLM ideas was not the thing people usually call "quality." The real gap was in range. LLMs thought inside a much narrower space than human researchers, and that narrowness was concentrated almost entirely in one pattern: the notion of "connecting existing research."
 
-![An abstract image contrasting a widely scattered constellation of ideas with one tightly clustered constellation]({{ '/assets/images/human-llm-research-idea-gap-hero.png' | relative_url }})
+![An abstract image contrasting a widely scattered constellation of ideas with one tightly clustered constellation]({{ '/assets/images/human-llm-research-idea-gap-hero.webp' | relative_url }})
 *A visual contrast between the wide spread of human ideas and the LLM's ideas clustered narrowly around a single pattern.*
 
 ## Overview

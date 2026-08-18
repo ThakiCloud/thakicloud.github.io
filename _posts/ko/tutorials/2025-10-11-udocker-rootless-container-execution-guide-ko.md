@@ -16,12 +16,18 @@ toc: true
 toc_label: "목차"
 lang: ko
 permalink: /ko/tutorials/udocker-rootless-container-execution-guide/
-canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/udocker-rootless-container-execution-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/udocker-rootless-container-execution-guide-ko/"
 categories:
   - tutorials
+audiobook: "https://drive.google.com/file/d/1uknRrpqVM3X6bi2VMBushHqNFYz4uegH/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **예상 읽기 시간**: 12분
+
+![udocker: 루트 권한 없이 Docker 컨테이너 실행하는 완벽 가이드 개념을 형상화한 이미지](/assets/images/udocker-rootless-container-execution-guide-ko-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 소개
 
@@ -45,6 +51,27 @@ udocker는 사용자가 다음과 같은 작업을 수행할 수 있게 해주�
 - **Docker 호환성**: 표준 Docker 이미지 및 레지스트리와 호환
 - **보안 중심**: 시스템 보안을 손상시키지 않으면서 격리 제공
 - **HPC 최적화**: 고성능 컴퓨팅 환경을 위해 설계
+
+### 동작 구조 한눈에 보기
+
+udocker에는 데몬이 없습니다. 레지스트리에서 받은 이미지 레이어를 사용자 홈 아래 rootfs로 풀어 두고, 실행 시점에 네 가지 엔진 중 하나를 골라 그 rootfs 안에서 프로세스를 띄웁니다. 아래 그림이 pull부터 run까지의 경로와 각 실행 모드의 분기를 보여줍니다.
+
+```mermaid
+flowchart TD
+    R["Docker Registry<br/>docker.io"] -->|"udocker pull"| L["Image layers<br/>~/.udocker/layers"]
+    L -->|"udocker create"| C["Container rootfs<br/>~/.udocker/containers"]
+    C -->|"udocker setup --execmode"| M{"Execution mode"}
+    M -->|"P1 fast / P2 compatible"| P["PRoot<br/>ptrace interception"]
+    M -->|"F1 to F4"| F["Fakechroot<br/>LD_PRELOAD"]
+    M -->|"R1 runC / R2 crun"| N["runC or crun<br/>rootless namespaces"]
+    M -->|"S1"| S["Singularity<br/>external install"]
+    P --> U["udocker run<br/>user process, no daemon, no root"]
+    F --> U
+    N --> U
+    S --> U
+```
+
+*이미지 획득과 실행이 분리되어 있고, 실행 엔진만 교체하면 같은 컨테이너를 다른 격리 방식으로 돌릴 수 있습니다.*
 
 ## 설치 가이드
 

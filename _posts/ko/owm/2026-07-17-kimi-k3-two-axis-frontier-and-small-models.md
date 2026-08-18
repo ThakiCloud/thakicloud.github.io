@@ -21,10 +21,12 @@ toc_label: "목차"
 toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/owm/kimi-k3-two-axis-frontier-and-small-models/"
-published: false
 audiobook: /assets/audio/posts/kimi-k3-two-axis-frontier-and-small-models/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
+
+![Kimi K3는 '격차 소멸'이 아니다: 오픈웨이트 프런티어 시대의 두 축 개념을 형상화한 이미지](/assets/images/kimi-k3-two-axis-frontier-and-small-models-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 이 글을 누가 읽어야 하나
 
@@ -67,6 +69,27 @@ Moonshot AI가 Kimi K3를 공개했습니다. 2.8조 파라미터 MoE로, 896개
 
 미국 모델이 무의미해졌다는 주장은 틀렸습니다. 진보는 오히려 두 축에서 동시에, 서로를 필요로 하며 일어납니다.
 
+```mermaid
+flowchart TB
+    K3[Kimi K3<br/>2.8조 파라미터 MoE<br/>896 전문가 중 16개 활성]
+    K3 --> NARROW[좁은 트랙<br/>프론트엔드 코드 아레나 1위 1,679 Elo<br/>SWE Marathon 1위 42.0]
+    K3 --> BROAD[넓은 트랙<br/>GDPval-AA v2 3위 1,687<br/>선두는 Fable 5 Max 1,815]
+    NARROW --> SPLIT{같은 모델이<br/>트랙 폭에 따라<br/>1위와 3위를 오감}
+    BROAD --> SPLIT
+    SPLIT --> THESIS[격차의 소멸이 아니라<br/>격차의 재배치]
+
+    subgraph AXES[두 축 가설]
+        A[축 A 천장<br/>프런티어 모델<br/>지속 학습·기억·장기 계획·환각 신뢰성]
+        B[축 B 바닥<br/>소형 증류 모델<br/>엣지와 온디바이스·비용 약 10분의 1]
+        A -->|증류| B
+    end
+
+    THESIS --> AXES
+    B -.프런티어가 멈추면 증류받을 원천이 마름.-> A
+```
+
+두 축은 경쟁이 아니라 파이프라인입니다. 아래 본문은 이 그림의 각 축을 차례로 풉니다.
+
 축 A는 천장입니다. 넓은 실무 과제, 장기 에이전트 워크플로, 과학적 난제처럼 아직 풀리지 않은 영역에서는 최상위 프런티어 모델이 계속 앞서 나가야 합니다. 2026년 현재 AI가 실제로 막혀 있는 곳은 벤치마크 점수가 아닙니다. 지속 학습이고, 기억 아키텍처이고, 월드 모델과 장기 계획이며, 무엇보다 환각의 신뢰성입니다. GDPval 같은 넓은 벤치마크에서 아직 폐쇄형이 앞서는 이유가 여기 있습니다. 코드 한 조각을 잘 짜는 일과 44개 직종의 실무를 신뢰성 있게 처리하는 일은 다릅니다. 천장을 올리는 작업은 끝나지 않았습니다.
 
 축 B는 바닥입니다. 동시에, 실제로 배포하고 실행할 수 있는 작은 모델이 절실합니다. 2026년의 분명한 흐름은 대형에서 소형·과제특화 모델로의 이동입니다. 증류를 거친 모델은 크기를 절반으로 줄여도 원본 성능의 90%를 유지하고, 한때 7B가 최소선으로 여겨지던 자리를 이제 10억 파라미터 미만 모델이 실무 과제에서 채웁니다. 비용은 약 10분의 1입니다. K3가 2.8조 파라미터로 서버룸을 요구하는 동안, 진짜 확산은 엣지와 온디바이스에서 일어납니다.
@@ -89,10 +112,11 @@ Kimi K3는 대단한 성취입니다. 동시에 격차가 사라졌다는 결론
 
 ## 참고 자료
 
-- VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever"
-- MarkTechPost, "Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model"
-- Fortune, "Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory"
-- officechai, "Kimi K3 Beats Fable 5, GPT 5.6 On Some Benchmarks"
-- Simon Willison, "Kimi K3, and what we can still learn from the pelican benchmark"
-- Dell, "The Power of Small: Edge AI Predictions for 2026"
-- NextBigFuture, "2026 is Breakthrough Year for Reliable AI World Models and Continual Learning"
+- Moonshot AI, [Kimi-K3 모델 카드](https://huggingface.co/moonshotai/Kimi-K3): 2.8조 파라미터, 896개 전문가 중 16개 활성, 100만 토큰 컨텍스트
+- MarkTechPost, [Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context](https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/)
+- Fortune, [Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory](https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/)
+- officechai, [Kimi K3 Beats Fable 5, GPT 5.6 On Some Benchmarks In Frontier-Level Performance](https://officechai.com/ai/kimi-k3-benchmarks/)
+- Simon Willison, [Kimi K3, and what we can still learn from the pelican benchmark](https://simonwillison.net/2026/Jul/16/kimi-k3/)
+- Dell, [The Power of Small: Edge AI Predictions for 2026](https://www.dell.com/en-us/blog/the-power-of-small-edge-ai-predictions-for-2026/)
+- NextBigFuture, [2026 is Breakthrough Year for Reliable AI World Models and Continual Learning Prototypes](https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html)
+- VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever" (링크 확인 불가)

@@ -17,12 +17,11 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/sovereign-ai-execution-layer/"
-published: false
 audiobook: /assets/audio/posts/sovereign-ai-execution-layer/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![핵심 개념 일러스트]({{ '/assets/images/sovereign-ai-execution-layer-hero.png' | relative_url }})
+![핵심 개념 일러스트]({{ '/assets/images/sovereign-ai-execution-layer-hero.webp' | relative_url }})
 
 한 인터뷰의 문장 하나가 오늘 아침 다이제스트 전체를 다시 읽게 만들었습니다. 고려대와 경기대에서 강의하는 최윤성 겸임교수는 앤트로픽의 차세대 모델 '미토스'를 예로 들며, AI가 전략 자산이 되는 순간 동맹국이라도 모델 접근권이 언제든 끊길 수 있다고 지적했습니다. 그리고 이렇게 정리했습니다. "통제 가능한 것은 남의 모델이 아니라, 어떤 모델을 쓰든 공급망을 검증하고 차단할 수 있는 인프라다."
 

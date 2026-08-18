@@ -23,7 +23,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ornith-1-self-scaffol
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 ![스스로 발판을 쌓아 올리는 자가-스캐폴딩 구조를 형상화한 추상 이미지]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp' | relative_url }})

@@ -21,7 +21,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/everything-claude-code-agent-harness/"
 ---
 
-![얇은 하네스 코어에 연결된 여러 스킬 모듈]({{ '/assets/images/everything-claude-code-agent-harness-hero.png' | relative_url }})
+![얇은 하네스 코어에 연결된 여러 스킬 모듈]({{ '/assets/images/everything-claude-code-agent-harness-hero.webp' | relative_url }})
 
 ## 개요
 

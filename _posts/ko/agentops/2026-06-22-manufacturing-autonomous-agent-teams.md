@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/manufacturing-auton
 reading_time: true
 categories:
   - agentops
-published: false
 audiobook: /assets/audio/posts/manufacturing-autonomous-agent-teams/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -467,11 +466,11 @@ HanTek 사례에서 얻을 수 있는 실제 적용 시사점은 다음과 같�
 
 본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![manufacturing-autonomous-agent-teams 슬라이드 1]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-01.png' | relative_url }})
+![manufacturing-autonomous-agent-teams 슬라이드 1]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-01.webp' | relative_url }})
 
-![manufacturing-autonomous-agent-teams 슬라이드 2]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-02.png' | relative_url }})
+![manufacturing-autonomous-agent-teams 슬라이드 2]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-02.webp' | relative_url }})
 
-![manufacturing-autonomous-agent-teams 슬라이드 3]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-03.png' | relative_url }})
+![manufacturing-autonomous-agent-teams 슬라이드 3]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-03.webp' | relative_url }})
 
-![manufacturing-autonomous-agent-teams 슬라이드 4]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-04.png' | relative_url }})
+![manufacturing-autonomous-agent-teams 슬라이드 4]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-04.webp' | relative_url }})
 

@@ -26,7 +26,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/reasoning-effort-to
 
 추론 모델을 서빙하면서 응답당 토큰, 즉 비용과 지연을 조절하고 싶은 엔지니어라면 "추론 강도(reasoning effort)" 라벨 하나로 연산량을 가를 수 있는지가 실질적인 관심사입니다. Qwen3-8B로 직접 붙여 보니, 길이 보상을 부드럽게 주는 흔한 방식으로는 라벨이 연산량을 거의 못 가릅니다. 대신 예상하지 못한 소득이 하나 나왔고, 왜 안 되는지도 분명해졌습니다.
 
-![추론 강도 라벨은 정말 연산량을 줄여줄까: Qwen3-8B로 확인한 것 개념을 형상화한 이미지](/assets/images/reasoning-effort-token-control-hero.png)
+![추론 강도 라벨은 정말 연산량을 줄여줄까: Qwen3-8B로 확인한 것 개념을 형상화한 이미지](/assets/images/reasoning-effort-token-control-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇을 했나
@@ -36,7 +36,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/reasoning-effort-to
 "제어가 된다"의 기준은 low 대비 high가 토큰을 1.8배 이상 더 쓰는 것으로 잡았습니다. o1, o3 계열이 보여 준 effort 다이얼 정도의 분리를 목표로 삼은 셈입니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/reasoning-effort-token-control/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/reasoning-effort-token-control/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 결과 하나: 라벨은 연산량을 못 가른다
@@ -90,7 +90,7 @@ flowchart TB
 이 수치는 시뮬레이션이 아니라 Qwen3-8B를 실제 H200에서 학습해 MATH-500과 GSM8K로 측정한 값입니다(seed 1234).
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/reasoning-effort-token-control/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/reasoning-effort-token-control/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처

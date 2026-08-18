@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 오늘 아침 뉴스를 훑다가 한 가지가 눈에 걸렸습니다. 같은 날짜에 정반대 방향으로 움직이는 두 개의 가격표가 나란히 놓여 있었기 때문입니다. 한쪽에서는 AI를 돌릴 장비를 사들이는 값이 사상 최고로 치솟고 있었고, 다른 한쪽에서는 AI를 한 번 굴리는 값이 사상 최저로 무너지고 있었습니다. 보통 원가가 오르면 판매가도 오릅니다. 그런데 지금은 밑재료 값과 완성품 값이 서로 등을 돌린 채 벌어지는 중입니다. 이 벌어짐이 오늘 이야기의 전부입니다.
 
-![같은 날 아침, 두 개의 가격표가 반대로 움직였다 개념을 형상화한 이미지](/assets/images/two-price-tags-moving-opposite-utilization-war-hero.png)
+![같은 날 아침, 두 개의 가격표가 반대로 움직였다 개념을 형상화한 이미지](/assets/images/two-price-tags-moving-opposite-utilization-war-hero.webp)
 *이번 주 뉴스의 핵심 흐름을 형상화했습니다.*
 
 ## 소유의 값은 사상 최고로 오른다
@@ -36,7 +36,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 장비값만 오르는 게 아닙니다. 판을 대는 큰손들의 지갑도 닫히고 있습니다. UBS는 마이크로소프트와 아마존을 포함한 4대 하이퍼스케일러의 자본지출 증가율이 2026년 76%에서 2027년 25%, 2028년 6%로 급격히 꺾일 것으로 봤습니다. 뱅크오브아메리카의 7월 펀드매니저 설문에서는 응답자의 82%가 반도체를 지금 시장에서 가장 붐비는 트레이드로 꼽았는데, 이는 조사 사상 최고치입니다. 뉴욕주가 신규 데이터센터 건설에 1년 유예를 걸 만큼 전력난과 규제 리스크도 현실이 됐습니다. 무차별 증설의 시대가 끝나고, '지을 것인가'에서 '얼마를 벌 것인가'로 질문이 바뀌는 국면입니다. 인프라를 소유한다는 결정이 이렇게까지 비싸고 무거워진 적은 없었습니다.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/two-price-tags-moving-opposite-utilization-war/nlm-infographic-1.png)
+![이번 주 뉴스 요약 인포그래픽 1](/assets/images/posts/news/two-price-tags-moving-opposite-utilization-war/nlm-infographic-1.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 쓰는 값은 사상 최저로 무너진다
@@ -394,7 +394,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 정리하면 이렇습니다. 소유는 비싸지고 모델은 흔해집니다. 그 사이에서 값을 만들어내는 건 좋은 모델을 손에 넣는 일이 아니라, 흔해진 모델을 싸게 라우팅하고 빈틈없이 스케줄링하며 감사 가능하게 통제하는 운영의 밀도입니다. 오늘 아침 반대로 움직이던 두 가격표는, 결국 같은 질문을 던지고 있었습니다. 당신은 가진 것을 얼마나 잘 굴리고 있습니까.
 
 <!-- nlm-visual -->
-![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/two-price-tags-moving-opposite-utilization-war/nlm-infographic-2.png)
+![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/two-price-tags-moving-opposite-utilization-war/nlm-infographic-2.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

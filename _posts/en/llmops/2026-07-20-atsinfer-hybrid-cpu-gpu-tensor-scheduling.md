@@ -14,7 +14,6 @@ tags:
 author_profile: true
 toc: true
 toc_label: Anatomy of Tensor-Level Scheduling
-published: true
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
@@ -370,7 +369,7 @@ Again: the numbers below are **values reported by the paper**, not something we 
 
 The paper's headline: versus existing hybrid systems (including llama.cpp's layer-level offloading), prefill (throughput to first token) improves by up to 1.94x, and decode (tokens generated per second) by up to 3.29x.
 
-![Max speedup ATSInfer reports in the paper]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.png' | relative_url }})
+![Max speedup ATSInfer reports in the paper]({{ '/assets/images/atsinfer-hybrid-cpu-gpu-tensor-scheduling-results.webp' | relative_url }})
 
 The setup is an RTX 4090 (24GB) and RTX 3060 system with 64GB RAM, and the validated models are:
 

@@ -417,11 +417,11 @@ description: >-
 
 핵심 규율은 하나입니다. **능력은 하네스가 아니라 스킬에 쌓습니다.** CLAUDE.md와 rules는 얇게 유지하고, 도메인 지식·판단·템플릿·실패 사례는 스킬에 두텁게 넣습니다. 같은 스킬이 Claude Code든 다른 하네스든 가로질러 동작하도록 만드는 것이 목표입니다.
 
-![CLAUDE.md는 얇게, 능력은 스킬에 쌓는 원칙을 저울로 표현한 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-05.png' | relative_url }})
+![CLAUDE.md는 얇게, 능력은 스킬에 쌓는 원칙을 저울로 표현한 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-05.webp' | relative_url }})
 
 ## 실제 측정: 프로덕션 Claude Code 프로젝트의 해부
 
-![1,671개의 스킬이 증명하는 설계 원칙, 프로덕션 환경의 데이터 해부 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-06.png' | relative_url }})
+![1,671개의 스킬이 증명하는 설계 원칙, 프로덕션 환경의 데이터 해부 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-06.webp' | relative_url }})
 
 이 글을 쓰는 리포지토리 자체가 무겁게 구성된 Claude Code 프로젝트입니다. 각 레이어가 현실에서 어떤 규모로 쓰이는지, 직접 파일을 세어 측정했습니다. 아래 수치는 모두 실제 측정값입니다.
 
@@ -446,7 +446,7 @@ description: >-
 
 Paxis는 ThakiCloud의 AI 인프라(ai-platform) 위에서 도는 에이전트 제어 평면으로, Skills·Tools·Policies·Audit Logs를 일급 리소스로 다룹니다. `.claude/` 폴더 해부와 직접 맞닿는 부분은 **Skill Harness**입니다. 위에서 본 것처럼 스킬을 아무리 많이 만들어도, 매 턴 전부 로드하면 컨텍스트가 폭발합니다. Paxis는 요청이 들어오면 방대한 스킬 풀에서 BM25 검색으로 관련 스킬만 선택해 로드하고, 그 스킬을 격리된 샌드박스에서 실행합니다. 이 글의 실측처럼 스킬 수가 1,000개를 훌쩍 넘어도 라우팅이 성립하는 이유입니다.
 
-![1,671개 스킬을 BM25로 검색해 관련 스킬만 격리 샌드박스에서 실행하는 Paxis 라우팅 엔진 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-11.png' | relative_url }})
+![1,671개 스킬을 BM25로 검색해 관련 스킬만 격리 샌드박스에서 실행하는 Paxis 라우팅 엔진 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-11.webp' | relative_url }})
 
 여기에 hooks가 하는 일(결정론적 게이트)을 정책 게이트와 감사 로그로 승격합니다. `.claude/settings.json`의 PreToolUse 훅이 위험한 명령을 막듯, Paxis는 모든 에이전트 행동을 정책 게이트와 감사 로그로 통과시켜 "누가 언제 무엇을 실행했는가"를 남깁니다. 개인 프로젝트의 훅을 멀티테넌트 환경에서도 신뢰할 수 있게 만든 형태입니다.
 
@@ -454,7 +454,7 @@ agents/ 레이어는 Paxis의 DAG 멀티에이전트 오케스트레이션으로
 
 인프라 관점(ai-platform 렌즈)에서도 의미가 있습니다. 이 모든 스킬·에이전트 실행은 결국 GPU와 추론 비용을 소모합니다. ThakiCloud의 ai-platform은 K8s·Kueue 기반 GPU 스케줄링과 vLLM 서빙으로 이 실행을 낮은 비용에 받쳐 주며, 온프렘·소버린 요구가 있는 고객 환경에서도 같은 하네스를 self-hosting으로 돌릴 수 있게 합니다. 저비용 서빙이 에이전트 경제성을 만들고, 그 위에서 Paxis의 스킬 하네스가 돌아가는 구조입니다.
 
-![K8s·Kueue GPU 스케줄링과 vLLM 서빙으로 에이전트 실행을 낮은 비용에 받치는 ai-platform 인프라 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-13.png' | relative_url }})
+![K8s·Kueue GPU 스케줄링과 vLLM 서빙으로 에이전트 실행을 낮은 비용에 받치는 ai-platform 인프라 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-13.webp' | relative_url }})
 
 ## 한계 및 반론
 

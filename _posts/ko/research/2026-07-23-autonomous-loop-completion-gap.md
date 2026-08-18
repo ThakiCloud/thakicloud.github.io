@@ -31,7 +31,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/autonomous-loop-com
 
 여덟 개 조합 전체를 놓고 보면, 세 메커니즘을 모두 끈 기준선의 실제 성공률은 26.22퍼센트에 그칩니다. 세 메커니즘을 모두 켰을 때는 97.59퍼센트까지 올라가 완료율 격차 71.37퍼센트포인트가 닫힙니다.
 
-![True-Success Rate by Mechanism Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig1_true_success_by_config.png)
+![True-Success Rate by Mechanism Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig1_true_success_by_config.webp)
 *여덟 개 메커니즘 조합별 실제 성공률입니다. 세 메커니즘을 모두 켰을 때만 90퍼센트대에 도달하고, 검증 게이트가 꺼진 조합은 롤백과 에스컬레이션을 더해도 30퍼센트대를 넘지 못합니다. ThakiCloud AI Platform Demo 클러스터의 CPU 전용 잡으로 30개 시드, 시드당 300개 작업을 CRN 시뮬레이션으로 측정한 결과입니다.*
 
 두 지점 근사 섀플리 값으로 각 메커니즘의 기여를 나눠보면 검증 게이트가 55.3퍼센트포인트, 체크포인트 롤백이 15.2퍼센트포인트, 정체 에스컬레이션이 0.64퍼센트포인트를 차지합니다. 검증 게이트는 켜져 있는 모든 조합에서 거짓 성공률을 정확히 0으로 만드는 유일한 메커니즘이기도 합니다. 성급한 완료 주장을 구조적으로 거부하기 때문에 환각된 "완료" 상태가 아예 발생하지 않는 것입니다.
@@ -42,10 +42,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/autonomous-loop-com
 
 체크포인트 롤백을 단독으로 켰을 때의 효과는 10.1퍼센트포인트에 그치지만, 전체 구성에서 롤백만 빼봤을 때 떨어지는 폭은 20.3퍼센트포인트로 거의 두 배입니다. 두 메커니즘이 서로 독립적이지 않고 강하게 맞물려 있다는 뜻입니다. 이 시너지는 반복 한도 소진율에서 가장 선명하게 드러납니다. 검증 게이트가 거짓 완료라는 탈출구를 막아버리면 작업들이 반복 한도 앞에 쌓이는데(게이트만 켰을 때 24.1퍼센트 소진), 체크포인트 롤백이 바로 그 쌓인 작업들을 되찾아옵니다. 검증과 롤백을 함께 켜면 소진율이 3.0퍼센트로 떨어집니다. 롤백은 게이트가 혼자 만들어낸 반복 소진 비용을 완료된 작업으로 되돌리는 셈이고, 그 대가는 작업당 약 3.4회의 되돌려진 반복뿐입니다.
 
-![Shapley-Style Marginal Contribution per Mechanism](/assets/images/posts/research/autonomous-loop-completion-gap/fig2_marginal_contribution.png)
+![Shapley-Style Marginal Contribution per Mechanism](/assets/images/posts/research/autonomous-loop-completion-gap/fig2_marginal_contribution.webp)
 *세 메커니즘이 닫은 71.4퍼센트포인트의 격차 중 검증 게이트가 55.3, 체크포인트 롤백이 15.2, 정체 에스컬레이션이 0.6퍼센트포인트를 차지합니다. 롤백의 단독 효과(10.1)보다 다른 메커니즘이 있을 때 빠지면 생기는 손실(20.3)이 두 배 큰 것이 초가산적 시너지를 보여줍니다. 실측이 아니라 두 지점 섀플리 근사에 기반한 해석적 모형입니다.*
 
-![Mean Wasted Iterations per Task by Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig3_wasted_iterations.png)
+![Mean Wasted Iterations per Task by Configuration](/assets/images/posts/research/autonomous-loop-completion-gap/fig3_wasted_iterations.webp)
 *검증 게이트가 없을 때 롤백은 작업당 약 1.9회의 반복을 되돌리지만, 게이트가 있을 때는 약 3.3에서 3.4회를 되돌립니다. 게이트가 만들어낸 반복 소진 비용을 롤백이 그만큼 더 많이 회수하고 있다는 뜻입니다. 게이트가 켜진 구성은 실측값이고, 롤백이 꺼진 구성 일부는 해석적 모형값입니다.*
 
 반면 정체 에스컬레이션의 기여는 0.64퍼센트포인트에 그쳤습니다. 이는 이 논문에서 기존 통념과 가장 상반되는 결과입니다. 정체와 무한루프 감지는 루프 엔지니어링 커뮤니티가 오랫동안 무겁게 다뤄온 주제인데, 이번 실험에서 만든 결함 조합에서는 지배적인 실패 원인이 환각된 완료와 조용한 퇴행이었지 문자 그대로의 무한 정체가 아니었기 때문에 에스컬레이션이 거의 효과를 내지 못했습니다. 이것을 정체 감지가 쓸모없다는 보편적 주장으로 읽으면 곤란합니다. 만성적인 정체 비율이 훨씬 높은 다른 결함 분포에서는 에스컬레이션이 훨씬 중요해질 수 있고, 이 실험 방법론이 바로 그런 질문에 답하도록 설계되어 있습니다. 즉 이번 결과는 이 특정 결함 조합에서의 범위 한정적 결론입니다.
@@ -70,10 +70,10 @@ ThakiCloud 입장에서 이 결과는 자사의 쿠버네티스·에이전트 �
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![autonomous-loop-completion-gap 슬라이드 1](/assets/images/autonomous-loop-completion-gap-slide-01.png)
+![autonomous-loop-completion-gap 슬라이드 1](/assets/images/autonomous-loop-completion-gap-slide-01.webp)
 
-![autonomous-loop-completion-gap 슬라이드 2](/assets/images/autonomous-loop-completion-gap-slide-02.png)
+![autonomous-loop-completion-gap 슬라이드 2](/assets/images/autonomous-loop-completion-gap-slide-02.webp)
 
-![autonomous-loop-completion-gap 슬라이드 3](/assets/images/autonomous-loop-completion-gap-slide-03.png)
+![autonomous-loop-completion-gap 슬라이드 3](/assets/images/autonomous-loop-completion-gap-slide-03.webp)
 
-![autonomous-loop-completion-gap 슬라이드 4](/assets/images/autonomous-loop-completion-gap-slide-04.png)
+![autonomous-loop-completion-gap 슬라이드 4](/assets/images/autonomous-loop-completion-gap-slide-04.webp)

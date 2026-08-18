@@ -24,7 +24,6 @@ toc_sticky: true
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 ![Abstract image depicting a self-scaffolding structure building its own foundation layer by layer]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-hero.webp' | relative_url }})

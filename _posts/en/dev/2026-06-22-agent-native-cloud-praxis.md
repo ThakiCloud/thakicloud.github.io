@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/agent-native-cloud-praxi
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 ![Agent-Native Cloud Paxis Overview]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})

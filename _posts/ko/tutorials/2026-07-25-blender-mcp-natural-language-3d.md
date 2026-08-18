@@ -413,13 +413,13 @@ Blender가 프롬프트 상자가 되었다는 말의 진짜 뜻은, MCP가 실�
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![blender-mcp-natural-language-3d 슬라이드 1](/assets/images/blender-mcp-natural-language-3d-slide-01.png)
+![blender-mcp-natural-language-3d 슬라이드 1](/assets/images/blender-mcp-natural-language-3d-slide-01.webp)
 
-![blender-mcp-natural-language-3d 슬라이드 2](/assets/images/blender-mcp-natural-language-3d-slide-02.png)
+![blender-mcp-natural-language-3d 슬라이드 2](/assets/images/blender-mcp-natural-language-3d-slide-02.webp)
 
-![blender-mcp-natural-language-3d 슬라이드 3](/assets/images/blender-mcp-natural-language-3d-slide-03.png)
+![blender-mcp-natural-language-3d 슬라이드 3](/assets/images/blender-mcp-natural-language-3d-slide-03.webp)
 
-![blender-mcp-natural-language-3d 슬라이드 4](/assets/images/blender-mcp-natural-language-3d-slide-04.png)
+![blender-mcp-natural-language-3d 슬라이드 4](/assets/images/blender-mcp-natural-language-3d-slide-04.webp)
 
 ## 출처
 

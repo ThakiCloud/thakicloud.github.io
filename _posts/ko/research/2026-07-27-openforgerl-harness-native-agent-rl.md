@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/openforgerl-harness
 
 에이전트를 파인튜닝해 보신 분이라면 한 번쯤 겪으셨을 겁니다. 학습은 단순한 ReACT 루프로 시켜 놓고, 실제 배포는 Claude Code나 Codex 같은 복잡한 하네스 위에서 돌리는 상황 말입니다. OpenForgeRL(arXiv 2607.21557)의 결론부터 말씀드리면, 이 불일치는 RL 스택을 통째로 갈아엎지 않고도 프록시 하나와 쿠버네티스 오케스트레이터 하나로 해소할 수 있습니다. 그리고 그렇게 학습한 8B 모델이 태스크 2,500개만으로 훨씬 큰 모델들과 겨룹니다.
 
-![OpenForgeRL 소개 표지 슬라이드](/assets/images/openforgerl-harness-native-agent-rl-slide-01.png)
+![OpenForgeRL 소개 표지 슬라이드](/assets/images/openforgerl-harness-native-agent-rl-slide-01.webp)
 
 ## 왜 읽어야 하나
 
@@ -47,7 +47,7 @@ OpenForgeRL은 세 번째 길을 냅니다. 하네스를 건드리지 않고, RL
 
 둘째는 쿠버네티스 오케스트레이터입니다. 롤아웃 하나마다 독립된 원격 컨테이너를 띄웁니다. 컴퓨터 유즈 학습의 경우 태스크별 Dockerfile로 이미지를 만들고 대상 하네스를 미리 설치해 두며, 각 파드는 CPU 4개와 메모리 4GB로 상한이 걸립니다. GUI 환경은 Xvfb로 가상 디스플레이를 렌더해서 모델이 마우스 클릭과 키보드 입력으로 화면을 조작하게 합니다. 브라우저 환경에서는 스텔스 브라우저 서비스를 붙였는데, 이것만으로 IP 차단과 캡차 차단 비율이 40퍼센트에서 거의 0으로 떨어졌다고 보고합니다. 실험을 해 보신 분이라면 이 한 줄이 얼마나 큰 실무적 차이인지 아실 겁니다.
 
-![롤아웃 하나당 컨테이너 하나, CPU 4개와 메모리 4GB 상한, Xvfb 가상 디스플레이와 스텔스 브라우저 구성](/assets/images/openforgerl-harness-native-agent-rl-slide-04.png)
+![롤아웃 하나당 컨테이너 하나, CPU 4개와 메모리 4GB 상한, Xvfb 가상 디스플레이와 스텔스 브라우저 구성](/assets/images/openforgerl-harness-native-agent-rl-slide-04.webp)
 
 롤아웃 격리 구성과 스텔스 브라우저 도입 효과입니다.
 
@@ -79,7 +79,7 @@ OpenForge-Claw는 Qwen3-30B-A3B-Thinking을 백본으로 삼은 30B 규모 MoE �
 
 OpenForge-GUI는 Qwen3-VL-8B-Thinking을 백본으로 한 8B 모델이며, 수정한 Kimi-Agent와 Molmo-Web 하네스에서 학습했습니다. OSWorld-Verified 37.7, Online-Mind2Web 63.0, WebVoyager 72.3을 기록했습니다. 논문은 이 결과가 비슷한 규모의 오픈 베이스라인을 거의 모든 벤치마크에서 앞서고, GUI 설정에서는 몇 배 큰 모델과 대등하거나 이를 넘어선다고 보고합니다.
 
-![OpenForgeRL이 보고한 벤치마크 점수와 학습 태스크 규모 비교 그래프](/assets/images/openforgerl-harness-native-agent-rl-results.png)
+![OpenForgeRL이 보고한 벤치마크 점수와 학습 태스크 규모 비교 그래프](/assets/images/openforgerl-harness-native-agent-rl-results.webp)
 
 논문이 보고한 점수와 GUI 학습에 쓰인 태스크 규모입니다. 파란색은 툴 사용 계열, 초록색은 GUI 계열 모델입니다.
 
@@ -95,7 +95,7 @@ OpenForge-GUI는 Qwen3-VL-8B-Thinking을 백본으로 한 8B 모델이며, 수�
 
 이 논문은 저희 두 제품 모두와 맞닿아 있습니다.
 
-![OpenForgeRL의 프록시 기록과 SKILL.md 도구 노출이 Paxis 스킬 하네스, 정책, 감사 로그와 맞물리는 구조](/assets/images/openforgerl-harness-native-agent-rl-slide-08.png)
+![OpenForgeRL의 프록시 기록과 SKILL.md 도구 노출이 Paxis 스킬 하네스, 정책, 감사 로그와 맞물리는 구조](/assets/images/openforgerl-harness-native-agent-rl-slide-08.webp)
 
 논문 구조와 Paxis 제어 평면이 겹치는 지점입니다.
 
@@ -107,7 +107,7 @@ ai-platform 관점에서는 인프라 궁합이 좋습니다. 롤아웃마다 �
 
 ## 한계 및 반론
 
-![프로덕션 적용을 위한 세 가지 과제: 인프라 스케줄링 비용, 하네스 종속성 관리, 오류 복구의 한계](/assets/images/openforgerl-harness-native-agent-rl-slide-10.png)
+![프로덕션 적용을 위한 세 가지 과제: 인프라 스케줄링 비용, 하네스 종속성 관리, 오류 복구의 한계](/assets/images/openforgerl-harness-native-agent-rl-slide-10.webp)
 
 프로덕션에 옮기기 전에 계산해야 할 세 가지입니다.
 

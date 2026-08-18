@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/loop-engineering-de
 slug: loop-engineering-design-before-run
 categories:
   - agentops
-published: false
 ---
 
 ## Overview

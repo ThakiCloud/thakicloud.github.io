@@ -22,14 +22,13 @@ categories:
   - agentops
 audiobook: https://drive.google.com/file/d/1RiPCBx18whGJJWlhZ6cVaKUr2m9C4iBk/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ## 개요
 
 Claude Fable 5를 다시 열기 전에 봐야 할 문서가 하나 생겼습니다. Anthropic이 Claude Fable 5와 Claude Mythos 5를 위한 공식 프롬프팅 가이드를 프롬프트 엔지니어링 문서 안에 조용히 올렸습니다. 요란한 발표 대신 문서 페이지 하나로 나왔기 때문에 놓친 분이 많지만, 내용을 읽어보면 지난 세대 모델을 다루던 습관을 상당 부분 뒤집으라는 이야기라 가볍게 넘길 문서가 아닙니다.
 
-가장 반직관적인 지점부터 짚겠습니다. 이 가이드의 관통하는 메시지는 "더 잘 쓰라"가 아니라 "덜 쓰라"에 가깝습니다. 이전 모델에서 좋은 결과를 뽑기 위해 쌓아 올린 상세한 지시가 Fable 5에서는 오히려 품질을 떨어뜨릴 수 있다는 것입니다. Fable 5는 사람이 몇 시간, 며칠, 길게는 몇 주에 걸쳐 처리할 만큼 복잡하고 길고 모호한 작업을 위임하는 모델로 설계됐고, 그런 모델에는 과도한 손잡이가 방해가 됩니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 인프라와 그 위에서 도는 에이전트 플랫폼을 운영하며 이런 장기 자율 에이전트를 매일 다루기 때문에, 이 가이드의 권고 하나하나가 우리에게는 곧 운용 규칙의 문제입니다. 이 글은 가이드가 제시한 네 가지 전환을 문서 근거와 함께 정리하고, 그것이 우리 제품에 어떻게 내려앉는지를 짚습니다.
+가장 반직관적인 지점부터 짚겠습니다. 이 가이드의 관통하는 메시지는 "더 잘 쓰라"가 아니라 "덜 쓰라"에 가깝습니다. 이전 모델에서 좋은 결과를 뽑기 위해 쌓아 올린 상세한 지시가 Fable 5에서는 오히려 품질을 떨어뜨릴 수 있다는 것입니다. Fable 5는 사람이 몇 시간, 며칠, 길게는 몇 주에 걸쳐 처리할 만큼 복잡하고 길고 모호한 작업을 위임하는 모델로 설계됐고, 그런 모델에는 과도한 손잡이가 방해가 됩니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 인프라와 그 위에서 도는 에이전트 플랫폼을 운영하며 이런 장기 자율 에이전트를 매일 다루기 때문에, 이 가이드의 권고 하나하나가 우리에게는 곧 운용 규칙의 문제입니다. 장기 실행 에이전트를 운영하는 팀이라면, 프롬프트에서 무엇을 덜어내고 무엇은 반드시 남겨야 하는지가 이 가이드에서 건질 실질적인 소득입니다.
 
 ![장기 자율 에이전트를 위한 프롬프팅 전환을 표현한 추상 이미지]({{ '/assets/images/anthropic-fable5-prompting-guide-hero.webp' | relative_url }})
 
@@ -41,7 +40,7 @@ Claude Fable 5를 다시 열기 전에 봐야 할 문서가 하나 생겼습니�
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -58,7 +57,7 @@ Claude Fable 5를 다시 열기 전에 봐야 할 문서가 하나 생겼습니�
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -413,22 +412,22 @@ Anthropic은 이 지시가 자사 테스트에서, 심지어 환각성 보고를
 
 둘째, "프롬프트를 지우라"는 조언은 오용되기 쉽습니다. 안전 제약, 도메인 규정, 조직의 정책처럼 모델 성능과 무관하게 반드시 남겨야 하는 지시가 있습니다. 삭제는 무차별적 청소가 아니라, 조항 하나하나가 구세대 모델의 결함을 메우던 것인지 작업의 본질적 제약인지를 가려내는 감사여야 합니다. 실제로 가이드 자신도 검증 지시는 명시적으로 넣으라고 말하므로, 이 문서의 메시지는 "덜 쓰되 남길 것은 분명히 남겨라"에 더 가깝습니다.
 
-셋째, 환각성 진행 보고를 거의 없앴다는 수치는 Anthropic 자사 테스트 결과이며, 이 글에서 우리가 독립적으로 재현한 값은 아닙니다. 검증 지시가 효과적이라는 방향성에는 동의하지만, 각 조직은 자신의 워크로드에서 실제 실패율을 측정한 뒤 신뢰 수준을 정해야 합니다. 마지막으로 effort를 high로 기본값을 두라는 권고는 비용과 지연을 함께 끌어올리므로, 예산이 빠듯한 팀은 정형 작업을 medium과 low로 적극 내려 배분의 균형을 스스로 찾아야 합니다.
+셋째, 환각성 진행 보고를 거의 없앴다는 수치는 Anthropic 자사 테스트 결과이며, 외부에서 독립적으로 재현된 값은 아닙니다. 검증 지시가 효과적이라는 방향성에는 동의하지만, 각 조직은 자신의 워크로드에서 실제 실패율을 측정한 뒤 신뢰 수준을 정해야 합니다. 마지막으로 effort를 high로 기본값을 두라는 권고는 비용과 지연을 함께 끌어올리므로, 예산이 빠듯한 팀은 정형 작업을 medium과 low로 적극 내려 배분의 균형을 스스로 찾아야 합니다.
 
-정리하면 이 가이드의 값어치는 새로운 마법 문구가 아니라, 강해진 모델을 다루는 태도의 전환에 있습니다. 통제를 더하는 대신 판단의 여지를 주고, 그 판단이 헛돌지 않도록 증거로 검증하고 위임으로 병렬화하라는 것입니다. 장기 자율 에이전트를 실제로 운영하는 입장에서 보면, 이것은 트렌드 문장이 아니라 운용 규칙의 재정렬입니다.
+이 가이드의 값어치는 새로운 마법 문구가 아니라, 강해진 모델을 다루는 태도의 전환에 있습니다. 통제를 더하는 대신 판단의 여지를 주고, 그 판단이 헛돌지 않도록 증거로 검증하고 위임으로 병렬화하라는 것입니다. 장기 자율 에이전트를 실제로 운영하는 입장에서 보면, 이것은 트렌드 문장이 아니라 운용 규칙의 재정렬입니다.
 
 
 ## 관련 슬라이드
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![anthropic-fable5-prompting-guide 슬라이드 1]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-01.png' | relative_url }})
+![anthropic-fable5-prompting-guide 슬라이드 1]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-01.webp' | relative_url }})
 
-![anthropic-fable5-prompting-guide 슬라이드 2]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-02.png' | relative_url }})
+![anthropic-fable5-prompting-guide 슬라이드 2]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-02.webp' | relative_url }})
 
-![anthropic-fable5-prompting-guide 슬라이드 3]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-03.png' | relative_url }})
+![anthropic-fable5-prompting-guide 슬라이드 3]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-03.webp' | relative_url }})
 
-![anthropic-fable5-prompting-guide 슬라이드 4]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-04.png' | relative_url }})
+![anthropic-fable5-prompting-guide 슬라이드 4]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-04.webp' | relative_url }})
 
 ## 출처
 

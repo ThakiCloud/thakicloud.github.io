@@ -21,7 +21,8 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/ko/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
-published: false
+audiobook: /assets/audio/posts/academic-research-skills-claude-code/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![연구 조립 라인을 추상화한 이미지]({{ '/assets/images/academic-research-skills-claude-code-hero.webp' | relative_url }})

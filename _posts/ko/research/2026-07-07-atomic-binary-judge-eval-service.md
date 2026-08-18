@@ -21,7 +21,6 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/atomic-binary-judge-eval-service/"
-published: false
 audiobook: /assets/audio/posts/atomic-binary-judge-eval-service/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -42,19 +41,19 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ThakiCloud AI Research는 이 세 가지 현실 조건 위에서 두 연구 흐름을 하나로 묶은 아키텍처 **ABJ-Gate**를 제안합니다. 핵심은 평가 기준마다 원자적인 이진 질문으로 쪼개어 소형 온프렘 워커 모델이 답하게 하고, 그 답을 집계하고 형식을 정규화하고 교정하고 감사 기록을 남기는 일은 전부 모델이 아니라 결정론적 코드가 맡는다는 점입니다. 판정이 갈리는 경계 지점에 놓인 항목이나 의심스러운 정황이 감지된 항목은 반드시 홀수 개의 독립된 회의론자 워커가 "반박해 보라"는 지시를 받고 표결에 부쳐지며, 다수가 반박에 실패했을 때만 판정이 살아남습니다. 그리고 이 모든 LLM 호출 예산은 Kueue/GPU 기반 스케줄러가 테넌트별 비용과 꼬리 지연 상한 안에서 배분합니다.
 
-![분석적 비용 모델(Eq. 8)에 따른 샘플링 비율 대 상대 비용]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig1_cost_frontier.png' | relative_url }})
+![분석적 비용 모델(Eq. 8)에 따른 샘플링 비율 대 상대 비용]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig1_cost_frontier.webp' | relative_url }})
 *이진 기준 5개, 플래그 비율 10%, 회의론자 3명을 가정한 분석 모델의 계산값입니다. 전체 항목을 이진 판정하면(k=1) 스칼라 심판 대비 비용이 약 5.3배로 뛰지만, conformal 교정으로 에스컬레이션을 줄여 샘플링 비율 k를 0.2까지 낮추면 해석 가능성과 교정을 유지한 채 스칼라 심판 비용의 약 1.06배까지 수렴합니다. 실측 벤치마크가 아닌 Eq. 8의 계산 결과입니다.*
 
 이 설계는 이 회사가 이미 사내 하네스에서 상시로 지키는 두 가지 규율, 즉 "형식은 코드가 소유하고 내용은 모델이 소유한다"는 원칙과 팬아웃된 검증 결과를 반드시 적대적 표결로 닫는다는 원칙을, 여러 테넌트가 함께 쓰는 정식 제품 표면으로 승격시킨 결과이기도 합니다. 워커 모델이 자기 답변의 길이나 개수, "전체적으로 몇 점"이라는 자기 보고를 아무리 그럴듯하게 내놓아도 그 값은 폐기되고 코드가 다시 계산하므로, 워커 쪽의 사소한 흔들림이 최종 결과를 오염시키지 못합니다.
 
 이 아키텍처가 실제로 지켜야 할 약속은 세 가지 성질로 정식화되고 증명됩니다. 첫째, 동일한 이진 답변 집합이 주어지면 집계 점수는 무작위 시드나 요청 순서와 무관하게 항상 같은 값을 낸다는 재현성입니다. 둘째, 값싼 1단계 판정과 비싼 2단계 검증이 얼마나 자주 어긋나는지를 conformal 위험 통제로 교정하면, 항목이 어떤 분포에서 나오든 그 불일치율을 목표 수준 이하로 분포에 무관하게 묶어낼 수 있다는 위험 통제 보장입니다. 셋째, 각 테넌트의 이용률을 특정 임계값 아래로 관리하는 어드미션 정책을 두면 대기 이론상 그 테넌트의 평가 지연은 유한한 값으로 유계가 된다는 성질입니다.
 
-![테넌트 이용률 대 예상 큐잉 지연의 개념도(Prop. 3)]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig2_latency_bound.png' | relative_url }})
+![테넌트 이용률 대 예상 큐잉 지연의 개념도(Prop. 3)]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig2_latency_bound.webp' | relative_url }})
 *M/G/c 큐잉 모델에서 이용률이 1에 가까워질수록 지연이 어떻게 치솟는지를 보여주는 개념 예시 곡선입니다. 어드미션 컨트롤이 샘플링 비율을 조절해 이용률을 목표 임계값 이하로 눌러 두면 꼬리 지연을 관리할 수 있다는 Proposition 3의 논거를 시각화한 것으로, 실측 지연 데이터가 아닙니다.*
 
 논문은 또한 이진 분해가 언제 실제로 도움이 되는지도 정량적으로 짚습니다. 각 기준을 사람이 스칼라 채점보다 더 안정적으로 답할 수 있고 기준들 사이의 상관이 낮아 서로 독립적인 정보를 담고 있을 때, 이진 분해와 다수결 검증은 스칼라 심판보다 엄밀하게 낮은 분산을 낸다는 조건을 유도합니다. 반대로 기준들이 서로 얽혀 있거나 이진 질문 자체가 손쉽게 눈속임당하는 형태라면 분해는 도움이 되지 않고 오히려 편향을 더할 수 있다는 점도 함께 밝힙니다.
 
-![기준 분해가 분산을 줄이는 조건]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig3_variance_reduction.png' | relative_url }})
+![기준 분해가 분산을 줄이는 조건]({{ '/assets/images/posts/research/atomic-binary-judge-eval-service/fig3_variance_reduction.webp' | relative_url }})
 *논문 4.4절의 분석적 논거를 시각화한 개념도입니다. 집계 점수의 분산은 대략 기준당 오차분산을 유효 독립 기준 개수로 나눈 값에 비례해 줄어들며, 기준선(스칼라 심판=1배) 대비 상대적인 분산 감소 경향을 보여줍니다. 실험으로 측정된 수치가 아닙니다.*
 
 ## 회사, 사회, 과학에 남기는 것
@@ -71,11 +70,11 @@ ThakiCloud AI Research는 이 세 가지 현실 조건 위에서 두 연구 흐�
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![atomic-binary-judge-eval-service 슬라이드 1]({{ '/assets/images/atomic-binary-judge-eval-service-slide-01.png' | relative_url }})
+![atomic-binary-judge-eval-service 슬라이드 1]({{ '/assets/images/atomic-binary-judge-eval-service-slide-01.webp' | relative_url }})
 
-![atomic-binary-judge-eval-service 슬라이드 2]({{ '/assets/images/atomic-binary-judge-eval-service-slide-02.png' | relative_url }})
+![atomic-binary-judge-eval-service 슬라이드 2]({{ '/assets/images/atomic-binary-judge-eval-service-slide-02.webp' | relative_url }})
 
-![atomic-binary-judge-eval-service 슬라이드 3]({{ '/assets/images/atomic-binary-judge-eval-service-slide-03.png' | relative_url }})
+![atomic-binary-judge-eval-service 슬라이드 3]({{ '/assets/images/atomic-binary-judge-eval-service-slide-03.webp' | relative_url }})
 
-![atomic-binary-judge-eval-service 슬라이드 4]({{ '/assets/images/atomic-binary-judge-eval-service-slide-04.png' | relative_url }})
+![atomic-binary-judge-eval-service 슬라이드 4]({{ '/assets/images/atomic-binary-judge-eval-service-slide-04.webp' | relative_url }})
 

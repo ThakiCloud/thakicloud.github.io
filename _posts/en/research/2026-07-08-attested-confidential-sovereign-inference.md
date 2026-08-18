@@ -22,7 +22,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/attested-confidenti
 lang: en
 categories:
   - research
-published: false
 ---
 
 ## Who Should Read This
@@ -43,7 +42,7 @@ ThakiCloud AI Research proposes **ACI (Attested Confidential Inference)**, a pro
 
 The point where these two meet is the paper's core object, the **Binding Ledger**. It signs the hash of $A$, the hash of $P$, the tenant identifier, and the request ID together to produce a binding record $B$, and records it in an append-only ledger. This binding is the single signed proof that "the audited weights ran inside the attested enclave." This verification is enforced at the **Kueue admission gate** before a GPU job is actually scheduled, so that without a valid binding matching the tenant identity, the GPU job is not admitted. Finally, there is a read-only **Regulator Verification API** that lets a regulator look up the entire $\{A, P, B\}$ set using only the request ID and independently re-verify the signatures and enclave measurements without relying on the operator.
 
-![ACI protocol sequence flow]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/aci-protocol-flow.png' | relative_url }})
+![ACI protocol sequence flow]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/aci-protocol-flow.webp' | relative_url }})
 *A conceptual diagram of ACI's per-request binding process. The attestation result $A$ and the provenance-verified weight digest $P$ meet at the Kueue admission gate to produce a signed binding $B$. This is an illustration of the protocol design, not measured hardware.*
 
 There is an honest point that needs to be made here. Comparing a running digest against a signed reference value is not, by itself, a new cryptographic technique. It is the same kind of pattern as already established measured-launch approaches such as measured boot, DICE, and TPM quote-versus-golden-value comparisons, and binding signed release claims to artifacts is also something prior work already does. The contribution this paper can honestly defend is not a new cryptographic technique, but **composition**. As far as we know, this is the first work to combine GPU TEE remote attestation with signed model provenance verification into a per-request, regulator-verifiable gate enforced at scheduler admission time inside a multi-tenant Kubernetes and Kueue system.
@@ -56,24 +55,24 @@ The most honest part of this paper was its original performance claims. Because 
 
 We measured the baseline first. Serving Qwen3.6-35B-A3B with vLLM on the same H200 cluster, the average end-to-end latency per request ($L_{\text{base}}$) was 4286 ms, and average throughput was 29.9 tokens per second.
 
-![Measured ACI software overhead]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-measured-overhead.png' | relative_url }})
+![Measured ACI software overhead]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-measured-overhead.webp' | relative_url }})
 *Measured overhead that the ACI software binding path adds on top of the H200 vLLM baseline (about 4286 ms per request). Even summing the signed ledger append, provenance verification, and software attestation flow, the total is about 0.01 ms per request, roughly 0.0002 percent of the baseline.*
 
 We measured each of the items ACI adds on top of this baseline separately. The cost of appending a binding record $B$ to the signed ledger ($L_{\text{ledger}}$) averaged 0.0037 ms across 3,000 repeated measurements, of which the signing itself accounted for 0.0014 ms. The provenance side splits into two stages. Computing the SHA-256 digest of an entire 512 MB shard yielded a throughput of 2.15 GB/s, but this is a one-time cost performed once when the model is loaded and amortized over the model's entire lifetime. The per-request verification cost, on the other hand, averaged only 0.00014 ms across 20,000 measurements. Finally, the entire software attestation handshake flow averaged 0.0062 ms per request, but when amortized over the same attestation session handling 128 requests, it dropped to about 0.00005 ms per request.
 
-![Attestation amortization]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-att-amortization.png' | relative_url }})
+![Attestation amortization]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-att-amortization.webp' | relative_url }})
 *How the per-request attestation cost falls as the number of requests $N$ amortizing an attestation session increases. The cost of 0.0062 ms at $N$=1 drops to 0.00005 ms at $N$=128, and to 0.000012 ms at $N$=512.*
 
 Summing all of these items gives a clear conclusion. The entire ACI software binding path, including the signed ledger append, per-request provenance verification, and software attestation flow, adds only about 0.01 ms per request, which is about 0.0002 percent of the 4286 ms baseline, well under 0.001 percent. In practice, this is a cost negligible enough to be effectively ignored.
 
-![Cost split]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-cost-split.png' | relative_url }})
+![Cost split]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-cost-split.webp' | relative_url }})
 *How the roughly 0.01 ms per-request ACI software overhead splits across ledger append, provenance verification, and the attestation flow. Computing the 512 MB shard digest is excluded from this breakdown because it is a one-time cost amortized over the model's lifetime.*
 
 Of course, this measurement does not fill in the entire picture. The throughput penalty of GPU confidential computing itself ($L_{\text{TEE}}$) still could not be measured on this cluster because CC mode is off, and it remains an unmeasured value cited from the 4 to 8 percent range reported by prior work (chrapek2025confidential, zhu2024hopperbenchmark). Generating the hardware attestation evidence itself also still cannot be measured, since that requires a CC-mode Hopper or Blackwell environment. In other words, what this measurement narrowed down is the new software cost ACI adds, and the one remaining unknown is now confined to the cost of the GPU TEE hardware itself.
 
 The paper argues its case against five requirements (attestation freshness, provenance binding, non-repudiation, scheduler-level isolation, and acceptable overhead), mapping each against three types of adversary (a curious operator, a malicious co-tenant, and a network attacker).
 
-![Security requirements versus adversary matrix]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/req-adversary-matrix.png' | relative_url }})
+![Security requirements versus adversary matrix]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/req-adversary-matrix.webp' | relative_url }})
 *A matrix mapping each of the five ACI requirements to the adversary types it addresses. The scheduler isolation requirement (R4) covers both the co-tenant and operator adversary types. This is a threat-model analysis result, not a measurement.*
 
 ## Contribution to Company, Society, and Science

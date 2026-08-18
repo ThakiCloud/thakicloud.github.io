@@ -20,7 +20,6 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-power-bottleneck/"
-published: false
 ---
 
 ![서버 랙으로 좁아져 들어가는 전력 병목과 그 위 소프트웨어 층을 나타낸 개념도]({{ '/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp' | relative_url }})
@@ -403,3 +402,16 @@ published: false
 - [테라울프, 저스티파이드 데이터 캠퍼스에서 앤스로픽과 임대 계약 발표](https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack) · TeraWulf
 - [네이버·카카오 2분기 실적도 광고, 커머스가 살렸다](https://zdnet.co.kr/view/?no=20260708165303) · ZDNet Korea
 - [초과세수 5조 투입…'소버린 AI' 개발한다](https://www.hankyung.com/article/2026070228011) · 한국경제
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 1](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-01.webp)
+
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 2](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-02.webp)
+
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 3](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-03.webp)
+
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 4](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-04.webp)
+

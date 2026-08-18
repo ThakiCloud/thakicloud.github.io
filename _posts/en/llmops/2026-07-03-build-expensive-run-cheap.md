@@ -14,7 +14,7 @@ categories:
   - llmops
 ---
 
-![Key concept illustration]({{ '/assets/images/build-expensive-run-cheap-hero.png' | relative_url }})
+![Key concept illustration]({{ '/assets/images/build-expensive-run-cheap-hero.webp' | relative_url }})
 
 If you run agents in production, you've seen the same pattern in your monthly bill. Most of the token spend comes from frontier models, and most of what those models are actually doing isn't hard reasoning at all. It's sorting email, matching news items, rendering tables, and checking whether an output followed spec. This post is for engineering leaders and AI teams who want a concrete answer to two questions: how do you decide whether a skill built on an expensive model can be run on a cheap one without losing quality, and how do you automate that decision so it runs every night instead of once?
 

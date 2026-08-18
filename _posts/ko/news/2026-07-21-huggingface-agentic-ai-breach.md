@@ -25,7 +25,7 @@ audiobook: /assets/audio/posts/huggingface-agentic-ai-breach/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![자율 에이전트 스웜이 데이터 파이프라인을 파고드는 추상 이미지]({{ '/assets/images/huggingface-agentic-ai-breach-hero.png' | relative_url }})
+![자율 에이전트 스웜이 데이터 파이프라인을 파고드는 추상 이미지]({{ '/assets/images/huggingface-agentic-ai-breach-hero.webp' | relative_url }})
 
 지난 주말 타임라인을 흔든 소식은 새 모델도, 새 벤치마크도 아니었습니다. 오픈 AI 생태계의 중심인 허깅페이스가 뚫렸다는 공지였습니다. 더 눈길을 끈 것은 침해의 주체였습니다. 사람 해커가 밤새 손으로 명령을 친 것이 아니라, 자율 AI 에이전트 프레임워크가 공격을 처음부터 끝까지 몰고 갔다고 회사가 밝혔기 때문입니다.
 

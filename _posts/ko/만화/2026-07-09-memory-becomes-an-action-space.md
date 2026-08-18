@@ -13,14 +13,15 @@ tags:
   - long-term-memory
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/memory-becomes-an-action-space/strip.png
+image: /assets/images/posts/만화/memory-becomes-an-action-space/strip.webp
 audiobook: /assets/audio/posts/memory-becomes-an-action-space/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 이번 주 화제가 된 논문 한 편은 에이전트의 '장기 기억'을 다시 정의합니다. 지금까지 기억은 어딘가에 조용히 쌓아두는 창고였는데, 이 논문은 기억을 '행동 공간(action space)'으로 봅니다. 에이전트가 기억을 그냥 저장만 하는 게 아니라 스스로 읽고 고쳐 쓰며, 그 기억을 근거로 다음 행동을 정한다는 뜻입니다. 말하자면 기억이 서랍이 아니라 작업대가 된 셈이죠. 문제는, 기억이 쉬지 않고 움직이면 그 기억이 어디서 도는지가 갑자기 중요해진다는 겁니다.
 
-![안 까먹는 AI, 청구서도 안 까먹더라]({{ '/assets/images/posts/만화/memory-becomes-an-action-space/strip.png' | relative_url }})
+![안 까먹는 AI, 청구서도 안 까먹더라]({{ '/assets/images/posts/만화/memory-becomes-an-action-space/strip.webp' | relative_url }})
 
 > 원 뉴스: [RT @omarsar0: // Memory becomes an action space //](https://x.com/hjguyhan/status/2074985812002050273) · twitter
 
@@ -31,3 +32,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![memory-becomes-an-action-space 슬라이드 1](/assets/images/memory-becomes-an-action-space-slide-01.webp)
+
+![memory-becomes-an-action-space 슬라이드 2](/assets/images/memory-becomes-an-action-space-slide-02.webp)
+
+![memory-becomes-an-action-space 슬라이드 3](/assets/images/memory-becomes-an-action-space-slide-03.webp)
+
+![memory-becomes-an-action-space 슬라이드 4](/assets/images/memory-becomes-an-action-space-slide-04.webp)
+

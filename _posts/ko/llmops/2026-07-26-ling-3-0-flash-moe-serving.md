@@ -24,7 +24,7 @@ audiobook: /assets/audio/posts/ling-3-0-flash-moe-serving/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![거대한 격자 위에서 소수의 노드만 밝게 켜져 하나의 통로로 모이는 추상 이미지](/assets/images/ling-3-0-flash-moe-serving-hero.png)
+![거대한 격자 위에서 소수의 노드만 밝게 켜져 하나의 통로로 모이는 추상 이미지](/assets/images/ling-3-0-flash-moe-serving-hero.webp)
 *전체 용량은 크게 두되 토큰마다 극히 일부만 켜는 MoE 구조를 형상화했습니다.*
 
 ## 왜 읽어야 하나
@@ -49,7 +49,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 Ling-2.6-flash의 config.json을 열어 보면 이 계열의 특징이 그대로 드러납니다. 모델 타입은 `bailing_hybrid`이고, 레이어는 32개인데 `layer_group_size`가 8입니다. 8개 레이어를 한 묶음으로 보고 그중 하나만 전체 어텐션, 나머지 일곱은 선형 어텐션으로 처리한다는 뜻입니다. 전체 32개 레이어 중 전체 어텐션은 4개뿐입니다. 그리고 그 4개마저 일반적인 방식이 아닙니다. `kv_lora_rank`가 512, `qk_rope_head_dim`이 64로 잡혀 있는데, 이것은 키와 값을 헤드마다 그대로 저장하지 않고 512차원 잠재 표현으로 압축해 두는 MLA 구조입니다.
 
-![32개 레이어 중 4개만 MLA 전체 어텐션이고 28개는 선형 어텐션임을 보여주는 도식](/assets/images/ling-3-0-flash-moe-serving-slide-04.png)
+![32개 레이어 중 4개만 MLA 전체 어텐션이고 28개는 선형 어텐션임을 보여주는 도식](/assets/images/ling-3-0-flash-moe-serving-slide-04.webp)
 *32개 레이어 중 캐시를 쌓는 레이어는 4개뿐이고, 전문가는 256개 중 8개만 켜집니다.*
 
 전문가 라우팅도 극단적입니다. 라우팅 대상 전문가가 256개인데 토큰당 8개만 선택합니다. 32분의 1만 켜는 셈입니다. Ling-3.0-flash는 공개된 요약에 따르면 KDA와 MLA 레이어를 5대 1로 쌓고 전문가 희소성을 64분의 1까지 밀었다고 알려져 있습니다[추정]. 이 두 수치는 1차 문서가 아직 없어 2차 출처에 근거합니다. 다만 방향은 분명합니다. 전체 어텐션 레이어를 줄이고 전문가를 더 희소하게 만드는 쪽입니다.
@@ -104,7 +104,7 @@ python3 scripts/skills/model_registry.py pull inclusionAI/Ling-2.6-flash /work/m
 
 측정 결과는 아래와 같습니다. 모든 수치는 실행 로그 `outputs/blog-impl/ling-3-0-flash-moe-serving/run-5.log`에서 그대로 가져왔고, 차트도 같은 로그를 파싱해 그렸습니다.
 
-![Ling-2.6-flash 체크포인트별 실측 가중치 용량과 세션당 KV 캐시 비교 차트](/assets/images/ling-3-0-flash-moe-serving-results.png)
+![Ling-2.6-flash 체크포인트별 실측 가중치 용량과 세션당 KV 캐시 비교 차트](/assets/images/ling-3-0-flash-moe-serving-results.webp)
 *왼쪽은 공개 체크포인트의 실제 safetensors 바이트, 오른쪽은 세션당 KV 캐시를 통상 공식과 실제 구조로 각각 계산한 값입니다.*
 
 가중치 용량부터 보겠습니다. bf16 원본은 27개 샤드에 걸쳐 200.2 GiB였습니다. fp8 버전은 101.5 GiB, int4 버전은 26개 샤드에 60.4 GiB입니다. int4까지 내리면 H200 한 장의 141 GiB 안에 들어가지만, 실제로는 KV 캐시와 활성화 메모리가 함께 올라가야 하므로 한 장에 밀어 넣는 구성은 권하지 않습니다.
@@ -113,12 +113,12 @@ python3 scripts/skills/model_registry.py pull inclusionAI/Ling-2.6-flash /work/m
 
 세션 단위로 환산하면 차이가 더 크게 다가옵니다. fp8 캐시 기준으로 128K 컨텍스트 세션 하나는 통상 공식으로 32 GiB, 실제 구조로는 0.295 GiB입니다. 선형 어텐션 레이어 28개가 들고 있는 고정 상태는 세션당 14 MiB 정도로 추정되는데, 이 값은 config에 직접 적혀 있지 않아 헤드 수와 헤드 차원에서 유도했습니다[추정]. 컨텍스트가 길어져도 이 부분은 늘지 않습니다.
 
-![통상 공식 512 KiB와 실제 구조 4.5 KiB의 토큰당 KV 캐시 차이를 보여주는 도식](/assets/images/ling-3-0-flash-moe-serving-slide-05.png)
+![통상 공식 512 KiB와 실제 구조 4.5 KiB의 토큰당 KV 캐시 차이를 보여주는 도식](/assets/images/ling-3-0-flash-moe-serving-slide-05.webp)
 *토큰당 요구량과 128K 세션 요구량을 통상 공식과 실제 구조로 각각 표시한 값입니다.*
 
 노드 단위 산정으로 넘어가면 결론이 바뀝니다. H200 여덟 장짜리 노드는 HBM이 1128 GiB이고, 활성화와 단편화를 위해 10퍼센트를 남기면 int4 가중치를 올린 뒤 954.8 GiB가 남습니다. 통상 공식대로라면 256K 세션을 15개도 못 담습니다. 실제 구조로 계산하면 1657개입니다.
 
-![8x H200 노드 1128 GiB에서 int4 가중치와 예비 공간을 뺀 954.8 GiB로 담을 수 있는 세션 수 비교](/assets/images/ling-3-0-flash-moe-serving-slide-06.png)
+![8x H200 노드 1128 GiB에서 int4 가중치와 예비 공간을 뺀 954.8 GiB로 담을 수 있는 세션 수 비교](/assets/images/ling-3-0-flash-moe-serving-slide-06.webp)
 *같은 가용 풀에 통상 공식으로는 15개 미만, 실제 구조로는 1657개가 들어갑니다.*
 
 여기서 중요한 것은 1657이라는 숫자 자체가 아닙니다. 병목의 위치가 바뀐다는 사실입니다. 통상 공식을 믿으면 이 모델은 메모리 바운드로 보이고, 그러면 노드를 더 사거나 컨텍스트를 줄이는 결정을 하게 됩니다. 실제로는 메모리에 여유가 크고 병목은 연산과 스케줄링 쪽으로 이동합니다. 잘못된 공식 하나가 조달 결정을 통째로 바꿔 놓을 수 있습니다.
@@ -133,7 +133,7 @@ ThakiCloud의 ai-platform은 쿠버네티스 위에서 Kueue로 GPU를 스케줄
 
 에이전트 워크로드 쪽에서는 Paxis 관점이 붙습니다. Paxis는 ai-platform 위에서 도는 Agent-Native Cloud 제어 평면으로, 스킬과 도구와 정책을 일급 리소스로 다룹니다. 에이전트는 사람보다 훨씬 많은 토큰을 훨씬 긴 컨텍스트로 씁니다. 활성 파라미터가 작고 긴 컨텍스트의 캐시 비용이 낮은 모델은 에이전트 경제성을 직접 바꿉니다. 토큰당 비용이 내려가면 그동안 비싸서 못 돌리던 스킬 조합을 상시로 돌릴 수 있게 됩니다. 저비용 서빙이 에이전트 상시 가동의 전제가 되는 구조입니다.
 
-![멀티테넌트 단가, Paxis 에이전트 상시 가동, 인프라 온보딩 프로세스 세 축으로 정리한 도식](/assets/images/ling-3-0-flash-moe-serving-slide-07.png)
+![멀티테넌트 단가, Paxis 에이전트 상시 가동, 인프라 온보딩 프로세스 세 축으로 정리한 도식](/assets/images/ling-3-0-flash-moe-serving-slide-07.webp)
 *노드당 세션 수의 변화가 단가와 에이전트 운용과 도입 절차에 각각 어떻게 이어지는지 정리했습니다.*
 
 다만 지금 단계에서 저희가 고객에게 권하는 답은 분명합니다. Ling-3.0-flash는 아직 온프레미스 후보가 아닙니다. 가중치가 열리기 전까지는 API 평가 대상이고, 데이터 반출이 제약인 고객에게는 평가조차 권하기 어렵습니다.

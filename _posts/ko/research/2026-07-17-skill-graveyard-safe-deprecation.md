@@ -41,7 +41,7 @@ categories:
 
 저자들은 이 현상을 "스킬 반감기(skill half-life)"라는 개념으로 정식화합니다. 어떤 지표가 작은 코퍼스 기준값의 절반 아래로 떨어지는 코퍼스 크기를 그 지표의 반감기로 정의하면, Top-1의 반감기는 이미 현재 운영 중인 코퍼스 크기 범위 안에 들어와 있습니다. 반면 Recall@5류 지표는 이번 측정 범위 안에서는 아직 반감기에 도달하지 않았습니다.
 
-![Skill Half-Life: Retrieval Accuracy vs. Corpus Size]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-growth-curve.png' | relative_url }})
+![Skill Half-Life: Retrieval Accuracy vs. Corpus Size]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-growth-curve.webp' | relative_url }})
 *ThakiCloud 프로덕션 Claude Code 하네스(63개 케이스 스위트)에서 측정한 코퍼스 크기별 부분표집 실험 결과입니다. Top-1 정확도가 코퍼스 성장 21.6배 구간에서 42.2퍼센트포인트 무너지는 동안, 게이트를 통과한 Recall@5는 상대적으로 견고하게 유지됩니다.*
 
 ## 지우기 전에 반드시 다시 검색해본다
@@ -54,7 +54,7 @@ categories:
 
 실제 코퍼스에서 의미적 중복 클러스터는 131개 발견됐고, 가드가 있든 없든 두 정책 모두 동일하게 160개 스킬을 폐기 후보로 지목했습니다. 가드 없이 그대로 실행했다면 이 중 4개는 저사용이지만 클러스터 안에서 특정 긍정·네이티브 케이스를 유일하게 커버하는 스킬이라 잘못 삭제됐을 겁니다. 안전장치를 켜면 이 잘못된 삭제가 4건에서 0건으로 줄어듭니다. 흥미로운 지점은, 가드가 클러스터 안에서 삭제 대상을 바꿀 뿐 목표 삭제량 자체는 줄이지 않기 때문에 가드 유무와 무관하게 코퍼스 축소율이 정확히 같은 7.39%(160/2,164)로 유지된다는 점입니다.
 
-![False Deprecations: Naive vs. Guarded Policy]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-guard-comparison.png' | relative_url }})
+![False Deprecations: Naive vs. Guarded Policy]({{ '/assets/images/posts/research/skill-graveyard-safe-deprecation/fig-guard-comparison.webp' | relative_url }})
 *동일하게 7.39% 코퍼스를 줄이는 두 정책을 비교합니다. 안전장치 없이 실행하면 잘못된 삭제가 4건 발생하지만, 안전장치가 클러스터 안에서 다음으로 사용량이 낮은 중복 스킬로 대체하면서 잘못된 삭제를 0건으로 만듭니다.*
 
 가드를 적용해 160개 스킬을 제거한 뒤 같은 63개 표준 스위트로 다시 채점하면, Recall@5(0.822), 게이트 Recall@5(0.667), Top-1(0.378), 환각률(0.0), 부정 회피율(0.375) 다섯 지표 모두 제거 전과 완전히 동일하게 나왔습니다. 코퍼스의 7.39%를 들어내면서도 측정 가능한 회귀가 전혀 없었던 셈입니다.

@@ -1,6 +1,6 @@
 ---
 title: "How to Make Agent Memory Persistent: The Five Steps of Graph Engineering"
-excerpt: "Agent memory dies with the context window. Treating a knowledge graph as shared memory keeps it alive. We break down the five steps an Anthropic engineer laid out, Extract, Resolve, Assemble, Query, and Repeat, and look at how they fit into multi-agent systems."
+excerpt: "Agent memory dies with the context window. Treating a knowledge graph as shared memory keeps it alive. We break down the five steps shared by the community, Extract, Resolve, Assemble, Query, and Repeat, and look at how they fit into multi-agent systems."
 seo_title: "Graph Engineering: Designing Persistent Memory for Multi-Agent Systems - Thaki Cloud"
 seo_description: "An engineering breakdown of graph engineering's five steps (Extract, Resolve, Assemble, Query, Repeat) for solving the problem of agent memory disappearing with the context window, using a shared knowledge graph. Covers Haiku/Sonnet model routing, provenance, and application to ThakiCloud Paxis."
 date: 2026-07-25
@@ -30,7 +30,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/graph-engineering-m
 
 ## Why This Matters
 
-If you build multi-agent systems or long-running agent products, this piece might make you set aside the question of whether you need a bigger model. The core conclusion up front: agent memory dies with the context window, and only a knowledge graph used as shared memory keeps it alive. A senior Anthropic engineer recently laid out graph engineering for multi-agent systems in a twelve-page document. Its backbone is five steps, Extract, Resolve, Assemble, Query, and Repeat. This post breaks down why that backbone matters now and how to wire it into a real system.
+If you build multi-agent systems or long-running agent products, this piece might make you set aside the question of whether you need a bigger model. The core conclusion up front: agent memory dies with the context window, and only a knowledge graph used as shared memory keeps it alive. A recently shared write-up laid out graph engineering for multi-agent systems. Its backbone is five steps, Extract, Resolve, Assemble, Query, and Repeat. This post breaks down why that backbone matters now and how to wire it into a real system.
 
 ## Overview
 
@@ -425,3 +425,5 @@ You do not need to start big. Define a small Pydantic schema around the handful 
 
 - [Codez (@0xCodez), "Graph Engineering for multi-agentic systems" (X)](https://x.com/0xCodez/status/2080250266851463209)
 - [Anthropic Engineering, "How we built our multi-agent research system"](https://www.anthropic.com/engineering/multi-agent-research-system)
+
+A note on sourcing. What we verified directly is the X post linked above; we could not confirm the author or length of the document behind it. Another write-up on the same material credits a different author, so we do not assert an unverified attribution in the body.

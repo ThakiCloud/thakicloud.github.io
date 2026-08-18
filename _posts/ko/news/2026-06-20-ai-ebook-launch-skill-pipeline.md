@@ -23,7 +23,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-ebook-launch-skill-p
 reading_time: true
 categories:
   - news
-published: false
 audiobook: /assets/audio/posts/ai-ebook-launch-skill-pipeline/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -99,11 +98,11 @@ PDF 크기가 216 KB에서 2.9 MB까지 벌어집니다. 챕터 수와 이미지
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![ai-ebook-launch-skill-pipeline 슬라이드 1]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-01.png' | relative_url }})
+![ai-ebook-launch-skill-pipeline 슬라이드 1]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-01.webp' | relative_url }})
 
-![ai-ebook-launch-skill-pipeline 슬라이드 2]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-02.png' | relative_url }})
+![ai-ebook-launch-skill-pipeline 슬라이드 2]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-02.webp' | relative_url }})
 
-![ai-ebook-launch-skill-pipeline 슬라이드 3]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-03.png' | relative_url }})
+![ai-ebook-launch-skill-pipeline 슬라이드 3]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-03.webp' | relative_url }})
 
-![ai-ebook-launch-skill-pipeline 슬라이드 4]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-04.png' | relative_url }})
+![ai-ebook-launch-skill-pipeline 슬라이드 4]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-04.webp' | relative_url }})
 

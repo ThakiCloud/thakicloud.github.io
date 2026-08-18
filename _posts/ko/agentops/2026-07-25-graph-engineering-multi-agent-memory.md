@@ -1,6 +1,6 @@
 ---
 title: "에이전트의 기억을 영구화하는 법: 그래프 엔지니어링 5단계"
-excerpt: "에이전트의 기억은 컨텍스트 창과 함께 죽습니다. 지식 그래프를 공유 메모리로 두면 그 기억이 영구화됩니다. Anthropic 엔지니어가 정리한 Extract·Resolve·Assemble·Query·Repeat 5단계를 뜯어보고, 멀티에이전트 시스템에 어떻게 붙이는지 짚습니다."
+excerpt: "에이전트의 기억은 컨텍스트 창과 함께 죽습니다. 지식 그래프를 공유 메모리로 두면 그 기억이 영구화됩니다. 커뮤니티에서 정리된 Extract·Resolve·Assemble·Query·Repeat 5단계를 뜯어보고, 멀티에이전트 시스템에 어떻게 붙이는지 짚습니다."
 seo_title: "그래프 엔지니어링: 멀티에이전트의 영구 기억 설계 - Thaki Cloud"
 seo_description: "에이전트 메모리가 컨텍스트 창과 함께 사라지는 문제를, 지식 그래프 공유 메모리로 해결하는 그래프 엔지니어링 5단계(Extract·Resolve·Assemble·Query·Repeat)를 실무 관점에서 분석합니다. Haiku·Sonnet 모델 라우팅과 provenance, ThakiCloud Paxis 적용까지."
 date: 2026-07-25
@@ -31,7 +31,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 ## 왜 읽어야 하나
 
-멀티에이전트 시스템이나 오래 도는 에이전트 제품을 만드는 엔지니어라면, 이 글은 "모델을 더 큰 걸로 바꿔야 하나"라는 질문을 잠시 내려놓게 해드립니다. 핵심 결론부터 말씀드리면 이렇습니다. **에이전트의 기억은 컨텍스트 창과 함께 죽고, 지식 그래프를 공유 메모리로 두어야 그 기억이 영구화됩니다.** 최근 한 Anthropic 시니어 엔지니어가 멀티에이전트 시스템을 위한 그래프 엔지니어링을 12쪽짜리 문서로 정리했는데, 그 뼈대인 다섯 단계(Extract, Resolve, Assemble, Query, Repeat)가 왜 지금 중요한지, 그리고 실제 시스템에 어떻게 붙이는지를 이 글에서 풀어드립니다.
+멀티에이전트 시스템이나 오래 도는 에이전트 제품을 만드는 엔지니어라면, 이 글은 "모델을 더 큰 걸로 바꿔야 하나"라는 질문을 잠시 내려놓게 해드립니다. 핵심 결론부터 말씀드리면 이렇습니다. **에이전트의 기억은 컨텍스트 창과 함께 죽고, 지식 그래프를 공유 메모리로 두어야 그 기억이 영구화됩니다.** 최근 멀티에이전트 시스템을 위한 그래프 엔지니어링을 정리한 글이 공유되었는데, 그 뼈대인 다섯 단계(Extract, Resolve, Assemble, Query, Repeat)가 왜 지금 중요한지, 그리고 실제 시스템에 어떻게 붙이는지를 이 글에서 풀어드립니다.
 
 ## 개요
 
@@ -414,6 +414,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 추출 단계의 환각도 문제입니다. 모델이 문서에 없는 삼중항을 지어내면, 출처가 붙어 있어도 그 출처 안에 실제로 그 관계가 있는지는 별도로 확인해야 합니다. 스키마가 형식은 강제하지만 내용의 진위까지 보장하지는 않습니다.
 
+출처 자체에도 유보를 답니다. 이 다섯 단계가 퍼진 경로는 X의 요약 글들인데, 원 문서의 저자와 분량이 전하는 사람마다 다릅니다. 같은 주에 "Anthropic 시니어 엔지니어의 12쪽", "Boris Cherny의 7쪽", "Anthropic 시니어 두 명의 11쪽"이 각각 돌았고, 저희는 그중 어느 것도 원본을 확인하지 못했습니다. 그래서 이 글은 저자나 분량을 근거로 삼지 않고 다섯 단계라는 구조 자체만 다룹니다. 구조는 검증 가능하지만 귀속은 아직 아닙니다.
+
 규모가 커지면 그래프가 비대해지고 질의 지연이 늘어납니다. 관련 서브그래프를 잘라내는 일 자체가 또 하나의 검색 문제가 되며, 잘라낸 조각이 너무 크면 다시 컨텍스트 창 한계로 돌아옵니다. 그리고 애초에 관계 추론이 필요 없는 단순한 조회라면, 무거운 그래프보다 평범한 벡터 RAG가 더 싸고 빠릅니다. 문제의 성격이 "비슷한 것 찾기"인지 "관계 따라가기"인지를 먼저 가르는 것이 순서입니다.
 
 ## 정리
@@ -427,15 +429,17 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![graph-engineering-multi-agent-memory 슬라이드 1](/assets/images/graph-engineering-multi-agent-memory-slide-01.png)
+![graph-engineering-multi-agent-memory 슬라이드 1](/assets/images/graph-engineering-multi-agent-memory-slide-01.webp)
 
-![graph-engineering-multi-agent-memory 슬라이드 2](/assets/images/graph-engineering-multi-agent-memory-slide-02.png)
+![graph-engineering-multi-agent-memory 슬라이드 2](/assets/images/graph-engineering-multi-agent-memory-slide-02.webp)
 
-![graph-engineering-multi-agent-memory 슬라이드 3](/assets/images/graph-engineering-multi-agent-memory-slide-03.png)
+![graph-engineering-multi-agent-memory 슬라이드 3](/assets/images/graph-engineering-multi-agent-memory-slide-03.webp)
 
-![graph-engineering-multi-agent-memory 슬라이드 4](/assets/images/graph-engineering-multi-agent-memory-slide-04.png)
+![graph-engineering-multi-agent-memory 슬라이드 4](/assets/images/graph-engineering-multi-agent-memory-slide-04.webp)
 
 ## 출처
 
 - [Codez (@0xCodez), "Graph Engineering for multi-agentic systems" (X)](https://x.com/0xCodez/status/2080250266851463209)
 - [Anthropic Engineering, "How we built our multi-agent research system"](https://www.anthropic.com/engineering/multi-agent-research-system)
+
+출처에 관해 한 가지 밝힙니다. 위 다섯 단계에 대해 저희가 직접 확인한 것은 위 X 게시물이며, 그 바탕이 된 문서의 저자와 분량은 확인하지 못했습니다. 같은 소재를 다룬 다른 소개 글은 저자를 다르게 적고 있어, 본문에서는 확인되지 않은 귀속을 쓰지 않았습니다.

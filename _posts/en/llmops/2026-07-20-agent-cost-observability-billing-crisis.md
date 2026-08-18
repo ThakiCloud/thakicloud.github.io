@@ -16,7 +16,6 @@ tags:
 author_profile: true
 toc: true
 toc_label: Anatomy of an Invisible Bill
-published: true
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/agent-cost-observability-billing-crisis/"

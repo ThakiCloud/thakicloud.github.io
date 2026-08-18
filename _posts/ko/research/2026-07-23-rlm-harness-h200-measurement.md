@@ -36,14 +36,14 @@ RLM의 발상은 단순합니다. 긴 문서를 모델 컨텍스트에 통째로
 
 과제는 OOLONG 계열을 본뜬 합성 장문 집계 QA 24문항입니다. 수백 개의 티켓 레코드가 흩어진 32k, 64k, 128k 토큰급 문서에서 특정 조건의 티켓 수를 세거나 최다 제품을 찾는 문제이며, 정답은 코드가 계산하고 채점은 exact match로 합니다.
 
-![하네스별 정확도]({{ '/assets/images/posts/research/rlm-harness/e1-accuracy.png' | relative_url }})
+![하네스별 정확도]({{ '/assets/images/posts/research/rlm-harness/e1-accuracy.webp' | relative_url }})
 *세 하네스의 티어별 정확도. 재귀 하네스만 32k와 64k에서 0.5에 도달하고, 두 대조군은 같은 값에 머뭅니다.*
 
 전체 정확도는 재귀 하네스가 41.7%(10/24), 1-pass와 map-reduce가 똑같이 16.7%(4/24)였습니다. 25%p 차이는 사전에 등록해 둔 채택 기준(+5%p)을 넘습니다. 다만 24문항 규모에서 이 차이는 통계적 유의성(McNemar 검정 p 약 0.11)에는 못 미치므로 정확도 이득은 방향성 있는 신호로 읽는 것이 정직합니다.
 
 숫자가 확실하게 갈린 쪽은 비용입니다.
 
-![하네스별 토큰 비용]({{ '/assets/images/posts/research/rlm-harness/e1-tokens.png' | relative_url }})
+![하네스별 토큰 비용]({{ '/assets/images/posts/research/rlm-harness/e1-tokens.webp' | relative_url }})
 *문항당 평균 토큰(로그 스케일). 재귀 하네스는 문서가 4배 길어져도 4천 토큰 언저리에 머뭅니다.*
 
 1-pass와 map-reduce는 문서 길이에 비례해 문항당 2만 8천에서 11만 토큰을 태웠지만, 재귀 하네스는 문서가 32k든 128k든 4천 토큰 안팎으로 일정했습니다. 24문항 전체로 보면 150만 토큰 대 9만 2천 토큰입니다. 16배입니다. 하네스가 태스크 길이와 모델이 실제로 읽는 토큰을 분리해 버린다는 논문의 quotient set 설명과 정확히 맞아떨어지는 패턴입니다.

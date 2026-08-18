@@ -6,7 +6,7 @@ seo_description: "Complete guide to Goclone website cloner. Learn installation, 
 date: 2025-10-15
 lang: en
 permalink: /en/tutorials/goclone-website-cloner-tutorial/
-canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/goclone-website-cloner-tutorial/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/goclone-website-cloner-tutorial-en/"
 tags:
   - goclone
   - web-scraping
@@ -21,6 +21,9 @@ categories:
 ---
 
 ⏱️ **Estimated Reading Time**: 8 minutes
+
+![Illustration of the core idea of Goclone: Clone Any Website to Your Computer in Seconds](/assets/images/goclone-website-cloner-tutorial-en-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Introduction
 
@@ -45,6 +48,25 @@ The tool preserves the original site's relative link structure, allowing you to 
 - 🌐 **Proxy Support**: Works with HTTP and SOCKS5 proxies
 - 🍪 **Cookie Management**: Supports pre-set cookies for authenticated sessions
 - 🖥️ **Local Server**: Built-in server to preview cloned sites
+
+Knowing the order in which a clone actually happens makes the options later in this guide much easier to read.
+
+<div class="mermaid">
+flowchart TB
+    URL["Target URL"] --> FETCH["Request HTML document"]
+    FETCH --> PARSE["Parse document<br/>collect asset links"]
+    PARSE --> POOL["Concurrent download via goroutines"]
+    POOL --> CSS["CSS stylesheets"]
+    POOL --> JS["JavaScript files"]
+    POOL --> IMG["Images and media"]
+    CSS --> KEEP["Preserve relative link structure"]
+    JS --> KEEP
+    IMG --> KEEP
+    KEEP --> DIR["Write to local directory"]
+    DIR --> SERVE["Preview with built-in server"]
+</div>
+
+*Goclone reads the document first to build the list of assets to fetch, downloads them concurrently with goroutines, and writes them locally with the relative link structure left intact.*
 
 ## Prerequisites
 

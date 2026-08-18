@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/structured-image-prompt-
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 "여행 사진을 지브리 스타일로 바꿔줘"라고 한 줄 던지면, 결과는 매번 다릅니다. 어떤 건 원본 구도를 잃고, 어떤 건 스타일이 약하고, 어떤 건 인물이 뭉개집니다. 최근 공유된 GPT Image 2 활용 사례는 이 문제를 **구조화 프롬프트**로 해결합니다. 자유 서술 대신 5개 섹션으로 계층을 나눠 변환을 제어하는 기법입니다.

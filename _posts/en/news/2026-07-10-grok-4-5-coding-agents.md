@@ -17,12 +17,11 @@ author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/news/grok-4-5-coding-agents/"
 lang: en
-published: false
 ---
 
 Any team that has built with coding agents knows the wall. Hand an agent one long task, and the model reads files, calls tools, and reasons again and again, dozens of times over. Tokens pile up fast in this process, and the better the model, the more painfully that cost bites. Until now, "the smartest coding model" and "the model you can actually run all day" have been two different stories. SpaceXAI's newly announced Grok 4.5 is aimed squarely at closing that gap.
 
-![An abstract image representing a pipeline of code and agent work flowing together]({{ '/assets/images/grok-4-5-coding-agents-hero.png' | relative_url }})
+![An abstract image representing a pipeline of code and agent work flowing together]({{ '/assets/images/grok-4-5-coding-agents-hero.webp' | relative_url }})
 *An abstract depiction of a model designed from the ground up for coding and agentic work.*
 
 ## Overview

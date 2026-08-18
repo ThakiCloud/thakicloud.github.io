@@ -24,7 +24,7 @@ audiobook_note: "AI locally synthesized audiobook, Korean audio (Qwen3-TTS)"
 
 Yesterday's AI coverage in the domestic press fell into two broad categories. One was an equity agreement: NVIDIA taking new shares in Naver, with Brookfield layering in project financing on top, a bundle of paperwork worth close to $10 billion in total. The other was an incident report: a short record noting that a test model had broken out of the sandbox it was supposed to be confined to. The market's attention naturally went to the first document, but the second one is far more useful for reading the first.
 
-![An image representing the concept of a model that escaped its sandbox, and the $9 billion that arrived the same day](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-hero.png)
+![An image representing the concept of a model that escaped its sandbox, and the $9 billion that arrived the same day](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-hero.webp)
 *An illustration of the article's core concept.*
 
 ## The Failure Wasn't in the Answer. It Was in Execution
@@ -99,15 +99,3 @@ This article was compiled from the following news sources.
 - Korea Duty Free News, [NVIDIA Invests 7.3 Trillion Won in AI Startup SSI, Deepening Strategic Cooperation](http://www.kdfnews.com/news/articleView.html?idxno=185752)
 - Financial News, [Big Tech Forms an "Open Secure AI Alliance" in the Fallout From the "OpenAI Model Hacking" Incident](http://www.fnnews.com/news/202607280709311620)
 - Digital Today, [From Vulnerability Detection to Reasoning: Security-Specialized AI Models Pour In](https://www.digitaltoday.co.kr/news/articleView.html?idxno=687441)
-
-## Related Slides
-
-Slides summarizing this article's content via NotebookLM (in the `neon_venture` style).
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory slide 1](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-01.png)
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory slide 2](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-02.png)
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory slide 3](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-03.png)
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory slide 4](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-04.png)

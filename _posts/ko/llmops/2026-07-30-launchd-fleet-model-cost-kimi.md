@@ -17,14 +17,14 @@ toc: true
 toc_label: "목차"
 toc_icon: "microchip"
 header:
-  teaser: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.png
-  overlay_image: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.png
+  teaser: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp
+  overlay_image: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp
   overlay_filter: 0.5
 categories:
   - llmops
 ---
 
-![hero](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.png)
+![hero](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp)
 
 > 📊 **슬라이드 요약 (NotebookLM)**: 글 전체를 읽기 전에 핵심만 슬라이드로 보고 싶다면 [3층 비용 절감 슬라이드 덱 (PDF)](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-nlm-ko.pdf)를 참고하세요.
 

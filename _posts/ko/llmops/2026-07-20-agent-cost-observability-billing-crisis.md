@@ -16,7 +16,6 @@ tags:
 author_profile: true
 toc: true
 toc_label: 보이지 않는 청구서의 해부
-published: true
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/agent-cost-observability-billing-crisis/"

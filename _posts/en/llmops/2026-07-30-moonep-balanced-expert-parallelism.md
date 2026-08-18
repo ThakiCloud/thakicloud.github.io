@@ -107,7 +107,7 @@ First, what we could not do. **We did not run the communication kernels.** They 
 
 The setup is 256 experts, 8 EP ranks, 2048 tokens per rank, top-8. Rank capacity is therefore `S × K`, or 16,384 tokens. Router skew is controlled by the sigma of the lognormal distribution the generator uses: 0 is perfectly balanced, 1 is what the docs call typical dropless-MoE skew, and 5 is near-degenerate routing.
 
-![Two bar charts showing tokens received per rank and the share of migrated tokens](/assets/images/moonep-balanced-expert-parallelism-results.png)
+![Two bar charts showing tokens received per rank and the share of migrated tokens](/assets/images/moonep-balanced-expert-parallelism-results.webp)
 
 | Bias sigma | Baseline peak load | Baseline min load | Peak/mean | MoonEP peak/mean | Migrated tokens | Copy slots |
 |---|---|---|---|---|---|---|

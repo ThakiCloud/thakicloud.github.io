@@ -14,7 +14,6 @@ tags:
 author_profile: true
 toc: true
 toc_label: Cost Study
-published: true
 categories:
   - llmops
   - dev

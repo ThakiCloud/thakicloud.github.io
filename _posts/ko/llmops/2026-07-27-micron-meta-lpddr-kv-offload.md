@@ -25,7 +25,7 @@ audiobook: /assets/audio/posts/micron-meta-lpddr-kv-offload/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![어두운 배경 위에서 작고 밝은 코어를 넓고 투명한 층들이 겹겹이 둘러싼 추상 이미지](/assets/images/micron-meta-lpddr-kv-offload-hero.png)
+![어두운 배경 위에서 작고 밝은 코어를 넓고 투명한 층들이 겹겹이 둘러싼 추상 이미지](/assets/images/micron-meta-lpddr-kv-offload-hero.webp)
 *좁고 뜨거운 HBM 코어와 넓고 차가운 LPDDR 계층이라는 이 백서의 구조를 형상화했습니다.*
 
 ## 왜 읽어야 하나
@@ -61,14 +61,14 @@ flowchart TB
 
 하드웨어 구성도 특이합니다. 시험대는 NVIDIA GH200 그레이스 호퍼 슈퍼칩입니다. 그레이스 CPU에는 LPDDR5X가 붙어 있고 호퍼 GPU에는 HBM3e가 붙어 있으며, 둘은 NVLink C2C로 이어져 캐시 일관성을 유지합니다. 이 구성에서는 프레임워크가 LPDDR을 GPU 메모리의 연장으로 다룰 수 있습니다. 백서는 단일 슈퍼칩 구성과 512GB LPDDR5X를 가진 슈퍼칩 두 개를 묶어 1TB를 흉내 낸 구성을 쓰고, 여기서 192GB LPDDR5X SOCAMM2 모듈 여덟 장으로 CPU당 1.5TB까지 가는 경우를 투사합니다. 모델은 Llama 3 70B를 FP16으로 올렸고 서빙 엔진은 TensorRT-LLM과 vLLM을 썼습니다.
 
-![그레이스 CPU의 LPDDR5X와 호퍼 GPU의 HBM3e가 NVLink C2C로 연결된 GH200 구성 도식](/assets/images/micron-meta-lpddr-kv-offload-slide-05.png)
+![그레이스 CPU의 LPDDR5X와 호퍼 GPU의 HBM3e가 NVLink C2C로 연결된 GH200 구성 도식](/assets/images/micron-meta-lpddr-kv-offload-slide-05.webp)
 *시험대인 GH200에서는 LPDDR이 GPU 메모리의 연장선으로 다뤄집니다.*
 
 ## 숫자를 직접 확인해 봤습니다
 
 백서의 전제가 맞는지 보려면 남의 그래프를 읽는 것보다 직접 계산하는 편이 빠릅니다. Llama 3 70B는 공개된 설정에서 레이어 80개, KV 헤드 8개, 헤드 차원 128을 씁니다. 키와 값 두 벌을 FP16으로 들고 있으므로 토큰 하나가 차지하는 캐시는 2 곱하기 80 곱하기 8 곱하기 128 곱하기 2바이트, 즉 320KiB입니다. 이 값을 컨텍스트 길이로 곱하기만 하면 세션 하나의 발자국이 나옵니다.
 
-![컨텍스트 길이별 Llama 3 70B KV 캐시 용량을 메모리 계층 용량선과 겹쳐 그린 로그 스케일 막대 그래프](/assets/images/micron-meta-lpddr-kv-offload-results.png)
+![컨텍스트 길이별 Llama 3 70B KV 캐시 용량을 메모리 계층 용량선과 겹쳐 그린 로그 스케일 막대 그래프](/assets/images/micron-meta-lpddr-kv-offload-results.webp)
 *세션 하나의 KV 발자국을 계층별 용량선과 겹쳐 그렸습니다. 500K 토큰 지점에서 이미 H100 한 장의 HBM 용량선을 크게 넘어섭니다.*
 
 결과는 다음과 같습니다. 8K 컨텍스트에서는 세션당 2.7GB로 가볍습니다. 128K로 늘리면 42.9GB가 되고, 백서가 실시간 추론 시험에 쓴 500K 컨텍스트에서는 세션 하나가 163.8GB를 요구합니다. 100만 토큰이면 327.7GB입니다. 같은 모델의 FP16 가중치가 141.2GB라는 점과 나란히 놓고 보면 백서의 주장이 그대로 확인됩니다. 500K 컨텍스트에서는 사용자 한 명의 캐시가 모델 전체보다 큽니다.
@@ -79,7 +79,7 @@ flowchart TB
 
 백서가 보고하는 핵심 수치는 두 갈래입니다. 실시간 장문 추론에서 CPU당 LPDRAM 용량을 512GB에서 1.5TB로 늘리자 첫 토큰까지 걸리는 시간이 최대 98% 줄었습니다. 500K 컨텍스트에서 Llama 3 70B를 FP16으로 돌린 조건이고, 이 개선으로 시스템 한 대가 최대 16명까지 감당했다고 적혀 있습니다. 회의 녹취를 일괄 변환하는 식의 오프라인 배치 추론에서는 같은 용량 증설이 동시 처리 요청 수, 즉 배치 크기를 두 배로 만들었습니다. 용량이 모자란 쪽은 키와 값을 반복해서 다시 계산해야 하므로 처리 속도가 떨어진다는 설명이 붙어 있습니다.
 
-![512GB에서 1.5TB 증설 시 TTFT 98% 감소, 동시 사용자 16명, 배치 크기 2배를 요약한 도식](/assets/images/micron-meta-lpddr-kv-offload-slide-06.png)
+![512GB에서 1.5TB 증설 시 TTFT 98% 감소, 동시 사용자 16명, 배치 크기 2배를 요약한 도식](/assets/images/micron-meta-lpddr-kv-offload-slide-06.webp)
 *500K 컨텍스트에서 Llama 3 70B를 FP16으로 돌렸을 때 백서가 보고한 세 가지 수치입니다.*
 
 98%라는 숫자가 커 보이지만 기전은 단순합니다. 캐시를 둘 자리가 없으면 재계산이 일어나고, 재계산은 프리필을 통째로 다시 도는 일이라 첫 토큰 지연에 그대로 얹힙니다. 자리를 만들어 주면 그 작업이 사라집니다. 성능이 좋아졌다기보다 낭비가 없어졌다고 읽는 편이 정확합니다.
@@ -88,7 +88,7 @@ flowchart TB
 
 여기서 마이크론 자신이 달아 놓은 단서가 중요합니다. 70B의 다섯 배는 메모리 종류만의 효과가 아니라 그레이스 CPU와 저전력 메모리와 NVLink의 조합에서 나온 결과라고 명시합니다. 실제로 두 시스템은 CPU 아키텍처가 다르고, GPU 연결도 한쪽은 양방향 900GB/s의 NVLink C2C, 다른 쪽은 128GB/s의 PCIe입니다. 일곱 배 차이 나는 링크를 사이에 두고 KV 캐시를 옮기는 실험이므로 이 결과를 LPDDR 대 DDR5의 순수 비교로 인용하면 틀립니다.
 
-![대역폭 293GB/s 대 215GB/s, 전력 최대 77% 절감, NVLink C2C 900GB/s 대 PCIe 128GB/s를 정리한 비교표](/assets/images/micron-meta-lpddr-kv-offload-slide-07.png)
+![대역폭 293GB/s 대 215GB/s, 전력 최대 77% 절감, NVLink C2C 900GB/s 대 PCIe 128GB/s를 정리한 비교표](/assets/images/micron-meta-lpddr-kv-offload-slide-07.webp)
 *두 시스템은 메모리만 다른 것이 아니라 CPU와 인터커넥트도 다릅니다.*
 
 ## 메타와 함께 확인한 부분
@@ -99,7 +99,7 @@ flowchart TB
 
 ## ThakiCloud 제품 적용 시사점
 
-![용량 산정 역산, 전력 예산과 TCO 재정의, 에이전트 워크로드 경제성 세 가지를 정리한 도식](/assets/images/micron-meta-lpddr-kv-offload-slide-08.png)
+![용량 산정 역산, 전력 예산과 TCO 재정의, 에이전트 워크로드 경제성 세 가지를 정리한 도식](/assets/images/micron-meta-lpddr-kv-offload-slide-08.webp)
 *이 백서를 저희 운영 관점으로 옮기면 세 갈래로 정리됩니다.*
 
 다키클라우드의 ai-platform은 쿠버네티스 위에서 고객사 GPU 자원을 나눠 쓰고 vLLM 기반 서빙을 운용합니다. 이 백서를 저희 관점으로 옮기면 세 가지가 남습니다.

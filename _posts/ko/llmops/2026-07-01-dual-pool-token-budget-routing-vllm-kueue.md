@@ -1,5 +1,5 @@
 ---
-title: "Dual-Pool Token-Budget Routing — vLLM 추론 GPU 시간 31~42% 절감하는 이원화 스케줄링"
+title: "Dual-Pool Token-Budget Routing: vLLM 추론 GPU 시간 31~42% 절감하는 이원화 스케줄링"
 excerpt: "짧은 응답 요청이 긴 응답 요청에 밀려 기다리는 HoL 블로킹은 GPU 시간을 낭비하는 조용한 적입니다. 요청을 short-context 풀과 long-context 풀로 나눠 라우팅하는 Dual-Pool Token-Budget Routing은 arXiv 2604.08075에서 GPU 시간 31~42% 절감, P99 TTFT 6% 개선을 측정했습니다. Kueue LocalQueue와 연동해 이 기법을 Kubernetes 위에서 구현하는 방법을 단계별로 정리합니다."
 seo_title: "Dual-Pool Token-Budget Routing: vLLM GPU 시간 31~42% 절감 | Thaki Cloud"
 seo_description: "vLLM 추론 요청을 short-context 풀과 long-context 풀로 이원화해 HoL 블로킹을 제거하고 GPU 시간 31~42%를 절감하는 Dual-Pool Token-Budget Routing 기법과 Kubernetes Kueue LocalQueue 연동 구현을 설명합니다."
@@ -16,11 +16,16 @@ author_profile: true
 toc: true
 toc_label: "목차"
 toc_icon: "microchip"
-canonical_url: "https://thakicloud.com/tech-blog/ko/technique/dual-pool-token-budget-routing-vllm-kueue/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/dual-pool-token-budget-routing-vllm-kueue/"
 categories:
   - llmops
-published: false
+audiobook: "https://drive.google.com/file/d/1zaFojeuvXVOf_U9Le16SWo8BT8Fc0uxC/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
+
+![Dual-Pool Token-Budget Routing: vLLM 추론 GPU 시간 31~42% 절감하는 이원화 스케줄링 개념을 형상화한 이미지](/assets/images/dual-pool-token-budget-routing-vllm-kueue-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 문제: HoL 블로킹이 GPU 시간을 조용히 낭비합니다
 
@@ -441,8 +446,8 @@ kind: Deployment
 metadata:
   name: vllm-short-pool
   namespace: llm-serving
-  annotations:
-    kueue.x-k8s.io/queue-name: short-pool-queue
+  labels:
+    kueue.x-k8s.io/queue-name: short-pool-queue   # 라벨, 어노테이션 아님
 spec:
   replicas: 2
   template:
@@ -466,7 +471,7 @@ kind: Deployment
 metadata:
   name: vllm-long-pool
   namespace: llm-serving
-  annotations:
+  labels:
     kueue.x-k8s.io/queue-name: long-pool-queue
 spec:
   replicas: 2
@@ -486,6 +491,8 @@ spec:
             limits:
               nvidia.com/gpu: "1"
 ```
+
+큐 이름을 어디에 다는지가 조용한 함정입니다. `kueue.x-k8s.io/queue-name`은 **라벨**이어야 합니다. 어노테이션에 적으면 Kueue의 웹훅이 라벨 셀렉터로 대상을 고르기 때문에 이 Deployment를 아예 집어 가지 않고, 워크로드는 큐에 들어가지도 못한 채 평범하게 스케줄됩니다. 에러가 나지 않아서 더 늦게 발견됩니다.
 
 ### 4단계: 라우터 구현 (Python 예시)
 
@@ -552,12 +559,13 @@ spec:
     - type: prometheus
       metadata:
         serverAddress: http://prometheus:9090
-        metricName: vllm_requests_waiting_short
         query: vllm:num_requests_waiting{deployment="vllm-short-pool"}
         threshold: "5"
 ```
 
 KEDA 메트릭 기반 스케일링은 단순 HTTP RPS 기반보다 추론 부하에 더 직접 대응합니다. 위 임계값 `5`는 현재 대기 요청이 5개를 초과하면 scale-up을 시작하라는 의미입니다.
+
+여기서도 오래된 예제를 그대로 옮기지 않도록 주의하십시오. 현재 KEDA Prometheus 스케일러 문서의 파라미터 목록에 `metricName`은 없습니다. 무엇을 보고 스케일할지는 `query`가 결정하므로 그 필드만 정확하면 됩니다.
 
 ### 모델 공유 vs 인스턴스 분리
 
@@ -580,3 +588,27 @@ Kueue LocalQueue를 이미 사용 중인 ThakiCloud 클러스터에서는 Short/
 Dual-Pool Token-Budget Routing이 해결하는 문제는 단순합니다. 짧은 요청과 긴 요청이 같은 대기열에 섞이면 짧은 요청이 손해를 봅니다. 이를 대기열 단계에서 분리하면 각 유형의 요청이 자기 속도로 처리됩니다.
 
 arXiv 2604.08075가 측정한 GPU 시간 31~42% 절감, preemption rate 5.4배 감소, P99 TTFT 6% 개선은 구현 복잡도에 비해 효과가 큰 기법입니다. Kubernetes 환경에서는 Kueue LocalQueue 두 개, vLLM Deployment 두 개, 경량 라우터 하나로 이 구조를 구현할 수 있습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
+
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 1](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-01.webp)
+
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 2](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-02.webp)
+
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 3](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-03.webp)
+
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 4](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-04.webp)
+
+## 출처
+
+- [Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving (arXiv)](https://arxiv.org/abs/2604.08075)
+- [Engine Arguments: max-model-len and gpu-memory-utilization (vLLM Docs)](https://docs.vllm.ai/en/latest/configuration/engine_args.html)
+- [vLLM Overview: Continuous Batching and PagedAttention (vLLM Docs)](https://docs.vllm.ai/en/latest/)
+- [Production Metrics: num_preemptions_total and num_requests_waiting (vLLM Docs v0.9.2)](https://docs.vllm.ai/en/v0.9.2/usage/metrics.html)
+- [ClusterQueue and ResourceFlavor Concepts (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/)
+- [LocalQueue Concept (Kueue Docs)](https://kueue.sigs.k8s.io/docs/concepts/local_queue/)
+- [Run Deployment on Kueue (Kueue Docs)](https://kueue.sigs.k8s.io/docs/tasks/run/deployment/)
+- [Prometheus Scaler Trigger Reference (KEDA Docs)](https://keda.sh/docs/latest/scalers/prometheus/)

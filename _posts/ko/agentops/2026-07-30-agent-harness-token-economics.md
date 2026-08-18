@@ -17,6 +17,8 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-harness-token-economics/"
+audiobook: /assets/audio/posts/agent-harness-token-economics/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트 비용이 예상을 넘으면 가장 먼저 검토하는 것은 보통 모델입니다. 더 싼 모델로 갈아타거나, 더 작은 모델로 내려가는 선택을 먼저 떠올립니다. 그런데 2026년 7월 29일에 Composio가 공개한 측정은 그 순서가 뒤바뀌어 있을 수 있다고 말합니다. 모델을 고정하고 하네스만 바꿨는데 같은 과제의 토큰 청구서가 몇 배로 벌어졌습니다.
@@ -99,7 +101,7 @@ bash scripts/blog/impl_sandbox.sh teardown agent-harness-token-economics
 
 세 전략의 턴당 예산으로 정리하면 이렇게 됩니다. 전략 A는 스킬 본문을 전부 주입하는 경우, B는 인덱스만 상주시키는 경우, C는 검색기로 상위 여섯 개만 고르는 경우입니다.
 
-![세 전략의 턴당 토큰 예산 비교와, 라우팅 이후 남는 예산의 구성 비율](/assets/images/agent-harness-token-economics-results.png)
+![세 전략의 턴당 토큰 예산 비교와, 라우팅 이후 남는 예산의 구성 비율](/assets/images/agent-harness-token-economics-results.webp)
 
 격리 체크아웃에서 A는 4,425,793 토큰, B는 394,096 토큰, C는 96,758 토큰입니다. A와 B의 비는 11.2배이고, A와 C의 비는 45.7배입니다. 라이브 트리에서는 규모가 커지면서 격차가 더 벌어집니다. A가 6,484,761 토큰, B가 531,627 토큰, C가 98,387 토큰이고, A와 C의 비는 65.9배입니다.
 
@@ -136,6 +138,19 @@ Paxis의 Skill Harness는 스킬을 전부 컨텍스트에 밀어 넣지 않고 
 실무로 옮기면 순서가 셋입니다. 먼저 자기 하네스의 상주 입력을 계층별로 실제 토크나이저로 세십니다. 추정하지 마시고 세십니다. 다음으로 가장 큰 계층부터 손대십니다. 대부분의 팀이 스킬이나 도구 개수를 먼저 줄이려 하지만, 선택 계층이 붙어 있다면 그쪽은 이미 상수에 가깝고 진짜 비용은 매 턴 무조건 로드되는 문서 쪽에 있습니다. 마지막으로 모델 교체는 이 두 단계를 끝낸 다음에 검토하십니다. 하네스에서 40배가 움직이는 동안 모델 단가에서 3배를 아끼려고 애쓰는 것은 순서가 뒤바뀐 일입니다.
 
 저희가 쓴 계수 스크립트는 저장소에 남겨 두었습니다. 룰 디렉터리와 스킬 정의를 훑어 계층별 토큰을 세고 세 전략의 예산을 비교해 주므로, 구조가 비슷한 하네스라면 경로만 바꿔 그대로 돌려 보실 수 있습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
+
+![agent-harness-token-economics 슬라이드 1](/assets/images/agent-harness-token-economics-slide-01.webp)
+
+![agent-harness-token-economics 슬라이드 2](/assets/images/agent-harness-token-economics-slide-02.webp)
+
+![agent-harness-token-economics 슬라이드 3](/assets/images/agent-harness-token-economics-slide-03.webp)
+
+![agent-harness-token-economics 슬라이드 4](/assets/images/agent-harness-token-economics-slide-04.webp)
 
 ## 출처
 

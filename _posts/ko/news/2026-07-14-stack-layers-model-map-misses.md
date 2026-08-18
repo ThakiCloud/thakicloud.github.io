@@ -16,7 +16,6 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/stack-layers-model-map-misses/"
-published: false
 ---
 
 AI 시장을 이야기할 때 우리는 보통 모델을 줄 세웁니다. 프론티어가 있고, 그 절반 값의 중국 상위 모델이 있고, 말이 안 되게 싼 초저비용 모델이 있고, 서비스 기업이 만든 자체 모델과 기기 위에서 도는 온디바이스 모델이 있다는 식입니다. 이 지도는 정확합니다. 어떤 모델이 존재하는지를 잘 보여 줍니다.
@@ -103,3 +102,16 @@ DeepSeek와 GLM처럼 순수 MIT로 풀린 모델은 베이스 계층을 사실�
 ---
 
 *이 글의 모델명, 가격, 라이선스, 출시 시점은 2026년 7월 14일 기준 공개 자료로 검증했습니다. 벤더 자체 보고 수치(추론 속도, PR 병합률, 화웨이 비용 절감 주장)와 제3자 미검증 항목은 본문에 명시했습니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![stack-layers-model-map-misses 슬라이드 1](/assets/images/stack-layers-model-map-misses-slide-01.webp)
+
+![stack-layers-model-map-misses 슬라이드 2](/assets/images/stack-layers-model-map-misses-slide-02.webp)
+
+![stack-layers-model-map-misses 슬라이드 3](/assets/images/stack-layers-model-map-misses-slide-03.webp)
+
+![stack-layers-model-map-misses 슬라이드 4](/assets/images/stack-layers-model-map-misses-slide-04.webp)
+

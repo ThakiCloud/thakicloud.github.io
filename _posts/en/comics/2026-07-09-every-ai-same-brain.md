@@ -13,21 +13,22 @@ tags:
   - AI
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/every-ai-same-brain/strip.png
+image: /assets/images/posts/comics/every-ai-same-brain/strip.webp
 audiobook: /assets/audio/posts/every-ai-same-brain/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/every-ai-same-brain/"
+published: false
 ---
 
-An MIT paper is making the rounds. The claim: every AI model on earth is quietly converging on the same internal "brain" — the same way of representing the world. That inner representation is just how a model draws its mental map of everything. Different labs, different data, and yet the maps keep drifting toward one shape. Which leaves an awkward question: if the brains all end up alike, why keep renting someone else's premium one by the month?
+An MIT paper is making the rounds. The claim: every AI model on earth is quietly converging on the same internal "brain", the same way of representing the world. That inner representation is just how a model draws its mental map of everything. Different labs, different data, and yet the maps keep drifting toward one shape. Which leaves an awkward question: if the brains all end up alike, why keep renting someone else's premium one by the month?
 
-![Turns Out Every AI Has the Same Brain]({{ '/assets/images/posts/comics/every-ai-same-brain/strip.png' | relative_url }})
+![Turns Out Every AI Has the Same Brain]({{ '/assets/images/posts/comics/every-ai-same-brain/strip.webp' | relative_url }})
 
 > Source: [RT @HowToPrompt__: MIT published a paper arguing that every AI model on earth is secretly converging on the same "brain.](https://x.com/hjguyhan/status/2074777331252756567) · twitter
 
 ## What this means for ThakiCloud
 
-If brains level up to roughly the same ceiling, the real difference shifts to where you run one and who holds the controls. As model quality converges, the fight moves to where your data lives and who owns the bill. That is exactly ThakiCloud's bet: Metis runs training and inference inside your own facilities, and Paxis layers agent orchestration on top. Because it is on-prem — operated within your own walls — a commodity-grade brain still leaves data sovereignty and cost control in your hands. The more identical the brains get, the more it pays to keep yours at home.
+If brains level up to roughly the same ceiling, the real difference shifts to where you run one and who holds the controls. As model quality converges, the fight moves to where your data lives and who owns the bill. That is exactly ThakiCloud's bet: Metis runs training and inference inside your own facilities, and Paxis layers agent orchestration on top. Because it is on-prem, operated within your own walls, a commodity-grade brain still leaves data sovereignty and cost control in your hands. The more identical the brains get, the more it pays to keep yours at home.
 
 ---
 

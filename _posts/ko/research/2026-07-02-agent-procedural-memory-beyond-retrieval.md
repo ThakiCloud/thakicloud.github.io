@@ -20,7 +20,6 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1fE7l1erjZhLKd5yItoXxPJOI7k5NXbIB/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![에이전트 절차적 메모리: 프롬프트 검색을 넘어 임시 템플릿에서 인지 인프라로의 전환]({{ '/assets/images/agent-procedural-memory-beyond-retrieval-slide-01.webp' | relative_url }})

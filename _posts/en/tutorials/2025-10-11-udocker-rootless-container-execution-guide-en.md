@@ -16,18 +16,25 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/tutorials/udocker-rootless-container-execution-guide/
-canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/udocker-rootless-container-execution-guide/"
+canonical_url: "https://thakicloud.com/tech-blog/en/tutorials/udocker-rootless-container-execution-guide-en/"
 categories:
   - tutorials
+audiobook: "https://drive.google.com/file/d/1xyVdDM2VQx3X9PjtalKg9hrRmzgbruvs/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 ⏱️ **Estimated Reading Time**: 12 minutes
+
+![Illustration of the core idea of udocker: Complete Guide to Rootless Docker Container Execution](/assets/images/udocker-rootless-container-execution-guide-en-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Introduction
 
 Have you ever needed to run Docker containers on a system where you don't have root privileges? Whether you're working on an HPC cluster, a shared computing environment, or a security-conscious organization, **udocker** is the perfect solution for executing Docker containers without requiring administrative access.
 
 udocker is a basic user tool that enables the execution of simple Docker containers in batch or interactive systems without root privileges. Developed by the INDIGO-DataCloud project, it provides a secure and practical way to run containerized applications in environments where traditional Docker isn't available or permitted.
+
 
 ## What is udocker?
 
@@ -45,6 +52,27 @@ udocker is a Python-based tool that allows users to:
 - **Docker Compatibility**: Works with standard Docker images and registries
 - **Security Focused**: Provides isolation without compromising system security
 - **HPC Optimized**: Designed for high-performance computing environments
+
+### How it works at a glance
+
+udocker runs no daemon. It unpacks the image layers it pulls from a registry into a rootfs under your home directory, then at run time picks one of four engines to start a process inside that rootfs. The diagram below traces the path from pull to run and shows where the execution modes branch.
+
+```mermaid
+flowchart TD
+    R["Docker Registry<br/>docker.io"] -->|"udocker pull"| L["Image layers<br/>~/.udocker/layers"]
+    L -->|"udocker create"| C["Container rootfs<br/>~/.udocker/containers"]
+    C -->|"udocker setup --execmode"| M{"Execution mode"}
+    M -->|"P1 fast / P2 compatible"| P["PRoot<br/>ptrace interception"]
+    M -->|"F1 to F4"| F["Fakechroot<br/>LD_PRELOAD"]
+    M -->|"R1 runC / R2 crun"| N["runC or crun<br/>rootless namespaces"]
+    M -->|"S1"| S["Singularity<br/>external install"]
+    P --> U["udocker run<br/>user process, no daemon, no root"]
+    F --> U
+    N --> U
+    S --> U
+```
+
+*Image acquisition and execution are separate concerns, so swapping the execution engine runs the same container under a different isolation method.*
 
 ## Installation Guide
 
@@ -433,6 +461,7 @@ udocker commit my-container my-custom-image
 | HPC Optimized | Yes | No | Yes | No |
 | Multiple Engines | Yes | No | No | No |
 | User Namespaces | Optional | Yes | Yes | Yes |
+
 
 ## Conclusion
 

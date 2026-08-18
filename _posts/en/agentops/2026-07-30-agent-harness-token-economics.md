@@ -99,7 +99,7 @@ Resident memory reads 0 in the isolated checkout because that file is generated 
 
 Expressed as the per-turn budget of the three strategies: A injects every skill body, B keeps only the index resident, and C lets the retriever pick the top six.
 
-![Per-turn token budget across the three strategies, and the composition of what remains after routing](/assets/images/agent-harness-token-economics-results.png)
+![Per-turn token budget across the three strategies, and the composition of what remains after routing](/assets/images/agent-harness-token-economics-results.webp)
 
 In the isolated checkout, A is 4,425,793 tokens, B is 394,096, and C is 96,758. A over B is 11.2x and A over C is 45.7x. On the live tree the gap widens with scale: A is 6,484,761, B is 531,627, C is 98,387, and A over C reaches 65.9x.
 

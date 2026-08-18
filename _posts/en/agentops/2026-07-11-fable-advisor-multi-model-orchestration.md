@@ -18,10 +18,15 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/fable-advisor-multi-model-orchestration/"
-published: false
+audiobook: "https://drive.google.com/file/d/1cdseXNeujQlZTRD7vIvaIpkdp7aVyFwV/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
-Anyone who has used a coding agent for a while eventually arrives at a natural question. Writing a precise spec and sharply reviewing a resulting diff is a different kind of work from actually typing out code line by line, so why should the same single model have to do both? The recently released and widely discussed `fable-advisor` plugin answers this question head on. It is a cross-vendor workflow in which **Claude Fable 5 does nothing but conduct, while Grok 4.5 handles all of the actual implementation**. This post breaks down that structure and examines what this design suggests from ThakiCloud's operational perspective, where multi-agent systems and model routing are treated as first-class resources.
+Anyone who has used a coding agent for a while eventually arrives at a natural question. Writing a precise spec and sharply reviewing a resulting diff is a different kind of work from actually typing out code line by line, so why should the same single model have to do both? The recently released and widely discussed `fable-advisor` plugin answers this question head on. It is a cross-vendor workflow in which **Claude Fable 5 does nothing but conduct, while Grok 4.5 handles all of the actual implementation**. If your team is weighing the cost and quality of a coding agent together, this structure of splitting models by role offers a design principle you can put to use right away.
+
+![Illustration of the core idea of A Cross-Vendor Workflow Where Fable 5 Conducts and Grok 4.5 Implements: fable-advisor](/assets/images/fable-advisor-multi-model-orchestration-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Overview
 
@@ -43,7 +48,7 @@ The overall flow looks like this in diagram form.
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -60,7 +65,7 @@ The overall flow looks like this in diagram form.
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -381,7 +386,7 @@ From an integration standpoint, it is worth noting that the routing logic is ope
 
 ## How This Design Actually Performs
 
-`fable-advisor` is not a tool that touts benchmark numbers but a workflow pattern, so instead of reproducible performance figures, this section covers the structural effects the design produces. Since the repository does not present quantitative metrics, this post also avoids inventing numbers and sticks to structural benefits.
+`fable-advisor` is not a tool that touts benchmark numbers but a workflow pattern. Since the repository does not present quantitative metrics, it should be judged not by performance figures but by the structural effects the design produces.
 
 The biggest effect is the **separation of cost and quality**. When orchestration that requires judgment goes to the conductor and implementation that requires throughput goes to a low-cost implementer, the overall workflow's unit cost drops while judgment quality is preserved. The arrangement "call the conductor sparingly and cheaply, call the implementer often but not expensively" falls into place naturally.
 

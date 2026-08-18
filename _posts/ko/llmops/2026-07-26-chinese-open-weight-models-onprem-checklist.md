@@ -22,7 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/chinese-open-weight-models-onprem-checklist/"
 ---
 
-![밀봉된 투명 보관함 안의 신경망 격자와 그것을 둘러싼 검사 고리를 형상화한 개념 이미지](/assets/images/chinese-open-weight-models-onprem-checklist-hero.png)
+![밀봉된 투명 보관함 안의 신경망 격자와 그것을 둘러싼 검사 고리를 형상화한 개념 이미지](/assets/images/chinese-open-weight-models-onprem-checklist-hero.webp)
 *가중치 자체보다 그것을 감싼 반입 절차가 안전을 결정한다는 구조를 형상화했습니다.*
 
 ## 왜 읽어야 하나
@@ -160,11 +160,11 @@ Paxis 층에서는 무엇을 들여올지와 무엇을 실행할지를 통제합
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![chinese-open-weight-models-onprem-checklist 슬라이드 1](/assets/images/chinese-open-weight-models-onprem-checklist-slide-01.png)
+![chinese-open-weight-models-onprem-checklist 슬라이드 1](/assets/images/chinese-open-weight-models-onprem-checklist-slide-01.webp)
 
-![chinese-open-weight-models-onprem-checklist 슬라이드 2](/assets/images/chinese-open-weight-models-onprem-checklist-slide-02.png)
+![chinese-open-weight-models-onprem-checklist 슬라이드 2](/assets/images/chinese-open-weight-models-onprem-checklist-slide-02.webp)
 
-![chinese-open-weight-models-onprem-checklist 슬라이드 3](/assets/images/chinese-open-weight-models-onprem-checklist-slide-03.png)
+![chinese-open-weight-models-onprem-checklist 슬라이드 3](/assets/images/chinese-open-weight-models-onprem-checklist-slide-03.webp)
 
-![chinese-open-weight-models-onprem-checklist 슬라이드 4](/assets/images/chinese-open-weight-models-onprem-checklist-slide-04.png)
+![chinese-open-weight-models-onprem-checklist 슬라이드 4](/assets/images/chinese-open-weight-models-onprem-checklist-slide-04.webp)
 

@@ -15,6 +15,7 @@ categories:
   - 만화
 audiobook: https://drive.google.com/file/d/1u60CUwh3vVjeKtn3WKbapFq0FfDO2LpD/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 어느 날 정신을 차려 보니 모델도, 추론 엔진도, 벡터 DB도 전부 남의 나라 회사 것이었습니다. 잘 돌아가긴 합니다. 문제는 스택의 어느 층도 제가 직접 통제하지 못한다는 점입니다. 약관이 바뀌거나 수출 규제가 걸리면 그날로 서비스가 멈출 수 있습니다. 여기서 '주권(sovereignty)'이란 모델과 데이터, 인프라를 남의 손이 아니라 내 통제 아래 두는 것을 뜻합니다. 파시스와 메티스가 이 상황을 어떻게 받아치는지 여섯 컷에 담았습니다.
@@ -30,3 +31,16 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-stack-sovereignty 슬라이드 1](/assets/images/ai-stack-sovereignty-slide-01.webp)
+
+![ai-stack-sovereignty 슬라이드 2](/assets/images/ai-stack-sovereignty-slide-02.webp)
+
+![ai-stack-sovereignty 슬라이드 3](/assets/images/ai-stack-sovereignty-slide-03.webp)
+
+![ai-stack-sovereignty 슬라이드 4](/assets/images/ai-stack-sovereignty-slide-04.webp)
+

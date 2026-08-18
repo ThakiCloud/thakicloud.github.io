@@ -21,7 +21,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/archify-agent-architecture-diagrams/"
 ---
 
-![여러 개의 상자와 연결선이 하나의 정돈된 격자 구조로 수렴하는 모습을 형상화한 추상 이미지]({{ '/assets/images/archify-agent-architecture-diagrams-hero.png' | relative_url }})
+![여러 개의 상자와 연결선이 하나의 정돈된 격자 구조로 수렴하는 모습을 형상화한 추상 이미지]({{ '/assets/images/archify-agent-architecture-diagrams-hero.webp' | relative_url }})
 
 ## 왜 읽어야 하나
 
@@ -45,7 +45,7 @@ Archify는 `tt-a1i`가 MIT 라이선스로 공개한 오픈소스 에이전트 �
 
 다섯 렌더러는 각각 다른 종류의 그림을 담당합니다. architecture는 시스템 구성 요소와 경계를 담고, workflow는 승인 흐름이나 CI/CD 같은 절차를, sequence는 요청 생애주기나 API 호출 순서를, dataflow는 ETL과 이벤트 스트림 같은 데이터 이동을, lifecycle는 배포나 에이전트 실행의 상태 전이를 표현합니다. 그리려는 대상이 정해지면 그에 맞는 렌더러와 스키마가 붙고, 그 스키마가 입력 JSON을 강제합니다.
 
-![Archify의 다섯 가지 렌더링 스키마: architecture, workflow, sequence, dataflow, lifecycle]({{ '/assets/images/archify-agent-architecture-diagrams-slide-05.png' | relative_url }})
+![Archify의 다섯 가지 렌더링 스키마: architecture, workflow, sequence, dataflow, lifecycle]({{ '/assets/images/archify-agent-architecture-diagrams-slide-05.webp' | relative_url }})
 
 이 역할 분담이 Mermaid와의 결정적 차이를 만듭니다. Mermaid는 문법을 파싱해 자동 배치(dagre)로 그림을 뽑지만, 선이 상자를 가로지르거나 라벨이 겹쳐도 그대로 그려 냅니다. Archify는 반대로 배치 좌표를 명시하게 하고, 렌더 직전에 **레이아웃 규칙을 강제로 검사**합니다. 규칙을 어기면 아예 그림을 만들지 않고 오류로 멈춥니다.
 
@@ -468,7 +468,7 @@ Error: Architecture layout validation failed:
 | 테마 지원 | `data-theme` 27곳 · `prefers-color-scheme` 7곳 |
 | 외부 참조 | 1건 (JetBrains Mono 웹폰트, 시스템 폰트로 폴백) |
 
-![다키클라우드 스택 실측 결과: 렌더 0.073초, 단일 HTML 508KB, 외부 참조 1건, 테마 변수 27곳]({{ '/assets/images/archify-agent-architecture-diagrams-slide-07.png' | relative_url }})
+![다키클라우드 스택 실측 결과: 렌더 0.073초, 단일 HTML 508KB, 외부 참조 1건, 테마 변수 27곳]({{ '/assets/images/archify-agent-architecture-diagrams-slide-07.webp' | relative_url }})
 
 숫자로 보면, 렌더 자체는 73밀리초로 사실상 즉시입니다. 결과물은 이미지 서버나 CDN에 의존하지 않는 자기완결형 HTML 한 장이며, 유일한 외부 참조는 코드용 웹폰트 하나뿐이라 오프라인에서도 시스템 폰트로 깨지지 않고 열립니다. 다크·라이트 테마는 장식이 아니라 실제 CSS 변수와 `prefers-color-scheme`로 구현돼 있었습니다.
 
@@ -482,7 +482,7 @@ Error: Architecture layout validation failed:
 
 **ai-platform 렌즈(인프라·문서화).** 자기완결형 HTML은 온프렘·소버린 환경에서 특히 유용합니다. 외부 다이어그램 SaaS에 내부 아키텍처를 올릴 수 없는 고객에게, 렌더가 로컬에서 끝나고 결과가 단일 파일로 남는 방식은 그대로 반입 가능한 산출물이 됩니다. 또한 JSON-IR은 텍스트라 Git으로 버전 관리되고 diff가 됩니다. ArgoCD로 매니페스트를 관리하듯 아키텍처 다이어그램도 코드로 관리하며, 변경 이력을 추적하고 리뷰할 수 있습니다. 신입 온보딩 문서나 고객용 배포 구조도를 매번 손으로 다시 그리는 대신, 구조가 바뀔 때 JSON만 고쳐 다시 렌더하면 됩니다.
 
-![다이어그램도 코드로: JSON-IR의 Git 버전 관리, ArgoCD 매니페스트처럼 변경 이력 리뷰, 온프렘 자기완결형 문서화 자산]({{ '/assets/images/archify-agent-architecture-diagrams-slide-09.png' | relative_url }})
+![다이어그램도 코드로: JSON-IR의 Git 버전 관리, ArgoCD 매니페스트처럼 변경 이력 리뷰, 온프렘 자기완결형 문서화 자산]({{ '/assets/images/archify-agent-architecture-diagrams-slide-09.webp' | relative_url }})
 
 두 렌즈는 서로를 보완합니다. 검증된 스킬(Paxis)이 재현 가능한 산출물(ai-platform 문서화)을 만들고, 그 산출물이 다시 온프렘 고객에게 반입 가능한 자산이 됩니다.
 
@@ -504,7 +504,7 @@ Archify를 직접 설치해 다키클라우드 스택을 그려 본 결론은 �
 
 그래서 다음 행동은 명확합니다. 아키텍처 다이어그램을 자주 그리고, 그 그림을 문서나 저장소에 코드처럼 남기고 싶다면 Archify를 한 번 돌려 볼 값어치가 있습니다. 반대로 빠른 스케치나 페이지에 여러 장을 얹는 용도라면 Mermaid가 여전히 가볍습니다. 판단 기준은 "이 그림을 재현 가능하고 검증된 자산으로 관리할 것인가"입니다. 그렇다면 Archify가, 그리고 같은 원리를 제품으로 만드는 Paxis의 스킬 하니스가 답이 됩니다.
 
-![선택 기준: 빠른 스케치와 자유로운 낙서라면 Mermaid, 재현 가능하고 검증된 문서·코드 자산이라면 Archify]({{ '/assets/images/archify-agent-architecture-diagrams-slide-11.png' | relative_url }})
+![선택 기준: 빠른 스케치와 자유로운 낙서라면 Mermaid, 재현 가능하고 검증된 문서·코드 자산이라면 Archify]({{ '/assets/images/archify-agent-architecture-diagrams-slide-11.webp' | relative_url }})
 
 > 출처
 > - Archify 저장소: [github.com/tt-a1i/archify](https://github.com/tt-a1i/archify) (MIT, v2.11.0)

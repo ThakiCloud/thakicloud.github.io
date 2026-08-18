@@ -25,7 +25,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 멀티턴 도구 사용과 환경 피드백으로 움직이는 LLM 에이전트를 강화학습으로 훈련하고 있다면, 이 글이 바로 여러분을 위한 것입니다. 핵심 결론을 먼저 적겠습니다. 에이전트 RL이 잘 안 되는 가장 흔한 이유는 모델이 약해서가 아니라 보상이 궤적 끝에 딱 한 번만 오기 때문이며, SEED는 에이전트가 자기 궤적을 스스로 분석해 만든 자연어 스킬을 다시 자기에게 되먹이는 방식으로 그 희소한 신호를 토큰 단위의 촘촘한 신호로 바꿉니다. 이 방법은 텍스트 기반과 비전 기반 에이전트 과제 모두에서 성능과 샘플 효율을 함께 끌어올렸습니다.
 
-![스스로의 궤적을 되돌아보며 자기 자신에게 지식을 증류하는 에이전트를 형상화한 추상 이미지](/assets/images/seed-self-evolving-distillation-agentic-rl-hero.png)
+![스스로의 궤적을 되돌아보며 자기 자신에게 지식을 증류하는 에이전트를 형상화한 추상 이미지](/assets/images/seed-self-evolving-distillation-agentic-rl-hero.webp)
 *완료된 궤적에서 스킬을 캐내 다시 자기에게 되먹이는 SEED의 자기진화 루프를 형상화했습니다.*
 
 ## 왜 읽어야 하나
@@ -408,11 +408,11 @@ SEED의 자기진화 구조는 강력하지만, 정책 자신이 분석가를 �
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![seed-self-evolving-distillation-agentic-rl 슬라이드 1](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-01.png)
+![seed-self-evolving-distillation-agentic-rl 슬라이드 1](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-01.webp)
 
-![seed-self-evolving-distillation-agentic-rl 슬라이드 2](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-02.png)
+![seed-self-evolving-distillation-agentic-rl 슬라이드 2](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-02.webp)
 
-![seed-self-evolving-distillation-agentic-rl 슬라이드 3](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-03.png)
+![seed-self-evolving-distillation-agentic-rl 슬라이드 3](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-03.webp)
 
-![seed-self-evolving-distillation-agentic-rl 슬라이드 4](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-04.png)
+![seed-self-evolving-distillation-agentic-rl 슬라이드 4](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-04.webp)
 

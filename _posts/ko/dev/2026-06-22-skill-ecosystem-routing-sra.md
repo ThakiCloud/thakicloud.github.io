@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/skill-ecosystem-routing-
 reading_time: true
 categories:
   - dev
-published: false
 audiobook: /assets/audio/posts/skill-ecosystem-routing-sra/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

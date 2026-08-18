@@ -10,7 +10,7 @@ author_profile: true
 toc: true
 audiobook: /assets/audio/posts/nvfp4-moe-selective-quant/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-canonical_url: "https://thakicloud.github.io/ko/research/nvfp4-moe-selective-quant/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/nvfp4-moe-selective-quant/"
 ---
 
 MoE(Mixture-of-Experts) 모델을 H200이나 Blackwell급 클러스터에서 서빙하면서 NVFP4 4비트 양자화 도입을 저울질하고 있다면, 이 글의 결론 한 줄이 바로 실무 지침이 됩니다. 모델의 모든 전문가를 똑같이 4비트로 누르는 대신 일부만 전정밀도로 지킬 수 있을 때, 지켜야 할 대상은 트래픽이 많은 "핫" 전문가입니다. 실제 디코더 MoE인 `allenai/OLMoE-1B-7B-0924`(전문가 1024개, top-8 라우팅)를 H200에서 측정한 결과, 핫 전문가를 지키는 정책은 같은 저장 공간을 쓰는 무작위 배분을 모든 저장 예산에서 파레토 지배했습니다. 가장 뜨거운 10퍼센트만 지켜도(균일 4비트 대비 약 24퍼센트 저장 프리미엄) 정확도 격차의 46.9퍼센트가 돌아왔습니다.
@@ -37,12 +37,12 @@ MoE 아키텍처는 토큰마다 소수의 전문가 서브네트워크만 활�
 
 가장 뜨거운 10퍼센트를 지키는 K=10퍼센트(전문가 102개, 4.7GB)에서 핫 정책은 perplexity 1.489로 46.9퍼센트를 회복했습니다. 같은 저장 공간을 쓰는 무작위 배분은 1.551로 9.7퍼센트, 왜곡 기준 배분은 1.554로 8.2퍼센트에 그쳤습니다. K=25퍼센트(전문가 256개, 6.1GB)에서는 핫이 1.454로 67.5퍼센트, 무작위가 1.516으로 30.5퍼센트, 왜곡이 1.516으로 30.8퍼센트였습니다. K=50퍼센트(전문가 512개, 8.4GB)에서는 핫이 1.445로 72.8퍼센트, 무작위가 1.474로 55.4퍼센트, 왜곡이 1.461로 63.4퍼센트를 기록했습니다. 가장 빠듯하면서 실무적으로 가장 매력적인 K=10퍼센트 예산에서 트래픽은 무작위를 거의 다섯 배 앞섰고, 세 예산을 통틀어 그 격차는 대략 두 배에서 다섯 배 사이였습니다.
 
-![Loss-gap recovery by policy]({{ '/assets/images/posts/research/nvfp4-moe-selective-quant/fig-gap-recovery.png' | relative_url }})
+![Loss-gap recovery by policy]({{ '/assets/images/posts/research/nvfp4-moe-selective-quant/fig-gap-recovery.webp' | relative_url }})
 *같은 저장 공간(보호 비율 K)에서 각 정책이 회복한 손실 격차 비율입니다. 트래픽 기준 핫 전문가 보호가 K=10/25/50퍼센트에서 46.9/67.5/72.8퍼센트를 회복해, 무작위(선형 혼합)의 9.7/30.5/55.4퍼센트를 크게 앞섭니다. 왜곡 기준 배분은 트래픽이 아니라 무작위를 따라갑니다.*
 
 정확도와 저장 공간을 함께 그린 프론티어에서도 결론은 같습니다. 핫 정책 곡선은 모든 중간 저장 예산에서 무작위와 왜곡 곡선보다 엄격히 아래에 놓입니다. 즉 단순 선형 혼합에 밀리는 것이 아니라, 그 선형 추세를 파레토 지배합니다. 이전 버전의 부정적 그래프가 뒤집힌 셈입니다.
 
-![Accuracy vs storage frontier]({{ '/assets/images/posts/research/nvfp4-moe-selective-quant/fig-accuracy-storage-pareto.png' | relative_url }})
+![Accuracy vs storage frontier]({{ '/assets/images/posts/research/nvfp4-moe-selective-quant/fig-accuracy-storage-pareto.webp' | relative_url }})
 *OLMoE-1B-7B의 perplexity 대 양자화 전문가 저장 공간입니다. 모든 정책은 균일 4비트(3.8GB, ppl 1.568)에서 bf16 기준선(13.0GB, ppl 1.399)으로 보간되지만, 트래픽 기준 핫 곡선만 모든 중간 예산에서 무작위와 왜곡보다 아래에 놓여 선형 추세를 파레토 지배합니다. 정확도는 가짜 양자화 프록시로 측정했고 처리 속도는 측정하지 않았습니다.*
 
 ## 왜 트래픽은 통하고 왜곡은 통하지 않았나
@@ -51,7 +51,7 @@ MoE 아키텍처는 토큰마다 소수의 전문가 서브네트워크만 활�
 
 그런데 사전 등록했던 두 번째 가설, "전문가별 양자화 왜곡이 트래픽보다 나은 신호일 것"은 데이터가 명확히 기각했습니다. 1024개 전문가에 걸쳐 트래픽은 최소 0, 평균 91.6, 최대 727 라우팅 토큰으로 퍼져서 가장 뜨거운 전문가가 평균의 7.9배에 달합니다. 트래픽은 전문가를 날카롭게 갈라놓습니다. 반면 전문가별 4비트 왜곡은 최소 0.051, 평균 0.055, 최대 0.107로, 가장 왜곡이 큰 전문가조차 평균의 1.9배에 그치고 전체가 평균의 0.93배에서 1.94배 안에 몰려 있습니다. 이렇게 균일한 신호로는 순위를 매길 수 없습니다. 그래서 표에서도 왜곡 정책이 트래픽이 아니라 무작위를 따라간 것입니다(K=10퍼센트에서 8.2퍼센트 대 9.7퍼센트, K=25퍼센트에서 30.8퍼센트 대 30.5퍼센트). 실무 결론은 구체적입니다. 이 모델에서는 트래픽으로 순위를 매기고, 전문가별 왜곡을 계산하는 데 노력을 들이지 마십시오. 어떤 전문가를 지켜야 하는지 왜곡은 알려주지 못합니다.
 
-![Why traffic works and distortion does not]({{ '/assets/images/posts/research/nvfp4-moe-selective-quant/fig-signal-spread.png' | relative_url }})
+![Why traffic works and distortion does not]({{ '/assets/images/posts/research/nvfp4-moe-selective-quant/fig-signal-spread.webp' | relative_url }})
 *1024개 전문가에 걸친 두 후보 신호의 최소·평균·최대를 각자의 평균으로 나눈 값입니다. 트래픽은 평균의 0배에서 7.9배까지 퍼져 전문가를 날카롭게 구분하지만, 4비트 왜곡은 0.93배에서 1.94배에 몰려 사실상 무작위에 가깝습니다. 이 모델에서 실행 가능한 신호는 왜곡이 아니라 트래픽입니다.*
 
 ## 스케줄러 관점의 실무 해석과 한계
@@ -68,11 +68,11 @@ Kueue 같은 배치 스케줄러 입장에서 이 결과는 유리하지만 경�
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![nvfp4-moe-selective-quant 슬라이드 1](/assets/images/nvfp4-moe-selective-quant-slide-01.png)
+![nvfp4-moe-selective-quant 슬라이드 1](/assets/images/nvfp4-moe-selective-quant-slide-01.webp)
 
-![nvfp4-moe-selective-quant 슬라이드 2](/assets/images/nvfp4-moe-selective-quant-slide-02.png)
+![nvfp4-moe-selective-quant 슬라이드 2](/assets/images/nvfp4-moe-selective-quant-slide-02.webp)
 
-![nvfp4-moe-selective-quant 슬라이드 3](/assets/images/nvfp4-moe-selective-quant-slide-03.png)
+![nvfp4-moe-selective-quant 슬라이드 3](/assets/images/nvfp4-moe-selective-quant-slide-03.webp)
 
-![nvfp4-moe-selective-quant 슬라이드 4](/assets/images/nvfp4-moe-selective-quant-slide-04.png)
+![nvfp4-moe-selective-quant 슬라이드 4](/assets/images/nvfp4-moe-selective-quant-slide-04.webp)
 

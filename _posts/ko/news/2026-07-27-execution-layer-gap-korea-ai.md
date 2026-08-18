@@ -22,7 +22,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/execution-layer-gap-korea-ai/"
 ---
 
-![답이 아니라 실행이 틀리기 시작했습니다: 한국 AI가 비워둔 가운데 층 개념을 형상화한 이미지](/assets/images/execution-layer-gap-korea-ai-hero.png)
+![답이 아니라 실행이 틀리기 시작했습니다: 한국 AI가 비워둔 가운데 층 개념을 형상화한 이미지](/assets/images/execution-layer-gap-korea-ai-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 오늘 아침 뉴스에서 가장 많이 나온 단어
@@ -34,7 +34,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/execution-layer-gap-kor
 세 사람이 같은 단어를 쓰는데 방향이 다릅니다. 앞의 둘은 실행을 목표로 말하고, 뒤의 하나는 실행을 위험으로 말합니다. 미국에서는 이미 전자의무기록 기업 에픽을 중심으로 의료 에이전트가 병원 워크플로에 들어갔고, 국내 도입까지는 1~2년이 걸릴 것으로 전망됩니다. 그 시차 안에 무엇을 준비하느냐를 가르는 것이 바로 이 어긋남입니다. 오늘 뉴스의 진짜 축은 여기에 있습니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/execution-layer-gap-korea-ai/nlm-infographic-1.png)
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/execution-layer-gap-korea-ai/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 능력과 사고가 같은 주에 도착했습니다
@@ -88,7 +88,7 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 만든 이유가 여기 있습니�
 의료 AI 전문가들은 한국이 미국을 1~2년 시차로 따라갈 것이라 전망합니다. 그 1~2년은 더 좋은 모델을 기다리는 시간이 아닙니다. 모델은 이미 넘칩니다. 실행 권한을 누가 어떻게 설계하고 기록할지 정하는 시간입니다. 그 층을 비워둔 채 GPU만 늘리는 조직은, 능력은 샀는데 책임은 사지 못한 상태로 2027년을 맞게 됩니다.
 
 <!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/execution-layer-gap-korea-ai/nlm-infographic-2.png)
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/execution-layer-gap-korea-ai/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료

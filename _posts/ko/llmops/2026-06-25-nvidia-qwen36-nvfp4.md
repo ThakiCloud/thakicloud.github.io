@@ -22,7 +22,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvidia-qwen36-nvfp4/"
 reading_time: true
 categories:
   - llmops
-published: false
 audiobook: /assets/audio/posts/nvidia-qwen36-nvfp4/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -108,13 +107,13 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![nvidia-qwen36-nvfp4 슬라이드 1](/assets/images/nvidia-qwen36-nvfp4-slide-01.png)
+![nvidia-qwen36-nvfp4 슬라이드 1](/assets/images/nvidia-qwen36-nvfp4-slide-01.webp)
 
-![nvidia-qwen36-nvfp4 슬라이드 2](/assets/images/nvidia-qwen36-nvfp4-slide-02.png)
+![nvidia-qwen36-nvfp4 슬라이드 2](/assets/images/nvidia-qwen36-nvfp4-slide-02.webp)
 
-![nvidia-qwen36-nvfp4 슬라이드 3](/assets/images/nvidia-qwen36-nvfp4-slide-03.png)
+![nvidia-qwen36-nvfp4 슬라이드 3](/assets/images/nvidia-qwen36-nvfp4-slide-03.webp)
 
-![nvidia-qwen36-nvfp4 슬라이드 4](/assets/images/nvidia-qwen36-nvfp4-slide-04.png)
+![nvidia-qwen36-nvfp4 슬라이드 4](/assets/images/nvidia-qwen36-nvfp4-slide-04.webp)
 
 ## 출처 (Sources)
 

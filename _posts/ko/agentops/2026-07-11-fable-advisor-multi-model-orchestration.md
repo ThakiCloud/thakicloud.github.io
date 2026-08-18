@@ -17,10 +17,15 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable-advisor-multi-model-orchestration/"
-published: false
+audiobook: "https://drive.google.com/file/d/1e7KfUD_JzGgMZVfqDCp78f4G_Yc-Pj6k/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-코딩 에이전트를 쓰다 보면 자연스럽게 드는 생각이 있습니다. 스펙을 정교하게 쓰고 결과 diff를 날카롭게 리뷰하는 일과, 실제로 코드를 한 줄 한 줄 타이핑하는 일은 성격이 다른 작업인데, 왜 같은 모델 하나가 둘을 다 해야 하는가입니다. 최근 공개되어 화제가 된 `fable-advisor` 플러그인은 이 질문에 정면으로 답합니다. **Claude Fable 5는 지휘만 하고, 실제 구현은 Grok 4.5가 전담**하는 크로스벤더 워크플로입니다. 이 글은 그 구조를 분해하고, 멀티에이전트와 모델 라우팅을 일급 리소스로 다루는 ThakiCloud의 운영 관점에서 이 설계가 무엇을 시사하는지 검증합니다.
+코딩 에이전트를 쓰다 보면 자연스럽게 드는 생각이 있습니다. 스펙을 정교하게 쓰고 결과 diff를 날카롭게 리뷰하는 일과, 실제로 코드를 한 줄 한 줄 타이핑하는 일은 성격이 다른 작업인데, 왜 같은 모델 하나가 둘을 다 해야 하는가입니다. 최근 공개되어 화제가 된 `fable-advisor` 플러그인은 이 질문에 정면으로 답합니다. **Claude Fable 5는 지휘만 하고, 실제 구현은 Grok 4.5가 전담**하는 크로스벤더 워크플로입니다. 코딩 에이전트의 비용과 품질을 함께 고민하는 팀이라면, 역할별로 모델을 갈라 배치하는 이 구조에서 당장 옮겨 쓸 만한 설계 원칙을 얻을 수 있습니다.
+
+![Fable 5가 지휘하고 Grok 4.5가 구현하는 크로스벤더 워크플로: fable-advisor 개념을 형상화한 이미지](/assets/images/fable-advisor-multi-model-orchestration-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -28,13 +33,13 @@ published: false
 
 이 설계의 핵심 통찰은 명료합니다. 지휘와 구현은 요구하는 능력이 다르고, 비용 구조도 다릅니다. 스펙 작성과 diff 리뷰는 판단과 추론의 영역이라 지휘자에게 적합한 모델이 필요하고, 대량의 코드 타이핑은 처리량과 비용 효율이 중요합니다. `fable-advisor`는 이 둘을 서로 다른 벤더의 모델에 각각 배치해, 각 레이어에 가장 잘 맞는 모델을 쓰도록 합니다. 무료 오픈소스이며 라우팅 로직을 직접 커스터마이징할 수 있다는 점도 실전 도입 문턱을 낮춥니다.
 
-![단일 벤더 멀티에이전트에서 크로스벤더 분업으로 넘어가는 패러다임 전환]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-03.png' | relative_url }})
+![단일 벤더 멀티에이전트에서 크로스벤더 분업으로 넘어가는 패러다임 전환]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-03.webp' | relative_url }})
 
 ## 이 기술은 무엇인가
 
 `fable-advisor`는 Claude Code에 얹는 플러그인으로, 세 가지 역할 분리를 강제합니다.
 
-![Fable 5는 지휘자로 스펙과 리뷰를, Grok 4.5는 구현자로 코드 타이핑을 전담하는 역할 분리]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-04.png' | relative_url }})
+![Fable 5는 지휘자로 스펙과 리뷰를, Grok 4.5는 구현자로 코드 타이핑을 전담하는 역할 분리]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-04.webp' | relative_url }})
 
 첫째, **지휘자(Fable 5)**는 스펙을 쓰고 결과를 리뷰합니다. 사용자의 요구를 받아 구현 스펙으로 분해하고, 구현이 끝난 뒤 diff를 검토합니다. 중요한 점은 지휘자가 **코드를 직접 쓰지 않는다**는 것입니다. 판단과 계약 정의에 집중합니다.
 
@@ -46,7 +51,7 @@ published: false
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -63,7 +68,7 @@ published: false
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -384,7 +389,7 @@ claude plugin marketplace add DannyMac180/fable-advisor
 
 ## 이 설계가 실제로 어떻게 동작하는가
 
-`fable-advisor`는 벤치마크 수치를 내세우는 도구가 아니라 워크플로 패턴이므로, 여기서는 재현 가능한 성능 수치 대신 설계가 만들어 내는 구조적 효과를 짚습니다. 저장소가 정량 지표를 제시하지 않으므로, 이 글에서도 수치를 지어내지 않고 구조적 이점만 다룹니다.
+`fable-advisor`는 벤치마크 수치를 내세우는 도구가 아니라 워크플로 패턴입니다. 저장소가 정량 지표를 제시하지 않으므로, 성능 수치가 아니라 설계가 만들어 내는 구조적 효과를 기준으로 봐야 합니다.
 
 가장 큰 효과는 **비용과 품질의 분리**입니다. 판단이 필요한 오케스트레이션은 지휘자에게, 처리량이 필요한 구현은 저비용 구현자에게 배치하면, 전체 워크플로의 단가는 낮아지면서도 판단 품질은 유지됩니다. "지휘자는 싸게 자주 부르지 않고, 구현자는 비싸지 않게 많이 부른다"는 배치가 자연스럽게 성립합니다.
 
@@ -392,7 +397,7 @@ claude plugin marketplace add DannyMac180/fable-advisor
 
 세 번째는 **병렬화로 인한 지연 단축**입니다. 독립적인 스펙을 동시에 구현하면, 전체 작업 시간이 순차 합계가 아니라 가장 오래 걸리는 단일 체인에 수렴합니다. 지휘자가 작업을 잘 분해할수록 이 이점은 커집니다.
 
-![비용·품질·속도 세 축에서 단일 벤더 워크플로 대비 크로스벤더 분업의 구조적 이점]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-06.png' | relative_url }})
+![비용·품질·속도 세 축에서 단일 벤더 워크플로 대비 크로스벤더 분업의 구조적 이점]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-06.webp' | relative_url }})
 
 ## 지휘자-워커 패턴의 일반화
 
@@ -408,11 +413,11 @@ claude plugin marketplace add DannyMac180/fable-advisor
 
 **Paxis 관점**에서 가장 직접적입니다. Paxis는 ThakiCloud의 Agent-Native Cloud 제어 평면으로, DAG 형태의 멀티에이전트 실행을 핵심 능력으로 다룹니다. `fable-advisor`가 보여 주는 "스펙 작성 → 분산 구현 → 교차 리뷰" 구조는 Paxis의 스킬 하네스가 작업을 서브태스크로 분해하고, 격리 샌드박스에서 병렬 실행한 뒤, 검증 스테이지로 닫는 설계와 같은 골격입니다. 특히 지휘자가 코드를 직접 쓰지 않고 판단과 계약 정의에 집중한다는 원칙은, 능력을 모델 등급이 아니라 주변 계약 구조에서 끌어낸다는 우리 설계 철학과 정확히 일치합니다. 서로 다른 모델의 결과를 지휘자가 다시 리뷰하는 흐름은, 멀티에이전트 fan-out을 검증 스테이지로 닫아 환각 누적을 막는다는 우리 운영 원칙과도 맞닿습니다.
 
-![fable-advisor의 분업 구조가 Paxis의 DAG 멀티에이전트·격리 샌드박스·계약 기반 철학과 겹치는 지점]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-07.png' | relative_url }})
+![fable-advisor의 분업 구조가 Paxis의 DAG 멀티에이전트·격리 샌드박스·계약 기반 철학과 겹치는 지점]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-07.webp' | relative_url }})
 
 **ai-platform 관점**에서는 비용 구조의 각도가 유효합니다. ThakiCloud의 ai-platform은 K8s와 Kueue 기반으로 GPU 워크로드를 스케줄링하며 고객사의 추론·학습 워크로드를 서빙합니다. `fable-advisor`가 구현 레인을 저비용 모델로 위임해 전체 워크플로 단가를 낮추는 발상은, GPU 클라우드 고객사가 자기 워크로드를 설계할 때 그대로 적용할 수 있는 패턴입니다. 무거운 추론이 필요한 소수의 판단 단계와, 처리량이 중요한 다수의 실행 단계를 서로 다른 티어의 자원에 배치하면, 같은 결과를 더 낮은 비용으로 얻습니다. 저비용 서빙이 곧 에이전트 경제성을 만든다는 점에서, ai-platform의 비용 효율과 Paxis의 에이전트 오케스트레이션은 서로를 보완합니다.
 
-![무거운 추론과 대규모 처리량을 분리해 자원을 배치하는 ai-platform의 비용 경제성 관점]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-08.png' | relative_url }})
+![무거운 추론과 대규모 처리량을 분리해 자원을 배치하는 ai-platform의 비용 경제성 관점]({{ '/assets/images/fable-advisor-multi-model-orchestration-slide-08.webp' | relative_url }})
 
 ## 한계 및 반론
 

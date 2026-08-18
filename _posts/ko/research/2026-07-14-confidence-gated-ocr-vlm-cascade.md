@@ -21,30 +21,50 @@ author_profile: true
 toc: true
 categories:
   - research
+audiobook: "https://drive.google.com/file/d/1nUYVOgPMKqapVHBXWEISZM_fFQwjt3Pv/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 문서 OCR 파이프라인에 크기가 다른 두 개의 VLM을 얹고 "언제 비싼 모델을 불러야 하나"를 고민하는 엔지니어를 위한 글입니다. 결론부터 말하면, 작은 모델의 신뢰도 점수 하나를 문턱으로 삼아 어려운 문서만 대형 모델로 올려보낸 캐스케이드는 H200 실측에서 대형 모델과 같거나 조금 더 낮은 글자 오류율을 그 비용의 약 60~67%에 달성했습니다.
 
 숫자로 보면 이렇습니다. 2억 5천만 파라미터급 SmolVLM-256M-Instruct를 작은 모델로, 22억 파라미터급 Qwen2-VL-2B-Instruct를 큰 모델로 두었습니다. 큰 모델의 연산량은 작은 모델의 8.61배입니다. 작은 모델만 쓰면 평균 CER(글자 오류율, 낮을수록 좋음)이 0.634로 문서의 3분의 2를 사실상 못 읽고, 큰 모델만 쓰면 CER이 0.045로 떨어지지만 비용이 8.61배가 됩니다. 캐스케이드는 이 두 극단 사이에서 임계값 τ 하나로 절충점을 고릅니다. 작은 모델의 신뢰도가 τ보다 낮은 문서만 큰 모델로 넘기므로, 에스컬레이션 비율과 기대 비용과 기대 오류율이 모두 τ의 함수가 됩니다.
 
-![H200에서 실측한 비용-정확도 파레토 프론티어]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-pareto-frontier.png' | relative_url }})
+![H200에서 실측한 비용-정확도 파레토 프론티어]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-pareto-frontier.webp' | relative_url }})
 *실제 H200 노드에서 측정한 값입니다. 가장 왼쪽 점(비용 1.0배, CER 0.634)이 소형 모델 단독, 가장 오른쪽 점(비용 8.61배, CER 0.045)이 대형 모델 단독입니다. τ가 0.85~0.95인 구간에서 캐스케이드는 CER 0.036~0.041에 도달하는데, 이는 비용 5.1~5.8배에서 대형 모델 단독과 같거나 조금 더 낮은 오류율입니다.*
 
 τ를 0에서 1.01까지 여덟 지점으로 훑으면 교과서적인 파레토 곡선이 나옵니다. τ=0.5에서는 문서의 8.3%만 올라가 CER 0.423, 비용 1.63배에 그치고, τ=0.7에서는 45.8%가 올라가며 CER이 0.103으로 급락하고 비용은 4.49배가 됩니다. 그리고 τ=0.85에서 54.2% 에스컬레이션에 CER 0.041, 비용 5.12배, τ=0.95에서 62.5% 에스컬레이션에 CER 0.036, 비용 5.76배에 이릅니다. 핵심은 이 구간의 CER 0.036~0.041이 대형 모델 단독의 0.045보다 오히려 조금 낮다는 사실입니다. 문서의 절반가량만 대형 모델로 넘기면서 대형 모델 수준의 정확도를 얻었고, 비용은 그 60~67%에 그쳤습니다. 캐스케이드가 대형 모델을 미세하게 앞선 이유도 데이터에 있습니다. 작은 모델은 일부 쉬운 문서를 대형 모델보다 더 정확히 읽었고(대형 모델은 줄바꿈 같은 데서 사소한 오차를 냈습니다), 캐스케이드는 그런 문서를 굳이 올려보내지 않고 작은 모델의 정답을 그대로 채택했기 때문입니다.
+
+![대형 VLM 정확도를 60% 비용에 사는 법: 신뢰도 기반 OCR 캐스케이드 실측 개념을 형상화한 이미지](/assets/images/confidence-gated-ocr-vlm-cascade-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 왜 통했나: 신뢰도가 못 읽는 문서를 정직하게 짚었다
 
 이 이득이 어디서 나오는지는 언어별로 쪼개 보면 분명해집니다.
 
-![언어별 CER 실측: 소형 모델은 한국어에서 무너진다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-shift-failure.png' | relative_url }})
+![언어별 CER 실측: 소형 모델은 한국어에서 무너진다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-shift-failure.webp' | relative_url }})
 *실제 H200에서 측정한 언어별 평균 CER입니다. 소형 모델은 영어에서 CER 0.084로 대형 모델(0.027)에 거의 근접하지만, 한국어에서는 CER이 1.18까지 치솟습니다. 신뢰도도 영어 0.957에서 한국어 0.625로 함께 떨어져, 게이트가 한국어 문서를 정확히 에스컬레이션 대상으로 지목합니다.*
 
 작은 모델은 영어에서는 대형 모델과 어깨를 나란히 하지만 한국어 앞에서는 무너집니다. CER 1.18은 정답과 거의 무관한 출력이라는 뜻이고, 실제 로그를 보면 작은 모델은 엉뚱한 영어 문장을 지어내거나 무의미한 반복을 뱉었습니다. 결정적인 것은 이때 작은 모델의 신뢰도도 함께 내려간다는 점입니다. 영어 0.957에서 한국어 0.625로 떨어진 이 신뢰도 하락이 캐스케이드의 엔진입니다. 작은 모델이 못 읽는 문서에서 스스로 확신을 잃어 주기 때문에, 임계값 하나만으로 어려운 문서를 골라낼 수 있는 것입니다.
 
-![스캔 품질별 CER 실측: 소형 모델은 흔들리고 대형 모델은 낮게 유지된다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.png' | relative_url }})
+![스캔 품질별 CER 실측: 소형 모델은 흔들리고 대형 모델은 낮게 유지된다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.webp' | relative_url }})
 *실제 H200에서 측정한 스캔 품질 등급별 평균 CER입니다. 소형 모델은 깨끗함 0.43, 중간 0.90, 손상 0.57로 등급을 가로질러 높고 고르지 못한 반면, 대형 모델은 0.03~0.06 사이에 머뭅니다.*
 
 스캔 품질 축에서도 같은 구조가 보입니다. 작은 모델의 오류율은 등급에 따라 0.43에서 0.90까지 출렁이지만 대형 모델은 어느 등급에서든 0.03~0.06에 얌전히 머뭅니다. 이 두 막대 사이의 넓은 간격이 캐스케이드가 회수하는 정확도 여유분이고, 신뢰도가 그 흔들림을 감지해 주는 한 캐스케이드는 그 여유분을 비용 효율적으로 챙깁니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 자기 문서 집단에서 τ를 고르는 법
+
+여기까지가 측정값이고, 실무에서 남는 질문은 "그래서 내 문서에는 τ를 얼마로 두나"입니다. 이번 스윕에 이미 답의 형태가 들어 있습니다.
+
+τ를 올릴수록 좋아지는 폭은 일정하지 않습니다. 0.5에서 0.7로 올릴 때는 에스컬레이션이 8.3%에서 45.8%로 늘면서 CER이 0.423에서 0.103으로 떨어집니다. 비용은 1.63배에서 4.49배가 되지만 오류율이 4분의 1로 줄었으니 명백히 남는 장사입니다. 반면 0.85에서 0.95로 올릴 때는 에스컬레이션이 54.2%에서 62.5%로 8.3%포인트 늘고 비용도 5.12배에서 5.76배로 붙는데, CER은 0.041에서 0.036으로 0.005밖에 나아지지 않습니다. 곡선의 무릎이 0.85 근처에 있다는 뜻이고, 그 위로는 돈을 더 내고 거의 같은 결과를 사는 구간입니다. 대형 모델 단독 대비 비용이 각각 59%와 67%인 것도 여기서 나옵니다.
+
+그래서 순서는 이렇습니다. 먼저 두 모델을 각각 단독으로 자기 문서에 돌려 양 끝점을 잡습니다. 이 단계를 건너뛰면 안 되는데, 만약 작은 모델의 CER이 이미 큰 모델에 가깝다면 캐스케이드가 회수할 여유분 자체가 없기 때문입니다. 이번 실측에서 이득이 컸던 이유는 0.634와 0.045라는 간격이 넓었기 때문이지 캐스케이드라는 구조가 마법이어서가 아닙니다.
+
+그다음 τ를 훑으면서 에스컬레이션 비율과 오류율을 함께 기록해 무릎을 찾습니다. 이때 반드시 같이 확인할 것이 하나 있습니다. 자기 데이터에서도 신뢰도가 실제로 오류와 같이 움직이는가입니다. 이 상관이 깨지면 임계값을 어디에 두든 게이트가 엉뚱한 문서를 올려보내므로, 캐스케이드 전체가 성립하지 않습니다. 마지막으로 문자 체계와 스캔 품질처럼 오류율이 크게 갈리는 축이 있다면 축별로 τ를 따로 잡는 편이 하나의 전역 임계값보다 안전합니다. 이번 데이터에서 영어와 한국어의 CER이 0.084와 1.18로 갈렸다는 사실 자체가 그 근거입니다.
 
 ## 이 승리를 어디까지 믿을 것인가
 
@@ -53,5 +73,29 @@ categories:
 바로 그 지점이 캐스케이드의 진짜 실패 모드와 이어집니다. 가장 위험한 상황은 "낮은 확신인데 정답"이 아니라 "높은 확신인데 오답"입니다. 낯선 문자 체계를 만난 작은 모델이 그럴듯하지만 틀린 답을 자신 있게 내놓으면, 그 문서는 절대 올라가지 않고 캐스케이드는 최악의 오류를 조용히 떠안습니다. 이번 한국어처럼 신뢰도가 정직하게 함께 떨어져 준 경우에는 이겼지만, 신뢰도가 높게 유지되는 언어를 만나면 같은 구조가 그대로 실패로 뒤집힙니다. 대부분의 VLM이 열 개 미만의 문자 체계에서만 잘 작동하고 저자원 언어에서 환각이 늘어난다고 보고한 GlotOCR 벤치마크가 이 위험을 뒷받침합니다.
 
 그래서 설계의 정답은 캐스케이드를 버리는 것이 아니라, 캐스케이드가 요구하는 가정을 문서 유형별로 실제로 확인하는 것입니다. 텍스트 LLM에서는 FrugalGPT가 최고 성능 모델과 비슷한 품질을 최대 98% 적은 비용에 얻는다고 이미 보고했고, 이번 실측은 그 아이디어가 문서 OCR에서도 통할 수 있음을 소규모로 보였습니다. 다만 문자 체계와 스캔 품질별로 임계값을 나눠 보정하고, 신뢰도 게이트를 단일 확률 하나가 아니라 시각적 확신과 구조적 신호를 함께 보는 다중 신호로 설계하며, 신뢰도가 배신하는 구간에서는 전량 에스컬레이션하거나 사람이 검토하는 편이 정직한 선택입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
+
+![confidence-gated-ocr-vlm-cascade 슬라이드 1](/assets/images/confidence-gated-ocr-vlm-cascade-slide-01.webp)
+
+![confidence-gated-ocr-vlm-cascade 슬라이드 2](/assets/images/confidence-gated-ocr-vlm-cascade-slide-02.webp)
+
+![confidence-gated-ocr-vlm-cascade 슬라이드 3](/assets/images/confidence-gated-ocr-vlm-cascade-slide-03.webp)
+
+![confidence-gated-ocr-vlm-cascade 슬라이드 4](/assets/images/confidence-gated-ocr-vlm-cascade-slide-04.webp)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 출처
+
+- [GlotOCR Bench: OCR Models Still Struggle Beyond a Handful of Unicode Scripts (arXiv:2604.12978)](https://arxiv.org/abs/2604.12978)
+- [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance (arXiv:2305.05176)](https://arxiv.org/abs/2305.05176)
+- [HuggingFaceTB/SmolVLM-256M-Instruct 모델 카드](https://huggingface.co/HuggingFaceTB/SmolVLM-256M-Instruct)
+- [Qwen/Qwen2-VL-2B-Instruct 모델 카드](https://huggingface.co/Qwen/Qwen2-VL-2B-Instruct)
 
 논문 상세 페이지는 다음 링크에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-14-confidence-gated-ocr-vlm-cascade](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-14-confidence-gated-ocr-vlm-cascade)

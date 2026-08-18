@@ -21,7 +21,6 @@ toc_label: "Contents"
 toc_icon: "robot"
 categories:
   - agentops
-published: false
 ---
 
 ## Overview

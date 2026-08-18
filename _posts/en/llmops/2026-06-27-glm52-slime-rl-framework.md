@@ -24,7 +24,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm52-slime-rl-framew
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 ![An abstract image depicting a generation cluster and a training cluster exchanging data asynchronously through a central buffer]({{ '/assets/images/glm52-slime-rl-framework-hero.webp' | relative_url }})

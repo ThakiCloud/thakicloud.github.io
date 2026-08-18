@@ -10,13 +10,20 @@ seo_title: "Autonomous Skill Router Repair Loop: Closing a Search Bottleneck wit
 seo_description: "In a real agent harness with more than 1,600 skills, this study introduces a deterministic loop that fixes the retriever's Korean-to-English synonym dictionary without any human involvement, and measures the resulting improvement in skill-routing accuracy."
 author_profile: true
 toc: true
+audiobook: "https://drive.google.com/file/d/19T5yQEscZGIOXZUFDvXaDV4k74iMS2xo/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 If you have ever operated a production agent harness that routes more than 1,600 skills and subagents through search, or if you are designing a structure that serves a large skill or tool library with a single retriever, the problem this post addresses will feel familiar. In what is called "compositional skill routing," where a user request is split into several sub-tasks and each sub-task is matched to the right skill to form a chain, the prevailing assumption has been that "if decomposition is done well, retrieval is almost always correct." This paper picks up where a prior study left off, a study that showed this assumption breaks down in a real mixed Korean-English production environment, and empirically tests whether that problem can actually be fixed by an unattended loop that runs overnight rather than by a human.
 
+![Illustration of the core idea of The Night the Search Dictionary Fixed Itself: Closing a Skill-Routing Bottleneck with an Unattended Loop](/assets/images/autonomous-skill-router-repair-loop-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## The Problem: Decomposition Was Fixed, but the Retriever Was the Real Bottleneck
 
 Prior work represented by SkillWeaver argues that the bottleneck in compositional skill routing lies in decomposition. Standard LLM decomposition reaches only 34.2% sub-task-level category recall, while the retriever itself is treated as an already-solved problem with roughly 99.5% top-1 recall. However, the study immediately preceding this paper ran the same 12-case benchmark on a production harness with more than 1,600 skills and real requests mixing Korean and English, and arrived at the opposite conclusion. Even under the ORACLE condition, where every sub-task was manually and perfectly decomposed by a human, step coverage reached only 63.6%. That means even perfect decomposition misses roughly a third of the skills actually needed, and the cause traced back to the fact that skill metadata was written only in English while real requests arrived in Korean. The prior study's conclusion was that the retriever's cross-lingual vocabulary bridge shares the bottleneck jointly with decomposition. The problem is that after this diagnosis was made, it was still a human hand that actually fixed the dictionary.
+
 
 ## Core Contribution: Fixing the Dictionary with No LLM, No Human, Using Only Pass/Fail on a Benchmark
 
@@ -24,22 +31,23 @@ This paper asks whether the single lever identified by that prior diagnosis, nam
 
 The results were clear. Step coverage rose from 57.1% to 71.2%, a gain of 14.1 points, and full chain completion rate doubled from 25.0% to 50.0%. The loop converged in exactly two iterations: of the 11 misses found in round 1, patches were applied to 9 of them, and in round 2 none of the remaining 6 misses could be newly patched, so the loop naturally stopped under the "zero new patches" condition. It never came close to the maximum iteration limit of 5.
 
-![Step Coverage: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/step-coverage-improvement.png' | relative_url }})
+![Step Coverage: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/step-coverage-improvement.webp' | relative_url }})
 *Measured step coverage before and after applying the loop on the compositional benchmark (n=12, SINGLE strategy, top_k=8). It rose from 57.1% to 71.2%, a gain of 14.1 points, with no human involvement.*
 
 The loop also comes with a built-in safeguard: a "first-write-wins" policy that never overwrites a dictionary key if a given Korean token is already registered as pointing to a different target. In this run, 19 raw collision events were consolidated into 11 distinct (token, competing target) pairs, one of which involved a within-case ambiguity that a flat dictionary structure cannot resolve at all: the single word "논문" (paper) needed to point to two different skills, academic-paper and academic-paper-reviewer, within the same case. Thanks to this conservative policy, all five metrics of an independent 63-case regression benchmark (recall, gated recall, top-1 accuracy, hallucination rate, and refusal-avoidance rate) were bit-for-bit identical before and after the loop ran. Because the dictionary only gains entries and never touches existing mappings, the possibility of breaking a query that already worked well is structurally blocked.
 
-![Chain Completion: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/chain-completion-doubling.png' | relative_url }})
+![Chain Completion: Baseline vs Final]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/chain-completion-doubling.webp' | relative_url }})
 *Measured full chain completion rate on the same benchmark (the share of cases where every correct skill is retrieved at once with no misses), which doubled from 25.0% to 50.0% after just two loop iterations.*
 
 The paper's sharpest finding lies elsewhere. Six misses remained even after convergence, and two of them still did not make it into the top 8 despite receiving exactly the correct patch: the correct Korean token, the correct English target, and the correct answer skill. For example, the sub-task "아이디어 딥리서치" (idea deep research) had its one and only patchable token correctly patched to deep-research with no collisions at all, yet it still did not appear in the retrieval results. This is because BM25/IDF-based ranking is determined by the score distribution of the entire corpus, not by the presence or absence of any single token. In other words, vocabulary coverage is a necessary condition but not a sufficient one, which reconfirms the prior study's diagnosis that the retriever itself is a joint bottleneck.
 
-![Convergence Trace: Step Coverage Across Iterations]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/convergence-trace.png' | relative_url }})
+![Convergence Trace: Step Coverage Across Iterations]({{ '/assets/images/posts/research/autonomous-skill-router-repair-loop/convergence-trace.webp' | relative_url }})
 *Measured convergence trace showing step coverage across iterations. All improvement happened in round 1, and round 2 halted under the stopping condition without applying a single new patch.*
 
 ## Contribution to Business, Society, and Science
 
 From a business standpoint, this study confirms with a reproducible pipeline that when maintaining a skill ecosystem of more than 1,600 skills, an unattended overnight loop using a retrieval benchmark as its reward signal can genuinely raise routing accuracy without any manual human tuning. From a societal standpoint, it offers an empirical pattern showing that a large agent skill ecosystem can self-heal over time rather than degrade, even without dedicated maintenance staff. The entire loop is a single Python process that makes no model calls and finishes in just two iterations, which is evidence that even a small team or a single operator can sustainably run an AI tool ecosystem. From a scientific standpoint, it offers a case where the "loop engineering" pattern (Act to Observe to Learn to Repeat), which iterates to convergence using a compiler or test suite as the reward signal, is applied not to source code repair but to a retrieval and routing system. The design choice to use only a fully external signal, namely pass or fail on a benchmark, as reward rather than the model's own self-report, also connects to recent findings that verifiable external signals fundamentally block reward hacking.
+
 
 ## Limitations
 

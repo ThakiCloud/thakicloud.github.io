@@ -16,7 +16,7 @@ categories:
   - llmops
 ---
 
-![Abstract illustration of quantized neural network weights being rearranged into blocks of different sizes]({{ '/assets/images/gguf-quantization-internals-hero.png' | relative_url }})
+![Abstract illustration of quantized neural network weights being rearranged into blocks of different sizes]({{ '/assets/images/gguf-quantization-internals-hero.webp' | relative_url }})
 
 ## Overview
 
@@ -421,7 +421,7 @@ The real reason becomes clear once you open the `Q4_K_M` file tensor by tensor. 
 | Q4_K | 12 | 4.5 | 6.1% |
 | F32 (norm/bias) | 121 | 32.0 | 0.1% |
 
-![Chart showing file sizes across quantization levels for Qwen2.5-0.5B, and the actual tensor type composition inside Q4_K_M. Q4_K_M's effective bit width is 6.16, far from the label's 4.0]({{ '/assets/images/gguf-quantization-internals-results.png' | relative_url }})
+![Chart showing file sizes across quantization levels for Qwen2.5-0.5B, and the actual tensor type composition inside Q4_K_M. Q4_K_M's effective bit width is 6.16, far from the label's 4.0]({{ '/assets/images/gguf-quantization-internals-results.webp' | relative_url }})
 
 Despite the `Q4_K_M` label, genuine 4-bit K-quantization (Q4_K) accounted for only **6.1 percent** of total weight capacity. Instead, the 5.5-bit legacy type Q5_0 took up more than half (54.9 percent), and the 8.5-bit Q8_0 consumed 30 percent. Calculating the file's overall effective bit width gives **6.16 bits**, more than 1.5 times the 4 bits the label implies.
 

@@ -16,14 +16,15 @@ tags:
 author_profile: true
 toc: true
 toc_label: 실시간 음성 스택 해부
-published: true
 lang: ko
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
+audiobook: /assets/audio/posts/hugging-voice-open-realtime-voice-self-hosted/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![직접 돌리는 오픈 실시간 음성 파이프라인]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.png' | relative_url }})
+![직접 돌리는 오픈 실시간 음성 파이프라인]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.webp' | relative_url }})
 
 이 글은 음성 에이전트를 붙이려다 OpenAI Realtime API의 종속과 비용 앞에서 멈칫한 엔지니어, 그리고 대화형 음성 기능을 자체 인프라에서 서빙할 수 있을지 저울질하는 인프라 담당자를 위해 썼습니다. 결론부터 말하면, 허깅페이스가 공개한 데모 [hugging-voice](https://huggingface.co/spaces/HuggingFaceM4/hugging-voice)와 그 밑에서 돌아가는 라이브러리 [speech-to-speech](https://github.com/huggingface/speech-to-speech)의 설계는 단순하면서도 실용적입니다. 실시간 음성을 위한 네 단계 파이프라인을 그대로 오픈소스로 열어 두되, 바깥쪽은 OpenAI Realtime과 똑같은 인터페이스로 감쌌습니다. 그래서 이미 OpenAI 실시간 클라이언트로 짜 둔 코드가 있다면, 서버를 가리키는 주소 한 줄만 바꿔 자체 스택으로 옮겨올 수 있습니다. 다만 성능에 관한 수치는 프로젝트가 공개한 범위에서만 인용하고, 저희가 직접 벤치마크한 값이 아님을 먼저 분명히 해 둡니다.
 
@@ -161,3 +162,16 @@ Paxis 렌즈에서 보면, 음성은 에이전트에 붙는 새로운 입출력 
 ## 마무리
 
 hugging-voice가 던지는 메시지는 명확합니다. 실시간 음성은 더 이상 소수 공급자의 폐쇄형 API에만 기댈 필요가 없고, 필요하면 인터페이스는 그대로 둔 채 백엔드만 자체 인프라로 옮겨올 수 있다는 것입니다. VAD에서 TTS까지 각 단계를 골라 끼우고, 클라이언트는 주소 한 줄만 바꾸는 이 설계는, 자체 서빙을 검토하는 팀에게 진입 비용을 크게 낮춰 줍니다. 직접 확인하고 싶다면 [데모 스페이스](https://huggingface.co/spaces/HuggingFaceM4/hugging-voice)에서 바로 말을 걸어 보거나, [GitHub 저장소](https://github.com/huggingface/speech-to-speech)에서 `pip install speech-to-speech`로 시작하시면 됩니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
+
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 1](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-01.webp)
+
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 2](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-02.webp)
+
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 3](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-03.webp)
+
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 4](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-04.webp)
+

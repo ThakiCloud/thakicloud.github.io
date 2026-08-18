@@ -20,7 +20,8 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/sovereign-speculative-serving/"
-published: false
+audiobook: /assets/audio/posts/sovereign-speculative-serving/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 이 글을 누가 읽으면 좋은가
@@ -63,3 +64,16 @@ ThakiCloud 입장에서 이 연구는 곧바로 우리가 운영하는 Kueue와 
 논문 원문과 데이터는 Hugging Face에서 확인할 수 있습니다. [https://huggingface.co/datasets/thaki-AI/thaki-daily-papers/tree/main/papers/2026-07-05-sovereign-speculative-serving](https://huggingface.co/datasets/thaki-AI/thaki-daily-papers/tree/main/papers/2026-07-05-sovereign-speculative-serving)
 
 arXiv 제출은 자동화 파이프라인이 tar 패키지까지 준비해 두었고, 실제 업로드는 사람이 검토한 뒤 진행하는 절차이므로 현재 상태는 제출 준비 완료(승인 대기)입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![sovereign-speculative-serving 슬라이드 1](/assets/images/sovereign-speculative-serving-slide-01.webp)
+
+![sovereign-speculative-serving 슬라이드 2](/assets/images/sovereign-speculative-serving-slide-02.webp)
+
+![sovereign-speculative-serving 슬라이드 3](/assets/images/sovereign-speculative-serving-slide-03.webp)
+
+![sovereign-speculative-serving 슬라이드 4](/assets/images/sovereign-speculative-serving-slide-04.webp)
+

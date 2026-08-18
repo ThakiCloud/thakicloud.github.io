@@ -132,7 +132,7 @@ output_sh, gathered_route_weights_sk, _ = buffer.combine(
 
 실험 설정은 전문가 256개, EP 8랭크, 랭크당 2048토큰, top-8입니다. 랭크당 용량은 `S × K`이므로 16,384 토큰입니다. 라우터 편향은 생성기가 쓰는 로그정규 분포의 시그마 값으로 조절했습니다. 0은 완전 균형, 1은 문서가 "전형적인 dropless MoE 편향"이라고 부르는 수준, 5는 거의 퇴화한 라우팅입니다.
 
-![랭크별 수신 토큰 수와 이주 토큰 비율을 나타낸 두 개의 막대 차트](/assets/images/moonep-balanced-expert-parallelism-results.png)
+![랭크별 수신 토큰 수와 이주 토큰 비율을 나타낸 두 개의 막대 차트](/assets/images/moonep-balanced-expert-parallelism-results.webp)
 
 측정값은 이렇습니다.
 

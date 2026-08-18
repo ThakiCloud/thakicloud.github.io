@@ -19,7 +19,7 @@ categories:
   - culture
 ---
 
-![Abstract image of human time dissolving into the light of humanoids and data centers]({{ '/assets/images/three-year-window-labor-to-assets-hero.png' | relative_url }})
+![Abstract image of human time dissolving into the light of humanoids and data centers]({{ '/assets/images/three-year-window-labor-to-assets-hero.webp' | relative_url }})
 
 ## Overview
 

@@ -22,7 +22,6 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
-published: false
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-cost-routing-rules/"
 ---
 
@@ -47,7 +46,11 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-cost-ro
 | `haiku` | 탐색, 파일 읽기, 검색, grep, 요약, 번역 | ~1x |
 | `sonnet` | 분석, 구현, 코드 생성, 리뷰, 글쓰기 (기본) | ~4x |
 | `opus` | 아키텍처, 다단계 추론, 복잡한 디버깅, 스펙 작성 | ~19x |
-| `fable` | 오케스트레이터/지휘자 (한도 절약) | 낮음 |
+| `fable` | 오케스트레이터/지휘자 (구독 한도 절약용, 토큰 단가는 최상위) | 높음 |
+
+배수에 관해 한 가지 못을 박아 둡니다. 위 숫자는 이 글을 쓰던 시점의 모델 세대를 기준으로 한 것이고, 가격표는 그 뒤로 바뀌었습니다. 공식 가격표 기준 현재 세대는 Haiku 4.5가 100만 토큰당 입력 1달러 출력 5달러, Sonnet 5가 2달러와 10달러, Opus 5가 5달러와 25달러입니다. 즉 haiku 대비 sonnet은 약 2배, opus는 약 5배입니다. 19배라는 간격은 이제 나지 않습니다. 배수의 절대값은 반드시 최신 가격표에서 확인하시고, 이 글에서는 "티어 간 간격이 크므로 작업에 맞춰 고정 매핑한다"는 구조만 가져가시기 바랍니다.
+
+`fable` 행은 특히 주의해서 읽어 주십시오. Fable 5의 토큰 단가는 100만 토큰당 입력 10달러 출력 50달러로, 나열한 티어 중 가장 비쌉니다. 지휘자로 쓰는 이유는 토큰이 싸서가 아니라 **구독 플랜의 사용 한도 소진 속도**를 늦추기 위해서입니다. 종량 과금 API로 같은 구성을 그대로 옮기면 비용은 오히려 올라갑니다. 두 가지는 다른 축입니다.
 
 하드 룰이 하나 있습니다. 모든 서브에이전트 호출은 `model` 파라미터를 반드시 명시해야 합니다. 생략하면 세션 기본값으로 청구되는데, 그 기본값이 Opus면 19배입니다. 6월 1일 사고의 본질이 바로 이것이었습니다.
 
@@ -58,7 +61,7 @@ Agent(subagent_type="Explore", model="haiku", prompt="...")
 Agent(subagent_type="Explore", prompt="...")
 ```
 
-여기에 한 가지 패턴을 더합니다. 세션 메인을 fable로 두고 지휘자 역할만 맡기는 것입니다. 라우팅, 분기, 집약은 저렴한 fable이 하고, 진짜 무거운 추론이 필요한 단계에서만 `Agent(model="opus")`로 단발 투입합니다. 탐색은 haiku입니다. 스폰 깊이는 최대 2이고, haiku 서브는 더 이상 서브를 만들지 않습니다.
+여기에 한 가지 패턴을 더합니다. 세션 메인을 fable로 두고 지휘자 역할만 맡기는 것입니다. 라우팅, 분기, 집약은 fable이 하고, 진짜 무거운 추론이 필요한 단계에서만 `Agent(model="opus")`로 단발 투입합니다. 앞서 적었듯 이 패턴이 아끼는 것은 토큰 단가가 아니라 구독 한도입니다. 탐색은 haiku입니다. 스폰 깊이는 최대 2이고, haiku 서브는 더 이상 서브를 만들지 않습니다.
 
 ## 2. 스킬 라우터: 메인이 코드베이스를 헤매지 않게
 
@@ -763,3 +766,10 @@ bad run 판정은 보수적입니다. 종료 코드가 0이 아니거나, 로그
 705달러 사고의 교훈은 단순했습니다. 누수는 기계가 아니라 행동에 있었고, 행동은 룰로만 교정됩니다. 모델 티어를 작업에 맞추고, 스킬 라우터로 탐색을 줄이고, 토큰을 위생적으로 다루고, 실패한 것만 승격하고, 매일 감사하면, 같은 일을 19배 싸게 할 수 있습니다.
 
 ThakiCloud는 이 비용 규율을 제품의 기본기로 만듭니다. 자세한 이야기는 홈페이지에서 확인하실 수 있습니다.
+
+## 출처
+
+- [Create custom subagents (Claude Code Docs)](https://code.claude.com/docs/en/sub-agents)
+- [Hooks reference (Claude Code Docs)](https://code.claude.com/docs/en/hooks)
+- [Run Claude Code programmatically (Claude Code Docs)](https://code.claude.com/docs/en/headless)
+- [Prompt caching (Claude Platform Docs)](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)

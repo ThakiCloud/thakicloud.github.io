@@ -25,7 +25,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 
 If you run a multi-agent orchestrator and are trying to cut token costs, the question this paper takes on will sound familiar. A single workflow mixes subtasks as trivial as pulling a value out of JSON with subtasks that have to satisfy four interlocking constraints at once, and yet we usually pin the same reasoning-effort tier across all of them. The Effort-Routing paper works out, with equations, exactly where that habit wastes money, and sets the conditions under which a policy that lets each subtask think only as much as it needs actually saves. It is not, however, a paper that measured this policy in practice. The authors say up front that they have implemented neither a classifier nor an executor, and this post carries that admission forward rather than glossing over it.
 
-![Illustration of the core idea of Keep the Model, Cut the Thinking: Routing Reasoning Effort Per Subtask](/assets/images/effort-routing-multi-agent-cost-hero.png)
+![Illustration of the core idea of Keep the Model, Cut the Thinking: Routing Reasoning Effort Per Subtask](/assets/images/effort-routing-multi-agent-cost-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Why every subtask gets the same amount of thinking time
@@ -40,12 +40,12 @@ Most prior routing work chose which model to use. This paper holds the model fix
 
 The paper's central tool is a single accounting identity. The authors decompose the cost difference Δ between a fixed policy and a routing policy into exactly two terms. One is the savings recovered by dropping easy subtasks to a lower tier. The other is the retry cost incurred when routing assigns too low a tier to a subtask and it fails.
 
-![Conceptual diagram of per-tier cost and quality curves](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-cost-quality-curves.png)
+![Conceptual diagram of per-tier cost and quality curves](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-cost-quality-curves.webp)
 *As the tier rises, expected cost C(e) increases while the success probability Q(d,e) saturates once it reaches the sufficient tier e*(d). This is a conceptual sketch of the paper's analytical model, not measured data.*
 
 Two conditions fall out of this decomposition. The first is a necessary condition: if the set of subtasks the fixed tier actually over-provisions (the paper calls it O) is empty, routing can never win, because there is nothing left to downgrade regardless of how good the classifier is. The second is a sufficient condition, an inequality stating that the number of subtasks the classifier mis-routes to too low a tier must be smaller than the savings recovered from the subtasks it correctly downgrades. Turning that inequality into two measurable quantities, the count of wrongly-downgraded subtasks and the summed savings of correctly-downgraded ones, is the proposition's real contribution.
 
-![Decomposition of savings: downtiering recovery versus correction retry cost](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-savings-decomposition.png)
+![Decomposition of savings: downtiering recovery versus correction retry cost](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-savings-decomposition.webp)
 *Δ splits exactly into the savings recovered from correct downtiering minus the retry cost incurred by under-tiering. This, too, is a diagram of the analytical model, not a measurement.*
 
 The authors are careful to state this is not a dominance theorem. The necessary condition explicitly leaves room for routing to lose. They also offer a supporting argument that a convex savings curve makes the downtiering recovery larger, but they flag this as an empirical property that depends on a vendor's tier pricing, not a proven fact.
@@ -56,7 +56,7 @@ Having established the conditions for savings, the paper proposes a rule-based c
 
 The measurement protocol places twelve subtasks across three small dependency workflows: log triage, spec reconciliation, and query repair. The reason these twelve are grouped into workflows with real data dependencies rather than laid out as twelve independent problems is that the paper's claim is specifically about subtask-level routing inside a decomposed workflow. A scattered single-problem benchmark could not test that setting.
 
-![Twelve subtasks arranged across three workflows](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-benchmark-structure.png)
+![Twelve subtasks arranged across three workflows](/assets/images/posts/research/effort-routing-multi-agent-cost/fig-benchmark-structure.webp)
 *Log triage, spec reconciliation, and query repair span twelve subtasks ranging from trivial to hard. This is a benchmark design diagram, not measured results.*
 
 Six policy arms are laid out for comparison: a naive baseline that always fixes high, the cheapest single fixed tier chosen with hindsight, a classifier-free competitor that starts at low and retries once on failure, an oracle that assigns the true sufficient tier directly, random routing matched to the tier distribution the classifier actually produces, and finally the classifier-routing policy the paper proposes. The reason the authors include random routing is worth noting on its own: without it, there is no way to tell whether savings come from features correlated with difficulty or simply from a lower average tier. Without that comparison, the classifier has not proven anything about itself.

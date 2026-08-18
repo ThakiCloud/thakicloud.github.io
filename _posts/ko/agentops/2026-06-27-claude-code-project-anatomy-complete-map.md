@@ -19,7 +19,6 @@ toc_icon: "sitemap"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-project-anatomy-complete-map/"
 categories:
   - agentops
-published: false
 audiobook: /assets/audio/posts/claude-code-project-anatomy-complete-map/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

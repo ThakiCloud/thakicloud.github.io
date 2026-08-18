@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/agent-native-cloud-praxi
 reading_time: true
 categories:
   - dev
-published: false
 audiobook: /assets/audio/posts/agent-native-cloud-praxis/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -469,11 +468,11 @@ Q4 2026에는 스킬 마켓플레이스를, Q2 2027 이후에는 SOC2 인증과 
 
 본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
 
-![agent-native-cloud-praxis 슬라이드 1](/assets/images/agent-native-cloud-praxis-slide-01.png)
+![agent-native-cloud-praxis 슬라이드 1](/assets/images/agent-native-cloud-praxis-slide-01.webp)
 
-![agent-native-cloud-praxis 슬라이드 2](/assets/images/agent-native-cloud-praxis-slide-02.png)
+![agent-native-cloud-praxis 슬라이드 2](/assets/images/agent-native-cloud-praxis-slide-02.webp)
 
-![agent-native-cloud-praxis 슬라이드 3](/assets/images/agent-native-cloud-praxis-slide-03.png)
+![agent-native-cloud-praxis 슬라이드 3](/assets/images/agent-native-cloud-praxis-slide-03.webp)
 
-![agent-native-cloud-praxis 슬라이드 4](/assets/images/agent-native-cloud-praxis-slide-04.png)
+![agent-native-cloud-praxis 슬라이드 4](/assets/images/agent-native-cloud-praxis-slide-04.webp)
 

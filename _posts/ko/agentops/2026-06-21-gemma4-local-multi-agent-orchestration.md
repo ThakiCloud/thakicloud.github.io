@@ -21,7 +21,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/gemma4-local-multi-
 reading_time: true
 categories:
   - agentops
-published: false
+audiobook: /assets/audio/posts/gemma4-local-multi-agent-orchestration/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 멀티에이전트 오케스트레이션이라고 하면 보통 클라우드 API를 떠올립니다. 그런데 최근 커뮤니티에서 공유된 데모는 다른 방향을 보여줍니다. Gemma 4 26B를 **로컬 머신에서 띄워** 10개의 병렬 서브에이전트로 SVG 아트 갤러리를 코딩하고, 100 tokens/sec 이상의 처리량을 달성했다는 것입니다.
@@ -63,11 +64,11 @@ Gemma 4 26B 로컬 멀티에이전트 데모는 "온프레미스 추론이 실�
 
 본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
 
-![gemma4-local-multi-agent-orchestration 슬라이드 1]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-01.png' | relative_url }})
+![gemma4-local-multi-agent-orchestration 슬라이드 1]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-01.webp' | relative_url }})
 
-![gemma4-local-multi-agent-orchestration 슬라이드 2]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-02.png' | relative_url }})
+![gemma4-local-multi-agent-orchestration 슬라이드 2]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-02.webp' | relative_url }})
 
-![gemma4-local-multi-agent-orchestration 슬라이드 3]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-03.png' | relative_url }})
+![gemma4-local-multi-agent-orchestration 슬라이드 3]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-03.webp' | relative_url }})
 
-![gemma4-local-multi-agent-orchestration 슬라이드 4]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-04.png' | relative_url }})
+![gemma4-local-multi-agent-orchestration 슬라이드 4]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-04.webp' | relative_url }})
 

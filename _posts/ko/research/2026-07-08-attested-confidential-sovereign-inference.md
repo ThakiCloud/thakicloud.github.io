@@ -21,7 +21,8 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/attested-confidential-sovereign-inference/"
-published: false
+audiobook: /assets/audio/posts/attested-confidential-sovereign-inference/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 이 글을 누가 읽으면 좋은가
@@ -42,7 +43,7 @@ ThakiCloud AI Research가 제안하는 **ACI(Attested Confidential Inference)**�
 
 이 둘이 만나는 지점이 논문의 핵심 객체인 **바인딩 원장(Binding Ledger)**입니다. $A$의 해시와 $P$의 해시, 테넌트 식별자, 요청 ID를 함께 서명해 결합 레코드 $B$를 만들고 append-only 원장에 기록합니다. 이 결합이 곧 "증명된 그 엔클레이브 안에서 감사받은 그 가중치가 서빙되었다"는 단일 서명 증거입니다. 이 검증은 **Kueue admission 게이트**에서 GPU job을 실제로 스케줄링하기 전에 강제되어, 유효한 결합이 없으면 테넌트 신원과 매칭되는 GPU job이 admit되지 않습니다. 마지막으로 규제기관이 요청 ID만으로 $\{A, P, B\}$ 전체를 조회하고 서명과 엔클레이브 측정값을 운영자와 독립적으로 재검증할 수 있는 읽기 전용 **규제기관 검증 API**가 놓입니다.
 
-![ACI 프로토콜 시퀀스 흐름]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/aci-protocol-flow.png' | relative_url }})
+![ACI 프로토콜 시퀀스 흐름]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/aci-protocol-flow.webp' | relative_url }})
 *ACI의 요청 단위 결합 과정을 개념적으로 나타낸 그림입니다. 증명 결과 $A$와 프로버넌스가 검증된 가중치 다이제스트 $P$가 Kueue admission 게이트에서 만나 서명된 결합 $B$를 만듭니다. 실측 하드웨어가 아닌 프로토콜 설계를 시각화한 예시입니다.*
 
 여기서 짚어야 할 정직한 지점이 있습니다. 실행 중인 다이제스트를 서명된 참조값과 비교하는 것 자체는 새로운 암호학적 기법이 아닙니다. measured boot나 DICE, TPM quote-vs-golden-value 같은 이미 확립된 measured-launch 패턴과 같은 종류이고, 서명된 릴리스 주장을 아티팩트에 묶는 일도 선행 연구가 이미 하고 있습니다. 이 논문이 정직하게 방어할 수 있는 기여는 새로운 암호 기법이 아니라 **합성(composition)**입니다. GPU TEE 원격 증명을 서명된 모델 프로버넌스 검증과 결합해, 멀티테넌트 Kubernetes+Kueue 시스템 안에서 스케줄러 admission 시점에 강제되는 요청 단위·규제기관 검증 가능 게이트로 만든 것은 우리가 아는 한 이 작업이 처음입니다.
@@ -55,24 +56,24 @@ ThakiCloud AI Research가 제안하는 **ACI(Attested Confidential Inference)**�
 
 베이스라인부터 실측했습니다. 같은 H200 클러스터에서 vLLM으로 Qwen3.6-35B-A3B를 서빙했을 때 요청당 종단 지연 시간($L_{\text{base}}$)은 평균 4286ms, 처리량은 평균 초당 29.9토큰이었습니다.
 
-![Measured ACI software overhead]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-measured-overhead.png' | relative_url }})
+![Measured ACI software overhead]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-measured-overhead.webp' | relative_url }})
 *H200 vLLM 베이스라인(약 4286ms/요청) 대비 ACI 소프트웨어 바인딩 경로가 추가하는 오버헤드를 실측한 결과입니다. 서명 원장 append, 프로버넌스 검증, 소프트웨어 attestation 흐름을 모두 더해도 요청당 약 0.01ms로, 베이스라인의 0.0002% 수준입니다.*
 
 이 베이스라인 위에 ACI가 얹는 항목들을 각각 측정했습니다. 서명 원장에 결합 레코드 $B$를 append하는 비용($L_{\text{ledger}}$)은 3000회 반복 측정에서 평균 0.0037ms였고, 이 가운데 서명 자체에 드는 비용은 0.0014ms였습니다. 프로버넌스 쪽은 두 단계로 나뉩니다. 512MB 샤드 전체의 SHA-256 다이제스트를 계산하는 작업은 2.15GB/s의 처리량이 나왔는데, 이는 모델이 로드될 때 한 번만 수행하고 모델 수명 전체에 걸쳐 상각되는 비용입니다. 반면 요청마다 실제로 검증하는 비용은 2만 회 측정에서 평균 0.00014ms에 불과했습니다. 마지막으로 소프트웨어 attestation 핸드셰이크 흐름 전체는 요청당 평균 0.0062ms였지만, 같은 증명 세션으로 128개 요청을 처리하도록 상각하면 요청당 약 0.00005ms까지 떨어졌습니다.
 
-![Attestation amortization]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-att-amortization.png' | relative_url }})
+![Attestation amortization]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-att-amortization.webp' | relative_url }})
 *증명 세션을 상각하는 요청 수 $N$이 늘어날수록 요청당 attestation 비용이 어떻게 줄어드는지 보여줍니다. $N$=1일 때 0.0062ms였던 비용이 $N$=128에서는 0.00005ms로, $N$=512에서는 0.000012ms까지 떨어집니다.*
 
 이 항목들을 합치면 결론은 명확합니다. ACI의 소프트웨어 바인딩 경로 전체, 즉 서명 원장 append와 요청당 프로버넌스 검증과 소프트웨어 attestation 흐름을 모두 더해도 요청당 약 0.01ms가 추가될 뿐이며, 이는 4286ms 베이스라인의 0.0002% 수준으로 0.001%에도 미치지 못합니다. 실무적으로는 사실상 무시해도 되는 비용입니다.
 
-![Cost split]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-cost-split.png' | relative_url }})
+![Cost split]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/fig-cost-split.webp' | relative_url }})
 *요청당 약 0.01ms인 ACI 소프트웨어 오버헤드가 원장 append, 프로버넌스 검증, attestation 흐름 세 항목으로 어떻게 나뉘는지를 보여줍니다. 512MB 샤드 다이제스트 계산은 모델 수명에 걸쳐 상각되는 일회성 비용이라 이 분해에서는 제외했습니다.*
 
 물론 이 측정이 전체 그림을 다 채우지는 못합니다. GPU 기밀 컴퓨팅 자체의 처리량 페널티($L_{\text{TEE}}$)는 이 클러스터에서 CC 모드가 꺼져 있어 여전히 측정하지 못했고, 선행 연구가 보고한 4~8% 범위(chrapek2025confidential, zhu2024hopperbenchmark)를 인용값으로만 남겨둡니다. 하드웨어 증명 근거 생성 자체도 CC 모드 Hopper/Blackwell 환경이 있어야 측정할 수 있어 아직 실측하지 못했습니다. 다시 말해 이번 실측으로 좁혀진 것은 ACI가 새로 추가하는 소프트웨어 비용이고, 남은 미지수는 GPU TEE 하드웨어 자체의 비용 하나로 줄었습니다.
 
 논문은 다섯 가지 요구사항(증명 신선도, 프로버넌스 결합, 부인 방지, 스케줄러 수준 격리, 수용 가능한 오버헤드)에 대해 세 종류의 공격자(호기심 많은 운영자, 악의적 공동 테넌트, 네트워크 공격자)를 각각 대입해 논증합니다.
 
-![보안 요구사항 대 공격자 매트릭스]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/req-adversary-matrix.png' | relative_url }})
+![보안 요구사항 대 공격자 매트릭스]({{ '/assets/images/posts/research/attested-confidential-sovereign-inference/req-adversary-matrix.webp' | relative_url }})
 *다섯 가지 ACI 요구사항이 각각 어떤 공격자 유형에 대응하는지 정리한 매트릭스입니다. 스케줄러 격리 요구사항(R4)은 공동 테넌트와 운영자 두 유형 모두를 커버합니다. 실측이 아닌 위협 모델 분석 결과입니다.*
 
 ## 회사·사회·과학에 대한 기여

@@ -408,6 +408,19 @@ macOS는 `brew install kimi-code`, 윈도우는 파워셸 스크립트도 제공
 
 그럼에도 개방 표준 위에서 에이전트와 에디터가 느슨하게 결합되는 방향은 분명한 흐름입니다. 특정 벤더 CLI에 종속되지 않고 모델과 에디터를 각각 갈아 끼울 수 있는 세계가 개발자에게 더 유리하며, Kimi Code CLI는 그 세계를 앞당기는 조각 중 하나입니다.
 
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 1](/assets/images/kimi-code-cli-acp-open-source-agent-slide-01.webp)
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 2](/assets/images/kimi-code-cli-acp-open-source-agent-slide-02.webp)
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 3](/assets/images/kimi-code-cli-acp-open-source-agent-slide-03.webp)
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 4](/assets/images/kimi-code-cli-acp-open-source-agent-slide-04.webp)
+
 ## 출처
 
 - [MoonshotAI/kimi-code (공식 저장소)](https://github.com/MoonshotAI/kimi-code)

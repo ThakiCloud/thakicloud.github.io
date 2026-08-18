@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/llm-cost-routing-guar
 reading_time: true
 categories:
   - llmops
-published: false
 audiobook: /assets/audio/posts/llm-cost-routing-guardrails/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -208,6 +207,24 @@ Claude 루프가 꼭 필요한 경우라면 다음 세 가지를 지킵니다.
 
 이 순서를 지키면 $705/일 사고는 재현되지 않습니다. 동시에 Sonnet 품질이 충분한 작업은 Sonnet으로, Haiku로 충분한 탐색은 Haiku로 돌아가는 체계가 자리를 잡습니다.
 
+## 참고문헌
+
+- 등급별 입력·출력 단가가 차등화되어 있고 캐시 읽기가 기본 입력가의 0.1배로 청구된다는 가격 구조의 출처입니다. 본문의 단가 숫자는 집필 시점 기준이므로 현재 값은 이 문서에서 확인하십시오. Anthropic, "Pricing". [https://platform.claude.com/docs/en/about-claude/pricing](https://platform.claude.com/docs/en/about-claude/pricing)
+- 서브에이전트의 `model` 파라미터가 haiku·sonnet·opus 별칭을 받고, 생략하면 상위 세션 모델을 상속한다는 근거입니다. 3번 항목이 왜 필수인지가 여기서 나옵니다. Claude Code 문서, "Create custom subagents". [https://code.claude.com/docs/en/sub-agents](https://code.claude.com/docs/en/sub-agents)
+
 ---
 
 ThakiCloud는 이 운영 경험을 Paxis와 AI Platform에 반영하고 있습니다. 비용인식 LLM 라우팅이 어떻게 제품으로 동작하는지 궁금하시다면 [hello@thakicloud.co.kr](mailto:hello@thakicloud.co.kr)로 문의 주십시오.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
+
+![llm-cost-routing-guardrails 슬라이드 1](/assets/images/llm-cost-routing-guardrails-slide-01.webp)
+
+![llm-cost-routing-guardrails 슬라이드 2](/assets/images/llm-cost-routing-guardrails-slide-02.webp)
+
+![llm-cost-routing-guardrails 슬라이드 3](/assets/images/llm-cost-routing-guardrails-slide-03.webp)
+
+![llm-cost-routing-guardrails 슬라이드 4](/assets/images/llm-cost-routing-guardrails-slide-04.webp)
+

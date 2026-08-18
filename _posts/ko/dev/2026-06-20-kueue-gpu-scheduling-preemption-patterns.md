@@ -15,7 +15,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/kueue-gpu-scheduling-pre
 reading_time: true
 categories:
   - dev
-published: false
 audiobook: /assets/audio/posts/kueue-gpu-scheduling-preemption-patterns/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -23,6 +22,9 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ⏱️ **예상 읽기 시간**: 8분
 
 GPU 클러스터를 여러 팀이 공유할 때 생기는 가장 흔한 문제는 두 가지입니다. 하나는 낮은 팀이 점유한 GPU를 높은 우선순위 작업이 가져올 방법이 없다는 것, 다른 하나는 어떤 팀이 쉬는 동안 GPU가 놀고 있다는 것입니다. Kueue는 이 두 문제를 선점(Preemption)과 쿼터 빌림(Quota Borrowing)으로 다룹니다.
+
+![Kueue로 GPU 워크로드 선점 제어하기: ClusterQueue 설계와 우선순위 패턴 개념을 형상화한 이미지](/assets/images/kueue-gpu-scheduling-preemption-patterns-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## Kueue가 기존 Kubernetes 스케줄러와 다른 점
 
@@ -37,6 +39,10 @@ Kueue는 Workload라는 추상 레이어를 Pod 위에 올립니다. 스케줄�
                                     선점 대상 탐색
                                     -> 낮은 우선순위 Preempt
 ```
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/kueue-gpu-scheduling-preemption-patterns/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## ClusterQueue 설계 기본
 
@@ -223,15 +229,27 @@ signal.signal(signal.SIGTERM, checkpoint_and_exit)
 
 Kueue는 Kubernetes 위에서 GPU 쿼터를 관리하는 몇 안 되는 프로덕션급 도구입니다. ClusterQueue-Cohort-Preemption 조합으로 팀 간 공정한 GPU 분배를 코드로 표현할 수 있습니다. 선점 정책은 반드시 실제 워크로드로 검증하고, 체크포인트 저장 시간을 terminationGracePeriodSeconds 안에 맞춰야 손실 없는 선점이 됩니다.
 
+## 참고문헌
+
+- ClusterQueue의 resourceGroups·flavors 쿼터 정의와 cohort 간 쿼터 빌림, reclaimWithinCohort·borrowWithinCohort·withinClusterQueue 선점 필드의 공식 정의입니다. Kueue 문서, "ClusterQueue". [https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/)
+- LocalQueue가 네임스페이스 스코프이고 하나의 ClusterQueue를 가리킨다는 근거입니다(함정 3). Kueue 문서, "LocalQueue". [https://kueue.sigs.k8s.io/docs/concepts/local_queue/](https://kueue.sigs.k8s.io/docs/concepts/local_queue/)
+- MultiKueue가 베타 상태이며 기본 활성화되어 있다는 상태 표기의 출처입니다. Kueue 문서, "MultiKueue". [https://kueue.sigs.k8s.io/docs/concepts/multikueue/](https://kueue.sigs.k8s.io/docs/concepts/multikueue/)
+- 협력적 선점은 확정된 릴리스가 아니라 체크포인트 정보를 선점 판단에 쓰자는 업스트림 제안 단계입니다. kubernetes-sigs/kueue 이슈 #477, "Use information about last checkpoint on preemption". [https://github.com/kubernetes-sigs/kueue/issues/477](https://github.com/kubernetes-sigs/kueue/issues/477)
+- 본문 PriorityClass 예제의 `preemptionPolicy: PreemptLowerPriority`와 `Never` 동작은 Kubernetes 표준 API입니다. Kubernetes 문서, "Pod Priority and Preemption". [https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/kueue-gpu-scheduling-preemption-patterns/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 관련 슬라이드
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 1]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.png' | relative_url }})
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 1]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.webp' | relative_url }})
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 2]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.png' | relative_url }})
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 2]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.webp' | relative_url }})
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 3]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.png' | relative_url }})
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 3]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.webp' | relative_url }})
 
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 4]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.png' | relative_url }})
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 4]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.webp' | relative_url }})
 

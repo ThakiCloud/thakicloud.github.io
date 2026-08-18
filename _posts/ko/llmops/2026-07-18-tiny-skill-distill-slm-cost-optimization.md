@@ -14,7 +14,6 @@ tags:
 author_profile: true
 toc: true
 toc_label: 비용 절감 실측
-published: true
 categories:
   - llmops
   - dev

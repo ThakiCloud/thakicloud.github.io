@@ -143,7 +143,7 @@ npx remotion render src/index.ts AiflPromo out/promo.mp4
 # real  0m22.758s
 ```
 
-![Measured wall-clock time per render stage and render throughput for video-shotcraft](/assets/images/video-shotcraft-agent-video-skill-results.png)
+![Measured wall-clock time per render stage and render throughput for video-shotcraft](/assets/images/video-shotcraft-agent-video-skill-results.webp)
 
 Measured wall-clock time per pipeline stage and render throughput. The red dashed line marks the 30fps realtime baseline.
 

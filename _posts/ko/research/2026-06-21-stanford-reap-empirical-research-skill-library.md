@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/stanford-reap-empir
 reading_time: true
 categories:
   - research
-published: false
 audiobook: /assets/audio/posts/stanford-reap-empirical-research-skill-library/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
@@ -70,11 +69,11 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![stanford-reap-empirical-research-skill-library 슬라이드 1]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-01.png' | relative_url }})
+![stanford-reap-empirical-research-skill-library 슬라이드 1]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-01.webp' | relative_url }})
 
-![stanford-reap-empirical-research-skill-library 슬라이드 2]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-02.png' | relative_url }})
+![stanford-reap-empirical-research-skill-library 슬라이드 2]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-02.webp' | relative_url }})
 
-![stanford-reap-empirical-research-skill-library 슬라이드 3]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-03.png' | relative_url }})
+![stanford-reap-empirical-research-skill-library 슬라이드 3]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-03.webp' | relative_url }})
 
-![stanford-reap-empirical-research-skill-library 슬라이드 4]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-04.png' | relative_url }})
+![stanford-reap-empirical-research-skill-library 슬라이드 4]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-04.webp' | relative_url }})
 

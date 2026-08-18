@@ -25,7 +25,6 @@ toc: true
 toc_sticky: true
 categories:
   - llmops
-published: false
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
 ---
 

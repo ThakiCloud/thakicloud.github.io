@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/news/huggingface-agentic-ai-breach/"
 ---
 
-![Abstract image of an autonomous agent swarm infiltrating a data pipeline]({{ '/assets/images/huggingface-agentic-ai-breach-hero.png' | relative_url }})
+![Abstract image of an autonomous agent swarm infiltrating a data pipeline]({{ '/assets/images/huggingface-agentic-ai-breach-hero.webp' | relative_url }})
 
 The story that shook timelines over the weekend was not a new model or a new benchmark. It was a notice that Hugging Face, the center of the open AI ecosystem, had been breached. What drew even more attention was who did it. According to the company, no human hacker typed commands through the night. An autonomous AI agent framework drove the attack from start to finish.
 

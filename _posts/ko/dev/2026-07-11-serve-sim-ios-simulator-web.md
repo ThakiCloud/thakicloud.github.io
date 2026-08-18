@@ -28,7 +28,7 @@ serve-sim이 흥미로운 이유는 단순한 화면 미러링 도구가 아니�
 
 이 조합이 중요한 이유는 AI 코딩 에이전트의 개발 루프를 완성하기 때문입니다. 에이전트가 코드를 고치고, 빌드하고, 실행한 뒤, 그 결과 화면을 보고, 버튼을 눌러 다음 단계로 넘어가는 전체 순환을 사람 없이 돌릴 수 있게 됩니다. ThakiCloud의 Agent-Native Cloud인 Paxis가 지향하는 "에이전트가 격리된 환경에서 실제 작업을 수행하는" 구조와 정확히 맞닿아 있어, 하나의 오픈소스 도구가 그 워크플로를 어떻게 구현하는지 살펴볼 가치가 있습니다.
 
-![클라우드 헤드리스 서버의 스마트폰 화면이 빛의 입자로 흩어져 네트워크를 타고 브라우저 창으로 흘러 들어가는 추상 이미지]({{ '/assets/images/serve-sim-ios-simulator-web-hero.png' | relative_url }})
+![클라우드 헤드리스 서버의 스마트폰 화면이 빛의 입자로 흩어져 네트워크를 타고 브라우저 창으로 흘러 들어가는 추상 이미지]({{ '/assets/images/serve-sim-ios-simulator-web-hero.webp' | relative_url }})
 *헤드리스 서버의 시뮬레이터 화면이 스트림이 되어 원격 브라우저로 흘러 들어가는 구조를 형상화했습니다.*
 
 ## serve-sim은 무엇인가
@@ -406,13 +406,13 @@ serve-sim은 표면적으로는 iOS 개발자용 도구지만, 그 아래에는 
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![serve-sim-ios-simulator-web 슬라이드 1]({{ '/assets/images/serve-sim-ios-simulator-web-slide-01.png' | relative_url }})
+![serve-sim-ios-simulator-web 슬라이드 1]({{ '/assets/images/serve-sim-ios-simulator-web-slide-01.webp' | relative_url }})
 
-![serve-sim-ios-simulator-web 슬라이드 2]({{ '/assets/images/serve-sim-ios-simulator-web-slide-02.png' | relative_url }})
+![serve-sim-ios-simulator-web 슬라이드 2]({{ '/assets/images/serve-sim-ios-simulator-web-slide-02.webp' | relative_url }})
 
-![serve-sim-ios-simulator-web 슬라이드 3]({{ '/assets/images/serve-sim-ios-simulator-web-slide-03.png' | relative_url }})
+![serve-sim-ios-simulator-web 슬라이드 3]({{ '/assets/images/serve-sim-ios-simulator-web-slide-03.webp' | relative_url }})
 
-![serve-sim-ios-simulator-web 슬라이드 4]({{ '/assets/images/serve-sim-ios-simulator-web-slide-04.png' | relative_url }})
+![serve-sim-ios-simulator-web 슬라이드 4]({{ '/assets/images/serve-sim-ios-simulator-web-slide-04.webp' | relative_url }})
 
 ## 출처
 

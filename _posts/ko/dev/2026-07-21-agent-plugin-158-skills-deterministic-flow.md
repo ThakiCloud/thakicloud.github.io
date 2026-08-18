@@ -23,7 +23,7 @@ audiobook: /assets/audio/posts/agent-plugin-158-skills-deterministic-flow/audiob
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
-![수많은 스킬 모듈이 하나의 정렬된 수직 파이프라인으로 수렴하는 모습을 형상화한 추상 이미지]({{ '/assets/images/agent-plugin-158-skills-deterministic-flow-hero.png' | relative_url }})
+![수많은 스킬 모듈이 하나의 정렬된 수직 파이프라인으로 수렴하는 모습을 형상화한 추상 이미지]({{ '/assets/images/agent-plugin-158-skills-deterministic-flow-hero.webp' | relative_url }})
 
 ## 개요
 

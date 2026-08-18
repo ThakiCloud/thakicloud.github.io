@@ -20,6 +20,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/minimal-guarded-agent-lo
 reading_time: true
 categories:
   - dev
+audiobook: /assets/audio/posts/minimal-guarded-agent-loop/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 "첫 AI 에이전트를 만드는 법"이라는 제목의 입문 가이드가 꾸준히 화제가 됩니다. 좋은 가이드는 대체로 에이전트를 네 조각으로 나눕니다. 추론을 담당하는 LLM 두뇌, 상태를 기억하는 메모리, 외부와 상호작용하는 도구, 그리고 이 셋을 묶어 반복하는 에이전트 루프입니다. 여기에 ReAct 패턴, 즉 추론과 행동을 번갈아 수행하는 구조가 표준처럼 따라옵니다. 다 맞는 설명입니다. 그런데 실제로 에이전트를 운영해 보면 무너지는 지점은 따로 있습니다. 바로 루프를 언제 멈출지 정하는 가드레일입니다. 이 글은 외부 LLM을 전혀 호출하지 않고 순수 파이썬으로 가드레일이 붙은 최소 에이전트 루프를 직접 돌려, 그 차이를 실제 수치로 보여 줍니다.

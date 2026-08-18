@@ -13,21 +13,22 @@ tags:
   - sovereignty
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.png
+image: /assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.webp
 video: /assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.ko.mp4
 audiobook: /assets/audio/posts/codex-image-cockpit-spin-the-bill/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
+published: false
 ---
 
 코덱스 워크플로에 붙는 이미지 조종석 하나가 공개됐습니다. 캐릭터를 앞, 비스듬앞, 옆, 비스듬뒤, 뒤 이렇게 다섯 방향으로 돌려가며 애니메이션으로 뽑아 주고, 이번 버전은 16프레임과 20프레임까지 실험적으로 늘렸습니다. 손은 편해집니다. 문제는 프레임 하나가 결국 이미지 추론 한 번, 그러니까 돈 나가는 호출 한 번이라는 점입니다. 방향을 늘리고 프레임을 늘릴수록 그림은 부드러워지지만 미터도 같이 돌아갑니다. 게다가 이 조종석은 남의 코딩 엔진 위에서만 날아요.
 
-![한 바퀴 돌렸더니 청구서도 한 바퀴](/assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.png)
+![한 바퀴 돌렸더니 청구서도 한 바퀴](/assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.webp)
 
 > 원 뉴스: [RT @dreiachse: Image Cockpit for Codex Workflows v0.1.7 を公開しました！](https://x.com/hjguyhan/status/2080249200890237270) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/codex-image-cockpit-spin-the-bill/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/codex-image-cockpit-spin-the-bill/comic.ko.mp4" type="video/mp4">
 </video>
 
@@ -38,3 +39,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![codex-image-cockpit-spin-the-bill 슬라이드 1](/assets/images/codex-image-cockpit-spin-the-bill-slide-01.webp)
+
+![codex-image-cockpit-spin-the-bill 슬라이드 2](/assets/images/codex-image-cockpit-spin-the-bill-slide-02.webp)
+
+![codex-image-cockpit-spin-the-bill 슬라이드 3](/assets/images/codex-image-cockpit-spin-the-bill-slide-03.webp)
+
+![codex-image-cockpit-spin-the-bill 슬라이드 4](/assets/images/codex-image-cockpit-spin-the-bill-slide-04.webp)
+

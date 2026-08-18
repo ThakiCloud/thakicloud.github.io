@@ -17,14 +17,14 @@ toc: true
 toc_label: "Contents"
 toc_icon: "microchip"
 header:
-  teaser: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.png
-  overlay_image: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.png
+  teaser: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp
+  overlay_image: /assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp
   overlay_filter: 0.5
 categories:
   - llmops
 ---
 
-![hero](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.png)
+![hero](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp)
 
 > 📊 **Slide summary (NotebookLM)**: For a slide-first walkthrough of this post, see the [three-layer cost-cut slide deck (PDF)](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-nlm-en.pdf).
 

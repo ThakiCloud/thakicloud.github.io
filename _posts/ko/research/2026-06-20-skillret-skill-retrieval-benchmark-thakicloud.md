@@ -10,13 +10,14 @@ tags:
   - benchmark
   - thakicloud
   - qwen3-embedding
-canonical_url: "https://thakicloud.com/tech-blog/research/skillret-skill-retrieval-benchmark-thakicloud/"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/skillret-skill-retrieval-benchmark-thakicloud/"
 reading_time: true
 toc: true
 toc_sticky: true
 categories:
   - research
-published: false
+audiobook: /assets/audio/posts/skillret-skill-retrieval-benchmark-thakicloud/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![SkillRet 2단계 스킬 검색 파이프라인]({{ '/assets/images/skillret-hero.webp' | relative_url }})

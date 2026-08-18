@@ -18,14 +18,13 @@ author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/glm-5-2-ppo-icepop/"
 lang: en
-published: false
 ---
 
 Any team that has actually run reinforcement learning (RL) post-training on large language models knows that the trend of the past year or two has leaned heavily in one direction. Since DeepSeek released GRPO, the practice of dropping the separate value model (critic) and estimating advantage purely from relative reward within a group has become close to standard. Without a critic to train, memory and compute costs drop and the implementation gets simpler. The claim that "critics are no longer necessary" has become something close to conventional wisdom.
 
 Zhipu's GLM-5.2, however, runs directly against this trend. The model abandons the group-relative approach and goes back to PPO with a trained value model, while addressing RL's chronic instability problem, the train-inference distribution mismatch, with a technique called IcePop. What makes this interesting is that the choice is not a simple regression. It amounts to an empirical rebuttal of the recent conventional wisdom that "GRPO is universally superior."
 
-![An abstract image depicting the reinforcement learning path returning from GRPO to PPO]({{ '/assets/images/glm-5-2-ppo-icepop-hero.png' | relative_url }})
+![An abstract image depicting the reinforcement learning path returning from GRPO to PPO]({{ '/assets/images/glm-5-2-ppo-icepop-hero.webp' | relative_url }})
 *Depicting the directional shift in RL post-training: dropping the critic, then bringing it back.*
 
 ## Overview

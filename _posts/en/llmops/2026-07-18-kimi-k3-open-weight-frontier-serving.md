@@ -14,7 +14,6 @@ tags:
 author_profile: true
 toc: true
 toc_label: Open Weight Frontier
-published: true
 categories:
   - llmops
   - owm
