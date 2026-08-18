@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/the-sixth-engineering-discipline/strip.webp
 video: /assets/videos/posts/만화/the-sixth-engineering-discipline/comic.mp4
+published: false
 ---
 
 프롬프트 엔지니어링에서 시작한 이름표가 컨텍스트, 하네스, 루프를 지나 이제 그래프 엔지니어링까지 왔습니다. 새 용어가 나올 때마다 업계는 그걸 혁명이라 부르지만, 뜯어보면 하는 일은 하나로 모입니다. 프롬프트는 모델에게 말을 어떻게 거느냐, 컨텍스트는 그 순간 무엇을 보여줄지 고르는 일, 하네스는 도구와 검증 규칙을 감싸는 골격, 루프는 결과를 다시 입력으로 넣어 수렴시키는 반복, 그래프는 그 반복들을 노드와 화살표로 이어 설계도로 만든 것입니다. 즉 다섯 개 학문이 아니라 같은 문제를 다섯 번 다시 부른 셈인데, 강의는 다섯 번 팔렸습니다.
