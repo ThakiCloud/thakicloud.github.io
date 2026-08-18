@@ -60,8 +60,8 @@
   {% endif %}
 {% endif %}
 {% assign ab_heading = page.audiobook_label | default: ab_label %}
-<div class="audiobook-player" dir="{% if ab_lang == 'ar' %}rtl{% else %}ltr{% endif %}" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid #1e293b;border-radius:8px;background:#0a0a0a;">
-  <div style="font-weight:600;color:#f8fafc;margin-bottom:0.5em;">
+<div class="audiobook-player" dir="{% if ab_lang == 'ar' %}rtl{% else %}ltr{% endif %}" style="margin:1.25em 0;padding:0.9em 1.1em;border:1px solid var(--border);border-radius:8px;background:var(--bg-elevated);">
+  <div style="font-weight:600;color:var(--text);margin-bottom:0.5em;">
     🎧 {{ ab_heading }}
   </div>
   {% if page.audiobook contains "://" %}
@@ -74,20 +74,20 @@
   </a>
   {% endif %}
   {% else %}
-  <audio controls preload="none" style="width:100%;color-scheme:dark;">
+  <audio controls preload="none" style="width:100%;">
     <source src="{{ page.audiobook | relative_url }}" type="audio/mpeg">
     {{ ab_fallback }} <a href="{{ page.audiobook | relative_url }}">{{ ab_download }}</a>
   </audio>
   {% if page.audiobook_en %}
-  <div style="font-size:0.85em;color:#9ca3af;margin-top:0.6em;">{{ ab_en_track }}</div>
-  <audio controls preload="none" style="width:100%;color-scheme:dark;">
+  <div style="font-size:0.85em;color:var(--text-muted);margin-top:0.6em;">{{ ab_en_track }}</div>
+  <audio controls preload="none" style="width:100%;">
     <source src="{{ page.audiobook_en | relative_url }}" type="audio/mpeg">
     <a href="{{ page.audiobook_en | relative_url }}">{{ ab_download }}</a>
   </audio>
   {% endif %}
   {% endif %}
   {% if ab_note != "" %}
-  <div style="font-size:0.78em;color:#9ca3af;margin-top:0.5em;">{{ ab_note }}</div>
+  <div style="font-size:0.78em;color:var(--text-subtle);margin-top:0.5em;">{{ ab_note }}</div>
   {% endif %}
 </div>
 {% endif %}

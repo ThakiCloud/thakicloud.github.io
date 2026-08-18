@@ -170,6 +170,8 @@ search: false
   --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
   /* Long-form reading serif (Latin); Pretendard carries Hangul per-glyph. */
   --font-serif: "Source Serif 4", Georgia, Cambria, "Pretendard Variable", Pretendard, serif;
+  --sb-thumb: rgba(0,0,0,0.28);         /* overlay scrollbar thumb (light) */
+  --sb-thumb-hover: rgba(0,0,0,0.45);
 }
 
 html[data-theme="dark"] {
@@ -184,6 +186,8 @@ html[data-theme="dark"] {
   --border-strong: rgba(255,255,255,0.20);
   --footer-link: #d1d5db;      /* gray300 on the black footer */
   --footer-icon: #9ca3af;      /* gray400 social icons */
+  --sb-thumb: rgba(255,255,255,0.22);   /* overlay scrollbar thumb (dark) */
+  --sb-thumb-hover: rgba(255,255,255,0.4);
   --divider: #334155;                 /* slate700 — brighter rules on black */
   --toc-idle: #94a3b8;                /* slate400 reads well on black too */
   --rule: #334155;                    /* slate700 */
@@ -211,17 +215,17 @@ body { font-family: var(--font-sans); }
    Dark-only site, so the thumb is a light translucent white. */
 * {
   scrollbar-width: thin;                                   /* Firefox */
-  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  scrollbar-color: var(--sb-thumb) transparent;
 }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--sb-thumb);
   border: 2px solid transparent;      /* inset so the thumb looks like an overlay pill */
   border-radius: 8px;
   background-clip: content-box;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: var(--sb-thumb-hover); background-clip: content-box; }
 ::-webkit-scrollbar-corner { background: transparent; }
 
 /* Base surfaces ----------------------------------------------------------- */
