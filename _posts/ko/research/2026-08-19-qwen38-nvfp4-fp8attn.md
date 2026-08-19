@@ -84,3 +84,29 @@ config 파일이 "혼합 정밀도"라고 적혀 있는 것과 텐서가 실제�
 공개 빌드와 남은 2 GiB 차이는 `lm_head`와 비전 타워입니다. 저쪽은 둘 다 양자화하고 저희는
 그대로 뒀습니다. `lm_head`는 어휘가 15만 개라 로짓 품질에 직결되는 자리이고, 통과율이 같다는
 것만으로 4비트로 내릴 근거는 되지 않는다고 봤습니다.
+
+## 참고 자료
+
+- [vLLM](https://github.com/vllm-project/vllm): 이 글에서 혼합 정밀도 체크포인트를 읽는지
+  확인한 서빙 엔진의 공식 저장소입니다.
+- [LLM Compressor](https://github.com/vllm-project/llm-compressor): 모듈별로 다른 정밀도를
+  지정해 양자화하는 데 사용한 공식 도구로, NVFP4·FP8 등 다양한 포맷을 지원합니다.
+- [NVFP4: A 4-Bit Floating Point Format for AI Inference](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/):
+  NVIDIA Blackwell 아키텍처에서 도입된 4비트 부동소수점 포맷을 설명하는 공식 블로그입니다.
+- [FP8 Primer](https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/examples/fp8_primer.html):
+  8비트 부동소수점 포맷의 스케일링 방식을 다루는 NVIDIA Transformer Engine 공식 문서입니다.
+- [NVIDIA Blackwell Architecture](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/):
+  B200이 속한 Blackwell GPU 아키텍처와 FP8 텐서코어 지원을 설명하는 공식 페이지입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![qwen38-nvfp4-fp8attn 슬라이드 1](/assets/images/qwen38-nvfp4-fp8attn-slide-01.png)
+
+![qwen38-nvfp4-fp8attn 슬라이드 2](/assets/images/qwen38-nvfp4-fp8attn-slide-02.png)
+
+![qwen38-nvfp4-fp8attn 슬라이드 3](/assets/images/qwen38-nvfp4-fp8attn-slide-03.png)
+
+![qwen38-nvfp4-fp8attn 슬라이드 4](/assets/images/qwen38-nvfp4-fp8attn-slide-04.png)
+
