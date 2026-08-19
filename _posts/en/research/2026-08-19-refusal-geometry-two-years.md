@@ -14,12 +14,12 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 header:
-  teaser: /assets/images/refusal-geometry-hero.png
+  teaser: /assets/images/refusal-geometry-hero.webp
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/research/refusal-geometry-two-years/
 ---
 
-![The geometry of refusal](/assets/images/refusal-geometry-hero.png)
+![The geometry of refusal](/assets/images/refusal-geometry-hero.webp)
 *What looked like a single axis keeps splitting into more, yet the control knob stays one.*
 
 If you evaluate derivative models for a living, it helps to know how refusal-direction research has moved over the past two years. A conclusion flipped once, and that flip changes how you should design your evaluation.

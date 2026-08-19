@@ -14,12 +14,12 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 header:
-  teaser: /assets/images/abliteration-refusal-hero.png
+  teaser: /assets/images/abliteration-refusal-hero.webp
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/research/abliteration-refusal-direction-explained/
 ---
 
-![Removing the refusal direction](/assets/images/abliteration-refusal-hero.png)
+![Removing the refusal direction](/assets/images/abliteration-refusal-hero.webp)
 *Suppressing a single axis out of many that carry the signal. That is what abliteration does to the weights.*
 
 Browse the Hugging Face model catalog for a while and you will keep running into models with `Uncensored` or `abliterated` tacked onto the end of their names. If your job is to bring models onto an internal platform, this forces a judgment call. What actually changed in this model? Can you trust it to perform the same as the original? Should it go into the catalog at all?

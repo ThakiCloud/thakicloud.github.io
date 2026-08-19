@@ -14,10 +14,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 header:
-  teaser: /assets/images/abliteration-refusal-hero.png
+  teaser: /assets/images/abliteration-refusal-hero.webp
 ---
 
-![거부 방향 제거](/assets/images/abliteration-refusal-hero.png)
+![거부 방향 제거](/assets/images/abliteration-refusal-hero.webp)
 *여러 갈래로 흐르던 신호에서 한 축만 눌러 없애는 것, abliteration이 가중치에 하는 일입니다.*
 
 허깅페이스 모델 카탈로그를 훑다 보면 이름 끝에 `Uncensored`나 `abliterated`가 붙은 모델을 자주 만나게 됩니다. 사내 플랫폼에 모델을 올리는 입장이라면 여기서 판단이 필요합니다. 이 모델은 무엇이 달라진 것인지, 원본과 같은 성능이라고 믿어도 되는지, 카탈로그에 들여도 되는지를 결정해야 합니다.

@@ -14,10 +14,10 @@ author_profile: true
 toc: true
 toc_label: "목차"
 header:
-  teaser: /assets/images/refusal-geometry-hero.png
+  teaser: /assets/images/refusal-geometry-hero.webp
 ---
 
-![거부의 기하 구조](/assets/images/refusal-geometry-hero.png)
+![거부의 기하 구조](/assets/images/refusal-geometry-hero.webp)
 *하나의 축인 줄 알았던 것이 여러 갈래로 갈라지는데, 손잡이는 여전히 하나입니다.*
 
 파생 모델을 평가해야 하는 자리에 있다면 지난 2년간 거부 방향 연구가 어떻게 움직였는지 알아 두는 편이 유리합니다. 결론이 한 번 뒤집혔고, 그 뒤집힘이 평가 설계를 바꾸기 때문입니다.

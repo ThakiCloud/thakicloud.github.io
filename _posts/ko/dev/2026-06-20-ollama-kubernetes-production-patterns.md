@@ -15,6 +15,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/ollama-kubernetes-produc
 reading_time: true
 categories:
   - dev
+audiobook: /assets/audio/posts/ollama-kubernetes-production-patterns/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
@@ -325,3 +327,16 @@ Ollama를 Kubernetes에서 제대로 운용하려면 모델 PVC, GPU toleration,
 - Kubernetes, [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/) 및 [HPA v2 API Reference](https://kubernetes.io/docs/reference/kubernetes-api/autoscaling/horizontal-pod-autoscaler-v2/)
 - NVIDIA, [dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter): GPU 메트릭 DaemonSet
 - vLLM, [Documentation](https://docs.vllm.ai/en/latest/): PagedAttention과 continuous batching
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![ollama-kubernetes-production-patterns 슬라이드 1](/assets/images/ollama-kubernetes-production-patterns-slide-01.webp)
+
+![ollama-kubernetes-production-patterns 슬라이드 2](/assets/images/ollama-kubernetes-production-patterns-slide-02.webp)
+
+![ollama-kubernetes-production-patterns 슬라이드 3](/assets/images/ollama-kubernetes-production-patterns-slide-03.webp)
+
+![ollama-kubernetes-production-patterns 슬라이드 4](/assets/images/ollama-kubernetes-production-patterns-slide-04.webp)
+
