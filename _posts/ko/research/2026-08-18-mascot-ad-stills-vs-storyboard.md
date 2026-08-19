@@ -14,6 +14,7 @@ toc: true
 toc_label: "목차"
 header:
   teaser: /assets/images/cf-seven-ads.jpg
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-ad-stills-vs-storyboard/"
 ---
 
 제품 마스코트로 광고 영상을 만들려는 분이라면 첫 결정이 "캐릭터를 무엇으로 붙잡을 것인가"입니다.
@@ -23,6 +24,9 @@ header:
 
 ![최종 일곱 편]({{ site.url }}{{ site.baseurl }}/assets/images/cf-seven-ads.jpg)
 *제품마다 한 편씩, 각 42초입니다. 어느 방법으로 만들었는지는 제품마다 다릅니다.*
+
+![마스코트 광고 일곱 편을 만들며 캐릭터를 지키는 세 가지 방법을 재봤습니다 개념을 형상화한 이미지](/assets/images/mascot-ad-stills-vs-storyboard-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 두 가지 방법
 

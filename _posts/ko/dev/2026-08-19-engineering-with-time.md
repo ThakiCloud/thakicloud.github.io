@@ -4,7 +4,7 @@ excerpt: "정산이 하루 어긋나고, 배치가 두 번 돌고, 타임아웃�
 seo_title: "시간 버그는 왜 조용히 터질까: 타임존부터 스케줄러까지 한 가지 원인"
 seo_description: "정산 오차, 중복 배치 실행, 타임아웃 폭주까지. 시간을 다루는 시스템에서 반복되는 장애의 공통 원인은 타입 설계 실수입니다. 순간, 벽시계 시각, 기간을 구분하는 실무 규칙을 다룹니다."
 date: 2026-08-19
-last_modified_at: 2026-08-19
+last_modified_at: 2026-08-20
 author_profile: true
 toc: true
 toc_label: "목차"
@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/engineering-with-time/"
 ebook: /assets/ebooks/engineering-with-time.pdf
 ebook_title: "시간을 다루는 기술"
 ebook_pages: 33
+audiobook: "https://drive.google.com/file/d/1RX4zS96bVStvPE6T5AlSbL498L9M1BuK/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 시간을 다루는 코드를 몇 년째 유지보수해 본 백엔드 엔지니어라면 이 문장에 뜨끔했을 것입니다. 정산 금액이 하루치 어긋나고, 배치가 새벽에 두 번 돌고, 멀쩡하던 타임아웃이 갑자기 무더기로 발동하는 사고들 말입니다. 이 글이 주장하는 것은 하나입니다. 이 사고들은 서로 다른 버그가 아니라 같은 버그가 다른 옷을 입고 나타난 것입니다. 그리고 그 버그의 정체는 논리 실수가 아니라 타입 설계 실수입니다.
@@ -109,3 +112,24 @@ ebook_pages: 33
 그래서 실무에서 쓸 수 있는 점검법은 하나로 요약됩니다. 코드에 시간 값이 등장할 때마다, 이것이 순간인지 벽시계 시각인지 기간인지, 그리고 기간이라면 물리적으로 고정된 것인지 달력에 의존하는 것인지를 스스로에게 묻는 것입니다. 답이 즉시 나오지 않는다면, 그 변수는 잘못된 타입에 담겨 있을 가능성이 높습니다. 이 질문 하나를 리뷰 습관으로 만드는 것이, 최신 시간 처리 라이브러리를 새로 도입하는 것보다 사고를 더 많이 막아 줍니다.
 
 시간 버그가 유독 오래 방치되는 이유는 겉으로 조용하기 때문입니다. 하지만 조용하다고 해서 원인이 복잡한 것은 아닙니다. 지금까지 살펴본 모든 사례에서 원인은 하나였습니다. 서로 다른 것을 같은 그릇에 담았다는 것입니다. 그릇을 나누는 순간, 사고의 절반은 애초에 코드로 표현조차 되지 않습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![engineering-with-time 슬라이드 1](/assets/images/engineering-with-time-slide-01.webp)
+
+![engineering-with-time 슬라이드 2](/assets/images/engineering-with-time-slide-02.webp)
+
+![engineering-with-time 슬라이드 3](/assets/images/engineering-with-time-slide-03.webp)
+
+![engineering-with-time 슬라이드 4](/assets/images/engineering-with-time-slide-04.webp)
+
+## 출처
+
+- IANA Time Zone Database, [Theory and pragmatics of the tz code and data](https://data.iana.org/time-zones/theory.html)
+- Linux man-pages, [clock_gettime(2)](https://man7.org/linux/man-pages/man2/clock_gettime.2.html)
+- Go, [package time: Monotonic Clocks](https://pkg.go.dev/time#hdr-Monotonic_Clocks)
+- Martin Fowler, [Bitemporal History](https://martinfowler.com/articles/bitemporal-history.html)
+- AWS Builders' Library, [Making retries safe with idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/)

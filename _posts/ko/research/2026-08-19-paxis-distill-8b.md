@@ -11,6 +11,10 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+audiobook: "https://drive.google.com/file/d/1ukmECj5i1WTBGRIYNpboa3QUPjJ0BiFP/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/paxis-distill-8b/"
 ---
 
 에이전트 플랫폼을 운영하면 곧 이 질문에 부딪힙니다. 사용자가 빌더로 에이전트를 계속 만드는데,
@@ -19,6 +23,9 @@ toc_label: "목차"
 저희가 잰 결론은 이렇습니다. **27B의 실행 로그로 8B를 증류하면, 학습이 한 번도 본 적 없는
 에이전트에서도 성능이 오릅니다.** 학습 전 236/347에서 학습 후 328/347, **+26.5pp**입니다.
 학습에 770행과 14분이 들었습니다.
+
+![사용자가 만든 에이전트를 밤새 8B에 넣기 개념을 형상화한 이미지](/assets/images/paxis-distill-8b-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇을 쟀나
 
@@ -132,11 +139,11 @@ flowchart TB
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![paxis-distill-8b 슬라이드 1](/assets/images/paxis-distill-8b-slide-01.png)
+![paxis-distill-8b 슬라이드 1](/assets/images/paxis-distill-8b-slide-01.webp)
 
-![paxis-distill-8b 슬라이드 2](/assets/images/paxis-distill-8b-slide-02.png)
+![paxis-distill-8b 슬라이드 2](/assets/images/paxis-distill-8b-slide-02.webp)
 
-![paxis-distill-8b 슬라이드 3](/assets/images/paxis-distill-8b-slide-03.png)
+![paxis-distill-8b 슬라이드 3](/assets/images/paxis-distill-8b-slide-03.webp)
 
-![paxis-distill-8b 슬라이드 4](/assets/images/paxis-distill-8b-slide-04.png)
+![paxis-distill-8b 슬라이드 4](/assets/images/paxis-distill-8b-slide-04.webp)
 

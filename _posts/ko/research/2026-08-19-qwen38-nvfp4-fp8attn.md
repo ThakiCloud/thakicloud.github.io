@@ -11,6 +11,10 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+audiobook: "https://drive.google.com/file/d/1LdST5Fk09yMHR8I9088U6yJsvjZ0_ZxD/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/qwen38-nvfp4-fp8attn/"
 ---
 
 모델을 양자화해 서빙하는 분이라면 한 번쯤 겪는 상황입니다. 공개된 체크포인트와 우리가 만든
@@ -18,6 +22,9 @@ toc_label: "목차"
 
 저희 경우 **28.07 GiB 대 약 19 GiB**였습니다. 둘 다 "NVFP4"입니다. 원인을 찾아보니 숫자
 형식이 아니라 **어텐션을 어떻게 다뤘느냐**였고, 고치자 **21.34 GiB로 24% 줄었습니다.**
+
+![같은 NVFP4인데 9GB 더 무거웠던 이유 개념을 형상화한 이미지](/assets/images/qwen38-nvfp4-fp8attn-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 제외는 안전한 선택이 아닙니다
 
@@ -102,11 +109,11 @@ config 파일이 "혼합 정밀도"라고 적혀 있는 것과 텐서가 실제�
 
 본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![qwen38-nvfp4-fp8attn 슬라이드 1](/assets/images/qwen38-nvfp4-fp8attn-slide-01.png)
+![qwen38-nvfp4-fp8attn 슬라이드 1](/assets/images/qwen38-nvfp4-fp8attn-slide-01.webp)
 
-![qwen38-nvfp4-fp8attn 슬라이드 2](/assets/images/qwen38-nvfp4-fp8attn-slide-02.png)
+![qwen38-nvfp4-fp8attn 슬라이드 2](/assets/images/qwen38-nvfp4-fp8attn-slide-02.webp)
 
-![qwen38-nvfp4-fp8attn 슬라이드 3](/assets/images/qwen38-nvfp4-fp8attn-slide-03.png)
+![qwen38-nvfp4-fp8attn 슬라이드 3](/assets/images/qwen38-nvfp4-fp8attn-slide-03.webp)
 
-![qwen38-nvfp4-fp8attn 슬라이드 4](/assets/images/qwen38-nvfp4-fp8attn-slide-04.png)
+![qwen38-nvfp4-fp8attn 슬라이드 4](/assets/images/qwen38-nvfp4-fp8attn-slide-04.webp)
 
