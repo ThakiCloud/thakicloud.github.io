@@ -10,9 +10,19 @@
   gtag('config', 'G-78BFTNGGJX');
 </script>
 
-<!-- Single-mode: no theme toggle, so pin the theme before first paint. -->
+<!-- Pin the theme before first paint (no flash), honouring the reader's own choice.
+     ⛔ 2026-08-19: this used to hard-code 'light' with the comment "no theme toggle" —
+     but masthead.html DOES ship a toggle that writes localStorage['theme']. So every
+     navigation snapped dark-mode readers back to light and the toggle looked broken.
+     The pin must read what the toggle wrote; theme-color is synced for the same reason. -->
 <script>
-  document.documentElement.setAttribute('data-theme', 'light');
+  (function () {
+    var t = 'light';
+    try { if (localStorage.getItem('theme') === 'dark') t = 'dark'; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'dark' ? '#0a0a0a' : '#ffffff');
+  })();
 </script>
 
 <!-- Typefaces: Pretendard (KO/EN), JetBrains Mono (code), IBM Plex Sans Arabic (ar) -->
