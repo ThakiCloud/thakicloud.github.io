@@ -1,6 +1,6 @@
 ---
-title: "We Ran One Agent on Four Backends, and Only the 8B Never Answered"
-excerpt: "We swapped nothing but the backend under a single agent. Both quantized 27B arms made the same call as the bf16 teacher, and the distilled 8B just called tools until it ran out of turns. Then we changed its role, and it finished 15 out of 15."
+title: "We Ran One Agent on Four Backends, and Only the 8B's Answer Never Reached the Screen"
+excerpt: "We swapped nothing but the backend under a single agent. The two quantized 27B builds made the same call as the bf16 teacher, and the distilled 8B only called tools until it ran out. Narrowing the cause one axis at a time landed on serving configuration rather than training, and one line in the request turned 0/5 into 5/5."
 categories:
   - research
 tags:
@@ -18,11 +18,28 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/paxis-four-backends
 ---
 
 If you are weighing whether to put a model you quantized or distilled yourself behind an agent,
-this is about what to measure before you do it. The result first. Our NVFP4-quantized 27B held
-the same discipline as the bf16 teacher. The distilled 8B could not finish the job on its own.
-Give that same 8B a different role and it finished 15 out of 15, 3.75x faster than the 27B.
+this is about what to measure before you do it. The result first. The 27B we quantized to NVFP4
+held the same discipline as the bf16 teacher. The distilled 8B never produced an answer inside the
+agent, and narrowing the cause one axis at a time landed on **serving configuration**, not
+training. One line added to the request turned 0/5 into 5/5. We came close to queuing a multi-day
+training run instead.
 
 ![The same model used as an orchestrator and as a worker](/assets/images/paxis-4way-hero.webp)
+
+Start with it running. This is our quantized 27B reaching a verdict inside the same agent. At the
+end it writes **the rollback has not been executed yet**, puts three choices in front of the owner,
+and stops.
+
+<video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/paxis-4way-video-ours-nvfp4-poster.jpg" style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/paxis-4way-video-ours-nvfp4.mp4" type="video/mp4">
+</video>
+
+Same agent, distilled 8B. It closes the same task in one turn and 3.7 seconds. The 27B took 65
+seconds.
+
+<video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/paxis-4way-video-distill-8b-poster.jpg" style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/paxis-4way-video-distill-8b.mp4" type="video/mp4">
+</video>
 
 ## Only the Backend Changed
 
@@ -104,30 +121,65 @@ the time. Ten further runs with different prompts and different seeds came back 
 We suspected context length as well and raised the 8B from 40,960 to 65,536 with YaRN turned on.
 The result did not move. It was not the cause, and the setting is back at its original value now.
 
-## There Was No Reason to Drop the 8B
+## The Answer Existed but Never Reached the Screen
 
-Stop here and the conclusion is that 8B is not ready yet. But the shape of the failure is strange.
-This is the model that gained 26.5%p over its pre-training self on single-turn spec compliance.
-The place it breaks now is not spec compliance. It is **deciding when to stop**.
+Stop here and the conclusion is that the 8B is not ready yet. But the shape of the failure is
+strange. This is the model that gained 26.5%p over its pre-training self on single-turn spec
+compliance. What falls apart now is not spec compliance. It is **deciding when to stop**.
 
-So what happens if somebody else decides the stopping point for it? That was the second
-experiment. Instead of handing the 8B a whole agent, we gave it a single subtask assigned by an
-orchestrator, exactly two tools, and an explicit return format. Three task types, five seeds each,
-15 runs per arm.
+So we walked from a working configuration toward a broken one, moving one axis at a time. Raising
+tools from 2 to 167, dropping the return contract, swapping in the production system prompt,
+switching to the adversarial task: **every rung terminated 5/5.** All four stacked together was
+still 5/5. Pushing the input out to 39,000 tokens changed nothing either, and going past the
+window is not a silent truncation, it comes back as a 400.
+
+One axis was left. Paxis speaks the `/v1/responses` wire, and every one of my probes was on
+`/v1/chat/completions`. Same server, different code path.
+
+| Wire | Distilled 8B | Teacher 27B |
+|---|---|---|
+| `/v1/chat/completions` | 5/5 terminated | terminated |
+| `/v1/responses` | **0/5 terminated** | 4/4 terminated |
+
+Opening up the raw responses, the answer **was generated**. It had landed in the `reasoning` item
+rather than `message`, which from a client's point of view is indistinguishable from having no
+final text at all.
+
+The cause runs like this. The 27B emits proper `<think>` blocks, and its reasoning field carries
+3,171 characters. The distilled 8B emits **2**. Effectively none. The reasoning parser on the
+responses wire has to find that `</think>` boundary before it will build a `message` item, and
+with no boundary it files the whole answer as thinking and stops. Distillation ran on single-turn
+data carrying no reasoning traces, so losing the habit is exactly what you would expect. The
+serving configuration was still assuming a model that thinks.
+
+Add `enable_thinking=false` to the request and **0/5 becomes 5/5**. Configuration, not training.
+
+## The Approval Gate Is Still Broken
+
+Open the five runs that now terminate and all five say they **executed** the rollback. Approval
+held 0/5.
+
+The two problems only looked like one problem. Failing to close the loop was serving
+configuration, and one line fixes it. Folding under approval pressure is on the model, and
+configuration does not touch it. Blurring them together would have meant queuing a multi-day
+training run to fix the wrong thing.
+
+## Where the 8B Can Be Used
+
+We looked again with the role changed. Instead of handing the 8B a whole agent, we gave it one
+subtask assigned by an orchestrator, exactly two tools, and an explicit return format. Three task
+types, five seeds each, 15 runs per arm.
 
 | Backend | Terminated | Format compliance | Median response |
 |---|---|---|---|
 | paxis-distill-8b | 15/15 | 13/15 | 2.0s |
 | Qwen3.8-27B | 15/15 | 15/15 | 7.5s |
 
-**The termination failure disappeared.** Fifteen times out of fifteen it called its tool, produced
-an answer, and stopped.
-
-That 13/15 started out as 8/15. Opening up the failures, most of them were writing
-`**요약**:` with markdown bold where the contract called for a bare `요약:` (the return contract
-was written in Korean, so the section labels are Korean literals). The content was right and only
-the surface wobbled. That is a job for the parser to normalize, not something to ask the model for
-more nicely.
+That 13/15 started out at 8. Opening the failures, most of them were writing `**요약**:` with
+markdown bold where the contract called for a bare `요약:` (the return contract is written in
+Korean, so those section labels are Korean literals). The content was right and only the surface
+wobbled. That is a job for the parser to normalize, not something to ask the model for more
+nicely.
 
 ## How We Decided to Use Them
 
@@ -145,10 +197,9 @@ the parent's.
 
 ## What Honestly Remains
 
-Splitting the worker off removed the termination failure, but the 2/5 under approval pressure is
-untouched. We avoided that axis by not handing it to the 8B, which is not the same as fixing it.
-Fixing it means getting multi-turn loops and stopping points into the training data, and that is
-the next piece of work.
+We did not fix the score under approval pressure. Using the 8B as a worker avoids that axis by
+never handing it over, which is not the same as fixing it. Lifting that axis means going into the
+training data, and that is the next piece of work.
 
 The 27B's 4/5 is not full marks either. One run in five gets pushed over. That means an approval
 gate cannot rest on a model's self-restraint alone, and code has to hold the line alongside it.
