@@ -25,7 +25,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/atsinfer-hybrid-cpu-g
 
 로컬 LLM을 돌려 본 사람이라면 한 번쯤 마주치는 벽이 있습니다. 모델 가중치가 GPU 메모리보다 크면, 남는 부분은 CPU 메모리로 내려야 합니다. llama.cpp의 `-ngl`(GPU에 올릴 레이어 수) 플래그가 바로 그 일을 합니다. 문제는 이 방식이 **레이어 단위**로만 자른다는 점입니다. 한 레이어 안에는 어텐션 가중치, FFN 가중치, 정규화 파라미터처럼 성격이 전혀 다른 텐서들이 섞여 있는데, 이들을 통째로 "GPU에 올리거나 / CPU에 두거나" 둘 중 하나로만 처리합니다.
 
-이 뭉텅이 배치가 왜 손해인지는 간단합니다. 같은 1GB를 VRAM에 올려도, 어떤 텐서는 GPU에서 10배 빨라지고 어떤 텐서는 2배밖에 안 빨라집니다. VRAM은 희소 자원인데, 뭉텅이로 자르면 "GB당 이득이 큰 텐서"를 골라 담을 수가 없습니다. ATSInfer는 이 지점을 정확히 겨냥합니다. 텐서마다 CPU와 GPU에서의 성능을 프로파일링해, **VRAM 1GB당 속도 이득이 가장 큰 텐서부터** 채워 넣습니다. 최근 화제였던 ktransformers가 MoE 모델의 전문가를 CPU로 내리는 "전문가 단위" 트릭이었다면([관련 글: ktransformers의 28배를 재현해봤습니다](/ko/llmops/ktransformers-moe-offload-28x-validation/)), ATSInfer는 그보다 한 단계 더 잘게 쪼갠 "텐서 단위" 일반화라고 볼 수 있습니다. MoE뿐 아니라 밀집(dense) 모델에도 적용된다는 점이 특히 다릅니다.
+이 뭉텅이 배치가 왜 손해인지는 간단합니다. 같은 1GB를 VRAM에 올려도, 어떤 텐서는 GPU에서 10배 빨라지고 어떤 텐서는 2배밖에 안 빨라집니다. VRAM은 희소 자원인데, 뭉텅이로 자르면 "GB당 이득이 큰 텐서"를 골라 담을 수가 없습니다. ATSInfer는 이 지점을 정확히 겨냥합니다. 텐서마다 CPU와 GPU에서의 성능을 프로파일링해, **VRAM 1GB당 속도 이득이 가장 큰 텐서부터** 채워 넣습니다. 최근 화제였던 ktransformers가 MoE 모델의 전문가를 CPU로 내리는 "전문가 단위" 트릭이었다면([관련 글: ktransformers의 28배를 재현해봤습니다](/tech-blog/ko/llmops/ktransformers-moe-offload-28x-validation/)), ATSInfer는 그보다 한 단계 더 잘게 쪼갠 "텐서 단위" 일반화라고 볼 수 있습니다. MoE뿐 아니라 밀집(dense) 모델에도 적용된다는 점이 특히 다릅니다.
 
 ## 이 기술은 무엇인가
 
@@ -388,7 +388,7 @@ ThakiCloud의 **ai-platform**은 Kubernetes와 Kueue 기반으로 다양한 고�
 
 둘째, **멀티테넌트 스케줄링과의 결합**입니다. ATSInfer의 "로드 인식 동적 전송"은 단일 노드 안에서의 텐서 이동이지만, 그 발상은 클러스터 수준에서도 유효합니다. Kueue로 GPU 자원을 큐잉하고 할당할 때, 어떤 요청을 어떤 정밀도·어떤 오프로딩 프로파일로 처리할지를 부하에 따라 결정하는 정책은 저희가 이미 고민하는 영역입니다. 텐서 단위 프로파일링이 노드 안에서 자원 이득을 짜내듯, 클러스터 스케줄러는 노드 사이에서 같은 일을 합니다.
 
-셋째, **비용-품질 곡선의 재정의**입니다. 저희는 [ktransformers 재현 글](/ko/llmops/ktransformers-moe-offload-28x-validation/)에서 "28배" 같은 화제 수치가 숨은 전제 위에 서 있음을 직접 측정으로 보였습니다. ATSInfer의 "3.29배"도 같은 렌즈로 봐야 합니다. 마케팅 수치가 아니라, 우리 고객의 실제 모델·실제 배치·실제 SLA에서 어떤 숫자가 나오는지를 검증하는 것이 저희가 제공하는 가치입니다. 낮은 서빙 비용에서의 경쟁력은 결국 이런 검증의 축적에서 나옵니다.
+셋째, **비용-품질 곡선의 재정의**입니다. 저희는 [ktransformers 재현 글](/tech-blog/ko/llmops/ktransformers-moe-offload-28x-validation/)에서 "28배" 같은 화제 수치가 숨은 전제 위에 서 있음을 직접 측정으로 보였습니다. ATSInfer의 "3.29배"도 같은 렌즈로 봐야 합니다. 마케팅 수치가 아니라, 우리 고객의 실제 모델·실제 배치·실제 SLA에서 어떤 숫자가 나오는지를 검증하는 것이 저희가 제공하는 가치입니다. 낮은 서빙 비용에서의 경쟁력은 결국 이런 검증의 축적에서 나옵니다.
 
 ## 한계 및 반론
 
@@ -403,4 +403,4 @@ ThakiCloud의 **ai-platform**은 Kubernetes와 Kueue 기반으로 다양한 고�
 ## 출처
 
 - ATSInfer 논문: [arXiv:2607.10183, Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](https://arxiv.org/abs/2607.10183)
-- 관련 글: [40만 달러 랙을 24GB로? ktransformers의 28배를 직접 재현해봤습니다](/ko/llmops/ktransformers-moe-offload-28x-validation/)
+- 관련 글: [40만 달러 랙을 24GB로? ktransformers의 28배를 직접 재현해봤습니다](/tech-blog/ko/llmops/ktransformers-moe-offload-28x-validation/)

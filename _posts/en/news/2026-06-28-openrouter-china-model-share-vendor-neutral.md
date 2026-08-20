@@ -69,7 +69,7 @@ Three indicators are worth watching: whether the revenue share curve follows the
 
 The share reversal on OpenRouter is real. But it does not mean the US lost. It is one facet of a market restructuring in which tokens and revenue are pulling apart. The winners will be those who are not dependent on whichever model rises next -- and who can provide the validation layer that makes running that model legal and safe. That is the position ThakiCloud and Paxis are building toward.
 
-Related reading: [The Real Logic Behind Big Tech's GPU Overinvestment: Asymmetric Insurance and the Next Generation Toll Gates](/en/news/gpu-overinvestment-ai-agents-sovereign-ai/)
+Related reading: [The Real Logic Behind Big Tech's GPU Overinvestment: Asymmetric Insurance and the Next Generation Toll Gates](/tech-blog/en/news/gpu-overinvestment-ai-agents-sovereign-ai/)
 
 ## Sources
 

@@ -20,7 +20,7 @@ audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 This post is for anyone curious what an ad campaign built around a mascot actually looks like when
-it ships. The method is written up in [the previous post](/en/research/mascot-ad-stills-vs-storyboard/),
+it ships. The method is written up in [the previous post](/tech-blog/en/research/mascot-ad-stills-vs-storyboard/),
 and here we lay out the finished results as they are: one brand film and seven per-product ads,
 with no per-character training.
 

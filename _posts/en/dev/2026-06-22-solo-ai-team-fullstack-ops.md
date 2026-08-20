@@ -369,7 +369,7 @@ The full stack is divided into four layers.
 
 **Layer 1 (Interface)** is where humans directly interact. Slash commands like `/morning`, `/eod`, `/review`, `/ship`, and `/debug` create the rhythm of the day. Hooks operate quietly in between. The `UserPromptSubmit` hook runs before every prompt; the `Stop` hook checks flag files when a task ends.
 
-**Layer 2 (Routing)** is the brain of this stack. Out of 1,620 skills, it must find the right one for the current request. The skill router gate automates that task. The underlying principles are covered in detail in [Skill Routing SRA](/en/dev/skill-ecosystem-routing-sra/).
+**Layer 2 (Routing)** is the brain of this stack. Out of 1,620 skills, it must find the right one for the current request. The skill router gate automates that task. The underlying principles are covered in detail in [Skill Routing SRA](/tech-blog/en/dev/skill-ecosystem-routing-sra/).
 
 **Layer 3 (Execution)** is where actual work happens. Skills encapsulate repeatable workflows; sub-agents handle parallel execution and role separation. The 55 sub-agents are organized into 8 hub-and-spoke teams: Research, Content, Strategic Intel, Incident, Code Ship, Knowledge, Meeting, and Sales. Each team has an orchestrator with specialized sub-agents underneath.
 
@@ -387,7 +387,7 @@ First, **pre-filtering**. Turns that need no skill -- greetings, confirmations, 
 
 Second, **candidate injection**. When a turn is judged as task-oriented, a `🧭 Skill Router Candidates` block is added to context. The model sees this hint and selects the appropriate skill. Candidates are capped at 5, and if 2 or more tie, the user is asked to confirm.
 
-Third, **preventing forced matching**. A skill is not selected just because its name partially overlaps. If the top score falls below a threshold, execution falls through to native. In an environment with 1,620 skills, the most common failure mode is an unrelated skill intruding like noise. The detailed design principles of this router are covered in [Skill Routing SRA](/en/dev/skill-ecosystem-routing-sra/).
+Third, **preventing forced matching**. A skill is not selected just because its name partially overlaps. If the top score falls below a threshold, execution falls through to native. In an environment with 1,620 skills, the most common failure mode is an unrelated skill intruding like noise. The detailed design principles of this router are covered in [Skill Routing SRA](/tech-blog/en/dev/skill-ecosystem-routing-sra/).
 
 The 36 always-on rules apply to all tasks independently of this routing. Cost control, Slack format determinism, the model routing table, output token discipline -- these are not "requested" of the model but enforced by code.
 
@@ -407,7 +407,7 @@ This is the part that surprises people most. While the engineer sleeps, three la
 
 **00:15 skill-evolution.** Applies what selfharness proposed. Refines skill descriptions, generates new skills when new patterns are found, and cleans up content that is no longer valid.
 
-The detailed principles of the self-evolution loop are covered separately in [Self-Evolving Harness Nightly](/en/research/self-evolving-harness-nightly/).
+The detailed principles of the self-evolution loop are covered separately in [Self-Evolving Harness Nightly](/tech-blog/en/research/self-evolving-harness-nightly/).
 
 There is an important design principle here. These nightly jobs are creative about skill content, but code owns the format. The model does not hand-write JSON or self-report quality judgments. Code measures with `len()`, validates with regex, and re-dispatches anything below threshold. The only way to keep a Sonnet-tier model producing consistent format across repeated batch tasks is to remove freedom.
 
@@ -415,7 +415,7 @@ There is an important design principle here. These nightly jobs are creative abo
 
 ## Preventing Cost Leaks: 4-Layer Guardrails
 
-There was a day when daily AI costs reached $705. A single monitor session (9.4 hours, 1,145 turns) accounted for 54% of the total. The 4-layer guardrails in use today came out of that incident. The detailed figures are published in [LLM Cost Routing Guardrails](/en/llmops/llm-cost-routing-guardrails/).
+There was a day when daily AI costs reached $705. A single monitor session (9.4 hours, 1,145 turns) accounted for 54% of the total. The 4-layer guardrails in use today came out of that incident. The detailed figures are published in [LLM Cost Routing Guardrails](/tech-blog/en/llmops/llm-cost-routing-guardrails/).
 
 **Layer 1: Model routing table.** Exploration, file reading, grep use haiku (~1x). Coding, review, test writing use sonnet (~4x). Architecture and complex multi-step reasoning use opus (~19x). The `model` parameter must always be specified when calling the Agent tool. Omitting it runs on the session default model (maximum cost). haiku sub-agents never spawn additional sub-agents. If a task cannot be resolved by haiku, the task was mis-classified.
 
@@ -425,7 +425,7 @@ There was a day when daily AI costs reached $705. A single monitor session (9.4 
 
 **Layer 4: Retro escalation.** Scheduled skills start on sonnet by default. `skill_model_policy.json` tracks the model and failure streak for each skill. If a skill fails consecutively `max_fail_streak` times, that skill alone is automatically promoted to opus and a notification is sent to Slack `#h-report`. A clean run resets the streak. Rather than promoting everything to opus, only skills that actually have a quality problem receive a targeted upgrade.
 
-With all four layers interlocking, a typical day now stays sonnet-dominant. The same output volume is produced at significantly lower cost. The full figures for the cost control design are published in [LLM Cost Routing Guardrails](/en/llmops/llm-cost-routing-guardrails/).
+With all four layers interlocking, a typical day now stays sonnet-dominant. The same output volume is produced at significantly lower cost. The full figures for the cost control design are published in [LLM Cost Routing Guardrails](/tech-blog/en/llmops/llm-cost-routing-guardrails/).
 
 Context hygiene also matters. Reading the same file repeatedly within a session accumulates `cache_read` tokens. Adding an unnecessary `cd` prefix to absolute-path commands does the same. `git` commands operate directly on the current working tree, so `cd` is never needed. Small habits like these stack up to meaningfully lower session cost [estimate].
 

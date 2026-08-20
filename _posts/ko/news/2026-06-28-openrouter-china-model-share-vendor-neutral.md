@@ -68,7 +68,7 @@ OpenRouter는 수백만 명의 개발자가 여러 LLM을 하나의 API로 골�
 
 OpenRouter의 점유율 역전은 진짜입니다. 그러나 그것이 곧 "미국 패배"는 아닙니다. 토큰과 매출이 갈라지는 시장 재편의 한 단면입니다. 어느 모델이 위로 올라오든 거기에 종속되지 않는 쪽, 그리고 그 모델을 합법적이고 안전하게 얹는 검증 레이어를 가진 쪽이 이깁니다. ThakiCloud와 Paxis가 겨냥하는 자리가 바로 거기입니다.
 
-함께 읽기: [빅테크 GPU 과투자의 진짜 논리: 비대칭 보험과 다음 세대 톨게이트](/ko/news/gpu-overinvestment-ai-agents-sovereign-ai/)
+함께 읽기: [빅테크 GPU 과투자의 진짜 논리: 비대칭 보험과 다음 세대 톨게이트](/tech-blog/ko/news/gpu-overinvestment-ai-agents-sovereign-ai/)
 
 ## 출처
 
