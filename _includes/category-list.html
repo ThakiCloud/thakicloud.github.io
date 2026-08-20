@@ -1,7 +1,7 @@
 {% comment %}
   Category links now point at the combined "All Posts" page, which filters in
   place via ?category=. The value is the raw category (lowercased) so it matches
-  the post-wrapper data-categories attribute (e.g. 'dev', '만화').
+  the post-wrapper data-categories attribute (e.g. 'dev', 'comics').
 {% endcomment %}
 {% if page.categories[0] %}
   {% assign categories_sorted = page.categories | sort_natural %}
