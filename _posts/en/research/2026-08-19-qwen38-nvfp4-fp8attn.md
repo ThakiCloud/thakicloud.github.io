@@ -127,7 +127,7 @@ serving config (`max_num_seqs=256`, `max_model_len=32768`, `gpu_memory_utilizati
 `CompilationMode.VLLM_COMPILE`) was identical across arms, and rather than trusting that we
 passed it, we **compared the config line each engine printed for itself**.
 
-![Output tokens per second by concurrency](/assets/images/qwen38-nvfp4-fp8attn-results.png)
+![Output tokens per second by concurrency](/assets/images/qwen38-nvfp4-fp8attn-results.webp)
 *The mixed recipe leads at every level, and the gap widens as concurrency rises.*
 
 | Concurrency | bf16 original | NVFP4 (MLP only) | Mixed (attention FP8) | Mixed + KV FP8 |

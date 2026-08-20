@@ -122,7 +122,7 @@ config 파일에 "혼합 정밀도"라고 적혀 있는 것과 텐서가 실제�
 `CompilationMode.VLLM_COMPILE`)은 모든 arm에 동일하게 주고, 준 것으로 끝내지 않고 **엔진이
 스스로 찍은 설정 줄을 대조**해 같음을 확인했습니다.
 
-![동시성별 출력 토큰/초 비교](/assets/images/qwen38-nvfp4-fp8attn-results.png)
+![동시성별 출력 토큰/초 비교](/assets/images/qwen38-nvfp4-fp8attn-results.webp)
 *네 레벨 모두에서 혼합 레시피가 앞서고 동시성이 올라갈수록 격차가 벌어집니다.*
 
 | 동시성 | bf16 원본 | NVFP4 (MLP만) | 혼합 (어텐션 FP8) | 혼합 + KV FP8 |
