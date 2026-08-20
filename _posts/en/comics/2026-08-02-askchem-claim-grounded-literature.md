@@ -15,6 +15,7 @@ toc: false
 image: /assets/images/posts/comics/askchem-claim-grounded-literature/strip.webp
 video: /assets/videos/posts/만화/askchem-claim-grounded-literature/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/askchem-claim-grounded-literature/"
+published: false
 ---
 
 A newly trending project reads a mountain of chemistry papers and organizes them not by sentence but by claim, pinning each claim back to the exact paper and passage it came from. A tidy summary is worthless if the sources are empty. Eugene's crew learns this the hard way in a library.
