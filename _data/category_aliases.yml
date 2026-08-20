@@ -1,0 +1,17 @@
+# Categories whose URL segment is not the same in every language, mapped to the
+# segment each language actually uses. Categories not listed here use one segment
+# everywhere and need no entry.
+#
+# A post and its translation are matched by category + slug (see
+# _includes/post-translations.html). The Korean comics live under /ko/만화/ while
+# the English ones live under /en/comics/, so without this table the two never
+# pair up: the sitemap loses its hreflang="en" alternates for all 14 comics, and
+# the language toggle lands on a URL that does not exist.
+#
+# Segments are written the way they appear in post.url, which Jekyll
+# percent-encodes — 만화 is %EB%A7%8C%ED%99%94. The display label for both
+# spellings lives in _data/category_labels.yml.
+comics:
+  ko: "%EB%A7%8C%ED%99%94"  # 만화
+  en: comics
+  ar: comics
