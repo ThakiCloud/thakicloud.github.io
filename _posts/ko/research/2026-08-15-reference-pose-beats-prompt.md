@@ -10,9 +10,16 @@ tags:
   - evaluation
   - wan2
 author_profile: true
+audiobook: "https://drive.google.com/file/d/1O8pUrIUBYIeKr_eJxtCqeY_QmlG0Vhli/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/reference-pose-beats-prompt/"
 ---
 
 레퍼런스 이미지를 주고 캐릭터 영상을 만드는데 요청한 동작이 안 나오고 계속 서 있는 자세로 돌아온다면, 프롬프트를 고쳐 쓰기 전에 레퍼런스 네 장이 전부 서 있는 사진인지 보십시오. 저희는 프롬프트 쪽을 먼저 고쳤고, 측정해 보니 아무것도 달라지지 않았습니다.
+
+![마스코트가 계속 서 있기만 한다면 프롬프트가 아니라 레퍼런스를 바꾸십시오 개념을 형상화한 이미지](/assets/images/reference-pose-beats-prompt-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇을 바꿨고 무엇이 달라졌나
 
@@ -104,3 +111,22 @@ v3는 v2와 소수점 넷째 자리까지 같습니다. 프롬프트 어휘를 �
 이 실험에서 실제로 남는 것은 재볼 수 있었다는 점입니다. "레퍼런스 자세가 동작을 제약한다"는 가설은 그럴듯하게 들립니다. 그럴듯한 가설은 대부분 틀립니다. 자기 데이터로 재보지 않으면 프롬프트만 계속 고쳐 쓰면서 왜 안 되는지 모르게 됩니다.
 
 이 글의 이미지와 영상은 전부 사내 GPU에서 생성한 것이고, 수치는 시뮬레이션이 아니라 실제 측정값입니다.
+
+## 참고 자료
+
+- [ArcFace: Additive Angular Margin Loss for Deep Face Recognition](https://arxiv.org/abs/1801.07698) (본문의 얼굴 인식 기반 정체성 지표가 쓰는 손실 함수)
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (CLIP 논문. 얼굴이 필요 없는 임베딩 지표는 여기의 이미지 임베딩 코사인 유사도입니다)
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (같은 랭크·같은 스텝으로 맞춰 학습한 두 어댑터의 원 방법)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![reference-pose-beats-prompt 슬라이드 1](/assets/images/reference-pose-beats-prompt-slide-01.png)
+
+![reference-pose-beats-prompt 슬라이드 2](/assets/images/reference-pose-beats-prompt-slide-02.png)
+
+![reference-pose-beats-prompt 슬라이드 3](/assets/images/reference-pose-beats-prompt-slide-03.png)
+
+![reference-pose-beats-prompt 슬라이드 4](/assets/images/reference-pose-beats-prompt-slide-04.png)
+

@@ -15,6 +15,10 @@ toc: true
 toc_label: "목차"
 header:
   teaser: /assets/images/character-identity-hero.webp
+audiobook: "https://drive.google.com/file/d/1ZRhNu4Jd9B7r6_Mrl8q82Z16i0oFS1RF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-identity-edit-vs-adapter/"
 ---
 
 ![캐릭터 정체성 유지](/assets/images/character-identity-hero.webp)
@@ -207,3 +211,22 @@ Metis가 추론과 서빙 계층이고 Maxis가 학습과 평가 계층인데, �
 편집의 상한도 아직 모릅니다. 0.823은 레퍼런스 자기유사도 0.96과 거리가 있고, 그 간격이 편집의 한계인지 저희 프롬프트의 한계인지 갈라 보지 않았습니다.
 
 같은 문제를 겪고 계시다면 베이스의 바닥선부터 재 보시길 권합니다. 저희도 그 숫자를 보고 나서야 무엇을 고쳐야 할지 알았습니다.
+
+## 참고 자료
+
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (어댑터의 원 논문. 사전학습 가중치를 얼려 두고 저랭크 행렬만 학습합니다)
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (CLIP 논문. 이 글의 CLIP-I는 여기의 이미지 임베딩 사이 코사인 유사도입니다)
+- [ArcFace: Additive Angular Margin Loss for Deep Face Recognition](https://arxiv.org/abs/1801.07698) (표준 얼굴 정체성 지표. 얼굴 없는 마스코트에는 쓸 수 없어 CLIP-I로 대신했습니다)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
+
+![character-identity-edit-vs-adapter 슬라이드 1](/assets/images/character-identity-edit-vs-adapter-slide-01.png)
+
+![character-identity-edit-vs-adapter 슬라이드 2](/assets/images/character-identity-edit-vs-adapter-slide-02.png)
+
+![character-identity-edit-vs-adapter 슬라이드 3](/assets/images/character-identity-edit-vs-adapter-slide-03.png)
+
+![character-identity-edit-vs-adapter 슬라이드 4](/assets/images/character-identity-edit-vs-adapter-slide-04.png)
+

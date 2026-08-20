@@ -10,9 +10,16 @@ tags:
   - reference-conditioning
   - wan2
 author_profile: true
+audiobook: "https://drive.google.com/file/d/1eo91mPTEV_89VP80lLfLQhI3Lo9zPcsS/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eyes-and-actions/"
 ---
 
 브랜드 마스코트를 만들었는데 표정이 어딘가 기계 같고 외계인처럼 보인다면, 눈 색을 바꾸기 전에 **각막 반사(캐치라이트)가 있는지** 먼저 보십시오. 저희 커피콩 로봇이 정확히 그 문제였고, 고치고 나니 남아 있던 어색함은 디자인이 아니라 학습 데이터 쪽이었습니다.
+
+![마스코트 눈이 외계인 같다면 색이 아니라 캐치라이트 문제입니다 개념을 형상화한 이미지](/assets/images/mascot-redesign-eyes-and-actions-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇이 달라졌나
 
@@ -20,6 +27,10 @@ author_profile: true
 *왼쪽이 이전, 오른쪽이 새로 설계한 눈입니다.*
 
 왼쪽 눈은 어두운 갈색 위에 얹힌 시안색 원판입니다. 홍채도 동공도 흰자도 없고, 무엇보다 표면에 반사광이 없습니다. 오른쪽은 앰버색 홍채에 결이 들어가고 검은 동공과 밝은 흰자가 생겼으며, 렌즈 좌상단에 반사 하이라이트가 하나 있습니다. 눈꺼풀 능선과 입도 함께 들어갔습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/mascot-redesign-eyes-and-actions/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 빛나는 눈이 문제가 아니었습니다
 
@@ -74,3 +85,24 @@ author_profile: true
 무엇보다 값어치를 하는 것은 **가설을 자기 데이터로 직접 재볼 수 있다**는 점입니다. 배경 가설은 재봤더니 맞았고, 동작 가설은 지금 재고 있습니다. 결과가 나오면 그대로 공개하겠습니다.
 
 이 글의 이미지와 영상은 전부 사내 GPU에서 생성한 것입니다.
+
+## 참고 자료
+
+- [The Uncanny Valley: The Original Essay by Masahiro Mori](https://spectrum.ieee.org/automaton/robotics/humanoids/the-uncanny-valley) (모리 마사히로의 1970년 논문. IEEE Spectrum이 저자 감수를 거쳐 2012년에 공개한 영어 번역본입니다)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/mascot-redesign-eyes-and-actions/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![mascot-redesign-eyes-and-actions 슬라이드 1](/assets/images/mascot-redesign-eyes-and-actions-slide-01.png)
+
+![mascot-redesign-eyes-and-actions 슬라이드 2](/assets/images/mascot-redesign-eyes-and-actions-slide-02.png)
+
+![mascot-redesign-eyes-and-actions 슬라이드 3](/assets/images/mascot-redesign-eyes-and-actions-slide-03.png)
+
+![mascot-redesign-eyes-and-actions 슬라이드 4](/assets/images/mascot-redesign-eyes-and-actions-slide-04.png)
+

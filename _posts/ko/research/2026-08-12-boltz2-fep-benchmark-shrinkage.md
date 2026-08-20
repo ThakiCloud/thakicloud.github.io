@@ -10,6 +10,10 @@ tags:
   - free-energy-perturbation
   - evaluation
 author_profile: true
+audiobook: "https://drive.google.com/file/d/1pQn8gcrBCCR3yTIkNPCynB-MS0Huemxa/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/boltz2-fep-benchmark-shrinkage/"
 ---
 
 신약 스크리닝에 AI 결합 친화도 모델을 넣을지 검토 중인 연구자와, 그 워크로드를 어디서 돌릴지 정해야 하는 인프라 담당자를 위해 쓴 글입니다. 저희가 사내 H200과 B200 클러스터에서 리간드 1,178개를 전량 예측하고 물리 기반 표준과 나란히 채점한 결과, 그리고 그 과정에서 통상적인 벤치마크 읽기가 어디서 틀리는지를 정리했습니다.
@@ -28,6 +32,10 @@ author_profile: true
 반대편에 **co-folding 모델**이 있습니다. 단백질과 화합물의 구조를 함께 예측하는 신경망에 친화도 예측 헤드를 붙인 형태이고, MIT에서 공개한 Boltz-2가 대표적입니다. 시뮬레이션 없이 한 번의 순전파로 값을 내므로 비교가 안 될 만큼 빠릅니다. 문제는 그 값이 믿을 만한가입니다.
 
 비교 기준으로는 Ross 등이 2023년에 공개한 FEP+ 벤치마크를 썼습니다. 이 데이터셋이 좋은 이유는 실험값만 있는 게 아니라 FEP+ 자신의 예측값도 같이 공개돼 있다는 점입니다. 덕분에 같은 리간드에 대해 두 방법을 나란히 놓을 수 있습니다. 저희는 이 중 91개 시스템 1,178개 리간드를 전량 처리했습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/boltz2-fep-benchmark-shrinkage/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 어떻게 쟀는가
 
@@ -152,3 +160,28 @@ python corpus_proximity.py --fetch && python corpus_proximity.py --analyze
 ```
 
 위 수치는 시뮬레이션 추정치가 아니라 저희 H200과 B200에서 실제로 돌린 1,178건의 측정값입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/boltz2-fep-benchmark-shrinkage/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 참고 자료
+
+- [The maximal and current accuracy of rigorous protein-ligand binding free energy calculations](https://pmc.ncbi.nlm.nih.gov/articles/PMC10576784/) (Ross 등, Communications Chemistry 2023. 이 글이 채점 대상으로 쓴 FEP+ 벤치마크의 원 논문입니다)
+- [jwohlwend/boltz](https://github.com/jwohlwend/boltz) (Boltz-2 공식 저장소. MIT 라이선스이고 친화도 예측 사용법이 여기 있습니다)
+- [Boltz-2: Towards Accurate and Efficient Binding Affinity Prediction](https://www.biorxiv.org/content/10.1101/2025.06.14.659707v1) (Boltz-2 프리프린트)
+- [FEP+ | Schrödinger](https://www.schrodinger.com/platform/products/fep/) (본문에서 비교 대상으로 삼은 상용 FEP 구현)
+- [PubChem](https://pubchem.ncbi.nlm.nih.gov/) (오염 반론을 검증할 때 리간드를 조회한 데이터베이스)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![boltz2-fep-benchmark-shrinkage 슬라이드 1](/assets/images/boltz2-fep-benchmark-shrinkage-slide-01.png)
+
+![boltz2-fep-benchmark-shrinkage 슬라이드 2](/assets/images/boltz2-fep-benchmark-shrinkage-slide-02.png)
+
+![boltz2-fep-benchmark-shrinkage 슬라이드 3](/assets/images/boltz2-fep-benchmark-shrinkage-slide-03.png)
+
+![boltz2-fep-benchmark-shrinkage 슬라이드 4](/assets/images/boltz2-fep-benchmark-shrinkage-slide-04.png)
+

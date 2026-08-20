@@ -10,6 +10,10 @@ tags:
   - wan2
   - diffusion
 author_profile: true
+audiobook: "https://drive.google.com/file/d/1iPaPo1GyhP3PuCnNrJapNUti93D3g0k_/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/ref2va-reference-video-lora/"
 ---
 
 영상 생성 모델을 파인튜닝해 브랜드 마스코트나 가상 인물을 일관되게 등장시키고 싶은 엔지니어라면, 이 글에서 두 가지를 얻어 가실 수 있습니다. 상용 트레이너가 API 뒤에 감춰 둔 레퍼런스 조건 학습 레시피를 오픈 가중치 모델에 이식하는 구체적인 방법, 그리고 그 레시피가 identity를 얼마나 올리고 프롬프트 추종을 얼마나 깎는지에 대한 실측 곡선입니다.
@@ -34,6 +38,10 @@ flowchart LR
     D --> L["velocity loss<br/>(target 영역만)"]
     P["확률 p=0.9"] -.->|"조건화 여부"| C
 ```
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ref2va-reference-video-lora/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 이식하며 발견한 계약 세 가지
 
@@ -109,3 +117,33 @@ p 스윕이 이 메커니즘의 성격을 알려 줍니다. 조건화를 100%로
 이 실험이 회사 관점에서 증명한 것은 수치 하나가 아니라 경로 전체입니다. 데이터셋 생성(합성 인물 I2V), LoRA 학습(MoE 이식 계약 포함), 평가(ArcFace와 CLIP-T 게이트), 샘플 생성까지 전부 사내 GPU 클러스터의 잡으로 닫혔습니다. 고객의 subject 영상이 외부 API로 나갈 필요가 없다는 뜻입니다. Maxis가 이런 학습 파이프라인을 고객 데이터 주권 안에서 제공하는 계층이고, 학습된 어댑터를 얹어 서빙하는 자리가 Metis입니다. 상용 API의 편의성과 데이터 주권 사이에서 고르지 않아도 되는 선택지를 만드는 것, 그것이 이 재현 실험의 실용적인 결론입니다.
 
 측정의 전 과정은 사전 등록 게이트와 결정론 평가 코드로 고정했고, 실패한 게이트도 그대로 보고했습니다. 다음 실험은 방금 말씀드린 그 비교입니다. 같은 Wan2.2 베이스에서 zero-shot 레퍼런스 조건화(VACE), 학습 LoRA, 그리고 같은 베이스라서 가능한 두 방식의 하이브리드를 동일한 홀드아웃 프롬프트와 동일한 게이트로 정면 비교해, "학습이 zero-shot 대비 얼마를 더 주는가"라는 비어 있는 곡선을 채울 예정입니다.
+
+## 참고 자료
+
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (이 실험이 재현한 어댑터 학습 방식의 원 논문)
+- [Wan2.2: Open and Advanced Large-Scale Video Generative Models](https://github.com/Wan-Video/Wan2.2) (베이스로 쓴 T2V A14B와 timestep 경계로 갈리는 MoE 구조)
+- [🤗 Diffusers](https://github.com/huggingface/diffusers) (per-token timestep을 받는 Wan transformer 구현. 이식 계약이 걸린 지점입니다)
+- [VACE: All-in-One Video Creation and Editing](https://arxiv.org/abs/2503.07598) (Apache 라이선스로 공개된 zero-shot 레퍼런스 체크포인트)
+- [MiniMax H3 Reference to Video LoRA Trainer on fal](https://fal.ai/models/minimax/h3/ref2va/trainer) (`reference_conditioning_p` 기본값 0.9. 저희 p 스윕의 기준점입니다)
+- [Phantom: Subject-consistent video generation via cross-modal alignment](https://arxiv.org/abs/2502.11079) (본문에서 비교한 zero-shot 계열)
+- [MAGREF: Masked Guidance for Any-Reference Video Generation with Subject Disentanglement](https://arxiv.org/abs/2505.23742) (같은 비교군)
+- [OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation](https://arxiv.org/abs/2505.20292) (본문이 인용한 OpenS2V-Eval 벤치마크의 출처)
+- [ArcFace: Additive Angular Margin Loss for Deep Face Recognition](https://arxiv.org/abs/1801.07698) (인물 유지 게이트에 쓴 지표)
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (CLIP 논문. 프롬프트 준수를 잰 CLIP-T의 출처)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ref2va-reference-video-lora/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![ref2va-reference-video-lora 슬라이드 1](/assets/images/ref2va-reference-video-lora-slide-01.png)
+
+![ref2va-reference-video-lora 슬라이드 2](/assets/images/ref2va-reference-video-lora-slide-02.png)
+
+![ref2va-reference-video-lora 슬라이드 3](/assets/images/ref2va-reference-video-lora-slide-03.png)
+
+![ref2va-reference-video-lora 슬라이드 4](/assets/images/ref2va-reference-video-lora-slide-04.png)
+
