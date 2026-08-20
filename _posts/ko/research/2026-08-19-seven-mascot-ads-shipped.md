@@ -17,7 +17,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/seven-mascot-ads-sh
 ---
 
 마스코트로 제품 광고를 만들면 실제로 무엇이 나오는지 궁금한 분을 위한 글입니다. 방법론은
-[앞 글](/ko/research/mascot-ad-stills-vs-storyboard/)에 적었고, 여기에는 완성된 결과물을 그대로
+[앞 글](/tech-blog/ko/research/mascot-ad-stills-vs-storyboard/)에 적었고, 여기에는 완성된 결과물을 그대로
 싣습니다. 브랜드 필름 한 편과 제품별 광고 일곱 편이고, 캐릭터별 학습은 하지 않았습니다.
 
 ![마스코트 광고 일곱 편, 실제로 만들어진 결과물 개념을 형상화한 이미지](/assets/images/seven-mascot-ads-shipped-hero.webp)

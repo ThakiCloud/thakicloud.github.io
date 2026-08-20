@@ -25,7 +25,7 @@ This post is for engineers weighing whether to self-serve a large model on a sin
 
 Anyone who has run a local LLM hits the same wall: if the model weights are larger than GPU memory, the overflow spills to CPU memory. llama.cpp's `-ngl` flag (how many layers to place on the GPU) does exactly this. The problem is that it cuts only at **layer granularity**. A single layer mixes tensors of very different character (attention weights, FFN weights, normalization params), yet they are handled all-or-nothing: either the whole thing goes to the GPU or it stays on the CPU.
 
-Why this chunked placement loses is simple. The same 1GB in VRAM might make one tensor 10x faster and another only 2x faster. VRAM is a scarce resource, and chunked cuts prevent you from picking the tensors with the highest gain per GB. ATSInfer targets exactly this. It profiles each tensor's CPU and GPU performance and fills VRAM starting from the tensors with the **highest speed gain per GB**. If the recent ktransformers was an "expert-level" trick that pushes MoE experts to the CPU (see our [related post: reproducing the ktransformers 28x](/en/llmops/ktransformers-moe-offload-28x-validation/)), ATSInfer is the finer, "tensor-level" generalization. Notably, it applies to dense models, not just MoE.
+Why this chunked placement loses is simple. The same 1GB in VRAM might make one tensor 10x faster and another only 2x faster. VRAM is a scarce resource, and chunked cuts prevent you from picking the tensors with the highest gain per GB. ATSInfer targets exactly this. It profiles each tensor's CPU and GPU performance and fills VRAM starting from the tensors with the **highest speed gain per GB**. If the recent ktransformers was an "expert-level" trick that pushes MoE experts to the CPU (see our [related post: reproducing the ktransformers 28x](/tech-blog/en/llmops/ktransformers-moe-offload-28x-validation/)), ATSInfer is the finer, "tensor-level" generalization. Notably, it applies to dense models, not just MoE.
 
 ## What is this technology
 
@@ -388,7 +388,7 @@ First, **the economics of on-premises and sovereign environments.** In settings 
 
 Second, **coupling with multi-tenant scheduling.** ATSInfer's "load-aware dynamic transfer" is tensor movement within a single node, but the idea holds at cluster scale too. When Kueue queues and allocates GPU resources, a policy that decides which request to handle at which precision and offloading profile based on load is an area we already think about. Just as tensor-level profiling squeezes resource gains within a node, the cluster scheduler does the same across nodes.
 
-Third, **redefining the cost-quality curve.** In our [ktransformers reproduction post](/en/llmops/ktransformers-moe-offload-28x-validation/) we showed by direct measurement that headline figures like "28x" rest on hidden premises. ATSInfer's "3.29x" deserves the same lens. Not a marketing number, but the value that emerges on our customers' actual models, actual batches, and actual SLAs, is what we verify. Competitiveness at low serving cost ultimately comes from accumulating exactly this kind of verification.
+Third, **redefining the cost-quality curve.** In our [ktransformers reproduction post](/tech-blog/en/llmops/ktransformers-moe-offload-28x-validation/) we showed by direct measurement that headline figures like "28x" rest on hidden premises. ATSInfer's "3.29x" deserves the same lens. Not a marketing number, but the value that emerges on our customers' actual models, actual batches, and actual SLAs, is what we verify. Competitiveness at low serving cost ultimately comes from accumulating exactly this kind of verification.
 
 ## Limits and counterarguments
 
@@ -403,4 +403,4 @@ Even so, the direction has clear value. Squeezing resource utilization through s
 ## Sources
 
 - ATSInfer paper: [arXiv:2607.10183, Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](https://arxiv.org/abs/2607.10183)
-- Related post: [A $400K rack on 24GB? We reproduced the ktransformers 28x](/en/llmops/ktransformers-moe-offload-28x-validation/)
+- Related post: [A $400K rack on 24GB? We reproduced the ktransformers 28x](/tech-blog/en/llmops/ktransformers-moe-offload-28x-validation/)
