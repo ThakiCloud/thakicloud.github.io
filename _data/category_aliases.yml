@@ -3,15 +3,20 @@
 # everywhere and need no entry.
 #
 # A post and its translation are matched by category + slug (see
-# _includes/post-translations.html). The Korean comics live under /ko/만화/ while
-# the English ones live under /en/comics/, so without this table the two never
-# pair up: the sitemap loses its hreflang="en" alternates for all 14 comics, and
-# the language toggle lands on a URL that does not exist.
+# _includes/post-translations.html), so a category that spells itself differently
+# per language would never pair up — the sitemap would lose its hreflang
+# alternates and the language toggle would land on a URL that does not exist.
 #
-# Segments are written the way they appear in post.url, which Jekyll
-# percent-encodes — 만화 is %EB%A7%8C%ED%99%94. The display label for both
-# spellings lives in _data/category_labels.yml.
-comics:
-  ko: "%EB%A7%8C%ED%99%94"  # 만화
-  en: comics
-  ar: comics
+# The toggle in the injected site chrome swaps ONLY the language segment of the
+# path. It does not read hreflang. So an entry here keeps the sitemap correct but
+# does NOT rescue the toggle: any category listed below is a category whose
+# toggle 404s. That is why comics was un-aliased on 2026-08-20 — ko moved from
+# 만화 to comics so both languages share one segment.
+#
+# Prefer fixing the category value over adding an entry here. Add one only when
+# the segments genuinely cannot be unified.
+#
+# Segments must be written the way they appear in post.url, which Jekyll
+# percent-encodes for non-ASCII (만화 was %EB%A7%8C%ED%99%94).
+#
+# (no aliases — every category uses one segment in every language)

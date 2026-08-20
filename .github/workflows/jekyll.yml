@@ -109,6 +109,12 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # 언어 토글은 경로의 언어 구간만 갈아끼운다(hreflang을 읽지 않는다). 그래서
+      # 카테고리 구간이 언어마다 다르면 토글이 없는 주소로 간다 — 만화(ko)/comics(en)이
+      # 정확히 그렇게 깨졌다. 배포 전에 빌드 산출물로 그 산술을 재현해 막는다.
+      - name: Verify language toggle reaches every translation
+        run: python3 scripts/check_language_toggle.py _site
+
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v6
         with:

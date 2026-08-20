@@ -57,7 +57,7 @@
      injected site chrome (thaki-chrome.js, from the homepage repo) reads to send
      its EN/KO toggle to the real translation. Without them the toggle can only
      guess by swapping the language segment, which 404s wherever the category
-     segment differs between languages (/ko/만화/ vs /en/comics/). -->
+     segment differs between languages. -->
 {%- include post-translations.html url=page.url -%}
 {%- if tr_ko != '' %}
 <link rel="alternate" hreflang="ko" href="{{ site.url }}{{ site.baseurl }}{{ tr_ko }}">

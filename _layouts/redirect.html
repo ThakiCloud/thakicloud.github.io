@@ -1,0 +1,16 @@
+---
+---
+<!doctype html>
+<html lang="{{ page.lang | default: 'ko' }}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url={{ site.baseurl }}{{ page.redirect_to }}">
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.redirect_to }}">
+<meta name="robots" content="noindex">
+<title>{{ page.title | default: 'Redirecting' }}</title>
+</head>
+<body>
+<p>이 글은 <a href="{{ site.baseurl }}{{ page.redirect_to }}">{{ site.baseurl }}{{ page.redirect_to }}</a> 로 옮겨졌습니다.</p>
+<script>location.replace({{ site.baseurl | append: page.redirect_to | jsonify }} + location.search + location.hash);</script>
+</body>
+</html>

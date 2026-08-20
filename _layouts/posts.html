@@ -12,8 +12,8 @@ classes: wide
   {% assign filtered_posts = site.posts | where: "lang", "ko" %}
 {% endif %}
 
-{% comment %} Comics category value differs by language: en/ar 'comics', ko '만화'. {% endcomment %}
-{% if page.lang == 'en' or page.lang == 'ar' %}{% assign comics_cat = 'comics' %}{% else %}{% assign comics_cat = '만화' %}{% endif %}
+{% comment %} Every language uses the same category value, so no per-language mapping. {% endcomment %}
+{% assign comics_cat = 'comics' %}
 
 <div class="postspage">
 

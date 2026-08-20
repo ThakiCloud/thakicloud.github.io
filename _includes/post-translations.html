@@ -4,7 +4,9 @@ Resolves the URLs of a post's translations.
 A post and its translation share a category and a slug, so the sibling URL is
 built by swapping the language segment — with the category segment translated
 through _data/category_aliases.yml on the way. Skipping that step is what left
-every /ko/만화/ post unpaired with its /en/comics/ counterpart.
+every /ko/만화/ post unpaired with its /en/comics/ counterpart before those
+were unified. The table is empty today; the lookup stays because the failure it
+prevents is silent.
 
 The candidate is then checked against the index of real post URLs, so a language
 that has no translation yields '' instead of a link to a page that isn't there.

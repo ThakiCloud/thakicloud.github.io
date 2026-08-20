@@ -12,7 +12,7 @@
   /{lang}/categories/#{cat}, which no longer exists. It also emitted a separate
   language crumb, but "/" just redirects to /{lang}/, so that duplicated Home.
   The category label/link now come from page.categories rather than the URL,
-  which avoids percent-encoded segments (e.g. Korean "만화") leaking into the
+  which avoids percent-encoded segments (non-ASCII categories) leaking into the
   visible label.
 {% endcomment %}
 

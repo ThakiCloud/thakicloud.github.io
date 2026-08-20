@@ -70,13 +70,13 @@
         {% if post.categories contains 'datasets' %}
           {% assign lang_datasets_count = lang_datasets_count | plus: 1 %}
         {% endif %}
-        {% if post.categories contains 'comics' or post.categories contains '만화' %}
+        {% if post.categories contains 'comics' %}
           {% assign lang_comics_count = lang_comics_count | plus: 1 %}
         {% endif %}
       {% endfor %}
 
-      {% comment %} Comics category value differs by language: en/ar use 'comics', ko uses '만화'. {% endcomment %}
-      {% if nl_lang == 'en' or nl_lang == 'ar' %}{% assign comics_cat = 'comics' %}{% else %}{% assign comics_cat = '만화' %}{% endif %}
+      {% comment %} Every language uses the same category value, so no per-language mapping. {% endcomment %}
+      {% assign comics_cat = 'comics' %}
       <li>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/">📂 Total Posts: {{ filtered_posts.size }}</a></span>
       </li>
