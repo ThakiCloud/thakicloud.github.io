@@ -1,0 +1,46 @@
+{%- comment -%}
+Resolves the URLs of a post's translations.
+
+A post and its translation share a category and a slug, so the sibling URL is
+built by swapping the language segment — with the category segment translated
+through _data/category_aliases.yml on the way. Skipping that step is what left
+every /ko/만화/ post unpaired with its /en/comics/ counterpart.
+
+The candidate is then checked against the index of real post URLs, so a language
+that has no translation yields '' instead of a link to a page that isn't there.
+
+Sets tr_ko, tr_en and tr_ar to the translation's URL, or '' when there is none.
+The post's own language is set too, since a post is in the index.
+
+Usage: {% include post-translations.html url=page.url %}
+{%- endcomment -%}
+{%- assign _rel = include.url | remove_first: '/ko/' | remove_first: '/en/' | remove_first: '/ar/' -%}
+{%- assign _seg = _rel | split: '/' -%}
+{%- assign _cat = _seg[0] -%}
+{%- assign _tail = _rel | remove_first: _cat -%}
+{%- comment -%} Localised segment -> canonical category. {%- endcomment -%}
+{%- assign _canon = _cat -%}
+{%- for _entry in site.data.category_aliases -%}
+  {%- for _pair in _entry[1] -%}
+    {%- if _pair[1] == _cat -%}{%- assign _canon = _entry[0] -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign _localised = site.data.category_aliases[_canon] -%}
+{%- capture _index -%}{%- include_cached post-url-index.html -%}{%- endcapture -%}
+{%- assign tr_ko = '' -%}
+{%- assign tr_en = '' -%}
+{%- assign tr_ar = '' -%}
+{%- assign _langs = 'ko|en|ar' | split: '|' -%}
+{%- for _lang in _langs -%}
+  {%- assign _lcat = _canon -%}
+  {%- if _localised -%}
+    {%- if _localised[_lang] -%}{%- assign _lcat = _localised[_lang] -%}{%- endif -%}
+  {%- endif -%}
+  {%- capture _candidate -%}/{{ _lang }}/{{ _lcat }}{{ _tail }}{%- endcapture -%}
+  {%- capture _probe -%},{{ _candidate }},{%- endcapture -%}
+  {%- if _index contains _probe -%}
+    {%- if _lang == 'ko' -%}{%- assign tr_ko = _candidate -%}{%- endif -%}
+    {%- if _lang == 'en' -%}{%- assign tr_en = _candidate -%}{%- endif -%}
+    {%- if _lang == 'ar' -%}{%- assign tr_ar = _candidate -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

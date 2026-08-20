@@ -1,0 +1,8 @@
+{%- comment -%}
+Every post URL, comma-delimited and comma-wrapped so that membership is a single
+`contains` test: ",{{ candidate }}," matches only a whole URL.
+
+Always reach for this through include_cached — it is rendered once per build and
+is worthless (and slow) uncached.
+{%- endcomment -%}
+,{% for p in site.posts %}{{ p.url }},{% endfor %}

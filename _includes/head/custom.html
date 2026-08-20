@@ -51,4 +51,23 @@
 <!-- Structured data (JSON-LD): BlogPosting / BreadcrumbList / WebSite -->
 {% include head/structured-data.html %}
 
+{%- if page.collection == 'posts' -%}
+<!-- hreflang alternates for this post.
+     The sitemaps already carry these, but the page-level links are also what the
+     injected site chrome (thaki-chrome.js, from the homepage repo) reads to send
+     its EN/KO toggle to the real translation. Without them the toggle can only
+     guess by swapping the language segment, which 404s wherever the category
+     segment differs between languages (/ko/만화/ vs /en/comics/). -->
+{%- include post-translations.html url=page.url -%}
+{%- if tr_ko != '' %}
+<link rel="alternate" hreflang="ko" href="{{ site.url }}{{ site.baseurl }}{{ tr_ko }}">
+{%- endif -%}
+{%- if tr_en != '' %}
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}{{ tr_en }}">
+{%- endif -%}
+{%- if tr_ar != '' %}
+<link rel="alternate" hreflang="ar" href="{{ site.url }}{{ site.baseurl }}{{ tr_ar }}">
+{%- endif -%}
+{%- endif %}
+
 <!-- end custom head snippets -->
