@@ -339,6 +339,21 @@ keeping the cache from being recomputed, keeping the engine running at its real 
 keeping the GPU from sitting idle. Being able to work all three inside one product line is
 what vertical integration actually buys you.
 
+## The 60-second cut
+
+<video controls muted playsinline style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/agent-fleet-cost-ad-60s.mp4" type="video/mp4">
+</video>
+
+The same argument compressed into a 60-second ad: 57 runners, a $46,911 bill, most of
+it cache reads, two lines of serving config, and $3,960. Every number on screen comes from
+the calculator below, and the captions are drawn by rendering code rather than by the generative
+model. Let the model write the numbers and it invents ones that were never measured.
+
+Seven eight-second shots, stitched, for $5.77 in generation cost. The person is synthetic, and
+the face changes once in the final shot. The chaining that carries a character across cuts
+failed on that segment alone.
+
 ## Reproduce
 
 Every number in this post comes from a deterministic calculator in our repo. The prose

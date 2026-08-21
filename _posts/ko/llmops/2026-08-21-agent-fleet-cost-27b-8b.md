@@ -311,6 +311,20 @@ NVFP4 27B 콜드스타트가 18분입니다. flashinfer 커널 오토튜닝만 6
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-fleet-cost-27b-8b/nlm-infographic-2.webp)
 *NotebookLM이 생성한 셀프호스팅 개요 인포그래픽입니다. 이 글의 실측이 아니라 일반 개념 요약입니다.*
 
+## 60초 광고
+
+<video controls muted playsinline style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/agent-fleet-cost-ad-60s.mp4" type="video/mp4">
+</video>
+
+이 글의 논지를 60초로 줄인 광고입니다. 러너 57개, 청구서 $46,911, 그중 대부분이
+캐시 읽기, 서빙 설정 두 줄, 그리고 $3,960. 화면에 뜨는 숫자는 전부 아래 계산기가
+산출한 값이고, 자막은 생성 모델이 아니라 렌더링 코드가 그립니다. 모델에게 숫자를 그리게
+두면 실제로 없는 값을 만들어 냅니다.
+
+8초짜리 컷 일곱 개를 이어붙였고 실비는 $5.77입니다. 인물은 합성이며, 마지막 컷에서 인물이
+한 번 바뀝니다. 컷 사이의 인물을 잇는 체이닝이 그 구간에서만 걸리지 않았습니다.
+
 ## 재현
 
 이 글의 모든 수치는 저장소의 결정론적 계산기가 산출합니다. 본문은 산문만 담고, 표에
