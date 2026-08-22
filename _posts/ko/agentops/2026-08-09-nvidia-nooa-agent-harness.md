@@ -20,6 +20,8 @@ categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/nvidia-nooa-agent-harness/"
 published: false
+audiobook: /assets/audio/posts/nvidia-nooa-agent-harness/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ## 왜 읽어야 하나
