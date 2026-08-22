@@ -1,8 +1,8 @@
 ---
-title: "Shrink a 27B Model to NVFP4, and Ten Enterprise Agents Still Finish the Job"
-excerpt: "We shrank a 27B model to NVFP4, deployed it on internal GPUs, and screen-recorded ten enterprise agents covering finance, legal, infra diagnostics, and more. All ten finished, instruction compliance tied commercial models, and the same workload cost 1/123rd of Claude Opus 5. But five of the Korean responses had simplified-Chinese characters mixed in. We report both the wins and the loss."
-seo_title: "NVFP4-Quantized 27B: Ten Enterprise Agent Cases, Measured"
-seo_description: "Screen recordings and measured results from running ten enterprise agents on an NVFP4-quantized 27B model. Covers cost versus Claude Opus 5, Sonnet 5, and GPT-5.6, instruction compliance, and Korean-language purity, including where we won and where we lost."
+title: "We Verified Work Automation Where Data Never Leaves the Building, on One Internal GPU"
+excerpt: "We actually tested whether you can automate work without sending contracts or incident logs outside the building. We shrank a 27B model to NVFP4, deployed it on internal GPUs, and screen-recorded ten Paxis work agents: all ten finished, with zero external API calls. Cost came out to 1/123rd of Claude Opus 5, but five of the Korean responses had simplified-Chinese characters mixed in. We report both the wins and the loss."
+seo_title: "Sovereign AI Verified: Ten Work Agents Complete on Internal GPUs"
+seo_description: "We put a sovereign AI setup, one where data never leaves the building, to a real test. Screen recordings of ten work agents running on an NVFP4-quantized 27B model on internal GPUs, how we verified zero external calls, cost versus Claude Opus 5 and GPT-5.6, and the Korean-purity weakness we found along the way."
 date: 2026-08-22
 last_modified_at: 2026-08-22
 author_profile: true
@@ -11,6 +11,7 @@ toc_label: "Contents"
 toc_icon: "robot"
 lang: en
 tags:
+  - sovereign-ai
   - ai-agents
   - quantization
   - nvfp4
@@ -29,9 +30,15 @@ categories:
 
 *One rack, ten workloads. This is the exact setup we ran for this post.*
 
-If you are weighing whether to run agents on your own GPUs, the question that actually matters comes down to one thing: does a quantized model finish real work, not just a demo. We shrank a 27B model to NVFP4, deployed it on an internal server, and ran ten enterprise agent workloads spanning everything from quarterly close to infrastructure incident triage. All ten finished, and single-request latency beat the bf16 original before quantization.
+For organizations that cannot send data outside, AI adoption usually stalls somewhere other than model performance. The performance is already good enough. The problem is that using it means sending contracts, incident logs, and customer complaints to someone else's API. So the review keeps stopping at the same question: if you keep the model inside your own walls, does the work actually get done?
 
-Converting the same workload to commercial API list prices comes out to 123x against Claude Opus 5 and 135x against GPT-5.6 Sol. Instruction compliance tied Claude Sonnet 5 and Haiku 4.5. But there is a side we lost on too: five of the ten Korean-language responses leaked a total of eleven simplified-Chinese characters, while both commercial model arms had zero. We report both sides below.
+To answer that, we shrank a 27B model to NVFP4, deployed it on internal GPUs, and screen-recorded ten work agents covering everything from quarterly close to infrastructure incident diagnosis. All ten finished, with zero external API calls. Single-request latency actually came out faster than the bf16 original before quantization.
+
+We think a setup only earns the word sovereign when three things are true at once. Data actually has to stay inside. Work has to finish end to end inside that boundary. And when a defect turns up, we have to be able to fix it. We confirmed the first two this time. The reason we decided to write this post is the third.
+
+Five of the ten Korean-language responses had simplified-Chinese characters mixed in, while both commercial model arms had zero under the same conditions. That is the axis we lost on. But because the checkpoint is ours, this defect is not something to wait on. It is work for the training layer to pick up. If it were someone else's API, finding the defect would leave us nothing to do but file a support ticket. The third condition only actually gets tested once a defect like this shows up.
+
+We include the cost numbers too. Converting the same workload to commercial API list prices comes out to 123x against Claude Opus 5 and 135x against GPT-5.6 Sol. Instruction compliance tied Claude Sonnet 5 and Haiku 4.5.
 
 By "finished" we do not mean the reply merely reads plausibly. It means the agent wrote Python itself and ran it inside an isolated Docker sandbox, searched the web nine times to gather evidence, queried the internal wiki, made twenty tool calls, and decided on its own when the task was done. Every video below runs at real time. We did not touch the playback speed, so the elapsed time you see is the elapsed time it actually took.
 
@@ -182,6 +189,8 @@ The ten runs actually moved 290,113 input tokens and 52,840 output tokens. Conve
 
 The multiples look large, but the conditions matter. The commercial prices are list prices with no cache discount applied. In real large-scale operation, cache reads bill at roughly 0.1x the input rate and that line item dominates the bill, so the gap narrows sharply for workloads with a high cache hit rate. Conversely, our own number leaves out the cost of building the quantized checkpoint and the time the card sits idle. If you only run ten cases a day, renting a single GPU is far more expensive. This comparison only means something once you have enough volume to keep the card busy.
 
+One more framing. Cost is less a reason to go sovereign than a line item that erases the counterargument. An organization that cannot send data out has a narrow set of options anyway, and the real question is what honoring that constraint costs. This table says that for an organization with the volume, it costs nothing.
+
 We left Fable 5 out of the table because we do not have a public price list for it. A blank is better than a guessed number.
 
 ## Instruction Compliance and Korean Quality
@@ -218,9 +227,9 @@ Both endpoints have `max_model_len` set to 262,144, and both run with compilatio
 
 So the numbers above are **client-observed wall-clock time at concurrency 1.** They are not throughput and not capacity. Behavior under concurrent load needs a separate measurement and is out of scope for this post.
 
-## How Do We Know Which Model Actually Answered
+## How Do We Know the Data Actually Never Left
 
-A claim that we ran our own model is not, by itself, verifiable. You cannot tell which backend answered just by looking at the screen.
+This is the one place a sovereign-setup claim actually needs verifying. Everything else is visible. This is the only part that is not. You cannot tell which backend answered just by looking at the screen.
 
 So we make that call from server logs, not from what is on screen. The line the server writes when a request actually goes out carries the transmitted model identifier, and that is the only evidence we accept. A line where the router logs which model it decided to use is a decision record, not a transmission record, and we have seen cases where it did not match what was actually sent. So we do not use that line for judgment.
 
@@ -236,25 +245,27 @@ In the first two cases, our model took more steps and still finished faster. The
 
 For the final ten-case recording, the transmitted model was a single one, `ThakiCloud/Qwen3.8-27B-NVFP4-FP8ATTN`, with zero external calls. That is also why the executing model is shown at the bottom of every video. You should be able to ask after the fact which backend actually answered.
 
-For an organization where data cannot leave the building, this distinction is not a performance question. It is a compliance question. You can only call it self-hosting if you can verify that even the auxiliary calls happening inside your tools stay on the same backend.
+This distinction matters because an agent does not call the model just once. The ten cases in the table earlier in this post add up to 32 turns and 73 steps, and every step carries its own model call. On top of that, auxiliary calls, routing decisions, title generation, and the like get bolted on separately. If even one of those goes outside, the contract text or incident log riding on that turn has already left. You cannot run only the main call on an internal model and call the whole thing sovereign. In fact, the longest-running bug we chased in this project was exactly that kind. The main turn went to the internal model while a classifier and a title generator were quietly going outside, and nobody knew until we started counting the logs.
 
-## Where Three Products Meet
+## Which Layers Have to Be Ours for This to Count as Sovereign
 
-None of this ran on a single product.
+Putting a model on your own servers does not by itself make a setup sovereign. Data never left the building in this run because all three layers sat inside the same wall. If even one of those layers had belonged to someone else, some call from the previous section would have leaked out.
 
-The layer that defines agents, grants tool permissions, runs the execution loop, and keeps an audit trail of every tool call is **Paxis**. The ten agents in the videos, the sandbox execution, and the tool-call tracing are all output from this layer.
+The layer that actually automates the work is **Paxis**. It defines agents, grants tool permissions, and runs the execution loop. The ten agents in the videos, the sandbox execution, and the twenty-call tool chains are all output from this layer. From a sovereignty standpoint, what matters more is the audit trail that sits alongside it. If you cannot later ask which tool was called, when, and with what, you cannot prove the data never left either.
 
 The layer that serves the model those agents call, on internal GPUs, is **Metis**. This comparison was possible because we could deploy the NVFP4-quantized checkpoint and the bf16 original the same way and swap between them at request time. If switching models required a code change, a measurement like this would take a whole day.
 
-And the work that shrank that 27B model to NVFP4 and fit it into 21 gigabytes is quantization work in the **Maxis** family. It matters that the checkpoint is ours for reasons beyond performance. The simplified-Chinese leak above is exactly that case in point. No amount of tuning serving configuration makes that defect go away; it has to be fixed in the training data and alignment stage. If you are calling someone else's API, finding that defect leaves you with nothing to do but wait.
+And the work that shrank that 27B model to NVFP4 and fit it into 21 gigabytes is quantization work in the **Maxis** family. The fact that the checkpoint is ours matters more when you hit a defect than it does for performance. The simplified-Chinese leak we saw earlier is exactly that case. No amount of tweaking the serving configuration makes that defect go away; it has to be fixed in the training data and the alignment stage, and whether we can actually reach that stage is exactly the third condition.
 
-To sum up: Paxis automates the work, and Metis and Maxis are what make that possible to run. When all three layers sit inside the same organization, swapping a model and measuring the effect stops being an experiment and becomes operations.
+To sum up: Paxis automates the work, and Metis and Maxis are what make it possible to run inside our own walls. When all three layers sit inside the same organization, swapping a model and measuring the effect stops being an experiment and becomes operations. And when a defect turns up, we are standing in the position to actually fix it.
 
 ## What Is Still Open
 
 We have not yet measured behavior under concurrent load. Good single-request latency is no guarantee of good throughput, and that axis depends heavily on serving configuration, including `max_num_seqs`. Do not use the numbers in this post as-is for capacity planning.
 
 The same caution applies to quality. All ten cases finishing means we did not fail on these ten cases. It does not mean quantization has no effect on quality. The simplified-Chinese leak is a confirmed defect and it is being addressed at the training layer. Behavior under adversarial conditions is being measured separately.
+
+For an organization that cannot send data outside, we don't think the question that actually matters is what percentage of a commercial model a quantized model reaches. It is how many of your ten workloads finish inside your own walls, what stops the ones that don't, and whether the cause sits in a layer you can actually reach. This post answered the first two questions with ten cases. It answered the third with eleven simplified-Chinese characters.
 
 If you are evaluating self-hosted GPUs for running work agents, we would recommend picking whichever of these ten cases is closest to your own work and measuring it the same way. That is a far more honest signal than a benchmark score.
 
