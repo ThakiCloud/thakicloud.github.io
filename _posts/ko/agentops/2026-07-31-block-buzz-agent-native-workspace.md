@@ -18,6 +18,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/block-buzz-agent-native-workspace/"
+published: false
 ---
 
 에이전트를 팀 워크플로에 넣어 본 조직이라면 비슷한 지점에서 막혔을 것입니다. 모델은 잘 돌아가는데, 그 에이전트가 슬랙 채널에서는 누구인지가 정의되지 않습니다. 봇 토큰 하나를 공유해서 쓰거나, 사람 계정을 빌려 쓰거나, 웹훅 뒤에 숨습니다. 그러면 "이 커밋은 누가 승인했나"라는 질문에 답할 수가 없습니다. 2026년 7월 21일에 Block이 공개한 Buzz는 바로 이 질문에서 출발한 제품입니다.

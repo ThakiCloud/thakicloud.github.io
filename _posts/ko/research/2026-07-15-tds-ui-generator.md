@@ -19,6 +19,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/tds-ui-generator/"
 audiobook: /assets/audio/posts/tds-ui-generator/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 이 글은 우리 플랫폼 팀이 THAKI Design System(`@thaki/tds`)으로 데스크톱 콘솔 UI를 자동

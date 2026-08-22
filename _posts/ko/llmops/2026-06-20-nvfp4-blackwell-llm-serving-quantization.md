@@ -25,6 +25,7 @@ categories:
   - llmops
 audiobook: /assets/audio/posts/nvfp4-blackwell-llm-serving-quantization/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 8분

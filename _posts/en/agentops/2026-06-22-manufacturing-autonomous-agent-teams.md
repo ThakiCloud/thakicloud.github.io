@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/manufacturing-auton
 reading_time: true
 categories:
   - agentops
+published: false
 ---
 
 ![Manufacturing Operations Autonomous Agent Teams Header Image]({{ '/assets/images/manufacturing-autonomous-agent-teams-hero.webp' | relative_url }})

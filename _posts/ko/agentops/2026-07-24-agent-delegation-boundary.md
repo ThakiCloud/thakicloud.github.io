@@ -21,6 +21,7 @@ categories:
   - agentops
 header:
   teaser: /assets/images/agent-delegation-boundary-hero.webp
+published: false
 ---
 
 ![두 에이전트가 빛나는 경계선을 사이에 두고 협상하는 추상 일러스트]({{ '/assets/images/agent-delegation-boundary-hero.webp' | relative_url }})

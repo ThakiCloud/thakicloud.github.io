@@ -21,6 +21,7 @@ lang: en
 audiobook: "https://drive.google.com/file/d/1RagQaJFjbwF_6dW_0NH0RT77Q_nqaZyo/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you run an AI data center or build services on top of one, the most expensive risk of the first half of 2026 has shifted. It is no longer about which model you choose, but about how you protect the infrastructure itself. This year's news has quietly pointed to one conclusion: as AI's value moved from the model down to the infrastructure, the thieves after that infrastructure arrived right along with it.

@@ -17,6 +17,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/stack-layers-model-map-misses/"
+published: false
 ---
 
 When we talk about the AI market, we usually line up the models. There's the frontier tier, then Chinese models at half the price, then absurdly cheap ultra-low-cost models, then in-house models built by service companies, and on-device models running on the hardware itself. This map is accurate. It shows clearly which models exist.

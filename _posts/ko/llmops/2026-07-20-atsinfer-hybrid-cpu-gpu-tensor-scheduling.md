@@ -17,6 +17,7 @@ toc_label: 텐서 단위 스케줄링의 해부
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/atsinfer-hybrid-cpu-gpu-tensor-scheduling/"
+published: false
 ---
 
 이 글은 소비자용 GPU 한 장으로 거대 모델을 자체 서빙할지 저울질하는 엔지니어, 그리고 "24GB로 120B를 돌린다"는 요즘 트윗을 어디까지 믿어야 할지 판단해야 하는 인프라 담당자를 위해 썼습니다. 결론부터 말하면, 난징대학교 연구진이 공개한 ATSInfer(arXiv:2607.10183)의 핵심 아이디어는 단순하면서도 설득력이 있습니다. 지금까지의 오프로딩이 "레이어" 또는 "전문가(expert)" 단위로 뭉텅이째 CPU와 GPU를 오갔다면, ATSInfer는 그 단위를 **텐서 하나하나**까지 쪼갭니다. 다만 화제가 된 "최대 3.29배"라는 숫자는 몇 가지 전제 위에 서 있고, 아직 코드가 공개되지 않았다는 점도 함께 짚겠습니다. 저희는 RTX 4090과 120B급 모델을 이 자리에서 재현하지는 못했으므로, 이 글의 모든 수치는 **논문이 보고한 값**임을 먼저 분명히 해 둡니다.

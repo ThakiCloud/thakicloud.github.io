@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/solo-ai-team-fullstack-o
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![Solo AI Engineer Full-Stack Operations Overview]({{ '/assets/images/solo-ai-team-fullstack-ops-hero.webp' | relative_url }})

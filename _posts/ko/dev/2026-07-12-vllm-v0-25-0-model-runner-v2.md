@@ -17,6 +17,7 @@ categories:
   - dev
 audiobook: /assets/audio/posts/vllm-v0-25-0-model-runner-v2/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 개요

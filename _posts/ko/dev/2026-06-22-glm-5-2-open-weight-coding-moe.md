@@ -21,6 +21,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/glm-5-2-open-weight-coding-moe/"
 audiobook: /assets/audio/posts/glm-5-2-open-weight-coding-moe/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 개요

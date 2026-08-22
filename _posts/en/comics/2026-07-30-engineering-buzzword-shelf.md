@@ -15,7 +15,6 @@ toc: false
 image: /assets/images/posts/comics/engineering-buzzword-shelf/strip.webp
 video: /assets/videos/posts/만화/engineering-buzzword-shelf/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/engineering-buzzword-shelf/"
-published: false
 ---
 
 A one-liner going around X yesterday landed a little too well: prompt engineering became context engineering, then harness, then loop, and now graph engineering, and every new label gets treated like a revolution.

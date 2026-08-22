@@ -21,6 +21,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/seed-self-evolving-distillation-agentic-rl/"
 audiobook: /assets/audio/posts/seed-self-evolving-distillation-agentic-rl/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 멀티턴 도구 사용과 환경 피드백으로 움직이는 LLM 에이전트를 강화학습으로 훈련하고 있다면, 이 글이 바로 여러분을 위한 것입니다. 핵심 결론을 먼저 적겠습니다. 에이전트 RL이 잘 안 되는 가장 흔한 이유는 모델이 약해서가 아니라 보상이 궤적 끝에 딱 한 번만 오기 때문이며, SEED는 에이전트가 자기 궤적을 스스로 분석해 만든 자연어 스킬을 다시 자기에게 되먹이는 방식으로 그 희소한 신호를 토큰 단위의 촘촘한 신호로 바꿉니다. 이 방법은 텍스트 기반과 비전 기반 에이전트 과제 모두에서 성능과 샘플 효율을 함께 끌어올렸습니다.

@@ -19,6 +19,7 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/rule2drc-drc-llm-agent-benchmark/"
+published: false
 ---
 
 칩을 양산하기 전 수천 개의 설계규칙을 검증하는 일을 자동화하고 싶은 엔지니어라면 이 글을 읽을 가치가 있습니다. Rule2DRC(arXiv:2605.15669, 서울대 송현오 교수팀·삼성 AI센터, ICML 2026)는 자연어로 쓰인 설계규칙을 실행 가능한 DRC 검증 스크립트로 번역하는 LLM 에이전트를, 코드가 얼마나 정답과 비슷하게 생겼는지가 아니라 실제 검증엔진에서 돌려 통과시키는지로 채점하는 대규모 벤치마크입니다. 이 팀은 여기서 그치지 않고 삼성 사내 보안망에 배포할 수 있는 레이아웃 네이티브 에이전트 GUI 앱까지 만들었습니다. 도메인 특화 에이전트가 규제와 보안이 빡센 산업 현장에 실제로 들어가고 있다는 뜻입니다.

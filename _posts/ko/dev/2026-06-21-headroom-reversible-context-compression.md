@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/dev/headroom-reversible-context
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![데이터가 응축되는 추상 이미지]({{ '/assets/images/headroom-reversible-context-compression-hero.webp' | relative_url }})

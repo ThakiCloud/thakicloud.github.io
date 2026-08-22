@@ -26,6 +26,7 @@ ebook_title: "에이전틱 소프트웨어 설계"
 ebook_pages: 21
 audiobook: /assets/audio/posts/agentic-software-architecture-design/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![에이전틱 소프트웨어 설계]({{ '/assets/images/agentic-software-architecture-design-hero.webp' | relative_url }})

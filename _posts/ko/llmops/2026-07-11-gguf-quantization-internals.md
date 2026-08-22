@@ -14,6 +14,7 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gguf-quantization-internals/"
 categories:
   - llmops
+published: false
 ---
 
 ![양자화된 신경망 가중치가 크기가 다른 블록으로 재배열되는 모습을 표현한 추상 일러스트]({{ '/assets/images/gguf-quantization-internals-hero.webp' | relative_url }})

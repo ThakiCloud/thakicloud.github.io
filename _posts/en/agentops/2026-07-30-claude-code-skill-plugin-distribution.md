@@ -18,6 +18,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-skill-plugin-distribution/"
+published: false
 ---
 
 The easiest way to grow an agent skill library is to copy folders out of someone else's repository. That is what we did, and it left 1,909 directories under `.claude/skills`. This week we audited that tree properly for the first time. 82.7% of the skills are a single SKILL.md file, 88 of them declare a version, and 33 declare where they came from.

@@ -22,6 +22,7 @@ categories:
   - llmops
 audiobook: /assets/audio/posts/healthcare-onprem-llm-finetuning/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![환자 데이터를 외부로 내보내지 않고 사내에서 의료 LLM 파인튜닝하기]({{ '/assets/images/healthcare-onprem-llm-finetuning-hero.webp' | relative_url }})

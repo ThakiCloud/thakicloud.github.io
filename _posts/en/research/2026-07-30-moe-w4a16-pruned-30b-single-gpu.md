@@ -13,6 +13,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/moe-w4a16-pruned-30
 audiobook: "https://drive.google.com/file/d/13bsjA5BlajhqCJI8IXWXa_8RHEFb3ECd/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you have ever run an infrastructure workload where the host RAM of the pod runs out before the GPU's high-bandwidth memory does, this paper is aimed directly at you. ThakiCloud AI Research measured what happens when you structurally prune and 4-bit quantize Qwen3-Coder-30B-A3B, a checkpoint with roughly 61 billion parameters, on a pod equipped with a single NVIDIA H200 GPU and only 32GiB of host RAM. If you have ever needed to compress a large Mixture-of-Experts (MoE) model to cut serving cost, only to have the compression job itself fail from lack of memory, this is the fix.

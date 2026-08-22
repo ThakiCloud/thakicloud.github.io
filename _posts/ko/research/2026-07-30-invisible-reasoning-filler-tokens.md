@@ -19,6 +19,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/invisible-reasoning-filler-tokens/"
 audiobook: /assets/audio/posts/invisible-reasoning-filler-tokens/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 언어 모델의 안전성 통제 상당수는 하나의 가정 위에 서 있습니다. 모델이 중요한 판단을 내릴 때는 그 판단의 근거가 출력 토큰에 드러난다는 가정입니다. 생각의 사슬을 읽어 감시하는 CoT 모니터링은 바로 이 가정을 자본으로 삼습니다. 2026년 7월 24일 arXiv에 올라온 「Not All LLM Reasoning is Visible in the Chain-of-Thought」는 이 가정이 이미 깨져 있다는 증거를 실험으로 제시합니다. 뉴욕대학교의 Vatsal Baherwani, 메릴랜드대학교의 Tom Goldstein, TogetherAI의 Ashwinee Panda가 함께 썼습니다.

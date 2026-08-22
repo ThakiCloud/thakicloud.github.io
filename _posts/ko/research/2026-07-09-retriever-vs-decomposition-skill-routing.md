@@ -20,6 +20,7 @@ toc: true
 audiobook: /assets/audio/posts/retriever-vs-decomposition-skill-routing/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/retriever-vs-decomposition-skill-routing/"
+published: false
 ---
 
 수백에서 수천 개의 스킬을 파일 단위로 관리하며 자연어 요청을 그때그때 알맞은 스킬로 라우팅하는 에이전트 하네스를 운영하고 있다면, 혹은 그런 시스템을 설계할 계획이라면 이 논문이 다루는 질문이 낯설지 않을 것입니다. 라우팅 품질이 기대에 못 미칠 때, 다음 투자를 복잡한 요청을 잘게 쪼개는 분해(decomposition) 계층에 부어야 할까요, 아니면 후보를 찾아내는 리트리버와 인덱스 자체를 손봐야 할까요. 이 논문은 값비싼 LLM 분해 파이프라인을 새로 만들지 않고도 어느 쪽에 먼저 투자해야 하는지 두 숫자만으로 판별하는 방법을 제시합니다. 그리고 그 진단을 자사 코퍼스에 실제로 돌려본 결과, 답이 분해도 리트리버도 아니었다는 이야기를 합니다.

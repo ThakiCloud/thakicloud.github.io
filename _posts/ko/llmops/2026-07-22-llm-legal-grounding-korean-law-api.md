@@ -16,11 +16,11 @@ tags:
 author_profile: true
 toc: true
 toc_label: 법률 LLM 근거 설계
-published: true
 lang: ko
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/llm-legal-grounding-korean-law-api/"
+published: false
 ---
 
 ![검증된 원문에 답을 묶는 근거 기반 파이프라인]({{ '/assets/images/llm-legal-grounding-korean-law-api-hero.webp' | relative_url }})

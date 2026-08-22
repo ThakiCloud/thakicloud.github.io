@@ -19,6 +19,7 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/jaxbench-tpu-pallas-context-over-scale/"
+published: false
 ---
 
 ![시스톨릭 격자를 관통하는 광선을 형상화한 표지 이미지](/assets/images/jaxbench-tpu-pallas-context-over-scale-hero.webp)

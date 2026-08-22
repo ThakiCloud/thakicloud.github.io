@@ -20,6 +20,7 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-tag-slack-agentic-collaboration/"
 categories:
   - agentops
+published: false
 ---
 
 ## Overview

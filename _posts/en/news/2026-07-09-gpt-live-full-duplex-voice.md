@@ -12,6 +12,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/gpt-live-full-duplex-voice/"
 categories:
   - news
+published: false
 ---
 
 Anyone who has used a voice assistant knows the awkward rhythm: it waits until you finish speaking, then after a brief pause delivers its answer all at once. GPT-Live, released by OpenAI on July 8, 2026, is an attempt to change that rhythm. This piece is written for developers and AI teams interested in voice interfaces and real-time inference infrastructure. We look at what GPT-Live actually changed at the technical level, and what this kind of full-duplex voice demands from serving infrastructure and agent design.

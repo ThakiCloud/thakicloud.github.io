@@ -15,7 +15,6 @@ toc: false
 image: /assets/images/posts/comics/phone-already-ran-the-model/strip.webp
 video: /assets/videos/posts/만화/phone-already-ran-the-model/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/phone-already-ran-the-model/"
-published: false
 ---
 
 Most people assume that recognizing a hand or a face means uploading the video somewhere first. Google's open-source real-time ML toolkit quietly flips that assumption: face, hand, pose, gesture and object detection all run inside the phone, the browser, or a small embedded board.

@@ -15,7 +15,6 @@ toc: false
 image: /assets/images/posts/comics/term-treadmill-x-engineering/strip.webp
 video: /assets/videos/posts/만화/term-treadmill-x-engineering/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/term-treadmill-x-engineering/"
-published: false
 ---
 
 Every season, AI coding coins a new discipline. It started with prompt engineering, then context, harness, loop, and now graph engineering. Each one gets crowned the next big thing, though half the time it is the same idea wearing a new badge. Eugene, Paxis and Metis decide to chase the parade of terms on a treadmill.

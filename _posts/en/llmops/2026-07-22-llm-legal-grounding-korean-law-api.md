@@ -16,11 +16,11 @@ tags:
 author_profile: true
 toc: true
 toc_label: Grounding legal LLMs
-published: true
 lang: en
 categories:
   - llmops
 canonical_url: "https://thakicloud.github.io/en/llmops/llm-legal-grounding-korean-law-api/"
+published: false
 ---
 
 ![A grounding pipeline that binds answers to verified source text](/assets/images/llm-legal-grounding-korean-law-api-hero.webp)

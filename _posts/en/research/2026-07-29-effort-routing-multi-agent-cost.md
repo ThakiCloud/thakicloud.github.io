@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/effort-routing-mult
 audiobook: "https://drive.google.com/file/d/1nzs3_d9jIZBeYdRQXL3kWlMZGoEI6oit/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you run a multi-agent orchestrator and are trying to cut token costs, the question this paper takes on will sound familiar. A single workflow mixes subtasks as trivial as pulling a value out of JSON with subtasks that have to satisfy four interlocking constraints at once, and yet we usually pin the same reasoning-effort tier across all of them. The Effort-Routing paper works out, with equations, exactly where that habit wastes money, and sets the conditions under which a policy that lets each subtask think only as much as it needs actually saves. It is not, however, a paper that measured this policy in practice. The authors say up front that they have implemented neither a classifier nor an executor, and this post carries that admission forward rather than glossing over it.

@@ -8,6 +8,7 @@ tags: [tool-use, MCP, deferred-loading, agent-harness, tool-discovery, cold-star
 categories: [research]
 author_profile: true
 toc: true
+published: false
 ---
 
 여러 개의 MCP 서버와 수백 개의 스킬을 붙인 에이전트 하네스를 운영하고 있고, 토큰 비용을 아끼려고 도구 스키마를 미리 다 띄우지 않고 필요할 때만 불러오는 지연 로딩(deferred loading)을 쓰고 있거나 도입을 고민 중인 엔지니어라면 이 글이 유용합니다. 이 연구는 지연 로딩이 실제로 얼마나 토큰을 아끼는지가 아니라, 에이전트가 애초에 존재를 모르는 도구를 검색으로 찾아낼 수 있는지를 실측한 결과입니다. 결론부터 말하면, 도구 이름과 작업 어휘가 겹치지 않으면 검색은 거의 작동하지 않습니다.

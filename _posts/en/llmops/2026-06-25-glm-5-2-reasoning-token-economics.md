@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/glm-5-2-reasoning-tok
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 When a model needs 220,000 tokens just to think through a Rubik's cube, who pays for that? That is the question Matt Pocock (@mattpocockuk) surfaced while using his `/teach` skill and `pi` to have GLM-5.2 work through a cube solution. Even at the lowest effort setting (High), three turns produced roughly 220,000 tokens of thinking traces. A more capable reasoning model means a model that thinks longer, and a model that thinks longer means someone receives a larger invoice.

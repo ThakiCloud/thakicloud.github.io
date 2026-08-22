@@ -19,6 +19,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1YEQu--4AbbuDbtiPrST1xkPvEUybXmfb/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 소버린 AI를 진지하게 고민하는 기업과 공공기관의 의사결정자라면, 이번 주 뉴스에서 한 가지 역설을 읽어야 합니다. 세계 최강 AI 보유국이 동맹국에 "각자 AI를 만들지 말고 우리 것을 쓰라"고 외교 채널로 지시한 바로 그 시점에, 정작 시장은 정반대 방향으로 뛰었습니다. 압박이 강해질수록 각국은 더 빠르게 자기 것을 만들려 움직였습니다. 이 어긋남 속에 앞으로 몇 년간 AI 인프라 전략의 핵심이 들어 있습니다.

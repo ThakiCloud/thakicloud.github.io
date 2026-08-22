@@ -20,6 +20,7 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/sk-nvidia-500b-ai-factory-korea/"
+published: false
 ---
 
 ![전력망이 하나의 조밀한 연산 격자로 수렴하는 모습을 형상화한 개념 이미지](/assets/images/sk-nvidia-500b-ai-factory-korea-hero.webp)

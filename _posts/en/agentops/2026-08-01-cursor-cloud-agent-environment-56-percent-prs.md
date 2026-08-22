@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/cursor-cloud-agent-
 audiobook: "https://drive.google.com/file/d/1j1nxiKQYWnYuBkJxKhGAItRd5vi6H9_D/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 Any team that has wired a coding agent into a real repository tends to hit the same wall. The agent that looked flawless in a demo stalls halfway through actual work. It cannot run the tests, the dependencies are missing, and it has no idea about the environment variables that only ever existed on someone's laptop. So people swap the model. The internal write-up Cursor published on July 30, 2026 argues that this reflex is usually the wrong one.

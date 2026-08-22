@@ -19,6 +19,7 @@ toc_icon: "microchip"
 canonical_url: "https://thakicloud.com/tech-blog/ko/technique/llm-internals-learning-path/"
 categories:
   - llmops
+published: false
 ---
 
 ![LLM 서빙의 블랙박스를 열다: 토큰화부터 추론 최적화까지, 인프라 엔지니어를 위한 멘탈 모델]({{ '/assets/images/llm-internals-learning-path-slide-01.webp' | relative_url }})

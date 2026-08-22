@@ -21,6 +21,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/12gpCSeeGgqmZ1noMdLMRbMeP_9sefKQr/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you are a decision maker at an enterprise or public institution seriously weighing sovereign AI, this week's news holds a paradox worth reading closely. In the very week the world's strongest AI power told its allies through diplomatic channels not to build their own AI and to use its models instead, the market ran in exactly the opposite direction. The harder the pressure, the faster each country moved to build its own. Inside that mismatch sits the core of AI infrastructure strategy for the next several years.

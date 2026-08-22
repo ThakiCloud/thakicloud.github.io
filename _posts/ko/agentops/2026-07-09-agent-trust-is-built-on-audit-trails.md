@@ -22,6 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-trust-is-built-on-audit-trails/"
 audiobook: /assets/audio/posts/agent-trust-is-built-on-audit-trails/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 어떤 에이전트가 지난주 여신 심사 보조 업무를 돌렸습니다. 결과는 그럴듯했습니다. 그런데 담당자가 "이 판단을 왜 이렇게 내렸느냐"고 물었을 때, 아무도 그 과정을 되짚지 못했습니다. 모델은 충분히 똑똑했지만, 무엇을 근거로 어떤 도구를 호출했고 어디서 멈췄는지가 남아 있지 않았기 때문입니다. 이 장면이 2026년 7월 9일 오늘, 여러 뉴스가 각자 다른 언어로 가리킨 공통의 빈칸이었습니다.

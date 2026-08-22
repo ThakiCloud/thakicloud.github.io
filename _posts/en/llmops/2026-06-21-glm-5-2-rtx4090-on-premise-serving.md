@@ -22,6 +22,7 @@ reading_time: true
 lang: en
 categories:
   - llmops
+published: false
 ---
 
 Running a 753B-parameter model on a single consumer GPU would have been hard to imagine a few years ago. A recently shared case reports running the SOTA open-weight model GLM-5.2 (753B, FP8) on an **RTX 4090** consumer GPU for the first time. It manages roughly 10 tok/s, but the point is not throughput. The point is that it runs at all.

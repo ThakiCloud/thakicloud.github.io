@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/만화/doctor-breakfast-stack-diet/strip.webp
 audiobook: https://drive.google.com/file/d/1KqT7l3oD3CaaQ0lhi5EFplgGnNOn5EoT/view
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 ---
 
 의사협회가 추천했다는 아침식사 목록이 타임라인을 한 바퀴 돌았습니다. 미지근한 물, 삶은 달걀, 무가당 우유, 양배추, 블루베리, 토마토. 검증된 조합을 그대로 따르기만 하면 되는 셈이죠. 파시스와 메티스는 여기서 엉뚱한 질문을 던집니다. AI 스택도 이렇게 몸에 좋은 것만 골라 담으면 되지 않겠냐고요. 그런데 진짜 문제는 재료가 아니라 그 냉장고를 누가 쥐고 있느냐에 있습니다. 주권은 모델과 데이터와 인프라를 남이 아니라 내 통제 아래 두는 것을 말하고, 온프렘은 그 스택을 남의 시설이 아닌 자기 시설 안에서 직접 돌리는 방식입니다.

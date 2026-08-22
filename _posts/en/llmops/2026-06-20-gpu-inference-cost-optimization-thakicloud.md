@@ -24,6 +24,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/gpu-inference-cost-optimization-thakicloud/"
 categories:
   - llmops
+published: false
 ---
 
 ![Compute costs flowing through a GPU data center]({{ '/assets/images/cost-opt-hero.webp' | relative_url }})

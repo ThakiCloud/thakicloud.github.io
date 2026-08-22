@@ -21,6 +21,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kimi-k3-local-serving/"
 audiobook: /assets/audio/posts/kimi-k3-local-serving/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 오픈웨이트 모델이 공개되면 반나절 안에 로컬에서 돌려 봤다는 글이 올라옵니다. 그런데 이번 Kimi K3는 사정이 좀 다릅니다. 저희가 HuggingFace API로 공개된 가중치 파일을 전수 집계해 보니 96개 샤드에 1,453.7GiB였습니다. 141GB짜리 H200을 11장 붙여야 가중치가 겨우 올라가는 크기이고, 여기에는 KV 캐시도 활성값도 아직 포함되지 않았습니다.

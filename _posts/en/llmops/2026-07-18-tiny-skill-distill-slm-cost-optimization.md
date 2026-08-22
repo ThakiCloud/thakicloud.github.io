@@ -18,6 +18,7 @@ categories:
   - llmops
   - dev
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/tiny-skill-distill-slm-cost-optimization/"
+published: false
 ---
 
 ## The bottom line first

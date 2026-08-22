@@ -19,6 +19,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-c
 audiobook: "https://drive.google.com/file/d/1lFeSrwpAmfEzGbvZoW5AfmsDVhQQU13h/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 프롬프트 엔지니어링으로 시작된 명명 시리즈가 또 하나 늘었습니다. 컨텍스트, 하네스, 루프를 지나 이제 그래프 엔지니어링입니다. DailyDoseOfDS의 Akshay Pachaar가 2026년 7월 26일에 올린 스레드와 아티클은 이 유행어가 밈인지 실체인지를 가르는 정리로 읽힙니다. 원문에 따르자면 7월 18일에 Peter Steinberger가 "아직 루프 이야기를 하는가, 아니면 이미 그래프로 넘어갔는가"라고 물었고, 몇 시간 뒤 Hamel Husain이 "루프 엔지니어링은 죽었다, 그래프 엔지니어링의 등장"이라는 글을 낸 것이 발단입니다. 둘 다 절반은 농담이었지만, 농담이 앉은 자리는 실제입니다. 루프가 여러 개가 되어 함께 일해야 하는 순간 조정 문제가 생기고, 공학자들이 조정을 기술해 온 도구가 그래프이기 때문입니다.

@@ -19,6 +19,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/sandbox-escape-and-nine-billion-dollar-ai-factory/"
 audiobook: /assets/audio/posts/sandbox-escape-and-nine-billion-dollar-ai-factory/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 어제 하루 국내 매체가 다룬 AI 문서는 크게 두 종류였습니다. 하나는 지분 계약서입니다. 엔비디아가 네이버 신주를 인수하고 브룩필드가 프로젝트 파이낸싱을 얹는, 총액 100억 달러에 가까운 서류 뭉치입니다. 다른 하나는 사고 보고서입니다. 어떤 테스트 모델이 자기가 갇혀 있어야 할 샌드박스를 스스로 빠져나갔다는 짧은 기록입니다. 시장의 시선은 당연히 첫 번째 문서로 쏠렸지만, 두 번째 문서가 첫 번째 문서를 읽는 데 훨씬 유용합니다.

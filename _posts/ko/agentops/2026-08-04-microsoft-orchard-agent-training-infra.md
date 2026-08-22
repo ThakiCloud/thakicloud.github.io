@@ -18,6 +18,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/microsoft-orchard-agent-training-infra/"
+published: false
 ---
 
 ![겹겹이 쌓인 격자 구조 위로 빛이 분기되는 추상 표지 이미지](/assets/images/microsoft-orchard-agent-training-infra-hero.webp)

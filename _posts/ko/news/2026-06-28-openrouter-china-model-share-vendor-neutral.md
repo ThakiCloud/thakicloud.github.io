@@ -22,6 +22,7 @@ categories:
   - news
 audiobook: /assets/audio/posts/openrouter-china-model-share-vendor-neutral/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 OpenRouter는 수백만 명의 개발자가 여러 LLM을 하나의 API로 골라 쓰는 플랫폼입니다. 어떤 모델이 실제로 얼마나 호출되는지를 비용에 민감한 개발자들의 실사용으로 보여주기 때문에, 시장의 선행 지표로 자주 인용됩니다. 그 OpenRouter에서 미국 모델의 토큰 점유율이 1년 만에 약 70%에서 약 30%로 내려앉았습니다.

@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/claude-code-router-on
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![Concept diagram]({{ '/assets/images/claude-code-router-onprem-routing-hero.webp' | relative_url }})

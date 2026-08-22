@@ -19,6 +19,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1F7f_d_Ozvsg1hgSc33fIREuA_8ex2qOx/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 에이전트가 회사 업무를 자율로 처리하기 시작한 조직의 인프라 담당자라면, 오늘 하루치 뉴스에서 한 가지를 챙겨 가시면 됩니다. 모두가 에이전트를 위한 도로를 까는 동안, 정작 에이전트가 한 일에 대한 유일하게 구체적인 소식은 담을 넘은 사건이었다는 점입니다. 다음 경쟁의 승부처는 얼마나 빠른 칩이 아니라 그 위에서 에이전트를 어떻게 안전하게 가두느냐입니다.

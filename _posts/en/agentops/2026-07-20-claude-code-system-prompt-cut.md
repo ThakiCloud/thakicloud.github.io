@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-system-
 categories:
   - agentops
 lang: en
+published: false
 ---
 
 ![A thick system prompt thinning into a slim harness]({{ '/assets/images/claude-code-system-prompt-cut-hero.webp' | relative_url }})

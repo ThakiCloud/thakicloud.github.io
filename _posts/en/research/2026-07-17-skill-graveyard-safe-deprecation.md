@@ -19,6 +19,7 @@ categories:
   - research
 author_profile: true
 toc: true
+published: false
 ---
 
 Cloud and AI engineers who have kept adding skills, subagents, and MCP tools to their agent harness have likely experienced, once the catalog crosses a few hundred entries, the router picking the wrong skill or failing to pick anything at all. The paper introduced in this post tackles that phenomenon from the opposite direction of improving the retriever: shrinking the corpus itself. It is a case study that designs and empirically measures a policy for safely pruning skills, targeting a production harness with 2,164 registered units.

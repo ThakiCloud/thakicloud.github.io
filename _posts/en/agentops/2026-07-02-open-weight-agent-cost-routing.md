@@ -24,6 +24,7 @@ header:
   image: /assets/images/open-weight-agent-cost-routing-hero.webp
 categories:
   - agentops
+published: false
 ---
 
 ![Abstract image of a task flow passing through a prism and splitting into multiple cost lanes]({{ '/assets/images/open-weight-agent-cost-routing-hero.webp' | relative_url }})

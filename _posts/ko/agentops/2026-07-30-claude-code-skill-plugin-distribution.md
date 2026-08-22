@@ -20,6 +20,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-skill-plugin-distribution/"
 audiobook: /assets/audio/posts/claude-code-skill-plugin-distribution/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 에이전트 스킬을 늘리는 가장 쉬운 방법은 남의 저장소에서 폴더를 복사해 오는 것입니다. 저희도 그렇게 했고, 그 결과 `.claude/skills` 아래에 1,909개의 디렉터리가 쌓였습니다. 이번에 그 트리를 처음으로 제대로 감사해 봤는데, 스킬의 82.7%가 SKILL.md 한 장짜리 복사본이었고 버전을 선언한 스킬은 88개, 출처를 선언한 스킬은 33개뿐이었습니다.

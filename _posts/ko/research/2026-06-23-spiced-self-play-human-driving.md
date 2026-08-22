@@ -27,6 +27,7 @@ categories:
   - research
 audiobook: /assets/audio/posts/spiced-self-play-human-driving/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 개요

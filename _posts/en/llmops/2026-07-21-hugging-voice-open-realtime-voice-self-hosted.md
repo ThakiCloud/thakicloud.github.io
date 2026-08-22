@@ -20,6 +20,7 @@ lang: en
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/hugging-voice-open-realtime-voice-self-hosted/"
+published: false
 ---
 
 ![An open realtime voice pipeline you run yourself]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.webp' | relative_url }})

@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/id-v2v-identity-pre
 audiobook: "https://drive.google.com/file/d/1YR4lduLMxHHPmgvnrM6-PWuBQOYUzHQ-/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 There is a recurring situation where you want to swap out a video's background and lighting wholesale while leaving the person's face untouched. Rebuilding ad creative for each season, rebranding the backdrop of a training video, or redesigning the lighting after the shoot has wrapped. Until now that meant reshooting or frame-by-frame compositing. ID-V2V, from Eyeline Labs and accepted to SIGGRAPH Asia 2026, proposes solving it with a single edited first frame.

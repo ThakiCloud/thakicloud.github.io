@@ -18,6 +18,7 @@ toc_icon: "microchip"
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/qwen3-6-27b-nvfp4-vllm-blackwell/"
 categories:
   - llmops
+published: false
 ---
 
 ![Qwen3.6-27B를 NVFP4로: Blackwell 단일 GPU 서빙의 경제학 개념을 형상화한 이미지](/assets/images/qwen3-6-27b-nvfp4-vllm-blackwell-hero.webp)

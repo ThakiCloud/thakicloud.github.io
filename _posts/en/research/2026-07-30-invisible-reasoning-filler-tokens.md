@@ -18,6 +18,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/invisible-reasoning-filler-tokens/"
+published: false
 ---
 
 Most safety controls for language models rest on one assumption: when a model makes a consequential judgment, the basis for that judgment shows up in its output tokens. Chain-of-thought monitoring stakes everything on it. "Not All LLM Reasoning is Visible in the Chain-of-Thought," posted to arXiv on 24 July 2026, offers experimental evidence that the assumption is already broken. The authors are Vatsal Baherwani of New York University, Tom Goldstein of the University of Maryland, and Ashwinee Panda of TogetherAI.

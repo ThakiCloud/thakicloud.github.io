@@ -23,6 +23,7 @@ toc_sticky: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/owm/kimi-k3-two-axis-frontier-and-small-models/"
 audiobook: /assets/audio/posts/kimi-k3-two-axis-frontier-and-small-models/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![Kimi K3는 '격차 소멸'이 아니다: 오픈웨이트 프런티어 시대의 두 축 개념을 형상화한 이미지](/assets/images/kimi-k3-two-axis-frontier-and-small-models-hero.webp)

@@ -24,6 +24,7 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+published: false
 ---
 
 ![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top]({{ '/assets/images/praxis-architecture-hero.webp' | relative_url }})

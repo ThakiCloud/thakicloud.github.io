@@ -10,10 +10,10 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/event-vs-cron-agent-automation/"
-published: true
 audiobook: "https://drive.google.com/file/d/1JbXSZRnNejgs67vAxto_0YxI4QwEbzu2/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 This is useful if you run an unattended agent automation system and have been picking your polling interval by feel, one minute versus five minutes, with no real measurement behind the choice. It matters even more if your organization runs infrastructure with multiple cron-based skill runners. This research actually measures the tug-of-war between latency and wasted cost that a single polling interval creates, and puts numbers on the idempotency design that has to travel alongside any move to event-based triggering.

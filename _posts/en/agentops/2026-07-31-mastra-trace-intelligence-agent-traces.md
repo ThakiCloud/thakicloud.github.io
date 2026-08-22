@@ -17,6 +17,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/mastra-trace-intelligence-agent-traces/"
+published: false
 ---
 
 Teams that ship agents to production hit a common wall. The traces pile up fine, but nobody reads them. Thousands arrive daily, and the only ones a human opens are the handful that triggered a failure alert. The rest sit there quietly, costing storage. Trace Intelligence, which Mastra released in private beta in July 2026, aims at exactly that gap.

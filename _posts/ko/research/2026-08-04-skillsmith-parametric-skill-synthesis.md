@@ -18,6 +18,7 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/skillsmith-parametric-skill-synthesis/"
+published: false
 ---
 
 에이전트에 스킬을 붙이는 방법은 오랫동안 두 갈래였습니다. 하나는 글로 적어두는 쪽입니다. 태스크 설명과 예시 몇 개, 지난번에 실패한 이유를 적은 반성 노트를 문서로 남겨두고 필요할 때 컨텍스트에 얹습니다. 다른 하나는 가중치로 굽는 쪽입니다. 반복되는 하위 작업마다 LoRA나 prefix 모듈을 하나씩 학습해 어댑터 서랍에 넣어두고 꺼내 씁니다. 두 방식은 십수 년째 서로 다른 학회 세션에서 논의돼 왔고, 실무에서도 대체로 둘 중 하나를 고르는 문제로 취급됩니다. 2026년 7월 29일 arXiv에 올라온 구글 딥마인드 논문은 이 선택지 자체를 다시 봅니다.

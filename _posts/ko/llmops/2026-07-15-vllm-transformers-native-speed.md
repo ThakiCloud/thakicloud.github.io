@@ -16,6 +16,7 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/vllm-transformers-native-speed/"
 categories:
   - llmops
+published: false
 ---
 
 ## 개요

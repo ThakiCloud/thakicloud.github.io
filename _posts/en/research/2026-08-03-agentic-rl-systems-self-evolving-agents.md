@@ -17,6 +17,7 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/agentic-rl-systems-self-evolving-agents/"
+published: false
 ---
 
 Something strange starts the day after you ship an agent to production. Users hit it every day, the agent handles thousands of tasks, and yet the agent itself has not moved an inch from the day it was deployed. Weights are frozen, the system prompt is frozen, the tool list is frozen. The only thing accumulating is logs, and those logs usually pass through an observability dashboard once and then disappear. A paper posted to arXiv on 1 July 2026 points at a slightly unexpected culprit for this frozen state. Not the model, not the algorithm. The plumbing.

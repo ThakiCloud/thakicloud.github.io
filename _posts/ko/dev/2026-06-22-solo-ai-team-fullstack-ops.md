@@ -22,6 +22,7 @@ categories:
   - dev
 audiobook: /assets/audio/posts/solo-ai-team-fullstack-ops/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![1인 AI 엔지니어 풀스택 운영 전경]({{ '/assets/images/solo-ai-team-fullstack-ops-hero.webp' | relative_url }})

@@ -21,6 +21,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1GpkmWlGhnmDnSg0Z5_k1ZwQCfulCmhWn/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 There is a moment worth screenshotting on a leaderboard: a fresh new model pushes past a familiar number one and climbs to the top. In July 2026, Kimi K3, the open weight model from China's Moonshot AI, created exactly that moment. It took the top spot on the Arena AI evaluation platform's frontend coding leaderboard, overtaking Anthropic's Claude Fable 5, and at 2.8 trillion parameters it is the largest open weight model released to date. Its API price is also less than half. Yet the reaction from Silicon Valley, as reported by Digital Today, was not applause but a single sentence: "It won the benchmark, but still."

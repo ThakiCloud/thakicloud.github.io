@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/execution-layer-gap-kor
 audiobook: "https://drive.google.com/file/d/1ZbhT1v-ZMcUINQ-LorT8Pnyi9T94hLD-/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 ![An image visualizing the concept of the middle layer Korean AI left empty, where execution rather than answers has begun to go wrong](/assets/images/execution-layer-gap-korea-ai-hero.webp)

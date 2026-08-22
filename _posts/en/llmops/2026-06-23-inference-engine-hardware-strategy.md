@@ -22,6 +22,7 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/inference-engine-hardware-strategy/"
 categories:
   - llmops
+published: false
 ---
 
 ![Abstract image of hardware foundations determining the shape of software above them]({{ '/assets/images/inference-engine-hardware-strategy-hero.webp' | relative_url }})

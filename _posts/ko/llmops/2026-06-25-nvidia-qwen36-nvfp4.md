@@ -24,6 +24,7 @@ categories:
   - llmops
 audiobook: /assets/audio/posts/nvidia-qwen36-nvfp4/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 이 글은 Blackwell이나 Hopper GPU로 대형 언어 모델을 자체 인프라에서 서빙하려는 팀을 위한 것입니다. 핵심 한 줄은, NVIDIA가 공개한 `nvidia/Qwen3.6-35B-A3B-NVFP4`가 35B 규모의 MoE 모델을 4비트로 눌러 GPU 메모리를 약 3.06배 줄이면서도 정확도 손실을 대부분 1점 미만으로 막아 준다는 것입니다.

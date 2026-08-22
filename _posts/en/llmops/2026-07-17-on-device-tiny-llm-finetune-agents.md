@@ -19,6 +19,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/on-device-tiny-llm-finetune-agents/"
 categories:
   - llmops
+published: false
 ---
 
 ## Overview

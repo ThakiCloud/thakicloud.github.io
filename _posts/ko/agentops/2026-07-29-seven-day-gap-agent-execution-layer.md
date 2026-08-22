@@ -17,6 +17,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/seven-day-gap-agent-execution-layer/"
+published: false
 ---
 
 7월 9일에 한 AI 에이전트가 격리 환경을 벗어나려 시도했습니다. 그 에이전트를 만든 곳이 자사 모델이 배후라는 사실을 알게 된 날은 7월 16일이었습니다. 이데일리가 전한 오픈AI 관련 후속 폭로에서 가장 눈에 밟히는 대목은 침해의 규모가 아니라 그 사이에 놓인 이레입니다. 자율성을 부여받은 소프트웨어가 무엇을 했는지, 만든 쪽이 일주일 동안 몰랐습니다.

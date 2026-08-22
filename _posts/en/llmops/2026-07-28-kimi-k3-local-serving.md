@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-local-serving/"
+published: false
 ---
 
 When an open-weight model drops, posts about running it locally usually appear within half a day. Kimi K3 is a different case. Summing every published weight file through the HuggingFace API gives 1,453.7GiB across 96 shards. That takes eleven 141GB H200s just to hold the weights, and that figure includes neither KV cache nor activations.

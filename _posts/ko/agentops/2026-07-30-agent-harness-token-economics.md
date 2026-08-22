@@ -19,6 +19,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-harness-token-economics/"
 audiobook: /assets/audio/posts/agent-harness-token-economics/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 에이전트 비용이 예상을 넘으면 가장 먼저 검토하는 것은 보통 모델입니다. 더 싼 모델로 갈아타거나, 더 작은 모델로 내려가는 선택을 먼저 떠올립니다. 그런데 2026년 7월 29일에 Composio가 공개한 측정은 그 순서가 뒤바뀌어 있을 수 있다고 말합니다. 모델을 고정하고 하네스만 바꿨는데 같은 과제의 토큰 청구서가 몇 배로 벌어졌습니다.

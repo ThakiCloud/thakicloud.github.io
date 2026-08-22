@@ -19,6 +19,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-intrusion-kil
 audiobook: "https://drive.google.com/file/d/1fOk67yNoznzGPkdDDaioqidvSh7iz7zY/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 쿠버네티스 위에서 남이 올린 데이터를 로드해 처리하는 플랫폼을 운영하고 계신다면, 이번 사건은 남의 이야기가 아닙니다. 얻어 갈 것은 하나로 요약됩니다. 방어선은 정상 작동했지만 공격자가 그 방어선이 검사하는 행위 자체를 하지 않았고, 파드에서 클라우드 메타데이터로 나가는 길 하나가 나머지 전부를 결정했습니다.

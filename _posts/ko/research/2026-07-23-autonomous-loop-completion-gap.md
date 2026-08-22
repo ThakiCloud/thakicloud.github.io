@@ -11,6 +11,7 @@ toc: true
 audiobook: /assets/audio/posts/autonomous-loop-completion-gap/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/autonomous-loop-completion-gap/"
+published: false
 ---
 
 야간에 사람 없이 돌아가는 에이전트 파이프라인을 운영하거나 설계하는 엔지니어라면 이 글을 읽어볼 만합니다. 결론부터 말하면, 루프가 스스로 "완료했다"고 보고하는 작업 수와 실제로 끝까지 검증된 작업 수 사이의 간극을 줄이는 데는 검증 게이트, 체크포인트 롤백, 정체 감지 세 메커니즘 가운데 하나가 압도적으로 크게 기여하고 나머지 둘은 그것을 뒤에서 받쳐주는 역할에 그칩니다. 다만 이 압도적인 메커니즘 하나만 켜두면 오히려 다른 방식으로 작업이 실패하는 함정이 생깁니다. 이것이 이 연구의 진짜 요점입니다.

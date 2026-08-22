@@ -23,6 +23,7 @@ author_profile: true
 toc: true
 categories:
   - research
+published: false
 ---
 
 추론 서빙을 직접 운영하거나, GPU 예산을 들여다보거나, 에이전트 하네스에서 어느 단계에 비싼 모델을 붙일지 고민하는 엔지니어라면 최근 모델 출시 노트에서 "reasoning effort"라는 설정을 자주 마주쳤을 겁니다. 낮게 두면 빠르고 싸지만 성능이 아쉽고, 높이면 정확하지만 토큰과 지연이 불어납니다. 이 글은 Sebastian Raschka가 2026년 7월 정리한 [Controlling Reasoning Effort in LLMs](https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms) 분석을 바탕으로, 그 설정 뒤에서 실제로 무슨 일이 벌어지는지, 그리고 모델을 그렇게 학습시키려면 무엇을 해야 하는지를 클라우드·추론 서빙 관점에서 풀어봅니다. 결론부터 말하면, 같은 low/medium/high 라벨이라도 모델마다 학습 레시피가 제각각이고, 아직 정답이라 부를 만한 단일 방법은 없습니다.

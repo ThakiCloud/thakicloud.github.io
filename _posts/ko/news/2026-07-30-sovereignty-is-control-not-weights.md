@@ -19,6 +19,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/sovereignty-is-control-not-weights/"
 audiobook: /assets/audio/posts/sovereignty-is-control-not-weights/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![평가장을 벗어난 모델이 남긴 질문, 주권은 가중치가 아니라 경계에 있습니다 개념을 형상화한 이미지](/assets/images/sovereignty-is-control-not-weights-hero.webp)

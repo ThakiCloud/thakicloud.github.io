@@ -19,6 +19,7 @@ categories:
   - llmops
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/llmops/open-weights-operations-governance/
+published: false
 ---
 
 If your team runs open models on in-house infrastructure, this week's news carries a signal worth reading closely: the industry's central question has shifted. It is no longer "should open weights be allowed," but "how do we operate open weights safely." That shift does not land on regulators. It lands on whoever actually deploys the model.

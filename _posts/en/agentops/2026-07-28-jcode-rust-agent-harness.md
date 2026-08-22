@@ -20,6 +20,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/jcode-rust-agent-harness/"
+published: false
 ---
 
 Reading that a coding agent boots 245 times faster than Claude Code triggers two reactions at once: curiosity and suspicion. So we downloaded the official release binary, verified its checksum, and measured it on one of our MacBooks. The short answer is that 245x is true and the 5.8x we measured is also true, because the two numbers measure different things.

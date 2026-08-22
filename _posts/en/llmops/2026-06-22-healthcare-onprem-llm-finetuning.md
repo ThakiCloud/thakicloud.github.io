@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/healthcare-onprem-llm
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![Fine-tuning healthcare LLMs on-premises without exporting patient data]({{ '/assets/images/healthcare-onprem-llm-finetuning-hero.webp' | relative_url }})

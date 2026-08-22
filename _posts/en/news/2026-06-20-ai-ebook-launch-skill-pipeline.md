@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/ai-ebook-launch-skill-p
 reading_time: true
 categories:
   - news
+published: false
 ---
 
 ⏱️ **Estimated reading time**: 7 min

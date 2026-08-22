@@ -18,6 +18,7 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/skillsmith-parametric-skill-synthesis/"
+published: false
 ---
 
 There have long been two ways to give an agent a skill. One is to write it down. You keep a task description, a handful of examples, and a reflection note about why the last attempt failed, then load that document into context when you need it. The other is to bake it into weights. For every recurring sub-goal you train a LoRA or prefix module, file it in an adapter drawer, and pull it out on demand. These two approaches have been discussed in separate conference tracks for over a decade, and in practice teams usually treat them as an either-or decision. A Google DeepMind paper posted to arXiv on 29 July 2026 revisits the choice itself.

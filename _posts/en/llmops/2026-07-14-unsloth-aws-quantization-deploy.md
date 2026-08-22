@@ -15,6 +15,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/unsloth-aws-quantization-deploy/"
 categories:
   - llmops
+published: false
 ---
 
 ![Abstract illustration of a large model distilled into compact layers flowing into cloud serving infrastructure]({{ '/assets/images/unsloth-aws-quantization-deploy-hero.webp' | relative_url }})

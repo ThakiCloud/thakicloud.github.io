@@ -21,6 +21,7 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/cursor-agent-swarm-sqlite-rust/"
+published: false
 ---
 
 Over the weekend Cursor published a striking demo. It handed a swarm of agents the task of rebuilding SQLite from scratch. No source code, no existing test suite, no internet. The only input was SQLite's 835-page official manual. The swarm read that document and wrote a SQLite replica in Rust, and that replica passed a separately held-out test suite (sqllogictest) at 100%.

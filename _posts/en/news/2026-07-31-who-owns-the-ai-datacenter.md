@@ -21,6 +21,7 @@ lang: en
 audiobook: "https://drive.google.com/file/d/1pjEIIwb5k7N8ISrNyC7HtU2QJKO0-TKb/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 ![Image visualizing the concept of builders, owners, and users have split: the day the number 20 percent appeared twice](/assets/images/who-owns-the-ai-datacenter-hero.webp)

@@ -20,6 +20,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1rllmu3MPNYJN09gWCwh_0nKrZysBQB_o/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 오픈 모델을 사내 인프라에서 돌리는 팀이라면 이번 주 뉴스에서 방향이 바뀌었다는 신호를 읽어야 합니다. 업계의 논점이 "오픈 가중치를 허용할 것인가"에서 "오픈 가중치를 어떻게 안전하게 운영할 것인가"로 넘어갔기 때문입니다. 이 전환은 규제 기관의 몫이 아니라, 결국 모델을 실제로 배포하는 운영자의 몫으로 돌아옵니다.

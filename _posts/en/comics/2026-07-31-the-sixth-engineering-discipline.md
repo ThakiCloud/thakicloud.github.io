@@ -15,7 +15,6 @@ toc: false
 image: /assets/images/posts/comics/the-sixth-engineering-discipline/strip.webp
 video: /assets/videos/posts/만화/the-sixth-engineering-discipline/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/the-sixth-engineering-discipline/"
-published: false
 ---
 
 The label started at prompt engineering, went through context, harness, loop, and has now arrived at graph engineering. Every new term gets announced like a revolution, but they all point at the same job. Prompting is how you talk to the model. Context is what you put in front of it at that moment. A harness is the scaffolding of tools and checks around it. A loop feeds the output back in until it converges. A graph is those loops drawn as nodes and arrows. So it is not five disciplines. It is one problem, renamed five times, and sold five times.

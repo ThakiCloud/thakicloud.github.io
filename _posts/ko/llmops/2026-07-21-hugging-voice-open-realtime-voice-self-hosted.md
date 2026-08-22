@@ -22,6 +22,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/hugging-voice-open-realtime-voice-self-hosted/"
 audiobook: /assets/audio/posts/hugging-voice-open-realtime-voice-self-hosted/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![직접 돌리는 오픈 실시간 음성 파이프라인]({{ '/assets/images/hugging-voice-open-realtime-voice-self-hosted-hero.webp' | relative_url }})

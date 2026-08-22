@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/id-v2v-identity-pre
 audiobook: "https://drive.google.com/file/d/1boZpXwOZV0QNF2UX-cgkXfP69gdaUIbT/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 영상 한 편의 배경과 조명을 통째로 바꾸고 싶은데 등장 인물의 얼굴만은 손대고 싶지 않은 상황이 있습니다. 광고 소재를 계절별로 다시 만들거나, 교육 영상의 배경을 브랜드에 맞게 갈아 끼우거나, 촬영이 끝난 뒤 조명 설계를 바꾸는 경우입니다. 지금까지 이 작업은 재촬영이거나 프레임 단위 합성이었습니다. Eyeline Labs가 SIGGRAPH Asia 2026에 낸 ID-V2V는 편집된 첫 프레임 한 장으로 이 문제를 풀겠다고 제안합니다.

@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/만화/one-smart-agent-hits-a-wall-send-a-crowd/strip.webp
 audiobook: /assets/audio/posts/one-smart-agent-hits-a-wall-send-a-crowd/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 ---
 
 Kimi를 만든 회사 대표가 이런 말을 남겼습니다. 하나의 에이전트를 더 똑똑하게 키우면 금세 벽에 부딪힌다, 그러니 대신 여러 에이전트를 붙여 협업시키라는 겁니다. 여기서 에이전트란 스스로 판단하고 도구를 쓰는 작은 AI 일꾼이고, 멀티에이전트란 그 일꾼 여럿이 역할을 나눠 함께 문제를 푸는 방식입니다.

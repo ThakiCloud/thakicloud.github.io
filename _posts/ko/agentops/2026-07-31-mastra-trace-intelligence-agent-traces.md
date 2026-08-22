@@ -19,6 +19,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/mastra-trace-intelligence-agent-traces/"
 audiobook: /assets/audio/posts/mastra-trace-intelligence-agent-traces/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 에이전트를 프로덕션에 올린 팀이 공통으로 마주치는 벽이 있습니다. 트레이스는 잘 쌓이는데 그걸 읽을 사람이 없다는 것입니다. 하루에 수천 건이 들어오고, 사람이 열어 볼 수 있는 것은 실패 알림이 뜬 몇 건뿐입니다. 나머지는 저장 비용만 내면서 조용히 쌓입니다. Mastra가 2026년 7월에 프라이빗 베타로 공개한 Trace Intelligence는 정확히 이 지점을 겨냥한 기능입니다.

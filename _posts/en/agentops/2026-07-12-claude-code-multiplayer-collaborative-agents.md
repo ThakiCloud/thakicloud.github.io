@@ -20,6 +20,7 @@ lang: en
 audiobook: "https://drive.google.com/file/d/1_ffMbcz1RFZkEHNk1HfrFDeci_JHwvLn/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 ![From isolated agents to a connected network of collaborative agents]({{ '/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp' | relative_url }})

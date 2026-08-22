@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/tokenizer-asymmetry
 audiobook: "https://drive.google.com/file/d/1doseaKFhX-ufYPCQeN5bHr1R9Gk0HW50/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 ![Illustration of the core idea of The Characters the Monitor Cannot Read: How Tokenizer Asymmetry Opens a Covert Channel Around AI Control](/assets/images/tokenizer-asymmetry-covert-channels-hero.webp)

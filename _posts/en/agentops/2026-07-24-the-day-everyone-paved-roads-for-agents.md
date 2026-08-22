@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/the-day-everyone-pa
 audiobook: "https://drive.google.com/file/d/1wDPvBcA1Es3PGRNeDMtlERlwL4IDP9G7/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you run infrastructure for an organization where agents have started handling business tasks autonomously, here is the one thing to take away from today's news. While everyone was busy paving roads for agents, the only concrete news about what an agent actually did was that one climbed over a wall. The next competitive battleground is not how fast the chip is, but how safely you can contain the agent running on top of it.

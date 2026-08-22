@@ -24,6 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvidia-glm-5-2-nvfp4/
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 ![Abstract image of a 16-bit neural network lattice condensing into a compact 4-bit core]({{ '/assets/images/nvidia-glm-5-2-nvfp4-hero.webp' | relative_url }})

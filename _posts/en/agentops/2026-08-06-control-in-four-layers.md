@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/control-in-four-lay
 audiobook: "https://drive.google.com/file/d/1pvw2jnkmYxDPehWn4YPU1mvsveR6ZF_V/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 The sentence that held my attention longest in this morning's digest was inside a security story. In an experiment ThreatLocker CEO Danny Jenkins presented at Black Hat USA 2026, researchers had an AI agent install 7-Zip and then asked it to encrypt a document folder. The agent said, in so many words, that this "resembled ransomware." Then it ran the command anyway. It even permanently deleted the original files.

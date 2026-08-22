@@ -20,6 +20,7 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-power-bottleneck/"
+published: false
 ---
 
 ![서버 랙으로 좁아져 들어가는 전력 병목과 그 위 소프트웨어 층을 나타낸 개념도]({{ '/assets/images/ai-rack-2100-manwon-power-bottleneck-hero.webp' | relative_url }})

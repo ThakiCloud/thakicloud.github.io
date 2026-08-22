@@ -8,6 +8,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/markovian-thinker-d
 categories: [research]
 author_profile: true
 toc: true
+published: false
 ---
 
 If you have hit the point where making a reasoning model think ever longer becomes unaffordable, this post is for you. Here is the conclusion first. The real cost of a long chain of thought is that the state grows without bound while the model thinks, so cost scales with the square of the thinking length, and Markovian Thinking lowers that cost to linear by making the policy advance reasoning while conditioning only on a fixed-size state. In Delethink, the environment that instantiates this idea, a 1.5B model trained with 8K-token chunks thinks up to 24K tokens and matches or surpasses the same-budget baseline, and at a 96K thinking length the training cost drops from 27 H100-months to 7.

@@ -23,6 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/huggingface-agentic-ai-breach/"
 audiobook: /assets/audio/posts/huggingface-agentic-ai-breach/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![자율 에이전트 스웜이 데이터 파이프라인을 파고드는 추상 이미지]({{ '/assets/images/huggingface-agentic-ai-breach-hero.webp' | relative_url }})

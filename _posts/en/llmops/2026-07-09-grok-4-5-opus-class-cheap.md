@@ -12,6 +12,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/grok-4-5-opus-class-cheap/"
 categories:
   - llmops
+published: false
 ---
 
 For the past several quarters, the frontier model race has been fought over a point or two on a benchmark chart. Then, on July 8, 2026, SpaceXAI's Grok 4.5 release changed the question being asked. If a model's performance sits close to Opus 4.8 and GPT-5.5, the question that matters next is not "who is smarter" but "who finishes the same job for less." This piece is for engineering leaders and AI teams who run infrastructure and pay the model bill every month. Using Grok 4.5's published numbers, we look at where model economics are heading, and what that means for a multi-tenant inference platform like ThakiCloud's.

@@ -20,6 +20,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/lead-time-gap-concrete-and-agents/"
 audiobook: /assets/audio/posts/lead-time-gap-concrete-and-agents/audiobook-ko.mp3
 audiobook_note: "AI locally synthesized audiobook, Korean audio (Qwen3-TTS)"
+published: false
 ---
 
 ![An image visualizing the concept of concrete that arrives in 2030, and the agent that finished the job in 16 days](/assets/images/lead-time-gap-concrete-and-agents-hero.webp)

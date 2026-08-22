@@ -18,6 +18,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/block-buzz-agent-native-workspace/"
+published: false
 ---
 
 Any organization that has put agents into a real team workflow has hit the same wall. The model works fine, but the agent has no defined identity in the Slack channel. You share one bot token, or borrow a human account, or hide behind a webhook. Then the question "who approved this commit" has no answer. Buzz, which Block released on July 21, 2026, starts from exactly that question.

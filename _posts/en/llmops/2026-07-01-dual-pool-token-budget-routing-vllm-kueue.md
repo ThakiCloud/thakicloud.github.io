@@ -23,6 +23,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1muGAx1V6CFl2rRLqMJ3MAXpfAd3tX6my/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 ![Illustration of the core idea of Dual-Pool Token-Budget Routing: Cutting vLLM Inference GPU Time by 31 to 42% with Two-Pool Scheduling](/assets/images/dual-pool-token-budget-routing-vllm-kueue-hero.webp)

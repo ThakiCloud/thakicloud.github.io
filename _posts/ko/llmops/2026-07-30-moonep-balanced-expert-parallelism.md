@@ -19,6 +19,7 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/moonep-balanced-expert-parallelism/"
+published: false
 ---
 
 ## 왜 읽어야 하나

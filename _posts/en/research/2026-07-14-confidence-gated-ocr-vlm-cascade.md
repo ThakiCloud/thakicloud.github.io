@@ -19,12 +19,12 @@ tags:
   - LLM-routing
 author_profile: true
 toc: true
-published: true
 categories:
   - research
 audiobook: "https://drive.google.com/file/d/1vqvv16UfoNI0cs0qkiOaBc1h8mSsmBRB/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 This is for engineers who have put two differently sized VLMs into a document OCR pipeline and are wrestling with the question of when to call the expensive model. The short answer: a cascade that uses a single confidence threshold from the small model to escalate only the hard documents to the large model matched, or even slightly beat, the large model's character error rate on H200 measurements, at roughly 60 to 67 percent of its cost.

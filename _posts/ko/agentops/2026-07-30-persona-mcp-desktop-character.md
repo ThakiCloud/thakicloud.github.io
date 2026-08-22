@@ -17,6 +17,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/persona-mcp-desktop-character/"
+published: false
 ---
 
 에이전트에게 새로운 능력을 열어 줄 때 가장 흔한 실수는 도구를 너무 많이 노출하는 것입니다. 파일을 읽고 쓰고 프로세스를 띄우는 범용 도구를 하나 던져 주면 당장은 편하지만, 그 순간부터 무엇이 가능한지 아무도 설명할 수 없게 됩니다. 2026년 7월 28일에 공개된 오픈소스 프로젝트 Persona는 정확히 반대 방향을 골랐습니다. 데스크톱 위에서 도는 3D 캐릭터에 에이전트를 연결하면서, 노출한 MCP 도구는 세 개뿐입니다.

@@ -13,6 +13,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/deferred-tool-schem
 audiobook: "https://drive.google.com/file/d/1RsLLIQUcJdaBEb-djKa-MtKxsrYg7Mr4/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you run an agent harness wired to multiple MCP servers and hundreds of skills, and you already use, or are considering, deferred loading, fetching tool schemas only when needed instead of surfacing all of them up front, to save on tokens, this post is for you. This research does not measure how many tokens deferred loading actually saves. It measures whether an agent can find, through search, a tool it does not already know exists. The short answer: when a tool's name and the task's vocabulary do not overlap, search barely works at all.

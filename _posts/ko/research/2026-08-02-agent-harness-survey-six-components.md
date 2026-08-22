@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-harness-surve
 audiobook: "https://drive.google.com/file/d/133SLW8FJSiNu8q5oATYjBJkP_AA3t2kK/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 에이전트가 기대만큼 안 움직이면 대부분 모델부터 의심합니다. 등급을 올리고, 프롬프트를 다시 쓰고, 그래도 안 되면 다음 모델을 기다립니다. 그런데 2026년 들어 쌓인 보고들은 다른 곳을 가리킵니다. 같은 모델을 서로 다른 껍데기에 넣었더니 점수가 몇 배씩 벌어졌다는 관찰이 반복해서 나왔습니다. 그 껍데기를 부르는 이름이 하네스입니다. 이번에 정리된 서베이 한 편은 이 껍데기에 처음으로 형식과 부품 목록을 붙였습니다.

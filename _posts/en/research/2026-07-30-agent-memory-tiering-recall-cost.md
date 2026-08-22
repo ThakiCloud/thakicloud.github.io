@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/agent-memory-tierin
 audiobook: "https://drive.google.com/file/d/1YvbgQfu1Ch3Rnj9JgZr6-5E10f0fQbO1/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you run an autonomous coding agent that keeps working for weeks without a break, and you've noticed the memory briefing it injects at the start of every session keeps blowing past its budget, this post is about exactly that problem. We tested three policies for deciding what stays in that briefing and what gets cut, against a real production memory corpus, and the numbers show why the most common intuition ("keep the newest items") is not the best answer.

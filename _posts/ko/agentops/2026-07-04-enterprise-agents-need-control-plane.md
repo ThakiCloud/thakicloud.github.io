@@ -23,6 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/enterprise-agents-need-control-plane/"
 audiobook: /assets/audio/posts/enterprise-agents-need-control-plane/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 데모에서 당직으로

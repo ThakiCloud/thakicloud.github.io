@@ -19,6 +19,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/traffic-regime-serving-breakeven/"
+published: false
 ---
 
 If you're on a team serving MoE (Mixture-of-Experts) models on B200, you've probably validated precision (FP16, FP8, NVFP4), n-gram speculative decoding, and automatic prefix caching against a single benchmark trace and flipped them on from there. This paper shows, through a closed-form cost model, that those three switches are not actually independent, and that which one pays off is decided not by precision itself but by the character of the traffic arriving right now: its concurrency, its prompt reuse rate, and its repetitiveness. It works out mathematically why winning on one benchmark trace is no guarantee of winning in the next time window or with the next tenant, and on top of that lays out a procedure for observing traffic and deciding the three switches in order, which makes it directly useful for engineers actually tuning serving costs.

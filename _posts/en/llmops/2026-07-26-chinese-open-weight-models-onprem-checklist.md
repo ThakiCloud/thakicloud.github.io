@@ -21,6 +21,7 @@ tags:
   - thakicloud
 categories:
   - llmops
+published: false
 ---
 
 ![Concept image of a neural lattice inside a sealed transparent vault surrounded by inspection rings](/assets/images/chinese-open-weight-models-onprem-checklist-hero.webp)

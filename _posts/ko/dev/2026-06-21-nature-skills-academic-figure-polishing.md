@@ -19,6 +19,7 @@ toc_icon: "cog"
 categories:
   - dev
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/nature-skills-academic-figure-polishing/"
+published: false
 ---
 
 ![다중 패널 데이터 곡선과 그림판이 학술적 분위기로 떠 있는 추상 이미지]({{ '/assets/images/nature-skills-hero.webp' | relative_url }})

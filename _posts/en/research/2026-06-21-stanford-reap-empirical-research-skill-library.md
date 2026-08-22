@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/stanford-reap-empir
 reading_time: true
 categories:
   - research
+published: false
 ---
 
 The claim that "AI writes a top journal paper in 20 minutes" is tempting, but taking it at face value is dangerous. The agent skill library released by CoPaper.AI, maintained under Stanford REAP (brycewang-stanford/Auto-Empirical-Research-Skills), gathers more than 23,000 empirical research agent skills spanning eight social science fields. The scale is impressive, but a data scientist's job is to honestly separate what that scale actually means.

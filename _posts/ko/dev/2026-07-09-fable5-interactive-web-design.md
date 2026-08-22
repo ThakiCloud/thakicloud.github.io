@@ -23,6 +23,7 @@ categories:
   - dev
 audiobook: /assets/audio/posts/fable5-interactive-web-design/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ## 이 글을 누가 읽으면 좋은가

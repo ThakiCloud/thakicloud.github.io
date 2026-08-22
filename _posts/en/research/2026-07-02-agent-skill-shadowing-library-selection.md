@@ -18,6 +18,7 @@ toc_icon: "layer-group"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/agent-skill-shadowing-library-selection/"
 categories:
   - research
+published: false
 ---
 
 ## Overview

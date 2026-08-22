@@ -23,6 +23,7 @@ header:
   image: /assets/images/b200-vllm-pd-disaggregation-hero.webp
 categories:
   - llmops
+published: false
 ---
 
 ![An image depicting two B200 GPUs splitting Prefill and Decode duties]({{ '/assets/images/b200-vllm-pd-disaggregation-hero.webp' | relative_url }})

@@ -10,6 +10,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/nvfp4-moe-selective-quant/"
+published: false
 ---
 
 This post will be useful for cloud and AI engineers who are serving Mixture-of-Experts (MoE) models on H200 or Blackwell-class clusters, or who are evaluating whether to adopt a quantization policy. The paper introduced today formalizes a policy that, instead of uniformly compressing an entire MoE model to NVFP4 4-bit precision, selectively protects the router (gating network) and low-traffic "rare" experts at full precision while compressing only the rest to 4 bits. It also reports, without hiding it, that the planned empirical experiments could not be run due to an infrastructure fault.

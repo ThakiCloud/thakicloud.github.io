@@ -18,6 +18,7 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/persona-mcp-desktop-character/"
+published: false
 ---
 
 The most common mistake when opening a new capability to an agent is exposing too many tools. Hand over one general-purpose tool that reads files, writes files, and spawns processes, and the immediate work gets easier while nobody can any longer describe what is possible. Persona, an open-source project published on 28 July 2026, went the opposite direction. It connects an agent to a 3D character running on the desktop, and it exposes exactly three MCP tools.

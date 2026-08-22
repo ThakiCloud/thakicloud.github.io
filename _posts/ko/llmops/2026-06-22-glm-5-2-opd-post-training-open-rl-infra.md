@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-opd-post-trai
 reading_time: true
 categories:
   - llmops
+published: false
 ---
 
 프론티어급 모델을 만드는 회사가 가중치만 공개하는 것은 이제 드문 일이 아닙니다. 그런데 Z.ai(THUDM)는 GLM-5.2를 내놓으면서 한 걸음 더 나갔습니다. 모델 가중치뿐 아니라 그 모델을 만든 강화학습 사후학습(RL post-training) 인프라 전체를 오픈소스로 풀었습니다. 가장 눈에 띄는 대목은 사후학습 방식입니다. Z.ai는 10개가 넘는 전문가 모델을 약 이틀 만에 하나로 합쳐 GLM-5.2를 완성했다고 보고합니다. 이 병렬 병합 과정을 OPD라고 부릅니다.

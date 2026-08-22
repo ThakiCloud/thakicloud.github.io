@@ -19,6 +19,7 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/gpt-5-6-sol-cybersecurity/"
+published: false
 ---
 
 오늘 아침 타임라인에서 한 문장이 오래 눈에 남았습니다. OpenAI가 자사 신규 플래그십 모델 GPT-5.6 Sol을 소개하면서, 사이버 보안 평가용 레인지인 "The Last Ones"에서 새로운 최고 기록을 세웠다고 밝힌 대목입니다. 여기서 중요한 건 점수 자체가 아니라 문장의 함의입니다. AI가 사람을 도와 취약점을 찾는 수준을 넘어, 사람 없이 여러 단계로 이어진 공격 시나리오를 스스로 끝까지 밟아 나가는 지점에 도달하고 있다는 이야기이기 때문입니다.

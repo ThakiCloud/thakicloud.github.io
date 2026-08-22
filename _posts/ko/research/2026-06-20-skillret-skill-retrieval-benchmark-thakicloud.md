@@ -18,6 +18,7 @@ categories:
   - research
 audiobook: /assets/audio/posts/skillret-skill-retrieval-benchmark-thakicloud/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![SkillRet 2단계 스킬 검색 파이프라인]({{ '/assets/images/skillret-hero.webp' | relative_url }})

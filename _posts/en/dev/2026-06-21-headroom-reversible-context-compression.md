@@ -15,6 +15,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/headroom-reversible-cont
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 ![Abstract image of data condensing]({{ '/assets/images/headroom-reversible-context-compression-hero.webp' | relative_url }})

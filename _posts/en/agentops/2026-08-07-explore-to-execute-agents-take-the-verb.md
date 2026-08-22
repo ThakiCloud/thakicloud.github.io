@@ -18,6 +18,7 @@ categories:
   - agentops
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/explore-to-execute-agents-take-the-verb/"
+published: false
 ---
 
 Every sentence has a verb, and every verb takes an object. For the past three years, the verbs AI handled were mostly explain, summarize, and generate, and the object was always text. Reading through this morning's news, the object has changed. Book a listing. Answer a civil complaint. Convert a video format. Order food. The strategic phrase Naver used to launch its new real estate agent names that shift precisely: Explore to Execute.

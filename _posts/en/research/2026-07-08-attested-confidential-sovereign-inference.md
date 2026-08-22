@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/attested-confidenti
 lang: en
 categories:
   - research
+published: false
 ---
 
 ## Who Should Read This

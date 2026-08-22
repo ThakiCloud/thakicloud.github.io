@@ -22,6 +22,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/liteparse-model-free-pdf
 reading_time: true
 categories:
   - dev
+published: false
 ---
 
 The first step of a RAG pipeline is document ingest, and the most common bottleneck in that first step is PDF parsing. LLM-based parsers have become more common recently, but running an LLM over every document racks up cost and latency, and sending sensitive documents to an external model raises data sovereignty concerns. LlamaIndex (Jerry Liu) has released **LiteParse**, which takes a different approach. It is an Apache 2.0 open-source parser that converts PDFs to markdown **without an LLM**.

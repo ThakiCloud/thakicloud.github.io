@@ -19,6 +19,7 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/jcode-rust-agent-harness/"
+published: false
 ---
 
 코딩 에이전트가 Claude Code보다 245배 빠르게 뜬다는 문장을 보면 두 가지 반응이 동시에 옵니다. 하나는 궁금함이고 다른 하나는 의심입니다. 그래서 저희는 공식 릴리스 바이너리를 내려받아 체크섬을 확인하고, 사내 맥북에서 직접 재봤습니다. 결론부터 말씀드리면 245배도 참이고, 저희가 잰 5.8배도 참입니다. 두 숫자는 서로 다른 것을 측정했기 때문입니다.

@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/만화/mesh-llm-no-80gb-gpu/strip.webp
 audiobook: /assets/audio/posts/mesh-llm-no-80gb-gpu/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
-published: false
 ---
 
 70B이 넘는 대형 모델을 돌리려면 보통 80GB짜리 값비싼 GPU 한 장이 있어야 한다고들 합니다. Mesh LLM은 그 전제를 뒤집습니다. 추론을 잘게 쪼갠 뒤, 이미 손에 있는 기기 여러 대에 나눠 얹는 방식이죠. 괴물 한 대를 사는 대신, 갖고 있는 것들을 엮어 괴물처럼 굴리는 셈입니다. 파시스와 메티스가 이 아이디어를 다키클라우드식으로 비틀어 봤습니다.

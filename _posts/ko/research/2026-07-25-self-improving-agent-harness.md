@@ -19,6 +19,7 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/self-improving-agent-harness/"
+published: false
 ---
 
 프로덕션에서 에이전트 하네스를 운영하는 엔지니어라면, 모델을 더 큰 것으로 바꾸지 않고도 통과율을 크게 올릴 여지가 어디에 남아 있는지 늘 궁금하실 겁니다. Self-Harness(arXiv 2606.09498)의 결론부터 말씀드리면, 그 여지는 모델이 아니라 하네스에 있고, 놀랍게도 에이전트가 사람 손 없이 자기 하네스를 스스로 고쳐서 그 여지를 상당 부분 회수할 수 있습니다. 다만 이 자가개선 루프가 어디까지 올라가느냐는 생성기가 아니라 평가자가 얼마나 까다로워지느냐에 달려 있습니다. 이 글은 그 메커니즘과 한계를 정리합니다.

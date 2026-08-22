@@ -19,6 +19,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/token-price-collapse-real-bill/"
 audiobook: /assets/audio/posts/token-price-collapse-real-bill/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![핵심 개념 일러스트]({{ '/assets/images/token-price-collapse-real-bill-hero.webp' | relative_url }})

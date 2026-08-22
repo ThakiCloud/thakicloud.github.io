@@ -20,6 +20,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ktransformers-moe-off
 audiobook: "https://drive.google.com/file/d/1RyBSyAe6yY-C7xVGw3YxNi_PJ5o7aVjW/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+published: false
 ---
 
 이 글은 GPU 한 장으로 대형 MoE 모델을 자체 서빙할 수 있을지 저울질하는 인프라 담당자를 위한 것입니다. 결론만 먼저 말하면, ktransformers의 오프로드 트릭은 실재하고, INT4 AMX 커널을 제대로 켜면 671B급 모델이 약 16 tok/s의 준-인터랙티브 속도로 돌아갑니다.

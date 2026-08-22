@@ -19,6 +19,7 @@ tags:
   - paxis
 categories:
   - news
+published: false
 ---
 
 If your team runs in-house AI on a handful of H200s, this week's news boils down to a single takeaway. Getting your hands on a frontier model is becoming close to free, but actually running that model cheaply and safely on your own infrastructure has become more expensive and more scarce than ever. As models become commodities, the center of gravity in this competition shifts from "which model are you using" to "where and how are you running it."

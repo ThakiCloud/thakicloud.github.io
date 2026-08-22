@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/filesystem-memory-l
 audiobook: "https://drive.google.com/file/d/16WELKRv1wsepV873eur9sfF9uyblh6K7/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 Open the long-term memory of an LLM agent running in production today and you will usually find nothing exotic. It is a folder tree of markdown files. The agent reads it, writes to it, and occasionally rearranges it using ordinary file tools. No vector database, no dedicated memory engine. Yet almost nobody has measured what this default actually buys.

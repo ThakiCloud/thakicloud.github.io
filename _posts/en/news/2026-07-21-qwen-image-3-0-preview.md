@@ -22,6 +22,7 @@ categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/en/news/qwen-image-3-0-preview/"
 lang: en
+published: false
 ---
 
 On Tuesday morning, the Qwen team's blog posted the announcement of the third generation of its image generation model. The name is Qwen-Image-3.0, and once again the team compressed the keyword it has attached to each generation into a single phrase. If 1.0 was "precision" and 2.0 was "precision, diversity, completeness, aesthetics, authenticity," the core of 3.0 is a single word: "Real" (实).

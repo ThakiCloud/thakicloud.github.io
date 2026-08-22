@@ -14,7 +14,6 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/askchem-claim-grounded-literature/strip.webp
 video: /assets/videos/posts/만화/askchem-claim-grounded-literature/comic.mp4
-published: false
 ---
 
 새로 뜬 연구 하나가 화학 문헌을 통째로 읽어 정리해 줍니다. 특이한 점은 문장이 아니라 '주장' 단위로 묶고, 주장마다 어느 논문 어느 대목에서 나왔는지 근거를 붙인다는 것입니다. 요약은 그럴듯한데 출처가 비면 소용없으니까요. 유진 팀이 도서관에서 그 원리를 몸으로 겪어 봅니다.

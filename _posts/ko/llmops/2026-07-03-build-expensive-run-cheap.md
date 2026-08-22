@@ -14,6 +14,7 @@ categories:
   - llmops
 audiobook: /assets/audio/posts/build-expensive-run-cheap/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
+published: false
 ---
 
 ![핵심 개념 일러스트]({{ '/assets/images/build-expensive-run-cheap-hero.webp' | relative_url }})

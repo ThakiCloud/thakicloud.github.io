@@ -8,6 +8,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/seed-self-evolving-
 categories: [research]
 author_profile: true
 toc: true
+published: false
 ---
 
 If you train LLM agents that act through multi-turn tool use and environment feedback with reinforcement learning, this post is for you. Here is the conclusion first. The most common reason agentic RL underperforms is not that the model is weak, but that the reward arrives only once at the end of a trajectory, and SEED converts that single sparse signal into dense per-token supervision by having the agent analyze its own trajectories, extract natural-language skills, and distill them back into itself. The method lifted both performance and sample efficiency across text-based and vision-based agentic tasks.
