@@ -21,6 +21,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/agent-tool-call-invoice
 audiobook: "https://drive.google.com/file/d/1_dTAwxuJHqH7weI6NzhCLT_yFgnEo58P/view"
 audiobook_label: "▶ Listen to the 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
+published: false
 ---
 
 If you're evaluating agent adoption, put today's two numbers side by side. One is 1,000. The other is $15 billion. The first is how many tool calls Meta's Muse Code, its first coding agent released in beta, uses to finish a single task. The second is the size of the corporate bond a bank consortium led by Morgan Stanley is issuing to refinance the loan on an Anthropic-linked Texas data center. Two numbers that look unrelated are actually two ends of the same chain. Here's today's conclusion up front: the price of running an agent is set not by a model price sheet but by three layers, capital, supply chain, and regulation. So the starting point for an adoption strategy isn't picking a model. It's figuring out which segment of those three layers your company can actually control.

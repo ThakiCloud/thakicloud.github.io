@@ -8,6 +8,7 @@ tags: [skill-routing, ensemble-voting, mixture-of-agents, cost-quality-tradeoff,
 categories: [research]
 author_profile: true
 toc: true
+published: false
 ---
 
 여러 스킬 중 하나를 골라야 하는 에이전트 하네스를 운영하고 있고, 그 라우터를 더 똑똑하게 만들 방법을 찾고 있는 엔지니어라면 이 글이 도움이 됩니다. 특히 "모델을 하나 더 붙여서 투표시키면 정확도가 오르지 않을까"라는 생각을 이미 해봤다면 더 그렇습니다. 이 연구는 그 직관을 실제로 구현하기 전에 비용 모델과 사전 등록 평가 절차부터 세워 두는 분석 작업입니다. 결과부터 말하면 이 논문은 실험을 돌리지 않았습니다. 대신 돌릴 가치가 있는지를 판단하는 계산기를 만들었고, 그 계산기가 벌써 흥미로운 답을 내놓습니다.
