@@ -23,7 +23,7 @@ categories:
 
 If you are a platform engineer or tech lead deciding whether to bring agents into your organization, and if so which layer to own and which to buy, this week's agent-platform debate is worth your time. The short version: the claim "a 100% open-source version of Grok Bot" is close to true on the harness axis, and not true on the cloud-computer axis.
 
-![Open harness vs closed vertical integration: a transparent modular chassis over a grid of swappable cubes, with a solid black monolith behind it](/assets/images/grok-bot-open-source-harness-hero.png)
+![Open harness vs closed vertical integration: a transparent modular chassis over a grid of swappable cubes, with a solid black monolith behind it](/assets/images/grok-bot-open-source-harness-hero.webp)
 *The transparent modular harness on interchangeable cubes, against the solid monolith in the background: a visual of harness separation versus vertical integration.*
 
 ## Why read this

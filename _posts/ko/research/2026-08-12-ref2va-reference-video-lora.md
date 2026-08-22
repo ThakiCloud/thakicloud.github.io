@@ -139,11 +139,11 @@ p 스윕이 이 메커니즘의 성격을 알려 줍니다. 조건화를 100%로
 
 본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![ref2va-reference-video-lora 슬라이드 1](/assets/images/ref2va-reference-video-lora-slide-01.png)
+![ref2va-reference-video-lora 슬라이드 1](/assets/images/ref2va-reference-video-lora-slide-01.webp)
 
-![ref2va-reference-video-lora 슬라이드 2](/assets/images/ref2va-reference-video-lora-slide-02.png)
+![ref2va-reference-video-lora 슬라이드 2](/assets/images/ref2va-reference-video-lora-slide-02.webp)
 
-![ref2va-reference-video-lora 슬라이드 3](/assets/images/ref2va-reference-video-lora-slide-03.png)
+![ref2va-reference-video-lora 슬라이드 3](/assets/images/ref2va-reference-video-lora-slide-03.webp)
 
-![ref2va-reference-video-lora 슬라이드 4](/assets/images/ref2va-reference-video-lora-slide-04.png)
+![ref2va-reference-video-lora 슬라이드 4](/assets/images/ref2va-reference-video-lora-slide-04.webp)
 

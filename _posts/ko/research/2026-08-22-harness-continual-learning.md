@@ -19,14 +19,14 @@ author_profile: true
 toc: true
 toc_label: "목차"
 header:
-  teaser: /assets/images/harness-continual-learning-hero.png
+  teaser: /assets/images/harness-continual-learning-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/harness-continual-learning/"
 audiobook: "https://drive.google.com/file/d/1N9Gl6uSn1D3_zCFyOiD8sWL9n7LED1TW/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![동결된 핵심을 감싸며 진화하는 하네스](/assets/images/harness-continual-learning-hero.png)
+![동결된 핵심을 감싸며 진화하는 하네스](/assets/images/harness-continual-learning-hero.webp)
 
 > 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1rVrbakfFrzsAn6bIxcOzUdST8qiemxw5/view)할 수 있습니다.
 

@@ -18,7 +18,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 header:
-  teaser: /assets/images/claude-code-concise-output-style-hero.png
+  teaser: /assets/images/claude-code-concise-output-style-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/claude-code-concise-output-style/"
 ---
 

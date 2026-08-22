@@ -19,14 +19,14 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 header:
-  teaser: /assets/images/harness-continual-learning-hero.png
+  teaser: /assets/images/harness-continual-learning-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/research/harness-continual-learning/"
 audiobook: "https://drive.google.com/file/d/1SVERSoUZJPq3RtLa5iIeSX95wh66Ikls/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
-![A frozen core surrounded by an evolving harness](/assets/images/harness-continual-learning-hero.png)
+![A frozen core surrounded by an evolving harness](/assets/images/harness-continual-learning-hero.webp)
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1rVrbakfFrzsAn6bIxcOzUdST8qiemxw5/view).
 

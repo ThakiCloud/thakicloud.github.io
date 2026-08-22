@@ -98,11 +98,11 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eye
 
 본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
 
-![mascot-redesign-eyes-and-actions 슬라이드 1](/assets/images/mascot-redesign-eyes-and-actions-slide-01.png)
+![mascot-redesign-eyes-and-actions 슬라이드 1](/assets/images/mascot-redesign-eyes-and-actions-slide-01.webp)
 
-![mascot-redesign-eyes-and-actions 슬라이드 2](/assets/images/mascot-redesign-eyes-and-actions-slide-02.png)
+![mascot-redesign-eyes-and-actions 슬라이드 2](/assets/images/mascot-redesign-eyes-and-actions-slide-02.webp)
 
-![mascot-redesign-eyes-and-actions 슬라이드 3](/assets/images/mascot-redesign-eyes-and-actions-slide-03.png)
+![mascot-redesign-eyes-and-actions 슬라이드 3](/assets/images/mascot-redesign-eyes-and-actions-slide-03.webp)
 
-![mascot-redesign-eyes-and-actions 슬라이드 4](/assets/images/mascot-redesign-eyes-and-actions-slide-04.png)
+![mascot-redesign-eyes-and-actions 슬라이드 4](/assets/images/mascot-redesign-eyes-and-actions-slide-04.webp)
 

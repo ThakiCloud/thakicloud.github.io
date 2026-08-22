@@ -122,11 +122,11 @@ v3는 v2와 소수점 넷째 자리까지 같습니다. 프롬프트 어휘를 �
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![reference-pose-beats-prompt 슬라이드 1](/assets/images/reference-pose-beats-prompt-slide-01.png)
+![reference-pose-beats-prompt 슬라이드 1](/assets/images/reference-pose-beats-prompt-slide-01.webp)
 
-![reference-pose-beats-prompt 슬라이드 2](/assets/images/reference-pose-beats-prompt-slide-02.png)
+![reference-pose-beats-prompt 슬라이드 2](/assets/images/reference-pose-beats-prompt-slide-02.webp)
 
-![reference-pose-beats-prompt 슬라이드 3](/assets/images/reference-pose-beats-prompt-slide-03.png)
+![reference-pose-beats-prompt 슬라이드 3](/assets/images/reference-pose-beats-prompt-slide-03.webp)
 
-![reference-pose-beats-prompt 슬라이드 4](/assets/images/reference-pose-beats-prompt-slide-04.png)
+![reference-pose-beats-prompt 슬라이드 4](/assets/images/reference-pose-beats-prompt-slide-04.webp)
 

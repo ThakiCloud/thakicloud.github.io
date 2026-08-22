@@ -21,7 +21,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 header:
-  teaser: /assets/images/figmatrace-design-computer-use-hero.png
+  teaser: /assets/images/figmatrace-design-computer-use-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/datasets/figmatrace-design-computer-use/"
 ---
 

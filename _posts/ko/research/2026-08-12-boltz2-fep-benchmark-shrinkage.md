@@ -177,11 +177,11 @@ python corpus_proximity.py --fetch && python corpus_proximity.py --analyze
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![boltz2-fep-benchmark-shrinkage 슬라이드 1](/assets/images/boltz2-fep-benchmark-shrinkage-slide-01.png)
+![boltz2-fep-benchmark-shrinkage 슬라이드 1](/assets/images/boltz2-fep-benchmark-shrinkage-slide-01.webp)
 
-![boltz2-fep-benchmark-shrinkage 슬라이드 2](/assets/images/boltz2-fep-benchmark-shrinkage-slide-02.png)
+![boltz2-fep-benchmark-shrinkage 슬라이드 2](/assets/images/boltz2-fep-benchmark-shrinkage-slide-02.webp)
 
-![boltz2-fep-benchmark-shrinkage 슬라이드 3](/assets/images/boltz2-fep-benchmark-shrinkage-slide-03.png)
+![boltz2-fep-benchmark-shrinkage 슬라이드 3](/assets/images/boltz2-fep-benchmark-shrinkage-slide-03.webp)
 
-![boltz2-fep-benchmark-shrinkage 슬라이드 4](/assets/images/boltz2-fep-benchmark-shrinkage-slide-04.png)
+![boltz2-fep-benchmark-shrinkage 슬라이드 4](/assets/images/boltz2-fep-benchmark-shrinkage-slide-04.webp)
 

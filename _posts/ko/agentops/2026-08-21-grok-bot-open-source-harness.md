@@ -23,7 +23,7 @@ categories:
 
 사내에 에이전트를 도입할지, 도입한다면 어떤 층을 우리 회사가 갖고 어떤 층을 사는지를 결정해야 하는 플랫폼 엔지니어나 기술 리더라면, 이번 주 에이전트 플랫폼 구도에 관한 이 논쟁을 읽어야 합니다. 결론부터 말하면, "그록 봇의 100% 오픈소스 버전"이라는 주장은 하네스(harness) 축에서는 사실에 가깝고, 클라우드 컴퓨터 축에서는 사실이 아닙니다.
 
-![오픈 하네스와 닫힌 세로 통합을 형상화한 이미지: 조립 격자 위 투명 모듈 chassis와 그 뒤의 단단한 블랙 모노리스](/assets/images/grok-bot-open-source-harness-hero.png)
+![오픈 하네스와 닫힌 세로 통합을 형상화한 이미지: 조립 격자 위 투명 모듈 chassis와 그 뒤의 단단한 블랙 모노리스](/assets/images/grok-bot-open-source-harness-hero.webp)
 *교체 가능한 큐브 위에 얹힌 투명한 모듈 하네스와, 배경의 고체 모노리스. 하네스 분리와 세로 통합의 대비를 형상화했습니다.*
 
 ## 왜 읽어야 하나
@@ -130,11 +130,11 @@ flowchart TB
 
 본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
 
-![grok-bot-open-source-harness 슬라이드 1](/assets/images/grok-bot-open-source-harness-slide-01.png)
+![grok-bot-open-source-harness 슬라이드 1](/assets/images/grok-bot-open-source-harness-slide-01.webp)
 
-![grok-bot-open-source-harness 슬라이드 2](/assets/images/grok-bot-open-source-harness-slide-02.png)
+![grok-bot-open-source-harness 슬라이드 2](/assets/images/grok-bot-open-source-harness-slide-02.webp)
 
-![grok-bot-open-source-harness 슬라이드 3](/assets/images/grok-bot-open-source-harness-slide-03.png)
+![grok-bot-open-source-harness 슬라이드 3](/assets/images/grok-bot-open-source-harness-slide-03.webp)
 
-![grok-bot-open-source-harness 슬라이드 4](/assets/images/grok-bot-open-source-harness-slide-04.png)
+![grok-bot-open-source-harness 슬라이드 4](/assets/images/grok-bot-open-source-harness-slide-04.webp)
 

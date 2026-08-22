@@ -19,11 +19,11 @@ author_profile: true
 toc: true
 toc_label: "المحتويات"
 header:
-  teaser: /assets/images/harness-continual-learning-hero.png
+  teaser: /assets/images/harness-continual-learning-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ar/research/harness-continual-learning/"
 ---
 
-![نواة متجمدة تحيط بها هarness متطورة](/assets/images/harness-continual-learning-hero.png)
+![نواة متجمدة تحيط بها هarness متطورة](/assets/images/harness-continual-learning-hero.webp)
 
 > 📄 **المراجعة المتعمقة الكاملة (DOCX)**: [نزّل المراجعة التفصيلية من Google Drive](https://drive.google.com/file/d/1rVrbakfFrzsAn6bIxcOzUdST8qiemxw5/view).
 

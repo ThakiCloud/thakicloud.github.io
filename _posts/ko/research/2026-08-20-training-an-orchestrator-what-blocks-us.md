@@ -9,14 +9,14 @@ tags:
   - orchestration
   - evaluation
 header:
-  teaser: /assets/images/training-an-orchestrator-what-blocks-us-hero.png
+  teaser: /assets/images/training-an-orchestrator-what-blocks-us-hero.webp
 author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/training-an-orchestrator-what-blocks-us/"
 ---
 
-![순서가 어긋난 한 칸](/assets/images/training-an-orchestrator-what-blocks-us-hero.png)
+![순서가 어긋난 한 칸](/assets/images/training-an-orchestrator-what-blocks-us-hero.webp)
 
 작은 모델에 에이전트 행동을 증류하고 계신다면, 위임 능력은 공짜로 따라오지 않는다는 점을 먼저
 말씀드립니다. 저희 8B는 자기가 어떤 에이전트인지 아는 데까지는 왔는데, 언제 남에게 넘길지는
@@ -39,7 +39,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/training-an-orchest
 넘기지 않는 것(절제)입니다. 둘 중 하나만 올리는 건 쉽습니다. 위임 예시를 넣으면 회수가 오르고,
 그 대신 아무 데나 넘기기 시작합니다.
 
-![12팔 산점도](/assets/images/training-an-orchestrator-what-blocks-us-results.png)
+![12팔 산점도](/assets/images/training-an-orchestrator-what-blocks-us-results.webp)
 
 가로축이 위임 정확도, 세로축이 기존 성능(회귀 홀드아웃 통과율)입니다. 오른쪽 위가 좋은 자리인데,
 대부분의 팔이 오른쪽으로 가면서 아래로 떨어집니다. 위임을 배우는 대가로 한국어 응답이나 도구

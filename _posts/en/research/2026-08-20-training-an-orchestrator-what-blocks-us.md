@@ -9,14 +9,14 @@ tags:
   - orchestration
   - evaluation
 header:
-  teaser: /assets/images/training-an-orchestrator-what-blocks-us-hero.png
+  teaser: /assets/images/training-an-orchestrator-what-blocks-us-hero.webp
 author_profile: true
 toc: true
 toc_label: "Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/training-an-orchestrator-what-blocks-us/"
 ---
 
-![One step out of order](/assets/images/training-an-orchestrator-what-blocks-us-hero.png)
+![One step out of order](/assets/images/training-an-orchestrator-what-blocks-us-hero.webp)
 
 If you are distilling agent behaviour into a small model, delegation does not come along for the
 ride. Our 8B had learned which agent it is. It had not learned when to hand a task to a different
@@ -40,7 +40,7 @@ Two behaviours have to move together. Handing off when a task needs it (recall),
 work you should just do yourself (restraint). Lifting either one alone is easy. Add delegation
 examples and recall climbs, and the model starts handing off everything.
 
-![Twelve arms](/assets/images/training-an-orchestrator-what-blocks-us-results.png)
+![Twelve arms](/assets/images/training-an-orchestrator-what-blocks-us-results.webp)
 
 Horizontal axis is delegation accuracy, vertical axis is how much of the model's prior ability
 survives. Up and to the right is where you want to be, and most arms move right by falling down.
