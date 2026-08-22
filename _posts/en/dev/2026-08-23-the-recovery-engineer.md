@@ -1,0 +1,107 @@
+---
+title: "Incident Response: The Best First Move Is to Stop, Not to Fix"
+excerpt: "Restarting and scaling up is the most instinctive response to a broken service, and the one that pollutes your diagnosis. During an incident, containment comes before repair, and it does not require the root cause. This is the discipline of the first thirty minutes: classify, stop, record, and declare recovery against a number, not a feeling."
+seo_title: "Incident Response for Small Teams: Stop First, Fix Second"
+seo_description: "Why the instinct to fix immediately makes incidents worse, and the containment-first discipline: classifying the axis, shedding load, rolling back, writing the timeline, and defining recovery numerically."
+date: 2026-08-23
+last_modified_at: 2026-08-23
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_icon: "book"
+tags:
+  - incident-response
+  - rollback
+  - load-shedding
+  - sre
+  - small-team-ops
+  - on-call
+  - postmortem
+  - reliability
+categories:
+  - dev
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/the-recovery-engineer/"
+ebook: /assets/ebooks/the-recovery-engineer.pdf
+ebook_title: "The Recovery Engineer"
+ebook_pages: 31
+---
+
+You run a service on your own, or you are part of a small team that owns it when it breaks. This article gives you one rule of action for the moment the dashboards start to blink. The best thing you can do during an incident is not to fix it. It is to stop it.
+
+That goes against the instinct. At 11 p.m. on a Thursday, with the service half dead, the first finger moves to the restart button or the scale-up slider. Fixing feels like work, and stopping feels like giving up. But in the first minutes of an incident you do not know the cause, and every change you make while ignorant pollutes the evidence you are trying to read.
+
+So this article argues one thing from start to finish: why fixing first is the trap, what stopping actually means, why partial recovery is the standard, what the first five minutes are for, how to record what you did, and how to know when the incident is over. The goal is not to prevent the incident. Incidents happen. The goal is to make the first thirty minutes something you can learn from.
+
+![Illustration of the core idea of Incident Response: The Best First Move Is to Stop, Not to Fix](/assets/images/the-recovery-engineer-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## Fixing first is the trap
+
+Diagnosis and treatment are operations in opposite directions. Diagnosis reads the system; treatment modifies it. The moment you start modifying, the system you are trying to read is no longer the same system, and every subsequent observation is ambiguous about whether it reflects the pre-treatment state or the aftermath of your change. Act on the first visible symptom and treatment and diagnosis get mixed, and the mix is what makes the rest of the night hard.
+
+The classic contamination is "I restarted it and the errors went down." Was it the restart that worked, or would the metric have improved on its own? Once you cannot tell, the question is unanswerable forever. That distinction is exactly the criterion you need later to decide which of your changes to revert, so losing it in the heat of the incident is an expensive loss.
+
+For a solo operator the mistake costs more still. A team supplies the person who asks "wait, are you sure that's the cause?"; alone, that question falls on yourself, and the version of you that just got paged at 11 p.m. is the worst judge available, reaching for the most visible button under tension.
+
+Picture the scene. Four alerts fire at once: payment API timeouts climbing, CPU utilization rising, a user emailing that orders are not going through, and the dashboard reporting a 34 percent error rate. It is four alerts, but it is one problem. The reflexive response picks the loudest: scale up because the CPU is up, restart because the payments are failing. Thirty minutes later the service is still half dead, and the system now carries two changes made by two versions of you. Root-causing it is harder than it was before you touched anything.
+
+The damage of multiple changes is not that any one of them is wrong. Each change is individually reasonable, and the combination is what becomes unattributable. When the cause is finally found, if you cannot answer "which of the things I did actually helped?", those thirty minutes were consumption rather than learning, and the next incident arrives just as unprepared as the last.
+
+## Stopping does not require the cause
+
+The line that separates the two actions is simple. Fixing requires the root cause; stopping does not. You do not need to know why the external payment provider is slow to route only ten percent of payment requests right now and hold the rest. That one action kills the retry storm, brings the CPU back down, and stops your service from dying. Payments are still slow. But a slow service and a dead service are different problems. With a slow one, users can wait; with a dead one, nothing can be done.
+
+"Stopping" is not a single technique. Throttling, shedding load, reverting a recent change, serving stale cached responses, queueing writes, degrading to read-only: all of these are containment. They share one property, and it is the property that matters. They reduce damage without knowing why the damage is happening. None of them requires an answer to "what's broken".
+
+The goal of containment is loss reduction, not perfection, and there is no reason to apologize for it being partial. During an incident, full recovery is usually impossible. Seventy percent standing in five minutes beats one hundred percent standing in two hours, because the user will not wait for the second option. The unit of damage is user-minutes, and every minute spent hunting the cause in the middle of the incident adds more user-minutes of damage. Containment is the act of cutting that addition off.
+
+There is one exception, and it is the most important sentence in this section: the stop is chosen by the axis of the incident, not by the cause. In a correctness incident where half-committed payments are themselves the damage, throttling is the wrong stop. The stop is to quarantine the writes, to make them stop, not to make them slower. The axis picks the action; the cause only tells you where to look later.
+
+| Axis | First stop | What fixing means | Recovery metric |
+|---|---|---|---|
+| Availability | Shed load, roll back | Remove the failing component | Error rate, request success |
+| Performance | Throttle, queue | Cut load per request | P95 latency |
+| Correctness | Quarantine writes | Stop the bad data source | Share verified correct |
+| Data | Freeze sync | Find the divergence point | Inconsistency count |
+
+## The first five minutes are for choosing, not for touching
+
+What do you do in the first five minutes? Nothing to the system. Those minutes are for choosing the direction of the fix, and the questions to answer are three. Which axis is this incident on: availability, performance, correctness, or data? Has anything changed recently? Is a dependency slow?
+
+Of the three, the cheapest signal is recent change. A deploy within the last hour, a config push, a sudden traffic jump, a version bump of a dependency. When one of these exists, the default first action is to revert it. Rollback is the one move that is containment and fix at the same time: it removes the recent change, and in doing so it buys you a clean system to observe.
+
+Rollback has two virtues that most fixes lack. The outcome is visible within minutes: if the change was the cause, the metric falls almost immediately. And failure is reversible: if the rollback made things worse, you can roll forward again. A hotfix, a tuning change, or a schema migration has none of these properties. You have to wait to learn whether it worked, and if it did not, the cost of the wait is high.
+
+The order matters: classify first, then roll back. Reverting the wrong thing is still a change, and it pollutes the diagnosis exactly like any other. With four alerts firing, the first move is the axis, not the button. The axis picks the stop, the stop picks where you look, and that order is what keeps the first thirty minutes clean enough to learn from later.
+
+If a solo operator keeps one tool close during an incident, it is the change history, not the debugger. The debugger answers "how is it broken"; the history answers "what changed". In the first five minutes, the question that is actually useful is the second one.
+
+## Write one line before you say one word
+
+An incident takes two things from a person: judgment and time. The cheapest way to buy them back is writing. Speaking is fast. "There's an error happening" takes five seconds to type into a chat, and that five seconds poisons everything that follows. It is a true statement, but it also sounds like you know the cause. Now the other side asks "what's the cause?", and you are in the position of having to answer without knowing.
+
+The discipline of writing is simple: before you speak, put one line into a timeline file. Each line has exactly three elements. Time, observation, action.
+
+```
+22:50 - Payment API timeouts rising, error rate 34%
+22:52 - Applied 50% rate limit on the payment route
+22:55 - Error rate down to 21%
+```
+
+The difference between speaking with three lines and speaking without them is the difference between the start of a decision and the start of a rumor. With the lines you can say "it started at 22:50, I rate-limited the payment route at 22:52, and it worked". Without them, all you can say is "it's been a bit unstable lately". One of those is something a team can act on; the other is something they have to guess from.
+
+The timeline lives in one file only. A timeline scattered across the chat thread, the note app and the dashboard comments is hard to merge, and information gets lost in the merging. For a solo operator, a local text file is enough. Name it incident-2026-08-23.md and keep it open until the incident is over. That file is the input to the postmortem. Without it, after recovery you still cannot answer which of the things you did actually worked. The person doing the postmortem is not the you of that night. It is the you of the next morning, trying to learn from last night. The timeline is the bridge between the two.
+
+## Recovery is a number, not a feeling
+
+23:05. The payment provider comes back, and the error rate falls from 21 percent to 4. The moment you think "it's fixed" is the moment you need the coldest head of the night. Feeling recovered and being recovered are different things. Four percent is still far above the pre-incident baseline of 0.5 percent, and if you wave it away, the remaining four percent keeps failing quietly. Users are inside that four percent.
+
+Ask "if 4% is acceptable, is 1%? If 1% is acceptable, is expecting 0% unreasonable?" and the recovery criterion becomes numerical. It has three fixed elements: which metric, against what range, for how long.
+
+The metric follows the axis you classified in the first five minutes. For an availability incident, the error rate and the request success rate. For a performance incident, the P95 latency. For a correctness incident, the share of results verified correct. For a data incident, the count of inconsistencies. This is what the early classification was for: not a formality, but the input to the recovery criterion.
+
+The range is "the past that worked", not the perfect past. If the service was already slow a day ago, the slow state is the baseline. If the pre-incident numbers exist only in your memory, look at the dashboard's 24-hour view. And do not chase a perfect baseline. If you do, recovery never gets declared and the incident stays open, which is its own form of harm.
+
+The duration: never declare from a single check. The convention is to hold the metric inside the baseline for roughly thirty minutes before declaring, and thirty minutes is a tunable convention, not a law. What matters is the shift from "for a moment" to "continuously". A metric that looked fine for five minutes can break again five minutes later. And if you shed load, the moment you restore traffic is exactly when the metric wobbles. Watching that wobble is what the duration is for. Declaring recovery is the moment you are allowed to stop watching, so the criterion has to be something you can keep watching for a stretch. With the number, the incident closes as a record; without it, it closes as a feeling. Only the record is learnable.
+
+If you want the fuller discipline of the first thirty minutes, the classification, the communication rules, and the numerical recovery criteria, the ebook alongside this article goes one level deeper.
