@@ -109,6 +109,38 @@ categories:
 
 한 가지 덧붙일 것은 프롬프트 규율도 비슷한 크기의 레버라는 점입니다. 같은 네 케이스에 답변을 한 문장으로만 하라고 지시했더니 현행 팔이 173.8초에서 82.6초가 됐습니다. 엔진이 빨라진 것이 아니라 생성 토큰이 줄어든 것입니다. 다만 이 경우 세 팔의 산출량이 18.4퍼센트까지 벌어져서 배수로는 인용하지 않습니다.
 
+## 화면 녹화
+
+네 케이스를 두 팔에서 각각 찍어 나란히 붙였습니다. 왼쪽이 현행, 오른쪽이 드래프터를 켠 팔이고 둘 다 같은 순간에 출발합니다. 오른쪽이 먼저 끝나면 마지막 화면이 그대로 멈춘 채 왼쪽이 계속 도는 것을 보실 수 있습니다. 재생 속도는 손대지 않았습니다.
+
+각 화면 아래쪽 모델 피커에 어느 백엔드인지 그대로 찍혀 있고, 여덟 개 클립 전부 백엔드 로그에서 실제로 그 모델이 답했음을 확인했습니다.
+
+### 백서 감사 · 엔지니어링 에이전트
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-whitepaper.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-whitepaper.mp4" type="video/mp4"></video>
+
+*모델 호출 시간은 현행 47.7초, 드래프터 26.9초입니다. 생성 토큰은 각각 4,908개와 5,470개입니다.*
+
+### 로그 진단 · 인프라 진단 에이전트
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-incident.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-incident.mp4" type="video/mp4"></video>
+
+*모델 호출 시간은 현행 39.1초, 드래프터 21.0초입니다. 생성 토큰은 각각 2,131개와 5,376개입니다.*
+
+### 코드 추적 · Codex 코딩 에이전트
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-codetrace.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-codetrace.mp4" type="video/mp4"></video>
+
+*모델 호출 시간은 현행 83.3초, 드래프터 15.7초입니다. 생성 토큰은 각각 7,603개와 3,880개입니다.*
+
+### 원장 감사 · 데이터 에이전트
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-ledger.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-ledger.mp4" type="video/mp4"></video>
+
+*모델 호출 시간은 현행 111.6초, 드래프터 18.4초입니다. 생성 토큰은 각각 5,436개와 6,454개입니다.*
+
+이 여덟 클립은 케이스마다 한 번씩 찍은 것이라 앞의 2.59배와 같은 값이 아닙니다. 화면에서 벌어진 간격이 더 큰데, 여기에는 이유가 있고 숨길 이유가 없습니다. 녹화는 측정보다 여섯 시간 뒤 저녁에 했고, 그 시각 현행 팔은 같은 고정 토큰 프로브에서 37.0 tok/s를 냈습니다. 낮에는 119.2였습니다. 세 팔 모두 동시 요청은 0이었으니 제 트래픽이 밀린 것은 아니고, 그 엔드포인트가 저녁에 느려진 이유는 여기서 특정할 수 없습니다. 그래서 본문이 인용하는 배수는 낮에 세 번씩 돌린 하네스 값이고, 영상은 같은 일을 두 구성으로 하면 화면에서 어떻게 다른지 보여주는 용도입니다.
+
 ## 남은 것
 
 동시성 1에서 잰 값입니다. 전용 스트림 하나의 원가이지 포화 처리량의 원가가 아닙니다.

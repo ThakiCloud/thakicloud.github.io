@@ -109,6 +109,38 @@ That's 7.4 GPU hours back per 1,000 turns. If a team runs this scale of document
 
 One thing worth adding: prompt discipline is a lever of comparable size. On the same four cases, telling the model to answer in a single sentence took the current arm from 173.8 seconds to 82.6 seconds. The engine didn't get faster; the number of generated tokens shrank. In this case, though, the three arms' output volume diverged by up to 18.4 percent, so we're not quoting it as a multiple.
 
+## Screen recordings
+
+We recorded each of the four cases on both arms and placed them side by side. The current arm is on the left, the drafter arm on the right, and both start at the same instant. When the right side finishes first, its last frame holds while the left keeps going. Playback speed is untouched.
+
+The model picker at the bottom of each pane shows which backend is selected, and for all eight clips we confirmed from the backend log that the model in question is the one that actually answered.
+
+### Whitepaper audit, engineering agent
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-whitepaper.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-whitepaper.mp4" type="video/mp4"></video>
+
+*Model call time was 47.7s on the current arm and 26.9s with the drafter. Generated tokens were 4,908 and 5,470.*
+
+### Log triage, infrastructure diagnostics agent
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-incident.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-incident.mp4" type="video/mp4"></video>
+
+*Model call time was 39.1s on the current arm and 21.0s with the drafter. Generated tokens were 2,131 and 5,376.*
+
+### Code trace, Codex coding agent
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-codetrace.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-codetrace.mp4" type="video/mp4"></video>
+
+*Model call time was 83.3s on the current arm and 15.7s with the drafter. Generated tokens were 7,603 and 3,880.*
+
+### Ledger audit, data agent
+
+<video controls preload="none" poster="/assets/images/posts/agentops/paxis-longctx-drafter-cost-ledger.webp" style="width:100%"><source src="/assets/videos/posts/paxis-longctx-drafter-cost-ledger.mp4" type="video/mp4"></video>
+
+*Model call time was 111.6s on the current arm and 18.4s with the drafter. Generated tokens were 5,436 and 6,454.*
+
+These eight clips are one run each, so they are not the same figure as the 2.59x above. The gap you see on screen is wider, and there is a reason for that which is worth stating. The recordings were made six hours after the measurement, in the evening, and at that hour the current arm produced 37.0 tok/s on the same fixed-token probe. In the afternoon it produced 119.2. All three arms had zero concurrent requests, so this was not my own traffic queuing, and why that endpoint slowed down in the evening is not something we can pin down from here. The multiple quoted in this post is therefore the harness figure from three runs per case in the afternoon, and the videos are here to show what the same work looks like on screen under the two configurations.
+
 ## What's left
 
 These are measured at concurrency 1. It's the cost of a single dedicated stream, not the cost of saturated throughput.
