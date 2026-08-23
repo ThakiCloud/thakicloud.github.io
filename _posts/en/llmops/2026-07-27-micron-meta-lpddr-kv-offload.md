@@ -21,7 +21,6 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/micron-meta-lpddr-kv-offload/"
-published: false
 ---
 
 ![Abstract image of a small bright core wrapped in wide translucent layers against a dark background](/assets/images/micron-meta-lpddr-kv-offload-hero.webp)

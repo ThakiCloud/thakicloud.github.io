@@ -21,7 +21,6 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/reasoning-pretraining-to-post-training/"
 audiobook: /assets/audio/posts/reasoning-pretraining-to-post-training/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 RL 후처리로 추론 모델을 개선하려는데 GPU 예산을 사전학습과 RL 사이에 어떻게 나눠야 할지 고민하는 엔지니어라면, 이 논문이 답의 실마리를 줍니다. 핵심 결론부터 말씀드리면, RL로 도달할 수 있는 추론 성능의 상한은 사전학습이 이미 정해 놓으며, 그 관계는 사전학습 손실이라는 하나의 값으로 예측할 수 있을 만큼 규칙적입니다. NYU와 Modal Labs, UCLA 등의 연구팀이 체스를 통제된 실험대로 삼아 사전학습부터 RL 후처리까지 전체 파이프라인을 관통하는 결합 스케일링 법칙을 찾아냈습니다.

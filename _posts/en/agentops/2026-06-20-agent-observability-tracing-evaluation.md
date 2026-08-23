@@ -24,7 +24,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-observability
 reading_time: true
 categories:
   - agentops
-published: false
 ---
 
 ⏱️ **Estimated reading time**: 9 min

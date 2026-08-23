@@ -23,7 +23,6 @@ categories:
   - llmops
 audiobook: /assets/audio/posts/claude-code-router-onprem-routing/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![개념 다이어그램]({{ '/assets/images/claude-code-router-onprem-routing-hero.webp' | relative_url }})

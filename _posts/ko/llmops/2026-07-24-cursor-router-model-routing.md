@@ -19,7 +19,6 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/cursor-router-model-routing/"
-published: false
 ---
 
 여러 모델을 섞어 쓰는 AI 코딩 환경을 운영하면서 매달 추론 비용 청구서에 놀라는 팀이라면, 이 글이 도움이 됩니다. 결론부터 말씀드리면, 요청을 하나하나 나눠 필요한 만큼의 지능만 배정하는 라우팅은 품질을 거의 그대로 유지하면서 비용을 30~60% 깎을 수 있는 실전 레버입니다. Cursor가 2026년 7월 공개한 Cursor Router가 이를 대규모 실사용 데이터로 보여 줬습니다. 그리고 같은 원리는 ThakiCloud가 이미 에이전트 스택 안에서 매일 돌리고 있는 패턴이기도 합니다.

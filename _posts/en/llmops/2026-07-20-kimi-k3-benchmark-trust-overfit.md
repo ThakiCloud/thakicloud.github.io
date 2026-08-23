@@ -20,7 +20,6 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-benchmark-trust-overfit/"
-published: false
 ---
 
 Whenever a new model arrives, the first thing that catches our eye is a single table. Looking at benchmark scores lined up side by side, we quickly conclude "this model is better than that one." Yet in July 2026, the moment Moonshot AI released Kimi K3, the largest open-weight model in history, a controversy emerged that puts the brakes on this habit. The scores are clearly top-tier, but suspicion that it might be "overfitted to the benchmarks" followed immediately.

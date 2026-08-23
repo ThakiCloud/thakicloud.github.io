@@ -23,7 +23,6 @@ header:
   teaser: /assets/images/agent-delegation-boundary-hero.webp
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-delegation-boundary/"
-published: false
 ---
 
 ![Abstract illustration of two agents negotiating across a glowing boundary line]({{ '/assets/images/agent-delegation-boundary-hero.webp' | relative_url }})

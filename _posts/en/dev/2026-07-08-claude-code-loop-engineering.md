@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/claude-code-loop-enginee
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 ## Who Should Read This

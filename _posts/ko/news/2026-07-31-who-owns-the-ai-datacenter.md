@@ -20,7 +20,6 @@ audiobook: "https://drive.google.com/file/d/1pjEIIwb5k7N8ISrNyC7HtU2QJKO0-TKb/vi
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/who-owns-the-ai-datacenter/"
-published: false
 ---
 
 ![짓는 사람, 가진 사람, 쓰는 사람이 갈라졌습니다: 20%라는 숫자가 두 번 나온 날 개념을 형상화한 이미지](/assets/images/who-owns-the-ai-datacenter-hero.webp)

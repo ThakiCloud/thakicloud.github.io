@@ -19,7 +19,6 @@ toc: true
 audiobook: /assets/audio/posts/bandit-hybrid-retrieval-calibration/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/bandit-hybrid-retrieval-calibration/"
-published: false
 ---
 
 에이전트 하네스에서 수백에서 수천 개의 스킬이나 도구를 검색으로 라우팅하고 있고, 그 검색기의 하이퍼파라미터를 사람이 주기적으로 손으로 재튜닝하는 데 지쳐본 엔지니어라면 이 글이 도움이 될 것입니다. 온라인 밴딧으로 검색 파라미터를 자동 보정하면 그 재튜닝 루프를 없앨 수 있지 않을까 하는 질문에, 이번 연구는 실제 프로덕션 검색기 위에서 직접 답을 구했습니다. 결론은 단순한 승패가 아니라 훨씬 더 실용적인 경고에 가깝습니다.

@@ -18,7 +18,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/tds-ui-generator/"
-published: false
 ---
 
 This is a field report from our platform team on building a model that automatically generates

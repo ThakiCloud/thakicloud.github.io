@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/graph-engineering-c
 audiobook: "https://drive.google.com/file/d/1EzpTYvALv-LoAjQAvIkms-mxKAfj6kjm/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 The naming series that started with prompt engineering has gained another entry. After context, harness, and loop, we now have graph engineering. The thread and article that Akshay Pachaar of DailyDoseOfDS posted on July 26, 2026 reads like a clear attempt to separate the meme from the substance. According to the original piece, the trigger came on July 18, when Peter Steinberger asked "are we still talking loops or did we shift to graphs yet," and Hamel Husain followed a few hours later with an article titled "Loop Engineering Is Dead. Enter Graph Engineering." Both were at least half joking, but the joke landed on something real. The moment several loops have to work together, you have a coordination problem, and graphs are how engineers have always described coordination.

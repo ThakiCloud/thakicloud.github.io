@@ -21,7 +21,6 @@ author_profile: true
 toc: true
 categories:
   - research
-published: false
 ---
 
 Any engineer who has operated an agent directly, or wired up a workflow heavy on tool calls, has shared one experience: even with the same base model, the agent behaves noticeably differently depending on the scaffolding it sits on (the tool list, tool descriptions, hints attached to observations). This scaffolding has recently come to be called the harness. This post is based on the paper [The Interplay of Harness Design and Post-Training in LLM Agents](https://arxiv.org/abs/2606.25447) (arXiv:2606.25447), published in June 2026. We summarize why designing a good harness and training the model well are not separate concerns, and what this result means for a cloud that actually serves agents in production. To state the conclusion up front: the harness is not a component you swap out after training finishes. It is something you must design together with the model, starting at the training stage.

@@ -17,7 +17,6 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-harness-token-economics/"
-published: false
 ---
 
 When agent spend overshoots the forecast, the first thing most teams examine is the model. Swap in something cheaper, or drop down a size. A measurement Composio published on 29 July 2026 suggests that order may be backwards. They held the model fixed, changed only the harness, and watched the token bill for the same task split several times over.

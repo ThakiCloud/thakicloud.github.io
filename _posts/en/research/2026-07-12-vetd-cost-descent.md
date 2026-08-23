@@ -21,7 +21,6 @@ author_profile: true
 toc: true
 categories:
   - research
-published: false
 ---
 
 ## The problem isn't the model, it's the assignment

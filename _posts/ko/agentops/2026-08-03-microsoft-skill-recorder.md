@@ -17,7 +17,6 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/microsoft-skill-recorder/"
-published: false
 ---
 
 ![사람이 남긴 손그림 궤적이 오른쪽으로 가면서 정연한 격자 구조로 결정화되는 추상 이미지](/assets/images/microsoft-skill-recorder-hero.webp)

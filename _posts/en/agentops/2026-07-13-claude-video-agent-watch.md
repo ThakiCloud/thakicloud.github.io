@@ -25,7 +25,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1BVv3gCDA6cbZ9GB0_00F7PlD8pMviYhY/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 ![Illustration of the core idea of Claude Code Can Watch Videos: claude-video Feeds Frames and Transcripts Into the Agent via /watch](/assets/images/claude-video-agent-watch-hero.webp)

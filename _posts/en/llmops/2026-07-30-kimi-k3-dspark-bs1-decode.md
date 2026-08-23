@@ -19,7 +19,6 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kimi-k3-dspark-bs1-decode/"
-published: false
 ---
 
 Most serving benchmarks brag about throughput. Raise the batch, add concurrent requests, report total tokens per second. That number lands poorly with anyone attaching a coding agent or a reasoning model, because the user is waiting on exactly one response and the next tool call cannot start until it finishes. The figure vLLM just published aims squarely at that spot: 464 tok/s at batch size 1.

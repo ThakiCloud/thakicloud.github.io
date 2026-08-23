@@ -21,7 +21,6 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1RRxN4VNT8s_Rp3F8oFHRwpsxk8kw3aiM/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ## 개요

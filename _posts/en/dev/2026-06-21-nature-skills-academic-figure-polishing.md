@@ -19,7 +19,6 @@ toc_icon: "cog"
 categories:
   - dev
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/nature-skills-academic-figure-polishing/"
-published: false
 ---
 
 ![Abstract image of multi-panel data curves and figure plates floating in an academic atmosphere]({{ '/assets/images/nature-skills-hero.webp' | relative_url }})

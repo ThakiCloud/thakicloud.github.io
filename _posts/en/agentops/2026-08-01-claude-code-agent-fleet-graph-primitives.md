@@ -16,7 +16,6 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/claude-code-agent-fleet-graph-primitives/"
-published: false
 ---
 
 ![Abstract image of a single orchestrator node fanning out into parallel workers that converge back into one verification gate below](/assets/images/claude-code-agent-fleet-graph-primitives-hero.webp)

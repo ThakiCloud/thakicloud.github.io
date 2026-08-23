@@ -22,7 +22,6 @@ header:
   overlay_filter: 0.5
 categories:
   - llmops
-published: false
 ---
 
 ![hero](/assets/images/2026-07-30-launchd-fleet-model-cost-kimi-hero.webp)

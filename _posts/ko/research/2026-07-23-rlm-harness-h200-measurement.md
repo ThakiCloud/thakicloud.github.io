@@ -20,7 +20,6 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/rlm-harness-h200-measurement/"
-published: false
 ---
 
 H200에서 긴 컨텍스트 워크로드를 다루는 엔지니어라면, 모델을 한 글자도 바꾸지 않고 하네스만 바꿔서 장문 처리 토큰을 16분의 1로 줄일 수 있습니다. MIT의 Recursive Language Models(RLM) 논문 주장을 저희가 자체 H200 클러스터에서 직접 실측했습니다. 그 숫자가 어디까지 진짜이고 어디부터 조심해야 하는지, 그리고 최신 논문을 그대로 따라 돌릴 때 실제로 무엇이 부러지는지를 이 글에 담았습니다.

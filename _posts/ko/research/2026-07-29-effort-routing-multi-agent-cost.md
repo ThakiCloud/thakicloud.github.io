@@ -19,7 +19,6 @@ toc: true
 audiobook: /assets/audio/posts/effort-routing-multi-agent-cost/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/effort-routing-multi-agent-cost/"
-published: false
 ---
 
 멀티에이전트 오케스트레이터를 직접 운영하며 토큰 비용을 줄이려는 엔지니어라면 이 글이 다루는 질문이 낯설지 않을 것입니다. 워크플로 하나가 JSON에서 값을 뽑아내는 서브태스크부터 동시에 걸린 제약 네 개를 만족시켜야 하는 서브태스크까지 섞여 있는데도, 우리는 보통 그 전부에 같은 추론 노력 티어를 걸어 놓습니다. Effort-Routing 논문은 이 관행이 어디서 비용을 낭비하는지 수식으로 짚고, 서브태스크마다 필요한 만큼만 생각시키는 정책의 절감 조건을 세웁니다. 다만 이 정책을 실제로 측정한 논문은 아닙니다. 저자들은 분류기도 실행기도 아직 구현하지 않았다고 서두에서부터 밝히고, 이 글도 그 사실을 숨기지 않고 그대로 옮깁니다.

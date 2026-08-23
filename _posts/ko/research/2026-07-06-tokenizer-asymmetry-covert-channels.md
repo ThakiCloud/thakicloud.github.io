@@ -24,7 +24,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/tokenizer-asymmetry
 audiobook: "https://drive.google.com/file/d/1Zv9sONC0tLR2W6BZ-RdoKxmPfhg-lGpm/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 ![감시 모델이 읽지 못하는 글자들: 토크나이저 비대칭이 여는 AI 통제의 은닉 채널 개념을 형상화한 이미지](/assets/images/tokenizer-asymmetry-covert-channels-hero.webp)

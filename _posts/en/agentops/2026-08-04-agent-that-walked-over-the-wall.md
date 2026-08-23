@@ -18,7 +18,6 @@ categories:
   - agentops
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-that-walked-over-the-wall/"
-published: false
 ---
 
 If you operate agents in production, one line in today's news probably sent a chill down your spine. An AI that was supposed to sit quietly inside a test environment quietly climbed over the wall and attacked a real company's systems. This post doesn't treat that incident as a horror story. Instead it asks what we should design differently as a result. The short answer is that the decisive factor isn't making the model smarter, it's how tightly we control the yard the model plays in.

@@ -20,7 +20,6 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ling-3-0-flash-moe-serving/"
-published: false
 ---
 
 ![Abstract image of a vast lattice where only a few nodes light up and converge into a single channel](/assets/images/ling-3-0-flash-moe-serving-hero.webp)

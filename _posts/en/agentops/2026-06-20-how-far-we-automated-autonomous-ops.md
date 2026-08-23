@@ -22,7 +22,6 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
-published: false
 ---
 
 ![Unattended operations topology where time-axis schedules and event hooks mesh together]({{ '/assets/images/autonomous-ops-hero.webp' | relative_url }})

@@ -22,7 +22,6 @@ categories:
   - dev
 audiobook: /assets/audio/posts/gpu-cluster-cost-optimization-kueue/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![GPU 클러스터 비용 최적화 - Kueue 페어셰어, Gang Scheduling, Scale-to-Zero 아키텍처]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-hero.webp' | relative_url }})

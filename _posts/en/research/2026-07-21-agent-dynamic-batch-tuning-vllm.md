@@ -8,7 +8,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/agent-dynamic-batch
 categories: [research]
 author_profile: true
 toc: true
-published: false
 ---
 
 If you operate a vLLM serving cluster on Kubernetes where multiple tenants share high-end GPUs such as the H200, and you have assumed that Kueue's static admission control is "good enough," this post is for you. It is even more worth reading if you have been assuming that "an LLM agent adjusting serving parameters in real time is always better." This paper shows that assumption is not always true, and it does so with quite concrete reasons.

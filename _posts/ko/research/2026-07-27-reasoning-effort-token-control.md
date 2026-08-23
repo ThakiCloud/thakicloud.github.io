@@ -22,7 +22,6 @@ audiobook: "https://drive.google.com/file/d/15slDDoqxUHsPlqPR9Gg0ebe7s05VOB1R/vi
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/reasoning-effort-token-control/"
-published: false
 ---
 
 추론 모델을 서빙하면서 응답당 토큰, 즉 비용과 지연을 조절하고 싶은 엔지니어라면 "추론 강도(reasoning effort)" 라벨 하나로 연산량을 가를 수 있는지가 실질적인 관심사입니다. Qwen3-8B로 직접 붙여 보니, 길이 보상을 부드럽게 주는 흔한 방식으로는 라벨이 연산량을 거의 못 가릅니다. 대신 예상하지 못한 소득이 하나 나왔고, 왜 안 되는지도 분명해졌습니다.

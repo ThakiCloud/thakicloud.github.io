@@ -22,7 +22,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/docker-android-k8s-emula
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 {% raw %}

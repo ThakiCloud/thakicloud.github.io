@@ -19,7 +19,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1RagQaJFjbwF_6dW_0NH0RT77Q_nqaZyo/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 AI 데이터센터를 운영하거나 그 위에 서비스를 올리는 분이라면, 2026년 상반기의 가장 값비싼 위험은 어떤 모델을 고르느냐가 아니라 인프라 그 자체를 어떻게 지키느냐로 옮겨왔습니다. 올해 뉴스가 조용히 말해준 결론은 하나입니다. AI의 값어치가 모델에서 인프라로 내려오자, 그 인프라를 노리는 도둑도 함께 도착했습니다.

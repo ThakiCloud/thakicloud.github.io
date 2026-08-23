@@ -19,7 +19,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-multipl
 audiobook: "https://drive.google.com/file/d/1t1I-rJW8Ke6Fdfn7Nd8BDoCpYJfQxa1s/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 ![고립된 에이전트에서 연결된 협업 에이전트 네트워크로 향하는 개념도]({{ '/assets/images/claude-code-multiplayer-collaborative-agents-hero.webp' | relative_url }})

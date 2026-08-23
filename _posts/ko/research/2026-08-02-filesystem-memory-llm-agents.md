@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/filesystem-memory-l
 audiobook: "https://drive.google.com/file/d/1b1T603SPbnMBaZ2CVND8l33luD-MFPoq/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 지금 실제로 돌아가는 LLM 에이전트의 장기 기억을 열어보면 대개 특별한 것이 없습니다. 마크다운 파일이 담긴 폴더 트리 하나입니다. 에이전트가 일반 파일 도구로 읽고, 쓰고, 가끔 스스로 재배치합니다. 벡터 데이터베이스도, 전용 메모리 엔진도 아닙니다. 그런데 이 기본값이 어떤 성질을 갖는지는 지금까지 거의 측정된 적이 없습니다.

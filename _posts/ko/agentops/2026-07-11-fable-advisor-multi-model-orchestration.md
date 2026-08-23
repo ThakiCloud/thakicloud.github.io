@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/fable-advisor-multi
 audiobook: "https://drive.google.com/file/d/1e7KfUD_JzGgMZVfqDCp78f4G_Yc-Pj6k/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 코딩 에이전트를 쓰다 보면 자연스럽게 드는 생각이 있습니다. 스펙을 정교하게 쓰고 결과 diff를 날카롭게 리뷰하는 일과, 실제로 코드를 한 줄 한 줄 타이핑하는 일은 성격이 다른 작업인데, 왜 같은 모델 하나가 둘을 다 해야 하는가입니다. 최근 공개되어 화제가 된 `fable-advisor` 플러그인은 이 질문에 정면으로 답합니다. **Claude Fable 5는 지휘만 하고, 실제 구현은 Grok 4.5가 전담**하는 크로스벤더 워크플로입니다. 코딩 에이전트의 비용과 품질을 함께 고민하는 팀이라면, 역할별로 모델을 갈라 배치하는 이 구조에서 당장 옮겨 쓸 만한 설계 원칙을 얻을 수 있습니다.

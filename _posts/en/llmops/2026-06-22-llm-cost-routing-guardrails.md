@@ -24,7 +24,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1QcxPCV6XSuG387fKYhEGJEWEvO3maGkn/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 ![LLM Cost Routing Guardrails in Practice]({{ '/assets/images/llm-cost-routing-guardrails-hero.webp' | relative_url }})

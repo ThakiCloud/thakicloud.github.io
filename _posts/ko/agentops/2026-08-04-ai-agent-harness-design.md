@@ -27,7 +27,6 @@ ebook_pages: 22
 audiobook: "https://drive.google.com/file/d/10qVjzX3zbVZ2YZW2_Zx-aKdf_I_2dtyQ/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 ![AI 에이전트 하네스 설계]({{ '/assets/images/ai-agent-harness-design-hero.webp' | relative_url }})

@@ -23,7 +23,6 @@ author_profile: true
 toc: true
 categories:
   - research
-published: false
 ---
 
 If you run inference serving directly, look at GPU budgets, or think about where to attach an expensive model in an agent harness, you have likely run into a setting called "reasoning effort" in recent model release notes more than once. Set it low and things are fast and cheap but the quality suffers; set it high and accuracy improves but tokens and latency balloon. This piece is based on Sebastian Raschka's July 2026 analysis, [Controlling Reasoning Effort in LLMs](https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms), and unpacks what actually happens behind that setting, and what it takes to train a model to behave that way, from a cloud and inference serving perspective. The bottom line up front: even under the same low/medium/high labels, the training recipe differs from model to model, and there is no single method that can yet be called the correct answer.

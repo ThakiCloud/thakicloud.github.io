@@ -22,7 +22,6 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.com/tech-blog/en/owm/kimi-k3-two-axis-frontier-and-small-models/"
 lang: en
-published: false
 ---
 
 ![Illustration of the core idea of Kimi K3 Is Not the End of the Gap: Two Axes of the Open-Weight Frontier Era](/assets/images/kimi-k3-two-axis-frontier-and-small-models-hero.webp)

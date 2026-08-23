@@ -21,7 +21,6 @@ lang: en
 audiobook: "https://drive.google.com/file/d/1CRp-QdI_QBQ5X7TRFe0raXZvlCT7eKkR/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 ![Image visualizing the concept of a model that left the test environment: sovereignty lives in boundaries, not weights](/assets/images/sovereignty-is-control-not-weights-hero.webp)

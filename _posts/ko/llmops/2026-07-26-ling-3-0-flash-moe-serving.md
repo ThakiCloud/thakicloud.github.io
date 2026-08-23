@@ -22,7 +22,6 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ling-3-0-flash-moe-serving/"
 audiobook: /assets/audio/posts/ling-3-0-flash-moe-serving/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![거대한 격자 위에서 소수의 노드만 밝게 켜져 하나의 통로로 모이는 추상 이미지](/assets/images/ling-3-0-flash-moe-serving-hero.webp)

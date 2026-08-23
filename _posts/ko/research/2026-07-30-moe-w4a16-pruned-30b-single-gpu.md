@@ -11,7 +11,6 @@ toc: true
 audiobook: "https://drive.google.com/file/d/1JSBYe-qrfkI0SNMTx1wogjUMw8rtRfm1/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 GPU 고대역폭 메모리보다 파드의 호스트 RAM이 먼저 바닥나는 상황을 겪어본 인프라 엔지니어라면, 이 논문이 정확히 그 지점을 다룬다는 걸 바로 알아볼 것입니다. ThakiCloud AI Research는 단일 NVIDIA H200 GPU와 32GiB 호스트 RAM만 있는 파드 위에서, 610억 파라미터급 체크포인트인 Qwen3-Coder-30B-A3B를 구조적으로 프루닝하고 4비트로 양자화한 실측 결과를 내놓았습니다. 대형 MoE(Mixture-of-Experts) 모델을 서빙 비용을 줄이려고 압축해야 하는데, 정작 압축 작업 자체가 메모리 부족으로 막히는 경험을 해본 분이라면 이 글이 바로 그 해법을 다룹니다.

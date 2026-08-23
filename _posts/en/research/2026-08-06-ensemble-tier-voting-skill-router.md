@@ -10,7 +10,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/research/ensemble-tier-voting-skill-router/
-published: false
 ---
 
 If you run an agent harness that has to pick one skill out of many, and you have been looking for a way to make that router smarter, this post is for you, especially if you have already had the thought that adding one more model to vote might raise accuracy. This research is an analysis that builds the cost model and the pre-registered evaluation procedure before actually implementing that intuition. To state the result up front: this paper did not run an experiment. Instead, it built a calculator for deciding whether running one is worth it, and that calculator already produces an interesting answer.

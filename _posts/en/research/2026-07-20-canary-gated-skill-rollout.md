@@ -8,7 +8,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/canary-gated-skill-
 categories: [research]
 author_profile: true
 toc: true
-published: false
 ---
 
 This post is written for cloud and AI engineers who are wrestling with how to safely push into production, the next day, whatever skills or configurations an unattended overnight pipeline produced on its own. As more autonomous harnesses start rewriting their own code, there is still no standard for the procedure that decides how the fixed result actually gets routed to real traffic. The paper introduced today proposes a concrete design that inserts canary releases and automatic rollback into this rollout stage, and it puts the effect to the test through simulation.

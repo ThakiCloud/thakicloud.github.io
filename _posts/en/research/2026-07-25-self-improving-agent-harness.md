@@ -20,7 +20,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/self-improving-agent-harness/"
-published: false
 ---
 
 If you run an agent harness in production, you are probably always wondering where the headroom for higher pass rates hides once you stop swapping in a bigger model. The conclusion of Self-Harness (arXiv 2606.09498) is this: that headroom lives not in the model but in the harness, and, remarkably, an agent can recover much of it by fixing its own harness with no human in the loop. How far this self-improvement loop climbs, however, depends not on the generator but on how demanding the evaluator becomes. This post lays out the mechanism and its limits.

@@ -26,7 +26,6 @@ toc_sticky: true
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/llm-d-distributed-inference-heterogeneous-accelerators/"
-published: false
 ---
 
 ![Heterogeneous cluster where a GPU pool and NPU pool jointly serve inference workloads]({{ '/assets/images/llm-d-heterogeneous-hero.webp' | relative_url }})

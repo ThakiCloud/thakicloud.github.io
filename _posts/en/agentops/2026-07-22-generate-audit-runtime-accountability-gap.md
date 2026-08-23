@@ -17,7 +17,6 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/generate-audit-runtime-accountability-gap/"
-published: false
 ---
 
 The symmetry is too precise to be coincidence. On July 22, 2026, two open weight models with opposite personalities arrived on the same day. One writes code. The other finds vulnerabilities in code. Poolside released Laguna S 2.1, a model built for self hosted coding agents, and Cisco introduced Antares, a small open weight model specialized in detecting code vulnerabilities. It is as if a sword and a shield were hung side by side in the same display case.

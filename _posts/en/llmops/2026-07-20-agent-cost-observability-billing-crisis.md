@@ -19,7 +19,6 @@ toc_label: Anatomy of an Invisible Bill
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/agent-cost-observability-billing-crisis/"
-published: false
 ---
 
 This piece is written for platform and infrastructure engineers rolling out Claude Code or AI agents across an organization, and for finance and procurement owners who have to explain next month's AI bill. The short version: the flood of AI cost news over the past month is not really a story about "AI being expensive." The real problem is that the bill doesn't explain what it's actually for. In an agent architecture, a single user request can fan out into dozens or hundreds of model calls, tool executions, and automatic retries on failure, and the final dollar amount alone gives you no way to tell which loop leaked the money. We think this observability gap is the real source of the pain the market is feeling right now.

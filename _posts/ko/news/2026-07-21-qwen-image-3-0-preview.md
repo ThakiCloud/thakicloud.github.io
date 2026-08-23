@@ -21,7 +21,6 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/qwen-image-3-0-preview/"
-published: false
 ---
 
 화요일 아침 Qwen 팀 블로그에 이미지 생성 모델의 3세대 발표가 올라왔습니다. 이름은 Qwen-Image-3.0이고, 팀은 세대마다 붙여 온 키워드를 이번에도 하나로 압축했습니다. 1.0이 "정밀", 2.0이 "정밀, 다양성, 완결성, 미감, 진정성"이었다면 3.0의 핵심은 한 글자 "진짜(实, Real)"라는 것입니다.

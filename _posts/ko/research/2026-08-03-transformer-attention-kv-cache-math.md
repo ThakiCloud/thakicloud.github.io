@@ -23,7 +23,6 @@ tags:
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/transformer-attention-kv-cache-math/"
-published: false
 ---
 
 ![여러 겹의 키·값 평면이 하나의 잠재 벡터로 수렴하는 추상 이미지](/assets/images/transformer-attention-kv-cache-math-hero.webp)

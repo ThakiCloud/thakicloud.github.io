@@ -22,7 +22,6 @@ tags:
   - thakicloud
 categories:
   - agentops
-published: false
 ---
 
 ## From Demo to Night Shift

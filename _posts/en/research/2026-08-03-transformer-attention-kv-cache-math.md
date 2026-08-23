@@ -24,7 +24,6 @@ tags:
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/en/research/transformer-attention-kv-cache-math/"
-published: false
 ---
 
 ![Layered key and value planes converging into a single latent vector](/assets/images/transformer-attention-kv-cache-math-hero.webp)

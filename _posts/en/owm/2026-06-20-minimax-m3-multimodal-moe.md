@@ -26,7 +26,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/owm/minimax-m3-multimodal-mo
 reading_time: true
 categories:
   - owm
-published: false
 ---
 
 ⏱️ **Estimated reading time**: 8 min

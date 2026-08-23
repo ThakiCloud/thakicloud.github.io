@@ -17,7 +17,6 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/microsoft-skill-recorder/"
-published: false
 ---
 
 ![A loose hand-drawn luminous trail on the left crystallising into an ordered lattice of blocks on the right](/assets/images/microsoft-skill-recorder-hero.webp)

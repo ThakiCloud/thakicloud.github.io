@@ -20,7 +20,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/reasoning-pretraining-to-post-training/"
-published: false
 ---
 
 If you are an engineer trying to improve a reasoning model with RL post-training and wondering how to split a GPU budget between pretraining and RL, this paper offers a clear answer. The headline finding is this: the ceiling on the reasoning performance RL can reach is already set by pretraining, and the relationship is regular enough to be predicted from a single number, the pretraining loss. Researchers from NYU, Modal Labs, and UCLA used chess as a controlled testbed and uncovered a joint scaling law that spans the whole pipeline, from pretraining through RL post-training.

@@ -20,7 +20,6 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/chinese-open-weight-models-onprem-checklist/"
-published: false
 ---
 
 ![밀봉된 투명 보관함 안의 신경망 격자와 그것을 둘러싼 검사 고리를 형상화한 개념 이미지](/assets/images/chinese-open-weight-models-onprem-checklist-hero.webp)

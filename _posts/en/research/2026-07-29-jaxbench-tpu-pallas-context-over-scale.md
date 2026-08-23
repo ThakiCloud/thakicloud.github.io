@@ -20,7 +20,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/jaxbench-tpu-pallas-context-over-scale/"
-published: false
 ---
 
 ![Cover image of light beams threading through a vast systolic lattice](/assets/images/jaxbench-tpu-pallas-context-over-scale-hero.webp)

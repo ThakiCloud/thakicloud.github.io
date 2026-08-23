@@ -21,7 +21,6 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/antigravity-skill-format-gemini-flash/"
-published: false
 ---
 
 ![Identically shaped modules slotting into three different machine housings](/assets/images/antigravity-skill-format-gemini-flash-hero.webp)

@@ -19,7 +19,6 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kat-coder-v25-dev-onprem/"
-published: false
 ---
 
 35B 모델이라는 말을 들으면 보통 GPU 여러 장을 먼저 떠올립니다. 그런데 이번에 Kwaipilot이 공개한 KAT-Coder-V2.5-Dev는 총 35B 중에서 토큰 하나당 3B만 켜지는 구조입니다. 저희가 공개된 `config.json`과 safetensors 인덱스를 직접 집계해 보니 전문가 256개 가운데 8개만 활성화되고, 라우팅되는 전문가 파라미터 32.2B 중 실제로 계산에 참여하는 몫은 1.007B였습니다. 비율로 3.12%입니다.

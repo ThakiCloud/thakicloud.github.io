@@ -25,7 +25,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-5-2-sovereign-ser
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 지난 한 해 동안 "오픈웨이트 모델은 결국 닫힌 모델을 따라잡지 못한다"는 회의론이 꾸준히 있었습니다. 성능은 늘 한두 세대 뒤처졌고, 진짜 프런티어 작업은 GPT나 Claude 같은 API에 맡겨야 한다는 인식이 강했습니다. 중국 Z.ai(구 Zhipu)가 2026년 6월 공개한 GLM-5.2는 이 전제를 정면으로 흔드는 사례입니다. SWE-bench Pro에서 GPT-5.5를 앞섰고, 라이선스는 제약 없는 MIT이며, 가중치를 통째로 내려받아 자체 인프라에서 돌릴 수 있습니다.

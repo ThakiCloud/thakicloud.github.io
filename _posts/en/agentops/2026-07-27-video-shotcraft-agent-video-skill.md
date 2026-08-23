@@ -20,7 +20,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/video-shotcraft-agent-video-skill/"
-published: false
 ---
 
 Can you hand a product promo video to an agent? This time we answer with numbers from a render we ran ourselves. A finished 1920x1080 promo running 36.17 seconds came out of a 12-core MacBook in 22.76 seconds. That is faster than the video plays back. The part worth studying, though, is not the render speed. It is how the skill that produces this result is packaged.

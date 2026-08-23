@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/unlimited-ocr-rswa/
 reading_time: true
 categories:
   - research
-published: false
 ---
 
 ## Overview

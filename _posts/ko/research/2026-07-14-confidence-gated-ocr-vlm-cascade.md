@@ -24,7 +24,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1nUYVOgPMKqapVHBXWEISZM_fFQwjt3Pv/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 문서 OCR 파이프라인에 크기가 다른 두 개의 VLM을 얹고 "언제 비싼 모델을 불러야 하나"를 고민하는 엔지니어를 위한 글입니다. 결론부터 말하면, 작은 모델의 신뢰도 점수 하나를 문턱으로 삼아 어려운 문서만 대형 모델로 올려보낸 캐스케이드는 H200 실측에서 대형 모델과 같거나 조금 더 낮은 글자 오류율을 그 비용의 약 60~67%에 달성했습니다.

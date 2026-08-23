@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/cursor-cloud-agent-
 audiobook: "https://drive.google.com/file/d/1Qhhd3bykm1T_3aw4nETyTbGifDs77xpF/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 코딩 에이전트를 사내에 붙여 본 팀이라면 대체로 같은 벽을 만납니다. 데모에서는 잘 돌던 에이전트가 실제 저장소에 들어오는 순간 절반쯤에서 멈춥니다. 테스트를 못 돌리고, 의존성이 없고, 로컬에서만 통하던 환경 변수를 모릅니다. 그래서 사람들은 모델을 바꿔 봅니다. 2026년 7월 30일에 Cursor가 공개한 사내 구축기는 그 반사 반응이 대체로 틀렸다고 말합니다.

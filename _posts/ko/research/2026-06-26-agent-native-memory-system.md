@@ -24,7 +24,6 @@ categories:
   - research
 audiobook: /assets/audio/posts/agent-native-memory-system/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![계층화된 데이터가 신경망과 데이터베이스가 섞인 격자 구조를 흐르며 기억 셀이 맺혔다 사라지는 추상 이미지]({{ '/assets/images/agent-native-memory-system-hero.webp' | relative_url }})

@@ -22,7 +22,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/stanford-storm-4-pr
 reading_time: true
 categories:
   - research
-published: false
 ---
 
 Research is time-consuming work. To dig into a topic properly, you have to formulate questions, gather material from several angles, build a structure, and then write a result with citations attached. STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking), released by Stanford's OVAL Lab, is a knowledge-curation system that automates this process with an LLM. It was presented at NAACL 2024, and its goal is to generate Wikipedia-grade long-form articles, complete with citations, from scratch.

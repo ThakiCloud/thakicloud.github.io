@@ -13,7 +13,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/personal-ai-computer-onprem-vram/"
 categories:
   - llmops
-published: false
 ---
 
 Over the past few days a project has quietly made the rounds on developer timelines. It is the "Personal AI Computer": instead of renting a cloud API, you assemble an AI machine at home or in the office and run open-weight models entirely on hardware you own. The guides go up to 384GB of VRAM, which naturally raises a very practical question: at that capacity, which models can actually run locally? This article is written for engineering leaders and ML platform teams evaluating on-premise AI infrastructure, and for data scientists who want to run models locally. We use calculation to confirm how VRAM decides which models are feasible, and cover what changes when you scale a single personal machine into organization-grade serving, alongside ThakiCloud's ai-platform perspective.

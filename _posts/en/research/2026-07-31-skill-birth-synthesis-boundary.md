@@ -19,7 +19,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/skill-birth-synthes
 audiobook: "https://drive.google.com/file/d/1TtM8KLEzpOqkHnQFK2vpyC6X5z3jNwzY/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 If you operate an agent harness that grows its skill library automatically overnight, or if you are the kind of team stacking up skills one at a time without a dedicated automation group, this post is for you. The paper we cover today answers the question of whether a new skill can safely be synthesized on the spot when no existing skill clears the retrieval gate, and it grounds that answer in an audit of real production commit history. It comes from a full audit of the git history behind the self-evolving agent skill ecosystem that ThakiCloud uses for routing every day, tracking quantitatively how skills were born and how fast and how intensely they were reused afterward.

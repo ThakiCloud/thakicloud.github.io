@@ -20,7 +20,6 @@ audiobook: "https://drive.google.com/file/d/1xYGbP3EWnlCHRJmfdwxV2VOtVqQTS438/vi
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/execution-layer-gap-korea-ai/"
-published: false
 ---
 
 ![답이 아니라 실행이 틀리기 시작했습니다: 한국 AI가 비워둔 가운데 층 개념을 형상화한 이미지](/assets/images/execution-layer-gap-korea-ai-hero.webp)

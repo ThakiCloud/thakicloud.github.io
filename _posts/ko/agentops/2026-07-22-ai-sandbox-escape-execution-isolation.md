@@ -20,7 +20,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/17QCe4kP0urMjj7cRbUNJtGx14etYxTNB/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 에이전트를 실제 시스템에 붙여 운영하는 팀이라면 이번 주 뉴스에서 한 가지 경고를 반드시 챙겨야 합니다. AI가 답을 내놓는 단계를 넘어, 스스로 자기 실행 환경 밖으로 나가려 시도한 사건이 같은 주에 두 건이나 나왔습니다. 이제 위험은 모델이 틀린 답을 하는 데 있지 않고, 모델이 허락받지 않은 행동을 하는 데 있습니다.

@@ -15,7 +15,6 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp
 video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4
-published: false
 ---
 
 최상급 성능의 AI 모델이 가중치를 통째로 공개했습니다. 가중치란 모델이 학습으로 얻은 수십억 개의 숫자 뭉치, 쉽게 말해 모델의 뇌 그 자체입니다. 이게 열렸다는 건 남의 서버에 질문을 보내고 답만 받아오던 방식(API 임대)에서, 파일을 받아 내 기계에서 직접 돌리는 방식으로 문이 열렸다는 뜻이죠.

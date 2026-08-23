@@ -20,7 +20,6 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/antigravity-skill-format-gemini-flash/"
-published: false
 ---
 
 ![동일한 규격의 모듈이 서로 다른 세 개의 기계에 끼워지는 추상 이미지](/assets/images/antigravity-skill-format-gemini-flash-hero.webp)

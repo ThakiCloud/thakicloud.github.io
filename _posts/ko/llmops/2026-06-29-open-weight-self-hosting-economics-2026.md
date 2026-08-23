@@ -23,7 +23,6 @@ header:
   image: /assets/images/open-weight-self-hosting-economics-2026-hero.webp
 categories:
   - llmops
-published: false
 ---
 
 ![오픈웨이트 모델과 self-hosting 경제학을 표현한 추상 비주얼]({{ '/assets/images/open-weight-self-hosting-economics-2026-hero.webp' | relative_url }})

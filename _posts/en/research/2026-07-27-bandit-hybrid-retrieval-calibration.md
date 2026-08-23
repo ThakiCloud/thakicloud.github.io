@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/bandit-hybrid-retri
 audiobook: "https://drive.google.com/file/d/1HHsCbM6FJf_TvXt6ZlLAH5gyx4E8hov_/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 If you run an agent harness that routes hundreds or thousands of skills or tools through retrieval, and you're tired of periodically re-tuning that retriever's hyperparameters by hand, this piece is for you. This study sought a direct answer, on a real production retriever, to the question of whether an online bandit could eliminate that re-tuning loop by auto-calibrating the retrieval parameters. The conclusion isn't a simple win or loss; it's closer to a far more practical warning.

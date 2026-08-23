@@ -20,7 +20,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/kat-coder-v25-dev-onprem/"
-published: false
 ---
 
 A 35B model usually brings several GPUs to mind. KAT-Coder-V2.5-Dev, newly released by Kwaipilot, is built differently: of its 35B total parameters, only 3B activate per token. We pulled the published `config.json` and safetensors index and tallied them ourselves. Of 256 experts, 8 activate, and of the 32.2B parameters held in routed experts, only 1.007B take part in any given token. That is 3.12%.

@@ -19,7 +19,6 @@ toc: true
 audiobook: /assets/audio/posts/kv-cache-tiering-pd-disagg-cost/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/kv-cache-tiering-pd-disagg-cost/"
-published: false
 ---
 
 프리필과 디코드를 분리해 서빙하는 팀, 그리고 LMCache 같은 도구로 KV 캐시를 GPU 밖으로 계층화해 재사용률을 높이려는 팀 모두에게 도움이 되는 글입니다. 두 기법은 각자 따로 검증된 최적화지만, 같이 쓰면 무슨 일이 벌어지는지는 거의 다뤄진 적이 없습니다. 이 글에서 소개하는 논문은 그 결합 효과를 수식으로 구조화하고, 실제로 H200 클러스터에서 측정을 시도했다가 vLLM 엔진이 두 번 죽어버린 경험까지 감추지 않고 보고합니다. 결론을 미리 말하면, 두 기법을 합치는 게 항상 이득은 아니고, 어느 쪽이 이기는지는 하드웨어가 아니라 워크로드의 재사용 패턴이 정합니다.

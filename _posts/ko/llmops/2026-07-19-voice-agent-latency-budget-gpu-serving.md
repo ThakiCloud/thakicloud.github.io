@@ -21,7 +21,6 @@ categories:
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/voice-agent-latency-budget-gpu-serving/"
-published: false
 ---
 
 실시간 음성 에이전트를 만들어 본 사람이라면 같은 벽에 부딪힙니다. 사용자가 말을 멈추고 나서

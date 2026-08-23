@@ -18,7 +18,6 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/traffic-regime-serving-breakeven/"
-published: false
 ---
 
 B200 위에서 MoE(Mixture-of-Experts) 모델을 서빙하는 팀이라면 정밀도(FP16, FP8, NVFP4), n-gram 스펙큘레이티브 디코딩, 자동 프리픽스 캐싱을 각각 벤치마크 트레이스 하나로 검증하고 켠 경험이 있을 겁니다. 이 논문은 그 세 스위치가 사실 독립적이지 않으며, 어느 것을 켜야 이득인지는 정밀도 자체가 아니라 지금 들어오는 트래픽의 성격, 즉 동시성과 프롬프트 재사용률과 반복성이 결정한다는 것을 닫힌 형태의 비용 모델로 보입니다. 벤치마크 한 트레이스에서 이겼다고 다음 시간대나 다음 테넌트에서도 이긴다는 보장이 없다는 걸 수식으로 짚고, 그 위에 트래픽을 관측해 세 스위치를 순서대로 결정하는 절차까지 제시하는 글이라, 서빙 비용을 실제로 튜닝하는 엔지니어가 바로 참고할 만합니다.

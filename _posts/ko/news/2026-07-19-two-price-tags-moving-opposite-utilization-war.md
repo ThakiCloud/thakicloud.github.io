@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/two-price-tags-moving-o
 audiobook: "https://drive.google.com/file/d/1V4dsmf5zh3A3N0F0VGvfoHipqnSQ54TK/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 오늘 아침 뉴스를 훑다가 한 가지가 눈에 걸렸습니다. 같은 날짜에 정반대 방향으로 움직이는 두 개의 가격표가 나란히 놓여 있었기 때문입니다. 한쪽에서는 AI를 돌릴 장비를 사들이는 값이 사상 최고로 치솟고 있었고, 다른 한쪽에서는 AI를 한 번 굴리는 값이 사상 최저로 무너지고 있었습니다. 보통 원가가 오르면 판매가도 오릅니다. 그런데 지금은 밑재료 값과 완성품 값이 서로 등을 돌린 채 벌어지는 중입니다. 이 벌어짐이 오늘 이야기의 전부입니다.

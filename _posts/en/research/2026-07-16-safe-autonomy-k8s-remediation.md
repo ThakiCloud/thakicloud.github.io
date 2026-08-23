@@ -22,7 +22,6 @@ author_profile: true
 toc: true
 categories:
   - research
-published: false
 ---
 
 If you are an SRE or MLOps engineer who has ever run a multi-tenant GPU cluster and considered handing incident remediation to an LLM agent to reduce on-call burden, you have probably already bumped into the question this paper asks. Should the agent decide and act on its own, or should it call a human? Instead of drawing that line from intuition or a team meeting's gut sense, this research formalizes risk by incident type and actually computes the threshold that minimizes recovery time while staying under a safety ceiling. For organizations running GPU workloads with Kueue queuing and Kyverno admission policies, the methodology here is immediately worth a look.

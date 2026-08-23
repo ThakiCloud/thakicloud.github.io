@@ -19,7 +19,6 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/openforgerl-harness-native-agent-rl/"
-published: false
 ---
 
 에이전트를 파인튜닝해 보신 분이라면 한 번쯤 겪으셨을 겁니다. 학습은 단순한 ReACT 루프로 시켜 놓고, 실제 배포는 Claude Code나 Codex 같은 복잡한 하네스 위에서 돌리는 상황 말입니다. OpenForgeRL(arXiv 2607.21557)의 결론부터 말씀드리면, 이 불일치는 RL 스택을 통째로 갈아엎지 않고도 프록시 하나와 쿠버네티스 오케스트레이터 하나로 해소할 수 있습니다. 그리고 그렇게 학습한 8B 모델이 태스크 2,500개만으로 훨씬 큰 모델들과 겨룹니다.

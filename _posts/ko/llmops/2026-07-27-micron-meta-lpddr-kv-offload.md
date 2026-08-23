@@ -23,7 +23,6 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/micron-meta-lpddr-kv-offload/"
 audiobook: /assets/audio/posts/micron-meta-lpddr-kv-offload/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ![어두운 배경 위에서 작고 밝은 코어를 넓고 투명한 층들이 겹겹이 둘러싼 추상 이미지](/assets/images/micron-meta-lpddr-kv-offload-hero.webp)

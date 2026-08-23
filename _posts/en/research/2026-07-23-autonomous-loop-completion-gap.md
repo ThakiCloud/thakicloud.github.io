@@ -13,7 +13,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/autonomous-loop-com
 audiobook: "https://drive.google.com/file/d/1HLqqLIhOJAqGVGMu45NHAzt-3AhRcfq0/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 If you operate or design agent pipelines that run overnight without a human watching, this piece is worth reading. The conclusion up front: of the three mechanisms, verification gates, checkpoint rollback, and stall detection, one contributes overwhelmingly more than the other two toward closing the gap between the number of tasks a loop reports as "complete" on its own and the number actually verified through to the end, while the other two mechanisms merely support it from behind. However, turning on that one dominant mechanism alone creates a trap: tasks end up failing in a different way instead. That is the real point of this research.

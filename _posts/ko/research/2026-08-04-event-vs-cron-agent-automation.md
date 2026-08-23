@@ -8,7 +8,6 @@ tags: [event-driven-automation, cron-scheduling, agent-harness, idempotency, dea
 categories: [research]
 author_profile: true
 toc: true
-published: false
 ---
 
 무인으로 돌아가는 에이전트 자동화 시스템을 운영하고 있고, 폴링 주기를 1분으로 할지 5분으로 할지 감으로 정해온 엔지니어라면 이 글이 유용합니다. cron 기반 스킬 러너를 여러 개 굴리는 인프라를 가진 조직이라면 특히 그렇습니다. 이 연구는 폴링 주기 하나를 두고 벌어지는 지연시간과 낭비 비용의 줄다리기를 실제로 재본 결과이자, 이벤트 기반 트리거로 옮겨갈 때 반드시 같이 가져가야 할 멱등성 설계를 수치로 보여주는 작업입니다.

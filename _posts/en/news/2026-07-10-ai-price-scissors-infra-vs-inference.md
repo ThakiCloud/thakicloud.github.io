@@ -24,7 +24,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1lG7BE293M5awvsVzMlsLFrNO2au7J2lr/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 ![Concept diagram of the AI scissors showing an enterprise caught between soaring rack prices above and collapsing inference prices below]({{ '/assets/images/ai-price-scissors-infra-vs-inference-hero.webp' | relative_url }})

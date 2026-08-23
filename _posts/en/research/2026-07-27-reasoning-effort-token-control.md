@@ -22,7 +22,6 @@ audiobook: "https://drive.google.com/file/d/1M2Qr74b5GfSgy4N1j9M1--DkhSG8FTDZ/vi
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/reasoning-effort-token-control/"
-published: false
 ---
 
 If you serve reasoning models and want to dial tokens per response, which is to say cost and latency, the practical question is whether a single "reasoning effort" label can gate compute. We wired this onto Qwen3-8B directly, and the common approach of a soft length reward barely moves the needle. What we did get was an unexpected payoff, and a clear reason for the failure.

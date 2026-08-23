@@ -25,6 +25,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      # ⛔ 배포 게이트: 이미 게시된 URL 은 약속이다 (2026-08-22 사고).
+      # 나이틀리 publish 패스가 STALE 정책 코드로 돌아 published:false 를 554개에
+      # 한꺼번에 박았고, 링크드인에 뿌린 링크가 전부 죽었다. 같은 버그를 8-12 에
+      # 이미 한 번 고쳤는데 재발했다 — 규칙이 "어느 머신이든 옛 사본을 돌릴 수 있는"
+      # 플래너 로직에만 있었기 때문이다. 그래서 판정을 CI(=stale 될 수 없는 곳)로 옮긴다.
+      # fail-closed: 살아 있던 URL 이 사라지면 배포를 막고 기존 사이트를 그대로 둔다.
+      - name: ⛔ URL ratchet (block silent unpublish of live URLs)
+        run: python3 scripts/url_ratchet.py --check
+
       
       - name: 📊 Filter posts by category (limit large categories)
         run: |

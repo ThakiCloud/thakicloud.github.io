@@ -18,7 +18,6 @@ toc: true
 audiobook: /assets/audio/posts/agent-memory-tiering-recall-cost/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tiering-recall-cost/"
-published: false
 ---
 
 몇 주씩 쉬지 않고 돌아가는 자율 코딩 에이전트를 직접 운영하면서, 매 세션 시작 때 주입하는 메모리 브리핑이 자꾸 예산을 넘긴다는 느낌을 받아본 엔지니어라면 이 글이 다루는 문제가 낯설지 않을 것입니다. 이 논문은 그 브리핑에 무엇을 남기고 무엇을 걷어낼지 정하는 세 가지 정책을 실제 프로덕션 메모리 코퍼스에 대고 직접 재보고, "최신 것을 남긴다"는 가장 흔한 직관이 왜 최선이 아닌지를 숫자로 보여줍니다.

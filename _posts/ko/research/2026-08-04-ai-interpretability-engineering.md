@@ -24,7 +24,6 @@ header:
 ebook: /assets/ebooks/ai-interpretability-engineering.pdf
 ebook_title: "AI Interpretability Engineering"
 ebook_pages: 29
-published: false
 ---
 
 ![AI 해석가능성 엔지니어링]({{ '/assets/images/ai-interpretability-engineering-hero.webp' | relative_url }})

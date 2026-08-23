@@ -26,7 +26,6 @@ header:
   teaser: /assets/images/finetuning-survival-strategy-2026-hero.webp
   overlay_image: /assets/images/finetuning-survival-strategy-2026-hero.webp
   overlay_filter: 0.5
-published: false
 ---
 
 ![Fine-tuning survival strategy hero image]({{ '/assets/images/finetuning-survival-strategy-2026-hero.webp' | relative_url }})

@@ -17,7 +17,6 @@ categories: [research]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/agentic-rl-systems-self-evolving-agents/"
-published: false
 ---
 
 에이전트를 프로덕션에 올린 다음 날부터 이상한 일이 벌어집니다. 사용자는 매일 그 에이전트를 쓰고, 에이전트는 매일 수천 건의 작업을 처리하는데, 정작 에이전트는 배포된 첫날에서 한 발짝도 나아가지 않습니다. 가중치도 고정이고 시스템 프롬프트도 고정이고 도구 목록도 고정입니다. 쌓이는 것은 로그뿐이고 그 로그는 대개 관측 대시보드를 한 번 지나간 뒤 사라집니다. 2026년 7월 1일 arXiv에 올라온 논문 한 편은 이 정지 상태의 범인을 조금 뜻밖의 곳에서 지목합니다. 모델도 아니고 알고리즘도 아니고, 배관입니다.

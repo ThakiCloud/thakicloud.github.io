@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/gemma4-12b-qat-turboq
 reading_time: true
 categories:
   - llmops
-published: false
 ---
 
 온프레미스 LLM 서빙의 가장 큰 장벽은 VRAM이었습니다. 12B 모델을 띄우려면 보통 고가의 데이터센터 GPU가 필요했습니다. 그런데 최근 커뮤니티 벤치마크는 다른 그림을 보여줍니다. Gemma 4 12B를 QAT(Quantization-Aware Training)와 TurboQuant 양자화로 **RTX 4060 8GB**에서 구동하면서, prefill 처리량과 긴 컨텍스트를 동시에 달성했다는 것입니다.

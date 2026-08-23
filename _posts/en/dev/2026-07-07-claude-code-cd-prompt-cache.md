@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/claude-code-cd-prompt-ca
 reading_time: true
 categories:
   - dev
-published: false
 ---
 
 Anyone who works with a coding agent long enough eventually has to switch directories. The classic case is a monorepo: you fix something in a core module inside a shared library, then move to the service that consumes it to verify the integration. Until now, that meant closing the session and reopening it in the new directory, or clearing the context with `/clear`. Either way, all the conversation context you had built up disappeared, and a less visible cost kicked in as well: the prompt cache was invalidated entirely, so the next request got billed at the cache-write rate all over again. The `/cd` command, quietly added in Claude Code v2.1.169, prevents both of these losses at once. This post looks at why that one line is not just a convenience feature but a real question of coding agent operating cost, using the rates Anthropic has published.

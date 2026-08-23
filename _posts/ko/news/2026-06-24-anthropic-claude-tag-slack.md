@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/anthropic-claude-tag-sl
 reading_time: true
 categories:
   - news
-published: false
 ---
 
 ![하나의 공유 채널에서 중앙 AI 노드가 여러 사람 노드와 연결된 협업 네트워크 추상 비주얼]({{ '/assets/images/anthropic-claude-tag-slack-hero.webp' | relative_url }})

@@ -22,7 +22,6 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
-published: false
 ---
 
 ![Paxis 계층 아키텍처: Cloud 인프라 위에 Paxis Core, 그 위에 849 스킬·14 도메인 에이전트 능력 계층]({{ '/assets/images/praxis-architecture-hero.webp' | relative_url }})

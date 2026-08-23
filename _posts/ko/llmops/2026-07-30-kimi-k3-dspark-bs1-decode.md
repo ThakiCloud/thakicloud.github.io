@@ -19,7 +19,6 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/kimi-k3-dspark-bs1-decode/"
-published: false
 ---
 
 서빙 벤치마크는 대부분 처리량을 자랑합니다. 배치를 키우고 동시 요청을 늘려서 초당 총 토큰 수를 보여 주는 식입니다. 그런데 코딩 에이전트나 추론 모델을 붙여 쓰는 쪽에서는 그 숫자가 잘 와닿지 않습니다. 사용자는 한 번에 하나의 응답을 기다리고 있고, 그 응답이 끝나야 다음 도구 호출이 시작되기 때문입니다. 이번에 vLLM이 공개한 숫자는 그 자리를 정확히 겨냥합니다. 배치 크기 1에서 464 tok/s입니다.

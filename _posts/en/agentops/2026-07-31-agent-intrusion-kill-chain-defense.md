@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-intrusion-kil
 audiobook: "https://drive.google.com/file/d/1mNix2FYEp-s4OMbZZRGJ0-biyg42qMLY/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 If you run a platform that loads and processes data other people upload, on Kubernetes, this incident is not somebody else's story. The takeaway fits in one line. The defenses worked as designed, but the attacker simply did not perform the action those defenses inspect, and a single path from a pod to cloud metadata decided everything that followed.

@@ -25,7 +25,6 @@ header:
 audiobook: /assets/audio/posts/graph-engineering-multi-agent-memory/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-multi-agent-memory/"
-published: false
 ---
 
 ![언어 조각이 영구적인 노드와 엣지 네트워크로 응결되는 추상 일러스트]({{ '/assets/images/graph-engineering-multi-agent-memory-hero.webp' | relative_url }})

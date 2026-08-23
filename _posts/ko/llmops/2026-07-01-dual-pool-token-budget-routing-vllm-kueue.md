@@ -22,7 +22,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1zaFojeuvXVOf_U9Le16SWo8BT8Fc0uxC/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 ![Dual-Pool Token-Budget Routing: vLLM 추론 GPU 시간 31~42% 절감하는 이원화 스케줄링 개념을 형상화한 이미지](/assets/images/dual-pool-token-budget-routing-vllm-kueue-hero.webp)

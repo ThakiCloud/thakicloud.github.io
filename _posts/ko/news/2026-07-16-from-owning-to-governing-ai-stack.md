@@ -22,7 +22,6 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/from-owning-to-governing-ai-stack/"
 audiobook: /assets/audio/posts/from-owning-to-governing-ai-stack/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ## 시리는 지금 구글의 GPU 위에서 돌아갑니다

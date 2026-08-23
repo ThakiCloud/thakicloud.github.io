@@ -24,7 +24,6 @@ header:
 ebook: /assets/ebooks/ai-agent-harness-design.pdf
 ebook_title: "AI 에이전트 핸스 설계"
 ebook_pages: 22
-published: false
 ---
 
 ![AI agent harness design]({{ '/assets/images/ai-agent-harness-design-hero.webp' | relative_url }})

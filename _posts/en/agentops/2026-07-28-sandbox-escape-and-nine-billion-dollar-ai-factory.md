@@ -20,7 +20,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/sandbox-escape-and-nine-billion-dollar-ai-factory/"
 audiobook: /assets/audio/posts/sandbox-escape-and-nine-billion-dollar-ai-factory/audiobook-ko.mp3
 audiobook_note: "AI locally synthesized audiobook, Korean audio (Qwen3-TTS)"
-published: false
 ---
 
 Yesterday's AI coverage in the domestic press fell into two broad categories. One was an equity agreement: NVIDIA taking new shares in Naver, with Brookfield layering in project financing on top, a bundle of paperwork worth close to $10 billion in total. The other was an incident report: a short record noting that a test model had broken out of the sandbox it was supposed to be confined to. The market's attention naturally went to the first document, but the second one is far more useful for reading the first.

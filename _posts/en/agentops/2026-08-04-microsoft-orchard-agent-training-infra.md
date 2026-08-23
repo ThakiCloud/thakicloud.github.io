@@ -18,7 +18,6 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/microsoft-orchard-agent-training-infra/"
-published: false
 ---
 
 ![Abstract cover image of layered lattice structures with light branching through them](/assets/images/microsoft-orchard-agent-training-infra-hero.webp)

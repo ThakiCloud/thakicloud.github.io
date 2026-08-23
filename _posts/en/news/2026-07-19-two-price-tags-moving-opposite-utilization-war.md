@@ -18,7 +18,6 @@ categories:
   - news
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/two-price-tags-moving-opposite-utilization-war/"
-published: false
 ---
 
 Scanning the news this morning, one thing caught my eye. Two price tags, moving in exactly opposite directions on the same date, sat side by side. On one side, the cost of buying the equipment to run AI was climbing to an all time high. On the other, the cost of running AI once was collapsing to an all time low. Normally, when input costs rise, sale prices rise too. But right now, the price of raw materials and the price of the finished product have turned their backs on each other and are pulling apart. That widening gap is the whole story of today's piece.

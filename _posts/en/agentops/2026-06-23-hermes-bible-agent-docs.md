@@ -20,7 +20,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/hermes-bible-agent-docs/"
 categories:
   - agentops
-published: false
 ---
 
 ![Abstract representation of an indexed knowledge library]({{ '/assets/images/hermes-bible-agent-docs-hero.webp' | relative_url }})

@@ -19,7 +19,6 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/generate-audit-runtime-accountability-gap/"
 audiobook: /assets/audio/posts/generate-audit-runtime-accountability-gap/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 우연이라기엔 대칭이 너무 정확합니다. 2026년 7월 22일, 성격이 정반대인 오픈웨이트 모델 두 개가 같은 날 세상에 나왔습니다. 하나는 코드를 씁니다. 다른 하나는 코드의 취약점을 찾습니다. 풀사이드는 셀프호스팅 코딩 에이전트용 모델 라구나 S 2.1을 공개했고, 시스코는 코드 취약점 탐지에 특화된 소형 오픈웨이트 모델 안타레스를 내놨습니다. 창과 방패가 같은 진열장에 나란히 걸린 셈입니다.

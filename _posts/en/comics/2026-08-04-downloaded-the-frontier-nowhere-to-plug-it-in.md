@@ -16,7 +16,6 @@ toc: false
 image: /assets/images/posts/comics/downloaded-the-frontier-nowhere-to-plug-it-in/strip.webp
 video: /assets/videos/posts/만화/downloaded-the-frontier-nowhere-to-plug-it-in/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/downloaded-the-frontier-nowhere-to-plug-it-in/"
-published: false
 ---
 
 A frontier-grade model just published its full weights. Weights are the billions of numbers a model learned during training, which is to say the brain itself. Publishing them moves you from renting answers through somebody's API to holding the actual thing on disk.

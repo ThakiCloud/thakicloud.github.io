@@ -20,7 +20,6 @@ categories:
 audiobook: "https://drive.google.com/file/d/1yzEyKpM0pXoCr9tgFnbcyH2KTYHj0nK6/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
-published: false
 ---
 
 H200 몇 장으로 사내 AI를 굴리는 팀이라면 이번 주 뉴스에서 한 가지 결론만 챙기면 됩니다. 최상급 모델을 손에 넣는 일은 점점 공짜에 가까워지지만, 그 모델을 실제로 자기 인프라에서 값싸고 안전하게 돌리는 능력은 오히려 더 비싸지고 희소해졌다는 것입니다. 모델이 흔해질수록 경쟁의 무게중심은 "무엇을 쓰느냐"에서 "어디서 어떻게 돌리느냐"로 넘어갑니다.

@@ -25,7 +25,6 @@ categories:
   - research
 audiobook: https://drive.google.com/file/d/1x9WLryiK2lcCi-AXZsdkV732W3SwHuzb/view
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ⏱️ **예상 읽기 시간**: 7분

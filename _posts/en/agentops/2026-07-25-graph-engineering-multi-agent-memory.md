@@ -24,7 +24,6 @@ header:
   teaser: /assets/images/graph-engineering-multi-agent-memory-hero.webp
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/graph-engineering-multi-agent-memory/"
-published: false
 ---
 
 ![Abstract illustration of language fragments condensing into a permanent network of nodes and edges]({{ '/assets/images/graph-engineering-multi-agent-memory-hero.webp' | relative_url }})

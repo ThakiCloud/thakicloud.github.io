@@ -17,7 +17,6 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/collective-communication-clusters/"
 categories:
   - dev
-published: false
 ---
 
 ## 개요

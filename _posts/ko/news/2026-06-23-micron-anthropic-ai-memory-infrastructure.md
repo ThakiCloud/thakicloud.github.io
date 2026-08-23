@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/micron-anthropic-ai-mem
 reading_time: true
 categories:
   - news
-published: false
 ---
 
 ## 개요

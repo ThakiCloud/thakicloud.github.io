@@ -15,7 +15,6 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/lossless-bf16-compression/"
 categories:
   - llmops
-published: false
 ---
 
 ![조밀하게 쌓인 유리 큐브가 손실 없이 더 작은 덩어리로 압축되는 모습을 표현한 추상 일러스트]({{ '/assets/images/lossless-bf16-compression-hero.webp' | relative_url }})

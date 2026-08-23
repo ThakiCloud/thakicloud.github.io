@@ -21,7 +21,6 @@ toc: true
 audiobook: /assets/audio/posts/agent-dynamic-batch-tuning-vllm/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.github.io/ko/research/agent-dynamic-batch-tuning-vllm/"
-published: false
 ---
 
 여러 테넌트가 H200 같은 공유 GPU 한 장 위에서 vLLM 추론 서버를 나눠 쓰는 환경을 운영하고 있다면 이 글이 바로 여러분을 위한 것입니다. 핵심 결론은 한 문장으로 요약됩니다. 테넌트들의 트래픽이 버스트성을 띨 때, 고정된 어드미션 예산을 수요가 있는 쪽으로 실시간 재분배하는 동적 컨트롤러는 예산을 반반으로 얼려 둔 정적 분배보다 총 처리량을 14% 더 냅니다. 이 수치는 실제 H200 한 장에서 측정한 값입니다.

@@ -15,7 +15,6 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/vllm-v0-25-0-model-runner-v2/"
 categories:
   - dev
-published: false
 ---
 
 ## Overview

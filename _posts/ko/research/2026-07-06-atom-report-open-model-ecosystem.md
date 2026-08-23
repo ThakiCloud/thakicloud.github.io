@@ -21,7 +21,6 @@ toc_icon: "flask"
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/atom-report-open-model-ecosystem/"
-published: false
 ---
 
 ## 이 글을 누가 읽으면 좋은가

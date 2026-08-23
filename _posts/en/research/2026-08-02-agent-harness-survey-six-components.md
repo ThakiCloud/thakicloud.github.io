@@ -20,7 +20,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/agent-harness-surve
 audiobook: "https://drive.google.com/file/d/1Sk9nGxFBzQ5tCwqNRhfi26JiisSwl-8q/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 When an agent underperforms, most teams suspect the model first. Bump the tier, rewrite the prompt, and if that fails, wait for the next release. Yet the reports piling up through 2026 point somewhere else. Put the same model inside different shells and the scores separate by multiples. That shell has a name: the harness. A newly consolidated survey is the first work to give it a formal shape and a parts list.

@@ -16,7 +16,6 @@ categories: [agentops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-agent-fleet-graph-primitives/"
-published: false
 ---
 
 ![하나의 오케스트레이터 노드에서 갈라져 나온 병렬 워커들이 아래쪽 검증 게이트 하나로 다시 모이는 구조의 추상 이미지](/assets/images/claude-code-agent-fleet-graph-primitives-hero.webp)

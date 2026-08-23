@@ -22,7 +22,6 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/en/technique/academic-research-skills-claude-code/"
 categories:
   - agentops
-published: false
 ---
 
 ![Abstract image of a research assembly line]({{ '/assets/images/academic-research-skills-claude-code-hero.webp' | relative_url }})

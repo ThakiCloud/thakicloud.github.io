@@ -24,7 +24,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/rlm-harness-h200-me
 audiobook: "https://drive.google.com/file/d/1VM4_cxjs6lZ6gVHvf_XsF9ge-DLgWgOS/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 If you run long-context workloads on H200, you can cut long-document processing tokens to one sixteenth without changing a single line of the model, just by changing the harness. We measured MIT's Recursive Language Models (RLM) paper claim directly on our own H200 cluster. This post covers how far those numbers hold up, where to stay cautious, and what actually breaks when you try to run a freshly published paper as-is.

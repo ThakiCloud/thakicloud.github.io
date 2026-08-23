@@ -21,7 +21,6 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/kv-cache-tiering-pd
 audiobook: "https://drive.google.com/file/d/1bPZXNkzyvya3fM8RD9jJDyB5KPCgcHxC/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
-published: false
 ---
 
 This post is useful both for teams disaggregating prefill and decode into separate serving pools and for teams using tools like LMCache to tier KV caches off the GPU to raise reuse rates. Both techniques have been validated on their own, but what happens when you combine them has barely been examined. The paper covered here structures that combined effect mathematically, then reports honestly on an attempt to actually measure it on an H200 cluster, an attempt in which the vLLM engine died twice. The short version: combining the two techniques is not always a win, and which side wins is determined not by hardware but by the workload's reuse pattern.

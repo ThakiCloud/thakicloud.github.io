@@ -19,7 +19,6 @@ categories:
 audiobook: /assets/audio/posts/lead-time-gap-concrete-and-agents/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-and-agents/"
-published: false
 ---
 
 ![2030년에 도착하는 콘크리트, 16일 만에 일을 끝낸 에이전트 개념을 형상화한 이미지](/assets/images/lead-time-gap-concrete-and-agents-hero.webp)

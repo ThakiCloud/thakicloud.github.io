@@ -20,7 +20,6 @@ author_profile: true
 toc: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/openforgerl-harness-native-agent-rl/"
-published: false
 ---
 
 If you have ever fine-tuned an agent, you have probably lived this: you train against a plain ReACT loop, then deploy on top of an elaborate harness such as Claude Code or Codex. The conclusion of OpenForgeRL (arXiv 2607.21557) is that this mismatch can be closed with one proxy and one Kubernetes orchestrator, without rewriting your RL stack at all. And an 8B model trained that way competes with far larger models using only 2,500 tasks.

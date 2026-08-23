@@ -21,7 +21,6 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/prime-agent-rlm-harness/"
 audiobook: /assets/audio/posts/prime-agent-rlm-harness/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
-published: false
 ---
 
 ## 왜 읽어야 하나
