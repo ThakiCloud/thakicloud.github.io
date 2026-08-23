@@ -27,9 +27,7 @@ Starting from the original Qwen3.8-27B weights, we did two things. First we quan
 4-bit, then we attached a speculative decoding drafter. 97.1 tokens per second became
 136.7, then became 458.5. One NVIDIA B200, the same prompt, one request at a time.
 
-<video controls playsinline preload="metadata" poster="/assets/images/model-ladder-quant-drafter-hero.webp" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/model-ladder-quant-drafter/ladder.mp4" type="video/mp4">
-</video>
+{% include video id="1QeNnUJiIqo0wrM35J2DUiQpBmd0XyYEQ" provider="google-drive" %}
 
 *Each stage was recorded separately and played back side by side. The two windows flow
 together, but they were not run at the same time.*

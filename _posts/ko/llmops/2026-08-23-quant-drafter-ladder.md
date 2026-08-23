@@ -25,9 +25,7 @@ Qwen3.8-27B 원본 가중치에서 시작해 두 가지를 했습니다. 먼저 
 디코딩 드래프터를 붙였습니다. 초당 97.1토큰이 136.7토큰이 되었고, 다시 458.5토큰이 됐습니다.
 NVIDIA B200 한 장, 같은 프롬프트, 요청은 한 번에 하나씩입니다.
 
-<video controls playsinline preload="metadata" poster="/assets/images/model-ladder-quant-drafter-hero.webp" style="width:100%;border-radius:8px;">
-  <source src="/assets/videos/posts/model-ladder-quant-drafter/ladder.mp4" type="video/mp4">
-</video>
+{% include video id="1QeNnUJiIqo0wrM35J2DUiQpBmd0XyYEQ" provider="google-drive" %}
 
 *두 단계를 각각 나란히 녹화했습니다. 두 창이 함께 흐르지만 동시에 돌린 것은 아닙니다.*
 
