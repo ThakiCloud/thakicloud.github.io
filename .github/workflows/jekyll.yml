@@ -162,6 +162,44 @@ jobs:
       # 200 + 사이트 셸을 돌려주므로(catch-all) 상태코드로는 soft-404를 못 잡는다.
       # 방금 빌드한 _site에서 포스트 3개를 뽑아 라이브 HTML에 그 글의 <title>이 실제로
       # 들어있는지 비교한다. 실패 = 빌드는 됐는데 서빙이 깨진 것 → 잡 실패로 표면화.
+      # 배포 후 전수 대조: 원장의 모든 URL 이 실제 배포된 인덱스에 링크돼 있나.
+      # 3장 샘플링(아래)은 "배포가 살아 있나"를 보고, 이 단계는 "약속한 URL 이 다
+      # 있나"를 본다 — 2026-08-22 처럼 554개가 조용히 빠지는 사고는 샘플링으로는
+      # 안 잡힌다. 이 대조가 url_ratchet 의 URL 계산기가 Jekyll 과 어긋나는 것도
+      # 잡는다(2026-08-23: categories 없는 글의 경로를 잘못 계산해 원장에 실재하지
+      # 않는 URL 6개가 들어갔던 건을 정확히 이 방법으로 발견했다).
+      - name: Verify every promised URL is actually deployed
+        run: |
+          python3 - <<'EOF'
+          import json, sys, time, urllib.request
+          from pathlib import Path
+          ledger = set(json.loads(Path("_data/published_urls.json").read_text()))
+          linked = set()
+          for lang in ("en", "ko"):
+              url = f"https://thakicloud.com/tech-blog/{lang}/"
+              html = ""
+              for _ in range(6):          # CloudFront 무효화 전파 대기
+                  try:
+                      html = urllib.request.urlopen(url, timeout=45).read().decode("utf-8", "ignore")
+                      if len(html) > 200_000:
+                          break
+                  except Exception as e:
+                      print(f"  retry {lang}: {type(e).__name__}")
+                  time.sleep(20)
+              import re
+              for m in re.finditer(r'href="(/tech-blog/(?:en|ko)/[^"?]*?)"', html):
+                  u = m.group(1)
+                  linked.add(u if u.endswith("/") else u + "/")
+          missing = sorted(ledger - linked)
+          print(f"ledger={len(ledger)} linked-on-deployed-index={len(linked)} missing={len(missing)}")
+          for u in missing[:30]:
+              print("   MISSING", u)
+          if missing:
+              print("\n배포된 사이트에 원장의 URL 이 없다. 게시된 URL 은 약속이다.")
+              sys.exit(1)
+          print("OK: every promised URL is live.")
+          EOF
+
       - name: Verify deployed content (soft-404 guard)
         run: |
           python3 - <<'EOF'

@@ -93,10 +93,19 @@ def url_for(path: Path, fm: dict) -> str:
         return BASEURL + "/" + explicit.strip("/") + "/"
     rel = path.relative_to(POSTS)
     lang = rel.parts[0]
-    cats = fm.get("categories") or list(rel.parts[1:-1])
+    # ⚠️ `:categories` comes from FRONT MATTER ONLY. Jekyll derives categories from
+    # directories ABOVE _posts, not below, so _posts/en/research/x.md with no
+    # `categories:` key publishes at /en/x/ — NOT /en/research/x/. Falling back to the
+    # directory name produced a URL that does not exist (caught 2026-08-23 by diffing
+    # this resolver against the deployed index, which is why that cross-check is the
+    # test: a ledger of URLs that were never real protects nothing).
+    cats = fm.get("categories")
+    if cats is None:
+        one = fm.get("category")
+        cats = [one] if one else []
     slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", path.stem)
     parts = [lang] + [str(c) for c in cats] + [slug]
-    return BASEURL + "/" + "/".join(p.strip("/") for p in parts if p) + "/"
+    return BASEURL + "/" + "/".join(x.strip("/") for x in parts if x) + "/"
 
 
 def published_urls() -> set[str]:
