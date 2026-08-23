@@ -108,13 +108,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
-    minimal-mistakes-jekyll (4.28.1)
-      jekyll (>= 3.7, < 5.0)
-      jekyll-feed (~> 0.1)
-      jekyll-gist (~> 1.5)
-      jekyll-include-cache (~> 0.1)
-      jekyll-paginate (~> 1.1)
-      jekyll-sitemap (~> 1.3)
     net-http (0.9.1)
       uri (>= 0.11.1)
     octokit (4.25.1)
@@ -202,7 +195,6 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
-  minimal-mistakes-jekyll (~> 4.28)
   tzinfo
   tzinfo-data
 
