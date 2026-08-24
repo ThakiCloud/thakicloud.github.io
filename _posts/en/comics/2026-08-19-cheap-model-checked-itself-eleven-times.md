@@ -24,7 +24,7 @@ A cheap model just outscored a far more expensive one on a terminal-task benchma
 
 > Source: [RT @jackyk02: Scaling self-verification with DeepSeek V4 Flash beats Claude Fable 5 on Terminal-Bench 2.1, while being 1](https://x.com/hjguyhan/status/2089676955188892058) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/cheap-model-checked-itself-eleven-times/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/cheap-model-checked-itself-eleven-times/comic.mp4" type="video/mp4">

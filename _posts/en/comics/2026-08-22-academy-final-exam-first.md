@@ -29,7 +29,7 @@ Which means the final test comes before the course. The quieter question of who 
 
 > Source: [RT @claudeai: Claude Academy is now live.](https://x.com/hjguyhan/status/2090588272678551683) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/academy-final-exam-first/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/academy-final-exam-first/comic.mp4" type="video/mp4">

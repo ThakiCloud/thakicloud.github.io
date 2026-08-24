@@ -24,7 +24,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: [RT @jackyk02: Scaling self-verification with DeepSeek V4 Flash beats Claude Fable 5 on Terminal-Bench 2.1, while being 1](https://x.com/hjguyhan/status/2089676955188892058) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/cheap-model-checked-itself-eleven-times/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/cheap-model-checked-itself-eleven-times/comic.mp4" type="video/mp4">
@@ -40,3 +40,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![cheap-model-checked-itself-eleven-times 슬라이드 1](/assets/images/cheap-model-checked-itself-eleven-times-slide-01.png)
+
+![cheap-model-checked-itself-eleven-times 슬라이드 2](/assets/images/cheap-model-checked-itself-eleven-times-slide-02.png)
+
+![cheap-model-checked-itself-eleven-times 슬라이드 3](/assets/images/cheap-model-checked-itself-eleven-times-slide-03.png)
+
+![cheap-model-checked-itself-eleven-times 슬라이드 4](/assets/images/cheap-model-checked-itself-eleven-times-slide-04.png)
+

@@ -39,7 +39,7 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ## 핵심 기여: 증명과 프로버넌스를 요청 단위로 묶는 ACI 프로토콜
 
-ThakiCloud AI Research가 제안하는 **ACI(Attested Confidential Inference)**는 RATS 스타일의 원격 증명 근거를 서명된 모델 프로버넌스 레코드에 묶고, 그 결합을 Kubernetes job admission 경계에서 강제하는 프로토콜입니다. 핵심 아이디어를 다섯 개의 논리적 컴포넌트로 나누어 보면, 먼저 릴리스 시점에 감사받은 가중치의 다이제스트와 학습 계보, 빌드 환경, 스캔 결과 같은 릴리스 주장을 서명해 프로버넌스 레코드 $P$를 만드는 **프로버넌스 등록기(Provenance Registrar)**가 있습니다. 다음으로 매 요청마다 신선한 nonce를 발급하고 GPU/CPU TEE로부터 증거를 받아 검증한 뒤 엔클레이브 측정값을 담은 증명 결과 $A$를 만드는 RATS Verifier 역할의 **증명 브로커(Attestation Broker)**가 있습니다.
+ThakiCloud AI Research가 제안하는 **ACI(Attested Confidential Inference)**는 RATS 스타일의 원격 증명 근거를 서명된 모델 프로버넌스 레코드에 묶고, 그 결합을 Kubernetes job admission 경계에서 강제하는 프로토콜입니다. 핵심 아이디어는 다섯 개의 논리적 컴포넌트로 나뉩니다. 먼저 **프로버넌스 등록기(Provenance Registrar)**는 릴리스 시점에 감사받은 가중치의 다이제스트와 학습 계보, 빌드 환경, 스캔 결과 같은 릴리스 주장을 서명해 프로버넌스 레코드 $P$를 만듭니다. 다음으로 **증명 브로커(Attestation Broker)**는 RATS Verifier 역할을 맡습니다. 매 요청마다 신선한 nonce를 발급하고 GPU/CPU TEE로부터 증거를 받아 검증한 뒤, 엔클레이브 측정값을 담은 증명 결과 $A$를 만듭니다.
 
 이 둘이 만나는 지점이 논문의 핵심 객체인 **바인딩 원장(Binding Ledger)**입니다. $A$의 해시와 $P$의 해시, 테넌트 식별자, 요청 ID를 함께 서명해 결합 레코드 $B$를 만들고 append-only 원장에 기록합니다. 이 결합이 곧 "증명된 그 엔클레이브 안에서 감사받은 그 가중치가 서빙되었다"는 단일 서명 증거입니다. 이 검증은 **Kueue admission 게이트**에서 GPU job을 실제로 스케줄링하기 전에 강제되어, 유효한 결합이 없으면 테넌트 신원과 매칭되는 GPU job이 admit되지 않습니다. 마지막으로 규제기관이 요청 ID만으로 $\{A, P, B\}$ 전체를 조회하고 서명과 엔클레이브 측정값을 운영자와 독립적으로 재검증할 수 있는 읽기 전용 **규제기관 검증 API**가 놓입니다.
 

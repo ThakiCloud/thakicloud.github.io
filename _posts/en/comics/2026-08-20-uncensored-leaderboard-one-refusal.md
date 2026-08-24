@@ -24,7 +24,7 @@ An uncensored build is the same model with its refusal behavior fine-tuned out, 
 
 > Source: [RT @LinearUncle: 喜欢Qwen3.8-27b无审查版本推友们看过来，下面这个博主把市面上的 5 个不同版本全部测试了一遍。](https://x.com/hjguyhan/status/2089997533401755927) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/uncensored-leaderboard-one-refusal/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/uncensored-leaderboard-one-refusal/comic.mp4" type="video/mp4">

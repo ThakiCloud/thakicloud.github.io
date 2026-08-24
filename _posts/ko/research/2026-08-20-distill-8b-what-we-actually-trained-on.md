@@ -12,12 +12,30 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/distill-8b-what-we-actually-trained-on/"
+audiobook: "https://drive.google.com/file/d/1UeZ8_rCopmtdrS4DSkOdRuXThItIvhLs/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 작은 모델을 자기 제품 데이터로 증류해 볼까 고민 중이시라면, 학습셋이 실제로 어떻게 생겼는지
 보고 시작하시는 게 빠릅니다. 저희가 8B를 가르칠 때 쓴 문장과 채점 규칙을 그대로 싣겠습니다.
 결론부터 적으면 학습 전후를 짝지어 비교했을 때 236건에서 328건으로, 26.5%p 올랐습니다.
 다만 첫 판에서는 두 항목이 오히려 떨어졌고, 그 원인은 학습 방법이 아니라 데이터 구성이었습니다.
+
+![채점 필터를 통과한 교사의 실행 기록이 작은 모델로 증류되는 흐름을 형상화한 이미지](/assets/images/distill-8b-what-we-actually-trained-on-hero.png)
+*8개 항목 채점이라는 필터를 통과한 실행 기록이, 27B 교사에서 8B 학생으로 증류되는 이 실험의 흐름을 형상화한 이미지입니다.*
+
+<div class="mermaid">
+flowchart TB
+    T["27B 교사 · 에이전트 155종 실행 기록"] --> F["8개 항목 채점 통과 행만 보존<br/>학습셋 780행"]
+    F --> S["8B LoRA 학습 (같은 코드)"]
+    S --> E["홀드아웃 평가 · 다른 에이전트 66종<br/>347건"]
+    E --> R1["첫 판 · recite와 step_order 하락<br/>원인은 분포 기울기"]
+    R1 --> B["항목당 상한 · 재구성 770행<br/>같은 코드로 재학습"]
+    B --> R2["최종 · 236/347에서 328/347<br/>+26.5%p"]
+</div>
+
+*실험 전체 흐름. 첫 판과 최종본 사이에서 바뀐 것은 학습 코드가 아니라 데이터 구성뿐입니다.*
 
 ## 무엇을 가르치려 했나
 
@@ -166,3 +184,22 @@ tool_calls ["mcp_connect", "skill_find"]
 
 방법보다 데이터 구성이 결과를 갈랐다는 게 이번의 요지입니다. 첫 판과 최종본은 학습 코드가
 같습니다. 바뀐 건 어떤 문장을 몇 개씩 넣었느냐뿐입니다.
+
+## 참고 자료
+
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+- [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531)
+- [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![distill-8b-what-we-actually-trained-on 슬라이드 1](/assets/images/distill-8b-what-we-actually-trained-on-slide-01.png)
+
+![distill-8b-what-we-actually-trained-on 슬라이드 2](/assets/images/distill-8b-what-we-actually-trained-on-slide-02.png)
+
+![distill-8b-what-we-actually-trained-on 슬라이드 3](/assets/images/distill-8b-what-we-actually-trained-on-slide-03.png)
+
+![distill-8b-what-we-actually-trained-on 슬라이드 4](/assets/images/distill-8b-what-we-actually-trained-on-slide-04.png)
+

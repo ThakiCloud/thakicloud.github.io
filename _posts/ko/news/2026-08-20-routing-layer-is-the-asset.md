@@ -16,9 +16,15 @@ tags:
   - thakicloud
 categories:
   - news
+audiobook: "https://drive.google.com/file/d/1Z3jlw4iX_anOHxdJ3sci-giO-juvDnpc/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 오늘 AI 뉴스에서 가장 비싼 가격표는 모델에 붙지 않았습니다. 모델을 고르는 계층에 붙었습니다. 스트라이프가 오픈라우터를 80억 달러 이상에 인수했고, 역대 가장 빠르게 성사된 대규모 AI 인수로 기록됐습니다. 같은 날 지능 점수 최상위 오픈 모델은 또 한 번 갈렸고, 4개월간 1위를 지키던 로컬 코딩 모델은 신규 모델에게 나흘 만에 자리를 내줬습니다. 이 두 사실을 나란히 놓으면 오늘 시장이 무엇에 값을 매겼는지가 선명해집니다.
+
+![모델은 지나가는 블록, 그 아래 라우팅 계층은 굳게 남은 구조를 형상화한 이미지](/assets/images/routing-layer-is-the-asset-hero.png)
+*모델은 소모품처럼 오가지만, 그 사이를 관리하는 계층이 구조로 남는다는 오늘 뉴스를 형상화한 이미지입니다.*
 
 ## 나흘 만에 바뀌는 왕좌에는 값을 매기기 어렵습니다
 
@@ -46,7 +52,7 @@ GLM-5.3 소식에는 성능 수치보다 덜 눈에 띄지만 더 구조적인 �
 
 공급 쪽 그림도 한 겹 더 복잡해졌습니다. 마벨이 구글에 122억 달러 규모 AI 칩 워런트를 부여하면서 반도체 계약을 확대했고, 여기에는 구글 TPU용 추론 가속기와 메모리 및 스토리지 컨트롤러가 포함됩니다. 마벨 주가는 13% 올랐습니다. 추론 연산의 공급원이 범용 GPU 한 갈래로 수렴하지 않고 갈라지고 있다는 뜻입니다.
 
-반대편 끝에서는 하드웨어 요구 자체가 줄고 있습니다. Unsloth가 Qwen3.8-27B용 새 GGUF와 양자화 가중치를 공개하면서, 1비트 양자화로 8GB RAM 수준의 소비자용 하드웨어에서 27B 모델이 돌아가고 정확도는 77% 수준을 유지한다고 밝혔습니다. 27B 모델이 노트북에서 도는 쪽과 122억 달러짜리 전용 가속기 계약이 같은 날 뉴스에 오릅니다. 워크로드마다 최적 실행 위치가 다르다는 사실이 이보다 분명하게 드러나기도 어렵습니다.
+반대편 끝에서는 하드웨어 요구 자체가 줄어듭니다. Unsloth가 Qwen3.8-27B용 새 GGUF와 양자화 가중치를 공개하면서, 1비트 양자화로 8GB RAM 수준의 소비자용 하드웨어에서 27B 모델이 돌아가고 정확도는 77% 수준을 유지한다고 밝혔습니다. 27B 모델이 노트북에서 도는 쪽과 122억 달러짜리 전용 가속기 계약이 같은 날 뉴스에 오릅니다. 워크로드마다 최적 실행 위치가 다르다는 사실이 이보다 분명하게 드러나기도 어렵습니다.
 
 77%라는 숫자는 그대로 읽어야 합니다. 정확도의 23%를 내주고 하드웨어 요구를 크게 낮춘 거래인데, 이 거래가 성립하는 작업과 성립하지 않는 작업은 따로 있습니다. 분류나 추출, 초안 작성처럼 뒤에 검증 단계가 붙는 작업이라면 남는 장사입니다. 반대로 결과가 그대로 고객에게 나가거나 다음 단계의 입력이 되는 작업이라면 23%는 싼값이 아닙니다. 같은 조직 안에서도 워크로드별로 답이 갈리기 때문에, 전사 표준 모델 하나를 정하는 방식은 점점 손해가 됩니다.
 
@@ -86,4 +92,16 @@ ThakiCloud가 Paxis를 만들면서 Skills와 Tools, Policies, Audit Logs를 일
 - HuggingNews, [Nebius Raises $4.5B in Convertible Notes, Shares Fall 7% Premarket](https://huggingnews.com/ai/update-nebius-raises-45b-in-convertible-notes-shares-fall-7percent-prema-cbb86de8)
 - HuggingNews, [Marvell Grants Google $12.2 Billion AI Chip Warrant, Lifts Shares 13%](https://huggingnews.com/ai/marvell-grants-google-122-billion-ai-chip-warrant-lifts-shares-13percent-99937e80)
 - HuggingNews, [OpenAI Targets 2027 IPO, Potential Earlier Listing if Business Inflects](https://huggingnews.com/ai/openai-targets-2027-ipo-potential-earlier-listing-if-business-inflects-75259262)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
+
+![routing-layer-is-the-asset 슬라이드 1](/assets/images/routing-layer-is-the-asset-slide-01.png)
+
+![routing-layer-is-the-asset 슬라이드 2](/assets/images/routing-layer-is-the-asset-slide-02.png)
+
+![routing-layer-is-the-asset 슬라이드 3](/assets/images/routing-layer-is-the-asset-slide-03.png)
+
+![routing-layer-is-the-asset 슬라이드 4](/assets/images/routing-layer-is-the-asset-slide-04.png)
 

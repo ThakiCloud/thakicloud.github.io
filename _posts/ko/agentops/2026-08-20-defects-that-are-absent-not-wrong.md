@@ -12,12 +12,18 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/defects-that-are-absent-not-wrong/"
+audiobook: "https://drive.google.com/file/d/17c5zobSaTF4W-MPOaLrOd542i8UDJ70v/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 에이전트가 남긴 실행 기록을 학습 데이터로 쓰려는 분이라면, 파이프라인이 조용히 0을 내놓는
 방식을 한 번쯤 보시는 게 낫습니다. 저희 export 도구는 실행 486건에서 Episode 468개를 냈고
 전부 스키마 검증을 통과했는데, **도구를 한 번이라도 부른 실행은 학습에 쓸 수 있는 게
 하나도 없었습니다.**
+
+![결함의 두 종류를 형상화한 이미지: 표면의 붉은 점과, 중앙의 빈 자리](/assets/images/defects-that-are-absent-not-wrong-hero.png)
+*"틀린" 결함은 표면에 붉은 점처럼 보이고, "없는" 결함은 큐브 하나가 통째로 빠진 빈 자리처럼 코드를 아무리 읽어도 보이지 않습니다.*
 
 ## 아무것도 실패하지 않았습니다
 
@@ -31,6 +37,24 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/defects-that-are-ab
 에이전트 오케스트레이션은 정의상 도구 실행입니다. 상위 에이전트가 하위 에이전트를 부르는
 것 자체가 `agent` 라는 이름의 도구 호출이니까요. 그러니 오케스트레이션 궤적의 수확량은
 정확히 0이었습니다.
+
+<div class="mermaid">
+flowchart TB
+    T["도구를 쓴 실행 254건"] --> P["조립기: 도구 호출 기록과 결과를<br/>학습 Episode 로 조립"]
+    P --> L1["손실 지점 1. 저장 자리 두 개 중<br/>컬럼만 조회, 채팅 경로 metadata 는 안 봄"]
+    P --> L2["손실 지점 2. 화면 잘림 1000자, 결과 저장 16KiB<br/>사이 밴드의 본문은 어디에도 없음"]
+    P --> L3["손실 지점 3. loop_1_agent 식별자 중복<br/>결과가 다른 호출에 부착됨"]
+    L1 --> Z["관측이 전부 truncated"]
+    L2 --> Z
+    L3 --> Z
+    Z --> R["검증기 전량 거부, 학습용 Episode 0"]
+</div>
+
+*파이프라인의 손실 지점 셋. 셋 다 에러를 만들지 않고, 코드 리뷰에서는 보이지 않습니다.*
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/defects-that-are-absent-not-wrong/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 코드를 읽어 찾은 결함 넷
 
@@ -148,3 +172,27 @@ tool_result  agent   [tool_use name="clarify" id="chatcmpl-tool-837c349fe54ce5cb
 
 트래커에서는 그중 둘이 이미 완료 상태였습니다. 필드도 있었고 저장소도 있었습니다. 그 둘을
 잇는 어댑터 한 겹만 없었을 뿐입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![defects-that-are-absent-not-wrong 슬라이드 1](/assets/images/defects-that-are-absent-not-wrong-slide-01.png)
+
+![defects-that-are-absent-not-wrong 슬라이드 2](/assets/images/defects-that-are-absent-not-wrong-slide-02.png)
+
+![defects-that-are-absent-not-wrong 슬라이드 3](/assets/images/defects-that-are-absent-not-wrong-slide-03.png)
+
+![defects-that-are-absent-not-wrong 슬라이드 4](/assets/images/defects-that-are-absent-not-wrong-slide-04.png)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/defects-that-are-absent-not-wrong/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 출처
+
+- [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions-genai)
+- [Anthropic - Tool use](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)
+
+에이전트 실행 트레이스와 도구 호출의 표준 관측 모델(스팬·속성)은 OpenTelemetry GenAI 규약에서, `tool_use`/`tool_result` 블록과 식별자의 의미는 Anthropic 도구 사용 문서에서 확인했습니다. 모든 링크는 2026년 8월 24일 실제 호출로 검증했습니다.

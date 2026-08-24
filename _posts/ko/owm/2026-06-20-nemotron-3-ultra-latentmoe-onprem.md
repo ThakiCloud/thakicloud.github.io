@@ -35,7 +35,7 @@ categories:
 
 NVIDIA가 2026년 6월 4일 공개한 `nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16`은 총 550B 파라미터, active 55B인 MoE 계열 모델입니다. 라이선스는 OpenMDW-1.1입니다.
 
-이 모델의 가장 큰 특징은 아키텍처 혼합 방식입니다. Mamba-2 기반 SSM, MoE, 표준 Attention을 결합한 LatentMoE 하이브리드이며, MTP(Multi-Token Prediction) speculative decoding도 통합됐습니다. 1M 토큰 컨텍스트를 지원합니다.
+이 모델의 가장 큰 특징은 아키텍처 혼합 방식입니다. Mamba-2 기반 SSM, MoE, 표준 Attention을 결합한 LatentMoE 하이브리드이며 MTP(Multi-Token Prediction) speculative decoding도 통합됐습니다. 1M 토큰 컨텍스트를 지원합니다.
 
 ## LatentMoE 하이브리드 아키텍처
 
@@ -43,7 +43,7 @@ NVIDIA가 2026년 6월 4일 공개한 `nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-
 
 기존 트랜스포머 기반 LLM은 어텐션의 $O(L^2)$ 복잡도가 긴 컨텍스트에서 병목이 됩니다. SSM(State Space Model) 계열, 특히 Mamba 아키텍처는 선형 복잡도($O(L)$)로 이 문제를 다른 방식으로 접근합니다. Mamba-2는 이를 구조화된 상태공간 행렬로 개선한 버전입니다.
 
-Nemotron-3-Ultra는 Mamba-2 레이어와 표준 Attention 레이어를 혼합하고, 여기에 MoE를 결합합니다. 이론적으로는 짧은 시퀀스에서 Attention의 정확한 패턴 포착 능력을 쓰고, 긴 시퀀스로 갈수록 SSM의 선형 복잡도 이점이 작동하는 구조입니다.
+Nemotron-3-Ultra는 Mamba-2 레이어와 표준 Attention 레이어를 혼합하고 여기에 MoE를 결합합니다. 이론적으로는 짧은 시퀀스에서 Attention의 정확한 패턴 포착 능력을 씁니다. 긴 시퀀스로 갈수록 SSM의 선형 복잡도 이점이 작동합니다.
 
 중요한 점은 이 조합이 실제 1M 컨텍스트 서빙에서 어떻게 작동하는지에 대한 실측 데이터가 아직 많지 않다는 것입니다. VRAM 요구사항이나 긴 컨텍스트에서의 실제 throughput은 직접 테스트 전까지는 불확실한 부분이 있습니다.
 

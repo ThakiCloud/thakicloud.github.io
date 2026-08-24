@@ -24,7 +24,7 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 > 원 뉴스: [RT @checheluna3: Seedance 2.5 쓰는 분들 이 사이트 혹시 알고 있나요? ](https://x.com/hjguyhan/status/2089321017521086865) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/prompt-gallery-hidden-retries/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/prompt-gallery-hidden-retries/comic.mp4" type="video/mp4">
@@ -40,3 +40,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![prompt-gallery-hidden-retries 슬라이드 1](/assets/images/prompt-gallery-hidden-retries-slide-01.png)
+
+![prompt-gallery-hidden-retries 슬라이드 2](/assets/images/prompt-gallery-hidden-retries-slide-02.png)
+
+![prompt-gallery-hidden-retries 슬라이드 3](/assets/images/prompt-gallery-hidden-retries-slide-03.png)
+
+![prompt-gallery-hidden-retries 슬라이드 4](/assets/images/prompt-gallery-hidden-retries-slide-04.png)
+

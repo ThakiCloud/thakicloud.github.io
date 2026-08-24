@@ -19,9 +19,15 @@ categories: [llmops]
 author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-lookup-vs-drafter/"
+audiobook: "https://drive.google.com/file/d/1p0_m6LlwBNKdl_XHI14B_LdHAhXmMqUv/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 긴 컨텍스트를 서빙하면서 투기 디코딩(speculative decoding)을 한 번 시험해 보고 "우리 워크로드에는 안 맞는다"로 접으셨다면, 그때 어느 방식을 쟀는지 확인해 볼 만합니다. 저희가 바로 그렇게 접었다가 다시 열어 보니, 문제는 투기 디코딩이 아니라 **방식 선택**이었습니다. 같은 모델, 같은 GPU에서 초당 15.0 토큰이 178.8 토큰이 됐습니다.
+
+![투기 디코딩의 두 후보 원천, lookup과 드래프터를 형상화한 이미지](/assets/images/speculative-decoding-lookup-vs-drafter-hero.png)
+*같은 이름 "투기 디코딩" 아래 서로 다른 후보 원천: 프롬프트 안에서 찾는 lookup과, 은닉 상태로 예측하는 드래프터.*
 
 ## 처음 결론은 반쪽이었습니다
 
@@ -31,7 +37,23 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 
 저희가 잰 것은 lookup 계열(suffix, ngram) 두 가지였습니다. 이 방식은 다음에 올 토큰의 후보를 **프롬프트 안에서 찾습니다**. 문서를 그대로 받아쓰는 과제에서는 정답이 눈앞에 있으니 잘 맞고, 요약이나 추론처럼 프롬프트에 없는 문장을 새로 쓸 때는 찾을 것이 없습니다. 수용 길이가 무너진 것은 모델 탓도 양자화 탓도 아니고 **후보를 어디서 가져오는가**의 문제였습니다.
 
-학습된 드래프터는 다르게 동작합니다. 작은 모델이 타깃의 은닉 상태를 보고 다음 토큰을 **예측**하므로, 프롬프트에 한 번도 등장하지 않은 토큰도 맞힐 수 있습니다. 그래서 같은 조건에 DFlash2 드래프터를 넣어 다시 쟀습니다.
+학습된 드래프터는 다르게 동작합니다. 작은 모델이 타깃의 은닉 상태를 보고 다음 토큰을 **예측**하므로, 프롬프트에 한 번도 등장하지 않은 토큰도 맞힐 수 있습니다. 그래서 같은 조건에 DFlash2 드래프터를 넣어 측정했습니다.
+
+<div class="mermaid">
+flowchart TB
+    A["타깃 모델<br/>은닉 상태"] --> B["드래프터 (작은 모델)<br/>다음 K개 토큰 예측"]
+    B --> C["타깃 모델이<br/>K개 동시 검증"]
+    C -->|모두 일치| D["K개 한 번에 수용"]
+    C -->|첫 불일치 지점| E["일치한 접두만 유지<br/>불일치 지점서 재생성"]
+    D --> A
+    E --> A
+</div>
+
+투기 디코딩의 핵심은 드래프터가 K개의 초안을 만들고, 그걸 타깃 모델이 한 번의 전향 계산으로 함께 검증하는 점입니다. lookup 계열은 이 드래프터 자리에 "프롬프트에서 후보를 검색한다"는 규칙을 얹을 뿐이고, 학습된 드래프터는 그 자리에 은닉 상태를 읽는 작은 모델을 넣는 것입니다. 같은 자리, 다른 후보 원천이 11.9배의 차이를 냅니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/speculative-decoding-lookup-vs-drafter/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 11.9배
 
@@ -76,7 +98,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 
 로그에는 `CUDA error: cudaErrorIllegalAddress`가 찍혔습니다. 파드는 재시작되지만, 요청 하나가 엔드포인트를 통째로 내렸다는 사실은 남습니다. 100만 토큰을 받겠다고 광고한 창의 4분의 3이 지뢰밭이었던 셈입니다.
 
-처방은 광고와 실제를 맞추는 것입니다. `max_model_len`을 245,760으로 낮추고 다시 확인했더니 240,503 토큰은 정상으로 처리되고 그보다 큰 요청은 프로세스를 죽이는 대신 **깨끗한 HTTP 400**을 받습니다. 244,689와 30만 사이의 정확한 경계는 아직 좁히지 않았고, 캡은 검증된 지점 바로 위에 놓아 두었습니다.
+처방은 광고와 실제를 맞추는 것입니다. `max_model_len`을 245,760으로 낮추고 확인했더니 240,503 토큰은 정상으로 처리되고 그보다 큰 요청은 프로세스를 죽이는 대신 **깨끗한 HTTP 400**을 받습니다. 244,689와 30만 사이의 정확한 경계는 아직 좁히지 않았고, 캡은 검증된 지점 바로 위에 놓아 두었습니다.
 
 ## 대가는 지연이 아니라 용량입니다
 
@@ -101,3 +123,24 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 같은 규율이 Paxis(에이전트 플랫폼)에도 적용됩니다. 에이전트는 배치를 채워 주지 않고 한 번에 한 스트림을 기다리므로, 총 처리량보다 이 구간의 응답 속도가 체감을 지배합니다. 다만 그 이득을 광고된 컨텍스트 창 전체에서 약속할 수는 없다는 것이 이번 측정의 결론이기도 합니다.
 
 이 수치는 프리픽스 캐시가 채워진 상태의 디코딩 속도입니다. 매번 완전히 새로운 234k 프롬프트가 들어오면 프리필 비용이 다시 붙습니다. 저희 실제 트래픽은 시스템 컨텍스트가 고정이라 캐시가 잘 듣는 쪽에 가깝지만, 그 전제가 다른 환경에서는 배수가 줄어듭니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![speculative-decoding-lookup-vs-drafter 슬라이드 1](/assets/images/speculative-decoding-lookup-vs-drafter-slide-01.png)
+
+![speculative-decoding-lookup-vs-drafter 슬라이드 2](/assets/images/speculative-decoding-lookup-vs-drafter-slide-02.png)
+
+![speculative-decoding-lookup-vs-drafter 슬라이드 3](/assets/images/speculative-decoding-lookup-vs-drafter-slide-03.png)
+
+![speculative-decoding-lookup-vs-drafter 슬라이드 4](/assets/images/speculative-decoding-lookup-vs-drafter-slide-04.png)
+
+## 출처
+
+- [Fast Inference from Transformers via Speculative Decoding (arXiv:2211.17192)](https://arxiv.org/abs/2211.17192)
+- [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty (arXiv:2401.15077)](https://arxiv.org/abs/2401.15077)
+- [vLLM 문서: Speculative Decoding](https://docs.vllm.ai/en/latest/features/speculative_decoding/)
+
+본문의 방식 분류(프롬프트 안에서 후보를 찾는 lookup 계열과, 은닉 상태를 읽는 학습된 드래프터)는 vLLM 문서의 방법 목록과 위 두 논문에서 확인했습니다. 모든 링크는 2026년 8월 24일 실제 호출로 검증했습니다.

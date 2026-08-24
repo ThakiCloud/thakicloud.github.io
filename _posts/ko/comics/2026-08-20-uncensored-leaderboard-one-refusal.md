@@ -18,13 +18,13 @@ audiobook: /assets/audio/posts/uncensored-leaderboard-one-refusal/audiobook-ko.m
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
-무검열판이라는 말은 원래 모델에 붙어 있던 거절 기능, 그러니까 위험한 요청을 막는 안전 필터를 떼어낸 파인튜닝 버전을 뜻합니다. 이번 주에 돌아다닌 표는 그런 버전 다섯 개를 열 개 항목에 세워 놓고 어느 쪽이 덜 거절하는지를 쟀습니다. 한 버전이 여덟 항목을 가져갔다는데, 항목 이름들이 축하할 만한 종류는 아니더군요. 그런데 이 표가 끝까지 채점하지 않는 칸이 하나 있습니다. 그 모델이 어느 건물 안에서 돌고, 거기에 무엇을 물었는지가 누구 로그에 쌓이느냐는 칸이죠. 온프렘은 그 서버를 자기 시설 안에 두고 돌리는 방식을 말합니다.
+무검열판이라는 말은 원래 모델에 붙어 있던 거절 기능, 그러니까 위험한 요청을 막는 안전 필터를 떼어낸 파인튜닝 버전을 뜻합니다. 이번 주에 돌아다닌 표는 그런 버전 다섯 개를 열 개 항목에 세워 놓고 어느 쪽이 덜 거절하는지를 쟀습니다. 한 버전이 여덟 항목을 가져갔다는데, 항목 이름들이 축하할 만한 종류는 아니더군요. 그런데 이 표가 끝까지 채점하지 않는 칸이 하나 있습니다. 그 모델이 어느 건물 안에서 돌고 거기에 무엇을 물었는지가 누구 로그에 쌓이느냐는 칸이죠. 온프렘은 그 서버를 자기 시설 안에 두고 돌리는 방식을 말합니다.
 
 ![필터 뗀 1등, 청구서는 못 답함](/assets/images/posts/만화/uncensored-leaderboard-one-refusal/strip.webp)
 
 > 원 뉴스: [RT @LinearUncle: 喜欢Qwen3.8-27b无审查版本推友们看过来，下面这个博主把市面上的 5 个不同版本全部测试了一遍。](https://x.com/hjguyhan/status/2089997533401755927) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다**
+**▶ 만화 영상판, 캐릭터들이 직접 말합니다**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/uncensored-leaderboard-one-refusal/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/uncensored-leaderboard-one-refusal/comic.mp4" type="video/mp4">
@@ -40,3 +40,16 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![uncensored-leaderboard-one-refusal 슬라이드 1](/assets/images/uncensored-leaderboard-one-refusal-slide-01.png)
+
+![uncensored-leaderboard-one-refusal 슬라이드 2](/assets/images/uncensored-leaderboard-one-refusal-slide-02.png)
+
+![uncensored-leaderboard-one-refusal 슬라이드 3](/assets/images/uncensored-leaderboard-one-refusal-slide-03.png)
+
+![uncensored-leaderboard-one-refusal 슬라이드 4](/assets/images/uncensored-leaderboard-one-refusal-slide-04.png)
+

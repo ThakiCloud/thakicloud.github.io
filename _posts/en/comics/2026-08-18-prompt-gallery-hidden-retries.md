@@ -24,7 +24,7 @@ A gallery collecting AI-generated videos next to the exact prompts behind them i
 
 > Source: [RT @checheluna3: Seedance 2.5 쓰는 분들 이 사이트 혹시 알고 있나요? ](https://x.com/hjguyhan/status/2089321017521086865) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/prompt-gallery-hidden-retries/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/prompt-gallery-hidden-retries/comic.mp4" type="video/mp4">

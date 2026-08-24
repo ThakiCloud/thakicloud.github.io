@@ -24,7 +24,7 @@ A single prompt now returns a ten-second vertical ad. The format everyone wants 
 
 > Source: [RT @Soaima_Ai: GPT image 2 ](https://x.com/hjguyhan/status/2088229056458396079) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio)**
+**▶ Animated edition: the characters speak for themselves (Korean audio)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/user-generated-minus-the-users/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/user-generated-minus-the-users/comic.mp4" type="video/mp4">
