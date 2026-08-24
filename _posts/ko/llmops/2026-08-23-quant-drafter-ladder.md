@@ -142,7 +142,7 @@ flowchart TB
 | 대화 | 99.9 | 144.5 | 334.7 | 3.35배 |
 | 장문 산문 | 102.0 | 148.0 | 346.0 | 3.39배 |
 
-![세 단계 측정 결과](/assets/images/model-ladder-quant-drafter-results.png)
+![세 단계 측정 결과](/assets/images/model-ladder-quant-drafter-results.webp)
 *왼쪽은 작업 종류별 세 단계, 오른쪽은 네 프롬프트 전체 평균의 계단입니다. 파란 두 막대의 높이
 차이는 어디서나 비슷하지만 주황 막대는 작업마다 크게 갈립니다.*
 

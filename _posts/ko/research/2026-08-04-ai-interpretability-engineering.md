@@ -24,6 +24,8 @@ header:
 ebook: /assets/ebooks/ai-interpretability-engineering.pdf
 ebook_title: "AI Interpretability Engineering"
 ebook_pages: 29
+audiobook: /assets/audio/posts/ai-interpretability-engineering/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 ![AI 해석가능성 엔지니어링]({{ '/assets/images/ai-interpretability-engineering-hero.webp' | relative_url }})

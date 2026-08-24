@@ -159,7 +159,7 @@ Broken down by prompt type, the multiplier over the original looks like this.
 | Conversation | 99.9 | 144.5 | 334.7 | 3.35x |
 | Long-form prose | 102.0 | 148.0 | 346.0 | 3.39x |
 
-![Results across three steps](/assets/images/model-ladder-quant-drafter-results.png)
+![Results across three steps](/assets/images/model-ladder-quant-drafter-results.webp)
 *Left: the three steps broken down by task type. Right: the ladder averaged across all
 four prompts. The gap between the two blue bars stays roughly the same everywhere, but the
 orange bar swings widely by task.*

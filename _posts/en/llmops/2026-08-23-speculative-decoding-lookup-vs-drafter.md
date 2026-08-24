@@ -23,7 +23,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/speculative-decoding-
 
 If you serve long contexts and tried speculative decoding once, only to shelve it with "it does not fit our workload", it is worth checking which method you measured. We did exactly that, and when we reopened the question, the problem was not speculative decoding but **the choice of method**. On the same model and the same GPU, 15.0 tokens per second became 178.8.
 
-![The two candidate sources of speculative decoding, lookup and drafter, in an abstract form](/assets/images/speculative-decoding-lookup-vs-drafter-hero.png)
+![The two candidate sources of speculative decoding, lookup and drafter, in an abstract form](/assets/images/speculative-decoding-lookup-vs-drafter-hero.webp)
 *Two different candidate sources under the same name, "speculative decoding": lookup searches inside the prompt, while the drafter predicts from hidden states.*
 
 ## The first conclusion was only half right

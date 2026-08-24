@@ -210,7 +210,7 @@ prefill_s  = t_short - 64 / decode_tps
 
 네 측정점 모두 반복 간 산포가 1.00에서 1.10 사이였습니다.
 
-![측정 결과](/assets/images/prefix-cache-long-context-results.png)
+![측정 결과](/assets/images/prefix-cache-long-context-results.webp)
 *왼쪽은 답변 길이에 따른 응답 완료 시간, 오른쪽 두 패널은 프리필과 디코드를 나눠 본 값입니다. 굵은 원 두 개만 실측이고 나머지는 그 둘을 잇는 직선입니다.*
 
 여기서 가장 중요한 문장을 적겠습니다. **단일 배수는 존재하지 않습니다.** 답변이 짧을수록

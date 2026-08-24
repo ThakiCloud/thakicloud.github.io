@@ -97,11 +97,11 @@ ThakiCloud가 Paxis를 만들면서 Skills와 Tools, Policies, Audit Logs를 일
 
 본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
 
-![routing-layer-is-the-asset 슬라이드 1](/assets/images/routing-layer-is-the-asset-slide-01.png)
+![routing-layer-is-the-asset 슬라이드 1](/assets/images/routing-layer-is-the-asset-slide-01.webp)
 
-![routing-layer-is-the-asset 슬라이드 2](/assets/images/routing-layer-is-the-asset-slide-02.png)
+![routing-layer-is-the-asset 슬라이드 2](/assets/images/routing-layer-is-the-asset-slide-02.webp)
 
-![routing-layer-is-the-asset 슬라이드 3](/assets/images/routing-layer-is-the-asset-slide-03.png)
+![routing-layer-is-the-asset 슬라이드 3](/assets/images/routing-layer-is-the-asset-slide-03.webp)
 
-![routing-layer-is-the-asset 슬라이드 4](/assets/images/routing-layer-is-the-asset-slide-04.png)
+![routing-layer-is-the-asset 슬라이드 4](/assets/images/routing-layer-is-the-asset-slide-04.webp)
 

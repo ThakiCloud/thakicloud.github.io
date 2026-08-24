@@ -26,7 +26,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 긴 컨텍스트를 서빙하면서 투기 디코딩(speculative decoding)을 한 번 시험해 보고 "우리 워크로드에는 안 맞는다"로 접으셨다면, 그때 어느 방식을 쟀는지 확인해 볼 만합니다. 저희가 바로 그렇게 접었다가 다시 열어 보니, 문제는 투기 디코딩이 아니라 **방식 선택**이었습니다. 같은 모델, 같은 GPU에서 초당 15.0 토큰이 178.8 토큰이 됐습니다.
 
-![투기 디코딩의 두 후보 원천, lookup과 드래프터를 형상화한 이미지](/assets/images/speculative-decoding-lookup-vs-drafter-hero.png)
+![투기 디코딩의 두 후보 원천, lookup과 드래프터를 형상화한 이미지](/assets/images/speculative-decoding-lookup-vs-drafter-hero.webp)
 *같은 이름 "투기 디코딩" 아래 서로 다른 후보 원천: 프롬프트 안에서 찾는 lookup과, 은닉 상태로 예측하는 드래프터.*
 
 ## 처음 결론은 반쪽이었습니다
@@ -129,13 +129,13 @@ flowchart TB
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 1](/assets/images/speculative-decoding-lookup-vs-drafter-slide-01.png)
+![speculative-decoding-lookup-vs-drafter 슬라이드 1](/assets/images/speculative-decoding-lookup-vs-drafter-slide-01.webp)
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 2](/assets/images/speculative-decoding-lookup-vs-drafter-slide-02.png)
+![speculative-decoding-lookup-vs-drafter 슬라이드 2](/assets/images/speculative-decoding-lookup-vs-drafter-slide-02.webp)
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 3](/assets/images/speculative-decoding-lookup-vs-drafter-slide-03.png)
+![speculative-decoding-lookup-vs-drafter 슬라이드 3](/assets/images/speculative-decoding-lookup-vs-drafter-slide-03.webp)
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 4](/assets/images/speculative-decoding-lookup-vs-drafter-slide-04.png)
+![speculative-decoding-lookup-vs-drafter 슬라이드 4](/assets/images/speculative-decoding-lookup-vs-drafter-slide-04.webp)
 
 ## 출처
 

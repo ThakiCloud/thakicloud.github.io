@@ -39,7 +39,7 @@ categories:
 
 핵심은 세 번째 arm입니다. 기본(default) arm은 컴파일과 CUDA 그래프가 꺼져 있고 동시성 상한(`max_num_seqs`)이 32로 묶여 있습니다. 튜닝(tuned) arm은 컴파일을 켜고 상한을 256까지 올립니다. 이 둘만 비교하면 두 노브가 동시에 바뀌어서 어느 쪽이 얼마를 기여했는지 알 수 없습니다. 그래서 컴파일만 켜고 상한은 그대로 32에 둔 중간(compile-on) arm을 하나 더 넣었습니다. 이 중간 arm이 있어야 비로소 "컴파일 때문에 얼마, 상한 때문에 얼마"를 분리해서 말할 수 있습니다.
 
-![The default-tax audit: five steps at endpoint creation](/assets/images/posts/research/default-configuration-tax/fig1.png)
+![The default-tax audit: five steps at endpoint creation](/assets/images/posts/research/default-configuration-tax/fig1.webp)
 *엔드포인트 생성 시점에 운영자가 그대로 따라 할 수 있는 5단계 감사 절차입니다. 실제 엔진 설정을 로그로 확인합니다. 사다리 양 끝에서 베이스라인을 잽니다. 한 번에 하나씩 노브를 뒤집어 두 성분을 분리합니다. (개념도 예시)*
 
 측정 결과, 단일 스트림(동시성 1)에서 기본 arm은 초당 7.4토큰, 컴파일만 켠 arm은 138.9토큰이었습니다. 18.8배 차이입니다. 사다리 꼭대기에서는 튜닝 arm이 동시성 256에서 초당 4,150.7토큰을 기록했습니다. 기본 arm은 231.6토큰에서 평평해져 있었습니다. 격차는 17.9배지만 이 숫자는 하한값으로 읽어야 합니다. 튜닝 arm이 사다리가 끝난 시점에도 직전 단계 대비 7.9% 더 오르는 중이어서 아직 포화(saturation)에 도달하지 않았기 때문입니다.
@@ -52,12 +52,12 @@ categories:
 
 동시성 상한 성분(Component B)은 반대로 '문턱값(threshold)'처럼 움직입니다. 오퍼된 동시성이 상한(32) 이하일 때는 정확히 1.00배, 즉 아무 효과가 없습니다. 상한을 넘어서는 순간에만 작동해서 동시성 128에서 1.66배, 각 arm의 최고 측정점 기준으로는 최소 1.79배를 벌어들입니다. 상한을 올리는 것은 두 번째 소득원이 아니라 트래픽이 그 문턱을 넘을 때만 열리는 게이트입니다.
 
-![Isolated component sizes by traffic regime](/assets/images/posts/research/default-configuration-tax/fig2.png)
+![Isolated component sizes by traffic regime](/assets/images/posts/research/default-configuration-tax/fig2.webp)
 *트래픽 레짐별로 각 노브를 하나씩 뒤집었을 때의 성분 크기입니다. 컴파일/기동 성분은 두 레짐 모두에서 더 큰 쪽입니다. 동시성 상한 성분은 오퍼된 동시성이 상한 이하일 때 정확히 1.00배로 비활성 상태다가 상한을 넘을 때만 작동합니다. (실측: Table 1의 분리된 성분값)*
 
 여기서 나오는 실무적 결론은 명확합니다. 레짐(단일 요청 지연이 중요한 대화형·에이전트 워크로드인지, 처리량이 중요한 배치 워크로드인지)이 정하는 것은 노브의 크기 순서가 아닙니다. 두 번째 노브가 실제로 작동하는지 여부입니다. 컴파일은 어느 레짐에서든 먼저 켜야 할 노브입니다. 동시성 상한은 오퍼된 트래픽이 실제로 그 문턱을 넘을 때만 켤 가치가 있습니다. 컴파일 없이 상한만 올리는 설정은 어느 레짐에서도 더 큰 손실 성분을 그대로 남깁니다. 컴파일만 켜고 상한을 그대로 두는 설정은 지연 중심 트래픽에는 충분하지만, 처리량 중심 트래픽에서는 최소 1.8배가량을 손해 봅니다.
 
-![Measured throughput of all three arms across the concurrency ladder](/assets/images/posts/research/default-configuration-tax/fig3.png)
+![Measured throughput of all three arms across the concurrency ladder](/assets/images/posts/research/default-configuration-tax/fig3.webp)
 *세 arm의 동시성 사다리 전 구간 처리량입니다. 기본 곡선과 컴파일 온 곡선 사이 간격은 컴파일 성분입니다. 컴파일 온과 튜닝 곡선 사이 간격은 상한 성분입니다. 오퍼된 동시성이 상한 32를 넘기 전까지 두 곡선은 겹쳐 있습니다. 기본·컴파일 온 arm은 동시성 256에서 측정하지 않았습니다. 튜닝 곡선은 마지막 지점에서도 직전 단계 대비 7.9% 더 오르는 중이라, 4,150.7은 포화 지점이 아니라 사다리가 끝난 지점으로 읽어야 합니다. (실측: Table 1 값)*
 
 논문은 여기에 프로버넌스(provenance) 원칙을 하나 더 얹습니다. 요청한 설정값이 아니라 엔진이 실제로 기동 로그에 남긴 값만 "적용됐다"고 인정한다는 규칙입니다. 정책 레이어가 값을 클램핑하거나 무시할 수 있기 때문에 운영자가 믿고 있는 설정과 실제 엔진 설정이 다를 수 있습니다. 이 원칙 위에서 5단계 감사(default-tax audit)를 제시합니다. (1) 실제 엔진 설정을 로그에서 읽습니다. (2) 세금 전체를 잽니다. (3) 컴파일만 켜서 발사 성분을 분리합니다. (4) 상한만 올려서 상한 성분을 분리합니다. (5) 두 성분과 문턱 지점, 기동 비용을 함께 보고합니다. 이 절차는 새 하드웨어 없이 기존 엔드포인트에서 그대로 실행할 수 있습니다.

@@ -227,7 +227,7 @@ out to be 45 concurrent requests.
 
 Spread across repeats stayed between 1.00 and 1.10 for all four measurement points.
 
-![Measurement results](/assets/images/prefix-cache-long-context-results.png)
+![Measurement results](/assets/images/prefix-cache-long-context-results.webp)
 *The left panel shows response completion time by answer length; the right two panels break
 out prefill and decode separately. Only the two bold circles are actual measurements, the
 rest is the straight line connecting them.*

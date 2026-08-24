@@ -178,13 +178,13 @@ tool_result  agent   [tool_use name="clarify" id="chatcmpl-tool-837c349fe54ce5cb
 
 본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
 
-![defects-that-are-absent-not-wrong 슬라이드 1](/assets/images/defects-that-are-absent-not-wrong-slide-01.png)
+![defects-that-are-absent-not-wrong 슬라이드 1](/assets/images/defects-that-are-absent-not-wrong-slide-01.webp)
 
-![defects-that-are-absent-not-wrong 슬라이드 2](/assets/images/defects-that-are-absent-not-wrong-slide-02.png)
+![defects-that-are-absent-not-wrong 슬라이드 2](/assets/images/defects-that-are-absent-not-wrong-slide-02.webp)
 
-![defects-that-are-absent-not-wrong 슬라이드 3](/assets/images/defects-that-are-absent-not-wrong-slide-03.png)
+![defects-that-are-absent-not-wrong 슬라이드 3](/assets/images/defects-that-are-absent-not-wrong-slide-03.webp)
 
-![defects-that-are-absent-not-wrong 슬라이드 4](/assets/images/defects-that-are-absent-not-wrong-slide-04.png)
+![defects-that-are-absent-not-wrong 슬라이드 4](/assets/images/defects-that-are-absent-not-wrong-slide-04.webp)
 
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/defects-that-are-absent-not-wrong/nlm-infographic-2.webp)

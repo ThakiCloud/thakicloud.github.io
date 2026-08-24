@@ -124,13 +124,13 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
 
-![the-recovery-engineer 슬라이드 1](/assets/images/the-recovery-engineer-slide-01.png)
+![the-recovery-engineer 슬라이드 1](/assets/images/the-recovery-engineer-slide-01.webp)
 
-![the-recovery-engineer 슬라이드 2](/assets/images/the-recovery-engineer-slide-02.png)
+![the-recovery-engineer 슬라이드 2](/assets/images/the-recovery-engineer-slide-02.webp)
 
-![the-recovery-engineer 슬라이드 3](/assets/images/the-recovery-engineer-slide-03.png)
+![the-recovery-engineer 슬라이드 3](/assets/images/the-recovery-engineer-slide-03.webp)
 
-![the-recovery-engineer 슬라이드 4](/assets/images/the-recovery-engineer-slide-04.png)
+![the-recovery-engineer 슬라이드 4](/assets/images/the-recovery-engineer-slide-04.webp)
 
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/the-recovery-engineer/nlm-infographic-2.webp)

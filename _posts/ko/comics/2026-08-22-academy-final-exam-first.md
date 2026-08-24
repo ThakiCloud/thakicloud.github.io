@@ -52,11 +52,11 @@ ThakiCloud는 반대 경로입니다. Paxis 에이전트가 내 기계 위에서
 
 본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![academy-final-exam-first 슬라이드 1](/assets/images/academy-final-exam-first-slide-01.png)
+![academy-final-exam-first 슬라이드 1](/assets/images/academy-final-exam-first-slide-01.webp)
 
-![academy-final-exam-first 슬라이드 2](/assets/images/academy-final-exam-first-slide-02.png)
+![academy-final-exam-first 슬라이드 2](/assets/images/academy-final-exam-first-slide-02.webp)
 
-![academy-final-exam-first 슬라이드 3](/assets/images/academy-final-exam-first-slide-03.png)
+![academy-final-exam-first 슬라이드 3](/assets/images/academy-final-exam-first-slide-03.webp)
 
-![academy-final-exam-first 슬라이드 4](/assets/images/academy-final-exam-first-slide-04.png)
+![academy-final-exam-first 슬라이드 4](/assets/images/academy-final-exam-first-slide-04.webp)
 

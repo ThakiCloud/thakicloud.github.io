@@ -45,11 +45,11 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
 
-![cheap-model-checked-itself-eleven-times 슬라이드 1](/assets/images/cheap-model-checked-itself-eleven-times-slide-01.png)
+![cheap-model-checked-itself-eleven-times 슬라이드 1](/assets/images/cheap-model-checked-itself-eleven-times-slide-01.webp)
 
-![cheap-model-checked-itself-eleven-times 슬라이드 2](/assets/images/cheap-model-checked-itself-eleven-times-slide-02.png)
+![cheap-model-checked-itself-eleven-times 슬라이드 2](/assets/images/cheap-model-checked-itself-eleven-times-slide-02.webp)
 
-![cheap-model-checked-itself-eleven-times 슬라이드 3](/assets/images/cheap-model-checked-itself-eleven-times-slide-03.png)
+![cheap-model-checked-itself-eleven-times 슬라이드 3](/assets/images/cheap-model-checked-itself-eleven-times-slide-03.webp)
 
-![cheap-model-checked-itself-eleven-times 슬라이드 4](/assets/images/cheap-model-checked-itself-eleven-times-slide-04.png)
+![cheap-model-checked-itself-eleven-times 슬라이드 4](/assets/images/cheap-model-checked-itself-eleven-times-slide-04.webp)
 

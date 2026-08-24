@@ -23,6 +23,8 @@ author_profile: true
 toc: true
 categories:
   - research
+audiobook: /assets/audio/posts/skill-graveyard-safe-deprecation/audiobook-ko.mp3
+audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 에이전트 하네스에 스킬이나 서브에이전트, MCP 도구를 계속 늘려온 국내 클라우드·AI 엔지니어라면, 카탈로그가 수백 개를 넘어가는 시점부터 라우터가 엉뚱한 스킬을 고르거나 아예 아무것도 못 고르는 경험을 해봤을 겁니다. 이 글에서 소개하는 논문은 그 현상을 리트리버 개선이 아니라 정반대 방향, 즉 코퍼스를 줄이는 쪽에서 풀어봅니다. 실제로 2,164개 유닛이 등록된 프로덕션 하네스를 대상으로, 스킬을 안전하게 솎아내는 정책을 설계하고 실측한 사례연구입니다.
@@ -72,3 +74,16 @@ categories:
 논문 상세 정보는 Hugging Face 데이터셋 페이지에서 확인할 수 있습니다.
 
 [Skill Graveyard: Safe Autonomous Deprecation in Growing Agent Skill Ecosystems](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-17-skill-graveyard-safe-deprecation)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![skill-graveyard-safe-deprecation 슬라이드 1](/assets/images/skill-graveyard-safe-deprecation-slide-01.webp)
+
+![skill-graveyard-safe-deprecation 슬라이드 2](/assets/images/skill-graveyard-safe-deprecation-slide-02.webp)
+
+![skill-graveyard-safe-deprecation 슬라이드 3](/assets/images/skill-graveyard-safe-deprecation-slide-03.webp)
+
+![skill-graveyard-safe-deprecation 슬라이드 4](/assets/images/skill-graveyard-safe-deprecation-slide-04.webp)
+

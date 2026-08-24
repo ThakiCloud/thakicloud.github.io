@@ -195,11 +195,11 @@ tool_calls ["mcp_connect", "skill_find"]
 
 본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![distill-8b-what-we-actually-trained-on 슬라이드 1](/assets/images/distill-8b-what-we-actually-trained-on-slide-01.png)
+![distill-8b-what-we-actually-trained-on 슬라이드 1](/assets/images/distill-8b-what-we-actually-trained-on-slide-01.webp)
 
-![distill-8b-what-we-actually-trained-on 슬라이드 2](/assets/images/distill-8b-what-we-actually-trained-on-slide-02.png)
+![distill-8b-what-we-actually-trained-on 슬라이드 2](/assets/images/distill-8b-what-we-actually-trained-on-slide-02.webp)
 
-![distill-8b-what-we-actually-trained-on 슬라이드 3](/assets/images/distill-8b-what-we-actually-trained-on-slide-03.png)
+![distill-8b-what-we-actually-trained-on 슬라이드 3](/assets/images/distill-8b-what-we-actually-trained-on-slide-03.webp)
 
-![distill-8b-what-we-actually-trained-on 슬라이드 4](/assets/images/distill-8b-what-we-actually-trained-on-slide-04.png)
+![distill-8b-what-we-actually-trained-on 슬라이드 4](/assets/images/distill-8b-what-we-actually-trained-on-slide-04.webp)
 
