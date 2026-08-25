@@ -15,8 +15,6 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.png
 video: /assets/videos/posts/만화/nothing-blurs-but-the-invoice/comic.mp4
-audiobook: /assets/audio/posts/nothing-blurs-but-the-invoice/audiobook-en.mp3
-audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 The news: a video engine grafted on an image model's 'spatial attention.' It is the eye that knows where everything is. Give it to video and the sets get richer, the textures come alive, and a character keeps the same face across dozens of shots. The old 'sharpness creep,' where every new shot blurred a little more, is gone as well. Where such a model runs, though, is a different story.

@@ -13,10 +13,8 @@ tags:
   - Metis
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/academy-final-exam-first/strip.webp
+image: /assets/images/posts/comics/academy-final-exam-first/strip.png
 video: /assets/videos/posts/만화/academy-final-exam-first/comic.mp4
-audiobook: /assets/audio/posts/academy-final-exam-first/audiobook-en.mp3
-audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 An AI giant just opened an academy: a learning platform with tiered tracks, from complete zero to daily power user, and the first step is literally "what is AI."
@@ -25,13 +23,13 @@ The funny part is admission. There is no entrance exam, and you may take the gra
 
 Which means the final test comes before the course. The quieter question of who actually grades it stays right where it is.
 
-![You May Take the Final Exam First](/assets/images/posts/comics/academy-final-exam-first/strip.webp)
+![You May Take the Final Exam First](/assets/images/posts/comics/academy-final-exam-first/strip.png)
 
 > Source: [RT @claudeai: Claude Academy is now live.](https://x.com/hjguyhan/status/2090588272678551683) · twitter
 
-**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/academy-final-exam-first/strip.webp" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/academy-final-exam-first/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/academy-final-exam-first/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/academy-final-exam-first/comic.en.vtt" default>
 </video>
