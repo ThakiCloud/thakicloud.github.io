@@ -21,9 +21,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/nvidia-verified-age
 reading_time: true
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1n6iyOQkF4Mv51M5KrpSKF0kiEw1aGcdg/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![모듈형 스킬 블록마다 암호 봉인이 찍혀 신뢰의 사슬로 이어지는 추상 이미지]({{ '/assets/images/nvidia-verified-agent-skills-hero.webp' | relative_url }})
+
+![NVIDIA가 검증한 에이전트 스킬: OMS 서명으로 스킬 공급망에 신뢰를 심는 법 개념을 형상화한 이미지](/assets/images/nvidia-verified-agent-skills-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -33,6 +39,10 @@ NVIDIA는 이 공백을 메우려고 검증된 에이전트 스킬(NVIDIA Verifi
 
 ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내부적으로 수백 개의 스킬과 자율 에이전트 작업을 돌립니다. 그래서 "스킬을 어떻게 신뢰할 것인가"는 우리에게 학술적인 질문이 아니라 매일의 운영 과제입니다. 이 글에서는 NVIDIA가 공개한 저장소를 실제로 받아 서명을 검증하고, 파일 한 줄을 바꿔 변조가 탐지되는지까지 직접 돌려본 결과를 정리합니다. 그리고 이 구조가 멀티테넌트 에이전트 플랫폼을 운영하는 입장에서 무엇을 바꾸는지 살펴봅니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/nvidia-verified-agent-skills/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 이 기술은 무엇인가
 
 NVIDIA 에이전트 스킬은 에이전트에게 CUDA-X 라이브러리, AI Blueprint, 플랫폼 도구를 올바르게 쓰는 법을 알려주는 이식 가능한 지시문 묶음입니다. 여기서 "검증됨(verified)"이라는 말에는 구체적인 의미가 있습니다. 카탈로그에 등재되고, 보안 스캔을 거치고, 암호 서명이 붙고, 스킬 카드로 문서화되었다는 뜻입니다. 단순히 "유명한 게시자가 올렸다"는 정황 증거가 아니라, 다운로드한 산출물 자체를 검증할 수 있다는 점이 일반 레지스트리와 다릅니다.
@@ -41,7 +51,7 @@ NVIDIA 에이전트 스킬은 에이전트에게 CUDA-X 라이브러리, AI Blue
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -58,7 +68,7 @@ NVIDIA 에이전트 스킬은 에이전트에게 CUDA-X 라이브러리, AI Blue
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -464,6 +474,23 @@ Verification failed with error: Signature mismatch:
 도구 성숙도도 짚어야 합니다. NVIDIA 스스로 서명을 "공개적으로 실험 중"이라고 표현합니다. 앞서 본 것처럼 옵션 이름이 바뀌어 블로그 예시가 그대로 동작하지 않았고, 검증기 생태계도 아직 초기입니다. 신뢰 앵커가 단일 루트 인증서에 묶여 있다는 점도 양면적입니다. 검증은 단순해지지만, 그만큼 NVIDIA라는 단일 주체에 신뢰가 집중됩니다. 크로스 하니스 이식성 역시 "설계상 동작하도록"이지 모든 하니스에서 보장되는 것은 아니므로, 도입 시에는 대상 하니스에서 실제로 한 번 돌려 확인하는 절차가 필요합니다.
 
 그럼에도 방향은 분명합니다. 스킬이 에이전트의 행동을 결정하는 부품이 되는 이상, 그 부품의 출처와 무결성을 검증할 수 있어야 한다는 요구는 사라지지 않습니다. NVIDIA의 시도는 그 요구에 대한 구체적이고 재현 가능한 첫 답안입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![nvidia-verified-agent-skills 슬라이드 1](/assets/images/nvidia-verified-agent-skills-slide-01.png)
+
+![nvidia-verified-agent-skills 슬라이드 2](/assets/images/nvidia-verified-agent-skills-slide-02.png)
+
+![nvidia-verified-agent-skills 슬라이드 3](/assets/images/nvidia-verified-agent-skills-slide-03.png)
+
+![nvidia-verified-agent-skills 슬라이드 4](/assets/images/nvidia-verified-agent-skills-slide-04.png)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/nvidia-verified-agent-skills/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

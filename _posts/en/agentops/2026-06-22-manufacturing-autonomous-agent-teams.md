@@ -25,6 +25,9 @@ categories:
 
 ![Manufacturing Operations Autonomous Agent Teams Header Image]({{ '/assets/images/manufacturing-autonomous-agent-teams-hero.webp' | relative_url }})
 
+![Illustration of the core idea of How to Automate Manufacturing Operations with Autonomous Agent Teams](/assets/images/manufacturing-autonomous-agent-teams-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Overview
 
 Modern manufacturing faces a structural contradiction: high intent to adopt AI, but a critical shortage of operational personnel. Even when factories want to deploy vision inspection models on production lines, they lack the MLOps specialists to maintain, service, and retrain those models. With three factory GPU clusters each managed by different teams, resource waste and downtime repeat in a cycle.
@@ -83,7 +86,7 @@ The diagram below is a simplified representation of HanTek's actual architecture
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -100,7 +103,7 @@ The diagram below is a simplified representation of HanTek's actual architecture
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

@@ -13,19 +13,20 @@ tags:
   - serving-cost
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.png
+image: /assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.webp
 video: /assets/videos/posts/만화/nothing-blurs-but-the-invoice/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/nothing-blurs-but-the-invoice/"
 ---
 
 The news: a video engine grafted on an image model's 'spatial attention.' It is the eye that knows where everything is. Give it to video and the sets get richer, the textures come alive, and a character keeps the same face across dozens of shots. The old 'sharpness creep,' where every new shot blurred a little more, is gone as well. Where such a model runs, though, is a different story.
 
-![Nothing Blurs But the Invoice](/assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.png)
+![Nothing Blurs But the Invoice](/assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.webp)
 
 > Source: [RT @C_of_Creativity: MiniMax-H3とZ-Imageの融合モデルでたー！！](https://x.com/hjguyhan/status/2091645755002065017) · twitter
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/nothing-blurs-but-the-invoice/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/nothing-blurs-but-the-invoice/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/nothing-blurs-but-the-invoice/comic.en.vtt" default>
 </video>

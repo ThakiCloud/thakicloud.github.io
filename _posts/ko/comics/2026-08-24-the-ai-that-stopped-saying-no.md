@@ -12,19 +12,20 @@ tags:
   - sovereignty
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/the-ai-that-stopped-saying-no/strip.png
+image: /assets/images/posts/만화/the-ai-that-stopped-saying-no/strip.webp
 video: /assets/videos/posts/만화/the-ai-that-stopped-saying-no/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/the-ai-that-stopped-saying-no/"
 ---
 
 이번 주 화제가 된 말은 '거부를 뺀 AI'입니다. 말 그대로 '아닙니다'라고 답하던 부분이 제거된 모델이에요. 그래서 물어보는 데로, 다 답합니다. 더 큰 반전은 그 전체가 자기 노트북에 들어온다는 점입니다. 데이터는 아무 서버로도 안 가고 요금은 아무 곳에도 안 붙습니다. 모델·데이터·기계를 내 손에 두는 걸 주권이라고 하는데, 주권이 이제 노트북 하나 크기입니다. 클라우드가 그 사이에서 빠지니, 청구서는 자연히 제로 직선이에요. 그제서야 놀란 쪽은 온 세상을 월세로 돌려주는 집주인입니다.
 
-![모형아, 거절 마](/assets/images/posts/만화/the-ai-that-stopped-saying-no/strip.png)
+![모형아, 거절 마](/assets/images/posts/만화/the-ai-that-stopped-saying-no/strip.webp)
 
 > 원 뉴스: [RT @kimmonismus: A "refusal-removed" version of Qwen3.8-27B can now run locally on Apple Silicon.](https://x.com/hjguyhan/status/2090841607075766469) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/the-ai-that-stopped-saying-no/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/the-ai-that-stopped-saying-no/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/the-ai-that-stopped-saying-no/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/the-ai-that-stopped-saying-no/comic.ko.vtt" default>
 </video>
@@ -38,3 +39,16 @@ video: /assets/videos/posts/만화/the-ai-that-stopped-saying-no/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![the-ai-that-stopped-saying-no 슬라이드 1](/assets/images/the-ai-that-stopped-saying-no-slide-01.webp)
+
+![the-ai-that-stopped-saying-no 슬라이드 2](/assets/images/the-ai-that-stopped-saying-no-slide-02.webp)
+
+![the-ai-that-stopped-saying-no 슬라이드 3](/assets/images/the-ai-that-stopped-saying-no-slide-03.webp)
+
+![the-ai-that-stopped-saying-no 슬라이드 4](/assets/images/the-ai-that-stopped-saying-no-slide-04.webp)
+

@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/academy-final-exam-first/strip.png
 video: /assets/videos/posts/만화/academy-final-exam-first/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/academy-final-exam-first/"
 ---
 
 AI 대기업 하나가 '아카데미'를 열었습니다. AI를 아예 모르는 사람부터 매일 쓰는 사람까지, 레벨별로 길을 골라주는 학습 플랫폼입니다. 'AI가 뭐냐'는 단계부터 시작할 수 있다고 해요.
@@ -27,7 +28,7 @@ AI 대기업 하나가 '아카데미'를 열었습니다. AI를 아예 모르는
 
 > 원 뉴스: [RT @claudeai: Claude Academy is now live.](https://x.com/hjguyhan/status/2090588272678551683) · twitter
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/academy-final-exam-first/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/academy-final-exam-first/comic.mp4" type="video/mp4">
@@ -45,3 +46,16 @@ ThakiCloud는 반대 경로입니다. Paxis 에이전트가 내 기계 위에서
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![academy-final-exam-first 슬라이드 1](/assets/images/academy-final-exam-first-slide-01.png)
+
+![academy-final-exam-first 슬라이드 2](/assets/images/academy-final-exam-first-slide-02.png)
+
+![academy-final-exam-first 슬라이드 3](/assets/images/academy-final-exam-first-slide-03.png)
+
+![academy-final-exam-first 슬라이드 4](/assets/images/academy-final-exam-first-slide-04.png)
+

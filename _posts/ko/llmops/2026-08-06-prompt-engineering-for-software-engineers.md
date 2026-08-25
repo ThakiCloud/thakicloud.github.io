@@ -23,6 +23,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/prompt-engineering-fo
 ebook: /assets/ebooks/prompt-engineering-for-software-engineers.pdf
 ebook_title: "프롬프트 엔지니어링"
 ebook_pages: 17
+audiobook: "https://drive.google.com/file/d/1GHzR84VXTqVU4D4AiXjoM8zZzImlatGG/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 이 글은 이미 코드를 계약으로 설계하는 법을 아는 소프트웨어 엔지니어를 위한 글입니다. 읽고 나면 프롬프트를 즉흥적인 글쓰기가 아니라 입력과 출력이 명시된 함수처럼 다루는 구체적인 방법을 얻을 수 있습니다.
@@ -109,6 +112,24 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 이 접근이 특별히 새로운 발상은 아닙니다. 소프트웨어 엔지니어가 함수를 설계하고 테스트하고 버전을 관리해온 방식을 그대로 프롬프트에 옮겨 오는 것뿐입니다. 다만 프롬프트가 자연어라는 이유로 이 규율을 생략해도 된다고 착각하는 팀이 여전히 많습니다. 자연어이기 때문에 오히려 계약을 명시하지 않으면 아무도 그 경계를 모르게 됩니다. 이미 알고 있는 엔지니어링 규율을 프롬프트에도 똑같이 적용하는 것, 그것이 이 글에서 전하고 싶은 전부입니다.
 
 더 깊은 예제와 코드로 확인하고 싶다면 전자책 전문을 참고하시기 바랍니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![prompt-engineering-for-software-engineers 슬라이드 1](/assets/images/prompt-engineering-for-software-engineers-slide-01.png)
+
+![prompt-engineering-for-software-engineers 슬라이드 2](/assets/images/prompt-engineering-for-software-engineers-slide-02.png)
+
+![prompt-engineering-for-software-engineers 슬라이드 3](/assets/images/prompt-engineering-for-software-engineers-slide-03.png)
+
+![prompt-engineering-for-software-engineers 슬라이드 4](/assets/images/prompt-engineering-for-software-engineers-slide-04.png)
+
+## 출처
+
+- [Few-Shot 프롬프팅의 원 논문: Language Models are Few-Shot Learners (Brown 외, 2020)](https://arxiv.org/abs/2005.14165)
+- [Chain-of-Thought 프롬프팅의 원 논문: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (Wei 외, 2022)](https://arxiv.org/abs/2201.11903)
 
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch01.webp)

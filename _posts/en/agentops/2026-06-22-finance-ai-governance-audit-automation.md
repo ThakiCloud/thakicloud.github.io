@@ -25,6 +25,9 @@ categories:
 
 ![AI Governance and Audit Automation in Financial Services]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
+![Illustration of the core idea of AI Governance and Audit Automation in Financial Services: Regulatory Compliance and Autonomous Agent Control](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Overview
 
 Adopting AI agents in the financial industry is no longer optional. As applications expand -- credit assessment automation, fraud detection, customer service support -- every financial institution must simultaneously achieve operational efficiency and regulatory compliance.
@@ -78,7 +81,7 @@ Tool calls are classified from Tier 1 (simple query) to Tier 7 (irreversible ext
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -95,7 +98,7 @@ Tool calls are classified from Tier 1 (simple query) to Tier 7 (irreversible ext
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

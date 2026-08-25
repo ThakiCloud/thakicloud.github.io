@@ -42,7 +42,7 @@ Hermes Bible의 핵심 기능은 색인과 검색입니다. 사이트는 Hermes 
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -59,7 +59,7 @@ Hermes Bible의 핵심 기능은 색인과 검색입니다. 사이트는 Hermes 
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -387,6 +387,19 @@ Hermes Bible을 단순한 검색 사이트가 아니라 하나의 패턴으로 �
 셋째, 외부 의존이라는 일반적 위험이 있습니다. 회사 블로그나 운영 문서가 제3자 사이트를 핵심 동선으로 끌어들이면, 그 사이트가 사라지거나 방향을 바꿀 때 링크가 깨질 수 있습니다. Hermes Bible은 발견과 학습의 보조 도구로 활용하되, 우리 내부 운영의 단일 진실 소스로 삼는 것은 적절하지 않습니다.
 
 종합하면, Hermes Bible은 빠르게 진화하는 에이전트 프레임워크의 지식을 사람이 따라잡도록 돕는 잘 만들어진 커뮤니티 자산입니다. 다만 비공식이라는 본질적 시차와 외부 의존을 인지하고, 공식 문서를 기준점으로 두는 균형이 필요합니다. 무엇보다 이 사이트가 보여주는 "방대한 에이전트 지식을 검색 가능하게, 그리고 실전 워크플로로 공유 가능하게 만든다"는 패턴 자체가, 우리처럼 대규모 스킬과 룰을 운용하는 플랫폼에 가장 값진 시사점입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
+
+![hermes-bible-agent-docs 슬라이드 1](/assets/images/hermes-bible-agent-docs-slide-01.png)
+
+![hermes-bible-agent-docs 슬라이드 2](/assets/images/hermes-bible-agent-docs-slide-02.png)
+
+![hermes-bible-agent-docs 슬라이드 3](/assets/images/hermes-bible-agent-docs-slide-03.png)
+
+![hermes-bible-agent-docs 슬라이드 4](/assets/images/hermes-bible-agent-docs-slide-04.png)
 
 ## 출처
 

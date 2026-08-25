@@ -26,11 +26,18 @@ categories:
 
 LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. 대화가 길어질수록 에이전트가 앞에서 한 약속을 잊고, 초반에 정한 규칙을 무시하기 시작합니다. 흔한 처방은 "컨텍스트 창이 더 크면 해결된다"입니다. 그러나 이것은 틀린 진단입니다. 진짜 문제는 창의 크기가 아니라 그 안의 토큰을 어떻게 관리하느냐, 즉 컨텍스트 엔지니어링입니다. 이 글은 장기 실행 에이전트가 컨텍스트 한계를 넘는 네 가지 검증된 기법을 정리하고, ThakiCloud가 실제 에이전트 운용에 이를 어떻게 녹였는지 보여 줍니다.
 
+![AI 에이전트에게 진짜 기억을 주는 법 - 컨텍스트 엔지니어링 4가지 기법 개념을 형상화한 이미지](/assets/images/ai-agent-memory-context-engineering-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 개요
 
 컨텍스트 엔지니어링은 프롬프트 엔지니어링의 다음 단계입니다. 프롬프트 엔지니어링이 "어떤 말을 적느냐"에 집중했다면, 컨텍스트 엔지니어링은 "추론 시점에 모델의 한정된 주의 예산에 어떤 토큰을 채워 넣느냐"를 다룹니다. 시스템 지시, 도구 정의, MCP, 외부 데이터, 메시지 이력 전체가 대상입니다. 에이전트는 루프를 돌면서 다음 턴에 쓸 수 있는 데이터를 계속 만들어 내고, 이 정보는 주기적으로 정제돼야 합니다.
 
 왜 토큰을 아껴야 할까요. LLM도 사람처럼 일정 지점을 넘으면 집중을 잃습니다. 토큰 수가 늘수록 그 안의 정보를 정확히 회상하는 능력이 떨어지는 현상을 컨텍스트 로트(context rot)라고 부릅니다. 정도의 차이는 있어도 모든 모델에서 나타납니다. 근본 원인은 트랜스포머 구조입니다. 모든 토큰이 다른 모든 토큰에 주의를 보내므로 토큰 n개에 대해 n의 제곱에 해당하는 관계가 생깁니다. 컨텍스트가 길어질수록 주의 예산이 묽어집니다. 그래서 컨텍스트는 무한한 저장소가 아니라 한정된 자원으로 다뤄야 합니다. 핵심은 원하는 결과를 낼 가능성을 가장 높이는 고신호 토큰의 최소 집합을 찾는 것입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-agent-memory-context-engineering/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 에이전트 메모리의 문제 구조
 
@@ -38,7 +45,7 @@ LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. �
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -55,7 +62,7 @@ LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. �
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -429,6 +436,10 @@ Anthropic은 Sonnet 4.5 출시와 함께 Claude 개발자 플랫폼에 메모리
 ![ai-agent-memory-context-engineering 슬라이드 3]({{ '/assets/images/ai-agent-memory-context-engineering-slide-03.webp' | relative_url }})
 
 ![ai-agent-memory-context-engineering 슬라이드 4]({{ '/assets/images/ai-agent-memory-context-engineering-slide-04.webp' | relative_url }})
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-agent-memory-context-engineering/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

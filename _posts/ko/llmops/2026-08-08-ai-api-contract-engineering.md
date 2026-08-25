@@ -23,6 +23,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ai-api-contract-engin
 ebook: /assets/ebooks/ai-api-contract-engineering.pdf
 ebook_title: "AI API 계약 엔지니어링"
 ebook_pages: 23
+audiobook: "https://drive.google.com/file/d/1GzltDMYnC0q5cI_Hx_84vhcn9w_dhUnS/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 백엔드에서 LLM 응답을 받아 파싱하고 저장하는 파이프라인을 운영해본 엔지니어라면, 이 글에서 프로덕션이 새벽에 조용히 죽는 이유 하나를 정확히 짚어낼 수 있습니다. 결론부터 말하면 원인은 대개 프롬프트 품질이 아니라 API 경계에 계약이 없다는 사실입니다.
@@ -99,6 +102,23 @@ LLM 제공자는 간헐적으로 모델을 업데이트합니다. 새 버전은 
 프롬프트를 잘 쓰는 것도 물론 중요합니다. 하지만 프롬프트는 모델의 평균적인 행동을 개선할 뿐, 꼬리 사례에서 벌어지는 실패까지 막아주지는 못합니다. 새벽에 파이프라인이 멈추는 사고는 대부분 이 꼬리 사례에서 시작됩니다. 그리고 꼬리 사례를 다루는 도구는 더 좋은 프롬프트가 아니라 명시적인 계약입니다.
 
 지금 운영 중인 LLM 통합 코드를 한번 열어보길 권합니다. 모델 응답을 파싱하는 곳 바로 앞뒤에 입력 검증과 출력 폴백이 있는지, 호출 실패를 감싸는 재시도 로직에 백오프와 상한이 있는지, 토큰 사용량이 어딘가에 기록되고 있는지, 모델 버전이 명시적으로 고정되어 있는지 확인해보십시오. 이 다섯 개 질문에 모두 답할 수 있다면 계약이 있는 것이고, 하나라도 막히면 그 지점이 다음 장애가 시작될 자리입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-api-contract-engineering 슬라이드 1](/assets/images/ai-api-contract-engineering-slide-01.png)
+
+![ai-api-contract-engineering 슬라이드 2](/assets/images/ai-api-contract-engineering-slide-02.png)
+
+![ai-api-contract-engineering 슬라이드 3](/assets/images/ai-api-contract-engineering-slide-03.png)
+
+![ai-api-contract-engineering 슬라이드 4](/assets/images/ai-api-contract-engineering-slide-04.png)
+
+## 출처
+
+- [지수 백오프 재시도 전략: Exponential Backoff And Jitter (AWS Architecture Blog)](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
 
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-api-contract-engineering/ch01.webp)

@@ -24,6 +24,9 @@ categories:
 
 ![금융권 AI 거버넌스와 감사 자동화]({{ '/assets/images/finance-ai-governance-audit-automation-hero.webp' | relative_url }})
 
+![금융권 AI 거버넌스와 감사 자동화: 규제 충족과 자율 에이전트 통제 개념을 형상화한 이미지](/assets/images/finance-ai-governance-audit-automation-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 개요
 
 금융 산업에서 AI 에이전트 도입은 더 이상 선택지가 아닙니다. 여신 심사 자동화, 이상거래 탐지, 고객 상담 지원 등 적용 범위가 넓어지면서 각 금융기관은 운영 효율과 규제 준수라는 두 목표를 동시에 달성해야 하는 상황에 놓여 있습니다.
@@ -77,7 +80,7 @@ Paxis의 정책엔진은 모든 도구 호출이 실행되기 전에 두 가지 
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -94,7 +97,7 @@ Paxis의 정책엔진은 모든 도구 호출이 실행되기 전에 두 가지 
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

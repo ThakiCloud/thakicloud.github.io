@@ -5,7 +5,6 @@ seo_title: "데이터센터에서 우주와 주머니로 이동 중인 AI 컴퓨
 seo_description: "스페이스X의 우주 AI 컴퓨트, 샤오미의 엣지 가속기, 리퀴드AI의 모바일 스위트, 엔비디아 그록의 초당 3,400토큰. 오늘 HuggingNews로 보는 추론의 분산."
 date: 2026-08-25
 last_modified_at: 2026-08-25
-published: false   # en 짝 생성 전까지 초안 ([[blog-ko-en-pair]])
 author_profile: true
 toc: true
 toc_label: "목차"
@@ -20,6 +19,7 @@ categories:
 audiobook: "https://drive.google.com/file/d/1KoeImu-vtfdqK2Oh7ewrnQM4bk8mUyTd/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-compute-map-beyond-datacenter/"
 ---
 
 ![데이터센터가 중심이 아니던 지도 개념을 형상화한 이미지](/assets/images/ai-compute-map-beyond-datacenter-hero.webp)
@@ -114,4 +114,16 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 - HuggingNews, [Trump Calls Rejection of AI Data Centers a Mistake in Race to Beat China](https://huggingnews.com/ai/update-trump-calls-rejection-of-ai-data-centers-a-mistake-in-race-to-bea-b27d1a42)
 - HuggingNews, [Sanders Demands AI Data Center Moratorium With 75% US Support](https://huggingnews.com/ai/update-sanders-demands-ai-data-center-moratorium-with-75percent-us-suppo-07da6586)
 - HuggingNews, [Liquid AI and Artificial Analysis Launch Pipette With 10,000 Results as First Open Mobile AI Suite](https://huggingnews.com/ai/liquid-ai-and-artificial-analysis-launch-pipette-with-10000-results-as-f-d1363ee4)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-compute-map-beyond-datacenter 슬라이드 1](/assets/images/ai-compute-map-beyond-datacenter-slide-01.webp)
+
+![ai-compute-map-beyond-datacenter 슬라이드 2](/assets/images/ai-compute-map-beyond-datacenter-slide-02.webp)
+
+![ai-compute-map-beyond-datacenter 슬라이드 3](/assets/images/ai-compute-map-beyond-datacenter-slide-03.webp)
+
+![ai-compute-map-beyond-datacenter 슬라이드 4](/assets/images/ai-compute-map-beyond-datacenter-slide-04.webp)
 
