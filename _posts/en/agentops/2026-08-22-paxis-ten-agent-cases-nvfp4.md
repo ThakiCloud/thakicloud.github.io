@@ -177,7 +177,7 @@ The ten runs actually moved 290,113 input tokens and 52,840 output tokens. Conve
 |---|---:|---:|
 | GPT-5.6 Sol | $3.0358 | 134.9x |
 | Claude Opus 5 | $2.7716 | 123.1x |
-| Claude Sonnet 5 | $1.6629 | 73.9x |
+| Claude Sonnet 5 | $1.1086 | 49.3x |
 | Kimi K3 | $1.6629 | 73.9x |
 | GPT-5.6 Terra | $1.2143 | 53.9x |
 | Claude Haiku 4.5 | $0.5543 | 24.6x |
@@ -187,7 +187,7 @@ The ten runs actually moved 290,113 input tokens and 52,840 output tokens. Conve
 
 *This is a log scale. Read the numbers, not the bar lengths.*
 
-The multiples look large, but the conditions matter. The commercial prices are list prices with no cache discount applied. In real large-scale operation, cache reads bill at roughly 0.1x the input rate and that line item dominates the bill, so the gap narrows sharply for workloads with a high cache hit rate. Conversely, our own number leaves out the cost of building the quantized checkpoint and the time the card sits idle. If you only run ten cases a day, renting a single GPU is far more expensive. This comparison only means something once you have enough volume to keep the card busy.
+The multiples look large, but the conditions matter. The commercial prices are list prices with no cache discount applied. In real large-scale operation, cache reads bill at roughly 0.1x the input rate and that line item dominates the bill, so the gap narrows sharply for workloads with a high cache hit rate. Conversely, our own number leaves out the cost of building the quantized checkpoint and the time the card sits idle. If you only run ten cases a day, renting a single GPU is far more expensive. This comparison only means something once you have enough volume to keep the card busy. Commercial list prices change often, so the table reflects the reference date of writing (2026-08-22). Check each provider's current pricing page before you budget against it.
 
 One more framing. Cost is less a reason to go sovereign than a line item that erases the counterargument. An organization that cannot send data out has a narrow set of options anyway, and the real question is what honoring that constraint costs. This table says that for an organization with the volume, it costs nothing.
 
@@ -270,3 +270,12 @@ For an organization that cannot send data outside, we don't think the question t
 If you are evaluating self-hosted GPUs for running work agents, we would recommend picking whichever of these ten cases is closest to your own work and measuring it the same way. That is a far more honest signal than a benchmark score.
 
 Every number in this post was measured on internal GPUs on August 22, 2026, and cross-checked against execution traces and server logs.
+
+## Sources
+
+- [ThakiCloud/Qwen3.8-27B-NVFP4-FP8ATTN model card (Hugging Face)](https://huggingface.co/ThakiCloud/Qwen3.8-27B-NVFP4-FP8ATTN)
+- [Claude Opus 5 launch and API pricing (Anthropic)](https://www.anthropic.com/news/claude-opus-5)
+- [Claude Sonnet 5 API pricing (Anthropic)](https://www.anthropic.com/news/claude-sonnet-5)
+- [OpenAI API pricing (gpt-5.6 sol/terra short and long context)](https://developers.openai.com/api/docs/pricing)
+- [NVFP4: NVIDIA Blackwell 4-bit floating point format (TensorRT docs)](https://docs.nvidia.com/deeplearning/tensorrt/latest/architecture/fp4.html)
+- [vLLM 0.24.0 release (GitHub)](https://github.com/vllm-project/vllm/releases/tag/v0.24.0)

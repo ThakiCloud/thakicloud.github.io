@@ -148,3 +148,11 @@ categories:
 드래프터 팔의 최대 컨텍스트는 245,760입니다. 1M이 아닙니다. 그리고 현행 팔은 vLLM 0.24.0 안정판이고 나머지 두 팔은 나이틀리라, 엔진 버전까지 통제된 비교는 가운데 팔과 오른쪽 팔 사이뿐입니다. 드래프터의 몫을 말할 때 쓴 것도 그 구간입니다.
 
 이 글의 모든 수치는 저장소에 커밋된 원장에서 나왔고, 계산은 전부 코드가 소유합니다.
+
+## 출처
+
+- [vLLM 오토매틱 프리픽스 캐싱 문서](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/)
+- [vLLM Speculative 디코딩 문서](https://docs.vllm.ai/en/latest/features/speculative_decoding/)
+- [DFlash: Speculative 디코딩용 경량 드래프터 (GitHub, DFlash 2 체크포인트 포함)](https://github.com/z-lab/dflash)
+- [Fast Inference from Slow LLMs via Speculative Decoding (Leviathan et al., arXiv 2211.17192)](https://arxiv.org/abs/2211.17192)
+- [vLLM 0.24.0 릴리스 (GitHub)](https://github.com/vllm-project/vllm/releases/tag/v0.24.0)

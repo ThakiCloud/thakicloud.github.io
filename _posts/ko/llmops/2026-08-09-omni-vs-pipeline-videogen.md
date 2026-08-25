@@ -108,3 +108,9 @@ Paxis처럼 여러 모델을 잇는 워크플로를 실행하는 계층에는 �
 옴니 모델이 상주 슬롯을 아껴 준다는 기대는 각 계층의 전문 모델이 옴니만큼 클 때만 성립합니다. 음성처럼 전문 모델이 작은 계층에서는 그 기대가 그대로 뒤집힙니다.
 
 이 글의 모든 수치는 2026년 8월 9일 NVIDIA H200 NVL 한 장, torch 2.11.0과 diffusers 0.39.0이라는 하나의 조합에서 측정한 값입니다. 옴니와 전사 전문가는 같은 프로세스 안에서 같은 파형을 받았습니다. 측정 스크립트와 원본 결과는 사내 저장소에 그대로 두었습니다.
+
+## 출처
+
+- [Wan2.2-T2V-A14B 모델 카드 (Hugging Face, Apache 2.0)](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)
+- [Qwen3-ASR-1.7B 모델 카드 (Hugging Face, Apache 2.0)](https://huggingface.co/Qwen/Qwen3-ASR-1.7B)
+- [NVIDIA H200 (H200 NVL 141GB HBM3e 스펙)](https://www.nvidia.com/en-us/data-center/h200/)

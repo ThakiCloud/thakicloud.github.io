@@ -119,3 +119,13 @@ Being able to download a model and being allowed to use it have split apart. Ten
 That means the order in which you evaluate a model needs to change too. Narrow candidates down by benchmark first and check the license last, and you end up reviewing every good candidate only to find you cannot use any of them. Filtering by license first and comparing quality among what is left saves time.
 
 The table and clause citations in this piece come from license files downloaded directly from each model's repository and cross-checked on August 9, 2026. Wherever a clause required interpretation, we reproduced the wording as written rather than offering our own reading.
+
+## Sources
+
+- [HunyuanVideo LICENSE (Tencent, EU/UK/Korea exclusion, 2024-12-03)](https://huggingface.co/Tencent/HunyuanVideo/raw/main/LICENSE)
+- [HunyuanVideo-I2V LICENSE (2025-03-05)](https://huggingface.co/Tencent/HunyuanVideo-I2V/raw/main/LICENSE)
+- [HunyuanVideo-1.5 LICENSE (2025-11-21)](https://huggingface.co/Tencent/HunyuanVideo-1.5/raw/main/LICENSE)
+- [MiniMax H3 community license (EU/UK/Korea/USA exclusion, $20M revenue gate, exclusive Hong Kong jurisdiction)](https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/main/LICENSE)
+- [LTX-2.3 LICENSE (Lightricks, no territory exclusion, $10M revenue gate, New York law, 2026-01-05)](https://huggingface.co/Lightricks/LTX-2.3/raw/main/LICENSE)
+- [CogVideoX LICENSE (THUDM, academic free, commercial registration, 1M monthly visits cap)](https://huggingface.co/THUDM/CogVideoX-5b/raw/main/LICENSE)
+- [Wan2.2-T2V-A14B model card (Apache 2.0)](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)

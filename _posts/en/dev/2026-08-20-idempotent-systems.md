@@ -92,3 +92,10 @@ Retry intervals matter just as much as the retry decision. A fixed interval with
 Everything above compresses down to one decision. Stop trying to achieve exactly-once delivery, assume at-least-once instead, and build a layer that guarantees the effect only lands once. That layer has two parts: an idempotency key the client generates and hands to the server, and a monotonic state transition baked into the data model. Neither is sufficient alone. A key store closes the partial-failure gap but adds an infrastructure dependency. A monotonic transition is sturdy without extra infrastructure but cannot cover failures spanning more than one system.
 
 The first thing worth auditing in an existing codebase is any logic split into three separate steps: read, decide in application code, then write. Wherever that pattern shows up is exactly where the next incident will start. The second thing to check is whether anything inside a retry loop gets regenerated on every attempt. Whether it is a random value or a timestamp, if any part of the key changes between retries, what you have is idempotency in name only. The last thing to do is go through every external integration and ask whether that API supports idempotency keys. If the answer is no, that integration is, right now, requiring a human to intervene every time it times out, whether anyone has noticed yet or not.
+
+## Sources
+
+- [Stripe: Idempotent Requests (safely retry with client-supplied keys)](https://docs.stripe.com/api/idempotent_requests)
+- [Stripe: Error Handling (connection errors make the outcome indeterminate)](https://docs.stripe.com/error-handling)
+- [AWS Architecture Blog: Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
+- [RFC 6585: 429 Too Many Requests and the Retry-After header](https://www.rfc-editor.org/rfc/rfc6585)

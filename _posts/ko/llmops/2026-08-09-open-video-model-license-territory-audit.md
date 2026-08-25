@@ -119,3 +119,13 @@ flowchart TD
 그렇다면 모델을 고르는 순서도 바뀌어야 합니다. 벤치마크로 후보를 좁힌 다음 라이선스를 확인하는 순서로는 좋은 후보를 다 검토한 뒤에 전부 못 쓴다는 결론에 도달합니다. 라이선스로 먼저 거르고 남은 것들 사이에서 품질을 비교하는 편이 시간을 아낍니다.
 
 이 글의 표와 조항 인용은 2026년 8월 9일에 각 모델 저장소의 라이선스 파일을 직접 내려받아 대조한 결과이며, 조항 해석이 필요한 부분은 해석 대신 문언을 그대로 옮겼습니다.
+
+## 출처
+
+- [HunyuanVideo LICENSE (Tencent, EU·UK·한국 제외 조항, 2024-12-03)](https://huggingface.co/Tencent/HunyuanVideo/raw/main/LICENSE)
+- [HunyuanVideo-I2V LICENSE (2025-03-05)](https://huggingface.co/Tencent/HunyuanVideo-I2V/raw/main/LICENSE)
+- [HunyuanVideo-1.5 LICENSE (2025-11-21)](https://huggingface.co/Tencent/HunyuanVideo-1.5/raw/main/LICENSE)
+- [MiniMax H3 커뮤니티 라이선스 (EU·UK·한국·미국 제외, 연매출 2천만 달러 게이트, 홍콩 전속 관할)](https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/main/LICENSE)
+- [LTX-2.3 LICENSE (Lightricks, 지역 제외 없음, 연매출 1천만 달러 게이트, 뉴욕주법, 2026-01-05)](https://huggingface.co/Lightricks/LTX-2.3/raw/main/LICENSE)
+- [CogVideoX LICENSE (THUDM, 학술 무료·상업 등록·월 100만 방문 상한)](https://huggingface.co/THUDM/CogVideoX-5b/raw/main/LICENSE)
+- [Wan2.2-T2V-A14B 모델 카드 (Apache 2.0)](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)

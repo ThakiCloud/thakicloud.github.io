@@ -108,3 +108,9 @@ Measured on the same card with the same waveform, the omni model cut transcripti
 The expectation that an omni model saves you resident slots only holds when every specialist in the stack is roughly as large as the omni model itself. In a layer like speech, where the specialists are small, that expectation flips.
 
 Every number in this piece was measured directly on a single NVIDIA H200 NVL on August 9, 2026, and the omni model and the transcription specialist received the exact same waveform inside the same process. The measurement scripts and raw results are kept in our internal repository.
+
+## Sources
+
+- [Wan2.2-T2V-A14B model card (Hugging Face, Apache 2.0)](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)
+- [Qwen3-ASR-1.7B model card (Hugging Face, Apache 2.0)](https://huggingface.co/Qwen/Qwen3-ASR-1.7B)
+- [NVIDIA H200 (H200 NVL 141GB HBM3e spec)](https://www.nvidia.com/en-us/data-center/h200/)

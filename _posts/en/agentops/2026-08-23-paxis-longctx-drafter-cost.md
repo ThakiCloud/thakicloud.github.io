@@ -148,3 +148,11 @@ These are measured at concurrency 1. It's the cost of a single dedicated stream,
 The drafter arm's max context is 245,760, not 1M. And the current arm runs vLLM 0.24.0 stable while the other two run nightly, so the only comparison with the engine version fully controlled for is between the middle and right arms. That's also the pair used when we talk about the drafter's contribution.
 
 Every number in this post comes from a ledger committed to the repository, and every calculation is owned by code.
+
+## Sources
+
+- [vLLM Automatic Prefix Caching (docs)](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/)
+- [vLLM Speculative Decoding (docs)](https://docs.vllm.ai/en/latest/features/speculative_decoding/)
+- [DFlash: lightweight draft model for speculative decoding (GitHub, DFlash 2 checkpoints)](https://github.com/z-lab/dflash)
+- [Fast Inference from Slow LLMs via Speculative Decoding (Leviathan et al., arXiv 2211.17192)](https://arxiv.org/abs/2211.17192)
+- [vLLM 0.24.0 release (GitHub)](https://github.com/vllm-project/vllm/releases/tag/v0.24.0)

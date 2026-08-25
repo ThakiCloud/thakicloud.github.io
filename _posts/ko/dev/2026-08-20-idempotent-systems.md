@@ -92,3 +92,10 @@ ebook_pages: 30
 지금까지 다룬 내용을 하나의 결정으로 압축하면 이렇게 됩니다. 정확히 한 번을 달성하려는 시도를 멈추고, 최소 한 번 전달을 전제로 한 번만 일어나게 만드는 장치를 얹으십시오. 그 장치는 두 층으로 구성됩니다. 클라이언트가 만들어 서버에 넘기는 멱등 키, 그리고 데이터 모델 자체에 박아 넣은 단조 상태 전이입니다. 어느 하나만으로는 부족합니다. 키 저장소는 부분 실패를 덮지만 인프라 의존성을 늘리고, 단조 상태 전이는 인프라 없이도 튼튼하지만 여러 시스템에 걸친 실패까지 막지는 못합니다.
 
 가장 먼저 점검할 지점은 코드베이스 안에서 조회한 뒤 판단하고 갱신하는 세 단계로 흩어진 로직입니다. 이 패턴이 있다면 그 자리가 바로 다음 장애가 시작될 지점입니다. 그다음으로 점검할 지점은 재시도 루프 안에서 매번 새로 만들어지는 값이 있는지입니다. 무작위 값이든 타임스탬프든, 재시도할 때마다 달라지는 값이 키의 일부라면 그 멱등성은 이름만 멱등성일 뿐입니다. 마지막으로 외부와 연동하는 모든 API를 두고 하나씩 물어야 합니다. 이 API는 멱등 키를 지원하는가. 답이 아니오라면, 그 연동은 지금 이 순간에도 타임아웃마다 사람의 눈을 요구하고 있는 셈입니다.
+
+## 출처
+
+- [Stripe: 멱등성으로 안전하게 재시도하기 (Idempotent Requests)](https://docs.stripe.com/api/idempotent_requests)
+- [Stripe: 에러 처리 (커넥션 에러는 결과를 불확정적으로 취급)](https://docs.stripe.com/error-handling)
+- [AWS Architecture Blog: Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
+- [RFC 6585: 429 Too Many Requests와 Retry-After 헤더](https://www.rfc-editor.org/rfc/rfc6585)
