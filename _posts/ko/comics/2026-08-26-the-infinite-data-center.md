@@ -13,7 +13,7 @@ tags:
   - sovereignty
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/the-infinite-data-center/strip.png
+image: /assets/images/posts/만화/the-infinite-data-center/strip.webp
 video: /assets/videos/posts/만화/the-infinite-data-center/comic.mp4
 audiobook: /assets/audio/posts/the-infinite-data-center/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
@@ -21,13 +21,13 @@ audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS �
 
 이번 주 뉴스는 사진 한 장으로 3D 장면을 만들어주는 오픈소스 도구, img2threejs입니다. 함께 따라오는 '디지털 트윈'은 실제 시설의 가상 복제본이에요. 전제는 단순합니다. 사진이 보여준 것을 렌더링하면 된다는 것. 그런데 3D 장면에는 사진이 못 보여준 공간이 있어요. 물체 뒤, 벽 안쪽 같은. 추론 기반 도구는 그 공간을 추측으로 채웁니다. 서버실 사진을 클라우드에 보냈다가 무한대로 돌아오는 일이 어떤지, 이 만화가 보여줍니다.
 
-![3D로 서버실이 무한대](/assets/images/posts/만화/the-infinite-data-center/strip.png)
+![3D로 서버실이 무한대](/assets/images/posts/만화/the-infinite-data-center/strip.webp)
 
 > 원 뉴스: [RT @NickDevFE: img2threejs 1.5.1 is out 🚀](https://x.com/hjguyhan/status/2092001184601264255) · twitter
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/the-infinite-data-center/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/the-infinite-data-center/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/the-infinite-data-center/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/the-infinite-data-center/comic.ko.vtt" default>
 </video>
