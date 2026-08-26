@@ -60,6 +60,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 악순환을 끊는 방법은 단순합니다. 정직한 보고의 비용을 낮추는 것입니다. 낮추는 방법이 추상적인 캠페인이나 포스터가 아니라, 실제로 회의가 열리는 방식과 문서가 쓰이는 방식이라는 게 다음 두 절의 핵심입니다.
 
+![postmortem-culture-engineering 슬라이드 1](/assets/images/postmortem-culture-engineering-slide-01.webp)
+
 ## 사실과 판단을 분리하는 훈련, 타임라인이 정보 시스템인 이유
 
 포스트모템 문서를 처음 써보는 팀은 대개 두 극단 중 하나에 빠집니다. 너무 짧아서 서버가 죽어서 재시작했다로 끝나는 문서는 다음에 같은 일이 생겨도 아무 도움이 되지 않습니다. 반대로 로그를 통째로 복사해 넣고 관련 없는 배경 설명을 몇 페이지씩 붙인 문서는 아무도 끝까지 읽지 않습니다. 좋은 포스트모템은 이 중간 지점에 있습니다. 읽는 사람이 오 분 안에 무슨 일이 있었는지 파악하고, 필요하면 더 깊이 파고들 수 있는 구조여야 합니다.
@@ -72,6 +74,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 결국 타임라인 작성법은 문서 스타일의 문제가 아니라 정보를 오염 없이 다음 사람에게 전달하는 파이프라인 설계의 문제입니다. 사실과 판단을 섞는 순간 그 파이프라인에 잡음이 섞이고, 잡음이 섞인 정보는 다음 의사결정의 품질을 떨어뜨립니다.
 
+![postmortem-culture-engineering 슬라이드 2](/assets/images/postmortem-culture-engineering-slide-02.webp)
+
 ## 문화는 선언이 아니라 회의 시작 삼 분의 행동이다
 
 우리 팀은 블레임리스 문화입니다라는 문장을 사내 위키에 적어 놓는다고 그 문화가 만들어지지 않습니다. 문화는 선언이 아니라 반복된 행동의 축적이고, 그 행동 중 가장 강력한 신호는 포스트모템 회의가 시작되는 첫 삼 분에 나옵니다. 그리고 이 삼 분을 결정하는 사람은 대개 그 방에서 가장 직급이 높은 사람입니다.
@@ -81,6 +85,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 반복이 중요한 이유는 한 번 말했다고 팀 전체가 그 원칙을 내재화하지 않기 때문입니다. 특히 새로 합류한 팀원이나 과거 다른 조직에서 비난 문화를 경험한 팀원에게는 이 반복이 매번 필요합니다. 이들에게 침묵은 안전한 디폴트이고, 그 디폴트를 깨려면 리더가 매 회의마다 안전하다는 신호를 새로 보내야 합니다.
 
 리더가 자기 취약성을 먼저 드러내는 것도 강력한 신호입니다. 저도 몇 년 전에 비슷한 실수로 장애를 냈습니다, 그때 배운 건 이거였습니다라고 말하는 리더 아래에서는 팀원들이 자기 실수를 훨씬 편하게 인정합니다. 반대로 리더가 한 번도 자기 실수를 인정하지 않는 조직에서는 실수를 인정하는 행위 자체가 약점을 드러내는 위험한 행동으로 여겨집니다. 리더의 언행이 곧 조직 전체가 학습하는 안전의 기준선이 됩니다.
+
+![postmortem-culture-engineering 슬라이드 3](/assets/images/postmortem-culture-engineering-slide-03.webp)
 
 ## 좋은 의도가 실행으로 이어지지 않는 이유
 
@@ -97,6 +103,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 | 우선순위 | 전체 동일 우선순위, 백로그에 방치 | 심각도 기반 순위, 기한 명시 |
 
 이 표가 보여주는 건 결국 하나입니다. 좋은 의도는 구체적인 구조로 감싸지 않으면 증발합니다. 액션 아이템은 회의가 끝난 순간의 감정이 아니라, 몇 주 뒤 아무도 그 회의를 기억하지 못하는 시점에도 스스로 실행될 수 있는 형태로 적혀야 합니다.
+
+![postmortem-culture-engineering 슬라이드 4](/assets/images/postmortem-culture-engineering-slide-04.webp)
 
 ## 정보 시스템으로서의 조직 설계
 
@@ -115,16 +123,3 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/postmortem-culture-engineering/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![postmortem-culture-engineering 슬라이드 1](/assets/images/postmortem-culture-engineering-slide-01.webp)
-
-![postmortem-culture-engineering 슬라이드 2](/assets/images/postmortem-culture-engineering-slide-02.webp)
-
-![postmortem-culture-engineering 슬라이드 3](/assets/images/postmortem-culture-engineering-slide-03.webp)
-
-![postmortem-culture-engineering 슬라이드 4](/assets/images/postmortem-culture-engineering-slide-04.webp)
-

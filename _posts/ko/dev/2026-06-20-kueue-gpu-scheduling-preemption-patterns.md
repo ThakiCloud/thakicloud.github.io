@@ -79,6 +79,8 @@ spec:
 
 Cohort는 쿼터를 공유하는 ClusterQueue 그룹입니다. 같은 Cohort에 묶인 큐들은 서로 쿼터를 빌려 쓸 수 있습니다.
 
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 1]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.webp' | relative_url }})
+
 ## 우선순위 설계 패턴
 
 GPU 클러스터에서 실용적인 우선순위 계층은 보통 세 단계로 나뉩니다.
@@ -144,6 +146,8 @@ inference-team이 새 작업을 제출하면 Kueue가 training-team에서 빌려
 
 실제로 PodDisruptionBudget과의 상호작용에서 예상치 못한 동작이 나올 수 있습니다. 선점 시 Pod 종료 유예 시간(terminationGracePeriodSeconds)도 고려해야 합니다. 체크포인트를 저장하는 데 필요한 시간보다 짧으면 체크포인트가 유실됩니다.
 
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 2]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.webp' | relative_url }})
+
 ## GPU 노드 보호
 
 CPU 워크로드가 GPU 노드에 스케줄되는 걸 막는 설정입니다. GPU 노드에 taint를 달고, GPU 워크로드에만 toleration을 붙입니다.
@@ -198,6 +202,8 @@ spec:
 
 MultiKueue Dispatcher를 통해 분산 알고리즘을 커스터마이징할 수 있습니다. 빌트인 알고리즘 외에 사용자 정의 디스패처를 플러그인 형태로 연결하는 방식입니다.
 
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 3]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.webp' | relative_url }})
+
 ## 협력적 선점(Cooperative Preemption)과 체크포인트
 
 2026년 Kueue 로드맵에서 주목할 기능이 협력적 선점입니다. 체크포인트를 구현한 워크로드는 선점 신호를 받았을 때 즉시 종료되지 않고 상태를 저장한 뒤 종료할 수 있습니다.
@@ -225,6 +231,8 @@ signal.signal(signal.SIGTERM, checkpoint_and_exit)
 
 **함정 3: LocalQueue와 ClusterQueue를 혼동합니다.** LocalQueue는 네임스페이스 스코프, ClusterQueue는 클러스터 스코프입니다. 네임스페이스별 팀 격리는 LocalQueue와 namespaceSelector 조합으로 구현합니다.
 
+![kueue-gpu-scheduling-preemption-patterns 슬라이드 4]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.webp' | relative_url }})
+
 ## 정리
 
 Kueue는 Kubernetes 위에서 GPU 쿼터를 관리하는 몇 안 되는 프로덕션급 도구입니다. ClusterQueue-Cohort-Preemption 조합으로 팀 간 공정한 GPU 분배를 코드로 표현할 수 있습니다. 선점 정책은 반드시 실제 워크로드로 검증하고, 체크포인트 저장 시간을 terminationGracePeriodSeconds 안에 맞춰야 손실 없는 선점이 됩니다.
@@ -240,16 +248,3 @@ Kueue는 Kubernetes 위에서 GPU 쿼터를 관리하는 몇 안 되는 프로�
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/kueue-gpu-scheduling-preemption-patterns/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 1]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-01.webp' | relative_url }})
-
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 2]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-02.webp' | relative_url }})
-
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 3]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-03.webp' | relative_url }})
-
-![kueue-gpu-scheduling-preemption-patterns 슬라이드 4]({{ '/assets/images/kueue-gpu-scheduling-preemption-patterns-slide-04.webp' | relative_url }})
-

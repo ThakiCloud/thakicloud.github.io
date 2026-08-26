@@ -48,6 +48,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 여기에 더 무거운 벽이 하나 더 서 있습니다. 전력입니다. 중앙일보와 조세일보가 나란히 짚었듯, AI 경쟁의 축은 반도체 확보에서 데이터센터 운영으로 이미 넘어갔습니다. 정부는 2029년까지 550조 원, 2035년까지 1000조 원이 넘는 AI 데이터센터 투자를 유치하겠다고 목표를 세웠고, 그 가운데 18.4기가와트 목표의 81퍼센트를 SK그룹이 맡는 구조입니다. 문제는 서울과 경기 지역이 관련 전력 계약의 78.7퍼센트를 차지하는데 정작 핵심 부지는 포화에 가깝다는 점입니다. GPU를 사 오는 일보다 계통 연계와 변전소 증설 인허가가 더 긴 리드타임을 요구합니다. 액침냉각 같은 액체 냉각을 도입하면 냉각에 드는 전력을 90퍼센트 넘게 줄일 수 있다지만, 이런 설비를 24시간 무중단으로 돌릴 고숙련 운영 인력을 3년에서 5년 이상 붙잡아 두기가 쉽지 않다는 인력난이 또 다른 병목으로 지목됩니다. 그래서 이미 대규모 송전 권리를 쥔 옛 비트코인 채굴업체들이 AI 인프라 공급자로 다시 값이 매겨지고 있습니다. 코어사이언티픽과 아이렌, 테라울프 같은 기업이 하이퍼스케일러와 장기 전력 계약을 맺으면서, 시장은 이들을 채굴 채산성이 아니라 확보한 전력 용량, 곧 메가와트 단위로 다시 평가하기 시작했습니다. 위층에서 진짜 희소한 자원은 이제 칩이 아니라 전기입니다.
 
+![ai-price-scissors-infra-vs-inference 슬라이드 1](/assets/images/ai-price-scissors-infra-vs-inference-slide-01.webp)
+
 ## 아래층: 답변의 값은 점점 싸집니다
 
 같은 날, 아래층에서는 정확히 반대되는 힘이 작동했습니다. 딥시크의 인하는 일회성 프로모션이 아니라 영구 정책이었고, 그 파장은 통계로 잡혔습니다. 버셀과 오픈라우터 같은 개발자 플랫폼에서 중국계 모델의 트래픽 점유율이 단기간에 두 자릿수로 뛰었고, 린디 같은 실제 스타트업은 앤스로픽에서 딥시크로 서비스를 통째로 갈아탔습니다. 가격에 민감한 고객층은 이미 움직이고 있습니다.
@@ -56,11 +58,15 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 가위질이 실리콘밸리만의 이야기가 아니라는 점이 국내 뉴스에서 드러납니다. 하정우 씨는 울산이 제조 산업 데이터를 많이 축적한 만큼 산업 AI 전환의 가능성이 크다고 말했고, 아이티센코어는 국민은행과 손잡았으며 SK AX는 제조 현장을 겨냥한 풀스택 전환을 내놓았습니다. LG는 물리 법칙을 이해하는 월드모델 개발에 나섰고, 알리페이는 결제와 신뢰, 개방을 앞세워 에이전트 시대의 승부수를 던졌습니다. 제조와 금융과 공공이 저마다 AI를 실제 업무에 밀어 넣기 시작했다는 뜻입니다. 문제는 이들이 AI를 도입하는 그 순간, 방금 살펴본 두 날 사이에 그대로 끼어든다는 데 있습니다. 위로는 인프라 자본비용이, 아래로는 모델 원가와 주권 리스크가 동시에 이들을 누릅니다.
 
+![ai-price-scissors-infra-vs-inference 슬라이드 2](/assets/images/ai-price-scissors-infra-vs-inference-slide-02.webp)
+
 ## 왜 이 둘은 같은 힘일까요
 
 모순처럼 보이던 두 방향은 사실 같은 뿌리에서 갈라집니다. AI 수요가 폭발하면서 상류에 있는 반도체와 전력의 희소성이 값을 밀어 올립니다. 동시에 그 수요를 잡으려는 모델 공급자들의 경쟁이 하류의 마진을 무너뜨립니다. 위로 오르는 자본비용과 아래로 내리는 판매가격이 같은 수요에서 태어난 쌍둥이라는 뜻입니다. 그래서 이 구도는 가위를 닮았습니다. 두 날은 반대로 움직이지만 하나의 축에 묶여 있습니다.
 
 기업이 서 있는 자리는 정확히 그 가위의 한가운데입니다. 인프라를 직접 지으려면 폭등하는 위층 비용을 감당해야 하고, 모델을 외부 API로만 쓰려면 남의 가격 정책과 데이터 주권 리스크에 몸을 맡겨야 합니다. 게다가 딥시크는 중국계 모델이고 메타는 폐쇄형 유료로 돌아섰습니다. 금융과 공공처럼 망분리와 데이터 주권 규제가 엄격한 영역에서는 저 싼 값을 그대로 가져다 쓰기 어렵습니다. 값이 싸다는 사실과 그 값을 안전하게 쓸 수 있다는 사실은 전혀 다른 문제입니다.
+
+![ai-price-scissors-infra-vs-inference 슬라이드 3](/assets/images/ai-price-scissors-infra-vs-inference-slide-03.webp)
 
 ## 가위 한가운데에서 쥐어야 할 손잡이
 
@@ -396,6 +402,8 @@ ThakiCloud가 Agent-Native Cloud로 만든 Paxis는 바로 이 네 손잡이를 
 </script>
 {% endraw %}
 
+![ai-price-scissors-infra-vs-inference 슬라이드 4](/assets/images/ai-price-scissors-infra-vs-inference-slide-04.webp)
+
 ## 가위는 벌어질수록 손잡이가 중요해집니다
 
 오늘의 두 숫자는 앞으로도 더 멀리 벌어질 가능성이 큽니다. 메모리 공급이 2028년까지 타이트하고 전력 병목은 몇 년의 인허가를 요구하니 위층은 쉽게 내려오지 않습니다. 반대로 자체 칩과 초저가 모델의 물결은 아래층을 계속 끌어내립니다. 이럴수록 승부는 두 날 자체가 아니라 그 사이를 쥐는 손잡이에서 갈립니다. 랙 값과 추론 값이라는 두 개의 숫자를 읽을 때, 그 사이에 놓인 스케줄링과 라우팅과 주권과 안전을 함께 읽어야 하는 이유입니다. 오늘의 뉴스는 어느 모델이 이겼는지를 묻지 않았습니다. 대신 그 모델을 굴리는 비용과 그 비용을 다루는 방식을 물었습니다. 가위의 한가운데에서 흔들리지 않으려면, 먼저 손잡이를 어디에 두었는지부터 확인해야 합니다.
@@ -416,16 +424,3 @@ ThakiCloud가 Agent-Native Cloud로 만든 Paxis는 바로 이 네 손잡이를 
 - [메타의 새 AI 칩, 9월부터 양산 시작](https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/) · TechCrunch
 - [스타트업 린디, 클로드를 버리고 딥시크로 전환해 수백만 달러 절감](https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/) · The Decoder
 - [과기정통부·KISA, 'AI 보안 레드티밍 가이드' 발간](https://www.digitaltoday.co.kr/news/articleView.html?idxno=682799) · 디지털투데이
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-price-scissors-infra-vs-inference 슬라이드 1](/assets/images/ai-price-scissors-infra-vs-inference-slide-01.webp)
-
-![ai-price-scissors-infra-vs-inference 슬라이드 2](/assets/images/ai-price-scissors-infra-vs-inference-slide-02.webp)
-
-![ai-price-scissors-infra-vs-inference 슬라이드 3](/assets/images/ai-price-scissors-infra-vs-inference-slide-03.webp)
-
-![ai-price-scissors-infra-vs-inference 슬라이드 4](/assets/images/ai-price-scissors-infra-vs-inference-slide-04.webp)
-

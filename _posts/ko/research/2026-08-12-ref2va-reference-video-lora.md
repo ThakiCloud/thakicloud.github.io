@@ -49,6 +49,8 @@ flowchart LR
 
 첫째, Diffusers의 Wan transformer는 per-frame이 아니라 per-token timestep을 받습니다. 프레임당 하나가 아니라 patch 토큰당 하나, 그것도 frame-major 순서의 (batch, n_tokens) 텐서여야 합니다. 프레임 단위 텐서를 넣으면 조용히 기능 감지에 실패하고 broadcast로 떨어집니다. 둘째, bf16 체크포인트에서도 time_embedder와 scale_shift_table, norm 계층은 라이브러리 계약상 fp32로 남습니다. 일괄 bf16 강제는 modulation을 망가뜨립니다. 셋째, MoE 라우팅은 토큰이 아니라 스텝 단위입니다. 레퍼런스의 anchor timestep 0.999는 라우팅을 바꾸지 않고 timestep 임베딩의 태그로만 작동합니다. 대신 uniform 샘플링에서 high-noise expert가 전체 스텝의 12.5%만 받는 비대칭이 생깁니다. 단일 expert였던 원 레시피에는 없던 변수입니다.
 
+![ref2va-reference-video-lora 슬라이드 1](/assets/images/ref2va-reference-video-lora-slide-01.webp)
+
 ## 데이터셋: 합성 인물로 초상권 없이
 
 공개 가능한 실험을 위해 subject는 완전 합성 인물 두 명으로 만들었습니다. 생성 클립 하나에서 스틸 여섯 장을 뽑고, 그 스틸을 I2V로 애니메이션해 인물당 여덟 클립을 얻는 방식입니다. 전 과정이 사내 플랫폼 위에서 돌았고 실존 인물은 어디에도 없습니다. 학습 데이터 자체의 identity 자기유사도는 ArcFace 기준 0.712와 0.606으로, 이것이 학습이 도달할 수 있는 천장 참조값이 됩니다.
@@ -68,6 +70,8 @@ flowchart TD
     E --> F["프레임 규칙 검증 게이트"]
     F --> G["학습"]
 ```
+
+![ref2va-reference-video-lora 슬라이드 2](/assets/images/ref2va-reference-video-lora-slide-02.webp)
 
 ## 결과: identity는 크게 얻고, 추종을 내준다
 
@@ -98,11 +102,15 @@ p 스윕이 이 메커니즘의 성격을 알려 줍니다. 조건화를 100%로
 
 정리하면 이렇습니다. 16클립 규모의 합성 데이터셋에서 이 레시피는 대표 약속인 subject 일관성을 확실히 전달하고, 그 대가로 측정 가능한 프롬프트 추종 비용을 청구합니다. 그 거래가 수용 가능한지는 용도에 달렸고, 위 전선 그래프가 그 판단의 결정면입니다. 아직 안 해 본 완화책도 남아 있습니다. 텍스트 쪽 guidance 조정, p=0.85 재학습, expert 균형 학습 같은 것들이며 전부 미측정 상태로 명시해 둡니다.
 
+![ref2va-reference-video-lora 슬라이드 3](/assets/images/ref2va-reference-video-lora-slide-03.webp)
+
 ## 어디에 쓰는 기술인가
 
 이 기술의 수요처는 한 인물이나 캐릭터를 여러 클립에 걸쳐 계속 등장시켜야 하는 모든 곳입니다. 가장 뚜렷한 시장은 버추얼 인플루언서와 브랜드 마스코트입니다. 얼굴 스틸 십수 장으로 정체성을 학습해 두면 장면과 의상이 바뀌어도 같은 인물이 유지되어야 하는데, 실제로 버추얼 인플루언서 플랫폼들이 이 LoRA 학습 방식을 표준 워크플로로 문서화하고 있습니다. 캠페인 규모가 수십에서 수백 클립으로 커질수록 클립마다 정체성이 흔들리는 비용이 누적되므로, 학습으로 한 번 고정해 두는 가치가 커집니다.
 
 에피소드형 콘텐츠도 같은 구조의 문제입니다. 웹툰이나 시리즈물을 영상화할 때 100화가 넘는 분량에서 캐릭터가 동일해야 하고, 이때 캐릭터 시트와 LoRA 앵커링을 결합하는 파이프라인이 쓰입니다. 얼굴이 아닌 대상에도 적용됩니다. 제품, 로고, 특정 아트 스타일, 나아가 캐릭터의 시그니처 동작까지 학습으로 바인딩할 수 있는데, 이 영역은 얼굴 임베딩에 특화된 zero-shot 방식이 상대적으로 약한 자리입니다. 그리고 실무적으로 무시할 수 없는 장점이 하나 더 있습니다. 학습을 마친 어댑터는 추론 때 레퍼런스 이미지가 필요 없습니다. 대량 생산 파이프라인에서 클립마다 레퍼런스 자산을 붙여 관리하는 오버헤드가 사라지고, 스타일 LoRA나 모션 LoRA와의 조합도 자유롭습니다.
+
+![ref2va-reference-video-lora 슬라이드 4](/assets/images/ref2va-reference-video-lora-slide-04.webp)
 
 ## 학습 없이도 되는 시대에, 왜 학습인가
 
@@ -134,16 +142,3 @@ p 스윕이 이 메커니즘의 성격을 알려 줍니다. 조건화를 100%로
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ref2va-reference-video-lora/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![ref2va-reference-video-lora 슬라이드 1](/assets/images/ref2va-reference-video-lora-slide-01.webp)
-
-![ref2va-reference-video-lora 슬라이드 2](/assets/images/ref2va-reference-video-lora-slide-02.webp)
-
-![ref2va-reference-video-lora 슬라이드 3](/assets/images/ref2va-reference-video-lora-slide-03.webp)
-
-![ref2va-reference-video-lora 슬라이드 4](/assets/images/ref2va-reference-video-lora-slide-04.webp)
-

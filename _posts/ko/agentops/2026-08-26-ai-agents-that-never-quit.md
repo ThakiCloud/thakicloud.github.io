@@ -49,6 +49,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/ai-agents-that-neve
 
 클라우드보안연합 조사는 그 배경을 설명합니다. 기업 82%는 보안과 IT 부서가 파악하지 못한 에이전트를 발견했고, 65%는 에이전트 사고를 경험했습니다. 조직이 모르는 에이전트가 조직의 데이터를 보는 구조에서는, 사고는 시간 문제입니다. 그리고 가장 눈이 가는 숫자는 마지막입니다. 에이전트에 대한 공식 폐기 절차를 갖춘 기업이 21%에 불과하다는 것입니다. 5개 중 4개는 '끝내는 법'을 정해 놓지 못한 채 에이전트를 굴리고 있는 것입니다.
 
+![ai-agents-that-never-quit 슬라이드 1](/assets/images/ai-agents-that-never-quit-slide-01.webp)
+
 ## 만드는 비용이 돈이 아니게 된 날
 
 IT 시스템의 비용은 수십 년간 '만드는 데' 있었습니다. 설계, 개발, 배포입니다. 예산은 돌아가게 만드는 쪽으로 흘러갔고 운영비는 그다음 이야기였습니다. 에이전트는 이 곡선을 뒤집었습니다. 만들기는 거의 무료에 가깝고 비싸진 것이 남기는 것입니다. 부서에서 만든 에이전트가 쓰이지 않게 되면, 그 에이전트는 사라지지 않고 권한을 붙든 채 서버실에 남습니다.
@@ -56,6 +58,8 @@ IT 시스템의 비용은 수십 년간 '만드는 데' 있었습니다. 설계,
 가트너는 6월 'AI Agents Are Technical Debt'라는 제목의 보고서에서, 지금 구축하는 에이전트가 곧 미래의 기술부채가 될 수 있다고 경고했습니다. 그리고 에이전트 확장은 CFO가 이끄는 거버넌스 파일럿이 먼저 되어야 한다고 덧붙였습니다. 왜 만들었는지, 누가 책임지는지, 실제로 가치를 만드는지, 운영비용은 얼마인지를 묻는 절차가 빠지면 에이전트는 빚으로 남는다는 것입니다.
 
 시장은 이미 움직이고 있습니다. 스노플레이크는 블랙햇 2026에서 AI 게이트웨이와 에이전트 보안 기능을 내놓았고 데이터브릭스는 유나이티드 캐탈로그 기반의 대규모 에이전트 거버넌스를 강화하고 있습니다. 앤트로픽은 에이전트 보안 백서와 제로트러스트 적용을 잇달아 발표했습니다. 8월 25일 The New Stack이 보도한 IDC 조사도 같은 그림입니다. 대부분의 기업은 에이전트를 배포하고 있지만, 제어와 거버넌스, 감독 역량은 뒤처져 있다는 것입니다. 에이전트 거버넌스 인프라에 대한 투자가 전 세계적으로 가속되는 가운데, 무게중심은 '에이전트를 어떻게 만들까'에서 '에이전트를 어떻게 다룰까'로 이동하고 있고, 대장과 권한, 퇴직까지 직원처럼 관리하는 에이전트 운영이라는 독립된 층이 신시장으로 부상하고 있습니다.
+
+![ai-agents-that-never-quit 슬라이드 2](/assets/images/ai-agents-that-never-quit-slide-02.webp)
 
 ## 한국에서 '퇴직 절차'가 가장 무거운 이유
 
@@ -67,7 +71,10 @@ IT 시스템의 비용은 수십 년간 '만드는 데' 있었습니다. 설계,
 
 국내 기업에 주는 함의는 명확합니다. 에이전트 도입 검토에서 감사, 권한 수명, 수명 관리가 전제 조건이 된다는 뜻입니다. 폐기 절차가 21%인 것은 세계 평균이고 한국의 금융과 공공이 그보다 높을 것이라고 기대하기는 어렵습니다. '끝낼 수 있는 구조'가 앞으로의 검토에서 기업을 가를 기준이 될 가능성이 큽니다.
 
+![ai-agents-that-never-quit 슬라이드 3](/assets/images/ai-agents-that-never-quit-slide-03.webp)
+
 ## 에이전트를 '인사'처럼 대하는 법
+![ai-agents-that-never-quit 슬라이드 4](/assets/images/ai-agents-that-never-quit-slide-04.webp)
 
 결국 조직이 에이전트를 인사처럼 대한다는 것은 무엇을 뜻할까요. 최소한의 답은 네 가지입니다. 누가 존재하는지, 각각에게 어떤 권한이 있는지, 모든 행동을 추적할 수 있는지, 자율의 범위가 정해져 있는지. 이 네 가지를 갖춘 조직에서만 '해고'가 가능한 것입니다. 고객의 자동이체 요청을 끝까지 처리하는 상담 에이전트든, 관제실에서 경보를 분류하는 에이전트든, '자동으로 해도 되는지'와 '사람이 서명해야 하는지'를 판단에 맡기지 않고 정책으로 정해 둔 조직이 위험을 통제합니다.
 
@@ -89,16 +96,3 @@ IT 시스템의 비용은 수십 년간 '만드는 데' 있었습니다. 설계,
 - The New Stack, [AI agents are spreading fast. Their rules are still catching up.](https://thenewstack.io/enterprise-ai-agent-governance/)
 - THE Biz, [정부가 키우는 'AI 보안요원'… 해커 잡다 서버 막으면 어쩌나](http://www.the-biz.co.kr/news/articleView.html?idxno=726828)
 - 디지털투데이, [유베이스, 상담 업무 직접 수행하는 AI 에이전트 상용화](https://www.digitaltoday.co.kr/news/articleView.html?idxno=695633)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-agents-that-never-quit 슬라이드 1](/assets/images/ai-agents-that-never-quit-slide-01.webp)
-
-![ai-agents-that-never-quit 슬라이드 2](/assets/images/ai-agents-that-never-quit-slide-02.webp)
-
-![ai-agents-that-never-quit 슬라이드 3](/assets/images/ai-agents-that-never-quit-slide-03.webp)
-
-![ai-agents-that-never-quit 슬라이드 4](/assets/images/ai-agents-that-never-quit-slide-04.webp)
-

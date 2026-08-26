@@ -59,6 +59,8 @@ flowchart LR
 
 계열별로 채점했습니다. 서로 다른 표적끼리 예측값을 한 통에 부어 놓고 상관을 재면 표적 간 차이가 신호를 만들어 냅니다. 실제 의사결정은 하나의 표적, 하나의 화합물 계열 안에서 이뤄지므로 채점도 그 단위로 했습니다.
 
+![boltz2-fep-benchmark-shrinkage 슬라이드 1](/assets/images/boltz2-fep-benchmark-shrinkage-slide-01.webp)
+
 ## 결과 1: 순위는 대등했습니다
 
 계열 안에서 어느 화합물이 더 센지 맞히는 능력을 순위 상관으로 재면 이렇습니다.
@@ -69,6 +71,8 @@ flowchart LR
 | Kendall tau | 0.519 | 0.524 |
 
 시스템별 중앙값 기준으로 사실상 구분되지 않습니다. 리드 최적화 단계에서 다음 라운드에 무엇을 합성할지 고르는 작업은 절대값이 아니라 순서로 이뤄지므로, 이 용도라면 두 방법이 같은 자리에 있다고 읽어도 됩니다.
+
+![boltz2-fep-benchmark-shrinkage 슬라이드 2](/assets/images/boltz2-fep-benchmark-shrinkage-slide-02.webp)
 
 ## 결과 2: RMSE 우위는 정확도가 아닙니다
 
@@ -89,6 +93,8 @@ Boltz-2의 중앙값은 0.639입니다. 실험이 보여주는 폭의 3분의 2�
 
 그래서 pairwise RMSE 하나로 이 두 방법을 비교하면 속습니다. 순위가 대등하다는 앞의 결론은 유지되지만, 그 근거로 RMSE를 인용해서는 안 됩니다.
 
+![boltz2-fep-benchmark-shrinkage 슬라이드 3](/assets/images/boltz2-fep-benchmark-shrinkage-slide-03.webp)
+
 ## 결과 3: 비용은 자릿수가 다릅니다
 
 비용을 비교하려면 단위부터 맞춰야 합니다. Boltz-2는 **리간드당** 비용이 듭니다. 화합물 하나를 한 번 돌리면 절대값이 나옵니다. FEP+는 **엣지당** 비용이 듭니다. 리간드 쌍 사이의 변환 하나가 상대값을 주고, 그것들을 이어 붙여 리간드별 값을 만듭니다.
@@ -100,6 +106,8 @@ Boltz-2 쪽은 저희 실측입니다. H200 한 장에서 케이스당 15.6초, 
 가장 방어하기 쉬운 숫자를 헤드라인으로 씁니다. 상용 엔진 중 스스로 가장 빠르다고 광고하는 설정, 리간드당 10분을 기준으로 하면 **38.5배**입니다. 널리 쓰이는 오픈소스 구현의 기본 설정(엣지당 3시간)으로 계산하면 1,291배까지 올라갑니다. 유리한 쪽을 고르지 않고 가장 낮은 배수를 택한 이유는 그쪽이 반박하기 어렵기 때문입니다.
 
 다만 비용과 정확도는 분리되지 않습니다. 앞서 확인한 순위 대등은 Ross 등의 프로토콜과 비교한 결과이고, 그 설정은 통상 생산 환경의 네 배가량 되는 샘플링을 씁니다. 싼 FEP가 싼 이유 중 하나는 덜 뽑기 때문입니다. 그러니 38.5배와 순위 대등을 한 문장에 나란히 놓는 것은 정확하지 않습니다. 순위가 비긴 상대는 비싼 쪽입니다.
+
+![boltz2-fep-benchmark-shrinkage 슬라이드 4](/assets/images/boltz2-fep-benchmark-shrinkage-slide-04.webp)
 
 ## 결과 4: 오염 반론을 실제로 재봤습니다
 
@@ -172,16 +180,3 @@ python corpus_proximity.py --fetch && python corpus_proximity.py --analyze
 - [Boltz-2: Towards Accurate and Efficient Binding Affinity Prediction](https://www.biorxiv.org/content/10.1101/2025.06.14.659707v1) (Boltz-2 프리프린트)
 - [FEP+ | Schrödinger](https://www.schrodinger.com/platform/products/fep/) (본문에서 비교 대상으로 삼은 상용 FEP 구현)
 - [PubChem](https://pubchem.ncbi.nlm.nih.gov/) (오염 반론을 검증할 때 리간드를 조회한 데이터베이스)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![boltz2-fep-benchmark-shrinkage 슬라이드 1](/assets/images/boltz2-fep-benchmark-shrinkage-slide-01.webp)
-
-![boltz2-fep-benchmark-shrinkage 슬라이드 2](/assets/images/boltz2-fep-benchmark-shrinkage-slide-02.webp)
-
-![boltz2-fep-benchmark-shrinkage 슬라이드 3](/assets/images/boltz2-fep-benchmark-shrinkage-slide-03.webp)
-
-![boltz2-fep-benchmark-shrinkage 슬라이드 4](/assets/images/boltz2-fep-benchmark-shrinkage-slide-04.webp)
-

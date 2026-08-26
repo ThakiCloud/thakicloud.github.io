@@ -48,6 +48,8 @@ AI의 단가는 매일 낮아집니다. 싸지면 더 쓰고 더 쓰면 총량�
 
 단가가 떨어지는 속도는 예상보다 빠릅니다. 테크크런치 2026 스타트업 배틀필드 200에 선정된 국내 GPU 클라우드 스타트업 에이아이브는 RTX급 GPU와 유휴 데이터센터급 GPU를 하나의 운영 환경으로 합쳐 추론 인프라를 제공합니다. 이미 30곳 이상의 유료 고객 사이트를 운영 중이고 퍼블릭 클라우드 대비 40~80% 저렴한 추론 비용을 주장합니다. 이 주장이 절반만 사실이어도, 추론의 '경제 개선'은 이미 상당히 일어난 셈입니다. 추론 인프라 시장의 갈라진 지형도 같은 방향을 가리킵니다. 한쪽은 대규모 데이터센터 중심의 네오클라우드이고 다른 한쪽은 유휴 GPU를 서비스화하는 분산 아그리게이션입니다. 방향은 달라져도 전제는 하나입니다. 토큰 단가가 계속 내려가고 내려간 만큼 더 많은 워크로드가 추론 위에 오른다는 것입니다. 제본스 역설의 전제는 완성됐습니다. 이제 남은 것은 후제, 즉 총 소비가 불어나는 일입니다.
 
+![token-deflation-bill-inflation 슬라이드 1](/assets/images/token-deflation-bill-inflation-slide-01.webp)
+
 ## 싼 토큰은 어디에 쓰이나
 
 기업은 싼 토큰을 그대로 두지 않습니다. 에이전트에게 줍니다.
@@ -60,6 +62,8 @@ SK AX와 SAP는 독일 발도르프의 SAP 본사에서 'AI 네이티브 엔터�
 
 국책 차원도 같은 길을 걷습니다. ETRI는 창립 50주년 기념 ETRI Conference에서 '모두의 AI 과학자(Co-Scientist)'를 핵심 컨셉으로 내세웠습니다. 가설, 데이터 분석, 실험, 검증 전 과정을 지원하는 멀티모달 파운데이션 모델이며 과기정통부와 ETRI, KISTI가 1,500억 원을 투입해 2031년까지 K-알파폴드 상용화를 목표로 합니다. 배경은 2035년까지 AI 데이터센터에 1,000조 원 이상을 투자하고 GPU를 15배 확장한다는 국가 목표입니다. 싼 토큰의 홍수는 하나의 챗봇에 머무르지 않습니다. ERP 안으로, 연구실 안으로, 그리고 국책 인프라 계획으로 빨려 들어갑니다.
 
+![token-deflation-bill-inflation 슬라이드 2](/assets/images/token-deflation-bill-inflation-slide-02.webp)
+
 ## 홍수에는 온도가 있다.
 
 토큰의 홍수는 물리적 서명도 가집니다. 열입니다. 에이전트가 늘수록 추론은 늘고 추론이 늘수록 전력은 늘어납니다. LG CNS는 경기 고양 삼송 데이터센터에 냉각수를 GPU 칩에 붙인 냉각판에 흘려 열을 직접 흡수하는 DTC, 즉 직접 칩 냉각 방식을 적용하기로 했습니다. 기존 공랭식은 1랙당 20~30kW 대응에 그치지만 차세대 GPU 랙은 200kW 이상의 전력 밀도로 설계되기 때문입니다.
@@ -68,6 +72,8 @@ SK AX와 SAP는 독일 발도르프의 SAP 본사에서 'AI 네이티브 엔터�
 
 제본스가 석탄 이야기에서 함께 언급한 것은 철과 석회석이었습니다. 기계가 좋아지면 석탄뿐 아니라 다른 자원의 소비도 함께 늘었다는 뜻입니다. 토큰 청구서의 열은 전기요금과 냉각 예산이라는 형태로, 이미 다른 장부에 찍힙니다.
 
+![token-deflation-bill-inflation 슬라이드 3](/assets/images/token-deflation-bill-inflation-slide-03.webp)
+
 ## 빠진 변수는 가격이 아니라 통제
 
 그렇다면 문제의 정체가 무엇입니까. 가격이 아닙니다. 사용이 불어나는 동안 통제의 수단이 불어나지 않는다는 것입니다.
@@ -75,6 +81,8 @@ SK AX와 SAP는 독일 발도르프의 SAP 본사에서 'AI 네이티브 엔터�
 델의 경고가 정확히 이곳에 착지합니다. 토큰 사용량을 견제하고 중앙적으로 컨트롤할 수단이 부족하다는 지적입니다. ERP 안에서 판단하며 움직이는 에이전트, 밤새 실험을 도는 Co-Scientist, 민감 데이터를 다루는 데스크사이드 추론. 각각은 합리적 선택입니다. 그런데 합리적 선택이 수천 번 누적된 자리에 계기가 없고 게이트가 없고, 기록이 없다면, 기업은 매달 말에 청구서에서만 사실을 알게 됩니다.
 
 이게 위험한 이유는 단순합니다. 통제 없는 사용은 비용 문제를 넘어 데이터 유출과 감사 공백, 그리고 규제 리스크로 번집니다. 토큰이 싼데 통제 장치가 없으면, 싼 만큼 더 많이, 더 넓게, 더 빠르게 쓰입니다. 제본스 역설은 토큰을 비싸게 만들어 풀 수 있는 문제가 아닙니다. 토큰이 흐르는 자리에 통제의 지점을 두어야만 빠져나갈 수 있습니다. 결국 '얼마나 쓰느냐'의 문제를, '누가 쓰게 하고 어디까지 쓰게 하고 어떻게 확인할 것인가'의 문제로 바꿔야 하는 시점입니다.
+
+![token-deflation-bill-inflation 슬라이드 4](/assets/images/token-deflation-bill-inflation-slide-04.webp)
 
 ## 청구서를 누가 손에 쥐는가
 
@@ -103,16 +111,3 @@ AI가 싸진 날. 그것은 곧 청구서가 커진 날이기도 합니다. 제�
 - 아시아경제, ['분산형 GPU 클라우드' 에이아이브 "테크크런치 배틀필드200 선정"](https://view.asiae.co.kr/article/2026082609384631163)
 - CNB저널(문화경제), [SK AX, SAP와 'AI 네이티브 엔터프라이즈' 동맹 강화](https://www.cnbizm.com/news/articleView.html?idxno=312698)
 - 헤럴드경제, ["AI가 과학자 동료로"…ETRI, 국가 'AI 혁신전략' 제시](https://biz.heraldcorp.com/article/10852330?ref=naver)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![token-deflation-bill-inflation 슬라이드 1](/assets/images/token-deflation-bill-inflation-slide-01.webp)
-
-![token-deflation-bill-inflation 슬라이드 2](/assets/images/token-deflation-bill-inflation-slide-02.webp)
-
-![token-deflation-bill-inflation 슬라이드 3](/assets/images/token-deflation-bill-inflation-slide-03.webp)
-
-![token-deflation-bill-inflation 슬라이드 4](/assets/images/token-deflation-bill-inflation-slide-04.webp)
-

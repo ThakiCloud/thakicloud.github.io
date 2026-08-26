@@ -68,6 +68,8 @@ flowchart TB
 
 이 11.9배는 두 레버가 겹친 결과입니다. 엔진을 v0.24.0에서 나이틀리로 바꾸는 것만으로 5.43배(15.0에서 81.4 tok/s)가 나오고, 드래프터가 그 위에 약 2.2배를 더합니다. 다만 81.4는 워밍업을 한 번만 준 조건에서 잰 값이라 **내부 분해는 잠정치**로 읽어 주시는 편이 정확합니다. 확정된 것은 현행 대비 11.9배입니다.
 
+![speculative-decoding-lookup-vs-drafter 슬라이드 1](/assets/images/speculative-decoding-lookup-vs-drafter-slide-01.webp)
+
 ## 품질은 그대로입니다
 
 투기 디코딩은 초안 토큰을 타깃 모델이 검증하고 틀리면 버리는 구조입니다. 그래서 출력 분포가 타깃 모델 단독과 같아야 하고, 이론상 무손실입니다. 다만 이건 알고리즘의 성질이지 특정 구현의 성질은 아니어서 직접 확인했습니다.
@@ -100,11 +102,15 @@ flowchart TB
 
 처방은 광고와 실제를 맞추는 것입니다. `max_model_len`을 245,760으로 낮추고 확인했더니 240,503 토큰은 정상으로 처리되고 그보다 큰 요청은 프로세스를 죽이는 대신 **깨끗한 HTTP 400**을 받습니다. 244,689와 30만 사이의 정확한 경계는 아직 좁히지 않았고, 캡은 검증된 지점 바로 위에 놓아 두었습니다.
 
+![speculative-decoding-lookup-vs-drafter 슬라이드 2](/assets/images/speculative-decoding-lookup-vs-drafter-slide-02.webp)
+
 ## 대가는 지연이 아니라 용량입니다
 
 드래프터를 붙이면 KV 캐시가 줄어듭니다. 같은 설정에서 풀이 1,808,112 토큰에서 1,354,786 토큰으로 25% 감소했습니다. 100만 토큰짜리 요청 기준으로 동시에 처리할 수 있는 수가 1.81에서 1.35로 내려갑니다.
 
 긴 컨텍스트 서빙이라면 여기부터 계산하셔야 합니다. 드래프터가 가져가는 것은 시간이 아니라 자리입니다.
+
+![speculative-decoding-lookup-vs-drafter 슬라이드 3](/assets/images/speculative-decoding-lookup-vs-drafter-slide-03.webp)
 
 ## 재현하실 때 걸릴 만한 것들
 
@@ -116,6 +122,8 @@ flowchart TB
 
 **반복을 늘려도 줄지 않는 산포는 노이즈가 아닙니다.** 복사형 과제의 동시성 16 구간은 5회 반복에서 1.52배, 15회에서 1.55배로 좁혀지지 않았습니다. 표본을 세 배로 늘려도 그대로면 분포가 실제로 두 갈래라는 뜻이고, 그건 측정 문제가 아니라 운영에서 겪을 사실입니다. 같은 동시성에서 자유 서술은 1.05배로 안정적이니, 흔들리는 것은 동시성이 아니라 워크로드 쪽입니다.
 
+![speculative-decoding-lookup-vs-drafter 슬라이드 4](/assets/images/speculative-decoding-lookup-vs-drafter-slide-04.webp)
+
 ## ThakiCloud 관점
 
 이 결과는 Metis(추론 플랫폼)의 서빙 기본값을 어떻게 잡을지를 바꿉니다. 저희가 배운 것은 투기 디코딩을 켜고 끄는 이분법이 아니라 **어느 구간에서 켜는가**입니다. 드래프터는 짧고 중간 길이 요청에서 품질 손실 없이 배수를 주고, 긴 요청 경로에서는 용량을 먹고 경계를 넘으면 서버를 내립니다. 그래서 길이에 따라 라우팅하는 쪽이 전면 적용보다 안전합니다.
@@ -125,17 +133,11 @@ flowchart TB
 이 수치는 프리픽스 캐시가 채워진 상태의 디코딩 속도입니다. 매번 완전히 새로운 234k 프롬프트가 들어오면 프리필 비용이 다시 붙습니다. 저희 실제 트래픽은 시스템 컨텍스트가 고정이라 캐시가 잘 듣는 쪽에 가깝지만, 그 전제가 다른 환경에서는 배수가 줄어듭니다.
 
 
-## 관련 슬라이드
 
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 1](/assets/images/speculative-decoding-lookup-vs-drafter-slide-01.webp)
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 2](/assets/images/speculative-decoding-lookup-vs-drafter-slide-02.webp)
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 3](/assets/images/speculative-decoding-lookup-vs-drafter-slide-03.webp)
 
-![speculative-decoding-lookup-vs-drafter 슬라이드 4](/assets/images/speculative-decoding-lookup-vs-drafter-slide-04.webp)
 
 ## 출처
 

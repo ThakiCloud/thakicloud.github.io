@@ -47,6 +47,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 가격이 바닥을 향하면 질문이 바뀝니다. "가장 똑똑한 모델이 무엇인가"에서 "이 능력을 우리 데이터와 업무에서 안전하게, 통제된 채, 감사 가능하게 돌릴 수 있는가"로 옮겨갑니다. 리더보드 1위가 안 팔리는 이유가 여기 있습니다. 기업이 결제하는 대상은 지능지표가 아니라 배포 가능성입니다. 벤치마크는 능력을 증명하지만 신뢰를 증명하지는 못합니다.
 
+![benchmark-wins-trust-gap-execution-layer 슬라이드 1](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-01.webp)
+
 ## 도입한 사람들이 먼저 말합니다
 
 이 간극을 가장 정직하게 증언하는 쪽은 회의론자가 아니라 이미 도입한 사람들입니다. 도입 자체는 폭발하고 있습니다. 하나투어는 멀티 AI 에이전트 하이(H-AI)를 카카오톡 안의 챗GPT 창과 연동해 별도 앱 설치 없이 여행 추천을 받게 했고, 생성형 AI 검색 최적화를 적용한 뒤 챗GPT를 통한 유입량이 약 850% 늘었습니다. 익숙한 메신저 표면으로 AI가 파고드는 속도는 이렇게 가파른데, 정작 그 결과를 조직이 얼마나 믿고 맡길지는 별개의 곡선을 그립니다.
@@ -57,17 +59,23 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 같은 통증을 시장으로 바꾼 회사도 있습니다. 지란지교소프트가 과기정통부와 KISA의 우수 정보보호 기술로 지정받은 솔루션은 임직원이 챗GPT나 클로드에 무언가를 입력할 때 엔드포인트 단에서 실시간으로 검사해 개인정보와 기업 기밀이 새어 나가는 것을 막고, 프롬프트 입력 이력과 메일 발송 기록을 통합 감사합니다. 능력을 파는 것이 아니라 능력을 안전하게 쓰는 틀을 팝니다. 세 사례가 가리키는 방향은 똑같습니다. 모델이 똑똑해지는 것과 그 모델을 조직이 믿고 맡기는 것은 완전히 다른 문제입니다.
 
+![benchmark-wins-trust-gap-execution-layer 슬라이드 2](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-02.webp)
+
 ## 국가가 같은 값을 다르게 부릅니다
 
 기업 단위에서 보이는 이 신호는 국가 단위로 올라가면 소버린 AI라는 이름을 답니다. 배경훈 부총리는 업무보고에서 앤트로픽 미토스급 프런티어 모델 개발에는 GPU 약 1만 장이 필요하다며 국가 주도 컴퓨팅 확충을 예고했고, 정부는 12월 전 국민 무료 서비스 모두의 AI를 내놓기로 했습니다. LG AI연구원 컨소시엄은 독자 파운데이션 모델 1차 평가에서 벤치마크와 전문가, 사용자 평가 전 부문 1위를 기록하며 행정안전부 서비스에 실증 적용됐습니다. 일본은 소니와 소프트뱅크, 혼다 등 44개사가 출자한 노에트라 컨소시엄이 엔비디아 루빈 GPU 약 2만7500장을 확보해 국가 AI 인프라를 짓습니다.
 
 이 흐름을 단순한 국가주의로 읽으면 절반만 본 셈입니다. 국가들이 막대한 돈을 자국 모델과 자국 컴퓨팅에 쏟는 진짜 이유는, 능력이 흔해질수록 정작 희소해지는 자원이 통제된 실행이기 때문입니다. 누구의 인프라 위에서, 어떤 정책 아래, 무엇이 기록된 채 모델이 도는가. 국가가 소버린 AI라 부르는 값어치와 기업이 감사 로그와 휴먼 인 더 루프라 부르는 값어치는 규모만 다를 뿐 같은 것입니다.
 
+![benchmark-wins-trust-gap-execution-layer 슬라이드 3](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-03.webp)
+
 ## 돈도 신중해지기 시작했습니다
 
 능력이 흔해지는 이 국면에서 무한정 쌓아 올리기만 하던 자본도 표정을 바꾸고 있습니다. 글로벌이코노믹이 짚은 대로, AI 설비투자를 지탱해온 하이퍼스케일러들의 신규 채권이 발행가 대비 평균 3.3포인트 하락하며 우량 IT 채권으로서는 이례적인 약세를 보였습니다. 골드만삭스 같은 대형 금융기관은 이들의 기초체력이 튼튼해 채무불이행 위험은 없다며 조기 거품론을 반박했지만, 북미 클라우드 사업자의 설비투자 증가율이 올해 83%에서 내년 23% 수준으로 둔화할 것이라는 전망이 함께 나옵니다. 무작정 짓는 시대가 끝나가고 선별의 시대가 열린다는 신호입니다.
 
 그 비용은 이미 다른 곳으로 번지고 있습니다. 디지털투데이에 따르면 세계 2위 스마트폰 시장인 인도의 2분기 출하량이 6년 만에 최대 폭인 10% 감소했는데, 하이퍼스케일러의 AI 인프라 투자가 D램과 낸드 공급을 잠식해 저가 스마트폰의 메모리 원가를 밀어 올린 것이 원인으로 지목됐습니다. 능력을 원자재처럼 쓰는 세계의 청구서가 인도의 210달러짜리 스마트폰 소비자에게까지 도착한 셈입니다. 능력을 더 쌓는 방향의 수익은 얇아지고, 능력을 더 잘 다루는 방향의 수익이 두꺼워지는 전환이 이렇게 여러 지표에서 동시에 나타납니다.
+
+![benchmark-wins-trust-gap-execution-layer 슬라이드 4](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-04.webp)
 
 ## 모델을 고르는 시대에서 실행 계층을 소유하는 시대로
 
@@ -431,16 +439,3 @@ ThakiCloud의 Paxis는 정확히 그 실행 계층을 제품으로 만든 Agent-
 - 뉴스로드, [車 두뇌 잡는 마이크론, 현대모비스·퀄컴과 '3~5년짜리' 메모리 동맹](http://www.newsroad.co.kr/news/articleView.html?idxno=61704)
 - 디지털투데이, [AI 메모리 수요 여파에 인도 스마트폰 출하 10% 감소…6년 만에 최대 낙폭](https://www.digitaltoday.co.kr/news/articleView.html?idxno=685002)
 - 매일일보, ['AI 보안기술기반 중소기업 정보유출 예방'…지란지교소프트, AI 보안](https://www.m-i.kr/news/articleView.html?idxno=1392577)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![benchmark-wins-trust-gap-execution-layer 슬라이드 1](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-01.webp)
-
-![benchmark-wins-trust-gap-execution-layer 슬라이드 2](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-02.webp)
-
-![benchmark-wins-trust-gap-execution-layer 슬라이드 3](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-03.webp)
-
-![benchmark-wins-trust-gap-execution-layer 슬라이드 4](/assets/images/benchmark-wins-trust-gap-execution-layer-slide-04.webp)
-

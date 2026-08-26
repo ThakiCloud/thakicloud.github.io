@@ -42,6 +42,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eye
 
 그래서 눈을 커피 톤과 같은 온도의 앰버로 낮추고, 반투명 렌즈 안에서 은은히 빛나되 표면은 빛을 반사하도록 바꿨습니다. 눈꺼풀 곡선은 눈썹이 없는 캐릭터에서 눈썹 역할을 대신합니다. 놀라면 둥글게 열리고 편안하면 살짝 처지는 축이 하나 생긴 셈입니다.
 
+![mascot-redesign-eyes-and-actions 슬라이드 1](/assets/images/mascot-redesign-eyes-and-actions-slide-01.webp)
+
 ## 남은 두 가지 어색함은 디자인이 아니었습니다
 
 표정이 단조롭고 걸음걸이가 미끄러진다는 문제가 남아 있었는데, 이건 그리는 문제가 아니었습니다.
@@ -54,6 +56,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eye
 걷기 컷은 세 번 만에 나왔습니다. 첫 번째는 캐릭터는 맞는데 두 팔이 같은 방향으로 나갔습니다. 자연스러운 걸음은 팔이 다리와 **반대로** 흔들려야 회전 모멘텀이 상쇄되는데, 이 카운터스윙이 없으면 정확히 "미끄러지는" 느낌이 납니다. 두 번째는 포즈는 맞았지만 몸이 매끈한 플라스틱이 되고 관절이 드러난 다른 로봇이 됐습니다. 재질과 실루엣을 명시하고 나서야 포즈와 정체성이 같이 잡혔습니다.
 
 포즈와 정체성을 동시에 잡기 어렵다는 것 자체가, 레퍼런스를 주고 생성하는 방식이 존재하는 이유입니다.
+
+![mascot-redesign-eyes-and-actions 슬라이드 2](/assets/images/mascot-redesign-eyes-and-actions-slide-02.webp)
 
 ## 그래서 학습 데이터를 다시 만들고 있습니다
 
@@ -72,11 +76,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eye
 
 판정은 **학습에 없던 동작**으로만 합니다. 달리기, 웅크리기, 회전, 절하기처럼 열두 종을 따로 빼뒀습니다. 배운 동작을 다시 재생하는 것은 일반화가 아니기 때문입니다.
 
+![mascot-redesign-eyes-and-actions 슬라이드 3](/assets/images/mascot-redesign-eyes-and-actions-slide-03.webp)
+
 ## 지금까지 배운 것
 
 작은 학습셋에서는 클립들이 우연히 공유하는 것이 그대로 캐릭터의 일부가 됩니다. 배경을 한 곳에서 찍으면 그 배경이, 표정을 하나로 고르면 그 표정이 캐릭터에 들러붙습니다. 편의로 내린 선택이 모델에게는 규칙으로 전달됩니다.
 
 그리고 어색함의 원인을 디자인과 데이터로 나눠 보는 것이 생각보다 중요했습니다. 눈은 아무리 학습해도 고쳐지지 않고, 걸음걸이는 아무리 다시 그려도 학습 데이터가 그대로면 돌아옵니다.
+
+![mascot-redesign-eyes-and-actions 슬라이드 4](/assets/images/mascot-redesign-eyes-and-actions-slide-04.webp)
 
 ## ThakiCloud 관점
 
@@ -93,16 +101,3 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eye
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/mascot-redesign-eyes-and-actions/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![mascot-redesign-eyes-and-actions 슬라이드 1](/assets/images/mascot-redesign-eyes-and-actions-slide-01.webp)
-
-![mascot-redesign-eyes-and-actions 슬라이드 2](/assets/images/mascot-redesign-eyes-and-actions-slide-02.webp)
-
-![mascot-redesign-eyes-and-actions 슬라이드 3](/assets/images/mascot-redesign-eyes-and-actions-slide-03.webp)
-
-![mascot-redesign-eyes-and-actions 슬라이드 4](/assets/images/mascot-redesign-eyes-and-actions-slide-04.webp)
-

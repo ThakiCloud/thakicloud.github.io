@@ -48,6 +48,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 다만 시스코는 스스로 선을 그었습니다. 이 모델은 의존성 분석이나 비밀정보 스캔, 동적 테스트를 대체하지 않으며 초기 필터링 단계에 위치해야 한다는 것입니다. 정직한 제한입니다. 그리고 이 제한이 오늘의 진짜 주제로 이어집니다. 생성 모델도 감사 모델도 결국 자기 역할의 조각만 담당할 뿐, 두 조각을 하나의 책임 있는 흐름으로 엮는 일은 별개의 문제라는 사실입니다.
 
+![generate-audit-runtime-accountability-gap 슬라이드 1](/assets/images/generate-audit-runtime-accountability-gap-slide-01.webp)
+
 ## 생성도 감사도 메우지 못하는 틈
 
 같은 날의 다른 기사가 그 틈을 정확히 보여 줍니다. 국내 이커머스 플랫폼 아임웹은 개발과 운영 전반에 AI를 투입해 4년 걸릴 일을 3개월로 줄였다고 밝혔습니다. OpenAI와 앤스로픽, 구글의 모델을 상호 검증용으로 동시에 쓰는 보수적 문화까지 갖췄습니다. 그런데 한 문장이 눈에 걸립니다. 인프라 이상을 탐지하면 배포 후 자동 롤백을 사람 승인 없이 즉시 수행한다는 대목입니다. 생산성 관점에서는 자랑거리지만, 거버넌스 관점에서는 경보음입니다. 승인 없이 프로덕션을 되돌릴 수 있는 에이전트는, 승인 없이 다른 일도 할 수 있다는 뜻이기 때문입니다.
@@ -56,11 +58,15 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 생성 모델은 코드를 만들고, 감사 모델은 코드의 결함을 찾습니다. 그러나 그 에이전트가 어떤 자율도로 움직이는지, 어떤 정책의 허락을 받고 실행되는지, 무엇을 언제 건드렸는지를 남기는 일은 두 모델 어느 쪽의 소관도 아닙니다. 이것은 모델의 문제가 아니라 실행 계층의 문제입니다.
 
+![generate-audit-runtime-accountability-gap 슬라이드 2](/assets/images/generate-audit-runtime-accountability-gap-slide-02.webp)
+
 ## 하드웨어 주권만으로는 닫히지 않습니다
 
 이 공백을 인프라의 규모로 메울 수 있을 것 같지만, 오늘 뉴스는 그렇지 않다고 말합니다. 같은 날 이재용·최태원·이해진 세 총수가 실리콘밸리에서 젠슨 황을 만나 엔비디아 중심의 AI 공급망 동맹을 재가동했습니다. 국내 소버린 AI 인프라 판도를 흔들 큰 움직임입니다. 삼성SDS는 퓨리오사AI의 국산 NPU를 얹은 NPUaaS를 출시하며 GPU 일변도였던 추론 인프라에 국산 대안을 처음 상용화 단계로 올렸습니다. 공공·금융 입장에서는 해외 GPU 의존을 낮출 소버린 옵션이 하나 더 생긴 것이고, 앞으로 정부 클라우드 입찰에서 국산 NPU가 요건으로 등장할 여지도 있습니다.
 
 칩과 데이터센터, 공급망 차원의 주권은 이렇게 빠르게 채워지고 있습니다. 그런데 하드웨어 주권은 질문의 절반만 답합니다. 국산 NPU 위에서 셀프호스팅 코딩 에이전트가 돌아간다고 해서, 그 에이전트가 무엇을 할 권한이 있고 무엇을 남겨야 하는지가 저절로 정의되지는 않습니다. 반출을 막는 것과 실행을 통제하는 것은 다른 층위의 문제입니다. 소버린 인프라가 완성될수록, 그 위에서 움직이는 에이전트의 자율도와 감사를 소프트웨어로 규정하는 계층의 부재가 오히려 더 또렷하게 드러납니다.
+
+![generate-audit-runtime-accountability-gap 슬라이드 3](/assets/images/generate-audit-runtime-accountability-gap-slide-03.webp)
 
 ## 실행 계층에서 답을 맞춥니다
 
@@ -400,6 +406,8 @@ ThakiCloud의 Paxis는 바로 이 비어 있는 계층을 다룹니다. Paxis는
 
 7월 22일의 두 릴리스는 에이전트가 코드를 쓰는 능력과 감시하는 능력을 동시에 갖추기 시작했음을 알립니다. 반가운 진전입니다. 다만 능력이 늘수록 책임의 공백도 함께 커집니다. 코드를 만드는 에이전트와 감사하는 에이전트가 흔해질수록, 정작 희소해지는 것은 그 에이전트들이 안전하게 실행되고 남김없이 기록되는 자리입니다. 창과 방패를 다 갖춘 다음에 남는 질문은 하나입니다. 이 둘은 결국 누구의 규칙 위에서 싸우는가. 모델을 고르는 일은 갈수록 쉬워지지만, 그 모델이 만든 결과에 책임을 지는 일은 여전히 어렵습니다. 오늘 나란히 걸린 창과 방패가 우리에게 알려 주는 것은, 다음 경쟁의 무대가 더 큰 모델이 아니라 그 모델들이 안전하게 살아 움직이는 실행 계층이라는 사실입니다.
 
+![generate-audit-runtime-accountability-gap 슬라이드 4](/assets/images/generate-audit-runtime-accountability-gap-slide-04.webp)
+
 ## 참고 자료
 
 이 글은 아래 뉴스를 종합해 작성했습니다.
@@ -424,16 +432,3 @@ ThakiCloud의 Paxis는 바로 이 비어 있는 계층을 다룹니다. Paxis는
 <!-- nlm-visual -->
 ![이번 주 뉴스 요약 인포그래픽 2](/assets/images/posts/news/generate-audit-runtime-accountability-gap/nlm-infographic-2.webp)
 *NotebookLM이 이번 주 뉴스 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![generate-audit-runtime-accountability-gap 슬라이드 1](/assets/images/generate-audit-runtime-accountability-gap-slide-01.webp)
-
-![generate-audit-runtime-accountability-gap 슬라이드 2](/assets/images/generate-audit-runtime-accountability-gap-slide-02.webp)
-
-![generate-audit-runtime-accountability-gap 슬라이드 3](/assets/images/generate-audit-runtime-accountability-gap-slide-03.webp)
-
-![generate-audit-runtime-accountability-gap 슬라이드 4](/assets/images/generate-audit-runtime-accountability-gap-slide-04.webp)
-

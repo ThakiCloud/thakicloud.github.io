@@ -39,6 +39,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-compute-map-beyond-d
 
 2027년 4분기는 대략 15개월 뒤입니다. 그 날짜 자체보다 중요한 것은, 실행 환경의 계획 지평선이 15개월 뒤 궤도까지 확장됐다는 사실입니다. 우주 컴퓨트는 아직 먼 미래처럼 들립니다. 다만 한 가지만 짚겠습니다. "궤도"가 AI의 실행 환경으로 정당화된 것입니다. 그동안 실행 환경의 목록은 데이터센터, 엣지, 온디바이스로 끝났습니다. 구획의 제약이 "데이터센터냐 아니냐"에서 "어디냐"로 넓어지고 있습니다. 에이전트가 일하는 장소의 목록에 우주가 추가된 날입니다.
 
+![ai-compute-map-beyond-datacenter 슬라이드 1](/assets/images/ai-compute-map-beyond-datacenter-slide-01.webp)
+
 ## 주머니: 스마트폰이 LLM을 위해 칩을 설계하는 시대
 
 지상에서는 지도가 궤도보다 빠르게 넓어집니다. 샤오미가 X링 O100을 발표했습니다. 첫 전용 엣지 AI 가속기로, 대역폭은 1.22TB/s입니다. 3D 웨이퍼 온 웨이퍼 스택 공법을 써서 스마트폰, 차량, 로봇에서 온디바이스 대형 언어 모델 추론을 가능하게 합니다. 공정은 6nm입니다.
@@ -46,6 +48,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-compute-map-beyond-d
 "전용"이라는 말이 숫자보다 크다고 봅니다. 그동안 스마트폰은 범용 칩으로 LLM을 돌려왔습니다. 이제 한 회사가 주머니에서 LLM만 돌리기 위해 칩을 설계하고 있습니다. 같은 날, 리퀴드AI와 아티피셜애널리시스는 피페트를 출시했습니다. 1만 개의 결과를 갖춘 첫 오픈 모바일 AI 스위트입니다. 아티피셜애널리시스의 평가에서 Nanbeige 4.2-3B와 LFM2.5-2.6B는 아이폰 17 프로와 갤럭시 S26 울트라에서 평균 지능 점수 63점으로 공동 최고를 기록했습니다.
 
 1만 개의 결과가 있다는 것은, 모바일 지능이 어디까지 왔는지를 이제 감각이 아니라 실측으로 알 수 있게 됐다는 뜻입니다. 클라우드 모델처럼, 기기에 올리는 모델을 벤치마크로 비교할 수 있는 시점입니다. 작은 모델이 똑똑해집니다. 똑똑해져서 어디에서 돌까요. 기기 자신에서입니다. 모델이 기기에 있으면 데이터를 왕복할 필요가 없고, 지연을 기다릴 필요도 없습니다. 온디바이스 추론이 확산되면 에이전트 워크플로에도 분할 문제가 생깁니다. 어떤 단계를 기기에 두고 어떤 단계를 클라우드로 보내느냐는, 이제 모델 선택 문제가 아니라 워크플로 설계 문제입니다. 주머니가 본격적인 실행 환경이 되고 있습니다.
+
+![ai-compute-map-beyond-datacenter 슬라이드 2](/assets/images/ai-compute-map-beyond-datacenter-slide-02.webp)
 
 ## 데이터센터: 밀려나는 쪽, 논쟁의 쪽
 
@@ -56,6 +60,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-compute-map-beyond-d
 결제 데이터도 같은 지도를 읽고 있습니다. 결제 데이터 그룹 램프 조사에 따르면, 앤스로픽 도구를 쓰는 기업은 가성비 좋은 오퍼스 5에 플래그십 페이블 5보다 더 많이 지출하고 있었습니다. 페이블 5의 지출 비중은 11%까지 내려갔습니다. 플래그십이 더 이상 기본값이 아니라, 워크로드별로 선택되는 옵션이 된 것입니다. 모델 선택이 이제 경제적 결정입니다.
 
 동시에 데이터센터 주변의 사회적 마찰이 커지고 있습니다. 미국에서 샌더스 의원은 국민 지지 75%를 근거로 새 AI 데이터센터 건설의 연방 차원 유예를 촉구하고 있습니다. 트럼프 대통령은 대규모 컴퓨팅 시설 건설을 반대하는 지역이 "엄청난 일자리와 돈"을 거절하고 있다고 말했습니다. 집중된 컴퓨트에 전력·용수 비용이 붙었고, 이제 사회 비용도 가격표에 오르고 있습니다. 집중할수록 비용이 비싸지는 구조입니다. 같은 데이터센터가, 건설되는 것만으로 사회적 합의를 요구하게 된 것입니다.
+
+![ai-compute-map-beyond-datacenter 슬라이드 3](/assets/images/ai-compute-map-beyond-datacenter-slide-03.webp)
 
 ## 왜 지도가 바뀌었는가
 
@@ -70,6 +76,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-compute-map-beyond-d
 넷째, 일의 범위가 넓어졌다는 점입니다. 오늘의 다이제스트에는 또 하나의 신호가 실려 있었습니다. 앤스로픽 소속 수학자 레벤트 알포게가 클로드 오퍼스 5와 함께 6차원 구(S⁶)의 복잡한 구조를 발견했다고 밝혔고 1948년부터 미해결이던 문제를 위한 108페이지 분량의 구성이 함께 제시됐다는 보도입니다. 발견의 내용보다, 프런티어 연구에 에이전트가 공동 작업자로 참여했다는 사실이 오늘의 포인트입니다. 에이전트의 일이 프런티어 발견 수준으로 확장되면, 실행 환경의 신뢰 비용인 감사와 승인, 격리도 일급 비용이 됩니다.
 
 결과는 실행 환경이 제각각이라는 것입니다. 같은 에이전트도 기기에 따라, 지역에 따라, 규정에 따라 다른 제약 아래에서 돕니다. 모델은 하나, 환경은 여러 개입니다. 이 차이를 플랫폼이 흡수하지 못하면, 전부 애플리케이션 코드로 새어나갑니다. 그리고 그 이질화는 해가 지날수록 넓어질 것이 분명합니다.
+
+![ai-compute-map-beyond-datacenter 슬라이드 4](/assets/images/ai-compute-map-beyond-datacenter-slide-04.webp)
 
 ## 지도를 읽는 법
 
@@ -114,16 +122,3 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-compute-map-beyond-d
 - HuggingNews, [Trump Calls Rejection of AI Data Centers a Mistake in Race to Beat China](https://huggingnews.com/ai/update-trump-calls-rejection-of-ai-data-centers-a-mistake-in-race-to-bea-b27d1a42)
 - HuggingNews, [Sanders Demands AI Data Center Moratorium With 75% US Support](https://huggingnews.com/ai/update-sanders-demands-ai-data-center-moratorium-with-75percent-us-suppo-07da6586)
 - HuggingNews, [Liquid AI and Artificial Analysis Launch Pipette With 10,000 Results as First Open Mobile AI Suite](https://huggingnews.com/ai/liquid-ai-and-artificial-analysis-launch-pipette-with-10000-results-as-f-d1363ee4)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-compute-map-beyond-datacenter 슬라이드 1](/assets/images/ai-compute-map-beyond-datacenter-slide-01.webp)
-
-![ai-compute-map-beyond-datacenter 슬라이드 2](/assets/images/ai-compute-map-beyond-datacenter-slide-02.webp)
-
-![ai-compute-map-beyond-datacenter 슬라이드 3](/assets/images/ai-compute-map-beyond-datacenter-slide-03.webp)
-
-![ai-compute-map-beyond-datacenter 슬라이드 4](/assets/images/ai-compute-map-beyond-datacenter-slide-04.webp)
-

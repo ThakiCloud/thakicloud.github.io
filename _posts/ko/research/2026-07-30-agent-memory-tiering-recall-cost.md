@@ -46,6 +46,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 
 흥미롭게도 최신순과 빈도 정책은 AUC가 정확히 같았지만 곡선의 모양은 서로 달랐습니다. 예산이 아주 빠듯할 때는 최신순이 앞서고 중간 구간부터는 빈도 정책이 앞서다가, 예산이 넉넉해지면 둘이 다시 만납니다. 적분값은 같아도 둘은 전혀 다른 방식으로 실패하고 있었던 셈입니다. 이는 "순서를 더 똑똑하게 매기는 것"만으로는 이 문제가 풀리지 않는다는 걸 보여주는 방증이기도 합니다.
 
+![agent-memory-tiering-recall-cost 슬라이드 1](/assets/images/agent-memory-tiering-recall-cost-slide-01.webp)
+
 ## 왜 중복 제거가 순서 정책을 이기는가
 
 최신순 프루닝과 빈도 유지는 둘 다 "순서" 정책입니다. 항목 전체에 하나의 순서를 매기고 예산이 허용하는 만큼 앞에서부터 자릅니다. 두 항목이 사실상 같은 내용을 담고 있는지는 전혀 확인하지 않습니다. 의미 중복 제거는 딱 한 가지 연산만 추가합니다. 순서를 매기기 전에, 토큰 집합 자카드 유사도가 0.5 이상으로 연결된 항목들을 하나의 클러스터로 묶고 각 클러스터에서 가장 최근 항목 하나만 대표로 남깁니다. 그 다음은 최신순 정책과 똑같이 정렬해서 자릅니다. 그래서 측정된 이득은 "더 나은 중요도 판단"에서 온 게 아니라, 순수하게 "중복 제거"에서 왔다고 말할 수 있습니다.
@@ -54,6 +56,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 *의미 중복 제거는 AUC 0.7189로, 최신순·빈도 정책의 0.6122 대비 17.4%의 상대적 이득을 기록했습니다. (CPU 전용 컨테이너에서 측정)*
 
 같은 교정 사항을 사람이 세션마다 조금씩 다른 표현으로 반복해서 지적하는 일은 실제로 흔합니다. 사람이 보기엔 "또 같은 말"이지만 순서 정책의 눈에는 서로 다른 세 개의 항목이고 예산 안에서 세 자리를 나눠 차지합니다. 최신순에서 빈도순으로 바꾼다고 이 문제가 풀리지 않는 것도 같은 이유입니다. 둘 다 "이 항목이 이미 남아 있는 다른 항목과 같은 뜻인지"는 아예 보지 않기 때문입니다. 결국 예산을 더 잘 쓰는 축은 순서의 정교함이 아니라 중복을 걷어내는 한 단계였습니다.
+
+![agent-memory-tiering-recall-cost 슬라이드 2](/assets/images/agent-memory-tiering-recall-cost-slide-02.webp)
 
 ## 제품에 있던 숨은 버그: 개수 캡과 글자 캡은 다른 변수다
 
@@ -64,11 +68,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 
 숫자로 보면 원인이 분명합니다. 지금 코퍼스는 총 1594자로, 통합 글자 예산 1600자에 거의 딱 맞습니다. 즉 글자 캡은 지금 코퍼스 크기에서는 사실상 아무것도 자르지 않는데, 개수 캡이 27개 항목을 먼저 잘라내고 있었던 겁니다. 두 캡을 "이중 안전장치"쯤으로 여기고 함께 걸어두는 설계는 흔하지만 이 결과는 그 전제가 틀렸다는 걸 보여줍니다. 어느 캡이 먼저 걸리는지는 코퍼스 크기가 아니라 항목의 평균 길이에 좌우됩니다. 이 코퍼스는 항목당 평균 약 35자로 짧은 편이라, 개수 캡(항목당 약 89자 허용)이 글자 캡보다 훨씬 먼저 걸립니다. 항목이 더 길고 서술적인 코퍼스였다면 이 관계는 순식간에 뒤집혔을 것입니다. 다만 이 결과는 지금 코퍼스 크기(1594자)에 국한된 것으로, 코퍼스가 자라 1600자를 넘어서면 글자 캡이 실제로 작동하기 시작할 것이라는 점도 논문은 분명히 못박고 있습니다.
 
+![agent-memory-tiering-recall-cost 슬라이드 3](/assets/images/agent-memory-tiering-recall-cost-slide-03.webp)
+
 ## 회사와 과학에 남기는 것
 
 실무적으로 이 결과가 주는 조언은 간단합니다. 순서를 정하기 전에 먼저 중복을 걷어내고 항목 개수 캡과 글자 캡은 서로 다른 변수로 각자 튜닝해야지 하나를 걸면 다른 하나는 안전망 정도로 봐도 된다고 가정해서는 안 됩니다. 두 캡 중 어느 쪽이 실제로 발동하고 있는지를 매번 로그로 남겨두면, 코퍼스가 자라면서 병목이 뒤바뀌는 순간을 조용히 놓치지 않고 확인할 수 있습니다.
 
 방법론 차원에서는 예산 스윕과 회수율 곡선, AUC 요약으로 이어지는 이 작은 측정 절차 자체가 재사용 가능한 자산입니다. 결정론적이고 재실행 가능해서, 어떤 팀이든 자신들이 쓰려는 계층화 정책을 실제로 배포하기 전에 자기 코퍼스 위에서 먼저 재볼 수 있습니다. 과학적으로는, 에이전트 메모리를 다루는 최근 연구 대부분이 계층 구조나 아키텍처 설계에 무게를 두고 있는 반면, 이 논문은 그 아키텍처가 내부에 품고 있는 보존 정책 자체를 실제 배포 시스템의 데이터로 통제된 비교를 통해 검증했다는 점에서 다른 각도의 근거를 더합니다.
+
+![agent-memory-tiering-recall-cost 슬라이드 4](/assets/images/agent-memory-tiering-recall-cost-slide-04.webp)
 
 ## 한계
 
@@ -79,16 +87,3 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/agent-memory-tierin
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/agent-memory-tiering-recall-cost/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-memory-tiering-recall-cost 슬라이드 1](/assets/images/agent-memory-tiering-recall-cost-slide-01.webp)
-
-![agent-memory-tiering-recall-cost 슬라이드 2](/assets/images/agent-memory-tiering-recall-cost-slide-02.webp)
-
-![agent-memory-tiering-recall-cost 슬라이드 3](/assets/images/agent-memory-tiering-recall-cost-slide-03.webp)
-
-![agent-memory-tiering-recall-cost 슬라이드 4](/assets/images/agent-memory-tiering-recall-cost-slide-04.webp)
-
