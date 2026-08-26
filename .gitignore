@@ -263,3 +263,11 @@ meetily-test/
 
 # runtime state from thaki-secretary tool (not site content)
 .thaki-secretary/
+
+# ⛔ Comic dry-run artifacts. comic_publish.py writes a smoke post into _posts/ for
+# local preview (slug = "dry-<source>"). Twice a batch runner's broad `git add
+# _posts/ko/comics` swept one into a commit and it went live (2026-08-22, 2026-08-25).
+# Never committable. Build-side veto lives in jekyll.yml + blog_plan draft-veto.
+_posts/*/comics/*-dry-*.md
+assets/images/posts/*/dry-*/
+assets/videos/posts/*/dry-*/

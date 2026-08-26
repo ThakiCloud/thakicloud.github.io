@@ -43,10 +43,23 @@ jobs:
           # 이 단계는 그 published:false 글만 빌드에서 제외해 빌드를 가볍게 한다.
           # ⛔ 날짜순 KEEP_COUNT로 자르지 말 것 — published 글이 누락돼 soft-404가 된다
           #    (2026-08-03 tokenizer 사고). published 글은 카테고리·나이와 무관하게 항상 빌드.
+          # ⛔ `draft: true` 와 `dry-` 슬러그도 같은 게이트에서 걸러낸다.
+          #    url_ratchet.published_urls() 는 오래전부터 이 둘을 원장에서 빼 왔지만
+          #    빌드는 그대로 태우고 있었다 — 주석만 "mirrors the build gate" 였고
+          #    빌드 게이트가 실제로는 없었다. 그래서 만화 드라이런이 2026-08-22 와
+          #    2026-08-25 두 번 라이브로 나갔다(/ko/comics/dry-twitter/).
           moved=0
           kept=0
+          drafts=0
           while IFS= read -r file; do
-            if grep -qiE '^published:[[:space:]]*(false|no|0)[[:space:]]*$' "$file"; then
+            base=$(basename "$file")
+            if grep -qiE '^draft:[[:space:]]*(true|yes|1)[[:space:]]*$' "$file" \
+               || [[ "$base" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-dry- ]]; then
+              rel="${file#_posts/}"
+              mkdir -p "_posts_backup/$(dirname "$rel")"
+              mv "$file" "_posts_backup/$rel" && drafts=$((drafts + 1))
+              echo "  draft-veto: $rel"
+            elif grep -qiE '^published:[[:space:]]*(false|no|0)[[:space:]]*$' "$file"; then
               rel="${file#_posts/}"
               mkdir -p "_posts_backup/$(dirname "$rel")"
               if mv "$file" "_posts_backup/$rel"; then
@@ -62,6 +75,7 @@ jobs:
           echo ""
           echo "=== Filtering Summary ==="
           echo "Unpublished moved to backup: $moved"
+          echo "Draft/dry-run vetoed:        $drafts"
           echo "Published kept for build:    $kept"
 
           # 최종 통계
