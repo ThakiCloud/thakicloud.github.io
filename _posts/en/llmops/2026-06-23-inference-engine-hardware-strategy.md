@@ -15,7 +15,7 @@ tags:
 lang: en
 author_profile: true
 toc: true
-toc_label: "목차"
+toc_label: "Contents"
 toc_icon: "microchip"
 header:
   image: /assets/images/inference-engine-hardware-strategy-hero.webp

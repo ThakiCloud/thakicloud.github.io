@@ -14,7 +14,7 @@ tags:
   - platform-engineering
 author_profile: true
 toc: true
-toc_label: "목차"
+toc_label: "Contents"
 toc_icon: "robot"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/hermes-agent-learn-skills/"

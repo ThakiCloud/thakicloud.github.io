@@ -12,7 +12,7 @@ tags:
   - LLMOps
 author_profile: true
 toc: true
-toc_label: "목차"
+toc_label: "Contents"
 lang: en
 permalink: /en/llmops/nvfp4-vs-fp8-two-four-bits/
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvfp4-vs-fp8-two-four-bits/"

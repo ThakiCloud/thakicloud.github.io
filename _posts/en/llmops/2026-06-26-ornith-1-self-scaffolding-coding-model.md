@@ -18,7 +18,7 @@ tags:
   - moe
 author_profile: true
 toc: true
-toc_label: "목차"
+toc_label: "Contents"
 toc_icon: "robot"
 toc_sticky: true
 reading_time: true
