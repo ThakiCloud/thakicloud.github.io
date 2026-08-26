@@ -30,11 +30,15 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 장면이 오늘 뉴스 전체를 읽는 렌즈가 됩니다. 애플은 올초 이스라엘 스타트업을 20억달러, 약 3조원에 사들였고, 반도체 스타트업 추가 인수까지 저울질하고 있습니다. CFO 케반 파레크는 그동안 고수해온 '순현금 중립' 기조를 접겠다는 신호를 보냈습니다. M시리즈 로드맵도 손봤습니다. M6는 기본형만 내고, AI에 특화된 M7 프로와 맥스와 울트라에 개발을 몰아줍니다. 정작 AI 서버칩의 자체 출시 시점은 2029년으로 미뤄졌고, 브로드컴과의 협력은 2031년까지 연장했습니다. 올가을 팀 쿡이 물러나면 하드웨어 전문가 존 터너스가 지휘봉을 잡습니다.
 
+![from-owning-to-governing-ai-stack 슬라이드 1](/assets/images/from-owning-to-governing-ai-stack-slide-01.webp)
+
 ## 가장 많이 소유한 회사가 가장 먼저 빌리기 시작했습니다
 
 애플의 신화는 '전부 직접 만든다'였습니다. 칩과 운영체제와 기기와 스토어를 한 몸으로 묶어 통제력을 무기로 삼았습니다. 그 통제가 곧 우위였습니다. 그런데 생성형 AI 추론이라는 벽 앞에서, 가장 많이 소유해온 회사가 가장 먼저 소유를 내려놓기 시작했습니다. 자체 칩만으로는 대규모 추론 수요를 감당할 수 없다는 판단을, 다른 곳도 아닌 애플이 공개적으로 인정한 셈입니다.
 
 여기서 더 흥미로운 대목은 중국입니다. 같은 날 애플은 중국 당국의 승인을 받아 현지 AI 서비스를 출시했는데, 탑재 모델이 구글이 아니라 알리바바의 큐원이었습니다. 지역에 따라 전혀 다른 회사의 모델을 얹어 규제를 통과한 것입니다. 미국에서는 제미나이, 중국에서는 큐원, 그리고 자체 칩은 구글 GPU로 대체합니다. 하나의 제품 안에 세 개의 서로 다른 공급자가 들어와 있습니다. 애플조차 이제는 무엇을 소유하느냐가 아니라, 소유하지 않은 것들을 어떻게 조합하고 다스리느냐로 경쟁의 축을 옮기고 있습니다.
+
+![from-owning-to-governing-ai-stack 슬라이드 2](/assets/images/from-owning-to-governing-ai-stack-slide-02.webp)
 
 ## 물리 계층은 소유하려 하고, 지능 계층은 빌리려 합니다
 
@@ -52,11 +56,15 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 사례들의 공통점은 분명합니다. 누구도 AI 능력을 스스로 처음부터 만들지 않습니다. 건설사는 로봇과 모델을 외부에서 들여오고, 대기업은 스타트업의 기술을 선별해 얹으며, MSP는 하이퍼스케일러의 모델을 자사 고객에 접목합니다. 각자 잘하는 본업 위에 남의 능력을 빌려 결합하는 방식입니다. 이때 승부를 가르는 것은 어떤 기술을 소유했느냐가 아니라, 빌려온 여러 조각을 자기 업무 흐름 안에서 얼마나 안전하고 일관되게 엮느냐입니다.
 
+![from-owning-to-governing-ai-stack 슬라이드 3](/assets/images/from-owning-to-governing-ai-stack-slide-03.webp)
+
 ## 모델은 하나로 수렴하지 않습니다
 
 빌려 쓰는 시대가 성립하려면 빌릴 대상이 여럿이어야 합니다. 그리고 오늘 뉴스는 모델 세계가 하나로 수렴하기는커녕 더 잘게 갈라지고 있음을 보여줍니다. 앤트로픽은 기업공개를 앞두고 오픈AI 대비 우위를 부각하며 프런티어 모델 벤더의 재편을 예고했습니다. 상하이에서 개막한 세계인공지능대회는 미중 경쟁 속에서 중국이 AI 자립을 과시하는 무대가 됐고, 기술 블록이 지역별로 나뉘는 흐름은 더 뚜렷해졌습니다.
 
 한국의 '모두의 AI' 사업은 이 파편화를 아예 규칙으로 못 박았습니다. 참여 기업은 자사 국산 모델을 50% 이상, 타사 국산 모델을 30% 이상 조합해 국산 비중을 80% 넘게 유지해야 합니다. 하나의 모델로 서비스를 채우는 것이 아니라, 여러 모델을 정해진 비율로 섞어야 사업 자격이 생기는 구조입니다. 게다가 발표평가에서 절반의 배점이 자체 모델 성능이 아니라 서비스 운영 역량에 걸려 있습니다. 무엇을 소유했느냐보다 빌려온 것들을 어떻게 운영하느냐를 국가가 먼저 평가 기준으로 삼은 셈입니다. 통신사와 포털과 AI 기업의 합종연횡이 활발한 것도, 혼자 모든 모델을 갖는 대신 서로의 능력을 엮으려는 움직임입니다.
+
+![from-owning-to-governing-ai-stack 슬라이드 4](/assets/images/from-owning-to-governing-ai-stack-slide-04.webp)
 
 ## 통치는 새로운 역량입니다
 
@@ -94,16 +102,3 @@ SKT가 15GW를 향해 달리고 정부가 512장의 GPU를 나누는 소유의 �
 - [경향신문: 상하이 세계인공지능대회 개막, 미중 AI 경쟁 속 중국 자립 과시](https://www.khan.co.kr/article/202607131607001/)
 - [벤처스퀘어: 리콘랩스 젠프레소 전면 개편 · 스킬 · C2PA · 사람 승인](https://www.venturesquare.net/1098814)
 - [Forbes: OpenAI vs Anthropic IPO 비교 · 앤트로픽의 경쟁 우위](https://www.forbes.com/sites/investor-hub/article/openai-vs-anthropic-ipo-comparison/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![from-owning-to-governing-ai-stack 슬라이드 1](/assets/images/from-owning-to-governing-ai-stack-slide-01.webp)
-
-![from-owning-to-governing-ai-stack 슬라이드 2](/assets/images/from-owning-to-governing-ai-stack-slide-02.webp)
-
-![from-owning-to-governing-ai-stack 슬라이드 3](/assets/images/from-owning-to-governing-ai-stack-slide-03.webp)
-
-![from-owning-to-governing-ai-stack 슬라이드 4](/assets/images/from-owning-to-governing-ai-stack-slide-04.webp)
-

@@ -32,11 +32,15 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 에이전트를 강화학습으로 후처리 훈련하는 엔지니어와, 그 훈련 인프라를 설계하는 플랫폼 담당자를 위한 것입니다. 여러분이 내려야 할 결정은 하나입니다. 결과 하나로만 보상을 주는 지금의 RL 파이프라인에 어떻게 추가 감독 신호를 더 밀어 넣을 것인가입니다. SEED(Self-Evolving On-Policy Distillation, arXiv:2607.14777)는 그 답으로 별도의 강한 교사 모델도, 사람이 만든 보상 모델도 아닌 정책 자기 자신을 교사로 쓰는 길을 제시합니다. 결론부터 말하면 궤적을 분석해 재사용 가능한 스킬을 뽑아내고 그 스킬이 정책의 행동 확률을 얼마나 바꾸는지를 신호로 삼는 이 자기진화 루프는 추가 라벨 없이도 중간 결정에 대한 감독을 만들어 냅니다.
 
+![seed-self-evolving-distillation-agentic-rl 슬라이드 1](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-01.webp)
+
 ## 개요
 
 지난 몇 년의 추론 모델 훈련은 결과 기반 강화학습, 즉 검증 가능한 보상을 쓰는 RLVR 계열이 이끌었습니다. 정답이면 1, 오답이면 0 같은 궤적 수준 보상을 주고 정책을 밀어 올리는 방식입니다. 단일 응답을 뱉는 수학이나 코딩 문제에서는 이 방식이 잘 통합니다. 문제는 에이전트입니다. 도구를 여러 번 호출하며 관찰을 받고 다시 행동하는 긴 궤적에서는 마지막 성공 여부 하나가 그 사이에 있었던 수십 개의 중간 결정 각각이 좋았는지 나빴는지를 거의 알려 주지 못합니다. 에피소드 수준의 결과와 토큰 수준의 학습 사이에 감독의 공백이 생기는 것입니다. 이 공백이 에이전트 RL의 샘플 효율을 갉아먹는 근본 병목입니다.
 
 SEED는 이 공백을 메우는 방법을 제안합니다. 핵심 발상은 완료된 궤적 안에 이미 배울 것이 들어 있다는 것입니다. 성공한 궤적에는 재사용할 만한 작업 흐름이 있고 실패한 궤적에는 피해야 할 함정이 있습니다. SEED는 이 사후 지식(hindsight)을 자연어 스킬로 명시화한 다음, 그 스킬을 다시 정책에게 증류해 넣습니다. 그리고 이 스킬을 뽑는 분석가 역할을 외부 모델이 아니라 현재 정책 자신이 맡습니다. 정책이 궤적도 모으고, 그 궤적에서 스킬도 뽑는 자기진화 구조입니다.
+
+![seed-self-evolving-distillation-agentic-rl 슬라이드 2](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-02.webp)
 
 ## SEED는 무엇인가
 
@@ -378,11 +382,15 @@ SEED가 진짜 차별화되는 지점은 다음 장치에 있습니다. 샘플�
 
 기존 접근과의 차이는 분명합니다. 강한 외부 모델을 교사로 두고 증류하는 방식은 교사를 구해야 하고 교사와 학생의 분포가 어긋나면 신호가 오염됩니다. 사람이 보상 모델을 만드는 방식은 라벨 비용이 큽니다. SEED는 둘 다 피합니다. 교사는 정책 자신이고 라벨은 궤적에서 자동으로 추출됩니다. 신호는 매 순간 현재 정책에 맞춰집니다.
 
+![seed-self-evolving-distillation-agentic-rl 슬라이드 3](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-03.webp)
+
 ## 논문이 보고한 실험 결과
 
 논문은 텍스트 기반과 비전 기반 에이전트 과제 양쪽에서 광범위한 실험을 수행했다고 보고합니다. 결과의 방향은 일관됩니다. SEED는 성능과 샘플 효율을 함께 개선했고 훈련에서 보지 못한 시나리오로의 일반화도 견고했다고 합니다. 강력한 베이스라인 방법들과 비교했을 때 세 개의 대표적인 에이전트 벤치마크에서 가장 높은 평균 성능을 기록했다는 것이 논문의 핵심 주장입니다.
 
 여기서 정직하게 짚을 것이 있습니다. 이 글은 논문의 초록과 공개된 요약을 근거로 작성했으며, 벤치마크별 구체적 수치는 원문에서 직접 확인하시기를 권합니다. 저희가 별도로 재현 실험을 돌려 측정한 값이 아니므로, 절대 수치를 인용하기보다 결과의 구조와 방향을 전달하는 데 집중했습니다. 다만 방향성만으로도 시사점은 분명합니다. 샘플 효율이 올랐다는 것은 같은 성능에 도달하는 데 더 적은 궤적, 곧 더 적은 GPU 시간이 든다는 뜻이고 이는 에이전트 RL을 실제로 운용하는 쪽에서 가장 비싼 자원을 아끼는 것과 직결됩니다.
+
+![seed-self-evolving-distillation-agentic-rl 슬라이드 4](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -403,16 +411,3 @@ SEED의 자기진화 구조는 강력하지만, 정책 자신이 분석가를 �
 에이전트 강화학습의 병목이 모델 능력이 아니라 감독의 공백이라는 진단은, 모델을 더 키우기 전에 신호를 더 촘촘하게 만들라는 방향을 가리킵니다. SEED는 그 촘촘한 신호를 외부에서 사 오지 않고 에이전트가 이미 만들어 낸 궤적 안에서 자연어 스킬의 형태로 캐내 자기 자신에게 되먹이는 길을 보여 줍니다. 여러분이 에이전트 RL 파이프라인을 운용한다면 오늘 가져갈 한 가지는 분명합니다. 결과 하나로만 보상을 주고 있다면, 그 궤적을 버리지 말고 사후 스킬을 뽑아 토큰 단위 감독으로 재활용할 여지가 있는지 먼저 점검해 보십시오. 그것이 더 큰 모델이나 더 강한 교사보다 먼저 시도해볼 만한 저비용 수단일 수 있습니다.
 
 출처: [SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning (arXiv:2607.14777)](https://arxiv.org/abs/2607.14777)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![seed-self-evolving-distillation-agentic-rl 슬라이드 1](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-01.webp)
-
-![seed-self-evolving-distillation-agentic-rl 슬라이드 2](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-02.webp)
-
-![seed-self-evolving-distillation-agentic-rl 슬라이드 3](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-03.webp)
-
-![seed-self-evolving-distillation-agentic-rl 슬라이드 4](/assets/images/seed-self-evolving-distillation-agentic-rl-slide-04.webp)
-

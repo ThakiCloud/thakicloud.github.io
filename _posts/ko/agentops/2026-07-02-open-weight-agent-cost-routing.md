@@ -369,6 +369,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 </script>
 {% endraw %}
 
+![open-weight-agent-cost-routing 슬라이드 1](/assets/images/open-weight-agent-cost-routing-slide-01.png)
+
 ## 설치 및 통합
 
 먼저 오픈 가중치 모델이 에이전트의 실제 핵심 작업, 즉 자연어 요청을 구조화된 도구 호출로 바꾸는 일을 해낼 수 있는지 확인했습니다. 검증 대상은 Gemma 4 26B이고, 관리형 API로 호출했습니다. 별도 의존성 없이 표준 라이브러리(urllib)만으로 호출하도록 실험을 짰습니다.
@@ -417,6 +419,8 @@ def call(prompt):
 
 작업이 들어오면 CostRouter가 작업 등급을 판단해 카탈로그에서 가장 싼 적격 모델을 고릅니다. 여기에 오픈 가중치 공급자를 같은 스키마로 얹어 두면, 도구 호출이나 대량 처리 같은 작업이 자동으로 저렴한 티어로 흘러갑니다. 라우팅을 사람이 매번 고르지 않아도 되는 이유입니다.
 
+![open-weight-agent-cost-routing 슬라이드 2](/assets/images/open-weight-agent-cost-routing-slide-02.png)
+
 ## 실제 실험 결과
 
 여섯 개의 실제 운영 요청을 Gemma 4에 넣고 결과를 그대로 채점했습니다. 채점 기준은 두 가지입니다. 출력이 유효한 JSON인가, 그리고 올바른 도구와 필수 파라미터를 담았는가입니다.
@@ -464,6 +468,8 @@ def call(prompt):
 
 정리하면, "비싼 모델을 덜 쓰자"가 아니라 "작업마다 이기는 모델을 쓰자"가 핵심입니다. 대부분의 에이전트 작업은 도구 호출과 파이프라인 실행이고, 그 대부분은 오픈 가중치로 충분합니다.
 
+![open-weight-agent-cost-routing 슬라이드 3](/assets/images/open-weight-agent-cost-routing-slide-03.png)
+
 ## 한계 및 반론
 
 이 접근에도 분명한 경계가 있습니다.
@@ -476,16 +482,6 @@ def call(prompt):
 
 마지막으로 지연입니다. 무료 공유 엔드포인트의 15초는 실시간 대화형 UX에는 부담스럽습니다. 배치 파이프라인이나 백그라운드 자동화에는 문제가 없지만, 사용자가 기다리는 경로라면 자체 서빙으로 지연을 잡거나 그 구간만 빠른 티어로 라우팅하는 판단이 필요합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![open-weight-agent-cost-routing 슬라이드 1](/assets/images/open-weight-agent-cost-routing-slide-01.png)
-
-![open-weight-agent-cost-routing 슬라이드 2](/assets/images/open-weight-agent-cost-routing-slide-02.png)
-
-![open-weight-agent-cost-routing 슬라이드 3](/assets/images/open-weight-agent-cost-routing-slide-03.png)
 
 ![open-weight-agent-cost-routing 슬라이드 4](/assets/images/open-weight-agent-cost-routing-slide-04.png)
 

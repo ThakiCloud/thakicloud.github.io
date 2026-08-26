@@ -32,6 +32,8 @@ AI 경쟁의 무게 중심이 모델에서 인프라로, 다시 인프라 안에
 
 ---
 
+![micron-anthropic-ai-memory-infrastructure 슬라이드 1]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.webp' | relative_url }})
+
 ## 무슨 일이 일어났나
 
 발표된 협약의 핵심은 세 갈래입니다.
@@ -45,6 +47,8 @@ AI 경쟁의 무게 중심이 모델에서 인프라로, 다시 인프라 안에
 발표 직후 Micron 주가는 약 5.5% 상승했습니다. 다만 본 글의 초점은 시세가 아니라, 이 동맹이 AI 인프라 설계에 던지는 기술적 함의입니다.
 
 ---
+
+![micron-anthropic-ai-memory-infrastructure 슬라이드 2]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.webp' | relative_url }})
 
 ## 왜 메모리가 AI 인프라의 병목인가
 
@@ -62,6 +66,8 @@ AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 
 ---
 
+![micron-anthropic-ai-memory-infrastructure 슬라이드 3]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.webp' | relative_url }})
+
 ## 메모리-스토리지 공동 설계가 의미하는 것
 
 지금까지 메모리는 대체로 표준 규격에 맞춰 구매하는 부품이었습니다. 이번 협약에서 주목할 부분은 Micron과 Anthropic이 **AI 워크로드에 맞춘 메모리·스토리지 아키텍처를 공동 설계**한다는 점입니다. 이는 몇 가지 변화를 시사합니다.
@@ -71,6 +77,8 @@ AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 또한 이 협약은 AI 인프라가 점점 **수직 통합**되고 있음을 보여 줍니다. 프런티어 AI 기업들이 GPU뿐 아니라 메모리까지 공급망과 설계 단계에서 확보하려 한다는 신호입니다. 시리즈 H 라운드에 Samsung, SK hynix 같은 메모리 기업이 함께 참여한 것도 같은 맥락으로 읽힙니다. 메모리 공급 능력이 AI 경쟁력의 일부로 편입되고 있는 것입니다.
 
 ---
+
+![micron-anthropic-ai-memory-infrastructure 슬라이드 4]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.webp' | relative_url }})
 
 ## ThakiCloud K8s AI/ML SaaS 플랫폼 관점
 
@@ -98,18 +106,6 @@ AI 추론 서버의 메모리 계층은 위 도표처럼 구성됩니다.
 
 ---
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![micron-anthropic-ai-memory-infrastructure 슬라이드 1]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-01.webp' | relative_url }})
-
-![micron-anthropic-ai-memory-infrastructure 슬라이드 2]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-02.webp' | relative_url }})
-
-![micron-anthropic-ai-memory-infrastructure 슬라이드 3]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-03.webp' | relative_url }})
-
-![micron-anthropic-ai-memory-infrastructure 슬라이드 4]({{ '/assets/images/micron-anthropic-ai-memory-infrastructure-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -37,6 +37,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/blender-mcp-natura
 
 여기서 중요한 것은 3D 자체가 아닙니다. Blender 자리에 다른 앱을 넣어도 같은 이야기가 성립한다는 점입니다. 표 계산기, 디자인 도구, 사내 관리 콘솔이 모두 잠재적인 "프롬프트 상자"가 됩니다. Blender MCP는 그 변화를 눈으로 확인시켜 주는 사례일 뿐입니다.
 
+![blender-mcp-natural-language-3d 슬라이드 1](/assets/images/blender-mcp-natural-language-3d-slide-01.webp)
+
 ## 이 기술은 무엇인가
 
 MCP(Model Context Protocol)는 모델과 외부 프로그램을 잇는 표준 규약입니다. Blender MCP는 이 규약을 이용해 Blender와 모델 사이에 **양방향 브리지**를 놓습니다. 모델은 브리지를 통해 Blender에게 명령을 보내고, Blender는 현재 씬의 상태를 모델에게 되돌려 줍니다. 이 왕복이 있어야 모델이 "지금 무엇이 놓여 있는지"를 보고 다음 동작을 결정할 수 있습니다.
@@ -374,17 +376,23 @@ MCP(Model Context Protocol)는 모델과 외부 프로그램을 잇는 표준 �
 </script>
 {% endraw %}
 
+![blender-mcp-natural-language-3d 슬라이드 2](/assets/images/blender-mcp-natural-language-3d-slide-02.webp)
+
 ## 어떻게 동작하나
 
 전체 흐름은 이렇게 이어집니다. 먼저 사용자가 원하는 장면을 평범한 문장으로 설명합니다. 스케치 한 장에서 출발하는 워크플로도 있습니다. 모델은 그 요청을 해석해 Blender가 실행할 파이썬 스크립트로 옮깁니다. 스크립트가 실행되면 씬에 오브젝트가 생기고, 모델은 브리지를 통해 바뀐 상태를 확인합니다. 조명이 부족하면 조명을 더하고, 위치가 어색하면 옮깁니다. 마지막에 Eevee Next 같은 렌더러로 결과를 그립니다.
 
 여기서 Kimi K3의 역할은 그 "번역과 판단"을 맡는 모델입니다. 자연어 요청을 구조화된 조작으로 옮기고, 씬 상태를 읽어 다음 수를 정하는 추론을 담당합니다. 모델이 Claude든 Kimi K3든, MCP라는 규약이 같기 때문에 브리지 아래의 흐름은 동일합니다. 초심자도 Blender를 거의 몰라도 자연어만으로 모델을 만들 수 있다는 반응이 나오는 이유가 여기 있습니다.
 
+![blender-mcp-natural-language-3d 슬라이드 3](/assets/images/blender-mcp-natural-language-3d-slide-03.webp)
+
 ## 무엇이 새로운가
 
 새로운 지점은 "생성"에서 "조작"으로의 이동입니다. 이미지 생성 모델은 결과물을 한 번에 뱉지만 그 안을 열어 고치기 어렵습니다. 반면 앱을 조작하는 방식은 **결과가 그 앱의 네이티브 포맷**으로 남습니다. Blender라면 씬 파일이고, 그 파일은 사람이 다시 열어 마저 다듬을 수 있습니다. AI가 초안을 잡고 사람이 완성하는 협업이 자연스럽게 성립합니다.
 
 이 패턴이 무서운 이유는 확장성 때문입니다. MCP 서버를 붙일 수 있는 앱이라면 무엇이든 에이전트의 손이 닿는 도구가 됩니다. 3D 툴에서 통했다면, 다음은 여러분 회사의 내부 도구일 수 있습니다.
+
+![blender-mcp-natural-language-3d 슬라이드 4](/assets/images/blender-mcp-natural-language-3d-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -408,18 +416,6 @@ Blender가 프롬프트 상자가 되었다는 말의 진짜 뜻은, MCP가 실�
 
 그래서 지금 해볼 만한 일은 3D 실험이 아니라 관점의 전환입니다. 여러분의 워크플로에서 사람이 반복적으로 클릭하는 앱을 하나 떠올려 보시고, "이것을 에이전트가 조종한다면 어디까지 맡기고 어디서 막아야 하나"를 먼저 그려 보십시오. 편리함은 MCP가 주지만, 안전은 샌드박스와 정책이 만듭니다. 에이전트에게 도구를 쥐여주기 전에 그 두 가지를 함께 설계하는 것이 순서입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![blender-mcp-natural-language-3d 슬라이드 1](/assets/images/blender-mcp-natural-language-3d-slide-01.webp)
-
-![blender-mcp-natural-language-3d 슬라이드 2](/assets/images/blender-mcp-natural-language-3d-slide-02.webp)
-
-![blender-mcp-natural-language-3d 슬라이드 3](/assets/images/blender-mcp-natural-language-3d-slide-03.webp)
-
-![blender-mcp-natural-language-3d 슬라이드 4](/assets/images/blender-mcp-natural-language-3d-slide-04.webp)
 
 ## 출처
 

@@ -34,6 +34,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-
 
 콘크리트는 4년 뒤에 도착하고 에이전트는 이미 도착했습니다. 오늘 다이제스트를 한 줄로 줄이면 이 문장입니다. 그리고 나머지 기사 대부분은 이 간격을 어떻게 견딜 것인가에 대한 서로 다른 대답들이었습니다.
 
+![lead-time-gap-concrete-and-agents 슬라이드 1](/assets/images/lead-time-gap-concrete-and-agents-slide-01.webp)
+
 ## 아무도 완공을 기다리지 않습니다
 
 리드타임이 길어지면 조직은 기다리지 않고 우회합니다. 오늘 나온 사례들이 그 우회로의 목록에 가깝습니다.
@@ -48,6 +50,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-
 
 물리 계층의 시계가 느린 데는 이유가 있습니다. 삼성전자가 이날 공개한 zHBM은 HBM5 대비 최대 8배 성능을 내세웠지만 아직 목업 단계이고 양산은 2028년 전후로 봅니다. LG전자는 600kW급 냉각수분배장치로 국내 기업 최초 엔비디아 인증을 받았고 상반기 냉각 수주만 6000억원을 기록했습니다. 랙당 전력이 올라가면서 냉각 자체가 병목이자 신사업이 됐다는 뜻입니다. 메모리도 냉각도 전력도, 전부 분기 단위보다 연 단위로 움직입니다.
 
+![lead-time-gap-concrete-and-agents 슬라이드 2](/assets/images/lead-time-gap-concrete-and-agents-slide-02.webp)
+
 ## 국내 수요는 이미 결제 단계입니다
 
 기다리지 않는 것은 인프라 사업자만이 아닙니다. 현대백화점그룹 계열 현대퓨처넷은 어제 한국마이크로소프트와 협약을 맺고 AI 파운드리와 애저 AI, 365 코파일럿을 그룹 전반에 적용하기로 했습니다. 자체 AI 조직을 유지하면서도 핵심 스택은 검증된 하이퍼스케일러 것을 그대로 가져오고 리테일 특화 에이전트는 공동 개발합니다. 실험 단계를 넘어 매장과 업무 프로세스에 이식하는 단계라는 뜻입니다.
@@ -55,6 +59,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-
 정부가 오늘 연 AX360도 같은 신호를 보냅니다. 부처와 지자체에 흩어져 있던 지원사업 정보를 한 창구로 모으면서 GPU를 모델별 성능과 활용 분야, 민간 서비스 가격까지 나란히 비교하게 했습니다. 독자 파운데이션 모델 2차 평가 결과물도 유형과 가격, 도입 사례와 함께 올라갑니다. 중견기업이 GPU를 직접 살지, 정부 지원사업에 붙을지, 민간 서비스를 쓸지를 한 화면에서 저울질하기 시작했다는 의미입니다.
 
 여기서 갈림길이 하나 생깁니다. 가격과 성능이 표준화된 표로 나열되는 순간, 컴퓨팅은 빠르게 원자재를 닮아갑니다. 조달 담당자가 비교할 수 없는 항목이 남아야 그 위에서 차별화가 생기는데, 그 항목은 대체로 GPU 사양표에 적히지 않습니다.
+
+![lead-time-gap-concrete-and-agents 슬라이드 3](/assets/images/lead-time-gap-concrete-and-agents-slide-03.webp)
 
 ## 빌린 컴퓨팅 위에서 통제는 어디에 남습니까
 
@@ -67,6 +73,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/lead-time-gap-concrete-
 통제가 남는 자리는 그 위층입니다. 어떤 에이전트가 어떤 권한으로 무슨 도구를 호출했는지, 그 호출이 어느 정책을 통과했는지, 사후에 누가 그것을 증명할 수 있는지 입니다. 레드햇이 오늘 아사고를 아파치 2.0으로 공개한 이유가 정확히 여기에 있습니다. 정책 문서를 해석해 표준에 매핑하고 안전성을 테스트해 완화 조치를 붙이고 그 결과를 실제 배포 설정으로 전환하는 4단계를 자동화하겠다는 프로젝트입니다. NIST AI RMF와 OWASP LLM Top 10, EU AI Act를 표준으로 끌어오고 IBM 리서치와 마이크로소프트, 엔비디아를 포함한 13개 이상 기관이 붙었습니다.
 
 주목할 점은 이것이 모델 경쟁이 아니라 운영 계층 표준 경쟁이라는 사실입니다. 컴플라이언스 팀의 문서와 엔지니어링 팀의 배포 설정 사이에 사람이 손으로 스크립트를 쓰던 구간을, 오픈소스 공용 규격으로 덮겠다는 시도입니다. 모델 계층에서 벌어진 일이 운영 계층에서 반복된다고 보면 이해가 빠릅니다. 표준이 공용화되면 그 아래 개별 구현은 대체 가능해지고 값은 표준을 먼저 갖춘 쪽으로 옮겨갑니다.
+
+![lead-time-gap-concrete-and-agents 슬라이드 4](/assets/images/lead-time-gap-concrete-and-agents-slide-04.webp)
 
 ## 국방이 먼저 값을 치릅니다
 
@@ -111,16 +119,3 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 정의한 이유가 여기 있습�
 - 머니투데이방송, [내가 'K-팔란티어'…국방 AI에 뛰어드는 ICT 기업들](https://news.mtn.co.kr/news-detail/2026080414200039433)
 - 중앙일보, ['한국판 팔란티어' 꿈꾸는 네이버, 김선호 전 국방차관 영입](https://www.joongang.co.kr/article/25450803)
 - 디지털데일리, [래블업·제논·셀렉트스타·인이지… AI 스타트업 상장 러시](https://www.ddaily.co.kr/page/view/2026080418165387449)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
-
-![lead-time-gap-concrete-and-agents 슬라이드 1](/assets/images/lead-time-gap-concrete-and-agents-slide-01.webp)
-
-![lead-time-gap-concrete-and-agents 슬라이드 2](/assets/images/lead-time-gap-concrete-and-agents-slide-02.webp)
-
-![lead-time-gap-concrete-and-agents 슬라이드 3](/assets/images/lead-time-gap-concrete-and-agents-slide-03.webp)
-
-![lead-time-gap-concrete-and-agents 슬라이드 4](/assets/images/lead-time-gap-concrete-and-agents-slide-04.webp)
-

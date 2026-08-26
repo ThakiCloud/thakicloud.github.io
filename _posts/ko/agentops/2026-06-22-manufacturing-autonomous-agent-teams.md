@@ -34,6 +34,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ---
 
+![manufacturing-autonomous-agent-teams 슬라이드 1]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-01.webp' | relative_url }})
+
 ## 제조 AI 운영의 인력 병목
 
 HanTek은 울산·구미·광주에 각각 GPU 클러스터를 운영하는 중견 전자 부품 제조사입니다. 지난 2년간 각 공장 라인에 비전 AI 모델을 도입했지만, 운영 현장에서는 아래 세 가지 문제가 반복적으로 발생했습니다.
@@ -47,6 +49,8 @@ HanTek은 울산·구미·광주에 각각 GPU 클러스터를 운영하는 중�
 이러한 문제는 HanTek만의 이야기가 아닙니다. 제조업 전반에서 AI를 도입했지만 운영 역량이 따라가지 못해 효과가 반감되는 패턴이 반복됩니다.
 
 ---
+
+![manufacturing-autonomous-agent-teams 슬라이드 2]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-02.webp' | relative_url }})
 
 ## 자율 에이전트팀 구성 - 멀티페르소나와 동적 작업
 
@@ -75,6 +79,8 @@ HanTek은 세 가지 페르소나로 에이전트팀을 구성했습니다.
 세 에이전트는 독립적으로 작동하지만 Paxis의 Multi-Agent Orchestration을 통해 필요 시 협업합니다. 예를 들어 모델 품질 에이전트가 재학습을 트리거할 때, 인프라 운영 에이전트에게 학습용 GPU 클러스터 확보를 요청하는 크로스 에이전트 위임이 자동으로 이뤄집니다. 이 위임 과정은 Policy Engine과 Audit Log를 통해 모든 의사결정이 기록됩니다.
 
 ---
+
+![manufacturing-autonomous-agent-teams 슬라이드 3]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-03.webp' | relative_url }})
 
 ## 멀티클러스터 중앙관리 - 여러 공장의 GPU 통합
 
@@ -430,6 +436,8 @@ GPU 사용률이 클러스터 평균 80%를 지속적으로 초과하면 Victori
 
 ---
 
+![manufacturing-autonomous-agent-teams 슬라이드 4]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-04.webp' | relative_url }})
+
 ## ThakiCloud 적용 시사점
 
 HanTek 사례에서 얻을 수 있는 실제 적용 시사점은 다음과 같습니다.
@@ -461,16 +469,3 @@ HanTek 사례에서 얻을 수 있는 실제 적용 시사점은 다음과 같�
 ---
 
 제조 AI 운영의 인력 병목은 단순히 채용으로 해결되지 않습니다. 자율 에이전트팀이 반복 운영 업무를 맡고, 멀티클러스터 중앙관리가 GPU 리소스 낭비를 줄이며, 사람은 더 복잡한 판단과 개선에 집중하는 구조가 지속 가능한 제조 AI 운영의 방향입니다. ThakiCloud AI Platform과 Paxis는 이 구조를 기술적으로 구현하는 구체적인 수단을 제공합니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![manufacturing-autonomous-agent-teams 슬라이드 1]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-01.webp' | relative_url }})
-
-![manufacturing-autonomous-agent-teams 슬라이드 2]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-02.webp' | relative_url }})
-
-![manufacturing-autonomous-agent-teams 슬라이드 3]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-03.webp' | relative_url }})
-
-![manufacturing-autonomous-agent-teams 슬라이드 4]({{ '/assets/images/manufacturing-autonomous-agent-teams-slide-04.webp' | relative_url }})
-

@@ -47,6 +47,8 @@ Paxis 에이전트 빌더로 만든 에이전트는 각자 시스템 프롬프�
 그래서 27B 교사가 같은 에이전트들을 실행한 기록을 모아 8B에게 먹였습니다. 목표는 지식이 아니라
 **지시 준수**입니다.
 
+![distill-8b-what-we-actually-trained-on 슬라이드 1](/assets/images/distill-8b-what-we-actually-trained-on-slide-01.webp)
+
 ## 학습셋은 이렇게 생겼습니다
 
 행 하나가 대화 하나이고, 구조는 `system / user / assistant` 셋입니다. system에는 그 에이전트의
@@ -105,6 +107,8 @@ tool_calls ["mcp_connect", "skill_find"]
 
 이 선택이 나중에 문제를 하나 만들었는데, 뒤에서 말씀드리겠습니다.
 
+![distill-8b-what-we-actually-trained-on 슬라이드 2](/assets/images/distill-8b-what-we-actually-trained-on-slide-02.webp)
+
 ## 홀드아웃은 에이전트 단위로 잘랐습니다
 
 문장 단위로 자르면 같은 에이전트의 다른 질문이 학습과 평가에 동시에 들어갑니다. 그러면 점수가
@@ -137,6 +141,8 @@ tool_calls ["mcp_connect", "skill_find"]
 
 즉 **이미 잘하던 것을 열 배로 더 가르치고, 못하던 것은 거의 안 가르쳤습니다.** 손실은 당연히
 많은 쪽으로 기울었고, 적은 쪽은 밀려났습니다.
+
+![distill-8b-what-we-actually-trained-on 슬라이드 3](/assets/images/distill-8b-what-we-actually-trained-on-slide-03.webp)
 
 ## 데이터를 다시 짜서 고쳤습니다
 
@@ -177,6 +183,8 @@ tool_calls ["mcp_connect", "skill_find"]
 
 측정이 없는 축은 학습되지 않습니다. 그리고 측정하지 않은 축은 나빠져도 모릅니다.
 
+![distill-8b-what-we-actually-trained-on 슬라이드 4](/assets/images/distill-8b-what-we-actually-trained-on-slide-04.webp)
+
 ## 남는 것
 
 여덟 항목 중 여섯이 올랐고, 하나는 표본이 작아 판단 보류이며, 하나는 그대로입니다. 뒤집힌 건
@@ -190,16 +198,3 @@ tool_calls ["mcp_connect", "skill_find"]
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 - [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531)
 - [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![distill-8b-what-we-actually-trained-on 슬라이드 1](/assets/images/distill-8b-what-we-actually-trained-on-slide-01.webp)
-
-![distill-8b-what-we-actually-trained-on 슬라이드 2](/assets/images/distill-8b-what-we-actually-trained-on-slide-02.webp)
-
-![distill-8b-what-we-actually-trained-on 슬라이드 3](/assets/images/distill-8b-what-we-actually-trained-on-slide-03.webp)
-
-![distill-8b-what-we-actually-trained-on 슬라이드 4](/assets/images/distill-8b-what-we-actually-trained-on-slide-04.webp)
-

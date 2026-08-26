@@ -372,6 +372,9 @@ SAO는 이름 그대로 두 가지를 결합합니다. "단일 롤아웃(single-
 
 여기서 근본적인 충돌이 발생합니다. GRPO(Group Relative Policy Optimization)는 이름부터 "그룹 상대"입니다. 한 프롬프트에 대해 여러 롤아웃을 묶어 그룹을 만들고, 그 그룹 안에서 상대적으로 잘한 롤아웃과 못한 롤아웃을 비교해 우위(advantage)를 계산합니다. 별도의 가치 함수(critic) 없이 그룹 내부 비교만으로 학습 신호를 만드는 것이 GRPO의 장점이자, 동시에 족쇄입니다. 그룹이 다 채워지지 않으면 우위를 계산할 수 없기 때문입니다. 롤아웃이 도착하는 대로 학습하는 비동기 구조와, 그룹이 다 찰 때까지 기다려야 하는 GRPO는 근본적으로 어긋납니다.
 
+
+![sao-single-rollout-async-agentic-rl 슬라이드 1]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-01.webp' | relative_url }})
+
 ## 왜 GRPO는 비동기 학습에 맞지 않는가
 
 이 어긋남을 조금 더 구체적으로 보겠습니다. 비동기 파이프라인에서 그룹을 유지하려면 두 가지 나쁜 선택 중 하나를 강요받습니다.
@@ -382,6 +385,9 @@ SAO는 이름 그대로 두 가지를 결합합니다. "단일 롤아웃(single-
 
 SAO의 답은 단순합니다. 그룹을 아예 없애는 것입니다. 프롬프트마다 롤아웃을 하나만 생성하고, 그 하나가 도착하면 바로 학습에 씁니다. 그룹 장벽이 사라지므로 생성기는 절대 기다리지 않고, GPU 유휴 시간이 크게 줄어듭니다.
 
+
+![sao-single-rollout-async-agentic-rl 슬라이드 2]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-02.webp' | relative_url }})
+
 ## SAO의 두 축: 단일 롤아웃과 양방향 토큰 클리핑
 
 그런데 그룹을 없애면 GRPO가 공짜로 얻던 것을 잃습니다. 그룹 내부 비교는 그 자체로 분산을 줄이는 baseline 역할을 했습니다. 롤아웃이 하나뿐이면 "이 롤아웃이 그룹 평균보다 잘했는가"라는 비교 기준이 사라집니다. 게다가 비동기 구조에서는 롤아웃을 만든 정책과 지금 업데이트하려는 정책 사이에 시차가 생깁니다. 이 시차, 즉 off-policy 문제가 학습을 흔드는 두 번째 위험입니다.
@@ -390,6 +396,9 @@ SAO는 이 안정성 문제를 "엄격한 양방향 토큰 단위 클리핑(stri
 
 이 조합의 결과로 SAO는 1,000 스텝 동안 안정적으로 학습을 이어 갔다고 보고합니다. 비동기 RL에서 수백 스텝을 넘기면 발산하거나 붕괴하는 사례가 흔하다는 점을 감안하면, 1,000 스텝 안정 학습은 이 방법의 핵심 주장을 뒷받침하는 증거입니다.
 
+
+![sao-single-rollout-async-agentic-rl 슬라이드 3]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-03.webp' | relative_url }})
+
 ## 실제 결과와 검증
 
 논문은 SAO를 GRPO 및 그 변형들과 비교했고, 에이전트 코딩과 추론 벤치마크에서 일관되게 앞섰다고 보고합니다. 언급된 벤치마크는 SWE-Bench Verified(실제 GitHub 이슈 해결), BeyondAIME(고난도 수학), IMOAnswerBench(올림피아드 수준 수학)입니다. 셋 모두 짧은 단답이 아니라 긴 호흡의 다단계 작업이라는 공통점이 있습니다. 바로 SAO가 겨냥한 영역입니다.
@@ -397,6 +406,9 @@ SAO는 이 안정성 문제를 "엄격한 양방향 토큰 단위 클리핑(stri
 가장 설득력 있는 검증은 벤치마크 표가 아니라 배포 사실 자체입니다. SAO는 GLM-5.2(750B-A40B, 활성 파라미터 40B 규모의 MoE) 오픈 모델을 학습하는 실제 에이전트 RL 파이프라인에 투입되었습니다. 연구용 방법이 논문에만 머물지 않고 수백 B 규모 모델의 프로덕션 학습에 쓰였다는 것은, 이 방법이 소규모 토이 세팅을 넘어 실제 스케일에서 견딘다는 강한 신호입니다.
 
 다만 이 글에서는 벤치마크의 구체적 수치를 인용하지 않습니다. 원문에서 검증한 정확한 수치를 이 자리에서 재현할 수 없다면, 숫자를 지어내지 않고 방법의 구조와 명시된 벤치마크 이름만 전하는 것이 정직합니다. 정확한 점수가 필요하다면 아래 원문을 직접 확인하시기 바랍니다.
+
+
+![sao-single-rollout-async-agentic-rl 슬라이드 4]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -418,18 +430,6 @@ SAO의 교훈은 알고리즘 논문 한 편을 넘어, GPU 클러스터를 운�
 
 그럼에도 SAO의 기여는 분명합니다. 문제(긴 롤아웃에서 그룹 샘플링의 비효율)를 정확히 짚었고, 해법(단일 롤아웃 + 양방향 클리핑)을 실제 수백 B 규모 프로덕션 학습으로 검증했습니다. GPU 활용률이 곧 학습 비용인 조직이라면, 자신의 파이프라인이 "그룹을 기다리느라" 얼마를 태우고 있는지 한 번쯤 계산해 볼 이유가 됩니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
-
-![sao-single-rollout-async-agentic-rl 슬라이드 1]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-01.webp' | relative_url }})
-
-![sao-single-rollout-async-agentic-rl 슬라이드 2]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-02.webp' | relative_url }})
-
-![sao-single-rollout-async-agentic-rl 슬라이드 3]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-03.webp' | relative_url }})
-
-![sao-single-rollout-async-agentic-rl 슬라이드 4]({{ '/assets/images/sao-single-rollout-async-agentic-rl-slide-04.webp' | relative_url }})
 
 ## 출처
 

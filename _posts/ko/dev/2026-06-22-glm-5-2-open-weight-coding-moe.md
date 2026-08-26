@@ -29,6 +29,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ThakiCloud처럼 쿠버네티스 기반으로 AI/ML SaaS 플랫폼을 운영하는 입장에서 이 조합은 그냥 지나칠 수 없습니다. 폐쇄형 API에 종속되지 않고, 고객의 데이터 경계 안에서, 통제된 비용으로 프런티어급 코딩 모델을 띄울 수 있다면, 그것은 온프렘과 소버린 AI를 요구하는 고객에게 곧바로 팔 수 있는 제품이 됩니다. 이 글에서는 GLM-5.2의 공개된 사실을 먼저 확인하고, 실제로 자체 호스팅하려면 무엇이 필요한지, 그리고 우리 플랫폼 관점에서 어떤 의미가 있는지를 차례로 정리합니다. 모델 자체를 8장의 H200 위에 띄우는 것은 이 글의 범위를 벗어나므로, 수치는 모두 공개 문서와 보도에서 확인한 값만 인용하고 직접 재현하지 못한 부분은 명확히 구분했습니다.
 
+![glm-5-2-open-weight-coding-moe 슬라이드 1]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-01.webp' | relative_url }})
+
 ## 이 모델은 무엇인가
 
 GLM-5.2는 중국의 Z.ai(zai-org)가 2026년 6월 13일 공개한 대규모 Mixture-of-Experts 모델입니다. 전체 파라미터는 744B 규모이고, 토큰마다 활성화되는 파라미터는 약 40B로 직전 세대인 GLM-5.1과 비슷한 수준을 유지합니다. MoE 구조의 핵심이 바로 여기에 있습니다. 전체 용량은 거대하게 키우되, 한 번의 추론에서 실제로 계산에 참여하는 전문가(expert)는 일부만 활성화해 추론 비용을 억제하는 방식입니다. 744B라는 숫자에 겁먹기 전에, 실효 연산량은 40B급이라는 점을 먼저 이해해야 자체 호스팅 비용을 올바르게 가늠할 수 있습니다.
@@ -364,6 +366,8 @@ GLM-5.2는 중국의 Z.ai(zai-org)가 2026년 6월 13일 공개한 대규모 Mix
 {% endraw %}
 *전체 744B 용량 중 토큰당 약 40B만 활성화하는 MoE 라우팅과, 1M 컨텍스트·코딩 특화 학습이 장기 호흡 코딩 성능으로 연결되는 구조입니다.*
 
+![glm-5-2-open-weight-coding-moe 슬라이드 2]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-02.webp' | relative_url }})
+
 ## 벤치마크: GPT-5.5를 어디서 앞섰나
 
 화제의 핵심인 벤치마크부터 사실 확인을 했습니다. 독립 벤치마크 기준으로 GLM-5.2는 현재 최상위 오픈웨이트 코딩 모델로 평가됩니다. 구체적인 수치는 다음과 같습니다.
@@ -376,6 +380,8 @@ GLM-5.2는 중국의 Z.ai(zai-org)가 2026년 6월 13일 공개한 대규모 Mix
 읽는 법은 이렇습니다. SWE-bench Pro에서 GLM-5.2의 62.1은 GPT-5.5의 58.6을 앞섭니다. 다만 Claude Opus 4.8의 69.2에는 미치지 못합니다. Terminal-Bench 2.1에서는 81.0을 기록하며 Claude Opus 4.8에 근소한 차이로 따라붙은 2위권으로 보도됐습니다. 즉 "모든 프런티어 모델을 이겼다"가 아니라, "최상위 폐쇄형 모델 바로 아래에 붙으면서, 같은 체급의 폐쇄형 API인 GPT-5.5는 여러 장기 호흡 코딩 과제에서 앞섰다"가 정확한 요약입니다.
 
 여기에 비용이 결합됩니다. 보도에 따르면 GLM-5.2는 이 수준의 성능을 GPT-5.5 대비 약 1/6 비용으로 냅니다. 성능에서 한두 점 차이는 실무에서 충분히 감내할 수 있지만, 6배의 비용 차이는 인프라 전략을 바꾸는 크기입니다. 참고로 Z.ai가 직접 제공하는 관리형 GLM Coding Plan은 라이트가 월 10달러, 프로가 월 30달러, 맥스가 월 80달러 수준으로 책정돼 있습니다. 자체 호스팅 대신 관리형으로 시작해 보고 싶은 팀에게는 진입 비용이 낮은 편입니다.
+
+![glm-5-2-open-weight-coding-moe 슬라이드 3]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-03.webp' | relative_url }})
 
 ## 자체 호스팅: 744B를 실제로 띄우려면
 
@@ -397,6 +403,8 @@ vllm serve zai-org/GLM-5.2-FP8 \
 
 핵심 운영 포인트는 분명합니다. FP8 KV 캐시는 KV 메모리를 절반으로 줄이면서 품질 영향이 미미하고, 1M 컨텍스트에서는 선택이 아니라 필수입니다. 대부분의 팀이 초기 자체 호스팅 평가를 시작할 때 FP8가 현실적인 출발점이라는 것이 공통된 권고입니다.
 
+![glm-5-2-open-weight-coding-moe 슬라이드 4]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-04.webp' | relative_url }})
+
 ## ThakiCloud K8s AI/ML SaaS 플랫폼 적용 및 시사점
 
 ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로드를 스케줄링하고, vLLM 기반으로 모델을 서빙하며, 멀티테넌트 환경에서 여러 고객의 추론을 격리해 운영하는 구조입니다. GLM-5.2는 이 스택에 거의 그대로 들어맞습니다.
@@ -417,18 +425,6 @@ ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로�
 
 결론적으로 GLM-5.2는 "폐쇄형을 무조건 대체한다"가 아니라, "온프렘·소버린·비용 통제가 중요한 워크로드에서 폐쇄형 API의 강력한 대안이 생겼다"로 읽는 것이 정확합니다. 그리고 그 워크로드야말로 ThakiCloud가 가장 잘하는 영역입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![glm-5-2-open-weight-coding-moe 슬라이드 1]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-01.webp' | relative_url }})
-
-![glm-5-2-open-weight-coding-moe 슬라이드 2]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-02.webp' | relative_url }})
-
-![glm-5-2-open-weight-coding-moe 슬라이드 3]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-03.webp' | relative_url }})
-
-![glm-5-2-open-weight-coding-moe 슬라이드 4]({{ '/assets/images/glm-5-2-open-weight-coding-moe-slide-04.webp' | relative_url }})
 
 ## 출처
 

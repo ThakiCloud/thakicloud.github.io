@@ -29,6 +29,8 @@ LLM 추론은 크게 prefill(입력 처리)과 decode(토큰 생성) 두 단계�
 
 단, Prefix Caching은 decode 속도에는 영향을 주지 않습니다. "첫 토큰 지연시간(TTFT)"은 개선되지만 "분당 토큰 수(TPS)"는 그대로입니다. 이 점을 혼동하면 기대치가 빗나갑니다.
 
+![vllm-prefix-caching-kv-reuse-production 슬라이드 1]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.webp' | relative_url }})
+
 ## vLLM의 KV 블록 해싱 원리
 
 vLLM은 PagedAttention을 기반으로 KV Cache를 고정 크기 블록 단위로 관리합니다. Automatic Prefix Caching은 각 블록을 그 블록의 토큰과, 그 앞의 모든 토큰 시퀀스를 함께 해싱해서 식별합니다.
@@ -40,6 +42,8 @@ vLLM은 PagedAttention을 기반으로 KV Cache를 고정 크기 블록 단위�
 덕분에 두 요청이 접두사를 공유하는 한 정확히 어느 블록까지 재사용 가능한지 O(1)로 확인됩니다. 신규 요청이 들어오면 vLLM이 블록 테이블에서 해시가 일치하는 블록을 찾아 재사용합니다. 일치하지 않는 블록부터 새로 prefill을 시작합니다.
 
 2026년 기준 프로덕션 추론 스택에서 PagedAttention은 사실상 표준입니다. vLLM, SGLang, TensorRT-LLM 모두 기본 탑재하고 있으며, 이로 인해 KV Cache 낭비는 4% 미만으로 줄어들었습니다. 2-4배 처리량 향상은 이 구조에서 나옵니다.
+
+![vllm-prefix-caching-kv-reuse-production 슬라이드 2]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.webp' | relative_url }})
 
 ## 활성화 방법
 
@@ -70,6 +74,8 @@ containers:
       nvidia.com/gpu: "1"
 ```
 
+![vllm-prefix-caching-kv-reuse-production 슬라이드 3]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.webp' | relative_url }})
+
 ## 히트율을 높이는 실전 패턴
 
 ### 시스템 프롬프트를 앞에 고정한다
@@ -90,6 +96,8 @@ messages = [
 ### RAG 문서를 앞부분에 배치한다
 
 Retrieval-Augmented Generation에서 검색 결과를 앞에 두고 질문을 뒤에 붙이면, 동일 문서 셋을 참조하는 요청들 사이에서 캐시 히트가 발생합니다. 문서 캐시 히트율 60-80%는 코드베이스 QA, 긴 문서 분석 같은 사용 패턴에서 현실적인 수치입니다.
+
+![vllm-prefix-caching-kv-reuse-production 슬라이드 4]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.webp' | relative_url }})
 
 ## 히트율 모니터링
 
@@ -120,16 +128,3 @@ Prefix Caching을 쓸 때 `--enable-chunked-prefill`을 함께 켜면 처리량�
 ## 정리
 
 vLLM Prefix Caching은 플래그 하나로 켜지는 무료 최적화입니다. 히트율 60% 이상이 나오는 워크로드에서는 GPU 비용을 절반 이하로 줄일 수 있습니다. 시스템 프롬프트 고정, 에이전트 루프 컨텍스트 누적, RAG 문서 앞배치가 히트율을 높이는 세 가지 패턴입니다. 켜두지 않을 이유가 없습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![vllm-prefix-caching-kv-reuse-production 슬라이드 1]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-01.webp' | relative_url }})
-
-![vllm-prefix-caching-kv-reuse-production 슬라이드 2]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-02.webp' | relative_url }})
-
-![vllm-prefix-caching-kv-reuse-production 슬라이드 3]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-03.webp' | relative_url }})
-
-![vllm-prefix-caching-kv-reuse-production 슬라이드 4]({{ '/assets/images/vllm-prefix-caching-kv-reuse-production-slide-04.webp' | relative_url }})
-

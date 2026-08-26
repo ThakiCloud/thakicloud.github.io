@@ -61,6 +61,8 @@ $ sales_crm_render_brief.py --data brief.json --print-slack
 
 헤더 번호, 링크 문법, 쓰레드 구조는 전부 코드가 붙입니다. 그래서 오케스트레이션과 포맷은 Sonnet과 코드로 내려가 있고, 고객에게 직접 나가는 문안 생성만 의도적으로 상위 모델을 유지합니다. 어디를 내리고 어디를 남길지가 뒤섞이지 않습니다.
 
+![build-expensive-run-cheap 슬라이드 1](/assets/images/build-expensive-run-cheap-slide-01.webp)
+
 ## 비용 최적화 스킬: 측정하고, 내리고, 되돌린다
 
 포맷을 코드로 내렸다면 다음 질문은 "그래서 이 스킬은 정말 싼 모델로 내려도 되는가"입니다. 이걸 사람이 눈대중으로 판단하면 안 됩니다. 그래서 스킬을 대상으로 실제 작업을 싼 티어와 현재 티어에 각각 돌려보고, 코드가 그 결과를 채점해 판정하는 비용 최적화 스킬을 만들었습니다.
@@ -78,6 +80,8 @@ $ cost_evolve.py evolve --skill humanizer
 ```
 
 게이트는 강등을 거부했습니다. Haiku가 문장을 자연스럽게 다시 쓰는 능력에서 실제로 밀렸기 때문입니다. 동시에 포맷 격차 세 개를 짚으며 "이건 코드로 내리면 된다"고 알려줍니다. 이게 정확히 우리가 원하는 판단입니다. 아무거나 싸게 내리는 게 아니라, 내려도 되는 것만 데이터로 골라냅니다.
+
+![build-expensive-run-cheap 슬라이드 2](/assets/images/build-expensive-run-cheap-slide-02.webp)
 
 ## 팩시스는 이 판단을 매일 밤 자동으로 돌린다
 
@@ -108,6 +112,8 @@ $ cost_evolve.py evolve --skill humanizer
 
 비싼 모델은 예외이고, 싼 모델이 기본입니다. 그리고 그 경계는 매일 밤 데이터로 다시 그어집니다.
 
+![build-expensive-run-cheap 슬라이드 3](/assets/images/build-expensive-run-cheap-slide-03.webp)
+
 ## 로컬 GPU가 있다면, 싼 티어를 직접 굴려도 된다
 
 여기까지가 상용 API 안에서 티어를 내리는 이야기라면, 로컬 GPU가 있는 팀에는 한 걸음 더 나갑니다. 싼 티어의 상당 부분을 오픈웨이트 소형 모델로 직접 돌릴 수 있기 때문입니다. 최근 소형·중형 오픈웨이트 모델의 도구 호출 능력이 실무에서 쓸 만한 수준으로 올라왔습니다.
@@ -115,6 +121,8 @@ $ cost_evolve.py evolve --skill humanizer
 구글의 Gemma 4는 Apache 2.0으로 열려 있고, E2B와 E4B 같은 소형 변형은 휴대폰이나 Jetson급 보드에서도 온디바이스로 돕니다. 라우팅과 분류, 간단한 도구 호출 워커로 쓰기 좋은 크기입니다. Zhipu의 GLM 5.2는 MIT 라이선스 오픈웨이트이면서 에이전트형 도구 사용을 앞세워 프론티어 폐쇄 모델에 근접한 성능을 보입니다. Moonshot의 Kimi K2.7-Code는 코딩과 다단계 도구 실행에 특화된 오픈웨이트 모델입니다. 업계에서는 이미 에이전트 트래픽의 60~80%를 이런 오픈웨이트로 흘리고, 정말 어려운 20% 남짓만 프론티어 API로 올려보내는 구성이 자리 잡고 있습니다.
 
 우리가 하려는 말은 단순합니다. 팀 업무의 대부분은 고난도 창작이 아니므로, 그 부분은 로컬에서 도는 작은 모델로 충분합니다. 프론티어 모델은 남겨두되, 진짜 어려운 소수의 일에만 쓰면 됩니다.
+
+![build-expensive-run-cheap 슬라이드 4](/assets/images/build-expensive-run-cheap-slide-04.webp)
 
 ## 도움이 필요하다면
 
@@ -130,16 +138,3 @@ GLM 5.2와 Kimi K2.7-Code 같은 최신 오픈웨이트 모델을 조합해 비�
 
 - [2026년 오픈소스 LLM 정리 (Hugging Face Blog)](https://huggingface.co/blog/daya-shankar/open-source-llms)
 - [GLM 5.2 vs Kimi K2.7 Code: 오픈웨이트 에이전트 코딩 비교 (Groundy)](https://groundy.com/articles/glm-5-2-vs-kimi-k2-7-code-two-open-weight-bets-on-agentic-coding/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![build-expensive-run-cheap 슬라이드 1](/assets/images/build-expensive-run-cheap-slide-01.webp)
-
-![build-expensive-run-cheap 슬라이드 2](/assets/images/build-expensive-run-cheap-slide-02.webp)
-
-![build-expensive-run-cheap 슬라이드 3](/assets/images/build-expensive-run-cheap-slide-03.webp)
-
-![build-expensive-run-cheap 슬라이드 4](/assets/images/build-expensive-run-cheap-slide-04.webp)
-

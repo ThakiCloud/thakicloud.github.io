@@ -39,6 +39,8 @@ Cameron R. Wolfe(Ph.D., Netflix Research)의 Substack Deep (Learning) Focus에�
 
 가이드가 전제하는 RL의 위치는 분명합니다. 초기 instruction following 모델 생성, alignment와 안전성, 복잡한 reasoning 문제 해결까지, LLM 역사에서 RL이 decisive 역할을 해왔고 지금 가장 뜨거운 문제들(reasoning, knowledge work, agents, token 효율, reliability)도 모두 RL로 다루어지고 있다는 것입니다. 이 글의 주제는 "RL이 왜 LLM에서 중요한가"가 아니라 "중요해진 그 RL을, 어떤 알고리즘을, 어떤 설계 결정과 함께 사용하는가"를 한 지도에 올리는 것입니다.
 
+![llm-rl-complete-guide 슬라이드 1](/assets/images/llm-rl-complete-guide-slide-01.webp)
+
 ## 가이드의 구조
 
 전체는 세 큰 축으로 나뉩니다.
@@ -82,6 +84,8 @@ RL 스케일링 로는 pretraining보다 "messy"합니다. pretraining이 held-o
 
 에이전트 RL과 월드 모델은 이 지도의 가장 끝단입니다. reasoning에서 knowledge work·에이전트·token 효율·reliability로 이어지는 현재 연구의 축을, 저자가 각기 deep dive로 연결해 줍니다.
 
+![llm-rl-complete-guide 슬라이드 2](/assets/images/llm-rl-complete-guide-slide-02.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 **Maxis 렌즈.** Maxis의 RL 파인튜닝 파이프라인 문서가 "어느 알고리즘을 왜 쓰나"를 설명해야 한다면, 이 가이드의 정책 기울기 섹션이 그 골격입니다. GRPO의 critic 제거가 실제로 파이프라인 비용을 얼마나 줄이는지, DAPO의 로스 집계 교정이 어떤 편향을 제거하는지, CISPO와 TIS가 같은 importance ratio를 어떻게 다른 용도로 쓰는지까지, 비교의 기준점을 한 곳에서 가져올 수 있습니다. 특히 "훈련 엔진 vs 추론 엔진 불일치(TIS)" 주제는 서빙 엔진과 훈련 엔진이 다른 MLOps 환경에서 실제 마주치는 문제입니다.
@@ -90,6 +94,8 @@ RL 스케일링 로는 pretraining보다 "messy"합니다. pretraining이 held-o
 
 **주의점.** 이 글은 primary research가 아니라 통합 가이드입니다. 각 섹션의 deep dive 링크(PPO for LLMs, GRPO++ tricks, RL scaling laws, online RL)와 거기서 인용되는 원본 논문이 사실의 정본입니다. 구현 레벨 코드(GAE 스니펫 등)가 일부 포함되지만, 파이프라인을 직접 짤 때의 레퍼런스로 쓰려면 trl·verl 같은 프레임워크 문서와 함께 봐야 합니다.
 
+![llm-rl-complete-guide 슬라이드 3](/assets/images/llm-rl-complete-guide-slide-03.webp)
+
 ## 한계 및 반론
 
 첫째, 통합본의 깊이 한계입니다. Sutton & Barto나 The RLHF Book 같은 전용 교재에 비해 수학적 유도보다 개념·구조 이해에 초점이 맞춰져 있습니다. 알고리즘을 유도부터 다시 짚어야 하는 독자에게는 보완 자료가 필요합니다.
@@ -97,6 +103,8 @@ RL 스케일링 로는 pretraining보다 "messy"합니다. pretraining이 held-o
 둘째, 이동하는 분야에 대한 스냅샷입니다. GRPO++ 변종(CISPO, TIS, DAPO 등)은 발표 시점 기준으로 정리되어 있고 가이드 공개일(2026-08-24) 이후의 새 변종은 포함되지 않습니다. 프런티어 주제는 "지금 지도"로 쓰고 세부 수치는 원본을 대조해야 합니다.
 
 셋째, Substack 형식의 제약입니다. 본문은 무료 공개이나 저자의 다른 deep dive 일부는 유료 구독과 연결되어 있고 이미지 기반 서술이 많아 텍스트만 원한다는 독자에게는 원본 링크를 따라가는 노력이 필요합니다.
+
+![llm-rl-complete-guide 슬라이드 4](/assets/images/llm-rl-complete-guide-slide-04.webp)
 
 ## 정리
 
@@ -107,16 +115,3 @@ LLM 강화학습을 "논문 단편"으로만 익혀온 사람에게, 이 가이�
 ---
 
 *출처: [Cameron R. Wolfe, "Reinforcement Learning for LLMs: The Complete Guide"](https://cameronrwolfe.substack.com/p/llm-rl), Deep (Learning) Focus, 2026-08-24. 저자 사이트 [cameronrwolfe.me](https://cameronrwolfe.me/). 본 가이드의 서술은 원문(Substack)에서 직접 확인한 내용을 바탕으로 했습니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![llm-rl-complete-guide 슬라이드 1](/assets/images/llm-rl-complete-guide-slide-01.webp)
-
-![llm-rl-complete-guide 슬라이드 2](/assets/images/llm-rl-complete-guide-slide-02.webp)
-
-![llm-rl-complete-guide 슬라이드 3](/assets/images/llm-rl-complete-guide-slide-03.webp)
-
-![llm-rl-complete-guide 슬라이드 4](/assets/images/llm-rl-complete-guide-slide-04.webp)
-

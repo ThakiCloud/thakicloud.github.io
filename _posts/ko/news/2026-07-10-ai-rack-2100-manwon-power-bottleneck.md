@@ -34,6 +34,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-pow
 
 경쟁의 전선이 칩 하나에 머물지 않는다는 점도 눈에 띕니다. 삼성전자는 HBM과 로직, 실리콘포토닉스를 한 패키지로 묶는 2.xD 이종집적을 개발 중이라고 밝혔고, AI PC용 가속기 가이아로 온디바이스 추론 시장에도 발을 들였습니다. 가이아는 프로세싱 인 메모리를 결합해 데이터 이동을 줄이고 전력 효율을 끌어올리는 방향을 잡았습니다. 연산을 빠르게 만드는 싸움이 곧 전력을 아끼는 싸움과 같아졌다는 뜻입니다. 이 흐름은 GPU 클라우드 사업자에게도 앞으로 엔비디아 한 곳이 아니라 NPU와 프로세싱 인 메모리까지 아우르는 멀티벤더 하드웨어를 준비해야 한다는 숙제를 남깁니다.
 
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 1](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-01.webp)
+
 ## 병목은 GPU에서 전력으로 내려갔다
 
 더 흥미로운 신호는 병목이 이동한 자리입니다. 조세일보가 전한 이야기는 상징적입니다. 코인을 캐던 기업들이 AI 인프라 회사로 변신하고 있는데, 그들이 가진 진짜 자산은 채굴기가 아니라 전력이었습니다. 코인셰어스 보고서에 따르면 상장 채굴 기업 매출에서 AI와 고성능컴퓨팅이 차지하는 비중이 지금 약 30퍼센트에서 연말 최대 70퍼센트까지 오를 전망이고, 지난 1년간 맺은 관련 계약만 700억 달러를 넘습니다. 테라울프는 앤트로픽과 20년 장기 임대를 맺어 2028년 초까지 401메가와트로 확장하고, IREN은 오클라호마 부지를 더해 전력 파이프라인을 4.5기가와트까지 늘렸습니다. 값싼 전력 계약과 변전 설비를 먼저 쥔 쪽이 승자가 된 것입니다.
@@ -42,6 +44,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-pow
 
 규모 경쟁이 대기업 컨소시엄으로 재편되는 국면에서, 작은 사업자에게 남는 길이 아예 없는 것은 아닙니다. LG유플러스는 파주에 200메가와트를 공급하는 시설을 짓고, LG씨엔에스는 컨테이너 하나에 GPU 576장을 담는 모듈형 소형 데이터센터를 준비합니다. KT의 에지 전략처럼 산업 현장 가까이 설비를 붙여 지연을 줄이는 접근도 있습니다. 하이퍼스케일 부지를 두고 정면으로 붙기 어려운 사업자라면, 모듈형과 에지, 전력 계약 다변화 같은 틈새에서 밀도를 높이는 편이 현실적인 선택입니다.
 
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 2](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-02.webp)
+
 ## 그런데 그 돈은 성과로 돌아오고 있는가
 
 여기서 반대 방향의 질문을 던져야 정직한 그림이 나옵니다. 이 사상 최대의 자본은 정말 성과로 회수되고 있을까요. 오늘 뉴스는 오히려 반대 신호를 보냅니다. 네이버는 2분기에 매출 3조 3562억 원, 영업이익 5701억 원으로 역대 2분기 최대를 예고했는데, 주가는 6월 1일 신고가 30만 4000원에서 한 달여 만에 7월 9일 18만 4400원까지 내려앉았습니다. 카카오는 지피티 인 카카오 누적 이용자가 1100만 명에 이르렀지만 수익화 증거가 부족하다는 이유로 증권사들이 일제히 목표주가를 낮췄습니다. 사상 최대 실적을 내고도 웃지 못하는 이유는 단순합니다. 시장은 이제 투자가 아니라 회수를 묻습니다.
@@ -49,6 +53,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-pow
 빅테크의 반응은 더 직설적입니다. 메타는 오픈소스 노선을 접고 첫 유료 모델 뮤즈 스파크 1.1을 내놓았습니다. 출력 100만 토큰당 4.25달러로, 오픈AI와 앤트로픽 최고급 모델의 약 25퍼센트 수준입니다. 저커버그는 데이터센터와 GPU를 외부에 빌려주는 컴퓨팅 임대 사업까지 저울질하며 사내에 메타 컴퓨트라는 별도 조직을 꾸렸습니다. 4월에 코어위브와 최대 210억 달러 규모 컴퓨팅 임대 계약을 맺은 데 이어, 이번에는 스스로 코어위브 같은 컴퓨팅 공급자가 되겠다는 것입니다. 수천억 달러를 부어놓고 이제 그것으로 돈을 벌겠다는 선언입니다. 한쪽에서는 딥시크가 출력 100만 토큰당 0.87달러로 오픈AI보다 34배 싼 가격을 앞세워 개발자 트래픽의 상당 부분을 흡수하고 있습니다. 오픈라우터 통계에서 중국 오픈소스 모델의 점유율이 한때 46퍼센트까지 치솟았다는 수치는 이 흐름이 취향이 아니라 원가 문제임을 보여줍니다. 승부의 축이 더 좋은 모델을 누가 만드느냐에서 누가 실제로 돈을 버느냐로 넘어갔다는 평가가 나오는 배경입니다.
 
 네이버의 사례는 이 시차를 숫자로 드러냅니다. 엔비디아와 손잡은 AI 팩토리는 55메가와트에서 2028년 200메가와트를 거쳐 최종 1기가와트까지 키우고 장기적으로 연매출 20조 원을 노리는 사업이지만, 정작 GPU 투자에 따른 감가상각비가 단기 영업이익률을 눌렀습니다. 인프라를 먼저 짓고 회수는 나중이라는 구조가 대형 플랫폼에서도 예외가 아니라는 뜻입니다. 투자자가 사용량이 아니라 계약과 매출이라는 증거를 요구하는 이유가 여기에 있습니다.
+
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 3](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-03.webp)
 
 ## 비싼 컴퓨트를 증명 가능한 일로 바꾸는 층
 
@@ -390,6 +396,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-pow
 
 청구서 이야기로 돌아가 보겠습니다. 랙 한 대에 2100만 달러가 찍히는 시대에, 가장 비싼 낭비는 그 랙 위에서 엉뚱한 모델에 엉뚱한 일을 시키고도 무엇을 했는지 설명하지 못하는 것입니다. 자본과 전력은 이미 격전지가 되었습니다. 다음 격전지는 그 위에서 매 사이클을 증명 가능한 일로 바꾸는 층이고, ThakiCloud는 바로 그 자리를 겨냥하고 있습니다.
 
+![ai-rack-2100-manwon-power-bottleneck 슬라이드 4](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-04.webp)
+
 ## 참고 자료
 
 - [엔비디아 루빈 울트라 랙 예상 판매가 2100만 달러](https://tech.ifeng.com/c/8uco339RORc) · 펑황망
@@ -402,16 +410,3 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/ai-rack-2100-manwon-pow
 - [테라울프, 저스티파이드 데이터 캠퍼스에서 앤스로픽과 임대 계약 발표](https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack) · TeraWulf
 - [네이버·카카오 2분기 실적도 광고, 커머스가 살렸다](https://zdnet.co.kr/view/?no=20260708165303) · ZDNet Korea
 - [초과세수 5조 투입…'소버린 AI' 개발한다](https://www.hankyung.com/article/2026070228011) · 한국경제
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 1](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-01.webp)
-
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 2](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-02.webp)
-
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 3](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-03.webp)
-
-![ai-rack-2100-manwon-power-bottleneck 슬라이드 4](/assets/images/ai-rack-2100-manwon-power-bottleneck-slide-04.webp)
-

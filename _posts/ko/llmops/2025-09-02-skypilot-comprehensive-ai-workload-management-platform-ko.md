@@ -40,6 +40,8 @@ categories:
 - **GPU 효율성**: 고급 GPU 공유, 스케줄링, 할당 전략
 - **엔터프라이즈 준비**: 대규모 AI 운영을 위한 프로덕션급 기능
 
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 1]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-01.webp' | relative_url }})
+
 ## 핵심 아키텍처 및 구성 요소
 
 ### 1. SkyPilot 실행 엔진
@@ -228,6 +230,8 @@ storage_mounts = {
 
 task.set_storage_mounts(storage_mounts)
 ```
+
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 2]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-02.webp' | relative_url }})
 
 ## LLMOps 특화 사용 사례
 
@@ -479,6 +483,8 @@ jobs:
             --cluster-name "ci-$(git rev-parse --short HEAD)"
 ```
 
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 3]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-03.webp' | relative_url }})
+
 ## 비용 분석 및 ROI 최적화
 
 ### 1. 실제 비용 비교
@@ -614,6 +620,8 @@ run: |
     python train.py --debug_mode \
     2>&1 | tee training.log
 ```
+
+![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 4]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-04.webp' | relative_url }})
 
 ## 마이그레이션 가이드 및 통합 패턴
 
@@ -777,16 +785,3 @@ SkyPilot은 단순한 도구가 아니라 진정으로 이식 가능하고 효�
 ---
 
 *AI 인프라를 혁신할 준비가 되셨나요? 오늘 SkyPilot으로 시작하고 AI 워크로드 관리에서 전례 없는 효율성을 달성하는 조직들의 성장하는 커뮤니티에 참여하세요.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 1]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-01.webp' | relative_url }})
-
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 2]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-02.webp' | relative_url }})
-
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 3]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-03.webp' | relative_url }})
-
-![skypilot-comprehensive-ai-workload-management-platform-ko 슬라이드 4]({{ '/assets/images/skypilot-comprehensive-ai-workload-management-platform-ko-slide-04.webp' | relative_url }})
-

@@ -33,6 +33,8 @@ published: false
 
 이 연구의 중요성은 단순한 학술적 호기심을 넘어섭니다. LLM이 중요한 의사결정 과정, 고객 서비스 시스템, 교육 플랫폼, 콘텐츠 생성 파이프라인에 점점 더 통합되면서, AEA를 통한 광범위한 잘못된 정보와 조작의 잠재력은 전체 AI 생태계에 대한 긴급한 우려사항이 되고 있습니다. 이 분석은 AEA의 메커니즘, 시사점, 그리고 이러한 신흥 위협을 완화하는 데 필요한 방어 전략에 대한 포괄적인 검토를 제공합니다.
 
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 1]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.webp' | relative_url }})
+
 ## 광고 임베딩 공격의 이해
 
 광고 임베딩 공격은 대형 언어 모델을 대상으로 하는 적대적 방법론의 정교한 진화를 나타냅니다. 명백한 모델 실패나 성능 저하를 야기하는 데 초점을 맞춘 전통적인 공격과 달리, AEA는 더 미묘하고 잠재적으로 더 위험한 접근 방식을 통해 작동합니다: 바로 일관성 있고 겉보기에는 합법적인 모델 출력에 원하지 않는 콘텐츠를 전략적으로 주입하는 것입니다.
@@ -144,6 +146,8 @@ AI 연구 및 개발 커뮤니티는 AI 발전의 협력적이고 개방적인 �
 연구 타당성과 재현성은 AEA로부터 직접적인 위협에 직면하며, 특히 백도어가 삽입된 모델이 연구 연구에 사용될 때 그렇습니다. 연구자가 침해된 모델을 무의식적으로 실험에 사용하면, 결과적인 발견이 체계적으로 편향되거나 무효할 수 있습니다. 이러한 오염은 인용 네트워크를 통해 전파되고 후속 연구 방향에 영향을 미쳐, 과학 문헌에서 장기적 왜곡을 만들어낼 수 있습니다.
 
 연구 커뮤니티에 대한 경제적 영향은 증가된 보안 요구사항, 추가적인 검증 절차, 더 정교한 평가 프레임워크의 필요성을 통해 나타납니다. 이러한 요구사항은 연구 프로젝트에 추가적인 비용과 복잡성을 부과하여, 잠재적으로 AI 연구의 접근성을 잘 자금이 조달된 기관으로 제한하고 독립 연구자나 자원이 제약된 환경에 있는 사람들에게 장벽을 만들 수 있습니다.
+
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 2]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.webp' | relative_url }})
 
 ## 공격 메커니즘의 기술적 분석
 
@@ -301,6 +305,8 @@ $$T_{model} = V_{signature} \cdot V_{provenance} \cdot V_{behavior} \cdot V_{com
 
 규제 및 거버넌스 프레임워크는 생태계 수준 보안 조치를 위한 정책 기반을 제공합니다. 이러한 프레임워크는 AI 시스템 보안을 위한 표준을 수립하고, 책임과 의무 구조를 정의하며, 대규모 보안 사건에 대한 조정된 대응을 위한 메커니즘을 만듭니다. 거버넌스 조치의 효과는 보안 요구사항과 혁신 인센티브의 균형을 맞추고 보안 조치가 합법적인 AI 연구 및 개발에 극복할 수 없는 장벽을 만들지 않도록 보장하는 데 달려 있습니다.
 
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 3]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.webp' | relative_url }})
+
 ## AI 안전성과 신뢰에 대한 시사점
 
 광고 임베딩 공격의 등장은 기술적 보안 도전을 넘어 사회에서 AI 시스템의 배포와 채택을 뒷받침하는 신뢰 관계에 근본적으로 의문을 제기합니다. AEA의 시사점은 즉각적인 운영 우려에서 기술 채택과 거버넌스에 대한 장기적 사회적 영향까지 AI 안전성의 여러 차원에 걸쳐 확장됩니다.
@@ -427,6 +433,8 @@ AI 매개 상호작용에 대한 정보에 입각한 동의 프레임워크에 �
 
 프라이버시, 접근성, 혁신과 같은 다른 사회적 가치와 보안 간의 절충을 포함한 방어 조치의 사회적 시사점에 대한 분석은 신중한 고려가 필요합니다. AI 매개 커뮤니케이션의 증가된 감시나 AI 능력에 대한 잠재적 제한을 포함한 방어 조치의 사회적 시사점은 보안과 프라이버시, 접근성, 혁신과 같은 다른 사회적 가치 간의 절충에 대한 신중한 고려가 필요합니다.
 
+![advertisement-embedding-attacks-llm-security-threat 슬라이드 4]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.webp' | relative_url }})
+
 ## 결론
 
 광고 임베딩 공격은 AI 보안 위협의 풍경에서 패러다임의 전환을 나타내며, 전통적인 적대적 예제와 성능 저하를 넘어 인간과 AI 시스템 간의 근본적인 신뢰 관계를 대상으로 합니다. 이러한 공격의 정교함과 여러 이해관계자 그룹에 걸친 광범위한 영향에 대한 잠재력이 결합되어 AEA를 AI 안전과 보안에서 가장 중요한 신흥 도전 중 하나로 확립합니다.
@@ -448,16 +456,3 @@ AI 커뮤니티가 이러한 도전과 씨름하면서, AEA의 등장은 AI 시�
 ## 참고문헌
 
 - Qiming Guo, Jinwen Tang, Xingran Huang. "Attacking LLMs and AI Agents: Advertisement Embedding Attacks Against Large Language Models." arXiv:2508.17674. [https://arxiv.org/abs/2508.17674](https://arxiv.org/abs/2508.17674)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 1]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-01.webp' | relative_url }})
-
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 2]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-02.webp' | relative_url }})
-
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 3]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-03.webp' | relative_url }})
-
-![advertisement-embedding-attacks-llm-security-threat 슬라이드 4]({{ '/assets/images/advertisement-embedding-attacks-llm-security-threat-slide-04.webp' | relative_url }})
-

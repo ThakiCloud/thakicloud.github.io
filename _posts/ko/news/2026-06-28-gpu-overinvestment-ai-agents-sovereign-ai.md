@@ -34,11 +34,15 @@ categories:
 
 여기까지만 보면 과투자가 맞습니다. 그런데 선두 기업이 사는 것이 "몇 달치 모델 우위"가 아니라면 셈법이 달라집니다.
 
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 1]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-01.webp' | relative_url }})
+
 ## 비대칭 보험: 선두가 실제로 사는 것
 
 빅테크가 GPU를 사는 진짜 이유는 3~6개월치 성능 우위가 아니라, 능력의 큰 도약이 일어났을 때 그 자리에 직접적인 힘을 가진 플레이어로 남아 있기 위한 보험입니다. 두 시나리오의 손실 크기가 압도적으로 비대칭이기 때문입니다.
 
 도약이 일어났는데 내가 거기 없다면, 검색·클라우드·오피스 같은 조 단위 본업이 순식간에 흔들립니다. 구글이 야후가 되는 시나리오입니다. 반대로 도약이 끝내 안 일어나서 내가 과투자한 것으로 판명되더라도, 본업은 그대로 살아 있고 사들인 GPU와 데이터센터가 0이 되는 것도 아닙니다. 한쪽 꼬리는 "회사의 존재 이유가 사라짐", 다른 쪽 꼬리는 "감가상각 손실"입니다. 손실의 크기가 이렇게 비대칭이면, 불확실성 속에서 합리적 기업이 택할 수 있는 답은 과투자 쪽으로 기웁니다. 거품이 아니라 비대칭 보상 구조에 대한 합리적 반응이라는 뜻입니다.
+
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 2]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-02.webp' | relative_url }})
 
 ## "도약"은 똑똑한 챗봇이 아니라 신뢰도 × 태스크 호라이즌입니다
 
@@ -48,11 +52,15 @@ categories:
 
 신뢰도 쪽은 단순한 산수가 임계선을 분명하게 보여줍니다. 단계당 신뢰도가 95%인 에이전트가 20단계짜리 작업을 끝까지 성공할 확률은 0.95의 20제곱, 즉 약 36%에 불과합니다. 사람이 매 단계를 검수해야 하니 인건비 절감이 없습니다. 같은 작업에서 신뢰도가 99%면 성공률은 약 82%, 99.9%면 약 98%로 올라갑니다. 신뢰도는 선형으로 오르는데, 사람을 빼도 되는 임계선을 넘는 순간 경제적 가치는 계단식으로 점프합니다. 이 점프가 빅테크가 베팅하는 "도약"의 정체입니다.
 
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 3]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-03.webp' | relative_url }})
+
 ## 빅4와 순수 랩의 지출 동기는 다릅니다
 
 같은 GPU를 사도 동기의 층위가 다릅니다. 마이크로소프트·구글·메타·아마존에게 GPU는 조 단위 본업을 지키는 상대적으로 싼 보험입니다. 도약을 놓치는 리스크에 비하면 캐펙스는 감당 가능한 보험료입니다. 반면 오픈AI·앤트로픽 같은 순수 AI 랩에게는 GPU가 곧 본업입니다. 도망갈 본업이 따로 없으니 지출은 보험이 아니라 생존입니다. 같은 숫자라도 의미가 다릅니다.
 
 덧붙이면, 이 캐펙스의 60% 이상은 칩이 아니라 전력과 데이터센터 건설에 들어갑니다. "GPU 쇼핑"으로만 보이는 숫자가 실제로는 전력 인프라 베팅에 더 가깝다는 점도 거품 판단을 흐리게 만드는 요소입니다.
+
+![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 4]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-04.webp' | relative_url }})
 
 ## 다음 세대 톨게이트: 의도 라우터
 
@@ -82,18 +90,6 @@ categories:
 
 빅테크의 GPU 과투자는 거품일 수도, 합리적 보험일 수도 있습니다. 그러나 이를 "비대칭 보상 구조에 대한 합리적 반응 + 다음 세대 톨게이트 선점 경쟁"으로 읽으면, 단순한 광기보다 훨씬 정교한 구조적 강제가 보입니다. 그리고 그 경쟁의 반대편에는, 톨게이트에 종속되기를 원치 않는 엔터프라이즈 수요가 형성되고 있습니다. ThakiCloud는 그 자리를 위해 만들어진 인프라입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 1]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-01.webp' | relative_url }})
-
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 2]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-02.webp' | relative_url }})
-
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 3]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-03.webp' | relative_url }})
-
-![gpu-overinvestment-ai-agents-sovereign-ai 슬라이드 4]({{ '/assets/images/gpu-overinvestment-ai-agents-sovereign-ai-slide-04.webp' | relative_url }})
 
 ## 출처
 

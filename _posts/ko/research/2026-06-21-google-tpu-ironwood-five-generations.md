@@ -41,6 +41,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 - **전력 효율(Power Efficiency)**: TFLOPS/Watt 개선이 세대별 핵심 지표입니다. 같은 일을 더 적은 전력으로 하는 것이 운영 비용과 직결됩니다.
 - **지속가능성(Sustainability)**: 전력 효율은 곧 탄소 발자국 문제이기도 합니다.
 
+![google-tpu-ironwood-five-generations 슬라이드 1](/assets/images/google-tpu-ironwood-five-generations-slide-01.webp)
+
 ## 데이터 과학자가 가져갈 교훈
 
 이 논문이 하드웨어 논문을 넘어 방법론적으로 유용한 이유는 이렇습니다.
@@ -49,13 +51,19 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 - **회복탄력성이 곧 처리량**: 대규모 학습에서 고장 복구 설계가 없으면, 실효 처리량이 급격히 떨어집니다. 체크포인팅과 부분 고장 허용은 옵션이 아니라 처리량 그 자체입니다.
 - **전력 효율을 1급 지표로**: TFLOPS/Watt를 핵심 지표로 추적하는 것은, 비용을 1급 시민으로 다루는 운영 철학입니다.
 
+![google-tpu-ironwood-five-generations 슬라이드 2](/assets/images/google-tpu-ironwood-five-generations-slide-02.webp)
+
 ## ThakiCloud 관점: 대규모 인프라 설계 원칙의 이식
 
 저희는 TPU 같은 전용 슈퍼컴퓨터를 만들지는 않지만 이 논문의 설계 원칙은 K8s 기반 GPU 플랫폼에 그대로 이식됩니다. 아키텍처 안정성은 표준화된 서빙·학습 인터페이스로, 회복탄력성은 Kueue 기반 작업 재시도와 체크포인팅으로, 전력 효율은 GPU 활용률 모니터링과 워크로드 패킹으로 나타납니다.
 
 수천 칩 규모의 교훈을 수십~수백 GPU 규모의 멀티테넌트 플랫폼에 적용하는 것이 저희가 다루는 영역입니다. 고장을 상수로 가정하고 시스템 전체 처리량을 보며 전력·비용을 1급 지표로 다루는 운영 철학은 규모와 무관하게 옳습니다.
 
+![google-tpu-ironwood-five-generations 슬라이드 3](/assets/images/google-tpu-ironwood-five-generations-slide-03.webp)
+
 ## 마치며
+![google-tpu-ironwood-five-generations 슬라이드 4](/assets/images/google-tpu-ironwood-five-generations-slide-04.webp)
+
 
 구글의 TPU 5세대 논문은 "대규모 AI 인프라는 칩이 아니라 시스템"이라는 메시지를 데이터로 보여줍니다. 아키텍처 안정성으로 누적하고 회복탄력성으로 처리량을 지키며 전력 효율을 1급 지표로 다루십시오. 이 원칙은 GPU 클러스터를 운영하는 모든 팀에 적용됩니다.
 
@@ -64,16 +72,3 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 출처: "Google's Training Supercomputers from TPU v2 to Ironwood: Architectural Stability, Scale, Resilience, Power Efficiency, and Sustainability Across Five Generations", arXiv:2606.15870 (2026-06-14). https://arxiv.org/abs/2606.15870
 
 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/10SsDPZB1CV-x4LzzzQQdhnY8m_PfWzG8/view)할 수 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![google-tpu-ironwood-five-generations 슬라이드 1](/assets/images/google-tpu-ironwood-five-generations-slide-01.webp)
-
-![google-tpu-ironwood-five-generations 슬라이드 2](/assets/images/google-tpu-ironwood-five-generations-slide-02.webp)
-
-![google-tpu-ironwood-five-generations 슬라이드 3](/assets/images/google-tpu-ironwood-five-generations-slide-03.webp)
-
-![google-tpu-ironwood-five-generations 슬라이드 4](/assets/images/google-tpu-ironwood-five-generations-slide-04.webp)
-

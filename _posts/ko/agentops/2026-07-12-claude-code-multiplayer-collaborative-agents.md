@@ -36,6 +36,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 흐름이 왜 중요한지는 명확합니다. 실제 개발 조직에서 가치 있는 일의 상당 부분은 조율에서 나옵니다. 누가 어느 파일을 만지는지, 이 변경이 저 모듈을 깨뜨리지 않는지, 리뷰어가 무엇을 걱정하는지 같은 것들입니다. 에이전트가 이 조율에 참여하지 못하면, 우리는 결국 에이전트가 각자 만든 결과물을 사람이 손으로 다시 봉합해야 합니다. 협업 에이전트는 그 봉합 비용을 줄이려는 시도입니다.
 
+![claude-code-multiplayer-collaborative-agents 슬라이드 1](/assets/images/claude-code-multiplayer-collaborative-agents-slide-01.webp)
+
 ## 멀티플레이어 코딩 에이전트란 무엇인가
 
 멀티플레이어라는 단어는 게임에서 왔지만, 여기서는 두 개의 서로 다른 축을 동시에 가리킵니다. 하나는 **사람 대 사람** 축입니다. 여러 개발자가 같은 세션을 공유하며 하나의 에이전트에 함께 지시를 내리는 형태입니다. 다른 하나는 **에이전트 대 에이전트** 축입니다. 각자의 에이전트가 서로 메시지를 주고받으며 작업을 나누는 형태입니다. 멀티플레이어 Claude Code가 흥미로운 이유는 이 두 축을 함께 다룬다는 데 있습니다.
@@ -372,11 +374,15 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 다만 발표된 정보만으로는 이 연결이 어느 수준까지 구현되었는지 단정하기 어렵습니다. 공유 터미널이 화면 스트리밍 수준인지, 아니면 에이전트가 실제로 서로의 계획과 편집 의도를 구조화된 형태로 교환하는지에 따라 실용성은 크게 갈립니다. 따라서 아래 설계 과제는 공개된 개념을 근거로 한 것이며, 검증되지 않은 내부 동작을 단정하지는 않습니다.
 
+![claude-code-multiplayer-collaborative-agents 슬라이드 2](/assets/images/claude-code-multiplayer-collaborative-agents-slide-02.webp)
+
 ## 왜 지금 이 방향인가
 
 협업 에이전트가 지금 등장하는 데에는 이유가 있습니다. 모델이 강해지면서 에이전트 한 대가 처리하는 작업의 크기가 커졌고, 그 결과 **여러 에이전트가 동시에 큰 변경을 만드는 상황**이 실제로 잦아졌기 때문입니다. 한 사람이 서브에이전트를 병렬로 띄워 파일을 나눠 고치는 패턴은 이미 흔합니다. 여기서 한 걸음만 더 나가면 서로 다른 사람의 에이전트가 같은 코드베이스에서 겹치는 순간이 옵니다. 조율이 없으면 이 순간은 곧 충돌이 됩니다.
 
 또 하나의 배경은 도구 생태계의 파편화입니다. 팀마다 Claude Code를 쓰는 사람, Codex를 쓰는 사람, Cursor를 쓰는 사람이 섞여 있습니다. 앞서 언급한 여러 벤더의 에이전트를 한 워크스페이스로 묶는 프로젝트들이 등장한 것은, 이 파편화를 조율 계층으로 흡수하려는 시도입니다. 즉 협업 에이전트는 단순히 사람을 더 붙이는 기능이 아니라, **이질적인 에이전트들이 공존하는 현실을 다루는 인프라 문제**로 커지고 있습니다.
+
+![claude-code-multiplayer-collaborative-agents 슬라이드 3](/assets/images/claude-code-multiplayer-collaborative-agents-slide-03.webp)
 
 ## 협업 에이전트가 풀어야 할 설계 과제
 
@@ -389,6 +395,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 셋째, **신뢰 경계**입니다. 내 에이전트가 남의 에이전트가 제안한 변경을 얼마나 신뢰해야 하는지의 문제입니다. 사람이 리뷰 없이 병합하지 않듯, 에이전트도 다른 에이전트의 산출물을 무검증으로 받아들여서는 안 됩니다. 멀티에이전트 시스템의 오래된 교훈은 명확합니다. **검증 단계 없이 여러 에이전트의 결과를 합치면 환각이 누적됩니다.** 협업 에이전트일수록 각 참여자의 산출물을 적대적으로 검증하는 게이트가 더 필요합니다.
 
 넷째, **감사와 책임 추적**입니다. 여러 사람과 여러 에이전트가 같은 코드를 만졌을 때, 어떤 변경이 누구의(혹은 어느 에이전트의) 판단에서 나왔는지 추적할 수 없다면 사고가 났을 때 원인을 되짚을 수 없습니다. 협업이 늘어날수록 감사 로그는 선택이 아니라 필수가 됩니다.
+
+![claude-code-multiplayer-collaborative-agents 슬라이드 4](/assets/images/claude-code-multiplayer-collaborative-agents-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -414,18 +422,6 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 그럼에도 방향 자체는 되돌리기 어렵다고 봅니다. 소프트웨어가 팀 작업인 한, 그 팀을 대신하는 에이전트들도 결국 서로 대화해야 합니다. 관건은 협업을 켜느냐 마느냐가 아니라, 그 협업을 **정책과 검증과 감사가 받쳐주는 구조 위에 세우느냐**입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-code-multiplayer-collaborative-agents 슬라이드 1](/assets/images/claude-code-multiplayer-collaborative-agents-slide-01.webp)
-
-![claude-code-multiplayer-collaborative-agents 슬라이드 2](/assets/images/claude-code-multiplayer-collaborative-agents-slide-02.webp)
-
-![claude-code-multiplayer-collaborative-agents 슬라이드 3](/assets/images/claude-code-multiplayer-collaborative-agents-slide-03.webp)
-
-![claude-code-multiplayer-collaborative-agents 슬라이드 4](/assets/images/claude-code-multiplayer-collaborative-agents-slide-04.webp)
 
 ## 출처
 

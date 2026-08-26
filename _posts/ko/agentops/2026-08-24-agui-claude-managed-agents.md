@@ -32,6 +32,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agui-claude-managed
 
 세 가지가 겹쳐 있습니다. AG-UI는 에이전트와 사용자 애플리케이션 사이의 공개 이벤트 기반 프로토콜이고 Claude Managed Agents는 Anthropic이 호스팅하는 상태 유지(stateful) 도구 사용 에이전트 런타임이며, CopilotKit은 그 스트림을 실제 UI(채팅, 파일 패널, 터미널 패널)로 그리는 프레임워크입니다. 각각의 위치를 먼저 정리하겠습니다.
 
+![agui-claude-managed-agents 슬라이드 1](/assets/images/agui-claude-managed-agents-slide-01.webp)
+
 ## 이 기술은 무엇인가
 
 ### AG-UI: 에이전트와 UI 사이의 표준 배선
@@ -78,6 +80,8 @@ flowchart TB
     H -->|"재개 (parentRunId)"| D
 ```
 
+![agui-claude-managed-agents 슬라이드 2](/assets/images/agui-claude-managed-agents-slide-02.webp)
+
 ## 설치 및 통합
 
 데모를 돌려보는 것은 30초입니다.
@@ -98,6 +102,8 @@ VIRTUAL_ENV="$PWD/.venv" uv pip install ag-ui-protocol
 ```
 
 설치된 버전은 ag-ui-protocol 0.1.20이었습니다. ag_ui.core 모듈에는 93개의 심볼이 있고 EventType 열거형은 실험 시점 33개입니다. TEXT_MESSAGE_* 계열, TOOL_CALL_* 계열, STATE_SNAPSHOT/STATE_DELTA, MESSAGES_SNAPSHOT, ACTIVITY_*, THINKING_*, REASONING_* 계열, RAW, CUSTOM, 그리고 RUN_STARTED/RUN_FINISHED/RUN_ERROR, STEP_STARTED/STEP_FINISHED입니다. SSE 와이어 포맷으로 인코딩하는 EventEncoder(accept="text/event-stream")도 함께 옵니다.
+
+![agui-claude-managed-agents 슬라이드 3](/assets/images/agui-claude-managed-agents-slide-03.webp)
 
 ## 실제 실험 결과
 
@@ -141,6 +147,8 @@ run 2는 19개 이벤트를 내보냈고 RUN_STARTED에 parentRunId="run-1"이 �
 
 둘째, live 모드에서만 발견된 버그가 두 개 있습니다. 하나는 모델이 "% / $"라는 복합 단위의 차트를 보내서 Y축 라벨이 전부 "0% / $"로 잘려 6개 라벨이 모두 동일하고 모두 틀렸던 일입니다. 다른 하나는 cd /mnt/session && python3 analyze.py 경로 때문에 파일 트리상 모든 파일이 상대·절대 경로로 두 번씩 열거된 일입니다. 녹화 트랜스크립트는 손으로 다듬은 페이로드를 보내므로 이 둘은 replay에서 도달 불가능했습니다. "테스트가 증명하지 못한 것은 영상에도 나오지 않는다"는 데모의 원칙이, 정반대로 live 검증이 테스트를 대체하지 못한다는 사실도 함께 보여줍니다.
 
+![agui-claude-managed-agents 슬라이드 4](/assets/images/agui-claude-managed-agents-slide-04.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 조합은 Paxis의 설계 언어와 정확히 겹칩니다. Paxis는 ThakiCloud의 Agent-Native Cloud로, 에이전트 플랫폼 위에서 Skills·Tools·Policies·Audit Logs를 일급 리소스로 다루는 제어 평면입니다.
@@ -171,18 +179,6 @@ run 2는 19개 이벤트를 내보냈고 RUN_STARTED에 parentRunId="run-1"이 �
 
 다음 단계로 데모를 fork해서 send_email을 자신의 도메인 도구나 워크플로로 교체하고 requires_action park에 감사 로그를 붙이는 것부터 시작하는 것을 권합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![agui-claude-managed-agents 슬라이드 1](/assets/images/agui-claude-managed-agents-slide-01.webp)
-
-![agui-claude-managed-agents 슬라이드 2](/assets/images/agui-claude-managed-agents-slide-02.webp)
-
-![agui-claude-managed-agents 슬라이드 3](/assets/images/agui-claude-managed-agents-slide-03.webp)
-
-![agui-claude-managed-agents 슬라이드 4](/assets/images/agui-claude-managed-agents-slide-04.webp)
 
 ## 출처
 

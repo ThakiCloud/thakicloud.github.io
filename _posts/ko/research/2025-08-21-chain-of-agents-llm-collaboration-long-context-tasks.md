@@ -35,6 +35,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 연구는 단순히 컨텍스트 윈도우를 확장하거나 입력을 축소하는 기존 방법론의 한계를 넘어서, 멀티에이전트 협업을 통한 자연스러운 정보 통합과 추론을 가능하게 하는 Chain-of-Agents(CoA) 프레임워크를 소개합니다. 본 포스트에서는 이 논문의 핵심 내용을 단락별로 상세히 분석하고, 그 의미와 기여도를 깊이 있게 살펴보겠습니다.
 
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 1]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-01.webp' | relative_url }})
+
 ## 연구 배경 및 문제 정의
 
 ### 긴 컨텍스트 처리의 근본적 문제
@@ -66,6 +68,8 @@ CoA는 명확히 구분되는 두 단계로 구성됩니다. **1단계: 워커 �
 CoA가 기존 방법론들과 구별되는 가장 중요한 특징은 **"interleaved read-process"** 방식입니다. 입력 축소 방식이 "read-then-process" 패턴으로 축소된 입력을 먼저 읽은 후 처리하는 반면, CoA는 각 청크를 읽으면서 동시에 처리하는 방식을 채택합니다. 이는 일반적인 요약이나 문단 계수와 같은 작업에서 입력 축소 방식이 겪는 문제들을 효과적으로 해결할 수 있습니다.
 
 또한 윈도우 확장 방식이 많은 토큰을 단일 LLM에 집약시키려 하는 반면, CoA는 커뮤니케이션 능력을 활용하는 더 자연스러운 해결책을 제시합니다. 이는 각 LLM이 처리할 수 있는 한계가 있으며, 복잡한 컨텍스트 작업은 항상 이러한 한계를 초과할 수 있다는 현실적 가정에 기반합니다.
+
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 2]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-02.webp' | relative_url }})
 
 ## 실험 설계 및 성능 평가
 
@@ -99,6 +103,8 @@ CoA가 기존 방법론들과 구별되는 가장 중요한 특징은 **"interle
 
 **QMSum 데이터셋 예시**에서는 산업 구성요소에 대한 토론을 요약하는 과정에서, 워커들이 점진적으로 정보를 축적하며 티타늄과 고무 소재 선택, 버튼 디자인, 음성 인식 기술 등 다양한 논의 사항들을 체계적으로 정리하는 모습을 확인할 수 있습니다.
 
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 3]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-03.webp' | relative_url }})
+
 ## 모델 강건성 및 일반화 성능
 
 ### 다양한 LLM에서의 일관된 성능
@@ -118,6 +124,8 @@ CoA의 또 다른 중요한 장점은 높은 해석 가능성입니다. 각 워�
 ### 오류 진단 및 개선 가능성
 
 워커들의 순차적 정보 처리 과정이 모두 가시화되기 때문에, 잘못된 답변이 도출된 경우 어느 단계에서 오류가 발생했는지 추적하고 개선할 수 있습니다. 이는 시스템의 지속적인 개선과 품질 관리에 있어 실용적인 이점을 제공합니다.
+
+![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 4]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-04.webp' | relative_url }})
 
 ## 한계점 및 향후 연구 방향
 
@@ -159,16 +167,3 @@ Chain-of-Agents는 긴 컨텍스트 처리라는 LLM의 근본적 한계를 해�
 - **소속**: Penn State University, Google Cloud AI Research  
 - **출판**: arXiv:2406.02818
 - **링크**: [https://arxiv.org/pdf/2406.02818](https://arxiv.org/pdf/2406.02818)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 1]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-01.webp' | relative_url }})
-
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 2]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-02.webp' | relative_url }})
-
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 3]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-03.webp' | relative_url }})
-
-![chain-of-agents-llm-collaboration-long-context-tasks 슬라이드 4]({{ '/assets/images/chain-of-agents-llm-collaboration-long-context-tasks-slide-04.webp' | relative_url }})
-

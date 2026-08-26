@@ -32,6 +32,8 @@ categories:
 
 Hot Chips 2025에서의 구글 발표는 TPU(Tensor Processing Unit) 배포 경험을 통해 얻은 정교한 엔지니어링 과제와 혁신적 솔루션을 공개했습니다. 구글의 액체 냉각 여정은 2018년에 시작되었으며, 전통적인 공기 냉각 방법이 현대 AI 가속기의 열적 요구사항에 점점 더 부적절해지고 있다는 인식에서 출발했습니다. 데이터센터 규모의 냉각 솔루션 개발에 대한 그들의 체계적 접근 방식은 고성능 컴퓨팅 인프라의 미래에 대한 귀중한 통찰을 제공하며, 다른 조직들이 유사한 열 관리 과제에 어떻게 접근할 수 있는지에 대한 청사진을 제시합니다.
 
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 1]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-01.webp' | relative_url }})
+
 ## 구글 액체 냉각 혁신 뒤의 물리학과 엔지니어링
 
 액체 냉각의 근본적 장점은 열 전달의 기본 물리학에 있으며, 물은 공기 대비 약 4000배 우수한 열전도율을 보여줍니다. 열 특성에서의 이러한 극적인 차이는 액체 냉각 시스템이 전례 없는 효율성으로 처리 장치에서 열을 제거할 수 있게 하며, 현대 AI 워크로드가 생성하는 극한의 열 부하 하에서도 최적의 작동 온도를 유지하는 것을 가능하게 합니다. 구글의 이 원리 구현은 단순한 열 전달을 훨씬 넘어서, 데이터센터 규모 배포의 고유한 과제를 해결하는 정교한 엔지니어링 솔루션을 통합합니다.
@@ -39,6 +41,8 @@ Hot Chips 2025에서의 구글 발표는 TPU(Tensor Processing Unit) 배포 경�
 구글의 액체 냉각 아키텍처는 6개 유닛으로 배열된 냉각제 분배 장치(CDU) 랙으로 시작하는 계층적 접근 방식을 채택하며, 이러한 CDU들은 PC 수냉 시스템에서 발견되는 라디에이터와 펌프 조합과 유사하게 기능하지만 전체 서버 랙의 열 부하를 처리하도록 확장되었습니다. 시스템 설계는 중복성 원칙을 통합하여, 5개의 CDU가 적절한 냉각 용량을 제공하면서 여섯 번째 유닛에서 다운타임 없이 유지보수를 가능하게 합니다. 이러한 중복성 전략은 필요한 유지보수 작업을 수행하면서 서비스 가용성을 유지하려는 구글의 commitment를 반영합니다.
 
 구글 시스템 내의 열 교환 프로세스는 냉각제 루프의 신중하게 설계된 분리를 통해 작동하며, 시설 수준의 급수와 내부 냉각제 액체가 절대 섞이지 않고, CDU가 이러한 별도의 액체 시스템 간에 열을 전달하는 열 브리지 역할을 합니다. 이러한 설계 접근 방식은 오염 문제를 해결하고 각 냉각 루프의 독립적 최적화를 가능하게 합니다. 냉각제 분배 시스템은 개별 TPU 서버로 냉각제를 라우팅하는 매니폴드를 활용하며, 냉각 루프가 직렬 구성으로 여러 칩을 연결하여 각 냉각 시퀀스의 최종 칩 요구사항을 기반으로 한 신중한 열 예산 수립을 필요로 합니다.
+
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 2]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-02.webp' | relative_url }})
 
 ## 고급 냉각 기술 및 최적화 전략
 
@@ -48,6 +52,8 @@ TPUv3에서 TPUv4로의 전환은 칩과 냉각 시스템 간의 열 인터페�
 
 구글의 최적화 작업은 개별 구성요소 설계를 넘어 시스템 수준의 효율성 개선을 포괄합니다. 그들의 분석에 따르면 액체 냉각 펌프 전력 소비는 동등한 공기 냉각 솔루션에 필요한 팬 전력의 5% 미만을 나타내며, 액체 냉각 시스템의 상당한 에너지 효율성 장점을 강조합니다. 이러한 전력 효율성 이득은 냉각 관련 전력 소비가 전체 시설 전력 요구사항의 상당 부분을 차지할 수 있는 데이터센터 규모에서 특히 중요해집니다.
 
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 3]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-03.webp' | relative_url }})
+
 ## 유지보수 프로토콜 및 운영 신뢰성
 
 데이터센터 규모에서 액체 냉각 시스템을 유지보수하는 운영 과제는 소규모 배포에서 사용되는 유지보수 접근 방식을 훨씬 넘어서는 정교한 프로토콜과 중복성 전략을 필요로 합니다. 구글의 유지보수 접근 방식은 미생물 성장, 누수 감지, 구성요소 교체 절차 등 액체 냉각 시스템에 내재된 운영 복잡성에 대한 깊은 이해를 반영합니다. 그들의 유지보수 전략은 서비스 중단을 최소화하면서 시스템 신뢰성을 보장하기 위한 다중 보호 및 모니터링 계층을 통합합니다.
@@ -55,6 +61,8 @@ TPUv3에서 TPUv4로의 전환은 칩과 냉각 시스템 간의 열 인터페�
 구성요소 검증은 구글의 유지보수 접근 방식의 중요한 측면을 나타내며, 배포 전 모든 시스템 구성요소에 광범위한 누수 테스트 프로토콜을 적용합니다. 그들의 모니터링 시스템은 누수나 온도 이상과 같은 문제를 감지할 수 있는 실시간 경고 기능을 통합하여, 잠재적 문제가 서비스 가용성에 영향을 미치기 전에 신속한 대응을 가능하게 합니다. 예방적 유지보수 일정과 여과 시스템의 구현은 시스템 장애 위험을 더욱 줄이고 구성요소 수명을 연장합니다.
 
 구글의 유지보수 프로토콜은 운영 팀이 일관되고 효과적인 방식으로 문제를 해결할 수 있게 하는 명확하게 정의된 대응 절차를 포함합니다. 이러한 유지보수 관리에 대한 체계적 접근 방식은 구글의 데이터센터 운영 규모를 다룰 때 필수적이 되며, 임시방편적 유지보수 접근 방식은 빠르게 관리 불가능해질 것입니다. 포괄적인 유지보수 프로토콜에 대한 구글의 투자는 운영 신뢰성이 성공적인 액체 냉각 구현에서 열 성능만큼 중요하다는 그들의 이해를 반영합니다.
+
+![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 4]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-04.webp' | relative_url }})
 
 ## 업계 시사점 및 미래 트렌드
 
@@ -87,16 +95,3 @@ GPU 클라우드 서비스 업계에게 이러한 냉각 기술 진보의 시사
 ---
 
 *출처: [Chips and Cheese - Google's Liquid Cooling at Hot Chips 2025](https://chipsandcheese.com/p/googles-liquid-cooling-at-hot-chips)*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 1]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-01.webp' | relative_url }})
-
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 2]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-02.webp' | relative_url }})
-
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 3]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-03.webp' | relative_url }})
-
-![google-liquid-cooling-datacenter-hot-chips-2025 슬라이드 4]({{ '/assets/images/google-liquid-cooling-datacenter-hot-chips-2025-slide-04.webp' | relative_url }})
-

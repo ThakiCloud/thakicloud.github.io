@@ -38,6 +38,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 ---
 
+![llm-cost-routing-guardrails 슬라이드 1](/assets/images/llm-cost-routing-guardrails-slide-01.webp)
+
 ## 비용은 어디서 새는가: 1개월 감사 결과
 
 사고 이후 1개월치 청구 데이터를 `cost_audit.py`와 `router_audit.py`로 분석했습니다. 총 비용 $4,691에서 가장 충격적인 발견은 이것이었습니다.
@@ -61,6 +63,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 Opus와 Haiku의 입력 단가 차이는 약 19배입니다. 탐색성 작업 하나를 Opus 대신 Haiku로 돌리면, 그 비용 차이가 18번의 추가 Haiku 호출을 가능하게 합니다.
 
 ---
+
+![llm-cost-routing-guardrails 슬라이드 2](/assets/images/llm-cost-routing-guardrails-slide-02.webp)
 
 ## 모델 라우팅: 작업 성격이 모델 등급을 결정합니다
 
@@ -93,6 +97,8 @@ Agent({
 또한 세션 라이프사이클 관리도 중요합니다. 세션이 50턴을 넘거나 컨텍스트가 40%를 초과하면 `/clear`로 새로 시작합니다. 메가세션은 컨텍스트가 비대해질수록 매 턴 cache_read가 선형으로 증가하기 때문입니다. 6월 1일 사고에서 cache_read 비용이 전체의 42%였던 것이 이 때문입니다.
 
 ---
+
+![llm-cost-routing-guardrails 슬라이드 3](/assets/images/llm-cost-routing-guardrails-slide-03.webp)
 
 ## 회고 기반 자동 에스컬레이션: 데이터가 모델을 결정합니다
 
@@ -143,6 +149,8 @@ plist의 `EnvironmentVariables`에서 해당 스킬의 모델 키를 제거하�
 품질이 미달이라고 느껴질 때, 먼저 해야 할 일은 **검증 단계를 추가하는 것**입니다. 모델을 올리기 전에 fan-out 결과에 adversarial verify 스텝을 먼저 달아보십시오. 품질 문제의 더 흔한 원인은 "모델이 약해서"가 아니라 검증 스테이지 부재입니다. 워커를 싸게 구성하고 최종 검증 스텝만 Opus로 두는 것이 비용 대비 품질을 극대화합니다.
 
 ---
+
+![llm-cost-routing-guardrails 슬라이드 4](/assets/images/llm-cost-routing-guardrails-slide-04.webp)
 
 ## 루프 cron화와 컨텍스트 위생
 
@@ -215,16 +223,3 @@ Claude 루프가 꼭 필요한 경우라면 다음 세 가지를 지킵니다.
 ---
 
 ThakiCloud는 이 운영 경험을 Paxis와 AI Platform에 반영하고 있습니다. 비용인식 LLM 라우팅이 어떻게 제품으로 동작하는지 궁금하시다면 [hello@thakicloud.co.kr](mailto:hello@thakicloud.co.kr)로 문의 주십시오.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
-
-![llm-cost-routing-guardrails 슬라이드 1](/assets/images/llm-cost-routing-guardrails-slide-01.webp)
-
-![llm-cost-routing-guardrails 슬라이드 2](/assets/images/llm-cost-routing-guardrails-slide-02.webp)
-
-![llm-cost-routing-guardrails 슬라이드 3](/assets/images/llm-cost-routing-guardrails-slide-03.webp)
-
-![llm-cost-routing-guardrails 슬라이드 4](/assets/images/llm-cost-routing-guardrails-slide-04.webp)
-

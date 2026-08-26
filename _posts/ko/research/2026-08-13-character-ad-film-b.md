@@ -56,6 +56,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b
 
 주체 충실도 0.839는 마스코트를 잘 지켰다는 뜻이지 장면을 지켰다는 뜻이 아닙니다. 이 지표는 주체만 재기 때문에 배경이 무너지는 것을 구조적으로 볼 수 없습니다. 프롬프트 추종 지표도 0.350 대 0.344로 거의 신호를 주지 않았는데, 짧은 프롬프트에서는 주체 단어만 맞아도 점수가 유지되기 때문입니다.
 
+![character-ad-film-b 슬라이드 1](/assets/images/character-ad-film-b-slide-01.webp)
+
 ## 범인은 학습 데이터였습니다
 
 의심스러운 지점이 하나 있었습니다.
@@ -74,6 +76,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b
 
 오른쪽 열도 눈여겨봐 주십시오. 장면은 잘 나오는데 첫 줄에서는 마스코트가 아예 사라졌습니다. 노트북과 책상만 있습니다. 세 번째 줄에서는 형체는 있지만 눈이 없습니다.
 
+![character-ad-film-b 슬라이드 2](/assets/images/character-ad-film-b-slide-02.webp)
+
 ## 숫자로 확인했습니다
 
 배경 붕괴를 재려면 지표가 하나 필요했습니다. 붕괴의 서명은 서로 다른 프롬프트를 준 클립들이 서로 닮는 것이므로, 레퍼런스와의 거리가 아니라 클립끼리의 유사도를 쟀습니다. 주체가 모든 방식에서 같으니 프레임 중앙을 도려내고 테두리만 비교했습니다. 이 지표가 실제로 붕괴를 가르는지부터 확인했는데, 눈으로 붕괴가 확인된 어댑터가 0.906으로 가장 높고 아무 조건도 주지 않은 베이스라인이 0.714로 가장 낮게 나왔습니다.
@@ -88,11 +92,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b
 
 두 번째 신호도 함께 정상으로 돌아왔습니다. 붕괴한 어댑터는 클립 쌍끼리의 유사도 편차가 0.022로 유독 작았습니다. 모든 쌍이 고르게 닮았다는 뜻이고, 하나의 배경으로 수렴했다는 이야기입니다. 새 어댑터는 0.060으로 다른 방식들과 같은 범위에 들어왔습니다.
 
+![character-ad-film-b 슬라이드 3](/assets/images/character-ad-film-b-slide-03.webp)
+
 ## 그래서 이 글의 원래 제목은 틀렸습니다
 
 이 글은 처음에 "학습이 졌다"는 제목으로 나갔습니다. 학습이 진 게 아니라 저희가 학습 데이터를 잘못 만든 것이었고, 그것은 고칠 수 있는 문제였습니다.
 
 배경 다양성이 같아진 상태에서 다시 비교하면 오히려 학습 쪽이 유리한 자리가 보입니다. 클립 안에서 주체가 가장 무너지는 지점을 보면 학습본이 0.819, zero-shot이 0.568로 이 차이는 통계적으로 유의합니다(p=0.044). 위 그림 첫 줄에서 zero-shot이 마스코트를 통째로 놓친 것이 이 숫자의 정체입니다. 다만 평균 충실도 차이(0.843 대 0.724)는 여덟 개 클립에서는 유의하지 않으므로(p=0.16), 지금 말할 수 있는 것은 평균이 아니라 최악의 순간에 대한 이야기입니다.
+
+![character-ad-film-b 슬라이드 4](/assets/images/character-ad-film-b-slide-04.webp)
 
 ## 남는 교훈
 
@@ -107,16 +115,3 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b
 이번 일에서 실제로 값어치를 한 것은 어느 방법이 이겼느냐가 아니라, 틀린 결론을 자기 데이터로 다시 재서 뒤집을 수 있었다는 점입니다. 방법을 바꾸는 것이 아니라 데이터를 바꿔야 하는 문제였다는 것도, 재보지 않았다면 알 수 없었습니다.
 
 이 글의 수치는 시뮬레이션이 아니라 사내 GPU에서 측정한 값입니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![character-ad-film-b 슬라이드 1](/assets/images/character-ad-film-b-slide-01.webp)
-
-![character-ad-film-b 슬라이드 2](/assets/images/character-ad-film-b-slide-02.webp)
-
-![character-ad-film-b 슬라이드 3](/assets/images/character-ad-film-b-slide-03.webp)
-
-![character-ad-film-b 슬라이드 4](/assets/images/character-ad-film-b-slide-04.webp)
-

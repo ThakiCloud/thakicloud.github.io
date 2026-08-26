@@ -30,6 +30,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/block-buzz-agent-na
 
 이 글은 사내에 에이전트를 실제로 배치해야 하는 플랫폼 엔지니어와, 에이전트의 행동에 대한 감사 추적을 설계해야 하는 분을 위해 썼습니다. 결론부터 말씀드리면, Buzz의 의미는 "Slack 대체제가 하나 더 나왔다"가 아니라 **에이전트의 신원과 권한을 애플리케이션 계층이 아니라 프로토콜 계층에서 푼 첫 대중적 시도**라는 데 있습니다. 사람과 에이전트가 각자 암호학적 키페어를 갖고, 모든 메시지와 코드 리뷰와 자동화 실행이 그 키로 서명되어 하나의 추가 전용 로그에 쌓입니다. 지금 당장 사내 Slack을 갈아엎으라는 이야기는 아닙니다. 다만 에이전트 플랫폼을 설계하고 계신다면, Buzz가 택한 이 구조는 참고할 가치가 충분합니다.
 
+![block-buzz-agent-native-workspace 슬라이드 1](/assets/images/block-buzz-agent-native-workspace-slide-01.webp)
+
 ## 개요
 
 Buzz는 Twitter와 Square의 공동 창업자인 Jack Dorsey가 이끄는 Block이 2026년 7월 21일에 공개한 오픈소스 협업 플랫폼입니다. 라이선스는 Apache 2.0이고 저장소는 [github.com/block/buzz](https://github.com/block/buzz)에 있습니다. 한 집계에 따르면 공개 사흘 만에 약 6.9K 스타를 넘겼고 7월 28일 기준으로 14.7K 부근에 도달했습니다.
@@ -82,6 +84,8 @@ flowchart TB
 
 *Buzz의 구조. 사람과 에이전트가 동일한 신원 모델을 공유하고, 모든 행동이 하나의 서명된 로그로 수렴합니다.*
 
+![block-buzz-agent-native-workspace 슬라이드 2](/assets/images/block-buzz-agent-native-workspace-slide-02.webp)
+
 ## 지금 우리가 에이전트를 붙이는 방식과 무엇이 다른가
 
 이 구조의 값어치는 현재 관행과 나란히 놓고 봐야 드러납니다. 사내에 에이전트를 배치할 때 실무에서 쓰이는 방법은 대체로 세 가지입니다.
@@ -119,6 +123,8 @@ PostgreSQL / Redis / S3 호환 스토리지
 
 이 흐름에서 눈여겨볼 대목은 에이전트끼리의 위임이 멘션이라는 사람용 문법을 그대로 쓴다는 점입니다. 별도의 오케스트레이션 DSL을 배울 필요가 없고, 사람이 그 위임 과정을 읽을 수 있습니다. 멀티에이전트 시스템에서 가장 자주 깨지는 지점이 "지금 무슨 일이 일어나고 있는지 사람이 모른다"는 것인데, 대화 로그를 실행 로그로 겸용하면 그 문제가 상당 부분 완화됩니다.
 
+![block-buzz-agent-native-workspace 슬라이드 3](/assets/images/block-buzz-agent-native-workspace-slide-03.webp)
+
 ## 이번 글에서 확인한 것과 확인하지 못한 것
 
 정직하게 적어 두겠습니다. 이 글은 Buzz를 자체 호스팅해서 직접 돌린 실측 리포트가 아닙니다.
@@ -141,6 +147,8 @@ Paxis는 다키클라우드의 Agent-Native Cloud 제어 평면으로, Skills와
 
 인프라 렌즈에서도 볼 지점이 있습니다. 자체 호스팅 가능한 릴레이와 텔레메트리 미유출이라는 Buzz의 요구 조건은 다키클라우드 ai-platform이 온프레미스와 소버린 환경에서 계속 대응해 온 요구와 정확히 같습니다. 국내 공공과 금융 고객이 요구하는 것도 결국 "데이터와 실행이 우리 경계 안에 머무는가"입니다. Buzz 같은 워크스페이스를 K8s 위에 올려 멀티테넌트로 운영하는 그림은 ai-platform이 이미 하고 있는 일의 연장선에 있습니다. PostgreSQL과 Redis, S3 호환 스토리지 조합은 특별할 것이 없는 스택이며, GPU 자원 관리가 필요한 워크로드는 아닙니다.
 
+![block-buzz-agent-native-workspace 슬라이드 4](/assets/images/block-buzz-agent-native-workspace-slide-04.webp)
+
 ## 한계 및 반론
 
 지금 시점에서 Buzz를 사내 표준으로 밀어 넣는 것은 성급합니다. 근거는 네 가지입니다.
@@ -161,18 +169,6 @@ Buzz의 기여는 새로운 채팅 앱을 하나 더 만든 데 있지 않습니
 
 당장 할 수 있는 일을 하나만 고르자면, 사내 에이전트 파이프라인에서 "이 행동을 누가 했는가"에 답할 수 있는지 점검해 보시기 바랍니다. 공유 봇 토큰 하나로 여러 에이전트를 돌리고 있다면 그 답은 없는 것입니다. 인증이 필요한 조직이라면 Buzz 자체를 도입하기보다, Buzz가 택한 주체별 신원과 서명 원장이라는 설계를 지금 쓰는 플랫폼에 어떻게 옮길지부터 검토하는 편이 실익이 큽니다. 다키클라우드가 Paxis에서 정책 게이트와 감사 로그를 일급 리소스로 둔 이유도 같습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![block-buzz-agent-native-workspace 슬라이드 1](/assets/images/block-buzz-agent-native-workspace-slide-01.webp)
-
-![block-buzz-agent-native-workspace 슬라이드 2](/assets/images/block-buzz-agent-native-workspace-slide-02.webp)
-
-![block-buzz-agent-native-workspace 슬라이드 3](/assets/images/block-buzz-agent-native-workspace-slide-03.webp)
-
-![block-buzz-agent-native-workspace 슬라이드 4](/assets/images/block-buzz-agent-native-workspace-slide-04.webp)
 
 ## 출처
 

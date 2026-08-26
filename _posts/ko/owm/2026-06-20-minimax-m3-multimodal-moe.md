@@ -39,6 +39,8 @@ MiniMaxAI가 `MiniMaxAI/MiniMax-M3`를 공개했습니다. M2.7의 후속 모델
 
 모달리티는 텍스트, 이미지, 비디오 세 가지를 네이티브로 처리합니다. 텍스트 전용이던 이전 세대와 달리 시각 정보를 입력받아 에이전트나 코딩 태스크에 활용할 수 있습니다. HuggingFace 태그에 `agent`, `coding`, `video`가 명시되어 있습니다.
 
+![minimax-m3-multimodal-moe 슬라이드 1](/assets/images/minimax-m3-multimodal-moe-slide-01.webp)
+
 ## 아키텍처
 
 총 파라미터는 약 428B이고 활성 파라미터는 약 23B입니다. MoE 구조에서 토큰당 실제 계산에 참여하는 전문가 수가 이 23B를 결정합니다. 전문가 개수나 레이어 수 같은 세부 MoE 파라미터는 모델 카드에 공개되어 있지 않습니다.
@@ -49,11 +51,15 @@ MiniMaxAI가 `MiniMaxAI/MiniMax-M3`를 공개했습니다. M2.7의 후속 모델
 
 dtype은 BF16과 F32를 지원합니다. FP8은 M2.7에서 지원되었으나 M3 모델 카드에는 FP8 언급이 없습니다. 실제 배포 전 확인이 필요합니다.
 
+![minimax-m3-multimodal-moe 슬라이드 2](/assets/images/minimax-m3-multimodal-moe-slide-02.webp)
+
 ## 벤치마크
 
 공식 모델 카드에 구체적인 벤치마크 수치는 없습니다. 기재된 정보는 M2 대비 속도 향상 수치뿐입니다. 외부 리더보드나 독립 평가 결과는 arXiv:2606.13392 논문과 함께 확인하는 것이 맞습니다.
 
 지원 언어 목록도 모델 카드에 명시되어 있지 않습니다. 멀티링귀얼 지원 여부는 직접 테스트로 확인해야 합니다.
+
+![minimax-m3-multimodal-moe 슬라이드 3](/assets/images/minimax-m3-multimodal-moe-slide-03.webp)
 
 ## 서빙과 배포
 
@@ -83,6 +89,8 @@ python -m sglang.launch_server \
   --dtype bfloat16
 ```
 
+![minimax-m3-multimodal-moe 슬라이드 4](/assets/images/minimax-m3-multimodal-moe-slide-04.webp)
+
 ## 라이선스
 
 라이선스는 `minimax-community`입니다. Apache-2.0이나 MIT가 아닌 자체 라이선스입니다. 상업적 사용 조건, 재배포 제약, 파생 모델 규정이 표준 오픈소스와 다를 수 있습니다. 프로덕션 배포 전 LICENSE 원문을 반드시 검토해야 합니다.
@@ -94,16 +102,3 @@ python -m sglang.launch_server \
 **1M 컨텍스트와 멀티모달 에이전트 파이프라인.** M3의 1M 컨텍스트와 이미지/비디오 입력 능력은 문서 분석, 코드 저장소 전체 탐색, 영상 이해 에이전트 구축에 활용 가능합니다. 현재 ThakiCloud의 Kueue 기반 배치 파이프라인에 M3 서빙 엔드포인트를 붙이면 긴 컨텍스트가 필요한 태스크를 배치로 처리하는 구조를 만들 수 있습니다. 단 자원 비용이 크므로 태스크별로 실제 컨텍스트 길이가 얼마나 필요한지 먼저 측정하는 것이 선행되어야 합니다.
 
 M2.7 기반 워크로드가 이미 있다면 M3로 업그레이드할 때 추론 파라미터(`thinking` 모드)와 멀티모달 입력 처리 부분을 별도로 검토해야 합니다. 드롭인 교체가 아니라 인터페이스 변경이 수반됩니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![minimax-m3-multimodal-moe 슬라이드 1](/assets/images/minimax-m3-multimodal-moe-slide-01.webp)
-
-![minimax-m3-multimodal-moe 슬라이드 2](/assets/images/minimax-m3-multimodal-moe-slide-02.webp)
-
-![minimax-m3-multimodal-moe 슬라이드 3](/assets/images/minimax-m3-multimodal-moe-slide-03.webp)
-
-![minimax-m3-multimodal-moe 슬라이드 4](/assets/images/minimax-m3-multimodal-moe-slide-04.webp)
-

@@ -62,6 +62,8 @@ def capture_failure_snapshot(request_id, prompt, raw_response, metadata):
 
 여러 턴이 이어지는 대화형 기능이라면 문제는 더 커집니다. 실패는 세 번째 턴에서 나타났는데 원인은 첫 번째 턴에서 잘못 붙은 문맥일 수 있습니다. 스냅샷을 요청 단위가 아니라 세션 단위로 묶어 두지 않으면, 실패한 턴만 따로 들여다봐서는 아무것도 보이지 않습니다. 세션 전체를 순서대로 복원할 수 있어야 그 대화가 어디서 궤도를 이탈했는지 짚을 수 있습니다. API로 제공되는 모델을 쓰는 경우에는 이 문제가 한 겹 더 있습니다. 제공사가 공지 없이 내부 가중치나 시스템 프롬프트를 조정하는 일이 드물지 않기 때문에, 응답 헤더에 모델 버전 식별자가 실려 온다면 그것도 스냅샷에 함께 남겨 둬야 합니다. 그렇지 않으면 몇 주 뒤에 "그날 어떤 모델이 응답했는지" 자체를 알 방법이 없어집니다.
 
+![ai-production-debugging 슬라이드 1](/assets/images/ai-production-debugging-slide-01.webp)
+
 ## 세 용의자를 순서대로 심문합니다
 
 AI 시스템에서 뭔가 잘못됐을 때 바뀔 수 있는 것은 크게 세 가지뿐입니다. 사람들이 무엇을 보내는지, 즉 입력 분포입니다. 모델이 무엇을 하는지, 즉 모델 버전이나 가중치입니다. 우리 코드가 무엇을 하는지, 즉 프롬프트 템플릿이나 후처리 로직입니다. 세 가지를 동시에 파고들면 시간이 흩어집니다. 순서를 정해야 합니다.
@@ -100,6 +102,8 @@ flowchart TB
 
 세 실험 중 실패가 사라지는 실험이 진짜 원인에 가장 가깝습니다. 셋 다 실패가 재현되지 않는다면, 그 실패는 세 변수의 조합에서만 나타나는 것이므로 조합 실험으로 넘어가야 합니다.
 
+![ai-production-debugging 슬라이드 2](/assets/images/ai-production-debugging-slide-02.webp)
+
 ## 조용히 나빠지는 품질은 사고 통계로 잡습니다
 
 앞서 다룬 것은 눈에 보이는 실패입니다. 더 까다로운 쪽은 에러도 없고 크래시도 없이 품질만 서서히 나빠지는 경우입니다. 이 조사는 새로운 계측을 설계하는 자리가 아닙니다. 이미 쌓여 있는 것, 예를 들어 사용자의 부정 피드백 비율이나 사람 상담으로 넘어간 비율, 기존 검증 로직이 걸러낸 출력의 비율을 재료로 씁니다. 진단 단계에서 새롭게 더할 수 있는 것은 표시 지표를 늘리는 일이 아니라, 앞서 모은 스냅샷을 이용한 눈가림 비교입니다.
@@ -122,6 +126,8 @@ def sample_before_after_pairs(store, cutover_time, cluster_key, n=40):
 
 숫자로 된 지표만 보고 안심하는 경우도 자주 봅니다. 응답 길이나 응답 시간 같은 표면적 통계는 변화가 없는데, 내용의 정확도만 조용히 떨어지는 경우가 실제로 흔합니다. 예를 들어 요약 기능이 문장 구조와 길이는 그대로 유지하면서 핵심 수치만 슬쩍 틀리게 뽑는 경우, 길이 분포나 응답 시간 지표로는 절대 걸리지 않습니다. 눈가림 비교에서 사람이 직접 내용을 읽어야만 드러나는 유형의 저하입니다. 그래서 사고 조사 중의 눈가림 비교는 표면 지표가 멀쩡할 때일수록 오히려 더 필요합니다. 지표가 이상 없다는 사실 자체가 조용한 저하를 배제하는 근거가 되지는 않습니다.
 
+![ai-production-debugging 슬라이드 3](/assets/images/ai-production-debugging-slide-03.webp)
+
 ## 롤백은 확신이 아니라 손실 비교로 결정합니다
 
 롤백 결정이 지연되는 가장 흔한 이유는 팀이 행동하기 전에 원인을 완전히 확신하고 싶어 하기 때문입니다. 그러나 장애는 확신이 설 때까지 기다려 주지 않습니다. 롤백을 결정하는 데 필요한 것은 원인의 완전한 확인이 아니라, 최근 변경이 그럴듯한 용의자라는 판단과 롤백 비용이 저하를 방치하는 비용보다 낮다는 판단, 이 둘뿐입니다.
@@ -140,6 +146,8 @@ def should_rollback(time_overlap, impact_per_hour, rollback_cost_min, elapsed_mi
 롤백을 반사적으로 실행해도 되는 조건과 그러지 말아야 할 조건을 미리 정해 두면 사고 중의 논쟁을 줄일 수 있습니다. 용의자와 장애 시작 시각이 명확히 겹치고, 되돌릴 버전이 이미 충분히 오래 안정적으로 운영됐던 이력이 있다면 반사적으로 롤백해도 됩니다. 반대로 롤백이 데이터베이스 마이그레이션이나 스키마 변경을 함께 되돌려야 하는 경우, 또는 직전 버전 자체가 별개의 알려진 결함을 안고 있던 경우라면 반사적 롤백을 멈추고 먼저 판단해야 합니다. 이 두 조건을 인시던트 대응 문서에 미리 적어 두면, 사고 한가운데서 담당자가 혼자 판단의 무게를 지지 않아도 됩니다.
 
 롤백은 결정으로 끝나지 않습니다. 결정 시각과 근거를 기록해 두고, 다시 확인할 시점을 명확히 정해야 합니다. 롤백 이후 지표가 회복되면 그것은 용의자가 맞았다는 강한 정황이지 확정 증거는 아닙니다. 회복되지 않으면 다음 용의자로 넘어가면 됩니다. 이때 롤백은 실패가 아니라 하나의 가설을 값싸게 검증한 결과로 취급하면 됩니다.
+
+![ai-production-debugging 슬라이드 4](/assets/images/ai-production-debugging-slide-04.webp)
 
 ## ThakiCloud 관점에서
 
@@ -165,20 +173,8 @@ def should_rollback(time_overlap, impact_per_hour, rollback_cost_min, elapsed_mi
 - [Defeating Nondeterminism in LLM Inference (Thinking Machines Lab)](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/)
 - [How Is ChatGPT's Behavior Changing over Time? (arXiv:2307.09009)](https://arxiv.org/abs/2307.09009)
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-production-debugging 슬라이드 1](/assets/images/ai-production-debugging-slide-01.webp)
-
-![ai-production-debugging 슬라이드 2](/assets/images/ai-production-debugging-slide-02.webp)
-
-![ai-production-debugging 슬라이드 3](/assets/images/ai-production-debugging-slide-03.webp)
-
-![ai-production-debugging 슬라이드 4](/assets/images/ai-production-debugging-slide-04.webp)
 
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-production-debugging/ch01.webp)
 ![3장 삽화](/assets/images/books/ai-production-debugging/ch03.webp)
 ![5장 삽화](/assets/images/books/ai-production-debugging/ch05.webp)
-

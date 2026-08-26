@@ -36,6 +36,8 @@ Ornith 소식은 여기에 한 가지를 더 얹습니다. 오픈 모델이 코�
 
 한 가지는 짚고 넘어가야 공정합니다. 벤치마크 1위와 우리 업무에서의 1위는 다른 사건입니다. Cline과 Harvey에서 정상에 올랐다는 사실이 우리 코드베이스에서도 최선이라는 보장은 되지 않습니다. 그래서 모델 교체를 뉴스 속도에 맞추는 조직은 대개 손해를 봅니다. 필요한 것은 빠른 교체가 아니라, 교체를 저렴하게 만드는 구조입니다. 두 가지는 자주 혼동되는데 비용 구조가 정반대입니다.
 
+![routing-layer-is-the-asset 슬라이드 1](/assets/images/routing-layer-is-the-asset-slide-01.webp)
+
 ## 같은 모델에 문이 세 개 달렸습니다
 
 GLM-5.3 소식에는 성능 수치보다 덜 눈에 띄지만 더 구조적인 사실이 하나 더 있습니다. 이 모델은 Venice 플랫폼에서 익명으로 접근할 수 있고, 오픈라우터에서도 쓸 수 있으며, Z AI 자사 퍼스트파티 채널로도 제공됩니다. 하나의 모델에 문이 세 개 달린 셈입니다.
@@ -45,6 +47,8 @@ GLM-5.3 소식에는 성능 수치보다 덜 눈에 띄지만 더 구조적인 �
 비용 회계도 같은 자리에서 어려워집니다. 한 모델을 세 채널로 쓰면 청구서도 세 장이 됩니다. 어느 팀의 어느 워크플로가 얼마를 썼는지는 채널 합계로는 답이 나오지 않습니다. 토큰을 쓴 주체가 사람이 아니라 에이전트일 때는 더 그렇습니다. 에이전트는 사람보다 훨씬 자주 호출하고, 실패하면 다시 시도하며, 그 재시도까지 과금됩니다. 사용량을 작업 단위로 묶어 보지 못하면 비용 관리는 사후 놀람으로 끝납니다.
 
 스트라이프가 산 것이 정확히 그 문제를 다루는 계층입니다. 인수 발표에 붙은 표현도 모델이 아니라 1,000만 개발자와 기업 커뮤니티의 토큰 흐름이었습니다. 흐름을 관리한다는 말은 결제 회사가 오랫동안 해 온 일의 정의와 겹칩니다. 어느 통로로 보낼지 고르고, 실패하면 다른 통로로 넘기고, 오간 것을 기록하고, 나중에 정산합니다. 결제사가 AI 회사를 샀다기보다, 라우팅이 결제를 닮아 가는 지점에 결제사가 먼저 도착했다고 읽는 편이 사실에 가깝습니다. 스트라이프는 같은 발표에서 상반기 매출 41% 성장과 잉여현금흐름 43% 증가를 함께 알렸고, AI 특이점이 1월 1일 시작됐다는 선언까지 덧붙였습니다. 선언은 마케팅이지만 가격표는 마케팅이 아닙니다.
+
+![routing-layer-is-the-asset 슬라이드 2](/assets/images/routing-layer-is-the-asset-slide-02.webp)
 
 ## 라우터 아래에는 여전히 쇳덩이가 있습니다
 
@@ -58,6 +62,8 @@ GLM-5.3 소식에는 성능 수치보다 덜 눈에 띄지만 더 구조적인 �
 
 두 뉴스를 겹쳐 놓으면 조달의 모양도 바뀝니다. 한쪽에서는 네오클라우드가 부채로 대형 사이트를 짓고, 다른 쪽에서는 하이퍼스케일러가 자체 추론 칩을 확대하며, 또 다른 쪽에서는 소형 하드웨어로 내려가는 경로가 열립니다. 이 셋 중 하나에 몰아서 베팅하는 계획은 위험합니다. 지금 필요한 것은 최적 하드웨어를 맞히는 능력보다, 하드웨어가 바뀌어도 워크로드가 따라 움직일 수 있는 이동성입니다.
 
+![routing-layer-is-the-asset 슬라이드 3](/assets/images/routing-layer-is-the-asset-slide-03.webp)
+
 ## 라우터도 결국 누군가의 자산입니다
 
 여기서 통념을 한 번 뒤집어 봅니다. 모델 종속이 위험하니 라우터로 감싸자는 결론은 절반만 맞습니다. 라우터를 특정 회사가 소유하는 순간, 라우터가 새로운 종속 지점이 됩니다. 어제까지 중립적으로 보이던 계층이 오늘 한 결제 회사의 자산이 됐습니다. 여기에 오픈AI가 2027년 상장을 목표로 하고 있고 사라 프라이어 CFO가 상장 시점은 상업적 성과 속도에 달렸다고 밝힌 소식까지 겹치면, 공급 측 전반이 수익화 압력 아래로 들어가는 그림이 됩니다. 상장 일정을 가진 공급사는 가격과 정책을 조정할 이유가 생깁니다.
@@ -65,6 +71,8 @@ GLM-5.3 소식에는 성능 수치보다 덜 눈에 띄지만 더 구조적인 �
 중립적인 인프라가 인수된 뒤에 무엇이 달라지는지는 이미 여러 번 본 장면입니다. 처음에는 아무것도 바뀌지 않습니다. 시간이 지나면 인수한 쪽의 주력 사업과 가까운 기능이 먼저 좋아지고, 먼 기능은 우선순위에서 밀립니다. 결제 회사가 소유한 라우터라면 정산과 과금 쪽이 빠르게 정교해질 가능성이 높습니다. 그 방향이 우리 팀의 방향과 일치하면 이득이고, 어긋나면 남의 로드맵을 기다리는 처지가 됩니다. 인수 자체를 나쁜 소식으로 볼 이유는 없지만, 로드맵 결정권이 우리 밖으로 이동했다는 사실은 계산에 넣어야 합니다.
 
 그래서 방어선은 라우터를 쓰느냐가 아니라, 라우팅 규칙을 내가 소유하느냐에 있습니다. 어느 작업을 어느 모델로 보낼지, 어떤 데이터가 어떤 채널을 통과해도 되는지, 누가 그 규칙을 바꿀 수 있고 바뀐 뒤에 무엇이 기록으로 남는지를 우리 쪽 자산으로 두어야 합니다. 그 규칙이 남의 콘솔에만 있으면, 모델 종속을 피하려다 라우터 종속으로 갈아탄 것입니다.
+
+![routing-layer-is-the-asset 슬라이드 4](/assets/images/routing-layer-is-the-asset-slide-04.webp)
 
 ## 우리가 Paxis를 이렇게 설계한 이유
 
@@ -92,16 +100,3 @@ ThakiCloud가 Paxis를 만들면서 Skills와 Tools, Policies, Audit Logs를 일
 - HuggingNews, [Nebius Raises $4.5B in Convertible Notes, Shares Fall 7% Premarket](https://huggingnews.com/ai/update-nebius-raises-45b-in-convertible-notes-shares-fall-7percent-prema-cbb86de8)
 - HuggingNews, [Marvell Grants Google $12.2 Billion AI Chip Warrant, Lifts Shares 13%](https://huggingnews.com/ai/marvell-grants-google-122-billion-ai-chip-warrant-lifts-shares-13percent-99937e80)
 - HuggingNews, [OpenAI Targets 2027 IPO, Potential Earlier Listing if Business Inflects](https://huggingnews.com/ai/openai-targets-2027-ipo-potential-earlier-listing-if-business-inflects-75259262)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
-
-![routing-layer-is-the-asset 슬라이드 1](/assets/images/routing-layer-is-the-asset-slide-01.webp)
-
-![routing-layer-is-the-asset 슬라이드 2](/assets/images/routing-layer-is-the-asset-slide-02.webp)
-
-![routing-layer-is-the-asset 슬라이드 3](/assets/images/routing-layer-is-the-asset-slide-03.webp)
-
-![routing-layer-is-the-asset 슬라이드 4](/assets/images/routing-layer-is-the-asset-slide-04.webp)
-

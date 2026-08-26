@@ -31,6 +31,8 @@ ThakiCloud의 에이전트 하네스는 사용자 요청을 약 천 개에 이�
 
 이 연구는 같은 팀의 이전 두 연구를 잇습니다. 앞선 연구는 이 시스템에서 복합 질의 라우팅의 진짜 병목이 질의 분해가 아니라 검색기 자체라는 점을 밝혔고, 완벽하게 분해해도 오라클 상한이 63.6%에 그친다는 것을 보였습니다. 그다음 연구는 검색기 어휘 드리프트를 탐지해 수정을 제안하는 결정론적 야간 리페어 루프를 만들었는데, 그 연구는 스스로 "밴딧도, 실시간 보상도, 지속적인 온라인 적응도 없는 단일 레버짜리 개념 증명"이라 못 박았고, 여전히 엔지니어가 오프라인 벤치마크 재실행을 승인해야 하는 구조였습니다. 이번 연구는 그 다음 단계로, 사람의 트리거 없이도 실시간 결과 피드백만으로 τ와 w를 계속 재보정하는 밴딧이 이 정적 기본값을 이길 수 있는지를 직접 실측합니다.
 
+![bandit-hybrid-retrieval-calibration 슬라이드 1](/assets/images/bandit-hybrid-retrieval-calibration-slide-01.webp)
+
 ## LinUCB로 검색 파라미터를 실시간으로 골라보기
 
 실험은 τ ∈ {0.50, 0.60, 0.70}과 w ∈ {0.30, 0.50, 0.70}을 교차한 3×3, 총 아홉 개의 팔(arm)로 구성됩니다. 이 중 하나가 현재 프로덕션 기본값인 (0.60, 0.50)입니다. 표준 LinUCB 알고리즘이 매 질의마다 다섯 차원짜리 문맥 벡터(편향 항, 질의 토큰 수, 질의에서 한글이 차지하는 비율, 지금까지 누적된 이름 변경 비율과 폐기 비율)를 보고 팔 하나를 선택하고, 실제 프로덕션 검색기 코드로 그 팔의 τ와 w를 그대로 적용해 검색을 수행합니다.
@@ -72,7 +74,13 @@ ThakiCloud 입장에서 결론은 명확합니다. `retrieve.py`의 하이브리
 
 학술적으로는, 하이브리드 어휘·임베딩 융합 가중치 보정에 밴딧을 적용한 연구는 있었지만 대부분 합성 보상이나 재구현된 검색기 위에서 이뤄졌습니다. 이 연구는 실제 프로덕션 검색기 코드를 그대로 가져와 이름 변경과 폐기가 프로그래밍적으로 주입되는 조건에서 실측했고, 그 결과가 널(null) 결과였다는 점, 그리고 왜 널이 나왔는지에 대한 구체적인 메커니즘(보상 오지정)까지 진단했다는 점에서 드문 사례로 자리매김합니다.
 
+![bandit-hybrid-retrieval-calibration 슬라이드 2](/assets/images/bandit-hybrid-retrieval-calibration-slide-02.webp)
+
 ## 한계: 이 결과를 어디까지 믿을 수 있나
+![bandit-hybrid-retrieval-calibration 슬라이드 3](/assets/images/bandit-hybrid-retrieval-calibration-slide-03.webp)
+
+
+![bandit-hybrid-retrieval-calibration 슬라이드 4](/assets/images/bandit-hybrid-retrieval-calibration-slide-04.webp)
 
 저자들이 스스로 밝힌 한계들이 결과 해석에 중요합니다. 먼저 보상은 애초에 등록했던 실시간 신호가 아니라 벤치마크 파생 대리 지표였기 때문에, `skill_retro`나 `verify_fanout` 같은 진짜 실시간 신호를 보상으로 썼을 때 어떤 결과가 나올지는 이 논문이 말해주지 않습니다. 또한 비교 기준이 된 정적 기본값은 순진한 디폴트가 아니라 애초에 이 온라인 실험이 재생한 것과 같은 벤치마크 계열로 오프라인에서 튜닝된, 사실상 테스트셋을 이미 본 강한 기준선입니다. 그런 상대를 콜드 스타트로 배운 밴딧이 무승부로 따라잡은 것 자체는 얕보기 어렵지만, 반대로 "온라인 적응이 불필요하다"는 일반 결론으로 확장할 수도 없습니다.
 
@@ -81,16 +89,3 @@ ThakiCloud 입장에서 결론은 명확합니다. `retrieve.py`의 하이브리
 저자들이 제시하는 다음 단계는 명확합니다. 보상 범위를 네이티브·부정 질의까지 넓히고, 정적 기본값보다 나빠지지 않도록 보장하는 제약을 추가하며, 정적 기본값 자체를 움직일 만큼 강한 드리프트 일정을 먼저 설계한 뒤에야 드리프트 적응형 밴딧을 시험하고, 마지막으로 애초에 계획했던 `skill_retro`와 `verify_fanout` 같은 진짜 실시간 신호를 실제로 연결해보는 것입니다. 그때까지는 사람이 트리거하는 오프라인 벤치마크 루프가 안전망으로, 그리고 최소한 온라인 보정의 필수 보완재로 남아야 한다는 것이 이 논문의 결론입니다.
 
 논문 상세 페이지는 [Hugging Face에서 확인할 수 있습니다](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-27-bandit-hybrid-retrieval-calibration).
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![bandit-hybrid-retrieval-calibration 슬라이드 1](/assets/images/bandit-hybrid-retrieval-calibration-slide-01.webp)
-
-![bandit-hybrid-retrieval-calibration 슬라이드 2](/assets/images/bandit-hybrid-retrieval-calibration-slide-02.webp)
-
-![bandit-hybrid-retrieval-calibration 슬라이드 3](/assets/images/bandit-hybrid-retrieval-calibration-slide-03.webp)
-
-![bandit-hybrid-retrieval-calibration 슬라이드 4](/assets/images/bandit-hybrid-retrieval-calibration-slide-04.webp)
-

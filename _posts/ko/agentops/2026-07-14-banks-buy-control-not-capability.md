@@ -34,11 +34,15 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 여기서 질문 하나가 생깁니다. 능력이 문제라면 이미 시장에는 강력한 모델이 넘칩니다. 그런데 왜 은행은 모델을 먼저 사지 않고 순서부터 그릴까요. 이 물음을 붙잡고 오늘 뉴스 전체를 다시 읽으면, 서로 다른 회사들이 사실은 같은 말을 하고 있다는 것이 보입니다. AI 도입의 승부처는 얼마나 똑똑한가가 아니라, 얼마나 통제할 수 있는가로 옮겨 갔다는 이야기입니다.
 
+![banks-buy-control-not-capability 슬라이드 1](/assets/images/banks-buy-control-not-capability-slide-01.webp)
+
 ## 돈은 여전히 하드웨어로 흐릅니다
 
 물론 자본의 물길은 아직 실리콘 쪽에 있습니다. 오늘만 봐도 한미반도체가 HBM4 전공정 장비 수요에 힘입어 2분기 영업이익 1303억원, 전년 대비 51퍼센트 증가한 창사 최대 분기 실적을 냈습니다. 메모리 3사는 올해 HBM 생산량을 두 배 이상 늘리고도 수요 초과로 내년 가격 인상을 예고했고, SK하이닉스는 용인 Y1 팹의 장비 발주를 시작했습니다. 최태원 회장은 이것을 두고 사이클이 아니라 산업의 진화라고 표현했습니다.
 
 그런데 돈이 하드웨어로 흐른다고 해서 병목까지 하드웨어에 있는 것은 아닙니다. 칩이 아무리 빨라도, 그 칩 위에서 무슨 일을 어디까지 시켜도 되는지를 정하지 못하면 규제 산업은 한 발도 못 뗍니다. 은행연합회가 산 것이 성능이 아니라 기준이었던 이유가 여기 있습니다.
+
+![banks-buy-control-not-capability 슬라이드 2](/assets/images/banks-buy-control-not-capability-slide-02.webp)
 
 ## 규제 산업은 능력이 아니라 순서를 먼저 삽니다
 
@@ -50,11 +54,15 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 신중함은 대중의 속도와 뚜렷이 대비됩니다. 같은 날 챗GPT는 올 상반기 국내 사용자 증가 1위에 오르며 국민앱 소리를 들었고, SKT의 독자 모델 독파모 정예팀에는 SK AX와 테크노매트릭스가 합류하며 제조와 공공 실증이 빨라졌습니다. 업비트는 AI와 대화하며 매매 전략을 검증하는 백테스트 도구를 베타로 내놨습니다. 개인과 도메인 서비스는 이렇게 앞으로 달려 나가는데, 은행과 공공은 오히려 속도를 늦춰 순서를 그립니다. 이 온도차가 우연은 아닙니다. 잃을 것이 많은 쪽일수록 자율의 다이얼을 천천히 돌립니다.
 
+![banks-buy-control-not-capability 슬라이드 3](/assets/images/banks-buy-control-not-capability-slide-03.webp)
+
 ## 자율은 스위치가 아니라 다이얼입니다
 
 그렇다면 자율의 최전선은 어떨까요. 오늘 SAP코리아가 서울에서 자율형 기업 청사진을 내놨습니다. AI 에이전트가 프로세스와 데이터에 내재돼 스스로 감지하고 판단하고 실행한다는 그림입니다. 대화형 어시스턴트 쥴이 재무와 구매, 공급망, 인사, 고객 영역에 걸쳐 50개 넘게 배치되고, 각 어시스턴트가 그 아래 200개 넘는 특화 에이전트를 조율해 좁고 정확한 작업을 실행합니다. 삼성전기는 이 전환 과정에서 시스템 비가동 시간을 144시간에서 34시간으로 76퍼센트 줄이며 제조라인 중단 없이 넘어간 사례로 소개됐습니다.
 
 주목할 것은 SAP가 제시한 네 개의 축 가운데 하나가 처음부터 거버넌스라는 점입니다. 가장 자율적인 그림을 그리는 회사조차, 자율과 통제를 한 묶음으로 팔고 있습니다. 이것이 핵심입니다. 자율은 켜고 끄는 스위치가 아닙니다. 어느 업무를, 누구의 승인 아래, 어느 선까지 에이전트가 스스로 처리하게 할지 단계로 돌리는 다이얼입니다. 재무와 인사, 공급망처럼 민감한 프로세스를 위임하려면 개인정보보호법과 전자금융거래법 준수, 그리고 무엇보다 감사 추적성이 전제가 됩니다. 국내 특유의 다단계 결재 문화와 에이전트의 자율 실행 사이를 어떻게 설계하느냐가 도입의 성패를 가릅니다.
+
+![banks-buy-control-not-capability 슬라이드 4](/assets/images/banks-buy-control-not-capability-slide-04.webp)
 
 ## 돈을 부어도 전략이 안 생기는 이유
 
@@ -93,16 +101,3 @@ SAP가 자율형 기업의 그림을 그리고 은행이 그 그림을 들일 �
 - [ITU AI for Good Global Summit](https://aiforgood.itu.int/): 규제 산업의 AI 도입이 능력이 아니라 거버넌스와 표준을 통과한다는 국제기구 맥락
 - [EU 인공지능법 (Regulation (EU) 2024/1689), EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj): 자율을 단계별 위험 등급으로 성문화한 교차 관할 사례
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework): 능력보다 거버넌스 프레임워크를 먼저 세우는 규제 선례
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![banks-buy-control-not-capability 슬라이드 1](/assets/images/banks-buy-control-not-capability-slide-01.webp)
-
-![banks-buy-control-not-capability 슬라이드 2](/assets/images/banks-buy-control-not-capability-slide-02.webp)
-
-![banks-buy-control-not-capability 슬라이드 3](/assets/images/banks-buy-control-not-capability-slide-03.webp)
-
-![banks-buy-control-not-capability 슬라이드 4](/assets/images/banks-buy-control-not-capability-slide-04.webp)
-

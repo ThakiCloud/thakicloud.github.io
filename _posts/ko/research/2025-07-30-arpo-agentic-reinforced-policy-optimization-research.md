@@ -36,6 +36,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 기존의 강화학습 알고리즘들이 단일턴 추론 작업에서는 효과적이었지만, **멀티턴 도구 상호작용**에서는 모델의 내재적 장기 추론 능력과 도구 활용 능력 간의 균형을 제대로 맞추지 못했습니다. ARPO는 이러한 한계를 극복하고, 놀랍게도 **기존 방법 대비 50% 적은 리소스**로 더 나은 성능을 달성했습니다.
 
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.webp' | relative_url }})
+
 ## ARPO의 핵심 발견: 도구 사용 후 엔트로피 급증
 
 ### 🔍 엔트로피 변화 패턴 분석
@@ -124,6 +126,8 @@ class AdvantageAttribution:
         branch_rewards = self.separate_branch_rewards(rollouts, rewards)
         return self.differentiated_advantage_assignment(branch_rewards)
 ```
+
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.webp' | relative_url }})
 
 ## 실험 결과 및 성능 분석
 
@@ -224,6 +228,8 @@ class ARPOAlgorithm:
                 rollouts.append(self.single_sampling(sample))
         return rollouts
 ```
+
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.webp' | relative_url }})
 
 ## 실제 적용 사례 분석
 
@@ -366,6 +372,8 @@ python train_arpo.py \
     --learning_rate 1e-5
 ```
 
+![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.webp' | relative_url }})
+
 ## 한계점 및 향후 연구 방향
 
 ### ⚠️ 현재 한계점
@@ -505,16 +513,3 @@ ARPO의 등장은 AI 에이전트 개발에서 다음과 같은 변화를 가져
 - [ARPO 데이터셋 및 모델](https://huggingface.co/collections/dongguanting/arpo-688229ff8a6143fe5b4ad8ae)
 
 **태그**: `#ARPO` `#강화학습` `#LLM에이전트` `#멀티턴추론` `#도구사용` `#엔트로피샘플링`
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 1]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-01.webp' | relative_url }})
-
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 2]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-02.webp' | relative_url }})
-
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 3]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-03.webp' | relative_url }})
-
-![arpo-agentic-reinforced-policy-optimization-research 슬라이드 4]({{ '/assets/images/arpo-agentic-reinforced-policy-optimization-research-slide-04.webp' | relative_url }})
-

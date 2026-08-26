@@ -55,6 +55,8 @@ vLLM은 처리량 최적화에 집중합니다. PagedAttention, continuous batch
 
 두 도구는 경쟁 관계라기보다 계층이 다릅니다. 처리량이 중요한 공개 인퍼런스 엔드포인트에는 vLLM이 맞고, 내부 개발팀이 쓰는 코드 보조 도구나 소규모 프라이빗 챗봇에는 Ollama의 운용 편의성이 더 적합합니다.
 
+![ollama-kubernetes-production-patterns 슬라이드 1](/assets/images/ollama-kubernetes-production-patterns-slide-01.webp)
+
 ## 기본 Kubernetes 배포
 
 ### Namespace와 RBAC
@@ -204,6 +206,8 @@ initContainers:
 
 Pod가 뜬 뒤 별도 Job을 실행해 모델을 pull하고 Modelfile을 빌드합니다. 초기 배포 시 한 번만 돌리면 됩니다.
 
+![ollama-kubernetes-production-patterns 슬라이드 2](/assets/images/ollama-kubernetes-production-patterns-slide-02.webp)
+
 ## 구조화된 출력(Structured Output)
 
 Ollama는 `format` 파라미터로 JSON 출력을 강제할 수 있습니다.
@@ -257,6 +261,8 @@ spec:
     interval: 30s
 ```
 
+![ollama-kubernetes-production-patterns 슬라이드 3](/assets/images/ollama-kubernetes-production-patterns-slide-03.webp)
+
 ## HPA 오토스케일링
 
 GPU 기반 HPA는 GPU 가동률 메트릭을 기반으로 스케일합니다. NVIDIA의 DCGM Exporter를 통해 GPU 활용률을 Prometheus로 수집하면 HPA의 커스텀 메트릭으로 사용할 수 있습니다.
@@ -305,6 +311,8 @@ nginx.conf: |
 
 Keycloak 같은 IdP와 연동하면 팀별 접근 권한도 관리할 수 있습니다.
 
+![ollama-kubernetes-production-patterns 슬라이드 4](/assets/images/ollama-kubernetes-production-patterns-slide-04.webp)
+
 ## 운용 팁
 
 **모델 업데이트는 별도 Job으로 스케줄합니다.** `ollama pull`은 실행 중인 Pod와 함께 돌릴 수 있지만, 업데이트 중 용량 부족으로 Pod가 재시작하는 일이 생깁니다. 점검 시간에 Job으로 별도 실행하는 쪽이 안전합니다.
@@ -327,16 +335,3 @@ Ollama를 Kubernetes에서 제대로 운용하려면 모델 PVC, GPU toleration,
 - Kubernetes, [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/) 및 [HPA v2 API Reference](https://kubernetes.io/docs/reference/kubernetes-api/autoscaling/horizontal-pod-autoscaler-v2/)
 - NVIDIA, [dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter): GPU 메트릭 DaemonSet
 - vLLM, [Documentation](https://docs.vllm.ai/en/latest/): PagedAttention과 continuous batching
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
-
-![ollama-kubernetes-production-patterns 슬라이드 1](/assets/images/ollama-kubernetes-production-patterns-slide-01.webp)
-
-![ollama-kubernetes-production-patterns 슬라이드 2](/assets/images/ollama-kubernetes-production-patterns-slide-02.webp)
-
-![ollama-kubernetes-production-patterns 슬라이드 3](/assets/images/ollama-kubernetes-production-patterns-slide-03.webp)
-
-![ollama-kubernetes-production-patterns 슬라이드 4](/assets/images/ollama-kubernetes-production-patterns-slide-04.webp)
-

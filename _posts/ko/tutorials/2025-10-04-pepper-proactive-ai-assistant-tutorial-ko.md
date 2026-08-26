@@ -72,6 +72,8 @@ published: false
   - OpenAI API 키 (필수)
   - Composio API 키 (도구 통합에 필수)
 
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.webp' | relative_url }})
+
 ## 설치 가이드
 
 ### 1단계: 리포지토리 클론
@@ -210,6 +212,8 @@ http://localhost:5050/pepper/ui.html
 ```bash
 # 터미널에서 Ctrl+C 누르기
 ```
+
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.webp' | relative_url }})
 
 ## Pepper의 아키텍처 이해
 
@@ -448,6 +452,8 @@ await worker.execute_tool("send_notification", {
 - 모든 응답 수신 시 알림
 - 결과 요약
 
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.webp' | relative_url }})
+
 ## 고급 설정
 
 ### Feeds 커스터마이징
@@ -604,6 +610,8 @@ source env_var.sh
 - **감사 로그**: Pepper의 작업을 정기적으로 모니터링
 - **데이터 프라이버시**: 이메일의 민감한 정보에 유의
 
+![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.webp' | relative_url }})
+
 ## 성능 최적화
 
 ### 1. Scheduler 튜닝
@@ -722,16 +730,3 @@ Pepper는 **Berkeley Sky Computing Lab**의 일환으로 **Agentica 팀**이 개
 - 커뮤니티와 경험 공유!
 
 즐거운 개발 되세요! 🚀
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 1]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-01.webp' | relative_url }})
-
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 2]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-02.webp' | relative_url }})
-
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 3]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-03.webp' | relative_url }})
-
-![pepper-proactive-ai-assistant-tutorial-ko 슬라이드 4]({{ '/assets/images/pepper-proactive-ai-assistant-tutorial-ko-slide-04.webp' | relative_url }})
-

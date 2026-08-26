@@ -31,17 +31,23 @@ canonical_url: "https://thakicloud.github.io/ko/research/agent-dynamic-batch-tun
 
 여기서 자주 쓰이는 방식이 테넌트마다 동시 요청 슬롯을 균등하게 나눠 주는 정적 분배입니다. 문제는 이 균등 분배가 테넌트의 트래픽이 출렁일 때 손해를 본다는 데 있습니다. 짧은 요청을 몰아쳤다가 한참 쉬는 대화형 테넌트를 생각해 보십시오. 이 테넌트가 쉬는 동안 그에게 예약된 슬롯 절반은 그대로 놉니다. 정적 분배는 그 노는 용량을 옆에서 굶주린 다른 테넌트에게 넘겨주지 못합니다. 예약해 두고 안 쓰는 용량이 곧 낭비입니다.
 
+![agent-dynamic-batch-tuning-vllm 슬라이드 1](/assets/images/agent-dynamic-batch-tuning-vllm-slide-01.webp)
+
 ## 제어루프로 정식화한 재분배 문제
 
 이 연구는 문제를 고정 총예산 아래의 폐루프 제어로 정식화합니다. 총 슬롯 예산은 항상 일정하게 유지되고 컨트롤러는 그 예산 안에서 슬롯을 테넌트 사이로 옮기기만 합니다. 상태는 테넌트별 수요(큐 깊이), GPU 메모리 사용률, 최근 지연 백분위수로 구성되고 액션은 합이 0인 재분배, 즉 한 테넌트에서 뺀 만큼 다른 테넌트에 더해 주는 조정입니다. 보상은 처리량에서 SLO를 넘긴 꼬리 지연 페널티와 비용을 뺀 형태입니다.
 
 손대는 레버는 vLLM 엔진 내부의 `max_num_seqs`가 아니라 클라이언트 측 테넌트별 어드미션 동시성입니다. 프로덕션 vLLM은 엔진 파라미터를 재시작 없이 바꿀 수 없기 때문에, 실제로 조정 가능한 지점은 서버로 들여보내는 동시 요청 수뿐이라는 실무 제약을 그대로 반영했습니다. 이 값을 바꾸면 vLLM의 연속 배치 구성이 실제로 재편되므로, Kueue 사이드카나 LLM 에이전트 라우터가 프로덕션에서 손댈 수 있는 레버와 동일합니다. 제어 틱마다 실제 LLM을 호출하지는 않으며 온라인으로 튜닝되는 대상은 어드미션 동시성 자체입니다.
 
+![agent-dynamic-batch-tuning-vllm 슬라이드 2](/assets/images/agent-dynamic-batch-tuning-vllm-slide-02.webp)
+
 ## 실측 설정: 한 서버, 고정 예산, 두 테넌트
 
 측정은 데모 클러스터의 실제 H200 노드 한 장에서 이뤄졌습니다. vLLM OpenAI 호환 서버가 Qwen2.5-3B-Instruct를 서빙했고 두 테넌트가 고정 96슬롯 예산 아래에서 이 서버를 공유했습니다. 예산 96은 두 정책 모두에서 똑같이 유지되므로, 정책 사이에 달라지는 것은 예산을 어떻게 나누느냐일 뿐 예산의 크기가 아닙니다.
 
 테넌트 A는 짧은 64토큰 디코딩을 켰다 껐다 하며 몰아치는 버스트형 대화 테넌트, 테넌트 B는 긴 512토큰 디코딩을 쉬지 않고 보내는 상시 배치 테넌트입니다. B에는 완료된 슬롯을 즉시 다시 채우는 폐루프 백프레셔를 걸어, 배치가 한순간도 마르지 않고 서버가 실제로 부하를 받도록 했습니다. 정적 정책은 예산을 {A:48, B:48}로 얼려 둡니다. 동적 정책은 2초마다 테넌트별 수요를 관측해 고정된 96슬롯을 수요가 있는 쪽으로 옮기는 결정론적 컨트롤러입니다. 각 정책을 90초 정상 구간에서 측정했습니다.
+
+![agent-dynamic-batch-tuning-vllm 슬라이드 3](/assets/images/agent-dynamic-batch-tuning-vllm-slide-03.webp)
 
 ## 결과: 동적 재분배가 정적을 이겼다
 
@@ -66,6 +72,8 @@ canonical_url: "https://thakicloud.github.io/ko/research/agent-dynamic-batch-tun
 
 이 결과는 앞선 비포화 실험을 바로잡습니다. 그때는 부하가 GPU를 21% 근처에만 올려 컨트롤러가 움직일 이유를 찾지 못했고 두 정책이 노이즈 안에서 비겼습니다. 그것은 동적 제어가 쓸모없다는 증거가 아니라, 어드미션 벤치마크는 경합 대상이 실제로 경합될 때만 의미가 있다는 증거였습니다. 더 큰 모델, 배치를 항상 채우는 폐루프 백프레셔, 그리고 전역 증감이 아니라 예산을 보존하며 옮기는 레버라는 세 가지 재설계가 비결과를 측정된 이득으로 뒤집었습니다.
 
+![agent-dynamic-batch-tuning-vllm 슬라이드 4](/assets/images/agent-dynamic-batch-tuning-vllm-slide-04.webp)
+
 ## 무엇을 남기나
 
 ThakiCloud 입장에서 이 연구가 남기는 실무적 사실은 명확합니다. 버스트성 멀티테넌시에서 예약해 두고 놀리는 용량은 실재하는 손실입니다. 단순한 수요 반응 재분배 규칙만으로도 그 손실의 두 자릿수 비율을 회수할 수 있습니다. 하네스는 이제 실제 하드웨어에서 부하를 걸고 이기는 것까지 검증됐으므로, 더 큰 모델로 사용률을 90% 위로 끌어올려 포화 상태에서 이득의 크기를 재측정하거나, 규칙 기반 컨트롤러 자리에 실제 LLM 에이전트 결정 함수를 끼워 넣는 다음 단계로 곧장 이어갈 수 있습니다.
@@ -75,16 +83,3 @@ ThakiCloud 입장에서 이 연구가 남기는 실무적 사실은 명확합니
 이 수치는 시뮬레이션이 아니라 실제 H200에서 vLLM을 띄워 측정한 값입니다.
 
 논문 상세 페이지는 다음에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-21-agent-dynamic-batch-tuning-vllm](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-21-agent-dynamic-batch-tuning-vllm)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-dynamic-batch-tuning-vllm 슬라이드 1](/assets/images/agent-dynamic-batch-tuning-vllm-slide-01.webp)
-
-![agent-dynamic-batch-tuning-vllm 슬라이드 2](/assets/images/agent-dynamic-batch-tuning-vllm-slide-02.webp)
-
-![agent-dynamic-batch-tuning-vllm 슬라이드 3](/assets/images/agent-dynamic-batch-tuning-vllm-slide-03.webp)
-
-![agent-dynamic-batch-tuning-vllm 슬라이드 4](/assets/images/agent-dynamic-batch-tuning-vllm-slide-04.webp)
-

@@ -31,6 +31,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/human-llm-research-
 
 그런데 이 논문은 바로 그 씨앗의 특성을 실증적으로 해부했습니다. 단순히 "LLM 아이디어가 좋다/나쁘다"를 넘어, 인간과 LLM이 아이디어 공간의 어느 지점을 차지하는지를 좌표로 그렸습니다. 그 지도가 우리에게 알려 주는 것은, 지금 그대로의 단일 LLM 가설 생성기를 믿으면 무엇을 놓치게 되는가입니다.
 
+![human-llm-research-idea-gap 슬라이드 1]({{ '/assets/images/human-llm-research-idea-gap-slide-01.webp' | relative_url }})
+
 ## 무엇을 측정했나: 통제된 아이디어 실험
 
 가장 인상적인 부분은 방법론의 엄격함입니다. 아이디어의 "좋고 나쁨"은 주관적이라 측정이 어렵습니다. 연구진은 이 문제를 통제 실험으로 우회했습니다.
@@ -365,6 +367,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/human-llm-research-
 
 비교의 잣대로는 "연구 취향(research-taste)"을 두 축으로 나눈 분류 체계를 썼습니다. 하나는 기회 패턴(어떤 종류의 빈틈을 동기로 삼는가), 다른 하나는 연구 패러다임(그 빈틈을 어떤 방법론으로 공략하는가)입니다. 이 좌표계 위에 인간과 LLM의 아이디어를 각각 찍어, 두 분포가 얼마나 겹치고 어긋나는지를 정량화했습니다. 평가 대상은 Claude·Gemini·GPT·DeepSeek·Qwen 등 주요 LLM 계열을 아울렀습니다.
 
+![human-llm-research-idea-gap 슬라이드 2]({{ '/assets/images/human-llm-research-idea-gap-slide-02.webp' | relative_url }})
+
 ## 핵심 발견: 격차는 품질이 아니라 폭이다
 
 결과의 핵심은 한 문장으로 요약됩니다. LLM이 만든 아이디어는 연구 취향 좌표계에서 인간 아이디어보다 실질적으로 더 좁은 영역만 차지했습니다.
@@ -375,11 +379,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/human-llm-research-
 
 인간 연구자들의 아이디어는 훨씬 넓게 흩어져 있었습니다. 메커니즘을 설명하려는 아이디어, 실패 사례를 파고드는 아이디어, 증거를 측정하려는 아이디어, 시스템을 구축하려는 아이디어, 효율을 개선하려는 아이디어가 고루 분포했습니다. LLM은 이 다양한 스펙트럼 대신, 안전하고 그럴듯한 "연결형" 아이디어의 좁은 골짜기에 반복적으로 착지했습니다.
 
+![human-llm-research-idea-gap 슬라이드 3]({{ '/assets/images/human-llm-research-idea-gap-slide-03.webp' | relative_url }})
+
 ## 왜 LLM은 "연결"에 쏠리는가
 
 이 쏠림은 우연이 아니라 구조적입니다. "기존 A와 B를 결합한다"는 발상은 주어진 선행 논문들에서 가장 안전하게 도출되는 다음 수(next token 수준에서도)입니다. 위험이 낮고 언제나 그럴듯하며 표면적으로는 새로워 보입니다. 반대로 "이 현상의 숨은 메커니즘은 무엇인가" 같은 아이디어는 주어진 텍스트를 넘어서는 도약을 요구합니다. LLM은 확률적으로 전자로 수렴하기 쉽습니다.
 
 문제는 실제 과학의 큰 진전이 종종 후자에서 나온다는 점입니다. 기존 것을 잇는 아이디어는 점진적 개선을 낳지만, 판을 바꾸는 발견은 대개 다른 종류의 질문에서 출발합니다. 단일 LLM 가설 생성기를 그대로 믿으면, 우리는 무의식적으로 아이디어 공간의 한 골짜기에 갇히게 됩니다.
+
+![human-llm-research-idea-gap 슬라이드 4]({{ '/assets/images/human-llm-research-idea-gap-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -403,18 +411,6 @@ ThakiCloud가 야간 연구 루프에서 가설을 뽑을 때 이 원칙은 실�
 
 그럼에도 실무 지침은 분명합니다. 자율 연구·아이디어 생성 파이프라인을 단일 모델·단일 프롬프트로 짜면 좁은 골짜기에 갇힙니다. 다양성을 하네스로 강제하고 검증으로 닫는 설계가, 이 논문이 측정한 실패 모드를 피하는 정공법입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![human-llm-research-idea-gap 슬라이드 1]({{ '/assets/images/human-llm-research-idea-gap-slide-01.webp' | relative_url }})
-
-![human-llm-research-idea-gap 슬라이드 2]({{ '/assets/images/human-llm-research-idea-gap-slide-02.webp' | relative_url }})
-
-![human-llm-research-idea-gap 슬라이드 3]({{ '/assets/images/human-llm-research-idea-gap-slide-03.webp' | relative_url }})
-
-![human-llm-research-idea-gap 슬라이드 4]({{ '/assets/images/human-llm-research-idea-gap-slide-04.webp' | relative_url }})
 
 ## 출처
 

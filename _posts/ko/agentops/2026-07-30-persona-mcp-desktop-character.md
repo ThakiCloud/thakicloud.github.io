@@ -46,6 +46,8 @@ flowchart TB
     APP --> HTTP["루프백 HTTP API<br/>state · audio-level · animation"]
 ```
 
+![persona-mcp-desktop-character 슬라이드 1](/assets/images/persona-mcp-desktop-character-slide-01.webp)
+
 ## 이 도구는 무엇인가
 
 MCP 쪽부터 보겠습니다. 앱이 떠 있는 동안 Persona는 Streamable HTTP 방식의 MCP 엔드포인트를 제공합니다. 노출하는 도구는 정확히 세 개입니다.
@@ -61,6 +63,8 @@ MCP 쪽부터 보겠습니다. 앱이 떠 있는 동안 Persona는 Streamable HT
 서버 설명 문자열도 눈여겨볼 만합니다. 사용자가 시각적 반응을 요청하거나 그 요청을 명백히 뒷받침할 때 `play_animation`을 쓰라고 안내하고, Persona는 절대 말하거나 오디오를 재생하지 않으며 `get_status`는 읽기 전용이라고 못 박습니다. 도구 스키마만으로는 전달되지 않는 사용 조건과 부작용 없음을 자연어 계약으로 함께 실어 보내는 방식입니다.
 
 설계에서 가장 베낄 만한 대목은 애니메이션 이름이 파일 경로가 아니라 제품 계약이라는 점입니다. 문서는 이 결정의 효과를 명시합니다. 나중에 캐릭터 팩을 통째로 교체하더라도 MCP 설정을 바꾸거나 파일시스템 접근 권한을 새로 내줄 필요가 없습니다. 에이전트는 `dance`라는 이름만 알면 되고, 그 이름 뒤에 어떤 파일이 있는지는 알 필요도 알 방법도 없습니다.
+
+![persona-mcp-desktop-character 슬라이드 2](/assets/images/persona-mcp-desktop-character-slide-02.webp)
 
 ## 설치 및 통합
 
@@ -90,6 +94,8 @@ MCP 말고 다른 진입점도 두 개 더 있습니다. 하나는 설치 패키
 
 플랫폼별 음성 감지 방식은 다음과 같습니다. Linux는 PipeWire 그래프를 폴링해 대상 재생 노드를 찾아 `pw-record`를 붙이고, Windows는 WASAPI 애플리케이션 루프백을 대상 프로세스 트리로 한정해 사용하며, macOS는 선택한 음성 프로세스에 대해 비공개 Core Audio 프로세스 탭과 집계 장치를 만듭니다. Linux는 `pw-dump`와 `pw-record`가 PATH에 있어야 하고, Windows는 빌드 20348 이상, macOS는 14.2 이상이 필요합니다.
 
+![persona-mcp-desktop-character 슬라이드 3](/assets/images/persona-mcp-desktop-character-slide-03.webp)
+
 ## 실제 확인 결과
 
 정직하게 적겠습니다. 이 글은 앱을 실제로 띄워 본 기록이 아닙니다. Persona는 하드웨어 가속 데스크톱 세션을 요구하고, 캐릭터 미디어가 저장소에서 의도적으로 제외되어 있어 `assets/model.vrm`과 여덟 개의 VRMA 파일을 직접 채워 넣어야 실행됩니다. 대신 저장소 문서와 소스를 직접 열어 확인 가능한 사실만 옮겼습니다. 벤치마크 수치나 지연 시간 같은 측정값은 이 글에 없습니다.
@@ -99,6 +105,8 @@ MCP 말고 다른 진입점도 두 개 더 있습니다. 하나는 설치 패키
 프라이버시 관련 서술도 문서에 명시적으로 적혀 있습니다. 각 리스너는 지원 애플리케이션의 재생 프로세스로 범위가 한정되며, Persona는 마이크를 캡처하지 않고, 오디오를 저장하지 않으며, 음성을 만들어 내지 않고, 내용을 전사하지 않으며, 오디오를 네트워크로 보내지 않는다고 되어 있습니다. Linux 경로에서는 샘플에서 RMS 진폭을 계산한 뒤 모든 샘플을 즉시 버린다고 구체적으로 기술합니다. 루프백 API는 비루프백 Host 헤더를 가진 요청을 거부하고, 브라우저 클라이언트는 신뢰된 로컬 출처와 지원 앱 출처로 제한합니다.
 
 배포 쪽에는 재미있는 게이트가 하나 걸려 있습니다. 캐릭터 미디어를 교체한 뒤 `manifest.json`의 모든 라이선스와 출처 필드를 채우고 `distributionAllowed`를 참으로 설정하기 전까지, 릴리스 워크플로가 실패하도록 되어 있습니다. 테스트용 파일을 그대로 배포하는 사고를 코드가 막는 구조입니다.
+
+![persona-mcp-desktop-character 슬라이드 4](/assets/images/persona-mcp-desktop-character-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -128,18 +136,6 @@ Persona에서 가져갈 것은 캐릭터가 아니라 좁힘의 방법입니다.
 
 사내 도구를 MCP로 감싸려는 분에게 남기는 다음 행동은 하나입니다. 도구 목록을 적기 전에, 에이전트가 수행할 동작의 이름을 먼저 유한한 목록으로 적어 보십시오. 그 목록이 길어진다면 도구를 나누기 전에 동작 자체를 다시 묶어야 한다는 신호입니다. 경로와 자유 문자열을 인자로 받는 순간 정책 게이트도 감사 로그도 함께 흐려집니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![persona-mcp-desktop-character 슬라이드 1](/assets/images/persona-mcp-desktop-character-slide-01.webp)
-
-![persona-mcp-desktop-character 슬라이드 2](/assets/images/persona-mcp-desktop-character-slide-02.webp)
-
-![persona-mcp-desktop-character 슬라이드 3](/assets/images/persona-mcp-desktop-character-slide-03.webp)
-
-![persona-mcp-desktop-character 슬라이드 4](/assets/images/persona-mcp-desktop-character-slide-04.webp)
 
 ## 출처
 

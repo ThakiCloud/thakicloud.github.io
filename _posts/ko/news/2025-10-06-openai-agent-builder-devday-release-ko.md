@@ -31,6 +31,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 OpenAI가 2025년 10월 6일 DevDay에서 오랫동안 기대되어 온 **Agent Builder**를 공식 발표했습니다. 이는 AI 워크플로우 생성의 민주화에 있어 중요한 이정표가 되었습니다. 이 새로운 시각적 프로그래밍 도구는 OpenAI를 Zapier와 n8n 같은 기존 자동화 플랫폼의 직접적인 경쟁자로 위치시키며, 개발자와 기업이 광범위한 코딩 지식 없이도 복잡한 에이전트 워크플로우를 직관적으로 구성할 수 있게 해줍니다.
 
+![openai-agent-builder-devday-release-ko 슬라이드 1]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-01.webp' | relative_url }})
+
 ## OpenAI Agent Builder란 무엇인가?
 
 Agent Builder는 사용자가 드래그 앤 드롭 인터페이스를 통해 정교한 AI 기반 자동화를 구축할 수 있게 해주는 포괄적인 시각적 워크플로우 생성 플랫폼입니다. 이 플랫폼은 순수한 모델 API에서 더 광범위한 생태계 접근 방식으로의 OpenAI의 전략적 전환을 나타내며, 사용자가 전례 없는 용이성으로 프로덕션 준비가 된 AI 에이전트를 생성할 수 있도록 지원합니다.
@@ -57,6 +59,8 @@ Agent Builder 플랫폼은 기존 자동화 도구와 차별화되는 여러 혁
 - 데이터 변환 단계
 - ChatKit 위젯 통합
 
+![openai-agent-builder-devday-release-ko 슬라이드 2]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-02.webp' | relative_url }})
+
 ## 기술 아키텍처와 통합
 
 Agent Builder는 OpenAI의 기존 인프라를 활용하면서 워크플로우 오케스트레이션을 위한 새로운 기능을 도입합니다. 플랫폼의 아키텍처는 엔터프라이즈 고객이 기대하는 보안 및 신뢰성 표준을 유지하면서 복잡한 다단계 프로세스를 처리하도록 설계되었습니다.
@@ -79,6 +83,8 @@ MCP 커넥터 기능은 AI 에이전트가 외부 시스템과 상호 작용하�
 - **프로덕션 배포**: 프로덕션 환경으로의 원클릭 배포
 - **모니터링 및 분석**: 실시간 워크플로우 성능 추적
 
+![openai-agent-builder-devday-release-ko 슬라이드 3]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-03.webp' | relative_url }})
+
 ## 시장 영향과 경쟁적 위치
 
 OpenAI의 워크플로우 자동화 분야 진출은 AI 환경에서 중요한 변화를 나타냅니다. Agent Builder를 제공함으로써 OpenAI는 Zapier, Microsoft Power Automate, n8n과 같은 오픈소스 대안 등 기존 플레이어들에게 직접적으로 도전하고 있습니다.
@@ -98,6 +104,8 @@ OpenAI의 워크플로우 자동화 분야 진출은 AI 환경에서 중요한 �
 - **솔루션 아키텍트**: 복잡한 워크플로우 설계를 위한 시각적 도구가 필요한 사용자
 - **비즈니스 사용자**: 셀프 서비스 AI 자동화 기능이 필요한 사용자
 - **기업**: 확장 가능하고 안전한 AI 워크플로우 솔루션을 찾는 조직
+
+![openai-agent-builder-devday-release-ko 슬라이드 4]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-04.webp' | relative_url }})
 
 ## 산업에 미치는 영향
 
@@ -128,16 +136,3 @@ AI 기반 워크플로우를 구현하려는 개발자와 기업에게 Agent Bui
 ---
 
 *출처: [TestingCatalog - OpenAI prepares to release Agent Builder during DevDay on October 6](https://www.testingcatalog.com/openai-prepares-to-release-agent-builder-during-devday-on-october-6/)*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
-
-![openai-agent-builder-devday-release-ko 슬라이드 1]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-01.webp' | relative_url }})
-
-![openai-agent-builder-devday-release-ko 슬라이드 2]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-02.webp' | relative_url }})
-
-![openai-agent-builder-devday-release-ko 슬라이드 3]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-03.webp' | relative_url }})
-
-![openai-agent-builder-devday-release-ko 슬라이드 4]({{ '/assets/images/openai-agent-builder-devday-release-ko-slide-04.webp' | relative_url }})
-

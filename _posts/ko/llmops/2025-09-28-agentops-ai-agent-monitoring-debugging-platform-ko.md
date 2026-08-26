@@ -32,6 +32,8 @@ AI 에이전트가 점점 더 정교해지고 프로덕션 환경에 배포되�
 
 간단한 챗봇을 프로토타이핑하든 복잡한 멀티 에이전트 시스템을 프로덕션에서 관리하든, AgentOps는 AI 에이전트가 안정적이고 효율적이며 안전하게 작동하도록 보장하는 데 필요한 도구와 인사이트를 제공합니다.
 
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 1]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-01.webp' | relative_url }})
+
 ## AgentOps란 무엇인가?
 
 AgentOps는 AI 에이전트를 위해 특별히 설계된 종합적인 모니터링 및 디버깅 플랫폼입니다. 개발자와 조직에게 다음과 같은 기능을 제공합니다:
@@ -111,6 +113,8 @@ AgentOps는 포괄적인 테스트를 위해 1,000개 이상의 평가 데이터
 - **데이터 유출 방지**: 민감한 정보 노출 모니터링
 - **감사 추적 유지**: 컴플라이언스 요구사항을 위한 상세한 로그 보관
 - **액세스 제어 관리**: 에이전트 데이터를 누가 보고 수정할 수 있는지 제어
+
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 2]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-02.webp' | relative_url }})
 
 ## 설치 및 설정
 
@@ -216,6 +220,8 @@ user_proxy = autogen.UserProxyAgent(
 user_proxy.initiate_chat(assistant, message="이 문제를 해결해주세요")
 ```
 
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 3]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-03.webp' | relative_url }})
+
 ## 고급 기능
 
 ### 사용자 정의 이벤트 추적
@@ -307,6 +313,8 @@ else:
 - **API 키와 비밀에 환경 변수 사용**
 - **컴플라이언스 요구사항을 위한 감사 추적 활성화**
 
+![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 4]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-04.webp' | relative_url }})
+
 ## 일반적인 문제 해결
 
 ### 연결 문제
@@ -390,16 +398,3 @@ AI 에이전트를 막 시작하든 복잡한 프로덕션 배포를 관리하�
 ---
 
 *AI 에이전트 워크플로우에서 AgentOps 구현에 대한 질문이 있으신가요? 아래 댓글에 의견을 공유하거나 개인화된 가이드를 위해 저희 팀에 문의하세요.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 1]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-01.webp' | relative_url }})
-
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 2]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-02.webp' | relative_url }})
-
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 3]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-03.webp' | relative_url }})
-
-![agentops-ai-agent-monitoring-debugging-platform-ko 슬라이드 4]({{ '/assets/images/agentops-ai-agent-monitoring-debugging-platform-ko-slide-04.webp' | relative_url }})
-

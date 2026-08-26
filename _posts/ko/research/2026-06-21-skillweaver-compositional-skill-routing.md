@@ -51,6 +51,8 @@ SkillWeaver 프레임워크는 이 세 단계를 각각 LLM 태스크 분해기,
 
 저자들은 이를 해결하기 위해 검색 결과를 피드백으로 받아 분해를 스킬 라이브러리의 어휘에 반복적으로 정렬시키는 retrieval-augmented 루프를 제안합니다. 분해가 "내가 가진 스킬로 실행 가능한 형태"로 수렴하도록 만드는 접근입니다.
 
+![skillweaver-compositional-skill-routing 슬라이드 1]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-01.webp' | relative_url }})
+
 ## 데이터 과학자 관점에서의 실무 가치
 
 이 논문이 단순 데모가 아니라 방법론으로서 유용한 이유는 세 가지입니다.
@@ -59,13 +61,19 @@ SkillWeaver 프레임워크는 이 세 단계를 각각 LLM 태스크 분해기,
 - **검색기 vs 분해기 진단**: 멀티에이전트 시스템 품질이 안 나올 때, 모델 등급을 올리기 전에 분해 단계의 재현율부터 측정하라는 실증적 근거를 줍니다. 비용을 쓰기 전에 측정하라는 이야기입니다.
 - **재현 가능한 벤치마크**: 실제 MCP 스킬 위에서 돌기 때문에, 합성 태스크가 아니라 생태계의 실제 분포를 반영합니다.
 
+![skillweaver-compositional-skill-routing 슬라이드 2]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-02.webp' | relative_url }})
+
 ## ThakiCloud는 이 발견을 이미 검증했습니다
 
 저희는 SkillWeaver의 문제 정식화와 평가틀을 차용해, 내부 스킬 코퍼스 위에서 단일 검색 vs 분해 기반 라우팅을 직접 측정했습니다. 결과는 논문과 방향이 같았습니다. 완벽히 분해해도 천장이 존재했고, 병목이 분해 **그리고** 검색기/디스크립션 품질 양쪽에 있었습니다. 다시 말해 "검색은 멀쩡하니 분해만 고쳐라"는 논문의 결론이 모든 환경에 그대로 이전되지는 않습니다. 환경마다 직접 측정해야 한다는 것이 저희의 실무 교훈입니다.
 
 이런 측정 인프라와 라우팅 게이트를 K8s 위에서 재현 가능하게 운영하는 일이 ThakiCloud가 다루는 영역입니다. 에이전트 라우팅 품질을 데이터로 다루고 싶은 엔지니어라면, 이런 문제가 매일의 과제인 곳입니다.
 
+![skillweaver-compositional-skill-routing 슬라이드 3]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-03.webp' | relative_url }})
+
 ## 마치며
+![skillweaver-compositional-skill-routing 슬라이드 4]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-04.webp' | relative_url }})
+
 
 SkillWeaver의 메시지는 명확합니다. 복합 작업에서 라우팅 품질을 올리려면 모델을 키우기 전에 **분해를 고치고, 단계별로 측정하라**는 것입니다. 고치기 전에 측정하라는 이 논문의 진짜 교훈은, 멀티에이전트를 운영하는 모든 팀에 그대로 적용됩니다.
 
@@ -74,16 +82,3 @@ SkillWeaver의 메시지는 명확합니다. 복합 작업에서 라우팅 품�
 출처: "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose", arXiv:2606.18051 (2026-06-16). https://arxiv.org/abs/2606.18051
 
 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1xKcquYDJ534VquYHdJL93tvrmIdq3qVl/view)할 수 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
-
-![skillweaver-compositional-skill-routing 슬라이드 1]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-01.webp' | relative_url }})
-
-![skillweaver-compositional-skill-routing 슬라이드 2]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-02.webp' | relative_url }})
-
-![skillweaver-compositional-skill-routing 슬라이드 3]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-03.webp' | relative_url }})
-
-![skillweaver-compositional-skill-routing 슬라이드 4]({{ '/assets/images/skillweaver-compositional-skill-routing-slide-04.webp' | relative_url }})
-

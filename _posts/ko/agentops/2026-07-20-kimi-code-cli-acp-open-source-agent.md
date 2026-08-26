@@ -373,6 +373,9 @@ kimi mcp add --transport stdio chrome-devtools -- npx chrome-devtools-mcp@latest
 
 여기까지가 널리 홍보되는 부분인데, 냉정하게 보면 서브에이전트와 격리 컨텍스트, MCP 편의성, 이미지 붙여넣기는 모두 클로드 코드도 이미 제공합니다. 차별점이라 부르기 어렵습니다. 관련 문서는 [MCP 설정](https://moonshotai.github.io/kimi-cli/en/customization/mcp.html)을 참고하시기 바랍니다.
 
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 1](/assets/images/kimi-code-cli-acp-open-source-agent-slide-01.webp)
+
 ## Agent Client Protocol, 여기가 진짜다
 
 Agent Client Protocol(ACP)은 Zed 에디터 팀이 만든 개방 표준으로, Apache 라이선스이며 JSON-RPC 2.0을 stdio 위에서 주고받습니다. 에디터가 에이전트를 자식 프로세스로 띄우고 표준 입출력으로 통신하는 방식이라, 전송 메커니즘은 언어 서버 프로토콜(LSP)과 동일합니다.
@@ -382,6 +385,9 @@ LSP 비유가 이해를 크게 돕습니다. LSP 이전에는 에디터마다 �
 MCP와 방향이 반대라는 점이 핵심입니다. MCP는 에이전트에서 도구로 향하고 이때 에이전트가 클라이언트입니다. ACP는 에디터에서 에이전트로 향하고 이때 에이전트가 서버, 에디터가 클라이언트입니다. 같은 에이전트가 한쪽으로는 MCP 클라이언트, 다른 쪽으로는 ACP 서버를 동시에 맡습니다. Kimi Code CLI는 `kimi acp` 서브커맨드로 이 프로토콜을 별도 설치 없이 네이티브로 지원합니다. Zed는 네이티브로, JetBrains는 플러그인으로 연결되어, 개발자는 익숙한 에디터를 떠나지 않고 Kimi 세션을 몰 수 있습니다.
 
 입력 방식에도 오해가 하나 있습니다. 문샷이 정면에 내세우는 것은 정적 스크린샷이 아니라 **화면 녹화 영상 입력**입니다. 데모 클립을 채팅에 떨어뜨리면 에이전트가 말로 설명하기 어려운 동작을 직접 보고 이해합니다. 기본 모델 K2.7 Code가 비전 인코더 MoonViT를 갖춘 네이티브 멀티모달이라 텍스트, 이미지, 영상을 모두 받습니다. 물론 이미지 붙여넣기도 되지만 진짜 홍보 포인트는 영상입니다.
+
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 2](/assets/images/kimi-code-cli-acp-open-source-agent-slide-02.webp)
 
 ## 설치와 모델 개방성
 
@@ -400,7 +406,12 @@ kimi
 
 macOS는 `brew install kimi-code`, 윈도우는 파워셸 스크립트도 제공합니다. 소스 개발에는 Node 24.15 이상과 pnpm이 필요합니다. 더 중요한 것은 프로바이더 개방성입니다. `~/.kimi-code/config.toml`에서 OpenAI 호환 엔드포인트, Anthropic API 키, 구글 GenAI나 Vertex AI까지 다중 프로바이더로 등록할 수 있어 특정 모델에 락인되지 않습니다. 문서는 [Providers and models](https://moonshotai.github.io/kimi-cli/en/configuration/providers.html)에 있습니다.
 
+
+![kimi-code-cli-acp-open-source-agent 슬라이드 3](/assets/images/kimi-code-cli-acp-open-source-agent-slide-03.webp)
+
 ## 클로드 코드에는 없는 기능인가
+![kimi-code-cli-acp-open-source-agent 슬라이드 4](/assets/images/kimi-code-cli-acp-open-source-agent-slide-04.webp)
+
 
 가장 널리 퍼진 "클로드 코드에 없는 기능"이라는 프레이밍은 대부분 과장입니다. 진짜 차이는 두 곳뿐입니다. 첫째, ACP를 CLI에 1차 기능으로 내장한 점입니다. 클로드 코드는 Zed가 만든 별도 어댑터를 거쳐 베타로 연결되니, 전자는 켜면 바로 되고 후자는 브릿지를 하나 더 얹어야 합니다([Zed의 베타 글](https://zed.dev/blog/claude-code-via-acp) 참고). 둘째, 모델 개방성입니다. Kimi는 오픈웨이트 K 시리즈에 멀티 프로바이더 전환까지 열려 있어 온프렘 서빙이 가능하지만, 클로드 코드는 CLI가 열려 있어도 모델이 API 전용입니다.
 
@@ -408,18 +419,6 @@ macOS는 `brew install kimi-code`, 윈도우는 파워셸 스크립트도 제공
 
 그럼에도 개방 표준 위에서 에이전트와 에디터가 느슨하게 결합되는 방향은 분명한 흐름입니다. 특정 벤더 CLI에 종속되지 않고 모델과 에디터를 각각 갈아 끼울 수 있는 세계가 개발자에게 더 유리하며, Kimi Code CLI는 그 세계를 앞당기는 조각 중 하나입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![kimi-code-cli-acp-open-source-agent 슬라이드 1](/assets/images/kimi-code-cli-acp-open-source-agent-slide-01.webp)
-
-![kimi-code-cli-acp-open-source-agent 슬라이드 2](/assets/images/kimi-code-cli-acp-open-source-agent-slide-02.webp)
-
-![kimi-code-cli-acp-open-source-agent 슬라이드 3](/assets/images/kimi-code-cli-acp-open-source-agent-slide-03.webp)
-
-![kimi-code-cli-acp-open-source-agent 슬라이드 4](/assets/images/kimi-code-cli-acp-open-source-agent-slide-04.webp)
 
 ## 출처
 

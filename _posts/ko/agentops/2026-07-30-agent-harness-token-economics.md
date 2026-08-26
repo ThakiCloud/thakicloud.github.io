@@ -27,6 +27,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 코딩 에이전트나 사내 에이전트 플랫폼의 토큰 비용을 실제로 책임지는 플랫폼 엔지니어와, 모델 교체 여부를 결정해야 하는 분을 위해 썼습니다. 결론부터 말씀드리면, 모델을 바꾸기 전에 하네스의 상주 비용을 재 보셔야 합니다. Composio의 측정에서 성공률은 세 하네스가 거의 붙었는데 중위 토큰 소비는 61k와 340k로 갈렸고, 저희가 같은 질문을 자체 하네스에 던져 직접 셌을 때는 선택 계층을 켜고 끄는 것만으로 턴당 예산이 45배에서 66배까지 움직였습니다. 더 중요한 것은 그다음입니다. 라우팅을 켠 뒤 남는 예산의 96.7퍼센트는 스킬이 아니라 상시 적용 룰이었습니다. 비용을 깎을 지점은 대부분의 사람이 쳐다보는 곳에 없었습니다.
 
+![agent-harness-token-economics 슬라이드 1](/assets/images/agent-harness-token-economics-slide-01.webp)
+
 ## 개요
 
 Composio는 Kimi K3 하나를 세 개의 에이전트 하네스에 태웠습니다. Claude Code, Hermes, Kimi Code입니다. 과제는 28개이고 세 하네스에 동일하게 주어졌습니다. 모델이 고정되어 있으므로 결과의 차이는 모델 능력이 아니라 하네스가 만드는 차이입니다.
@@ -60,6 +62,8 @@ flowchart TB
 ```
 
 스킬 계층에서 전략이 갈리는 부분이 핵심입니다. 스킬을 수천 개 갖춘 하네스가 그 본문을 전부 컨텍스트에 넣으면 모델은 매 턴 도서관 전체를 읽습니다. 이름과 설명만 상주시키면 목록만 읽습니다. 검색기로 상위 몇 개만 고르면 필요한 몇 권만 읽습니다. 세 전략은 같은 과제를 같은 확률로 끝내면서 전혀 다른 비용을 청구합니다.
+
+![agent-harness-token-economics 슬라이드 2](/assets/images/agent-harness-token-economics-slide-02.webp)
 
 ## 저희 하네스를 직접 재 봤습니다
 
@@ -111,6 +115,8 @@ bash scripts/blog/impl_sandbox.sh teardown agent-harness-token-economics
 
 무게가 큰 룰 파일도 같이 확인했습니다. 가장 무거운 다섯 개가 5,331 토큰, 3,631 토큰, 3,497 토큰, 3,398 토큰, 3,395 토큰입니다. 상위 다섯 개만 합쳐도 1만 9천 토큰이 넘고, 이는 라우팅된 스킬 카드 전체의 여섯 배에 가깝습니다. 스킬 설명 쪽에서 가장 긴 카드는 603 토큰이었습니다. 한 계층에서 아끼려고 애쓰는 몇백 토큰과 다른 계층에서 새는 몇천 토큰이 같은 예산 안에 섞여 있었습니다.
 
+![agent-harness-token-economics 슬라이드 3](/assets/images/agent-harness-token-economics-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 주제는 에이전트와 스킬 오케스트레이션에 걸려 있으므로 Paxis 렌즈로 보는 것이 맞습니다. Paxis는 ThakiCloud의 Agent-Native Cloud 제어 평면이고, Skills와 Tools, Policies, Audit Logs를 일급 리소스로 다룹니다. 이번 측정은 그 설계 결정 하나의 값을 숫자로 만들어 줬습니다.
@@ -131,6 +137,8 @@ Paxis의 Skill Harness는 스킬을 전부 컨텍스트에 밀어 넣지 않고 
 
 마지막으로 이 측정은 한 저장소의 한 하네스입니다. 96.7퍼센트라는 비율은 저희 룰 계층이 두껍고 라우팅이 잘 붙어 있는 구성에서 나온 값이며, 룰이 얇고 스킬을 전부 주입하는 하네스에서는 정반대의 그림이 나옵니다. 옮겨 가야 하는 것은 숫자가 아니라 절차입니다.
 
+![agent-harness-token-economics 슬라이드 4](/assets/images/agent-harness-token-economics-slide-04.webp)
+
 ## 정리
 
 모델을 바꾸기 전에 하네스를 재 보셔야 한다는 것이 이 글의 결론입니다. Composio는 모델을 고정하고 하네스만 바꿔 같은 과제의 중위 토큰이 61k와 340k로 갈리는 것을 보였고, 성공률은 그 격차를 정당화해 주지 않았습니다. 저희는 하네스를 고정하고 계층을 갈라 세어, 선택 계층의 값이 45배에서 66배에 해당하고 그 계층을 켠 뒤에는 상시 룰이 남은 예산의 95퍼센트를 먹는다는 것을 확인했습니다.
@@ -139,18 +147,6 @@ Paxis의 Skill Harness는 스킬을 전부 컨텍스트에 밀어 넣지 않고 
 
 저희가 쓴 계수 스크립트는 저장소에 남겨 두었습니다. 룰 디렉터리와 스킬 정의를 훑어 계층별 토큰을 세고 세 전략의 예산을 비교해 주므로, 구조가 비슷한 하네스라면 경로만 바꿔 그대로 돌려 보실 수 있습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-harness-token-economics 슬라이드 1](/assets/images/agent-harness-token-economics-slide-01.webp)
-
-![agent-harness-token-economics 슬라이드 2](/assets/images/agent-harness-token-economics-slide-02.webp)
-
-![agent-harness-token-economics 슬라이드 3](/assets/images/agent-harness-token-economics-slide-03.webp)
-
-![agent-harness-token-economics 슬라이드 4](/assets/images/agent-harness-token-economics-slide-04.webp)
 
 ## 출처
 

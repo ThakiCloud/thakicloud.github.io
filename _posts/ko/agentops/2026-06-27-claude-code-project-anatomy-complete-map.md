@@ -34,6 +34,8 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
 
 이 글은 그 비교 실측의 기록입니다. 각 구성요소의 역할 경계를 정리하고, 우리 레포(`ai-platform-strategy`)의 실제 구성요소 수를 측정해 지도와 대조한 뒤, 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하는 관점에서 이 구조가 왜 단순한 정리정돈 이상의 의미를 갖는지 정리했습니다.
 
+![claude-code-project-anatomy-complete-map 슬라이드 1](/assets/images/claude-code-project-anatomy-complete-map-slide-01.png)
+
 ## Claude Code 프로젝트 구조란 무엇인가
 
 핵심 발상은 단순합니다. Claude Code는 두 곳에서 설정을 읽습니다. 프로젝트 디렉터리의 `.claude`와 홈 디렉터리의 `~/.claude`입니다. 프로젝트 파일은 git에 커밋해 팀과 공유하고, 홈 디렉터리 파일은 모든 프로젝트에 적용되는 개인 설정입니다. 이 두 갈래를 기준으로 모든 구성요소가 자리를 잡습니다.
@@ -367,6 +369,8 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
 {% endraw %}
 *Claude Code 프로젝트의 구성요소를 로드 타이밍 기준으로 정리한 구조도. 클릭하면 확대됩니다.*
 
+![claude-code-project-anatomy-complete-map 슬라이드 2](/assets/images/claude-code-project-anatomy-complete-map-slide-02.png)
+
 ## 구성요소별 역할 경계
 
 지도가 진짜 가치를 갖는 지점은 "무엇을 어디에 담는가"의 경계입니다. 글이 정리한 각 구성요소의 책임을 우리가 실제로 운용하는 방식과 함께 정리하면 다음과 같습니다.
@@ -384,6 +388,8 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
 **agents는 서브에이전트 정의입니다.** 독립적인 역할, 도구 조합, 모델 티어를 가진 전문가로, 필요할 때 소환됩니다. 탐색에는 저렴한 모델을, 구현에는 균형 잡힌 모델을, 아키텍처 결정에는 가장 비싼 모델을 배정하는 식으로 작업 성격에 따라 모델을 라우팅합니다.
 
 **agent-memory는 에이전트가 학습한 지식입니다.** `CLAUDE.md`와의 핵심 차이가 여기 있습니다. `CLAUDE.md`는 사람이 알려준 것이고, agent-memory는 에이전트가 경험으로 배운 것입니다. 장기 실행 에이전트가 반복 패턴, 버그, 문서화되지 않은 컨벤션을 누적합니다.
+
+![claude-code-project-anatomy-complete-map 슬라이드 3](/assets/images/claude-code-project-anatomy-complete-map-slide-03.png)
 
 ## 새 지식은 어디에 두는가
 
@@ -718,6 +724,8 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
 
 가장 흔한 실수도 명확합니다. "가끔만 필요한" 지식을 `CLAUDE.md`에 다 때려넣으면 매 세션 토큰을 낭비합니다. `.claudeignore`가 없는 모노레포는 컨텍스트가 소진됩니다. `CLAUDE.local.md`를 git에 커밋하면 개인 정보와 경로가 노출됩니다. MCP 서버를 10개 이상 상시 활성화하면 사용하지 않아도 매번 약 1만 토큰을 낭비합니다.
 
+![claude-code-project-anatomy-complete-map 슬라이드 4](/assets/images/claude-code-project-anatomy-complete-map-slide-04.png)
+
 ## ThakiCloud 레포를 이 지도에 비춰보기
 
 지도를 읽었으니 우리 레포를 거기에 비춰봤습니다. `ai-platform-strategy` 레포의 `.claude` 디렉터리를 실제로 측정한 결과는 다음과 같습니다.
@@ -760,18 +768,6 @@ Paxis는 Claude Code의 이 구조를 단일 개발자 환경을 넘어 프로�
 
 마지막으로, 출처 글의 일부 수치(예: MCP 서버당 약 1천 토큰)는 환경과 버전에 따라 달라질 수 있는 근사치입니다. 절대값으로 받기보다 "상시 로드되는 것은 모두 비용이다"라는 방향성으로 읽는 것이 맞습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-code-project-anatomy-complete-map 슬라이드 1](/assets/images/claude-code-project-anatomy-complete-map-slide-01.png)
-
-![claude-code-project-anatomy-complete-map 슬라이드 2](/assets/images/claude-code-project-anatomy-complete-map-slide-02.png)
-
-![claude-code-project-anatomy-complete-map 슬라이드 3](/assets/images/claude-code-project-anatomy-complete-map-slide-03.png)
-
-![claude-code-project-anatomy-complete-map 슬라이드 4](/assets/images/claude-code-project-anatomy-complete-map-slide-04.png)
 
 ## 출처
 

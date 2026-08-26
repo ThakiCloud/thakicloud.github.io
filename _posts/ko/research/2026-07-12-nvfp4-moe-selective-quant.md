@@ -21,6 +21,8 @@ MoE 아키텍처는 토큰마다 소수의 전문가 서브네트워크만 활�
 
 이 전제는 틀렸습니다. 어떤 워크로드에서든 전문가는 대부분의 토큰을 처리하는 소수의 핫 전문가와, 어쩌다 한 번 발화하는 긴 꼬리의 희귀 전문가로 갈립니다. 핫 전문가의 가중치는 그 레이어를 지나는 토큰 대다수가 소비하기 때문에, 이 전문가를 4비트로 누르면 그 양자화 오차가 가장 많은 출력으로 번집니다. 반대로 희귀 전문가를 눌러도 오차가 닿는 토큰은 몇 개뿐이라, 지켜봐야 되찾는 정확도가 미미합니다. 그래서 지킬 예산이 한정되어 있다면 핫 전문가에 써야 정확도 회복 효율이 가장 높습니다. 이것이 이 연구가 채택하고 실제로 측정한 방향이며 이전 버전과 정확히 반대입니다.
 
+![nvfp4-moe-selective-quant 슬라이드 1](/assets/images/nvfp4-moe-selective-quant-slide-01.webp)
+
 ## 핵심: RASQ 정책과 등가 저장 비교
 
 이 정책을 논문은 Router-Aware Selective Quantization, 줄여서 RASQ라고 부릅니다. 약어는 유지하되 전문가 보호 규칙을 새로 정의했습니다. 라우터 선형 레이어는 예외 없이 항상 전정밀도로 고정하고 전문가를 트래픽으로 순위 매긴 뒤 가장 뜨거운 상위 K 비율만 전정밀도로 지키고 나머지는 4비트로 양자화합니다. 아무것도 지키지 않는 K=0이 곧 균일 4비트 양자화이므로, 균일 양자화와 RASQ는 같은 한 개 파라미터짜리 계열 위의 두 점입니다.
@@ -29,7 +31,13 @@ MoE 아키텍처는 토큰마다 소수의 전문가 서브네트워크만 활�
 
 정확도 축은 고정된 공개 도메인 영어 코퍼스(오스틴, 디킨스, 캐럴 등 1900년 이전 산문) 위의 perplexity이며 절대값이 아니라 설정 간 상대 비교로만 씁니다. 정확도 측정에는 채널별 affine 4비트 가짜 양자화를 NVFP4의 하드웨어 독립적 프록시로 사용했습니다. H200은 Hopper 세대라 네이티브 FP4 텐서코어가 없어 이 프록시가 필요했고 그래서 처리 속도가 아니라 정밀도 배분의 정확도 효과만 측정했습니다.
 
+![nvfp4-moe-selective-quant 슬라이드 2](/assets/images/nvfp4-moe-selective-quant-slide-02.webp)
+
 ## 측정 결과: 핫 전문가 보호가 모든 예산에서 이겼다
+![nvfp4-moe-selective-quant 슬라이드 3](/assets/images/nvfp4-moe-selective-quant-slide-03.webp)
+
+
+![nvfp4-moe-selective-quant 슬라이드 4](/assets/images/nvfp4-moe-selective-quant-slide-04.webp)
 
 기준점부터 보겠습니다. 전정밀도 baseline_bf16은 perplexity 1.399에 전문가 가중치 저장 13.0GB, 균일 4비트 uniform_4bit은 perplexity 1.568에 3.8GB였습니다. 둘 사이의 손실 격차는 0.168 perplexity입니다. 이 격차 중 각 정책이 얼마를 되찾는지를 회복률로 정리하면 결과가 선명하게 드러납니다.
 
@@ -62,16 +70,5 @@ Kueue 같은 배치 스케줄러 입장에서 이 결과는 유리하지만 경�
 
 논문 상세 페이지: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-12-nvfp4-moe-selective-quant](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-12-nvfp4-moe-selective-quant)
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![nvfp4-moe-selective-quant 슬라이드 1](/assets/images/nvfp4-moe-selective-quant-slide-01.webp)
-
-![nvfp4-moe-selective-quant 슬라이드 2](/assets/images/nvfp4-moe-selective-quant-slide-02.webp)
-
-![nvfp4-moe-selective-quant 슬라이드 3](/assets/images/nvfp4-moe-selective-quant-slide-03.webp)
-
-![nvfp4-moe-selective-quant 슬라이드 4](/assets/images/nvfp4-moe-selective-quant-slide-04.webp)
 
 배분 방향은 핫 전문가를 지키는 쪽이고, 지표는 실제 디코더 MoE의 perplexity입니다. 두 축을 다르게 잡으면 부호가 뒤집힙니다.

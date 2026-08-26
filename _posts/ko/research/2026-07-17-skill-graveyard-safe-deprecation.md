@@ -35,6 +35,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 논문은 저자들이 앞서 낸 두 편의 기술보고서를 정면으로 잇습니다. 첫 번째 보고서는 라우팅 실패를 질의 분해 문제로 뜯어봤고 오라클 수준으로 질의를 완벽히 분해해도 리트리버가 정답 스텝의 63.6%밖에 회수하지 못한다는 걸 확인했습니다. 두 번째 보고서는 리트리버의 동의어 확장과 질의 분해를 함께 개선하는 리페어 루프를 만들었지만, 이 역시 라우팅 정확도를 포화시키지는 못했습니다. 두 논문 모두 "고정된 채 계속 커지는 코퍼스 안에서 리트리버를 더 잘 찾게 만드는" 쪽만 건드렸습니다. 이번 논문은 그 반대편, 코퍼스 자체를 줄이는 레버를 시험합니다.
 
+![skill-graveyard-safe-deprecation 슬라이드 1](/assets/images/skill-graveyard-safe-deprecation-slide-01.webp)
+
 ## 코퍼스가 21.6배 커지자 Top-1 정확도가 반토막 났다
 
 저자들은 ThakiCloud가 실제로 운영 중인 Claude Code 하네스(등록 유닛 2,164개, 그중 순수 스킬 정의만 1,930개)를 대상으로 코퍼스 크기와 검색 정확도의 관계를 실측했습니다. 코퍼스를 100개부터 전체 2,164개까지 여섯 단계로 부분표집해 Recall@5, 게이트를 통과한 Recall@5, Top-1 정확도를 각각 측정했습니다.
@@ -52,6 +54,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 두 신호만으로 저사용·중복 스킬을 후보로 뽑으면 위험한 오탐이 남습니다. 사용량은 낮지만 특정 질의를 유일하게 커버하는 스킬이 섞여 있을 수 있기 때문입니다. 그래서 논문은 여기에 실행 시점 안전장치를 하나 더 얹습니다. 후보를 실제로 지우기 전에 63개짜리 라벨링 스위트(정답 스킬이 있는 긍정 케이스 45개, 스킬 없이 직접 처리해야 하는 네이티브 케이스 10개, 그럴듯해 보이지만 선택되면 안 되는 부정 케이스 8개)를 대상으로, 그 스킬이 빠졌다고 가정하고 검색을 다시 시뮬레이션합니다. 만약 어떤 긍정·네이티브 케이스가 더 이상 검색되지 않는다면 그 스킬은 대체 불가능으로 판정되어 제거 대상에서 빠지고 같은 클러스터 안에서 사용량이 그다음으로 낮은 중복 스킬이 대신 제거 대상이 됩니다. 클러스터 안의 후보가 모두 소진되도록 대체할 스킬이 없으면 목표 축소량을 억지로 채우지 않고 부족분을 그대로 기록합니다.
 
+![skill-graveyard-safe-deprecation 슬라이드 2](/assets/images/skill-graveyard-safe-deprecation-slide-02.webp)
+
 ## 160개를 들어냈는데 측정 가능한 회귀가 없었다
 
 실제 코퍼스에서 의미적 중복 클러스터는 131개 발견됐고 가드가 있든 없든 두 정책 모두 동일하게 160개 스킬을 폐기 후보로 지목했습니다. 가드 없이 그대로 실행했다면 이 중 4개는 저사용이지만 클러스터 안에서 특정 긍정·네이티브 케이스를 유일하게 커버하는 스킬이라 잘못 삭제됐을 겁니다. 안전장치를 켜면 이 잘못된 삭제가 4건에서 0건으로 줄어듭니다. 흥미로운 지점은, 가드가 클러스터 안에서 삭제 대상을 바꿀 뿐 목표 삭제량 자체는 줄이지 않기 때문에 가드 유무와 무관하게 코퍼스 축소율이 정확히 같은 7.39%(160/2,164)로 유지된다는 점입니다.
@@ -61,7 +65,11 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 가드를 적용해 160개 스킬을 제거한 뒤 같은 63개 표준 스위트로 다시 채점하면, Recall@5(0.822), 게이트 Recall@5(0.667), Top-1(0.378), 환각률(0.0), 부정 회피율(0.375) 다섯 지표 모두 제거 전과 완전히 동일하게 나왔습니다. 코퍼스의 7.39%를 들어내면서도 측정 가능한 회귀가 전혀 없었던 셈입니다.
 
+![skill-graveyard-safe-deprecation 슬라이드 3](/assets/images/skill-graveyard-safe-deprecation-slide-03.webp)
+
 ## 회사와 생태계에 주는 의미, 그리고 스스로 그은 한계선
+![skill-graveyard-safe-deprecation 슬라이드 4](/assets/images/skill-graveyard-safe-deprecation-slide-04.webp)
+
 
 회사 차원에서 이 결과는 실용적입니다. 리트리버를 다시 학습시키거나 재구축하지 않고도, 하네스가 라우팅과 회고(retrospection)를 위해 이미 갖고 있던 텔레메트리와 유사도 계산만으로 코퍼스를 안전하게 다이어트할 수 있다는 뜻이기 때문입니다. 코퍼스가 작아지면 턴마다 스킬 목록을 로드하는 온보딩 토큰 비용도 줄어들 개연성이 있지만, 저자들은 이번 실험에서 그 비용 자체를 직접 측정하지는 않았다고 명시합니다.
 
@@ -74,16 +82,3 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 논문 상세 정보는 Hugging Face 데이터셋 페이지에서 확인할 수 있습니다.
 
 [Skill Graveyard: Safe Autonomous Deprecation in Growing Agent Skill Ecosystems](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-17-skill-graveyard-safe-deprecation)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![skill-graveyard-safe-deprecation 슬라이드 1](/assets/images/skill-graveyard-safe-deprecation-slide-01.webp)
-
-![skill-graveyard-safe-deprecation 슬라이드 2](/assets/images/skill-graveyard-safe-deprecation-slide-02.webp)
-
-![skill-graveyard-safe-deprecation 슬라이드 3](/assets/images/skill-graveyard-safe-deprecation-slide-03.webp)
-
-![skill-graveyard-safe-deprecation 슬라이드 4](/assets/images/skill-graveyard-safe-deprecation-slide-04.webp)
-

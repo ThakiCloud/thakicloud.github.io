@@ -35,6 +35,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/deepmind-agi-to-asi
 
 이 태도 전환 자체가 이 문서를 읽을 첫 번째 이유입니다. 보고서는 초지능이 반드시 온다고 단언하지 않습니다. 대신 만약 온다면 어떤 경로를 통해 올 수 있는지, 그리고 각 경로를 무엇이 가로막는지를 냉정하게 분류합니다. 흥분도 공포도 아닌 이 분류 작업이야말로 실무자에게 가장 쓸모 있는 부분입니다. 막연한 전망은 준비를 낳지 못하지만 경로와 병목이 분명하면 우리가 어디를 지켜보고 무엇을 준비할지가 또렷해지기 때문입니다.
 
+![deepmind-agi-to-asi-pathways 슬라이드 1]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-01.webp' | relative_url }})
+
 ## 네 갈래 경로
 
 보고서는 AGI에서 초지능으로 가는 길을 네 갈래로 정리합니다. 각 경로는 서로 배타적이지 않으며 현실에서는 여러 경로가 겹쳐서 작동할 수도 있습니다.
@@ -369,17 +371,23 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/deepmind-agi-to-asi
 
 이 네 번째 경로가 특히 흥미로운데, 초지능을 단일 거대 모델의 문제가 아니라 조율과 오케스트레이션의 문제로 재정의하기 때문입니다. 개별 구성원은 인간 수준을 넘지 않아도, 그들이 이루는 집단의 지적 산출은 개인의 합을 훌쩍 넘어설 수 있습니다. 인간 사회가 개인의 지능만으로는 설명되지 않는 문명을 만들어 온 것과 같은 논리입니다.
 
+![deepmind-agi-to-asi-pathways 슬라이드 2]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-02.webp' | relative_url }})
+
 ## 재귀적 자기개선: 가장 뜨거운 경로
 
 네 경로 중 논쟁이 가장 뜨거운 쪽은 재귀적 자기개선입니다. 핵심 아이디어는 AI가 AI 연구개발 자체를 돕게 되는 순간, 개선된 시스템이 다음 연구를 더 잘 돕고 그렇게 더 나아진 시스템이 그다음 연구를 또 가속하는 순환이 열린다는 것입니다. 이 순환이 충분히 빠르면 AGI에서 초지능으로의 전이가 점진적이지 않고 폭발적으로 일어날 수 있다는 것이 이 경로의 시나리오입니다.
 
 보고서가 이 경로를 다루는 방식이 인상적인 이유는, 그것을 필연으로도 불가능으로도 단정하지 않는다는 점입니다. 자기개선 루프가 실제로 폭발적 전이를 일으키려면 여러 조건이 동시에 맞아야 하고 각 조건마다 그 자체의 병목이 있습니다. 개선이 매 단계 실제로 다음 개선을 쉽게 만드는가, 아니면 수확이 점점 줄어드는가. 개선의 속도가 검증과 안전성 확인의 속도를 앞지르는가. 이런 질문들이 폭발의 실제 기울기를 좌우합니다. 보고서는 이 병목들을 나열함으로써, 재귀적 자기개선을 신화라기보다 검토 가능한 공학 시나리오로 끌어내립니다.
 
+![deepmind-agi-to-asi-pathways 슬라이드 3]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-03.webp' | relative_url }})
+
 ## 초지능도 물리 법칙에 묶인다
 
 이 보고서에서 가장 균형 잡힌 대목은 초지능조차 무한하지 않다는 주장입니다. 어떤 지능도 근본적인 물리적, 계산적 한계를 벗어날 수 없습니다. 신호는 빛의 속도보다 빠르게 전달될 수 없고 계산에는 열역학이 부과하는 최소 에너지 비용이 따릅니다. 어떤 문제는 복잡도 이론상 아무리 똑똑해도 효율적으로 풀 수 없고 괴델의 불완전성이 보여 주듯 어떤 참인 명제는 주어진 형식 체계 안에서 증명 자체가 불가능합니다.
 
 이 한계론은 초지능 논의를 땅으로 끌어내립니다. 초지능은 마법이 아니라 여전히 물리 세계에서 돌아가는 계산 시스템이고 그 시스템은 에너지와 지연시간과 계산 복잡도라는 실제 예산 안에서 작동해야 합니다. 인프라를 만드는 사람에게 이 대목이 특히 반가운 이유는, 능력의 상한이 결국 물리적 자원의 문제로 환원된다는 점을 분명히 하기 때문입니다. 아무리 영리한 알고리즘도 전력과 냉각, 상호연결 대역폭이라는 물리적 현실 위에서 돌아갑니다.
+
+![deepmind-agi-to-asi-pathways 슬라이드 4]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -399,18 +407,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/deepmind-agi-to-asi
 
 마지막으로, 이런 담론이 실무에 주는 진짜 효용은 초지능 예측보다 지금의 설계 원칙을 벼리는 데 있습니다. 폭발적 자기개선의 위험을 미리 상상해 보면, 오늘 우리가 만드는 자가진화 루프에 왜 검증 게이트가 필요한지가 분명해집니다. 다중 에이전트 조율의 힘을 진지하게 받아들이면, 오늘의 오케스트레이션을 더 견고하게 짤 이유가 생깁니다. 먼 미래를 논하는 문서에서 가까운 실천의 근거를 길어 올리는 것, 그것이 이 보고서를 읽는 가장 실용적인 방법입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![deepmind-agi-to-asi-pathways 슬라이드 1]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-01.webp' | relative_url }})
-
-![deepmind-agi-to-asi-pathways 슬라이드 2]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-02.webp' | relative_url }})
-
-![deepmind-agi-to-asi-pathways 슬라이드 3]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-03.webp' | relative_url }})
-
-![deepmind-agi-to-asi-pathways 슬라이드 4]({{ '/assets/images/deepmind-agi-to-asi-pathways-slide-04.webp' | relative_url }})
 
 ## 출처
 

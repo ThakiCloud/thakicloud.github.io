@@ -364,6 +364,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/how-far-we-automate
 </script>
 {% endraw %}
 
+![how-far-we-automated-autonomous-ops 슬라이드 1](/assets/images/how-far-we-automated-autonomous-ops-slide-01.png)
+
 ## 1. 시간축: launchd 스케줄 잡
 
 `scripts/launchd/`의 plist들이 하루를 채웁니다. 평일 아침 6시 SOD ship이 깃 동기화와 정리로 하루를 열고, 7시 hf-trending이 허깅페이스 트렌드를 수집하고, 8시 sales-crm이 영업 브리프를 만들고, 9시부터 21시까지 세 시간 간격으로 트위터 타임라인을 다섯 번 슬랙에 정리합니다. 10시 bespin 뉴스, 12시 daily-pm 오케스트레이터, 17시 EOD ship이 하루의 변경을 리뷰하고 커밋과 PR로 닫습니다.
@@ -402,6 +404,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/how-far-we-automate
 자정과 오후 1시에 selfharness-evolve가 실제 실패를 근거로 스킬 본문을 진화시킵니다. 0시 15분에 skill-evolution이 자율로 스킬을 만들고 개선하되, 한 번에 신규 3개와 개선 2개로 상한을 둡니다. 1시 10분에 blog-evolve가 기술 블로그를 스스로 개선합니다.
 
 여기에 회고 기반 모델 에스컬레이션이 겹쳐 돕니다. 각 LLM 러너는 종료 시 자기 실행 결과를 기록하고, 연속 2회 실패하면 그 스킬만 sonnet에서 opus로 자동 승격합니다. 에스컬레이션 장부 자체는 $0이고, 승격된 실행만 비싸집니다. 콘텐츠 품질을 진화시키는 selfharness와, 실행 비용 티어를 진화시키는 retro 루프는 서로 직교하는 두 개의 독립 루프입니다.
+
+![how-far-we-automated-autonomous-ops 슬라이드 2](/assets/images/how-far-we-automated-autonomous-ops-slide-02.png)
 
 ## 4. 메모리 파이프라인: 결정론과 판단을 분리한다
 
@@ -737,27 +741,18 @@ memkraft dream-cycle은 6단계로 메모리를 정돈합니다. 비용 때문�
 </script>
 {% endraw %}
 
+![how-far-we-automated-autonomous-ops 슬라이드 3](/assets/images/how-far-we-automated-autonomous-ops-slide-03.png)
+
 ## ThakiCloud 관점: 무인 운영은 신뢰의 문제
 
 1인 엔지니어가 이만큼을 돌릴 수 있는 이유는 자동화가 많아서가 아니라, 자동화가 정직하게 배선되어 있기 때문입니다. 결정론으로 충분한 곳은 $0로 돌리고, LLM은 판단이 필요한 곳에만 투입하며, 모든 무인 러너는 실패를 기록하고 회고로 스스로 교정합니다.
 
 이것이 우리가 온프레미스 AI 플랫폼에서 고객에게 보여주려는 운영 모델입니다. 자동화는 화려한 데모가 아니라, 실패해도 안전하게 멈추고 데이터로 스스로 나아지는 시스템이어야 합니다. 시간축과 이벤트축과 자가개선 루프가 맞물려 돌고, 각 톱니가 비용까지 의식하는 이 구조가 무인 운영의 신뢰를 만듭니다.
 
+![how-far-we-automated-autonomous-ops 슬라이드 4](/assets/images/how-far-we-automated-autonomous-ops-slide-04.png)
+
 ## 마무리
 
 자동화의 척도는 개수가 아니라, 사람 없이도 안전하게 도는가입니다. 우리는 시간으로 도는 스케줄, 사건으로 도는 훅, 밤에 스스로를 고치는 루프를 비용까지 구분해 운영합니다. 결정론은 공짜로, 판단은 신중하게, 실패는 회고로 교정합니다.
 
 ThakiCloud는 이 무인 운영의 규율을 제품으로 만듭니다. 더 많은 이야기는 홈페이지에서 확인하실 수 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![how-far-we-automated-autonomous-ops 슬라이드 1](/assets/images/how-far-we-automated-autonomous-ops-slide-01.png)
-
-![how-far-we-automated-autonomous-ops 슬라이드 2](/assets/images/how-far-we-automated-autonomous-ops-slide-02.png)
-
-![how-far-we-automated-autonomous-ops 슬라이드 3](/assets/images/how-far-we-automated-autonomous-ops-slide-03.png)
-
-![how-far-we-automated-autonomous-ops 슬라이드 4](/assets/images/how-far-we-automated-autonomous-ops-slide-04.png)
-

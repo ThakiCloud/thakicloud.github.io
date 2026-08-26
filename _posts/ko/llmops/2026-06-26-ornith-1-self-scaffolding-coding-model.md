@@ -42,6 +42,8 @@ categories:
 
 원 트윗은 이 모델을 "프런티어급으로 코딩하는, 미국 연구소 최초의 오픈소스 모델"로 소개했습니다. 다만 DeepReinforce의 본사 소재지는 공개 자료에서 독립적으로 확인하지 못했으므로, 이 글은 국적 프레이밍보다 검증 가능한 메커니즘과 공개 수치에 무게를 둡니다.
 
+![ornith-1-self-scaffolding-coding-model 슬라이드 1]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-01.webp' | relative_url }})
+
 ## 이 모델은 무엇인가
 
 `Ornith-1.0`은 사전학습된 베이스 모델 위에 후처리 학습(post-training)을 얹어 만들었습니다. DeepReinforce는 베이스로 Gemma 4와 Qwen 3.5 계열을 사용했다고 밝혔습니다. 즉 처음부터 사전학습한 모델이 아니라, 강력한 오픈 베이스에 **자사의 강화학습 후처리**를 적용해 코딩 능력을 끌어올린 구성입니다. 이 점은 NVIDIA가 제3자 모델을 양자화해 재배포하는 흐름과 비슷하게, "베이스는 공유 자산, 차별화는 후처리"라는 최근 오픈 생태계의 분업 구조를 보여줍니다.
@@ -49,6 +51,8 @@ categories:
 모델 자체는 추론(reasoning) 모델입니다. 기본적으로 어시스턴트 응답을 `<think> … </think>` 블록으로 열어 사고 과정을 먼저 전개한 뒤 최종 답을 냅니다. 공개된 서빙 레시피는 이 사고 과정을 별도의 `reasoning_content` 필드로 분리하는 reasoning 파서와, 모델의 도구 호출 블록을 OpenAI 스타일 `tool_calls`로 노출하는 tool-call 파서를 활성화하도록 안내합니다. 에이전트 루프에 그대로 꽂아 쓰라는 설계 의도가 분명합니다. 최대 컨텍스트 길이는 262,144 토큰으로, 대형 리포지토리를 한 번에 밀어 넣는 장기 호라이즌 코딩 작업을 염두에 둔 길이입니다.
 
 DeepReinforce는 이번이 첫 RL 작업이 아닙니다. 2025년 공개한 `CUDA-L1`은 강화학습으로 CUDA 커널을 자동 최적화해 다수 GPU 태스크에서 평균 3.12배, 피크로는 수십 배의 가속을 보고한 바 있습니다. "강화학습으로 코드/커널을 스스로 개선하게 만든다"는 일관된 연구 줄기가 이번 코딩 모델로 이어진 셈입니다.
+
+![ornith-1-self-scaffolding-coding-model 슬라이드 2]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-02.webp' | relative_url }})
 
 ## 핵심: 스스로 스캐폴드를 짜는 강화학습
 
@@ -384,6 +388,8 @@ DeepReinforce의 설명에 따르면, 각 RL 스텝은 두 단계로 진행됩�
 
 이 구조가 중요한 이유는 두 가지입니다. 첫째, 사람이 손으로 스캐폴드를 튜닝하는 병목이 사라집니다. 작업 분포가 바뀌어도 모델이 스스로 발판을 다시 짭니다. 둘째, 스캐폴드가 보상 신호에 직접 노출되므로, "정책은 멀쩡한데 발판이 나빠서 점수가 안 나오는" 흔한 실패 모드를 학습 루프 안에서 교정할 수 있습니다. 이는 [Loop Engineering 패턴](https://thakicloud.com/tech-blog/ko/llmops/)에서 외부 도구(컴파일러·테스트)를 보상 신호로 쓰는 발상과 같은 계열이되, 보상을 받는 대상에 **발판 자체**를 추가했다는 점에서 한 걸음 더 나아간 설계입니다.
 
+![ornith-1-self-scaffolding-coding-model 슬라이드 3]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-03.webp' | relative_url }})
+
 ## 공개 벤치마크
 
 DeepReinforce가 공개한 플래그십 수치는 다음과 같습니다. 모두 자사 발표 기준이며, 본 환경에서 재현한 값이 아닙니다.
@@ -397,6 +403,8 @@ DeepReinforce가 공개한 플래그십 수치는 다음과 같습니다. 모두
 DeepReinforce는 Terminal-Bench 2.1, SWE-Bench, NL2Repo, OpenClaw 등 코딩 벤치마크에서 동급 크기 오픈소스 중 최고 수준을 주장합니다. 특히 35B MoE가 더 큰 일부 모델을 앞선다는 보고가 함께 나왔는데, 이는 MoE 희소성과 자가-스캐폴딩 후처리가 결합해 활성 파라미터 대비 효율을 끌어올린 결과로 읽힙니다. 다만 SWE-Bench 계열은 측정 변형(Verified/Pro/원본)에 따라 점수가 크게 갈리므로, 표의 어떤 변형인지를 확인하지 않은 단순 비교는 위험합니다. 표의 SWE-Bench Pro 값을 `[추정]`으로 둔 이유입니다.
 
 벤치마크 점수보다 운영자 입장에서 더 의미 있는 것은 **점수의 출처가 공개 메커니즘이라는 점**입니다. 폐쇄 모델의 점수는 재현이 불가능하지만, MIT로 풀린 가중치와 공개된 학습 서술은 외부 검증의 길을 열어 둡니다.
+
+![ornith-1-self-scaffolding-coding-model 슬라이드 4]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-04.webp' | relative_url }})
 
 ## 설치 및 서빙
 
@@ -447,18 +455,6 @@ ai-platform 관점에서도 시사점은 분명합니다. self-scaffolding 방�
 
 결론적으로 Ornith-1.0은 "점수"보다 "방법"으로 주목할 모델입니다. MIT 오픈웨이트라는 점에서 자가호스팅 코딩 에이전트의 현실적 후보이고, 자가-스캐폴딩이라는 메커니즘은 모델을 채택하든 안 하든 에이전트 학습 파이프라인 설계에 빌려올 가치가 있습니다. 다만 모든 벤치마크 주장은 자체 평가로 검증하기 전까지 "발표 수치"로만 받아들이는 것이 안전합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![ornith-1-self-scaffolding-coding-model 슬라이드 1]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-01.webp' | relative_url }})
-
-![ornith-1-self-scaffolding-coding-model 슬라이드 2]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-02.webp' | relative_url }})
-
-![ornith-1-self-scaffolding-coding-model 슬라이드 3]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-03.webp' | relative_url }})
-
-![ornith-1-self-scaffolding-coding-model 슬라이드 4]({{ '/assets/images/ornith-1-self-scaffolding-coding-model-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -51,6 +51,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-identity-
 
 이 사실이 왜 중요하냐면, 캐릭터가 흔들릴 때 대부분의 팀이 시도하는 처방이 정확히 그 방향이기 때문입니다. 레퍼런스를 여섯 장으로 늘리고, 프롬프트에 특징을 더 자세히 적고, 시드를 더 뽑아 고릅니다. 회색 막대가 평평하다는 것은 그 방향에 천장이 있다는 이야기입니다.
 
+![character-identity-edit-vs-adapter 슬라이드 1](/assets/images/character-identity-edit-vs-adapter-slide-01.png)
+
 ## 프롬프트를 조이는 것으로는 움직이지 않았습니다
 
 베이스의 한계를 확인하기 전에, 저희도 프롬프트 쪽을 먼저 밀어 봤습니다. 자기일관성, 즉 같은 캐릭터를 여러 번 뽑았을 때 서로 얼마나 닮았는지를 재고 세 가지 개입을 차례로 넣었습니다. 값은 낮을수록 일관됩니다.
@@ -98,6 +100,8 @@ flowchart TB
     E -.정체성 0.42~0.76.-> E
 ```
 
+![character-identity-edit-vs-adapter 슬라이드 2](/assets/images/character-identity-edit-vs-adapter-slide-02.png)
+
 ## 색은 hex로 지시되지 않습니다
 
 정체성이 형태만의 문제는 아닙니다. 색이 새는 현상도 같이 쟀는데, 원인이 예상 밖이었습니다.
@@ -138,6 +142,8 @@ hex를 말로 번역해서 넘기자 같은 캐릭터가 26.5%에서 43.5%로 �
 반대로 배에 구멍을 뚫는 변화는 시트에서는 선명했지만 실루엣에서는 사라졌습니다. 구멍이 안쪽에 있어 외곽선을 바꾸지 않기 때문입니다. 저희가 그 시트를 실루엣 판정이라고 부르며 봤던 것이 착오였습니다.
 
 한 가지 더 있습니다. 표면 질감은 정체성 축이 아닙니다. 손으로 그린 느낌인지 클레이인지 플랫 벡터인지는 색을 지우는 순간 사라집니다. 저희가 캐릭터 여덟 종에 서로 다른 골격을 배정한 이유가 이것입니다. 같은 골격에 다른 질감을 입힌 두 캐릭터는 실루엣만 놓고 보면 같은 캐릭터입니다.
+
+![character-identity-edit-vs-adapter 슬라이드 3](/assets/images/character-identity-edit-vs-adapter-slide-03.png)
 
 ## 임계값은 노이즈 위에서 정해야 합니다
 
@@ -182,6 +188,8 @@ def refs_attached(run: str) -> bool | None:
 
 일반화하면 이렇습니다. **조건부 입력은 안 붙어도 조용합니다.** 레퍼런스 이미지, 마스크, 컨트롤넷 힌트, 시스템 프롬프트 조각 모두 마찬가지입니다. 이런 입력을 쓰는 파이프라인은 산출물이 아니라 로그에서 부착을 확인해야 하고, 그 확인은 자동화된 자리에 있어야 합니다.
 
+![character-identity-edit-vs-adapter 슬라이드 4](/assets/images/character-identity-edit-vs-adapter-slide-04.png)
+
 ## 파이프라인에 가져가실 것
 
 가장 먼저 하실 일은 베이스의 바닥선을 재는 것입니다. 레퍼런스를 주고 캐릭터를 요청했을 때 지금 몇 점이 나오는지 모르면 얼마나 개선해야 하는지도 모릅니다. 저희는 0.35에서 0.43이었고, 이 숫자 하나가 학습에 GPU를 태울 근거가 됐습니다. 반대로 그 숫자가 이미 0.8이었다면 학습할 이유가 없었을 겁니다.
@@ -217,16 +225,3 @@ Metis가 추론과 서빙 계층이고 Maxis가 학습과 평가 계층인데, �
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (어댑터의 원 논문. 사전학습 가중치를 얼려 두고 저랭크 행렬만 학습합니다)
 - [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (CLIP 논문. 이 글의 CLIP-I는 여기의 이미지 임베딩 사이 코사인 유사도입니다)
 - [ArcFace: Additive Angular Margin Loss for Deep Face Recognition](https://arxiv.org/abs/1801.07698) (표준 얼굴 정체성 지표. 얼굴 없는 마스코트에는 쓸 수 없어 CLIP-I로 대신했습니다)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
-
-![character-identity-edit-vs-adapter 슬라이드 1](/assets/images/character-identity-edit-vs-adapter-slide-01.png)
-
-![character-identity-edit-vs-adapter 슬라이드 2](/assets/images/character-identity-edit-vs-adapter-slide-02.png)
-
-![character-identity-edit-vs-adapter 슬라이드 3](/assets/images/character-identity-edit-vs-adapter-slide-03.png)
-
-![character-identity-edit-vs-adapter 슬라이드 4](/assets/images/character-identity-edit-vs-adapter-slide-04.png)
-

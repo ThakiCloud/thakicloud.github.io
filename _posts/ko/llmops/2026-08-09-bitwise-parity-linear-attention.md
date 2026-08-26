@@ -41,6 +41,8 @@ RL 후처리 학습에는 오래된 골칫거리가 있습니다. 샘플러가 �
 
 vLLM과 TorchTitan 팀이 작년 11월에 공개한 [No More Train-Inference Mismatch](https://blog.vllm.ai/2025/11/10/bitwise-consistent-train-inference.html)는 이 문제를 정면으로 없앤 기록입니다. TorchTitan을 훈련 엔진으로, vLLM을 추론 엔진으로 두고 두 프레임워크 사이의 불변성을 확보해, 훈련과 추론의 수치가 비트 단위로 일치하는 오픈소스 온폴리시 RL 실행을 시연했습니다. 그 뒤로 이 작업은 계속 확장되고 있고, 지금 남은 가장 눈에 띄는 빈칸이 선형 어텐션입니다. 이 글은 그 정합이 무엇을 했고, 왜 선형 어텐션에서 유독 어려운지를 공개된 저장소와 이슈를 확인해 정리했습니다.
 
+![bitwise-parity-linear-attention 슬라이드 1](/assets/images/bitwise-parity-linear-attention-slide-01.webp)
+
 ## 비트 단위 정합은 무엇을 한 것인가
 
 접근은 단순하지만 지루합니다. 순전파 중에 일어나는 모든 커널의 모든 호출을 감사해서 두 프레임워크 사이에서 비트 단위로 동등한지 확인했습니다.
@@ -70,6 +72,8 @@ flowchart TB
 
 RL 데모는 GSM8K와 정답 여부 보상으로 구성한 일반적인 스크립트입니다. 트레이너는 TorchTitan의 유틸리티를 쓰고, 생성기는 `VLLMRolloutEngine`이라는 얇은 래퍼를 새로 만들어 생성 호출과 가중치 갱신만 감쌌습니다. 전체를 단일 호스트에서 동기적으로, 트레이너와 생성기를 번갈아 실행합니다. 저자들도 이 구성이 정확히 온폴리시라는 것을 보여주기 위한 것이지 대규모 실행에서 흔한 방식은 아니라고 밝혔습니다.
 
+![bitwise-parity-linear-attention 슬라이드 2](/assets/images/bitwise-parity-linear-attention-slide-02.webp)
+
 ## 숫자가 말한 것
 
 결과는 두 가지로 갈립니다.
@@ -81,6 +85,8 @@ RL 데모는 GSM8K와 정답 여부 보상으로 구성한 일반적인 스크�
 대가도 분명합니다. 현재 비트 단위 RL 실행은 그렇지 않은 경우보다 2.4배 느립니다. 배치 불변 커널은 배치 크기에 따라 전략을 바꾸는 최적화를 포기하기 때문에 처음부터 손해를 안고 갑니다. 그리고 이 구성은 아직 `torch.compile`을 쓰지 않습니다. TorchTitan 쪽 모델에 컴파일을 적용하지 않았기 때문에 vLLM도 이거 모드로 강제됩니다. vLLM 자체는 컴파일을 적극적으로 쓰면서도 배치 불변성을 유지할 수 있지만, 프레임워크를 가로지르는 호환을 유지하려면 훈련 쪽 모델도 함께 바뀌어야 합니다.
 
 남은 구조적 부채도 저자들이 직접 적어뒀습니다. 지금은 모델 코드가 훈련용과 추론용 두 벌로 존재합니다. 첫 통합에는 편하지만 장기 유지에는 취약합니다. 어느 한쪽을 조금만 고쳐도 동등성이 깨집니다. 후속 방향은 두 프레임워크가 모델 정의를 공유하는 것이고, 진행 상황은 RFC [#28326](https://github.com/vllm-project/vllm/issues/28326)과 [#27433](https://github.com/vllm-project/vllm/issues/27433)에서 추적됩니다.
+
+![bitwise-parity-linear-attention 슬라이드 3](/assets/images/bitwise-parity-linear-attention-slide-03.webp)
 
 ## 선형 어텐션이 다음 벽인 이유
 
@@ -101,6 +107,8 @@ RuntimeError: VLLM batch_invariant mode is not supported for GDN_ATTN.
 이 사례가 말해주는 것은 분명합니다. 선형 어텐션의 상태 재귀에서는 병렬화 전략을 바꾸는 순간 결과가 바뀔 수 있습니다. 소프트맥스 어텐션에서 배치 불변성이 누적 순서를 고정하는 문제였다면, 여기서는 **상태 전파 경계를 고정하는 문제**가 하나 더 얹힙니다. 백엔드에 지원 플래그를 켜는 것과 청크 분할이 달라져도 같은 비트가 나온다고 보장하는 것은 다른 작업입니다.
 
 문제를 더 까다롭게 만드는 것은 청크 경계가 고정된 상수가 아니라는 점입니다. 서빙 엔진은 프리필을 나눠 처리하고, 그 분할은 그 순간 함께 스케줄된 다른 요청과 남은 예산에 따라 달라집니다. 완전 어텐션이라면 이 분할이 달라져도 최종 누적을 고정하는 방식으로 대응할 수 있습니다. 재귀 상태는 그렇지 않습니다. 어디서 끊어 어디까지 굴렸는지가 다음 청크의 초기 상태로 그대로 이어지므로, 분할 자체가 계산 그래프의 일부가 됩니다. 혼합 구조에서는 이 성질이 층마다 번갈아 나타나고, 선형 층과 완전 어텐션 층을 함께 관리하는 캐시 관리자가 그 사이에 놓입니다. 정합을 보장하려면 스케줄러가 만든 분할까지 재현 가능해야 한다는 뜻이고, 이건 커널 한 개의 문제가 아니라 실행 경로 전체의 문제입니다.
+
+![bitwise-parity-linear-attention 슬라이드 4](/assets/images/bitwise-parity-linear-attention-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -128,18 +136,6 @@ RuntimeError: VLLM batch_invariant mode is not supported for GDN_ATTN.
 
 지금 RL 후처리 학습을 운영 중이라면 한 가지를 먼저 확인해보시길 권합니다. 트레이너가 계산한 로그 확률과 샘플러가 보고한 로그 확률의 차이를 스텝마다 기록하고 있는지입니다. 그 값이 0이 아니면서 학습이 흔들린다면, 다음에 조정할 것은 학습률이 아니라 커널입니다. 그리고 혼합 선형 어텐션 모델을 후보에 올려두셨다면, 서빙 효율이 좋다는 이유만으로 학습 계획까지 그 아키텍처에 태우기 전에 위 이슈의 현재 상태를 한 번 확인하시는 편이 좋습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![bitwise-parity-linear-attention 슬라이드 1](/assets/images/bitwise-parity-linear-attention-slide-01.webp)
-
-![bitwise-parity-linear-attention 슬라이드 2](/assets/images/bitwise-parity-linear-attention-slide-02.webp)
-
-![bitwise-parity-linear-attention 슬라이드 3](/assets/images/bitwise-parity-linear-attention-slide-03.webp)
-
-![bitwise-parity-linear-attention 슬라이드 4](/assets/images/bitwise-parity-linear-attention-slide-04.webp)
 
 ## 출처
 

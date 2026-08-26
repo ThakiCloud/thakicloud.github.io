@@ -31,6 +31,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/chinese-open-weight-m
 
 먼저 결론을 말씀드리겠습니다. 가중치 파일에 백도어가 심어져 있다는 통념은 기술적으로 근거가 약합니다. 그 점에서 젠슨 황의 말은 대체로 맞습니다. 다만 이것은 위험이 없다는 뜻이 아니라 위험이 다른 곳에 있다는 뜻입니다. 실제 공격면은 가중치 숫자가 아니라 그것을 감싸고 있는 로더 포맷과 저장소에 딸려 오는 파이썬 코드, 그리고 실행 환경의 네트워크 경계에 있습니다. 그래서 도입 여부는 모델의 국적이 아니라 반입 절차로 판단해야 합니다.
 
+![chinese-open-weight-models-onprem-checklist 슬라이드 1](/assets/images/chinese-open-weight-models-onprem-checklist-slide-01.webp)
+
 ## 무슨 일이 있었나
 
 2026년 7월 22일 NVIDIA의 젠슨 황 CEO가 중국산 오픈소스 모델을 두고 이례적으로 직설적인 발언을 내놨습니다. 여러 매체가 전한 발언의 요지는 이렇습니다.
@@ -58,6 +60,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/chinese-open-weight-m
 셋째, 실행 환경입니다. 모델이 통신하지 못하더라도 그 모델을 감싼 컨테이너 이미지와 추론 서버, 그 서버가 열어 둔 아웃바운드 경로는 통신할 수 있습니다. 데이터 유출은 파라미터가 아니라 네트워크 경계에서 일어납니다. 반대로 말하면 아웃바운드가 차단된 격리 환경에서는 이 경로가 구조적으로 닫힙니다.
 
 정리하면 황의 주장은 첫 번째 층위에서 맞고, 두 번째와 세 번째 층위를 다루지 않았습니다. 그리고 실무에서 사고가 나는 곳은 대부분 두 번째와 세 번째입니다.
+
+![chinese-open-weight-models-onprem-checklist 슬라이드 2](/assets/images/chinese-open-weight-models-onprem-checklist-slide-02.webp)
 
 ## 백도어가 아닌, 남아 있는 진짜 리스크
 
@@ -111,6 +115,8 @@ vllm serve /srv/models/<model> \
 
 마지막으로 실행 환경을 격리합니다. 추론 파드에서 외부로 나가는 트래픽을 기본 차단하고 필요한 목적지만 허용하면, 설령 어딘가에 문제가 있어도 데이터가 밖으로 나가지 못합니다. 쿠버네티스에서는 네트워크 정책으로 이 경계를 코드로 고정할 수 있습니다.
 
+![chinese-open-weight-models-onprem-checklist 슬라이드 3](/assets/images/chinese-open-weight-models-onprem-checklist-slide-03.webp)
+
 ## 들여온 다음에 무엇을 재야 하나
 
 반입이 끝났다고 검증이 끝난 것은 아닙니다. 여기서 많은 팀이 표준 벤치마크 점수만 확인하고 넘어가는데, 공개된 리더보드 점수는 도입 판단에 필요한 정보의 절반도 알려주지 않습니다. 오픈웨이트 모델을 실제 서비스에 붙이기 전에 최소한 네 가지는 자체 데이터로 재야 합니다.
@@ -130,6 +136,8 @@ vllm serve /srv/models/<model> \
 ai-platform 층에서는 실행 자체를 통제합니다. 쿠버네티스 위에서 모델 서빙 워크로드를 네임스페이스 단위로 격리하고, 네트워크 정책으로 아웃바운드를 기본 차단하며, vLLM 기반 서빙 구성을 표준화해 각 팀이 임의로 원격 코드 실행 옵션을 켜지 못하게 합니다. 온프레미스와 소버린 환경을 전제로 설계했기 때문에 데이터가 국경을 넘지 않는다는 조건이 배포 형상 자체에 들어 있습니다. 규제 산업 고객에게 중국산이든 미국산이든 특정 모델을 쓸 수 있다고 말하려면 이 조건이 먼저 성립해야 합니다.
 
 Paxis 층에서는 무엇을 들여올지와 무엇을 실행할지를 통제합니다. Paxis는 ThakiCloud의 에이전트 네이티브 클라우드로, 스킬과 도구, 정책, 감사 로그를 일급 리소스로 다룹니다. 모델 카탈로그는 출처와 라이선스, 리비전 해시를 함께 보관해 위 반입 절차의 마지막 두 단계를 시스템으로 강제합니다. 정책 게이트는 검증되지 않은 체크포인트가 에이전트 실행 경로에 끼어드는 것을 막고, 감사 로그는 어떤 모델이 언제 무엇을 했는지 사후에 추적할 수 있게 합니다. 모델을 교체할 수 있는 구조 역시 여기서 나옵니다. 작업마다 적합한 모델을 고르는 선택권이 있으면 정책 환경이 바뀌어도 파이프라인을 통째로 다시 만들 필요가 없습니다.
+
+![chinese-open-weight-models-onprem-checklist 슬라이드 4](/assets/images/chinese-open-weight-models-onprem-checklist-slide-04.webp)
 
 ## 한계 및 반론
 
@@ -155,16 +163,3 @@ Paxis 층에서는 무엇을 들여올지와 무엇을 실행할지를 통제합
 - Quartz, [Jensen Huang says U.S. firms should use Chinese AI models](https://qz.com/jensen-huang-chinese-open-source-ai-models-072226)
 - Moonshot AI, [Kimi K3 Tech Blog: Open Frontier Intelligence](https://www.kimi.com/blog/kimi-k3)
 - Interconnects, [Kimi K3: The open-weights escalation](https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![chinese-open-weight-models-onprem-checklist 슬라이드 1](/assets/images/chinese-open-weight-models-onprem-checklist-slide-01.webp)
-
-![chinese-open-weight-models-onprem-checklist 슬라이드 2](/assets/images/chinese-open-weight-models-onprem-checklist-slide-02.webp)
-
-![chinese-open-weight-models-onprem-checklist 슬라이드 3](/assets/images/chinese-open-weight-models-onprem-checklist-slide-03.webp)
-
-![chinese-open-weight-models-onprem-checklist 슬라이드 4](/assets/images/chinese-open-weight-models-onprem-checklist-slide-04.webp)
-

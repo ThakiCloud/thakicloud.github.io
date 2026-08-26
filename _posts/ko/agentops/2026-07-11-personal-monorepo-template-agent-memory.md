@@ -31,6 +31,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 
 만든 사람의 배경이 이 설계에 무게를 더합니다. jxnl은 구조화 출력(structured output) 라이브러리 `Instructor`의 창시자로, 이 라이브러리는 월 수백만 건 다운로드되며 OpenAI가 자사 structured output 기능의 영감으로 인용했다고 알려져 있습니다. 현재 그는 OpenAI Codex 팀의 개발자 경험(Developer Experience) 엔지니어로, 코딩 에이전트를 매일 실전에서 운용하는 사람이 자기 문제를 풀려고 만든 도구라는 점에서 참고 가치가 큽니다.
 
+![personal-monorepo-template-agent-memory 슬라이드 1]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-01.webp' | relative_url }})
+
 ## 이 기술은 무엇인가
 
 핵심 아이디어는 하나입니다. **에이전트의 기억을 모노레포 안의 평범한 폴더와 마크다운으로 표현하고, 세션마다 자동으로 로드합니다.** 세 가지 축으로 나눠 볼 수 있습니다.
@@ -371,6 +373,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 
 이 설계가 흥미로운 이유는, 정확히 이 저장소의 저자가 별도 글에서 정리한 "Codex-maxxing" 철학과 맞닿아 있기 때문입니다. 에이전트에게 더 좋은 모델을 붙이는 것이 아니라, 에이전트가 매번 백지에서 시작하지 않도록 **주변 구조를 두텁게 쌓는** 방향입니다.
 
+![personal-monorepo-template-agent-memory 슬라이드 2]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-02.webp' | relative_url }})
+
 ## 설치 및 통합
 
 이 저장소는 이름 그대로 템플릿입니다. 자신의 깃허브 계정으로 템플릿을 복제한 뒤, 코딩 에이전트(Codex 또는 유사 CLI)가 저장소 루트를 작업 디렉터리로 삼도록 설정하는 방식으로 통합합니다. 핵심 진입점은 저장소 루트의 `AGENTS.md`로, 에이전트가 세션을 시작할 때 이 파일을 읽어 폴더 구조와 사람·프로젝트 맥락, 그리고 로드해야 할 스킬 목록을 파악합니다.
@@ -378,6 +382,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 여기서 중요한 통합 포인트는 `AGENTS.md`가 **단순 문서가 아니라 상시 로드되는 계약**이라는 점입니다. 세션마다 이 파일이 컨텍스트 앞머리에 들어가므로, 여기에 무엇을 적느냐가 곧 에이전트의 기본 행동을 정의합니다. 폴더 구조가 정해져 있으므로 에이전트는 "동료 A의 컨텍스트가 필요하면 `people/A.md`를 읽는다"처럼 결정론적으로 기억에 접근합니다. 벡터 검색의 확률적 근사와 달리, 파일 경로는 항상 같은 곳을 가리킵니다.
 
 자동 체크인은 스케줄러(cron 계열)에 체크인 스크립트를 걸어 매일 정해진 시각에 실행하는 형태로 통합됩니다. 이 부분은 에이전트를 사람이 매번 호출하지 않아도 기억이 최신 상태로 유지되게 하는 장치이며, 동시에 비용 관점에서도 중요한 설계 결정입니다. 상시 폴링이 아니라 하루 두 번의 유한 실행이므로, 무한 루프로 토큰을 태우지 않습니다.
+
+![personal-monorepo-template-agent-memory 슬라이드 3]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-03.webp' | relative_url }})
 
 ## 이 설계가 실제로 어떻게 동작하는가
 
@@ -388,6 +394,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 두 번째 효과는 **감사 가능성**입니다. 모든 기억이 사람이 읽을 수 있는 마크다운으로 저장되므로, 에이전트가 무엇을 알고 있는지 개발자가 직접 열어 확인하고 수정할 수 있습니다. 벡터 임베딩은 사람이 눈으로 검증하기 어렵지만, `people/A.md`는 그냥 텍스트 파일입니다. 에이전트의 기억이 틀렸을 때 그 자리에서 고칠 수 있다는 것은 실무에서 큰 차이를 만듭니다.
 
 세 번째 효과는 **이식성**입니다. 특정 벡터DB 벤더나 임베딩 모델에 종속되지 않으므로, 저장소 자체가 곧 완결된 기억입니다. 다른 머신, 다른 에이전트로 옮겨도 폴더와 마크다운은 그대로 동작합니다. 인프라 종속이 없다는 점은 뒤에서 다룰 온프렘·소버린 관점과 직접 연결됩니다.
+
+![personal-monorepo-template-agent-memory 슬라이드 4]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -409,18 +417,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/personal-monorepo-t
 
 그럼에도 이 저장소가 던지는 핵심 메시지는 분명합니다. 에이전트의 기억은 반드시 무거운 인프라여야 하는 것이 아니며, 좋은 폴더 구조와 상시 로드되는 계약만으로도 상당한 지속성을 얻을 수 있다는 것입니다. 이는 스킬과 지식을 일급 리소스로 다루는 ThakiCloud의 방향과 정확히 같은 곳을 가리킵니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![personal-monorepo-template-agent-memory 슬라이드 1]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-01.webp' | relative_url }})
-
-![personal-monorepo-template-agent-memory 슬라이드 2]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-02.webp' | relative_url }})
-
-![personal-monorepo-template-agent-memory 슬라이드 3]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-03.webp' | relative_url }})
-
-![personal-monorepo-template-agent-memory 슬라이드 4]({{ '/assets/images/personal-monorepo-template-agent-memory-slide-04.webp' | relative_url }})
 
 ## 출처
 

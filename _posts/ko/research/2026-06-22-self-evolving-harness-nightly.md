@@ -40,6 +40,8 @@ ThakiCloud는 이 비전을 실제 운영 루프로 구현하고 있습니다. �
 
 이 글은 그 야간 루프가 어떤 원리로 작동하는지, 어떤 안전장치가 환각을 차단하는지, 스킬 진화를 구성하는 여러 메커니즘이 어떻게 협력하는지, 그리고 이것이 Paxis 플랫폼의 Curator 데몬으로 제품화되는 미래까지 설명합니다.
 
+![self-evolving-harness-nightly 슬라이드 1]({{ '/assets/images/self-evolving-harness-nightly-slide-01.webp' | relative_url }})
+
 ## 어제의 실패에서 배운다: Weakness Mining
 
 ### Self-Harness 패러다임
@@ -388,6 +390,8 @@ ThakiCloud의 `selfharness-evolve` 작업은 이 논문의 3단계 루프를 실
 
 **3단계 - Proposal Validation**: 생성된 제안들을 홀드아웃 태스크셋에 대해 회귀 테스트합니다. 통과율이 올라가면서 다른 태스크에서 회귀가 없을 때만 해당 제안이 실제 SKILL.md에 적용됩니다. 하나의 실패를 고치다가 다른 것을 망가뜨리는 일은 허용되지 않습니다.
 
+![self-evolving-harness-nightly 슬라이드 2]({{ '/assets/images/self-evolving-harness-nightly-slide-02.webp' | relative_url }})
+
 ## 안전하게 진화하기: 날조 방지와 비회귀 게이트
 
 ### 클라우드 루틴의 실패에서 얻은 교훈
@@ -407,6 +411,8 @@ ThakiCloud의 `selfharness-evolve` 작업은 이 논문의 3단계 루프를 실
 변형이 실제로 적용되기 직전, 시스템은 shadow-git 체크포인트를 생성합니다. 만약 적용 후에 문제가 발견된다면 이 체크포인트로 정확히 되돌아갈 수 있습니다. 진화는 단방향이 아닙니다. 잘못된 방향으로 갔을 때 회수할 수 있어야 합니다.
 
 모든 변형은 skills-guard 보안 게이트도 통과해야 합니다. 스킬이 프롬프트 인젝션 벡터가 되지 않도록, 과도한 권한을 요청하지 않도록, 데이터 유출 경로가 생기지 않도록 검사합니다. 자가진화가 보안 취약점의 통로가 되는 것을 막는 마지막 방어선입니다.
+
+![self-evolving-harness-nightly 슬라이드 3]({{ '/assets/images/self-evolving-harness-nightly-slide-03.webp' | relative_url }})
 
 ## 스킬 진화의 여러 갈래
 
@@ -439,6 +445,8 @@ ThakiCloud의 `selfharness-evolve` 작업은 이 논문의 3단계 루프를 실
 이 세 스킬은 서로 다른 타임스케일에서 작동하면서 상호보완적으로 작동합니다. `auto-distill`이 외부 지식을 스킬의 씨앗으로 만들면, `skill-autoimprove`가 실제 사용을 통해 그 씨앗을 다듬고 `hermes-skill-evolver`가 다양한 변형을 탐색해 최선을 선택합니다. 전체 생태계는 단방향이 아니라 피드백 루프로 연결되어 있습니다.
 
 `selfharness-evolve`는 이 모든 것의 기반인 하네스 자체를 책임집니다. 스킬이 아무리 잘 작성되어 있어도, 스킬을 실행하는 하네스가 실패 패턴을 가지고 있다면 결과는 반복적으로 나빠집니다. 하네스 진화는 스킬 진화의 전제 조건입니다.
+
+![self-evolving-harness-nightly 슬라이드 4]({{ '/assets/images/self-evolving-harness-nightly-slide-04.webp' | relative_url }})
 
 ## Paxis Curator로의 제품화
 
@@ -481,16 +489,3 @@ ThakiCloud는 이러한 한계들을 기술적 과제로 인식하고 지속적�
 매일 밤 시스템은 어제보다 조금 더 나은 내일을 준비합니다. 엔지니어가 없어도, 명시적 지시 없이도, 실패에서 배우고 스스로 개선하는 AI 하네스. 복리처럼 조용히 쌓이는 개선이 시스템의 경쟁력이 됩니다. 이것이 ThakiCloud가 만들고 있는 운영의 미래입니다.
 
 Self-Harness 논문(arXiv:2606.09498)과 Paxis 플랫폼에 관심 있으시다면 [ThakiCloud 공식 사이트](https://thakicloud.co.kr)에서 더 자세한 내용을 확인하실 수 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![self-evolving-harness-nightly 슬라이드 1]({{ '/assets/images/self-evolving-harness-nightly-slide-01.webp' | relative_url }})
-
-![self-evolving-harness-nightly 슬라이드 2]({{ '/assets/images/self-evolving-harness-nightly-slide-02.webp' | relative_url }})
-
-![self-evolving-harness-nightly 슬라이드 3]({{ '/assets/images/self-evolving-harness-nightly-slide-03.webp' | relative_url }})
-
-![self-evolving-harness-nightly 슬라이드 4]({{ '/assets/images/self-evolving-harness-nightly-slide-04.webp' | relative_url }})
-

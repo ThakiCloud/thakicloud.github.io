@@ -29,11 +29,15 @@ categories:
 
 이러한 문제는 개발 팀이 여러 관련 프로젝트를 동시에 작업하는 기업 환경에서 더욱 심각하게 부각됩니다. 개발자가 새로운 프로젝트 작업공간을 초기화하거나 대용량 저장소의 서로 다른 브랜치 간을 전환할 때마다, 전통적인 `repo` 명령어는 원격 서버로부터 새로운 다운로드를 유발하게 됩니다. 이러한 접근 방식은 기능적으로는 작동하지만 불필요한 네트워크 오버헤드를 생성하고, 특히 광범위한 커밋 히스토리와 여러 서브모듈을 포함하는 대규모 프로젝트를 다룰 때 개발자 생산성에 심각한 영향을 미칠 수 있는 지연 시간을 도입하게 됩니다.
 
+![repomirror-git-caching-revolutionary-tool 슬라이드 1]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-01.webp' | relative_url }})
+
 ## RepomMirror: 게임을 바꾸는 혁신적 솔루션의 등장
 
 RepomMirror는 이러한 지속적인 도전과제들에 대한 우아한 해결책으로 등장하였으며, 로컬 Git 저장소 캐싱에 대한 정교하면서도 간단한 접근 방식을 제공합니다. 이 혁신적인 도구는 전통적인 `repo` 명령어의 완벽한 대체재 역할을 수행하면서, 반복적인 원격 저장소 접근의 필요성을 극적으로 줄여주는 로컬 미러를 지능적으로 생성하고 관리합니다. 캐싱 프로세스를 자동화함으로써 RepomMirror는 개발 팀이 버전 제어 시스템과 상호작용하는 방식을 근본적으로 변화시키며, 즉각적인 성능 향상과 장기적인 리소스 최적화를 동시에 제공합니다.
 
 RepomMirror의 핵심 철학은 지능적인 리소스 활용의 원칙에 중심을 두고 있습니다. 각 저장소 작업을 새로운 네트워크 통신이 필요한 독립된 이벤트로 취급하는 대신, RepomMirror는 저장소 사용 패턴을 인식하고 여러 프로젝트와 워크플로우에 서비스할 수 있는 로컬 미러를 능동적으로 생성합니다. 이러한 접근 방식은 반응적 저장소 관리에서 능동적 리소스 최적화로의 근본적인 전환을 나타내며, 개발 팀이 네트워크 트래픽 감소를 통해 환경적 영향을 줄이면서 더욱 효율적으로 작업할 수 있도록 지원합니다.
+
+![repomirror-git-caching-revolutionary-tool 슬라이드 2]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-02.webp' | relative_url }})
 
 ## 기술적 아키텍처의 깊은 이해
 
@@ -41,11 +45,15 @@ RepomMirror의 기술적 구현은 단순함 속에서 놀라운 정교함을 �
 
 미러링 프로세스는 처음에는 중복적으로 보일 수 있지만 중요한 성능 최적화 목적을 제공하는 2단계 초기화를 포함합니다. 첫 번째 단계에서 RepomMirror는 원격 저장소와 로컬 미러를 설정하고 동기화하여 필요한 모든 Git 객체와 메타데이터가 로컬에서 사용 가능하도록 보장합니다. 두 번째 단계에서는 이 로컬 미러를 실제 작업 디렉토리 초기화를 위한 참조 소스로 활용하여 네트워크를 통해 전송해야 하는 데이터량을 극적으로 줄입니다. 이러한 이중 단계 접근 방식은 성능 이점을 최대화하면서 데이터 무결성을 보장합니다.
 
+![repomirror-git-caching-revolutionary-tool 슬라이드 3]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-03.webp' | relative_url }})
+
 ## 실용적 구현과 사용 패턴
 
 RepomMirror의 실제 적용은 기존 개발자 워크플로우에 최소한의 변경만을 요구하면서 상당한 성능 향상을 제공하는 직관적인 설계 철학을 드러냅니다. 개발자들이 이전에 `repo init -u manifest_url.git`에 이어 `repo sync`와 같은 전통적인 명령어를 실행했던 곳에서, RepomMirror는 미러 관리를 통합한 수정된 구문을 도입합니다: `repo-mirror -m $HOME/.repo-mirror -- init -u manifest_url.git`. 친숙한 명령어에 대한 이러한 약간의 수정은 광범위한 재교육이나 워크플로우 중단을 요구하지 않으면서 강력한 캐싱 기능을 가능하게 합니다.
 
 RepomMirror 구현의 아름다움은 복잡한 시나리오를 자동으로 처리하는 능력에 있습니다. 이 도구는 미러 디렉토리 선택을 관리하고, 동시 접근 충돌을 방지하기 위해 필요한 잠금 메커니즘을 구현하며, Git 및 repo 작업에 내재된 다양한 동시성 제한사항을 해결합니다. 이러한 배후에서 이루어지는 최적화는 여러 개발자가 순수한 캐싱 구현에서 발생할 수 있는 경쟁 조건이나 데이터 손상 문제를 겪지 않고 공유 미러 리소스를 안전하게 활용할 수 있도록 보장합니다.
+
+![repomirror-git-caching-revolutionary-tool 슬라이드 4]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-04.webp' | relative_url }})
 
 ## 성능 이점과 리소스 최적화
 
@@ -74,16 +82,3 @@ RepomMirror의 성공은 개발 도구의 다른 영역에서 유사한 혁신�
 ---
 
 RepomMirror는 일반적인 개발 도전과제에 적용된 사려 깊은 엔지니어링의 힘에 대한 증명으로 서 있습니다. 우아한 자동화를 통해 전통적인 저장소 관리의 근본적인 비효율성을 해결함으로써, 이 도구는 정교한 기술적 솔루션이 리소스 활용을 최적화하면서 개발자 경험을 극적으로 향상시킬 수 있는 방법을 보여줍니다. 인프라 비용과 환경적 영향을 줄이면서 생산성을 향상시키고자 하는 개발 팀에게 RepomMirror는 최소한의 구현 복잡성으로 즉각적인 이익을 제공하는 매력적인 솔루션을 제시합니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![repomirror-git-caching-revolutionary-tool 슬라이드 1]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-01.webp' | relative_url }})
-
-![repomirror-git-caching-revolutionary-tool 슬라이드 2]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-02.webp' | relative_url }})
-
-![repomirror-git-caching-revolutionary-tool 슬라이드 3]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-03.webp' | relative_url }})
-
-![repomirror-git-caching-revolutionary-tool 슬라이드 4]({{ '/assets/images/repomirror-git-caching-revolutionary-tool-slide-04.webp' | relative_url }})
-

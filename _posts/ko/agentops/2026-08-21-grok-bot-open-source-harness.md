@@ -30,6 +30,8 @@ categories:
 
 이 글은 에이전트를 도입할 때 "어느 회사의 에이전트 앱을 쓸 것인가"에서 "어느 층을 우리 회사 것으로 가져갈 것인가"로 질문을 옮기는 분을 위해 씁니다. 8월 초 그록 봇 출시, 그 한 주 뒤 터진 "100% 오픈소스 버전" 주장, 이 두 신호가 가리키는 방향을 코드 기준으로 검증해 드리면, 도입 결정에서 모델·하네스·실행 환경 3층 중 통제할 층을 고르는 기준이 세워집니다.
 
+![grok-bot-open-source-harness 슬라이드 1](/assets/images/grok-bot-open-source-harness-slide-01.webp)
+
 ## 개요
 
 지난 8월 11일, SpaceXAI는 그록 봇 베타를 내놓았습니다. 맥과 iOS, 윈도우, 리눅스용 에이전트 앱으로, 사용자가 자율적인 디지털 팀원을 만들고 봇이 직접 로그인해서 작업을 수행합니다. 에이전트에게 전용 클라우드 컴퓨터를 준다는 콘셉트입니다. 저희도 8월 12일 글에서 이 출시를 신원과 감사 로그라는 축으로 읽었습니다.
@@ -37,6 +39,8 @@ categories:
 이 출시가 나온 시점은 시장 전체가 같은 층으로 밀려들고 있던 바로 그 주였습니다. 같은 8월에 그록 4.6이 출시되면서 이용 한도 리셋 소식이 나왔고, 엔비디아는 에이전트 작업용 경량 모델을 내면서 반복 실행 레이어의 단가를 낮추기 시작했습니다. 모델 순위가 분기마다 흔들리는 상황에서, 모델 자체보다 "모델이 일하는 환경"을 누가 갖느냐가 경쟁의 다음 축으로 올라오는 중이었습니다. 그록 봇의 전용 클라우드 컴퓨터가 정확히 그 축을 겨냥한 제품이라는 점에서, 일주일 뒤 터진 오픈소스 반응은 우연이 아닙니다.
 
 그로부터 일주일 뒤, 구글 시니어 AI PM이자 오픈소스 프로젝트 awesome-llm-apps를 운영하는 Shubham Saboo가 트윗을 올렸습니다. "INSANE. This is 100% Open Source version of Grok Bot. Works with any Agent harness. Let that sink in." 12만 뷰를 넘긴 이 트윗이 가리키는 대상을, 저희 파이프라인의 8월 20일 부연은 오픈소스 진영의 Hermes Agent로 식별했습니다. 이 글은 그 식별을 전제로 삼되, 주장 자체를 사실로 전담하지 않습니다. 어디가 맞고 어디가 다른지를, 검증 가능한 코드로 나눠 봅니다.
+
+![grok-bot-open-source-harness 슬라이드 2](/assets/images/grok-bot-open-source-harness-slide-02.webp)
 
 ## 그록 봇과 Hermes Agent: 두 개의 세로축
 
@@ -50,6 +54,8 @@ Hermes Agent는 반대 방향의 구조입니다. Nous Research가 MIT 라이선
 | 실행 환경 | 전용 클라우드 컴퓨터 (관리형) | 7종 백엔드, 셀프호스팅 |
 | 접점 | 네이티브 앱 | 게이트웨이 1개로 22종 챗 플랫폼 |
 | 신성 | 코드 미공개 | MIT, 전체 코드 공개 |
+
+![grok-bot-open-source-harness 슬라이드 3](/assets/images/grok-bot-open-source-harness-slide-03.webp)
 
 ## 코드를 뜯어서 본 검증
 
@@ -94,6 +100,8 @@ flowchart TB
 
 다시 말해, "100% 오픈소스 버전"이라는 주장의 해부도는 이렇습니다. 코드 공개 축에서는 성립합니다. 모델 교체 축에서는 성립합니다. 실행 환경 축에서는 "구성이 공개되어 있다"까지가 맞고, "컴퓨터가 주어진다"는 부분까지 성립하지는 않습니다. 그록 봇의 클라우드 컴퓨터가 관리형 서비스라면, 오픈소스 쪽은 서버리스를 포함한 셀프호스팅 레시피입니다. 같은 문제를 한쪽은 패키지로, 다른 쪽은 부품 목록으로 풀고 있는 것입니다.
 
+![grok-bot-open-source-harness 슬라이드 4](/assets/images/grok-bot-open-source-harness-slide-04.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 구도는 저희가 Paxis를 설계하는 자리에서 매일 부딪히는 질문입니다.
@@ -125,16 +133,3 @@ flowchart TB
 ---
 
 *출처: Shubham Saboo의 원트윗(x.com), HuggingNews의 Grok Bot 베타 출시 보도, Nous Research Hermes Agent 공식 README와 레포지토리(2026-08-21 시점 코드로 검증), 그리고 2026-08-12 자 ThakiCloud 기술 블로그의 Grok Bot 분석. 트윗의 원문 링크 대상이 Hermes Agent라는 식별은 내부 부연의 추론임을 명시합니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![grok-bot-open-source-harness 슬라이드 1](/assets/images/grok-bot-open-source-harness-slide-01.webp)
-
-![grok-bot-open-source-harness 슬라이드 2](/assets/images/grok-bot-open-source-harness-slide-02.webp)
-
-![grok-bot-open-source-harness 슬라이드 3](/assets/images/grok-bot-open-source-harness-slide-03.webp)
-
-![grok-bot-open-source-harness 슬라이드 4](/assets/images/grok-bot-open-source-harness-slide-04.webp)
-

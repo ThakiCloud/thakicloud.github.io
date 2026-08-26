@@ -364,6 +364,9 @@ Claude Fable 5를 다시 열기 전에 봐야 할 문서가 하나 생겼습니�
 </script>
 {% endraw %}
 
+
+![anthropic-fable5-prompting-guide 슬라이드 1]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-01.webp' | relative_url }})
+
 ## 전환 1: 프롬프트를 더하지 말고 지우세요
 
 가장 먼저 나오는 권고는 기존 프롬프트와 스킬을 다시 읽고, 이제는 필요 없어진 지시를 삭제하라는 것입니다. 가이드는 이전 모델을 위해 만든 프롬프트와 스킬이 Fable 5에는 종종 너무 세세해서(too prescriptive) 오히려 출력 품질을 떨어뜨릴 수 있다고 설명합니다. 능력이 크게 오른 순간이야말로 과거의 지시를 정리하기 좋은 시점이라는 것입니다.
@@ -372,11 +375,17 @@ Claude Fable 5를 다시 열기 전에 봐야 할 문서가 하나 생겼습니�
 
 물론 이 권고를 "프롬프트를 다 지워라"로 오독하면 위험합니다. 뒤에서 다룰 검증 지시처럼, 여전히 명시적으로 넣어야 하는 지시도 있습니다. 실무적으로는 지시를 하나씩 떼어 보며 품질이 떨어지지 않는지 확인하고, 특정 모델의 결함을 메우던 조항인지 아니면 작업의 본질적 제약인지를 구분하는 감사 작업에 가깝습니다.
 
+
+![anthropic-fable5-prompting-guide 슬라이드 2]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-02.webp' | relative_url }})
+
 ## 전환 2: effort가 지능·지연·비용의 주 제어판입니다
 
 Fable 5에서 지능과 지연, 비용 사이의 균형을 조절하는 일차적 손잡이는 effort 파라미터입니다. 가이드는 대부분의 작업을 high로 시작하고, 능력이 특히 중요한 워크로드에는 xhigh를, 반복적이고 정형화된 일에는 medium이나 low를 쓰라고 권합니다. 즉 프롬프트를 더 길게 써서 성능을 짜내는 대신, 작업의 성격에 맞춰 effort를 올리고 내리는 것이 기본 조작법이 됩니다.
 
 이 변화는 운용 관점에서 중요합니다. effort를 올리면 모델은 더 많은 추론을 수행하므로 지연과 비용이 함께 올라갑니다. 따라서 effort는 무조건 높이는 값이 아니라, 작업의 난이도에 맞춰 배분하는 예산 개념으로 다뤄야 합니다. 정형 작업까지 xhigh로 돌리면 비용만 새고, 어려운 판단을 low로 처리하면 품질이 무너집니다. 프롬프트 문장의 정교함보다 effort 배분의 정확도가 결과와 청구서를 동시에 좌우하는 구조입니다.
+
+
+![anthropic-fable5-prompting-guide 슬라이드 3]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-03.webp' | relative_url }})
 
 ## 전환 3: 진행 보고를 증거에 감사시키세요
 
@@ -391,6 +400,9 @@ if something is not yet verified, say so.
 ```
 
 Anthropic은 이 지시가 자사 테스트에서, 심지어 환각성 보고를 유도하도록 설계한 과제에서도 조작된 진행 보고를 거의 없앴다고 밝힙니다. 여기서 핵심은 두 가지입니다. 첫째, 이것은 삭제하라던 전환 1과 모순되지 않습니다. 모델의 결함을 메우던 낡은 규칙은 지우되, 자율 실행의 신뢰를 지키는 이런 지시는 명시적으로 넣어야 합니다. 둘째, 검증의 기준을 모델의 자기 확신이 아니라 도구 결과라는 외부 증거에 둔다는 점입니다. 이는 우리가 오래 지켜온 원칙, 즉 모델의 자기 보고를 루프 종료 조건으로 삼지 않는다는 규율과 정확히 맞닿습니다.
+
+
+![anthropic-fable5-prompting-guide 슬라이드 4]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-04.webp' | relative_url }})
 
 ## 전환 4: 서브에이전트를 비동기로 오케스트레이션하세요
 
@@ -416,18 +428,6 @@ Anthropic은 이 지시가 자사 테스트에서, 심지어 환각성 보고를
 
 이 가이드의 값어치는 새로운 마법 문구가 아니라, 강해진 모델을 다루는 태도의 전환에 있습니다. 통제를 더하는 대신 판단의 여지를 주고, 그 판단이 헛돌지 않도록 증거로 검증하고 위임으로 병렬화하라는 것입니다. 장기 자율 에이전트를 실제로 운영하는 입장에서 보면, 이것은 트렌드 문장이 아니라 운용 규칙의 재정렬입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![anthropic-fable5-prompting-guide 슬라이드 1]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-01.webp' | relative_url }})
-
-![anthropic-fable5-prompting-guide 슬라이드 2]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-02.webp' | relative_url }})
-
-![anthropic-fable5-prompting-guide 슬라이드 3]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-03.webp' | relative_url }})
-
-![anthropic-fable5-prompting-guide 슬라이드 4]({{ '/assets/images/anthropic-fable5-prompting-guide-slide-04.webp' | relative_url }})
 
 ## 출처
 

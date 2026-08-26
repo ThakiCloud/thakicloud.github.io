@@ -53,6 +53,8 @@ Paxis 백엔드는 Go로 작성됐고, 아키텍처는 세 계층으로 읽으�
 
 나머지는 샌드박스 실행과 멀티 에이전트 오케스트레이션이 받칩니다. 핵심만 기억한다면 런타임·하니스·지식엔진 셋입니다.
 
+![praxis-agent-native-cloud 슬라이드 1](/assets/images/praxis-agent-native-cloud-slide-01.png)
+
 ## 능력 추가 = 파일 한 장
 
 Paxis에서 새 능력을 더하는 비용은 코드 배포 0입니다. `skills/<도메인>/<이름>/SKILL.md` 파일 하나를 두면, 서버가 디렉터리를 자동 탐색해 즉시 반영합니다.
@@ -82,6 +84,8 @@ curl -X POST http://localhost:8080/api/v1/tasks \
 ```
 
 채팅에서 "매일 아침 9시에 경쟁사 뉴스 10건 요약해줘"라고 말하면, LLM이 이 cron·스킬·파라미터로 변환해 등록합니다. 코드는 0줄입니다.
+
+![praxis-agent-native-cloud 슬라이드 2](/assets/images/praxis-agent-native-cloud-slide-02.png)
 
 ## CostRouter: 작업마다 모델을 코드가 고른다
 
@@ -424,6 +428,8 @@ curl -X POST http://localhost:8080/api/v1/tasks \
 
 핵심은 대부분의 작업이 가장 싼 Haiku로 충분하고, Opus는 정말 중요한 단계에만 쓴다는 것입니다. 거기에 실행당 예산 상한이 걸려, 비용이 예측 가능해지고 Command Center에서 당일·주간으로 보고됩니다. 그리고 쓸수록 어떤 작업에 싼 모델로 충분한지 라우팅이 학습되어, 반복 작업의 실행당 비용은 점점 내려갑니다.
 
+![praxis-agent-native-cloud 슬라이드 3](/assets/images/praxis-agent-native-cloud-slide-03.png)
+
 ## 기존 RAG와 무엇이 다른가: HKE
 
 전통 RAG는 그때그때 검색해 붙이는 일회성에 가깝습니다. Paxis의 하이브리드 지식 엔진(HKE)은 지식이 자산으로 쌓입니다.
@@ -436,6 +442,8 @@ curl -X POST http://localhost:8080/api/v1/tasks \
 | 비용 무제어 | tool-budget로 큰 결과 절단·지연 fetch |
 
 문서나 코드를 올리면 정제를 거쳐 지식 그래프로 자라고, 답변에는 출처가 인용됩니다. 팀 단위로 격리되어 한 팀의 위키가 다른 팀에 노출되지 않습니다. 그 아래에는 세션·pgvector 의미 검색·팀 위키·provenance의 4계층 메모리가 있어, 대화가 반복될수록 맥락이 누적됩니다.
+
+![praxis-agent-native-cloud 슬라이드 4](/assets/images/praxis-agent-native-cloud-slide-04.png)
 
 ## 통제되는 에이전트: 거버넌스가 해자
 
@@ -472,16 +480,3 @@ ThakiCloud의 AI 플랫폼은 Kubernetes 위에서 Kueue로 GPU를 스케줄링�
 - 경영 데모 덱(33장, 발표 노트 포함): [Google Slides](https://docs.google.com/presentation/d/11E5ixfWgV6uY-akebEZ--Kwp1JmRQJG1OpPaChbJLmc/edit)
 
 함께 만들 동료와 파일럿 고객을 찾고 있습니다. Agent-Native Cloud라는 범주를 우리가 먼저 정의하려 합니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![praxis-agent-native-cloud 슬라이드 1](/assets/images/praxis-agent-native-cloud-slide-01.png)
-
-![praxis-agent-native-cloud 슬라이드 2](/assets/images/praxis-agent-native-cloud-slide-02.png)
-
-![praxis-agent-native-cloud 슬라이드 3](/assets/images/praxis-agent-native-cloud-slide-03.png)
-
-![praxis-agent-native-cloud 슬라이드 4](/assets/images/praxis-agent-native-cloud-slide-04.png)
-

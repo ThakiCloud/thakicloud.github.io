@@ -35,6 +35,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 arXiv:2605.18747 "Code as Agent Harness"는 이 패턴들을 하나의 프레임으로 묶습니다. 핵심 주장은 코드가 AI 에이전트 시스템의 기반 인프라로 작동한다는 것입니다. 코드가 에이전트와 추론 엔진을 연결하고 환경과의 인터페이스를 정의하고 멀티에이전트 조율을 가능하게 합니다. 이를 세 계층으로 체계화해서 분석한 서베이입니다.
 
+![code-as-agent-harness-survey 슬라이드 1]({{ '/assets/images/code-as-agent-harness-survey-slide-01.webp' | relative_url }})
+
 ## 3계층 프레임워크
 
 아래 그림은 코드가 추론 엔진과 환경 사이에서 하네스로 작동하며 그 위에 메커니즘과 조율이 쌓이는 세 계층을 요약합니다.
@@ -387,6 +389,8 @@ LLM 방향으로는 모델이 받아야 할 입력 형식, 생성해야 할 출�
 
 코드가 하네스 역할을 할 때 멀티에이전트 조율이 자연스럽게 표현됩니다. 각 에이전트를 함수나 서비스처럼 다루고 조율 로직을 일반 프로그래밍 패턴으로 작성할 수 있습니다.
 
+![code-as-agent-harness-survey 슬라이드 2]({{ '/assets/images/code-as-agent-harness-survey-slide-02.webp' | relative_url }})
+
 ## 응용 영역
 
 서베이는 코딩 어시스턴트, GUI 자동화, 과학적 발견, 기업 워크플로를 주요 응용 영역으로 분석합니다.
@@ -399,6 +403,8 @@ LLM 방향으로는 모델이 받아야 할 입력 형식, 생성해야 할 출�
 
 **기업 워크플로**: 여러 SaaS 서비스와 내부 시스템을 연결하는 자동화입니다. API 통합과 데이터 흐름 관리가 주를 이룹니다.
 
+![code-as-agent-harness-survey 슬라이드 3]({{ '/assets/images/code-as-agent-harness-survey-slide-03.webp' | relative_url }})
+
 ## 미해결 과제들
 
 서베이가 식별한 열린 과제들이 현실적입니다.
@@ -408,6 +414,8 @@ LLM 방향으로는 모델이 받아야 할 입력 형식, 생성해야 할 출�
 **검증 전략**: 에이전트가 생성한 코드와 계획이 의도한 대로 작동하는지 어떻게 보장하는가. 실행 전 정적 분석, 샌드박스 실행, 형식 검증 등의 조합이 논의됩니다.
 
 **안전성**: 에이전트가 의도하지 않은 부작용을 일으키는 것을 어떻게 막는가. 권한 관리, 실행 격리, 취소 메커니즘이 핵심입니다.
+
+![code-as-agent-harness-survey 슬라이드 4]({{ '/assets/images/code-as-agent-harness-survey-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 플랫폼 관점
 
@@ -430,16 +438,3 @@ LLM 방향으로는 모델이 받아야 할 입력 형식, 생성해야 할 출�
 서베이 논문의 한계도 있습니다. 각 영역을 폭넓게 다루다 보니 특정 설계 결정에 대한 깊은 분석은 원저 논문을 따로 찾아야 합니다. 하지만 에이전트 인프라를 체계적으로 이해하는 출발점으로서 가치가 있습니다.
 
 원문: [https://arxiv.org/abs/2605.18747](https://arxiv.org/abs/2605.18747)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![code-as-agent-harness-survey 슬라이드 1]({{ '/assets/images/code-as-agent-harness-survey-slide-01.webp' | relative_url }})
-
-![code-as-agent-harness-survey 슬라이드 2]({{ '/assets/images/code-as-agent-harness-survey-slide-02.webp' | relative_url }})
-
-![code-as-agent-harness-survey 슬라이드 3]({{ '/assets/images/code-as-agent-harness-survey-slide-03.webp' | relative_url }})
-
-![code-as-agent-harness-survey 슬라이드 4]({{ '/assets/images/code-as-agent-harness-survey-slide-04.webp' | relative_url }})
-

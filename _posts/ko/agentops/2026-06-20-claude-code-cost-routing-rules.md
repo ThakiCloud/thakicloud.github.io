@@ -41,6 +41,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 이 글은 그날 이후 우리가 박은 규칙들입니다. AI 플랫폼이나 GPU 이야기는 빼고, 에이전트 운영 자체의 비용을 라우팅과 토큰 위생으로 어떻게 접는지에만 집중합니다.
 
+![claude-code-cost-routing-rules 슬라이드 1](/assets/images/claude-code-cost-routing-rules-slide-01.png)
+
 ## 1. 모델 티어: 같은 일에 19배를 내지 않는다
 
 가장 큰 레버는 모델 선택입니다. 우리 환경의 비용 배수는 명확합니다. haiku는 약 1배, sonnet은 약 4배, opus는 약 19배입니다. 같은 탐색 작업을 opus로 하면 haiku의 19배를 내는 셈입니다.
@@ -68,6 +70,8 @@ Agent(subagent_type="Explore", prompt="...")
 ```
 
 여기에 한 가지 패턴을 더합니다. 세션 메인을 fable로 두고 지휘자 역할만 맡기는 것입니다. 라우팅, 분기, 집약은 fable이 하고, 진짜 무거운 추론이 필요한 단계에서만 `Agent(model="opus")`로 단발 투입합니다. 앞서 적었듯 이 패턴이 아끼는 것은 토큰 단가가 아니라 구독 한도입니다. 탐색은 haiku입니다. 스폰 깊이는 최대 2이고, haiku 서브는 더 이상 서브를 만들지 않습니다.
+
+![claude-code-cost-routing-rules 슬라이드 2](/assets/images/claude-code-cost-routing-rules-slide-02.png)
 
 ## 2. 스킬 라우터: 메인이 코드베이스를 헤매지 않게
 
@@ -404,6 +408,8 @@ Agent(subagent_type="Explore", prompt="...")
 점수는 이름 정확매칭에 가중치를 크게 주고(idf 기반), 설명 토큰에는 작게 줍니다. 인사나 단순 명령은 토큰 0 프리필터로 건너뛰고, 연속 동일 턴은 캐시합니다. 추가 LLM 패스 없이 입력 쪽 힌트만 주는 구조라 비용이 거의 없습니다. 효과는 메인이 탐색에 쓸 opus 토큰을 처음부터 아끼는 것입니다.
 
 정직하게 한계도 밝힙니다. 복합 요청을 분해해 단계별로 검색하는 실험(SAD)에서, 완벽히 분해해도 우리 검색기 천장은 step coverage 42.5%였습니다. 논문이 말하는 "검색은 멀쩡, 분해만 고쳐라"가 우리 환경엔 그대로 적용되지 않았습니다. 그래서 결정론 정규식 분해는 기본 끄고, 분해는 복합 요청에만 opt-in으로 씁니다. 측정하지 않고 고치지 않는다는 원칙입니다.
+
+![claude-code-cost-routing-rules 슬라이드 3](/assets/images/claude-code-cost-routing-rules-slide-03.png)
 
 ## 3. 토큰 위생: 컨텍스트는 새기 쉽다
 
@@ -755,6 +761,8 @@ Agent(subagent_type="Explore", prompt="...")
 
 bad run 판정은 보수적입니다. 종료 코드가 0이 아니거나, 로그에 인증 실패, API 에러, Traceback 같은 마커가 있을 때만입니다. 일시적인 한 번으로는 승격하지 않고, streak가 쌓여야 합니다. 깨끗하게 성공하면 초기화하고, 자동 강등은 없습니다. 비용 통제를 모델 일괄 강등이 아니라 데이터 기반 선별 승격으로 하는 것입니다. 품질이 정말 필요한 스킬만 비싸집니다. 실제로 `twitter-timeline-to-slack`은 sonnet이 enrichment 단계를 건너뛰어 opus로 핀했습니다.
 
+![claude-code-cost-routing-rules 슬라이드 4](/assets/images/claude-code-cost-routing-rules-slide-04.png)
+
 ## 5. 감사: 돈이 어디로 갔는지 본다
 
 마지막은 측정입니다. `scripts/cost_audit.py`가 세션 트랜스크립트를 파싱해 티어별 비용, 캐시 적중률, 비싼 세션과 도구, 다시 읽은 파일을 보고합니다. 6월 1일의 "메인 Opus가 97% 청구" 같은 인사이트가 여기서 나오고, 그 결과가 다시 모델 핀으로 피드백됩니다.
@@ -773,18 +781,6 @@ bad run 판정은 보수적입니다. 종료 코드가 0이 아니거나, 로그
 
 ThakiCloud는 이 비용 규율을 제품의 기본기로 만듭니다. 자세한 이야기는 홈페이지에서 확인하실 수 있습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-code-cost-routing-rules 슬라이드 1](/assets/images/claude-code-cost-routing-rules-slide-01.png)
-
-![claude-code-cost-routing-rules 슬라이드 2](/assets/images/claude-code-cost-routing-rules-slide-02.png)
-
-![claude-code-cost-routing-rules 슬라이드 3](/assets/images/claude-code-cost-routing-rules-slide-03.png)
-
-![claude-code-cost-routing-rules 슬라이드 4](/assets/images/claude-code-cost-routing-rules-slide-04.png)
 
 ## 출처
 

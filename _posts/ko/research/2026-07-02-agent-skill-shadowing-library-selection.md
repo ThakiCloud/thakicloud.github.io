@@ -28,6 +28,8 @@ categories:
 
 이 문제는 학술적 호기심이 아니라 운영 현실입니다. ThakiCloud의 Agent-Native Cloud인 Paxis는 이미 960개가 넘는 스킬을 다루며 매 요청마다 그중 어느 것을 로드할지 결정해야 합니다. 스킬을 늘리는 일은 쉽지만 늘어난 스킬 속에서 맞는 것을 고르는 일은 갈수록 어려워집니다. 이 글은 스킬 섀도잉이라는 렌즈로 그 병목의 정체를 짚고 Paxis 스킬 하니스가 검색과 어보스테인 게이트로 이를 어떻게 실무에서 막는지 실제 측정치와 함께 정리합니다.
 
+![agent-skill-shadowing-library-selection 슬라이드 1]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-01.webp' | relative_url }})
+
 ## 스킬 섀도잉이란 무엇인가
 
 스킬 라이브러리는 LLM 에이전트가 필요할 때 과제별 지침을 온디맨드로 불러오게 해 줍니다. 비전문 사용자가 어떤 스킬이 존재하는지, 내부가 어떻게 동작하는지 몰라도 자연어만으로 도메인 과제를 풀 수 있게 하는 것이 목적입니다. 문제는 라이브러리가 커지면서 시작됩니다.
@@ -364,11 +366,15 @@ arXiv 2605.24050의 핵심 기여는 성능 하락을 두 효과로 분해한 �
 
 이 흐름은 우리가 이미 겪은 문제와 정확히 겹칩니다. 스킬 목록을 통째로 프롬프트에 넣던 방식은 스킬 수가 수백 개를 넘어가는 순간 무너집니다. 라이브러리를 계속 키우는 대신, 요청마다 상위 후보만 검색해 로드하는 구조로 바꿔야 하는 이유가 여기에 있습니다.
 
+![agent-skill-shadowing-library-selection 슬라이드 2]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-02.webp' | relative_url }})
+
 ## 왜 지금 이 문제가 중요한가
 
 스킬 라이브러리의 규모 문제는 한 편의 논문에 국한되지 않습니다. 같은 시기 공개된 SkillRet 벤치마크(arXiv 2605.05726)는 무려 17,810개의 공개 에이전트 스킬을 모아, 6개 대분류와 18개 소분류의 2단계 분류 체계로 정리한 대규모 검색 벤치마크를 제시합니다. 스킬이 수만 개 단위로 쌓이는 현실이 이미 도래했고 그 안에서 맞는 스킬을 골라내는 검색이 별도의 연구 과제로 떠올랐다는 뜻입니다.
 
 정리하면, 커뮤니티가 스킬을 빠르게 늘리는 흐름과 그 스킬을 정확히 선택하는 능력 사이에 격차가 벌어지고 있습니다. 스킬 섀도잉 연구는 그 격차가 실제 성능 하락으로 나타난다는 것을 정량적으로 보였고 SkillRet 같은 벤치마크는 그 격차를 측정할 공통 자를 제공합니다. 두 흐름이 가리키는 실무 처방은 하나입니다. **스킬을 늘리는 것과 별개로, 검색과 선택을 일급 문제로 다뤄라.**
+
+![agent-skill-shadowing-library-selection 슬라이드 3]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-03.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -380,6 +386,8 @@ arXiv 2605.24050의 핵심 기여는 성능 하락을 두 효과로 분해한 �
 
 여기에 Paxis의 격리 샌드박스 실행과 정책 게이트, 감사 로그가 더해집니다. 잘못된 스킬이 어쩌다 선택되더라도 그 실행은 격리된 환경에서 이뤄지고 모든 행동이 감사 로그에 남습니다. 스킬 섀도잉이 완전히 사라지지 않더라도, 그 파급을 실행 경계에서 봉쇄하는 구조입니다. 연구가 진단한 병목(선택 실패)과 그 하류 위험(잘못된 실행)을 검색·게이트·격리라는 세 겹으로 나눠 막는 셈입니다.
 
+![agent-skill-shadowing-library-selection 슬라이드 4]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-04.webp' | relative_url }})
+
 ## 한계 및 반론
 
 이 연구와 우리 설계 모두 한계가 분명합니다. 첫째, arXiv 2605.24050의 21% 하락 수치는 특정 실험 세팅(202개 규모 라이브러리)에서의 값이며 스킬 설명의 품질과 중복도, 과제 도메인에 따라 크게 달라집니다. 스킬을 잘 설명하고 서로 겹치지 않게 유지하면 같은 규모에서도 하락 폭은 줄어듭니다. 즉 "스킬을 늘리지 마라"가 아니라 "설명 품질과 검색을 함께 관리하라"가 정확한 교훈입니다.
@@ -388,18 +396,6 @@ arXiv 2605.24050의 핵심 기여는 성능 하락을 두 효과로 분해한 �
 
 셋째, 어보스테인 게이트는 임계값 설정의 문제로 환원됩니다. 임계가 너무 높으면 유용한 스킬까지 배제해 커버리지가 떨어지고 너무 낮으면 섀도잉을 막지 못합니다. 환각 0%라는 결과는 보수적으로 잡은 임계의 산물이며 그만큼 정당한 매칭도 일부 놓칩니다. 결국 스킬 라이브러리 운영은 "얼마나 늘리느냐"가 아니라 "검색·게이트·설명 품질의 균형을 어떻게 잡느냐"의 문제이고 스킬 섀도잉 연구는 그 균형점이 생각보다 낮은 규모에서부터 흔들린다는 경고를 정량적으로 던진 것입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-skill-shadowing-library-selection 슬라이드 1]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-01.webp' | relative_url }})
-
-![agent-skill-shadowing-library-selection 슬라이드 2]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-02.webp' | relative_url }})
-
-![agent-skill-shadowing-library-selection 슬라이드 3]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-03.webp' | relative_url }})
-
-![agent-skill-shadowing-library-selection 슬라이드 4]({{ '/assets/images/agent-skill-shadowing-library-selection-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -37,6 +37,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 문제는 이 두 갈래 응답이 거의 언제나 단일 머신 위의 오프라인 벤치마크로만 검증된다는 점입니다. 병원, 은행, 정부 연구소처럼 데이터 주권이 중요한 조직이 실제로 맞닥뜨리는 현실은 세 가지 지점에서 다릅니다. 데이터가 시설 밖으로 나갈 수 없으므로 평가는 프론티어 API가 아니라 조직 소유의 공유 GPU 클러스터에서 돌아가야 하고 여러 팀이 같은 가속기를 두고 경쟁하므로 평가 서비스는 테넌트마다 비용과 꼬리 지연 예산을 지켜야 하며 규제 담당자는 "몇 점인가"가 아니라 "왜 그 점수인가"를 묻는데 불투명한 스칼라 하나로는 그 질문에 답할 수 없습니다.
 
+![atomic-binary-judge-eval-service 슬라이드 1]({{ '/assets/images/atomic-binary-judge-eval-service-slide-01.webp' | relative_url }})
+
 ## 핵심 기여: ABJ-Gate가 묶어내는 네 가지 규율
 
 ThakiCloud AI Research는 이 세 가지 현실 조건 위에서 두 연구 흐름을 하나로 묶은 아키텍처 **ABJ-Gate**를 제안합니다. 핵심은 평가 기준마다 원자적인 이진 질문으로 쪼개어 소형 온프렘 워커 모델이 답하게 하고 그 답을 집계하고 형식을 정규화하고 교정하고 감사 기록을 남기는 일은 전부 모델이 아니라 결정론적 코드가 맡는다는 점입니다. 판정이 갈리는 경계 지점에 놓인 항목이나 의심스러운 정황이 감지된 항목은 반드시 홀수 개의 독립된 회의론자 워커가 "반박해 보라"는 지시를 받고 표결에 부쳐지며 다수가 반박에 실패했을 때만 판정이 살아남습니다. 그리고 이 모든 LLM 호출 예산은 Kueue/GPU 기반 스케줄러가 테넌트별 비용과 꼬리 지연 상한 안에서 배분합니다.
@@ -60,21 +62,14 @@ ThakiCloud AI Research는 이 세 가지 현실 조건 위에서 두 연구 흐�
 
 회사 관점에서 이 논문은 사내 GPU 스케줄링 인프라 위에서 돌아가는 이진 분해 심판, 결정론 집계 게이트, 테넌트별 비용과 지연 상한을 만족하는 샘플링 스케줄러를 하나의 완결된 설계로 정리했습니다. 이미 운영 중이던 내부 규율을 여러 테넌트가 함께 쓰는 제품 표면으로 끌어올린 것입니다. 사회적으로는 데이터가 밖으로 나갈 수 없어 프론티어 API 평가 서비스를 쓸 수 없었던 규제 산업 조직들이 배포 전 안전성과 품질 검증을 자기 하드웨어에서 상시로, 재현 가능하고 감사 가능한 방식으로 수행할 수 있는 길을 엽니다. 신뢰할 수 있는 AI 배포의 진입장벽을 낮추는 셈입니다. 과학적으로는 이진 분해라는 아이디어에 교정, 적대적 검증 표결, 결정론적 집계, 비용 유계 샘플링을 결합했을 때 심판의 신뢰도와 비용이 어떤 관계를 이루는지를 정량화하는 틀을 세우고 그 관계를 최근 6개월 문헌 위에서 실증하기 위한 사전등록 프로토콜을 함께 제시합니다.
 
+![atomic-binary-judge-eval-service 슬라이드 2]({{ '/assets/images/atomic-binary-judge-eval-service-slide-02.webp' | relative_url }})
+
 ## 한계
+![atomic-binary-judge-eval-service 슬라이드 3]({{ '/assets/images/atomic-binary-judge-eval-service-slide-03.webp' | relative_url }})
+
+
+![atomic-binary-judge-eval-service 슬라이드 4]({{ '/assets/images/atomic-binary-judge-eval-service-slide-04.webp' | relative_url }})
 
 논문이 스스로 분명히 밝히는 한계가 있습니다. 이 연구는 아키텍처와 세 가지 이론적 증명, 분석적 비용 모델, 그리고 그 프론티어를 사람 라벨 대비 검증하기 위한 사전등록 프로토콜을 제시할 뿐, 실측된 정확도 수치는 담고 있지 않습니다. 저자들은 프로토콜을 돌리지 않고 숫자를 보고하는 것 자체가 조작이라고 못 박고 의도적으로 수치를 비워 두었습니다. 그 밖에도 이진 질문 문구 자체가 눈속임당할 수 있다는 점, 교정 함수가 새로운 모델군이나 적대적 공격의 흐름 아래에서 드리프트할 수 있다는 점, 링크 생존만 확인하는 휴리스틱이 소프트 404 같은 정교한 실패는 놓친다는 점, 기준들이 서로 얽혀 있으면 분산 감소 논증 자체가 깨진다는 점을 한계로 명시하고 있습니다. 그리고 온프렘 소형 워커 모델은 프론티어급 심판보다 원래 성능이 낮아, 해석 가능성과 교정, 재현성, 비용 유계를 얻는 대가로 단일 심판으로서의 정확도를 일부 내준다는 점도 인정합니다.
 
 논문 상세 정보는 Hugging Face에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-07-atomic-binary-judge-eval-service](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-07-atomic-binary-judge-eval-service)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![atomic-binary-judge-eval-service 슬라이드 1]({{ '/assets/images/atomic-binary-judge-eval-service-slide-01.webp' | relative_url }})
-
-![atomic-binary-judge-eval-service 슬라이드 2]({{ '/assets/images/atomic-binary-judge-eval-service-slide-02.webp' | relative_url }})
-
-![atomic-binary-judge-eval-service 슬라이드 3]({{ '/assets/images/atomic-binary-judge-eval-service-slide-03.webp' | relative_url }})
-
-![atomic-binary-judge-eval-service 슬라이드 4]({{ '/assets/images/atomic-binary-judge-eval-service-slide-04.webp' | relative_url }})
-

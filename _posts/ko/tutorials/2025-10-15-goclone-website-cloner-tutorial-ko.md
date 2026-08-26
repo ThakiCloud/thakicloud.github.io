@@ -29,6 +29,8 @@ categories:
 
 오프라인 열람, 아카이브 목적 또는 개발 참고 자료로 전체 웹사이트를 다운로드해야 했던 적이 있나요? **Goclone**은 Go 언어로 작성된 강력한 커맨드라인 도구로, 웹사이트를 몇 초 만에 컴퓨터로 복제할 수 있습니다. 전통적인 웹 스크래퍼와 달리, Goclone은 Go의 강력한 동시성 기능(고루틴)을 활용하여 원본 사이트의 구조와 상대 링크를 유지하면서 놀라울 정도로 빠르게 웹사이트를 다운로드합니다.
 
+![goclone-website-cloner-tutorial-ko 슬라이드 1](/assets/images/goclone-website-cloner-tutorial-ko-slide-01.webp)
+
 ## Goclone이란?
 
 Goclone은 인터넷에서 완전한 웹사이트를 로컬 디렉토리로 다운로드하는 오픈소스 웹사이트 클로닝 유틸리티입니다. 다음과 같은 모든 필수 자산을 캡처합니다:
@@ -122,6 +124,8 @@ sudo mv goclone /usr/local/bin/
 # 설치 확인
 goclone --help
 ```
+
+![goclone-website-cloner-tutorial-ko 슬라이드 2](/assets/images/goclone-website-cloner-tutorial-ko-slide-02.webp)
 
 ## 기본 사용법
 
@@ -251,6 +255,8 @@ goclone https://target-site.com --serve
 # 이제 스크래퍼가 온라인 대신 localhost를 타겟팅할 수 있습니다
 ```
 
+![goclone-website-cloner-tutorial-ko 슬라이드 3](/assets/images/goclone-website-cloner-tutorial-ko-slide-03.webp)
+
 ## 명령어 참조
 
 사용 가능한 모든 플래그의 전체 목록:
@@ -349,6 +355,8 @@ Goclone의 성능은 여러 요인에 따라 달라집니다:
 - 가능한 경우 지리적으로 가까운 서버에서 클론
 - 대상 서버가 IP를 제한하는 경우 프록시 사용
 
+![goclone-website-cloner-tutorial-ko 슬라이드 4](/assets/images/goclone-website-cloner-tutorial-ko-slide-04.webp)
+
 ## 다른 도구와의 비교
 
 | 기능 | Goclone | wget | HTTrack | Scrapy |
@@ -395,16 +403,3 @@ Goclone은 웹사이트를 로컬 머신에 복제하기 위한 강력하고 빠
 ---
 
 **이 튜토리얼이 도움이 되셨나요?** Goclone의 혜택을 받을 수 있는 다른 사람들과 공유해주세요! 질문이나 제안이 있으시면 아래에 댓글을 남기거나 GitHub에서 이슈를 열어주세요.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![goclone-website-cloner-tutorial-ko 슬라이드 1](/assets/images/goclone-website-cloner-tutorial-ko-slide-01.webp)
-
-![goclone-website-cloner-tutorial-ko 슬라이드 2](/assets/images/goclone-website-cloner-tutorial-ko-slide-02.webp)
-
-![goclone-website-cloner-tutorial-ko 슬라이드 3](/assets/images/goclone-website-cloner-tutorial-ko-slide-03.webp)
-
-![goclone-website-cloner-tutorial-ko 슬라이드 4](/assets/images/goclone-website-cloner-tutorial-ko-slide-04.webp)
-

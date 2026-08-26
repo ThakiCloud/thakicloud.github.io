@@ -39,6 +39,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 문제는 이 모든 속도 향상이 하나의 전제 위에 서 있다는 점입니다. 검증을 숨겨 줄 연산 여유가 존재한다는 전제입니다. 그런데 공유 클러스터는 바로 그 여유를 없애 버립니다. ThakiCloud는 규제 산업과 자원 제약이 있는 조직을 위해 데이터 주권형 온프렘 클러스터를 운영합니다. 이 클러스터는 프롬프트를 외부로 내보낼 수 없다는 전제 위에 서 있습니다. 이런 클러스터는 두 가지 특징을 동시에 가집니다. 하나는 여러 모델과 고객을 함께 배치해 값비싼 가속기를 최대한 활용하는 멀티테넌시입니다. 다른 하나는 시기별로 사들인 A100, H100, 소비자급 GPU가 섞여 있는 이기종 구성입니다. GPU가 이미 다른 테넌트의 요청으로 포화 상태라면 연산 유닛은 더 이상 놀지 않습니다. 이 경우 스펙큘레이터가 타깃 모델에 추가로 검증시키는 토큰은 공짜가 아니라 실제 연산량입니다. 같은 배치를 공유하는 모든 요청의 순전파 시간을 늘립니다. 단일 테넌트에서 관찰된 속도 향상이 멀티테넌트에서는 지연으로 뒤집힐 수 있습니다. 더 나쁜 것은 이 지연이 스펙큘레이션을 요청하지도 않은 이웃 테넌트에게 전가되는 외부성이라는 점입니다.
 
+![sovereign-speculative-serving 슬라이드 1](/assets/images/sovereign-speculative-serving-slide-01.webp)
+
 ## 핵심 기여: 속도 향상을 스케줄러가 계산할 수 있는 값으로 바꾸기
 
 이 논문의 첫 번째 기여는 실제로 실현되는 속도 향상 $S_{real}$을 세 가지 변수의 함수로 명시적으로 표현한 것입니다. 이 세 변수는 스케줄러가 직접 관측하고 통제할 수 있습니다. 토큰별 수용률(acceptance rate), 여유 연산력(spare-compute headroom), 배칭 간섭(batching interference)이 그 세 변수입니다. 검증 비용을 이 변수들로 모델링하면, 여유 연산력이 0에 가까워질수록 스펙큘레이션이 이득을 내지 못하는 조건이 자연스럽게 도출됩니다. 채택 토큰 수율은 드래프트 길이를 늘려도 어느 지점에서 포화합니다. 반면 분모에 해당하는 검증 비용은 드래프트 길이에 비례해 계속 늘어나기 때문에, 포화된 GPU에서는 항상 스펙큘레이션이 손해로 전환되는 드래프트 길이가 존재합니다. 여기서 도출되는 최적 드래프트 예산은 여유 연산력이 줄어들수록 함께 줄어드는데, 이는 지금까지의 드래프트 중심 시스템들이 스케줄러에 노출하지 않던 값입니다.
@@ -49,6 +51,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 논문이 제시하는 레짐 분석 결과도 흥미롭습니다. 유휴 상태에서는 익숙한 2배 이상의 속도 향상이 나옵니다. 다만 코배칭이 여유 연산력을 잠식할수록 속도 향상이 단조롭게 줄어듭니다. 포화 상태에서 드래프트가 약하거나 길이가 과도하면 1 미만, 즉 순손실로 전환됩니다. 이때 스펙큘레이션을 무조건 실행하는 기존 방식은 20퍼센트가 넘는 디코드 세금을 내면서도 스스로는 가속한다고 착각합니다. 또한 드래프트 예산을 여유 연산력에 맞춰 조정하는 것만으로도 상당한 이득을 회수할 수 있음을 보였습니다. 더 나은 드래프터 없이 스케줄링 결정만으로 얻은 20퍼센트대의 상대적 이득입니다. 외부성 조건이 없다면 한 요청을 가속하기 위해 여러 이웃의 SLO를 위반하는 상황이 실제로 발생한다는 점도 수치로 드러납니다.
 
+![sovereign-speculative-serving 슬라이드 2](/assets/images/sovereign-speculative-serving-slide-02.webp)
+
 ## 회사, 사회, 과학에 각각 어떤 의미가 있는가
 
 ThakiCloud 입장에서 이 연구는 실용적인 레버입니다. 곧바로 우리가 운영하는 Kueue와 쿠버네티스 기반 서빙 스택에 얹을 수 있습니다. 프롬프트를 외부로 보낼 수 없는 조직이 선택할 수 있는 대안은 가속기를 과도하게 사들이거나, 아니면 데이터 거주 원칙을 깨고 외부 API로 우회하는 것뿐입니다. SovereignSpec처럼 멀티테넌트 부하에서도 스펙큘레이티브 디코딩을 순이득 상태로 유지할 수 있다면, 같은 GPU로 더 많은 테넌트를 서비스하면서 토큰당 에너지 비용을 낮출 수 있습니다. 이는 신뢰 경계를 건드리지 않으면서 온프렘 서빙의 경제성을 개선하는 구체적인 비용 절감 수단이 됩니다.
@@ -57,23 +61,14 @@ ThakiCloud 입장에서 이 연구는 실용적인 레버입니다. 곧바로 �
 
 과학적으로는 접근 지점이 다릅니다. 스펙큘레이티브 디코딩의 이론과 실제 성능 사이에 큰 간극이 있다는 사실은 이미 여러 측정 연구가 보고했습니다. 이 논문은 그 간극을 만드는 핵심 변수를 명시합니다. 그 변수는 스케줄러가 다룰 수 있는 여유 연산력입니다. 스펙큘레이션 여부도 드래프터가 아니라 스케줄러의 결정으로 재정의합니다. 단일 테넌트, 동종 GPU 환경만 전제하던 기존 연구들이 비워 둔 자리를 정확히 채웁니다.
 
+![sovereign-speculative-serving 슬라이드 3](/assets/images/sovereign-speculative-serving-slide-03.webp)
+
 ## 한계와 다음 단계
+![sovereign-speculative-serving 슬라이드 4](/assets/images/sovereign-speculative-serving-slide-04.webp)
+
 
 논문은 스스로의 한계를 숨기지 않습니다. 이 연구는 개념적이고 분석적인 기여이며 아직 물리적인 클러스터에서 측정한 결과는 없습니다. 논문에 제시된 모든 수치는 검증된 수용률과 디스어그리게이션 측정치를 참고해 설정한 파라미터로부터 유도한 모델 예측값이지, 실측값이 아닙니다. 검증 비용의 가중치나 여유 연산력 같은 핵심 파라미터는 모델과 GPU 종류별로 프로파일링해야 합니다. 잘못 추정하면 순손실 스펙큘레이션을 그대로 승인할 위험도 있습니다. 또한 배칭 간섭 공식은 포화 구간을 전제로 한 1차 근사이기 때문에, 여유 연산력이 중간 정도인 전이 구간은 실측 보정이 필요합니다. 연구팀은 이 간극을 메우기 위해 A100, H100, 소비자급 GPU에서 파라미터를 프로파일링하고 Kueue 어드미션 체크 플러그인과 vLLM 또는 SGLang 스케줄러 훅으로 알고리즘을 실제 구현했습니다. 그 뒤 실현된 속도 향상과 P99 지연, 공정성, 토큰당 에너지 소비를 측정하는 구체적인 평가 계획을 제시하고 있습니다.
 
 논문 원문과 데이터는 Hugging Face에서 확인할 수 있습니다. [https://huggingface.co/datasets/thaki-AI/thaki-daily-papers/tree/main/papers/2026-07-05-sovereign-speculative-serving](https://huggingface.co/datasets/thaki-AI/thaki-daily-papers/tree/main/papers/2026-07-05-sovereign-speculative-serving)
 
 arXiv 제출은 자동화 파이프라인이 tar 패키지까지 준비해 두었습니다. 실제 업로드는 사람이 검토한 뒤 진행하는 절차이므로 현재 상태는 제출 준비 완료(승인 대기)입니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
-
-![sovereign-speculative-serving 슬라이드 1](/assets/images/sovereign-speculative-serving-slide-01.webp)
-
-![sovereign-speculative-serving 슬라이드 2](/assets/images/sovereign-speculative-serving-slide-02.webp)
-
-![sovereign-speculative-serving 슬라이드 3](/assets/images/sovereign-speculative-serving-slide-03.webp)
-
-![sovereign-speculative-serving 슬라이드 4](/assets/images/sovereign-speculative-serving-slide-04.webp)
-

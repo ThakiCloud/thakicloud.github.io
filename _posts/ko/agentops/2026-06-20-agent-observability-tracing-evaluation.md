@@ -424,6 +424,9 @@ span.set_attribute("cost.estimated_usd", estimated_cost)
 
 ---
 
+
+![agent-observability-tracing-evaluation 슬라이드 1]({{ '/assets/images/agent-observability-tracing-evaluation-slide-01.webp' | relative_url }})
+
 ## 평가 루프 설계
 
 트레이싱이 "무슨 일이 일어났나"를 답한다면, 평가는 "잘 됐나"를 답합니다. 두 가지는 다른 레이어입니다.
@@ -457,6 +460,9 @@ LLM을 평가자로 쓰는 패턴이 널리 쓰이지만 주의가 필요합니�
 
 ---
 
+
+![agent-observability-tracing-evaluation 슬라이드 2]({{ '/assets/images/agent-observability-tracing-evaluation-slide-02.webp' | relative_url }})
+
 ## 플랫폼 선택: MLflow vs LangSmith vs Arize
 
 세 플랫폼 모두 프로덕션에서 사용 가능한 수준이지만 강점이 다릅니다.
@@ -470,6 +476,9 @@ LLM을 평가자로 쓰는 패턴이 널리 쓰이지만 주의가 필요합니�
 세 플랫폼 모두 LangGraph, OpenAI Agents SDK, CrewAI 등 주요 프레임워크와 통합을 지원합니다.
 
 ---
+
+
+![agent-observability-tracing-evaluation 슬라이드 3]({{ '/assets/images/agent-observability-tracing-evaluation-slide-03.webp' | relative_url }})
 
 ## 프로덕션 디버깅 패턴
 
@@ -496,6 +505,9 @@ MLflow는 이 목적으로 에이전트 리플레이 기능을 제공합니다. 
 각 유형별 빈도와 에이전트 컨텍스트를 함께 보면 시스템적인 원인을 찾을 수 있습니다.
 
 ---
+
+
+![agent-observability-tracing-evaluation 슬라이드 4]({{ '/assets/images/agent-observability-tracing-evaluation-slide-04.webp' | relative_url }})
 
 ## 관찰가능성 구축 순서
 
@@ -530,16 +542,3 @@ MLflow는 이 목적으로 에이전트 리플레이 기능을 제공합니다. 
 - [LangSmith](https://docs.langchain.com/langsmith)
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix)
 - [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions-genai)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-observability-tracing-evaluation 슬라이드 1]({{ '/assets/images/agent-observability-tracing-evaluation-slide-01.webp' | relative_url }})
-
-![agent-observability-tracing-evaluation 슬라이드 2]({{ '/assets/images/agent-observability-tracing-evaluation-slide-02.webp' | relative_url }})
-
-![agent-observability-tracing-evaluation 슬라이드 3]({{ '/assets/images/agent-observability-tracing-evaluation-slide-03.webp' | relative_url }})
-
-![agent-observability-tracing-evaluation 슬라이드 4]({{ '/assets/images/agent-observability-tracing-evaluation-slide-04.webp' | relative_url }})
-

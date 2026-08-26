@@ -50,6 +50,8 @@ outputs/<niche-slug>/
 
 데이터는 전부 JSON으로, 사람이 읽는 산출물은 PDF와 HTML로 갈라 둡니다. 포맷을 코드가 쥐고, 모델은 내용만 채우는 구조입니다.
 
+![ai-ebook-launch-skill-pipeline 슬라이드 1]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-01.webp' | relative_url }})
+
 ## 6단계 파이프라인
 
 **1. 리서치.** 타깃 틈새의 경쟁 분석, 실제 크리에이터 핸들, 콘텐츠 각도, 가격 벤치마크를 웹 검색으로 모읍니다. 결과는 `research.md` 한 장으로 정리됩니다.
@@ -63,6 +65,8 @@ outputs/<niche-slug>/
 **5. 배포.** 자격 증명이 있을 때만 동작하는 경로입니다. 스토어는 Whop을 권장합니다. 제품 생성, 가격 플랜, 결제 웹훅까지 API가 검증돼 있습니다. Gumroad는 파일 업로드가 UI로만 되고 웹훅 API가 2026년 6월 기준 404라 권장하지 않습니다. 소셜은 X의 `POST /2/tweets`로 유기적 포스팅만 합니다.
 
 **6. 품질 게이트.** 구조 자동 검증에 더해, 콘텐츠 깊이와 카피, 비주얼을 0~10으로 채점합니다. 평균 8.0 이상이면서 어느 항목도 6 미만이 아니어야 통과합니다. 미달이면 수정 루프로 되돌아갑니다.
+
+![ai-ebook-launch-skill-pipeline 슬라이드 2]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-02.webp' | relative_url }})
 
 ## 6일, 5권의 실측
 
@@ -80,6 +84,8 @@ outputs/<niche-slug>/
 
 PDF 크기가 216 KB에서 2.9 MB까지 벌어집니다. 챕터 수와 이미지 밀도 차이입니다. 같은 주제를 v1, v2로 두 번 돌린 흔적도 보입니다. 한 번에 완성본이 나온다기보다, 빠르게 뽑고 다시 돌리는 쪽에 가깝습니다.
 
+![ai-ebook-launch-skill-pipeline 슬라이드 3]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-03.webp' | relative_url }})
+
 ## 솔직한 한계
 
 자랑만 하면 글이 거짓말이 됩니다. 지금 스킬의 경계는 분명합니다.
@@ -88,21 +94,10 @@ PDF 크기가 216 KB에서 2.9 MB까지 벌어집니다. 챕터 수와 이미지
 
 규칙도 박혀 있습니다. 콜드 DM 자동 발송은 금지고, 안티봇 벽 뒤 스크래핑도 막혀 있습니다. 인바운드 DM에 대한 반응형 자동 응답만 허용합니다. 금융이나 건강, 법률 틈새는 면책 문구를 강제합니다.
 
+![ai-ebook-launch-skill-pipeline 슬라이드 4]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-04.webp' | relative_url }})
+
 ## ThakiCloud 관점에서
 
 우리가 이 스킬을 흥미롭게 보는 이유는 책 자체가 아니라 파이프라인의 모양입니다. 리서치, 생성, 검증, 배포를 단계로 끊고 각 단계의 포맷을 코드가 쥐는 구조는 우리가 사내 배치 스킬에 적용하는 원칙과 같습니다. 챕터마다 서브에이전트를 띄워 컨텍스트를 갈아 끼우는 방식, 모델에는 본문만 맡기고 표지 글자와 조립은 결정론 스크립트로 빼는 방식, 품질 게이트가 평균과 최저선을 동시에 보는 방식. 콘텐츠 종류는 달라도 이 골격은 그대로 옮겨집니다.
 
 자동화가 사람을 지웠다는 이야기는 아닙니다. 주제를 고르고, 품질 게이트의 기준선을 정하고, 라이선스와 면책을 챙기는 판단은 여전히 사람 몫입니다. 스킬이 한 일은 그 사이의 반복 노동을 6일에 5권 속도로 밀어준 것입니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-ebook-launch-skill-pipeline 슬라이드 1]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-01.webp' | relative_url }})
-
-![ai-ebook-launch-skill-pipeline 슬라이드 2]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-02.webp' | relative_url }})
-
-![ai-ebook-launch-skill-pipeline 슬라이드 3]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-03.webp' | relative_url }})
-
-![ai-ebook-launch-skill-pipeline 슬라이드 4]({{ '/assets/images/ai-ebook-launch-skill-pipeline-slide-04.webp' | relative_url }})
-

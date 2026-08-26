@@ -34,6 +34,8 @@ AI 시장을 이야기할 때 우리는 보통 모델을 줄 세웁니다. 프�
 
 핵심은 이겁니다. Cognition도 JPMorgan도 SoftBank도 실리콘을 고를 때 어떤 모델이 도는지와 무관하게 고릅니다. 싸고 빠른 토큰을 소유한 쪽이 어떤 모델이 돌든 마진을 가져갑니다. 모델 순위표에는 이 층이 아예 안 보입니다.
 
+![stack-layers-model-map-misses 슬라이드 1](/assets/images/stack-layers-model-map-misses-slide-01.webp)
+
 ## 둘째 층: 서빙 경제학, 마진이 실제로 사는 곳
 
 모델을 어떻게 서빙하느냐가 단위 경제를 결정합니다. 2026년 중반 기준 오픈 서빙 스택은 vLLM이 가장 넓은 하드웨어를 지원하는 기본값이고, SGLang은 RadixAttention 접두 캐싱으로 에이전트나 다중 턴, RAG 워크로드에서 vLLM보다 약 29퍼센트 앞선다는 벤치가 있으며, TensorRT-LLM은 컴파일하면 가장 빠르지만 Nvidia 전용에 설정 비용이 큽니다.
@@ -42,11 +44,15 @@ AI 시장을 이야기할 때 우리는 보통 모델을 줄 세웁니다. 프�
 
 이 층은 벤치마크 IQ 순위에는 절대 안 뜹니다. 그러나 AI 제품의 실제 단위 경제는 모델 품질이 아니라 바로 여기서 갈립니다.
 
+![stack-layers-model-map-misses 슬라이드 2](/assets/images/stack-layers-model-map-misses-slide-02.webp)
+
 ## 셋째 층: 평가와 관측, 오케스트레이션을 가능하게 하는 바닥
 
 여러 모델을 태스크별로 라우팅하겠다는 이야기는 자주 나옵니다. 그런데 그걸 실제로 돌리려면 평가와 관측 계층이 있어야 합니다. DeepSeek로 보냈다가 GLM으로 바꾸고 Kimi로 라우팅하는 판단을, 무엇을 근거로 내리고 어떻게 회귀를 감지할지가 이 층의 몫입니다. 이 층 없이는 오케스트레이션이 말로만 존재합니다.
 
 시장은 LangSmith, Arize, 그리고 8억 달러 밸류에이션의 Braintrust로 성숙했고 단일 승자는 없습니다. 표준화 쪽에서는 OpenTelemetry가 5월에 CNCF를 졸업하며 일반 관측의 기본으로 자리 잡았고, GenAI 시맨틱 컨벤션이 에이전트와 도구, 모델 스팬을 정의하고 있습니다. 다만 GenAI 전용 스펙은 아직 개발 단계로 정식 확정 전이니, 표준이 이미 굳었다고 과장하지는 않겠습니다. 방향은 분명하되 아직 진행 중입니다. 요점은 이 평가와 관측 계층이 어떤 모델이 이기느냐와 무관하게 독립된 시장으로 굳어지고 있다는 것입니다.
+
+![stack-layers-model-map-misses 슬라이드 3](/assets/images/stack-layers-model-map-misses-slide-03.webp)
 
 ## 넷째 층: 라이선스가 누가 그 위에 해자를 쌓을지 결정한다
 
@@ -67,6 +73,8 @@ DeepSeek와 GLM처럼 순수 MIT로 풀린 모델은 베이스 계층을 사실�
 프론티어 모델들이 원 성능에서 수렴할수록, 지속 가능한 해자는 모델 가중치가 아니라 그것을 감싼 제품 하니스로 이동합니다. IDE 통합, 도구 오케스트레이션, 작업 루프, 리뷰와 PR 흐름이 에이전트 품질의 가장 큰 단일 변수가 됐다는 서술이 2026년 담론의 공통분모입니다. Cursor의 모델은 실제 코드베이스 위에서 벌어진 수조 토큰 규모의 사용자 상호작용으로 훈련됐고, 이 데이터는 하니스를 소유하지 않은 독립 모델 랩에게는 존재하지 않습니다. Cognition은 Devin의 PR 병합률이 1년 사이 34퍼센트에서 67퍼센트로 올랐다고 밝혔는데, 이 수치는 자체 보고라 독립 검증 전임을 감안해야 합니다.
 
 기전은 이렇습니다. 편집을 수락하고 거부한 기록, 작업 완료 여부, 사람의 교정 같은 독점 상호작용 로그가 지속적인 강화학습의 보상 신호가 됩니다. 하니스 소유자만이 결과 라벨이 붙은 전체 상호작용 궤적을 봅니다. 하니스가 없는 랩은 합성 데이터나 라이선스 데이터에 의존해야 하고, 이는 구조적으로 열등한 신호입니다. 그래서 진짜 경쟁 지도는 이번 분기 벤치 점수가 아니라, 누가 사용자 상호작용 데이터와 하니스를 소유하는지를 중심으로 그려야 합니다. 다만 이 플라이휠이 정확히 어떻게 복리로 쌓이는지는 어느 랩도 방법론을 공개하지 않았으니, 방향은 설득력 있되 세부 기전은 애널리스트의 추론임을 분명히 해 둡니다.
+
+![stack-layers-model-map-misses 슬라이드 4](/assets/images/stack-layers-model-map-misses-slide-04.webp)
 
 ## ThakiCloud의 관점
 
@@ -102,16 +110,3 @@ DeepSeek와 GLM처럼 순수 MIT로 풀린 모델은 베이스 계층을 사실�
 ---
 
 *이 글의 모델명, 가격, 라이선스, 출시 시점은 2026년 7월 14일 기준 공개 자료로 검증했습니다. 벤더 자체 보고 수치(추론 속도, PR 병합률, 화웨이 비용 절감 주장)와 제3자 미검증 항목은 본문에 명시했습니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![stack-layers-model-map-misses 슬라이드 1](/assets/images/stack-layers-model-map-misses-slide-01.webp)
-
-![stack-layers-model-map-misses 슬라이드 2](/assets/images/stack-layers-model-map-misses-slide-02.webp)
-
-![stack-layers-model-map-misses 슬라이드 3](/assets/images/stack-layers-model-map-misses-slide-03.webp)
-
-![stack-layers-model-map-misses 슬라이드 4](/assets/images/stack-layers-model-map-misses-slide-04.webp)
-

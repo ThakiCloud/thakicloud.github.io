@@ -40,6 +40,8 @@ STORM의 파이프라인은 크게 두 단계입니다.
 
 핵심 통찰은 "다관점 질문하기"입니다. 단일 관점에서 질문하면 빠진 각도가 생기지만 여러 페르소나가 각자의 관심사로 질문하면 커버리지가 넓어집니다. 이는 멀티에이전트 시스템에서 서로 다른 렌즈로 동일 문제를 검증하는 패턴과 정확히 같습니다.
 
+![stanford-storm-4-prompt-research-workflow 슬라이드 1]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.webp' | relative_url }})
+
 ## 4프롬프트 워크플로로 옮기기
 
 전체 STORM 코드베이스(stanford-oval/storm)를 돌리지 않더라도, 그 방법론의 골격은 4단계 프롬프트 워크플로로 옮길 수 있습니다. 핵심은 "한 번에 다 시키지 않고, 단계를 분리하는 것"입니다.
@@ -61,7 +63,13 @@ STORM이 단순 프롬프트 팁이 아니라 방법론으로 유용한 이유�
 - **다관점 = 커버리지 엔진**: 검색을 더 많이 돌리는 것보다, 질문하는 관점을 다양화하는 것이 빠진 영역을 메우는 데 효과적입니다. 이는 검색 도구 개수가 아니라 질의 전략의 다양성이 진짜 다양성 엔진이라는 실무 경험과 일치합니다.
 - **인용 강제가 환각을 줄인다**: 모든 주장을 검색된 근거에 묶으면, 모델이 지어내는 여지가 줄어듭니다. 단, 근거 URL이 실제로 도달 가능한지는 코드로 검증해야 합니다. 모델이 인용을 날조하지 않게 하는 가드는 별도로 필요합니다.
 
+![stanford-storm-4-prompt-research-workflow 슬라이드 2]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.webp' | relative_url }})
+
 ## ThakiCloud 관점: 지식 워크플로를 인프라로 다루기
+![stanford-storm-4-prompt-research-workflow 슬라이드 3]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.webp' | relative_url }})
+
+
+![stanford-storm-4-prompt-research-workflow 슬라이드 4]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.webp' | relative_url }})
 
 저희는 이런 다단계 리서치 파이프라인을 K8s 위에서 재현 가능하게 운영하는 일을 다룹니다. 각 단계를 독립 작업으로 분리하면, 검색·합성·작성을 서로 다른 모델 등급에 라우팅할 수 있습니다. 탐색은 싼 모델로, 합성과 판단은 강한 모델로 배분하는 식입니다. 비용과 품질을 분리하는 이 설계가 멀티에이전트 지식노동의 핵심입니다.
 
@@ -70,16 +78,3 @@ STORM의 메시지는 분명합니다. 좋은 리서치 자동화는 "더 똑똑
 ---
 
 출처: STORM(Synthesis of Topic Outlines through Retrieval and Multi-perspective question asking), Stanford OVAL Lab (NAACL 2024). GitHub: https://github.com/stanford-oval/storm
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![stanford-storm-4-prompt-research-workflow 슬라이드 1]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.webp' | relative_url }})
-
-![stanford-storm-4-prompt-research-workflow 슬라이드 2]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.webp' | relative_url }})
-
-![stanford-storm-4-prompt-research-workflow 슬라이드 3]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.webp' | relative_url }})
-
-![stanford-storm-4-prompt-research-workflow 슬라이드 4]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.webp' | relative_url }})
-

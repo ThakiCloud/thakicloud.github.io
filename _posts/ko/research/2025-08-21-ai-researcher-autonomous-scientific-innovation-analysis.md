@@ -35,6 +35,8 @@ categories:
 
 이 분석에서는 AI-Researcher의 기술적 아키텍처, 핵심 혁신 요소, 그리고 한국의 연구 환경에서의 활용 가능성을 종합적으로 살펴보겠습니다.
 
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 1]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-01.webp' | relative_url }})
+
 ## AI-Researcher 프로젝트 개요
 
 ### 📄 논문 및 핵심 가치
@@ -461,6 +463,8 @@ flowchart TD
 - **Level 1**: 기존 연구 아이디어를 바탕으로 한 심화 연구 및 실험
 - **Level 2**: 참고 논문만으로 새로운 연구 아이디어 생성부터 실험까지
 
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 2]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-02.webp' | relative_url }})
+
 ## 기술 스택 및 도구 생태계
 
 ### 🛠️ 통합 기술 아키텍처
@@ -559,6 +563,8 @@ graph LR
 - **전문가 수준 기준**: 인간 전문가가 작성한 논문을 기준으로 한 평가
 - **다차원 메트릭**: 참신성, 실험 설계, 이론적 배경, 결과 분석, 글쓰기 품질
 
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 3]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-03.webp' | relative_url }})
+
 ## 벤치마크 및 평가 체계
 
 ### 📏 종합 평가 프레임워크
@@ -616,6 +622,8 @@ AI-Researcher는 다음과 같은 포괄적인 평가 체계를 구축했습니�
 - **교육 프로그램**: 연구자 대상 AI-Researcher 활용 교육
 - **평가 체계 개편**: AI 보조 연구에 대한 새로운 평가 기준
 
+![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 4]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-04.webp' | relative_url }})
+
 ## 미래 전망 및 발전 방향
 
 ### 🔮 기술적 진화
@@ -670,16 +678,3 @@ AI-Researcher가 제시하는 미래는 인간과 AI가 협력하여 **더 창�
 ---
 
 **💡 이 글이 도움이 되셨나요?** AI-Researcher와 같은 혁신적인 연구 도구에 대한 더 많은 분석과 활용 가이드를 원하신다면, Thaki Cloud 블로그를 구독해주세요!
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 1]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-01.webp' | relative_url }})
-
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 2]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-02.webp' | relative_url }})
-
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 3]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-03.webp' | relative_url }})
-
-![ai-researcher-autonomous-scientific-innovation-analysis 슬라이드 4]({{ '/assets/images/ai-researcher-autonomous-scientific-innovation-analysis-slide-04.webp' | relative_url }})
-

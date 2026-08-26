@@ -44,6 +44,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 구분을 코드 리뷰 봇에 적용해 보면 차이가 뚜렷해집니다. 정해진 린트 규칙에 걸린 줄에 항상 같은 코멘트를 다는 봇은 자율적이지만 행위자적이지는 않습니다. 반면 코멘트를 단 뒤 개발자의 반응(수용, 무시, 반박)을 관찰하고, 같은 유형의 지적이 반복해서 무시되면 그 규칙의 우선순위를 스스로 낮추는 봇은 행위자성을 갖습니다. 두 봇의 코드는 겉보기에 비슷해도 아키텍처는 완전히 다릅니다. 후자에는 관찰 결과를 다음 판단에 반영하는 상태 저장 경로가 반드시 있어야 하기 때문입니다.
 
+![agentic-software-architecture-design 슬라이드 1](/assets/images/agentic-software-architecture-design-slide-01.webp)
+
 ## 툴은 API가 아니라 협업 계약입니다
 
 에이전트가 세상에 개입하는 유일한 통로가 툴입니다. 그런데 툴을 일반적인 함수나 API처럼 설계하면 문제가 생깁니다. 사람이 문서를 읽고 호출하는 API와 달리, 툴은 이름과 설명과 스키마만으로 에이전트에게 스스로를 설명해야 합니다. 사람이 옆에서 보충 설명을 해주지 않습니다.
@@ -56,6 +58,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 실패 처리는 재시도, 대체 툴, 기능 축소라는 세 층위로 나눠 미리 계획해두는 편이 낫습니다. 재시도는 일시적 문제에만 유효하고 상한이 필요합니다. 대체 툴은 같은 목적을 다른 경로로 달성하는 예비 수단입니다. 기능 축소는 전체 기능을 잠시 내리는 대신 좁힌 기능으로라도 계속 동작시키는 전략입니다. 이 세 가지를 런타임에 즉석으로 판단하게 두면 실패마다 결과가 달라지지만, 미리 계획해두면 실패가 나도 시스템의 행동이 일관됩니다.
 
+![agentic-software-architecture-design 슬라이드 2](/assets/images/agentic-software-architecture-design-slide-02.webp)
+
 ## 메모리는 단기와 장기를 나눠야 밀도가 유지됩니다
 
 컨텍스트 윈도우는 유한합니다. 모든 대화를 그대로 다 담아두는 방식은 구현은 쉽지만 금방 포화합니다. 그렇다고 중요도 점수로 무작정 걸러내면, 그 점수 기준이 불명확할 때 에이전트가 엉뚱한 정보를 근거로 판단하게 됩니다.
@@ -67,6 +71,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 검색 증강 생성, 즉 RAG는 에이전트 메모리와 겹쳐 보이지만 실제로는 다른 문제를 풉니다. RAG는 질문이 들어오면 그에 맞는 지식을 찾아오는 pull 방식이고, 에이전트 메모리는 대화가 진행되는 동안 시스템이 알아서 중요한 것을 골라 저장하는 push 방식입니다. 실무에서는 이 둘에 실시간 툴 호출을 더해 세 갈래로 역할을 나누는 편이 깔끔합니다. 에이전트 자신의 동작 범위 안 정보(대화 맥락, 작업 진행)는 에이전트 메모리가, 동작 범위 밖이지만 검색으로 닿는 정보(사내 문서, 카탈로그)는 RAG가, 실시간으로만 얻을 수 있는 정보(현재 시각, 외부 API 상태)는 툴 호출이 담당합니다. RAG가 에이전트 메모리를 대체한다고 생각하면 설계가 꼬입니다. 둘은 서로 보완하는 별개의 층입니다.
 
 메모리 구조화 수준도 초반에 정해야 하는 선택입니다. 대화를 전문 그대로 저장하면 정보 손실은 없지만 검색 효율이 낮습니다. 스키마로 미리 정의해서 구조화하면 검색은 빨라지지만 그 구조에 안 맞는 정보는 버려집니다. 대부분의 프로덕션 시스템은 그 중간을 택합니다. 핵심 메타데이터(작업 종류, 관련 파일, 사용자 의도)는 구조화된 필드로 저장하고, 세부 이력은 전문으로 남기되 인덱싱만 걸어둡니다.
+
+![agentic-software-architecture-design 슬라이드 3](/assets/images/agentic-software-architecture-design-slide-03.webp)
 
 ## 루프 종료 조건은 코드가 판정해야 합니다
 
@@ -140,6 +146,8 @@ class ToolError(Exception):
         super().__init__(f"{reason}: {suggested_action}")
 ```
 
+![agentic-software-architecture-design 슬라이드 4](/assets/images/agentic-software-architecture-design-slide-04.webp)
+
 ## ThakiCloud 관점에서
 
 저희는 고객사 온프렘 환경에 K8s 기반 AI 플랫폼을 직접 서빙합니다. 그 위치에서 보면 이 글에서 다룬 네 가지 결정 중 특히 루프 종료 조건과 메모리 계층이 플랫폼 레이어의 문제로 넘어옵니다. 애플리케이션 개발자가 짠 종료 판정 로직이 각기 다르면, 어떤 에이전트는 자원을 다 쓸 때까지 돌고 어떤 에이전트는 한 번의 실패로 멈춥니다. 클러스터 운영자 입장에서는 그 편차가 곧 예측 불가능한 GPU 점유로 나타납니다. 그래서 반복 횟수 상한과 자원 소진 조건은 애플리케이션 코드가 아니라 플랫폼이 강제하는 기본값으로 두는 편이 안전하다는 결론에 자주 도달합니다.
@@ -156,22 +164,9 @@ class ToolError(Exception):
 ![1장 삽화](/assets/images/books/agentic-software-architecture/ch01.webp)
 
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![agentic-software-architecture-design 슬라이드 1](/assets/images/agentic-software-architecture-design-slide-01.webp)
-
-![agentic-software-architecture-design 슬라이드 2](/assets/images/agentic-software-architecture-design-slide-02.webp)
-
-![agentic-software-architecture-design 슬라이드 3](/assets/images/agentic-software-architecture-design-slide-03.webp)
-
-![agentic-software-architecture-design 슬라이드 4](/assets/images/agentic-software-architecture-design-slide-04.webp)
-
 ## 출처
 
 - Anthropic, [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
 - Anthropic, [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - Yao et al., [ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629)
 - Anthropic, [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
-

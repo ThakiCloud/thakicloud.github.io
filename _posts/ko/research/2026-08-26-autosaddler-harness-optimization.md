@@ -41,6 +41,8 @@ KAIST(Wonjoong Kim, Chanyoung Park)와 POSTECH(Sungho Park, Wook-Shin Han) 그�
 
 > 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1rZ60AlAHZBBNcKjWuIxASN2NMC2d7t6Y/view)할 수 있습니다.
 
+![autosaddler-harness-optimization 슬라이드 1](/assets/images/autosaddler-harness-optimization-slide-01.webp)
+
 ## AutoSaddler가 하는 일
 
 AutoSaddler는 태스크 집합을 학습·개발·테스트셋으로 나눈 뒤, rollout 예산 K 안에서 후보 하네스를 탐색하는 예산 제약 최적화 문제입니다. 반복의 구조는 미니배치 학습과 동일합니다.
@@ -76,6 +78,8 @@ flowchart TB
 
 생성된 패치는 세 단계를 통과해야 유지됩니다. 같은 미니배치에서 성능이 실제로 개선됐는지, dev 셋에서 일반화되는지, 그리고 리플렉션 세션에서 구체적 수정이 일반 원칙으로 추상화되는지입니다. 승인된 하네스 버전은 단순 선형 체인이 아니라 DAG(EvoDAG)로 기록됩니다. 앞선 버전에서 검증된 수정을 cherry-pick하거나, 회귀를 일으킨 패치는 rebase로 되돌리는 식입니다. GAIA2 전체 실행(50회, 2에폭)에서 51개 후보 중 21개만 dev 평가로 승인됐습니다. 일반화 선택을 제거하면 Pass@1이 50.6으로, 모든 아블레이션 중 가장 크게(11.4) 떨어집니다. 특정 트레이스에 맞춘 수리는 다른 태스크에서 회귀를 일으켰고 dev 게이트가 그것 대부분을 막아냈습니다.
 
+![autosaddler-harness-optimization 슬라이드 2](/assets/images/autosaddler-harness-optimization-slide-02.webp)
+
 ## 실험 결과
 
 세 벤치마크는 에이전트 능력의 다른 축을 짚습니다. GAIA2는 시뮬레이션 스마트폰 환경 10개 유니버스에 걸친 일반 어시스턴트 태스크(기본 ReAct 에이전트가 base), SWE-Bench Pro는 엔터프라이즈 규모 소프트웨어 엔지니어링 태스크(SWE-agent가 base), Terminal-Bench 2.0은 시스템 관리·머신러닝·사이버보안 분야 89개 태스크(Terminus 2가 base)입니다. 옵티마이저와 에이전트 백본 모두 Claude Opus 4.6으로 고정했습니다.
@@ -101,6 +105,8 @@ flowchart TB
 
 백본이 다른 모델로 바뀌어도 효과가 유지되는지(강한 모델로 최적화한 하네스를 약한 모델에 적용)도 확인했습니다. Claude Haiku 4.5를 태스크 에이전트로 쓰고 하네스는 Opus 4.6 최적화 결과를 그대로 쓰면, 기본 에이전트 대비 +5.6포인트 개선이 유지됩니다. 하네스 최적화의 효과가 모델에 쫙 달라붙는 것이 아니라, 모델 바깥의 실행 환경에 남아 전이된다는 뜻입니다.
 
+![autosaddler-harness-optimization 슬라이드 3](/assets/images/autosaddler-harness-optimization-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 **Paxis 렌즈.** 이 논문은 Paxis 자가진화 스킬 루프의 설계 참고서와 같습니다. Paxis가 실패 trace에서 스킬 패치를 생성하고 검증 게이트로만 반영하는 방향을 고민해 왔다면, AutoSaddler는 그 설계가 실제로 동작하는지 세 축으로 실증해 줍니다. 첫째, 진단의 깊이가 패치 품질을 결정합니다(4.2포인트). trace를 "한 번 보고 반성"하는 수준에서 그치면 패치는 Steering으로 쏠리고 실패의 원인을 건드리지 못합니다. 둘째, 검증 게이트는 선택이 아니라 생존 조건입니다(11.4포인트). 모든 아블레이션 중 가장 큰 낙폭이 dev 게이트 제거에서 나왔습니다. 특정 실행에 맞춘 수리는 unseen 태스크에서 회귀로 돌아왔고 게이트가 그것을 막았습니다. 셋째, 패치 이력은 선형이 아니라 DAG여야 합니다. rebase와 cherry-pick이 회귀를 국소화하는 방식은, 스킬 패치 원장을 "수정 이력의 그래프"로 설계하라는 제안과 같습니다.
@@ -108,6 +114,8 @@ flowchart TB
 **ai-platform 렌즈.** rollout 효율은 곧 서빙 비용입니다. 에이전트 최적화는 기본적으로 추론 실행을 태우는 작업이고 GAIA2에서 1,000 대 2,800, 활용 기준 147 대 1,400이라는 차이는 같은 최적화 결과에 드는 Metis 추론 비용의 차이입니다. "실패 트레이스만 학습 신호로 쓴다"는 설계는 성공 케이스까지 재실행할 필요가 없다는 뜻이므로, 에이전트 평가 파이프라인의 비용 구조 자체를 바꿉니다.
 
 관련 글로, 같은 "모델은 동결, 하네스가 학습한다" 주제에 [Harness Continual Learning](/tech-blog/ko/research/harness-continual-learning/)을 다뤘습니다. AutoSaddler가 오프라인(배포 전) 최적화라면, 그 글의 대상은 배포 후 지속 적응 문제입니다.
+
+![autosaddler-harness-optimization 슬라이드 4](/assets/images/autosaddler-harness-optimization-slide-04.webp)
 
 ## 한계 및 반론
 
@@ -130,16 +138,3 @@ AutoSaddler는 에이전트 시스템의 향상 대상이 모델 파라미터가
 *출처: [AutoSaddler, arXiv 2608.23041](https://arxiv.org/abs/2608.23041) (Sungho Park 외 13인, 2026-08-24). 프로젝트 사이트 [aka.ms/AutoSaddler-website](https://aka.ms/AutoSaddler-website). 본 글의 수치는 논문 원문(abs + HTML full text)에서 직접 확인한 값입니다.*
 
 > 📄 **심층 리뷰 전문(DOCX)**: 이 논문의 상세 피어리뷰를 [Google Drive에서 다운로드](https://drive.google.com/file/d/1rZ60AlAHZBBNcKjWuIxASN2NMC2d7t6Y/view)할 수 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![autosaddler-harness-optimization 슬라이드 1](/assets/images/autosaddler-harness-optimization-slide-01.webp)
-
-![autosaddler-harness-optimization 슬라이드 2](/assets/images/autosaddler-harness-optimization-slide-02.webp)
-
-![autosaddler-harness-optimization 슬라이드 3](/assets/images/autosaddler-harness-optimization-slide-03.webp)
-
-![autosaddler-harness-optimization 슬라이드 4](/assets/images/autosaddler-harness-optimization-slide-04.webp)
-

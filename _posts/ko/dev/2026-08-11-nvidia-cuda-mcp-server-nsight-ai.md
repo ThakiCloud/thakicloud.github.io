@@ -29,6 +29,8 @@ CUDA 커널을 손보다가 코딩 에이전트에게 물어보신 적이 있을
 
 이 글은 CUDA 코드를 다루면서 코딩 에이전트를 쓰는 엔지니어, 그리고 사내 개발 환경에 어떤 외부 MCP 서버를 허용할지 정해야 하는 플랫폼 담당자를 위해 썼습니다. 결론을 먼저 말씀드리겠습니다. 이 서버는 붙이는 비용이 명령 한 줄로 사실상 없다시피 하므로 개인 개발자라면 지금 붙이는 편이 낫지만, 조직 단위로는 그냥 붙이면 안 됩니다. NVIDIA Developer 계정 인증이 클라이언트마다 필요하고 질의 내용이 외부로 나가기 때문입니다. 그리고 NVIDIA는 그 사실을 숨기지 않고, 민감한 코드를 다루는 조직은 자체 호스팅 경로를 쓰라고 문서에 직접 적어 두었습니다. 그래서 이 글은 연결 방법과 함께 연결하면 안 되는 경우를 같이 다룹니다.
 
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 1](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-01.webp)
+
 ## 개요
 
 CUDA는 이 문제가 유독 아프게 나타나는 영역입니다. 툴킷 릴리스가 자주 나오고, 아키텍처 세대가 바뀔 때마다 권장 패턴이 함께 바뀌며, 같은 코드가 세대에 따라 전혀 다른 성능을 내기 때문입니다. 게다가 잘못된 답이 조용히 통과합니다. 문법이 틀리면 컴파일러가 잡아 주지만, 낡은 권장 패턴을 따라 쓴 커널은 멀쩡히 컴파일되고 멀쩡히 실행되며 그저 느릴 뿐입니다. 프로파일러를 붙여 보기 전까지는 문제가 있다는 사실조차 드러나지 않습니다. 에이전트가 옛 지식으로 답할 때 가장 위험한 분야가 바로 이런 곳입니다.
@@ -71,6 +73,8 @@ flowchart TB
 ```
 
 두 경로의 갈림길은 성능이 아니라 데이터가 어디로 흐르는가입니다. NVIDIA도 FAQ에서 같은 기준을 제시합니다. 호스팅 서버는 NVIDIA가 큐레이션한 문서 접근을 제공하지만, 매우 민감하거나 독점적인 코드를 다루는 사용자는 자체 호스팅 Blueprint를 써서 데이터가 온프레미스에 머물도록 하라고 명시합니다. 벤더가 자기 호스팅 서비스의 적용 범위를 스스로 좁혀 적어 둔 문서는 흔치 않으므로, 이 문장은 그대로 신뢰하고 판단 기준으로 삼을 만합니다.
+
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 2](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-02.webp)
 
 ## 설치 및 통합
 
@@ -139,6 +143,8 @@ GET https://api.copilot.nsight.ngc.nvidia.com/mcp/cuda-docs
 
 직접 평가하실 때 무엇을 재면 좋을지도 적어 두겠습니다. 첫째는 최신성입니다. 최근에 바뀐 API나 새로 나온 권장 패턴을 골라 물어보고, 붙이기 전과 후의 답이 달라지는지 봅니다. 달라지지 않는다면 색인이 여러분이 쓰는 CUDA 버전 대역을 덮지 못하는 것입니다. 둘째는 인용 정확도입니다. 답변이 근거로 든 문서 위치를 실제로 열어 내용이 맞는지 확인합니다. 검색이 붙었다고 해서 인용이 정확해지는 것은 아닙니다. 셋째는 응답 지연입니다. 문서 검색이 매 질문마다 왕복을 하나 추가하므로, 대화가 느려져서 결국 꺼 버리게 되는지를 며칠 써 보고 판단하시면 됩니다. 이 세 가지는 각자의 코드베이스와 CUDA 버전에 따라 결과가 달라지므로 남의 벤치마크로 대신할 수 없습니다.
 
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 3](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 사례에서 ThakiCloud가 눈여겨보는 지점은 CUDA 지식 자체가 아니라 구조입니다.
@@ -159,6 +165,8 @@ GET https://api.copilot.nsight.ngc.nvidia.com/mcp/cuda-docs
 
 마지막으로 검증의 얇음을 지적해 둡니다. 이 글은 공식 제품 페이지와 저장소 메타데이터, 그리고 엔드포인트 응답 코드까지만 직접 확인했습니다. 검색 품질이 실제로 좋은지는 계정 인증을 붙여 CUDA 질문을 여러 개 던져 봐야 알 수 있고, 그 작업은 아직 하지 않았습니다. 도입을 결정하기 전에 각자의 실제 질문으로 확인해 보시길 권합니다.
 
+![nvidia-cuda-mcp-server-nsight-ai 슬라이드 4](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-04.webp)
+
 ## 정리
 
 정리하면 이렇습니다. CUDA MCP Server는 코딩 에이전트의 CUDA 지식 신선도 문제를 문서의 원저작자가 직접 푸는 접근이고, 붙이는 비용이 명령 한 줄이라 개인 개발자에게는 판단이 쉽습니다. 지금 붙이시면 됩니다.
@@ -167,18 +175,6 @@ GET https://api.copilot.nsight.ngc.nvidia.com/mcp/cuda-docs
 
 다음 행동을 한 줄로 제안하면, 개인 노트북에는 오늘 붙여 보시고 사내 배포는 커넥터 허용 정책을 정한 뒤에 하시는 것입니다. 순서를 바꾸면 되돌리는 데 훨씬 큰 비용이 듭니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 1](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-01.webp)
-
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 2](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-02.webp)
-
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 3](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-03.webp)
-
-![nvidia-cuda-mcp-server-nsight-ai 슬라이드 4](/assets/images/nvidia-cuda-mcp-server-nsight-ai-slide-04.webp)
 
 ## 출처
 

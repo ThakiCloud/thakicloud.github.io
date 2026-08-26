@@ -30,6 +30,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 핵심 결론을 먼저 말씀드리겠습니다. 월 2,000 커밋이라는 속도에서도 프로덕션 품질을 지키는 열쇠는 테스트를 무한정 늘리는 것이 아닙니다. **벤치마크 게이트로 성능 회귀를 막고, 릴리스 브랜치를 가장 건강한 커밋에 고정하며, 회귀가 생기면 커밋 단위로 이등분해 원인을 특정하는** 세 가지 결정론적 장치입니다. 이 셋은 다키클라우드가 vLLM을 K8s 위에서 멀티테넌트로 서빙할 때 그대로 차용할 수 있는 운영 패턴이기도 합니다.
 
+![vllm-production-quality-ci-release 슬라이드 1]({{ '/assets/images/vllm-production-quality-ci-release-slide-01.webp' | relative_url }})
+
 ## 개요
 
 2026년 7월 16일, vLLM 유지관리팀은 「Keeping vLLM Production Quality」라는 운영기를 공개했습니다. 숫자부터가 압도적입니다. 2026년 6월 한 달 동안 vLLM은 main 브랜치에 **1,918개의 커밋**을 병합했습니다. 하루 평균 약 64개로, PyTorch나 Kubernetes 같은 대형 오픈소스와 맞먹는 속도입니다. 같은 달 CI는 **1,300만 분(job minutes)**을 소비했고, 피크 시점에는 **1,400개의 러너**가 동시에 돌았습니다.
@@ -376,6 +378,8 @@ vLLM의 품질 유지 체계는 세 개의 층으로 나뉩니다. 각 층이 �
 </script>
 {% endraw %}
 
+![vllm-production-quality-ci-release 슬라이드 2]({{ '/assets/images/vllm-production-quality-ci-release-slide-02.webp' | relative_url }})
+
 ## 무엇이 실패했고, 어떻게 고쳤나
 
 이 체계는 처음부터 완성돼 있던 것이 아닙니다. 2026년 5월, vLLM은 v0.20.0을 릴리스한 뒤 며칠 만에 두 개의 긴급 패치를 잘라내야 했습니다. 두 가지 문제가 CI를 그대로 통과해 사용자에게 도달했기 때문입니다.
@@ -408,6 +412,8 @@ pip install https://wheels.vllm.ai/<commit-hash>/vllm-<version>-cp38-abi3-manyli
 ```
 
 여기서 릴리스 엔지니어링의 진짜 가치가 드러납니다. vLLM은 격주 월요일에 릴리스 주간을 시작합니다. 릴리스 매니저는 그날 main 브랜치의 최근 full-CI 실행들을 검토해 **가장 초록빛(greenest) 커밋**을 고릅니다. 이렇게 하면 릴리스 특화 변경을 더하기 전에 가장 건강한 출발점을 확보하게 됩니다. 그리고 릴리스 브랜치를 자주 자르는 데에는 숨은 이득이 있습니다. **이등분할 커밋이 수천 개가 아니라 500개 정도일 때 회귀 추적이 훨씬 쉬워진다**는 점입니다. 릴리스 케이던스 자체가 디버깅 비용을 낮추는 장치인 셈입니다.
+
+![vllm-production-quality-ci-release 슬라이드 3]({{ '/assets/images/vllm-production-quality-ci-release-slide-03.webp' | relative_url }})
 
 ## vLLM이 공개한 규모 지표
 
@@ -446,24 +452,14 @@ vLLM의 접근이 모든 조직에 그대로 이식되지는 않습니다. 몇 �
 
 마지막 한계는 격주 릴리스 케이던스가 낳는 **안정성과 최신성의 트레이드오프**입니다. 릴리스를 자주 자르면 이등분은 쉬워지지만 최신 기능을 프로덕션에 반영하는 속도는 느려지고, 최신 커널 최적화가 급히 필요한 고객이 있다면 안정 릴리스만 고집하는 정책이 오히려 병목이 될 수 있습니다. 이 균형점은 조직마다 다릅니다.
 
+![vllm-production-quality-ci-release 슬라이드 4]({{ '/assets/images/vllm-production-quality-ci-release-slide-04.webp' | relative_url }})
+
 ## 정리
 
 빠르게 움직이는 오픈소스 위에서 프로덕션을 지키는 문제는 결국 여기로 귀결됩니다. vLLM이 월 2,000 커밋 속도에서도 무너지지 않는 이유는 테스트를 무한정 늘려서가 아니라, **성능 회귀를 막는 벤치마크 게이트, 가장 건강한 커밋을 고르는 릴리스 브랜치 고정, 원인을 좁히는 커밋 단위 이등분**이라는 세 가지 결정론적 장치를 갖췄기 때문입니다.
 
 다키클라우드처럼 vLLM을 서빙 핵심으로 쓰는 조직이 오늘 당장 할 수 있는 행동은 분명합니다. 새 vLLM 버전을 올릴 때 기능 테스트 통과에만 의존하지 말고, 대표 고객 워크로드에 대한 벤치마크를 롤아웃 게이트로 세우십시오. 그리고 main을 따라가는 대신 vLLM이 검증한 릴리스 태그를 GitOps values에 고정하십시오. 이 두 가지만 배포 파이프라인에 넣어도 상류의 속도를 그대로 흡수하면서 하류의 안정성을 지킬 수 있습니다. 품질은 더 많은 테스트가 아니라 옳은 곳에 놓인 게이트에서 나옵니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![vllm-production-quality-ci-release 슬라이드 1]({{ '/assets/images/vllm-production-quality-ci-release-slide-01.webp' | relative_url }})
-
-![vllm-production-quality-ci-release 슬라이드 2]({{ '/assets/images/vllm-production-quality-ci-release-slide-02.webp' | relative_url }})
-
-![vllm-production-quality-ci-release 슬라이드 3]({{ '/assets/images/vllm-production-quality-ci-release-slide-03.webp' | relative_url }})
-
-![vllm-production-quality-ci-release 슬라이드 4]({{ '/assets/images/vllm-production-quality-ci-release-slide-04.webp' | relative_url }})
 
 ## 출처
 

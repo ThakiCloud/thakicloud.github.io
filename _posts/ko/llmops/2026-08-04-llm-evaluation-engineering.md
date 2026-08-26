@@ -64,6 +64,8 @@ flowchart TB
 
 여기서 짚을 함정이 하나 더 있습니다. 평가자가 "이 답변 좋다"고 느끼는 인상 자체가 편향되어 있다는 점입니다. 사람은 자신이 직접 테스트한 몇 개의 입력에 대해서만 판단을 내리는데, 그 입력은 애초에 전체 분포를 대표하지 못합니다. 게다가 같은 텍스트를 두 번 평가해도 같은 점수가 나오지 않는 경우가 흔합니다. 그래서 평가는 사람의 개별 판단이 아니라, 그 판단을 구조화한 절차 위에 세워야 합니다.
 
+![llm-evaluation-engineering 슬라이드 1](/assets/images/llm-evaluation-engineering-slide-01.webp)
+
 ## 골든셋을 편향 없이 만드는 법
 
 세 가지 질문에 답하려면 무엇을 테스트할지부터 정해야 합니다. 이 고정된 테스트 케이스 집합을 골든셋이라 부릅니다. 문제는 골든셋을 아무렇게나 만들면 그 자체가 편향의 근원이 된다는 점입니다.
@@ -94,6 +96,8 @@ def golden_set_priority(frequency, impact_score, is_recent_failure):
 
 점수가 높은 순으로 골든셋을 채우면 예산이 한정된 상황에서도 가장 중요한 케이스부터 커버리지를 확보할 수 있습니다.
 
+![llm-evaluation-engineering 슬라이드 2](/assets/images/llm-evaluation-engineering-slide-02.webp)
+
 ## LLM 판정자를 쓰는 법과 믿지 않는 법
 
 골든셋이 준비되면 그 출력을 무엇으로 채점할지가 남습니다. 여기서 두 가지 도구를 섞어 씁니다. 규칙 기반의 휴리스틱 게이트와 LLM 판정자입니다.
@@ -122,6 +126,8 @@ def evaluate_output(output, context):
 
 절대 점수를 매기게 하는 대신 상대 비교를 시키는 것도 판정자의 일관성을 높이는 방법입니다. "이 답변은 5점 만점에 몇 점인가"보다 "두 답변 중 어느 쪽이 더 나은가"를 물으면, 판정자마다 다른 척도를 쓰는 데서 오는 오차가 줄어듭니다. 사람 평가자를 쓸 때도 같은 원리가 적용됩니다. 다만 사람 평가는 비용이 가장 크므로, 판정자의 확신이 낮은 케이스, 즉 두 후보 사이의 점수 차이가 거의 없는 케이스에만 사람을 투입하는 편이 예산을 아낍니다. 판정자가 이미 확신하는 케이스까지 사람이 다시 보는 것은 정보 가치가 거의 없는 작업입니다.
 
+![llm-evaluation-engineering 슬라이드 3](/assets/images/llm-evaluation-engineering-slide-03.webp)
+
 ## 오프라인 신호와 온라인 신호를 분리합니다
 
 골든셋과 판정자로 구성한 평가는 오프라인에서 돌아갑니다. 배포 전에 실행하고, 결과가 나오는 데 시간이 걸려도 괜찮습니다. 문제는 오프라인 평가가 아무리 촘촘해도 실제 트래픽의 다양성을 완전히 흉내 낼 수 없다는 점입니다. 그래서 온라인에서도 신호를 따로 모아야 하는데, 이때 두 가지 방식을 구분해서 씁니다.
@@ -131,6 +137,8 @@ def evaluate_output(output, context):
 A/B 테스트는 실제 사용자 일부에게 새 버전을 직접 노출합니다. 섀도 모드보다 현실에 가까운 결과를 얻지만, 새 버전이 실제로 사용자 경험에 영향을 주는 만큼 위험도 함께 커집니다. 그래서 실무에서는 섀도 모드로 먼저 안정성을 확인한 뒤에만 A/B 테스트로 넘어가는 순서를 권합니다.
 
 이 두 신호를 오프라인 골든셋과 구분해서 보는 이유는 명확합니다. 골든셋은 우리가 이미 알고 있는 실패 패턴을 반복 검증하는 도구이고, 온라인 신호는 우리가 아직 모르는 실패 패턴을 찾아내는 도구입니다. 온라인에서 새로 발견한 실패 케이스는 다음 골든셋 갱신 주기에 그대로 편입되어야, 위 그림 맨 아래의 화살표가 실제로 작동합니다.
+
+![llm-evaluation-engineering 슬라이드 4](/assets/images/llm-evaluation-engineering-slide-04.webp)
 
 ## 개선을 증명하는 절차
 
@@ -168,20 +176,7 @@ LLM 평가를 시스템으로 만드는 일은 결국 무엇을 측정할지 미
 ![2장 삽화](/assets/images/books/llm-evaluation-engineering/ch02.webp)
 
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![llm-evaluation-engineering 슬라이드 1](/assets/images/llm-evaluation-engineering-slide-01.webp)
-
-![llm-evaluation-engineering 슬라이드 2](/assets/images/llm-evaluation-engineering-slide-02.webp)
-
-![llm-evaluation-engineering 슬라이드 3](/assets/images/llm-evaluation-engineering-slide-03.webp)
-
-![llm-evaluation-engineering 슬라이드 4](/assets/images/llm-evaluation-engineering-slide-04.webp)
-
 ## 출처
 
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv)](https://arxiv.org/abs/2306.05685)
 - [FastChat: MT-Bench and Chatbot Arena Official Repository (GitHub, LMSYS Org)](https://github.com/lm-sys/FastChat)
-

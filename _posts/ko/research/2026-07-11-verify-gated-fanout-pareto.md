@@ -24,6 +24,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/verify-gated-fanout
 
 문제는 이 원칙 안에 있는 두 변수, 즉 스켑틱을 맡을 검증자 모델의 등급과 스켑틱을 몇 명 붙일지, 그리고 어떤 다수결 규칙을 쓸지가 대부분 실측 없이 고정된 채로 쓰여왔다는 점입니다. 더 비싼 모델을 검증자로 쓰면 더 안전합니다. 스켑틱을 더 많이 붙이면 더 안전하다는 가정도 직관적으로 그럴듯합니다. 그러나 실제 멀티에이전트 하네스에는 정답이 알려진 벤치마크가 있습니다. 그 벤치마크로 이 가정을 확인한 연구는 이 논문 이전까지 없었습니다.
 
+![verify-gated-fanout-pareto 슬라이드 1]({{ '/assets/images/verify-gated-fanout-pareto-slide-01.webp' | relative_url }})
+
 ## 핵심 기여: 12개 findings, 180회 실제 API 호출로 27개 설정을 재구성하다
 
 연구진은 실제 프로덕션급 멀티에이전트 오케스트레이션 하네스 위에서 통제된 벤치마크를 만들었습니다. 진짜로 타당한 finding 6개와 의도적으로 조작한 가짜 finding 6개, 총 12개를 준비했습니다. 그리고 Haiku·Sonnet·Opus 세 검증자 등급 각각에 대해 finding마다 5명의 독립 스켑틱 verdict를 받았습니다. 이렇게 실제로 수집한 API 호출은 180회, 실패는 0건, 총비용은 96.91달러였습니다. 여기서 핵심적인 방법론은 사후 절단(post-hoc slicing)입니다. 이 하나의 draw에서 스켑틱 인원 N(1/3/5)과 다수결·전원일치·단일거부(strict veto) 세 임계규칙을 조합한 27개 설정 전체를, 추가 호출 없이 결정론적으로 재구성했습니다.
@@ -45,27 +47,20 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/verify-gated-fanout
 
 이 결과는 규칙 선택의 중요성도 드러냅니다. "전원일치"는 이름만 보면 가장 신중한 규칙 같습니다. 실제로는 Opus 등급에서 N=3, N=5 모두 환각 생존율 0.167을 기록해 가장 취약한 규칙이었습니다. 반대로 스켑틱 1명이라도 반증하면 즉시 폐기하는 규칙이 있습니다. 이 단일거부(strict veto) 규칙은 모든 등급·모든 인원 구성에서 환각 생존율 0을 달성한 유일한 규칙이었습니다. 다만 이 규칙에도 대가는 있습니다. 저비용 등급인 Haiku에서는 노이즈로 인한 스켑틱의 오판이 있었습니다. 그 오판이 진짜 finding을 잘못 폐기하는 사례로 소폭 이어졌습니다(진짜 finding 생존율 0.833).
 
+![verify-gated-fanout-pareto 슬라이드 2]({{ '/assets/images/verify-gated-fanout-pareto-slide-02.webp' | relative_url }})
+
 ## 회사·사회·과학 기여
 
 ThakiCloud는 "fan-out은 검증으로 닫는다"는 원칙을 이미 하우스룰로 운영해 왔습니다. 검증자 등급과 스켑틱 인원, 다수결 규칙의 최적 조합은 그동안 서술적인 원칙으로만 존재했지 실측된 적이 없었습니다. 이번 연구는 실제 프로덕션 하네스와 결정론적 집계 스크립트로 얻은 Pareto 곡선을 제공함으로써, 스킬 리뷰나 리서치 fan-out, 논문 파이프라인처럼 이미 운영 중인 멀티에이전트 워크플로의 검증 게이트 설정을 비용 대비 최적화할 근거를 마련합니다.
 
 더 넓게 보면, 이 연구는 검증 예산이 넉넉하지 않은 소규모 팀을 염두에 둡니다. 그런 팀도 저비용으로 신뢰할 수 있는 에이전트 감사 파이프라인을 구축할 수 있음을 실증했습니다. fan-out 형태의 멀티에이전트 파이프라인에서 검증자 등급과 스켑틱 수, 다수결 임계값이 환각 생존율에 미치는 영향을 정답이 알려진 통제된 벤치마크로 정량화한 것도 이 연구가 처음입니다. 그동안 적대적 검증 관행은 원칙 서술 수준에 머물러 있었습니다. 이 연구는 그것을 측정 가능한 곡선으로 끌어올렸습니다.
 
+![verify-gated-fanout-pareto 슬라이드 3]({{ '/assets/images/verify-gated-fanout-pareto-slide-03.webp' | relative_url }})
+
 ## 한계
+![verify-gated-fanout-pareto 슬라이드 4]({{ '/assets/images/verify-gated-fanout-pareto-slide-04.webp' | relative_url }})
+
 
 연구진은 이 결과의 한계를 명확히 밝히고 있습니다. 벤치마크 자체가 12개 finding, 단일 draw를 기반으로 한 소규모 실험이라, 백분율이 6분의 1 단위로 거칠게 움직입니다. 특히 N=3과 N=5 조건은 별도로 재추출한 독립 시행이 아니라 동일한 5회 draw를 사후에 잘라 구성한 것이기 때문에, 이상치 하나가 여러 셀에 동시에 영향을 줄 수 있습니다. 이런 이유로 통계적 유의성 검정도 표본 크기상 수행하지 않았습니다. 연구진은 Claude 계열의 Haiku·Sonnet·Opus 세 등급만 테스트했습니다. 그래서 이 등급 간 서열이 다른 모델 패밀리에도 그대로 적용된다고 볼 근거는 없습니다. 비용 수치는 2026년 7월 10일 시점의 API 단가를 반영한 것입니다. 가격이 바뀌면 어떤 설정이 지배적인지도 달라질 수 있습니다. 연구진은 콩도르세 희석 메커니즘 자체는 수학적으로 확실하다고 봅니다. 다만 실제 운영 환경에서 어려운 항목이 스켑틱 정답률 50% 미만 구간에 얼마나 자주 놓입니다. 이번 소규모 벤치마크만으로는 이를 답할 수 없다고 연구진은 못 박습니다. 그리고 더 큰 규모의 seeded 벤치마크와 셀마다 독립적으로 재추출하는 후속 실험을 다음 과제로 제시합니다.
 
 논문 상세 정보는 Hugging Face 데이터셋 페이지에서 확인할 수 있습니다: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-07-11-verify-gated-fanout-pareto)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![verify-gated-fanout-pareto 슬라이드 1]({{ '/assets/images/verify-gated-fanout-pareto-slide-01.webp' | relative_url }})
-
-![verify-gated-fanout-pareto 슬라이드 2]({{ '/assets/images/verify-gated-fanout-pareto-slide-02.webp' | relative_url }})
-
-![verify-gated-fanout-pareto 슬라이드 3]({{ '/assets/images/verify-gated-fanout-pareto-slide-03.webp' | relative_url }})
-
-![verify-gated-fanout-pareto 슬라이드 4]({{ '/assets/images/verify-gated-fanout-pareto-slide-04.webp' | relative_url }})
-

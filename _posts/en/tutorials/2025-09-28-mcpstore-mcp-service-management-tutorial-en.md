@@ -518,5 +518,3 @@ Start your MCPStore journey today and experience the future of MCP service manag
 *For more tutorials and AI development resources, visit [Thaki Cloud](https://thakicloud.com/tech-blog).*
 
 
-
-

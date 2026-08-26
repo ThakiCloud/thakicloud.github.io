@@ -32,6 +32,8 @@ AI 인프라·배포 엔지니어로 커리어를 설계하는 개발자, 그리
 
 FDE(Forward Deployed Engineer)는 Applied AI 조직의 창립 멤버급 역할로, 일반 소프트웨어 엔지니어(SWE) 루프보다 새로운 구조를 전제로 합니다. 고객 현장에 "배포되어" 문제를 직접 풀어야 한다는 의미에서, 기술 실력은 물론 배포·소통·제품 감각까지 한 인터뷰에 압축됩니다.
 
+![anthropic-fde-interview-guide 슬라이드 1](/assets/images/anthropic-fde-interview-guide-slide-01.webp)
+
 ## FDE 인터뷰의 6단계
 
 가이드가 서술하는 인터뷰는 6단계로 구성됩니다.
@@ -57,11 +59,15 @@ flowchart TB
 
 나머지 리크루터 스크린, 하이어매니저, 솔루션 디자인 라운드는 다른 회사 인터뷰와 큰 차이가 없지만, 이 세 라운드가 위에 짚은 두 축을 전후에서 받치고 있다는 점이 구조의 포인트입니다.
 
+![anthropic-fde-interview-guide 슬라이드 2](/assets/images/anthropic-fde-interview-guide-slide-02.webp)
+
 ## 일반 SWE 루프와 무엇이 다른가
 
 핵심 차이는 두 가지입니다. 첫째, 평가 대상이 "코드를 잘 쓰나"에서 "AI를 배포할 수 있나"로 이동했다는 점입니다. 라이브 Claude+MCP 시나리오는 정적 코딩 테스트가 재기 어려운, 배포 현장의 역량을 인터뷰에서 그대로 재는 장치입니다. 둘째, 기술이 전체의 절반이라는 점입니다. 밸류즈 라운드가 동등한 비중을 갖는 순간, 이 인터뷰는 순수 기술 평가가 아니라 "이 사람을 고객 현장에 보내도 되는가"의 종합 평가가 됩니다.
 
 가이드들이 공통으로 덧붙이는 점은, FDE가 Applied AI 조직의 창립급 역할이라 인터뷰 루프가 아직 완전히 표준화되지 않고 팀별 편차가 크다는 것입니다. 즉, 아래 구조는 2026년 시점의 대표적 형태지, 모든 팀에 고정된 정답은 아닙니다.
+
+![anthropic-fde-interview-guide 슬라이드 3](/assets/images/anthropic-fde-interview-guide-slide-03.webp)
 
 ## ThakiCloud 관점의 시사점
 
@@ -72,6 +78,8 @@ flowchart TB
 **Paxis 관점.** 유즈케이스 라운드가 검증하는 '라이브 Claude+MCP 프로덕션 워크플로'는, 정확히 Paxis가 스킬 하네스와 MCP 커넥터로 제품화하는 영역입니다. Paxis의 MCP 커넥터 시나리오를 유즈케이스 라운드의 롱컨텍스트 신뢰성 체크리스트로 벤치마크한다면, "우리 플랫폼이 FDE가 현장에서 해야 하는 일을 얼마나 잘 떠받치는가"를 객관적으로 재게 됩니다.
 
 **Metis·Telox 관점.** 엔터프라이즈 AI 도입의 병목이 모델이 아니라 'FDE형 배포 인재'라는 점이 다시 확인됩니다. PoC 랜딩존을 설계할 때, 배포 인력을 얼마나 빠르게 현장에 세우느냐가 영업 관점의 변수가 됩니다.
+
+![anthropic-fde-interview-guide 슬라이드 4](/assets/images/anthropic-fde-interview-guide-slide-04.webp)
 
 ## 한계 및 반론
 
@@ -84,16 +92,3 @@ FDE 인터뷰가 보여주는 방향은 명확합니다. AI를 배포하는 엔�
 ---
 
 *출처: @avrldotdev의 2026 Anthropic FDE 인터뷰 가이드(트윗 이미지)를 [tryexponent](https://www.tryexponent.com/guides/anthropic-forward-deployed-engineer-interview)·[TheForwardDeployed](https://www.theforwarddeployed.io/interviews/anthropic)·rungcode의 2026 FDE 가이드와 대조해 정리했습니다. 구조 서술은 여러 출처가 독립적으로 corroborate하는 부분이며, 이번 세션에서는 원문을 재-fetch하지 못해 corroborating 출처로 인용했습니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![anthropic-fde-interview-guide 슬라이드 1](/assets/images/anthropic-fde-interview-guide-slide-01.webp)
-
-![anthropic-fde-interview-guide 슬라이드 2](/assets/images/anthropic-fde-interview-guide-slide-02.webp)
-
-![anthropic-fde-interview-guide 슬라이드 3](/assets/images/anthropic-fde-interview-guide-slide-03.webp)
-
-![anthropic-fde-interview-guide 슬라이드 4](/assets/images/anthropic-fde-interview-guide-slide-04.webp)
-

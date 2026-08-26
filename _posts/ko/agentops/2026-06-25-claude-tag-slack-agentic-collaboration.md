@@ -31,11 +31,15 @@ Anthropic이 2026년 6월 23일 Claude Tag을 공개했습니다. 슬랙 채널 
 
 ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내부적으로 허브앤스포크 구조의 에이전트 팀을 돌리고, 작업 결과를 슬랙 보고 채널로 흘려보냅니다. 그래서 "에이전트가 협업 도구 안으로 들어와 상주한다"는 흐름은 우리에게 남의 이야기가 아니라 직접 운영하는 패턴입니다. 이 글은 Claude Tag이 실제로 무엇이 새로운지, 65%라는 숫자를 어떻게 읽어야 하는지, 그리고 이 패턴이 멀티테넌트 온프레미스 플랫폼에 무엇을 시사하는지를 정리합니다.
 
+![claude-tag-slack-agentic-collaboration 슬라이드 1]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-01.webp' | relative_url }})
+
 ## Claude Tag은 무엇인가
 
 가장 단순하게 말하면 Claude Tag은 슬랙 안에 들어온 작업 수행형 에이전트입니다. 사용자가 평범한 자연어로 `@Claude`에게 요청을 적으면, 에이전트가 작업을 단계로 나누고, 연결된 도구와 데이터를 활용해 한 단계씩 처리한 뒤, 스레드 안에서 결과를 돌려줍니다. 코드 자동완성처럼 옆에서 거드는 도구가 아니라, 하나의 과업 전체를 맡아 끝까지 끌고 가는 방식입니다.
 
 작동 무대를 슬랙으로 잡은 선택이 중요합니다. 슬랙은 이미 많은 조직의 업무 맥락이 모이는 곳입니다. 엔지니어링 논의, 제품 지표 질문, 지원 티켓, 디버깅 대화가 채널 단위로 쌓여 있습니다. Anthropic은 자사 팀이 내부 버전을 바로 이런 용도, 즉 엔지니어링과 제품 지표와 지원 티켓과 디버깅에 매일 써왔다고 설명합니다. 에이전트를 별도 도구로 띄우는 대신, 이미 맥락이 흐르는 곳에 상주시킨 것입니다.
+
+![claude-tag-slack-agentic-collaboration 슬라이드 2]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-02.webp' | relative_url }})
 
 ## 무엇이 새로운가: 지속성, 멀티플레이어, 능동성
 
@@ -57,6 +61,8 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 
 물론 이 세 가지 성질은 강력한 만큼 운영상의 부담도 함께 가져옵니다. 상주하는 에이전트는 권한과 데이터 접근 범위를 분명히 해야 하고, 능동 동작은 잘못 켜지면 채널을 잡음으로 채울 수 있습니다. 새로움의 가치와 통제의 비용은 항상 함께 옵니다.
 
+![claude-tag-slack-agentic-collaboration 슬라이드 3]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-03.webp' | relative_url }})
+
 ## 65%라는 숫자를 어떻게 읽을 것인가
 
 가장 눈에 띄는 주장은 제품팀 코드의 65%가 내부 버전으로 작성되었다는 수치입니다. 이 숫자는 인상적이지만, 사실관계와 해석을 분리해서 읽어야 합니다.
@@ -64,6 +70,8 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 먼저 사실은 이렇습니다. 이것은 회사가 자사 제품팀에 대해 밝힌 자기 보고 수치이고, 측정 기준(무엇을 "작성"으로 세는지, 사람이 검토하고 수정한 부분을 어떻게 처리하는지)은 공개되어 있지 않습니다. 그래서 이 65%를 산업 전반에 일반화하거나, 다른 조직에서 동일하게 재현된다고 단정할 수는 없습니다[추정: 회사 발표 기준].
 
 그럼에도 이 숫자가 시사하는 방향은 분명합니다. 프런티어 모델 개발사 내부에서 에이전트가 코드 생산의 다수를 담당하는 단계에 이미 들어섰다는 것입니다. 여기서 중요한 것은 비율 자체보다, 그 비율이 가능하려면 무엇이 갖춰져야 하는가입니다. 에이전트가 코드의 대부분을 쓰려면 결과를 검증하는 게이트, 사람이 방향을 잡는 개입 지점, 그리고 잘못된 변경을 되돌릴 수 있는 안전장치가 함께 있어야 합니다. 65%는 모델 능력만의 결과가 아니라 그 주변의 운영 설계가 받쳐준 결과입니다. 이 점이 사실은 가장 중요한 대목입니다.
+
+![claude-tag-slack-agentic-collaboration 슬라이드 4]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-04.webp' | relative_url }})
 
 ## ThakiCloud K8s AI/ML SaaS 플랫폼 적용 및 시사점
 
@@ -85,18 +93,6 @@ ThakiCloud는 쿠버네티스 위에서 Kueue로 GPU 작업을 큐잉하고, 테
 
 결론적으로 Claude Tag은 에이전트가 일회성 대화에서 상주형 동료로 옮겨가는 흐름을 가장 또렷하게 보여주는 사례입니다. 그러나 그 가치를 실제 조직에서 안전하게 누리려면, 모델의 능력만이 아니라 격리·권한·비용·되돌리기라는 운영 설계가 함께 와야 합니다. 그 설계를 자체 인프라 위에서 제공하는 것이 멀티테넌트 온프레미스 플랫폼이 서 있는 자리입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-tag-slack-agentic-collaboration 슬라이드 1]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-01.webp' | relative_url }})
-
-![claude-tag-slack-agentic-collaboration 슬라이드 2]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-02.webp' | relative_url }})
-
-![claude-tag-slack-agentic-collaboration 슬라이드 3]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-03.webp' | relative_url }})
-
-![claude-tag-slack-agentic-collaboration 슬라이드 4]({{ '/assets/images/claude-tag-slack-agentic-collaboration-slide-04.webp' | relative_url }})
 
 ## 출처
 

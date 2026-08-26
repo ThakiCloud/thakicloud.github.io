@@ -50,11 +50,15 @@ v3는 v2와 소수점 넷째 자리까지 같습니다. 프롬프트 어휘를 �
 </video>
 *정지 프레임으로는 반쪽만 보입니다. 같은 여섯 프롬프트를 같은 시드로 돌린 클립을 나란히 놓았습니다. 왼쪽은 대체로 선 자세를 유지하고, 오른쪽은 실제로 뜨고 내려앉고 넘어집니다.*
 
+![reference-pose-beats-prompt 슬라이드 1](/assets/images/reference-pose-beats-prompt-slide-01.webp)
+
 ## 레퍼런스는 외형만 정하는 것이 아닙니다
 
 레퍼런스 조건 생성에서 레퍼런스는 보통 "이 캐릭터가 어떻게 생겼는지"를 알려주는 장치로 설명됩니다. 실제로는 자세도 같이 알려줍니다. 네 장이 전부 서 있으면 모델은 이 캐릭터가 서 있는 존재라고 배웁니다. 프롬프트로 웅크리라고 말해도 레퍼런스가 계속 서 있으라고 말하고 있으면, 둘 중 이기는 쪽은 레퍼런스입니다.
 
 실용적으로 중요한 이유는 비용입니다. 프롬프트를 다시 쓰는 일은 공짜처럼 느껴지고 그래서 먼저 손이 갑니다. 레퍼런스를 다시 만드는 일은 이미지를 새로 생성하고 골라야 하니 번거롭습니다. 저희는 싼 쪽을 먼저 했고 그게 헛수고였습니다. 순서가 반대여야 했습니다.
+
+![reference-pose-beats-prompt 슬라이드 2](/assets/images/reference-pose-beats-prompt-slide-02.webp)
 
 ## 시드를 늘려도 검정력이 안 샀습니다
 
@@ -70,6 +74,8 @@ v3는 v2와 소수점 넷째 자리까지 같습니다. 프롬프트 어휘를 �
 
 정리하면 이렇습니다. **프롬프트 어휘를 바꾸는 것이 무의미했다는 쪽은 단단합니다.** v3와 v2가 소수점 넷째 자리까지 같은 것은 검정이 필요 없습니다. **레퍼런스 자세 쪽은 방향이 세 시드에서 일관되고 짝지은 검정에서 유의하지만, 세트 단위 검정으로는 아직 아닙니다.** 두 숫자를 다 보고 판단하시는 편이 낫습니다.
 
+![reference-pose-beats-prompt 슬라이드 3](/assets/images/reference-pose-beats-prompt-slide-03.webp)
+
 ## 지표가 배경을 재고 있었습니다
 
 이 결과들을 내기 전에 지표부터 고쳐야 했습니다. 동작 다양성을 재려고 프레임 차분에서 모션 서명을 뽑아 클립끼리 비교했는데, 처음 구현은 프레임 **전체**를 썼습니다. 클립마다 배경이 다르니 카페의 김과 해변의 파도와 눈길의 조명이 전부 "움직임"으로 들어왔습니다.
@@ -77,6 +83,8 @@ v3는 v2와 소수점 넷째 자리까지 같습니다. 프롬프트 어휘를 �
 중앙 60퍼센트만 남기고 다시 재자 귀무분포의 표준편차가 절반 이하로 줄었고, 그 전까지 "유의하지 않음"이던 판정이 두 건 뒤집혔습니다. 배경을 다양화하라는 조언과 동작 다양성을 재라는 요구는 같이 가는데, 배경을 다양화한 순간 전체 프레임 지표는 못 쓰게 됩니다.
 
 임계값도 손으로 정하지 않는 편이 낫습니다. 두 세트의 클립을 한 통에 붓고 무작위로 다시 가르기를 이천 번 반복하면 "우연히 이 정도 차이가 날 확률"이 그대로 나옵니다. 저희가 처음 쓰던 임계 0.05는 그렇게 만든 분포의 95퍼센트 지점보다 네 배쯤 높은 값이었습니다.
+
+![reference-pose-beats-prompt 슬라이드 4](/assets/images/reference-pose-beats-prompt-slide-04.webp)
 
 ## 학습보다 제로샷이 안정적이었습니다
 
@@ -117,16 +125,3 @@ v3는 v2와 소수점 넷째 자리까지 같습니다. 프롬프트 어휘를 �
 - [ArcFace: Additive Angular Margin Loss for Deep Face Recognition](https://arxiv.org/abs/1801.07698) (본문의 얼굴 인식 기반 정체성 지표가 쓰는 손실 함수)
 - [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (CLIP 논문. 얼굴이 필요 없는 임베딩 지표는 여기의 이미지 임베딩 코사인 유사도입니다)
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (같은 랭크·같은 스텝으로 맞춰 학습한 두 어댑터의 원 방법)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![reference-pose-beats-prompt 슬라이드 1](/assets/images/reference-pose-beats-prompt-slide-01.webp)
-
-![reference-pose-beats-prompt 슬라이드 2](/assets/images/reference-pose-beats-prompt-slide-02.webp)
-
-![reference-pose-beats-prompt 슬라이드 3](/assets/images/reference-pose-beats-prompt-slide-03.webp)
-
-![reference-pose-beats-prompt 슬라이드 4](/assets/images/reference-pose-beats-prompt-slide-04.webp)
-

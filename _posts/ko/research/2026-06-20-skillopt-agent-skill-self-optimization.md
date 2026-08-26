@@ -35,6 +35,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 arXiv:2605.23904 "SkillOpt: Executive Strategy for Self-Evolving Agent Skills"는 이 과정을 자동화합니다. 스킬 문서를 훈련 가능한 외부 컴포넌트로 취급하고, 에이전트 실행 결과를 바탕으로 스킬을 체계적으로 개선하는 시스템입니다.
 
+![skillopt-agent-skill-self-optimization 슬라이드 1](/assets/images/skillopt-agent-skill-self-optimization-slide-01.webp)
+
 ## 텍스트 공간 최적화
 
 SkillOpt의 핵심 아이디어는 "텍스트 공간 최적화(text-space optimizer)"입니다. 모델 가중치를 건드리지 않고, 스킬 문서 텍스트 자체를 최적화합니다. 이 접근이 기존 스킬 작성 방식과 다른 점은 세 가지입니다.
@@ -45,11 +47,15 @@ SkillOpt의 핵심 아이디어는 "텍스트 공간 최적화(text-space optimi
 
 **검증 게이트**: 편집이 제안된다고 바로 적용되지 않습니다. 검증 점수가 개선될 때만 변경이 수락됩니다. 성능이 나빠지는 편집은 자동으로 걸러집니다.
 
+![skillopt-agent-skill-self-optimization 슬라이드 2](/assets/images/skillopt-agent-skill-self-optimization-slide-02.webp)
+
 ## 추론 시 오버헤드 없음
 
 SkillOpt의 실용적 장점 중 하나가 추론 시 오버헤드가 없다는 점입니다. 스킬 최적화는 오프라인에서 이뤄집니다. 롤아웃을 수집하고, 편집을 제안하고, 검증하는 과정이 에이전트 실행과 분리됩니다.
 
 배포된 에이전트는 최적화된 스킬 문서를 참조할 뿐입니다. 최적화 자체가 실행 경로에 없으므로 레이턴시에 영향을 주지 않습니다. "더 나은 스킬 = 더 느린 실행"이라는 트레이드오프가 없습니다.
+
+![skillopt-agent-skill-self-optimization 슬라이드 3](/assets/images/skillopt-agent-skill-self-optimization-slide-03.webp)
 
 ## 실험 결과
 
@@ -60,6 +66,8 @@ SkillOpt의 실용적 장점 중 하나가 추론 시 오버헤드가 없다는 
 **크로스 모델 전이**: 한 모델로 최적화된 스킬이 다른 모델에서도 효과적이라는 결과입니다. 이는 스킬 최적화 비용을 정당화하는 중요한 속성입니다. GPT-5.5로 최적화한 스킬을 Qwen 계열 모델에 적용했을 때도 성능 향상이 유지된다면, 스킬을 한 번 최적화해서 여러 모델에 재사용할 수 있습니다.
 
 크로스 환경 전이도 보고됩니다. 최적화된 스킬이 다른 실행 환경에서도 효과를 유지한다는 의미입니다.
+
+![skillopt-agent-skill-self-optimization 슬라이드 4](/assets/images/skillopt-agent-skill-self-optimization-slide-04.webp)
 
 ## 손 작성 스킬 vs. SkillOpt 스킬
 
@@ -90,16 +98,3 @@ SkillOpt의 한계도 있습니다. 스킬 편집이 제어되더라도 누적 �
 SkillOpt는 에이전트 스킬을 "배포하고 끝나는 아티팩트"에서 "지속적으로 개선되는 살아있는 컴포넌트"로 전환하는 접근입니다. +23.5 포인트라는 수치와 크로스 모델 전이성은 검토할 가치가 있습니다. 스킬 기반 에이전트 시스템을 운용하는 팀이라면 논문 전문을 읽어볼 만합니다.
 
 원문: [https://arxiv.org/abs/2605.23904](https://arxiv.org/abs/2605.23904)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![skillopt-agent-skill-self-optimization 슬라이드 1](/assets/images/skillopt-agent-skill-self-optimization-slide-01.webp)
-
-![skillopt-agent-skill-self-optimization 슬라이드 2](/assets/images/skillopt-agent-skill-self-optimization-slide-02.webp)
-
-![skillopt-agent-skill-self-optimization 슬라이드 3](/assets/images/skillopt-agent-skill-self-optimization-slide-03.webp)
-
-![skillopt-agent-skill-self-optimization 슬라이드 4](/assets/images/skillopt-agent-skill-self-optimization-slide-04.webp)
-

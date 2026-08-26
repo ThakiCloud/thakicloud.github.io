@@ -34,6 +34,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 arXiv:2604.15034 "Autogenesis: A Self-Evolving Agent Protocol"은 이 문제를 정면으로 다룹니다. 핵심 주장은 단순합니다. 에이전트를 구성하는 모든 요소, 즉 프롬프트, 툴, 메모리, 에이전트 그 자체를 버전 관리 가능한 "프로토콜 리소스"로 다루면, 에이전트가 스스로 개선 루프를 닫을 수 있습니다.
 
+![autogenesis-self-evolving-agent-protocol 슬라이드 1]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-01.webp' | relative_url }})
+
 ## 두 개의 계층: 리소스와 자기진화
 
 AGP(Autogenesis Protocol)는 두 계층으로 구성됩니다.
@@ -54,15 +56,21 @@ AGP(Autogenesis Protocol)는 두 계층으로 구성됩니다.
 
 중요한 점은 커밋 단계에 명시적 검증 게이트가 있다는 것입니다. 검증을 통과하지 못한 변경은 반영되지 않습니다. 무제한 자기수정이 아니라 통제된 자기개선입니다.
 
+![autogenesis-self-evolving-agent-protocol 슬라이드 2]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-02.webp' | relative_url }})
+
 ## 실험 결과
 
 논문은 복잡한 계획(planning)과 툴 사용(tool use)이 필요한 벤치마크에서 AGP 기반 Autogenesis 시스템이 일관된 성능 향상을 보였다고 보고합니다. 구체적인 수치는 초록 기준 상세 미공개이며 논문 본문에서 확인해야 합니다. 논문이 강조하는 것은 단일 실행 성능보다 시간이 지남에 따라 성능이 누적되어 올라가는 궤적입니다.
+
+![autogenesis-self-evolving-agent-protocol 슬라이드 3]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-03.webp' | relative_url }})
 
 ## 무엇이 다른가
 
 기존 에이전트 자기개선 연구 대부분은 모델 파인튜닝에 집중합니다. 더 좋은 데이터로 가중치를 업데이트하는 방식입니다. AGP는 다른 경로를 택했습니다. 모델 가중치는 건드리지 않고 에이전트를 둘러싼 프로토콜 리소스(프롬프트, 툴 정의, 메모리 구조)를 최적화합니다. 이 접근의 장점은 빠르다는 것입니다. 파인튜닝 사이클 없이 런타임에 변경이 적용됩니다.
 
 단점도 있습니다. 프로토콜 리소스 수준의 개선은 모델의 근본적 능력 한계를 넘어서기 어렵습니다. 모델이 애초에 처리 못 하는 작업을 프롬프트 최적화로 해결할 수는 없습니다.
+
+![autogenesis-self-evolving-agent-protocol 슬라이드 4]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 플랫폼 관점
 
@@ -79,16 +87,3 @@ AGP는 에이전트 시스템을 "코드처럼" 다루는 접근입니다. 코�
 아직 해결해야 할 질문들이 많습니다. 자기진화 루프가 수렴하는 조건은 무엇인가, 발산하거나 오염된 방향으로 진화하는 것을 어떻게 막는가, 큰 규모의 멀티에이전트 환경에서 리소스 버전 관리가 어떻게 작동하는가. 이 질문들에 대한 답이 후속 연구에서 나오길 기대합니다.
 
 원문: [https://arxiv.org/abs/2604.15034](https://arxiv.org/abs/2604.15034)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![autogenesis-self-evolving-agent-protocol 슬라이드 1]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-01.webp' | relative_url }})
-
-![autogenesis-self-evolving-agent-protocol 슬라이드 2]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-02.webp' | relative_url }})
-
-![autogenesis-self-evolving-agent-protocol 슬라이드 3]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-03.webp' | relative_url }})
-
-![autogenesis-self-evolving-agent-protocol 슬라이드 4]({{ '/assets/images/autogenesis-self-evolving-agent-protocol-slide-04.webp' | relative_url }})
-

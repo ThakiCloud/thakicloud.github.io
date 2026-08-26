@@ -29,6 +29,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/cognitive-commons-e
 
 이 글은 저희에게도 편한 주제가 아닙니다. 저희가 파는 것이 정확히 그 주니어 업무를 흡수하는 플랫폼이기 때문입니다.
 
+![cognitive-commons-expertise-regeneration 슬라이드 1](/assets/images/cognitive-commons-expertise-regeneration-slide-01.webp)
+
 ## 개요
 
 지난주 X에서 한 논문이 돌았습니다. 자라 장루이가 소개하면서 이렇게 썼습니다. "이 논문은 여러분이 이미 몸으로 느끼고 있던 문제에 그럴듯한 이름을 붙여줍니다." 그 이름이 인지 공유지의 비극입니다.
@@ -38,6 +40,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/cognitive-commons-e
 익숙한 공유지의 비극 구조를 인지 영역으로 옮긴 셈입니다. 목초지에서는 각 목동이 소를 한 마리 더 놓는 것이 개인에게는 합리적이지만 모두가 그러면 풀밭이 죽습니다. 여기서 고갈되는 자원은 풀이 아니라 직군이 스스로를 갱신하는 데 필요한 공유 전문성 저장고입니다. 개별 조직이 AI를 도입해 주니어 업무를 줄이는 것은 그 조직 입장에서 완전히 합리적입니다. 문제는 그 합리적 선택들이 모여서 저장고를 마르게 한다는 점입니다.
 
 이 흐름을 다루는 논문이 여러 갈래로 나오고 있습니다. 같은 달 마헤르 칼렐과 모하메드 엘 루아디가 같은 제목의 다른 논문을 arXiv에 올려 경제학 모형 쪽에서 접근했고, 그 이전 2026년 2월에는 대런 아세모글루를 포함한 MIT 연구진이 지식 붕괴를 다룬 논문을 냈습니다. 서로 다른 분야에서 같은 지점을 짚고 있다는 사실 자체가 신호로 읽힙니다.
+
+![cognitive-commons-expertise-regeneration 슬라이드 2](/assets/images/cognitive-commons-expertise-regeneration-slide-02.webp)
 
 ## 핵심 개념 세 가지
 
@@ -73,6 +77,8 @@ flowchart TB
 
 이들의 결론은 에이전트 AI가 사적 신호는 대체할 수 있지만 공적 신호를 다시 쌓지는 못한다는 것입니다. 여기에 사람의 노력이 충분히 탄력적이면, 즉 굳이 힘들여 배우지 않아도 되는 선택지가 있으면 사람들은 그 쪽을 고릅니다. 그렇게 낮은 지식 균형에 도달합니다. 균형이라는 표현이 중요합니다. 사고가 아니라 각자의 합리적 선택이 모여 안착하는 상태라는 뜻입니다.
 
+![cognitive-commons-expertise-regeneration 슬라이드 3](/assets/images/cognitive-commons-expertise-regeneration-slide-03.webp)
+
 ## 증거는 어디까지 나와 있나
 
 논문 자체는 개념 논문입니다. 저자도 인과관계를 입증했다고 주장하지 않습니다. AI 노출도가 높은 분야에서 숙련 재생산 경로에 교란이 있을 수 있다는 초기 노동시장 신호와 임상 근거를 제시하는 수준이고, 도입이 최근이라 가장 강한 신호도 선도 분야에 국한된다고 명시합니다.
@@ -80,6 +86,8 @@ flowchart TB
 이차 자료에서 자주 인용되는 수치가 하나 있습니다. 2018년부터 2024년 사이 AI 노출도가 높은 직군에서 경력 3년 이하를 요구하는 채용 공고 비중이 소프트웨어 개발은 43%에서 28%로, 데이터 분석은 35%에서 22%로, 컨설팅은 41%에서 26%로 떨어졌다는 것입니다. 다만 이 수치는 논문 초록에서 직접 확인한 것이 아니라 관련 논평 기사를 통해 접한 값이므로 원자료를 확인하기 전까지는 참고용으로만 보시는 것이 안전합니다. 법률 쪽에서는 자동 문서 검토가 1년차 어소시에이트가 하던 업무를 줄였고, 일부 대형 로펌에서 AI 교육을 필수로 지정하면서도 청구 가능 시간으로는 인정하지 않는다는 보도가 있었습니다.
 
 한국 상황에 그대로 대입하기는 이릅니다. 다만 신입 개발자 채용 규모와 요구 경력 분포는 국내에서도 관찰 가능한 지표라, 같은 프레임으로 자체 데이터를 열어볼 가치는 충분합니다.
+
+![cognitive-commons-expertise-regeneration 슬라이드 4](/assets/images/cognitive-commons-expertise-regeneration-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -117,18 +125,6 @@ flowchart TB
 
 에이전트 자동화를 검토 중이시라면 이번 도입 건에 한 줄만 추가해보시길 권합니다. 이 업무를 자동화한 뒤, 이 업무를 하면서 배우던 것은 어디서 배우게 됩니까. 답이 없으면 도입을 멈추라는 뜻이 아니라, 그 답을 설계에 포함시켜야 한다는 뜻입니다. 저희도 같은 질문을 저희 제품에 던지고 있습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![cognitive-commons-expertise-regeneration 슬라이드 1](/assets/images/cognitive-commons-expertise-regeneration-slide-01.webp)
-
-![cognitive-commons-expertise-regeneration 슬라이드 2](/assets/images/cognitive-commons-expertise-regeneration-slide-02.webp)
-
-![cognitive-commons-expertise-regeneration 슬라이드 3](/assets/images/cognitive-commons-expertise-regeneration-slide-03.webp)
-
-![cognitive-commons-expertise-regeneration 슬라이드 4](/assets/images/cognitive-commons-expertise-regeneration-slide-04.webp)
 
 ## 출처
 

@@ -33,6 +33,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/atom-report-open-mo
 
 ATOM 리포트(arXiv 2604.07190, 2026년 4월 8일 공개)는 바로 이 질문에 정면으로 답합니다. Interconnects가 펴낸 이 보고서는 약 1,500개의 주력 오픈 모델을 대상으로 허깅페이스 다운로드와 파생 모델 수, 추론 시장 점유율, 성능 지표를 교차해 오픈 모델 생태계 전체의 스냅샷을 그렸습니다. 한 조직이 자기 모델의 성공을 자랑하는 자료가 아니라, 생태계를 위에서 내려다보며 지도를 그린 자료라는 점이 이 리포트의 가치입니다.
 
+![atom-report-open-model-ecosystem 슬라이드 1]({{ '/assets/images/atom-report-open-model-ecosystem-slide-01.webp' | relative_url }})
+
 ## ATOM 리포트는 무엇을 측정했나
 
 리포트의 방법론은 단일 지표의 함정을 피하려는 데서 출발합니다. 오픈 모델의 성공을 하나의 숫자로 재려는 시도는 대부분 왜곡을 낳습니다. 허깅페이스 다운로드만 보면 파인튜닝 커뮤니티가 활발한 모델이 과대평가되고, 추론 API 호출만 보면 상용 호스팅에 잘 얹힌 모델이 과대평가됩니다. ATOM 리포트는 이 둘을 분리해서 나란히 놓습니다. 하나는 개발자가 무엇을 자기 손으로 내려받아 만지작거리는가를 보는 다운로드 렌즈이고, 다른 하나는 실제 프로덕션 트래픽이 어느 모델로 흐르는가를 보는 추론 렌즈입니다.
@@ -365,6 +367,8 @@ ATOM 리포트(arXiv 2604.07190, 2026년 4월 8일 공개)는 바로 이 질문�
 </script>
 {% endraw %}
 
+![atom-report-open-model-ecosystem 슬라이드 2]({{ '/assets/images/atom-report-open-model-ecosystem-slide-02.webp' | relative_url }})
+
 ## 핵심 발견: 중국 오픈 모델이 지형을 바꿨다
 
 리포트의 가장 무거운 발견은 지역 구도의 역전입니다. 중국 오픈 모델은 2025년 여름 미국 진영을 추월했고, 그 뒤로 격차를 오히려 벌려 왔습니다. 이것은 한두 개 화제작이 반짝 앞선 사건이 아니라, 다운로드와 추론 양쪽에서 함께 관측되는 구조적 이동입니다.
@@ -375,6 +379,8 @@ ATOM 리포트(arXiv 2604.07190, 2026년 4월 8일 공개)는 바로 이 질문�
 
 리포트는 화제의 중심에 있는 모델만 다루지 않습니다. OpenAI가 내놓은 오픈웨이트 계열인 GPT-OSS의 부상, Moonshot과 Z.ai, MiniMax 같은 중국 중위권 조직의 영향력 확대, 그리고 미국 진영이 오픈 모델에서 다시 진전을 보이는 신호까지 함께 짚습니다. 지형도는 상위 몇 개 이름이 아니라 이 두꺼운 중간층이 만든다는 관찰은, 특정 스타 모델에만 의존하는 전략이 왜 위험한지를 넌지시 일러 줍니다.
 
+![atom-report-open-model-ecosystem 슬라이드 3]({{ '/assets/images/atom-report-open-model-ecosystem-slide-03.webp' | relative_url }})
+
 ## 다운로드와 추론, 두 개의 서로 다른 렌즈
 
 이 지점을 조금 더 파고들 필요가 있습니다. 인프라를 설계하는 사람에게 이 두 렌즈의 차이는 단순한 통계 이야기가 아니라 곧바로 의사결정으로 연결되는 실무 문제이기 때문입니다.
@@ -382,6 +388,8 @@ ATOM 리포트(arXiv 2604.07190, 2026년 4월 8일 공개)는 바로 이 질문�
 다운로드 지표는 생태계의 활력과 미래 방향을 읽는 데 유용합니다. 어떤 계열의 파생 모델이 폭발적으로 늘어난다면, 그 계열을 위한 양자화 빌드, 서빙 최적화, 파인튜닝 스크립트, 어댑터가 함께 쏟아진다는 뜻입니다. 우리가 그 계열을 채택할 때 기댈 수 있는 도구와 커뮤니티 지원이 그만큼 풍부해집니다. 반대로 추론 지표는 지금 이 순간의 경제성을 읽는 데 유용합니다. 실제 트래픽이 어느 모델로 흐르는지는 그 모델의 가격 대비 성능이 현장에서 통한다는 사회적 증거이고, 호스팅 인프라가 이미 그 모델에 맞춰 튜닝돼 있을 가능성이 높다는 신호이기도 합니다.
 
 두 지표가 어긋날 때 어느 쪽을 믿을지는 목적에 달려 있습니다. 사내 파인튜닝 파이프라인을 오래 끌고 갈 기반 모델을 고른다면 다운로드와 파생 생태계의 두께가 더 중요합니다. 지금 당장 비용 효율이 좋은 서빙 대상을 고른다면 추론 시장의 실제 점유율이 더 정확한 나침반입니다. ATOM 리포트가 두 축을 끝까지 분리해서 제시하는 이유가 여기에 있습니다.
+
+![atom-report-open-model-ecosystem 슬라이드 4]({{ '/assets/images/atom-report-open-model-ecosystem-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -401,18 +409,6 @@ ATOM 리포트(arXiv 2604.07190, 2026년 4월 8일 공개)는 바로 이 질문�
 
 마지막으로 이 스냅샷은 빠르게 낡습니다. 생태계가 몇 달 단위로 요동치는 분야에서 2026년 4월의 지도는 오늘의 지형과 이미 조금 다를 수 있습니다. 그럼에도 이 리포트의 값어치는 개별 순위가 아니라, 다운로드와 추론을 분리해서 보라는 방법론과 무게중심이 이동했다는 큰 흐름에 있습니다. 그 흐름은 당분간 유지될 가능성이 높고, 인프라를 준비하는 우리는 그 방향에 맞춰 서빙 스택을 열어 두면 됩니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![atom-report-open-model-ecosystem 슬라이드 1]({{ '/assets/images/atom-report-open-model-ecosystem-slide-01.webp' | relative_url }})
-
-![atom-report-open-model-ecosystem 슬라이드 2]({{ '/assets/images/atom-report-open-model-ecosystem-slide-02.webp' | relative_url }})
-
-![atom-report-open-model-ecosystem 슬라이드 3]({{ '/assets/images/atom-report-open-model-ecosystem-slide-03.webp' | relative_url }})
-
-![atom-report-open-model-ecosystem 슬라이드 4]({{ '/assets/images/atom-report-open-model-ecosystem-slide-04.webp' | relative_url }})
 
 ## 출처
 

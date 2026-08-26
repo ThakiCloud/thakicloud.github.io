@@ -63,6 +63,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 "드물게만 나서 괜찮다"는 답이 되지 않습니다. 그 한 가지 순서가 나타날 확률은 부하와 타이밍에 달려 있습니다. 부하가 두 배가 되는 새벽 3시에 옵니다. 그것이 일어난다는 것을 증명할 필요는 없습니다. 일어날 틈을 없앨 필요가 있는 것입니다.
 
+![the-concurrency-discipline 슬라이드 1](/assets/images/the-concurrency-discipline-slide-01.webp)
+
 ## 로크는 해결책이 아니라 규율의 시작
 
 로크는 인터리빙 지점을 없애는 도구입니다. 로크를 쥔 동안 다른 실행은 크리티컬 섹션에 들어올 수 없고, 찢어질 수 있던 순서가 원자적이 됩니다. 로크는 "확인과 행동을 한 단위로 묶어라"를 기계가 대신 강제해주는 셈입니다.
@@ -77,6 +79,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 검증이 안 되면 계속 안에 둡니다. 느린 안전한 구간이 빠른 깨진 구간보다 낫습니다. 이 트레이드오프를 매번 의식해서 선택하는 것이 크리티컬 섹션 규율의 전부입니다. 두 번째 규칙은 한 줄입니다. 예외 경로를 포함해 모든 경로가 로크를 내려놓아야 합니다. 한 경로가 잊으면 나머지 시스템이 영원히 기다립니다.
 
+![the-concurrency-discipline 슬라이드 2](/assets/images/the-concurrency-discipline-slide-02.webp)
+
 ## 단일 스레드는 안전하지 않다
 
 지금까지 여러 스레드가 동시에 도는 이야기를 했습니다. 그런데 대부분의 시스템은 스레드를 많이 돌리지 않습니다. 웹 서버, 챗봇, 메시지 프로세서, 대부분의 자바스크립트 런타임은 실행자가 하나입니다. 그런데도 동시에 수십 개의 요청을 처리합니다.
@@ -90,6 +94,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 fetch가 쓰기라면 이야기가 달라집니다. 결제, 예약, 할당입니다. 앞 섹션의 이중 실행이 단일 스레드에서 그대로 재현됩니다. "단일 스레드는 안전하다"는 정신 모델은 여기서 틀립니다. 안전하지 않습니다. 단지 인터리빙 지점이 적을 뿐입니다.
 
 고쳐야 할 정신 모델은 이것입니다. 안전을 결정하는 것은 실행자의 개수가 아닙니다. 양도 지점 사이에 틈이 여는 것입니까. 단일 스레드에도 yield가 있으면 check-then-act가 찢어집니다. await를 가로지르는 동안 로크를 쥔 채로 있게 하거나, 그 구간을 큐로 직렬화해야 합니다.
+
+![the-concurrency-discipline 슬라이드 3](/assets/images/the-concurrency-discipline-slide-03.webp)
 
 ## 백프레셔: 도착이 처리보다 빠를 때의 규율
 
@@ -119,6 +125,8 @@ fetch가 쓰기라면 이야기가 달라집니다. 결제, 예약, 할당입니
 
 차이가 있다면 규모뿐입니다. 코드의 인터리빙은 밀리세컨드이고 사람의 인터리빙은 일 단위입니다. 법칙은 규모를 묻지 않습니다. 그래서 회고 체크리스트도 같습니다. 이번 주 계획의 어디에 무엇이 끼어들 수 있습니까. 무엇을 확인한 뒤 그 확인이 무효가 된 채 행동했습니까. 큐는 어디에 있고 차면 어떻게 됩니까.
 
+![the-concurrency-discipline 슬라이드 4](/assets/images/the-concurrency-discipline-slide-04.webp)
+
 ## 하나의 규율만 가져가려면
 
 다시 모읍니다. 동시성 실행 시스템에서 실패의 원인은 양도 지점이지 실행자가 아닙니다. 그래서 첫 번째 체크는 코드에서 모든 양도 지점을 찾는 일입니다. await 전부, 콜백 경계 전부, 실행을 다른 쪽에 넘기는 자리 전부입니다.
@@ -140,16 +148,3 @@ fetch가 쓰기라면 이야기가 달라집니다. 결제, 예약, 할당입니
 - [Single point of failure - Wikipedia](https://en.wikipedia.org/wiki/Single_point_of_failure)
 - [Events - Node.js documentation](https://nodejs.org/api/events.html)
 - [asyncio (Asynchronous I/O) - Python documentation](https://docs.python.org/3/library/asyncio.html)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![the-concurrency-discipline 슬라이드 1](/assets/images/the-concurrency-discipline-slide-01.webp)
-
-![the-concurrency-discipline 슬라이드 2](/assets/images/the-concurrency-discipline-slide-02.webp)
-
-![the-concurrency-discipline 슬라이드 3](/assets/images/the-concurrency-discipline-slide-03.webp)
-
-![the-concurrency-discipline 슬라이드 4](/assets/images/the-concurrency-discipline-slide-04.webp)
-

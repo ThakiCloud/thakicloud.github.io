@@ -31,6 +31,8 @@ Claude Code 스킬은 마법이 아니라 **표준 작업 절차서(SOP)**입니
 
 이 관점은 ThakiCloud가 에이전트를 운용하는 원칙과 정확히 겹칩니다. 에이전트의 품질은 모델 등급이 아니라 그 모델을 감싸는 계약 구조에서 나온다는 것입니다. 랜딩페이지 스킬은 그 계약 구조를 프런트엔드 디자인이라는 좁은 영역에 집중시킨 좋은 사례입니다. 자유도를 줄여 평균 품질을 올리는 전형적인 스킬 설계이기도 합니다.
 
+![claude-code-skill-oneshot-landing-pages 슬라이드 1]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.webp' | relative_url }})
+
 ## 이 기술은 무엇인가
 
 Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하나입니다. 이 파일 안에는 에이전트가 특정 작업을 할 때 따라야 할 원칙과 규칙, 그리고 사용자의 선호가 담깁니다. 사용자가 자연어로 요청하면, 관련 스킬이 에이전트의 컨텍스트에 주입되고, 에이전트는 그 지침을 SOP처럼 따르며 로컬에서 HTML과 CSS, 자바스크립트를 직접 생성합니다.
@@ -365,6 +367,8 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
 
 핵심은 "원샷"이라는 표현입니다. 사용자가 원하는 바를 평범한 문장으로 설명하면, 에이전트가 여러 번의 왕복 없이 한 번에 전체 페이지를 만들어 냅니다. 이것이 가능한 이유는 모델이 창의력을 발휘해서가 아니라, 스킬이 이미 "좋은 랜딩페이지란 무엇인가"에 대한 결정을 대부분 대신 내려 주기 때문입니다.
 
+![claude-code-skill-oneshot-landing-pages 슬라이드 2]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.webp' | relative_url }})
+
 ## 스킬이 대신 내려 주는 결정들
 
 스킬 없이 랜딩페이지를 요청하면 결과가 제네릭한 이유는 명확합니다. 에이전트가 매번 처음부터 레이아웃, 여백, 타이포그래피, 색 대비, 애니메이션 타이밍을 새로 판단해야 하고, 그 판단은 안전한 평균값으로 수렴하기 때문입니다. 공개된 프리미엄 랜딩페이지 스킬들은 바로 이 판단을 미리 고정합니다([MindStudio 분석](https://www.mindstudio.ai/blog/claude-code-landing-page-generator-skill-city-service-matrix-seo)).
@@ -373,11 +377,15 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
 
 여기서 얻는 교훈은 프런트엔드에만 국한되지 않습니다. 좋은 스킬은 모델에게 자유를 주는 것이 아니라, 검증된 골격을 주고 그 안을 채우게 하는 것입니다. 디자인 토큰, 레이아웃 그리드, 산출 포맷을 코드처럼 고정할수록 매 호출의 편차가 줄고 평균 품질이 올라갑니다. 반대로 "멋지게 만들어줘" 같은 산문 부탁만으로는 매번 다른 결과가 나옵니다.
 
+![claude-code-skill-oneshot-landing-pages 슬라이드 3]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.webp' | relative_url }})
+
 ## 직접 만들 때의 유의점
 
 이런 스킬을 직접 작성해 본다면 몇 가지가 중요합니다. 첫째, 산출 포맷을 명시적으로 못박아야 합니다. "단일 HTML, 인라인 CSS/JS, 외부 의존성은 폰트와 GSAP만"처럼 구조를 규정하면 배포와 이식이 단순해집니다. 둘째, 디자인 판단을 규칙으로 환원해야 합니다. 여백 스케일, 타이포그래피 대비, 허용 색 팔레트, 애니메이션은 레이아웃을 흔들지 않는 `transform`과 `opacity` 위주로 같은 규칙을 SOP에 적어 두면 에이전트가 매번 다시 고민하지 않습니다. 셋째, 실패 사례를 담아야 합니다. 스킬에서 가장 밀도 높은 정보는 "이렇게 하지 마라" 목록입니다. 레이아웃을 흔드는 애니메이션 금지, 접근성 기본 위반 금지 같은 항목이 결과 품질을 실제로 지켜 줍니다([Ryan Doser 가이드](https://ryandoser.com/claude-code-landing-pages/)).
 
 한 가지 덧붙이면, 스킬은 세금이기도 합니다. 스킬이 컨텍스트에 로드되는 순간부터 토큰 비용을 지불하므로, 모든 문장이 "이게 없으면 에이전트가 틀리는가"라는 질문을 통과해야 합니다. 불필요한 미사여구는 순손실입니다.
+
+![claude-code-skill-oneshot-landing-pages 슬라이드 4]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -397,18 +405,6 @@ Claude Code 스킬은 본질적으로 `SKILL.md`라는 마크다운 파일 하�
 
 이 사례의 진짜 가치는 "예쁜 페이지가 한 번에 나온다"가 아니라, **에이전트 품질은 모델이 아니라 스킬 설계에서 나온다**는 원칙을 눈에 보이게 증명했다는 데 있습니다. 그리고 그 원칙을 플랫폼 차원에서 운용 가능한 형태로 제품화한 것이 바로 Paxis입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-code-skill-oneshot-landing-pages 슬라이드 1]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-01.webp' | relative_url }})
-
-![claude-code-skill-oneshot-landing-pages 슬라이드 2]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-02.webp' | relative_url }})
-
-![claude-code-skill-oneshot-landing-pages 슬라이드 3]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-03.webp' | relative_url }})
-
-![claude-code-skill-oneshot-landing-pages 슬라이드 4]({{ '/assets/images/claude-code-skill-oneshot-landing-pages-slide-04.webp' | relative_url }})
 
 ## 출처
 

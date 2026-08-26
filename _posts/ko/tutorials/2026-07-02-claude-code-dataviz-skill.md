@@ -20,6 +20,8 @@ categories:
 
 Claude Code 2.1.198은 이 간극을 겨냥한 내장 스킬 `/dataviz`를 추가했습니다. 공식 체인지로그는 "차트와 대시보드 설계 지침(chart and dashboard design guidance)"을 제공한다고만 짧게 적었지만, 실제로 하는 일은 차트를 코드 문제에서 설계 문제로 되돌리는 것입니다. 코드를 쓰기 전에 어떤 형태를 고를지, 색을 어떻게 배정할지, 접근성을 어떻게 지킬지를 먼저 컨텍스트에 얹습니다. ThakiCloud에서 GPU 사용량 대시보드나 모델 평가 리포트를 만들 때 반복되던 "일단 그리고 나중에 다듬기"의 순서를 뒤집는 도구라 눈여겨볼 만합니다.
 
+![claude-code-dataviz-skill 슬라이드 1]({{ '/assets/images/claude-code-dataviz-skill-slide-01.webp' | relative_url }})
+
 ## /dataviz 스킬은 무엇인가
 
 `/dataviz`는 어떤 출력 매체에서든 차트, 그래프, 대시보드를 만들기 직전에 읽는 참조 스킬입니다. HTML이나 React 아티팩트, 인라인 SVG, `matplotlib`이나 `plotly`나 d3나 Recharts 같은 라이브러리 코드, 렌더해서 업로드할 PNG, Slack으로 공유하는 차트까지 매체를 가리지 않습니다. 차트 코드의 첫 줄을 쓰기 전, 차트 색을 고르기 전, KPI 타일이나 미터나 지표 행을 배치하기 전에 먼저 로드하도록 설계되어 있습니다.
@@ -27,6 +29,8 @@ Claude Code 2.1.198은 이 간극을 겨냥한 내장 스킬 `/dataviz`를 추�
 핵심은 특정 디자인 시스템에 묶이지 않는다는 점입니다. 스킬은 브랜드 중립적인 플레이스홀더 팔레트를 기본값으로 제공하고, 그 값을 각자의 브랜드 색으로 교체하도록 안내합니다. 즉 "이 색을 쓰세요"가 아니라 "색을 이렇게 고르는 방법을 쓰세요"에 가깝습니다. 방법론을 가르치기 때문에 프로젝트마다 팔레트가 달라도 같은 규율이 적용됩니다.
 
 트리거되는 상황을 보면 스킬의 범위가 분명해집니다. 차트, 그래프, 플롯, 데이터 시각화, 대시보드, 애널리틱스라는 단어는 물론이고 범주형 색, 순차형과 발산형 팔레트, 지표 타일, 스파크라인, 히트맵, 범례, 축, 툴팁처럼 시각화의 구성 요소 하나하나가 진입점입니다. 차트 하나를 통째로 그리든 KPI 행 하나를 얹든 같은 지침을 거치게 됩니다.
+
+![claude-code-dataviz-skill 슬라이드 2]({{ '/assets/images/claude-code-dataviz-skill-slide-02.webp' | relative_url }})
 
 ## 이 스킬은 무엇을 컨텍스트에 얹는가
 
@@ -366,6 +370,8 @@ Claude Code 2.1.198은 이 간극을 겨냥한 내장 스킬 `/dataviz`를 추�
 
 **마크 사양과 인터랙션 규칙**은 차트의 세부를 통일합니다. 축을 어떻게 그릴지, 범례를 어디에 둘지, 툴팁에 무엇을 담을지 같은 결정을 매번 새로 하지 않고 규칙으로 고정합니다. 결과적으로 서로 다른 사람이 서로 다른 라이브러리로 만든 차트가 하나의 시스템처럼 읽힙니다.
 
+![claude-code-dataviz-skill 슬라이드 3]({{ '/assets/images/claude-code-dataviz-skill-slide-03.webp' | relative_url }})
+
 ## 실제로 어떻게 쓰는가
 
 사용법 자체는 단순합니다. 차트나 대시보드를 만들기 시작하기 전에 스킬을 불러오면, 위 네 덩어리의 지침이 컨텍스트에 들어옵니다. 그 뒤로는 어떤 라이브러리를 쓰든 같은 규율 위에서 코드가 생성됩니다.
@@ -373,6 +379,8 @@ Claude Code 2.1.198은 이 간극을 겨냥한 내장 스킬 `/dataviz`를 추�
 주의할 점은 순서입니다. 스킬 설명이 반복해서 강조하는 것은 "차트 코드의 첫 줄을 쓰기 전에" 읽으라는 점입니다. 코드를 다 짜고 나서 색을 고치는 것은 이미 늦습니다. 축을 0에서 시작하지 않은 막대그래프를 사후에 바로잡으려면 스케일과 레이아웃을 다시 손봐야 하고, 다크 모드 대비 문제는 팔레트를 통째로 다시 짜야 하는 경우가 많습니다. 설계를 앞단에 두면 이런 재작업이 사라집니다.
 
 Slack으로 공유하는 차트에도 같은 지침이 적용된다는 점은 실무에서 특히 유용합니다. 팀 채널에 붙이는 즉석 차트는 보통 가장 대충 만들어지고 가장 많이 읽히는 이중고를 겪는데, 스킬을 거치면 이런 차트도 정식 대시보드와 같은 규칙을 따르게 됩니다.
+
+![claude-code-dataviz-skill 슬라이드 4]({{ '/assets/images/claude-code-dataviz-skill-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -392,18 +400,6 @@ Slack으로 공유하는 차트에도 같은 지침이 적용된다는 점은 �
 
 기본 팔레트가 브랜드 중립적이라는 점도 양날입니다. 교체하지 않고 그대로 쓰면 어느 회사 차트인지 알 수 없는 무색무취한 그림이 나옵니다. `references/palette.md`의 값을 자기 브랜드로 바꾸는 한 단계를 건너뛰면 일관성은 얻되 정체성은 잃습니다. 스킬은 방법을 주고, 브랜드를 입히는 마지막 결정은 여전히 우리 몫입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-code-dataviz-skill 슬라이드 1]({{ '/assets/images/claude-code-dataviz-skill-slide-01.webp' | relative_url }})
-
-![claude-code-dataviz-skill 슬라이드 2]({{ '/assets/images/claude-code-dataviz-skill-slide-02.webp' | relative_url }})
-
-![claude-code-dataviz-skill 슬라이드 3]({{ '/assets/images/claude-code-dataviz-skill-slide-03.webp' | relative_url }})
-
-![claude-code-dataviz-skill 슬라이드 4]({{ '/assets/images/claude-code-dataviz-skill-slide-04.webp' | relative_url }})
 
 ## 출처
 

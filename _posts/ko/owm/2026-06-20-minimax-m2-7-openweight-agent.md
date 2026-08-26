@@ -39,6 +39,8 @@ MiniMax가 `MiniMaxAI/MiniMax-M2.7`로 공개한 모델입니다. 총 229B 파�
 
 라이선스는 "other"로 분류되어 있습니다. 모델을 사용하거나 상용 배포를 검토한다면 LICENSE 원문을 직접 읽어야 합니다.
 
+![minimax-m2-7-openweight-agent 슬라이드 1](/assets/images/minimax-m2-7-openweight-agent-slide-01.webp)
+
 ## 아키텍처
 
 M2.7의 MoE 구조 세부 파라미터(전문가 수, 활성 전문가 수, 어텐션 방식, 컨텍스트 길이)는 공개 모델카드에 명시적으로 기재되어 있지 않습니다. 229B라는 총 파라미터 수와 FP8 지원이 주요 공개 정보입니다.
@@ -46,6 +48,8 @@ M2.7의 MoE 구조 세부 파라미터(전문가 수, 활성 전문가 수, 어�
 모델카드에서 강조하는 특징은 두 가지입니다. 첫째, 에이전트 팀 기능으로 역할 정체성을 가진 여러 에이전트가 협업하고 자율 의사결정을 수행한다고 설명합니다. 둘째, 내부 버전 기준 100회 이상 자율 최적화 라운드를 거쳤다는 자기진화(self-evolution) 주장이 있습니다. 이 수치는 모델 개발사 주장이므로 독립 검증 없이 그대로 받아들이기보다는 실제 태스크에서 직접 확인하는 것이 맞습니다.
 
 tool-use는 명시적으로 지원됩니다.
+
+![minimax-m2-7-openweight-agent 슬라이드 2](/assets/images/minimax-m2-7-openweight-agent-slide-02.webp)
 
 ## 벤치마크
 
@@ -70,6 +74,8 @@ SWE-Pro 56.22%와 SWE Multilingual 76.5는 코드 에이전트 분야에서 준�
 
 MM Claw e2e 62.7%는 멀티모달 에이전트 태스크 성능으로, 이미지와 텍스트를 함께 처리하는 파이프라인에서 참고할 수치입니다.
 
+![minimax-m2-7-openweight-agent 슬라이드 3](/assets/images/minimax-m2-7-openweight-agent-slide-03.webp)
+
 ## 서빙 및 배포
 
 ### 지원 프레임워크
@@ -93,6 +99,8 @@ MM Claw e2e 62.7%는 멀티모달 에이전트 태스크 성능으로, 이미지
 
 229B BF16 기준 약 458GB VRAM이 필요합니다. H100 80GB 기준 6장 이상이 필요한 규모입니다. FP8을 쓰면 절반 수준으로 줄어듭니다. NVIDIA NIM 경로를 쓰면 DGX 시스템에서 최적화된 서빙 스택을 그대로 가져올 수 있어서 초기 설정 부담이 줄어듭니다.
 
+![minimax-m2-7-openweight-agent 슬라이드 4](/assets/images/minimax-m2-7-openweight-agent-slide-04.webp)
+
 ## ThakiCloud 관점
 
 M2.7에서 가장 실용적으로 눈에 들어오는 두 가지를 꼽으면 다음과 같습니다.
@@ -102,16 +110,3 @@ M2.7에서 가장 실용적으로 눈에 들어오는 두 가지를 꼽으면 �
 **라이선스 "other"는 온프렘 상용 배포 전 필수 확인 항목.** 오픈웨이트라는 말이 상용 무료를 의미하지 않습니다. 라이선스가 "other"로 분류되어 있다는 것은 표준 분류(MIT, Apache, Llama Community 등)와 다른 조건이 있다는 신호입니다. 상용 서비스에 붙이거나 내부 엔터프라이즈 배포를 계획한다면 LICENSE 원문을 법무팀과 함께 검토해야 합니다. 기술 평가와 라이선스 검토는 병렬로 진행하되 후자가 배포 전에 완료되어야 합니다.
 
 에이전트 팀 협업이나 자기진화 기능은 실제 사용 사례에서 직접 검증하는 것이 맞습니다. 벤치마크와 개발사 설명만으로는 실제 워크플로에서 어떻게 동작하는지 알기 어렵습니다. 프로토타입 단계에서 소규모 양자화 버전으로 먼저 검증하고 필요한 하드웨어 규모를 산정하는 접근이 현실적입니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![minimax-m2-7-openweight-agent 슬라이드 1](/assets/images/minimax-m2-7-openweight-agent-slide-01.webp)
-
-![minimax-m2-7-openweight-agent 슬라이드 2](/assets/images/minimax-m2-7-openweight-agent-slide-02.webp)
-
-![minimax-m2-7-openweight-agent 슬라이드 3](/assets/images/minimax-m2-7-openweight-agent-slide-03.webp)
-
-![minimax-m2-7-openweight-agent 슬라이드 4](/assets/images/minimax-m2-7-openweight-agent-slide-04.webp)
-

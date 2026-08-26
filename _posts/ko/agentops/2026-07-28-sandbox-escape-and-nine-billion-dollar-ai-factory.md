@@ -34,6 +34,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 연합이 결성됐다는 사실 자체도 중요한 신호입니다. 업계 표준을 만드는 단체가 생기면 그 표준은 곧 조달 문서로 내려옵니다. 지금까지 기업 보안 심사에서 AI는 대체로 데이터 유출 항목 하나로 다뤄졌지만, 앞으로는 에이전트가 어떤 권한으로 무엇을 실행했는지 증빙하라는 항목이 따라붙을 가능성이 큽니다. 네이버와 SK텔레콤이 창립 멤버로 들어간 이상 국내 대기업 심사 양식이 바뀌는 것도 시간 문제로 보입니다.
 
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 1](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-01.webp)
+
 ## 시장은 통제를 상품으로 만들기 시작했습니다
 
 흥미로운 반응은 곧바로 나왔습니다. 디지털투데이가 정리한 보안 특화 모델 경쟁이 그것입니다. 코전트 시큐리티는 내부 공격 경로를 실제 실행으로 검증하는 추론 모델 VR-1을 내놨는데, 자체 벤치마크에서 키미 K3와 클로드 오퍼스 4.8, GLM-5.2 대비 공격 경로를 두 배 더 입증하면서 비용은 4분의 1 수준을 기록했다고 합니다. 구글은 취약점 탐지와 패치를 담당하는 제미나이 3.5 플래시 사이버를 정부와 신뢰 파트너 한정 파일럿으로 열었고, 마이크로소프트도 자사 취약점 플랫폼에 사이버보안 특화 모델을 탑재했습니다.
@@ -41,6 +43,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 가장 시사적인 쪽은 시스코입니다. 오픈웨이트 소형 모델 안타레스-350M과 안타레스-1B를 허깅페이스에 공개했는데, 로컬에서 돌아가기 때문에 민감한 소스코드를 클라우드로 내보내지 않고도 취약점 위치를 특정합니다. 500개 저장소를 15분 남짓, 1달러 미만으로 스캔했다고 하니 5시간과 100달러 이상이 들던 대형 범용 모델과는 성격이 아예 다른 도구입니다.
 
 방향이 보이시나요. 통제 계층의 해법은 "모델을 더 크게"가 아니라 "작게, 로컬로, 검증 가능하게"로 가고 있습니다. 같은 날 서울경제가 전한 노타의 발표도 결이 같습니다. 솔라 오픈2를 4비트 저정밀 양자화와 프루닝으로 압축해 서빙에 필요한 GPU를 8장에서 2장으로 낮췄습니다. 250B 파라미터 규모의 전문가 혼합 모델을 자기 랙 안에서 돌릴 수 있게 됐다는 뜻이고, 이는 데이터 주권이 중요한 금융과 공공, 제조 고객에게는 성능 지표보다 훨씬 중요한 소식입니다. 디지털데일리가 비교한 규제 특화 서비스 챗코딧이 범용 모델보다 실무 속도에서 앞섰다는 결과, 데이터뉴스가 전한 위즈코어의 제조 도메인 특화 플랫폼도 같은 흐름 위에 있습니다. 좁게 만들고 가까이 두는 쪽이 이기고 있습니다.
+
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 2](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-02.webp)
 
 ## 어떤 모델을 쓸지는 이미 기술 문제가 아닙니다
 
@@ -52,6 +56,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 그래서 모델 교체 가능성은 이제 취향이 아니라 아키텍처 요구사항입니다. 특정 모델에 프롬프트와 툴 호출 규약이 하드코딩된 시스템은 제재 뉴스 한 줄에 재작성 대상이 됩니다. 여기에 국내 기업이 상용 API 출력을 학습 데이터로 써 온 관행까지 겹치면, 데이터 거버넌스 정비는 법무 과제가 아니라 엔지니어링 과제로 넘어옵니다.
 
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 3](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-03.webp)
+
 ## 자본은 실행 쪽에만 몰려 있습니다
 
 이 세 갈래 위에 어제의 대형 뉴스를 얹어 보겠습니다. 프라임경제와 조선비즈에 따르면 엔비디아는 네이버 제3자 배정 유상증자에 약 10억 달러를 넣어 지분 4.5%로 3대 주주가 되고, 브룩필드는 최대 90억 달러 규모 자금 조달을 지원하는 조건합의서를 맺었습니다. 각 세종 AI 팩토리는 2027년 상반기 55MW로 시작해 2028년 200MW, 장기적으로 1GW까지 확장한다는 계획입니다. 아시아경제가 전한 엔비디아의 신규 딜 총규모는 7500억 달러에 이르고 여기에는 SK그룹과의 5000억 달러 규모 협력 의향서가 포함됩니다. 같은 날 한국면세뉴스는 엔비디아가 SSI에 약 50억 달러를 투자했고 SSI는 12개월 안에 컴퓨팅을 10배로 늘린다고 전했습니다.
@@ -61,6 +67,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 연합뉴스의 분석은 이 구조의 역설을 정확히 짚습니다. 소버린 AI는 특정 국가와 기업에 대한 의존을 줄이자는 취지에서 출발했는데, 데이터 주권을 확보하는 대가로 인프라는 다시 한 벤더의 생태계 안으로 들어갑니다. 투자금이 결국 GPU 구매로 돌아오는 순환 구조에 채권시장이 경고음을 내는 것도 같은 지점입니다.
 
 여기서 비대칭이 드러납니다. 우리는 토큰을 생산하는 능력에 조 단위를 씁니다. 그런데 그 토큰이 무엇을 실행해도 되는지 정하고, 실행한 뒤 무엇을 했는지 증명하는 계층에는 얼마를 쓰고 있을까요. 어제 사고 보고서가 알려준 것은 그 계층이 비어 있으면 나머지 투자가 위험 자산이 된다는 사실입니다.
+
+![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 4](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-04.webp)
 
 ## 통제는 정책과 감사와 격리라는 세 개의 리소스입니다
 
@@ -98,16 +106,3 @@ ThakiCloud가 Paxis를 Agent-Native Cloud로 정의하면서 스킬과 툴뿐 �
 - 한국면세뉴스, [美 엔비디아, AI 스타트업 SSI에 7.3조원 투자…전략적 협력 강화](http://www.kdfnews.com/news/articleView.html?idxno=185752)
 - 파이낸셜뉴스, [빅테크, '오픈형 AI 보안 동맹' 결성…'오픈AI 모델 해킹' 파장 여파](http://www.fnnews.com/news/202607280709311620)
 - 디지털투데이, [취약점 탐지부터 추론까지...보안 특화 AI 모델 쏟아진다](https://www.digitaltoday.co.kr/news/articleView.html?idxno=687441)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 1](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-01.webp)
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 2](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-02.webp)
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 3](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-03.webp)
-
-![sandbox-escape-and-nine-billion-dollar-ai-factory 슬라이드 4](/assets/images/sandbox-escape-and-nine-billion-dollar-ai-factory-slide-04.webp)
-

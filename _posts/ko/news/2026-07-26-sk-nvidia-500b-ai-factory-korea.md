@@ -31,6 +31,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/sk-nvidia-500b-ai-facto
 
 먼저 결론을 말씀드리겠습니다. 2기가와트 AI 팩토리가 2027년에 가동을 시작해도 여러분 조직의 GPU 대기열은 그것만으로 짧아지지 않습니다. 공급이 늘어나면 병목은 사라지는 것이 아니라 위층으로 이동합니다. 하드웨어를 구하는 문제에서 확보한 하드웨어를 조직 전체가 공정하고 촘촘하게 나눠 쓰는 문제로 넘어갑니다. 그 계층을 미리 만들어 둔 조직만 늘어난 공급을 실제 처리량으로 바꿉니다.
 
+![sk-nvidia-500b-ai-factory-korea 슬라이드 1](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-01.webp)
+
 ## 발표된 사실만 먼저
 
 2026년 7월 24일과 25일에 걸쳐 SK그룹과 NVIDIA가 전략적 파트너십 확대를 발표했습니다. 공개된 내용을 사실 그대로만 옮기면 다음과 같습니다.
@@ -56,6 +58,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/sk-nvidia-500b-ai-facto
 랙 단위로 환산하면 규모가 더 실감납니다. 최신 세대 고밀도 AI 랙 한 대의 소비 전력을 130킬로와트 안팎으로 잡으면, 냉각과 부대 설비를 제외한 순수 IT 부하 기준으로 만 대 단위의 랙이 들어갈 수 있는 규모입니다. 다만 이 계산은 공개된 랙 전력값에 기댄 추정이고, 실제로는 전력사용효율과 배전 설계, 단계별 증설 계획에 따라 크게 달라집니다.
 
 인프라를 운영해 본 입장에서 더 중요한 대목은 따로 있습니다. 기가와트급 신규 부하는 장비를 사는 문제가 아니라 계통에 접속하는 문제입니다. 부지 확보와 송전 용량, 변전 설비, 인허가가 순서대로 풀려야 첫 랙에 전기가 들어옵니다. 2027년이라는 시점이 보수적으로 잡혀 있는 이유이기도 합니다.
+
+![sk-nvidia-500b-ai-factory-korea 슬라이드 2](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-02.webp)
 
 ## DSX와 HBM4가 바꾸는 조달의 성격
 
@@ -90,6 +94,8 @@ flowchart TB
 
 여기서 자주 생기는 오해가 있습니다. AI 팩토리는 원자재를 공급하는 설비이지 여러분의 조직이 쓰는 플랫폼이 아닙니다. 전력과 랙과 가속기가 준비돼도, 여러 팀이 한 클러스터를 나눠 쓰는 순간 완전히 다른 문제가 시작됩니다. 어떤 팀에 얼마를 배분할지, 급한 추론 워크로드가 장시간 학습 잡을 밀어낼 수 있는지, 밀려난 잡을 어디서부터 다시 시작할지, 유휴 자원을 누가 어떤 규칙으로 채울지가 전부 정해져 있어야 합니다. 이 규칙이 없으면 유휴 GPU와 긴 대기열이 같은 클러스터에서 동시에 발생합니다. 공급을 열 배로 늘려도 이 현상은 사라지지 않습니다.
 
+![sk-nvidia-500b-ai-factory-korea 슬라이드 3](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 발표를 읽으면서 저희가 확인한 것은 저희가 만들고 있는 두 제품이 겨냥하는 지점이 정확히 위 그림의 상단 네 계층이라는 사실입니다.
@@ -112,6 +118,8 @@ Paxis는 그 위에서 도는 에이전트 네이티브 클라우드 제어 평�
 
 가장 강한 반론은 이런 것입니다. 공급이 늘면 단가가 내려가고 그러면 운영 고민의 상당 부분이 돈으로 해결되지 않느냐는 지적입니다. 일리가 있습니다. 다만 지난 십여 년의 클라우드 역사가 보여준 것은 단가 하락이 수요를 더 크게 키웠고, 그 결과 비용 관리와 자원 배분이 오히려 더 어려운 문제가 됐다는 사실입니다. 값이 싸질수록 더 많은 팀이 더 많은 워크로드를 올리고, 그 순간 다시 누가 얼마를 쓰는지의 문제로 돌아옵니다.
 
+![sk-nvidia-500b-ai-factory-korea 슬라이드 4](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-04.webp)
+
 ## 정리
 
 이번 발표에서 확정된 것은 세 가지입니다. 국내에 최대 2기가와트급 AI 팩토리가 들어오고, 첫 단계가 2027년에 켜지며, 그 위에 얹히는 가속기와 메모리가 한 로드맵으로 묶인다는 사실입니다. 규모는 크지만 성격은 원자재 공급입니다.
@@ -127,16 +135,3 @@ Paxis는 그 위에서 도는 에이전트 네이티브 클라우드 제어 평�
 - SK hynix Newsroom, [SK Group and NVIDIA Expand Strategic Partnership Across AI Factories and Next-Generation Memory](https://news.skhynix.com/en/skhynix-nvidia-partnership-2026/)
 - Tom's Hardware, [Nvidia and SK Group enter $500 billion AI partnership](https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-sk-group-enter-usd500-billion-ai-partnership-plan-to-supercharge-ai-infrastructure-with-next-gen-memory-and-massive-ai-factories)
 - StockTitan, [SK Telecom Plans 2-Gigawatt AI Factory to Come Online in 2027](https://www.stocktitan.net/news/NVDA/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-flao3olat3l2.html)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![sk-nvidia-500b-ai-factory-korea 슬라이드 1](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-01.webp)
-
-![sk-nvidia-500b-ai-factory-korea 슬라이드 2](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-02.webp)
-
-![sk-nvidia-500b-ai-factory-korea 슬라이드 3](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-03.webp)
-
-![sk-nvidia-500b-ai-factory-korea 슬라이드 4](/assets/images/sk-nvidia-500b-ai-factory-korea-slide-04.webp)
-

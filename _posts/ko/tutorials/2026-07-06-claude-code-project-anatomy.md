@@ -25,6 +25,8 @@ Claude Code로 작업을 시작할 때 가장 흔한 실수는 세팅을 건너�
 
 이 문제의 해법은 모델을 더 좋은 것으로 바꾸는 게 아니라 **프로젝트 자체를 하나의 계약 구조로 만드는 것**입니다. Claude Code에서 그 계약이 사는 곳이 바로 프로젝트 루트의 `.claude/` 폴더입니다. 최근 X에서 널리 공유된 Akshay Pachaar의 ".claude/ 폴더 해부" 스레드가 이 구조를 잘 정리했는데, 이 글에서는 그 뼈대를 따라가되 **실제로 스킬 1,671개가 도는 프로덕션 Claude Code 프로젝트를 직접 측정한 수치**로 각 레이어가 현실에서 어떤 규모로 쓰이는지 보여 드립니다. 그리고 ThakiCloud가 이 패턴을 Agent-Native Cloud인 Paxis로 제품화한 방식과 연결합니다.
 
+![CLAUDE.md는 얇게, 능력은 스킬에 쌓는 원칙을 저울로 표현한 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-05.webp' | relative_url }})
+
 ## .claude/ 폴더는 무엇인가
 
 `.claude/`는 Claude Code에게 "이 프로젝트에서는 이렇게 일하라"고 알려 주는 규약의 집합입니다. 핵심은 하나의 거대한 프롬프트가 아니라, 역할이 다른 여러 레이어로 나뉘어 있다는 점입니다. 각 레이어는 로딩 시점과 비용이 다릅니다.
@@ -371,6 +373,8 @@ Claude Code로 작업을 시작할 때 가장 흔한 실수는 세팅을 건너�
 
 여기에 더해 `.claude/` 폴더는 두 벌이 존재합니다. 하나는 리포지토리에 커밋되어 팀 전체가 공유하는 프로젝트용이고, 다른 하나는 `~/.claude/`에 있는 전역 폴더로 개인 선호와 프로젝트 간 자동 메모리를 담습니다.
 
+![1,671개의 스킬이 증명하는 설계 원칙, 프로덕션 환경의 데이터 해부 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-06.webp' | relative_url }})
+
 ## 설치 및 구성
 
 가장 빠른 시작은 프로젝트 루트에서 초기화하는 것입니다.
@@ -417,11 +421,11 @@ description: >-
 
 핵심 규율은 하나입니다. **능력은 하네스가 아니라 스킬에 쌓습니다.** CLAUDE.md와 rules는 얇게 유지하고, 도메인 지식·판단·템플릿·실패 사례는 스킬에 두텁게 넣습니다. 같은 스킬이 Claude Code든 다른 하네스든 가로질러 동작하도록 만드는 것이 목표입니다.
 
-![CLAUDE.md는 얇게, 능력은 스킬에 쌓는 원칙을 저울로 표현한 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-05.webp' | relative_url }})
+
+![1,671개 스킬을 BM25로 검색해 관련 스킬만 격리 샌드박스에서 실행하는 Paxis 라우팅 엔진 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-11.webp' | relative_url }})
 
 ## 실제 측정: 프로덕션 Claude Code 프로젝트의 해부
 
-![1,671개의 스킬이 증명하는 설계 원칙, 프로덕션 환경의 데이터 해부 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-06.webp' | relative_url }})
 
 이 글을 쓰는 리포지토리 자체가 무겁게 구성된 Claude Code 프로젝트입니다. 각 레이어가 현실에서 어떤 규모로 쓰이는지, 직접 파일을 세어 측정했습니다. 아래 수치는 모두 실제 측정값입니다.
 
@@ -440,13 +444,14 @@ description: >-
 
 그런데 스킬이 1,671개나 되면 새로운 문제가 생깁니다. 사람도, 모델도 이 목록 전체를 훑어 "지금 어떤 스킬을 써야 하는지" 고를 수 없습니다. 이 지점이 정확히 다음 섹션으로 이어집니다.
 
+![K8s·Kueue GPU 스케줄링과 vLLM 서빙으로 에이전트 실행을 낮은 비용에 받치는 ai-platform 인프라 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-13.webp' | relative_url }})
+
 ## ThakiCloud 제품 적용 시사점
 
 스킬이 수천 개가 되는 순간, `.claude/` 폴더의 파일 관리는 더 이상 개인의 정리 문제가 아니라 **런타임 라우팅 문제**가 됩니다. ThakiCloud는 이 패턴을 Agent-Native Cloud인 **Paxis**로 제품화했습니다.
 
 Paxis는 ThakiCloud의 AI 인프라(ai-platform) 위에서 도는 에이전트 제어 평면으로, Skills·Tools·Policies·Audit Logs를 일급 리소스로 다룹니다. `.claude/` 폴더 해부와 직접 맞닿는 부분은 **Skill Harness**입니다. 위에서 본 것처럼 스킬을 아무리 많이 만들어도, 매 턴 전부 로드하면 컨텍스트가 폭발합니다. Paxis는 요청이 들어오면 방대한 스킬 풀에서 BM25 검색으로 관련 스킬만 선택해 로드하고, 그 스킬을 격리된 샌드박스에서 실행합니다. 이 글의 실측처럼 스킬 수가 1,000개를 훌쩍 넘어도 라우팅이 성립하는 이유입니다.
 
-![1,671개 스킬을 BM25로 검색해 관련 스킬만 격리 샌드박스에서 실행하는 Paxis 라우팅 엔진 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-11.webp' | relative_url }})
 
 여기에 hooks가 하는 일(결정론적 게이트)을 정책 게이트와 감사 로그로 승격합니다. `.claude/settings.json`의 PreToolUse 훅이 위험한 명령을 막듯, Paxis는 모든 에이전트 행동을 정책 게이트와 감사 로그로 통과시켜 "누가 언제 무엇을 실행했는가"를 남깁니다. 개인 프로젝트의 훅을 멀티테넌트 환경에서도 신뢰할 수 있게 만든 형태입니다.
 
@@ -454,7 +459,6 @@ agents/ 레이어는 Paxis의 DAG 멀티에이전트 오케스트레이션으로
 
 인프라 관점(ai-platform 렌즈)에서도 의미가 있습니다. 이 모든 스킬·에이전트 실행은 결국 GPU와 추론 비용을 소모합니다. ThakiCloud의 ai-platform은 K8s·Kueue 기반 GPU 스케줄링과 vLLM 서빙으로 이 실행을 낮은 비용에 받쳐 주며, 온프렘·소버린 요구가 있는 고객 환경에서도 같은 하네스를 self-hosting으로 돌릴 수 있게 합니다. 저비용 서빙이 에이전트 경제성을 만들고, 그 위에서 Paxis의 스킬 하네스가 돌아가는 구조입니다.
 
-![K8s·Kueue GPU 스케줄링과 vLLM 서빙으로 에이전트 실행을 낮은 비용에 받치는 ai-platform 인프라 슬라이드]({{ '/assets/images/claude-code-project-anatomy-slide-13.webp' | relative_url }})
 
 ## 한계 및 반론
 

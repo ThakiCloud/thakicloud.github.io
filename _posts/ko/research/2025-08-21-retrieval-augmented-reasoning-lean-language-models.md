@@ -39,6 +39,8 @@ Alan Turing Institute의 연구진이 최근 발표한 "Retrieval-Augmented Reas
 
 특히 주목할 점은 이 시스템이 NHS(영국 국민건강서비스)의 A-to-Z 조건 페이지라는 실제 도메인 특화 데이터를 활용하여 검증되었다는 것입니다. 이는 단순한 학술적 연구를 넘어서 실제 의료 환경에서의 적용 가능성을 보여주는 중요한 성과라고 할 수 있습니다.
 
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 1]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-01.webp' | relative_url }})
+
 ## 연구 배경 및 동기
 
 ### 테스트 타임 스케일링의 중요성
@@ -72,6 +74,8 @@ Alan Turing Institute의 연구진이 최근 발표한 "Retrieval-Augmented Reas
 ### 데이터 처리 파이프라인
 
 시스템의 데이터 처리 파이프라인은 문서 압축, 합성 데이터 설계, 그리고 추론 인식 파인튜닝의 세 가지 핵심 요소를 중심으로 설계되었습니다. 요약 기반 문서 압축은 검색된 문서의 핵심 정보를 보존하면서도 처리 효율성을 높이는 역할을 합니다. 합성 데이터 설계는 실제 도메인에서 발생할 수 있는 다양한 쿼리 패턴을 시뮬레이션하여 모델의 일반화 능력을 향상시킵니다. 추론 인식 파인튜닝은 모델이 검색된 증거를 바탕으로 논리적이고 일관성 있는 추론을 수행할 수 있도록 훈련합니다.
+
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 2]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-02.webp' | relative_url }})
 
 ## 데이터셋 구성 및 실험 설계
 
@@ -180,6 +184,8 @@ Alan Turing Institute의 연구진이 최근 발표한 "Retrieval-Augmented Reas
 
 특히 주목할 만한 것은 "보수적 진단" 편향을 도입한 것입니다. 이는 모델이 불확실한 상황에서 더 높은 심각도 수준을 권장하거나 전문의 상담을 권하는 방향으로 학습되도록 하여, 잠재적으로 위험한 상황을 놓치는 것을 방지합니다.
 
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 3]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-03.webp' | relative_url }})
+
 ## 평가 방법론 및 실험 결과
 
 ### 종합적 평가 프레임워크
@@ -263,6 +269,8 @@ Alan Turing Institute의 연구진이 최근 발표한 "Retrieval-Augmented Reas
 **지식 증류 (Knowledge Distillation)**: 더 큰 모델의 지식을 경량 모델로 전이하는 기법을 활용하여, 작은 모델도 큰 모델에 준하는 성능을 발휘할 수 있도록 했습니다.
 
 **동적 추론**: 쿼리의 복잡성에 따라 추론 깊이를 조절하는 동적 추론 메커니즘을 구현했습니다. 간단한 쿼리는 적은 계산으로도 처리할 수 있어 전체적인 효율성을 향상시켰습니다.
+
+![retrieval-augmented-reasoning-lean-language-models 슬라이드 4]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-04.webp' | relative_url }})
 
 ## 시스템의 실용적 응용 가능성
 
@@ -846,16 +854,3 @@ DeepSeek-R1 모델을 활용한 추론 트레이스 생성에 사용된 프롬�
 4. **심각도 일관성**: 동일한 조건에 대한 심각도 판단의 일관성 확인
 
 이러한 체계적인 데이터셋 구성과 검증 과정은 시스템의 신뢰성과 실용성을 크게 향상시키는 핵심 요소였습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 1]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-01.webp' | relative_url }})
-
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 2]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-02.webp' | relative_url }})
-
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 3]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-03.webp' | relative_url }})
-
-![retrieval-augmented-reasoning-lean-language-models 슬라이드 4]({{ '/assets/images/retrieval-augmented-reasoning-lean-language-models-slide-04.webp' | relative_url }})
-

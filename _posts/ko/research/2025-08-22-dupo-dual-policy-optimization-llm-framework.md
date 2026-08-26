@@ -43,6 +43,8 @@ published: false
 
 DuPO는 듀얼 학습(Dual Learning) 개념을 기반으로 한 자기 감독 학습 프레임워크로, 외부 주석이나 검증자에 대한 의존도를 크게 줄이면서도 다양한 작업에서 일관된 성능 향상을 달성할 수 있는 새로운 패러다임을 제시합니다. 이 연구는 LLM 최적화 분야에서 확장 가능하고 일반적이며 주석이 필요 없는 새로운 방향성을 제시한다는 점에서 큰 의미를 가집니다.
 
+![dupo-dual-policy-optimization-llm-framework 슬라이드 1]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-01.webp' | relative_url }})
+
 ## DuPO의 핵심 개념: 일반화된 듀얼리티 프레임워크
 
 ### 듀얼 학습의 기본 원리와 한계
@@ -460,6 +462,8 @@ $$\nabla_\theta J(\theta) = \mathbb{E}_{x \sim D, y \sim \pi_\theta(y|x)}[R(x, y
 2. **점진적 학습**: 프라이멀과 듀얼 작업을 번갈아가며 점진적으로 개선
 3. **앙상블 접근법**: 여러 듀얼 작업의 결과를 종합하여 더 안정적인 보상 계산
 
+![dupo-dual-policy-optimization-llm-framework 슬라이드 2]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-02.webp' | relative_url }})
+
 ## 실험 결과 및 성능 분석
 
 ### 번역 작업에서의 성능 향상
@@ -516,6 +520,8 @@ DuPO는 특정 도메인에서도 효과적으로 활용될 수 있습니다:
 
 **과학 연구**: 실험 조건의 일부를 숨기고, 결과 분석으로부터 이를 재구성하는 방식으로 과학적 추론의 정확성을 평가할 수 있습니다.
 
+![dupo-dual-policy-optimization-llm-framework 슬라이드 3]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-03.webp' | relative_url }})
+
 ## DuPO의 기술적 장점과 혁신성
 
 ### 확장성 (Scalability)
@@ -558,6 +564,8 @@ DuPO가 혁신적인 접근법임에도 불구하고 몇 가지 한계점이 존
 
 **멀티모달 확장**: 텍스트를 넘어 이미지, 음성, 비디오 등 다양한 모달리티에서 DuPO를 적용하는 연구가 필요합니다. 각 모달리티의 특성에 맞는 듀얼리티 설계 방법론 개발이 중요합니다.
 
+![dupo-dual-policy-optimization-llm-framework 슬라이드 4]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-04.webp' | relative_url }})
+
 ## 결론: DuPO가 제시하는 AI 발전의 새로운 방향
 
 DuPO(Dual-Policy Optimization)는 대규모 언어 모델의 성능 향상을 위한 혁신적인 패러다임을 제시합니다. 기존 RLHF와 RLVR 방법론의 한계를 극복하고, 확장 가능하고 일반적이며 주석이 필요 없는 자기 감독 학습 프레임워크를 통해 다양한 작업에서 일관된 성능 향상을 달성했습니다.
@@ -573,20 +581,7 @@ DuPO의 핵심인 일반화된 듀얼리티 프레임워크는 입력을 알려�
 DuPO는 AI 연구 분야에서 자기 감독 학습의 새로운 가능성을 열어주었으며, 이는 향후 더욱 지능적이고 자율적인 AI 시스템 개발의 중요한 이정표가 될 것으로 기대됩니다. 특히 저자원 환경이나 전문 도메인에서의 AI 활용 확산에 중요한 기여를 할 것으로 전망됩니다.
 
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![dupo-dual-policy-optimization-llm-framework 슬라이드 1]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-01.webp' | relative_url }})
-
-![dupo-dual-policy-optimization-llm-framework 슬라이드 2]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-02.webp' | relative_url }})
-
-![dupo-dual-policy-optimization-llm-framework 슬라이드 3]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-03.webp' | relative_url }})
-
-![dupo-dual-policy-optimization-llm-framework 슬라이드 4]({{ '/assets/images/dupo-dual-policy-optimization-llm-framework-slide-04.webp' | relative_url }})
-
 ## 출처
 
 - Yang et al., "DuPO: Enabling Reliable LLM Self-Verification via Dual Preference Optimization" (arXiv:2508.14460, ByteDance Seed, 2025): <https://arxiv.org/abs/2508.14460>
 - 본문의 성능 수치(번역 COMET 향상, 수학 추론 정확도 향상, 추론 시 재랭킹 향상)는 위 논문 발표 기준이며 본 환경에서 재현한 값이 아닙니다.
-

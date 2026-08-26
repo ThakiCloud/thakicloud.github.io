@@ -27,6 +27,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 다중 스텝 에이전트를 운영하거나 LLM 추론 비용을 책임지고 계신 분, 그리고 벤치마크 수치를 근거로 모델을 선택해야 하는 분을 위해 썼습니다. 결론부터 말씀드리면, **같은 모델의 점수가 13.3%에서 38.3%로 세 배 가까이 벌어진 원인은 모델 능력이 아니라 하네스가 모델의 작업 기억을 어떻게 다루느냐였습니다.** 추론 흔적을 스텝마다 버리느냐 유지하느냐, 컨텍스트가 넘칠 때 잘라내느냐 요약하느냐. 이 두 가지 선택이 정확도와 토큰 비용을 동시에 바꿨습니다. 벤치마크 순위 자체보다 이 사실이 우리 파이프라인에 훨씬 실용적인 함의를 갖습니다.
 
+![arc-agi-3-harness-settings-context-memory 슬라이드 1](/assets/images/arc-agi-3-harness-settings-context-memory-slide-01.webp)
+
 ## 개요
 
 ARC-AGI-3는 ARC Prize 재단이 운영하는 벤치마크로, 모델이 처음 보는 2차원 퍼즐 게임을 시행착오로 학습해 클리어할 수 있는지를 봅니다. 앞선 ARC-AGI-1이나 2가 정적인 격자 변환 문제를 한 번에 푸는 형태였다면, 3은 여러 번 움직이면서 규칙을 스스로 알아내야 하는 에이전트형 과제입니다. 한 스텝의 정답이 아니라 수십 스텝에 걸친 학습과 기억이 평가 대상이 됩니다.
@@ -76,6 +78,8 @@ OpenAI가 켠 설정은 두 가지입니다.
 
 두 설정 모두 OpenAI의 Responses API에서 제공됩니다. 이전 세대 인터페이스인 Chat Completions API는 매 요청이 독립적인 구조라 추론 흔적을 서버 쪽에서 이어 주는 개념이 없습니다. 그래서 OpenAI의 권고는 세 문장으로 요약됩니다. Chat Completions 대신 Responses API를 쓰고, 턴 사이에 추론을 유지하고, 장기 실행 작업에는 압축을 켜라는 것입니다.
 
+![arc-agi-3-harness-settings-context-memory 슬라이드 2](/assets/images/arc-agi-3-harness-settings-context-memory-slide-02.webp)
+
 ## 숫자를 정확히 읽기
 
 공개된 수치를 헷갈리지 않게 정리하면 다음과 같습니다.
@@ -106,6 +110,8 @@ Responses API를 쓰지 않는 환경, 예를 들어 vLLM이나 SGLang으로 오
 
 **넷째, 개선을 무엇으로 판정할 것인가.** 이 사건의 교훈을 그대로 적용하면, 개선 여부는 정확도와 출력 토큰을 함께 봐야 합니다. 한쪽만 보면 착시가 생깁니다. 추론 유지로 입력 토큰이 늘었는데 출력 토큰 감소가 그보다 크지 않으면 총비용은 오릅니다. 실제 워크로드로 두 값을 동시에 측정하는 것이 유일하게 믿을 만한 판정 방법입니다.
 
+![arc-agi-3-harness-settings-context-memory 슬라이드 3](/assets/images/arc-agi-3-harness-settings-context-memory-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 사건은 ThakiCloud가 운영하는 두 제품 모두에 직접 닿습니다.
@@ -128,24 +134,14 @@ Responses API를 쓰지 않는 환경, 예를 들어 vLLM이나 SGLang으로 오
 
 넷째, **벤더 종속 문제가 있습니다.** 이 두 설정은 OpenAI Responses API의 기능입니다. 자체 호스팅 모델을 vLLM이나 SGLang으로 서빙하는 환경이라면 같은 동작을 직접 구현해야 합니다. 추론 흔적 보존은 프롬프트 조립 단계에서 가능하지만, 압축은 요약 모델을 따로 붙여야 해서 지연과 비용이 추가됩니다.
 
+![arc-agi-3-harness-settings-context-memory 슬라이드 4](/assets/images/arc-agi-3-harness-settings-context-memory-slide-04.webp)
+
 ## 정리
 
 이 사건에서 가져갈 것은 리더보드 순위가 아닙니다. **같은 모델이 하네스 설정 하나로 정확도 세 배와 출력 토큰 6분의 1을 동시에 오갔다는 사실**입니다. 다중 스텝 에이전트에서 성능은 모델 안에만 있지 않고, 스텝 사이의 기억을 누가 어떻게 관리하느냐에 상당 부분 걸려 있습니다.
 
 당장 해 볼 일은 단순합니다. 운영 중인 에이전트 루프를 열어서 스텝 사이에 무엇이 버려지는지 확인하십시오. 도구 호출 결과만 남기고 그 선택의 이유를 버리고 있다면, 그리고 컨텍스트가 찰 때 오래된 것부터 잘라내고 있다면, 이 글의 표준 하네스와 같은 구조입니다. 모델 등급을 올리기 전에 그 두 지점을 먼저 고쳐 보는 편이 비용 대비 효과가 큽니다. 벤치마크 수치를 볼 때도 모델 이름 옆에 어떤 하네스였는지를 함께 읽는 습관이 필요합니다. 그 정보 없이는 두 숫자가 같은 것을 재고 있는지조차 알 수 없습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![arc-agi-3-harness-settings-context-memory 슬라이드 1](/assets/images/arc-agi-3-harness-settings-context-memory-slide-01.webp)
-
-![arc-agi-3-harness-settings-context-memory 슬라이드 2](/assets/images/arc-agi-3-harness-settings-context-memory-slide-02.webp)
-
-![arc-agi-3-harness-settings-context-memory 슬라이드 3](/assets/images/arc-agi-3-harness-settings-context-memory-slide-03.webp)
-
-![arc-agi-3-harness-settings-context-memory 슬라이드 4](/assets/images/arc-agi-3-harness-settings-context-memory-slide-04.webp)
 
 ## 출처
 

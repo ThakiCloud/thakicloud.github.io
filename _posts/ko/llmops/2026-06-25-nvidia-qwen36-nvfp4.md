@@ -36,6 +36,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 여기에는 하드웨어 전제가 하나 붙습니다. NVFP4 연산은 NVIDIA Hopper와 Blackwell 마이크로아키텍처에서만 가속되며, 모델카드의 테스트 하드웨어는 GB300으로 기재되어 있습니다. 이 전제는 뒤에서 다시 한계로 다루겠습니다.
 
+![nvidia-qwen36-nvfp4 슬라이드 1](/assets/images/nvidia-qwen36-nvfp4-slide-01.webp)
+
 ## vLLM으로 띄우기
 
 NVIDIA가 제시하는 기본 서빙 명령은 짧습니다. `vllm/vllm-openai:nightly` 이미지를 띄운 뒤 실행합니다.
@@ -67,6 +69,8 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 
 이 확장 명령은 `--kv-cache-dtype fp8`로 KV 캐시까지 8비트로 낮추고, `--gpu-memory-utilization 0.4`로 점유를 억제하며, MTP(Multi-Token Prediction) 기반 추측 디코딩과 도구 호출 파싱까지 켭니다. NVIDIA가 명시한 용도 자체가 AI 에이전트 시스템, 챗봇, RAG에 바로 붙일 사전 양자화 모델이므로, 옵션 구성이 그 시나리오를 그대로 반영합니다.
 
+![nvidia-qwen36-nvfp4 슬라이드 2](/assets/images/nvidia-qwen36-nvfp4-slide-02.webp)
+
 ## 정확도는 얼마나 지켜지나
 
 아래 표는 NVIDIA가 모델카드에 공개한 공식 평가로, 베이스 모델(BF16)을 기준으로 NVFP4 버전을 비교한 것입니다.
@@ -94,6 +98,8 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 
 이 파이프라인은 처음이 아닙니다. 같은 계열인 `Qwen/Qwen3-30B-A3B`를 RunPod B200(Blackwell SM100)에서 NVFP4(W4A4, group_size 16)로 양자화한 2026년 5월 1일 검증에서는 17.1GB 체크포인트를 137초의 PTQ로 생성했고, 전체 소요 약 25분에 비용은 B200 온디맨드 기준 약 3.48달러였습니다. 두 실행이 말해 주듯 NVFP4 양자화는 짧은 시간과 낮은 비용으로 끝나는 일회성 작업이며, NVIDIA처럼 사전 양자화본이 공개되면 그 작업조차 건너뛰고 바로 서빙으로 진입할 수 있습니다.
 
+![nvidia-qwen36-nvfp4 슬라이드 3](/assets/images/nvidia-qwen36-nvfp4-slide-03.webp)
+
 ## 온프레미스 서빙 관점의 이득과 한계
 
 멀티테넌트 환경에서 GPU는 가장 비싼 공유 자원이고, 메모리를 약 3.06배 줄인다는 것은 동일 GPU에 더 큰 모델이나 더 많은 동시 세션을 수용할 여지가 생긴다는 뜻입니다. 여기에 3B 수준 연산량의 MoE 특성이 겹치면 고품질 모델을 낮은 서빙 비용으로 제공한다는 온프레미스 가치 제안이 구체화됩니다. K8s 위에서는 GPU 워크로드를 Kueue로 큐잉하고 서빙은 vLLM 파드로 띄우되 `--quantization modelopt`로 체크포인트를 인식시키며, 절감된 메모리만큼 테넌트당 할당을 조정합니다.
@@ -102,16 +108,6 @@ vllm serve nvidia/Qwen3.6-35B-A3B-NVFP4 \
 
 정리하면, `nvidia/Qwen3.6-35B-A3B-NVFP4`는 Blackwell이나 Hopper 기반 인프라를 가진 팀에게 거의 손실 없이 메모리를 4분의 1로 줄이는 실용적 선택지입니다. 그 이점은 하드웨어 전제와 도메인별 정확도 검증 위에서만 성립하며, ThakiCloud는 자체 서빙 벤치마크로 처리량과 테넌트별 적합성을 확인한 뒤 노드 풀 정책에 반영할 계획입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![nvidia-qwen36-nvfp4 슬라이드 1](/assets/images/nvidia-qwen36-nvfp4-slide-01.webp)
-
-![nvidia-qwen36-nvfp4 슬라이드 2](/assets/images/nvidia-qwen36-nvfp4-slide-02.webp)
-
-![nvidia-qwen36-nvfp4 슬라이드 3](/assets/images/nvidia-qwen36-nvfp4-slide-03.webp)
 
 ![nvidia-qwen36-nvfp4 슬라이드 4](/assets/images/nvidia-qwen36-nvfp4-slide-04.webp)
 

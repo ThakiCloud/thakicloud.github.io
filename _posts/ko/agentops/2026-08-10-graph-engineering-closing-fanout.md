@@ -31,6 +31,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-c
 
 그리고 하나 더 있습니다. 팬아웃이 비싸다는 통념은 저희 데이터에서 성립하지 않았습니다. 비용은 오히려 위임하지 않고 메인 스레드에서 오래 끄는 쪽에 붙습니다.
 
+![graph-engineering-closing-fanout 슬라이드 1](/assets/images/graph-engineering-closing-fanout-slide-01.webp)
+
 ## 개요
 
 2026년 7월, X 타임라인에 Graph Engineering이라는 말이 돌기 시작했습니다. 프롬프트 엔지니어링, 컨텍스트 엔지니어링, 하네스 엔지니어링, 루프 엔지니어링에 이어 나온 다섯 번째 이름입니다. 일본어권에서는 마사히로 차엔이 이를 두고 Claude Code나 UltraCode에서 하는 Dynamic Workflow와 같은 발상이라고 설명했고, 그 트윗이 저희 큐에 들어오면서 이 글이 시작됐습니다.
@@ -65,6 +67,8 @@ flowchart TB
 ```
 
 핵심은 마지막 두 단계입니다. 판정을 모델 산문에 맡기지 않고 결정론적 코드가 표를 세는 구조입니다. 모델이 "검증해봤는데 괜찮아 보입니다"라고 말하는 것은 검증이 아닙니다. 그건 자기 보고입니다.
+
+![graph-engineering-closing-fanout 슬라이드 2](/assets/images/graph-engineering-closing-fanout-slide-02.webp)
 
 ## 설치 및 통합
 
@@ -180,6 +184,8 @@ $ .venv/bin/python .claude/skills/jarvis/runtime/graph_close.py stats
 
 폐쇄 영수증이 파일로 남는 것도 의도된 설계입니다. 무엇을 언제 검증했고 무엇을 버렸는지가 감사 가능한 흔적으로 남습니다.
 
+![graph-engineering-closing-fanout 슬라이드 3](/assets/images/graph-engineering-closing-fanout-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 실험은 저희 Paxis 팀이 매일 쓰는 코드로 돌렸습니다. 그래서 시사점도 가설이 아니라 운영 경험입니다.
@@ -202,6 +208,8 @@ $ .venv/bin/python .claude/skills/jarvis/runtime/graph_close.py stats
 
 마지막으로, 작업이 넓지 않으면 그래프는 과잉입니다. 단발 수정이나 단일 버그, 무엇을 찾는지 아직 모르는 탐색적 작업, 진짜로 순차 의존인 작업은 단일 에이전트나 루프가 더 싸고 빠릅니다. 가짜 엣지 테스트에서 병렬 가능한 쌍을 못 찾으면 그건 애초에 그래프 문제가 아니었던 겁니다.
 
+![graph-engineering-closing-fanout 슬라이드 4](/assets/images/graph-engineering-closing-fanout-slide-04.webp)
+
 ## 정리
 
 Graph Engineering이라는 이름이 새로운지는 중요하지 않습니다. 저희가 계측해서 확인한 것은 세 가지입니다.
@@ -214,18 +222,6 @@ Graph Engineering이라는 이름이 새로운지는 중요하지 않습니다. 
 
 오늘 팬아웃을 쓰고 계시다면 한 가지만 먼저 해보시길 권합니다. 다음 병렬 디스패치에서 `--expected N`을 넘겨보는 것입니다. 조용히 죽은 노드가 있었는지 그 한 줄이 알려줍니다. 저희는 그 한 줄에서 시작했습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![graph-engineering-closing-fanout 슬라이드 1](/assets/images/graph-engineering-closing-fanout-slide-01.webp)
-
-![graph-engineering-closing-fanout 슬라이드 2](/assets/images/graph-engineering-closing-fanout-slide-02.webp)
-
-![graph-engineering-closing-fanout 슬라이드 3](/assets/images/graph-engineering-closing-fanout-slide-03.webp)
-
-![graph-engineering-closing-fanout 슬라이드 4](/assets/images/graph-engineering-closing-fanout-slide-04.webp)
 
 ## 출처
 

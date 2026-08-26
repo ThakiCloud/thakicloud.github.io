@@ -31,6 +31,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-ops-business
 
 이 글은 claude-ops라는 오픈소스 플러그인을 소재로 씁니다. 다만 소개가 목적은 아닙니다. README에 적힌 숫자를 그대로 옮기는 대신 저장소 트리를 직접 세어봤고, 그 과정에서 같은 저장소 안에서만 세 가지 다른 숫자가 나왔습니다. 그 불일치를 따라가면 에이전트 하네스를 실제로 운영할 때 무엇이 병목인지가 꽤 선명하게 드러납니다.
 
+![claude-ops-business-os 슬라이드 1](/assets/images/claude-ops-business-os-slide-01.webp)
+
 ## 개요
 
 claude-ops는 Claude Code를 회사 운영 체계로 바꾸는 것을 목표로 하는 플러그인입니다. Lifecycle Innovations Limited가 MIT 라이선스로 공개했고, 확인한 시점 기준 저장소는 별 99개, 마지막 푸시는 2026년 8월 11일 08시 04분 UTC입니다. 어제 타임라인에 올라온 소개 글에서는 스킬 57개와 에이전트 21개라고 소개됐습니다.
@@ -80,6 +82,8 @@ flowchart TB
 여기까지는 기능 설명이고, 진짜 배울 점은 그다음입니다. `tests/test-agent-teams.sh`가 모든 스킬을 감사합니다. 허용 도구 목록에 `Agent`가 들어 있는 스킬이라면 팀 생성과 메시지 전달 호출, 문서화 섹션, 기능 플래그 확인, 폴백 경로를 전부 갖추고 있어야 하고, 하나라도 빠지면 CI가 떨어집니다. 스킬 작성자에게 규약을 지켜달라고 산문으로 부탁하는 대신 검사하는 코드를 붙인 것입니다.
 
 스킬이 63개일 때도 이런 검사가 필요했다면, 수백 개 규모에서는 선택지가 아닙니다. 저희가 산출물의 형식과 통과 여부를 모델 자기 보고가 아니라 코드가 판정하도록 규칙으로 못 박아 둔 것과 같은 판단입니다. 사람이 지키기로 한 규약은 시간이 지나면 반드시 깨지고, 깨진 것을 알아차리는 시점은 대개 사고가 난 뒤입니다.
+
+![claude-ops-business-os 슬라이드 2](/assets/images/claude-ops-business-os-slide-02.webp)
 
 ## 설치 및 통합
 
@@ -136,6 +140,8 @@ python3 scripts/blog/_exp_claude_ops_20260811.py
 
 숫자를 나란히 놓으면 그림이 분명해집니다. claude-ops는 스킬 하나에 저희의 두 배 가까운 분량을 담고 그 스킬을 63개만 둡니다. 저희는 스킬 하나를 얇게 쓰고 개수를 30배로 늘렸습니다. 같은 목표를 정반대 방향에서 푼 것입니다.
 
+![claude-ops-business-os 슬라이드 3](/assets/images/claude-ops-business-os-slide-03.webp)
+
 ## 두꺼운 스킬 소수와 얇은 스킬 다수
 
 이 차이는 취향이 아니라 라우팅 문제입니다.
@@ -162,6 +168,8 @@ claude-ops가 다루는 문제는 Paxis가 다루는 문제와 정확히 겹칩�
 
 Metis는 이 지점을 Dedicated Endpoint와 Serverless로 흡수해 워커 한 번 실행의 토큰 단가를 낮추고, 같은 워크로드를 Telox GPU 클러스터에서도 고객 폐쇄망의 Aegis 위에서도 동일하게 돌립니다. 업무 자동화의 경제성은 결국 모델 호출 단가와 호출 횟수의 곱이고, 두 항 모두 인프라 쪽에서 손댈 수 있습니다. 개인 도구는 구독 한도 안에서 이 계산을 넘길 수 있지만, 조직 단위에서 워커를 상시로 돌리기 시작하면 단가가 곧 도입 가능 범위가 됩니다.
 
+![claude-ops-business-os 슬라이드 4](/assets/images/claude-ops-business-os-slide-04.webp)
+
 ## 한계 및 반론
 
 이 도구를 그대로 도입하기 전에 짚어야 할 점이 몇 가지 있습니다.
@@ -180,18 +188,6 @@ claude-ops에서 가져갈 것은 기능 목록이 아니라 설계 선택입니
 
 그래서 오늘 다음 단계로 권하고 싶은 것은 도입 검토가 아니라 측정입니다. 지금 운영 중인 에이전트 하네스에서 스킬 개수와 스킬 문서의 평균 크기를 세어보시기 바랍니다. 개수가 세 자릿수를 넘겼는데 라우터가 없다면 병목은 이미 모델이 아니라 선택 단계에 있습니다. 반대로 개수가 적은데 스킬 문서가 얇다면 모델이 매번 맥락을 스스로 복원하고 있을 가능성이 큽니다. 어느 쪽이든 세어보기 전에는 알 수 없고, 문서에 적힌 숫자는 답이 되지 못합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![claude-ops-business-os 슬라이드 1](/assets/images/claude-ops-business-os-slide-01.webp)
-
-![claude-ops-business-os 슬라이드 2](/assets/images/claude-ops-business-os-slide-02.webp)
-
-![claude-ops-business-os 슬라이드 3](/assets/images/claude-ops-business-os-slide-03.webp)
-
-![claude-ops-business-os 슬라이드 4](/assets/images/claude-ops-business-os-slide-04.webp)
 
 ## 출처
 

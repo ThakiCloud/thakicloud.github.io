@@ -34,6 +34,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 hugging-voice는 이 흐름에 대한 반례로 등장했습니다. 스페이스의 부제부터가 "직접 돌릴 수 있는 오픈 실시간 음성(An Open Realtime Voice You Can Actually Run Yourself)"입니다. 마이크로 들어온 목소리를 텍스트로 바꾸고, 언어 모델에 보내고, 답을 다시 음성으로 되돌려 주는 이 왕복 전체를, 구성 요소 하나하나를 교체할 수 있는 오픈 파이프라인으로 열어 둔 것이 핵심입니다. 저희처럼 온프렘과 소버린 환경에서 모델을 서빙하는 입장에서는, "실시간 음성을 자체 클러스터에서 돌릴 수 있는가"라는 질문에 대한 구체적인 참조 구현이 생긴 셈입니다.
 
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 1](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-01.webp)
+
 ## hugging-voice와 speech-to-speech는 무엇인가
 
 용어부터 정리하면, hugging-voice는 웹에서 바로 말을 걸어 볼 수 있는 데모 스페이스이고, 그 안에서 실제로 음성을 처리하는 엔진이 speech-to-speech 라이브러리입니다. 라이브러리는 실시간 음성 에이전트를 네 단계로 나눕니다. 음성 구간 감지(VAD), 음성 인식(STT), 언어 모델(LLM), 음성 합성(TTS)입니다. 각 단계는 별도 스레드에서 돌고 큐로 연결되어, 앞 단계의 출력이 스트리밍으로 다음 단계에 흘러 들어갑니다. 사용자가 말을 마치기도 전에 부분 전사가 나오고, 모델이 문장을 완성하기 전에 앞부분부터 음성 합성이 시작되는 구조라 체감 지연을 줄일 수 있습니다.
@@ -52,6 +54,8 @@ flowchart TB
 </div>
 
 이 그림에서 오른쪽의 WebSocket 서버가 이 프로젝트의 진짜 무기입니다. 네 단계를 잘 붙였다는 것만으로는 새롭지 않습니다. speech-to-speech가 다른 점은, 이 파이프라인 전체를 OpenAI Realtime 프로토콜과 호환되는 WebSocket 엔드포인트로 감쌌다는 데 있습니다. 덕분에 기존 OpenAI 실시간 클라이언트가 이 서버를 마치 OpenAI인 것처럼 붙어서 쓸 수 있습니다. 참고로 이 스택은 실험용 장난감이 아니라, 허깅페이스가 판매하는 Reachy Mini 로봇의 실시간 음성 인프라를 실제로 구동하고 있습니다.
+
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 2](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-02.webp)
 
 ## 한 줄로 갈아타기
 
@@ -88,6 +92,8 @@ with client.realtime.connect(model="local") as conn:
 ```
 
 눈여겨볼 부분은 `base_url`과 `websocket_base_url`이 로컬 서버를 가리키고, `api_key`가 사실상 필요 없다는 점입니다. `session.update`로 넘기는 지시문, 서버 측 VAD 기반 턴 감지, 응답 중 끼어들기 같은 옵션은 OpenAI Realtime과 같은 스키마를 그대로 따릅니다. 즉 애플리케이션 코드는 거의 손대지 않고, 백엔드만 외부 API에서 자체 서버로 옮겨오는 구조입니다. 벤더 종속을 걱정하는 팀에게는 이 인터페이스 호환성 자체가 가장 큰 실용적 가치입니다.
+
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 3](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-03.webp)
 
 ## 설치와 실행
 
@@ -132,6 +138,8 @@ speech-to-speech \
 
 같은 파이프라인을 로컬 완전 실행부터 클라우드 추론 위임까지, 플래그 몇 개로 오갈 수 있다는 점이 설계의 미덕입니다.
 
+![hugging-voice-open-realtime-voice-self-hosted 슬라이드 4](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-04.webp)
+
 ## 모듈 교체: STT, LLM, TTS 백엔드
 
 이 프로젝트가 단순한 데모를 넘어 참조 아키텍처로 읽히는 이유는 각 단계의 백엔드를 갈아 끼울 수 있기 때문입니다. 정리하면 다음과 같습니다.
@@ -162,16 +170,3 @@ Paxis 렌즈에서 보면, 음성은 에이전트에 붙는 새로운 입출력 
 ## 마무리
 
 hugging-voice가 던지는 메시지는 명확합니다. 실시간 음성은 더 이상 소수 공급자의 폐쇄형 API에만 기댈 필요가 없고, 필요하면 인터페이스는 그대로 둔 채 백엔드만 자체 인프라로 옮겨올 수 있다는 것입니다. VAD에서 TTS까지 각 단계를 골라 끼우고, 클라이언트는 주소 한 줄만 바꾸는 이 설계는, 자체 서빙을 검토하는 팀에게 진입 비용을 크게 낮춰 줍니다. 직접 확인하고 싶다면 [데모 스페이스](https://huggingface.co/spaces/HuggingFaceM4/hugging-voice)에서 바로 말을 걸어 보거나, [GitHub 저장소](https://github.com/huggingface/speech-to-speech)에서 `pip install speech-to-speech`로 시작하시면 됩니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
-
-![hugging-voice-open-realtime-voice-self-hosted 슬라이드 1](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-01.webp)
-
-![hugging-voice-open-realtime-voice-self-hosted 슬라이드 2](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-02.webp)
-
-![hugging-voice-open-realtime-voice-self-hosted 슬라이드 3](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-03.webp)
-
-![hugging-voice-open-realtime-voice-self-hosted 슬라이드 4](/assets/images/hugging-voice-open-realtime-voice-self-hosted-slide-04.webp)
-

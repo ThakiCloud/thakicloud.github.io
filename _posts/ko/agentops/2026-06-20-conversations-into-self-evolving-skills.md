@@ -38,11 +38,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/conversations-into-
 
 이 글은 마케팅이 아니라 우리가 실제로 돌리는 두 개의 자율 루프를 그대로 공개합니다. 하나는 과거 대화에서 반복 워크플로를 캐내 스킬로 만드는 Chronicle 마이닝이고, 다른 하나는 실패를 근거로 기존 스킬의 본문을 스스로 고치는 selfharness 자가진화입니다.
 
+![conversations-into-self-evolving-skills 슬라이드 1](/assets/images/conversations-into-self-evolving-skills-slide-01.png)
+
 ## 1. Chronicle: 과거 대화를 코퍼스로 만든다
 
 먼저 재료가 필요합니다. Claude Code 세션은 `~/.claude/projects/<repo>/*.jsonl`에 원본 트랜스크립트로 쌓입니다. 우리는 `scripts/memory/extract-sessions.py`로 이 원본에서 고신호 항목만 추려 `memory/sessions/` 아래에 마크다운 세션 로그로 추출해 둡니다. 현재 801개. 각 파일은 프론트매터에 `date`, `session_id`, `title`, `files_touched`를 담고 본문에 메시지를 담습니다.
 
 이 코퍼스가 우리의 Chronicle입니다. 비용은 0입니다. 추출은 야간 메모리 파이프라인의 결정론 단계에서 증분으로만 돌기 때문입니다.
+
+![conversations-into-self-evolving-skills 슬라이드 2](/assets/images/conversations-into-self-evolving-skills-slide-02.png)
 
 ## 2. 카운팅은 모델이 아니라 코드가 소유한다
 
@@ -61,6 +65,8 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
 그래도 `.cursor/plugins/cache/` 아래 플러그인 캐시의 SKILL.md 이름들이 거짓 신호로 상위를 점령했습니다. 실제 세션 몇 개를 열어보고서야 원인을 찾았습니다. 그래서 캐시, 생성된 플랜, vendored 경로를 통째로 제외하고, 신호를 "사용자의 의도가 담긴 제목" 과 "실제로 호출한 스킬 정체성" 으로만 좁혔습니다. 그제서야 진짜 워크플로가 드러났습니다.
 
 이 과정 자체가 교훈입니다. 품질이 안 나올 때 모델 등급부터 올리는 것은 게으른 선택입니다. 먼저 엔진을 측정하고, 노이즈의 원인을 데이터로 찾아 고쳐야 합니다.
+
+![conversations-into-self-evolving-skills 슬라이드 3](/assets/images/conversations-into-self-evolving-skills-slide-03.png)
 
 ## 3. 진화 판정: 업데이트냐, 신규냐, 분할이냐
 
@@ -397,6 +403,8 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
 그 하나는 "내용을 docs 폴더 아래 영어 계획 문서로, 적절한 스킬을 라우팅해서, 소프트웨어 공학 핵심만" 이라는 사용자의 시그니처 워크플로였습니다. 39회 넘게 반복됐지만 어떤 스킬도 정확히 커버하지 않았습니다. 이것만 신규로 만들고, 트리거가 약했던 기존 스킬 하나를 보강했습니다. 나머지는 사유와 함께 폐기했습니다. 조용히 버리지 않고 임계 미달로 떨군 패턴 수까지 명시하는 것이 규칙입니다.
 
 이 접근이 비슷한 상용 기능과 다른 점은 두 가지입니다. 첫째, 결정론 엔진이 카운팅과 노이즈 필터를 소유해 빈도 환각을 원천 차단합니다. 둘째, 1600개가 넘는 기존 스킬과 검색 기반으로 중복을 강제 검증합니다.
+
+![conversations-into-self-evolving-skills 슬라이드 4](/assets/images/conversations-into-self-evolving-skills-slide-04.png)
 
 ## 4. selfharness: 실패를 근거로 스킬 본문을 고친다
 
@@ -755,16 +763,3 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
 반복되는 일은 스킬이 되어야 하지만, 아무 반복이나 스킬이 되어서는 안 됩니다. 우리는 과거 대화를 결정론 엔진으로 캐내 진짜 반복만 골라내고, 기존 생태계와 중복을 강제 검증하며, 만든 스킬을 실패 근거로 leak-free하게 진화시킵니다. 빈도는 코드가 세고, 품질은 비회귀 게이트가 지키고, 비용은 별도 루프가 통제합니다.
 
 ThakiCloud는 이런 자기개선형 에이전트 운영을 온프레미스 환경에서 그대로 구현합니다. 같은 규율을 여러분의 인프라 위에서 돌리고 싶다면, 홈페이지에서 더 많은 이야기를 확인하실 수 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![conversations-into-self-evolving-skills 슬라이드 1](/assets/images/conversations-into-self-evolving-skills-slide-01.png)
-
-![conversations-into-self-evolving-skills 슬라이드 2](/assets/images/conversations-into-self-evolving-skills-slide-02.png)
-
-![conversations-into-self-evolving-skills 슬라이드 3](/assets/images/conversations-into-self-evolving-skills-slide-03.png)
-
-![conversations-into-self-evolving-skills 슬라이드 4](/assets/images/conversations-into-self-evolving-skills-slide-04.png)
-

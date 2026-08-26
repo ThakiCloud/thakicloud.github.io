@@ -43,6 +43,8 @@ LLM을 호출부에 끼워 넣는 순간 이 전제가 무너집니다. 모델�
 
 이 간극을 메우려면 관찰 대상 자체를 넓혀야 합니다. 요청이 성공했는지가 아니라 그 성공이 얼마나 믿을 만한지를 나타내는 대리 지표가 필요합니다. 다음 절에서 다루는 것이 바로 이 대리 지표를 어디서 뽑아낼지에 대한 이야기입니다. 참고로 그 신뢰도를 어떤 방법론으로 채점할지, 즉 골든셋을 어떻게 구성하고 LLM 심사자를 어떻게 설계할지는 그 자체로 별도의 주제이므로 여기서는 다루지 않고, 채점된 결과를 신호로 어떻게 흘려보낼지에 집중합니다.
 
+![ai-production-observability 슬라이드 1](/assets/images/ai-production-observability-slide-01.webp)
+
 ## 품질 저하를 신호로 바꾸는 법
 
 품질이라는 말은 그 자체로는 계측할 수 없습니다. 계측 가능한 대리 지표로 쪼개야 대시보드에 올릴 수 있습니다. 다행히 LLM 파이프라인 안에는 품질 저하와 상관관계가 있는 구조적 신호가 이미 여러 개 존재합니다. 새로 만들 필요 없이 지금 파이프라인에서 뽑아내기만 하면 됩니다.
@@ -84,6 +86,8 @@ def summarize(signals: list[RequestSignal]) -> dict:
 
 이 네 개의 비율만 시간 축으로 쌓아도 "요약이 왜 이상해졌지"라는 막연한 질문이 "필드 검증률이 어제 오후부터 12퍼센트 떨어졌다"는 구체적인 질문으로 바뀝니다. 원인을 완전히 설명하지는 못해도, 어디서부터 들여다볼지를 알려주는 역할은 충분히 합니다.
 
+![ai-production-observability 슬라이드 2](/assets/images/ai-production-observability-slide-02.webp)
+
 ## 신호의 세 층을 하나의 언어로 묶기
 
 지연, 토큰, 검증이라는 세 종류의 신호는 따로 보면 각자 다른 이야기를 합니다. 지연이 늘었다고 해서 품질이 떨어졌다는 뜻은 아니고, 토큰 소비가 늘었다고 해서 반드시 나쁜 신호도 아닙니다. 이 세 층을 같은 요청 단위로 묶어야 서로가 서로를 설명해 주기 시작합니다.
@@ -110,6 +114,8 @@ flowchart TB
 ```
 
 여기서 강조하고 싶은 것은 저장 형태의 차이입니다. 지연이나 토큰 수, 검증 통과율처럼 숫자로 요약되는 신호는 시계열 메트릭으로 저장해 낮은 비용으로 오래 보관합니다. 반면 어떤 요청이 왜 그런 값을 냈는지 재구성해야 하는 상황에서는 프롬프트와 도구 호출 순서가 통째로 담긴 트레이스가 필요합니다. 두 저장 형태의 비용 구조가 다르기 때문에, 모든 신호를 트레이스 하나로 몰아넣기보다 요약값은 메트릭으로 흘리고 원본은 필요한 경우에만 남기는 구조가 유리합니다. 다음 절에서 다루는 카디널리티와 샘플링이 바로 이 구분을 실제로 구현하는 방법입니다.
+
+![ai-production-observability 슬라이드 3](/assets/images/ai-production-observability-slide-03.webp)
 
 ## 카디널리티와 샘플링: 무엇을 얼마나 남길 것인가
 
@@ -151,6 +157,8 @@ def should_retain(latency_ms: float, p95_ms: float,
 
 이 방식의 장점은 저장 비용이 트래픽 총량이 아니라 이상 요청의 비율에 붙는다는 데 있습니다. 서비스가 커져도 정상 요청 비중이 유지되는 한 저장소 비용은 완만하게만 늘어나고, 정작 들여다봐야 할 요청은 하나도 놓치지 않습니다. 다만 기준값 자체, 즉 무엇을 이상으로 볼지는 정적으로 고정해 두지 말고 최근 분포를 기준으로 주기적으로 다시 계산해야 합니다. 트래픽 패턴이 계절을 타거나 새 기능 출시로 프롬프트 구조 자체가 바뀌면 어제의 p95가 오늘은 더 이상 이상치의 기준이 아니게 됩니다.
 
+![ai-production-observability 슬라이드 4](/assets/images/ai-production-observability-slide-04.webp)
+
 ## 대시보드와 알림의 설계 기준
 
 신호를 다 모아 놓아도 대시보드가 산만하면 아무도 보지 않습니다. 대시보드 설계에서 가장 흔한 실수는 수집한 모든 신호를 같은 화면에 같은 크기로 늘어놓는 것입니다. 그러면 정작 지금 봐야 할 신호가 다른 스무 개의 패널 사이에 묻힙니다. 화면 상단에는 세 가지 층(지연, 토큰, 검증) 각각의 요약 하나씩만 두고, 세부 분해는 그 아래 계층에서 필요할 때만 펼쳐 보는 구조가 낫습니다.
@@ -173,21 +181,8 @@ def should_retain(latency_ms: float, p95_ms: float,
 ![1장 삽화](/assets/images/books/ai-production-observability/ch01.webp)
 
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-production-observability 슬라이드 1](/assets/images/ai-production-observability-slide-01.webp)
-
-![ai-production-observability 슬라이드 2](/assets/images/ai-production-observability-slide-02.webp)
-
-![ai-production-observability 슬라이드 3](/assets/images/ai-production-observability-slide-03.webp)
-
-![ai-production-observability 슬라이드 4](/assets/images/ai-production-observability-slide-04.webp)
-
 ## 출처
 
 - [Chat Completions API 레퍼런스, finish_reason 필드 정의 (OpenAI)](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/retrieve)
 - [Sampling 개념 문서, Tail Sampling 설명 (OpenTelemetry)](https://opentelemetry.io/docs/concepts/sampling/)
 - [메트릭 이름과 레이블 작성 가이드, 카디널리티 경고 (Prometheus)](https://prometheus.io/docs/practices/naming/)
-

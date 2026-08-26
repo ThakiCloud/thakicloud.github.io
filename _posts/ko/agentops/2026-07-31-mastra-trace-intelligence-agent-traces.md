@@ -46,6 +46,8 @@ Mastra는 TypeScript 기반 에이전트 프레임워크입니다. 워크플로�
 
 이 네 축이 함께 있다는 점이 설계상 의미가 있습니다. outcome만 보면 성공과 실패의 비율은 알 수 있지만, goal이 붙어야 "어떤 목적의 요청이 실패하는가"가 나옵니다. sentiment는 특히 흥미로운 축인데, 도구 호출이 전부 성공하고 응답도 반환됐는데 사용자는 만족하지 않은 세션이 실제로는 흔하기 때문입니다. 로그 레벨의 성공 여부만 보는 관측 체계는 이 구간을 통째로 놓칩니다.
 
+![mastra-trace-intelligence-agent-traces 슬라이드 1](/assets/images/mastra-trace-intelligence-agent-traces-slide-01.webp)
+
 ## 신호에서 테마로, 테마에서 흐름으로
 
 ```mermaid
@@ -95,6 +97,8 @@ npm i @mastra/core@^1.53.0 mastra@^1.20.2
 
 100건이라는 문턱은 그냥 넘어갈 수치가 아닙니다. 군집화 기반 분석의 특성상 표본이 적으면 테마가 통계적으로 의미를 갖지 못합니다. 반대로 말하면 이 기능은 이미 실사용 트래픽이 도는 에이전트를 위한 것이지, 개발 중인 프로토타입을 위한 것이 아닙니다. 내부 테스트 트래픽 100건으로 만든 테마는 개발자 자신의 사용 습관을 반영할 뿐입니다.
 
+![mastra-trace-intelligence-agent-traces 슬라이드 2](/assets/images/mastra-trace-intelligence-agent-traces-slide-02.webp)
+
 ## 기존 관측 도구와 무엇이 다른가
 
 에이전트 트레이싱 자체는 새롭지 않습니다. Mastra도 이미 [AI Tracing](https://mastra.ai/blog/aitracing)을 지원해 왔고, OpenTelemetry 익스포터로 외부 백엔드에 내보내는 경로도 있습니다. LangSmith 같은 도구로 Mastra 애플리케이션을 추적하는 문서도 별도로 존재합니다. 그러니까 "트레이스를 본다"는 이미 해결된 문제입니다.
@@ -108,6 +112,8 @@ Trace Intelligence가 하는 일은 그 축을 사후에 만들어 내는 것입
 **Paxis 관점.** Paxis는 ThakiCloud의 Agent-Native Cloud 제어 평면으로, 스킬과 도구와 정책과 감사 로그를 일급 리소스로 다룹니다. 여기서 감사 로그는 이미 모든 에이전트 행동을 기록하고 있습니다. Trace Intelligence가 제기하는 질문은 그 로그를 개별 조회용으로만 쓸 것인가입니다. 960개가 넘는 스킬을 BM25로 선택해 격리 샌드박스에서 실행하는 구조에서는, "어떤 요청 유형에서 스킬 선택이 반복적으로 빗나가는가"가 핵심 운영 질문입니다. 이 질문은 감사 로그 한 건을 보는 것으로는 답이 나오지 않고, 요청 목표별로 군집을 만들어야 나옵니다. goal과 outcome을 교차한 흐름 뷰는 스킬 라우팅 품질을 측정하는 형태로 그대로 옮겨 올 수 있는 아이디어입니다. 자가진화 스킬 루프에도 직접 연결됩니다. 어떤 스킬을 개선할지 고르는 신호가 지금은 실패 알림 중심인데, 반복 실패 테마의 크기 순으로 우선순위를 매기면 개선의 투자 대비 효과가 달라집니다.
 
 **ai-platform 관점.** ThakiCloud의 ai-platform은 Kubernetes와 Kueue 위에서 멀티테넌트로 AI/ML 워크로드를 서빙합니다. 트레이스 군집화는 인프라 계층에도 함의가 있습니다. behavior 테마별로 토큰 소비와 지연을 집계하면 비용이 어느 행동 패턴에 몰려 있는지가 보입니다. 특정 도구 호출 경로가 전체 GPU 시간의 상당 부분을 먹고 있는데 성공률은 낮다면, 그 경로가 최적화 대상입니다. 온프레미스와 소버린 환경 고객에게는 이 분석이 자체 클러스터 안에서 끝나야 한다는 요구도 있습니다. 외부 SaaS에 트레이스를 보내지 않고 같은 분석을 할 수 있느냐가 실제 도입 조건이 됩니다.
+
+![mastra-trace-intelligence-agent-traces 슬라이드 3](/assets/images/mastra-trace-intelligence-agent-traces-slide-03.webp)
 
 ## 초대를 기다리는 동안 할 수 있는 것
 
@@ -135,24 +141,14 @@ Trace Intelligence가 하는 일은 그 축을 사후에 만들어 내는 것입
 
 **벤더 결합도.** 이 기능은 Mastra 플랫폼 프로젝트에 묶여 있고 특정 버전 이상을 요구합니다. 관측 데이터가 OpenTelemetry 표준으로 나가더라도 분석 계층이 플랫폼에 있으면 이전 비용이 생깁니다. 트레이스는 표준 포맷으로 자체 보관하면서 분석만 얹는 구조가 장기적으로 안전합니다.
 
+![mastra-trace-intelligence-agent-traces 슬라이드 4](/assets/images/mastra-trace-intelligence-agent-traces-slide-04.webp)
+
 ## 정리
 
 에이전트 관측성의 다음 단계는 트레이스를 더 잘 보여 주는 것이 아니라 **트레이스를 덜 보게 만드는 것**입니다. Trace Intelligence가 택한 방향이 그렇습니다. 사람이 개별 세션을 읽는 대신 목표와 결과와 행동과 감정이라는 네 축으로 분해된 테마를 읽고, 그중 큰 덩어리부터 손보는 구조입니다.
 
 에이전트를 운영하고 계신다면, 초대를 기다리기 전에 지금 쌓이는 트레이스에 이 네 축을 붙일 수 있는지부터 확인해 보시길 권합니다. 목표와 감정은 보통 기록되지 않는 축입니다. 그 두 개가 없으면 어떤 분석 도구를 붙여도 "기술적으로는 성공했는데 사용자는 떠난" 구간을 찾아낼 수 없습니다. 도구 도입보다 스키마 설계가 먼저입니다. 그리고 트레이스를 어디서 분석할 것인가는 기능 비교가 아니라 데이터 주권의 문제로 다뤄야 합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
-
-![mastra-trace-intelligence-agent-traces 슬라이드 1](/assets/images/mastra-trace-intelligence-agent-traces-slide-01.webp)
-
-![mastra-trace-intelligence-agent-traces 슬라이드 2](/assets/images/mastra-trace-intelligence-agent-traces-slide-02.webp)
-
-![mastra-trace-intelligence-agent-traces 슬라이드 3](/assets/images/mastra-trace-intelligence-agent-traces-slide-03.webp)
-
-![mastra-trace-intelligence-agent-traces 슬라이드 4](/assets/images/mastra-trace-intelligence-agent-traces-slide-04.webp)
 
 ## 출처
 

@@ -38,6 +38,8 @@ Prime Intellect가 2026년 8월 초 [Prime Agent](https://www.primeintellect.ai/
 
 다만 벤치마크 숫자는 이 글의 관심사가 아닙니다. 단일 벤치마크의 0.1%p 차이는 독립 재현 없이는 해석하기 어렵고, 저희가 직접 확인할 수도 없는 값입니다. 흥미로운 쪽은 그 숫자를 만든 구조입니다. Prime Agent는 도구 목록을 늘리는 대신 도구를 하나로 줄였습니다. 모델이 쓸 수 있는 유일한 도구가 영속 IPython 커널입니다. 나머지는 전부 그 커널 안에서 코드로 표현됩니다.
 
+![prime-agent-rlm-harness 슬라이드 1](/assets/images/prime-agent-rlm-harness-slide-01.webp)
+
 ## 이 기술은 무엇인가
 
 Prime Agent는 두 개의 추상 위에 서 있습니다. 하나는 RLM이라 부르는 재귀 언어 모델 런타임이고, 다른 하나는 Continual Harness입니다.
@@ -65,6 +67,8 @@ flowchart TB
 
 고정된 툴 콜 스키마와 컨텍스트 압축을 쓰는 구조에서는 모델이 자기 발판을 우회하는 데 힘을 씁니다. 설계 시점에 손으로 짜 넣은 서브에이전트와 스킬은 실행 중에 배운 것을 반영하지 못합니다. Prime Agent는 두 지점을 같은 방법으로 건드립니다. 발판을 코드로 만들고, 코드니까 실행 중에 고칠 수 있게 합니다.
 
+![prime-agent-rlm-harness 슬라이드 2](/assets/images/prime-agent-rlm-harness-slide-02.webp)
+
 ## 설치 및 통합
 
 솔직하게 적겠습니다. 이번 작업 환경에서는 패키지 설치가 정책상 차단되어 `prime-agent` 자체를 설치해 돌리지 못했습니다. 재현 시도 중 실패한 지점이 여기입니다. 따라서 이 글에는 Prime Agent를 실제로 구동해서 얻은 수치가 없습니다. 저장소의 문서가 설치와 인증, 첫 세션 실행, 세션과 자율 실행 한도, 출력 모드를 다루고 있으니 구동 자체는 [저장소 문서](https://github.com/PrimeIntellect-ai/prime-agent)를 따르시면 됩니다. RLM 프로그래밍 모델 자체에 대한 설명은 [별도 문서](https://github.com/PrimeIntellect-ai/prime-agent/blob/main/packages/coding-agent/docs/rlm.md)에 정리되어 있습니다.
@@ -90,6 +94,8 @@ run("errs = [l for l in ctx.split('\\n') if l.startswith('ERROR:')]\nprint(len(e
 
 전체 스크립트와 실행 로그는 `outputs/blog-impl/prime-agent-rlm-harness/`에 그대로 남겨두었습니다.
 
+![prime-agent-rlm-harness 슬라이드 3](/assets/images/prime-agent-rlm-harness-slide-03.webp)
+
 ## 실제 실험 결과
 
 히스토리는 1,115,465자, 17,284줄이었습니다. 이것을 통째로 프롬프트에 넣으면 321,458 토큰입니다.
@@ -104,6 +110,8 @@ run("errs = [l for l in ctx.split('\\n') if l.startswith('ERROR:')]\nprint(len(e
 집계만 필요한 S1은 149 토큰으로 2,157배 절감이었습니다. 집계에 더해 에러 주변 원문을 열두 줄씩 세 군데 읽어온 S2는 717 토큰으로 448배가 됐습니다. 파일 네 개의 원문 40줄 블록을 통째로 읽어야 하는 S3에서는 3,234 토큰까지 올라가 99배로 내려앉았습니다.
 
 이 기울기가 실험의 진짜 결과입니다. S1에서 S3로 가면서 이득이 스무 배 넘게 깎였습니다. 컨텍스트를 변수로 두는 설계가 마법처럼 토큰을 없애는 것이 아니라, 모델이 원문을 직접 볼 필요가 없는 만큼만 절약해 준다는 뜻입니다. 다만 가장 불리한 조건에서도 여전히 99배였다는 점은 짚어둘 만합니다. 백만 자짜리 히스토리를 다루는 상황에서 두 자릿수 배율의 차이는 세션을 이어갈 수 있느냐 없느냐를 가릅니다.
+
+![prime-agent-rlm-harness 슬라이드 4](/assets/images/prime-agent-rlm-harness-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -133,18 +141,6 @@ Prime Agent에서 가져갈 것은 벤치마크 숫자가 아니라 문제를 �
 
 직접 재현해 본 결론은 이렇습니다. 이 패턴은 실제로 작동하며, 이득의 크기는 도구가 아니라 질문이 결정합니다. 집계와 검색이 많은 워크로드일수록 세 자릿수 배율까지 벌고, 모델이 원문을 정독해야 하는 워크로드에서는 두 자릿수로 내려앉습니다. 그래서 도입을 검토하신다면 먼저 하실 일은 프레임워크를 고르는 게 아니라, 여러분의 에이전트가 컨텍스트에 대해 실제로 어떤 질문을 하는지 세어보는 것입니다. 집계형 질의가 대부분이라면 이 구조는 지금 당장 큰 값을 돌려줍니다. 정독이 대부분이라면 기대치를 두 자릿수로 낮추고 시작하시는 편이 맞습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![prime-agent-rlm-harness 슬라이드 1](/assets/images/prime-agent-rlm-harness-slide-01.webp)
-
-![prime-agent-rlm-harness 슬라이드 2](/assets/images/prime-agent-rlm-harness-slide-02.webp)
-
-![prime-agent-rlm-harness 슬라이드 3](/assets/images/prime-agent-rlm-harness-slide-03.webp)
-
-![prime-agent-rlm-harness 슬라이드 4](/assets/images/prime-agent-rlm-harness-slide-04.webp)
 
 ## 출처
 

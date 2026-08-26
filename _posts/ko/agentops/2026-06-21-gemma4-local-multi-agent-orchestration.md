@@ -38,6 +38,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 10개 서브에이전트가 각각 SVG 작품을 생성하고 그 결과를 갤러리로 조립하는 구조는, 클라우드 API 비용 없이 로컬에서 멀티에이전트 패턴을 검증할 수 있다는 것을 보여줍니다. (100+ tokens/sec는 작성자의 로컬 환경 자가 보고 수치이므로 [추정]으로 받아들이는 것이 정확합니다. 하드웨어·양자화·배치 설정에 따라 크게 달라집니다.)
 
+![gemma4-local-multi-agent-orchestration 슬라이드 1]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-01.webp' | relative_url }})
+
 ## 멀티에이전트 오케스트레이션의 운영 관점
 
 병렬 서브에이전트를 띄우는 것은 멋지지만, 운영에는 규율이 필요합니다. 저희가 멀티에이전트 워크플로를 다루며 얻은 원칙은 이렇습니다.
@@ -46,29 +48,22 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 - **병렬은 자원 경합을 부른다**: 10개 서브에이전트를 동시에 띄우면 GPU 메모리와 KV 캐시가 경합합니다. 순차 처리와 병렬 처리의 트레이드오프를 작업 성격에 맞춰 결정해야 합니다.
 - **검증 단계가 품질을 만든다**: 병렬 워커의 산출물을 모은 뒤, 적대적(adversarial) 검증 단계를 한 번 더 두면 모델 등급을 올리지 않고도 품질이 올라갑니다. 품질 문제는 모델이 약해서가 아니라 검증이 없어서 나는 경우가 많습니다.
 
+![gemma4-local-multi-agent-orchestration 슬라이드 2]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-02.webp' | relative_url }})
+
 ## ThakiCloud 관점: 온프레미스 추론 경제성
 
 로컬 멀티에이전트 데모가 의미 있는 진짜 이유는 **데이터 주권과 비용**입니다. 민감한 코드·문서를 외부 API에 보내지 않고 사내 GPU에서 처리하려는 수요가 분명히 존재합니다. 중형 오픈웨이트 모델이 실용 처리량에 도달하면서, 이 수요는 더 이상 이론이 아니라 운영 가능한 옵션이 됩니다.
 
 저희가 다루는 영역이 바로 이 지점입니다. K8s 위에서 모델 서빙을 표준화하고, Kueue로 GPU 워크로드를 큐잉하며, 멀티에이전트 오케스트레이션을 재현 가능하게 운영하는 일입니다. 로컬 단일 머신 데모를 조직 규모의 서빙 인프라로 확장하면, 자원 스케줄링·격리·관측성이 핵심 과제가 됩니다. 단순히 모델을 띄우는 것과, 다수의 테넌트가 안정적으로 멀티에이전트를 돌리게 하는 것은 다른 문제입니다.
 
+![gemma4-local-multi-agent-orchestration 슬라이드 3]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-03.webp' | relative_url }})
+
 ## 마치며
+![gemma4-local-multi-agent-orchestration 슬라이드 4]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-04.webp' | relative_url }})
+
 
 Gemma 4 26B 로컬 멀티에이전트 데모는 "온프레미스 추론이 실용 영역에 들어왔다"는 신호입니다. 모델이 작아지고 빨라지면서, 멀티에이전트 패턴을 클라우드 비용 없이 검증할 수 있게 되었습니다. 이를 조직 규모로 키우는 일에 관심 있는 엔지니어라면, 이런 서빙·스케줄링 문제가 매일의 과제인 곳입니다.
 
 ---
 
 출처: Gemma 4 26B 로컬 멀티에이전트 오케스트레이션 커뮤니티 데모. Gemma 모델 정보: https://ai.google.dev/gemma (처리량 수치는 작성자 로컬 벤치 자가 보고 [추정])
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![gemma4-local-multi-agent-orchestration 슬라이드 1]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-01.webp' | relative_url }})
-
-![gemma4-local-multi-agent-orchestration 슬라이드 2]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-02.webp' | relative_url }})
-
-![gemma4-local-multi-agent-orchestration 슬라이드 3]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-03.webp' | relative_url }})
-
-![gemma4-local-multi-agent-orchestration 슬라이드 4]({{ '/assets/images/gemma4-local-multi-agent-orchestration-slide-04.webp' | relative_url }})
-

@@ -29,6 +29,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/moonshot-ai-kimi-re
 
 본 포스트에서는 Kimi-Researcher의 혁신적인 기술적 접근법과 End-to-End 에이전트 강화학습의 새로운 패러다임을 심층 분석합니다.
 
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 1]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-01.webp' | relative_url }})
+
 ## Kimi-Researcher 핵심 성과
 
 ### 1. 벤치마크 성능
@@ -155,6 +157,8 @@ class KimiResearcher:
         # - 변화하는 도구와 환경에 적응
         # - 계획, 인식, 도구 사용 통합 학습
 ```
+
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 2]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-02.webp' | relative_url }})
 
 ## 핵심 기술 아키텍처
 
@@ -529,6 +533,8 @@ class RigorousVerification:
         return cross_verified
 ```
 
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 3]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-03.webp' | relative_url }})
+
 ## 실제 활용 사례
 
 ### 1. 학술 연구 지원
@@ -666,6 +672,8 @@ class ResearchMethodologyInnovation:
         }
 ```
 
+![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 4]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-04.webp' | relative_url }})
+
 ## 향후 발전 방향
 
 ### 1. 범용 에이전트로의 진화
@@ -742,16 +750,3 @@ Moonshot AI의 Kimi-Researcher는 End-to-End 에이전트 강화학습의 새로
 - **실용화 가속**: 다양한 도메인에서의 실제 활용 확산
 
 Kimi-Researcher는 단순히 성능이 우수한 AI 모델을 넘어, **AI 에이전트가 인간처럼 복잡한 연구와 추론을 수행할 수 있는 가능성**을 보여주었습니다. 이는 AI 연구의 새로운 지평을 열었으며, 향후 더욱 지능적이고 자율적인 AI 시스템 개발의 토대가 될 것입니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 1]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-01.webp' | relative_url }})
-
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 2]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-02.webp' | relative_url }})
-
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 3]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-03.webp' | relative_url }})
-
-![moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis 슬라이드 4]({{ '/assets/images/moonshot-ai-kimi-researcher-end-to-end-agentic-rl-analysis-slide-04.webp' | relative_url }})
-

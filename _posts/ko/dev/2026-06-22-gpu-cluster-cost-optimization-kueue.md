@@ -36,6 +36,8 @@ ThakiCloud AI Platform은 이 세 가지 병목을 Kueue + KAI 커스텀 스케�
 
 ---
 
+![gpu-cluster-cost-optimization-kueue 슬라이드 1]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-01.webp' | relative_url }})
+
 ## GPU 비용이 새는 3가지 지점
 
 ### 지점 1: 스케줄링 없는 GPU 유휴
@@ -57,6 +59,8 @@ ThakiCloud AI Platform은 이 세 가지 병목을 Kueue + KAI 커스텀 스케�
 모델 서빙 엔드포인트는 처음 기동될 때 GPU 메모리를 할당합니다. KEDA나 유사한 오토스케일러 없이 배포된 추론 서비스는 요청이 없는 새벽에도 GPU를 점유합니다. 소규모 조직은 1~2개 GPU를 불필요하게 점유하는 것처럼 보이지만, 수십 개의 모델 엔드포인트를 운영하는 조직에서는 이 낭비가 기하급수적으로 커집니다.
 
 ---
+
+![gpu-cluster-cost-optimization-kueue 슬라이드 2]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-02.webp' | relative_url }})
 
 ## Kueue 페어셰어 + Gang Scheduling
 
@@ -481,6 +485,8 @@ spec:
 
 ---
 
+![gpu-cluster-cost-optimization-kueue 슬라이드 3]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-03.webp' | relative_url }})
+
 ## 추론 비용: vLLM Scale-to-Zero
 
 ### KEDA HTTP 기반 오토스케일링
@@ -528,6 +534,8 @@ Scale-to-Zero의 명백한 단점은 콜드 스타트 지연입니다. vLLM이 7
 비용 절감 효과를 극대화하면서도 응답성을 유지하려면, 엔드포인트의 실제 트래픽 패턴을 VictoriaMetrics에서 확인한 뒤 `cooldownPeriod`와 `minReplicaCount` 조합을 사용 패턴에 맞게 튜닝하는 것이 실용적입니다.
 
 ---
+
+![gpu-cluster-cost-optimization-kueue 슬라이드 4]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-04.webp' | relative_url }})
 
 ## 비용 가시성: DCGM/VictoriaMetrics
 
@@ -608,16 +616,3 @@ GPU 클러스터는 그 자체로 거대한 자원이지만, 스케줄링 정책
 - [Quantization Support (vLLM Docs)](https://docs.vllm.ai/en/latest/features/quantization/index.html)
 - [Default GPU Metrics Counters (NVIDIA dcgm-exporter, GitHub)](https://github.com/NVIDIA/dcgm-exporter/blob/main/etc/default-counters.csv)
 - [MetricsQL Query Language (VictoriaMetrics Docs)](https://docs.victoriametrics.com/metricsql/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![gpu-cluster-cost-optimization-kueue 슬라이드 1]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-01.webp' | relative_url }})
-
-![gpu-cluster-cost-optimization-kueue 슬라이드 2]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-02.webp' | relative_url }})
-
-![gpu-cluster-cost-optimization-kueue 슬라이드 3]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-03.webp' | relative_url }})
-
-![gpu-cluster-cost-optimization-kueue 슬라이드 4]({{ '/assets/images/gpu-cluster-cost-optimization-kueue-slide-04.webp' | relative_url }})
-

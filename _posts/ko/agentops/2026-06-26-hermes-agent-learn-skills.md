@@ -34,6 +34,8 @@ Nous Research가 2026년 6월 24일 자사 에이전트 프레임워크 Hermes A
 
 ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼에서 멀티테넌트 에이전트를 운용합니다. 에이전트가 스스로 절차적 기억을 쌓고, 그 기억을 사람이 검토할 수 있게 게이트를 거는 구조는 저희가 "얇은 harness, 두꺼운 스킬(Thin Harness, Fat Skills)" 원칙으로 정리해 온 방향과 정확히 맞닿아 있습니다. 능력은 harness가 아니라 스킬에 쌓는다는 원칙입니다. `/learn`은 그 스킬을 만드는 진입장벽을 낮추는 도구이므로, 단순한 편의 기능 이상으로 볼 여지가 있습니다.
 
+![hermes-agent-learn-skills 슬라이드 1]({{ '/assets/images/hermes-agent-learn-skills-slide-01.webp' | relative_url }})
+
 ## 이 기술은 무엇인가
 
 `/learn`은 별도의 인제스천 엔진이 아닙니다. 핵심은 "표준을 안내하는 프롬프트를 만들어 에이전트에게 평범한 한 턴으로 넘긴다"는 점입니다. 그래서 소스를 수집하는 일도 에이전트가 이미 가진 도구로 처리합니다. 로컬 디렉터리는 `read_file`과 `search_files`로 읽고, 온라인 문서는 `web_extract`로 가져오며, 방금 대화에서 함께 진행한 워크플로는 대화 컨텍스트 그대로 캡처합니다.
@@ -107,6 +109,8 @@ instruction: |
 
 스킬 시스템 자체에는 빈 상태로 시작하는 선택지도 있습니다. `hermes skills opt-out`으로 번들 스킬 시딩을 멈추고, `hermes skills opt-in --sync`로 되돌립니다. `platforms` 필드로 호환되지 않는 운영체제에서는 스킬을 숨기고, 조건부 필드로 특정 toolset이 있을 때만 스킬을 노출하는 등 노출 제어도 세밀합니다.
 
+![hermes-agent-learn-skills 슬라이드 2]({{ '/assets/images/hermes-agent-learn-skills-slide-02.webp' | relative_url }})
+
 ## 설치 및 통합
 
 ThakiCloud 환경에 설치된 Hermes Agent를 직접 확인했습니다. 바이너리는 `~/.local/bin/hermes`에 있고, 실제로는 `~/hermes-agent/venv`의 파이썬에서 구동됩니다.
@@ -169,6 +173,8 @@ Level 1: skill_view(name)        → 전체 내용 + 메타데이터
 Level 2: skill_view(name, path)  → 특정 참조 파일
 ```
 
+![hermes-agent-learn-skills 슬라이드 3]({{ '/assets/images/hermes-agent-learn-skills-slide-03.webp' | relative_url }})
+
 ## 실제 실험 결과
 
 여기서 정직하게 기록해야 할 한계가 있습니다. ThakiCloud에 설치된 버전은 `v0.16.0 (2026.6.5)`로, `/learn`이 추가된 2026년 6월 24일자 릴리스보다 앞섭니다. 바이너리가 로컬 git 체크아웃을 기준으로 "Up to date"라고 보고하기 때문에 업스트림 신규 릴리스가 자동 반영되지는 않았습니다. 그래서 이번 글에서는 `/learn`을 우리 환경에서 직접 실행해 결과 수치를 캡처하지는 못했습니다. 재현 시도 중 제약: 설치본 버전이 `/learn` 도입 이전이라 명령 자체가 부재합니다.
@@ -178,6 +184,8 @@ Level 2: skill_view(name, path)  → 특정 참조 파일
 `/learn`의 동작 자체는 공식 문서와 2026년 6월 24일 MarkTechPost 보도로 교차 검증했습니다. 두 소스 모두 네 가지 소스 유형, `read_file`/`search_files`/`web_extract` 수집 도구, 60자 설명 제약과 고정 섹션 순서, `skill_manage` 저장과 `write_approval` 게이트라는 동일한 사실을 기술합니다. 수치를 지어내는 대신, 검증된 범위와 검증하지 못한 범위를 분명히 나눠 둡니다.
 
 업스트림으로 업데이트하면 `/learn`을 직접 돌려 산출물 품질을 측정할 수 있습니다. 다만 그 업데이트는 운용 중인 멀티테넌트 환경에 영향을 줄 수 있어, 격리된 프로파일에서 먼저 검증한 뒤 반영하는 것이 안전합니다. 후속 글에서 실제 `/learn` 산출물을 캡처해 보강할 예정입니다.
+
+![hermes-agent-learn-skills 슬라이드 4]({{ '/assets/images/hermes-agent-learn-skills-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 쿠버네티스 AI/ML SaaS 플랫폼 적용 및 시사점
 
@@ -201,18 +209,6 @@ progressive disclosure의 약 3,000토큰 인덱스도 서빙 비용 관점에�
 
 결론적으로 `/learn`은 스킬을 만드는 마찰을 크게 줄이는 동시에, 그 마찰이 수행하던 자연스러운 검토 단계를 게이트와 curator로 옮긴 설계입니다. 멀티테넌트 에이전트 플랫폼을 운용하는 입장에서는 편의 기능이 아니라 거버넌스 설계로 읽는 편이 정확합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![hermes-agent-learn-skills 슬라이드 1]({{ '/assets/images/hermes-agent-learn-skills-slide-01.webp' | relative_url }})
-
-![hermes-agent-learn-skills 슬라이드 2]({{ '/assets/images/hermes-agent-learn-skills-slide-02.webp' | relative_url }})
-
-![hermes-agent-learn-skills 슬라이드 3]({{ '/assets/images/hermes-agent-learn-skills-slide-03.webp' | relative_url }})
-
-![hermes-agent-learn-skills 슬라이드 4]({{ '/assets/images/hermes-agent-learn-skills-slide-04.webp' | relative_url }})
 
 ## 출처 (Sources)
 

@@ -48,6 +48,8 @@ Qwen3-Coder-30B-A3B 하나를 bf16, FP8, W4A16, NVFP4로 만들어 B200 한 장�
 
 에너지에서는 격차가 더 벌어집니다. 동시성 128 기준으로 에너지당 토큰이 NVFP4는 12.82이고 FP8은 9.48입니다. 1.35배인데, 같은 지점의 처리량 이득 1.22배보다 큽니다. 4비트가 연산량만 줄이는 게 아니라 메모리 트래픽도 함께 줄이기 때문입니다.
 
+![nvfp4-vs-fp8-two-four-bits 슬라이드 1](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-01.webp)
+
 ## 활성값을 줄였느냐가 갈랐습니다
 
 두 4비트의 차이는 활성값입니다.
@@ -58,6 +60,8 @@ NVFP4는 활성값까지 4비트로 내립니다. 그러면 Blackwell의 FP4 텐
 
 그래서 "4비트는 용량을 사지 속도를 사지 않는다"는 문장은 절반만 맞습니다. W4A16에 대해서는 참이고 NVFP4에 대해서는 거짓입니다.
 
+![nvfp4-vs-fp8-two-four-bits 슬라이드 2](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-02.webp)
+
 ## 품질은 넷 다 구분되지 않습니다
 
 속도만 보고 고르면 안 되니 같은 하네스로 HumanEval 전수 164문항을 돌렸습니다. pass@1이 bf16 0.9207, FP8 0.9146, W4A16 0.9268, NVFP4 0.9024로 나왔습니다. 표준오차가 각각 0.021 수준인데 넷의 전체 폭이 0.024입니다. 유의한 차이가 하나도 없다는 뜻이죠.
@@ -65,6 +69,8 @@ NVFP4는 활성값까지 4비트로 내립니다. 그러면 Blackwell의 FP4 텐
 여기서 정직하게 적어야 할 게 있습니다. **NVFP4가 넷 중 수치상 가장 낮습니다.** bf16 대비 z가 −0.58이라 이 검정력으로는 구분되지 않는 크기지만, 그렇다고 "NVFP4가 품질도 낫다"고 말할 근거는 없습니다. 방어할 수 있는 진술은 측정 가능한 손실이 없다는 데까지입니다.
 
 하네스가 제대로 돌았는지는 bf16이 알려줍니다. 여기서 0.9207이 나왔고 다른 날 다른 하네스로 잰 같은 모델이 0.9267이었습니다. 0.6포인트면 노이즈 안입니다.
+
+![nvfp4-vs-fp8-two-four-bits 슬라이드 3](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-03.webp)
 
 ## 4비트가 느리게 나왔다면 벤치마크를 먼저 보십시오
 
@@ -75,6 +81,8 @@ NVFP4는 활성값까지 4비트로 내립니다. 그러면 Blackwell의 FP4 텐
 GPU도 한 번도 포화되지 않았습니다. 사용률이 54에서 85퍼센트 사이를 오갔는데, 그 상태에서 나온 평평한 결과를 하드웨어 천장으로 읽었죠. 천장이 아니라 바닥이었습니다.
 
 마지막으로 후보당 한 번씩만 쟀습니다. 나중에 같은 체크포인트를 다시 돌려 보니 재현 편차가 후보 사이의 차이보다 컸습니다. 애초에 순위를 매길 수 있는 데이터가 아니었던 겁니다.
+
+![nvfp4-vs-fp8-two-four-bits 슬라이드 4](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-04.webp)
 
 ## 커널 경로는 물어보지 말고 확인하십시오
 
@@ -112,18 +120,6 @@ W4A16이 여전히 이기는 자리도 있습니다. 파일이 조금 더 작고
 
 이 글의 수치는 단일 B200에서 vLLM 0.27.1로 잰 실측값이며 시뮬레이션이 아닙니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![nvfp4-vs-fp8-two-four-bits 슬라이드 1](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-01.webp)
-
-![nvfp4-vs-fp8-two-four-bits 슬라이드 2](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-02.webp)
-
-![nvfp4-vs-fp8-two-four-bits 슬라이드 3](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-03.webp)
-
-![nvfp4-vs-fp8-two-four-bits 슬라이드 4](/assets/images/nvfp4-vs-fp8-two-four-bits-slide-04.webp)
 
 ## 출처
 

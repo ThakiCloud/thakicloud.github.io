@@ -29,6 +29,8 @@ categories:
 
 ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내부적으로 수십 개의 무인 루프와 반복 에이전트 작업을 돌립니다. 그 과정에서 하루에 700달러가 청구되는 비용 사고를 한 번 겪었고, 그 사고에서 배운 내용을 그대로 루프 가드레일로 만들어 운영하고 있습니다. 그래서 이 주제는 우리에게 추상적인 트렌드가 아니라 매일의 운영 설계 과제입니다. 이 글은 루프를 돌리기 전에 무엇을 설계해야 하는지, 그리고 그것을 실제 플랫폼 운영에 어떻게 적용했는지를 정리합니다.
 
+![loop-engineering-design-before-run 슬라이드 1]({{ '/assets/images/loop-engineering-design-before-run-slide-01.webp' | relative_url }})
+
 ## 루프 엔지니어링이란 무엇인가
 
 루프 엔지니어링은 에이전트에게 매번 직접 지시하는 대신, 에이전트를 지시하는 시스템을 짜는 일입니다. 사람이 루프 안에 계속 들어가 있으면 에이전트가 한 단계를 끝낼 때마다 다음 지시를 입력해야 합니다. 루프 엔지니어링은 그 자리에 작은 자동화를 끼워 넣습니다. 시스템이 할 일을 찾고, 적절한 에이전트에게 넘기고, 결과를 점검하고, 진행 상황을 적어두고, 다음 행동을 결정합니다.
@@ -70,6 +72,8 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 
 이 흐름에서 가장 자주 빠뜨리는 칸이 4번 검증자 분리와 5번 캡입니다. 이 두 칸이 빠지면 루프는 무한히 돌거나, 그럴듯하지만 틀린 결과를 합쳐서 내놓습니다.
 
+![loop-engineering-design-before-run 슬라이드 2]({{ '/assets/images/loop-engineering-design-before-run-slide-02.webp' | relative_url }})
+
 ## 두 가지 비용: 토큰과 주의력
 
 루프의 청구서는 두 가지 통화로 옵니다. 하나는 토큰이고 다른 하나는 사람의 주의력입니다. 한 번의 무인 실행이 수백만 토큰을 태울 수 있고, 그것이 정당한 경우는 그 토큰이 토큰값보다 더 가치 있는 무언가를 사는 경우뿐입니다.
@@ -87,6 +91,8 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 둘째, 꼭 모델로 돌려야 하는 루프는 짧고 상태가 없게(stateless) 유지합니다. 상태는 파일에 두고, 매 깨어남이 최소 컨텍스트로 시작하며, 한 세션이 일정 반복을 넘기기 전에 컨텍스트를 리셋합니다. 세션 컨텍스트가 비대해질수록 매 반복의 캐시 읽기가 선형으로 증가하기 때문입니다.
 
 셋째, 오케스트레이션을 담당하는 메인 세션은 중간 등급 모델로 두고, 진짜 복잡한 추론이 필요한 단계만 최상위 모델 서브에이전트로 격리합니다. 사고 당일의 문제는 서브에이전트가 아니라 메인 세션 자체가 비싼 모델이었다는 데 있었습니다. 워커는 싸게, 게이트만 비싸게라는 원칙이 여기서 나왔습니다.
+
+![loop-engineering-design-before-run 슬라이드 3]({{ '/assets/images/loop-engineering-design-before-run-slide-03.webp' | relative_url }})
 
 ## 도구 선택: 목표, 루프, 스케줄을 구분합니다
 
@@ -106,6 +112,8 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 
 실무자 관점에서도 시사점이 분명합니다. 데이터 과학자나 ML 엔지니어가 야간 배치로 실험을 돌리거나 데이터 파이프라인을 자동화할 때, 검증자 분리와 토큰 캡과 메모리 파일이라는 세 가지만 챙겨도 비용 사고의 대부분을 막을 수 있습니다. 이 패턴은 특정 벤더에 묶이지 않고 어떤 에이전트 하니스에서도 통용됩니다.
 
+![loop-engineering-design-before-run 슬라이드 4]({{ '/assets/images/loop-engineering-design-before-run-slide-04.webp' | relative_url }})
+
 ## 한계 및 반론
 
 루프 엔지니어링이 만능은 아닙니다. 가장 강한 반론은 모든 작업이 루프로 풀리지는 않는다는 것입니다. 단발성 질문이나 한 번의 파일 편집을 억지로 루프에 넣으면 설계 오버헤드만 늘고 얻는 것이 없습니다. 루프는 반복적이고 검증 가능한 작업에만 가치가 있습니다.
@@ -116,18 +124,6 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 
 결국 루프 엔지니어링의 핵심은 자율성을 늘리는 것이 아니라 자율성의 경계를 명확히 그리는 것입니다. 어디까지 맡기고 어디서 멈추며 무엇으로 검증하는지를 돌리기 전에 정하는 규율, 그것이 토큰을 태우지 않는 루프와 부채가 되는 루프를 가릅니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![loop-engineering-design-before-run 슬라이드 1]({{ '/assets/images/loop-engineering-design-before-run-slide-01.webp' | relative_url }})
-
-![loop-engineering-design-before-run 슬라이드 2]({{ '/assets/images/loop-engineering-design-before-run-slide-02.webp' | relative_url }})
-
-![loop-engineering-design-before-run 슬라이드 3]({{ '/assets/images/loop-engineering-design-before-run-slide-03.webp' | relative_url }})
-
-![loop-engineering-design-before-run 슬라이드 4]({{ '/assets/images/loop-engineering-design-before-run-slide-04.webp' | relative_url }})
 
 ## 출처
 

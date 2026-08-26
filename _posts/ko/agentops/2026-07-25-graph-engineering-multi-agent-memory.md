@@ -41,6 +41,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 그래프 엔지니어링은 여기서 다른 답을 냅니다. 정보를 통째로 저장하는 대신, 개체와 개체 사이의 **관계를 명시적인 그래프**로 남깁니다. 그러면 에이전트의 기억이 문장 덩어리가 아니라 조회 가능한 구조가 됩니다.
 
+![graph-engineering-multi-agent-memory 슬라이드 1](/assets/images/graph-engineering-multi-agent-memory-slide-01.webp)
+
 ## 이 기술은 무엇인가
 
 핵심 아이디어는 단순합니다. 에이전트가 읽고 겪은 것을 **주어-서술어-목적어(S-P-O) 삼중항**으로 뽑아 지식 그래프에 쌓고, 필요할 때 그 그래프의 일부를 잘라내어 질의합니다. 노드는 개체이고, 엣지는 타입이 붙은 관계이며, 모든 삼중항에는 어디서 나왔는지를 가리키는 출처(provenance)가 함께 붙습니다.
@@ -380,6 +382,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 </script>
 {% endraw %}
 
+![graph-engineering-multi-agent-memory 슬라이드 2](/assets/images/graph-engineering-multi-agent-memory-slide-02.webp)
+
 ## 다섯 단계 자세히 보기
 
 **1. Extract.** 문서 하나가 들어오면 값싼 모델(Haiku)이 개체와 S-P-O 삼중항을 뽑습니다. 문서당 한 번의 호출이면 충분합니다. 여기서 흥미로운 지점은 별도의 학습 데이터가 필요 없다는 것입니다. 무엇을 어떤 모양으로 뽑을지는 **Pydantic 스키마 하나**가 정의합니다. 스키마가 곧 유일한 학습 신호 역할을 합니다. 출력 형식을 코드가 소유하고 모델은 내용만 채우는 구조라, 결과가 흔들리지 않습니다.
@@ -394,11 +398,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 모델 라우팅이 단계마다 다르다는 점을 눈여겨보시면 좋습니다. 대량 추출은 값싼 Haiku가, 판단이 필요한 개체 해소와 질의 추론은 Sonnet이 맡습니다. 비싼 모델을 전 단계에 바르지 않고, 판단이 필요한 곳에만 씁니다. 이것은 저희가 사내 배치 작업에서 지키는 원칙과 정확히 같습니다. 워커는 싸게, 게이트만 비싸게 둡니다.
 
+![graph-engineering-multi-agent-memory 슬라이드 3](/assets/images/graph-engineering-multi-agent-memory-slide-03.webp)
+
 ## 멀티에이전트에 어떻게 붙나
 
 지식 그래프의 진짜 값어치는 여러 에이전트가 **같은 메모리를 공유**할 때 드러납니다. 워커 에이전트는 알아낸 것을 그래프에 씁니다. 평가 에이전트는 워커의 주장을 그래프에 비추어 사실 확인합니다. 그리고 밤새 도는 루프는 이 그래프를 통해 어제의 진척을 오늘로 이어받습니다.
 
 이 그림은 저희가 여러 자동화 루프를 운영하며 얻은 교훈과 겹칩니다. 팬아웃한 서브에이전트의 결과는 반드시 검증 스테이지로 닫아야 하는데, 그 검증의 기준점이 될 공유 사실 저장소가 없으면 각 에이전트가 백지에서 다시 시작합니다. 그래프는 그 기준점 역할을 합니다. 워커가 쓰고, 평가자가 대조하고, 다음 루프가 물려받는 구조가 자연스럽게 만들어집니다.
+
+![graph-engineering-multi-agent-memory 슬라이드 4](/assets/images/graph-engineering-multi-agent-memory-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -424,18 +432,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/graph-engineering-m
 
 시작은 거창하지 않아도 됩니다. 여러분의 도메인에서 가장 중요한 개체와 관계 몇 가지를 정의한 **작은 Pydantic 스키마 하나**를 만들고, 값싼 모델로 문서 하나를 추출해 보십시오. 거기서부터 그래프가 자랍니다. 다음에 에이전트가 "그거 어제 알았는데 잊어버렸다"고 할 때, 답은 더 큰 모델이 아니라 더 나은 기억 구조라는 것을 기억하시면 됩니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![graph-engineering-multi-agent-memory 슬라이드 1](/assets/images/graph-engineering-multi-agent-memory-slide-01.webp)
-
-![graph-engineering-multi-agent-memory 슬라이드 2](/assets/images/graph-engineering-multi-agent-memory-slide-02.webp)
-
-![graph-engineering-multi-agent-memory 슬라이드 3](/assets/images/graph-engineering-multi-agent-memory-slide-03.webp)
-
-![graph-engineering-multi-agent-memory 슬라이드 4](/assets/images/graph-engineering-multi-agent-memory-slide-04.webp)
 
 ## 출처
 

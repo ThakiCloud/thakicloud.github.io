@@ -37,6 +37,8 @@ categories:
 
 ---
 
+![finance-ai-governance-audit-automation 슬라이드 1]({{ '/assets/images/finance-ai-governance-audit-automation-slide-01.webp' | relative_url }})
+
 ## 금융권이 AI 도입에서 막히는 지점
 
 ### 데이터 국내저장 요건
@@ -56,6 +58,8 @@ AI가 특정 여신 한도를 추천하거나 의심 거래를 자동 정지시�
 증권 업무, 보험 업무, 신탁 업무를 담당하는 각 본부가 동일한 AI 인프라를 공유하더라도 각 팀의 데이터와 감사 로그는 완전히 격리되어야 합니다. 한 부서의 에이전트가 다른 부서의 고객 정보나 거래 내역에 접근할 수 있다면 내부 통제 원칙 위반입니다.
 
 ---
+
+![finance-ai-governance-audit-automation 슬라이드 2]({{ '/assets/images/finance-ai-governance-audit-automation-slide-02.webp' | relative_url }})
 
 ## 거버넌스 아키텍처: 정책엔진과 자율성 x 위험 매트릭스
 
@@ -420,6 +424,8 @@ A은행은 중소기업 여신 심사 업무에 AI 에이전트를 도입하고�
 
 ---
 
+![finance-ai-governance-audit-automation 슬라이드 3]({{ '/assets/images/finance-ai-governance-audit-automation-slide-03.webp' | relative_url }})
+
 ## 감사 및 추적: 해시체인 로그와 개인정보 마스킹
 
 ### 해시체인 감사 로그의 작동 방식
@@ -450,6 +456,8 @@ Paxis의 감사 체계는 해시체인(Hash Chain) 구조로 설계되어 있습
 A은행에서 여신 담당 부서와 자산관리 부서가 동일한 Paxis 인스턴스를 사용하더라도, 팀 식별자(team ID)를 기반으로 위키, 세션, 설정, 감사 로그가 완전히 격리됩니다. 여신 팀의 에이전트가 자산관리 팀의 고객 데이터에 접근을 시도하면, 데이터 자체가 "없음"으로 응답되어 존재 여부조차 노출되지 않습니다.
 
 ---
+
+![finance-ai-governance-audit-automation 슬라이드 4]({{ '/assets/images/finance-ai-governance-audit-automation-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 적용 시사점
 
@@ -492,16 +500,3 @@ ThakiCloud AI Platform은 K8s 기반으로 금융기관 전산 센터 내부망�
 ---
 
 금융권의 AI 에이전트 도입은 기술 문제가 아니라 거버넌스 문제입니다. 데이터가 어디에 저장되는지, 에이전트가 어디까지 자율적으로 행동할 수 있는지, 그 모든 행동이 검증 가능한 방식으로 기록되는지가 핵심입니다. 정책엔진과 해시체인 감사 로그는 이 세 가지 질문에 대한 기술적 답변을 제공하지만, 그것이 규제 준수의 전부가 아니라는 점을 함께 기억해야 합니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![finance-ai-governance-audit-automation 슬라이드 1]({{ '/assets/images/finance-ai-governance-audit-automation-slide-01.webp' | relative_url }})
-
-![finance-ai-governance-audit-automation 슬라이드 2]({{ '/assets/images/finance-ai-governance-audit-automation-slide-02.webp' | relative_url }})
-
-![finance-ai-governance-audit-automation 슬라이드 3]({{ '/assets/images/finance-ai-governance-audit-automation-slide-03.webp' | relative_url }})
-
-![finance-ai-governance-audit-automation 슬라이드 4]({{ '/assets/images/finance-ai-governance-audit-automation-slide-04.webp' | relative_url }})
-

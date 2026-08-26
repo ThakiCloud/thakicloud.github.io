@@ -32,6 +32,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 Agent S3는 단순히 성능 향상에 그치지 않고, **Behavior Best-of-N (bBoN)** 기법이라는 혁신적인 확장 프레임워크를 도입하여 컴퓨터 사용 에이전트의 패러다임을 바꾸고 있습니다. 이 글에서는 Agent S3의 핵심 기술과 혁신적 접근법을 상세히 분석해보겠습니다.
 
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.webp' | relative_url }})
+
 ## Agent S3의 핵심 혁신 사항
 
 ### 1. 프레임워크 단순화와 네이티브 코딩 에이전트
@@ -502,6 +504,8 @@ Agent S3는 OSWorld뿐만 아니라 다른 환경에서도 우수한 성능을 �
 
 이러한 결과는 bBoN 기법이 특정 환경에 국한되지 않고 **범용적으로 적용 가능**함을 보여줍니다.
 
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.webp' | relative_url }})
+
 ## 기술적 구현 세부사항
 
 ### 판단 시스템의 정확도
@@ -572,6 +576,8 @@ Agent S3는 개발자의 생산성을 크게 향상시킬 수 있습니다:
 - **배포 파이프라인 관리**: CI/CD 프로세스의 자동 모니터링 및 문제 해결
 - **문서화 자동화**: 코드 변경사항에 따른 문서 자동 업데이트
 
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.webp' | relative_url }})
+
 ## 한계점과 향후 개선 방향
 
 ### 현재의 한계점
@@ -636,6 +642,8 @@ class OptimizedBBoN:
 #### 기존 AI 에이전트
 - **한계**: 단일 실행의 불안정성, 낮은 성공률
 - **Agent S3의 장점**: bBoN을 통한 안정성 확보, 높은 성공률
+
+![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.webp' | relative_url }})
 
 ## 산업 적용 전망
 
@@ -810,16 +818,3 @@ Agent S3의 성공은 컴퓨터 사용 자동화 분야의 밝은 미래를 보�
 - 컴퓨터 사용 에이전트의 진화: Agent S에서 S3까지
 - AI 자동화 도구 비교 분석
 - LLMOps에서의 에이전트 활용 전략
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 1]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-01.webp' | relative_url }})
-
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 2]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-02.webp' | relative_url }})
-
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 3]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-03.webp' | relative_url }})
-
-![agent-s3-human-level-computer-use-breakthrough-ko 슬라이드 4]({{ '/assets/images/agent-s3-human-level-computer-use-breakthrough-ko-slide-04.webp' | relative_url }})
-

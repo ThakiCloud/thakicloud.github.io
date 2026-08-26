@@ -37,6 +37,8 @@ LLM으로 업무를 자동화하다 보면 같은 딜레마를 반복해서 만�
 
 우리가 함대에서 쓰는 방법을 소개합니다. 이름은 **VETD, Validate-Expensive-Then-Descend**입니다. 비싼 모델로 먼저 검증하고 그다음 코드가 통과시키는 만큼만 싼 티어로 내려갑니다.
 
+![vetd-cost-descent 슬라이드 1](/assets/images/vetd-cost-descent-slide-01.webp)
+
 ## 네 가지 약속
 
 VETD의 핵심 약속은 넷입니다.
@@ -63,6 +65,8 @@ VETD의 핵심 약속은 넷입니다.
 
 마지막은 결정론 게이트입니다. 코드가 세 조건을 모두 만족할 때만 강등을 승인합니다. headline_gap이 임계값 이하이고 reasoning 격차가 0이며 fixable 격차가 0일 때입니다. 결과는 세 갈래입니다. 셋 다 만족하면 강등하고 headline_gap은 괜찮지만 fixable 격차가 있으면 스킬을 고친 뒤 다시 재고 reasoning 격차가 있거나 headline_gap이 임계값을 넘으면 보류하거나 고정합니다.
 
+![vetd-cost-descent 슬라이드 2](/assets/images/vetd-cost-descent-slide-02.webp)
+
 ## 왜 강등해도 품질이 살아남는가
 
 강등이 안전하려면 싼 티어의 콘텐츠가 충분해야 하고 형식은 다른 데서 붙잡아야 합니다. 우리 함대의 대표 강등 사례가 정확히 이 원리로 살아남았습니다. 타임라인 다이제스트를 매일 다섯 번 올리는 스킬이었는데, 프런티어 티어에 고정돼 쿼터를 크게 잡아먹었습니다.
@@ -77,6 +81,8 @@ VETD를 적용한 뒤 16개 스킬 중 10개가 중간 티어에서 돕니다. �
 
 세일즈 CRM은 통째로 내리는 대신 갈랐습니다. 오케스트레이션을 담당하는 메인 지휘자는 중간 티어로 내리고 고객과 거래를 마주하는 콘텐츠 작성은 프런티어 티어의 서브에이전트로 남겼습니다. 비용의 대부분인 조율은 내려가고 값이 높은 얇은 산문 조각은 그대로입니다.
 
+![vetd-cost-descent 슬라이드 3](/assets/images/vetd-cost-descent-slide-03.webp)
+
 ## 게이트가 "아니오"라고 말할 때
 
 모든 스킬이 내려가는 것은 아닙니다. 오늘 밤 라이브로 두 스킬을 재봤습니다. 리포트 검증 스킬은 headline_gap 1.4에 reasoning 격차가 둘이었고 스탠드업 다이제스트는 headline_gap 2.4에 사실 근거와 분석 깊이라는 reasoning 격차가 둘이었습니다. 둘 다 게이트 판정은 보류였고 코드가 낸 권고는 "형식 격차부터 코드로 옮긴 뒤 다시 재라"였습니다.
@@ -90,6 +96,8 @@ VETD를 적용한 뒤 16개 스킬 중 10개가 중간 티어에서 돕니다. �
 교훈이 된 실패는 강등보다 승격 쪽에서 나왔습니다. 7월 초 몇몇 스킬이 "나쁜 실행"이 반복됐다는 이유로 프런티어 티어로 자동 승격됐습니다. 그런데 그 나쁜 실행은 사실 주간 쿼터 소진이었지 품질 실패가 아니었습니다. 실행 자체는 제대로 끝났는데 로그에 한도 마커가 있어서 잘못 집계된 것입니다.
 
 수정은 실패 분류기가 쿼터와 인증 소진을 중립으로 처리하도록 고치는 것이었습니다. 능력 실패가 아니니 연속 실패 횟수를 올리지 않게 했습니다. 교훈은 일반화됩니다. **승격과 강등을 몰아가는 신호는 능력 실패와 가용성 실패를 반드시 구분해야 합니다.** 그러지 못하면 루프는 노이즈를 상대로 최적화합니다.
+
+![vetd-cost-descent 슬라이드 4](/assets/images/vetd-cost-descent-slide-04.webp)
 
 ## 정직한 경계
 
@@ -110,16 +118,3 @@ VETD는 모델 비용 절감을 모델링 문제가 아니라 측정과 게이�
 ---
 
 *이 글의 방법과 수치는 ThakiCloud 자동화 함대의 실제 운영 기록입니다. 정리한 논문 초안은 [PDF]({{ '/assets/papers/vetd-cost-descent-2026-07-12.pdf' | relative_url }})로 함께 공개합니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![vetd-cost-descent 슬라이드 1](/assets/images/vetd-cost-descent-slide-01.webp)
-
-![vetd-cost-descent 슬라이드 2](/assets/images/vetd-cost-descent-slide-02.webp)
-
-![vetd-cost-descent 슬라이드 3](/assets/images/vetd-cost-descent-slide-03.webp)
-
-![vetd-cost-descent 슬라이드 4](/assets/images/vetd-cost-descent-slide-04.webp)
-

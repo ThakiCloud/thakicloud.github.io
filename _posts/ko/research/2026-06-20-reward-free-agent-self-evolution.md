@@ -37,6 +37,8 @@ LLM 에이전트를 새로운 환경에 적응시키는 표준 방법은 강화�
 
 arXiv:2604.18131 "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration"은 이 병목을 다른 방향에서 우회합니다. 외부 보상 신호를 없애고, 대신 에이전트 자신이 생성한 세계 지식(world knowledge)이 다운스트림 태스크 성능을 얼마나 높이는지를 훈련 신호로 삼습니다.
 
+![reward-free-agent-self-evolution 슬라이드 1]({{ '/assets/images/reward-free-agent-self-evolution-slide-01.webp' | relative_url }})
+
 ## 핵심 아이디어: 지식이 곧 보상
 
 논문의 출발점은 "좋은 에이전트는 좋은 세계 모델을 갖는다"는 가정입니다. 새 환경을 만났을 때 적절히 행동하려면 그 환경에 대한 정확한 지식이 필요합니다. 그렇다면, 에이전트가 환경을 탐색해서 스스로 생성한 지식의 품질을 훈련 신호로 쓸 수 있지 않을까요.
@@ -44,6 +46,8 @@ arXiv:2604.18131 "Training LLM Agents for Spontaneous, Reward-Free Self-Evolutio
 구체적으로 논문이 제안하는 결과 기반 보상(outcome-based reward) 메커니즘은 이렇게 작동합니다. 에이전트가 환경을 탐색해 세계 지식을 자체 생성합니다. 그 지식으로 다운스트림 태스크를 수행했을 때 성능이 얼마나 나오는지 측정합니다. 이 측정치가 훈련 신호가 됩니다. 사람이 만든 보상 함수가 없어도 됩니다.
 
 훈련이 끝난 에이전트는 내부 파라미터만으로 자발적 자기진화를 수행할 수 있습니다. 새 환경을 탐색해 지식을 생성하고, 그 지식을 활용해 행동하는 사이클이 외부 개입 없이 돌아갑니다.
+
+![reward-free-agent-self-evolution 슬라이드 2]({{ '/assets/images/reward-free-agent-self-evolution-slide-02.webp' | relative_url }})
 
 ## 실험 결과: 숫자로 보는 성능
 
@@ -55,6 +59,8 @@ arXiv:2604.18131 "Training LLM Agents for Spontaneous, Reward-Free Self-Evolutio
 
 다만 이 수치들은 초록에 기재된 값이며, 어떤 벤치마크에서 어떤 설정으로 측정했는지는 논문 본문을 참조해야 합니다.
 
+![reward-free-agent-self-evolution 슬라이드 3]({{ '/assets/images/reward-free-agent-self-evolution-slide-03.webp' | relative_url }})
+
 ## 왜 이 접근이 의미 있나
 
 기존 에이전트 적응 방법과 비교하면 차별점이 명확합니다.
@@ -62,6 +68,8 @@ arXiv:2604.18131 "Training LLM Agents for Spontaneous, Reward-Free Self-Evolutio
 파인튜닝은 특정 도메인 데이터가 많아야 합니다. 새 도메인에 들어갈 때마다 데이터를 수집하고 재훈련하는 사이클이 필요합니다. 강화학습은 보상 함수 설계와 수천 번의 탐색 에피소드가 필요합니다. 프롬프트 엔지니어링은 빠르지만 깊이가 얕습니다.
 
 이 논문의 방법은 훈련 후에는 파라미터만으로 작동한다는 점이 실용적입니다. 서빙 인프라 입장에서 보면, 별도의 보상 함수 서버나 외부 평가 API 없이도 에이전트가 새 환경에 자발적으로 적응합니다. 에이전트 배포 후 지속적 유지보수 비용을 줄이는 방향입니다.
+
+![reward-free-agent-self-evolution 슬라이드 4]({{ '/assets/images/reward-free-agent-self-evolution-slide-04.webp' | relative_url }})
 
 ## 한계와 열린 질문들
 
@@ -90,16 +98,3 @@ ThakiCloud의 AI 플랫폼은 다양한 고객 환경에서 에이전트를 운�
 - HuggingFace 모델: [https://huggingface.co/Bklight999/World-Knowledge](https://huggingface.co/Bklight999/World-Knowledge)
 
 저자는 텐센트와 홍콩과기대(광저우) 소속입니다. 별도 데이터셋 페이지와 프로젝트 페이지는 확인되지 않았습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![reward-free-agent-self-evolution 슬라이드 1]({{ '/assets/images/reward-free-agent-self-evolution-slide-01.webp' | relative_url }})
-
-![reward-free-agent-self-evolution 슬라이드 2]({{ '/assets/images/reward-free-agent-self-evolution-slide-02.webp' | relative_url }})
-
-![reward-free-agent-self-evolution 슬라이드 3]({{ '/assets/images/reward-free-agent-self-evolution-slide-03.webp' | relative_url }})
-
-![reward-free-agent-self-evolution 슬라이드 4]({{ '/assets/images/reward-free-agent-self-evolution-slide-04.webp' | relative_url }})
-

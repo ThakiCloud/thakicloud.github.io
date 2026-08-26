@@ -36,6 +36,8 @@ Anthropic이 2026년 6월 26일 공개한 [Economic Index 보고서 'Cadences'](
 
 ThakiCloud처럼 쿠버네티스 위에서 멀티테넌트 AI/ML 플랫폼을 실제로 운영하는 입장에서 이 전환은 남의 이야기가 아닙니다. 고객사에 ROI를 설명하는 언어가 "시스템 지표"에서 "업무 산출물과 구성원 인식"으로 옮겨가는 흐름을, 이 보고서가 데이터로 보여주기 때문입니다. 이 글은 보고서의 공식 자료를 근거로 세 가지 방법론 전환을 정리하고, 우리 플랫폼 관점에서 무엇을 가져갈 수 있는지를 짚습니다.
 
+![anthropic-economic-index-cadences 슬라이드 1]({{ '/assets/images/anthropic-economic-index-cadences-slide-01.webp' | relative_url }})
+
 ## 이 보고서는 무엇인가
 
 Anthropic은 2023년부터 Economic Index를 통해 Claude 사용 양상을 분석해 왔습니다. 그동안의 보고서는 모두 **7일치 샘플 데이터**에 기댔습니다. 일주일을 잘라내 그 안에서 사용 패턴을 들여다보는 방식입니다. 1년 전만 해도 Claude 사용의 대부분이 사용자와 어시스턴트 사이의 대화였기 때문에, 이 방식으로도 그림이 어느 정도 잡혔습니다.
@@ -54,6 +56,8 @@ Anthropic은 2023년부터 Economic Index를 통해 Claude 사용 양상을 분�
 
 업무 성격에 따른 차이도 드러납니다. 야간과 주말처럼 정규 시간이 아닐 때 사람들이 일 때문에 Claude를 찾으면, 그 태스크는 **고임금 직군** 쪽으로 쏠립니다. 마케팅 매니저나 프로그래머처럼 전통적 근무 시간 밖에서 일하는 비중이 높은 직군이 여기 해당합니다. 반대로 텔레마케팅이나 사무 보조처럼 하위 임금 분위의 태스크는 야간·주말에 비중이 줄어듭니다. Anthropic은 컴퓨터·수학 직군을 분석에서 빼는 강건성 검증을 해도 이 경향이 유지된다고 덧붙입니다. 단순 자동화가 아니라 고숙련 업무의 보조 도구로 AI가 기능하고 있다는 신호로 읽을 수 있는 대목입니다.
 
+![anthropic-economic-index-cadences 슬라이드 2]({{ '/assets/images/anthropic-economic-index-cadences-slide-02.webp' | relative_url }})
+
 ## 두 번째 축: 산출물(Artifact) 분류기
 
 두 번째 전환은 대화의 결과물을 분류하는 일입니다. Anthropic은 채팅과 Cowork 대화 각각이 어떤 **산출물(artifact)**을 만들어내는지를 30개가 넘는 범주로 분류했습니다. 문서, 설명, 코드 한 조각, 학술 논문처럼 그 대화에서 Claude가 만들어낸 주된 결과물을 뜻합니다.
@@ -64,6 +68,8 @@ Anthropic은 2023년부터 Economic Index를 통해 Claude 사용 양상을 분�
 
 같은 산출물이라도 Claude Code에서 만들 때 자율성이 더 높게 측정됩니다. 보여준 31개 산출물 중 26개에서 Claude Code 쪽 자율성이 챗·Cowork보다 높았고, 전체 평균으로는 **0.37점** 차이가 났습니다. 스크립트나 코드 조각의 경우 그 격차가 0.53점까지 벌어집니다. 이 차이의 약 3분의 2는 같은 작업을 더 많이 위임해서 처리하기 때문이라고 설명합니다. 블로그 글이 좋은 예입니다. 챗·Cowork에서 블로그 글을 만드는 대화는 중앙값 기준 13번의 주고받기를 거치지만, Claude Code에서는 사용자가 더 많은 판단을 맡깁니다. 사용자가 AI에게 더 많은 자율성을 넘기고 있다는 뜻입니다.
 
+![anthropic-economic-index-cadences 슬라이드 3]({{ '/assets/images/anthropic-economic-index-cadences-slide-03.webp' | relative_url }})
+
 ## 세 번째 축: 인식 설문
 
 세 번째 축은 로그가 아니라 사람에게 직접 묻는 데이터입니다. Anthropic은 2026년 4월 경제지수 설문을 시작해, 실제 Claude 이용자에게 AI가 자신의 업무를 어느 정도 수행할 수 있는지를 직접 물었습니다. 설문 응답은 프라이버시 보존 방법으로 사용 데이터와 연결됩니다.
@@ -71,6 +77,8 @@ Anthropic은 2023년부터 Economic Index를 통해 Claude 사용 양상을 분�
 응답자에게 오늘 기준으로 AI가 스스로 처리할 수 있는 업무 비중(reported exposure)과 12개월 뒤에 처리할 것으로 기대하는 비중(anticipated exposure)을 물었습니다. **10명 중 6명에 가까운 응답자가 내년에 더 높은 구간을 선택**했고, **3분의 1 이상이 내년에는 AI가 자기 업무의 대부분 또는 거의 전부를 처리할 수 있을 것으로 기대**한다고 답했습니다.
 
 층위별 차이도 또렷합니다. 소득 수준이 낮은 국가의 응답자일수록 AI가 더 많은 업무를 대체할 수 있다고 느끼는 경향이 강했습니다. Anthropic은 이런 국가일수록 AI를 보강이 아니라 자동화에 쓰는 경향이 있다는 이전 연구를 함께 인용합니다. 경력에 따른 차이도 나타났습니다. 15년 이상 경력자는 AI가 할 수 있는 업무 비중을 첫해 근무자보다 약 10퍼센트포인트 낮게 봤습니다. 오래 일한 사람일수록 AI가 흉내내기 어려운 암묵적·맥락적 전문성을 쌓았기 때문이라는 해석입니다. 응답자들은 AI가 끝내 할 수 없는 일로 판단, 맥락 인식, 상황 추론, 그리고 신뢰 구축과 사람 관리 같은 관계적 차원을 꼽았습니다. 대체에 대한 우려는 경력 초년생과 저임금 직군에 집중됐습니다.
+
+![anthropic-economic-index-cadences 슬라이드 4]({{ '/assets/images/anthropic-economic-index-cadences-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -88,18 +96,6 @@ ai-platform은 Paxis 위에서 작동하는 에이전트들이 사용하는 추�
 
 마지막으로, 측정 방법론의 고도화가 곧 영향의 크기를 키우는 것은 아닙니다. 더 정교하게 본다는 것과 더 크게 일어난다는 것은 다른 이야기입니다. 이 보고서의 가치는 "AI가 일을 얼마나 대체했다"는 결론이 아니라, "그 영향을 어떻게 더 정직하게 측정할 것인가"라는 질문을 다층 혼합 방법론으로 다시 세운 데 있습니다. ThakiCloud가 가져갈 것도 결론이 아니라 그 측정의 태도입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![anthropic-economic-index-cadences 슬라이드 1]({{ '/assets/images/anthropic-economic-index-cadences-slide-01.webp' | relative_url }})
-
-![anthropic-economic-index-cadences 슬라이드 2]({{ '/assets/images/anthropic-economic-index-cadences-slide-02.webp' | relative_url }})
-
-![anthropic-economic-index-cadences 슬라이드 3]({{ '/assets/images/anthropic-economic-index-cadences-slide-03.webp' | relative_url }})
-
-![anthropic-economic-index-cadences 슬라이드 4]({{ '/assets/images/anthropic-economic-index-cadences-slide-04.webp' | relative_url }})
 
 ## 출처
 

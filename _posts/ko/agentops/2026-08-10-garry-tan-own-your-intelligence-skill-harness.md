@@ -36,6 +36,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 *Startup School 2026 강연 전체 영상입니다. 러닝타임은 약 42분입니다.*
 
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 1](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-01.webp)
+
 ## 개요
 
 Y Combinator 대표인 개리 탄은 2026년 8월 초 Startup School 2026 무대에서 42분 동안 퍼스널 AGI라는 표현을 꺼냈습니다. 그가 말하는 퍼스널 AGI는 새로운 모델 등급이 아닙니다. 자기 인프라 위에서 돌고, 시간이 지나면서 사용자에 대한 지식을 축적하며, 그 결과로 만들 수 있는 것의 범위를 넓혀주는 에이전트를 가리킵니다. 강연은 그가 매일 쓰는 도구와 워크플로를 공개하면서, 창업자라면 지능을 빌리지 말고 소유해야 한다는 주장으로 이어집니다.
@@ -69,6 +71,8 @@ flowchart TB
 
 개리 탄 본인의 구성으로는 22만 페이지 규모의 지식 위키, 에이전트에게 절차를 지시하는 마크다운 스킬 파일들, 그리고 모델과 결정론적 코드를 잇는 하네스가 언급됩니다. 그가 오픈소스로 공개한 GStack은 Claude Code를 오피스아워, 디자인, 코드 리뷰, QA, 브라우저 테스트 같은 역할을 나눠 맡는 엔지니어링 팀처럼 굴리는 도구 모음으로 소개됩니다.
 
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 2](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-02.webp)
+
 ## 하네스라는 단어를 눈여겨볼 필요가 있습니다
 
 세 요소 중 실무자가 가장 과소평가하는 것이 하네스입니다. 모델과 **결정론적 코드**를 잇는다는 표현이 여기서 핵심입니다.
@@ -90,6 +94,8 @@ flowchart TB
 넷째, **모든 줄이 비용을 냅니다**. 스킬은 인덱스에 올라간 순간부터 매 호출마다 후보로 등장합니다. 그래서 각 문장에 이 문장이 없으면 에이전트가 틀리는가를 물어보고, 아니면 지웁니다. 두 번 반복했다고 전부 파일로 만들면 저장소가 소음으로 차고, 그 소음은 정확히 이 방식이 주려던 이득을 갉아먹습니다.
 
 정리하면 스킬 파일은 잘 쓴 지시문이 아니라 **검증 조건과 실패 지식이 붙은 절차**입니다. 그 형태가 되어야 하네스가 그것을 실행하고 결과를 되먹일 수 있습니다.
+
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 3](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-03.webp)
 
 ## 스피노자를 꺼낸 이유
 
@@ -115,6 +121,8 @@ Paxis의 Skill Harness는 요청이 들어오면 스킬 저장소를 검색해 �
 
 한 줄로 줄이면 이렇습니다. 강연이 개인에게 권한 것을 조직 단위로 옮기면 승인과 감사와 격리가 따라붙고, 그 전체를 한 벌로 세운 것이 Paxis입니다.
 
+![garry-tan-own-your-intelligence-skill-harness 슬라이드 4](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-04.webp)
+
 ## 한계 및 반론
 
 이 주장을 그대로 받아들이기 전에 몇 가지는 눌러볼 필요가 있습니다.
@@ -133,18 +141,6 @@ Paxis의 Skill Harness는 요청이 들어오면 스킬 저장소를 검색해 �
 
 그래서 오늘 하실 일은 새 도구를 설치하는 것이 아닙니다. 지난 2주 동안 에이전트에게 **두 번 이상 같은 취지로 시킨 일**을 하나만 떠올려서 그 절차를 마크다운 한 장으로 옮겨보시기 바랍니다. 무엇을 확인해야 하는지, 어디서 틀리기 쉬운지, 끝났다는 판정을 무엇으로 하는지까지 적으면 그게 첫 번째 스킬 파일입니다. 그 파일이 한 장에서 열 장이 되는 동안 축적되는 것은 프롬프트가 아니라 판단입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 1](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-01.webp)
-
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 2](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-02.webp)
-
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 3](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-03.webp)
-
-![garry-tan-own-your-intelligence-skill-harness 슬라이드 4](/assets/images/garry-tan-own-your-intelligence-skill-harness-slide-04.webp)
 
 ## 출처
 

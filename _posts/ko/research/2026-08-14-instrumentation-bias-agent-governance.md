@@ -33,6 +33,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/instrumentation-bia
 
 이 5%를 어떻게 읽어야 할지에는 몇 가지 해석이 있습니다. 첫 번째 해석은 규칙이 95%의 경우에 무시됐다는 것입니다. 두 번째는 검증이 실제로 자주 일어났지만 기록되지 않았다는 것입니다. 원래 흐름에서 영수증을 남기려면 JSON 검증 기록을 직접 작성하고, kill/keep 임계값을 정하고, 로깅 스크립트를 수동으로 호출하는 등 다섯 단계를 거쳐야 했는데, 이미 검증 자체는 끝났다고 느끼는 순간에 이 절차를 자발적으로 완주할 사람은 거의 없습니다. 세 번째는 측정 자체가 어디서 어떻게 봤는지에 따른 산물이라는 것입니다. 이 논문이 만든 프레임워크로 보면, 대시보드가 보여준 숫자는 이 세 가지 중 어느 것도 구분해주지 않습니다.
 
+![instrumentation-bias-agent-governance 슬라이드 1](/assets/images/instrumentation-bias-agent-governance-slide-01.webp)
+
 ## 계측 편향: 규칙이 있다는 것과 측정 가능하다는 것은 다르다
 
 논문은 이 현상에 계측 편향(instrumentation bias)이라는 이름을 붙입니다. 실제로 검증이 일어났는지를 나타내는 지표 C_true와, 감사자에게 그 영수증이 보이는지를 나타내는 지표 C_obs를 따로 정의하고, 그 기댓값의 차이 Δ를 계측 편향으로 정의합니다. 이 시스템에서는 영수증이 남았다면 검증이 실제로 일어났다는 것을 확실히 보장하지만, 그 역은 성립하지 않습니다. 대화 도중에 즉흥적으로 검증했거나 운영자가 결과를 눈으로 훑어본 경우처럼, 영수증 없이도 검증이 일어날 수 있기 때문입니다. 그래서 Δ는 구조적으로 항상 0 이상이고, 대시보드에 찍힌 준수율은 진짜 준수율의 하한선일 뿐입니다. 이 비대칭성이 위험한 이유는, 낮은 대시보드 수치가 항상 실제로는 준수율이 높은 상황과도 양립 가능하기 때문입니다. 대시보드만으로는 프로세스가 망가진 것인지 센서가 망가진 것인지 구분할 수 없습니다.
@@ -44,6 +46,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/instrumentation-bia
 
 여기서 논문이 강조하는 구분이 하나 있습니다. 계측 편향은 굿하트의 법칙(측정이 목표가 되는 순간 그 측정은 의미를 잃는다)과는 다른 문제입니다. 굿하트 현상은 지표가 계속 생산되지만 그 생산 과정 자체가 왜곡되는 타당성(validity) 문제이고, 계측 편향은 지표가 정확하게 생산됐을 때는 신뢰할 만하지만 애초에 충분히 자주 생산되지 않거나 감사자가 닿을 수 없는 곳에서 생산되는 완전성(completeness) 문제입니다. 그래서 대응 방향도 정반대입니다. 굿하트 편향에 맞설 때는 좋아 보이는 지표를 의심해야 하지만, 계측 편향에 맞설 때는 나빠 보이거나 아예 아무것도 보이지 않는 지표를 의심해야 합니다.
 
+![instrumentation-bias-agent-governance 슬라이드 2](/assets/images/instrumentation-bias-agent-governance-slide-02.webp)
+
 ## 실측: 원인 규명, 그리고 두 번째 실패
 
 같은 날 팀은 두 갈래 개선을 배포했습니다. 다섯 단계짜리 수동 흐름을 `plan`과 `tally` 두 개의 명령으로 대체해 임계값 판정과 중복 제거, 검증 집계를 사람의 판단이 아니라 결정론적 코드가 담당하도록 옮겼고, 디스패치 시점에 자동으로 발동하는 훅을 붙여 fan-out이 일어나는 바로 그 순간에 영수증 절차를 상기시키도록 했습니다. 각각 마찰 메커니즘과 인지 격차 메커니즘을 정확히 겨냥한 조치였습니다.
@@ -51,6 +55,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/instrumentation-bia
 이 개선이 실제로 폐쇄율을 끌어올렸는지 확인하기 위해 팀은 훅이 배포된 시각을 기준으로 이전 구간과 이후 구간을 나누고, 두 구간의 영수증 비율을 이표본 비율 검정으로 비교하는 전/후 자연실험을 설계했습니다. 그런데 재실행 결과는 양쪽 구간 모두 관측치가 0건이었습니다. 세션 파일도, 디스패치 호출도, 원장 항목도 전부 0으로 나왔고, 두 z통계량은 계산 자체가 불가능한 상태(undefined)였습니다.
 
 원인은 감사 장비 자체의 범위 불일치였습니다. 세션 트랜스크립트는 대화형 세션을 돌리는 머신의 로컬 홈 디렉터리 아래에 기록되는데, 이 재실행 스캔은 별도의 배치 컴퓨트 노드에서 실행됐고 그 노드에는 애초에 해당 디렉터리 자체가 존재하지 않았습니다. 글롭 패턴이 빈 집합으로 확장됐고, 그 이후의 모든 집계가 결정론적으로 0을 상속받았습니다. 더 까다로운 점은 이 실패가 조용했다는 것입니다. 잡은 에러 없이 정상 종료됐고, 모든 필드에 0을 보고했습니다. 이는 정말로 아무도 검증을 닫지 않았을 때 나올 법한 모양과 정확히 같습니다. 스캔 로직도, 윈도우 파라미터도, 통계 설계도, 원장 경로도 전부 올바랐습니다. 코드 리뷰가 점검할 수 있는 모든 구성 요소가 멀쩡했는데도 결과는 텅 비었습니다. 감사자가 감사 대상과 같은 곳에 서 있는지는 어떤 단위 테스트도, 어떤 코드 리뷰도, 스캐너를 작성한 모델의 추론 과정도 잡아낼 수 없는 배포 속성이었기 때문입니다.
+
+![instrumentation-bias-agent-governance 슬라이드 3](/assets/images/instrumentation-bias-agent-governance-slide-03.webp)
 
 ## 이 결과가 남기는 세 가지 함의
 
@@ -60,6 +66,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/instrumentation-bia
 
 과학적으로는 자율 에이전트 하네스의 새로운 실패 모드를 정식화했다는 점이 핵심입니다. 계측 편향을 세 가지 메커니즘으로 분해하고, 굿하트 현상과 구분하고, 실제 프로덕션 세션 로그(수천 세션, 수백 건의 fan-out) 기반 전/후 자연실험으로 이를 측정하는 프로토콜을 제시했습니다. 다만 그 프로토콜을 실행에 옮긴 첫 시도가 스스로 프레임워크가 예측한 세 번째 메커니즘, 즉 범위 불일치의 실사례가 됐다는 점이 이 논문에서 가장 설득력 있는 대목입니다. 계측 편향의 분류를 막 정리한 팀이 바로 그 실패를 자기 손으로 재현한 셈이기 때문입니다.
 
+![instrumentation-bias-agent-governance 슬라이드 4](/assets/images/instrumentation-bias-agent-governance-slide-04.webp)
+
 ## 한계와 다음 단계
 
 이 연구는 단일 팀의 단일 프로덕션 하네스만 다룹니다. 5.0%라는 수치는 그 시스템, 그 시기의 도구 사용성을 반영한 값일 뿐 다른 곳에서도 비슷하게 나타난다고 주장하지 않습니다. 일반화할 수 있다고 주장하는 것은 수치가 아니라 프레임워크와 세 가지 속성(존재·계측·범위 일치)을 나눠 점검해야 한다는 구조적 원칙입니다.
@@ -67,16 +75,3 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/instrumentation-bia
 더 근본적인 한계는 자연실험 재실행이 실패하면서 개선 조치의 실제 효과를 검증된 수치로 보고하지 못했다는 점입니다. 이 논문은 개선 전 기준선과 범위 불일치라는 실패 모드의 실증만 확보했을 뿐, 두 명령 도구와 디스패치 훅이 폐쇄율을 실제로 끌어올렸다고는 아직 말할 수 없습니다. 또한 진짜 준수 여부(C_true)를 독립적으로 확인해줄 오라클이 없어서 Δ는 정의는 명확하지만 아직 추정할 수 없는 이론적 양으로 남아 있고, 전/후 비교 설계 자체도 "기록이 쉬워져서 늘어난 준수"와 "관측되는 것을 의식해서 실제로 늘어난 준수"라는 두 채널을 구분하지 못한다는 구조적 약점을 안고 있습니다. 다음 단계로는 대화형 세션과 같은 범위에서 실행되는 스캐너로 재실험을 다시 돌리고, 세션 파일을 0건 찾았을 때는 조용히 0을 보고하는 대신 크게 실패하도록 하는 생존성 검증(liveness assertion)을 추가하는 작업이 최우선 과제로 제시됩니다. 그 이후에는 다른 프로덕션 하네스로 프로토콜을 확장하고, 영수증 없는 fan-out 이벤트를 사람이 표본 추출해 직접 검토하는 오라클을 구축해 Δ를 추정치가 아닌 보정된 값으로 전환하는 것이 목표입니다.
 
 논문 상세 페이지: [https://huggingface.co/datasets/thaki-AI/daily-paper-2026-08-14-instrumentation-bias-agent-governance](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-08-14-instrumentation-bias-agent-governance)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![instrumentation-bias-agent-governance 슬라이드 1](/assets/images/instrumentation-bias-agent-governance-slide-01.webp)
-
-![instrumentation-bias-agent-governance 슬라이드 2](/assets/images/instrumentation-bias-agent-governance-slide-02.webp)
-
-![instrumentation-bias-agent-governance 슬라이드 3](/assets/images/instrumentation-bias-agent-governance-slide-03.webp)
-
-![instrumentation-bias-agent-governance 슬라이드 4](/assets/images/instrumentation-bias-agent-governance-slide-04.webp)
-

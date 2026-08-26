@@ -35,6 +35,8 @@ Model Context Protocol(MCP)은 Anthropic이 2024년 11월에 공개한 표준 �
 
 에이전트 인프라를 운영하는 입장에서 이 논문이 흥미로운 이유는 따로 있습니다. 논문은 "도구를 몇 개까지 붙일 수 있는가"를 실제로 측정했고, 그 답이 우리가 막연히 생각하던 것보다 훨씬 낮았기 때문입니다. ThakiCloud가 Agent-Native Cloud인 Paxis에서 960개가 넘는 스킬을 다루는 방식과 정면으로 맞닿는 주제라, 이 글에서 실측 결과와 우리 설계 선택을 함께 짚어보겠습니다.
 
+![mcp-server-architecture-patterns 슬라이드 1]({{ '/assets/images/mcp-server-architecture-patterns-slide-01.webp' | relative_url }})
+
 ## 이 연구는 무엇인가
 
 논문의 접근은 실증적입니다. 이론에서 출발해 "이래야 한다"를 제시하는 대신, 이미 돌아가고 있는 서버 15개를 뜯어보고 공통 구조를 귀납적으로 추출했습니다. 그 결과 도출된 다섯 패턴은 서버가 LLM에게 무엇을 노출하느냐, 그리고 상태를 어떻게 다루느냐에 따라 갈립니다.
@@ -367,6 +369,8 @@ Model Context Protocol(MCP)은 Anthropic이 2024년 11월에 공개한 표준 �
 
 이 분류가 유용한 이유는 서버를 설계할 때 "내 서버는 어떤 종류인가"를 먼저 정하게 만들기 때문입니다. Resource Gateway를 만들면서 Tool Orchestrator의 복잡한 실행 로직을 욱여넣으면 두 패턴의 단점만 합쳐집니다. 패턴을 명시적으로 고르는 것 자체가 설계 규율입니다.
 
+![mcp-server-architecture-patterns 슬라이드 2]({{ '/assets/images/mcp-server-architecture-patterns-slide-02.webp' | relative_url }})
+
 ## 다섯 가지 아키텍처 패턴
 
 **Resource Gateway**는 데이터베이스나 파일 시스템, API 같은 데이터 소스를 읽기 중심으로 노출하는 서버입니다. 도구 자체는 단순하고, 관건은 어떤 리소스를 어떤 권한으로 열어주느냐입니다.
@@ -379,6 +383,8 @@ Model Context Protocol(MCP)은 Anthropic이 2024년 11월에 공개한 표준 �
 
 **Domain-Specific Adapter**는 특정 도메인(금융, 의료, 사내 시스템 등)의 개념을 LLM이 다루기 좋은 형태로 래핑합니다. 도메인 용어와 제약을 도구 스키마에 녹여, 모델이 엉뚱한 조합을 시도하지 않게 유도합니다.
 
+![mcp-server-architecture-patterns 슬라이드 3]({{ '/assets/images/mcp-server-architecture-patterns-slide-03.webp' | relative_url }})
+
 ## 도구 과부하: 도구가 많으면 왜 흔들리는가
 
 이 논문에서 가장 실무적으로 중요한 부분은 도구 개수와 도구 선택 정확도의 관계를 측정한 대목입니다. 결과는 명확합니다. 컨텍스트에 붙는 도구가 일정 수를 넘으면, 모델이 올바른 도구를 고르는 정확도가 90% 아래로 떨어집니다.
@@ -386,6 +392,8 @@ Model Context Protocol(MCP)은 Anthropic이 2024년 11월에 공개한 표준 �
 구체적으로 논문은 Claude Haiku 4.5의 경우 도구 10~15개 구간에서, Sonnet 4의 경우 20~30개 구간에서 도구 선택 정확도가 90% 밑으로 내려간다고 보고합니다. 더 큰 모델일수록 감당하는 도구 수가 늘어나긴 하지만, "무한정 붙여도 된다"는 지점은 존재하지 않습니다. 도구가 많아지고 설명이 모호해질수록 모델은 헷갈립니다.
 
 이 실측은 흔한 직관을 뒤집습니다. MCP를 처음 붙이는 팀은 "일단 가진 API를 전부 도구로 노출하자"고 시작하는 경우가 많습니다. Proxy Aggregator로 여러 백엔드를 합치면 도구 수는 금세 수십 개가 됩니다. 그 순간 정확도 곡선의 벼랑 아래로 떨어지는 셈입니다. 도구 개수는 무료가 아니라, 모델의 판단 예산을 갉아먹는 비용입니다.
+
+![mcp-server-architecture-patterns 슬라이드 4]({{ '/assets/images/mcp-server-architecture-patterns-slide-04.webp' | relative_url }})
 
 ## 안티패턴과 교차 관심사
 
@@ -409,18 +417,6 @@ Proxy Aggregator의 위험도 같은 렌즈로 관리합니다. Paxis의 MCP 커
 
 도구 선택 정확도 실측 역시 모델과 프롬프트 설계에 따라 달라질 수 있는 값입니다. 잘 짜인 도구 설명과 명확한 네이밍은 같은 도구 수에서도 정확도를 끌어올립니다. 즉 "도구 N개까지 안전"이라는 절대선이 있는 것이 아니라, 도구 수는 여러 변수 중 하나입니다. 그럼에도 방향성은 분명합니다. 도구는 공짜가 아니며, 필요한 만큼만 노출하는 규율이 에이전트 신뢰성의 토대라는 점입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![mcp-server-architecture-patterns 슬라이드 1]({{ '/assets/images/mcp-server-architecture-patterns-slide-01.webp' | relative_url }})
-
-![mcp-server-architecture-patterns 슬라이드 2]({{ '/assets/images/mcp-server-architecture-patterns-slide-02.webp' | relative_url }})
-
-![mcp-server-architecture-patterns 슬라이드 3]({{ '/assets/images/mcp-server-architecture-patterns-slide-03.webp' | relative_url }})
-
-![mcp-server-architecture-patterns 슬라이드 4]({{ '/assets/images/mcp-server-architecture-patterns-slide-04.webp' | relative_url }})
 
 ## 출처
 

@@ -39,6 +39,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이렇게 주장을 헷지하는 것이 과장에 휩쓸리지 않는 기본 위생입니다. 규모가 크다고 해서 품질이 보장되는 것은 아닙니다.
 
+![stanford-reap-empirical-research-skill-library 슬라이드 1]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-01.webp' | relative_url }})
+
 ## 그럼에도 가치 있는 이유
 
 과장을 걷어내도 이 접근에는 실무 가치가 남습니다.
@@ -47,15 +49,21 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 - **스킬 = 능력 상품**: 단순 프롬프트와 달리, 스킬은 버전 관리되고 스크립트·템플릿·검증이 함께 묶입니다. 입력에서 출력, 에러 복구까지 재사용 가능한 워크플로가 됩니다.
 - **사용자 기여 구조**: 사용자가 자신의 스킬을 업로드할 수 있는 구조는, 생태계가 집단 지성으로 성장하는 경로를 엽니다.
 
+![stanford-reap-empirical-research-skill-library 슬라이드 2]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-02.webp' | relative_url }})
+
 ## 멀티에이전트 지식노동 자동화 관점
 
 이 라이브러리의 진짜 교훈은 "능력을 어디에 쌓느냐"입니다. 능력을 harness(모델 루프)가 아니라 skill에 두텁게 쌓으면, 동일 스킬이 여러 환경을 가로질러 작동합니다. 도메인 지식, 판단, 템플릿, 실패 사례를 스킬에 패키징하는 설계는, 멀티에이전트 시스템이 확장 가능하게 성장하는 핵심 원칙입니다.
 
 그러나 자동화가 풀지 못하는 부분도 명확합니다. 인과 식별의 타당성, 결과의 재현성, 환각 차단은 코드로 완전히 검증되지 않습니다. 이런 판단성 작업은 여전히 강한 모델과 사람의 검토가 필요합니다. 자동화는 반복 작업을 덜어줄 뿐, 판단을 대체하지 않습니다.
 
+![stanford-reap-empirical-research-skill-library 슬라이드 3]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-03.webp' | relative_url }})
+
 ## ThakiCloud 관점
 
 저희가 다루는 영역은 이런 스킬 라이브러리를 K8s 위에서 재현 가능하게 운영하는 일입니다. 탐색·통계 실행 같은 반복 작업은 싼 모델에, 인과 추론·결과 검증 같은 판단은 강한 모델에 배분합니다. 워커는 싸게, 게이트만 비싸게 두는 원칙입니다. 그리고 모든 결과는 적대적 검증 단계를 거치게 해서, 환각과 과장을 코드와 모델 양쪽으로 걸러냅니다.
+
+![stanford-reap-empirical-research-skill-library 슬라이드 4]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-04.webp' | relative_url }})
 
 ## 마치며
 
@@ -64,16 +72,3 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---
 
 출처: brycewang-stanford/Auto-Empirical-Research-Skills (Stanford REAP / CoPaper.AI 유지). GitHub: https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
-
-![stanford-reap-empirical-research-skill-library 슬라이드 1]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-01.webp' | relative_url }})
-
-![stanford-reap-empirical-research-skill-library 슬라이드 2]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-02.webp' | relative_url }})
-
-![stanford-reap-empirical-research-skill-library 슬라이드 3]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-03.webp' | relative_url }})
-
-![stanford-reap-empirical-research-skill-library 슬라이드 4]({{ '/assets/images/stanford-reap-empirical-research-skill-library-slide-04.webp' | relative_url }})
-

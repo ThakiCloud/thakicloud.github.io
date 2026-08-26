@@ -30,11 +30,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 
 다른 하나는 값이 오른다는 뉴스입니다. 추론 전용 칩 스타트업 삼바노바가 기업가치 110억 달러, 약 16조 원을 인정받으며 시리즈F 1차로 10억 달러를 조달했습니다. 불과 5개월 전 시리즈E 때 몸값이 22억 달러였으니, 5개월 만에 다섯 배가 뛴 셈입니다. 토큰 한 알의 값은 반토막이 나는데, 그 토큰을 찍어내는 칩을 만드는 회사의 값은 다섯 배가 됐습니다. 둘 중 하나가 틀린 걸까요. 그렇지 않습니다. 두 뉴스는 같은 하나의 흐름을 앞과 뒤에서 찍은 사진입니다.
 
+![token-price-war-jevons-paradox-inference 슬라이드 1](/assets/images/token-price-war-jevons-paradox-inference-slide-01.webp)
+
 ## 값이 내려가면 더 쓴다는 오래된 법칙
 
 19세기 경제학자 윌리엄 제번스는 석탄을 효율적으로 쓰는 증기기관이 나오면 석탄 소비가 줄 것이라는 통념을 뒤집었습니다. 연료가 싸지자 사람들은 아끼기는커녕 더 많은 기계를 돌렸고, 결국 석탄 총소비는 오히려 늘었습니다. 자원의 단가가 내려가면 그 자원의 총사용량은 늘어난다는 이 역설이, 지금 추론 시장에서 거의 교과서처럼 재현되고 있습니다.
 
 디지털데일리가 짚은 '토큰 역설'이 정확히 이 대목입니다. 2023년 이후 토큰 단가는 꾸준히 내려왔는데, 기업이 체감하는 AI 총비용은 오히려 급증하고 있습니다. 범인은 AI 에이전트입니다. 스스로 검색하고 도구를 호출하며 여러 단계를 거쳐 일을 끝내는 에이전트는, 한 번 묻고 한 번 답하던 챗봇보다 작업 한 건당 최소 50배에서 많게는 500배의 토큰을 삼킵니다. 골드만삭스는 전 세계 월간 토큰 소비량이 올해 월 5000조 개에서 2030년 월 12경 개로 24배 늘어날 것으로 봤습니다. 단가가 절반이 되어도 사용량이 스무 배로 뛰면 청구서는 열 배가 됩니다. 값을 깎는 경쟁이 치열할수록 총지출은 더 커지는 구조입니다.
+
+![token-price-war-jevons-paradox-inference 슬라이드 2](/assets/images/token-price-war-jevons-paradox-inference-slide-02.webp)
 
 ## 병목은 아래에서 위로 올라갑니다
 
@@ -43,6 +47,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 같은 압력이 메모리에서도 나타납니다. 삼성전자가 이번 주 공개한 CXL 평가 결과를 보면, AI 추론이 대화 맥락을 저장하는 KV캐시 요구량이 수백 기가바이트 단위로 폭증하면서 GPU에 붙은 HBM만으로는 용량을 감당하기 어려운 병목이 드러납니다. 512기가바이트 D램은 KV캐시가 넘칠 때 성능이 무너졌지만, 1테라바이트 CXL 메모리 풀은 8-GPU 환경에서도 D램 대비 92% 성능을 지켜냈습니다. 시장조사기관 욜은 CXL 시장이 올해 21억 달러에서 2028년 약 160억 달러로 커질 것으로 봅니다. HBM이 대역폭 문제를 풀었다면 CXL은 용량과 비용 문제를 푸는 상호 보완재로 자리를 잡아가고 있습니다.
 
 이 폭증하는 수요는 실물 지표로도 확인됩니다. 대만의 6월 수출액은 748억 달러로 월간 기준 역대 세 번째 규모였고, 그래픽카드와 AI 서버가 포함된 정보통신 품목 출하가 전년보다 72.3% 폭증하며 실적을 끌었습니다. 그 뒤에는 HBM과 CoWoS 첨단 패키징 수요가 있습니다. 최태원 SK 회장이 글로벌 투자자 앞에서 HBM 리더십을 축으로 한 AI 반도체 청사진을 직접 편 것도 같은 맥락입니다. 토큰이 흔해질수록, 그 토큰을 감당하는 칩과 메모리는 귀해집니다. 값이 내려가는 층 바로 아래에서 병목이 위로 밀려 올라오는 그림입니다.
+
+![token-price-war-jevons-paradox-inference 슬라이드 3](/assets/images/token-price-war-jevons-paradox-inference-slide-03.webp)
 
 ## 진짜 비싼 것은 토큰이 아니라 자율 실행입니다
 
@@ -378,6 +384,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 </script>
 {% endraw %}
 
+![token-price-war-jevons-paradox-inference 슬라이드 4](/assets/images/token-price-war-jevons-paradox-inference-slide-04.webp)
+
 ## 값싼 토큰의 홍수에는 수도관이 필요합니다
 
 빅테크의 셈법도 이 압력을 뒷받침합니다. 알파벳, 마이크로소프트, 메타, 아마존 4사의 2026년 합산 자본지출은 사상 최고인 약 7250억 달러로 매출 대비 30%에 이르고, 이들 합산 잉여현금흐름은 약 10년 만에 가장 낮은 수준으로 주저앉았습니다. 아마존의 최근 12개월 잉여현금흐름은 1년 전 259억 달러에서 12억 달러로 95% 급감했습니다. 값싼 토큰의 홍수를 그냥 흘려보내기만 하는 조직은, 청구서가 먼저 무너뜨립니다. 필요한 것은 더 굵은 파이프가 아니라, 홍수를 안전하게 나눠 보내는 잘 설계된 수도관입니다.
@@ -399,16 +407,3 @@ ThakiCloud의 Paxis는 정확히 그 수도관을 겨냥한 정식 제품, Agent
 - [우리은행, 884억 원 들여 175개 AI 에이전트 구축 (BIkorea)](https://m.bikorea.net/news/articleView.html?idxno=45433)
 - [중국 AI 의인화 상호작용 관리 조치 시행, 챗봇 페르소나 기능 중단 (ZDNet Korea)](https://zdnet.co.kr/view/?no=20260707224246)
 - [빅테크 7250억 달러 AI 투자에 잉여현금흐름은 10여 년 만에 최저 (파이낸셜뉴스)](https://www.fnnews.com/news/202605111154590244)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
-
-![token-price-war-jevons-paradox-inference 슬라이드 1](/assets/images/token-price-war-jevons-paradox-inference-slide-01.webp)
-
-![token-price-war-jevons-paradox-inference 슬라이드 2](/assets/images/token-price-war-jevons-paradox-inference-slide-02.webp)
-
-![token-price-war-jevons-paradox-inference 슬라이드 3](/assets/images/token-price-war-jevons-paradox-inference-slide-03.webp)
-
-![token-price-war-jevons-paradox-inference 슬라이드 4](/assets/images/token-price-war-jevons-paradox-inference-slide-04.webp)
-

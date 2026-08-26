@@ -41,6 +41,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 위 영상은 Viktor Oddy가 Fable 5로 3D 인터랙티브 웹을 만드는 과정을 녹화한 가이드입니다.
 
+![fable5-interactive-web-design 슬라이드 1]({{ '/assets/images/fable5-interactive-web-design-slide-01.webp' | relative_url }})
+
 ## Fable 5는 무엇이 다른가
 
 Fable 5는 Anthropic이 공개한 Claude 계열 모델로, 특히 프런트엔드 엔지니어링과 여러 단계에 걸친 에이전트형 작업에서 강점을 보입니다. 여기서 "여러 단계"라는 표현이 중요합니다. 인터랙티브 웹 하나를 만드는 일은 사실 여러 작업의 묶음입니다. 레이아웃을 잡고, 3D 지오메트리를 정의하고, 스크롤 이벤트와 씬을 연결하고, 셰이더를 붙이고, 파일을 구조화하고, 성능을 다듬는 과정이 이어집니다. 기존 모델이 이 중 한두 단계를 처리하고 나머지를 사람에게 넘겼다면, Fable 5는 이 사슬을 더 길게 스스로 이어 갑니다.
@@ -48,6 +50,8 @@ Fable 5는 Anthropic이 공개한 Claude 계열 모델로, 특히 프런트엔�
 구체적으로 공개 사례에서 반복적으로 확인되는 특징은 다음과 같습니다. 첫째, 스크롤로 제어되는 애니메이션을 코드로 구현합니다. 스크롤 진행도를 씬의 카메라나 요소 상태에 매핑하는, 손으로 짜면 상태 관리가 까다로운 부분을 모델이 직접 배선합니다. 둘째, Three.js 같은 3D 라이브러리와 GLSL 셰이더를 조합해 굴절, 노이즈, 파티클 같은 시각 효과를 만듭니다. 셋째, 스크린샷을 입력으로 받아 기존 사이트의 레이아웃과 인터랙션을 개선한 리디자인을 제안합니다. 넷째, 프로젝트 파일 구조와 애셋을 스스로 정리하며 단일 프롬프트에서 실행 가능한 결과물까지 밀고 갑니다.
 
 이 능력들의 공통점은 "정적 마크업 생성"이 아니라 "상태와 시간이 얽힌 코드의 생성"이라는 점입니다. 바로 이 지점이 그동안 AI 프런트엔드의 약한 고리였고, Fable 5가 눈에 띄게 밀어 올린 부분입니다.
+
+![fable5-interactive-web-design 슬라이드 2]({{ '/assets/images/fable5-interactive-web-design-slide-02.webp' | relative_url }})
 
 ## 인터랙티브 웹 디자인, 어떻게 만드는가
 
@@ -383,6 +387,8 @@ Fable 5는 Anthropic이 공개한 Claude 계열 모델로, 특히 프런트엔�
 
 주의할 점도 분명합니다. 화려한 셰이더와 3D는 모바일 성능과 접근성에서 대가를 치릅니다. 모델이 뽑은 결과가 데스크톱에서 근사해도, 저사양 기기나 스크린 리더 사용자를 위한 대응은 여전히 사람의 몫입니다. 이 검수 단계를 워크플로에 명시적으로 넣지 않으면, "예쁘지만 실전에 못 쓰는" 결과물이 쌓이기 쉽습니다.
 
+![fable5-interactive-web-design 슬라이드 3]({{ '/assets/images/fable5-interactive-web-design-slide-03.webp' | relative_url }})
+
 ## 실제 사례와 오픈소스 갤러리
 
 이 흐름이 개인의 자랑이 아니라는 근거는 공개 자료에 있습니다. 앞서 언급한 Viktor Oddy의 가이드는 과정 전체를 녹화로 남겼고, 커뮤니티에서는 Fable 5로 만든 UI 실험을 모은 오픈소스 갤러리 `pulkitxm/claude-directory`가 공개되어 있습니다. 이 저장소는 랜딩 페이지, 히어로 섹션, GLSL 셰이더, 디자인 시스템, 애니메이션, 3D를 React, Tailwind, Three.js 위에서 구현한 예제를 모아 둔 곳으로, 결과물을 직접 열어 코드까지 확인할 수 있습니다. 개별 실험을 브라우저에서 바로 볼 수 있으므로, "정말 되는가"를 스크린샷이 아니라 실행으로 검증할 수 있다는 점이 중요합니다.
@@ -390,6 +396,8 @@ Fable 5는 Anthropic이 공개한 Claude 계열 모델로, 특히 프런트엔�
 또 다른 사례로는 Fable 5와 Higgsfield MCP를 조합해 시네마틱 스크롤 웹사이트를 만든 공개 기록도 있습니다. 여기서 눈여겨볼 부분은 모델이 단독으로 모든 것을 하는 것이 아니라, MCP 커넥터를 통해 외부 도구(여기서는 비주얼 애셋 생성)와 연결되어 하나의 결과물로 합쳐진다는 점입니다. 인터랙티브 웹 생성이 단일 모델의 재주가 아니라, 모델과 도구가 물려 돌아가는 파이프라인의 산물로 진화하고 있다는 신호입니다.
 
 정리하면 지금 시점에서 확인 가능한 사실은 다음과 같습니다. 첫째, 단일 프롬프트에서 3D 인터랙티브 웹의 실행 가능한 초안이 나옵니다. 둘째, 그 결과가 공개 저장소에서 코드째 검증됩니다. 셋째, MCP 같은 도구 연결로 애셋 생성까지 파이프라인에 통합됩니다. 다만 이 사례들에서 정량적인 성능 벤치마크(프레임률, 번들 크기, 접근성 점수)는 표준화되어 공개된 것이 없으므로, 품질 판단은 여전히 각자의 검수 기준에 달려 있다는 점은 [추정]이 아니라 사실로 받아들이는 편이 안전합니다.
+
+![fable5-interactive-web-design 슬라이드 4]({{ '/assets/images/fable5-interactive-web-design-slide-04.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -413,18 +421,6 @@ Paxis 관점에서 위 워크플로를 다시 보면 각 단계가 제어 평면
 
 결론적으로 Fable 5는 인터랙티브 웹 생성의 문턱을 실질적으로 낮췄습니다. 다만 그 결과를 신뢰할 수 있는 제품으로 만드는 일은, 여전히 검수와 정책과 인프라의 문제입니다. 그리고 그 마지막 구간을 어떻게 시스템으로 닫느냐가, 도구를 쓰는 팀과 제품을 만드는 팀을 가릅니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![fable5-interactive-web-design 슬라이드 1]({{ '/assets/images/fable5-interactive-web-design-slide-01.webp' | relative_url }})
-
-![fable5-interactive-web-design 슬라이드 2]({{ '/assets/images/fable5-interactive-web-design-slide-02.webp' | relative_url }})
-
-![fable5-interactive-web-design 슬라이드 3]({{ '/assets/images/fable5-interactive-web-design-slide-03.webp' | relative_url }})
-
-![fable5-interactive-web-design 슬라이드 4]({{ '/assets/images/fable5-interactive-web-design-slide-04.webp' | relative_url }})
 
 ## 출처
 

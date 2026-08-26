@@ -39,6 +39,8 @@ Blackwell에서 NVIDIA는 한 단계 더 낮춰 NVFP4를 네이티브 텐서 코
 
 Nota AI와 Microsoft Azure AI Foundry가 공개한 자료에 따르면, Blackwell GPU(B200)에서 NVFP4 dense 연산 성능은 FP8 대비 5배입니다. GPU당 10 PFLOPS dense NVFP4 대 2 PFLOPS dense FP8입니다. 이 차이는 메모리 대역폭이 아니라 연산 처리량에서 옵니다.
 
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 1]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.webp' | relative_url }})
+
 ## NVFP4가 실제로 의미하는 것
 
 모델 크기를 숫자로 보면 이해가 쉽습니다.
@@ -57,6 +59,8 @@ Llama-3.1-70B를 기준으로 BF16은 약 140GB, FP8은 약 70GB, NVFP4는 약 3
 
 **SGLang**: Blackwell 지원을 추가하고 있으나 NVFP4 지원 성숙도는 TensorRT-LLM에 뒤처집니다.
 
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 2]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.webp' | relative_url }})
+
 ## vLLM에서 FP8 양자화 실전 설정
 
 Blackwell이 아직 없는 환경이라면 H100에서 FP8부터 시작합니다. vLLM의 FP8 설정은 비교적 간단합니다.
@@ -71,6 +75,8 @@ vllm serve meta-llama/Llama-3.1-70B-Instruct \
 ```
 
 `--kv-cache-dtype fp8`은 KV 캐시도 FP8로 저장해 메모리 효율을 추가로 높입니다. KV 캐시는 긴 컨텍스트에서 메모리를 빠르게 잠식하기 때문에 이 옵션은 거의 항상 켜는 것이 낫습니다.
+
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 3]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.webp' | relative_url }})
 
 ## Blackwell 환경에서 NVFP4 적용
 
@@ -95,6 +101,8 @@ trtllm-build \
 ```
 
 캘리브레이션 데이터셋 선택이 품질에 영향을 미칩니다. 실제 서빙 트래픽 분포와 비슷한 데이터로 캘리브레이션할수록 정확도 손실이 줄어듭니다.
+
+![nvfp4-blackwell-llm-serving-quantization 슬라이드 4]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.webp' | relative_url }})
 
 ## K8s 서빙 스택 통합 전략
 
@@ -129,16 +137,3 @@ Blackwell 하드웨어에 대한 접근이 생기기 시작했다면 NVFP4 전�
 - [TensorRT-LLM - Quantization 문서](https://nvidia.github.io/TensorRT-LLM/latest/features/quantization.html)
 - [vLLM 공식 문서](https://docs.vllm.ai/)
 - [Kueue - Kubernetes 작업 큐잉](https://kueue.sigs.k8s.io/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 1]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-01.webp' | relative_url }})
-
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 2]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-02.webp' | relative_url }})
-
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 3]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-03.webp' | relative_url }})
-
-![nvfp4-blackwell-llm-serving-quantization 슬라이드 4]({{ '/assets/images/nvfp4-blackwell-llm-serving-quantization-slide-04.webp' | relative_url }})
-

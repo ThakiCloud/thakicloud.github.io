@@ -41,6 +41,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/stochastok-subword-
 - **BPE-dropout**: BPE 병합 단계를 건너뛰는 방식
 - **문자 레벨 토크나이저**: 계산 비용이 크고 일관성 없는 개선
 
+![stochastok-subword-understanding-llm-tokenization 슬라이드 1]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.webp' | relative_url }})
+
 ## STOCHASTOK 방법론
 
 ### 핵심 아이디어
@@ -170,6 +172,8 @@ Expand 1: 토큰 1672("example") 선택
 - 2,000회 추가 훈련만으로 서브워드 이해 능력 획득
 - 전체 재훈련 없이도 성능 향상 가능
 
+![stochastok-subword-understanding-llm-tokenization 슬라이드 2]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.webp' | relative_url }})
+
 ## STOCHASTOK의 장점
 
 ### 실용적 이점
@@ -186,6 +190,8 @@ Expand 1: 토큰 1672("example") 선택
 - **표현 학습**: 대안 토크나이제이션들이 점진적으로 동일한 표현으로 수렴
 - **구조 캡처**: 서브워드 레벨의 형태학적 구조를 효과적으로 학습
 
+![stochastok-subword-understanding-llm-tokenization 슬라이드 3]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.webp' | relative_url }})
+
 ## 내부 메커니즘 분석
 
 ### 표현 학습 변화
@@ -197,6 +203,8 @@ Expand 1: 토큰 1672("example") 선택
 ### 레이어별 수렴 패턴
 
 각 트랜스포머 레이어를 거치면서 대안 토크나이제이션들이 점진적으로 동일한 표현으로 수렴하는 패턴을 보여줍니다.
+
+![stochastok-subword-understanding-llm-tokenization 슬라이드 4]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.webp' | relative_url }})
 
 ## 향후 연구 방향
 
@@ -224,16 +232,3 @@ STOCHASTOK은 최소한의 변경으로 LLM의 서브워드 이해 능력을 획
 이 연구는 토크나이제이션이 여전히 LLM 성능 향상의 핵심 요소임을 보여주며, 인간과 기계의 언어 인식 차이를 줄이는 중요한 진전을 나타냅니다.
 
 **GitHub 코드**: [github.com/anyasims/stochastok](https://github.com/anyasims/stochastok)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![stochastok-subword-understanding-llm-tokenization 슬라이드 1]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-01.webp' | relative_url }})
-
-![stochastok-subword-understanding-llm-tokenization 슬라이드 2]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-02.webp' | relative_url }})
-
-![stochastok-subword-understanding-llm-tokenization 슬라이드 3]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-03.webp' | relative_url }})
-
-![stochastok-subword-understanding-llm-tokenization 슬라이드 4]({{ '/assets/images/stochastok-subword-understanding-llm-tokenization-slide-04.webp' | relative_url }})
-

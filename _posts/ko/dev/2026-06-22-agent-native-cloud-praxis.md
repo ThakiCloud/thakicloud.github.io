@@ -34,6 +34,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 이 글은 그 갭을 들여다보고, 에이전트 시대에 필요한 인프라 추상화의 원칙을 살펴봅니다. 제품 소개가 아니라 패러다임에 관한 이야기입니다.
 
+![agent-native-cloud-praxis 슬라이드 1](/assets/images/agent-native-cloud-praxis-slide-01.webp)
+
 ## 클라우드 추상화의 진화
 
 클라우드 인프라의 역사는 추상화 계층을 쌓아 온 역사입니다.
@@ -49,6 +51,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 이 모든 세대를 관통하는 공통점이 있습니다. 관리 대상이 항상 **실행 환경**이었다는 점입니다. VM이든 컨테이너든 함수든, 클라우드는 "무언가를 실행하는 공간"을 제공하는 데 집중해 왔습니다.
 
 자율 AI 에이전트는 이 프레임을 벗어납니다.
+
+![agent-native-cloud-praxis 슬라이드 2](/assets/images/agent-native-cloud-praxis-slide-02.webp)
 
 ## 에이전트 운영의 4대 난제
 
@@ -85,6 +89,8 @@ VM 관리에서 AMI 이미지를 체계적으로 관리하지 않으면 이미�
 배포 파이프라인을 통해 컨테이너 이미지를 갱신하듯, 에이전트의 능력도 체계적으로 갱신되어야 합니다. 그러나 기존 클라우드 인프라는 이런 "능력의 진화"를 일급 시민으로 다루지 않습니다.
 
 이 난제는 특히 엔터프라이즈 환경에서 두드러집니다. 수백 명의 팀원이 사용하는 에이전트 시스템에서 어떤 스킬이 지난 달에 비해 성능이 떨어졌는지, 어떤 시나리오에서 새로운 스킬이 필요한지를 파악하는 것은 엄청난 운영 비용을 필요로 합니다. 이 과정이 자동화되지 않으면, 에이전트 시스템은 초기 배포 이후 점진적으로 품질이 저하되는 경향을 보입니다.
+
+![agent-native-cloud-praxis 슬라이드 3](/assets/images/agent-native-cloud-praxis-slide-03.webp)
 
 ## 일급 리소스로서의 Skills·Tools·Policies·Audit
 
@@ -428,6 +434,8 @@ VM 관리에서 AMI 이미지를 체계적으로 관리하지 않으면 이미�
 
 이 네 가지 리소스가 일급 시민으로 취급된다는 것은 단순히 이들을 저장하고 조회할 수 있다는 의미가 아닙니다. 컴퓨팅 리소스처럼 프로비저닝하고, 버전을 관리하고, 정책으로 접근을 제어하고, 비용을 추적하고, 장애 시 롤백할 수 있는 라이프사이클 관리가 가능해야 합니다. 쿠버네티스가 컨테이너를 "Deployment"와 "ReplicaSet"이라는 추상화로 다루듯, 에이전트 네이티브 플랫폼은 스킬을 "SkillRelease"와 "SkillPolicy"라는 추상화로 다루어야 합니다.
 
+![agent-native-cloud-praxis 슬라이드 4](/assets/images/agent-native-cloud-praxis-slide-04.webp)
+
 ## ThakiCloud의 구현: Paxis와 AI Platform 연계
 
 ThakiCloud는 이 설계 원칙을 구체화한 플랫폼으로 **Paxis**를 개발하고 있습니다. "AWS for Agents"라는 콘셉트 아래, 기존 클라우드가 VM·DB·Network를 다루듯 Skills·Tools·Policies·Audit Logs를 일급 리소스로 다루는 것을 목표로 합니다.
@@ -463,16 +471,3 @@ Paxis는 **AI Platform(ai-suite)**과 연계하여 동작합니다. AI Platform�
 Q4 2026에는 스킬 마켓플레이스를, Q2 2027 이후에는 SOC2 인증과 에어갭 배포를 [추정] 로드맵에 포함하고 있는 Paxis의 여정도 그 흐름의 일부입니다. 플랫폼이 성숙할수록 개발자는 에이전트의 능력 설계에 집중하고, 실행 안전성과 비용 최적화는 인프라가 담당하는 분업이 가능해질 것입니다.
 
 에이전트 네이티브 클라우드는 아직 완성된 개념이 아닙니다. 그러나 다음 세대의 소프트웨어 운영이 어떤 문제를 인프라 레이어에서 해결해야 하는지는, 지금 이 시점에 설계 원칙으로 자리를 잡아 가고 있습니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-native-cloud-praxis 슬라이드 1](/assets/images/agent-native-cloud-praxis-slide-01.webp)
-
-![agent-native-cloud-praxis 슬라이드 2](/assets/images/agent-native-cloud-praxis-slide-02.webp)
-
-![agent-native-cloud-praxis 슬라이드 3](/assets/images/agent-native-cloud-praxis-slide-03.webp)
-
-![agent-native-cloud-praxis 슬라이드 4](/assets/images/agent-native-cloud-praxis-slide-04.webp)
-

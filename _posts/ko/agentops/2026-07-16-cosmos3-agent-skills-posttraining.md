@@ -47,6 +47,8 @@ VANTAGE-Bench, PAI-Bench, Physics-IQ, RoboLab, RoboArena 여러 벤치마크에�
 사람의 개입을 최소한으로 하고도 학습 파이프라인을 스스로 조율하게 만듭니다. 다시 말해 스킬은
 프롬프트 한 줄이 아니라, 실행 가능한 절차와 실패 복구까지 포장한 재사용 단위입니다.
 
+![cosmos3-agent-skills-posttraining 슬라이드 1](/assets/images/cosmos3-agent-skills-posttraining-slide-01.webp)
+
 ## 두 개의 프롬프트로 끝나는 포스트트레이닝
 
 이 사례가 인상적인 이유는 사람이 입력한 것이 자연어 프롬프트 두 개뿐이라는 점입니다.
@@ -419,6 +421,8 @@ curl -fsSL https://raw.githubusercontent.com/NVIDIA-TAO/tao-skills-bank/main/scr
 학습 데이터는 Toyota의 Woven Traffic Safety 데이터셋으로, 8,000개가 넘는 학습·검증 샘플을 가진
 영상 질의응답 과제입니다. 도로 구조, 도로 유형, 교통 안전 상황을 묻는 4지선다 문제로 구성됩니다.
 
+![cosmos3-agent-skills-posttraining 슬라이드 2](/assets/images/cosmos3-agent-skills-posttraining-slide-02.webp)
+
 ## 두 프롬프트가 만든 숫자
 
 성능은 명확하게 올랐습니다. 아래 수치는 전부 NVIDIA가 공개한 값이며, 우리가 재현한 결과가 아닙니다.
@@ -438,6 +442,8 @@ AutoML 스윕은 여러 A100 노드에 걸쳐 43개 시도를 병렬로 돌려 1
 엔드포인트로 서빙합니다. vLLM 의존성이나 CUDA 설정을 손으로 맞출 필요 없이 사전 빌드된 마이크로
 서비스로 바로 배포되는 구조입니다.
 
+![cosmos3-agent-skills-posttraining 슬라이드 3](/assets/images/cosmos3-agent-skills-posttraining-slide-03.webp)
+
 ## 우리는 이것을 직접 돌려봤나
 
 정직하게 밝히면, 이 워크플로를 우리 환경에서 재현하지는 못했습니다. Cosmos 3 계열 가중치는 게이트가
@@ -447,6 +453,8 @@ AutoML 스윕은 여러 A100 노드에 걸쳐 43개 시도를 병렬로 돌려 1
 재현 없이 만든 벤치마크는 만들지 않는다는 원칙을 지킵니다. 대신 우리가 할 수 있는 것은 이 사례의
 구조를 뜯어보고, 우리 플랫폼에서 이미 돌고 있는 것과 무엇이 같고 무엇이 다른지 정확히 대조하는
 일입니다.
+
+![cosmos3-agent-skills-posttraining 슬라이드 4](/assets/images/cosmos3-agent-skills-posttraining-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -490,18 +498,6 @@ Kueue로 GPU를 나누고 vLLM으로 어댑터를 서빙하는 경로를 제공�
 자기 보고가 아니라 측정된 게이트로 확인하는 구조는 특정 벤더의 전략이 아니라 에이전트 시대의 공통
 설계입니다. 우리가 Paxis와 ai-platform으로 만들려는 것도 바로 그 구조입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![cosmos3-agent-skills-posttraining 슬라이드 1](/assets/images/cosmos3-agent-skills-posttraining-slide-01.webp)
-
-![cosmos3-agent-skills-posttraining 슬라이드 2](/assets/images/cosmos3-agent-skills-posttraining-slide-02.webp)
-
-![cosmos3-agent-skills-posttraining 슬라이드 3](/assets/images/cosmos3-agent-skills-posttraining-slide-03.webp)
-
-![cosmos3-agent-skills-posttraining 슬라이드 4](/assets/images/cosmos3-agent-skills-posttraining-slide-04.webp)
 
 ## 출처
 

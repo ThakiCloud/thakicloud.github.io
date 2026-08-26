@@ -32,6 +32,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 다른 한쪽은 조용했지만 방향이 분명했습니다. IT조선은 "알아서 일하는 AI 에이전트, 행동 기록이 신뢰를 좌우한다"는 진단을 내놨습니다. 마이크로소프트와 유아이패스 같은 플랫폼 기업들이 앞다퉈 강화하는 것은 더 큰 모델이 아니라, 에이전트의 모든 실행 단계를 로그와 지표와 추적 정보로 남기는 관측가능성 도구였습니다. 생성형 AI 시절의 단순 응답 로그를 넘어, 에이전트가 스스로 판단하고 행동한 흔적 자체를 기록으로 붙잡으려는 흐름입니다.
 
+![agent-trust-is-built-on-audit-trails 슬라이드 1](/assets/images/agent-trust-is-built-on-audit-trails-slide-01.webp)
+
 ## 지능은 상향 평준화되고, 병목은 옮겨갔습니다
 
 두 방향을 겹쳐 보면 통념 하나가 흔들립니다. 우리는 오랫동안 "더 똑똑한 모델이 더 나은 에이전트를 만든다"고 믿어 왔습니다. 그런데 앤트그룹 사례처럼 지능이 작고 저렴해지고, 무료 토큰 경쟁처럼 최고 모델의 접근 장벽마저 낮아지면, 지능은 더 이상 차별화 요소가 아니게 됩니다. 누구나 쓸 수 있는 것은 누구의 경쟁력도 아니기 때문입니다.
@@ -40,17 +42,23 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 같은 날 하나금융융합기술원이 기업여신과 상담을 지원하는 금융 업무용 AI 모델을 공개한 것도 이 맥락에서 읽힙니다. 케이뱅크와 신한은행, KB국민은행이 이미 자체 도메인 모델로 방향을 튼 데는 망분리 규제와 고객 데이터 외부 반출 제한이라는 국내 특유의 환경이 자리합니다. 은행권이 범용 초거대 모델 대신 내부망에서 돌아가는 경량 특화 모델로 수렴하는 이유는 성능이 아니라 통제 가능성입니다. 어디서 돌아가고 무엇을 남기는지를 스스로 쥐고 있어야 규제를 통과할 수 있습니다.
 
+![agent-trust-is-built-on-audit-trails 슬라이드 2](/assets/images/agent-trust-is-built-on-audit-trails-slide-02.webp)
+
 ## 흔해지는 것의 폭이 넓어지고 있습니다
 
 지능만 흔해지는 것이 아닙니다. 그 지능을 떠받치는 하드웨어 우위도 한 지점에 머물지 않고 흩어지는 중입니다. 글로벌이코노믹은 AI 주도권이 GPU 독점에서 인프라 수요 확산으로 넘어가고 있다고 짚었습니다. GPU 품귀는 2026년 하반기부터 점진적으로 풀릴 전망이고, TSMC의 첨단 패키징 생산능력과 HBM 공급이 안정화되면서 투자 초점이 CPU와 메모리, 서버, 전력, 냉각, 네트워크로 번지고 있습니다. 병목이 GPU 한 곳에 있을 때는 GPU를 확보하는 것이 곧 경쟁력이었지만, 병목이 여러 갈래로 퍼지면 어느 한 자원의 우위만으로는 격차를 벌리기 어려워집니다.
 
 슈퍼마이크로가 70억 달러를 조달하며 엣지부터 초대형 데이터센터까지 공급을 넓히고, 통신사들이 대규모 데이터센터 용량 경쟁에 뛰어드는 것도 같은 방향입니다. 공급이 넓어질수록 하드웨어를 얼마나 확보했느냐보다, 그 위에서 워크로드를 어떻게 배치하고 어떻게 운영하며 무엇을 기록하느냐가 진짜 변별점으로 남습니다. 자원이 귀할 때는 소유가 경쟁력이지만, 자원이 흔해지면 운영이 경쟁력입니다. 그리고 자율 에이전트 시대의 운영은 곧 통제와 기록의 다른 이름입니다.
 
+![agent-trust-is-built-on-audit-trails 슬라이드 3](/assets/images/agent-trust-is-built-on-audit-trails-slide-03.webp)
+
 ## 결과가 아니라 과정을 본다는 신호
 
 흥미롭게도 같은 전환이 사람을 뽑는 자리에서도 나타났습니다. 크래프톤과 CJ올리브영이 공동 개최한 AI 네이티브 해커톤에서 쓰인 평가 방식은, 완성된 결과물만 보지 않았습니다. 지원자가 문제를 어떻게 구조화했고 AI 에이전트를 어떤 방식으로 활용해 반복 개선했는지, 그 과정을 함께 채점했습니다. 결과물의 겉모습은 AI 코딩 도구가 보편화되면서 상향 평준화됐기 때문입니다. 변별력은 결과가 아니라 과정의 기록에서 나온다는 판단이, 채용 시장에서도 똑같이 작동하기 시작했습니다.
 
 에이전트에게 요구되는 것도 다르지 않습니다. 자율성이 커질수록 신뢰의 근거는 매끈한 최종 출력이 아니라, 그 출력에 이르기까지의 검증 가능한 궤적으로 옮겨갑니다. 지능이 흔해진 세계에서 남는 질문은 언제나 같습니다. 이 에이전트가 한 일을, 나중에 다른 사람이 되짚을 수 있습니까.
+
+![agent-trust-is-built-on-audit-trails 슬라이드 4](/assets/images/agent-trust-is-built-on-audit-trails-slide-04.webp)
 
 ## 기록은 나중에 붙이는 기능이 아닙니다
 
@@ -86,16 +94,3 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 - [세계 1만5천 AI 석학들 서울 총집결…ICML 2026, 한국 AI 위상 높인다](https://www.aitimes.kr/news/articleView.html?idxno=40833) · 인공지능신문
 - [KT, 'AX연결 허브' 도약…수요 기반 AI 인프라 확충](https://zdnet.co.kr/view/?no=20260706160957) · ZDNet Korea
 - [SKT, 15GW 규모 AI 데이터센터 구축…"아시아 AI 인프라 허브될 것"](https://news.sktelecom.com/227469) · SK텔레콤 뉴스룸
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![agent-trust-is-built-on-audit-trails 슬라이드 1](/assets/images/agent-trust-is-built-on-audit-trails-slide-01.webp)
-
-![agent-trust-is-built-on-audit-trails 슬라이드 2](/assets/images/agent-trust-is-built-on-audit-trails-slide-02.webp)
-
-![agent-trust-is-built-on-audit-trails 슬라이드 3](/assets/images/agent-trust-is-built-on-audit-trails-slide-03.webp)
-
-![agent-trust-is-built-on-audit-trails 슬라이드 4](/assets/images/agent-trust-is-built-on-audit-trails-slide-04.webp)
-

@@ -366,11 +366,17 @@ categories:
 
 EAGLE(Extrapolation Algorithm for Greater Language-model Efficiency)은 여기서 드래프트 품질을 크게 높입니다. 단순한 소형 언어 모델 대신, 타깃 모델의 피처 레이어를 활용해 다음 토큰을 예측하는 자동회귀 드래프트 헤드를 씁니다.
 
+
+![vllm-eagle-speculative-decoding-production 슬라이드 1]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-01.webp' | relative_url }})
+
 ## EAGLE 3.1: 2026년 5월 vLLM 공식 통합
 
 vLLM 팀이 2026년 5월 26일 게시한 블로그에 따르면, EAGLE 3.1은 기존 EAGLE-3 대비 추가 개선을 담았습니다. 핵심 수치를 살펴보면 동시 사용자 1명 기준 출력 처리량이 기존 대비 2.03배 높고, 동시성 4에서는 1.71배, 16에서는 1.66배입니다. 배치 크기가 늘어도 이득이 의미있게 유지되는 점이 이전 세대와 다릅니다.
 
 AWS가 기여한 P-EAGLE도 이 시점에 vLLM 메인에 포함됐습니다. 코딩 태스크 벤치마크에서 EAGLE-3 단독 대비 20~30% 추가 개선을 보입니다.
+
+
+![vllm-eagle-speculative-decoding-production 슬라이드 2]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-02.webp' | relative_url }})
 
 ## 설정: vLLM에서 EAGLE 3.1 활성화
 
@@ -387,6 +393,9 @@ vllm serve meta-llama/Llama-3.1-70B-Instruct \
 `--speculative-disable-by-batch-size 8`은 동시 요청이 8개를 넘으면 투기적 디코딩을 자동 비활성화합니다. 배치가 클 때는 드래프트 오버헤드가 이득을 상회하기 때문에 이 파라미터를 반드시 설정해야 합니다.
 
 EAGLE 드래프트 헤드는 타깃 모델과 같은 GPU를 공유하므로 별도 서버를 띄울 필요가 없습니다. 메모리 오버헤드는 드래프트 헤드 크기에 따라 다르지만 70B 타깃 기준 약 2~4GB 수준입니다.
+
+
+![vllm-eagle-speculative-decoding-production 슬라이드 3]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-03.webp' | relative_url }})
 
 ## K8s 멀티테넌트 환경 적용 전략
 
@@ -408,6 +417,9 @@ serving:
 ```
 
 **MIG 분리와의 호환**: A100/H100에서 MIG 파티셔닝을 쓰는 경우, EAGLE은 단일 MIG 인스턴스 내에서 실행됩니다. 드래프트 헤드와 타깃 모델이 같은 GPU 메모리를 쓰므로 MIG 슬라이스 크기 계획 시 추가 메모리를 반영해야 합니다.
+
+
+![vllm-eagle-speculative-decoding-production 슬라이드 4]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-04.webp' | relative_url }})
 
 ## 핵심 메트릭 모니터링
 
@@ -435,18 +447,6 @@ vllm:generation_tokens_total
 
 EAGLE 3.1의 vLLM 통합은 드래프트 모델 관리 부담을 크게 줄였습니다. 서빙 레이턴시 개선이 필요한 인터랙티브 사용 사례라면 지금이 도입을 검토할 시점입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![vllm-eagle-speculative-decoding-production 슬라이드 1]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-01.webp' | relative_url }})
-
-![vllm-eagle-speculative-decoding-production 슬라이드 2]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-02.webp' | relative_url }})
-
-![vllm-eagle-speculative-decoding-production 슬라이드 3]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-03.webp' | relative_url }})
-
-![vllm-eagle-speculative-decoding-production 슬라이드 4]({{ '/assets/images/vllm-eagle-speculative-decoding-production-slide-04.webp' | relative_url }})
 
 ## 출처
 

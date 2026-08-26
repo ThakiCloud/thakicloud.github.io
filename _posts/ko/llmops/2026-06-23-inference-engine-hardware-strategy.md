@@ -32,11 +32,15 @@ LLM을 서빙하려고 마음먹으면 가장 먼저 던지는 질문이 보통 
 
 ThakiCloud는 쿠버네티스 위에서 GPU 자원을 풀로 묶고 여러 고객의 추론 워크로드를 서빙하는 플랫폼을 운영합니다. 그래서 이 "하드웨어 우선" 프레임은 단순한 트윗 한 줄의 통찰이 아니라, 우리가 매일 GPU 스케줄링과 서빙 스택을 설계하며 내리는 결정의 언어이기도 합니다. 이 글에서는 이 선택법을 정리하고, 왜 우리가 대부분의 경우 기본값으로 vLLM에서 출발해 병목이 측정될 때만 다른 엔진으로 옮기는지를 설명합니다.
 
+![inference-engine-hardware-strategy 슬라이드 1]({{ '/assets/images/inference-engine-hardware-strategy-slide-01.webp' | relative_url }})
+
 ## 핵심 주장: 엔진이 아니라 하드웨어 전략을 고른다
 
 원 저자의 논지는 추론 엔진을 추상적인 성능 순위로 줄 세우지 말라는 것입니다. 엔진은 진공 속에서 빠르거나 느린 것이 아니라, **특정 하드웨어 위에서, 특정 워크로드 모양에 대해** 빠르거나 느립니다. 따라서 결정의 출발점은 "가장 빠른 엔진은 무엇인가"가 아니라 "나는 어떤 하드웨어를 가지고 있고, 내 워크로드는 어떤 모양인가"여야 합니다. 하드웨어와 워크로드가 정해지면 적합한 엔진의 후보는 자연스럽게 한두 개로 좁혀집니다.
 
 이 사고방식이 중요한 이유는, 사람들이 흔히 자기 환경과 무관한 벤치마크를 보고 엔진을 고르기 때문입니다. 8장짜리 H100 클러스터에서 측정한 최대 처리량 숫자는, 맥북이나 RTX 한두 장으로 돌리는 사람에게는 거의 의미가 없습니다. 반대로 에지 박스에서 잘 도는 경량 엔진을 대규모 동시 요청 서빙에 그대로 들이밀면 무너집니다. 결국 맞춰야 할 것은 "런타임을 워크로드의 모양과 하드웨어, 그리고 운영 부담을 감내할 수 있는 정도에 맞추는 것"입니다.
+
+![inference-engine-hardware-strategy 슬라이드 2]({{ '/assets/images/inference-engine-hardware-strategy-slide-02.webp' | relative_url }})
 
 ## 하드웨어별 엔진 지도
 
@@ -65,11 +69,15 @@ NVIDIA에서 최대 성능이 절실할 때        → TensorRT-LLM (컴파일 �
 
 여러 비교 분석들도 대체로 같은 결론에 수렴합니다. 중·고볼륨 프로덕션에서는 처리량과 개발자 경험의 균형으로 vLLM이나 SGLang이 무난하고, 초고볼륨이나 지연에 극도로 민감한 경우에 한해 TensorRT-LLM의 컴파일 경로에 투자하는 식입니다. 대부분의 팀에게 권장되는 출발점은 vLLM이며, 프로파일링으로 병목이 확인됐을 때 비로소 다른 엔진으로 이전하라는 것입니다.
 
+![inference-engine-hardware-strategy 슬라이드 3]({{ '/assets/images/inference-engine-hardware-strategy-slide-03.webp' | relative_url }})
+
 ## 왜 이 순서가 맞는가
 
 "엔진 먼저"가 위험한 이유는 조기 최적화이기 때문입니다. 아직 실측 병목이 무엇인지 모르는 상태에서 가장 빠르다고 알려진 엔진을 고르면, 운영 복잡도라는 비용을 먼저 치르고 그 대가로 얻을 이득은 불확실합니다. TensorRT-LLM의 컴파일 경로는 분명 빠르지만, 엔진 빌드와 버전 관리, 모델 변환 파이프라인이라는 지속적인 운영 부담을 동반합니다. 워크로드가 그 복잡도를 정당화하지 못하면 이는 순손실입니다.
 
 "하드웨어와 워크로드 먼저"는 반대로 측정 가능한 사실에서 출발합니다. 가진 GPU의 종류와 장수, 모델 크기, 컨텍스트 길이, 동시 요청 패턴은 모두 관측 가능한 값입니다. 이 값들이 정해지면 후보 엔진은 좁혀지고, 그중 **측정된 병목에 맞는 가장 단순한 엔진**을 고르는 것이 합리적입니다. 단순함은 그 자체로 운영 가치입니다. 장애가 적고, 업그레이드가 쉽고, 사람을 적게 묶습니다.
+
+![inference-engine-hardware-strategy 슬라이드 4]({{ '/assets/images/inference-engine-hardware-strategy-slide-04.webp' | relative_url }})
 
 ## ThakiCloud K8s AI/ML SaaS 플랫폼 적용 및 시사점
 
@@ -92,18 +100,6 @@ NVIDIA에서 최대 성능이 절실할 때        → TensorRT-LLM (컴파일 �
 
 정리하면, "추론 엔진을 고르지 말고 하드웨어 전략을 고르라"는 조언은 조기 최적화를 피하고 측정 가능한 사실에서 출발하라는 좋은 규율입니다. ThakiCloud에게 이는 새로운 발상이 아니라 우리가 GPU 풀과 멀티테넌트 서빙을 설계하며 이미 따르고 있는 원칙의 간결한 요약입니다. 기본은 단순하고 넓은 엔진에서 출발하고, 복잡한 특화 엔진은 병목이 스스로를 증명할 때만 도입합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![inference-engine-hardware-strategy 슬라이드 1]({{ '/assets/images/inference-engine-hardware-strategy-slide-01.webp' | relative_url }})
-
-![inference-engine-hardware-strategy 슬라이드 2]({{ '/assets/images/inference-engine-hardware-strategy-slide-02.webp' | relative_url }})
-
-![inference-engine-hardware-strategy 슬라이드 3]({{ '/assets/images/inference-engine-hardware-strategy-slide-03.webp' | relative_url }})
-
-![inference-engine-hardware-strategy 슬라이드 4]({{ '/assets/images/inference-engine-hardware-strategy-slide-04.webp' | relative_url }})
 
 ## 출처
 

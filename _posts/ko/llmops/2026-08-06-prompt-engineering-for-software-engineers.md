@@ -49,6 +49,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 결국 이 재구성이 주는 실질적 이득은 협업 가능성입니다. 프롬프트를 함수 계약으로 취급하면 코드 리뷰를 하듯 프롬프트를 리뷰할 수 있고, 다른 엔지니어가 그 프롬프트를 수정할 때 무엇을 지켜야 하는지 계약만 보고 알 수 있습니다. 이것이 다음 두 절에서 다룰 입력 계약과 출력 계약의 출발점입니다.
 
+![prompt-engineering-for-software-engineers 슬라이드 1](/assets/images/prompt-engineering-for-software-engineers-slide-01.png)
+
 ## 입력 계약: Few-Shot과 Chain-of-Thought가 실제로 하는 일
 
 모델에게 예제를 어떻게 주입하느냐에 따라 결과의 품질이 크게 달라집니다. Few-Shot 프롬프팅은 이 원리를 체계적으로 활용하는 기법이고, Chain-of-Thought는 추론 과정을 단계별로 유도하는 기법입니다. 두 기법을 계약의 언어로 다시 표현하면 이해가 훨씬 쉬워집니다. Few-Shot은 출력의 형태를 계약하는 방법이고, Chain-of-Thought는 추론의 절차를 계약하는 방법입니다.
@@ -73,6 +75,8 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 
 결국 출력 계약을 온전히 지키려면 모델에게 형식을 맡기고 검증은 코드가 맡는 분업이 필요합니다. 모델은 확률적으로 그럴듯한 문장을 만드는 데 강하고, 결정론적인 규칙을 지키는 데는 약합니다. 반대로 코드는 규칙을 어기지 않는 데 강합니다. 이 두 강점을 각자의 자리에 배치하는 것이 구조화 출력을 프로덕션 수준으로 끌어올리는 핵심입니다.
 
+![prompt-engineering-for-software-engineers 슬라이드 2](/assets/images/prompt-engineering-for-software-engineers-slide-02.png)
+
 ## 계약이 흔들리는 실제 지점들
 
 지금까지 다룬 입력 계약과 출력 계약을 모두 지켜도 계약이 조용히 무너지는 지점이 남아 있습니다. 가장 흔한 지점은 모델 버전이 바뀌는 순간입니다. 같은 프롬프트를 다른 버전의 모델에 그대로 넣으면 이전 버전에서는 지켜지던 암묵적 규칙이 새 버전에서는 지켜지지 않을 수 있습니다. 프롬프트는 특정 모델의 습성에 어느 정도 맞춰 튜닝된 결과물이기 때문에, 모델을 바꾸는 일은 코드에서 런타임을 바꾸는 일과 비슷한 무게로 다뤄야 합니다.
@@ -92,6 +96,8 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 버전마다 무엇이 왜 바뀌었는지, 그 결과 정확도나 일관성이 어떻게 달라졌는지를 기록으로 남겨두면 나중에 문제가 생겼을 때 원인을 찾고 롤백하기가 수월해집니다. 이 기록은 거창할 필요가 없습니다. 어떤 버전에서 어떤 문제를 발견해 어떤 문장을 고쳤고 그 결과 어느 지표가 얼마나 움직였는지 몇 줄만 남겨도 다음 사람이 같은 실수를 반복하지 않습니다. 반대로 기록 없이 문장만 계속 고치면 팀 전체가 같은 시행착오를 몇 번이고 되풀이하게 됩니다.
 
 버전 관리가 특히 힘을 발휘하는 순간은 모델을 교체하거나 업그레이드할 때입니다. 이전 절에서 언급했듯 모델 버전이 바뀌면 프롬프트의 암묵적 규칙도 함께 흔들립니다. 버전 관리 체계가 갖춰져 있으면 새 모델에 맞춰 프롬프트를 조정하는 과정을 안전하게 실험할 수 있습니다. 기존 버전을 그대로 둔 채 새 버전을 나란히 만들어 비교하고, 새 버전이 확실히 더 낫다는 판단이 서면 그때 기존 버전을 대체하는 식의 점진적 전환이 가능해집니다.
+
+![prompt-engineering-for-software-engineers 슬라이드 3](/assets/images/prompt-engineering-for-software-engineers-slide-03.png)
 
 ## 평가 없는 버전 관리는 의미가 없다
 
@@ -114,16 +120,6 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 더 깊은 예제와 코드로 확인하고 싶다면 전자책 전문을 참고하시기 바랍니다.
 
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![prompt-engineering-for-software-engineers 슬라이드 1](/assets/images/prompt-engineering-for-software-engineers-slide-01.png)
-
-![prompt-engineering-for-software-engineers 슬라이드 2](/assets/images/prompt-engineering-for-software-engineers-slide-02.png)
-
-![prompt-engineering-for-software-engineers 슬라이드 3](/assets/images/prompt-engineering-for-software-engineers-slide-03.png)
-
 ![prompt-engineering-for-software-engineers 슬라이드 4](/assets/images/prompt-engineering-for-software-engineers-slide-04.png)
 
 ## 출처
@@ -136,4 +132,3 @@ Chain-of-Thought는 다른 축의 문제를 해결합니다. Few-Shot이 출력�
 ![2장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch02.webp)
 ![3장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch03.webp)
 ![4장 삽화](/assets/images/books/prompt-engineering-for-software-engineers/ch04.webp)
-

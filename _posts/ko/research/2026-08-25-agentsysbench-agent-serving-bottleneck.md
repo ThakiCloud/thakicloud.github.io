@@ -37,6 +37,8 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 Alibaba와 ByteDance 연구진이 발표한 AgentSysBench(arXiv 2608.15127, 제1저자 Chaokun Chang 외 22인, 2026-08-15 게시)는 바로 이 지점을 프로덕션 트레이스 3개를 포함해 실측한 벤치마크입니다. 이 논문이 던지는 핵심 메시지는 단순합니다. 에이전트 서빙의 병목은 요청·모델·배포에 따라 움직입니다. 그중 상당수는 LLM 추론 바깥의 구성요소가 지배합니다.
 
+![agentsysbench-agent-serving-bottleneck 슬라이드 1](/assets/images/agentsysbench-agent-serving-bottleneck-slide-01.webp)
+
 ## AgentSysBench가 밝힌 그림
 
 에이전트 태스크 한 번은 LLM 호출 하나로 끝내지 않습니다. 아래 도식은 에이전트 태스크의 구성을 보여줍니다. 오케스트레이션이 LLM 추론과 여러 비LLM 구성요소(샌드박스 실행, 도구 호출·웹 검색, 메모리·상태 관리)를 병렬로 거치며, 이들이 함께 태스크 완료를 이룹니다.
@@ -62,6 +64,8 @@ flowchart TB
 
 실측은 10개 에이전트 앱을 대상으로 했습니다. 그중 5개는 지연이 비LLM 구성요소에 의해 지배됐습니다. 샌드박스 워크셋은 세션당 최대 28GB의 메모리를 쓰며, GPU·메모리·CPU가 섞인 구성에서 태스크 지연은 최대 32배까지 편차를 보였습니다. 같은 에이전트라도 요청의 형태, 쓰는 모델, 배포 방식에 따라 병목이 어디로 이동하는지가 달라집니다. "병목은 고정된 한 지점"이라는 전제 자체가 성립하지 않는다는 뜻입니다.
 
+![agentsysbench-agent-serving-bottleneck 슬라이드 2](/assets/images/agentsysbench-agent-serving-bottleneck-slide-02.webp)
+
 ## 태스크인식 서빙이 회수한 것
 
 논문은 이 관찰을 바탕으로 태스크를 단위로 다루는 서빙 기법들을 제안하고 실측합니다. 크게 세 갈래입니다.
@@ -69,6 +73,8 @@ flowchart TB
 태스크인식(task-aware) 서빙은 태스크의 단계와 자원을 알아보고 스케줄링하는 것으로, 전체 태스크 지연을 29~40% 줄였습니다. 배치가상(placement virtualization)은 태스크를 어디에 실행할지를 추상화해 4.5배의 개선통계량을 보고했고, 상태 오프로딩(state offloading)은 에이전트 상태를 서빙 티어 밖으로 내보내 4.6배의 개선계수를 기록했습니다. 여기에 도구결과 캐싱(tool-result caching)이 더해져, 동일한 검색·도구 호출의 35.2%를 중복으로 제거했습니다.
 
 숫자의 의미를 짚어 보면, 29~40%와 4.5x·4.6x는 모델 체력을 높인 결과가 아닙니다. 시간이 모델 바깥, 그 주변에서 태워지고 있었다는 사실에 대한 보정입니다. 도구결과 캐싱의 35.2%는 RAG나 웹 검색을 많이 쓰는 에이전트일수록 운영 원가에 직접적으로 걸리는 항목입니다. 같은 질문을 다시 검색하거나 같은 도구를 다시 부르지 않도록 캐시를 두는 것만으로 태스크당 비용을 크게 줄일 수 있다는 뜻입니다.
+
+![agentsysbench-agent-serving-bottleneck 슬라이드 3](/assets/images/agentsysbench-agent-serving-bottleneck-slide-03.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -79,6 +85,8 @@ flowchart TB
 **Paxis(에이전트 플랫폼)** 관점에서, 멀티에이전트 실행의 비용과 지연을 결정하는 변수가 토큰이 아닌 샌드박스·메모리·도구 호출이라는 점이 제품 설계에 직접 반영될 수 있습니다. Paxis가 격리 샌드박스에서 스킬을 실행하고 MCP 커넥터로 도구를 부르는 구조인데, 이 논문은 그 구조의 병목을 정확히 찍어 줍니다. 샌드박스 워크셋 메모리(세션당 최대 28GB)와 도구 호출 캐싱이 Paxis 실행 경제성의 핵심 변수라는 실측 근거입니다.
 
 구체적으로 착지할 실험은 둘입니다. 첫째, Paxis 워크플로에서 비LLM 구성요소 지연을 분해 측정해 서빙 최적화 축을 재설정하는 것. 둘째, Metis 데모 에이전트 워크로드에 도구결과 캐싱을 A/B로 넣어 지연·비용을 실측하는 것. 둘 다 "모델을 바꾼다"가 아니라 "서빙·실행 계층을 바꾼다"는 방향이라, 기존 체크포인트 위에서 검증 가능합니다.
+
+![agentsysbench-agent-serving-bottleneck 슬라이드 4](/assets/images/agentsysbench-agent-serving-bottleneck-slide-04.webp)
 
 ## 한계 및 반론
 
@@ -93,16 +101,3 @@ flowchart TB
 ---
 
 *출처: [AgentSysBench, arXiv 2608.15127](https://arxiv.org/abs/2608.15127) (제1저자 Chaokun Chang 외, 2026-08-15). 본 글의 수치는 논문 원문에 대한 내부 딥리서치 정본에서 확인한 값이며, 이번 세션에서는 원문을 재-fetch하지 못해 논문 자체의 측정값으로 인용했습니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![agentsysbench-agent-serving-bottleneck 슬라이드 1](/assets/images/agentsysbench-agent-serving-bottleneck-slide-01.webp)
-
-![agentsysbench-agent-serving-bottleneck 슬라이드 2](/assets/images/agentsysbench-agent-serving-bottleneck-slide-02.webp)
-
-![agentsysbench-agent-serving-bottleneck 슬라이드 3](/assets/images/agentsysbench-agent-serving-bottleneck-slide-03.webp)
-
-![agentsysbench-agent-serving-bottleneck 슬라이드 4](/assets/images/agentsysbench-agent-serving-bottleneck-slide-04.webp)
-

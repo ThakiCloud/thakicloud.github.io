@@ -365,6 +365,9 @@ serve-sim의 동작 원리는 생각보다 단순하고 영리합니다. 별도�
 
 핵심은 "어떤 부팅된 시뮬레이터든" 대상이 된다는 점입니다. 앱을 수정할 필요가 없으므로, 이미 있는 프로젝트에 그대로 붙일 수 있습니다. 게다가 시뮬레이터 로그를 브라우저로 전달해, browser-use 계열 MCP 도구가 그 로그를 읽어 상태를 판단하게 할 수도 있습니다. 브라우저 창에 영상·이미지를 드래그 앤 드롭하면 시뮬레이터 기기에 파일로 추가되는 편의 기능도 있습니다.
 
+
+![serve-sim-ios-simulator-web 슬라이드 1]({{ '/assets/images/serve-sim-ios-simulator-web-slide-01.webp' | relative_url }})
+
 ## 설치 및 사용
 
 serve-sim의 진입 장벽은 낮습니다. Node.js가 있는 맥에서 한 줄이면 됩니다.
@@ -377,9 +380,15 @@ npx serve-sim
 
 에이전트 통합은 별도의 Agent Skill로 제공됩니다. 저장소의 `skills/serve-sim`에 담긴 이 스킬은 Claude Code·Cursor·Codex CLI·Gemini CLI를 비롯해 오픈 Agent Skills 표준을 구현한 모든 호스트에게 시뮬레이터를 CLI로 조작하는 방법을 가르칩니다. 탭, 제스처, 하드웨어 버튼, 화면 회전, 카메라 입력 주입, 그리고 스트림을 호스트의 프리뷰 창으로 넘기는 동작까지 포함됩니다.
 
+
+![serve-sim-ios-simulator-web 슬라이드 2]({{ '/assets/images/serve-sim-ios-simulator-web-slide-02.webp' | relative_url }})
+
 ## 재현 참고
 
 이 글을 작성한 실행 환경은 GUI가 없는 헤드리스 배치 세션으로, Node.js 실행이 정책상 차단되어 있어 `npx serve-sim`을 직접 구동해 화면을 캡처하지는 못했습니다. 따라서 이 글의 명령과 동작 설명은 저장소 README와 공식 소개 자료에서 확인한 사실에 근거하며, 벤치마크 수치를 지어내지 않았습니다. 실제 시뮬레이터 스트리밍 화면과 지연 시간은 macOS + Xcode 시뮬레이터가 부팅된 환경에서 위 명령으로 직접 확인하시기 바랍니다.
+
+
+![serve-sim-ios-simulator-web 슬라이드 3]({{ '/assets/images/serve-sim-ios-simulator-web-slide-03.webp' | relative_url }})
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -388,6 +397,9 @@ serve-sim은 표면적으로는 iOS 개발자용 도구지만, 그 아래에는 
 **Paxis 렌즈 (에이전트 네이티브 개발).** ThakiCloud의 Paxis는 스킬을 격리 샌드박스에서 실행하고 모든 행동을 정책 게이트와 감사 로그로 통과시키는 Agent-Native Cloud 제어 평면입니다. serve-sim이 채택한 개방형 Agent Skills 표준은 Paxis의 스킬 하네스가 다루는 것과 같은 계약 모델입니다. 하나의 스킬이 "시뮬레이터를 탭하고 회전시키고 화면을 읽는" 능력을 여러 에이전트 호스트에 공통으로 제공한다는 발상은, Paxis가 960개 이상의 스킬을 BM25로 선택해 격리 실행하는 구조와 정확히 같은 방향을 향합니다. 특히 serve-sim의 제어 채널처럼 에이전트가 실제 UI를 조작하는 워크로드는, 그 조작이 정책 게이트를 통과하고 감사 로그로 기록되어야 안전하게 프로덕션에 올릴 수 있습니다. serve-sim이 "능력"을 제공한다면, Paxis는 그 능력을 "안전하게 통제"하는 계층을 제공합니다.
 
 **ai-platform 렌즈 (헤드리스 실행 인프라).** serve-sim의 진짜 매력은 헤드리스 원격 맥에서 동작한다는 점입니다. GUI 없는 서버에서 빌드하고 스트리밍한다는 발상은 ThakiCloud ai-platform이 Kubernetes 위에서 워크로드를 GUI 없이 스케줄링하고 실행하는 방식과 같은 철학입니다. iOS 빌드가 요구하는 macOS 러너를 온디맨드로 붙이고, 그 위에서 에이전트가 빌드·테스트를 자동으로 돌린 뒤 결과만 사람에게 스트리밍하는 파이프라인은 CI를 넘어 "에이전트 주도 QA"로 확장될 수 있습니다. 저비용 헤드리스 실행 인프라(ai-platform)가 에이전트 자동화(Paxis)의 경제성을 떠받치는 구조입니다.
+
+
+![serve-sim-ios-simulator-web 슬라이드 4]({{ '/assets/images/serve-sim-ios-simulator-web-slide-04.webp' | relative_url }})
 
 ## 한계 및 반론
 
@@ -401,18 +413,6 @@ serve-sim은 표면적으로는 iOS 개발자용 도구지만, 그 아래에는 
 
 그럼에도 serve-sim의 방향은 분명합니다. "에이전트가 코드만 쓰는 단계"에서 "에이전트가 빌드하고 실행하고 직접 화면을 조작하며 검증하는 단계"로 넘어가는 데 필요한 실질적인 다리를 하나 놓았습니다. 헤드리스 클라우드에서 모바일 앱을 에이전트로 개발하려는 팀이라면, 지금 바로 `npx serve-sim` 한 줄로 그 세계를 열어 볼 수 있습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![serve-sim-ios-simulator-web 슬라이드 1]({{ '/assets/images/serve-sim-ios-simulator-web-slide-01.webp' | relative_url }})
-
-![serve-sim-ios-simulator-web 슬라이드 2]({{ '/assets/images/serve-sim-ios-simulator-web-slide-02.webp' | relative_url }})
-
-![serve-sim-ios-simulator-web 슬라이드 3]({{ '/assets/images/serve-sim-ios-simulator-web-slide-03.webp' | relative_url }})
-
-![serve-sim-ios-simulator-web 슬라이드 4]({{ '/assets/images/serve-sim-ios-simulator-web-slide-04.webp' | relative_url }})
 
 ## 출처
 

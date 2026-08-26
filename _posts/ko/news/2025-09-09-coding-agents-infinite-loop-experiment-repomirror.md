@@ -31,6 +31,8 @@ published: false
 
 최근 개발자 커뮤니티에서 화제가 된 혁신적인 실험이 있습니다. 한 개발자가 Claude 코딩 에이전트를 헤드리스 방식으로 무한 while 루프에 넣어두었더니, 하룻밤 사이에 1000건이 넘는 커밋과 함께 여러 개의 완전한 코드베이스 포팅 작업이 자동으로 완성되었다는 놀라운 결과입니다. 이 실험은 단순히 AI의 코딩 능력을 보여주는 것을 넘어서, 소프트웨어 개발 자동화의 새로운 가능성을 제시하고 있습니다.
 
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 1]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-01.webp' | relative_url }})
+
 ## 무한 루프 코딩 에이전트의 작동 원리
 
 ### 기본 개념과 실행 방식
@@ -381,6 +383,8 @@ Browser Use라는 Python 프로젝트를 TypeScript로 포팅하는 작업에서
 
 흥미롭게도 에이전트는 Vercel AI SDK를 TypeScript에서 Python으로 역방향 포팅하는 작업도 수행했습니다. 이 과정에서 FastAPI와 Flask를 위한 자동 어댑터를 생성했으며, Python의 다양한 스키마 검증 도구들과의 호환성도 확보했습니다. 이는 단순한 문법 변환을 넘어서 각 언어 생태계의 특성과 관습을 이해하고 적용하는 높은 수준의 지능을 보여주는 사례입니다.
 
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 2]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-02.webp' | relative_url }})
+
 ## 에이전트의 예상치 못한 창발적 행동들
 
 ### 자율적 테스트 코드 작성
@@ -404,6 +408,8 @@ Browser Use라는 Python 프로젝트를 TypeScript로 포팅하는 작업에서
 ### 맥락 이해와 자율성의 균형
 
 효과적인 프롬프트는 구체적인 실행 방법보다는 목표와 맥락을 명확히 제시하는 것이 중요했습니다. 에이전트는 "React를 Vue로 포팅하라"는 간단한 지시에서 필요한 모든 세부사항을 스스로 파악하고 실행할 수 있었지만, 과도하게 상세한 단계별 지시는 오히려 창의적 문제 해결을 제한하는 경향을 보였습니다.
+
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 3]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-03.webp' | relative_url }})
 
 ## RepoMirror: 자동화를 위한 혁신적 도구
 
@@ -433,6 +439,8 @@ RepoMirror는 React에서 Vue로의 프레임워크 전환뿐만 아니라 gRPC�
 
 실험에 소요된 비용은 약 800달러였으며, 1100건의 커밋을 생성하는 데 에이전트당 시간당 10.50달러의 비용이 발생했습니다. 이는 대규모 프로젝트나 지속적인 운영에서는 상당한 비용 부담이 될 수 있음을 의미합니다. 따라서 자동화의 이점과 비용 효율성 사이의 균형점을 찾는 것이 실용적 도입의 핵심 과제가 될 것입니다.
 
+![coding-agents-infinite-loop-experiment-repomirror 슬라이드 4]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-04.webp' | relative_url }})
+
 ## 개발 패러다임의 변화와 미래 전망
 
 ### 의존성 관리 철학의 변화
@@ -455,18 +463,6 @@ RepoMirror와 같은 도구의 등장은 이러한 자동화 기술이 점차 �
 
 이 실험이 제시하는 가장 중요한 통찰은 AI의 능력이 아니라 그것을 활용하는 인간의 창의성과 지혜가 여전히 혁신의 핵심이라는 점입니다. 무한 루프에 넣은 AI가 놀라운 결과를 만들어낸 것은 AI 자체의 능력보다는 그것을 적절히 설계하고 활용한 인간의 통찰력 덕분이었습니다. 따라서 AI 시대의 개발자들에게는 기술적 숙련도와 함께 AI와의 효과적인 소통과 협업 능력이 더욱 중요한 역량이 될 것입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 1]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-01.webp' | relative_url }})
-
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 2]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-02.webp' | relative_url }})
-
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 3]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-03.webp' | relative_url }})
-
-![coding-agents-infinite-loop-experiment-repomirror 슬라이드 4]({{ '/assets/images/coding-agents-infinite-loop-experiment-repomirror-slide-04.webp' | relative_url }})
 
 ## 출처
 

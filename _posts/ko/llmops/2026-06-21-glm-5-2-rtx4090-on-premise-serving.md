@@ -38,11 +38,15 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 약 10 tok/s라는 처리량은 프로덕션 서빙에는 느리지만, 이 수치는 작성자의 단일 환경 측정값이므로 [추정]으로 보는 것이 정확합니다. 중요한 것은 "전용 데이터센터 GPU 없이도 753B 모델을 구동하는 경로가 열렸다"는 점입니다.
 
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 1]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-01.webp' | relative_url }})
+
 ## 데이터 과학자/엔지니어 관점에서의 의미
 
 - **커널 이식이 곧 접근성**: 모델이 새 어텐션 메커니즘을 쓸 때, 그 커널을 다양한 GPU 아키텍처로 이식하는 작업이 접근성을 결정합니다. SOTA 모델이 나와도 커널이 특정 하드웨어에만 묶여 있으면 생태계가 좁아집니다.
 - **희소성이 긴 컨텍스트를 푼다**: DSA 같은 희소 어텐션은 긴 컨텍스트 서빙의 연산·메모리 비용을 낮추는 핵심 기법입니다. 컨텍스트가 길어질수록 밀집 어텐션의 비용은 제곱으로 늘지만, 희소 어텐션은 이를 완화합니다.
 - **처리량은 트레이드오프**: 10 tok/s는 큰 모델을 작은 하드웨어에 넣은 대가입니다. 실제 서빙에서는 모델 크기, 하드웨어, 처리량의 트레이드오프를 워크로드 성격에 맞춰 선택해야 합니다.
+
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 2]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-02.webp' | relative_url }})
 
 ## ThakiCloud 관점: 온프레미스 대형 LLM 서빙
 
@@ -50,22 +54,14 @@ audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 
 저희가 다루는 영역이 이 지점입니다. 대형 오픈웨이트 모델을 K8s 위에서 다중 GPU로 샤딩해 서빙하고, Kueue로 GPU 자원을 배분하며, 희소 어텐션 커널 같은 모델별 최적화를 표준화된 서빙 스택에 통합하는 일입니다. 단일 머신 데모를 멀티테넌트 프로덕션 서빙으로 키우는 것이 핵심 과제입니다.
 
+![glm-5-2-rtx4090-on-premise-serving 슬라이드 3]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-03.webp' | relative_url }})
+
 ## 마치며
 
 GLM-5.2를 RTX 4090에서 돌린 사례는 "대형 SOTA 모델의 온프레미스 서빙 경로가 열렸다"는 신호입니다. 커널 이식과 희소 어텐션이 접근성을 만들고, 양자화가 메모리를 푸는 구조입니다. 이를 조직 규모의 서빙 인프라로 확장하는 일에 관심 있는 엔지니어라면, 이런 문제가 매일의 과제인 곳입니다.
 
 ---
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 1]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-01.webp' | relative_url }})
-
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 2]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-02.webp' | relative_url }})
-
-![glm-5-2-rtx4090-on-premise-serving 슬라이드 3]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-03.webp' | relative_url }})
 
 ![glm-5-2-rtx4090-on-premise-serving 슬라이드 4]({{ '/assets/images/glm-5-2-rtx4090-on-premise-serving-slide-04.webp' | relative_url }})
 

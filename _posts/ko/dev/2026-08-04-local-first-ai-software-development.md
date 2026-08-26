@@ -45,6 +45,8 @@ ebook_pages: 27
 
 이 제약이 개인 사용자 앱에만 해당하는 이야기는 아닙니다. 기업 고객을 상대하는 소프트웨어에서는 계약서 자체에 데이터 반출 금지 조항이 명시되는 경우가 흔합니다. 이런 환경에서는 클라우드 API의 응답 품질이 아무리 뛰어나도 애초에 검토 대상이 될 수 없습니다. 계약이 기술 선택을 앞질러 결정해버리는 셈입니다. 그래서 로컬 우선 설계는 처음부터 기술팀만의 판단이 아니라 법무나 보안 조직과 함께 조건을 확인하는 데서 시작하는 편이 안전합니다.
 
+![local-first-ai-software-development 슬라이드 1](/assets/images/local-first-ai-software-development-slide-01.webp)
+
 ## 왜 지연 시간이 아키텍처를 바꾸는가
 
 클라우드 API 호출은 네트워크 왕복을 피할 수 없습니다. 서울에서 해외 리전까지 오가는 데만 100밀리초 안팎이 걸리고, 여기에 모델 추론 시간이 더해집니다. 이 정도 지연은 챗봇처럼 텍스트 한 번 주고받는 상호작용에서는 크게 문제되지 않을 수 있습니다. 하지만 실시간 음성 대화나 카메라 프레임마다 반응해야 하는 증강현실 기능에서는 이야기가 달라집니다.
@@ -52,6 +54,8 @@ ebook_pages: 27
 지연 시간이 늘어나면 단순히 사용자가 더 오래 기다리는 것으로 끝나지 않습니다. 어떤 기능을 아예 제품에 넣을 수 있는지 자체가 결정됩니다. 음성으로 자연스럽게 대화를 이어가려면 상대방의 말이 끝난 직후 곧바로 반응이 나와야 하는데, 네트워크 왕복이 끼어드는 순간 그 자연스러움은 깨집니다. 실시간 자막이나 즉각적인 이미지 필터링도 마찬가지입니다. 이런 기능은 애초에 로컬 추론 없이는 설계 도면에 올릴 수조차 없습니다.
 
 로컬 추론은 네트워크 구간을 완전히 제거합니다. 적절한 크기의 모델을 적합한 하드웨어에서 돌리면 응답을 수십 밀리초 안에 만들어낼 수 있습니다. 이 속도는 최적화의 결과가 아니라 구조적으로 얻어지는 값입니다. 왕복할 네트워크 자체가 없기 때문입니다. 그래서 로컬 우선 아키텍처를 검토할 때는 비용 절감보다 먼저 이 질문을 던지는 편이 정확합니다. 우리 제품에 네트워크 왕복이 끼어드는 순간 성립하지 않는 기능이 있는가.
+
+![local-first-ai-software-development 슬라이드 2](/assets/images/local-first-ai-software-development-slide-02.webp)
 
 ## 로컬 하드웨어의 현실: 메모리와 양자화의 트레이드오프
 
@@ -66,6 +70,8 @@ ebook_pages: 27
 기기 발열도 무시할 수 없는 변수입니다. 모바일 칩에서 추론을 오래 지속하면 발열 제어를 위해 처리 속도가 스스로 낮아지는 현상이 나타납니다. 벤치마크를 짧게 한 번만 돌려서 얻은 숫자는 실제 사용 환경의 성능을 과대평가하기 쉽습니다. 연속 사용 시나리오까지 포함해 성능을 검증해야 실제 배포 후에 겪을 저하를 미리 알 수 있습니다.
 
 모델 파일 자체의 용량도 앱 배포 과정에서 걸림돌이 됩니다. [앱스토어](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/)나 [플레이스토어](https://developer.android.com/topic/performance/reduce-apk-size)는 초기 설치 용량에 제한을 두는 경우가 많고, 사용자도 수 기가바이트짜리 앱을 선뜻 내려받지 않습니다. 그래서 모델을 앱 번들에 포함하지 않고 최초 실행 시점에 별도로 내려받게 하는 구조를 많이 씁니다. 이때는 다운로드가 끊기거나 실패했을 때의 재시도 경로, 그리고 모델이 준비되지 않은 동안 사용자에게 무엇을 보여줄지도 함께 설계해야 합니다.
+
+![local-first-ai-software-development 슬라이드 3](/assets/images/local-first-ai-software-development-slide-03.webp)
 
 ## 언제 로컬을 쓰고 언제 클라우드로 넘길 것인가
 
@@ -107,6 +113,8 @@ def choose_inference_path(is_sensitive: bool, device_ram_mb: int,
 
 이 함수는 실제 제품에서는 훨씬 복잡해지겠지만, 핵심은 판단 순서를 코드로 명시해두는 데 있습니다. 민감도 확인이 언제나 맨 앞에 와야 하고, 그다음에야 성능과 네트워크 상태를 따집니다. 순서가 바뀌면 민감한 데이터가 실수로 클라우드까지 넘어가는 사고로 이어질 수 있습니다.
 
+![local-first-ai-software-development 슬라이드 4](/assets/images/local-first-ai-software-development-slide-04.webp)
+
 ## 로컬 우선 설계에서 흔히 놓치는 함정
 
 로컬 우선 아키텍처를 처음 도입할 때 자주 반복되는 실수가 몇 가지 있습니다.
@@ -141,19 +149,7 @@ def choose_inference_path(is_sensitive: bool, device_ram_mb: int,
 - [Maximum Build File Sizes (App Store Connect Help)](https://developer.apple.com/help/app-store-connect/reference/maximum-build-file-sizes/)
 - [Reduce your app size (Android Developers)](https://developer.android.com/topic/performance/reduce-apk-size)
 
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![local-first-ai-software-development 슬라이드 1](/assets/images/local-first-ai-software-development-slide-01.webp)
-
-![local-first-ai-software-development 슬라이드 2](/assets/images/local-first-ai-software-development-slide-02.webp)
-
-![local-first-ai-software-development 슬라이드 3](/assets/images/local-first-ai-software-development-slide-03.webp)
-
-![local-first-ai-software-development 슬라이드 4](/assets/images/local-first-ai-software-development-slide-04.webp)
 
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/local-first-ai-software-development/ch01.webp)
 ![5장 삽화](/assets/images/books/local-first-ai-software-development/ch05.webp)
-

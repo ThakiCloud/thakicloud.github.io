@@ -43,6 +43,8 @@ arXiv 2604.08075가 제안한 **Dual-Pool Token-Budget Routing**은 이 문제�
 | Preemption rate | **5.4배 감소** |
 | P99 TTFT 개선 | **6%** |
 
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 1](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-01.webp)
+
 ## 핵심 원리: 토큰 버짓 기반 라우팅
 
 Dual-Pool의 핵심은 단순합니다. 요청마다 **예상 최대 토큰 수**를 추정하고, 임계값을 기준으로 두 풀 중 하나에 할당합니다.
@@ -57,6 +59,8 @@ Dual-Pool의 핵심은 단순합니다. 요청마다 **예상 최대 토큰 수*
 2. **히스토리 기반 분류**: 같은 API 경로 또는 시스템 프롬프트 해시로 이전 요청 길이 분포를 추적해 P75 또는 P90 값을 기준으로 분류합니다.
 
 임계값 설정은 워크로드 특성에 따라 다르지만, 논문에서 보고한 실험에서는 출력 512토큰을 기준으로 short/long을 나눴습니다.
+
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 2](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-02.webp)
 
 ## 아키텍처: 두 풀의 구조
 
@@ -388,6 +392,8 @@ Dual-Pool의 핵심은 단순합니다. 요청마다 **예상 최대 토큰 수*
 
 Short-context 풀은 KV 캐시를 빠르게 회전시켜 높은 throughput을 유지합니다. Long-context 풀은 긴 생성을 방해 없이 완료할 수 있는 충분한 KV 캐시 메모리를 확보합니다. 두 풀은 서로 선점 간섭을 일으키지 않습니다.
 
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 3](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-03.webp)
+
 ## Kueue LocalQueue 연동 구현
 
 ThakiCloud의 ai-platform은 Kubernetes 위에서 Kueue를 통해 GPU 워크로드를 스케줄링합니다. Dual-Pool Routing을 Kueue LocalQueue와 연동하면 클러스터 수준에서 두 풀의 자원 배분을 선언적으로 관리할 수 있습니다.
@@ -528,6 +534,8 @@ async def proxy(request: Request):
 
 이 라우터는 Kubernetes Service로 노출하고, 기존 추론 엔드포인트 앞에 배치합니다.
 
+![dual-pool-token-budget-routing-vllm-kueue 슬라이드 4](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-04.webp)
+
 ## 운영 고려사항
 
 ### 임계값 튜닝
@@ -589,18 +597,6 @@ Dual-Pool Token-Budget Routing이 해결하는 문제는 단순합니다. 짧은
 
 arXiv 2604.08075가 측정한 GPU 시간 31~42% 절감, preemption rate 5.4배 감소, P99 TTFT 6% 개선은 구현 복잡도에 비해 효과가 큰 기법입니다. Kubernetes 환경에서는 Kueue LocalQueue 두 개, vLLM Deployment 두 개, 경량 라우터 하나로 이 구조를 구현할 수 있습니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`tech_pitch` 스타일)으로 요약한 슬라이드입니다.
-
-![dual-pool-token-budget-routing-vllm-kueue 슬라이드 1](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-01.webp)
-
-![dual-pool-token-budget-routing-vllm-kueue 슬라이드 2](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-02.webp)
-
-![dual-pool-token-budget-routing-vllm-kueue 슬라이드 3](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-03.webp)
-
-![dual-pool-token-budget-routing-vllm-kueue 슬라이드 4](/assets/images/dual-pool-token-budget-routing-vllm-kueue-slide-04.webp)
 
 ## 출처
 
