@@ -22,9 +22,13 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/how-far-we-automated-autonomous-ops/"
 ---
 
 ![Unattended operations topology where time-axis schedules and event hooks mesh together]({{ '/assets/images/autonomous-ops-hero.webp' | relative_url }})
+
+![Illustration of the core idea of How Far We Automated: A Solo Engineer's Unattended Operations Inventory](/assets/images/how-far-we-automated-autonomous-ops-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## An Honest Definition of "Automated"
 
@@ -36,7 +40,7 @@ The full topology divides into three axes: time-driven schedules, event-driven h
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -53,7 +57,7 @@ The full topology divides into three axes: time-driven schedules, event-driven h
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -409,7 +413,7 @@ The LLM judgment stage runs at 23:30 and handles topic consolidation and prefere
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -426,7 +430,7 @@ The LLM judgment stage runs at 23:30 and handles topic consolidation and prefere
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

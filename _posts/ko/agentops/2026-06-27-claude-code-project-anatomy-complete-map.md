@@ -42,7 +42,7 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -59,7 +59,7 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -391,7 +391,7 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -408,7 +408,7 @@ Claude Code로 일을 하다 보면 `.claude` 폴더가 어느 순간 잡동사�
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -759,6 +759,19 @@ Paxis는 Claude Code의 이 구조를 단일 개발자 환경을 넘어 프로�
 셋째, 이 구조는 Claude Code에 특화돼 있습니다. 다른 에이전트 실행 환경으로 옮기면 디렉터리 규약과 로드 메커니즘이 달라집니다. 그래서 지식 자체는 가능한 한 실행 환경 중립적으로 기술하고, 환경별 배선은 얇게 유지하는 편이 장기적으로 안전합니다.
 
 마지막으로, 출처 글의 일부 수치(예: MCP 서버당 약 1천 토큰)는 환경과 버전에 따라 달라질 수 있는 근사치입니다. 절대값으로 받기보다 "상시 로드되는 것은 모두 비용이다"라는 방향성으로 읽는 것이 맞습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![claude-code-project-anatomy-complete-map 슬라이드 1](/assets/images/claude-code-project-anatomy-complete-map-slide-01.png)
+
+![claude-code-project-anatomy-complete-map 슬라이드 2](/assets/images/claude-code-project-anatomy-complete-map-slide-02.png)
+
+![claude-code-project-anatomy-complete-map 슬라이드 3](/assets/images/claude-code-project-anatomy-complete-map-slide-03.png)
+
+![claude-code-project-anatomy-complete-map 슬라이드 4](/assets/images/claude-code-project-anatomy-complete-map-slide-04.png)
 
 ## 출처
 

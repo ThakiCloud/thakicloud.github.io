@@ -4,7 +4,7 @@ excerpt: "Just as traditional clouds treat servers as first-class resources, Pax
 seo_title: "Paxis Agent-Native Cloud: Governance, CostRouter, and Evolving Skills - Thaki Cloud"
 seo_description: "ThakiCloud Paxis is an Agent-Native Cloud for running autonomous AI agents safely. It features L0-L3 autonomy governance, multi-LLM CostRouter cost optimization, a Git-based HKE knowledge engine, and an 849-skill harness. Explained with real code."
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/agentops/praxis-agent-native-cloud/
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/praxis-agent-native-cloud/"
 date: 2026-06-20
 last_modified_at: 2026-06-20
 tags:
@@ -27,6 +27,9 @@ categories:
 ---
 
 ![Paxis layered architecture: Cloud infrastructure at the base, Paxis Core above it, and the 849-skill / 14-domain agent capability layer on top]({{ '/assets/images/praxis-architecture-hero.webp' | relative_url }})
+
+![Illustration of the core idea of Paxis: Run a Full Team of AI Employees Without Writing Code](/assets/images/praxis-agent-native-cloud-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## The Next Question in Cloud: How Do You Operate Agents?
 
@@ -87,7 +90,7 @@ The "AI cost explosion" problem is almost always the same cause: using an expens
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -104,7 +107,7 @@ The "AI cost explosion" problem is almost always the same cause: using an expens
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

@@ -22,9 +22,13 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/praxis-agent-native-cloud/"
 ---
 
 ![Paxis 계층 아키텍처: Cloud 인프라 위에 Paxis Core, 그 위에 849 스킬·14 도메인 에이전트 능력 계층]({{ '/assets/images/praxis-architecture-hero.webp' | relative_url }})
+
+![Paxis: AI 직원 한 팀을 코드 없이 운영하는 Agent-Native Cloud 개념을 형상화한 이미지](/assets/images/praxis-agent-native-cloud-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 클라우드의 다음 질문은 "에이전트를 어떻게 운영하나"
 
@@ -85,7 +89,7 @@ curl -X POST http://localhost:8080/api/v1/tasks \
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -102,7 +106,7 @@ curl -X POST http://localhost:8080/api/v1/tasks \
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -468,3 +472,16 @@ ThakiCloud의 AI 플랫폼은 Kubernetes 위에서 Kueue로 GPU를 스케줄링�
 - 경영 데모 덱(33장, 발표 노트 포함): [Google Slides](https://docs.google.com/presentation/d/11E5ixfWgV6uY-akebEZ--Kwp1JmRQJG1OpPaChbJLmc/edit)
 
 함께 만들 동료와 파일럿 고객을 찾고 있습니다. Agent-Native Cloud라는 범주를 우리가 먼저 정의하려 합니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![praxis-agent-native-cloud 슬라이드 1](/assets/images/praxis-agent-native-cloud-slide-01.png)
+
+![praxis-agent-native-cloud 슬라이드 2](/assets/images/praxis-agent-native-cloud-slide-02.png)
+
+![praxis-agent-native-cloud 슬라이드 3](/assets/images/praxis-agent-native-cloud-slide-03.png)
+
+![praxis-agent-native-cloud 슬라이드 4](/assets/images/praxis-agent-native-cloud-slide-04.png)
+

@@ -22,9 +22,13 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/conversations-into-self-evolving-skills/"
 ---
 
 ![과거 대화가 재사용 가능한 스킬로 응결되는 모습]({{ '/assets/images/self-evolving-skills-hero.webp' | relative_url }})
+
+![대화가 스킬이 된다: 과거 세션에서 워크플로를 캐내고 스스로 진화시키는 에이전트 개념을 형상화한 이미지](/assets/images/conversations-into-self-evolving-skills-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 매번 같은 것을 다시 설명하고 있다면
 
@@ -64,7 +68,7 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -81,7 +85,7 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -402,7 +406,7 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -419,7 +423,7 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -751,3 +755,16 @@ ambient = {t for t, c in raw_df.items() if c / n > MAX_DF_RATIO}
 반복되는 일은 스킬이 되어야 하지만, 아무 반복이나 스킬이 되어서는 안 됩니다. 우리는 과거 대화를 결정론 엔진으로 캐내 진짜 반복만 골라내고, 기존 생태계와 중복을 강제 검증하며, 만든 스킬을 실패 근거로 leak-free하게 진화시킵니다. 빈도는 코드가 세고, 품질은 비회귀 게이트가 지키고, 비용은 별도 루프가 통제합니다.
 
 ThakiCloud는 이런 자기개선형 에이전트 운영을 온프레미스 환경에서 그대로 구현합니다. 같은 규율을 여러분의 인프라 위에서 돌리고 싶다면, 홈페이지에서 더 많은 이야기를 확인하실 수 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![conversations-into-self-evolving-skills 슬라이드 1](/assets/images/conversations-into-self-evolving-skills-slide-01.png)
+
+![conversations-into-self-evolving-skills 슬라이드 2](/assets/images/conversations-into-self-evolving-skills-slide-02.png)
+
+![conversations-into-self-evolving-skills 슬라이드 3](/assets/images/conversations-into-self-evolving-skills-slide-03.png)
+
+![conversations-into-self-evolving-skills 슬라이드 4](/assets/images/conversations-into-self-evolving-skills-slide-04.png)
+

@@ -4,7 +4,7 @@ excerpt: "하루 705달러를 태운 사고에서 출발해, LLM 모델 라우�
 seo_title: "Claude Code 비용 최적화: 모델 라우팅·스킬 라우터·토큰 룰 - Thaki Cloud"
 seo_description: "ThakiCloud가 Claude Code 에이전트 운영비를 줄이는 실전 규칙. haiku/sonnet/opus/fable 모델 라우팅, BM25 스킬 라우터, 2K 토큰 룰, retro 모델 에스컬레이션, 일일 비용 감사까지 사고 사례와 수치로 정리합니다."
 date: 2026-06-20
-last_modified_at: 2026-06-20
+last_modified_at: 2026-08-27
 tags:
   - cost-optimization
   - model-routing
@@ -23,9 +23,15 @@ toc_sticky: true
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/claude-code-cost-routing-rules/"
+audiobook: "https://drive.google.com/file/d/19OiLrvDKR0dlNsiOAbWLiXJ6xNy5OkFI/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![에이전트 작업이 모델 티어별로 분기되며 비용이 접히는 모습]({{ '/assets/images/cost-routing-hero.webp' | relative_url }})
+
+![에이전트 운영비를 라우팅으로 접는다: 모델 티어, 스킬 라우터, 그리고 7개의 비용 룰 개념을 형상화한 이미지](/assets/images/claude-code-cost-routing-rules-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 하루에 705달러를 태운 날
 
@@ -71,7 +77,7 @@ Agent(subagent_type="Explore", prompt="...")
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -88,7 +94,7 @@ Agent(subagent_type="Explore", prompt="...")
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -423,7 +429,7 @@ Agent(subagent_type="Explore", prompt="...")
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -440,7 +446,7 @@ Agent(subagent_type="Explore", prompt="...")
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -766,6 +772,19 @@ bad run 판정은 보수적입니다. 종료 코드가 0이 아니거나, 로그
 705달러 사고의 교훈은 단순했습니다. 누수는 기계가 아니라 행동에 있었고, 행동은 룰로만 교정됩니다. 모델 티어를 작업에 맞추고, 스킬 라우터로 탐색을 줄이고, 토큰을 위생적으로 다루고, 실패한 것만 승격하고, 매일 감사하면, 같은 일을 19배 싸게 할 수 있습니다.
 
 ThakiCloud는 이 비용 규율을 제품의 기본기로 만듭니다. 자세한 이야기는 홈페이지에서 확인하실 수 있습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![claude-code-cost-routing-rules 슬라이드 1](/assets/images/claude-code-cost-routing-rules-slide-01.png)
+
+![claude-code-cost-routing-rules 슬라이드 2](/assets/images/claude-code-cost-routing-rules-slide-02.png)
+
+![claude-code-cost-routing-rules 슬라이드 3](/assets/images/claude-code-cost-routing-rules-slide-03.png)
+
+![claude-code-cost-routing-rules 슬라이드 4](/assets/images/claude-code-cost-routing-rules-slide-04.png)
 
 ## 출처
 

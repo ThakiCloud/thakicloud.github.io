@@ -22,9 +22,13 @@ toc: true
 toc_sticky: true
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/how-far-we-automated-autonomous-ops/"
 ---
 
 ![시간축 스케줄과 이벤트 훅이 맞물려 도는 무인 운영 토폴로지]({{ '/assets/images/autonomous-ops-hero.webp' | relative_url }})
+
+![어디까지 자동화했나: 1인 엔지니어의 무인 운영 인벤토리 개념을 형상화한 이미지](/assets/images/how-far-we-automated-autonomous-ops-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## "자동화했다"는 말의 정직한 정의
 
@@ -36,7 +40,7 @@ categories:
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -53,7 +57,7 @@ categories:
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -409,7 +413,7 @@ memkraft dream-cycle은 6단계로 메모리를 정돈합니다. 비용 때문�
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -426,7 +430,7 @@ memkraft dream-cycle은 6단계로 메모리를 정돈합니다. 비용 때문�
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -744,3 +748,16 @@ memkraft dream-cycle은 6단계로 메모리를 정돈합니다. 비용 때문�
 자동화의 척도는 개수가 아니라, 사람 없이도 안전하게 도는가입니다. 우리는 시간으로 도는 스케줄, 사건으로 도는 훅, 밤에 스스로를 고치는 루프를 비용까지 구분해 운영합니다. 결정론은 공짜로, 판단은 신중하게, 실패는 회고로 교정합니다.
 
 ThakiCloud는 이 무인 운영의 규율을 제품으로 만듭니다. 더 많은 이야기는 홈페이지에서 확인하실 수 있습니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![how-far-we-automated-autonomous-ops 슬라이드 1](/assets/images/how-far-we-automated-autonomous-ops-slide-01.png)
+
+![how-far-we-automated-autonomous-ops 슬라이드 2](/assets/images/how-far-we-automated-autonomous-ops-slide-02.png)
+
+![how-far-we-automated-autonomous-ops 슬라이드 3](/assets/images/how-far-we-automated-autonomous-ops-slide-03.png)
+
+![how-far-we-automated-autonomous-ops 슬라이드 4](/assets/images/how-far-we-automated-autonomous-ops-slide-04.png)
+

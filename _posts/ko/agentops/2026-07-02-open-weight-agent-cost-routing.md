@@ -23,6 +23,9 @@ header:
   image: /assets/images/open-weight-agent-cost-routing-hero.webp
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1LjJ2QxP4VZLrxPRa3-yJj_fl8cGhAQJF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![작업 흐름이 프리즘을 지나 여러 비용 레인으로 갈라지는 추상 이미지]({{ '/assets/images/open-weight-agent-cost-routing-hero.webp' | relative_url }})
@@ -30,6 +33,9 @@ categories:
 에이전트 운영비 청구서를 열어 보면 대부분의 팀이 같은 착각을 합니다. "우리 에이전트가 어려운 추론을 많이 하니까 최상위 모델을 써야 한다"는 것입니다. 그런데 실제 트래픽을 뜯어보면 그림이 다릅니다. 자연어 요청을 API 호출로 바꾸고, 로그를 분류하고, 파이프라인을 잇고, 결과를 요약하는 반복 작업이 압도적으로 많습니다. 이 작업들은 세계 최고 수준의 추론이 필요 없습니다. 그런데도 전부 프런티어 프리미엄 모델로 처리하면, 비싼 값을 치르고 오버스펙을 사는 셈입니다.
 
 이 글은 그 낭비를 실측으로 확인하고 접는 과정입니다. 오픈 가중치 모델(Gemma 4)로 실제 운영 요청을 tool-call로 변환하는 실험을 돌려 품질을 확인하고, Paxis의 CostRouter로 작업마다 알맞은 모델에 라우팅했을 때 비용이 어디까지 내려가는지 실제 토큰과 실가격으로 계산합니다. 결론부터 말하면, 동일한 워크로드에서 프런티어 프리미엄 대비 약 44배까지 비용이 줄었습니다.
+
+![작업마다 이기는 모델로 라우팅한다: 오픈 가중치로 에이전트 자동화 비용을 44배 접은 실측 개념을 형상화한 이미지](/assets/images/open-weight-agent-cost-routing-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 이 접근은 무엇인가
 
@@ -39,7 +45,7 @@ categories:
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -56,7 +62,7 @@ categories:
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -469,6 +475,19 @@ def call(prompt):
 비용 수치의 오픈 가중치 단가는 추정치입니다. 관리형 API냐 자체 서빙이냐, 어느 공급자냐에 따라 절대값은 달라집니다. 다만 이 글에서 프런티어 단가는 실제 값이고 실험 품질은 실측이므로, "자릿수가 바뀌는 절감"이라는 결론의 방향은 유지됩니다. 자기 환경의 실제 단가로 같은 계산을 다시 해보시길 권합니다.
 
 마지막으로 지연입니다. 무료 공유 엔드포인트의 15초는 실시간 대화형 UX에는 부담스럽습니다. 배치 파이프라인이나 백그라운드 자동화에는 문제가 없지만, 사용자가 기다리는 경로라면 자체 서빙으로 지연을 잡거나 그 구간만 빠른 티어로 라우팅하는 판단이 필요합니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![open-weight-agent-cost-routing 슬라이드 1](/assets/images/open-weight-agent-cost-routing-slide-01.png)
+
+![open-weight-agent-cost-routing 슬라이드 2](/assets/images/open-weight-agent-cost-routing-slide-02.png)
+
+![open-weight-agent-cost-routing 슬라이드 3](/assets/images/open-weight-agent-cost-routing-slide-03.png)
+
+![open-weight-agent-cost-routing 슬라이드 4](/assets/images/open-weight-agent-cost-routing-slide-04.png)
 
 ## 출처
 

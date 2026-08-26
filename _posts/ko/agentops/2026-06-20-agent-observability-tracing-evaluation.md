@@ -4,7 +4,7 @@ excerpt: "멀티에이전트 시스템에서 전통적인 로깅이 왜 통하�
 seo_title: "LLM 에이전트 관찰가능성 구축 가이드 - Thaki Cloud"
 seo_description: "MLflow, LangSmith, Arize AI를 활용한 LLM 에이전트 트레이싱과 평가 루프 구축 방법. 프로덕션 에이전트 실패의 65%가 컨텍스트 문제임을 기반으로 한 실전 가이드."
 date: 2026-06-20
-last_modified_at: 2026-06-20
+last_modified_at: 2026-08-27
 tags:
   - observability
   - tracing
@@ -23,6 +23,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-observability
 reading_time: true
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1RFvZp24ETpgv-SrWMkytlxbsf9_oxSBb/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **예상 읽기 시간**: 9분
@@ -32,7 +35,7 @@ categories:
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -49,7 +52,7 @@ categories:
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -355,6 +358,9 @@ categories:
   })();
 </script>
 {% endraw %}
+
+![LLM 에이전트 관찰가능성: 트레이싱, 평가 루프, 프로덕션 디버깅 개념을 형상화한 이미지](/assets/images/agent-observability-tracing-evaluation-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 에이전트에서 로그가 의미없는 이유
 
