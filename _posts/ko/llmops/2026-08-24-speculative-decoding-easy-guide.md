@@ -28,7 +28,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 ![LLM 추론 가속의 설계학, 추측 해독 표지 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-01.webp)
 *이 글에 실린 슬라이드는 원문을 소스로 NotebookLM이 자동 생성한 것입니다. 글을 따라 읽으면서 그림으로 한 번 더 확인하시라고 중간중간 넣었습니다.*
 
-
 ## 글자 하나 쓰는 데 도서관을 한 번 다녀옵니다
 
 큰 언어 모델이 문장을 만드는 방식은 생각보다 답답합니다. 한 글자를 정하면 그 글자를 다시 입력에 붙여서 처음부터 계산하고 그렇게 나온 다음 글자를 또 붙입니다. 백 글자짜리 답변이면 이 과정을 백 번 반복합니다.
@@ -41,7 +40,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 
 ![자기회귀 생성이 메모리 대역폭에 막혀 연산 능력이 유휴 상태가 되는 구조 도식](/assets/images/speculative-decoding-easy-guide-slide-02.webp)
 *계산 능력은 남는데 통로가 막혀 있죠. 투기 디코딩은 바로 이 남는 능력을 씁니다.*
-
 
 ## 눈치 빠른 친구를 옆에 앉힙니다
 
@@ -383,7 +381,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
   })();
 </script>
 {% endraw %}
-
 
 ![초안 작성, 병렬 검증, 거부 샘플링 3단계를 나눠 그린 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-03.webp)
 *가벼운 초안, 한 번의 병렬 검증, 답을 지켜 주는 거부 샘플링. 이 세 가지가 전부죠.*
@@ -757,7 +754,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 ![지연 시간 공식 L = (T_draft + T_verify) / tau 를 시소로 표현한 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-04.webp)
 *한 글자당 걸리는 시간은 초안 시간과 채점 시간을 합쳐 평균 통과 길이로 나눈 값. 결국 분모를 키우는 싸움입니다.*
 
-
 이 그림이 지난 몇 년간의 연구 방향을 그대로 설명합니다. 미리 쓰는 개수를 늘리는 건 금방 한계에 부딪히니까, 사람들은 **친구를 더 잘 맞히게 만드는 쪽**으로 갔습니다.
 
 ## 친구를 만드는 방법이 계속 좋아졌습니다
@@ -767,12 +763,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 ![독립 초안 모델 구조와 2배에서 3배 가속을 보여주는 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-05.webp)
 *작은 모델을 하나 더 띄우는 가장 단순한 형태. 편한 대신 메모리를 두 배로 씁니다.*
 
-
 그다음에 나온 **Medusa**는 친구를 따로 두는 대신 선생님 머리에 손을 여러 개 달았습니다. 각 손이 두 번째, 세 번째, 네 번째 글자를 동시에 예측합니다. 2.2배에서 3.6배가 나왔는데 약점이 있었습니다. 손끼리 서로 상의를 하지 않아서 뒤쪽 손일수록 엉뚱한 글자를 내놓습니다.
 
 ![Medusa와 MTP의 다중 헤드 예측 구조 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-06.webp)
 *본체에 손을 여러 개 답니다. 손끼리 상의를 안 하는 게 한계죠.*
-
 
 **MTP(다중 토큰 예측)** 는 그 손들을 완성된 모델에 나중에 붙이지 말고 처음 배울 때부터 같이 키우자는 접근입니다. 덤으로 본체 모델의 실력까지 좋아지는 효과가 있어서, 추론이 3배 빨라지는 건 오히려 부산물에 가깝습니다.
 
@@ -781,12 +775,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 ![EAGLE 계열이 숨겨진 상태를 기반으로 초안을 만드는 구조 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-07.webp)
 *글자가 아니라 선생님 머릿속 상태를 물려받는 방식. 지금 가장 널리 쓰입니다.*
 
-
 가장 최근에 나온 **DFlash**는 아예 다르게 접근합니다. 글자를 하나씩 순서대로 쓰는 대신 한 덩어리를 통째로 한 번에 만들어 냅니다. 확산 모델이 이미지를 흐릿한 상태에서 점점 또렷하게 만드는 것과 비슷한 방식을 글자 블록에 씁니다. 평균 4배에서 6배가 나옵니다. 친구를 더 크게 키울수록 잘 붙습니다.
 
 ![DFlash의 블록 병렬 확산 드래프팅을 표현한 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-08.webp)
 *한 글자씩 계단을 오르는 대신 블록을 통째로 내려놓는 쪽으로.*
-
 
 여기에 **DSpark**를 하나 더 얹으면 최근 흐름이 보입니다. 이 방식은 초안을 더 잘 만드는 데 매달리지 않습니다. 대신 지금 서버에 요청이 얼마나 몰려 있는지와 친구가 얼마나 자신 있어 하는지를 같이 보고 채점을 언제 할지 조절합니다. 한 사람이 체감하는 속도를 60%에서 85%까지 올렸는데, 대신 챙길 게 늘어서 구현이 복잡해집니다.
 
@@ -809,7 +801,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/speculative-decoding-
 
 ![배치 크기가 커지면 가속 효과가 떨어지는 곡선 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-11.webp)
 *동시 요청이 늘수록 곡선이 내려앉습니다. 오른쪽 빗금 구간이라면 켜도 얻는 게 거의 없죠.*
-
 
 투기 디코딩은 **동시 사용자가 적을 때** 가장 크게 이깁니다. 사용자가 많아져서 GPU 계산 능력이 이미 꽉 찬 상태라면, 남는 능력을 쓰겠다는 이 기술의 전제 자체가 사라집니다. 심하면 초안 만드는 비용만 더해져서 손해가 나기도 합니다.
 
@@ -848,11 +839,6 @@ python -m sglang.launch_server \
 ![방식별 초안 패턴, 평균 통과 길이, 보고된 가속 배수를 정리한 비교표 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-10.webp)
 *지금까지 나온 방식을 한 장으로 모으면 이렇습니다. 숫자는 각 연구가 보고한 값입니다.*
 
-
 기술의 흐름도 짚어 볼 만합니다. 처음에는 "친구를 어떻게 똑똑하게 만들까"가 전부였습니다. 별도 모델에서 시작해 선생님 머리에 손을 달았고, 글자 대신 머릿속 상태를 물려주는 데까지 왔습니다. 그런데 최근 연구들을 보면 질문이 바뀌고 있습니다. 여러 사용자가 몰릴 때 **채점을 언제 어떻게 몰아서 할 것인가**, 그러니까 초안 만들기보다 검증 일정 짜기가 더 어려운 문제로 올라오고 있습니다. 이 부분이 다음 몇 년의 싸움터가 될 것 같습니다.
-
-
-![원문 출처와 시각 콘셉트를 밝힌 마무리 슬라이드](/assets/images/speculative-decoding-easy-guide-slide-12.webp)
-*슬라이드의 출처와 시각 콘셉트.*
 
 이 글의 원본 설명은 Leonie Monigatti의 [Speculative Decoding](https://leoniemonigatti.com/blog/speculative-decoding.html)입니다. 수식과 논문 링크가 필요하시면 원문을 함께 보시길 권합니다.

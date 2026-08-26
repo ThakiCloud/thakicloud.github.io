@@ -28,15 +28,26 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPTS = {
-    "Arabic": re.compile(r"[؀-ۿݐ-ݿ]"),
+# Arabic BLOCKS: the language was retired 2026-07-27 and its posts are excluded from the
+# build, so any Arabic on a page is a leak by definition. Kana and Cyrillic only WARN:
+# they show up legitimately in quoted source titles and in language-demo posts, and a
+# gate that fails on those would either be switched off or would delete real content.
+#
+# ⛔ This distinction was learned the expensive way. The first version blocked on all
+# three and was shipped after testing against a STALE local _site, so it looked clean.
+# The first real build failed and stopped every deploy: 9 flagged pages, of which 8 were
+# a Japanese TTS sample sentence and three comics quoting the Japanese tweet they are
+# about. Exactly one was a genuine leak.
+BLOCKING = {"Arabic": re.compile(r"[؀-ۿݐ-ݿ]")}
+WARNING = {
     "Cyrillic": re.compile(r"[Ѐ-ӿ]"),
     "Kana": re.compile(r"[぀-ゟ゠-ヿ]"),
 }
+SCRIPTS = {**BLOCKING, **WARNING}
 # Pages whose foreign script IS the content. Slug substrings, deliberately narrow.
-ALLOW = ("thank-you-in-7-languages",)
-# Chrome that ships on every page and legitimately names other languages.
-ALLOW_SNIPPET = re.compile(r"hreflang|lang=\"ar\"|/ar/")
+ALLOW = ("thank-you-in-7-languages", "tts-comparison-showcase")
+# Chrome that ships on every page, plus quoted source titles (원 뉴스 links, blockquotes).
+ALLOW_SNIPPET = re.compile(r"hreflang|lang=\"ar\"|/ar/|<blockquote|원 뉴스|Source:")
 
 
 def offenders(html: str) -> dict[str, int]:
@@ -55,6 +66,7 @@ def main() -> int:
         print(f"script-purity: {site} 없음 — 건너뜀")
         return 0
     bad: list[str] = []
+    warn: list[str] = []
     checked = 0
     for f in site.rglob("*.html"):
         rel = str(f.relative_to(site))
@@ -62,8 +74,14 @@ def main() -> int:
             continue
         checked += 1
         found = offenders(f.read_text(encoding="utf-8", errors="replace"))
-        if found:
-            bad.append(f"{rel}: " + ", ".join(f"{k} {v}자" for k, v in found.items()))
+        if not found:
+            continue
+        line = f"{rel}: " + ", ".join(f"{k} {v}자" for k, v in found.items())
+        (bad if any(k in BLOCKING for k in found) else warn).append(line)
+    for w in warn[:10]:
+        print(f"  ⚠️  {w}")
+    if warn:
+        print(f"script-purity: 경고 {len(warn)}건 (인용·데모로 보이는 이질 문자 — 차단 안 함)")
     if bad:
         for b in bad[:25]:
             print(f"  {b}")
