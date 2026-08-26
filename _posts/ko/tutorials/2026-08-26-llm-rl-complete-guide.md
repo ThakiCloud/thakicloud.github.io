@@ -61,7 +61,7 @@ flowchart TB
 
 LLM은 토큰별 확률과 전체 completion 확률을 모두 계산할 수 있으므로, RL은 MDP로든 밴딧으로든 형성할 수 있습니다. 둘 다 실무에서 쓰입니다. REINFORCE나 RLOO는 보통 밴딧 형성이고 PPO는 MDP 형성입니다. 이 구분이 중요한 이유는 보상과 크레딧 할당(credit assignment)의 단위가 달라지기 때문입니다. MDP는 token 단위로 상태·행동·보상을 다루고 밴딧은 completion 단위로 결과를 다룹니다.
 
-보상이 откуда 나오느냐는 두 갈래로 나뉩니다. RLHF(Reinforcement Learning from Human Feedback)는 prompt와 chosen·rejected completion 쌍으로 된 선호 데이터에서 reward model을 훈련하고 그 모델의 점수로 RL을 돌립니다. RLVR(Reinforcement Learning with Verifiable Rewards)는 규칙 기반 또는 결정적 검증기(정답 여부, 테스트 통과 등)의 신호를 그대로 보상으로 씁니다. reasoning 모델의 post-training이 RLVR 쪽으로 이동한 것은, 검증 가능한 보상이 선호 모델보다 편이 적고 스케일하기 쉽다는 판단에서입니다.
+보상이 어디서 나오느냐는 두 갈래로 나뉩니다. RLHF(Reinforcement Learning from Human Feedback)는 prompt와 chosen·rejected completion 쌍으로 된 선호 데이터에서 reward model을 훈련하고 그 모델의 점수로 RL을 돌립니다. RLVR(Reinforcement Learning with Verifiable Rewards)는 규칙 기반 또는 결정적 검증기(정답 여부, 테스트 통과 등)의 신호를 그대로 보상으로 씁니다. reasoning 모델의 post-training이 RLVR 쪽으로 이동한 것은, 검증 가능한 보상이 선호 모델보다 편이 적고 스케일하기 쉽다는 판단에서입니다.
 
 ### Policy Gradient: REINFORCE에서 GRPO까지
 

@@ -145,6 +145,11 @@ jobs:
       - name: Verify language toggle reaches every translation
         run: python3 scripts/check_language_toggle.py _site
 
+      # ⛔ 이질 문자는 소스가 아니라 빌드 산출물에서 잡는다. 2026-08-27 유출은 _posts 가
+      # 아니라 _config.yml 브랜드 메타에서 나와 모든 페이지가 아랍어 122자를 실어 날랐다.
+      - name: ⛔ Script purity (no stray Arabic/Cyrillic/Kana in built pages)
+        run: python3 scripts/script_purity_check.py _site
+
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v6
         with:
