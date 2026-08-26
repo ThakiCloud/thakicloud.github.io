@@ -107,7 +107,7 @@ flowchart TB
 
 **ai-platform 렌즈.** rollout 효율은 곧 서빙 비용입니다. 에이전트 최적화는 기본적으로 추론 실행을 태우는 작업이고 GAIA2에서 1,000 대 2,800, 활용 기준 147 대 1,400이라는 차이는 같은 최적화 결과에 드는 Metis 추론 비용의 차이입니다. "실패 트레이스만 학습 신호로 쓴다"는 설계는 성공 케이스까지 재실행할 필요가 없다는 뜻이므로, 에이전트 평가 파이프라인의 비용 구조 자체를 바꿉니다.
 
-관련 글로, 같은 "모델은 동결, 하네스가 학습한다" 주제에 [Harness Continual Learning](/ko/research/harness-continual-learning/)을 다뤘습니다. AutoSaddler가 오프라인(배포 전) 최적화라면, 그 글의 대상은 배포 후 지속 적응 문제입니다.
+관련 글로, 같은 "모델은 동결, 하네스가 학습한다" 주제에 [Harness Continual Learning](/tech-blog/ko/research/harness-continual-learning/)을 다뤘습니다. AutoSaddler가 오프라인(배포 전) 최적화라면, 그 글의 대상은 배포 후 지속 적응 문제입니다.
 
 ## 한계 및 반론
 

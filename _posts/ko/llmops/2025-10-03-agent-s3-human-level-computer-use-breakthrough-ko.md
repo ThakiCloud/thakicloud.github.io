@@ -807,9 +807,9 @@ Agent S3의 성공은 컴퓨터 사용 자동화 분야의 밝은 미래를 보�
 - WindowsAgentArena 및 AndroidWorld 평가 결과
 
 **관련 글**:
-- [컴퓨터 사용 에이전트의 진화: Agent S에서 S3까지](/ko/llmops/computer-use-agent-evolution/)
-- [AI 자동화 도구 비교 분석](/ko/tutorials/ai-automation-tools-comparison/)
-- [LLMOps에서의 에이전트 활용 전략](/ko/llmops/agent-utilization-strategies/)
+- 컴퓨터 사용 에이전트의 진화: Agent S에서 S3까지
+- AI 자동화 도구 비교 분석
+- LLMOps에서의 에이전트 활용 전략
 
 ## 관련 슬라이드
 

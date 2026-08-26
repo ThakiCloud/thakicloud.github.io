@@ -805,6 +805,6 @@ Computer use agents have now evolved from laboratory research topics to **techno
 - WindowsAgentArena and AndroidWorld Evaluation Results
 
 **Related Articles**:
-- [Evolution of Computer Use Agents: From Agent S to S3](/en/llmops/computer-use-agent-evolution/)
-- [Comparative Analysis of AI Automation Tools](/en/tutorials/ai-automation-tools-comparison/)
-- [Agent Utilization Strategies in LLMOps](/en/llmops/agent-utilization-strategies/)
+- Evolution of Computer Use Agents: From Agent S to S3
+- Comparative Analysis of AI Automation Tools
+- Agent Utilization Strategies in LLMOps

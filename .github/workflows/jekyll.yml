@@ -34,6 +34,13 @@ jobs:
       - name: ⛔ URL ratchet (block silent unpublish of live URLs)
         run: python3 scripts/url_ratchet.py --check
 
+      # ⛔ 내부 링크는 baseurl 을 달아야 하고 실재하는 글을 가리켜야 한다.
+      # Jekyll 은 `](/ko/...)` 같은 루트상대 링크에 baseurl 을 주입하지 않아서
+      # thakicloud.com/ko/... 로 나가고, CloudFront 가 랜딩페이지를 200 으로 돌려준다.
+      # 상태코드로는 절대 안 잡히는 soft-404 다 (2026-08-27, autosaddler 글).
+      - name: ⛔ Internal link check (baseurl + target exists)
+        run: python3 scripts/internal_link_check.py
+
       
       - name: 📊 Filter posts by category (limit large categories)
         run: |

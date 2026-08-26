@@ -107,7 +107,7 @@ Cross-model transfer was checked too: with Claude Haiku 4.5 as the task agent an
 
 **ai-platform lens.** Rollout efficiency is serving cost. Agent optimization burns inference executions by construction, and the gap of 1,000 vs 2,800 on GAIA2 (147 vs 1,400 by leveraged rollouts) is the difference in Metis inference cost for the same optimization outcome. The design of "use only failure traces as learning signal" means success cases do not need re-execution, which changes the cost structure of the agent evaluation pipeline itself.
 
-A related post, [The Model Is Frozen, the Harness Learns: Harness Continual Learning](/en/research/harness-continual-learning/), covers the same "harness learns" theme. AutoSaddler is offline (pre-deployment) optimization; that post covers post-deployment continual adaptation.
+A related post, [The Model Is Frozen, the Harness Learns: Harness Continual Learning](/tech-blog/en/research/harness-continual-learning/), covers the same "harness learns" theme. AutoSaddler is offline (pre-deployment) optimization; that post covers post-deployment continual adaptation.
 
 ## Limitations and counterarguments
 
