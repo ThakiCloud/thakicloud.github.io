@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/the-recovery-engineer/"
 ebook: /assets/ebooks/the-recovery-engineer.pdf
 ebook_title: "복구의 엔지니어"
-ebook_pages: 31
+ebook_pages: 30
 audiobook: "https://drive.google.com/file/d/1hDL_oVTdUVO34MW1ezGLtkveZb2HVWMU/view"
 audiobook_label: "▶ 5분 브리핑으로 듣기"
 audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"

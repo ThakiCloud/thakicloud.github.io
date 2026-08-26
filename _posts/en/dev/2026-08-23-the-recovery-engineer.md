@@ -23,7 +23,7 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/the-recovery-engineer/"
 ebook: /assets/ebooks/the-recovery-engineer.pdf
 ebook_title: "The Recovery Engineer"
-ebook_pages: 31
+ebook_pages: 30
 ---
 
 You run a service on your own, or you are part of a small team that owns it when it breaks. This article gives you one rule of action for the moment the dashboards start to blink. The best thing you can do during an incident is not to fix it. It is to stop it.
