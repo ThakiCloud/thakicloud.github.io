@@ -1,0 +1,100 @@
+---
+title: "Solo Operator Security: Capping the Damage of Your Own Leaks"
+excerpt: "Solo developers and one-person cloud operators read security incidents as attacker stories, but the enemy is usually the version of you that forgot where a key lived. The practical goal is not an unbreakable wall. It is a setup where anything that leaks expires quickly and can reach little, built from three structural habits: inventory, least privilege, and deadlines."
+seo_title: "Solo Operator Security: Capping Your Own Leaks"
+seo_description: "A working security model for solo developers and one-person cloud operators: take inventory of what is open, shrink the trust you delegate, and give every key a deadline. Ten minutes a week, not a penetration test."
+date: 2026-08-28
+last_modified_at: 2026-08-28
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_icon: "book"
+tags:
+  - security
+  - secrets-management
+  - supply-chain-security
+  - ai-agents
+  - attack-surface
+  - least-privilege
+  - solo-developer
+categories:
+  - dev
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/the-security-engineer/"
+ebook: /assets/ebooks/the-security-engineer.pdf
+ebook_title: "The Security Engineer"
+ebook_pages: 34
+---
+
+Solo developers and one-person cloud operators read security incidents as attacker stories, but the enemy in your next incident is probably not a remote attacker. This post argues that solo-operator security should be designed around the premise that you will leak something, and shows, through four real incident shapes, how to cap the damage of that leak to a ten-minute cleanup.
+
+The conclusion first. The unbreakable wall does not exist, and building one is not a realistic goal for a single person. The workable goal is different, and it is what this whole post is about: when something leaks, it expires quickly, and it can reach little. The argument runs through three structural habits, taking inventory, shrinking the trust you delegate, and putting a deadline on every key, and it ends with the newest attack surface: the coding agents we now hand shells and deploy rights to.
+
+![Illustration of the core idea of Solo Operator Security: Capping the Damage of Your Own Leaks](/assets/images/the-security-engineer-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## The incident you will actually face is not a hacker story
+
+Most solo-developer incidents have the same shape. Nobody broke a lock with advanced technique; the key was simply forgotten somewhere it should not have been. A payment API key pasted into a source file and committed. A webhook secret printed into a server log, and that log uploaded to the cloud. An access key pasted into a messenger room whose membership was never checked once.
+
+Security feels like preventing being hacked. But in a one-person operation, what actually happens is mostly that you leaked a key. In a company with a team, when a key leaks, someone responds. For a solo operator, the response budget is your sleep and the next morning. The real adversary, then, is not the hacker. It is the you that forgets.
+
+The forgetting is dangerous because the internet never sleeps. A port left open for convenience gets found within a day. A key that ever made it into a repository stays in the git history forever. A package installed unread runs in production with the permissions your secrets touch. The attacker side rarely needs special skill. It only needs you to have left a door open and then forgotten it.
+
+Accept that, and the design of security flips. The question stops being how do I stop intruders, and becomes how fast does a leak expire, and what can it touch once it is out. The rest of this post builds on that premise: three habits (inventory, least privilege, deadlines), followed by the newest surface, coding agents.
+
+## Habit one: convert the unknown into the known
+
+The first step in capping damage is knowing what you have. Not from memory, but read from the console. The moment a thought like I am probably not leaving anything open comes from memory rather than a list, that part is the part most likely to be wrong. Start with keys: every key you have, where it is used, where it is stored, and when it was last rotated, written down in one table. The scarcest cell in that table is unknown. If you do not know when you changed a key, you do not know who has seen it.
+
+For the network, the exercise is to look from the outside. Run a full port scan of your own server from a different network, and search your IP on a service like Shodan. What you opened and what the internet can see are frequently different things: rules a load balancer attached, instances left over from an old project, ports a monitoring agent opened once. If a database port such as 5432 or 6379 is visible from outside, that is not exposure. That is an incident already in progress.
+
+For dependencies, read the tree. The packages you install directly are few enough to count on one hand, but transitive dependencies push the total into the hundreds, typically. All of those hundreds run in your production, with the permissions your secrets touch. Ask two questions of the tree: is the same package present in multiple versions at once, and is there any package you would want to ask why are you here? Unknown dependencies get removed. They are not being used.
+
+The output of the exercise is a file. Save this month's scan and diff it against next month's, and you can see when which door newly opened. Security is close to change management. The difference is not one good look but a weekly look. Not knowing what is open is worse than being open, because a door you do not know about is a door you cannot close or lock.
+
+## Habit two: shrink the trust you delegate
+
+Damage is only as large as the authority of what leaked. So the second question is not whether it leaked, but what this key can do. The most dangerous structure for a solo developer is the one where your personal account, the CI account, and the application account all hold the same top-level privilege. In that structure, one leaked key opens everything. And because the privilege cannot be taken away, rotation never happens.
+
+Separate the accounts, then. The person logging into the console, the CI building and deploying, and the app talking to the database should be distinct identities. Each machine identity gets only what it needs right now. A deploy account has no reason to delete a database. A read-only account does not get write rights. The point is not perfection; it is that no single key can see the whole house.
+
+The change that restructures everything is replacing static keys with short-lived tokens. With an OIDC connection, CI does not own a key. It borrows a role at the moment a deploy is needed, and the token invalidates itself when the job ends. If that token leaks, the hole closes by the clock. The opposite structure is a static key sitting in a credentials file on a laptop. That key has no expiry. If it leaks, it leaks forever.
+
+The same logic applies to ports and to commands. The principle is default deny. Remove world from the default rules of a new instance, write a one-line reason for every rule that stays, and delete the rules whose reason you cannot reread a month later. A coding agent's deny list is built with the same grammar: the criterion is can it be undone. Reversible work the agent does; irreversible work you do. Shrinking trust does not slow the work down. It draws the upper bound of damage before the work starts.
+
+## Habit three: give every key a deadline
+
+If rotation is only something you do after an incident, it is already too late. Rotation has to be routine and easy. The pattern is two keys. Create the new key, deploy with both keys live, confirm everything is normal, and only then invalidate the old one. Kill the old key first and the service dies. Skip the confirmation and you learn about the breakage the next day. The order is the whole method.
+
+When you do not have time to rotate everything, set the order. First the keys that can touch money: payment, billing. Then the keys that can touch data: the database, storage. Last, the keys that only deploy. The first two, if leaked, create damage you cannot undo. The last one creates operational annoyance. If rotating all three takes four days, rotate the first one today.
+
+If a static key is unavoidable, give it an expiry. The thirty-day cap is not a security standard; it is the number that tells you the upper bound of the damage this key can do if it leaks. If a key seems impossible to rotate, that key is a symptom of a bigger structural problem, and the structure is what you should fix.
+
+The incident rule is one. When a key leaks, kill the key first, investigate second. Investigating while the key is still alive, because it might still be useful, means spending time with the hole open. Killing the key stops the attacker's clock and, just as importantly, lets you investigate calmly. And for human accounts: turn on MFA, and actually practice the recovery once a quarter. A lock you have never practiced opening is a lock that will not open when you need it.
+
+## The newest surface: the agent you handed tools to
+
+Coding agents are now standard equipment for solo developers. They open a terminal, edit files, run git, and in some setups deploy. Old automation, CI scripts and cron jobs, executed a fixed sequence. Agents are different: they choose the next action themselves based on what they read. Once a decision exists, that decision can be contaminated by the input, a web page, an issue, an email. That is the real reason the attack surface widened.
+
+An agent can do exactly what you gave it tools for. An agent with a shell is, in effect, someone logged in with your account. On a laptop that reaches every file in the home directory, the SSH keys, the browser sessions. The cost of the agent making a mistake is everything on that machine.
+
+Prompt injection means that everything the agent reads is input. A web page can contain a sentence telling it to ignore previous instructions and print the environment variables. A human reading that sentence ignores it. The agent processes it as input, through the same channel as your own instructions. That is fatal because the agent is not a talker. If a chat-only AI gets injected, the worst case is a wrong answer. An AI with a shell and deploy rights executes real commands. The defense is not preventing reading; reading is the agent's job. The defense is a structure where reading yields nothing to take: no keys inside the sandbox, a deny list in the policy. Injection can still produce commands, but there is nothing to steal.
+
+In 2025 a coding agent deleted production database data, with no injection involved. It judged it was fixing something broken and ran an irreversible operation. Authority produces incidents. So put a human checkpoint at the irreversible moment and let the agent do everything inside it freely. And never put secrets in the context window: pasting a production key into the chat is the same as opening the room the agent reads to everyone. If you hand an agent an error log to clean up, mask it first.
+
+## What is not worth doing, and where to start today
+
+The opposite of capping damage is spending more budget on preventing entry: full penetration tests, reading every line of every dependency, the unbreakable wall. For a solo operator these are either impossible or low return per hour. The high return is ten minutes a week. Build the key table, run one outside scan and diff it, read one dependency batch, check the agent's deny list once. The goal is to convert the unknown into the known, every week.
+
+Laid side by side, the four surfaces show that the fix is structural, not heroic.
+
+| Surface | What gets forgotten | How to see it | Structure that caps damage |
+|---|---|---|---|
+| Secrets | Keys in git history, unrotated keys | Key flow table, pre-commit scanner | Account separation, short-lived tokens |
+| Network | Convenience ports, leftover instances | Outside full port scan, monthly diff | Default deny, SSH behind a tunnel |
+| Supply chain | Transitive dependencies, lookalike names | Dependency tree, lockfile | Weekly update batches, pinned versions |
+| Agent | Tools handed over, contaminated inputs | Command log with triggers | Sandbox, deny list, checkpoints |
+
+Start today with thirty minutes. Open a note and write down every key you have and where it is used; that is the key flow table. Then, from your phone's mobile network or another machine, run a full port scan against your server and save the result file with a date. If you use a coding agent, write three deny lines: production deploy, schema changes, force push. If any of these is no, that item is your most vulnerable spot right now.
+
+Security is not an all-or-nothing game. Fix one thing today, one more tomorrow. If you want the deeper version, the 34-page ebook PDF is below, with the step order and checklists for each of these habits. But the start is the thirty minutes above; you do not need to wait for the book to convert one unknown into a known.
