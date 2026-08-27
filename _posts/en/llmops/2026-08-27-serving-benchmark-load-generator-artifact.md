@@ -113,8 +113,8 @@ The setup was a single B200 with a Qwen3.8-27B NVFP4 checkpoint on vLLM 0.24, fi
 
 ## References
 
-- [vLLM Metrics](https://docs.vllm.ai/en/latest/design/metrics/) — the TTFT and TPOT quantiles in this article come from the histograms vLLM exposes directly. Start here to read the same values off your own stack.
-- [vLLM Optimization and Tuning](https://docs.vllm.ai/en/latest/configuration/optimization.html) — the official account of what chunked prefill and `max_num_batched_tokens` actually control.
-- [vLLM Disaggregated Prefilling](https://docs.vllm.ai/en/latest/features/disagg_prefill/) — the prefill/decode split you reach for when TTFT genuinely is the bottleneck.
-- [Little's law](https://en.wikipedia.org/wiki/Little%27s_law) — the basis for saying the Poisson side carried the heavier load. Mean requests in flight is arrival rate times residence time.
+- [vLLM Metrics](https://docs.vllm.ai/en/latest/design/metrics/). the TTFT and TPOT quantiles in this article come from the histograms vLLM exposes directly. Start here to read the same values off your own stack.
+- [vLLM Optimization and Tuning](https://docs.vllm.ai/en/latest/configuration/optimization.html). the official account of what chunked prefill and `max_num_batched_tokens` actually control.
+- [vLLM Disaggregated Prefilling](https://docs.vllm.ai/en/latest/features/disagg_prefill/). the prefill/decode split you reach for when TTFT genuinely is the bottleneck.
+- [Little's law](https://en.wikipedia.org/wiki/Little%27s_law). the basis for saying the Poisson side carried the heavier load. Mean requests in flight is arrival rate times residence time.
 

@@ -23,6 +23,9 @@ toc_label: "목차"
 toc_sticky: true
 reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/serving-benchmark-load-generator-artifact/"
+audiobook: "https://drive.google.com/file/d/19oJbAY3hfaiUGQm8XG07CvyaOATB4tB0/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 vLLM 벤치마크를 돌려 p99 TTFT를 보고 계신다면, 그 숫자가 모델이 아니라 **부하 생성기**를 잴 가능성이 높습니다. 저희가 B200 한 장에서 확인한 바로는 같은 엔드포인트가 부하를 던지는 방식만 바꿔도 꼬리 지연이 열한 배 갈렸습니다. 더 곤란한 건 그다음입니다. 병목의 정체가 바뀌면서, 고쳐야 할 노브까지 바뀌었습니다.
@@ -45,6 +48,10 @@ vLLM 벤치마크를 돌려 p99 TTFT를 보고 계신다면, 그 숫자가 모�
 
 **0.4% 나빠졌습니다.** 네 배를 키웠는데 소수점 아래에서만 움직였습니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/serving-benchmark-load-generator-artifact/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 왜 안 움직였나
 
 노브가 고장 난 게 아니었습니다. 그 노브가 손댈 수 있는 양이 애초에 정해져 있었습니다.
@@ -65,7 +72,7 @@ vLLM 벤치마크를 돌려 p99 TTFT를 보고 계신다면, 그 숫자가 모�
 
 | 도착 방식 | 처리량 | TTFT p99 | TPOT p99 |
 |---|---|---|---|
-| 동시 128개 | 3,434 tok/s | **5.380초** | — |
+| 동시 128개 | 3,434 tok/s | **5.380초** | 해당 없음 |
 | 푸아송 12/초 | 3,113 tok/s | **0.477초** | 71.7밀리초 |
 
 **처리량 91%를 내면서 꼬리 지연이 열한 배 좋습니다.**
@@ -114,10 +121,14 @@ TTFT가 병목이면 프리필 용량 문제입니다. 프리필과 디코드를
 
 실험 조건은 B200 한 장에 Qwen3.8-27B NVFP4 체크포인트, vLLM 0.24, 입력 2,048 / 출력 256 고정입니다. 원본 측정 기록은 저희 백서 저장소의 측정 원장에 sha256과 함께 보관합니다. 측정 전에 판정 기준을 문서로 고정했고 사후에 고치지 않았습니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/serving-benchmark-load-generator-artifact/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 참고 자료
 
-- [vLLM Metrics](https://docs.vllm.ai/en/latest/design/metrics/) — 이 글의 TTFT·TPOT 분위수는 vLLM이 직접 노출하는 히스토그램에서 뽑았습니다. 자기 스택에서 같은 값을 보려면 여기부터 보시면 됩니다.
-- [vLLM Optimization and Tuning](https://docs.vllm.ai/en/latest/configuration/optimization.html) — chunked prefill과 `max_num_batched_tokens`가 무엇을 조절하는지에 대한 공식 설명입니다.
-- [vLLM Disaggregated Prefilling](https://docs.vllm.ai/en/latest/features/disagg_prefill/) — TTFT가 진짜 병목일 때 검토하게 되는 프리필·디코드 분리입니다.
-- [Little's law](https://en.wikipedia.org/wiki/Little%27s_law) — 푸아송 쪽이 더 무거운 부하였다는 판단의 근거입니다. 평균 재차 요청 수는 도착률과 체류시간의 곱입니다.
+- [vLLM Metrics](https://docs.vllm.ai/en/latest/design/metrics/). 이 글의 TTFT·TPOT 분위수는 vLLM이 직접 노출하는 히스토그램에서 뽑았습니다. 자기 스택에서 같은 값을 보려면 여기부터 보시면 됩니다.
+- [vLLM Optimization and Tuning](https://docs.vllm.ai/en/latest/configuration/optimization.html). chunked prefill과 `max_num_batched_tokens`가 무엇을 조절하는지에 대한 공식 설명입니다.
+- [vLLM Disaggregated Prefilling](https://docs.vllm.ai/en/latest/features/disagg_prefill/). TTFT가 진짜 병목일 때 검토하게 되는 프리필·디코드 분리입니다.
+- [Little's law](https://en.wikipedia.org/wiki/Little%27s_law). 푸아송 쪽이 더 무거운 부하였다는 판단의 근거입니다. 평균 재차 요청 수는 도착률과 체류시간의 곱입니다.
 
