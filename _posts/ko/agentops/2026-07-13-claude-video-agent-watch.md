@@ -45,7 +45,7 @@ claude-video는 모델을 새로 만들지 않습니다. 이미 검증된 세 �
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -62,7 +62,7 @@ claude-video는 모델을 새로 만들지 않습니다. 이미 검증된 세 �
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -445,6 +445,19 @@ claude-video는 ThakiCloud가 밀고 있는 두 축과 자연스럽게 맞물립
 넷째, 외부 API 의존입니다. 자막 없는 영상의 전사가 Groq·OpenAI로 나가면 데이터가 외부로 이동합니다. 민감한 내부 회의 녹화라면 앞서 말한 사내 Whisper 서빙으로 경로를 바꾸지 않는 한 그대로 노출입니다.
 
 그럼에도 큰 그림은 유효합니다. claude-video는 "코딩 에이전트는 텍스트만 읽는다"는 전제를 얇고 실용적인 방식으로 깼습니다. 새 모델이 아니라 검증된 도구의 조합으로 감각을 확장한다는 접근은, 에이전트 플랫폼을 설계하는 입장에서 계속 참고할 만한 패턴입니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
+
+![claude-video-agent-watch 슬라이드 1](/assets/images/claude-video-agent-watch-slide-01.webp)
+
+![claude-video-agent-watch 슬라이드 2](/assets/images/claude-video-agent-watch-slide-02.webp)
+
+![claude-video-agent-watch 슬라이드 3](/assets/images/claude-video-agent-watch-slide-03.webp)
+
+![claude-video-agent-watch 슬라이드 4](/assets/images/claude-video-agent-watch-slide-04.webp)
 
 ## 출처
 

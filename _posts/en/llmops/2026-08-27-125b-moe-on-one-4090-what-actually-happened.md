@@ -17,13 +17,20 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/llmops/125b-moe-on-one-4090-what-actually-happened/
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/125b-moe-on-one-4090-what-actually-happened/"
+audiobook: "https://drive.google.com/file/d/1BluOK-ag-t-9jUqEASELSvdTQSv43zAF/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
+
 If you've ever given up on running a large model locally because of VRAM, this post is going to make you redo that math. A record recently made the rounds claiming a 111GB model ran with a 250,000-token context on a single RTX 4090, and checking the numbers against the original source shows most of it holds up. But the conclusion attached to that record, "the VRAM wall is dead," doesn't.
 
 Here's the accurate version. **Most of a 111GB quantized model sat in 110GB of system RAM, with only attention and the KV cache left on the GPU, running at roughly 21 tok/s for a single user.** The core move was treating 24GB of VRAM and 110GB of DDR4 as one tiered memory pool. The wall didn't disappear. It moved from the GPU to system RAM.
 
 Even with that correction, the result still matters, because the model architecture that made this possible has direct implications for how we design serving going forward.
+
+![Illustration of the core idea of 125B Didn't Fit in 24GB: How to Read the Single-4090 Record Correctly](/assets/images/125b-moe-on-one-4090-what-actually-happened-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## What Actually Ran
 
@@ -42,6 +49,23 @@ The first is ultra-sparse MoE. Each MoE layer in this model has 512 experts, but
 The second is the attention structure. The 48 layers aren't uniform. Using the official card's notation, the pattern is 12 × (3 × (Gated DeltaNet → MoE) → 1 × (Qwen Sparse Attention → MoE)), which works out to 36 linear-attention layers and only 12 sparse-attention layers. This isn't a typical full-attention model that builds a KV cache proportional to context length at every layer. On top of that, QSA has only 24 Q heads against 2 KV heads, and its budget is capped at 2,048 tokens. Both of these are why the memory cost of long context stays low.
 
 The third is the nature of the n-gram embedding. 51B sounds heavy on its own, but it's a lookup table that currently pulls only a handful of rows corresponding to bigrams and trigrams. The llama.cpp PR description also states that it fetches from a 97.7GiB n-gram hash table via `ggml_get_rows`, using host-side row indices. The actual transfer volume and compute involved are far smaller than the parameter count suggests.
+
+```mermaid
+flowchart TB
+    subgraph GPU["GPU · RTX 4090 (VRAM 18.3GB, at 250K reservation)"]
+        AT["Attention layers: DeltaNet 36 + QSA 12<br/>KV heads 2, ~39KB per context token"]
+        AC["Active weights: shared layers + MTP 4B"]
+    end
+    subgraph RAM["System RAM · DDR4 110GB"]
+        EX["MoE expert weights<br/>most of the 111GB GGUF<br/>512 per layer, 11 active per token (routed 10 + shared 1)"]
+        NG["n-gram embedding 51B<br/>97.7GiB lookup table, only needed rows via ggml_get_rows"]
+    end
+    TOK["Token stream"] --> AT
+    AT --> AC
+    AC -->|"only the 11 active experts cross PCIe 4.0"| EX
+    EX --> AC
+    NG -.->|"bigram / trigram row lookup"| TOK
+```
 
 ## How to Read the Numbers
 

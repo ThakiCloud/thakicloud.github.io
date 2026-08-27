@@ -12,14 +12,14 @@ tags:
   - cloud-invoice
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/the-cloud-in-3d-is-a-cardboard-box/strip.png
+image: /assets/images/posts/만화/the-cloud-in-3d-is-a-cardboard-box/strip.webp
 audiobook: /assets/audio/posts/the-cloud-in-3d-is-a-cardboard-box/audiobook-ko.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 이번 주 뉴스는 '사진 한 장'이 '3D 세계'가 된 일입니다. img2threejs 1.5.1이라는 도구가 사진을 넣으면 3D 장면과 그 장면을 돌리는 코드를 내줘요. 재밌는 건 형태가 아니라 그 코드입니다. 내가 만든 세계는 내가 가진 어떤 기계에서나 돌아갈 수 있어요. 모델·데이터·기계를 전부 내 손에 두는 주권을 처음으로 3D로 눈앞에서 볼 수 있게 됐어요.
 
-![클라우드를 3D로 만들었더니 종이상자였다](/assets/images/posts/만화/the-cloud-in-3d-is-a-cardboard-box/strip.png)
+![클라우드를 3D로 만들었더니 종이상자였다](/assets/images/posts/만화/the-cloud-in-3d-is-a-cardboard-box/strip.webp)
 
 > 원 뉴스: [RT @NickDevFE: img2threejs 1.5.1 is out 🚀](https://x.com/hjguyhan/status/2092001184601264255) · twitter
 

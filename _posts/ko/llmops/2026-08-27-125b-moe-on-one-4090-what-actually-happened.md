@@ -16,12 +16,20 @@ tags:
 author_profile: true
 toc: true
 toc_label: "목차"
+audiobook: "https://drive.google.com/file/d/1TaitzdDNuAUGxG_JBkgPgc-Sg5XRNcZP/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/125b-moe-on-one-4090-what-actually-happened/"
 ---
+
 로컬에서 큰 모델을 돌리려다 VRAM 앞에서 포기해 본 적이 있다면, 이 글은 그 계산을 다시 하게 만들 겁니다. RTX 4090 한 장에서 111GB짜리 모델을 250,000 컨텍스트로 돌렸다는 기록이 최근 공유됐고, 숫자는 원본 자료로 확인해 보니 대부분 사실이었습니다. 다만 그 기록에 붙은 "VRAM 장벽이 죽었다"는 결론은 사실이 아닙니다.
 
 정확한 문장은 이렇습니다. **111GB 양자화 모델의 대부분을 110GB 시스템 RAM에 두고, GPU에는 어텐션과 KV 캐시만 남겨서, 단일 사용자 기준 약 21 tok/s로 돌렸습니다.** 24GB VRAM과 110GB DDR4를 하나의 계층형 메모리로 쓴 것이 핵심입니다. 장벽은 사라지지 않았고 GPU에서 시스템 RAM으로 옮겨갔습니다.
 
 그런데 이 구분을 하고 나서도 결과는 여전히 중요합니다. 어떤 모델 구조가 이걸 가능하게 했는지가 앞으로의 서빙 설계에 직접 영향을 주기 때문입니다.
+
+![125B를 24GB에 넣은 게 아닙니다: 4090 한 장 기록을 정확히 읽는 법 개념을 형상화한 이미지](/assets/images/125b-moe-on-one-4090-what-actually-happened-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇이 실제로 실행됐나
 
@@ -40,6 +48,23 @@ toc_label: "목차"
 둘째는 어텐션 구조입니다. 48개 계층이 균일하지 않습니다. 공식 카드의 표기를 그대로 옮기면 12 × (3 × (Gated DeltaNet → MoE) → 1 × (Qwen Sparse Attention → MoE))이고, 계산하면 36개 계층이 선형 어텐션이고 12개만 희소 어텐션입니다. 일반적인 full attention 모델처럼 모든 계층에서 컨텍스트 길이에 비례하는 KV 캐시를 만들지 않습니다. 게다가 QSA는 어텐션 헤드가 Q 24개에 KV 2개뿐이고 예산이 2,048토큰으로 묶여 있습니다. 긴 컨텍스트의 메모리 비용이 낮은 이유가 이 두 가지입니다.
 
 셋째는 n-gram 임베딩의 성질입니다. 51B라는 숫자만 보면 무겁게 느껴지지만, 현재 bigram과 trigram에 해당하는 몇 개 행만 꺼내 쓰는 조회 테이블입니다. llama.cpp PR 설명도 97.7GiB 크기의 n-gram 해시 테이블을 host 쪽 행 인덱스로 받아 `ggml_get_rows`로 가져온다고 적고 있습니다. 파라미터 수 대비 실제 전송량과 계산량이 훨씬 작습니다.
+
+```mermaid
+flowchart TB
+    subgraph GPU["GPU · RTX 4090 (VRAM 18.3GB, 250K 예약 기준)"]
+        AT["어텐션 계층: DeltaNet 36 + QSA 12<br/>KV 헤드 2개, 컨텍스트 토큰당 약 39KB"]
+        AC["활성 가중치: 공통 계층 + MTP 4B"]
+    end
+    subgraph RAM["시스템 RAM · DDR4 110GB"]
+        EX["MoE 전문가 가중치<br/>111GB GGUF의 대부분<br/>512개/층, 매 토큰 활성 11개 (routed 10 + shared 1)"]
+        NG["n-gram 임베딩 51B<br/>97.7GiB 조회 테이블, ggml_get_rows로 필요한 행만 가져옴"]
+    end
+    TOK["토큰 스트림"] --> AT
+    AT --> AC
+    AC -->|"매 토큰 활성 11개 전문가만 PCIe 4.0 경유"| EX
+    EX --> AC
+    NG -.->|"bigram / trigram 행 조회"| TOK
+```
 
 ## 숫자를 어떻게 읽나
 
@@ -107,3 +132,16 @@ llama.cpp master에는 아직 이 아키텍처가 없습니다. PR #27742 브랜
 - [Qwen3.8-Flash-Next 공식 모델 카드](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)
 - [Unsloth Qwen3.8-Flash-Next GGUF](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF)
 - [llama.cpp PR #27742: add Qwen3.8-Flash-Next](https://github.com/ggml-org/llama.cpp/pull/27742)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 1](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-01.webp)
+
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 2](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-02.webp)
+
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 3](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-03.webp)
+
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 4](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-04.webp)
+

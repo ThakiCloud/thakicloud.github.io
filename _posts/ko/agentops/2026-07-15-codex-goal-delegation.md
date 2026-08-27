@@ -19,7 +19,13 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/codex-goal-delegation/"
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1UNzG5g2BsI4JtofbhXBZvIFIyvvZrze_/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
+
+![어려운 작업일수록 목표부터 쓰게 합니다: Codex goal 위임 프롬프팅 개념을 형상화한 이미지](/assets/images/codex-goal-delegation-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -39,7 +45,7 @@ categories:
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -56,7 +62,7 @@ categories:
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -398,6 +404,19 @@ Paxis는 ThakiCloud의 Agent-Native Cloud로, 스킬과 도구와 정책과 감�
 셋째, 자율 실행이 길어질수록 사람이 결과를 신뢰하고 검토를 멈추는 경향이 생깁니다. 목표를 잘 위임했다는 안도감이 오히려 위험합니다. 검증기가 아무것도 걸러내지 못한다면 그것은 전부 통과라는 신호가 아니라 검증기가 고장 났다는 신호일 가능성이 큽니다. 그래서 핵심 산출물은 주기적으로 사람이 표본을 뽑아 직접 확인해야 하고, 검증기는 통과가 아니라 반증을 지향하도록 설계해야 합니다.
 
 정리하면, "어려운 작업일수록 목표부터 쓰게 하라"는 팁은 프롬프트 요령이 아니라 목표 작성과 목표 실행을 분리하고 그 사이에 검토 지점을 끼우는 구조적 조언입니다. Codex의 goal 기능이 이를 개인 개발자 손에 쥐여 주었다면, ThakiCloud는 같은 원리를 Paxis의 Goal Mode와 검증 루프로 팀 단위에서 강제합니다. 목표를 잘 쓰는 일이 곧 에이전트를 잘 굴리는 일이라는 사실은, 도구가 무엇이든 변하지 않습니다.
+
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
+
+![codex-goal-delegation 슬라이드 1](/assets/images/codex-goal-delegation-slide-01.webp)
+
+![codex-goal-delegation 슬라이드 2](/assets/images/codex-goal-delegation-slide-02.webp)
+
+![codex-goal-delegation 슬라이드 3](/assets/images/codex-goal-delegation-slide-03.webp)
+
+![codex-goal-delegation 슬라이드 4](/assets/images/codex-goal-delegation-slide-04.webp)
 
 ## 출처
 

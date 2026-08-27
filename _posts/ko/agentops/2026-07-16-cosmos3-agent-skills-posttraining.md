@@ -33,6 +33,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/cosmos3-agent-skill
 ![중앙 오케스트레이션 노드가 GPU 서버 무리를 지휘하는 추상 일러스트]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.webp' | relative_url }})
 *에이전트 스킬은 GPU 학습·평가·튜닝의 반복 노동을 지휘합니다. 사람은 프롬프트로 목적만 줍니다.*
 
+![에이전트가 GPU 학습을 직접 운전한다: NVIDIA Cosmos 3 에이전트 스킬 해부 개념을 형상화한 이미지](/assets/images/cosmos3-agent-skills-posttraining-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## Cosmos 3와 에이전트 스킬은 무엇인가
 
 Cosmos 3는 NVIDIA가 물리 세계를 다루기 위해 만든 파운데이션 모델입니다. 텍스트와 이미지, 영상,
@@ -83,7 +86,7 @@ validation accuracy and summarize the best models.
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -100,7 +103,7 @@ validation accuracy and summarize the best models.
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

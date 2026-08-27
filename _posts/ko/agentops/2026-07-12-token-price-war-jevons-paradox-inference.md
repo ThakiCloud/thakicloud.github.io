@@ -17,6 +17,9 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jevons-paradox-inference/"
+audiobook: "https://drive.google.com/file/d/10Ua8vIDY1o9F3gRHluWs_ESC0jNjmQLF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![값싼 토큰이 홍수처럼 쏟아질수록 그 아래 추론 인프라의 몸값은 위로 치솟는 구조를 나타낸 개념도]({{ '/assets/images/token-price-war-jevons-paradox-inference-hero.webp' | relative_url }})
@@ -31,6 +34,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 다른 하나는 값이 오른다는 뉴스입니다. 추론 전용 칩 스타트업 삼바노바가 기업가치 110억 달러, 약 16조 원을 인정받으며 시리즈F 1차로 10억 달러를 조달했습니다. 불과 5개월 전 시리즈E 때 몸값이 22억 달러였으니, 5개월 만에 다섯 배가 뛴 셈입니다. 토큰 한 알의 값은 반토막이 나는데, 그 토큰을 찍어내는 칩을 만드는 회사의 값은 다섯 배가 됐습니다. 둘 중 하나가 틀린 걸까요. 그렇지 않습니다. 두 뉴스는 같은 하나의 흐름을 앞과 뒤에서 찍은 사진입니다.
 
 ![token-price-war-jevons-paradox-inference 슬라이드 1](/assets/images/token-price-war-jevons-paradox-inference-slide-01.webp)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/token-price-war-jevons-paradox-inference/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 값이 내려가면 더 쓴다는 오래된 법칙
 
@@ -60,7 +67,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -77,7 +84,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -393,6 +400,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/token-price-war-jev
 ThakiCloud의 Paxis는 정확히 그 수도관을 겨냥한 정식 제품, Agent-Native Cloud v1.1입니다. 토큰 전쟁이 열어젖힌 반값 모델들은 CostRouter 관점에서는 위협이 아니라 무기가 됩니다. 단순 반복 작업은 저가 경량 모델로, 복잡한 추론만 프론티어 모델로 작업별로 갈라 보내면 제번스 역설의 청구서를 구조적으로 눌러낼 수 있으니까요. UST처럼 회로도를 직접 읽는 에이전트에게는 격리된 샌드박스 실행이, 우리은행식 수백 개 에이전트 배치에는 정책 게이트와 감사 로그, 그리고 L0에서 L3까지 나눈 자율도 거버넌스가 이중 승인 원칙을 대신할 안전장치가 됩니다. 삼바노바와 JP모건이 보여준 온프레미스 추론 수요, 소버린 AI를 향한 주권 논의는 소버린 온프렘 K8s 위에서 Skills와 Tools, Policies, Audit Logs를 일급 리소스로 다루는 Paxis의 설계와 그대로 맞닿습니다.
 
 정리하면 이렇습니다. 토큰이 싸질수록 우리는 토큰을 더 많이, 더 자율적으로 쓰게 되고, 그럴수록 병목과 위험은 단가가 아니라 실행과 통제의 층위로 올라갑니다. 반값 경쟁의 뉴스와 몸값 5배의 뉴스가 모순이 아니라 한 몸이었던 이유가 여기에 있습니다. 값이 싸진 세계에서 이기는 쪽은 토큰을 가장 아끼는 곳이 아니라, 흘러넘치는 토큰을 가장 안전하게 다스리는 곳일 것입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/token-price-war-jevons-paradox-inference/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 참고 자료
 

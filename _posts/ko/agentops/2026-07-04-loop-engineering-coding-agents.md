@@ -19,7 +19,13 @@ toc_icon: "robot"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/loop-engineering-coding-agents/"
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1A-U69W5PjeRv3ZhbAo-EAAzstRQwGSh2/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
+
+![프롬프트를 쓰지 않고 루프를 씁니다: 코딩 에이전트의 루프 엔지니어링 개념을 형상화한 이미지](/assets/images/loop-engineering-coding-agents-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 개요
 
@@ -28,6 +34,10 @@ categories:
 이 변화는 모델이 좋아졌다는 이야기와는 결이 다릅니다. 아무리 강한 모델이라도 한 번의 프롬프트로 끝나는 단발 요청에서는 복잡한 작업을 끝까지 밀어붙이지 못합니다. 대신 모델이 도구를 호출하고, 그 결과를 다시 입력으로 받아 다음 행동을 결정하는 반복 구조에 얹으면 이야기가 달라집니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내부 개발에도 이런 루프를 실제로 돌리고 있습니다. 그래서 "루프를 짠다"는 표현은 우리에게 트렌드 문장이 아니라 매일의 엔지니어링 과제입니다. 이 글은 그 루프가 실제로 무엇으로 구성되는지, 그리고 무엇이 이 루프를 신뢰할 수 있게 만드는지를 정리합니다.
 
 ![코딩 에이전트 루프 엔지니어링 개념 이미지]({{ '/assets/images/loop-engineering-coding-agents-hero.webp' | relative_url }})
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/loop-engineering-coding-agents/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 프롬프트에서 루프로: 무엇이 바뀌나
 
@@ -45,7 +55,7 @@ categories:
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -62,7 +72,7 @@ categories:
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);
@@ -402,6 +412,10 @@ fan-out을 쓰는 경우에는 규칙이 하나 더 붙습니다. 여러 서브�
 셋째, 비용입니다. 루프는 정의상 여러 번의 추론 호출을 소모합니다. 상한을 두지 않으면 예산이 순식간에 소진되고, 강한 모델을 상시로 붙여 두면 비용이 선형이 아니라 배수로 늘어납니다. 실무에서는 탐색과 반복 실행에는 저렴한 모델을 쓰고, 정확도가 임계인 검증 단계에만 비싼 모델을 배치하는 라우팅이 필요합니다. 워커는 싸게, 게이트만 비싸게라는 원칙이 여기서도 그대로 적용됩니다.
 
 정리하면, "프롬프트를 쓰지 않고 루프를 쓴다"는 문장은 도발적이지만 그 안에는 실질이 있습니다. 다만 그 실질은 화려한 모델이 아니라, 무엇을 성공으로 볼 것인가를 기계가 판정하게 만드는 지루한 설계에서 나옵니다. ThakiCloud가 pge-loop와 Goal Mode에서 배운 교훈도 같습니다. 좋은 루프는 좋은 종료 조건에서 나옵니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/loop-engineering-coding-agents/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

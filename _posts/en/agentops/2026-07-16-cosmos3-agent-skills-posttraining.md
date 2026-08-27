@@ -35,6 +35,9 @@ conclusion: the real protagonist of this case study is neither the model nor the
 ![Abstract illustration of a central orchestration node conducting a fleet of GPU servers]({{ '/assets/images/cosmos3-agent-skills-posttraining-hero.webp' | relative_url }})
 *Agent skills conduct the repetitive labor of GPU training, evaluation, and tuning. The human only supplies the goal through a prompt.*
 
+![Illustration of the core idea of Agents Take the Wheel on GPU Training: Dissecting NVIDIA Cosmos 3 Agent Skills](/assets/images/cosmos3-agent-skills-posttraining-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## What Cosmos 3 and Agent Skills Are
 
 Cosmos 3 is a foundation model NVIDIA built to handle the physical world. It uses a
@@ -92,7 +95,7 @@ fills in the repetitive work in between.
 
 {% raw %}
 <!--
-  animated-architecture-diagram — self-contained D3 embed template.
+  animated-architecture-diagram - self-contained D3 embed template.
   HuggingFace research-article style: declarative NODES/EDGES/SEQ model,
   data(solid)/event(dashed) edges, hover-trace + tooltip, flow-dot animation
   along edge paths, replay button, scroll-into-view autoplay, reduced-motion +
@@ -109,7 +112,7 @@ fills in the repetitive work in between.
     --text-color: #1a1d21;
     --muted-color: #6b7280;
     --border-color: #d5d9e0;
-    --primary-color: hsl(217 91% 55%); /* brand accent — swap for #1B4F72 etc. */
+    --primary-color: hsl(217 91% 55%); /* brand accent, swap for #1B4F72 etc. */
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", system-ui, sans-serif;
     color: var(--text-color);

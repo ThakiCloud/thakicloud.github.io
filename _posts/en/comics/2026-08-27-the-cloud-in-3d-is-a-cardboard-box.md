@@ -12,14 +12,14 @@ tags:
   - cloud-invoice
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/the-cloud-in-3d-is-a-cardboard-box/strip.png
+image: /assets/images/posts/comics/the-cloud-in-3d-is-a-cardboard-box/strip.webp
 audiobook: /assets/audio/posts/the-cloud-in-3d-is-a-cardboard-box/audiobook-en.mp3
 audiobook_note: "만화 캐릭터 목소리로 듣는 오디오북 (Qwen3-TTS 로컬)"
 ---
 
 The news this week: one photo became a whole 3D world. A tool called img2threejs 1.5.1 takes a picture and hands back the scene in 3D, plus the code that spins it. The interesting part is not the shape — it's the code. A world you built can run on any machine you own. That's sovereignty — models, data, and hardware all in your own hands — finally visible in 3D.
 
-![We 3D-Rendered the Cloud. It's a Cardboard Box.](/assets/images/posts/comics/the-cloud-in-3d-is-a-cardboard-box/strip.png)
+![We 3D-Rendered the Cloud. It's a Cardboard Box.](/assets/images/posts/comics/the-cloud-in-3d-is-a-cardboard-box/strip.webp)
 
 > Source: [RT @NickDevFE: img2threejs 1.5.1 is out 🚀](https://x.com/hjguyhan/status/2092001184601264255) · twitter
 

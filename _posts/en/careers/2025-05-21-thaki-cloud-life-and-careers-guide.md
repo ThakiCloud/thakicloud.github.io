@@ -2,6 +2,7 @@
 title: "Thaki Cloud Life & Career Guide"
 excerpt: "Sharing Thaki Cloud's corporate culture, benefits, developer stories, recruitment information, and more."
 date: 2025-05-21
+last_modified_at: 2026-08-28
 tags:
   - Company Culture
   - Careers
@@ -16,65 +17,49 @@ categories:
   - careers
 ---
 
-## [Thaki Cloud Life & Career] Post Writing Guide
+Thaki Cloud Life & Career is where we talk honestly about what it is like to work at ThakiCloud, who you will work with, and the culture you will actually be part of. We believe voices from the field are more persuasive than job posting copy.
 
-Create posts that introduce Thaki Cloud's attractive corporate culture, work style, and growth opportunities to make potential applicants want to join Thaki Cloud. It's important to appeal the company's attractiveness in non-technical aspects.
+![Illustration of the core idea of Thaki Cloud Life & Career Guide](/assets/images/thaki-cloud-life-and-careers-guide-hero.webp)
+*A visual metaphor for the article's key idea.*
 
-### 1. Post Topic Examples
+## Topics we cover
 
-* **Corporate Culture and Values:**
-  * Introduction to Thaki Cloud's core values and mission
-  * Introduction to horizontal and free discussion culture, work environment based on autonomy and responsibility
-  * Knowledge sharing culture (studies, internal seminars, conference participation support, etc.)
-  * Culture that respects diversity and inclusion
-* **Team and Developer Stories:**
-  * Project execution stories or team culture introduction of specific teams (e.g., IaaS team, PaaS team, AI team)
-  * Individual growth stories of Thaki Cloud developers, interviews about reasons for joining and job satisfaction
-  * Introduction to new employee onboarding process and mentoring programs
-  * Introduction to activities showing developers' passion such as side projects or internal hackathons
-* **Benefits and Work Environment:**
-  * Detailed introduction to Thaki Cloud's major benefits (vacation, self-development support, health checkups, meal/snack support, etc.)
-  * Introduction to flexible work environments such as office environment and remote work policies
-  * Culture that values work-life balance and actual cases
-* **Recruitment Information and Tips:**
-  * Introduction to major recruitment positions currently in progress (job content, qualifications, preferred requirements)
-  * Guide to Thaki Cloud's recruitment process (documents - coding test - interview, etc.)
-  * Tips for successful application (resume writing, interview preparation, etc.)
-  * Recruitment-related Q&A (frequently asked questions and answers)
-* **Company News and Events:**
-  * Sharing achievements such as major company milestones and awards
-  * Sketches of company events such as workshops, team building activities, and year-end parties
+Posts in this section cover the following topics.
 
-### 2. Content Structure Guidelines
+**Company culture and values**
 
-* **Introduction:**
-  * Start with interesting topics or questions that capture the attention of readers (potential applicants).
-  * Give a positive and attractive first impression of Thaki Cloud.
-* **Main Body:**
-  * **Sincerity and Specificity:** Write based on actual cases and specific information rather than vague boasting to build trust.
-  * **Positive and Energetic Atmosphere:** Use photos, videos (if possible) to convey the vibrant company atmosphere.
-  * **Applicant-Centered:** Prioritize information that applicants would be curious about (actual work environment, growth potential, colleagues' appearance, etc.).
-  * **Storytelling:** Developer interviews or team introductions can add fun and emotion using storytelling techniques.
-* **Conclusion:**
-  * Deliver a message to talented individuals who want to grow with Thaki Cloud.
-  * Guide recruitment page links or application methods and encourage active applications.
+We talk about how ThakiCloud actually works: the horizontal discussion culture, the way of working that pairs autonomy with responsibility, and the knowledge-sharing culture that includes study sessions and conference participation support. Our mission, principles, and values are stated as-is in [Mission, Principles, and Values](https://thakicloud.com/tech-blog/en/careers/mission-principles-values/).
 
-### 3. Style and Tone
+**Teams and developer stories**
 
-* **Warm and Friendly:** Use a soft tone so applicants feel comfortable and curious about the company.
-* **Pride and Passion:** Naturally express pride in the company and colleagues and passion for work.
-* **Welcoming Atmosphere:** Convey a welcoming message that we're ready to welcome new colleagues.
+We introduce concretely which problems the IaaS, PaaS, and AI teams are each solving and who works on them, including new-hire onboarding experiences and side project or hackathon stories. How ThakiCloud runs MLOps along the three axes of Velocity, Validation, and Versioning is covered in [Three Vs-Driven MLOps](https://thakicloud.com/tech-blog/en/careers/thakicloud-three-vs-mlops-careers/).
 
----
+**Benefits and work environment**
 
-## Write actual [Thaki Cloud Life & Career] related content here
+We cover what benefits actually exist: vacation policy, self-development support, health checkups, remote work options. Showing the real conditions as they are is more honest than saying "good benefits."
 
-(Example)
+**Recruitment information and tips**
 
-### Thaki Cloud AI Engineer A's Day: "Creating the Future of LLM with Autonomy and Responsibility"
+We guide you through the positions currently open, the hiring criteria we use, and the application process, plus practical tips for resume writing and interview preparation. Published in the section today: the [ten must-read books](https://thakicloud.com/tech-blog/en/careers/backend-infrastructure-engineer-hiring-10-must-read-books/) for backend and infrastructure engineers, the [essential skills guide](https://thakicloud.com/tech-blog/en/careers/ml-engineer-essential-skills-guide/) for ML engineers, the [AI Engineering Learning Roadmap](https://thakicloud.com/tech-blog/en/careers/ai-engineering-learning-roadmap/), and the [career growth strategy beyond technical skills](https://thakicloud.com/tech-blog/en/careers/beyond-technical-skills-career-growth-strategy-en/).
 
-Thaki Cloud boasts the nation's highest level of LLM Ops environment! At its center are passionate and excellent AI engineers. Today, we met with Mr. A from Thaki Cloud's AI team to hear honest stories from the joining process to currently ongoing interesting projects, and Thaki Cloud's special development culture. Feel the growth and joy at Thaki Cloud through Mr. A's day!
+**Company news**
 
-(Content development in interview format...)
+We record team achievements, conferences attended, and technical stories shared externally. In 2025 we presented the xPU as a Service based Agentic AI platform at [KCD Seoul 2025](https://thakicloud.com/tech-blog/en/careers/conference-kcd-seoul-2025/), publishing the talk materials and script as-is.
 
----
+## How we write
+
+Our readers are potential applicants. Rather than vague boasting, we include real cases and put at the center the things applicants would actually want to know: a day in the life, team atmosphere, growth potential.
+
+We prefer storytelling. "How did this person feel about this experience" stays in memory longer than numbers or policies.
+
+At the end of each post we point to the careers page or an email address so that interested readers can take the next step immediately.
+
+## ThakiCloud AI Engineer A's Story: "Building LLM Infrastructure with Autonomy and Responsibility"
+
+A joined ThakiCloud after three years on a large enterprise cloud team. The answer to "why did you join?" was striking: "In a large organization you live as a single bolt; here I actually get to design and decide."
+
+Today A works on cutting the latency of the LLM serving pipeline, hands-on from GPU scheduling to inference runtime optimization. "When something does not work, I share it in the team channel right away. Building the idea together there is the fun part."
+
+Mornings: team standup. Afternoons: code review and experiments. A sets aside the last hour before leaving to read papers. "Studying within working hours felt strange at first. Then I noticed it actually raises the quality of the work."
+
+If you are interested, reach out at **info@thakicloud.co.kr**.
