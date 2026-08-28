@@ -152,3 +152,8 @@ For this reason, we recommend designing routing decisions together with the sche
 Model routing should be designed in order: start by splitting tiers, then set the criteria that assign requests to those tiers, then confirm with a cost-quality curve whether that judgment actually produces savings. Rules, classifiers, and embeddings each have different strengths and weaknesses, so rather than committing to just one, a combination that handles the obvious cases with rules and hands only the ambiguous ones to a more sophisticated method tends to work well in practice. It's worth remembering that a middle tier's reason for existing stays unproven until you've actually plotted the curve. And whatever routing system you build, you need to design for both side effects, unhandled edge cases and quality instability, together, so the savings don't come back around and eat into reliability.
 
 This post is a blog rewrite of a section from our ebook "AI Cost Engineering: Designing Tokens, Routing, and Caching for Production LLM Apps," compiled while we operated our internal automation pipelines.
+
+## References
+
+- [Kueue: Kubernetes SIG job queueing for batch, HPC, and AI/ML workloads, with priority-based preemption in the scheduling layer](https://kueue.sigs.k8s.io/)
+- [RouteLLM: Learning to Route LLMs with Preference Data (arXiv 2406.18665; routers that dynamically select between a stronger and a weaker LLM at inference to cut cost without compromising response quality)](https://arxiv.org/abs/2406.18665)

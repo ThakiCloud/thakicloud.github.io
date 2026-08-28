@@ -99,3 +99,9 @@ The first step is to pin down the target, guardrail, and diagnostic metrics on a
 The last step is automating the report itself. Generate the value-variance-condition sentence automatically, and fail the report generation step outright if the condition field is empty. Pair that with the machine-readable ledger, and the next team that tries to reproduce this benchmark, or compare it against a past result, can rely on a record instead of on someone's recollection.
 
 All of this feels like overhead at first. Agreeing on a single target metric takes real discussion, and writing the steady-state detection logic takes real time. But that cost is paid once. The cost of a bad decision made on an unconditioned number gets paid over and over, usually much later and for a much larger bill than anyone expected. Next time you are about to put a benchmark result on a slide, ask whether you can complete the sentence describing exactly what conditions it was captured under. If you cannot, the number is not ready to be reported yet.
+
+## References
+
+- [Google SRE Book: Distributed Systems Monitoring and Telemetry (the four golden signals and the latency percentile discussion)](https://sre.google/sre-book/monitoring-distributed-systems/)
+- [JMH (Java Microbenchmark Harness), OpenJDK project page (a benchmark harness that separates warmup from measurement)](https://openjdk.org/projects/code-tools/jmh/)
+- [JMH @Warmup annotation source (warmup iterations configured separately from measurement)](https://github.com/openjdk/jmh/blob/master/jmh-core/src/main/java/org/openjdk/jmh/annotations/Warmup.java)

@@ -100,3 +100,10 @@ ebook_pages: 34
 주간 루틴은 레포를 자르는 일입니다. 죽은 브랜치를 정리하고 오래된 stash를 꺼내거나 지우고 remote 브랜치를 정리합니다. 자르지 않는 레포는 이름이 많은 곳이 되고 어느 날 내가 어디에 있는지 모르게 되는 거예요. 그리고 '사라졌다'는 생각은 거의 항상 틀렸습니다. git은 HEAD의 모든 이동을 reflog에 기록하고 기본값으로 약 90일치를 유지합니다. 브랜치를 지웠든, rebase 중에 커밋을 잃었든, reflog를 열어 잃은 커밋을 찾고, 거기서 새 브랜치를 만들면 끝입니다.
 
 모든 것을 합치면, 이 글의 주장은 단순합니다. 1인 개발자에게 git은 백업이 아니라, 어제의 나에게 질문을 물을 수 있는 시간선입니다. 체크포인트에 커밋하고 실험은 브랜치에서 하고 역사에 이유를 적어 두면, 매일 조금씩 빠져나가던 세 가지 비용이 사라집니다. 규율은 규칙으로 시작해서, 반사로 끝납니다. 더 깊이 보고 싶다면, 34페이지 분량의 전자책 '보관소의 규율'을 펼쳐 보면 됩니다.
+
+## 출처
+
+- [Pro Git: Branches in a Nutshell (브랜치는 커밋을 가리키는 lightweight movable pointer. 브랜치를 만드는 것은 새 포인터 하나를 만드는 것뿐)](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+- [Pro Git: Maintenance and Data Recovery (git reflog가 HEAD의 모든 이동을 조용히 기록하며, 잃은 커밋을 찾는 가장 빠른 방법)](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery)
+- [git-config 문서 (gc.reflogExpire 기본값 90일. reflog 엔트리 만료 규칙)](https://git-scm.com/docs/git-config)
+- [Conventional Commits 스펙 v1.0.0 (type/scope/subject 구조와 본문·푸터 규칙)](https://www.conventionalcommits.org/en/v1.0.0/)

@@ -97,3 +97,10 @@ The evening piece leaves the last checkpoint of the day. Commit what is worth ke
 The weekly piece trims the repo. Delete dead branches, clear old stashes, prune remote branches. A repo you never trim becomes a place with many names: branches, tags, stashes, history all accumulate, until one day you do not know where you are. And remember: "it is gone" is almost always wrong. git records every move of HEAD in the reflog and keeps roughly 90 days of it by default. You deleted a branch or lost a commit mid-rebase: open the reflog, find the commit, confirm it, and make a new branch at it. The reflog is the local last safety net, and knowing it is there removes a lot of the fear of experimenting.
 
 Put it all together and the argument is simple. For a solo developer, git is not a backup; it is a timeline you can ask questions of. Commit at checkpoints, experiment in branches, and write the reasons into history, and the three daily costs disappear. Discipline starts as rules and ends as reflexes. If you want to go deeper, the 34-page ebook The Version Control Discipline collects the full treatment.
+
+## References
+
+- [Pro Git: Branches in a Nutshell (a branch is a lightweight movable pointer to a commit; creating one is just a new pointer)](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+- [Pro Git: Maintenance and Data Recovery (git reflog silently records every move of HEAD and is the quickest way to find a lost commit)](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery)
+- [git-config documentation (gc.reflogExpire defaults to 90 days; reflog entry expiration)](https://git-scm.com/docs/git-config)
+- [Conventional Commits specification v1.0.0 (type/scope/subject structure and body/footer rules)](https://www.conventionalcommits.org/en/v1.0.0/)

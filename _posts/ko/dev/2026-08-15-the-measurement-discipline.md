@@ -99,3 +99,9 @@ ebook_pages: 31
 마지막으로 보고 자동화입니다. 값과 흔들림과 조건을 하나의 문장으로 묶어 자동으로 생성하고, 조건이 비어 있으면 보고서 생성 자체를 실패시킵니다. 여기에 기계가 읽는 원장을 함께 남기면, 다음 팀이 같은 벤치마크를 재현하거나 지난 결과와 비교할 때 산문 기억이 아니라 기록에 의존할 수 있습니다.
 
 이 모든 절차는 처음에는 번거롭게 느껴집니다. 목표 지표 하나를 정하는 데도 팀 안에서 합의가 필요하고, 정상 상태 판정 로직을 짜는 데도 시간이 듭니다. 하지만 이 초기 비용은 한 번만 지불하면 됩니다. 반면 조건 없는 숫자를 근거로 잘못된 결정을 내리는 비용은 매번 다시 지불해야 하고, 대개는 훨씬 늦게, 훨씬 크게 청구됩니다. 다음에 벤치마크 결과를 슬라이드에 올리기 전에, 그 숫자가 어떤 조건에서 나왔는지 한 문장으로 완성할 수 있는지 스스로 물어보시기 바랍니다. 완성할 수 없다면 아직 보고할 준비가 되지 않은 숫자입니다.
+
+## 출처
+
+- [Google SRE Book: Distributed Systems Monitoring and Telemetry (네 골든 시그널 latency·traffic·errors·saturation와 지연 백분위 논의)](https://sre.google/sre-book/monitoring-distributed-systems/)
+- [JMH (OpenJDK Java Microbenchmark Harness) 프로젝트 페이지 (워밍업과 측정 구간을 분리한 벤치마크 하네스)](https://openjdk.org/projects/code-tools/jmh/)
+- [JMH @Warmup 어노테이션 소스 (워밍업 반복을 측정 반복과 별도로 설정)](https://github.com/openjdk/jmh/blob/master/jmh-core/src/main/java/org/openjdk/jmh/annotations/Warmup.java)
