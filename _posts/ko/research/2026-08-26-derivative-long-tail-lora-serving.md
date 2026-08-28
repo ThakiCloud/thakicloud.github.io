@@ -44,7 +44,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/derivative-long-tai
 
 플릿 우위비 R(K,s)는 전용 플릿의 비용을 멀티플렉스 플릿 비용 단위로 나눈 값, K(1+ε_a)를 1+δ(K,s)로 나눈 것입니다. R은 조사한 s 밴드 전체에서 대략 K를 따라갑니다. K=2에서 약 2배, K=32에서 s에 따라 29.4에서 30.6배, K=256에서 약 230배, 집중 트래픽 s=1.5에서는 K=512까지 약 483배로 올라갑니다. 트래픽 집중도는 스케일이 아니라 마진을 움직입니다. s가 클수록 배치별 서로 다른 어댑터 수가 줄고, 오버헤드가 작아져 R은 오버헤드 없는 동일선 R=K에 더 가까워집니다.
 
-![Fleet advantage versus adapter count](/assets/images/posts/research/derivative-long-tail-lora-serving/fig1.png)
+![Fleet advantage versus adapter count](/assets/images/posts/research/derivative-long-tail-lora-serving/fig1.webp)
 *Zipf 집중도 s = 0.5, 1, 1.5에서 어댑터 수 K에 대한 플릿 우위비 R(K, s)와 오버헤드 없는 동일선 R = K를 비교한 그림입니다. R은 밴드 전체에서 K를 따라가고, 평탄 트래픽 곡선은 K = 512에서 풀을 벗어난 호스트 링크 페널티가 초과하면서 K 아래로 휘어집니다. (분석적 모델 출력이며 실측이 아닙니다)*
 
 비단조 지점 하나가 눈에 띕니다. 평탄 트래픽 s=0.5 곡선은 K=256의 224.8에서 K=512의 190.5로 내려갑니다. 풀은 512개 중 223개만 품고, 남은 289개 비상주 어댑터가 배치당 많은 수의 콜드 미스를 만들어 호스트 링크의 큰 부분이 노출됩니다. K=256에서는 작은 마이너였던 오버헤드 항이 K=512에서는 지배적 비용이 됩니다. 비상주 꼬리 자체가 무거울 때 D_cold가 가장 크기 때문에, 이 페널티는 평탄 트래픽에서 집중 트래픽보다 훨씬 심하게 물립니다. 최악 지점에서도 플릿 우위는 190배입니다.
@@ -57,7 +57,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/derivative-long-tai
 
 s = 1 구간에서 오버헤드 분해는 깔끔합니다. 배치 내 리스트림 항 d_b·ε_a는 K=8에서 3.63퍼센트로 시작해 K=223에서 10.85퍼센트로 커진 뒤 평탄해집니다. d_b가 배치 크기 32에 수렴하기 때문에, 이 항은 b·ε_a로 상한이 잡혀 있습니다. 풀을 벗어난 항 φ는 223개 어댑터의 풀-핏 경계까지 정확히 0이고, K=512에서 +22.01퍼센트 포인트로 도약합니다. K=512에서 배치당 3.87개의 서로 다른 비상주 어댑터가 콜드 페칭 윈도우를 디코드 스텝 길이보다 길게 밀어냅니다. 총 오버헤드는 경계 안에서 약 11퍼센트로 평탄하고, K=512에서 33.7퍼센트입니다.
 
-![Multiplex overhead decomposition versus adapter count (s = 1)](/assets/images/posts/research/derivative-long-tail-lora-serving/fig2.png)
+![Multiplex overhead decomposition versus adapter count (s = 1)](/assets/images/posts/research/derivative-long-tail-lora-serving/fig2.webp)
 *멀티플렉스 토큰당 오버헤드 δ(K, s = 1)를 퍼센트 포인트로 분해한 그림입니다. 배치 내 어댑터 리스트림 항은 약 11퍼센트로 커진 뒤 223개 어댑터의 풀-핏 경계에서 평탄해지고, 풀을 벗어난 호스트 링크 경쟁 항은 경계까지 정확히 0이다가 K = 512에서 +22.0포인트로 도약합니다. (분석적 모델 출력이며 실측이 아닙니다)*
 
 이 도약은 PLoRA식 풀링 메모리, SALT식 중심점 고정, MinT식 어댑터 라이프사이클 관리가 아키텍처적으로 제거하려 하는 구간입니다. 모델은 풀링 메모리 류 설계의 경제적 베팅을 토큰당 오버헤드 22에서 34퍼센트 포인트, 1.22에서 1.34배의 비용 곱수로 가격 매겼습니다. 이 곱수는 메모리 아키텍처에 붙는 값인 셈.
@@ -66,7 +66,7 @@ s = 1 구간에서 오버헤드 분해는 깔끔합니다. 배치 내 리스트�
 
 카탈로그는 고정 입력이 아닙니다. 프로덕션에서는 파인튜닝이 서빙과 같은 장소에 붙어 있고, 온디맨드 어댑터 생성기가 새 파생물을 계속 만들어 냅니다. DeltaServe는 지연 목표를 보호하면서 유휴 추론 GPU 용량을 LoRA 파인튜닝에 재사용하기도 합니다. 카탈로그가 운영자 코앞에서 커지는 이유 중 하나가 여기 있는 셈입니다. 논문은 도착률 α를 비용 변수로 만드는 것입니다. 새 파생물이 주 4개씩 도착하고 초기 카탈로그 K0=32, 정상 상태 상한 Kss=512로 두면, 카탈로그 크기 K(t) = min(Kss, K0 + αt)는 223개 어댑터의 풀-핏 경계를 약 48주차, 약 0.9년 만에 건너고 약 120주차, 약 2.3년 만에 512로 포화됩니다. 같은 기간 s=1의 플릿 우위는 30배에서 약 385배로 흘러가는 것입니다.
 
-![Catalog growth and fleet-advantage drift](/assets/images/posts/research/derivative-long-tail-lora-serving/fig3.png)
+![Catalog growth and fleet-advantage drift](/assets/images/posts/research/derivative-long-tail-lora-serving/fig3.webp)
 *주 4개씩의 일정한 도착(K0 = 32, Kss = 512) 하에서 카탈로그가 약 48주차에 풀-핏 경계를 건너 약 120주차(2.3년)에 512로 포화되는 동안, s = 1의 플릿 우위가 30배에서 약 385배로 흐르는 그림입니다. (분석적 모델 출력이며 실측이 아닙니다)*
 
 새 파생물 한 개의 한계 비용은 두 플릿에서 다르다. 멀티플렉스에서는 풀 메모리 약 0.268GB와 추가 GPU 제로이고, 전용 플릿에서는 엔드포인트 하나 전체다. 긴 꼬리는 복리로 붙는다. 카탈로그는 멀티플렉스 엔드포인트 아래에서 거의 비용 없이 자라고, 플릿 우위는 카탈로그 성장에 따라 벌어진다. 이 드리프트는 국경선을 시간 위에서 다시 본 값인가.

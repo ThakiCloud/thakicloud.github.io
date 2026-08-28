@@ -4,6 +4,7 @@ seo_title: "자체 호스팅 코딩 에이전트에서 reasoning_effort가 no-op
 seo_description: "사내 Qwen3.8-27B에 에이전트 하네스를 붙이고 무엇이 수렴을 만드는지 4팔로 갈랐습니다. 턴 예산도 프로바이더 명시도 튜닝 전체도 아니었고, 정작 걸어둔 reasoning_effort는 전송조차 되지 않았습니다. 자체 호스팅 모델을 붙일 때 설정이 실제로 도달했는지 확인하는 방법을 실측으로 정리합니다."
 excerpt: "reasoning_effort를 low로 걸어두고 이틀을 보냈습니다. 코드를 열어 보니 그 필드는 저희 엔드포인트로 나가지도 않았습니다. 설정 파일에 값이 남아 있으면 걸린 것처럼 보입니다."
 date: 2026-08-27
+last_modified_at: 2026-08-29
 tags:
   - 코딩 에이전트
   - 자체 호스팅
@@ -20,6 +21,9 @@ toc_label: "목차"
 toc_sticky: true
 reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/settings-that-never-reached-the-wire/"
+audiobook: "https://drive.google.com/file/d/1E6lAM9cJR9LQXyNCQPBbFNkFWSPWacT8/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 자체 호스팅 모델에 코딩 에이전트를 붙여 쓰고 계신다면, 지금 설정 파일에 적어둔 값 중 일부는 서버로 서버에 닿지 않습니다. 저희는 `reasoning_effort`를 낮춰두고 이틀을 보낸 뒤에야 그 필드가 저희 엔드포인트로 전송되지 않는다는 걸 알았습니다.
@@ -32,6 +36,9 @@ if not self._is_openrouter_url():
 ```
 
 허용 목록은 특정 호스트 몇 개뿐이었고 사내 도메인은 거기 없었습니다. 설정은 파일에 남아 있었고, 명령을 실행하면 성공했고, 아무 경고도 없었습니다. 걸린 것처럼 보이는 상태가 이틀 갔습니다.
+
+![설정을 걸었는데 전선에는 안 실렸습니다 개념을 형상화한 이미지](/assets/images/settings-that-never-reached-the-wire-hero.webp)
+*전선에 실린 설정과, 실리지 못한 설정: 한 쪽은 빛을 전달하고 다른 한 쪽은 사라집니다.*
 
 ## 무엇이 수렴을 만드는지 갈라 봤습니다
 
@@ -48,6 +55,10 @@ if not self._is_openrouter_url():
 
 열두 번 전부 통과했고 팔이 갈리지 않았습니다. 세 가설이 한꺼번에 죽었습니다. 특히 마지막 줄이 아팠는데, 며칠에 걸쳐 넣은 튜닝을 통째로 되돌린 팔도 똑같이 7초였기 때문입니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/settings-that-never-reached-the-wire/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 그럼 장황함은 무엇으로 줄이나
 
 `reasoning_effort`가 안 나간다면 남는 것은 채팅 템플릿 인자입니다. 같은 엔드포인트에 짧은 코드 생성 프롬프트 세 종을 두 번씩 던져 봤습니다.
@@ -59,7 +70,20 @@ if not self._is_openrouter_url():
 
 두 배쯤 줄어듭니다. 전달 경로는 프로바이더별 요청 본문에 얹는 방식이었고, 이건 실제로 전선에 도달했습니다. 응답의 사고 토큰이 0으로 떨어지는 것으로 확인했습니다.
 
-여기서 한 가지 고백을 해야겠습니다. 처음 이 값을 한 번만 재고 다섯 배라고 적었습니다. 여섯 번을 재니 두 배였습니다. 짧은 프롬프트 하나가 유난히 짧은 답을 내놓았을 뿐입니다. 그 한 번을 근거로 쓸 뻔했습니다.
+표본 하나짜리 재측은 이상치에 끌려갈 수 있습니다. 짧은 프롬프트 하나가 유난히 짧은 답을 내놓으면 절감률이 다섯 배까지 부풀려 보일 수 있고 여섯 번 잰 중앙값이 주는 숫자가 두 배입니다. 인용할 숫자는 후자입니다.
+
+두 설정, 두 운명. `reasoning_effort`는 호스트 허용 목록 게이트에서 전송이 끊기고, chat template 인자만 실제로 전선에 도달합니다.
+
+```mermaid
+flowchart TB
+    A["설정 파일"] --> B["reasoning_effort: low"]
+    A --> C["chat template 인자<br/>(사고 켜짐 / 끔)"]
+    B --> D{"하네스 디스패치 게이트<br/>(_is_openrouter_url)"}
+    D -->|"사내 도메인은 허용 목록에 없음"| E["전선에 도달하지 않음<br/>이틀 동안 no-op"]
+    C --> F["프로바이더별 요청 본문에 포함"]
+    F --> G["전선에 도달<br/>사고 토큰 0 확인"]
+```
+*두 설정, 두 운명: reasoning_effort는 호스트 허용 목록 게이트에서 전송되지 않고 chat template 인자만 실제로 전선에 도달합니다.*
 
 ## 스킬이 안 보인 이유는 작업 디렉터리였습니다
 
@@ -77,7 +101,7 @@ if not self._is_openrouter_url():
 
 ## 세 번의 오진이 같은 모양이었습니다
 
-수렴이 안 될 때 모델을 의심했는데 설정 혼입이었습니다. 스킬이 없다고 할 때 환각이라고 적었는데 사실이었습니다. 다섯 배 절감이라고 적었는데 표본 하나짜리 이상치였습니다.
+수렴이 안 될 때 모델을 의심했는데 설정 혼입이었습니다. 스킬이 없다고 할 때 환각이라고 적었는데 사실이었습니다. 다섯 배 절감이 나왔는데 표본 하나짜리 이상치였습니다.
 
 관측이 이상할 때마다 모델을 먼저 의심했고 매번 하네스가 범인이었습니다. 자체 호스팅 모델은 상용 API보다 낯섭니다. 의심이 그쪽으로 가는 게 자연스럽습니다. 그런데 낯선 쪽은 모델이 아니라 그 모델을 감싼 배선이었습니다.
 
@@ -85,8 +109,31 @@ if not self._is_openrouter_url():
 
 설정을 건 뒤에 그 설정이 도달했는지를 따로 확인하시길 권합니다. 방법은 셋입니다. 코드에서 그 필드를 싣는 조건을 직접 읽습니다. 산출물이나 응답에서 값을 되읽습니다. 아니면 같은 요청을 두 조건으로 보내 토큰 수를 비교합니다.
 
-그리고 반복 없이 잰 숫자는 인용하지 않는 편이 안전합니다. 저희는 표본 하나로 다섯 배를 적었다가 여섯 번을 재고 두 배로 고쳤습니다.
+그리고 반복 없이 잰 숫자는 인용하지 않는 편이 안전합니다. 표본 하나짜리 재측은 이상치에 끌려가고, 여러 번 잰 중앙값이 인용할 숫자입니다.
 
 마지막으로 에이전트가 도구에서 무엇을 받았는지 알고 싶을 때는 요약이 아니라 원문을 요구하시면 됩니다. 저희가 사흘 붙잡고 있던 문제를 그 한 마디가 풀었습니다.
 
-여기 적은 수치는 단일 B200 노드에서 서빙한 Qwen3.8-27B NVFP4 실측이며, 7초라는 절대값은 이 사소한 과제 전용입니다. 코딩 에이전트 일반 성능으로 읽으시면 안 됩니다.
+여기 적은 수치는 단일 B200 노드에서 서빙한 Qwen3.8-27B NVFP4 실측이며 7초라는 절대값은 이 사소한 과제 전용입니다. 코딩 에이전트 일반 성능으로 읽으시면 안 됩니다.
+
+## 참고 자료
+
+- [vLLM 지원 모델 문서](https://docs.vllm.ai/en/latest/models/supported_models/) : 자체 호스팅 서빙 설정의 정본
+- [Qwen3 블로그](https://qwenlm.github.io/blog/qwen3/) : 사고 모드(on/off) 토글과 chat template 인자의 개념
+- [OpenRouter 문서](https://openrouter.ai/docs/quickstart) : 하네스가 호스트 허용 목록으로 가르는 대상인 프로바이더
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/settings-that-never-reached-the-wire/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![settings-that-never-reached-the-wire 슬라이드 1](/assets/images/settings-that-never-reached-the-wire-slide-01.webp)
+
+![settings-that-never-reached-the-wire 슬라이드 2](/assets/images/settings-that-never-reached-the-wire-slide-02.webp)
+
+![settings-that-never-reached-the-wire 슬라이드 3](/assets/images/settings-that-never-reached-the-wire-slide-03.webp)
+
+![settings-that-never-reached-the-wire 슬라이드 4](/assets/images/settings-that-never-reached-the-wire-slide-04.webp)
+

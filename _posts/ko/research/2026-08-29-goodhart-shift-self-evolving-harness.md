@@ -34,7 +34,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/goodhart-shift-self
 
 논문은 루프가 볼 수 있는 케이스의 이득과, 한 번도 관측하지 못한 봉인된 홀드아웃의 이득 사이의 격차가 밤마다 넓어지는 이 실패 모드를 굿하르트 시프트라고 부릅니다. 함께 정의되는 개념이 있습니다. case-flip은 표면이 바뀌면서 결과, 예를 들어 top-1의 옳음이나 네이티브·네거티브 쿼리에서 발화 여부가 변한 케이스입니다. silent case-flip은 그보다 날카로운 버전으로, 루프의 자기 보고가 성공이라고 선언한 밤에 숨겨진 홀드아웃에서 회귀가 발생하는 경우입니다. 루프의 야간 요약은 '퇴화 없음'이라고 쓰고, 숨겨진 벤치는 다르게 말합니다. 자기 보고는 구조적으로 이를 볼 수 없습니다. 논문은 churn without gain도 정의합니다. 루프가 표면을 고치긴 했는데($s_n \neq s_{n-1}$) 어느 쪽 이득도 사전 등록한 허용치 $\epsilon$을 넘지 않는 밤입니다. 측정 가능한 움직임이 없는 컴퓨트 소비이며, 이런 밤이 반복되면 기록된 베이스라인이 자기 편집의 노이즈 안에서 미끄러집니다.
 
-![무인 자율 진화 루프의 두 양상: 복리식 개선과 굿하르트 드리프트](/assets/images/posts/research/goodhart-shift-self-evolving-harness/fig1_goodhart_regimes.png)
+![무인 자율 진화 루프의 두 양상: 복리식 개선과 굿하르트 드리프트](/assets/images/posts/research/goodhart-shift-self-evolving-harness/fig1_goodhart_regimes.webp)
 *루프가 볼 수 있는 트레인 점수는 두 양상 모두에서 오릅니다. 편집이 transfer될 때만 봉인된 홀드아웃 점수가 거의 제로인 밤 단위 발산을 두고 따라오며, 편집이 보이는 케이스를 기억화하면 홀드아웃은 제자리걸음하거나 떨어지고 발산이 밤마다 쌓입니다. 이 그림은 논문의 해석적 모델(analytical model)의 개념 예시이며 실측 데이터가 아닙니다.*
 
 핵심은 두 양상이 루프의 자기 보고에서는 똑같이 보인다는 점입니다. 트레인을 기억화한 밤이든 transfer한 밤이든 자기 보고는 트레인의 함수일 뿐이라 '개선'을 똑같이 보고하기 때문입니다. '루프가 개선됐다'와 '루프가 과적합했다'를 가르는 유일한 채널은 봉인된 홀드아웃입니다. 밤 단위 발산 $\delta_n$과 tie-breaker인 silent flip 개수가 두 양상을 가르는 최소 통계입니다.
@@ -45,7 +45,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/goodhart-shift-self
 
 이 모델 하에서 논문은 기대 밤 단위 발산이 $\mathbb{E}[\delta_n] = a\, e_n\, (1 - p_n)$임을 보여 줍니다. 발산은 편집 중 기억화 편집의 질량에 비례합니다. 활성 밤(루프가 실제로 편집을 하는 밤)에서는 기대 발산이 제로인 것과 모든 편집이 transfer되는 것($p_n = 1$)은 동치입니다. 기억화 편집이 하나라도 있는 밤은 silent 홀드아웃 flip이 발생할 양의 확률을 가지며, $p_n = 1$인 밤은 1차적으로 그런 채널을 가지지 않습니다. 밤 단위 발산과 tie-breaker로서의 silent flip 개수가 일반화되지 않는 밤의 1차 탐지기가 되는 이유입니다.
 
-![편집 종류별 기대 기여: transfer 편집과 기억화 편집](/assets/images/posts/research/goodhart-shift-self-evolving-harness/fig2_edit_contribution_structure.png)
+![편집 종류별 기대 기여: transfer 편집과 기억화 편집](/assets/images/posts/research/goodhart-shift-self-evolving-harness/fig2_edit_contribution_structure.webp)
 *논문의 편집 단위 transfer 모델에서 transfer 편집은 트레인 쪽과 봉인된 홀드아웃 쪽을 동일하게 올리고, 기억화 편집은 트레인 쪽만 올립니다. 그래서 기대 밤 단위 발산이 편집의 기억화 비율에 의해 좌우됩니다. 해석적 모델의 개념 예시이며 실측 데이터가 아닙니다.*
 
 그로부터 읽을 점이 셋이 됩니다. 첫째, 발산은 부수 통계로 치부할 대상이 아닙니다. 관심의 대상(estimand) 그 자체라고 볼 수 있습니다. 루프가 계속 많이 고치고($e_n$ 크며) 편집이 점점 보이는 케이스를 겨냥하게 되면($p_n$ 떨어짐), 양쪽 절대 점수가 멀쩡해 보이는 동안에도 $\delta_n$은 오릅니다. 2022년 Gao 일행이 프록시 리워드 과최적화에서 보인 '일단 오른 후 악화된다'는 onset과, 보수적 오프라인 학습이 온라인 적응 하에서 해킹 피해를 단조롭게 키운다는 Pessimism's Paradox의 결과를 표면 편집으로 옮겨놓은 모습입니다. 둘째, 기억화 채널은 리트리버 루프에 구조적으로 열려 있습니다. 이전 repair-loop 연구가 보여주듯, 올바르게 적용한 사전 패치조차 일부 리트리벌을 움직이지 못합니다. BM25/IDF 랭킹은 코퍼스 전체의 성질이라, 어휘 커버리지만으로는 부족하기 때문입니다. 거꾸로, 표면 편집은 너무 좁게 겨냥되어 $T$에는 맞되 본 적 없는 쿼리의 라우팅에는 손을 대지 않을 수 있습니다. 정확히 $(1-p_n)$ 항인 셈입니다. 셋째, 제외된 조각은 silent flip의 공장입니다. 보상이 positive 쿼리만 본다면 편집은 보상받은 조각으로 체계적으로 편향되고, 제외 케이스의 $p_n$은 더 낮아집니다. 제외된 쪽이 먼저 flip합니다. 추상적 가정이 아닙니다. 위에서 본 top-1 상승과 네이티브 환각의 0.0→0.4가 바로 실현 사례입니다.
@@ -66,7 +66,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/goodhart-shift-self
 
 마지막 단계는 배포 계층으로 넘기는 일입니다. flag된 밤은 자동 롤백되지 않고 기존 canary-with-rollback 절차로 넘겨집니다. 두 계층은 다른 질문을 답합니다. 게이트는 "개선이 일반화됐나"를, canary는 "그렇지 않았다면 트래픽의 얼마가 봤나"를 묻습니다.
 
-![전체 루프 train/holdout 발산 게이트: 밤 단위 프로토콜](/assets/images/posts/research/goodhart-shift-self-evolving-harness/fig3_divergence_gate_protocol.png)
+![전체 루프 train/holdout 발산 게이트: 밤 단위 프로토콜](/assets/images/posts/research/goodhart-shift-self-evolving-harness/fig3_divergence_gate_protocol.webp)
 *평가 계층의 게이트는 첫 밤 전에 홀드아웃을 봉인하고 루프의 편집을 변화 없이 관찰하며, 고정 경로로 양쪽을 점수 매기고 no-edit 대조로 노이즈 바닥을 정한 뒤 매 밤 세 가지 판정 중 하나를 내리고 flag된 밤을 배포 계층의 canary로 넘깁니다. 개념 예시(conceptual example) 도식입니다.*
 
 봉인이 중요한 이유를 다시 짚겠습니다. 루프가 홀드아웃 점수를 본다면, 직접이지 않더라도 그 점수를 요약하는 자기 보고를 통해서라도, $H$는 최적화 대상의 일부가 됩니다. 기억화 채널이 홀드아웃까지 확장되고 발산은 의미를 잃습니다. 굿하르트 법칙이 경고하는 벤치 타게팅 실패 모드, 평가 안전 문헌이 말하는 오염(contamination) 우려가 그 모습입니다. 실질 규칙은 엄격합니다. $H$는 게이트만 읽고 루프는 절대 읽지 않으며, 장 주기로 fresh traffic 라벨링 케이스로 재봉인해 봉인 세트 자체가 루프의 유효 학습 분포로 늙어가는 것을 막습니다.

@@ -15,6 +15,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/growth-spurt-is-my-new-coat/strip.webp
 video: /assets/videos/posts/만화/growth-spurt-is-my-new-coat/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/growth-spurt-is-my-new-coat/"
 ---
 
 The news is about a graphics-card company's quarterly revenue: 133 trillion won, up 106% year over year. That is doubling in a single year. The press calls it a growth spurt, which is also what moms say when a four-year-old's winter coat stops fitting in one season. The bigger the chipmaker gets, the bigger somebody's invoice gets. This strip is about who buys the new clothes.
@@ -23,7 +24,7 @@ The news is about a graphics-card company's quarterly revenue: 133 trillion won,
 
 > Source: [엔비디아, 분기 매출 133조원…전년동기 대비 106% '폭풍성장'(종합)](https://n.news.naver.com/mnews/article/001/0016273376?sid=104) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/growth-spurt-is-my-new-coat/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/growth-spurt-is-my-new-coat/comic.mp4" type="video/mp4">

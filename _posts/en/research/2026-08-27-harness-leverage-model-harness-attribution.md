@@ -45,7 +45,7 @@ A balanced two-way analysis of variance (ANOVA) on run-level completion rate sho
 
 The interaction turns out to be nearly as large as the harness main effect itself. That signature means the harness mechanism's effect changes with model strength, and a single-axis ablation misses exactly this part. The paper recommends reporting HLS alongside η² for any factorial design that crosses harness arms with models, and lays the two accounting choices side by side: 0.2990 if you count only the harness main effect, 0.5806 if you include the interaction. It lets readers see directly how the attribution choice moves the headline number. The explainable fraction itself is only 22.10%, and the remaining 77.90% is dominated by task difficulty, which means harness effects concentrate on hard tasks and the absolute level of completion rate is suite-dependent. That is why HLS has to be remeasured for every target suite.
 
-![Share of Explainable Variance by ANOVA Source](/assets/images/posts/research/harness-leverage-model-harness-attribution/fig3_anova_share_of_explained_variance.png)
+![Share of Explainable Variance by ANOVA Source](/assets/images/posts/research/harness-leverage-model-harness-attribution/fig3_anova_share_of_explained_variance.webp)
 *Model tier is the larger single main effect, but the harness main effect and the harness-tier interaction together claim 58.06% of the explainable variance, the harness leverage share. In this design, model tier is a simulated proposer calibrated to published accuracy and the harness is real control-flow code; the numbers are measured on CPU-only containers.*
 
 ## Gates Buy Completion, Ledgers Buy Tokens
@@ -56,7 +56,7 @@ In the weak tier, H0's completion rate is 62.50%. H1 and H2 both reach 100.00%, 
 
 The cost channel tells a different story. In the weak tier, H3 cuts tokens from 9,040.8 to 7,512.8 (−16.9%) and cost by the same ratio. The degraded-step rate, where context overload lowers the odds of a valid action, also drops from 0.6652 to 0.2839 (a relative −57.3%). Its completion-rate gain of 4.37pp is not significant. H4 is the opposite case: the last 6 lines plus summary still overshoot the weak tier's 400-token cap, pushing the degraded-step rate up to 0.8430 (from 0.6652 at H0), and halving the learning coefficient leaves the error-action rate essentially unchanged from H0 (0.2803 vs. 0.2805). H4 fixes the weak tier on neither channel. Gates buy completion at a token premium: cost rises 2.3% for H1 and 6.6% for H2 in the weak tier, and 8.0% for H1 and 9.1% for H2 in the strong tier. No single arm dominates both channels at once in any cell, which is exactly why combining a gate with a ledger is the natural next step.
 
-![Completion Rate by Harness Arm and Model Tier](/assets/images/posts/research/harness-leverage-model-harness-attribution/fig1_completion_by_arm_and_tier.png)
+![Completion Rate by Harness Arm and Model Tier](/assets/images/posts/research/harness-leverage-model-harness-attribution/fig1_completion_by_arm_and_tier.webp)
 *The deterministic verification gate (H1) and the predictive gate (H2) raise weak-tier completion rate from 62.50% to 100.00%, while the MEA ledger (H3) and memory tiering (H4) show no statistically meaningful difference from baseline. In this design, model tier is a simulated proposer calibrated to published accuracy and the harness is real control-flow code; the numbers are measured on CPU-only containers.*
 
 ## Under a Cent per Run: the Quality-per-Dollar Frontier
@@ -65,7 +65,7 @@ Even though the price spread is 25x and the completion-rate range is only 0.625 
 
 Plotting cross-tier (arm, tier) pairs whose completion rates sit within 1pp of each other on a substitution frontier shows that the cheaper side of the top 5 pairs is every time a gated weak tier. Measured savings run 94.6 to 94.9%, roughly 20x cheaper. Within the same arm, the strong-to-weak cost ratio is 19.4x for H1 and 18.4x for H0, since the dominant cost axis is tier substitution. The cheapest path to matched completion is a gated weak tier. What the MEA ledger substitutes for is tokens, and in the weak tier that trade costs −16.9% in cost for +4.37pp in completion. The direction matches StateM's benchmark-level substitution of $15 vs. $574.68 (38.3x). There is now a measured number on the agent-mechanism side too.
 
-![Quality-per-Dollar Frontier: All 15 Measured Cells](/assets/images/posts/research/harness-leverage-model-harness-attribution/fig2_quality_per_dollar_frontier.png)
+![Quality-per-Dollar Frontier: All 15 Measured Cells](/assets/images/posts/research/harness-leverage-model-harness-attribution/fig2_quality_per_dollar_frontier.webp)
 Measured 15 (arm, tier) cells form three cost bands by tier, and gated weak-tier cells reach 100% completion at under a cent per run, roughly 20x cheaper than their strong-tier counterparts. In this design, model tier is a simulated proposer calibrated to published accuracy and the harness is real control-flow code; the numbers are measured on CPU-only containers.*
 
 ## What This Leaves for the Company, Society, and Science

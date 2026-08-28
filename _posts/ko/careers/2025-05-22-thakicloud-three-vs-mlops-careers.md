@@ -2,7 +2,7 @@
 title: "Three Vs-Driven MLOps at ThakiCloud: Why You'll Want to Join Us"
 excerpt: "ThakiCloud의 Three Vs(속도, 검증, 버전관리) 기반 MLOps 문화와 실전 사례, 그리고 함께할 동료를 찾는 채용 안내를 담았습니다."
 date: 2025-05-22
-last_modified_at: 2026-06-20
+last_modified_at: 2026-08-29
 tags:
   - MLOps
   - ThreeVs
@@ -12,6 +12,10 @@ tags:
 author_profile: true
 categories:
   - careers
+audiobook: "https://drive.google.com/file/d/1lIerf4M6uu2-IOhgjfqP7mn3N8KHW-a1/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/careers/thakicloud-three-vs-mlops-careers/"
 ---
 
 Velocity, Validation, Versioning. 이 세 단어가 심박수를 올린다면, ThakiCloud가 맞는 자리일 수 있습니다.
@@ -19,6 +23,9 @@ Velocity, Validation, Versioning. 이 세 단어가 심박수를 올린다면, T
 GPU/NPU 인프라부터 SaaS까지 수직 통합된 환경에서 실전 트래픽과 함께 풀스택 MLOps를 경험할 수 있습니다. 실험실 수준이 아니라, 실제 서비스가 돌아가는 클러스터 위에서요.
 
 ---
+
+![Three Vs-Driven MLOps at ThakiCloud: Why You'll Want to Join Us 개념을 형상화한 이미지](/assets/images/thakicloud-three-vs-mlops-careers-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## ThakiCloud MLOps, 구체적으로 어떻게 다른가
 
@@ -39,6 +46,10 @@ confidence 임계값 미만의 예측은 자동으로 필터링해서 사용자 
 모델, 피처, 메타데이터를 OCI 이미지 태그로 관리합니다. SHA만 지정하면 즉시 롤백됩니다. 데이터 drift가 감지되면 Airflow DAG가 재훈련, 검증, 프로모션을 자동으로 처리합니다. SLO 위반이 생기면 라이트 모델이 1초 내로 투입됩니다.
 
 ---
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/thakicloud-three-vs-mlops-careers/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 우리가 해결했거나 해결 중인 것들
 
@@ -74,6 +85,17 @@ Cloud Infra 팀의 C님은 다른 각도에서 봅니다.
 
 ---
 
+## 우리가 돌리는 도구의 공식 문서
+
+글에 등장하는 스택은 전부 공개 프로젝트입니다. 각 도구의 공식 문서를 참고하세요.
+
+- [Kubernetes](https://kubernetes.io/docs/concepts/overview/) : NodePool 기반 GPU/NPU 혼합 배치
+- [Helm](https://helm.sh/docs/intro/) : 브랜치 푸시마다 staging 배포
+- [Argo Rollouts](https://argoproj.github.io/rollouts/) : Canary + Progressive Delivery
+- [Prometheus](https://prometheus.io/docs/introduction/overview/) : ML 지표 수집
+- [Grafana](https://grafana.com/docs/grafana/latest/) : 비즈니스 KPI와 같은 화면 모니터링
+- [Airflow](https://airflow.apache.org/docs/) : drift 감지 시 자동 재훈련 DAG
+
 ## 지원하는 법
 
 1. **GitHub 또는 기술 블로그 링크**: 커밋이 곧 자기소개서입니다.
@@ -83,3 +105,20 @@ Cloud Infra 팀의 C님은 다른 각도에서 봅니다.
 ---
 
 Velocity, Validation, Versioning. 이 세 단어에 심박수가 올라간다면, `git push origin thakicloud` 에서 만납시다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/thakicloud-three-vs-mlops-careers/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![thakicloud-three-vs-mlops-careers 슬라이드 1](/assets/images/thakicloud-three-vs-mlops-careers-slide-01.png)
+
+![thakicloud-three-vs-mlops-careers 슬라이드 2](/assets/images/thakicloud-three-vs-mlops-careers-slide-02.png)
+
+![thakicloud-three-vs-mlops-careers 슬라이드 3](/assets/images/thakicloud-three-vs-mlops-careers-slide-03.png)
+
+![thakicloud-three-vs-mlops-careers 슬라이드 4](/assets/images/thakicloud-three-vs-mlops-careers-slide-04.png)
+
