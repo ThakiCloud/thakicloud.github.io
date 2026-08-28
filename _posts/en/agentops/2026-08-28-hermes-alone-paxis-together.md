@@ -26,6 +26,9 @@ If you run a local agent against your own model and work mostly by yourself, the
 
 We pointed the Hermes desktop app at our in-house endpoint. The model is `thakicloud/Qwen3.8-27B-NVFP4-GPTQ-txt-245k-dflash`, an arm serving a 245,760 token context. We selected that same model in the Paxis model picker. Then we handed both the **same prompt** for two procedures that actually run in our company. One decides whether a spending request exceeds its remaining budget. The other merges monthly KPIs that every team reports in a different shape.
 
+![One model behind two very different interfaces](/assets/images/hermes-alone-paxis-together-hero.webp)
+*The same endpoint feeds a chat log on one side and a queryable ledger on the other.*
+
 ## First task: budget check on spending requests
 
 We supplied remaining budgets for three cost centers and three requests, and asked for an approve or reject verdict per item. Arithmetic settles the answer. DOC-8841 asks for 4,500,000 against 3,200,000 remaining, so it is over by 1,300,000. DOC-8842 asks for 21,000,000 against 31,500,000, so it passes. DOC-8843 asks for 300,000 against 50,000, so it is over by 250,000.
