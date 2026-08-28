@@ -99,6 +99,31 @@ Audit is not the only thing. Approval proposals sit in `approval_proposals` at 1
 ![The layers under a provable process](/assets/images/hermes-alone-paxis-together-slide-05.webp)
 *The model writes the answer; the infrastructure above it runs the work.*
 
+## The same work on a local agent
+
+That is the Paxis side. We ran the same two tasks on a local agent (the Hermes desktop) pointed at the same model, so those screens belong here too. They sit near the end because of priority, not because the results were poor.
+
+The budget case.
+
+<video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/hermes-245k-budget-poster.jpg" style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/hermes-245k-budget.mp4" type="video/mp4">
+</video>
+
+The KPI case.
+
+<video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/hermes-245k-kpi-poster.jpg" style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/hermes-245k-kpi.mp4" type="video/mp4">
+</video>
+
+Three verdicts and nine KPI rows came out matching the Paxis side. The screen is also fast and quiet: paste, press enter, get a table. Those two clips are why the earlier sentence about a local tool being better in a solo seat is not a courtesy.
+
+What differed was the volume sent upstream.
+
+![Input token comparison on the budget case](/assets/images/hermes-alone-paxis-together-slide-03.webp)
+*Budget case. A structural difference, not a general cost comparison.*
+
+On the budget case the local agent spent 126,861 input tokens and Paxis spent 24,411. On the KPI case the figures were 48,477 and 23,467. The local agent ships its full tool catalogue on every call while Paxis narrows to the matched skill. Call counts and architectures differ, so these are not divided by a common yardstick. The direction held across both cases, though: registering the procedure shortens the context by that much.
+
 ## What we cannot claim
 
 Some honest limits.

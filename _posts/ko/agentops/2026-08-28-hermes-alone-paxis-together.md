@@ -99,6 +99,31 @@ Paxis는 답변 아래에 영수증을 한 줄 붙입니다. 어떤 에이전트
 ![답변 품질 너머에 필요한 것들](/assets/images/hermes-alone-paxis-together-slide-05.webp)
 *답은 모델이 만들고 업무는 그 위의 인프라가 실행합니다.*
 
+## 같은 과제를 로컬 에이전트로 돌리면
+
+여기까지가 Paxis 쪽 이야기입니다. 같은 두 과제를 같은 모델에 물린 로컬 에이전트(Hermes 데스크탑)로도 돌려봤으니 그 화면도 같이 두겠습니다. 순서를 뒤에 둔 것은 중요도 때문이지 결과가 나빠서가 아닙니다.
+
+먼저 예산 케이스.
+
+<video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/hermes-245k-budget-poster.jpg" style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/hermes-245k-budget.mp4" type="video/mp4">
+</video>
+
+그다음 KPI 케이스.
+
+<video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/hermes-245k-kpi-poster.jpg" style="max-width:100%">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/hermes-245k-kpi.mp4" type="video/mp4">
+</video>
+
+판정 세 건과 KPI 아홉 줄이 Paxis 쪽과 같게 나왔습니다. 화면은 빠르고 조용한 편이고, 붙여넣고 엔터를 치면 표가 나옵니다. 혼자 쓰는 자리라면 이쪽이 낫다는 말을 앞에서 한 이유가 이 두 클립입니다.
+
+다만 상류로 나간 양이 달랐습니다.
+
+![예산 케이스 입력 토큰 비교](/assets/images/hermes-alone-paxis-together-slide-03.webp)
+*예산 케이스 기준. 구조 차이에서 온 값이고 일반화된 비용 비교는 아닙니다.*
+
+예산 케이스에서 로컬 에이전트는 입력 126,861 토큰을 썼고 Paxis는 24,411 토큰을 썼습니다. KPI 케이스는 각각 48,477과 23,467입니다. 로컬 에이전트는 자기 도구 목록 전체를 매 호출에 실어 보내고 Paxis는 매칭된 스킬 범위로 좁혀 보내기 때문입니다. 호출 수도 아키텍처도 다르니 같은 잣대로 나눈 숫자는 아닙니다. 다만 절차를 등록해두면 컨텍스트가 그만큼 짧아진다는 방향은 이 두 케이스에서 일관됐습니다.
+
 ## 정직하게 남겨둘 것
 
 이 실측에서 주장할 수 없는 것들을 적어 둡니다.
