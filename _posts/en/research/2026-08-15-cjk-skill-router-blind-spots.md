@@ -1,0 +1,124 @@
+---
+title: "Script-Blind Retrieval: CJK Queries Invisible to an ASCII Tokenizer, and a Regression in the Name of Consistency"
+seo_title: "Script-Blind Retrieval, CJK Trigger Blind Spots, and Gate Collapse - ThakiCloud"
+seo_description: "An audit of the 1,911-item production skill router found that the ASCII-only tokenizer reduces all 21 pure Chinese character queries to an empty token set, leaving Top-1 at 0.0%. A one-line character class extension revives Top-1 to 95.24%. The existing Korean benchmark is untouched, but applying the 0.35 fragment discount consistently to Chinese characters and kana drops gated Recall@5 to 19.05% while ranking metrics stay healthy. We name this failure mode gate collapse and show, in measured numbers, why retrieval systems with threshold gates must report gate metrics alongside ranking metrics."
+excerpt: "Characters absent from the tokenizer's regex do not rank poorly, they are simply invisible. In an audit of the 1,911-item production skill router, 21 pure Chinese character queries tokenize to an empty token set, and applying the Hangul-only 0.35 discount to Chinese characters and kana 'consistently' yields a measured failure mode where the production injection gate drops 76 points while ranking metrics stay intact."
+date: 2026-08-15
+last_modified_at: 2026-08-15
+tags:
+  - skill-routing
+  - bm25
+  - tokenization
+  - multilingual-retrieval
+  - non-latin-script
+  - retrieval-augmented-agents
+  - truncation-bias
+  - agent-harness
+  - information-retrieval-fairness
+  - gate-collapse
+categories:
+  - research
+author_profile: true
+toc: true
+toc_label: "Contents"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/cjk-skill-router-blind-spots/"
+---
+
+Engineers who build or operate a BM25-family lexical search over skill, tool, and subagent registries should read this post. Especially if the system gates search scores with a threshold before injecting context. In lexical retrieval, the regular expression that defines tokens defines the entire world search can reach. Characters absent from that regex are not recognized by search at all. The autonomous research paper 'Script-Blind Retrieval' from ThakiCloud AI Research is an audit that measured this boundary against a single production skill router. The setup: a 1,911-item corpus, an ASCII-only tokenizer, a 6.0-point injection gate. The audit lands right after the 2-character Hangul bigram patch shipped on August 14, 2026. This paper asks whether that patch generalizes to Chinese characters and kana, and whether making it consistent is safe, comparing three code-isolated conditions. The answer comes in two lines. A one-line character class extension in the regex revives Top-1 for Chinese character queries from 0.0% to 95.24%. Finish that extension in its 'consistent' form and the regression suite passes as-is. The actual injection capability for Chinese character requests drops by 76 points, and ranking metrics show almost no trace of it.
+
+## The Tokenizer Regex That Defines the Boundary of Search
+
+The first stage of a router in a production agent harness is almost always lexical. A BM25 variant, or an IDF-weighted term overlap score. Because it is cheap, has no cold start, and is easy to debug. Skill Retrieval Augmentation (SRA) canonized this pattern, and multiple systems studies have confirmed that routing becomes a first-class engineering problem as registries grow. Lexical search inherits an assumption that stays invisible until it fails. The assumption that the regex defining tokens is the entire space the router can reach through search.
+
+The audit target is the skill retrieval component that ThakiCloud's Claude-Code-based agent harness uses every day. It is a single 688-line Python module. It indexes skill definition files, subagent definitions, and a financial services plugin catalog into one flat corpus. As of August 15, 2026, it holds 1,911 items, with 1,823 definition files underneath. The difference comes from double name aliasing, where items are indexed under both the frontmatter name and the directory name when the two differ. Scoring is hand-rolled IDF-weighted overlap. A query token matching a candidate's name wholesale accumulates 3.0×idf, a name substring 2.0×idf, membership in the general token set 1.0×idf. Phrase and substring bonuses layer on top, and an exact name match always adds 5.0. The IDF term maps a token's document frequency in the corpus to a weight in the 0.5 to 1.5 range.
+
+In this router, what decides the outcome is the gate. Only candidates with a score of GATE_MIN = 6.0 or above are injected into the context of the calling agent. Winning first place at 5.9 is, in the agent's eyes, identical to not being found. Ranking recall and gated recall are separate questions. This audit shows that the two questions can receive opposite answers under a single scoring change.
+
+On August 14, the maintainer pushed two commits. The first added an extractor that slices runs of two or more consecutive Hangul syllable blocks (U+AC00~U+D7A3) into overlapping 2-character units. That is the standard way to index CJK-family text without a morphological segmenter. The second introduced a fragment-confidence discount that scales the weight of those 2-character Hangul bigrams to 0.35. The judgment: bigrams are less reliable than whole words, and scoring them at full weight makes Korean queries overmatch. The numbers in the engineering log are evidence left by the system's change history. It records that on the in-house gold benchmark, Top-1 rose from 40.0% to 42.2% and gated Recall@5 rose from 66.7% to 68.9%, and the paper does not treat that record as a formal ablation.
+
+The router also carries a Korean-English synonym dictionary of roughly 230 entries. Since June 2026 it has grown one entry at a time, each with a dated comment saying it was created to prevent a specific retrieval miss. Chinese entries: 0. Japanese entries: 0. An enumerated multilingual bridge, where one human observation, one diagnosis, and one commit yield one entry, is labor-intensive and does not converge.
+
+This audit's question lands right after that. Does the patch that fixed Hangul generalize to Chinese characters and kana? Is it safe to make that patch internally consistent? Consistent means applying the 0.35 discount to Chinese character and kana bigrams the same way. ThakiCloud's earlier diagnostic research established that the bottleneck in this harness sits on the retriever side. The overnight autonomous repair loop research handed that repair to a human engineer. This paper audits what that engineer actually shipped.
+
+## Three Conditions, One Line Apart
+
+The audit compares three tokenizer conditions in a code-isolated state. The experimental harness loads the live router module once per condition via importlib, producing independent module objects. A patch to any condition cannot leak into another. Only the index build entry point is called; the index load entry point is not invoked. The production index cache on disk is neither read nor written during the experiment. The audit target is the shipped source itself. The shipped state is left untouched.
+
+baseline is exactly what shipped on August 15: the ASCII main regex, the Hangul-only bigram extractor, the 0.35 discount in effect. cjk_naive is the minimal fix. It extends the extractor's character class from Hangul to CJK Unified Ideographs (U+4E00~U+9FFF), Hiragana (U+3040~U+309F), and Katakana (U+30A0~U+30FF). A one-line regex change. The 0.35 discount stays, so Chinese character and kana bigrams score at full IDF weight. cjk_full is the principled-equality fix. On top of the same extension it generalizes the discount's decision condition. What was 'is this a 2-character Hangul bigram' becomes 'is this a 2-character bigram within the Hangul, Chinese character, or kana ranges'. Chinese character and kana bigrams are also discounted to 0.35. This is exactly the hygiene change an engineer reviewing the minimal fix would make, judging that the phenomenon is the same and only the constant differs, and deciding to make the internals consistent.
+
+Neither condition touches the main ASCII regex or the stopword set. For queries and documents containing only ASCII, the token sets and weights are byte-identical across the three conditions. This equivalence is not a value that came out of the experiment. It is a structural property of the diff itself.
+
+The evaluation surface has three parts. The structural audit finds CJK-dominant items across all 1,911 items, those whose full description contains 8 or more Chinese characters or kana. It counts how many structural blind spots each condition has. A structural blind spot is an item whose description contributes not a single token beyond those derived from its name and directory name. Such an item is retrievable only by someone who already knows its name. The reason the router exists collapses. The CJK query evaluation uses 21 handwritten Mandarin task queries, each mapped to a validated gold checked against the corresponding skill definition file. The regression evaluation runs the router's existing official gold benchmark, 45 Korean production queries, untouched. The 21 queries reuse the proper nouns and domain vocabulary found in the gold descriptions. They are close to the realistic ceiling a bigram index without a segmenter can reach. Not a worst case, but not tuned to the router either. The queries were fixed before any condition was run.
+
+## The Center of the Failure: the Query Side
+
+The corpus-wide structural audit only weakly supports the hypothesis that CJK descriptions are unreachable. Of the 59 CJK-dominant items, just 2, 3.4%, are structurally blind in baseline. And those two are name aliases of the same skill, one skill with an 85-character description, 66 of which are Chinese characters. When both the ASCII regex and the Hangul-only extractor refuse to split that description, the tokens left are the 3 derived from the name alone. In cjk_naive and cjk_full, zero of the 59 are structurally blind.
+
+![Structurally Blind Skills: Baseline vs CJK-Fixed Conditions](/assets/images/posts/research/cjk-skill-router-blind-spots/structural-blindness.png)
+*Of the 1,911 items, the 59 CJK-dominant ones (full description containing 8 or more Chinese characters or kana) were audited, and the shipped baseline leaves only 2, 3.4%, as structural blind spots where the description contributes not a single token. Both CJK conditions restore the count to 0. Measured on the paper's local benchmark harness; hybrid reranking is off in every condition, and the production index cache was neither read nor written.*
+
+The real failure is caught by the tokenization probe at another location. In baseline, tokenizing the pure Chinese character query '哔哩哔哩视频下载转录成文字' (a task to download a Bilibili video and transcribe it to text) yields an empty token set. There is not a single ASCII character in it. With no query tokens, the scoring function returns 0 for all 1,911 items. The retriever surfaces no candidate at all. This is not a ranking error, it is a complete non-response, and it holds no matter what is in the index. In cjk_naive, the same query tokenizes into 11 bigrams. Units like 哔哩, 视频, 下载, 转录, 文字, 频下, 11 of them, put the correct skill first.
+
+Not every query fails this cleanly. One of the 21, '知乎视频转录保存成markdown笔记' (a task to transcribe a Zhihu video and save it as a markdown note), contains the ASCII loanword 'markdown', so even baseline produces a top-3. The gold is not in that top-3. An irrelevant item that happens to match one generic token slips in. Mixed-script queries partially escape the worst case through their embedded ASCII, but they do not escape to the right answer, they escape to a wrong one. Pure-script queries do not escape at all. This distinction matters to anyone estimating the incidence of this bug from production logs. Monitoring that counts only 'queries that returned nothing' misses the mixed cases that do return something, and undercounts by construction.
+
+The numbers for the 21 queries. baseline: Top-1 0.0%, Recall@5 0.0%. The MRR of 0.0037 comes only from accidental hits deep in the ranking. cjk_naive: Top-1 95.24%, Recall@5 100%, gated Recall@5 95.24%, MRR 0.9683. cjk_full: Top-1 90.48%, Recall@5 100%, MRR 0.9444. Ranking metrics are almost unchanged, yet gated Recall@5 is 19.05%.
+
+![Top-1 Accuracy: Baseline vs cjk_naive vs cjk_full](/assets/images/posts/research/cjk-skill-router-blind-spots/top1-comparison.png)
+*Top-1 accuracy across the three conditions on the 21 Chinese character queries. The shipped baseline is 0.0%, cjk_naive, the one-line character class extension, is 95.24%, and cjk_full, which applies the 0.35 discount consistently to Chinese characters and kana, is 90.48%. Measured on the local benchmark harness; each of the 21 queries is mapped to a validated gold.*
+
+In the regression evaluation, the three conditions produce exactly the same numbers. Top-1 51.11%, Recall@5 82.22%, gated Recall@5 75.56%, MRR 0.6256. This match is not an approximation. None of the 45 queries contains a Chinese character or kana, so the changed code path structurally never fires. On the surface where the system is already being evaluated, a change in the CJK direction burns exactly nothing. The minimal fix is a strict improvement over the measured surface. It revives a capability that was zero, at a cost of 0 on the surfaces already in place.
+
+## Gate Collapse: The 76 Points the Consistent Fix Erased
+
+The most important result is that in cjk_full the ranking metrics and the gate metrics diverge. The mechanism is arithmetically simple. For the Bilibili query above, the correct skill ranks first in both CJK conditions. In cjk_naive its score is 8.017, past the 6.0 gate, so it is injected into the agent context. In cjk_full, every Chinese character bigram contributing to the score is multiplied by 0.35. The score is a weighted sum dominated by bigram contributions, so the total scales almost exactly proportionally. 8.017 × 0.35 = 2.806. Since 2.806 is below 6.0, the skill is quietly not injected. The agent behaves as if no relevant skill exists at all. Meanwhile Recall@5 stays at 100%. Top-1 drops by 4.76 points, MRR by only 0.024. A regression suite reporting Recall@k and MRR lets this change pass. Production capability for Chinese character script requests has dropped by 76 points.
+
+![Gated Recall@5: The Gate Collapse Effect](/assets/images/posts/research/cjk-skill-router-blind-spots/gated-recall-collapse.png)
+*Both CJK conditions keep ranking metrics near perfect (Recall@5 100%, MRR 0.9683/0.9444), but gated Recall@5 falls from 95.24% to 19.05% in cjk_full. Applying the 0.35x discount to Chinese character and kana bigrams rescales scores below the injection threshold GATE_MIN = 6.0. Measured on the local benchmark harness (21 Chinese character queries, threshold 6.0).*
+
+The paper names this failure mode gate collapse. In a retrieval system with a threshold gate, the score is a decision variable. It is not merely an ordering device. A change that rescales scores without changing the order is invisible on every ranking-based metric and fully visible at the gate. Judged by the metrics an IR practitioner reports, the two CJK conditions are nearly identical. Recall@5 100% vs 100%, MRR 0.9683 vs 0.9444. On the metric that decides what the production agent actually sees, they stand 76 points apart. 95.24% vs 19.05%. Any system with the same structure as this skill router, a RAG system that injects only context above a similarity threshold, or a system that passes a confidence gate before committing a tool call, sits inside the same risk. The prescription is small and cheap. Using the production threshold as-is, report a gated metric alongside Recall@k and MRR across the entire regression suite. Without it, a real production regression sails through a healthy ranking suite.
+
+Why the 'consistent' fix was dangerous is equally clear. The 0.35 constant was calibrated against Korean overmatching. Applying that constant to another script assumes that the quantity the two constants govern is the same quantity. That assumption is itself empirical. Nothing has measured whether a Chinese character bigram and a Hangul bigram carry the same amount of independent lexical evidence. It carries a constant calibrated on one script outside the regime of another.
+
+A script-typological explanation is possible here, but the paper offers it only as a hypothesis. One Hangul letter is a syllable block, a complex of 2 to 3 jamo, each a phoneme. A syllable is usually not a morpheme. A 2-syllable piece cut arbitrarily from a Korean word may be neither a word nor a morpheme. One Chinese character, by contrast, is often a morpheme and a word in its entirety. In Chinese, a 2-character bigram is frequently an actual compound. It is rarely read as an arbitrary fragment. So the discount calibrated for Hangul is an overcorrection for Chinese. This matches the direction of the effect in this experiment exactly. But this is one corpus, 21 queries, no discount-value sweep, no statistical test. The claim that needs verification is that in this scoring function, the optimal discount for Chinese character bigrams is strictly larger than the optimal discount for Hangul bigrams. The paper's design cannot separate that claim from the other differences between the two evaluation sets. A proper follow-up is to run the same methodological audit once Japanese skills appear in this corpus, and to run a discount-value sweep in place of the coarse two-point comparison.
+
+## A Correction on the 300-Character Truncation, and the One Line That Replaces the Linear Process
+
+The earlier incident report was written after the production incident of August 11, 2026. It attributes the unreachable trigger to the combination of the ASCII tokenizer and 300-character description truncation. As a response, it required front-loading the trigger into the first 300 characters of each skill description. The code review in this audit does not support the second half of that attribution. The 300-character slice applies only to the description field returned for display. The token set used for scoring is computed from the full description before that slice. The average description length of CJK-dominant items is 385.2 characters. That truncation loses not a single token. In the audited version, the truncation step is not the operating mechanism of the script blind spot.
+
+The paper does not claim the earlier attribution was wrong. The behavior of revisions that were not audited cannot be reconstructed from the available change history. This is a correction narrower than a denial.
+
+The methodological point stands apart from this correction. An attribution written during an incident is a hypothesis formed under time pressure. Re-deriving it independently from the code later costs less than keeping a response aimed at the wrong mechanism.
+
+The cost structure of the response changes. The front-loading response is a per-skill manual process. A human rewrites every affected description, and every skill written from now on must be written under the same constraint. A linear cost, proportional to the number of affected skills. With no mechanism to enforce it on new contributions, it rots over time. The minimal fix here is a one-line character class extension in the regex. It restores the structural reachability of all 59 CJK-dominant items in this corpus. It lifts Top-1 for Chinese character queries from 0.0% to 95.24%. Its measured cost on the existing evaluation surface is 0, and it changes no skill description. That is the difference between a fix with constant cost against registry size and a process that is linear in size and repeats forever.
+
+## What Remains for the Company, for Society, and for Science
+
+For the company, this audit quantifies the set of structurally unreachable items across the full 1,911-item skill corpus. It also gives a code-level fix that applies straight to the router source. A character class extension, or a relaxation of the truncation window. It restores the reachability of Hangul, Chinese character, and kana triggers at the tokenizer level, with no per-skill manual trigger reshuffling. The gate collapse finding belongs in the regression suite as well. Fix the suite to report gate metrics by default, so that cjk_full-class changes stop passing review from now on.
+
+For society, it leaves accessibility knowledge for non-Latin script users that applies across BM25-family search and tool routing as a whole. As the numbers on the roughly 230-entry Korean-English synonym dictionary say, 0 Chinese entries and 0 Japanese entries, an enumerated multilingual bridge is labor-intensive and does not converge. A tokenizer-level fix is the lower-maintenance path by contrast. It keeps CJK users, including Chinese character and kana users, from being structurally disadvantaged in the agent tool ecosystem.
+
+For science, it quantitatively characterizes a failure mode not yet documented in production retrieval-augmented agent systems. A script bias produced by the tokenizer regex combined with a score-threshold gate. It also exposes the hole in an evaluation structure where a regression certified by ranking metrics alone is judged safe. It is a measured supplement to the multilingual robustness limits of the SRA framework, and it substantiates the methodological premise that a component multilingual only in name should not be assumed to handle a script; it must be audited in that script.
+
+## Limitations
+
+The limitations are left honestly open.
+
+First, a single corpus. Every measurement comes from one organization's internal registry, 1,911 items. Not a public benchmark. The reported effect sizes are a description of this system. They should not be read as general effect sizes across BM25 skill routers. The mechanism generalizes to any regex character class that does not cover a script. The size belongs to this system.
+
+Second, the composition of the query set. The 21 Chinese queries were handwritten by the paper's author. No independent labeling by multiple annotators, no sampling of real user logs. There is no Chinese user in this internal harness. The queries reuse the proper nouns and domain vocabulary in the gold descriptions. They are close to a near-optimal scenario for a bigram tokenizer without a segmenter.
+
+Third, kana is unverified end-to-end. No Japanese skill exists in the audited corpus. Verifying the kana side of the extension is only possible through a synthetic unit probe that produced 17 tokens from a 2-sentence kana string. There is no system-level evidence for Japanese.
+
+Fourth, the regression surface is Korean-only. The existing official gold benchmark has no English cases, so an English-only regression set was not run. The claim of no English regression is structural, not empirical. No condition touches the main ASCII regex or the stopwords. ASCII token extraction and weights are byte-identical across the three conditions. A strong claim, but not a measurement.
+
+Fifth, the exactness of the Korean results is mechanical. The three conditions matching byte-for-byte on the 45-query benchmark is the expected outcome. Those queries contain no Chinese characters or kana, so the changed code path cannot structurally fire. It is only a confirmation that the diff is scoped as intended. Not evidence that the fix is harmless in general.
+
+Sixth, the hybrid reranking layer is excluded. Embedding-based reranking was off in every condition, isolating the lexical layer alone. In production, behavior may differ when it is on. The most plausible direction is partial masking of the blind spot, because embeddings do not depend on regex tokenization. Quantifying that interaction is an open question.
+
+Seventh, there is no discount-value sweep. Only the two extremes were compared: full weight and a blanket 0.35 discount. The optimal discount for Chinese characters and kana most likely sits between the two values. The maintainer has already run a threshold sweep on the injection gate. A discount sweep in the same shape would turn this paper's coarse two-point comparison into a curve. Among the identifiable follow-up work, the one with the highest value.
+
+---
+
+The paper's detail page is available at [https://thakicloud.com/tech-blog/en/research/cjk-skill-router-blind-spots/](https://thakicloud.com/tech-blog/en/research/cjk-skill-router-blind-spots/).
+
+*All numbers in this post are measured by the paper's local benchmark harness against the shipped router source (as of August 15, 2026). Hybrid reranking was off in every condition, and the production index cache was neither read nor written. The three figures in this post diagram those measurements.*
