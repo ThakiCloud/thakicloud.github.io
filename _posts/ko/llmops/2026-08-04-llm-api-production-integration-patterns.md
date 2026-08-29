@@ -222,7 +222,27 @@ LLM API를 부품으로 만드는 일은 모델을 잘 고르는 문제가 아�
 
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『AI API 엔지니어링』의 일부를 블로그용으로 다시 쓴 것입니다.
 
+## 참고 자료
+
+- 스키마 기반 구조화 출력: [Instructor](https://python.useinstructor.com/)
+- 지수 백오프와 jitter 재시도: [Exponential Backoff And Jitter (AWS Architecture Blog)](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
+- circuit breaker 패턴: [Circuit Breaker (Martin Fowler)](https://martinfowler.com/bliki/CircuitBreaker.html)
+- 스트리밍 전송 계층 SSE: [Using server-sent events (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- LLM 스팬 추적 규약: [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions/blob/main/docs/gen-ai/gen-ai-spans.md)
+
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-api-engineering/ch01.webp)
 ![2장 삽화](/assets/images/books/ai-api-engineering/ch02.webp)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![llm-api-production-integration-patterns 슬라이드 1](/assets/images/llm-api-production-integration-patterns-slide-01.png)
+
+![llm-api-production-integration-patterns 슬라이드 2](/assets/images/llm-api-production-integration-patterns-slide-02.png)
+
+![llm-api-production-integration-patterns 슬라이드 3](/assets/images/llm-api-production-integration-patterns-slide-03.png)
+
+![llm-api-production-integration-patterns 슬라이드 4](/assets/images/llm-api-production-integration-patterns-slide-04.png)
 

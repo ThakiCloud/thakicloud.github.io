@@ -54,7 +54,7 @@ baseline은 8월 15일 출하된 그대로입니다. ASCII 메인 정규식, 한
 
 코퍼스 전체 구조 감사는 'CJK 설명이 도달 불가능하다'는 가설을 약하게만 지탱합니다. CJK 우세 항목 59개 중 baseline에서 구조적으로 블라인드인 것은 2개, 3.4%뿐입니다. 그것도 같은 스킬의 두 이름 앨리어스, 85자 설명이고 그중 한자가 66자인 한 스킬입니다. ASCII 정규식과 한글 전용 추출기가 둘 다 그 설명을 쪼개기를 거부하면 남는 토큰은 이름에서 파생된 3개뿐입니다. cjk_naive와 cjk_full에서는 59개 중 구조적 블라인드가 0개입니다.
 
-![Structurally Blind Skills: Baseline vs CJK-Fixed Conditions](/assets/images/posts/research/cjk-skill-router-blind-spots/structural-blindness.png)
+![Structurally Blind Skills: Baseline vs CJK-Fixed Conditions](/assets/images/posts/research/cjk-skill-router-blind-spots/structural-blindness.webp)
 *1,911개 항목 중 CJK 우세 59개(전체 설명에 한자·가나 8자 이상)를 감사한 결과, 출하된 baseline에서 설명이 단 한 토큰도 기여하지 못하는 구조적 블라인드는 2개(3.4%)뿐이었습니다. 두 CJK 조건에서는 모두 0으로 복원됩니다. 논문의 로컬 벤치 하네스 실측이며 하이브리드 리랭은 모든 조건에서 꺼져 있고 프로덕션 인덱스 캐시는 읽지도 쓰지도 않았습니다.*
 
 진짜 실패는 토크나이징 탐사가 다른 위치에서 잡아냅니다. baseline에서 순수 한자 쿼리 '哔哩哔哩视频下载转录成文字'(비리비리 동영상을 내려받아 문자로 전사하는 태스크)를 토크나이징하면 토큰은 빈 집합입니다. ASCII 문자가 하나도 없기 때문입니다. 쿼리 토큰이 없으면 스코어링 함수는 1,911개 항목 전부에서 0을 반환합니다. 리트리버는 후보를 아무것도 내놓지 않습니다. 랭킹 오류가 아니라 완전한 무응답이고 색인에 무엇이 들어 있어도 마찬가지입니다. cjk_naive에서는 같은 쿼리가 11개 바이그램으로 토크나이즈됩니다. 哔哩, 视频, 下载, 转录, 文字, 频下 같은 11개 단위로 정답 스킬이 1위가 됩니다.
@@ -63,7 +63,7 @@ baseline은 8월 15일 출하된 그대로입니다. ASCII 메인 정규식, 한
 
 21개 쿼리의 수치입니다. baseline은 Top-1 0.0%, Recall@5 0.0%입니다. MRR 0.0037은 깊은 랭킹의 우연한 명중에서만 나옵니다. cjk_naive는 Top-1 95.24%, Recall@5 100%, 게이트 Recall@5 95.24%, MRR 0.9683입니다. cjk_full은 Top-1 90.48%, Recall@5 100%, MRR 0.9444입니다. 랭킹 지표는 거의 그대로인데 게이트 Recall@5는 19.05%입니다.
 
-![Top-1 Accuracy: Baseline vs cjk_naive vs cjk_full](/assets/images/posts/research/cjk-skill-router-blind-spots/top1-comparison.png)
+![Top-1 Accuracy: Baseline vs cjk_naive vs cjk_full](/assets/images/posts/research/cjk-skill-router-blind-spots/top1-comparison.webp)
 *21개 한자 쿼리에서 세 조건을 비교한 Top-1 정확도입니다. 출하된 baseline은 0.0%, 한 줄의 문자 클래스 확장 cjk_naive는 95.24%, 0.35 할인을 한자·가나에 일관 적용한 cjk_full은 90.48%입니다. 로컬 벤치 하네스 실측이며 21개 쿼리는 각각 검증된 골드로 매핑됐습니다.*
 
 회귀 평가에서는 세 조건이 완전히 동일한 숫자를 냅니다. Top-1 51.11%, Recall@5 82.22%, 게이트 Recall@5 75.56%, MRR 0.6256. 이 일치는 근사가 아닙니다. 45개 쿼리 중 어느 것도 한자·가나 문자를 포함하지 않아 변경된 코드 경로가 구조적으로 발동하지 않기 때문입니다. 시스템이 이미 평가받고 있는 표면에서 CJK 방향의 변경은 정확히 아무것도 태우지 않는 셈입니다. 최소 수정은 실측된 표면 위에서 엄밀한 개선입니다. 제로였던 능력을 되살리고 이미 재고 있던 표면에서는 대가가 0이라는 뜻입니다.
@@ -72,7 +72,7 @@ baseline은 8월 15일 출하된 그대로입니다. ASCII 메인 정규식, 한
 
 가장 중요한 결과는 cjk_full에서 랭킹 지표와 게이트 지표가 갈라지는 것입니다. 기제는 산술적으로 단순합니다. 앞에서 본 비리비리 쿼리에서 정답 스킬은 두 CJK 조건 모두에서 1위입니다. cjk_naive에서 그 점수는 8.017으로 게이트 6.0을 넘어서 에이전트 컨텍스트에 주입됩니다. cjk_full에서는 점수에 기여하는 한자 바이그램 전부가 0.35로 곱해집니다. 점수가 바이그램 기여가 지배하는 가중 합이라 총점은 거의 정확히 비례적으로 스케일링합니다. 8.017 × 0.35 = 2.806. 2.806은 6.0보다 작으므로 스킬은 조용히 주입되지 않는다. 에이전트는 관련 스킬이 아예 없는 것처럼 동작한다. 그 사이 Recall@5는 100% 그대로인 셈이다. Top-1은 4.76포인트, MRR은 0.024만 내려간다. Recall@k와 MRR을 보고하는 회귀 스위트는 이 변경을 통과시킨다. 한자 스크립트 요청에 대한 프로덕션 능력은 76포인트 빠진 것이다.
 
-![Gated Recall@5: The Gate Collapse Effect](/assets/images/posts/research/cjk-skill-router-blind-spots/gated-recall-collapse.png)
+![Gated Recall@5: The Gate Collapse Effect](/assets/images/posts/research/cjk-skill-router-blind-spots/gated-recall-collapse.webp)
 *두 CJK 조건 모두 랭킹 지표는 거의 완벽(Recall@5 100%, MRR 0.9683/0.9444)이지만 게이트 통과 Recall@5는 cjk_full에서 95.24%에서 19.05%로 추락한다. 한자·가나 바이그램에 0.35x 할인이 적용되면 점수가 주입 임계 GATE_MIN = 6.0 아래로 재스케일링되기 때문이다. 로컬 벤치 하네스 실측(21개 한자 쿼리, 임계 6.0)입니다.*
 
 논문은 이 실패 모드를 gate collapse라고 명명합니다. 임계값 게이트를 거는 검색 시스템에서 점수는 결정 변수입니다. 순서만 정하는 장치가 아닙니다. 순서를 바꾸지 않고 점수만 재스케일링하는 변경은 모든 랭킹 기반 지표에서는 보이지 않고 게이트에서는 온전히 보입니다. 두 CJK 조건을 IR 실무자가 보고하는 지표로 보면 거의 동일합니다. Recall@5 100% 대 100%, MRR 0.9683 대 0.9444. 프로덕션 에이전트가 실제로 보는 것을 결정하는 지표에서는 76포인트 벌어집니다. 95.24% 대 19.05%. RAG에서 유사도 임계 이상 컨텍스트만 주입하는 시스템, 도구 호출을 확정하기 전 신뢰 게이트를 거는 시스템, 이 스킬 라우터와 같은 구조라면 모두 같은 위험 안에 있습니다. 처방은 작고 쌉니다. 프로덕션 임계값을 그대로 써서 회귀 스위트 전부에 Recall@k와 MRR 곁에 게이트 통과 지표를 함께 보고하는 것입니다. 없으면 진짜 프로덕션 회귀가 멀쩡한 랭킹 스위트를 통과합니다.

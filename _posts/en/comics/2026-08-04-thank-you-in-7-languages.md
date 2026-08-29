@@ -49,3 +49,13 @@ Every word is spoken twice by a native voice, with English subtitles.
 
 Localising educational content usually multiplies cost by the number of languages. Here the scenes are produced once, with only the voice, subtitles and on-screen text changing per language, so an eighth language costs almost nothing. The same logic applies internally, where the multilingual speech model's location matters. Fine-tuning and serving it on Metis keeps training data and children's voices inside the company cluster. For organisations whose data cannot leave the building, that on-premise setup makes real sovereignty possible.
 
+## References
+
+- English "thank you": [Wiktionary](https://en.wiktionary.org/wiki/thank_you)
+- Korean "고맙습니다 (gomapseumnida)": [Wiktionary](https://en.wiktionary.org/wiki/%EA%B3%A0%EB%A7%99%EC%8A%B5%EB%8B%88%EB%8B%A4)
+- Japanese "ありがとう (arigato)": [Wiktionary](https://ja.wiktionary.org/wiki/%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86)
+- Chinese "谢谢 (xiexie)": [Wiktionary](https://zh.wiktionary.org/wiki/%E8%B0%A2%E8%B0%A2)
+- French "merci": [Wiktionary](https://fr.wiktionary.org/wiki/merci)
+- Russian "спасибо (spasibo)": [Wiktionary](https://ru.wiktionary.org/wiki/%D1%81%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE)
+- Arabic "شكرا (shukran)": [Wikipedia: Thank you](https://en.wikipedia.org/wiki/Thank_you)
+

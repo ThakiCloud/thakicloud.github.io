@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ai-reliability-engine
 ebook: /assets/ebooks/ai-reliability-engineering.pdf
 ebook_title: "AI 신뢰성 공학"
 ebook_pages: 24
+audiobook: "https://drive.google.com/file/d/141YaLTy4Ca4N-iD-x7NLdEwOCD8VvyOu/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 AI 기능을 서비스에 붙이고 있는 백엔드 엔지니어나 프로덕트 오너를 위한 글입니다. 이 글을 읽고 나면 모델 정확도를 한 자릿수 더 끌어올리는 일보다, 모델이 틀렸거나 늦거나 아예 응답하지 못했을 때 사용자 화면에 무엇을 띄울지 먼저 결정하는 일이 왜 신뢰성의 핵심인지 납득하게 됩니다.
@@ -95,6 +98,26 @@ AI 기능을 서비스에 붙이고 있는 백엔드 엔지니어나 프로덕�
 
 지금까지 살펴본 그레이스풀 디그레이션, 서킷 브레이커, 폴백 사다리, 피처 플래그, 장애 대응 등급은 서로 다른 다섯 가지 기법처럼 보이지만 사실은 하나의 질문에 대한 답입니다. 실패했을 때 사용자는 무엇을 보게 되는가. 이 질문에 미리 답해 둔 시스템만이 모델이 어떤 이유로 무너지든 사용자에게는 조용히 낮아진 품질을 보여줄 뿐, 무너진 화면을 보여주지 않습니다. 모델의 정확도는 계속 올라갈 것이고 그래야 마땅하지만, 그 정확도가 100퍼센트에 도달하는 날은 오지 않습니다. 신뢰할 수 있는 AI 시스템을 만드는 사람은 그 사실을 받아들이고, 정확도 대신 실패의 모양을 설계하는 사람입니다. 각 장의 나머지 실무 체크리스트와 코드 수준의 구현 예시는 전자책 전문에서 이어집니다.
 
+## 참고 자료
+
+- 그레이스풀 디그레이션: [Fault tolerance, Graceful degradation (Wikipedia)](https://en.wikipedia.org/wiki/Fault_tolerance#Graceful_degradation)
+- 회로 차단기 패턴: [Circuit Breaker (Martin Fowler)](https://martinfowler.com/bliki/CircuitBreaker.html)
+- 피처 플래그: [Feature Flag (Martin Fowler)](https://martinfowler.com/bliki/FeatureFlag.html)
+- 장애 등급과 대응 단계: [Managing Incidents (Google SRE Book)](https://sre.google/sre-book/managing-incidents/)
+- 사후 분석 문화: [Postmortem Culture (Google SRE Book)](https://sre.google/sre-book/postmortem-culture/)
+
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-reliability-engineering/ch01.webp)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-reliability-engineering 슬라이드 1](/assets/images/ai-reliability-engineering-slide-01.png)
+
+![ai-reliability-engineering 슬라이드 2](/assets/images/ai-reliability-engineering-slide-02.png)
+
+![ai-reliability-engineering 슬라이드 3](/assets/images/ai-reliability-engineering-slide-03.png)
+
+![ai-reliability-engineering 슬라이드 4](/assets/images/ai-reliability-engineering-slide-04.png)
 

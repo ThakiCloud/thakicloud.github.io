@@ -20,6 +20,9 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/multilingual-tts-serving-measured/"
+audiobook: "https://drive.google.com/file/d/1cHN1GZ2XZ5ehsiT4o5UycMEuD1MkAey1/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 한국어와 일본어까지 서빙해야 하는 음성합성 엔드포인트를 고르고 있다면, 모델 카드에 적힌 자연성
@@ -187,3 +190,25 @@ Kokoro-82M을 CPU에 얹는 선택이 전력에서 가장 쌉니다.
 측정 원장과 하네스는 사내 저장소에 있고, 합성 오디오는 모델당 16MB에서 44MB 규모로 함께
 보관합니다. 오디오를 남겨두면 채점 로직을 고친 뒤 GPU 없이 다시 채점할 수 있습니다. 이번에
 그걸 안 해둔 모델 하나는 버그를 고친 뒤 120발화를 GPU에서 통째로 다시 합성해야 했습니다.
+
+## 참고 자료
+
+- Qwen3-TTS 모델: [QwenLM/Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)
+- VoxCPM2 모델: [openbmb/VoxCPM2 (Hugging Face)](https://huggingface.co/openbmb/VoxCPM2)
+- Supertonic-3 모델: [Supertone/supertonic-3 (Hugging Face)](https://huggingface.co/Supertone/supertonic-3)
+- Kokoro-82M 모델: [hexgrad/Kokoro-82M (Hugging Face)](https://huggingface.co/hexgrad/Kokoro-82M)
+- 명료도 측정용 ASR: [openai/whisper-large-v3 (Hugging Face)](https://huggingface.co/openai/whisper-large-v3)
+- 자연성 지표 UTMOS(v1, 2022) 구현: [UTMOS PyTorch implementation](https://github.com/Blinorot/UTMOS-PyTorch)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![multilingual-tts-serving-measured 슬라이드 1](/assets/images/multilingual-tts-serving-measured-slide-01.png)
+
+![multilingual-tts-serving-measured 슬라이드 2](/assets/images/multilingual-tts-serving-measured-slide-02.png)
+
+![multilingual-tts-serving-measured 슬라이드 3](/assets/images/multilingual-tts-serving-measured-slide-03.png)
+
+![multilingual-tts-serving-measured 슬라이드 4](/assets/images/multilingual-tts-serving-measured-slide-04.png)
+

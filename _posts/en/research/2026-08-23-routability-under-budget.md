@@ -38,14 +38,14 @@ The experiment is fully deterministic. It uses no model inference, no network ac
 
 The scored variants come in two families. The first is the description budget ladder: `current`, B300, B400, B600, B1000, B1500, B2000, `full`, where the run names state, in characters, how much of the description prefix the router may see. The shipped `current` regime and the truncation-free `full` regime are not kept as anchors outside the ladder.
 
-![Budget ladder: description window per variant](/assets/images/posts/research/routability-under-budget/fig2.png)
+![Budget ladder: description window per variant](/assets/images/posts/research/routability-under-budget/fig2.webp)
 *The variable this study manipulates is the description prefix length, in characters. The shipped 'current' regime and the truncation-free 'full' regime sit outside this ladder. The window sizes are as designed in the variant matrix, not measured values.*
 
 The second family is the `B300_noanti` ablation. It scores the 300-character budget with the anti-trigger sentences that begin with `Do NOT use` removed, in order to separate the anti-trigger effect from the budget effect. If top-1 rises at the same budget once the anti-trigger sentences are removed, that is direct evidence that in the narrow window the do-not-use sentences were eating the space the triggers need.
 
 The scorer is the production pure BM25 lexical channel. The hybrid embedding channel is off, the retrieval gate is 6.0, and top-k is 5. Nothing about the scorer changes between variants. The label suite is a fixed set of 63 manual labels made up of positive, native, and negative cases, and it is held constant so that the deltas in the variant matrix come from the description window alone.
 
-![Causal attribution pipeline](/assets/images/posts/research/routability-under-budget/fig1.png)
+![Causal attribution pipeline](/assets/images/posts/research/routability-under-budget/fig1.webp)
 A conceptual example. Only the description window changes (and in the ablation, the anti-trigger sentences), while the corpus, the production scorer, and the label set are fixed. So accuracy deltas are attributed to the description edit.*
 
 Each variant is scored on top-1 accuracy, recall@5, and negative avoidance. What separates this protocol from a plain benchmark run is the per-case counterfactual. It records which labeled tasks drop out at 300 characters and which recover to top-1 for the first time at a larger budget. That is the point where the aggregate recovery curve becomes a per-task recovery map, showing where each skill's description gets cut and what that cut costs.
@@ -58,7 +58,7 @@ The contribution of this study is the protocol itself. It turns description-writ
 
 The motivation for moving the ladder is a mechanism already inside the shipped harness. The router runs on two channels. The token channel sees the full description, but the substring channel sees only the first 300 characters. Because of this asymmetry, the B300 variant is strictly less informative than today's regime. The lexical channel that actually determines top-1 routing is starved in the shipped regime, and the budget ladder measures that loss one run at a time.
 
-![Two-channel truncation mechanism](/assets/images/posts/research/routability-under-budget/fig3.png)
+![Two-channel truncation mechanism](/assets/images/posts/research/routability-under-budget/fig3.webp)
 A conceptual example. The shipped regime is asymmetric: the token channel sees the full description while the substring channel sees only 300 characters. So the B300 variant is strictly less informative than today.*
 
 What the ladder reveals is the shape of that loss. If the step from 300 to 400 is steep and the curve is flat from 1500 to full, the answer is that most of the loss happens in the first 100 characters, and the design rule is to put the triggers in the first 100. If the curve keeps climbing all the way to full, the answer is that the budget itself is the bottleneck, and the price is paid in context. Four features inside the window, the Korean trigger ratio, the ASCII keyword count, the presence of anti-triggers, and the number of trigger mentions, also correlate with per-skill top-1 rates. The paper states that it marks this correlation as an observation and does not read it as causation. The causal claims are reserved for the budget ladder and the anti-trigger ablation, the only places where the window is actually changed.

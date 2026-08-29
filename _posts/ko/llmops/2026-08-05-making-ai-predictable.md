@@ -23,6 +23,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/making-ai-predictable
 ebook: /assets/ebooks/making-ai-predictable.pdf
 ebook_title: "불확실한 AI를 제어가능하게"
 ebook_pages: 15
+audiobook: "https://drive.google.com/file/d/1o0LrjO6ZnJ88UVRNGek_uL31WWMtD2cP/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 LLM을 API 뒤에 두고 서비스를 만들어본 엔지니어라면 한 번쯤 겪었을 장면이 있습니다. 어제까지 멀쩡하게 동작하던 프롬프트가 오늘은 다른 형식의 답을 내놓습니다. 코드를 하나도 바꾸지 않았는데 말입니다. 이 현상을 마주친 팀은 대개 프롬프트를 더 정교하게 다듬는 쪽으로 움직입니다. 지시문을 늘리고, 예시를 추가하고, "반드시 JSON으로만 답하라"는 문장을 몇 번이고 반복해서 넣습니다.
@@ -36,7 +39,7 @@ LLM을 API 뒤에 두고 서비스를 만들어본 엔지니어라면 한 번쯤
 
 먼저 원인을 정확히 짚고 넘어갈 필요가 있습니다. 많은 엔지니어가 LLM의 비결정성을 온도(temperature) 설정 문제로 오해합니다. 온도를 0으로 낮추면 모델이 항상 가장 확률이 높은 토큰만 선택하게 되니 결정론적으로 동작하지 않겠냐는 생각입니다. 실제로는 그렇지 않습니다. 온도를 0으로 고정해도 아키텍처 수준의 비결정성은 완전히 사라지지 않습니다.
 
-이유는 토큰 선택이 우리가 생각하는 단어 단위가 아니라 훨씬 더 잘게 쪼개진 하위 토큰 단위에서 일어나기 때문입니다. 예를 들어 한글 문자열 하나조차 모델 내부에서는 여러 개의 바이트 쌍으로 분해될 수 있고, 그 분해 경로는 실행할 때마다 미묘하게 달라질 수 있습니다. 여기에 부동소수점 연산의 병렬 처리 방식, GPU 배치 처리 중 발생하는 계산 순서의 차이 같은 하드웨어 수준의 요인까지 겹치면, 이론상 결정론적이어야 할 설정에서도 실제로는 미세한 확률적 흔들림이 남습니다.
+이유는 토큰 선택이 우리가 생각하는 단어 단위가 아니라 훨씬 더 잘게 쪼개진 하위 토큰 단위에서 일어나기 때문입니다. 예를 들어 한글 문자열 하나조차 모델 내부에서는 여러 개의 바이트 쌍으로 분해되는데, 이 분해 자체는 같은 문자열이면 항상 동일합니다. 비결정성은 여기서 나오지 않습니다. 실제로는 부동소수점 연산의 병렬 처리 방식, GPU 배치 처리 중 발생하는 계산 순서의 차이 같은 하드웨어 수준의 요인이 겹치면서, 이론상 결정론적이어야 할 설정에서도 미세한 확률적 흔들림이 남습니다.
 
 이 사실이 프로덕션 관점에서 중요한 이유는 소프트웨어를 안전하게 운영하는 전통적인 전제가 여기서는 성립하지 않는다는 데 있습니다. 우리가 평소 다루는 소프트웨어는 같은 입력이 들어오면 같은 출력이 나온다는 전제 위에 세워져 있습니다. 테스트를 작성하고, 캐시를 설계하고, 재현 가능한 버그 리포트를 만드는 모든 관행이 이 전제에 의존합니다. LLM은 이 전제를 깨뜨립니다. 같은 입력이 다른 출력을 낼 수 있다는 사실을 받아들이지 못하면, 시스템은 겉보기에는 멀쩡해 보여도 운영 중에 예측하지 못한 방식으로 흔들리게 됩니다.
 
@@ -80,7 +83,7 @@ LLM을 API 뒤에 두고 서비스를 만들어본 엔지니어라면 한 번쯤
 
 그래서 재시도를 설계할 때는 실패를 세 갈래로 구분하는 작업이 먼저 필요합니다. 첫 번째는 일시적 실패입니다. 네트워크 오류, 모델 서버의 순간적인 과부하, 요청 빈도 제한 초과 같은 원인으로 발생하며, 시간이 지나면 자연스럽게 풀리는 경우가 많습니다. 이런 실패에는 재시도가 효과적입니다. 두 번째는 영구적 실패입니다. API 키가 잘못됐거나 모델이 해당 작업 자체를 지원하지 않을 때 일어나며, 재시도를 반복해도 결과는 언제나 동일합니다. 이런 실패에 재시도를 반복하는 것은 시간과 비용의 낭비일 뿐입니다.
 
-세 번째가 가장 까다로운 결과 실패입니다. 모델이 응답 자체는 돌려주었지만 그 내용이 기대와 다른 경우입니다. 구조화된 출력을 요청했는데 형식이 어긋났거나, 사실이 아닌 내용이 섞였거나, 판단 자체가 잘못된 상황이 여기에 해당합니다. 이 경우 재시도하면 다른 결과가 나올 가능성은 있지만, 같은 문제가 그대로 반복될 가능성도 똑같이 존재합니다. 이 세 갈래를 구분하지 않은 채 무조건 재시도부터 하는 시스템은, 영구적 실패에 자원을 낭비하고 결과 실패는 겉으로만 해결된 것처럼 위장하게 됩니다. 재시도할 때는 지수적 백오프, 즉 대기 시간을 1초, 2초, 4초처럼 점점 늘려가는 방식을 표준으로 쓰는 것이 좋습니다. 이렇게 하면 모델 서버에 부담을 주지 않으면서도 일시적 실패가 자연스럽게 해소될 시간을 벌 수 있습니다.
+세 번째가 가장 까다로운 결과 실패입니다. 모델이 응답 자체는 돌려주었지만 그 내용이 기대와 다른 경우입니다. 구조화된 출력을 요청했는데 형식이 어긋났거나, 사실이 아닌 내용이 섞였거나, 판단 자체가 잘못된 상황이 여기에 해당합니다. 이 경우 재시도하면 다른 결과가 나올 가능성은 있지만, 같은 문제가 그대로 반복될 가능성도 똑같이 존재합니다. 이 세 갈래를 구분하지 않은 채 무조건 재시도부터 하는 시스템은, 영구적 실패에 자원을 낭비하고 결과 실패는 겉으로만 해결된 것처럼 위장하게 됩니다. 재시도할 때는 지수적 백오프, 즉 대기 시간을 1초, 2초, 4초처럼 점점 늘려가는 방식을 표준으로 쓰는 것이 좋습니다. 여기에 대기 시간 안에 무작위성, 즉 jitter를 섞어야 합니다. 모든 클라이언트가 같은 순간에 재시도하면 오히려 회복 중인 서버에 집중 부하를 만들 수 있기 때문입니다. 이렇게 하면 모델 서버에 부담을 주지 않으면서도 일시적 실패가 자연스럽게 해소될 시간을 벌 수 있습니다.
 
 ## 측정하지 않으면 관리할 수 없다
 
@@ -102,7 +105,27 @@ LLM을 API 뒤에 두고 서비스를 만들어본 엔지니어라면 한 번쯤
 
 이 글에서 다룬 내용을 더 깊이 들여다보고 싶다면, 각 패턴을 구체적인 코드 수준까지 풀어낸 전자책 [불확실한 AI를 제어가능하게](/assets/ebooks/making-ai-predictable.pdf)를 참고하시기 바랍니다.
 
+## 참고 자료
+
+- 환각 현상과 그 분류: [A Survey on Hallucination in Large Language Models](https://arxiv.org/abs/2311.05232)
+- 스키마 기반 구조화 출력과 검증: [Instructor](https://python.useinstructor.com/)
+- 도구 호출 계약: [Tool use with Claude (Anthropic Docs)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+- 지수 백오프와 jitter 재시도: [Exponential Backoff And Jitter (AWS Architecture Blog)](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
+- LLM 관측 스팬 규약: [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions/blob/main/docs/gen-ai/gen-ai-spans.md)
+
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/making-ai-predictable/ch01.webp)
 ![4장 삽화](/assets/images/books/making-ai-predictable/ch04.webp)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![making-ai-predictable 슬라이드 1](/assets/images/making-ai-predictable-slide-01.png)
+
+![making-ai-predictable 슬라이드 2](/assets/images/making-ai-predictable-slide-02.png)
+
+![making-ai-predictable 슬라이드 3](/assets/images/making-ai-predictable-slide-03.png)
+
+![making-ai-predictable 슬라이드 4](/assets/images/making-ai-predictable-slide-04.png)
 

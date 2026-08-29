@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/the-deployment-engineer/
 ebook: /assets/ebooks/the-deployment-engineer.pdf
 ebook_title: "되돌릴 수 있어야 보내는 것"
 ebook_pages: 37
+audiobook: "https://drive.google.com/file/d/108ykDK6yfjerdYVueYVo9cyaWgVssXGU/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 자신의 서비스를 프로덕션에 직접 올리는 개발자, 그리고 운영을 따로 두지 않는 소규모 팀의 엔지니어라면 이 글에서 하나의 원칙을 가져갈 수 있습니다. 프로덕션 배포의 진짜 질문은 '올려지는가'가 아니라, '잘못됐을 때 얼마나 빨리 되돌릴 수 있는가'입니다. 되돌릴 곳이 준비되기 전에 보내는 배포는 도박이고 되돌릴 곳이 항상 있는 배포는 연습해 온 루프의 다음 바퀴입니다.
@@ -124,3 +127,23 @@ deploy가 push를 필요로 하는 한 줄이 수호 장치입니다. environmen
 두 번째 안전망은 기능 플래그입니다. 위험한 기능은 코드를 올려 두되 플래그는 꺼 두고 일부 사용자만 켜고 지켜 봅니다. 이상하면 플래그만 끄면 되고 아티팩트 전체를 바꾸는 것보다 빠릅니다. 다만 플래그는 만능이 아닙니다. 쓰지 않는 기능이 쌓입니다. 플래그에는 만료일을 붙여 다음 릴리스에서 함께 지웁니다. 3개월 넘게 제자리에 있는 플래그는 부채입니다.
 
 이 논증을 한 문장으로 되돌리면 되돌릴 수 있어야 보내는 것입니다. 빌드가 신원을 만들고 저장소가 불변으로 보관하고 파이프라인이 순서를 지키고, 계약이 설정과 데이터의 자리를 정합니다. 롤백할 곳이 항상 준비되어 있다면, 보내는 순간은 도박이 아니라 연습해 온 루프의 다음 바퀴입니다.
+
+## 참고 자료
+
+- 빌드·릴리스·런의 분리, 설정을 환경으로 주입하는 방식: [The Twelve-Factor App](https://12factor.net/)
+- 아티팩트를 다이제스트로 고정하는 불변 신원: [OCI Image Spec](https://github.com/opencontainers/image-spec/blob/main/README.md)
+- 롤백을 트래픽 전환(교체)으로 설계하는 방식: [Blue Green Deployment (Martin Fowler)](https://martinfowler.com/bliki/BlueGreenDeployment.html)
+- rolling update와 롤백의 동작: [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![the-deployment-engineer 슬라이드 1](/assets/images/the-deployment-engineer-slide-01.webp)
+
+![the-deployment-engineer 슬라이드 2](/assets/images/the-deployment-engineer-slide-02.webp)
+
+![the-deployment-engineer 슬라이드 3](/assets/images/the-deployment-engineer-slide-03.webp)
+
+![the-deployment-engineer 슬라이드 4](/assets/images/the-deployment-engineer-slide-04.webp)
+

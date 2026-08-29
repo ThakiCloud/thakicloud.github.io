@@ -20,6 +20,9 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/sonic-branding-generative-music/"
+audiobook: "https://drive.google.com/file/d/1tgEqND0M_NNXzWF3ht1L_77lGxCAzpRE/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 음악 생성 모델을 사내에 올릴지 검토 중이시라면, 어떤 모델을 고르느냐보다 **그 모델을 어떻게
@@ -260,3 +263,23 @@ peak VRAM 대비 남는 용량을 처리량으로 환산하는 일은 LLM 서빙
 이 글의 음악은 전부 오픈 웨이트 모델로 만들었고 실존 아티스트의 목소리나 스타일을 모사하지
 않았습니다. 상업 배포에는 별도의 라이선스와 공시 검토가 필요하며 아직 어디에도 배포하지
 않았습니다. 위 수치는 NVIDIA B200 한 장에서 bf16으로 측정한 실측값입니다.
+
+## 참고 자료
+
+- MiniMax-Music3 모델: [MiniMaxAI/MiniMax-Music3 (Hugging Face)](https://huggingface.co/MiniMaxAI/MiniMax-Music3)
+- Flow Matching 아키텍처: [Flow Matching for Generative Modeling (arXiv)](https://arxiv.org/abs/2210.02747)
+- 레퍼런스 파이프라인 (diffusers): [Diffusers (Hugging Face)](https://huggingface.co/docs/diffusers)
+- Xet 전송 경로: [Xet: our Storage Backend (Hugging Face)](https://huggingface.co/docs/hub/en/xet)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
+
+![sonic-branding-generative-music 슬라이드 1](/assets/images/sonic-branding-generative-music-slide-01.png)
+
+![sonic-branding-generative-music 슬라이드 2](/assets/images/sonic-branding-generative-music-slide-02.png)
+
+![sonic-branding-generative-music 슬라이드 3](/assets/images/sonic-branding-generative-music-slide-03.png)
+
+![sonic-branding-generative-music 슬라이드 4](/assets/images/sonic-branding-generative-music-slide-04.png)
+

@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ai-product-shipping-f
 ebook: /assets/ebooks/ai-product-shipping-field-guide.pdf
 ebook_title: "AI 프로덕트 배포 필드 가이드"
 ebook_pages: 15
+audiobook: "https://drive.google.com/file/d/1LiafH_xdq0NS4lzkra1BIhFSnbF5iY8m/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 이 글은 AI 기능을 이미 만들어봤고 이제 진짜 사용자에게 내보내야 하는 엔지니어와 프로덕트 리더를 위해 씁니다. 얻어갈 결론은 하나입니다. AI 제품이 프로덕션에서 무너지는 진짜 원인은 대개 모델의 품질이 아니라, 언제 멈춰야 하는지를 아무도 미리 정하지 않았다는 사실입니다.
@@ -118,7 +121,27 @@ AI 시스템은 완전히 동작하거나 완전히 멈추거나 둘 중 하나�
 
 그래서 AI 제품을 준비하는 팀에 제안하고 싶은 순서는 이렇습니다. 모델을 고르기 전에 먼저 멈출 기준을 정하십시오. 배포 버튼을 누르기 전에 되돌릴 절차를 준비하십시오. 장애가 나기 전에 실패를 분류하는 기준을 만들어두십시오. 그리고 이 모든 것이 작동하는지 지켜볼 눈을 먼저 심어두십시오. 이 순서를 지킨 팀은 사고가 나도 몇 분 만에 회복하고, 이 순서를 건너뛴 팀은 사고가 날 때마다 처음부터 다시 배웁니다.
 
+## 참고 자료
+
+- LLM 평가와 릴리스 게이트: [Holistic Evaluation of Language Models (HELM, Stanford)](https://crfm.stanford.edu/helm/)
+- 카나리 배포: [Canary Release (Martin Fowler)](https://martinfowler.com/bliki/CanaryRelease.html)
+- 블루그린 배포: [Blue Green Deployment (Martin Fowler)](https://martinfowler.com/bliki/BlueGreenDeployment.html)
+- 회로 차단기 패턴: [Circuit Breaker (Martin Fowler)](https://martinfowler.com/bliki/CircuitBreaker.html)
+- 데이터 드리프트와 예측 드리프트 모니터링: [Model monitoring in production (Azure Machine Learning)](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-monitoring)
+
 ## 챕터 삽화
 ![3장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch03.webp)
 ![4장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch04.webp)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
+
+![ai-product-shipping-field-guide 슬라이드 1](/assets/images/ai-product-shipping-field-guide-slide-01.png)
+
+![ai-product-shipping-field-guide 슬라이드 2](/assets/images/ai-product-shipping-field-guide-slide-02.png)
+
+![ai-product-shipping-field-guide 슬라이드 3](/assets/images/ai-product-shipping-field-guide-slide-03.png)
+
+![ai-product-shipping-field-guide 슬라이드 4](/assets/images/ai-product-shipping-field-guide-slide-04.png)
 
