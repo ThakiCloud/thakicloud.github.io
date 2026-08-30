@@ -5,6 +5,19 @@
   sidebar.html 이 include_cached 로 부르므로 (lang, nav) 조합당 한 번만 렌더된다.
   ⛔ 그래서 page.* 를 직접 읽으면 안 된다 — 캐시된 첫 페이지 값이 전 페이지에 박힌다.
   언어는 반드시 include.lang 으로 받는다(아래 nl_lang). 새 조건을 추가할 때도 동일.
+
+  ⛔ 2026-08-30: 여기 있던 태그 클라우드 블록을 삭제했다. HTML 주석(<!-- -->)으로
+  꺼 놨지만 Jekyll 은 HTML 이 되기 전에 Liquid 를 먼저 돌린다 — 주석은 결과를
+  브라우저에서만 가릴 뿐 루프를 막지 못한다. `(1..tags_max) x site.tags` =
+  168 x 4,812 = 808,416 회 iteration 이 whitespace control 없이 돌면서 매번 개행을
+  뱉었고, 그 결과 모든 글 페이지가 13.19 MB(공백 98.6%)로 나갔다. CloudFront 는
+  10 MB 초과 객체를 압축하지 않으므로 gzip 도 걸리지 않았다(Fast 4G 기준 27.7초).
+  삭제 후 55 KB / gzip 17.9 KB, 풀 빌드 34.1초 → 15.8초.
+  ⛔ 루프를 다시 넣으려면 (a) 주석이 아니라 실제로 지우거나 조건부로 감싸고
+     (b) 반드시 하이픈 붙은 Liquid 구분자(whitespace control)를 쓴다.
+     태그 목록 자체는 _layouts/tags.html 소유.
+  ⛔ 이 주석 안에 Liquid 태그 문법을 그대로 쓰지 마라 — comment 블록 안에서도
+     토크나이즈되어 빌드가 죽는다(2026-08-30 실제로 한 번 죽였다).
 {% endcomment %}
 {% assign nl_lang = include.lang | default: page.lang %}
 {% comment %} Original navigation assignment - now replaced with custom logic {% endcomment %}
@@ -93,25 +106,6 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category=datasets">☁️ Datasets ({{ lang_datasets_count }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="{{ lang_prefix }}/?category={{ comics_cat | uri_escape }}">💬 Comics ({{ lang_comics_count }})</a></span>
 
-        <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
-        <ul v-show="flag_t">
-        
-          {% assign tags_max = 0 %}
-          {% for tag in site.tags %}
-            {% if tag[1].size > tags_max %}
-              {% assign tags_max = tag[1].size %}
-            {% endif %}
-          {% endfor %}
-
-            {% for i in (1..tags_max) reversed %}
-              {% for tag in site.tags %}
-                {% if tag[1].size == i %}
-                  <li><a href="{{ site.baseurl }}/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-            
-        </ul> -->
       </li>
   </ul>
 </nav>
