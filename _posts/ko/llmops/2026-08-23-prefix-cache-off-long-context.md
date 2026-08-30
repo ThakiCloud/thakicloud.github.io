@@ -16,6 +16,9 @@ toc_label: "목차"
 header:
   teaser: /assets/images/prefix-cache-long-context-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/prefix-cache-off-long-context/"
+audiobook: "https://drive.google.com/file/d/1Mp2sfw01r2N3yvoWgc4jjhayQnSe-2El/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 긴 문서를 통째로 넣는 LLM 서비스를 운영하고 계신다면, 지금 같은 프롬프트를 두 번 보내
@@ -368,3 +371,26 @@ GPU-시간을 씁니다. 14달러와 1달러의 차이입니다.
 
 그래도 결론 하나는 분명합니다. 긴 문서를 다루는 서비스라면, 모델을 바꾸기 전에 캐시가 돌고
 있는지부터 확인하는 것이 훨씬 싼 최적화입니다.
+
+## 참고 자료
+
+엔진과 아키텍처, 하드웨어의 정본 링크입니다.
+
+- vLLM: [vllm-project/vllm](https://github.com/vllm-project/vllm)
+- vLLM Automatic Prefix Caching: [docs.vllm.ai](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/)
+- Qwen3-Next (하이브리드 GDN): [Qwen/Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)
+- Mamba: [arXiv:2312.00752](https://arxiv.org/abs/2312.00752)
+- NVIDIA HGX (B200): [nvidia.com](https://www.nvidia.com/en-us/data-center/hgx/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![prefix-cache-off-long-context 슬라이드 1](/assets/images/prefix-cache-off-long-context-slide-01.webp)
+
+![prefix-cache-off-long-context 슬라이드 2](/assets/images/prefix-cache-off-long-context-slide-02.webp)
+
+![prefix-cache-off-long-context 슬라이드 3](/assets/images/prefix-cache-off-long-context-slide-03.webp)
+
+![prefix-cache-off-long-context 슬라이드 4](/assets/images/prefix-cache-off-long-context-slide-04.webp)
+

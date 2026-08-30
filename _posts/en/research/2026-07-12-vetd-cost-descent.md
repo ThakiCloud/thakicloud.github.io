@@ -21,7 +21,13 @@ author_profile: true
 toc: true
 categories:
   - research
+audiobook: "https://drive.google.com/file/d/1LfcdOuTrkd3m1QuHmJshqigEM41VrfqD/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
+
+![Illustration of the core idea of Validate Expensive, Then Descend: Cutting a Skill Fleet's Model Cost with Code Gates](/assets/images/vetd-cost-descent-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## The problem isn't the model, it's the assignment
 
@@ -59,7 +65,7 @@ Next comes the tier sweep. Given a target skill and a fixed set of input fixture
 
 Then comes judging. A judge running on the frontier model scores each tier's output against rubric dimensions on a scale of one to five, and produces a structured gap object for the cheapest candidate under test. That gap splits into an overall headline_gap, a fixable gap recoverable through prompt edits, and a reasoning gap where the cheaper tier is structurally short. Critically, the judge only produces these labels and scores. It never decides whether to descend.
 
-Finally there's the deterministic gate. Code approves a descent only when three conditions all hold: headline_gap is at or below the threshold, the reasoning gap is zero, and the fixable gap is zero. There are three possible outcomes. If all three hold, it descends. If headline_gap is fine but a fixable gap remains, the skill gets fixed and re-measured. If there's a reasoning gap, or headline_gap exceeds the threshold, the skill is held or pinned.
+Finally there's the deterministic gate. Code approves a descent only when three conditions all hold: headline_gap is at or below the threshold, the reasoning gap is zero, and the fixable gap is zero. There are three possible outcomes. If all three hold, it descends. If headline_gap is fine but a fixable gap remains, the skill gets fixed and swept again. If there's a reasoning gap, or headline_gap exceeds the threshold, the skill is held or pinned.
 
 ## Why quality survives the descent
 
@@ -77,11 +83,11 @@ The sales CRM skill wasn't descended wholesale; it was split instead. The main c
 
 ## When the gate says no
 
-Not every skill descends. We re-measured two skills live tonight. A report-validation skill came back with a headline_gap of 1.4 and two reasoning gaps. A standup digest skill came back with a headline_gap of 2.4 and two reasoning gaps, in factual grounding and analytical depth. Both were held by the gate, and the code's recommendation in both cases was the same: move the format gaps into code first, then re-measure.
+Not every skill descends. Two skills the gate holds make the point concrete. A report-validation skill comes in with a headline_gap of 1.4 and two reasoning gaps. A standup digest skill comes in with a headline_gap of 2.4 and two reasoning gaps, in factual grounding and analytical depth. Both are held by the gate, and the code's recommendation in both cases is the same: move the format gaps into code first, then run the sweep again.
 
 Earlier, a Korean AI-writing-tell remover skill came in at a headline_gap of 2.0, well over the threshold, carrying three fixable gaps alongside one reasoning gap. That, too, was held. In this case the correct VETD output isn't a descent, it's a work order: close the three fixable gaps through skill edits and measure again.
 
-This part matters. A system that only ever descends is broken. The gate has to be able to say no. Systems under pressure to cut cost drift toward descending everything, and tonight's two live measurements, plus the humanizer skill's hold, are exactly the gate holding its ground against that pressure.
+This part matters. A system that only ever descends is broken. The gate has to be able to say no. Systems under pressure to cut cost drift toward descending everything, and the two held measurements, plus the humanizer skill's hold, are exactly the gate holding its ground against that pressure.
 
 ## The failure that actually hurt
 
@@ -104,6 +110,14 @@ Prompts, skills, and model versions all drift. A descent valid today can become 
 VETD treats model-cost reduction as a measurement and gating problem, not a modeling problem. Validate with the expensive tier first, confine the expensive model to judging rather than doing the work, and let deterministic code own both the pass gate and, wherever possible, the output format. Do that and one person can push most of a 16-skill fleet down to a mid tier while keeping the few skills that genuinely need capability on the frontier tier. And the loop caught the one time it mistook a quota outage for a quality failure.
 
 The portable takeaway compresses to a single line: **spend your best model finding the places it's no longer needed.**
+
+## References
+
+Canonical links for the judge-based evaluation, cost-cascade research, and model documentation this method draws on.
+
+- Judge-based evaluation: [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv:2306.05685)](https://arxiv.org/abs/2306.05685)
+- Cost cascade: [FrugalGPT (arXiv:2305.05176)](https://arxiv.org/abs/2305.05176)
+- Model tier docs: [Claude Models Overview](https://platform.claude.com/docs/en/models/overview)
 
 ---
 

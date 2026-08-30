@@ -115,6 +115,14 @@ VETD는 모델 비용 절감을 모델링 문제가 아니라 측정과 게이�
 
 옮겨 갈 수 있는 핵심은 한 문장으로 줄어듭니다. **가장 좋은 모델은, 그 모델이 더는 필요 없는 자리를 찾아내는 데 쓰십시오.**
 
+## 참고 자료
+
+이 방법이 참고한 심판 기반 평가와 비용 캐스케이드 연구, 모델 문서의 정본 링크입니다.
+
+- 심판 기반 평가: [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv:2306.05685)](https://arxiv.org/abs/2306.05685)
+- 비용 캐스케이드: [FrugalGPT (arXiv:2305.05176)](https://arxiv.org/abs/2305.05176)
+- 모델 티어 문서: [Claude Models Overview](https://platform.claude.com/docs/en/models/overview)
+
 ---
 
 *이 글의 방법과 수치는 ThakiCloud 자동화 함대의 실제 운영 기록입니다. 정리한 논문 초안은 [PDF]({{ '/assets/papers/vetd-cost-descent-2026-07-12.pdf' | relative_url }})로 함께 공개합니다.*

@@ -16,6 +16,9 @@ toc_label: "목차"
 header:
   teaser: /assets/images/model-ladder-quant-drafter-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/quant-drafter-ladder/"
+audiobook: "https://drive.google.com/file/d/1rU4TD6m9bFrRqeAlZOsJ1m5DJwPvPC2c/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 27B급 모델을 자체 GPU에 올려 서비스하고 계시다면, 모델을 바꾸지 않고 속도를 어디까지 올릴 수
@@ -28,6 +31,9 @@ NVIDIA B200 한 장, 같은 프롬프트, 요청은 한 번에 하나씩입니�
 {% include video id="1QeNnUJiIqo0wrM35J2DUiQpBmd0XyYEQ" provider="google-drive" %}
 
 *두 단계를 각각 나란히 녹화했습니다. 두 창이 함께 흐르지만 동시에 돌린 것은 아닙니다.*
+
+![같은 27B 모델에 두 가지를 했더니 초당 97토큰이 458토큰이 됐습니다 개념을 형상화한 이미지](/assets/images/quant-drafter-ladder-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 한 번에 하나씩만 바꿨습니다
 
@@ -281,3 +287,28 @@ flowchart TB
 
 모델을 바꾸지 않고 서빙 계층만 손봐서 얻은 값이라는 점이 요점입니다. 자체 GPU에 모델을 올려
 쓰고 계시다면, 지금 구성에서 얼마나 남아 있는지 한번 재보실 만합니다.
+
+## 참고 자료
+
+본문이 참조한 모델 빌드와 vLLM 기능의 정본 링크입니다.
+
+- Qwen3.8-27B: [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)
+- NVFP4 빌드: [ThakiCloud/Qwen3.8-27B-NVFP4-FP8ATTN](https://huggingface.co/ThakiCloud/Qwen3.8-27B-NVFP4-FP8ATTN)
+- 드래프터: [z-lab/Qwen3.8-27B-DFlash2](https://huggingface.co/z-lab/Qwen3.8-27B-DFlash2)
+- vLLM 추측 디코딩: [vLLM Docs, Speculative Decoding](https://docs.vllm.ai/en/latest/features/speculative_decoding/)
+- vLLM 수용 길이 지표: [vLLM Docs, Per-Request Acceptance Metrics](https://docs.vllm.ai/en/latest/features/speculative_decoding/acceptance_metrics/)
+- vLLM NVFP4 양자화: [vLLM Docs, ModelOpt (NVFP4)](https://docs.vllm.ai/en/latest/features/quantization/modelopt/)
+- B200: [NVIDIA DGX B200](https://www.nvidia.com/en-us/data-center/dgx-b200/)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
+
+![quant-drafter-ladder 슬라이드 1](/assets/images/quant-drafter-ladder-slide-01.webp)
+
+![quant-drafter-ladder 슬라이드 2](/assets/images/quant-drafter-ladder-slide-02.webp)
+
+![quant-drafter-ladder 슬라이드 3](/assets/images/quant-drafter-ladder-slide-03.webp)
+
+![quant-drafter-ladder 슬라이드 4](/assets/images/quant-drafter-ladder-slide-04.webp)
+

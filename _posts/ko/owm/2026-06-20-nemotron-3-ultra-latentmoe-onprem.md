@@ -25,11 +25,17 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/owm/nemotron-3-ultra-latentm
 reading_time: true
 categories:
   - owm
+audiobook: "https://drive.google.com/file/d/1UfGTdbbg4mDcU_ZcPzbNtssbvNvxL5Vl/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ⏱️ **예상 읽기 시간**: 8분
 
 ![Nemotron-3-Ultra 하이브리드 아키텍처 개념도]({{ '/assets/images/nemotron-3-ultra-hero.webp' | relative_url }})
+
+![NVIDIA Nemotron-3-Ultra-550B: LatentMoE 하이브리드, 1M 컨텍스트, 한국어 지원 온프렘 분석 개념을 형상화한 이미지](/assets/images/nemotron-3-ultra-latentmoe-onprem-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## Nemotron-3-Ultra-550B 개요
 
@@ -113,3 +119,12 @@ MTP speculative decoding을 vLLM에서 5토큰 단위로 쓸 수 있어서 throu
 **한국어 공식 지원이 국내 엔터프라이즈 온프렘 근거가 됩니다.** 한국어가 10개 공식 지원 언어 중 하나로 명시된 것은 중요합니다. 많은 대형 모델이 한국어를 지원한다고 하지만 공식 평가 언어에 포함되는 경우는 드뭅니다. 금융, 공공, 의료 등 한국어 문서 처리가 핵심인 엔터프라이즈 온프렘 도입의 근거 자료로 쓸 수 있습니다. 다만 한국어 벤치마크 수치가 별도로 제시되지 않아서, 실제 한국어 성능 검증은 자체 평가 세트로 진행해야 합니다.
 
 OpenMDW-1.1 라이선스는 NVIDIA가 설계한 오픈 모델 라이선스입니다. 상용 온프렘 배포 전 라이선스 원문 검토는 필수입니다.
+
+## 참고 자료
+
+본문이 참조한 모델카드, 라이선스, 아키텍처, 하드웨어의 정본 링크입니다.
+
+- 모델카드: [nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16)
+- 라이선스: [OpenMDW-1.1](https://openmdw.ai/license/1-1/)
+- Mamba 아키텍처: [state-spaces/mamba](https://github.com/state-spaces/mamba)
+- 하드웨어: [NVIDIA DGX B200](https://www.nvidia.com/en-us/data-center/dgx-b200/)

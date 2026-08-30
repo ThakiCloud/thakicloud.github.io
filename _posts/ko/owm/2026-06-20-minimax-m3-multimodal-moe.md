@@ -102,3 +102,11 @@ python -m sglang.launch_server \
 **1M 컨텍스트와 멀티모달 에이전트 파이프라인.** M3의 1M 컨텍스트와 이미지/비디오 입력 능력은 문서 분석, 코드 저장소 전체 탐색, 영상 이해 에이전트 구축에 활용 가능합니다. 현재 ThakiCloud의 Kueue 기반 배치 파이프라인에 M3 서빙 엔드포인트를 붙이면 긴 컨텍스트가 필요한 태스크를 배치로 처리하는 구조를 만들 수 있습니다. 단 자원 비용이 크므로 태스크별로 실제 컨텍스트 길이가 얼마나 필요한지 먼저 측정하는 것이 선행되어야 합니다.
 
 M2.7 기반 워크로드가 이미 있다면 M3로 업그레이드할 때 추론 파라미터(`thinking` 모드)와 멀티모달 입력 처리 부분을 별도로 검토해야 합니다. 드롭인 교체가 아니라 인터페이스 변경이 수반됩니다.
+
+## 참고 자료
+
+본문이 참조한 모델카드와 논문의 정본 링크입니다.
+
+- 모델카드: [MiniMaxAI/MiniMax-M3](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- MSA 논문: [arXiv:2606.13392, MiniMax Sparse Attention](https://arxiv.org/abs/2606.13392)
+- 공식 사이트: [MiniMax](https://www.minimaxi.com/)

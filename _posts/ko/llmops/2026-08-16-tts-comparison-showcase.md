@@ -21,6 +21,9 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showcase/"
+audiobook: "https://drive.google.com/file/d/1eC_HNrx9NR3zGA6gcWG4VYbVBSZ3_iFT/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![다국어 TTS 비교]({{ site.url }}{{ site.baseurl }}/assets/images/tts-comparison-showcase-hero.webp)
@@ -38,6 +41,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/tts-comparison-showca
 | 영어 | Kokoro-82M (CPU로 충분) | 아무거나 (차이 작음) | 없음 |
 | 중국어 | VoxCPM2 | Qwen3-TTS | **Zonos (깨짐)** |
 | 일본어 | VoxCPM2 | Supertonic-3 | 전 모델 검수 필요 |
+
+![다국어 TTS 5종 들어보기: 한국어 영어 중국어 일본어, 어느 모델을 쓸까 개념을 형상화한 이미지](/assets/images/tts-comparison-showcase-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 한국어
 
@@ -429,7 +435,35 @@ CPU에서 돌린 두 모델의 전력 수치는 신뢰하지 마시기 바랍니
 음성을 요구하는 복제형 모델이었습니다. 참조 음성을 주는 순간 재는 대상이 음성합성 품질에서 복제
 충실도로 바뀌기 때문에 같은 표에 섞지 않았습니다. 그쪽은 따로 다루겠습니다.
 
+## 참고 자료
+
+비교에 쓴 모델과 지표의 정본 링크입니다.
+
+- Qwen3-TTS: [Qwen/Qwen3-TTS-12Hz-1.7B-Base](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base)
+- VoxCPM2: [openbmb/VoxCPM2](https://huggingface.co/openbmb/VoxCPM2)
+- Zonos: [Zyphra/ZONOS2](https://huggingface.co/Zyphra/ZONOS2)
+- Supertonic-3: [Supertone/supertonic-3](https://huggingface.co/Supertone/supertonic-3)
+- Kokoro-82M: [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)
+- Chatterbox: [ResembleAI/chatterbox](https://huggingface.co/ResembleAI/chatterbox)
+- UTMOS: [mosmodels/utmos](https://huggingface.co/mosmodels/utmos)
+- Whisper large-v3: [openai/whisper](https://github.com/openai/whisper)
+- FLEURS: [google/fleurs](https://huggingface.co/datasets/google/fleurs)
+- TTSDS2: [arXiv:2506.19441](https://arxiv.org/abs/2506.19441)
+
 ---
 
 샘플 61개는 모두 이 측정에서 나온 실제 합성 결과이고, 후처리나 선별 없이 원장이 가리키는 파일을
 그대로 변환한 것입니다.
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![tts-comparison-showcase 슬라이드 1](/assets/images/tts-comparison-showcase-slide-01.webp)
+
+![tts-comparison-showcase 슬라이드 2](/assets/images/tts-comparison-showcase-slide-02.webp)
+
+![tts-comparison-showcase 슬라이드 3](/assets/images/tts-comparison-showcase-slide-03.webp)
+
+![tts-comparison-showcase 슬라이드 4](/assets/images/tts-comparison-showcase-slide-04.webp)
+

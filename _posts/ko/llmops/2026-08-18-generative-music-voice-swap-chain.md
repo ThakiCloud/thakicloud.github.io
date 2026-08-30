@@ -19,6 +19,9 @@ tags:
 categories:
   - llmops
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/generative-music-voice-swap-chain/"
+audiobook: "https://drive.google.com/file/d/1MThGa0kU9Dr0R_NzIgXCtYyHVg-tDVec/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 생성 음악에 원하는 목소리를 앉히려고 캡션을 붙들고 계신다면, 그 방향으로는 도착하지 못합니다.
@@ -38,6 +41,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/generative-music-voic
 한 가지 미리 말씀드립니다. 이 글에서 다루는 목소리 교체는 실존 인물의 음성을 복제하는 작업이
 아닙니다. 바꾸는 쪽도 바뀌는 쪽도 전부 합성 음성이고, 특정 가수의 목소리나 이름을 참조하지
 않았습니다. 캐스팅에 쓴 것은 사내에서 만든 합성 앵커 몇 종뿐입니다.
+
+![생성 음악의 목소리는 캡션으로 안 바뀝니다: 보컬만 떼어내 갈아 끼운 기록 개념을 형상화한 이미지](/assets/images/generative-music-voice-swap-chain-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 캡션으로는 목소리가 움직이지 않습니다
 
@@ -195,3 +201,25 @@ MiniMax-Music3로 만든 곡입니다. 참고로 음색 클로닝을 네이티�
 
 여기 실린 수치는 전부 사내 B200과 H200에서 잰 실측값이고, 목소리에 대한 채택 여부는 사람이
 듣고 판정한 결과입니다.
+
+## 참고 자료
+
+체인에 쓴 오픈소스 도구의 정본 링크입니다.
+
+- MiniMax-Music3: [MiniMaxAI/MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3)
+- demucs (htdemucs): [facebookresearch/demucs](https://github.com/facebookresearch/demucs)
+- Chatterbox: [ResembleAI/chatterbox](https://huggingface.co/ResembleAI/chatterbox)
+- WORLD: [mmorise/World](https://github.com/mmorise/World)
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
+
+![generative-music-voice-swap-chain 슬라이드 1](/assets/images/generative-music-voice-swap-chain-slide-01.webp)
+
+![generative-music-voice-swap-chain 슬라이드 2](/assets/images/generative-music-voice-swap-chain-slide-02.webp)
+
+![generative-music-voice-swap-chain 슬라이드 3](/assets/images/generative-music-voice-swap-chain-slide-03.webp)
+
+![generative-music-voice-swap-chain 슬라이드 4](/assets/images/generative-music-voice-swap-chain-slide-04.webp)
+
