@@ -20,6 +20,9 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/uber-software-factory-agent-cost/"
+audiobook: "https://drive.google.com/file/d/1_e4bX1d1sNjgBNvsyd2oAHd3X2bbvI3Z/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ## 왜 읽어야 하나
@@ -28,7 +31,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/uber-software-facto
 
 Uber가 2026년 8월 27일에 공개한 숫자가 그 명제를 뒷받침합니다. 2월부터 8월까지 주간 활성 사용자는 7배, 주간 에이전트 요청은 9.4배 늘었는데 AI 총지출은 4월 이후로 거의 평평합니다. 모델 업그레이드 효과를 제거하려고 같은 모델을 고정해서 다시 재보니, 요청 1,000건당 비용이 정점 대비 34% 낮아졌고 세션당 비용은 6월 고점 대비 52% 낮아졌습니다. 쓰는 양이 9배가 되는 동안 단위 비용이 절반이 된 것입니다.
 
-![파이프라인 밖으로 새어 나가는 토큰을 형상화한 이미지](/assets/images/uber-software-factory-agent-cost-hero.webp)
+![대부분이 걸러지고 일부만 목적지에 닿는 토큰 흐름을 형상화한 이미지](/assets/images/uber-software-factory-agent-cost-hero.webp)
 
 에이전트가 쓰는 것의 대부분은 사용자의 요청에 닿지 않습니다.
 
@@ -142,6 +145,10 @@ Uber의 숫자를 그대로 우리 조직에 대입할 수는 없습니다. Uber
 에이전트 비용을 낮추는 일은 결국 엔지니어링 문제입니다. 더 싼 모델로 내려가거나 도구를 덜 쓰게 만드는 대신, 가치를 만들지 않는 토큰을 찾아내 제거하는 쪽이 이깁니다. Uber는 그렇게 해서 사용량을 7배로 키우면서 단위 비용을 전 지표에서 낮췄고 품질은 유지하거나 개선했습니다.
 
 당장 해볼 것을 하나만 고른다면 지금 쓰는 에이전트의 세션 시작 컨텍스트를 재보시길 권합니다. 사용자가 첫 프롬프트를 입력하기 전에 툴 정의와 시스템 지시로 몇 토큰이 이미 차 있는지 세어 보면, 그 숫자가 매 턴 반복해서 청구되고 있다는 사실이 바로 보입니다. 저희는 그 값이 18만 6천이었습니다. 재고 나서야 이 글의 나머지가 남의 회사 이야기로 읽히지 않았습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/uber-software-factory-agent-cost/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 
