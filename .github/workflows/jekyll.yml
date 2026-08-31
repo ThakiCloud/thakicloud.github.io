@@ -150,6 +150,13 @@ jobs:
       - name: ⛔ Script purity (no stray Arabic/Cyrillic/Kana in built pages)
         run: python3 scripts/script_purity_check.py _site
 
+      # ⛔ 무거운 페이지는 리뷰에서 안 보인다 — 마크다운은 똑같고 빌드는 초록이고
+      # 값은 폰으로 읽는 사람만 치른다. 상한은 **전송(gzip)** 기준이다: 이 사이트는
+      # raw 5.3MB 인데 96%가 공백이라 실제 다운로드는 63KB 다. raw 로 재면 멀쩡한
+      # 페이지를 전부 떨어뜨린다(비대는 경고로만 표면화).
+      - name: ⛔ Page weight (transfer > 500KB fails)
+        run: python3 scripts/page_weight_check.py _site
+
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v6
         with:
