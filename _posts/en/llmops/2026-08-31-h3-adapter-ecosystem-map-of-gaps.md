@@ -36,6 +36,9 @@ The residents did not wait. They installed their own intercoms, did their own fi
 
 The model in this post is that apartment. And the small parts people used to bolt onto models like this were mostly **wallpaper**. They changed the look and the palette. That has shifted. People are now working on the **plumbing and the frame**. I will keep this comparison for the rest of the post.
 
+![Overall stack with adapters attached above and below the H3 base](/assets/images/h3-adapter-ecosystem-map-of-gaps-architecture.webp)
+*The whole stack in one picture. The three dashed slots are the modules that were never released, and community modules sit in them.*
+
 ## What we counted
 
 MiniMax H3 is an open-weight video generation model published to Hugging Face on 28 July 2026. It packs text, images, video, and audio into a single sequence, and produces video together with stereo audio. We covered what it takes to host it in-house in an [earlier post](/tech-blog/en/llmops/minimax-h3-omni-modal-onprem-serving/).
