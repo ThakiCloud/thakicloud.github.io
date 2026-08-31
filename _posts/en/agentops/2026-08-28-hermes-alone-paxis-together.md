@@ -29,9 +29,6 @@ This post records what happened when we pointed Paxis at our in-house endpoint a
 ![What remains after the agent answers](/assets/images/hermes-alone-paxis-together-hero.webp)
 *A queryable ledger on one side, a conversation on the other. One model feeds both.*
 
-![One model behind two interfaces](/assets/images/hermes-alone-paxis-together-slide-01.webp)
-*The same Qwen3.8-27B NVFP4 245k arm, seen by a local agent (Hermes desktop) and by Paxis.*
-
 Measurement conditions first. Everything pointed at `https://e70a2682812d-8000.demo.thakicloud.net`, and the prompt was pasted character for character. Each case ran once, sequentially, on the same MacBook. So the seconds below indicate an order of magnitude. Token counts and row counts are read straight out of the product's own ledger.
 
 ## First task: budget check on spending requests
@@ -41,9 +38,6 @@ We supplied remaining budgets for three cost centers and three requests, and ask
 <video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/paxis-245k-budget-poster.jpg" style="max-width:100%">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/paxis-245k-budget.mp4" type="video/mp4">
 </video>
-
-![Verdicts on the three spending requests](/assets/images/hermes-alone-paxis-together-slide-02.webp)
-*All three correct to the won, with rejection reasons attached.*
 
 All three landed. The value of that screen is not the verdict, though. It is the step that runs **before** the answer.
 
@@ -81,9 +75,6 @@ Underneath, the ledger keeps **one row per call**. Pulling the calls from a sing
 | 09:38:22 | Qwen3.8-27B NVFP4 245k | 9,437 | 1,132 | 2,291ms |
 | 09:38:25 | Qwen3.8-27B NVFP4 245k | 8,099 | 1,109 | 3,356ms |
 
-![Model and tokens per call within one turn](/assets/images/hermes-alone-paxis-together-slide-04.webp)
-*Only the routing classification went to the 8B; every call that wrote the answer went to the 245k.*
-
 The first row stands out. One routing classification went to a distilled 8B, and every call that actually wrote the answer went to the 245k model. What matters is less that we designed it that way and more that **the fact can be pulled into a table later**. When a bill looks wrong you can name the call responsible; when an answer is wrong you can name the model that wrote the sentence. This instance's call ledger currently holds 9,881 rows.
 
 Context volume falls out of the same structure. Paxis sent 24,411 input tokens upstream for the budget case, because it narrows to the matched skill rather than shipping a full tool catalogue on every call.
@@ -95,9 +86,6 @@ Audit events accumulated separately over the same minutes. `agent.routing.ground
 Rejecting a budget line blocks someone's spending. That person asks why, and the question usually arrives days later. What you need then is one query with a filter on it rather than a scroll back through a chat window.
 
 Audit is not the only thing. Approval proposals sit in `approval_proposals` at 160 rows, credentials live in a vault with versions and an access log, and execution quality gets scored separately in `eval_reports` at 122 rows. Metering accumulates in `usage_entries` at 9,613 rows alongside rate contracts. None of this looks related to answer quality, yet every item becomes something a person asks about once an organization actually runs agents.
-
-![The layers under a provable process](/assets/images/hermes-alone-paxis-together-slide-05.webp)
-*The model writes the answer; the infrastructure above it runs the work.*
 
 ## The same work on a local agent
 
@@ -118,9 +106,6 @@ The KPI case.
 Three verdicts and nine KPI rows came out matching the Paxis side. The screen is also fast and quiet: paste, press enter, get a table. Those two clips are why the earlier sentence about a local tool being better in a solo seat is not a courtesy.
 
 What differed was the volume sent upstream.
-
-![Input token comparison on the budget case](/assets/images/hermes-alone-paxis-together-slide-03.webp)
-*Budget case. A structural difference, not a general cost comparison.*
 
 On the budget case the local agent spent 126,861 input tokens and Paxis spent 24,411. On the KPI case the figures were 48,477 and 23,467. The local agent ships its full tool catalogue on every call while Paxis narrows to the matched skill. Call counts and architectures differ, so these are not divided by a common yardstick. The direction held across both cases, though: registering the procedure shortens the context by that much.
 

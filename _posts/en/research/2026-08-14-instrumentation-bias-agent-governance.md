@@ -38,8 +38,6 @@ Counting seemed simple. Every closure leaves a receipt in a ledger, and every fa
 
 There are several ways to read that 5%. The first reading is that the rule was ignored 95% of the time. The second is that verification happened often but simply went unrecorded. Leaving a receipt in the original workflow meant writing a JSON verification record by hand, setting a kill/keep threshold, and manually invoking a logging script, five steps in all, and almost no one voluntarily completes that procedure once they already feel the verification itself is done. The third reading is that the measurement itself is an artifact of where and how it was observed. Under the framework this paper builds, the number the dashboard showed does not distinguish among any of these three.
 
-![instrumentation-bias-agent-governance slide 1](/assets/images/instrumentation-bias-agent-governance-slide-01.webp)
-
 ## Instrumentation Bias: Having a Rule Is Not the Same as Being Able to Measure It
 
 The paper names this phenomenon instrumentation bias. It defines two separate indicators: C_true, whether verification actually happened, and C_obs, whether a receipt for it is visible to the auditor, and defines the gap between their expected values, Δ, as instrumentation bias. In this system, a receipt guarantees that verification really happened, but the reverse does not hold. Verification can happen without leaving a receipt, for instance when it is done ad hoc mid-conversation or when an operator eyeballs the result. So Δ is structurally always at least zero, and the compliance rate a dashboard shows is only a floor on the true compliance rate. This asymmetry is dangerous because a low dashboard number is always compatible with a situation where actual compliance is high. The dashboard alone cannot tell you whether the process is broken or the sensor is.
@@ -51,8 +49,6 @@ The paper breaks the path that opens Δ into three mechanisms. Manual-step frict
 
 The paper draws one distinction worth emphasizing here. Instrumentation bias is a different problem from Goodhart's Law, the observation that a measure stops meaning anything once it becomes a target. Goodhart's phenomenon is a validity problem: the metric keeps getting produced, but the process that produces it gets distorted. Instrumentation bias is a completeness problem: when the metric is produced correctly it is trustworthy, but it either does not get produced often enough or gets produced somewhere the auditor cannot reach. The two call for opposite responses. Guarding against Goodhart bias means being suspicious of a metric that looks good. Guarding against instrumentation bias means being suspicious of one that looks bad, or shows nothing at all.
 
-![instrumentation-bias-agent-governance slide 2](/assets/images/instrumentation-bias-agent-governance-slide-02.webp)
-
 ## The Measurement: Root Cause, and a Second Failure
 
 That same day, the team shipped two fixes. They replaced the five-step manual flow with two commands, `plan` and `tally`, moving threshold decisions, deduplication, and verification tallying from human judgment to deterministic code. They also attached a hook that fires automatically at dispatch time, so the receipt procedure gets surfaced at the exact moment a fan-out happens. Each fix targeted one mechanism precisely: the first targeted friction, the second targeted the awareness gap.
@@ -61,8 +57,6 @@ To check whether the fix actually raised the closure rate, the team designed a b
 
 The cause was a scope-parity gap in the audit tooling itself. Session transcripts get written under the local home directory of the machine running the interactive session, but this re-run scan executed on a separate batch compute node, one where that directory did not exist at all. The glob pattern expanded to an empty set, and every downstream aggregation deterministically inherited zero. What makes this trickier is that the failure was silent. The job exited cleanly with no error and reported zero in every field, exactly the shape you would get if verification genuinely never closed at all. The scan logic, the window parameters, the statistical design, and the ledger path were all correct. Every component a code review could inspect was fine, yet the result was empty. Whether an auditor stands in the same place as what it is auditing is a deployment property that no unit test, no code review, and no reasoning trace from the model that wrote the scanner could have caught.
 
-![instrumentation-bias-agent-governance slide 3](/assets/images/instrumentation-bias-agent-governance-slide-03.webp)
-
 ## Three Implications This Result Leaves Behind
 
 This incident leaves a different lesson at each of three levels. At the level of a single company, it yields a practical directive: when you quantify fan-out verification compliance in your own harness, verify separately that the rule exists and that the rule is instrumented. Treat those two as the same thing at the policy-design stage, and you will repeat both failure modes: misdiagnosing a process that is actually working well as broken and over-correcting it, or mistaking a system that no one is watching for a healthy one.
@@ -70,8 +64,6 @@ This incident leaves a different lesson at each of three levels. At the level of
 At the social level, this carries implications for the AI audit and regulation debate. The machine-readable compliance frameworks now emerging raise the value of evidence that reaches the ledger, but they do nothing for evidence that was never generated or never collected in the first place. If anything, they make the result look more plausible and authoritative without making it more complete. So the paper's proposal is that these frameworks should carry, as a required field alongside the compliance number, coverage metadata stating how much of the actual scope the auditor was able to observe.
 
 At the scientific level, the core contribution is formalizing a new failure mode for autonomous agent harnesses. The paper decomposes instrumentation bias into three mechanisms, distinguishes it from the Goodhart phenomenon, and proposes a protocol for measuring it with a before/after natural experiment run against real production session logs, thousands of sessions and hundreds of fan-outs. What makes this paper most persuasive, though, is that the first attempt to run that protocol became a live instance of the third mechanism the framework itself predicted, the scope-parity gap. The team that had just finished cataloguing instrumentation bias reproduced that exact failure with its own hands.
-
-![instrumentation-bias-agent-governance slide 4](/assets/images/instrumentation-bias-agent-governance-slide-04.webp)
 
 ## Limits and Next Steps
 
