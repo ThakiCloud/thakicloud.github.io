@@ -50,22 +50,15 @@ So any contamination figure has to carry its temperature. A number without one c
 
 You also need a noise floor. Running the same model twice under identical settings gives 2.67% and 2.33%. **0.33 percentage points move on their own between runs.** Anything smaller than that should not be read as an effect. In fact, out of 2,000 prompts, 569 flipped contamination status when the same model was run against itself. This looks less like a property of the prompt and more like a property of sampling.
 
-## DPO learned it and did not transfer
+## DPO learned it; whether it transfers is still open
 
 Preference learning was the first attempt. We built minimal pairs: take a response containing Han characters, replace only the Han spans with Korean, and use that as the preferred answer. The median sequence similarity between the two is 0.9979, so the only thing the model can learn is the presence or absence of Han characters.
 
-Training converged cleanly. Held-out preference accuracy reached 97.4% and the loss went to zero. Then we measured actual generation.
+Training converged cleanly. Held-out preference accuracy reached 97.4% and the loss went to zero.
 
-| | base | after DPO |
-|---|---|---|
-| 384 prompts used in training | 15.10% | 10.94% |
-| 2,985 unseen prompts | 10.69% | **11.32%** |
+The generation-side check, however, turned out to be void. A later audit showed that our serving engine was silently ignoring LoRA adapters for this model family: at temperature 0, adapter output was byte-identical to base output. The column we believed was "after DPO" was in fact the base model measured twice. An earlier version of this article carried a transfer-failure table built on that comparison; we have removed it, and we are re-measuring with the adapter merged directly into the weights.
 
-It improved only on the prompts it trained on. On everything else it moved slightly the wrong way.
-
-The reason is a mismatch of levels. DPO adjusts the relative likelihood of **two complete responses**, while contamination is a **single-token event** that fires at an arbitrary position. "Prefer the Korean version of this answer over the Han version" does not translate into "emit fewer Han tokens anywhere." The model gained a discriminative skill; its generative tendency stayed put.
-
-The literature says the same thing. [The TLPO paper](https://arxiv.org/abs/2604.26553) notes that "prior mitigation approaches based on sequence-level fine-tuning, such as DPO, ORPO, and GRPO, operate at the level of entire responses," and proposes token-level intervention instead. Our experiment failed exactly as predicted.
+The hypothesis stands, unverified. DPO adjusts the relative likelihood of **two complete responses**, while contamination is a **single-token event** that fires at an arbitrary position. [The TLPO paper](https://arxiv.org/abs/2604.26553) points at the same limitation of sequence-level fine-tuning and proposes token-level intervention. But this experiment did not test it.
 
 Scale was also short. We used 346 pairs; SASFT, tackling the same symptom with SFT, used 110k to 210k samples. That said, more data does not dissolve a level mismatch.
 
@@ -151,4 +144,4 @@ When you deal with Han characters leaking into Korean output, work in this order
 
 The approach is not new. [`dnotitia/smoothie-qwen`](https://github.com/dnotitia/smoothie-qwen) already ships pre-adjusted Qwen checkpoints in the same direction. What we added is a curve built around preserving Korean Hanja, plus the two observations above.
 
-One last thing to be clear about. **This is hygiene, not style.** A separate attempt in the same project to make the Korean prose sound human failed, because the training targets were nearly identical to the base model's own output. Removing Han characters does not make writing natural. That is a different problem and it needs different data.
+One last thing to be clear about. **This is hygiene, not style.** A separate attempt in the same project to make the Korean prose sound human is still unjudged: the same serving defect voided its comparison, and we are re-measuring. What did hold up is that its training targets were nearly identical to the base model's own output. Removing Han characters does not make writing natural. That is a different problem and it needs different data.
