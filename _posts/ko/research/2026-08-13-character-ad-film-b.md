@@ -94,9 +94,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b
 
 ![character-ad-film-b 슬라이드 3](/assets/images/character-ad-film-b-slide-03.webp)
 
-## 그래서 이 글의 원래 제목은 틀렸습니다
-
-이 글은 처음에 "학습이 졌다"는 제목으로 나갔습니다. 학습이 진 게 아니라 저희가 학습 데이터를 잘못 만든 것이었고, 그것은 고칠 수 있는 문제였습니다.
+## 배경 다양성을 맞췄을 때의 재비교
 
 배경 다양성이 같아진 상태에서 다시 비교하면 오히려 학습 쪽이 유리한 자리가 보입니다. 클립 안에서 주체가 가장 무너지는 지점을 보면 학습본이 0.819, zero-shot이 0.568로 이 차이는 통계적으로 유의합니다(p=0.044). 위 그림 첫 줄에서 zero-shot이 마스코트를 통째로 놓친 것이 이 숫자의 정체입니다. 다만 평균 충실도 차이(0.843 대 0.724)는 여덟 개 클립에서는 유의하지 않으므로(p=0.16), 지금 말할 수 있는 것은 평균이 아니라 최악의 순간에 대한 이야기입니다.
 
@@ -115,3 +113,11 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/character-ad-film-b
 이번 일에서 실제로 값어치를 한 것은 어느 방법이 이겼느냐가 아니라, 틀린 결론을 자기 데이터로 다시 재서 뒤집을 수 있었다는 점입니다. 방법을 바꾸는 것이 아니라 데이터를 바꿔야 하는 문제였다는 것도, 재보지 않았다면 알 수 없었습니다.
 
 이 글의 수치는 시뮬레이션이 아니라 사내 GPU에서 측정한 값입니다.
+
+## 참고 자료
+
+- [VACE: All-in-One Video Creation and Editing](https://arxiv.org/abs/2503.07598): 비교에 쓴 zero-shot 레퍼런스 조건 방식
+- [Wan2.2](https://github.com/Wan-Video/Wan2.2): 베이스로 쓴 오픈 가중치 영상 모델
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685): 학습 어댑터의 원 논문
+- [이전 글: 레퍼런스 조건 영상 LoRA를 사내 GPU로 재현하기](https://thakicloud.com/tech-blog/ko/research/ref2va-reference-video-lora/): LoRA 학습 레시피와 동일 조건 비교의 기준
+- [마스코트 눈이 외계인 같다면 색이 아니라 캐치라이트 문제입니다](https://thakicloud.com/tech-blog/ko/research/mascot-redesign-eyes-and-actions/): 같은 커피콩 마스코트 시리즈의 후속(눈 리디자인과 레퍼런스 표정 다양화)

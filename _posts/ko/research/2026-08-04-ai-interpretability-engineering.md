@@ -167,6 +167,14 @@ flowchart TB
 
 이 글의 내용은 저희가 정리한 전자책, 『AI Interpretability Engineering: 프로덕션 모델의 Decision을 읽는 기술』의 일부를, 블로그용으로 다시 쓴 것입니다.
 
+## 출처
+
+- [Eliciting Latent Predictions from Transformers with the Tuned Lens](https://arxiv.org/abs/2303.08112) (Belrose et al., 2023): 레이어별 로짓 디코딩(Logit Lens) 기법의 후속 논문
+- [An Adversarial Example for Direct Logit Attribution](https://arxiv.org/abs/2310.07325) (Janiak et al., 2023): Direct Logit Attribution의 한계를 논한 논문
+- [Steering Llama 2 via Contrastive Activation Addition](https://arxiv.org/abs/2312.06681) (Panickssery et al., 2023): 스티어링 벡터(activation addition) 방식의 대표 논문
+- [What do you learn from context? Probing for sentence structure in contextualized word representations](https://arxiv.org/abs/1905.06316) (Tenney et al., 2019): 선형 프로브 기법의 대표 논문
+- [EU 인공지능법 (Regulation (EU) 2024/1689), EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj): 본문이 언급한 의사결정 설명 의무를 요구하는 규제
+
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-interpretability-engineering/ch01.webp)
 ![2장 삽화](/assets/images/books/ai-interpretability-engineering/ch02.webp)

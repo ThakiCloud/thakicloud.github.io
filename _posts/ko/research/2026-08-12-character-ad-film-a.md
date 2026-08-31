@@ -52,3 +52,9 @@ flowchart LR
 이 광고 한 편은 데이터가 밖으로 나가지 않는 콘텐츠 파이프라인의 실증이기도 합니다. 캐릭터 학습(Maxis의 자리)부터 샷 생성과 조립(Metis 위에서 도는 추론)까지 전부 고객이 통제하는 인프라 안에서 닫혔습니다. 브랜드 자산인 캐릭터를 외부 API에 올리지 않고도 캠페인 규모의 영상 생산이 가능하다는 것을 43초로 보여드린 셈입니다.
 
 다음 편에서는 더 어려운 질문으로 갑니다. 얼굴이 아닌 대상, 그러니까 마스코트 캐릭터를 같은 파이프라인으로 학습해 두 번째 광고를 만들고, 학습 없이 레퍼런스만 주는 zero-shot 방식과 같은 조건에서 정면 비교한 실측 결과까지 함께 공개하겠습니다.
+
+## 참고 자료
+
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685): 레퍼런스 조건 어댑터 학습의 원 논문
+- [Wan2.2](https://github.com/Wan-Video/Wan2.2): 베이스로 쓴 오픈 가중치 영상 모델
+- [이전 글: 레퍼런스 조건 영상 LoRA를 사내 GPU로 재현하기](https://thakicloud.com/tech-blog/ko/research/ref2va-reference-video-lora/): 이 광고가 그대로 재사용한 LoRA와 어댑터 강도(1.0/0.7) 측정의 출처

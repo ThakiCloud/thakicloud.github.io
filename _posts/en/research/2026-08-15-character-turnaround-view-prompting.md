@@ -264,3 +264,8 @@ characters, and the fact that the rule does nothing would have gone unnoticed.
 
 The numbers and images in this post come from actual runs, and the character shown is an
 original design we own.
+
+## References
+
+- [If your character comes back as a different character every time, more reference images will not fix it](https://thakicloud.com/tech-blog/en/research/character-identity-edit-vs-adapter/) (measured on the same character editing pipeline)
+- [If Your Mascot Keeps Standing There, Change the References, Not the Prompt](https://thakicloud.com/tech-blog/en/research/reference-pose-beats-prompt/) (a lesson from the same character video pipeline)

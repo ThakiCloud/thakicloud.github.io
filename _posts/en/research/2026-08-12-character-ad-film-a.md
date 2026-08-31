@@ -52,3 +52,9 @@ The limits are equally visible. The rooftop shot failed to follow the background
 This one commercial is also a demonstration of a content pipeline where data never leaves. Character training (where Maxis sits) through shot generation and assembly (inference running on Metis) all closed inside customer-controlled infrastructure. A brand's character asset can drive campaign-scale video production without ever being uploaded to an external API, and this 43-second film is that claim made concrete.
 
 The next installment takes on the harder question: a non-face subject. We are training a mascot character through the same pipeline for a second commercial, and we will publish it together with a controlled head-to-head against zero-shot reference conditioning measured under identical conditions.
+
+## References
+
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685): the reference-conditioned adapter training method
+- [Wan2.2](https://github.com/Wan-Video/Wan2.2): the open-weights video model used as the base
+- [Previous post: Reimplementing a reference-conditioned video LoRA on internal GPUs](https://thakicloud.com/tech-blog/en/research/ref2va-reference-video-lora/): where this ad's reused LoRA and the adapter-scale (1.0/0.7) measurements come from

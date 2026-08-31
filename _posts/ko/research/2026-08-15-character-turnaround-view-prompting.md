@@ -249,3 +249,8 @@ flowchart TB
 
 이 글의 수치와 이미지는 실제로 돌린 결과이며, 등장하는 캐릭터는 저희가 권리를 가진
 오리지널 디자인입니다.
+
+## 참고 자료
+
+- [캐릭터가 매번 다른 캐릭터로 나온다면, 레퍼런스를 몇 장 더 넣는 것으로는 해결되지 않습니다](https://thakicloud.com/tech-blog/ko/research/character-identity-edit-vs-adapter/) (같은 캐릭터 편집 파이프라인의 실측)
+- [마스코트가 계속 서 있기만 한다면 프롬프트가 아니라 레퍼런스를 바꾸십시오](https://thakicloud.com/tech-blog/ko/research/reference-pose-beats-prompt/) (같은 캐릭터 영상 파이프라인의 교훈)

@@ -162,6 +162,14 @@ A single final probability value left in a log can't tell you "why" a model answ
 
 This post is adapted for the blog from a section of our ebook, AI Interpretability Engineering: Reading the Decisions of Production Models.
 
+## References
+
+- [Eliciting Latent Predictions from Transformers with the Tuned Lens](https://arxiv.org/abs/2303.08112) (Belrose et al., 2023): the Logit Lens follow-up covering per-layer logit decoding and its limits
+- [An Adversarial Example for Direct Logit Attribution](https://arxiv.org/abs/2310.07325) (Janiak et al., 2023): on the limits of DLA (correlation is not causation)
+- [Steering Llama 2 via Contrastive Activation Addition](https://arxiv.org/abs/2312.06681) (Panickssery et al., 2023): the activation-addition steering method
+- [What do you learn from context? Probing for sentence structure in contextualized word representations](https://arxiv.org/abs/1905.06316) (Tenney et al., 2019): a representative linear-probing study
+- [EU AI Act (Regulation (EU) 2024/1689), EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj): the regulation cited for decision-explanation duties
+
 ## Chapter Illustrations
 ![Chapter 1 illustration](/assets/images/books/ai-interpretability-engineering/ch01.webp)
 ![Chapter 2 illustration](/assets/images/books/ai-interpretability-engineering/ch02.webp)

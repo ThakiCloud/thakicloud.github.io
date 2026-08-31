@@ -85,9 +85,7 @@ The new adapter lands at 0.791, level with zero-shot's 0.792. What matters is th
 
 A second signal normalised alongside it. The collapsed adapter's clip-to-clip similarities had an unusually small spread of 0.022, meaning every pair was alike to the same degree, which is what convergence on a single background looks like. The retrained one sits at 0.060, in the same range as the other methods.
 
-## Which makes this post's original title wrong
-
-This piece first went out under a title saying training lost. Training did not lose. We built the training set badly, and that was fixable.
+## The comparison at equal background diversity
 
 Comparing again at equal background diversity even shows where training has the edge. At the point inside a clip where the subject degrades most, the trained arm reads 0.819 against zero-shot's 0.568, and that gap is significant (p=0.044). The first row of the figure above, where zero-shot drops the mascot entirely, is what that number is made of. The mean-fidelity gap of 0.843 against 0.724 is *not* significant across eight clips (p=0.16), so the claim available today is about the worst moments rather than the average.
 
@@ -104,3 +102,11 @@ Mascot clip generation, the twelve-clip training run, the controlled four-way co
 What actually earned its keep here was not that some method won, but that a wrong conclusion could be tested against our own data and reversed. That the fix belonged in the data rather than the method is also something no amount of reasoning would have told us.
 
 The numbers in this post are measured on internal GPUs, not simulated.
+
+## References
+
+- [VACE: All-in-One Video Creation and Editing](https://arxiv.org/abs/2503.07598): the zero-shot reference conditioning method in the comparison
+- [Wan2.2](https://github.com/Wan-Video/Wan2.2): the open-weights video model used as the base
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685): the trained adapter method
+- [Previous post: Reimplementing a reference-conditioned video LoRA on internal GPUs](https://thakicloud.com/tech-blog/en/research/ref2va-reference-video-lora/): the LoRA training recipe and the controlled-comparison baseline
+- [If Your Mascot's Eyes Look Alien, the Problem Is the Catchlight, Not the Colour](https://thakicloud.com/tech-blog/en/research/mascot-redesign-eyes-and-actions/): a follow-up in the same coffee-bean mascot series (eye redesign and reference-expression variety)
