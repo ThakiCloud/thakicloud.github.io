@@ -1,10 +1,10 @@
 ---
-title: "The Harness Is Code: AutoSaddler Learns Patches from Failure Traces"
-seo_title: "Automatic Agent Harness Optimization, AutoSaddler +9-10 pts on GAIA2/SWE-Bench Pro, Thaki Cloud"
-seo_description: "AutoSaddler (arXiv 2608.23041) from KAIST, POSTECH, and Microsoft treats the agent harness as code and learns structured patches from failure traces. It improves GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 by 9.0, 9.6, and 10.0 points with roughly 10x better rollout efficiency than GEPA and Meta-Harness - and what its validation-gated architecture means for Paxis self-evolution."
-excerpt: "Treat the harness as code and learn only from failure traces, and agent performance goes up 9-10 points. The key is three ingredients: deep diagnosis, structured patches, and generalization-aware selection. Rollout efficiency is roughly 10x over existing automation baselines."
+title: "It Fixes Itself From Failure Records: AutoSaddler Evolves the Agent Harness"
+seo_title: "AutoSaddler: Automatic Harness Optimization From Failure Records - ThakiCloud"
+seo_description: "AutoSaddler, from KAIST, POSTECH, and Microsoft, treats everything an agent uses to do its job as one system and fixes it by reading only its own failure records. Across GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 it beat hand-tuned automation baselines using far fewer tries, and we look at what this means for the Paxis self-evolution loop."
+excerpt: "A program that used to be hand-tuned by people now fixes itself by reading only its failure records, and scores jumped on all three benchmarks tested. The trick is three habits: dig for the real cause, never patch blindly, and always test a fix before keeping it."
 date: 2026-08-26
-last_modified_at: 2026-08-26
+last_modified_at: 2026-08-31
 tags:
   - harness-optimization
   - agent-evaluation
@@ -27,106 +27,94 @@ header:
   teaser: /assets/images/autosaddler-harness-optimization-hero.webp
 ---
 
-## Why read this
+An agent (a program that makes its own decisions across many steps) sometimes fails, and a person used to fix its setup by hand, one piece at a time. The paper we cover today made a program do that fixing itself, using only its own failure records. Across all three test tasks the score went up by a wide margin, and it reached that level with far fewer tries than other automated methods.
 
-If you design agent execution environments, or you have been hand-tuning the harness (prompts, tool configuration, control logic) of agents you operate, read this paper. The bottom line first: an offline optimization loop that treats the harness as code and uses only failure traces as learning signal delivers 9.0, 9.6, and 10.0 point gains over base harnesses on three agent benchmarks, with roughly 10x rollout efficiency over existing automation baselines. It is the most concrete evidence so far that automating harness tuning is the right direction, and how to design it.
+If you run several agents, or you have been hand-tuning their setup yourself, this is worth your time. It is the most concrete evidence so far that automating that tuning is the right direction, and it shows how to build it.
 
 ![An agent harness rewriting itself from failure traces](/assets/images/autosaddler-harness-optimization-hero.webp)
+*A cracked chip with circuit lines radiating outward, standing in for a harness that repairs itself after failure.*
 
-## Overview
+## In plain terms
 
-LLM agents remain unreliable on long-horizon tasks. Small local failures compound over extended interactions and become whole-task failure. External harnesses cut this fragility substantially, but harness design itself is manual and expensive. You have to search a large space of prompt specifications, tool configurations, and system-level choices, and evaluating each candidate costs rollouts until the agent has run many steps and a success or failure is decided.
+Picture a bike courier. Leave the courier's own skill alone, and call everything else the gear: the bike, its gears, and the delivery app's settings. The gear covers the chain, the brakes, and even the wording of the app's route warnings.
 
-AutoSaddler (arXiv 2608.23041, submitted 2026-08-24, 44 pages), co-authored by 13 researchers from KAIST (Wonjoong Kim, Chanyoung Park), POSTECH (Sungho Park, Wook-Shin Han), and Microsoft Research (Jue Zhang, Dongmei Zhang, and others), recasts the problem as an offline learning problem. The name means a device that automatically adjusts the saddle; the substance is a mini-batch optimization loop that patches the harness like code and uses only failed execution traces as the learning signal. On GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 it improves over the base harnesses by 9.0, 9.6, and 10.0 points, and over the strongest automated baseline on each benchmark by 7.4, 4.4, and 6.7 points.
+The courier failed a few deliveries: late arrivals, spilled food, packages left at the wrong door. Until now, a mechanic looked the bike over and fixed it by feel. This paper turns that mechanic into a program, and one that looks only at the failed deliveries, never the successful ones.
 
-> 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1rZ60AlAHZBBNcKjWuIxASN2NMC2d7t6Y/view).
+This mechanic has three habits. First, it never just glances at the bike; it takes it apart to find the real cause. Second, it never tinkers randomly: every fix is either a big repair that swaps a part, or a small tweak that only adjusts a setting. Third, it test-rides the fixed bike not just on the route that failed but on other routes too, and keeps the fix only if it truly helps. It also logs every fix as a branch on a tree, so if one fix later causes trouble, that branch alone gets cut while the good ones stay.
 
-## What AutoSaddler does
+## What we did
 
-AutoSaddler is a budget-constrained optimization problem: partition the task set into training, development, and test sets, then search candidate harnesses within a rollout budget K. The loop is identical in shape to mini-batch learning.
+Fixing an agent's harness (harness: the prompts, tool setup, and control logic an agent runs on) has always been a person's job. On long tasks a small failure compounds into a whole failed job, and there is a lot to fix, wording, tool settings, control logic. Doing it all by hand costs a lot and mostly runs on gut feeling.
 
-```mermaid
-flowchart TB
-    A["Sample mini-batch Bn<br/>from training set"] --> B["Execute current harness Hn<br/>collect outcomes and traces"]
-    B --> C["Diagnosis-Patch Session<br/>deep failure root-cause analysis"]
-    C --> D["Generate structured patch Delta-theta<br/>treat harness as code"]
-    D --> E["Candidate Hn' = Hn + Delta-theta<br/>validate on the same mini-batch"]
-    E -->|"improvement confirmed"| F["dev-set generalization check<br/>EvoDAG evolution and reflection"]
-    E -->|"no improvement"| G["discard, keep Hn"]
-    F --> H["record accepted harness version<br/>in the DAG (rebase / cherry-pick)"]
-    H --> A
-```
+Thirteen researchers from KAIST, POSTECH, and Microsoft Research built AutoSaddler to turn this into a problem a program can learn to solve. The name comes from a device that tightens a bike saddle automatically. What it does is patch the harness like code, using only failed execution records as the learning signal.
 
-The core design compresses into three ingredients. The paper ablates each one, and all three are mandatory.
+The loop runs like mini-batch learning. It samples a batch of training tasks, runs the current harness, and keeps only the failures. It then digs into those records and the harness's own code to find the real cause. Once it has a cause, it writes a structured patch and tests it again on the same tasks. If that helps, it checks the fix once more on a separate set of tasks held back for validation. Only fixes that pass both checks get logged on the tree, and the whole loop repeats for a fixed number of tries.
 
-### First, deep diagnosis
+Patches come in only two kinds. A capability patch, the big repair in our bike analogy, changes tool code, infrastructure settings, or the agent's own control logic. A steering patch, the small tweak, leaves the executable code untouched and only edits wording, prompts and tool descriptions. Removing this split and letting patches be written freely pushed the vast majority of fixes toward wording tweaks, and the high-value tool and infrastructure fixes were never even tried.
 
-Instead of a single LLM call that reflects on a failed trace, a Claude Agent SDK session actively explores both the execution trace and the harness source code to find the root cause. The diagnosis-patch session makes on average 6.2 more tool calls and 5.8 more file accesses than a patch-only session. That extra investigation effort pays off: removing deep diagnosis drops GAIA2 test-set Pass@1 from 62.0 to 57.8. When failure reflection stays surface-level, the patch never sees the cause.
+Three benchmarks tested this. GAIA2 covers general assistant tasks across ten simulated smartphone worlds. SWE-Bench Pro covers enterprise-scale software engineering tasks, and Terminal-Bench 2.0 covers eighty-nine tasks in system administration, machine learning, and security. Both the mechanic program and the courier agent ran on the same model, Claude Opus 4.6.
 
-### Second, structured patches
+## What came out
 
-Patches are not written freely; they are generated inside a taxonomy with two major classes.
+### It gained 9 to 10 points and needed far fewer tries
 
-- **Capability patches**: change executable code or orchestration logic. Tool implementations, tool arguments, infrastructure settings, and agent-loop logic are in scope. They change what actions the agent can perform, or how the harness executes them.
-- **Steering patches**: text edits that leave executable code untouched. Prompts, tool descriptions, and hook reminder texts are in scope. They refine which existing capability the agent picks and which constraints it follows.
+All three tasks scored 9 to 10 points higher than the hand-built default harness, and beat the best existing automated method by 4 to 7 points.
 
-The distinction mirrors large versus small learning-rate steps in gradient optimization. Capability patches are large steps - new functionality, changed control flow. Steering patches are small steps - behavior selection within an established capability set. AutoSaddler manages their order with a phased schedule. Remove the structure (unconstrained editing, the Meta-Harness style) and patches collapse 91.5% onto steering, with GAIA2 Pass@1 dropping further to 56.9. The high-value infrastructure and tool interventions are simply never explored.
+| Benchmark | vs default harness | vs best automated method |
+|---|---|---|
+| GAIA2 | +9.0 | +7.4 |
+| SWE-Bench Pro | +9.6 | +4.4 |
+| Terminal-Bench 2.0 | +10.0 | +6.7 |
 
-### Third, generalization-aware selection
+The bigger story is how few tries it took to get there. On GAIA2, AutoSaddler reached 72.3% with about 1,000 runs, while the other two methods used about 2,800 runs and still topped out at 64.6% and 61.5%. Counting only the runs that actually fed the learning, the gap widens further: AutoSaddler hit its best score after 147 runs, one rival needed 1,400. In plain terms, it matched the same score with roughly ten times fewer tries.
 
-A generated patch survives only if it passes three checks: real improvement on the same mini-batch, generalization on the dev set, and a reflection session that abstracts the concrete fix into a general principle. Accepted harness versions are recorded not as a linear chain but as a DAG (EvoDAG): cherry-pick validated fixes from earlier versions, rebase away patches that caused regressions. In the full GAIA2 run (50 iterations, 2 epochs), only 21 of 51 candidates passed dev evaluation. Remove generalization-aware selection and Pass@1 falls to 50.6, the largest drop of any ablation (11.4). A repair fitted to one specific trajectory causes regressions on other tasks, and the dev gate blocked most of them.
+The systems and security benchmark told the same story. From the same starting point, AutoSaddler used 31 runs and only 12 records to reach 73.7%. The other method used 98 records and still sat at 63.2%.
 
-## Experimental results
+### Drop any one of the three habits and the score falls
 
-The three benchmarks probe different axes of agent ability. GAIA2 covers general assistant tasks across 10 universes of a simulated smartphone environment (base: the default ReAct agent), SWE-Bench Pro covers enterprise-scale software engineering tasks (base: SWE-agent), and Terminal-Bench 2.0 covers 89 tasks across system administration, machine learning, and cybersecurity (base: Terminus 2). Both the optimizer and the agent backbone were fixed at Claude Opus 4.6.
+We checked whether all three habits actually matter by removing each one.
 
-| Benchmark | Base harness | vs base | vs strongest automated baseline |
-|---|---|---|---|
-| GAIA2 | GAIA2 default ReAct | +9.0 | +7.4 |
-| SWE-Bench Pro | SWE-agent | +9.6 | +4.4 |
-| Terminal-Bench 2.0 | Terminus 2 | +10.0 | +6.7 |
-
-Efficiency matters more. On GAIA2, AutoSaddler reaches 72.3% dev accuracy with about 1,000 rollouts, while GEPA and Meta-Harness saturate at 64.6% and 61.5% after roughly 2,800 task executions. Measured by rollouts actually leveraged for learning, the gap is sharper: AutoSaddler records its best dev score after consuming 147 rollouts; Meta-Harness takes 1,400. About 10x. Terminal-Bench 2.0 repeats the picture. From a common 52.6% start, AutoSaddler reaches 73.7% dev after 31 task executions and 12 leveraged traces, well ahead of Meta-Harness (63.2%, 98 traces) and GEPA (57.9%).
-
-The ablation numbers together show the value of each ingredient (GAIA2 test Pass@1).
-
-| Setting | Pass@1 |
+| Setting | Score (GAIA2, Pass@1) |
 |---|---|
 | AutoSaddler (full) | 62.0 |
-| w/o deep diagnosis | 57.8 |
-| w/o structured intervention | 56.9 |
-| w/o generalization-aware selection | 50.6 |
+| without deep diagnosis | 57.8 |
+| without the capability/steering split | 56.9 |
 
-The paper also records an interesting execution trace. In the full GAIA2 run, iteration 20's patch - a hook on a high-frequency tool - caused a catastrophic regression (33.8%); the evolution session rebased to iteration 13 (67.7%) and cherry-picked only the fixes validated at iterations 13-14. Iteration 27 records the global peak of 72.3%. A linear chain would have contaminated all subsequent history with one bad patch; the DAG structure localized the regression and kept the validated parts.
+Drop the split and the fixes pile up on one side. With editing left unconstrained, 91.5 percent of the patches went to steering, and the score moved among the largest swings in the table.
+| without validation | 50.6 |
 
-Cross-model transfer was checked too: with Claude Haiku 4.5 as the task agent and the harnesses kept exactly as optimized by Opus 4.6, the improvement of +5.6 points over the default agent holds. The effect of harness optimization does not stick to the model; it remains in the execution environment around the model and transfers with it.
+The biggest drop came from removing validation. A fix tailored to one failure often broke other tasks, and checking it again on held-back tasks caught most of those cases. In plain terms, validation is not a nice-to-have; it is what keeps the whole approach alive.
 
-## ThakiCloud product implications
+The run log holds one striking moment. At try 20, a fix to a frequently used tool crashed the score to 33.8%. The system rolled back to try 13 (67.7%) and re-applied only the fixes validated at tries 13 and 14, then hit its overall best of 72.3% at try 27. A straight list of fixes would have let that one bad patch poison everything after it. The tree structure let the system cut only the bad branch and keep the good ones.
 
-**Paxis lens.** This paper is a design reference for the Paxis self-evolution skill loop. If Paxis has been considering generating skill patches from failure traces and reflecting only through a validation gate, AutoSaddler validates that design on three axes. First, diagnosis depth determines patch quality (4.2 points). If trace review stops at "look once and reflect," patches skew steering and never touch the cause. Second, the validation gate is not a choice but a survival condition (11.4 points). The largest ablation drop came from removing the dev gate. A repair fitted to one execution causes regressions on unseen tasks, and the gate blocked it. Third, patch history must be a DAG, not linear. The way rebase and cherry-pick localize regressions is a proposal to design the skill patch ledger as a graph of fix history.
+### It still worked well handed to a weaker courier
 
-**ai-platform lens.** Rollout efficiency is serving cost. Agent optimization burns inference executions by construction, and the gap of 1,000 vs 2,800 on GAIA2 (147 vs 1,400 by leveraged rollouts) is the difference in Metis inference cost for the same optimization outcome. The design of "use only failure traces as learning signal" means success cases do not need re-execution, which changes the cost structure of the agent evaluation pipeline itself.
+When the fixed bike, tuned with the strong model (Opus 4.6), was handed to a weaker model (Haiku 4.5), the 5.6-point gain over the default agent still held. In plain terms, the benefit of the repair sticks to the bike and the app settings, not to the model, so it carries over to a different courier.
 
-A related post, [The Model Is Frozen, the Harness Learns: Harness Continual Learning](/tech-blog/en/research/harness-continual-learning/), covers the same "harness learns" theme. AutoSaddler is offline (pre-deployment) optimization; that post covers post-deployment continual adaptation.
+## What to change
 
-## Limitations and counterarguments
+First, build a real deep-diagnosis step before anything else. A quick glance at a failure pushes fixes toward wording tweaks and never touches the real cause. Our own Paxis self-evolution skill loop has been weighing whether to generate skill patches from failure records, and this result shows that diagnosis depth is what decides patch quality.
 
-First, the backbone stays within a single model family. Both optimizer and agent were Claude Opus 4.6, and cross-model transfer was verified only within the Claude family (Opus optimization, Haiku application). Whether a harness optimized for GPT- or Gemini-based agents transfers is unverified.
+Second, validation is not optional. A fix built around one failure tends to break unseen tasks, and a second check on held-back tasks is what catches that. In one full run, only 21 of 51 candidate fixes made it through.
 
-Second, the validation gate presumes task-level deterministic metrics (pass/fail, accuracy). GAIA2, SWE-Bench Pro, and Terminal-Bench all have verifiable ground truth. How to define "dev-set generalization" in open-ended business domains without ground truth is a precondition for applying this design. The RLVR vs RLHF distinction reappears here.
+Third, keep fix history as a tree, not a straight line. Rolling back a bad branch while keeping the good ones is the same idea as designing a skill-patch ledger as a graph of fixes.
 
-Third, the offline formulation. Reflecting the real workflow of "tune in development, deploy to production" is a strength, but it does not address production distribution drift. After a model upgrade or domain shift, the budget must be spent again.
+Fourth, the number of tries is a serving cost. A tenfold gap in tries to reach the same result is also a tenfold gap in Metis inference cost for the same outcome. Never re-running the cases that already succeeded changes the cost structure of the whole evaluation pipeline.
 
-Fourth, depth costs money. The extra 6.2 tool calls and 5.8 file accesses are per-optimization-session cost. Given the efficiency results, the paper argues the trade-off pays off, but for small agents or tight budgets shallow reflection may be the rational choice.
+A related post, [The Model Is Frozen, the Harness Learns](/tech-blog/en/research/harness-continual-learning/), covers the same theme. AutoSaddler tunes before deployment; that post covers adapting after deployment.
 
-## Conclusion
+## What not to trust
 
-AutoSaddler shows what happens when the improvement target of an agent system is the execution environment (harness) outside the model rather than model parameters: environment improvement becomes a learning problem. The answer is three ingredients. Diagnose failures deeply, generate only structured patches, and record in the DAG only what passes validation and generalization gates. The 9-10 point gains over base on GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 and the ~10x rollout efficiency are the evidence for this design; the cross-backbone transfer (+5.6) shows the value of optimization persists outside the model.
+Both the mechanic program and the courier agent ran on one model family. Whether the same gain holds with a different company's model is not something this paper answers.
 
-If you are currently tuning harnesses by hand, the next experiment is putting a "failure trace to structured patch to validation gate" loop on one benchmark. Do not start with unconstrained editing. The cheapest lesson from this paper is that without structure, 91.5% of patches collapse into text edits.
+Validation only works when success or failure is clear-cut, and all three benchmarks had a clean answer key. How to define a held-back check for real work without a clean answer key is a question this design has to answer before it can be used there.
+
+This is a tune-before-deployment approach. It matches how teams actually work, but it does not handle things changing after deployment. A new model or a new kind of task means starting the whole search over again.
+
+Going deep costs money. Each diagnosis session makes about six more tool calls and six more file reads. The paper argues this trade pays for itself, but for a smaller agent or a tight budget, a quicker glance may be the more sensible choice.
 
 ---
 
-*Source: [AutoSaddler, arXiv 2608.23041](https://arxiv.org/abs/2608.23041) (Sungho Park and 12 co-authors, 2026-08-24). Project site [aka.ms/AutoSaddler-website](https://aka.ms/AutoSaddler-website). All numbers in this post were verified directly against the paper (abs + HTML full text).*
+*Source: [AutoSaddler, arXiv 2608.23041](https://arxiv.org/abs/2608.23041) (Sungho Park and 12 co-authors, 2026-08-24). Project site [aka.ms/AutoSaddler-website](https://aka.ms/AutoSaddler-website). Numbers in this post were verified against the paper itself and rounded for readability.*
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1rZ60AlAHZBBNcKjWuIxASN2NMC2d7t6Y/view).

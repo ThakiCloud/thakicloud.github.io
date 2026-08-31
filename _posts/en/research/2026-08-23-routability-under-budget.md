@@ -1,10 +1,10 @@
 ---
-title: "Which Features Determine Routing Inside the 300-Character Window: A Causal Attribution Protocol for Skill Descriptions"
-seo_title: "Routability Under Budget: Causal Attribution of Routing Accuracy to Skill Description Features - ThakiCloud"
-seo_description: "The skill router sees only the first 300 characters of each description. This paper varies only the description budget (a ladder from 300 to full), ablates only the anti-trigger sentences, and scores a 1,978-skill corpus against a 63-case manual label suite with the unchanged production BM25 scorer. It delivers a protocol that attributes accuracy deltas to description edits alone; the measured recovery curves follow."
-excerpt: "The router sees only the 300-character prefix of each skill description; the rest of the metadata is hidden behind components it relies on but cannot see. This paper asks which features inside that window causally determine top-1 routing accuracy and how much accuracy each additional character buys. The answer is a protocol built from a budget ladder, an anti-trigger ablation, per-case counterfactuals, and an index rebuild control check."
+title: "The Sign Only Shows Its First 300 Characters: How to Measure What Decides Routing"
+seo_title: "Routability Under Budget: A Causal Measurement Protocol for Skill Description Length and Routing Accuracy - ThakiCloud"
+seo_description: "The program that picks a tool for our agents reads only the first 300 characters of each tool's description. This paper builds a way to measure what inside that 300-character window decides the pick. It is designed against a 2,275-skill registry and a 63-case check set, and this post reports no accuracy numbers."
+excerpt: "The picking program never sees past the first 300 characters of a skill description. This post introduces a measurement plan for what inside that narrow window decides the pick, and how much accuracy one more character buys. The paper delivers the measuring stick only; the real numbers come in a follow-up."
 date: 2026-08-23
-last_modified_at: 2026-08-29
+last_modified_at: 2026-08-31
 tags:
   - skill-routing
   - agent-harness
@@ -22,61 +22,70 @@ toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/routability-under-budget/"
 ---
-If you run an agent harness with dozens to thousands of registered skills and have to decide how much context the skill index gets, this post is for you. In the reference harness, the skill router that maps a user request to the right skill sees only the first 300 characters of each skill description. The rest of the metadata is hidden behind components that rely on it but cannot see it. This post introduces "Routability Under Budget," an autonomous research paper from ThakiCloud AI Research. The paper asks which features inside the 300-character window causally determine top-1 routing accuracy and how much accuracy each additional character buys. A point of honesty up front: this study delivers a measurement protocol, not numbers. The measured accuracy recovery curves follow. This post makes no routing accuracy claims at all.
 
-## The description window is an ad, not a document
+The program that picks a tool for our agents reads only the first 300 characters of each tool's description, and it never sees the rest. If you run an agent that has several tools or skills registered and have wondered how long each description should be, this post is for you. Up front, honestly: this paper delivers a way to measure the answer, not the answer itself.
 
-This gap has two sides. On accuracy, when the router picks the wrong skill or finds no skill at all, the agent goes down a failure path before it ever reaches generation. On cost, the description index is re-read as context every session, so writing long descriptions is not free. The truncation budget is a token-quality knob that trades context cost against routing precision, and the value of that knob has been set by convention so far.
+## In plain terms
 
-The paper reframes the problem as competition. Because the router sees only the prefix, a skill description is not a document in the ordinary sense. It is a fixed-size advertisement competing for the attention of a lexical retrieval engine against roughly 2,000 peer skills. The features that win that competition are values only measurement can settle.
+Picture a long row of shops, more than two thousand of them. To find the shop you need, you have to read the sign out front, but you are in a hurry, so you only catch the first few words before walking past. It does not matter how good the rest of the sign is. Once you have walked past it, those words might as well not exist.
 
-Prior skill routing research covered retriever architecture, query decomposition, corpus growth, and embedding models, but never the content budget. This research team's own lineage is the same. They re-measured the architecture, weighting, ecosystem operation, and model axes, yet the description content itself stayed fixed in every study. In the paper published on 2026-07-09, the diagnosis for mixed Korean-English queries in the production harness was that the binding constraint was the retriever ceiling, not query decomposition. The repair, discard, birth, and quantization studies that followed each moved one axis at a time among architecture, corpus size, and model. The content budget axis, which asks what features inside the window determine routing accuracy, had not been measured. This paper moves that lever.
+Our own agents work the same way. Each tool's description is a sign, and the picking program is the shopper skimming past. Right now this row holds 2,275 signs, and the picking program decides which shop to enter after reading only the first 300 characters of each one.
 
-## A protocol that changes only the description window
+In plain terms, a sign like this is not a careful set of instructions. It is a short ad line. This paper builds a ruler for figuring out which words inside that short ad line catch the shopper's eye. The paper only builds the ruler; it does not yet report a number measured with it.
 
-The experiment is fully deterministic. It uses no model inference, no network access, and no accelerators. The only thing that changes between variants is the description window, and in the ablation the anti-trigger text changes with it. So every accuracy delta is attributable to that single edit alone.
+## What we did
 
-The scored variants come in two families. The first is the description budget ladder: `current`, B300, B400, B600, B1000, B1500, B2000, `full`, where the run names state, in characters, how much of the description prefix the router may see. The shipped `current` regime and the truncation-free `full` regime are not kept as anchors outside the ladder.
+The program running today already reads only the first 300 characters of each description. The rest sits behind a wall the program relies on but cannot see.
+
+Widening that window sounds like it would only help, but it can also cost more. If the picking program grabs the wrong shop or no shop at all, the whole job stalls before it even starts. On the other side, a description gets re-read as context every single time, so opening the window wider means paying for more characters every time, too.
+
+So the research team built a way to change that window size step by step and watch how accuracy moves. The experiment calls no model and touches no network. Only the window size changes between setups, so any accuracy swing has one and only one explanation.
+
+The window size runs from 300 characters up to the full, untruncated text, laid out as a six-step ladder.
 
 ![Budget ladder: description window per variant](/assets/images/posts/research/routability-under-budget/fig2.webp)
 *The variable this study manipulates is the description prefix length, in characters. The shipped 'current' regime and the truncation-free 'full' regime sit outside this ladder. The window sizes are as designed in the variant matrix, not measured values.*
 
-The second family is the `B300_noanti` ablation. It scores the 300-character budget with the anti-trigger sentences that begin with `Do NOT use` removed, in order to separate the anti-trigger effect from the budget effect. If top-1 rises at the same budget once the anti-trigger sentences are removed, that is direct evidence that in the narrow window the do-not-use sentences were eating the space the triggers need.
+Separately, one more thing gets removed and put back as a test. The sentences that start with "do not use this for" get stripped out of the 300-character window and scored again. If ranking improves once those sentences are gone, that is direct evidence they were eating the space the useful keywords needed.
 
-The scorer is the production pure BM25 lexical channel. The hybrid embedding channel is off, the retrieval gate is 6.0, and top-k is 5. Nothing about the scorer changes between variants. The label suite is a fixed set of 63 manual labels made up of positive, native, and negative cases, and it is held constant so that the deltas in the variant matrix come from the description window alone.
+The scoring itself is plain keyword matching rather than meaning-aware search, using the BM25 method, and it stays fixed across every setup. Each setup is scored on three things: does it rank the right pick first, does it land the right pick in the top five, and does it avoid false positives. A fixed set of 63 check cases stays the same throughout, so any score gap traces back to the window size alone. For each check case, the team also records the exact window size where the right answer first appears, so a single recovery curve turns into a map of where each description gets cut and what that costs.
+
+Finally, the team checks that all of this was measured on the same material the live service actually uses. They rebuild the search list from scratch with full descriptions across 1,978, or roughly 2,000, skills, and confirm the rebuilt version matches what today's service produces.
 
 ![Causal attribution pipeline](/assets/images/posts/research/routability-under-budget/fig1.webp)
-A conceptual example. Only the description window changes (and in the ablation, the anti-trigger sentences), while the corpus, the production scorer, and the label set are fixed. So accuracy deltas are attributed to the description edit.*
+*A conceptual example. Only the description window changes (and in the ablation, the anti-trigger sentences), while the corpus, the production scorer, and the label set are fixed. So accuracy deltas are attributed to the description edit.*
 
-Each variant is scored on top-1 accuracy, recall@5, and negative avoidance. What separates this protocol from a plain benchmark run is the per-case counterfactual. It records which labeled tasks drop out at 300 characters and which recover to top-1 for the first time at a larger budget. That is the point where the aggregate recovery curve becomes a per-task recovery map, showing where each skill's description gets cut and what that cut costs.
+What this study delivers is the procedure itself. How long a description should be stops being a habit and becomes something you can measure.
 
-The protocol includes a control check for index rebuilding. It rebuilds the production skill routing index from source, with full descriptions, against the 1,978 (roughly 2,000) skill corpus, then cross-validates the rebuilt `current` variant against an independent run of the production bench. The scoring script runs the production bench on the cached index and looks for divergence from the rebuild. This certifies that the completed runs were measured on the same artifact the router serves, the artifact on which the ladder was scored.
+## What came out
 
-The contribution of this study is the protocol itself. It turns description-writing convention into a measurable cost-quality knob for agent harnesses with a token budget. The measured accuracy recovery curves follow, and this post makes no routing accuracy claims.
+This paper has no measured accuracy numbers yet. Two other things came out first.
 
-## Two-channel asymmetry: B300 is strictly less informative than today
-
-The motivation for moving the ladder is a mechanism already inside the shipped harness. The router runs on two channels. The token channel sees the full description, but the substring channel sees only the first 300 characters. Because of this asymmetry, the B300 variant is strictly less informative than today's regime. The lexical channel that actually determines top-1 routing is starved in the shipped regime, and the budget ladder measures that loss one run at a time.
+First, the live service is already paying a cost today. It runs on two paths at once: one path reads the full description, and the other reads only the first 300 characters using plain keyword matching. The path that actually decides which shop gets picked is the second one, the 300-character path. In plain terms, the live service is working with less information than it could already have today, for free.
 
 ![Two-channel truncation mechanism](/assets/images/posts/research/routability-under-budget/fig3.webp)
-A conceptual example. The shipped regime is asymmetric: the token channel sees the full description while the substring channel sees only 300 characters. So the B300 variant is strictly less informative than today.*
+*A conceptual example. The shipped regime is asymmetric: the token channel sees the full description while the substring channel sees only 300 characters. So the B300 variant is strictly less informative than today.*
 
-What the ladder reveals is the shape of that loss. If the step from 300 to 400 is steep and the curve is flat from 1500 to full, the answer is that most of the loss happens in the first 100 characters, and the design rule is to put the triggers in the first 100. If the curve keeps climbing all the way to full, the answer is that the budget itself is the bottleneck, and the price is paid in context. Four features inside the window, the Korean trigger ratio, the ASCII keyword count, the presence of anti-triggers, and the number of trigger mentions, also correlate with per-skill top-1 rates. The paper states that it marks this correlation as an observation and does not read it as causation. The causal claims are reserved for the budget ladder and the anti-trigger ablation, the only places where the window is actually changed.
+Second, there is an observation about which words help inside the window. The share of Korean-language keywords, the count of English keywords, whether a do-not-use sentence is present, and how many times the keyword repeats, all four move together with how often a skill gets picked first. The paper is careful to call this an observation, not a cause. Only the window-size ladder and the do-not-use ablation, the two places where the window is actually changed, are allowed to make a causal claim.
 
-## What remains for the company, society, and science
+## What to change
 
-For ThakiCloud, the deliverable is description field design rules for the 1,978-skill ecosystem. Measurement answers where triggers go, what keyword density to hold, and where the budget ceiling sits. Those rules point toward pushing the sra_bench top-1, which the earlier repair study raised to 52.9%, even higher, and cutting the skill index context cost paid every session. Because the description index is re-read every session, a saving of a few characters per skill multiplies across the whole registry.
+First, for our own registry of roughly 2,000 skills, the writing rules for descriptions get settled by measurement rather than a guess. Where to place a keyword, how many English keywords to include, and where to cap the window all become answerable questions. This points toward pushing the picking program's first-pick accuracy, already raised to 52.9% by an earlier study, even higher, while cutting the cost of re-reading these descriptions every session.
 
-For society, it is a token cost-quality discipline for skill metadata, applicable to every environment that runs agent harnesses in the Claude Code lineage. The basis for lowering the operating cost of skill-based automation shifts from convention to measurement. Teams registering hundreds or thousands of skills no longer need to guess how long to write descriptions. After measuring how much routing accuracy each additional character buys, they can set the budget where the curve flattens.
+Second, this discipline is not ours alone. Any agent setup that registers several tools faces the same trade-off. A team registering hundreds or thousands of skills no longer has to guess how long a description should be. After measuring how much accuracy one more character buys, they can set the cutoff where the curve goes flat.
 
-Scientifically, it is the first causal attribution measurement between skill description features and retrieval accuracy. As the next step beyond the structural diagnosis of the retriever bottleneck, it opens the axis of content budget rather than structure. The protocol has value before any results exist. A fully deterministic experiment that mutates only the description field and completes on a local route is reusable by any harness with a skill registry, and the index rebuild control check sets the standard for the claim that a measurement was taken on the same artifact the router serves.
+Third, this paper has value even before its results exist. Because the experiment changes only the description window and finishes on a single machine with everything else held fixed, it can be reused by any system with a skill registry. Confirming that the rebuilt list matches what the live service uses sets a standard for what it means to measure on real, in-service material.
 
-## Limitations of this study
+Fourth, we are not locking in a window size yet. Until the real accuracy recovery curve exists, we treat this procedure as a direction to follow, and we leave any decision that leans on a number for the follow-up.
 
-This study contains no measurements. The paper is a protocol design, and the control comparison against the rebuilt index follows together with all accuracy claims. That is the first limitation, and the reason this post should be read as a methodological contribution.
+## What not to trust
 
-The scorer is the pure BM25 lexical channel with hybrid embedding switched off, so the results may not transfer to dense or hybrid routers. The label set, 63 hand-built cases, is narrow relative to the full query space, and top-1 deltas on such a set are coarse. The feature statistics inside the window are not causal effects. An observed correlation cannot be read as causation, and the paper itself draws that line. A corpus of roughly 2,000 skills is a single operating point, and the shape of the budget ladder can bend differently in much smaller or much larger skill ecosystems.
+This study contains no measurements. It is a protocol design, and the check against the rebuilt list will arrive together with every accuracy claim that follows. That is the first thing not to trust here, and the reason to read this post as a methods introduction rather than a results post.
+
+The scoring is plain keyword matching with no meaning-aware search, so the outcome may not carry over to systems that do use meaning-aware search. The 63 check cases were built by hand and are narrow next to the full space of possible requests, so any first-pick accuracy gap measured on them will be coarse. The relationship between window features and per-skill scores is an observation, not a cause; an observed pattern cannot be read as a cause, and the paper itself draws that line. A registry of roughly 2,000 skills is a single data point, and the shape of the ladder could bend differently in a much smaller or much larger registry.
 
 ---
 
 Full paper page: https://thakicloud.com/tech-blog/en/research/routability-under-budget/
+
+*Figures are scaled to a 1,978-skill (roughly 2,000) registry and a 63-case check set. No accuracy value has been measured yet, and this post makes no such claim.*

@@ -1,10 +1,10 @@
 ---
-title: "The Throughput Your Defaults Are Eating: Measuring the Configuration Tax in Serverless LLM Inference"
-seo_title: "Measuring Throughput Loss From Default Serverless LLM Inference Settings - Thaki Cloud"
-seo_description: "We present measured results showing that disabled compilation and a low max_num_seqs default on vLLM serverless endpoints quietly cut throughput by 18.8x in the single-stream regime and by at least 17.9x at saturation, along with a five-step audit procedure."
-excerpt: "On the same checkpoint and the same GPU, changing only two serving settings widened throughput by up to 18.8x. The problem was not the model. It was a platform default nobody had looked at."
+title: "Low Flame, Narrow Door: How an Untouched Server Setting Turned Customers Away"
+seo_title: "Why Default AI Server Settings Quietly Cut Throughput - Thaki Cloud"
+seo_description: "An AI-serving server can lose more than 18x its capacity to handle requests, purely because of two settings nobody ever touched. We explain the measured numbers and a five-step check, in plain terms."
+excerpt: "Same computer, same model. Changing only two server settings widened the speed gap by more than 18x. The problem was not the model. It was a default setting nobody had looked at."
 date: 2026-08-24
-last_modified_at: 2026-08-24
+last_modified_at: 2026-08-31
 tags:
   - llm-inference
   - vllm
@@ -27,57 +27,77 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/default-configuration-tax/"
 ---
 
-If you self-host LLM serving, or if you're a cloud or AI infrastructure engineer who has to optimize the per-token cost of a serverless inference endpoint, this paper is worth your attention. The headline finding: before you ever tune the serving engine itself, two settings a platform ships as defaults can swing throughput by more than 18x. You don't need to change the model. You don't need more GPUs. Rereading the configuration on the endpoint you already have running is enough to recover this much performance.
+This is worth reading if you run a server that serves AI models, or if you want to cut the bill for one. Here is the short version. Without touching a single line of code, changing only two server settings raised how many requests the same server could handle at once. The gain was more than 18x. No new model. No extra hardware. This is the size of the performance you can get back just by looking again at the settings on the server you already have running.
 
-## Why This Needed a Second Look
+## In plain terms
 
-For the past few years, inference systems research has mostly assumed a "well-tuned system" as its starting point. Continuous batching, paged KV cache, chunked prefill, prefill/decode disaggregation, speculative decoding: all of these techniques report how much faster they are than some configured baseline. But nobody has measured how much loss that "configured baseline" itself starts out carrying.
+Think of a restaurant. A customer orders, and the kitchen cooks the dish. The AI server we are talking about works the same way: every time it writes out one more letter of a sentence, the kitchen is finishing one more dish.
 
-On managed and serverless platforms, engine settings get baked into a Helm chart or a template once, and after that an operator almost never looks at them again. This paper calls the throughput lost to that neglected default the "configuration tax" and measures its size in a real production environment. The setup was simple: hold the same checkpoint, the same GPU, and the same engine version fixed, and compare three configurations (arms) that differ only in serving settings. The result was an 18.8x gap in the single-stream regime and at least a 17.9x gap at the top of the concurrency ladder.
+This kitchen had two settings nobody had touched. The first was the stove. Every time the cook made a dish, they relit the stove and put it out again right after, so lighting the stove actually took longer than cooking the food. From here on we will call this setting "pre-lighting the stove." The second was a sign on the door. It read "only 32 guests at a time," even though the kitchen could actually cook for 256 people at once. We will call this setting "the guest cap."
 
-## What Was Measured, and How
+Neither setting required rebuilding the kitchen or hiring a new cook. Both could be fixed as easily as swapping a piece of paper. Nobody had looked at them again, so they simply stayed as they were.
 
-The measurement ran on a single NVIDIA B200. It kept vLLM 0.24.0 and the NVFP4-quantized `RadixArk/Qwen3.8-27B-NVFP4` checkpoint fixed and changed only the serving settings. A fixed workload of 2,048 input tokens and 256 output tokens was swept across a concurrency ladder of 1, 8, 32, and 128 (up to 256 for the tuned arm). Each step used a different prompt each time to rule out prefix-caching effects, was repeated 3 times, and reported the median.
+## What We Did
 
-The key is the third arm. The default arm has compilation and CUDA graphs turned off, with the concurrency cap (`max_num_seqs`) pinned at 32. The tuned arm turns compilation on and raises the cap to 256. Comparing only those two would change both knobs at once, so there would be no way to tell how much each one contributed. That's why a middle compile-on arm was added: compilation turned on, the cap left at 32. Only with this middle arm can you separate "how much from compilation" from "how much from the cap."
+Most research on server speed so far has started from a server that is already well tuned. Nobody has measured how much loss that "well-tuned" starting point itself was already carrying.
 
-![The default-tax audit: five steps at endpoint creation](/assets/images/posts/research/default-configuration-tax/fig1.webp)
-*A five-step audit procedure any operator can follow at endpoint creation time. Confirm the actual engine settings from the logs. Measure baselines at both ends of the ladder. Flip one knob at a time to isolate the two components. (Illustrative diagram)*
+So this measurement ran on a single server with one graphics card. The serving program (vLLM 0.24.0) and the compressed model (RadixArk/Qwen3.8-27B-NVFP4) stayed fixed. Only the server settings changed. The same job fed the server a 2,048-character question and asked for a 256-character answer. We repeated it while the number of guests climbed from 1 up to 128, and up to 256 for the best-tuned case. Each step used a fresh sentence and was repeated three times, and we kept the middle value.
 
-At a single stream (concurrency 1), the default arm measured 7.4 tokens per second and the compile-on arm measured 138.9. That's an 18.8x difference. At the top of the ladder, the tuned arm hit 4,150.7 tokens per second at concurrency 256, while the default arm had flattened out at 231.6. The gap there is 17.9x, but that number should be read as a lower bound: the tuned arm was still climbing 7.9% over its previous step even at the end of the ladder, meaning it had not yet reached saturation.
+We compared three cases. The first is a "kitchen nobody touched": no pre-lit stove, and the guest cap still at 32. The second is a "kitchen with only the stove pre-lit": the guest cap stays at 32. The third is a "kitchen with the stove lit and the door wide open": the guest cap goes up to 256. The reason for the second case is simple. Comparing only the first and third would change the stove and the cap at the same time, so there would be no way to tell which one earned the gain.
 
-## The Two Knobs Don't Work the Same Way
+![A conceptual diagram of the five-step audit an operator can follow when turning on a server](/assets/images/posts/research/default-configuration-tax/fig1.webp)
+*A five-step check any operator can follow when turning on a server. Confirm the settings actually applied from the logs, measure a baseline at both ends of the guest count, then flip one setting at a time to isolate each one's effect. (Illustrative diagram)*
 
-The most practical finding in this paper is that the two knobs play different roles.
+## What Came Out
 
-The compilation component (Component A) is the compile-on arm divided by the default arm: 18.8x at concurrency 1, 16.5x at 8, 10.2x at 32, and still 10.0x at 128. It holds a double-digit gain across the entire ladder. When compilation is off, the host has to launch a small GPU kernel for every decode step, and that launch wait time becomes the bottleneck. The default arm's per-stream throughput sits nearly flat at 7.4, 6.96, and 7.12 across concurrency 1, 8, and 32, which is exactly what you'd expect from that bottleneck: launch overhead doesn't shrink no matter how large the batch gets. The compile-on arm's per-stream throughput, by contrast, falls as batches grow: 138.9, 115.2, 72.7. That's normal batching efficiency at work.
+### Even a Lone Customer Waited Longer
 
-The concurrency-cap component (Component B) behaves the opposite way, like a threshold. When offered concurrency is at or below the cap (32), it's exactly 1.00x: no effect at all. It only kicks in once concurrency crosses that cap, delivering 1.66x at concurrency 128 and at least 1.79x measured at each arm's top data point. Raising the cap isn't a second, independent source of gain. It's a gate that only opens once traffic crosses that threshold.
+We measured what happens with a single guest. The untouched kitchen made 7.4 letters per second. The kitchen with only the stove pre-lit made 138.9 letters per second. That's an 18.8x gap.
 
-![Isolated component sizes by traffic regime](/assets/images/posts/research/default-configuration-tax/fig2.webp)
-*Component sizes, isolated by flipping one knob at a time, broken out by traffic regime. The compile/launch component is the larger of the two in both regimes. The concurrency-cap component sits at exactly 1.00x, inactive, whenever offered concurrency is at or below the cap, and only activates once concurrency crosses it. (Measured: isolated component values from Table 1)*
+In plain terms, pre-lighting the stove alone made serving a single guest more than eighteen times faster. All that relighting and putting out the stove for every dish was costing that much.
 
-The practical conclusion here is clear. What the regime (whether single-request latency matters most, as in conversational and agentic workloads, or throughput matters most, as in batch workloads) determines isn't the ranking of the two knobs by size. It determines whether the second knob actually does anything. Compilation is the knob to flip first regardless of regime. The concurrency cap is only worth raising once offered traffic actually crosses that threshold. Raising the cap without turning on compilation leaves the larger loss component untouched in either regime. Turning on compilation while leaving the cap alone is enough for latency-focused traffic, but it costs roughly 1.8x or more in throughput-focused traffic.
+What happens when guests pile up? The kitchen with the stove lit and the door wide open made 4,150.7 letters per second with 256 guests at once. The untouched kitchen had flattened out at 231.6 and stopped climbing. The gap there is 17.9x, but read that number as a floor. The wide-open kitchen was still climbing 7.9 percent over its previous step even at the very end, so it had not actually hit its ceiling.
 
-![Measured throughput of all three arms across the concurrency ladder](/assets/images/posts/research/default-configuration-tax/fig3.webp)
-*Measured throughput for all three arms across the full concurrency ladder. The gap between the default curve and the compile-on curve is the compilation component. The gap between the compile-on curve and the tuned curve is the cap component. The two curves overlap until offered concurrency crosses the cap of 32. The default and compile-on arms were not measured at concurrency 256. The tuned curve was still climbing 7.9% over its previous step even at its last point, so 4,150.7 should be read as where the ladder ended, not where saturation was reached. (Measured: Table 1 values)*
+In plain terms, the busier the hour, the bigger the price of leaving both settings untouched.
 
-The paper adds one more principle on top of this: provenance. A setting only counts as "applied" if the engine actually recorded it in its startup log, not if it's merely what you requested. A policy layer can clamp or silently ignore a requested value, so what an operator believes they configured and what the engine actually runs can diverge. Building on that principle, the paper lays out a five-step default-tax audit: (1) read the engine's actual settings from the logs, (2) measure the full tax, (3) turn on compilation alone to isolate the launch component, (4) raise the cap alone to isolate the cap component, and (5) report both components together with the threshold point and the startup cost. This procedure can run on an existing endpoint exactly as is, with no new hardware needed.
+### The Two Settings Do Not Work the Same Way
 
-## What This Means for the Company, the Industry, and the Science
+Measuring the two settings separately turned up something interesting. They do not work the same way at all.
 
-From ThakiCloud's perspective, this result leads directly to the question of tenant default serving settings on Metis (AI Inference / Token Factory). In fact, this measurement came from our own demo cluster. On that basis, we now have grounds to change policy so that Metis serverless endpoints default to `TORCH_COMPILE_DISABLE=0` and `max_num_seqs=256`. The cost is only about a 79-second increase in endpoint startup time, and this paper's practical conclusion is exactly that this cost isn't worth trading against an 18.8x gain. More broadly, since the work-automation workflows Paxis runs ultimately consume tokens on top of Metis, the throughput quietly burned by serving defaults is a cost that feeds directly into the execution economics of agent automation.
+Pre-lighting the stove helped by roughly the same large amount whether there was one guest, eight, thirty-two, or a hundred and twenty-eight: 18.8x, 16.5x, 10.2x, and 10.0x. The reason is simple. In a kitchen that relights the stove every time, the time spent lighting it per dish never shrinks, no matter how many guests show up. Indeed, in the untouched kitchen, output per cook stayed almost flat at 7.4, 6.96, and 7.12 across one, eight, and thirty-two guests. In the kitchen with the stove pre-lit, output per cook actually fell as guests grew: 138.9, 115.2, 72.7. That is exactly what normal batching efficiency looks like when many dishes are cooked together.
 
-For the industry as a whole, the message is simpler. What often determines a company's token costs isn't which model it picked, but an unmeasured platform default. This audit procedure needs no new GPU purchase, and anyone running self-hosted inference can apply it to their own endpoint right now.
+The guest cap moved the opposite way. Up to 32 guests, raising this setting made exactly no difference: 1.00x, however you slice it. It only kicked in once guests crossed 32, adding 1.66x at 128 guests and at least 1.79x at each kitchen's busiest point measured.
 
-Scientifically, the weight is different. Most existing serving-optimization literature measures already-tuned systems. This paper goes the other direction: it's the first case to use a controlled measurement to isolate how much loss a platform default creates, broken down by knob (compilation mode, concurrency cap, KV budget) and by traffic regime. The methodology itself, reading the engine's actual settings back out of pod logs to verify them, stands as a reusable contribution.
+![A bar chart comparing the size of each setting's effect across traffic levels](/assets/images/posts/research/default-configuration-tax/fig2.webp)
+*The size of each setting's effect, isolated by flipping one at a time, for low and high guest counts. Pre-lighting the stove is the larger effect in both cases. The guest cap sits at exactly 1.00x, doing nothing, until guest count crosses the cap, and only then kicks in. (Measured: isolated values from Table 1)*
 
-## What Are the Limits
+In plain terms, widening the door sign is only worth doing once guests actually cross that line. Pre-lighting the stove is always the first thing to do, and widening the door is the second thing, worth doing only when guests are piling up.
 
-The authors draw clear lines around their own claims. This paper is a single controlled measurement, from one GPU generation (B200), one engine version (vLLM 0.24.0), one precision (NVFP4), and one checkpoint. It does not claim to be an empirical study spanning multiple models and multiple accelerators. It is explicit that this is only an analytical model calibrated by these measurements. The decomposition structure itself, two knobs combining multiplicatively with one of them behaving like a threshold, is expected to generalize to other environments, but that generalization remains unverified and is left as future work.
+![A line chart of measured speed as guest count rises, for all three cases](/assets/images/posts/research/default-configuration-tax/fig3.webp)
+*Measured speed by guest count for all three cases. The gap between the untouched curve and the stove-only curve is the stove effect, and the gap above it to the tuned curve is the cap effect. The two lower curves overlap until guest count crosses 32. The tuned curve was still climbing at its last point, so 4,150.7 should be read as where the measurement stopped, not a ceiling. (Measured values)*
 
-The paper is also honest about limits in the measurement itself. The tuned arm was still climbing even at the end of the ladder, so the 17.9x figure and the 1.79x cap component are both lower bounds; the real values could be larger. The node used for measurement wasn't a fully isolated environment either: another GPU on the same node was handling real traffic for the same model, so host CPU and power budget were partially shared. That's a factor that could somewhat overestimate the compilation component or make absolute throughput look lower than it actually is. Finally, the assumption that decode steps are launch-bound with compilation off was observed on this specific model-and-engine combination. On a different architecture or attention backend, the size of the compilation component, and even which of the two knobs takes priority, could change.
+The paper adds one more rule on top of this. A setting only counts as "applied" if the server itself recorded it in the log when it started up, not just because an operator asked for it. Some other layer in between can quietly change or ignore a requested value, so what an operator believes is running and what the server actually runs can differ. Building on this rule, the paper lays out a five-step check. First, read the real settings from the log, then measure the total loss. Turn on the stove alone to isolate its effect, then raise the guest cap alone to isolate its effect. Finally, report both effects together with the threshold and the startup cost. You can run this on the server you already have, with no new hardware.
 
-You can find the original dataset and the paper detail page below.
+## What to Change
 
-[HF Daily Paper: The Default Configuration Tax](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-08-24-default-configuration-tax)
+First, check the real settings on the server you have running, straight from the log. What was requested and what actually took effect can be two different things.
+
+Second, always turn on pre-lighting the stove first. The loss is large whether guests are piling up or not.
+
+Third, only raise the guest cap for a service that really does see guests pile up. The cost of raising it is about a 79-second increase in the time it takes the server to start. If that buys back several times the throughput, it is a good trade.
+
+Our own company, ThakiCloud, has already acted on this. This measurement came from our own real server. Our AI inference service, Metis, will change its serverless endpoints to turn on both settings by default (in engine terms, `TORCH_COMPILE_DISABLE=0` and `max_num_seqs=256`). The more a service runs work automatically through agents, the more it ends up spending on top of this same server. Throughput quietly burned by a neglected setting turns directly into the cost of automation.
+
+This is not only our problem. What a company spends on AI server costs often has less to do with which model it chose than with one unmeasured default nobody looked at. This five-step check needs no new graphics card, and anyone running self-hosted AI serving can apply it to their own server right now. Most existing research on serving speed measures a server that is already tuned. This paper goes the other way and is the first to actually measure, and separate out, how much a neglected default setting costs on its own.
+
+## What Not to Trust
+
+This measurement has clear limits. It was measured on one generation of graphics card (B200), one version of the serving program, and one model. It was not checked across many kinds of graphics cards or many models. The shape of the result, two settings combining multiplicatively with one of them acting like a threshold, seems likely to hold elsewhere too, but that has not been confirmed yet.
+
+There are also limits to the measurement itself. The wide-open kitchen was still climbing even as measurement ended, so the 17.9x figure and the 1.79x cap effect are both floors and the real numbers could be larger. The server used for measurement was not a fully isolated environment either. Another graphics card on the same server was handling real guests with the same model, so computer resources and power were partly shared. That could make pre-lighting the stove look somewhat more effective than it truly is, or make overall speed look lower than it truly is. Finally, the idea that, with the stove unlit, the time it takes to light it per dish is the real bottleneck was observed for this specific model-and-program combination. With a different combination, which of the two settings matters more could change.
+
+---
+
+You can find the paper detail page here: [The Default Configuration Tax](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-08-24-default-configuration-tax)
+
+*Figures in this post were measured on a single B200 graphics card and rounded for readability in the body text. Exact values stay in the figure captions.*

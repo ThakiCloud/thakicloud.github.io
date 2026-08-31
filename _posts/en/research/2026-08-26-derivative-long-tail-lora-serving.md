@@ -1,9 +1,10 @@
 ---
-title: "The Long Tail of Community LoRAs: The Cost Frontier Where Multiplexed Serving Beats Dedicated Endpoints by a Factor of K"
-seo_title: "Cost Frontier: Community LoRA Multiplexing vs. Dedicated Serving - ThakiCloud"
-seo_description: "Community derivatives around popular open base models, LoRA fine-tunes, GGUF and MLX ports, and compressed checkpoints, are the long tail that serving infrastructure has to absorb. Under H200-class assumptions, this paper computes in closed form when one shared endpoint serving K adapters is cheaper than K dedicated endpoints, one per adapter. The total-cost gap is about 30x at K=32 and about 385x at K=512, and dedicated wins on a per-token basis only when a single adapter accounts for more than 37 percent of traffic."
-excerpt: "The trending list around a single 27B-class open model is no longer dominated by the base model itself, but by community derivatives: GGUF ports, MLX ports, uncensored fine-tunes. Serving this long tail with one dedicated endpoint per adapter costs K times the GPUs, but pooling them onto one endpoint keeps overhead flat at roughly 11 percent. This paper computes that cost frontier in closed form and shows a price point where a single-GPU operator beats a dedicated fleet of 32 GPUs by 30x."
+title: "One Machine, Swap the Capsule: A Cheaper Way to Serve Community Model Variants"
+seo_title: "Cost Frontier for Community LoRA Serving: Shared Server vs. Dedicated Server - ThakiCloud"
+seo_description: "A popular open model quickly grows dozens or hundreds of community variants. This paper computes when pooling those variants onto one shared server beats giving each one its own dedicated server. At 32 variants the gap is about 30x, at 512 it is about 385x, and a dedicated server only wins when one variant takes more than a third of all requests."
+excerpt: "Release one open model and community variants follow within days. Give each variant its own server and you buy the expensive body over and over. Pool them on one server and you buy the body once, then just swap a small piece. This paper works out exactly where that line falls."
 date: 2026-08-26
+last_modified_at: 2026-08-31
 tags:
   - lora-adapter-serving
   - derivative-model-ecosystem
@@ -22,76 +23,99 @@ author_profile: true
 toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/derivative-long-tail-lora-serving/"
 ---
-If you run an open-model inference service, or you need to decide how many GPUs to serve community LoRA fine-tunes, GGUF/MLX ports, and compressed checkpoints around a base model, this paper is your budgeting problem. The headline result: a multiplexed fleet that pools K community adapters onto one shared endpoint comes out roughly K times cheaper in total cost than a fleet built from K dedicated endpoints, one per adapter. Under H200-class assumptions and the Zipf traffic band typical of community derivatives (s = 0.5 to 1.5), the gap runs about 30x at K=32 and about 385x at K=512. Per token, the picture flips. A dedicated endpoint only beats the pool when that adapter accounts for more than 37 percent of catalog traffic, and within the traffic band the paper surveys, not a single adapter reaches that threshold. This post covers "The Derivative Long Tail: Mapping the Multiplex-vs-Dedicated Cost Frontier of Community LoRA Serving on H200." Every number in the paper is the output of an analytical model under explicit assumptions, not a measurement, and the paper spells out a validation protocol for replacing the model's free parameters with real measurements.
+Release a popular open model, and slightly tweaked community versions follow within days, often dozens of them. Pooling those versions onto one shared server costs far less than giving each version its own server. If you run a model service, or decide how many servers to buy, this post hands you that math directly.
 
-## The unit of serving demand is no longer the model, it's the adapter
+This post introduces a paper our research team wrote autonomously. It is called "The Derivative Long Tail," and it draws the line between pooling servers and splitting them, using real numbers.
 
-Open-model hubs are increasingly organized around a handful of popular base models, each trailing a large ecosystem of community derivatives. As of 2026-08-26, the top slots on the Hugging Face trending list around one 27B-class base model belong to community derivatives, not the hub artifact itself. Quantized GGUF ports, MLX ports, FP8-compressed builds, and uncensored fine-tunes fill the top of the list, with derivatives like unsloth/Qwen3.8-27B-GGUF and OBLITERATUS/Qwen3.8-27B-OBLITERATED leading it. A year of production serving traces captures the full production behavior spanning popular and long-tail models alike, and online serving workloads show a steep skew where a small number of model instances absorb most of the demand. In LoRA-based derivative ecosystems, the unit of serving demand isn't the model, it's the adapter: one base model, a catalog of fine-tunes around it, and the tail lives in the catalog.
+## In plain terms
 
-The systems literature has already answered how to serve many adapters off one base endpoint. S-LoRA keeps adapters in main memory and fetches them only when a running query calls for them, paging both adapters and the KV cache through a unified memory pool. It batches heterogeneous LoRA computation with custom kernels to serve thousands of adapters at low overhead. Punica keeps a single copy of the base model per GPU and batches the GPU computation of multiple LoRA adapters. The 2026 line of work widens both the memory hierarchy and the catalog scale: PLoRA moves adapters into pooled CXL or NVLink memory, SALT pins a shared domain centroid and swaps in ultra-low-rank per-user residual adapters, and MinT manages adapter revisions at a catalog scale of a million adapters across a rollout, evaluation, and serving lifecycle. This paper positions itself as an explicit upgrade on S-LoRA. S-LoRA answered how to make multiplexing efficient; this paper asks under what conditions a multiplexed architecture is economical against a dedicated endpoint per adapter.
+Picture a coffee machine. The machine itself is big and expensive. A capsule is small and cheap. Nobody buys a whole new machine every time a new flavor comes out. You just make a new capsule and drop it in the drawer.
 
-Given a catalog of K adapters over a base model and a Zipf community traffic mix with exponent s, the open question is: when is one shared endpoint serving all K adapters cheaper, per token and in total, than K dedicated endpoints each running the base plus one adapter? The multiplexing systems above reported multiplexing's throughput and overhead, benchmarked against single-adapter serving on the same hardware. None of them quantified the multiplex-versus-dedicated cost frontier as a function of adapter count and traffic concentration, yet that frontier is exactly the operator decision that determines how many GPUs a derivative catalog needs.
+Serving an open model works the same way. The big, expensive body is the base model. The capsules are the small pieces the community builds on top of it, called LoRA adapters. One piece is worth less than half a percent of the body's size.
 
-## One assumption table, two fleets
+**A dedicated server rebuilds the whole body for every single piece.** A hundred pieces means a hundred full bodies. **A shared server keeps one body and stacks the pieces in a drawer instead.** When an order comes in, it just pulls out that one piece.
 
-The model is built from two fleets and one overhead function, and every quantity in the paper traces back to a single assumption table. The base model is a 27B-class open model, 54GB in bf16. The adapter is rank 32, 134 million parameters, 0.268GB, about half a percent of the base model's size. That smallness is exactly what makes the paper's question interesting. Every dedicated endpoint for a single derivative pays the full 54GB base each time. The multiplexed endpoint pays one 54GB base plus 0.268GB per resident adapter. The GPU is H200-class: 141GB of HBM, 4.8TB/s of bandwidth. One 54GB base copy, a 27GB KV cache, and a 60GB adapter pool add up to exactly 141GB. The host link is PCIe Gen5-class at 64GB/s, the decode batch size is 32, output length is 256 tokens, and the GPU rental rate is $5 per hour. Traffic follows a Zipf mix over K adapters, surveyed across bands s = 0.5, 1, and 1.5.
+The drawer has a limit, though. A piece that does not fit has to make a trip to the storage room, and that trip is the extra cost the shared server pays. When most orders stick to a few favorite flavors, the drawer opens and closes less often, so that extra cost shrinks too.
 
-The dedicated fleet spins up K endpoints, each running a full copy of the base plus one adapter. Adapter i's endpoint pays a per-token cost multiplied by 1/w_i, because that endpoint only handles w_i of the catalog's workload. A scale-to-zero variant removes idle endpoints and reloads the base on every cold start; this cold-start tax takes the same 1/w_i shape for low-traffic adapters. Adapters with less traffic sit idle more often and pay the load cost more frequently per token served.
+## What we did
 
-The multiplexed fleet is a single endpoint: one base copy, a device-memory-resident pool holding the top 223 adapters, and a host-link path for the remainder. The per-token overhead δ is the sum of two terms. The first term, d_b times ε_a, is the extra HBM traffic added on top of the base stream by the distinct adapters appearing in a decode batch, at 0.50 percent of the base per adapter. The second term, φ, is the host-link contention that arises from cold-fetching non-resident adapters outside the pool. Pool capacity is 60GB divided by 0.268GB, or 223 adapters, and within that boundary φ is exactly zero, meaning the host link is never on the critical path. That is the entire model. Two fleet costs, K(1+ε_a) and 1+δ, and every frontier result the paper derives afterward is algebra on those two terms.
+The paper lays every assumption out in one table, then computes both server setups against it. The base model is a strong open model, about 54 gigabytes in size. One piece is worth less than half a percent of that. That tiny size is exactly what makes the paper's question interesting.
 
-## Total cost diverges by roughly a factor of K
+A dedicated server reloads the full body for every piece. A shared server loads the body once and stacks pieces on top. The graphics card behind the shared server is H200-class, with 141 gigabytes of on-board memory. That space splits three ways.
 
-The fleet advantage ratio R(K,s), the dedicated fleet's cost divided by the multiplexed fleet's cost, is K(1+ε_a) over 1+δ(K,s). R tracks roughly K across the whole surveyed s band: about 2x at K=2, 29.4 to 30.6x at K=32 depending on s, about 230x at K=256, and up to about 483x at K=512 under the concentrated traffic case s=1.5. Traffic concentration doesn't move the scale, it moves the margin: the higher s is, the fewer distinct adapters appear per batch, the smaller the overhead, and the closer R sits to the overhead-free diagonal R=K.
+- The body (base model): 54 gigabytes
+- Short-term memory for the conversation: 27 gigabytes
+- The drawer for pieces: 60 gigabytes
+
+Because one piece costs half a percent of the body, that drawer holds about 220 pieces. In plain terms, the drawer looks roomy, but once the catalog passes 220 pieces, it runs out of room.
+
+The paper also varied how concentrated customer orders were, testing low, medium, and high concentration. It swept the number of pieces from 2 up to 512.
+
+## What came out
+
+### Buying the body over and over is what drives the cost
+
+The more pieces you have, the more times a dedicated server buys the full body. A shared server buys the body exactly once. The total cost gap ends up tracking roughly the number of pieces.
+
+- 32 pieces: about 30x cheaper
+- 256 pieces: about 230x cheaper
+- 512 pieces, orders piled on a few flavors: about 480x cheaper
 
 ![Fleet advantage versus adapter count](/assets/images/posts/research/derivative-long-tail-lora-serving/fig1.webp)
 *Fleet advantage ratio R(K, s) versus adapter count K for Zipf concentrations s = 0.5, 1, and 1.5, compared against the overhead-free diagonal R = K. R tracks K across the band, and the flat-traffic curve bends below K at K = 512 once the out-of-pool host-link penalty overtakes it. (Analytical model output, not a measurement.)*
 
-One non-monotonic point stands out. The flat-traffic s=0.5 curve drops from 224.8 at K=256 to 190.5 at K=512. The pool only holds 223 of 512 adapters, and the remaining 289 non-resident adapters generate enough cold misses per batch to expose a large share of the host link. The overhead term that was a minor factor at K=256 becomes the dominant cost at K=512. Because D_cold is largest exactly when the non-resident tail itself is heaviest, this penalty bites much harder under flat traffic than under concentrated traffic. Even at its worst point, the fleet advantage is still 190x.
+There is one exception. When orders spread out evenly instead of piling up, going from 256 to 512 pieces overflows the 220-piece drawer, and the advantage actually shrinks slightly. Even at its worst, though, the shared server still comes out 190 times cheaper. In plain terms, adding more pieces never flips the advantage to the dedicated server's side.
 
-## The one regime where dedicated wins per token
+### Overhead jumps once the drawer fills up
 
-Adapter i's dedicated endpoint beats the multiplexed endpoint per token exactly when that adapter's traffic share exceeds the fleet discount, when w_i exceeds (1+ε_a) divided by (1+δ(K,s)). That threshold starts at 0.995 at K=2 and drops, depending on s, to between 0.372 and 0.944 at K=512. The number of adapters H* whose Zipf weight crosses the threshold is zero across the entire surveyed grid. The top adapter's share w_1 ranges from 0.586 down to 0.023 across the grid. The grid's own threshold never falls below 0.372, and w_1 never reaches it. Within the community-derivative traffic band the paper surveys, no adapter carries enough traffic to beat a dedicated endpoint on a per-token basis. What's left for dedicated endpoints is non-cost justification: SLO isolation, failure containment, or extreme near-monopoly concentration outside the Zipf band.
+The shared server's extra cost comes from two sources: pulling a piece out of the drawer for each order, and the rare trip to the storage room when a piece does not fit. Within the 220-piece limit, the two split like this.
 
-## Overhead flattens at 11 percent, the boundary sits at 223 adapters
-
-At s = 1, the overhead decomposition is clean. The in-batch restream term, d_b times ε_a, starts at 3.63 percent at K=8, climbs to 10.85 percent at K=223, and flattens after that. Because d_b converges to the batch size of 32, this term is bounded above by b times ε_a. The out-of-pool term φ stays exactly zero up to the 223-adapter pool-fit boundary, then jumps by 22.01 percentage points at K=512. At K=512, an average of 3.87 distinct non-resident adapters per batch push the cold-fetch window past the length of a decode step. Total overhead sits flat at roughly 11 percent within the boundary, and reaches 33.7 percent at K=512.
+- Pulling a piece from the drawer: levels off around 10 percent
+- A trip to the storage room: exactly zero
 
 ![Multiplex overhead decomposition versus adapter count (s = 1)](/assets/images/posts/research/derivative-long-tail-lora-serving/fig2.webp)
 *Decomposition of the multiplexed per-token overhead δ(K, s = 1) into percentage points. The in-batch adapter restream term climbs to about 11 percent and flattens at the 223-adapter pool-fit boundary, while the out-of-pool host-link contention term stays exactly zero up to that boundary and jumps by +22.0 points at K = 512. (Analytical model output, not a measurement.)*
 
-This jump is exactly the regime that pooled-memory designs like PLoRA, centroid-pinning designs like SALT, and lifecycle management like MinT are architecturally trying to eliminate. The model prices the economic bet behind pooled-memory designs at a 22-to-34-percentage-point per-token overhead, or a 1.22x to 1.34x cost multiplier. That multiplier is effectively the price tag attached to the memory architecture.
+Past 220 pieces, the picture changes. At 512 pieces, the storage-room trip suddenly adds more than 22 percentage points, and the total extra cost climbs to about 34 percent. In plain terms, keeping the drawer from overflowing is the real job of running a shared server well.
 
-## The catalog is a moving boundary
+### The one case where a dedicated server wins
 
-The catalog isn't a fixed input. In production, fine-tuning sits right next to serving, and on-demand adapter generators keep producing new derivatives. DeltaServe even reuses idle inference GPU capacity for LoRA fine-tuning while protecting latency targets, which is part of why the catalog grows right under the operator's feet. The paper turns the arrival rate α into a cost variable. With new derivatives arriving at 4 per week, an initial catalog K0=32, and a steady-state ceiling Kss=512, catalog size K(t) = min(Kss, K0 + αt) crosses the 223-adapter pool-fit boundary at about week 48, roughly 0.9 years in, and saturates at 512 around week 120, roughly 2.3 years in. Over that same span, the s=1 fleet advantage drifts from 30x to about 385x.
+Priced order by order, the picture can flip. If one piece pulls in a very large share of all orders, a dedicated server built just for that piece can be cheaper than the shared one. That crossover line drops as the catalog grows.
+
+- At 2 pieces, the crossover line: almost all of the orders
+- At 512 pieces, the crossover line: a little over a third of the orders
+
+Not one piece in the traffic ranges the paper surveyed ever crossed that line. Even the single most popular piece falls short of it. In plain terms, within the community-variant traffic this paper looked at, a dedicated server never wins on a per-order basis.
+
+### The catalog does not sit still
+
+The list of variants keeps growing, because fine-tuning teams keep making new ones every week. The paper assumed 4 new pieces arrive each week and tracked what happens over time. Starting from 32 pieces, the catalog crosses the 220-piece drawer limit in under a year, and levels off at 512 after about two years.
 
 ![Catalog growth and fleet-advantage drift](/assets/images/posts/research/derivative-long-tail-lora-serving/fig3.webp)
 *Under a constant arrival rate of 4 derivatives per week (K0 = 32, Kss = 512), the catalog crosses the pool-fit boundary around week 48 and saturates at 512 around week 120 (2.3 years), while the s = 1 fleet advantage drifts from 30x to about 385x over the same span. (Analytical model output, not a measurement.)*
 
-The marginal cost of one new derivative differs sharply between the two fleets. Under multiplexing it's about 0.268GB of pool memory and zero additional GPUs; under a dedicated fleet it's a whole extra endpoint. The long tail compounds: the catalog grows at near-zero cost under the multiplexed endpoint, and the fleet advantage widens as the catalog grows. This drift is simply the frontier viewed again, this time over time.
+Over that same stretch, the shared server's advantage grows from about 30x to about 385x. In plain terms, one new piece costs the shared server a drawer slot, and costs the dedicated fleet a whole extra body.
 
-## An operator's decision rule, and a small operator's price point
+## What to change
 
-The paper compresses the frontier into an operator rule. At K=1, dedicated and multiplexed are identical, so either one works. Between 2 and 223 adapters, the answer is pure multiplexing: the pool wins per token for every adapter, because the head-parity threshold rules out any single adapter carrying 90 to 99.5 percent of traffic anywhere in the surveyed band. Above 223 adapters, multiplexing needs one more memory move: expanding the pool, offloading to pooled memory the way PLoRA does, or adopting a centroid-and-residual structure the way SALT does. Dedicated endpoints only become justified at a near-monopoly head, and the Zipf band doesn't produce a near-monopoly head. If there's an SLO or isolation requirement, a dedicated head tier is justified on non-cost grounds regardless of the cost rule, and the paper explicitly marks that exception as outside the cost model.
+The paper compresses all of this into one operating rule. With just one piece, either setup is fine. Between 2 and 220 pieces, the answer is always a shared server. Past 220, a shared server needs one more move: a bigger drawer, or a tighter way of stacking pieces.
 
-That rule gets priced directly off the assumption table. At K=32, s=1, 100 million tokens of total monthly traffic, and $5 per GPU-hour, the multiplexed fleet costs 1 GPU, $3,869 a month. The dedicated fleet costs 32 GPUs, $115,773 a month, a 30x gap. Per million tokens, that's $38.7 versus $1,158. Because both costs scale linearly with total token volume, this ratio holds at any volume. This is the answer to the small operator's feasibility question at catalog scale: a single-GPU operator can match a 32-GPU dedicated fleet on the same catalog at 30x lower cost.
+Put a price on it and the gap gets real. Take 32 pieces, 100 million requests a month, and a graphics card renting for 5 dollars an hour. A shared server needs one graphics card, about 3,900 dollars a month. A dedicated setup needs 32 graphics cards, about 116,000 dollars a month. In plain terms, an operator with a single graphics card can match a 32-card team on the same catalog at a thirtieth of the price.
 
-The frontier also pairs with a precision lever. Quantizing the base to something like NVFP4 shrinks M_B by roughly 4x, from 16-bit to 4-bit, and ε_a = m / M_B grows by the same ratio. T_step falls, but the adapter size m doesn't change, so the 223-adapter pool-fit boundary doesn't move. A precision decision that lowers the base's cost simultaneously raises the relative cost of every resident adapter. The multiplex-versus-dedicated frontier is a paired object with the quantization lever, not an independent one.
+Shrinking the body further, say by compressing it more aggressively, ties into this same math. A smaller body makes each piece relatively heavier, so shrinking the body and the drawer limit move together, not apart.
 
-## What this leaves for the company, the industry, and the science
+For ThakiCloud, this is a direct rule for how many graphics cards Metis, our inference service, needs to keep up with community-variant demand. Maxis, the training and evaluation pipeline that produces those variants, feeds directly into that same demand. Every open model that ships now grows this kind of variant ecosystem around it, which means serving cost has to be planned per variant from day one.
 
-For ThakiCloud, this analysis is directly a decision rule for Metis's (AI Inference, Token Factory) derivative demand. Community derivatives dominate the Hugging Face trending list around base models, and the downstream training and evaluation pipelines Maxis runs are exactly the demand that produces community adapters. The paper's price point answers how many GPUs a derivative catalog needs and what it costs per month. It carries an industry-level implication too: community derivatives, localization, and domain adaptation around open models are the main channel through which open models spread. Quantifying this serving cost tells small operators the price point at which a derivative model becomes economically viable. Scientifically, this is the first work to quantify the multiplex-versus-dedicated cost frontier for long-tail Zipf traffic on a single GPU class. Prior serving research, S-LoRA's system design and setup tax, and precision-tier routing, all held the adapter dimension fixed at one adapter per endpoint. This paper separates adapter count and traffic concentration out as independent cost variables.
+## What not to trust
 
-## Where the paper draws its own line
+Every number in this paper comes from a calculation, not a measurement. The paper lays out its own follow-up: run real engines on real graphics cards across a range of order concentrations, measure the true numbers, then fit concentration levels from real production logs and check the frontier against them. Read the numbers here as predictions, not confirmed results.
 
-Every number in the paper is a model output over an assumption table; the paper is not a multi-model or multi-accelerator empirical study, and it makes no measurement claims. It lays out the next step as a validation protocol: on an H200-class cluster, measure the model's free parameters, d_b, ε_a, and φ, using an engine's native multi-LoRA path against Zipf synthetic request mixes swept across the s band, fit s from production traces, and re-evaluate the frontier against real measurements. The paper's results should be read as that protocol's predictions.
+The calculation also holds up well on its own terms. Switching order concentration between low, medium, and high barely moved the total cost gap within the drawer limit. A few things stayed fixed as assumptions, though: every piece is the same size, and the whole catalog sits on one base model. The batch size was also fixed at 32 orders at a time; a bigger batch would likely tilt the math even further toward the shared server.
 
-Robustness is stated explicitly too. The fleet-level R is insensitive to s. The three curves agree within about 5 to 7 percent up to the pool-fit boundary, and only diverge once the out-of-pool term kicks in. The K-fold fleet advantage doesn't depend on where the community mix sits within the band, and that is the robustness the paper claims. The remaining assumptions are stated openly as well: every adapter shares the same rank and size m, and the catalog sits on a single base. SALT's centroid-and-residual structure is a natural extension. Batch size is fixed at 32, and the frontier flattens further as batch size grows. The prefetch exposure coefficient ξ=0.5 is a stated assumption; because φ is linear in ξ, the 22.01 percentage points at K=512 should be read as a bracket, growing to full exposure if ξ=1.
+The cost math leaves out isolation, security, and failure protection. A dedicated server keeps one bad piece from causing trouble for other customers. This calculation says a dedicated server always loses on a per-order basis, but where isolation genuinely matters, a dedicated server can still be the right call regardless of cost. The paper marks that exception outside its own math.
 
-Non-cost dimensions sit outside the model. Isolation, security, and failure containment are the relevant ones. A dedicated endpoint structurally shields against a bad adapter's failure, memory pressure, and tenant blast radius. The cost rule says dedicated loses per token across the entire surveyed band; the operational rule can differ, and the paper explicitly marks that exception.
+---
 
-If the systems literature built the object called a multiplexed endpoint, this paper prices it. Under the assumption table, the cost of one shared endpoint serving K community adapters is one endpoint's worth plus roughly 11 percent overhead, flat up to the 223-adapter pool-fit boundary. The cost of a dedicated fleet that runs the full base K times is K(1+ε_a) endpoints' worth. The fleet advantage tracks roughly K: about 30x at K=32, about 483x at K=512 under concentrated traffic, and a drift from 30x to about 385x as the catalog grows over roughly 2.3 years. Per token, a dedicated endpoint only beats the pool for an adapter carrying 37 to 99.5 percent of traffic, and no Zipf adapter in the surveyed band meets that condition. What's left for dedicated endpoints is isolation, nothing more. For community-derivative demand, the multiplexed endpoint is the cost-minimal architecture at essentially any adapter count above one, and what remains is a memory-architecture problem, keeping the pool large enough, and a routing problem, keeping traffic concentrated enough.
+The paper's full page is available at the link below: [The Derivative Long Tail: Multiplex-vs-Dedicated LoRA Serving on H200](https://thakicloud.com/tech-blog/en/research/derivative-long-tail-lora-serving/)
 
-The paper's full page is available at the link below.
-[The Derivative Long Tail: Multiplex-vs-Dedicated LoRA Serving on H200](https://thakicloud.com/tech-blog/en/research/derivative-long-tail-lora-serving/)
+*Numbers in the body are rounded for readability; exact values stay in each figure caption. Every number in this paper comes from an assumption table, not a measurement.*

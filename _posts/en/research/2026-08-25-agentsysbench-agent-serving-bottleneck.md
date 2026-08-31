@@ -1,10 +1,10 @@
 ---
-title: "Serving Agents: The Non-LLM Bottleneck AgentSysBench Reveals"
-seo_title: "The real bottleneck in agent serving is not the model - AgentSysBench, Thaki Cloud"
-seo_description: "AgentSysBench (arXiv 2608.15127) from Alibaba and ByteDance shows that in agent workloads the latency is dominated by non-LLM components - sandbox, memory, tool calls - not the model. Task-aware serving cuts task latency 29-40%. Implications for Metis and Paxis."
-excerpt: "In 5 of 10 agent apps, latency was dominated not by LLM inference but by sandbox, memory, and tool calls. The serving-optimization axis must move from 'tokens per second' to 'cost and latency per task.'"
+title: "Coffee Pours Fast, So Why Is Your Agent Slow"
+seo_title: "AgentSysBench in plain terms: why agent serving is actually slow - ThakiCloud"
+seo_description: "In 5 of 10 agent apps measured, the slow part was not the AI model but the work around it. We break down AgentSysBench in plain terms, the 29 to 40 percent time savings from reordering that work, and what it means for ThakiCloud's products."
+excerpt: "A barista pulls a shot in seconds. The customer still waits much longer for the coffee. Agents work the same way: the real time sink is not the AI model, it is everything around it."
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-08-31
 tags:
   - agent-serving
   - llmops
@@ -25,27 +25,31 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/research/agentsysbench-agent-serving-bottleneck/"
 ---
 
-## Why read this
+When you give an agent a job, the thing that eats the most time is usually not the AI model. This is worth reading if you run several agents or own the cost of routing them. Today we walk through a paper that actually measured where that hidden time goes.
 
-If you optimize serving latency or operating cost for multi-agent workloads, or you build the execution environment that agents run in, read this paper. The bottom line up front: in half of the agent apps measured, latency was dominated not by LLM inference but by non-LLM components - sandbox, memory, tool calls - and recognizing that lets "task-aware serving" cut task latency by 29-40% on production traces. It is the evidence base for moving your serving-optimization view up one level, from per-token throughput to per-task cost and latency.
+## In plain terms
 
-## Overview
+Order a coffee. The barista pulls the shot in a few seconds. But you still wait much longer for the cup, because someone has to grind beans, warm up the machine, check stock, and write your name on it.
 
-The inference-serving field has nearly solved "serve a single LLM request fast" over the past few years. Continuous batching, paged KV cache, chunked prefill, prefill/decode disaggregation: per-request optimization is mature. But the work AI actually takes on in production is increasingly not "one request" but "a task that walks through several steps" - search, run code in a sandbox, read the result, call the next tool. If you keep optimizing only at the request level, a large part of the latency your users feel is happening somewhere you are not looking.
+Agents work the same way. The AI model making an answer, the moment the shot gets pulled, is already fast enough. What eats most of your wait is everything around the model: setting up a workspace, calling a tool, searching the web, and remembering the earlier conversation. In the coffee shop, that is grinding beans, checking stock, and writing your name on the cup.
 
-AgentSysBench (arXiv 2608.15127; first author Chaokun Chang and 22 co-authors; posted 2026-08-15), from Alibaba and ByteDance research groups, is a benchmark that measures exactly this, including three production traces. Its core message is simple: in agent serving the bottleneck moves with the request, the model, and the deployment, and a large share of it sits in non-LLM components.
+The barista is fast. The shop is slow. The paper we cover today measures, for the first time, the whole wait from the line to the cup in your hand.
 
-## What AgentSysBench shows
+## What we did
 
-An agent task does not end in one LLM call. The diagram below shows the structure: orchestration drives both LLM inference and several non-LLM components (sandbox execution, tool calls / web search, memory / state management) in parallel, and together they complete the task.
+The research team looked at a paper from Alibaba and ByteDance. It is called AgentSysBench, and it measured, on 10 agent apps actually running in production, exactly where the time goes.
+
+Most work on fast AI serving has focused on one thing: how fast can you answer one question. But what an agent actually does is search, run code in a sandbox, read the result, and call the next tool, one step after another. Making a single question fast tells you nothing about why the whole shop is slow.
+
+So the team broke one agent task apart the way you would break down a coffee order. They timed the AI model separately from the time spent running code in a sandbox, calling tools or searching the web, and holding the earlier conversation in memory.
 
 ```mermaid
 flowchart TB
     R["Agent task request"] --> P["Orchestration / planning"]
-    P --> LLM["LLM inference (token work)"]
-    P --> N1["Sandbox execution"]
-    P --> N2["Tool calls / web search"]
-    P --> N3["Memory / state management"]
+    P --> LLM["AI model makes an answer"]
+    P --> N1["Run code in a sandbox"]
+    P --> N2["Call a tool / search the web"]
+    P --> N3["Hold the conversation"]
     LLM --> D["Task complete"]
     N1 --> D
     N2 --> D
@@ -56,38 +60,44 @@ flowchart TB
     class N1,N2,N3 non
 ```
 
-The color split is the point. The blue LLM inference is already well served; it is the orange non-LLM components that dominate the latency.
+*The blue box (the AI model) is already served well. The orange boxes (sandbox, tool calls, memory) are what this paper targets.*
 
-The measurement covered 10 agent apps. In 5 of them, latency was dominated by non-LLM components. Sandbox worksets used up to 28GB of memory per session, and in mixed GPU / memory / CPU configurations task latency varied by up to 32x. Where the bottleneck sits changes with the shape of the request, the model used, and the deployment. The premise that "the bottleneck is one fixed point" simply does not hold.
+## What we found
 
-## What task-aware serving recovers
+### Half the shops are slow in the back room
 
-On top of that observation, the paper proposes and measures serving techniques that treat the task as the unit. Three strands:
+In 5 of 10 measured agent apps, most of the customer's wait came not from pulling the shot but from work in the back room. In plain terms, in half of the shops we measured, the real bottleneck was not the AI model but everything around it.
 
-Task-aware serving, which schedules by understanding the task's steps and resources, cut overall task latency by 29-40%. Placement virtualization, which abstracts where a task runs, reported a 4.5x improvement factor; state offloading, which moves agent state out of the serving tier, recorded a 4.6x factor. On top of that, tool-result caching removed 35.2% of duplicate search / tool calls.
+The back-room workspace also stacked up as much as 28GB of stuff per customer session. Depending on how a shop mixed its GPU, memory, and CPU, the time to serve one customer swung by as much as 32x. In plain terms, where the bottleneck sits keeps moving depending on which shop and which customer. The assumption that "the bottleneck always sits in the same place" simply does not hold.
 
-Read the numbers correctly and they are a correction to "we were spending the time somewhere other than the model." The 29-40% and the 4.5x / 4.6x are not about making the model stronger; they are about the fact that time was being burned in the surroundings. The 35.2% from tool-result caching lands directly on operating cost for agents that lean on RAG or web search: not re-searching the same question or re-calling the same tool is a large per-task cost reduction by itself.
+### Seeing the whole shop shaved off 3 to 4 tenths
 
-## ThakiCloud product implications
+Based on that, the team tried a few ways of planning the whole shop's flow instead of one step at a time.
 
-The implications reach both ThakiCloud products, Metis and Paxis.
+The first plans the whole task ahead of time, the same as pulling out cups and ingredients while the shot is still brewing. That alone cut the time to serve one customer by 29 to 40 percent.
 
-From a **Metis** (token factory / AI inference) view, there is now a basis to reset the serving-optimization axis. Metis serverless and dedicated serving has been tuned around per-token throughput, KV cache, and batching, and we have even measured and recovered the platform default "configuration tax." AgentSysBench points at the next step: for agent workloads, task-level scheduling, state offloading, and tool-result caching matter more than per-token throughput. Adding task-aware scheduling and tool-result caching to the Metis serving layer becomes the next optimization axis for agent customers.
+The second flexibly decides which shop serves the customer, and the third stores the customer's bags in a separate room instead of behind the counter. Those two lifted throughput by about 4.5x and 4.6x respectively. Add a way to check stock notes instead of walking back to the stockroom every time, and about 35 percent of repeat searches and tool calls simply disappeared.
 
-From a **Paxis** (agent platform) view, the finding that multi-agent execution cost and latency are set by sandbox / memory / tool calls rather than tokens maps directly onto product design. Paxis runs skills in isolated sandboxes and calls tools through MCP connectors; this paper pins down exactly where that structure's bottleneck is. Sandbox workset memory (up to 28GB per session) and tool-call caching become the key variables of Paxis execution economics, now with a measured basis.
+In plain terms, none of this made the shot itself pour faster. It made the back-room prep and cleanup efficient enough that the customer's wait got shorter.
 
-Two concrete experiments follow. First, decompose and measure non-LLM component latency in Paxis workflows to reset the serving-optimization axis. Second, A/B tool-result caching on a Metis demo agent workload to measure latency and cost. Both are "change the serving / execution layer," not "change the model," so they validate on top of existing checkpoints.
+## What to change
 
-## Limitations and counterpoints
+First, reuse the result of a tool call or a web search whenever you can. Not walking back to the stockroom every time cuts both wait time and cost on its own. The payoff grows for agents that lean on search or outside data.
 
-The measurement rests on three production traces, so extrapolating to a wider range of workloads and models needs care. The "5 of 10 apps non-LLM dominated" ratio comes from a small sample, and the definition of "agent app" is the authors' - in other environments the non-LLM share could differ. The 4.5x / 4.6x factors also depend on the baseline they are measured against, so read the assumed configuration together with the number rather than the multiplier alone.
+Second, if your agent takes several steps, plan the whole flow ahead instead of one question at a time. Pull out the cups while the shot is still brewing: get the next tool or workspace ready while the AI model is still working on an answer.
 
-Task-aware serving also adds layers (task recognition, state store, cache) to the serving path, which can be pure overhead for a simple single-request workload. The win only clears the cost when agent traffic is large enough and staged enough.
+The same story applies to our two products. Metis, our inference service, has been tuned around processing tokens fast; for agent workloads it needs to shift the yardstick from one question to the whole task. Paxis, our agent platform, runs tools in isolated workspaces. This paper gives us measured evidence that reusing that workspace and its tool-call history is what actually decides operating cost.
 
-## Takeaway
+We have picked two follow-up experiments. One breaks down the timing of a Paxis workflow step by step to see where it leaks. The other adds tool-call result reuse to an agent running on Metis and measures the before and after. Neither changes the AI model; both fix what is around it, so we can validate them on the models we already run.
 
-Serving an agent is not "put the request into a fast LLM." It is a question of how well you schedule a task made of sandbox, memory, and tool calls, where you keep state, and what you cache. AgentSysBench shows that much of the bottleneck sits outside the model and that task-aware serving recovers 29-40% on production evidence. For ThakiCloud, that evidence is a signal to point Metis's serving-optimization axis from per-token to per-task, and to read Paxis execution economics through sandbox and tool-caching variables. The next experiment is not a new model benchmark; it is non-LLM latency decomposition and a tool-result caching A/B on a demo agent workload.
+## What not to trust
+
+This measurement rests on records from three production services. With only three shops, we do not yet know whether the same picture holds for other kinds of agents or other model combinations.
+
+The "5 of 10 shops slow in the back room" figure comes from a sample of only 10. What counts as an "agent app" is also a call the research team made, so that ratio could differ elsewhere. The 4.5x and 4.6x gains also depend on what they were measured against, so read the setup along with the multiplier rather than the multiplier alone.
+
+Planning the whole shop's flow also means more to build and maintain: something to recognize the task, a room to hold bags, and a record to reuse. For a simple shop where every customer just orders one coffee, this can be a net loss. The payoff only shows up once an agent takes several steps and traffic is large enough.
 
 ---
 
-*Source: [AgentSysBench, arXiv 2608.15127](https://arxiv.org/abs/2608.15127) (first author Chaokun Chang and co-authors, 2026-08-15). The figures in this post were verified against the paper in our internal deep-research record; the primary source could not be re-fetched in this session, so they are cited as the paper's own measurements.*
+*Full paper: [AgentSysBench, arXiv 2608.15127](https://arxiv.org/abs/2608.15127) (first author Chaokun Chang and 22 co-authors, posted 2026-08-15). The figures in this post were verified against the paper through our internal deep-research record. We could not re-fetch the primary source for this pass, so the numbers are cited as the paper's own reported values.*
