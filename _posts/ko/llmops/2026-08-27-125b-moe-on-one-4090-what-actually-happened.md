@@ -39,6 +39,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/125b-moe-on-one-4090-
 
 실행 환경은 Ubuntu 22, CUDA 13.0, PCIe 4.0 x16, DDR4 110GB였고, llama.cpp 본체가 아닌 아직 병합되지 않은 PR에서 빌드해야 합니다. 이 부분은 확인이 필요해서 직접 조회했는데, PR #27742는 2026년 8월 26일에 열렸고 지금도 open 상태입니다. 즉, 이 실행 경로는 아직 master에 없습니다.
 
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 1](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-01.webp)
+
 ## 왜 111GB가 24GB 카드에서 도는가
 
 세 가지 구조가 겹쳐서 만든 결과이고 셋 중 하나라도 빠지면 성립하지 않습니다.
@@ -83,6 +85,8 @@ flowchart TB
 
 한 가지 자주 오해되는 플래그가 있습니다. 원 기록은 `-ncmoe 40`을 "40개 전문가 계층을 GPU로 오프로드"라고 적었는데, 실제 의미는 반대입니다. 40개 계층의 MoE 전문가를 CPU에 남긴다는 뜻이고 48계층 중 나머지 8계층의 전문가만 GPU에 올라갑니다. `-cmoe`는 그걸 전 계층으로 확장한 것입니다. "512개 전문가 계층"이라는 표현도 정확하지 않습니다. 계층은 48개이고 각 MoE 계층마다 전문가가 512개입니다.
 
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 2](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-02.webp)
+
 ## 250K는 아직 예약이지 실사용이 아닙니다
 
 여기가 이 기록에서 가장 조심해야 할 대목입니다. 원 기록은 모든 실행에서 지속적으로 28K 프롬프트를 사용했다고 스스로 밝히고 있습니다. 그러니까 검증된 것은 "250K 컨텍스트 슬롯을 할당한 서버가 28K 프롬프트를 처리했다"입니다.
@@ -103,6 +107,8 @@ MTP도 dflash도 KV 캐시 양자화도 쓰지 않았다는 단서가 붙어 있
 
 "프로덕션급 125B 서빙"이라는 표현도 아직 이릅니다. 동시 요청 수와 총 처리량, p95와 p99 지연, 수시간 연속 부하에서의 안정성, 4비트 양자화의 품질 저하, prompt caching 효과가 전부 공개되지 않았습니다. 지금 단계에서 정확한 이름은 상당히 인상적인 단일 사용자 로컬 추론 실증입니다.
 
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 3](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-03.webp)
+
 ## 그러면 27B 밀집 모델보다 나은가
 
 기준에 따라 다릅니다. 공식 벤치마크에서 Flash-Next는 Qwen3.8-27B를 대체로 앞섭니다. DeepSWE 1.1이 58.7 대 42.2, SWE-bench Pro가 62.5 대 61.7, SWE-bench Multilingual이 81.0 대 73.8, JobBench가 55.7 대 33.4입니다. 다만 이건 Qwen 측 자체 벤치마크이고 UD-Q4_K_XL로 양자화한 상태의 품질을 따로 측정한 결과는 아닙니다.
@@ -119,6 +125,8 @@ Aegis 온프렘 관점에서는 진입 비용의 모양이 바뀝니다. 폐쇄�
 
 우리 쪽에서 확인이 필요한 것도 분명합니다. 저 21 tok/s가 어떤 CPU와 몇 채널 메모리에서 나온 값인지 모르는 상태이고, 4비트 양자화 품질을 우리 평가셋으로 재보지 않았습니다. 도입을 논하기 전에 이 둘을 우리 하드웨어에서 직접 측정하는 것이 순서입니다.
 
+![125b-moe-on-one-4090-what-actually-happened 슬라이드 4](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-04.webp)
+
 ## 재현하려면
 
 llama.cpp master에는 아직 이 아키텍처가 없습니다. PR #27742 브랜치에서 빌드해야 하고 그 PR은 2026년 8월 26일에 열려 아직 병합되지 않았습니다. 실험적 브랜치를 프로덕션 경로에 넣지 않는 것이 좋습니다.
@@ -132,16 +140,3 @@ llama.cpp master에는 아직 이 아키텍처가 없습니다. PR #27742 브랜
 - [Qwen3.8-Flash-Next 공식 모델 카드](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)
 - [Unsloth Qwen3.8-Flash-Next GGUF](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF)
 - [llama.cpp PR #27742: add Qwen3.8-Flash-Next](https://github.com/ggml-org/llama.cpp/pull/27742)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![125b-moe-on-one-4090-what-actually-happened 슬라이드 1](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-01.webp)
-
-![125b-moe-on-one-4090-what-actually-happened 슬라이드 2](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-02.webp)
-
-![125b-moe-on-one-4090-what-actually-happened 슬라이드 3](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-03.webp)
-
-![125b-moe-on-one-4090-what-actually-happened 슬라이드 4](/assets/images/125b-moe-on-one-4090-what-actually-happened-slide-04.webp)
-

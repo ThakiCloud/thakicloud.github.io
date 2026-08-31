@@ -69,6 +69,8 @@ Music3는 가사와 구조화된 캡션을 받아 32kHz 스테레오 완곡을 �
 않았습니다. 레퍼런스 오디오로 목소리를 지정할 통로가 애초에 없다는 뜻입니다. 캡션이 유일한
 조건인데 그 캡션이 성도를 못 움직이니, 이 모델 안에서 가수를 고르는 길은 닫혀 있습니다.
 
+![generative-music-voice-swap-chain 슬라이드 1](/assets/images/generative-music-voice-swap-chain-slide-01.webp)
+
 ## 그래서 보컬만 갈아 끼웁니다
 
 작곡과 편곡은 모델이 잘합니다. 못 하는 것은 캐스팅 하나입니다. 그러면 잘하는 일은 모델에
@@ -116,6 +118,8 @@ flowchart LR
 재합성한 보컬 스템에서 유성 구간 F0 중앙값을 재면 발라드가 251.1Hz와 126.3Hz, 시티팝이
 242.6Hz와 123.4Hz입니다. 두 벌의 간격이 열두 반음 근처에서 안정적으로 유지됩니다.
 
+![generative-music-voice-swap-chain 슬라이드 2](/assets/images/generative-music-voice-swap-chain-slide-02.webp)
+
 ## 조옮김에 자유도가 거의 없습니다
 
 여기서 한 번 크게 헛디뎠습니다. 남녀 두 벌을 만들었는데 두 벌이 같은 음고로 나왔습니다.
@@ -155,6 +159,8 @@ flowchart LR
 서른한 개가 채택됐는데, 떨어진 아홉 개는 품질이 무너져서가 아니라 그 곡에 그 목소리가 안 맞아서
 떨어졌습니다.
 
+![generative-music-voice-swap-chain 슬라이드 3](/assets/images/generative-music-voice-swap-chain-slide-03.webp)
+
 ## 판정은 끝까지 사람이 했습니다
 
 비싸게 배운 쪽은 지표였습니다. 정체성이 충분히 갈렸는지 재려고 세 가지를 썼습니다. 화자 임베딩 코사인 거리, 포먼트 F4, 배율입니다. 셋 다 귀와 어긋났습니다.
@@ -185,6 +191,8 @@ ThakiCloud가 Metis로 파는 것이 정확히 이 구간입니다. 모델을 �
 스택에 어떻게 올리느냐가 원가를 한 자릿수 배수로 바꿉니다. 오디오처럼 산출물 하나가 분 단위로
 길고 후처리 체인이 붙는 워크로드일수록 그 차이가 그대로 제품 가능 여부로 넘어갑니다.
 
+![generative-music-voice-swap-chain 슬라이드 4](/assets/images/generative-music-voice-swap-chain-slide-04.webp)
+
 ## 쓰신다면
 
 체인 네 단계의 라이선스는 분리와 변환이 MIT, F0 이식이 수정 BSD입니다. 생성 모델은 자체
@@ -210,16 +218,3 @@ MiniMax-Music3로 만든 곡입니다. 참고로 음색 클로닝을 네이티�
 - demucs (htdemucs): [facebookresearch/demucs](https://github.com/facebookresearch/demucs)
 - Chatterbox: [ResembleAI/chatterbox](https://huggingface.co/ResembleAI/chatterbox)
 - WORLD: [mmorise/World](https://github.com/mmorise/World)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![generative-music-voice-swap-chain 슬라이드 1](/assets/images/generative-music-voice-swap-chain-slide-01.webp)
-
-![generative-music-voice-swap-chain 슬라이드 2](/assets/images/generative-music-voice-swap-chain-slide-02.webp)
-
-![generative-music-voice-swap-chain 슬라이드 3](/assets/images/generative-music-voice-swap-chain-slide-03.webp)
-
-![generative-music-voice-swap-chain 슬라이드 4](/assets/images/generative-music-voice-swap-chain-slide-04.webp)
-

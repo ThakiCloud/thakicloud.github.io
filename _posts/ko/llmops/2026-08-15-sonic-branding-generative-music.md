@@ -62,6 +62,8 @@ Global LLM 8B, Local LLM 0.6B, Flow Matching 2.4B, Flow-VAE 123M으로 이루어
 나왔습니다. 네트워크가 아니라 전송 계층이 병목이었습니다. 다만 이건 특정 시점의 관측이지 법칙이
 아니므로, 큰 모델을 받기 전에는 한 번 재보시길 권합니다.
 
+![sonic-branding-generative-music 슬라이드 1](/assets/images/sonic-branding-generative-music-slide-01.png)
+
 ## 실행 스택이 만든 12.7배
 
 모델 카드가 안내하는 레퍼런스 경로는 diffusers 파이프라인을 직접 호출하는 방식입니다. 이 경로로
@@ -116,6 +118,8 @@ Global LLM 8B, Local LLM 0.6B, Flow Matching 2.4B, Flow-VAE 123M으로 이루어
 전력을 인용할 때는 유휴를 언제 쟀는지가 함께 적혀 있어야 합니다. 모델 로드 직후에 재면 순증
 전력이 실제보다 훨씬 작게 나오고, 그 값으로 계산한 곡당 에너지는 몇 배씩 틀립니다.
 
+![sonic-branding-generative-music 슬라이드 2](/assets/images/sonic-branding-generative-music-slide-02.png)
+
 ## 재현되지 않은 것
 
 모델 카드는 최대 5분짜리 완곡을 만든다고 안내합니다. 저희 실행에서는 재현되지 않았습니다.
@@ -155,6 +159,8 @@ Global LLM 8B, Local LLM 0.6B, Flow Matching 2.4B, Flow-VAE 123M으로 이루어
 
 이 파일은 numpy가 만듭니다. 배음의 비정수배 비율, 어택 길이, 절차 생성 잔향까지 전부 코드에
 숫자로 적혀 있고, 다시 돌리면 바이트가 같습니다.
+
+![sonic-branding-generative-music 슬라이드 3](/assets/images/sonic-branding-generative-music-slide-03.png)
 
 ## 같은 세 음, 일곱 개의 편곡
 
@@ -200,6 +206,8 @@ Global LLM 8B, Local LLM 0.6B, Flow Matching 2.4B, Flow-VAE 123M으로 이루어
 이건 취향 문제가 아니라 실무 문제입니다. 스포티파이에서 1,300만 스트림을 기록했던 AI 생성곡이
 특정 가수의 목소리와 유사하다는 이유로 전 플랫폼에서 삭제된 사례가 있습니다. 목소리를 흉내 내는
 순간 그 자산은 언제든 사라질 수 있는 자산이 됩니다.
+
+![sonic-branding-generative-music 슬라이드 4](/assets/images/sonic-branding-generative-music-slide-04.png)
 
 ## 광고 영상까지
 
@@ -270,16 +278,3 @@ peak VRAM 대비 남는 용량을 처리량으로 환산하는 일은 LLM 서빙
 - Flow Matching 아키텍처: [Flow Matching for Generative Modeling (arXiv)](https://arxiv.org/abs/2210.02747)
 - 레퍼런스 파이프라인 (diffusers): [Diffusers (Hugging Face)](https://huggingface.co/docs/diffusers)
 - Xet 전송 경로: [Xet: our Storage Backend (Hugging Face)](https://huggingface.co/docs/hub/en/xet)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![sonic-branding-generative-music 슬라이드 1](/assets/images/sonic-branding-generative-music-slide-01.png)
-
-![sonic-branding-generative-music 슬라이드 2](/assets/images/sonic-branding-generative-music-slide-02.png)
-
-![sonic-branding-generative-music 슬라이드 3](/assets/images/sonic-branding-generative-music-slide-03.png)
-
-![sonic-branding-generative-music 슬라이드 4](/assets/images/sonic-branding-generative-music-slide-04.png)
-

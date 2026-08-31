@@ -74,6 +74,8 @@ Cloud Infra 팀의 C님은 다른 각도에서 봅니다.
 
 ---
 
+![thakicloud-three-vs-mlops-careers 슬라이드 1](/assets/images/thakicloud-three-vs-mlops-careers-slide-01.png)
+
 ## 모집 포지션
 
 | 팀 | 지금 풀고 있는 문제 |
@@ -96,7 +98,12 @@ Cloud Infra 팀의 C님은 다른 각도에서 봅니다.
 - [Grafana](https://grafana.com/docs/grafana/latest/) : 비즈니스 KPI와 같은 화면 모니터링
 - [Airflow](https://airflow.apache.org/docs/) : drift 감지 시 자동 재훈련 DAG
 
+![thakicloud-three-vs-mlops-careers 슬라이드 2](/assets/images/thakicloud-three-vs-mlops-careers-slide-02.png)
+
 ## 지원하는 법
+![thakicloud-three-vs-mlops-careers 슬라이드 3](/assets/images/thakicloud-three-vs-mlops-careers-slide-03.png)
+
+![thakicloud-three-vs-mlops-careers 슬라이드 4](/assets/images/thakicloud-three-vs-mlops-careers-slide-04.png)
 
 1. **GitHub 또는 기술 블로그 링크**: 커밋이 곧 자기소개서입니다.
 2. **프로젝트 파일**: Jupyter Notebook, Dockerfile, Helm 차트 모두 환영합니다.
@@ -109,16 +116,3 @@ Velocity, Validation, Versioning. 이 세 단어에 심박수가 올라간다면
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/thakicloud-three-vs-mlops-careers/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![thakicloud-three-vs-mlops-careers 슬라이드 1](/assets/images/thakicloud-three-vs-mlops-careers-slide-01.png)
-
-![thakicloud-three-vs-mlops-careers 슬라이드 2](/assets/images/thakicloud-three-vs-mlops-careers-slide-02.png)
-
-![thakicloud-three-vs-mlops-careers 슬라이드 3](/assets/images/thakicloud-three-vs-mlops-careers-slide-03.png)
-
-![thakicloud-three-vs-mlops-careers 슬라이드 4](/assets/images/thakicloud-three-vs-mlops-careers-slide-04.png)
-

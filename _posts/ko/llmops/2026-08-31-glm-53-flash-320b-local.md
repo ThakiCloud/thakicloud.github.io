@@ -28,6 +28,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/glm-53-flash-320b-loc
 
 결론부터 말하겠습니다. **실행은 되지만, 그 128GB는 macOS의 GPU 메모리 캡과 MoE의 활성 파라미터 구조 때문에 모델 전체가 쓰는 128GB가 아닙니다.** GPU가 실제로 건드릴 수 있는 영역은 96GB 선이고 120GB짜리 3비트 모델은 전문가 가중치의 상당 부분을 CPU 쪽에 두고 계층형으로 돌아갑니다. 대가는 생성 속도와 3비트 양자화의 품질입니다.
 
+![glm-53-flash-320b-local 슬라이드 1](/assets/images/glm-53-flash-320b-local-slide-01.webp)
+
 ## 개요
 
 Z.ai(즈이)는 2026년 8월 26일, GLM-5 시리즈에서 네이티브 멀티모달을 처음 갖춘 GLM-5.3-Flash를 발표했습니다. 텍스트뿐 아니라 이미지와 비디오를 받아 텍스트를 내는 320B 파라미터 MoE 모델이고 컨텍스트는 100만 토큰입니다. 발표와 거의 동시에 이 모델이 Unsloth의 3비트 GGUF 양자화로 128GB RAM 환경에서 로컬 실행된다는 소식이 돌아왔고, 여기까지가 많은 사람이 공유한 줄거리입니다.
@@ -42,6 +44,8 @@ Z.ai(즈이)는 2026년 8월 26일, GLM-5 시리즈에서 네이티브 멀티모
 이 모델의 총 파라미터는 320B이지만, 한 토큰을 만들 때 실제로 켜지는 활성 파라미터는 18B입니다. MoE의 기본 구조인데 수백 개의 전문가 계층 중 토큰마다 일부만 라우팅되어 계산에 쓰이고 나머지는 대기 상태입니다. 그래서 "320B 모델"이라는 말은 저장 크기의 이야기이고 "18B 활성"이라는 말이 계산량의 이야기입니다. 두 숫자를 섞어 읽으면 로컬 실행의 비용 구조가 왜 이 모양인지 설명되지 않습니다.
 
 또한 GLM-5.3-Flash는 이 시리즈에서 네이티브 멀티모달을 처음 갖춘 모델입니다. 이미지와 비디오를 입력으로 받고 텍스트를 출력하는 구조이며 코딩과 에이전틱 작업에서 특히 강점이 있다는 점에 발표 자료가 힘을 실었습니다. 공개 전에는 Ox Alpha라는 이름으로 소규모에 먼저 돌기 시작해 화제가 됐고 정식 발표 때 GLM-5.3-Flash임이 밝혀졌습니다.
+
+![glm-53-flash-320b-local 슬라이드 2](/assets/images/glm-53-flash-320b-local-slide-02.webp)
 
 ## "128GB 로컬 실행"의 실제 산수
 
@@ -74,6 +78,8 @@ flowchart TB
 
 이 배치가 가능한 이유는 18B 활성이라는 MoE 구조 때문입니다. 매 토큰마다 켜지지 않는 대다수 전문가가 느린 메모리에 있어도 되고, 항상 쓰이는 어텐션과 공통 계층, 그리고 그 토큰이 골라낸 활성 전문가만 GPU로 올리면 됩니다. 앞서 본 Qwen3.8-Flash-Next의 4090 사례와 같은 원리이며 GLM-5.3-Flash는 그 구조가 320B/18B라는 더 큰 스케일에 적용된 것입니다. 병목은 결국 GPU VRAM 용량에서 메모리 대역폭으로 옮겨가는데 통합 메모리에서 CPU와 GPU가 같은 칩을 공유하는 Mac 환경에서는 이 대역폭이 데스크톱의 PCIe 오프로드와 다른 결입니다.
 
+![glm-53-flash-320b-local 슬라이드 3](/assets/images/glm-53-flash-320b-local-slide-03.webp)
+
 ## 벤치마크를 어떻게 읽나
 
 발표 자료의 벤치마크를 Z.ai 보고 기준으로 나열하면 다음과 같습니다.
@@ -89,6 +95,8 @@ flowchart TB
 Terminal-Bench 2.1에서 84.3이라는 수치가 Claude Opus 4.8의 85.0과 오차범위 안에 든다는 것은, "프런티어 코딩 모델과 비등하다"고 읽을 만한 점입니다. 다만 세 가지 단서가 붙습니다.
 
 첫째, 이 수치는 Z.ai의 자체 발표 기준이고 독립 재현된 것이 아닙니다. 둘째, 비교는 코딩·터미널 벤치마크에 집중되어 있고 멀티모달(이미지·비디오) 능력은 이 표에 없습니다. 셋째, 클라우드 API에서 이 모델의 생성 속도는 Z.ai 기준 약 48.7 토큰/초로, 같은 품질의 frontier API에 비해 느리다고 스스로 평가합니다. 로컬 3비트 실행이라면 이 속도 문제 위에 양자화 품질 저하가 추가로 겹칩니다.
+
+![glm-53-flash-320b-local 슬라이드 4](/assets/images/glm-53-flash-320b-local-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -123,16 +131,3 @@ GLM-5.3-Flash가 주는 메시지는 "VRAM 장벽이 죽었다"가 아니라, Mo
 - [CNET: Ox Alpha is GLM-5.3-Flash](https://www.cnet.com/tech/services-and-software/the-powerful-stealth-ai-model-ox-alpha-is-glm-5-3-flash-and-you-can-use-it-now/)
 - [MarkTechPost: GLM-5.3-Flash release](https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/)
 - [Ollama library: glm-5.3-flash](https://ollama.com/library/glm-5.3-flash)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![glm-53-flash-320b-local 슬라이드 1](/assets/images/glm-53-flash-320b-local-slide-01.webp)
-
-![glm-53-flash-320b-local 슬라이드 2](/assets/images/glm-53-flash-320b-local-slide-02.webp)
-
-![glm-53-flash-320b-local 슬라이드 3](/assets/images/glm-53-flash-320b-local-slide-03.webp)
-
-![glm-53-flash-320b-local 슬라이드 4](/assets/images/glm-53-flash-320b-local-slide-04.webp)
-

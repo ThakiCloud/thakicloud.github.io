@@ -369,6 +369,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 </script>
 {% endraw %}
 
+![codex-goal-delegation 슬라이드 1](/assets/images/codex-goal-delegation-slide-01.webp)
+
 ## "다른 스레드를 위한 목표를 쓰게 한다"는 기법
 
 이제 팁으로 돌아갑니다. 어려운 작업을 앞에 두고, 사람이 곧바로 목표를 잘 쓰기는 어렵습니다. 측정 가능한 결과가 무엇인지, 무엇으로 진행을 검증할지, 어떤 제약을 걸어야 할지를 사람이 처음부터 완벽하게 채우려면 그 자체로 작지 않은 설계 작업입니다. 이 팁이 제안하는 것은 그 설계를 모델에게 먼저 위임하라는 것입니다.
@@ -381,6 +383,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 물론 이것은 만능이 아닙니다. 한 개발자 뉴스레터는 이 방식이 "네 시간짜리 작업을 걸어두고 잊는 워크플로로 바꾼다"고 표현했는데, 이는 잘 맞은 사례에 대한 인상이지 보장이 아닙니다. 목표를 잘 쓰게 하는 데 성공하더라도, 실행 스레드가 그 목표를 향해 제대로 수렴하는지는 별개의 문제입니다. 그래서 이 기법은 뒤에서 이야기할 검증 게이트와 함께 쓰일 때 비로소 값을 합니다.
 
+![codex-goal-delegation 슬라이드 2](/assets/images/codex-goal-delegation-slide-02.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 이 기법이 낯설지 않은 이유가 있습니다. ThakiCloud는 이미 같은 원리를 프롬프트 부탁이 아니라 코드 규율로 강제하고 있기 때문입니다. 주제가 에이전트 운용인 만큼 여기서는 우리의 에이전트 플랫폼 Paxis 관점을 중심에 두되, 그 아래 인프라인 ai-platform과의 연결도 함께 봅니다.
@@ -392,6 +396,8 @@ Paxis는 ThakiCloud의 Agent-Native Cloud로, 스킬과 도구와 정책과 감�
 무엇보다 우리는 팬아웃한 결과를 검증 없이 합치지 않습니다. 목표를 아무리 잘 써서 위임하더라도, 실행 결과가 옳은지는 실행 주체가 아니라 별도의 검증 단계가 판정해야 합니다. 코드 산출물은 테스트를 실제로 돌려 종료 코드로 판정하고, 콘텐츠나 판단 산출물은 서로 다른 시각의 검증기를 여러 개 띄워 다수결로 걸러냅니다. 모델이 "다 된 것 같습니다"라고 스스로 보고하는 문장은 루프의 종료 조건이 될 수 없습니다. 이 규율은 Codex goal의 "턴 종료마다 증거로 자기 판정한다"는 동작을 우리가 어떻게 신뢰 가능한 형태로 굳혔는지를 보여 줍니다.
 
 인프라 렌즈에서도 연결이 있습니다. 이렇게 목표를 잘게 나누어 검증하며 돌리는 루프는 계산 자원을 꾸준히 소모합니다. ai-platform은 쿠버네티스와 Kueue 기반 GPU 스케줄링, vLLM 서빙, 멀티테넌트 격리를 제공하는 계층으로, 이런 에이전트 루프가 값싸고 안정적으로 돌 수 있는 바닥을 만듭니다. 저비용 서빙이 에이전트 경제성을 만들고, 그 위에서 Paxis의 목표 위임과 검증 루프가 실질적으로 성립합니다. 두 렌즈가 서로를 보완하는 구조입니다.
+
+![codex-goal-delegation 슬라이드 3](/assets/images/codex-goal-delegation-slide-03.webp)
 
 ## 한계 및 반론
 
@@ -406,15 +412,11 @@ Paxis는 ThakiCloud의 Agent-Native Cloud로, 스킬과 도구와 정책과 감�
 정리하면, "어려운 작업일수록 목표부터 쓰게 하라"는 팁은 프롬프트 요령이 아니라 목표 작성과 목표 실행을 분리하고 그 사이에 검토 지점을 끼우는 구조적 조언입니다. Codex의 goal 기능이 이를 개인 개발자 손에 쥐여 주었다면, ThakiCloud는 같은 원리를 Paxis의 Goal Mode와 검증 루프로 팀 단위에서 강제합니다. 목표를 잘 쓰는 일이 곧 에이전트를 잘 굴리는 일이라는 사실은, 도구가 무엇이든 변하지 않습니다.
 
 
-## 관련 슬라이드
 
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
 
-![codex-goal-delegation 슬라이드 1](/assets/images/codex-goal-delegation-slide-01.webp)
 
-![codex-goal-delegation 슬라이드 2](/assets/images/codex-goal-delegation-slide-02.webp)
 
-![codex-goal-delegation 슬라이드 3](/assets/images/codex-goal-delegation-slide-03.webp)
+
 
 ![codex-goal-delegation 슬라이드 4](/assets/images/codex-goal-delegation-slide-04.webp)
 

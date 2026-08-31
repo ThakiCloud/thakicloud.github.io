@@ -51,6 +51,8 @@ IaaS팀, PaaS팀, AI팀이 각각 어떤 문제를 풀고 있는지, 어떤 사�
 
 ---
 
+![thaki-cloud-life-and-careers-guide 슬라이드 1](/assets/images/thaki-cloud-life-and-careers-guide-slide-01.webp)
+
 ## 어떻게 쓰는가
 
 독자는 잠재적 지원자입니다. 막연한 자랑보다 실제 사례를 담고, 지원자가 실제로 궁금해하는 것들, 예를 들어 하루 일과나 팀 분위기, 성장 가능성 같은 것들을 중심에 놓습니다.
@@ -61,7 +63,12 @@ IaaS팀, PaaS팀, AI팀이 각각 어떤 문제를 풀고 있는지, 어떤 사�
 
 ---
 
+![thaki-cloud-life-and-careers-guide 슬라이드 2](/assets/images/thaki-cloud-life-and-careers-guide-slide-02.webp)
+
 ## ThakiCloud AI 엔지니어 A님 이야기: "자율과 책임 속에서 LLM 인프라를 만듭니다"
+![thaki-cloud-life-and-careers-guide 슬라이드 3](/assets/images/thaki-cloud-life-and-careers-guide-slide-03.webp)
+
+![thaki-cloud-life-and-careers-guide 슬라이드 4](/assets/images/thaki-cloud-life-and-careers-guide-slide-04.webp)
 
 A님은 대기업 클라우드팀에서 3년 일하다가 ThakiCloud에 합류했습니다. 입사 계기를 물어봤을 때 돌아온 대답이 인상적이었습니다. "규모가 큰 곳에서는 하나의 나사로만 살아야 했는데, 여기서는 실제로 설계하고 결정할 수 있어서요."
 
@@ -70,16 +77,3 @@ A님은 대기업 클라우드팀에서 3년 일하다가 ThakiCloud에 합류�
 오전에는 팀 스탠드업, 오후에는 코드 리뷰와 실험. 퇴근 전 한 시간은 논문 읽는 시간으로 따로 확보한다고 했습니다. "업무 시간 안에 공부할 수 있다는 게 처음엔 낯설었어요. 근데 그게 실제로 일의 질을 높여준다는 걸 느꼈습니다."
 
 관심 있다면 **info@thakicloud.co.kr** 로 연락주세요.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![thaki-cloud-life-and-careers-guide 슬라이드 1](/assets/images/thaki-cloud-life-and-careers-guide-slide-01.webp)
-
-![thaki-cloud-life-and-careers-guide 슬라이드 2](/assets/images/thaki-cloud-life-and-careers-guide-slide-02.webp)
-
-![thaki-cloud-life-and-careers-guide 슬라이드 3](/assets/images/thaki-cloud-life-and-careers-guide-slide-03.webp)
-
-![thaki-cloud-life-and-careers-guide 슬라이드 4](/assets/images/thaki-cloud-life-and-careers-guide-slide-04.webp)
-

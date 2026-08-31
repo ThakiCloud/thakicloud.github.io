@@ -85,6 +85,8 @@ flowchart TB
 ```
 *두 설정, 두 운명: reasoning_effort는 호스트 허용 목록 게이트에서 전송되지 않고 chat template 인자만 실제로 전선에 도달합니다.*
 
+![settings-that-never-reached-the-wire 슬라이드 1](/assets/images/settings-that-never-reached-the-wire-slide-01.webp)
+
 ## 스킬이 안 보인 이유는 작업 디렉터리였습니다
 
 같은 기간에 다른 증상도 있었습니다. 저장소의 스킬을 에이전트에 물려줬는데 조회하면 하나도 없다고 답했습니다.
@@ -99,11 +101,15 @@ flowchart TB
 
 도구가 정말로 빈손을 돌려줬습니다. 에이전트에게 현재 디렉터리를 물으니 홈 디렉터리였습니다. 저장소 안에서 실행해도 그랬습니다. 프로젝트 루트를 못 찾으니 스킬이 0개가 됩니다. 환경 변수로 작업 디렉터리를 시드하자 마흔세 개가 보이고 스킬 본문도 정상적으로 열렸습니다.
 
+![settings-that-never-reached-the-wire 슬라이드 2](/assets/images/settings-that-never-reached-the-wire-slide-02.webp)
+
 ## 세 번의 오진이 같은 모양이었습니다
 
 수렴이 안 될 때 모델을 의심했는데 설정 혼입이었습니다. 스킬이 없다고 할 때 환각이라고 적었는데 사실이었습니다. 다섯 배 절감이 나왔는데 표본 하나짜리 이상치였습니다.
 
 관측이 이상할 때마다 모델을 먼저 의심했고 매번 하네스가 범인이었습니다. 자체 호스팅 모델은 상용 API보다 낯섭니다. 의심이 그쪽으로 가는 게 자연스럽습니다. 그런데 낯선 쪽은 모델이 아니라 그 모델을 감싼 배선이었습니다.
+
+![settings-that-never-reached-the-wire 슬라이드 3](/assets/images/settings-that-never-reached-the-wire-slide-03.webp)
 
 ## 실무에서 쓸 수 있는 것
 
@@ -115,6 +121,8 @@ flowchart TB
 
 여기 적은 수치는 단일 B200 노드에서 서빙한 Qwen3.8-27B NVFP4 실측이며 7초라는 절대값은 이 사소한 과제 전용입니다. 코딩 에이전트 일반 성능으로 읽으시면 안 됩니다.
 
+![settings-that-never-reached-the-wire 슬라이드 4](/assets/images/settings-that-never-reached-the-wire-slide-04.webp)
+
 ## 참고 자료
 
 - [vLLM 지원 모델 문서](https://docs.vllm.ai/en/latest/models/supported_models/) : 자체 호스팅 서빙 설정의 정본
@@ -124,16 +132,3 @@ flowchart TB
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/settings-that-never-reached-the-wire/nlm-infographic-2.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![settings-that-never-reached-the-wire 슬라이드 1](/assets/images/settings-that-never-reached-the-wire-slide-01.webp)
-
-![settings-that-never-reached-the-wire 슬라이드 2](/assets/images/settings-that-never-reached-the-wire-slide-02.webp)
-
-![settings-that-never-reached-the-wire 슬라이드 3](/assets/images/settings-that-never-reached-the-wire-slide-03.webp)
-
-![settings-that-never-reached-the-wire 슬라이드 4](/assets/images/settings-that-never-reached-the-wire-slide-04.webp)
-

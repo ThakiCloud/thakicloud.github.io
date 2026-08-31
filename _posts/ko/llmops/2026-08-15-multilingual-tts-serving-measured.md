@@ -68,6 +68,8 @@ Supertonic의 전력이 50.4, 44.0, 133.6으로 178% 흔들렸습니다. 같은 
 1581, 1449, 1440으로 9.7% 안에 들어옵니다. GPU 전용 노드에서는 순증분도 안정적이라
 VoxCPM2와 Qwen3-TTS의 전력 비교는 그대로 유효하고, CPU 쪽은 속도만 비교하는 편이 맞습니다.
 
+![multilingual-tts-serving-measured 슬라이드 1](/assets/images/multilingual-tts-serving-measured-slide-01.png)
+
 ## 명료도는 전부 통과했지만, 통과 지점이 다릅니다
 
 합성한 음성을 Whisper-large-v3로 다시 받아쓰고 원문과 대조했습니다. 네 모델 모두 중앙값
@@ -77,6 +79,8 @@ VoxCPM2와 Qwen3-TTS의 전력 비교는 그대로 유효하고, CPU 쪽은 속�
 크게 깨집니다. 범주별로 쪼개 보면 원인이 분명해집니다. 평문과 의문문, 복합문은 오류가 0에
 가깝고 **숫자와 전문용어에서만** 실패가 몰립니다. 기사를 읽어주는 용도라면 무해하지만 금액과
 일시, 제품 코드를 읽어야 한다면 바로 그 두 범주가 사고 지점입니다.
+
+![multilingual-tts-serving-measured 슬라이드 2](/assets/images/multilingual-tts-serving-measured-slide-02.png)
 
 ## 감정은 속도와 함께 오지 않았습니다
 
@@ -120,6 +124,8 @@ Supertonic-3은 각성도가 높은 감정끼리 뭉쳐서 공포와 기쁨, 분
 Supertonic-3에서 하나 더 눈에 띈 것은 영어 EFI가 0.157로 유독 낮았다는 점입니다. 같은 모델의
 일본어가 0.354이니 모델 전체가 약한 게 아니라 영어 경로에서만 감정 지시가 약하게 먹는 셈입니다.
 
+![multilingual-tts-serving-measured 슬라이드 3](/assets/images/multilingual-tts-serving-measured-slide-03.png)
+
 ## 그런데 채점기가 세 번 거짓말했습니다
 
 여기까지가 결과이고, 실은 이쪽이 더 값비싼 교훈이었습니다. 측정 도중 **성공을 보고하면서
@@ -145,6 +151,8 @@ Supertonic-3에서 하나 더 눈에 띈 것은 영어 EFI가 0.157로 유독 �
 처방은 셋 다 같았습니다. **기대치 대비로 판정하는 것**입니다. 감정 발화가 존재하는데 채점된
 그룹이 0이면 그건 감정이 없는 모델이 아니라 채점기 고장이므로, 이제 명시적으로 실패를 내고
 종료 코드를 0이 아닌 값으로 돌려줍니다.
+
+![multilingual-tts-serving-measured 슬라이드 4](/assets/images/multilingual-tts-serving-measured-slide-04.png)
 
 ## 유휴 전력을 언제 재느냐가 결과를 8배 바꿉니다
 
@@ -199,16 +207,3 @@ Kokoro-82M을 CPU에 얹는 선택이 전력에서 가장 쌉니다.
 - Kokoro-82M 모델: [hexgrad/Kokoro-82M (Hugging Face)](https://huggingface.co/hexgrad/Kokoro-82M)
 - 명료도 측정용 ASR: [openai/whisper-large-v3 (Hugging Face)](https://huggingface.co/openai/whisper-large-v3)
 - 자연성 지표 UTMOS(v1, 2022) 구현: [UTMOS PyTorch implementation](https://github.com/Blinorot/UTMOS-PyTorch)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![multilingual-tts-serving-measured 슬라이드 1](/assets/images/multilingual-tts-serving-measured-slide-01.png)
-
-![multilingual-tts-serving-measured 슬라이드 2](/assets/images/multilingual-tts-serving-measured-slide-02.png)
-
-![multilingual-tts-serving-measured 슬라이드 3](/assets/images/multilingual-tts-serving-measured-slide-03.png)
-
-![multilingual-tts-serving-measured 슬라이드 4](/assets/images/multilingual-tts-serving-measured-slide-04.png)
-

@@ -47,6 +47,8 @@ flowchart LR
 
 ---
 
+![mission-principles-values 슬라이드 1](/assets/images/mission-principles-values-slide-01.webp)
+
 ## 원칙 (Principles)
 
 ### 진실성과 정직함
@@ -62,6 +64,8 @@ flowchart LR
 "우리가 만들지 않았으면 쓰지 않는다"는 태도는 갖지 않습니다. 좋은 기술은 어디에서든 나올 수 있고, 중요한 것은 출처가 아니라 고객에게 실제로 가치가 있느냐입니다. 외부의 아이디어와 솔루션을 적극적으로 받아들입니다.
 
 ---
+
+![mission-principles-values 슬라이드 2](/assets/images/mission-principles-values-slide-02.webp)
 
 ## 가치 (Values)
 
@@ -89,7 +93,10 @@ flowchart LR
 
 멋진 말보다 결과로 보여줍니다. 발표 자리에서 말을 잘하는 것보다, 약속한 것을 실제로 해내는 것을 더 높이 삽니다.
 
+![mission-principles-values 슬라이드 3](/assets/images/mission-principles-values-slide-03.webp)
+
 ## 가치의 흔적이 일에서 나타나는 곳
+![mission-principles-values 슬라이드 4](/assets/images/mission-principles-values-slide-04.webp)
 
 가치는 실제 일에서 찾을 수 있을 때만 신뢰할 만합니다. 우리가 발행하는 기술 블로그에서 따라 볼 수 있는 흔적을 몇 개 짚습니다.
 
@@ -108,16 +115,3 @@ flowchart LR
 - [기술적 역량을 넘어선 커리어 성장 전략](https://thakicloud.com/tech-blog/ko/careers/beyond-technical-skills-career-growth-strategy-ko/)
 
 > 함께 일하고 싶다면 **info@thakicloud.co.kr** 로 연락 주세요.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_swiss` 스타일)으로 요약한 슬라이드입니다.
-
-![mission-principles-values 슬라이드 1](/assets/images/mission-principles-values-slide-01.webp)
-
-![mission-principles-values 슬라이드 2](/assets/images/mission-principles-values-slide-02.webp)
-
-![mission-principles-values 슬라이드 3](/assets/images/mission-principles-values-slide-03.webp)
-
-![mission-principles-values 슬라이드 4](/assets/images/mission-principles-values-slide-04.webp)
-

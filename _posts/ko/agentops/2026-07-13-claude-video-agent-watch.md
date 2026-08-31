@@ -371,6 +371,8 @@ claude-video는 모델을 새로 만들지 않습니다. 이미 검증된 세 �
 
 기존 접근과의 차이는 분명합니다. 지금까지 "AI가 유튜브를 요약한다"는 대부분 제목·설명·자막 텍스트만 읽고 추측하는 방식이었습니다. claude-video는 제목으로 짐작하지 않습니다. 실제 프레임을 이미지로 보고, 자막이나 전사를 함께 읽어 시각과 청각을 결합합니다. 화면에 무엇이 떠 있는지, 어느 시점에 UI가 깨지는지 같은 질문은 텍스트 자막만으로는 답할 수 없고, 프레임을 봐야 답이 나옵니다.
 
+![claude-video-agent-watch 슬라이드 1](/assets/images/claude-video-agent-watch-slide-01.webp)
+
 ## 설치 및 사용
 
 설치는 두 갈래입니다. Claude Code 사용자는 플러그인 마켓플레이스로 붙입니다.
@@ -402,6 +404,8 @@ npx skills add bradautomates/claude-video -g
 
 `--start`와 `--end`가 중요합니다. 긴 영상 전체를 프레임으로 뜯으면 컨텍스트와 비용이 폭증합니다. 구간을 좁히면 그 부분만 다운로드하고 프레임을 뽑아 토큰을 아낍니다. 실무에서는 "회의 녹화 45분 중 데모가 나오는 12분 구간만" 같은 식으로 범위를 좁혀 쓰는 것이 정석입니다.
 
+![claude-video-agent-watch 슬라이드 2](/assets/images/claude-video-agent-watch-slide-02.webp)
+
 ## 내부 동작: 자막 우선, 프레임 추출, 중복 제거, 전사
 
 claude-video가 흥미로운 이유는 조각을 잇는 방식에 실용적 판단이 배어 있기 때문입니다. 문서화된 설계를 단계별로 보겠습니다. 아래 수치와 파라미터는 프로젝트가 공개한 설계 값이며, 제가 이 환경에서 직접 측정한 벤치마크가 아닙니다.
@@ -414,6 +418,8 @@ claude-video가 흥미로운 이유는 조각을 잇는 방식에 실용적 판�
 
 넷째, 최종 조립입니다. 프레임 이미지와 전사를 타임스탬프로 정렬해서, 프레임은 이미지로, 전사는 시각이 붙은 텍스트로 Claude의 컨텍스트에 들어갑니다. Claude는 "이 시점 화면에는 이런 게 보이고, 그때 이런 말이 나왔다"를 함께 읽고 답합니다.
 
+![claude-video-agent-watch 슬라이드 3](/assets/images/claude-video-agent-watch-slide-03.webp)
+
 ## 실제 확인: 문서화된 동작과 재현 메모
 
 정직하게 밝힙니다. 이 글을 쓰는 저작 환경은 외부 영상 다운로드가 막혀 있어, claude-video를 설치해 실제 유튜브 영상을 프레임으로 뜯는 라이브 벤치마크는 수행하지 못했습니다. 그래서 지연·정확도 수치를 지어내지 않습니다. 대신 프로젝트가 공개한 설계와 동작을 사실대로 정리하고, 재현 가능한 검증 지점을 남깁니다.
@@ -421,6 +427,8 @@ claude-video가 흥미로운 이유는 조각을 잇는 방식에 실용적 판�
 문서와 여러 사용기에서 일관되게 확인되는 사실은 다음과 같습니다. 자막이 있는 공개 영상은 다운로드 없이 무료로 전사됩니다. 프레임 상세도는 efficient/balanced/token-burner 세 단계이며, 각각 속도와 충실도가 다릅니다. 중복 제거는 16×16 그레이스케일 비교에 임계치 2.0을 씁니다. 전사 폴백 경로는 Groq whisper-large-v3에서 OpenAI whisper-1 순입니다. 포크 프로젝트 `mathiaschu/watch`는 이 중 전사 단계를 로컬 `mlx-whisper`로 바꿔 API 키 없이 완전 온디바이스로 돌리는 변형을 제공합니다.
 
 직접 확인하려면 다음을 권합니다. 자막이 있는 짧은 공개 영상을 `--start`/`--end`로 1분 이내 구간만 잘라 `/watch`에 던지고, 프레임 상세도를 efficient와 token-burner로 각각 돌려 프레임 개수와 응답 토큰 차이를 비교하는 것입니다. 이 비교가 "구간 좁히기 + 상세도 선택"이 비용에 미치는 영향을 가장 직관적으로 보여 줍니다. 실측 없이 숫자를 인용하는 것보다, 각자 환경에서 이 두 축을 재는 편이 정확합니다.
+
+![claude-video-agent-watch 슬라이드 4](/assets/images/claude-video-agent-watch-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -447,17 +455,11 @@ claude-video는 ThakiCloud가 밀고 있는 두 축과 자연스럽게 맞물립
 그럼에도 큰 그림은 유효합니다. claude-video는 "코딩 에이전트는 텍스트만 읽는다"는 전제를 얇고 실용적인 방식으로 깼습니다. 새 모델이 아니라 검증된 도구의 조합으로 감각을 확장한다는 접근은, 에이전트 플랫폼을 설계하는 입장에서 계속 참고할 만한 패턴입니다.
 
 
-## 관련 슬라이드
 
-본문 내용을 NotebookLM(`executive_report` 스타일)으로 요약한 슬라이드입니다.
 
-![claude-video-agent-watch 슬라이드 1](/assets/images/claude-video-agent-watch-slide-01.webp)
 
-![claude-video-agent-watch 슬라이드 2](/assets/images/claude-video-agent-watch-slide-02.webp)
 
-![claude-video-agent-watch 슬라이드 3](/assets/images/claude-video-agent-watch-slide-03.webp)
 
-![claude-video-agent-watch 슬라이드 4](/assets/images/claude-video-agent-watch-slide-04.webp)
 
 ## 출처
 

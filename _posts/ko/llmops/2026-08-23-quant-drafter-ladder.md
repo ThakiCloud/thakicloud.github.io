@@ -51,6 +51,8 @@ NVIDIA B200 한 장, 같은 프롬프트, 요청은 한 번에 하나씩입니�
 
 중앙값이고 각 셀을 세 번씩 돌렸습니다. 프롬프트는 대화, 추론, 장문, 코드 네 종류입니다.
 
+![quant-drafter-ladder 슬라이드 1](/assets/images/quant-drafter-ladder-slide-01.webp)
+
 ## 1단계: 4비트 양자화가 1.41배
 
 첫 번째 단계는 가중치를 4비트로 줄이는 것입니다. 엔진도 서빙 설정도 그대로 두고 모델 파일만
@@ -137,6 +139,8 @@ flowchart TB
 기반의 다른 추측 방식을 시험했을 때는, 같은 노브를 키우고 줄이는 것만으로 배수가 뒤집히는
 구간을 봤습니다. 켤지 말지를 정하기 전에 자기 트래픽에서 수용 길이부터 재는 편이 빠릅니다.
 
+![quant-drafter-ladder 슬라이드 2](/assets/images/quant-drafter-ladder-slide-02.webp)
+
 ## 코드에서 7.13배, 대화에서 3.4배
 
 원본 대비 배수를 프롬프트별로 나눠 보면 이렇습니다.
@@ -185,6 +189,8 @@ flowchart TB
 
 계단의 각 단계가 앞 단계 대비 1.41배와 3.35배로 곱해져 4.72배가 나왔다는 사실 자체가 두
 기법이 서로를 잡아먹지 않았다는 증거입니다.
+
+![quant-drafter-ladder 슬라이드 3](/assets/images/quant-drafter-ladder-slide-03.webp)
 
 ## 어떻게 쟀는가
 
@@ -241,6 +247,8 @@ flowchart TB
 이번 실험은 **품질을 재지 않았습니다.** 속도만 쟀습니다. 양자화는 원리상 출력이 달라질 수 있고,
 추측 디코딩은 검증 방식에 따라 원 모델과 같은 분포를 보장할 수도 아닐 수도 있습니다. 도입을
 검토하신다면 속도와 별개로 품질 회귀 테스트가 반드시 필요합니다.
+
+![quant-drafter-ladder 슬라이드 4](/assets/images/quant-drafter-ladder-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -299,16 +307,3 @@ flowchart TB
 - vLLM 수용 길이 지표: [vLLM Docs, Per-Request Acceptance Metrics](https://docs.vllm.ai/en/latest/features/speculative_decoding/acceptance_metrics/)
 - vLLM NVFP4 양자화: [vLLM Docs, ModelOpt (NVFP4)](https://docs.vllm.ai/en/latest/features/quantization/modelopt/)
 - B200: [NVIDIA DGX B200](https://www.nvidia.com/en-us/data-center/dgx-b200/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![quant-drafter-ladder 슬라이드 1](/assets/images/quant-drafter-ladder-slide-01.webp)
-
-![quant-drafter-ladder 슬라이드 2](/assets/images/quant-drafter-ladder-slide-02.webp)
-
-![quant-drafter-ladder 슬라이드 3](/assets/images/quant-drafter-ladder-slide-03.webp)
-
-![quant-drafter-ladder 슬라이드 4](/assets/images/quant-drafter-ladder-slide-04.webp)
-

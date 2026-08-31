@@ -60,6 +60,8 @@ flowchart TB
 
 왼쪽 위에서 오른쪽 아래로 갈수록 비용이 커집니다. 캐시에서 끊으면 0원이고, 예산 검사에서 끊으면 요청 하나 값이며, 모델까지 갔다가 스키마 검증에서 실패하면 그 요청을 두 번 낸 셈이 됩니다. 통제점의 순서 자체가 비용 설계입니다.
 
+![llm-api-production-integration-patterns 슬라이드 1](/assets/images/llm-api-production-integration-patterns-slide-01.png)
+
 ## 첫째, 출력 형식은 부탁하지 말고 강제합니다
 
 프롬프트에 "JSON으로만 답하세요"라고 적는 것은 통제가 아니라 희망입니다. 실제로 작동하는 것은 스키마이고, 스키마에는 세 개의 지렛대가 있습니다.
@@ -142,6 +144,8 @@ async def semantic_chunks(stream, boundaries=(". ", "다.\n", "?\n", "!\n"), cap
 
 지표도 하나로는 부족합니다. TTFT(첫 토큰까지의 시간)와 전체 완료 시간을 따로 재야 어디가 느린지 보입니다. 둘을 합친 평균 응답 시간만 보면 모델이 느린 건지 큐가 밀린 건지 구분되지 않습니다.
 
+![llm-api-production-integration-patterns 슬라이드 2](/assets/images/llm-api-production-integration-patterns-slide-02.png)
+
 ## 셋째, 실패는 막는 게 아니라 가둡니다
 
 LLM API는 실패합니다. rate limit에 걸리고, 게이트웨이가 흔들리고, 가끔은 아무 이유 없이 느려집니다. 목표는 실패를 없애는 것이 아니라 **실패가 번지지 않게 하는 것**입니다. 층위가 다른 네 개의 장치를 씁니다.
@@ -208,6 +212,8 @@ with tracer.start_as_current_span("llm_call") as span:
 
 마지막은 사용자에게 보이는 얼굴입니다. 재시도도 실패하고 회로까지 열렸을 때 "일시적인 오류가 발생했습니다"만 내보내면 사용자는 무엇을 해야 할지 모릅니다. rate limit이면 얼마 뒤에 다시 시도하면 되는지, 입력이 너무 길었다면 얼마나 줄이면 되는지를 함께 주는 편이 낫습니다. AI 요약이 실패했을 때 키워드 요약으로 내려앉는 것처럼, 기능을 끄는 대신 낮추는 선택지를 미리 만들어두면 실패가 서비스 중단으로 번지지 않습니다.
 
+![llm-api-production-integration-patterns 슬라이드 3](/assets/images/llm-api-production-integration-patterns-slide-03.png)
+
 ## ThakiCloud 관점에서
 
 저희는 고객사 환경에서 모델을 직접 서빙합니다. 그래서 이 네 통제점이 애플리케이션 코드가 아니라 플랫폼 쪽에 있어야 한다는 것을 반복해서 확인했습니다.
@@ -222,6 +228,8 @@ LLM API를 부품으로 만드는 일은 모델을 잘 고르는 문제가 아�
 
 이 글의 내용은 저희가 사내 자동화 파이프라인을 운영하면서 정리한 전자책 『AI API 엔지니어링』의 일부를 블로그용으로 다시 쓴 것입니다.
 
+![llm-api-production-integration-patterns 슬라이드 4](/assets/images/llm-api-production-integration-patterns-slide-04.png)
+
 ## 참고 자료
 
 - 스키마 기반 구조화 출력: [Instructor](https://python.useinstructor.com/)
@@ -233,16 +241,3 @@ LLM API를 부품으로 만드는 일은 모델을 잘 고르는 문제가 아�
 ## 챕터 삽화
 ![1장 삽화](/assets/images/books/ai-api-engineering/ch01.webp)
 ![2장 삽화](/assets/images/books/ai-api-engineering/ch02.webp)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`strategic_blue` 스타일)으로 요약한 슬라이드입니다.
-
-![llm-api-production-integration-patterns 슬라이드 1](/assets/images/llm-api-production-integration-patterns-slide-01.png)
-
-![llm-api-production-integration-patterns 슬라이드 2](/assets/images/llm-api-production-integration-patterns-slide-02.png)
-
-![llm-api-production-integration-patterns 슬라이드 3](/assets/images/llm-api-production-integration-patterns-slide-03.png)
-
-![llm-api-production-integration-patterns 슬라이드 4](/assets/images/llm-api-production-integration-patterns-slide-04.png)
-

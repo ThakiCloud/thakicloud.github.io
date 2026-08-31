@@ -48,6 +48,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 그래서 첫 질문을 바꿔야 합니다. 이 모델이 얼마나 똑똑한가가 아니라, 이 모델이 어떤 조건에서 우리가 감당할 수 없는 실패를 낼 가능성이 있는가로 질문을 시작해야 합니다. 이 질문에 답할 수 있을 때 비로소 다음 단계인 파이프라인과 배포 전략을 설계할 준비가 된 것입니다.
 
+![ai-product-shipping-field-guide 슬라이드 1](/assets/images/ai-product-shipping-field-guide-slide-01.png)
+
 ## 평가는 보고서가 아니라 멈추는 규칙이다
 
 평가 기준을 정했다고 해서 끝난 게 아닙니다. 그 기준이 사람이 매번 읽고 판단하는 보고서로 남아 있다면, 그 기준은 실제로는 존재하지 않는 것과 크게 다르지 않습니다. 사람은 바쁘고, 지치고, 배포 일정에 쫓깁니다. 기준이 사람의 판단에 맡겨지는 순간 그 기준은 압박이 심한 날에 가장 먼저 무너집니다.
@@ -71,6 +73,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 파이프라인 내부도 전처리, 추론, 후처리 세 단계로 나뉘어 있다는 점을 기억해야 합니다. 실패는 이 셋 중 어디에서든 일어날 수 있고, 각 단계마다 실패했을 때의 동작을 미리 정의해두어야 합니다. 전처리에서 입력이 이상하면 추론까지 보내지 말고 그 자리에서 거부하는 편이 낫습니다. 후처리에서 형식이 어긋나면 사용자에게 원본을 그대로 노출하는 대신 안전한 기본값으로 대체해야 합니다.
 
 배포를 절차로 다루는 팀은 사고가 나도 몇 분 안에 이전 상태로 돌아갑니다. 배포를 스위치로 다루는 팀은 사고가 난 뒤에야 되돌릴 방법을 찾기 시작합니다. 그 차이가 장애의 지속 시간을 결정합니다.
+
+![ai-product-shipping-field-guide 슬라이드 2](/assets/images/ai-product-shipping-field-guide-slide-02.png)
 
 ## 실패를 넷으로 나누면 대응이 보인다
 
@@ -101,6 +105,8 @@ AI 시스템은 완전히 동작하거나 완전히 멈추거나 둘 중 하나�
 
 부분 실패를 견디는 설계는 비용도 줄여줍니다. 모든 구성 요소를 똑같은 수준으로 견고하게 만들 필요가 없기 때문입니다. 핵심 기능에는 다중화와 빠른 폴백을 투자하고, 부가 기능은 실패했을 때 그냥 조용히 사라지도록 두는 편이 자원을 더 효율적으로 쓰는 길입니다.
 
+![ai-product-shipping-field-guide 슬라이드 3](/assets/images/ai-product-shipping-field-guide-slide-03.png)
+
 ## 게이트에 눈이 없으면 아무것도 못 막는다
 
 지금까지 다룬 평가 게이트, 배포 절차, 실패 분류는 모두 관측이 뒷받침되지 않으면 무력해집니다. 게이트가 아무리 정교해도 그 게이트가 지금 무엇을 보고 있는지 알 수 없다면, 문제가 생겨도 아무도 알아채지 못합니다.
@@ -121,6 +127,8 @@ AI 시스템은 완전히 동작하거나 완전히 멈추거나 둘 중 하나�
 
 그래서 AI 제품을 준비하는 팀에 제안하고 싶은 순서는 이렇습니다. 모델을 고르기 전에 먼저 멈출 기준을 정하십시오. 배포 버튼을 누르기 전에 되돌릴 절차를 준비하십시오. 장애가 나기 전에 실패를 분류하는 기준을 만들어두십시오. 그리고 이 모든 것이 작동하는지 지켜볼 눈을 먼저 심어두십시오. 이 순서를 지킨 팀은 사고가 나도 몇 분 만에 회복하고, 이 순서를 건너뛴 팀은 사고가 날 때마다 처음부터 다시 배웁니다.
 
+![ai-product-shipping-field-guide 슬라이드 4](/assets/images/ai-product-shipping-field-guide-slide-04.png)
+
 ## 참고 자료
 
 - LLM 평가와 릴리스 게이트: [Holistic Evaluation of Language Models (HELM, Stanford)](https://crfm.stanford.edu/helm/)
@@ -132,16 +140,3 @@ AI 시스템은 완전히 동작하거나 완전히 멈추거나 둘 중 하나�
 ## 챕터 삽화
 ![3장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch03.webp)
 ![4장 삽화](/assets/images/books/ai-product-shipping-field-guide/ch04.webp)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_timeline` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-product-shipping-field-guide 슬라이드 1](/assets/images/ai-product-shipping-field-guide-slide-01.png)
-
-![ai-product-shipping-field-guide 슬라이드 2](/assets/images/ai-product-shipping-field-guide-slide-02.png)
-
-![ai-product-shipping-field-guide 슬라이드 3](/assets/images/ai-product-shipping-field-guide-slide-03.png)
-
-![ai-product-shipping-field-guide 슬라이드 4](/assets/images/ai-product-shipping-field-guide-slide-04.png)
-

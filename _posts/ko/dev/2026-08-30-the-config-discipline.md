@@ -48,6 +48,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 네 얼굴의 공통점은 발견이 늦다는 것입니다. 대가는 결과가 고객에게 닿은 뒤에야 청구됩니다. 설정 사고는 조용히 일어납니다.
 
+![the-config-discipline 슬라이드 1](/assets/images/the-config-discipline-slide-01.webp)
+
 ## 대가는 장애가 아니라 매일의 마찰이다
 
 설정의 대가는 장애로만 오지 않습니다. 장애는 눈에 보이니까 오히려 고마울 정도입니다. 더 비싼 비용은 매일의 마찰입니다. 가장 흔한 마찰은 확인의 시간입니다. 어떤 값이 어디에 있는지 몰라 5분, 10분, 40분을 씁니다. 한 번에 크지 않지만 그 확인이 하루 3번씩 한 달을 이어지면 생산력을 깎는 고정 비용이 됩니다. 값 20개 남짓의 서비스를 혼자 운영하는 팀이 주당 30분에서 1시간을 확인에 쓰는 것은 흔한 수준입니다 [추정].
@@ -57,6 +59,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 세 번째 마찰은 불안입니다. 환경 값을 하나 고치려 할 때, 시크릿을 하나 추가하려 할 때 드는 그 느낌. 다른 환경에 영향이 갈까, 누가 이 값을 알고 있을까, 90일 뒤에 뭐가 터질까. 이 불안은 체계 부재의 증세입니다. 체계가 있으면 불안은 사라지지 않더라도 확인 가능한 형태로 줄어듭니다.
 
 비용은 값의 개수만으로는 정해지지 않습니다. 환경의 개수와 값의 개수가 곱해집니다. 값 10개에 환경 2개면 20개의 조합이고 환경 5개면 50개입니다. 혼자 운영하는 사람이라면 값을 줄이는 것보다 환경을 먼저 다듬는 것이 늘 이롭습니다.
+
+![the-config-discipline 슬라이드 2](/assets/images/the-config-discipline-slide-02.webp)
 
 ## 각 값은 네 질문으로 거처를 정한다
 
@@ -71,6 +75,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 넷째, 사람이나 테넌트마다 다른가. 다르면 데이터입니다. 설정이 아닙니다. 고객사별로 결제 게이트웨이가 다른데 그 값을 환경 변수로 올리려 하면, 고객사가 한 개 늘어날 때마다 변수가 하나 늘고 변수가 늘 때마다 모든 절차가 무거워집니다. 환경 변수는 서비스 하나당 값이 하나입니다.
 
 오배치도 네 가지 모양으로 옵니다. 시크릿을 .env 파일에 커밋하는 것, 기능의 켜짐과 꺼짐을 코드 상수로 가두는 것, 테넌트 값을 환경 변수로 올리는 것, 민감하지 않은 값을 시크릿으로 격리하는 것까지입니다. 회색 지대의 값이 보인다면, 먼저 둘로 쪼개질 수 있는지 확인합니다. 엔드포인트와 뒤에 붙는 토큰은 주기가 다른 값 둘이고 하나로 묶으면 짧은 주기의 값이 긴 주기의 값을 끌어안고 돌아갑니다. 층이 정해지면 장소가 정해지고, 장소가 정해지면 검색이 불필요해집니다.
+
+![the-config-discipline 슬라이드 3](/assets/images/the-config-discipline-slide-03.webp)
 
 ## 프로덕션 값이 바뀌는 길은 하나여야 한다
 
@@ -91,6 +97,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 환경 값 파일 자체도 코드처럼 리포지토리에 둡니다. 값은 환경별로 디렉토리로 나누고 시크릿은 제외합니다. 시크릿은 매니저에 있고 파이프라인이 배포 시점에 주입합니다. 빠지기 쉬운 지점은, 환경이 공유하는 것이 키라는 점입니다. 앱이 읽는 키 목록은 한 번 정의하고 모든 환경이 그 목록을 채웁니다.
 
 채우지 못한 키는 시작할 때 실패해야 합니다. 키가 하나라도 없으면 앱이 죽는 구조입니다. 죽는 것이 좋습니다. 프로덕션에서 키가 없으면, 앱은 죽는 대신 엉뚱한 값을 쓰며 계속 돈이 됩니다. 설정 누락이 동작으로 둔갑하는 것보다, 시작 실패로 드러나는 것이 낫습니다. 반대 패턴은 기본 값 구조입니다. 키가 없으면 코드에 적어 둔 기본 값으로 조용히 넘어가는 한 줄은, 그 값을 주입하지 않은 모든 환경을 같은 값으로 만듭니다. 개발의 2초도 300이 되고 스테이징의 30초도 300이 됩니다. 기본 값은 환경의 차이를 지웁니다. 그리고 지워진 차이는 나중에 장애의 형태로 돌아옵니다.
+
+![the-config-discipline 슬라이드 4](/assets/images/the-config-discipline-slide-04.webp)
 
 ## 시크릿은 값이 아니라 상태다
 
@@ -123,16 +131,3 @@ diff를 싼 것으로 만드는 것은 스냅샷입니다. 배포할 때 실제�
 - 환경마다 주입되는 값으로서의 설정: [The Twelve-Factor App](https://12factor.net/)
 - 설정 드리프트의 정의와 탐지: [AWS, What is Configuration Drift](https://aws.amazon.com/what-is/configuration-drift/)
 - 공개 저장소의 시크릿 유출 탐지: [GitHub, About secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
-
-![the-config-discipline 슬라이드 1](/assets/images/the-config-discipline-slide-01.webp)
-
-![the-config-discipline 슬라이드 2](/assets/images/the-config-discipline-slide-02.webp)
-
-![the-config-discipline 슬라이드 3](/assets/images/the-config-discipline-slide-03.webp)
-
-![the-config-discipline 슬라이드 4](/assets/images/the-config-discipline-slide-04.webp)
-

@@ -83,6 +83,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 요청한 감정으로 가지는 않으니, 감정이 목적이라면 권하지 않습니다.
 
 
+![tts-comparison-showcase 슬라이드 1](/assets/images/tts-comparison-showcase-slide-01.webp)
+
 ## 영어
 
 다섯 모델 모두 지원합니다.
@@ -157,6 +159,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 ⛔ **Zonos 중국어는 쓰지 마십시오.** 위 샘플에서 들으셨듯 문장이 아니라 같은 음절 반복이 나옵니다. 레포의 지원 언어 목록에는 중국어가 들어 있지만 실측 오류율이 1.0에서 6.9까지 나왔습니다. 지원 목록은 주장이지 측정이 아닙니다.
 
 
+![tts-comparison-showcase 슬라이드 2](/assets/images/tts-comparison-showcase-slide-02.webp)
+
 ## 일본어
 
 다섯 모델이 지원합니다.
@@ -214,6 +218,8 @@ Zonos는 RTF 0.592로 실시간을 지키는 중간 선택지입니다. 감정 �
 이 두 범주가 사고 지점입니다. 다섯 모델이 같은 경향을 보였으니 특정 모델의 결함이 아니라 이
 세대 TTS의 공통 성질에 가깝습니다. 숫자를 미리 한글로 풀어 넣는 얇은 전처리가 모델 교체보다
 확실하고 훨씬 쌉니다.
+
+![tts-comparison-showcase 슬라이드 3](/assets/images/tts-comparison-showcase-slide-03.webp)
 
 ## 감정을 지시하면 얼마나 달라지나
 
@@ -364,6 +370,8 @@ VoxCPM2가 표에서 빠진 이유는 성능이 나빠서가 아닙니다. 이 �
 발화 하나하나를 채점하는 방식보다 언어를 덜 탑니다. 사람 음성 레퍼런스로는 구글 FLEURS의 검증
 셋에서 언어당 120발화를 썼습니다.
 
+![tts-comparison-showcase 슬라이드 4](/assets/images/tts-comparison-showcase-slide-04.webp)
+
 ## 이런 비교는 보통 어떻게 하나
 
 같은 결과를 재현하시거나 직접 다른 모델을 재보실 때 참고하시라고, 이 분야에서 통용되는 측정
@@ -454,16 +462,3 @@ CPU에서 돌린 두 모델의 전력 수치는 신뢰하지 마시기 바랍니
 
 샘플 61개는 모두 이 측정에서 나온 실제 합성 결과이고, 후처리나 선별 없이 원장이 가리키는 파일을
 그대로 변환한 것입니다.
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
-
-![tts-comparison-showcase 슬라이드 1](/assets/images/tts-comparison-showcase-slide-01.webp)
-
-![tts-comparison-showcase 슬라이드 2](/assets/images/tts-comparison-showcase-slide-02.webp)
-
-![tts-comparison-showcase 슬라이드 3](/assets/images/tts-comparison-showcase-slide-03.webp)
-
-![tts-comparison-showcase 슬라이드 4](/assets/images/tts-comparison-showcase-slide-04.webp)
-

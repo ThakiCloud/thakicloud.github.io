@@ -50,6 +50,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 그래서 측정 길이를 실제 트래픽에 맞췄습니다. 여러분이 같은 확인을 하실 때도 마찬가지입니다.
 서비스가 실제로 받는 프롬프트 길이에서 재지 않으면, 최적화할 곳을 잘못 짚게 됩니다.
 
+![prefix-cache-off-long-context 슬라이드 1](/assets/images/prefix-cache-off-long-context-slide-01.webp)
+
 ## 증상: 세 번을 물어도 15.3초
 
 이상하다고 느낀 지점은 절대적인 느림이 아니었습니다. 234k 토큰이면 프리필에 시간이 걸리는
@@ -149,6 +151,8 @@ flowchart TB
     H --> I
 ```
 
+![prefix-cache-off-long-context 슬라이드 2](/assets/images/prefix-cache-off-long-context-slide-02.webp)
+
 ## 어떻게 쟀는가
 
 측정 방법을 먼저 적는 이유는, 첫 번째 시도가 완전히 틀린 답을 냈기 때문입니다.
@@ -228,6 +232,8 @@ prefill_s  = t_short - 64 / decode_tps
 
 그래서 저희는 배수 대신 **"15.3초가 1.1초로"** 를 앞에 둡니다. 사용자가 실제로 겪는 것은
 비율이 아니라 대기 시간이고, 비율은 답변 길이에 따라 세 배씩 움직이기 때문입니다.
+
+![prefix-cache-off-long-context 슬라이드 3](/assets/images/prefix-cache-off-long-context-slide-03.webp)
 
 ## 드래프터의 몫은 얼마인가
 
@@ -317,6 +323,8 @@ GPU-시간을 씁니다. 14달러와 1달러의 차이입니다.
 워크로드에서는 이 차이가 곧 서비스 가능 여부입니다. 모델을 더 작은 것으로 바꾸거나 카드를 더
 사는 선택지를 검토하기 전에 확인할 값이라는 뜻입니다.
 
+![prefix-cache-off-long-context 슬라이드 4](/assets/images/prefix-cache-off-long-context-slide-04.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 저희 Metis는 추론과 토큰 팩토리를 담당하는 제품이고, 이 실측은 그 계층에서 무엇을 기본값으로
@@ -381,16 +389,3 @@ GPU-시간을 씁니다. 14달러와 1달러의 차이입니다.
 - Qwen3-Next (하이브리드 GDN): [Qwen/Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)
 - Mamba: [arXiv:2312.00752](https://arxiv.org/abs/2312.00752)
 - NVIDIA HGX (B200): [nvidia.com](https://www.nvidia.com/en-us/data-center/hgx/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
-
-![prefix-cache-off-long-context 슬라이드 1](/assets/images/prefix-cache-off-long-context-slide-01.webp)
-
-![prefix-cache-off-long-context 슬라이드 2](/assets/images/prefix-cache-off-long-context-slide-02.webp)
-
-![prefix-cache-off-long-context 슬라이드 3](/assets/images/prefix-cache-off-long-context-slide-03.webp)
-
-![prefix-cache-off-long-context 슬라이드 4](/assets/images/prefix-cache-off-long-context-slide-04.webp)
-

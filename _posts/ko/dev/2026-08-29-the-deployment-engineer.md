@@ -48,6 +48,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 '조심해서 하면 된다'는 답은 통하지 않습니다. 조심은 상태이지 시스템이 아닙니다. 서버에서 코드를 직접 고치는 일, lockfile 없이 의존성을 설치하는 일, 배포 대신 재시작으로 문제를 넘기는 습관. 하나씩은 작은 지름길이지만 다 합치면 지금 프로덕션의 상태를 설명할 수 없는 상태가 됩니다. 설명할 수 없는 상태는 되돌릴 수 없는 상태입니다.
 
+![the-deployment-engineer 슬라이드 1](/assets/images/the-deployment-engineer-slide-01.webp)
+
 ## 머신을 떠나는 것은 코드가 아니라 빌드입니다
 
 Git에 들어 있는 것은 텍스트입니다. 텍스트는 어디에서도 실행되지 않습니다. 그 텍스트를 특정 실행 가능 형태로 바꾸는 작업이 빌드이고 배포는 그 결과물을 프로덕션에 옮겨 실행하는 행위로 정의됩니다. 학술적으로만 들리는 구분이지만 프로덕션 사고를 다루는 방식은 이 구분이 정합니다.
@@ -59,6 +61,8 @@ Git에 들어 있는 것은 텍스트입니다. 텍스트는 어디에서도 실
 신원이 있는 아티팩트는 다시 만들 수 있어야 합니다. lockfile은 코드입니다. 빌드의 부속산물이 아니므로 소스 관리에 함께 커밋하고 Dockerfile의 FROM python:3.12 같은 약한 고정 대신 digest까지 고정합니다. 같은 소스에서 같은 아티팩트가 다시 나올 때, 화요일에 보고된 버그를 수요일 아침 같은 버전에서 구동하며 디버깅을 시작합니다. 버전 번호도 사람이 매기지 않습니다. 빌드가 매깁니다. 1.4.2에 버그가 있으면 고쳐 다시 쓰지 않습니다. 1.4.3을 만듭니다. 한 번 쓴 번호는 재사용하지 않습니다.
 
 저장소는 이미지 저장소, tarball이라면 버킷 하나 정도로 단순해도 됩니다. 여기서 결정적인 규칙은 불변성입니다. 같은 이름의 아티팩트는 절대 바뀌면 안 됩니다. 내용이 조용히 바뀌는 순간 '돌아가는 것으로 확인된 버전'은 사라집니다. 지금 도는 것과 최근 몇 개는 남아 있어야 하고 아티팩트를 지우는 순간은 그 버전으로 되돌릴 권리를 포기하는 순간입니다. 서비스 하나짜리 팀이라면, CI 기계에서의 빌드와 버킷 하나, 한 줄의 배포 명령이 전부입니다.
+
+![the-deployment-engineer 슬라이드 2](/assets/images/the-deployment-engineer-slide-02.webp)
 
 ## 파이프라인은 하나의 규칙을 지키는 기계입니다
 
@@ -82,6 +86,8 @@ deploy가 push를 필요로 하는 한 줄이 수호 장치입니다. environmen
 
 파이프라인이 완성되면 배포는 한 줄, ./deploy.sh가 됩니다. 모든 단계가 멱등이고 노트북 없이 CI 환경에서 돌아가야 합니다. 이 한 줄은 롤백 명령과 짝을 이룹니다. 배포는 ./deploy.sh, 롤백은 ./rollback.sh. 둘 다 한 줄이고 저장소의 아티팩트에서 동작합니다. 되돌리기가 한 명령으로 안 되면, 그 파이프라인은 편도 티켓입니다. 실패는 반드시 보이게 하고 성공 알림은 보너스, 실패 알림은 필수입니다. 조용히 실패한 배포에서 프로덕션은 옛 버전으로 돌고, 팀은 새 버전으로 알고 있기 때문입니다.
 
+![the-deployment-engineer 슬라이드 3](/assets/images/the-deployment-engineer-slide-03.webp)
+
 ## 환경은 장소가 아니라 계약입니다
 
 사람들은 환경을 기계로 떠올립니다. 개발 서버, 스테이징 서버, 프로덕션 서버. 하지만 코드에게는 기계가 보이지 않습니다. 코드가 보는 것은 대화할 수 있는 서비스 목록, 읽을 수 있는 값, 건드릴 수 있는 데이터입니다. 환경은 코드가 같은 질문을 했을 때 듣는 답들의 집합입니다. 그래서 답을 확인하는 기준은 서버가 같은가가 아닙니다. 코드가 같은 질문을 했을 때 같은 답을 듣는가가 기준입니다.
@@ -95,6 +101,8 @@ deploy가 push를 필요로 하는 한 줄이 수호 장치입니다. environmen
 실질적인 질문은 따로 둔 환경 없이 검증할 수 없는 계약이 무엇인지를 묻는 것입니다. 통상 프로덕션에만 존재하는 실제 설정, 데이터 마이그레이션의 동작, 실제 트래픽에서만 나타나는 지연과 부하입니다. 서비스가 돈을 다루지 않고 마이그레이션이 작다면 스테이징을 생략해도 됩니다. 대신 배포 직후 검증 스크립트와, 짧은 되돌림 시간이 대안입니다.
 
 스테이징을 두기 시작하면 어긋남은 시간문제입니다. 드리프트는 구조의 문제입니다. 성실함의 문제가 아닙니다. 두 환경을 같은 방식으로 만들게 합니다. 인프라를 코드로 쓰고 스테이징과 프로덕션이 저장소의 같은 아티팩트를 끌어오게 하고, 같은 스모크 테스트를 두 환경에서 돌립니다. 스테이징에서만 통과하는 검증은 프로덕션을 보증하지 못합니다.
+
+![the-deployment-engineer 슬라이드 4](/assets/images/the-deployment-engineer-slide-04.webp)
 
 ## 롤백은 되돌리는 것이 아니라 교체하는 것입니다
 
@@ -134,16 +142,3 @@ deploy가 push를 필요로 하는 한 줄이 수호 장치입니다. environmen
 - 아티팩트를 다이제스트로 고정하는 불변 신원: [OCI Image Spec](https://github.com/opencontainers/image-spec/blob/main/README.md)
 - 롤백을 트래픽 전환(교체)으로 설계하는 방식: [Blue Green Deployment (Martin Fowler)](https://martinfowler.com/bliki/BlueGreenDeployment.html)
 - rolling update와 롤백의 동작: [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![the-deployment-engineer 슬라이드 1](/assets/images/the-deployment-engineer-slide-01.webp)
-
-![the-deployment-engineer 슬라이드 2](/assets/images/the-deployment-engineer-slide-02.webp)
-
-![the-deployment-engineer 슬라이드 3](/assets/images/the-deployment-engineer-slide-03.webp)
-
-![the-deployment-engineer 슬라이드 4](/assets/images/the-deployment-engineer-slide-04.webp)
-
