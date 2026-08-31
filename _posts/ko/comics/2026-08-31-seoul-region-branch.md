@@ -13,19 +13,19 @@ tags:
   - bill-bomb
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/seoul-region-branch/strip.png
+image: /assets/images/posts/만화/seoul-region-branch/strip.webp
 video: /assets/videos/posts/만화/seoul-region-branch/comic.mp4
 ---
 
 오늘의 뉴스는 글로벌 클라우드 업체의 최신 모델이 '서울 리전'에 배치됐고, 국내 금융권이 AI 전환(AX)의 실전 단계에 들어갔다는 것. 리전은 데이터센터가 들어 있는 지역 위치를 가리키는 말로, 모델이 서울에 있으면 추론 왕복 거리가 짧아진다. 하지만 주소가 서울이라고 해서 계량기의 소유주와 데이터의 주소까지 함께 옮겨지는 것은 아니다. 이 만화는 '실전 단계'에 진짜 진입하는 것이 무엇인지 쫓아간다.
 
-![서울 리전? 지점이래](/assets/images/posts/만화/seoul-region-branch/strip.png)
+![서울 리전? 지점이래](/assets/images/posts/만화/seoul-region-branch/strip.webp)
 
 > 원 뉴스: [AWS·앤트로픽, 서울 리전에 클로드 최신 모델 투입…국내 금융권 AI 전환(AX) 실전 단계 진입](https://n.news.naver.com/mnews/article/001/0016274952?sid=101) · bespin
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/seoul-region-branch/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/seoul-region-branch/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/seoul-region-branch/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/seoul-region-branch/comic.ko.vtt" default>
 </video>
