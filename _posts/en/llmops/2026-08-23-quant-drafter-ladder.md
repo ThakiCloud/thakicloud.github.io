@@ -1,8 +1,10 @@
 ---
 title: "We Did Two Things to the Same 27B Model and Went From 97 to 458 Tokens per Second"
 excerpt: "Starting from the original weights, we changed one thing at a time. 4-bit quantization got us 1.41x, a speculative decoding drafter on top got us 3.35x more. Combined, 4.72x. We recorded every step side by side, and code generation stretches the gap to 7.13x."
+permalink: /en/llmops/quant-drafter-ladder/
 categories:
   - llmops
+  - product
 tags:
   - vllm
   - quantization

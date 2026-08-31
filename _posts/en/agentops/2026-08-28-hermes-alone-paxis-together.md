@@ -13,7 +13,8 @@ tags:
   - self-hosted
   - Qwen
   - AgentOps
-categories: [agentops]
+permalink: /en/agentops/hermes-alone-paxis-together/
+categories: [agentops, product]
 author_profile: true
 toc: true
 toc_label: "Contents"

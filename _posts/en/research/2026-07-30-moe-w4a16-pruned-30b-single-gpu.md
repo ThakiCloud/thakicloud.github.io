@@ -5,7 +5,8 @@ seo_description: "ThakiCloud measured pruning and 4-bit quantization of the roug
 excerpt: "A measured paper that solves the problem of large MoE compression pipelines being bottlenecked by host RAM rather than GPU memory, using shard-level streaming pruning and layer-wise RTN W4A16 quantization."
 date: 2026-07-30
 tags: [MoE, 양자화, LLM압축, 전문가프루닝, Qwen3, H200, W4A16, 추론비용]
-categories: [research]
+permalink: /en/research/moe-w4a16-pruned-30b-single-gpu/
+categories: [research, product]
 author_profile: true
 toc: true
 lang: en

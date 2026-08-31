@@ -1,8 +1,10 @@
 ---
 title: "We Ran One Agent on Four Backends, and Only the 8B's Answer Never Reached the Screen"
 excerpt: "We swapped nothing but the backend under a single agent. The two quantized 27B builds made the same call as the bf16 teacher, and the distilled 8B only called tools until it ran out. Narrowing the cause one axis at a time landed on serving configuration rather than training, and one line in the request turned 0/5 into 5/5."
+permalink: /en/research/paxis-four-backends-one-agent/
 categories:
   - research
+  - product
 tags:
   - agent-platform
   - quantization

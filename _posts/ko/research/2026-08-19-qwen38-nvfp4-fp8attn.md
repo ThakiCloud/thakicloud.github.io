@@ -1,8 +1,10 @@
 ---
 title: "4비트를 더 쓴 쪽이 아니라 8비트를 제자리에 쓴 쪽이 이겼습니다"
 excerpt: "어텐션을 양자화에서 빼면 bf16으로 남습니다. 그 자리에 FP8을 넣자 체크포인트가 7GB 가벼워지고 포화 처리량이 1.49배에서 1.64배로 올라갔습니다. MMMU에서는 원본과 구별되지 않았습니다."
+permalink: /ko/research/qwen38-nvfp4-fp8attn/
 categories:
   - research
+  - product
 tags:
   - quantization
   - nvfp4

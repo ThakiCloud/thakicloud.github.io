@@ -18,6 +18,7 @@ permalink: /ko/llmops/nvfp4-vlm-calibration/
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvfp4-vlm-calibration/"
 categories:
   - llmops
+  - product
 ---
 
 비전 언어 모델을 4비트로 내려 온프렘에 서빙하시는 분이라면, 비트 폭을 고민하기 전에 캘리브레이션 셋부터 확인하셔야 합니다. 저희가 같은 양자화 레시피를 같은 모델에 두 번 적용하고 캘리브레이션 데이터만 바꿨더니 MMMU 점수가 1.89포인트 움직였습니다. 이 폭은 저희가 측정한 재실행 잡음의 다섯 배가 넘습니다.

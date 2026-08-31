@@ -21,8 +21,10 @@ tags:
 header:
   teaser: /assets/images/posts/agentops/paxis-longctx-drafter-cost-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/paxis-longctx-drafter-cost/"
+permalink: /en/agentops/paxis-longctx-drafter-cost/
 categories:
   - agentops
+  - product
 ---
 
 ![A configuration showing where time goes in an agent turn that swallows a long document](/assets/images/posts/agentops/paxis-longctx-drafter-cost-hero.webp)

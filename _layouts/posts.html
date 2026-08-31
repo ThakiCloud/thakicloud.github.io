@@ -33,7 +33,7 @@ classes: wide
     Labels come from _data/category_labels.yml so the chips and the post-footer
     taxonomy always show the same name (e.g. 'dev' → 'DevOps').
   {% endcomment %}
-  {% assign chip_values = 'dev,owm,llmops,agentops,tutorials,careers,culture,news,research,datasets' | split: ',' %}
+  {% assign chip_values = 'product,dev,owm,llmops,agentops,tutorials,careers,culture,news,research,datasets' | split: ',' %}
   <nav class="catchips" aria-label="Filter by category">
     <button type="button" class="catchip is-active" data-cat="">All</button>
     {% for v in chip_values %}

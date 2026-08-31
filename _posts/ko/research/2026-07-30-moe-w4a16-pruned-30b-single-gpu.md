@@ -5,7 +5,8 @@ seo_description: "610억 파라미터급 Qwen3-Coder-30B-A3B를 단일 H200, 32G
 excerpt: "GPU 메모리가 아니라 호스트 RAM이 먼저 막히는 대형 MoE 압축 파이프라인 문제를, 샤드 단위 스트리밍 프루닝과 레이어별 RTN W4A16 양자화로 풀어낸 실측 논문을 소개합니다."
 date: 2026-07-30
 tags: [MoE, 양자화, LLM압축, 전문가프루닝, Qwen3, H200, W4A16, 추론비용]
-categories: [research]
+permalink: /ko/research/moe-w4a16-pruned-30b-single-gpu/
+categories: [research, product]
 author_profile: true
 toc: true
 audiobook: "https://drive.google.com/file/d/1JSBYe-qrfkI0SNMTx1wogjUMw8rtRfm1/view"

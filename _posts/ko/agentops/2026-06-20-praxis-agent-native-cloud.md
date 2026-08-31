@@ -20,8 +20,10 @@ header:
   teaser: /assets/images/praxis-architecture-hero.webp
 toc: true
 toc_sticky: true
+permalink: /ko/agentops/praxis-agent-native-cloud/
 categories:
   - agentops
+  - product
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/praxis-agent-native-cloud/"
 ---
 

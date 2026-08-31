@@ -15,3 +15,7 @@ news: News
 research: Research
 datasets: Datasets
 comics: Comics
+# 우리 제품 화면·비교, 자체 양자화 레시피가 실제로 들어간 글. 기존 카테고리와
+# 배타적이지 않다 — 이 값은 항상 원래 카테고리에 '추가'되고, 그 글의 permalink는
+# 기존 URL로 고정된다([[published-url-is-a-promise]]).
+product: Product

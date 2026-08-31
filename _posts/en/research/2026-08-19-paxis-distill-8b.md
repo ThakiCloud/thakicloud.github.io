@@ -1,8 +1,10 @@
 ---
 title: "We Built Agents, Ran Them, and Taught an 8B Model with the Record"
 excerpt: "We ran 221 agents built in the builder on a 27B model, then used that execution record to train an 8B model overnight. On agents the training never saw, it gained +26.5pp, and the training itself took 14 minutes."
+permalink: /en/research/paxis-distill-8b/
 categories:
   - research
+  - product
 tags:
   - distillation
   - lora

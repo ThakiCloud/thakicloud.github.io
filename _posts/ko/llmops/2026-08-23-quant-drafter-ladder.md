@@ -1,8 +1,10 @@
 ---
 title: "같은 27B 모델에 두 가지를 했더니 초당 97토큰이 458토큰이 됐습니다"
 excerpt: "원본 가중치에서 시작해 한 번에 하나씩만 바꿨습니다. 4비트 양자화가 1.41배, 그 위에 추측 디코딩 드래프터가 3.35배. 합쳐서 4.72배입니다. 매 단계를 나란히 녹화했고, 코드 생성에서는 7.13배까지 벌어집니다."
+permalink: /ko/llmops/quant-drafter-ladder/
 categories:
   - llmops
+  - product
 tags:
   - vllm
   - quantization

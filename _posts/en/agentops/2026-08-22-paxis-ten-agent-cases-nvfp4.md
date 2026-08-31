@@ -22,8 +22,10 @@ tags:
 header:
   teaser: /assets/images/posts/agentops/paxis-ten-agent-cases-nvfp4-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/paxis-ten-agent-cases-nvfp4/"
+permalink: /en/agentops/paxis-ten-agent-cases-nvfp4/
 categories:
   - agentops
+  - product
 ---
 
 ![Ten enterprise agents running at once on a single internal GPU rack](/assets/images/posts/agentops/paxis-ten-agent-cases-nvfp4-hero.webp)

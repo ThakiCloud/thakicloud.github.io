@@ -18,8 +18,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/agent-native-cloud-praxis/"
 reading_time: true
+permalink: /ko/dev/agent-native-cloud-praxis/
 categories:
   - dev
+  - product
 audiobook: /assets/audio/posts/agent-native-cloud-praxis/audiobook-ko.mp3
 audiobook_note: "AI 로컬 합성 오디오북 (Qwen3-TTS)"
 ---

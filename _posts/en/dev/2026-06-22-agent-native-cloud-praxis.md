@@ -19,8 +19,10 @@ toc_icon: "cog"
 toc_sticky: true
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/agent-native-cloud-praxis/"
 reading_time: true
+permalink: /en/dev/agent-native-cloud-praxis/
 categories:
   - dev
+  - product
 ---
 
 ![Agent-Native Cloud Paxis Overview]({{ '/assets/images/agent-native-cloud-praxis-hero.webp' | relative_url }})

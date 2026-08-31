@@ -1,8 +1,10 @@
 ---
 title: "에이전트를 만들고, 돌리고, 그 기록으로 8B를 가르쳤습니다"
 excerpt: "빌더에서 만든 에이전트 221종을 27B로 실행하고 그 기록으로 8B를 하룻밤 학습시켰습니다. 학습이 한 번도 본 적 없는 에이전트에서 +26.5pp, 학습에 든 시간은 14분입니다."
+permalink: /ko/research/paxis-distill-8b/
 categories:
   - research
+  - product
 tags:
   - distillation
   - lora

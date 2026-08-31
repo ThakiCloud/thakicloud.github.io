@@ -21,8 +21,10 @@ tags:
 header:
   teaser: /assets/images/posts/agentops/paxis-ten-agent-cases-nvfp4-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/paxis-ten-agent-cases-nvfp4/"
+permalink: /ko/agentops/paxis-ten-agent-cases-nvfp4/
 categories:
   - agentops
+  - product
 ---
 
 ![사내 GPU 한 대 위에서 업무 에이전트 열 종이 동시에 도는 구성](/assets/images/posts/agentops/paxis-ten-agent-cases-nvfp4-hero.webp)

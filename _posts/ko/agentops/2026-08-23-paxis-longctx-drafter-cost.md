@@ -21,8 +21,10 @@ tags:
 header:
   teaser: /assets/images/posts/agentops/paxis-longctx-drafter-cost-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/paxis-longctx-drafter-cost/"
+permalink: /ko/agentops/paxis-longctx-drafter-cost/
 categories:
   - agentops
+  - product
 ---
 
 ![긴 문서를 무는 에이전트 턴에서 시간이 어디로 가는지 보여주는 구성](/assets/images/posts/agentops/paxis-longctx-drafter-cost-hero.webp)

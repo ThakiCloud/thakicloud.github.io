@@ -18,6 +18,7 @@ permalink: /en/llmops/nvfp4-vlm-calibration/
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/nvfp4-vlm-calibration/"
 categories:
   - llmops
+  - product
 ---
 
 If you're pushing a vision-language model down to 4 bits to serve on-prem, check the calibration set before you worry about bit width. We applied the same quantization recipe to the same model twice and only changed the calibration data, and the MMMU score moved by 1.89 points. That's more than five times the rerun noise we measured.

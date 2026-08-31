@@ -1,8 +1,10 @@
 ---
 title: "같은 에이전트를 백엔드 넷으로 돌렸더니, 8B의 답만 화면에 닿지 않았습니다"
 excerpt: "에이전트 하나에 백엔드만 갈아 끼웠습니다. 양자화한 27B 두 개는 bf16 교사와 같은 판단을 했고, 증류한 8B는 도구만 부르다 끝났습니다. 원인을 한 축씩 좁혀보니 학습이 아니라 서빙 설정이었고, 요청 한 줄로 0/5가 5/5가 됐습니다."
+permalink: /ko/research/paxis-four-backends-one-agent/
 categories:
   - research
+  - product
 tags:
   - agent-platform
   - quantization

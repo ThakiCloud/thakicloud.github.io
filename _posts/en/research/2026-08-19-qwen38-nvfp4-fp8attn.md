@@ -1,8 +1,10 @@
 ---
 title: "The winner used 8-bit in the right place, not 4-bit in more places"
 excerpt: "Excluding attention from quantization leaves it at bf16. Putting FP8 there instead made the checkpoint 7GB lighter and moved saturation throughput from 1.49x to 1.64x, with no measurable quality change on MMMU."
+permalink: /en/research/qwen38-nvfp4-fp8attn/
 categories:
   - research
+  - product
 tags:
   - quantization
   - nvfp4
