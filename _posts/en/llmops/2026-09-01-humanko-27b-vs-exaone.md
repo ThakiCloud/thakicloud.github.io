@@ -38,11 +38,24 @@ For the knowledge axis we drew 2,000 KMMLU and 500 HAE-RAE questions with a fixe
 | KMMLU (n=2,000) | 64.2% | 63.7% | 55.9% |
 | HAE-RAE (n=500) | 57.4% | 58.6% | 49.5% |
 
-This surprised us too. Under these conditions our model scored significantly higher than EXAONE on both axes — 8.4pp on KMMLU and 7.9pp on HAE-RAE, both statistically clear. But the result carries an important qualifier: we ran all three models with thinking mode disabled and forced single-letter answers. EXAONE 4.5 is designed around its reasoning mode, so this protocol takes away its main weapon. That is also why these numbers differ from LG's published scores.
+This surprised us too. Under these conditions our model scored significantly higher than EXAONE on both axes — 8.4pp on KMMLU and 7.9pp on HAE-RAE, both statistically clear. But the result carries an important qualifier: we ran all three models with thinking mode disabled and forced single-letter answers. EXAONE 4.5 is designed around its reasoning mode, so this protocol takes away its main weapon. That is also why these numbers differ from LG's published scores. So we also prepared a test that gives the weapon back — next section.
 
-In plain terms: on a test where the model must answer immediately without time to think, ours came out ahead. The long-deliberation condition that favors EXAONE is not measured in this article.
+In plain terms: on a test where the model must answer immediately without time to think, ours came out ahead. The test where models get time to think is right below.
 
 The gap between our model and its base was statistically indistinguishable on both axes. The style surgery did not cut into knowledge, which was the first thing we wanted to confirm from this comparison.
+
+## What happens with reasoning on
+
+The second exam ran a subset of the same items with thinking enabled on all three models, each using its own recommended generation settings. Reasoning was budgeted at 3,072 tokens, and items that did not finish inside the budget were excluded from scoring for every model alike.
+
+| Accuracy on completed items | Human-KO 27B | Base Qwen 27B | EXAONE 4.5 33B |
+|---|---|---|---|
+| KMMLU (of 500) | 83.4% (76% done) | 85.7% (73% done) | 68.4% (79% done) |
+| HAE-RAE (of 200) | 88.0% (67% done) | 90.7% (59% done) | 87.9% (66% done) |
+
+With reasoning on, every model jumps — and the picture splits. On KMMLU, the item-paired comparison still puts us 15.0pp ahead, statistically clear. On HAE-RAE, EXAONE catches up to a statistical tie. The gap between our model and its base remains indistinguishable on both axes even with reasoning enabled.
+
+In plain terms: given time to think, we still win one subject and draw the other — and the style surgery did not touch reasoning ability either.
 
 ## The register report card
 
@@ -55,15 +68,17 @@ Same 200 questions, no instructions. That condition matters: prompt any model wi
 
 EXAONE shows the same habit as base Qwen: nine answers out of ten arrive as bullet lists, at around fifteen hundred characters. Among the three, only ours defaults to a human register. This is not a capability gap — it is a training-objective gap. The other two were simply not built for it.
 
+Beyond counting, we also ran a head-to-head. We gave a judge model 200 anonymized answer pairs and asked which side reads like a person wrote it: ours won 190, lost 3, tied 7, with 96.5% verdict consistency under position swap. One caveat stands — the judge shares a model family with our base, so a family-style preference cannot be ruled out.
+
 Answer length is serving cost. A model that answers the same question seven times shorter runs that much cheaper wherever billing is per token.
 
 ## So which one should you use
 
-If the seat needs short answers, fast, in a human register — support desks, internal chatbots, messenger-style products — this measurement favors our model. If the seat needs long, deep reasoning, do not judge by this article's numbers. We did not measure that condition, and EXAONE with reasoning enabled may be a different model. Read the report card that matches the seat; that one sentence is the conclusion.
+If the seat needs short answers, fast, in a human register — support desks, internal chatbots, messenger-style products — this measurement favors our model. Even with reasoning enabled, we led or drew on both Korean knowledge axes. But math, coding, and tool use — the arenas where reasoning models earn their keep — were not measured here, so do not judge those seats by this report card. Read the report card that matches the seat; that one sentence is the conclusion.
 
 ## What not to trust yet
 
-The limits, stated plainly. The knowledge-axis sample cannot detect a 1pp-level difference. "Good" on the register axis is use-case dependent — where long structured documents are the job, bullets and length are the right answer. EXAONE was measured with thinking mode off and answers forced to a single letter; 13 of its HAE-RAE responses broke that format and were excluded from scoring (n=487). EXAONE's scores with reasoning enabled may be higher than these numbers. LG's official figures are not directly comparable because the protocols differ, and the model sizes are not equal (27B vs 33B).
+The limits, stated plainly. The knowledge-axis sample cannot detect a 1pp-level difference. "Good" on the register axis is use-case dependent — where long structured documents are the job, bullets and length are the right answer. The first table is thinking-off with single-letter answers forced; format-breaking responses were excluded. The reasoning table counts only items completed within a 3,072-token budget, and a larger budget could shift the numbers. Reasoning runs used each model's recommended sampling, so draw noise is present and each arm ran once. The human-likeness judge is still a model, not a person. LG's official figures are not directly comparable because the protocols differ, the model sizes are not equal (27B vs 33B), and axes like math and coding were not measured.
 
 ## References
 
