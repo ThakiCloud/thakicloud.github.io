@@ -19,6 +19,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/humanko-cjk-vocab-prune/"
+audiobook: "https://drive.google.com/file/d/18bp4mRjknqP8e4SqdVLCi8diQ_e8eHcZ/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 한국어 서비스에 다국어 LLM을 붙여 쓰는 분이라면 이런 문장을 본 적이 있을 겁니다.
@@ -34,9 +37,16 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/humanko-cjk-vocab-pru
 
 이 글에서 얻어 가실 것은 세 가지입니다. **첫째, 이 문제를 재기 전에 생성 온도를 반드시 확인해야 합니다.** 온도 하나가 오염률의 5배를 설명합니다. **둘째, 측정 도구부터 의심해야 합니다.** 저희는 선호 학습의 효과를 재다가, 비교 자체가 성립하지 않았다는 걸 나중에 알았습니다. **셋째, 가중치에서 출력 경로를 막으면 됩니다.** 다만 한국어 한자 병기를 죽이지 않으려면 무엇을 자를지 골라야 합니다.
 
+![한국어 답변에 한자가 섞이는 문제, 온도부터 확인하세요 개념을 형상화한 이미지](/assets/images/humanko-cjk-vocab-prune-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 쉽게 말하면
 
 모델이 글자를 내놓는 마지막 단계는 자판에서 글쇠를 고르는 일과 같습니다. 저희가 한 일은 그 자판에서 중국어 단어 글쇠를 빼낸 것입니다. 낱글자 한자 글쇠는 남겨 두었습니다. 한국어 글에는 개항(開港)처럼 한자를 괄호로 병기하는 자리가 있기 때문입니다. 이 자판 비유를 글 끝까지 쓰겠습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/humanko-cjk-vocab-prune/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 온도가 5배를 좌우합니다
 
@@ -55,17 +65,21 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/humanko-cjk-vocab-pru
 
 한 가지 더 필요한 게 노이즈 바닥입니다. 같은 모델을 같은 설정으로 두 번 돌리면 2.67%와 2.33%가 나옵니다. **런 사이에 0.33%p가 그냥 흔들립니다.** 이보다 작은 차이는 어떤 처치의 효과로 읽으면 안 됩니다. 실제로 프롬프트 2,000건 중 569건에서 같은 모델이 자기 자신과 오염 여부가 뒤집혔습니다. 이 현상은 프롬프트의 성질이라기보다 샘플링의 성질에 가깝습니다.
 
+![humanko-cjk-vocab-prune 슬라이드 1](/assets/images/humanko-cjk-vocab-prune-slide-01.webp)
+
 ## DPO는 배웠지만, 전이는 판정하지 못했습니다
 
 먼저 시도한 건 선호 학습이었습니다. 최소 쌍을 만들었습니다. 한자가 섞인 응답을 그대로 두고 그 한자 스팬만 한국어로 바꾼 것을 좋은 답으로 삼았습니다. 두 응답의 유사도 중앙값은 사실상 1이라(1과의 차이가 천분의 2), 모델이 배울 차이는 오직 한자 유무뿐입니다.
 
 학습은 아주 깨끗하게 붙었습니다. 홀드아웃 선호 정확도가 97.4%까지 올라가고 손실은 0에 수렴했습니다.
 
-그런데 생성 단계 검증은 무효가 됐습니다. 사후 점검에서, 저희가 쓰던 서빙 엔진이 이 모델 계열의 LoRA 어댑터를 에러 없이 통째로 무시한다는 사실이 드러났습니다. 온도 0에서 어댑터를 붙인 출력과 base 출력이 바이트 단위로 같았습니다. "DPO 적용"이라고 믿었던 열은 사실 base를 한 번 더 잰 것이었습니다. 그래서 이 글의 이전 판에 있던 전이 실패 표는 뺐고, 지금은 어댑터를 가중치에 직접 병합해 다시 재고 있습니다.
+그런데 생성 단계 검증은 성립하지 않았습니다. 쓰던 서빙 엔진은 이 모델 계열의 LoRA 어댑터를 에러 없이 통째로 무시합니다. 온도 0에서 어댑터를 붙인 출력은 base 출력과 바이트 단위로 같고, "DPO 적용" 상태의 생성 실측은 없습니다. 그래서 전이는 아직 판정되지 않았습니다. 판정하려면 어댑터를 가중치에 직접 병합한 상태에서 재측정해야 합니다.
 
 가설은 남아 있습니다. DPO는 **완성된 두 응답**의 상대 확률을 조정하는데, 오염은 임의 위치에서 터지는 **단일 토큰 사건**입니다. TLPO 논문도 시퀀스 수준 미세조정의 같은 한계를 지적하며 토큰 수준 개입을 제안합니다. 다만 이번 실험이 그 가설을 검증한 것은 아닙니다.
 
 덧붙이면 데이터 규모도 부족했습니다. 저희는 346쌍이었는데, 같은 증상을 SFT로 잡은 SASFT는 11만~21만 샘플을 썼습니다. 다만 규모를 키운다고 층위 불일치가 사라지는 건 아닙니다.
+
+![humanko-cjk-vocab-prune 슬라이드 2](/assets/images/humanko-cjk-vocab-prune-slide-02.webp)
 
 ## 그래서 출력 경로를 막았습니다
 
@@ -97,6 +111,19 @@ W_i := -alpha * mu_h / ||mu_h||^2     (alpha = 200)
 
 여기서 방향이 나옵니다. **가나와 간체 전용 글자, 그리고 두 글자 이상 순수 한자 토큰을 자르고 단일 한자는 남깁니다.** 54,902개 토큰이 대상이 됩니다.
 
+```mermaid
+flowchart TB
+    A["lm_head: 생성의 마지막 단계<br/>은닉 상태 h를 어휘 크기의 로짓으로 변환"] --> B{"생성하려는 토큰의 종류"}
+    B -->|"두 글자 이상 순수 한자 토큰<br/>您的 · 贵公司 · 具体时间"| C["54,902개 대상 행<br/>W_i를 큰 음수 배수로 덮어씀"]
+    B -->|"단일 한자<br/>開 · 港 · 債 · 權"| D["그대로 보존"]
+    C --> E["중국어 단어는 더 이상 생성 불가"]
+    D --> F["개항(開港) 같은 한자 병기는 정상 출력"]
+    E --> G["실오류 1.81% → 0.18%<br/>한자 병기는 살아 있음"]
+    F --> G
+```
+
+![humanko-cjk-vocab-prune 슬라이드 3](/assets/images/humanko-cjk-vocab-prune-slide-03.webp)
+
 ## 결과
 
 프롬프트 3,369건을 같은 엔진에서 짝지어 측정했습니다.
@@ -117,6 +144,8 @@ W_i := -alpha * mu_h / ||mu_h||^2     (alpha = 200)
 ```
 
 맞는 글자가 막히자 바이트 조각으로 엉뚱한 한자를 조립해 자신 있게 내놓습니다. 한자를 아예 안 쓰는 것보다 나쁩니다.
+
+![humanko-cjk-vocab-prune 슬라이드 4](/assets/images/humanko-cjk-vocab-prune-slide-04.webp)
 
 ## 이 방법의 한계 두 가지
 
@@ -166,3 +195,7 @@ systemd-run・user     my・pod     request・user_id     ・perf
 
 - SASFT: <https://arxiv.org/abs/2507.14894>
 - TLPO: <https://arxiv.org/abs/2604.26553>
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/humanko-cjk-vocab-prune/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*

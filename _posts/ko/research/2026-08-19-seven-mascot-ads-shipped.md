@@ -14,6 +14,9 @@ toc_label: "목차"
 header:
   teaser: /assets/images/cf-seven-ads.jpg
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/seven-mascot-ads-shipped/"
+audiobook: "https://drive.google.com/file/d/1-MaaW6B9-L-_znuTwEwfzNhkjUEKXdt1/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 마스코트로 제품 광고를 만들면 실제로 무엇이 나오는지 궁금한 분을 위한 글입니다. 방법론은
@@ -41,9 +44,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/seven-mascot-ads-sh
 
 이 방식을 쓰게 된 경위와 그 과정에서 나온 숫자는 글 뒤쪽에 적었습니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/seven-mascot-ads-shipped/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 제품별 광고 일곱 편
 
 각 42초입니다.
+
+![seven-mascot-ads-shipped 슬라이드 1](/assets/images/seven-mascot-ads-shipped-slide-01.png)
 
 ## Paxis
 
@@ -69,6 +78,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/seven-mascot-ads-sh
   <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/cf-ad-maxis.mp4" type="video/mp4">
 </video>
 
+![seven-mascot-ads-shipped 슬라이드 2](/assets/images/seven-mascot-ads-shipped-slide-02.png)
+
 ## Telox
 
 GPU를 실어 나르는 제품이라 증기 기관차와 철로를 세계로 썼습니다.
@@ -92,6 +103,8 @@ GPU를 실어 나르는 제품이라 증기 기관차와 철로를 세계로 썼
 <video controls muted playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/cf-ad-aegis-poster.jpg" style="max-width:100%">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/cf-ad-aegis.mp4" type="video/mp4">
 </video>
+
+![seven-mascot-ads-shipped 슬라이드 3](/assets/images/seven-mascot-ads-shipped-slide-03.png)
 
 ## Signum
 
@@ -141,6 +154,8 @@ GPU를 실어 나르는 제품이라 증기 기관차와 철로를 세계로 썼
 실험에서 학습 없이 동작 지시만 넣는 방식이 같은 캐릭터, 같은 평가기, 같은 레퍼런스에서 0.704를
 냈습니다. 프롬프트 세트가 서로 달라 통제된 비교는 아니지만, 큰 영상 모델이 이미 아는 것을 다시
 가르치기보다 무엇을 그릴지만 지시하는 편이 싸게 먹힌다는 방향은 읽힙니다.
+
+![seven-mascot-ads-shipped 슬라이드 4](/assets/images/seven-mascot-ads-shipped-slide-04.png)
 
 ## 남은 한계
 
@@ -192,3 +207,11 @@ Paxis가 주황이 아니라 진갈색으로 나온 적이 있는데, 그 편의
 
 **자동 지표가 눈과 다투면 대개는 지표가 다른 것을 재고 있습니다.** 그럴 때 지표를 믿고 넘어가면
 잘못된 결론이 그대로 배포됩니다.
+
+## 참고 자료
+
+- [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242): 생성 이미지와 레퍼런스 이미지의 CLIP 임베딩 코사인 유사도로 정체성을 재는 지표 CLIP-I을 정의한 논문입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/seven-mascot-ads-shipped/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*

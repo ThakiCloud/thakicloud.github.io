@@ -43,6 +43,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-ad-stills-vs
 일곱 제품 전부를 두 방법으로 만들었습니다. 시나리오와 길이, 시드와 해상도를 고정했으니 다른
 것은 조건화 방식 하나뿐입니다.
 
+![mascot-ad-stills-vs-storyboard 슬라이드 1](/assets/images/mascot-ad-stills-vs-storyboard-slide-01.png)
+
 ## 정체성은 생각보다 안 갈립니다
 
 레퍼런스 스틸 대비 CLIP-I 평균이 스틸 쪽 0.636, 스토리보드 쪽 0.617이었습니다. 차이가
@@ -67,6 +69,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-ad-stills-vs
 덜 바꿉니다. 결과물은 차분합니다. 반대로 스틸만 주면 모델이 매 순간 프레임을 다시 잡고,
 클로즈업과 와이드가 섞여 영화처럼 읽힙니다. 어느 쪽이 맞는지는 취향이 아니라 목적이 정합니다.
 제품을 차분히 보여줘야 하면 시트, 시선을 붙잡아야 하면 스틸입니다.
+
+![mascot-ad-stills-vs-storyboard 슬라이드 2](/assets/images/mascot-ad-stills-vs-storyboard-slide-02.png)
 
 ## 시트는 구도만 옮기지 않습니다
 
@@ -115,6 +119,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-ad-stills-vs
 **화질이든 품질이든 문제를 만나면 모델을 의심하기 전에 기본값부터 세어 보십시오.** 저희는 같은
 함정을 두 번 밟았고, 두 번째는 축 하나를 통째로 포기할 뻔했습니다.
 
+![mascot-ad-stills-vs-storyboard 슬라이드 3](/assets/images/mascot-ad-stills-vs-storyboard-slide-03.png)
+
 ## 무엇을 골라 내보냈나
 
 일곱 편을 실제로 배포하려면 제품마다 하나를 정해야 했습니다. 취향으로 고르지 않으려고 규칙을
@@ -129,6 +135,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-ad-stills-vs
 카드는 영상과 같은 해상도로 그립니다. 카드 글자는 폭을 재고 나서 안전 영역 안에 들어갔는지
 검사까지 합니다. 예전에 폭을 계산해 놓고 확인은 안 해서 832픽셀 화면에 877픽셀 글자를 그린 적이
 있습니다. **폭을 계산하는 코드는 그 폭에 대한 검사도 함께 져야 합니다.**
+
+![mascot-ad-stills-vs-storyboard 슬라이드 4](/assets/images/mascot-ad-stills-vs-storyboard-slide-04.png)
 
 ## 학습은 필요한가
 
@@ -155,3 +163,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/mascot-ad-stills-vs
 잡았습니다. 자동 지표가 눈과 다투면 대개는 지표가 다른 것을 재고 있습니다.
 
 여기 실린 수치는 사내 GPU에서 실제로 생성한 열일곱 편을 잰 값입니다.
+
+## 참고 자료
+
+- [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242): 이 글이 정체성 지표로 쓰는 CLIP-I을 평가 프로토콜로 처음 정의한 논문입니다. 생성 이미지와 레퍼런스 이미지의 CLIP 임베딩 코사인 유사도로 주어 보존을 잽니다.
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020): CLIP-I 계산이 쓰는 이미지 임베딩을 만든 원래 CLIP 논문입니다.

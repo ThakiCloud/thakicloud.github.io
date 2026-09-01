@@ -1,5 +1,5 @@
 ---
-title: "한국어 27B, 무엇으로 비교해야 하나 — Human-KO와 EXAONE을 나란히 놓아 봤습니다"
+title: "한국어 27B, 무엇으로 비교해야 하나: Human-KO와 EXAONE을 나란히 놓아 봤습니다"
 excerpt: "지식 시험 점수와 대화 말투는 다른 과목입니다. 저희가 공개한 Human-KO 27B를 EXAONE 4.5 33B와 같은 문항·같은 조건으로 비교했습니다. 지식 축 결과는 있는 그대로, 문체 축 결과도 있는 그대로 공개합니다."
 seo_title: "Qwen3.8-27B-Human-KO vs EXAONE-4.5-33B 비교 실측"
 seo_description: "공개 가중치 Human-KO 27B와 EXAONE-4.5-33B를 KMMLU 2,000문항·HAE-RAE 500문항 짝지은 벤치와 자유 생성 문체 분포로 비교했습니다. 각 모델이 이기는 축이 다릅니다."
@@ -24,7 +24,7 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 어제 저희는 사람처럼 말하는 한국어 27B 모델의 가중치를 공개했습니다. 그 글을 두고 가장 많이 받을 질문은 하나입니다. "그래서 다른 모델보다 나은가요?" 오늘 그 질문에 숫자로 답합니다. 결론부터 말하면, 어느 쪽이 이기는지는 무엇을 재느냐에 따라 갈립니다. 공개 글은 글 끝 참고 목록에 있습니다.
 
-![한국어 27B, 무엇으로 비교해야 하나 — Human-KO와 EXAONE을 나란히 놓아 봤습니다 개념을 형상화한 이미지](/assets/images/humanko-27b-vs-exaone-hero.webp)
+![한국어 27B, 무엇으로 비교해야 하나: Human-KO와 EXAONE을 나란히 놓아 봤습니다 개념을 형상화한 이미지](/assets/images/humanko-27b-vs-exaone-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
 
 ## 쉽게 말하면

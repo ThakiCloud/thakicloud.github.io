@@ -31,7 +31,10 @@ If you run a multilingual LLM behind a Korean-facing service, you have probably 
 
 All of it came from Qwen3.8-27B answering Korean prompts. The response does not switch to Chinese wholesale. Two or three characters slip into the middle of an otherwise Korean sentence. The most frequent intruders are `的`, `您`, and `贵` — Chinese particles and honorifics.
 
-There are three things to take away. **First, check your generation temperature before you measure anything.** Temperature alone accounts for a 5x swing in the contamination rate. **Second, suspect your measuring tools.** We measured the effect of preference learning, and only later discovered the comparison itself had never taken place. **Third, you can block the output path in the weights** — but choosing what to cut decides whether Korean Hanja notation survives.
+There are three things to take away. **First, check your generation temperature before you measure anything.** Temperature alone accounts for a 5x swing in the contamination rate. **Second, suspect your measuring tools.** We measured the effect of preference learning, and only later discovered the comparison itself had never taken place. **Third, you can block the output path in the weights**, and choosing what to cut decides whether Korean Hanja notation survives.
+
+![Chinese characters leaking into Korean output: check the temperature first, concept illustration](/assets/images/humanko-cjk-vocab-prune-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Plain terms
 
@@ -60,7 +63,7 @@ Preference learning was the first attempt. We built minimal pairs: take a respon
 
 Training converged cleanly. Held-out preference accuracy reached 97.4% and the loss went to zero.
 
-The generation-side check, however, turned out to be void. A later audit showed that our serving engine was silently ignoring LoRA adapters for this model family: at temperature 0, adapter output was byte-identical to base output. The column we believed was "after DPO" was in fact the base model measured twice. An earlier version of this article carried a transfer-failure table built on that comparison; we have removed it, and we are re-measuring with the adapter merged directly into the weights.
+The generation-side check, however, does not hold. The serving engine we used silently ignores LoRA adapters for this model family. At temperature 0, adapter output is byte-identical to base output, and there is no generation measurement that actually carries the DPO state. Whether the preference learning transfers is therefore still undetermined. Establishing it requires re-measuring with the adapter merged directly into the weights.
 
 The hypothesis stands, unverified. DPO adjusts the relative likelihood of **two complete responses**, while contamination is a **single-token event** that fires at an arbitrary position. The TLPO paper points at the same limitation of sequence-level fine-tuning and proposes token-level intervention. But this experiment did not test it.
 
@@ -96,6 +99,17 @@ Whole Chinese words as single tokens. Korean does not emit those as one unit. Ko
 
 That gives the rule. **Cut kana, simplified-only characters, and multi-character pure-Han tokens; keep single Han characters.** 54,902 tokens qualify.
 
+```mermaid
+flowchart TB
+    A["lm_head: the final generation step<br/>hidden state h into vocabulary-sized logits"] --> B{"Type of token being generated"}
+    B -->|"Multi-character pure-Han word tokens<br/>您的 · 贵公司 · 具体时间"| C["54,902 target rows<br/>overwrite W_i with a large negative multiple"]
+    B -->|"Single Han characters<br/>開 · 港 · 債 · 權"| D["Kept as-is"]
+    C --> E["Chinese words can no longer be generated"]
+    D --> F["Hanja gloss like 개항(開港) still renders"]
+    E --> G["Real errors 1.81% → 0.18%<br/>Hanja notation survives"]
+    F --> G
+```
+
 ## Results
 
 3,369 prompts, paired on the same engine.
@@ -105,7 +119,7 @@ That gives the rule. **Cut kana, simplified-only characters, and multi-character
 | base | 2.55% | 1.81% |
 | pruned | **0.68%** | **0.18%** |
 
-An 82% reduction in real errors, 5.7x the 0.33pp noise floor, A McNemar test puts the odds of this being chance below one in ten thousand.
+An 82% reduction in real errors, 5.7x the 0.33pp noise floor; the McNemar test puts the odds of this being chance below one in ten thousand.
 
 **Hanja notation survives.** On 12 prompts that explicitly demand Han characters, the pruned model produces them 12 out of 12, same as base. HumanEval coding accuracy is 92.19%, identical to base — though at n=64 the minimum detectable difference is 13.29pp, so that reads as "we could not detect a regression," not "there is none."
 

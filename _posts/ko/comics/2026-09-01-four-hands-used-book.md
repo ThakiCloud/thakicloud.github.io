@@ -14,9 +14,10 @@ tags:
 author_profile: true
 toc: false
 image: /assets/images/posts/만화/four-hands-used-book/strip.webp
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/four-hands-used-book/"
 ---
 
-오늘의 뉴스는 글로벌 AI 업체가 국내 리셀러와 SI(시스템통합) 채널을 넓히며 B2B 시장 공략을 가속한다는 것. 리셀러는 남의 제품을 사 와서 다시 파는 사업자고, SI는 여러 제품을 받아 하나의 시스템으로 조립하는 사업자다. 그 사이에는 운영과 과금을 맡는 AI MSP(관리형 서비스 제공자)도 끼여 있다. 주문한 AI가 우리에게 직접 오는 게 아니라, 손을 몇 번 거쳐 도착한다는 뜻이다. 이 만화에서는 그 AI가 손에 몇 번 전달된 뒤 어떤 모양이 되는지, 도서관의 어떤 선반에 꽂히는지 쫓아간다.
+오늘의 뉴스는 글로벌 AI 업체가 국내 리셀러와 SI(시스템통합) 채널을 넓히며 B2B 시장 공략을 가속한다는 것입니다. 리셀러는 남의 제품을 사 와서 다시 파는 사업자이고, SI는 여러 제품을 받아 하나의 시스템으로 조립하는 사업자입니다. 그 사이에는 운영과 과금을 맡는 AI MSP(관리형 서비스 제공자)도 끼여 있습니다. 주문한 AI가 우리에게 직접 오는 게 아니라, 손을 몇 번 거쳐 도착한다는 뜻입니다. 이 만화에서는 그 AI가 손에 몇 번 전달된 뒤 어떤 모양이 되는지, 도서관의 어떤 선반에 꽂히는지 쫓아갑니다.
 
 ![AI가 손 4번이면 중고서?](/assets/images/posts/만화/four-hands-used-book/strip.webp)
 
@@ -24,8 +25,21 @@ image: /assets/images/posts/만화/four-hands-used-book/strip.webp
 
 ## ThakiCloud 제품 적용 시사점
 
-채널이 길면, 그 위에 계량기가 늘어난다. ThakiCloud의 주권형 온프렘 구성은 다른 길을 택한다. AI가 손을 거치지 않는다. 모델은 회사 서버에 설치되고, 파시스의 에이전트와 메티스의 추론은 그 자리에서 도는 구조다. 데이터는 건물을 나가지 않고, 계량기도 우리의 것이다. AI가 갈 수 있는 최단 경로는 결국 자기 선반으로 직접 가는 길이다. ThakiCloud 팀도 자기 일은 그렇게 굴린다. 오늘 뉴스를 고르고 이 대본을 쓴 에이전트는 옆 서버실에서 일하고 있으니, 채널을 타지 않고 선반으로 바로 간다.
+채널이 길면, 그 위에 계량기가 늘어납니다. ThakiCloud의 주권형 온프렘 구성은 다른 길을 택합니다. AI가 손을 거치지 않습니다. 모델은 회사 서버에 설치되고, 파시스의 에이전트와 메티스의 추론은 그 자리에서 도는 구조입니다. 데이터는 건물을 나가지 않고, 계량기도 우리의 것입니다. AI가 갈 수 있는 최단 경로는 결국 자기 선반으로 직접 가는 길입니다. ThakiCloud 팀도 자기 일은 그렇게 굴립니다. 오늘 뉴스를 고르고 이 대본을 쓴 에이전트는 옆 서버실에서 일하고 있으니, 채널을 타지 않고 선반으로 바로 갑니다.
 
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`prismatic_tech` 스타일)으로 요약한 슬라이드입니다.
+
+![four-hands-used-book 슬라이드 1](/assets/images/four-hands-used-book-slide-01.webp)
+
+![four-hands-used-book 슬라이드 2](/assets/images/four-hands-used-book-slide-02.webp)
+
+![four-hands-used-book 슬라이드 3](/assets/images/four-hands-used-book-slide-03.webp)
+
+![four-hands-used-book 슬라이드 4](/assets/images/four-hands-used-book-slide-04.webp)
+
