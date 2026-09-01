@@ -1,8 +1,8 @@
 ---
 title: "Chinese Characters Leaking Into Korean Output? Check Your Temperature First"
-excerpt: "Qwen3.8-27B drops Han characters mid-sentence when answering in Korean. Chasing the cause, we found that a single generation setting accounts for a 5x swing, DPO learned the training task perfectly without transferring, and pruning the output path cut real errors from 1.81% to 0.18%."
+excerpt: "Qwen3.8-27B drops Han characters mid-sentence when answering in Korean. Chasing the cause, we found that a single generation setting accounts for a 5x swing, and pruning the output path cut real errors from 1.81% to 0.18% while keeping Korean Hanja notation alive."
 seo_title: "Korean LLM Han Character Leakage: Temperature, DPO, Vocabulary Pruning"
-seo_description: "We measured CJK contamination in Qwen3.8-27B Korean responses across 3,369 prompts. Temperature drives a 5x difference, DPO does not generalize, and lm_head vocabulary pruning cuts real errors from 1.81% to 0.18% while preserving Korean Hanja notation."
+seo_description: "We measured CJK contamination in Qwen3.8-27B Korean responses across 3,369 prompts. Temperature drives a 5x difference, and lm_head vocabulary pruning cuts real errors from 1.81% to 0.18% while preserving Korean Hanja notation."
 date: 2026-09-01
 published: true
 categories:
@@ -31,11 +31,15 @@ If you run a multilingual LLM behind a Korean-facing service, you have probably 
 
 All of it came from Qwen3.8-27B answering Korean prompts. The response does not switch to Chinese wholesale. Two or three characters slip into the middle of an otherwise Korean sentence. The most frequent intruders are `的`, `您`, and `贵` — Chinese particles and honorifics.
 
-There are three things to take away. **First, check your generation temperature before you measure anything.** Temperature alone accounts for a 5x swing in the contamination rate. **Second, preference learning does not fix this.** We hit 97.4% accuracy on the held-out preference task and got exactly zero effect on unseen prompts. **Third, you can block the output path in the weights** — but choosing what to cut decides whether Korean Hanja notation survives.
+There are three things to take away. **First, check your generation temperature before you measure anything.** Temperature alone accounts for a 5x swing in the contamination rate. **Second, suspect your measuring tools.** We measured the effect of preference learning, and only later discovered the comparison itself had never taken place. **Third, you can block the output path in the weights** — but choosing what to cut decides whether Korean Hanja notation survives.
+
+## Plain terms
+
+The last step a model takes before emitting a character is like picking a key on a keyboard. What we did was remove the Chinese-word keys from that keyboard, while leaving the single-character Hanja keys in place — Korean writing puts Han characters in parentheses, as in 개항(開港), and we did not want to break that. This keyboard picture carries through the rest of the article.
 
 ## Temperature drives a 5x swing
 
-For a while our numbers sat 40x above published figures. [The SASFT paper](https://arxiv.org/abs/2507.14894), working on the same model family, reports a Korean code-switching ratio of 0.25% for Qwen3-8B. We were seeing more than 10%.
+For a while our numbers sat 40x above published figures. The SASFT paper, working on the same model family, reports a Korean code-switching ratio of 0.25% for Qwen3-8B. We were seeing more than 10%.
 
 The gap was not the model. It was the generation setting. Same model, same 1,200 prompts, temperature the only variable.
 
@@ -52,13 +56,13 @@ You also need a noise floor. Running the same model twice under identical settin
 
 ## DPO learned it; whether it transfers is still open
 
-Preference learning was the first attempt. We built minimal pairs: take a response containing Han characters, replace only the Han spans with Korean, and use that as the preferred answer. The median sequence similarity between the two is 0.9979, so the only thing the model can learn is the presence or absence of Han characters.
+Preference learning was the first attempt. We built minimal pairs: take a response containing Han characters, replace only the Han spans with Korean, and use that as the preferred answer. The median similarity between the two is effectively 1 (two parts in a thousand short of it), so the only thing the model can learn is the presence or absence of Han characters.
 
 Training converged cleanly. Held-out preference accuracy reached 97.4% and the loss went to zero.
 
 The generation-side check, however, turned out to be void. A later audit showed that our serving engine was silently ignoring LoRA adapters for this model family: at temperature 0, adapter output was byte-identical to base output. The column we believed was "after DPO" was in fact the base model measured twice. An earlier version of this article carried a transfer-failure table built on that comparison; we have removed it, and we are re-measuring with the adapter merged directly into the weights.
 
-The hypothesis stands, unverified. DPO adjusts the relative likelihood of **two complete responses**, while contamination is a **single-token event** that fires at an arbitrary position. [The TLPO paper](https://arxiv.org/abs/2604.26553) points at the same limitation of sequence-level fine-tuning and proposes token-level intervention. But this experiment did not test it.
+The hypothesis stands, unverified. DPO adjusts the relative likelihood of **two complete responses**, while contamination is a **single-token event** that fires at an arbitrary position. The TLPO paper points at the same limitation of sequence-level fine-tuning and proposes token-level intervention. But this experiment did not test it.
 
 Scale was also short. We used 346 pairs; SASFT, tackling the same symptom with SFT, used 110k to 210k samples. That said, more data does not dissolve a level mismatch.
 
@@ -68,13 +72,13 @@ Scale was also short. We used 346 pairs; SASFT, tackling the same symptom with S
 
 One thing to watch. **Do not zero the row.** Qwen's `lm_head` has no bias, so the logit is `h · W_i`. Zeroing the row makes the logit 0, not negative infinity — and the moment every other candidate is negative, 0 becomes the maximum.
 
-Instead we overwrote the rows with a large negative multiple of the mean hidden-state direction.
+Instead we overwrote the rows with a large negative multiple of the mean hidden-state direction. In keyboard terms: rather than pulling the keys out, we locked them so they never register.
 
 ```
 W_i := -alpha * mu_h / ||mu_h||^2     (alpha = 200)
 ```
 
-`mu_h` is the mean final hidden state over Korean sentences, measured rather than assumed. Two independent measurements gave `||mu_h||²` of 9845.958 and 9887.059, reproducing within 0.4%.
+`mu_h` is the mean final hidden state over Korean sentences, measured rather than assumed. Two independent measurements gave `||mu_h||²` of ~9,846 and 9,887, reproducing within 0.4%.
 
 The tokenizer and the input embeddings are untouched. The model **cannot generate Han characters but can still read them.** Vocabulary size is unchanged, so it loads through the standard path.
 
@@ -101,7 +105,7 @@ That gives the rule. **Cut kana, simplified-only characters, and multi-character
 | base | 2.55% | 1.81% |
 | pruned | **0.68%** | **0.18%** |
 
-An 82% reduction in real errors, 5.7x the 0.33pp noise floor, McNemar p < 0.0001.
+An 82% reduction in real errors, 5.7x the 0.33pp noise floor, A McNemar test puts the odds of this being chance below one in ten thousand.
 
 **Hanja notation survives.** On 12 prompts that explicitly demand Han characters, the pruned model produces them 12 out of 12, same as base. HumanEval coding accuracy is 92.19%, identical to base — though at n=64 the minimum detectable difference is 13.29pp, so that reads as "we could not detect a regression," not "there is none."
 
@@ -145,3 +149,9 @@ When you deal with Han characters leaking into Korean output, work in this order
 The approach is not new. [`dnotitia/smoothie-qwen`](https://github.com/dnotitia/smoothie-qwen) already ships pre-adjusted Qwen checkpoints in the same direction. What we added is a curve built around preserving Korean Hanja, plus the two observations above.
 
 One last thing to be clear about. **This is hygiene, not style.** A separate attempt in the same project to make the Korean prose sound human is still unjudged: the same serving defect voided its comparison, and we are re-measuring. What did hold up is that its training targets were nearly identical to the base model's own output. Removing Han characters does not make writing natural. That is a different problem and it needs different data.
+
+
+## References
+
+- SASFT: <https://arxiv.org/abs/2507.14894>
+- TLPO: <https://arxiv.org/abs/2604.26553>
