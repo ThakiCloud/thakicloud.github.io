@@ -12,7 +12,7 @@ tags:
   - durable-execution
   - 에이전트-샌드박스
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

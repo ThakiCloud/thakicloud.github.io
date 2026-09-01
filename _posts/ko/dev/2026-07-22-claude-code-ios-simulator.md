@@ -9,7 +9,7 @@ tags:
   - AI코딩
   - 에이전트루프
   - 개발생산성
-  - Paxis
+  - paxis
 author_profile: true
 toc: true
 toc_label: iOS 시뮬레이터 루프 해부

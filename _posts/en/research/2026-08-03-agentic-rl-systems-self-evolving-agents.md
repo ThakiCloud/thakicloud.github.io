@@ -11,7 +11,7 @@ tags:
   - AReaL
   - trajectory-data
   - agent-governance
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

@@ -12,7 +12,7 @@ tags:
   - 스킬 하네스
   - 점진적 공개
   - AgentOps
-  - Paxis
+  - paxis
   - 모션 그래픽
   - 로컬 렌더링
 categories: [agentops]

@@ -12,7 +12,7 @@ tags:
   - durable-execution
   - agent-sandbox
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

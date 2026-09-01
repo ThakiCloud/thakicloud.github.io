@@ -12,7 +12,7 @@ tags:
   - GPU
   - 온프레미스
   - 데이터주권
-  - Paxis
+  - paxis
 categories: [dev]
 author_profile: true
 toc: true

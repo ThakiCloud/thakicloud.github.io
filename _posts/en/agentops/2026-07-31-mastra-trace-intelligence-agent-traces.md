@@ -12,7 +12,7 @@ tags:
   - OpenTelemetry
   - agent-evaluation
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

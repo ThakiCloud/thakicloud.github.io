@@ -42,6 +42,22 @@ classes: wide
     <button type="button" class="catchip" data-cat="{{ comics_cat }}">{{ site.data.category_labels[comics_cat] | default: 'Comics' }}</button>
   </nav>
 
+  {% comment %}
+    ── Tag chips ────────────────────────────────────────────────────────
+    The ?tags= filter has always worked (rows carry data-<slug>), but nothing
+    rendered an entry point, so a reader had to know the URL to use it. That is
+    why product posts were hard to find even though 240+ of them carry the tag.
+    Curated, not auto-generated: an auto top-N list churns with publishing
+    volume and would put a different row in front of readers every week.
+    Values are slugs — they must match `tag | slugify` on the rows.
+  {% endcomment %}
+  {% assign tagchip_values = 'paxis,agentops,llmops,vllm,quantization,on-prem,sovereign-ai,claude-code' | split: ',' %}
+  <nav class="tagchips" aria-label="Filter by tag">
+    {% for v in tagchip_values %}
+      <button type="button" class="tagchip" data-tag="{{ v }}">#{{ v }}</button>
+    {% endfor %}
+  </nav>
+
   {% comment %} ── Post list ───────────────────────────────────────────── {% endcomment %}
   <div class="postspage__list">
     {% for post in filtered_posts %}
@@ -163,7 +179,32 @@ classes: wide
     {%- comment %} ?tags= still filters (rows carry data-<slug>), even though the
        search box was removed — links elsewhere may still point here. {% endcomment -%}
     var tagParam = q.tags || q.tag;
-    if (tagParam) { selects.push(tagParam.toLowerCase().replace(/\s+/g, '-')); }
+    {%- comment %} A page can pre-select a tag (see _pages/*/paxis.md). The query
+       param still wins so an explicit link is never overridden. {% endcomment -%}
+    {% if page.default_tag %}if (!tagParam) { tagParam = {{ page.default_tag | jsonify }}; }{% endif %}
+    if (tagParam) { tagParam.toLowerCase().split(',').forEach(function (x) {
+      x = x.trim().replace(/\s+/g, '-'); if (x) selects.push(x);
+    }); }
+    syncTagChips();
+
+    /* ---- tag chips ---- */
+    function syncTagChips() {
+      document.querySelectorAll('.tagchip').forEach(function (c) {
+        c.classList.toggle('is-active', selects.indexOf(c.dataset.tag) !== -1);
+      });
+    }
+    document.querySelectorAll('.tagchip').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var i = selects.indexOf(chip.dataset.tag);
+        if (i === -1) { selects.push(chip.dataset.tag); } else { selects.splice(i, 1); }
+        syncTagChips();
+        var url = new URL(window.location.href);
+        if (selects.length) { url.searchParams.set('tags', selects.join(',')); }
+        else { url.searchParams.delete('tags'); }
+        history.replaceState(null, '', url);
+        page = 1; apply();
+      });
+    });
 
     apply();
 

@@ -11,7 +11,7 @@ tags:
   - 비용관측성
   - 모델라우팅
   - self-hosting
-  - Paxis
+  - paxis
   - AI인프라
 author_profile: true
 toc: true

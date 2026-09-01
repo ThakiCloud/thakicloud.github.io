@@ -9,7 +9,7 @@ tags:
   - ClaudeCode
   - 플러그인
   - 결정론
-  - Paxis
+  - paxis
   - AI에이전트
 author_profile: true
 toc: true

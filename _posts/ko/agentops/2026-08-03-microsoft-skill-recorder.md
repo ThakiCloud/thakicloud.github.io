@@ -12,7 +12,7 @@ tags:
   - SKILL-md
   - 워크플로-자동화
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

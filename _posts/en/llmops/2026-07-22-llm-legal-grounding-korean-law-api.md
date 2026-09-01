@@ -12,7 +12,7 @@ tags:
   - LLMOps
   - on-prem
   - self-hosting
-  - Paxis
+  - paxis
 author_profile: true
 toc: true
 toc_label: Grounding legal LLMs

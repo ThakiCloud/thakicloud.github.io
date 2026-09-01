@@ -14,7 +14,7 @@ tags:
   - 벤치마크
   - 추론 최적화
   - MLOps
-  - Paxis
+  - paxis
 categories: [research]
 author_profile: true
 toc: true

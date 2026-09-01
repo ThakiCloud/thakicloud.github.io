@@ -11,7 +11,7 @@ tags:
   - 컨텍스트-엔지니어링
   - BM25-스킬라우팅
   - AgentOps
-  - Paxis
+  - paxis
   - tiktoken
 categories: [agentops]
 author_profile: true

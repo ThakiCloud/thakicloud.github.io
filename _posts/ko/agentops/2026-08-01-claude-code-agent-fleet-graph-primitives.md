@@ -11,7 +11,7 @@ tags:
   - 멀티에이전트
   - 에이전트-오케스트레이션
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

@@ -13,7 +13,7 @@ tags:
   - multi-agent
   - audit-log
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

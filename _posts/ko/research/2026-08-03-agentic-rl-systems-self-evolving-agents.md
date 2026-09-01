@@ -11,7 +11,7 @@ tags:
   - AReaL
   - 궤적-데이터
   - 에이전트-거버넌스
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

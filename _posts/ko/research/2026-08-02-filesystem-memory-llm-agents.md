@@ -11,7 +11,7 @@ tags:
   - LLM-에이전트
   - 컨텍스트-엔지니어링
   - 스킬-저장소
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

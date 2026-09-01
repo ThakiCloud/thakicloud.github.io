@@ -12,7 +12,7 @@ tags:
   - LangGraph
   - agent-orchestration
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

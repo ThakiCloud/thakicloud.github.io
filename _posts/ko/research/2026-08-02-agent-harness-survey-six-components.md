@@ -11,7 +11,7 @@ tags:
   - 서베이
   - 완전성-행렬
   - 에이전트-평가
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

@@ -9,7 +9,7 @@ tags:
   - Rules
   - AI코딩
   - AgentOps
-  - Paxis
+  - paxis
   - 개발생산성
 author_profile: true
 toc: true

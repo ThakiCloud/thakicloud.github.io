@@ -14,7 +14,7 @@ tags:
   - 컴퓨터 유즈
   - 포스트 트레이닝
   - MLOps
-  - Paxis
+  - paxis
 categories: [research]
 author_profile: true
 toc: true

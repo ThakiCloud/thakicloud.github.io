@@ -12,7 +12,7 @@ tags:
   - GPU
   - On-Premises
   - Data Sovereignty
-  - Paxis
+  - paxis
 categories: [dev]
 author_profile: true
 toc: true

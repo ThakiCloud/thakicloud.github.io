@@ -13,7 +13,7 @@ tags:
   - 스킬 라우팅
   - 공급망
   - 버전 관리
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

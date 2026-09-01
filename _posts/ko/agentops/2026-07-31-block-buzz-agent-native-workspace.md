@@ -13,7 +13,7 @@ tags:
   - 멀티에이전트
   - 감사로그
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

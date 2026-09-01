@@ -12,7 +12,7 @@ tags:
   - LLMOps
   - 온프렘
   - self-hosting
-  - Paxis
+  - paxis
 author_profile: true
 toc: true
 toc_label: 법률 LLM 근거 설계

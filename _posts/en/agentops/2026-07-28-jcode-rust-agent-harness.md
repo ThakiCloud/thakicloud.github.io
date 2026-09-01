@@ -13,7 +13,7 @@ tags:
   - 에이전트 메모리
   - vLLM
   - AgentOps
-  - Paxis
+  - paxis
   - 오픈소스
 categories: [agentops]
 author_profile: true

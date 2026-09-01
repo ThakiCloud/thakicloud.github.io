@@ -11,7 +11,7 @@ tags:
   - multi-agent
   - agent-orchestration
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

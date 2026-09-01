@@ -1390,6 +1390,41 @@ html[lang="ar"] .toss-rail__rank { }
 .catchip:focus { outline: none; box-shadow: none; }
 .catchip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+/* ---- Tag chips — secondary row under the category chips ----
+   Lighter than .catchip on purpose: category is the primary axis, tag is the
+   cross-cutting one. Same interaction states so they don't feel like different
+   controls. */
+.tagchips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 8px;
+  row-gap: 8px;
+  margin: -1.75rem 0 2.5rem;
+}
+.tagchip {
+  font-family: var(--font-mono, var(--font-sans));
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 5px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: var(--surface-hover, var(--surface));
+  color: var(--text-muted, var(--text));
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.tagchip:hover { border-color: var(--border-strong); color: var(--text); }
+.tagchip.is-active {
+  background: var(--accent, var(--text));
+  color: var(--bg);
+  border-color: transparent;
+}
+.tagchip:focus { outline: none; box-shadow: none; }
+.tagchip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 /* ---- Post rows — no cards, hairline dividers (32px above/below) ---- */
 .postrow {
   display: flex;
@@ -1617,6 +1652,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
   .site-footer__info { text-align: center; }
   .catchips { gap: 8px; }
   .catchip { font-size: 0.875rem; padding: 6px 14px; }
+  .tagchips { gap: 6px; margin-top: -1.5rem; }
+  .tagchip { font-size: 0.75rem; padding: 4px 10px; }
 }
 
 

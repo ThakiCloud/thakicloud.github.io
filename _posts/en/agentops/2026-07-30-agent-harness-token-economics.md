@@ -11,7 +11,7 @@ tags:
   - context-engineering
   - BM25-skill-routing
   - AgentOps
-  - Paxis
+  - paxis
   - tiktoken
 categories: [agentops]
 author_profile: true

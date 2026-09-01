@@ -10,7 +10,7 @@ tags:
   - 온프렘
   - 주권 AI
   - Metis
-  - Paxis
+  - paxis
 author_profile: true
 toc: false
 image: /assets/images/posts/comics/samsung-foundry-first-profit-own-the-fab/strip.webp

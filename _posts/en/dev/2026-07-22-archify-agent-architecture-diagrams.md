@@ -10,7 +10,7 @@ tags:
   - 개발도구
   - 시각화
   - JSON-IR
-  - Paxis
+  - paxis
 author_profile: true
 toc: true
 toc_label: Archify in Practice

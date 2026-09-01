@@ -11,7 +11,7 @@ tags:
   - CostObservability
   - ModelRouting
   - self-hosting
-  - Paxis
+  - paxis
   - AIInfrastructure
 author_profile: true
 toc: true

@@ -12,7 +12,7 @@ tags:
   - supply-chain-security
   - audit-logs
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

@@ -9,7 +9,7 @@ tags:
   - AI코딩
   - 개발생산성
   - Accessibility
-  - Paxis
+  - paxis
   - 포용적개발
 author_profile: true
 toc: true

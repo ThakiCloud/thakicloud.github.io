@@ -13,7 +13,7 @@ tags:
   - Open Source
   - Agent Harness
   - Evaluation
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

@@ -11,7 +11,7 @@ tags:
   - survey
   - completeness-matrix
   - agent-evaluation
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

@@ -11,7 +11,7 @@ tags:
   - 강화학습
   - Qwen
   - 커리큘럼-학습
-  - Paxis
+  - paxis
   - 논문리뷰
 categories: [research]
 author_profile: true

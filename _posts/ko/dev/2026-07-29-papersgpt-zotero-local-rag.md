@@ -14,7 +14,7 @@ tags:
   - 온프레미스
   - 공급망 보안
   - 데이터 주권
-  - Paxis
+  - paxis
 categories: [dev]
 author_profile: true
 toc: true

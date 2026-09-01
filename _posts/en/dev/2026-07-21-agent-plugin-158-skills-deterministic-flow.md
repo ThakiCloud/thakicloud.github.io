@@ -9,7 +9,7 @@ tags:
   - ClaudeCode
   - Plugins
   - Determinism
-  - Paxis
+  - paxis
   - AIAgents
 author_profile: true
 toc: true

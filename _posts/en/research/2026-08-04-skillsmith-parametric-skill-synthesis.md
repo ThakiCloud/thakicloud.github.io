@@ -12,7 +12,7 @@ tags:
   - PEFT
   - KV-cache
   - Gemma-3
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

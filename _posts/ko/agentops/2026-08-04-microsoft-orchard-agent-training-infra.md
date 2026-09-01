@@ -13,7 +13,7 @@ tags:
   - 오픈소스
   - 에이전트 하네스
   - 평가
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

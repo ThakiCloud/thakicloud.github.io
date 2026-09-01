@@ -5,7 +5,7 @@ seo_description: "We pointed Paxis at our in-house Qwen3.8-27B NVFP4 245k endpoi
 excerpt: "A local agent answers just fine. What separates an organization is whether the answer records which procedure it followed, which model spent what, and who asked."
 date: 2026-08-28
 tags:
-  - Paxis
+  - paxis
   - agents
   - audit log
   - execution trace

@@ -9,7 +9,7 @@ tags:
   - AICoding
   - AgentLoop
   - DevProductivity
-  - Paxis
+  - paxis
 author_profile: true
 toc: true
 toc_label: Anatomy of the iOS Simulator Loop

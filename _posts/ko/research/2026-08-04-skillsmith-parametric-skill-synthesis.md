@@ -12,7 +12,7 @@ tags:
   - PEFT
   - KV-캐시
   - Gemma-3
-  - Paxis
+  - paxis
   - ai-platform
 categories: [research]
 author_profile: true

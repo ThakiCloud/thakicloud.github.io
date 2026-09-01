@@ -11,7 +11,7 @@ tags:
   - 공급망-보안
   - 감사로그
   - AgentOps
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

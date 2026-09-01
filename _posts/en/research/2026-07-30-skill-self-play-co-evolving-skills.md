@@ -11,7 +11,7 @@ tags:
   - reinforcement-learning
   - Qwen
   - curriculum-learning
-  - Paxis
+  - paxis
   - paper-review
 categories: [research]
 author_profile: true

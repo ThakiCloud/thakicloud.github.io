@@ -8,7 +8,7 @@ tags:
   - ScreenReader
   - AICoding
   - DeveloperProductivity
-  - Paxis
+  - paxis
   - InclusiveDev
 author_profile: true
 toc: true

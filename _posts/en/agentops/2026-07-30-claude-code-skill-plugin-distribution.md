@@ -13,7 +13,7 @@ tags:
   - Skill Routing
   - Supply Chain
   - Versioning
-  - Paxis
+  - paxis
 categories: [agentops]
 author_profile: true
 toc: true

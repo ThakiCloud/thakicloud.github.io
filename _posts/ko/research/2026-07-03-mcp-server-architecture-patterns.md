@@ -12,7 +12,7 @@ tags:
   - Architecture-Patterns
   - Tool-Selection
   - Agent-Native-Cloud
-  - Paxis
+  - paxis
 author_profile: true
 toc: true
 toc_label: "목차"

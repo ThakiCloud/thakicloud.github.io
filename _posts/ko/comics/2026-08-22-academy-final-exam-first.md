@@ -9,7 +9,7 @@ tags:
   - AI 아카데미
   - 졸업고사 먼저
   - 온프렘
-  - Paxis
+  - paxis
   - Metis
 author_profile: true
 toc: false
