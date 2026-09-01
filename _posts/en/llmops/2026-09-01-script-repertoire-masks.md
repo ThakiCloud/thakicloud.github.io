@@ -106,6 +106,28 @@ We published masks and an apply script for six languages. We did not upload weig
 | Vietnamese | all Han, kana, Hangul | 65,695 |
 | Arabic | iso8859-6 plus digit and vowel-mark exceptions | 815 |
 
+```mermaid
+flowchart TD
+    A["Foreign script appears in output"] --> B{"Target language?"}
+    B -->|Korean| K["euc_kr repertoire<br/>+ runs of 2+ Han"]
+    B -->|Japanese| J["shift_jis repertoire<br/>always keep kana tokens"]
+    B -->|Traditional Chinese| T["big5 repertoire"]
+    B -->|Cantonese| C["big5hkscs repertoire<br/>keeps 嘅喺啲哋嘢"]
+    B -->|Vietnamese| V["all Han, kana, Hangul"]
+    B -->|Arabic| R["iso8859-6<br/>+ digit and vowel-mark exceptions"]
+    K --> Z["Suppress those lm_head rows"]
+    J --> Z
+    T --> Z
+    C --> Z
+    V --> Z
+    R --> Z
+```
+
+Collapsing these branches into one always breaks a language. Replace the Japanese branch with
+the Traditional Chinese one and shinjitai disappears; replace the Cantonese branch with it and
+Cantonese loses its own characters.
+
+
 ## What you should not trust
 
 This part matters.
