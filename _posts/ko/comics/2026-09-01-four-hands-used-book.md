@@ -13,12 +13,12 @@ tags:
   - b2b
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/four-hands-used-book/strip.png
+image: /assets/images/posts/만화/four-hands-used-book/strip.webp
 ---
 
 오늘의 뉴스는 글로벌 AI 업체가 국내 리셀러와 SI(시스템통합) 채널을 넓히며 B2B 시장 공략을 가속한다는 것. 리셀러는 남의 제품을 사 와서 다시 파는 사업자고, SI는 여러 제품을 받아 하나의 시스템으로 조립하는 사업자다. 그 사이에는 운영과 과금을 맡는 AI MSP(관리형 서비스 제공자)도 끼여 있다. 주문한 AI가 우리에게 직접 오는 게 아니라, 손을 몇 번 거쳐 도착한다는 뜻이다. 이 만화에서는 그 AI가 손에 몇 번 전달된 뒤 어떤 모양이 되는지, 도서관의 어떤 선반에 꽂히는지 쫓아간다.
 
-![AI가 손 4번이면 중고서?](/assets/images/posts/만화/four-hands-used-book/strip.png)
+![AI가 손 4번이면 중고서?](/assets/images/posts/만화/four-hands-used-book/strip.webp)
 
 > 원 뉴스: [앤트로픽, 韓 리셀러·SI 채널 확대하며 B2B 시장 공략 가속…AI MSP 경쟁구도 주목](https://n.news.naver.com/mnews/article/092/0002435487?sid=105) · bespin
 

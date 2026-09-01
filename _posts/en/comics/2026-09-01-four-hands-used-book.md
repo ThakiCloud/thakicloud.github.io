@@ -13,12 +13,12 @@ tags:
   - b2b
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/four-hands-used-book/strip.png
+image: /assets/images/posts/comics/four-hands-used-book/strip.webp
 ---
 
 News of the day: a global AI company is widening its Korean reseller and system integrator channels to accelerate its B2B push. A reseller buys someone else's product and sells it on. An SI takes an order and stitches several products into one system. In between sits the AI MSP, the managed service provider that runs the operation and the billing. In other words, the AI you order does not arrive at your desk directly. It makes the trip through several pairs of hands. This strip follows what shape the AI ends up in after being passed around, and which shelf of the library it lands on.
 
-![Four Hands. Condition: Used.](/assets/images/posts/comics/four-hands-used-book/strip.png)
+![Four Hands. Condition: Used.](/assets/images/posts/comics/four-hands-used-book/strip.webp)
 
 > Source: [앤트로픽, 韓 리셀러·SI 채널 확대하며 B2B 시장 공략 가속…AI MSP 경쟁구도 주목](https://n.news.naver.com/mnews/article/092/0002435487?sid=105) · bespin
 
