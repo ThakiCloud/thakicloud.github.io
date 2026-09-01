@@ -22,6 +22,9 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/skill-state-long-horizon-agent-runtime/"
+audiobook: "https://drive.google.com/file/d/1sNo-OVic1nMa1KR4LmIRDV0h6dlMm1Pq/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 Hand an agent a long job and it gets slower, costlier, and wronger as it goes. The cause is not the model's reasoning. It is the habit of carrying every word ever exchanged. Swap the chat log for a board that holds only the current state, and token use drops by an order of magnitude while accuracy goes up.
@@ -89,7 +92,7 @@ Stretch to 200 steps and the gap widens. The state runtime held 94 percent while
 
 Put plainly: as runs get longer the others get pricier and less correct, while this one holds both its price and its accuracy.
 
-![Cumulative tokens and task accuracy across execution horizons](/assets/images/skill-state-long-horizon-agent-runtime-results.webp)
+![Cumulative tokens and task accuracy across execution horizons](/assets/images/skill-state-long-horizon-agent-runtime-results.png)
 *Values transcribed from Table 1 of the paper. Left is cumulative tokens on a log scale; right is accuracy. At 200 steps the state runtime used 122,384 tokens against 5,041,164 for the structured-block baseline. These are paper-reported numbers, not a ThakiCloud reproduction.*
 
 The second experiment injects noise. Events unrelated to the task get mixed into the environment. At five injected events the raw-conversation baseline was already at 68 percent, and at fifty it fell to 53 percent. Across that same range the state runtime held 100 percent and then 98 percent.
@@ -118,7 +121,7 @@ Every runtime was capped near 1,800 prompt tokens and rerun. At 100 steps the st
 
 The telling number is that the uncapped raw-conversation baseline scored 84 percent. Shrinking carelessly is far worse than not shrinking at all.
 
-![Accuracy under an identical token budget with only the representation changed](/assets/images/skill-state-long-horizon-agent-runtime-budget.webp)
+![Accuracy under an identical token budget with only the representation changed](/assets/images/skill-state-long-horizon-agent-runtime-budget.png)
 *Values transcribed from Table 11 of the paper. Four of the five runtimes share the same 1,800-token budget. At 100 steps the state runtime scored 0.94 against 0.52 for summarization, 0.22 for statistical compression, and 0.18 for truncation, while the uncapped baseline scored 0.84.*
 
 Put plainly: it did not win by being short. It won by having a different shape. A whiteboard is not a compressed transcript; it is a different object.
