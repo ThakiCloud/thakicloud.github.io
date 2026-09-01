@@ -39,6 +39,8 @@ NVIDIA는 이 공백을 메우려고 검증된 에이전트 스킬(NVIDIA Verifi
 
 ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내부적으로 수백 개의 스킬과 자율 에이전트 작업을 돌립니다. 그래서 "스킬을 어떻게 신뢰할 것인가"는 우리에게 학술적인 질문이 아니라 매일의 운영 과제입니다. 이 글에서는 NVIDIA가 공개한 저장소를 실제로 받아 서명을 검증하고, 파일 한 줄을 바꿔 변조가 탐지되는지까지 직접 돌려본 결과를 정리합니다. 그리고 이 구조가 멀티테넌트 에이전트 플랫폼을 운영하는 입장에서 무엇을 바꾸는지 살펴봅니다.
 
+![에이전트 스킬 공급망 신뢰 확보와 NVIDIA OMS 서명 기술 검증을 알리는 표지](/assets/images/nvidia-verified-agent-skills-slide-01.png)
+
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/nvidia-verified-agent-skills/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
@@ -46,6 +48,8 @@ ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하면서 내
 ## 이 기술은 무엇인가
 
 NVIDIA 에이전트 스킬은 에이전트에게 CUDA-X 라이브러리, AI Blueprint, 플랫폼 도구를 올바르게 쓰는 법을 알려주는 이식 가능한 지시문 묶음입니다. 여기서 "검증됨(verified)"이라는 말에는 구체적인 의미가 있습니다. 카탈로그에 등재되고, 보안 스캔을 거치고, 암호 서명이 붙고, 스킬 카드로 문서화되었다는 뜻입니다. 단순히 "유명한 게시자가 올렸다"는 정황 증거가 아니라, 다운로드한 산출물 자체를 검증할 수 있다는 점이 일반 레지스트리와 다릅니다.
+
+![출처 불분명한 스킬 배포의 위험성과 무결성 검증 핵심 과제를 설명하는 화면](/assets/images/nvidia-verified-agent-skills-slide-02.png)
 
 스킬이 검증되는 과정은 여덟 단계로 이루어집니다. 소스 저장소에서 출발해 리뷰, 스캔, 평가, 스킬 카드 생성, 서명, 카탈로그 등재, 동기화 순서로 흐릅니다. 이 파이프라인은 매일 동기화되며, 각 단계가 끝나야 다음 단계로 넘어갑니다.
 
@@ -380,9 +384,13 @@ NVIDIA 에이전트 스킬은 에이전트에게 CUDA-X 라이브러리, AI Blue
 
 첫째는 서명입니다. NVIDIA는 OpenSSF Model Signing(OMS) 포맷을 채택해 스킬마다 detached 서명 파일 `skill.oms.sig`를 함께 배포합니다. 이 서명은 스킬 디렉터리 안의 모든 파일과 하위 디렉터리를 덮습니다. 즉 단일 파일이 아니라 디렉터리 트리 전체에 대한 무결성을 보장합니다. OMS는 Sigstore 스타일 번들을 확장해 디렉터리 단위 검증이 가능하도록 만든 포맷입니다.
 
+![OpenSSF Model Signing 포맷을 채택한 암호 서명과 무결성 검증 체계 안내](/assets/images/nvidia-verified-agent-skills-slide-03.png)
+
 둘째는 보안 스캔입니다. 발행 전에 모든 스킬은 SkillSpector를 거칩니다. SkillSpector는 취약한 의존성, 의심스러운 스크립트, 위험한 코드 패턴, 자격 증명 접근, 데이터 유출 경로 같은 전통적인 소프트웨어 위험을 점검합니다. 여기에 더해 에이전트 고유의 위험도 봅니다. 숨겨진 지시문, 프롬프트 인젝션, 트리거 남용, 과도한 권한, 도구 오염, 그리고 스킬이 선언한 목적과 실제로 요구하는 접근 권한과 번들된 동작 사이의 불일치를 잡아냅니다. 파일 수준에서는 무해해 보여도 에이전트를 위험한 행동으로 유도하는 스킬이 있을 수 있기 때문에, 이 의도 계층 점검이 중요합니다. SkillSpector의 점검 범위는 OWASP의 LLM 애플리케이션 위험 가이드와 에이전트 AI 위험 가이드에 기반합니다.
 
 셋째는 스킬 카드입니다. 검증된 스킬마다 기계가 읽을 수 있는 신뢰 기록이 따라옵니다. 무엇을 하는 스킬인지, 누가 만들었는지, 라이선스는 무엇인지, 어떤 의존성이 있는지, 알려진 기술적 한계와 위험과 완화책은 무엇인지를 담습니다. 개발자는 이 카드를 보고 대상 에이전트와 호환되는지, 배포 전에 어떤 의존성을 확인해야 하는지를 빠르게 판단할 수 있습니다.
+
+![OMS 암호 서명과 SkillSpector 보안 스캔 및 기계 판독형 스킬 카드 3대 축](/assets/images/nvidia-verified-agent-skills-slide-04.png)
 
 ## 설치 및 검증
 
@@ -465,6 +473,8 @@ Verification failed with error: Signature mismatch:
 
 온프레미스와 규제 환경에서는 이 가치가 한층 커집니다. 망 분리되거나 보안 요구가 높은 고객 환경에서는 "이 스킬이 정말 NVIDIA가 발행한 그것이고, 우리 손에 들어오기까지 바뀌지 않았다"를 증명하는 일이 그 자체로 컴플라이언스 요건이 됩니다. self-hosting과 온프렘을 강점으로 내세우는 플랫폼이라면, 스킬 공급망의 검증 가능성은 마케팅 문구가 아니라 실제 도입 게이트를 통과시키는 기술 요건입니다.
 
+![보안 스캔 및 위험 점수 기준과 로컬 서명 검증 흐름을 정리한 신뢰 파이프라인](/assets/images/posts/news/nvidia-verified-agent-skills/nlm-infographic-2.webp)
+
 ## 한계 및 반론
 
 서명을 과대평가하지 않는 편이 정직합니다. 암호 서명이 보장하는 것은 무결성과 출처이지, 스킬이 안전하거나 올바르다는 보장이 아닙니다. 나쁜 스킬도 서명될 수 있습니다. 서명은 "이것이 발행자가 올린 그것이며 변조되지 않았다"만 말할 뿐, "이 스킬이 시키는 대로 해도 안전하다"는 말해 주지 않습니다. 실제로 `dynamo-interconnect-check`의 스킬 카드조차 "배포 전에 리뷰하고 스캔하라"고 적어 두었습니다.
@@ -475,22 +485,6 @@ Verification failed with error: Signature mismatch:
 
 그럼에도 방향은 분명합니다. 스킬이 에이전트의 행동을 결정하는 부품이 되는 이상, 그 부품의 출처와 무결성을 검증할 수 있어야 한다는 요구는 사라지지 않습니다. NVIDIA의 시도는 그 요구에 대한 구체적이고 재현 가능한 첫 답안입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`neo_constructivist` 스타일)으로 요약한 슬라이드입니다.
-
-![nvidia-verified-agent-skills 슬라이드 1](/assets/images/nvidia-verified-agent-skills-slide-01.png)
-
-![nvidia-verified-agent-skills 슬라이드 2](/assets/images/nvidia-verified-agent-skills-slide-02.png)
-
-![nvidia-verified-agent-skills 슬라이드 3](/assets/images/nvidia-verified-agent-skills-slide-03.png)
-
-![nvidia-verified-agent-skills 슬라이드 4](/assets/images/nvidia-verified-agent-skills-slide-04.png)
-
-<!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/nvidia-verified-agent-skills/nlm-infographic-2.webp)
-*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

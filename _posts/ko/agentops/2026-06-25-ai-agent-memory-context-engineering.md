@@ -35,13 +35,19 @@ LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. �
 
 왜 토큰을 아껴야 할까요. LLM도 사람처럼 일정 지점을 넘으면 집중을 잃습니다. 토큰 수가 늘수록 그 안의 정보를 정확히 회상하는 능력이 떨어지는 현상을 컨텍스트 로트(context rot)라고 부릅니다. 정도의 차이는 있어도 모든 모델에서 나타납니다. 근본 원인은 트랜스포머 구조입니다. 모든 토큰이 다른 모든 토큰에 주의를 보내므로 토큰 n개에 대해 n의 제곱에 해당하는 관계가 생깁니다. 컨텍스트가 길어질수록 주의 예산이 묽어집니다. 그래서 컨텍스트는 무한한 저장소가 아니라 한정된 자원으로 다뤄야 합니다. 핵심은 원하는 결과를 낼 가능성을 가장 높이는 고신호 토큰의 최소 집합을 찾는 것입니다.
 
+![AI 에이전트에게 진짜 기억을 주는 법 제목과 서버 랙이 배치된 데이터센터 배경 화면]({{ '/assets/images/ai-agent-memory-context-engineering-slide-01.webp' | relative_url }})
+
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/ai-agent-memory-context-engineering/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
+![n제곱 기호와 함께 컨텍스트 창 확장의 한계와 정보 희석 문제를 설명하는 화면]({{ '/assets/images/ai-agent-memory-context-engineering-slide-02.webp' | relative_url }})
+
 ## 에이전트 메모리의 문제 구조
 
 장기 실행 작업은 토큰 수가 컨텍스트 창을 넘는 행동의 연속에서 일관성과 목표 지향성을 유지해야 합니다. 대규모 코드베이스 마이그레이션이나 수 시간짜리 리서치처럼 수십 분에서 여러 시간 이어지는 작업이 그렇습니다. 이때 단순히 모든 것을 창에 쌓아 두는 방식은 컨텍스트 로트로 무너집니다. 그래서 정보를 창 밖으로 빼내고, 필요할 때만 다시 끌어오는 구조가 필요합니다. 아래 도식이 그 골격입니다.
+
+![대화 길이에 따라 비용은 증가하고 정보 회상률은 하락하는 컨텍스트 로트 그래프]({{ '/assets/images/ai-agent-memory-context-engineering-slide-03.webp' | relative_url }})
 
 {% raw %}
 <!--
@@ -371,6 +377,8 @@ LLM 에이전트를 오래 돌려 본 사람은 같은 벽에 부딪힙니다. �
 
 이 구조의 목표는 단순합니다. 상세한 작업 컨텍스트는 창 밖으로 격리하고, 메인 에이전트의 창에는 결정에 필요한 고신호 토큰만 남기는 것입니다.
 
+![과거 프롬프트 방식과 고신호 토큰을 메인 창에 격리하는 컨텍스트 방식을 비교한 다이어그램]({{ '/assets/images/ai-agent-memory-context-engineering-slide-04.webp' | relative_url }})
+
 ## 네 가지 기법
 
 ### 컴팩션
@@ -394,6 +402,8 @@ Anthropic은 Sonnet 4.5 출시와 함께 Claude 개발자 플랫폼에 메모리
 이 기법들의 가치를 보려면 흔한 대안과 비교하는 것이 좋습니다. 첫 번째 대안은 모든 것을 그냥 큰 컨텍스트 창에 욱여넣는 방식입니다. 단순하지만 컨텍스트 로트로 무너지고, 매 턴 거대한 이력을 다시 읽으니 비용도 선형으로 늘어납니다. 두 번째 대안은 벡터 검색 기반 RAG입니다. 외부 지식을 끌어오는 데는 강하지만, 에이전트 자신이 작업 중 만든 상태(중간 결정, 진행 상황, 자기 노트)를 다루는 데는 어색합니다. RAG는 읽기에 최적화돼 있지 쓰기와 갱신에 최적화돼 있지 않기 때문입니다.
 
 파일 기반 메모리와 구조적 노트는 이 빈틈을 메웁니다. 에이전트가 스스로 적고, 갱신하고, 리셋 후 다시 읽는 상태 저장소를 제공하기 때문입니다. 또 하나의 원칙은 적시 인출(just-in-time)입니다. 모든 정보를 미리 창에 올리는 대신, 가벼운 식별자(파일 경로, 인덱스 항목)만 들고 있다가 정말 필요한 순간에만 본문을 읽어 옵니다. 컴팩션, 노트, 서브에이전트, 적시 인출은 서로 배타적이지 않고 함께 쌓을수록 강해집니다.
+
+![고신호 토큰 원칙 적시 정보 로드 3대 관리 기법을 네 개 영역으로 정리한 인포그래픽](/assets/images/posts/news/ai-agent-memory-context-engineering/nlm-infographic-2.webp)
 
 ## ThakiCloud의 적용
 
@@ -424,22 +434,6 @@ Anthropic은 Sonnet 4.5 출시와 함께 Claude 개발자 플랫폼에 메모리
 
 마지막으로 모델이 더 똑똑해질수록 이런 처방의 필요가 줄어든다는 점도 정직하게 인정해야 합니다. 이미 더 강한 모델은 덜 규범적인 엔지니어링으로도 더 큰 자율성을 보입니다. 그래도 컨텍스트를 한정 자원으로 다루는 원칙 자체는 능력이 커져도 남을 것입니다. 기법은 바뀌어도 주의 예산을 아낀다는 방향은 유효합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![ai-agent-memory-context-engineering 슬라이드 1]({{ '/assets/images/ai-agent-memory-context-engineering-slide-01.webp' | relative_url }})
-
-![ai-agent-memory-context-engineering 슬라이드 2]({{ '/assets/images/ai-agent-memory-context-engineering-slide-02.webp' | relative_url }})
-
-![ai-agent-memory-context-engineering 슬라이드 3]({{ '/assets/images/ai-agent-memory-context-engineering-slide-03.webp' | relative_url }})
-
-![ai-agent-memory-context-engineering 슬라이드 4]({{ '/assets/images/ai-agent-memory-context-engineering-slide-04.webp' | relative_url }})
-
-<!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/ai-agent-memory-context-engineering/nlm-infographic-2.webp)
-*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

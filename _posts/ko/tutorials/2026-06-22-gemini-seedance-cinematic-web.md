@@ -33,6 +33,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gemini-seedance-ci
 
 이 글은 그 워크플로가 정확히 무엇을 합친 것인지, 그리고 이런 멀티모달 생성 작업이 인프라 관점에서 어떤 수요를 만드는지를 다룹니다. ThakiCloud는 쿠버네티스 기반 AI/ML SaaS 플랫폼을 운영하며 GPU 워크로드 서빙을 핵심으로 삼고 있기 때문에, "한 사람이 영상 사이트를 만든다"는 화제의 표면보다 그 아래에서 돌아가는 추론 워크로드에 더 관심이 있습니다. 사용한 도구의 사실관계는 공개 보도와 제작자 본인의 공지에서 확인한 값만 인용했고, 직접 재현하지 않은 부분은 분명히 구분했습니다.
 
+![대형 디스플레이의 데이터 대시보드를 보며 논의하는 비즈니스 팀원들과 인프라 전략 안내 문구](/assets/images/gemini-seedance-cinematic-web-slide-01.webp)
+
 {% include video id="xRTTnbfT3jM" provider="youtube" %}
 *빅터 오디의 16분 튜토리얼 영상입니다. Gemini 3.1로 구조를 짜고 Seedance 2.0으로 영상을 입히는 전체 과정을 보여줍니다.*
 
@@ -44,6 +46,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gemini-seedance-ci
 
 빅터 오디가 공개한 튜토리얼의 제목은 "Gemini 3.1 + Seedance 2.0 = Cinematic $10k Websites"이며, 길이는 약 16분입니다. 제목의 1만 달러라는 숫자는 마케팅적 프레이밍으로 받아들이는 것이 정확합니다. 핵심 메시지는 "과거 여러 사람이 며칠에서 몇 주에 걸쳐 만들던 결과물을, 한 사람이 적절한 AI 도구로 몇 시간 안에 만든다"는 것입니다.
 
+![16분 제작 시간과 1만 달러 가치를 비교하며 웹사이트 제작 타임라인 단축을 나타낸 도식](/assets/images/gemini-seedance-cinematic-web-slide-02.webp)
+
 여기서 주목할 부분은 도구를 자랑하는 데모가 아니라 두 종류의 생성 작업을 하나의 파이프라인으로 묶었다는 점입니다. 코드 생성과 영상 생성은 그동안 완전히 다른 도구, 다른 전문가의 영역이었습니다. 이 튜토리얼은 그 둘을 한 사람의 손끝에서 연결합니다. 제작자는 추가 템플릿과 워크플로를 자신의 자료 생태계(motionsites.ai, designrocket.io, webraw.studio 등)로 안내하고 있어, 단발 데모가 아니라 반복 가능한 작업 방식으로 정리하려는 의도가 읽힙니다.
 
 ## 워크플로: Gemini 3.1은 건축가, Seedance 2.0은 촬영감독
@@ -51,6 +55,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/tutorials/gemini-seedance-ci
 워크플로는 의외로 단순합니다. 두 도구가 각자 잘하는 역할로 명확히 분리돼 있습니다.
 
 Gemini 3.1은 건축가입니다. 레이아웃, 반응형 디자인, 인터랙션, 그리고 이 모든 것을 묶는 코드를 담당합니다. 사이트의 구조와 동작을 책임지는 부분입니다. Seedance 2.0은 촬영감독입니다. 동적인 비주얼, 즉 사이트를 시네마틱하게 만드는 영상 콘텐츠를 생성합니다. 작업 순서는 Gemini로 구조와 코드를 만든 뒤, Seedance로 생성한 영상 콘텐츠를 그 안에 흘려 넣는 방식입니다. 결과물은 물리 기반 모션과 동기화된 오디오를 갖춘, 곧바로 쓸 수 있는 마케팅 사이트입니다.
+
+![기존 에이전시와 단일 AI 워크플로의 작업 주체 소요 시간 및 비용 요소를 비교한 표](/assets/images/gemini-seedance-cinematic-web-slide-03.webp)
 
 ```mermaid
 flowchart TB
@@ -70,6 +76,8 @@ flowchart TB
 
 이 구조에서 중요한 것은 역할 분리가 자유도를 줄여 결과 품질을 안정시킨다는 점입니다. 한 모델에게 "멋진 영상 사이트를 만들어줘"라고 통째로 맡기는 대신, 구조는 코드 모델이, 영상은 영상 모델이 책임지도록 나눴습니다. 검증된 골격에 각 도구의 강점을 채워 넣는 방식이며, ThakiCloud가 스킬과 파이프라인 설계에서 반복적으로 강조해 온 원칙과 같은 맥락입니다.
 
+![건축가 Gemini와 촬영감독 Seedance의 역할 분담으로 품질을 안정시키는 구조 설명](/assets/images/gemini-seedance-cinematic-web-slide-04.webp)
+
 ## Seedance 2.0이 새로 가져온 것
 
 이 워크플로를 가능하게 한 결정적 변수는 Seedance 2.0의 능력입니다. 바이트댄스가 만든 이 멀티모달 영상 생성 모델은 텍스트, 이미지, 영상, 오디오를 포함해 최대 12종의 입력 유형을 지원합니다. 단순한 텍스트투비디오를 넘어, 여러 형태의 입력을 조합해 영상을 만든다는 의미입니다.
@@ -77,6 +85,8 @@ flowchart TB
 가장 두드러지는 두 가지 기능이 있습니다. 첫째는 멀티카메라 스토리텔링입니다. 마치 여러 대의 카메라가 동시에 돌아간 것처럼 서로 다른 앵글을 오가는 영상을 만들 수 있습니다. 둘째는 네이티브 오디오 동시 생성입니다. 별도의 오디오 도구 없이도 영상에 어울리는 사운드 디자인을 함께 만들어냅니다. 영상과 음향을 따로 제작해 동기화하던 과정 자체가 사라지는 것입니다.
 
 Seedance 2.0은 현재 힉스필드(Higgsfield), 모픽(Morphic) 같은 플랫폼과 여러 API 제공자를 통해 접근할 수 있습니다. 즉 개인 운영자도 자체 GPU 없이 클라우드 추론으로 이 기능을 쓸 수 있다는 뜻이며, 이것이 단일 운영자 워크플로가 현실이 된 배경입니다.
+
+![멀티모달 자산 수집 멘션 참조 네이티브 4K 출력 및 웹사이트 구축 4단계 안내](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-2.webp)
 
 ## ThakiCloud 관점: 멀티모달 생성이 만드는 GPU 서빙 수요
 
@@ -94,22 +104,6 @@ ThakiCloud의 AI 플랫폼은 쿠버네티스 위에서 Kueue로 GPU 워크로�
 
 마지막으로 이 글의 모든 도구 사양은 공개 보도와 제작자 공지에서 인용한 것이며, 직접 동일 환경에서 재현한 결과가 아닙니다. 입력 유형 수나 기능 목록 같은 사양은 제공자의 발표 기준이므로, 실제 도입 전에는 자사 요구사항으로 재검증하는 절차가 필요합니다. 그럼에도 분명한 신호는 있습니다. 생성형 멀티모달이 개인의 워크플로로 내려오고 있고, 그 수요를 안정적으로, 그리고 데이터 주권을 지키며 떠받치는 일은 인프라 사업자의 몫이라는 점입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![gemini-seedance-cinematic-web 슬라이드 1](/assets/images/gemini-seedance-cinematic-web-slide-01.webp)
-
-![gemini-seedance-cinematic-web 슬라이드 2](/assets/images/gemini-seedance-cinematic-web-slide-02.webp)
-
-![gemini-seedance-cinematic-web 슬라이드 3](/assets/images/gemini-seedance-cinematic-web-slide-03.webp)
-
-![gemini-seedance-cinematic-web 슬라이드 4](/assets/images/gemini-seedance-cinematic-web-slide-04.webp)
-
-<!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/gemini-seedance-cinematic-web/nlm-infographic-2.webp)
-*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

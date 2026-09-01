@@ -38,6 +38,8 @@ STORM의 파이프라인은 크게 두 단계입니다.
 1. **다관점 질문 생성 + 개요 작성**: 주제를 여러 페르소나(관점)에서 바라보며 질문을 만들고 각 질문에 대해 검색으로 근거를 모은 뒤, 그 결과를 종합해 계층적 개요를 잡습니다.
 2. **개요 기반 본문 작성**: 잡힌 개요를 따라 섹션별로 본문을 채우고 검색된 근거를 인용으로 연결합니다.
 
+![단순 요약 방식과 다중 페르소나 및 개요 설계를 강조하는 STORM 방법론을 비교한 인포그래픽]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.webp' | relative_url }})
+
 핵심 통찰은 "다관점 질문하기"입니다. 단일 관점에서 질문하면 빠진 각도가 생기지만 여러 페르소나가 각자의 관심사로 질문하면 커버리지가 넓어집니다. 이는 멀티에이전트 시스템에서 서로 다른 렌즈로 동일 문제를 검증하는 패턴과 정확히 같습니다.
 
 ![stanford-storm-4-prompt-research-workflow 슬라이드 1]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-01.webp' | relative_url }})
@@ -55,6 +57,8 @@ STORM의 파이프라인은 크게 두 단계입니다.
 
 각 단계를 분리하면 중간 산출물을 검증할 수 있습니다. 개요가 엉성하면 본문도 엉성하므로, 3단계에서 멈추고 고치는 것이 4단계 결과를 통째로 버리는 것보다 훨씬 쌉니다.
 
+![관점 도출 다관점 질문 개요 합성 인용 본문 작성으로 이어지는 4단계 리서치 프로세스]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.webp' | relative_url }})
+
 ## 데이터 과학자 관점에서의 실무 가치
 
 STORM이 단순 프롬프트 팁이 아니라 방법론으로 유용한 이유는 세 가지입니다.
@@ -66,10 +70,8 @@ STORM이 단순 프롬프트 팁이 아니라 방법론으로 유용한 이유�
 ![stanford-storm-4-prompt-research-workflow 슬라이드 2]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-02.webp' | relative_url }})
 
 ## ThakiCloud 관점: 지식 워크플로를 인프라로 다루기
-![stanford-storm-4-prompt-research-workflow 슬라이드 3]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-03.webp' | relative_url }})
 
 
-![stanford-storm-4-prompt-research-workflow 슬라이드 4]({{ '/assets/images/stanford-storm-4-prompt-research-workflow-slide-04.webp' | relative_url }})
 
 저희는 이런 다단계 리서치 파이프라인을 K8s 위에서 재현 가능하게 운영하는 일을 다룹니다. 각 단계를 독립 작업으로 분리하면, 검색·합성·작성을 서로 다른 모델 등급에 라우팅할 수 있습니다. 탐색은 싼 모델로, 합성과 판단은 강한 모델로 배분하는 식입니다. 비용과 품질을 분리하는 이 설계가 멀티에이전트 지식노동의 핵심입니다.
 

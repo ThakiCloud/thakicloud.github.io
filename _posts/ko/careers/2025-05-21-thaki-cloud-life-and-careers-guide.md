@@ -49,6 +49,8 @@ IaaS팀, PaaS팀, AI팀이 각각 어떤 문제를 풀고 있는지, 어떤 사�
 
 팀이 달성한 성과, 참여한 컨퍼런스, 외부에 발표한 기술 이야기 등을 기록합니다. 2025년에는 [KCD Seoul 2025](https://thakicloud.com/tech-blog/ko/careers/conference-kcd-seoul-2025/)에서 xPU as a Service 기반 Agentic AI 플랫폼에 대해 발표했고, 발표 자료와 스크립트를 공개해 두었습니다.
 
+![속도 검증 버전 관리 중심의 MLOps 3단계와 각 개발팀 협업 구조 및 KCD Seoul 2025 발표 성과](/assets/images/thaki-cloud-life-and-careers-guide-slide-03.webp)
+
 ---
 
 ![thaki-cloud-life-and-careers-guide 슬라이드 1](/assets/images/thaki-cloud-life-and-careers-guide-slide-01.webp)
@@ -66,14 +68,14 @@ IaaS팀, PaaS팀, AI팀이 각각 어떤 문제를 풀고 있는지, 어떤 사�
 ![thaki-cloud-life-and-careers-guide 슬라이드 2](/assets/images/thaki-cloud-life-and-careers-guide-slide-02.webp)
 
 ## ThakiCloud AI 엔지니어 A님 이야기: "자율과 책임 속에서 LLM 인프라를 만듭니다"
-![thaki-cloud-life-and-careers-guide 슬라이드 3](/assets/images/thaki-cloud-life-and-careers-guide-slide-03.webp)
 
-![thaki-cloud-life-and-careers-guide 슬라이드 4](/assets/images/thaki-cloud-life-and-careers-guide-slide-04.webp)
 
 A님은 대기업 클라우드팀에서 3년 일하다가 ThakiCloud에 합류했습니다. 입사 계기를 물어봤을 때 돌아온 대답이 인상적이었습니다. "규모가 큰 곳에서는 하나의 나사로만 살아야 했는데, 여기서는 실제로 설계하고 결정할 수 있어서요."
 
 현재 A님은 LLM 서빙 파이프라인의 지연시간을 줄이는 작업을 맡고 있습니다. GPU 스케줄링부터 추론 런타임 최적화까지 직접 손댑니다. "잘 안 되는 게 나오면 팀 채널에 바로 공유해요. 거기서 아이디어를 같이 만들어가는 과정이 재밌습니다."
 
 오전에는 팀 스탠드업, 오후에는 코드 리뷰와 실험. 퇴근 전 한 시간은 논문 읽는 시간으로 따로 확보한다고 했습니다. "업무 시간 안에 공부할 수 있다는 게 처음엔 낯설었어요. 근데 그게 실제로 일의 질을 높여준다는 걸 느꼈습니다."
+
+![대기업 3년 경력 AI 엔지니어의 오전 팀 스탠드업 오후 파이프라인 최적화 퇴근 전 1시간 논문 리서치 일과](/assets/images/thaki-cloud-life-and-careers-guide-slide-04.webp)
 
 관심 있다면 **info@thakicloud.co.kr** 로 연락주세요.

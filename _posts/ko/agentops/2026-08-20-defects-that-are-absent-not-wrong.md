@@ -38,6 +38,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 것 자체가 `agent` 라는 이름의 도구 호출이니까요. 그러니 오케스트레이션 궤적의 수확량은
 정확히 0이었습니다.
 
+![수확량 0을 상징하는 거대한 숫자 0과 에이전트 오케스트레이션 실행 지표 요약](/assets/images/defects-that-are-absent-not-wrong-slide-01.webp)
+
 <div class="mermaid">
 flowchart TB
     T["도구를 쓴 실행 254건"] --> P["조립기: 도구 호출 기록과 결과를<br/>학습 Episode 로 조립"]
@@ -56,6 +58,8 @@ flowchart TB
 ![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/defects-that-are-absent-not-wrong/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
+![생성된 에피소드 468개 중 도구 사용 254건과 유효 데이터 수확량 0을 나타낸 수치 그래프](/assets/images/defects-that-are-absent-not-wrong-slide-02.webp)
+
 ## 코드를 읽어 찾은 결함 넷
 
 먼저 코드를 읽었고 네 가지가 나왔습니다.
@@ -63,6 +67,8 @@ flowchart TB
 트레이스에 **종료 사유 필드가 아예 없었습니다.** 루프는 `success`·`max_turns`·`timeout`
 같은 타입 있는 값을 만들고 있었고, 트레이스를 마무리하는 함수는 그 값을 손에 들고 있었는데,
 저장 구조체에 담을 자리가 없었습니다. 631개 트레이스 중 이 문자열을 담은 게 0개였습니다.
+
+![코드에서 보이는 틀린 결함과 코드에서 보이지 않는 결함을 입체 큐브로 비교한 다이어그램](/assets/images/defects-that-are-absent-not-wrong-slide-03.webp)
 
 **분류기가 찾는 문자열과 방출되는 문자열이 달랐습니다.** 루프는 `max_turns`(밑줄)를 내고
 분류기는 `max turns`(공백)를 찾습니다. 턴 제한에 걸려 끝난 실행이 "실패 없음"으로,
@@ -73,6 +79,8 @@ flowchart TB
 
 **전체 관측을 가져오는 인터페이스가 선언되고 테스트까지 됐는데 프로덕션에서 주입된 적이
 없었습니다.** 호출자를 전수 조회하니 테스트 파일 네 줄이 전부였습니다.
+
+![종료 사유 필드 누락 등 코드를 읽어 발견한 네 가지 결함 항목을 정리한 표](/assets/images/defects-that-are-absent-not-wrong-slide-04.webp)
 
 넷 다 진짜 결함입니다. 그런데 넷을 다 고치고 다시 돌려도 **수확량은 그대로 0이었습니다.**
 
@@ -161,6 +169,8 @@ tool_result  agent   [tool_use name="clarify" id="chatcmpl-tool-837c349fe54ce5cb
 내용 검사는 다른 일이고, 둘 다 필요합니다. 이걸 그대로 학습에 넣었으면 "위임하고 아무것도
 못 받는다"를 가르쳤을 겁니다.
 
+![클라이언트 및 서버 도구 실행과 표준 관측성 및 모니터링 체계를 설명하는 인포그래픽](/assets/images/posts/news/defects-that-are-absent-not-wrong/nlm-infographic-2.webp)
+
 ## 남는 것
 
 넷은 **틀린** 결함이었습니다. 라벨이 잘못 붙거나 값이 비어 나옵니다. 셋은 **없는** 결함이었고
@@ -173,22 +183,6 @@ tool_result  agent   [tool_use name="clarify" id="chatcmpl-tool-837c349fe54ce5cb
 트래커에서는 그중 둘이 이미 완료 상태였습니다. 필드도 있었고 저장소도 있었습니다. 그 둘을
 잇는 어댑터 한 겹만 없었을 뿐입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_portfolio` 스타일)으로 요약한 슬라이드입니다.
-
-![defects-that-are-absent-not-wrong 슬라이드 1](/assets/images/defects-that-are-absent-not-wrong-slide-01.webp)
-
-![defects-that-are-absent-not-wrong 슬라이드 2](/assets/images/defects-that-are-absent-not-wrong-slide-02.webp)
-
-![defects-that-are-absent-not-wrong 슬라이드 3](/assets/images/defects-that-are-absent-not-wrong-slide-03.webp)
-
-![defects-that-are-absent-not-wrong 슬라이드 4](/assets/images/defects-that-are-absent-not-wrong-slide-04.webp)
-
-<!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/defects-that-are-absent-not-wrong/nlm-infographic-2.webp)
-*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 

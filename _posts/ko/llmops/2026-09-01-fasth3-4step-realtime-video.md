@@ -34,6 +34,8 @@ MiniMax H3는 7월 말에 오픈웨이트가 허깅페이스에 오른 영상 �
 
 공개 이후 H3 주변의 어댑터 생태계는 빠르게 커졌습니다. [별개 글](/tech-blog/ko/llmops/h3-adapter-ecosystem-map-of-gaps/)에서 14종의 어댑터를 세어 분류했는데, 스타일 LoRA와 카메라 무브와 물리 시뮬레이션과 프롬프트 리라이터와 업스케일러가 그것입니다. 그중에 가속 어댑터도 있었습니다. 커뮤니티의 8스텝 투로 경로, 그리고 한 번의 호출로 여러 스텝의 효과를 예측하는 병렬 디코딩 증류 어댑터가 대표적입니다. 8월 27일 공개된 FastH3 Preview v1은 이 계보보다 한 발 더 간 변종입니다. 가속을 어댑터 하나로 끝내지 않고, 추론 궤적 자체를 4스텝으로 다시 썼습니다. FastVideo(Hao AI Lab)와 Nuva Lab, 그리고 NVIDIA의 FastGen 팀이 함께 냈습니다. FastVideo는 영상 디퓨전 모델의 사후 학습과 실시간 추론을 묶는 통합 프레임워크이고, FastGen은 다단계 디퓨전 모델을 적스텝 생성기로 바꾸는 디스틸레이션 방법들을 한 프레임워크로 통합한 PyTorch 기반 오픈소스입니다.
 
+![FastH3 실시간 영상 서빙의 아키텍처 제목과 오픈웨이트 영상 생성 모델 도입 평가 프레임워크 텍스트](/assets/images/fasth3-4step-realtime-video-slide-01.webp)
+
 ## FastH3가 무엇인가
 
 FastH3는 H3에서 디스틸한 텍스트-투-비디오-앤-오디오(T2VA) 생성기입니다. 텍스트 프롬프트 하나로 영상과 네이티브 스테레오 소리를 동시에 만듭니다. 대화와 사운드효과와 앰비언트 음향이 영상과 함께 생성된다는 뜻입니다. H3 본체도 이 능력을 갖지만, FastH3는 그 생성 비용을 다시 짰습니다.
@@ -54,6 +56,8 @@ DataFree라는 말에도 의미가 있습니다. 디스틸레이션에 새 영�
 | [FastH3-4-step-Preview-v1-VSA-DataFree](https://huggingface.co/FastVideo/FastH3-4-step-Preview-v1-VSA-DataFree) | VSA + DataFree 디스틸레이션 | VSA-H3 커널 필요 |
 | [FastH3-4-step-Preview-v1-r16](https://huggingface.co/KyleNeverGivesUp/FastH3-4-step-Preview-v1-r16) | 커뮤니티 재배포본 | 랭크 16 변형 |
 | [FastH3_GGUFs](https://huggingface.co/realrebelai/FastH3_GGUFs) | GGUF 양자화본 | 저VRAM 방향 |
+
+![숫자 15와 13을 통해 영상 길이 15초 대비 생성 시간 13초와 실시간 서빙 전환을 나타낸 슬라이드](/assets/images/fasth3-4step-realtime-video-slide-02.webp)
 
 ## 벤치마크 수치를 어떻게 읽어야 하나
 
@@ -78,6 +82,8 @@ flowchart TB
 
 13초 수치가 중요한 이유는 임계값을 넘기 때문입니다. 생성 시간이 영상 길이보다 짧아졌고, 이게 바로 영상 생성이 "렌더링"에서 "서빙"으로 넘어가는 지점입니다.
 
+![4개의 사각형 박스와 DataFree 레시피 및 텍스트 투 비디오 앤 오디오 개념을 정리한 인포그래픽](/assets/images/fasth3-4step-realtime-video-slide-03.webp)
+
 ## 설치 및 실행 경로
 
 FastH3는 FastVideo와 함께 설치됩니다. 공식 경로는 uv 기반 환경 구성이고, 모델을 돌리려면 FastVideo의 런처를 씁니다. LoRA는 범용 PEFT 로더를 전제로 하지 않으며, VSA 변종은 FastVideo의 VSA-H3 어텐션 백엔드와 커널을 추가로 요구합니다.
@@ -85,6 +91,8 @@ FastH3는 FastVideo와 함께 설치됩니다. 공식 경로는 uv 기반 환경
 범용 PEFT 로더가 먹지 못하는 이유가 따로 있습니다. VSA 변종의 어댑터는 가중치 델타만 아니라 희소 어텐션 경로의 게이트 텐서까지 담고 있고, 실행 대상이 FastVideo의 VSA-H3 커널이라고 설계됐습니다. 커널을 모르고 가중치만 올리는 로더는 경로를 완성하지 못합니다. 그래서 공식 경로는 uv 기반 FastVideo 환경과 FastVideo 런처입니다.
 
 즉, 기존 서빙 스택에 끼워 넣는 것이 아니라 별도의 실행 경로를 여는 것입니다. 그리고 그 경로 자체는 FastVideo에 의존합니다. 저VRAM 방향의 커뮤니티 GGUF 경로는 있지만, 그쪽은 진입 하방을 낮추는 경로일 뿐 13초 벤치마크의 조건을 이어받는 것이 아닙니다.
+
+![42.5GB 베이스 모델 위에 공식 LoRA와 VSA 변종 및 커뮤니티 어댑터들이 연결된 아키텍처 구성도](/assets/images/fasth3-4step-realtime-video-slide-04.webp)
 
 ## 라이선스: 실행 전에 읽는 것
 
@@ -124,18 +132,6 @@ H3의 어댑터 생태계는 회사가 공개하지 않은 모듈을 채우는 �
 
 이 글로 뭘 하려면 순서가 있습니다. 먼저 라이선스를 읽습니다. 한국은 제외 지역이므로 상업 경로는 별개의 일입니다. 그다음, B200 8장 머신이 있다면 13초 수치를 사양으로 삼아 자기 플리트에서 재현하는 실험을 세웁니다. 실행 경로는 기존 스택과 맞바꿀 수 있는 것이 아니라 FastVideo 런처와 커널이라는 별개의 체계라는 점도 함께 확인합니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
-
-![fasth3-4step-realtime-video 슬라이드 1](/assets/images/fasth3-4step-realtime-video-slide-01.webp)
-
-![fasth3-4step-realtime-video 슬라이드 2](/assets/images/fasth3-4step-realtime-video-slide-02.webp)
-
-![fasth3-4step-realtime-video 슬라이드 3](/assets/images/fasth3-4step-realtime-video-slide-03.webp)
-
-![fasth3-4step-realtime-video 슬라이드 4](/assets/images/fasth3-4step-realtime-video-slide-04.webp)
 
 ## 출처
 

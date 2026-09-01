@@ -50,11 +50,15 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ![스캔 품질별 CER 실측: 소형 모델은 흔들리고 대형 모델은 낮게 유지된다]({{ '/assets/images/posts/research/confidence-gated-ocr-vlm-cascade/fig-frontier-shift.webp' | relative_url }})
 *실제 H200에서 측정한 스캔 품질 등급별 평균 CER입니다. 소형 모델은 깨끗함 0.43, 중간 0.90, 손상 0.57로 등급을 가로질러 높고 고르지 못한 반면, 대형 모델은 0.03~0.06 사이에 머뭅니다.*
 
+![신뢰도 기반 OCR 캐스케이드 실무 최적화 플레이북 제목과 보석 형상의 다면체 그래픽](/assets/images/confidence-gated-ocr-vlm-cascade-slide-01.webp)
+
 스캔 품질 축에서도 같은 구조가 보입니다. 작은 모델의 오류율은 등급에 따라 0.43에서 0.90까지 출렁이지만 대형 모델은 어느 등급에서든 0.03~0.06에 얌전히 머뭅니다. 이 두 막대 사이의 넓은 간격이 캐스케이드가 회수하는 정확도 여유분이고, 신뢰도가 그 흔들림을 감지해 주는 한 캐스케이드는 그 여유분을 비용 효율적으로 챙깁니다.
 
 <!-- nlm-visual -->
 ![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-1.webp)
 *NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+![대형 모델 대비 연산 비용 60에서 67퍼센트 절감과 글자 오류율 0.036 달성 수치](/assets/images/confidence-gated-ocr-vlm-cascade-slide-02.webp)
 
 ## 자기 문서 집단에서 τ를 고르는 법
 
@@ -64,7 +68,11 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 그래서 순서는 이렇습니다. 먼저 두 모델을 각각 단독으로 자기 문서에 돌려 양 끝점을 잡습니다. 이 단계를 건너뛰면 안 되는데, 만약 작은 모델의 CER이 이미 큰 모델에 가깝다면 캐스케이드가 회수할 여유분 자체가 없기 때문입니다. 이번 실측에서 이득이 컸던 이유는 0.634와 0.045라는 간격이 넓었기 때문이지 캐스케이드라는 구조가 마법이어서가 아닙니다.
 
+![소형 SmolVLM과 대형 Qwen2-VL 모델의 연산량 및 글자 오류율 비교표](/assets/images/confidence-gated-ocr-vlm-cascade-slide-03.webp)
+
 그다음 τ를 훑으면서 에스컬레이션 비율과 오류율을 함께 기록해 무릎을 찾습니다. 이때 반드시 같이 확인할 것이 하나 있습니다. 자기 데이터에서도 신뢰도가 실제로 오류와 같이 움직이는가입니다. 이 상관이 깨지면 임계값을 어디에 두든 게이트가 엉뚱한 문서를 올려보내므로, 캐스케이드 전체가 성립하지 않습니다. 마지막으로 문자 체계와 스캔 품질처럼 오류율이 크게 갈리는 축이 있다면 축별로 τ를 따로 잡는 편이 하나의 전역 임계값보다 안전합니다. 이번 데이터에서 영어와 한국어의 CER이 0.084와 1.18로 갈렸다는 사실 자체가 그 근거입니다.
+
+![임계값 변화에 따른 글자 오류율과 비용 곡선 및 스위트 스팟 구간 그래프](/assets/images/confidence-gated-ocr-vlm-cascade-slide-04.webp)
 
 ## 이 승리를 어디까지 믿을 것인가
 
@@ -72,24 +80,10 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 바로 그 지점이 캐스케이드의 진짜 실패 모드와 이어집니다. 가장 위험한 상황은 "낮은 확신인데 정답"이 아니라 "높은 확신인데 오답"입니다. 낯선 문자 체계를 만난 작은 모델이 그럴듯하지만 틀린 답을 자신 있게 내놓으면, 그 문서는 절대 올라가지 않고 캐스케이드는 최악의 오류를 조용히 떠안습니다. 이번 한국어처럼 신뢰도가 정직하게 함께 떨어져 준 경우에는 이겼지만, 신뢰도가 높게 유지되는 언어를 만나면 같은 구조가 그대로 실패로 뒤집힙니다. 대부분의 VLM이 열 개 미만의 문자 체계에서만 잘 작동하고 저자원 언어에서 환각이 늘어난다고 보고한 GlotOCR 벤치마크가 이 위험을 뒷받침합니다.
 
+![신뢰도 기반 모델 에스컬레이션 메커니즘과 다국어 실패 모드 방지를 정리한 인포그래픽](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.webp)
+
 그래서 설계의 정답은 캐스케이드를 버리는 것이 아니라, 캐스케이드가 요구하는 가정을 문서 유형별로 실제로 확인하는 것입니다. 텍스트 LLM에서는 FrugalGPT가 최고 성능 모델과 비슷한 품질을 최대 98% 적은 비용에 얻는다고 이미 보고했고, 이번 실측은 그 아이디어가 문서 OCR에서도 통할 수 있음을 소규모로 보였습니다. 다만 문자 체계와 스캔 품질별로 임계값을 나눠 보정하고, 신뢰도 게이트를 단일 확률 하나가 아니라 시각적 확신과 구조적 신호를 함께 보는 다중 신호로 설계하며, 신뢰도가 배신하는 구간에서는 전량 에스컬레이션하거나 사람이 검토하는 편이 정직한 선택입니다.
 
-
-## 관련 슬라이드
-
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
-
-![confidence-gated-ocr-vlm-cascade 슬라이드 1](/assets/images/confidence-gated-ocr-vlm-cascade-slide-01.webp)
-
-![confidence-gated-ocr-vlm-cascade 슬라이드 2](/assets/images/confidence-gated-ocr-vlm-cascade-slide-02.webp)
-
-![confidence-gated-ocr-vlm-cascade 슬라이드 3](/assets/images/confidence-gated-ocr-vlm-cascade-slide-03.webp)
-
-![confidence-gated-ocr-vlm-cascade 슬라이드 4](/assets/images/confidence-gated-ocr-vlm-cascade-slide-04.webp)
-
-<!-- nlm-visual -->
-![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/confidence-gated-ocr-vlm-cascade/nlm-infographic-2.webp)
-*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 출처
 
