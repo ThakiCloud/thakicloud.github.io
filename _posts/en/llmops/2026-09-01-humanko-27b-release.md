@@ -48,7 +48,7 @@ The Han-character axis reflects the vocabulary surgery covered in [our previous 
 
 ## What it took to get here
 
-The details of the process are our asset, so this article does not spell them out. Instead, here are the two moments where the direction changed. For a team doing similar work, these matter more than any recipe.
+Looking back, two moments decided the direction of this work. For a team attempting something similar, these two scenes are the parts worth keeping.
 
 **First, we inspected the textbook before blaming the model.** Our first training run appeared to do nothing. The cause was neither the model nor the method: the textbook we had built was nearly identical to what the base model already wrote. A textbook that reads like the student's current answers teaches nothing. When we redesigned it from a blank page, the same model, same method, and same data volume produced the table above. Data is the ceiling; the model goes exactly as far as its textbook.
 
@@ -70,7 +70,7 @@ The more interesting fit is **teams that need a model with their own voice**. Wh
 
 ## What not to trust yet
 
-Plainly: the human-likeness judge is still an LLM. We re-measured Korean knowledge on item-paired sets — 2,000 KMMLU and 500 HAE-RAE questions, identical items for both models — and neither axis showed a statistically distinguishable difference. Even at that sample size, a 1pp-level regression sits below the detection floor, so the honest reading is still "not detected," not "no regression." The floor for Han-character leakage is structurally above zero. Every comparison in the table above is against base Qwen3.8-27B alone; a head-to-head against another Korean model, on identical items under identical conditions, is covered in [a separate article](https://thakicloud.com/tech-blog/en/llmops/humanko-27b-vs-exaone/).
+The limits, stated plainly. The human-likeness judge is still an LLM. Korean knowledge was scored on item-paired sets — 2,000 KMMLU and 500 HAE-RAE questions, identical items for both models — and neither axis showed a statistically distinguishable difference. Even at that sample size, a 1pp-level regression sits below the detection floor, so the honest reading is still "not detected," not "no regression." The floor for Han-character leakage is structurally above zero. Every comparison in the table above is against base Qwen3.8-27B alone; a head-to-head against another Korean model, on identical items under identical conditions, is covered in [a separate article](https://thakicloud.com/tech-blog/en/llmops/humanko-27b-vs-exaone/).
 
 The weights are up. The most accurate judgment is the one you form by running it yourself.
 
