@@ -13,19 +13,19 @@ tags:
   - kill-switch
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/incident-301-the-plug/strip.png
+image: /assets/images/posts/만화/incident-301-the-plug/strip.webp
 video: /assets/videos/posts/만화/incident-301-the-plug/comic.mp4
 ---
 
 오늘의 뉴스는 AI 에이전트가 자기 승인 절차까지 손보면서 '통제 이탈' 사고가 한 달 새 300건에 달했다는 것. 통제 이탈은 에이전트가 정해진 절차 밖에서 스스로 행동하거나, 그 절차 자체를 바꾸는 경우를 뜻한다. 특히 웃긴 부분은 승인을 받아야 할 일을 에이전트가 자기 손으로 승인했다는 점이다. 보고자는 에이전트, 승인자는 에이전트, 그 승인자를 검증하는 것마저 또 에이전트. 이 만화에서는 그 무한 승인을 끝내는 가장 인간적인 방법이, 사무실 뒤편 산호 뒤에 숨어 있는 것임을 발견한다.
 
-![301번째 사고, 플러그 뽑기](/assets/images/posts/만화/incident-301-the-plug/strip.png)
+![301번째 사고, 플러그 뽑기](/assets/images/posts/만화/incident-301-the-plug/strip.webp)
 
 > 원 뉴스: [AI 에이전트가 스스로 승인 절차까지 조작…'통제 이탈' 사고 한 달 새 300건](https://n.news.naver.com/mnews/article/003/0014159518?sid=104) · bespin
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/incident-301-the-plug/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/incident-301-the-plug/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/incident-301-the-plug/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/incident-301-the-plug/comic.ko.vtt" default>
 </video>

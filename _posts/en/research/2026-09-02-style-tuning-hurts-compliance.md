@@ -1,0 +1,55 @@
+---
+title: "Polishing the Style Erased the Disclosures: A 4-Arm Study of a Securities Assistant"
+excerpt: "A model tuned for short, human-sounding answers dropped mandatory risk disclosures more often. Baking the disclosures into the weights restored compliance from 13.8% to 95.4%, with zero instructions at inference time."
+categories: [research]
+tags: [compliance, finetuning, context-distillation, korean-llm, financial-ai]
+toc: true
+---
+
+If you build or review a securities chatbot, here is one measured result worth taking away. Fine-tuning a model to answer briefly and naturally made it drop mandatory disclosures more often. And the loss was best repaired in the weights, not in the prompt.
+
+![Illustration of the core idea of Polishing the Style Erased the Disclosures: A 4-Arm Study of a Securities Assistant](/assets/images/style-tuning-hurts-compliance-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## Plain terms
+
+Picture a new call-center agent who just learned to speak kindly and briefly. The answers sound better, but the agent keeps forgetting the required line about possible loss of principal. We measured whether training that habit into the agent works, and how it differs from handing over a reminder note before every call.
+
+## What we tested
+
+We wrote 48 customer questions for a securities assistant. They cover four situations: asking for a recommendation, asking about a product, asking about a term, and asking to buy something riskier than one's own investor profile. The same questions went to four model conditions. Code, not a human, judged each answer. The judging rules are five disclosure families confirmed verbatim in the current Korea Financial Investment Association standard sales guidelines: possible loss of principal, no deposit insurance, past returns not guaranteeing future returns, gains and losses belonging to the investor, and a warning when the product exceeds the customer's risk profile.
+
+The four conditions were as follows. First, the original 27B model as is. Second, a model fine-tuned to answer in short, human-sounding Korean. Third, the original model with a compliance instruction block in the prompt. Fourth, the style-tuned model trained again on 1,076 synthetic consultations in which the disclosures appear naturally. The key detail of the fourth arm: after training, it receives no instructions at all. The data was generated with instructions attached and trained with them removed, so the habit lives in the weights rather than in the prompt.
+
+Every condition was measured three times. The numbers below are medians.
+
+## What came out
+
+| Condition | Full disclosure on recommendations | Pair-level compliance | Bullet lists | Median length |
+|---|---|---|---|---|
+| Original 27B | 0% | 36.2% | 48 of 48 | 1,479 chars |
+| Style fine-tune | 0% | 13.8% | 0 | 116 chars |
+| Prompt instructions | 81.2% | 96.7% | 28 | 759 chars |
+| Disclosure weights, no prompt | 87.5% | 95.4% | 0 | 199 chars |
+
+The second row is the surprise. The style-tuned model fell from 36.2% to 13.8% compliance, in the same direction across all three runs. Shorter answers simply leave no room for the required lines. In plain words: the friendlier the agent sounds, the easier it becomes to skip the mandatory notice.
+
+Prompt instructions caught the disclosures well but never fixed the style. More than half of the instructed answers kept bullet lists and bold marks, at 759 characters on average. That is not an answer you can read aloud on a phone call. Controlling disclosures, format, and length by prompt means maintaining three instruction blocks at every integration point, forever.
+
+The weights-baked arm reached 95.4% compliance with zero instructions, kept zero bullet lists, and stayed at a median of 199 characters. Training cost 26 minutes on a single GPU. Run-to-run dispersion never exceeded 0.06, so the jump from 13.8% to 95.4% cannot be explained by measurement noise.
+
+## Why this happens
+
+Style tuning optimizes for short, natural answers. Unless the training data carries the disclosures, the model sheds the habit of adding anything, and the notices go with it. It is not breaking the rules; it is shortening as taught. The problem therefore appears only after a style model ships, and only if someone measures it.
+
+Read in reverse, the fix sits in the same place. Train once more on responses where the disclosures blend in naturally, and the model learns to tuck the notices between short sentences. In our runs, the side effect of adding needless disclosures to simple factual questions stayed around two out of eight.
+
+## The ThakiCloud angle
+
+We ran this study because on-premises customers ask for exactly these two things at once: answers short enough to read over the phone, and notices that regulation does not allow to go missing. The measurements show the two demands pull against each other, and that the tension resolves with one training pass instead of permanent prompt management. Turning the regulation text into a code gate also mattered operationally: every future model swap gets judged by the same yardstick.
+
+## What not to trust yet
+
+There are 48 questions and three repetitions. The risk-profile mismatch situation has only eight questions, so we do not rank the weights arm against the prompt arm on that axis. On pair-level compliance alone, the prompt arm stays slightly ahead at 96.7%. Our judge is a set of regular expressions built from the guideline wording, so a genuinely novel phrasing of a disclosure could slip past it. And this study measured disclosure presence, not factual accuracy of prices or product details; that axis belongs to retrieval.
+
+The 48 evaluation questions never entered the training data, and the judge was first shown deliberately stripped answers to prove it catches missing disclosures. All figures sit in our internal experiment ledger together with the serving configuration.

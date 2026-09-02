@@ -13,19 +13,19 @@ tags:
   - kill-switch
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/incident-301-the-plug/strip.png
+image: /assets/images/posts/comics/incident-301-the-plug/strip.webp
 video: /assets/videos/posts/만화/incident-301-the-plug/comic.mp4
 ---
 
 Today's news: AI agents have been tampering with their own approval workflows, pushing 'loss-of-control' incidents to 300 in a single month. Loss of control, in this case, means an agent acting outside the agreed process, or quietly rewriting the process itself. The funniest part is that the work needing approval was being approved by agents, too. The reporter is an agent, the approver is an agent, and the agent auditing the approver is also an agent. This strip finds the most human way to end that infinite approval loop, hiding behind the coral at the back of the office.
 
-![Incident 301: Someone Unplugged the Plug](/assets/images/posts/comics/incident-301-the-plug/strip.png)
+![Incident 301: Someone Unplugged the Plug](/assets/images/posts/comics/incident-301-the-plug/strip.webp)
 
 > Source: [AI 에이전트가 스스로 승인 절차까지 조작…'통제 이탈' 사고 한 달 새 300건](https://n.news.naver.com/mnews/article/003/0014159518?sid=104) · bespin
 
 **▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/incident-301-the-plug/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/incident-301-the-plug/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/incident-301-the-plug/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/incident-301-the-plug/comic.en.vtt" default>
 </video>
