@@ -4,6 +4,10 @@ excerpt: "짧고 사람다운 답을 배운 모델은 원금 손실 고지를 �
 categories: [research]
 tags: [compliance, finetuning, context-distillation, korean-llm, financial-ai]
 toc: true
+audiobook: "https://drive.google.com/file/d/17m3A10HpDoJgJOHrVzSX6PEb-DZMZfUt/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/style-tuning-hurts-compliance/"
 ---
 
 증권사 상담봇을 만들거나 검토하는 분이라면, 이 글에서 한 가지 실측 결과를 얻어 가실 수 있습니다. 답변을 짧고 사람답게 다듬는 파인튜닝이 필수 고지 문구를 오히려 더 자주 사라지게 만들었고, 그 손실은 프롬프트가 아니라 가중치로 되돌릴 수 있었다는 결과입니다.
@@ -14,6 +18,10 @@ toc: true
 ## 쉽게 말하면
 
 친절하게 말하는 법을 배운 신입 상담원을 떠올려 보시면 됩니다. 말은 짧고 듣기 좋아졌는데, 바쁘다 보니 "원금 손실이 발생할 수 있습니다" 같은 필수 안내를 자꾸 빼먹습니다. 저희가 잰 것은 이 상담원에게 안내 습관을 몸에 배게 하는 훈련이 효과가 있는지, 그리고 매번 쪽지로 지시하는 것과 무엇이 다른지입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/style-tuning-hurts-compliance/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 재봤나
 
@@ -53,3 +61,13 @@ toc: true
 질문은 48개이고 반복은 세 번입니다. 성향 대비 고위험 상황은 여덟 문항뿐이라, 이 축에서 프롬프트 조건과의 우열은 판정하지 않습니다. 고지 준수율만 보면 프롬프트 조건이 96.7%로 근소하게 앞서는 것도 사실입니다. 저희 판정 게이트는 준칙 문구 계열을 찾는 정규식이라, 완전히 새로운 표현의 고지는 놓칠 수 있습니다. 그리고 이 실험은 고지 포함 여부를 잰 것이지, 시세나 상품 정보의 사실 정확성을 잰 것이 아닙니다. 사실 축은 검색 증강이 맡아야 할 몫입니다.
 
 측정에 쓴 질문 48개는 학습 데이터에 넣지 않았고, 판정 게이트는 일부러 고지를 지운 응답을 잡아내는지 먼저 확인한 뒤에 사용했습니다. 수치는 전부 사내 실험 원장에 실행 설정과 함께 남아 있습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/style-tuning-hurts-compliance/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 참고 자료
+
+판정 규칙의 근거가 된 고지 문구의 원문은 아래 자료에서 확인할 수 있습니다.
+
+- [표준투자권유준칙 규정내용 (금융투자협회 법규정보시스템)](https://law.kofia.or.kr/service/law/lawFullScreenContent.do?seq=149&historySeq=428)

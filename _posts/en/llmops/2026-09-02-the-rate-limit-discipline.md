@@ -105,3 +105,13 @@ What running a production service as a solo developer taught me is that keeping 
 So the conclusion. When traffic surges, do not try to handle it faster. Slow down on purpose. Refuse on purpose. The server fixes the number at the door with a token bucket. The client steps back with exponential backoff and jitter. The LLM budget is a ceiling enforced right before the call. With just those three, the system stops dying from the load it called on itself. The technology that does not collapse is not the technology that scales. It is the technology that says not now.
 
 For the token bucket implementation, where the budget enforcement goes, and the load-shedding priority table, the 34-page ebook on this subject has the detail. With the PDF's implementation notes, moving the three controls of this piece into your service's code is an hour or two of work. [Estimate]
+
+## References
+
+The token bucket, 429, and exponential backoff with jitter in the body cross-check against these materials.
+
+- [Token bucket (Wikipedia)](https://en.wikipedia.org/wiki/Token_bucket)
+- [Rate limiting (Wikipedia)](https://en.wikipedia.org/wiki/Rate_limiting)
+- [RFC 6585: Additional HTTP Status Codes (429)](https://www.rfc-editor.org/rfc/rfc6585)
+- [Exponential Backoff And Jitter (AWS Architecture Blog)](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
+- [Rate limits (OpenAI API documentation)](https://platform.openai.com/docs/guides/rate-limits)

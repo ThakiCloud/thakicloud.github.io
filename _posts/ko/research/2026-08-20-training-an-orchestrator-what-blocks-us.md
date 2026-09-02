@@ -14,6 +14,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/training-an-orchestrator-what-blocks-us/"
+audiobook: "https://drive.google.com/file/d/1KSJx2rg5wsLbWeCJ6YPJ8ZHP4F2BZxP0/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![순서가 어긋난 한 칸](/assets/images/training-an-orchestrator-what-blocks-us-hero.webp)
@@ -52,6 +55,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/training-an-orchest
 **무엇을 하지 않을지는 하는 예시들 사이에서만 배워집니다.** 절제는 일반 작업 데이터와의 균형에서
 나오는 것이라, 위임 데이터만 격리해 놓으면 그 신호 자체가 사라집니다. 멀티 LoRA 서빙은 서빙
 비용을 줄이는 기술이지 행동을 섞는 기술이 아니었습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/training-an-orchestrator-what-blocks-us/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 여덟 팔이 틀린 데이터 위에서 돌고 있었습니다
 
@@ -102,6 +109,8 @@ flowchart TB
 실제 DB를 조회해 세션당 응답 행이 정확히 하나인 걸 확인하고 나서야 픽스처가 사고를 재현했습니다.
 **회귀 테스트는 수정을 되돌려 실패시켜 보는 것까지가 한 단위입니다.**
 
+![training-an-orchestrator-what-blocks-us 슬라이드 1](/assets/images/training-an-orchestrator-what-blocks-us-slide-01.webp)
+
 ## 지표가 안 보는 자리에서 두 개가 더 썩고 있었습니다
 
 첫 번째는 조건 불일치였습니다. 평가할 때는 모델에게 24개 도구 스키마를 노출하는데, 학습 행에는
@@ -126,6 +135,8 @@ flowchart TB
 6/9로 회복됐는데 도구 선택이 52에서 44로 떨어졌습니다. 두 팔의 차이는 p=0.3075라서, 정직하게
 읽으면 **차이가 없고 해로울 수도 있습니다.**
 
+![training-an-orchestrator-what-blocks-us 슬라이드 2](/assets/images/training-an-orchestrator-what-blocks-us-slide-02.webp)
+
 ## 게이트를 절대값으로 썼고, 그게 오설계였습니다
 
 실험 전에 통과 기준을 못 박아 뒀습니다. "회귀 327점 이상"이었습니다. 최종 후보는 326점입니다.
@@ -138,6 +149,8 @@ flowchart TB
 두고 오설계는 별건으로 남겼습니다. 다음 사전등록은 기준선 대비 짝지은 검정으로 쓰고, 유형별
 하한을 함께 겁니다. 총점 274점짜리 팔이 도구 선택 0/64였는데, 총점만 보면 한 유형이 통째로
 무너진 게 안 보이기 때문입니다.
+
+![training-an-orchestrator-what-blocks-us 슬라이드 3](/assets/images/training-an-orchestrator-what-blocks-us-slide-03.webp)
 
 ## 예측이 세 번 빗나갔습니다
 
@@ -155,6 +168,8 @@ flowchart TB
 것 자체가 노이즈를 고를 위험이라, 상위 세 팔은 서로 p 값 0.2를 넘겨 갈리지도 않습니다.
 최종 팔을 고른 근거는 "가장 높아서"가 아니라 **세 위임 지표를 동시에 올린 유일한 팔이면서
 기존 성능이 기준선과 구분되지 않아서**입니다.
+
+![training-an-orchestrator-what-blocks-us 슬라이드 4](/assets/images/training-an-orchestrator-what-blocks-us-slide-04.webp)
 
 ## ThakiCloud 제품 관점
 
@@ -197,3 +212,10 @@ Paxis의 서브 에이전트 모델로 배선됐습니다. 만든 것을 다시 
 것이 먼저입니다. 게이트도 짝지은 검정으로 다시 씁니다.
 
 측정을 늘리기 전에 측정 도구부터 고치는 순서입니다.
+
+## 참고 자료
+
+본문의 LoRA와 McNemar 검정의 정의는 아래 자료로 확인할 수 있습니다.
+
+- [LoRA: Low-Rank Adaptation of Large Language Models (arXiv 2106.09685)](https://arxiv.org/abs/2106.09685)
+- [McNemar's test (Wikipedia)](https://en.wikipedia.org/wiki/McNemar_test)

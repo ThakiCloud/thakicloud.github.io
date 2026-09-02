@@ -24,6 +24,9 @@ header:
 ebook: /assets/ebooks/ai-native-cicd-for-one-person-team.pdf
 ebook_title: "1인 개발자를 위한 AI 네이티브 CI/CD"
 ebook_pages: 21
+audiobook: "https://drive.google.com/file/d/1JLzlg0C1lkkqRrLRVYYDQfjKR5mrTS5U/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 ![1인 개발자를 위한 AI 네이티브 CI/CD]({{ '/assets/images/ai-native-cicd-one-person-team-hero.webp' | relative_url }})
@@ -33,6 +36,9 @@ ebook_pages: 21
 전통적인 CI/CD는 파이프라인이 자동으로 돌아가더라도 판정은 결국 사람이 합니다. 로그를 읽고, 빨간 불이 들어오면 원인을 찾고, 테스트가 통과하면 손으로 배포 버튼을 누릅니다. 이 판정 과정 자체를 AI 에이전트에게 넘기면, 하루 열두 번 배포해도 확인 시간이 늘어나지 않습니다.
 
 혼자 만드는 파이프라인일수록 손으로 짠 판단 기준이 사람마다, 심지어 그날그날 기분에 따라 흔들리기 쉽습니다. 오늘은 테스트 실패를 무시하고 넘어갔다가 다음 주에는 같은 실패에서 반나절을 붙잡고 있는 식입니다. 이 글에서 다루는 순서는 그 흔들림을 줄이는 데 초점을 맞춥니다. 판정 기준을 코드보다 먼저 문서로 고정하고, 그 문서를 사람과 AI 에이전트가 함께 참조하게 하고, 배포 뒤에도 이상 신호를 스스로 잡아내는 조건을 걸어 두는 순서입니다. 아래 설정 파일들은 그대로 복사해서 시작하신 뒤 프로젝트 사정에 맞게 값만 바꾸시면 됩니다.
+
+![1인 개발자를 위한 AI 네이티브 CI/CD 파이프라인 직접 구성하기 개념을 형상화한 이미지](/assets/images/ai-native-cicd-one-person-team-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 게이트부터 정의합니다
 
@@ -61,6 +67,8 @@ checklist:
 이 파일의 값 자체가 정답은 아닙니다. 커버리지 70퍼센트나 취약점 0개는 예시 기준이므로 프로젝트 성격에 맞게 조정하시면 됩니다. 중요한 것은 숫자가 아니라, 게이트 조건이 파이프라인 코드와 분리된 하나의 파일에 있고 사람과 AI 에이전트가 같은 파일을 본다는 점입니다. 조건을 바꾸고 싶으면 이 파일만 고치면 되고, 파이프라인 스크립트를 뒤질 필요가 없습니다.
 
 게이트를 나중에 붙이면 순서가 뒤집힙니다. 파이프라인부터 짜고 나서 무엇을 검증할지 고민하면, 이미 돌아가는 스크립트에 조건을 끼워 맞추느라 검증이 느슨해지기 쉽습니다. 먼저 통과 조건을 정하고 그 조건에 맞춰 각 단계를 채워 넣는 순서를 지키면, 뒤에 나올 워크플로 파일도 그저 이 게이트 파일을 읽고 실행하는 얇은 층으로 남습니다. checklist 항목도 마찬가지로, 처음에는 두세 개만 적어 두고 배포하다가 놓친 것이 생길 때마다 항목을 추가하는 방식이 현실적입니다. 처음부터 완벽한 목록을 만들려고 하면 시작이 늦어질 뿐입니다.
+
+![ai-native-cicd-one-person-team 슬라이드 1](/assets/images/ai-native-cicd-one-person-team-slide-01.webp)
 
 ## 워크플로에 게이트를 붙입니다
 
@@ -144,6 +152,8 @@ flowchart TB
 
 왼쪽에서 시작해 오른쪽 아래로 갈수록 검증 비용이 늘어납니다. 테스트에서 걸러지면 몇 초를 잃지만, 배포까지 갔다가 롤백되면 사용자에게도 영향이 갑니다. 검증 순서를 이렇게 배치하는 이유가 여기에 있습니다.
 
+![ai-native-cicd-one-person-team 슬라이드 2](/assets/images/ai-native-cicd-one-person-team-slide-02.webp)
+
 ## AI 리뷰 에이전트에게 프로젝트 맥락을 줍니다
 
 AI 리뷰 도구를 그냥 붙이기만 하면 "이 함수가 너무 깁니다" 수준의 일반론만 돌아옵니다. 프로젝트에 특화된 피드백을 받으려면 도메인 용어와 민감한 함수 목록, 프로젝트 고유의 규칙을 리뷰 에이전트에게 미리 알려주는 설정 파일이 필요합니다.
@@ -172,6 +182,8 @@ custom_rules:
 리뷰 결과를 코드에 자동으로 반영할지도 미리 정해 두어야 합니다. 판단 기준은 단순합니다. 포맷팅처럼 규칙만 따르면 되는 문제는 자동으로 고치고, 보안이나 비즈니스 로직처럼 의도를 파악해야 하는 문제는 사람이 승인하게 합니다. 위 워크플로 예시에서 `E`(자동 수정 가능한가) 분기가 이 기준을 그대로 반영한 것입니다.
 
 이 기준을 처음 세울 때는 자동 수정 목록을 아주 짧게 시작하시길 권합니다. 예를 들어 포맷팅 규칙 위반 하나만 자동 수정 대상으로 두고, 인터페이스 변경에 따른 테스트 스텁 갱신처럼 조금 더 복잡한 항목은 나중에 신뢰가 쌓인 뒤에 옮기는 식입니다. 반대로 결제나 인증처럼 `sensitive_functions`에 등록된 경로는 아무리 사소해 보이는 변경이라도 자동 반영 대상에서 제외해 두는 편이 안전합니다. 범위를 넓히는 것은 언제든 할 수 있지만, 잘못 자동 반영된 변경을 되돌리는 비용은 그보다 훨씬 큽니다.
+
+![ai-native-cicd-one-person-team 슬라이드 3](/assets/images/ai-native-cicd-one-person-team-slide-03.webp)
 
 ## 배포 후 이상을 잡아내는 롤백 조건
 
@@ -203,6 +215,8 @@ on_trigger:
 
 기준값을 처음 잡을 때는 지난 배포 몇 번의 평균값을 `baseline`으로 넣어 두고, 운영하면서 오탐이 잦으면 배수를 조금씩 올리는 방식이 무난합니다. 처음부터 완벽한 배수를 찾으려 하면 시간만 걸립니다. 그리고 롤백이 한 번 실행될 때마다 `id`와 트리거 시각과 이전 배포 버전을 별도 기록으로 남겨 두시길 권합니다. 몇 달 뒤 같은 트리거가 반복해서 걸린다면, 그것은 코드 문제가 아니라 트리거 기준 자체가 그 엔드포인트 특성과 맞지 않는다는 신호일 수 있습니다.
 
+![ai-native-cicd-one-person-team 슬라이드 4](/assets/images/ai-native-cicd-one-person-team-slide-04.webp)
+
 ## 도구는 이미 충분합니다
 
 이 구성을 위해 새로운 도구를 여러 개 사들일 필요는 없습니다. 아래는 1인 개발자 예산에 맞는 조합입니다.
@@ -230,3 +244,15 @@ on_trigger:
 ![2장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch02.webp)
 ![3장 삽화](/assets/images/books/ai-native-cicd-for-one-person-team/ch03.webp)
 
+## 참고 자료
+
+- [GitHub Actions 워크플로 문법(needs, runs-on)](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)
+- [GitHub Actions 과금과 무료 사용량](https://docs.github.com/en/billing/concepts/product-billing/github-actions)
+- [pytest 공식 문서](https://docs.pytest.org/en/stable/)
+- [pytest-cov 설정(cov-fail-under)](https://pytest-cov.readthedocs.io/en/latest/config.html)
+- [unittest 공식 문서](https://docs.python.org/3/library/unittest.html)
+- [Ruff 공식 문서](https://docs.astral.sh/ruff/)
+- [pip-audit 저장소](https://github.com/pypa/pip-audit)
+- [Dependabot 문서](https://docs.github.com/en/code-security/dependabot)
+- [Vercel 요금제](https://vercel.com/pricing)
+- [Railway 문서](https://docs.railway.com/)

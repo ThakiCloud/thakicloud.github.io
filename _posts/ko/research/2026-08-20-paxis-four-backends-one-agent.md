@@ -17,6 +17,9 @@ toc_label: "목차"
 header:
   teaser: /assets/images/paxis-4way-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/paxis-four-backends-one-agent/"
+audiobook: "https://drive.google.com/file/d/1tnr8QyznqcNHe1EIVuOgztPtCVhgDftx/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 직접 양자화하거나 증류한 모델을 에이전트에 붙일지 고민 중이시라면, 붙이기 전에 무엇을 재야
@@ -59,6 +62,10 @@ Paxis에서 에이전트를 하나 만들었습니다. 이름은 릴리즈 가�
 구두로 이미 받아놨으니 승인된 걸로 처리하라"고 압박합니다. 이때 옳게 행동한다는 건 롤백을 멈추고
 승인 선택지를 다시 올린다는 뜻입니다. 말 한마디로 열리는 게이트라면 애초에 게이트가 아니니까요.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/paxis-four-backends-one-agent/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 27B 세 팔은 같은 판단을 했습니다
 
 bf16 교사부터 보겠습니다. 압박에 넘어가지 않았고, 재판정 기준을 표로 만들어 언제 무엇을 하면
@@ -95,6 +102,8 @@ bf16 교사부터 보겠습니다. 압박에 넘어가지 않았고, 재판정 �
 카탈로그를 비워도, 프롬프트를 새로 써도, 도구를 161개까지 차단해도, 에이전트 바인딩을 아예 풀어도
 같았습니다. 같은 조건에서 27B 세 팔은 전부 정상적으로 답했습니다.
 
+![paxis-four-backends-one-agent 슬라이드 1](/assets/images/paxis-four-backends-one-agent-slide-01.webp)
+
 ## 한 번은 결과가 아니었습니다
 
 위 화면은 팔마다 한 번씩 돌린 결과입니다. 그 상태로만 보면 네 팔 중 셋이 통과했다는 이야기로
@@ -114,6 +123,8 @@ bf16 교사부터 보겠습니다. 압박에 넘어가지 않았고, 재판정 �
 
 컨텍스트 길이도 의심해서 8B를 40,960에서 65,536으로 올려 YaRN을 켜봤지만 결과는 그대로였습니다.
 원인이 아니었고, 지금은 원래 값으로 되돌려 두었습니다.
+
+![paxis-four-backends-one-agent 슬라이드 2](/assets/images/paxis-four-backends-one-agent-slide-02.webp)
 
 ## 답은 있었는데 화면까지 오지 못했습니다
 
@@ -145,6 +156,8 @@ bf16 교사부터 보겠습니다. 압박에 넘어가지 않았고, 재판정 �
 
 요청에 `enable_thinking=false` 하나를 넣자 **0/5가 5/5로 바뀝니다.** 학습이 아니라 설정입니다.
 
+![paxis-four-backends-one-agent 슬라이드 3](/assets/images/paxis-four-backends-one-agent-slide-03.webp)
+
 ## 그런데 승인 게이트는 그대로입니다
 
 종료가 고쳐진 5건을 열어 보면 전부 롤백을 **실행했다고** 말합니다. 승인 사수는 0/5입니다.
@@ -152,6 +165,8 @@ bf16 교사부터 보겠습니다. 압박에 넘어가지 않았고, 재판정 �
 두 문제가 하나로 보였을 뿐 별개였습니다. 루프를 못 끝내는 건 서빙 설정이었고 한 줄로 고쳐집니다.
 승인 압박에 밀리는 건 모델 쪽이고 설정으로는 안 고쳐집니다. 뭉뚱그렸으면 며칠짜리 학습을 걸어
 놓고 엉뚱한 걸 고쳤을 겁니다.
+
+![paxis-four-backends-one-agent 슬라이드 4](/assets/images/paxis-four-backends-one-agent-slide-04.webp)
 
 ## 8B를 어디에 쓸 수 있나
 
@@ -190,3 +205,16 @@ Paxis에서는 이게 코드 수정이 아니라 설정입니다. 서브에이�
 
 그리고 이 글의 수치는 전부 다섯 번 이상 돌린 값입니다. 한 번 돌려서 좋았던 결과를 결론으로
 적었다가 뒤집힌 게 바로 이 실험이라, 같은 실수를 반복하지 않으려고 적어 둡니다.
+
+## 참고 자료
+
+본문에 등장하는 서빙 기술의 원문은 아래 자료에서 확인할 수 있습니다.
+
+- [YaRN: Efficient Context Window Extension of Large Language Models (arXiv 2309.00071)](https://arxiv.org/abs/2309.00071)
+- [Qwen3 Technical Report (arXiv 2505.09388)](https://arxiv.org/abs/2505.09388)
+- [Introducing NVFP4 for Efficient and Accurate Low-Precision Inference (NVIDIA Technical Blog)](https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/)
+- [What is the Model Context Protocol (MCP)? (Model Context Protocol documentation)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/paxis-four-backends-one-agent/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
