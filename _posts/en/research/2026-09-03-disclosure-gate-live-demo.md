@@ -44,7 +44,7 @@ Starting next January, monetary penalties for financial investment advertising t
 
 ## The ThakiCloud angle
 
-We could stand this demo up in a day because the parts already existed. The gate is the exact code used in the evaluation three days ago, the frontend skeleton came from our insurance demo and Paxis, and the model serves on in-house GPUs from a single manifest. Turning regulation text into a code gate means evaluation and demo share one yardstick, and in an on-premises customer demo you can answer "which line of the guideline says so" with a number.
+We could stand this demo up in a day because the parts already existed. The gate is the exact code used in the evaluation three days ago, and the model serves on in-house GPUs from a single manifest. Turning regulation text into a code gate means evaluation and demo share one yardstick, and in an on-premises customer demo you can answer "which line of the guideline says so" with a number.
 
 ## What not to trust yet
 
