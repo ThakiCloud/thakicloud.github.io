@@ -18,6 +18,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/humanko-safety-benchmark/"
+audiobook: "https://drive.google.com/file/d/1hmsLWjBD0udJwAL4_XFPjnDpukv4zoGF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 모델을 사람처럼 부드럽게 말하도록 다시 훈련시키면, 위험한 요청을 걸러내는 능력도 같이 물러지지 않을까요. 회사가 모델을 고객 응대용으로 손볼 때 가장 자주 받는 걱정이 이것입니다. 저희도 같은 걱정을 안고 직접 재봤습니다. 결론부터 말하면, 그 훈련은 안전 반응을 통계적으로 건드리지 않았습니다.

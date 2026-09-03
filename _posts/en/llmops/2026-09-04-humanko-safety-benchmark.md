@@ -18,9 +18,15 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/humanko-safety-benchmark/"
+audiobook: "https://drive.google.com/file/d/1sb5NqG9B5pXRXhaYKvtI041ByGLUvWW4/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 Last week we [put Human-KO 27B next to EXAONE 4.5 on knowledge and tone](https://thakicloud.com/tech-blog/en/llmops/humanko-27b-vs-exaone/). A customer who read that post asked a different question: "Knowledge and tone, sure, but is it safe?" Today we answer with numbers. The short version: the surgery that made this model talk like a person did not statistically touch its safety axis.
+
+![Illustration of the core idea of What Does 'Safe' Even Mean? We Put Human-KO Next to EXAONE and Our Own Ruler](/assets/images/humanko-safety-benchmark-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Plain terms
 

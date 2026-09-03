@@ -16,9 +16,15 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-level-evaluation-praxis/"
+audiobook: "https://drive.google.com/file/d/151Ue_U8jloBMtSWkKPDj32hrKeATD69y/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 A few days ago we wrote about [measuring Human-KO's safety](https://thakicloud.com/tech-blog/en/llmops/humanko-safety-benchmark/). While doing that work, a different question came up alongside it: "Does this benchmark cover models only, or agents too?" Short answer: in our product UI, only models. But a tool for evaluating agents already existed in-house. It was just sitting in a different drawer.
+
+![Illustration of the core idea of A Model Exam and an Agent Exam Are Different Tests — We Found the Answer Already Sitting in a Drawer](/assets/images/agent-level-evaluation-praxis-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Plain terms
 

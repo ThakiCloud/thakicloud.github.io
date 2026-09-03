@@ -16,6 +16,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-level-evaluation-praxis/"
+audiobook: "https://drive.google.com/file/d/11m4vPYYqqc7xo_K-uiBZm7sGKrIbJwEF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 모델을 재는 시험과 에이전트를 재는 시험은 같은 시험이 아닙니다. 저희 제품 화면에서는 모델만 잽니다. 그런데 에이전트를 재는 도구는 회사 안에 이미 있었습니다. 다른 서랍에 들어 있었을 뿐입니다.
