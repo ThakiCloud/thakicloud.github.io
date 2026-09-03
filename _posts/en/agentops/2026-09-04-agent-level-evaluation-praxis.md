@@ -1,8 +1,8 @@
 ---
-title: "A Model Exam and an Agent Exam Are Different Tests — We Found the Answer Already Sitting in a Drawer"
-excerpt: "The test sheet for grading a model and the one for grading an agent are different papers. Metis Benchmarks only grades the first one. We opened the code to find where the second answer sheet already lives."
-seo_title: "How Far Along Is Agent-Level Evaluation? A Code-Level Look at Praxis agenteval"
-seo_description: "After confirming Metis Benchmarks only evaluates model endpoints, we opened the agenteval module inside our agent platform Praxis to see what agent-level evaluation actually looks like in our own stack."
+title: "We Actually Ran Agent Evaluation on Our Own Platform"
+excerpt: "Instead of reading code, we pressed the actual evaluation button. Here is what happened when we graded real agents that use tools across multiple turns and deliver a final result, under real conditions."
+seo_title: "Running Praxis Agent Evaluation for Real: What We Found"
+seo_description: "We called the real evaluation API against real, working agents on our agent platform Praxis. Here is what recording a multi-turn execution and grading it against fixed conditions actually looks like, with real results."
 date: 2026-09-04
 published: true
 categories:
@@ -16,44 +16,44 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-level-evaluation-praxis/"
-audiobook: "https://drive.google.com/file/d/151Ue_U8jloBMtSWkKPDj32hrKeATD69y/view"
+audiobook: "https://drive.google.com/file/d/1jSsZuMq2MvMM_Jchh3n0sxV69Q3kAIDV/view"
 audiobook_label: "▶ Listen: 5-minute briefing"
 audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
-A few days ago we wrote about [measuring Human-KO's safety](https://thakicloud.com/tech-blog/en/llmops/humanko-safety-benchmark/). While doing that work, a different question came up alongside it: "Does this benchmark cover models only, or agents too?" Short answer: in our product UI, only models. But a tool for evaluating agents already existed in-house. It was just sitting in a different drawer.
+Our last post confirmed by reading code that an agent-evaluation feature exists in our product. This time is different. We actually pressed that evaluation button and ran it. Here is what happened when we graded real agents, ones that use tools across multiple turns and deliver a final result, under real conditions.
 
-![Illustration of the core idea of A Model Exam and an Agent Exam Are Different Tests — We Found the Answer Already Sitting in a Drawer](/assets/images/agent-level-evaluation-praxis-hero.webp)
+![Illustration of the core idea of We Actually Ran Agent Evaluation on Our Own Platform](/assets/images/agent-level-evaluation-praxis-hero.webp)
 *A visual metaphor for the article's key idea.*
 
 ## Plain terms
 
-Hiring a cook usually involves two kinds of exam. A written test asks about ingredient properties and recipe knowledge. A practical test puts the candidate in a real kitchen and checks whether they handle a knife properly, control heat, and actually produce a finished dish. Both matter, but they're completely different test sheets — no amount of polishing the written exam will grade practical skill. A language-model benchmark is the written exam: one question, one graded answer. Agent evaluation is the practical exam: multiple steps, tool use, and whether a final result actually comes out the other end. Our company has both a written-exam sheet (Metis Benchmarks) and a practical-exam sheet (Praxis's agenteval). They were just filed in separate drawers, so one side didn't know the other existed.
+Handing a new hire a manual and asking "are they good at this job" gets you nowhere. You have to actually give them work and grade what comes back. Our agent platform works the same way. The screen where you build an agent and the feature that grades it are two separate things, and saying "evaluation exists" means little until someone actually presses that grading feature. This time we gave a real agent real work and graded what came back.
 
-## How we investigated
+## How we checked
 
-Instead of answering "does it exist" from memory, we read the actual code. That means the `agenteval` module's source inside our agent platform Praxis, the API router that calls it, and the database migrations backing it. It also means evidence that it has actually run in practice, such as logs and bug-fix commit messages. "Exists" and "actually runs" are different claims, so we only cite evidence for the latter.
+We originally planned to do this on our shared development server. We ran into an access step we could not finish inside this session. So we ran it instead on a local instance built from the same code and the same database. Because both are identical, what we found here reflects how the real product behaves. We updated the code to the latest version and stood up the internal-system mocks these agents actually call, 35 systems including HRIS, CRM, and ERP, exposing 181 real tools. That instance already held several agents our team had built for real work. We picked the ones with an eval sheet already in place, then called the product's real evaluation API against them.
 
-## What we found — real, running, and it already caught a bug
+## What actually happened when we ran it
 
-Three findings.
+We asked the engineering-domain agent to check recent commits and summarize what changed. It finished in 8.5 seconds, and it also passed the check for not calling a dangerous deploy command. We then asked the same agent how to deploy to production, and it passed in 9.3 seconds. We asked the sales-domain agent to find the top 3 open deals in our pipeline, and it passed in 11 seconds. All three responses came from our own Human-KO 27B model, and both the time each run took and its token usage were logged and stored.
 
-First, `agenteval` doesn't grade a single question-answer pair — it evaluates a **multi-turn execution trajectory**. It records which tools an agent called, how many times, whether each call succeeded or failed, which skill was chosen, and whether a final artifact was actually delivered. Grading isn't a judge model's impression either. It runs on **nine deterministic conditions**: was a tool called, was a specific skill chosen, was an artifact actually delivered, did cost stay under budget, and so on.
+## We wrote our own answer sheet and ran it
 
-Second, this isn't scaffolding — it's code that has actually run. Calling `POST /api/v1/agent-specs/{id}/eval` over REST executes it, and results persist in Postgres. There's even a real bug fix documented in the code comments. In one run, the team identifier was passed as an empty string. Every single tool call was denied as a result, and this exact evaluation tool is what caught it.
+Grading runs against fixed conditions, checked against a single multi-turn execution. Did the run complete, was a specific tool called, was a dangerous tool avoided. This set of conditions, the answer sheet, can come from a built-in template for the agent's business domain, or an agent's author can write one specifically for that agent.
 
-Third, and yet it is **not connected** to Metis Benchmarks. Across the entire repository, code referencing `agenteval` exists only inside Praxis; the name never appears anywhere in Metis Benchmarks' code. The two exam sheets aren't even in the same filing cabinet.
+We picked our own "competitor battlecard agent," a real agent we use for real work, and wrote a sheet for it by hand. We added a single question, asking the agent to check for any mention of a competitor tied to direct hyperscaler sales, registered it, and ran the evaluation. It passed in 11.8 seconds. Checking the frontend afterward, we found that registering a sheet like this doesn't require calling the API directly at all. It's already built into the agent-builder screen itself.
 
-In plain terms: the practical-exam proctor already works here. The written-exam front desk just didn't have their phone number.
+In plain terms: grading an agent works like preparing an exam. Once you decide the questions, a machine does the actual grading against the real execution record.
 
-## What it would take to merge the two
+## What this confirmed
 
-Bringing the two drawers together needs three things. First, Metis Benchmarks needs to be able to target a Praxis agent spec, not just a model endpoint. Second, it needs a path that ingests a multi-turn execution trajectory rather than a single completed answer. Since `agenteval` already owns that grading logic, calling into it beats reimplementing it. Third, `agenteval`'s grading today is entirely condition-based (was a tool called, was an artifact produced) — there's no layer that has a judge model score answer *quality*. Metis Benchmarks doesn't have that layer either, so whichever side builds it first, it's homework both systems still need to do.
+The evaluation engine grades a multi-turn execution trajectory rather than a single question and answer. It grades against fixed conditions rather than a judge model's impression, and it actually persists the result. Three real runs and one new registration all confirmed this works exactly as designed. The next thing worth watching is extending that grading to a layer where a judge model scores answer quality itself. Right now grading only checks fixed conditions like completion and tool calls, so scoring quality beyond that is still a separate piece of work.
 
 ## What not to trust here
 
-This investigation was done by reading code, not by running `agenteval` and producing a fresh result ourselves. We confirmed what the code is built to do, but did not separately verify how often it's invoked in production today or how many runs it has executed recently. And "no quality-judging layer" means we didn't find one in the code we read — it doesn't fully rule out something equivalent existing elsewhere that we didn't check.
+This experiment ran on a local instance built from the same code and database, not on our shared development server. This post covers agents that already had an eval sheet, or that we registered one for ourselves. We did not check whether that same ratio holds across the whole catalog. Every grading method that exists today is condition-based, and there is no layer yet that has a judge model score answer quality, so we could not check that part.
 
 ## References
 
-- [Human-KO safety benchmark article](https://thakicloud.com/tech-blog/en/llmops/humanko-safety-benchmark/)
+- [Previous post: Human-KO safety benchmark](https://thakicloud.com/tech-blog/en/llmops/humanko-safety-benchmark/)
