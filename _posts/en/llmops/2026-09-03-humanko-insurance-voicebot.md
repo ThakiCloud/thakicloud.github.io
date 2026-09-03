@@ -1,7 +1,7 @@
 ---
-title: "An Insurance Voicebot That Knows 452 Clauses. We Never Trained It On Any of Them."
-excerpt: "We put the Financial Supervisory Service's standard insurance terms on top of the Korean 27B we released last week, and built an agent that answers in one sentence, with first sound in about 0.6 seconds. Retrieval owns the clauses, the weights own the voice. We publish the demo videos alongside the measurements."
-seo_title: "Insurance Clause Voicebot: Human-KO 27B + Standard Terms RAG, Measured"
+title: "What an Open 27B Can Build: An Insurance Agent That Runs Inside Your Own Walls"
+excerpt: "If you want your own model running inside your own company, this is a worked example. We took the weights we released two days ago, added 452 clauses of the Financial Supervisory Service's standard insurance terms, and trained nothing. The agent answers in one sentence with a grounded citation, and first sound arrives about 0.6 seconds after the question. Every component, the answer model and the speech synthesizer, ran on our own GPUs, and no request ever left the building. Because the weights are open, the same setup can move straight into a company's own internal network."
+seo_title: "A Sovereign AI Case Study Built on Open Weights: Human-KO 27B Insurance Clause Agent"
 seo_description: "An insurance chatbot that answers in one sentence, grounded in 452 clauses of the Financial Supervisory Service's standard terms. We publish clause-selection accuracy (recall at 1 of 0.969), time to first sound (about 0.6 seconds), and how we fixed the voice, all measured."
 date: 2026-09-03
 published: true
@@ -10,10 +10,12 @@ categories:
 tags:
   - korean
   - human-ko
+  - open-weights
+  - sovereign-ai
   - rag
   - voice-agent
   - insurance
-  - enterprise-ai
+  - on-premise
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
@@ -22,7 +24,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/humanko-insurance-voi
 
 ![Policy clauses passing through the model and coming out as speech](/assets/images/humanko-insurance-voicebot-hero.webp)
 
-If you are trying to put a voicebot in front of an insurance call center, you already know you need two things at once. The answer has to be short, and it has to be traceable to a source. We put the Financial Supervisory Service's standard insurance terms, 452 clauses across ten product lines, on top of the Korean 27B we released last week, and built an agent that answers in one sentence with first sound about 0.6 seconds after the question. We did not train a new model.
+If you want your own model running inside your own company, this post is one concrete place to start. We took the Korean 27B weights we released two days ago, added 452 clauses of the Financial Supervisory Service's standard insurance terms across ten product lines, and built an insurance agent. We did no domain training. The model that drafts the answer and the synthesizer that produces the voice both ran on our own GPUs, and no request ever left the building.
 
 <video controls playsinline preload="none" poster="{{ site.url }}{{ site.baseurl }}/assets/images/humanko-insurance-multiturn-poster.jpg" style="max-width:100%">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/videos/posts/humanko-insurance-multiturn.mp4" type="video/mp4">
@@ -30,6 +32,9 @@ If you are trying to put a voicebot in front of an insurance call center, you al
 *We recommend turning the sound on. The spoken audio is Korean. This is a single take covering four turns: the agent answers a first question, the caller taps a suggested follow-up, a vague follow-up like "how many days does that take" gets resolved against the earlier turn, and a question outside the clauses gets a clean refusal. The voice you hear is not re-recorded. It is exactly what the browser received at that moment.*
 
 ## Why it has to be this answer
+
+![One turn of the consultation screen]({{ site.url }}{{ site.baseurl }}/assets/images/humanko-insurance-ui.webp)
+*A single turn frozen as a screenshot. Three grounding clauses sit above the answer, and below it are a replay button, three suggested follow-up questions, and that turn's own measurements: clause selection in 0.158 seconds, answer drafting in 0.321 seconds.*
 
 What shows up on a screen and what goes out as a voice are different products. On a screen, eight bullet points get skimmed. A voice cannot be skimmed. While the agent reads a thousand characters, the caller has already hung up.
 
@@ -68,7 +73,15 @@ What actually worked was reversing the direction. Instead of having the model **
 ![Clause selection accuracy]({{ site.url }}{{ site.baseurl }}/assets/images/humanko-insurance-retrieval-en.webp)
 *Every method that asks the model to write a query sits near 0.3. Only picking from a list reaches 1.000.*
 
-Widening to the top five keeps the same order. Full text search reaches 0.571, adding the product filter 0.714, clause selection 1.000.
+Widening to the top five keeps the same order. Here is everything, including what we tried and threw away.
+
+| Retrieval method | recall@1 | recall@5 |
+|---|---|---|
+| Full clause-text search | 0.286 | 0.571 |
+| Title weighted 3x | 0.286 | 0.429 |
+| Model rewrites the query | 0.000 | 0.429 |
+| Add product filter | 0.286 | 0.714 |
+| **Clause selection from a closed list** | **1.000** | **1.000** |
 
 With only 7 test questions we were pinned at the ceiling and could not measure anything, so we grew the set to 32. That run came back at 0.812, and the cause turned out to be our own code, not the model. When the model correctly answered "no matching clause," our fallback search was silently overwriting that answer. Once we fixed it, we got 0.969.
 
@@ -95,6 +108,9 @@ We even fumbled the measurement, because there was no simple way to eyeball this
 
 The condition that actually sounded different to a human listener was a set of different sentences. Once we changed the test to that, and measured with speaker embeddings instead of pitch, the gap showed up. Before pinning the voice, sample-to-sample similarity was 0.655. After pinning it, 0.928. The two ranges do not overlap.
 
+![Speaker similarity before and after pinning]({{ site.url }}{{ site.baseurl }}/assets/images/humanko-insurance-voice-en.webp)
+*There is an empty band between the before and after sample-to-sample ranges. The second row crosses that band because it measures something else, similarity to the target voice.*
+
 When a metric says "no difference," that can mean the thing genuinely does not differ, or it can mean the ruler cannot measure it. Here it was the second one.
 
 ## How fast is it
@@ -111,6 +127,9 @@ The first was a typing animation. The answer was already fully generated, but we
 
 We fixed it by sending the finished sentence to the browser first, so it can start playing sound immediately, and by only generating the replay file when the caller actually presses the replay button. That change alone took the same script from 2.61 seconds down to 0.84 seconds. We changed no model and added no GPU.
 
+![Time to first sound, before and after the fix]({{ site.url }}{{ site.baseurl }}/assets/images/humanko-insurance-latency-en.webp)
+*Measured with the same script both times. We did not use a bigger model or add a GPU. We changed the order.*
+
 To be clear, this number is not call latency. Speech recognition and detecting that the caller has finished speaking both add time before this stage even starts. What we measured here runs from a typed question to first sound.
 
 ## What it can't do
@@ -121,15 +140,49 @@ It is not connected to a phone network yet. The numbers above run from a typed q
 
 The evaluation set is 32 questions. At that size, a single question is worth 0.03 of the score, so 0.969 should not be read as a trend.
 
-Synthesis is not identical run to run. Generating the same sentence five times sometimes produces a broken opening, and certain starting words made that more likely. We pre-tested and filtered the sentences used in the demo for exactly this reason.
+Synthesis is not identical run to run. So we pre-tested the sentences used in the demo. We synthesized the answer to each of seven questions five times, ran each result back through speech recognition, and compared it against the original text.
+
+| Question | Start of the answer | Failures | Median similarity |
+|---|---|---|---|
+| How to file a claim | "Submit the claim form and accident certificate..." | 0/5 | 1.000 |
+| Payment deadline | "Starting from the day we receive your documents..." | 0/5 | 1.000 |
+| Missed premium | "After the due date..." | **5/5** | 0.836 |
+| Changing beneficiary | "Yes, the beneficiary..." | 1/5 | 1.000 |
+| Cancelling the contract | "Starting from the day you received the policy..." | 0/5 | 0.911 |
+| Notification deadline | "Notify us of the accident immediately..." | 0/5 | 1.000 |
+| Prompting a refusal | "What you're asking about..." | 0/5 | 1.000 |
+
+The answer starting with "After the due date" failed all five times. We cannot call this a synthesis defect with certainty, though. If it were genuine non-determinism, the way it failed should vary run to run, but across ten repeats the speech recognizer read the same phrase back as the same wrong Korean word every single time. It is more likely that the recognizer has a structural blind spot for that particular Sino-Korean term. We could not tell which explanation was correct, so we withheld judgment and simply left it out of the demo.
+
+The answer starting with "Yes, the beneficiary" turned the Korean word for "yes" into the word for "my" once out of five runs. That one is a genuine synthesis defect. The contract-cancellation answer passed the gate, but on one run the word for "withdraw" came out as the word for "process," a term with a completely different meaning, and that run barely cleared our similarity threshold. A threshold does not guarantee that meaning survives.
 
 Four of the recovered clause tables are not yet attached to any clause.
+
+## So sovereign AI is possible
+
+No request in this demo ever left the building. The 27B that drafted answers and the synthesizer that produced the voice both sat on our own GPUs, and the clause index is a local file. There is no point in the path where we called an outside model company's API.
+
+There is exactly one reason this is possible. The weights are open. Borrow someone else's API and every customer question and every clause of your own terms passes through someone else's server, every single time. Hold the weights yourself and that round trip disappears entirely.
+
+Plenty of companies already talk about sovereign AI. Most of them are talking about it with a closed model. "We keep it inside our walls," said about a closed model, is a promise. The same sentence, said about open weights, is a fact you can go verify yourself. [Human-KO 27B is available to download right now](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO).
+
+To be honest about it, we have not proven this inside an air-gapped network. This demo ran on our own internal infrastructure, and that endpoint is reachable from the internet. But there is no reason it could not move. The model file, the clause index, and a server that runs to a few hundred lines are the whole thing, and none of it needs anything outside.
+
+The only thing that has to change is what sits where the insurance terms sit here. For a securities firm it would be investment-solicitation rules, for a public agency it would be complaint-handling regulations, for a manufacturer it would be equipment manuals. The model stays the same. Only the index changes.
 
 ## Where this fits
 
 This demo spans three layers. The conversation flow itself is the shape of workflow automation that Paxis handles. The 27B that drafts answers and the synthesizer that produces the voice run together on a single GPU on top of Metis. And insurance companies typically want this kept inside their own network, which is where Aegis sits.
 
 The same structure runs unchanged for other companies. What changes is only what goes into the index in place of insurance terms.
+
+## If you want your own model
+
+The method in this post is not special. Take open weights, index documents your company already has, and build an evaluation set to check the answers. That is the whole thing. The hard part is not the model, it is the two steps after it: deciding which documents are the source of truth, and deciding what will judge whether an answer is correct.
+
+If that is where you are stuck, we would like to work through it with you. If your company wants to build its own model and put it into a real service, or if your institution needs a domain agent running inside a closed network, get in touch. Once you know what goes where the insurance terms sit here, the rest of it is exactly what is written in this post.
+
+Reach us at [info@thakicloud.co.kr](mailto:info@thakicloud.co.kr) or [thakicloud.co.kr](https://thakicloud.co.kr).
 
 ## References
 
