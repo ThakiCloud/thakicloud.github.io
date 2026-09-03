@@ -1,0 +1,116 @@
+---
+title: "A Feature's Cost Is Settled in the Data Model"
+excerpt: "That 'just add a currency code' request that turned into a week-long project was never about the request. It was about the shape. Data is the product's memory, and a feature's real price is settled the day you decide where the new fact lives. This post is about moving that bill from the most expensive moment to the cheapest one."
+seo_title: "Why a Feature's Real Cost Is Decided in the Data Model"
+seo_description: "Code is disposable but data is memory: how table shapes set your product's limits, the three cost chunks of changing a shape, four quiet model failures, and the hour-long shape check that keeps migrations off the 2 a.m. schedule."
+date: 2026-09-04
+last_modified_at: 2026-09-04
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_icon: "book"
+tags:
+  - data-modeling
+  - database-schema
+  - migrations
+  - saas
+  - solo-developer
+  - normalization
+  - llm-apps
+categories:
+  - dev
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/the-data-modeling-discipline/"
+ebook: /assets/ebooks/the-data-modeling-discipline.pdf
+ebook_title: "The Data Modeling Discipline"
+ebook_pages: 31
+---
+
+This post is for the developer building and running a product alone, with no database admin and no on-call teammate. By the end you will have a habit that tells you, before you write a line of code, whether a feature is cheap or expensive. The conclusion first: a feature's real cost is not settled when you implement it. It is settled the day you decide the shape of your data.
+
+It is Tuesday night. A customer message arrives: we would like our invoices to support multiple currencies. It sounds small at first, one column next to the amount. The amount is one integer column. There is no place for a currency code, no rate at issuance, no tax basis. Every place that reads money has to be touched, and every past row rewritten. By the next morning the small request is a week-long project.
+
+The problem was never the request. It was the shape. Code is disposable: rewrite it, roll back the deploy. It has no memory. Data is different. Data is the product's memory. Every past invoice and usage event has already left the building; customers have seen it, tax offices received it, reports shipped it. The discipline this post argues for has one line: pay for the shape when it is cheap, in small pieces, not when you need it.
+
+![Illustration of the core idea of A Feature's Cost Is Settled in the Data Model](/assets/images/the-data-modeling-discipline-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## A Product's Limits Grow Out of Its Tables
+
+A product's shape is not born in the screens. It is born in the tables. Take a product with workspaces. The database has one row in a workspaces table, and each member is a users row carrying a workspace identifier column. That shape says one person belongs to one workspace. That single sentence grows into product limits by itself.
+
+The first limit is ownership transfer. You think handing the workspace to someone else means updating the identifier value. But the settings, the billing account, and the payment details are all attached to the owner's row. The second limit is invitations. There is no place in the shape for the state of invited but not yet signed up, so the flow either does not exist or gets bolted on as a temporary table outside the model.
+
+The third limit is billing. Because the billing account is tied to the owner, only the owner can pay for this workspace. The question of whether another member could pay does not even exist. Picture the screen first and these limits stay invisible. Picture the shape and they show up.
+
+LLM apps are no different. A chat product stores messages by conversation id and sequence. Now the screen needs threaded replies, but the shape has no notion of a thread, so a new thread means re-storing the whole conversation. There is no place to keep the user's edited message separate from the model's original output. The edit overwrites the original, and the original you would later want for an evaluation dataset is already gone.
+
+So the question to ask when a new feature comes in: which row gains which new fact? If the answer is one or two rows, the feature is cheap. If it scatters across three tables, it is not a feature implementation at all. It is a shape change, and you are already doing a migration.
+
+## Read New Requests as Shapes
+
+Read a feature request through the shape, not the screen or the code. It is not the length of the spec that sets the price. It is the depth of where the new fact attaches.
+
+First request: let users download their usage history as a file. The usage facts already live in the usage history table. But where is the fact that a download happened? Who, for which period, to where, in what state. The shape has no place for it. This request is a new table with an identifier, the user, the period, the file location, and a state column. The moment a new request spawns a new entity, it is model work, not feature work.
+
+Second request: put the company logo on the login screen. Store the logo in file storage and add one path column to the users row. The new fact attaches to an existing place. This request is cheap. One line in the spec, one column in the shape.
+
+This difference is the whole of request evaluation. A long spec that adds no column to the shape is cheap. A one-line request that needs a new table is expensive. The expensive part never appears in the spec, so it slips out of the estimate. The expensive part is in the rows you have already written.
+
+One habit covers half of this post: before estimating any work, ask where the new fact attaches. It finishes before you write code, and it hands you the price band.
+
+## Changing a Shape Costs Three Chunks
+
+Changing the shape of an empty table is free. Changing the shape of a table that holds data is a project. Your customers are looking at that data right now. The cost of the change arrives in three chunks.
+
+The first chunk is conversion. Existing rows have to be rewritten into the new shape. A million rows means careful batched passes while the service stays up. A million rows at a thousand per pass is roughly seventeen minutes; correct for load and plan for an hour or two [estimate]. It must flow quietly outside your deploy window.
+
+The second chunk is the dual-version period. During a migration, old code and new code run together, both reading and writing the same tables. The old code does not know the new shape; the new code has to tolerate the old one. The schema must be a shape both versions can live in. The length of this period is set by your deploy cadence, and for a solo team the cadence is you.
+
+The third chunk is verification. You have to prove that old and new shapes hold the same values. The row counts per state match, the total amount of open invoices matches to the last cent, and a hundred randomly picked rows match column by column. For a billing product, a one-cent mismatch is the end. Write these verification queries before you start.
+
+Compare this with a code change. A bug fix is verified by tests, and its blast radius is a function. A shape change is verified by queries, and its blast radius is the whole product. Changing the shape is a house move: carry the boxes, live in two houses, prove every box arrived.
+
+## Models Fall Quietly, in Four Shapes
+
+Most models do not collapse dramatically. They collapse in four quiet shapes. And the trap of all four is the same: the shape is decided when it is cheapest, and paid for when it is most expensive.
+
+The first is the hidden one-to-many. At design time it looks like one: a user's company, a workspace's billing account. So it becomes a single field. Half a year later the product says a person can belong to two companies. The field has to become a table, and every query that assumed it has to change. Read the product's language: words like destination, account, and membership mean the relationship may grow. If the horizon is inside a year, put in the join table from the start.
+
+The second is the frozen enumeration. The state column holds four values and the code branches on them. A fifth value arrives: refunded. Adding the value is not hard. Hard is the old code that will now see it. The branch that handled four values and threw the rest as errors now swallows a legal state as an error. An enumeration is a contract with its readers. Before adding a value, list every place that reads the column.
+
+The third is the shape of money and time. Amounts in floating point, timestamps carrying a local timezone, dates stored as strings. Nothing of this breaks today. It breaks the day multi-currency support, daylight saving time, and cross-month reports arrive. Floating-point rounding error becomes a billing dispute. Local-time dates drift a month at the settlement-period boundary. Store amounts as integers in the smallest unit with a currency code from day one, and store time in UTC.
+
+The fourth is the vanishing history. The model keeps only current state: the last model used, the current balance, the recent login. The past is overwritten. Then a history screen is requested, and there is no data. What was never stored cannot be reconstructed. An append-only history table is cheap at first and irreplaceable later. The most expensive query in a product is the one against data that does not exist.
+
+| Shape | Where it appears | When it hurts |
+|---|---|---|
+| Hidden one-to-many | single field at design time | when the relationship grows |
+| Frozen enumeration | adding a state value | when old code sees the new state |
+| Money and time shape | floating point, local time | multi-currency, monthly reports |
+| Vanishing history | overwritten columns | history screen requests |
+
+## The Shape Check: One Hour Before Code
+
+So what do you do when you set the first model? You do not look for perfection. You run a short ritual called the shape check. For each new table, before writing code, answer six questions. It finishes within an hour per table [estimate].
+
+First, identity. What makes this row a row? The answer id is not an answer. The answer has to look like a specific payment on a specific day of a specific invoice. Identity fixes the primary key, and the primary key fixes everything. Second, the time axis. What happened to this row? At minimum, created and updated timestamps. If you do not know when a value was born, that value is not evidence.
+
+Third, the owner. Whose data is this? The user's, the organization's, the platform's. Without an owner there is no access boundary, and multi-tenant products fall apart here. Fourth, state. If there is state, where does the list of states live, and who records the transitions? State without a transition record is the frozen enumeration from earlier.
+
+Fifth, growth room. Which column looks like it will change in a year? A nullable column or two is nearly free, and a join table is cheap inside a year horizon. Sixth, deletion. Can this row disappear? If it can, decide now whether disappearance is physical or a flag. Rows in a billing product do not disappear. That is debt. Requests to see a deleted row again always come.
+
+The shape check does not guarantee the model is right; it guarantees the model was not decided by accident. A shape decided by accident is paid for at 2 a.m. A shape decided by ritual is paid for on design day, at a price you can afford.
+
+## Pay for the Shape When It Is Cheap
+
+The discipline is moving this cost from the moment you need it to the moment it is cheap. A column added at design stage costs almost nothing. The same column added in production costs a project.
+
+Where to store a fact, and how many times, is not a question of right and wrong. It is a question of budget. Normalization is the discipline of storing a fact once; denormalization is the deliberate breaking of that. One budget is write cost, the other is read cost. Copying the organization identifier into every usage row is money paid in advance against read cost: the hottest query, this organization's usage this month, stops paying a join on every call.
+
+But every copy is a promise that it will follow the source, and a promise needs a keeper. The member-count column on the organization row is updated in the same transaction as the membership insert and delete, and healed by a nightly job that recomputes it. The column, the transaction, the job, the reconciliation query. Four pieces, one bundle; drop one and the promise has no keeper.
+
+Facts that must not be corrected go on the document side. An invoice is a document, not a view. It stores the amount, currency, and tax rate at issuance. When model prices change, already-issued invoices are not adjusted retroactively. The urge to adjust them is a signal that the product's promise is wrong.
+
+When the shape must change, do it in three moves: expand, migrate, contract. Widen the shape so both versions can live. Move the data in batches. Watch for a few days, then drop the old shape. Each step is small, observable, and pausable; stop at any point and the system is in a working shape.
+
+Frequency matters more than size. A team that does one big migration a month lives with that anxiety every day. A team that does five small ones a week does not think about it. The risk sits in the length of the dual-version period. Put a 30-minute schema-only slot on the calendar, and never mix a schema change with a behavior change in one release. The 2 a.m. migration is not bad luck. It is the invoice that the shapes you did not decide on design day accumulated. This discipline is paying that invoice in installments, on a quiet Tuesday afternoon. The full version, from first model to migrations and indexes, is in the ebook that ships with this post.
