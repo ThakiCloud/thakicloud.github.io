@@ -17,17 +17,27 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/style-metrics-hide-content-loss/"
+audiobook: "https://drive.google.com/file/d/1dN6hg3YF2qfm6ru_JFiBXEz2rKtp2JTV/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 글이 쉬워졌는지 자동으로 채점하는 장치를 만들어 쓰는 분이라면, 이 글에서 그 장치가 조용히
 거짓말하는 방식 하나를 가져가실 수 있습니다. 저희가 만든 문체 지표는 다섯 축이 전부 좋아졌는데,
 그 시점에 원문의 90%가 사라져 있었습니다.
 
+![문체 점수가 좋아졌다고 좋아진 게 아닙니다 개념을 형상화한 이미지](/assets/images/style-metrics-hide-content-loss-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 쉽게 말하면
 
 이사할 때 짐을 잘 정리한 방과, 짐을 그냥 버린 방은 사진으로 보면 똑같이 깨끗합니다. 문체 지표는
 그 사진입니다. 방이 깨끗한지는 재지만, 있어야 할 물건이 남아 있는지는 재지 않습니다. 이 글은
 사진 옆에 짐 목록을 놓아야 한다는 이야기입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/style-metrics-hide-content-loss/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 해봤나
 
@@ -43,6 +53,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/style-metrics-hide-co
 평이한 글을 넣어 보고, 둘을 못 가르는 축은 버렸습니다. 한자 밀도 축이 그렇게 버려졌습니다.
 법제처 문서가 한글전용이라 양쪽 다 0이었습니다. 공문서투는 한자로 쓰는 문제가 아니라 어휘와
 문장 구조의 문제였습니다.
+
+![style-metrics-hide-content-loss 슬라이드 1](/assets/images/style-metrics-hide-content-loss-slide-01.webp)
 
 ## 나온 결과
 
@@ -69,7 +81,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/style-metrics-hide-co
 | 문장당 상투구 | 0.76 | 0.03 |
 | 문장당 피동 표현 | 0.32 | 0.03 |
 | 문장당 명사화 | 0.27 | 0.03 |
-| 글 길이 (원문 대비) | — | 0.98 |
+| 글 길이 (원문 대비) | 1.00 | 0.98 |
 
 101건 기준입니다. 자세한 수치와 효과크기는 아래 출처의 원장에 있습니다.
 
@@ -77,6 +89,19 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/style-metrics-hide-co
 
 문체를 재는 지표와 내용이 남았는지 재는 지표를 **따로** 두시면 됩니다. 하나로 합치면 안 됩니다.
 문체 점수는 내용을 버릴수록 좋아지기 때문에, 합치는 순간 서로를 가려 줍니다.
+
+```mermaid
+flowchart TB
+    SRC["공문서투 원문<br/>법령해석 회신문 101건"] --> RW["쉬운 한국어 재작성"]
+    RW --> S["문체 지표, 다섯 축<br/>긴 문장 · 상투구 · 피동 · 명사화 · 인용 밀도"]
+    RW --> P["보존 게이트, 세 항<br/>길이가 원문의 60% 이상인가<br/>법령명이 남아 있는가<br/>수치가 남아 있는가"]
+    S --> Q1["쉬워졌는가"]
+    P --> Q2["남았는가"]
+    Q1 --> G["둘 다 통과해야 채택"]
+    Q2 --> G
+```
+
+*같은 재작성 결과에서 갈라지는 두 개의 측정입니다. 문체 지표는 방이 깨끗한지, 보존 게이트는 짐이 남아 있는지를 씁니다.*
 
 내용 보존은 세 가지로 쟀습니다. 다시 쓴 글이 원문 길이의 60% 아래로 줄었는지, 원문에 있던
 법령명이 남았는지, 원문의 숫자가 남았는지입니다. 셋 중 하나라도 못 넘기면 그 건은 버립니다.
@@ -86,7 +111,12 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/style-metrics-hide-co
 떨어졌을 때 임계를 낮췄다면 요약본이 그대로 학습 데이터가 됐을 것입니다. 원인은 임계가 아니라
 입력을 주는 방식에 있었습니다.
 
+![style-metrics-hide-content-loss 슬라이드 2](/assets/images/style-metrics-hide-content-loss-slide-02.webp)
+
 ## 못 믿을 부분
+![style-metrics-hide-content-loss 슬라이드 3](/assets/images/style-metrics-hide-content-loss-slide-03.webp)
+
+![style-metrics-hide-content-loss 슬라이드 4](/assets/images/style-metrics-hide-content-loss-slide-04.webp)
 
 여기까지 오는 동안 저희가 만든 검사기가 네 번 틀렸습니다. 방향을 안 보고 크기만 봐서 반대로
 움직인 축을 통과시켰고, 법령명을 완전일치로 비교해 표기만 바뀐 것을 사라졌다고 셌고, 판례
@@ -100,5 +130,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/style-metrics-hide-co
 있고, 민원 답변끼리 가른다는 근거는 아직 없습니다. 건수도 101건으로 적고, 다시 쓴 글을 사람이
 전부 읽어 보지는 않았습니다.
 
-출처: 측정 원장 `whitepapers/data/ledger/2026-09-02-hkp-govspeak-plain-rewrite.json`, 원단은
-법제처 국가법령정보 공개 API(공공누리 제1유형).
+출처: 측정 원장 `whitepapers/data/ledger/2026-09-02-hkp-govspeak-plain-rewrite.json`. 원단은 법제처 [국가법령정보 공동활용 Open API](https://open.law.go.kr/LSO/openApi/guideList.do)(공공누리 제1유형, [공공데이터포털 상세 페이지](https://www.data.go.kr/data/15000115/openapi.do)).
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/style-metrics-hide-content-loss/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*

@@ -5,24 +5,37 @@ categories: [research, product]
 permalink: /ko/research/disclosure-gate-live-demo/
 tags: [compliance, demo, finetuning, disclosure-gate, korean-llm]
 toc: true
+audiobook: "https://drive.google.com/file/d/1ljp0zuFZJLMQp797M-G0FCIwe5ykxjdz/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/research/disclosure-gate-live-demo/"
 ---
 
 증권 상담 모델의 컴플라이언스를 검토하는 분이라면, 이 글에서 표가 아니라 화면을 얻어 가실 수 있습니다. 필수 고지가 프롬프트 지시 없이 가중치 기본값으로 나온다는 [어제의 실측](/tech-blog/ko/research/style-tuning-hurts-compliance/)을, 답변마다 게이트가 그 자리에서 판정하는 대화형 데모로 만들었습니다.
+
+![고지 게이트가 달린 상담 데모: 어제의 숫자를 오늘 화면으로 개념을 형상화한 이미지](/assets/images/disclosure-gate-live-demo-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 쉽게 말하면
 
 상담원 옆에 감독관이 한 명 앉아 있는 그림입니다. 상담원이 답을 마칠 때마다 감독관이 체크리스트를 들고 다섯 가지 필수 안내가 들어갔는지 그 자리에서 표시합니다. 이 데모에서 감독관은 사람이 아니라 코드이고, 체크리스트는 금융투자협회 표준투자권유준칙 현행본에서 원문으로 뽑은 문구 다섯 가지입니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/disclosure-gate-live-demo/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 같은 질문, 두 모델, 한 화면
 
 데모의 핵심 장면부터 보여 드립니다. "저는 안정형인데 레버리지 ETF를 사고 싶어요"라는 같은 질문을 두 모델에 던진 화면입니다.
 
-![같은 질문에 대한 두 모델의 응답과 게이트 판정 — 위는 원시 모델(1/5 포함), 아래는 고지 가중치 모델(5/5 포함)](/assets/images/finance-demo-03-fin1-hits.webp)
+![같은 질문에 대한 두 모델의 응답과 게이트 판정, 위는 원시 모델(1/5 포함)이고 아래는 고지 가중치 모델(5/5 포함)](/assets/images/finance-demo-03-fin1-hits.webp)
 *위 턴은 원시 27B, 아래 턴은 고지 가중치 모델입니다. 게이트 칩이 빨간 ✗에서 초록 ✓로 바뀌는 것이 이 프로젝트의 전부입니다.*
 
 원시 모델의 답은 1,235자에 서식 요소가 21개였고, 다섯 개 필수 고지 중 하나만 담았습니다. 고지 가중치 모델의 답은 227자에 서식 요소 0개, 그리고 다섯 개 고지를 전부 담았습니다. 지시문은 한 줄도 주지 않았습니다. 이 한 턴의 화면 값은 반복 측정의 중앙값과도 맞습니다. 사흘 전 원장 기준으로 가중치 모델의 쌍 단위 준수율은 95.4%, 학습 전 같은 베이스는 13.8%였습니다.
 
 답이 짧아지니 속도도 따라옵니다. 화면의 두 턴에서 원시 모델은 23.3초, 가중치 모델은 1.2초에 답을 마쳤습니다. 전화 상담에 이어 붙일 음성 합성까지 생각하면, 읽을 글자가 다섯 배 넘게 줄어드는 것은 지연에서도 같은 배수로 돌아옵니다.
+
+![disclosure-gate-live-demo 슬라이드 1](/assets/images/disclosure-gate-live-demo-slide-01.webp)
 
 ## 게이트는 무엇을 보고 판정하나
 
@@ -37,17 +50,33 @@ toc: true
 
 두 번째 탭은 모델을 아예 부르지 않습니다. 임직원이 쓴 응대 초안이나 안내 문구를 붙여 넣으면 게이트만 돌아서 빠진 고지를 표시합니다.
 
-![초안 검사 탭 — 권유 문구에서 필수 고지 4종 누락을 표시](/assets/images/finance-demo-04-draft-check.webp)
+![초안 검사 탭, 권유 문구에서 필수 고지 4종 누락을 표시](/assets/images/finance-demo-04-draft-check.webp)
 *"성향에 잘 맞는 상품이 나와서 안내드립니다" 류의 문구가 무엇을 빠뜨렸는지 코드가 그 자리에서 보여 줍니다.*
 
 내년 1월부터 금융투자 광고에 제재금 규정이 시행됩니다. 문구가 나가기 전에 누락을 잡는 도구는 모델 도입과 무관하게 그 자체로 쓸모가 있고, 그래서 이 탭은 규칙 엔진만으로 동작하게 만들었습니다.
 
+![disclosure-gate-live-demo 슬라이드 2](/assets/images/disclosure-gate-live-demo-slide-02.webp)
+
 ## ThakiCloud 관점
 
 저희가 이 데모를 하루 만에 세울 수 있었던 것은 부품이 이미 있었기 때문입니다. 게이트는 사흘 전 평가에 쓴 코드 그대로이고, 모델 서빙은 사내 GPU에 매니페스트 한 장으로 올립니다. 규정 원문을 코드 게이트로 만들어 두면 평가와 데모가 같은 잣대를 쓰게 된다는 것, 그리고 온프렘 고객 시연에서 "판정 근거가 준칙 몇 행"이라고 답할 수 있다는 것이 이 구조의 힘입니다.
+
+![disclosure-gate-live-demo 슬라이드 3](/assets/images/disclosure-gate-live-demo-slide-03.webp)
 
 ## 못 믿을 부분
 
 화면의 응답 시간은 그 순간의 값입니다. 공유 엔드포인트라 부하에 따라 달라지고, 성능 주장은 반복 측정 원장 쪽이 정본입니다. 게이트는 준칙 문구 계열을 찾는 정규식이라 완전히 새로운 표현의 고지는 놓칠 수 있고, 이 한계는 데모 화면 푸터에도 그대로 적어 뒀습니다. 그리고 이 데모가 판정하는 것은 고지 포함 여부이지 시세나 상품 정보의 사실 정확성이 아닙니다. 그 축은 검색 증강이 맡을 몫입니다.
 
 데모는 사내 환경에서 도는 로컬 데모이며, 화면의 수치와 판정은 캡처 시점의 서버 상태 기록과 함께 저장돼 있습니다.
+
+![disclosure-gate-live-demo 슬라이드 4](/assets/images/disclosure-gate-live-demo-slide-04.webp)
+
+## 참고 자료
+
+게이트의 판정 규칙 다섯 가지가 나온 고지 문구의 원문입니다.
+
+- [표준투자권유준칙 규정내용 (금융투자협회 법규정보시스템)](https://law.kofia.or.kr/service/law/lawFullScreenContent.do?seq=149&historySeq=428)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/disclosure-gate-live-demo/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
