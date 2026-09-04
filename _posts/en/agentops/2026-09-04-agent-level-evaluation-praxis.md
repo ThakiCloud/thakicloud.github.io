@@ -52,7 +52,17 @@ The evaluation engine grades a multi-turn execution trajectory rather than a sin
 
 ## What not to trust here
 
-This experiment ran on a local instance built from the same code and database, not on our shared development server. This post covers agents that already had an eval sheet, or that we registered one for ourselves. We did not check whether that same ratio holds across the whole catalog. Every grading method that exists today is condition-based, and there is no layer yet that has a judge model score answer quality, so we could not check that part.
+This experiment ran on a local instance built from the same code and database, not on our shared development server. This post covers agents that already had an eval sheet, or that we registered one for ourselves. We did not check whether that same ratio holds across the whole catalog. Every grading method that exists today is condition-based, and there is no layer yet that has a judge model score answer quality, so we could not check that part. The τ-bench comparison also covers a single domain (retail), temperature 0, and one run per model. We did not check whether the same result holds for other domains or across repeated runs.
+
+## We also checked it against an outside benchmark: τ-bench
+
+Everything above confirms our own evaluation engine actually works. But if the grading criteria are ours, the results can look favorable by construction. So we asked the same question again, this time using an external, widely-used benchmark instead of our own judgment. We picked τ-bench-retail, all 115 tasks, a benchmark that simulates retail customer support, and ran our Human-KO 27B against EXAONE-4.5, a 33B-parameter open model, under exactly the same conditions: same tool set, same user simulator, same temperature.
+
+The result was 90/115, 78.3%, an exact match between the two models. Suspicious of a coincidental tie, we compared task by task. Of the 115 tasks, 95 matched (both passed or both failed), and of the remaining 20 where they diverged, it split exactly 10-10. This isn't mixed-up data; it means our much smaller model matched a larger open model on real agentic tasks.
+
+Getting to this number involved one infrastructure issue. EXAONE's first full run showed a raw score of 56.5%. On inspection, that wasn't the model failing to solve tasks; a connection dropped mid-run and 38 tasks were entirely swallowed by "connection refused" errors. We discarded that contaminated number, added a connection watchdog, and reran just those 38. One of those reruns dropped again partway through, so we reran the remaining tasks once more, and only accepted the final 115-task set once it had zero remaining errors.
+
+In plain terms: an internal grading standard alone can just mean "we say we're good." It's only credible once the same score holds up against an outside yardstick.
 
 ## References
 
