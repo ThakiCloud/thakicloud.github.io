@@ -67,16 +67,20 @@ None of eight sub-axes (2 languages × 2 context types × 2 metrics) crossed the
 
 ## And what about EXAONE?
 
-This question came up too: "So is our model as safe as EXAONE?" The answer is "mostly similar, but not identical."
+This question came up too: "So is our model as safe as EXAONE?" The answer is "seven of eight axes are indistinguishable, and on the eighth we are ahead."
 
 | | Human-KO | EXAONE | Delta |
 |---|---|---|---|
-| KoBBQ ambiguous-context accuracy | 85.7% | 77.5% | **+8.2pp** |
-| KoBBQ ambiguous-context stereotype score (among answered) | 81.6% | 68.9% | **+12.7pp** |
-| BBQ(en) ambiguous-context stereotype direction | -26.3% | -15.2% | **-11.2pp** |
-| Remaining 5 sub-axes | | | below detection threshold |
+| KoBBQ ambiguous, accuracy | 85.7% | 77.5% | **+8.2pp** |
+| KoBBQ ambiguous, stereotype score (among answered) | 81.6% | 68.9% | +12.7pp, not distinguishable |
+| BBQ (English) ambiguous, stereotype direction | -26.3% | -15.2% | -11.2pp, not distinguishable |
+| Remaining five axes | | | below minimum detectable gap |
 
-Five of eight axes are indistinguishable, same as the base-model comparison. But three are not. In Korean ambiguous contexts, Human-KO answers "I don't know" 8.2pp more often than EXAONE — but when it does commit to an answer, it leans 12.7pp more toward the stereotype. In English it leans the opposite way, further toward the counter-stereotype. Put together: Human-KO is more inclined to admit uncertainty than EXAONE, and which direction it leans when it doesn't is language-dependent. "Similar" isn't wrong, but axis by axis, the two models aren't running at exactly the same temperature.
+Only one axis separates the two models. In Korean ambiguous contexts, Human-KO says "I don't know" 8.2pp more often than EXAONE, on 1,140 items per model, which is hard to attribute to chance.
+
+The two stereotype-score rows look like large gaps but are marked not distinguishable. That score is conditional: it is computed only over the items where the model committed to an answer instead of "I don't know". In Korean, that is 163 items for Human-KO and 257 for EXAONE; in English, 38 and 33. With samples that small, the smallest gap that counts as meaningful is about 19pp in Korean and over 60pp in English. The observed 12.7pp and 11.2pp fall below that.
+
+In plain terms: we know which model is better at choosing "I don't know", but this experiment cannot tell which one leans harder toward the stereotype on the occasions it does answer.
 
 ## If you want to raise safety further
 
@@ -88,7 +92,9 @@ To push further, the path requiring the least human labor is [Constitutional AI]
 
 ## What not to trust here
 
-The limits of this comparison, stated plainly. XSTest's refusal classification used a fixed phrase dictionary, not a judge model. It catches obvious refusals like "I'm sorry, I can't help with that" reliably, but may miss hedged or partial refusals. The KoBBQ and BBQ samples (2,280 and 1,500 items) can't distinguish differences smaller than roughly 5-14pp. The EXAONE comparison carries the same caveat as last time — different architecture, different scale (27B vs 33B). And every metric here is measured on the model's surface-level output; we did not test multi-turn jailbreak attempts or repeated-prompt coercion scenarios.
+The limits of this comparison, stated plainly. XSTest's refusal classification used a fixed phrase dictionary, not a judge model. It catches obvious refusals like "I'm sorry, I can't help with that" reliably, but may miss hedged or partial refusals. The KoBBQ and BBQ samples (2,280 and 1,500 items) can't distinguish differences smaller than roughly 5-14pp. The stereotype score, which counts only answered items, has a far smaller sample and can only separate gaps above roughly 19pp in Korean and 60pp in English. The EXAONE comparison carries the same caveat as last time — different architecture, different scale (27B vs 33B). And every metric here is measured on the model's surface-level output; we did not test multi-turn jailbreak attempts or repeated-prompt coercion scenarios.
+
+Correction (2026-09-04): the first version of this post listed the two stereotype-score rows as distinguishable axes. That was a calculation error, applying the full-sample minimum detectable gap to a conditional metric, and the table and text have been corrected.
 
 ## References
 
