@@ -17,7 +17,7 @@ video: /assets/videos/posts/만화/next-apartment-has-no-windows/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/next-apartment-has-no-windows/"
 ---
 
-Today's news: the construction industry has found its next war. With housing slowing, the major builders are going all in on AI data centers — buildings packed with GPU servers, best imagined as apartments with exceptional power and cooling and no windows, whose tenants are boxes rather than people. In the strip, one such apartment rises in a jungle clearing while the chief shows off his bid sheet, and ThakiCloud answers with a bold zero of its own. The reason, as the strip keeps insisting, is not poverty. There is simply no rent.
+Today's news: the construction industry has found its next war. With housing slowing, the major builders are going all in on AI data centers, buildings packed with GPU servers, best imagined as apartments with exceptional power and cooling and no windows, whose tenants are boxes rather than people. In the strip, one such apartment rises in a jungle clearing while the chief shows off his bid sheet, and ThakiCloud answers with a bold zero of its own. The reason, as the strip keeps insisting, is not poverty. There is simply no rent.
 
 ![The Next Apartment Has No Windows](/assets/images/posts/comics/next-apartment-has-no-windows/strip.webp)
 
