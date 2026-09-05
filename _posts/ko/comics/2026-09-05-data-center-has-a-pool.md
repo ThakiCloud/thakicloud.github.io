@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/data-center-has-a-pool/strip.webp
 video: /assets/videos/posts/만화/data-center-has-a-pool/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/data-center-has-a-pool/"
 ---
 
 오늘 뉴스는 대형 건설사들의 AI 데이터센터 수주전입니다. 수주전은 새 건물을 누가 지을지 겨루는 입찰 경쟁이고, 주택 경기가 식자 건설사들이 AI 데이터센터를 다음 대형 아파트로 보고 총력을 기울인다는 내용입니다. 데이터센터는 서버 전력이 유독 강한 건물이라, 물로 칩을 식히는 냉방이 핵심 설비입니다. 이 만화에서는 수주장이 아파트 감각 그대로 편의시설을 계획하고, 항목이 길어지다가 마지막에 풀장의 진짜 사용자가 드러납니다.
@@ -22,7 +23,7 @@ video: /assets/videos/posts/만화/data-center-has-a-pool/comic.mp4
 
 > 원 뉴스: [주택 넘어 AI 데이터센터로…대형 건설사 '수주전' 본격화](https://n.news.naver.com/mnews/article/421/0009147733?sid=101) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/data-center-has-a-pool/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/data-center-has-a-pool/comic.mp4" type="video/mp4">
@@ -38,3 +39,16 @@ video: /assets/videos/posts/만화/data-center-has-a-pool/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`academic_edge` 스타일)으로 요약한 슬라이드입니다.
+
+![data-center-has-a-pool 슬라이드 1](/assets/images/data-center-has-a-pool-slide-01.webp)
+
+![data-center-has-a-pool 슬라이드 2](/assets/images/data-center-has-a-pool-slide-02.webp)
+
+![data-center-has-a-pool 슬라이드 3](/assets/images/data-center-has-a-pool-slide-03.webp)
+
+![data-center-has-a-pool 슬라이드 4](/assets/images/data-center-has-a-pool-slide-04.webp)
+

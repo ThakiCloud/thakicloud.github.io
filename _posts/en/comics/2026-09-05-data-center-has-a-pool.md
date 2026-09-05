@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/data-center-has-a-pool/strip.webp
 video: /assets/videos/posts/만화/data-center-has-a-pool/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/data-center-has-a-pool/"
 ---
 
 Today's news: the big builders are locked in a bidding war over AI data centers. With housing quiet, the firms are treating a data center like the next big apartment tower and pouring everything into the contracts. Data centers run hot, which is why they cool their chips with water. In this strip, a construction chief plans the building with full apartment instincts, a pool, a gym, a lobby, and the amenity list keeps growing until the true user of the pool finally shows up.
@@ -22,7 +23,7 @@ Today's news: the big builders are locked in a bidding war over AI data centers.
 
 > Source: [주택 넘어 AI 데이터센터로…대형 건설사 '수주전' 본격화](https://n.news.naver.com/mnews/article/421/0009147733?sid=101) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/data-center-has-a-pool/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/data-center-has-a-pool/comic.mp4" type="video/mp4">

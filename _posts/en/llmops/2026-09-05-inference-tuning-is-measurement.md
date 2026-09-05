@@ -22,6 +22,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/llmops/inference-tuning-is-m
 
 We had to configure the same model, on one GPU, two different ways. If you run an inference server and have wondered what to set the concurrency limit to, this post has an answer. The short version is that the number is not a constant. Your request length decides it.
 
+![Illustration of the core idea of Same GPU, Same Model, Opposite Settings](/assets/images/inference-tuning-is-measurement-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Plain terms
 
 Think of your server's memory as a parking lot. The space where the model keeps the conversation is the lot's area, and each request is a car. A separate setting decides how many cars you let in at once, and that setting is the subject of this post.
@@ -34,11 +37,11 @@ In plain terms: do not copy a concurrency setting from someone else's deployment
 
 We put a 27-billion-parameter model on a single NVIDIA B200, compressed to 4 bits. That compression is called quantization, and it is what makes the model fit on one card.
 
-The model's layers are not alike. Of its 64 layers, only 16 need more memory as the conversation grows. The other 48 use a fixed amount regardless of length. That is why a one-million-token context fits on a single card. A conventional model where every layer grows would need 137 GB, which does not fit.
+The model's layers are not alike. Of its 64 layers, only 16 need more memory, i.e. the [KV cache](https://docs.vllm.ai/en/stable/features/automatic_prefix_caching.html), as the conversation grows. The other 48 use a fixed amount regardless of length. That is why a one-million-token context fits on a single card. A conventional model where every layer grows would need 137 GB, which does not fit.
 
-We also attached a drafter. A small model proposes several next tokens and the large model verifies them in one pass. In our measurements about three proposals in ten were accepted, and each pass produced 3.4 tokens on average.
+We also attached a [drafter](https://docs.vllm.ai/en/stable/features/speculative_decoding.html). A small model proposes several next tokens and the large model verifies them in one pass. In our measurements about three proposals in ten were accepted, and each pass produced 3.4 tokens on average.
 
-Then we measured both endpoints from 1 to 256 concurrent requests. We changed one setting at a time, because otherwise you cannot say what caused what.
+Then we raised the concurrency limit, [max_num_seqs](https://docs.vllm.ai/en/stable/configuration/engine_args.html), from 1 to 256 and measured both endpoints. We changed one setting at a time, because otherwise you cannot say what caused what.
 
 ## What we found
 
@@ -54,7 +57,7 @@ Then we measured both endpoints from 1 to 256 concurrent requests. We changed on
 
 **The drafter came through intact.** We expected the narrower format to hurt how often draft tokens are accepted. After the change acceptance stayed between 30 and 37 percent, at 3.1 to 3.6 tokens per pass. That matches the figures from before.
 
-**Spare memory is margin, not waste. We broke that rule once.** The engine offers to spend every remaining byte and prints the exact figure. After switching formats we used that figure as printed, and the server never came up. It crash-looped, one gigabyte short. The figure had been measured under the old format, and the new one needs slightly more elsewhere. We settled on a value that leaves 6 GB free.
+**Spare memory is margin, not waste. We broke that rule once.** The engine, on the strength of [gpu_memory_utilization](https://docs.vllm.ai/en/stable/configuration/engine_args.html), offers to spend every remaining byte and prints the exact figure. After switching formats we used that figure as printed, and the server never came up. It crash-looped, one gigabyte short. The figure had been measured under the old format, and the new one needs slightly more elsewhere. We settled on a value that leaves 6 GB free.
 
 In plain terms: pushing a setting to its maximum and tuning it correctly are different jobs.
 
