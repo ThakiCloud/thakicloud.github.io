@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/selftest-passed-hardw
 **결함 다섯 개**를 찾았습니다. 그중 셋은 자체 점검으로는 원리적으로 볼 수 없는 자리에
 있었습니다.
 
+![짐 목록과 현관문의 폭 비유를 형상화한 이미지](/assets/images/selftest-passed-hardware-disagreed-hero.webp)
+*글의 핵심 비유를 형상화했습니다.*
+
 ## 쉽게 말하면
 
 이사 가기 전에 짐을 다 싸고 목록도 두 번 확인한 상황입니다. 목록은 완벽합니다. 그런데
@@ -33,6 +36,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/selftest-passed-hardw
 현관문 폭, 엘리베이터 크기, 주차장 높이는 **가서 재봐야** 알 수 있습니다. 저희가 찾은
 다섯 개 중 셋이 정확히 그 현관문 폭이었습니다.
 
+![selftest-passed-hardware-disagreed 슬라이드 1](/assets/images/selftest-passed-hardware-disagreed-slide-01.webp)
+
 ## 무엇을 해봤나
 
 학습 속도와 추론 처리량을 재는 도구 여덟 개를 만들었습니다. 각각 자체 점검을 붙여 전부
@@ -40,6 +45,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/selftest-passed-hardw
 돌렸습니다.
 
 목적은 성능 숫자가 아니라 **코드가 이 장비에서 도는가**였습니다.
+
+![selftest-passed-hardware-disagreed 슬라이드 2](/assets/images/selftest-passed-hardware-disagreed-slide-02.webp)
 
 ## 나온 결과
 
@@ -89,6 +96,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/selftest-passed-hardw
 실제로는 장비를 더 알차게 쓰고 있는 중입니다. 긴 대화 기록을 다루는 서비스라면 두 숫자를
 같이 봐야 합니다.
 
+![selftest-passed-hardware-disagreed 슬라이드 3](/assets/images/selftest-passed-hardware-disagreed-slide-03.webp)
+
 ## 그래서 무엇을 바꾸면 되나
 
 자체 점검을 더 촘촘히 쓰는 것보다 **가장 작은 실물 장비에서 한 번 태우는 것**이 값이
@@ -99,6 +108,23 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/selftest-passed-hardw
 
 그리고 자체 점검을 쓸 때는 **기대값을 실측에서 가져오세요.** 위 다섯 번째 결함은 저희가
 실제 숫자를 기대값으로 박아 넣은 뒤에야 잡혔습니다. 처음 쓴 점검은 그냥 통과시켰습니다.
+
+이 흐름을 한 장으로 모으면 이렇습니다.
+
+```mermaid
+flowchart TD
+    A["자체 점검<br/>짐 목록 검사, 빠진 물건과 이름"] --> B["전부 통과"]
+    B --> C["가장 작은 실물 장비에서 한 번 실행<br/>H100 1장, 작은 모델"]
+    C --> D["결함 5건"]
+    D --> D1["볼 수 없던 3건<br/>없는 도메인, 파일 이름 규약, 캐시 오염"]
+    D --> D2["계열 바뀌면 터지는 1건<br/>고정된 레이어 이름"]
+    D --> D3["문서에 쓰고 코드에서 안 지킨 1건<br/>무게만 보는 적재 판정"]
+    D1 --> E["그 층은 실행해야만 드러납니다<br/>주소 실재, 규약 일치, 캐시 상태"]
+    D2 --> E
+    D3 --> E
+```
+
+![selftest-passed-hardware-disagreed 슬라이드 4](/assets/images/selftest-passed-hardware-disagreed-slide-04.webp)
 
 ## 못 믿을 부분
 

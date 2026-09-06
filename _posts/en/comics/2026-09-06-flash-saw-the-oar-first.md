@@ -12,12 +12,12 @@ tags:
   - ai-research
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/flash-saw-the-oar-first/strip.png
+image: /assets/images/posts/comics/flash-saw-the-oar-first/strip.webp
 ---
 
 Today's news is a new vision model, DeepSeek-V4-Flash-Vision-Exp, trending on the open platform. Vision means it can see images, Flash means it is very fast, and Exp means it is an experimental build released for testing rather than finished work. Being fast and experimental, our team decided to test it on a quiet alpine lake. The lake had nothing in it, but the model saw a whale, a UFO, and a mustachioed fish. And it saw the oar fall two seconds before the oar fell.
 
-![It Saw the Oar Before It Fell](/assets/images/posts/comics/flash-saw-the-oar-first/strip.png)
+![It Saw the Oar Before It Fell](/assets/images/posts/comics/flash-saw-the-oar-first/strip.webp)
 
 > Source: [deepseek-ai/DeepSeek-V4-Flash-Vision-Exp](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp) · hf-trending
 

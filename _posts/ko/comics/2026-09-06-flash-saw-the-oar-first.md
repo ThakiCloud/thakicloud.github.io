@@ -12,12 +12,12 @@ tags:
   - ai-research
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/flash-saw-the-oar-first/strip.png
+image: /assets/images/posts/만화/flash-saw-the-oar-first/strip.webp
 ---
 
 오늘 뉴스는 AI 커뮤니티에 나타난 비전 모델 'DeepSeek-V4-Flash-Vision-Exp'입니다. 비전은 이미지를 '본다'는 뜻이고, 플래시는 번개 같은 속도를 뜻하며, Exp(실험용)는 완성이 아닌 테스트용으로 나온 빌드라는 뜻입니다. 워낙 빠리고 실험적이다 보니 우리 팀은 조용한 알프스 호수에서 테스트를 하기로 했습니다. 호수에는 아무것도 없었는데, 모델의 눈에는 고래, UFO, 수염 난 생선이 보였습니다. 그리고 노가 물에 빠지기 2초 전에, 노가 빠지는 것도 봤습니다.
 
-![플래시라 부르는 모델이, 노 빠짐을 2초 전에 봤다](/assets/images/posts/만화/flash-saw-the-oar-first/strip.png)
+![플래시라 부르는 모델이, 노 빠짐을 2초 전에 봤다](/assets/images/posts/만화/flash-saw-the-oar-first/strip.webp)
 
 > 원 뉴스: [deepseek-ai/DeepSeek-V4-Flash-Vision-Exp](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp) · hf-trending
 

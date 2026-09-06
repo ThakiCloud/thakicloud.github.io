@@ -23,6 +23,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/the-logging-discipline/"
 ebook: /assets/ebooks/the-logging-discipline.pdf
 ebook_title: "무언가 말해주는 시스템"
 ebook_pages: 32
+audiobook: "https://drive.google.com/file/d/1FuvvG2Sg5DZOWJL-kQj3ZQVycsmRY71A/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 혼자서 프로덕션을 돌리는 개발자를 위한 글입니다. 읽고 나면 지금의 로그가 증거인지 소문인지 판별하는 기준, 그리고 그 기준을 채우는 순서를 갖게 됩니다.
@@ -30,6 +33,9 @@ ebook_pages: 32
 결론부터 말합니다. 로그는 나중에 시스템에게 물릴 질문의 답을 미리 써두는 행위입니다. 시스템은 이미 지난 일을 겪었고 지난 일은 로그에 남겨진 만큼만 남습니다. 남겨지지 않은 일은 일어난 일일지라도 증명이 안 되며, 증명이 안 되는 일은 새벽 2시에는 없는 일과 다르지 않습니다.
 
 새벽 2시에 결제 에러율이 5퍼센트를 넘겼다는 알림이 오면, 그 뒤의 30분은 같은 네 질문으로 채워집니다. 에러율이 언제부터 올라왔나, 어떤 요청이 실패하고 있나, 실패는 내 코드에서 일어나는 건지 외부에서 오는 건지, 어제 내가 건드린 것과 관련이 있는가. 네 답이 로그에 남아 있으면 새벽은 견딜 만하고, 남아 있지 않으면 새벽은 추측 게임이 됩니다. 이 글은 한 가지 주장을 끝까지 따집니다. 로그 줄의 가치는 쓰는 순간에 정해진다.
+
+![로그는 미리 써둔 답이다 개념을 형상화한 이미지](/assets/images/the-logging-discipline-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 새벽 2시에는 기억이 가장 위험한 출처다
 
@@ -57,6 +63,10 @@ ebook_pages: 32
 
 네 줄이 15초를 설명합니다. 벤더가 한 번 502를 던졌고 재시도 대기 15초, 두 번째 시도가 210밀리초에 성공했다는 사실입니다. 줄의 수가 문제가 아닙니다. 관련이 있는 줄이, 관련을 알 수 있는 형태로, 나중에 찾을 수 있는 자리에 남아 있는가가 문제입니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/the-logging-discipline/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 레벨은 독자에게 하는 약속이다
 
 처음에는 모든 것이 중요합니다. 그래서 모든 줄이 INFO가 됩니다. 서버를 시작했습니다, 요청을 받았습니다, 배치 작업을 마쳤습니다, 다 같은 눈높이에 놓입니다. 결과는 하루 10만 줄의 INFO이고 그 가운데 새벽에 필요한 줄이 있습니다. 그런데 찾을 수 없습니다. 찾지 못한 이유는 그 줄과 똑같은 줄이 10만 번 더 있었기 때문입니다.
@@ -83,6 +93,8 @@ ERROR payment call failed provider=stripe status=502 latency_ms=3120 request_id=
 
 첫 줄은 뭔가 실패했다는 것만 알립니다. 두 번째 줄은 뭘, 어디에서, 어떻게, 어느 요청이 실패했는지를 알립니다. stripe가 502를 던졌고 두 번째 시도였다는 사실까지. 시작과 판단 사이의 거리가 이 두 줄 사이의 거리입니다. 테스트를 통과하지 못하는 줄은 독자에게 빈칸을 요구하는 줄이고, 빈칸은 컨텍스트로 채워집니다. 그런데 컨텍스트가 최악인 시점이 바로 새벽 2시입니다.
 
+![the-logging-discipline 슬라이드 1](/assets/images/the-logging-discipline-slide-01.webp)
+
 ## 기계가 찾을 수 있는 줄을 쓴다
 
 '결제 API 2026-03-14 09:12:33 ERROR request req_9f2k failed' 같은 텍스트 줄은 사람이 읽기는 합니다. 다만 사람만이 읽습니다. 14일에 실패한 요청을 전부 찾으려면, request ID가 줄의 어디쯤 있는지 기억하고 패턴을 맞춰야 합니다. 필드의 순서가 한 칸만 어긋나면 grep이 끊깁니다.
@@ -108,6 +120,8 @@ worker 09:12:34 INFO retry scheduled next_in_ms=15000
 payment-api 09:12:47 INFO payment succeeded attempt=2
 ```
 
+![the-logging-discipline 슬라이드 2](/assets/images/the-logging-discipline-slide-02.webp)
+
 ## 로그는 다섯 가지 얼굴로 거짓말한다
 
 '로그가 사실이다'를 구호로 삼으면 안 됩니다. 로그가 거짓말하는 방식은 구조이고 흔한 거짓말은 다섯 가지이며 각자의 해독제가 이미 알려져 있습니다. 얼굴을 알면 의심할 곳이 줄어듭니다. 순서가 뒤집혀 보이면 시계를, 마지막 줄이 없으면 버퍼를, 같은 시각이 두 개면 형식을 의심합니다.
@@ -122,6 +136,8 @@ payment-api 09:12:47 INFO payment succeeded attempt=2
 
 존재하는 줄만 읽는 분석은 가장 중요한 증거를 놓칩니다. 증거는 없는 줄에도 있기 때문입니다. 문제 서비스의 시간 창 안에서 마지막 줄을 찾고 다음으로 기대되는 줄이 있는지 봅니다. 마지막 줄이 09:12:31의 request received이고, 다음으로 기대되는 provider call start가 없다면, 프로세스는 그 둘 사이에 죽은 것입니다. 경계에 로그를 쓰면 마지막 로그가 위치를 알려줍니다.
 
+![the-logging-discipline 슬라이드 3](/assets/images/the-logging-discipline-slide-03.webp)
+
 ## 쓰지 않는 것도 규율이다
 
 로그 규율은 무엇을 쓸까만 다루지 않습니다. 무엇을 쓰지 않을까도 다룹니다. 첫 번째 종류는 안전입니다. 시크릿, API 키, 토큰, 비밀번호는 영원히 로그에 들어가면 안 됩니다. 시크릿을 한 번 실어 보낸 로그는 영원히 오염됩니다. 로그 저장 서비스로 복제되고 백업으로 복제되고 아카이브로 복제되며 오염이 퍼진 경로는 역추적할 수 없습니다. 실수는 한 번이면 충분합니다.
@@ -134,6 +150,8 @@ payment-api 09:12:47 INFO payment succeeded attempt=2
 
 줄의 개수에도 예산이 필요합니다. 하나의 요청이 정상적으로 끝나면 INFO는 3줄 안팎, 시작, 중간 경계, 성공입니다. 한 요청이 INFO 20줄을 만든다면, 그 20줄 가운데 새벽에 필요한 줄은 몇 줄인가, 대부분 3줄보다 적습니다. 나머지는 DEBUG로 내려 보냅니다. 예산을 정하면 줄을 줄이는 일이 허용되고 줄이는 것은 신호를 끌어올리는 일입니다.
 
+![the-logging-discipline 슬라이드 4](/assets/images/the-logging-discipline-slide-04.webp)
+
 ## 신뢰는 훈련에서 자란다
 
 찾은 것을 믿어도 되는가는 가장 무거운 질문입니다. 찾을 수 있지만 거짓인 로그는 없는 로그보다 위험합니다. 잘못된 확신을 주기 때문에, 확신이 잘못되면 행위가 잘못되고 행위가 잘못되면 인시던트는 길어집니다. 그런데 신뢰는 훈련으로 자랍니다.
@@ -145,3 +163,18 @@ payment-api 09:12:47 INFO payment succeeded attempt=2
 인시던트가 끝나면 메모를 세 줄 씁니다. 뭐가, 어떤 증거, 뭐를 바꿨다. 증거는 느낌으로 쓰지 않고 쿼리로 씁니다. '지난 15분 ERROR 검색, provider 502 확인'이 메모이고 '결제 벤더 같았어'는 메모가 아닙니다. 형식은 고정, 인시던트 이름, 시간 창, 원인 한 줄, 쿼리 한 줄, 조치 한 줄. 형식이 같으면 메모들은 나중에 서로 검색됩니다.
 
 끝은 점검입니다. 지금 시스템의 로그를 열어서 ERROR 줄이 새벽 2시에 일어나게 만드는 줄인지, 한 줄만 읽어도 행동할 수 있는지, 모든 줄에 ts와 service, level, msg, request_id가 있는지, 각 단계에 진입과 출구가 있는지 봅니다. 전부 답할 필요는 없습니다. 하나를 답할 때마다 새벽은 조금 부드러워집니다. 이 글의 논증을 장으로 늘리고 각 장 끝에 점검을 둔 전자책은 PDF로 함께 제공됩니다.
+
+## 참고 자료
+
+본문의 로그 레벨, 시계 동기화, 한 줄 JSON, 요청 ID 전파, 로테이션 주장은 아래 자료와 대조해 보실 수 있습니다.
+
+- [RFC 5424: The Syslog Protocol (IETF)](https://datatracker.ietf.org/doc/html/rfc5424)
+- [logging: Facility for logging in Python (Python docs)](https://docs.python.org/3/library/logging.html)
+- [JSON Lines (jsonlines.org)](https://jsonlines.org/)
+- [Context propagation (OpenTelemetry)](https://opentelemetry.io/docs/concepts/context-propagation/)
+- [Network Time Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Network_Time_Protocol)
+- [logrotate(8): Linux manual page](https://man7.org/linux/man-pages/man8/logrotate.8.html)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/the-logging-discipline/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*

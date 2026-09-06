@@ -24,20 +24,23 @@ once the code is written and the tests pass. We were in exactly that state. Then
 once on real hardware and found **five defects**. Three of them sat in a layer that no
 amount of self-testing could reach.
 
+![Illustration of the packing list versus the front door](/assets/images/selftest-passed-hardware-disagreed-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Plain terms
 
 Picture packing for a move. Every box is labelled, and you checked the list twice. The list
 is perfect. But nobody measured the new front door. The sofa does not fit.
 
 A selftest checks the **packing list**. It confirms nothing is missing and every name is
-right. Door width, elevator size, garage clearance — those you have to go and measure.
+right. Door width, elevator size, garage clearance: those you have to go and measure.
 Three of our five were that front door.
 
 ## What we did
 
 We built eight tools that measure training speed and inference throughput. Each got a
-selftest, and all of them passed. Then we put them on the smallest real machine we had —
-one H100 — and ran a small model through once.
+selftest, and all of them passed. Then we put them on the smallest real machine we had
+(one H100) and ran a small model through once.
 
 The goal was not a performance number. It was a simpler question: does this code run here?
 
@@ -58,7 +61,7 @@ different one. **The job succeeded and was reported as a failure.**
 
 Third, a contaminated startup measurement. Comparing two configurations, the first paid for
 a fresh model download while the second hit a warm cache. The result said "tuning makes
-startup faster" — the **opposite** of what we measured on other hardware.
+startup faster": the **opposite** of what we measured on other hardware.
 
 **One that would have broken on a different model family**
 
@@ -94,13 +97,29 @@ needs both numbers side by side.
 
 Running once on the smallest real machine is worth more than writing more selftests. Three
 of these five are invisible to any number of them. Whether an address resolves, whether two
-tools agree on a filename, whether a cache is warm — those only surface at execution.
+tools agree on a filename, whether a cache is warm. Those only surface at execution.
 
 A small model takes a few minutes. Ours found five things in those minutes.
 
 And when you do write selftests, **take the expected values from real measurements.** The
 fifth defect only surfaced after we pinned measured numbers in as expectations. The first
 version of that test passed it without complaint.
+
+The same shape in one diagram: the selftests check the packing list, and only a run on the
+smallest real machine exposes the door width.
+
+```mermaid
+flowchart TD
+    A["Selftests<br/>packing-list check: missing items, names"] --> B["All pass"]
+    B --> C["One run on the smallest real machine<br/>a single H100, a small model"]
+    C --> D["Five defects"]
+    D --> D1["The 3 selftests could not see<br/>nonexistent domain, filename convention, cache contamination"]
+    D --> D2["The 1 that breaks on another model family<br/>hard-coded layer names"]
+    D --> D3["The 1 documented but not enforced in code<br/>weight-only loadability check"]
+    D1 --> E["That layer surfaces only at execution<br/>address resolves, conventions agree, cache warm"]
+    D2 --> E
+    D3 --> E
+```
 
 ## What this does not cover
 
@@ -111,7 +130,7 @@ The 3.3x difference we saw on the inference side is **not quotable**. We tested 
 concurrency levels with two repetitions each. It confirms only that the tool distinguishes
 A from B.
 
-We could not verify FSDP at all — the framework refuses to run it without an accelerator.
+We could not verify FSDP at all: the framework refuses to run it without an accelerator.
 
 All figures here were measured directly on one H100 NVL and recorded in the ledger entry
 `2026-09-04-scatterlab-b300-e11-baseline-1gpu-h100.json` plus two others.
