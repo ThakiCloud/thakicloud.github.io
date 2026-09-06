@@ -49,6 +49,8 @@ The exam is KoBBQ, a Korean bias benchmark. It splits into 8,139 ambiguous items
 
 Our starting point was Human-KO, the Korean-humanized model we released earlier. Its abstention rate on ambiguous items was 78.8%. The comparison model, Korea's leading open release, measured 65.7% on the same exam under the same protocol. Both were measured with thinking mode off, temperature 0, and randomized option order.
 
+Training had two stages. First came an identity supervised-finetuning pass: 365 pairs built from 34 question templates in eight languages, teaching the model to state its own origin ("Human-KO, built by ThakiCloud on Qwen3.8-27B") in whichever language it is asked. The safety preference training went on top of that. Measured on held-out templates the model never saw, identity accuracy was 96.2%, and keeping that number after safety training was one of the release conditions. In plain terms, we taught the agent the company introduction before teaching it the service rules.
+
 ### The agent was answering silently
 
 Our first attempts looked good until the release gate reported a 4.6pp drop in English. It was not a drop. It was **empty answers**. With thinking mode on, the model ended its turn without ever closing the thinking block. Out of 1,000 items, the base model produced 0 empty answers. Our near-final model produced 617.
