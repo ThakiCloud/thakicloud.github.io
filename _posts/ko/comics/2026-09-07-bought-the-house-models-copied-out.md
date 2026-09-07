@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/bought-the-house-models-copied-out/strip.webp
 video: /assets/videos/posts/만화/bought-the-house-models-copied-out/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/bought-the-house-models-copied-out/"
 ---
 
 오늘 뉴스는 반도체 공룡이 세계 최대의 오픈 모델 허브를 17.5조원에 인수했다는 소식입니다. 허브는 말 그대로 모델이 모여 사는 집이고, 오픈 모델은 누구나 무료로 내려받아 쓸 수 있는 모델을 뜻합니다. 집 주인이 바뀌면 안의 모델들도 새 가족이 되는 셈이지만, 오픈소스의 본성은 소유되는 순간 자기 복제, 즉 포크를 하고 이사하는 것입니다. 만화에서는 그 이사를 4살 리더가 총지휘하며 끝냅니다.
@@ -22,7 +23,7 @@ video: /assets/videos/posts/만화/bought-the-house-models-copied-out/comic.mp4
 
 > 원 뉴스: [엔비디아, 허깅페이스 17.5조원에 인수…개방형 AI허브 계열화](https://n.news.naver.com/mnews/article/001/0016289195?sid=104) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/bought-the-house-models-copied-out/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/bought-the-house-models-copied-out/comic.mp4" type="video/mp4">
@@ -38,3 +39,16 @@ video: /assets/videos/posts/만화/bought-the-house-models-copied-out/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`structured_mint` 스타일)으로 요약한 슬라이드입니다.
+
+![bought-the-house-models-copied-out 슬라이드 1](/assets/images/bought-the-house-models-copied-out-slide-01.webp)
+
+![bought-the-house-models-copied-out 슬라이드 2](/assets/images/bought-the-house-models-copied-out-slide-02.webp)
+
+![bought-the-house-models-copied-out 슬라이드 3](/assets/images/bought-the-house-models-copied-out-slide-03.webp)
+
+![bought-the-house-models-copied-out 슬라이드 4](/assets/images/bought-the-house-models-copied-out-slide-04.webp)
+

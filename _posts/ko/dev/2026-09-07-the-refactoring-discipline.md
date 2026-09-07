@@ -22,6 +22,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/the-refactoring-discipli
 ebook: /assets/ebooks/the-refactoring-discipline.pdf
 ebook_title: "리팩토링의 규율"
 ebook_pages: 31
+audiobook: "https://drive.google.com/file/d/1M8AB9wkyJzvvCZlVAuBOVof0faW9Gk89/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 자기가 지은 코드베이스를 혼자 수년째 돌리고 있다면, 이 글은 당신을 위한 것이다. 얻을 것은 한 줄의 잣대와 절차 하나입니다. 어디부터 고칠지를 어떻게 정하고 어떻게 고쳐야 동작을 깨뜨리지 않는지.
@@ -63,6 +66,10 @@ ebook_pages: 31
 그래서 고칠 순서를 정할 때 첫 질문은 언제나, 내가 언제 또 만지게 되느냐다.
 운영에서 장애가 잦은 서비스를 오래되고 추하지만 안정된 서비스보다 먼저 보는 것과 같은 논리죠.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/the-refactoring-discipline/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 고칠 곳의 목록은 git 히스토리가 낸다
 
 그렇다면 변경 빈도는 어떻게 재는가.
@@ -82,6 +89,8 @@ git log --since="6 months ago" --name-only --oneline | sort | uniq -c | sort -rn
 
 파일을 열기 전에 냄새를 볼 수 있는 신호도 있죠. 파일 이름이 util이든 helper든 manager든, 대개 로직의 집이 없는 쓰레기장입니다. 또 고침, 임시 처리, 여기만 건드리지 마 같은 커밋 메시지는 코드가 마찰을 냈다는 직접적 증거입니다. 이 세 신호를 먼저 훑고 파일을 열면, 판단이 훨씬 빨라집니다.
 
+![the-refactoring-discipline 슬라이드 1](/assets/images/the-refactoring-discipline-slide-01.webp)
+
 ## 고쳐도 좋을 만한 추함의 역순서, 세 가지
 
 반대 목록도 같은 무게로 적어 두자. 고치고 싶어도 고치지 말아야 하는 추한 코드는 세 종류입니다. 첫째는 데드 코드입니다. 이미 대체된 기능, 더 이상 읽히지 않는 설정.
@@ -96,6 +105,8 @@ git log --since="6 months ago" --name-only --oneline | sort | uniq -c | sort -rn
 
 이 세 종류는 공통점이 있죠. 고치면 기분이 좋고 회수는 없기 때문이다. 변경 빈도라는 잣대의 역할은 바로 그 만족감에서 당신을 지키는 일입니다. 바꾸지 않을 코드를 고치고 싶어지는 순간, 멈추고 회수가 언제 오느냐를 물어 보라. 답이 나오지 않는다면, 그 코드는 이번 주에는 안 되는 겁니다.
 
+![the-refactoring-discipline 슬라이드 2](/assets/images/the-refactoring-discipline-slide-02.webp)
+
 ## 앵커 없이는 한 줄도 움직이지 않는다
 
 잣대와 목록은 정했습니다. 이제 진짜 어려운 질문입니다. 동작을 바꾸지 않고 코드를 실제로 움직이는 방법. 동작은 그대로라는 약속은, 검증 수단이 없으면 공염불입니다. 테스트 없이 코드를 옮기면, 동작이 바뀌었는지를 아는 유일한 방법은 앱을 돌리고 눈으로 보는 것뿐이고, 여러 기능이 동시에 돌아가는 1인 개발자에게 그 방법은 믿기 어렵습니다.
@@ -105,6 +116,8 @@ git log --since="6 months ago" --name-only --oneline | sort | uniq -c | sort -rn
 순서는 단순합니다. 대표적 입력을 고릅니다. 정상 케이스, 경계 값, 에러 케이스. 가격 함수라면 입력 4건에서 6건이면 충분합니다. 현재 코드를 돌려 출력을 적습니다. 출력한 값을 그대로 복사해 적기만 하면 됩니다. 적어 둔 출력을 기대값으로 어설션을 씁니다. 이 테스트가 초록이 되는 순간, 앵커가 설치된 겁니다. 이 시점부터 형태를 바꾸고 출력이 달라지면, 테스트가 멈춰 세웁니다.
 
 구체적 예를 보자. 할인 로직을 가진 가격 함수의 입력으로 네 가지를 고릅니다. 6월의 골드 사용자, 12월의 골드 사용자, 12월의 실버 사용자, 쿠폰을 한 장 가진 실버 사용자. 옛 코드를 돌려 할인 출력을 적어 두면, 현재 동작은 이 네 건으로 고정됩니다. 이제 함수의 형태를 바꿔도, 아무도 이 값을 건드릴 수 없습니다. 코드가 입출력에 엉켜 테스트가 어렵다면, 모듈 전체를 앵커하지 말고 그 안의 순수 리프 함수부터 앵커합니다. 같은 입력이 같은 출력을 내는 함수부터. 앵커는 사다리입니다. 한 칸씩 올라가면 됩니다.
+
+![the-refactoring-discipline 슬라이드 3](/assets/images/the-refactoring-discipline-slide-03.webp)
 
 ## 한 칸, 검증, 커밋
 
@@ -117,6 +130,8 @@ git log --since="6 months ago" --name-only --oneline | sort | uniq -c | sort -rn
 실전 경계를 하나 더 두자. 3줄이면 고칠 수 있는 것은 백로그에 적지 말고 그 자리에서 고칩니다. 이름 바꾸기, 상수 추출, 조기 return. 작은 과제를 목록에 적고 나중에 맥락에 다시 들어가는 비용이, 그냥 하는 비용보다 큰 일이 자주 있습니다. 반대의 규율도 있습니다. 3줄이던 수정이 중간에 30줄로 불어난다면, 멈춥니다.
 그때 그것은 프로젝트고, 한 칸 절차로 돌아가야 합니다.
 대부분의 실패는 이것이 작은 일인지 프로젝트인지 정하지 못하는 지점에서 나옵니다.
+
+![the-refactoring-discipline 슬라이드 4](/assets/images/the-refactoring-discipline-slide-04.webp)
 
 ## 의지가 아니라 리듬
 
@@ -137,3 +152,17 @@ git log --since="6 months ago" --name-only --oneline | sort | uniq -c | sort -rn
 모아 보겠습니다. 코드 형태는 다음 변경을 쉽게 만드는 만큼 자라나는 자산이고 다음 변경은 생각보다 빨리 옵니다. 오늘 내딛는 작은 걸음은 다음 주의 작업에서 회수됩니다. 바뀌지 않는 추함은 공짜이고, 자주 바뀌는 마찰은 복리로 붙습니다. 그래서 고칠 순서는 변경 빈도가 정하고, 앵커와 한 칸과 검증과 작은 커밋과 15분 리뷰가 그 투자를 도박에서 지킵니다.
 
 이 논증의 전체 버전, 우선순위가 실린 냄새 목록과 중단 기준이 포함된 루프와 레거시 코드 5일 루틴, 그리고 가격 함수를 세 칸으로 실제로 통과시키는 예까지, 전자책 '리팩토링의 규율'에 있습니다. 31쪽 분량으로, 이 글에서 더 깊이 보고 싶은 사람의 다음 읽을거리입니다.
+
+## 참고 자료
+
+본문의 리팩토링 정의, 특화 테스트 앵커, 작은 움직임 메뉴, 코드의 냄새, 빚과 이자 비유는 아래 자료와 대조해 보실 수 있습니다.
+
+- [Catalog of Refactorings (Martin Fowler)](https://martinfowler.com/refactoring/catalog/)
+- [Code refactoring (Wikipedia)](https://en.wikipedia.org/wiki/Refactoring)
+- [Characterization test (Wikipedia)](https://en.wikipedia.org/wiki/Characterization_test)
+- [Technical debt (Wikipedia)](https://en.wikipedia.org/wiki/Technical_debt)
+- [Code Smells (refactoring.guru)](https://refactoring.guru/refactoring/smells)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/the-refactoring-discipline/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
