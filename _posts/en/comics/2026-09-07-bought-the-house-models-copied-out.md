@@ -12,19 +12,19 @@ tags:
   - ai-acquisition
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/bought-the-house-models-copied-out/strip.png
+image: /assets/images/posts/comics/bought-the-house-models-copied-out/strip.webp
 video: /assets/videos/posts/만화/bought-the-house-models-copied-out/comic.mp4
 ---
 
 Today's news: a chip giant bought the home of open models for 17.5 trillion won. The hub is literally the house where models live together, and open models are the ones anyone can download and use for free. A new owner means a new family for every model inside, except open source has a well-known habit of copying itself and moving out the moment it is owned. In the comic, our four-year-old leader commands the whole move-out.
 
-![They Bought the House. The Models Copied Themselves Out.](/assets/images/posts/comics/bought-the-house-models-copied-out/strip.png)
+![They Bought the House. The Models Copied Themselves Out.](/assets/images/posts/comics/bought-the-house-models-copied-out/strip.webp)
 
 > Source: [엔비디아, 허깅페이스 17.5조원에 인수…개방형 AI허브 계열화](https://n.news.naver.com/mnews/article/001/0016289195?sid=104) · bespin
 
 **▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/bought-the-house-models-copied-out/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/bought-the-house-models-copied-out/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/bought-the-house-models-copied-out/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/bought-the-house-models-copied-out/comic.en.vtt" default>
 </video>
