@@ -1,0 +1,119 @@
+---
+title: "A Library's Real Cost Is Paid When It Changes"
+excerpt: "Installing a library feels free, but the bill arrives at the moments of change: the update, the replacement, the removal. This post argues where the cost actually lands and gives the habits that put the billing date back in your hands."
+seo_title: "When Does a Library's Cost Arrive? The Discipline of Dependencies"
+seo_description: "The cost of a dependency is paid at change, not install. Price removal before you buy, measure lock-in, and keep every update on your own schedule."
+date: 2026-09-08
+last_modified_at: 2026-09-08
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_icon: "book"
+tags:
+  - dependency-management
+  - solo-developer
+  - lockfile
+  - library-selection
+  - technical-debt
+  - code-removal
+  - software-engineering
+categories:
+  - dev
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/the-dependency-discipline/"
+ebook: /assets/ebooks/the-dependency-discipline.pdf
+ebook_title: "Dependency Discipline"
+ebook_pages: 32
+---
+
+This post is for developers who run a service alone, or who are the only engineer in a small product team. What you will get out of it is a single account: when a library's real cost is billed, and the habits that put the billing date in your hands.
+
+Conclusion first. The cost of a dependency is not paid when you install it. It is paid when the dependency changes, in the update, the replacement, and the removal. The person who signs the bill is always you, even when the code is not yours.
+
+The scene repeats. You are building a product and a small problem shows up, one of date handling, file upload, authentication, email. You search the registry, pick a library with a decent rating, install it in five minutes, and the first example in the docs just runs. That night you sleep well. Eighteen months later, the same library answers for more than its one small problem. Config files, deploy scripts, and tests all reference it now. The library you borrowed to save a few hours has become something you pay a few hours to touch. The difference between those two moments is not time. It is where the price was hidden, and this post argues where to expose it.
+
+![Illustration of the core idea of A Library's Real Cost Is Paid When It Changes](/assets/images/the-dependency-discipline-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## The Bill Comes at the Moment of Change
+
+Nothing happens at install time. That is exactly why the decision feels free. In reality, a contract has just been signed, and the price has been split into four streams scheduled for the future.
+
+The first stream is maintenance. From that day on, every release means reading a changelog, checking security notices, and fixing whatever broke. Holding a version still costs nothing, or so it appears. The cost does not disappear; it moves into the future and grows while it waits.
+
+The second is learning. Documentation teaches how to use a library, not what to do when it breaks. The third is security. Every library is a door, and you do not hold the keys; an abandoned package becoming an attack target is a real, repeated pattern. The fourth is license. A clause you never read can still bind you.
+
+The trap is that none of these four arrive together. Learning shows up first, maintenance follows months later, security can wait years, so at the moment of decision the total feels like zero. A cost you cannot see cannot be controlled; you have to write it down while you still can. The rest of this post builds that ledger, entry by entry.
+
+## Installing Is Signing a Contract
+
+The shortest definition of a dependency is this: code you use but do not control. The author decides when the next version ships, whether maintenance stops, whether the terms tighten, whether anyone answers your questions. You take what is offered.
+
+So installing is the signing of a short contract. Four clauses, and each one hurts. The other side can break your build at any time; that is called a major version. The other side can stop maintaining, or change the terms. If the other side disappears, the cleanup cost is yours.
+
+Most installs sign without reading. No changelog, no issue list, no maintainer history. Nothing happens at signing, which is the problem, because the obligations begin exactly then. After that, the library is a thing you must check at every release, every vulnerability notice, and every deploy.
+
+For a one-person team the same contract weighs more. With a team, an update is a ticket you hand off and a broken build is someone else's morning. Alone, everything is tomorrow, and tomorrow is your product time. You cannot divide the bill by headcount, and you are the only person who knows why the library was chosen and how far it has spread.
+
+That is why, for one person, timing matters more than total. A cost that arrives once is survivable. A cost that arrives a little every quarter accumulates until it owns you. Borrowing without the price written down is debt; borrowing with it is investment. The line between the two is the record.
+
+## The Question That Matters Most: What Would Removal Cost
+
+The most common selection criterion, download count, is the least trustworthy. Downloads measure how many people tried a library, not how many can safely keep using it today. A library that was popular once and is abandoned now keeps its big number. Installing today is a bet on when the next update will come.
+
+Six external signals are actually checkable. The release cadence, and whether it arrives on a rhythm. Whether the maintainer answers issues, and explains when closing them. Whether the changelog says what broke and how to migrate, or is just a list of commit links. Whether releases get rolled back often. Whether the maintainer is one person or a team. And how many transitive dependencies the library drags in.
+
+But the external signals are the cheap half. The question that decides is internal, one of five you should answer before install: what would removal cost? If the API surface is small, removal is easy. If the library's types flow into your domain model, or if it manages your application's lifecycle, removal is a project. That one question separates a tool from a tenant.
+
+The surest way to answer it is to try the library in a scratch branch for thirty minutes. Implement only the two or three core use cases. Measure build time and bundle size against the state without the library. Then do the most important step: delete it. If removing a few imports is all it takes, the lock is low. If type names and configuration keys change with it, the lock is high.
+
+Those thirty minutes buy the following months. The verdict follows from the experiment. Core use cases work and removal is clean, bring it in. Core use cases work but removal is painful, slow down and ask whether the convenience is worth the lock. If the core use case does not work at all, no amount of polished documentation saves the candidate.
+
+## A Scale for Lock-In
+
+Lock-in is not a question of how much API you call. It is a question of whether the library's concepts leak into your code. The leaks happen in four places: names, data shapes, processes, and configuration.
+
+The common leak is naming. When your type names start carrying the library's prefix, the library has moved into the middle of your domain. The bigger leak is data shape: once a table structure matches the library's expectations, the library's fingerprint is in your data. The deepest leak is process, your application starts and stops because the library starts and stops. A dependency is something you can use; a lock is something you cannot stop using.
+
+Graded, the difference becomes a working scale.
+
+| Lock level | Example | Where the fingerprint lives | Replacement cost |
+|---|---|---|---|
+| Low, pure utility | formatting or validation functions | imports only | hours |
+| Middle, ORM or HTTP client | query builders, data shapes | types, schemas, settings | days |
+| High, framework or runtime | web frameworks, app lifecycle | process, start and stop | weeks |
+
+The top of the scale is not forbidden; frameworks have real value. The point is knowing the order of magnitude, because choosing the top row means your replacement cost is measured in weeks, not hours. When two candidates do the same core job, the safer pick is the one a grade lower. And the higher the lock, the harder the isolation in the next section has to be.
+
+## Keeping the Change on Your Side
+
+Choosing is half the work. The other half starts at install, and its first rule is knowing the difference between two files. The manifest is intent: a range of allowed versions, anything in the 3.x line. The lock file is the contract: the exact versions you actually tested. Most incidents begin with confusing the two.
+
+So commit the lock file, even for a one-person project, even for internal tools. It is the only thing that stops the same manifest from producing different builds on different days. Production installs exactly what the lock file says. If a deploy re-resolves to the latest, you no longer know what changed or when.
+
+Version numbers are hints, not guarantees. The promise is simple: patches fix bugs, minors add without breaking, majors may break anything. In practice, breaking changes hide in minors. Sometimes an honest mistake, the maintainer saw a behavior change as an improvement. Sometimes a gray zone, the docs say you can do this without saying do not depend on that, and your code did. Your tests protect you where the version number does not. So the discipline is cheap: read the changelog before, run the full suite after. Minutes of cost that catch weeks of damage.
+
+Updates need a rhythm, not a reflex. Batch the patches and minors into a fixed slot, say Monday morning for fifteen minutes. Raise everything waiting at once, run the whole suite, and commit only what is green. One update a day costs more in context switching than in updates. Majors do not go in the batch; they get their own branch and a time limit. If the migration will not fit the limit, step back and change the question: is it worth migrating at all?
+
+The thing that makes replacement cheap is done at integration time, not selection time. Put a thin interface of your own between your code and the library, an adapter, a wrapper, a facade, any name. The rule is one: the library's types do not cross your interface. Log everywhere directly and the logging library locks you. Route through one small module and the concrete calls live in exactly one file; switching libraries becomes a one-file job, and the removal cost is a constant. One caution: the interface must speak your domain's language. It says send an order confirmation, not the library's method name. If the signature carries the library's vocabulary, the isolation is fake.
+
+## Removal Is the Test of Ownership
+
+A good dependency is not one that works well. It is one you can remove cleanly when you want to. Removal is the final test of borrowing. Installing brings someone else's code in; removal exposes exactly how much of it your code has absorbed. Done well, it is less a horror than an inspection: the weak points of the system come out as a one-page list.
+
+References hide in four places. Imports are visible; the tools find them. Configuration hides them: keys named after the library, environment variables, flags that only mean something while the library is there. The lock file keeps them: remove the manifest entry, and if another library depends on it, the tree brings it right back. Those are ghost dependencies. And in the deepest place, your head, the afterimage remains: type names, data shapes, and code order shaped by the library's expectations. A full-text search will not show you those.
+
+So removal runs in five stages. First, map every reference: search the codebase, the config, the deploy scripts, the docs, for the library's name, and paste the results into a list you will check off. Second, remove the code; do the replacement before the removal, never in the same stroke. Third, drop the manifest entry, regenerate the lock file, and check that the dependency count actually fell; if it did not, a ghost is holding it, and you go back to the map. Fourth, build clean: a fresh clone in a clean environment, never the incremental build that hides stale artifacts. Fifth, measure build time, bundle size, and dependency count, before and after, written down.
+
+The most common accident is a half-finished removal, and it is worse than none. Recover simply: revert the removal commit, mine the error messages for the names you missed, add them to the map, and try again. Fear not the half-finished state but the failure to revert. Keep the removal in small commits, code, manifest, lock file, each its own, and the cost of a failure is minutes.
+
+Make it a habit, and the test runs quarterly, thirty minutes at a time. Walk the direct dependencies one by one and ask each: are you still doing the job you were brought in for? Services evolve and the job disappears while the library stays in the tree; that is how most unneeded dependencies die quietly. Sort each one into keep, watch, replace, or remove. Accuracy matters less than sorting at all: an unsorted dependency is a dying one nobody sees. A remove verdict runs the five-stage procedure in the same week. Removal is work with a deadline, not a note to self.
+
+## Borrowed Code Is Still Our Code
+
+Borrowed code is still your code. Not in the sense that the source belongs to you. In the sense that the consequences do: the cost of updates, the cost of learning, the cost of security, the cost of removal, all of it lands in your account.
+
+So the whole discipline compresses to one line. Installing is signing a contract; write down the clauses at the moment of signing, the price, the removal cost, the height of the lock. Everything after that is maintenance: read the changelog, run the tests, update the sheet, remove what is due. You get to set both the timing and the size of the change.
+
+You can do one thing today. Open the manifest, count the direct dependencies, and pick the one with the largest removal cost. Search the codebase for its name and collect the references. Just the mapping stage. That list will tell you where the system is soft, and what the next install should watch for.
+
+Borrowing is not free. But borrowing with the price written down is borrowable. If you want the deeper version of this argument, with worked examples, the ebook that accompanies this post, Dependency Discipline, is the place to keep it.
