@@ -157,7 +157,7 @@ The honest boundaries. Those ladders were measured with three to five prompts an
 
 There are quality boundaries too. Conditioning fidelity was measured as first-frame correlation, and the first frame is where the condition binds hardest, which makes it the last indicator to break. Mid-clip and final-frame fidelity were not measured in this sweep. Where the cliff sits when the cache is pushed harder also has to be re-checked per job type.
 
-Finally, licensing. One candidate model is under license review for self-hosting, and its weights are not in our internal registry yet. We do not put models like that on the production path before a formal license is secured, and that judgment is enforced by a deployment gate in code rather than by anyone's memory.
+Finally, licensing. One candidate model is under license review for self-hosting. A different candidate does not have its weights in our internal registry at all. We do not put models like that on the production path before a formal license is secured, and that judgment is enforced by a deployment gate in code rather than by anyone's memory.
 
 ## What this means for Metis
 
