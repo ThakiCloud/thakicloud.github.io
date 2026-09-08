@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/ex-officio-inquiry-stopped-at-the-gate/strip.webp
 video: /assets/videos/posts/만화/ex-officio-inquiry-stopped-at-the-gate/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/ex-officio-inquiry-stopped-at-the-gate/"
 ---
 
 오늘 뉴스는 정부가 내달부터 해킹 기업에 대해 직권조사를 시작한다는 소식입니다. 직권조사란 피해 기업이 신고하지 않아도 당국이 스스로 직접 조사에 들어가는 걸 뜻합니다. 털린 걸 파악하면 신고를 안 해도 찾아와 뒤집는 시스템이죠. 이런 조사의 첫 질문은 늘 '데이터가 어디에 있느냐'인데, 퍼블릭클라우드를 쓰는 기업은 데이터도 로그도 전부 임대인의 데이터센터 안에 있습니다. 만화에서는 직권 조사관이 먼저 클라우드 임대인을 만나고, 우리의 대문 앞에서 발걸음을 멈춥니다.
@@ -22,7 +23,7 @@ video: /assets/videos/posts/만화/ex-officio-inquiry-stopped-at-the-gate/comic.
 
 > 원 뉴스: ["신고 안 해도 털리면 바로 턴다"…정부, 내달부터 해킹 기업 직권조사 착수](https://www.newsis.com/view/NISX20260904_0003775831) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/ex-officio-inquiry-stopped-at-the-gate/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/ex-officio-inquiry-stopped-at-the-gate/comic.mp4" type="video/mp4">
@@ -38,3 +39,16 @@ video: /assets/videos/posts/만화/ex-officio-inquiry-stopped-at-the-gate/comic.
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![ex-officio-inquiry-stopped-at-the-gate 슬라이드 1](/assets/images/ex-officio-inquiry-stopped-at-the-gate-slide-01.webp)
+
+![ex-officio-inquiry-stopped-at-the-gate 슬라이드 2](/assets/images/ex-officio-inquiry-stopped-at-the-gate-slide-02.webp)
+
+![ex-officio-inquiry-stopped-at-the-gate 슬라이드 3](/assets/images/ex-officio-inquiry-stopped-at-the-gate-slide-03.webp)
+
+![ex-officio-inquiry-stopped-at-the-gate 슬라이드 4](/assets/images/ex-officio-inquiry-stopped-at-the-gate-slide-04.webp)
+

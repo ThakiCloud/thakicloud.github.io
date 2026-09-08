@@ -14,15 +14,16 @@ author_profile: true
 toc: false
 image: /assets/images/posts/comics/ex-officio-inquiry-stopped-at-the-gate/strip.webp
 video: /assets/videos/posts/만화/ex-officio-inquiry-stopped-at-the-gate/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/ex-officio-inquiry-stopped-at-the-gate/"
 ---
 
-Today's news: the government is starting ex officio investigations of hacked companies next month. Ex officio means the authorities act on their own power, without waiting for the victim to file a report — if a breach is detected, they come and flip it whether you reported it or not. The first question of any such investigation is where the data lives, and for a company running on public cloud that is the landlord's data center, logs included. In the comic, the ex officio investigator runs into the cloud landlord first, and then comes to a stop at our gate on the wall.
+Today's news: the government is starting ex officio investigations of hacked companies next month. Ex officio means the authorities act on their own power, without waiting for the victim to file a report; if a breach is detected, they come and flip it whether you reported it or not. The first question of any such investigation is where the data lives, and for a company running on public cloud that is the landlord's data center, logs included. In the comic, the ex officio investigator runs into the cloud landlord first, and then comes to a stop at our gate on the wall.
 
 ![They Came Ex Officio. The Gate Stayed Closed.](/assets/images/posts/comics/ex-officio-inquiry-stopped-at-the-gate/strip.webp)
 
 > Source: ["신고 안 해도 털리면 바로 턴다"…정부, 내달부터 해킹 기업 직권조사 착수](https://www.newsis.com/view/NISX20260904_0003775831) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/comics/ex-officio-inquiry-stopped-at-the-gate/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/ex-officio-inquiry-stopped-at-the-gate/comic.mp4" type="video/mp4">
