@@ -12,19 +12,19 @@ tags:
   - 국정원
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/standard-lets-data-board-a-plane/strip.png
+image: /assets/images/posts/만화/standard-lets-data-board-a-plane/strip.webp
 video: /assets/videos/posts/만화/standard-lets-data-board-a-plane/comic.mp4
 ---
 
 국정원이 클라우드 보안 기준 개정을 추진하면서, 공공 데이터가 해외에 있는 미국과 중국 클라우드 기업의 관리를 받는 게 아니냐는 논란이 커지고 있습니다. 클라우드 보안 기준은 '공공 데이터가 어디에, 누구의 손에서 저장되고 운영되는지'를 정하는 정부 규정입니다. 개정안에는 그 '어디'의 범위가 넓어지고, 데이터가 해외로 이동해도 '안전'으로 인정된다는 우려가 담겨 있습니다. 이번 만화에서는 그 논란을, 기준을 한 줄로 줄여본 캐릭터들의 이야기로 풀어봤습니다.
 
-![보안 기준을 고쳤더니 데이터가 비행기에 탔다](/assets/images/posts/만화/standard-lets-data-board-a-plane/strip.png)
+![보안 기준을 고쳤더니 데이터가 비행기에 탔다](/assets/images/posts/만화/standard-lets-data-board-a-plane/strip.webp)
 
 > 원 뉴스: [국정원 클라우드 보안 기준 개정 논란…공공 데이터 미·중 클라우드 기업 해외서 관리하나](https://n.news.naver.com/mnews/article/030/0003464399?sid=105) · bespin
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/standard-lets-data-board-a-plane/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/standard-lets-data-board-a-plane/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/standard-lets-data-board-a-plane/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/standard-lets-data-board-a-plane/comic.ko.vtt" default>
 </video>
