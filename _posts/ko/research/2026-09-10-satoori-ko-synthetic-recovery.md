@@ -20,9 +20,15 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/satoori-ko-synthetic-recovery/"
+audiobook: "https://drive.google.com/file/d/1s5tB64RdXsp8Hg0dEy1VDt6RV87OryAx/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 한국어 사투리 모델 두 개를 허깅페이스에 공개했습니다. 하나는 실제 방언 데이터로 배웠습니다. 다른 하나는 원본을 한 글자도 쓰지 않고 배웠습니다. 방언 데이터를 다루는데 라이선스 때문에 결과를 공개하지 못해 막힌 적이 있다면 이 글이 도움이 됩니다.
+
+![원본 없이 사투리를 배운 모델이 원본으로 배운 모델을 어디서 이겼나 개념을 형상화한 이미지](/assets/images/satoori-ko-synthetic-recovery-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 결론을 먼저 말씀드립니다. 합성으로 배운 모델은 실데이터 학습 이득의 10점 중 9점 정도를 되찾았습니다. 다만 그 점수는 능력별로 크게 갈립니다. 우리가 직접 쓴 문장에서는 순위까지 뒤집혔습니다.
 
@@ -31,6 +37,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/satoori-ko-syntheti
 사투리를 배우는 학생 두 명을 떠올려 주십시오. 한 명은 그 지역에 가서 어르신들 이야기를 직접 듣고 배웠습니다. 다른 한 명은 녹음에서 뽑아낸 단어장만 받았습니다. 그리고 다른 사람이 써 준 문장에 그 단어장을 적용하며 배웠습니다.
 
 앞으로 이 글에서 첫 번째를 **현지 학생**, 두 번째를 **단어장 학생**이라고 부르겠습니다. 두 학생을 같은 시험지로 재는 것이 이 실험입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/satoori-ko-synthetic-recovery/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 해봤나
 
@@ -42,11 +52,16 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/satoori-ko-syntheti
 
 그다음 같은 바탕 모델에서 출발해 두 학생을 길렀습니다. 현지 학생은 실제 방언 짝문장으로 배웠습니다. 단어장 학생은 우리 모델이 쓴 표준어 문장에 규칙 변환기를 적용한 합성 문장으로만 배웠습니다.
 
+![satoori-ko-synthetic-recovery 슬라이드 1](/assets/images/satoori-ko-synthetic-recovery-slide-01.webp)
+
 ## 나온 결과
 
 되찾은 정도를 회수율이라고 부르겠습니다. 현지 학생이 올린 점수를 100으로 놓습니다. 단어장 학생이 그중 얼마를 따라왔는지 보는 값입니다.
 
 능력별로 보면 이야기가 완전히 달라집니다. 식별은 91.2퍼센트, 이해는 52.7퍼센트에서 멈췄습니다. 생성은 지표에 따라 갈립니다. 우리가 만든 단어 목록으로 재면 105.6퍼센트로 실데이터를 넘고, 그 목록을 안 쓰는 참조 기준으로 재면 72.4퍼센트로 못 넘습니다.
+
+![축별 회수율, 생성 축은 두 지표 모두 표시됩니다](/assets/images/satoori-ko-synthetic-recovery-recovery.webp)
+*축별 회수율입니다. 식별 91.2퍼센트, 이해 52.7퍼센트, 생성은 단어장 지표 105.6퍼센트, 참조 지표 72.4퍼센트입니다. 100은 실데이터 모델 기준입니다.*
 
 즉, 사람 말로는 이렇습니다. 사투리를 **만드는** 능력은 단어장으로도 거의 다 옮겨 갔습니다. 반면 **알아듣는** 능력은 절반밖에 옮겨 가지 않았습니다.
 
@@ -79,6 +94,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/satoori-ko-syntheti
 
 제주도의 "하영"은 많이라는 뜻의 제주 말입니다. 강원도의 "와가주"와 경상도의 "와가꼬"도 실제로 갈리는 어미입니다. 다만 충청도 요청에도 "와가꼬"가 나왔는데 이것은 경상과 전라 쪽 어미입니다. 나누기는 하되 언제나 맞게 나누지는 않습니다.
 
+![satoori-ko-synthetic-recovery 슬라이드 2](/assets/images/satoori-ko-synthetic-recovery-slide-02.webp)
+
 ## 그래서 무엇을 바꾸면 되나
 
 방언 자료가 라이선스로 막혀 있다면, 생성 쪽 일은 합성으로 시작해도 됩니다. 말투를 바꾸는 작업, 지역색 있는 대사를 만드는 작업, 캐릭터 목소리를 나누는 작업이 여기 들어갑니다.
@@ -96,7 +113,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/satoori-ko-syntheti
 - 실데이터 모델: [ThakiCloud/Qwen3.8-27B-Satoori-KO](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Satoori-KO)
 - 합성 모델: [ThakiCloud/Qwen3.8-27B-Satoori-KO-Synth](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Satoori-KO-Synth)
 
+![satoori-ko-synthetic-recovery 슬라이드 3](/assets/images/satoori-ko-synthetic-recovery-slide-03.webp)
+
 ## 못 믿을 부분
+![satoori-ko-synthetic-recovery 슬라이드 4](/assets/images/satoori-ko-synthetic-recovery-slide-04.webp)
 
 **대화 모델이 아닙니다.** 학습이 전부 한 번씩 주고받는 변환과 분류였습니다. 사투리로 대화하는 능력은 배운 적도 잰 적도 없습니다.
 
@@ -109,3 +129,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/satoori-ko-syntheti
 **소리를 배우지 않았습니다.** 받아쓴 글만 학습했기 때문에 발음 정보는 들어 있지 않습니다.
 
 학습에 쓴 자료의 출처는 AI 허브의 한국어 방언 발화 데이터와 중·노년층 한국어 방언 발화 데이터입니다. 두 저장소 어디에도 원본 자료나 방언과 표준어를 잇는 대응 사전은 넣지 않았고 가중치만 공개했습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/satoori-ko-synthetic-recovery/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*

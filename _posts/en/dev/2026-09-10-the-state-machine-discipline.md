@@ -23,6 +23,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/dev/the-state-machine-discip
 ebook: /assets/ebooks/the-state-machine-discipline.pdf
 ebook_title: "The State Machine Discipline"
 ebook_pages: 35
+audiobook: "https://drive.google.com/file/d/1rsTvo6BlWC9v0vclTKlH8EgYWkqkPdBR/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 This post is for backend and product engineers who own objects whose status flows: orders, payments, subscriptions, documents, approvals. What you get out of it is one argument, made in full: why status changes on its own, and the concrete design that stops it.
@@ -141,3 +144,13 @@ Second, gather every direct write of status into one place. You do not need the 
 Third, create the history table. Append-only, with from, event, to, and time. With just those three in place, "how did it get here?" becomes a query instead of an excavation, and most of the debugging value comes from here.
 
 After the three, the next requirement is no longer "add another if" but "change one cell in the table", and that one-sentence difference is the whole discipline. If you want to go deeper, the ebook *The State Machine Discipline* carries all four chapters as a PDF, from the state inventory through guards, concurrency, and history operations.
+
+## References
+
+The four terms of state, event, transition, and guard, the transition table, the append-only history, and the optimistic concurrency handling in this post can be checked against the following.
+
+- [Finite-state machine (Wikipedia)](https://en.wikipedia.org/wiki/Finite-state_machine)
+- [State pattern (Wikipedia)](https://en.wikipedia.org/wiki/State_pattern)
+- [State diagram (Wikipedia)](https://en.wikipedia.org/wiki/State_diagram)
+- [Event Sourcing (Martin Fowler)](https://martinfowler.com/eaaDev/EventSourcing.html)
+- [Optimistic concurrency control (Wikipedia)](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)

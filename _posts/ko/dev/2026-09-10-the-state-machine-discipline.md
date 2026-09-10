@@ -128,3 +128,13 @@ apply 내부의 검사 순서는 자의적이지 않습니다. 각 단계가 각
 셋째, 히스토리 테이블을 만드세요. 부기 전용입니다. 출발 상태, 이벤트, 도착 상태, 시각. 이 셋만 있어도 "어떻게 여기까지 왔나"를 읽을 수 있습니다. 디버깅의 8할은, 이것 하나예요.
 
 셋이 끝나면, 다음 요구사항이 "if를 하나 더 넣자"에서 "표를 하나 고치자"로 바뀝니다. 그 한 문장의 차이가, 이 글의 전부예요. 더 깊게 파고들고 싶은 분은, 이 글과 함께 준비된 전자책 "상태머신의 규율: 주문·결제·문서가 제멋대로 바뀌지 않는 기술"을 보시면 됩니다. 상태 인벤토리 잡기부터 가드와 동시성, 히스토리 운영까지, 이 글이 간략히 한 지점들을 예시와 함께 펼쳐 쓴 책입니다.
+
+## 참고 자료
+
+본문의 상태, 이벤트, 전이, 가드 네 단어와 전이 테이블, 부기 전용 히스토리, 낙관적 동시성 처리는 아래 자료와 대조해 보실 수 있습니다.
+
+- [Finite-state machine (Wikipedia)](https://en.wikipedia.org/wiki/Finite-state_machine)
+- [State pattern (Wikipedia)](https://en.wikipedia.org/wiki/State_pattern)
+- [State diagram (Wikipedia)](https://en.wikipedia.org/wiki/State_diagram)
+- [Event Sourcing (Martin Fowler)](https://martinfowler.com/eaaDev/EventSourcing.html)
+- [Optimistic concurrency control (Wikipedia)](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)
