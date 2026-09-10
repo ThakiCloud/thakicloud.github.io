@@ -46,11 +46,13 @@ Then we raised the two students from the same base model. The resident student l
 
 We call the recovered share the recovery rate. Take the resident student's gain as 100 and ask how much of it the phrasebook student reached.
 
-The median came out at 92.3 percent. Broken down by ability the story changes completely. Generation reached 105.6 percent and went past. Identification reached 91.2 percent. Comprehension stopped at 52.7 percent.
+Broken down by ability the story changes completely. Identification reached 91.2 percent and comprehension stopped at 52.7 percent. Generation depends on which ruler you use. Measured with the word list we built, it reached 105.6 percent and passed real data. Measured against a human reference that uses none of that list, it reached 72.4 percent and did not.
 
 Put simply, the ability to **produce** dialect transferred almost fully through a phrasebook, while the ability to **understand** it transferred only halfway.
 
-One thing needs flagging here. A generation score above 100 does not mean the phrasebook student is better. The synthetic data made the regions more distinct from each other than they really are. Real dialects bleed into their neighbours, the synthetic ones did not reproduce that overlap, and the score read that gap as a gain.
+One thing needs flagging here. The score above 100 was not skill, it was **the wrong ruler**. The word list used for scoring came from the same place as the rules used to build the dialect. When we removed from that list every form the rules can produce, **not one word survived in any of the five regions**. Rescored against a human reference that shares none of that vocabulary, generation fell to 72.4 percent, and no synthetic model passed real data.
+
+Separately, the synthetic data made the regions more distinct from each other than they really are. Real dialects bleed into their neighbours, and the synthetic ones did not reproduce that overlap.
 
 ### On our own sentences the ranking flipped
 
