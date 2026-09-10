@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/solved-in-ten-replaced-in-ten/strip.webp
 video: /assets/videos/posts/만화/solved-in-ten-replaced-in-ten/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/solved-in-ten-replaced-in-ten/"
 ---
 
 오늘의 뉴스는 'AX 생존법'이 나왔다는 것입니다. AX는 AI 전환(AI Transformation)의 줄임말로, 기업이 AI를 어떻게 쓰느냐의 생존 전략을 말합니다. 화제의 사례는 자동차 공장에서 5년째 안 풀리던 도장(페인팅) 문제를 AI 에이전트가 10분 만에 해결했다는 것입니다. 에이전트가 5년치 실험 기록을 한꺼번에 읽고 원인을 추론했다고 합니다. 만화에서는 다키클라우드의 파시스와 메티스가 같은 방법을 5년 된 우리 문제, 클라우드 청구서에 써 봅니다.
@@ -22,7 +23,7 @@ video: /assets/videos/posts/만화/solved-in-ten-replaced-in-ten/comic.mp4
 
 > 원 뉴스: ["5년 못 푼 자동차 도장 문제, 10분 만에 해결"…앤트로픽이 제시한 AX 생존법](https://n.news.naver.com/mnews/article/092/0002436644?sid=105) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/solved-in-ten-replaced-in-ten/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/solved-in-ten-replaced-in-ten/comic.mp4" type="video/mp4">
@@ -38,3 +39,16 @@ video: /assets/videos/posts/만화/solved-in-ten-replaced-in-ten/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`doodle_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![solved-in-ten-replaced-in-ten 슬라이드 1](/assets/images/solved-in-ten-replaced-in-ten-slide-01.webp)
+
+![solved-in-ten-replaced-in-ten 슬라이드 2](/assets/images/solved-in-ten-replaced-in-ten-slide-02.webp)
+
+![solved-in-ten-replaced-in-ten 슬라이드 3](/assets/images/solved-in-ten-replaced-in-ten-slide-03.webp)
+
+![solved-in-ten-replaced-in-ten 슬라이드 4](/assets/images/solved-in-ten-replaced-in-ten-slide-04.webp)
+
