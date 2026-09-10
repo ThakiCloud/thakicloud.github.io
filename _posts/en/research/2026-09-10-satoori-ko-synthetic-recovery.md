@@ -85,9 +85,11 @@ If dialect data is locked behind a licence, generation work can start on synthet
 
 Understanding, by contrast, is hard to fill in synthetically. Summarising a dialect support call into standard Korean needs the real thing. Of the two models we released, that use case wants the real-data one.
 
-And if you are planning to build synthetic data, change your ordering. We refined the conversion rules three times and the score did not move. What moved it was **the register of the sentences being converted**. Switching the source from written prose to spoken utterances doubled the rate at which rules found somewhere to apply.
+And if you are planning to build synthetic data, one thing is worth knowing in advance. We refined the conversion rules three times and the score did not move. Switching the source from written prose to spoken utterances doubled the rate at which rules found somewhere to apply. But **that doubling did not turn into capability**. Measured with metrics that do not lean on our own word list, all three axes moved less than the wobble we get from simply changing the training seed.
 
-The next largest lever was not growing the source corpus but growing the training set. Quadrupling the source changed almost nothing, while tripling the training set lifted recovery clearly.
+Put simply, widening where the rules can land and making the model actually better turned out to be different problems.
+
+Tripling the training set lifted **only the ability to name the region**. Comprehension and reference-based generation again stayed inside the wobble.
 
 Both models are available here.
 
