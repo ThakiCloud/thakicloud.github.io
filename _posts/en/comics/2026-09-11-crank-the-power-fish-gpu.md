@@ -13,19 +13,19 @@ tags:
   - 병맛만화
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/crank-the-power-fish-gpu/strip.png
+image: /assets/images/posts/comics/crank-the-power-fish-gpu/strip.webp
 video: /assets/videos/posts/만화/crank-the-power-fish-gpu/comic.mp4
 ---
 
 Today's news poses the question: where does an 'AI data center' actually end? The answer, it turns out, is 'design power' — whether a facility is a data center or just a building comes down to how much electricity you design into it. We ran that exact experiment on our ocean floor. Turn the watts all the way up and… the fish start walking around as servers.
 
-![We Turned Up the Power. The Fish Became GPUs.](/assets/images/posts/comics/crank-the-power-fish-gpu/strip.png)
+![We Turned Up the Power. The Fish Became GPUs.](/assets/images/posts/comics/crank-the-power-fish-gpu/strip.webp)
 
 > Source: [어디까지 ‘AI 데이터센터’인가…설계 전력에 달렸다](https://n.news.naver.com/mnews/article/018/0006366438) · bespin
 
 **▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/crank-the-power-fish-gpu/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/crank-the-power-fish-gpu/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/crank-the-power-fish-gpu/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/crank-the-power-fish-gpu/comic.en.vtt" default>
 </video>
