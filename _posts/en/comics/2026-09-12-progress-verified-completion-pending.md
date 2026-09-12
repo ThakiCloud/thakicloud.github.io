@@ -13,19 +13,19 @@ tags:
   - 병맛만화
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/progress-verified-completion-pending/strip.png
+image: /assets/images/posts/comics/progress-verified-completion-pending/strip.webp
 video: /assets/videos/posts/만화/progress-verified-completion-pending/comic.mp4
 ---
 
 The week's trending paper, Apodex 1.1, claims to scale agentic intelligence for complex work. The twist: the brains didn't get bigger — the executable environments the agents run in did. The system trains agents to coordinate long-horizon jobs across stages, keeping a running state log so a derailed task can be recovered and picked back up. Our four-year-old chief took the paper's advice literally, scaled up the environment, and deployed the whole operation to what she considers the gold standard of complex work: a galaxy made of blocks.
 
-![Progress Verified. Completion Pending.](/assets/images/posts/comics/progress-verified-completion-pending/strip.png)
+![Progress Verified. Completion Pending.](/assets/images/posts/comics/progress-verified-completion-pending/strip.webp)
 
 > Source: [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://huggingface.co/papers/2608.23283) · hf-trending
 
 **▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/progress-verified-completion-pending/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/progress-verified-completion-pending/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/progress-verified-completion-pending/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/progress-verified-completion-pending/comic.en.vtt" default>
 </video>

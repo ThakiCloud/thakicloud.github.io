@@ -13,19 +13,19 @@ tags:
   - 병맛만화
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/progress-verified-completion-pending/strip.png
+image: /assets/images/posts/만화/progress-verified-completion-pending/strip.webp
 video: /assets/videos/posts/만화/progress-verified-completion-pending/comic.mp4
 ---
 
 이번 주 HuggingFace 트렌딩을 달군 논문 Apodex 1.1은 '복잡한 작업'을 위한 에이전트 지능을 스케일했다고 발표했습니다. 그런데 자세히 보면 뇌가 커진 게 아니라, 에이전트가 실제로 작업하는 실행 환경(executable environment)을 키운 것이 핵심입니다. 여러 에이전트가 긴 작업(long-horizon work)을 단계로 나눠 조율하게 훈련하고, 진행 상태를 기록해 중간에 어긋나도 복구해서 다시 이어 가게 하는 방식이에요. 이 '환경 스케일링'을 그대로 따라 해 본 우리 4살 리더 유진이, 회사에서 말하는 '복잡한 일'의 정석인 은하 레고에 전사적 에이전트를 투입하는 과정을 볼 수 있습니다.
 
-![환경은 스케일, 완료는 아직](/assets/images/posts/만화/progress-verified-completion-pending/strip.png)
+![환경은 스케일, 완료는 아직](/assets/images/posts/만화/progress-verified-completion-pending/strip.webp)
 
 > 원 뉴스: [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://huggingface.co/papers/2608.23283) · hf-trending
 
 **▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/progress-verified-completion-pending/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/progress-verified-completion-pending/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/progress-verified-completion-pending/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/progress-verified-completion-pending/comic.ko.vtt" default>
 </video>
