@@ -13,19 +13,20 @@ tags:
   - ThakiCloud
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/fde-forward-deployed-person/strip.png
+image: /assets/images/posts/만화/fde-forward-deployed-person/strip.webp
 video: /assets/videos/posts/만화/fde-forward-deployed-person/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/fde-forward-deployed-person/"
 ---
 
 오늘의 뉴스는 'FDE, 전진 배치 엔지니어'입니다. 소프트웨어 회사가 자사 엔지니어 한 명을 고객 회사로 보내, 그 자리에 상주하며 프로젝트를 직접 돌리는 방식이죠. 요즘은 빅테크까지 이 상주에 나섰고, 이름만 들어도 아는 '한국형 FDE'가 등장했다는 겁니다. 그런데 이 구조를 자세히 보면, 실제로 '전진 배치'된 건 인력뿐입니다. 모델과 데이터는 여전히 남의 나라 구름으로 왕복하고, 상주한 엔지니어는 그 구름에 꽂혀 일할 뿐이죠. 한 줄로 풀어 쓰면, 온프렘은 모델·데이터·인프라를 전부 자기 건물 안에 두는 것. 여기서 건물 안에 있는 건, 사람 한 명뿐입니다.
 
-![FDE 상주, 전진 배치된 건 사람뿐](/assets/images/posts/만화/fde-forward-deployed-person/strip.png)
+![FDE 상주, 전진 배치된 건 사람뿐](/assets/images/posts/만화/fde-forward-deployed-person/strip.webp)
 
 > 원 뉴스: [빅테크, 고객사 상주 시작…'한국형 FDE'는 무엇이 다를까](https://n.news.naver.com/mnews/article/092/0002437016) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/fde-forward-deployed-person/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/fde-forward-deployed-person/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/fde-forward-deployed-person/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/fde-forward-deployed-person/comic.ko.vtt" default>
 </video>
@@ -39,3 +40,16 @@ video: /assets/videos/posts/만화/fde-forward-deployed-person/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`neon_venture` 스타일)으로 요약한 슬라이드입니다.
+
+![fde-forward-deployed-person 슬라이드 1](/assets/images/fde-forward-deployed-person-slide-01.webp)
+
+![fde-forward-deployed-person 슬라이드 2](/assets/images/fde-forward-deployed-person-slide-02.webp)
+
+![fde-forward-deployed-person 슬라이드 3](/assets/images/fde-forward-deployed-person-slide-03.webp)
+
+![fde-forward-deployed-person 슬라이드 4](/assets/images/fde-forward-deployed-person-slide-04.webp)
+

@@ -13,19 +13,20 @@ tags:
   - ThakiCloud
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/fde-forward-deployed-person/strip.png
+image: /assets/images/posts/comics/fde-forward-deployed-person/strip.webp
 video: /assets/videos/posts/만화/fde-forward-deployed-person/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/fde-forward-deployed-person/"
 ---
 
 Today's news: big tech is putting forward-deployed engineers on-site at client companies, and there is even a 'Korean-style' version. An FDE is an engineer the vendor embeds in the client's office, living the project from the inside. Look closely, though, and the only thing actually deployed forward is the person. The models and the data still round-trip to a public cloud somewhere else, and the on-site engineer is simply plugged into it. On-prem, in one line, means the model, the data, and the infrastructure all live inside your own building. In this setup, the only thing in the building is a person.
 
-![They Forward-Deployed the Headcount, Not the Stack](/assets/images/posts/comics/fde-forward-deployed-person/strip.png)
+![They Forward-Deployed the Headcount, Not the Stack](/assets/images/posts/comics/fde-forward-deployed-person/strip.webp)
 
 > Source: [빅테크, 고객사 상주 시작…'한국형 FDE'는 무엇이 다를까](https://n.news.naver.com/mnews/article/092/0002437016) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/fde-forward-deployed-person/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/fde-forward-deployed-person/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/fde-forward-deployed-person/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/fde-forward-deployed-person/comic.en.vtt" default>
 </video>
