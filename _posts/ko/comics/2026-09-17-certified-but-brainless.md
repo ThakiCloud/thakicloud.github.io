@@ -14,6 +14,7 @@ author_profile: true
 toc: false
 image: /assets/images/posts/만화/certified-but-brainless/strip.png
 video: /assets/videos/posts/만화/certified-but-brainless/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/certified-but-brainless/"
 ---
 
 오늘의 뉴스는 한 IT 대기업이 해외 AI 기업의 '공인 파트너' 자격을 획득했다는 소식입니다. 공인 파트너는 그 기업의 AI를 공식적으로 활용하고 제안할 수 있다는 인정을 받는 자리로, 자격증 한 장이 곧 기업 신용처럼 작동합니다. 만화에서는 그 인증식이 장성 위, 장대한 벽 위에서 열립니다. 근사해 보이는 딱지만 그 안에 AI는 들어 있지 않고, 모델과 데이터, 청구서는 모두 담장 너머에 남아 있습니다. 그래서 벽 위를 뛰어다니는 작은 에이전트 로봇들이 전달하는 주소는 끝내 담장 너머 방향입니다.
@@ -22,7 +23,7 @@ video: /assets/videos/posts/만화/certified-but-brainless/comic.mp4
 
 > 원 뉴스: [삼성SDS, 앤트로픽 공인 파트너 자격 획득](https://n.news.naver.com/mnews/article/081/0003680642) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
 <video controls playsinline preload="metadata" poster="/assets/images/posts/만화/certified-but-brainless/strip.png" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/certified-but-brainless/comic.mp4" type="video/mp4">
@@ -38,3 +39,16 @@ video: /assets/videos/posts/만화/certified-but-brainless/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`blue_collage` 스타일)으로 요약한 슬라이드입니다.
+
+![certified-but-brainless 슬라이드 1](/assets/images/certified-but-brainless-slide-01.png)
+
+![certified-but-brainless 슬라이드 2](/assets/images/certified-but-brainless-slide-02.png)
+
+![certified-but-brainless 슬라이드 3](/assets/images/certified-but-brainless-slide-03.png)
+
+![certified-but-brainless 슬라이드 4](/assets/images/certified-but-brainless-slide-04.png)
+
