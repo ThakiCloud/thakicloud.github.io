@@ -12,20 +12,20 @@ tags:
   - 병맛만화
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/certified-but-brainless/strip.png
+image: /assets/images/posts/comics/certified-but-brainless/strip.webp
 video: /assets/videos/posts/만화/certified-but-brainless/comic.mp4
 canonical_url: "https://thakicloud.com/tech-blog/en/comics/certified-but-brainless/"
 ---
 
 The news today: a major local IT firm has just earned 'certified partner' status from a foreign AI giant. A certified partner is officially allowed to build on, integrate, and sell that AI, the stamp works like a corporate credit rating. In today's strip, the ceremony takes place on top of the Great Wall. The certificate looks impressive, but it contains no AI inside: the model, the data, and the invoice all stay over the wall. So the tiny agent robots bouncing along the wall keep delivering to the far side.
 
-![The Stamp Is Real. The Brain Isn't.](/assets/images/posts/comics/certified-but-brainless/strip.png)
+![The Stamp Is Real. The Brain Isn't.](/assets/images/posts/comics/certified-but-brainless/strip.webp)
 
 > Source: [삼성SDS, 앤트로픽 공인 파트너 자격 획득](https://n.news.naver.com/mnews/article/081/0003680642) · bespin
 
 **▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/certified-but-brainless/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/certified-but-brainless/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/certified-but-brainless/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/certified-but-brainless/comic.en.vtt" default>
 </video>

@@ -13,19 +13,20 @@ tags:
   - 병맛만화
 author_profile: true
 toc: false
-image: /assets/images/posts/comics/isms-p-data-in-the-clouds/strip.png
+image: /assets/images/posts/comics/isms-p-data-in-the-clouds/strip.webp
 video: /assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/en/comics/isms-p-data-in-the-clouds/"
 ---
 
 Today's news: South Korea's Personal Information Protection Commission has proposed tightening the ISMS-P certification audit. ISMS-P is the 'information security management' certification a company handling personal data must pass, a formal check that its protection system is real. This round, they're raising the standard on the audit itself. In today's strip, that audit takes place on the stone terraces of Machu Picchu, high in the Andes clouds. When the inspector asks 'where is the personal data, physically?', the data actually drifts up into the sky. It's one of those days when 'the cloud' works double duty.
 
-![Audit Passed. The Data? In the Clouds.](/assets/images/posts/comics/isms-p-data-in-the-clouds/strip.png)
+![Audit Passed. The Data? In the Clouds.](/assets/images/posts/comics/isms-p-data-in-the-clouds/strip.webp)
 
 > Source: [ISMS-P 인증심사 강화한다…개인정보위, 시행령 개정안 입법예고](https://n.news.naver.com/mnews/article/030/0003467360) · bespin
 
-**▶ Animated edition — the characters speak for themselves (Korean audio, English subtitles included)**
+**▶ Animated edition: the characters speak for themselves (Korean audio, English subtitles included)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/isms-p-data-in-the-clouds/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/comics/isms-p-data-in-the-clouds/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="en" label="English" src="/assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.en.vtt" default>
 </video>

@@ -13,19 +13,20 @@ tags:
   - 병맛만화
 author_profile: true
 toc: false
-image: /assets/images/posts/만화/isms-p-data-in-the-clouds/strip.png
+image: /assets/images/posts/만화/isms-p-data-in-the-clouds/strip.webp
 video: /assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.mp4
+canonical_url: "https://thakicloud.com/tech-blog/ko/comics/isms-p-data-in-the-clouds/"
 ---
 
 오늘의 뉴스는 개인정보보호위원회가 ISMS-P 인증심사를 강화하는 시행령 개정안을 예고했다는 소식입니다. ISMS-P는 개인정보를 다루는 기업이 '개인정보를 지키는 제도, 즉 정보보호 관리체계가 갖춰져 있다'는 것을 외부에 검증받는 인증이고, 이번에는 그 심사 자체의 기준을 높인다는 겁니다. 만화에서는 그 심사가 안데스 구름 위 돌다랑지, 마추픽추에서 열립니다. 심사관이 '개인정보는 물리적으로 어디에 있나요'라고 묻자, 데이터는 정말로 하늘 구름 위로 둥둥 떠 올라갑니다. 하루 종일 '구름'이 이중 뜻으로 쓰인 날입니다.
 
-![ISMS-P는 합격. 데이터는? 구름요.](/assets/images/posts/만화/isms-p-data-in-the-clouds/strip.png)
+![ISMS-P는 합격. 데이터는? 구름요.](/assets/images/posts/만화/isms-p-data-in-the-clouds/strip.webp)
 
 > 원 뉴스: [ISMS-P 인증심사 강화한다…개인정보위, 시행령 개정안 입법예고](https://n.news.naver.com/mnews/article/030/0003467360) · bespin
 
-**▶ 만화 영상판 — 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
+**▶ 만화 영상판: 캐릭터들이 직접 말합니다 (한국어 자막 포함)**
 
-<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/isms-p-data-in-the-clouds/strip.png" style="width:100%;border-radius:8px;">
+<video controls playsinline preload="metadata" poster="/assets/images/posts/만화/isms-p-data-in-the-clouds/strip.webp" style="width:100%;border-radius:8px;">
   <source src="/assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.mp4" type="video/mp4">
   <track kind="subtitles" srclang="ko" label="한국어" src="/assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.ko.vtt" default>
 </video>
@@ -39,3 +40,16 @@ video: /assets/videos/posts/만화/isms-p-data-in-the-clouds/comic.mp4
 ---
 
 *이 만화는 업계 뉴스를 바탕으로 자동 생성된 초안입니다.*
+
+## 관련 슬라이드
+
+본문 내용을 NotebookLM(`cinematic_infographic` 스타일)으로 요약한 슬라이드입니다.
+
+![isms-p-data-in-the-clouds 슬라이드 1](/assets/images/isms-p-data-in-the-clouds-slide-01.webp)
+
+![isms-p-data-in-the-clouds 슬라이드 2](/assets/images/isms-p-data-in-the-clouds-slide-02.webp)
+
+![isms-p-data-in-the-clouds 슬라이드 3](/assets/images/isms-p-data-in-the-clouds-slide-03.webp)
+
+![isms-p-data-in-the-clouds 슬라이드 4](/assets/images/isms-p-data-in-the-clouds-slide-04.webp)
+
