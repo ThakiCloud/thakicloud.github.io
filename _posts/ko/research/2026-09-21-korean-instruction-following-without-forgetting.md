@@ -21,7 +21,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/korean-instruction-following-without-forgetting/"
 ---
 
-![hero](/assets/images/korean-instruction-following-without-forgetting-hero.png)
+![hero](/assets/images/korean-instruction-following-without-forgetting-hero.webp)
 
 한국어 업무 번역의 사고는 정확도에서 나지 않습니다. 말투에서 납니다. 부장에게 갈 메일이 동료에게 하는 말투로 나가고, 재무팀이 매일 쓰는 CAPEX 가 자본지출로 바뀝니다. 의미는 전부 맞고 읽는 사람만 불편합니다.
 
@@ -108,7 +108,7 @@ flowchart TB
 
 ## replay 원문이 결과를 가릅니다
 
-![results](/assets/images/korean-instruction-following-without-forgetting-results.png)
+![results](/assets/images/korean-instruction-following-without-forgetting-results.webp)
 
 세 가지 구성을 비교했습니다. 세로축 두 개를 같이 봐야 합니다. 한국어 제약 준수와, 28개 번역 방향 평균의 변화량입니다.
 

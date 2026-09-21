@@ -21,7 +21,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/en/research/korean-instruction-following-without-forgetting/"
 ---
 
-![hero](/assets/images/korean-instruction-following-without-forgetting-hero.png)
+![hero](/assets/images/korean-instruction-following-without-forgetting-hero.webp)
 
 What goes wrong in Korean business translation is rarely accuracy. It is register. A mail meant for a director goes out in the tone you would use with a peer, and CAPEX, the word the finance team says every day, comes back as 자본지출. Every sentence is correct. Only the reader is uncomfortable.
 
@@ -108,7 +108,7 @@ Here is what we did not expect. The thing that mattered was not what goes into r
 
 ## The replay source decides the outcome
 
-![results](/assets/images/korean-instruction-following-without-forgetting-results.png)
+![results](/assets/images/korean-instruction-following-without-forgetting-results.webp)
 
 Three configurations, read against two vertical axes at once: Korean constraint compliance, and the change in the 28-direction mean.
 
