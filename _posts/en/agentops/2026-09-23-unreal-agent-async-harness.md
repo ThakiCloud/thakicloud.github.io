@@ -77,7 +77,7 @@ flowchart TB
     D --> E[Tool runs in background]
     E -.-> E2[Model does not wait,<br/>handles next task / user input]
     E --> F[Tool completes: result arrives]
-    F --> G[Result appended to session log (append-only)]
+    F --> G["Result appended to session log (append-only)"]
     G --> H[LLM re-invoked without breaking cache]
     H --> A
 ```
