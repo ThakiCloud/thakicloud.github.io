@@ -20,6 +20,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/k-decision-maxis-metis-pipeline/"
+audiobook: "https://drive.google.com/file/d/1R6zQEB6xp5OX6YzFbeQB9zW96ndKqwo5/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 규정을 근거로 감사 가능한 판정을 내려야 하는 기업 아키텍트와 프로덕트 오너를 위한 글입니다. 결론부터 말하면, 고객 자신의 문서로 학습시킨 한국형 결정 모델을 Maxis로 고객 네트워크 안에서 학습시키고, 한 대의 GPU 위에서 Metis로 서빙할 수 있습니다. 이 루프를 지탱하는 것은 데이터, 학습, 봉인된 평가 게이트, 서빙, 에이전트로 이어지는 다섯 단계이고, 그중 어느 하나라도 빠지면 나머지 넷도 신뢰할 수 없습니다.
@@ -36,6 +39,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/k-decision-maxis-meti
 여기에 두 번째 요구가 겹칩니다. 자동화된 판정은 감사가 가능해야 합니다. 담당자가 나중에 "왜 이 문서가 상한 초과로 분류되었는가"를 물었을 때, 자유 텍스트로 생성된 설명만으로는 그 판정이 얼마나 확실했는지 되짚기 어렵습니다. 이 두 요구, 즉 데이터가 네트워크를 벗어나지 않아야 한다는 것과 판정이 감사 가능해야 한다는 것을 동시에 만족시키려면, 학습부터 서빙까지 전체 루프가 고객 네트워크 안에서 완결되고 매 판정이 확률과 근거를 함께 남기는 구조가 필요합니다.
 
 이 요구를 만족시키려는 시도는 대개 두 축 중 하나에서 무너집니다. 사외 API를 그대로 쓰면 데이터 반출 요구를 넘지 못하고, 자유 텍스트 생성 모델을 그대로 온프렘에 올리면 판정이 감사 가능하지 않은 채로 남습니다. 이 파이프라인이 겨냥하는 자리는 그 둘 사이, 즉 온프렘이면서 동시에 판정 형식 자체가 감사를 전제로 설계된 자리입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/k-decision-maxis-metis-pipeline/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 파이프라인 전체 구조
 
@@ -55,6 +62,8 @@ flowchart TB
 *Maxis에서 Paxis까지, 데이터가 감사 가능한 판정으로 바뀌는 전체 경로입니다. 게이트를 통과하지 못한 모델은 다시 학습 단계로 돌아갑니다.*
 
 각 단계가 무엇을 의미하는지는 아래에서 하나씩 짚습니다.
+
+![k-decision-maxis-metis-pipeline 슬라이드 1](/assets/images/k-decision-maxis-metis-pipeline-slide-01.webp)
 
 ## Maxis: 고객 네트워크 안에서 학습시키는 LoRA 파인튜닝
 
@@ -100,17 +109,23 @@ flowchart TB
 
 이 게이트가 잡아낸 약점도 그대로 남깁니다. 이자율 계산은 학습 데이터에 1,000건 넘게 포함되어 있었는데도 여전히 약 51퍼센트 정확도에 머뭅니다. 금액에 이자율을 곱하고 일수로 나누는 복합 연산을 이 모델이 아직 배우지 못했다는 뜻입니다. 합성 분포 밖 평가셋에서는 `noul` 유형이 1.4퍼센트포인트 올랐지만, 1퍼센트포인트 이내 비열등성은 아직 확립되지 않았습니다. 게이트는 이런 약점을 감추지 않고 그대로 승격 판정 기록에 남깁니다.
 
+![k-decision-maxis-metis-pipeline 슬라이드 2](/assets/images/k-decision-maxis-metis-pipeline-slide-02.webp)
+
 ## Metis: 서빙은 가볍고, 어댑터는 여러 개를 한 GPU에
 
 게이트를 통과한 모델은 `kev.serve` 서버로 서빙하고, 이 서버가 Metis 엔드포인트에 올라가는 단위가 됩니다. 이 서버는 System One 호환 API를 노출하므로, Jev를 호출하도록 짠 코드가 엔드포인트만 바꾸면 그대로 동작합니다. 서빙은 GPU 한 대로 충분합니다. LoRA 어댑터와 포인터 헤드를 합친 크기가 약 130MB라서, 태스크마다 어댑터를 따로 두어도 저장·배포 부담이 작습니다. 다만 지금 서버는 프로세스 하나에 어댑터 하나를 올리므로, 베이스 모델 하나에 여러 어댑터를 동시에 얹는 멀티 어댑터 서빙은 아직 구현하지 않았습니다.
 
 서빙 지연시간은 실측했습니다. Metis 위가 아니라 H100 한 장에 `kev.serve`를 직접 띄우고 bf16으로 봉인 법령셋 115건을 한 번에 하나씩 보냈을 때, 워밍업이 끝난 뒤 P50 115ms, P95 189ms였습니다(fp32는 P50 358ms). 요청마다 법령 발췌 한 건에 질문 약 세 개가 붙은 조건입니다. 목표로 잡은 P50 100ms에는 조금 못 미칩니다. 이 숫자는 동시 요청이 없는 단일 스트림 지연이므로, 대량 처리량이 필요한 배포에서는 동시성을 올려 가며 포화 처리량을 따로 재야 큐잉 전략을 확정할 수 있습니다. 그 측정이 이 파이프라인의 다음 순서입니다.
 
+![k-decision-maxis-metis-pipeline 슬라이드 3](/assets/images/k-decision-maxis-metis-pipeline-slide-03.webp)
+
 ## Paxis: 판정을 감사 가능하게 만드는 마지막 단계
 
 서빙된 확률은 그 자체로는 아직 제품이 아닙니다. Paxis 에이전트가 그 확률을 특정 워크플로 안에서 소비하고, 판정과 확률, 그리고 그 판정에 쓰인 문서 발췌를 함께 감사 로그에 남길 때 비로소 감사 가능한 자동화가 완성됩니다. 에이전트가 사람의 승인을 거쳐야 하는 단계라면, 승인자에게도 자유 텍스트 설명 대신 확률과 근거를 함께 보여 주도록 설계할 수 있습니다. 이 설계는 Aegis가 요구하는 완전 폐쇄망 배포와도 맞물립니다. 공공·국방처럼 물리적으로 분리된 네트워크에 배포해야 하는 고객에게는, 학습부터 서빙과 감사 로그까지 전 구간이 그 네트워크를 벗어나지 않는다는 사실 자체가 제품의 전제 조건입니다.
 
 이 마지막 단계에서 결정 모델과 에이전트의 역할 분담도 분명해집니다. 결정 모델은 판정과 확률을 내놓는 역할만 맡고, 그 판정을 언제 자동으로 실행하고 언제 사람에게 넘길지는 에이전트 쪽 정책이 결정합니다. 예를 들어 확률이 높은 판정은 자동으로 다음 단계로 넘기고, 확률이 애매한 구간에 걸린 판정만 사람에게 승인을 요청하는 식입니다. 이렇게 역할을 나누면 결정 모델을 재학습하지 않고도 승인 정책만 바꿔 자동화 범위를 조정할 수 있습니다.
+
+![k-decision-maxis-metis-pipeline 슬라이드 4](/assets/images/k-decision-maxis-metis-pipeline-slide-04.webp)
 
 ## 한계
 
@@ -123,3 +138,16 @@ flowchart TB
 그다음 Maxis가 공개 벤치마크와 대조쌍 생성 로직 위에 고객 문서를 더해 학습시키고, 봉인된 평가 게이트를 한 번 통과시킵니다. 여기서 HOLD 판정이 나온다면, 그 원인이 특정 질문 유형인지 특정 숫자 계열인지를 먼저 좁히고 나서 다음 학습 라운드에 반영합니다. 원인을 좁히지 않고 데이터만 더 넣는 것은, 이 글 앞부분에서 대조군과 비교해 확인한 것처럼 대조쌍이라는 데이터 성질 자체가 주는 이득보다 효율이 낮습니다.
 
 마지막으로 게이트를 통과한 모델만 Metis 엔드포인트에 올리고, Paxis 에이전트가 그 판정을 워크플로 안에 배선합니다. 이 세 단계 중 어느 것도 문서가 고객 네트워크를 벗어나야 진행되지 않습니다. 그리고 게이트를 통과하지 못한 모델은 서빙으로 올라가지 않는다는 규칙이, 이 루프가 신뢰를 유지하는 유일한 이유입니다.
+
+## 참고 자료
+
+본문에 언급된 공개 자료입니다.
+
+- KoBEST · [KOBEST: Korean Balanced Evaluation of Significant Tasks (arXiv)](https://arxiv.org/abs/2204.04541)
+- KLUE · [KLUE-benchmark 공식 저장소 (GitHub)](https://github.com/klue-benchmark/klue)
+- AI 허브(한국지능정보사회진흥원) · [법률·규정 텍스트 분석 데이터 (AI Hub)](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71723)
+- Qwen3.5-4B-Base · [Qwen/Qwen3.5-4B-Base (Hugging Face)](https://huggingface.co/Qwen/Qwen3.5-4B-Base)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/k-decision-maxis-metis-pipeline/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*

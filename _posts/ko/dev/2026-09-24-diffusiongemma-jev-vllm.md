@@ -22,6 +22,9 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/dev/diffusiongemma-jev-vllm/"
 ---
 
+![DiffusionGemma-as-Jev: 오픈웨이트로 self-host하는 System-1 결정 API 개념을 형상화한 이미지](/assets/images/diffusiongemma-jev-vllm-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 왜 읽어야 하나
 
 이 글은 LLM 서빙을 담당하고 vLLM을 돌리는 플랫폼 엔지니어와 개발자를 향해 씁니다. 끝까지 읽으면 디퓨전 LLM이 무엇인지, 그동안 우리가 쓰는 오토레거시 LLM과 어디가 다른지, 그리고 상업용 전용 모델이었던 'System-1 결정 API'를 오픈웨이트로 self-host할 수 있는지 여부를 알게 됩니다.
@@ -35,6 +38,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/diffusiongemma-jev-vllm/
 
 이 글은 세 가지를 순서대로 다룹니다. 먼저 디퓨전 LLM이 무엇이고 오토레거시 LLM과 무엇이 다른지. 다음으로 vLLM이 DiffusionGemma를 어떻게 지원하고 structured-reads 모드가 그 위에 무엇을 추가하는지. 마지막으로 vLLM 기반 추론을 서빙하는 ThakiCloud에 이 일이 어떤 의미인지입니다.
 
+![diffusiongemma-jev-vllm 슬라이드 1](/assets/images/diffusiongemma-jev-vllm-slide-01.webp)
+
 ## 디퓨전 LLM이란
 
 지금까지 주류 LLM은 오토레거스였습니다. 토큰을 하나씩 순서대로 만들고 매 스테프에서 그전까지 만든 토큰을 보고 다음 토큰을 예측합니다. 이 구조 때문에 생성 길이가 곧 지연 시간과 직결됩니다. 구조화된 출력을 얻으려면 모델이 JSON을 직접 쓰게 하고 나중에 파싱하는 방식, 혹은 constrained decoding 같은 장치를 뒤에 붙였습니다.
@@ -43,6 +48,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/diffusiongemma-jev-vllm/
 
 이 설계가 속도 주장의 근거입니다. 가이드에 인용되는 벤치마크는 스테프마다 256개 토큰을 병렬로 다루고 단일 H100에서 초당 1000개 토큰 수준이라는 수치를 봅니다. [추정] 이 수치를 우리는 독립적으로 검증하지 못했지만, 병렬 denoising 구조 자체가 오토레거시 디코딩이 안 닿는 처리량 대역을 노린다는 점은 구조에서 읽을 수 있습니다.
 
+![diffusiongemma-jev-vllm 슬라이드 2](/assets/images/diffusiongemma-jev-vllm-slide-02.webp)
+
 ## DiffusionGemma란
 
 DiffusionGemma는 구글이 오픈웨이트로 낸 텍스트 디퓨전 LLM입니다. 파라미터는 약 260억(MoE, Mixture of Experts) 구조이고 체크포인트 이름은 `diffusiongemma-26B-A4B-it`입니다. Gemma 백본 위에 서 있고 비전 타워를 통해 텍스트·이미지·비디오 입력을 함께 다룹니다.
@@ -50,6 +57,8 @@ DiffusionGemma는 구글이 오픈웨이트로 낸 텍스트 디퓨전 LLM입니
 핵심은 연구 커뮤니티의 실험 단계를 지나 서빙 플랫폼이 직접 지원하는 모델이 됐다는 점입니다. vLLM이 DiffusionGemma를 네이티브로 추가했고 디퓨전 LLM이 vLLM에 직접 통합된 것은 이것이 처음입니다. 구글 팀과 함께한 작업입니다. vLLM 문서에서는 단일 Gemma4 백본을 두 모드로 돌린다고 설명합니다. causal attention으로 KV 캐시를 쓰는 인코더 모드, 그리고 그 인코더 KV를 bidirectional attention으로 읽는 디코더 모드. YOCO에 가까운 형태입니다.
 
 즉, 우리가 이미 프로덕션에서 쓰는 LLM 서빙 엔진이 디퓨전 모델의 낯선 디코딩 구조(양방향 어텐션, 반복 정제, 블록 기반 생성)를 배우고 실행하게 되었습니다. 디퓨전 LLM이 '특별 케이스로 따로 돌리는 것'에서 '서빙 플랫폼이 지원하는 모델 클래스'로 격상된 것입니다.
+
+![diffusiongemma-jev-vllm 슬라이드 3](/assets/images/diffusiongemma-jev-vllm-slide-03.webp)
 
 ## Jev란, structured-reads란
 
@@ -72,6 +81,8 @@ flowchart TB
   E --> F["타입화된 답 + 신뢰도 반환"]
 ```
 *structured-reads(Jev 유사)의 데이터 흐름. 문장 생성 후 파싱 대신, 단일 병렬 패스에서 답과 확신을 함께 계산합니다.*
+
+![diffusiongemma-jev-vllm 슬라이드 4](/assets/images/diffusiongemma-jev-vllm-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -101,11 +112,18 @@ Paxis 관점에서도 같습니다. 에이전트 하네스는 빠른 결정을 �
 
 ThakiCloud에게는, 이미 돌리는 vLLM 서빙 위의 새로운 능력 축이자 Paxis 에이전트 루프의 실행 경제성을 올리는 인프라입니다.
 
+
+
+
+
+
+
+
 ## 출처
 
-- vLLM 문서 — structured reads: https://docs.vllm.ai/en/latest/examples/features/structured_diffusion/
-- vLLM 발표 — DiffusionGemma: https://vllm-project.github.io/2026-06-10/diffusion-gemma.html
+- vLLM 문서 · structured reads: https://docs.vllm.ai/en/latest/examples/features/structured_diffusion/
+- vLLM 발표 · DiffusionGemma: https://vllm-project.github.io/2026-06-10/diffusion-gemma.html
 - 오픈 패치 (PR #57250): https://github.com/siliconflow/vllm-structured-reads
-- Google DeepMind — DiffusionGemma: https://deepmind.google/models/gemma/diffusiongemma/
-- TypeSafe AI — Introducing System One Models & Jev: https://typesafe.ai/blog/introducing-system-one-models-and-jev
-- explainx.ai — DiffusionGemma as Jev: https://explainx.ai/blog/diffusiongemma-jev-vllm-open-source-2026
+- Google DeepMind · DiffusionGemma: https://deepmind.google/models/gemma/diffusiongemma/
+- TypeSafe AI · Introducing System One Models & Jev: https://typesafe.ai/blog/introducing-system-one-models-and-jev
+- explainx.ai · DiffusionGemma as Jev: https://explainx.ai/blog/diffusiongemma-jev-vllm-open-source-2026

@@ -22,6 +22,9 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/diffusiongemma-jev-vllm/"
 ---
 
+![Illustration of the core idea of DiffusionGemma-as-Jev: Self-Hosting a System-1 Decision API on Open Weights](/assets/images/diffusiongemma-jev-vllm-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Why read this
 
 This post is for platform engineers and developers who serve LLMs and run vLLM. By the end you will understand what a diffusion LLM is, where it differs from the autoregressive LLMs we have used until now, and whether a "System-1 decision API" that used to be a proprietary commercial model can be self-hosted on open weights.
@@ -103,9 +106,9 @@ For ThakiCloud, this is a new capability axis on top of the vLLM serving we alre
 
 ## Sources
 
-- vLLM docs — structured reads: https://docs.vllm.ai/en/latest/examples/features/structured_diffusion/
-- vLLM announcement — DiffusionGemma: https://vllm-project.github.io/2026-06-10/diffusion-gemma.html
+- vLLM docs · structured reads: https://docs.vllm.ai/en/latest/examples/features/structured_diffusion/
+- vLLM announcement · DiffusionGemma: https://vllm-project.github.io/2026-06-10/diffusion-gemma.html
 - Open patch (PR #57250): https://github.com/siliconflow/vllm-structured-reads
-- Google DeepMind — DiffusionGemma: https://deepmind.google/models/gemma/diffusiongemma/
-- TypeSafe AI — Introducing System One Models & Jev: https://typesafe.ai/blog/introducing-system-one-models-and-jev
-- explainx.ai — DiffusionGemma as Jev: https://explainx.ai/blog/diffusiongemma-jev-vllm-open-source-2026
+- Google DeepMind · DiffusionGemma: https://deepmind.google/models/gemma/diffusiongemma/
+- TypeSafe AI · Introducing System One Models & Jev: https://typesafe.ai/blog/introducing-system-one-models-and-jev
+- explainx.ai · DiffusionGemma as Jev: https://explainx.ai/blog/diffusiongemma-jev-vllm-open-source-2026
