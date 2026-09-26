@@ -20,9 +20,15 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/statute-numeric-conflict-audit/"
+audiobook: "https://drive.google.com/file/d/12e4mJVqRKt4IGOdtpm8LcBQhseimEAKD/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 사내 규정, 약관, 계약서 묶음에서 "이 조항의 기한과 저 조항의 기한이 서로 맞는가"를 자동으로 검사하고 싶은 엔지니어와 법무·컴플라이언스 담당자를 위한 글입니다. 가장 촘촘하게 관리되는 문서 묶음인 대한민국 공개 법령 전체에 같은 검사를 돌려 봤습니다. 결과는 두 문장으로 요약됩니다. 서로를 명시적으로 인용하는 조문끼리 현행 본문의 숫자 기준이 어긋나는 경우는, 세 모델 계열이 모두 동의한 기준으로는 한 건도 없었습니다. 실제 불일치는 법률이 먼저 바뀌고 시행령이 아직 따라오지 못한 **개정 지연** 구간에서 나왔습니다.
+
+![한국 법령 전체에서 숫자 모순을 찾아봤습니다: 확정 0건, 틈은 개정 지연에 있었습니다 개념을 형상화한 이미지](/assets/images/statute-numeric-conflict-audit-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 무엇을 검사했나
 
@@ -35,11 +41,17 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/statute-numeric-con
 
 모델이 맡은 일은 두 가지뿐입니다. 사내 Qwen3.8-27B가 "이 두 숫자가 정말 같은 양을 말하는가"를 보고 검수 순서를 정하고, Claude·GPT·Qwen 세 계열이 서로의 답을 보지 않은 채 각 쌍을 검수합니다. 셋이 모두 충돌이라고 하고, 근거로 든 문구가 원문에 글자 그대로 있을 때만 확정합니다. 사람 검수는 넣지 않았습니다. 대신 세 계열의 합의와 근거 문자열 대조를 코드가 판정합니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/statute-numeric-conflict-audit/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 검사기가 충돌을 놓치지 않는지부터 확인했습니다
 
 0건이라는 결과가 의미를 가지려면 검사기가 진짜 충돌을 잡을 수 있어야 합니다. 그래서 충돌을 일부러 심어 봤습니다. 서로 맞는 조문 쌍을 골라 GPT에게 하위 조문의 숫자 하나만 상위 범위 밖으로 바꾸게 했고, 이 과정은 검사기 코드를 전혀 보지 않는 규약으로 진행했습니다. 개발에 쓴 표본은 모두 빼고 새로 뽑은 65쌍에서 검사기는 65쌍을 모두 잡았습니다(Wilson 95% 하한 94.4%).
 
 처음부터 이렇게 나온 것은 아닙니다. 첫 버전은 하한 84.8%로 기준인 90%에 못 미쳐 기각됐습니다. "초과하지 아니하는"처럼 부정형으로 상한을 표현한 문장, "N을 말한다" 식의 정의 문장, 상위가 값을 고정하고 하위가 요건만 좁히는 자격 기준형 위임을 놓치고 있었습니다. 이 세 가지를 고치고 규칙을 다시 봉인한 뒤에야 기준을 넘었습니다.
+
+![statute-numeric-conflict-audit 슬라이드 1](/assets/images/statute-numeric-conflict-audit-slide-01.webp)
 
 ## 1,201쌍이 0건이 되기까지
 
@@ -52,6 +64,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/statute-numeric-con
 
 이 결과가 알려 주는 것은 법령보다 방법에 관한 것입니다. 숫자만 비교하는 검사기는 후보를 넓게 잡는 데는 쓸모가 있지만 그 자체로 결론이 되지는 못합니다. 두 숫자가 같은 대상의 같은 양인지 판단하는 단계가 반드시 뒤따라야 합니다.
 
+![statute-numeric-conflict-audit 슬라이드 2](/assets/images/statute-numeric-conflict-audit-slide-02.webp)
+
 ## 실제 틈: 법률은 바뀌었는데 시행령이 남아 있을 때
 
 불일치가 실제로 나온 곳은 개정 이력이었습니다. 상위 법률의 숫자가 개정으로 바뀌었는데 그 조문을 받는 하위 조문의 개정 표시가 그보다 오래된 경우를 찾는 탐지기를 따로 만들었습니다. 이 탐지기가 과거에도 통했는지 보려고, 법령 이력을 2020년, 2023년, 2024년 1월 1일 시점으로 되돌려 같은 검사를 돌렸습니다.
@@ -60,9 +74,13 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/statute-numeric-con
 
 현재 시점에서 가장 강한 후보는 보훈보상대상자 지원에 관한 법률입니다. 제51조제6항은 2026년 9월 8일 개정·시행으로 위탁 진료비 감면 대상을 75세 이상에서 65세 이상으로 넓혔습니다. 그런데 감면 비율을 정하는 시행령 제63조제2항은 2021년 개정 문구 그대로 "75세 이상"을 대상으로 적고 있습니다. Claude와 GPT는 둘 다 위임 범위를 벗어난 불일치로 판정했고, Qwen은 다시 물어도 "사문화된 조문"이라며 충돌이 아니라고 답했습니다. 규칙상 만장일치가 아니므로 확정하지 않고 감시 목록에 두었습니다. 시행령 개정이 진행 중일 수도 있어서, 이 글에서는 모순이 아니라 개정 지연 후보로 소개합니다. 개정 법률의 시행일이 아직 오지 않은 3쌍(신용협동조합법, 외국환거래법, 전공의법)은 시행일 이후에 다시 판정할 예정입니다.
 
+![statute-numeric-conflict-audit 슬라이드 3](/assets/images/statute-numeric-conflict-audit-slide-03.webp)
+
 ## 4B 소형 모델로 대신할 수 있을까
 
 같은 1,201쌍을 ThakiCloud의 4B 판정 모델 K-Decision에도 돌려 봤습니다. H100 한 장에서 1,201건을 53초에 끝냈고, "두 숫자가 같은 양인가"라는 질문에서는 Claude·GPT 합의와 98.7% 일치했습니다. 반면 "두 조문이 충돌하는가"를 물으면 962쌍을 충돌이라고 답해 일치율이 19.6%에 그쳤습니다. 거의 모든 쌍에 같은 답을 내는 편향입니다. 소형 모델은 싸고 빠른 1차 필터로는 쓸 수 있지만, 충돌 판정은 코드와 대형 모델 합의에 맡겨야 한다는 뜻입니다.
+
+![statute-numeric-conflict-audit 슬라이드 4](/assets/images/statute-numeric-conflict-audit-slide-04.webp)
 
 ## 이 결과를 읽을 때 조심할 점
 
@@ -75,3 +93,17 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/statute-numeric-con
 **Paxis**에서는 이 흐름을 "규정 정합성 감사" 업무 자동화로 구성할 수 있습니다. 문서가 개정될 때마다 영향받는 조항을 찾아 오라클로 판정하고, 모델 합의가 갈리는 건만 담당자 승인으로 넘기는 방식입니다. 27B 순위 모델과 4B 필터는 **Metis**에서 서빙하고, 규정 문서를 외부로 보낼 수 없는 금융·공공 고객이라면 **Aegis** 온프레미스에서 같은 파이프라인을 돌립니다. 외부 모델 검수가 불가능한 환경에서는 사내 모델끼리 계열을 달리해 합의하도록 바꾸면 됩니다.
 
 이 글의 수치는 2026년 9월 23일 기준 공개 법령 스냅숏(legalize-kr)에 대한 실측값이며, 사람이 읽지 않은 기계 합의 결과입니다.
+
+## 참고 자료
+
+본문에 인용한 조문은 아래 공개 출처에서 확인됩니다.
+
+- [legalize-kr](https://github.com/legalize-kr/legalize-kr) - 대한민국 법령을 Git 저장소로 관리하는 프로젝트. 각 법령은 Markdown 파일이고, 각 개정은 공포일을 가진 commit입니다. 이 글의 실측에 쓴 공개 법령 스냅숏(2026-09-23 기준)의 출처.
+- [소득세법](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%86%8C%EB%93%9D%EC%84%B8%EB%B2%95), 국가법령정보센터. 제12조제2호나목, 1주택자 주택임대소득 비과세에서 기준시가 12억원 초과 주택을 제외하는 규정.
+- [소득세법 시행령](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%86%8C%EB%93%9D%EC%84%B8%EB%B2%95%EC%8B%9C%ED%96%89%EB%A0%B9), 국가법령정보센터. 제8조의2.
+- [보훈보상대상자 지원에 관한 법률](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EB%B3%B4%ED%9B%88%EB%B3%B4%EC%83%81%EB%8C%80%EC%83%81%EC%9E%90%EC%A7%80%EC%9B%90%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0), 국가법령정보센터. 제51조제6항, 위탁 의료기관 진료비 감면 대상 연령(2026-09-08 개정으로 65세 이상).
+- [보훈보상대상자 지원에 관한 법률 시행령](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EB%B3%B4%ED%9B%88%EB%B3%B4%EC%83%81%EB%8C%80%EC%83%81%EC%9E%90%EC%A7%80%EC%9B%90%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0%EC%8B%9C%ED%96%89%EB%A0%B9), 국가법령정보센터. 제63조제2항, 개정 지연 후보로 짚은 "75세 이상" 문구(2021년 개정).
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/statute-numeric-conflict-audit/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
