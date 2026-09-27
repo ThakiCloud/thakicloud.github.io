@@ -19,7 +19,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 lang: ko
-permalink: /ko/owm/qwen-image-fewstep/
+permalink: /ko/research/qwen-image-fewstep/
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/qwen-image-fewstep/"
 ---
 
