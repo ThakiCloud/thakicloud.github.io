@@ -30,7 +30,7 @@ If you use coding agents every day, or you run agent workloads in production, re
 
 Claude Code is a terminal-first tool. Sessions were local processes that existed only while the terminal was open. On top of that, "Claude Code on the web" began as a research preview, and around September 23-24 (per reports) cloud sessions left the preview. The official message: close your laptop, and Claude Code keeps working.
 
-This launch connects to the announcement from the previous week. The redesigned Claude Code Projects, which went to beta on September 17, was a "conductor" structure coordinating multiple parallel cloud sessions from a single conversation, and [a previous post](/en/agentops/claude-code-projects-parallel-agent-threads/) analyzed its parallel sessions and shared memory structure. Immediately after Projects defined "how to run many sessions," cloud sessions GA defined "where those sessions live and how they move." Read the two announcements together and you get Anthropic's full picture of the execution environment for coding agents.
+This launch connects to the announcement from the previous week. The redesigned Claude Code Projects, which went to beta on September 17, was a "conductor" structure coordinating multiple parallel cloud sessions from a single conversation, and [a previous post](/tech-blog/en/agentops/claude-code-projects-parallel-agent-threads/) analyzed its parallel sessions and shared memory structure. Immediately after Projects defined "how to run many sessions," cloud sessions GA defined "where those sessions live and how they move." Read the two announcements together and you get Anthropic's full picture of the execution environment for coding agents.
 
 ## What Cloud Sessions Are
 

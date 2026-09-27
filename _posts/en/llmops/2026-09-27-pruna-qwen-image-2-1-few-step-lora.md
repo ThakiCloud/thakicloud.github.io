@@ -5,6 +5,8 @@ seo_description: "The serving debate around Qwen-Image-2.1 has expanded from the
 excerpt: "The cost of image generation serving comes down on two levers: engine efficiency and step count. Pruna's few-step LoRA turns the second lever into an off-the-shelf part. The key is that it does not change the base weights."
 date: 2026-09-27
 last_modified_at: 2026-09-27
+published: false
+draft_note: "2026-09-27 retired: ThakiCloud's own FewStep LoRA release post (research/2026-09-27-qwen-image-fewstep) already covers the Pruna comparison with measurements. Pruna analysis folded into that post."
 tags:
   - pruna
   - qwen-image-2-1
@@ -29,11 +31,11 @@ Engineers serving image generation models or running batch generation should rea
 
 ## Overview
 
-When the Qwen team released Qwen-Image-2.1 on September 20 and vLLM-Omni served it with day-0 support, diffusion serving converged on the same principles as LLM serving: exact cross-step KV reuse for block-wise causal attention, and CUDA Graphs. [A previous post](/en/llmops/qwen-image-2-1-vllm-omni-day0/) analyzed that engine side against our own B200 measurements.
+When the Qwen team released Qwen-Image-2.1 on September 20 and vLLM-Omni served it with day-0 support, diffusion serving converged on the same principles as LLM serving: exact cross-step KV reuse for block-wise causal attention, and CUDA Graphs. [A previous post](/tech-blog/en/llmops/qwen-image-2-1-vllm-omni-day0/) analyzed that engine side against our own B200 measurements.
 
 This post covers a different axis of the same model: step count. Around September 23, PrunaAI open-sourced Pruna-Qwen-Image-2.1, a set of LoRA adapters that tunes the base model to run in 5 or 8 steps, claiming generation up to 6.3x faster without CFG (classifier-free guidance).
 
-PrunaAI is a model-efficiency company that has built its core technology around reducing the step count of diffusion models. [A post from last year analyzing Pruna's efficiency curation](/en/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-en/) traced their technical direction. This open-sourcing is that direction applied to Qwen-Image-2.1, the current top-tier open image model.
+PrunaAI is a model-efficiency company that has built its core technology around reducing the step count of diffusion models. [A post from last year analyzing Pruna's efficiency curation](/tech-blog/en/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-en/) traced their technical direction. This open-sourcing is that direction applied to Qwen-Image-2.1, the current top-tier open image model.
 
 ## What Pruna-Qwen-Image-2.1 Is
 
@@ -129,5 +131,5 @@ One line to close: the step-count lever is now an off-the-shelf part, and what r
 - [ComfyUI Wiki: Pruna 5-Step and 8-Step Qwen-Image 2.1 LoRAs](https://comfyui-wiki.com/en/news/2026-09-23-pruna-qwen-image-2-1)
 - [Pruna AI announcement (LinkedIn)](https://www.linkedin.com/posts/pruna-ai_today-we-open-source-pruna-qwen-image-21-activity-7508918316690972672-A3tz)
 - [Pruna API documentation: Qwen-Image](https://docs.api.pruna.ai/guides/models/qwen-image)
-- [Previous post: vLLM-Omni's day-0 support for Qwen-Image-2.1](/en/llmops/qwen-image-2-1-vllm-omni-day0/)
-- [Previous post: PrunaAI efficiency curation analysis](/en/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-en/)
+- [Previous post: vLLM-Omni's day-0 support for Qwen-Image-2.1](/tech-blog/en/llmops/qwen-image-2-1-vllm-omni-day0/)
+- [Previous post: PrunaAI efficiency curation analysis](/tech-blog/en/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-en/)

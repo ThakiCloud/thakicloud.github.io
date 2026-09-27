@@ -5,6 +5,8 @@ seo_description: "Qwen-Image-2.1 서빙 논쟁이 엔진(vLLM-Omni day-0, 크로
 excerpt: "이미지 생성 서빙의 비용은 두 레버로 줄인다. 엔진 효율과 스텝 수. Pruna의 few-step LoRA가 두 번째 레버를 오프더셸 부품으로 만들었다. 베이스 가중치를 바꾸지 않는다는 것이 핵심이다."
 date: 2026-09-27
 last_modified_at: 2026-09-27
+published: false
+draft_note: "2026-09-27 retire: ThakiCloud 자체 FewStep LoRA 공개 글(research/2026-09-27-qwen-image-fewstep)이 Pruna 비교 실측까지 커버해 중복 소재로 전환. Pruna 원문 분석은 그 글의 '왜 이 문제가 흥미로운가' 절에 이미 반영."
 tags:
   - pruna
   - qwen-image-2-1
@@ -29,13 +31,13 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/pruna-qwen-image-2-1-
 
 ## 개요
 
-9월 20일 Qwen 팀이 Qwen-Image-2.1을 공개하고 vLLM-Omni가 day-0으로 서빙하면서 diffusion 서빙은 LLM 서빙과 같은 원리(블록인과적 어텐션의 exact 크로스스텝 KV 재사용, CUDA Graphs)로 수렴했습니다. [지난 글](/ko/llmops/qwen-image-2-1-vllm-omni-day0/)에서 그 엔진 측면을 B200 실측 기준으로 분석했습니다.
+9월 20일 Qwen 팀이 Qwen-Image-2.1을 공개하고 vLLM-Omni가 day-0으로 서빙하면서 diffusion 서빙은 LLM 서빙과 같은 원리(블록인과적 어텐션의 exact 크로스스텝 KV 재사용, CUDA Graphs)로 수렴했습니다. [지난 글](/tech-blog/ko/llmops/qwen-image-2-1-vllm-omni-day0/)에서 그 엔진 측면을 B200 실측 기준으로 분석했습니다.
 
 ![엔진 레버(vLLM-Omni & CUDA Graphs)와 경로 레버(Pruna Few-Step LoRA)의 독립적 합성(NLM 슬라이드)](/assets/images/pruna-qwen-image-2-1-few-step-lora-slide-04.webp)
 
 이 글은 같은 모델의 다른 축을 다룹니다. 스텝 수입니다. 9월 23일경 PrunaAI가 Pruna-Qwen-Image-2.1을 오픈소스했는데, 이는 5스텝 또는 8스텝으로 동작하도록 베이스 모델을 조율하는 LoRA 어댑터 세트입니다. CFG(유도 계수) 없이, 최대 6.3배 빠른 생성을 주장합니다.
 
-PrunaAI는 모델 효율성 전문 기업으로, diffusion 모델의 스텝 수 축소를 주력 기술로 삼아 왔습니다. [지난해 Pruna의 효율성 큐레이션을 분석한 글](/ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ko/)에서 그들의 기술 방향을 확인한 바 있습니다. 이번 오픈소스는 그 방향이 Qwen-Image-2.1이라는 현재 최상위 오픈 이미지 모델에 적용된 것입니다.
+PrunaAI는 모델 효율성 전문 기업으로, diffusion 모델의 스텝 수 축소를 주력 기술로 삼아 왔습니다. [지난해 Pruna의 효율성 큐레이션을 분석한 글](/tech-blog/ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ko/)에서 그들의 기술 방향을 확인한 바 있습니다. 이번 오픈소스는 그 방향이 Qwen-Image-2.1이라는 현재 최상위 오픈 이미지 모델에 적용된 것입니다.
 
 ## Pruna-Qwen-Image-2.1이 무엇인가
 
@@ -141,5 +143,5 @@ Qwen-Image-2.1을 서빙하거나 배치 생성을 돌린다면, 지금 당장 �
 - [ComfyUI Wiki: Pruna 5-Step and 8-Step Qwen-Image 2.1 LoRAs](https://comfyui-wiki.com/en/news/2026-09-23-pruna-qwen-image-2-1)
 - [Pruna AI 공식 발표 (LinkedIn)](https://www.linkedin.com/posts/pruna-ai_today-we-open-source-pruna-qwen-image-21-activity-7508918316690972672-A3tz)
 - [Pruna API 문서: Qwen-Image](https://docs.api.pruna.ai/guides/models/qwen-image)
-- [지난 글: vLLM-Omni의 Qwen-Image-2.1 day-0 지원](/ko/llmops/qwen-image-2-1-vllm-omni-day0/)
-- [지난 글: PrunaAI 효율성 큐레이션 분석](/ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ko/)
+- [지난 글: vLLM-Omni의 Qwen-Image-2.1 day-0 지원](/tech-blog/ko/llmops/qwen-image-2-1-vllm-omni-day0/)
+- [지난 글: PrunaAI 효율성 큐레이션 분석](/tech-blog/ko/research/prunaai-awesome-ai-efficiency-comprehensive-analysis-ko/)

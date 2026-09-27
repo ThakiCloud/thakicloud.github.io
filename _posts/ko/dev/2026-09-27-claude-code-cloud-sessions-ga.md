@@ -30,7 +30,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/dev/claude-code-cloud-sessio
 
 Claude Code는 터미널 퍼스트 도구입니다. 세션은 로컬 프로세스였고, 터미널이 열려 있는 동안에만 존재했습니다. 그 위에 'Claude Code on the web'이 연구 프리뷰로 시작됐는데, 9월 23~24일경(보도에 따르면) 클라우드 세션이 연구 프리뷰를 벗어났습니다. 노트북을 닫아도 Claude Code가 계속 일한다는 것이 공식 메시지입니다.
 
-이 출시는 바로 전 주에 나온 발표와 잇닿아 있습니다. 9월 17일 베타로 나온 재설계된 Claude Code Projects는 하나의 대화로 여러 병렬 클라우드 세션을 조율하는 '조율자' 구조였는데, [지난 글](/ko/agentops/claude-code-projects-parallel-agent-threads/)에서 그 병렬 세션과 shared memory 구조를 분석했습니다. Projects가 '세션을 여러 개 띄우는 법'을 정한 직후, 클라우드 세션 GA가 '그 세션이 어디에 있고 어떻게 이동하는지'를 정했습니다. 두 발표를 합쳐 읽으면 Anthropic이 코딩 에이전트의 실행 환경에 대한 전체 그림이 보입니다.
+이 출시는 바로 전 주에 나온 발표와 잇닿아 있습니다. 9월 17일 베타로 나온 재설계된 Claude Code Projects는 하나의 대화로 여러 병렬 클라우드 세션을 조율하는 '조율자' 구조였는데, [지난 글](/tech-blog/ko/agentops/claude-code-projects-parallel-agent-threads/)에서 그 병렬 세션과 shared memory 구조를 분석했습니다. Projects가 '세션을 여러 개 띄우는 법'을 정한 직후, 클라우드 세션 GA가 '그 세션이 어디에 있고 어떻게 이동하는지'를 정했습니다. 두 발표를 합쳐 읽으면 Anthropic이 코딩 에이전트의 실행 환경에 대한 전체 그림이 보입니다.
 
 ![세션이 그 세션을 시작한 머신보다 오래 살아남는다는 NLM 슬라이드](/assets/images/claude-code-cloud-sessions-ga-slide-02.webp)
 
