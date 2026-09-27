@@ -19,7 +19,7 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 lang: en
-permalink: /en/owm/qwen-image-fewstep/
+permalink: /en/research/qwen-image-fewstep/
 canonical_url: "https://thakicloud.com/tech-blog/en/research/qwen-image-fewstep/"
 ---
 
