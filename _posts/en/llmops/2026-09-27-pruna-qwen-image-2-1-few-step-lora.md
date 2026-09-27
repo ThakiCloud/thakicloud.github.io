@@ -5,7 +5,6 @@ seo_description: "The serving debate around Qwen-Image-2.1 has expanded from the
 excerpt: "The cost of image generation serving comes down on two levers: engine efficiency and step count. Pruna's few-step LoRA turns the second lever into an off-the-shelf part. The key is that it does not change the base weights."
 date: 2026-09-27
 last_modified_at: 2026-09-27
-published: false
 draft_note: "2026-09-27 retired: ThakiCloud's own FewStep LoRA release post (research/2026-09-27-qwen-image-fewstep) already covers the Pruna comparison with measurements. Pruna analysis folded into that post."
 tags:
   - pruna

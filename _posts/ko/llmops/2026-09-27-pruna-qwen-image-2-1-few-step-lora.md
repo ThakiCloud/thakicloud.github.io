@@ -5,7 +5,6 @@ seo_description: "Qwen-Image-2.1 서빙 논쟁이 엔진(vLLM-Omni day-0, 크로
 excerpt: "이미지 생성 서빙의 비용은 두 레버로 줄인다. 엔진 효율과 스텝 수. Pruna의 few-step LoRA가 두 번째 레버를 오프더셸 부품으로 만들었다. 베이스 가중치를 바꾸지 않는다는 것이 핵심이다."
 date: 2026-09-27
 last_modified_at: 2026-09-27
-published: false
 draft_note: "2026-09-27 retire: ThakiCloud 자체 FewStep LoRA 공개 글(research/2026-09-27-qwen-image-fewstep)이 Pruna 비교 실측까지 커버해 중복 소재로 전환. Pruna 원문 분석은 그 글의 '왜 이 문제가 흥미로운가' 절에 이미 반영."
 tags:
   - pruna
