@@ -111,7 +111,7 @@ On the cost side, Metis and Maxis fit together. This model is a LoRA r8 adapter 
 
 ## Limits
 
-Some checks are not finished. These results come from a model trained with a single seed; two more seeds with the same settings are training now, and we will add the variance to the model card when they finish. It covers restaurants only; other industries need their own intent scheme first. Evaluation used the BF16 merged model, and a 4-bit quantized version is being validated separately. General knowledge, coding and safety benchmarks have not been run yet, so do not assume the base model's general abilities are fully preserved.
+Some checks are not finished. These results come from a model trained with a single seed; two more seeds with the same settings are training now, and we will add the variance to the model card when they finish. It covers restaurants only; other industries need their own intent scheme first. We also released a 4-bit (NVFP4) serving build. Its resolution rate is 0.700 on IID and 0.550 on Hard, 0.9 points below the BF16 original on IID (interval −1.4 to −0.4), but the two were measured on different GPUs (H200 and B200), so hardware differences are mixed in. Measured side by side on the same B200 over 400 items, NVFP4 was actually 1.5 points higher. It still beats the base model by 9.1 points on IID and 7.7 on Hard, with zero unsupported facts. General knowledge, coding and safety benchmarks have not been run yet, so do not assume the base model's general abilities are fully preserved.
 
 Gold labels were computed by rule code. When an independent outside judge labeled 200 items separately, action agreement was 95.5%, and none of the 9 disagreements was a code error. Still, if the rules themselves were wrong, all three models could have been graded wrong in the same direction.
 
@@ -122,6 +122,7 @@ MerchantDesk v0.1 is a 27B model built for Korea's small-business owners that ha
 ## Links
 
 - Merged model: [ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1)
+- 4-bit serving build: [ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-NVFP4](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-NVFP4)
 - LoRA adapter: [ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-LoRA](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-LoRA)
 - Collection: [Merchant Desk collection](https://huggingface.co/collections/ThakiCloud/merchant-desk-korean-small-business-customer-desk-6aba5da20fbd297da8cdc3c7)
 - Base model: [ThakiCloud/Qwen3.8-27B-Human-KO](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO)

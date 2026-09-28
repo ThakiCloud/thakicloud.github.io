@@ -111,7 +111,7 @@ C는 예상을 빗나갔습니다. 외부 리뷰에서는 범용 정책 모델�
 
 ## 한계
 
-확인이 끝나지 않은 부분도 남아 있습니다. 이번 결과는 시드 하나로 학습한 모델에서 나왔고 같은 설정으로 시드 두 개를 더 학습하는 중입니다. 결과가 나오면 분산을 모델 카드에 덧붙이겠습니다. 음식점 업종만 다루며 다른 업종은 의도 체계부터 새로 정해야 합니다. 평가는 BF16 병합본으로 했고 4비트 양자화본은 따로 검증 중입니다. 일반 지식과 코딩과 안전 벤치는 아직 재지 않았으므로, 기준 모델의 일반 능력이 그대로 유지된다고 가정하지 마시기 바랍니다.
+확인이 끝나지 않은 부분도 남아 있습니다. 이번 결과는 시드 하나로 학습한 모델에서 나왔고 같은 설정으로 시드 두 개를 더 학습하는 중입니다. 결과가 나오면 분산을 모델 카드에 덧붙이겠습니다. 음식점 업종만 다루며 다른 업종은 의도 체계부터 새로 정해야 합니다. 4비트(NVFP4) 서빙판도 함께 공개했습니다. 해결률이 IID 0.700, Hard 0.550 으로 BF16 원본보다 IID 에서 0.9%p 낮았지만(구간 −1.4 ~ −0.4), 두 모델을 다른 GPU(H200 과 B200)에서 쟀기 때문에 하드웨어 차이가 섞여 있습니다. 같은 B200 에서 400건을 나란히 재면 오히려 NVFP4 가 1.5%p 높았습니다. 기준 모델보다는 여전히 IID 9.1%p, Hard 7.7%p 높고 근거 없는 사실은 0건입니다. 일반 지식과 코딩과 안전 벤치는 아직 재지 않았으므로, 기준 모델의 일반 능력이 그대로 유지된다고 가정하지 마시기 바랍니다.
 
 정답 라벨은 규칙 코드로 계산했습니다. 이 코드와 독립적인 외부 판정자에게 200건을 따로 매기게 했을 때 행동 일치율은 95.5%였고 엇갈린 9건에서 코드 쪽 오류는 없었습니다. 그래도 규칙 자체가 틀렸다면 세 모델이 모두 같은 방향으로 틀리게 채점됐을 가능성은 남아 있습니다.
 
@@ -122,6 +122,7 @@ MerchantDesk v0.1은 우리나라 소상공인 사장님들을 위해, 동네 �
 ## 링크
 
 - 병합 모델: [ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1)
+- 4비트 서빙판: [ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-NVFP4](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-NVFP4)
 - LoRA 어댑터: [ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-LoRA](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO-MerchantDesk-v0.1-LoRA)
 - 컬렉션: [Merchant Desk 컬렉션](https://huggingface.co/collections/ThakiCloud/merchant-desk-korean-small-business-customer-desk-6aba5da20fbd297da8cdc3c7)
 - 기준 모델: [ThakiCloud/Qwen3.8-27B-Human-KO](https://huggingface.co/ThakiCloud/Qwen3.8-27B-Human-KO)
