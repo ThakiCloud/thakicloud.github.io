@@ -4,7 +4,7 @@ excerpt: "Alibaba's Qwen3.8-Flash-Next (125B MoE, 6B active) shrinks 2.7x under 
 seo_title: "NVIDIA NVFP4 Qwen3.8-Flash-Next: 125B MoE in 135GB, and Why Serving Config Decides Performance"
 seo_description: "The hybrid-attention architecture of NVFP4-quantized Qwen3.8-Flash-Next (125B MoE, 6B active), single GB10 serving paths, and what ThakiCloud's B200 NVFP4 measurements show about serving configuration."
 date: 2026-09-29
-last_modified_at: 2026-09-29
+last_modified_at: 2026-09-30
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -22,6 +22,9 @@ tags:
 categories:
   - llmops
 ---
+
+![Illustration of the core idea of A 125B MoE in 135GB: NVIDIA Re-packs Qwen3.8-Flash-Next in NVFP4](/assets/images/nvidia-nvfp4-qwen38-flash-next-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Why read this
 
@@ -142,3 +145,16 @@ Finally, GB10 is a developer device. The fact that a 135GB checkpoint loads into
 The NVFP4 release of Qwen3.8-Flash-Next changes two things at once. One is the floor of large MoE serving: a 125B-class model now runs on a single 128GB device, which goes directly into the cost arithmetic of on-premises and data-sovereignty environments. The other is the center of gravity of serving: the checkpoint is 63% smaller, but the throughput it delivers is still decided by the engine's compile setting and max-seqs cap.
 
 If we benchmark this model on B200 next week, there is one thing to look at. Not "NVFP4 made 125B into 135GB", but "what tokens/s does that 135GB deliver, under which configuration". The former is the announcement. The latter is the serving.
+
+## Sources
+
+- Qwen official release blog: <https://qwen.ai/blog?id=qwen3.8-flash-next>
+- Qwen3.8-Flash-Next Hugging Face model card: <https://huggingface.co/Qwen/Qwen3.8-Flash-Next>
+- QwenLM official repository (tech report included): <https://github.com/QwenLM/Qwen3.8-Flash-Next>
+- NVIDIA NVFP4 quantized checkpoint: <https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4>
+- RadixArk NVFP4 mirror checkpoint: <https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4>
+- Ollama model page (125b-a6b-nvfp4 tag): <https://ollama.com/library/qwen3.8-flash-next>
+- SGLang single GB10 (SM121) serving recipe (r0b0tlab): <https://github.com/r0b0tlab/qwen38-flash-next-nvidia-nvfp4-sm121-sglang>
+- vLLM 2x DGX Spark (TP2+EP, MTP speculative decoding) serving recipe (getrefined): <https://github.com/getrefined/Qwen3.8-Flash-Next-NVFP4-vLLM-DGX-Spark>
+- NVIDIA developer forum (1/2/4 DGX Spark, 64 tok/s single stream): <https://forums.developer.nvidia.com/t/382476>
+- ThakiCloud B200 serving-configuration measurement, canonical source of the numbers above: <https://thakicloud.com/tech-blog/en/research/default-configuration-tax/>

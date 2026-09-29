@@ -4,7 +4,7 @@ excerpt: "알리바바의 Qwen3.8-Flash-Next(125B MoE, 활성 6B)가 NVIDIA NVFP
 seo_title: "NVIDIA NVFP4 Qwen3.8-Flash-Next: 125B MoE를 135GB로, 그리고 서빙 설정이 성능을 결정하는 이유"
 seo_description: "NVFP4 양자화된 Qwen3.8-Flash-Next(125B MoE, 활성 6B)의 하이브리드 어텐션 아키텍처와 단일 GB10 서빙, 그리고 ThakiCloud의 B200 NVFP4 실측에서 확인한 서빙 설정의 영향까지 정리했습니다."
 date: 2026-09-29
-last_modified_at: 2026-09-29
+last_modified_at: 2026-09-30
 author_profile: true
 toc: true
 toc_label: "목차"
@@ -22,9 +22,14 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/nvidia-nvfp4-qwen38-flash-next/"
 ---
 
+![125B MoE를 135GB로: NVIDIA가 NVFP4로 재포장한 Qwen3.8-Flash-Next 개념을 형상화한 이미지](/assets/images/nvidia-nvfp4-qwen38-flash-next-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 왜 읽어야 하나
 
 서빙 인프라를 운영하는 엔지니어라면 이번 주에 한 체크포인트의 존재만으로 계산법이 바뀔 일이 생겼습니다. 125B 매개변수 MoE 모델을 단 하나의 128GB 개발용 장치에서 돌릴 수 있게 됐기 때문입니다. 핵심 결론을 먼저 말합니다. 대형 MoE 서빙의 하한선은 개발용 단일 기기로 내려왔지만, 그 장치 위에서 실제로 나오는 처리량은 체크포인트가 아니라 엔진의 서빙 설정이 결정합니다. 이 글은 NVIDIA가 NVFP4로 공개한 Qwen3.8-Flash-Next의 아키텍처와 검증된 서빙 경로를 정리하고, 같은 NVFP4 경로에 대한 우리 B200 실측에서 그 결론을 확인합니다.
+
+![nvidia-nvfp4-qwen38-flash-next 슬라이드 1](/assets/images/nvidia-nvfp4-qwen38-flash-next-slide-01.webp)
 
 ## 개요
 
@@ -74,6 +79,8 @@ NVFP4 양자화 자체는 새로운 기술이 아닙니다. NVIDIA ModelOpt가 F
 
 이 차이가 중요한 이유는 하드웨어 의존성에 있습니다. 정수 4비트는 어떤 GPU에서도 동작하지만, NVFP4의 이득은 Blackwell에서만 완성됩니다. "63% 축소"가 처리량 이득으로 이어지려면 장치가 Blackwell이어야 합니다. 아래 한계 섹션에서 이 점을 다시 다룹니다.
 
+![nvidia-nvfp4-qwen38-flash-next 슬라이드 2](/assets/images/nvidia-nvfp4-qwen38-flash-next-slide-02.webp)
+
 ## 설치 및 통합
 
 검증된 서빙 경로는 세 개입니다.
@@ -94,6 +101,8 @@ ollama run qwen3.8-flash-next:125b-a6b-nvfp4
 ```
 
 여기까지가 "돌리는 법"입니다. 그런데 이 체크포인트가 실제로 서빙 처리량을 결정하는 것은 아닙니다. 그건 아래에서 우리 실측으로 보여줍니다.
+
+![nvidia-nvfp4-qwen38-flash-next 슬라이드 3](/assets/images/nvidia-nvfp4-qwen38-flash-next-slide-03.webp)
 
 ## 실제 실험 결과
 
@@ -120,6 +129,8 @@ ollama run qwen3.8-flash-next:125b-a6b-nvfp4
 
 두 축을 함께 읽으면, 양자화 체크포인트는 "얼마나 작은가"를, 서빙 설정은 "그 작은 체크포인트에서 얼마나 많이 내는가"를 결정한다는 구분이 선명해집니다. 대형 MoE의 NVFP4 공개가 서빙 경제학에 주는 메시지도 이 두 축 위에서 읽어야 합니다.
 
+![nvidia-nvfp4-qwen38-flash-next 슬라이드 4](/assets/images/nvidia-nvfp4-qwen38-flash-next-slide-04.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 NVFP4는 ThakiCloud의 ai-platform이 이미 운영 중인 양자화 경로입니다. B200 클러스터에서 ModelOpt NVFP4 체크포인트를 네이티브 FP4 커널로 서빙하고 양자화 자체도 내부 파이프라인(runpod-nvfp4-quantize 계열)으로 돌립니다. Qwen3.8-Flash-Next 같은 신규 대형 MoE가 NVFP4로 공개된다는 것은, 이 경로에 올라오는 모델 카탈로그가 넓어진다는 뜻입니다.
@@ -141,3 +152,23 @@ NVFP4는 Blackwell 전용입니다. SM100(B200)과 SM121(GB10)의 네이티브 F
 Qwen3.8-Flash-Next의 NVFP4 공개는 두 가지를 동시에 바꿔놓습니다. 하나는 대형 MoE 서빙의 하한선입니다. 125B급 모델을 단일 128GB 장치에서 돌릴 수 있게 됐고 이는 온프레미스·데이터 주권 환경의 비용 계산에 직접 들어옵니다. 다른 하나는 서빙의 중심축입니다. 체크포인트가 63% 작아졌지만, 그 체크포인트의 처리량을 결정하는 것은 여전히 엔진의 compile 여부와 max-seqs 설정입니다.
 
 다음 주에 이 모델을 B200에서 실측한다면, 볼 것은 하나입니다. "NVFP4가 125B를 135GB로 만들었다"가 아니라, "그 135GB가 어떤 설정에서 몇 토큰/초를 내는가"입니다. 전자는 발표고 후자가 서빙입니다.
+
+
+
+
+
+
+
+
+## 출처
+
+- Qwen 공식 릴리스 블로그: <https://qwen.ai/blog?id=qwen3.8-flash-next>
+- Qwen3.8-Flash-Next Hugging Face 모델 카드: <https://huggingface.co/Qwen/Qwen3.8-Flash-Next>
+- QwenLM 공식 저장소(기술 리포트 포함): <https://github.com/QwenLM/Qwen3.8-Flash-Next>
+- NVIDIA NVFP4 양자화 체크포인트: <https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4>
+- RadixArk NVFP4 미러 체크포인트: <https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4>
+- Ollama 모델 페이지(125b-a6b-nvfp4 태그): <https://ollama.com/library/qwen3.8-flash-next>
+- SGLang 단일 GB10(SM121) 서빙 레시피(r0b0tlab): <https://github.com/r0b0tlab/qwen38-flash-next-nvidia-nvfp4-sm121-sglang>
+- vLLM 2×DGX Spark(TP2+EP, MTP 스펙추티브 디코딩) 서빙 레시피(getrefined): <https://github.com/getrefined/Qwen3.8-Flash-Next-NVFP4-vLLM-DGX-Spark>
+- NVIDIA 개발자 포럼(1·2·4개 DGX Spark, 단일 스트림 64토큰/초): <https://forums.developer.nvidia.com/t/382476>
+- 위 실측 숫자의 정본인 ThakiCloud B200 서빙 설정 실측 글: <https://thakicloud.com/tech-blog/ko/research/default-configuration-tax/>
