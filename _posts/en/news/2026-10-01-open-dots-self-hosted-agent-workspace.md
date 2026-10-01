@@ -1,0 +1,100 @@
+---
+title: "An Open Answer to OpenAI Dots: Open Dots, the Self-Hosted Agent Workspace"
+excerpt: "Two days after OpenAI unveiled always-on agents called Dots at DevDay, Open Dots shipped — an MIT-licensed, self-hosted agent workspace claiming the same capabilities at one tenth the cost. The next battleground of the agent-workspace race is 'where, by whom, audited how.'"
+seo_title: "Open Dots self-hosted agent workspace launch - MIT-licensed open-source alternative to OpenAI Dots (DevDay 2026, always-on agents, GPT-6 Astra). Chat, tool use, approvals, connectors, computer tasks, Composio integration, the 1/10th-cost claim, ThakiCloud Paxis perspective"
+seo_description: "In response to OpenAI's always-on agents Dots, a self-hosted open-source agent workspace called Open Dots has launched. Why approvals, connectors, and audit-first self-hosted workspaces matter now, and what the agent-infrastructure race means for ThakiCloud Paxis."
+date: 2026-10-01
+last_modified_at: 2026-10-01
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_icon: "robot"
+tags:
+  - agent-workspace
+  - openai-dots
+  - self-hosted-ai
+  - composio
+  - agent-governance
+  - open-source
+  - devday-2026
+  - knowledge-work-agents
+categories:
+  - news
+canonical_url: "https://thakicloud.com/tech-blog/en/news/open-dots-self-hosted-agent-workspace/"
+---
+
+The agent race is moving outside the model. The week's agent news in one line: a fight over who runs the "always-on agent," and where. Two days after OpenAI unveiled Dots at DevDay, Open Dots shipped — an MIT-licensed workspace that runs the same capability self-hosted. This news is worth reading for developers who prefer self-hosting and for platform teams that build agent infrastructure as a product.
+
+![Concept image: an open lattice of server nodes with a floating self-hosted workspace](/assets/images/open-dots-self-hosted-agent-workspace-hero.webp)
+*The article's core concept, visualized.*
+
+## OpenAI Dots: A Coworker That Never Sleeps
+
+OpenAI announced Dots at DevDay on September 29, 2026. Dots are "always-on agents": proactive assistants that keep working across complex projects and everyday tasks, each reportedly with its own cloud computer. Per TechCrunch, they are personal agentic assistants powered by GPT-6 Astra.
+
+Rollout covers Pro and Business Premium users in eligible markets (BetaNews). Dots work natively with files inside ChatGPT Space and can be interacted with through ChatGPT, Slack, and Microsoft Teams (VentureBeat). The New York Times framed Dots as an agent rival to Meta's daily-life assistant Muse.
+
+The significance: agents move from "tools that answer when asked" to "coworkers with their own environment." Once an agent is resident, the question shifts from capability to governance. Where does it run, what can it access, what needs approval, and who audits it?
+
+## Open Dots: The Same Capability, On Your Server
+
+Two days later, Composio co-founder Karan Vaidya announced the launch of Open Dots. His tweet is blunt: "We are launching Open Dots, run the same capabilities in 1/10th of the cost. OpenAI shipped Dot yesterday for Pro users." — the same capabilities at one tenth the cost, positioned as the open answer to exactly what OpenAI shipped yesterday.
+
+Open Dots is an open-source project by Anil Matcha (github.com/Anil-matcha/open-dots), released under the MIT license as a self-hosted personal AI agent workspace (AGI Hunt). The feature set is a direct port of Dots' "resident agent" concept into the self-hosted world:
+
+- **Chat**: model conversations, local-first
+- **Tool use**: the agent calls tools
+- **Approvals**: explicit pre-execution approval steps
+- **Connectors**: external app connections — via Composio, with explicit OAuth and narrow GitHub issue lookup/create actions
+- **Computer tasks**: the agent performs work in its own environment
+- **Assistant roles**: roles with different instructions and model IDs
+
+The connector layer is handled by Vaidya's company, Composio — the tooling infrastructure that lets agents act across 1,000+ apps (Notion, Apollo, GitHub, and more). Vaidya has described the positioning as becoming "the git of the world of knowledge-work agents."
+
+The positioning is visible in the list Open Dots names as competition: not just OpenAI Dots, but Meta Muse, Grok Bot, Claude Cowork, and the ChatGPT agent (AGI Hunt). Every major vendor is putting the "resident agent" concept inside its own platform; Open Dots takes the concept itself, opens it, and self-hosts it.
+
+## Why Self-Hosted, Why Now
+
+Vaidya's recurring thesis: 2026 is the year agents actually work, and the bottleneck is no longer the model — it is the infrastructure. He has listed the primitives that advance knowledge-work agents: centralization, memory, verification, access control, and reversion (per coverage).
+
+Open Dots' feature list maps directly onto those primitives. Chat is memory; tool use is access; approvals are verification and access control; self-hosting is centralization and data sovereignty; roles are the unit of policy. The "1/10th cost" claim is the economics of that list: for a resident agent running 24/7, the cost curve changes when you stop renting the cloud and run it on your own server. (It is a launch claim without independent verification [estimate].)
+
+The practical value of a self-hosted workspace is audit. Which action ran under whose authority at the approval step, which OAuth scope the connectors read with, which instructions a role was created with — all trackable in one setup. With a platform-hosted agent, that history lives in the provider's logs; self-hosted, it lives in your database.
+
+## ThakiCloud Product Implications
+
+**Paxis lens**: Paxis is an agent control plane that treats Skills, Tools, Policies, and Audit Logs as first-class resources. What Open Dots ships as features — approvals, connectors, roles, tool use — is nearly the same set Paxis models as first-class resources. The industry is converging on a common agent-workspace feature set: conversation + tools + approvals + connectors + audit. Open Dots publishing that set as open source is a validation signal for Paxis's positioning. The difference: Paxis layers multi-agent orchestration (DAG), self-evolving skills, and policy gates on top of it.
+
+**ai-platform lens**: A resident agent is a workload that occupies a GPU around the clock. "Its own cloud computer" means one persistent execution environment per agent. From ThakiCloud's on-prem and sovereign-AI vantage point, the self-hosted agent workspace is a likely standard configuration for industries that need agents whose data never leaves: public sector, finance, defense. Aegis (on-prem) and Velox (bare metal) are the environments where resident-agent workloads will land next.
+
+## What to Watch Next
+
+Three places where the next moves of this race are worth watching.
+
+First, the connector expansion speed of Open Dots. If Composio's track record of extending agent actions across 1,000+ apps holds, the "connector" layer of Open Dots will thicken quickly. The practical value of a self-hosted workspace comes from the combination of connectors and approvals, so how fast these two mature will decide adoption.
+
+Second, the distribution expansion of OpenAI Dots. If Dots, currently aimed at Pro and Business Premium, moves down to general plans, the reference price of the "cloud resident agent" falls and the cost case for self-hosted alternatives becomes relative. If Dots keeps its current usage limits (permissions, audit, data residency), the self-hosted case gets stronger.
+
+Third, standardization of the open-source agent workspace. With Open Dots opening its feature set under MIT, an open baseline now exists for "conversation + tools + approvals + connectors + audit." The industry will start separating "features locked to a cloud" from "features that are open" when evaluating agent workspaces. For a platform like ThakiCloud, this makes it easier to explain the difference it adds on top of the open set: multi-agent orchestration and policy gates.
+
+## How to Read This News
+
+Three caveats.
+
+First, "1/10th the cost" is the launcher's claim. There is no independent benchmark yet comparing OpenAI Dots' Pro/Business Premium pricing against Open Dots' total self-hosted ownership cost (server, operations, security) [estimate].
+
+Second, watch the name collision. open-dots.dev is a separate project about "always-on agents on open weights." This launch refers to github.com/Anil-matcha/open-dots — the self-hosted workspace.
+
+Third, the MIT license is a substantive strength. Commercial use, modification, and redistribution are free. For enterprises that cannot adopt a vendor's resident agent for internal policy reasons but need one anyway, Open Dots fills that gap.
+
+## Takeaways
+
+The 48 hours after the OpenAI Dots announcement were a pivot point for the agent industry. The resident-agent concept moved to the cloud, and an open-source answer to that concept shipped in the same week. The next battleground is governance, not capability: where it runs, what gets approved, who audits. The competition is moving toward self-hosted agent workspaces as the standard configuration — and the question ThakiCloud's Paxis, Aegis, and Velox answer is exactly that one.
+
+## Sources
+
+- Launch tweet: [Karan Vaidya (@KaranVaidya6)](https://x.com/KaranVaidya6/status/2105334408932954604)
+- Open Dots: [github.com/Anil-matcha/open-dots](https://github.com/Anil-matcha/open-dots)
+- OpenAI Dots announcement: [Introducing dots — OpenAI](https://openai.com/index/introducing-dots/)
+- Coverage: [TechCrunch — OpenAI launches Dots](https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/) · [NYT — OpenAI Unveils Dots](https://www.nytimes.com/2026/09/29/technology/openai-dots-ai-agents.html) · [BetaNews — OpenAI launches dots](https://betanews.com/article/openai-dots-agents-chatgpt/) · [VentureBeat — Dots as always-on agent coworkers](https://venturebeat.com/technology/openai-launches-dots-always-on-ai-agent-coworkers-and-chatgpt-space-where-they-can-collaborate-with-human-teams)
+- Analysis: [AGI Hunt — Open Dots](https://agihunt.info/en/p/1a0f2e987339af2781703bccc40) · [DataCamp — OpenAI Dots explained](https://www.datacamp.com/blog/openai-dots)
