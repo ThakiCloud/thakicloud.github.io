@@ -1726,3 +1726,66 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
   .ebook-reader__actions { width: 100%; }
   .ebook-reader__btn { flex: 1; text-align: center; }
 }
+
+
+/* ── "Share this article" bar (posts) ──────────────────────────────────────
+   Same design as the thakicloud.com Insights articles: label + round icon
+   buttons. Top bar sits under the title (divider above, like the Insights date
+   rule); bottom bar closes the body with a divider above. Label matches the
+   body text size. Tokens only — follows the data-theme toggle. */
+.thaki-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 680px;      /* = reading measure of .page__content */
+  padding: 0.5rem 0;
+  clear: both;           /* stay out of the floated TOC's column */
+}
+.thaki-share--top {
+  margin: 0 0 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--divider);
+}
+.thaki-share--bottom {
+  margin: 2.5rem 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--divider);
+}
+.thaki-share__label {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;    /* = .layout--single .page__content body size (20px) */
+  font-weight: 500;
+  color: var(--text);
+}
+.thaki-share__list {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.thaki-share__list li { margin: 0; }
+.thaki-share__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  background: var(--surface-hover);
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 150ms ease-out;
+}
+.thaki-share__btn:hover { background: var(--border-strong); color: var(--text); }
+.thaki-share__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.thaki-share__icon-check { display: none; }
+.thaki-share__copy.is-copied .thaki-share__icon-link { display: none; }
+.thaki-share__copy.is-copied .thaki-share__icon-check { display: inline; }
