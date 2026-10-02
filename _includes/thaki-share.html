@@ -12,13 +12,21 @@
 {%- assign _url = page.url | absolute_url -%}
 {%- assign _u = _url | url_encode -%}
 {%- assign _t = page.title | markdownify | strip_html | strip_newlines | strip | url_encode -%}
+{%- comment -%}
+  mailto is not a form-encoded query: a '+' stays a literal '+' in the
+  subject line of most mail clients (RFC 6068), so spaces have to go out as
+  %20 there. LinkedIn/X/Facebook are ordinary HTTP query params, where '+'
+  does mean a space, so those keep _u / _t as-is.
+{%- endcomment -%}
+{%- assign _u_mail = _u | replace: '+', '%20' -%}
+{%- assign _t_mail = _t | replace: '+', '%20' -%}
 <div class="thaki-share thaki-share--{{ include.position | default: 'top' }}">
   <p class="thaki-share__label">{% if _ko %}이 글 공유하기{% else %}Share this article:{% endif %}</p>
   <ul class="thaki-share__list">
     <li><a class="thaki-share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ _u }}" target="_blank" rel="noopener noreferrer" aria-label="{% if _ko %}LinkedIn에 공유{% else %}Share on LinkedIn{% endif %}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 1 0 -4 0"/><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"/></svg></a></li>
     <li><a class="thaki-share__btn" href="https://twitter.com/intent/tweet?url={{ _u }}&amp;text={{ _t }}" target="_blank" rel="noopener noreferrer" aria-label="{% if _ko %}X에 공유{% else %}Share on X{% endif %}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a></li>
     <li><a class="thaki-share__btn" href="https://www.facebook.com/sharer/sharer.php?u={{ _u }}" target="_blank" rel="noopener noreferrer" aria-label="{% if _ko %}Facebook에 공유{% else %}Share on Facebook{% endif %}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/></svg></a></li>
-    <li><a class="thaki-share__btn" href="mailto:?subject={{ _t }}&amp;body={{ _u }}" aria-label="{% if _ko %}이메일로 공유{% else %}Share by email{% endif %}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"/><path d="M3 7l9 6l9 -6"/></svg></a></li>
+    <li><a class="thaki-share__btn" href="mailto:?subject={{ _t_mail }}&amp;body={{ _u_mail }}" aria-label="{% if _ko %}이메일로 공유{% else %}Share by email{% endif %}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"/><path d="M3 7l9 6l9 -6"/></svg></a></li>
     <li><button type="button" class="thaki-share__btn thaki-share__copy" data-url="{{ _url }}" data-label="{% if _ko %}링크 복사{% else %}Copy link{% endif %}" data-done="{% if _ko %}링크를 복사했습니다{% else %}Link copied{% endif %}" aria-label="{% if _ko %}링크 복사{% else %}Copy link{% endif %}"><svg class="thaki-share__icon-link" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 15l6 -6"/><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></svg><svg class="thaki-share__icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5l10 -10"/></svg></button></li>
   </ul>
 </div>
