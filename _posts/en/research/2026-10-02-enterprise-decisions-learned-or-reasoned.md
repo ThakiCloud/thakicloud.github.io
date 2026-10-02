@@ -52,9 +52,9 @@ We separated two things. The first is **how the answer comes out**: as a written
 
 ### Nobody wrote the answers
 
-We first built items on top of real statutes and had people label them. Agreement was poor. We replaced the people with models from several vendors, and it got worse.
+We first built items on top of real statutes and had two commercial models label each one independently. They agreed poorly on both pools we tried. Both runs also abstained on roughly 30% of items and neither finished its checking stage, so read that as a method failing to converge rather than as a clean reliability number.
 
-Looking closer, the problem was deeper. On items meant to probe whether a tool is needed, the judges almost always chose "just answer" and chose "call a tool" **not once**. The boundary we intended had never made it into the text. It lived in our heads and in our selection criteria.
+The clearer signal was what the judges picked. On the items meant to probe whether a tool is needed, they chose "call a tool" on **3 of 348** and "just answer" on 182. The boundary we intended had never made it into the text. It lived in our heads and in our selection criteria.
 
 So we stopped writing items and started **computing** them. A hidden policy is a handful of switches: does this need live state, is a required fact missing, is there a side effect that needs confirmation. Give the switches and a program derives exactly one correct action, along with the reason it is correct.
 
