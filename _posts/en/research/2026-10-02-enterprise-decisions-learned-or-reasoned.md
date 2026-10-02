@@ -22,6 +22,7 @@ author_profile: true
 toc: true
 toc_label: "Contents"
 canonical_url: "https://thakicloud.com/tech-blog/en/research/enterprise-decisions-learned-or-reasoned/"
+published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 에 리다이렉트 등록
 ---
 
 What an enterprise agent needs is not the ability to produce sentences. It is time to think. On policies it already knows, it did not even need that. On policies it had never seen, turning thinking on was worth more than anything else we changed.

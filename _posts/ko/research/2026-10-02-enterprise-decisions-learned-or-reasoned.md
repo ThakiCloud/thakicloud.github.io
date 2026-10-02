@@ -22,6 +22,7 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/enterprise-decisions-learned-or-reasoned/"
+published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 에 리다이렉트 등록
 ---
 
 사내 규정에 따라 움직이는 에이전트에게 정말 필요한 것은 문장을 만들어 내는 능력이 아니라 생각할 시간이었습니다. 익숙한 규정에서는 생각도 필요 없었지만, 처음 보는 규정에서는 생각을 켜는 것만으로 성적이 크게 올랐습니다. 사내 문서 위에서 도는 에이전트를 만들거나 그 비용을 책임지는 분이라면 읽을 값이 있습니다.

@@ -2,5 +2,7 @@
   "/tech-blog/ko/comics/dry-twitter/": "/tech-blog/ko/comics/",
   "/tech-blog/en/comics/dry-twitter/": "/tech-blog/en/comics/",
   "/tech-blog/ko/owm/qwen-image-fewstep/": "/tech-blog/ko/research/qwen-image-fewstep/",
-  "/tech-blog/en/owm/qwen-image-fewstep/": "/tech-blog/en/research/qwen-image-fewstep/"
+  "/tech-blog/en/owm/qwen-image-fewstep/": "/tech-blog/en/research/qwen-image-fewstep/",
+  "/tech-blog/ko/research/enterprise-decisions-learned-or-reasoned/": "/tech-blog/ko/owm/enterprise-boundary-decision-model/",
+  "/tech-blog/en/research/enterprise-decisions-learned-or-reasoned/": "/tech-blog/en/owm/enterprise-boundary-decision-model/"
 }
