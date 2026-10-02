@@ -25,9 +25,6 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/jev-27b-vl-open-dec
 
 에이전트 워크플로우의 추론 비용을 설계하는 개발자, 또는 "LLM 호출을 줄이되 판단 품질은 유지하는" 문제를 가진 플랫폼 엔지니어라면 이 모델을 봐야 합니다. 결론은 한 줄이면 충분합니다. '생성이 아니라 결정.' AutoTrust AI가 2026년 9월 말 공개한 JEV-27B(-VL)는 '답을 쓰는' 언어 모델이 아니라, 결정만 내려 주는 모델로 소개됩니다. 타입 지정 질문에 보정된 확률로 choice·score·yes/no를 돌려주며, 그 결정은 자기회귀 생성이 아닌 단일 병렬 포워드 패스로 나옵니다. 에이전트 시스템이 프런티어 LLM 호출을 매 결정 지점에 쓰는 구조에서, 이 클래스의 모델이 그 지점을 대체할 수 있다면 에이전트 추론 비용의 지배 변수가 바뀝니다.
 
-![결정만 내려주는 모델의 개념을 형상화한 이미지: 분기점에서 확률로 선택지를 가르는 순간](/assets/images/jev-27b-vl-open-decision-model-hero.webp)
-*결정 모델의 핵심 개념을 형상화했습니다.*
-
 ## 개요
 
 2026년 9월 29일, AutoTrust AI는 JEV-27B를 Apache-2.0 오픈웨이트로 발표했습니다. PR Newswire의 보도자료 제목이 이 모델의 정체성을 그대로 보여 줍니다. "self-hosted AI agents를 위한 오픈 결정 모델(Open Decision Model)". 이튿날(9월 30일)에는 멀티모달 확장 JEV-27B-VL이 나왔고, AutoTrust는 이를 "세계 최초의 오픈웨이트, near-SOTA 멀티모달 결정 모델"이라고 소개했습니다(제조사 주장).
