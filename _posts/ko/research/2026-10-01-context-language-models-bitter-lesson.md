@@ -23,6 +23,9 @@ tags:
 categories:
   - research
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/context-language-models-bitter-lesson/"
+audiobook: "https://drive.google.com/file/d/1Uwt_f_c8h4fST4OJlThq4iAYXASMZx2R/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 에이전트의 컨텍스트 관리 전략을 설계하는 개발자, 또는 오픈 모델로 RL 포스트 트레이닝을 돌리는 플랫폼 엔지니어라면 이 논문을 읽어야 합니다. 핵심 결론을 한 줄로 먼저 말해 두겠습니다. 컨텍스트 관리는 검색과 게임처럼, 인간이 손으로 설계한 헤uris틱이 범용 학습에 지는 층이 되고 있습니다. 자신의 컨텍스트를 파일처럼 취급해 자유롭게 다시 쓰게 한 Context Language Models(CLM)은, 가장 좋은 인간 설계 압축 전략보다 정확도에서도 계산량에서도 이깁니다.
@@ -40,6 +43,10 @@ Rich Sutton이 쓴 쓴 교훈(Bitter Lesson)은 유명한 관찰입니다. 장�
 
 ![context-language-models-bitter-lesson 슬라이드: 기존 인간 설계와 모델 네이티브 방식 비교](/assets/images/context-language-models-bitter-lesson-slide-02.webp)
 *NotebookLM이 소스를 종합해 생성한 '기존 인간 설계 vs 모델 네이티브' 비교 슬라이드입니다.*
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/context-language-models-bitter-lesson/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 쉽게 말하면
 
@@ -151,10 +158,14 @@ RL 경로(Qwen3.5-9B +47.6%)는 학습 비용이 들어갑니다. 제로샷 경�
 
 한 줄로 다시 말해, 컨텍스트를 설계하는 손은 하네스 엔지니어에서 모델 스스로로 이동하기 시작했습니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/context-language-models-bitter-lesson/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 출처
 
 - 논문: [Context Language Models (arXiv 2609.37725)](https://arxiv.org/abs/2609.37725) · [HTML 전문](https://arxiv.org/html/2609.37725v1)
 - 공식 코드: [facebookresearch/context-language-models](https://github.com/facebookresearch/context-language-models)
 - Hugging Face Papers: [2609.37725](https://huggingface.co/papers/2609.37725)
 - 벤치마크: [BrowseComp-Plus (arXiv 2508.06600)](https://github.com/texttron/BrowseComp-Plus)
-- 보도: [mpost.io — Meta presents CLM](https://mpost.io/meta-presents-context-language-models-ai-agents-that-edit-their-own-memory-outperform-fixed-harnesses-at-lower-compute-cost/) · [AGI Hunt — Context Language Models](https://agihunt.info/en/p/1a0f26bccfa7564452fa31a3ba6)
+- 보도: [mpost.io: Meta presents CLM](https://mpost.io/meta-presents-context-language-models-ai-agents-that-edit-their-own-memory-outperform-fixed-harnesses-at-lower-compute-cost/) · [AGI Hunt: Context Language Models](https://agihunt.info/en/p/1a0f26bccfa7564452fa31a3ba6)

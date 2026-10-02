@@ -20,10 +20,13 @@ tags:
 categories:
   - agentops
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/agentops/agents-two-badges/
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agents-two-badges/"
 ---
 
 This morning's Shinhan Bank news landed with a different texture than past banking incidents. The bank's president issued an apology and promised full compensation once harm is confirmed, and the bank moved to emergency measures including suspending the related service and blocking external IPs. The Financial Supervisory Service began an emergency on-site investigation, and the Financial Services Commission has convened an emergency response meeting. The names, phone numbers, annual incomes, and loan limits of roughly 25,000 customers were leaked, along with 66 resident registration numbers and 97 linked identifiers (CI). What was new was the intrusion channel. It was not the core banking app the bank guards most tightly, but a lookup service dedicated to loan solicitors. After bypassing the identity verification process, information was secured in a chain by repeatedly plugging in lookup values. The security industry is placing weight on the possibility that a generative AI agent, not human hands, was deployed in this automated sweep. If so, the agents this morning were wearing one of two kinds of badges. The suspect's badge.
+
+![Concept image: a badge-less silhouette running at machine speed on the dark side, and a glowing audited badge with a golden record trail on the light side](/assets/images/agents-two-badges-hero.webp)
+*The article's core concept, visualized.*
 
 ## The Suspect at Machine Speed
 
@@ -36,6 +39,20 @@ The question the Shinhan Bank incident left behind is less a technical one than 
 ## The Second Badge: A Finance Agent That Leaves a Record
 
 On the same American morning, another news item carried the number 86x. According to Korea IT Times, the financial technology company Maximor changed its name to Hyphenate on October 1 and expanded its business to the entire CFO organization. Five areas: order to cash, treasury, general ledger and close, procure to pay, and reporting and analysis. What makes the approach different from existing automation tools is clear. AI agents execute the work directly, leave every detail as an auditable record, and escalate only items requiring judgment to the person in charge. It is also notable that it layers on top of existing ERP, banking, and payroll systems and applies without migration. Internal metrics came out alongside: an average of 6 modules in use per customer, and 40% expanding their usage scope from the first year of the contract. Hibyte processed over $2.5 billion in GMV with full order-to-cash automation and shortened month-end close from 3 weeks to 5 days. Kittyworks automated 98% of cash transactions across 10 legal entities, and Doora is described as having cut back-office costs by 70%. On one side is the agent wearing the suspect's badge; on the other, the agent wearing the employee's badge. What separates the two badges is not capability, but identity and record. The employee's badge has a name, a scope of authority, a trail of footprints. The suspect's badge has nothing.
+
+```mermaid
+flowchart TB
+    A[Always-on agent] --> B{Has identity and records}
+    B -->|No| C[The suspect's badge]
+    C --> C1[Machine-speed probing<br/>Automated scanning and repeated access]
+    C1 --> C2[Breach or leak<br/>Unclear responsibility]
+    B -->|Yes| D[The employee's badge]
+    D --> D1[Name, scope of authority, footprints]
+    D1 --> D2[Policy gate: stops risky actions before execution]
+    D2 --> D3[Audit log: full trace, replayable]
+    D3 --> D4[Trustworthy automation<br/>Only judgment calls go to humans]
+```
+*What separates the two badges: identity and record. Only the agent that leaves a record can work inside policy gates and audit logs.*
 
 ## Identity Impersonation Using the AI Policy Clash as Bait
 

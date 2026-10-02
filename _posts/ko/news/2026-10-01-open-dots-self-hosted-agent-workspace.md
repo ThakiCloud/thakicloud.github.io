@@ -21,6 +21,9 @@ tags:
 categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/ko/news/open-dots-self-hosted-agent-workspace/"
+audiobook: "https://drive.google.com/file/d/1Tl2XvAvnXUhPaeiYM6CCk1qw6k_HcCqH/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 에이전트 경쟁의 전장은 모델 밖으로 이동합니다. 이번 주 AI 에이전트 뉴스를 한 줄로 요약하면, '항상 켜져 있는 에이전트'를 누가 어디서 돌릴 것인가의 싸움입니다. OpenAI가 DevDay에서 Dots를 발표한 지 이틀 만에, 같은 능력을 셀프호스트로 돌리는 MIT 라이선스 워크스페이스 Open Dots가 출시됐습니다. 이 뉴스는 셀프호스트를 선호하는 개발자와, 에이전트 인프라를 제품으로 만드는 플랫폼 팀 모두에게 읽어 볼 가치가 있습니다.
@@ -39,12 +42,16 @@ OpenAI는 9월 29일 DevDay에서 Dots를 발표했습니다. Dots는 '항상 �
 ![open-dots-self-hosted-agent-workspace 슬라이드: capability에서 governance으로](/assets/images/open-dots-self-hosted-agent-workspace-slide-02.webp)
 *NotebookLM이 소스를 종합해 생성한 '질문의 중심축 이동' 슬라이드입니다.*
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/open-dots-self-hosted-agent-workspace/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## Open Dots: 같은 능력, 자기 서버에서
 
 ![open-dots-self-hosted-agent-workspace 슬라이드: 단 48시간 만에 벌어진 독점과 해방](/assets/images/open-dots-self-hosted-agent-workspace-slide-03.webp)
 *NotebookLM이 소스를 종합해 생성한 '48시간의 독점과 해방' 슬라이드입니다.*
 
-출시 두 날 뒤, Composio 공동창업자 Karan Vaidya는 Open Dots의 출시를 알렸습니다. 그의 트윗은 직설적입니다. "We are launching Open Dots, run the same capabilities in 1/10th of the cost. OpenAI shipped Dot yesterday for Pro users." — 같은 능력을 10분의 1 비용으로 돌린다는, 그리고 OpenAI가 어제 Pro 사용자에게 넘긴 바로 그 능력에 대한 오픈 답안이라는 주장입니다.
+출시 두 날 뒤, Composio 공동창업자 Karan Vaidya는 Open Dots의 출시를 알렸습니다. 그의 트윗은 직설적입니다. "We are launching Open Dots, run the same capabilities in 1/10th of the cost. OpenAI shipped Dot yesterday for Pro users." 같은 능력을 10분의 1 비용으로 돌린다는, 그리고 OpenAI가 어제 Pro 사용자에게 넘긴 바로 그 능력에 대한 오픈 답안이라는 주장입니다.
 
 Open Dots는 Anil Matcha가 올린 오픈소스 프로젝트(github.com/Anil-matcha/open-dots)입니다. MIT 라이선스로, 셀프호스트 개인형 AI 에이전트 워크스페이스를 표방합니다(AGI Hunt). 기능 집합을 보면 Dots의 '상주 에이전트' 개념을 셀프호스트 세계로 가져온 모양입니다.
 
@@ -75,7 +82,7 @@ Open Dots의 기능 목록은 정확히 그 원시 개념들과 대응합니다.
 
 ## ThakiCloud 제품 적용 시사점
 
-**Paxis 렌즈**: Paxis는 Skills, Tools, Policies, Audit Logs를 일급 리소스로 다루는 에이전트 제어 평면입니다. Open Dots가 기능으로 내놓은 것들 — 승인, 커넥터, 롤, 도구 사용 — 은 Paxis가 '일급 리소스'로 모델링한 집합과 거의 일치합니다. 산업 전반이 '에이전트 워크스페이스 = 대화 + 도구 + 승인 + 커넥터 + 감사'라는 공통 기능 집합으로 수렴하고 있고 Open Dots가 오픈소스로 그 집합을 내놓았다는 점은 Paxis의 포지셔닝을 검증하는 신호입니다. 차이가 있다면 Paxis는 그 위에 멀티에이전트 오케스트레이션(DAG)과 자가진화 스킬, 정책 게이트를 얹는다는 것입니다.
+**Paxis 렌즈**: Paxis는 Skills, Tools, Policies, Audit Logs를 일급 리소스로 다루는 에이전트 제어 평면입니다. Open Dots가 기능으로 내놓은 것들(승인, 커넥터, 롤, 도구 사용)은 Paxis가 '일급 리소스'로 모델링한 집합과 거의 일치합니다. 산업 전반이 '에이전트 워크스페이스 = 대화 + 도구 + 승인 + 커넥터 + 감사'라는 공통 기능 집합으로 수렴하고 있고 Open Dots가 오픈소스로 그 집합을 내놓았다는 점은 Paxis의 포지셔닝을 검증하는 신호입니다. 차이가 있다면 Paxis는 그 위에 멀티에이전트 오케스트레이션(DAG)과 자가진화 스킬, 정책 게이트를 얹는다는 것입니다.
 
 ![open-dots-self-hosted-agent-workspace 슬라이드: Paxis 렌즈](/assets/images/open-dots-self-hosted-agent-workspace-slide-06.webp)
 *NotebookLM이 소스를 종합해 생성한 Paxis 관점 슬라이드입니다.*
@@ -116,6 +123,6 @@ OpenAI Dots 발표 이후 48시간이 에이전트 업계의 분기점입니다.
 
 - 출시 트윗: [Karan Vaidya (@KaranVaidya6)](https://x.com/KaranVaidya6/status/2105334408932954604)
 - Open Dots: [github.com/Anil-matcha/open-dots](https://github.com/Anil-matcha/open-dots)
-- OpenAI Dots 발표: [Introducing dots — OpenAI](https://openai.com/index/introducing-dots/)
-- 보도: [TechCrunch — OpenAI launches Dots](https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/) · [NYT — OpenAI Unveils Dots](https://www.nytimes.com/2026/09/29/technology/openai-dots-ai-agents.html) · [BetaNews — OpenAI launches dots](https://betanews.com/article/openai-dots-agents-chatgpt/) · [VentureBeat — Dots as always-on agent coworkers](https://venturebeat.com/technology/openai-launches-dots-always-on-ai-agent-coworkers-and-chatgpt-space-where-they-can-collaborate-with-human-teams)
-- 분석: [AGI Hunt — Open Dots](https://agihunt.info/en/p/1a0f2e987339af2781703bccc40) · [DataCamp — OpenAI Dots explained](https://www.datacamp.com/blog/openai-dots)
+- OpenAI Dots 발표: [OpenAI: Introducing dots](https://openai.com/index/introducing-dots/)
+- 보도: [TechCrunch: OpenAI launches Dots](https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/) · [NYT: OpenAI Unveils Dots](https://www.nytimes.com/2026/09/29/technology/openai-dots-ai-agents.html) · [BetaNews: OpenAI launches dots](https://betanews.com/article/openai-dots-agents-chatgpt/) · [VentureBeat: Dots as always-on agent coworkers](https://venturebeat.com/technology/openai-launches-dots-always-on-ai-agent-coworkers-and-chatgpt-space-where-they-can-collaborate-with-human-teams)
+- 분석: [AGI Hunt: Open Dots](https://agihunt.info/en/p/1a0f2e987339af2781703bccc40) · [DataCamp: OpenAI Dots explained](https://www.datacamp.com/blog/openai-dots)

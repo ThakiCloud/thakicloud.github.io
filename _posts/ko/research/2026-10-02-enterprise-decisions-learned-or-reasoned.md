@@ -22,7 +22,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/enterprise-decisions-learned-or-reasoned/"
-published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 에 리다이렉트 등록
+audiobook: "https://drive.google.com/file/d/1R0D_uMTlxClGkMuI7BHT-ikf4ZmMtG1s/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 사내 규정에 따라 움직이는 에이전트에게 정말 필요한 것은 문장을 만들어 내는 능력이 아니라 생각할 시간이었습니다. 익숙한 규정에서는 생각도 필요 없었지만, 처음 보는 규정에서는 생각을 켜는 것만으로 성적이 크게 올랐습니다. 사내 문서 위에서 도는 에이전트를 만들거나 그 비용을 책임지는 분이라면 읽을 값이 있습니다.
@@ -39,6 +41,10 @@ published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 
 이제 그 직원을 다른 지점으로 보냅니다. 거기에는 처음 보는 규정집이 있습니다. 같은 사람인데도 이제는 읽고 따져 봐야 합니다. 외운 것이 없으니 생각하는 수밖에 없습니다.
 
 저희가 만든 에이전트도 똑같았습니다. 그리고 이 글에서 "생각"이라고 부르는 것은 모델이 답을 내기 전에 속으로 따져 보는 과정을 말합니다. 창구 직원이 규정집을 뒤적이는 시간이라고 보시면 됩니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/enterprise-decisions-learned-or-reasoned/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 해봤나
 
@@ -62,6 +68,8 @@ published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 
 즉, 사람 말로는 정답을 **아무도 쓰지 않았습니다**. 스위치를 정하면 답이 따라 나옵니다.
 
 겉으로 보이는 한국어 문장은 평가 대상이 아닌 다른 회사 모델들이 지어냈고, 그 모델들은 정답을 끝까지 못 봤습니다. 기계 검사를 통과한 문항만 남겼습니다. 답이 문장에 새어 나오지 않았는지, 짝 문항이 정말 스위치 하나만 다른지 같은 것들입니다. 그렇게 300문항을 만들고 내용 지문을 찍어 봉인한 뒤에야 모델을 돌렸습니다.
+
+![enterprise-decisions-learned-or-reasoned 슬라이드 1](/assets/images/enterprise-decisions-learned-or-reasoned-slide-01.webp)
 
 ## 나온 결과
 
@@ -90,6 +98,8 @@ published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 
 
 전체 성적은 79.2%까지 왔습니다. 같은 모델이 생각을 켜면 88.0%이니 8.8%p가 남습니다. 데이터로 메운 만큼과 못 메운 만큼이 둘 다 보입니다.
 
+![enterprise-decisions-learned-or-reasoned 슬라이드 2](/assets/images/enterprise-decisions-learned-or-reasoned-slide-02.webp)
+
 ## 그래서 무엇을 바꾸면 되나
 
 익숙한 규정 위에서 도는 기능이라면 결정을 문장으로 만들어 내지 마십시오. 선택지가 정해져 있다면 가리키기만 해도 충분하고, 그 편이 빠르고 덜 흔들립니다. 저희 추론 제품인 **메티스(Metis)** 위에서 이 설정을 쓰면 응답 시간이 거의 사라집니다.
@@ -100,7 +110,10 @@ published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 
 
 확신이 낮은 문항에만 생각을 켜는 방법도 재 봤습니다. 절반만 켜서 85.7%까지 왔습니다. 아끼기는 하지만 기대만큼은 아니었고, 이유가 분명합니다. 처음 보는 경계에서 모델은 **확신에 차서 틀립니다**. 그러면 확신이라는 신호로는 걸러 낼 수가 없습니다.
 
+![enterprise-decisions-learned-or-reasoned 슬라이드 3](/assets/images/enterprise-decisions-learned-or-reasoned-slide-03.webp)
+
 ## 못 믿을 부분
+![enterprise-decisions-learned-or-reasoned 슬라이드 4](/assets/images/enterprise-decisions-learned-or-reasoned-slide-04.webp)
 
 모델 한 종류, 언어 하나, 과제 한 종류에서 잰 결과입니다.
 
@@ -115,3 +128,7 @@ published: false   # 2026-10-02 중복으로 내림 — _data/retired_urls.json 
 ---
 
 문제집과 채점 근거는 [EnterpriseOps-KO Blind-A](https://huggingface.co/datasets/ThakiCloud/EnterpriseOps-KO-Blind-A), 모델은 [ThakiCloud 조직 페이지](https://huggingface.co/ThakiCloud)에 있습니다. 학습에 쓴 원본 데이터는 내부·라이선스 출처라 공개하지 않습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/enterprise-decisions-learned-or-reasoned/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
