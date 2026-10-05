@@ -140,6 +140,6 @@ All three models are released under Apache-2.0. Usage code, full per-size metric
 - [ThakiCloud/RAG-Gate-8B](https://huggingface.co/ThakiCloud/RAG-Gate-8B)
 - [ThakiCloud/RAG-Gate-9B](https://huggingface.co/ThakiCloud/RAG-Gate-9B)
 
-A 27B model is training now and will be released if it clears the same five gates. The training data is not distributed.
+We trained a 27B model the same way and did not release it. Accuracy rose from 78.9% to 94.8%, but ChainCheck Σ on real-entity items fell from 0.24 to -0.04, so it failed G4. The base 27B model already tracked the support chain well, and training erased that. We do not change gates after seeing results, so this stays a recorded result. The training data is not distributed.
 
 *Measurement note: all numbers were measured by us with bf16 weights on ThakiCloud GPUs (H200, H100) and copied from measurement records written before release.*
