@@ -35,7 +35,7 @@ The vLLM project announced "Decision 2.0: our newest state-of-the-art decision m
 
 Semantic Router carries the slogan "make your Mixture-of-Models programmable." In the words of its official docs, applications call one stable OpenAI- or Anthropic-compatible endpoint while the serving layer chooses, or composes, the capability path for each request. The project pulls the "who runs which model, when" problem out of every client and into a shared layer inside the request path.
 
-This post does not re-explain the decision-model concept itself (System 1, calibrated probabilities, typed output). Our [AutoTrust JEV-27B post](/en/research/jev-27b-vl-open-decision-model/) from October 2 covered that concept and its expansion into a model class. This one goes one level up: the layer that programs routing with decisions, and the open-weight family that actually runs it.
+This post does not re-explain the decision-model concept itself (System 1, calibrated probabilities, typed output). Our [AutoTrust JEV-27B post](/tech-blog/en/research/jev-27b-vl-open-decision-model/) from October 2 covered that concept and its expansion into a model class. This one goes one level up: the layer that programs routing with decisions, and the open-weight family that actually runs it.
 
 ## What is vLLM Semantic Router
 
@@ -154,5 +154,5 @@ If you run an agent platform or MoM serving, the next action is one: list where 
 - [vLLM Semantic Router (GitHub: vllm-project/semantic-router)](https://github.com/vllm-project/semantic-router)
 - [vLLM Semantic Router official docs (Intro)](https://vllm-sr.ai/docs/intro/)
 - [arXiv 2603.04444: vLLM Semantic Router: Signal Driven Decision Routing for Mixture-of-Modality Models](https://arxiv.org/abs/2603.04444)
-- ThakiCloud tech blog: [The 27B that only decides: JEV-27B-VL and System 1 decisions in open weights](/en/research/jev-27b-vl-open-decision-model/)
+- ThakiCloud tech blog: [The 27B that only decides: JEV-27B-VL and System 1 decisions in open weights](/tech-blog/en/research/jev-27b-vl-open-decision-model/)
 - Xunzhuo Liu's Decision 2.0 announcement (RT): [x.com/hjguyhan/status/2106396837322391941](https://x.com/hjguyhan/status/2106396837322391941)

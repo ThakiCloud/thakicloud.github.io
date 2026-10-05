@@ -35,7 +35,7 @@ vLLM 프로젝트는 2026년 10월 3일(트윗 기준) "Decision 2.0: our newest
 
 Semantic Router는 "Mixture-of-Models를 프로그래밍 가능하게 한다"는 슬로건을 내걸고 있습니다. 공식 문서의 표현을 그대로 빌리면, 애플리케이션은 안정된 OpenAI 또는 Anthropic 호환 엔드포인트 하나를 호출한 채로, 서빙 레이어가 요청마다 능력 경로를 선택하거나 구성하게 됩니다. 클라우드, 데이터센터, 엣지에 걸친 이질적 AI 인프라 위에 MoM 시스템을 올리면서 발생하는 "누가 어떤 모델을 언제 쓰는가"라는 결정 문제를, 요청 경로 안의 공유 레이어로 빼내는 것이 이 프로젝트의 본체입니다.
 
-이 글은 결정 모델의 개념 자체(System 1, 보정 확률, 타입 지정 출력)를 처음부터 설명하지 않습니다. 지난 10월 2일 자 [AutoTrust JEV-27B 포스트](/ko/research/jev-27b-vl-open-decision-model/)에서 그 개념과 '모델 클래스'로서의 확장이 이미 다뤄졌기 때문입니다. 이 글은 그 한 단계 위, 결정을 써서 라우팅을 프로그래밍하는 레이어와, 그 레이어를 실제로 돌리는 오픈웨이트 모델 패밀리에 집중합니다.
+이 글은 결정 모델의 개념 자체(System 1, 보정 확률, 타입 지정 출력)를 처음부터 설명하지 않습니다. 지난 10월 2일 자 [AutoTrust JEV-27B 포스트](/tech-blog/ko/research/jev-27b-vl-open-decision-model/)에서 그 개념과 '모델 클래스'로서의 확장이 이미 다뤄졌기 때문입니다. 이 글은 그 한 단계 위, 결정을 써서 라우팅을 프로그래밍하는 레이어와, 그 레이어를 실제로 돌리는 오픈웨이트 모델 패밀리에 집중합니다.
 
 ## vLLM Semantic Router란
 
@@ -172,5 +172,5 @@ Decision 2.0이 던지는 질문은 JEV 포스트와 같습니다. "더 좋은 �
 - [vLLM Semantic Router (GitHub: vllm-project/semantic-router)](https://github.com/vllm-project/semantic-router)
 - [vLLM Semantic Router 공식 문서 (Intro)](https://vllm-sr.ai/docs/intro/)
 - [arXiv 2603.04444: vLLM Semantic Router: Signal Driven Decision Routing for Mixture-of-Modality Models](https://arxiv.org/abs/2603.04444)
-- ThakiCloud 기술블로그: [결정만 내려주는 27B: JEV-27B-VL과 System 1 결정을 오픈웨이트로](/ko/research/jev-27b-vl-open-decision-model/)
+- ThakiCloud 기술블로그: [결정만 내려주는 27B: JEV-27B-VL과 System 1 결정을 오픈웨이트로](/tech-blog/ko/research/jev-27b-vl-open-decision-model/)
 - Xunzhuo Liu의 Decision 2.0 소개 트윗 (RT): [x.com/hjguyhan/status/2106396837322391941](https://x.com/hjguyhan/status/2106396837322391941)
