@@ -17,10 +17,12 @@ tags:
 categories:
   - agentops
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/agentops/openai-tolerate-bad-fix-daily/
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/openai-tolerate-bad-fix-daily/"
 ---
 
 One company sent two contradictory messages on the same day. The CEO said the world should accept negative outcomes for the benefit of AI, and the product side promised to ship fixes every day for 28 days. Read together, the contradiction gives a one-line takeaway: the industry's update cadence has shifted from weekly to daily, and the one paying for that cadence is the enterprise that has to keep up every day. This post sketches the shape of that cost, one item at a time, from the stories in this morning's HuggingNews digest.
+
+![A fast river of glowing version tiles pressing against a heavy cracked slab: the cost of keeping up with daily change](/assets/images/openai-tolerate-bad-fix-daily-hero.webp)
 
 ## Put the Two Headlines Side by Side
 
@@ -51,6 +53,22 @@ Finally, the environments where compute runs. On October 1, Google launched four
 In a single morning, the model menu, the execution environment, and the funding structure all moved at once. When a frontier lab accepts the bad outcomes, the cost does not disappear. It moves to the enterprise that has to keep up. The larger the organization, the slower the tracking, and the slower the tracking, the larger the gap. That gap is the shape of the invoice this industry is now writing out.
 
 One point to note here. The tracking cost is not a one-time expense. As long as daily variation is the base frequency of the industry, this cost is a standing cost that regrows every accounting period. It is not a one-time payment, but a rent that keeps getting paid.
+
+The four entries meet the three multipliers, and the result is a standing cost:
+
+```mermaid
+flowchart TB
+    A["Tool versions move daily<br/>an update every day for 28 days"] --> B["Tracking cost, four entries"]
+    B --> B1["Retesting<br/>does the workflow still work"]
+    B --> B2["Re-approval<br/>a new version needs a new review"]
+    B --> B3["Documentation<br/>manuals and training go stale"]
+    B --> B4["Incident handling<br/>a daily bug becomes a resident"]
+    B1 --> C["Three multipliers<br/>tools, models, people"]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    C --> D["A standing cost, not a one-time expense<br/>it regrows every accounting period"]
+```
 
 ## What Daily Variation Does to an Agent Stack
 

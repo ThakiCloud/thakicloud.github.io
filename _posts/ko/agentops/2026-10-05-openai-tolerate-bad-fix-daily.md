@@ -16,9 +16,13 @@ tags:
   - thakicloud
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/openai-tolerate-bad-fix-daily/"
 ---
 
 같은 회사가 하루 사이에 서로 모순된 두 메시지를 보냈습니다. CEO는 세상이 AI의 이익을 위해 나쁜 일까지 받아들여야 한다고 했고 제품 쪽은 28일 동안 매일 고치겠다고 약속했습니다. 이 모순을 붙여 읽으면 한 줄의 테이크아웃이 나옵니다. 산업의 업데이트 주기가 주 단위에서 일 단위로 넘어왔고, 그 비용을 내는 쪽은 매일 쫓아야 하는 기업이라는 것입니다. 오늘 이 글은 그 비용의 모양을, 오늘 아침 HuggingNews 다이제스트의 스토리들을 거두어 하나하나 그려 봅니다.
+
+![일일 업데이트의 흐름이 기업의 단단한 블록에 균열을 새긴다는 글의 핵심 개념을 형상화한 이미지](/assets/images/openai-tolerate-bad-fix-daily-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 두 헤드라인을 나란히 놓으면
 
@@ -29,6 +33,8 @@ categories:
 두 발표를 함께 읽으면 또 하나의 사실이 보입니다. 올트먼의 말은 앞으로의 방향을 서술한 것이고 Codex의 28일 약속은 그 방향의 대가를 지금 바로 치르는 것입니다. 한쪽은 서사이고 다른 쪽은 공정입니다. 서사는 헤드라인을 먹고 공장은 엔지니어의 주말을 먹습니다. 기업이 이 두 가지를 동시에 볼 필요가 있는 이유가 여기에 있습니다.
 
 한쪽 메시지는 사회를 향한 것이었고 다른 쪽은 사용자를 향한 것이었습니다. 한쪽은 받아들이라고 했고 다른 쪽은 우리가 고치겠다고 했습니다. 두 문장을 나란히 놓으면 프론티어 랩의 속도와 기업의 속도 사이에 놓인 거리가 선명해집니다. 그리고 그 거리는 더 이상 능력이 아니라 운영 비용의 문제입니다.
+
+![openai-tolerate-bad-fix-daily 슬라이드 1](/assets/images/openai-tolerate-bad-fix-daily-slide-01.webp)
 
 ## 추적 비용이라는 새 항목
 
@@ -50,6 +56,24 @@ categories:
 
 여기서 한 가지만 짚어 두겠습니다. 추적 비용은 일시적 경비가 아닙니다. 일일 변동이 산업의 기본 주파수가 되는 한, 이 비용은 매 회계 기간마다 다시 자라는 상비 비용입니다. 한 번에 드는 돈이 아니라, 계속 내야 하는 월세 같은 것입니다.
 
+네 내역이 세 곱셈인자를 만나 상비 비용으로 끝나는 과정을 한 장으로 정리했습니다.
+
+```mermaid
+flowchart TB
+    A["도구 버전이 매일 이동<br/>28일 동안 매일 업데이트"] --> B["추적 비용, 4개 내역"]
+    B --> B1["재테스트<br/>워크플로가 아직 되는지 확인"]
+    B --> B2["재승인<br/>새 버전은 새 리뷰를 요구"]
+    B --> B3["문서<br/>매뉴얼과 교육자료가 구식화"]
+    B --> B4["사건 처리<br/>일일 버그가 상주가 됨"]
+    B1 --> C["곱셈인자 3개<br/>도구 수, 모델 수, 사람 수"]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    C --> D["일시적 경비가 아닌 상비 비용<br/>매 회계 기간마다 다시 자랍니다"]
+```
+
+![openai-tolerate-bad-fix-daily 슬라이드 2](/assets/images/openai-tolerate-bad-fix-daily-slide-02.webp)
+
 ## 일일 변동이 에이전트 스택에 하는 일
 
 한 가지를 짚고 넘어가야 합니다. 에이전트 스택은 모델 하나가 아닙니다. 도구, 커넥터, 정책까지가 모두 스택의 일부입니다. Codex 같은 도구가 매일 변하면, 그 위에 세운 에이전트 워크플로가 버전과 함께 깨집니다. 통점은 어떤 모델을 쓰느냐에서, 매일 변하는 도구를 어떻게 안정적으로 실행하느냐로 이동합니다.
@@ -62,6 +86,8 @@ categories:
 
 이 네 가지가 갖춰지면, 매일의 버전 변화는 전체를 다시 짓는 일이 아니라 정책 범위 안에서 한 자원을 바꾸는 수준으로 줄어듭니다. 수비적인 태도가 아닙니다. 일일 속도로 움직이는 산업에서, 제한된 비용으로 그 속도를 유지하는 유일한 형태입니다.
 
+![openai-tolerate-bad-fix-daily 슬라이드 3](/assets/images/openai-tolerate-bad-fix-daily-slide-03.webp)
+
 ## 결론: 나쁜 일을 감수할 필요는 없습니다
 
 역설을 다시 기업 쪽으로 가져와 보겠습니다. 나쁜 일을 감수하라는 말은 프론티어 랩이 사회에 보낸 답입니다. 기업은 그 답을 그대로 받을 필요가 없습니다. 기업에게 아직 남아 있는 답이 하나 더 있습니다. 나쁜 일이 일어난 뒤에 감수하는 것이 아니라, 일어나기 전에 보일 수 있게 만드는 것입니다.
@@ -71,6 +97,8 @@ categories:
 다음 28일이 이 글의 시험대가 됩니다. 매일의 업데이트가 약속처럼 지켜진다면, 일일 변동은 하나의 뉴스가 아니라 산업의 기본 주파수가 됩니다. 그때 기업에게 남아 있는 질문은 도입 여부를 묻는 것이 아니라, 도입한 것을 얼마나 안전한 주파수로 돌리느냐를 묻게 됩니다.
 
 결국 오픈AI가 같은 날 보낸 두 메시지는 다시 한 번, 다른 뜻으로 읽을 수 있습니다. 이 산업은 이제 일일 변동으로 움직인다는 뜻입니다. 기업에 남은 질문은 쫓을 것인가가 아니라, 얼마나 제한된 비용으로 쫓을 것인가입니다. 나쁜 일이라서 감수해야 할 부분은, 이제 감사 로그와 정책 게이트가 대신 짊어집니다. 속도는 프론티어의 권리이고 제한된 비용으로 도는 것은 기업의 권리입니다. 오늘 아침의 다이제스트는 그 권리가 구체적인 형태로 갖춰지고 있다는 첫 장입니다.
+
+![openai-tolerate-bad-fix-daily 슬라이드 4](/assets/images/openai-tolerate-bad-fix-daily-slide-04.webp)
 
 ## 참고 자료
 
@@ -82,4 +110,3 @@ categories:
 - HuggingNews, [South Korea Invests $900B in AI to Rival US and China](https://huggingnews.com/ai/south-korea-invests-900b-in-ai-to-rival-us-and-china-90af984c)
 - HuggingNews, [OpenAI CEO Sam Altman Says World Should Accept Bad Things for AI Benefits](https://huggingnews.com/ai/openai-ceo-sam-altman-says-world-should-accept-bad-things-for-ai-benefit-65a8d364)
 - HuggingNews, [OpenAI Pledges 28 Days of Daily Codex Updates](https://huggingnews.com/ai/openai-pledges-28-days-of-daily-codex-updates-88a08fd8)
-
