@@ -23,6 +23,8 @@ categories:
   - news
 ---
 
+![A scale weighing a glowing certification seal against a dark unmarked block: the price of 'unvalidated' and the weight of proof](/assets/images/the-price-of-unvalidated-ai-hero.webp)
+
 ## One City, One Day
 
 On October 5, New York City put a price on "using an unvalidated AI model." The price is $25,000. It is the first regulation of its kind, a fine for unvalidated AI models. The city did not stop at the fine; it went to court the same day. The New York City Council filed a lawsuit against SpaceXAI because the company failed to appear at the mandatory AI safety hearing scheduled for October 5. For a company that received a subpoena and still did not show up, the city advanced the process to the next step.
@@ -80,6 +82,25 @@ The flow of $65 billion in ARR points the same way. The total volume of executio
 This is exactly where Paxis's design began. ThakiCloud's Agent-Native Cloud is a formal product at v1.1 GA, and it structures Skills, Tools, Policies, and Audit Logs as first-class resources. From autonomy-level (L0 to L3) governance, policy gates, and audit logs, to isolated sandboxes, MCP connectors and a skill market, and per-task model selection (CostRouter), it treats the whole of an agent's movement as an operational resource.
 
 The pain that today's news reveals can be addressed one by one. To "unvalidated," which the fine points to, the policy gate answers. It defines, before execution, at which autonomy level which model may perform which task. To "what was executed how," which the subpoena asks, the audit log answers, and the isolated sandbox keeps the execution bound. To "which model to run it with," which the flagship delay and the expansion of model supply leave behind, per-task model selection answers with routing. To the token cost that grows heavier as execution volume rises, CostRouter manages the unit price; and if where the data stays is the issue, the answer is a sovereign or on-premises Kubernetes deployment (ai-platform).
+
+That mapping, drawn as a single flow, looks like this.
+
+```mermaid
+flowchart LR
+    subgraph demand["What regulation and operations ask"]
+        direction TB
+        Q1["Fine: is any model<br/>running unvalidated"]
+        Q2["Subpoena: what was<br/>executed, and how"]
+        Q3["Model supply leaves:<br/>which model runs it"]
+        Q4["Execution volume leaves:<br/>cost and data location"]
+    end
+    Q1 --> A1["Policy gate<br/>model, autonomy level, task scope before execution"]
+    Q2 --> A2["Audit log<br/>replayable execution record"]
+    Q2 --> A3["Isolated sandbox<br/>execution boundary"]
+    Q3 --> A4["Per-task model selection<br/>routing before execution"]
+    Q4 --> A5["CostRouter<br/>unit price per task"]
+    Q4 --> A6["Sovereign, on-prem K8s<br/>data stays inside"]
+```
 
 On the day a price was put on the fine, governance is one line item on the cost sheet. Paxis has already turned that item into infrastructure.
 

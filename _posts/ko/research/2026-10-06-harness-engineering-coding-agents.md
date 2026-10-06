@@ -38,6 +38,8 @@ header:
 
 이 논문의 대상은 프로덕션에서 실제로 돌고 있는 코딩 에이전트 11개입니다. Claude Code, Codex CLI, Gemini CLI, Mistral Vibe, OpenHands, Aider, Mini-SWE-Agent, Hermes, Pi, OpenCode, OpenClaw. 여기에 Databricks의 Omnigent를 메타하니스 비교점으로 추가해 12개 트리를 다룹니다. 방법론은 실행이 아니라 읽기입니다. 의존성 manifest를 점검하고 세 언어(Python, TypeScript, Rust)의 import를 grep해서, 그 점검을 3개월 간격으로 두 번(2026년 4월과 7월 pin) 반복했습니다.
 
+![harness-engineering-coding-agents 슬라이드 1](/assets/images/harness-engineering-coding-agents-slide-01.webp)
+
 ## 어떤 연구인가
 
 핵심 프레임은 7개 정준 서브시스템입니다. 잘 만들어진 에이전트는 전부 이 7개 뼈대 위에 서 있습니다.
@@ -68,6 +70,8 @@ flowchart TB
 
 둘째, 벡터 검색 부재. 11개 시스템 모두 코드 검색에 vector embedding을 쓰지 않습니다. 전부가 ripgrep, tree-sitter, glob, 자동 발견되는 Markdown 컨텍스트 파일(AGENTS.md, CLAUDE.md, CONTEXT.md), LSP 진단, git status injection에 의존합니다. 유일한 default embedding 구성은 OpenClaw의 memory-core(sqlite-vec KNN + FTS5/BM25)이고, 그것도 conversation memory 전용입니다.
 
+![harness-engineering-coding-agents 슬라이드 2](/assets/images/harness-engineering-coding-agents-slide-02.webp)
+
 ## 주요 발견
 
 **Skills가 MCP를 채택률로 역전했다.** SKILL.md 기반 skills가 9/11 시스템에, MCP가 8/11에 존재합니다. 4월 판에서는 6/8 동점이었고, Pi의 "skills는 있고 MCP는 없다"는 입장이 그 균형을 깨뜨렸습니다. 에이전트 확장 방식의 무게중심이 서브프로세스 프로토콜(MCP)에서 파일 기반 스킬(markdown + 툴 매핑) 쪽으로 이동하고 있다는 신호입니다.
@@ -82,6 +86,8 @@ flowchart TB
 
 **90줄 scaffold.** 논문의 실용적 산출물은 13개 cross-cutting observations, 29개 design patterns(4월 판 17 + 신규 12), 18개 design recommendations, 그리고 90줄 Python minimum-viable-harness scaffold(Listing 3)입니다. 이 scaffold는 18개 권장사항 중 10개를 직접 구현하는데, framework 의존성 0, RAG 0, vector store 0, 다중 에이전트 0, sandbox 0입니다. 외부 repo가 아니라 논문 본문 인라인에 공개되어 있습니다.
 
+![harness-engineering-coding-agents 슬라이드 3](/assets/images/harness-engineering-coding-agents-slide-03.webp)
+
 ## ThakiCloud 제품 적용 시사점
 
 Paxis는 ThakiCloud의 Agent-Native Cloud로, 하네스 설계 자체를 일급 리소스로 다루는 플랫폼입니다. 이 논문의 7개 정준 서브시스템은 Paxis의 레이어 구성과 거의 1:1로 대응합니다. loop, tools, context, safety, orchestration, extensibility. Paxis가 framework 위에서 감싸는 방식이 아니라 하네스 자체를 설계하는 길을 택한 것이, 11개 프로덕션 시스템의 독립적 선택과 같은 방향이라는 점에서 이 논문은 우리의 아키텍처 판단에 외부 근거를 제공합니다.
@@ -91,6 +97,8 @@ Paxis는 ThakiCloud의 Agent-Native Cloud로, 하네스 설계 자체를 일급 
 세 번째는 "주 단위 반감기" 관찰의 함의입니다. 벤더 간 패턴 확산이 이토록 빠르면, 새 패턴을 따라잡는 것은 경쟁력이 아니라 유지비입니다. Paxis의 설계는 7개 정준 서브시스템이라는 안정적인 뼈대에 고정하고, 그 위의 표면 패턴(hook 어휘, manifest 포맷)은 policy-as-configuration으로 빠르게 흡수하는 방향이 맞습니다. 논문이 관찰한 "policy가 prompt 산문에서 configuration으로 이동"하는 흐름과도 일치합니다.
 
 마지막으로, 90줄 scaffold는 내부 최소 하네스나 smoke 테스트용 baseline으로 바로 활용할 수 있는 참고 자료입니다. framework 0, RAG 0, vector store 0으로 "에이전트의 최소 뼈대"를 정의해 준다는 점에서는 우리 팀의 thin harness, fat skills 원칙과 동일한 철학입니다.
+
+![harness-engineering-coding-agents 슬라이드 4](/assets/images/harness-engineering-coding-agents-slide-04.webp)
 
 ## 한계 및 반론
 
@@ -113,17 +121,11 @@ framework 부재 발견은 강력하지만 구조적으로 보수적입니다. �
 다음 단계로 권하는 것은 두 가지입니다. 13개 observations과 29개 patterns을 자신의 하네스 점검 체크리스트로 쓰는 것, 그리고 90줄 scaffold를 기준으로 "우리 하네스에서 빠져 있는 축"을 찾는 것입니다. 이 논문이 남긴 가장 실용적인 유산은 framework가 아니라 그 7개의 질문입니다.
 
 
-## 관련 슬라이드
 
-본문 내용을 NotebookLM(`architectural_mono` 스타일)으로 요약한 슬라이드입니다.
 
-![harness-engineering-coding-agents 슬라이드 1](/assets/images/harness-engineering-coding-agents-slide-01.webp)
 
-![harness-engineering-coding-agents 슬라이드 2](/assets/images/harness-engineering-coding-agents-slide-02.webp)
 
-![harness-engineering-coding-agents 슬라이드 3](/assets/images/harness-engineering-coding-agents-slide-03.webp)
 
-![harness-engineering-coding-agents 슬라이드 4](/assets/images/harness-engineering-coding-agents-slide-04.webp)
 
 ## 출처
 
