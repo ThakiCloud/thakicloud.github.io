@@ -35,6 +35,26 @@ For the past few years, the announcement order of frontier labs has been fairly 
 
 Let me go one step more concrete. Two things come attached to the output of 722 proofs. A standard for checking the proofs, and a place to leave that check. If the side that made the output bears both at the same time, it is not a big problem. But once the output starts circulating toward the user side first, the checking cost moves with it. At that point, the ledger becomes the subject.
 
+The flip, as a diagram:
+
+```mermaid
+flowchart LR
+    subgraph OLD["Before, model first"]
+        M1["Model announcement"] --> M2["Capability demo"] --> M3["Paper and output"]
+    end
+    subgraph NEW["Now, output first"]
+        O1["Output arrives first<br/>722 proofs"] --> O2["Verification runs ahead of release"] --> O3["Verification cost<br/>moves to the receiving side"]
+    end
+    O3 --> L["Ledger<br/>one line per output"]
+    L --> L1["Which model"]
+    L --> L2["Which authority"]
+    L --> L3["Which cost"]
+    L --> L4["Which output"]
+```
+
+![The state where output arrives first and the model is still in the vault, the core concept of this post visualized](/assets/images/proofs-out-model-in-vault-hero.webp)
+*Proofs out, model in the vault. The core concept of this post, visualized.*
+
 ## The Morning the Outputs Poured In
 
 If you read today's digest from start to finish, the output side is moving simultaneously all morning long.

@@ -1,7 +1,7 @@
 ---
 title: "Autonomy: Show the Receipt"
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/agentops/autonomy-receipt/
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/autonomy-receipt/"
 excerpt: "In October, SAP officially released its 'Autonomous Enterprise' and switched billing to a consumption model of 'AI units.' In the same week, Samsung SDS outlined its four elements of agent governance, SK AX unveiled a control tower, and KT said 'use it often.' The model layer is flooding with $12 billion and a trillion parameters. It was a week in which the first question about enterprise AI moved from 'how smart is it?' to 'can it be audited, measured, and stopped?'"
 seo_title: "SAP Autonomous Enterprise GA, Samsung SDS Four Elements of Agent Governance: The Center of Gravity of Enterprise AI Moves to the Control Layer (ThakiCloud)"
 seo_description: "SAP's shift to 'AI units' billing, Samsung SDS FabriX 2.0, and SK AX's integrated control tower announcement all landed in the same week. With the model layer flooding with new releases, we analyze through the lens of ThakiCloud Paxis why agent governance has become a product, and the four enterprise pains it reveals."
@@ -18,6 +18,9 @@ tags:
   - thakicloud
 categories:
   - agentops
+audiobook: "https://drive.google.com/file/d/1pEc4D1ggR1AU0sWbTacq1cTY90uwQl4Z/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
 ---
 
 SAP's new invoice has a new line item: 'AI units.' It is one word, but the way companies pay for AI changes with this line item. No longer a flat monthly subscription, it is a consumption model that drains as agents reason and work. Add the visibility into usage that comes with it, and this invoice is a different species of document from the old subscription contract. It landed in front of customers in October, alongside the new term SAP officially introduced: the 'Autonomous Enterprise.'
@@ -26,6 +29,9 @@ A slightly paradoxical pairing. The 'autonomy' of a company whose agents judge f
 
 Line up one week's headlines and the shift becomes visible. The first question about enterprise AI has moved from 'how smart is it?' to 'can it be audited, measured, and stopped?' And at the center of this paradox sits the question companies have kept postponing: when agents really do the work, where does the receipt go? This week is a special one by the standard of a single headline's worth of change. A company that has overseen corporate ledgers for more than 30 years put 'autonomy' out as a product, and in Korea, three companies spoke in the same week about how to put controls on that autonomy.
 
+![A week in which the first question about enterprise AI moved from performance to the control layer, visualized as a metered receipt](/assets/images/autonomy-receipt-hero.webp)
+*The core concept of this post, a metered receipt with moving agents, visualized.*
+
 ## The Day the ERP Giant Changed the Invoice
 
 The core of SiliconANGLE's reporting is a single sentence. It means 'AI on the app,' not 'AI in the app.' The Autonomous Enterprise architecture was first presented at the Sapphire event in May, and in October its two pillars, Joule Work and Joule Desktop, moved to general availability. Instead of embedding an assistant in each application, Joule reads intent and performs work across both SAP and non-SAP apps.
@@ -33,6 +39,10 @@ The core of SiliconANGLE's reporting is a single sentence. It means 'AI on the a
 Behind it lies a 'secret weapon': a structured knowledge graph built from the ERP's data, processes, policies, and relationships. Finance, supply chain, spend, workforce, customer experience. Domain-specific autonomous agents are expanding in each of these areas, and SAP is turning the fact that generic models struggle to reproduce this knowledge into its competitive edge. At the same time, it holds to the principle that humans remain in the loop to ensure governance, audit, and transparency. The controls and audits that Korea's finance and public sectors demand meet exactly at this point.
 
 From Korea's perspective, this GA is not just a global news item. It is a signal that agent work can actually be placed on an ERP that still holds the system of record position in manufacturing, finance, and the public sector. The billing change is worth a second look here too. Moving from subscription-centric to a consumption model that drains 'AI units' makes agent inference costs visible every month. The industry is calling this a new FinOps challenge for enterprise AI operations. What SAP is selling in October is, in the end, not the capability itself but the capability with a meter attached. Salesforce and ServiceNow are pushing in the same direction with headless applications and a context layer. It is not one company's symbol, but the movement of the industry's center of gravity.
+
+<!-- nlm-visual -->
+![Key-concept summary infographic 1](/assets/images/posts/news/autonomy-receipt/en/nlm-infographic-1.webp)
+*Infographic generated by NotebookLM from the sources.*
 
 ## Three Voices from Seoul
 
@@ -64,9 +74,26 @@ Paxis is ThakiCloud's Agent-Native Cloud. It is a formal product running as v1.1
 
 In Paxis, the level at which an agent can act autonomously is fixed in stages from L0 to L3. Before execution, a policy gate judges what can be touched and under whose authority it can be touched. Where Samsung SDS tried to block the path of confidential data flowing to external models with internal-model routing, Paxis has the policy gate perform that judgment at the structural unit level. All execution happens inside an isolated sandbox, and connection to the outside goes through MCP connectors and the skill marketplace. For customers that require sovereignty, the same workloads also run on top of on-premises K8s (ai-platform). CostRouter picks a model for each task, sending simple work to small models and heavy reasoning to high-performance models. It is the same logic as the 'AI gateway' Samsung SDS brought out this week, but in Paxis it is not a feature bolted on later; the design itself is that way. The four pains this week's news revealed: audit, permissions, safe execution, cost. Paxis is a structure where these four are pre-assembled as resources, not fitted in later.
 
+The control flow, summarized at a glance:
+
+```mermaid
+flowchart LR
+    A["Agent work request"] --> B["Policy gate<br/>what is touched, under whose authority<br/>L0 to L3"]
+    B --> C["Isolated sandbox<br/>safe execution"]
+    C --> D["MCP connectors and skill market<br/>connection to the outside"]
+    B --> E["CostRouter<br/>per-task model selection"]
+    E --> F["Small model<br/>high-performance model<br/>internal model"]
+    C --> G["Audit log<br/>records authority and cost"]
+    G --> H["Receipt<br/>AI-unit metering"]
+```
+
 SAP attached a receipt to autonomy, Samsung SDS named the four elements, and SK AX built a control tower. And the model layer is flooding out. There is one common variable hidden behind a week of news. The ability to cut a receipt. The answer Paxis offers to a company that is about to hire its first 'non-human employee' is clear.
 
 The receipt is already on the books.
+
+<!-- nlm-visual -->
+![Key-concept summary infographic 2](/assets/images/posts/news/autonomy-receipt/en/nlm-infographic-2.webp)
+*Infographic generated by NotebookLM from the sources.*
 
 ## References
 
