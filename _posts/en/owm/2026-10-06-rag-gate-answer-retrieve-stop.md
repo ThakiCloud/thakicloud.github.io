@@ -1,10 +1,10 @@
 ---
-title: "Answer, Retrieve, or Stop: Releasing RAG-Gate 4B, 8B and 9B"
-excerpt: "We put one small model in the gap after retrieval and before generation. If the documents contain the full support chain, it answers. If not, it retrieves more. If it cannot retrieve more, it stops. Accuracy rose sharply over the same-size base models, and all three passed five release gates fixed before training."
-seo_title: "RAG-Gate 4B, 8B and 9B: Open RAG Decision Models - ThakiCloud"
+title: "Answer, Retrieve, or Stop: Releasing RAG-Gate 4B, 8B, 9B and 27B"
+excerpt: "We put one small model in the gap after retrieval and before generation. If the documents contain the full support chain, it answers. If not, it retrieves more. If it cannot retrieve more, it stops. Accuracy rose sharply over the same-size base models, and every released model passed five release gates fixed before training. 27B failed once and passed after a targeted retrain."
+seo_title: "RAG-Gate 4B, 8B, 9B and 27B: Open RAG Decision Models - ThakiCloud"
 seo_description: "ThakiCloud released RAG-Gate, a decision model that sits after retrieval and before generation. It reads a question and the retrieved passages and emits one token: Answer, Retrieve, or Stop. Decision accuracy rose from 47-69% to about 95%, with unsupported answers held to 3-5%. Includes deployment patterns and limitations."
 date: 2026-10-06
-last_modified_at: 2026-10-06
+last_modified_at: 2026-10-07
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -134,12 +134,21 @@ Finally, 95% accuracy means one wrong call in twenty. Each model card deliberate
 
 ## What we released
 
-All three models are released under Apache-2.0. Usage code, full per-size metrics with confidence intervals, and the results of all five gates are on each model card.
+All four models are released under Apache-2.0. Usage code, full per-size metrics with confidence intervals, and the results of all five gates are on each model card.
 
 - [ThakiCloud/RAG-Gate-4B](https://huggingface.co/ThakiCloud/RAG-Gate-4B)
 - [ThakiCloud/RAG-Gate-8B](https://huggingface.co/ThakiCloud/RAG-Gate-8B)
 - [ThakiCloud/RAG-Gate-9B](https://huggingface.co/ThakiCloud/RAG-Gate-9B)
+- [ThakiCloud/RAG-Gate-27B](https://huggingface.co/ThakiCloud/RAG-Gate-27B)
 
-We trained a 27B model the same way and did not release it. Accuracy rose from 78.9% to 94.8%, but ChainCheck Σ on real-entity items fell from 0.24 to -0.04, so it failed G4. The base 27B model already tracked the support chain well, and training erased that. We do not change gates after seeing results, so this stays a recorded result. We then pre-registered a separate capability-preserving retrain and ran three recipes. The recipe that reduced the update and added a loss anchoring the base model's judgment kept chain sensitivity throughout, but decision accuracy stayed near 82%; the recipe that only reduced the update reached 88% accuracy while losing chain sensitivity again. No checkpoint met both conditions, so 27B is not released and that line is closed. On the larger model, the change that teaches the gate and the change that erases chain sensitivity moved together. The training data is not distributed.
+## 27B failed once, then passed
 
-*Measurement note: all numbers were measured by us with bf16 weights on ThakiCloud GPUs (H200, H100) and copied from measurement records written before release.*
+When we first trained 27B the same way as 4B, 8B and 9B, we did not release it. Accuracy rose from 78.9% to 94.8%, but ChainCheck Σ on real-entity items fell from 0.24 to -0.04, so it failed G4. Looking closer, the model had not lost the ability to spot a broken chain. What changed was that renaming the bridge entity, with the chain left intact, now flipped its decision about 4 times in 10 instead of 1 in 10. It could no longer tell a cosmetic edit from a broken chain.
+
+So we pre-registered a retrain that kept the same recipe and added one loss term. Each training item is paired with a copy whose bridge entity is renamed everywhere, and the model is penalised only when the two decisions drift further apart than they do in the base model. Rejecting broken chains more strictly is left free. An earlier attempt that anchored the base model's whole judgment had kept chain sensitivity but stalled at about 82% accuracy; this time we protected only the rename axis.
+
+The retrain first met the validation criteria fixed in advance at step 224, and we opened the sealed test once, for that checkpoint. Accuracy went from 78.9% to 93.8%, and ChainCheck Σ was 0.26 on real entities and 0.45 on fictional ones, higher than the base model. A rename now flips the decision about 2 times in 10. In the last gate, the released files were downloaded again and re-scored on 200 items, and 199 decisions matched. In plain terms, it learned the gate without giving up the chain sensitivity it started with.
+
+There is a cost. Unsupported answers are 5.5%, a little higher than the smaller models (3-5%), and accuracy on broken-chain documents is 86%, below the first fine-tune's 97%. The renamed pairs used in training are the same kind of edit as ChainCheck's chain-intact items, so for 27B G4 is a less independent check than for the smaller models; the model card says so. Where an unsupported answer is costly, raise the `p(Answer)` threshold. The training data is not distributed.
+
+*Measurement note: all numbers were measured by us with bf16 weights on ThakiCloud GPUs (H200, H100, B200) and copied from measurement records written before release.*
