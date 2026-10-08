@@ -1,7 +1,7 @@
 ---
 title: "Humans to GPT-6, Computers to Haiku"
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/agentops/humans-gpt6-computer-haiku/
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/humans-gpt6-computer-haiku/"
 excerpt: "The day GPT-6 launched to 1.2 billion people, the lead in computer-use scores tilted to the small model. On the morning an agent's hand becomes a consumable, the seat that takes the wheel becomes the enterprise's question."
 seo_title: "Humans to GPT-6, Computers to Haiku: Two Races on the Same Day | ThakiCloud"
 seo_description: "GPT-6's 1.2 billion user launch and Claude Haiku 5.5's 72.4% on OSWorld 2.1. On the morning the flagship's screen and the agent's hand diverge, the execution environment is the question left to the enterprise."
@@ -26,6 +26,9 @@ categories:
 
 An agent's hand is cheaper than you would expect. The day GPT-6 launched to 1.2 billion people, the lead in computer-use scores quietly tilted toward the small model Claude Haiku 5.5. The signal this morning's digest points to is exactly this crossover. While the flagship's announcement filled the headlines, the baseline of agent operations moved quietly in the other direction. There is a lot of news, but it all converges on one direction. It is a setup in which the small model takes the seat at the computer while the flagship fills the human's screen. Does this crossover mark the starting point of enterprise agent operations in the second half of the year?
 
+![Illustration of the core idea of Humans to GPT-6, Computers to Haiku](/assets/images/humans-gpt6-computer-haiku-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Two launches on the same day
 
 OpenAI announced GPT-6 and a new Intelligent UI on the same day. Subscribers to the Plus, Pro, Business, and Enterprise tiers of ChatGPT can access the model in all regions, and the launch targets 1.2 billion users. The flagship has gone toward the human's screen. Along with GPT-6, an interface called the Intelligent UI ships as a package. From OpenAI's perspective, a conversation is not completed by model performance alone. How the interaction happens on the screen is the variable that separates one user experience from another. Access across all regions, including the Enterprise tier, reads as intent to push this UI into the business domain. The battlefield of agent automation is widening from a race of model performance to a race of SaaS UI. A finished product experience, untethered from a model API, also shapes the enterprise's adoption path. The moment some of the automation built on top of a platform moves inside the provider's screen, control tends to shift to the owner of the UI.
@@ -45,6 +48,19 @@ What this shift changes is the cost structure of agent operations. The expensive
 Translated into the language of operations, 72.4% is more concrete. If an agent takes a screen task a hundred times, it finishes seventy-two and fails the rest. A system in which every failed case passes to a human hand does not hold. Procedures for partial completion, retry, and human handoff must be prepared together. The score of 72.4% is not a degree of completion but the starting point of repeatable execution. In segments where a hand's failure becomes the work's failure directly, a strong model is still needed. The reason for dividing into layers is here.
 
 Model use now divides into two layers. The layer that talks with a human, and the layer that handles the screen. In conversation, quality and trust matter. On the screen, repetition and cost matter. A design that filled both layers with one model is inefficient. When the execution layer drops to a small model, the flagship can focus on the conversation layer. A structure in which more agents and longer workflows run on the same budget is built.
+
+```mermaid
+flowchart TD
+  D["Same day, two races"] --> S1["Race 1: GPT-6<br/>toward the human's screen"]
+  D --> S2["Race 2: Haiku 5.5<br/>into the computer's seat"]
+  S1 --> R1["Widens the screen for 1.2 billion users<br/>ships with the Intelligent UI"]
+  S2 --> R2["72.4% on OSWorld 2.1<br/>GPT-6 Luna 48.9% · Haiku 4.5 15.7%"]
+  R1 --> L["Converge into two layers of model use"]
+  R2 --> L
+  L --> T1["Conversation layer: negotiates with humans<br/>quality and trust matter"]
+  L --> T2["Execution layer: handles the screen<br/>repetition and cost matter"]
+```
+*A schematic of the two same-day races converging into two layers of model use.*
 
 Evidence in the same direction sits elsewhere in the digest. The same morning, Microsoft said the Surface Laptop Ultra is up to 4.3 times faster than the latest MacBook Pro at AI image generation and cuts first-token response time by 2.1 times. Inference on local devices is speeding up fast. Google's first open multimodal embedding model powers Foresight, a macOS app that builds a knowledge graph locally without a cloud connection. Execution that does not pass through the cloud becomes a practical option for the enterprise that can decide where its data stays. The menu of models that can run an agent gets wider and cheaper.
 
