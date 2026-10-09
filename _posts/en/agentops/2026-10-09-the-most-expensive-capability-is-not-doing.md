@@ -71,6 +71,18 @@ Paxis, ThakiCloud's Agent-Native Cloud, treats day-two questions as design requi
 
 Day two is a problem of the range of action. In Paxis, autonomy is divided into levels L0 through L3. The range of actions an agent can take varies with the risk of the task. The design does not give the same permissions to an agent that lives for days and one that answers once. Before execution, a policy gate asks whether the action is permitted. After execution, an audit log records who did what, with which permission, where. The two failure modes the index measures, unauthorized action and misattribution, become engineering problems of the policy gate and the audit log. What the index measures from the outside, the platform blocks from the inside. The structure is one where a mistake stops at a gate, not in a report.
 
+The structure that blocks both failure modes looks like this.
+
+```mermaid
+flowchart TB
+    T["Agent task"] --> G{"Policy gate"}
+    G --> P["Permitted: in scope"]
+    G --> D["Denied: out of scope"]
+    P --> S["Sandboxed run"]
+    S --> L["Audit log: who, what, which permission"]
+    L --> F["Blocks both failure modes: unauthorized action, misattribution"]
+```
+
 Execution happens inside an isolated sandbox. Even when a mistake occurs, the damage stops inside the box. Where the data itself must not leave the facility, Paxis comes back as sovereign/on-prem K8s (ai-platform). The clinical case above is exactly that domain. In that domain, choosing an open-weight model is a choice of placement. In a market where capability has converged, execution cost also becomes an operational variable. Paxis's CostRouter routes models per task. From among the candidates that passed governance, it picks the model whose cost fits the task.
 
 For an enterprise, two seats change. The index is the seat you look from when choosing a supplier. The platform is the seat you stand on when operating it yourself.
