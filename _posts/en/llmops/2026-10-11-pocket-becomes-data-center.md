@@ -23,11 +23,38 @@ categories:
   - llmops
 ---
 
+![Inference descending from the data center building to the pocket and the desk, the core concept of the article](/assets/images/pocket-becomes-data-center-hero.webp)
+
 The direction in which intelligence moves is changing. Inference that had been gathering only inside the data center descends this week onto the pocket and the desk.
 
 A 3.4x speedup on a Mac, the blueprint for a 100-billion-parameter model in a phone by 2028, a $30-billion building that capital markets turned their backs on, a $25-billion staffing deal Nvidia is negotiating, and 92 sandbox workers that stayed up through the night. Every number in this week's digest points in the same direction.
 
 Here is a map for how to read this week's digest. Two hardware signals, one reversal of capital, one report from the night shift, and one warning from a CEO. The hardware signals are the 100B phone blueprint and the 3.4x Mac. The reversal of capital is Firmus's withdrawal of its listing and Reflection's acqui-hire. The night shift report is the 92 sandbox workers. The warning is Nadella's phrasing of insider threat.
+
+The flow of that map is this.
+
+```mermaid
+flowchart TD
+    subgraph S["Signals of the week"]
+        Q["Qualcomm 100B phone<br/>by 2028, forecast"]
+        L["llama.cpp 3.4x<br/>M3 Ultra, merged"]
+        F["Firmus IPO withdrawn<br/>rejected at $30B"]
+        R["Nvidia and Reflection<br/>$25B acqui-hire"]
+        N["92 sandbox workers<br/>five improved bounds overnight"]
+        C["Nadella<br/>frontier AI as insider threat"]
+    end
+    Q --> W
+    L --> W
+    F --> W
+    R --> W
+    N --> W
+    C --> W
+    W["Where the model runs<br/>building and pocket, two surfaces"]
+    W --> K["The cost structure changes<br/>token price per surface"]
+    K --> G["Scale of the night shift<br/>flexible surfaces absorb the spike"]
+    G --> B["Brakes multiply by the surface"]
+    B --> T["Scarce capability: routing<br/>workload x silicon x policy x logs"]
+```
 
 If you have actually run agents, you can see why this week's news matters. The place where models run is starting to change. When the place changes, the cost structure changes, and when the cost structure changes, the number of agents you can run in parallel overnight changes.
 
