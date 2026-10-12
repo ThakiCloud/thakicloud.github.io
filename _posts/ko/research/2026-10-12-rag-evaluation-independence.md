@@ -20,11 +20,17 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/rag-evaluation-independence/"
+audiobook: "https://drive.google.com/file/d/1SMacwMWrF8aCU-xGTIkmRWVdt9OCFz4n/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 평가셋의 크기를 말할 때 보통 문항 수를 셉니다. 저희도 검색 판단 모델을 독립적으로 검증할 평가셋을 두 번 만들려고 했습니다. 한 번은 위키백과에서, 한 번은 한국 법령에서였습니다. 두 번 다 문항은 충분히 만들 수 있었지만 두 번 다 멈췄습니다. 문항끼리 서로 기대고 있었기 때문입니다.
 
 평가셋을 직접 만들거나, 남이 만든 평가셋의 숫자를 믿어도 되는지 판단해야 하는 분께 이 글을 권합니다. 이 글은 평가셋을 만드는 데 실패한 기록이지만, 무엇이 실패를 불렀는지는 다른 평가에도 그대로 적용됩니다.
+
+![수천 개의 점이 다섯 개의 덩어리로 모여드는 개념을 형상화한 이미지](/assets/images/rag-evaluation-independence-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 쉽게 말하면
 
@@ -33,6 +39,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/rag-evaluation-inde
 평가 문항도 마찬가지입니다. 두 문항이 같은 문단을 근거로 쓰면 한 가족입니다. 모델이 그 문단을 잘 읽으면 두 문항을 다 맞히고 못 읽으면 다 틀립니다. 그래서 통계를 낼 때는 문항이 아니라 가족을 한 단위로 세야 합니다. 저희는 이 가족을 컴포넌트라고 부릅니다.
 
 문제는 누구와 누구를 한 가족으로 볼지 정하는 규칙입니다. 규칙이 촘촘할수록 가족은 커지고 가족 수는 줄어듭니다.
+
+![rag-evaluation-independence 슬라이드 1](/assets/images/rag-evaluation-independence-slide-01.webp)
 
 ## 무엇을 해봤나
 
@@ -58,6 +66,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/rag-evaluation-inde
 
 그래서 문항을 더 어렵게 바꾼 새 설계를 세웠습니다. 인용된 조문 대신 같은 번호의 다른 법령 조문을 디코이로 넣는 방식입니다. 그리고 실제로 만들기 전에 얼마나 만들 수 있는지부터 세었습니다. 가족을 묶는 규칙은 미리 문서로 고정했습니다. 같은 문단을 공유하거나, 거의 같은 조문을 가졌거나, 디코이로 쓰인 법령은 한 가족입니다.
 
+![rag-evaluation-independence 슬라이드 2](/assets/images/rag-evaluation-independence-slide-02.webp)
+
 ## 나온 결과
 
 만들 수 있는 문항은 충분했습니다. 시행 중인 법령 1,656개에서 디코이를 붙일 수 있는 문항 후보가 10,702개 나왔습니다.
@@ -74,6 +84,15 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/rag-evaluation-inde
 
 *거의 같은 조문은 글자 5개 단위 조각의 겹침 비율(Jaccard)이 0.8 이상인 조문입니다. 앞의 두 줄은 판정 뒤에 원인을 보려고 계산한 진단값입니다.*
 
+연결 규칙이 더해지며 컴포넌트가 수축하는 과정을 도표로 정리했습니다.
+
+```mermaid
+flowchart TB
+    A["후보 문항 10,702개<br/>시행 중 법령 1,656개"] --> B["완전히 같은 문단만 묶음<br/>컴포넌트 1,357개"]
+    B --> C["거의 같은 조문까지 묶음<br/>컴포넌트 737개"]
+    C --> D["디코이 법령까지 묶음<br/>컴포넌트 5개"]
+```
+
 완전히 같은 문단만 따지면 법령은 1,357개 덩어리로 나뉩니다. 거의 같은 조문을 더하자 845개 법령짜리 덩어리가 생겼습니다. 같은 번호의 디코이 연결이 나머지를 거의 다 이었습니다.
 
 즉, 사람 말로는 1만 명에게 물을 수 있었지만, 같은 가족으로 묶어 보니 사실상 다섯 집에 물은 셈이었습니다.
@@ -81,6 +100,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/rag-evaluation-inde
 ### 두 시도의 공통점
 
 두 원천은 전혀 달랐지만 같은 모양으로 실패했습니다. 위키백과에서는 방해 문단을 같은 문단 묶음에서 나눠 쓴 것이 문제였습니다. 법령에서는 법마다 반복되는 상투 조문과, 문항을 어렵게 만들려고 넣은 디코이가 문항끼리 잇는 다리가 됐습니다. 두 경우 모두 문항을 만드는 방식 자체가 문항 사이에 연결을 만들었습니다.
+
+![rag-evaluation-independence 슬라이드 3](/assets/images/rag-evaluation-independence-slide-03.webp)
 
 ## 그래서 무엇을 바꾸면 되나
 
@@ -92,6 +113,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/rag-evaluation-inde
 
 ThakiCloud 관점에서 이 교훈은 Paxis의 에이전트 품질 평가로 이어집니다. 고객 업무 문서로 에이전트를 평가하면 같은 사내 규정이나 양식 문단이 수많은 질문에 반복해서 나옵니다. 질문 수가 많아 보여도, 같은 문단을 공유하는 질문끼리 묶어 세지 않으면 평가 결과를 실제보다 훨씬 확신하게 됩니다.
 
+![rag-evaluation-independence 슬라이드 4](/assets/images/rag-evaluation-independence-slide-04.webp)
+
 ## 못 믿을 부분
 
 가장 큰 반론은 저희 독립성 정의가 지나치게 보수적일 수 있다는 점입니다. 거의 같은 조문을 공유한다고 해서 정답 정보가 새는 것은 아닙니다. 양벌규정이 여러 법에 똑같이 있다고 한 법의 문항을 풀면 다른 법의 문항이 저절로 풀리지는 않습니다. 더 느슨한 규칙을 쓰면 컴포넌트는 훨씬 많아집니다.
@@ -101,5 +124,12 @@ ThakiCloud 관점에서 이 교훈은 Paxis의 에이전트 품질 평가로 이
 둘째, 컴포넌트 단위로 세는 방식도 하나의 선택입니다. 군집을 고려한 다른 분산 추정이나, 연결 강도에 가중치를 주는 방식이면 다른 숫자가 나옵니다.
 
 셋째, 이 결과를 모든 RAG 평가로 넓힐 수는 없습니다. 위키백과 기반 다단계 질문과 한국 법령 인용이라는 두 사례일 뿐입니다. 문단을 공유하지 않는 원천이라면 같은 문제가 생기지 않을 수 있습니다.
+
+## 참고 자료
+
+- Ho, Nguyen, Sugawara, Aizawa, [Constructing A Multi-hop QA Dataset for Comprehensive Evaluation of Reasoning Steps (2WikiMultihopQA 논문, arXiv:2011.01060)](https://arxiv.org/abs/2011.01060)
+- [Alab-NII/2wikimultihop: 2WikiMultihopQA 공식 데이터셋 저장소 (GitHub)](https://github.com/Alab-NII/2wikimultihop)
+- [Jaccard index (위키백과)](https://en.wikipedia.org/wiki/Jaccard_index): '거의 같은 조문' 규칙의 5글자 조각 겹침 비율(0.8 이상) 기준
+- [Design effect (위키백과)](https://en.wikipedia.org/wiki/Effective_sample_size): 문항끼리 묶이면 유효 표본 수가 줄어드는 통계 원리
 
 *이 글의 수치는 저희가 직접 계산한 값이며 연구 원장에 기록된 결과만 인용했습니다.*

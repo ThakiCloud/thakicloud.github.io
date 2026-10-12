@@ -30,6 +30,9 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 판단 결과를 감사하거나, 같은 입력에 같은 판단이 나와야 하는 서비스를 운영하는 분께 이 글을 권합니다. 정확도가 재현되는 것과 확률이 비트 단위로 재현되는 것은 서로 다른 요구사항이었습니다.
 
+![같은 코어가 세 가지 환경 챔버를 지나 색다른 빛으로 나오는 개념을 형상화한 이미지](/assets/images/decision-head-reproducibility-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 쉽게 말하면
 
 같은 레시피와 같은 반죽으로 빵을 굽는다고 해 보겠습니다. 오븐에 한 판만 넣고 구울 수도 있고 여러 판을 한꺼번에 넣고 구울 수도 있습니다. 여러 판을 같이 넣으면 열이 도는 방식이 조금 달라져 빵 색이 미세하게 바뀝니다. 오븐 회사가 다르면 같은 온도 설정에서도 결과가 또 다릅니다.
@@ -39,6 +42,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 저희 판단 어댑터가 그 검사입니다. 반죽은 입력이고 레시피는 가중치입니다. 오븐은 실행 환경입니다. 몇 판을 같이 넣느냐는 배치와 패딩이고 오븐 회사는 CUDA 빌드와 커널 라이브러리입니다.
 
 <!-- nlm-visual -->
+![decision-head-reproducibility 슬라이드 1](/assets/images/decision-head-reproducibility-slide-01.webp)
+
 ## 무엇을 해봤나
 
 ### 공개 전 검증에서 생긴 일
@@ -95,6 +100,18 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 
 원인 하나는 코드에서 바로 확인됐습니다. 기준 환경에는 커널 라이브러리가 깔려 있었습니다. 그래서 모델 일부 층의 핵심 연산이 그 라이브러리의 커널로 돌았습니다. 실행 로그에는 빠른 경로를 쓸 수 없어 기본 구현으로 돌린다는 경고가 떴는데도 그랬습니다. 경고는 다른 보조 라이브러리 하나가 빠졌다는 뜻이었고 실제로는 대부분의 연산이 빠른 커널을 쓰고 있었습니다. 깨끗한 환경에는 그 라이브러리가 없어서 같은 층이 기본 구현으로 돌았습니다.
 
+의심 대상을 하나씩 거르고 고정까지 이른 과정을 도표로 정리했습니다.
+
+```mermaid
+flowchart TB
+    A["의심 1: 로더 코드<br/>8개씩 묶어 재실행, 차이 0"] --> B["의심 2: 이웃 입력 간섭<br/>이웃 내용만 변경, 16문항 모두 차이 0"]
+    B --> C["의심 3: 배치와 패딩 형상<br/>차이 최대 6.6%p, 1층부터"]
+    C --> D["의심 4: 커널 라이브러리와 CUDA 빌드<br/>차이 최대 14.4%p"]
+    D --> E["고정: 같은 CUDA 빌드 + 같은 커널 라이브러리<br/>깨끗한 환경에서 비트 동일 재현"]
+```
+
+![decision-head-reproducibility 슬라이드 2](/assets/images/decision-head-reproducibility-slide-02.webp)
+
 ## 나온 결과
 
 세 가지가 분명해졌습니다.
@@ -106,6 +123,8 @@ audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 셋째, 정확한 재현은 가능합니다. 같은 CUDA 빌드와 같은 커널 라이브러리를 쓰면 새로 만든 환경에서도 확률이 비트 단위까지 같았습니다.
 
 그래서 공개 패키지를 이렇게 고정했습니다. 의존성 목록에 torch의 CUDA 빌드와 커널 라이브러리 버전까지 적었습니다. 로더는 실행할 때 환경을 확인하고 검증된 조합과 다르면 경고를 냅니다. 공식 지원 범위는 입력 하나씩, 패딩 없이 계산하는 방식으로 제한했습니다. 카드에는 다른 환경에서 확률이 달라진다는 사실을 수치와 함께 적었습니다.
+
+![decision-head-reproducibility 슬라이드 3](/assets/images/decision-head-reproducibility-slide-03.webp)
 
 ## 그래서 무엇을 바꾸면 되나
 
@@ -120,6 +139,8 @@ ThakiCloud 관점에서 이 문제는 Metis의 서빙과 바로 이어집니다.
 공개 패키지와 실행 환경 고정본은 [Hugging Face의 ECP-Q7-27B-Research](https://huggingface.co/ThakiCloud/ECP-Q7-27B-Research)에 있습니다.
 
 <!-- nlm-visual -->
+![decision-head-reproducibility 슬라이드 4](/assets/images/decision-head-reproducibility-slide-04.webp)
+
 ## 못 믿을 부분
 
 먼저 진단 규모가 작습니다. 형상 진단은 시드 하나, 16개 문항이었고 환경 비교는 시드마다 64개 문항이었습니다. 이 범위에서 판단이 뒤집히지 않았다는 사실을 전체 데이터로 넓혀 말할 수 없습니다.

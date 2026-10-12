@@ -30,6 +30,9 @@ When releasing a research model, shipping the weights with a dependency list usu
 
 This is for anyone who audits model decisions, or runs a service where the same input must get the same decision. Reproducing accuracy and reproducing probabilities bit for bit turned out to be different requirements.
 
+![The same core passing through three differently tinted environment chambers, illustrating the concept](/assets/images/decision-head-reproducibility-hero.webp)
+*The article's core concept, visualized.*
+
 ## In plain terms
 
 Say you bake bread with the same recipe and the same dough. You can put one tray in the oven, or several at once. With several trays, the heat circulates a little differently, and the crust color shifts slightly. A different oven brand, at the same setting, shifts it again.
@@ -60,7 +63,7 @@ Then we changed only the shape.
 | neighbor content only, same shape | 0 | none | 0 |
 | padding added to one input | 6.6 points | layer 1 | 0 |
 | batch size 1 → 8 | 3.9 points | layer 1 | 0 |
-| padding length 1,024 → 1,536 at batch 8 | 0.9 points | layers 45–46 | 0 |
+| padding length 1,024 → 1,536 at batch 8 | 0.9 points | layers 45 to 46 | 0 |
 
 *A diagnostic on 16 items and one seed.*
 
@@ -94,6 +97,16 @@ Finally, we installed only the public files in a clean virtual environment. Agai
 *64 items per seed. The kernel library is flash-linear-attention 0.5.2.*
 
 One cause showed up directly in the code. The reference environment had the kernel library installed, so the core computation of some layers ran on its kernels. That held even though the log warned that the fast path was unavailable and the default implementation would be used. The warning only meant one other helper library was missing; most of the computation was in fact running on the fast kernels. The clean environment lacked the library, so the same layers ran on the default implementation.
+
+The path from suspect to suspect, ending at the pin, looks like this.
+
+```mermaid
+flowchart TB
+    A["suspect 1: loader code<br/>re-run in batches of 8, gap 0"] --> B["suspect 2: neighbor input interference<br/>neighbors changed only, gap 0 on all 16 items"]
+    B --> C["suspect 3: batch and padding shape<br/>gap up to 6.6 points, from layer 1"]
+    C --> D["suspect 4: kernel library and CUDA build<br/>gap up to 14.4 points"]
+    D --> E["pin: same CUDA build + same kernel library<br/>bit-identical in a clean environment"]
+```
 
 ## What came out
 

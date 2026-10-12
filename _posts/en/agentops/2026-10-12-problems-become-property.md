@@ -30,6 +30,9 @@ There are three pieces of evidence. OpenAI released 700 papers at once. Research
 
 Tied together in a single line, this morning's news is the day the price of problems changed. The value of what is unsolved was placed on the same footing as the value of solving it.
 
+![One problem forking into two paths, illustrating the core concept](/assets/images/problems-become-property-hero.webp)
+*The article's core concept, visualized.*
+
 ## A Day in Integer Multiplication
 
 Integer multiplication is the most basic of computations. It is the operation we perform at every moment, and lowering the number that measures this operation's efficiency has been a task left open in mathematics for a long time.
@@ -77,6 +80,14 @@ The value of a playground shows in repetition. When many people run the same pro
 The side that wanted to protect problems and the side that expanded problems into a playground moved in the same week. At one end a door closes, and at the other a door opens. Problems now exist in two forms.
 
 The interesting point is that both are now handling the same problems. The question of which side wins comes after that. One problem has taken two forms: a private asset and a public training ground.
+
+The two paths look like this.
+
+```mermaid
+flowchart TB
+    P["One public problem<br/>integer multiplication task"] --> A["closed door path<br/>private asset: one company's model material"]
+    P --> B["open door path<br/>public training ground: open-source RL environments and community trails"]
+```
 
 The meaning of this split is that the problem itself has become an asset. An asset comes with a price. A problem that stays private becomes material that grows one company's model. A problem that is published becomes the training ground of every model. A structure has emerged in which the same equation carries two values.
 
