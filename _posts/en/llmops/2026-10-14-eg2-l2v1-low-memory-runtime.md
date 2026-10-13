@@ -79,7 +79,7 @@ Short audio is hit hardest, and the gap narrows as clips get longer and batches 
 
 ## What about retrieval quality?
 
-The embeddings from this runtime are almost the same as the official loader's, so the retrieval evaluation in the model card applies as is. The card states that image, audio and video retrieval met non-inferiority criteria against BF16 that were fixed in advance. The evaluation data and harness are internal, though, so outsiders cannot reproduce them directly. If your application depends on exact neighbor order, such as deduplication or near-duplicate checks, validate on your own data.
+The embeddings from this runtime are almost the same as the official loader's, so we expect the retrieval conclusions in the model card to hold. We have not rerun that retrieval evaluation with this runtime, though. The card states that image, audio and video retrieval met non-inferiority criteria against BF16 that were fixed in advance. The evaluation data and harness are internal, though, so outsiders cannot reproduce them directly. If your application depends on exact neighbor order, such as deduplication or near-duplicate checks, validate on your own data.
 
 ## Try it
 
