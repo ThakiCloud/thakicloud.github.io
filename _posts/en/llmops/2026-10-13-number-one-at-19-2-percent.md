@@ -20,12 +20,15 @@ tags:
 categories:
   - llmops
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/llmops/number-one-at-19-2-percent/
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/number-one-at-19-2-percent/"
 ---
 
 If you are the kind of reader who takes the top of a model ranking and starts using it right away, this morning's news is a warning. The core of the warning fits in one line. The new number one in open-weight legal AI, Zai's GLM-Legal, scored 19.2%.
 
 Zai announced its first specialized model, GLM-Legal, and took the number one spot in open-weight legal AI. On Harvey's Legal Agent Benchmark, GLM-Legal recorded 19.2%. More than double the 8.3% of full-size GLM 5.3, and triple the 6.7% of other GLM models. A first place that dominates the rankings; a first place on the report card that misses even one out of five questions. That gap is where this morning starts.
+
+![A single glowing summit over dark ridges, with the dense execution-environment lattice spread beneath, the article's core concept visualized](/assets/images/number-one-at-19-2-percent-hero.webp)
+*The article's core concept, visualized.*
 
 The strange part of this news is that every number in it is true. Number one, double, triple. All of them factual. And yet the sentence "the number one legal AI" does not reach the sentence "an AI you can use at work." The 19.2% fills the space between those two sentences. Choosing the legal domain does not change that. In a field where documents, permissions, and records all move together, the way of executing has to be settled before the score. GLM-Legal is Zai's first specialized model. An open-weight company choosing law as its first vertical shows where the industry is looking for somewhere it can hand work to.
 
@@ -88,6 +91,20 @@ The report card is not a shopping list. It is a routing map.
 Compressed to one line, today's news says this. Models make a first place every day, and organizations put agents to work before the score is anywhere near 100. Money flows outside the model. The place where the three branches meet is the execution environment. Where it runs, with what permissions it is used, what is left as a record, and who accounts for the token cost.
 
 One product has put forward an answer to this question. Paxis by ThakiCloud, the v1.1 GA product of the agent-native cloud. Skills, tools, policies, and audit logs are managed as first-class resources, and autonomy levels L0 through L3 carry stepwise governance. A pre-execution policy gate checks permissions, every action runs inside an isolated sandbox and lands in the audit log. MCP connectors and the skill market attach domain specialist models as agent skills, and sovereign on-prem K8s (ai-platform) provides the execution environment itself where data does not leave. CostRouter's per-task model selection turns this post's arithmetic into a cost calculation.
+
+Routing that adds up today's score and today's money together, drawn as one map, looks like this.
+
+```mermaid
+flowchart TD
+    J["Work request"] --> R["CostRouter<br/>per-task model selection"]
+    R --> L["Legal documents<br/>GLM-Legal at 19.2%"]
+    R --> T["Audio transcription<br/>small model, 288x real-time"]
+    L --> H["80% human review<br/>records feed the next iteration"]
+    H --> G["Policy gate<br/>autonomy L0 to L3"]
+    T --> G
+    G --> S["Isolated sandbox execution"]
+    S --> A["Audit log<br/>spend lands in the log"]
+```
 
 A 19.2% first place like GLM-Legal can work next to the case file on these rails. The specialist model comes on as a skill. Sensitive documents stay in the on-prem environment. The 80% that a person reviews is held by the autonomy level and the policy gate. Spend is computed by the per-task model selection. Legal on the specialist model, transcription on the small model, spend in the logs. That is the shape in which today's 19.2% works.
 
