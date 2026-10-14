@@ -20,7 +20,7 @@ tags:
   - paxis
 categories:
   - agentops
-canonical_url: https://thakicloud.com/tech-blog/en/agentops/conversation-becomes-evidence/
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/conversation-becomes-evidence/"
 ---
 
 Today, the conversations you have with AI are heading to four places you probably never imagined: a courtroom, a witness stand, bankruptcy papers, and an auditor's desk.
@@ -34,6 +34,9 @@ The US Department of Justice (DOJ) linked a bugging suspect to a chatbot account
 The chatbot did nothing wrong in this case. It simply answered what it was asked. But that conversation is no longer a service log. It became a record that points at a person. The question and the answer, bound to an identity-bearing account, formed a single line that pointed at the suspect. The help the suspect was looking for remains there as a lead the prosecutors picked up. What filled the gap was not the chatbot's answer, but the account holding the answer.
 
 What is worth noting is that this is not a one-off exception. The other news from this morning all points at the same object: usage records.
+
+![Illustration of the core idea of The Conversation That Became Evidence](/assets/images/conversation-becomes-evidence-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## Case No. 1: The Crime Scene That Is the Chat Window
 
@@ -88,6 +91,16 @@ Tying this morning's four cases into one line: the courtroom, 100x, 14-to-1, the
 Then the question left for the company is one: who, with which AI, on which work, with what authority, and for how much did they execute it? Can you answer that now? If the answer is in a third party's log, or nowhere, that record is not an asset. It is a liability being accounted for on someone else's desk.
 
 The order of the answer comes in four stages. First, inventory. What records exist, and where they are. Next, access. Who can read them, and can a third party read them. Third, the gate. What can the agent do, under what conditions. Finally, metering. How much does one action cost. In the end, what this morning's four cases demand is a structure that runs these four stages at the execution level.
+
+Matching the four stages to their execution-level components, one by one:
+
+```mermaid
+flowchart TB
+    S1["1 Inventory<br/>what records exist,<br/>and where"] --> A1["Audit log"]
+    S2["2 Access<br/>who can read,<br/>and a third party"] --> A2["Sovereign · on-prem"]
+    S3["3 Gate<br/>what the agent may do,<br/>under what conditions"] --> A3["Policy gate<br/>autonomy L0-L3"]
+    S4["4 Metering<br/>cost per action"] --> A4["CostRouter"]
+```
 
 ThakiCloud's Paxis is an Agent-Native Cloud that takes this question as its design starting point. It is a formal product (v1.1 GA). In Paxis, Skills, Tools, Policies, and Audit Logs are first-class resources, not options bolted onto a log server. Autonomy is governed step by step from L0 to L3, a pre-execution policy gate checks authority, and every action runs inside an isolated sandbox and is left as an audit log. MCP connectors and the skill marketplace manage the tools the agent uses, and sovereign/on-prem K8s (ai-platform) provides an execution environment where the records themselves do not leave the site. CostRouter's per-task model selection turns the arithmetic of Case No. 3 into an execution-level routing problem.
 
