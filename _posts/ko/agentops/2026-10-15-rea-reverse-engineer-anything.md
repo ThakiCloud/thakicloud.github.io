@@ -19,6 +19,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/rea-reverse-engineer-anything/"
+audiobook: "https://drive.google.com/file/d/1cok_QJ3aDhwjk1bamba1f0I3--kKQaIa/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 이번 주 AI 개발 커뮤니티에서 '역공학을 AI 에이전트에게 시키는 도구'가 화제가 되었습니다. 안드로이드 APK든, 윈도우 EXE든, Electron 앱이든 펌웨어든, 에이전트에게 물어보면 소스 코드 없이 앱이 어떻게 동작하는지 증거와 함께 설명해 주는 구조입니다.
@@ -34,6 +37,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/rea-reverse-enginee
 ## 왜 읽어야 하나
 
 에이전트 도구를 설계하거나, 에이전트를 검증 없는 대상으로 돌리는 위험을 평가하는 분께 이 글은 두 가지를 줍니다. 첫째, 도구 카탈로그와 가이드 워크플로, 증거 모델을 한 패키지에 올린 MCP 서버의 실제 설계 사례입니다. 둘째, '로컬 실행'이 안전을 뜻하지 않는다는 경고의 구체적인 형상입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/rea-reverse-engineer-anything/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 개요
 
@@ -59,7 +66,7 @@ REA(Reverse Engineer Anything)는 morluto가 개발한 오픈소스 프로젝트
 
 ### 증거 모델
 
-REA의 문서가 반복적으로 쓰는 개념은 Evidence입니다. 도구 결과는 인라인으로 증거를 포함하고 증거는 세션 장부에 보관된 ID로 참조됩니다. 문서의 말은 이겁니다. 관찰(observation), 추론(inference), 모름(unknown)을 구분하라는 것. 미확인 사항(residual unknowns)은 감사가 가능한 1급 대상이 되어 audit_residual_unknowns 워크플로가 그것만 짚습니다.
+REA의 문서가 반복적으로 쓰는 개념은 Evidence입니다. 도구 결과는 인라인으로 증거를 포함하고 증거는 세션 장부에 보관된 ID로 참조됩니다. 문서의 말은 이렇습니다. 관찰(observation), 추론(inference), 모름(unknown)을 구분하라는 것. 미확인 사항(residual unknowns)은 감사가 가능한 1급 대상이 되어 audit_residual_unknowns 워크플로가 그것만 짚습니다.
 
 ![관찰, 추론, 미확인 사항을 구분해 모름을 1급 산출물로 올리는 증거 모델](/assets/images/rea-reverse-engineer-anything-slide-07.webp)
 *관찰, 추론, 미확인 사항을 구분하고, 모름을 독립 감사 대상인 1급 산출물로 올리는 구조입니다.*
@@ -133,7 +140,7 @@ setup은 지원 에이전트를 고르게 하고, 제안 변경을 검토한 뒤
 ![워크플로, 증거 1급 격체화, 격리 케이지라는 지능형 인프라의 3대 설계 원리](/assets/images/rea-reverse-engineer-anything-slide-09.webp)
 *도구보다 워크플로가 성공을, 증거의 1급 격체화가 환각을, 격리의 케이지가 안전을 결정합니다.*
 
-둘째, 이 도구가 보여주는 위험이 Paxis 샌드박스의 이유입니다. REA의 문서와 면책 조항은 명확합니다. 샌드박스가 아니며 신뢰하지 않는 바이너리를 열면 사용자의 권한으로 로컬 디컴파일러가 그 파일을 파싱합니다. 악의로 만든 파일에 명령어처럼 보이는 문자열이 있으면 에이전트가 그것에 반응할 수 있습니다. 로컬 기계에서 이게 일어난다면, 에이전트 실행 인프라에서는 격리 샌드박스와 정책 게이트, 감사 로그가 그 자리를 채웁니다. Paxis가 에이전트 실행을 격리 환경에서 돌리고 모든 행동을 정책 게이트로 통과시키는 구조인 이유입니다.
+둘째, 이 도구가 보여주는 위험이 Paxis 샌드박스의 이유입니다. REA의 문서와 면책 조항은 명확합니다. 샌드박스가 아니며 신뢰하지 않는 바이너리를 열면 사용자의 권한으로 로컬 디컴파일러가 그 파일을 파싱합니다. 악의로 만든 파일에 명령어처럼 보이는 문자열이 있으면 에이전트가 그것에 반응할 수 있습니다. 로컬 기계에서 이것이 일어난다면, 에이전트 실행 인프라에서는 격리 샌드박스와 정책 게이트, 감사 로그가 그 자리를 채웁니다. Paxis가 에이전트 실행을 격리 환경에서 돌리고 모든 행동을 정책 게이트로 통과시키는 구조인 이유입니다.
 
 ![로컬 실행의 위험 노출과 기업형 격리 패러다임의 비교](/assets/images/rea-reverse-engineer-anything-slide-08.webp)
 *REA의 로컬 실행은 사용자 권한 파싱과 프롬프트 인젝션 노출을 갖고, 기업형 패러다임은 격리 샌드박스와 정책 게이트, 감사 로그로 같은 위험을 통제합니다.*
@@ -148,4 +155,14 @@ setup은 지원 에이전트를 고르게 하고, 제안 변경을 검토한 뒤
 
 에이전트의 역공학 능력이 '설치하면 되는' 단계에 왔습니다. 대상은 자신이 소유하거나 검사 권한이 있는 소프트웨어로 한정하고 README의 예시처럼 한 줄로 시작해 볼 가치가 있습니다. 에이전트 실행 인프라를 만드는 입장에서 가져갈 것은 세 가지입니다. 도구 카탈로그 위에 워크플로를 얹는 설계, 증거를 1급 산출물로 만드는 모델, 그리고 로컬 실행이 안전이 아니라는 경고. 역공학을 에이전트에게 시킬 때, 그것을 담는 환경이 개발자 기계가 아니라 격리 실행 환경이어야 한다는 것이 이 도구가 스스로 증명한 교훈입니다.
 
-*자료 위치: 공식 저장소(github.com/morluto/rea), 사이트(rea.tools), npm 패키지(rea-agents v6.5.0). 스타·포크·릴리스 수치는 2026-10-15 GitHub API와 npm 저장소 기록 기준입니다.*
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/rea-reverse-engineer-anything/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 참고 자료
+
+- REA 공식 저장소, [morluto/rea](https://github.com/morluto/rea)
+- REA 공식 사이트, [rea.tools](https://rea.tools)
+- npm 패키지, [rea-agents](https://www.npmjs.com/package/rea-agents)
+
+스타·포크·릴리스 수치는 2026-10-15 GitHub API와 npm 저장소 기록 기준입니다.
