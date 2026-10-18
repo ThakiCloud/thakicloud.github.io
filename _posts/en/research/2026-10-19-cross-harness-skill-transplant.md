@@ -1,0 +1,199 @@
+---
+title: "The Transplant: How Much of a Reusable Agent Skill's Capability Survives a Harness Move, Computed Before the Move"
+seo_title: "The Transplant: Introducing the Cross-Harness Skill Transplant and Capability Retention Measurement Paper (System-Prompt, Tool-Schema, Model-Tier Shift, Self-Hosted H200) - ThakiCloud"
+seo_description: "A skill measured once on its home harness can be redeployed to a harness with a different system prompt, tool schema, or model tier, but no controlled study had quantified how much capability survives the transplant. This analytic paper presents an identity that decomposes the portability gap exactly into a loading component and an execution component, closed-form retention for verbatim and re-wrap transplant policies, fleet-level break-even rules for transplant versus re-tune versus regenerate, and a deterministic 2×2×2 factorial protocol on self-hosted H200."
+excerpt: "The share of task success rate and routing recall a skill loses when it moves harnesses is computed from the skill's own properties before the move. The portability gap decomposes exactly into a loading component and an execution component. A skill fully coupled to the schema shows total silent breakage under verbatim transplant."
+date: 2026-10-19
+tags:
+  - skill-portability
+  - cross-harness-transfer
+  - capability-retention
+  - tool-schema-compatibility
+  - system-prompt-shift
+  - model-tier-transfer
+  - skill-ecosystem
+  - agent-harness
+  - h200-serving
+  - unattended-automation
+categories: [research]
+author_profile: true
+toc: true
+canonical_url: "https://thakicloud.com/tech-blog/en/research/cross-harness-skill-transplant/"
+audiobook: "https://drive.google.com/file/d/1OG2xblGHDh0UQIfPH5DGazrlXo-5Hm8j/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
+---
+
+A skill's surviving capability after a harness move can be computed before the move. If you run an agent fleet on a self-hosted H200, or ship skills across several harnesses, you need this. It gives you the criterion that separates skills worth transplanting from skills to re-tune per harness and skills to regenerate.
+
+ThakiCloud's analytic paper gives that criterion as coefficients and models. First, the nature of the paper. It is not a measured study. It reports no cell values. Every number in this post is a prediction of the analysis model, not a measurement.
+
+The paper is titled The Transplant: Measuring Cross-Harness Portability and Capability Retention of Reusable Agent Skills Under System-Prompt, Tool-Schema, and Model-Tier Shift on Self-Hosted H200. This post walks through the coefficients, the models, and the way to measure before you move.
+
+![Illustration of the core idea of The Transplant: How Much of a Reusable Agent Skill's Capability Survives a Harness Move, Computed Before the Move](/assets/images/cross-harness-skill-transplant-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## In plain terms
+
+Think of a skill as a washing machine you are moving to a new house. In the old home it runs fine. In the new home, three things change. The shape of the outlets (the tool schema). The house rules and the language of the manuals (the system prompt). The skill level of the person who operates it (the model tier).
+
+The question is one: how much of the machine's performance remains after the move?
+
+There are two ways to move it. Plug the old plug straight into the new outlet (verbatim transplant). Or fit a new plug that matches the new outlet (re-wrap transplant). The new plug is a one-to-one swap. Only the surface plug changes. The machine's insides are untouched.
+
+If performance drops, the cause is one of two. The new house's butler cannot find the machine among the manual cards (the loading gap). Or the machine is found, but it does not run at full power under the new outlet, the new rules, and the new operator (the execution gap). The paper splits the total loss into exactly these two. It is an identity, not an approximation.
+
+One case is especially dangerous. The machine is plugged in and humming, but no laundry is actually done. The paper calls this total silent breakage. The record looks normal, yet every call fails the check, and no signal remains to improve the machine.
+
+Three properties let you judge before the move. How tightly the machine is bound to the old outlet shape (schema coupling). How much of the manual assumes the old house rules (prompt anchoring). How many operations must succeed in a row (tier depth). All three are computed from the machine and the test tasks, without moving anything.
+
+Put simply: before the truck leaves, check whether the plug fits, whether the manual was written for the new house, and how many operations run in sequence. That tells you how much performance will remain.
+
+<!-- nlm-visual -->
+![Key-concept summary infographic 1](/assets/images/posts/news/cross-harness-skill-transplant/en/nlm-infographic-1.webp)
+*Infographic generated by NotebookLM from the sources.*
+
+## What we did
+
+Reusable agent skills are already small packages. The 2026 literature treats them as packages of YAML metadata, natural-language instructions, and executable code. Public ecosystems hold more than 138K skill files. The format is standardized enough to be studied by normalization and algebra research, long-term maintenance work, and large-scale reuse analysis.
+
+A harness is broader than a model. It is the triple of a system-prompt regime (Π), a tool-schema convention (Σ), and a model tier (μ). Π carries the role specification, gate-hook idioms, skill-card phrasing, and language. Σ fixes naming, casing, parameter wrapping, and error-message style. μ is the precision and size class of the checkpoint served locally.
+
+Organizations that self-host inference on an H200 run several such triples in parallel. A production gate-hook harness. A minimal English harness for external users. A 4-bit checkpoint to secure capacity. A sub-billion-parameter checkpoint for latency-sensitive microtasks, all served side by side. ThakiCloud's fleet is the same. It loads more than 2,000 skills across harnesses and tiers.
+
+Before it is a research question, this is a deployment problem. A fleet of thousands of skills cannot afford to measure every skill again on every harness it lands in. An organization needs two things. One is per-axis retention measurement, which tells apart skills worth transplanting fleet-wide, skills to re-tune per harness, and skills that only need a cheap re-wrap. The other is skill properties that predict retention before the transplant runs. The paper gives the former as coefficients and the latter as models.
+
+The literature of the past two years approached the harness from other directions. Adaptation methods fix a skill so it works in a new harness, but they do not answer how much of the original capability remained. Training-side robustness makes the model withstand the shift in post-training. The assets are not measured, and it does not apply to frozen checkpoints. Runtime portability moves the code, but the measured capability does not move. Studies that treat the harness as the treatment measure agent behavior under a fixed asset set, but the results do not read as retention of the skill assets. Skill transfer research moves assets across tasks, teams, and model families while holding the harness fixed.
+
+In that map, one cell was empty. It is the cell that moves a fixed skill set across harnesses, isolates the three axes, and measures retention. This paper fills it. It is the first controlled factorial study of asset-level cross-harness skill transplant, extending software portability analysis into the world of LLM skills.
+
+The asset is a pair: a manifest (SKILL.md) and a body. The manifest holds the front matter, the trigger description, and the tool-contract text. The body holds the instructions and the scripts. Two transplant policies exist. Verbatim sends the asset as-is, with surface tokens such as tool names and parameter keys left in the source convention. Re-wrap applies a one-to-one rename map only to the convention-dependent tokens in the manifest and body. Non-surface "card" text is kept as-is.
+
+Measurement is three metrics over a fixed task suite. Each task has a golden skill and a golden tool-call sequence. A deterministic router r_h renders each manifest under the target harness and returns a ranked list. The loading metric ℓ_h(i) reports whether the golden skill enters the top k. A BFCL-style AST grader g judges the call sequence on exact tool names, presence of required arguments, types, and match against golden values. Lists are compared as sets.
+
+S is the task success rate. L is the routing recall (loading). J is the share of tasks that were loaded and executed (the conjunction). The per-axis retention R of each metric lies in (0, 1]. The transplant gap G is 1 - R. Transplant is defined only for skills that work at home (S_h* > 0). Skills that fail at home are excluded from the retention accounting. Their prevalence is a separate empirical question.
+
+Verification is a frozen 2×2×2 factorial protocol. Every axis level is deterministic. Every grader and score is frozen, so any implementer reproduces the same cell. The substrate is a single self-hosted H200 instance on a paged-KV engine (vLLM family). All eight transplant cells are served there. The fixed-prefix cost of re-sending the manifest every turn is held structurally constant on the P and Σ axes. Only the T axis changes the serving checkpoint. The per-token price is declared up front for cost accounting.
+
+Each axis has two levels. The home of the P axis is the production gate-hook skill-card convention: a prompt with scoring-plus-recommendation idioms in the deployment language. The transplant level uses a minimal generic English system prompt. The home of the Σ axis has run_snake names, parameters wrapping, and snake_case keys. The transplant level has execute{Pascal} names, params wrapping, and camelCase keys.
+
+The home of the T axis is an approximately 27B low-precision (NVFP4) checkpoint on self-hosted H200. The transplant level contrasts it with a local checkpoint of under 1 billion parameters. Card text is held identical across the two Σ levels. The routing corpus is re-rendered schema-first in a fixed language, so language variation is not confounded with the schema axis.
+
+The skill set is 10 golden skills drawn from the production index, plus 40 same-family distractors with real descriptions. Distractor competition is part of the transplant, not noise. Ten deterministic task prompts per golden family are fixed in the deployment language. Grading is frozen on sra_bench and BFCL-style AST grading. The judgment items are exact tool names, presence of required arguments, type checks, match against golden values, and set comparison for lists.
+
+Grader integrity is part of the protocol too. State-integrity invariants of the judgment pipeline guard every cell. Canary tasks with golden sequences must pass before any cell is scored. Together they keep the transplant gap from becoming an artifact of a broken oracle.
+
+The routing score is a frozen deterministic IDF-weighted score with synonym expansion. It is extracted programmatically from the router source and embedded verbatim, so transcription error is excluded. Each cell records recall@5, recall@5-gated (fixed gate score), and top-1 over a fixed query set. The statistics keep per-cell independent state. If a cell breaks, only that cell degrades, and the report says so.
+
+Retention comparisons are paired within skill, and the skill is the unit of randomization. Success rates and recalls carry exact binomial (Clopper-Pearson) intervals. The per-skill log-retention additivity residual Δ_resid(a) is the protocol's built-in leakage meter. It quantifies stage-separation leakage per axis pair.
+
+The model gives four testable hypotheses with cell comparisons. H1: the schema axis is visible to the grader and concentrates on coupling. Verbatim retention is 1 - κ_T, re-wrap recovers most of it, and fully coupled skills collapse under verbatim transplant. H2: routing is a co-binding constraint; on the schema axis, most cells have loading retention below execution retention, because re-rendering and distractor competition hit loading before execution. H3: tier loss amplifies with depth, and the gate amounts to only partial insurance. H4: the three properties predict portability, and the triage's composite prediction ranks the transplant decisions. At pilot scale this is reported with Spearman coefficients and labeled exploratory.
+
+## What came out
+
+### The gap decomposes exactly into two
+
+The diagnostic core of the coefficients is the gate-composition identity. Under a deterministic router, the conjunction metric J is the product of loading L and the conditional success rate over loaded tasks. Written in retention, conjunction retention is the product of loading retention and execution retention.
+
+On the log scale it goes one step further. The conjunction transplant gap decomposes exactly into the sum of the loading gap and the execution gap. It is an identity, not an approximation. A gap is either a loading gap or an execution gap, and the two do not mix. The former is the router no longer finding the skill under the new convention. The latter is a model, grader, or surface mismatch.
+
+The binding axis is the most negative term, and it is read directly off the metrics. Put simply, when the machine underperforms in the new home, you can tell at once whether the butler cannot find it or it will not run.
+
+![Gate-composition decomposition of the portability gap](/assets/images/posts/research/cross-harness-skill-transplant/fig-gate-decomposition.webp)
+*A conceptual diagram decomposing the portability gap of each transplant axis exactly into a loading component (routing-recall loss) and an execution component (conditional-success-rate loss). The binding axis is read directly off the metrics. This is an example from the analysis model, not a measurement.*
+
+Three properties let you compute retention before transplanting. Schema coupling κ_T is the share of golden tasks with at least one required call that is convention-dependent. It counts the tasks that contain a call whose tool name or required parameter key changes under the rename map.
+
+Prompt anchoring α measures the share of body segments that presuppose the home-prompt conventions: gate-hook idioms, scoring and recommendation phrasing, deployment language. Tier depth d̄ is the average number of sequential required tool calls per golden task. All three are computed from the asset and the golden suite alone, with no transplant run required.
+
+The lineage continues ThakiCloud's earlier study. That study measured more than 1,600 skills in the production harness, and even oracle decomposition stopped at 63.6 percent step coverage. The router's vocabulary bridge was diagnosed as a co-binding constraint. This paper asks how much of that residual routing recall remains after the manifest is re-rendered into the new schema convention and prompt regime.
+
+### The schema axis is closed in closed form
+
+The model starts from a stage-separation condition. Routing reads only the manifest rendered under (Π, Σ). Execution reads only the body, the model tier, and the grader. The condition holds by construction of the protocol. The router cannot see the body, and the grader cannot see inside the router. This is exactly the property that makes per-axis attribution valid.
+
+The schema axis is closed by a theorem. When the new schema differs from the home convention only by a one-to-one surface rename, the execution retention of a verbatim transplant is R^S = 1 - κ_T. Calls not bound to the convention pass through unchanged, by model invariance. Bound calls all fail the name and argument checks.
+
+A fully coupled skill (κ_T = 1) shows total silent breakage. The transcript looks plausible, but the convention-dependent calls fail the AST check, so no signal is left for reward-based skill evolution.
+
+The retention of a re-wrap transplant is 1 - ε_ρ. ε_ρ is the interface-alignment error: the probability that the model mis-reproduces an interface that was renamed but keeps the same meaning. It grows with the rename distance (casing, keys, wrapping) and with κ_T. The routing side shifts too.
+
+Manifest re-rendering lowers loading retention to 1 - δ_ρ through the convention tokens embedded in the description. Under a frozen IDF-style score and schema-first re-rendering, δ_ρ becomes a measurable constant per cell.
+
+The grader's role is written into this theorem. A lenient semantic grader cannot distinguish the renames and erases the measurable schema gap. AST grading is structurally surface-sensitive, so it is essential to attributing the schema axis.
+
+![Predicted retention under schema shift: verbatim vs re-wrap transplant](/assets/images/posts/research/cross-harness-skill-transplant/fig-schema-retention.webp)
+*Predicted retention of verbatim and re-wrap transplants as a skill's surface schema coupling grows. verbatim falls monotonically from coupling 1 to 0 (total silent breakage). re-wrap keeps high retention with only a small rise in interface-alignment error. The y-axis is qualitative, and this is a prediction of the analysis model, not a measurement.*
+
+### The tier axis is amplified by depth
+
+The tier axis is closed by depth amplification and the verification boundary. If per-call accuracy drops from p* at the home tier to p at the transplant tier, a task that needs d sequential required calls succeeds with p^d. Retention is the expectation of (p/p*)^d over the task distribution, and by Jensen's inequality it is at least (p/p*)^d̄.
+
+Retention therefore falls as the average depth d̄ rises. Per-call scores that look flat do not mean multi-turn damage is small. They mean it is masked.
+
+Put simply, a small per-step failure probability compounds over every sequential step, so deeper tasks lose more.
+
+Attaching a free deterministic verifier caps the upside. Per-call success rises only up to the dividend Δ = q·p_d/(1 - p_d), and even that is capped by δ(1 - p). The silent-wrong floor 1 - p_s/(1 - p_d) cannot be crossed by any retry budget.
+
+The weaker the tier, the smaller p_d is, so the insurance is smallest exactly where the gap is largest.
+
+The crossover p_d*(q) = 1 - 1/(q(3 - 2q)) decides per cell whether low-tier retries are cheaper or a tier upgrade is cheaper. This formula imports into the transplant setting what ThakiCloud's earlier work (Validator's Dividend) priced under a free deterministic verifier.
+
+The prompt axis is closed by anchoring. Execution retention is at least 1 - α·η(μ). η(μ) is the per-anchored-segment performance drop for tier μ in a foreign regime. Stronger models re-adapt better to unfamiliar conventions, so prompt loss concentrates in high-α skills and gets worse at lower tiers.
+
+Where anchored segments and depth-exposed calls co-occur, the log retention of the P×T combined cell becomes super-additive. The combined cell is worse than the sum of the two single-axis cells. The three axes are not symmetric in the conjunction metric.
+
+A pure schema shock acts through loading retention and the verbatim branch's execution retention. A pure tier shock acts through conditional success. A pure prompt shock acts through both. Each single-axis cell leaves a distinctive signature in the (R^L, R^S̃) plane. That is what lets you read the 2×2×2 factorial design as a measuring instrument rather than a stress test.
+
+### A budget that separates transplant, re-tune, and regenerate
+
+The fleet-level bottom line is closed by a budget equation. V_f is the per-harness value of skill family f, namely task volume times utility per task. C_t is the one-time transplant cost, covering re-wrapping, re-rendering, and re-grading. C_r is the per-harness re-tuning cost, and C_g is the cost of regenerating the family on the target harness.
+
+Transplanting to a second harness is worthwhile only when the retained value pays off the transplant cost: R^J·V_f - C_t ≥ 0. Transplant beats regeneration when R^J ≥ 1 - (C_g - C_t)/V_f. Both thresholds can be computed before running the transplant.
+
+Put simply, weigh the moving cost against the expected value in the new home, and you know before the move whether to move, to fix up, or to buy new.
+
+Composing the schema theorem, the tier theorem, and the prompt proposition yields a closed-form triage for the optimal transplant policy φ*. Surface-agnostic families with κ_T ≈ 0 get a verbatim transplant. When κ_T is large, α is low, and d̄ sits inside the tier budget, re-wrap is taken once 1 - ε_ρ clears the break-even threshold. If α·η(μ) or the depth-amplified tier loss blocks the threshold, the family is re-tuned per harness. If no policy clears the threshold, regeneration is the decision. The triage points each skill family to one of four layers, and the coefficients read that layer before transplanting.
+
+If the fleet keeps producing n_f new families per cycle, that effort compounds at fleet scale only in the portable layer. The indicator 1[R^J > θ*] in the fleet value equation is that switch. Effort spent producing κ_T ≈ 1 families toward a target harness with a different schema must be duplicated per harness, and the coefficients read that fact ex ante.
+
+The cost side gets priced too. A re-rendered manifest changes the fixed prefix, and the per-turn retransmitted tokens priced by the prefix-economics model (Manifest Order) must be added to C_t. It is a term invisible to the capability coefficients alone.
+
+## What to change
+
+First, triage with coefficients before the transplant. Measuring schema coupling, prompt anchoring, and tier depth tells you which families to transplant fleet-wide, which to re-tune per harness, and which to regenerate. That judgment moves from intuition to a budget equation. A transplant that breaks loading forces you to abandon the skill, no matter what execution retains.
+
+Second, treat manifest re-rendering as a cost, not a free conversion. It is a cost of the routing asset. It changes the fixed prefix and raises the per-turn retransmitted tokens.
+
+Third, price the tier insurance. A free deterministic verifier lifts success only up to the dividend Δ, and the silent-wrong floor cannot be crossed by retries. Use the crossover p_d*(q) to pick the cheaper of low-tier retries and a tier upgrade, per cell. A lower tier is a choice of latency.
+
+Fourth, aim continuous skill-production effort at the portable layer. Effort that produces fully schema-coupled families for a different-schema harness must be duplicated per harness, and the coefficients read that ex ante.
+
+Portable and interoperable skill assets lower the deployment cost of LLM workflow automation across organizations and model providers. The field is converging on packaged skill artifacts. A common coefficient for "what percentage remains after a move" moves that criterion from someone's internal tool to a measurement of an open cross-harness skill standard. This paper is a concrete first step: it puts down the coefficient the standard will need first.
+
+<!-- nlm-visual -->
+![Key-concept summary infographic 2](/assets/images/posts/news/cross-harness-skill-transplant/en/nlm-infographic-2.webp)
+*Infographic generated by NotebookLM from the sources.*
+
+## What not to trust
+
+Every claim in the paper is analytic. The protocol is the measuring instrument, and cell estimates only appear when the protocol is run. The external numbers cited in the body belong to the cited studies. The two figures in this post are also qualitative shapes of the analysis model.
+
+Stage separation is an assumption, and leakage is measured by the residual. If manifest content leaks into execution, the exactness of the gate-composition identity breaks. The contract text the model reads at call time is one such case. Per-axis attribution is clean only up to the additivity residual Δ_resid.
+
+The pilot scale is 10 golden skills, so H4 stays at hypothesis generation. A larger held-out family pool is needed before the threshold θ* goes into production triage.
+
+The tier axis has two levels. Within one engine family, it is only the contrast between an approximately 27B low-precision (NVFP4) checkpoint and an under-1-billion-parameter checkpoint.
+
+The quantization-sweep literature (8-bit to 2-bit) is brought in as a prior, not re-swept. Cloud API harnesses and other engine families are out of scope.
+
+Grader sensitivity is two-sided. AST grading surfaces the verbatim regime but also penalizes drift that a semantic grader would forgive. Retention is a property of the (asset, grader) pair, and comparisons across graders require re-attribution.
+
+Skills change over time through maintenance, self-evolution, and scope expansion. Transplant is a snapshot of moving day. Retention measured on today's asset is not guaranteed to hold through next month's revision.
+
+---
+
+The paper text and accompanying materials are available here: [The Transplant dataset](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-10-19-cross-harness-skill-transplant)
+
+*Every number in this post is a prediction of the analysis model, not a measurement. The two figures are qualitative shapes of the analysis model.*
+
