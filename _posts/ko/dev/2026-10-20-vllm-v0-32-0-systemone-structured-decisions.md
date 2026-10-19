@@ -14,7 +14,7 @@ date: 2026-10-20
 lang: ko
 categories:
   - dev
-canonical_url: ""
+canonical_url: "https://thakicloud.com/tech-blog/ko/dev/vllm-v0-32-0-systemone-structured-decisions/"
 ---
 
 ![여러 데이터 흐름이 하나의 결정 노드로 수렴하는 추상 개념](/assets/images/vllm-v0-32-0-hero.webp)
@@ -188,7 +188,9 @@ ERROR ... EngineCore failed to start.
 
 **엔드포인트 코드 검증(설치된 패키지).** 서빙이 불가능한 환경에서도, 0.32.0 패키지를 직접 열어 릴리스 노트의 기술들을 확인했습니다. `vllm/entrypoints/generate/structured_decisions/` 모듈에 `api_router.py`(37번째 줄에 `"/v1/systemone"` 루트), `question_types.py`·`strategies.py`(choice/noul/score), `protocol.py`, `serving.py`(`ServingStructuredDecisions`, `create_decision`)가 들어 있고, `protocol.py`에는 읽기가 출력 토큰 1개로 제한되는 `max_output_tokens=1`이, 응답 진단에 `argmax_is_label`이 코드로 존재합니다. "질문 하나가 첫 토큰 읽기 하나"라는 문서의 설명이 코드에서 확인된 것입니다. `response_template` 파서는 `vllm/parser/` 아래(`response_template.py`, `parser_manager.py` 등)에 존재합니다.
 
-정리하면, `/v1/systemone`의 동작(HTTP 응답, 확률, 400/501)은 이번 로컬 실험에서 실측하지 못했습니다. 로컬에서 검증한 것은 (a) 설치된 패키지 코드에 의한 릴리스 구성, (b) 실행 경로의 한계 전수지도(macOS 바퀴 부재, aarch64 바퀴의 CPU 확장 부재, GPU 없는 호스트의 CLI 크래시), (c) 공식 문서의 API 계약입니다. 엔드포인트의 실측은 GPU 환경에서의 다음 단계로 남깁니다.
+한 단계 더 나아가 공식 문서의 예시 수치를 코드와 대조했습니다. v0.32.0 태그의 `question_types.py`를 직접 실행하고, 문서 예시가 스스로 인쇄하는 확률값으로 세 답안을 다시 계산했습니다. team(choice)의 confidence 0.90은 코드 산출 0.9021과 일치합니다. urgent(noul)의 confidence는 문서에 0.95로 적혀 있고 코드 산출은 0.9604입니다. tone(score)의 기대 레벨은 문서에 0.6으로 적혀 있는데, 코드 산출은 문서가 스스로 인쇄한 확률 분포(0.7/0.2/0.1)에서 0.4가 됩니다. `score`는 레벨 인덱스의 확률가중 평균으로 정의되므로 0×0.7+1×0.2+2×0.1=0.4가 맞는 값입니다. 문서 예시값이 실측 없이 지나간 작은 불일치이며, 실무 정본은 배포되는 코드 쪽입니다.
+
+정리하면, `/v1/systemone`의 동작(HTTP 응답, 확률, 400/501)은 이번 로컬 실험에서 실측하지 못했습니다. 로컬에서 검증한 것은 (a) 설치된 패키지 코드에 의한 릴리스 구성, (b) 실행 경로의 한계 전수지도(macOS 바퀴 부재, aarch64 바퀴의 CPU 확장 부재, GPU 없는 호스트의 CLI 크래시), (c) 공식 문서의 API 계약, (d) 문서 예시값과 코드의 대조(예시의 tone 답 `score` 필드가 코드 산출과 불일치)입니다. 엔드포인트의 실측은 GPU 환경에서의 다음 단계로 남깁니다.
 
 ## ThakiCloud 제품 적용 시사점
 

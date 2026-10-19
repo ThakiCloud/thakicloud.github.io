@@ -14,7 +14,7 @@ date: 2026-10-20
 lang: en
 categories:
   - dev
-canonical_url: ""
+canonical_url: "https://thakicloud.com/tech-blog/en/dev/vllm-v0-32-0-systemone-structured-decisions/"
 ---
 
 ![Abstract concept of multiple data flows converging into a single decision node](/assets/images/vllm-v0-32-0-hero.webp)
@@ -188,7 +188,9 @@ Conclusively, the distributed aarch64 wheel is a build with no CPU operator exte
 
 **Endpoint code verification (installed package).** Even in an environment where serving is impossible, I opened the 0.32.0 package directly to confirm the release note's claims. The `vllm/entrypoints/generate/structured_decisions/` module contains `api_router.py` (the `"/v1/systemone"` route on line 37), `question_types.py` and `strategies.py` (choice/noul/score), `protocol.py`, and `serving.py` (`ServingStructuredDecisions`, `create_decision`), and `protocol.py` has, in code, `max_output_tokens=1` limiting the read to one output token and `argmax_is_label` for response diagnostics. The documentation's claim that "one question becomes one first-token read" is confirmed in code. The `response_template` parser exists under `vllm/parser/` (`response_template.py`, `parser_manager.py`, etc.).
 
-To sum up, the behavior of `/v1/systemone` (HTTP response, probabilities, 400/501) was not measured in this local experiment. What was verified locally is (a) the release composition by the installed package code, (b) a complete map of the run route's limits (absence of the macOS wheel, absence of the CPU extension in the aarch64 wheel, the CLI crash on a host without a GPU), and (c) the official documentation's API contract. Measuring the endpoint remains as the next step in a GPU environment.
+One step further, I cross-checked the official documentation's example numbers against the code. Running the v0.32.0 tag's `question_types.py` directly and recomputing the three answers with the probabilities the example prints itself: the team (choice) confidence of 0.90 matches the code's 0.9021, but the urgent (noul) confidence is 0.95 in the docs while the code computes 0.9604, and the tone (score) expected level is 0.6 in the docs while the code computes 0.4 from the probability distribution (0.7/0.2/0.1) the docs print. Since `score` is defined as the probability-weighted mean of the level indices, 0×0.7+1×0.2+2×0.1=0.4 is the correct value. These are small mismatches the docs' example numbers made without measurement, and in practice the shipped code is the source of truth.
+
+The behavior of `/v1/systemone` (HTTP response, probabilities, 400/501) was not measured in this local experiment. What was verified locally is (a) the release composition by the installed package code, (b) a complete map of the run route's limits (absence of the macOS wheel, absence of the CPU extension in the aarch64 wheel, the CLI crash on a host without a GPU), (c) the official documentation's API contract, and (d) the docs' example numbers against the code (the example's tone answer `score` field does not match the code's computation). Measuring the endpoint remains as the next step in a GPU environment.
 
 ## Implications for ThakiCloud products
 
