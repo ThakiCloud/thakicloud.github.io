@@ -37,7 +37,7 @@ ThakiCloud published four Hugging Face repositories for this setup. Below we cov
 
 ## Overview: what the four repositories do
 
-[EmbeddingGemma 2](/en/owm/embeddinggemma-2-multimodal-embedding/) maps text, images, audio and video into one 768-dimensional space. Text-to-image search needs two things: an **index model** that turns images into vectors, and a **query model** that turns search text into vectors in the same space. The four repositories split along those two roles.
+[EmbeddingGemma 2](/tech-blog/en/owm/embeddinggemma-2-multimodal-embedding/) maps text, images, audio and video into one 768-dimensional space. Text-to-image search needs two things: an **index model** that turns images into vectors, and a **query model** that turns search text into vectors in the same space. The four repositories split along those two roles.
 
 | Repository | Role | Size | Use it when |
 |---|---|---|---|
@@ -132,7 +132,7 @@ We also ran an install check: downloading the published files in a clean environ
 
 ## What this means for ThakiCloud
 
-This split matches how the ThakiCloud AI platform serves search on-premises and at the edge. Index building runs once as a batch job on a GPU server, and query encoding runs on CPU without a GPU. No GPU has to stay resident for queries, which lowers serving cost, and a 17.6 MB encoder is easy to carry into air-gapped environments. Serving the 4-bit EmbeddingGemma 2 on standard vLLM is covered in [an earlier post](/en/llmops/eg2q-vllm-plugin-serving/).
+This split matches how the ThakiCloud AI platform serves search on-premises and at the edge. Index building runs once as a batch job on a GPU server, and query encoding runs on CPU without a GPU. No GPU has to stay resident for queries, which lowers serving cost, and a 17.6 MB encoder is easy to carry into air-gapped environments. Serving the 4-bit EmbeddingGemma 2 on standard vLLM is covered in [an earlier post](/tech-blog/en/llmops/eg2q-vllm-plugin-serving/).
 
 We trained these models on our in-house GPU queue, fixed the evaluation rules before looking at scores, and opened sealed sets only once. That is also why the "not claimed" sections of the cards are long: a customer re-measuring on their own data should reach the same conclusions.
 
