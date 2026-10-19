@@ -93,3 +93,10 @@ Search와 Fetch의 성공 청구 구조는 유리해 보이지만, 검색 결과
 ## 정리
 
 DeepSeek가 Search와 Fetch를 독립 단품으로 내놓은 것은 검색이 비싸서가 아니라, 에이전트가 웹을 쓰는 두 단계가 비용으로 분리됐기 때문에 중요합니다. 1,000회당 각 0.75달러, 성공만 청구, 11월 1일 시작이라는 세 수치는 루프 비용 테이블에 새 두 줄을 씁니다. 이제 에이전트를 짤 때 물어야 할 것이 하나 늘었습니다. 이 루프는 검색과 fetch를 몇 번 부르는가. 모델 토큰만 세던 비용 계산은, 웹 접지가 단품이 된 순간부터 더 정확하지 않습니다. Paxis처럼 도구 호출을 일급 시민으로 다루는 플랫폼이 이 두 줄을 장부에 합칠 때, 에이전트의 진짜 단가가 보입니다.
+
+## 참고 자료
+
+- DeepSeek 공식 문서, [Search & Fetch 가이드 (성공 요청 1,000회당 $0.75, 2026-11-01 00:00 베이징 시간부터 청구)](https://api-docs.deepseek.com/guides/search)
+- DeepSeek 공식 문서, [Search API 참고](https://api-docs.deepseek.com/api/search)
+- DeepSeek 공식 문서, [Fetch API 참고](https://api-docs.deepseek.com/api/fetch)
+- DeepSeek 공식 발표, [DeepSeek-V4.1-Flash-1017 릴리스 (2026-10-17)](https://api-docs.deepseek.com/news/news261017)

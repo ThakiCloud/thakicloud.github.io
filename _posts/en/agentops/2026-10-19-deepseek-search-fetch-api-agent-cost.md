@@ -93,3 +93,10 @@ There is also no official statement that this API is instantly available in ever
 ## Summary
 
 DeepSeek shipping Search and Fetch as standalone products matters not because search is expensive, but because the two steps an agent takes to reach the web are now separated into cost. The three figures, $0.75 per 1,000 each, bill-on-success only, and a November 1 start, write two new lines on the loop cost table. There is now one more question to ask when you build an agent. How many search and fetch calls does this loop make. The cost calculation that counted only model tokens stopped being accurate the moment web grounding became a product. When a platform that treats tool calls as first-class citizens, like Paxis, adds these two lines to the ledger, the agent's real unit price becomes visible.
+
+## References
+
+- DeepSeek official docs, [Search & Fetch guide ($0.75 per 1,000 successful requests; billing starts 2026-11-01 00:00 Beijing time)](https://api-docs.deepseek.com/guides/search)
+- DeepSeek official docs, [Search API reference](https://api-docs.deepseek.com/api/search)
+- DeepSeek official docs, [Fetch API reference](https://api-docs.deepseek.com/api/fetch)
+- DeepSeek official release, [DeepSeek-V4.1-Flash-1017 (2026-10-17)](https://api-docs.deepseek.com/news/news261017)

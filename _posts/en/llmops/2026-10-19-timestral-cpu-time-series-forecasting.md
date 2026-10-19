@@ -94,3 +94,7 @@ Timestral is also a time-series-specific model. It does not do natural-language 
 ## Summary
 
 Timestral matters not because one more model shipped, but because the serving unit for time-series forecasting has moved from GPU to CPU, loosening the constraints on where and how often you call a forecast. A data scientist can pick the 123M or the 28M to hold most of the 209M accuracy with lower latency. An ML engineer gains a serving unit that schedules without a GPU. From the agent-platform side, the unit price of a forecast call drops, and forecasting inside the loop becomes routine. From today, when you plan time-series forecasting, the first thing to ask is not the GPU, but the CPU core count.
+
+## References
+
+- Mistral official, [Timestral: Mistral's time-series foundation models](https://mistral.ai/news/timestral/)
