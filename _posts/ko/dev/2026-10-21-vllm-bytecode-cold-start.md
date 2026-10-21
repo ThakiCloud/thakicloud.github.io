@@ -109,3 +109,11 @@ ThakiCloud ai-platform은 vLLM 기반 서버리스 엔드포인트(Metis)로 고
 ## 정리
 
 `UV_COMPILE_BYTECODE=1`은 빌드 시점에 Python 바이트코드를 만들어 이미지에 담아, 런처의 소스→바이트코드 컴파일을 통째로 지우는 한 줄입니다. 효과는 H100 스탠트당 약 18초, Qwen3-8B·32B 중위 17.6~17.8초이며, `torch.compile`/GPU 커널 캐시와 다른 경로라 기존 최적화와 중복 없이 쌓입니다. 다음 행동을 하나만 골라잡자면, 자사 서빙 이미지에 이 한 줄을 넣고 스타트업을 재측정하는 것입니다. 모델 로딩이 스타트업을 지배하는 워크로드라면 이 효과는 작을 테니, 스타트업을 구간별로 쪼개서 어디가 순수 Python import인지 먼저 확인하는 것이 우선입니다.
+
+## 출처
+
+- vLLM Blog (Nils Matteson), [Reducing vLLM startup time with one uv flag (2026-09-22)](https://vllm.ai/blog/2026-09-22-python-bytecode-startup)
+- vLLM Project, [PR #55422: Compile Python bytecode at image build time](https://github.com/vllm-project/vllm/pull/55422)
+- uv (Astral), [Environment variables, UV_COMPILE_BYTECODE (added in 0.3.3)](https://docs.astral.sh/uv/reference/environment/)
+- Python Software Foundation, [Tutorial 6.1.3, "Compiled" Python files (bytecode cache)](https://docs.python.org/3/tutorial/modules.html)
+- vLLM Project, [v0.32.0 release (2026-10-18)](https://github.com/vllm-project/vllm/releases/tag/v0.32.0)

@@ -109,3 +109,11 @@ The same logic holds for on-prem and self-hosting. The more often node pools tur
 ## Takeaway
 
 `UV_COMPILE_BYTECODE=1` is the one line that, at build time, makes the Python bytecode and bundles it into the image, so the launcher skips the source-to-bytecode compile entirely. The effect is about 18 seconds per startup on H100 and a 17.6-17.8s median for Qwen3-8B/32B, and because it is on a different path than the `torch.compile`/GPU kernel cache, it stacks without overlap. If you pick only one next action, add the line to your serving image and re-measure startup. If model loading dominates your workload's startup, the effect will be small, so first break startup into stages and confirm which part is pure Python import.
+
+## Sources
+
+- [Reducing vLLM startup time with one uv flag (vLLM Blog, Nils Matteson, 2026-09-22)](https://vllm.ai/blog/2026-09-22-python-bytecode-startup)
+- [PR #55422: Compile Python bytecode at image build time (vLLM, GitHub)](https://github.com/vllm-project/vllm/pull/55422)
+- [Environment variables, UV_COMPILE_BYTECODE, added in 0.3.3 (uv Docs, Astral)](https://docs.astral.sh/uv/reference/environment/)
+- [Tutorial 6.1.3, "Compiled" Python files, bytecode cache (Python Docs)](https://docs.python.org/3/tutorial/modules.html)
+- [v0.32.0 release, 2026-10-18 (vLLM, GitHub)](https://github.com/vllm-project/vllm/releases/tag/v0.32.0)
