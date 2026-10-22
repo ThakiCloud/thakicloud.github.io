@@ -30,6 +30,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/news/php2shell-gpt56-sol-sec
 
 PHP 스택을 운영 중인 보안·운영 엔지니어, 그리고 "LLM의 보안 역량이 이제 어디까지 왔나"를 판단의 근거로 삼아야 하는 플랫폼 엔지니어를 위해 씁니다. 한 줄로 결론을 앞당기면, LLM은 이제 "알고 있는 버그 패턴을 찾아주는 도구"가 아니라 "사람이 22년 동안 놓아둔 기습 취약점을 실제로 팠다"는 첫 실증 사례를 냈고, 그 대상이 바로 인터넷의 약 70%를 지탱하는 PHP였습니다. 운영자라면 패치 여부를 오늘 확인해야 하고, 플랫폼 엔지니어라면 "AI로 코드를 읽는 행위"를 공격과 방어 양쪽에 놓고 다시 계산해야 합니다.
 
+![php2shell-gpt56-sol-security 슬라이드 1](/assets/images/php2shell-gpt56-sol-security-slide-01.webp)
+
 ## 쉽게 말하면
 
 2004년에 지은 오래된 아파트의 배관이라고 상상해 보세요. 주 물줄기는 22년째 매일 수백만 번 열리고 닫히며, 그 때문에 누구보다 잘 정비되어 있습니다. 반면 화재 때에나 열릴 비상수밸브는 한 번도 열려 본 적 없어 내부가 녹슨 채로 방치되어 왔습니다. 사람이 배관을 점검할 때는 주 물줄기를 봅니다. LLM은 다릅니다. "이 밸브는 22년째 한 번도 열려 본 적 없다"는 사실 자체가 의심의 대상이 되어, 비상경로를 한 개인 한 개인 전부 열어 봅니다. PHP2Shell은 그렇게 열린 비상수밸브, 즉 longjmp로 돌아가는 오류 경로에서 터진 것입니다.
@@ -41,6 +43,8 @@ PHP 스택을 운영 중인 보안·운영 엔지니어, 그리고 "LLM의 보�
 사건의 핵심은 패치 자체보다 발견의 경로입니다. 보안 기업 Calif가 OpenAI의 Patch the Planet 이니셔티브에 참여해 GPT-5.6 Sol로 이 취약점을 초기 발견했고, exploit 개발은 공개되지 않은 다른 OpenAI 모델로 진행됐습니다. 그와 별개로 Google의 보안 자회사 Wiz도 Gemini 4 Argon과 Wiz Atlas로 같은 취약점을 독립적으로 찾아냈습니다. 두 조직, 두 모델이 같은 구멍을 뚫은 셈입니다. 이 수렴 자체가 이번 사건의 가장 주목할 만한 부분입니다.
 
 발견된 구멍의 나이는 22년입니다. PHP 5.x가 2004년에 나온 이래 줄곧 존재해 왔습니다. 영향 범위는 "5 이후 전부"라고 보면 되고, EOL인 5.4부터 8.1까지는 패치가 없으므로 마이그레이션으로 넘어가야 합니다. 인터넷의 약 70%가 PHP로 동작한다는 통계를 감안하면, WordPress와 Drupal을 쓰는 조직부터 영향권에 들어 있습니다.
+
+![php2shell-gpt56-sol-security 슬라이드 2](/assets/images/php2shell-gpt56-sol-security-slide-02.webp)
 
 ## PHP2Shell은 무엇인가
 
@@ -70,6 +74,8 @@ OpenAI가 2026년 6월 22일에 내놓은 Patch the Planet은 Trail of Bits와 �
 
 GPT-5.6은 7월 9일에 GA 된 계열로, Sol(플래그십)·Terra(균형형)·Luna(고속 저가형) 세 단계로 나뉩니다. Greg Brockman이 "PHP가 내 첫 프로그래밍 언어였다"고 한 것은 우연이 아닙니다. OpenAI가 이 사건의 얼굴로 Sol을 내세운 데에는, "우리 플래그십이 할 수 있다"는 메시지가 들어 있습니다.
 
+![php2shell-gpt56-sol-security 슬라이드 3](/assets/images/php2shell-gpt56-sol-security-slide-03.webp)
+
 ## 악용 상황과 패치
 
 공개 시점 기준, OpenAI는 "exploit in the wild 보고가 없다"고 밝혔습니다. 그러나 발표 직후 악용 시도 보도가 나왔습니다. AWS는 공개 패치 4일 전인 10월 17일부터 악용 시도를 관측했다고, Datadog 보안랩 인용으로 전해집니다. watchTowr는 10월 21일에 honeypot 경유 시도를 보고했고, 싱가포르 CSA는 10월 22일에 광범위한 시도와 다수의 PoC 출현까지 전했습니다. CISA KEV 등재는 10월 21~22일 시점에서 확인되지 않았습니다. [미확인]
@@ -90,7 +96,7 @@ NSA의 권고는 더 단호합니다. 패치할 수 없는 환경이면 오프�
 
 ```mermaid
 flowchart TB
-    A[PHP 소스: 5.x(2004) 이후 전 버전] --> B[GPT-5.6 Sol 스캔<br/>Calif × OpenAI Patch the Planet]
+    A["PHP 소스: 5.x(2004) 이후 전 버전"] --> B[GPT-5.6 Sol 스캔<br/>Calif × OpenAI Patch the Planet]
     A --> C[Gemini 4 Argon + Wiz Atlas 스캔<br/>Google Wiz]
     B --> D[longjmp 오류 경로 취약점 확인]
     C --> D
@@ -106,6 +112,8 @@ OpenAI는 이 PHP 구멍을 "tip of the iceberg", 빙산의 일각이라고 스�
 이 말이 중요한 이유는 수치가 아니라 방향입니다. 지금까지 "LLM이 취약점을 찾았다"는 발표는 대개 연구실 조건, 인위적으로 만든 bug, 특정 함수 family 안에서 나온 것이었습니다. PHP2Shell은 다릅니다. 22년간 실전에 나갔던, 수백만 사이트에서 매일 돌고 있는, 사람이 한 번도 안 열던 경로에서 나온 것입니다. "LLM이 코드베이스를 끝까지 읽는 능력"이 이제 공격 무기로 실전 검증됐습니다.
 
 방어 측 관점에서 같은 말은 다른 결을 냅니다. 30개 프로젝트에 그치지 않고, 우리 운영 중인 전체 스택에 LLM을 돌린다면 무엇이 나올까요. "드물게 가는 경로", "한 번도 테스트 안 된 에러 핸들링", "EOL 의존성의 longjmp"이 그 목록입니다.
+
+![php2shell-gpt56-sol-security 슬라이드 4](/assets/images/php2shell-gpt56-sol-security-slide-04.webp)
 
 ## ThakiCloud 제품 적용 시사점
 
@@ -128,6 +136,13 @@ Paxis 렌즈로 보면, 이번 사건은 "LLM 코드 감사" 워크로드의 경
 PHP를 돌린다면, 오늘 `php -v`를 보고, 8.2.35 이상인지, 아니면 EOL 버전인지 확인해야 합니다. EOL이면 마이그레이션 일정을 세웁니다. 패치할 수 없으면 NSA처럼 오프라인을 검토합니다.
 
 플랫폼 엔지니어라면, "LLM이 코드를 끝까지 읽을 수 있다"는 전제로 두 가지 질문을 다시 계산해야 합니다. 우리 스택의 드문 경로는 어디인가, 그리고 그 경로를 LLM으로 스캔하는 워크플로를 Paxis처럼 정책 게이트와 감사 로그를 두어서 돌릴 수 있는가. OpenAI가 빙산의 일각이라고 한 것은, 이제 공격과 방어 양쪽에서 LLM을 쓰는 시대의 시작을 뜻합니다. 22년 숨어 있던 구멍이 LLM에 의해 열렸고, 그 열림의 속도는 앞으로 빨라질 것입니다.
+
+
+
+
+
+
+
 
 ## 출처
 

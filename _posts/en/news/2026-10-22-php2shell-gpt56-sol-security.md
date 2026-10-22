@@ -90,7 +90,7 @@ The check sequence is simple. First, run `php -v` at every entry point and recor
 
 ```mermaid
 flowchart TB
-    A[PHP source: all versions since 5.x (2004)] --> B[GPT-5.6 Sol scan<br/>Calif x OpenAI Patch the Planet]
+    A["PHP source: all versions since 5.x (2004)"] --> B[GPT-5.6 Sol scan<br/>Calif x OpenAI Patch the Planet]
     A --> C[Gemini 4 Argon + Wiz Atlas scan<br/>Google Wiz]
     B --> D[longjmp error-path flaw confirmed]
     C --> D
