@@ -25,7 +25,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/en/owm/soc-ier-4b-open/"
 header:
-  teaser: /assets/images/soc-ier-4b-open-chart-en.png
+  teaser: /assets/images/soc-ier-4b-open-chart-en.webp
 ---
 
 This post is for security operations analysts and the people who run detection systems. The small model we are releasing answers one question. Does the short stretch of records in front of you actually contain evidence of an attack?
@@ -60,7 +60,7 @@ Training took about 14 minutes on one H100 NVL. The recipe follows the one publi
 
 The evaluation set was opened only once, after model selection was finished. It holds 48 independent incident chains and 239 windows. The chains come from an attack family absent from training. Every model was measured with the same prompts, the same parser and the same decoding.
 
-![Sealed benchmark decision macro-F1 comparison](/assets/images/soc-ier-4b-open-chart-en.png)
+![Sealed benchmark decision macro-F1 comparison](/assets/images/soc-ier-4b-open-chart-en.webp)
 *Sealed-benchmark decision macro-F1 with 95% confidence intervals. Values are copied as-is from the model card.*
 
 | Model | Setting | Decision macro-F1 [95% CI] | Evidence recall | Evidence precision | False-SUPPORTED | Incident miss |

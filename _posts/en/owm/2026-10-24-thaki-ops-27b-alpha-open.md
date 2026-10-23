@@ -24,7 +24,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/en/owm/thaki-ops-27b-alpha-open/"
 header:
-  teaser: /assets/images/thaki-ops-27b-alpha-open-chart-en.png
+  teaser: /assets/images/thaki-ops-27b-alpha-open-chart-en.webp
 ---
 
 This post is for people who want to put an AI assistant on server incident investigation. Assistants like this tend to share a few bad habits. They repeat the same status query over and over. They open secrets they had no reason to look at. They name a root cause even when the evidence is missing.
@@ -49,7 +49,7 @@ There is one intended use. It is a read-only diagnosis assistant for Kubernetes,
 
 All numbers come from our in-house HolmesGPT harness on KIND clusters. Each scenario ran 3 times, with English and Korean prompts. Every model used the same harness and serving settings, and only the weights changed. Comparisons are against the base model run in the same harness.
 
-![No-op handling score. English prompts: base 0.636, alpha 0.909. Korean prompts: base 0.818, alpha 0.909.](/assets/images/thaki-ops-27b-alpha-open-chart-en.png)
+![No-op handling score. English prompts: base 0.636, alpha 0.909. Korean prompts: base 0.818, alpha 0.909.](/assets/images/thaki-ops-27b-alpha-open-chart-en.webp)
 *This check asks whether the agent leaves things alone when nothing is wrong. Values are the ones published on the model card.*
 
 The clearest gain is the case where nothing is broken. It is the ability not to swap parts on a car that runs fine. With English prompts the score rose from about 0.64 to 0.91. With Korean prompts it rose from about 0.82 to 0.91.

@@ -26,7 +26,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/en/owm/commerce-model-family-open/"
 header:
-  teaser: /assets/images/commerce-model-family-open-chart-en.png
+  teaser: /assets/images/commerce-model-family-open-chart-en.webp
 ---
 
 This post is for developers and data teams who want to add AI features to an online shop. Shop AI is not one model. Finding products, ordering them, tidying product data, predicting what a shopper does next and reading reviews are each a different model's job.
@@ -69,7 +69,7 @@ The flow has five slots. The search embedding pulls candidates out of tens of th
 
 All eight repositories are grouped in the [Commerce FM collection](https://huggingface.co/collections/ThakiCloud/commerce-fm-korean-shopping-mall-models-6ad32c59e6f5788209ce7770). The baseline in each row is the strongest comparison that card reports. The metric differs from model to model, so do not compare numbers across rows.
 
-![Bar charts comparing seven commerce models with their baselines, one panel per model and metric](/assets/images/commerce-model-family-open-chart-en.png)
+![Bar charts comparing seven commerce models with their baselines, one panel per model and metric](/assets/images/commerce-model-family-open-chart-en.webp)
 *Each panel uses its own metric. Hatched bars are baselines, blue bars are the released models. Values are copied from each model card.*
 
 ## 1. Pulling from the shelf: product search embedding

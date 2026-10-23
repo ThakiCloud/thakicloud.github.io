@@ -23,7 +23,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/en/owm/voice2policy-open/"
 header:
-  teaser: /assets/images/voice2policy-open-chart-en.png
+  teaser: /assets/images/voice2policy-open-chart-en.webp
 ---
 
 This post is for developers who want to put a voice assistant on the phone line of a neighborhood dental clinic or cafe, taking bookings and orders. The first question such a system has to answer after hearing a customer is simple: what kind of command is this? It has to tell a booking from an order, a confirmation of a pending booking from a cancellation, and both from a plain question.
@@ -62,7 +62,7 @@ We also checked that the released files match the original scikit-learn model. O
 
 ## Where the numbers are good and where they are not
 
-![Text router frame accuracy by input, and end-to-end latency of the two paths](/assets/images/voice2policy-open-chart-en.png)
+![Text router frame accuracy by input, and end-to-end latency of the two paths](/assets/images/voice2policy-open-chart-en.webp)
 *The left axis starts at 0.70. All values are taken from the two model cards.*
 
 On 3,081 test sentences from the generator, frame accuracy is 99.8%. On 18,879 transcripts made by reading the same test sentences with TTS voices and transcribing them with ASR, it is 99.7%. Even with transcription errors mixed in, the notepad boxes came out almost unchanged.

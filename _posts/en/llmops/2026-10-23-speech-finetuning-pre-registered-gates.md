@@ -21,7 +21,7 @@ tags:
   - llmops
 categories:
   - llmops
-canonical_url: https://thakicloud.com/tech-blog/en/llmops/speech-finetuning-pre-registered-gates/
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/speech-finetuning-pre-registered-gates/"
 lang: en
 ---
 
@@ -51,9 +51,9 @@ Two things matter in this structure. First, we do not turn a NO-GO into a PASS a
 
 ## The biggest lesson was label notation
 
-Our first Korean ASR candidate was Qwen3-ASR-1.7B fine-tuned for one epoch on the Zeroth read-speech corpus plus domain data. General Korean CER dropped from 3.83% to 2.36%. On 60 silent and low-volume noise clips, the baseline hallucinated a stock filler phrase (the Korean equivalent of "right, right") on all 60, and the candidate did so on none. We confirmed through the same inference path that this was a change in the model itself, not in pre- or post-processing. Latency measured again on the same cluster fell 28%. So far this reads as a success.
+Our first Korean ASR candidate was [Qwen3-ASR-1.7B](https://huggingface.co/Qwen/Qwen3-ASR-1.7B) fine-tuned for one epoch on the Zeroth read-speech corpus plus domain data. General Korean CER dropped from 3.83% to 2.36%. On 60 silent and low-volume noise clips, the baseline hallucinated a stock filler phrase (the Korean equivalent of "right, right") on all 60, and the candidate did so on none. We confirmed through the same inference path that this was a change in the model itself, not in pre- or post-processing. Latency measured on the same cluster fell 28%. So far this reads as a success.
 
-But on the FLEURS read-speech evaluation, CER rose from 5.52% to 7.45% and failed G1. The cause was label notation. Zeroth labels spell numbers out in Hangul and carry no punctuation. The model learned that notation faithfully, and on FLEURS, which uses Arabic numerals and punctuation, character-level errors went up. In the number evaluation too, about half of the errors were notation differences, such as "sixteen thousand won" spelled out in Hangul versus "16000 won" in digits, which write the same words differently.
+But on the [FLEURS](https://huggingface.co/datasets/google/fleurs) read-speech evaluation, CER rose from 5.52% to 7.45% and failed G1. The cause was label notation. Zeroth labels spell numbers out in Hangul and carry no punctuation. The model learned that notation faithfully, and on FLEURS, which uses Arabic numerals and punctuation, character-level errors went up. In the number evaluation too, about half of the errors were notation differences, such as "sixteen thousand won" spelled out in Hangul versus "16000 won" in digits, which write the same words differently.
 
 A 10-minute check before training would have caught this. Put 100 training labels next to 100 evaluation labels and compare the rates of number notation, punctuation, and English tokens, and the gap is obvious. We confirmed it only after two training runs, so we have since put that check into the submission path as code. If the notation distributions of training and evaluation labels differ by more than a set margin and there is no policy file declaring the target notation, the submission is blocked.
 
@@ -82,11 +82,11 @@ Both candidates are NO-GO, but reading the table column by column shows where th
 
 ## Two hours was enough for a brand voice, and thirty minutes was not
 
-On the TTS side, the experiment attached a LoRA to VoxCPM2 to build a single-speaker brand voice. The baseline is zero-shot cloning with the base model given a reference clip of the same speaker, and the candidate is a LoRA trained on that speaker's reading. The harness forces both arms to use the same reference clip and the same 100 sentences.
+On the TTS side, the experiment attached a LoRA to [VoxCPM2](https://huggingface.co/openbmb/VoxCPM2) to build a single-speaker brand voice. The baseline is zero-shot cloning with the base model given a reference clip of the same speaker, and the candidate is a LoRA trained on that speaker's reading. The harness forces both arms to use the same reference clip and the same 100 sentences.
 
 The first candidate, trained on 30 minutes of audio, failed. Speaker cosine similarity was identical at 0.969 for both baseline and candidate. Reference cloning alone had already filled most of the speaker similarity, so the LoRA had nothing left to add. On top of that, the 30-minute LoRA cut content accuracy, lowered naturalness, and produced runaway generation in 12 of 100 sentences, where output never ended and ran to the length cap. The lowest rung of the ladder was not an opponent worth beating.
 
-Two candidates trained on 2 hours each passed. We trained one female and one male standard-Korean professional voice actor with the same recipe: rank 32, alpha 32, learning rate 1e-4, effective batch 16, 2 epochs. Speaker cosine rose from 0.9405 to 0.9464 and from 0.9584 to 0.9673. UTMOS naturalness rose by 0.20 and 0.35, and there were no runaway or silent outputs. The third voice actor failed because speaker cosine dropped by 0.002, a difference that sits inside the noise of a single measurement. We still left the verdict as registered.
+Two candidates trained on 2 hours each passed. We trained one female and one male standard-Korean professional voice actor with the same recipe: rank 32, alpha 32, learning rate 1e-4, effective batch 16, 2 epochs. Speaker cosine rose from 0.9405 to 0.9464 and from 0.9584 to 0.9673. [UTMOS](https://arxiv.org/abs/2204.02152) naturalness rose by 0.20 and 0.35, and there were no runaway or silent outputs. The third voice actor failed because speaker cosine dropped by 0.002, a difference that sits inside the noise of a single measurement. We still left the verdict as registered.
 
 The real-time factor gate produced one lesson on the harness side. Measured on the model object with the LoRA attached, inference is 25% slower and fails T5. Merging the weights into the base made no difference on that same object; only loading the merged weights into an ordinary base object, built without a LoRA config, gave the same speed as the baseline. The slowdown came from the inference path of the model object built with the LoRA config. The adapter computation itself was not the cause. Since the serving condition uses merged weights, we fixed T5 to be measured in the merged state and wrote that into the gate definition.
 
@@ -115,3 +115,10 @@ The public brand voice takes a different path. We design a synthetic voice that 
 ## One next training run
 
 This week's conclusion is three lines. We will train Korean ASR once more with a fp32 recipe that includes the audio encoder, after aligning the label notation. For dialects, we will not spend GPU until we have secured 50 hours per region with speaker diversity. For the brand voice, we will use the two passing models internally and rebuild the public one from a synthetic voice. The number of passing gates is still two. Code already knows where the next training run has to fix things.
+
+## Sources
+
+- ASR baseline/candidate model: [Qwen3-ASR-1.7B](https://huggingface.co/Qwen/Qwen3-ASR-1.7B)
+- TTS baseline/candidate model: [VoxCPM2](https://huggingface.co/openbmb/VoxCPM2)
+- Read-speech evaluation set: [FLEURS](https://huggingface.co/datasets/google/fleurs)
+- Naturalness metric: [UTMOS (arXiv:2204.02152)](https://arxiv.org/abs/2204.02152)

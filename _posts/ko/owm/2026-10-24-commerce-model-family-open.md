@@ -26,7 +26,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/ko/owm/commerce-model-family-open/"
 header:
-  teaser: /assets/images/commerce-model-family-open-chart.png
+  teaser: /assets/images/commerce-model-family-open-chart.webp
 ---
 
 쇼핑몰에 AI 기능을 붙이려는 개발자와 데이터 담당자께 드리는 글입니다. 쇼핑몰 AI는 모델 하나로 되지 않습니다. 상품 찾기, 순서 매기기, 상품 정보 정리, 손님 행동 예측, 리뷰 읽기가 각각 다른 모델의 몫입니다.
@@ -69,7 +69,7 @@ flowchart LR
 
 여덟 저장소는 [Commerce FM 컬렉션](https://huggingface.co/collections/ThakiCloud/commerce-fm-korean-shopping-mall-models-6ad32c59e6f5788209ce7770)에 함께 묶여 있습니다. 표의 기준선은 각 카드가 정한 비교 대상 가운데 가장 강한 것입니다. 지표가 모델마다 다르므로 행끼리 숫자 크기를 비교하시면 안 됩니다.
 
-![커머스 모델 7종의 기준선 대비 결과를 모델별 지표로 나눠 그린 막대 그래프](/assets/images/commerce-model-family-open-chart.png)
+![커머스 모델 7종의 기준선 대비 결과를 모델별 지표로 나눠 그린 막대 그래프](/assets/images/commerce-model-family-open-chart.webp)
 *패널마다 지표가 다릅니다. 빗금 막대가 기준선, 파란 막대가 공개 모델입니다. 수치는 각 모델 카드에서 옮겼습니다.*
 
 ## 1. 서가에서 꺼내 오기: 상품 검색 임베딩

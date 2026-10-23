@@ -25,7 +25,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/ko/owm/soc-ier-4b-open/"
 header:
-  teaser: /assets/images/soc-ier-4b-open-chart.png
+  teaser: /assets/images/soc-ier-4b-open-chart.webp
 ---
 
 보안관제 분석가와 탐지 체계를 운영하시는 분께 드리는 글입니다. 이번에 공개하는 작은 모델은 한 가지 질문에 답합니다. 눈앞의 짧은 기록 구간에 공격의 증거가 실제로 있느냐는 질문입니다.
@@ -60,7 +60,7 @@ header:
 
 평가 세트는 모델 선택이 끝난 뒤 한 번만 열었습니다. 독립된 사고 체인 48개, 구간 239개로 이뤄져 있습니다. 학습에 없던 공격 계열에서 나온 체인입니다. 모든 모델을 같은 프롬프트와 같은 파서, 같은 디코딩으로 쟀습니다.
 
-![봉인 평가 판정 macro-F1 비교](/assets/images/soc-ier-4b-open-chart.png)
+![봉인 평가 판정 macro-F1 비교](/assets/images/soc-ier-4b-open-chart.webp)
 *봉인 평가 판정 macro-F1과 95% 신뢰구간입니다. 수치는 모델 카드에서 그대로 옮겼습니다.*
 
 | 모델 | 설정 | 판정 macro-F1 [95% CI] | 근거 재현율 | 근거 정밀도 | 오탐(False-SUPPORTED) | 공격 놓침 |

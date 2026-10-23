@@ -24,7 +24,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/ko/owm/thaki-ops-27b-alpha-open/"
 header:
-  teaser: /assets/images/thaki-ops-27b-alpha-open-chart.png
+  teaser: /assets/images/thaki-ops-27b-alpha-open-chart.webp
 ---
 
 서버 장애를 조사하는 인공지능 비서를 운영에 붙여 보려는 분들께 드리는 글입니다. 이런 비서에게는 흔한 버릇이 있습니다. 같은 상태 조회를 끝없이 되풀이합니다. 보지 않아도 될 비밀값을 열어 봅니다. 근거가 없어도 원인을 단정합니다.
@@ -49,7 +49,7 @@ Thaki-Ops-27B v0.1-alpha는 [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3
 
 수치는 모두 KIND 클러스터 위의 자체 HolmesGPT 평가 환경에서 쟀습니다. 시나리오마다 3회씩, 영어와 한국어 프롬프트로 돌렸습니다. 모든 모델이 같은 환경과 같은 서빙 설정을 썼고 가중치만 바꿨습니다. 비교 대상은 같은 환경에서 돌린 기반 모델입니다.
 
-![아무것도 바꾸지 말아야 할 상황의 처리 점수. 영어 프롬프트에서 기반 모델 0.636, 알파 0.909. 한국어 프롬프트에서 기반 모델 0.818, 알파 0.909.](/assets/images/thaki-ops-27b-alpha-open-chart.png)
+![아무것도 바꾸지 말아야 할 상황의 처리 점수. 영어 프롬프트에서 기반 모델 0.636, 알파 0.909. 한국어 프롬프트에서 기반 모델 0.818, 알파 0.909.](/assets/images/thaki-ops-27b-alpha-open-chart.webp)
 *클러스터에 문제가 없을 때 아무것도 바꾸지 않는지를 본 항목입니다. 모델 카드에 공개한 값입니다.*
 
 가장 뚜렷하게 나아진 곳은 문제가 없는 상황입니다. 멀쩡한 차를 맡겼을 때 괜히 부품을 갈지 않는 능력입니다. 영어 프롬프트에서는 약 0.64에서 0.91로 올랐습니다. 한국어에서는 약 0.82에서 0.91로 올랐습니다.

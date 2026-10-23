@@ -23,7 +23,7 @@ categories:
   - owm
 canonical_url: "https://thakicloud.com/tech-blog/ko/owm/voice2policy-open/"
 header:
-  teaser: /assets/images/voice2policy-open-chart.png
+  teaser: /assets/images/voice2policy-open-chart.webp
 ---
 
 동네 치과나 카페에 전화로 예약과 주문을 받는 음성 비서를 붙이려는 개발자께 드리는 글입니다. 손님의 말을 들은 시스템이 가장 먼저 답해야 할 질문은 "이 말이 무슨 명령인가"입니다. 예약인지, 주문인지, 방금 잡은 예약을 확정하는지, 아니면 그냥 질문인지를 가려야 합니다.
@@ -62,7 +62,7 @@ Voice2Policy는 한국어 업무 음성 명령을 다루는 다키클라우드�
 
 ## 숫자가 좋은 곳과 나쁜 곳
 
-![텍스트 라우터의 입력별 명령 틀 정확도와 두 경로의 종단 지연](/assets/images/voice2policy-open-chart.png)
+![텍스트 라우터의 입력별 명령 틀 정확도와 두 경로의 종단 지연](/assets/images/voice2policy-open-chart.webp)
 *왼쪽 축은 0.70부터 시작합니다. 수치는 모두 두 모델 카드에 공개된 값입니다.*
 
 생성기가 만든 시험 문장 3,081개에서 명령 틀 정확도는 99.8%입니다. 같은 시험 문장을 TTS 음성으로 읽혀 ASR로 받아 적은 전사 18,879개에서도 99.7%입니다. 받아쓰기 오류가 섞여도 메모지 칸은 거의 그대로 채워졌습니다.
