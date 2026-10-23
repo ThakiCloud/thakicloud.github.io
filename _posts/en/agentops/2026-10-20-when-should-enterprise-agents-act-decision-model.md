@@ -26,6 +26,10 @@ categories:
 
 The hard part of an enterprise AI agent is not writing a good sentence. It is choosing the next action. The same kind of request sometimes needs a direct answer, sometimes a tool call, and sometimes a human's confirmation before anything runs. At ThakiCloud we are splitting that judgment out into a small dedicated model and attaching it to the Paxis agent runtime. This post is the first record of that work. Model training and serving measurements are done; the experiment that wires the model into Paxis and compares it with the existing agent is just starting. We keep the two apart below.
 
+## In plain terms
+
+Think of a bank teller. After hearing a customer, the teller first decides what to do: answer right away, ask for a missing document, double-check with the customer, process the request, hand it to a manager, or politely decline. That first call is what the Decision model makes. Even when the teller decides to process a transfer, the bank's system still enforces limits and permissions on its own. In Paxis, too, the right to execute belongs to the policy layer, not the model. The results below measure how often this teller processes something it should not, and how often it blocks something it should have handled.
+
 ## Why choosing the action is harder than answering
 
 An agent connected to company systems does more than answer questions. It looks up data, chains several business tools, and sometimes changes real state, such as cancelling an order or updating a setting. "Tell me last month's revenue" and "Cancel customer A's order" look alike as sentences, but the first only needs a lookup while the second may need confirmation before it runs. "Change this employee's salary" may have to be refused depending on who is asking.
@@ -64,7 +68,7 @@ We cared less about average accuracy than about two kinds of mistake: a **danger
 | Policy-composition regression set | 87.0% | **100%** | 93.8% |
 | Multi-tool recall (391 regression items) | 91.3% | **98.2%** | 92.3% |
 
-Bigger was not better across the board. The 9B was about as accurate as the 4B but made more dangerous executions and more over-blocks. What mattered for this task was drawing the action boundaries reliably, and the 4B did that best. We also ran an existing 27B generative policy model with the same A–G readout. It reached 74.0% on val2 with 26 dangerous executions. That model was never trained on the letter readout or on the AND/OR/NOT data, so read the number as a lower bound for a 27B.
+Bigger was not better across the board. The 9B was about as accurate as the 4B but made more dangerous executions and more over-blocks. What mattered for this task was drawing the action boundaries reliably, and the 4B did that best. We also ran an existing 27B generative policy model with the same A-to-G readout. It reached 74.0% on val2 with 26 dangerous executions. That model was never trained on the letter readout or on the AND/OR/NOT data, so read the number as a lower bound for a 27B.
 
 The 100% on the composition regression set comes from data we opened several times during development. It does not mean 100% in production. We trusted the same direction showing up across several sets more than any single number.
 
@@ -76,7 +80,7 @@ So we built 420 contrast examples, "specified means execute, unspecified means a
 
 ## Serving: about 60 ms per decision
 
-A dedicated model adds a decision cost every time the agent acts, so serving speed matters as much as quality. We served the merged bf16 4B with vLLM 0.29.0 on one B200, calling `/v1/completions` with the output constrained to A–G and at most one token.
+A dedicated model adds a decision cost every time the agent acts, so serving speed matters as much as quality. We served the merged bf16 4B with vLLM 0.29.0 on one B200, calling `/v1/completions` with the output constrained to the letters A to G and at most one token.
 
 Single-request latency was 61.5 ms at the median and 63.3 ms at p95. With 32 concurrent requests it handled 288 requests per second. All 974 responses were valid letters, and the weights took about 7.9 GiB. Under the same setup the 2B was faster, 43.8 ms median and 359 requests per second, but its accuracy fell sharply on policy documents written in unfamiliar formats. So the 4B is the main model and the 2B is a lightweight option for throughput-bound deployments. The 2B is [public on Hugging Face](https://huggingface.co/ThakiCloud/Thaki-Decision-2B-v0.2); we plan to release the 4B after the Paxis integration is verified.
 
@@ -107,7 +111,7 @@ Reading the code also showed a gap we have to close. Paxis already has an approv
 
 Good offline accuracy is not a reason to put the model on the execution path right away. The first stage is Shadow Mode: the existing agent behaves as usual, and Decision-4B judges the same situation separately and only records its decision. It blocks and changes nothing.
 
-What we want from this comparison is not how often the model gets A–G right. It is how many of the existing agent's wrong actions Decision-4B catches, and how many requests the existing agent handled correctly that Decision-4B would have blocked. That balance, plus the measured latency increase, decides whether the gate runs on every request or only on high-risk write actions. If it catches little and only adds latency, we will not roll it out everywhere.
+What we want from this comparison is not how often the model gets the A-to-G letter right. It is how many of the existing agent's wrong actions Decision-4B catches, and how many requests the existing agent handled correctly that Decision-4B would have blocked. That balance, plus the measured latency increase, decides whether the gate runs on every request or only on high-risk write actions. If it catches little and only adds latency, we will not roll it out everywhere.
 
 ## What ThakiCloud wants from this design
 
@@ -124,6 +128,8 @@ In the next post we will compare the existing agent and Decision-4B on the same 
 ## Update (2026-10-24): the 0.8B line
 
 This post covered only the 2B, 4B and 9B action-decision models. Here we summarize the four 0.8B models we have published on Hugging Face under the same Thaki-Decision name. The 0.8B line does a different job from the A~G action-decision model above.
+
+G12 through G15 are generation numbers for the same router, rebuilt four times, and each generation carries a version name from v0.1 to v0.4. In bank terms, this is the greeter who looks at each customer and sends them to the regular counter or the specialist desk. The regular counter (8B) is cheap and fast but may not solve hard cases; the specialist desk (27B) solves most of them but costs more. A good greeter never sends a customer who truly needs the specialist to the regular counter, while sending everyone else there whenever possible. The four generations below record how well that greeting went.
 
 The 0.8B line is a router that looks at one request and decides whether to send it to an 8B model or a 27B model. It generates no text. One pass through a 0.8B encoder feeds a small linear head that estimates how likely each model is to answer correctly on the first attempt. If the gap between the two (delta) is at or below a threshold τ, the request goes to the 8B model. The base is vllm-sr/d3-lite (built on Qwen3.5-0.8B), with a LoRA adapter and the head on top.
 
