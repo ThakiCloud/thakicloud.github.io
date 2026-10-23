@@ -4,7 +4,7 @@ excerpt: "Answer, call a tool, or ask a human first. Instead of leaving that cal
 seo_title: "Action Decisions for Enterprise AI Agents: Separating a Decision Model from Policy Enforcement | ThakiCloud"
 seo_description: "We trained 2B, 4B and 9B decision models that pick one of seven next actions for an agent: answer, call a tool, ask for confirmation, refuse and more. The 4B made the fewest dangerous executions and decides in about 60 ms on vLLM."
 date: 2026-10-20
-last_modified_at: 2026-10-20
+last_modified_at: 2026-10-24
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -120,3 +120,54 @@ It is also where ThakiCloud's two products meet. The decision model runs on ai-p
 All training and evaluation data is code-generated Korean customer-service policy scenarios. Nothing guarantees the same performance on real company policy documents and real conversations. Even the sealed set comes from our own generator family, so it is not a test fully independent of how we built the training data. Dangerous executions are not zero either: three remain on val2. The decision model is therefore not a safety mechanism, and every real tool execution still needs a deterministic permission check in front of it.
 
 In the next post we will compare the existing agent and Decision-4B on the same requests, using integration scenarios built from Paxis's real tools and policies. We will show both the cases where the existing agent was wrong and Decision-4B was right, and the cases where Decision-4B got in the way of normal work.
+
+## Update (2026-10-24): the 0.8B line
+
+This post covered only the 2B, 4B and 9B action-decision models. Here we summarize the four 0.8B models we have published on Hugging Face under the same Thaki-Decision name. The 0.8B line does a different job from the A~G action-decision model above.
+
+The 0.8B line is a router that looks at one request and decides whether to send it to an 8B model or a 27B model. It generates no text. One pass through a 0.8B encoder feeds a small linear head that estimates how likely each model is to answer correctly on the first attempt. If the gap between the two (delta) is at or below a threshold τ, the request goes to the 8B model. The base is vllm-sr/d3-lite (built on Qwen3.5-0.8B), with a LoRA adapter and the head on top.
+
+All four generations are experimental. The candidates are fixed to two models, Qwen3-8B and Qwen3.8-27B. The training requests are 2,400 code-generated requests across 24 task families covering code, JSON transformation, math and tool calls. Each request was run five times on both models, and deterministic checkers turned the success counts into labels.
+
+### v0.1 (G12, 10-18): first release
+
+It used a 2-way head that estimates each model's success probability separately. The card verifies only that it trains and that reloading reproduces the same scores. Routing quality, cost saving and advantage over simple rules were not verified, and it ships no recommended τ. On four free-form prompts outside the training range it gave almost the same scores regardless of difficulty. It is now marked as legacy.
+
+### v0.2 (G13, 10-18): the current recommended version
+
+The head became a four-cell joint head. It splits probability across four cases: both fail, only 27B succeeds, only 8B succeeds, both succeed. Data and training recipe are the same as v0.1. Comparing the two versions under the same rule on 320 requests from 8 task families not used in training gives the following.
+
+| Metric | v0.1 | v0.2 |
+|---|---|---|
+| Share routed to 8B | 10.6% | 9.4% |
+| Quality loss vs. always-27B | 2.22pp | 0.66pp |
+| Requests only 27B solves, sent to 8B (of 95) | 9 | 0 |
+| GPU-seconds per request (always-27B is 0.280) | 0.312 | 0.275 |
+
+There are many caveats. Each version was trained once, and at the request level the direct difference between the two versions is not significant. The cost saving is 1.8%, far below the 20% target the card sets. The ability to order requests is also weak, so the gain came from misrouting fewer requests that need 27B. The sealed test set has not been opened.
+
+### v0.3 (G14, 10-19): a recorded failure
+
+Training continued from v0.2 with one extra loss term. The term ranks requests where 8B fails and only 27B succeeds above the rest. The ranking metric went up, but actual routing got worse. Quality loss grew to 2.12pp and the cost rose above always-27B. Of the 95 requests only 27B solves, it sent 8 to 8B. The card marks this version as not recommended and keeps it as a negative result.
+
+### v0.4 (G15, 10-19): a recorded failure
+
+This time the architecture and loss stayed the same and the data grew. Adding 900 requests from 6 new task families gave 3,300 requests across 30 families, trained on top of v0.2. Ranking improved on the trained families but did not carry over to unseen ones. The τ chosen on the dev split sent only 2.5% of held-out requests to 8B. The cost saving was +3.6% for v0.2 and -5.0% for v0.4. Neither router sent any of the 180 new-family requests to 8B, so that split says nothing about generalization.
+
+### What the four generations tell us
+
+The recommended version is still v0.2, and v0.2 is not a validated router either. In two follow-up attempts the ranking metric went up while routing did not improve. That is the clearest result of this line. All training data is code-generated, verifiable tasks, so performance on open conversation or production traffic is unknown. If the decision model in this post picks the next action, the 0.8B router decides which model size handles the request. They are judgments at different layers.
+
+Following the card's example, v0.2 loads as shown below. The τ value was chosen on the card's dev split only, so pick it again on your own traffic.
+
+```python
+from huggingface_hub import hf_hub_download
+import sys, os
+sys.path.insert(0, os.path.dirname(hf_hub_download("ThakiCloud/Thaki-Decision-0.8B-G13-v0.2", "thaki_decision.py")))
+from thaki_decision import ThakiDecision
+
+td = ThakiDecision.from_pretrained("ThakiCloud/Thaki-Decision-0.8B-G13-v0.2")
+print(td.route("Write a Python function that returns the n-th Fibonacci number.", tau=0.0267))
+```
+
+Model links: [Thaki-Decision-0.8B-G12-v0.1](https://huggingface.co/ThakiCloud/Thaki-Decision-0.8B-G12-v0.1), [Thaki-Decision-0.8B-G13-v0.2](https://huggingface.co/ThakiCloud/Thaki-Decision-0.8B-G13-v0.2), [Thaki-Decision-0.8B-G14-v0.3](https://huggingface.co/ThakiCloud/Thaki-Decision-0.8B-G14-v0.3), [Thaki-Decision-0.8B-G15-v0.4](https://huggingface.co/ThakiCloud/Thaki-Decision-0.8B-G15-v0.4). All are Apache-2.0.
