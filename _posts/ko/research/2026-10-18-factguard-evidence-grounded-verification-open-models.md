@@ -4,7 +4,7 @@ seo_title: "FactGuard 공개: AI 답변의 주장을 근거와 대조해 4가지
 seo_description: "AI 답변 속 가격, 플랜, 기능 주장을 제공된 근거와 대조해 SUPPORTED, CONTRADICTED, NOT_VERIFIABLE, STALE 중 하나로 판정하는 FactGuard 4B, 8B, 9B, 27B를 Apache-2.0으로 공개했습니다. 검증된 범위와 아직 검증하지 않은 후보 영역을 구분해 정리합니다."
 excerpt: "RAG, 쇼핑 AI, 상담 센터, 에이전트가 내놓은 문장을 사람이 일일이 확인하기는 어렵습니다. FactGuard는 주장 하나와 근거 묶음을 읽고 네 가지 라벨 중 하나를 고릅니다. 학습하고 평가한 범위와 아직 후보로만 남은 범위를 나눠 적었습니다."
 date: 2026-10-18
-last_modified_at: 2026-10-18
+last_modified_at: 2026-10-24
 tags:
   - factguard
   - fact-verification
@@ -127,6 +127,61 @@ F2: [<페이지 제목>] <문장>
 ## 다음 단계: Generalist FactGuard
 
 현재 모델은 제품, 가격, 플랜 주장에 맞춰져 있습니다. 표, 계약서, 사내 문서와 RAG, 한국어 NLI, 도구 실행 로그까지 근거 형태를 넓힌 Generalist FactGuard를 개발 중입니다. 아직 보고할 결과는 없습니다.
+
+## 업데이트 (2026-10-24): General 계열과 LoRA 어댑터
+
+위에서 개발 중이라고 적은 Generalist FactGuard의 첫 공개본이 나왔습니다. 이 글에서 다룬 4B, 8B, 9B, 27B는 가격 주장에 맞춘 Specialist라고 부르며 이번 공개로 바뀌지 않았습니다. 같은 때에 Specialist 네 개와 Generalist의 LoRA 어댑터도 공개했습니다. 네 라벨과 입력 형식은 그대로입니다.
+
+### FactGuard-General-4B-v2: 분야를 가리지 않는 연구 프리뷰
+
+Qwen3.5-4B 위에서 LoRA를 새로 학습해 병합한 BF16 가중치입니다. 기존 Specialist 어댑터에서 이어 학습하지 않았습니다. 학습 데이터 41,515행은 권리를 검토한 출처만 썼습니다. 자체 코드로 만든 숫자·시점 검증 문항 28,519행, MultiNLI의 비소설 장르 9,996행, 자체 코드로 만든 가격·기능 표 3,000행입니다. 상용 언어 모델 API가 만든 데이터는 쓰지 않았습니다. 프롬프트는 범용 머리말이 기본이고 Specialist용 머리말도 호환을 위해 남겨 두었습니다.
+
+결과는 엇갈립니다. 9개 출처를 섞은 일반 개발 셋 2,700행에서 전체 정확도는 83.1%였습니다. 출처별로는 KLUE-NLI 90.7%, FEVER 89.7%가 높았고 AttributionBench 72.3%, FaithDial 75.3%가 낮았습니다. 권리가 확인되지 않은 출처까지 학습한 내부 모델(비공개, 89.1%)보다 약 6점 낮습니다.
+
+이 체크포인트는 스스로 사전 등록한 합격 기준을 넘지 못했습니다. Specialist 개발 셋에서 기존 라벨 계약 기준 89.6%로 기준선 91.0%에 못 미쳤습니다. 그래도 데이터 권리, 병합 일치, 재로딩 검사를 통과했습니다. 권리 검토를 거친 후보 가운데 일반 검증과 숫자 검증의 균형도 가장 나았습니다. 그래서 연구 프리뷰로 공개했습니다. B200 한 장, 배치 1에서 지연 중앙값은 81.6ms입니다.
+
+실제 AI 답변에 대한 성능은 아직 검증하지 않았습니다. 실제 공개 가격 페이지를 다룬 AI 답변 주장 450건으로 탐색해 본 결과는 50.9%였습니다. 같은 문항에서 Specialist 4B는 45.6%, 27B 참고 모델은 54.7%였습니다. 다만 라벨 대부분이 모델의 도움을 받아 붙었으므로 벤치마크 결과로 읽으면 안 됩니다. 근거가 판정을 정하는데도 NOT_VERIFIABLE을 내는 경향도 남아 있습니다. 가격 페이지의 "포함되지 않음", "~만" 같은 문장과 각주 조건에서 특히 그렇습니다.
+
+### FactGuard-General-4B-M050: 두 어댑터를 반씩 섞은 실험
+
+이 저장소에는 LoRA 어댑터(약 0.26GB)만 있고 기반 모델은 따로 받아야 합니다. General-4B-v2를 만든 어댑터(C1)와 내부 형제 어댑터(C4)를 정확히 50:50으로 합쳤습니다. C4는 같은 코드로 학습했고 미국 연방 사이트의 요금표 1,500행을 더 배웠습니다. 합치는 과정에서 추가 학습은 하지 않았습니다.
+
+합친 비율을 고정한 뒤 새로 만든 셋으로 사전 등록한 전이 시험을 했고 판정은 실패였습니다.
+
+| 평가 셋 | C1 (General-4B-v2) | M050 | 판정 |
+|---|---|---|---|
+| TabFact 테스트 (비열등성) | 75.8% | 75.5% | 통과 |
+| 미국 연방 문서 | 95.93% | 98.64% | 실패 (+2.71pp, 기준 +3.00pp 미달) |
+| SaaS 문서 (비열등성) | 94.2% | 96.4% | 통과 |
+| 세 셋 합산 틀린 SUPPORTED | | 1.58pp 감소 | 통과 |
+
+카드는 실패 판정을 사후에 바꾸지 않았다고 밝힙니다. M050은 어느 셋에서도 C1보다 나쁘지 않았고 틀린 SUPPORTED는 세 셋 모두에서 줄었습니다. 그래도 카드는 M050이 C1보다 전반적으로 낫다고 주장하지 않습니다. 기준 Generalist는 여전히 General-4B-v2입니다.
+
+병합본은 공개하지 않았습니다. 어댑터를 BF16 가중치에 병합하자 판정 11,971건 중 14건이 바뀌었고 그중에는 새로 생긴 틀린 SUPPORTED 1건도 있었습니다. 평가와 같은 결과를 얻으려면 병합하지 않은 채 PeftModel로 붙여 써야 합니다.
+
+### LoRA 어댑터 다섯 개: 병합 전 원본
+
+10-20에 FactGuard-4B, 8B, 9B, 27B와 General-4B-v2를 만든 LoRA 어댑터를 공개했습니다. 학습을 재현하거나, 병합 가중치 대신 어댑터로 불러 쓰려는 분을 위한 저장소입니다. 용도, 데이터, 평가, 한계는 병합 모델 카드와 같고 어댑터 공개로 바뀌는 것은 없습니다.
+
+Specialist 네 저장소에는 v0-sft, v0.1-sft, v0.3-sft의 세 단계가 들어 있습니다. 같은 LoRA를 이어 학습한 기록이라 최종 단계인 v0.3-sft만 기반 모델에 올리면 됩니다. General-4B-v2 어댑터는 단계가 하나입니다. 올바른 어댑터인지는 병합 가중치에서 기반 가중치를 뺀 값과 어댑터 변화량을 비교해 확인했습니다. 코사인 중앙값은 약 0.95(8B)에서 0.99(4B) 사이였고 쓰이지 않은 어댑터라면 0 근처가 나옵니다.
+
+```python
+import torch
+from transformers import AutoModelForCausalLM
+from peft import PeftModel
+
+model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen3.5-4B", torch_dtype=torch.bfloat16)
+model = PeftModel.from_pretrained(model, "ThakiCloud/FactGuard-4B-LoRA", subfolder="v0.3-sft").merge_and_unload()
+```
+
+8B 어댑터의 기반은 Qwen3-8B, 9B는 Qwen3.5-9B, 27B는 Qwen3.8-27B입니다.
+
+### 새 저장소 링크
+
+- Generalist: [FactGuard-General-4B-v2](https://huggingface.co/ThakiCloud/FactGuard-General-4B-v2), [FactGuard-General-4B-M050](https://huggingface.co/ThakiCloud/FactGuard-General-4B-M050), [FactGuard-General-4B-v2-LoRA](https://huggingface.co/ThakiCloud/FactGuard-General-4B-v2-LoRA)
+- Specialist 어댑터: [FactGuard-4B-LoRA](https://huggingface.co/ThakiCloud/FactGuard-4B-LoRA), [FactGuard-8B-LoRA](https://huggingface.co/ThakiCloud/FactGuard-8B-LoRA), [FactGuard-9B-LoRA](https://huggingface.co/ThakiCloud/FactGuard-9B-LoRA), [FactGuard-27B-LoRA](https://huggingface.co/ThakiCloud/FactGuard-27B-LoRA)
+
+모두 Apache-2.0입니다.
 
 ## 모델 링크
 
