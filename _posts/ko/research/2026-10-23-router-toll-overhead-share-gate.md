@@ -21,7 +21,7 @@ toc: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/router-toll-overhead-share-gate/"
 ---
 
-셀프호스트 H200 위에서 스킬 2,000개가 넘는 에이전트 하네스(에이전트 실행 환경)를 돌리거나, 그 하네스의 밤샘(overnight) 루프에 skill-router를 붙여 둔 국내 클라우드/AI 엔지니어라면 이 글의 대상입니다. 무감시 루프에서는 들어오는 태스크마다 라우터 파이프라인이 지나갑니다. 그런데 이 파이프라인 자체가 에이전트 루프 token의 몇 %를 쓰고 있는지, 라우터가 아껴 주는 것보다 스스로 내는 것이 클 수 있는지에 대해, 라우팅 문헌은 답하지 못했습니다. ThakiCloud의 실측 논문 The Router's Toll은 이 회계 공백을 메웁니다. 2,293-entry의 production skill registry와 동결된 63-decision holdout 위에서 라우터 파이프라인의 자체 token bill을 arm별로 미터링하고, 그 bill의 대부분을 스킵하면서도 실측 정확도 손실이 0인 결정론 precondition gate(파이프라인을 실행하기 전에 점수만 보고 생략 여부를 정하는 규칙)를 찾습니다. 읽고 나면 자기 하네스에서 라우터를 언제 켤지 근거를 가지고 정할 수 있습니다.
+셀프호스트 H200 위에서 스킬 2,000개가 넘는 에이전트 하네스(에이전트 실행 환경)를 돌리거나, 그 하네스의 밤샘(overnight) 루프에 skill-router를 붙여 둔 국내 클라우드/AI 엔지니어라면 이 글의 대상입니다. 무감시 루프에서는 들어오는 태스크마다 라우터 파이프라인이 지나갑니다. 그런데 이 파이프라인 자체가 에이전트 루프 token의 몇 %를 쓰는지, 라우터가 아껴 주는 것보다 스스로 내는 것이 클 수 있는지에 대해, 라우팅 문헌은 답하지 못했습니다. ThakiCloud의 실측 논문 The Router's Toll은 이 회계 공백을 메웁니다. 2,293-entry의 production skill registry와 동결된 63-decision holdout 위에서 라우터 파이프라인의 자체 token bill을 arm별로 미터링하고, 그 bill의 대부분을 스킵하면서도 실측 정확도 손실이 0인 결정론 precondition gate(파이프라인을 실행하기 전에 점수만 보고 생략 여부를 정하는 규칙)를 찾습니다. 읽고 나면 자기 하네스에서 라우터를 언제 켤지 근거를 갖고 정할 수 있습니다.
 
 ![The Router's Toll: skill-router 파이프라인이 스스로 내는 토큰 통행료를 실측하고, 결정론 precondition gate로 그 bill의 71.6%를 스킵합니다 개념을 형상화한 이미지](/assets/images/router-toll-overhead-share-gate-hero.webp)
 *글의 핵심 개념을 형상화했습니다.*
@@ -48,7 +48,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/router-toll-overhea
 
 ## 톨의 실측: full 파이프라인이 결정당 1,440.3 token, LLM 쪽이 71.6%
 
-production registry scale(R=2,293, n=63 동결 holdout)에서 비용을 내는 3개 arm의 결정당 bill은 다음과 같습니다. off는 구조상 아무것도 내지 않습니다. lite는 결정당 평균 409.6 token(median 451, max 810)을 내고 declared rate 기준 0.000614357 달러이다. median turn의 0.13002%, 세션당 0.13548%에 해당한다. full은 결정당 평균 1,440.3 token(median 1,443, max 2,314)을 내고 0.002090124 달러, median turn의 0.45574%, 세션당 0.47484%이다. full 파이프라인은 lite path의 평균 bill의 3.52배를 낸다. 결정당 1,030.7 token을 추가로 내며 그 중 952.6가 input, 78.2가 declared output이다.
+production registry scale(R=2,293, n=63 동결 holdout)에서 비용을 내는 3개 arm의 결정당 bill은 다음과 같습니다. off는 구조상 아무것도 내지 않습니다. lite는 결정당 평균 409.6 token(median 451, max 810)을 내고 declared rate 기준 0.000614357 달러입니다. median turn의 0.13002%, 세션당 0.13548%에 해당합니다. full은 결정당 평균 1,440.3 token(median 1,443, max 2,314)을 내고 0.002090124 달러, median turn의 0.45574%, 세션당 0.47484%입니다. full 파이프라인은 lite path의 평균 bill의 3.52배를 냅니다. 결정당 1,030.7 token을 추가로 내며 그 중 952.6가 input, 78.2가 declared output이다.
 
 ![Per-Decision Token Bill by Routing Arm at Production Registry Scale (R=2,293)](/assets/images/posts/research/router-toll-overhead-share-gate/fig-arm-bills.webp)
 *off, lite, full 세 arm의 결정당 평균 token bill(R=2,293, n=63 동결 holdout). full hybrid 파이프라인이 BM25-only lite path의 3.52배(1,440.3 대 409.6 token)를 냅니다. CPU-only container에서 measured한 값입니다.*

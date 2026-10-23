@@ -33,7 +33,7 @@ header:
 
 ## 왜 읽어야 하나
 
-분류·라우팅·모더레이션 태스크에 자기 레이블을 붙이되, 생성 모델 추론 비용을 그대로 내고 싶지 않은 ML 엔지니어·데이터 사이언티스트라면 이 글이 레시피입니다. 결론을 먼저 씁니다. **decision model(d1-3B)의 fine-tuning은 'completion이 토큰 1개인 SFT'이고, 결과의 품질을 가르는 것은 학습 프레임워크(TRL인지 Unsloth인지)가 아니라 데이터 위생 세 가지입니다. Liquid AI의 두 노트북은 이 파이프라인 전체를 free-tier T4에서 30분 안쪽에 완주하는 것을 보여줍니다.**
+분류·라우팅·모더레이션 태스크에 자기 레이블을 붙이되, 생성 모델 추론 비용을 그대로 내고 싶지 않은 ML 엔지니어·데이터 사이언티스트라면 이 글이 레시피입니다. 결론을 먼저 씁니다. **decision model(d1-3B)의 fine-tuning은 'completion이 토큰 1개인 SFT'이고 결과의 품질을 가르는 것은 학습 프레임워크(TRL인지 Unsloth인지)가 아니라 데이터 위생 세 가지입니다. Liquid AI의 두 노트북은 이 파이프라인 전체를 free-tier T4에서 30분 안쪽에 완주하는 것을 보여줍니다.**
 
 ## 쉽게 말하면
 
@@ -94,19 +94,19 @@ Colab에서 바로 여는 배지도 노트북 상단에 있습니다(TRL 약 35�
 
 ## 데이터 준비 (핵심)
 
-Banking77은 약 13k개의 온라인 뱅킹 고객 메시지로, 각 메시지가 77개 intent 중 하나를 가집니다. 노트북은 학습 3,000개, 평가 100개를 씁니다. 데이터 작업은 세 가지이고, 모두 '정답'이 아니라 '공정한 평가'를 위한 것입니다.
+Banking77은 약 13k개의 온라인 뱅킹 고객 메시지로, 각 메시지가 77개 intent 중 하나를 가집니다. 노트북은 학습 3,000개, 평가 100개를 씁니다. 데이터 작업은 세 가지이고 모두 '정답'이 아니라 '공정한 평가'를 위한 것입니다.
 
-**1) case 단위 dedup.** Banking77에는 같은 요청의 재변형이 섞여 있습니다. "can you tell me why my transfer failed?"와 "Can you please tell me why my transfer failed?" 같은 쌍입니다. 하나가 학습에, 나머지가 평가에 들어가면 평가가 암기를 보상하게 됩니다. 노트북은 단어 겹이 80% 이상이면 같은 case로 보고, test 메시지의 재변형인 학습 메시지는 제거합니다.
+**1) case 단위 dedup.** Banking77에는 같은 요청의 재변형이 섞여 있습니다. "can you tell me why my transfer failed?"와 "Can you please tell me why my transfer failed?" 같은 쌍입니다. 하나가 학습에, 나머지가 평가에 들어가면 평가가 암기를 보상하게 됩니다. 노트북은 단어 겹이 80% 이상이면 같은 case로 보고 test 메시지의 재변형인 학습 메시지는 제거합니다.
 
 **2) case 단위 10% 홀드아웃.** 학습집의 10%를 loss 추적용 eval로 빼되, 메시지 단위가 아니라 case 단위로 뺍니다. 같은 case가 양쪽에 걸쳐 있으면 1)과 같은 문제가 되기 때문입니다.
 
-**3) 예제별 옵션 리스트 랜덤화.** 옵션 코드는 위치순으로 부여됩니다. 1번 옵션에 1번 코드, 2번에 2번. 만약 항상 같은 순서로 학습하면 모델은 옵션 리스트를 읽지 않고 '코드 = intent' 대응을 외우게 됩니다. 나중에 intent를 추가하거나 순서를 바꾸면 코드가 전부 밀리고, fine-tuned 모델도 함께 깨집니다. 그래서 각 학습 예제마다 '정답 intent + 다른 intent 중 무작위 26~76개'를 무작위 순서로 새 리스트를 만들어 줍니다. 26개 이하면 코드가 A~Z 글자, 27개 이상이면 두 자리 숫자 코드로 바뀌는 규칙을 이용합니다. 서브셋은 항상 27개 이상이므로 코드가 두 자리(전체 77개 질문 때와 같은 체계)로 고정됩니다.
+**3) 예제별 옵션 리스트 랜덤화.** 옵션 코드는 위치순으로 부여됩니다. 1번 옵션에 1번 코드, 2번에 2번. 만약 항상 같은 순서로 학습하면 모델은 옵션 리스트를 읽지 않고 '코드 = intent' 대응을 외우게 됩니다. 나중에 intent를 추가하거나 순서를 바꾸면 코드가 전부 밀리고 fine-tuned 모델도 함께 깨집니다. 그래서 각 학습 예제마다 '정답 intent + 다른 intent 중 무작위 26~76개'를 무작위 순서로 새 리스트를 만들어 줍니다. 26개 이하면 코드가 A~Z 글자, 27개 이상이면 두 자리 숫자 코드로 바뀌는 규칙을 이용합니다. 서브셋은 항상 27개 이상이므로 코드가 두 자리(전체 77개 질문 때와 같은 체계)로 고정됩니다.
 
 실측(이 글의 재현): 제거된 학습 메시지 6건(test 재변형), sft_train 2,694, sft_eval 300, label 77개.
 
 ## 실제 실험 결과
 
-Apple Silicon(M 시리즈, 51GB, MPS)에서 TRL 버전 파이프라인을 돌렸습니다. 한 가지 Mac 특화 적응이 있습니다. TRL 1.15.0의 SFTTrainer는 fused logprob 커널을 강제합니다. 이 커널은 triton 기반이고, macOS용 triton 배포판이 없습니다(실측 `pip install triton` → No matching distribution). 그래서 학습 런만 TRL 1.14.0(표준 logits 경로)으로 돌렸고, 나머지는(LoRA 타깃·SFT config·데이터 파이프라인) 노트북과 동일하게 유지했습니다.
+Apple Silicon(M 시리즈, 51GB, MPS)에서 TRL 버전 파이프라인을 돌렸습니다. 한 가지 Mac 특화 적응이 있습니다. TRL 1.15.0의 SFTTrainer는 fused logprob 커널을 강제합니다. 이 커널은 triton 기반이고 macOS용 triton 배포판이 없습니다(실측 `pip install triton` → No matching distribution). 그래서 학습 런만 TRL 1.14.0(표준 logits 경로)으로 돌렸고 나머지는(LoRA 타깃·SFT config·데이터 파이프라인) 노트북과 동일하게 유지했습니다.
 
 | 항목 | 실측 |
 |---|---|
@@ -131,28 +131,28 @@ LoRA 타깃은 노트북과 동일하게 언어 모델만 적응시킵니다. �
 
 ## 두 노트북의 차이 (TRL vs Unsloth)
 
-둘은 같은 데이터를 같은 목적에 쓰지만, 학습 래퍼가 다릅니다.
+둘은 같은 데이터를 같은 목적에 쓰지만 학습 래퍼가 다릅니다.
 
 - **TRL 버전**: `AutoModelForImageTextToText` + PEFT `LoraConfig`(target_modules 리스트) + `SFTTrainer`(prompt-completion 포맷). loss는 completion(옵션 코드 1토큰)에서만 계산됩니다.
-- **Unsloth 버전**: `FastVisionModel.from_pretrained(model_name, auto_model=AutoModelForImageTextToText, max_seq_length=2048)` + regex `target_modules`(`.*language_model.*\.(q_proj|...)`). `train_on_responses_only`로 instruction 부분의 loss를 mask하고, `adamw_8bit`와 `use_gradient_checkpointing="unsloth"`를 씁니다.
+- **Unsloth 버전**: `FastVisionModel.from_pretrained(model_name, auto_model=AutoModelForImageTextToText, max_seq_length=2048)` + regex `target_modules`(`.*language_model.*\.(q_proj|...)`). `train_on_responses_only`로 instruction 부분의 loss를 mask하고 `adamw_8bit`와 `use_gradient_checkpointing="unsloth"`를 씁니다.
 
 Unsloth 노트북에 있는 가장 중요한 경고는, 왜 `FastDecisionModel`/`DecisionTrainer`를 쓰지 않는가에 대한 설명입니다. Unsloth에는 decision model 학습용 클래스가 있는데, d1-3B에 그것을 쓰면 모델 위에 새로 무작위 초기화된 decision head를 얹고 Unsloth 고유 포맷으로 저장하게 됩니다. 그러면 d1-3B가 학습해 둔 readout(옵션 확률을 읽어 내는 부분)과 System One API를 잃습니다. 그래서 Unsloth 노트북도 d1-3B의 readout을 LM head SFT로 fine-tune해, fine-tuned 모델이 `system_one`으로 원본과 동일하게 동작하게 합니다.
 
-둘 다 학습 후 merge를 하고, d1-3B의 코드 파일들(api.py, hybrid.py, lfm2_vl.py, modeling_d1.py, prompt.py, runner.py, processor_config.json, LICENSE)을 같은 폴더로 복사해 System One API가 유지되는 'normal' 체크포인트를 만듭니다.
+둘 다 학습 후 merge를 하고 d1-3B의 코드 파일들(api.py, hybrid.py, lfm2_vl.py, modeling_d1.py, prompt.py, runner.py, processor_config.json, LICENSE)을 같은 폴더로 복사해 System One API가 유지되는 'normal' 체크포인트를 만듭니다.
 
 ## ThakiCloud 제품 적용 시사점
 
-**ai-platform 렌즈(서빙·비용).** decision model의 '출력 토큰 0개' 구조는 분류·라우팅 서비스의 비용 구조를 바꿉니다. decode 루프가 없습니다. `system_one_batch`가 no-padding packing이라, 고처리량 배치 triage에 적합합니다. 3B + LoRA 24.46M 파라미터는 free-tier T4에서 30분 만에 fine-tuning되는 규모이고, 이는 '고객이 자기 데이터로 라우팅 모델을 fine-tune해 멀티테넌트 서빙에 올린다'는 구성을 실제로 실행 가능한 단위로 만듭니다. 생성 모델 앞에 decision model을 값싼 라우터로 두면 파이프라인 경제가 바뀝니다. triage는 4090에서 8ms(모델카드 참고값)이고, 어려운 건만 큰 모델에 넘기는 구조입니다. ThakiCloud의 ai-platform이 NVFP4급 서빙 스택으로 운용하는 환경에서, 이 3B decision model은 사이드카(메인 모델 옆의 경량 분류기) 배치를 넘어 '라우팅 계층'에 둘 후보입니다.
+**ai-platform 렌즈(서빙·비용).** decision model의 '출력 토큰 0개' 구조는 분류·라우팅 서비스의 비용 구조를 바꿉니다. decode 루프가 없습니다. `system_one_batch`가 no-padding packing이라, 고처리량 배치 triage에 적합합니다. 3B + LoRA 24.46M 파라미터는 free-tier T4에서 30분 만에 fine-tuning되는 규모이고 이는 '고객이 자기 데이터로 라우팅 모델을 fine-tune해 멀티테넌트 서빙에 올린다'는 구성을 실제로 실행 가능한 단위로 만듭니다. 생성 모델 앞에 decision model을 값싼 라우터로 두면 파이프라인 경제가 바뀝니다. triage는 4090에서 8ms(모델카드 참고값)이고 어려운 건만 큰 모델에 넘기는 구조입니다. ThakiCloud의 ai-platform이 NVFP4급 서빙 스택으로 운용하는 환경에서, 이 3B decision model은 사이드카(메인 모델 옆의 경량 분류기) 배치를 넘어 '라우팅 계층'에 둘 후보입니다.
 
-**Paxis 렌즈(에이전트·감사).** Paxis 에이전트의 가드레일 체크('이 동작을 허용할까?', '이 응답이 정책을 위반하는가?')는 `noul`형 판단이고, LLM-as-a-judge 채점은 `score`형 판단입니다. 모든 에이전트 동작마다 27B급 judge를 호출하는 대신, 3B decision model을 inline으로 돌리면 감사 체크의 비용을 한 등급 낮출 수 있습니다. 확률 출력은 정책 게이트의 임계값에 그대로 쓸 수 있습니다. '모든 행동을 정책 게이트+감사 로그로 통과시킨다'는 Paxis의 구조에서, 그 게이트 자체를 값싸게 만드는 구성입니다.
+**Paxis 렌즈(에이전트·감사).** Paxis 에이전트의 가드레일 체크('이 동작을 허용할까?', '이 응답이 정책을 위반하는가?')는 `noul`형 판단이고 LLM-as-a-judge 채점은 `score`형 판단입니다. 모든 에이전트 동작마다 27B급 judge를 호출하는 대신, 3B decision model을 inline으로 돌리면 감사 체크의 비용을 한 등급 낮출 수 있습니다. 확률 출력은 정책 게이트의 임계값에 그대로 쓸 수 있습니다. '모든 행동을 정책 게이트+감사 로그로 통과시킨다'는 Paxis의 구조에서, 그 게이트 자체를 값싸게 만드는 구성입니다.
 
 ## 한계 및 반론
 
-첫째, 라이선스입니다. d1-3B는 LFM Open License v1.0입니다. 상업 사용은 사용자·법인의 연매출이 $10M 미만일 때(또는 Qualified Non-Profit)에만 이 라이선스로 허용되고, 그 이상은 '이 계약으로 라이선스되지 않습니다'. 규모 있는 상업 서비스로 도입하려면 Liquid AI와의 별도 라이선스 협상이 필요합니다. 모델카드의 'lfm1.0' 표기가 이 라이선스를 가리킵니다.
+첫째, 라이선스입니다. d1-3B는 LFM Open License v1.0입니다. 상업 사용은 사용자·법인의 연매출이 $10M 미만일 때(또는 Qualified Non-Profit)에만 이 라이선스로 허용되고 그 이상은 '이 계약으로 라이선스되지 않습니다'. 규모 있는 상업 서비스로 도입하려면 Liquid AI와의 별도 라이선스 협상이 필요합니다. 모델카드의 'lfm1.0' 표기가 이 라이선스를 가리킵니다.
 
-둘째, fine-tuning 수치는 데모 규모입니다. 이 글의 재현은 2,694개 서브셋의 150 steps(Mac 스모크)입니다. 노트북의 전체 런(3,000개, 1 epoch, T4 약 35분)과는 별개입니다. 테스트 100개 메시지는 작은 샘플이라 단 1건의 비중이 크고, 베이스라인 83.0%와 fine-tuned 87.0%의 +4.0pp(4건) 차이를 'trend'의 크기로 읽으면 안 됩니다.
+둘째, fine-tuning 수치는 데모 규모입니다. 이 글의 재현은 2,694개 서브셋의 150 steps(Mac 스모크)입니다. 노트북의 전체 런(3,000개, 1 epoch, T4 약 35분)과는 별개입니다. 테스트 100개 메시지는 작은 샘플이라 단 1건의 비중이 크고 베이스라인 83.0%와 fine-tuned 87.0%의 +4.0pp(4건) 차이를 'trend'의 크기로 읽으면 안 됩니다.
 
-셋째, chat 모델이 아닙니다. 텍스트를 써 내려가지 않는 것이 분류·라우팅에서는 강점이지만, 자유 응답·설명 생성·fallback 텍스트를 기대하면 안 됩니다.
+셋째, chat 모델이 아닙니다. 텍스트를 써 내려가지 않는 것이 분류·라우팅에서는 강점이지만 자유 응답·설명 생성·fallback 텍스트를 기대하면 안 됩니다.
 
 넷째, 옵션 리스트는 epoch당 한 번 생성됩니다. 노트북은 각 예제에 새 리스트를 주기 위해 '1 epoch 기준' 설계입니다. 여러 epoch로 학습하려면 epoch마다 dataset을 다시 map해(서브셋 값 변경) 새 리스트를 만들어 붙여야 합니다.
 
@@ -160,11 +160,11 @@ Unsloth 노트북에 있는 가장 중요한 경고는, 왜 `FastDecisionModel`/
 
 ## 정리
 
-decision model fine-tuning은 'completion이 토큰 1개인 SFT'입니다. 프레임워크 선택(TRL 또는 Unsloth)은 2차 문제이고, 1차 문제는 데이터 위생 세 가지입니다. case 단위 dedup, case 단위 홀드아웃, 예제별 옵션 리스트 랜덤화. 셋 다 '모델이 암기하지 않고 읽게 만드는' 장치입니다. 그리고 결과물은 'System One API가 유지되는 merged 체크포인트'로 저장해야, 추론 코드가 학습 전과 동일하게 동작합니다.
+decision model fine-tuning은 'completion이 토큰 1개인 SFT'입니다. 프레임워크 선택(TRL 또는 Unsloth)은 2차 문제이고 1차 문제는 데이터 위생 세 가지입니다. case 단위 dedup, case 단위 홀드아웃, 예제별 옵션 리스트 랜덤화. 셋 다 '모델이 암기하지 않고 읽게 만드는' 장치입니다. 그리고 결과물은 'System One API가 유지되는 merged 체크포인트'로 저장해야, 추론 코드가 학습 전과 동일하게 동작합니다.
 
 실무에서 기억할 것은 세 가지입니다. 자기 레이블의 decision model이 필요하다면 TRL 노트북에서 시작해 choice criteria를 자기 태스크의 옵션으로 바꾸면 됩니다. fine-tuned 모델을 배포한다면 merge 후 d1-3B 코드 파일들을 같이 복사해 System One API가 유지되는 체크포인트로 만들어야 합니다. 상업적으로 쓸 계획이라면 LFM Open License의 연매출 $10M 조건을 먼저 확인해야 합니다.
 
-한 줄 결론: **판단 모델의 fine-tuning은 프레임워크 문제가 아니라 '공정한 기출문제 만들기'이며, 그 문제의 질이 accuracy를 결정합니다.**
+한 줄 결론: **판단 모델의 fine-tuning은 프레임워크 문제가 아니라 '공정한 기출문제 만들기'이며 그 문제의 질이 accuracy를 결정합니다.**
 
 ## 출처
 
