@@ -27,6 +27,10 @@ If you run a RAG system, a shopping assistant, a support-center bot or an agent 
 
 What we trained and evaluated is verification of claims about products, prices, plans and features. Shopping, enterprise RAG and agent-result checking are candidate uses we have not validated, and this post keeps the two apart throughout. This is a research preview.
 
+## In plain terms
+
+Picture an accounts clerk checking an expense report against a stack of receipts. The clerk takes one line of the report and looks through the receipts. A matching receipt means approved, a receipt with a different amount means rejected, no receipt at all means cannot verify, and only last month's receipt means out of date. FactGuard's four labels are those four stamps. The clerk does not look anything up outside the stack and judges only from the papers handed over. In this post, the "trained domain" is the kind of paperwork this clerk has handled for a long time, and the "candidate uses" are kinds it has never been given.
+
 ## What FactGuard does
 
 The model receives evidence and a claim. The evidence is a few sentences taken from official pages (F1, F2, ...), and the claim is one sentence from an AI answer. The model judges the claim using only that evidence. It does not search, it does not know facts you did not pass in, and it does not know live prices or stock.
@@ -92,11 +96,11 @@ Latencies are medians on a single B200, batch size 1, model only. The 8B has a d
 
 ## Performance and honest limits
 
-Only the 4B has a sealed evaluation. On eval-v6, 2,483 counterfactual items about 28 brands unseen in training, the 4B alone scored 0.913 accuracy, with 27 false supports and 37 false contradictions. Adding a deterministic Claim Coverage Guard (guard/2.2, which is not part of the weights) gives 0.908, nearly the same, but false supports drop to 7 and false contradictions to 8. A Qwen3.8-27B prompted generative judge with the same guard scored 0.918.
+Only the 4B has a sealed evaluation. On eval-v6, 2,483 counterfactual items about 28 brands unseen in training, the 4B alone scored 91.3% accuracy, with 27 false supports and 37 false contradictions. Adding a deterministic Claim Coverage Guard (guard/2.2, which is not part of the weights) gives 90.8%, nearly the same, but false supports drop to 7 and false contradictions to 8. A Qwen3.8-27B prompted generative judge with the same guard scored 91.8%.
 
 One caveat matters here. The pre-registered non-inferiority bar for replacing the 27B judge with the 4B was not met. The difference is -1.1 percentage points with a 95% confidence interval of [-5.0, +4.3], so we cannot say the 4B is not worse.
 
-The 8B, 9B and 27B have development-set results only, and sealed evaluation is pending. Development-set accuracy is 0.987 for the 8B (0.495 for its base with the same prompt), 0.992 for the 9B (base 0.260), 0.993 for the 27B (base 0.371) and 0.993 for the 4B. The 27B base figure uses the label-token prompt, so it is a different measurement from the prompted generative judge above. None of these numbers is generalization accuracy: the 4B seed was chosen on these sets, and the 8B differs in architecture, so this is not a clean size curve. Accuracy on naturally occurring errors in real AI answers is not established.
+The 8B, 9B and 27B have development-set results only, and sealed evaluation is pending. Development-set accuracy is 98.7% for the 8B (49.5% for its base with the same prompt), 99.2% for the 9B (base 26.0%), 99.3% for the 27B (base 37.1%) and 99.3% for the 4B. The 27B base figure uses the label-token prompt, so it is a different measurement from the prompted generative judge above. None of these numbers is generalization accuracy: the 4B seed was chosen on these sets, and the 8B differs in architecture, so this is not a clean size curve. Accuracy on naturally occurring errors in real AI answers is not established.
 
 ## How developers use it
 
@@ -122,7 +126,7 @@ We ran the published FactGuard-4B (Hub commit 29a66c89bdacb183b94cfa3ef6770f1660
 | The MoaNote Basic plan can also use 100GB of storage. | CONTRADICTED | CONTRADICTED | 0.9983 |
 | The MoaNote Pro plan supports offline mode. | NOT_VERIFIABLE | NOT_VERIFIABLE | 1.0000 |
 
-In the second item the remaining mass was 0.0014 on NOT_VERIFIABLE and 0.0002 on SUPPORTED. In the third, every other label was below 0.00002. All three matched expectations, but three easy items demonstrate behavior and are not evidence of accuracy. Probabilities this close to 1 on easy items do not mean the same confidence appears on naturally occurring errors.
+In the second item the remaining mass was 0.14% on NOT_VERIFIABLE and 0.02% on SUPPORTED. In the third, every other label was below 2 in 100,000. All three matched expectations, but three easy items demonstrate behavior and are not evidence of accuracy. Probabilities this close to 1 on easy items do not mean the same confidence appears on naturally occurring errors. For the clerk, this was three neat receipts, not a real report with crumpled or missing ones.
 
 ## Next: Generalist FactGuard
 
