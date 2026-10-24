@@ -29,6 +29,9 @@ If you run a RAG agent over internal documents, you have probably noticed that t
 
 This post is more about use than scores. It shows where the model sits behind Paxis Hybrid RAG, where it should hand off to a person, and what it should not be trusted with.
 
+![Illustration of the core idea of Thaki-CiteRank-4B: a 4B model that picks what a RAG agent should cite](/assets/images/citerank-4b-paxis-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## In plain terms
 
 Say an agent is asked, "What is the default restart policy of a Pod?" The retriever returns ten passages that look related. One states the answer, some only share the topic, and one comes from an older version with a different value. To the retriever they are all "relevant."
@@ -99,6 +102,6 @@ relevance, head_scores = score(
 
 ## What we released
 
-`ThakiCloud/Thaki-CiteRank-4B` on Hugging Face contains the merged weights, the auxiliary classification head, the tokenizer, an evaluation manifest and example code under Apache-2.0. No training or evaluation text is included. Training used QASPER (CC BY 4.0), Kubernetes documentation (CC BY 4.0) and Python documentation (PSF License v2); CUAD (CC BY 4.0) was used for evaluation only.
+[Thaki-CiteRank-4B](https://huggingface.co/ThakiCloud/Thaki-CiteRank-4B) on Hugging Face contains the merged weights, the auxiliary classification head, the tokenizer, an evaluation manifest and example code under Apache-2.0. No training or evaluation text is included. Training used QASPER (CC BY 4.0), Kubernetes documentation (CC BY 4.0) and Python documentation (PSF License v2); CUAD (CC BY 4.0) was used for evaluation only.
 
-ThakiCloud's open ranking models now have distinct roles. The EditRank models choose how to rewrite a document; CiteRank chooses which existing passage to cite. Both are designed so that a person can do the final check more easily when a Paxis agent works with internal knowledge.
+ThakiCloud's open ranking models now have distinct roles. The EditRank models ([EditRank-0.6B](https://huggingface.co/ThakiCloud/EditRank-0.6B), [EditRank-Multidomain-4B](https://huggingface.co/ThakiCloud/EditRank-Multidomain-4B)) choose how to rewrite a document; CiteRank chooses which existing passage to cite. Both are designed so that a person can do the final check more easily when a Paxis agent works with internal knowledge.

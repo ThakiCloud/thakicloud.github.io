@@ -29,6 +29,9 @@ header:
 
 이 글은 모델 성적보다 쓰는 법에 무게를 둡니다. Paxis의 Hybrid RAG 뒤에 이 모델을 어떻게 끼우고, 어디서 사람에게 넘기며 무엇은 맡기면 안 되는지를 정리했습니다.
 
+![RAG 에이전트가 인용할 문서를 고르는 4B 모델, Thaki-CiteRank-4B 개념을 형상화한 이미지](/assets/images/citerank-4b-paxis-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 쉽게 말하면
 
 에이전트가 "파드의 기본 재시작 정책은 무엇인가"라는 질문을 받았다고 해 보겠습니다. 검색기는 관련 있어 보이는 문단 열 개를 가져옵니다. 그중에는 답이 적힌 문단도 있고, 주제만 같은 문단도 있고, 옛 버전이라 값이 다른 문단도 있습니다. 검색기 입장에서는 모두 "관련 있음"입니다.
@@ -99,6 +102,6 @@ relevance, head_scores = score(
 
 ## 공개한 것
 
-Hugging Face `ThakiCloud/Thaki-CiteRank-4B`에 병합 가중치, 보조 분류 헤드, 토크나이저, 평가 매니페스트, 예제 코드를 Apache-2.0으로 올렸습니다. 학습과 평가에 쓴 원문 데이터는 포함하지 않았습니다. 학습 데이터는 QASPER(CC BY 4.0), Kubernetes 문서(CC BY 4.0), Python 문서(PSF License v2)이고, 평가에만 CUAD(CC BY 4.0)를 썼습니다.
+Hugging Face [Thaki-CiteRank-4B](https://huggingface.co/ThakiCloud/Thaki-CiteRank-4B)에 병합 가중치, 보조 분류 헤드, 토크나이저, 평가 매니페스트, 예제 코드를 Apache-2.0으로 올렸습니다. 학습과 평가에 쓴 원문 데이터는 포함하지 않았습니다. 학습 데이터는 QASPER(CC BY 4.0), Kubernetes 문서(CC BY 4.0), Python 문서(PSF License v2)이고, 평가에만 CUAD(CC BY 4.0)를 썼습니다.
 
-ThakiCloud가 공개한 문서 순위 모델은 이제 역할이 나뉩니다. EditRank 계열은 문서를 어떻게 고쳐 쓸지 고르는 모델입니다. CiteRank는 이미 있는 문서 중 무엇을 근거로 인용할지 고르는 모델입니다. 둘 다 Paxis 에이전트가 사내 지식을 다룰 때 사람이 마지막 확인을 하기 쉽게 만드는 쪽으로 설계했습니다.
+ThakiCloud가 공개한 문서 순위 모델은 이제 역할이 나뉩니다. EditRank 계열([EditRank-0.6B](https://huggingface.co/ThakiCloud/EditRank-0.6B), [EditRank-Multidomain-4B](https://huggingface.co/ThakiCloud/EditRank-Multidomain-4B))은 문서를 어떻게 고쳐 쓸지 고르는 모델입니다. CiteRank는 이미 있는 문서 중 무엇을 근거로 인용할지 고르는 모델입니다. 둘 다 Paxis 에이전트가 사내 지식을 다룰 때 사람이 마지막 확인을 하기 쉽게 만드는 쪽으로 설계했습니다.
