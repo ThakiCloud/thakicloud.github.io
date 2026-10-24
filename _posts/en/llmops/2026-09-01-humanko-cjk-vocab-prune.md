@@ -105,7 +105,7 @@ flowchart TB
     B -->|"Multi-character pure-Han word tokens<br/>您的 · 贵公司 · 具体时间"| C["54,902 target rows<br/>overwrite W_i with a large negative multiple"]
     B -->|"Single Han characters<br/>開 · 港 · 債 · 權"| D["Kept as-is"]
     C --> E["Chinese words can no longer be generated"]
-    D --> F["Hanja gloss like 개항(開港) still renders"]
+    D --> F["Hanja gloss like gaehang (開港) still renders"]
     E --> G["Real errors 1.81% → 0.18%<br/>Hanja notation survives"]
     F --> G
 ```
