@@ -77,7 +77,7 @@ Much of the gap is format. The stock model matched the per-task output format on
 
 0.997 is a result on the **same distribution** as training. The generated repositories (worlds) are disjoint between train and dev (train 487, dev 44, shared 0), and exact and skeleton duplicates are 0. But all 14 bug templates and all 12 boundaries are shared, so dev is an in-distribution test. On top of that, T4 gold is always `confirmed` and T5 gold is always `rejected`, so the task type itself is a cue.
 
-The sealed held-out test has not been run yet, and there is only one seed. Seeds 2 and 3 are training now, a 27B Format-v2 check job is running, and 4B and 8B are in progress.
+The sealed held-out test has not been run yet, and there is a single training run (seed 20261025). Rather than repeating the same recipe, we will judge quality by independent evaluation, and 4B, 8B and 27B training is in progress.
 
 What we can say is that a 2B model can learn structured judgment and verification-ready output. As the out-of-distribution example shows, real-world performance is unknown.
 
@@ -149,7 +149,7 @@ The benefit is that nothing is tied to one model. If SecProof is retrained or sw
 
 ## 6. What we check next
 
-The order is fixed. First the sealed held-out test, then variance from seeds 2 and 3. After that we configure a read-only security code review agent in Paxis and measure the false-positive rate on clean code, the miss rate on defects, how often an unverified patch is treated as a success, and developer review time. We also check whether the policy gate really blocks unpermitted execution and whether audit logs can reconstruct the process. Out-of-distribution failures, like the tenant filter example here, become the next training data.
+The order is fixed. First the sealed held-out test. After that we configure a read-only security code review agent in Paxis and measure the false-positive rate on clean code, the miss rate on defects, how often an unverified patch is treated as a success, and developer review time. We also check whether the policy gate really blocks unpermitted execution and whether audit logs can reconstruct the process. Out-of-distribution failures, like the tenant filter example here, become the next training data.
 
 ## Wrapping up
 
