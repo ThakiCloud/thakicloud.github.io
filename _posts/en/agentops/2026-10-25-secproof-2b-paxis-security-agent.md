@@ -71,7 +71,7 @@ Dev has 356 cases (T1 124, T2 92, T4 68, T5 72). Compared with stock Qwen3.5-2B:
 | Location accuracy | 0.000 | 0.975 |
 | Composite score S | 0.355 | 0.997 |
 
-Format match is 1.000 for both models, so the gap above comes from judgment and location, not format. To serve as a component inside an agent, structured output has to be stable enough for the next tool to parse, and that held after training.
+Much of the gap is format. The stock model matched the per-task output format only 0.12, 0.00, 0.06 and 0.11 of the time, and 51 of 356 answers hit the length limit; the trained model is at 1.000 on all four tasks. Format-independent judgment shows in T1 balanced accuracy (0.258 to 0.992) and location accuracy (0 to 0.975). The format gain still matters: a component inside an agent has to produce output the next tool can parse, every time.
 
 ### How to read these numbers
 
