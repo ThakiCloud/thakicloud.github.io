@@ -79,16 +79,15 @@ Qwen2.5-14B-Instruct에 zsRE 사실 편집 50개를 고정 순서로 적용합�
 
 | 방법 | 50회 후 CR | 50회 후 RR | 편집당 학습 매개변수 |
 |---|---|---|---|
-| Vanilla (컨텍스트 없음) | 2.9% | 100% | 0 |
-| FT-M | 4.3% | 100% | 70.8M |
-| ROME | 19.1% | 100% | 353.9M |
-| MEMIT | 40.3% | 100% | 353.9M |
-| AlphaEdit | 80.9% | 100% | 70.8M |
-| WISE | 4.6% | 100% | 2.73M |
+| ROME (최강 baseline) | 28.5% |  | 353.9M |
+| MEMIT |  |  | 353.9M |
+| FT-M |  |  | 70.8M |
+| AlphaEdit |  |  | 70.8M |
+| WISE |  |  | 2.73M |
 | Cortex Synaptic (r=1) | 80.6% | 97.2% | 2.73M |
 | Cortex Structural (k=1) | 88.9% | 99.8% | 0.74M |
 
-표의 RR은 편집 방법들이 MMLU/SimpleQA/GSM8K에서 사실상 완전 보존(100% 근접)인 동안, Cortex Synaptic만 97.2%로 미세하게 내려가는 것이 보이고, CR은 AlphaEdit(80.9%)까지 ROME/MEMIT이 19.1%/40.3%로 급격히 떨어지는 것과 대비됩니다. ROME을 최종 CR 최강 baseline(28.5% CR 기준, 본문)으로 잡고 보면, Structural의 88.9%와 Synaptic의 80.6%는 3배 가까운 격차입니다. 매 편집당 학습 매개변수는 Structural 0.74M, Synaptic 2.73M으로, ROME/MEMIT(353.9M)의 1/500에서 1/130 수준입니다.
+본문이 명시하는 숫자만으로 표를 채웠습니다. 편집 방법 5종(FT-M, ROME, MEMIT, AlphaEdit, WISE)은 모두 연속 설정에서 급격히 떨어지고, 그 중 최종 CR 최강 baseline은 ROME의 28.5%입니다. ROME/MEMIT은 편집당 353.9M, FT-M/AlphaEdit은 70.8M 매개변수를 건드리는 동안, Cortex는 Synaptic 2.73M, Structural 0.74M의 새 매개변수만 학습합니다. 50회 누적해도 Structural이 새로 쓰는 매개변수는 37M에 불과합니다. Structural의 88.9%와 Synaptic의 80.6%가 ROME의 28.5%와 가진 격차는, 곧 "어디에 쓰느냐"의 격차입니다.
 
 즉각 효과와 최종 효과의 격차도 분석합니다. Structural은 각 사실을 편집 직후 91.3% CR에서 최종 88.9%로 2.4포인트 잃고, Synaptic은 85.8%에서 80.6%로 5.2포인트, WISE는 52.0%에서 28.0%로 24.0포인트를 잃습니다. Cortex의 최종 우위는 "더 강한 초기 기록"과 "그 다음 업데이트들이 초래하는 더 작은 손실"의 합입니다. 처음 10개 사실을 40회 후속 편집 이후에 재평가하면 Structural이 97.2%, Synaptic이 92.6% 평균 CR를 유지합니다. 출력 종결(반복 또는 길이 제한)은 Structural 0.0%, Synaptic 0.8%로, 50회 누적 adapter가 모델의 생성 행동을 병리학적으로 바꾸지 않았다는 부수적 증거입니다.
 

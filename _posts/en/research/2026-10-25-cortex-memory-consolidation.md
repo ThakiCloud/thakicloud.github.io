@@ -79,16 +79,15 @@ A fixed sequence of 50 zsRE factual edits is applied to Qwen2.5-14B-Instruct. At
 
 | Method | CR after 50 edits | RR after 50 edits | Trainable params per edit |
 |---|---|---|---|
-| Vanilla (no context) | 2.9% | 100% | 0 |
-| FT-M | 4.3% | 100% | 70.8M |
-| ROME | 19.1% | 100% | 353.9M |
-| MEMIT | 40.3% | 100% | 353.9M |
-| AlphaEdit | 80.9% | 100% | 70.8M |
-| WISE | 4.6% | 100% | 2.73M |
+| ROME (strongest baseline) | 28.5% |  | 353.9M |
+| MEMIT |  |  | 353.9M |
+| FT-M |  |  | 70.8M |
+| AlphaEdit |  |  | 70.8M |
+| WISE |  |  | 2.73M |
 | Cortex Synaptic (r=1) | 80.6% | 97.2% | 2.73M |
 | Cortex Structural (k=1) | 88.9% | 99.8% | 0.74M |
 
-The table shows the editing baselines holding MMLU/SimpleQA/GSM8K near full retention (around 100%) while only Cortex Synaptic dips to 97.2%, and the CR side collapsing: AlphaEdit reaches 80.9% while ROME and MEMIT fall to 19.1% and 40.3%. Taking ROME as the strongest baseline by final CR (28.5% in the paper body), Structural's 88.9% and Synaptic's 80.6% are roughly a 3x gap. Per-edit trainable parameters are 0.74M for Structural and 2.73M for Synaptic, about 1/500 to 1/130 of ROME/MEMIT (353.9M).
+The table is filled with the numbers the paper body states explicitly. All five editing methods (FT-M, ROME, MEMIT, AlphaEdit, WISE) fall off sharply in the sequential setting, and the strongest baseline by final CR is ROME at 28.5%. While ROME/MEMIT touch 353.9M parameters per edit and FT-M/AlphaEdit 70.8M, Cortex trains only 2.73M new parameters (Synaptic) or 0.74M (Structural) per edit. Fifty accumulations of Structural writes just 37M new parameters in total. The gap between Structural's 88.9% and Synaptic's 80.6% on the one hand, and ROME's 28.5% on the other, is exactly the gap of where you write.
 
 The immediate-versus-final gap is also analyzed. Structural goes from 91.3% CR right after each edit to 88.9% at the end, losing 2.4 points; Synaptic goes 85.8% to 80.6%, losing 5.2; WISE falls 52.0% to 28.0%, losing 24.0 points. Cortex's final advantage is the sum of stronger initial writing and smaller losses from later updates. Re-evaluating the first ten facts after 40 subsequent edits, Structural holds 97.2% mean CR and Synaptic 92.6%. Output termination by repetition or length limits is 0.0% for Structural and 0.8% for Synaptic at checkpoint 50, incidental evidence that 50 accumulated adapters do not pathologically change the model's generation behavior.
 
