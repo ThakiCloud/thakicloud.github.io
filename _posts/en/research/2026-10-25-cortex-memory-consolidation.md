@@ -28,6 +28,9 @@ A post for teams operating agent platforms who face the decision "do we have to 
 
 > 📄 **Full deep review (DOCX)**: [Download the detailed peer review on Google Drive](https://drive.google.com/file/d/1I5rK3Zzra0p_BfobIvqG-OUdjRiItKhE/view).
 
+![Abstract visual of temporary memory particles flowing into a long-term memory lattice](/assets/images/cortex-memory-consolidation-hero.webp)
+*Memory consolidation from the hippocampus to the neocortex, pictured.*
+
 ## Overview
 
 The context window is temporary RAM with a high rent. Put information in the prompt and the model answers well, close the session and it is gone, and fine-tuning that information into weights afterwards usually lobotomizes the base model. The paper formalizes this problem as Memory Consolidation, or MC: internalize the gains context C gave model M so they survive C's removal, while preserving the capabilities unrelated to C. MC connects context-specified editing, skill learning, and behavioral steering under a single objective. The biological analogy is systems consolidation, the hippocampus moving episodic memory into distributed neocortical representations.
