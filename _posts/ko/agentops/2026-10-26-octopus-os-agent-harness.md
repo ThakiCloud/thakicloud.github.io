@@ -81,11 +81,15 @@ flowchart TB
     L -->|"mark는 검증기에서만"| S
 ```
 
+**골(goal) 토폴로지**는 트윗의 "goals act as real environments" 주장이 가리키는 구조입니다. 모든 태스크는 하나의 골에 속하고, 더 큰 결과물은 관련 골로 가지집니다. 하나의 골이 여러 활성 태스크를 동시에 담을 수 있는데, 독립적인 작업은 병렬로 진행하고 의존 작업은 필요한 결과가 도착할 때까지 가시적으로 기다립니다. 결과가 도착하면 기다리던 작업이 재개됩니다. 프로젝트 페이지 표현대로 "장기 작업이 하나의 가시적 구조로 유지되는" 것이 이 토폴로지의 목적입니다. 에이전트 플랫폼 관점에서, 프로젝트 페이지의 표어 "work that outlives the chat"이 말하는 대로 채팅 세션을 넘어 골이 상태의 경계가 되는 설계가 지속성 문제를 다루는 방식입니다.
+
 **자기 수정의 실제 경로**도 디스크립터입니다. "정책 안에서 에이전트가 goal을 만들고 고치고, interface(트리거)를 바꾸고, 도구를 추가하고, worker를 조직한다." 이 변경은 task와 run을 넘어 유지됩니다. 대표적 트리거는 `world_file_observer`입니다. inbound sensor 인터페이스로, `life.json`이 python3 프로세스를 선언하고 그 프로세스가 자기 movement를 읽고 단일 intake로 아티팩트를 넘깁니다. "할 수 없는 것은 스스로 쓴다(what it cannot do, it can write)"는 이 아키텍처의 뜻입니다. coding worker가 grant된 도구로 기기 드라이버 패키지를 쓰고, 설치·바인딩하면 이후 작업에서 다시 빌드하지 않고 씁니다.
 
 **보안 모델**도 눈에 띱니다. 신뢰 경계 표에서 모델은 "신뢰하지 않음. 출력은 요청이지 권위가 아니다"이고 World의 아티팩트(웹페이지·메시지·파일·MCP 결과)도 "신뢰하지 않음. 모델에게 향한 명령을 taşı고 있을 수 있다"입니다. 런타임은 "payload를 읽지 않고 모델의 말을 아무것도 믿지 않는다." 정책은 각 arrival마다 worker ceiling·EE 체인·authored bindings에서 grant를 재계산하고 grant 밖 요청은 `DeliveryRefused` movement로 기록됩니다. 모델이 run record에 아무리 적어도 권한이 되지 않는 구조입니다.
 
 **원장(ledger)은 이 구조의 기억장치**입니다. `schemas/movement.schema.json`을 보면 movement의 필수 필드가 `from·kind·lamport·seq·to·trace·recorded_at_unix_ms`로, Lamport 시각과 시퀀스가 함께 들어 있습니다. 분산 시스템에서 사건 순서를 정하는 표준 primitive를 원장에 직접 박아둔 셈입니다. 아키텍처 문서는 "인덱스는 캐시지 두 번째 진실원이 아니다. 커널은 인-메모리 인덱스를 유지한다"고 쓰고, 커널이 보는 것은 route·caller·movement 세 가지만이라고 합니다. payload 자체는 커널이 읽지 않는다는 보안 모델과 같은 문법입니다.
+
+`schemas/`에는 JSON Schema 8종이 들어 있습니다. mark·mark_descriptor·movement·delivery_verdict·grant_projection·required_verified_artifact·run_record·verifier_descriptor. 그중 `required_verified_artifact`가 `artifact_label·mark·verifier` 세 필드를 필수로 요구하는 것,이 "mark는 검증기에서만 온다"는 규칙의 형식화된 표명입니다.
 
 **World의 넓이**도 디스크립터로 확인했습니다. `world_*` 인터페이스에는 MCP 서버(github·firecrawl·unity), slack, terminal, image generation, cron, file observer, 심지어 hand gesture control까지 들어 있고, 모델 프로바이더는 anthropic·openai·gemini·vllm·ollama·codex·claude_cli·huggingface·together·groq 등 30종 안팎으로 열려 있습니다. "어떤 모델이든, 어떤 채널이든 디스크립터 하나로 붙는다"는 설계가 문서에 머무르지 않습니다. 폴더가 실제로 그렇게 나열되어 있습니다.
 
