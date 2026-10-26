@@ -1,10 +1,10 @@
 ---
-title: "From Finding a Vulnerability to Verifying the Fix: Building a Security Agent with SecProof-2B and Paxis"
-excerpt: "We released SecProof-2B, a 2B model that judges permission boundaries in agent-runtime code and cites file and line evidence. Its answers are things to verify, and execution rights belong to Paxis policy, sandbox and human approval. This post shows the measured results behind that."
-seo_title: "Thaki-SecProof-2B-Preview: a code security agent built on Paxis - ThakiCloud"
-seo_description: "Thaki-SecProof-2B-Preview is a LoRA-tuned Qwen3.5-2B code security judge (Research Preview). It improved sharply on 356 in-distribution dev cases, then gave a confident wrong answer on a hand-written out-of-distribution repo. This post covers why the Paxis sandbox, policy gate and audit logs matter."
+title: "SecProof 2B, 4B, 8B and 27B on a Sealed Test, and Picking the Model for Paxis Security Review"
+excerpt: "We scored four SecProof models, which judge permission boundaries in agent-runtime code, once each on template families they never trained on. 4B and 27B cleared every pre-registered gate; 2B and 8B each missed one. This post covers what changed when we plugged them into Paxis, and why the model's answer still has to be checked by a sandbox and a policy."
+seo_title: "Thaki-SecProof 2B, 4B, 8B, 27B sealed results and the Paxis security agent - ThakiCloud"
+seo_description: "Thaki-SecProof is a family of LoRA-tuned Qwen-family code security judges. On a single sealed run over held-out template families, 4B and 27B passed gates G1 to G7, 2B failed G4a and 8B failed G4b. In Paxis, 4B and 8B caught a tenant isolation bug that 2B missed, and all three over-confirmed an undecidable case."
 date: 2026-10-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-27
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -25,132 +25,95 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/secproof-2b-paxis-security-agent/"
 ---
 
-If you are putting an LLM into code security review, you have probably found that the model explaining a vulnerability convincingly is the easy part; deciding **how far you can act on its judgment** is the hard part. Thaki-SecProof-2B is a 2B model that judges permission boundaries in agent-runtime code in a structured format, and the conclusion of this post is that however good the model gets, its answer is something to verify, while execution rights must be held separately by a control layer such as Paxis.
+This post is for development and security teams thinking about putting an LLM into code security review. The short version: we scored four SecProof models once each on template families they never saw in training. 4B and 27B cleared every gate we had fixed in advance, and 2B and 8B each missed one. So the Paxis security analysis tool is switching its default model from 2B to 4B in the internal development environment. The model's answer is still something to verify, though, and execution rights stay with the Paxis sandbox, policy and human approval.
 
-The model is on Hugging Face: [ThakiCloud/Thaki-SecProof-2B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecProof-2B-Preview). It is a LoRA adapter on Qwen3.5-2B, the seed 20261025 checkpoint at step 750. It is a Research Preview and not ready for production.
+The released models are LoRA adapters on Qwen-family base models:
 
-## What the model does, and what it does not
+- [Thaki-SecProof-2B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecProof-2B-Preview)
+- [Thaki-SecProof-4B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecProof-4B-Preview)
+- [Thaki-SecProof-8B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecProof-8B-Preview)
+- 27B passed the same evaluation and is being prepared for release.
 
-First, the scope. SecProof is not a SQL injection or general CVE detector. It was trained on small synthetic Python AI-agent-runtime repositories and on 12 named boundaries only:
+## In plain terms
 
-- approval_single_use, approval_tool_binding, tool_action_approval_binding (is an approval token used once, for that tool and that action only)
-- cache_tenant_isolation, rag_tenant_isolation, rag_write_tenant_binding, tool_tenant_binding (is the tenant boundary kept in caches, retrieval, writes and tool calls)
+Think of an airport security checkpoint. SecProof is the officer reading the X-ray screen. It says "open this bag" or "this one is fine" and points at the part of the image it looked at. But when the officer says "fine", the bag does not go straight onto the plane. If something looks off, a second officer opens the bag (the sandbox test), and the checkpoint rules and a supervisor decide whether it passes (Paxis policy and human approval).
+
+This evaluation was like testing the X-ray officer on bag types they had never seen. 4B and 27B passed every item, and 2B and 8B each failed one. The test bags still came from the same factory, though, so there is no guarantee the scores carry over to unfamiliar bags at a real airport.
+
+## What the model does and does not do
+
+SecProof does not look for SQL injection or general CVEs. It was trained on small synthetic Python AI-agent runtime repositories to judge only 12 named boundaries.
+
+- approval_single_use, approval_tool_binding, tool_action_approval_binding (is an approval token used once, and only for that tool and that action)
+- cache_tenant_isolation, rag_tenant_isolation, rag_write_tenant_binding, tool_tenant_binding (do tenant boundaries hold in caching, retrieval, writes and tool calls)
 - memory_trust_promotion, principal_confusion, tool_identity, tool_authorization_scope (trust promotion, principal confusion, tool identity and authorization scope)
-- secret_exposure_output (do secrets leak into output)
+- secret_exposure_output (does a secret leak into the output)
 
-There are four tasks. T1 discovers candidate defects in a repository, T2 verifies one candidate, T4 writes a full-file patch, and T5 judges whether a candidate patch regresses. Verdicts are `confirmed`, `needs_validation` or `rejected`, each with file and line evidence. There is no "safe" output. In this post, a "false confirm" means calling safe code `confirmed`.
+The output is one fixed JSON object. The verdict is `confirmed`, `needs_validation` or `rejected`, with file and line evidence. There is no "safe" output. In this post a "false confirm" means answering `confirmed` on safe code.
 
-## 1. A well-formed answer that was wrong
+## Sealed evaluation: 4B and 27B pass, 2B and 8B fall short
 
-After training, the first thing we tried was one example outside the training distribution. In a hand-written four-file repository, `search.find(tenant, query)` returns documents without filtering by tenant (`app/search.py`, line 10). The correct answer is `confirmed`.
+The development set (DEV) comes from the same templates as the training data, so a high score there only means the model learned this task family. We therefore held 6 of the generator's 60 template families out of training and DEV from the start, and opened them once, after every model had been selected. The pass criteria (G1 to G7) were also fixed before any result was seen. The test mixes vulnerable code, already-fixed code, code with no basis for a decision, and decoys. A decoy is code that looks risky but actually has a guard in place, so it is safe.
 
-The preview model answered `rejected`. It pointed at exactly line 10 and the JSON was valid. But its rationale said the search filters by tenant, and the code does not.
-
-This single case is the thesis in miniature. An answer can have valid format, correct location and a confident tone and still reach the wrong conclusion. One case says nothing about general performance, but for agent design one is enough: if that answer turned into "no vulnerability, skip the check", code with a broken tenant boundary would pass straight through.
-
-Judgment, verification and control are three different jobs.
-
-- Judgment: tell whether a permission boundary is actually broken. SecProof's part.
-- Verification: confirm with an executable test. The isolated sandbox's part.
-- Control: decide and record what to execute based on verified results. Paxis policy and audit logs.
-
-A "vulnerable" verdict must not grant fix permission automatically, and `rejected` must not become grounds for skipping a security check.
-
-## 2. What 900 steps of training showed
-
-Training is SFT on structured security-audit tasks with sandbox-confirmed outcomes as targets. It ran 900 steps on one H200, and step 750 was chosen by a rule fixed beforehand. Training took 1.195 GPU-hours and dev generation 1.354, about 2.55 GPU-hours in total.
-
-Dev has 356 cases (T1 124, T2 92, T4 68, T5 72). Compared with stock Qwen3.5-2B:
-
-| Metric (356 dev cases) | Stock | SecProof-2B |
+| Model | Result | Gate missed |
 |---|---|---|
-| T1 discovery balanced accuracy | 0.258 | 0.992 |
-| T2 verification balanced accuracy | 0.806 | 1.000 |
-| T4 sandbox both-pass (security test and functional test) | 0.000 | 1.000 (68/68) |
-| False-confirm rate (safe code called `confirmed`) | 0.078 | 0.000 |
-| Location accuracy | 0.000 | 0.975 |
-| Composite score S | 0.355 | 0.997 |
+| 2B | Fail | G4a: decoy false confirms were low at 5 of 239 (2.1%), but there was not enough statistical evidence that it beats the same-size base model |
+| 4B | Pass | none |
+| 8B | Fail | G4b: it called 4 of 39 already-fixed cases vulnerable, over the limit of 3 |
+| 27B | Pass | none |
+*Every result is a single run: one training run, scored once.*
 
-Much of the gap is format. The stock model matched the per-task output format only 0.12, 0.00, 0.06 and 0.11 of the time, and 51 of 356 answers hit the length limit; the trained model is at 1.000 on all four tasks. Format-independent judgment shows in T1 balanced accuracy (0.258 to 0.992) and location accuracy (0 to 0.975). The format gain still matters: a component inside an agent has to produce output the next tool can parse, every time.
+2B did not fail because it confirmed too many decoys. The base Qwen3.5-2B itself rarely confirms decoys, so the trained model could not show it was clearly better than the base. 8B had already called safe code vulnerable in 4 of 141 DEV cases, and the same weakness came out larger on the held-out families. Neither model will be retrained. Both stay as Research Previews, and the failure is stated on their model cards.
 
-### How to read these numbers
+4B and 27B scored perfectly on every gate. That also means this test cannot tell them apart. On DEV, 5 of 27B's 6 checkpoints scored perfectly as well, so step 300 was picked by the pre-registered "earliest step wins a tie" rule.
 
-0.997 is a result on the **same distribution** as training. The generated repositories (worlds) are disjoint between train and dev (train 487, dev 44, shared 0), and exact and skeleton duplicates are 0. But all 14 bug templates and all 12 boundaries are shared, so dev is an in-distribution test. On top of that, T4 gold is always `confirmed` and T5 gold is always `rejected`, so the task type itself is a cue.
+## In Paxis: a missed vulnerability and an over-confident answer
 
-The sealed held-out test has not been run yet, and there is a single training run (seed 20261025). Rather than repeating the same recipe, we will judge quality by independent evaluation, and 4B, 8B and 27B training is in progress.
+Separately from the scores, we plugged all three Preview models into the Paxis security analysis tool (secproof_analyze) under identical conditions: the same input, the same prompt, the same Docker sandbox with networking disabled, and the same reconciliation table. Each model ran three times, and all three runs gave the same verdicts.
 
-What we can say is that a 2B model can learn structured judgment and verification-ready output. As the out-of-distribution example shows, real-world performance is unknown.
+| Case | 2B | 4B | 8B |
+|---|---|---|---|
+| Search code that does not filter by tenant | Missed, then the sandbox flagged the conflict | Found, confirmed by the sandbox | Found, confirmed by the sandbox |
+| Code that cannot be judged because the needed file is missing | Over-confirmed, stopped as unverified | Same | Same |
+*On the safe-code case all three ended as not reproduced, and the broken-output case was marked invalid for all three.*
 
-## 3. Using it in Paxis: the target architecture
+In the first case 2B answered `rejected` on vulnerable code. That answer did not pass through, though. The sandbox security test failed, and Paxis recorded a conflict state meaning "the model probably missed this". The second officer opened the bag the X-ray reader had cleared and found the problem.
 
-For a security agent to work in an enterprise it needs repository access rights, a safe place to run verification, and an approval procedure. Paxis treats Skills, Tools, Policies and Audit Logs as resources the platform manages directly, along with MCP tool connections, autonomy policies, isolated sandboxes and on-premises operation. We wrote about the same concern in [our control plane post](https://www.thakicloud.com/tech-blog/en/agentops/enterprise-agents-need-control-plane/), and the product is described in the [Paxis docs](https://docs.thakicloud.com/ko/paxis/) (Korean).
+All three models got the second case wrong. They answered `confirmed` even though the file needed to decide was missing. No test could run, so Paxis stopped at "model judgment only, unverified", and no path ended in "safe". 4B carries this weakness too, so this handling and the approval step for code changes stay as they are after the default model changes.
+
+Median model call latency was about 250 ms for 2B, 480 ms for 4B and 610 ms for 8B. The three models shared one GPU while we measured, so these are not serving numbers. Since a single Web Chat run takes tens of seconds, we judged that paying about 230 ms more to catch the missed vulnerability is the better trade.
+
+## Next steps in Paxis
 
 ```mermaid
 flowchart LR
-  A["1 Review request<br/>approved repo, read-only"] --> B["2 Security audit Skill<br/>trust boundaries, conditions"]
+  A["1 Security review request<br/>approved repo, read only"] --> B["2 Security audit Skill<br/>trust boundaries and conditions"]
   B --> C["3 SecProof<br/>candidate, location, evidence, verdict"]
-  C --> D["4 Isolated sandbox<br/>reproduce, patch, regression"]
+  C --> D["4 Isolated sandbox<br/>reproduce, patch, regression test"]
   D --> E["5 Paxis Policy<br/>analysis and tests allowed"]
-  E -->|"merge to repo"| F["Human approval"]
+  E -->|"apply to repo"| F["Human approval"]
   E --> G["6 Audit Logs<br/>model version, results, approval"]
   F --> G
 ```
-*The six-step target flow. The model sits in step 3 only; the other five steps are all control outside the model.*
+*SecProof is step 3. The other five steps are all controls outside the model.*
 
-1. A developer requests a security review of a PR or change. The agent confirms the approved repository and change scope and starts read-only.
-2. A security audit Skill defines trust boundaries and security conditions. SecProof's data-generation code references Cloudflare's public [security-audit-skill](https://github.com/cloudflare/security-audit-skill) at a pinned commit, with an adapter that maps the synthetic repositories onto that procedure's hunter and verifier roles. That is as far as the repository record goes; the training record format is separate from Cloudflare's report schema. In Paxis, such procedures are managed as reusable Skills.
-3. SecProof emits a structured result: candidate defect, code location, evidence, and whether more verification is needed. The output alone is never the final verdict, and weak evidence or failed verification goes to a human.
-4. An isolated sandbox runs only permitted tests: does it reproduce, does the patch pass, is there a regression. Failures are not hidden.
-5. Paxis Policy sets the execution scope. Read-only analysis and isolated tests are allowed; merging into the repository requires human approval. Model confidence is not grounds to widen permissions.
-6. Repository and commit, model version, code location, sandbox result, policy decision and approval are linked in Audit Logs so the process can be reconstructed later.
+In the internal development environment, the default model for secproof_analyze moves from 2B to 4B. Only this security analysis tool changes its model; the LLM behind the Paxis agents stays the same. After the switch we rerun the regression tests through the real Web Chat path. Once 27B is released we will compare it with 4B on the same inputs and use it as the higher-tier option only if it actually does better.
 
-Put the out-of-distribution example through this flow. If the model says `rejected`, step 4 runs an isolated test that searches as tenant A and checks whether tenant B documents come back. If they do, the model's verdict and the sandbox result conflict, and that conflict is itself the signal for a human, recorded in step 6. The point of the structure is that a wrong model answer does not pass through unchallenged.
+There is no production deployment yet. This tool runs the tests of the code under review directly in a sandbox, and until we harden the isolation settings of the shared sandbox further it is for internal validation only.
 
-These six steps are the **target architecture**. We have not measured a real Paxis and SecProof integration, latency, cost savings or agent success rate, and this post does not claim any.
+Because the model and the platform are kept separate, this switch is a single model setting. The Skills, Tools, Policy, sandbox and Audit Logs are the same ones we used with 2B. For the wider background, see [the agent control plane post](https://www.thakicloud.com/tech-blog/en/agentops/enterprise-agents-need-control-plane/) and the [Paxis docs](https://docs.thakicloud.com/ko/paxis/).
 
-## 4. Role-specific models instead of one big model
+## What these numbers do not tell you
 
-Searching security documents, judging an incident and judging code are different jobs, so ThakiCloud uses a model per role.
+- **The sealed test is synthetic code too.** It uses template families the models never trained on, but the same generator. 4B and 27B passing means they cleared pre-set numeric criteria. It does not show how they perform on real enterprise code or whether they are safe in operation.
+- **Everything is a single run.** One training run and one sealed scoring per model. Seed variance was not measured.
+- **There is one deviation from the pre-registration.** The sealed generation jobs failed to finish twice for infrastructure reasons and were rerun, and the rerun outputs were not byte-identical to the earlier ones. The pre-registration required reruns to reproduce the same artifacts, so that condition was not met (retry_output_sha_mismatch). The trained 2B model's verdicts matched on all 366 cases across the two runs, and only the one completed run was scored. The deviation is on record and was accepted as is.
+- **The Paxis comparison covers two cases.** That is not enough to rank model sizes or to claim production safety.
 
-```mermaid
-flowchart TB
-  subgraph P["Roles inside Paxis"]
-    S["Skills<br/>audit procedure"]
-    T["Tools / MCP<br/>repo, tests"]
-    O["Policy, Sandbox, Audit Logs"]
-  end
-  E["Thaki-SecEmbed-8B-Preview<br/>security documents, evidence retrieval"] --> S
-  I["SOC-IER-4B v0.1<br/>evidence-based incident judgment"] --> S
-  X["Thaki-SecProof-2B-Preview<br/>code security judgment, verification output"] --> T
-  M["Metis<br/>model inference service"] -.-> E
-  M -.-> I
-  M -.-> X
-  T --> O
-```
-*The three models are called by role, Metis serves inference, and execution control lives on the Paxis side, not in any model.*
+## Summary
 
-The three are [Thaki-SecEmbed-8B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecEmbed-8B-Preview), [SOC-IER-4B v0.1](https://huggingface.co/ThakiCloud/SOC-IER-4B-v0.1) and [Thaki-SecProof-2B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecProof-2B-Preview). After 2B we are preparing 4B, 8B and 27B variants (4B and 8B are training, 27B is in a format check), and we may later route by task size. We have not compared speed, cost or success rate across sizes, so we make no cost-saving claim.
+Of the four SecProof models, 4B and 27B cleared the pre-set criteria on templates they never trained on, and 2B and 8B each failed one item. In Paxis, 4B found the tenant isolation bug that 2B missed, so it becomes the default. All three still over-confirmed code they could not actually judge. Changing the X-ray officer does not remove the officer who opens the bag, or the rules for letting it through.
 
-## 5. What stays when the model changes
+What is left is not building more models. It is showing how useful the models we already have are in real enterprise security code review.
 
-Running a job needs much more than a model.
-
-| Component | Responsibility |
-|---|---|
-| SecProof model | Code security judgment and structured verification output |
-| Paxis Skills | Audit procedure and work steps |
-| Paxis Tools, MCP | Repository and test tool connections |
-| Paxis Policy | Analysis, fix and approval permissions |
-| Paxis Sandbox | Isolated test execution |
-| Paxis Audit Logs | Record of judgments and executions |
-| Metis | Model inference service |
-
-The benefit is that nothing is tied to one model. If SecProof is retrained or swapped for the 4B, the policies, tools and evaluation setup are reused as they are. That is why model building and the operating platform are kept separate.
-
-## 6. What we check next
-
-The order is fixed. First the sealed held-out test. After that we configure a read-only security code review agent in Paxis and measure the false-positive rate on clean code, the miss rate on defects, how often an unverified patch is treated as a success, and developer review time. We also check whether the policy gate really blocks unpermitted execution and whether audit logs can reconstruct the process. Out-of-distribution failures, like the tenant filter example here, become the next training data.
-
-## Wrapping up
-
-The point of this post is to turn explanation into verification and verification into controlled execution. SecProof is a model specialized for code security judgment, and Paxis manages what that judgment is allowed to lead to. A good security agent separates what is confirmed from what is not and leaves verifiable results within the scope it is allowed.
+*First published on 2026-10-25 with the SecProof-2B release, and rewritten on 2026-10-27 with the sealed results for all four models and the Paxis comparison.*
