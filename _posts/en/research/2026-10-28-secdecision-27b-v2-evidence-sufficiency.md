@@ -83,7 +83,11 @@ The heads' probability distributions are not the output. On top of them sits a p
 
 Support requires the status to be SUPPORTED, no unsatisfied required fact, and at least one piece of evidence in the SUPPORT direction. Refutation requires not only the status REFUTED but an observation-based basis. Concretely, at least one REFUTE-direction piece of evidence whose source_type is collection_attestation or telemetry counts as a refutation basis. In courtroom terms: even when declaring the defendant not guilty, the judge demands directly observed evidence, not a witness's testimony. A non-observed document like "I read some reference" (attack_reference) cannot serve as a refutation basis.
 
+The same principle applies to the absence of a record. "A command is not in the logs" does not mean "the command did not run." It may simply not have been collected yet. Until the collection scope and completeness are verified, absence cannot be a refutation basis.
+
 A conflict is judged when the status is CONFLICTED, or when there is at least one piece of evidence in each of the SUPPORT and REFUTE directions. can_conclude becomes True only after passing all these gates and the sufficiency score crossing the pre-set threshold τ. τ is 0.9995245433226797. It was chosen on the calibration split as "the lowest threshold whose False-ENOUGH rate is at or below 2%", with maximum recall among those. It was chosen without seeing the results, so it is not changed after the results are seen. The moment you retune the threshold against a different split, the number is no longer trustworthy.
+
+Rule B was learned and corrected in earlier experiments. In the previous regression run, the macro F1 rose above the stock (0.627 → 0.731), but the false-conclusion rate rose with it (1.79% → 3.19%), and it did not pass the pre-registered gate. The pre-amendment rule was conservative in the refutation direction: on cases where the evidence overturns the claim, conclusion recall stayed around 0.48, and refutation-direction recall on the calibration split was 0.048. The amendment that requires an observed refutation basis (refutation coverage gate correction, amendment seq 274) is Rule B, and on the sealed TEST it produced a REFUTE_COVERAGE recall of 0.9985. This too was fixed before the TEST was opened.
 
 The support/refute evidence IDs in the output are picked only from the input's evidence_ids. An ID that is not in the input therefore cannot structurally appear in the output.
 
@@ -162,3 +166,4 @@ In a security agent, the moment you conclude is the moment action begins. The mo
 
 - [From vulnerability discovery to fix verification: building a security agent with SecProof-2B and Paxis](/tech-blog/en/agentops/secproof-2b-paxis-security-agent/)
 - [One 27B model running answer generation and evidence judgment together: a shared backbone that only the last 4 layers diverge](/tech-blog/en/research/shared-backbone-evidence-gate-27b/)
+- [Thaki-CiteRank-4B: a 4B model that picks what a RAG agent should cite](/tech-blog/en/agentops/citerank-4b-paxis/)
