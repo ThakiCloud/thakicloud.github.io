@@ -1,0 +1,182 @@
+---
+title: "The Twin Registry: An Analytical Paper on the Twin (Near-Duplicate Skill) Accumulation Law, 4-Channel Routing Error Attribution, and the Merge vs Rewrite Dedup Dividend in a Self-Evolving 2,200-Skill Registry"
+seo_title: "The Twin Registry: Twin density law, 4-channel error attribution, merge vs rewrite dedup dividend, aging in place, self-evolving 2,200-skill agent harness - ThakiCloud"
+seo_description: "In a self-evolving 2,200-skill registry where a nightly LLM curator rewrites descriptions and abstentions synthesize new skills, accumulating twins (near-duplicates) age routing top-1 even when the registry does not grow. This paper, established by ThakiCloud, promotes description-space density to the third axis of registry hygiene and presents analytically the breakpoint retreat law, 4-channel error attribution (retrieval failure, benign twin, malignant collision, coverage gap), the break-even density of merge vs rewrite at fixed cardinality, and arm-dominance rules based on functional redundancy. The 3-protocol measurement program is pre-registered with falsification criteria, and every value is a recorded anchor, first-order arithmetic on those anchors, or a labeled model prediction."
+excerpt: "Routing top-1 ages even when the registry does not grow. We introduce The Twin Registry, ThakiCloud's paper that establishes the twin accumulation law, 4-channel error attribution, and the merge vs rewrite dedup dividend analytically. It is an analytical paper, so every value is a prediction, not a measurement."
+date: 2026-10-29
+tags:
+  - near-duplicate-skills
+  - skill-registry-density
+  - routing-error-attribution
+  - deduplication-dividend
+  - merge-vs-rewrite
+  - self-evolving-harness
+  - embedding-similarity
+  - top-1-accuracy
+  - agent-harness
+  - sra-bench
+categories: [research]
+author_profile: true
+toc: true
+canonical_url: "https://thakicloud.com/tech-blog/en/research/twin-registry-dedup-dividend/"
+audiobook: "https://drive.google.com/file/d/1xyiIINp60nMR2S2MlFkkrQT_iOnT2Oew/view"
+audiobook_label: "▶ Listen: 5-minute briefing"
+audiobook_note: "NotebookLM audio overview (AI-generated)"
+---
+
+Engineers who run LLM agents in production and grow a skill registry into the thousands, or cloud and AI teams about to build one, should read this post.
+
+The one-line conclusion. The registry need not grow for routing to age quietly. The curator loop rewrites descriptions nightly and synthesizes new skills from router abstentions. The density of the near-duplicates it produces quietly pushes the top-1 recommendation on the hot path down.
+
+One clarification before you read on. This is an analytical paper. Every number in the body is one of three kinds: a recorded anchor, first-order arithmetic on that anchor, or a labeled model prediction. There is not a single new measurement. The measured numbers belong to the measurement program the paper pre-registered.
+
+![Illustration of the core idea of The Twin Registry: An Analytical Paper on the Twin (Near-Duplicate Skill) Accumulation Law, 4-Channel Routing Error Attribution, and the Merge vs Rewrite Dedup Dividend in a Self-Evolving 2,200-Skill Registry](/assets/images/twin-registry-dedup-dividend-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## In plain terms
+
+An analogy: the phone book. Imagine a phone book that someone rewrites in full every night. One restaurant's address appears on three near-identical pages with slightly awkward wording. When someone looks the restaurant up, the hand lands on the wrong page. The more such near-duplicate pages accumulate, the more often the hand lands wrong, even though the book does not get thicker.
+
+The twin in this paper is exactly such a near-duplicate page. The agent harness's skill registry holds 2,200 skills, and the curator loop rewrites descriptions and synthesizes new entries every night. The router picks the one page that best fits the user's query, the top-1 skill. As twins accumulate, near-duplicate pages push each other out for the same query, and the hand lands on the wrong side.
+
+There are two ways to clean this up. Merge consolidates three near-identical pages into one and fills the freed pages with different businesses. Rewrite keeps all the pages but rewrites the descriptions until they clearly tell apart. The paper gives a closed-form formula for the density at which cleanup pays off its cost. It also gives a rule for choosing which cleanup, based on how similar the skills are.
+
+Put simply: even if the phone book does not get thicker, near-duplicate addresses pile up page by page. The hand holding the receiver lands on the wrong page a little more often every day. This paper, The Twin Registry, computes that rate of going wrong, and the way to clean it up, as numbers.
+
+<!-- nlm-visual -->
+![Key-concept summary infographic 1](/assets/images/posts/news/twin-registry-dedup-dividend/en/nlm-infographic-1.webp)
+*Infographic generated by NotebookLM from the sources.*
+
+## What the paper does
+
+The setup. This paper looks at ThakiCloud's self-evolving agent harness. Each skill is a directory, and the only routing signal is the one description in SKILL.md. A hybrid BM25+embedding router picks the top-1 skill every turn, and the top-5 neighbors are kept for monitoring. The registry is not static. Every night the LLM curator rewrites descriptions, and the collateral hazard by edit type runs semantic shift > truncation > paraphrase. When the router abstains, a new skill is synthesized.
+
+The churn is fast. The registry grew from about 1,600 to 2,029 in roughly 3 weeks (July to September 2026). In that time, the fixed 63-case gold monitor, the SRA suite, quietly lost 21 cases to churn, leaving only 42 valid. Rescoring on the valid cases, Recall@5 was 86.7% and strict top-1 was 48.9%. Recall still looks healthy. The trap starts here.
+
+Earlier papers in the series have already mapped three hygiene axes. First, the cardinality (size) axis. In the survival model, strict top-1 falls as the registry grows, and at the recorded calibration the 0.50 breakpoint comes out at about 1,950 skills, already crossed. Going from N=512 to 2,029, strict top-1 dropped 26.2 points while Recall@5 moved 0.0 points. Second, the verbosity axis: the description-length frontier moved from 500 to 2,200, with an uncertain sign. Third, the fixed-size composition axis: with quality held fixed, strict top-1 falls by 1/(m+1) for each of m duplicate copies. After measuring those three axes, one axis remains to be measured over time: density, the axis of how much the live curator loop accumulates near-duplicate twin descriptions. The September 2026 redundancy study had already flagged that misses concentrate on three known fine-grained pairs, and this paper lifts that flag into a measurable axis. The N=2,234 the analysis keys is the concrete size recorded in that redundancy study. It is not a claim about the current size but a declared baseline design choice, and the cited series reports the live registry at about 2,200 (October 2026).
+
+The recorded anchors this paper uses are collected in the table below.
+
+| Recorded anchor | Value |
+|---|---|
+| Survival model P_top1(N)=r*exp[-p(N-1)] calibration | r=0.867, p=2.83x10^-4 |
+| Breakpoint (accuracy 0.50) | about 1,950 skills (already crossed) |
+| Operating point (N=2,029) | Recall@5 86.7%, strict top-1 48.9% |
+| Key baseline | N=2,234 (September 2026 redundancy study) |
+| SRA monitor | 63-case gold, 42 valid |
+| Collateral suite | about 300 cases (SRA-CI shadow-routing gate) |
+
+## The denser the twins, the farther the breakpoint retreats
+
+The first contribution. The curator loop is a duplication engine. Every night, drifted rewrites that land on neighbors, i.e., within the twin threshold tau of cosine similarity, and skill synthesis from abstentions grow the twin mass. Meanwhile, usage-ranked culling cuts nothing by similarity. Its gate is K*>=220 and its economic break-even is at or below 100, so similarity-based trimming never happens. Without an explicit density gate, then, twin mass is monotonically non-decreasing, and its nightly increment mu is the subject of this paper.
+
+Composing the recorded survival model with the recorded composition model gives the breakpoint N*(rho) at which accuracy falls below the threshold alpha. The form is N*(rho) = 1 + ln(r/alpha) / [p(1+gamma*rho)]. Rho is duplicate density, the fraction of redundant copies inside twin clusters ((N-N_unique)/N). Gamma is the per-duplicate collision multiplier, one of the two recorded sensitivities, 0.5 or 1.0.
+
+| Twin density rho | Safe size N*(rho) |
+|---|---|
+| 0.0 | about 1,946 (matches the recorded about 1,950) |
+| 0.2 | about 1,622 |
+| 0.4 | about 1,390 |
+
+*Table values are first-order arithmetic on the recorded anchors (r=0.867, p=2.83x10^-4, alpha=0.50, upper gamma=1.0), not measurements.*
+
+As twins get denser, the registry size that was safe shrinks. At the same registry size, the denser the twins, the sooner the breakpoint is met.
+
+![Break point N*(rho) retreats as twin density grows](/assets/images/posts/research/twin-registry-dedup-dividend/fig1-breakpoint.webp)
+*The shape in which the model-predicted accuracy breakpoint (the registry size at which strict top-1 falls below 0.50) retreats monotonically with duplicate density rho. An analytical model example drawn with the recorded calibration (r=0.867, p=2.83x10^-4) and the upper-end gamma=1.0 sensitivity, not a measurement.*
+
+At the key baseline N=2,234, the headroom H(rho)=N*(rho)-N is already -288 at rho=0. With zero twins, the breakpoint has already been crossed, and twins only deepen the overshoot. The rate of change per unit twin density, dH/drho, is about -1,351 slots at rho=0.2 and gamma=1.0. That is a rate at which the overshoot deepens by about 135 slots for each 0.1 rise in twin density. At rho=0 the slope is about -1,945 for gamma=1.0 and about -972 for gamma=0.5. Gamma halves the slope.
+
+The corollary attached here, aging in place, is the most dangerous. With N fixed at 2,234, dP/dt = -P(N,rho) * p(N-1) * gamma * mu. At rho=0.2 and gamma=1.0, the model composition gives accuracy P of about 0.4 (the exact value is in the table below). Substituting mu=0.01 per night, an illustrative assumption, dP/dt is about -0.26 points per night in strict top-1 (a model prediction under assumed inputs). Mu is the primary output of P1.
+
+| Aging in place (N fixed at 2,234) | Value |
+|---|---|
+| Model accuracy P (rho=0.2, gamma=1.0) | 0.406 (model prediction) |
+| Twin production rate mu | 0.01 per night (illustrative assumption, P1 primary output) |
+| Nightly drift dP/dt of strict top-1 | about -0.26 points (model prediction under assumed inputs) |
+
+Even without the registry growing, top-1 leaks away a little every day. Worse, this rate is structurally invisible to a recall-centric monitor. The 1% per-case design point over the 42 valid cases corresponds to about 0.4 case flips per sweep. Against the recorded powers, such sweeps are caught with about 34 to 47 percent probability at the 1% rate and about 57 to 72 percent at the 2% rate. That is, they are missed with 28 to 66 percent probability (first-order arithmetic on recorded anchors). The dashboard stays quiet while top-1 is shaved by a fraction of a case per sweep.
+
+So the paper gives a decision rule for the density gate. Turn the gate on the moment the per-case flip rate induced by a twin-producing sweep exceeds the 1% design point of the 300-case collateral suite. The rule is stated without numbers, and the twin map (P1), which reads mu directly, takes on that role.
+
+## Errors split into four channels
+
+The second contribution. A strict top-1 miss falls into one of four channels. Channel A is retrieval failure: the gold is not in the top-5, the recorded channel of about 13 points. Channel B1 is benign sibling: the returned skill is a twin of the gold, so the miss is functionally correct. Channel B2 is malignant collision: similar but wrong, an inter-cluster collision, the recorded about 38-point collision mass minus B1. Channel G is coverage gap: no skill matching the query exists in the registry to begin with.
+
+G was added because of the recorded ORACLE ceiling. With 1,600+ skills in a mixed-language regime, even a perfect hand-built decomposition reached only 63.6% step coverage. The 36.4-point residual (first-order arithmetic on recorded anchors) is mass that no routing improvement can harvest.
+
+![Recorded top-1 error mass by channel](/assets/images/posts/research/twin-registry-dedup-dividend/fig2-error-channels.webp)
+*The shape in which, at the recorded operating point N=2,029, the strict top-1 error mass splits into retrieval failure (about 13 points) and ranking collision (about 38 points) and concentrates in the collision channel at 2.9 to 1. An analytical model example, not a measurement.*
+
+At the recorded operating point (N=2,029), the top-1 error mass is about 38 points of collision and about 13 points of retrieval failure. It concentrates in the collision channel at 2.9:1. Twin-attributed misses are exactly the B1 channel, and the identity share_B1 = share_B * c_twin holds exactly. Share_B is 38/(38+13), about 0.75 (first-order arithmetic on recorded anchors). C_twin is the fraction of collision misses in which the gold and the returned skill sit in the same tau-cluster. C_twin is what the P2 protocol measures, not a value to insert as an assumption. Substituting the illustrative input c_twin=0.5 gives share_B1 of about 0.37. That is, about 37% of the recorded (A+B) top-1 error mass is attributed to twins (a model prediction under assumed inputs). The rest is retrieval failure (A), malignant collision (B2), and the unrecorded coverage gap (G).
+
+The paired cluster-mass relationship carries the predictive power. Under the recorded symmetry result, B1 = C * E[m/(m+1)] (a model prediction). C is the cluster-win mass (P1 output), and the per-query split m/(m+1) is 1/2 at m=1, 2/3 at m=2, and 3/4 at m=3. The series recorded the collision mass but did not record how concentrated that mass is in confusable clusters. C_twin is the primary output of P2.
+
+The second structural result is margin concentration. For a flip to occur, the score margin must fall inside a perturbation ball of radius rho_eff. The dense-side quantization error decays linearly in the fusion weight and enters the fused score as a single dense term. Background candidates are spread across N, so the per-candidate flip hazard scales like 1/N. A twin cluster packs m candidates into O(rho_eff) near gold. The local flip hazard therefore scales with the local twin mass rho_local, not the global 1/N. The twin cluster amplifies the flip risk created by quantization and paraphrase through local density.
+
+The query side has a mirror. The recommendation-set Jaccard similarity between two paraphrases of the same intent sits well below the baseline, whether the rewrite is cosmetic or constraint-adding (table below, about 6,000 runs). Near-duplicate inputs produce similar unstable rankings under structure-free ranking.
+
+| Query-side paraphrase brittleness (recorded) | Value |
+|---|---|
+| Cosmetic-rewrite recommendation-set Jaccard | 0.288 |
+| Constraint-adding-rewrite Jaccard | 0.135 |
+| Baseline | 0.50 to 0.6x |
+| Scale | about 6,000 runs |
+
+The paper defends the attribution above against three false-attribution modes. F1 is scoring artifact: index staleness can masquerade as density, and a stale entry adds the expected collision Delta_lambda. So P2 rescores the same registry with a fresh index and attributes only the difference to staleness. F2 is malignant collision: a twin pair whose tasks are opposites is negative transfer. So the rewrite arm of P3 watches whether new confusable pairs form outside the cluster. F3 is the cost channel: if an attributed miss is recovered cheaply downstream, the dividend vanishes (recorded miss pricing). So P3 measures end-to-end cost with the recorded per-task ledger.
+
+## At fixed size: merge or rewrite
+
+The third contribution. At the key baseline N=2,234, with N fixed, the paper compares two cleanups. MERGE (M) consolidates each tau-cluster into one canonical skill and back-fills the vacated slots with individual capabilities. REWRITE (W) keeps all skills and rewrites the cluster's descriptions until the intra-cluster cosine falls below tau (differentiation). Since both arms hold N fixed, per-query router inference cost does not change (flat inference cost). Only the one-time intervention cost and accuracy change.
+
+On accuracy, both arms recover, to first order, the recorded symmetry loss m/(m+1) of their own cluster back to zero. M additionally removes the duplicate mass itself. N_eff falls from N(1-rho)+N*rho/(m_bar+1) toward N(1-rho_M). The collision channel shrinks, the dense index gets smaller, and the recorded staleness cost goes down. W, holding N_eff, gains only within-cluster symmetry recovery and the removal of within-cluster extreme scores under averaging (a log cluster size deduction).
+
+The cost is C_int = C_curator + C_reembed + C_gate. M's back-fill synthesis is priced in time at the recorded 24x speed (median 1.2 days vs 29.0 days, individual authorship). W patches m_bar+1 descriptions in place (m_bar if the canonical member is pinned). C_reembed re-embeds the touched entries at the recorded index cadence. C_gate is the cost of running SRA-CI shadow routing once over the 300-case collateral suite. The value of the misses avoided is Delta P * V_miss * Q. V_miss is the per-task miss price and Q is the nightly task volume. Setting the two equal gives the break-even density reduction in closed form.
+
+| Break-even density reduction | Formula |
+|---|---|
+| Delta rho_be | C_int / [P * p(N-1) * gamma * V_miss * Q] |
+| With P=0.406 (model value), p(N-1)*gamma=0.632 substituted | about 3.90 * C_int / (V_miss * Q) |
+
+Every cost parameter of C_int is a pre-registered input of P3, and the paper gives a formula, not a number.
+
+![Merge versus differentiate-rewrite at fixed cardinality](/assets/images/posts/research/twin-registry-dedup-dividend/fig3-arm-decision.webp)
+*The decision structure in which the functional redundancy o of a twin cluster is compared against a pre-registered crossover to choose MERGE (back-fill after consolidation) or REWRITE (in-place differentiation). A conceptual example (schema) of the arm-dominance decision rule; it carries no quantitative claim.*
+
+Which arm wins is decided by the functional overlap o. O is measured by SRA case co-coverage plus LLM-judged task equivalence, and is pre-registered. If o is at or above the pre-registered crossover o*, that is, if the twins are nearly identical, M dominates. The symmetry recovery is the same, and M additionally gets N_eff recovery and index shrinkage, whereas W cannot tell functionally identical skills apart even after rewriting. Given the dilution property of the request-skill gap, and tool proliferation at MCP scale where names are the same and descriptions similar, differentiation is not trustworthy.
+
+If o is below o*, twins that differ by one parameter or one verb, W dominates. It recovers the full symmetry loss at lower curator cost, with no coverage churn. That is because semantic-shift edits are the largest class of collateral hazard, and culling below K*>=220 would lose the precision maintenance. The boundary o* equates the arms' curator-cost difference to the per-cluster N_eff consolidation effect, and P3 finds it empirically. If the proposition is the model, P3 is the part that measures which arm wins.
+
+## The measurement program is the contribution
+
+The fourth contribution. The paper pre-registers the measurement of the density axis together with its falsification criteria. It states explicitly that the program itself, rather than the results, is the contribution.
+
+| Protocol | What it measures | Outputs and decision rule |
+|---|---|---|
+| P1 twin map | Embeds every description in the snapshot registry and, with a threshold-aware executor that stops after W consecutive failed candidate searches at each value of the pre-registered tau grid (0.85, 0.90, 0.95), counts tau-edges and forms connected components | rho_hat, cluster size distribution, mu_hat (twin production rate) from consecutive nightly snapshots; compare mu_hat to the SRA-CI 1% per-case design point, and if it exceeds it, the density axis binds before the size axis |
+| P2 attribution | Runs the frozen SRA suite, tests every top-1 miss for same-cluster membership with P1's tau-graph, and assigns to A/B1/B2/G | share_B1 and c_twin; F1 is controlled with a fresh-index control |
+| P3 intervention | Four arms: B0 (no-intervention baseline), M (merge), W (rewrite), RC (random-cluster null) | Every arm is evaluated at the same N with SRA + collateral suite and the SRA-CI shadow gate; end-to-end task cost is measured with the recorded per-task ledger (token spend + downstream recovery) and converted into the recorded deadline currency |
+
+The RC arm spends the cheaper arm's edit budget on a random skill set rather than a cluster, killing the null that any curation improves routing. The falsification criteria are three. F1: if the arm's gain disappears under the fresh-index control, it is staleness attribution. F2: if the rewrite creates new confusable pairs outside the cluster, it is malignant collision. F3: if the accuracy dividend cannot survive full cost accounting, it is the cost channel.
+
+## So what should you change
+
+For ThakiCloud, the paper finds the failure mode the nightly curator loop creates itself: the near-duplicate accumulation that erodes the router top-1 as the registry passes 2,000 skills. And it quantifies that size. It gives a merge-vs-rewrite dedup gate with the break-even density reduction in closed form, keeping a 2,200+ skill registry routable at flat inference cost.
+
+For teams running similar harnesses, the actionable rule is short. Do not leave the recall-centric monitor as the only dashboard. Turn on the density gate the moment the per-case flip rate of a twin-producing sweep exceeds the 1% design point of the 300-case collateral suite. Before deciding between merge and rewrite, read the twin production rate mu directly with the twin map (P1).
+
+Agent ecosystems get shared and grow to the scale of community-contributed skill registries. Then description-space density stops being one organization's internal affair and becomes a public-infrastructure problem. The structure transfers to adjacent systems. In 100,000 (100K) scale community hubs and 111,000 (111K) pool public registries, density is the first binding constraint (model expectation). The 367,174-tool MCP proliferation is a density problem with a W-arm answer. Knowledge-graph predicates that are up to 30% potentially redundant also have the same M-vs-W two-arm structure. Agent memory maintenance and federated skill evolution correspond to the P1 twin map + P2 channel test, and to a patch-space M-arm. One MoE analogy too, with a caveat. The shape in which twin clusters steal top-1 mass is structurally the same as the shape in which overlapping experts steal load. If MoE's answer is load control, the answer here is description-space dedup. No claims are made about training dynamics.
+
+<!-- nlm-visual -->
+![Key-concept summary infographic 2](/assets/images/posts/news/twin-registry-dedup-dividend/en/nlm-infographic-2.webp)
+*Infographic generated by NotebookLM from the sources.*
+
+## What to doubt
+
+The limits, in the order the paper itself wrote them down. First, there is a single calibration point. Since r and p are estimated from one production point, the entire survival family inherits that uncertainty. It is the position of calibrating a whole phone book from a one-page example. The pre-registered tau grid (0.85, 0.90, 0.95) bounds but does not remove the sensitivity of the twin definition. Second, rho_hat, mu_hat, and c_twin are estimates pending P1 and P2, not measurements. Third, the W arm carries a separability assumption. The arm-dominance proposition presumes that functionally distinguishable skills can be differentiated below tau, and collapses into the M regime if the skills are nearly identical. In phone-book terms, if the three pages really are the same restaurant, no rewriting can tell them apart, so merge is the answer. Fourth, the fixed-N assumption. The live registry keeps growing, and with mu>0 plus N growth, the headroom differential is strictly worse than either effect alone. The joint trajectory is a P1 output. Fifth, one embedding model, one harness. There are no cross-model or cross-harness claims. Sixth, cross-lingual confusability has a blind spot. The recorded repair regime mixes Korean and English queries, and the twin definition does not model this. Finally, this is an analytical paper. Every labeled model prediction is a pre-registered prior, not a result. The measured numbers belong to P1-P3, and if they do not fill in, the claims die by the falsification criteria above.
+
+---
+
+The paper's detail page and accompanying materials are available here: [The Twin Registry](https://huggingface.co/datasets/thaki-AI/daily-paper-2026-10-29-twin-registry-dedup-dividend)
+
+*This is an analytical paper. The numbers in the body are not measurements but recorded anchors, first-order arithmetic on those anchors, and labeled model predictions, and the assumed inputs used as examples (c_twin=0.5, mu=0.01, etc.) are the role that P1-P3 measurements will replace.*
