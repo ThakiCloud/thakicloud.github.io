@@ -20,10 +20,19 @@ toc: true
 toc_label: "Table of Contents"
 lang: en
 permalink: /en/research/ko-voicepersona-e4b/
-canonical_url: "https://thakicloud.github.io/en/research/ko-voicepersona-e4b/"
+canonical_url: "https://thakicloud.com/tech-blog/en/research/ko-voicepersona-e4b-en/"
 ---
 
-This is for teams building a Korean voice assistant or mascot. KO-VoicePersona-E4B answers in speakable Korean of 90 characters or fewer, calls a tool instead of inventing facts, and scored 0.78 tool-call accuracy and 0.88 persona retention on an independent set. However, 36% of its replies are repeated stock phrases, and a real speech recognition and synthesis loop has not been evaluated.
+This is for teams building a Korean voice assistant or mascot. This post introduces a short-speaking Korean voice persona model. The model answers in speakable Korean of 90 characters or fewer, calls a tool instead of inventing unknown facts, and scored 0.78 tool-call accuracy and 0.88 persona retention on a hand-written independent set of 58 dialogs. It also keeps the rule of one or two sentences, spelling out numbers and English the way they sound. However, 36% of its replies repeat the same stock phrases, and the real speech recognition and synthesis loop has not been evaluated yet. The limits are reported alongside.
+
+![Illustration of the core idea of KO-VoicePersona-E4B: A Korean Voice Persona Model That Speaks Short and Checks Facts With Tools](/assets/images/ko-voicepersona-e4b-en-hero.webp)
+*A visual metaphor for the article's key idea.*
+
+## In plain terms
+
+Think of a radio show host. The host does not answer every question at length; it answers in one or two lines. A number or fact it does not know on air is not invented; the host checks with the studio producer and speaks only that answer. And it keeps the show's register from the first minute to the last.
+
+This model is that host in software. The under-90-character answers are the show's register, tools like `lookup` are the producer, and the independent evaluation scores rate the hosting ability. In one line, the model is **a host who does not talk at length, checks what it does not know, and keeps its register**. It is named KO-VoicePersona-E4B: a thin adapter trained on top of the Nemotron 3.5 Bolt E4B base introduced below.
 
 ## What Nemotron 3.5 Bolt E4B is
 
@@ -65,7 +74,7 @@ The biggest change is persona role retention. The base scores 0.13 and nearly lo
 - The evaluation dialogs are written text, not real user speech.
 - No real ASR and TTS loop was evaluated, so recognition errors and synthesis quality are not in these numbers.
 
-A tool-call accuracy of 0.78 means that in roughly two or three of ten calls the tool name or arguments are off. You need a layer outside the model that checks calls before they run.
+A tool-call accuracy of 0.78 means that in roughly two or three of ten calls the tool name or arguments are off. In the radio metaphor, the host still sometimes hands the producer the wrong question, which is why a layer outside the model must check calls before they run.
 
 ## How to use it in Paxis
 
