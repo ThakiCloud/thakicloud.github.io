@@ -47,7 +47,7 @@ ThakiCloud의 자체 H200/H100 플릿에서도 이 압력은 실제로 보입니
 
 P3은 LLM 에이전트 컨트롤러입니다. 180초마다 로컬 vLLM으로 서빙하는 27B급 instruct 체크포인트에 큐 깊이, utilization, Metis 토큰 미터의 속도, 선언된 단기자 forecast 잔차, 현재 쿼터와 노드 상태를 구조화해 넘기고 쿼터 벡터와 노드 증감과 리스크 타겟 κ*(작업 deadline slack 배율 1.5, 2.5, 3.5 중 하나)를 제한된 구조화된 행동으로 돌려 받습니다. κ*는 admission 버퍼로, 예상 큐 지연이 남은 deadline slack의 κ*배 이내일 때만 작업이 큐에 들어갑니다. 결정 하나당 $0.001의 청구액이 미터로 붙고 다음 사이클에 되돌리는 잘못된 경보도 선언된 비용(1개 GPU를 30분 붙들고 있는 것)으로 잡힙니다.
 
-![Night-shift control loop and three-arm comparison protocol](/assets/images/posts/research/night-shift-k8s-capacity-agent/fig_control_loop.png)
+![Night-shift control loop and three-arm comparison protocol](/assets/images/posts/research/night-shift-k8s-capacity-agent/fig_control_loop.webp)
 *밤사이 에이전트 수요가 Kueue가 관리하는 GPU 큐로 들어오고, 세 컨트롤러 팔(P1 정적 쿼터, P2 교정된 임계 휴리스틱, P3 LLM 에이전트)이 상태와 forecast 잔차를 읽어서 쿼터 벡터와 프로비저닝된 노드 수를 움직이며, provisioned 비용과 마감 신뢰도가 프론티어 점으로 집계되는 구조입니다. 개념 예시(정성적 구조)이며 정량적 주장을 담지 않습니다.*
 
 비교 프로토콜은 선언된 수요와 시드로 재현되도록 고정한다. overnight 수요는 합성 포아송 과정으로 선언한다. 일주기 기반 2.0 + 2.5sin(π(t - 0.5)/7.5) 작업/시간 위에 버스트 세 개를 얹는다. 초과 6/8/5 작업/시간, 지속 35/40/30분, 시작 2.3/4.8/6.5시간, 시드 20261031이다. 이 형태는 프로덕션 trace 재현이 아니다. 팀의 overnight 플릿에서 실제로 보이는 운영 양상(낮 기반, manifest 기반 배치 런치, 모델 폴백 서지)에 맞춰 선언한 것이다. 실행은 총 14회이며 설정마다 시드 두 개씩이다. P1은 8개 GPU 풀 위에서 쿼터 3/5/8 스윕, P2는 단일 설정, P3은 리스크 타겟 3개 스윕이다. P3의 결정은 실제 LLM 호출이고 호출 지연과 토큰 청구와 파싱 결과를 호출마다 미터링해 결정 비용에 포함한다. 실행 한 번당 기록하는 지표는 마감 신뢰도 ρ, admission 지연 p50/p95, 시간 평균과 정점 utilization이다. provisioned GPU 시간과 그 $, 에이전트 결정 비용, 완성한 일 작업당 달러도 함께 기록한다.
@@ -64,7 +64,7 @@ P3은 LLM 에이전트 컨트롤러입니다. 180초마다 로컬 vLLM으로 서
 
 이 숫자의 모양이 본문에서 더 중요하다. L*는 실행 지연 R에 무관하다. 노드 기동이 오래 걸리면 휴리스틱의 보험 비용과 에이전트의 선지 가치가 같은 비율로 늘어나 기준선은 제자리에 멈춘다. 인용된 GPU 기동 2~10분은 에이전트 팔에게는 오히려 자산이다. L*는 버스트 초과 b와 horizon T가 크면 작아지고 결정 비용 OV에는 선형이다. L=0에서는 에이전트가 정확히 OV만큼 지고 forecast 선지가 없는 에이전트 컨트롤러는 휴리스틱에 자기 청구액이 붙은 것에 불과하다. 그것이 논문의 내장 negative-result guard이다.
 
-![Break-even structure: heuristic insurance bill vs agent cost and net advantage](/assets/images/posts/research/night-shift-k8s-capacity-agent/fig_breakeven.png)
+![Break-even structure: heuristic insurance bill vs agent cost and net advantage](/assets/images/posts/research/night-shift-k8s-capacity-agent/fig_breakeven.webp)
 *교정된 휴리스틱의 한 밤 $7.68 일정한 보험 청구액, 선지 L=0에서 $8.84로 시작해 L=R=6분에서 결정 비용 $1.16까지 떨어지는 에이전트의 밤 비용, 그리고 honest bar L*=0.906분에서 0을 건너 포화 시 $6.52/밤(보험의 84.9%)까지 오르는 순 이익이다. 선언된 상수에 대한 정확한 산술이며 실측이 아닌 분석 모델입니다.*
 
 선지가 R=6분 이상이면 순 이익은 포화합니다. 보험 $7.68에서 결정 비용 $1.16을 뺀 $6.52, 휴리스틱 보험의 84.9%가 한 밤의 최대 절감입니다.
