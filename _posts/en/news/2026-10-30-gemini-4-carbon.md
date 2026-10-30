@@ -21,14 +21,14 @@ categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/en/news/gemini-4-carbon/"
 header:
-  teaser: /assets/images/gemini-4-carbon-hero.png
+  teaser: /assets/images/gemini-4-carbon-hero.webp
 ---
 
 ## Who Should Read This
 
 If you design model costs for agent workflows, or you operate a platform that uses frontier model APIs and open-weight models together, this post is for you. The core conclusion first: Gemini 4 Carbon, unveiled by Google on October 28, is a frontier model positioned around "cybersecurity and long-horizon work," and at the intro price of $2/$10 (per 1M tokens) it is the point where you can actually compute how those properties enter agent execution costs. In the first week of release, a subset of cyber defenders and trusted partners get access before general developers, so what matters now is less the performance numbers and more "which workloads this price tier applies to."
 
-![Abstract image of a carbon lattice transforming into shields and long time lines](/assets/images/gemini-4-carbon-hero.png)
+![Abstract image of a carbon lattice transforming into shields and long time lines](/assets/images/gemini-4-carbon-hero.webp)
 
 ## Overview
 

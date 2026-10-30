@@ -22,14 +22,14 @@ categories:
   - dev
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/nemotron-3-5-transcribe/"
 header:
-  teaser: /assets/images/nemotron-3-5-transcribe-hero.png
+  teaser: /assets/images/nemotron-3-5-transcribe-hero.webp
 ---
 
 ## Who Should Read This
 
 If you serve STT (speech-to-text) on a K8s AI platform, or you are a speech ML practitioner deciding what to build your in-house STT on, this post is for you. The core conclusion first: on October 28, NVIDIA released Nemotron 3.5 Transcribe, a 40-language multilingual ASR model, and opened day-0 serving on vLLM 0.32.0 through the NeMo Speech plugin the same day. ASR has entered, for the first time, the day-0 serving stack that LLMs have enjoyed for the past two years. Speech recognition inference is no longer separate infrastructure; it becomes a first-class workload on the same GPU queue, the same runtime, and the same quantization tiers (BF16/FP8/NVFP4) as LLMs.
 
-![Abstract image of multilingual sound waves converging into a structured timeline](/assets/images/nemotron-3-5-transcribe-hero.png)
+![Abstract image of multilingual sound waves converging into a structured timeline](/assets/images/nemotron-3-5-transcribe-hero.webp)
 
 ## Overview
 
