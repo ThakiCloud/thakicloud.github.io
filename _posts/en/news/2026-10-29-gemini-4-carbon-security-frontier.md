@@ -35,7 +35,7 @@ Think of a new fire extinguisher. The fire brigade tested it. It puts out fire t
 
 ## The scores first
 
-Google DeepMind announced Gemini 4 Carbon on October 28. The timing matters. It came two weeks after the previous model Argon. Model replacement now runs on a two-week cycle. For a platform, the evaluation cycle has to speed up by the same amount. This site covered Argon less than two weeks ago. If you read about [Argon's agents finishing 27 hours of Minecraft](/en/research/gemini-4-argon-multi-agent-minecraft/), you remember the last generation's character.
+Google DeepMind announced Gemini 4 Carbon on October 28. The timing matters. It came two weeks after the previous model Argon. Model replacement now runs on a two-week cycle. For a platform, the evaluation cycle has to speed up by the same amount. This site covered Argon less than two weeks ago. If you read about [Argon's agents finishing 27 hours of Minecraft](/tech-blog/en/research/gemini-4-argon-multi-agent-minecraft/), you remember the last generation's character.
 
 VentureBeat called the announcement a "retaking" of the world's number-one spot. The word "retaking" tells us the top seat changed hands recently. The index crown moves owners on a weekly scale.
 

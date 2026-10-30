@@ -37,7 +37,7 @@ AI 플랫폼의 모델 선정과 평가를 맡은 엔지니어, 또는 어떤 �
 
 ## 점수부터 보면
 
-Google DeepMind는 10월 28일 Gemini 4 Carbon을 발표했습니다. 타이밍이 주목됩니다. 직전 모델 Argon 공개 불과 2주 뒤의 후속 모델입니다. 모델 교체 주기가 2주로 짧아졌다는 뜻이고, 플랫폼 입장에서는 평가 주기 역시 그만큼 빨라졌다는 이야기입니다. Argon이 이 사이트에서 다뤄진 지 보름도 안 지났습니다. [Gemini 4 Argon 에이전트의 27시간 Minecraft 완주](/ko/research/gemini-4-argon-multi-agent-minecraft/)를 봤다면, 직전 세대 모델이 어떤 성격을 가졌는지 기억할 것입니다.
+Google DeepMind는 10월 28일 Gemini 4 Carbon을 발표했습니다. 타이밍이 주목됩니다. 직전 모델 Argon 공개 불과 2주 뒤의 후속 모델입니다. 모델 교체 주기가 2주로 짧아졌다는 뜻이고, 플랫폼 입장에서는 평가 주기 역시 그만큼 빨라졌다는 이야기입니다. Argon이 이 사이트에서 다뤄진 지 보름도 안 지났습니다. [Gemini 4 Argon 에이전트의 27시간 Minecraft 완주](/tech-blog/ko/research/gemini-4-argon-multi-agent-minecraft/)를 봤다면, 직전 세대 모델이 어떤 성격을 가졌는지 기억할 것입니다.
 
 VentureBeat는 이 발표를 "재탈환(retaking)으로 세계 1위"라고 썼습니다. "다시"라는 표현이 붙는 것 자체가, 1위 자리가 최근 다른 모델로 옮겨간 적이 있었음을 보여줍니다. 지수 1위가 몇 주 단위로 주인을 바꾼다는 뜻입니다.
 
