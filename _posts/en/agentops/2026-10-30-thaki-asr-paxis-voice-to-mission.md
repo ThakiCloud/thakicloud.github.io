@@ -30,7 +30,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/thaki-asr-paxis-voi
 
 ## Why Read This
 
-This post is for engineers and leaders who want to use voice AI as part of work automation inside their enterprise, and it matters most in domains such as customer service, finance, and security, where numbers and evidence carry weight. If you want to secure Korean speech recognition in-house, the headline is this: a Korean ASR model fine-tuned on top of Qwen3-ASR-1.7B for call-center speech and numeric recognition passed all five pre-registered release gates in an independent evaluation. This model is not a transcription tool. It is the starting point of a Voice-to-Mission architecture that connects to the Perception layer which kicks off Paxis work execution.
+This post is for engineers and leaders who want to use voice AI as part of work automation inside their enterprise, and it matters most in domains such as customer service, finance, and security, where numbers and evidence carry weight. If you want to secure Korean speech recognition in-house, the headline is this: a [Korean ASR model](https://huggingface.co/ThakiCloud/Thaki-ASR-KO-1.7B) fine-tuned on top of Qwen3-ASR-1.7B for call-center speech and numeric recognition passed all five pre-registered release gates in an independent evaluation. This model is not a transcription tool. It is the starting point of a Voice-to-Mission architecture that connects to the Perception layer which kicks off Paxis work execution.
 
 The moment speech recognition becomes text, the next step is the real question. If a customer asks to cancel a payment during a call, the work does not end with logging that sentence. The system has to understand the request, look up the order, review the refund policy, obtain the necessary approval, and then process it in the actual system. Different AI capabilities are involved at each stage.
 
@@ -57,6 +57,8 @@ Third, we preserved existing general recognition. A model that improves on call-
 ## Independent Evaluation: Improvements on Conversation, General Speech, and Numbers
 
 For the final evaluation, we compared the original Qwen3-ASR-1.7B against the Korean-specialized checkpoint `ckpt-1200`. We composed three new test sets, TEST-C/D/E, that were not used in earlier evaluations, and applied the same decoding conditions to both models.
+
+The released model is available on [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-ASR-KO-1.7B). The evaluation code and reproduction scripts are published on [GitHub](https://github.com/ThakiCloud/thaki-asr-ko-1.7b).
 
 ![Thaki Korean-specialized ASR independent evaluation results](/assets/images/thaki-asr-paxis-voice-to-mission-results-en.webp)
 *Independent evaluation results for the original model and the Korean-specialized model. All figures were measured on the sealed TEST-C/D/E sets.*
@@ -171,4 +173,4 @@ We encourage you to redefine your own voice problem along the same axis. Do not 
 
 *ThakiCloud AI Engineering, Korean ASR & Agentic AI*
 
-*Source of ASR performance: ASR-NG-R2 Step 5b independent evaluation, October 29, 2026. The public/release status of model weights and the Paxis-integrated service must be confirmed separately.*
+*Source of ASR performance: ASR-NG-R2 Step 5b independent evaluation, October 29, 2026. The model weights are published on [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-ASR-KO-1.7B). The release status of the Paxis-integrated service must be confirmed separately.*

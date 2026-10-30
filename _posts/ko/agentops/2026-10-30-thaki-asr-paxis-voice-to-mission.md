@@ -29,7 +29,7 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/thaki-asr-paxis-voi
 
 ## 왜 읽어야 하나
 
-이 글은 기업에서 음성 AI를 업무 자동화의 일부로 쓰고 싶은 엔지니어와 리더를 위해 씁니다. 상담, 금융, 보안처럼 숫자와 근거가 중요한 도메인에서 한국어 음성인식부터 직접 확보하고 싶은 분이라면 특히 그렇습니다. 핵심을 먼저 말씀드리면, Qwen3-ASR-1.7B를 기반으로 한국어 상담과 숫자 인식을 직접 학습한 ASR이 독립 평가에서 사전에 정의한 5개 출시 게이트를 모두 통과했습니다. 이 모델은 단순 전사 도구가 아닌, Paxis의 업무 실행을 시작하는 Perception 계층으로 잇는 Voice-to-Mission 아키텍처의 출발점입니다.
+이 글은 기업에서 음성 AI를 업무 자동화의 일부로 쓰고 싶은 엔지니어와 리더를 위해 씁니다. 상담, 금융, 보안처럼 숫자와 근거가 중요한 도메인에서 한국어 음성인식부터 직접 확보하고 싶은 분이라면 특히 그렇습니다. 핵심을 먼저 말씀드리면, Qwen3-ASR-1.7B를 기반으로 한국어 상담과 숫자 인식을 직접 학습한 [ASR](https://huggingface.co/ThakiCloud/Thaki-ASR-KO-1.7B)이 독립 평가에서 사전에 정의한 5개 출시 게이트를 모두 통과했습니다. 이 모델은 단순 전사 도구가 아닌, Paxis의 업무 실행을 시작하는 Perception 계층으로 잇는 Voice-to-Mission 아키텍처의 출발점입니다.
 
 음성인식이 텍스트로 바뀌는 순간, 그 다음 단계가 진짜 질문입니다. 고객이 상담 중 결제 취소를 요청했다면 그 문장을 기록하는 것으로 업무가 끝나지 않습니다. 요청을 파악하고 주문을 확인하고 환불 정책을 검토하고 필요한 승인을 받은 뒤 실제 시스템에서 처리해야 합니다. 이 과정에는 서로 다른 AI 능력이 들어갑니다.
 
@@ -56,6 +56,8 @@ Paxis Agent Platform은 이 다섯 능력을 잇는 에이전트 실행 환경�
 ## 독립 평가 결과: 상담, 일반 대화, 숫자 인식 모두 개선
 
 최종 평가에서는 원본 Qwen3-ASR-1.7B와 한국어 특화 체크포인트 `ckpt-1200`을 비교했습니다. 기존 평가에 쓰지 않은 새로운 TEST-C/D/E 세트를 구성하고 두 모델에 같은 디코딩 조건을 적용했습니다.
+
+이번에 공개한 모델은 [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-ASR-KO-1.7B)에서 내려받을 수 있습니다. 평가 코드와 재현 스크립트는 [GitHub](https://github.com/ThakiCloud/thaki-asr-ko-1.7b)에 함께 공개했습니다.
 
 ![Thaki 한국어 특화 ASR 독립 평가 결과](/assets/images/thaki-asr-paxis-voice-to-mission-results.webp)
 *원본 모델과 한국어 특화 모델의 독립 평가 결과. 모든 수치는 봉인된 TEST-C/D/E 범위에서 측정했습니다.*
@@ -172,4 +174,4 @@ ASR의 CER가 좋아졌다고 에이전트 전체의 업무 성공률이 같은 
 
 *ThakiCloud AI Engineering · Korean ASR & Agentic AI*
 
-*ASR 성능 출처: ASR-NG-R2 Step 5b 독립 평가, 2026년 10월 29일. 모델 가중치와 Paxis 통합 서비스의 공개·배포 상태는 별도로 확인해야 합니다.*
+*ASR 성능 출처: ASR-NG-R2 Step 5b 독립 평가, 2026년 10월 29일. 모델 가중치는 [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-ASR-KO-1.7B)로 공개되어 있습니다. Paxis 통합 서비스의 배포 상태는 별도로 확인해야 합니다.*
