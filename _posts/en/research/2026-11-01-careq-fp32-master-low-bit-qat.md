@@ -115,10 +115,10 @@ The sealed GSM8K test (1,319 problems, 5-shot, strict match) was run exactly onc
 | Model | Effective BPW | GSM8K test | GSM8K DEV | C4 PPL | held-out KL |
 |---|---|---|---|---|---|
 | Qwen3-1.7B-Base BF16 | 16 | 67.7% | not measured | 15.42 | 0 |
-| D64-2 (FP32 master) | 2.397 | 23.05% | 59/256 | 24.12 | 0.426 |
+| D64-2 (FP32 master) | 2.397 | 23.05% (304/1319) | 59/256 | 24.12 | 0.426 |
 | K3 (same start, BF16 master) | 2.397 | not measured | 36/256 | 25.98 | 0.541 |
-| P3 (previous 2.4-bit) | 2.394 | 14.86% | 37/256 | 25.81 | 0.529 |
-| P2-A (previous 2.785-bit) | 2.785 | 20.09% | 50/256 | 24.61 | not measured |
+| P3 (previous 2.4-bit) | 2.394 | 14.86% (196/1319) | 37/256 | 25.81 | 0.529 |
+| P2-A (previous 2.785-bit) | 2.785 | 20.09% (265/1319) | 50/256 | 24.61 | not measured |
 
 The controlled comparison is the K3 row. K3 started from the same checkpoint as D64-2 and saw the same data in the same order; the only difference is that its trainable parameters were stored in BF16. On DEV the gap between the two is +9.0 points, 95% CI [+3.5, +14.5]. Against P3, our previous 2.4-bit checkpoint, the test gap is +8.2 points (CI [+5.9, +10.5]). It is also 3.0 points higher on test than the 2.8-bit model that uses more bits. The P3 and P2-A comparisons, however, are between final models with different starting points and rank allocations, so they do not isolate the FP32 master effect.
 
@@ -148,8 +148,9 @@ The diagnosis also left us with an operating rule. We now log "the fraction of e
 - **Reasoning is far below the original.** GSM8K test at 23.1% is a long way from the BF16 original's 67.7%. ARC-Challenge, HellaSwag, and PIQA are also below the original. This is a research checkpoint, not a replacement for the original.
 - **One seed.** By pre-registered design we did no additional seed, rank, or data search. We make no claim about seed-to-seed variance.
 - **We could not narrow the cause to one factor.** The FP32 master also increased the updates of the residuals ra and rb, not only scale_mid (about 2.8× in relative L2 change). This experiment cannot separate whether the gain comes from recovering the scales or from a higher effective learning rate on the residuals. The strongest counterargument is that "this is a problem with BF16 parameter updates in general, not with the scales," and we cannot rule that reading out.
-- **Generation loops remain.** About 8% of greedy generations repeat the same sentence until the token limit, and those outputs are almost never correct.
-- **One model, one architecture.** We confirmed this only on Qwen3-1.7B-Base. We do not yet know whether the same stagnation appears in other architectures or sizes.
+- **Generation loops remain.** About 8% of greedy generations repeat the same sentence until the token limit, and those outputs are almost never correct. On DEV the loop rate was actually 2.3pp higher than with the BF16 master (K3), 95% CI [−1.6, +6.6], not significant. The FP32 master did not reduce loops.
+- **One model, one architecture.** We measured the FP32 master effect only on Qwen3-1.7B-Base. Reproduction on LFM3-1.7B and Qwen3.5-4B, 9B and 27B is being verified now, and there are no results yet.
+- **Data and license are separate questions.** The model card lists where the training data came from. Whether each source's terms fit the license of the released weights is under separate review, and this post draws no conclusion on it.
 
 ## Summary
 
