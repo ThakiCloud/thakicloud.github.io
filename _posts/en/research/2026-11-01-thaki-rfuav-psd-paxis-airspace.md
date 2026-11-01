@@ -68,9 +68,9 @@ The first candidate showed no evidence of a difference from v1. The second was s
 
 In phone terms, the new hire was no better at naming callers than the person already on the desk, so we kept the person on the desk. A new version alone is not a reason to swap. We swap only when a rule set in advance says so. We think that rule will outlast any single score.
 
-## After identification: connecting to Paxis
+## Usage scenario: connecting identification to Paxis
 
-Naming the model does not finish the job. An operator still has to decide whether the alert is real, where it came from, and who should hear about it. Paxis, ThakiCloud's agent platform, connects that judgment to action. Below is a reference design for plugging this model into Paxis.
+Naming the model does not finish the job. An operator still has to decide whether the alert is real, where it came from, and who should hear about it. Paxis, ThakiCloud's agent platform, connects that judgment to action. Below is a reference design for plugging this model into Paxis; the path from model verdict to Paxis work has not yet been verified end to end.
 
 ```mermaid
 flowchart LR
@@ -82,7 +82,7 @@ flowchart LR
   E -->|hold| G["Keep observing"]
 ```
 
-Metis serves the small signal model close to the sensor, and release decisions follow pre-set gates. Paxis takes each verdict and triages it: is the same model seen repeatedly, and is the probability high enough? It then bundles the raw spectrum, the verdict, and the time as evidence for the operator.
+In this design, Metis serves the small signal model close to the sensor, and release decisions follow pre-set gates. Paxis would take each verdict and triage it: is the same model seen repeatedly, and is the probability high enough? It would then bundle the raw spectrum, the verdict, and the time as evidence for the operator.
 
 Where the human sits is the point. This model cannot reject an unknown signal, so it always answers with one of the 14 models. That is why its answer never turns straight into action. The agent checks and organises, and the operator decides whether to start a response.
 
@@ -100,7 +100,7 @@ It reads little beyond the drone model. Telling control signals from status sign
 
 ## Wrap-up
 
-We released a small model that names the drone model from one slice of radio, and it clearly beat a baseline on recordings from a site not used for training. Keeping v1 because a later candidate did not win is part of the same result. Paxis handles checking and evidence after identification, and a person decides whether to respond.
+We released a small model that names the drone model from one slice of radio, and it clearly beat a baseline on recordings from a site not used for training. Keeping v1 because a later candidate did not win is part of the same result. In the intended design, Paxis handles checking and evidence after identification, and a person decides whether to respond.
 
 Even if someone can name every caller by voice, the person in charge still decides whether to report it. That is the relationship between this model and Paxis.
 

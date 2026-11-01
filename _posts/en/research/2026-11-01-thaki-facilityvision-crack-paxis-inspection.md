@@ -34,7 +34,7 @@ One model decides whether a small patch of a photo contains a crack. The other m
 
 Picture an editorial desk proofreading a manuscript. A proofreader flips through quickly and folds the corner of every page with a typo. An editor then opens only the folded pages and underlines each wrong word in red ink. Finally, the managing editor collects the marked pages and writes a correction order: who fixes what, and by when.
 
-The classifier is the proofreader folding corners, and the segmentation model is the red pen. Paxis plays the managing editor, writing the correction order and following it through. The editorial office that picks the pens, trains them, and keeps them to one standard is Metis and Maxis. The rest of this post follows those three steps in order.
+The classifier is the proofreader folding corners, and the segmentation model is the red pen. Paxis is planned as the managing editor, writing the correction order and following it through. The editorial office that picks the pens, trains them, and keeps them to one standard is Metis and Maxis. The rest of this post follows those three steps in order.
 
 ## What we released
 
@@ -59,9 +59,9 @@ For segmentation, the number to watch is how many thin cracks the model keeps. T
 
 *The segmentation threshold of 0.95 was chosen on the same dev set. The 95% confidence interval for the thin-crack recall gain excludes zero; the interval for the Dice difference includes zero.*
 
-## The inspection flow with Paxis
+## Usage scenario: the inspection flow with Paxis
 
-Finding a crack does not finish an inspection. Someone needs to know which wall on which floor the photo came from. They need to know whether the crack grew since the last visit, and who checks and repairs it. Paxis groups the model output into those units of work and keeps the evidence. Below is a reference design that places the two released models into that flow.
+Finding a crack does not finish an inspection. Someone needs to know which wall on which floor the photo came from. They need to know whether the crack grew since the last visit, and who checks and repairs it. In this scenario, Paxis groups the model output into those units of work and keeps the evidence. The step from model output to a Paxis Mission has not yet been verified end to end. Below is a reference design that places the two released models into that flow.
 
 ```mermaid
 flowchart TB
@@ -76,7 +76,7 @@ flowchart TB
 
 Back to the proofreading desk: the red pen only touches folded pages, so the expensive step never runs on every photo. The underline the pen draws becomes the evidence for the correction order. The checksum records which version of which model drew it. If a repair decision later turns out wrong, you can trace back through photo, mask, and model version to see why.
 
-The key principle is to keep the model's output apart from the repair decision. A crack mask is not a structural safety verdict. So Paxis does not order repairs or restrict use based on a mask alone, and it always routes through a human reviewer. The models shrink the pile of photos a person must look at and organize the evidence.
+The key principle is to keep the model's output apart from the repair decision. A crack mask is not a structural safety verdict. So in this design Paxis does not order repairs or restrict use based on a mask alone, and it always routes through a human reviewer. The models shrink the pile of photos a person must look at and organize the evidence.
 
 ## Why small models
 
@@ -94,7 +94,7 @@ Both models are research previews, not certified inspection tools. The Paxis flo
 
 ## Summary
 
-What this release offers is less a high score and more a pair of small, verifiable models shipped with a clear account of what to trust. The corner-folding proofreader and the red pen are ready, and Paxis takes the managing editor's seat. The next question is whether the pen draws the same lines on real site photos, and only site data can answer it.
+What this release offers is less a high score and more a pair of small, verifiable models shipped with a clear account of what to trust. The corner-folding proofreader and the red pen are ready, and connecting Paxis as the managing editor is the next step. The next question is whether the pen draws the same lines on real site photos, and only site data can answer it.
 
 ---
 

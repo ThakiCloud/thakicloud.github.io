@@ -27,13 +27,13 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/thaki-equipmentheal
 
 We released a small model that sorts a machine into four health states using only its sensor readings. It is for engineers and operations leads who want factory equipment data to drive real work. On vehicles it had never seen, it never called a dangerous machine normal.
 
-The model reads the sensors of transport vehicles that carry wafers around a semiconductor fab. It outputs one of four states: normal, attention, warning, or danger. What comes after the verdict is handled by Paxis: opening the maintenance work, attaching the evidence, and getting human approval.
+The model reads the sensors of transport vehicles that carry wafers around a semiconductor fab. It outputs one of four states: normal, attention, warning, or danger. We also describe a usage scenario in which Paxis handles what comes after the verdict: opening the maintenance work, attaching the evidence, and getting human approval.
 
 ## Plain terms
 
 Think of the triage nurse at the entrance of an emergency room. The nurse looks at a few numbers, such as temperature, pulse, and blood pressure, and sorts patients by urgency. The nurse does not decide on surgery. A doctor makes that call after reading the chart.
 
-This model is the triage nurse. It looks at sensor numbers such as current, temperature, and dust, and puts each vehicle into one of four boxes. Paxis plays the role of the hospital's intake and chart system. It turns the triage result into a maintenance ticket with evidence, and hands heavy decisions, like stopping a vehicle, to a person.
+This model is the triage nurse. It looks at sensor numbers such as current, temperature, and dust, and puts each vehicle into one of four boxes. In the intended design, Paxis plays the role of the hospital's intake and chart system. It turns the triage result into a maintenance ticket with evidence, and hands heavy decisions, like stopping a vehicle, to a person.
 
 A triage nurse does not need a full diagnostic lab, and this step does not need a large language model. A model that is small, fast, and easy to audit is enough.
 
@@ -65,9 +65,9 @@ One honest caveat. On danger alone, logistic regression caught slightly more cas
 
 Before release we also checked that the downloaded model gives the same answers as at training time. On 146 readings from six shuffled sessions, features and probabilities matched exactly.
 
-## How Paxis turns this into maintenance work
+## Usage scenario: how Paxis would turn this into maintenance work
 
-A triage label on its own changes nothing. When a warning appears, someone has to open a maintenance request, note which sensor looked wrong, and assign an owner. Paxis handles that link. Below is the reference design.
+A triage label on its own changes nothing. When a warning appears, someone has to open a maintenance request, note which sensor looked wrong, and assign an owner. In this scenario Paxis handles that link. Below is the reference design; the path from model verdict to Paxis work creation has not yet been verified end to end.
 
 ```mermaid
 flowchart LR
@@ -81,9 +81,9 @@ flowchart LR
   G -->|hold| F
 ```
 
-On attention or warning, Paxis opens a maintenance ticket. The ticket carries the class probabilities, the latest sensor values, and their changes as evidence. The owner can see at once why the ticket exists.
+In this design, on attention or warning, Paxis opens a maintenance ticket. The ticket would carry the class probabilities, the latest sensor values, and their changes as evidence. The owner can see at once why the ticket exists.
 
-On danger, Paxis still does not stop the vehicle by itself. It proposes a stop and waits for a person to approve. The triage nurse can flag a critical patient, but the doctor decides on surgery. The approval and the outcome are kept in the work record.
+On danger, the design has Paxis propose a stop instead of stopping the vehicle itself, and wait for a person to approve. The triage nurse can flag a critical patient, but the doctor decides on surgery. The approval and the outcome would be kept in the work record.
 
 The model side is split as well. The intended setup is that Maxis trains and verifies small models like this one, and Metis serves them in production. At about 0.1 ms per reading, the model runs on a CPU without a GPU. The more work Paxis automates, the cheaper each judgment needs to be, and small models keep that floor low.
 
