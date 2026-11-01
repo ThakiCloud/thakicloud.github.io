@@ -4,7 +4,7 @@ seo_title: "Thaki-SecDecision-27B-V2: generation-free security evidence-sufficie
 seo_description: "Takes a claim, its required facts, and the evidence set, then decides SUPPORTED, REFUTED, INSUFFICIENT, CONFLICTED and whether a conclusion is allowed. Frozen 27B backbone with LoRA and three fp32 heads, no free generation. On the sealed TEST of 4,002 examples, 1 wrong conclusion; 97.2% recall on the cases that allow one."
 excerpt: "In autonomous security response, the moment you conclude is the moment action begins. We built a model that concludes only when the evidence is enough and says the rest need more evidence. It generates no text."
 date: 2026-10-28
-last_modified_at: 2026-10-28
+last_modified_at: 2026-11-01
 tags:
   - secdecision
   - evidence-sufficiency
@@ -30,7 +30,7 @@ In autonomous security response, the moment you conclude is the moment action be
 
 This post introduces a model that judges whether security evidence is sufficient. It takes a claim, the required facts that must be established for that claim to hold, and the evidence collected so far. It decides whether the claim is supported, refuted, short of evidence, or contradicted; which input evidence supports and which refutes; which required facts remain unsatisfied; and whether a conclusion is allowed at all. The model does not write freely; it only fills in the verdict form. The model is named Thaki-SecDecision-27B-V2, and the four verdict states are SUPPORTED, REFUTED, INSUFFICIENT, and CONFLICTED. It is written for people building security agents, or deciding what to place where in an agent stack.
 
-The model, inference code, and model card are [public on Hugging Face](https://huggingface.co/ThakiCloud/Thaki-SecDecision-27B-V2).
+The model, inference code, and model card are [public on Hugging Face](https://huggingface.co/ThakiCloud/Thaki-SecDecision-27B-V2). A smaller research preview with the same input format and decision rule, [Thaki-SecDecision-4B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecDecision-4B-Preview), is public as well. Its verification status is much weaker, and it has its own section below.
 
 ![Security judgment that concludes only when the evidence is enough: a generation-free 27B evidence-sufficiency model](/assets/images/secdecision-27b-v2-evidence-sufficiency-hero.webp)
 *The moment of checking each piece of evidence against the claim, before the verdict is rendered.*
@@ -94,25 +94,38 @@ The same principle applies to the absence of a record. "A command is not in the 
 
 A conflict is judged when the status is CONFLICTED, or when there is at least one piece of evidence in each of the SUPPORT and REFUTE directions. can_conclude becomes True only after passing all these gates and the sufficiency score crossing the pre-set threshold τ. τ is the value chosen on the calibration split as "the lowest threshold whose False-ENOUGH rate is at or below 2%", with maximum recall among those. Its full precision is in Table 1 below. It was chosen without seeing the results, so it is not changed after the results are seen. The moment you retune the threshold against a different split, the number is no longer trustworthy.
 
-Rule B was learned and corrected in earlier experiments. In the previous regression run, the macro F1 rose above the stock (62.7% → 73.1%), but the false-conclusion rate rose with it (1.79% → 3.19%), and it did not pass the pre-registered gate. The pre-amendment rule was conservative in the refutation direction: overall conclusion recall on the calibration split stayed around 0.48, and on the cases where the evidence overturns the claim (REFUTE_COVERAGE) it was only 4.8%. The amendment that requires an observed refutation basis (refutation coverage gate correction, amendment seq 274) is Rule B, and on the sealed TEST it produced a REFUTE_COVERAGE recall of 99.85%. This too was fixed before the TEST was opened.
+Three things were fixed before the TEST was opened: the decision rule, the threshold, and the rule that chose the threshold. Table 1 lists them.
 
-The support/refute evidence IDs in the output are picked only from the input's evidence_ids. An ID that is not in the input therefore cannot structurally appear in the output.
-
-**Table 1. Pre-registered values fixed together with Rule B**
+**Table 1. Fixed before the TEST was opened**
 
 | Item | Value |
 |---|---|
+| Decision rule | Rule B, the pre-registered amendment `refutation_coverage_gate_correction` (ledger seq 274) |
+| τ selection rule | calib split only: the smallest τ with False-ENOUGH ≤ 0.02, maximizing recall |
 | Sufficiency threshold τ | 0.9995245433226797 |
-| Macro F1 (regression run) | 0.627 → 0.731 |
-| False-conclusion rate (regression run) | 1.79% → 3.19% |
-| REFUTE_COVERAGE recall (pre-amendment, calib split) | 0.048 |
-| REFUTE_COVERAGE recall (post-amendment, sealed TEST) | 0.9985 |
+
+Rule B came out of earlier runs, and those runs are separate from the result above. Table 2 keeps them apart and names the run on each row. The V1 regression run used an earlier model (V1). Its macro F1 beat the stock model (0.627 → 0.731), but its false-conclusion rate rose too (1.79% → 3.19%), and it failed its pre-registered gates. The V2 calibration run under the pre-amendment rule was conservative in the refutation direction. Overall conclusion recall on the calibration split stayed around 0.48, and on the cases where the evidence overturns the claim (REFUTE_COVERAGE) it was 0.048. Requiring an observed refutation basis is the correction that became Rule B.
+
+**Table 2. Earlier runs that motivated Rule B (not the sealed TEST)**
+
+| Run | Metric | Value |
+|---|---|---|
+| V1 regression run (stock → V1) | Macro F1 | 0.627 → 0.731 |
+| V1 regression run (stock → V1) | False-conclusion rate | 1.79% → 3.19% |
+| V2 calib, pre-amendment rule | Conclusion recall, all calib cases | about 0.48 |
+| V2 calib, pre-amendment rule | REFUTE_COVERAGE recall | 0.048 |
+
+For comparison, the sealed TEST under Rule B gives a REFUTE_COVERAGE recall of 0.9985 (Table 3).
+
+The support/refute evidence IDs in the output are picked only from the input's evidence_ids. An ID that is not in the input therefore cannot structurally appear in the output.
 
 ## The results
 
-The sealed TEST has 4,002 examples: 2,202 from the standard generator and 1,800 from a generator with different generation rules (generator_disjoint). Ground truth was set by the generation rules only (0 teacher-model, human, or LLM judgments). Cross-split leakage is 0 on all of the world, group, host, IP, and user axes.
+The sealed TEST has 4,002 examples: 2,202 from the standard generator and 1,800 from a generator with different generation rules (generator_disjoint). Ground truth was set by the generation rules only (0 teacher-model, human, or LLM judgments). Splits share no world, group, host, IP, or user, and there are no exact duplicates across splits.
 
-**Table 2. Sealed TEST results and pre-registered requirements**
+That is entity-level separation, not content-level independence. A masked-text audit run after release (2026-10-31) masked digits, IPs, hex IDs and timestamps, then compared each claim, its sorted evidence and its variant against the training side. It found that 50 of the 4,002 TEST examples (1.25%) had a near-copy in train, train_dev or calib. All 50 are in the standard stratum and none are in generator_disjoint. This does not mean the TEST set is close to the training data: the other 3,952 examples had no near-copy under this audit. It does mean the results below include those 50 examples, because the TEST numbers were not recomputed without them.
+
+**Table 3. Sealed TEST results and pre-registered requirements**
 
 | Metric | SecDecision-27B-V2 | Stock (zero-shot) |
 |---|---|---|
@@ -127,11 +140,11 @@ The sealed TEST has 4,002 examples: 2,202 from the standard generator and 1,800 
 | Safety-gap paired bootstrap 95% CI | [−0.08771, −0.06408] | n/a |
 | Pre-registered CI upper bound | +0.005 | n/a |
 
-The False-ENOUGH in the ADJACENT (adjacent-claim) stratum is 0, and mis-concluded conflict cases are 0 as well. The 95% confidence interval of the paired bootstrap (group-cluster, 2,000 resamples) of the safety gap (V2 minus Stock) is [−8.77%, −6.41%] (full precision in Table 2). The pre-registered requirement, an upper bound of +0.5% or less, is satisfied with wide margin.
+The False-ENOUGH in the ADJACENT (adjacent-claim) stratum is 0, and mis-concluded conflict cases are 0 as well. The 95% confidence interval of the paired bootstrap (group-cluster, 2,000 resamples) of the safety gap (V2 minus Stock) is [−8.77%, −6.41%] (full precision in Table 3). The pre-registered requirement, an upper bound of +0.5% or less, is satisfied with wide margin.
 
-All seven pre-registered gates (G0 to G7) were passed; the verdict is GO.
+All eight pre-registered gates (G0 to G7) were passed; the verdict is GO.
 
-We state the limit of the Stock comparison as well. The Stock baseline ran Qwen3.8-27B zero-shot under a fixed evaluation contract (same input render, greedy, thinking off, max_new_tokens=64). Under that contract, Stock failed to emit a parseable status at all on 3,370 of 4,002 examples (83.96%, PARSE_ERROR). In some cases the thinking output consumed the 64-token budget before the decision output could start. This comparison is therefore not a complete proof of superiority over an optimized Stock model (tuned prompts, larger output budget, fine-tuning). The pre-registered GO verdict stands; we disclose this limit so the Stock comparison is not over-read.
+We state the limit of the Stock comparison as well. The Stock baseline ran Qwen3.8-27B zero-shot under a fixed evaluation contract (same input render, greedy, thinking off, max_new_tokens=64). Under that contract, Stock failed to emit a parseable status at all on 3,370 of 4,002 examples (83.96%, PARSE_ERROR). In some cases the thinking output consumed the 64-token budget before the decision output could start. That reads oddly next to "thinking off", so we report it the way the card does: an observed behaviour of the stock model under that contract. We did not investigate why thinking text appeared with thinking turned off. This comparison is therefore not a complete proof of superiority over an optimized Stock model (tuned prompts, larger output budget, fine-tuning). The pre-registered GO verdict stands; we disclose this limit so the Stock comparison is not over-read.
 
 ![TEST results of SecDecision-27B-V2 vs Stock (zero-shot)](/assets/images/secdecision-27b-v2-evidence-sufficiency-result-en.webp)
 *Left: the rate of not missing cases that allow a conclusion (ENOUGH recall). Right: the rate of mis-concluding on cases that do not allow one (False-ENOUGH).*
@@ -142,40 +155,83 @@ The numbers were not read from the training run's log; they were reproduced with
 
 The most important check is forward-identity. On held-out calib examples, the recomputed probabilities matched the sealed dump within a maximum difference of 1e-3. That means this package reproduces the arithmetic of the sealed TEST. All four statuses (SUPPORTED, REFUTED, INSUFFICIENT, CONFLICTED) fired normally, and out-of-input evidence IDs in the output were 0.
 
-The package runs with one line. `python3 inference.py --base Qwen/Qwen3.8-27B --example smoke_example.json --check-sha` emits one line of JSON, and --check-sha compares the fingerprints of the adapter, heads, and decision module against the config.json canonical. As emphasized above, loading the adapter alone does not reproduce the verified behavior. This model is the adapter, the heads, and the Rule B decision rule as one bundle.
+## How to run it
 
-## The Paxis view: a gate between evidence and response
+The commands below are copied from the model card's Quick start. Run them inside a download of the model repository.
 
-Integration with Paxis is not in scope for this release. This section presents, as a goal architecture, what role the model will play in a security workflow.
+```bash
+pip install -r requirements.txt
+# base from a local path (or HF id — the revision is pinned in config.json):
+python3 inference.py --base /path/to/Qwen3.8-27B --example smoke_example.json --check-sha
+# base from Hugging Face:
+python3 inference.py --base Qwen/Qwen3.8-27B --example smoke_example.json --check-sha
+```
 
-In a Paxis security workflow, this model sits between evidence collection and response planning. As the agent collects evidence for a detection, it asks the model at every step whether a conclusion is allowed now. If can_conclude is False, the agent does not guess a response. It takes the unsatisfied required facts and the evidence that still needs collecting, as reported by the model, as the next collection targets. When it is True, it moves to the response-planning stage with the supporting and refuting evidence IDs in hand.
+`--check-sha` checks the adapter, heads and rule-module hashes against `config.json`. The input is one JSON object, as in `smoke_example.json`:
 
-The roles of the model family become clear as well. Retrieval is handled by Thaki-SecEmbed-8B, vulnerability-patch fix verification by Thaki-SecProof-2B, and evidence-sufficiency judgment by this SecDecision-27B. Each model does only its one job, and the agent orchestrates them.
+```json
+{"claim": {"text": "...", "required_facts": [{"fact_id": "f1", "desc": "..."}]},
+ "evidence": [{"evidence_id": "e1", "source_type": "telemetry", "text": "..."}]}
+```
 
-| Role | Model |
+The output is one JSON line, for example:
+
+```json
+{"example_id": "...", "claim_status": "SUPPORTED", "can_conclude": true,
+ "support_evidence_ids": ["e1"], "refute_evidence_ids": [], "missing_required_facts": [],
+ "sufficiency_score": 0.9995, "rule": "b", "gated": true}
+```
+
+Two warnings. First, do not load the adapter alone. The model is the adapter, the fp32 heads (`heads.pt`) and Rule B as one bundle, and `adapter_model.safetensors` by itself does not reproduce the verified behavior. Second, this is not a standard `transformers` classification pipeline, so use `inference.py` rather than `pipeline("text-classification", ...)`.
+
+The verified environment is narrow. The card lists one NVIDIA B200, bf16, SDPA attention, inputs of at most 4,096 tokens, and the `vllm/vllm-openai:v0.28.0` image. No other GPU or software environment is listed as verified.
+
+## The Paxis and Metis view (target architecture): a gate between evidence and response
+
+What exists today is the model release: weights, heads, and inference code. Neither SecDecision model ships inside Paxis or Metis today. The release includes no Paxis, Autonomous-SOC or Web-Chat integration and no resident serving. Everything in this section is target architecture, a design we intend to build, not a running feature.
+
+In the intended Paxis security workflow, this model would sit between evidence collection and response planning. As the agent collects evidence for a detection, it would ask the model at every step whether a conclusion is allowed now. If can_conclude is False, the agent would not guess a response. It would take the unsatisfied required facts reported by the model as the next collection targets. When it is True, it would move to response planning with the supporting and refuting evidence IDs in hand.
+
+The model card places SecDecision next to two public sibling models. In that pipeline, SecProof surfaces candidate issues and SecDecision judges whether the evidence collected for them is sufficient to conclude.
+
+| Role (from the model cards) | Model |
 |---|---|
-| Security retrieval · embedding | Thaki-SecEmbed-8B |
-| Vulnerability-patch fix verification | Thaki-SecProof-2B |
-| Evidence sufficiency · conclusion-allowance judgment | Thaki-SecDecision-27B-V2 |
+| Cybersecurity retrieval embedding | Thaki-SecEmbed-8B-Preview |
+| Audits small Python AI-agent runtimes for 12 named security boundaries | Thaki-SecProof-27B-V1 (the smaller 2B, 4B and 8B Previews share its recipe) |
+| Evidence sufficiency and conclusion-allowance judgment | Thaki-SecDecision-27B-V2 (and the 4B-Preview below) |
 
-Paxis's policy gate and audit log take this model's output as the basis of judgment. When recording what response was executed, the record says "because it was based on these evidence IDs, at this sufficiency score", not "the agent judged it intuitively".
+In the design, a Paxis policy gate and audit log would take this model's output as the basis of judgment. A record of an executed response would then say "based on these evidence IDs, at this sufficiency score", not "the agent judged it intuitively".
 
-The gate matters for execution economics too: it moves the cost of "one wrong response" forward to the cost of "one more round of evidence collection". The cost of a response caused by a wrong conclusion is greater than the cost of one more collection round. The number, False-ENOUGH of 1 in 2,668, is the size of the cost paid in that trade.
+The design rests on an assumption we have not measured: that a wrong response costs more than one more round of evidence collection. If that holds, the gate trades the first cost for the second. The measured part is only the error rate of the gate itself, a False-ENOUGH of 1 in 2,668 on the synthetic TEST.
+
+On the Metis side, this is a different serving workload from a chat model. Each decision is one forward pass of the frozen backbone and LoRA, the fp32 heads, and a deterministic rule, with no generation and no sampling. Inputs are capped at 4,096 tokens, and longer ones are excluded rather than truncated. The verified environment is the one in the usage section. We have not published latency, throughput or cost figures, so we make no claim about them. Serving it as a Metis endpoint is a possible later step, not something available now.
 
 ```mermaid
 flowchart TB
     A["Detection"] --> B["Security agent<br/>evidence collection (telemetry · attestation · documents)"]
     B --> C["Thaki-SecDecision-27B-V2<br/>evidence-sufficiency judgment"]
     C --> D{"can_conclude?"}
-    D -->|"False: unsatisfied facts + evidence to collect"* --> B
-    D -->|"True: status + support/refute evidence IDs"* --> E["Response planning<br/>policy gate + audit log"]
+    D -->|"False: unsatisfied facts + evidence to collect"| B
+    D -->|"True: status + support/refute evidence IDs"| E["Response planning<br/>policy gate + audit log"]
 ```
+
+*Target architecture only. No Paxis integration ships with this release.*
+
+## The smaller sibling: Thaki-SecDecision-4B-Preview
+
+[Thaki-SecDecision-4B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecDecision-4B-Preview) uses the same input format, head structure and Rule B on a `Qwen/Qwen3.5-4B` backbone. LoRA covers the top 8 of 32 layers, and it has its own τ (0.3484134802001108, fixed on calib for False-ENOUGH ≤ 0.01). Its verification status comes first: it has no pre-registered independent TEST pass. Its one pre-registered holdout (dev, n = 3,000) ended in ABORT_OVERLAP. An audit before the model was loaded found 58 of 3,000 examples (1.93%) near-copied from the training side, above the 1% limit, so the model was never scored on that set.
+
+A separately labelled post-hoc holdout with those 58 removed (n = 2,942) was run once and passed its gates (FILTERED_PASS). There, False-ENOUGH was 4/1,968 = 0.0020, ENOUGH recall 834/974 = 0.8563, and FULL recall 351/484 = 0.7252. That set comes from the same synthetic generator and does not replace the pre-registered result. The development targets were FULL ≥ 0.80 and ENOUGH ≥ 0.88, and the 4B model does not meet them. Roughly one in four fully supported claims is left unconcluded. It is not validated as a 27B replacement, on real SOC logs, or for production.
+
+The 4B card also reports a useful negative result. 27B → 4B knowledge distillation, run with the same examples, order, step count and seed as gold-label training, did not beat gold-only continuation under the pre-registered criterion. The released 4B is therefore the gold-only model. Its install steps differ from the 27B package (PyTorch 2.13.0 from the CUDA 13.0 index, then causal-conv1d 1.7.0 built from source), so copy them from its card. Don't reuse one model's τ for the other.
 
 ## What to not trust
 
 A judge honed only in a mock courtroom is hard to say ready for a real one. This model's TEST is a synthetic claimworld: 4,002 examples whose ground truth was set by generation rules. It measures controlled generalization within the synthetic range, not the real SOC operational performance that involves real logs, real detections, and analyst judgment. Accuracy on real logs is disclosed as unverified.
 
-The structural parser records 1.0 inside the generator, so in-generator performance can be saturated; generalization claims rest only on the generator_disjoint stratum (FE 0.0, recall 95.7%). The full-precision value is in Table 2.
+The structural parser records 1.0 inside the generator, so in-generator performance can be saturated; generalization claims rest only on the generator_disjoint stratum (FE 0.0, recall 95.7%). The full-precision value is in Table 3. Even that stratum is synthetic, so it says nothing about real logs or about scenario families outside claimworld.
+
+The post-release audit adds one more limit. 50 of the 4,002 TEST examples (1.25%) had a near-copy in the training data, all in the standard stratum, and the TEST numbers were not recomputed without them. Before release, the splits were checked for entity separation, not for content independence.
 
 To re-emphasize: can_conclude being True is not an action authorization. It is a statement that the evidence is sufficient. Approving a response is a decision of a separate policy layer, and this release provides neither Paxis or Autonomous-SOC integration nor resident serving. Only the model weights and inference code are public.
 
@@ -187,10 +243,23 @@ To re-emphasize: can_conclude being True is not an action authorization. It is a
 
 This model does not write a story. It looks at the submitted evidence and decides whether the claim is supported, overturned, short of evidence, or contradicted, and whether a conclusion is allowed now. On the sealed TEST, only 1 of the 2,668 cases that do not allow a conclusion was mis-concluded, and 1,297 of the 1,334 cases that do were found.
 
-In a security agent, the moment you conclude is the moment action begins. The model that decides "may I conclude now" is the gate that guards that moment. The model, inference code, and model card are public on Hugging Face, and anyone can load them as-is and reproduce the numbers in this post.
+In a security agent, the moment you conclude is the moment action begins. The model that decides "may I conclude now" is the gate that guards that moment. The model, inference code, and model card are public on Hugging Face. Anyone can load the package as shipped and run it. The TEST numbers come from the sealed set, published as aggregates only (`SEC_DECISION_V2_TEST_EVAL.json`). The dataset is not in the repository, so outside readers cannot recompute them. What we verified is narrower: the public package, loaded in a fresh process on one B200 in bf16 inside `vllm/vllm-openai:v0.28.0`, reproduces the sealed computation within max |Δ| < 1e-3.
 
 **Related posts**
 
 - [From vulnerability discovery to fix verification: building a security agent with SecProof-2B and Paxis](/tech-blog/en/agentops/secproof-2b-paxis-security-agent/)
 - [One 27B model running answer generation and evidence judgment together: a shared backbone that only the last 4 layers diverge](/tech-blog/en/research/shared-backbone-evidence-gate-27b/)
 - [Thaki-CiteRank-4B: a 4B model that picks what a RAG agent should cite](/tech-blog/en/agentops/citerank-4b-paxis/)
+
+## Update log
+
+**2026-11-01**
+
+- Corrected the gate count: G0 to G7 is eight gates, not seven.
+- Added the post-release near-copy audit of 2026-10-31: 50 of 4,002 TEST examples (1.25%) had a near-copy in the training data, all in the standard stratum. The TEST numbers were not recomputed.
+- Split the old Table 1. Values fixed before TEST (Rule B, τ, τ selection rule) are now separate from the earlier V1 and pre-amendment runs that motivated Rule B.
+- Matched the model-family table to the model card (Thaki-SecEmbed-8B-Preview, Thaki-SecProof-27B-V1) and added the 4B-Preview.
+- Replaced "anyone can reproduce the numbers" with what was actually verified and in which environment.
+- Added a usage section copied from the model card.
+- Reworded the Paxis section as target architecture and stated that neither model ships inside Paxis or Metis today.
+- Fixed the Mermaid edge-label syntax in the workflow diagram.
