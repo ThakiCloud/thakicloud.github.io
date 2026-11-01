@@ -124,7 +124,7 @@ flowchart TB
 
 이 설계에서 판단과 실행의 경계는 분명합니다. 신경망은 제안만 합니다. 서명하거나 승인하거나 실행하지 않습니다. 승인과 서명은 별도 계층이 맡습니다. 설비 구동 권한은 지금 단계에서 항상 거부(DENY)입니다. FactoryShield의 출력이 그대로 설비에 닿는 경로는 없습니다.
 
-이렇게 나누면 각 계층을 따로 평가할 수 있습니다. 제안 단계는 위험률과 coverage로 재고 승인 계층은 권한과 감사 기록으로 봅니다. 앞서 소개한 [한국어 ASR과 Voice-to-Mission 아키텍처](/ko/agentops/thaki-asr-paxis-voice-to-mission/)에서 언어 이해와 실행 권한을 분리했던 원칙을 설비 명령에 적용한 것입니다.
+이렇게 나누면 각 계층을 따로 평가할 수 있습니다. 제안 단계는 위험률과 coverage로 재고 승인 계층은 권한과 감사 기록으로 봅니다. 앞서 소개한 [한국어 ASR과 Voice-to-Mission 아키텍처](/tech-blog/ko/agentops/thaki-asr-paxis-voice-to-mission/)에서 언어 이해와 실행 권한을 분리했던 원칙을 설비 명령에 적용한 것입니다.
 
 ## Metis 관점: 대형 LLM 없이 엣지에서
 

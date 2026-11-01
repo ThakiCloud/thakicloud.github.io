@@ -125,7 +125,7 @@ flowchart TB
 
 In this design the boundary between judgment and execution is explicit. The network only proposes. It does not sign, approve or execute anything. Approval and signing belong to a separate layer. At this stage, permission to actuate equipment is always denied (DENY). There is no path by which FactoryShield's output reaches equipment directly.
 
-Splitting it this way lets each layer be evaluated on its own. The proposal step is measured by risk and coverage, and the approval layer by permissions and audit records. This applies to equipment commands the same principle we described for our [Korean ASR and the Voice-to-Mission architecture](/en/agentops/thaki-asr-paxis-voice-to-mission/): language understanding is kept separate from the authority to execute.
+Splitting it this way lets each layer be evaluated on its own. The proposal step is measured by risk and coverage, and the approval layer by permissions and audit records. This applies to equipment commands the same principle we described for our [Korean ASR and the Voice-to-Mission architecture](/tech-blog/en/agentops/thaki-asr-paxis-voice-to-mission/): language understanding is kept separate from the authority to execute.
 
 ## The Metis angle: on the edge without a large LLM
 
