@@ -70,7 +70,7 @@ In phone terms, the new hire was no better at naming callers than the person alr
 
 ## Usage scenario: connecting identification to Paxis
 
-Naming the model does not finish the job. An operator still has to decide whether the alert is real, where it came from, and who should hear about it. Paxis, ThakiCloud's agent platform, connects that judgment to action. Below is a reference design for plugging this model into Paxis; the path from model verdict to Paxis work has not yet been verified end to end.
+Naming the model does not finish the job. An operator still has to decide whether the alert is real, where it came from, and who should hear about it. The proposed design uses Paxis, ThakiCloud's agent platform, to connect that judgment to an operator workflow. Below is a reference design for plugging this model into Paxis; the path from model verdict to Paxis work has not yet been verified end to end.
 
 ```mermaid
 flowchart LR
