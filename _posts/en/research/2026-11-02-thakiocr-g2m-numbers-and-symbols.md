@@ -74,7 +74,7 @@ We opened the independent evaluation set once, after training and model selectio
 
 The symbol test is a set we generated ourselves, collecting only the characters G2M was built to handle. It measures the trained skill directly, so scores run higher than they would for reading ordinary documents. The real-document holdout is one volume, unused in training, taken from the same dataset family as the training data.
 
-![Critical-token exact match for the three models on the 5,991-line symbol test](/assets/images/thakiocr-g2m-symbol-test-en.png)
+![Critical-token exact match for the three models on the 5,991-line symbol test](/assets/images/thakiocr-g2m-symbol-test-en.webp)
 
 The gate results are as follows. I1, critical-token exact match, passed. I2, won-sign family exact match, passed (99.9% when the two won signs are treated as the same currency). I3, whether real-document line CER is lower than S1's, passed. I5, size and CPU latency (median 13.3 ms per line), passed. **I4, real-document numbers and dates, failed: only 3 of 4 dates were correct.**
 

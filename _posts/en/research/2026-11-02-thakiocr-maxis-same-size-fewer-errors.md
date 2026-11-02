@@ -81,7 +81,7 @@ The final evaluation used three form types held out of training entirely: one ba
 | ThakiOCR G2M | 8.93M | 4.84% |
 | ThakiOCR A2 | 8.93M | 3.34% |
 
-![Character error rates of the three models on the three sealed-evaluation form types](/assets/images/thakiocr-maxis-cer-en.png)
+![Character error rates of the three models on the three sealed-evaluation form types](/assets/images/thakiocr-maxis-cer-en.webp)
 
 A2's error rate is 0.689 times G2M's, which means errors fell by about 31%. We also resampled the 1,493 document groups to compute the difference, and its 95% confidence interval lay entirely below zero.
 

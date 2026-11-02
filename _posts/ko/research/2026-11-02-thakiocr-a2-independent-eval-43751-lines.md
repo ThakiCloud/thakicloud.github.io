@@ -70,7 +70,7 @@ flowchart TB
 
 S1의 차이에 대해서는 1,493쪽을 단위로 묶은 클러스터 부트스트랩도 돌렸습니다. CER 차이는 −1.51%p이고 95% 신뢰구간은 −1.57%p에서 −1.44%p로, 0을 포함하지 않았습니다. 참고로 첫 공개 모델 A는 같은 세트에서 12.19%였습니다.
 
-![봉인 평가에서 G2M과 A2의 숫자·날짜·원화 금액 정확도](/assets/images/thakiocr-a2-critical-tokens.png)
+![봉인 평가에서 G2M과 A2의 숫자·날짜·원화 금액 정확도](/assets/images/thakiocr-a2-critical-tokens.webp)
 
 학습은 B200 GPU 한 장에서 40,000스텝, 배치 128로 약 2.16 GPU시간이 걸렸습니다.
 

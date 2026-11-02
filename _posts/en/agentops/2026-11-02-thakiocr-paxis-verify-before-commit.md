@@ -60,7 +60,7 @@ On 256 synthetic evaluation documents (clean and mildly degraded), the results w
 | Documents containing errors | 168 |
 | Error documents that leaked through auto-confirm | 0 |
 
-![Share of auto-confirmed and human-review documents among 256 synthetic evaluation documents](/assets/images/thakiocr-paxis-ver001-en.png)
+![Share of auto-confirmed and human-review documents among 256 synthetic evaluation documents](/assets/images/thakiocr-paxis-ver001-en.webp)
 
 None of the 168 error documents passed through auto-confirm. The one-sided 95% upper bound on the miss rate computed from this sample is about 1.8%.
 

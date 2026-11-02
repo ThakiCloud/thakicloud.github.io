@@ -70,7 +70,7 @@ The comparison baseline is G2M, our previous public model. Both models have abou
 
 For the S1 difference we also ran a cluster bootstrap with the 1,493 pages as the unit. The CER difference is −1.51pp, and the 95% confidence interval runs from −1.57pp to −1.44pp, which does not include 0. For reference, the first public model, A, scored 12.19% on the same set.
 
-![Digit, date, and won-amount accuracy of G2M and A2 on the sealed evaluation](/assets/images/thakiocr-a2-critical-tokens-en.png)
+![Digit, date, and won-amount accuracy of G2M and A2 on the sealed evaluation](/assets/images/thakiocr-a2-critical-tokens-en.webp)
 
 Training took about 2.16 GPU hours on a single B200 GPU, with 40,000 steps at batch size 128.
 

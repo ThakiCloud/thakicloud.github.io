@@ -81,7 +81,7 @@ flowchart TB
 | ThakiOCR G2M | 893만 | 4.84% |
 | ThakiOCR A2 | 893만 | 3.34% |
 
-![봉인 평가 서식 3종에서 세 모델의 글자 오류율](/assets/images/thakiocr-maxis-cer.png)
+![봉인 평가 서식 3종에서 세 모델의 글자 오류율](/assets/images/thakiocr-maxis-cer.webp)
 
 A2의 오류율은 G2M의 0.689배입니다. 오류가 약 31% 줄었다는 뜻입니다. 문서 묶음 1,493개를 다시 뽑아 계산한 차이의 95% 신뢰구간도 0보다 작은 쪽에만 있었습니다.
 
