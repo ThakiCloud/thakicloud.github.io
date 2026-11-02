@@ -24,6 +24,9 @@ reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/thaki-memorypolicy-vllm-config-ranker/"
 ---
 
+![Illustration of the core idea of Can a 10K-Parameter Ranker Pick Better vLLM Settings Than the Defaults? Building Thaki-MemoryPolicy](/assets/images/thaki-memorypolicy-vllm-config-ranker-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Summary
 
 [Thaki-MemoryPolicy-vLLM-Ranker](https://huggingface.co/ThakiCloud/Thaki-MemoryPolicy-vLLM-Ranker) is a ranker with about 10,000 parameters. Looking only at the model architecture and the workload specification, it picks one of 15 vLLM serving configurations before any server is started. One recommendation takes about 0.15 ms on CPU.
@@ -92,6 +95,15 @@ There are three baselines.
 - **LightGBM**: a separate SLO-pass classifier and throughput regressor; among candidates with pass probability ≥ 0.5, pick the highest predicted throughput.
 
 We pre-registered that one of MLP and LightGBM would be chosen on dev by (SLO-violation rate, regret), and only the chosen policy would be evaluated once on test. Regret is how far the chosen configuration's throughput falls short of the best throughput among SLO-meeting candidates, as a ratio.
+
+```mermaid
+flowchart TB
+  A["15 candidate configurations<br/>12 grid + default + 2 prefix-off"] --> B["1,440 cells measured<br/>6 workloads × 4 concurrency levels × 4 models<br/>dedicated vLLM server on one B200, 4s warmup + 15s window"]
+  B --> C["Splits<br/>train: chat · rag · longgen / dev: summarize / test: agent · codeassist"]
+  C --> D["Leak-free inputs (12 features)<br/>model 4 · workload 4 · candidate 4<br/>16 post-run measurements forbidden in code"]
+  D --> E["MLP ranker (9,985 parameters)<br/>scores the 15 candidates per scenario, picks the highest"]
+  E --> F["Preregistered evaluation<br/>chosen on dev → run once on test, vs FIXED · HEUR · LightGBM"]
+```
 
 ## Dev results: close to the best configuration
 

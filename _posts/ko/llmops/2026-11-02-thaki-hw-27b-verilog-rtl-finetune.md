@@ -24,6 +24,9 @@ reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/thaki-hw-27b-verilog-rtl-finetune/"
 ---
 
+![RTL로 학습한 27B는 원본을 이기지 못했습니다: Thaki-HW-27B-v0.1 개발기 개념을 형상화한 이미지](/assets/images/thaki-hw-27b-verilog-rtl-finetune-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 핵심 요약
 
 Qwen3.8-27B를 Verilog RTL 생성에 맞춰 학습한 [Thaki-HW-27B-v0.1](https://huggingface.co/ThakiCloud/Thaki-HW-27B-v0.1)을 Hugging Face에 공개했습니다. 결과부터 적습니다. 학습 전에 정해 둔 공개 기준은 통과했지만, **원본 Qwen3.8-27B보다 낫다는 통계적 증거는 나오지 않았습니다.** VerilogEval은 +0.85%p였고 95% 신뢰구간이 0을 포함합니다. RTLLM은 −4.27%p로 점추정이 오히려 낮고, 하락 가능성을 배제하지 못했습니다.
@@ -67,6 +70,16 @@ v0.1 전에 두 번 시도했고 두 번 다 실패했습니다. 평가 조건�
 이렇게 한 데는 두 가지 이유가 있습니다. 하나는 정답 확인입니다. 사람이 쓴 원본 코드라도 그 설명과 정확히 대응한다는 보장이 없는데, 동치 검사를 통과한 생성물은 최소한 원본과 같은 동작을 합니다. 다른 하나는 공개 권리입니다. 공개 근거는 원본 RTL의 라이선스에서 가져오고, "모델 출력이니 자유롭게 써도 된다"는 논리에 기대지 않았습니다.
 
 16,576건을 생성했고 최종 채택은 1,452건이었습니다. 이 가운데 1,000건을 회로 계열별로 고르게 뽑되, 계열 안에서는 복잡한 것부터 골랐습니다. 여기에 일반 코딩 replay 317행(OpenCodeInstruct, CommitPackFT 허용 라이선스 부분)을 섞었습니다.
+
+```mermaid
+flowchart TB
+  A["OpenRTLSet<br/>131,309개 Verilog 모듈"] --> B["필터링<br/>라이선스 · Verilator lint · 길이 · 오염 제거 · 중복 제거 · 봉인 계열 제외"]
+  B --> C["시드 7,257<br/>설명 데이터셋과 정확히 일치하는 것만 → 3,545"]
+  C --> D["자기증류<br/>Qwen3.8-27B가 설명 + 포트 정의만으로 RTL 작성 (생성 16,576건)"]
+  D --> E["Yosys 형식 동치 검사<br/>순차: 초기 상태 0에서 50 사이클 · 조합: SAT"]
+  E --> F["채택 1,452<br/>시드당 1개만"]
+  F --> G["학습 데이터<br/>회로 계열 균형 1,000행 + 일반 코딩 replay 317행"]
+```
 
 ### 판정기가 데이터를 깎은 방식
 

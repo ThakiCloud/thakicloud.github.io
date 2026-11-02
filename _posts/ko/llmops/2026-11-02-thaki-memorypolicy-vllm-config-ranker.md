@@ -24,6 +24,9 @@ reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/thaki-memorypolicy-vllm-config-ranker/"
 ---
 
+![1만 파라미터 랭커로 vLLM 설정을 고르면 기본값보다 나을까: Thaki-MemoryPolicy 개발기 개념을 형상화한 이미지](/assets/images/thaki-memorypolicy-vllm-config-ranker-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 핵심 요약
 
 [Thaki-MemoryPolicy-vLLM-Ranker](https://huggingface.co/ThakiCloud/Thaki-MemoryPolicy-vLLM-Ranker)는 파라미터가 약 1만 개인 랭커입니다. 모델 구조와 워크로드 사양만 보고, 서버를 띄우기 전에 vLLM 서빙 설정 15개 중 하나를 고릅니다. CPU에서 한 번 추천하는 데 0.15ms 정도 걸립니다.
@@ -92,6 +95,15 @@ SLO는 p95 TTFT 3초 이하, p95 TPOT 60ms 이하, 오류율 1% 이하, 서버 �
 - **LightGBM**: SLO 통과 확률 분류기와 처리량 회귀기를 따로 학습해, 통과 확률 0.5 이상인 후보 중 예측 처리량이 가장 큰 것을 고릅니다.
 
 MLP와 LightGBM 중 하나를 dev에서 (SLO 위반율, regret) 순으로 고르고, 고른 정책만 테스트에서 한 번 평가한다고 사전등록했습니다. regret은 "SLO를 지킨 후보 중 최고 처리량" 대비 고른 설정의 처리량이 얼마나 모자란지를 비율로 잰 값입니다.
+
+```mermaid
+flowchart TB
+  A["후보 설정 15개<br/>격자 12 + 기본값 + prefix 끔 2"] --> B["실측 1,440칸<br/>6 워크로드 × 동시성 4단계 × 모델 4종<br/>B200 1장 전용 vLLM 서버, 4초 예열 + 15초 창"]
+  B --> C["분할<br/>train: chat · rag · longgen / dev: summarize / test: agent · codeassist"]
+  C --> D["새어 들어가지 않는 입력 (특징 12개)<br/>모델 4 · 워크로드 4 · 후보 설정 4<br/>실행 후 측정값 16종은 코드 금지"]
+  D --> E["MLP 랭커 (파라미터 9,985)<br/>시나리오당 후보 15개에 점수를 매겨 최고를 고름"]
+  E --> F["사전등록 평가<br/>dev에서 고르기 → 테스트에서 한 번, FIXED · HEUR · LightGBM 비교"]
+```
 
 ## dev 결과: 최적 설정에 가까웠다
 

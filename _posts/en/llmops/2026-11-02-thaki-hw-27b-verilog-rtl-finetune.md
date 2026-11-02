@@ -24,6 +24,9 @@ reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/thaki-hw-27b-verilog-rtl-finetune/"
 ---
 
+![Illustration of the core idea of Our RTL Fine-Tune of a 27B Model Did Not Beat the Base: Building Thaki-HW-27B-v0.1](/assets/images/thaki-hw-27b-verilog-rtl-finetune-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Summary
 
 We released [Thaki-HW-27B-v0.1](https://huggingface.co/ThakiCloud/Thaki-HW-27B-v0.1), a Qwen3.8-27B fine-tuned for Verilog RTL generation, on Hugging Face. The result comes first. It met the release criteria we fixed before training, but **we found no statistically significant improvement over the original Qwen3.8-27B.** VerilogEval moved +0.85pp with a 95% confidence interval that includes zero. RTLLM moved −4.27pp, so the point estimate is lower than the base, and a regression cannot be ruled out.
@@ -67,6 +70,16 @@ We did not train on the source RTL directly. Instead, Qwen3.8-27B received only 
 There were two reasons. The first is correctness. Even human-written source code is not guaranteed to match its description, while a sample that passes the equivalence check at least behaves like the source. The second is redistribution rights. The case for publishing rests on the licence of the source RTL, not on an argument that model output is free to use.
 
 We generated 16,576 samples and accepted 1,452. From those we chose 1,000, spread evenly across circuit families, taking the most complex first within each family. We mixed in 317 rows of general coding replay (OpenCodeInstruct and the permissive part of CommitPackFT).
+
+```mermaid
+flowchart TB
+  A["OpenRTLSet<br/>131,309 Verilog modules"] --> B["Filtering<br/>licence · Verilator lint · length · decontamination · dedup · sealed-family exclusion"]
+  B --> C["Seeds 7,257<br/>only exact matches with the description dataset → 3,545"]
+  C --> D["Self-distillation<br/>Qwen3.8-27B writes RTL from description + port list only (16,576 generated)"]
+  D --> E["Yosys formal equivalence<br/>sequential: 50 cycles from all-zero state · combinational: SAT"]
+  E --> F["Accepted 1,452<br/>at most one per seed"]
+  F --> G["Training data<br/>1,000 rows balanced across circuit families + 317 rows coding replay"]
+```
 
 ### How the checker shaped the data
 

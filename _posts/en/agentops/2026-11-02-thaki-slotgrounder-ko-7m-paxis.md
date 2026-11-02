@@ -24,6 +24,9 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/thaki-slotgrounder-ko-7m-paxis/"
 ---
 
+![Illustration of the core idea of Confidence Is Not Evidence: Thaki-SlotGrounder-KO-7M, a 7M Model That Checks Structured Commands Against the Source Sentence](/assets/images/thaki-slotgrounder-ko-7m-paxis-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Summary
 
 When a user says "김하늘한테 5만원 보내줘" ("Send 50,000 won to Kim Haneul"), an agent turns it into a structure such as `send · payee 김하늘 · amount 5만원`. The trouble starts when that conversion is wrong. An extraction model can be highly confident even when the operation has become `delete` or the target file is the wrong one. Being confident and being supported by the source sentence are two different things.
@@ -36,12 +39,13 @@ Placed behind our existing extraction model on synthetic sealed tests, it cut wr
 
 The IntentAction models in the [TrustEdge series](/tech-blog/en/agentops/thaki-inputguard-ko-9m-paxis/) are extractors: they pull the operation and its fields out of a sentence. SlotGrounder looks from the other side. It takes one finished proposal and asks, field by field, "does this sentence actually say this value?"
 
-```text
-user sentence
-  → extractor (IntentAction, ...)   : builds a structured proposal
-  → deterministic verifier          : boundaries, negation, registries, amount expressions
-  → SlotGrounder                    : per-field evidence score, REJECT if weak
-  → separate confirm/approve layer  : user confirms fields, signing, execution
+```mermaid
+flowchart TB
+  A["user sentence<br/>(e.g., 'Send 50,000 won to Kim Haneul')"] --> B["extractor (IntentAction, ...)<br/>builds a structured proposal"]
+  B --> C["deterministic verifier<br/>boundaries · negation · registries · amount expressions"]
+  C --> D["SlotGrounder (7M)<br/>per-field evidence score g, weakest field is g"]
+  D -->|g below 0.3, REJECT| X["refused<br/>not shown on the confirmation screen"]
+  D -->|SUPPORTED| E["separate confirm/approve layer<br/>user confirms fields · signing · execution"]
 ```
 
 The model outputs a support probability for the operation and for the payee (PAYEE), target (RESOURCE) and amount (MONEY) fields. The lowest of them is the score `g`, and a proposal with `g` below 0.3 is rejected. A proposal that passes is labeled `SUPPORTED`. That is not an approval. User confirmation and signing happen in a separate layer afterwards.

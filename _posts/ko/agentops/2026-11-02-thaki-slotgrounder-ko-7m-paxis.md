@@ -24,6 +24,9 @@ reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/thaki-slotgrounder-ko-7m-paxis/"
 ---
 
+![확신과 근거는 다릅니다: 구조화 명령의 근거를 따지는 7M 모델, Thaki-SlotGrounder-KO-7M 개념을 형상화한 이미지](/assets/images/thaki-slotgrounder-ko-7m-paxis-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 핵심 요약
 
 사용자가 "김하늘한테 5만원 보내줘"라고 말하면 에이전트는 이 문장을 `send · 수취인 김하늘 · 금액 5만원` 같은 구조로 바꿉니다. 문제는 이 변환이 틀릴 때입니다. 작업 종류가 `delete`로 바뀌거나 대상 파일이 다른 것으로 잡혀도 추출 모델은 높은 확신도를 낼 수 있습니다. 확신도가 높다는 것과 원문이 그 값을 뒷받침한다는 것은 서로 다른 이야기입니다.
@@ -36,12 +39,13 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/thaki-slotgrounder-
 
 [TrustEdge 시리즈](/tech-blog/ko/agentops/thaki-inputguard-ko-9m-paxis/)의 IntentAction 계열 모델은 문장에서 작업 종류와 필드를 뽑는 추출기입니다. SlotGrounder는 반대 방향에서 봅니다. 이미 만들어진 제안 하나를 받아서 "이 문장이 정말 이 값을 말하고 있는가"를 필드마다 묻습니다.
 
-```text
-사용자 문장
-  → 추출기 (IntentAction 등)        : 구조화 제안 생성
-  → 결정론 검증기                    : 경계·부정·등록 목록·금액 표현 확인
-  → SlotGrounder                    : 필드별 근거 점수, 약하면 REJECT
-  → 별도 확인·승인 계층              : 사용자 필드 확인, 서명, 실행
+```mermaid
+flowchart TB
+  A["사용자 문장<br/>(예: '김하늘한테 5만원 보내줘')"] --> B["추출기 (IntentAction 등)<br/>구조화 제안 생성"]
+  B --> C["결정론 검증기<br/>경계 · 부정 · 등록 목록 · 금액 표현 확인"]
+  C --> D["SlotGrounder (7M)<br/>필드별 근거 점수 g, 가장 낮은 값이 g"]
+  D -->|g 0.3 미만, REJECT| X["거절<br/>확인 화면에 올리지 않음"]
+  D -->|SUPPORTED| E["별도 확인·승인 계층<br/>사용자 필드 확인 · 서명 · 실행"]
 ```
 
 모델은 작업 종류와 수취인(PAYEE), 대상(RESOURCE), 금액(MONEY) 필드에 각각 뒷받침 확률을 냅니다. 가장 낮은 값이 점수 `g`이고, `g`가 0.3보다 작으면 제안을 거절합니다. 통과한 제안의 판정 이름은 `SUPPORTED`입니다. 승인이라는 뜻은 아닙니다. 그 뒤의 사용자 확인과 서명은 별도 계층이 맡습니다.

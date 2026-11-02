@@ -24,6 +24,9 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/thaki-intentaction-finance-ko-7m-paxis/"
 ---
 
+![Illustration of the core idea of From a General Model to a Money-Transfer Model: Building Thaki-IntentAction-Finance-KO-7M](/assets/images/thaki-intentaction-finance-ko-7m-paxis-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Summary
 
 "김하늘한테 5만원 보내줘" ("Send 50,000 won to Kim Haneul") is a simple request for a person. For a system to handle it, it has to answer several questions at once. Who is the payee? How much? Is this a request to send now, or a remark about yesterday's transfer, or an instruction not to send?
@@ -44,13 +47,15 @@ That distribution decided the next step. The weakness was concentrated in "what 
 
 The model does not generate text. Rules first cut candidates out of the input, such as payee spans and amount expressions, and the network picks one candidate or "none" for each field. So it cannot invent a name or a number that is not in the input.
 
-```text
-Korean request
-  → rule candidates     : payee spans, amount expressions
-  → model selection     : per-field candidate pick, action / negation / abstain scores
-  → general verifier    : negation, condition, past, reported-speech markers, verb match, registries
-  → Finance Profile v1  : send + registered payee + one amount expression + identical re-parse
-  → PROPOSE or ABSTAIN
+```mermaid
+flowchart TB
+  A["Korean request<br/>(e.g., 'Send 50,000 won to Kim Haneul')"] --> B["Rule candidate extraction<br/>payee spans · amount expressions"]
+  B --> C["Model selection (7M)<br/>one candidate or 'none' per field<br/>action / negation / abstain scores"]
+  C --> D["General verifier<br/>negation · condition · past · reported speech · verb match · registries"]
+  D -->|refused| X["ABSTAIN<br/>no proposal"]
+  D -->|passed| E["Finance Profile v1<br/>send + registered payee + one amount expression + identical re-parse"]
+  E -->|any miss| X
+  E -->|all hold| P["PROPOSE<br/>confirmation request: source hash · field positions · structured values"]
 ```
 
 The Finance Profile is the last gate. It proposes only when the action is a transfer, the payee appears verbatim in the list the user supplies, the sentence contains exactly one amount expression, and re-parsing gives the same value. Everything else is refused. Expressions like "5만원 이하로" (up to 50,000 won), "월급 들어오면" (when my salary comes in), "보내지 마" (don't send) or "어제 보냈어" (I sent it yesterday) produce no proposal. This layer never repairs or re-selects a value. It never proposes a transfer to someone outside the list, and with no list at all it refuses every request.
