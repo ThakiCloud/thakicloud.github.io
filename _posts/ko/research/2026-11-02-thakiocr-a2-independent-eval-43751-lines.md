@@ -22,9 +22,14 @@ lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-a2-independent-eval-43751-lines/"
 ---
 
-ThakiOCR의 세 번째 모델 A2를 학습에 전혀 쓰지 않은 서식 1,493쪽에서 평가했습니다. 미리 등록한 게이트 6개를 모두 통과해 **연구 후보로 GO** 판정을 받았습니다. 그러나 **제품 판정은 NO_GO**이고 가중치는 공개하지 않은 비공개 상태입니다. 이 글은 모델 소개가 아니라 평가 보고입니다.
+학습에 전혀 쓰지 않은 서식 1,493쪽에서 새 모델을 한 번만 시험했습니다. 미리 등록한 합격선 6개를 모두 통과해 연구 후보로 인정받았지만, 제품으로 내놓기에는 아직 부족하다는 결론입니다. 가중치는 공개하지 않습니다. 어떤 시험지를 만들고, 그 시험지를 만들면서 데이터셋의 어떤 결함을 찾았는지, 합격선마다 무엇이 통과했는지, 아직 확인되지 않은 부분이 어디인지 이 글에서 하나씩 다룹니다.
 
-[Maxis 글](/tech-blog/ko/research/thakiocr-maxis-same-size-fewer-errors/)에서 "같은 크기인데 오류가 31% 줄었다"는 결과를 소개했습니다. 여기서는 그 숫자가 어떤 시험에서 나왔는지, 게이트별로 무엇이 통과했는지, 아직 무엇이 부족한지를 자세히 다룹니다.
+이 글은 모델 소개가 아니라 평가 보고서입니다. 공개 데이터셋으로 새 모델을 시험해 본 독자라면, 시험지를 만드는 점검 부분부터 읽으면 됩니다.
+
+시험받은 모델은 ThakiOCR A2(세 번째 모델)이고, 비교 대상은 그 앞의 공개 모델 G2M입니다. 앞선 Maxis 글에서 "같은 크기인데 오류가 31% 줄었다"고 소개한 결과가 바로 이 시험에서 나온 것입니다.
+
+![ThakiOCR A2: 독립 평가 43,751줄에서 확인한 개선과 남은 한계 개념을 형상화한 이미지](/assets/images/thakiocr-a2-independent-eval-43751-lines-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 쉽게 말하면
 
@@ -101,6 +106,8 @@ A2가 제품이 되더라도 OCR 결과를 그대로 업무에 반영하지는 �
 ## 참고
 
 - A2 가중치는 비공개입니다. 이 글은 평가 결과 보고이며 모델 공개나 사용 안내가 아닙니다.
+- 앞선 결과: [Maxis 글](/tech-blog/ko/research/thakiocr-maxis-same-size-fewer-errors/)
 - 공개된 이전 모델: [ThakiOCR A](/tech-blog/ko/research/thakiocr-a-small-korean-english-line-ocr/), [ThakiOCR G2M](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/)
-- 평가 데이터: AI Hub 데이터셋 632. 원본과 잘라 낸 이미지는 재배포하지 않습니다.
+- 평가 데이터: [AI Hub 데이터셋 632](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=632)(공식 명칭: 금융업 특화 문서 OCR 데이터). 원본과 잘라 낸 이미지는 재배포하지 않습니다.
+- AI Hub 데이터 이용 조건: [AI Hub FAQ](https://www.aihub.or.kr/aihubnews/faq/list.do)
 - 성능이 최고 수준이라고 주장하지 않습니다.

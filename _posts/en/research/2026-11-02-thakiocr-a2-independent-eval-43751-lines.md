@@ -26,6 +26,9 @@ We evaluated A2, the third ThakiOCR model, on 1,493 pages of forms that were nev
 
 The [Maxis post](/tech-blog/en/research/thakiocr-maxis-same-size-fewer-errors/) reported "the same size, 31% fewer errors." Here we cover which test that number came from, what passed at each gate, and what is still lacking.
 
+![Illustration of the core idea of ThakiOCR A2: What an Independent 43,751-Line Evaluation Confirmed, and What Is Still Missing](/assets/images/thakiocr-a2-independent-eval-43751-lines-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## In plain terms
 
 Imagine a student who studied one workbook and then took an exam from a completely different publisher. The exam paper stayed sealed until test day, and the passing line was written down in advance.
@@ -101,6 +104,8 @@ Even if A2 becomes a product, OCR output will not go into business processes as 
 ## References
 
 - The A2 weights are private. This post is an evaluation report, not a model release or usage guide.
+- Earlier result: [Maxis post](/tech-blog/en/research/thakiocr-maxis-same-size-fewer-errors/)
 - Previously released models: [ThakiOCR A](/tech-blog/en/research/thakiocr-a-small-korean-english-line-ocr/), [ThakiOCR G2M](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/)
-- Evaluation data: AI Hub dataset 632. We do not redistribute the originals or the cropped images.
+- Evaluation data: [AI Hub dataset 632](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=632) (official name: 금융업 특화 문서 OCR 데이터). We do not redistribute the originals or the cropped images.
+- AI Hub data usage terms: [AI Hub FAQ](https://www.aihub.or.kr/aihubnews/faq/list.do)
 - We do not claim state-of-the-art performance.
