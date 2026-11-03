@@ -17,13 +17,15 @@
     if (links.length < 2) return;
 
     var ticks = nav.querySelector('.thaki-toc__ticks');
-    var tickItems = links.map(function (link, i) {
+    var tickItems = links.map(function () {
       var li = document.createElement('li');
       var button = document.createElement('button');
       button.type = 'button';
       button.tabIndex = -1;
+      // With a mouse the open panel covers the ticks, so this only runs on touch screens: a tap
+      // opens the panel through :focus-within, and the reader picks the section from the list.
       button.addEventListener('click', function () {
-        if (sections[i]) sections[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        button.focus();
       });
       li.appendChild(button);
       ticks.appendChild(li);
@@ -38,6 +40,9 @@
         e.stopPropagation();
         sections[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, '', link.hash);
+        // A mouse click or tap leaves focus on the link, which would hold the panel open over
+        // the text through :focus-within. Keyboard activation (detail 0) keeps its place.
+        if (e.detail) link.blur();
       });
     });
     nav.classList.add('is-ready');

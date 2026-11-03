@@ -7,6 +7,11 @@
  * Priority: 1) explicit product tag  2) category candidates ∩ topic tags
  *           3) category candidates   4) the general ad.
  * Tags match exactly after normalising, so `paxis` never matches `paxis-neo`.
+ *
+ * Replacing an ad image: add it under a new file name and point that creative at it in ADS
+ * (`file: 'ad-paxis-ko-square-v2'`). The deploy uploads media with `--size-only` and caches it
+ * for 7 days, so a file under the same name may not upload at all, and readers can see the old
+ * ad for up to a week.
  */
 (function () {
   'use strict';
@@ -136,6 +141,10 @@
     if (typeof window.gtag === 'function') window.gtag('event', name, params);
   }
 
+  function creativeFile(ad, lang) {
+    return ADS[ad][lang].file || 'ad-' + ad + '-' + lang + '-square';
+  }
+
   function render(slot, ad, lang, base, onClick) {
     var creative = ADS[ad][lang];
     var link = document.createElement('a');
@@ -145,7 +154,7 @@
     if (window.top !== window.self) link.target = '_top';
     link.addEventListener('click', onClick);
     var img = document.createElement('img');
-    img.src = base + 'ad-' + ad + '-' + lang + '-square.webp';
+    img.src = base + creativeFile(ad, lang) + '.webp';
     img.alt = creative.alt;
     img.width = 640;
     img.height = 640;
@@ -174,7 +183,7 @@
       article_category: categories.join(','),
       matching_rule: result.rule,
       locale: lang,
-      creative_id: 'ad-' + ad + '-' + lang + '-square'
+      creative_id: creativeFile(ad, lang)
     };
     var onClick = function () { track('ad_click', params); };
     slots.forEach(function (slot) { render(slot, ad, lang, data.adBase, onClick); });

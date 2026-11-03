@@ -2,13 +2,16 @@
   Collapsed "On this page" for posts (assets/js/thaki-toc.js draws the ticks). Sections only —
   H2s — because a tick per subsection is more marks than the screen edge can hold.
   Usage: {% include thaki-toc.html %} — shown where the post has `toc: true`.
+  A post's own `toc_label` wins over the language default. `toc_sticky` and `toc_icon` from the
+  old theme TOC have no effect here: this one is always fixed and has no icon.
 {%- endcomment -%}
 {%- assign _toc_label = 'On this page' -%}
-{%- if page.lang == 'ko' -%}{%- assign _toc_label = '목차' -%}{%- endif -%}
-<nav class="thaki-toc" aria-label="{{ _toc_label }}">
+{%- if page.lang == 'ko' -%}{%- assign _toc_label = '목차' -%}{%- elsif page.lang == 'ar' -%}{%- assign _toc_label = 'على هذه الصفحة' -%}{%- endif -%}
+{%- assign _toc_label = page.toc_label | default: _toc_label -%}
+<nav class="thaki-toc" aria-label="{{ _toc_label | escape }}">
   <ul class="thaki-toc__ticks" aria-hidden="true"></ul>
   <div class="thaki-toc__panel">
-    <p class="thaki-toc__title">{{ _toc_label }}</p>
+    <p class="thaki-toc__title">{{ _toc_label | escape }}</p>
     {% include toc.html sanitize=true html=content h_min=2 h_max=2 class="thaki-toc__list" skip_no_ids=true %}
   </div>
 </nav>
