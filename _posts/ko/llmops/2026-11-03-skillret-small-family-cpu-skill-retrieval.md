@@ -23,7 +23,13 @@ toc_label: "목차"
 toc_sticky: true
 reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skillret-small-family-cpu-skill-retrieval/"
+audiobook: "https://drive.google.com/file/d/1lQtdlEga47iZjX4JYSfjn1C1nOudLtth/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
+
+![CPU에서 도는 스킬 검색: SKILLRET 소형 모델 패밀리 개발기 개념을 형상화한 이미지](/assets/images/skillret-small-family-cpu-skill-retrieval-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
 
 ## 왜 작은 모델이 필요했나
 
@@ -32,6 +38,34 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skillret-small-family
 0.6B 모델도 BF16으로 1,191.6MB입니다. 스킬 검색은 턴마다 한 번씩 도는 앞단 작업이라 GPU를 따로 붙이기 아깝습니다. 그래서 질문을 이렇게 잡았습니다. 교사 모델의 검색 품질을 얼마나 남기면서 CPU 한 코어로 돌 만큼 작게 만들 수 있는가.
 
 이 글은 그 과정에서 나온 모델 9개를 다룹니다. 22M·109M 학생 모델, 그 int4·int3 양자화본, 층마다 비트를 다르게 준 drift-mixed, 그리고 2단 검색용 Reranker-0.6B입니다. 305M 모델과 그 INT8 실패는 [사전등록 게이트 글](/tech-blog/ko/owm/preregistered-gates-three-models-open/)에서 다뤘으니 여기서는 반복하지 않습니다.
+
+아홉 개 모델의 계보는 아래처럼 됩니다. 각 노드에 공개된 패킹 파일 크기와 NDCG@10을 적었습니다.
+
+```mermaid
+flowchart TD
+  T["교사 SKILLRET-Embedding-0.6B<br/>BF16 · 1,191.6MB<br/>NDCG@10 78.48"]
+  S22["22M<br/>snowflake-arctic-embed-xs 기반<br/>fp16 · 45.4MB · 75.26"]
+  S109["109M<br/>snowflake-arctic-embed-m 기반<br/>fp16 · 219.0MB · 79.18"]
+  A22["22M int4<br/>17.0MB · 75.14"]
+  B22["22M int3<br/>14.2MB · 73.82"]
+  C22["22M drift-mixed<br/>14.14MB · 74.56"]
+  A109["109M int4<br/>82.0MB · 79.21"]
+  B109["109M int3<br/>68.4MB · 78.04"]
+  C109["109M int3/g32<br/>54.7MB · 77.10"]
+  R["Reranker-0.6B<br/>2단 검색의 두 번째 단계<br/>Qwen3-Reranker-0.6B에서 미세조정<br/>8B 상위 20개 재정렬: NDCG@10 86.44 → 87.74<br/>B200 질의당 약 0.8초"]
+  T -->|"증류: multi-positive InfoNCE + KD 0.7"| S22
+  T -->|"증류: multi-positive InfoNCE + KD 0.7"| S109
+  S22 --> A22
+  S22 --> B22
+  S22 --> C22
+  S109 --> A109
+  S109 --> B109
+  S109 --> C109
+```
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/skillret-small-family-cpu-skill-retrieval/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 먼저 밝혀 둘 평가 조건
 
@@ -43,7 +77,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skillret-small-family
 
 셋째는 CPU 비용입니다. 기계와 입력 길이(최대 128토큰)가 다르므로 품질 표와 같은 줄에 놓지 않았습니다.
 
-> 초기 모델 카드 몇 개는 교사 점수를 80.82로 잡고 "교사 대비 %"를 계산했습니다. 이 값은 학습과 평가의 지시문이 어긋난 상태에서 나온 것이라 폐기했고, 이 글은 다시 잰 78.48을 기준으로 씁니다.
+> 지시문 조건이 어긋난 값은 이 글의 비교 대상이 아닙니다. 학습과 평가의 질의 앞 지시문이 다르면 같은 체크포인트의 점수가 크게 흔들리기 때문입니다. 이 글의 표는 전부 첫째 조건(지시문 없음)에서 잰 값으로 채웁니다.
+
+![skillret-small-family-cpu-skill-retrieval 슬라이드 1](/assets/images/skillret-small-family-cpu-skill-retrieval-slide-01.webp)
 
 ## 증류 레시피
 
@@ -90,6 +126,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skillret-small-family
 
 넷째, 큰 모델을 직접 줄이는 것보다 증류한 뒤 줄이는 편이 나았습니다. 교사를 int3/g32로 줄이면 297.9MB에서 64.46인데, 22M int4는 17.0MB에서 75.14입니다.
 
+![skillret-small-family-cpu-skill-retrieval 슬라이드 2](/assets/images/skillret-small-family-cpu-skill-retrieval-slide-02.webp)
+
 ## drift-mixed: 층마다 다른 비트
 
 같은 바이트로 품질을 더 남길 수 있는지 보려고, 22M에서 층마다 비트를 다르게 주는 실험을 했습니다. 어느 층에 비트를 더 줄지는 라벨 없이 정했습니다. 보정용 스킬 1,500개와 질의 150개를 각 층만 2·3·4비트로 바꿔 통과시키고, 출력 임베딩이 원본에서 얼마나 벗어나는지(1−코사인)를 쟀습니다. 그 표를 놓고 주어진 비트 예산 안에서 벗어남이 가장 작은 조합을 정수 계획으로 골랐습니다.
@@ -127,6 +165,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/skillret-small-family
 NDCG@10이 1.30 올랐습니다. Recall@10은 0.32만 올랐으니, 리랭커는 이미 상위 10개 안에 있던 정답을 더 위로 올리는 역할을 주로 했습니다.
 
 비용도 같이 봐야 합니다. 후보 20개를 다시 매기는 데 B200 한 장에서 질의당 약 0.8초가 걸렸습니다. CPU용 학생 모델과는 비용 차원이 다릅니다. 그리고 우리는 리랭커를 22M·109M 학생이 뽑은 후보 위에 얹어 잰 적이 없습니다. "학생 + 리랭커가 교사를 넘는다"는 말은 지금 근거가 없습니다.
+
+![skillret-small-family-cpu-skill-retrieval 슬라이드 3](/assets/images/skillret-small-family-cpu-skill-retrieval-slide-03.webp)
 
 ## CPU에서 실제로 얼마나 드나
 
@@ -172,11 +212,13 @@ NDCG@10이 1.30 올랐습니다. Recall@10은 0.32만 올랐으니, 리랭커는
 
 109M은 SkillRet에서 가장 높지만 NFCorpus에서 7.54로 가장 낮습니다. 스킬 카탈로그 검색 말고 다른 용도에 쓰려면 이 모델들은 맞지 않습니다.
 
-## 실패와 철회
+## 실패 모드: 대칭 양자화와 int2
 
-2026년 9월 11일, 대칭 양자화로 잰 네 개 체크포인트의 결과를 철회했습니다. 그룹 안 값이 전부 0이면 fp16 스케일이 0으로 떨어져 NaN이 생겼고, 이것이 모델 붕괴처럼 보였습니다. 공개 모델은 모두 비대칭 양자화로 다시 쟀습니다.
+대칭 양자화에는 실패 모드가 하나 있습니다. 그룹 안 값이 전부 0이면 fp16 스케일이 0으로 떨어져 NaN이 생기고, 모델 붕괴처럼 보입니다. 공개된 모든 모델은 비대칭(그룹 min/max) 양자화로 잰 값입니다.
 
-int2는 진짜로 무너집니다. 22M 59.42, 109M 63.55로, 크기 이점도 int4보다 크지 않았습니다. 일부 초기 카드에 적힌 "INT2에서 0.1 근처로 붕괴"는 교사 0.6B의 사후 양자화 결과이고 학생 모델 값이 아닙니다.
+int2는 진짜로 무너집니다. 22M 59.42, 109M 63.55로, 크기 이점도 int4보다 크지 않습니다. "INT2에서 0.1 근처로 붕괴"라는 표기는 교사 0.6B의 사후 양자화 결과이고 학생 모델 값이 아닙니다.
+
+![skillret-small-family-cpu-skill-retrieval 슬라이드 4](/assets/images/skillret-small-family-cpu-skill-retrieval-slide-04.webp)
 
 ## Paxis와의 연결은 어디까지인가
 
@@ -198,3 +240,7 @@ Paxis 에이전트 서버(`praxis` 저장소)에는 턴마다 어떤 툴을 프�
 남은 일은 세 가지입니다. 학생 모델 위에 리랭커를 얹은 조합을 같은 조건으로 재는 것, ONNX INT8 파일의 NDCG를 재는 것, Paxis 라벨 벤치를 22M으로 돌리는 것입니다. 이번 글을 쓰면서 새로 학습하거나 다시 평가한 것은 없습니다. 모든 숫자는 기존 원장과 공개 카드에서 가져왔습니다.
 
 공개 모델은 Hugging Face의 ThakiCloud 조직에서 볼 수 있습니다: [SKILLRET-Edge-22M](https://huggingface.co/ThakiCloud/SKILLRET-Edge-22M), [22M-int4](https://huggingface.co/ThakiCloud/SKILLRET-Edge-22M-int4), [22M-int3](https://huggingface.co/ThakiCloud/SKILLRET-Edge-22M-int3), [22M-drift-mixed](https://huggingface.co/ThakiCloud/SKILLRET-Edge-22M-drift-mixed), [SKILLRET-Edge-109M](https://huggingface.co/ThakiCloud/SKILLRET-Edge-109M), [109M-int4](https://huggingface.co/ThakiCloud/SKILLRET-Edge-109M-int4), [109M-int3](https://huggingface.co/ThakiCloud/SKILLRET-Edge-109M-int3), [109M-int3-g32](https://huggingface.co/ThakiCloud/SKILLRET-Edge-109M-int3-g32), [SKILLRET-Reranker-0.6B](https://huggingface.co/ThakiCloud/SKILLRET-Reranker-0.6B).
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/skillret-small-family-cpu-skill-retrieval/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
