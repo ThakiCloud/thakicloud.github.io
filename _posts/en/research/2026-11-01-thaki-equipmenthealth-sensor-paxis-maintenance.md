@@ -1,8 +1,8 @@
 ---
-title: "Reading Equipment Health from Sensors, and Letting Paxis Open the Maintenance Work"
-seo_title: "Thaki-EquipmentHealth-Sensor-LGBM - Sensor-Based Equipment Health Classification and Paxis Maintenance Automation | ThakiCloud"
-seo_description: "We released a 1 MB LightGBM model on Hugging Face that reads current, temperature, and particulate sensors on semiconductor-fab transport vehicles (OHT and AGV) and sorts them into four states: normal, attention, warning, danger. On vehicles it never saw, it reached macro F1 0.94 and never called a danger reading normal. We show how Paxis turns that verdict into maintenance work with evidence attached, with a human approving any risky action."
-excerpt: "Not every decision needs an LLM. A 1 MB model sorts equipment into four health states from sensor readings, and Paxis turns that verdict into maintenance work with evidence attached."
+title: "Reading Equipment Health from Sensors, and a Design for Opening Maintenance Work in Paxis"
+seo_title: "Thaki-EquipmentHealth-Sensor-LGBM - Sensor-Based Equipment Health Classification and a Paxis Maintenance Integration Design | ThakiCloud"
+seo_description: "We released a 1 MB LightGBM model on Hugging Face that reads current, temperature, and particulate sensors on semiconductor-fab transport vehicles (OHT and AGV) and sorts them into four states: normal, attention, warning, danger. On vehicles it never saw, it reached macro F1 0.94 and never called a danger reading normal. We also present a reference design in which Paxis turns that verdict into maintenance work with evidence attached, with a human approving any risky action."
+excerpt: "Not every decision needs an LLM. A 1 MB model sorts equipment into four health states from sensor readings. We also propose a design in which Paxis turns that verdict into maintenance work with evidence attached."
 date: 2026-11-01
 last_modified_at: 2026-11-01
 tags:
@@ -73,15 +73,15 @@ A triage label on its own changes nothing. When a warning appears, someone has t
 flowchart LR
   A["Vehicle sensor stream"] --> B["Health classifier<br/>served on Metis"]
   B -->|normal| C["Log only"]
-  B -->|attention or warning| D["Paxis opens maintenance work<br/>sensor evidence attached"]
-  B -->|danger| E["Paxis urgent work<br/>proposes a stop"]
+  B -->|attention or warning| D["Paxis maintenance work (proposed)<br/>sensor evidence attached"]
+  B -->|danger| E["Paxis urgent work (proposed)<br/>proposes a stop"]
   D --> F["Owner reviews and schedules maintenance"]
   E --> G{"Human approval"}
   G -->|approve| H["Stop, repair, and record the result"]
   G -->|hold| F
 ```
 
-In this design, on attention or warning, Paxis opens a maintenance ticket. The ticket would carry the class probabilities, the latest sensor values, and their changes as evidence. The owner can see at once why the ticket exists.
+In this design, on attention or warning, Paxis would open a maintenance ticket. The ticket would carry the class probabilities, the latest sensor values, and their changes as evidence. The owner could then see at once why the ticket exists.
 
 On danger, the design has Paxis propose a stop instead of stopping the vehicle itself, and wait for a person to approve. The triage nurse can flag a critical patient, but the doctor decides on surgery. The approval and the outcome would be kept in the work record.
 

@@ -2,7 +2,7 @@
 title: "Two Small Vision Models for Finding Concrete Cracks, Now Public"
 seo_title: "Thaki FacilityVision Crack Classification and Segmentation Models, and a Paxis Inspection Flow | ThakiCloud"
 seo_description: "We published a concrete crack patch classifier (ResNet-18) and a pixel-level crack segmentation model (U-Net with a ResNet-34 encoder) on Hugging Face. Here is what they scored on one public dataset, where those scores stop meaning anything, and a Paxis reference flow that turns inspection photos into maintenance work with an evidence trail."
-excerpt: "We released two small models that pick out cracks in inspection photos and trace them pixel by pixel. The scores are high, but they come from a single public dataset. This post explains what you can trust, what is still unknown, and how Paxis turns the output into inspection work."
+excerpt: "We released two small models that pick out cracks in inspection photos and trace them pixel by pixel. The scores are high, but they come from a single public dataset. This post explains what you can trust, what is still unknown, and a reference design for turning the output into Paxis inspection work."
 date: 2026-11-01
 last_modified_at: 2026-11-01
 tags:
