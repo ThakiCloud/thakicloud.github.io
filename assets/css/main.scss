@@ -1823,7 +1823,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
    ========================================================================= */
 .thaki-ad { display: none; }
 .thaki-ad[hidden] { display: none !important; }
-.thaki-ad__link { display: block; border: 0; }
+/* .page__content prefix: must outrank the body-link underline in `.page__content a`. */
+.page__content .thaki-ad__link { display: block; border: 0; }
 .thaki-ad__link img {
   display: block;
   width: 100%;
