@@ -418,50 +418,6 @@ html[data-theme="dark"] .page__footer { background-color: #000; }
 /* Symmetric 24px vertical padding (MM ships 0 top / 2em bottom + a 2em margin). */
 .page__footer footer { margin-top: 0; padding: 24px 2rem; max-width: 1280px; }
 
-/* Table of contents — Figma 17958-164.
-   A flat list rather than MM's boxed card: no background, border, radius,
-   shadow or title bar. Items are 14px Medium slate400, 16px apart; the active
-   one is SemiBold in the primary text colour. */
-.toc {
-  color: var(--toc-idle);
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-.toc .nav__title { display: none; }
-
-.toc__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.toc__menu li { margin: 0; border: 0; }
-.toc__menu li a {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-bottom: 0;
-  background: transparent;
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.35;
-  color: var(--toc-idle);
-  transition: color .15s ease;
-}
-.toc__menu li a:hover { background: transparent; color: var(--text); }
-.toc__menu li.active a,
-.toc .active a {
-  background: transparent;
-  color: var(--text);
-  font-weight: 600;
-}
-
 /* =========================================================================
    Theme toggle button (sits next to search in masthead)
    ========================================================================= */
@@ -1093,49 +1049,7 @@ html[lang="ar"] .toss-rail__rank { }
 /* Date meta icon (Tabler calendar-event) */
 .page__date-icon { vertical-align: -2px; margin-right: 2px; }
 
-/* Table of contents.
-   Wide screens: lift it out of the text column into the right margin so it
-   doesn't eat into the article measure. Needs ~244px of clear space beside the
-   948px column, i.e. 948 + 2×244 ≈ 1440px.
-   Narrower: stack it above the article instead of floating into the copy. */
 .layout--single .page__inner-wrap { position: relative; }
-
-@media (min-width: 1440px) {
-  /* Floated so it leaves the text flow, pulled into the right margin with a
-     negative margin (so copy doesn't wrap around it), and sticky so the card
-     follows the scroll. Sticky can't be combined with absolute positioning,
-     hence float rather than `left: 100%`. */
-  .layout--single .sidebar__right {
-    float: right;
-    position: sticky;
-    top: 88px;
-    width: 220px;
-    margin-left: 24px;
-    margin-right: -244px;
-    margin-bottom: 2rem;
-    clear: none;
-  }
-  .layout--single .sidebar__right .toc {
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    /* keep it scrollable when the entries are long, but without the visible
-       scrollbar track appearing beside the list */
-    scrollbar-width: none;          /* Firefox */
-    -ms-overflow-style: none;       /* legacy Edge */
-  }
-  .layout--single .sidebar__right .toc::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
-  }
-}
-/* Below the width where the TOC can sit out in the right margin, hide it
-   rather than stacking it above the article. */
-@media (max-width: 1439px) {
-  .layout--single .sidebar__right {
-    display: none;
-  }
-}
 
 /* Layout — drop the sidebar, center the column. 728px outer − 2×1.5rem padding
    = 680px content, matching the post-page reading measure. */
@@ -1789,3 +1703,157 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
 .thaki-share__icon-check { display: none; }
 .thaki-share__copy.is-copied .thaki-share__icon-link { display: none; }
 .thaki-share__copy.is-copied .thaki-share__icon-check { display: inline; }
+
+/* =========================================================================
+   Table of contents — same pattern as the thakicloud.com Insights articles:
+   ticks at the right edge, the full list floats out on hover or focus. Takes
+   no column of its own, which leaves the right margin to the ad below.
+   ========================================================================= */
+.thaki-toc { display: none; }
+@media (min-width: 1024px) {
+  .thaki-toc.is-ready {
+    display: block;
+    position: fixed;
+    top: 128px;
+    right: 24px;
+    z-index: 30;
+  }
+}
+.thaki-toc__ticks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  max-height: calc(100vh - 176px);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+.thaki-toc__ticks li { display: flex; margin: 0; }
+.thaki-toc__ticks button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+.thaki-toc__ticks button::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--border-strong);
+  transition: width .2s ease, background-color .2s ease;
+}
+.thaki-toc:hover .thaki-toc__ticks button::before { background: var(--toc-idle); }
+.thaki-toc__ticks li.is-active button::before,
+.thaki-toc:hover .thaki-toc__ticks li.is-active button::before {
+  width: 24px;
+  background: var(--text);
+}
+.thaki-toc__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 260px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .12);
+  opacity: 0;
+  transform: translateX(4px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.thaki-toc:hover .thaki-toc__panel,
+.thaki-toc:focus-within .thaki-toc__panel {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.thaki-toc__title {
+  margin: 0 0 12px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .025em;
+  color: var(--toc-idle);
+}
+.thaki-toc__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 60vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+.thaki-toc__list li { margin: 0; }
+.thaki-toc__list a {
+  display: block;
+  padding-left: 12px;
+  border-left: 2px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--toc-idle);
+  text-decoration: none;
+  transition: color .15s ease, border-color .15s ease;
+}
+.thaki-toc__list a:hover { border-left-color: var(--border-strong); color: var(--text); }
+.thaki-toc__list li.is-active a {
+  border-left-color: var(--accent);
+  font-weight: 500;
+  color: var(--text);
+}
+/* TOC jumps must clear the fixed site nav. */
+.layout--single .page__content h2[id] { scroll-margin-top: 80px; }
+
+/* =========================================================================
+   Product ad — one creative, two slots: beside the article where the right
+   margin fits it (300px + 24px gap beside the 680px column), otherwise after
+   the article body so it never interrupts the text. Only one slot displays.
+   ========================================================================= */
+.thaki-ad { display: none; }
+.thaki-ad[hidden] { display: none !important; }
+.thaki-ad__link { display: block; border: 0; }
+.thaki-ad__link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.thaki-ad__link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (min-width: 1280px) {
+  /* Floated out of the text flow with a negative margin, like the old TOC column,
+     because sticky can't be combined with absolute positioning. */
+  .thaki-ad--side {
+    display: block;
+    float: right;
+    position: sticky;
+    top: 88px;
+    width: 300px;
+    margin: 0 -324px 2rem 24px;
+    clear: none;
+  }
+}
+@media (max-width: 1279px) {
+  .thaki-ad--end {
+    display: block;
+    width: min(100%, 320px);
+    margin: 2.5rem 0 0;
+    clear: both;
+  }
+}
+@media print {
+  .thaki-ad, .thaki-toc { display: none !important; }
+}
