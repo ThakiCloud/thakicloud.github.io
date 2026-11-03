@@ -1,0 +1,11 @@
+{%- comment -%}
+  Product ad slot, filled by assets/js/thaki-ads.js from this post's categories and tags.
+  Rendered twice on a post: position="side" (right margin) and position="end" (after the body);
+  CSS shows one by viewport width. Both start hidden so a page without JS shows no empty box.
+{%- endcomment -%}
+<aside class="thaki-ad thaki-ad--{{ include.position }}" hidden data-thaki-ad
+  data-ad-lang="{{ page.lang }}"
+  data-ad-slug="{{ page.slug | escape }}"
+  data-ad-categories="{{ page.categories | join: '|' | escape }}"
+  data-ad-tags="{{ page.tags | join: '|' | escape }}"
+  data-ad-base="{{ '/assets/images/ads/' | relative_url }}"></aside>

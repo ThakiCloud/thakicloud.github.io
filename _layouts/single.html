@@ -21,6 +21,8 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
+  {% if page.toc %}{% include thaki-toc.html %}{% endif %}
+
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -39,18 +41,12 @@ layout: default
       {% if page.collection == 'posts' and page.share_bar != false %}{% include thaki-share.html position="top" %}{% endif %}
 
       <section class="page__content e-content" itemprop="text">
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </nav>
-          </aside>
-        {% endif %}
+        {% if page.collection == 'posts' %}{% include thaki-ad.html position="side" %}{% endif %}
         {% if page.audiobook %}{% include audiobook-player.html %}{% endif %}
         {% if page.ebook %}{% include ebook-reader.html %}{% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.collection == 'posts' %}{% include thaki-ad.html position="end" %}{% endif %}
       </section>
 
       {% if page.collection == 'posts' and page.share_bar != false %}{% include thaki-share.html position="bottom" %}{% endif %}
@@ -93,3 +89,6 @@ layout: default
     </div>
   {% endif %}
 </div>
+
+{% if page.toc %}<script src="{{ '/assets/js/thaki-toc.js' | relative_url }}" defer></script>{% endif %}
+{% if page.collection == 'posts' %}<script src="{{ '/assets/js/thaki-ads.js' | relative_url }}" defer></script>{% endif %}
