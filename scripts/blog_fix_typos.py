@@ -39,6 +39,13 @@ TYPO_MAP = [
     ("컨네이너", "컨테이너"),             # dropped syllable
 ]
 
+# Regex corrections (context-sensitive, not plain substring). Standalone short form
+# "타키" (= the company) -> "다키". Guarded so 타키온(tachyon)·타키투스·파타키 are untouched:
+# no Hangul before, and a josa / space / punctuation / end right after.
+REGEX_MAP = [
+    (re.compile(r"(?<![가-힣])타키(?=(?:은|는|이|가|을|를|의|와|과|도|로|에|만|랑|께|$|[\s.,!?·)」』\"'’”]))"), "다키"),
+]
+
 # ── Safety: spans that must be preserved verbatim ─────────────────────────────
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
 URL_RE = re.compile(r"https?://[^\s)\"'<>]+")
@@ -84,6 +91,9 @@ def fix_text(text):
             if c:
                 protected = protected.replace(bad, good)
                 n += c
+        for rx, good in REGEX_MAP:
+            protected, c = rx.subn(good, protected)
+            n += c
         out.append(_restore(protected, restores))
     return "\n".join(out), n
 
@@ -92,7 +102,7 @@ def main():
     ap = argparse.ArgumentParser(description="KO brand/typo guardrail for blog posts")
     ap.add_argument("--apply", action="store_true", help="rewrite files in place")
     ap.add_argument("--check", action="store_true", help="report only; exit 1 if typos found")
-    ap.add_argument("--paths", nargs="*", help="explicit files (default: _posts + _pages)")
+    ap.add_argument("--paths", nargs="*", help="explicit files (default: _posts + _pages + site chrome)")
     args = ap.parse_args()
 
     files = args.paths or (
@@ -100,6 +110,12 @@ def main():
         + glob.glob("_posts/**/*.html", recursive=True)
         + glob.glob("_pages/**/*.md", recursive=True)
         + glob.glob("_pages/**/*.html", recursive=True)
+        # Site chrome: a wrong brand here ships on EVERY page (2026-11-04: meta keywords
+        # carried "타키 클라우드" on 946/959 ko pages while all post bodies were clean).
+        + ["_config.yml"]
+        + glob.glob("_includes/**/*.html", recursive=True)
+        + glob.glob("_layouts/**/*.html", recursive=True)
+        + glob.glob("_data/**/*.yml", recursive=True)
     )
 
     total, changed_files, offenders = 0, 0, []
