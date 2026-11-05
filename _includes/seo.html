@@ -14,6 +14,17 @@
   {%- assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once -%}
 {%- endif -%}
 
+{%- comment -%}
+  A page's own `meta_title` is used as written: no site name appended and no markdownify, which
+  turns a title containing "|" into a table. Not `seo_title`: most posts carry that field and
+  it has never been rendered.
+{%- endcomment -%}
+{%- assign og_title = page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- if page.meta_title -%}
+  {%- assign seo_title = page.meta_title | escape_once -%}
+  {%- assign og_title = seo_title -%}
+{%- endif -%}
+
 {% if page.canonical_url %}
   {%- assign canonical_url = page.canonical_url %}
 {% else %}
@@ -50,8 +61,9 @@
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 
-{% if site.keywords %}
-<meta name="keywords" content="{{ site.keywords }}">
+{%- assign meta_keywords = page.meta_keywords | default: site.keywords -%}
+{% if meta_keywords %}
+<meta name="keywords" content="{{ meta_keywords }}">
 {% endif %}
 
 <!-- Brand name variations for better SEO -->
@@ -72,7 +84,7 @@
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+<meta property="og:title" content="{{ og_title }}">
 <meta property="og:url" content="{{ canonical_url }}">
 
 {% if seo_description %}
@@ -87,7 +99,7 @@
 
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+  <meta name="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ seo_description }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
 

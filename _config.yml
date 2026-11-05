@@ -336,6 +336,7 @@ defaults:
       share: false
       related: true
       lang: ko
+      meta_keywords: "Thaki Cloud, 다키클라우드, LLMOps, AgentOps, AI 인프라, GPU 컴퓨팅, 프라이빗 클라우드, vLLM, 인공지능 에이전트, 온프레미스 AI, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링"
       permalink: /ko/:categories/:title/
   # English posts
   - scope:
@@ -349,6 +350,7 @@ defaults:
       share: false
       related: true
       lang: en
+      meta_keywords: "Thaki Cloud, 다키클라우드, AI infrastructure, GPU cloud, GPU computing, LLMOps, AgentOps, private cloud, vLLM, AI agents, on-premises AI, artificial intelligence, machine learning, Kubernetes, AI engineering, tech blog"
       permalink: /en/:categories/:title/
   # Arabic posts
   - scope:

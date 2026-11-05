@@ -17,6 +17,8 @@ classes: wide
 
 <div class="postspage">
 
+  {% if page.intro %}<p class="postspage__intro">{{ page.intro }}</p>{% endif %}
+
   {% comment %} ── Full-text search (title + summary + tags) ───────────── {% endcomment %}
   {% if page.lang == 'en' %}{% assign search_ph = 'Search posts' %}
   {% elsif page.lang == 'ar' %}{% assign search_ph = 'ابحث في المقالات' %}
