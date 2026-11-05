@@ -19,6 +19,9 @@ minimal_mistakes_skin    : "thaki" # "air", "aqua", "contrast", "dark", "dirt", 
 locale : "ko-KR"
 title  : "Thaki Cloud Tech Blog | ThakiCloud | 다키클라우드 기술 블로그"
 title_separator          : "-"
+meta_title_suffix:
+  ko: "다키클라우드(Thaki Cloud) 기술 블로그"
+  en: "Thaki Cloud Tech Blog"
 subtitle                 : "AI/ML Engineering & DevOps 전문 기술 블로그"
 name   : "Thaki Cloud"
 description              : "Thaki Cloud (ThakiCloud, 다키클라우드, thaki cloud, THAKI CLOUD)는 AI/ML Engineering, LLMOps, DevOps 분야의 최신 기술과 실무 경험을 공유하는 전문 기술 블로그입니다. 머신러닝 모델 운영, 쿠버네티스, 클라우드 인프라, AI 엔지니어링 커리어, 인공지능 기술 블로그, 다키클라우드 개발 팀의 깊이 있는 인사이트를 제공합니다."
@@ -337,7 +340,6 @@ defaults:
       related: true
       lang: ko
       meta_keywords: "Thaki Cloud, 다키클라우드, LLMOps, AgentOps, AI 인프라, GPU 컴퓨팅, 프라이빗 클라우드, vLLM, 인공지능 에이전트, 온프레미스 AI, 인공지능, 머신러닝, 클라우드, 쿠버네티스, 기술블로그, AI엔지니어링"
-      meta_title_suffix: "다키클라우드(Thaki Cloud) 기술 블로그"
       permalink: /ko/:categories/:title/
   # English posts
   - scope:
@@ -352,7 +354,6 @@ defaults:
       related: true
       lang: en
       meta_keywords: "Thaki Cloud, 다키클라우드, AI infrastructure, GPU cloud, GPU computing, LLMOps, AgentOps, private cloud, vLLM, AI agents, on-premises AI, artificial intelligence, machine learning, Kubernetes, AI engineering, tech blog"
-      meta_title_suffix: "Thaki Cloud Tech Blog"
       permalink: /en/:categories/:title/
   # Arabic posts
   - scope:

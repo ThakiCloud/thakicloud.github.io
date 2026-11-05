@@ -42,14 +42,4 @@ lang: ar
       {% endunless %}
     {% endif %}
   {% endfor %}
-
-  <!-- Arabic Categories -->
-  {% for category in site.categories %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/ar/categories/#{{ category[0] | slugify }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  {% endfor %}
 </urlset>

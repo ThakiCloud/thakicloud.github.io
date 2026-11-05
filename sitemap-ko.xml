@@ -41,14 +41,4 @@ lang: ko
       {% endunless %}
     {% endif %}
   {% endfor %}
-
-  <!-- Korean Categories -->
-  {% for category in site.categories %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/ko/categories/#{{ category[0] | slugify }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  {% endfor %}
 </urlset>
