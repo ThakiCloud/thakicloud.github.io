@@ -24,6 +24,10 @@
   {%- assign seo_title = page.meta_title | escape_once -%}
   {%- assign og_title = seo_title -%}
 {%- endif -%}
+{%- comment -%} Posts: "<title> | <blog name>" from `meta_title_suffix` in _config.yml defaults. {%- endcomment -%}
+{%- if page.meta_title_suffix -%}
+  {%- assign seo_title = og_title | append: " &#124; " | append: page.meta_title_suffix -%}
+{%- endif -%}
 
 {% if page.canonical_url %}
   {%- assign canonical_url = page.canonical_url %}
