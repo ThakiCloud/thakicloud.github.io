@@ -6,27 +6,19 @@
 
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
-{%- if page.title -%}
-  {%- assign seo_title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
-{%- endif -%}
-
-{%- if seo_title -%}
-  {%- assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once -%}
-{%- endif -%}
-
 {%- comment -%}
-  A page's own `meta_title` is used as written: no site name appended and no markdownify, which
-  turns a title containing "|" into a table. Not `seo_title`: most posts carry that field and
-  it has never been rendered.
+  <title> is "<page title> | <blog name>", with the blog name per language from
+  `meta_title_suffix` in _config.yml. A page's own `meta_title` is used as written. Neither goes
+  through markdownify, which turns text containing "|" into a table. Not `seo_title`: most posts
+  carry that field and it has never been rendered.
 {%- endcomment -%}
-{%- assign og_title = page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- assign og_title = page.title | markdownify | strip_html | strip_newlines | escape_once | default: site.title -%}
 {%- if page.meta_title -%}
   {%- assign seo_title = page.meta_title | escape_once -%}
   {%- assign og_title = seo_title -%}
-{%- endif -%}
-{%- comment -%} Posts: "<title> | <blog name>" from `meta_title_suffix` in _config.yml defaults. {%- endcomment -%}
-{%- if page.meta_title_suffix -%}
-  {%- assign seo_title = og_title | append: " &#124; " | append: page.meta_title_suffix -%}
+{%- elsif page.title -%}
+  {%- assign title_suffix = site.meta_title_suffix[page.lang] | default: site.meta_title_suffix.ko -%}
+  {%- assign seo_title = og_title | append: " &#124; " | append: title_suffix -%}
 {%- endif -%}
 
 {% if page.canonical_url %}

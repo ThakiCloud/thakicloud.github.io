@@ -41,14 +41,4 @@ lang: en
       {% endunless %}
     {% endif %}
   {% endfor %}
-
-  <!-- English Categories -->
-  {% for category in site.categories %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/en/categories/#{{ category[0] | slugify }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  {% endfor %}
 </urlset>

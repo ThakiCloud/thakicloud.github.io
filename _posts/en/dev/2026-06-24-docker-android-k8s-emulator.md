@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Android Emulators in Containers - Building a Reproducible Device Farm on K8s with docker-android"
 excerpt: "docker-android packages an Android emulator into a single container and runs it headlessly. We verify image sizes and KVM requirements against the official documentation, and explore what running device-passthrough workloads looks like on the ThakiCloud Kubernetes platform."
 seo_title: "docker-android K8s Emulator - Container Android Device Farm - Thaki Cloud"
