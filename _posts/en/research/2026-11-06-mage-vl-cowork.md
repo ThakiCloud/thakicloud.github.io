@@ -28,7 +28,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/mage-vl-cowork/"
 
 If you are an agent-platform engineer running multi-agent sandboxes, or an infra planner working on on-prem/sovereign AI, read this paper before you draw the next CUA (computer-use agent) roadmap.
 
-The conclusion up front: Microsoft released the full training recipe for a 4B open-weight model that routes screen clicks (GUI channel) and terminal typing (code channel) inside a single policy, and it is Apache-2.0. It scores 66.0% on OSWorld-Verified (50-step budget) - the best in the 4B class - and its demonstration data costs $0.158 per task to generate. The on-device CUA baseline moved, with numbers.
+The conclusion up front: Microsoft released the full training recipe for a 4B open-weight model. It routes screen clicks (GUI channel) and terminal typing (code channel) inside a single policy, under Apache-2.0. It scores 66.0% on OSWorld-Verified (50-step budget) - the best in the 4B class - and its demonstration data costs $0.16 per task to generate. The on-device CUA baseline moved, with numbers.
 
 ## In Plain Terms
 
@@ -40,17 +40,17 @@ Let me use the analogy to the end. The senior (the teacher model) that trains th
 
 ## Overview
 
-The Microsoft Mage team published the paper on arXiv 2610.40747 on October 29, 2026, and released the model on Hugging Face (microsoft/Mage-VL-Cowork) under Apache-2.0 open weights: 4B parameters, 9.48GB in bf16 (two shards). The code lives in the GitHub microsoft/Mage repository.
+The Microsoft Mage team published the paper on arXiv on October 29, 2026. The model is released on Hugging Face (microsoft/Mage-VL-Cowork) under Apache-2.0 open weights: 4B parameters, 9.48GB in bf16 (two shards). The code lives in the GitHub microsoft/Mage repository.
 
 The backbone: Mage-VL-Cowork sits on Mage-VL, a codec-native streaming multimodal foundation model. The visual encoder, Mage-ViT, is trained from scratch (16x16 patch grid, spatial_merge_size=2, 3D RoPE), and the language model is Qwen3-4B-Instruct-2507. Training a fresh visual stack at 4B is what separates this from bolting on an existing vision encoder.
 
-A demo shipped with the release. Hugging Face ML engineer Niels Rogge built one: you submit a task like "go to Wikipedia and find out when the Eiffel Tower was completed," and watch the model click, type, scroll, and use a terminal on a real Linux desktop. Everything runs inside Hugging Face: the model in a Space, the desktop in an HF Sandbox. No VMs to manage, in the tweet's words. A 4B-scale CUA reaching a usable demo the moment it ships is the feel of this release.
+A demo shipped with the release. Hugging Face ML engineer Niels Rogge built one. You give it a task: "go to Wikipedia and find out when the Eiffel Tower was completed." The model clicks, types, scrolls, and opens a terminal on a real Linux desktop. Everything runs inside Hugging Face: the model in a Space, the desktop in an HF Sandbox. No VMs to manage, in the tweet's words. A 4B-scale CUA reaching a usable demo the moment it ships is the feel of this release.
 
 ## What Is Hybrid Computer Use
 
-A traditional CUA takes a screenshot and outputs click/drag coordinates. In the paper's framing, the screenshot-only GUI channel is "a modeling choice rather than a property of the domain," and an expensive one: a typical screenshot costs thousands of tokens, and a screen-watching agent pays that thousands-of-tokens bill at every step. The terminal channel compresses the same state into a line of output. The payoff of channel routing comes exactly from this token gap. The 25.4% output-token reduction after RL (below) is that design converted into an inference-cost number.
+A traditional CUA takes a screenshot and outputs click/drag coordinates. In the paper's framing, the screenshot-only GUI channel is "a modeling choice rather than a property of the domain." And an expensive one: a typical screenshot costs thousands of tokens, and a screen-watching agent pays that thousands-of-tokens bill at every step. The terminal channel compresses the same state into a line of output. The payoff of channel routing comes exactly from this token gap. The 25.4% output-token reduction after RL (below) is that design converted into an inference-cost number.
 
-Hybrid computer use means one policy holds both channels: the GUI channel (visual observation plus coordinate control) and the terminal channel (a persistent shell environment where it runs code, invokes command-line utilities, and calls application libraries directly). The core design decision: channel routing is learned inside the policy, at turn level, with no external orchestrator. The project page's phrasing, verbatim: "One 4B policy that knows when to click-and when to code."
+Hybrid computer use means one policy holds both channels: the GUI channel (visual observation plus coordinate control), and the terminal channel. The terminal is a persistent shell environment: the policy runs code, invokes command-line utilities, and calls application libraries directly. The core design decision: channel routing is learned inside the policy, at turn level, with no external orchestrator. The project page's phrasing, verbatim: "One 4B policy that knows when to click-and when to code."
 
 In the training data, GUI tool calls versus terminal tool calls run 68.19% to 31.81%. The policy is trained on data where the channel is allocated per task, not data skewed to one side.
 
@@ -85,7 +85,7 @@ Stage 5, online hybrid RL, trains on the 1,988 tasks released by ScaleCUA, each 
 
 The most unusual part of the recipe. The teacher (the demonstration-generating model) does not work in a fixed environment. An authoring agent revises the harness the teacher works with: scaffold (F), tool interfaces (T), prompt (P), and terminal execution environment (E, a Docker sandbox).
 
-The revision criteria are four, judged on a shared dev set: rubric-based task success, per-task token cost, execution feedback, and application-level channel statistics. Per the paper, evolution is as much pruning as growth: it removes xdotool and adds domain libraries like python-pptx. The harness transitions run alpha to beta (add the terminal channel), to gamma (scaffold), to delta (teacher model switch), to epsilon (prompt refinement), and once selected, the harness stays essentially fixed across subsequent data-generation rounds.
+The revision criteria are four, judged on a shared dev set: rubric-based task success, per-task token cost, execution feedback, and application-level channel statistics. Per the paper, evolution is as much pruning as growth: it removes xdotool and adds domain libraries like python-pptx. The harness transitions run alpha to beta (add the terminal channel), to gamma (scaffold), to delta (teacher model switch), and to epsilon (prompt refinement). Once selected, the harness stays essentially fixed across subsequent data-generation rounds.
 
 The teacher stack is not prompt-only. Demonstrations come from GPT-5.4 (the official GPT-5.4 OSWorld agent), step-level reasoning annotations from GPT-5.4-mini, and the rubric judge plus the task-generation cost baseline both run on gpt-5.6-terra.
 
@@ -93,7 +93,12 @@ The teacher stack is not prompt-only. Demonstrations come from GPT-5.4 (the offi
 
 The 293,806 desktop and web tasks are synthesized over a taxonomy of 6,915 atomic skills. The taxonomy is agent-constructed and refined over three rounds using student feedback. Single-app tasks are 61.76%, multi-app 38.24%. After teacher execution, rubric-based LLM judging, and quality filtering, 318,837 trajectories survive.
 
-Cost efficiency is the headline result of the engine. Per-task generation cost drops from $0.906 (1,276K tokens) under an agent-first approach to $0.158 (85K tokens) with Mage-CUA-Forge: 82.6% less (tokens -93.3%). Caveat from the paper: one-time workflow authoring and debugging are excluded from the per-task comparison.
+Cost efficiency is the headline result of the engine. Per-task generation cost drops from $0.91 (1,276K tokens) under an agent-first approach to $0.16 (85K tokens) with Mage-CUA-Forge: 82.6% less (tokens -93.3%). The paper's exact per-task figures are in the table below. Caveat from the paper: one-time workflow authoring and debugging are excluded from the per-task comparison.
+
+| Per-task generation | Cost | Tokens |
+|---|---|---|
+| agent-first | $0.906 | 1,276K |
+| Mage-CUA-Forge | $0.158 | 85K |
 
 ## Results
 
@@ -116,7 +121,14 @@ OSWorld-Verified stands at 66.0% (50-step budget): the two-run average (run 1: 6
 
 The stage-by-stage progression is even. GUI SFT 45.56% to hybrid SFT 55.84% (+10.28pp) to RL 66.0% (+10.16pp). SFT building and RL polishing contribute about the same.
 
-The compute split is also reported (Appendix B): midtraining 1.182e21, SFT 3.988e21, RL 2.618e21 FLOP, totaling 7.787e21. The share: midtraining 15.2%, SFT 51.2%, RL 33.6%. Half of the performance comes from SFT, a third from RL.
+The compute split is also reported (Appendix B); per-stage FLOPs are in the table below. The share: midtraining 15.2%, SFT 51.2%, RL 33.6%.
+
+| Stage | FLOP |
+|---|---|
+| midtraining | 1.182e21 |
+| SFT | 3.988e21 |
+| RL | 2.618e21 |
+| Total | 7.787e21 | Half of the performance comes from SFT, a third from RL.
 
 The stage-1 grounding effect: OSWorld-G 30.6% to 56.9% (against Qwen3.5-4B's 54.5%), ScreenSpot-v2 78.8% to 87.2% (against Qwen3-VL-4B's 85.3%).
 
@@ -130,13 +142,13 @@ The harness ablation (Table 5, 672 held-out multi-app tasks) backs the paper's d
 
 ## The SOTA Claim, and Its Scope
 
-The tweet's "new SOTA for on-device computer use" is wider than the paper's "state-of-the-art performance at its parameter size." Precisely: SOTA within the 4B parameter class. It clears the same-size control Fara1.5-4B (13.9%) by a wide margin, is effectively tied with 30B Muse Glimmer (65.9%), and trails the frontier APIs (GPT-5.5 78.7%, Claude Opus 4.7 78.0%) by 12 to 13 points. Humans (72.4%) are still above it.
+The tweet's "new SOTA for on-device computer use" is wider than the paper's "state-of-the-art performance at its parameter size." Precisely: SOTA within the 4B parameter class. It clears the same-size control Fara1.5-4B (13.9%) by a wide margin, and is effectively tied with 30B Muse Glimmer (65.9%). It trails the frontier APIs (GPT-5.5 78.7%, Claude Opus 4.7 78.0%) by 12 to 13 points. Humans (72.4%) are still above it.
 
 For reference, the paper itself evaluates GPT-5.4-mini once on the same 361 tasks: 69.6% (50 steps). The gap to a frontier mini model is 3.6pp, much narrower than the gap to large frontier models (12 to 13pp). Read "on-device SOTA" with both scopes in mind.
 
 ## Implications for ThakiCloud
 
-Through the Paxis lens, the numbers this recipe leaves behind are new inputs to the CUA-step economics of multi-agent sandboxes. Turn-level channel routing (removing the external orchestrator) is a pattern directly portable to Paxis's multi-channel tool agents (GUI+API+CLI): it moves the fixed overhead of orchestrator calls inside the policy. Combine $0.158 per generated task with 4B serving (9.48GB bf16), and the cost-quality frontier for CUA steps substitutable by local models instead of frontier API calls is fixed with numbers. The demo Niels Rogge published on HF Space plus HF Sandbox (model and desktop both inside Hugging Face, no VM management) is the on-device-scale version of Paxis's sandboxed execution. Running Mage-VL-Cowork in the Paxis sandbox demo would turn "frontier API versus local 4B" CUA economics into internal data.
+Through the Paxis lens, the numbers this recipe leaves behind are new inputs to the CUA-step economics of multi-agent sandboxes. Turn-level channel routing (removing the external orchestrator) is a pattern directly portable to Paxis's multi-channel tool agents (GUI+API+CLI): it moves the fixed overhead of orchestrator calls inside the policy. Combine $0.16 per generated task with 4B serving (9.48GB bf16), and the cost-quality frontier for CUA steps substitutable by local models instead of frontier API calls is fixed with numbers. The demo Niels Rogge published on HF Space plus HF Sandbox (model and desktop both inside Hugging Face, no VM management) is the on-device-scale version of Paxis's sandboxed execution. Running Mage-VL-Cowork in the Paxis sandbox demo would turn "frontier API versus local 4B" CUA economics into internal data.
 
 Through the ai-platform lens, this gives on-prem/sovereign AI a production-candidate baseline for CUA configuration: 66% OSWorld-Verified, 9.48GB bf16, Apache-2.0. A CUA servable on one 48GB-class GPU is a concrete option for on-prem configurations that reduce dependence on large frontier APIs. The on-device small-CUA trend aligns with the direction of lowering large-GPU dependence.
 
@@ -158,9 +170,9 @@ Sixth, the -82.6% cost figure excludes one-time authoring. The per-task comparis
 
 Collecting the conclusion stated in the introduction: the on-device CUA baseline moved from the mid-40s to 66.0% (OSWorld-Verified, 50 steps), and the recipe plus the model are out under Apache-2.0.
 
-The paper leaves three things. One: single-policy channel routing - the structure that learns to use two channels inside the policy without an external orchestrator. Two: evolved harnesses - lifting demonstration quality from the teacher's model to the teacher's tooling (the ablation where a 2.4pp teacher gap becomes a 12.5pp student gap is the evidence). Three: the economics of CUA training data, with 6,915 reusable skill workflows bringing per-task cost to $0.158.
+The paper leaves three things. One: single-policy channel routing - the structure that learns to use two channels inside the policy without an external orchestrator. Two: evolved harnesses - lifting demonstration quality from the teacher's model to the teacher's tooling (the ablation where a 2.4pp teacher gap becomes a 12.5pp student gap is the evidence). Three: the economics of CUA training data, with 6,915 reusable skill workflows bringing per-task cost to $0.16.
 
-One line for teams drawing CUA roadmaps: the denominator of "how far can 4B go" is now 66% / $0.158. When you pick an on-prem CUA candidate, or compute the cost-quality substitution for frontier API calls, use that number as the new baseline.
+One line for teams drawing CUA roadmaps: the denominator of "how far can 4B go" is now 66% / $0.16. When you pick an on-prem CUA candidate, or compute the cost-quality substitution for frontier API calls, use that number as the new baseline.
 
 ## Sources
 
