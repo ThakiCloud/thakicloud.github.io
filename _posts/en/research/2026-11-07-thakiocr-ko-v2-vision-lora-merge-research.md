@@ -4,7 +4,6 @@ seo_title: "ThakiOCR-KO-v2 diagnostic: merging only the vision LoRA gives 4.80% 
 seo_description: "We combined two LoRA adapters from KO-v1 training component by component, with no extra training. The arm that moved only the vision LoRA reached 4.80% Word CER and 9.78% handwriting CER on Dev and passed the table-structure checks. The independent evaluation data fell short of the preregistered requirements, so the model was not released."
 excerpt: "We kept the decoder as it was and moved only the vision LoRA. Handwriting errors dropped and table structure held. These are Dev diagnostic numbers, and we put the release on hold because the independent evaluation data is not enough."
 date: 2026-11-07
-published: false
 tags:
   - ocr
   - thakiocr
@@ -27,6 +26,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/thakiocr-ko-v2-visi
 **The numbers below are diagnostic values on the development (Dev) set. They have not been independently verified and are not official performance figures. The model has not been released.** The Dev set was already used to select the previous model, so these numbers cannot decide final performance.
 
 In one line: with no further training, we combined two LoRA adapters component by component. The arm that moved only the vision LoRA reached 4.80% Word CER and 9.78% handwriting CER on Dev and passed the table-structure checks. The preregistered independent evaluation data, however, fell short of its requirements, so we put the release on hold. We stopped because there is not enough data to evaluate on, not because performance was bad.
+
+![Illustration of the core idea of Merging Only the Vision LoRA Gave a 4.80% Dev CER: A ThakiOCR-KO-v2 Diagnostic That Kept Table Structure](/assets/images/thakiocr-ko-v2-vision-lora-merge-research-hero.webp)
+*A visual metaphor for the article's key idea.*
 
 ## In plain terms
 
@@ -94,7 +96,7 @@ v2a_vl's overall Word CER, pooled across the four sources, is 4.80%. Whether the
 
 ## What the table-structure diagnostic measured
 
-Changing the vision side can keep characters right while breaking table cell layout or reading order. So we measured again with the same checks and tolerances as the KO-v1 selection, running the base model in the same job.
+Changing the vision side can keep characters right while breaking table cell layout or reading order. So we measured with the same checks and tolerances as the KO-v1 selection, running the base model in the same job.
 
 - **Sealed table structure match (structure_em)**: the share of the 50 sealed tables whose cells, spans and headers match the ground truth exactly. This check also has a separate floor of 0.96.
 - **TEDS**: treats a table as a tree and measures similarity by edit distance to the ground truth.

@@ -53,8 +53,8 @@ lang: ko
 
 | 출처 | 발화 수 | 길이 |
 |---|---|---|
-| AI 허브(AI-Hub) — 「회의 음성」(#132) | 24,000 | 36.43시간 |
-| AI 허브(AI-Hub) — 「한국어 음성」(#123) | 8,000 | 11.37시간 |
+| AI 허브(AI-Hub) · 「회의 음성」(#132) | 24,000 | 36.43시간 |
+| AI 허브(AI-Hub) · 「한국어 음성」(#123) | 8,000 | 11.37시간 |
 | 합계 | 32,000 | 47.8시간 |
 
 132번은 24,000행 전부 라이선스·녹음 동의·학습 동의 필드를 확인했습니다. 123번은 8,000행 전부 라이선스·상업 이용 허용·권리 근거를 확인했습니다. 평가 세트(Zeroth-Korean, HiKE, FLEURS, 보류 dev/test)는 학습에서 빼고 음성 해시와 문장 해시로 누출을 검사했습니다.
@@ -169,4 +169,4 @@ python infer_guarded.py --adapter . sample.wav
 
 *다키클라우드 AI Engineering · Korean Speech*
 
-*모델: [ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1](https://huggingface.co/ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1) (revision `cf73497c`). 학습 데이터 출처: AI 허브(AI-Hub) — 「회의 음성」(#132), AI 허브(AI-Hub) — 「한국어 음성」(#123). 데이터는 재배포하지 않으며 모델 가중치만 공개합니다.*
+*모델: [ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1](https://huggingface.co/ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1) (revision `cf73497c`). 학습 데이터 출처: AI 허브(AI-Hub) · 「회의 음성」(#132), AI 허브(AI-Hub) · 「한국어 음성」(#123). 데이터는 재배포하지 않으며 모델 가중치만 공개합니다.*

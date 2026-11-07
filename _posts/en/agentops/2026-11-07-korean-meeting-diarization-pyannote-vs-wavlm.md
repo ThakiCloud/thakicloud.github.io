@@ -207,6 +207,6 @@ Previous in this series: [Releasing a Korean LoRA for Nemotron 3.5 Transcribe: H
 
 Every figure in this post comes from measurements recorded in our internal experiment ledgers. The ledgers themselves are not published.
 
-*Data source: AI 허브(AI-Hub) — 「주요 영역별 회의 음성인식 데이터」 (Major-Domain Meeting Speech Recognition Data, #464). The data is not redistributed; this post contains only aggregate metrics and per-speaker-bin aggregates.*
+*Data source: AI 허브(AI-Hub) · 「주요 영역별 회의 음성인식 데이터」 (Major-Domain Meeting Speech Recognition Data, #464). The data is not redistributed; this post contains only aggregate metrics and per-speaker-bin aggregates.*
 
 *ThakiCloud AI Engineering · Speech & Meeting Intelligence*

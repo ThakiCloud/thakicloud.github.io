@@ -33,6 +33,9 @@ When reading Korean words in uneven condition, such as handwritten application f
 
 The release is called [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B). It is a LoRA adapter for Qwen3.6-27B, licensed under Apache-2.0. On a fixed development set of 2,400 crops, the base model had a word CER of 18.04%. With this adapter attached, CER drops to 6.01%. It reads one word crop at a time, and it is a research preview, not a product release.
 
+![Illustration of the core idea of ThakiOCR-Large-27B-R2B: We Fine-Tuned Qwen 27B for Korean Word OCR and Released It](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## In plain terms
 
 Show a strong reader an unfamiliar handwritten note one word at a time and they will make mistakes. Often the problem is not that they cannot recognize the letters but that they add letters that are not there. This adapter is what you get after walking that reader through 12,800 handwritten, printed, and photographed word cards, once each, with one instruction: write down only the letters you see. The reader stays the same and only the habit changes, so we ship it as a small adapter file that sits on top of the base model.
@@ -75,9 +78,9 @@ flowchart TB
 
 Training data came from three application-based datasets on AI-Hub, cut into word crops. After de-duplication the training pools were 149,980 crops (91 handwriting), 119,361 (605), 20,927 (91 printed), and 33,105 (105). The data and anything derived from it (crops, label files, subsets, samples) are not released and do not appear in this post.
 
-- AI 허브(AI-Hub) — 대용량 손글씨 OCR 데이터 (605), large-scale handwriting OCR data
-- AI 허브(AI-Hub) — 다양한 형태의 한글 문자 이미지 인식 데이터 (91), Korean character images in various forms
-- AI 허브(AI-Hub) — 야외 실제 촬영 한글 이미지 데이터 (105), Korean text photographed outdoors
+- AI 허브(AI-Hub) · 대용량 손글씨 OCR 데이터 (605), large-scale handwriting OCR data
+- AI 허브(AI-Hub) · 다양한 형태의 한글 문자 이미지 인식 데이터 (91), Korean character images in various forms
+- AI 허브(AI-Hub) · 야외 실제 촬영 한글 이미지 데이터 (105), Korean text photographed outdoors
 
 ## Performance against the baseline
 

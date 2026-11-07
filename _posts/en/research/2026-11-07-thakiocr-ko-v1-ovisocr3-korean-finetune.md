@@ -31,6 +31,9 @@ We trained a LoRA adapter for Korean word recognition on top of the open OCR mod
 
 This is a research release, not a product launch. The model reads an image of one cropped word. We have not verified how well it reads a full document page, so treat it as one step in a pipeline that handles handwritten forms or photographed signs. The base model stays as it is and you download one small extra file on top, so it is easy to add to an existing setup.
 
+![Illustration of the core idea of ThakiOCR-KO-v1: We Released a LoRA That Adapts OvisOCR3 to Korean Word OCR](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## In plain terms
 
 OvisOCR3 is like an experienced clerk who reads printed documents well. It was weak on Korean handwriting, especially cursive writing whose shapes differ from person to person. We gave this clerk a short, focused practice session with a stack of Korean word cards. The method does not change the clerk's whole memory; it only adds one notebook (the LoRA).
@@ -55,9 +58,9 @@ OvisOCR3 is an open OCR model that can read document structure. Measured under t
 
 The training data comes from three AI-Hub datasets.
 
-- AI 허브(AI-Hub) — 대용량 손글씨 OCR 데이터 (605), large-scale handwriting OCR data
-- AI 허브(AI-Hub) — 다양한 형태의 한글 문자 이미지 인식 데이터 (91), Korean character images in various forms, handwritten and printed subsets
-- AI 허브(AI-Hub) — 야외 실제 촬영 한글 이미지 데이터 (105), Korean text photographed outdoors
+- AI 허브(AI-Hub) · 대용량 손글씨 OCR 데이터 (605), large-scale handwriting OCR data
+- AI 허브(AI-Hub) · 다양한 형태의 한글 문자 이미지 인식 데이터 (91), Korean character images in various forms, handwritten and printed subsets
+- AI 허브(AI-Hub) · 야외 실제 촬영 한글 이미지 데이터 (105), Korean text photographed outdoors
 
 The data was used only for internal training and evaluation by the approved applicant. The originals and anything derived from them (crops, label files, subsets, samples) are not in the public repository, and this post does not include them either. To use the data, apply for it yourself on AI-Hub.
 

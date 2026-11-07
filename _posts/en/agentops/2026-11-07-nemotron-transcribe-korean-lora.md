@@ -52,8 +52,8 @@ We trained on 32,000 Korean utterances (47.8 hours) from AI Hub.
 
 | Source | Utterances | Duration |
 |---|---|---|
-| AI 허브(AI-Hub) — 「회의 음성」 (Meeting Speech, #132) | 24,000 | 36.43 h |
-| AI 허브(AI-Hub) — 「한국어 음성」 (Korean Speech, #123) | 8,000 | 11.37 h |
+| AI 허브(AI-Hub) · 「회의 음성」 (Meeting Speech, #132) | 24,000 | 36.43 h |
+| AI 허브(AI-Hub) · 「한국어 음성」 (Korean Speech, #123) | 8,000 | 11.37 h |
 | Total | 32,000 | 47.8 h |
 
 For dataset 132 we checked the license, recording-consent and training-consent fields on all 24,000 rows; for dataset 123, the license, commercial-use and rights-basis fields on all 8,000 rows. Evaluation sets (Zeroth-Korean, HiKE, FLEURS and the held-out dev/test splits) were excluded from training and checked for leakage by audio and sentence hashes.
@@ -168,4 +168,4 @@ Every figure in this post comes from measurements recorded in our internal exper
 
 *ThakiCloud AI Engineering · Korean Speech*
 
-*Model: [ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1](https://huggingface.co/ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1) (revision `cf73497c`). Training data source: AI 허브(AI-Hub) — 「회의 음성」(#132), AI 허브(AI-Hub) — 「한국어 음성」(#123). The data is not redistributed; only the model weights are released.*
+*Model: [ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1](https://huggingface.co/ThakiCloud/Thaki-KSpeech-KO-30B-A4B-LoRA-v1) (revision `cf73497c`). Training data source: AI 허브(AI-Hub) · 「회의 음성」(#132), AI 허브(AI-Hub) · 「한국어 음성」(#123). The data is not redistributed; only the model weights are released.*

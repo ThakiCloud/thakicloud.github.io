@@ -33,6 +33,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-ko-v1-ovis
 
 모델 이름은 [ThakiCloud/ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1)이고, 공개 OCR 모델 OvisOCR3에 붙이는 LoRA 어댑터입니다. 위 오류율은 문자 오류율(CER)이며 base 모델과 같은 조건으로 쟀습니다. 어댑터는 25.6MB이고 Apache-2.0 라이선스입니다.
 
+![ThakiOCR-KO-v1: OvisOCR3를 한국어 단어 OCR에 맞춘 LoRA를 공개했습니다 개념을 형상화한 이미지](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp)
+*글의 핵심 개념을 형상화했습니다.*
+
 ## 쉽게 말하면
 
 OvisOCR3는 인쇄된 문서를 잘 읽는 경력 직원에 가깝습니다. 다만 한국어 손글씨, 특히 사람마다 모양이 다른 흘림 글씨에는 약했습니다. 우리는 이 직원에게 한국어 단어 카드 묶음으로 짧은 집중 연습을 시켰습니다. 기억 전체를 바꾸지 않고 메모장 한 권(LoRA)만 덧붙이는 방식입니다.
@@ -57,9 +60,9 @@ OvisOCR3는 문서 구조를 읽는 능력이 있는 공개 OCR 모델입니다.
 
 학습 데이터는 AI 허브(AI-Hub)의 세 데이터셋입니다.
 
-- AI 허브(AI-Hub) — 대용량 손글씨 OCR 데이터(605)
-- AI 허브(AI-Hub) — 다양한 형태의 한글 문자 이미지 인식 데이터(91), 손글씨·인쇄체 하위셋
-- AI 허브(AI-Hub) — 야외 실제 촬영 한글 이미지 데이터(105)
+- AI 허브(AI-Hub) · 대용량 손글씨 OCR 데이터(605)
+- AI 허브(AI-Hub) · 다양한 형태의 한글 문자 이미지 인식 데이터(91), 손글씨·인쇄체 하위셋
+- AI 허브(AI-Hub) · 야외 실제 촬영 한글 이미지 데이터(105)
 
 데이터는 승인받은 신청자 본인이 내부 학습과 평가에만 썼습니다. 원본과 가공물(크롭, 라벨 파일, 서브셋, 샘플)은 공개 저장소에 없고 이 글에도 싣지 않습니다. 데이터가 필요하면 AI 허브에서 직접 신청해야 합니다.
 
@@ -223,7 +226,7 @@ flowchart TB
     H --> R
 ```
 
-ThakiCloud는 고객이 통제하는 환경에서 모델을 학습하고(Maxis), 서비스하고(Metis), 업무에 연결하는(Paxis) 플랫폼을 만듭니다. 자체 문서로 같은 방식의 어댑터를 학습하거나 평가하려면 [ThakiCloud](https://thakicloud.com)로 문의해 주세요.
+ThakiCloud는 고객이 통제하는 환경에서 모델을 학습하고(Maxis), 서비스하고(Metis), 업무에 연결하는(Paxis) 플랫폼을 만듭니다. 자체 문서로 같은 방식의 어댑터를 학습하거나 평가하려면 [ThakiCloud](https://thakicloud.com)로 문의해 주시기 바랍니다.
 
 ## 관련 글
 
