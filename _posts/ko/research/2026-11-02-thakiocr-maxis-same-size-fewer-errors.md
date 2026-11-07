@@ -118,6 +118,7 @@ Maxis는 ThakiCloud의 AI 학습·파인튜닝 플랫폼입니다. 이번 연구
 
 ## 참고
 
+- 공개 OCR 모델 네 개 한눈에 보기: [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - 공개 모델: [ThakiOCR-KOEN-V1-Dense (A)](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)
 - A2는 연구 평가를 통과한 비공개 체크포인트이며 금융 문서 자동 처리 제품으로 출시하지 않았습니다.
 - AI Hub 원본 이미지와 라벨, 잘라 낸 학습 샘플은 국내 내부 저장소에만 두며 공개하거나 재배포하지 않습니다.

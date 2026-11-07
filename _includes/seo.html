@@ -78,7 +78,8 @@
 {% endif %}
 
 <meta property="og:type" content="{{ og_type }}">
-<meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
+{%- if page.lang == "en" -%}{%- assign og_locale = "en_US" -%}{%- elsif page.lang == "ar" -%}{%- assign og_locale = "ar_AR" -%}{%- else -%}{%- assign og_locale = site.locale | replace: "-", "_" | default: "en_US" -%}{%- endif %}
+<meta property="og:locale" content="{{ og_locale }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ og_title }}">
 <meta property="og:url" content="{{ canonical_url }}">
@@ -132,7 +133,9 @@
   {% endif %}
 {% endif %}
 
+{%- unless site.redirect_mode %}
 <link rel="canonical" href="{{ canonical_url }}">
+{%- endunless %}
 
 {% if paginator.previous_page %}
   <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}">

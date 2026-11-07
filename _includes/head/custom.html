@@ -68,6 +68,10 @@
 {%- if tr_ar != '' %}
 <link rel="alternate" hreflang="ar" href="{{ site.url }}{{ site.baseurl }}{{ tr_ar }}">
 {%- endif -%}
+{%- assign tr_xd = tr_en | default: tr_ko -%}
+{%- if tr_xd != '' %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ tr_xd }}">
+{%- endif -%}
 {%- endif %}
 
 <!-- end custom head snippets -->

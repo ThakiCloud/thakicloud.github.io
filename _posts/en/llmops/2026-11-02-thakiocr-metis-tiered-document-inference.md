@@ -97,6 +97,7 @@ You should be able to use a different model per document and measure the cost an
 
 ## References
 
+- All four public OCR models at a glance: [ThakiOCR model hub](/tech-blog/en/ocr/)
 - Public models: [ThakiOCR-KOEN-V1-Dense (A)](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)
 - The tiered Metis layout in this post is a proposed architecture. We ran per-model inference and some multi-model service checks, but promotion of the financial document path to production has not been approved.
 - Our notes from installing an external OCR model ourselves are in the [PaddleOCR-VL post](/tech-blog/en/research/paddleocr-vl-09b-multilingual-document-parsing/).

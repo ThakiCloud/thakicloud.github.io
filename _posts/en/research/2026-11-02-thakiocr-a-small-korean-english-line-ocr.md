@@ -101,6 +101,7 @@ ThakiCloud builds a platform for training models (Maxis), serving them (Metis) a
 
 ## References
 
+- All four public OCR models at a glance: [ThakiOCR model hub](/tech-blog/en/ocr/)
 - Model: [ThakiCloud/ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense)
 - Training data: [nvidia/OCR-Synthetic-Multilingual-v1](https://huggingface.co/datasets/nvidia/OCR-Synthetic-Multilingual-v1) (CC BY 4.0)
 - This is a research release; product release decisions are separate. We do not claim state-of-the-art accuracy.

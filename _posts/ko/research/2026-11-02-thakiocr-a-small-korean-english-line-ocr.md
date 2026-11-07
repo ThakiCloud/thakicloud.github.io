@@ -101,6 +101,7 @@ ThakiCloud는 고객이 통제하는 환경에서 모델을 학습하고(Maxis),
 
 ## 참고
 
+- 공개 OCR 모델 네 개 한눈에 보기: [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - 모델: [ThakiCloud/ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense)
 - 학습 데이터: [nvidia/OCR-Synthetic-Multilingual-v1](https://huggingface.co/datasets/nvidia/OCR-Synthetic-Multilingual-v1) (CC BY 4.0)
 - 연구용 공개이며 제품 출시 판정은 별도입니다. 성능이 최고 수준이라고 주장하지 않습니다.

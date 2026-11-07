@@ -100,6 +100,7 @@ G2M의 실문서 평가는 너무 작았습니다. 그래서 다음 모델 A2는
 
 ## 참고
 
+- 공개 OCR 모델 네 개 한눈에 보기: [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - 모델: [ThakiCloud/ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview) (연구 프리뷰, A1_GEN2_NO_GO)
 - 학습 데이터: NVIDIA OCR-Synthetic-Multilingual-v1(CC BY 4.0), AI Hub 71299 Training 분할(재배포하지 않음), SIL OFL 1.1 폰트로 만든 기호 합성 줄
 - 제품 출시가 아닙니다. 성능이 최고 수준이라고 주장하지 않습니다.
