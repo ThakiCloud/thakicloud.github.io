@@ -21,17 +21,21 @@ toc: true
 toc_label: "Contents"
 reading_time: true
 lang: en
+header:
+  teaser: /assets/images/korean-meeting-diarization-pyannote-vs-wavlm-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/korean-meeting-diarization-pyannote-vs-wavlm/"
 series: thaki-minutes
 order: 2
 ---
 
+![Colored ribbons from each seat meeting in a knot at the center of a round table](/assets/images/korean-meeting-diarization-pyannote-vs-wavlm-hero.webp)
+*Meeting diarization is the work of untangling many voices back into individual speakers.*
 
 ## Why read this
 
 In meeting minutes, the error people notice first is usually not a typo. It is a **speaker error**. When two people are merged into one, the record of who promised what falls apart. This post is for engineers adding diarization to meeting notes or call records.
 
-The short version. At ThakiCloud we compared two speaker-linking methods for our meeting-notes product, Thaki Minutes, on 64 real Korean meetings (dev2: 30, final2: 34), with the same ASR, the same references, and the same scorer. We report the two sets separately and never pool their numbers. All numbers below are from the product path, with the product rules turned on.
+Here is the short version. At ThakiCloud we compared two speaker-linking methods for our meeting-notes product, Thaki Minutes, on 64 real Korean meetings (dev2: 30, final2: 34), with the same ASR, the same references, and the same scorer. We report the two sets separately and never pool their numbers. All numbers below are from the product path, with the product rules turned on.
 
 - In the 24 final2 meetings with 5-8 speakers, pyannote cut wrong merges sharply: **0.4085 → 0.0342**.
 - In the 10 final2 meetings with 3-4 speakers, speaker precision and cpCER got worse: cpCER **0.2743 → 0.3562**. The cause is not confirmed. The same bin in dev2 did not show this regression.
@@ -52,7 +56,7 @@ Both paths share the same ASR (NVIDIA Nemotron 30B, 45-second chunks). The diffe
 The title says "WavLM vs. pyannote", but strictly this is **a comparison of two pipelines**, not an embedder swap.
 
 ```mermaid
-flowchart LR
+flowchart TB
   A[Meeting audio] --> B[ASR, 45 s chunks<br/>shared by both paths]
   B --> C1[Speaker tags inside chunks]
   C1 --> D1[Link chunks with<br/>WavLM embeddings p1-strict]
@@ -104,7 +108,7 @@ Every pyannote-v1 value in the tables below is from the **product path**: the re
 | final2 (34) | p1-strict | 0.8905 | 0.8107 | 0.3862 | 0.3962 | 0.1792 | 0.4318 | 4/30/0 |
 | final2 (34) | pyannote-v1 product path | 0.9652 | 0.8900 | 0.2480 | 0.1026 | 0.0888 | 0.3540 | 22/7/5 |
 
-On each set, the pyannote-v1 product path beats p1-strict in every column. Coverage and UNKNOWN are weak comparisons, though, because the two methods leave words unidentified under different rules. Speaker count stands out. p1-strict undercounted in most meetings on both sets (under 26/30 and 30/34). strict is designed to protect precision by leaving words as UNKNOWN, and still had wrong merges of 0.33-0.40. Even inside the labels it was confident about, two people sometimes shared one label.
+On each set, the pyannote-v1 product path beats p1-strict in every column. Coverage and UNKNOWN are weak comparisons, though, because the two methods leave words unidentified under different rules. Speaker count stands out. p1-strict undercounted in most meetings on both sets (under 26/30 and 30/34). p1-strict is built to protect precision by leaving words as UNKNOWN, yet it still had wrong merges of 0.33-0.40. Even inside the labels it was confident about, two people sometimes shared one label.
 
 ## 5-8 speakers: far fewer wrong merges
 
@@ -135,13 +139,13 @@ What we observed:
 - In 1 of the 10 final2 meetings with 3-4 speakers, pyannote-v1 split 4 speakers into 6.
 - Speaker-count over-estimates: 0 meetings in the dev2 3-4 bin, 1 in the final2 3-4 bin.
 
-**The cause is not confirmed.** We have not checked whether these observations explain the cpCER increase. With only 10 meetings per bin, we also cannot tell sampling noise from a real weakness. We had no criterion fixed in advance for judging this regression, and we did not build one after the fact to dismiss it.
+**The cause is not confirmed.** We have not checked whether these observations explain the cpCER increase. With only 10 meetings per bin, we also cannot tell sampling noise from a real weakness. We had no criterion fixed in advance for judging this regression. We also did not build one after the fact to dismiss it.
 
 ## Reported separately: the diarizer's own output before product rules
 
 These numbers come from a different measurement stage than the tables above. Here pyannote's speaker segments are assigned to words directly, without the product rules. What users get in the product is the product-path value in the tables. We do not put the two side by side as one comparison.
 
-In final2 5-8 speaker meetings, the diarizer's own output had a wrong-merge rate of 0.0223; the product path has 0.0342. In final2 3-4 speaker meetings, cpCER was 0.3062 for the diarizer's own output and 0.3562 on the product path. Set-level cpCER for the diarizer's own output was 0.2663 on dev2 and 0.2694 on final2. We have not separately tested where the gap between the two stages comes from.
+In final2 5-8 speaker meetings, the diarizer's own output had a wrong-merge rate of 0.0223. The product path has 0.0342. In final2 3-4 speaker meetings, cpCER was 0.3062 for the diarizer's own output and 0.3562 on the product path. Set-level cpCER for the diarizer's own output was 0.2663 on dev2 and 0.2694 on final2. We have not separately tested where the gap between the two stages comes from.
 
 ## Why we kept the default
 
@@ -163,7 +167,7 @@ Building C, we kept these rules:
 The option text on screen says only what we measured. For pyannote-v1 it reads: fewer wrong merges confirmed on real Korean 5-8 speaker meetings, more mixed and overlapping turns to review, no confirmed gain for 3-4 speakers.
 
 ```mermaid
-flowchart TD
+flowchart TB
   U[Create meeting] --> S{Choose speaker linking}
   S -->|default| P1[p1-strict]
   S -->|user choice| PY[pyannote-v1]
@@ -179,9 +183,9 @@ flowchart TD
 ## Limitations
 
 - **Human review is assumed.** These numbers describe automatic output before anyone checks speakers.
-- **No validation with real users.** Speaker confirmation and approval were done by an automated driver. There have been zero real users. We do not know how much reviewer time pyannote-v1's extra review items cost.
+- **No validation with real users.** An automated script, not a person, confirmed speakers and approved the minutes. There have been zero real users. We do not know how much reviewer time pyannote-v1's extra review items cost.
 - **Overlapping speech was not evaluated.** The reference labels contain no overlap.
-- **The evaluation sets are not fully independent.** Both are existing evaluation sets that we have scored repeatedly; final2 had also been scored in an earlier round, and we could not rule out the same speakers appearing in both dev and final.
+- **The evaluation sets are not fully independent.** Both are existing evaluation sets that we have scored repeatedly. final2 had also been scored in an earlier round, and we could not rule out the same speakers appearing in both dev and final.
 - **The 3-4 bins have 10 meetings each.** One meeting can move the result a lot.
 - Accuracy of the minutes content, such as decisions, action items, and owners, has no reference and is out of scope here.
 
