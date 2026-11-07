@@ -100,7 +100,7 @@ The model card example looks like this. The input is three-phase a, b, c current
 import numpy as np
 from thaki_mcsa import load_model, welch_views, predict_recording
 
-net, labels, meta = load_model("mantisv2_mcc5_full_welch.pt", device="cpu")  # verify sha256 before loading
+net, labels, meta = load_model("mantisv2_mcc5_full_welch.pt", device="cpu")  # verifies sha256 before loading
 current = np.load("current.npy")                 # [3, n_samples], amperes, fs = 12,800 Hz
 out = predict_recording(net, labels, welch_views(current, fs=12800))
 print(out["label"], out["top3"], out["n_windows"])
