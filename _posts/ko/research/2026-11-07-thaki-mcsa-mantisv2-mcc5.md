@@ -99,7 +99,7 @@ MantisV2가 녹화 시각을 입력으로 받은 것은 아닙니다. 다만 녹
 import numpy as np
 from thaki_mcsa import load_model, welch_views, predict_recording
 
-net, labels, meta = load_model("mantisv2_mcc5_full_welch.pt", device="cpu")  # 로드 전에 sha256을 확인합니다
+net, labels, meta = load_model("mantisv2_mcc5_full_welch.pt", device="cpu")  # 로드하기 전에 sha256을 직접 검증합니다
 current = np.load("current.npy")                 # [3, n_samples], 암페어, fs = 12,800 Hz
 out = predict_recording(net, labels, welch_views(current, fs=12800))
 print(out["label"], out["top3"], out["n_windows"])
