@@ -1,0 +1,9 @@
+# 시리즈 정의 — 글 front matter 의 `series: <key>` 와 짝. `order:` (정수) 로 회차를 매긴다.
+# 시리즈 허브는 /<lang>/series/<key>/ (layout: series, 정적 필터 — 클라이언트 JS 필터 아님).
+thaki-minutes:
+  name:
+    ko: "Thaki Minutes"
+    en: "Thaki Minutes"
+  description:
+    ko: "개발 중인 한국어 AI 회의록 시스템 Thaki Minutes의 음성인식·화자 분리 연구와 구현 기록을 회차별로 묶은 시리즈입니다."
+    en: "A numbered series on the speech recognition, speaker diarization research and engineering behind Thaki Minutes, a Korean AI meeting-notes system in development."

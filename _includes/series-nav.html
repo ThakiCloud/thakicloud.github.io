@@ -1,0 +1,22 @@
+{%- comment -%}
+같은 `series` + 같은 `lang` 글을 회차(order, 없으면 date) 순으로 나열한다. single.html 의 page__meta 에서 호출.
+정적 HTML 로 렌더하므로 크롤러가 시리즈 내부 링크를 그대로 따라간다.
+{%- endcomment -%}
+{%- assign _s = site.data.series[page.series] -%}
+{%- assign _lang = page.lang | default: 'ko' -%}
+{%- assign _items = site.posts | where: "series", page.series | where: "lang", _lang | sort: "date" -%}
+{%- assign _with_order = _items | where_exp: "p", "p.order" | sort: "order" -%}
+{%- if _with_order.size == _items.size -%}{%- assign _items = _with_order -%}{%- endif -%}
+{%- if _items.size > 0 -%}
+<nav class="series-nav" aria-label="{{ _s.name[_lang] | default: page.series }}">
+  <p class="series-nav__title">
+    <a href="{{ '/' | append: _lang | append: '/series/' | append: page.series | append: '/' | relative_url }}">{{ _s.name[_lang] | default: _s.name.ko | default: page.series }}</a>
+    · {% if _lang == 'en' %}{{ _items.size }} posts{% else %}{{ _items.size }}편{% endif %}
+  </p>
+  <ol class="series-nav__list">
+    {%- for p in _items %}
+    <li{% if p.url == page.url %} aria-current="page"{% endif %}>{% if p.url == page.url %}<strong>{{ p.title }}</strong>{% else %}<a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% endif %}</li>
+    {%- endfor %}
+  </ol>
+</nav>
+{%- endif -%}

@@ -1,0 +1,36 @@
+---
+layout: archive
+classes: wide
+---
+{%- comment -%}
+시리즈 허브. posts.html(전체 글을 렌더한 뒤 JS 로 거르는 방식, /ko/paxis/ = 965편·1.8MB)과 달리
+Liquid 로 그 시리즈 글만 정적 렌더한다 → 허브 HTML 자체가 주제에 집중된다.
+front matter: series: <key>, lang: ko|en
+{%- endcomment -%}
+{%- assign _s = site.data.series[page.series] -%}
+{%- assign _items = site.posts | where: "series", page.series | where: "lang", page.lang -%}
+<p class="postspage__intro">{{ _s.description[page.lang] | default: _s.description.ko }}</p>
+{{ content }}
+<div class="postspage__list">
+  {%- for post in _items %}
+  <article class="postrow">
+    <div class="postrow__body">
+      <h2 class="postrow__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="postrow__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></p>
+      {%- assign _d = post.summary | default: post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 160 %}
+      <p class="postrow__desc">{{ _d }}</p>
+    </div>
+  </article>
+  {%- endfor %}
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "name": {{ _s.name[page.lang] | default: page.series | jsonify }},
+  "description": {{ _s.description[page.lang] | default: '' | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": {{ page.lang | jsonify }},
+  "hasPart": [{% for post in _items %}{"@type":"BlogPosting","headline":{{ post.title | strip_html | jsonify }},"url":{{ post.url | absolute_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</script>

@@ -1,24 +1,16 @@
+---
+layout: null
+sitemap: false
+permalink: /robots.txt
+---
+{%- comment -%}
+정본 도메인 = https://thakicloud.com/tech-blog/ (CloudFront+S3).
+⚠️ 크롤러는 호스트 루트(/robots.txt)만 읽는다. thakicloud.com 에서 이 파일은 /tech-blog/robots.txt 로
+   나가서 아무도 안 읽는다 — 실효 선언은 thaki-homepage 레포 public/robots.txt 에 넣어야 한다.
+   github.io(redirect_mode) 빌드에서는 이 파일이 루트 robots 가 되므로 정본 사이트맵만 가리킨다.
+   Disallow 는 두지 않는다: 리디렉션 스텁을 크롤러가 읽어야 canonical/refresh 를 본다.
+{%- endcomment %}
 User-agent: *
 Allow: /
 
-# Disallow certain paths to improve crawl efficiency
-Disallow: /_site/
-Disallow: /assets/js/
-Disallow: /.git/
-Disallow: /.jekyll-cache/
-
-# Priority sitemaps
-Sitemap: https://thakicloud.github.io/sitemap.xml
-Sitemap: https://thakicloud.github.io/feed.xml
-
-# Language-specific sitemaps
-Sitemap: https://thakicloud.github.io/sitemap-ko.xml
-Sitemap: https://thakicloud.github.io/sitemap-en.xml
-
-# Language-specific search indexes
-Allow: /search-ko.json
-Allow: /search-en.json
-
-# Language directories
-Allow: /ko/
-Allow: /en/
+Sitemap: https://thakicloud.com/tech-blog/sitemap.xml

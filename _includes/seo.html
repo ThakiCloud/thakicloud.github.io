@@ -134,7 +134,8 @@
 {% endif %}
 
 {%- unless site.redirect_mode %}
-<link rel="canonical" href="{{ canonical_url }}">
+{%- comment -%} redirect_mode(github.io) 빌드에서는 head.html 이 thakicloud.com 정본 canonical 을 이미 낸다 — 자기참조 canonical 이 두 번째로 붙지 않게 한다. {%- endcomment -%}
+{% unless site.redirect_mode %}<link rel="canonical" href="{{ canonical_url }}">{% endunless %}
 {%- endunless %}
 
 {% if paginator.previous_page %}

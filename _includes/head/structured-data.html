@@ -11,7 +11,13 @@
   "headline": {{ page.title | strip_html | truncate: 110 | jsonify }},
   "description": {{ _sd_desc | jsonify }},
   "image": {{ _sd_img | jsonify }},
-  "inLanguage": {{ _page_lang | jsonify }},
+  "inLanguage": {{ _page_lang | jsonify }},{% if page.series %}
+  {%- assign _series = site.data.series[page.series] -%}
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": {{ _series.name[_page_lang] | default: _series.name.ko | default: page.series | jsonify }},
+    "url": {{ site.url | append: site.baseurl | append: '/' | append: _page_lang | append: '/series/' | append: page.series | append: '/' | jsonify }}
+  },{% endif %}
   "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
   "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
   "author": { "@type": "Organization", "name": {{ site.name | jsonify }}, "url": {{ '/' | absolute_url | jsonify }} },
