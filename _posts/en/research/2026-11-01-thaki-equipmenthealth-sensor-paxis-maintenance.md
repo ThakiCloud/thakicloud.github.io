@@ -15,6 +15,7 @@ tags:
   - semiconductor-logistics
   - small-models
   - human-in-the-loop
+  - industrial-ai
 permalink: /en/research/thaki-equipmenthealth-sensor-paxis-maintenance/
 categories: [research]
 author_profile: true
@@ -106,6 +107,9 @@ There is also a test score on vehicles 17 and 18, about 0.94 macro F1. That spli
 False alarms happen. The most common error is calling a normal reading attention: 286 out of 5,729 normal readings. In plain words, about one normal reading in twenty raises an attention alert. Four normal readings were called danger.
 
 No training data is included in the repository. To get the data, apply to AI Hub under its terms. The trained weights are released under AI Hub's terms for trained models.
+
+
+{% include industrial-ai-hub-link.html lang="en" %}
 
 ---
 

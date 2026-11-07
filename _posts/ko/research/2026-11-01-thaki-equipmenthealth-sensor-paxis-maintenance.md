@@ -14,6 +14,7 @@ tags:
   - 반도체 물류
   - 작은 모델
   - human-in-the-loop
+  - industrial-ai
 permalink: /ko/research/thaki-equipmenthealth-sensor-paxis-maintenance/
 categories: [research]
 author_profile: true
@@ -103,6 +104,9 @@ flowchart LR
 오경보도 있습니다. 가장 흔한 오류는 정상을 관심으로 판정한 경우로, 정상 5,729건 중 286건이었습니다. 즉, 사람 말로는 정상 20건 중 1건꼴로 관심 경보가 울립니다. 정상을 위험으로 판정한 경우도 4건 있었습니다.
 
 학습 데이터는 이 저장소에 포함하지 않았습니다. 데이터가 필요하면 AI 허브에 이용 신청을 하셔야 합니다. 학습한 가중치는 AI 허브의 학습 모델 공개 조건에 따라 공개했습니다.
+
+
+{% include industrial-ai-hub-link.html lang="ko" %}
 
 ---
 

@@ -14,6 +14,7 @@ tags:
   - 산업 안전
   - research preview
   - AgentOps
+  - industrial-ai
 permalink: /ko/agentops/thaki-factoryshield-ko-7m-paxis/
 categories: [agentops, product]
 author_profile: true
@@ -185,6 +186,9 @@ r["safe_to_actuate"]   # 항상 False
 말로 내린 설비 명령을 곧바로 실행하지 않고 작은 모델이 구조화된 제안으로 바꾸거나 거절하게 했습니다. 설비 ID는 입력에서만 고르고 등록 설비 목록과 정확히 맞을 때만 제안합니다. 목록이 없으면 전부 거절합니다. 모델 단독으로는 2.6~3.9%를 틀립니다. 검증기와 등록 목록을 붙인 시스템 위험은 0.00%, 0.33%, 0.00%입니다.
 
 이 수치는 합성 봉인 테스트의 결과입니다. 실제 설비 환경에서의 안전성 검증은 아닙니다. 그 차이를 메우는 것이 다음 일입니다. Paxis에서 신경망은 제안만 하고 승인은 별도 계층이 맡으며 설비 구동은 거부됩니다. 판단과 실행 사이의 이 경계가 이번 공개에서 가장 먼저 보여 드리고 싶었던 부분입니다.
+
+
+{% include industrial-ai-hub-link.html lang="ko" %}
 
 ---
 

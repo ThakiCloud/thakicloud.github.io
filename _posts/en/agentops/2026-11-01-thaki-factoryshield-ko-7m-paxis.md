@@ -15,6 +15,7 @@ tags:
   - industrial-safety
   - research-preview
   - agentops
+  - industrial-ai
 permalink: /en/agentops/thaki-factoryshield-ko-7m-paxis/
 categories: [agentops, product]
 author_profile: true
@@ -186,6 +187,9 @@ The next step is to shrink these limitations in order. The first thing needed is
 Instead of executing a spoken equipment command directly, we had a small model turn it into a structured proposal or refuse. The equipment ID is picked only from the input, and a proposal is made only on an exact registry match. Without a registry, everything is refused. The model alone is wrong on 2.6% to 3.9%. With the verifier and the registry, system risk is 0.00%, 0.33% and 0.00%.
 
 These numbers come from a synthetic sealed test. They are not a safety validation in a real equipment environment. Closing that gap is the next job. In Paxis the network only proposes, approval belongs to a separate layer, and equipment actuation is denied. That boundary between judgment and execution is what we most wanted to show with this release.
+
+
+{% include industrial-ai-hub-link.html lang="en" %}
 
 ---
 

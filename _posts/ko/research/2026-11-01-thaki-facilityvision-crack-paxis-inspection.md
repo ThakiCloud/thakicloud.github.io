@@ -14,6 +14,7 @@ tags:
   - resnet
   - hugging-face
   - research-preview
+  - industrial-ai
 permalink: /ko/research/thaki-facilityvision-crack-paxis-inspection/
 categories: [research]
 author_profile: true
@@ -93,6 +94,9 @@ flowchart TB
 ## 정리
 
 이번 공개의 의미는 높은 점수보다, 작고 검증 가능한 모델을 무엇을 믿어도 되는지와 함께 내놓았다는 데 있습니다. 모서리를 접는 교정자와 빨간 펜은 준비됐고, 수정 지시서를 쓰는 편집장은 Paxis가 맡습니다. 다음 질문은 현장 사진에서도 같은 밑줄을 긋느냐이며, 그 답은 현장 데이터로 재는 수밖에 없습니다.
+
+
+{% include industrial-ai-hub-link.html lang="ko" %}
 
 ---
 
