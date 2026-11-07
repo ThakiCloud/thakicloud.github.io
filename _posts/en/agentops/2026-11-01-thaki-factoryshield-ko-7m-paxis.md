@@ -187,6 +187,9 @@ Instead of executing a spoken equipment command directly, we had a small model t
 
 These numbers come from a synthetic sealed test. They are not a safety validation in a real equipment environment. Closing that gap is the next job. In Paxis the network only proposes, approval belongs to a separate layer, and equipment actuation is denied. That boundary between judgment and execution is what we most wanted to show with this release.
 
+
+{% include industrial-ai-hub-link.html lang="en" %}
+
 ---
 
 *ThakiCloud AI Engineering, Korean Voice Command & Agentic AI*

@@ -104,6 +104,9 @@ flowchart LR
 
 학습 데이터는 이 저장소에 포함하지 않았습니다. 데이터가 필요하면 AI 허브에 이용 신청을 하셔야 합니다. 학습한 가중치는 AI 허브의 학습 모델 공개 조건에 따라 공개했습니다.
 
+
+{% include industrial-ai-hub-link.html lang="ko" %}
+
 ---
 
 *모델: [ThakiCloud/Thaki-EquipmentHealth-Sensor-LGBM](https://huggingface.co/ThakiCloud/Thaki-EquipmentHealth-Sensor-LGBM) (CC BY 4.0, 연구 미리보기). 학습 데이터 출처: AI 허브 데이터셋 71802(OHT·AGV 설비). 본문의 Paxis 정비 흐름은 참조 설계이며 통합 제품의 실측 결과가 아닙니다.*

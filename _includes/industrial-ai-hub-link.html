@@ -1,0 +1,15 @@
+{%- comment -%}
+  산업 AI 허브 링크. 허브 페이지(/ko|en/industrial-ai/)가 빌드에 들어 있을 때만 그린다.
+  허브가 published: false 인 동안에는 아무것도 출력하지 않으므로, 기존 글에 먼저 넣어도
+  깨진 링크나 미공개 페이지 노출이 생기지 않는다. 사용: include industrial-ai-hub-link.html lang="ko"
+{%- endcomment -%}
+{%- assign _ia_lang = include.lang | default: page.lang | default: "ko" -%}
+{%- assign _ia_url = "/" | append: _ia_lang | append: "/industrial-ai/" -%}
+{%- assign _ia_hub = site.pages | where: "url", _ia_url | first -%}
+{%- if _ia_hub -%}
+{%- if _ia_lang == "en" %}
+More industrial AI models in one place: [ThakiCloud Industrial AI hub]({{ site.baseurl }}{{ _ia_url }})
+{%- else %}
+산업 AI 모델을 한곳에서 보기: [ThakiCloud 산업 AI 허브]({{ site.baseurl }}{{ _ia_url }})
+{%- endif %}
+{%- endif -%}

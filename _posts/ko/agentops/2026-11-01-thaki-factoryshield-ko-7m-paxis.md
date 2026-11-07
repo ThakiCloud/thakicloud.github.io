@@ -186,6 +186,9 @@ r["safe_to_actuate"]   # 항상 False
 
 이 수치는 합성 봉인 테스트의 결과입니다. 실제 설비 환경에서의 안전성 검증은 아닙니다. 그 차이를 메우는 것이 다음 일입니다. Paxis에서 신경망은 제안만 하고 승인은 별도 계층이 맡으며 설비 구동은 거부됩니다. 판단과 실행 사이의 이 경계가 이번 공개에서 가장 먼저 보여 드리고 싶었던 부분입니다.
 
+
+{% include industrial-ai-hub-link.html lang="ko" %}
+
 ---
 
 *ThakiCloud AI Engineering · Korean Voice Command & Agentic AI*

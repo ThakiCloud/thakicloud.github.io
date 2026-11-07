@@ -96,6 +96,9 @@ Both models are research previews, not certified inspection tools. The Paxis flo
 
 What this release offers is less a high score and more a pair of small, verifiable models shipped with a clear account of what to trust. The corner-folding proofreader and the red pen are ready, and Paxis takes the managing editor's seat. The next question is whether the pen draws the same lines on real site photos, and only site data can answer it.
 
+
+{% include industrial-ai-hub-link.html lang="en" %}
+
 ---
 
 *Source: the public model cards for both models (Hugging Face, published October 31, 2026). Training data: Ç. F. Özgenel, Mendeley Data (doi:10.17632/5y9wdsg2zt.2, doi:10.17632/jwsn7tfbrp.1), CC BY 4.0.*

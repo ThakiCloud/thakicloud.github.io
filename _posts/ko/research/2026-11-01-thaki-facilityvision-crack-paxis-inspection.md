@@ -94,6 +94,9 @@ flowchart TB
 
 이번 공개의 의미는 높은 점수보다, 작고 검증 가능한 모델을 무엇을 믿어도 되는지와 함께 내놓았다는 데 있습니다. 모서리를 접는 교정자와 빨간 펜은 준비됐고, 수정 지시서를 쓰는 편집장은 Paxis가 맡습니다. 다음 질문은 현장 사진에서도 같은 밑줄을 긋느냐이며, 그 답은 현장 데이터로 재는 수밖에 없습니다.
 
+
+{% include industrial-ai-hub-link.html lang="ko" %}
+
 ---
 
 *출처: 두 모델의 공개 모델 카드(Hugging Face, 2026년 10월 31일 공개). 학습 데이터는 Ç. F. Özgenel, Mendeley Data(doi:10.17632/5y9wdsg2zt.2, doi:10.17632/jwsn7tfbrp.1), CC BY 4.0입니다.*

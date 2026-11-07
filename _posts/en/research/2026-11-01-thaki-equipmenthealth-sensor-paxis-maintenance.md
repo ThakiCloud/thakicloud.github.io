@@ -107,6 +107,9 @@ False alarms happen. The most common error is calling a normal reading attention
 
 No training data is included in the repository. To get the data, apply to AI Hub under its terms. The trained weights are released under AI Hub's terms for trained models.
 
+
+{% include industrial-ai-hub-link.html lang="en" %}
+
 ---
 
 *Model: [ThakiCloud/Thaki-EquipmentHealth-Sensor-LGBM](https://huggingface.co/ThakiCloud/Thaki-EquipmentHealth-Sensor-LGBM) (CC BY 4.0, research preview). Training data source: AI Hub dataset 71802 (OHT and AGV equipment). The Paxis maintenance flow is a reference design, not a measured result of an integrated product.*
