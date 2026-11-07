@@ -14,6 +14,7 @@ tags:
   - 산업 안전
   - research preview
   - AgentOps
+  - industrial-ai
 permalink: /ko/agentops/thaki-factoryshield-ko-7m-paxis/
 categories: [agentops, product]
 author_profile: true

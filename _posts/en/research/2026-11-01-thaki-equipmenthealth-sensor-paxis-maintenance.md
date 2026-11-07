@@ -15,6 +15,7 @@ tags:
   - semiconductor-logistics
   - small-models
   - human-in-the-loop
+  - industrial-ai
 permalink: /en/research/thaki-equipmenthealth-sensor-paxis-maintenance/
 categories: [research]
 author_profile: true

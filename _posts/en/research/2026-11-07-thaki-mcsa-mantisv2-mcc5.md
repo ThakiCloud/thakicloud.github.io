@@ -4,7 +4,7 @@ seo_title: "Thaki-MCSA-MantisV2-MCC5 - A Motor Current (MCSA) Fault Diagnosis Mo
 seo_description: "We released an MCSA research model on Hugging Face that sorts 24 motor states from three-phase current. MantisV2 fine-tuned on MCC5 scored Macro-F1 0.943 on 71 sealed TEST recordings, but a baseline that uses only the recording time scored 0.986, so generalization to real equipment is not shown."
 excerpt: "We released an MCSA model that classifies motor fault states from current. Sealed TEST Macro-F1 is 0.943, but a recording-time baseline scores 0.986, so we also spell out what this number fails to prove."
 date: 2026-11-07
-published: false
+published: true
 tags:
   - industrial-ai
   - mcsa

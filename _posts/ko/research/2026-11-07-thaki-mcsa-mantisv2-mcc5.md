@@ -4,7 +4,7 @@ seo_title: "Thaki-MCSA-MantisV2-MCC5 공개 - 모터 전류 분석(MCSA) 고장 
 seo_description: "3상 모터 전류로 24가지 고장 상태를 구분하는 MCSA 연구 모델을 Hugging Face에 공개했습니다. MantisV2를 MCC5로 미세조정해 봉인 TEST 71개 녹화에서 Macro-F1 0.943을 얻었지만, 녹화 시각만 쓰는 기준선이 0.986으로 더 높아 실제 설비 일반화는 입증되지 않았습니다."
 excerpt: "모터 전류로 고장 상태를 구분하는 MCSA 모델을 공개했습니다. 봉인 TEST Macro-F1은 0.943이지만, 녹화 시각만 쓰는 기준선이 0.986이라 이 숫자가 무엇을 증명하지 못하는지까지 함께 적었습니다."
 date: 2026-11-07
-published: false
+published: true
 tags:
   - industrial-ai
   - mcsa

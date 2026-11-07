@@ -8,7 +8,7 @@ lang: ko
 default_tag: industrial-ai
 author_profile: true
 sitemap: true
-published: false
+published: true
 ---
 
 ThakiCloud가 Hugging Face에 공개한 산업 AI 모델을 한곳에 모았습니다. 모두 연구 미리보기(research preview)이며 제품 출시가 아닙니다. 모델마다 데이터, 평가 방식, 라벨의 성격이 다르므로 아래 숫자를 모델 사이의 순위로 읽으면 안 됩니다.

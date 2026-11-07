@@ -15,6 +15,7 @@ tags:
   - resnet
   - hugging-face
   - research-preview
+  - industrial-ai
 permalink: /en/research/thaki-facilityvision-crack-paxis-inspection/
 categories: [research]
 author_profile: true

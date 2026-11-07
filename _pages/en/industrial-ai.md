@@ -8,7 +8,7 @@ lang: en
 default_tag: industrial-ai
 author_profile: true
 sitemap: true
-published: false
+published: true
 ---
 
 This page collects the industrial AI models ThakiCloud has published on Hugging Face. All of them are research previews, not product launches. Each model differs in data, evaluation method, and the nature of its labels, so the numbers below are not a ranking between models.

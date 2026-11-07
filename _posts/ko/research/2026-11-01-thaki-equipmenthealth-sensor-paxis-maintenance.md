@@ -14,6 +14,7 @@ tags:
   - 반도체 물류
   - 작은 모델
   - human-in-the-loop
+  - industrial-ai
 permalink: /ko/research/thaki-equipmenthealth-sensor-paxis-maintenance/
 categories: [research]
 author_profile: true
