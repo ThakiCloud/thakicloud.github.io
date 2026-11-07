@@ -21,6 +21,9 @@ toc_label: "Contents"
 toc_sticky: true
 reading_time: true
 lang: en
+header:
+  image: /assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp
+  teaser: /assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/research/thakiocr-ko-v1-ovisocr3-korean-finetune/"
 ---
 
@@ -104,6 +107,9 @@ flowchart TB
 - Paired over the same items, M1 minus base is −17.50 pp pooled (95% CI −20.32 to −15.12). All four sources improve with confidence intervals that exclude zero.
 - The unweighted mean of the per-source CERs is 8.53% for M1.
 - By character class, M1 CER is 9.11% for Hangul, 0.85% for digits, 5.04% for Latin letters and 4.14% for punctuation. The base model scored 18.87%, 3.75%, 22.30% and 18.42%. Latin covers only 42 crops (139 characters), so that number is noisy.
+
+![Per-source word-crop CER on 2,400 Dev crops, base vs. ThakiOCR-KO-v1](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-results-en.webp)
+*Per-source word-crop CER measured with the same prompt, image size and greedy decoding. Lower is better.*
 
 ### Did document structure get worse?
 
@@ -201,6 +207,19 @@ The public files are `adapter_model.safetensors` (25.6 MB), `adapter_config.json
 ## Using it on-premises and on the platform
 
 The adapter is 25.6 MB and the base is an open model, so even in on-premises environments where documents cannot leave the site, you can download the base once and then test by swapping only the adapter. We built this model through ThakiCloud's own procedure of queue-based GPU training, data lineage records, hash verification and anonymous reproduction.
+
+In a document workflow, this adapter covers one step: reading a cropped word. We recommend routing inputs that still produce errors, such as cursive handwriting or outdoor photos, to a human review step.
+
+```mermaid
+flowchart TB
+    P["Document page image"] --> D["Text region detection"]
+    D --> C["Word crops"]
+    C --> K["OvisOCR3 + ThakiOCR-KO-v1<br/>word recognition"]
+    K --> Q{"Error-prone input such as<br/>cursive handwriting or outdoor photos?"}
+    Q -- "No" --> R["Pass to the workflow"]
+    Q -- "Yes" --> H["Human review step"]
+    H --> R
+```
 
 ThakiCloud builds a platform for training models (Maxis), serving them (Metis) and connecting them to work (Paxis) in environments the customer controls. If you want to train or evaluate an adapter like this on your own documents, contact [ThakiCloud](https://thakicloud.com).
 

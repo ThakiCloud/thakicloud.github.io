@@ -21,12 +21,15 @@ toc_label: "Contents"
 toc_sticky: true
 reading_time: true
 lang: en
+header:
+  image: /assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-hero.webp
+  teaser: /assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/research/thakiocr-large-27b-r2b-qwen-korean-ocr/"
 ---
 
 We released a research model that transcribes images of Korean words into text. It leaves a large vision-language model as it is and adds a small extra trained file on top. Compared with the original model using the same instruction, character errors dropped sharply.
 
-When reading Korean words in uneven condition, such as handwritten application forms or photos taken on site, the original model often added characters that were not there. This training reduced that habit. Errors on digits and Latin letters also fell, but we did not separately measure parts where format matters, such as amounts. The verified scope, however, ends at reading one word image, and we have not yet measured reading whole documents.
+When reading Korean words in uneven condition, such as handwritten application forms or photos taken on site, the original model often added characters that were not there. This training reduced that habit. Errors on digits and Latin letters also fell, but we did not separately measure parts where format matters, such as amounts. The verified scope ends at reading one word image; we have not yet measured reading whole documents.
 
 The release is called [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B). It is a LoRA adapter for Qwen3.6-27B, licensed under Apache-2.0. On a fixed development set of 2,400 crops, the base model had a word CER of 18.04%. With this adapter attached, CER drops to 6.01%. It reads one word crop at a time, and it is a research preview, not a product release.
 
@@ -36,7 +39,7 @@ Show a strong reader an unfamiliar handwritten note one word at a time and they 
 
 ## The problem
 
-Enterprise document processing has to turn Korean images of very different quality into text: handwritten application forms, printed forms, signs and labels photographed on site. Large vision-language models are good at describing image content, but before fine-tuning they made many errors when transcribing Korean handwritten words. In our measurement, the Qwen3.6-27B base model had a CER of 37.77% on handwritten words (91 handwriting).
+Enterprise document processing has to turn Korean images of very different quality into text: handwritten application forms, printed forms, signs and labels photographed on site. Large vision-language models are good at describing image content. Before fine-tuning, however, they made many errors when transcribing handwritten Korean words. In our measurement, the Qwen3.6-27B base model had a CER of 37.77% on handwritten words (91 handwriting).
 
 The research asked two questions.
 
@@ -46,6 +49,18 @@ The research asked two questions.
 ## Model, data, and training
 
 The base model is `Qwen/Qwen3.6-27B` (revision `6a9e13bd6fc8f0983b9b99948120bc37f49c13e9`, Apache-2.0). The release is a LoRA adapter for this model and does not include the base weights.
+
+
+```mermaid
+flowchart TB
+    D["AI Hub word-crop training pool<br/>605 · 91 handwriting · 91 printed · 105"] --> S["R2-B sampling<br/>weight 1 to 2 for rare-character words"]
+    S --> T["LoRA training<br/>496 decoder linear layers · 800 steps<br/>about 3.37 B200 GPU-hours"]
+    Q["Qwen3.6-27B base model<br/>vision encoder and merger frozen"] --> T
+    T --> A["LoRA adapter<br/>adapter_model.safetensors"]
+    A --> E["Preregistered evaluation<br/>fixed dev set of 2,400 crops"]
+    E --> R["Release and hash check<br/>anonymous download, inference reproduced"]
+    R --> I["Inference<br/>base model + adapter · bf16 · greedy"]
+```
 
 | Item | Value |
 |---|---|
@@ -69,6 +84,8 @@ Training data came from three application-based datasets on AI-Hub, cut into wor
 **Baseline**: the same Qwen3.6-27B without fine-tuning, with the same prompt (`이미지에 적힌 글자를 그대로 옮겨 적으세요. 글자만 출력하세요.`, "Transcribe the text in the image exactly. Output only the text.") and the same decoding settings. R2-A is a reference adapter trained under the same conditions with uniform sampling only.
 
 **Evaluation set**: 2,400 word crops, 600 per source, drawn from the official Validation splits of the three datasets used for training. All three models were measured on the same 2,400 crops. Because it comes from the same datasets as the training data, it is not an independent test set.
+
+![Bar chart of word CER by source for the base model and the R2-A and R2-B adapters on the fixed 2,400-crop development set](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-results-en.webp)
 
 **Metric**: word CER, the total number of character edits divided by the total number of ground-truth characters, after Unicode NFC normalization and whitespace strip. Lower is better.
 

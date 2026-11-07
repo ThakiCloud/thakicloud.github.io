@@ -21,6 +21,9 @@ toc_label: "목차"
 toc_sticky: true
 reading_time: true
 lang: ko
+header:
+  image: /assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp
+  teaser: /assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-ko-v1-ovisocr3-korean-finetune/"
 ---
 
@@ -32,9 +35,9 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-ko-v1-ovis
 
 ## 쉽게 말하면
 
-OvisOCR3는 인쇄된 문서를 잘 읽는 경력 직원과 비슷합니다. 다만 한국어 손글씨, 특히 사람마다 모양이 다른 흘림 글씨에는 약했습니다. 우리는 이 직원에게 한국어 단어 카드 묶음으로 짧은 집중 연습을 시켰습니다. 기억 전체를 바꾸지 않고 메모장 한 권(LoRA)만 덧붙이는 방식입니다.
+OvisOCR3는 인쇄된 문서를 잘 읽는 경력 직원에 가깝습니다. 다만 한국어 손글씨, 특히 사람마다 모양이 다른 흘림 글씨에는 약했습니다. 우리는 이 직원에게 한국어 단어 카드 묶음으로 짧은 집중 연습을 시켰습니다. 기억 전체를 바꾸지 않고 메모장 한 권(LoRA)만 덧붙이는 방식입니다.
 
-연습 뒤 단어 카드를 읽는 실력은 크게 늘었습니다. 원래 잘하던 표 읽기를 잊지 않았는지도 따로 확인했습니다. 단어는 더 잘 읽게 됐지만 표 읽기 시험에서 떨어진 다른 연습 방식은 이번 공개에서 뺐습니다.
+연습 뒤 단어 카드를 읽는 실력은 크게 늘었습니다. 원래 잘하던 표 읽기를 잊지 않았는지도 따로 확인했습니다. 단어는 더 잘 읽게 됐어도 표 읽기 시험에서 떨어진 다른 연습 방식은 이번 공개에서 뺐습니다.
 
 ## 어떤 문제를 푸는가
 
@@ -106,6 +109,9 @@ flowchart TB
 - 같은 문항끼리 비교한 M1과 base의 차이는 전체 −17.50%p(95% CI −20.32~−15.12)입니다. 네 출처 모두 신뢰구간이 0을 포함하지 않는 범위에서 좋아졌습니다.
 - 출처별 CER을 단순 평균한 값은 M1 8.53%입니다.
 - 문자 종류별 M1 CER은 한글 9.11%, 숫자 0.85%, 라틴 문자 5.04%, 문장부호 4.14%입니다. base는 각각 18.87%, 3.75%, 22.30%, 18.42%였습니다. 라틴 문자는 크롭 42장(139자)뿐이라 이 값은 흔들림이 큽니다.
+
+![Dev 단어 크롭 2,400장의 출처별 CER, base와 ThakiOCR-KO-v1 비교](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-results.webp)
+*같은 프롬프트, 같은 이미지 크기, 같은 greedy 디코딩으로 잰 출처별 단어 크롭 CER입니다. 낮을수록 좋습니다.*
 
 ### 문서 구조는 나빠지지 않았나
 
@@ -203,6 +209,19 @@ print(processor.tokenizer.decode(out[0, inputs["input_ids"].shape[1]:], skip_spe
 ## 온프레미스와 플랫폼에서 쓰기
 
 어댑터가 25.6MB이고 base가 공개 모델이므로, 문서를 밖으로 내보낼 수 없는 온프레미스 환경에서도 base를 한 번 받아 두면 어댑터만 교체하며 시험할 수 있습니다. 이 모델은 ThakiCloud의 큐 기반 GPU 학습과 데이터 계보 기록, 해시 검증, 익명 재현 절차를 그대로 거쳐 만들었습니다.
+
+문서 업무 흐름에서 이 어댑터가 맡는 자리는 잘라 낸 단어를 읽는 한 단계입니다. 흘림 손글씨나 야외 촬영처럼 오류가 남는 입력은 사람 확인 단계로 넘기는 구성을 권합니다.
+
+```mermaid
+flowchart TB
+    P["문서 페이지 이미지"] --> D["글자 영역 검출"]
+    D --> C["단어 크롭"]
+    C --> K["OvisOCR3 + ThakiOCR-KO-v1<br/>단어 인식"]
+    K --> Q{"흘림 손글씨·야외 촬영처럼<br/>오류가 남는 입력인가"}
+    Q -- "아니오" --> R["업무 흐름으로 전달"]
+    Q -- "예" --> H["사람 확인 단계"]
+    H --> R
+```
 
 ThakiCloud는 고객이 통제하는 환경에서 모델을 학습하고(Maxis), 서비스하고(Metis), 업무에 연결하는(Paxis) 플랫폼을 만듭니다. 자체 문서로 같은 방식의 어댑터를 학습하거나 평가하려면 [ThakiCloud](https://thakicloud.com)로 문의해 주세요.
 

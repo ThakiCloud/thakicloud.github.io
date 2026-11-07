@@ -20,6 +20,9 @@ toc_label: "Contents"
 toc_sticky: true
 reading_time: true
 lang: en
+header:
+  image: /assets/images/korean-ocr-open-models-2m-to-27b-hero.webp
+  teaser: /assets/images/korean-ocr-open-models-2m-to-27b-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/research/korean-ocr-open-models-2m-to-27b/"
 ---
 
@@ -108,6 +111,9 @@ First, the input unit differs. Line CER and word CER share a name but measure di
 Second, the size and independence of the evaluation sets differ. G2M's real-document set has only 70 lines, so a single error moves the number a lot. The development sets of KO-v1 and Large-27B-R2B come from the same sources as the training data. They say nothing about new handwriting styles or new document types.
 
 Third, the development sets of the two large models are built in a similar way. We have not verified that their evaluation images, preprocessing, decoding, and ground-truth handling are the same. So we do not say "the 0.9B-class model is on par with 27B." The only comparable number for each model is its change from its own base model on the same set.
+
+![Three separate panels: word CER of KO-v1 and Large-27B-R2B against their own base models, and strict critical-token match of V1-Dense and G2M on the same symbol test set](/assets/images/korean-ocr-open-models-2m-to-27b-results-en.webp)
+*Each panel has its own evaluation set and metric. Do not read the three panels side by side as a model ranking.*
 
 Speed and memory were also measured under different conditions, so the table below is not a ranking either.
 
