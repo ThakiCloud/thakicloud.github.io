@@ -4,7 +4,7 @@ seo_title: "PrismML Ternary Bonsai 2 27B: Qwen3.8-27B at 1.72bpw in 5.9GB - dens
 seo_description: "PrismML's Ternary Bonsai 2 27B compresses Qwen3.8-27B to 1.72 bits per weight (5.95GB GGUF, 7.67GB MLX) and claims 98.2% benchmark retention across 14 thinking modes. We re-verify the bit-accounting with our own code and add our July 1.7B independent verification, plus a capacity-planning frame for platforms that serve the same base model."
 excerpt: "A 27B-class flagship open model at 1.72 bits per weight, 5.9GB on disk, 98.2% claimed retention. We re-check the format's bit-accounting with our own code, recall our July verification of the 1.7B release, and lay out the bit-width decision frame for serving."
 date: 2026-11-08
-published: true
+published: false
 tags:
   - quantization
   - ternary

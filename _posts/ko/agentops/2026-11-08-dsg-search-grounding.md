@@ -4,7 +4,7 @@ seo_title: "DoorDash Decoupled Search Grounding: LLM 검색 비용 98% 절감과
 seo_description: "DoorDash가 LLM 내장 검색을 분리해 여러 에이전트가 하나의 검색 게이트웨이를 공유하면서 검색 비용을 98% 줄인 구조를 정리합니다. 시맨틱 캐시로 냉각기 150쿼리 실험에서 27.3% 적중률로 98.5% 절감을 재현한 수치와 한계까지 다키클라우드 관점에서 분석합니다."
 excerpt: "검색 비용을 98% 줄인 것은 더 싼 검색 API가 아니라, 검색을 모델에서 빼내 여러 에이전트가 하나의 게이트웨이를 공유하게 만든 구조적 결정이었습니다. 시맨틱 캐시 미니 실험의 실측 수치로 그 구조를 재검증합니다."
 date: 2026-11-08
-published: true
+published: false
 tags:
   - search-grounding
   - agent-cost
