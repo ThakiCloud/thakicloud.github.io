@@ -122,6 +122,8 @@ The plumbing fixture detector uses the same ONNX FP32 file on GPU and CPU and ru
 
 Accuracy was high at the box level, but only 56.6% of the new drawings had every count right. So this model goes only as far as a quantity draft that a person checks item by item. The next step is to break down the causes of sink and toilet undercounting on the development split, then evaluate again on independent customer drawings.
 
+The trained detection model is published on Hugging Face at [ThakiCloud/BlueprintParse-R50](https://huggingface.co/ThakiCloud/BlueprintParse-R50). The training data and anything derived from it are not included.
+
 ---
 
 *Data source: AI-Hub, architectural drawing dataset (OBJ) (71465). The data is not redistributed and was used only for the applicant's own internal training and evaluation. This post contains aggregate figures only, with no drawings, crops or label values. The figures are charts drawn from ledger numbers and concept images.*

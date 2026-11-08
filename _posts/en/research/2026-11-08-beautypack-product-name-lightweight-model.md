@@ -93,6 +93,8 @@ Picking the product name could not be solved by text size alone. A small tree mo
 
 A large part of that number may rest on remembering strings from the training data. The evaluation connected to real OCR output is still being measured, and automatic product name extraction stays off until it reports. If you are evaluating the same capability, we suggest judging by scores on real OCR output, not by scores under the correct-text condition.
 
+We did not publish the product name model because it embeds lexical statistics derived from the labels. Only the OCR model is published, on Hugging Face at [ThakiCloud/BeautyPackOCR-KO](https://huggingface.co/ThakiCloud/BeautyPackOCR-KO).
+
 ---
 
 *Data source: AI-Hub, cosmetics and pharmaceutical package OCR dataset (633). The data is not redistributed and was used only for the applicant's own internal training and evaluation. This post contains aggregate figures only, with no photos, crops or label values. The figures are charts drawn from ledger numbers and concept images.*

@@ -122,6 +122,8 @@ The small OCR that reads text and dates on cosmetics package photos reached an E
 
 And the next test has to use photos the model has never seen. If you are evaluating the same capability, we suggest testing first on photos taken under your own capture conditions. The numbers in this post work well as a baseline when you design that evaluation.
 
+The trained detector and recognizer weights and the inference code are published on Hugging Face at [ThakiCloud/BeautyPackOCR-KO](https://huggingface.co/ThakiCloud/BeautyPackOCR-KO). The training data and anything derived from it are not included.
+
 ---
 
 *Data source: AI-Hub, cosmetics and pharmaceutical package OCR dataset (633). The data is not redistributed and was used only for the applicant's own internal training and evaluation. This post contains aggregate figures only, with no photos, crops or label values. The figures are charts drawn from ledger numbers and concept images.*
