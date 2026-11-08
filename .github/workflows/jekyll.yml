@@ -207,6 +207,10 @@ jobs:
           import json, sys, time, urllib.request
           from pathlib import Path
           ledger = set(json.loads(Path("_data/published_urls.json").read_text()))
+          # 원장은 '한 번이라도 배포된 URL' 누적이라 retired 로 명시 회수된 URL 도 남는다
+          # (nightly 가 옛 원장 사본으로 다시 써도 같다). 회수된 URL 은 약속에서 뺀다.
+          _ret = Path("_data/retired_urls.json")
+          ledger -= set(json.loads(_ret.read_text()) if _ret.exists() else {})
           linked = set()
           for lang in ("en", "ko"):
               url = f"https://thakicloud.com/tech-blog/{lang}/"
