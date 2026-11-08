@@ -110,6 +110,12 @@ If you want to explore diagnostics on your own equipment's current data, [contac
 
 {% include industrial-ai-hub-link.html lang="en" %}
 
+## Sources
+
+- [W. T. Thomson, M. Fenger, "Current signature analysis to detect induction motor faults", IEEE Industry Applications Magazine, 2001 (DOI)](https://doi.org/10.1109/2943.930988)
+- [MCC5-THU: Multi-mode Fault Diagnosis Datasets of Three-phase Asynchronous Motor Under Variable Working Conditions (Mendeley Data, CC BY 4.0)](https://data.mendeley.com/datasets/6s3dggj9mw/1)
+- [AI-Hub dataset: 기계시설물 고장 예지 센서 / machine facility fault prediction sensor (#238)](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=238)
+
 ---
 
 *The spectra in the figure come from a synthetic signal generated with numpy. MCC5 figures come from our audit and evaluation of MCC5-THU (Mendeley Data, CC BY 4.0). The machine identification figure is an aggregate from an unlabeled representation evaluation on AI-Hub "Machine Facility Failure Prediction Sensor" (#238); no source data is included. Fault frequency relations: W. T. Thomson and M. Fenger, "Current signature analysis to detect induction motor faults", IEEE Industry Applications Magazine, 2001.*

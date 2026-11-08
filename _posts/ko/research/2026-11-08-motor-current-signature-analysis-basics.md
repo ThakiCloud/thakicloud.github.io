@@ -109,6 +109,12 @@ flowchart TB
 
 {% include industrial-ai-hub-link.html lang="ko" %}
 
+## 출처
+
+- [W. T. Thomson, M. Fenger, "Current signature analysis to detect induction motor faults", IEEE Industry Applications Magazine, 2001 (DOI)](https://doi.org/10.1109/2943.930988)
+- [MCC5-THU: Multi-mode Fault Diagnosis Datasets of Three-phase Asynchronous Motor Under Variable Working Conditions (Mendeley Data, CC BY 4.0)](https://data.mendeley.com/datasets/6s3dggj9mw/1)
+- [AI 허브, 기계시설물 고장 예지 센서 데이터(#238)](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=238)
+
 ---
 
 *그림의 스펙트럼은 numpy로 만든 합성 신호입니다. MCC5 수치는 MCC5-THU(Mendeley Data, CC BY 4.0) 감사·평가 결과, 장비 구분 수치는 AI 허브(AI-Hub) 「기계시설물 고장 예지 센서」(#238)의 라벨 없는 표현 평가에서 나온 집계값이며 원천 데이터는 포함하지 않았습니다. 고장별 주파수 관계: W. T. Thomson, M. Fenger, "Current signature analysis to detect induction motor faults", IEEE Industry Applications Magazine, 2001.*

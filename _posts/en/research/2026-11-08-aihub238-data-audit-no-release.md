@@ -123,6 +123,12 @@ If you are evaluating fault diagnosis AI on your own equipment data, [contact Th
 
 {% include industrial-ai-hub-link.html lang="en" %}
 
+## Sources
+
+- [AI-Hub dataset: 기계시설물 고장 예지 센서 / machine facility fault prediction sensor (#238)](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=238)
+- [paris-noah/MantisV2 (Hugging Face, Apache-2.0)](https://huggingface.co/paris-noah/MantisV2)
+- [Mantis: Lightweight Foundation Model for Time Series Classification (GitHub)](https://github.com/vfeofanov/mantis)
+
 ---
 
 *Data source: AI-Hub, machine facility fault prediction sensor dataset (#238). Raw and processed data are not redistributed and were used only for the applicant's internal research. This post contains aggregate figures only, with no waveforms, files or label rows.*

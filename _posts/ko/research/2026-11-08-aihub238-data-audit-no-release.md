@@ -123,6 +123,12 @@ AI 허브 #238 트랙도 영구 폐기가 아닙니다. 같은 모터의 정상�
 
 {% include industrial-ai-hub-link.html lang="ko" %}
 
+## 출처
+
+- [AI 허브, 기계시설물 고장 예지 센서 데이터(#238)](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=238)
+- [paris-noah/MantisV2 (Hugging Face, Apache-2.0)](https://huggingface.co/paris-noah/MantisV2)
+- [Mantis: Lightweight Foundation Model for Time Series Classification (GitHub)](https://github.com/vfeofanov/mantis)
+
 ---
 
 *데이터 출처: AI 허브(AI-Hub), 기계시설물 고장 예지 센서(#238). 원본과 가공 데이터는 재배포하지 않으며 신청자 내부 연구에만 사용했습니다. 이 글에는 집계 수치만 실었고 파형, 파일, 라벨 행은 싣지 않았습니다.*
