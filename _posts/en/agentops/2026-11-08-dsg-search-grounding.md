@@ -22,6 +22,7 @@ header:
   teaser: /assets/images/dsg-search-grounding-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/dsg-search-grounding/"
 lang: en
+published: false
 ---
 
 ![Illustration of the core idea of Every Agent Searching on Its Own Multiplies the Bill: The Structure Behind DoorDash's 98% LLM Search Cost Cut](/assets/images/dsg-search-grounding-hero.webp)
@@ -132,6 +133,6 @@ If your agents call built-in search, pulling search into one shared gateway is t
 
 ## Sources
 
-- DoorDash Engineering Blog: How DoorDash Reduced LLM Search Costs by 98% Without Losing Accuracy (careersatdoordash.com; direct fetch returned 403, fact-checked via the GeekNews translation)
-- GeekNews: How DoorDash cut LLM search costs by 98% while keeping accuracy (news.hada.io/topic?id=36733)
+- [DoorDash Engineering Blog: How DoorDash Reduced LLM Search Costs by 98% Without Losing Accuracy](https://careersatdoordash.com/blog/how-doordash-reduced-llm-search-costs-by-98-without-losing-accuracy/) (direct fetch returned 403 bot-blocking; fact-checked via the GeekNews translation)
+- [GeekNews: How DoorDash cut LLM search costs by 98% while keeping accuracy](https://news.hada.io/topic?id=36733)
 - ThakiCloud sandbox experiment: outputs/blog-impl/dsg-search-grounding/run-1.log (2026-11-08)

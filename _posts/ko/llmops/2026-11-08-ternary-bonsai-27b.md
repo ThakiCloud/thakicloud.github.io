@@ -22,6 +22,7 @@ header:
   teaser: /assets/images/ternary-bonsai-27b-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/ternary-bonsai-27b/"
 lang: ko
+published: false
 ---
 
 ![Qwen3.8-27B가 5.9GB에 들어온다: 1.72비트 3진 양자화 Bonsai 2 27B를 우리가 검증한 범위까지 개념을 형상화한 이미지](/assets/images/ternary-bonsai-27b-hero.webp)
@@ -125,8 +126,8 @@ PPL은 짧은 고정 발판의 거친 신호입니다. "동작하는 것과 붕�
 
 ## 출처
 
-- Hugging Face 모델카드: prism-ml/Ternary-Bonsai-2-27B-mlx-2bit (2026-11-08 fact-check)
-- PrismML: Bonsai 2 27B 공개 (prismml.com/news/bonsai-2-27b, 2026-09-17)
-- GGUF 빌드: prism-ml/Ternary-Bonsai-27B-gguf (PTQ1_0 / PQ2_0 / Q2_0)
+- [Hugging Face 모델카드: prism-ml/Ternary-Bonsai-2-27B-mlx-2bit](https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit) (2026-11-08 fact-check, HF API 확인)
+- [PrismML: Introducing Bonsai 2 27B](https://prismml.com/news/bonsai-2-27b) (2026-09-17)
+- [GGUF 빌드: prism-ml/Ternary-Bonsai-27B-gguf](https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf) (PTQ1_0 / PQ2_0 / Q2_0)
 - ThakiCloud 독립 검증 기록: outputs/bonsai-repro/REPORT.md (2026-07-16, Qwen3-1.7B)
 - 비트 계산 selftest: outputs/blog-impl/ternary-bonsai-27b/selftest.log (2026-11-08)

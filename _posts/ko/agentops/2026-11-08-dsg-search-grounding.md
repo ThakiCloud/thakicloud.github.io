@@ -22,6 +22,7 @@ header:
   teaser: /assets/images/dsg-search-grounding-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/dsg-search-grounding/"
 lang: ko
+published: false
 ---
 
 ![에이전트마다 검색을 시키면 비용은 N배: DoorDash가 LLM 검색 비용을 98% 줄인 구조 개념을 형상화한 이미지](/assets/images/dsg-search-grounding-hero.webp)
@@ -134,6 +135,6 @@ VIRTUAL_ENV="$PWD/.venv" uv pip install sentence-transformers
 
 ## 출처
 
-- DoorDash Engineering Blog: How DoorDash Reduced LLM Search Costs by 98% Without Losing Accuracy (careersatdoordash.com, 원문 직접 fetch 403, GeekNews 번역본으로 사실확인)
-- GeekNews: DoorDash가 정확도를 유지하면서 LLM 검색 비용을 98% 줄인 방법 (news.hada.io/topic?id=36733)
+- [DoorDash Engineering Blog: How DoorDash Reduced LLM Search Costs by 98% Without Losing Accuracy](https://careersatdoordash.com/blog/how-doordash-reduced-llm-search-costs-by-98-without-losing-accuracy/) (원문 직접 fetch 403 봇 차단, GeekNews 번역본으로 사실확인)
+- [GeekNews: DoorDash가 정확도를 유지하면서 LLM 검색 비용을 98% 줄인 방법](https://news.hada.io/topic?id=36733)
 - ThakiCloud 샌드박스 실험: outputs/blog-impl/dsg-search-grounding/run-1.log (2026-11-08)

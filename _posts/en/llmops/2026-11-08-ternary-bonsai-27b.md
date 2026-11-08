@@ -22,6 +22,7 @@ header:
   teaser: /assets/images/ternary-bonsai-27b-hero.webp
 canonical_url: "https://thakicloud.com/tech-blog/en/llmops/ternary-bonsai-27b/"
 lang: en
+published: false
 ---
 
 ![Illustration of the core idea of Qwen3.8-27B Now Fits in 5.9GB: the 1.72-bit Ternary Bonsai 2 27B, Verified as Far as We Could](/assets/images/ternary-bonsai-27b-hero.webp)
@@ -125,8 +126,8 @@ If your condition is "node memory is 6GB-class and I need 27B-class intelligence
 
 ## Sources
 
-- Hugging Face model card: prism-ml/Ternary-Bonsai-2-27B-mlx-2bit (fact-checked 2026-11-08)
-- PrismML: Bonsai 2 27B release (prismml.com/news/bonsai-2-27b, 2026-09-17)
-- GGUF builds: prism-ml/Ternary-Bonsai-27B-gguf (PTQ1_0 / PQ2_0 / Q2_0)
+- [Hugging Face model card: prism-ml/Ternary-Bonsai-2-27B-mlx-2bit](https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit) (fact-checked 2026-11-08 via HF API)
+- [PrismML: Introducing Bonsai 2 27B](https://prismml.com/news/bonsai-2-27b) (2026-09-17)
+- [GGUF builds: prism-ml/Ternary-Bonsai-27B-gguf](https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf) (PTQ1_0 / PQ2_0 / Q2_0)
 - ThakiCloud independent verification record: outputs/bonsai-repro/REPORT.md (2026-07-16, Qwen3-1.7B)
 - Bit-accounting selftest: outputs/blog-impl/ternary-bonsai-27b/selftest.log (2026-11-08)
