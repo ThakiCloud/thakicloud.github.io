@@ -4,5 +4,9 @@
   "/tech-blog/ko/owm/qwen-image-fewstep/": "/tech-blog/ko/research/qwen-image-fewstep/",
   "/tech-blog/en/owm/qwen-image-fewstep/": "/tech-blog/en/research/qwen-image-fewstep/",
   "/tech-blog/ko/research/enterprise-decisions-learned-or-reasoned/": "/tech-blog/ko/owm/enterprise-boundary-decision-model/",
-  "/tech-blog/en/research/enterprise-decisions-learned-or-reasoned/": "/tech-blog/en/owm/enterprise-boundary-decision-model/"
+  "/tech-blog/en/research/enterprise-decisions-learned-or-reasoned/": "/tech-blog/en/owm/enterprise-boundary-decision-model/",
+  "/tech-blog/ko/agentops/dsg-search-grounding/": "/tech-blog/ko/agentops/",
+  "/tech-blog/ko/llmops/ternary-bonsai-27b/": "/tech-blog/ko/llmops/",
+  "/tech-blog/en/agentops/dsg-search-grounding/": "/tech-blog/en/agentops/",
+  "/tech-blog/en/llmops/ternary-bonsai-27b/": "/tech-blog/en/llmops/"
 }
