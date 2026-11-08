@@ -1,8 +1,8 @@
 ---
-title: "Picking the Product Name on Cosmetics Packaging: Full-Photo E2E F1 of 0.605, Good for Review Candidates, Not Automatic Extraction"
+title: "Picking the Product Name on Cosmetics Packaging: Full-Photo E2E F1 of 0.605, Released as a Review-Candidate Model"
 seo_title: "A Small Model for Product Name Identification on Cosmetics Packaging: Why the Rule Failed and the Full-Photo E2E Result | ThakiCloud"
-seo_description: "We built a small tree model that picks which text line read from a package photo is the product name. A single full-photo evaluation through detection and OCR gave an F1 of 0.605 and passed the preregistered criteria, but it is at the level of candidate suggestions that help human review."
-excerpt: "On full photos, a rule that picks the largest text line reached an F1 of only 0.161, while the deployable tree model reached 0.605. Most of the loss came from choosing the name line, not from OCR, and the product's default output stays NOT_EXTRACTED."
+seo_description: "We built a small tree model that picks which text line read from a package photo is the product name. We released it on Hugging Face. A single full-photo evaluation through detection and OCR gave an F1 of 0.605 and passed the preregistered criteria, but it is at the level of candidate suggestions that help human review."
+excerpt: "On full photos, a rule that picks the largest text line reached an F1 of only 0.161, while the deployable tree model reached 0.605. We released the two lexicon-free models as ThakiCloud/BeautyProductName-KO, and the product's default output stays NOT_EXTRACTED."
 date: 2026-11-08
 published: true
 tags:
@@ -28,7 +28,7 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/beautypack-product-
 
 If you want to automatically pick which of the text lines read from a package photo is the product name, here is the conclusion first. In an evaluation that ran full photos all the way through detection, OCR and product name selection, the small deployable tree model reached an F1 of 0.605 (95% confidence interval 0.599 to 0.612). Under the same conditions, a rule that picks the line with the largest text reached 0.161. The evaluation set of 21,044 photos was opened once, and all three preregistered criteria were met.
 
-Even so, this model is not good enough to extract product names automatically. The share of photos where every product name was found exactly is 0.196, and latency on a 4 vCPU environment exceeded the deployment condition. So the product's default output stays `NOT_EXTRACTED`. We use this model only to suggest candidates for a person to confirm.
+Even so, this model is not good enough to extract product names automatically. The share of photos where every product name was found exactly is 0.196. So the product's default output stays `NOT_EXTRACTED`, and we use this model only to suggest candidates for a person to confirm. The two models that need no label statistics are released on Hugging Face as [ThakiCloud/BeautyProductName-KO](https://huggingface.co/ThakiCloud/BeautyProductName-KO).
 
 ## In plain terms
 
@@ -60,8 +60,8 @@ First, the condition where ground-truth boxes and ground-truth text are given as
 |---|---|---|---|
 | Fixed height rule (ratio 0.7) | 0.055 | 0.566 | 0.100 (0.090 to 0.112) |
 | Tuned height rule (ratio 0.95) | 0.282 | 0.232 | 0.255 (0.227 to 0.284) |
-| Model without lexical features | 0.730 | 0.659 | 0.692 (0.664 to 0.723) |
-| Model with all features | 0.875 | 0.816 | 0.844 (0.825 to 0.864) |
+| Model without lexical features (released, `no_lex`) | 0.730 | 0.659 | 0.692 (0.664 to 0.723) |
+| Model with all features (not released) | 0.875 | 0.816 | 0.844 (0.825 to 0.864) |
 
 The paired F1 difference against the tuned rule was +0.590 (0.563 to 0.618). Split into 996 cosmetics photos and 509 pharmaceutical photos, F1 was similar at 0.844 and 0.846. Removing the lexical feature dropped F1 to 0.692, and the paired difference was +0.152 (0.131 to 0.174).
 
@@ -76,7 +76,7 @@ The deployable model drops the lexical feature, is retrained on OCR output, and 
 | Condition (VS1, single run) | Precision | Recall | F1 (95% confidence interval) |
 |---|---|---|---|
 | Tuned height rule (ratio 0.9) | 0.127 | 0.218 | 0.161 (0.156 to 0.166) |
-| Deployable model | 0.618 | 0.593 | 0.605 (0.599 to 0.612) |
+| Deployable model (released, `ocr_conf`) | 0.618 | 0.593 | 0.605 (0.599 to 0.612) |
 | Deployable model, 2,403 photos after near-duplicate removal | 0.539 | 0.504 | 0.521 (0.496 to 0.545) |
 | Deployable model, 1,433 photos of products absent from training | 0.644 | 0.528 | 0.580 (0.557 to 0.602) |
 | Deployable model, 169 photos of products absent from training and not near-duplicates | 0.539 | 0.373 | 0.441 (0.357 to 0.520) |
@@ -88,9 +88,9 @@ The 0.844 in the previous section comes from a different condition with correct 
 
 We also broke down where the loss comes from. Even when the deployable model is given ground-truth boxes and ground-truth text, its F1 is 0.623. So the 0.377 lost against perfect input belongs to the name line selection step. OCR character errors added a loss of 0.013, and detection added 0.005. The place to improve is not detection or recognition but the model that picks the product name line.
 
-If only candidates scoring 0.90 or higher are grouped as "confirmed", precision is 0.916. This group, however, covers only 22% of the product names that were found. The remaining candidates have a precision of 0.566 and go to human review.
+If only candidates scoring 0.90 or higher are grouped into a high-score bucket, precision is 0.916 (6,725 candidates). This bucket, however, is 22.2% of the correct candidates and only about 13% of all product name lines. The remaining candidates have a precision of 0.566 and go to human review. The bucket sets review order; it is not an auto-accept rule.
 
-Latency was measured on 100 photos in an environment limited to 4 vCPU and 8 GiB. With product name candidates on, the median was 1,618 ms and p95 was 3,653 ms, with peak memory of 3.76 GiB. The memory condition (6 GiB or less) was met, but the p95 condition of 3,000 ms or less was not. The hypothesis that excessive thread creation is the cause has not been measured yet.
+Latency was measured on 100 photos in an environment limited to 4 vCPU and 8 GiB. In the first measurement, with product name candidates on, the median was 1,618 ms and p95 was 3,653 ms, which missed the p95 condition of 3,000 ms. A follow-up measurement found that the cause was not the number of threads but onnxruntime worker threads spin-waiting and using up the CPU quota. With spinning turned off, the median was 992 ms and p95 was 2,483 ms, which passes the condition, and the output on all 105 photos was byte-identical. The margin is about 17% from a single 100-photo run, so it needs to be measured again on customer hardware. Peak memory was 3.76 GiB, within the 6 GiB condition.
 
 ## What this number does not prove
 
@@ -104,7 +104,23 @@ Every photo in this set is an indoor single-product photo from the same dataset.
 
 In the document and photo handling flows of Paxis, the product name belongs as a field candidate that a person confirms. The default output stays `NOT_EXTRACTED`. Only when the setting is turned on does the tool return candidates marked "unverified" and "review required". There is no automatic approval path.
 
-Because this model trains on CPU without a GPU and never looks at pixels, it is easy to place in an on-premise installation such as Aegis. Training a small classifier on domain data instead of a large vision language model is the same workflow as Maxis small domain models. Since it missed the latency condition on 4 vCPU, the candidate feature is also on hold until it is measured again with fixed thread settings or run on 6 to 8 vCPU.
+Because this model trains on CPU without a GPU and never looks at pixels, it is easy to place in an on-premise installation such as Aegis. Training a small classifier on domain data instead of a large vision language model is the same workflow as Maxis small domain models. The 4 vCPU latency condition now passes with spin-waiting off, but turning the candidate feature on still waits for validation on real customer photos.
+
+## Hugging Face release: BeautyProductName-KO
+
+We kept product name selection out of the OCR model and made it a separate model. Most of the loss came from choosing lines, not from reading characters, and line choice can be retrained cheaply from boxes and text without pixels. The pipeline has three stages. [ThakiCloud/BeautyPackOCR-KO](https://huggingface.co/ThakiCloud/BeautyPackOCR-KO) finds and reads text lines, [ThakiCloud/BeautyProductName-KO](https://huggingface.co/ThakiCloud/BeautyProductName-KO) scores each line, and a person confirms the product name.
+
+The repository holds two variants. The default `ocr_conf` is the full-photo E2E 0.605 model trained on OCR output, and `no_lex` is the 0.692 model for the correct-text condition. Both are 300 trees exported to JSON that holds only numbers, and they run with numpy alone. Re-scoring the same splits with the released files gave exactly the ledger values (0.60529 and 0.69238). The checkpoint sha256 values are 7789f00db297831e… for `ocr_conf` and 4325603cad8af34e… for `no_lex`, and the release commit is [`d34abcff`](https://huggingface.co/ThakiCloud/BeautyProductName-KO/commit/d34abcfffa141b098aa415a4418ab33e7e7896ec).
+
+```bash
+pip install numpy huggingface_hub
+hf download ThakiCloud/BeautyProductName-KO --local-dir BeautyProductName-KO
+cd BeautyProductName-KO
+python productname.py --selftest
+python productname.py examples/synthetic_ocr_output.json   # fictional example; BeautyPackOCR-KO output JSON works as is
+```
+
+The output is a ranked candidate list, and every result carries `review_required: true`. Candidates are line fragments at label granularity, not a reconstructed full product name. The license is Apache-2.0. The repository holds only weights, code and a hand-written fictional example, with no photos, crops, labels, product name lists or string frequency tables. The model card also states that it has not been tested on customer photos.
 
 ## Limitations and counterarguments
 
@@ -118,7 +134,7 @@ Picking the product name could not be solved by text size alone. A small tree mo
 
 Still, four photos in five need a person to correct them, and on products seen for the first time performance falls to the 0.44 to 0.58 range. Most of the loss comes from choosing the name line, not from OCR. At this level the model suggests candidates that help human review rather than extracting names automatically, and using it requires validation on real customer photos first.
 
-We did not publish the product name model. The model with lexical features embeds statistics derived from the labels, so it will not be deployed or published. Only the OCR model is published, on Hugging Face at [ThakiCloud/BeautyPackOCR-KO](https://huggingface.co/ThakiCloud/BeautyPackOCR-KO).
+What we released are the two models without lexical features. The 0.844 model with lexical features cannot run without a frequency table of label strings, so it will not be published.
 
 ---
 
