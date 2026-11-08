@@ -1,9 +1,10 @@
 ---
 title: "A Motor Current Encoder Trained Without Labels: It Beat the Baselines on Reconstruction, but Still Recognizes the Device"
 seo_title: "Self-Supervised (SSL) Motor Current Encoder Validation - Reconstruction Wins and the Device Shortcut | ThakiCloud"
-seo_description: "We trained a label-free self-supervised encoder on 1.1 million industrial current waveforms from AI-Hub. On devices it never saw, it reconstructed masked waveform segments better than a harmonic baseline, but all four representations we compared, including physics features, a random encoder, and MantisV2, identified the device almost perfectly, so no advantage as a fault-diagnosis representation was shown."
-excerpt: "We trained an industrial current encoder without labels. It beat the baselines at reconstructing masked waveforms, but every representation we compared recognized the device almost perfectly, so we cannot call it a better representation for fault diagnosis."
+seo_description: "We trained a label-free self-supervised encoder on 1.1 million industrial current waveforms from AI-Hub. On devices it never saw, it reconstructed masked waveform segments better than a harmonic baseline, but all four representations we compared, including physics features, a random encoder, and MantisV2, identified the device almost perfectly, so no advantage as a fault-diagnosis representation was shown. The final within-device and cross-device evaluation found no SSL advantage either."
+excerpt: "We trained an industrial current encoder without labels. It beat the baselines at reconstructing masked waveforms, but every representation we compared recognized the device almost perfectly, so we cannot call it a better representation for fault diagnosis. The final evaluation reached the same conclusion."
 date: 2026-11-08
+last_modified_at: 2026-11-08
 published: true
 tags:
   - industrial-ai
@@ -25,6 +26,8 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/current-ssl-device-
 ---
 
 ![Three current waveforms flowing through a dark space while light rejoins their broken segments, with rows of motor drawings marked by fingerprint patterns above and below](/assets/images/current-ssl-device-shortcut-hero.webp)
+
+> **Updated 2026-11-08 with the final experiment results.** The analysis that separates normal from fault within a device (P3-E) finished under the criteria fixed in advance, and its results are added in the "Final Evaluation" section below. The P0 to P2 results are left as first published.
 
 We trained a self-supervised (SSL) encoder on 1.1 million current waveforms from 42 industrial motors, without using any fault labels. When we masked parts of waveforms from devices left out of training and asked it to fill them in, its error was roughly half that of a baseline fitted with the fundamental and its harmonics. That part worked.
 
@@ -53,7 +56,7 @@ flowchart TB
     A["P0 small check<br/>do save, reload, reconstruct work"] --> B["P1 5-fold training<br/>fixed 30,000 steps per fold"]
     B --> C["P2 unseen-device evaluation<br/>reconstruction and representation, no labels"]
     C --> D{"Does the representation carry<br/>fault signal beyond the device"}
-    D -->|"undecided"| E["P3 within-device analysis<br/>only devices with both normal and fault data"]
+    D -->|"undecided"| E["P3-E within-device and cross-device analysis<br/>no SSL advantage, research closed"]
     D -.->|"no release"| F["weights stay internal research artifacts"]
 ```
 
@@ -117,21 +120,50 @@ Splitting 42 devices into five folds leaves only 8 or 9 evaluation devices per f
 
 ## What these results do not claim
 
-We do not claim that this encoder is a better representation for fault diagnosis, because we ran no labeled evaluation. We do not claim it beats MantisV2: the intervals on device-identification differences include zero, and physics transfer is mixed across metrics. We do not claim it generalizes to unseen time periods or other plants, since the scope is unseen devices from the same period. And we do not claim it works regardless of operating conditions. Without speed, torque, or voltage records, those conditions were not controlled.
+We do not claim that this encoder is a better representation for fault diagnosis. P2 used no labels, and the labeled P3-E evaluation showed no advantage either. We do not claim it beats MantisV2: the intervals on device-identification differences include zero, physics transfer is mixed across metrics, and the P3-E cross-device medians were nearly identical, 0.610 for SSL and 0.612 for MantisV2. We do not claim it generalizes to unseen time periods or other plants, since the scope is unseen devices from the same period. And we do not claim it works regardless of operating conditions. Without speed, torque, or voltage records, those conditions were not controlled.
 
 The trained weights are not released. They are kept as internal research artifacts only, and the release decision is `RELEASE_NO_GO`.
 
-## Next step: separating normal from fault within a device
+## The planned next step: separating normal from fault within a device
 
 One question remains. Does a fault signal survive once device recognition is taken away? To see that, we have to look only at devices that have both normal and fault data. Within the same device, the device ID cannot give away the answer. We decided in advance not to count high accuracy on devices with only normal or only fault data as performance.
 
-That within-device analysis is running separately. Whether the result is good or bad, the verdict will follow the criteria fixed above.
+We ran this analysis (P3-E) once, on 2026-11-08. The verdict followed the criteria fixed before seeing the results.
+
+## Final Evaluation: Did SSL Training on 1.1 Million Current Waveforms Improve Generalization to Unseen Motors?
+
+P3-E looked at two things. The first was whether a representation separates normal segments from fault segments within the same device. Cross-validation was grouped by recording date, so windows from the same day never appeared in both training and evaluation. We selected 25 device and fault combinations that had both normal and fault data, and dropped 3 as confounded because recording time or sensor information alone reached an AUROC of 0.90 or higher. The second was whether, after training on the other devices with the same fault, the same separation holds on one device left out of training. We evaluated 25 devices, holding each out in turn.
+
+| Item | Value |
+|---|---|
+| Real training waveforms | 1,111,199 |
+| Internal SSL checkpoints | 5, private |
+| Total SSL GPU use | 6.665 GPU-h |
+| Median within-device AUROC | PHYS 0.998 / MantisV2 0.999 / SSL 0.991 |
+| Median unseen-device AUROC | PHYS 0.519 / MantisV2 0.612 / SSL 0.610 / Random 0.638 |
+| Within-device pairs with a significant SSL advantage | 0 of 22 |
+| Devices meeting the preregistered cross-device advantage criterion | 8 of 25, short of the required 17 |
+| Final verdict | P3E_FAULT_SIGNAL_NO_SSL_ADVANTAGE |
+
+Within a device, all three representations reached an AUROC of about 0.99. Even the untrained random encoder had a median of 0.960. Inside a single device, almost anything separates normal from fault segments, so these numbers cannot rank the representations. Even so, SSL was significantly ahead of both the physics features and MantisV2 in none of the 22 pairs. It was significantly behind the physics features in 16 pairs and behind MantisV2 in 18.
+
+On motors left out of training, the numbers fell to near chance. Separation that reached 0.99 within a device stayed at medians of 0.52 to 0.64. Some devices scored below an AUROC of 0.5, meaning the ranking was inverted: 12 for physics features, 7 for SSL, 5 for MantisV2, and 4 for the random encoder. The criterion fixed in advance required SSL to beat both the physics features and MantisV2 on at least 17 of 25 devices, with a positive mean difference. It did so on 8, and the mean difference was −0.098.
+
+The random encoder's cross-device median of 0.638 was the highest, but that does not mean the random encoder is a better representation. All four representations swung widely from device to device around 0.5, and the order among them is only an observed value. The advantage test was defined in advance for SSL only, and we never tested whether the random encoder is better.
+
+We did confirm that a signal separating fault segments exists within a device, because the representations beat the time and sensor confound baselines. This design cannot tell whether that signal is fault physics or a difference in device state or operating conditions during that period, because there are no speed, torque, or voltage records.
+
+The verdict, by the rule fixed in advance, is `P3E_FAULT_SIGNAL_NO_SSL_ADVANTAGE`. SSL used 6.665 GPU-hours in total: 4.045 for P0 to P2 and 2.62 for P3-E. We closed this research with no further training, fine-tuning, or re-evaluation on this data. The five checkpoints are kept internally and remain private. If new industrial data with operating conditions and maintenance history becomes available, we will start again as a separate project.
 
 We hit the same problem on a different dataset in [We Released a Motor Current Signature Analysis (MCSA) Model](/tech-blog/en/research/thaki-mcsa-mantisv2-mcc5/). In that experiment, a baseline that used only the recording time outscored the model.
 
 ## Summary
 
-The industrial current encoder trained without labels learned waveform structure. On devices it never saw, it restored masked segments more accurately than a harmonic baseline. But in this data any representation separated devices almost perfectly, and on top of that we could not claim an advantage as a fault-diagnosis representation. Between "loss went down and reconstruction improved" and "this is a diagnostic representation you can use in the field," there is a separate step that still has to be checked.
+The industrial current encoder trained without labels learned waveform structure. On devices it never saw, it restored masked segments more accurately than a harmonic baseline. But in this data any representation separated devices almost perfectly, and the final evaluation, which split within-device from cross-device performance, showed no SSL advantage either.
+
+Self-supervised learning improved the ability to reconstruct masked current waveforms, but we found no evidence that it represents real fault information better than existing physics features or MantisV2. High classification performance within a device did not carry over to new motors.
+
+Between "loss went down and reconstruction improved" and "this is a diagnostic representation you can use in the field," there was a separate step to check, and this data did not get past it. Our only public model remains the MantisV2 Research Preview trained on MCC5.
 
 If you want to check whether your own equipment's current or sensor data hides a device shortcut like this, [contact ThakiCloud](/contact?interest=industrial-ai&origin=current-ssl). We review the data structure before choosing a model.
 
@@ -139,4 +171,4 @@ If you want to check whether your own equipment's current or sensor data hides a
 
 ---
 
-*Data source: AI-Hub, Machine Facility Failure Prediction Sensor dataset (#238). Raw and processed data were used only for the applicant's internal research and are not redistributed. This post contains aggregate figures only. Comparison model: [paris-noah/MantisV2](https://huggingface.co/paris-noah/MantisV2) (Apache-2.0). The encoder weights trained here are not released.*
+*Data source: AI-Hub, Machine Facility Failure Prediction Sensor dataset (#238). Raw and processed data were used only for the applicant's internal research and are not redistributed. This post contains aggregate figures only. Comparison model: [paris-noah/MantisV2](https://huggingface.co/paris-noah/MantisV2) (Apache-2.0). The five encoder checkpoints trained here are not released.*
