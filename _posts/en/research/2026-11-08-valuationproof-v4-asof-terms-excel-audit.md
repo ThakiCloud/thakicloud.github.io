@@ -114,9 +114,29 @@ V4.1 fixes three things. It uses the stated effective date as the primary key. I
 
 The cost is clear. In 138 of 567 quarter-end pairs (24.3%) at least one field goes to a person. Re-measurement also exposed a bug in the V4.1 draft. A correction that restated the original conversion price was filed later, so the draft rolled back the adjusted value and produced 719 silent wrong day-fields. After making adjustment filings take precedence over such corrections, that count went to 0.
 
-## Next steps
+## V4.2 update: collecting adjustment filings itself (2026-11-09)
 
-We are developing V4.2. It will collect conversion price adjustment filings automatically. It will add a bitemporal model that records separately when a term took effect and when it became known through a filing. And when it cannot confirm that all relevant filings were collected, it will flag results as "event coverage unverified." There are no results yet. The public repository is pinned to V4.1 (commit 800a601).
+V4.1 left one hole. The caller had to supply the adjustment filings. V4.2 collects conversion price adjustment filings on the default command-line path, paging through the OpenDART list in two-year windows. A deterministic parser reads the filing text; no LLM is involved. Each event keeps three dates: the filing date, the effective date stated in the filing, and the date the fact became knowable. That lets the tool return two answers: the value with every event known by the end of collection, and the value with only the events known by a given cutoff.
+
+We also added a completeness check. If the series is ambiguous (C4), consecutive adjustments do not chain in price (C5), or a correction cannot be linked to its original filing (C6), the conversion price is not judged automatically. It goes to a person as "event coverage unverified."
+
+We registered the measurement plan first and ran it on the same 60-company sample as V4.1. The unit is a (chain, quarter-end) pair, 567 pairs in all.
+
+| Metric | Value | Numerator/denominator |
+|---|---|---|
+| Conversion price auto-confirmed | 78.8% | 447/567 pairs |
+| Conversion price event coverage unverified | 12.2% | 69/567 pairs |
+| Conversion price effective date unconfirmed | 9.0% | 51/567 pairs |
+| At least one field sent to review | 35.3% | 200/567 pairs |
+| Unflagged wrong values | 0 | 4,536 quarter-end cells, 508,528 daily cells |
+
+*Software verification on public filing fields. Not validated against contracts or customer data.*
+
+The first three rows (78.8%, 12.2%, 9.0%) split the conversion price field without overlap, so they add up to 567 pairs. The 35.3% uses a different unit. It counts pairs where any field needs review, and it includes all 120 pairs flagged on the conversion price. The 69 unverified pairs carry 52 C6, 22 C4 and 17 C5 reasons. A pair can have more than one reason, which is why the total of 91 exceeds 69. We did not count how many distinct pairs each reason covers.
+
+We also reran the 84 pairs where V4.0 had returned a stale conversion price (the 61.8% above). V4.2 auto-confirmed 79 of them, all matching the reference, and sent the other 5 to review. It returned a stale value without a flag in none of them. Measured against a reference built from every adjustment filing with no cap, V4.1 also produced unflagged wrong values: 51 quarter-end cells, and 109 on the default path that supplies no adjustment filings. The V4.1 numbers were not wrong. Its reference was built under a cap of eight filing texts per company.
+
+The cost is review volume. On the same calculation, the share of quarter-end pairs sent to a person rose from 23.6% in V4.1 to 35.3%. Zero unflagged errors is not 100% accuracy either. The reference was built from the same filings V4.2 collected, so it is not an independent check, and the number holds only within this sample and the two readings, prospective and retroactive. Three of the eight adjustment corrections still have before-and-after tables the parser cannot read. C6 comes from those tables, so fixing the parser could lower the review share.
 
 ## What we have not verified
 
@@ -124,7 +144,7 @@ We have not checked a single valuation workbook prepared by a practicing account
 
 The effective-date measurement validates public DART fields, not contracts. We could not confirm whether stated dates match the effective dates of signed contracts or whether corrections apply retroactively. V4.1 therefore keeps "contract effective date not confirmed" on every result.
 
-Automatic collection of conversion price adjustment filings is not implemented yet. V4.1 applies them when they are in the chain, but the default command-line path does not gather them. Unless the caller supplies them, the stale conversion price problem remains.
+V4.2 now collects conversion price adjustment filings, but that completeness only extends to what DART discloses. The series check (C4) compares chains within the sample, so it cannot see a bond issued under the same series number outside it. Adjustments that were never disclosed cannot be collected at all.
 
 For unlisted RCPS there is only an input schema and a checklist: 4 items on early redemption, 2 on preferred dividends, 4 on conversion ratio adjustment and 2 on fair value. That function always returns "customer evidence required" and never declares success on synthetic input.
 
@@ -156,7 +176,7 @@ What remains is testing on real valuation models. Only the structure and wording
 
 We are looking for accounting firms and valuation teams that would like to test this tool on real valuation models for convertible bonds or RCPS. The work can be designed so that your material stays inside your environment. If you are interested, please reach us through the contact page on the [ThakiCloud website](https://thakicloud.com).
 
-The V4.1 code is public on GitHub at [ThakiCloud/thaki-valuationproof](https://github.com/ThakiCloud/thaki-valuationproof), and a browser demo runs as the Hugging Face Space [ThakiCloud/ValuationProof-Demo](https://huggingface.co/spaces/ThakiCloud/ValuationProof-Demo). The public release contains only code and fully synthetic data, with no filing text or values derived from real filings. The demo's valuation date and results therefore differ from the numbers in this post.
+The V4.2 code (tag v4.2.0; the previous release is v4.1) is public on GitHub at [ThakiCloud/thaki-valuationproof](https://github.com/ThakiCloud/thaki-valuationproof), and a browser demo runs as the Hugging Face Space [ThakiCloud/ValuationProof-Demo](https://huggingface.co/spaces/ThakiCloud/ValuationProof-Demo). The public release contains only code and fully synthetic data, with no filing text or values derived from real filings. The demo's valuation date and results therefore differ from the numbers in this post.
 
 ---
 
