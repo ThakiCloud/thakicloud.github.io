@@ -157,6 +157,12 @@ jobs:
       - name: ⛔ Page weight (transfer > 500KB fails)
         run: python3 scripts/page_weight_check.py _site
 
+      # ⛔ 표 바로 밑에 빈 줄 없이 캡션이 붙으면 kramdown 이 표 전체를 문단으로 렌더해
+      # `| a | b | |—|—|` 원문이 그대로 보인다(2026-11-09 secproof). 소스 정규식이 아니라
+      # 빌드 산출물에서 <table> 밖 구분행 패턴을 찾는다 — 원인이 무엇이든 결과로 잡는다.
+      - name: ⛔ Broken markdown tables (rendered as text)
+        run: python3 scripts/broken_table_check.py _site
+
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v6
         with:
