@@ -113,6 +113,5 @@ A good document agent is not one that processes every document automatically. It
 
 ## References
 
-- All four public OCR models at a glance: [ThakiOCR model hub](/tech-blog/en/ocr/)
 - The workflow above is a design example of applying ThakiDocTrust verification results to Paxis. The 256-document validation is a synthetic evaluation, and it has not shipped as an automatic approval system for financial work.
 - Public models: [ThakiOCR-KOEN-V1-Dense (A)](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)

@@ -167,7 +167,7 @@ Dev 2,400문항과 봉인 표 세트는 KO-v1 후보를 고를 때 이미 썼습
 
 ## 지금 쓸 수 있는 모델
 
-이 후보는 공개하지 않았기 때문에 다운로드와 추론 코드는 없습니다. 지금 내려받아 쓸 수 있는 한국어 OCR 모델은 [ThakiOCR-KO-v1 글](/tech-blog/ko/research/thakiocr-ko-v1-ovisocr3-korean-finetune/)에서 설치와 추론 방법까지 확인할 수 있습니다. ThakiOCR 모델 전체는 [OCR 허브](https://thakicloud.com/tech-blog/ko/ocr/)에 모아 두었습니다.
+이 후보는 공개하지 않았기 때문에 다운로드와 추론 코드는 없습니다. 지금 내려받아 쓸 수 있는 한국어 OCR 모델은 [ThakiOCR-KO-v1 글](/tech-blog/ko/research/thakiocr-ko-v1-ovisocr3-korean-finetune/)에서 설치와 추론 방법까지 확인할 수 있습니다.
 
 ## 온프레미스와 기술 문의
 

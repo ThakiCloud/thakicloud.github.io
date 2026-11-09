@@ -105,7 +105,6 @@ A2가 제품이 되더라도 OCR 결과를 그대로 업무에 반영하지는 �
 
 ## 참고
 
-- 공개 OCR 모델 네 개 한눈에 보기: [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - A2 가중치는 비공개입니다. 이 글은 평가 결과 보고이며 모델 공개나 사용 안내가 아닙니다.
 - 앞선 결과: [Maxis 글](/tech-blog/ko/research/thakiocr-maxis-same-size-fewer-errors/)
 - 공개된 이전 모델: [ThakiOCR A](/tech-blog/ko/research/thakiocr-a-small-korean-english-line-ocr/), [ThakiOCR G2M](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/)

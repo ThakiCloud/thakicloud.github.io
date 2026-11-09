@@ -103,7 +103,6 @@ Even if A2 becomes a product, OCR output will not go into business processes as 
 
 ## References
 
-- All four public OCR models at a glance: [ThakiOCR model hub](/tech-blog/en/ocr/)
 - The A2 weights are private. This post is an evaluation report, not a model release or usage guide.
 - Earlier result: [Maxis post](/tech-blog/en/research/thakiocr-maxis-same-size-fewer-errors/)
 - Previously released models: [ThakiOCR A](/tech-blog/en/research/thakiocr-a-small-korean-english-line-ocr/), [ThakiOCR G2M](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/)

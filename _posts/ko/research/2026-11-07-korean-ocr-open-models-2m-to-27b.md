@@ -52,7 +52,7 @@ flowchart TB
     E --> F
 ```
 
-네 모델 모두 페이지에서 글자 위치를 찾지 않습니다. 앞단에 검출 단계가 있어야 하고 그 뒤에서 어느 모델로 보낼지를 정합니다. 이런 배치는 [Metis 계층형 문서 추론 글](/tech-blog/ko/llmops/thakiocr-metis-tiered-document-inference/)에서 따로 다룹니다. 모델별 규모, 링크, 라이선스는 [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)에 모아 두었습니다.
+네 모델 모두 페이지에서 글자 위치를 찾지 않습니다. 앞단에 검출 단계가 있어야 하고 그 뒤에서 어느 모델로 보낼지를 정합니다. 이런 배치는 [Metis 계층형 문서 추론 글](/tech-blog/ko/llmops/thakiocr-metis-tiered-document-inference/)에서 따로 다룹니다.
 
 ## 각 모델이 배운 것
 
@@ -180,7 +180,6 @@ python inference_example.py --image word.png --report   # JSON: text + load chec
 
 ## 관련 글
 
-- [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - [ThakiOCR A: 213만 파라미터 자체 한국어·영어 OCR](/tech-blog/ko/research/thakiocr-a-small-korean-english-line-ocr/)
 - [ThakiOCR G2M: 숫자와 기호를 더 정확하게 읽는 두 번째 공개 모델](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/)
 - [ThakiOCR A2: 독립 평가 43,751줄에서 확인한 개선과 남은 한계](/tech-blog/ko/research/thakiocr-a2-independent-eval-43751-lines/)

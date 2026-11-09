@@ -100,7 +100,6 @@ Model improvements alone will not eliminate symbol errors. How a business system
 
 ## References
 
-- All four public OCR models at a glance: [ThakiOCR model hub](/tech-blog/en/ocr/)
 - Model: [ThakiCloud/ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview) (research preview, A1_GEN2_NO_GO)
 - Training data: NVIDIA OCR-Synthetic-Multilingual-v1 (CC BY 4.0), AI Hub 71299 Training split (not redistributed), symbol lines synthesized with SIL OFL 1.1 fonts
 - This is not a product release. We do not claim state-of-the-art performance.

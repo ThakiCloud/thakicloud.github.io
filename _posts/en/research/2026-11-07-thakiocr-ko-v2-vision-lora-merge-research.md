@@ -165,7 +165,7 @@ Once independent document and handwriting evaluation data is secured, we will ev
 
 ## Models you can use today
 
-This candidate is not released, so there is no download or inference code. The Korean OCR model you can download today is covered, including setup and inference, in the [ThakiOCR-KO-v1 post](/tech-blog/en/research/thakiocr-ko-v1-ovisocr3-korean-finetune/). All ThakiOCR models are collected on the [OCR hub](https://thakicloud.com/tech-blog/en/ocr/).
+This candidate is not released, so there is no download or inference code. The Korean OCR model you can download today is covered, including setup and inference, in the [ThakiOCR-KO-v1 post](/tech-blog/en/research/thakiocr-ko-v1-ovisocr3-korean-finetune/).
 
 ## On-premises and technical questions
 

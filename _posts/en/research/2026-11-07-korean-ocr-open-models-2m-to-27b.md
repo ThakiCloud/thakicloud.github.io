@@ -52,7 +52,7 @@ flowchart TB
     E --> F
 ```
 
-None of the four models finds text positions on a page. A detection step must come first, and after it a decision on which model gets the input. That routing is covered separately in the [Metis tiered document inference post](/tech-blog/en/llmops/thakiocr-metis-tiered-document-inference/). Size, links, and licenses for each model are collected on the [ThakiOCR model hub](/tech-blog/en/ocr/).
+None of the four models finds text positions on a page. A detection step must come first, and after it a decision on which model gets the input. That routing is covered separately in the [Metis tiered document inference post](/tech-blog/en/llmops/thakiocr-metis-tiered-document-inference/).
 
 ## What each model learned
 
@@ -180,7 +180,6 @@ If you want to evaluate on your own documents or are considering the platform, c
 
 ## Related posts
 
-- [ThakiOCR model hub](/tech-blog/en/ocr/)
 - [ThakiOCR A: our own 2.13M-parameter Korean-English OCR](/tech-blog/en/research/thakiocr-a-small-korean-english-line-ocr/)
 - [ThakiOCR G2M: our second public model, built to read numbers and symbols more accurately](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/)
 - [ThakiOCR A2: what an independent 43,751-line evaluation confirmed](/tech-blog/en/research/thakiocr-a2-independent-eval-43751-lines/)

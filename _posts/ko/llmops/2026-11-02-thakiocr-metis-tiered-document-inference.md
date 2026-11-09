@@ -97,7 +97,6 @@ Metis의 역할은 OCR 모델을 하나 더 띄우는 데 있지 않습니다. �
 
 ## 참고
 
-- 공개 OCR 모델 네 개 한눈에 보기: [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - 공개 모델: [ThakiOCR-KOEN-V1-Dense (A)](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)
 - 이 글의 Metis 계층형 배치는 제안 아키텍처입니다. 모델별 추론과 일부 다중 모델 서비스 검증은 수행했지만 금융 문서 처리 경로의 프로덕션 승격은 승인되지 않았습니다.
 - 외부 OCR 모델을 직접 설치해 본 기록은 [PaddleOCR-VL 글](/tech-blog/ko/research/paddleocr-vl-09b-multilingual-document-parsing/)에 있습니다.

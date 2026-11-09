@@ -118,7 +118,6 @@ How to serve the trained model is covered in the [Metis tiered inference post](/
 
 ## References
 
-- All four public OCR models at a glance: [ThakiOCR model hub](/tech-blog/en/ocr/)
 - Released models: [ThakiOCR-KOEN-V1-Dense (A)](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)
 - A2 is an unreleased checkpoint that passed the research evaluation. It has not been released as a financial document automation product.
 - The original AI Hub images and labels, along with the cropped training samples, are kept only in domestic internal storage and are not published or redistributed.

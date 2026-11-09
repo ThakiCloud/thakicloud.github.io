@@ -113,6 +113,5 @@ Paxis는 OCR을 대신하는 제품이 아닙니다. 문서 인식 결과를 업
 
 ## 참고
 
-- 공개 OCR 모델 네 개 한눈에 보기: [ThakiOCR 모델 허브](/tech-blog/ko/ocr/)
 - 위 워크플로는 ThakiDocTrust 검증 결과를 Paxis에 적용하는 설계 예시입니다. 256개 문서 검증은 합성 평가 결과이며 금융 업무의 자동 승인 시스템으로 출시하지 않았습니다.
 - 공개 모델: [ThakiOCR-KOEN-V1-Dense (A)](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)
