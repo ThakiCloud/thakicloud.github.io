@@ -74,6 +74,7 @@ The development set (DEV) comes from the same templates as the training data, so
 | G5 | Undecidable cases answered `needs_validation` (10 cases) | pass (10/10) | pass (10/10) | pass (10/10) | pass (10/10) |
 | G6 | Patch passes sandbox security and functional tests (39 cases) | pass (1.000) | pass (1.000) | pass (1.000) | pass (1.000) |
 | G7 | Output format (sealed T1 / T4) | pass (1.0 / 1.0) | pass (1.0 / 1.0) | pass (1.0 / 1.0) | pass (1.0 / 1.0) |
+
 *Every result is a single run: one training run, scored once. Numbers are from each model card.*
 
 ![G4a decoys answered confirmed out of 239: 2B 5, 4B 0, 8B 30, 27B 0](/assets/images/secproof-2b-paxis-security-agent-fig-bars-en.webp)
@@ -102,6 +103,7 @@ Separately from the scores, we plugged the three Preview models into the Paxis s
 |---|---|---|---|
 | Search code that does not filter by tenant | Missed, then the sandbox flagged the conflict | Found, confirmed by the sandbox | Found, confirmed by the sandbox |
 | Code that cannot be judged because the needed file is missing | Over-confirmed, stopped as unverified | Same | Same |
+
 *On the safe-code case all three ended as not reproduced, and the broken-output case was marked invalid for all three.*
 
 In the first case 2B answered `rejected` on vulnerable code. That answer did not pass through, though. The sandbox security test failed, and Paxis recorded a conflict state meaning "the model probably missed this". The second officer opened the bag the X-ray reader had cleared and found the problem.
