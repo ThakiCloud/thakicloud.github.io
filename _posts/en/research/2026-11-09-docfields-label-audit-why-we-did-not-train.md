@@ -36,7 +36,7 @@ The data we received was rich in ingredients. Every document image recorded wher
 
 The goal was a classifier that assigns a role (amount, date, business registration number, counterparty and so on) to each text box in scanned finance and logistics documents. Text recognition is handled by an existing OCR. This model decides which field a recognized string belongs to.
 
-The candidate dataset was AI 허브(AI-Hub) — 금융 및 물류 분야 특화 문서 OCR(71301), the Korean AI-Hub dataset of finance and logistics document OCR. It holds 44,990 finance documents and 97,121 logistics documents across 34 form types. Finance documents average 21.5 text boxes each and logistics documents average 93.3. On size alone it looked more than enough for a role classifier.
+The candidate dataset was 'OCR 데이터(금융 및 물류)' (71301) on AI 허브(AI-Hub), the Korean AI data platform's finance and logistics document OCR set. It holds 44,990 finance documents and 97,121 logistics documents across 34 form types. Finance documents average 21.5 text boxes each and logistics documents average 93.3. On size alone it looked more than enough for a role classifier.
 
 The applicant downloaded the data personally and handled it only in storage that only the applicant can access. The data may not be redistributed, so this post contains only aggregates such as counts and ratios. It contains no document images, box strings or form examples.
 
@@ -164,6 +164,10 @@ Having data and having the answers your task needs are different things. Here we
 
 If you are preparing document field extraction, run a label audit before writing the training plan. A CPU job like the code above is enough to get an answer. If the answer is "there are none," it also tells you where and how much human labeling you need.
 
+## Sources
+
+- [AI-Hub dataset: 'OCR 데이터(금융 및 물류)' / document OCR for finance and logistics (71301)](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=71301)
+
 ---
 
-*Data source: AI 허브(AI-Hub) — 금융 및 물류 분야 특화 문서 OCR(71301) (AI-Hub, finance and logistics document OCR). The data is not redistributed, and the audit was carried out only under the applicant's internal-use terms. This post contains only aggregates such as counts and ratios, and no document images, box strings, form examples or identifiers. The figures are charts drawn from the audit ledger aggregates.*
+*Data source: the AI 허브(AI-Hub) dataset 'OCR 데이터(금융 및 물류)' (71301). The data is not redistributed, and the audit was carried out only under the applicant's internal-use terms. This post contains only aggregates such as counts and ratios, and no document images, box strings, form examples or identifiers. The figures are charts drawn from the audit ledger aggregates.*

@@ -20,6 +20,7 @@ categories:
   - agentops
 lang: en
 published: true
+canonical_url: "https://thakicloud.com/tech-blog/en/agentops/lattice-latex-agent-workspace/"
 ---
 
 ## Why read this
@@ -47,14 +48,14 @@ The desk structure is in the diagram below. The key point is that the agent pane
 ```mermaid
 flowchart TB
     P[Project folder<br/>.tex source + PDF + notes + slides]
-    subgraph L[Lattice desktop shell (Tauri)]
+    subgraph L["Lattice desktop shell (Tauri)"]
         E[Source editor<br/>CodeMirror + TeX diagnostics]
         V[PDF viewer<br/>PDF.js + SyncTeX two-way jump]
         R[Paper library<br/>arXiv, DOI, BibTeX, Zotero]
         O[Overleaf sync panel<br/>live presence + comments + tracked changes]
         A[Agent panel<br/>diff review + accept/reject]
     end
-    C[Agent CLI<br/>Claude Code, Codex, Cursor etc. (your account)]
+    C["Agent CLI<br/>Claude Code, Codex, Cursor etc. (your account)"]
     M[MCP servers<br/>Zotero, Heptabase]
     T[Your own TeX Live<br/>one-click build + arXiv export ZIP]
     P --> E

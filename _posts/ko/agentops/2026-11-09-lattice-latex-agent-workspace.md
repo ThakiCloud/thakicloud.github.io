@@ -20,6 +20,7 @@ categories:
   - agentops
 lang: ko
 published: true
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/lattice-latex-agent-workspace/"
 ---
 
 ## 왜 읽어야 하나
@@ -47,14 +48,14 @@ README가 스스로를 "local-first, agent-first LaTeX writing app for macOS"라
 ```mermaid
 flowchart TB
     P[프로젝트 폴더<br/>.tex 소스 + PDF + 메모 + 슬라이드]
-    subgraph L[Lattice 데스크톱 셸 (Tauri)]
+    subgraph L["Lattice 데스크톱 셸 (Tauri)"]
         E[소스 편집기<br/>CodeMirror + TeX 진단]
         V[PDF 뷰어<br/>PDF.js + SyncTeX 양방향 점프]
         R[논문 라이브러리<br/>arXiv · DOI · BibTeX · Zotero]
         O[Overleaf 동기 패널<br/>라이브 프레전스 + 댓글 + 변경 추적]
         A[에이전트 패널<br/>diff 검토 + 승인/거절]
     end
-    C[에이전트 CLI<br/>Claude Code · Codex · Cursor 등 (사용자 계정)]
+    C["에이전트 CLI<br/>Claude Code · Codex · Cursor 등 (사용자 계정)"]
     M[MCP 서버<br/>Zotero · Heptabase]
     T[내 TeX Live<br/>원클릭 빌드 + arXiv 수출 ZIP]
     P --> E
