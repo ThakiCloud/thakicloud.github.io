@@ -4,7 +4,7 @@ excerpt: "A 4B reranker that moves the passages you can actually cite to the top
 seo_title: "Thaki-CiteRank-4B: an evidence reranker for Paxis RAG agents - ThakiCloud"
 seo_description: "Thaki-CiteRank-4B is a Research Preview reranker that takes a question or claim plus candidate passages and ranks them by whether they can be cited as evidence. nDCG@10 rose to 0.919 on QASPER and 0.905 on held-out CUAD, and unsupported citations dropped. We cover how to wire it into a Paxis agent and what it cannot do."
 date: 2026-10-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-09
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -25,31 +25,40 @@ header:
   teaser: /assets/images/citerank-results-en.webp
 ---
 
-If you run a RAG agent over internal documents, you have probably noticed that trust erodes less from retrieval missing a document than from the agent **citing the wrong one**. Thaki-CiteRank-4B is a 4B reranker for exactly that step: choosing which candidate passage to cite. On contract data it never saw during training, it ranked evidence better than the base Qwen3-Reranker-4B.
+![Title card for Thaki-CiteRank-4B, a 4B model that picks what a RAG agent should cite. CUAD nDCG@10 from 0.838 to 0.905](/assets/images/citerank-4b-paxis-fig-title-en.webp)
+
+If you run a RAG agent over internal documents, you have seen these. A passage that only shares the topic gets attached as evidence. An old version of a document is cited with the wrong value. A passage that supports half the claim sits at the top as if it were the answer. Trust erodes less from retrieval missing a document than from the agent **citing the wrong one**.
+
+Thaki-CiteRank-4B is a 4B reranker for exactly that step: choosing which candidate passage to cite. On contract data it never saw during training (CUAD), it ranked evidence better than the base Qwen3-Reranker-4B, with nDCG@10 rising from 0.838 to 0.905.
 
 This post is more about use than scores. It shows where the model sits behind Paxis Hybrid RAG, where it should hand off to a person, and what it should not be trusted with.
 
-![Illustration of the core idea of Thaki-CiteRank-4B: a 4B model that picks what a RAG agent should cite](/assets/images/citerank-4b-paxis-hero.webp)
-*A visual metaphor for the article's key idea.*
-
-## In plain terms
+## Relevant is not the same as citable
 
 Say an agent is asked, "What is the default restart policy of a Pod?" The retriever returns ten passages that look related. One states the answer, some only share the topic, and one comes from an older version with a different value. To the retriever they are all "relevant."
 
-CiteRank rereads those ten passages and scores each one on a narrower question: can this passage be cited as evidence? It was trained to score low on passages that only share the topic, support only part of the claim, or contradict it. If even the top score falls below a threshold, the agent can conclude there is nothing safe to cite.
+A reranker is a model that rereads the candidates a retriever returned and puts them in a new order. CiteRank orders them on a narrower question: can this passage be cited as evidence? It was trained to score low on passages that only share the topic, support only part of the claim, or contradict it. If even the top score falls below a threshold, the agent can conclude there is nothing safe to cite.
 
-## Results
+![Citation scores returned for a correct passage, a passage with the value flipped to Never, and the threshold decision rule, all for the same claim](/assets/images/citerank-4b-paxis-fig-io-en.webp)
+*Actual scores from the repository example. The correct passage gets +3.500 and the opposite passage gets -1.562. The opposite passage clears the -1.6875 threshold by a hair, so the auxiliary label has to be checked too (more below).*
+
+## Ranking improved even on contracts it never trained on
 
 ![nDCG@10 for evidence ranking and unsupported citation rate, base Qwen3-Reranker-4B vs Thaki-CiteRank-4B](/assets/images/citerank-results-en.webp)
 *Left: ranking quality (y-axis starts at 0.75). Right: how often the cited passage was not labeled as evidence.*
 
-We evaluated on three kinds of data. On scientific-paper QA (QASPER), nDCG@10 rose from 0.863 to 0.919. The more important number comes from contract clauses (CUAD), which were used for neither training nor model selection: 0.838 to 0.905, with a 95% confidence interval of +0.058 to +0.078. The ranking gain carries over to a different kind of document, not just the one it was trained on.
+Ranking quality is measured with nDCG@10, a 0-to-1 score for how high the true evidence lands within the top ten results. We evaluated on three kinds of data. On scientific-paper QA (QASPER), nDCG@10 rose from 0.863 to 0.919.
+
+The more important number comes from contract clauses (CUAD), which were used for neither training nor model selection: 0.838 to 0.905, with a 95% confidence interval of +0.058 to +0.078. The ranking gain carries over to a different kind of document, not just the one it was trained on.
 
 Unsupported citations also fell, from 23.6% to 12.6% on QASPER and from 50.9% to 33.1% on CUAD. All five pass/fail criteria were fixed before the test data was opened, and all five passed. Training was a single run of about three hours on one B200. Inference costs 11.1 ms per candidate, essentially the same as the base model.
 
-## What it looks like inside Paxis
+## In Paxis it sits between retrieval and the answer
 
 Paxis builds multi-agent workflows over internal data without external APIs, and provides Hybrid RAG, an MCP Tool Hub and AgentOps audit trails. CiteRank fits most naturally right after Hybrid RAG gathers candidates and right before the answer is written.
+
+![Comparison of citing retrieval output directly and a separate CiteRank step that rescores passages and routes anything under the threshold to human review](/assets/images/citerank-4b-paxis-fig-arch-en.webp)
+*Top: evidence attached in retrieval-score order. Bottom: a separate citation step. Retrieval stays the same; only the citation decision changes.*
 
 ```mermaid
 flowchart LR
@@ -60,9 +69,13 @@ flowchart LR
   A --> L["AgentOps audit trail<br/>cited passages and scores"]
   H --> L
 ```
-*Where CiteRank sits in a Paxis workflow. Retrieval stays as it is; only the citation decision changes.*
+*Where CiteRank sits in a Paxis workflow.*
 
-There are three reasons for this placement. First, the retriever does not change: keyword and vector search stay as they are, and only their output order is redone. Second, the threshold becomes a way to say "I don't know." With 33.1% unsupported citations still left on CUAD, routing low-score questions to a reviewer is a requirement, not an option. Third, the scores become part of the audit record. When a wrong answer turns up later, logged scores tell you whether retrieval or citation was at fault.
+There are three reasons for this placement. First, the retriever does not change: keyword and vector search stay as they are, and only their output order is redone.
+
+Second, the threshold becomes a way to say "I don't know." With 33.1% unsupported citations still left on CUAD, routing low-score questions to a reviewer is a requirement, not an option.
+
+Third, the scores become part of the audit record. When a wrong answer turns up later, logged scores tell you whether retrieval or citation was at fault.
 
 Because it is a 4B model (peak memory 12.3 GiB in our runs), it can run in the same on-premises environment as Paxis. Citation quality improves without breaking the Paxis premise that documents never leave the boundary.
 
@@ -78,11 +91,22 @@ The bundled example shows the limit directly. For the claim "the default is Alwa
 
 In a Paxis workflow, use the CONTRADICTS output only as a "worth a second look" flag, and do not surface it in answers as a factual verdict.
 
-## Limitations
+## It is not ready to cite on its own
 
-An unsupported citation rate of 33.1% on contracts is lower than the base model's but not low enough to cite automatically. Paper QA is a relatively easy retrieval task because answer sentences share many words with the questions. The model is English only, and passages longer than 1,024 tokens (prompt included) are truncated. There is no evidence that it increases citations in live AI search products such as ChatGPT or Perplexity. It helps your own agent choose evidence; it does not get you cited by someone else's search engine.
+Side by side with the base reranker, what improved and what did not is easy to see.
 
-## Try it
+| Property | Base Qwen3-Reranker-4B | Thaki-CiteRank-4B |
+|---|---|---|
+| Held-out contract ranking (CUAD nDCG@10) | ⚠️ 0.838 | ✅ 0.905 |
+| Unsupported citations (CUAD) | ⚠️ 50.9% | ⚠️ 33.1%, lower but not safe to automate |
+| Inference time per candidate | ✅ about the same | ✅ 11.1 ms |
+| Contradiction detection | ⚠️ no output | ⚠️ auxiliary flag only, uncalibrated |
+
+An unsupported citation rate of 33.1% on contracts is lower than the base model's but not low enough to cite automatically. Paper QA is a relatively easy retrieval task because answer sentences share many words with the questions. The model is English only, and passages longer than 1,024 tokens (prompt included) are truncated.
+
+There is also no evidence that it increases citations in live AI search products such as ChatGPT or Perplexity. It helps your own agent choose evidence; it does not get you cited by someone else's search engine.
+
+## The bundled example gives you scores in a few lines
 
 Use the `example_inference.py` that ships with the repository. Pass a question, a claim and candidate passages, and it returns a citation score and auxiliary label scores for each passage.
 
@@ -100,8 +124,12 @@ relevance, head_scores = score(
 
 `relevance` is a ranking score, not a probability. The threshold used in evaluation, -1.6875, was chosen on dev data, so re-tune it on your own. Keep the instruction from the example; changing it shifts the score distribution.
 
-## What we released
+## Weights and example code are out under Apache-2.0
 
 [Thaki-CiteRank-4B](https://huggingface.co/ThakiCloud/Thaki-CiteRank-4B) on Hugging Face contains the merged weights, the auxiliary classification head, the tokenizer, an evaluation manifest and example code under Apache-2.0. No training or evaluation text is included. Training used QASPER (CC BY 4.0), Kubernetes documentation (CC BY 4.0) and Python documentation (PSF License v2); CUAD (CC BY 4.0) was used for evaluation only.
 
 ThakiCloud's open ranking models now have distinct roles. The EditRank models ([EditRank-0.6B](https://huggingface.co/ThakiCloud/EditRank-0.6B), [EditRank-Multidomain-4B](https://huggingface.co/ThakiCloud/EditRank-Multidomain-4B)) choose how to rewrite a document; CiteRank chooses which existing passage to cite. Both are designed so that a person can do the final check more easily when a Paxis agent works with internal knowledge.
+
+## Closing
+
+CiteRank leaves retrieval alone and changes only the citation decision. Ranking improved on contracts it never trained on and unsupported citations fell, but with 33.1% left, a path that sends below-threshold questions to a person has to come with it. The cheapest first experiment: take 100 to 200 real questions from your RAG, pull the top cited passage from the base reranker and from CiteRank side by side, and re-tune the threshold on that data. The model is on [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-CiteRank-4B).

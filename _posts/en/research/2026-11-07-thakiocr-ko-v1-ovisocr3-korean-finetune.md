@@ -27,12 +27,13 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/en/research/thakiocr-ko-v1-ovisocr3-korean-finetune/"
 ---
 
+![ThakiOCR-KO-v1 title card: a 25.6MB Korean word LoRA for OvisOCR3, word CER 7.78% (base 25.28%)](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-title-en.webp)
+
+The name field on a handwritten application, a sign photographed outdoors, one item on a printed form: each arrives as a single cropped word. Document pipelines read these words one image at a time. When the handwriting is cursive, even good open models get characters wrong.
+
 We trained a LoRA adapter for Korean word recognition on top of the open OCR model OvisOCR3 and released it as [ThakiCloud/ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1). On 2,400 word crops from our internal development set, the character error rate (CER) went from 25.28% for the base model to 7.78%, a 69.2% relative reduction. The adapter is 25.6 MB and licensed under Apache-2.0.
 
 This is a research release, not a product launch. The model reads an image of one cropped word. We have not verified how well it reads a full document page, so treat it as one step in a pipeline that handles handwritten forms or photographed signs. The base model stays as it is and you download one small extra file on top, so it is easy to add to an existing setup.
-
-![Illustration of the core idea of ThakiOCR-KO-v1: We Released a LoRA That Adapts OvisOCR3 to Korean Word OCR](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-hero.webp)
-*A visual metaphor for the article's key idea.*
 
 ## In plain terms
 
@@ -40,13 +41,18 @@ OvisOCR3 is like an experienced clerk who reads printed documents well. It was w
 
 After practice, the clerk read word cards much better. We also checked separately that the clerk had not forgotten how to read tables, which it already did well. Another practice method read words even better but failed the table-reading test, so we left it out of this release.
 
-## What problem it solves
+## A good detector does not help if the word is misread
 
 Korean document pipelines usually find text regions on a page and then crop and recognize them. If the step that reads a cropped word image is weak, the result is wrong no matter how good the detector is. In Korean settings with varied inputs, such as handwritten application forms, signs photographed outdoors, and printed forms, errors from this step pile up.
 
 OvisOCR3 is an open OCR model that can read document structure. Measured under the same conditions, its CER on Korean word crops was 25.28%, and on one handwriting subset it rose to 66.89%. Our goal was to fix only this weakness without harming the document-structure ability the base model already had.
 
-## Model, data and training
+![What OvisOCR3 base and ThakiOCR-KO-v1 return for the same cursive word, and for a page with a table](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-io-en.webp)
+*Examples of the output format. The word and table are made up for illustration and do not come from training or evaluation data.*
+
+The input is a crop holding one word, and the output is the characters in it. After adding the adapter, the model still has to read tables when given a page. Keeping both was the condition for this training run.
+
+## We added a 25.6 MB adapter on the language-model side only
 
 ### Model
 
@@ -54,13 +60,18 @@ OvisOCR3 is an open OCR model that can read document structure. Measured under t
 - Size: the bf16 checkpoint with the adapter merged is 1,706,030,528 bytes, which works out to roughly 0.85B parameters. The model card calls it "0.9B-class".
 - Adapter: LoRA r=16, alpha=32, dropout 0.05, attached only to `q/k/v/o/gate/up/down_proj` of the language model. That is 96 modules and 6,389,760 trainable parameters. The vision tower and the vision-language merger were frozen.
 
+LoRA (Low-Rank Adaptation) keeps the original weights fixed, attaches two small matrices beside them, and trains only those. That is why the released file is a 25.6 MB adapter holding just the added matrices, not the whole model.
+
+![Structure of OvisOCR3 base, M1 (language-model LoRA, released) and M2 (LoRA including vision, not released)](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-arch-en.webp)
+*M1 adds LoRA only on the language-model side, while M2 also trains the vision side. M2 read words better but failed the table-structure check, so we released M1.*
+
 ### Data
 
 The training data comes from three AI-Hub datasets.
 
-- AI 허브(AI-Hub) · 대용량 손글씨 OCR 데이터 (605), large-scale handwriting OCR data
-- AI 허브(AI-Hub) · 다양한 형태의 한글 문자 이미지 인식 데이터 (91), Korean character images in various forms, handwritten and printed subsets
-- AI 허브(AI-Hub) · 야외 실제 촬영 한글 이미지 데이터 (105), Korean text photographed outdoors
+- AI-Hub · Large-scale handwriting OCR data (605)
+- AI-Hub · Korean character image recognition data in various forms (91), handwritten and printed subsets
+- AI-Hub · Korean text images photographed outdoors (105)
 
 The data was used only for internal training and evaluation by the approved applicant. The originals and anything derived from them (crops, label files, subsets, samples) are not in the public repository, and this post does not include them either. To use the data, apply for it yourself on AI-Hub.
 
@@ -91,7 +102,7 @@ flowchart TB
     F --> H["M1: passed structure gate → released"]
 ```
 
-## Performance: same-condition comparison with the base model
+## Word-crop CER fell from 25.28% to 7.78%
 
 **Evaluation set**: 2,400 word crops from our internal development set (Dev), 600 per source (605, 91 handwriting, 91 printed, 105), drawn from the official validation splits of the three training datasets. The ground truth totals 7,389 characters, and the 91 handwriting subset has 15 writers. Because it comes from the same sources as the training data, it is not an independent test set.
 
@@ -107,6 +118,9 @@ flowchart TB
 | 91 printed (600 crops) | 6.28% | **1.56%** | 1.66% |
 | 105 outdoor photos (600 crops) | 13.23% | **7.97%** | 6.47% |
 
+![Overall CER on 2,400 word crops: base 25.28%, M1 7.78%, M2 5.98%](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-bars-en.webp)
+*The released adapter M1 brings CER down from 25.28% to 7.78%. M2 went lower, to 5.98%, but did not pass the table-structure check.*
+
 - Paired over the same items, M1 minus base is −17.50 pp pooled (95% CI −20.32 to −15.12). All four sources improve with confidence intervals that exclude zero.
 - The unweighted mean of the per-source CERs is 8.53% for M1.
 - By character class, M1 CER is 9.11% for Hangul, 0.85% for digits, 5.04% for Latin letters and 4.14% for punctuation. The base model scored 18.87%, 3.75%, 22.30% and 18.42%. Latin covers only 42 crops (139 characters), so that number is noisy.
@@ -114,7 +128,7 @@ flowchart TB
 ![Per-source word-crop CER on 2,400 Dev crops, base vs. ThakiOCR-KO-v1](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-results-en.webp)
 *Per-source word-crop CER measured with the same prompt, image size and greedy decoding. Lower is better.*
 
-### Did document structure get worse?
+### We released M1 because it kept table structure
 
 Fine-tuning on word crops can break the table reading or reading order the base model already handled. So we checked, on pages rather than word crops, only that the model did not get worse than the base (no regression). The evaluation sets are 200 sealed synthetic pages (including 50 table pages), set aside and never used for training or tuning, and an 849-item Korean document test suite. Tolerances were fixed before we saw the results. The numbers come from a bf16 merged copy of the adapter served under the same interface as the base model.
 
@@ -129,9 +143,12 @@ Fine-tuning on word crops can break the table reading or reading order the base 
 
 M2 read words more accurately. M2 minus M1 is −1.80 pp pooled (95% CI −2.43 to −1.14), and on 91 handwriting it is −5.19 pp with a writer-clustered bootstrap over 15 writers (95% CI −7.49 to −3.20). But its exact table-structure match fell to 0.80, more than the 0.04 tolerance below the base model's 0.98. Under the preregistered rule we chose M1. The M2 checkpoint is kept as a separate research model and is not in this repository.
 
+![Table structure exact match on 50 sealed table pages: base 0.98, M1 1.00, M2 0.80](/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-bars-table-en.webp)
+*Against base 0.98, M1 scored 1.00 and stayed inside the margin; M2 dropped to 0.80, more than the 0.04 margin. These are results on 50 synthetic pages.*
+
 M1's 1.00 is a result on 50 synthetic pages. It does not mean table structure is always correct on real documents.
 
-## Remaining errors and limits
+## Cursive handwriting and outdoor photos still trip it up
 
 ### Where it still fails
 
@@ -146,15 +163,29 @@ M1's 1.00 is a result on 50 synthetic pages. It does not mean table structure is
 - **Out-of-distribution generalization**: Dev comes from the same three datasets as the training data. New writers, new fonts, new document types and new capture conditions were not tested. For 91 printed, the same fonts appear in train and Dev.
 - **Comparison with larger models**: we do not claim this adapter matches larger OCR models.
 - **Other inference settings**: prompts, image sizes and sampling other than the fixed settings below were not evaluated.
-- **Cost**: on one B200 GPU at batch size 1, median latency was 0.210 s, p95 0.360 s, and peak memory 7.02 GiB. The base model alone took 0.186 s, 0.310 s and 4.95 GiB. The adapter makes inference a little slower and uses more memory.
 
-## What we checked before release
+## The adapter is a little slower and uses more memory
+
+We measured on one B200 GPU at batch size 1.
+
+| Model | Median latency | p95 | Peak memory |
+|---|---|---|---|
+| OvisOCR3 base | 0.186 s | 0.310 s | 4.95 GiB |
+| **ThakiOCR-KO-v1** | **0.210 s** | **0.360 s** | **7.02 GiB** |
+
+Replaying the two medians at real speed shows how large the gap is.
+
+<figure class="fig-video"><video src="/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-race-en.mp4" poster="/assets/images/thakiocr-ko-v1-ovisocr3-korean-finetune-fig-race-en.webp" autoplay muted loop playsinline preload="metadata" aria-label="Animation replaying, at real speed, the per-crop latency of OvisOCR3 base and ThakiOCR-KO-v1"></video><figcaption>The median latencies in the table above (measured), replayed in real time for 8 seconds. The adapter costs a few tens of milliseconds per crop.</figcaption></figure>
+
+In exchange for a much lower error rate, each crop costs a few tens of milliseconds and a bit over 2 GiB of extra memory. If throughput matters in your pipeline, weigh this cost too.
+
+## We re-ran all 2,400 crops before release and got the same answers
 
 - Just before release, we re-ran the release adapter on the 2,400 Dev crops. All 2,400 predictions matched the strings saved during training, and the pooled CER was the same 7.78%.
 - After switching the repository to public, we downloaded the 6 files without logging in and confirmed that every sha256 matched the pre-release manifest.
 - In the same anonymous environment, we downloaded the base model, the adapter and `inference_example.py`, and confirmed that one synthetic image was read correctly. 96 modules had the LoRA attached and 0 on the vision side. This was a loading check, not a performance measurement.
 
-## Download and inference
+## Download it and run it with the fixed settings
 
 Use the fixed settings from the model card exactly.
 
@@ -201,13 +232,13 @@ print(processor.tokenizer.decode(out[0, inputs["input_ids"].shape[1]:], skip_spe
 
 The public files are `adapter_model.safetensors` (25.6 MB), `adapter_config.json`, `inference_example.py`, the English card `README.md`, the Korean card `MODEL_CARD.ko.md` and `LICENSE`. The internal bf16 merged checkpoint (1.71 GB) is not part of this release. A bf16 merge is not bit-identical to running the fp32 base with the adapter.
 
-## License and attribution
+## The adapter is Apache-2.0; the training data cannot be redistributed
 
 - **Base model**: `ATH-MaaS/OvisOCR3` is Apache-2.0. Use of the base model is governed by its own license.
 - **ThakiOCR-KO-v1 LoRA adapter**: released under Apache-2.0.
-- **Training data**: may not be redistributed. When you use the adapter, keep the attribution "AI 허브(AI-Hub)" together with the three dataset names above.
+- **Training data**: may not be redistributed. When you use the adapter, keep the attribution "AI-Hub" together with the three dataset names above.
 
-## Using it on-premises and on the platform
+## On-premises, you can test by swapping only the adapter
 
 The adapter is 25.6 MB and the base is an open model, so even in on-premises environments where documents cannot leave the site, you can download the base once and then test by swapping only the adapter. We built this model through ThakiCloud's own procedure of queue-based GPU training, data lineage records, hash verification and anonymous reproduction.
 
@@ -226,15 +257,15 @@ flowchart TB
 
 ThakiCloud builds a platform for training models (Maxis), serving them (Metis) and connecting them to work (Paxis) in environments the customer controls. If you want to train or evaluate an adapter like this on your own documents, contact [ThakiCloud](https://thakicloud.com).
 
-## Related posts
+## Closing
+
+ThakiOCR-KO-v1 adds one 25.6 MB adapter to OvisOCR3, cuts the CER on Korean word crops from 25.28% to 7.78%, and keeps the table-structure ability. To try it, download the base at the pinned revision and run a few dozen word crops from your own work with and without the adapter. If you have a lot of cursive handwriting, measure the error rate on that group separately.
 
 - The larger model in the same series: [ThakiOCR-Large-27B-R2B release post](/tech-blog/en/research/thakiocr-large-27b-r2b-qwen-korean-ocr/). Its evaluation set, preprocessing and decoding differ, so its numbers cannot be ranked against the numbers in this post.
 - A small OCR we trained from scratch: [ThakiOCR A release post](/tech-blog/en/research/thakiocr-a-small-korean-english-line-ocr/)
 - A follow-up model focused on numbers and symbols: [G2M release post](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/)
 
-## References
-
 - Model: [ThakiCloud/ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1)
 - Base model: [ATH-MaaS/OvisOCR3](https://huggingface.co/ATH-MaaS/OvisOCR3)
-- Training data: the AI 허브(AI-Hub) datasets 605, 91 and 105 listed in the data section above. Data may not be redistributed; internal use by the applicant only.
+- Training data: the AI-Hub datasets 605, 91 and 105 listed in the data section above. Data may not be redistributed; internal use by the applicant only.
 - This is a research release; any product-launch decision is separate.

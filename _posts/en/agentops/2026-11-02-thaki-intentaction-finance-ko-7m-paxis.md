@@ -24,47 +24,42 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/thaki-intentaction-finance-ko-7m-paxis/"
 ---
 
-![Illustration of the core idea of From a General Model to a Money-Transfer Model: Building Thaki-IntentAction-Finance-KO-7M](/assets/images/thaki-intentaction-finance-ko-7m-paxis-hero.webp)
-*A visual metaphor for the article's key idea.*
+![Title card for Building Thaki-IntentAction-Finance-KO-7M: 0 field errors among proposals on the sealed8 synthetic family](/assets/images/thaki-intentaction-finance-ko-7m-paxis-fig-title-en.webp)
 
-## Summary
+"Send 50,000 won to Kim Haneul," said in Korean, is a simple request for a person. For a system to handle it, it has to answer several questions at once. Who is the payee? How much? Is this a request to send now, or a remark about yesterday's transfer, or an instruction not to send?
 
-"김하늘한테 5만원 보내줘" ("Send 50,000 won to Kim Haneul") is a simple request for a person. For a system to handle it, it has to answer several questions at once. Who is the payee? How much? Is this a request to send now, or a remark about yesterday's transfer, or an instruction not to send?
+We released [Thaki-IntentAction-Finance-KO-7M](https://huggingface.co/ThakiCloud/Thaki-IntentAction-Finance-KO-7M), a Korean model that answers those questions, on Hugging Face. It has 7,402,003 parameters. It turns a transfer request into a proposal made of a payee, an amount and a currency, or refuses when it cannot be sure. It contains no payment or banking code, and `safe_to_actuate` in its output is always `false`. `safe_to_actuate` is the output field that says whether the result may be executed directly.
 
-We released [Thaki-IntentAction-Finance-KO-7M](https://huggingface.co/ThakiCloud/Thaki-IntentAction-Finance-KO-7M), a Korean model that answers those questions, on Hugging Face. It has 7,402,003 parameters. It turns a transfer request into a proposal made of a payee, an amount and a currency, or refuses when it cannot be sure. It contains no payment or banking code, and `safe_to_actuate` in its output is always `false`.
+![One PROPOSE and two ABSTAIN results for three requests against the same payee list](/assets/images/thaki-intentaction-finance-ko-7m-paxis-fig-io-en.webp)
+*The shape of the result for three requests against the same payee list. The sentences are invented examples, shown in English translation of Korean input; the verdicts follow the finance-profile rules described below.*
 
 This model was not meant to be transfer-only. We built it as a general model that would also extract purchases, reservations, deletions and lookups, and it failed at that goal. This post records what failed and why we released the same model narrowed to money transfers. Every number was measured on synthetic data. The status is research preview.
 
-## The general goal failed in ten attempts
+## The general goal failed all ten attempts
 
-The original goal was a general action extractor for agents: one model that structures transfer, purchase, reservation, deletion and lookup requests. We fixed the pass criteria before the attempts. On every evaluation split, wrong proposals had to be at most 0.5%, executed negated commands at most 0.1%, and at least 70% of correct proposals actually had to be proposed.
+The original goal was a general action extractor for agents: one model that structures transfer, purchase, reservation, deletion and lookup requests. We fixed the pass criteria before the attempts. Coverage is the share of correct proposals the model actually makes. On every evaluation split, wrong proposals had to be at most 0.5%, executed negated commands at most 0.1%, and at least 70% of correct proposals actually had to be proposed.
 
 Across ten attempts, R2 through S9, it never passed. Lowering risk pushed coverage below 0.70, and meeting coverage raised wrong proposals on unseen phrasings. When we broke down the 43 wrong proposals that got through in the S8 evaluation, 24 were operation errors and 19 were target (RESOURCE) errors. Payee, amount and currency errors: zero.
 
+![Field breakdown of the 43 wrong proposals that passed in S8: operation 24, target 19, payee, amount and currency 0](/assets/images/thaki-intentaction-finance-ko-7m-paxis-fig-bars-en.webp)
+*24 were operation errors and 19 were target (RESOURCE) errors; payee, amount and currency had 0. That distribution is why we narrowed to money transfers.*
+
 That distribution decided the next step. The weakness was concentrated in "what is the user asking to do" and "which item or file," while the three fields a transfer needs were already stable. So instead of growing the model or training longer, we kept only the range where it was already strong. This does not mean the general goal succeeded. We admitted the failure and split off only the verified part. Actions other than transfers were not fixed; they were switched off.
 
-## The model picks, rules settle
+## The model picks candidates; rules settle the values
 
 The model does not generate text. Rules first cut candidates out of the input, such as payee spans and amount expressions, and the network picks one candidate or "none" for each field. So it cannot invent a name or a number that is not in the input.
 
-```mermaid
-flowchart TB
-  A["Korean request<br/>(e.g., 'Send 50,000 won to Kim Haneul')"] --> B["Rule candidate extraction<br/>payee spans · amount expressions"]
-  B --> C["Model selection (7M)<br/>one candidate or 'none' per field<br/>action / negation / abstain scores"]
-  C --> D["General verifier<br/>negation · condition · past · reported speech · verb match · registries"]
-  D -->|refused| X["ABSTAIN<br/>no proposal"]
-  D -->|passed| E["Finance Profile v1<br/>send + registered payee + one amount expression + identical re-parse"]
-  E -->|any miss| X
-  E -->|all hold| P["PROPOSE<br/>confirmation request: source hash · field positions · structured values"]
-```
+![General action extractor path compared with the money-transfer finance profile path](/assets/images/thaki-intentaction-finance-ko-7m-paxis-fig-arch-en.webp)
+*The general goal failed its gate on all ten attempts. From the same checkpoint we kept only money transfers and stacked rule layers around it: the model picks candidates and rules settle them.*
 
-The Finance Profile is the last gate. It proposes only when the action is a transfer, the payee appears verbatim in the list the user supplies, the sentence contains exactly one amount expression, and re-parsing gives the same value. Everything else is refused. Expressions like "5만원 이하로" (up to 50,000 won), "월급 들어오면" (when my salary comes in), "보내지 마" (don't send) or "어제 보냈어" (I sent it yesterday) produce no proposal. This layer never repairs or re-selects a value. It never proposes a transfer to someone outside the list, and with no list at all it refuses every request.
+The Finance Profile is the last gate. It proposes only when the action is a transfer, the payee appears verbatim in the list the user supplies, the sentence contains exactly one amount expression, and re-parsing gives the same value. Everything else is refused. Korean expressions meaning "up to 50,000 won," "when my salary comes in," "don't send" or "I sent it yesterday" produce no proposal. This layer never repairs or re-selects a value. It never proposes a transfer to someone outside the list, and with no list at all it refuses every request.
 
-The amount boundary is settled here too. In the [SlotGrounder post](/tech-blog/en/agentops/thaki-slotgrounder-ko-7m-paxis/) from the same series, we covered a case where the neural network missed a proposal that cut "5만원" down to "5." The Finance Profile passes an amount span only if it matches the entire amount expression in the sentence, so it rejects that proposal.
+The amount boundary is settled here too. In the [SlotGrounder post](/tech-blog/en/agentops/thaki-slotgrounder-ko-7m-paxis/) from the same series, we covered a case where the neural network missed a proposal that cut the Korean amount "5man-won" (50,000 won) down to "5." The Finance Profile passes an amount span only if it matches the entire amount expression in the sentence, so it rejects that proposal.
 
-## Results after narrowing
+## After narrowing, proposed transfers had zero field errors
 
-For evaluation we used a synthetic family generated only for testing: no name or business overlaps with training, and the phrasings and endings are new. The payee list mixed the correct payees with 5,000 decoy names. The checkpoint, thresholds and policy were fixed before this evaluation. Below are the results on the sealed8 family, opened once for this release.
+For evaluation we used a synthetic family generated only for testing: no name or business overlaps with training, and the phrasings and endings are new. The payee list mixed the correct payees with 5,000 decoy names. The checkpoint, thresholds and policy were fixed before this evaluation; a sealed family is evaluation data nobody opens until every setting is frozen. Below are the results on the sealed8 family, opened once for this release.
 
 | Split | Transfer requests proposed | Field errors among proposals |
 |---|---|---|
@@ -72,17 +67,20 @@ For evaluation we used a synthetic family generated only for testing: no name or
 | ASR noise | 169/173 (97.7%) | 0 |
 | paraphrase | 149/151 (98.7%) | 0 |
 
+![Share of sealed8 transfer requests proposed: template 100%, ASR noise 97.7%, paraphrase 98.7%](/assets/images/thaki-intentaction-finance-ko-7m-paxis-fig-bars2-en.webp)
+*It proposed 456/456 on template, 169/173 on ASR noise and 149/151 on paraphrase, and every proposed transfer had the right payee, amount and currency.*
+
 Every proposed transfer had the correct payee, amount and currency. On all three splits, there were zero transfer proposals for non-transfer requests or negated commands. On the sealed6 and sealed7 families, already seen during development, the same settings also gave zero proposal errors, with coverage from 95.0% to 100%.
 
 Three cautions apply. First, transfer rows are a small part of each split, 456 of 5,992 rows in template, so on the ASR split a single case moves the rate by about 0.6 points. Second, the ASR-noise split is not real recognizer output but synthetic text with fillers and spacing changes. Third, these numbers must not be read as general performance. By the general criteria, transfer rows are at most 16% of correct proposals, so coverage is capped at 0.16 and the general gate cannot be passed by construction.
 
-## Understanding and execution are separate layers
+## Understanding the sentence and moving money belong to different layers
 
 For a transfer, understanding the sentence correctly and approving the movement of money are different problems. A `PROPOSE` from this model carries a confirmation request. It holds a hash of the source text, the positions in the source where the payee, amount and currency came from, and the structured values, and the user must confirm each field on a trusted screen. If any confirmed value differs from the value shown, it is rejected.
 
-Signing is done by TrustEdge's separate Ed25519 approval path, which is not part of this release. The model neither signs nor approves. This training work did not touch the approval path.
+Signing is done by TrustEdge's separate Ed25519 approval path (Ed25519 is a digital signature scheme that is hard to forge), which is not part of this release. The model neither signs nor approves. This training work did not touch the approval path.
 
-## Where it fits in Paxis, Metis and Maxis
+## In Paxis it owns the step that puts a transfer on the confirmation screen
 
 What follows is an application design. The model is not integrated into any product today and has never been tested against a real financial system.
 
@@ -92,7 +90,9 @@ What follows is an application design. The model is not integrated into any prod
 
 **Maxis.** The lesson that carries over is on the training side. When the general gate failed, breaking the failures down by field revealed the range the model already handled well. Before growing the model, the right move was to decompose the failure and narrow the product scope to the verified range.
 
-## How to use it
+## Pass your address book and get back a proposal or a refusal
+
+The model reads Korean only, so the example input below is in Korean. The [model card](https://huggingface.co/ThakiCloud/Thaki-IntentAction-Finance-KO-7M) has the same calls.
 
 ```python
 from intentaction_min import load_intentaction
@@ -108,10 +108,12 @@ r["safe_to_actuate"]        # always False
 
 The repository holds only weights, config and minimal inference code; it contains no training data or evaluation sentences.
 
-## Limitations
+## Five things to know before using it
 
 All training and test sentences are synthetic. We have not tested real users, real speech recognizers, slang, typos, or input mixed with foreign languages. Payee matching is exact string matching, so a stale list or two people with the same name produce wrong proposals that the model cannot notice. It covers only Korean transfers with won-style amount expressions. Latency and memory on device hardware were not measured. Do not use this checkpoint for actions other than transfers.
 
-## Takeaway
+## Closing
 
 A tiny model does not have to understand every command. This release is a model that failed its general goal, narrowed on the basis of failure analysis. The model picks candidates from the input, rules settle the amount and the payee, the user confirms each field, and a separate path does the signing. For a small model to become a practical component, its scope has to be exact and everything else has to be refused.
+
+The cheapest first experiment: feed a few dozen transfer sentences from your own service and your real address book into `propose` on the [model](https://huggingface.co/ThakiCloud/Thaki-IntentAction-Finance-KO-7M), and first check that every sentence with a negation, condition or past-tense expression comes back as `ABSTAIN`.

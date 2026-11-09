@@ -27,32 +27,40 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/en/research/thakiocr-large-27b-r2b-qwen-korean-ocr/"
 ---
 
+![ThakiOCR-Large-27B-R2B title card: a Korean word OCR adapter for Qwen3.6-27B, word CER 6.01% (base 18.04%)](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-fig-title-en.webp)
+
 We released a research model that transcribes images of Korean words into text. It leaves a large vision-language model as it is and adds a small extra trained file on top. Compared with the original model using the same instruction, character errors dropped sharply.
 
 When reading Korean words in uneven condition, such as handwritten application forms or photos taken on site, the original model often added characters that were not there. This training reduced that habit. Errors on digits and Latin letters also fell, but we did not separately measure parts where format matters, such as amounts. The verified scope ends at reading one word image; we have not yet measured reading whole documents.
 
 The release is called [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B). It is a LoRA adapter for Qwen3.6-27B, licensed under Apache-2.0. On a fixed development set of 2,400 crops, the base model had a word CER of 18.04%. With this adapter attached, CER drops to 6.01%. It reads one word crop at a time, and it is a research preview, not a product release.
 
-![Illustration of the core idea of ThakiOCR-Large-27B-R2B: We Fine-Tuned Qwen 27B for Korean Word OCR and Released It](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-hero.webp)
-*A visual metaphor for the article's key idea.*
-
 ## In plain terms
 
 Show a strong reader an unfamiliar handwritten note one word at a time and they will make mistakes. Often the problem is not that they cannot recognize the letters but that they add letters that are not there. This adapter is what you get after walking that reader through 12,800 handwritten, printed, and photographed word cards, once each, with one instruction: write down only the letters you see. The reader stays the same and only the habit changes, so we ship it as a small adapter file that sits on top of the base model.
 
-## The problem
+## Even a large model adds characters to handwritten Korean words
 
 Enterprise document processing has to turn Korean images of very different quality into text: handwritten application forms, printed forms, signs and labels photographed on site. Large vision-language models are good at describing image content. Before fine-tuning, however, they made many errors when transcribing handwritten Korean words. In our measurement, the Qwen3.6-27B base model had a CER of 37.77% on handwritten words (91 handwriting).
+
+![What the Qwen3.6-27B base model and the R2-B adapter return for the same word image](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-fig-io-en.webp)
+*An illustrative example of the output format and error type. The words are invented and do not come from training or evaluation data.*
+
+The input is an image of a single word cut out of a page, which this post calls a crop. The output should be only the text inside it. The base model often added characters that were not there.
 
 The research asked two questions.
 
 1. If we train only a LoRA on the decoder of a 27B model for word OCR, do errors drop compared with the base model?
 2. Does training that draws words with rare characters more often (R2-B) beat training that draws uniformly (R2-A)?
 
-## Model, data, and training
+## The vision side stays frozen; only the decoder gets an adapter
 
-The base model is `Qwen/Qwen3.6-27B` (revision `6a9e13bd6fc8f0983b9b99948120bc37f49c13e9`, Apache-2.0). The release is a LoRA adapter for this model and does not include the base weights.
+LoRA is a fine-tuning method that freezes the original weights and trains only a few small matrices added beside them. The base model is `Qwen/Qwen3.6-27B` (revision `6a9e13bd6fc8f0983b9b99948120bc37f49c13e9`, Apache-2.0). The release is a LoRA adapter for this model and does not include the base weights.
 
+![Architecture of the Qwen3.6-27B base model and ThakiOCR-Large-27B-R2B: vision encoder and merger frozen, LoRA on the decoder only](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-fig-arch-en.webp)
+*The vision encoder and merger stay as they are; LoRA is attached only to 496 decoder linear layers.*
+
+The training flow:
 
 ```mermaid
 flowchart TB
@@ -78,13 +86,13 @@ flowchart TB
 
 Training data came from three application-based datasets on AI-Hub, cut into word crops. After de-duplication the training pools were 149,980 crops (91 handwriting), 119,361 (605), 20,927 (91 printed), and 33,105 (105). The data and anything derived from it (crops, label files, subsets, samples) are not released and do not appear in this post.
 
-- AI 허브(AI-Hub) · 대용량 손글씨 OCR 데이터 (605), large-scale handwriting OCR data
-- AI 허브(AI-Hub) · 다양한 형태의 한글 문자 이미지 인식 데이터 (91), Korean character images in various forms
-- AI 허브(AI-Hub) · 야외 실제 촬영 한글 이미지 데이터 (105), Korean text photographed outdoors
+- AI-Hub · Large-scale handwriting OCR data (605)
+- AI-Hub · Korean character images in various forms (91)
+- AI-Hub · Korean text images photographed outdoors (105)
 
-## Performance against the baseline
+## Overall word error rate fell from 18.04% to 6.01%
 
-**Baseline**: the same Qwen3.6-27B without fine-tuning, with the same prompt (`이미지에 적힌 글자를 그대로 옮겨 적으세요. 글자만 출력하세요.`, "Transcribe the text in the image exactly. Output only the text.") and the same decoding settings. R2-A is a reference adapter trained under the same conditions with uniform sampling only.
+**Baseline**: the same Qwen3.6-27B without fine-tuning, with the same prompt (a fixed Korean instruction that means "Transcribe the text in the image exactly. Output only the text."; the exact string is in the code below) and the same decoding settings. R2-A is a reference adapter trained under the same conditions with uniform sampling only.
 
 **Evaluation set**: 2,400 word crops, 600 per source, drawn from the official Validation splits of the three datasets used for training. All three models were measured on the same 2,400 crops. Because it comes from the same datasets as the training data, it is not an independent test set.
 
@@ -108,11 +116,17 @@ The decision rules were pre-registered before we saw results. The 95% confidence
 
 We also checked for leakage. Train and evaluation share zero files by file hash, decoded-pixel hash, and source-image hash, and no 91-handwriting writer appears in both. Training images close to evaluation candidates (dHash ≤ 4 and pHash ≤ 8) were removed from training. The step-800 checkpoint was fixed in advance.
 
-## Error types and limits
+![Overall word CER on the fixed 2,400-crop development set: base 18.04%, R2-A 6.42%, R2-B 6.01%](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-fig-bars-en.webp)
+*Overall word CER on the same 2,400 crops with the same prompt. The gap to R2-A is small, so we read it as a weak result.*
+
+## Most of the gain came from no longer inventing characters
 
 The error diagnostics are descriptive only, without confidence intervals. We describe error types and rates and do not quote any source text or image.
 
 **The base model's main error was adding characters.** On 91 handwriting, the base model had 19.19% substitutions, 18.59% insertions, and 0 deletions. After fine-tuning, insertions almost disappeared (R2-A 0.08%, R2-B 0.15%), while substitutions stayed at 12.11% for both adapters. On 91 handwriting, most of the gain came from no longer inventing characters. Picking the wrong look-alike character is still there.
+
+![Insertion errors on 91 handwriting: base 18.59%, R2-A 0.08%, R2-B 0.15%](/assets/images/thakiocr-large-27b-r2b-qwen-korean-ocr-fig-bars-ins-en.webp)
+*Insertions almost disappeared, while look-alike substitutions remained.*
 
 **Digits and Latin characters improved the most.** Pooled CER by character class is below, computed after projecting both reference and prediction onto that class.
 
@@ -127,7 +141,9 @@ R2-B's gain over R2-A came mainly from digits, Latin characters, and characters 
 
 **Checks for misread numbers and amounts stop here.** The digit CER above is for digit characters inside word crops. We did not separately measure amount formats (commas, the won sign, units), date formats, or exact match of whole digit strings with this adapter. Workflows that handle amounts need separate checks, such as format validation or totals reconciliation, and we have not measured their effect yet.
 
-**Not verified**
+## Anything beyond a single word crop is still unmeasured
+
+This evaluation shows how well the model reads one word crop. The following was not verified.
 
 - It reads one word crop. Full pages, lines and paragraphs, tables, layout, and reading order were not evaluated.
 - The evaluation set comes from the same datasets as training. We do not know whether performance holds on new document types or new capture conditions.
@@ -137,7 +153,21 @@ R2-B's gain over R2-A came mainly from digits, Latin characters, and characters 
 - We did not compare against specialist OCR models under the same conditions and do not claim to be better than them.
 - English-only and mixed Korean-English inputs were not measured on their own.
 
-## What we know and do not know for operations
+## About 0.46 s per crop; throughput and cost are still unknown
+
+What we confirmed and what remains, in one table:
+
+| Item | Status |
+|---|---|
+| Overall word CER on the fixed dev set | ✅ base 18.04% → R2-B 6.01% |
+| Insertions on 91 handwriting | ✅ 18.59% → 0.15% |
+| Digit and Latin errors | ✅ digits 6.81% → 0.77%, Latin 25.18% → 5.76% |
+| Extra gain over uniform sampling (R2-A) | ⚠️ −0.41 pp, upper bound close to zero, weak result |
+| Amount and date formats, whole digit strings | ⚠️ not measured separately |
+| Full pages, tables, layout | ⚠️ not evaluated |
+| Throughput, concurrency, cost | ⚠️ not measured yet |
+
+The numbers that matter for operations:
 
 | Question | Current evidence |
 |---|---|
@@ -149,14 +179,14 @@ R2-B's gain over R2-A came mainly from digits, Latin characters, and characters 
 
 **On-premises operation** is possible as far as licensing and packaging go. Both the base model and the adapter are public Apache-2.0 weights, and the base model repository does not require access approval. If you download both and run them on your own GPU servers, the images you process do not have to leave your environment. We have not measured behavior or performance on hardware other than what is listed above.
 
-## Download and inference
+## Download it and run it with the fixed settings
 
 Use the settings below exactly. Other prompts, image sizes, and sampling settings were not evaluated. The base model's `generation_config.json` enables sampling by default, so pass `do_sample=False` explicitly.
 
 | Setting | Value |
 |---|---|
 | Base model | `Qwen/Qwen3.6-27B`, revision `6a9e13bd6fc8f0983b9b99948120bc37f49c13e9` |
-| Prompt (Korean, verbatim) | `이미지에 적힌 글자를 그대로 옮겨 적으세요. 글자만 출력하세요.` |
+| Prompt | Fixed Korean instruction meaning "Transcribe the text in the image exactly. Output only the text." Use the exact string from the code below |
 | Chat template | one user turn: image, then prompt; `add_generation_prompt=True`, `enable_thinking=False` |
 | Image size limits | `min_pixels = 64*64`, `max_pixels = 1024*1024` |
 | Decoding | greedy (`do_sample=False`), `max_new_tokens=64`, batch 1 |
@@ -191,19 +221,19 @@ print(processor.tokenizer.decode(out[0, inputs["input_ids"].shape[1]:], skip_spe
 
 After release, we downloaded the adapter without logging in and confirmed its hashes match the original. We then ran the public example code unchanged and confirmed that it reads one synthetic image we rendered ourselves (not AI-Hub data) correctly.
 
-## Using it on the platform, and how to reach us
+## Contact ThakiCloud about deploying it on your own GPUs
 
 ThakiCloud builds a platform for training models (Maxis), serving them (Metis), and connecting them to work (Paxis) in environments the customer controls. This adapter went through the same process: data lineage records, pre-registered evaluation, queue-based GPU training, hash verification, and reproduction from an anonymous download. For technical questions about deploying it on your own GPUs or re-evaluating it on your own documents, contact [ThakiCloud](https://thakicloud.com).
 
-## Related posts
+## Closing
+
+One adapter on the decoder of a 27B vision-language model sharply reduced its habit of inventing characters when reading Korean words. The extra gain from rare-character sampling was small, and full-document reading and serving cost are the next things to measure.
 
 Research on the same Korean word OCR task with a much smaller model is in the [ThakiOCR-KO-v1 post](/tech-blog/en/research/thakiocr-ko-v1-ovisocr3-korean-finetune/). The two posts use different evaluation sets and measurement conditions, so their numbers are not a ranking.
 
 - [ThakiOCR A: a 2.13M-parameter Korean-English line OCR](/tech-blog/en/research/thakiocr-a-small-korean-english-line-ocr/)
 - [ThakiOCR G2M: the second release, reading digits and symbols more accurately](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/)
 - [ThakiOCR A2: improvements and remaining limits on a 43,751-line independent evaluation](/tech-blog/en/research/thakiocr-a2-independent-eval-43751-lines/)
-
-## References
 
 - Model: [ThakiCloud/ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B) (Apache-2.0)
 - Base model: [Qwen/Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) (Apache-2.0)

@@ -26,10 +26,8 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/careq-fp32-master-low-bit-qat/"
 ---
 
-![Ultra-low-bit quantization and training precision](/assets/images/careq-fp32-master-low-bit-qat-hero.webp)
-*We traced how very small changes were being erased the moment they were stored*
-
-## Why read this
+![Why a 2.4-bit model stopped learning: BF16 rounding and an FP32 master](/assets/images/careq-fp32-master-low-bit-qat-fig-title-en.webp)
+*From 14.86% for our previous 2.4-bit checkpoint to 23.05% for the model trained with an FP32 master, both on the sealed GSM8K test*
 
 When you shrink a model and then train it again, you expect quality to come back. We did exactly that, and at some point training simply stopped improving. The cause was neither the data nor the objective. The number format used to store each change was so coarse that small changes vanished the moment they were written.
 
@@ -45,7 +43,10 @@ BF16 is like that ruler. Near the value 1, the gap between representable numbers
 
 An FP32 master is a second, much finer ruler kept on the side. Small changes accumulate in the FP32 copy, and only the forward pass uses a BF16 cast of it. Once the 0.1 mm changes add up to more than one mark, the BF16 value moves too.
 
-## Overview
+![Where one small update ends up](/assets/images/careq-fp32-master-low-bit-qat-fig-io-en.webp)
+*Adding a 1/10,000 update to a value near 1. These are illustrative values chosen to show the rounding, not measurements*
+
+## The loss kept falling while a scale parameter stood still
 
 Starting from the binary low-rank decomposition in [NanoQuant](https://github.com/SamsungLabs/NanoQuant), we built a format (internal name CareQ) that attaches a small low-rank residual to every linear layer. The goal was to bring Qwen3-1.7B-Base below 2.4 bits per weight, embeddings included, and to recover as much quality as possible by distilling from the BF16 original as teacher.
 
@@ -63,7 +64,7 @@ flowchart TB
     G[AdamW update] --> F
 ```
 
-## What the technique is
+## The 2.4-bit format is a 1-bit core plus a small residual
 
 Each of the 196 linear layers (28 blocks × q, k, v, o, gate, up, down) computes:
 
@@ -71,9 +72,9 @@ Each of the 196 linear layers (28 blocks × q, k, v, o, gate, up, down) computes
 y = NanoQuant(x) + F.linear(F.linear(x, rb), ra)
 ```
 
-`NanoQuant(x)` is the binary low-rank core: sign matrices packed at 1 bit per element, multiplied by row and column scales. `ra · rb` is a small low-rank residual. The embedding and LM head are tied and stored as a 4-bit embedding plus a rank-56 residual.
+`NanoQuant(x)` is the binary low-rank core: sign matrices packed at 1 bit per element, multiplied by row and column scales. `ra · rb` is a small low-rank residual. A low-rank residual approximates a large matrix as the product of two thin ones, a correction term that patches what the 1-bit core misses at a small byte cost. The embedding and LM head are tied and stored as a 4-bit embedding plus a rank-56 residual.
 
-During training the binary signs stay fixed, and only the scales and residuals are learned. The loss is centered on KL to the BF16 teacher, with next-token cross-entropy and hidden-state alignment added at small weights. The single file is 515,564,507 bytes; multiplying the file bytes by 8 and dividing by the total parameter count gives an effective BPW of about 2.4. Embeddings are counted, not excluded.
+During training the binary signs stay fixed, and only the scales and residuals are learned. Distillation trains the small model to imitate the output distribution of the original (the teacher), and KL measures how far apart the two distributions are. The loss is centered on KL to the BF16 teacher, with next-token cross-entropy and hidden-state alignment added at small weights. The single file is 515,564,507 bytes; multiplying the file bytes by 8 and dividing by the total parameter count gives an effective BPW of about 2.4. Embeddings are counted, not excluded.
 
 | Component | Bytes |
 |---|---|
@@ -85,7 +86,10 @@ During training the binary signs stay fixed, and only the scales and residuals a
 
 The FP32 master covers the 196 middle scales and the two residual factors, 16.5 million values in total. That is under 1% of the model, so the memory cost is small.
 
-## How we diagnosed it
+![Two containers for the update](/assets/images/careq-fp32-master-low-bit-qat-fig-arch-en.webp)
+*Top: the original path (K3 arm). Bottom: the FP32 master (D64-2 arm). Start, data, steps and learning rate are the same; only the update path differs*
+
+## Counting changed elements exposed the stall
 
 A falling loss does not tell you which parameters are doing the work. So we built two arms starting from the same checkpoint. One arm updates the BF16 parameters directly; the other updates them through an FP32 master copy. The starting checkpoint, data order, step count, loss, and learning rate were all identical; the only difference was the update path. The held-out measurements at the start were bit-identical between the two arms.
 
@@ -99,13 +103,16 @@ After running each arm for 1,000 steps (global step 1,500 to 2,500), we counted 
 
 In the BF16 arm, scale_mid was effectively frozen. More than half of the elements of the residuals ra and rb never changed either. In the FP32 master arm, nearly every element moved.
 
+![Share of elements that changed over 1,000 steps](/assets/images/careq-fp32-master-low-bit-qat-fig-bars-en.webp)
+*Two arms from the same checkpoint. scale_mid changed in 0.007% of elements with direct BF16 updates and 67.1% with the FP32 master*
+
 Quality followed. Held-out KL to the teacher was lower for the FP32 master arm on all three data sources (fineweb-edu, finemath, opc). A paired bootstrap over 192 sequences (10,000 resamples) put the difference at about 0.06, with a 95% confidence interval that excludes zero. The deployed BPW of the two arms matches to the third decimal place. The extra precision is used only during training, and the FP32 copy is not shipped in the file.
 
 In plain words: "Same model, same data, same size; we only changed the container that holds the updates, and training started moving again."
 
-## Results
+## From the same start, DEV correct answers rose from 36 to 59
 
-Based on the diagnosis, we continued training from the same starting point with the FP32 master to the end; that model is D64-2. It trained for 9,156 steps in total, and the segment after step 1,500 took 5.0 hours on a single B200. The promotion criteria were registered before training: BPW at or below 2.4, integrity when loaded from the packed file alone, C4 PPL, held-out KL, and GSM8K DEV accuracy. All six criteria passed on the DEV set.
+Based on the diagnosis, we continued training from the same starting point with the FP32 master to the end; that model is D64-2. It trained for 9,156 steps in total, and the segment after step 1,500 took 5.0 hours on a single B200. The promotion criteria were registered before training (pre-registration fixes the pass/fail rules before anyone sees the results): BPW at or below 2.4, integrity when loaded from the packed file alone, C4 PPL, held-out KL, and GSM8K DEV accuracy. All six criteria passed on the DEV set.
 
 The sealed GSM8K test (1,319 problems, 5-shot, strict match) was run exactly once, after the model and file were frozen.
 
@@ -122,6 +129,15 @@ The sealed GSM8K test (1,319 problems, 5-shot, strict match) was run exactly onc
 
 The controlled comparison is the K3 row. K3 started from the same checkpoint as D64-2 and saw the same data in the same order; the only difference is that its trainable parameters were stored in BF16. On DEV the gap between the two is +9.0 points, 95% CI [+3.5, +14.5]. Against P3, our previous 2.4-bit checkpoint, the test gap is +8.2 points (CI [+5.9, +10.5]). It is also 3.0 points higher on test than the 2.8-bit model that uses more bits. The P3 and P2-A comparisons, however, are between final models with different starting points and rank allocations, so they do not isolate the FP32 master effect.
 
+![GSM8K DEV correct answers](/assets/images/careq-fp32-master-low-bit-qat-fig-bars-dev-en.webp)
+*Strict-match correct answers on the 256-problem DEV set. Only K3 versus D64-2 is a controlled comparison from the same start*
+
+| Comparison | Controlled? | How to read it |
+|---|---|---|
+| D64-2 vs K3 (DEV) | ✅ same start, data and order | Can be read as the FP32 master effect |
+| D64-2 vs P3 (test) | ⚠️ different start and rank allocation | A comparison of final models |
+| D64-2 vs P2-A (test) | ⚠️ different bit budget too | Reference for quality per size |
+
 You can download and run the model right away. It is a research packed format, so it uses the loader included in the repository.
 
 ```bash
@@ -135,7 +151,7 @@ python load_careq.py .
 
 The loader verifies the SHA-256 first and rejects any pickle that references code before building the model.
 
-## What this means for ThakiCloud products
+## Causes like this surface only when small controlled runs are cheap
 
 This work ran on Metis, ThakiCloud's training and serving platform. Every training and evaluation run went into the Kueue queue as a batch job. An exit hook uploads outputs to internal S3 even if the job is evicted or times out. Each 1,000-step diagnostic arm took about one hour on one B200, and the whole post-hoc diagnosis used 2.6 GPU-hours. Finding causes like this one depends on being able to run small controlled experiments cheaply and often.
 
@@ -143,7 +159,7 @@ Ultra-low-bit models matter most in on-premises and sovereign environments. In a
 
 The diagnosis also left us with an operating rule. We now log "the fraction of elements that actually changed" per parameter group as a default metric for every low-bit training job. Monitoring that looks only at the loss curve could not catch this problem.
 
-## Limits and counterarguments
+## We could not isolate one cause, and the gap to the original is large
 
 - **Reasoning is far below the original.** GSM8K test at 23.1% is a long way from the BF16 original's 67.7%. ARC-Challenge, HellaSwag, and PIQA are also below the original. This is a research checkpoint, not a replacement for the original.
 - **One seed.** By pre-registered design we did no additional seed, rank, or data search. We make no claim about seed-to-seed variance.
@@ -152,8 +168,8 @@ The diagnosis also left us with an operating rule. We now log "the fraction of e
 - **One model, one architecture.** We measured the FP32 master effect only on Qwen3-1.7B-Base. Reproduction on LFM3-1.7B and Qwen3.5-4B, 9B and 27B is being verified now, and there are no results yet.
 - **Data and license are separate questions.** The model card lists where the training data came from. Whether each source's terms fit the license of the released weights is under separate review, and this post draws no conclusion on it.
 
-## Summary
+## Closing
 
 In ultra-low-bit QAT with a small learning rate, per-step updates can be smaller than BF16's representable gap and get erased by rounding. In our 2.4-bit model the scale parameters effectively did not change at all, and the loss curve did not show it. Updating the same parameters through an FP32 master brought the updates back, and in the controlled comparison GSM8K DEV rose by 9.0 points.
 
-If you train low-bit models, we recommend measuring "the fraction of elements that actually changed" per parameter group at least once. It costs almost nothing, and if the number is close to zero, that is a reason to check update precision before changing the data or the loss. As a next step, we plan to check whether the same effect appears in other architectures (hybrid attention, linear attention) and in larger models.
+If you train low-bit models, we recommend, as a first experiment, measuring "the fraction of elements that actually changed" per parameter group at least once. It costs almost nothing, and if the number is close to zero, that is a reason to check update precision before changing the data or the loss. As a next step, we plan to check whether the same effect appears in other architectures (hybrid attention, linear attention) and in larger models.

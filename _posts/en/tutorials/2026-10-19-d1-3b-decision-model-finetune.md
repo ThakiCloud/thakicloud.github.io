@@ -4,7 +4,7 @@ excerpt: "Liquid AI's d1-3B is a decision model: give it a state (text, JSON, im
 seo_title: "d1-3B decision model fine-tuning tutorial - TRL/Unsloth, your own data - Thaki Cloud"
 seo_description: "Fine-tune Liquid AI d1-3B (3.1B, single-forward-pass decision model) on your own data: system_one API, noul/choice/score question schema, TRL SFT and Unsloth notebook walkthroughs, LFM2.5-VL hybrid conv architecture inspection, ThakiCloud S3 onboarding, and agent-gate application perspective."
 date: 2026-10-19
-last_modified_at: 2026-10-19
+last_modified_at: 2026-11-09
 tags:
   - decision-model
   - liquid-ai
@@ -27,32 +27,26 @@ header:
   teaser: /assets/images/d1-3b-decision-model-finetune-hero.webp
 ---
 
-![Abstract visual of a decision model: streams of light converging into a single fork of typed choices](/assets/images/d1-3b-decision-model-finetune-hero.webp)
+![Title card for the d1-3B tutorial: a decision model with zero output tokens, 8 ms per decision on an RTX 4090](/assets/images/d1-3b-decision-model-finetune-fig-title-en.webp)
 
-## Why read this
+Routing a customer message to the right team, picking the next tool an agent should call, checking that a payment API call is safe before it goes out. Inside a product there are many places that need a short decision rather than a long answer. Until now we filled those places with a small chat model and parsed the sentence it wrote to pull a label out.
 
-For engineers who put a "decision" step in agent or service pipelines. Routing, triage, guardrails, LLM-as-judge scoring: the goal is "picking," not "writing an answer," and the standard tool so far has been calling a small chat model, generating text, and parsing it. Conclusion first: **a decision model is a different species that moves the parsing step inside the model, and fine-tuning d1-3B is just "SFT where the completion is a single token," so it finishes in about 30 minutes on free GPU.** This post includes the model architecture we verified by downloading the weights, the question schema, the two fine-tuning notebooks (TRL, Unsloth), and our internal S3 onboarding.
+Liquid AI's d1-3B is built for exactly those places. It does not write a sentence; it returns a probability for each question. It produces zero output tokens and takes 8 ms per decision on an RTX 4090. Training is light too. Because the answer is a single token, you can fine-tune it on your own labels in about 30 minutes on a free GPU.
 
-## Overview
+This post starts with the shape of the values d1-3B returns, opens up the model, and then walks through fine-tuning it along two paths, TRL and Unsloth.
 
-A tweet by Leonie, a DevRel engineer at Liquid AI, went viral: two notebooks that show "how to fine-tune a decision model on your own data," covering (1) how to prepare the training data and (2) how to fine-tune d1-3B with your own labels, via TRL and Unsloth.
+## Three question types that return probabilities instead of sentences
 
-d1-3B itself is an open model from Liquid AI's "system one" decision-model line. Its Hugging Face model card records it as the best decision model under 10B on Decision Index 0.2.1 (48.57), below 12B Winnow (50.02) but above 36B Decider 35B-A3B (47.11). One decision takes 8ms on an RTX 4090, and packing 64 states into one pass gives 475 decisions per second.
+You give d1-3B two inputs: the **state** you want judged (text, JSON and images can be mixed) and a **list of questions**. Each question uses one of three types.
 
-| Metric | d1-3B |
-|---|---|
-| Parameters | 3.12B (base LFM2.5-VL-3B) |
-| Context | 32,768 tokens |
-| Output tokens | 0 (single forward pass) |
-| Decision Index 0.2.1 | 48.57 (best under 10B) |
-| 4090 latency | 8ms/decision (compiled) |
-| License | lfm1.0 (custom) |
+![The shape of the value returned when the same customer message is sent to the noul, choice and score question types](/assets/images/d1-3b-decision-model-finetune-fig-io-en.webp)
+*You can ask all three questions about the same message at once. The values in the figure illustrate the format and are not measurements.*
 
-## What a decision model is
+A noul question is yes/no and returns the probability of "yes". A choice question picks among options and returns a probability for each option. A score question places the input on an ordered scale such as "can wait → today → blocking now" and returns the expected position.
 
-The difference between a chat model and a decision model is the output. A chat model generates a token sequence. d1-3B takes a state (text, JSON, images, or a mix) plus a list of questions, answers all of them in **one forward pass**, and emits zero output tokens. Answers are typed values: a yes/no probability, a probability distribution over choices, an expected ordered level.
+Since the values arrive as numbers, you can wire them straight into service code. Send the ticket to the billing team when the billing probability is above 0.9, and hand it to a person when it hovers around 0.5. No parser, and no parse-failure handling.
 
-The real usage example on the model card throws three questions at a single customer-support ticket.
+Here is the example from the model card, unchanged.
 
 ```python
 import torch
@@ -63,10 +57,7 @@ model = AutoModel.from_pretrained(
 ).to("cuda")
 
 questions = {
-    "refund": {
-        "type": "noul",
-        "instructions": "Is the customer asking for a refund?",
-    },
+    "refund": {"type": "noul", "instructions": "Is the customer asking for a refund?"},
     "team": {
         "type": "choice",
         "instructions": "Which team should handle this?",
@@ -88,93 +79,68 @@ print(model.system_one(
 ))
 ```
 
-Questions come in three types. `noul` returns the yes/no probability (P(yes)), `choice` returns one of the named options with its probability distribution, and `score` returns an expected level over 2 to 10 ordered levels. Putting your domain options and descriptions in `criteria` is the core of fine-tuning, and that schema is the shape of the training data.
+The descriptions you write in `criteria` are the options. When you fine-tune later, this same schema becomes the shape of your training data.
 
-How the "decision" is produced matters. The model does not write text; it reads the next-token probability at the answer slot, normalized across the choice-code tokens, and that reading is the answer. No generation loop, zero output tokens, 8ms.
+## No sentence to write means no parser to maintain
 
-### The question-and-state flow
+Doing the same decision with a chat model takes a longer path. The model writes a sentence like "This belongs to the billing team…" one token at a time, and then a regex or JSON validator reads that sentence back to extract a label. The extracted label carries no probability, so you cannot tell how confident the model was.
 
-```mermaid
-flowchart TB
-    S["State<br/>text, JSON, images mixed"] --> Q["Question list<br/>noul, choice, score"]
-    Q --> FWD["One forward pass<br/>zero output tokens"]
-    FWD --> P1["Next-token probability<br/>at the answer slot"]
-    P1 --> NORM["Normalized over<br/>choice-code tokens"]
-    NORM --> OUT["Typed answer<br/>probability, distribution, expected level"]
-```
+![The generate-and-parse path of a small chat model compared with the single-forward-pass path of d1-3B](/assets/images/d1-3b-decision-model-finetune-fig-arch-en.webp)
+*Top: a chat model writes its answer as a sentence and the sentence is parsed again. Bottom: d1-3B passes through the model once and reads only the probabilities at the answer slot.*
 
-*The path where a state and questions converge into a typed answer in one forward pass*
+d1-3B runs the model exactly once (a single forward pass). At the position where the answer goes, it reads the probability of each possible next token, renormalizes over the option tokens, and uses that as the answer. There is no generation loop, so there are zero output tokens, which is where the 8 ms comes from.
 
-## What is inside d1-3B
+The architecture leans toward speed as well. We downloaded the weights and read `config.json` ourselves: the text stack has 30 layers, 22 of which are convolution (conv) layers that look at a short window, and only 8 are attention layers that see the whole context. Attention cost grows quadratically with input length; conv layers do not. That is why it stays fast while accepting a 32,768-token context.
 
-Before installing anything, we downloaded the weights and read config.json directly. The reason `trust_remote_code=True` is required is that the model ships its own code (`modeling_d1.py`, `D1Model`). What that code and the config show:
+| Item | d1-3B |
+|---|---|
+| Base model | LFM2.5-VL-3B (3.1B, vision-language) |
+| Layers | 30 = 22 conv + 8 attention |
+| Image encoder | SigLIP2 NaFlex 400M (one image → 64–256 tokens) |
+| Context length | 32,768 tokens |
+| Languages | 16 (including Korean) |
+| License | lfm1.0 (custom, not Apache-family) |
 
-- **Base**: LFM2.5-VL-3B (3.1B vision-language). The text backbone is a 30-layer LFM2, hidden 2048, GQA (32 heads / 8 KV heads), vocab 128,000
-- **Hybrid layers**: 22 of the 30 layers are conv recurrent layers, only 8 are full attention (roughly every 5th layer). LFM2's signature conv+attention mix, so long states do not push attention cost linearly
-- **Vision encoder**: SigLIP2 NaFlex 400M. One image compresses to 64 to 256 tokens, and text, JSON, and images enter the same state
-- **Multilingual**: 16 languages (ar, zh, en, fr, de, hi, id, it, ja, ko, pl, pt, ru, es, th, vi)
-- **Context**: 32,768 tokens
-- **dtype**: bfloat16, recorded against transformers 5.14.1
+## A 3B model that out-decides a 36B MoE
 
-The performance tables on the model card are also worth reading as decisions. SQuAD 2.0 at 85.3, MASSIVE intent at 87.3, BoolQ at 86.7, XNLI at 85.0: public benchmarks reframed as decision problems, at a class apart from Decider 4B. The 11 image benchmarks average 74.1, on par with the base model (73.9), and with images removed the score drops to 45.1, a verification that the answers actually come from the images.
+Decision quality is measured with the Decision Index. On the 0.2.1 scores published in the model card, d1-3B gets 48.57. That is 1.5 points below the 12B Winnow (50.02) and above the 36B MoE Decider 35B-A3B (47.11).
 
-## Fine-tuning on your own data
+![Decision Index 0.2.1 comparison: Winnow 50.02, d1-3B 48.57, Decider 35B-A3B 47.11](/assets/images/d1-3b-decision-model-finetune-fig-bars-en.webp)
+*Decision Index 0.2.1, numbers from the model card. The x-axis starts at 40.*
 
-Leonie's two notebooks live in `finetuning/notebooks/` of the `Liquid4All/cookbook` repository.
+Speed depends on the device. Replaying the per-decision latency from the model card at real speed makes the gap easy to see.
 
-- **TRL path**: `sft_for_decision_models_with_trl.ipynb`
-- **Unsloth path**: the companion notebook in the same folder
+<figure class="fig-video"><video src="/assets/images/d1-3b-decision-model-finetune-fig-race-en.mp4" poster="/assets/images/d1-3b-decision-model-finetune-fig-race-en.webp" autoplay muted loop playsinline preload="metadata" aria-label="Animation replaying per-decision latency on four devices at real speed"></video><figcaption>RTX 4090 8 ms, Jetson AGX Thor 16 ms, Apple M5 Pro 30 ms and Jetson Orin Nano 50 ms (model card numbers), replayed at real speed for 8 seconds. These are one-request-at-a-time values; batching 64 requests together reaches 475 decisions per second on the 4090.</figcaption></figure>
 
-Both follow the same procedure. The difference is the install stack and speed.
+What stands out is that even an edge board finishes one decision within 50 ms. You can attach a decision model directly to devices outside the datacenter, such as factory cameras or store terminals.
 
-### Step 1. Prepare the data
+## Four steps to fine-tune on your own data
 
-One row of training data is (state, question schema, label). In the customer-support example, the ticket body is the state, the question is the `team` choice schema seen above, and the label is "billing." Writing your domain options and descriptions in `criteria` is all there is to it, and on the TRL path the completion is one choice-code token, so it fits standard SFTTrainer data handling.
+Liquid AI published two notebooks (`finetuning/notebooks/` in `Liquid4All/cookbook`), one for the TRL path and one for the Unsloth path. The procedure is the same; only the install stack and memory use differ.
 
-The core is not volume but **option-description quality**. If `criteria` descriptions are ambiguous, the model answers ambiguously, and calibration gets tangled too.
+**Step 1, prepare the data.** Each training row is (state, question schema, correct label). The quality of the option descriptions matters more than volume. If you only write "billing: charges and refunds", a message like "the in-app payment screen goes blank" splits its probability between billing and technical. Adding a sentence or two about which phrasings belong where, and mixing such borderline cases into the data, decides most of the quality.
 
-### Step 2. Fine-tune (TRL path)
+**Step 2, train with TRL.** After `pip install "transformers>=5.14" torch torchvision pillow`, the notebook puts LoRA on top of d1-3B and runs SFT. The bf16 weights are a little over 6GB, so they fit comfortably on a 24GB GPU, and the notebook author reports that a run takes about 30 minutes. The model ships its own chat template in code, so you do not need a separate data-conversion script.
 
-```bash
-pip install "transformers>=5.14" torch torchvision pillow
-```
+**Step 3, or train with Unsloth.** It combines 4-bit loading with LoRA to run the same process on a smaller GPU. One point is easy to confuse: the Unsloth doc "Train your own Decision Model" is not about training d1. It is a separate feature that attaches a decision head to another LLM such as Qwen. To train d1-3B, follow the cookbook notebook.
 
-The one install line the model card requires. Inside the notebook, LoRA is attached to d1-3B as base and SFT runs, finishing in about 30 minutes on free GPU (24GB-class), per Leonie. A 3.1B model in bf16 is just over 6GB, so training LoRA alone fits 24GB with room to spare.
+**Step 4, verify.** After training, you still call `system_one` the same way. On your own test set, check whether the probabilities separate. If clear billing tickets gather near 0.9 and clear technical tickets near 0.1, training worked; if many tickets bunch around 0.5, revisit the option descriptions or the data.
 
-### Step 3. Fine-tune (Unsloth path)
+We have not run the fine-tune ourselves yet. We uploaded the 15 weight files (6.27GB) to our internal dev S3 and verified the structure; reproducing training on the cluster is running as a separate job.
 
-The Unsloth path repeats the same process with 4bit plus LoRA in less VRAM. One caveat: the Unsloth docs entry "Train your own Decision Model" covers a **separate feature that attaches a decision head to your own LLM (Qwen family, etc.)**, not the d1 line. For fine-tuning d1-3B, the cookbook notebooks are the right path; confusing the two tangles the stack.
+## In Paxis it slots into the policy gate
 
-### Step 4. Verify
+ThakiCloud's agent platform, Paxis, sends an agent through a policy gate before it calls an external tool. If a chat model makes that call, every invocation pays for sentence generation and carries parse-failure risk. With d1-3B, "Does this payment call comply with policy?" becomes a single noul question, and its probability is compared directly with the gate threshold. Because the verdict is a number, it can go straight into the audit log.
 
-The fine-tuned model keeps the same `system_one` API. Run your domain test set through (state, question) pairs and check that the choice probability distribution lands on the expected label and that confidence separates. Because d1-3B claims to be "calibrated," probability reliability is easier to audit than in a normal chat model.
+On the serving side, 3.1B in bf16 uses little GPU memory, so it can run as a customer-dedicated gateway on the Telox GPU cloud or be pushed down to edge devices at the customer site. Before deployment, though, check the commercial redistribution terms of the lfm1.0 license in the original text.
 
-### Reproduction status (honestly)
+## Four things to know before you use it
 
-We have not run the fine-tune itself yet. The recipe targets Colab/free GPU, so running it on our cluster needs a separate GPU job pinning transformers 5.14.1 and wiring the d1 custom modeling-code load path. Onboarding is done, though: all 15 weight files (6.27GB) were uploaded and verified to ThakiCloud's dev S3 store (`objects3-dev.thakicloud.net`, `ai-platform/global/models/liquidai/d1-3B/`), and the config inspection above was performed against those files. The fine-tune reproduction is split off as a follow-up job.
+First, the license is a separate agreement called lfm1.0. When you distribute a fine-tuned model, confirm whether the original license terms carry over. Second, not writing sentences is both the strength and the limit: it cannot do work that produces text, such as summaries or conversation. Third, the context is 32K, so judging a long document as a whole needs splitting or retrieval in front. Fourth, the claim that its probabilities are well calibrated rests on the official benchmark. Re-check it on a test set from your own domain.
 
-## ThakiCloud product implications
+## Closing
 
-### Paxis lens (agents)
-
-The most expensive cost in an agent loop is "every decision is written as text by a big model." Routing, triage, guardrails, judge scoring are all "picking" tasks, exactly where a decision model fits. d1-3B at 8ms on a 4090, 475/s packed, means Paxis workflows can reduce a "pre-stage gate" to a single model call while keeping latency in milliseconds. Deciding one ticket before an agent makes ten tool calls is cheaper with one d1 pass than one chat-model generation, and the typed, parse-free answer keeps downstream safe.
-
-### ai-platform lens (serving)
-
-3.1B bf16 uses about a third of a single GPU's VRAM, so it works both as a customer-dedicated gateway on Telox GPUaaS and as on-prem edge (the model card records Jetson AGX Thor at 262/s, Orin Nano at 38/s). One thing to check before deployment: the license is lfm1.0 (custom). Since it is not an Apache family license, verify commercial redistribution terms against the license text; our platform recommends confirming this first in customer on-prem cases.
-
-## Limits and counterarguments
-
-Four points.
-
-1. **License.** lfm1.0 is a custom license. "Open-weight" with a different contract than Apache 2.0; confirm whether fine-tuned model redistribution inherits the original terms.
-2. **Zero output is a strength and a boundary.** It cannot produce free text (summaries, generation, dialogue). It is for decision slots only.
-3. **32K context.** If the state is a whole long document, chunking or external RAG must sit in front.
-4. **Calibration is scorer-dependent.** Decision Index scores come from the official scorer; re-check probability calibration on your own test set.
-
-## Takeaway
-
-A decision model is a design that replaces "small chat model plus parsing" with "one pass of typed output." d1-3B is the open-weight model that ships that design at its current top spec (best under 10B on Decision Index, 8ms, 32K, 16 languages), and fine-tuning it is SFT with a one-token completion, so data preparation is everything. If you have a gate slot in an agent loop, the cheapest experiment this week is running the cookbook notebook on Colab. Our cluster onboarding is complete through dev S3, and the fine-tune reproduction plus lfm1.0 license review continue as the next job.
+Swapping the chat model in a decision slot for d1-3B removes the parser, brings latency down to milliseconds, and leaves every decision as a probability. The cheapest first experiment: pick one decision slot, write a one-sentence description for each option, label 50 to 100 borderline cases, train once with the cookbook's TRL notebook, and see whether the probabilities separate. It takes a day.
 
 ### Sources
 

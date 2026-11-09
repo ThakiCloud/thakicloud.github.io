@@ -4,7 +4,7 @@ excerpt: "We scored four SecProof models, which judge permission boundaries in a
 seo_title: "Thaki-SecProof 2B, 4B, 8B, 27B sealed results and the Paxis security agent - ThakiCloud"
 seo_description: "Thaki-SecProof is a family of LoRA-tuned Qwen-family code security judges. On a single sealed run over held-out template families, 4B and 27B passed all eight gates (G1 to G7, with G4 split into G4a and G4b), 2B failed G4a and 8B failed G4b. In a Paxis test, 4B and 8B caught a tenant isolation bug that 2B missed, and all three Previews over-confirmed an undecidable case."
 date: 2026-10-25
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-09
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -25,7 +25,13 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/secproof-2b-paxis-security-agent/"
 ---
 
-This post is for development and security teams thinking about putting an LLM into code security review. The short version: we scored four SecProof models once each on template families they never saw in training. 4B and 27B cleared all eight gates we had fixed in advance, and 2B and 8B each missed one. Based on that and a small Paxis test, we decided to make 4B the default model of the Paxis security analysis tool in our internal development environment. That is a decision for an internal environment, not a product release, and the section on next steps separates what is done from what is still planned. Either way, the model's answer is something to verify, and execution rights stay with the Paxis sandbox, policy and human approval.
+![Title card for the sealed SecProof 2B, 4B, 8B and 27B results and the Paxis security analysis model choice. 4B and 27B passed all eight gates](/assets/images/secproof-2b-paxis-security-agent-fig-title-en.webp)
+
+Code that lets an agent call tools is full of boundaries people miss. Is an approval token used once and thrown away? Does retrieval mix in another tenant's documents? Does a secret leak into a response? This post is for development and security teams thinking about putting an LLM into that kind of review.
+
+We scored four SecProof models once each on template families they never saw in training. 4B and 27B cleared all eight gates we had fixed in advance, and 2B and 8B each missed one. Based on that and a small Paxis test, we decided to make 4B the default model of the Paxis security analysis tool in our internal development environment.
+
+That is a decision for an internal environment, not a product release, and a later section separates what is done from what is still planned. Either way, the model's answer is something to verify, and execution rights stay with the Paxis sandbox, policy and human approval.
 
 All four models are public LoRA adapters on Qwen-family base models:
 
@@ -34,13 +40,13 @@ All four models are public LoRA adapters on Qwen-family base models:
 - [Thaki-SecProof-8B-Preview](https://huggingface.co/ThakiCloud/Thaki-SecProof-8B-Preview) (Research Preview, base Qwen3-8B)
 - [Thaki-SecProof-27B-V1](https://huggingface.co/ThakiCloud/Thaki-SecProof-27B-V1) (passed V1, base Qwen3.8-27B; public since 2026-10-26)
 
-## In plain terms
+## The X-ray officer speaks; someone else opens the bag
 
 Think of an airport security checkpoint. SecProof is the officer reading the X-ray screen. It says "open this bag" or "this one is fine" and points at the part of the image it looked at. But when the officer says "fine", the bag does not go straight onto the plane. If something looks off, a second officer opens the bag (the sandbox test), and the checkpoint rules and a supervisor decide whether it passes (Paxis policy and human approval).
 
 This evaluation tested the X-ray officer on bag types they had never seen. The test bags still came from the same factory, though, so there is no guarantee the scores carry over to real bags at a real airport.
 
-## What the model does and does not do
+## It judges 12 named boundaries and never answers "safe"
 
 SecProof does not look for SQL injection or general CVEs. It was trained on small synthetic Python AI-agent runtime repositories to judge only 12 named boundaries.
 
@@ -51,9 +57,12 @@ SecProof does not look for SQL injection or general CVEs. It was trained on smal
 
 The output is one fixed JSON object. The verdict is `confirmed`, `needs_validation` or `rejected`, with file and line evidence. There is no "safe" output. In this post a "false confirm" means answering `confirmed` on safe code. The cards list general CVE hunting, memory-safety bugs, non-Python code, large real-world repositories and any other boundary as out of scope.
 
-## Sealed evaluation: 4B and 27B pass, 2B and 8B fall short
+![The shape of the confirmed, rejected and needs_validation verdicts. confirmed comes with file and line evidence such as app/search.py:10](/assets/images/secproof-2b-paxis-security-agent-fig-io-en.webp)
+*The left card is the expected answer for the hand-written example in every public repository. The middle and right inputs are made up to show the format and are not measured.*
 
-The development set (DEV) comes from the same templates as the training data, so a high score there only means the model learned this task family. We therefore held 6 of the generator's 60 template families out of training and DEV from the start, and opened them once, on 2026-10-26, after every model had been selected. The pass criteria were also fixed before any result was seen: eight gates, G1 to G7, with G4 split into G4a and G4b. The test mixes vulnerable code, already-fixed code, code with no basis for a decision, and decoys. A decoy is code that looks risky but actually has a guard in place, so it is safe.
+## On unseen templates, 4B and 27B cleared all eight gates
+
+The development set (DEV) comes from the same templates as the training data, so a high score there only means the model learned this task family. A sealed evaluation is a test set locked away until the end and scored only once. We therefore held 6 of the generator's 60 template families out of training and DEV from the start, and opened them once, on 2026-10-26, after every model had been selected. The pass criteria were also fixed before any result was seen: eight gates, G1 to G7, with G4 split into G4a and G4b. The test mixes vulnerable code, already-fixed code, code with no basis for a decision, and decoys. A decoy is code that looks risky but actually has a guard in place, so it is safe.
 
 | Gate | What it checks | 2B | 4B | 8B | 27B |
 |---|---|---|---|---|---|
@@ -67,9 +76,15 @@ The development set (DEV) comes from the same templates as the training data, so
 | G7 | Output format (sealed T1 / T4) | pass (1.0 / 1.0) | pass (1.0 / 1.0) | pass (1.0 / 1.0) | pass (1.0 / 1.0) |
 *Every result is a single run: one training run, scored once. Numbers are from each model card.*
 
+![G4a decoys answered confirmed out of 239: 2B 5, 4B 0, 8B 30, 27B 0](/assets/images/secproof-2b-paxis-security-agent-fig-bars-en.webp)
+*8B confirmed 30 decoys and still passed G4a; 2B confirmed only 5 and failed, because it could not be shown better than its base model. The gate looks at the comparison with the base model, not just the count.*
+
 ### What the two Previews did not pass
 
 2B passed seven of the eight gates and failed G4a on one condition only. Its decoy false-confirm rate was low (5 of 239, 0.021, Wilson upper bound 0.048) and within the absolute limits. But the base Qwen3.5-2B itself rarely confirms decoys (0.050), and the gate also requires the adapter to be shown better than the base. The upper end of the confidence interval for the difference came out at +0.004, above zero, so that part failed. 2B also answered `rejected` on the hand-written example that ships with every repository, where the correct answer is `confirmed`; its rationale claimed the search filters by tenant, which the code does not do.
+
+![G4b already-fixed code called vulnerable out of 39: 2B 0, 4B 0, 8B 4, 27B 0 (limit 3)](/assets/images/secproof-2b-paxis-security-agent-fig-bars2-en.webp)
+*The 0.10 limit allows 3 of 39. Only 8B went over, with 4.*
 
 8B passed seven of the eight gates and failed G4b. It called 4 of 39 already-fixed cases vulnerable (0.103), over the limit of 0.10, which allows 3. It had already called safe code vulnerable in 4 of 141 DEV cases, and the same weakness came out larger on the held-out families. 8B also sits on a different base family from the others: Qwen3-8B with dense attention, while 2B, 4B and 27B use the Qwen3.5-style hybrid architecture. So 8B is not "a larger 4B", and its results say nothing about size alone.
 
@@ -79,7 +94,7 @@ Neither model will be retrained. Both stay as Research Previews, not production-
 
 4B and 27B passed all eight gates. They also sit at the ceiling on almost every sealed and DEV metric, which means this test cannot tell them apart; the 27B card says to choose between them on your own code. On DEV, 5 of 27B's 6 checkpoints scored perfectly, so step 300 was picked by the pre-registered "earliest step wins a tie" rule. A pass means the pre-registered numeric bar was met on synthetic code, nothing more.
 
-## In Paxis: a missed vulnerability and an over-confident answer
+## In Paxis, 2B missed a vulnerability and all three over-confirmed
 
 Separately from the scores, we plugged the three Preview models into the Paxis security analysis tool under identical conditions: the same input, the same prompt, the same Docker sandbox with networking disabled, and the same reconciliation table. Each model ran three times, and all three runs gave the same verdicts. 27B was not part of this test.
 
@@ -95,7 +110,7 @@ All three models got the second case wrong. They answered `confirmed` even thoug
 
 An earlier version of this post also quoted rough model call latencies for the three Previews. They were measured with the three models sharing one GPU, without the conditions needed to repeat them, and no model card reports latency, so we removed them. Measure latency on the hardware you will actually use.
 
-## How to use it
+## Three rules for matching the model card results
 
 This is the quick start from the [4B card](https://huggingface.co/ThakiCloud/Thaki-SecProof-4B-Preview). The 2B, 8B and 27B cards give the same commands with the repository name changed.
 
@@ -115,7 +130,10 @@ Three details decide whether your results look like the cards'.
 
 The bundled example is a hand-written repository whose search ignores the tenant argument. The expected answer is `confirmed` with evidence at `app/search.py:10`. 4B, 8B and 27B gave that answer in the release checks on their cards; 2B answered `rejected`. Use it as a smoke test after you load a model, not as proof that the model works on your code.
 
-## Next steps in Paxis
+## SecProof is one of six steps in Paxis security analysis
+
+![Stopping at the model verdict compared with Paxis treating the verdict as a lead and running it through sandbox, policy, human approval and audit logs](/assets/images/secproof-2b-paxis-security-agent-fig-arch-en.webp)
+*Top: the verdict is the conclusion. Bottom: Paxis treats the verdict as a lead. The sandbox is an isolated execution environment that reproduces the flagged vulnerability and tests the patch.*
 
 ```mermaid
 flowchart LR
@@ -149,7 +167,7 @@ Where things stand as of 2026-11-01:
 
 For the wider background, see [the agent control plane post](https://www.thakicloud.com/tech-blog/en/agentops/enterprise-agents-need-control-plane/) and the [Paxis docs](https://docs.thakicloud.com/ko/paxis/).
 
-## What these numbers do not tell you
+## Five things these numbers do not tell you
 
 - **The sealed test is synthetic code too.** It uses template families the models never trained on, but the same generator. 4B and 27B passing means they cleared pre-set numeric criteria. It does not show how they perform on real enterprise code or whether they are safe in operation.
 - **Everything is a single run.** One training run and one sealed scoring per model. Seed variance was not measured.
@@ -157,11 +175,11 @@ For the wider background, see [the agent control plane post](https://www.thakicl
 - **T4 and T5 verdicts carry a task-type cue.** Every T4 gold verdict is `confirmed` and every T5 gold verdict is `rejected`, so for patches the meaningful number is the sandbox pass rate.
 - **The Paxis comparison covers two cases and three models.** That is not enough to rank model sizes or to claim production safety.
 
-## Data and licence
+## Data stays private; the adapters are Apache-2.0
 
 The training and evaluation data are not released. The repositories come from an in-house deterministic generator with no third-party source code and no personal data, and every secret-looking value is a fake `FAKE-TENANT-*` token. Labels come from the generator's ground truth and sandbox execution, not from a model. The adapters and their code are Apache-2.0, and so are the base models.
 
-## Summary
+## Closing
 
 Of the four SecProof models, 4B and 27B cleared all eight pre-set gates on templates they never trained on. 2B and 8B each failed one gate and stay as Research Previews. In a Paxis test, 4B found the tenant isolation bug that 2B missed, so we decided to make it the default of the internal analysis tool. All three Previews still over-confirmed code they could not actually judge, which is why the sandbox, policy and human approval stay in place.
 
@@ -171,6 +189,7 @@ If you want to try it, start with 4B: run the quick start above, check the bundl
 
 ## Update log
 
+- **2026-11-09:** Added figures for the verdict format, the path comparison and the G4a and G4b counts, and rewrote headings as claims. No numbers changed.
 - **2026-11-01:** 27B is public as Thaki-SecProof-27B-V1 (since 2026-10-26); removed "being prepared for release" and added the link.
 - **2026-11-01:** Gate count corrected to eight (G1 to G7, with G4 split into G4a and G4b), and a per-gate table for all four models added.
 - **2026-11-01:** Described the pre-registration deviation as the model cards do: the first sealed submission of every model stopped without output, and only the 2B job needed one more rerun. The earlier text said the jobs "failed to finish twice".

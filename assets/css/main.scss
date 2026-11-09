@@ -1859,3 +1859,13 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
 @media print {
   .thaki-ad, .thaki-toc { display: none !important; }
 }
+
+/* Figure kit (blog_figure.py) — 정보형 도표·움직이는 자료 (2026-11-09) */
+.page__content figure.fig-video { margin: 2rem 0; }
+.page__content figure.fig-video video {
+  display: block; width: 100%; height: auto;
+  border-radius: 12px; background: #000;
+}
+.page__content figure.fig-video figcaption,
+.page__content figure figcaption { font-size: .85em; color: #6e6e73; margin-top: .5rem; text-align: center; }
+.page__content img[src*="-fig-"] { border-radius: 12px; }

@@ -30,7 +30,7 @@ import sys
 # 1) markdown image/link:  ](/assets/PATH)  or  ](/assets/PATH "title")
 MD_RE = re.compile(r'\]\((/assets/[^)\s]+)')
 # 2) raw html:  src="/assets/PATH"  src='/assets/PATH'
-HTML_RE = re.compile(r'''(src|href)=(["'])(/assets/[^"']+)\2''')
+HTML_RE = re.compile(r'''(src|href|poster)=(["'])(/assets/[^"']+)\2''')
 
 INLINE_CODE_RE = re.compile(r'`[^`]*`')
 

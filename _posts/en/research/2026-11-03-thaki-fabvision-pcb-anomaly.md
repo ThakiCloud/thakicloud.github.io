@@ -24,12 +24,14 @@ reading_time: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/thaki-fabvision-pcb-anomaly/"
 ---
+![Title card for an anomaly detector that learns only normal PCB photos and points to defects. Image AUROC mean 0.978](/assets/images/thaki-fabvision-pcb-anomaly-fig-title-en.webp)
+*The mean image-level score (image AUROC) on the official VisA PCB1 to PCB4 test split is 0.978.*
 
-We trained a model on photos of normal PCBs only, and it picks out defective boards and marks where the defect is. This is for manufacturing engineers working on visual inspection, and for teams that cannot collect enough defect photos. On the test split of four PCB categories in the public VisA benchmark, its mean image-level score (image AUROC) was 0.978.
+Most circuit-board photos an inspector looks at every day are fine. Defect photos are rare, and a new kind of defect shows up without warning. Try to teach a classifier with photos of every defect type, and by the time the photos are in, the line has already changed.
 
-That number comes from VisA photographs. We have not measured it on a real SMT production line or with a different camera. The model is public on [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-FabVision-PCB-Anomaly) as a Research Preview, and this post covers what it did and what we still do not know.
+So we trained a model on photos of normal PCBs only, and it picks out defective boards and marks where the defect is. This is for manufacturing engineers working on visual inspection, and for teams that cannot collect enough defect photos. Its scores on four board categories of a public benchmark are in the table below.
 
-## Key numbers
+Those numbers come from VisA photographs. We have not measured it on a real SMT production line or with a different camera. The model is public on [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-FabVision-PCB-Anomaly) as a Research Preview, and this post covers what it did and what we still do not know.
 
 | Metric | Value (VisA PCB1-4 official test, mean of 4) |
 |---|---|
@@ -43,15 +45,21 @@ That number comes from VisA photographs. We have not measured it on a real SMT p
 
 *All numbers come from a single evaluation of the official VisA PCB1-4 test split after the model and threshold were fixed. They do not carry over to a real SMT line.*
 
-## Why we built a PCB visual anomaly detector
+## In plain terms
 
-In PCB visual inspection, defect photos are the hardest thing to collect. The better a line runs, the rarer defects become, and new defect types appear without warning. Collecting hundreds of photos per defect type to train a classifier tends to finish after the line has already changed.
+Picture a bank teller who has handled countless genuine banknotes. The teller never studied counterfeits, yet stops the moment a note feels different, and can point to the spot that feels wrong. This model works the same way. It learns what a normal board looks like from normal photos only, then marks the spots in a new photo that depart from it.
+
+But a teller who has only handled one bank's notes of one currency can be fooled by foreign money. This model, too, has only seen four board types from one public dataset. The sections below show that with numbers.
+
+## Defect photos are always scarce, normal photos pile up daily
+
+In PCB visual inspection, defect photos are the hardest thing to collect. Collecting hundreds of photos per defect type to train a classifier tends to finish after the line has already changed.
 
 Photos of normal boards, on the other hand, pile up every day. So we chose to learn only what a normal board looks like and flag the places that depart from it. It is the same idea as an experienced inspector who has never seen a particular defect but still notices that something looks off.
 
 The goal of this work was to see how far that approach goes on a public benchmark, and to release the result in a form anyone can check again.
 
-## VisA PCB1-4 data and license
+## Trained on VisA PCB1-4, four board types from a public benchmark
 
 We used the four PCB categories, PCB1 to PCB4, of VisA (Zou et al., ECCV 2022), released by Amazon Science under CC BY 4.0. We kept VisA's official 1cls split and divided its normal training images 9:1 into training and a held-out normal validation set (Normal Dev).
 
@@ -64,15 +72,18 @@ We used the four PCB categories, PCB1 to PCB4, of VisA (Zou et al., ECCV 2022), 
 
 Before training we checked for files shared between training and test. There were no exact duplicates and no train-test leaks. The public repository contains no raw images, defect masks, test images or extracted features. We released only the trained head weights, the inference code, a config file and the model cards.
 
-## Training on normal images only
+## No defect image was used for training or for any choice
 
 Training used no defect images at all. The model learns from normal board photos what usually appears at each position. At inference it scores how far each position of a new photo is from that distribution, and the highest position score becomes the image score.
+
+![Input and output example: one board photo goes in, an image score with a threshold verdict and a 256×256 anomaly map come out](/assets/images/thaki-fabvision-pcb-anomaly-fig-io-en.webp)
+*Feed one board photo and you get an image score and an anomaly map. The score is not a probability but how far the board strays from normal.*
 
 Selection also used normal images only. We measured the mean loss (NLL) on Normal Dev every 5 epochs and kept the lowest checkpoint, and set the decision threshold at the 95th percentile of Normal Dev scores (q95). Test defects and masks were not used for any choice, and we did not reselect a checkpoint or threshold after seeing test results.
 
 A q95 threshold means that on normal boards similar to the training data, roughly 1 in 20 raises an alarm. That is a starting point by design. In real use the threshold has to be set again on your own line, based on what a missed defect and a false alarm each cost you.
 
-## DINOv2-L + flow head architecture
+## Only a small flow head is trained, on top of a frozen DINOv2-L
 
 The model has two parts. The front is DINOv2-L, the image model released by Meta, kept frozen with no training. The back is a small flow head trained separately for each PCB category. Only the heads were trained.
 
@@ -97,7 +108,7 @@ The flow head is our own implementation in the FastFlow style. It is not Anomali
 
 Training used Adam (learning rate 1e-3), 60 epochs and seed 0. All four categories took about 36 minutes on one B200 GPU. Each head's weights are 126 MB.
 
-## Same-condition comparison with a PatchCore baseline
+## It picked defects better than PatchCore on the same features
 
 As a baseline we ran PatchCore under the same conditions. PatchCore is a widely used method that stores normal features in memory and judges a new feature by its distance to the nearest stored normal one. Here we built it on the same frozen DINOv2 features, with 3×3 neighborhood pooling, a 10% coreset and 1-nearest-neighbor scoring.
 
@@ -106,11 +117,17 @@ As a baseline we ran PatchCore under the same conditions. PatchCore is a widely 
 | FabVision flow head | **0.978** | **0.991** | **0.956** | 6.2% |
 | PatchCore | 0.871 | 0.981 | 0.817 | 9.0% |
 
-Per category, PatchCore's image AUROC was 0.859 (pcb1), 0.884 (pcb2), 0.812 (pcb3) and 0.928 (pcb4).
+AUROC measures how well defective images rise above normal ones when all images are ranked by score; the closer to a perfect score, the cleaner the separation. AUPRO measures how much of each defect region the anomaly map covers at the pixel level, weighting every defect evenly.
+
+![Architecture comparison on the same DINOv2 features: PatchCore's nearest-neighbor memory versus the FabVision flow head that learns the normal distribution](/assets/images/thaki-fabvision-pcb-anomaly-fig-arch-en.webp)
+*Both use the same frozen DINOv2-L features. One stores normal features and measures distance; the other learns the normal distribution.*
+
+![Bar chart of image AUROC and AUPRO for the flow head and PatchCore on the same DINOv2 features](/assets/images/thaki-fabvision-pcb-anomaly-fig-bars-en.webp)
+*The flow head's mean image AUROC was 0.978, and it is higher than PatchCore on both image AUROC and AUPRO. Note that the horizontal axis does not start at the origin.*
 
 This comparison says something narrow. With the same features, the flow head made better use of them than nearest-neighbor scoring did. It is not a comparison with the usual WideResNet-50 PatchCore, and we did not compute confidence intervals. So we do not claim that this model beats PatchCore in general or that it is state of the art on VisA.
 
-## Per-category test results for PCB1-4
+## Per-category results for PCB1-4 also passed all six preset criteria
 
 | Category | Image AUROC | Image AP | Pixel AUROC | AUPRO | Normal false alarm rate | Defect detection rate |
 |---|---|---|---|---|---|---|
@@ -121,11 +138,14 @@ This comparison says something narrow. With the same features, the flow head mad
 
 *False alarm and detection rates use the Normal Dev q95 threshold. Each category's test set has 100 defective and 100-101 normal images.*
 
+![Bar chart comparing image AUROC of the flow head and PatchCore for each board type, pcb1 through pcb4](/assets/images/thaki-fabvision-pcb-anomaly-fig-bars-pcb-en.webp)
+*Per category, PatchCore's image AUROC was 0.859 (pcb1), 0.884 (pcb2), 0.812 (pcb3) and 0.928 (pcb4). The flow head is higher on all four, with the widest gap on pcb3.*
+
 We fixed and committed the pass criteria before training started. There were six: mean image AUROC at least 0.95 with each category at least 0.90, mean pixel AUROC at least 0.95, mean AUPRO at least 0.80, mean normal false alarm rate at most 10%, image AUROC no more than 0.03 below same-feature PatchCore, and a score error of at most 1e-5 when the saved weights are reloaded. All six (G1 to G6) passed.
 
 Training was not always smooth. For pcb4, validation loss jumped around epoch 50, and the selection rule picked the epoch-30 checkpoint. We did not retrain with other seeds, so we do not know how often this instability happens.
 
-## Normal false alarms and the near-duplicate problem
+## Training and test photos look too much alike
 
 First, false alarms. A mean of 6.2% means about 6 in 100 normal boards raise an alarm. That may be acceptable where a person reviews flagged boards, but each line has to decide that for itself.
 
@@ -140,7 +160,7 @@ The bigger limit is that the images look very much alike. VisA photographs the s
 
 In other words, most test photos were taken under conditions very close to what the model saw during training. On a real line, where lighting, angle and board revision drift, scores will likely be lower. We also did not test generalization to other cameras or other boards. The model does not name defect types either. It only marks where a board looks unlike normal.
 
-## The release check that failed, and how we fixed it
+## The release code check failed twice under the original rule
 
 After the model verdict, we checked on a GPU that the inference code packaged for release gives the same answers as the code used for evaluation. We ran the release code (one image at a time) and the evaluation code (16 images at a time) on the same test images and compared scores, anomaly maps, decisions and metrics. The tolerances were fixed in code before the first run. The check failed twice at first.
 
@@ -155,7 +175,7 @@ One point needs to be clear. The changed criterion is a post-hoc criterion, set 
 
 The G1-G6 criteria in the previous section are a separate model verdict, independent of this package check. They were set before training and were not changed after seeing results. What changed in the package check is how we measure whether the release code reproduces the evaluation code, not the model performance criteria.
 
-## Research Preview use cases
+## For now it is a starting point to retrain on your own line
 
 At this stage we can recommend the model for experiments and as a starting point. First, it can serve as a reference for estimating how well normal-only anomaly detection works on your own data. The released heads are fitted to VisA boards, so in practice you would train a new head with the same architecture on your line's normal photos and set the threshold again on that line.
 
@@ -163,7 +183,7 @@ Second, you can study an assist tool that overlays the anomaly map on an inspect
 
 In every case we assume a person reviews the decision. This is not a certified inspection system, and we have not tested it together with other ThakiCloud products.
 
-## Installing from HF and running inference
+## Install and inference take a few lines of code
 
 The backbone is not included in the repository. At runtime it is downloaded from `facebook/dinov2-large` at the pinned revision `47b73eefe95e8d44ec3623f8890bd894b6ea2d6c`.
 
@@ -189,11 +209,13 @@ From the shell you can also run `python inference.py <model_dir> pcb1 board.jpg`
 
 The repository has 10 files: two model cards (English and Korean), a config file, aggregate metrics, the model code, the inference code and four per-category head weights. The repository revision we verified is `ede737842367b1a569041435e602831d3a2fcd4e`, and the SHA256 of each head is listed in `config.json`.
 
-## Summary
+## Closing
 
-We released a model that learns from normal PCB photos only, picks out defective images on the VisA PCB1-4 test split with a mean AUROC of 0.978, and marks where the defect is. It scored higher than PatchCore on the same features, but that comparison holds only under the narrow same-feature condition.
+We released a model that learns from normal PCB photos only, picks out defective images on the VisA PCB1-4 test split with a high AUROC, and marks where the defect is. It scored higher than PatchCore on the same features, but that comparison holds only under the narrow same-feature condition.
 
 What we did not do is just as clear. We did not measure it on a real SMT line, another camera or another board, and training and test photos are very similar. The release code check failed under the original criterion and passed only under a criterion changed afterwards, and we kept both records. Please treat this model as a starting point to retrain and re-measure on your own line.
+
+Here is a first experiment to try today. Train a head with the same structure on normal photos from your own line, then set the threshold again on that line's normal validation photos. Even a teller who knows genuine notes by touch has to handle a new bank's notes first. The model and inference code are on [Hugging Face](https://huggingface.co/ThakiCloud/Thaki-FabVision-PCB-Anomaly).
 
 ---
 

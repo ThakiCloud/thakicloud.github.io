@@ -26,18 +26,20 @@ reading_time: true
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/thaki-facilityvision-crack-paxis-inspection/"
 ---
+![Title card for two released facility crack models, highlighting thin-crack recall](/assets/images/thaki-facilityvision-crack-paxis-inspection-fig-title-en.webp)
+*The segmentation model that works at native resolution keeps more thin cracks. Exact values are in the table below.*
 
 We have made two small models public that find concrete cracks in inspection photos and trace their shape pixel by pixel. If you want to automate inspections of buildings, bridges, or tunnels, check how far these models can actually take you. The scores are very high, but they were measured on one public dataset, so they are not field accuracy.
 
 One model decides whether a small patch of a photo contains a crack. The other marks every pixel a crack runs through across the whole photo. Both are released under terms that allow commercial use, and the training data is not redistributed.
 
-## Plain terms
+## In plain terms
 
 Picture an editorial desk proofreading a manuscript. A proofreader flips through quickly and folds the corner of every page with a typo. An editor then opens only the folded pages and underlines each wrong word in red ink. Finally, the managing editor collects the marked pages and writes a correction order: who fixes what, and by when.
 
 The classifier is the proofreader folding corners, and the segmentation model is the red pen. Paxis plays the managing editor, writing the correction order and following it through. The editorial office that picks the pens, trains them, and keeps them to one standard is Metis and Maxis. The rest of this post follows those three steps in order.
 
-## What we released
+## Two models, a filter and a red pen, released separately
 
 The two models are [Thaki-FacilityVision-CrackCls-ResNet18](https://huggingface.co/ThakiCloud/Thaki-FacilityVision-CrackCls-ResNet18) and [Thaki-FacilityVision-CrackSeg-E2](https://huggingface.co/ThakiCloud/Thaki-FacilityVision-CrackSeg-E2). Both use the CC BY 4.0 license, which only asks for attribution.
 
@@ -45,13 +47,25 @@ The classifier is based on ResNet-18 and has about 11 million parameters. Cut a 
 
 The segmentation model is a U-Net with a ResNet-34 encoder and about 24 million parameters. It does not shrink the photo. It processes the original resolution in overlapping tiles, which keeps hairline cracks that a downscaled pass loses. A 12-megapixel photo takes under a second on a GPU and close to 30 seconds on CPU alone.
 
+![Input and output example: a photo patch returns crack or clean, a whole photo returns a crack mask, Paxis groups results into inspection work](/assets/images/thaki-facilityvision-crack-paxis-inspection-fig-io-en.webp)
+*The classifier returns crack or clean per patch, and the segmentation model returns a crack pixel mask. The probability shown is a format example, not a measurement.*
+
 Before release we checked three things. Anonymous download works without logging in. The downloaded weights match the training output by checksum. The published inference code gives the same output as the training code, with zero difference for both models.
 
-## Results
+## The classifier is nearly perfect, and segmentation keeps more thin cracks
 
 The classifier got only 4 of 5,524 held-out test patches wrong. It missed 2 cracks and raised 2 false alarms on clean surfaces. It edged out a small CNN and a ResNet-18 with only the last layer trained. What matters more is that all three already scored above 0.98. In plain terms, this dataset is on the easy side, so the gaps stay small.
 
+![Macro F1 bars for three classifier approaches, axis starting at 0.98](/assets/images/thaki-facilityvision-crack-paxis-inspection-fig-bars-en.webp)
+*All three approaches score high, so the axis is zoomed in. The gaps are small and mostly say this dataset is easy.*
+
 For segmentation, the number to watch is how many thin cracks the model keeps. The earlier model, which shrank photos to 1,024 pixels, caught about 7 in 10 thin cracks. The new model, working at native resolution, catches more than 9 in 10. The overall overlap score (Dice) is about 0.9, essentially the same as before. The red pen now traces finer lines, but the overall accuracy of the underlines did not jump.
+
+![Architecture comparison: earlier model that downscales the photo versus CrackSeg-E2 with native-resolution tiles](/assets/images/thaki-facilityvision-crack-paxis-inspection-fig-arch-en.webp)
+*The earlier model shrinks the photo and looks once. The new model splits the original resolution into overlapping tiles, which is why fine cracks survive.*
+
+![Segmentation bars: thin-crack recall and Dice versus the earlier downscaled model](/assets/images/thaki-facilityvision-crack-paxis-inspection-fig-bars-seg-en.webp)
+*Thin-crack recall rose sharply while overall Dice stayed about the same. Measured on the dev set.*
 
 | Model | Evaluated on | Headline numbers | Compared with |
 |---|---|---|---|
@@ -60,7 +74,7 @@ For segmentation, the number to watch is how many thin cracks the model keeps. T
 
 *The segmentation threshold of 0.95 was chosen on the same dev set. The 95% confidence interval for the thin-crack recall gain excludes zero; the interval for the Dice difference includes zero.*
 
-## The inspection flow with Paxis
+## In Paxis, a mask becomes evidence for a repair order
 
 Finding a crack does not finish an inspection. Someone needs to know which wall on which floor the photo came from. They need to know whether the crack grew since the last visit, and who checks and repairs it. Paxis groups the model output into those units of work and keeps the evidence. Below is a reference design that places the two released models into that flow.
 
@@ -79,13 +93,13 @@ Back to the proofreading desk: the red pen only touches folded pages, so the exp
 
 The key principle is to keep the model's output apart from the repair decision. A crack mask is not a structural safety verdict. So Paxis does not order repairs or restrict use based on a mask alone, and it always routes through a human reviewer. The models shrink the pile of photos a person must look at and organize the evidence.
 
-## Why small models
+## Small models are cheap to run and easy to verify
 
 Inspection photos pile up by the thousands per visit. Running one large general vision model over all of them drives up both cost and latency. If a CPU-friendly classifier filters first, native-resolution segmentation only runs on suspect photos. Splitting the work this way makes the cost of one Paxis inspection task easier to predict.
 
 Small models are also easier to verify. One weights checksum, one inference script, and one evaluation summary tell you exactly what was published. When models trained on Maxis and served on Metis are this small and checkable, a version retrained on site data can be compared the same way. Customers who cannot move data outside can consider running the same flow inside infrastructure they control, such as Aegis.
 
-## Limitations
+## One public dataset, so these are not field scores
 
 The biggest limit is that there is only one data source. Both models were trained and evaluated only on the concrete crack datasets published by Özgenel. Those photos come from one campus with similar lighting and texture. Expect a large drop with other cameras, shadows, stains, or joints that look like cracks. The near-perfect classifier score means it fits this dataset, not that it generalizes to the field.
 
@@ -93,9 +107,11 @@ The segmentation numbers come from 60 dev images only. The threshold was picked 
 
 Both models are research previews, not certified inspection tools. The Paxis flow above is a reference design, not a measured integrated product. Putting this in the field requires a separate evaluation on site photos. A version retrained on that data should then be compared through the same procedure.
 
-## Summary
+## Closing
 
 What this release offers is less a high score and more a pair of small, verifiable models shipped with a clear account of what to trust. The corner-folding proofreader and the red pen are ready, and Paxis takes the managing editor's seat. The next question is whether the pen draws the same lines on real site photos, and only site data can answer it.
+
+A first experiment you can run today is simple. Feed a handful of inspection photos from your own site into the classifier and check whether it mistakes shadows, stains, or joints for cracks. Both models are available from the model cards linked above.
 
 
 {% include industrial-ai-hub-link.html lang="en" %}
