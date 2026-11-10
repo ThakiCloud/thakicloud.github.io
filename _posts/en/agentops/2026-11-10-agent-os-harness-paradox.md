@@ -4,7 +4,7 @@ excerpt: "DeepSeek's agent framework 'Harness' reached 1.54 million daily active
 seo_title: "DeepSeek's Agent OS Harness: the Enterprise Control Structure the Name Doesn't Capture | ThakiCloud"
 seo_description: "This post analyzes DeepSeek Harness's 1.54 million daily active users and 92 trillion daily tokens, the AI auto-approval password leak, and the gap in agent KPIs, and examines the enterprise governance structure an agent OS requires."
 date: 2026-11-10
-last_modified_at: 2026-11-10
+last_modified_at: 2026-11-11
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -22,6 +22,9 @@ categories:
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-os-harness-paradox/"
 ---
+
+![An illustration of loose harness straps and a black box bolted firmly into the chassis](/assets/images/agent-os-harness-paradox-hero.webp)
+*An illustration of a scene where the straps are loose and the black box is bolted firmly into the chassis.*
 
 ## An OS with a Contradictory Name
 
@@ -70,6 +73,28 @@ So what "harness" should an enterprise attach to the agent OS? Even just gatheri
 Global Economic's take points in the same direction. As the global penetration of a China-origin open-source harness accelerates, the concerns in the enterprise sector over data sovereignty and domestic alternatives grow. Demand is rising for a neutral agent platform that orchestrates multiple harnesses and multiple models to secure optimal performance, cost, and security. It means the market is already preparing for the moment when openness alone is not the answer.
 
 These four criteria are the domain ThakiCloud Paxis handles. Paxis is ThakiCloud's Agent-Native Cloud, a formal product at the v1.1 GA stage. It treats Skills, Tools, Policies, and Audit Logs as first-class resources, not add-on features. It sets autonomy levels from L0 to L3 per workflow, and a policy gate and audit log leave the basis of each decision. Agent execution happens in an isolated sandbox, and the ecosystem is connected through MCP connectors and the skill market. The same structure can be lifted into a sovereign, on-premises Kubernetes (ai-platform) environment and run there. CostRouter picks the right model per task, and in a market where price competition intensifies, as in Anthropic's 20% cut, this becomes the operational lever. The four criteria sit directly on top of these resources. The autonomy level and policy gate handle the approval structure, the audit log handles traceability, the sandbox handles isolated execution, and CostRouter handles cost governance.
+
+```mermaid
+flowchart LR
+    subgraph S1[The four criteria an enterprise checks first]
+        A1[Approval structure]
+        A2[Traceability]
+        A3[Isolated execution]
+        A4[Cost governance]
+    end
+    subgraph S2[ThakiCloud Paxis resources]
+        B1[Autonomy level L0~L3<br>+ policy gate]
+        B2[Audit log]
+        B3[Isolated sandbox]
+        B4[CostRouter]
+    end
+    A1 --> B1
+    A2 --> B2
+    A3 --> B3
+    A4 --> B4
+```
+
+*The four criteria an enterprise checks first before an agent OS, and the Paxis resources that carry them.*
 
 This is the day an operating system called a harness appeared. What enterprises want is not the harness coming loose, but the harness bolted firmly into the OS. The next front of the agent OS will be decided not by the number of plugins, but by the thickness of the black box bolted into the chassis.
 

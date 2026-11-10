@@ -4,7 +4,7 @@ excerpt: "OpenAI has made public that it can stop the output of its own frontier
 seo_title: "The Day the Capability Race Built the Brakes: OpenAI's 35-Second Emergency Stop | ThakiCloud"
 seo_description: "Starting with OpenAI's control room that stops model output in 35 seconds, this post analyzes the AI industry's shift from a capability race to building control infrastructure. The control floor enterprises need answers the agent governance questions that Paxis addresses."
 date: 2026-11-10
-last_modified_at: 2026-11-10
+last_modified_at: 2026-11-11
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -25,9 +25,25 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/openai-control-room
 
 The story the AI industry tells itself is changing. "How strong can we build it" is no longer the only question; "how fast can we stop it" has joined it. The number that best illustrates this change is 35 seconds. OpenAI has made public the Control Room, a system that stops the output of its own frontier model within 35 seconds when a safety or security risk is detected. A company that sells models has produced, like a product, the very device that cuts off its models' output. The party selling the most intelligent thing built the brake first. That is the core running through today's news. While the capability race ran toward the limit, the control race quietly started on the other side of the same track. This post takes the number 35 seconds as its starting point and follows how "stopping" is becoming infrastructure for the entire industry. And at the end, we look together at what enterprises need on the ground.
 
+![An illustration of a brake clamping one point of a flowing data stream](/assets/images/openai-control-room-35-second-brake-hero.webp)
+*An illustration of a brake clamping one point of a flowing data stream and stopping it there.*
+
 ## The 35-Second Button OpenAI Built
 
 The Control Room is a centralized monitoring and shutdown device. It keeps watching research workloads and, when it sees a danger signal, stops that output within 35 seconds. What matters here is the word "centralized." When there are hundreds of models and thousands of workloads, it is a structure that watches all of it from one place and turns it off in one action. That is a different scale from putting a button on each individual model. The speed of 35 seconds is equally meaningful. In the past, response came after an incident. The order was investigate, apologize, fix it in the next version. Now, the moment a signal appears, you must be able to turn output off and on again within seconds. The stop decision has moved from "an apology after the incident" to "a device that travels alongside." Even for one company's frontier model, running this structure means binding monitoring, judgment, stopping, resuming, and the record of that history together into a single system. In the end, safety goes beyond one line on a feature list, to the point where the architecture is designed with safety as a premise. The moment you leave a record of "who, when, and why stopped," safety becomes the way of operating itself. A structure where the act of pressing the brake is itself an audit history. That is what the Control Room points to. The number 35 seconds therefore reads like a new unit for measuring safety level. Tomorrow's models will be evaluated not only by how strong they are, but by how fast they can be stopped. How quickly and transparently you can stop. That is becoming the new competitive edge.
+
+```mermaid
+flowchart LR
+    A[Research workloads<br>hundreds of models, thousands of tasks] --> B[Central monitoring]
+    B --> C{Risk signal decision}
+    C -- none --> A
+    C -- stop within 35s --> D[Output halted]
+    D --> E[History record<br>who, when, why it stopped]
+    E --> F[Resume decision]
+    F --> A
+```
+
+*The structure where the Control Room binds monitoring, decision, stop, resume, and history into one system.*
 
 ## The Accelerator and the Brake in One Hand
 

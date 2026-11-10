@@ -4,7 +4,7 @@ excerpt: "딥시크의 에이전트 프레임워크 'Harness'가 출시 3개월 
 seo_title: "에이전트 OS 딥시크 하네스, 이름에 담기지 않은 기업용 통제 구조"
 seo_description: "DeepSeek Harness의 DAU 154만과 하루 92조 토큰, AI 자동승인 비밀번호 유출 사례, 에이전트 KPI 공백을 분석하며 에이전트 OS의 기업 거버넌스 구조를 살펴봅니다."
 date: 2026-11-10
-last_modified_at: 2026-11-10
+last_modified_at: 2026-11-11
 author_profile: true
 toc: true
 toc_label: "목차"
@@ -19,7 +19,11 @@ tags:
   - policy-gate
 categories:
   - agentops
+canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/agent-os-harness-paradox/"
 ---
+
+![줄은 풀려 있고 차체에는 블랙박스가 단단히 박혀 있는 장면을 형상화한 이미지](/assets/images/agent-os-harness-paradox-hero.webp)
+*줄은 풀려 있고 차체에는 블랙박스가 단단히 박혀 있는 장면을 형상화한 이미지입니다.*
 
 ## 이름부터 모순인 OS
 
@@ -68,6 +72,28 @@ Harness는 8월 13일 공개됐습니다. 9월 29일에는 독립형 데스크�
 글로벌이코노믹의 짚기도 같은 방향입니다. 중국발 오픈소스 하네스의 글로벌 침투가 가속되면 엔터프라이즈 영역에서 데이터 주권과 국산 대안을 둘러싼 고민이 커진다는 것입니다. 다중 하네스와 다중 모델을 오케스트레이션해 최적의 성능과 비용, 보안을 확보하는 중립형 에이전트 플랫폼에 대한 수요가 높아지고 있습니다. 시장이 개방만으로는 답이 안 되는 순간을 이미 준비하고 있다는 뜻입니다.
 
 이 네 가지 기준이 ThakiCloud Paxis가 다루는 영역입니다. Paxis는 ThakiCloud의 Agent-Native Cloud로, v1.1 GA 단계의 정식 제품입니다. Skills, Tools, Policies, Audit Logs를 추가 기능이 아니라 일급 리소스로 다룹니다. L0에서 L3까지 자율도 레벨을 워크플로별로 정하고 정책 게이트와 감사 로그가 판단의 근거를 남깁니다. 에이전트 실행은 격리된 샌드박스에서 일어나며 MCP 커넥터와 스킬 마켓으로 생태계를 연결합니다. 소버린, 온프렘 Kubernetes (ai-platform) 환경에도 같은 구조를 올려 실행할 수 있습니다. CostRouter는 작업마다 맞는 모델을 골라 주며 앤트로픽의 20% 인하처럼 가격 경쟁이 격화되는 시장에서 이것이 바로 운영 지렛대가 됩니다. 네 가지 기준은 이 리소스 위에 그대로 놓입니다. 승인 구조는 자율도 레벨과 정책 게이트가, 추적 가능성은 감사 로그가, 격리 실행은 샌드박스가, 비용 거버넌스는 CostRouter가 담당합니다.
+
+```mermaid
+flowchart LR
+    subgraph S1[기업이 먼저 보는 네 가지 기준]
+        A1[승인 구조]
+        A2[추적 가능성]
+        A3[격리 실행]
+        A4[비용 거버넌스]
+    end
+    subgraph S2[ThakiCloud Paxis 리소스]
+        B1[자율도 레벨 L0~L3<br>+ 정책 게이트]
+        B2[감사 로그]
+        B3[격리 샌드박스]
+        B4[CostRouter]
+    end
+    A1 --> B1
+    A2 --> B2
+    A3 --> B3
+    A4 --> B4
+```
+
+*에이전트 OS 앞에서 기업이 먼저 보는 네 가지 기준과 그 기준을 담당하는 Paxis 리소스입니다.*
 
 하네스라 부르는 운영체제가 등장한 날입니다. 기업이 원하는 것은 하네스가 풀리는 것이 아니라, 하네스가 OS에 단단히 박히는 쪽입니다. 에이전트 OS의 다음 전장은 플러그인의 숫자가 아니라, 차체에 박힌 블랙박스의 두께로 결정될 것입니다.
 
