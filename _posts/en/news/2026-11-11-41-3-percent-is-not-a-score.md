@@ -1,7 +1,7 @@
 ---
 title: "41.3%, A Number That Is Not a Score"
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/news/41-3-percent-is-not-a-score/
+canonical_url: "https://thakicloud.com/tech-blog/en/news/41-3-percent-is-not-a-score/"
 excerpt: "Today's morning news has a number that is hard to read as a benchmark score. An AI model finished 41.3% of real freelance projects with no human touch. The moment the unit of measurement moves from test score to share of labor, the model layer gets closer to a commodity, and the question of the execution layer speeds up."
 seo_title: "41.3%, A Number That Is Not a Score | ThakiCloud"
 seo_description: "Claude Fable 5.2 and Mythos 5.2 fully automated 41.3% of real freelance projects on the Remote Labor Index. This morning's AI industry signals, where capability acceleration, risk alerts, and model commoditization advance at the same time, and the execution platform question companies must answer, analyzed."
@@ -28,6 +28,19 @@ Today's morning news contains a number that is hard to read as a benchmark score
 ## A Benchmark That Measures Work
 
 The Remote Labor Index measures by a different yardstick than the benchmarks seen so far. The unit is the share of entire projects, from receiving a commission to delivering the result, that are automated to the end. What this share contains is real freelance work, genuine orders that people took in and processed. The fact that these are real orders is what sets this benchmark apart. Synthetic problem sets are finite and can be memorized, but orders in the freelance market are varied, new ones keep appearing, and it is hard to manipulate the benchmark. The word "fully" also carries weight. It means a person never intervened once, and the model alone carried the project to the end. In an evaluation that stops at partial help, a person follows through to the end, but here the model fills the final stretch. One more point to note: two models entered this evaluation. Claude Fable 5.2 and Mythos 5.2 are models from the same vendor but separate lines, and the fact that both recorded this share together means the product family as a whole has started to move by share of work. The rival comparison of "nearly double" also holds on this yardstick. In other words, the capability gap between companies has passed the stage where it is measured only by a few points. It has reached a range where a model can take more than four out of ten freelance jobs wholesale. That is exactly where the 41.3% points. The same index applies as is to the next model. With each new model, what gets measured is the share. This number reads with two different meanings: the model answering well, and the whole piece of work finishing. In the latter case, the model begins to take the place of the person doing the work. So it is hard to call this number a score. Because the object of evaluation became the task, the model is being evaluated as a worker.
+
+```mermaid
+flowchart TB
+    subgraph OLD["Previous benchmarks"]
+        A1["Synthetic problem sets<br/>finite · memorizable"] --> A2["Test score<br/>does the model answer well"]
+    end
+    subgraph NEW["Remote Labor Index"]
+        B1["Real freelance orders<br/>varied · keep appearing"] --> B2["Zero human intervention<br/>model carries it to the end"] --> B3["Share of completed projects<br/>41.3%"]
+    end
+    B3 --> C["Same unit for the next model<br/>what gets measured is the share"]
+```
+
+*This is where the unit of measurement changed: not a test score on synthetic problems, but the share of real freelance work completed end to end with no human intervention.*
 
 ## Speed Ahead of Forecasts
 

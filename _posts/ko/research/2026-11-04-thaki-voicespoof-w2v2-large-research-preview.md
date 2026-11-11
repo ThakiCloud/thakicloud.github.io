@@ -20,6 +20,9 @@ author_profile: true
 toc: true
 toc_label: "목차"
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/thaki-voicespoof-w2v2-large-research-preview/"
+audiobook: "https://drive.google.com/file/d/1vuTDqIalix7dpmMY6Ujq30afWKJZLFYg/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 음성이 실제 녹음인지 합성인지를 판별하는 모델을 만들어 공개했습니다. 공개 시험에서는 기준선보다 오차 비용이 약 70퍼센트 낮았지만, 공개 전 재로드 검사에서 실패한 항목 하나를 지우지 않고 그대로 공개합니다. 모델을 학습해서 서비스에 올리는 일, 혹은 모델 결과를 업무에 쓰는 일을 맡고한다면 이 글을 읽을 가치가 있습니다.
@@ -42,6 +45,10 @@ AI가 만든 목소리는 사람의 목소리와 점점 비슷해지고 있습�
 직원이 확인하지 않는 것도 있습니다. 누가 도장을 찍었는지, 내용이 사실인지, 그 사람에게 서명 권한이 있는지까지입니다. 도장이 진짜여도 찍은 사람이 권한이 없으면 서류는 무효입니다. 모델도 같습니다. 높은 점수는 목소리가 실제 녹음에 가깝다는 것만 증명합니다. 화자의 신원과 말의 진실, 거래 승인 권한까지 증명하지는 않습니다.
 
 ![thaki-voicespoof-w2v2-large-research-preview 슬라이드 1](/assets/images/thaki-voicespoof-w2v2-large-research-preview-slide-01.webp)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/thaki-voicespoof-w2v2-large-research-preview/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 무엇을 해봤나
 
@@ -274,4 +281,15 @@ Metis 서빙과 Paxis 업무 흐름과의 끝에서 끝 통합은 검증하지 �
 
 대회 원천 음성, 발화별 라벨, 화자 정보는 올리지 않았습니다. 한국어 음성 위조 탐지는 독립적으로 검증하지 않았습니다.
 
-*참고 자료: ASVspoof 5 평가 계획, 공식 ASVspoof 5 코드와 AASIST, Wav2Vec2-Large 모델 카드. 본문 수치는 2026년 11월 4일 공개 전 검사 판정과 재로드 검사 원인 진단 기록에 근거하며 공식 리더보드 순위가 아닙니다.*
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/thaki-voicespoof-w2v2-large-research-preview/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 출처
+
+- [Thaki-VoiceSpoof-W2V2-Large 모델 카드 (Hugging Face, Research Preview)](https://huggingface.co/ThakiCloud/Thaki-VoiceSpoof-W2V2-Large)
+- [Wav2Vec2-Large 모델 카드 (facebook/wav2vec2-large, Hugging Face)](https://huggingface.co/facebook/wav2vec2-large)
+- ASVspoof 5 평가 계획
+- 공식 ASVspoof 5 코드와 AASIST
+
+*본문 수치는 2026년 11월 4일 공개 전 검사 판정과 재로드 검사 원인 진단 기록에 근거하며 공식 리더보드 순위가 아닙니다.*

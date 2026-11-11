@@ -16,6 +16,10 @@ tags:
   - thakicloud
 categories:
   - news
+audiobook: "https://drive.google.com/file/d/18GDzN8TXUocMWxFPKD6XMJowqUCRKpqQ/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/jensen-huang-risk-ai-supply-chain-table/"
 ---
 
 11월, NVIDIA AI 데이 서울 2026에서 희한한 장면이 벌어졌다. 행사는 11월 9~10일 코엑스 일정으로 열렸다. 그 2일간의 한가운데, 배경훈 부총리 면담과 카카오모빌리티 행사를 앞두고 있던 매디슨 황 수석의사가 방한을 돌연 취소했다.
@@ -40,6 +44,35 @@ categories:
 
 오늘 식탁의 역설은 바로 여기에 있습니다. 칩과 모델과 클라우드와 파운드리, 그동안 서로 경쟁해 온 것들이 이제는 서로의 주주입니다. 결합이 클수록 "한 지점의 리스크"가 "산업 전체의 리스크"로 바뀝니다. 코너스톤 주주 7개사도 모두 칩, 모델, 클라우드 식탁에 동시에 앉아 있습니다. 한 의자의 리스크가 곧 전체 식탁의 리스크가 되는 구조입니다. 젠슨 황 리스크는 그 첫 시험 문제입니다.
 
+```mermaid
+flowchart TB
+    subgraph CS["앤트로픽 IPO 코너스톤 주주 7개사"]
+        NV["엔비디아<br/>100억 달러"]
+        GO["구글<br/>100억 달러"]
+        AMD["AMD<br/>25억 달러"]
+        BC["브로드컴"]
+        MC["마이크론"]
+        MS["마이크로소프트"]
+        TS["TSMC"]
+    end
+    AN["앤트로픽<br/>합산 최대 904억 달러<br/>상단 기업가치 약 1.4조 달러"]
+    NV --> AN
+    GO --> AN
+    AMD --> AN
+    BC --> AN
+    MC --> AN
+    MS --> AN
+    TS --> AN
+    TS -. "오픈AI 우선주<br/>최대 5억 달러" .-> OA["오픈AI"]
+    KR["한국: 실행의 좌석은 있음(HBM · 네이버 1GW)<br/>자본의 좌석(코너스톤)은 미포함"]
+```
+
+*한 가지의 식탁. 경쟁해 온 칩·클라우드·파운드리가 서로의 주주가 됐습니다. 7개사 코너스톤이 무의결권(N주)으로 최대 260억 달러를 사전 배정했고, TSMC는 앤트로픽과 오픈AI에 동시에 걸었습니다.*
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/jensen-huang-risk-ai-supply-chain-table/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 한국은 어디에 앉아 있습니까
 
 실행의 한쪽은 분명 한국에 있습니다. 엔비디아는 11월 6일 네이버 신주 인수 대금 1조 3000억원을 납입했고, 곧 3대 주주에 오를 예정입니다. 네이버와 SK텔레콤의 1GW급 AI 데이터센터 추진, 삼성전자와 SK하이닉스의 HBM 공급, 포인트투테크놀로지와 업스테이지 등 국내 AI 스타트업 투자까지 포함하면, 한국은 이 식탁 위에 깊숙이 얽혀 있습니다.
@@ -51,6 +84,8 @@ categories:
 통념은 "한국의 리스크는 엔비디아 의존"이라고 말합니다. 그런데 그 통념을 뒤집어 볼 여지가 있습니다. 의존 자체는 그만큼 무섭지 않습니다. 헤지할 수 있기 때문입니다. 11월 9일, 같은 NVIDIA AI 데이 서울 부대행사에서 엔비디아, SK텔레콤, 리벨리온이 3자 MOU를 체결했습니다. 프리필을 엔비디아 GPU가, 디코드를 리벨리온의 리벨 R200이 담당하는 분리형 추론입니다. R200은 NV링크 퓨전과 MGX 랙 아키텍처에 통합돼 SK텔레콤 AI 데이터센터에서 실증되고 있으며, 2028년 수조 개 매개변수 MoE 모델 저지연 추론 시스템 도입을 목표로 합니다. 구글의 TPU는 또 하나의 헤지입니다. 의존은 이렇게 대안 목록으로 바꿀 수 있습니다.
 
 바꿀 수 없는 것은 "자본 식탁 밖"이라는 위치입니다. 젠슨 황 리스크가 왜 중요한지 보여 주는 대목입니다. 미국 의회가 이미 CEO에게 사안 설명을 요구한 상태입니다. 엔비디아 정관에 따르면 이사회는 재적 과반수로 CEO를 해임할 수 있습니다. 조사가 길어지면 불확실성은 "주가 하락"이 아니라 "차세대 제품 출시 일정과 신규 투자 결정의 흔들림"이 됩니다. 업계의 판단은 AI 투자가 빅테크의 중장기 설비투자 계획과 서비스 수요에 좌우되므로 당장의 공급 차질은 제한적이라는 것입니다. 다만 투자가 클수록 일정이 중요한 법입니다. 물론 당장은 계약된 GPU 공급 스케줄이 차질 없이 진행될 것으로 보입니다. 과기정통부 류제명 제2차관이 국회에서 그렇게 전망했습니다. 그럼에도 업계 평가는 하나로 모입니다. 준비해야 할 대상은 지금의 스케줄이 아니라, 스케줄이 바뀌는 순간입니다.
+
+![jensen-huang-risk-ai-supply-chain-table 슬라이드 1](/assets/images/jensen-huang-risk-ai-supply-chain-table-slide-01.webp)
 
 ## 흔들리지 않는 층, 실행 층
 
@@ -64,6 +99,8 @@ categories:
 
 "젠슨 황 리스크"를 Paxis의 이야기로 읽을 필요는 없습니다. Paxis가 아니라, "식탁의 집중점이 앞으로 계속 이동한다"는 이야기로 읽어야 합니다. 그 이동이 새로운 거버넌스 조사가 되었든, 파운드리 캐펙스 조정이 되었든, 네오클라우드 자금 조달 문제가 되었든, 기업에 떨어지는 영향은 같습니다. 실행이 어디에서 일어나는지, 얼마나 안전하게 실행되는지, 그리고 얼마가 드는지를 묻는 세 질문입니다. 어디에서, 얼마나 안전하게, 얼마만큼에. 이 세 질문에 대한 답은 식탁이 흔들린다고 흔들려서 안 됩니다.
 
+![jensen-huang-risk-ai-supply-chain-table 슬라이드 2](/assets/images/jensen-huang-risk-ai-supply-chain-table-slide-02.webp)
+
 ## 다음 리스크
 
 다음 젠슨 황 리스크는 아마 젠슨 황이 아닐 것입니다. 네트워크의 집중점이 다음에는 다른 의자로 이동하는 것, 그것이 교차 투자 식탁의 본질입니다.
@@ -72,7 +109,10 @@ categories:
 
 그래서 오늘의 뉴스는 한 회사의 스캔들로 기억할 사건이 아닙니다. "전 세계 AI 산업은 하나의 리스크 식탁이다"라는 구조적 신호로 기억할 사건입니다. 실행의 좌석만큼은 이미 한국에 있다는 점을 확인한 이상, 이제 준비해야 할 것은 다른 의자를 예측하는 것이 아닙니다. 어떤 식탁이 흔들려도 우리 기업의 실행 층이 제자리에 머물게 만드는 것. 그것이 오늘 뉴스가 남긴 교훈입니다.
 
+![jensen-huang-risk-ai-supply-chain-table 슬라이드 3](/assets/images/jensen-huang-risk-ai-supply-chain-table-slide-03.webp)
+
 ## 참고 자료
+![jensen-huang-risk-ai-supply-chain-table 슬라이드 4](/assets/images/jensen-huang-risk-ai-supply-chain-table-slide-04.webp)
 
 이 글은 아래 뉴스를 종합해 작성했습니다.
 
@@ -85,3 +125,6 @@ categories:
 - IT동아, [“효율 찾아 삼자동맹" 이기종 컴퓨팅 기반 소버린 AI 역량 강화 위해 손...](https://it.donga.com/109889/)
 - 뉴스웨이, [엔비디아에 기댄 한국 AI…젠슨 황 리스크에 쏠리는 시선](https://www.newsway.co.kr/news/view?ud=2026111015335681001)
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/jensen-huang-risk-ai-supply-chain-table/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
