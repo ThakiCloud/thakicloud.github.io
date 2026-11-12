@@ -74,7 +74,7 @@ compute·인프라 비용만 봐도 같은 방향입니다. 9개월 사이 144�
 ![1,040억 달러 순손실의 구조, 공정가치 평가손과 Q3 영업손실 비교](/assets/images/anthropic-895b-defense-line-slide-03.webp)
 *순손실의 대부분을 만든 공정가치 평가손과, 실제 영업 손익을 나란히.*
 
-어제 [식탁 글](/ko/news/jensen-huang-risk-ai-supply-chain-table/)에서 전한 Q3 영업손실 5억 6700만 달러와 비교하면, 1,040억 달러 순손실은 다른 방식으로 읽어야 할 숫자입니다.
+어제 [식탁 글](/tech-blog/ko/news/jensen-huang-risk-ai-supply-chain-table/)에서 전한 Q3 영업손실 5억 6700만 달러와 비교하면, 1,040억 달러 순손실은 다른 방식으로 읽어야 할 숫자입니다.
 
 ## 하루 만에 철회한 첫 가격안
 
@@ -165,4 +165,4 @@ AI 예산을 맡고 있는 사람이라면 오늘부터 할 일이 하나 있습
 - [Reuters, Anthropic aims to raise up to $69.3 billion in blockbuster IPO](https://www.reuters.com/business/anthropic-aims-raise-up-693-billion-blockbuster-ipo-2026-11-10/) (2026-11-10)
 - [FXStreet, Anthropic launches IPO roadshow after withdrawing its first pricing plan](https://www.fxstreet.com/news/anthropic-launches-ipo-roadshow-after-withdrawing-its-first-pricing-plan-202611111000) (2026-11-11)
 - [Simon Willison, Anthropic's IPO roadshow video](https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/) (2026-11-11)
-- 전편: [AI 산업, 하나의 리스크 식탁: 젠슨 황 리스크와 한국의 좌석](/ko/news/jensen-huang-risk-ai-supply-chain-table/) (2026-11-11)
+- 전편: [AI 산업, 하나의 리스크 식탁: 젠슨 황 리스크와 한국의 좌석](/tech-blog/ko/news/jensen-huang-risk-ai-supply-chain-table/) (2026-11-11)
