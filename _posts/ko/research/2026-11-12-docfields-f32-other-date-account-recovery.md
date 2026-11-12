@@ -1,5 +1,5 @@
 ---
-title: "DocFields F3.2 — 일반 날짜 및 계좌번호 라벨 복구를 통한 한국어 금융서식 역할 추출 개선"
+title: "DocFields F3.2 · 일반 날짜 및 계좌번호 라벨 복구를 통한 한국어 금융서식 역할 추출 개선"
 seo_title: "DocFields F3.2: 일반 날짜·계좌번호 라벨 복구로 한국어 금융서식 역할 추출 개선 | ThakiCloud"
 seo_description: "한국어 금융 서식 OCR 박스에 필드 역할을 붙이는 DocFields F3.2를 실험 공개했습니다. OTHER_DATE 라벨 복구, 불확실 라벨 손실 마스킹, 날짜·계좌번호 구분, 세 모델 라우팅의 단일 체크포인트 통합과 전화번호 목표 미달, 평가의 한계를 정리했습니다."
 excerpt: "이전 단일 모델이 놓치던 일반 날짜와 계좌번호를 체크포인트 하나로 다시 잡았습니다. 목표 7개 중 6개를 넘겼지만 전화번호 목표는 못 넘겼고, 평가는 노출된 세트와 LLM 의사 라벨에 기대고 있습니다."
@@ -21,6 +21,9 @@ toc_label: "목차"
 toc_sticky: true
 reading_time: true
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/docfields-f32-other-date-account-recovery/"
+audiobook: "https://drive.google.com/file/d/1z81Ol38CmCKV9pw8hDRIvvu3HqhZyiAN/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 보험금 청구서 한 장에는 날짜가 여러 개 있습니다. 작성일이 있고 사고일자가 있고 입원 기간이 있습니다. 계좌번호 칸 옆에는 전화번호와 계약번호가 비슷한 모양으로 붙어 있습니다. 한국어 금융 서식에서 값을 뽑아 다음 시스템으로 넘기려는 개발자라면 이 두 지점에서 모델이 자주 틀린다는 것을 겪어 봤을 것입니다.
@@ -38,6 +41,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/docfields-f32-other
 
 F3.2는 이 직원에게 '그 밖의 날짜' 서랍을 하나 더 줬습니다. 판단이 애매한 서류는 억지로 '해당 없음'에 넣으라고 가르치지 않고 그냥 채점에서 뺐습니다. 계좌번호처럼 생긴 숫자라도 옆에 '전화번호'라고 적혀 있으면 계좌 서랍에 넣지 말라고 따로 가르쳤습니다. 이 글의 나머지는 이 서랍 이야기를 조금 더 정확한 말로 옮긴 것입니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/docfields-f32-other-date-account-recovery/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 발행일 하나뿐이던 날짜 라벨에 OTHER_DATE를 되돌렸습니다
 
 DocFields는 이미지 픽셀을 읽지 않습니다. 입력은 OCR이 낸 글자 박스와 그 좌표이고 출력은 박스마다 붙는 역할 라벨입니다. 기반 모델은 문서 배치 정보를 다루는 LiLT에 다국어 인코더 XLM-RoBERTa를 결합한 [`nielsr/lilt-xlm-roberta-base`](https://huggingface.co/nielsr/lilt-xlm-roberta-base)이고, 이를 15개 라벨로 전체 미세조정했습니다.
@@ -50,6 +57,8 @@ F3.2는 발행일이 아닌 날짜에 `OTHER_DATE`라는 라벨을 따로 줬습
 *이전 단일 모델이 0.273에 머물던 날짜 검출이 0.703까지 올라갔습니다. 노출된 평가 세트에서 결정론 날짜 검사기를 기준으로 잰 값이고, 같은 검사기를 학습 라벨에도 썼습니다.*
 
 여기서 날짜 검출은 완전한 날짜 문자열이 든 박스에 `ISSUE_DATE`든 `OTHER_DATE`든 날짜 라벨이 붙었는지를 봅니다. 기준은 날짜 형식을 규칙으로 판정하는 결정론 검사기이며 사람이 확인한 정답은 아닙니다. 정밀도는 0.417로 이전 모델과 같았습니다. 모델이 날짜라고 한 박스의 절반 이상이 그 검사기 기준으로는 완전한 날짜가 아니라는 뜻이며 문서 한 건에 잘못된 날짜 박스가 0.79개꼴로 나옵니다.
+
+![docfields-f32-other-date-account-recovery 슬라이드 1](/assets/images/docfields-f32-other-date-account-recovery-slide-01.webp)
 
 ## 애매한 박스는 '역할 없음'으로 가르치지 않고 손실에서 뺐습니다
 
@@ -71,6 +80,8 @@ flowchart TB
     D --> H["이전 전용 모델 라벨이<br/>확신 조건을 넘을 때만 채움"]
 ```
 
+![docfields-f32-other-date-account-recovery 슬라이드 2](/assets/images/docfields-f32-other-date-account-recovery-slide-02.webp)
+
 ## 계좌번호 모양이라도 옆 항목명이 전화번호면 계좌가 아닙니다
 
 금융 서식에서 숫자와 하이픈으로 된 문자열은 계좌번호, 전화번호, 계약번호, 주민번호 중 어느 것이든 될 수 있습니다. 문자열 모양만으로는 구분이 안 됩니다. 사람은 바로 옆에 인쇄된 항목명을 보고 판단합니다.
@@ -78,6 +89,8 @@ flowchart TB
 F3.2는 이 판단을 학습 라벨에 넣었습니다. 계좌번호 형식인 문자열이라도 바로 옆 항목명이 계약번호, 주민번호, 전화번호이면 `ACCOUNT_NO`의 hard negative로 둡니다. hard negative는 정답과 헷갈리기 쉬운 오답 예시를 일부러 넣어 둘을 가르게 하는 학습 예시입니다. 추론할 때는 계좌번호 쪽 임계값 하나를 둡니다. argmax 결과가 날짜나 계좌가 아닌 박스라도 `ACCOUNT_NO` 확률이 0.25 이상이면 `ACCOUNT_NO`로 올립니다. 날짜 쪽 승격은 끄고 공개했습니다.
 
 평가 세트 `sealed7_fin`에서 `ACCOUNT_NO` F1은 이전 단일 모델 0.694에서 0.797로 올랐습니다. 문서 단위 paired bootstrap(2,000회 재표집, 95% 구간)으로 보면 차이는 +0.104, 구간은 [0.016, 0.219]입니다. 같은 세트에서 문서 단위로 다시 뽑아도 차이가 0 위에 머문다는 뜻입니다. 다만 이 비교 역시 아래 '한계' 절의 조건을 모두 안고 있습니다.
+
+![docfields-f32-other-date-account-recovery 슬라이드 3](/assets/images/docfields-f32-other-date-account-recovery-slide-03.webp)
 
 ## 세 모델 라우팅을 체크포인트 하나로 합쳤습니다
 
@@ -122,6 +135,8 @@ F3.1과 직접 비교한 paired bootstrap 결과도 함께 봐야 합니다. 날
 
 정리하면, 날짜와 계좌번호 쪽에서 관측된 개선은 있습니다. 하지만 그 개선이 처음 보는 서식이나 발급처에서도 이어진다는 일반화는 입증하지 못했습니다. 두 가지를 같은 말로 섞지 않으려고 이 절을 길게 썼습니다.
 
+![docfields-f32-other-date-account-recovery 슬라이드 4](/assets/images/docfields-f32-other-date-account-recovery-slide-04.webp)
+
 ## 직접 돌려 보려면
 
 카드에 실린 손으로 쓴 합성 청구서(19박스)로 동작을 확인할 수 있습니다. 공개 가중치를 CPU로 돌린 실제 출력 일부는 아래와 같습니다. 전화번호와 계좌번호는 맞게 붙었습니다. 사고일자 옆의 값은 `OTHER_DATE`가 더 맞는데 `ISSUE_DATE`로 나왔습니다. 청구인 이름 '홍길동'은 `O`로 놓쳤습니다. 이름 라벨은 합성 서식으로만 배웠기 때문입니다.
@@ -146,6 +161,8 @@ for r in df.predict(model, tok, labels, dec, boxes):
 
 두 가지를 지켜야 카드의 수치와 같은 조건이 됩니다. 첫째, 디코딩은 `decode.json`의 계좌번호 임계값을 쓰는 동봉 스크립트로 해야 합니다. 단순 argmax나 기본 `pipeline()`으로 돌리면 결과가 달라집니다. 둘째, 박스 순서가 인코더에 영향을 주므로 OCR이 내는 순서대로 위에서 아래, 왼쪽에서 오른쪽으로 넣어야 합니다. 15개 라벨 가운데 실제 서식으로 학습하고 채점한 것은 `ADDRESS`, `PHONE`, `ACCOUNT_NO`, `CLAIM_AMOUNT`, `ISSUE_DATE`, `OTHER_DATE` 여섯 개뿐이고 나머지 출력은 검증되지 않은 것으로 봐야 합니다.
 
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/docfields-f32-other-date-account-recovery/nlm-infographic-2.webp)
+
 ## Paxis에서는 사람이 확인하는 초안 단계에 들어갑니다
 
 Paxis의 문서 업무 자동화는 에이전트가 서류에서 값을 뽑아 초안을 채우고 사람이 확인하는 흐름입니다. 이 흐름에서는 모델 수가 곧 운영 비용입니다. 세 모델을 따로 배포하고 버전을 맞추던 일을 체크포인트 하나로 줄이면, 배포하고 버전을 맞출 대상이 셋에서 하나로 줄어듭니다. 다만 지금의 F3.2는 사람이 확인하는 단계 앞에 두는 후보이고 사람 확인 없이 값을 확정하는 용도로 쓸 수준이라는 근거는 아직 없습니다.
@@ -156,8 +173,18 @@ F3.2는 기반 모델을 그대로 두고 라벨 설계를 바꿨습니다. 발�
 
 비슷한 서식 모델을 다루고 있다면 오늘 할 수 있는 첫 점검은 간단합니다. 학습 라벨에서 `O`로 들어간 박스 가운데 날짜나 계좌번호처럼 생긴 문자열이 얼마나 되는지 세어 보는 것입니다. 그 수가 크다면 모델이 그 역할을 무시하도록 배울 가능성이 큽니다. 모델과 코드는 [Hugging Face](https://huggingface.co/ThakiCloud/DocFields-F32-KO)에 있습니다.
 
+
+
+
+
+
+
+
+<!-- nlm-visual -->
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 출처와 데이터
 
 - 모델: [ThakiCloud/DocFields-F32-KO](https://huggingface.co/ThakiCloud/DocFields-F32-KO) (MIT, 기반 모델 [`nielsr/lilt-xlm-roberta-base`](https://huggingface.co/nielsr/lilt-xlm-roberta-base) MIT). 이 글의 수치는 모두 모델 카드와 같은 실험 원장에서 옮겼습니다.
-- 학습 데이터: AI 허브(AI-Hub) — OCR 데이터(금융 및 물류)(71301), 그리고 법령 별지 서식(law.go.kr)에 합성 값을 채운 문서. **데이터는 재배포하지 않습니다.** AI 허브 데이터는 신청자 본인의 내부 이용으로 한정되며 이 글과 그림에는 데이터셋의 이미지, 글자, 라벨, 크롭, 샘플이 들어 있지 않습니다. 예시는 모두 손으로 쓴 합성 값입니다.
+- 학습 데이터: AI 허브(AI-Hub)의 OCR 데이터(금융 및 물류)(71301)와 법령 별지 서식(law.go.kr)에 합성 값을 채운 문서. **데이터는 재배포하지 않습니다.** AI 허브 데이터는 신청자 본인의 내부 이용으로 한정되며 이 글과 그림에는 데이터셋의 이미지, 글자, 라벨, 크롭, 샘플이 들어 있지 않습니다. 예시는 모두 손으로 쓴 합성 값입니다.
 - 이전 글: [문서 필드 추출 모델을 학습하지 않은 이유](/tech-blog/ko/research/docfields-label-audit-why-we-did-not-train/)
