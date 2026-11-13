@@ -29,6 +29,9 @@ The same digest holds two more stories that look unrelated to this finding. A Ch
 
 If your organization runs AI on rented compute or trains its own models, this morning's news direction is worth reading twice. The moment regulation changes what it chases, "where is my compute and who can verify it" becomes a management question.
 
+![A dark chip under a narrow forensic spotlight, a glowing fingerprint pattern traced across its surface, the article's core concept visualized](/assets/images/smuggled-chip-testifying-model-hero.webp)
+*The article's core concept, visualized.*
+
 ## Evidence: The Fingerprint Left in the Weight Files
 
 The core of the report is simple. Former OpenAI researcher Will DePue identified a hardware signature in the weights of a public frontier AI model. According to the report, the signature matches the layout and seed patterns of Nvidia Blackwell GPUs. The conclusion is one line: China's top AI companies trained frontier models on banned Blackwell GPUs.
@@ -88,6 +91,21 @@ The direction of capital is compute, the direction of the rule is the fence, the
 ## The Question for Companies: Who Can Explain Which GPU Did What
 
 This morning's news compresses to one word for companies that operate AI inside their own boundary. Verifiability. If you cannot verify which chip a GPU came from, you have no basis to trust the model trained on it. If the origin of the model is uncertain, the behavior of the agents sitting on that model becomes uncertain too. From chips to models, from models to agents, the responsibility of verification descends one layer at a time.
+
+```mermaid
+flowchart TD
+    subgraph CASE["Three stories, one case"]
+        E["Evidence, the weight fingerprint<br/>layout and seed patterns point to Blackwell"]
+        S["Suspect, the funding-round procurement<br/>when the box stops, money moves first"]
+        R["Rule, reach into rental<br/>extends from ownership to usage"]
+    end
+    E --> C["Read as one case<br/>chips are smuggled, models testify"]
+    S --> C
+    R --> C
+    C --> Q["The question left for companies<br/>who can explain which GPU did what"]
+```
+
+Set side by side, the three stories read as one case. The evidence is the weight file, the suspect is the procurement path in the funding round, and the rule's reach comes down to rental. Where the three lines meet, one question is left for companies.
 
 What the fingerprint news asks of companies is simple. Where did your model come from, in terms of hardware? Can your audit logs answer that question? The rule news asks one step further. If compute rented in the cloud becomes a target of regulation, where will tomorrow's audit request come from?
 
