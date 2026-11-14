@@ -1,6 +1,6 @@
 ---
-title: "Published, Not Approved for Production: Two Experimental Korean/English Guardrail Models for Gibberish and PII NER"
-seo_title: "Thaki-Gibberish-KoEn-Experimental and Thaki-PII-NER-KoEn-v2-Preview: Experimental Release, Release Decision on Hold | ThakiCloud"
+title: "Why We Didn't Ship a Model That Scored F1 0.99"
+seo_title: "Why We Didn't Ship a Model That Scored F1 0.99: Thaki-PII-NER-KoEn-v2-Preview and Thaki-Gibberish-KoEn-Experimental on Hold | ThakiCloud"
 seo_description: "We published a Korean/English gibberish detector and a PII and organization NER model on Hugging Face as candidates for LLM Guard style guardrail scanners. Neither is approved for production. This post shows how numbers measured on training-like sources differed from numbers measured on independent data."
 excerpt: "The gibberish detector passed 15 of 16 gates but failed on a 1.33% upper bound for mixed/code false positives. The PII NER model scored F1 0.99 on its development set but only 0.40 for organizations on an independent English set. Both are research releases, and both release decisions remain on hold."
 date: 2026-11-14

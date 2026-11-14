@@ -1,6 +1,6 @@
 ---
-title: "Thaki-BanCode-KoEn-v2 · 한국어 문장을 코드로 오인하지 않는 LLM 가드레일용 코드 블록 탐지기"
-seo_title: "Thaki-BanCode-KoEn-v2: 한국어 오탐을 없앤 LLM Guard BanCode 코드 블록 탐지 모델 공개 | ThakiCloud"
+title: "한국어 문장 91%를 코드로 오인하던 가드레일, 0%로 고쳤습니다"
+seo_title: "한국어 문장 91%를 코드로 오인하던 LLM Guard BanCode, 오탐 0%로 고친 Thaki-BanCode-KoEn-v2 | ThakiCloud"
 seo_description: "LLM Guard BanCode 스캐너 자리에 들어갈 140M 한국어·영어 코드 블록 탐지기 Thaki-BanCode-KoEn-v2를 공개했습니다. 학습에 쓰지 않은 공개 문서 13,814건에서 원본 BanCode 모델이 한국어 일반 문장 91.3%, 영어 60.7%를 코드로 잘못 잡은 반면 v2는 0.00%와 0.72%였고, 코드 탐지율은 99.3%와 99.8%였습니다."
 excerpt: "학습에 쓰지 않은 공개 문서 13,814건에서 원본 BanCode 모델은 한국어 일반 문장의 91.3%를 코드로 잡았습니다. v2는 4,200건 중 0건이었고 코드 탐지율은 99.3%로 원본(98.2%)보다 낮아지지 않았습니다. 다만 llm-guard 기본 BanCode 클래스에 그대로 끼우면 안 됩니다."
 date: 2026-11-14

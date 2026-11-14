@@ -1,6 +1,6 @@
 ---
-title: "공개는 했지만 운영 승인은 아닙니다 · 한·영 무의미 문자열 탐지기와 개인정보 NER 실험 모델 두 개"
-seo_title: "Thaki-Gibberish-KoEn-Experimental·Thaki-PII-NER-KoEn-v2-Preview 실험 공개, 출시 판정은 보류 | ThakiCloud"
+title: "개발 세트 F1 0.99인데 출시하지 않은 이유"
+seo_title: "개발 세트 F1 0.99인데 출시하지 않은 이유: Thaki-PII-NER-KoEn-v2-Preview·Thaki-Gibberish-KoEn-Experimental 보류 판정 | ThakiCloud"
 seo_description: "LLM Guard식 가드레일 스캐너 후보로 만든 한·영 무의미 문자열 탐지기와 개인정보·기관명 NER 모델을 Hugging Face에 공개했습니다. 두 모델 모두 운영용 승인을 받지 못했습니다. 학습과 같은 출처에서 잰 숫자와 독립 데이터에서 잰 숫자가 어떻게 달랐는지 정리합니다."
 excerpt: "무의미 문자열 탐지기는 16개 게이트 중 15개를 통과했지만 혼합·코드 오탐률 상한 1.33%로 떨어졌고, 개인정보 NER은 개발 세트 F1 0.99와 달리 독립 영어 세트의 기관명 F1이 0.40이었습니다. 둘 다 연구 열람용 공개이며 출시 판정은 보류 그대로입니다."
 date: 2026-11-14

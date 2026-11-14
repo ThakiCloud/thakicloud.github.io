@@ -1,6 +1,6 @@
 ---
-title: "Thaki-BanCode-KoEn-v2: A Code-Block Detector for LLM Guardrails That Stops Flagging Korean Prose as Code"
-seo_title: "Thaki-BanCode-KoEn-v2: An LLM Guard BanCode Code-Block Detector Without the Korean False Alarms | ThakiCloud"
+title: "LLM Guard Flagged 91% of Korean Prose as Code. v2 Gets It to 0%"
+seo_title: "LLM Guard BanCode Flagged 91% of Korean Prose as Code: Thaki-BanCode-KoEn-v2 Gets It to 0% | ThakiCloud"
 seo_description: "We released Thaki-BanCode-KoEn-v2, a 140M Korean/English code-block detector built for the LLM Guard BanCode scanner slot. On 13,814 public items never used in training, the original BanCode model flagged 91.3% of normal Korean text and 60.7% of normal English text as code, while v2 flagged 0.00% and 0.72%, with detection rates of 99.3% and 99.8%."
 excerpt: "On 13,814 public items never used in training, the original BanCode model flagged 91.3% of normal Korean text as code. v2 flagged 0 of 4,200, and its Korean detection rate of 99.3% was no lower than the original's 98.2%. It must not be dropped into the stock llm-guard BanCode class, though."
 date: 2026-11-14
