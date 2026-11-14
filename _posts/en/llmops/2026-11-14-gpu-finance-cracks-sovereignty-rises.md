@@ -27,6 +27,9 @@ If you have been watching a quieter layer than model rankings or chip geopolitic
 
 Let me give you the conclusion first. The question of the day is no longer 'which model is strong' but 'who can keep the compute running, and can that compute be trusted.' Today's HuggingNews digest had a lot of familiar stories mixed in. But the signals worth reading were in the quiet layer. Two stories about money, and two stories about running AI inside your own boundary. Put the four together and a clear picture emerges. For operators who run agents on rented compute, today's signals land even more directly.
 
+![A glowing stack of compute servers standing on a thin, cracking beam of light, with a small self-contained ring of warm light holding a chip beside it, the article's core concept visualized](/assets/images/gpu-finance-cracks-sovereignty-rises-hero.webp)
+*The core concept of the post, visualized.*
+
 ## Two numbers on one page
 
 Two numbers that are awkward to put side by side stand out in the compute supply chain this morning. One is $500 billion. It is the size of the credit fund for AI startups to buy GPUs, and the partners financing it are reconsidering whether to participate after leadership changes on the Nvidia side. The other is $5.5 billion. It is the debt of GPU cloud Nscale, and its cash runway has shrunk to 12 months. Nscale warned that it needs additional capital to fulfill its 2027 contracts, including building data center campuses.
@@ -46,6 +49,26 @@ On the other side of that signal there is quiet resistance. On November 13, the 
 The two companies are different, and on the surface their directions differ. But the logic underneath is one. Run AI inside your own boundary, on your own hardware, and in a verifiable way. The days when local inference was a hobby and privacy was an add-on option are over. The stabilization of the local base and the spread of confidential computing are the hedge the industry has quietly laid down against the risk of the GPUs it rents and lends.
 
 Let me connect this to the section right before. When the financing layer of rented compute wobbles, the value of 'I run it and I verify it' rises. llama.cpp is the answer to 'where do you run the model,' and Solana Confidential Compute is the answer to 'how do you prove that run is safe.' The two fill in both faces of sovereignty at the same time.
+
+```mermaid
+flowchart TD
+    subgraph FUND["Financing layer of rented compute"]
+        C1["$500 billion credit fund<br/>capital side, money to buy GPUs"]
+        C2["Nscale $5.5 billion debt<br/>delivery side, 12-month cash runway"]
+    end
+    subgraph HEDGE["The opposite direction the industry quietly bet on"]
+        H1["llama.cpp and ggml stable v1.0.0<br/>I run it, local execution"]
+        H2["Solana Confidential Compute<br/>I prove it, verifiable execution"]
+    end
+    AG["Agents started spending real money<br/>ChatGPT Wallet, transactions and purchases"]
+    C1 -. "when capital wobbles" .-> AG
+    C2 -. "when delivery wobbles" .-> AG
+    H1 --> SOV["Sovereignty becomes a technical choice<br/>where you put it, how you prove it"]
+    H2 --> SOV
+    AG --> SOV
+```
+
+Restated as one map: the wobbling financing layer (capital side, delivery side) and the quiet hedges (local execution, confidential execution) meet at the layer of agents spending real money, and together they make sovereignty a technical choice.
 
 Why does this matter? Because these technologies are no longer in the experimental stage. llama.cpp reaching 1.0 means the local execution base has entered a stage where downstream tools can depend on it. And Solana's confidential computing is open source that anyone can audit. 'I run it and I prove it' has moved from the territory of 'can it be done' to the territory of 'will it be done.' That is the essence of the change.
 

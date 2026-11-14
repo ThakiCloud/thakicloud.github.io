@@ -20,6 +20,9 @@ tags:
 categories:
   - agentops
 canonical_url: "https://thakicloud.com/tech-blog/ko/agentops/self-hosted-claude-managed-agents/"
+audiobook: "https://drive.google.com/file/d/1J0ZkWo3o2HYibm2w7mPLvMpkEXICPSK5/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 에이전트를 프로덕션에 올린 팀이라면 이 질문을 한 번쯤 마주합니다. 새벽에 깨진 빌드를 고치는 에이전트, 릴리스를 테스트하는 에이전트, 알람을 트리아지하는 에이전트, 버그 백로그를 파고드는 에이전트. 이런 에이전트는 무인으로, 내 코드 위에, 내 내부 시스템에 접속한 채로 돌아야 합니다. 그런데 이 에이전트를 실제로 돌리는 플랫폼 자체는 어디에 두는 걸까요.
@@ -46,6 +49,10 @@ Managed Agents는 "자율 에이전트를 만들어 배포하는 조립식 API �
 
 ![셀프호스트 전환을 결정하는 두 가지 트리거: 완전한 데이터 주권과 커스텀 추론 라우팅](/assets/images/self-hosted-claude-managed-agents-slide-03.webp)
 *셀프호스트 전환을 결정하는 두 가지 트리거입니다. 에이전트·세션·히스토리를 내가 저장해야 하고, 모델 호출을 내가 고른 프로바이더로 라우팅해야 할 때.*
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/self-hosted-claude-managed-agents/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 서버, 데이터베이스, 워커, 콘솔: 내 경계 안의 주체들
 
@@ -154,3 +161,16 @@ flowchart TB
 *권장 도입 경로를 세 단계로 짚은 슬라이드입니다.*
 
 첫 실험은 낮은 부담부터 시작하는 것이 좋습니다. 셀프호스트 샌드박스에서 도구 실행만 내 쪽으로 빼고, 워커가 폴링하며 샌드박스가 컨테이너로 뜨는 형상을 확인한 뒤, 서비스가 필요해지는 시점에 cma-server와 데이터베이스를 함께 올립니다. 도입 문서는 docs의 self-hosted 페이지, 발표 자료의 claude.com 리소스 페이지, 그리고 라이선스 페이지가 정본입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/self-hosted-claude-managed-agents/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+## 참고 자료
+
+- [Claude Platform Docs · Self-hosted Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/self-hosted): cma-server·워커·데이터베이스 구조, cma-sandboxes Helm 차트, 추론 프로바이더 선택, "Differences from the hosted service"
+- [Claude Platform Docs · Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview): 베타 헤더와 ZDR 포함 데이터 처리
+- [Software License Agreement: Claude Managed Agents Server](https://www.anthropic.com/legal/self-hosted-managed-agents-license): 서버 소프트웨어 라이선스 정본
+- [ClaudeDevs 발표 트윗](https://x.com/ClaudeDevs/status/2120938988165091693): 프라이빗 베타 오픈 발표
+- [Claude Managed Agents 리소스 페이지](https://claude.com/resources/articles/claude-managed-agents): 발표 자료 정본
+- [Anthropic · Scaling Managed Agents with stable interfaces](https://www.anthropic.com/research/managed-agents): 뇌와 손의 분리를 포함한 설계 원칙
