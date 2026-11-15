@@ -1,7 +1,7 @@
 ---
-title: "한국어 OCR 오픈소스 모델 4종 비교: 213만부터 27B까지"
-seo_title: "한국어 OCR 오픈소스 모델 4종 비교: 213만 파라미터 줄 OCR부터 27B 단어 OCR까지, 크기가 다른 이유와 측정 계약 | ThakiCloud"
-seo_description: "ThakiCloud가 공개한 한국어 OCR 모델 4종(213만·893만 파라미터 줄 OCR, 0.9B급·27B 단어 OCR 어댑터)을 왜 크기를 다르게 만들었는지, 각 모델이 무엇을 배웠는지, 평가 세트와 지표가 어떻게 다른지 정리합니다. 수치는 모델 간 순위가 아닙니다."
+title: "한국어 OCR 오픈소스 모델 5종 비교: 213만부터 27B까지"
+seo_title: "한국어 OCR 오픈소스 모델 5종 비교: 213만 파라미터 줄 OCR부터 27B 단어 OCR까지, 크기가 다른 이유와 측정 계약 | ThakiCloud"
+seo_description: "ThakiCloud가 공개한 한국어 OCR 모델 5종(213만·893만 파라미터 줄 OCR 세 개, 0.9B급·27B 단어 OCR 어댑터)을 왜 크기를 다르게 만들었는지, 각 모델이 무엇을 배웠는지, 평가 세트와 지표가 어떻게 다른지 정리합니다. 수치는 모델 간 순위가 아닙니다."
 excerpt: "CPU에서 한 줄을 수 밀리초에 읽는 모델과 GPU 53GB를 쓰는 모델을 함께 공개했습니다. 왜 네 가지 크기가 필요했고, 각 모델의 숫자를 어디까지 읽어야 하는지 정리했습니다."
 date: 2026-11-07
 tags:
@@ -26,7 +26,7 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/korean-ocr-open-models-2m-to-27b/"
 ---
 
-ThakiCloud는 크기가 1만 배 넘게 차이 나는 한국어 문자 인식 모델 네 개를 공개했습니다. 작은 두 모델은 CPU에서 텍스트 한 줄을 읽고 큰 두 모델은 GPU에서 한국어 단어 이미지 한 장을 읽습니다. 네 모델은 서로 다른 문제를 풀려고 만들었습니다. 평가 세트와 지표도 달라서 숫자를 나란히 놓고 순위를 매길 수 없습니다.
+ThakiCloud는 크기가 1만 배 넘게 차이 나는 한국어 문자 인식 모델 다섯 개를 공개했습니다. 작은 세 모델은 CPU에서 텍스트 한 줄을 읽고 큰 두 모델은 GPU에서 한국어 단어 이미지 한 장을 읽습니다. 작은 모델 가운데 G2M-R2는 G2M-Preview를 3배 오래 학습한 후속판입니다. 모델들은 서로 다른 문제를 풀려고 만들었습니다. 평가 세트와 지표도 달라서 숫자를 나란히 놓고 순위를 매길 수 없습니다.
 
 ## 쉽게 말하면
 
@@ -34,11 +34,11 @@ ThakiCloud는 크기가 1만 배 넘게 차이 나는 한국어 문자 인식 �
 
 ThakiOCR의 작은 모델은 스캐너, 큰 모델은 숙련된 직원에 가깝습니다.
 
-## 왜 크기가 다른 모델 네 개인가
+## 왜 크기가 다른 모델을 여러 개 냈나
 
 기업 문서 처리에는 성격이 다른 두 요구가 함께 있습니다.
 
-첫째는 양과 환경입니다. 같은 서식의 줄 이미지를 하루에 수십만 번 읽어야 하고 GPU가 없는 온프레미스 서버나 현장 단말에서 돌려야 하는 경우가 많습니다. 이때는 CPU에서 한 줄을 수 밀리초 안에 읽는 작은 줄 OCR이 필요합니다. ThakiOCR-KOEN-V1-Dense(213만 파라미터)와 ThakiOCR-KOEN-G2M-Preview(893만 파라미터)가 이 자리를 맡습니다.
+첫째는 양과 환경입니다. 같은 서식의 줄 이미지를 하루에 수십만 번 읽어야 하고 GPU가 없는 온프레미스 서버나 현장 단말에서 돌려야 하는 경우가 많습니다. 이때는 CPU에서 한 줄을 수 밀리초 안에 읽는 작은 줄 OCR이 필요합니다. ThakiOCR-KOEN-V1-Dense(213만 파라미터)와 ThakiOCR-KOEN-G2M-Preview(893만 파라미터), 그 후속판 ThakiOCR-KOEN-G2M-R2(893만 파라미터)가 이 자리를 맡습니다.
 
 둘째는 어려운 입력입니다. 손글씨, 야외에서 찍은 간판 글자, 흔치 않은 한글 음절은 작은 CTC 모델이 잘 읽지 못합니다. 이런 단어는 이미지와 텍스트를 대량으로 학습한 비전 언어 모델을 한국어 단어 OCR에 맞춰 조정하는 편이 낫습니다. ThakiOCR-KO-v1(0.9B급 기반 모델용 LoRA)과 ThakiOCR-Large-27B-R2B(27B 기반 모델용 LoRA)가 이 자리를 맡습니다.
 
@@ -52,7 +52,7 @@ flowchart TB
     E --> F
 ```
 
-네 모델 모두 페이지에서 글자 위치를 찾지 않습니다. 앞단에 검출 단계가 있어야 하고 그 뒤에서 어느 모델로 보낼지를 정합니다. 이런 배치는 [Metis 계층형 문서 추론 글](/tech-blog/ko/llmops/thakiocr-metis-tiered-document-inference/)에서 따로 다룹니다.
+다섯 모델 모두 페이지에서 글자 위치를 찾지 않습니다. 앞단에 검출 단계가 있어야 하고 그 뒤에서 어느 모델로 보낼지를 정합니다. 이런 배치는 [Metis 계층형 문서 추론 글](/tech-blog/ko/llmops/thakiocr-metis-tiered-document-inference/)에서 따로 다룹니다.
 
 ## 각 모델이 배운 것
 
@@ -73,6 +73,12 @@ G2M은 같은 계열 구조를 893만 파라미터로 키우고 실제 공공 �
 남은 실패도 분명합니다. 연도 뒤에 공백이 들어간 날짜를 틀렸고 생김새가 거의 같은 `₩`(U+20A9)와 `￦`(U+FFE6)를 427줄에서 서로 바꿔 읽었습니다. 미리 정해 둔 합격 기준(사전등록 게이트) 다섯 개 가운데 날짜 기준에서 떨어져 판정은 A1_GEN2_NO_GO입니다. 경위는 [G2M 공개 글](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/)에 정리했습니다.
 
 G2M과 같은 구조로 금융 문서 데이터를 더해 다시 학습한 A2는 가중치를 공개하지 않았습니다. A2는 학습에 없던 서식으로 따로 평가했습니다. 그 결과는 [A2 평가 글](/tech-blog/ko/research/thakiocr-a2-independent-eval-43751-lines/)과 [Maxis 관점의 학습 글](/tech-blog/ko/research/thakiocr-maxis-same-size-fewer-errors/)에 있습니다.
+
+### G2M-R2: 학습을 3배로 늘려도 실제 이미지는 거의 그대로였다
+
+G2M-R2는 G2M-Preview 가중치(4만 step)에서 8만 step을 더 학습한 후속판입니다. 구조와 어휘는 Preview와 같습니다. 개발셋 7개 모두에서 CER이 내려갔지만 개선은 합성 줄에 몰렸습니다. 합성 한국어 줄은 6.38%에서 5.36%로 내려갔고 실제 스캔 줄은 8.43%에서 8.37%로 거의 그대로였습니다.
+
+공백을 뺀 세 글자 이하의 짧은 실제 줄은 32.76%에서 33.91%로 오히려 조금 나빠졌습니다. 같은 실제 줄 이미지를 오래 보는 것만으로는 실제 이미지 정확도가 오르지 않는다는 것이 이 모델의 교훈입니다. 수치는 모두 후보 선택에 쓴 개발셋이라 독립 테스트가 아닙니다. 자세한 내용은 [G2M-R2 공개 글](/tech-blog/ko/research/thakiocr-g2m-r2-three-times-training/)에 있습니다.
 
 ### KO-v1: 단어를 더 잘 읽는 쪽이 문서를 망칠 수 있다
 
@@ -101,6 +107,7 @@ Large-27B-R2B는 Qwen/Qwen3.6-27B의 디코더 선형층 496개에 LoRA를 붙�
 |---|---|---|---|---|
 | V1-Dense | 줄 | AI 허브 71299 검증 데이터 일부의 단어 5,000개 | 개발용, 독립 시험 아님 | CER 37.14% |
 | G2M | 줄 | AI 허브 71299 Training 중 학습에서 뺀 한 권의 줄 70개 | 학습 뒤 한 번만 개봉, 같은 데이터셋 계열 | CER 0.89% |
+| G2M-R2 | 줄 | AI 허브 71299 Training에서 떼어 둔 내부 검증 줄 2,895개 | 개발용, R2 후보 선택에 씀 | CER 8.43% → 8.37% |
 | KO-v1 | 단어 | 데이터셋 605·91·105 Validation에서 원천별 600개, 총 2,400개 | 같은 원천, 독립 시험 아님 | CER 25.28% → 7.78% |
 | Large-27B-R2B | 단어 | 데이터셋 605·91·105 Validation에서 원천별 600개, 총 2,400개 | 같은 원천, 독립 시험 아님 | CER 18.04% → 6.01% |
 
@@ -126,7 +133,7 @@ Large-27B-R2B는 Qwen/Qwen3.6-27B의 디코더 선형층 496개에 LoRA를 붙�
 
 ## 실제 오류 유형과 한계
 
-네 모델의 오류는 유형별로 정리하면 다음과 같습니다.
+네 모델(Preview까지)의 오류는 유형별로 정리하면 다음과 같습니다. R2의 짧은 텍스트·날짜 한계는 위 G2M-R2 절에 있습니다.
 
 - **공백 삽입**: V1-Dense는 실제 한국어 단어 이미지의 38%에서 음절 사이에 공백을 넣습니다. 공백을 무시하면 같은 세트의 CER이 37.14%에서 17.81%로 내려갑니다.
 - **날짜 안의 공백**: G2M은 연도 뒤에 공백이 있는 날짜에서 공백을 지웠습니다. 내부 실문서 개발 세트의 날짜 토큰 정확 일치율은 45%에서 69% 사이였습니다.
@@ -134,13 +141,13 @@ Large-27B-R2B는 Qwen/Qwen3.6-27B의 디코더 선형층 496개에 LoRA를 붙�
 - **문서 구조 손상**: KO-v1의 M2 갈래는 단어를 더 잘 읽었지만 표 50개 중 10개에서 셀 글자는 맞히고 표 구조는 틀렸습니다. 공개한 M1은 이 문제가 없도록 고른 갈래입니다.
 - **없는 글자 삽입**: Large-27B-R2B의 기반 모델은 손글씨에서 없는 글자를 끼워 넣었고 미세조정 뒤 이 오류는 사라졌습니다.
 
-공통 한계도 있습니다. 네 모델 모두 연구용 공개이고 실행할 때마다 결과가 얼마나 달라지는지 여러 시드로 재지 않았습니다. 금융·법률·신분 문서의 중요 필드를 사람 확인 없이 읽는 데 쓰면 안 됩니다.
+공통 한계도 있습니다. 다섯 모델 모두 연구용 공개이고 실행할 때마다 결과가 얼마나 달라지는지 여러 시드로 재지 않았습니다. 금융·법률·신분 문서의 중요 필드를 사람 확인 없이 읽는 데 쓰면 안 됩니다.
 
 ## 어떤 기준으로 고르나
 
 숫자 순위가 아니라 세 가지 질문으로 고릅니다.
 
-1. **입력이 줄인가, 단어인가?** 검출기가 줄을 잘라 준다면 V1-Dense나 G2M, 단어를 잘라 준다면 KO-v1이나 Large-27B-R2B입니다.
+1. **입력이 줄인가, 단어인가?** 검출기가 줄을 잘라 준다면 V1-Dense나 G2M 계열(Preview·R2), 단어를 잘라 준다면 KO-v1이나 Large-27B-R2B입니다.
 2. **GPU를 쓸 수 있는가?** GPU가 없으면 줄 OCR 두 모델만 후보입니다. GPU 한 장에 7GiB 정도면 KO-v1, 53GB 이상이면 Large-27B-R2B까지 돌릴 수 있습니다.
 3. **틀리면 안 되는 글자가 무엇인가?** 원화 기호, 원문자, 마스킹 숫자라면 G2M이 그런 글자를 겨냥해 학습했습니다. 손글씨나 촬영 글자라면 단어 OCR 어댑터가 그 데이터로 학습했습니다. 어느 쪽이든 날짜와 금액은 따로 검증하는 단계를 둡니다.
 
@@ -174,7 +181,7 @@ python inference_example.py --image word.png --report   # JSON: text + load chec
 
 ## 온프레미스와 플랫폼에서 쓰려면
 
-네 모델 모두 가중치를 내려받아 내부망에서 실행할 수 있습니다. ThakiCloud는 고객이 통제하는 환경에서 모델을 학습하고(Maxis), 서비스하고(Metis), 업무에 연결하는(Paxis) 플랫폼을 만듭니다. 작은 줄 OCR은 CPU 엔드포인트로, 단어 OCR 어댑터는 GPU 엔드포인트로 나눠 올리고 그 앞에 문서 분류를, 뒤에 중요 필드 검증을 두는 구성을 연구합니다.
+다섯 모델 모두 가중치를 내려받아 내부망에서 실행할 수 있습니다. ThakiCloud는 고객이 통제하는 환경에서 모델을 학습하고(Maxis), 서비스하고(Metis), 업무에 연결하는(Paxis) 플랫폼을 만듭니다. 작은 줄 OCR은 CPU 엔드포인트로, 단어 OCR 어댑터는 GPU 엔드포인트로 나눠 올리고 그 앞에 문서 분류를, 뒤에 중요 필드 검증을 두는 구성을 연구합니다.
 
 자체 문서로 평가해 보거나 플랫폼 도입을 검토하신다면 [ThakiCloud](https://thakicloud.com)로 문의하시면 됩니다.
 
@@ -182,6 +189,7 @@ python inference_example.py --image word.png --report   # JSON: text + load chec
 
 - [ThakiOCR A: 213만 파라미터 자체 한국어·영어 OCR](/tech-blog/ko/research/thakiocr-a-small-korean-english-line-ocr/)
 - [ThakiOCR G2M: 숫자와 기호를 더 정확하게 읽는 두 번째 공개 모델](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/)
+- [ThakiOCR G2M-R2: 같은 모델을 3배 오래 학습한 결과](/tech-blog/ko/research/thakiocr-g2m-r2-three-times-training/)
 - [ThakiOCR A2: 독립 평가 43,751줄에서 확인한 개선과 남은 한계](/tech-blog/ko/research/thakiocr-a2-independent-eval-43751-lines/)
 - [ThakiOCR-KO-v1 공개 글](/tech-blog/ko/research/thakiocr-ko-v1-ovisocr3-korean-finetune/)
 - [ThakiOCR-Large-27B-R2B 공개 글](/tech-blog/ko/research/thakiocr-large-27b-r2b-qwen-korean-ocr/)
@@ -189,6 +197,6 @@ python inference_example.py --image word.png --report   # JSON: text + load chec
 
 ## 참고
 
-- 모델: [ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview), [ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1), [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B)
+- 모델: [ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview), [ThakiOCR-KOEN-G2M-R2](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-R2), [ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1), [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B)
 - 데이터 출처: NVIDIA OCR-Synthetic-Multilingual-v1(CC BY 4.0), AI 허브(AI-Hub)의 OCR 데이터(공공)(71299), 대용량 손글씨 OCR 데이터(605), 다양한 형태의 한글 문자 이미지 인식 데이터(91), 야외 실제 촬영 한글 이미지 데이터(105). AI 허브 데이터와 그 가공물은 재배포하지 않습니다.
-- 네 모델 모두 연구용 공개이며 제품 출시 판정은 별도입니다. 성능이 최고 수준이라고 주장하지 않습니다.
+- 다섯 모델 모두 연구용 공개이며 제품 출시 판정은 별도입니다. 성능이 최고 수준이라고 주장하지 않습니다.

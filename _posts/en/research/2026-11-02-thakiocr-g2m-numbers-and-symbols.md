@@ -25,6 +25,8 @@ canonical_url: "https://thakicloud.com/tech-blog/en/research/thakiocr-g2m-number
 
 We have uploaded G2M, the second public ThakiOCR model, to Hugging Face as [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview). It has 8.93 million parameters and is released under the Apache-2.0 license.
 
+> New version: G2M-R2, the same architecture trained 3x longer, is now public. Results and limits are in the [G2M-R2 release post](/tech-blog/en/research/thakiocr-g2m-r2-three-times-training/).
+
 First, its status. G2M is a **research preview**. It failed one of the five gates we set in advance, the date gate, and was ruled **A1_GEN2_NO_GO**. For product use, the verdict is NO-GO. We are releasing it not because it clears a bar, but so that other researchers can see what we did and where it got stuck, and reuse it.
 
 ⚠️ **Do not use this model to automatically process critical fields in financial or contract documents (amounts, account numbers, ID numbers, dates, contract terms).** The date and won-sign errors described below are exactly the failures that matter in those documents. Keep a human verification step in the loop.

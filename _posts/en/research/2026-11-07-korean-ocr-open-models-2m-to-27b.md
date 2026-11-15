@@ -1,7 +1,7 @@
 ---
-title: "Four Open Korean OCR Models Compared: From 2.13M to 27B"
-seo_title: "Four open Korean OCR models compared: from a 2.13M-parameter line OCR to a 27B word OCR, why the sizes differ and how each was measured | ThakiCloud"
-seo_description: "ThakiCloud's four public Korean OCR models (2.13M and 8.93M-parameter line OCR, 0.9B-class and 27B word OCR adapters): why we built them at different sizes, what each one learned, and how their evaluation sets and metrics differ. The numbers are not a ranking between models."
+title: "Five Open Korean OCR Models Compared: From 2.13M to 27B"
+seo_title: "Five open Korean OCR models compared: from a 2.13M-parameter line OCR to a 27B word OCR, why the sizes differ and how each was measured | ThakiCloud"
+seo_description: "ThakiCloud's five public Korean OCR models (three 2.13M and 8.93M-parameter line OCR models, 0.9B-class and 27B word OCR adapters): why we built them at different sizes, what each one learned, and how their evaluation sets and metrics differ. The numbers are not a ranking between models."
 excerpt: "We released a model that reads a line in a few milliseconds on CPU alongside one that needs 53GB of GPU memory. Here is why four sizes were needed, and how far each model's numbers can be read."
 date: 2026-11-07
 tags:
@@ -26,7 +26,7 @@ header:
 canonical_url: "https://thakicloud.com/tech-blog/en/research/korean-ocr-open-models-2m-to-27b/"
 ---
 
-ThakiCloud has released four Korean text recognition models whose sizes differ by more than 10,000 times. The two small models read one text line on CPU, and the two large models read one Korean word image on GPU. The four were built to solve different problems, and their evaluation sets and metrics differ too, so their numbers cannot be lined up and ranked.
+ThakiCloud has released five Korean text recognition models whose sizes differ by more than 10,000 times. The three small models read one text line on CPU, and the two large models read one Korean word image on GPU. Among the small ones, G2M-R2 is a follow-up that trains G2M-Preview 3x longer. The models were built to solve different problems, and their evaluation sets and metrics differ too, so their numbers cannot be lined up and ranked.
 
 ## In plain terms
 
@@ -34,11 +34,11 @@ Think of a parcel sorting center. Boxes with a cleanly printed barcode go past a
 
 ThakiOCR's small models are closer to the scanner, and its large models closer to the experienced clerk.
 
-## Why four models of different sizes
+## Why we released several models of different sizes
 
 Enterprise document processing carries two kinds of demand at once.
 
-The first is volume and environment. The same form's line images may need to be read hundreds of thousands of times a day, often on on-premises servers or field devices without a GPU. That calls for a small line OCR that reads one line in a few milliseconds on CPU. ThakiOCR-KOEN-V1-Dense (2.13M parameters) and ThakiOCR-KOEN-G2M-Preview (8.93M parameters) fill that role.
+The first is volume and environment. The same form's line images may need to be read hundreds of thousands of times a day, often on on-premises servers or field devices without a GPU. That calls for a small line OCR that reads one line in a few milliseconds on CPU. ThakiOCR-KOEN-V1-Dense (2.13M parameters), ThakiOCR-KOEN-G2M-Preview (8.93M parameters), and its follow-up ThakiOCR-KOEN-G2M-R2 (8.93M parameters) fill that role.
 
 The second is hard input. Handwriting, signboard text photographed outdoors, and uncommon Hangul syllables are hard for a small CTC model. For such words it works better to take a vision-language model already trained on large amounts of image and text and adapt it to Korean word OCR. ThakiOCR-KO-v1 (a LoRA for a 0.9B-class base model) and ThakiOCR-Large-27B-R2B (a LoRA for a 27B base model) fill that role.
 
@@ -52,7 +52,7 @@ flowchart TB
     E --> F
 ```
 
-None of the four models finds text positions on a page. A detection step must come first, and after it a decision on which model gets the input. That routing is covered separately in the [Metis tiered document inference post](/tech-blog/en/llmops/thakiocr-metis-tiered-document-inference/).
+None of the five models finds text positions on a page. A detection step must come first, and after it a decision on which model gets the input. That routing is covered separately in the [Metis tiered document inference post](/tech-blog/en/llmops/thakiocr-metis-tiered-document-inference/).
 
 ## What each model learned
 
@@ -73,6 +73,12 @@ On the same symbol test set (5,991 self-generated synthetic lines), critical-tok
 The remaining failures are just as clear. It got a date wrong when a space followed the year, and it swapped the near-identical `₩` (U+20A9) and `￦` (U+FFE6) in 427 lines. It failed the date criterion out of five pre-set pass criteria (preregistered gates), so the verdict is A1_GEN2_NO_GO. The details are in the [G2M release post](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/).
 
 A2 was retrained on the same architecture as G2M with financial-document data added, and its weights are not public. We evaluated it separately on forms not seen in training. The results are in the [A2 evaluation post](/tech-blog/en/research/thakiocr-a2-independent-eval-43751-lines/) and the [Maxis training post](/tech-blog/en/research/thakiocr-maxis-same-size-fewer-errors/).
+
+### G2M-R2: 3x the training, but real images barely moved
+
+G2M-R2 continues from the G2M-Preview weights (40k steps) for 80k more steps. The architecture and vocabulary are the same as Preview. CER fell on all 7 development sets, but the gain sat on synthetic lines. Synthetic Korean lines went from 6.38% to 5.36%, while real scanned lines went from 8.43% to 8.37%, almost unchanged.
+
+Very short real lines, three characters or fewer without spaces, got slightly worse, from 32.76% to 33.91%. The lesson is that seeing the same real line images for longer does not raise real-image accuracy. All numbers are dev sets used for candidate selection, not an independent test. Details are in the [G2M-R2 release post](/tech-blog/en/research/thakiocr-g2m-r2-three-times-training/).
 
 ### KO-v1: the better word reader can break the document
 
@@ -101,6 +107,7 @@ The evaluation sets and metrics in the table below differ, so it is not a rankin
 |---|---|---|---|---|
 | V1-Dense | line | 5,000 word crops from part of AI-Hub 71299 validation data | development set, not an independent test | CER 37.14% |
 | G2M | line | 70 lines from one volume of AI-Hub 71299 Training held out of training | opened once after training, same dataset family | CER 0.89% |
+| G2M-R2 | line | 2,895 internal validation lines held out of AI-Hub 71299 Training | dev set, used to pick R2 | CER 8.43% → 8.37% |
 | KO-v1 | word | 600 per source from Validation of datasets 605, 91, 105, 2,400 total | same source, not an independent test | CER 25.28% → 7.78% |
 | Large-27B-R2B | word | 600 per source from Validation of datasets 605, 91, 105, 2,400 total | same source, not an independent test | CER 18.04% → 6.01% |
 
@@ -126,7 +133,7 @@ Speed and memory were also measured under different conditions, so the table bel
 
 ## Real error types and limits
 
-Grouped by type, the errors of the four models look like this.
+Grouped by type, the errors of the four models up to Preview look like this. R2's short-text and date limits are in the G2M-R2 section above.
 
 - **Space insertion**: V1-Dense inserts spaces between syllables on 38% of real Korean word crops. Ignoring spaces brings CER on the same set from 37.14% down to 17.81%.
 - **Spaces inside dates**: G2M dropped the space in dates that have a space after the year. On internal real-document development sets, date-token exact match was between 45% and 69%.
@@ -134,13 +141,13 @@ Grouped by type, the errors of the four models look like this.
 - **Broken document structure**: KO-v1's M2 arm read words better, but on 10 of 50 tables it got cell text right and table structure wrong. The released M1 is the arm chosen to avoid that.
 - **Inserting characters that are not there**: Large-27B-R2B's base model inserted extra characters on handwriting, and that error disappeared after fine-tuning.
 
-There are shared limits too. All four are research releases, and run-to-run variation was not measured over multiple seeds. None of them should read critical fields in financial, legal, or identity documents without human review.
+There are shared limits too. All five are research releases, and run-to-run variation was not measured over multiple seeds. None of them should read critical fields in financial, legal, or identity documents without human review.
 
 ## How to choose
 
 Choose with three questions, not by a numeric ranking.
 
-1. **Is the input a line or a word?** If the detector crops lines, V1-Dense or G2M; if it crops words, KO-v1 or Large-27B-R2B.
+1. **Is the input a line or a word?** If the detector crops lines, V1-Dense or the G2M family (Preview, R2); if it crops words, KO-v1 or Large-27B-R2B.
 2. **Can you use a GPU?** Without a GPU, only the two line OCR models are candidates. With about 7GiB on one GPU you can run KO-v1, and with 53GB or more, Large-27B-R2B as well.
 3. **Which characters must not be wrong?** For won signs, circled numbers, and masked digits, G2M was trained for exactly that skill. For handwriting or photographed text, the word OCR adapters were trained on that data. Either way, keep a separate verification step for dates and amounts.
 
@@ -174,7 +181,7 @@ Follow the card's Usage table for prompt, image size, and decoding settings. Not
 
 ## On-premises and platform use
 
-All four models can be downloaded and run inside a private network. ThakiCloud builds a platform for training models (Maxis), serving them (Metis), and connecting them to business work (Paxis) in environments the customer controls. We are researching a setup that puts the small line OCR on a CPU endpoint and the word OCR adapters on a GPU endpoint. Document classification sits in front, and critical-field verification behind.
+All five models can be downloaded and run inside a private network. ThakiCloud builds a platform for training models (Maxis), serving them (Metis), and connecting them to business work (Paxis) in environments the customer controls. We are researching a setup that puts the small line OCR on a CPU endpoint and the word OCR adapters on a GPU endpoint. Document classification sits in front, and critical-field verification behind.
 
 If you want to evaluate on your own documents or are considering the platform, contact [ThakiCloud](https://thakicloud.com).
 
@@ -182,6 +189,7 @@ If you want to evaluate on your own documents or are considering the platform, c
 
 - [ThakiOCR A: our own 2.13M-parameter Korean-English OCR](/tech-blog/en/research/thakiocr-a-small-korean-english-line-ocr/)
 - [ThakiOCR G2M: our second public model, built to read numbers and symbols more accurately](/tech-blog/en/research/thakiocr-g2m-numbers-and-symbols/)
+- [ThakiOCR G2M-R2: what 3x the training did to the same model](/tech-blog/en/research/thakiocr-g2m-r2-three-times-training/)
 - [ThakiOCR A2: what an independent 43,751-line evaluation confirmed](/tech-blog/en/research/thakiocr-a2-independent-eval-43751-lines/)
 - [ThakiOCR-KO-v1 release post](/tech-blog/en/research/thakiocr-ko-v1-ovisocr3-korean-finetune/)
 - [ThakiOCR-Large-27B-R2B release post](/tech-blog/en/research/thakiocr-large-27b-r2b-qwen-korean-ocr/)
@@ -189,6 +197,6 @@ If you want to evaluate on your own documents or are considering the platform, c
 
 ## References
 
-- Models: [ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview), [ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1), [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B)
+- Models: [ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense), [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview), [ThakiOCR-KOEN-G2M-R2](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-R2), [ThakiOCR-KO-v1](https://huggingface.co/ThakiCloud/ThakiOCR-KO-v1), [ThakiOCR-Large-27B-R2B](https://huggingface.co/ThakiCloud/ThakiOCR-Large-27B-R2B)
 - Data sources: NVIDIA OCR-Synthetic-Multilingual-v1 (CC BY 4.0); AI-Hub's OCR 데이터(공공) (71299), 대용량 손글씨 OCR 데이터 (605), 다양한 형태의 한글 문자 이미지 인식 데이터 (91), and 야외 실제 촬영 한글 이미지 데이터 (105). AI-Hub data and anything derived from it are not redistributed.
-- All four models are research releases; product release decisions are separate. We make no claim of state-of-the-art performance.
+- All five models are research releases; product release decisions are separate. We make no claim of state-of-the-art performance.

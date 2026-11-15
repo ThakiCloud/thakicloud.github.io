@@ -25,6 +25,8 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-g2m-number
 
 ThakiOCR의 두 번째 공개 모델 G2M을 Hugging Face에 [ThakiOCR-KOEN-G2M-Preview](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-Preview)라는 이름으로 올렸습니다. 파라미터는 893만 개이고 Apache-2.0 라이선스입니다.
 
+> 새 버전: 같은 구조로 학습량을 3배로 늘린 G2M-R2를 공개했습니다. 결과와 한계는 [G2M-R2 공개 글](/tech-blog/ko/research/thakiocr-g2m-r2-three-times-training/)에 있습니다.
+
 먼저 상태부터 밝힙니다. G2M은 **연구 프리뷰**입니다. 미리 정해 둔 게이트 다섯 개 가운데 날짜 게이트 하나를 통과하지 못해 **A1_GEN2_NO_GO**로 판정됐습니다. 제품용으로는 NO-GO입니다. 기준을 넘어서가 아니라, 무엇을 했고 어디서 막혔는지 다른 연구자가 살펴보고 재사용할 수 있도록 공개합니다.
 
 ⚠️ **금융 문서와 계약 문서의 중요 필드(금액, 계좌번호, 식별번호, 날짜, 계약 조건)를 이 모델로 자동 처리하지 마십시오.** 아래에서 설명할 날짜와 원화 기호 오류가 바로 그런 문서에서 문제가 되는 실패입니다. 사람이 확인하는 단계를 반드시 두어야 합니다.
