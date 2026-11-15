@@ -1,7 +1,7 @@
 ---
 title: "Memory Dropped 73%, but the Model Could Not Answer: Performance and Quality Limits of Low-Bit LLM Quantization on B200"
 seo_title: "Low-Bit LLM Quantization Measured on NVIDIA B200: How Memory, Latency, Throughput and Korean Quality Diverge When Qwen3-8B Is Cut to 2, 3 and 4 Bits, NVFP4 and Mixed Precision | ThakiCloud"
-seo_description: "We quantized Qwen3-8B on NVIDIA B200 from 2 bits up to 4 bits, NVFP4 and mixed precision, and served it with real packed kernels. Memory fell by up to 73% and all 144 linear layers ran low-bit, but no arm passed the Korean quality gate. These are the measurements and failure modes."
+seo_description: "We quantized Qwen3-8B on NVIDIA B200 from 2 bits up to 4 bits, NVFP4 and mixed precision, and served it with real packed kernels. Memory fell by up to 73% and all 144 linear modules ran low-bit, but no arm passed the Korean quality gate. These are the measurements and failure modes."
 excerpt: "The 2-bit model cut memory by 73% and produced no answers at all. Serving 3-bit, 4-bit, NVFP4 and mixed-precision models on B200 showed that speed and memory are solved, while Korean quality remains the open problem."
 date: 2026-11-15
 published: true
@@ -25,7 +25,7 @@ toc: true
 
 This is a measurement report for engineers weighing low-bit quantization to cut the GPU cost of self-hosted LLMs. ThakiCloud quantized Qwen3-8B from 2 bits to 4 bits on NVIDIA B200 and ran it through a real serving path. The memory and kernel problems were solved, but no model has yet passed our Korean quality bar.
 
-So this is not a success story. It is a technical report that records, in numbers, which doors opened and which stayed shut. When a model passes the quality bar, we will publish it separately.
+So this is not a success story. It is a technical report that records, in numbers, which criteria were met and which remain open. When a model passes the quality bar, we will publish it separately.
 
 ## In plain terms
 
@@ -33,7 +33,7 @@ Picture packing clothes into a suitcase with a vacuum compression bag. The more 
 
 The catch is that squeezing too hard wrinkles the clothes. Two bits is close to pulling out nearly all the air. The bag became as small as it gets, but the clothes came out too wrinkled to wear. The rest of this post records how hard you can squeeze before the clothes give, and which clothes wrinkle first.
 
-## The three gates we tried to pass
+## The three criteria we tried to meet
 
 Every experiment asked the same three questions. First, do the low-bit weights run directly on B200 kernels without expanding back to BF16? Second, does weight memory at load fall below 5.98 GiB? Third, does the quantized model still answer the items the original model got right?
 
@@ -53,7 +53,7 @@ The BF16 original uses 15.27 GiB to load its weights. GPTQ 3-bit used 4.86 GiB a
 
 Bit counts need a stated basis. Counting only linear layers, 3-bit is 3.125 bits per weight and 2-bit is 2.125. Counting the whole model including embeddings and the output layer, they are 5.08 and 4.23 bits. The label "2-bit model" alone does not tell you the actual memory.
 
-The execution path behaved as intended. All 144 linear layers, 72 in attention and 72 in the MLP, ran on low-bit kernels. We never caught packed weights expanding into BF16. Batch-1 throughput was also higher: GPTQ 2-bit reached 304.9 tokens per second against 253.8 for BF16.
+The execution path behaved as intended. All 144 linear modules, 72 in attention and 72 in the MLP, ran on low-bit kernels. A module here is the unit in which vLLM fuses the original 252 linear layers for a single computation. We never caught packed weights expanding into BF16. Batch-1 throughput was also higher: GPTQ 2-bit reached 304.9 tokens per second against 253.8 for BF16 in the same run.
 
 But no answers came out. The 2-bit arm scored a tier of only 0.115. RTN 2-bit hit the maximum length on 76% of generation items. GPTQ 2-bit was truncated on 99.9%, and its distinct-2 score, the variety of consecutive word pairs, fell to 0.008. In other words, it repeated the same phrase without end. Neither method produced a single response from which a final answer could be extracted.
 
@@ -73,7 +73,7 @@ From the next experiment on, we changed the definition. We count the weight byte
 
 ## NVFP4 has the highest throughput and the slowest first token
 
-NVFP4, the FP4 path on B200, had the highest batch-1 throughput at 389.3 tokens per second, against 255.5 for BF16. Its median time to first token (TTFT), however, was 42.84 ms, about 2.9 times BF16's 14.68 ms.
+NVFP4, the FP4 path on B200, had the highest batch-1 throughput at 389.3 tokens per second, against 255.5 for BF16 in the same final-set run. Its median time to first token (TTFT), however, was 42.84 ms, about 2.9 times BF16's 14.68 ms.
 
 ![NVFP4 has the highest throughput but its first token is ~2.9x slower than BF16.](/assets/images/posts/research/b200-low-bit-quantization-limits/b200-low-bit-quantization-limits-fig-bars-ttft-en.webp)
 *NVFP4 has the highest throughput but its first token is ~2.9x slower than BF16.*
@@ -88,7 +88,7 @@ At roughly the same 4-bit budget, NVFP4's Korean retention was 0.805. Across exp
 
 ## Mixing W4 into W3 raises quality, and the gain reproduces
 
-Next, we returned some layers of the 3-bit model to 4 bits. Of 144 layers, the 41 that a diagnostic set flagged as sensitive went to 4 bits; the other 103 stayed at 3 bits. Load memory was 5.19 GiB.
+Next, we returned some layers of the 3-bit model to 4 bits. Of 144 modules, the 41 that a diagnostic set flagged as sensitive went to 4 bits; the other 103 stayed at 3 bits. Load memory was 5.19 GiB.
 
 ![The W3/W4 mix improved a lot over W3, yet no arm cleared 0.90 Korean retention.](/assets/images/posts/research/b200-low-bit-quantization-limits/b200-low-bit-quantization-limits-fig-bars-tier-en.webp)
 *The W3/W4 mix improved a lot over W3, yet no arm cleared 0.90 Korean retention.*
@@ -106,7 +106,7 @@ The development set looked promising. A tier of 0.926 and Korean retention of 0.
 ![Values that cleared the gate on DEV fell back below it on FINAL.](/assets/images/posts/research/b200-low-bit-quantization-limits/b200-low-bit-quantization-limits-fig-bars-devfinal-en.webp)
 *Values that cleared the gate on DEV fell back below it on FINAL.*
 
-On the unseen final set the result did not reproduce. Tier fell to 0.891 and Korean retention to 0.877. The reasoning drop widened to 9.0 points. Both values that had been above the line went back below it. The layer selection chosen on the development set was likely fitted to that set.
+On the unseen final set the result did not reproduce. Tier fell to 0.891 and Korean retention to 0.877. The reasoning drop widened to 9.0 points. Both values that had been above the line went back below it. The layer selection chosen on the development set may have been fitted to that set.
 
 We add one comparison that was not in the preregistered plan. On the same final set, this mix was 2.4 points less accurate than plain GPTQ 4-bit, with an interval of −3.6 to −1.2 points. Because it is a post-hoc exploratory result, we did not use it for any verdict. Read it only as a hint that the layers promoted to 8 bits may have hurt reasoning.
 
@@ -128,7 +128,7 @@ We also tried quantization-aware distillation (QAD), which retrains to recover q
 
 ## The results in one table
 
-These are the main arms on the final evaluation set (4,061 items). Memory is unrounded loaded bytes; latency and throughput are at batch size 1.
+These are the main arms on the final evaluation set (4,061 items). Memory is unrounded loaded bytes; latency and throughput are at batch size 1. Only the BF16 load memory comes from the earlier 3-bit and 2-bit measurement run.
 
 | Arm | Load memory | Median TTFT | Throughput | Tier | Korean retention |
 |---|---|---|---|---|---|
