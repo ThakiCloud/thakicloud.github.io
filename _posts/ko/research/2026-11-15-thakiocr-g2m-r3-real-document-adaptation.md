@@ -21,6 +21,9 @@ toc_sticky: true
 reading_time: true
 lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-g2m-r3-real-document-adaptation/"
+audiobook: "https://drive.google.com/file/d/1JjBAbeFrJ2iZAFgM9dslNpD4fIAn8oUF/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 작은 문자 인식 모델을 실제 서류에 붙여 본 개발자라면 같은 장면을 겪습니다. 합성 문장으로 잰 점수는 좋은데 스캐너로 읽은 신청서에서는 틀린 글자가 자꾸 나옵니다. 그래서 학습을 더 돌려 보지만 실제 문서 점수는 잘 움직이지 않습니다.
@@ -42,6 +45,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-g2m-r3-rea
 
 두 학생 모두 시험 점수가 조금 올랐습니다. 다만 새 문제집을 받은 학생은 짧은 단어 문제에서 더 나아졌습니다. 흐린 종이로 연습한 학생은 긴 문장 문제에서 더 나아졌습니다. 흐린 종이 연습을 한 학생은 원래 깨끗한 문제집 점수를 더 많이 잃었습니다.
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/thakiocr-g2m-r3-real-document-adaptation/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
 ## 구조는 그대로 두고 데이터만 한 가지씩 바꿨습니다
 
 두 후보의 출발점은 공개된 G2M-R2 가중치입니다. 구조와 전처리는 R2와 같습니다. 잘라 낸 텍스트 한 줄을 받아 문자열 하나를 돌려주는 CTC 줄 인식기이고 파라미터는 8,926,251개입니다. CTC는 글자 위치를 따로 맞추지 않고 줄 전체를 한 번에 글자열로 옮기는 학습 방식입니다.
@@ -59,6 +66,8 @@ R3B는 데이터 비율을 R2와 같게 두고 학습 이미지에만 변형을 
 *R2는 학습 시간만 늘렸습니다. R3A는 실제 문서 출처를 하나 더 넣었고, R3B는 같은 데이터에 촬영 증강을 넣었습니다.*
 
 평가셋과 홀드아웃은 두 후보 모두 학습에 쓰지 않았습니다. 71299 공식 Validation 분할과 632 봉인 평가셋, 평가 전용으로 받은 다른 AI 허브 데이터도 학습에서 뺐습니다.
+
+![thakiocr-g2m-r3-real-document-adaptation 슬라이드 1](/assets/images/thakiocr-g2m-r3-real-document-adaptation-slide-01.webp)
 
 ## 결과를 보기 전에 고르는 규칙을 적어 두었습니다
 
@@ -92,6 +101,8 @@ R2 글에서 실제 스캔 줄은 3배 학습으로 0.05%p 움직였습니다. �
 
 새로 넣은 632 쪽은 차이가 컸습니다. 학습에 없던 서식의 632 개발 줄 CER이 파일럿에서 10.88%에서 6.63%로 내려갔습니다. 다만 학습 데이터와 같은 출처라 이 숫자는 선택 근거로 쓰지 않았습니다.
 
+![thakiocr-g2m-r3-real-document-adaptation 슬라이드 2](/assets/images/thakiocr-g2m-r3-real-document-adaptation-slide-02.webp)
+
 ## R3B는 줄 단위에서 더 좋았지만 다른 곳을 더 잃었습니다
 
 증강을 넣은 R3B도 파일럿 개선 조건을 넘었습니다. 실제 줄 CER은 R3A보다 더 많이 내려갔습니다.
@@ -124,6 +135,8 @@ R3B 연장본은 실제 줄에서 7.82%로 표 전체에서 가장 낮았습니�
 
 두 추정 모두 오류 사례를 하나하나 분류해 확인한 결과는 아닙니다. 평가셋별 CER 차이에서 읽은 해석입니다. 두 방법을 합치면 둘의 장점이 모두 남는지도 아직 시험하지 않았습니다.
 
+![thakiocr-g2m-r3-real-document-adaptation 슬라이드 3](/assets/images/thakiocr-g2m-r3-real-document-adaptation-slide-03.webp)
+
 ## 학습 비용은 그래픽 카드 한 장으로 두 시간이 안 됩니다
 
 R3A는 파일럿 0.57 GPU-시간과 연장 1.11 GPU-시간을 합쳐 B200 한 장에서 1.68 GPU-시간을 썼습니다. R3B도 파일럿과 연장을 합쳐 1.67 GPU-시간이었습니다. R2가 4.45 GPU-시간을 써서 실제 줄을 0.05%p 움직인 것과 비교하면, 데이터 구성 실험이 훨씬 싼 편이었습니다.
@@ -133,6 +146,8 @@ R3A는 파일럿 0.57 GPU-시간과 연장 1.11 GPU-시간을 합쳐 B200 한 �
 공개로 바꾼 뒤 로그인하지 않은 환경에서 공개 리비전(59fd1fbe)을 내려받았습니다. 내려받은 가중치 파일의 해시는 원본과 같았습니다. 그다음 CPU fp32로 합성 한국어 줄과 합성 영어 줄에서 각각 512행을 다시 읽혔습니다.
 
 예측 문자열은 한국어 512행과 영어 512행이 모두 학습 환경 결과와 같았습니다. 같은 행의 CER도 한국어 4.75%, 영어 5.02%로 일치했습니다. R2 때는 1,024행 중 3행이 달랐는데 이번에는 다른 행이 없었습니다. 다만 512행씩만 확인한 결과입니다.
+
+![thakiocr-g2m-r3-real-document-adaptation 슬라이드 4](/assets/images/thakiocr-g2m-r3-real-document-adaptation-slide-04.webp)
 
 ## 쓰기 전에 알아 둘 한계
 
@@ -160,9 +175,20 @@ python inference.py line.png              # one or more line images
 python inference.py --demo                # renders an English line and reads it back
 ```
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/thakiocr-g2m-r3-real-document-adaptation/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+
+
+
+
+
+
+
 ## 출처와 데이터
 
 - 모델: [ThakiCloud/ThakiOCR-KOEN-G2M-R3](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-R3) (Apache-2.0, 연구 프리뷰, 리비전 59fd1fbe). R2 저장소 [ThakiCloud/ThakiOCR-KOEN-G2M-R2](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-G2M-R2)는 그대로 둡니다. 이 글의 수치는 모두 같은 실험 원장에서 옮겼습니다.
-- 학습 데이터: NVIDIA OCR-Synthetic-Multilingual-v1(CC BY 4.0), AI 허브(AI-Hub) — OCR 데이터(공공)(71299) Training 분할, AI 허브(AI-Hub) — 금융업 특화 문서 OCR 데이터(632) Training 분할, SIL OFL 1.1 글꼴로 만든 합성 기호 줄.
+- 학습 데이터: NVIDIA OCR-Synthetic-Multilingual-v1(CC BY 4.0), AI 허브(AI-Hub) OCR 데이터(공공)(71299) Training 분할, AI 허브(AI-Hub) 금융업 특화 문서 OCR 데이터(632) Training 분할, SIL OFL 1.1 글꼴로 만든 합성 기호 줄.
 - AI 허브 데이터와 그 가공물은 재배포하지 않습니다. 모델 저장소와 이 글에는 AI 허브 이미지, 크롭, 라벨이 들어 있지 않고, 이 글의 수치는 모두 집계값입니다.
 - 이전 글: [G2M-R2: 학습량 3배 실험](/tech-blog/ko/research/thakiocr-g2m-r2-three-times-training/) · [G2M Preview: 숫자와 기호](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/) · [213만 파라미터 ThakiOCR A](/tech-blog/ko/research/thakiocr-a-small-korean-english-line-ocr/) · [KO-v1: OvisOCR3 한국어 LoRA](/tech-blog/ko/research/thakiocr-ko-v1-ovisocr3-korean-finetune/) · [KO-v2 진단 실험](/tech-blog/ko/research/thakiocr-ko-v2-vision-lora-merge-research/) · [Large-27B-R2B](/tech-blog/ko/research/thakiocr-large-27b-r2b-qwen-korean-ocr/) · [한국어 OCR 오픈소스 모델 비교](/tech-blog/ko/research/korean-ocr-open-models-2m-to-27b/)

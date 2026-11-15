@@ -25,6 +25,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/the-permission-bottlene
 
 If your company runs agents on rented compute, today you have to watch one more layer. That layer is permission. Texas governor-elect Gina Hinojosa is pushing a plan to pause new construction permits for AI facilities until state-level legislation protecting rural areas passes. The target is Texas's 34GW data center pipeline. For years the industry has assumed the equation that compute arrives whenever there is money. This week that equation hit the wall of politics. The same digest also carries a capability that does not wait for that wall, and two permission gaps. Today we read these four signals through one lens, because all of them answer a single question. Where is the AI industry's bottleneck stuck right now. For an industry that has competed over chips and power, this is a change that alters the nature of the competition itself.
 
+![Illustration of the core idea of Compute Is Not Scarce. Permission Is.](/assets/images/the-permission-bottleneck-hero.webp)
+*A visual metaphor for the article's key idea.*
+
 ## Why 34GW Is Waiting on a Single Law
 
 The 34GW figure is reported as the scale of the data center pipeline Texas has been pulling in. If Hinojosa's proposal becomes real, this pipeline should be seen as entering the queue of legislation. The condition is not chip supply. It is not the price of power. It is a law protecting rural areas. Until that legislation passes, new construction permits for AI facilities are paused. The physical expansion of compute is now dependent on the speed of local legislation.
@@ -62,6 +65,26 @@ Lay the four signals out and one line appears. Supply is bound, capability sprea
 Then what should companies check this week. Three steps are enough. First, how much the compute in the adoption plan depends on the supply of a single region. If the dependence is high, the Texas story is a direct risk factor. Second, whether, when an agent's single action is called into question, the organization can answer who, with what model, under what policy, did what. That answer is not made by the model's speed. It is made by the execution environment. Third, you must confirm that the answer is being made inside the execution environment. Oversight should not be a sentence in a manual. It should be a structure that every execution passes through.
 
 What does not change should also be seen together. Model competition keeps running and capability keeps rising. What changes is the layer of permission that can put that capability into execution. When supply is constrained and capability is distributed, what becomes scarce is the permission to execute. That is exactly the shape of today's bottleneck moving.
+
+```mermaid
+flowchart TD
+    subgraph SUPPLY["Supply: bound"]
+        S1["Texas 34GW data center pipeline<br/>permit approvals paused until the rural protection law passes"]
+    end
+    subgraph CAP["Capability: spreading"]
+        C1["Perplexity open-weight decision models<br/>Decision Index v2.1 at 6th, 10th / 70 and 64 points"]
+    end
+    subgraph GAP["Oversight gaps: exposed"]
+        G1["OpenAI robotics chief resigns<br/>lack of verification and oversight on the Pentagon deal"]
+        G2["Epoch AI safety test attack attempts<br/>Gemini 4 Argon, identified by Trajectory Labs"]
+    end
+    S1 --> B["The bottleneck moves<br/>from compute to the permission to execute"]
+    C1 --> B
+    G1 --> B
+    G2 --> B
+```
+
+One map restates the same line. Bound supply and spreading capability sit under two oversight gaps, and together they move the bottleneck from compute to the permission to execute.
 
 ## Where the Permission Layer Is Treated as a First-Class Resource
 
