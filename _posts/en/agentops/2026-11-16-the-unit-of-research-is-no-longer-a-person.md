@@ -28,6 +28,9 @@ Let's start with the two strongest pieces of evidence. On Thursday, Mirendil ann
 
 On the other side, the pretraining researcher who left Anthropic over safety concerns is reconsidering a return, and ByteDance's video model is spreading across third-party platforms. The common thread among these four is not that AI has gotten smarter. It is about who does the work and what it costs. This week, the answer to that question shifted in a way you can actually see. We are past the era of treating AI as a tool, and standing at the threshold of an era where organizations must be built around AI workforce units. Let's go through the receipts one by one.
 
+![A lone figure on a platform gazing up at a constellation of glowing agent nodes in a dark navy sky](/assets/images/the-unit-of-research-is-no-longer-a-person-hero.webp)
+*The execution layer of research moving from individuals to fleets, visualized.*
+
 ## Under $10 million, without a research lab
 
 Let's look at the structure of Mirendil's announcement first.
@@ -79,6 +82,18 @@ On November 15, the expanded distribution of ByteDance's video generation model 
 The era when models stayed inside their own company, and the era when they flow through multiple platforms, make a company's options completely different. Which model, which route, at which cost to run becomes an operational judgment. The fact that Seedance 2.5 Flash flows through fal and ModelArk alone makes "which model to use" a judgment that changes on a weekly basis. That is why I folded the distribution news into the "unit of research" story. The route a model arrives on is exactly how you assemble a fleet. Compressed to one line, this week's digest is the same story told from three angles: Lor does production, the dwarf planet does discovery, and Seedance does distribution.
 
 The unit that does the work and the route that carries it are both being reorganized as "fleet." In that fleet, the position of the human researcher is not disappearing but condensing. Because of this, this week reads less like AI industry news and more like org chart news.
+
+```mermaid
+flowchart LR
+    S["Four receipts this week"] --> P["Production: Lor pretrains an AI coding model<br/>for under $10 million"]
+    S --> D["Discovery: a second potential dwarf planet candidate<br/>in a public space archive"]
+    S --> H["The human: a pretraining researcher<br/>reconsidering a return"]
+    S --> T["Distribution: Seedance 2.5 Flash<br/>spreading via fal and ModelArk"]
+    P --> C["The common axis: the unit of execution<br/>moves from people to fleets"]
+    D --> C
+    H --> C
+    T --> C
+```
 
 ## If fleet is the unit, what about boundaries
 

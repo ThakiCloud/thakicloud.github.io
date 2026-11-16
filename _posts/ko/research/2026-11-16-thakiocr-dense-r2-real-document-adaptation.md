@@ -19,6 +19,9 @@ toc_sticky: true
 reading_time: true
 lang: ko
 canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-dense-r2-real-document-adaptation/"
+audiobook: "https://drive.google.com/file/d/16TiP1SvjVPajRvHQGGLQJ06Q3BMF-2e_/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
 그래픽 카드 없는 서버나 작은 기기에서 문서를 읽어야 하는 개발자는 큰 모델을 쓰기 어렵습니다. 그래서 수백만 개 가중치짜리 작은 문자 인식 모델을 찾습니다. 그런데 작은 모델은 대개 합성 문장으로만 학습돼 있어서 실제 스캔 서류 앞에서는 크게 틀립니다.
@@ -39,6 +42,10 @@ canonical_url: "https://thakicloud.com/tech-blog/ko/research/thakiocr-dense-r2-r
 그래서 실제 신문 문장으로 연습을 시켰더니 틀리는 글자가 열 개 중 한두 개로 줄었습니다. 그런데 이번에는 띄어 써야 할 곳을 붙여 쓰는 버릇이 생겼습니다.
 
 선생님이 "띄어쓰기를 빠뜨리지 마라"고 따로 지도하자 붙여 쓰는 일은 절반 가까이 줄었습니다. 대신 띄어 쓰지 말아야 할 곳까지 띄어 쓰기 시작했습니다. 긴 문장 점수는 조금 올랐지만 짧은 단어 받아쓰기 점수는 떨어졌습니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/thakiocr-dense-r2-real-document-adaptation/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 실제 문서 줄로 이어 학습하자 실제 줄 CER이 39%에서 14.8%로 내려갔습니다
 
@@ -123,9 +130,13 @@ V1-Dense는 원래 반대 문제가 있었습니다. 실제 단어 이미지에�
 
 다음에 이어 간다면 항을 대칭으로 만드는 것이 첫 후보입니다. 공백 하나를 지운 오답과 함께 없는 자리에 공백 하나를 넣은 오답도 만들고 단어 크롭을 공백이 없어야 하는 예로 쓰는 방식입니다. 이 실험은 아직 돌리지 않았고 이어 갈지는 따로 정합니다.
 
+![thakiocr-dense-r2-real-document-adaptation 슬라이드 1](/assets/images/thakiocr-dense-r2-real-document-adaptation-slide-01.webp)
+
 ## 학습은 짧았고 데이터 준비가 길었습니다
 
 Dense-R2 파일럿은 0.88 GPU-시간, 연장본은 1.72 GPU-시간이었습니다. 띄어쓰기 보정 학습 자체는 0.48 GPU-시간이었습니다. 그런데 이 학습은 CPU가 적은 H200 노드에서 돌면서 데이터 준비에만 약 2.5시간이 걸렸습니다. 한 번은 데이터 준비 중 시간 제한에 걸려 학습 없이 끝났습니다. 그래서 보정 실험이 GPU를 점유한 시간은 스모크 포함 7.03시간이었습니다.
+
+![thakiocr-dense-r2-real-document-adaptation 슬라이드 2](/assets/images/thakiocr-dense-r2-real-document-adaptation-slide-02.webp)
 
 ## 쓰기 전에 알아 둘 한계
 
@@ -135,9 +146,13 @@ Dense-R2 파일럿은 0.88 GPU-시간, 연장본은 1.72 GPU-시간이었습니�
 - **띄어쓰기 실패 원인은 가설입니다.** 단어 평가셋의 공백 삽입을 따로 재지 않았습니다.
 - **크기 대비 정확도가 아직 높지 않습니다.** 거의 같은 실제 줄 평가셋에서 893만 파라미터 [G2M-R3](/tech-blog/ko/research/thakiocr-g2m-r3-real-document-adaptation/)는 8.16%입니다. 213만 파라미터 모델은 14.80%입니다.
 
+![thakiocr-dense-r2-real-document-adaptation 슬라이드 3](/assets/images/thakiocr-dense-r2-real-document-adaptation-slide-03.webp)
+
 ## 작은 모델은 Paxis에서 1차 판독 자리에 맞습니다
 
 Paxis로 문서 업무를 자동화할 때 모든 줄을 큰 모델로 읽을 필요는 없습니다. 213만 파라미터 모델은 CPU에서도 가볍게 돌아서 1차 판독이나 사전 분류에 둘 수 있습니다. 다만 띄어쓰기와 영어 회귀가 남아 있으므로 값 검증과 사람 확인을 뒤에 둬야 합니다. 이 구성은 [Paxis 검증 글](/tech-blog/ko/agentops/thakiocr-paxis-verify-before-commit/)과 [계층형 문서 추론 글](/tech-blog/ko/llmops/thakiocr-metis-tiered-document-inference/)에서 다룹니다.
+
+![thakiocr-dense-r2-real-document-adaptation 슬라이드 4](/assets/images/thakiocr-dense-r2-real-document-adaptation-slide-04.webp)
 
 ## 끝으로
 
@@ -145,9 +160,21 @@ Paxis로 문서 업무를 자동화할 때 모든 줄을 큰 모델로 읽을 �
 
 작은 OCR 모델을 직접 다룬다면 CER 하나만 보지 말고 공백 삭제와 삽입을 따로 재 보시기를 권합니다. 이번처럼 CER은 좋아지는데 공백 습관이 한쪽으로 기우는 일이 생깁니다. 공개된 [V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense)로 내 문서 줄 몇 장을 읽혀 보고 공백을 지운 결과와 그대로인 결과를 나란히 비교하는 것이 가장 빠른 첫 실험입니다.
 
+
+
+
+
+
+
+
+<!-- nlm-visual -->
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
+
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/thakiocr-dense-r2-real-document-adaptation/nlm-infographic-2.webp)
+
 ## 출처와 데이터
 
 - 공개 모델: [ThakiCloud/ThakiOCR-KOEN-V1-Dense](https://huggingface.co/ThakiCloud/ThakiOCR-KOEN-V1-Dense) (Apache-2.0). 이 글의 Dense-R2 파일럿, 연장본, 띄어쓰기 보정 후보는 공개하지 않았습니다.
-- 학습 데이터: NVIDIA OCR-Synthetic-Multilingual-v1(CC BY 4.0), AI 허브(AI-Hub) — OCR 데이터(공공)(71299) Training 분할, SIL OFL 1.1 글꼴로 만든 합성 기호 줄.
+- 학습 데이터: NVIDIA OCR-Synthetic-Multilingual-v1(CC BY 4.0), AI 허브(AI-Hub)의 OCR 데이터(공공)(71299) Training 분할, SIL OFL 1.1 글꼴로 만든 합성 기호 줄.
 - AI 허브 데이터와 그 가공물은 재배포하지 않습니다. 이 글에는 AI 허브 이미지, 크롭, 라벨이 들어 있지 않고 수치는 모두 집계값입니다.
 - 이전 글: [213만 파라미터 ThakiOCR A](/tech-blog/ko/research/thakiocr-a-small-korean-english-line-ocr/) · [G2M-R3: 실제 이미지 적응 실험](/tech-blog/ko/research/thakiocr-g2m-r3-real-document-adaptation/) · [G2M-R2: 학습량 3배 실험](/tech-blog/ko/research/thakiocr-g2m-r2-three-times-training/) · [G2M Preview: 숫자와 기호](/tech-blog/ko/research/thakiocr-g2m-numbers-and-symbols/) · [KO-v1: OvisOCR3 한국어 LoRA](/tech-blog/ko/research/thakiocr-ko-v1-ovisocr3-korean-finetune/) · [KO-v2 진단 실험](/tech-blog/ko/research/thakiocr-ko-v2-vision-lora-merge-research/) · [Large-27B-R2B](/tech-blog/ko/research/thakiocr-large-27b-r2b-qwen-korean-ocr/) · [한국어 OCR 오픈소스 모델 비교](/tech-blog/ko/research/korean-ocr-open-models-2m-to-27b/)

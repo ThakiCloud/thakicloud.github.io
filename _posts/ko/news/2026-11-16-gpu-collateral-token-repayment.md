@@ -19,7 +19,14 @@ tags:
   - agent-ops
 categories:
   - news
+audiobook: "https://drive.google.com/file/d/1FizHQt7n6Z5HV5XaOheI9PvY0SUMqPv_/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/gpu-collateral-token-repayment/"
 ---
+
+![균형 빔 위에 올려진 반투명한 발광 GPU 블레이드, 그 위로 밝은 토큰 구슬들이 흘러내리는 장면](/assets/images/gpu-collateral-token-repayment-hero.webp)
+*담보는 칩인데, 상환은 토큰이 결정한다는 글의 핵심을 형상화했습니다.*
 
 ## 은행의 장부에서 처음 보인 GPU
 
@@ -31,7 +38,20 @@ categories:
 
 컨슈머타임스 보도에 따르면 KB국민은행이 브룩필드의 특수목적사가 추진하는 12.6조 원 AI 컴퓨팅 인프라 사업에서 대표 금융주선기관에 선정됐고 하나, 신한, 우리, NH투자증권 등이 신디케이트론에 참여했습니다. 구조는 단순합니다. 브룩필드 SPC가 GPU와 데이터센터를 확보해 네이버클라우드에 장기간 컴퓨팅 역량을 제공하고, 네이버클라우드가 내는 사용료로 대출을 상환하는 방식이니까요. 이 티켓이 생긴 순간, GPU는 더 이상 랙 속에 놓인 생산설비가 아닙니다. 장부에서 가격이 매겨지는 금융 자산이 됐습니다.
 
+```mermaid
+flowchart LR
+    BANK["KB국민은행, 대표 금융주선기관<br/>하나·신한·우리·NH투자증권 신디케이트론"] --> SPC["브룩필드 SPC<br/>12.6조 원 AI 컴퓨팅 인프라 사업"]
+    SPC --> GPU["GPU와 데이터센터 확보"]
+    GPU --> NAV["네이버클라우드<br/>장기간 컴퓨팅 역량 제공"]
+    NAV --> FEES["클라우드 사용료, 최대 8년 지급보증"]
+    FEES --> BANK
+```
+
 이 티켓을 여신심사회에 올린다면 첫 질문은 담보가 진정인가를 묻는 것일 겁니다. 그리고 실제로는 훨씬 더 중요한 두 번째 질문이 무엇일까요. GPU 위에 무엇이 도는가, 이것입니다.
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/gpu-collateral-token-repayment/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## 돈이 칩보다 빨리 온다
 
@@ -47,6 +67,8 @@ categories:
 
 인베스트조선은 이 구조를 이렇게 짚습니다. AI 인프라 투자는 반도체, 에너지, 발전, 건설, 금융 등 여러 산업의 이해관계가 긴밀하게 결합된 사업이기 때문에, 리더십 교체와 미국 정책 변수, 글로벌 빅테크의 투자 속도 불확실성이 겹치면 GPU 수급을 가르는 것은 공급이 아니라 인수와 운영 능력이 된다고요. 26.9%라는 숫자는 바로 그 논리의 실측입니다. 돈은 1년 안에 10조 원 단위로 모였지만 그 돈을 쓰는 칩과 칩을 돌릴 데이터센터는 아직 부지 단계에 있는 셈입니다.
 
+![gpu-collateral-token-repayment 슬라이드 1](/assets/images/gpu-collateral-token-repayment-slide-01.webp)
+
 ## 수익 측의 이중격차, 단가는 떨어지고 물량은 오른다
 
 담보가 GPU인 대출에서는 상환력이 어떻게 계산되는지가 다음 질문입니다. 상환 재원은 사용료이고 사용료는 토큰에서 나옵니다. 그런데 토큰의 단가는 누구의 예상보다 빨리 떨어져 왔습니다.
@@ -59,6 +81,8 @@ LGU+는 코딩 AI에 엑사원 같은 자체 모델을 배치해 통상 모델 �
 
 금융기관도 이 리스크를 인지하고 있습니다. 컨슈머타임스 보도에서 지적한 것처럼 GPU의 빠른 기술 진부화로 자산 가치가 떨어지면 담보 회수가 어렵고, AI 수요가 기대에 못 미치면 수익성이 악화됩니다.
 
+![gpu-collateral-token-repayment 슬라이드 2](/assets/images/gpu-collateral-token-repayment-slide-02.webp)
+
 ## 그렇다면 은행은 실제로 무엇을 담보로 보는가
 
 세 단락을 붙여 보면, 이 대출의 진짜 안전판은 칩의 금속이 아니라 칩 위에서 도는 소프트웨어 층으로 수렴합니다.
@@ -67,9 +91,13 @@ LGU+는 코딩 AI에 엑사원 같은 자체 모델을 배치해 통상 모델 �
 
 일본의 데이터센터가 왜 안전지대라고 불렸는지, 한국의 GPU 반입률이 왜 26.9%에서 멈춰 있는지를 두고 나온 질문의 정답은 같은 곳을 가리킵니다. 칩은 결국 사고 돈은 결국 빌립니다. 하지만 칩이 안전하게 도고 감사되고 수익을 낳는 실행환경이 갖춰져 있을 때 비로소 그 칩과 그 대출은 자산이 됩니다.
 
+![gpu-collateral-token-repayment 슬라이드 3](/assets/images/gpu-collateral-token-repayment-slide-03.webp)
+
 ## 12개월 후의 장부
 
 이 흐름을 12개월 뒤로 내다보면 두 가지가 벌어질 가능성이 큽니다. 첫째, GPU 파이낸싱은 네이버 한 건에 머무르지 않을 것입니다. 10조 원 단위의 캐펙스가 늘수록 은행권은 담보 평가와 상환력 검증을 반복해야 하고, 그 과정에서 이 클러스터에 실제로 어떤 워크로드가 도는지를 보여줄 수 있는 실행환경이 거래 조건에 반영되기 시작할 것입니다. 둘째, 일본이 추론 허브로 자리 잡듯 한국은 반입된 GPU를 가동할 운영 능력으로 승부를 걸어야 합니다. 전력, 냉각, 네트워크, 운영 인력, 그리고 그 위에 도는 에이전트 워크로드까지 하나의 시스템으로 묶는 쪽이 같은 칩에서 더 높은 수익을 올릴 것입니다. 담보가 자산으로 인정받으려면, 그 자산 위에서 돌아가는 것이 보여져야 합니다.
+
+![gpu-collateral-token-repayment 슬라이드 4](/assets/images/gpu-collateral-token-repayment-slide-04.webp)
 
 ## 그 질문에 답하는 렌즈, Paxis
 
@@ -93,3 +121,6 @@ GPU가 자산으로 가격 매겨지는 시대에, 담보 위에 무엇이 돌�
 - 인베스트조선, [[Invest]깐부회동 1년만에 젠슨 황 퇴장…GPU 26만장 약속은 어떻게 됐을...](https://www.investchosun.com/site/data/html_dir/2026/11/15/2026111580032.html)
 - 조선일보, [젠슨 황 퇴진에 글로벌 AI 스타트업 투자 ‘비상’… “엔비디아 공백 ...](https://www.chosun.com/economy/tech_it/2026/11/16/6OSLDZB2BJFCNN7JJ3CJK3R5QM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news)
 
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/gpu-collateral-token-repayment/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
