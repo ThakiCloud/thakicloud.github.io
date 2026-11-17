@@ -72,6 +72,20 @@
 {%- if tr_xd != '' %}
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ tr_xd }}">
 {%- endif -%}
+{%- elsif page.tr_ko and page.tr_en -%}
+<!-- hreflang for paired standalone pages (front matter tr_ko / tr_en) -->
+<link rel="alternate" hreflang="ko" href="{{ site.url }}{{ site.baseurl }}{{ page.tr_ko }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}{{ page.tr_en }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ page.tr_en }}">
 {%- endif %}
+
+<!-- GPU cost assessment CTA clicks (blog posts -> /<lang>/gpu-cost-assessment/). No personal data. -->
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="/gpu-cost-assessment/"]');
+  if (!a || !window.gtag || location.pathname.indexOf('/gpu-cost-assessment/') >= 0) return;
+  window.gtag('event', 'cta_click', { cta_target: 'gpu-cost-assessment', cta_page: location.pathname });
+});
+</script>
 
 <!-- end custom head snippets -->

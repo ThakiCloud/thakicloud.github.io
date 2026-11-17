@@ -191,3 +191,5 @@ NVFP4 27B Base 하나에 직접 학습한 LoRA 8개를 재학습 없이 붙여 B
 비슷한 구성을 검토하고 있다면 응답 텍스트 비교에서 멈추지 말고 결함 주입 검사와 캐시 경계 검사를 먼저 붙여 보시길 권합니다. 검사가 rot과 leak을 잡지 못한다면, 통과 판정도 믿을 수 없습니다.
 
 **여러 전문 AI를 각각의 GPU에 배포하고 계신가요?** 다키클라우드는 하나의 Base 모델과 업무별 LoRA를 공유하는 AI 서빙 아키텍처를 설계하고 있습니다. 지금 운영 중인 구조를 놓고 GPU 메모리 요구량과 예상 비용을 함께 검토해 드릴 수 있습니다. 예상 비용은 추정치이며, 워크로드에 따라 공유 구성이 더 비싸게 나오는 경우도 그대로 보여 드립니다.
+
+[무료 GPU 비용 진단 신청하기]({{ "/ko/gpu-cost-assessment/" | relative_url }}?utm_source=techblog&utm_medium=post_cta&utm_campaign=multilora_cost_assessment&utm_content=b200_nvfp4_multilora)

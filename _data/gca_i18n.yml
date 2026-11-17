@@ -1,0 +1,159 @@
+# GPU 비용 진단 페이지 문구 (ko/en). 동의 문구는 thakicloud.com/contact 의 현행 문구와 같게 유지한다.
+ko:
+  h1: "전문 AI가 늘어날 때마다 GPU도 늘리고 계신가요?"
+  lead: "무료 GPU 비용 사전 진단입니다. 운영 중이거나 계획 중인 전문 AI의 수, GPU 종류, 월 요청 수, 동시 처리 수, 지연 목표를 넣으면 업무별로 모델을 따로 띄울 때와 Base 모델 하나에 업무별 LoRA를 붙여 공유할 때의 GPU 수를 추정합니다. 공유 구성이 더 비싸게 나오는 조건도 그대로 보여 드립니다."
+  checked_h: "확인한 것과 확인하지 않은 것"
+  checked: "다키클라우드는 B200 GPU 한 장에서 NVFP4 27B Base 모델 하나에 업무별 LoRA 8개를 붙여 9개 모델을 함께 서빙했습니다. 서로 다른 어댑터 요청이 한 배치에 섞여도 계산이 섞이지 않는 것과, Prefix Cache가 어댑터·테넌트 경계를 넘어 재사용되지 않는 것(1,732건 요청, 잘못된 재사용 0건)을 확인했습니다."
+  unchecked: "처리량, 응답 시간, 실제 비용 절감률은 아직 재지 않았습니다. 업무별 답변 품질도 별도 검증이 필요합니다. 그래서 아래 계산 결과는 모두 입력 가정에 따른 추정치입니다."
+  post_link: "검증 내용 자세히 보기"
+  post_url: "/ko/llmops/b200-nvfp4-multilora-kernel-isolation/"
+  step1: "1. 운영 조건 입력"
+  f_models: "전문 AI(업무) 수"
+  f_gpu: "GPU 종류"
+  gpu_b200: "NVIDIA B200 (메모리 실측)"
+  gpu_h200: "NVIDIA H200 (공개 사양, 가정)"
+  gpu_h100: "NVIDIA H100 80GB (공개 사양, 가정)"
+  f_requests: "월 요청 수 (전체 업무 합계)"
+  f_dist: "업무별 요청 분포"
+  dist_even: "업무마다 비슷함"
+  dist_skewed: "두 업무에 몰림 (70%)"
+  f_peak: "피크 배수 <small>(피크 요청률 ÷ 평균)</small>"
+  f_concurrency: "피크 동시 처리 수 <small>(전체 합계)</small>"
+  f_sla: "지연 목표"
+  sla_strict: "엄격 (대화형, 짧은 응답 시간)"
+  sla_normal: "보통"
+  sla_relaxed: "느슨 (배치·비동기)"
+  f_ha: "이중화"
+  ha_no: "없음 (업무당 1벌)"
+  ha_yes: "있음 (2벌)"
+  f_ctx: "요청당 문맥 길이"
+  ctx_short: "짧음 (수천 토큰)"
+  ctx_mid: "중간 (수만 토큰)"
+  ctx_long: "긺 (긴 문서)"
+  f_in: "요청당 평균 입력 토큰"
+  f_out: "요청당 평균 출력 토큰"
+  f_price: "GPU 1장 시간당 단가 <small>(선택, 통화 무관)</small>"
+  calc: "추정 계산"
+  step2: "2. 추정 결과"
+  result_note: "A는 업무마다 GPU를 따로 쓰는 배포, A′는 업무별 인스턴스를 메모리와 연산이 허락하는 만큼 한 GPU에 모은 배포입니다. A′가 가장 강한 비교 기준입니다. 처리량은 아직 재지 않은 값이라 낮음·중간·높음 세 가지로 계산합니다."
+  step3: "3. 무료 진단 신청"
+  form_lead: "계산 결과를 바탕으로 담당 엔지니어가 귀사 조건을 다시 검토합니다. 진단 결과에는 추정 TCO, 적용 가능성 판단, 도입 전에 남는 품질 검증 항목이 들어갑니다. 비용은 들지 않습니다."
+  f_segment: "회사 유형"
+  seg_saas: "AI SaaS"
+  seg_msp: "MSP·SI"
+  seg_private: "자체 Private AI 운영"
+  seg_mssp: "보안 서비스(MSSP)"
+  seg_other: "기타"
+  f_name: "이름"
+  f_email: "회사 이메일"
+  f_company: "회사명"
+  f_dept: "부서 <small>(선택)</small>"
+  f_title: "직책 <small>(선택)</small>"
+  f_phone: "연락처 <small>(선택)</small>"
+  f_country: "국가"
+  country_kr: "대한민국"
+  country_other: "기타"
+  submit: "진단 신청"
+  consent_req_title: "개인정보 수집·이용 동의 (필수)"
+  consent_req_body: |-
+    「개인정보 보호법」 제15조에 따라 아래 4개 항목을 확인하시고 동의해 주십시오.
+    1. 수집·이용 목적: 상담 요청 및 문의 대응, 계약·서비스 제공을 위한 기본 정보 확인
+    2. 수집 항목: 이름, 회사 이메일, 회사명, 부서, 직책, 연락처, 국가, 요청 유형
+    3. 보유·이용 기간: 수집일로부터 3년
+    4. 동의 거부 권리 및 불이익: 귀하는 동의를 거부할 권리가 있으며, 거부 시 문의 접수 및 응대가 제한됩니다.
+  consent_req_label: "(필수) 개인정보의 수집 및 이용에 동의합니다."
+  consent_mkt_title: "마케팅 목적 이용 동의 (선택)"
+  consent_mkt_body: |-
+    아래 4개 항목을 확인하시고 동의해 주십시오.
+    1. 수집·이용 목적: 제품·서비스 관련 소식 제공, 웨비나·전시 등 행사 안내, 뉴스레터 발송
+    2. 수집 항목: 이름, 이메일, 회사명
+    3. 보유·이용 기간: 수집일로부터 3년
+    4. 동의 거부 권리 및 불이익: 동의를 거부할 권리가 있으며, 거부하셔도 상담 및 서비스 이용에는 제한이 없습니다. 다만 행사 안내·뉴스레터는 수신하실 수 없습니다.
+  consent_mkt_label: "(선택) 다키클라우드코리아 제품 관련 마케팅 및 광고 목적의 활용에 동의합니다."
+  consent_note: "위에 입력하신 운영 조건(업무 수, GPU, 요청량 등)은 개인정보가 아닌 업무 정보로, 진단을 위해 함께 전달됩니다. 이 페이지는 이용 통계를 위해 Google Analytics를 사용하며, 이름·이메일 등 개인정보는 Google Analytics로 보내지 않습니다."
+  policy: "개인정보 처리 방침"
+  policy_url: "https://thakicloud.com/privacy-statement/privacy"
+  how_h: "계산 방식과 가정"
+  how: |
+    <p>업무별 GPU 부하는 피크 요청률 × (입력 토큰 ÷ prefill 처리량 + 출력 토큰 ÷ decode 처리량)으로 계산합니다. Multi-LoRA는 LoRA 처리 효율 0.85를 가정해 이 값을 나눕니다(미측정). 배포마다 필요한 GPU 수는 최소 복제 수, 부하 ÷ 지연 목표에 따른 사용률 상한, 피크 동시 처리 수 × 요청당 KV 메모리 ÷ GPU당 KV 여유 중 가장 큰 값입니다.</p>
+    <p>우리 B200 실행에서 잰 값은 GPU 메모리 179.06 GiB, NVFP4 27B 모델 로딩 30.51 GiB, 로딩 뒤 KV 캐시 가용 104.33 GiB, r16 어댑터 445 MiB입니다. 엔진 오버헤드 26.31 GiB는 이 값에서 역산했습니다. 처리량 범위(prefill 1만·2만·4만, decode 1,250·2,500·5,000 토큰/초), 문맥 길이별 KV 메모리(1·2·6 GiB), 지연 목표별 사용률 상한(0.5·0.6·0.8)은 예시 가정입니다. H100·H200은 공개 메모리 사양만 반영했고, NVFP4는 Blackwell 세대 기능이라 실제로는 다른 정밀도와 모델 크기를 써야 할 수 있습니다.</p>
+    <p>공유 구성은 모든 업무의 피크가 동시에 겹친다고 보고 계산합니다. 독립 배치(A′)는 한 GPU에 여러 엔진을 띄울 때의 간섭을 넣지 않아 독립 쪽에 유리합니다. 공유 구성은 엔진 하나가 멈추면 모든 업무가 영향을 받고, 품질 검증을 통과한 어댑터만 같은 엔진에 올려야 합니다.</p>
+en:
+  h1: "Adding GPUs every time you add a specialized AI?"
+  lead: "A free GPU cost pre-assessment. Enter how many specialized AI models you run or plan to run, your GPU type, monthly requests, concurrency, and latency target. We estimate how many GPUs you need when each task gets its own model deployment versus when one base model shares per-task LoRA adapters. If sharing comes out more expensive for your workload, the estimate shows that too."
+  checked_h: "What we verified and what we did not"
+  checked: "On a single B200 GPU, ThakiCloud served nine models at once: one NVFP4 27B base model with eight task-specific LoRA adapters. We confirmed that requests for different adapters in the same batch do not mix their computation, and that the prefix cache is never reused across adapter or tenant boundaries (1,732 requests, 0 wrong reuses)."
+  unchecked: "We have not measured throughput, latency, or actual cost savings, and answer quality per task needs separate validation. Every figure below is an estimate under your inputs."
+  post_link: "Read the full validation"
+  post_url: "/en/llmops/b200-nvfp4-multilora-kernel-isolation/"
+  step1: "1. Your workload"
+  f_models: "Number of specialized AI models (tasks)"
+  f_gpu: "GPU type"
+  gpu_b200: "NVIDIA B200 (memory measured)"
+  gpu_h200: "NVIDIA H200 (public spec, assumed)"
+  gpu_h100: "NVIDIA H100 80GB (public spec, assumed)"
+  f_requests: "Monthly requests (all tasks combined)"
+  f_dist: "Request split across tasks"
+  dist_even: "Roughly even"
+  dist_skewed: "Concentrated in two tasks (70%)"
+  f_peak: "Peak factor <small>(peak rate ÷ average)</small>"
+  f_concurrency: "Peak concurrent requests <small>(all tasks)</small>"
+  f_sla: "Latency target"
+  sla_strict: "Strict (interactive)"
+  sla_normal: "Standard"
+  sla_relaxed: "Relaxed (batch, async)"
+  f_ha: "Redundancy"
+  ha_no: "None (one copy per task)"
+  ha_yes: "Yes (two copies)"
+  f_ctx: "Context length per request"
+  ctx_short: "Short (a few thousand tokens)"
+  ctx_mid: "Medium (tens of thousands)"
+  ctx_long: "Long (long documents)"
+  f_in: "Average input tokens per request"
+  f_out: "Average output tokens per request"
+  f_price: "Hourly price per GPU <small>(optional, any currency)</small>"
+  calc: "Estimate"
+  step2: "2. Estimate"
+  result_note: "A gives each task its own GPUs. A′ packs per-task instances onto shared GPUs as far as memory and compute allow, and is the strongest baseline. Throughput has not been measured, so we compute low, mid, and high cases."
+  step3: "3. Request a free assessment"
+  form_lead: "An engineer will review your inputs and send back an estimated TCO, an applicability call, and the quality checks that remain before adoption. There is no charge."
+  f_segment: "Company type"
+  seg_saas: "AI SaaS"
+  seg_msp: "MSP / SI"
+  seg_private: "In-house private AI"
+  seg_mssp: "Managed security (MSSP)"
+  seg_other: "Other"
+  f_name: "Name"
+  f_email: "Work email"
+  f_company: "Company"
+  f_dept: "Department <small>(optional)</small>"
+  f_title: "Job title <small>(optional)</small>"
+  f_phone: "Phone <small>(optional)</small>"
+  f_country: "Country"
+  country_kr: "South Korea"
+  country_other: "Other"
+  submit: "Request assessment"
+  consent_req_title: "Consent to the Collection and Use of Personal Information (Required)"
+  consent_req_body: |-
+    Pursuant to Article 15 of PIPA, please review and agree to the following four items.
+    1. Purpose: To respond to consultation requests and inquiries, and to verify basic information for contract execution and service provision
+    2. Items collected: Name, work email, company name, department, job title, contact number, country, request type
+    3. Retention period: 3 years from the date of collection
+    4. Right to refuse & consequences: You have the right to refuse consent. If you refuse, we cannot receive or respond to your inquiry.
+  consent_req_label: "(Required) I consent to the collection and use of my personal information."
+  consent_mkt_title: "Consent to Use for Marketing Purposes (Optional)"
+  consent_mkt_body: |-
+    Please review and agree to the following four items.
+    1. Purpose: Providing product/service news, event invitations (webinars, exhibitions), and newsletters
+    2. Items collected: Name, email, company name
+    3. Retention period: 3 years from the date of collection
+    4. Right to refuse & consequences: You may refuse consent. Refusal does not limit consultation or service use, but you will not receive event invitations or newsletters.
+  consent_mkt_label: "(Optional) I consent to the use of my information for marketing and advertising related to Thaki Cloud Korea products."
+  consent_note: "The workload details above (task count, GPU, request volume, and so on) are business information, not personal information, and are sent with your request for the assessment. This page uses Google Analytics for usage statistics; your name, email, and other personal information are never sent to Google Analytics."
+  policy: "Privacy Policy"
+  policy_url: "https://thakicloud.com/privacy-statement/privacy"
+  how_h: "How the estimate works"
+  how: |
+    <p>Per-task GPU load is peak request rate × (input tokens ÷ prefill throughput + output tokens ÷ decode throughput). For Multi-LoRA, this is divided by an assumed LoRA efficiency of 0.85 (not measured). Each deployment needs the largest of: the minimum replica count, load ÷ the utilization cap for your latency target, and peak concurrency × KV memory per request ÷ KV headroom per GPU.</p>
+    <p>Measured on our B200 run: 179.06 GiB GPU memory, 30.51 GiB to load the NVFP4 27B model, 104.33 GiB of KV cache available after loading, and 445 MiB per r16 adapter. The 26.31 GiB engine overhead is derived from those numbers. The throughput range (prefill 10k, 20k, 40k and decode 1,250, 2,500, 5,000 tokens/s), KV memory by context length (1, 2, 6 GiB), and utilization caps by latency target (0.5, 0.6, 0.8) are example assumptions. For H100 and H200 only the public memory spec is used; NVFP4 is a Blackwell feature, so in practice those GPUs may need a different precision and model size.</p>
+    <p>The shared setup assumes every task peaks at the same time. The packed baseline (A′) ignores interference between engines on one GPU, which favors the independent side. A shared engine is a single failure domain for all tasks, and only adapters that pass quality validation should share an engine.</p>

@@ -55,6 +55,7 @@
                     {%- endif -%}
                   {%- endfor -%}
                 {%- endif -%}
+                {%- if page.tr_ko and page.tr_en -%}{%- assign _tr_ko = page.tr_ko -%}{%- assign _tr_en = page.tr_en -%}{%- endif -%}
                 <ul class="dropdown-menu">
                   {%- for child in link.children -%}
                     {%- comment %} child urls are /ko/ /en/ /ar/; child_lang = ko|en|ar. {% endcomment -%}

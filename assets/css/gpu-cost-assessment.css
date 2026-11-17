@@ -1,0 +1,35 @@
+/* GPU 비용 진단 페이지 전용. 테마 토큰이 없어 라이트/다크 두 벌을 직접 둔다. */
+#gca { --gca-fg: #1f2933; --gca-muted: #5f6b7a; --gca-line: #d9dee5; --gca-card: #f7f9fb; --gca-accent: #2b5fd9;
+  --gca-good: #1d7a46; --gca-warn: #a15c00; --gca-bad: #b3261e; color: var(--gca-fg); max-width: 880px; }
+[data-theme="dark"] #gca { --gca-fg: #e6e9ee; --gca-muted: #a3adba; --gca-line: #3a4250; --gca-card: #1e242d;
+  --gca-accent: #7ea3ff; --gca-good: #6fd19a; --gca-warn: #f0b35a; --gca-bad: #ff8a80; }
+#gca .gca-lead { font-size: 1.08em; color: var(--gca-muted); }
+#gca .gca-card { background: var(--gca-card); border: 1px solid var(--gca-line); border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+#gca .gca-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 18px; }
+#gca label { display: block; font-size: .88em; font-weight: 600; margin-bottom: 4px; }
+#gca label small { font-weight: 400; color: var(--gca-muted); }
+#gca input[type=number], #gca input[type=text], #gca input[type=email], #gca input[type=tel], #gca select {
+  width: 100%; box-sizing: border-box; padding: 8px 10px; border: 1px solid var(--gca-line); border-radius: 6px;
+  background: transparent; color: var(--gca-fg); font: inherit; }
+#gca select option { color: #1f2933; }
+#gca button { background: var(--gca-accent); color: #fff; border: 0; border-radius: 6px; padding: 10px 18px; font: inherit; font-weight: 600; cursor: pointer; margin-top: 16px; }
+[data-theme="dark"] #gca button { color: #10151c; }
+#gca button[disabled] { opacity: .6; cursor: wait; }
+#gca .gca-label { display: inline-block; font-size: .75em; letter-spacing: .06em; border: 1px solid var(--gca-warn); color: var(--gca-warn); border-radius: 4px; padding: 2px 6px; }
+#gca .gca-table-wrap { overflow-x: auto; }
+#gca .gca-table { width: 100%; border-collapse: collapse; font-size: .92em; margin: 10px 0; }
+#gca .gca-table th, #gca .gca-table td { border-bottom: 1px solid var(--gca-line); padding: 8px 10px; text-align: left; vertical-align: top; }
+#gca .gca-table small { color: var(--gca-muted); }
+#gca .gca-verdict { font-weight: 600; }
+#gca .gca-better { color: var(--gca-good); } #gca .gca-equal { color: var(--gca-warn); } #gca .gca-worse { color: var(--gca-bad); }
+#gca .gca-warn { color: var(--gca-warn); }
+#gca .gca-muted, #gca .gca-consent p { color: var(--gca-muted); font-size: .88em; }
+#gca .gca-consent { border-top: 1px solid var(--gca-line); margin-top: 18px; padding-top: 14px; }
+#gca .gca-consent pre { white-space: pre-wrap; font: inherit; font-size: .85em; color: var(--gca-muted); background: none; border: 0; padding: 0; margin: 6px 0; }
+#gca .gca-check { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; margin-top: 8px; }
+#gca .gca-check input { margin-top: 4px; }
+#gca #gca-form-msg { font-weight: 600; min-height: 1.4em; }
+#gca details { margin: 10px 0; } #gca summary { cursor: pointer; font-weight: 600; }
+#gca .gca-hook { font-size: 1.45em; font-weight: 700; line-height: 1.35; margin: 0 0 8px; }
+#gca .gca-table { min-width: 520px; }
+#gca .gca-table th[scope=row] { white-space: nowrap; }

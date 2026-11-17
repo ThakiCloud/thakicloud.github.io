@@ -1,0 +1,74 @@
+{%- assign t = site.data.gca_i18n[page.lang] -%}
+<link rel="stylesheet" href="{{ '/assets/css/gpu-cost-assessment.css' | relative_url }}">
+<div id="gca" data-lang="{{ page.lang }}">
+  <p class="gca-hook">{{ t.h1 }}</p>
+  <p class="gca-lead">{{ t.lead }}</p>
+
+  <h2>{{ t.checked_h }}</h2>
+  <p>{{ t.checked }}</p>
+  <p>{{ t.unchecked }} <a href="{{ t.post_url | relative_url }}">{{ t.post_link }}</a></p>
+
+  <div class="gca-card">
+    <h2>{{ t.step1 }}</h2>
+    <div class="gca-grid">
+      <div><label for="gca-models">{{ t.f_models }}</label><input id="gca-models" type="number" min="1" max="32" step="1" value="8"></div>
+      <div><label for="gca-gpu">{{ t.f_gpu }}</label><select id="gca-gpu">
+        <option value="b200">{{ t.gpu_b200 }}</option><option value="h200">{{ t.gpu_h200 }}</option><option value="h100">{{ t.gpu_h100 }}</option></select></div>
+      <div><label for="gca-requests">{{ t.f_requests }}</label><input id="gca-requests" type="number" min="0" step="1000" value="300000"></div>
+      <div><label for="gca-dist">{{ t.f_dist }}</label><select id="gca-dist">
+        <option value="even">{{ t.dist_even }}</option><option value="skewed">{{ t.dist_skewed }}</option></select></div>
+      <div><label for="gca-peak">{{ t.f_peak }}</label><input id="gca-peak" type="number" min="1" step="0.5" value="3"></div>
+      <div><label for="gca-concurrency">{{ t.f_concurrency }}</label><input id="gca-concurrency" type="number" min="1" step="1" value="32"></div>
+      <div><label for="gca-sla">{{ t.f_sla }}</label><select id="gca-sla">
+        <option value="strict">{{ t.sla_strict }}</option><option value="normal" selected>{{ t.sla_normal }}</option><option value="relaxed">{{ t.sla_relaxed }}</option></select></div>
+      <div><label for="gca-ha">{{ t.f_ha }}</label><select id="gca-ha">
+        <option value="no">{{ t.ha_no }}</option><option value="yes">{{ t.ha_yes }}</option></select></div>
+      <div><label for="gca-ctx">{{ t.f_ctx }}</label><select id="gca-ctx">
+        <option value="short">{{ t.ctx_short }}</option><option value="mid" selected>{{ t.ctx_mid }}</option><option value="long">{{ t.ctx_long }}</option></select></div>
+      <div><label for="gca-in">{{ t.f_in }}</label><input id="gca-in" type="number" min="1" step="100" value="1500"></div>
+      <div><label for="gca-out">{{ t.f_out }}</label><input id="gca-out" type="number" min="1" step="50" value="300"></div>
+      <div><label for="gca-price">{{ t.f_price }}</label><input id="gca-price" type="number" min="0" step="0.1"></div>
+    </div>
+    <button type="button" id="gca-calc">{{ t.calc }}</button>
+  </div>
+
+  <h2>{{ t.step2 }}</h2>
+  <p class="gca-muted">{{ t.result_note }}</p>
+  <div id="gca-result" class="gca-card" hidden aria-live="polite"></div>
+
+  <div class="gca-card">
+    <h2>{{ t.step3 }}</h2>
+    <p>{{ t.form_lead }}</p>
+    <form id="gca-form" novalidate>
+      <div class="gca-grid">
+        <div><label for="gca-segment">{{ t.f_segment }}</label><select id="gca-segment">
+          <option value="ai_saas">{{ t.seg_saas }}</option><option value="msp_si">{{ t.seg_msp }}</option>
+          <option value="private_ai">{{ t.seg_private }}</option><option value="mssp">{{ t.seg_mssp }}</option><option value="other">{{ t.seg_other }}</option></select></div>
+        <div><label for="gca-name">{{ t.f_name }}</label><input id="gca-name" type="text" required maxlength="100" autocomplete="name"></div>
+        <div><label for="gca-email">{{ t.f_email }}</label><input id="gca-email" type="email" required maxlength="200" autocomplete="email"></div>
+        <div><label for="gca-company">{{ t.f_company }}</label><input id="gca-company" type="text" required maxlength="200" autocomplete="organization"></div>
+        <div><label for="gca-dept">{{ t.f_dept }}</label><input id="gca-dept" type="text" maxlength="100"></div>
+        <div><label for="gca-title">{{ t.f_title }}</label><input id="gca-title" type="text" maxlength="100" autocomplete="organization-title"></div>
+        <div><label for="gca-phone">{{ t.f_phone }}</label><input id="gca-phone" type="tel" maxlength="40" autocomplete="tel"></div>
+        <div><label for="gca-country">{{ t.f_country }}</label><select id="gca-country">
+          <option value="{% if page.lang == 'ko' %}KR{% else %}Other{% endif %}">{% if page.lang == 'ko' %}{{ t.country_kr }}{% else %}{{ t.country_other }}{% endif %}</option>
+          <option value="{% if page.lang == 'ko' %}Other{% else %}KR{% endif %}">{% if page.lang == 'ko' %}{{ t.country_other }}{% else %}{{ t.country_kr }}{% endif %}</option></select></div>
+      </div>
+      <div class="gca-consent">
+        <p><strong>{{ t.consent_req_title }}</strong></p>
+        <pre>{{ t.consent_req_body }}</pre>
+        <label class="gca-check"><input id="gca-privacy" type="checkbox" required> {{ t.consent_req_label }}</label>
+        <p><strong>{{ t.consent_mkt_title }}</strong></p>
+        <pre>{{ t.consent_mkt_body }}</pre>
+        <label class="gca-check"><input id="gca-marketing" type="checkbox"> {{ t.consent_mkt_label }}</label>
+        <p>{{ t.consent_note }} <a href="{{ t.policy_url }}" target="_blank" rel="noopener">{{ t.policy }}</a></p>
+      </div>
+      <button type="submit" id="gca-submit">{{ t.submit }}</button>
+      <p id="gca-form-msg" role="status"></p>
+    </form>
+  </div>
+
+  <details><summary>{{ t.how_h }}</summary>{{ t.how }}</details>
+</div>
+<script src="{{ '/assets/js/gpu-cost-assessment.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/gpu-cost-assessment-ui.js' | relative_url }}"></script>

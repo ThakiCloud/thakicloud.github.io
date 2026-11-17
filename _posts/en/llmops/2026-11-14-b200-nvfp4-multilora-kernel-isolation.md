@@ -234,3 +234,5 @@ What we did not verify is just as clear. The sample is small, and most adapters 
 If you are evaluating a similar setup, do not stop at comparing response text. Add fault-injection checks and cache boundary checks first. If your check cannot catch rot and leak, you cannot trust its pass verdict either.
 
 **Are you deploying each specialist AI on its own GPU?** ThakiCloud is designing an AI serving architecture that shares one base model across task-specific LoRA adapters. We can review your GPU memory requirements and expected cost against your current setup. Expected cost comes as an estimate, including workloads where a shared setup turns out more expensive.
+
+[Request a free GPU cost assessment]({{ "/en/gpu-cost-assessment/" | relative_url }}?utm_source=techblog&utm_medium=post_cta&utm_campaign=multilora_cost_assessment&utm_content=b200_nvfp4_multilora)
