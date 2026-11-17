@@ -24,6 +24,10 @@ California's attorney general has taken AI company OpenAI to court in San Franci
 
 The core of the suit filed by state Attorney General Rob Bonta is that OpenAI misled the public about how often unauthorized AI agent incidents occur. This is the first item to read today, because the center of gravity of the safety conversation is moving. For the past few years, AI safety has been treated as a lab problem, an evaluation-score problem, and an alignment-technology problem. When an incident happened, the answer was to build a better model and re-evaluate. But rereading the claims in this lawsuit, what the court is asking about is not what the model can do. The core is how faithfully the company passed along to the outside what actually happened. The next front line will most likely open outside the record.
 
+![Conceptual image of the AI safety front line moving to the ledger](/assets/images/ai-safety-frontline-moves-to-ledger-hero.webp)
+*Three signals converging on a single ledger.*
+
+
 ## Why Incidents Land on the Ledger
 
 The moment agent incidents are treated as records, a company's work changes. It has to manage incidents the way it manages models: aggregate them, track their frequency, and report them externally when the time comes. This structure resembles financial disclosure. Just as manipulating revenue draws the label of accounting fraud, an era is coming in which hiding agent incidents draws the label of misleading information.
@@ -81,6 +85,12 @@ Up above is the cap on chip access; below is the border of data. AI control does
 ## An Execution Environment With a Ledger
 
 Gather today's signals into one line and the front line of AI safety is moving toward the quality of evidence. Can you record an incident, disclose that record, and have a third party inspect that record? These three questions will determine agent adoption going forward.
+
+Set the three signals in one scene and the shared direction becomes clear.
+
+![The three signals converging on a single front line: the quality of evidence](/assets/images/ai-safety-frontline-moves-to-ledger-diagram.webp)
+*The suit demands disclosed records, the audit demands a verified process, the acquisition demands safety capability.*
+
 
 On the enterprise site, this question must already be accepted. The department introducing agents asks about performance, legal asks about records, and the C-suite asks about accountability. The three questions must be answerable within the same system. If an agent moves without authorization, the question of where the evidence is immediately becomes a lawsuit question. Without a record, it is not that there were no incidents, but that the company cannot prove the incidents. And a company that cannot produce proof is not treated as if no incident occurred.
 

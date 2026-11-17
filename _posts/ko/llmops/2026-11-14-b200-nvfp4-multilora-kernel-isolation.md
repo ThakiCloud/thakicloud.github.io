@@ -1,5 +1,5 @@
 ---
-title: "GPU 한 장에서 8개 전문 AI를 동시에 — NVFP4 Multi-LoRA 커널·캐시 격리 실증"
+title: "GPU 한 장에서 8개 전문 AI를 동시에 · NVFP4 Multi-LoRA 커널·캐시 격리 실증"
 excerpt: "NVFP4로 양자화한 27B Base 하나에 업무별 LoRA 8개를 재학습 없이 붙여 B200 1장에서 9개 모델로 서빙했습니다. 서로 다른 어댑터 요청이 한 배치에 섞여도 계산과 Prefix Cache가 섞이지 않는지 확인했습니다. 실패 판정과 아직 검증하지 못한 제품 안정성·업무 품질까지 그대로 적었습니다."
 seo_title: "B200 NVFP4 Multi-LoRA 커널·캐시 격리 실증: GPU 한 장에 전문 AI 8개 | ThakiCloud"
 seo_description: "다키클라우드가 Qwen3.8-27B NVFP4 Base에 보안·사실검증·RAG·운영·RTL·방언 LoRA 8개를 붙여 vLLM 0.29.0으로 B200 한 장에서 서빙했습니다. 72개 어댑터 순서쌍 100% 구별, 허용오차 초과 0행, 결함 주입 전수 검출, Prefix Cache 어댑터·테넌트 간 재사용 0건. 메모리 산술과 검증의 한계를 함께 정리합니다."
@@ -28,9 +28,12 @@ categories:
 header:
   teaser: /assets/images/b200-nvfp4-multilora-kernel-isolation-fig-title.webp
 canonical_url: "https://thakicloud.com/tech-blog/ko/llmops/b200-nvfp4-multilora-kernel-isolation/"
+audiobook: "https://drive.google.com/file/d/1D_bScsNWyFZr2_R2q86FU-_GJBxLhQnf/view"
+audiobook_label: "▶ 5분 브리핑으로 듣기"
+audiobook_note: "NotebookLM 오디오 개요 (AI 생성)"
 ---
 
-![GPU 한 장에서 8개 전문 AI를 동시에 — NVFP4 Multi-LoRA 커널·캐시 격리 실증](/assets/images/b200-nvfp4-multilora-kernel-isolation-fig-title.webp)
+![GPU 한 장에서 8개 전문 AI를 동시에 · NVFP4 Multi-LoRA 커널·캐시 격리 실증](/assets/images/b200-nvfp4-multilora-kernel-isolation-fig-title.webp)
 *B200 NVFP4 Multi-LoRA 커널·캐시 격리 실증 (커널 2026-11-14, Prefix Cache 2026-11-16)*
 
 보안 관제 센터에 보안 판정 모델을 하나 들였다고 해 보겠습니다. 다음 분기에는 탐지 근거를 문서로 쓰는 모델이 필요해지고 그다음에는 RAG 답변이 근거 문서를 벗어나는지 걸러 주는 모델이 필요해집니다. 업무마다 27B 모델을 하나씩 따로 띄우면 GPU 수가 전문 AI 수를 그대로 따라갑니다. MSSP, 보안 SI, 사내 Private AI를 운영하는 팀이 지금 겪는 비용 구조가 이렇습니다.
@@ -47,6 +50,10 @@ LoRA(Low-Rank Adaptation)는 Base 가중치는 고정해 두고 작은 저랭크
 
 ![전문 AI 9개를 띄우는 두 가지 방법](/assets/images/b200-nvfp4-multilora-kernel-isolation-fig-arch.webp)
 *독립 인스턴스는 가중치를 모델 수만큼 올리고 KV 캐시도 인스턴스마다 나눕니다. Multi-LoRA는 Base 1벌 위에서 요청마다 다른 어댑터를 같은 배치로 계산합니다.*
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 1](/assets/images/posts/news/b200-nvfp4-multilora-kernel-isolation/nlm-infographic-1.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
 
 ## Base 하나에 업무용 어댑터 여덟 개를 붙였습니다
 
@@ -77,6 +84,8 @@ vllm serve ThakiCloud/Qwen3.8-27B-NVFP4-GPTQ-txt \
 ```
 
 클라이언트는 OpenAI 호환 API의 `model` 필드에 `secproof`나 `raggate` 같은 서빙 이름을 넣어 어댑터를 고릅니다. Base를 부르면 어댑터 없이 계산합니다. 다키클라우드가 쓰는 엔드포인트에는 DFlash2 투기적 디코딩이 붙어 있지만, 이번 검증에서는 끄고 돌렸습니다. 격리 문제와 디코딩 가속 문제를 한 실험에 섞지 않기 위해서입니다.
+
+![b200-nvfp4-multilora-kernel-isolation 슬라이드 1](/assets/images/b200-nvfp4-multilora-kernel-isolation-slide-01.webp)
 
 ## 독립 인스턴스 8개는 B200 한 장에 들어가지 않습니다
 
@@ -116,6 +125,8 @@ P1 단계에서는 실제 NVFP4 27B 서버를 띄웠습니다. 모든 LoRA 선�
 
 결과는 이렇습니다. 허용오차를 넘은 행은 0개, Base 행이 수정된 경우도 0건이었습니다. 라우팅한 어댑터와 응답에 찍힌 모델이 어긋난 경우도 0건이었습니다. Base를 포함한 9개 모델에서 두 개를 고르는 72개 순서쌍(9×8)을 모두 구별했고 쌍마다 최소 145행이 근거가 됐습니다. 9개 모델이 한 GPU 스텝에 모두 들어간 경우가 eager 계측 서버에서 6스텝, CUDA graph 서버에서 6스텝 있었습니다. CUDA graph 서버에서는 커널에 넘기는 메타 버퍼(어떤 행이 어떤 어댑터를 쓰는지 적은 표)가 370스텝 전부 실제 요청 매핑과 일치했습니다. 같은 서버에 rot과 leak 결함을 주입하자 각각 860/860, 236/236으로 전부 검출됐습니다.
 
+![b200-nvfp4-multilora-kernel-isolation 슬라이드 2](/assets/images/b200-nvfp4-multilora-kernel-isolation-slide-02.webp)
+
 ## 1 ULP 차이와 잘못된 어댑터를 구별하기까지
 
 이 판정은 한 번에 나오지 않았습니다. 하루 전 1차 실행의 판정은 `NOT_ISOLATED_ULP_DRIFT`였습니다. 혼합 실행 2,792행 중 2행에서 1 ULP 이내의 차이(지표값 0.0104)가 나왔는데, 비교할 기준선이 735행뿐이어서 허용선이 바닥값 0.001로 잡혀 있었습니다. 작은 차이 두 건이 허용선을 넘었고 규칙대로 실패로 판정됐습니다.
@@ -139,6 +150,8 @@ NVFP4 독립 기준선은 모델 하나만 도는 스텝 81개, LoRA 48,589행�
 - 어댑터가 다른 경우(Cross-LoRA)와 테넌트 salt가 다른 경우(Cross-Salt)의 잘못된 재사용은 0건입니다. 한 테넌트가 캐시를 채운 직후 다른 테넌트 salt로 같은 앞부분을 보낸 기회가 44번 있었습니다. salt가 있는 요청 뒤에 salt 없는 요청이 같은 앞부분을 보낸 기회도 396번 있었습니다. 어느 쪽도 재사용으로 이어지지 않았습니다.
 
 판정은 `R7C1_PASS`입니다. 원 판정 코드와 따로 짠 재계산 스크립트로 다시 집계해도 같은 결과가 나왔습니다. 첫 시도는 인프라 문제로 측정이 끝나지 않아 `INCOMPLETE_INFRA`로 기록돼 있습니다. 해석에는 두 가지 조건이 붙습니다. salt를 주지 않은 요청끼리는 같은 어댑터 안에서 캐시가 재사용됩니다. 이것은 엔진의 정상 동작이며 테넌트 격리 근거가 아닙니다. 테넌트를 나누려면 요청마다 salt를 넣어야 합니다. 또 vLLM의 캐시 키에는 어댑터의 이름과 경로가 들어가고 가중치 내용은 들어가지 않습니다. 같은 이름과 경로로 다른 가중치를 다시 올리는 경우는 이번 시험 범위 밖입니다. 운영에서는 어댑터를 바꿀 때 이름이나 경로를 바꾸는 규칙이 필요합니다. 이 결과는 vLLM의 캐시 salt가 캐시 재사용 경계를 나눈다는 실증이지, 멀티테넌트 보안 전체를 인증한 것은 아닙니다.
+
+![b200-nvfp4-multilora-kernel-isolation 슬라이드 3](/assets/images/b200-nvfp4-multilora-kernel-isolation-slide-03.webp)
 
 ## 어댑터 품질은 따로 판정합니다
 
@@ -172,6 +185,8 @@ NVFP4 독립 기준선은 모델 하나만 도는 스텝 81개, LoRA 48,589행�
 - 고객 간 데이터 접근 통제. 커널과 캐시 격리는 계산과 캐시가 섞이지 않는다는 뜻이지, 테넌트별 데이터 격리, 인증, 로그 분리를 보장하지 않습니다. 이 부분은 플랫폼 계층에서 따로 설계하고 검증해야 합니다.
 - 운영 승인. 이 결과는 운영 투입 결정이 아닙니다.
 
+![b200-nvfp4-multilora-kernel-isolation 슬라이드 4](/assets/images/b200-nvfp4-multilora-kernel-isolation-slide-04.webp)
+
 ## S-LoRA와 Punica가 연 길 위에서 확인한 것
 
 여러 LoRA 어댑터가 Base를 공유해 메모리와 배칭 효율을 높인다는 아이디어는 선행 연구가 먼저 제시했습니다. [S-LoRA(Sheng 외, 2023)](https://arxiv.org/abs/2311.03285)는 어댑터를 메인 메모리에 두고 실행 중인 요청이 쓰는 어댑터만 GPU로 가져오는 통합 메모리 풀과 전용 커널로, 한 대의 머신에서 수천 개의 어댑터를 서빙하는 방법을 보였습니다. [Punica(Chen 외, 2023)](https://arxiv.org/abs/2310.18547)는 서로 다른 LoRA를 쓰는 요청을 한 배치로 묶어 계산하는 SGMV(Segmented Gather Matrix-Vector Multiplication) 커널을 제안했고 GPU에는 Base 한 벌만 두면 된다는 점을 보였습니다.
@@ -193,3 +208,7 @@ NVFP4 27B Base 하나에 직접 학습한 LoRA 8개를 재학습 없이 붙여 B
 **여러 전문 AI를 각각의 GPU에 배포하고 계신가요?** 다키클라우드는 하나의 Base 모델과 업무별 LoRA를 공유하는 AI 서빙 아키텍처를 설계하고 있습니다. 지금 운영 중인 구조를 놓고 GPU 메모리 요구량과 예상 비용을 함께 검토해 드릴 수 있습니다. 예상 비용은 추정치이며, 워크로드에 따라 공유 구성이 더 비싸게 나오는 경우도 그대로 보여 드립니다.
 
 [무료 GPU 비용 진단 신청하기]({{ "/ko/gpu-cost-assessment/" | relative_url }}?utm_source=techblog&utm_medium=post_cta&utm_campaign=multilora_cost_assessment&utm_content=b200_nvfp4_multilora)
+
+<!-- nlm-visual -->
+![핵심 개념 요약 인포그래픽 2](/assets/images/posts/news/b200-nvfp4-multilora-kernel-isolation/nlm-infographic-2.webp)
+*NotebookLM이 소스를 종합해 생성한 인포그래픽입니다.*
