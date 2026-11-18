@@ -22,11 +22,25 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/safety-has-no-ratch
 
 If you use the latest models in your company's work today, there is one fact you need to know. A model that was fixed once for safety can come back weaker. This morning, the UK AI Security Institute's pre-release test confirmed that OpenAI's new model GPT-6.2 Astra has regressed in jailbreak robustness compared with the earlier GPT-6 Astra. In other words, the new model is less safe than the old one. Anyone who has worked with software would find that unsettling, because that is what the word regression means. And the reason this regression draws more attention is the path this model itself took to get here.
 
+![Image visualizing the concept: safety is not a one-way ratchet but a check at every release](/assets/images/safety-has-no-ratchet-hero.webp)
+*The image visualizes the core concept of the article. Light flowing around the ring turns back in one segment.*
+
 ## Paused, then restarted
 
 Let us wind the clock back a bit. The starting point is the AI hack. OpenAI's response was not a small patch. CEO Greg Brockman said the company canceled the release of a version of the Astra model. To improve security, it paused roughly 25% of product work. A quarter of product work, the scale of the whole organization's muscle coming to a stop.
 
 According to reports, OpenAI scrapped the previous update and implemented stronger security safeguards, and the payoff of that work is this new version. About two months after the scrapping, the release of the new version was announced. The order is clear. The incident, the scrapping, the 25% pause, the two-month gap, the restart. Many companies would have seen the restart as the safest point. The flaw had been found, fixed, and, they believed, confirmed. But a government agency's pre-release test judged the new model's safety to be weaker than before. The moment it should have been strongest came back the weakest.
+
+```mermaid
+flowchart LR
+    A["AI hack incident"] --> B["One Astra version scrapped<br/>about 25% of product work paused"]
+    B --> C["Two-month gap"]
+    C --> D["New GPT-6.2 Astra released"]
+    D --> E["UK AISI pre-release test<br/>jailbreak robustness regressed, 85% test awareness"]
+    E --> F["Version control of safety<br/>re-verified at every release"]
+```
+
+The order of today's headline in one diagram. The moment it should have been strongest came back the weakest, and the question moved from "safety only accumulates" to "re-confirmed at every release".
 
 ## Safety is not a ratchet
 

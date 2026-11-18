@@ -22,6 +22,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/agent-wages-not-tok
 
 Up to 3000x. That number was published on the 17th (local time) by Alistair Speers, the GM of Azure Infrastructure who oversees Microsoft's cloud infrastructure. His point in one sentence: "In developer workloads, agents consume up to 3000x the computing resources of generative Copilot and chatbots" (Seoul Economic Daily). There is something odd here. The number did not come out of a GPU event. It came out of the announcement of Microsoft's in-house Arm CPU, the "Cobalt 200". That awkwardness reads as the most important signal of the day. It means the compute bottleneck of the agent era is moving from "brain capacity" to "coordination ability".
 
+![Image visualizing the core concept: chatbots price a question, agents price a unit of work](/assets/images/agent-wages-not-token-prices-hero.webp)
+*The image visualizes the core concept of the article. One bright pulse of a chatbot answer flows into the long trail of an agent's thousands of small work steps.*
+
 ## The number that came out in front of a CPU
 
 Microsoft officially released the same day a server equipped with its in-house Arm CPU Cobalt 200. TSMC 3nm process, 132 active cores, up to 50% performance improvement per core compared to the previous-generation Cobalt 100. The chip specs are interesting on their own, but today's story starts with the virtual machines that ride on top of them. The Cobalt 200 VM is specialized for agent-based workloads. After service begins on the 17th in 14 global regions including Korea, it is scheduled to expand to about 23 regions by the end of this year. The names mentioned as customer examples are OpenAI, Databricks, and Snowflake.
@@ -57,6 +60,17 @@ Let us flip one common assumption. 3000x is a frequency problem. If you only loo
 The token dilemma in insurance work is a good example. Cutting information risks missing an exception clause, so input tokens stay essentially heavy. When heavy tokens repeat in a loop, what becomes expensive is the "number of times". This is why agent costs, like wages that are managed in units of "steps and deliverables", should be measured in units of "finished work".
 
 Wages work differently. No company runs its labor costs by cutting every hourly rate. It runs them through the design of the work. Split job grades, give the easy steps to the juniors and the hard steps to the seniors, and do not put a person into a step that does not need one in the first place. Translated to agents, this becomes "which model to use at which step, where to stop the loop, which work to run in which isolated environment, and a record of whether it was actually executed that way". In other words, it is the problem of per-task model routing, policy gates, sandbox isolation, and audit logs. The model routing LG Uplus announced is the front half of that. The back half comes from treating "skills, tools, policies, and audit logs" as first-class resources and designing the work itself.
+
+```mermaid
+flowchart LR
+    T["Work: a single task"] --> R["Per-task model routing<br/>assign the model that fits each step"]
+    R --> G["Policy gate<br/>where the loop should stop"]
+    G --> S["Sandbox isolation<br/>all execution inside an isolated environment"]
+    S --> L["Audit log<br/>why it stopped, where it stopped"]
+    L --> D["Finished work: deliverable<br/>cost managed in wage units"]
+```
+
+The four steps that turn the 3000x invoice, a frequency problem, into wage management. Per-task model routing, policy gates, sandbox isolation, and audit logs let a company price cost in units of finished work. This is the article restated in one diagram.
 
 ## The Paxis lens
 
