@@ -26,6 +26,9 @@ The AI industry built doors this week. Not doors for customers, but doors for re
 
 There is, of course, plenty of news about opening windows, too. The window of the capability race was wide open this week as well. But the side that moved more was the doors. So today we will pass by the doors first.
 
+![An abstract rendering of the core concept: three glowing doors and one small window](/assets/images/the-week-ai-built-doors-hero.webp)
+*An abstract rendering of the core concept: three glowing doorways and one small bright window standing side by side in a dark space.*
+
 ## The Door of Reach, Regulation That Locks Distance
 
 The first door opened on the chip. A new US rule blocks Chinese companies from remotely accessing advanced AI processors located in overseas data centers. The word to note is "remote." The chip itself can sit in another country's data center. Export controls until now handled the question of where the chip is. This time, the question is who can reach it. Keeping hardware abroad and driving it remotely was an ordinary engineering answer. That answer becomes a regulated target starting next week.
@@ -81,6 +84,21 @@ The door and the window do not point in the same direction this week. Door news 
 ## The Door a Company Should Have
 
 What the three doors ask in common is one thing. Where does your agent run, who verifies it, and what is its address. Reach is locked by regulation, location becomes an address, and verification opens to the outside. The industry's doors all face outward. What a company needs is the foyer inside.
+
+```mermaid
+flowchart TB
+    W["This week: three doors installed<br/>for regulators, sovereigns, and verifiers"] --> D1["Door of reach: chip rule<br/>who can reach, not where it sits<br/>remote access to overseas data centers blocked"]
+    W --> D2["Door of location: sovereign cloud<br/>Brunei, Philippines, Malaysia deals<br/>the address registered in national documents"]
+    W --> D3["Door of verification: safety<br/>89-signatory open letter, GPT-6.2 safety card<br/>verification pushed open from outside"]
+    W --> C1["Window: capability race<br/>Gemini 4 Neon, 61 points, 3rd overall<br/>MAI Code 2, Hy4 Flash open weights"]
+    D1 --> Q["The one sentence a company must answer<br/>run a good model, in an allowed position,<br/>in a provable way"]
+    D2 --> Q
+    D3 --> Q
+    C1 --> Q
+    Q --> F["The foyer: Paxis<br/>policy gate, audit log, L0 to L3 sandbox<br/>sovereign K8s, CostRouter, MCP and skill market"]
+```
+
+This week's three doors and the window of capability, gathered into the one sentence a company must answer, and the foyer that answers it. The article restated in one diagram.
 
 Paxis is, in effect, exactly that foyer. Paxis is ThakiCloud's Agent-Native Cloud, currently running as its v1.1 GA product. Its first-class resources are Skills, Tools, Policies, and Audit Logs. An agent's reach is drawn by a policy gate, and every movement is recorded in the audit log. This is what corresponds to the door of verification. Execution happens in an isolated sandbox, and autonomy is governed in L0 to L3 levels. This corresponds to the door of reach. When it runs on sovereign, on-prem Kubernetes (ai-platform), the door of location stands in the company's own building. CostRouter picks a model per task, so even when rankings change, the workflow stays in place. MCP connectors and the skill market are the window, connecting to the external ecosystem.
 
