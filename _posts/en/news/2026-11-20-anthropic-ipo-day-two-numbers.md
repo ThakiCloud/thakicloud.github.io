@@ -30,6 +30,24 @@ The subject of the answers is Anthropic. On its first day of Nasdaq trading at a
 
 Today we follow those answers one by one. Each answer comes from a different subject. The market answered with a price, the street with a line, an investor with the location of equity, and the remaining layers of the industry with the conditions of resources. On a day when four subjects answered the same question in four ways, the meaning of the day did not sit inside any single answer alone.
 
+![A line of small silhouettes crossing a city street at dawn, a golden column of light rising on the far side, the article's core concept visualized](/assets/images/anthropic-ipo-day-two-numbers-hero.webp)
+*The article's core concept, visualized.*
+
+```mermaid
+flowchart TD
+    Q["Nov 19, the same question<br/>How far to push AI"]
+    Q --> A1["The market<br/>trading opens at a $1.4T valuation"]
+    Q --> A2["The street<br/>~100 people demand an RSI ban"]
+    Q --> A3["An investor<br/>multibillion stake moves to a nonprofit"]
+    Q --> A4["Other industry layers<br/>chip rental curbs, access tiers, OS agents"]
+    A1 --> G["The day governance is traded<br/>alongside the stock price"]
+    A2 --> G
+    A3 --> G
+    A4 --> G
+```
+
+The map of that day's four answers. The market answered with a price, the street with a line, an investor with the location of equity, and the remaining layers with the conditions of resources; the point where those answers converge is the question of the day.
+
 ## $1.4 Trillion: The Answer Capital Gave
 
 Anthropic began public market trading at a $1.4 trillion valuation on November 19. The listing went ahead despite warnings from Democratic lawmakers. The warning and the trading happened on the same day, which shows that safety concerns did not bend the market's decisiveness. The number $1.4 trillion is not the size of one company but the market's appraisal. It also means that the value of the work models produce is now printed on the price list the public market sets.
