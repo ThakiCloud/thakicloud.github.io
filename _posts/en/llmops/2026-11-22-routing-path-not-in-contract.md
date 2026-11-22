@@ -17,8 +17,11 @@ tags:
 categories:
   - llmops
 lang: en
-canonical_url: https://thakicloud.com/tech-blog/en/llmops/routing-path-not-in-contract/
+canonical_url: "https://thakicloud.com/tech-blog/en/llmops/routing-path-not-in-contract/"
 ---
+
+![A single thin luminous thread winding through a dark navy field of faint nodes, one waypoint brighter than the rest, the article's core concept visualized](/assets/images/routing-path-not-in-contract-hero.webp)
+*The article's core concept, visualized.*
 
 ## You Picked the Model. You Did Not Pick the Path
 
@@ -81,6 +84,37 @@ Models can change. Prices change, benchmarks change, and the ranking of the stro
 The content is not complex. The model ID a request reaches, the processing region, the list of intervening processors, and the retention period. That is all. Right now this information sits somewhere in an operator's internal documents. The moment it is made into a contract annex, routing changes from "discretion" to "responsibility."
 
 The answer is not to distrust the routing layer. The answer is to make the path a first-class contract object. Audit logs that record where the path goes, policy gates that block paths the contract does not allow, routing that picks a model per task within a visible range, and sovereign on-prem deployment that brings the entire path inside the fence when needed. In a structure with these four, routing freedom and compliance certainty are no longer opponents. The price of sovereignty finally came down this week to a fair level, and the last option has become real.
+
+```mermaid
+flowchart TD
+    subgraph C["What the contract covers"]
+        U["User request"]
+        API["Platform API<br/>model name and price"]
+        U --> API
+    end
+    subgraph R["What it does not cover, the reality of execution"]
+        RT["Provider internal router"]
+        M1["Model A, region 1"]
+        M2["Model B, region 2"]
+        M3["A path not in the contract<br/>routed to China's MiniMax"]
+        RT --> M1
+        RT --> M2
+        RT --> M3
+    end
+    API --> RT
+    subgraph L["Four things that make the path a first-class contract object"]
+        L1["Audit logs that record where the path goes"]
+        L2["Policy gates that block paths the contract does not allow"]
+        L3["Per-task model selection within a visible range"]
+        L4["Sovereign on-prem that brings the entire path inside the fence"]
+    end
+    L1 --> K["Routing moves from discretion to responsibility"]
+    L2 --> K
+    L3 --> K
+    L4 --> K
+```
+
+Restating the map. The contract names the platform API and a model. Execution carries the provider's internal router and paths the contract never names. Audit logs, policy gates, per-task routing, and sovereign on-prem deployment turn the hidden path into an object of the contract.
 
 The role ThakiCloud's Agent-Native Cloud, Paxis, is designed for is exactly this. Skills, Tools, Policies, and Audit Logs as first-class resources, autonomy (L0 to L3) governance, policy gates and audit logs, isolated sandbox execution, MCP connectors and a skill marketplace, and per-task model selection through CostRouter. These are all parts that try to see and govern the "path." But what matters more is that the industry is now asking this question first. Whatever model service you use, ask just one thing.
 
