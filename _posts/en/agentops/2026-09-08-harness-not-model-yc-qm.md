@@ -1,7 +1,7 @@
 ---
 title: "Same Model, 30 to 95: The Agent Harness Moves to the Research Front"
 excerpt: "Y Combinator's panel put the same model weights through a weak harness and a strong one, and ARC-AGI scores went from about 30 percent to about 95 percent. The era of dismissing harnesses as scaffolding is over, and YC's open-sourcing of its own multiplayer harness QM under MIT is the product proof of that claim."
-seo_title: "The Agent Harness Moves to the Research Front: YC QM and ARC-AGI 30 vs 95 | ThakiCloud"
+seo_title: "Same Model, 30 to 95: The Agent Harness Moves to the Research Front"
 seo_description: "A look at Y Combinator's panel finding that identical model weights score 30 percent and 95 percent on ARC-AGI depending on harness, and the MIT open-source of its agent harness QM. Room-level isolation, a model-agnostic control plane, durable sandboxes, and what it implies for the Paxis architecture."
 date: 2026-09-08
 last_modified_at: 2026-09-08

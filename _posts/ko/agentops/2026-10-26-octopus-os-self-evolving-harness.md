@@ -1,7 +1,7 @@
 ---
 title: "에이전트가 자기 하네스를 고치는 OS: Octopus-SI-OS 해부"
 excerpt: "Rust 커널 58.7k줄, 에이전트는 JSON 두 개, 거부는 대장 한 행. '에이전트가 자기 하네스를 수정한다'는 주장을 실제 레포지토리를 clone해 구조·계산·컴파일 시도까지 검증했습니다."
-seo_title: "Octopus OS: 자기 진화 에이전트 하네스 아키텍처 검증 | ThakiCloud 기술블로그"
+seo_title: "에이전트가 자기 하네스를 고치는 OS: Octopus-SI-OS 해부"
 seo_description: "miu21590의 Octopus-SI-OS를 실제 클론해 커널 규모, worker JSON 계약, 정책·대장 스키마를 검증하고, 에이전트 자기 수정 아키텍처를 Paxis 관점에서 분석합니다."
 date: 2026-10-26
 last_modified_at: 2026-10-26

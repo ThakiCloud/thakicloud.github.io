@@ -1,7 +1,7 @@
 ---
-title: "SkillOpt: Optimizing Agent Skills as Trainable Text Components (arXiv:2605.23904)"
+title: "SkillOpt: Optimizing Agent Skills as Trainable Text"
 excerpt: "An analysis of SkillOpt, which treats agent skill documents as external optimization targets and converts scored rollouts into controlled edits (add, delete, replace). Results include up to +23.5 points of performance gain on GPT-5.5."
-seo_title: "SkillOpt Agent Skill Self-Optimization System Analysis - Thaki Cloud"
+seo_title: "SkillOpt: Optimizing Agent Skills as Trainable Text"
 seo_description: "arXiv 2605.23904 SkillOpt: deep analysis of text-space skill optimization, controlled edit mechanism, GPT-5.5 +23.5 point gain, and cross-model transferability."
 date: 2026-06-20
 last_modified_at: 2026-06-20

@@ -3,7 +3,7 @@ title: "One Month, 1.8 Trillion Won"
 excerpt: "Turning on the Louisiana data center one month early creates 1.8 trillion won. The axis of this morning's news was not 'how much' but 'how fast'. The moment a compute clock becomes money, one question is left for the enterprise. At the instant the switch flips, is the agent ready to work?"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/one-month-at-1-8-trillion-won/"
-seo_title: "Why One Month Became 1.8 Trillion Won. The Day AI Infrastructure Competition Switched to 'Time' | ThakiCloud"
+seo_title: "One Month, 1.8 Trillion Won"
 seo_description: "Anthropic's 15GW lease, the Samsung and LG modular data center speed race, SK Hynix's 30-year Indiana tax deal, Amazon's $7 billion Decart acquisition talks. We analyze the signals that the axis of AI infrastructure competition is moving from capacity to time, and the question left for enterprises running agents."
 date: 2026-10-12
 last_modified_at: 2026-10-12

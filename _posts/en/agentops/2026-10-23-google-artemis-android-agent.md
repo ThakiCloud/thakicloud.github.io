@@ -1,7 +1,7 @@
 ---
 title: "ARTEMIS: The Agent That Drives a Real Android Phone Over MCP"
 excerpt: "Google open-sourced ARTEMIS, and the interesting part is not an Android automation script. It is the contract that turns a phone screen into a tool an agent can call. Five MCP tools connect a real device to coding agents like Claude Code and Codex, and two execution profiles separate speed from verification depth. In our hands-on run, 191 packages installed in 477ms, and the doctor command pinpointed the missing API key and the absent device."
-seo_title: "ARTEMIS: The Agent That Drives a Real Android Phone Over MCP | Google's Open-Source Mobile Testing Agent"
+seo_title: "ARTEMIS: The Agent That Drives a Real Android Phone Over MCP"
 seo_description: "Google's open-source ARTEMIS is a multimodal agent that drives real Android devices from natural language. This post covers the native MCP server, the Flash and Pro execution profiles, the 99%+ AndroidWorld claim, and what the diagnostic contract and profile routing mean for ThakiCloud."
 date: 2026-10-23
 last_modified_at: 2026-10-23

@@ -3,7 +3,7 @@ title: "Danggeun Opened Its Door to ChatGPT. What Really Matters Is the Doorman"
 excerpt: "Korea's used-goods marketplace Danggeun is opening its ad system to ChatGPT and Claude with an 'Ads MCP'. On the other side, insurance, hospitals, and manufacturing are quietly building their own doormen. The door is becoming a standard, and what decides the competition is who stands in front of it."
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/agentops/danggeun-ai-doorman/
-seo_title: "Danggeun Ads MCP Launch Analysis | In the AI Agent Era, Execution Governance Is the Real Competition"
+seo_title: "Danggeun Opened Its Door to ChatGPT. What Really Matters Is the Doorman"
 seo_description: "The ads MCP and open API Danggeun connects to ChatGPT and Claude, the responses from Kakao and Naver, and the guardrails in insurance, healthcare, and manufacturing. An analysis of why policy, audit, and autonomy have become scarce assets in an era when agents actually perform work."
 date: 2026-11-09
 last_modified_at: 2026-11-09

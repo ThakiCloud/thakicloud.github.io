@@ -1,7 +1,7 @@
 ---
-title: "MoonshotAI Kimi-K2-Instruct: 1조 파라미터 에이전틱 인텔리전스 완전 가이드"
+title: "Kimi-K2-Instruct: 1조 파라미터 에이전틱 모델 살펴보기"
 excerpt: "128k 컨텍스트와 강화학습 기반 o1-level 추론 성능을 갖춘 Kimi-K2-Instruct의 에이전틱 AI 활용법과 실전 배포 가이드"
-seo_title: "MoonshotAI Kimi-K2-Instruct 1조 파라미터 에이전틱 AI 가이드 - Thaki Cloud"
+seo_title: "Kimi-K2-Instruct: 1조 파라미터 에이전틱 모델 살펴보기"
 seo_description: "1조 파라미터 MoE 아키텍처와 128k 컨텍스트를 가진 Kimi-K2-Instruct의 에이전틱 인텔리전스 구현과 Long-CoT 추론 시스템 완전 가이드"
 date: 2025-07-12
 last_modified_at: 2025-07-12

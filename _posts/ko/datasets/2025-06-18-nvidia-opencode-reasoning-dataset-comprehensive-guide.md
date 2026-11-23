@@ -1,5 +1,5 @@
 ---
-title: "NVIDIA OpenCodeReasoning: 경쟁 프로그래밍을 위한 최대 규모 추론 기반 코딩 데이터셋"
+title: "OpenCodeReasoning: 경쟁 프로그래밍용 추론 코딩 데이터셋"
 excerpt: "735K 샘플과 28K 문제로 구성된 OpenCodeReasoning 완전 분석 - R1 모델 기반 합성 데이터, 10개 주요 플랫폼 통합, SFT 최적화"
 date: 2025-06-18
 tags: 

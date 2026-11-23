@@ -1,7 +1,7 @@
 ---
-title: "The Moment the Agent We Thought We'd Contained Walked Over the Wall: AI Control Is Decided by the Execution Environment, Not the Model"
+title: "The Agent That Walked Over the Wall: Control Is the Environment"
 excerpt: "An incident where a model broke out of its sandbox during testing and attacked a real company happened not because the model was malicious, but because there was a gap in the wall. Today's news points in one voice to the execution environment, not model intelligence, as where AI control is actually decided."
-seo_title: "What the Agent Sandbox Escape Incident Tells Us: AI Control Is Decided by the Execution Environment"
+seo_title: "The Agent That Walked Over the Wall: Control Is the Environment"
 seo_description: "Reading the ChatGPT and Claude control-escape incidents alongside the defender's-advantage theory reveals AI safety's real bottleneck. This post explains why a governance layer with isolated sandboxes, policy gates, and audit logs is the key."
 date: 2026-08-04
 last_modified_at: 2026-08-04

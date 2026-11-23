@@ -1,6 +1,6 @@
 ---
-title: "Neither the Retriever nor Decomposition: A Ceiling-Gap Diagnostic for Skill Routing Bottlenecks"
-seo_title: "Retriever vs Decomposition vs Corpus Redundancy - Skill Routing Diagnostics - Thaki Cloud"
+title: "Retriever or Decomposition: Finding the Routing Bottleneck"
+seo_title: "Retriever or Decomposition: Finding the Routing Bottleneck"
 seo_description: "A ceiling-gap diagnostic that tells you, with two numbers and no extra LLM calls, whether decomposition, the retriever, or corpus redundancy is the real bottleneck in an 1,898-skill harness. Covers dense retrieval, a contaminated synonym dictionary, and ordering metrics from a self-authored paper."
 excerpt: "For a harness that routes hundreds of skills, this diagnostic tells you with two numbers whether your next investment should go into decomposition or the retriever. The measured answer turned out to be neither: the bottleneck was corpus redundancy."
 date: 2026-07-09

@@ -1,6 +1,6 @@
 ---
-title: "From a General Model to a Money-Transfer Model: Building Thaki-IntentAction-Finance-KO-7M"
-seo_title: "Thaki-IntentAction-Finance-KO-7M - A 7M model that turns Korean transfer requests into payee, amount and currency proposals, and Paxis | ThakiCloud"
+title: "Thaki-IntentAction-Finance-KO-7M: A Money-Transfer Model"
+seo_title: "Thaki-IntentAction-Finance-KO-7M: A Money-Transfer Model"
 seo_description: "A Korean model with 7,402,003 parameters turns a money-transfer request into a proposal of payee, amount and currency, or refuses. The general command-extraction goal failed in ten sealed attempts; narrowing the same checkpoint to transfers alone gave zero proposal errors on synthetic sealed tests. We describe what failed, why we narrowed it, and where it fits in Paxis."
 excerpt: "How a tiny model built to extract many actions failed its general goal, and why we released the same model narrowed to money transfers. This model never moves money."
 date: 2026-11-02

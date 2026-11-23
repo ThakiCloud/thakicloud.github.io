@@ -1,7 +1,7 @@
 ---
-title: "Builders, Owners, and Users Have Split: The Day the Number 20 Percent Appeared Twice"
+title: "Builders, Owners, and Users Have Split"
 excerpt: "Meta holds only 20 percent of its data center, while Google received 20 percent equity in a data center it won't even use, as payment for guaranteeing it. Ownership, use, and liability in AI infrastructure are separating, and the same split is now happening at the agent execution layer too."
-seo_title: "AI Data Center Ownership Unbundled: What Meta's 20%, Google's Guarantee, and Samsung SDS's 800MW Mean"
+seo_title: "Builders, Owners, and Users Have Split"
 seo_description: "We read Meta's $14 billion BlackRock deal, Google's guarantee for Anthropic's data center, and Samsung SDS's 800MW DBO strategy as one continuous thread. How to control an asset you don't own has emerged as the shared challenge for AI infrastructure and agent operations."
 date: 2026-07-31
 last_modified_at: 2026-07-31

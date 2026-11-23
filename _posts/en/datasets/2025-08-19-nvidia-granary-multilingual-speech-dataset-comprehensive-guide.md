@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Granary: A Large-Scale Multilingual Speech Dataset Spanning 25 European Languages"
+title: "NVIDIA Granary: Speech Data for 25 European Languages"
 excerpt: "NVIDIA's latest multilingual speech recognition and translation dataset, Granary, covers 640,000 hours of audio across 25 European languages. This guide covers its key characteristics and practical uses."
-seo_title: "NVIDIA Granary Multilingual Speech Dataset Comprehensive Guide - Thaki Cloud"
+seo_title: "NVIDIA Granary: Speech Data for 25 European Languages"
 seo_description: "A detailed look at NVIDIA Granary: 25 European languages, 640,000 hours of audio, dataset structure, and how to use it for ASR and AST tasks."
 date: 2025-08-19
 last_modified_at: 2025-08-19

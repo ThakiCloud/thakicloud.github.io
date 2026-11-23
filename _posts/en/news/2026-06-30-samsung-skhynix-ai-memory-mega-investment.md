@@ -1,7 +1,7 @@
 ---
-title: "Samsung & SK’s 4,755 Trillion KRW 10-Year Domestic Investment: Honam Memory Fabs to 15GW AI Data Centers"
+title: "Samsung and SK: A Ten-Year Domestic Investment Plan"
 excerpt: "On June 29, 2026, Samsung Electronics and SK hynix announced a combined 4,755 trillion KRW domestic investment over the next 10 years. Centered on four memory fabs in the southwestern region (800 trillion KRW) and SK's 15GW AI data center plan (1,000 trillion KRW), this post breaks down the announcement, examines the HBM supercycle and policy environment, and explores what rapidly expanding domestic AI infrastructure means for ThakiCloud's Kubernetes- and Kueue-based serving platform."
-seo_title: "Samsung & SK 4,755 Trillion KRW Investment Announcement: Honam Fabs & AI Data Centers - Thaki Cloud"
+seo_title: "Samsung and SK: A Ten-Year Domestic Investment Plan"
 seo_description: "Samsung 2,655 trillion + SK 2,100 trillion = 4,755 trillion KRW domestic investment announced. Covers the 800 trillion KRW southwestern memory fabs, SK's 1,000 trillion KRW 15GW AI data centers, the HBM supercycle, the Semiconductor Special Act, and ThakiCloud's K8s/Kueue serving perspective."
 date: 2026-06-30
 last_modified_at: 2026-06-30

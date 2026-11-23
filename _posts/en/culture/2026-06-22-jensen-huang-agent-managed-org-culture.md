@@ -1,7 +1,7 @@
 ---
-title: "The Age of Agent-Managed Organizations: Jensen Huang's Vision and the Reshaping of Organizational Culture"
+title: "Agent-Managed Organizations: Jensen Huang's Vision"
 excerpt: "When NVIDIA CEO Jensen Huang's vision of 'hundreds of agents per engineer' becomes reality, how must organizational structures and ways of working change?"
-seo_title: "Jensen Huang's Agent-Managed Org Culture Vision - Thaki Cloud"
+seo_title: "Agent-Managed Organizations: Jensen Huang's Vision"
 seo_description: "Jensen Huang envisions 100 AI agents per engineer. Explore how this reshapes hiring, accountability, performance measurement, and organizational culture."
 date: 2026-06-22
 last_modified_at: 2026-06-22

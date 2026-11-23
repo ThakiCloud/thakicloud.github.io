@@ -1,7 +1,7 @@
 ---
 title: "인지 바이러스: LLM 의존이 점진적이지 않다고 말하는 역학 모델"
 excerpt: "Harvard Wyss 연구소를 포함한 국제 연구팀이 LLM 도입을 전염병으로 모델링한 논문을 발표했습니다. 독립-결합-의존 3상태 ODE와 집단 강화 항이 tipping point를 만듭니다. 도입이 조금 증가하면 인구 전체가 의존 상태로 급격히 이동할 수 있고, 그 상태는 쉽게 되돌아오지 않습니다. 모델 구조가 기업 AI 플랫폼 운영에 무엇을 의미하는지 정리합니다."
-seo_title: "LLMs as a Cognitive Virus: 인지 의존의 역학 모델과 Tipping Point | ThakiCloud"
+seo_title: "인지 바이러스: LLM 의존이 점진적이지 않다고 말하는 역학 모델"
 seo_description: "arXiv 2609.03344 'Large-Language Models as a Cognitive Virus' 분석. 3상태 ODE(uncoupled/coupled/dependent), transcritical bifurcation과 tipping point, hysteresis와 lock-in, 인지 면역(cognitive immunization), 그리고 ThakiCloud Paxis 에이전트 거버넌스에 대한 시사점."
 date: 2026-09-09
 last_modified_at: 2026-09-09

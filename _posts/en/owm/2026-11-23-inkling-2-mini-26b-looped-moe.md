@@ -1,7 +1,7 @@
 ---
 title: "Why a 26B Model Fits a 32GB Laptop: Inkling 2 Mini's Loop Architecture"
 excerpt: "Thinking Machines released Inkling 2 Mini, a 26.4B open-weight MoE, under Apache 2.0 on Nov 20. Instead of adding layers, its looped design visits the middle 12 layers three times, turning 24 layers of weights into 48 layer applications. A 20GB native-NVFP4 checkpoint, a 1M-token context, and official numbers that beat Qwen3.8-27B on agentic coding."
-seo_title: "Inkling 2 Mini 26B looped MoE — 32GB laptop serving, official benchmark comparison vs Qwen3.8-27B"
+seo_title: "Why a 26B Model Fits a 32GB Laptop: Inkling 2 Mini's Loop Architecture"
 seo_description: "26.4B total parameters, 5.4B effective active, native NVFP4 20GB checkpoint, 1M-token context. The middle-12-layers-x3 loop design, official benchmarks, and 32GB-hardware serving paths, verified against the HF config.json."
 date: 2026-11-23
 author_profile: true

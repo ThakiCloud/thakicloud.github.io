@@ -1,7 +1,7 @@
 ---
 title: "Four Control Points That Turn an LLM API Into a Reliable Component"
 excerpt: "LLM calls fail, output formats drift, and cost creeps up without warning. This post lays out how to treat an LLM API as a component of a production system through four control points: schema enforcement, streaming boundaries, failure isolation, and cost and tracing."
-seo_title: "LLM API Production Integration Patterns: Schema, Retries, Cost Control - Thaki Cloud"
+seo_title: "Four Control Points That Turn an LLM API Into a Reliable Component"
 seo_description: "From enforcing JSON schemas to circuit breakers and bulkheads, token budgets and semantic caching, and OpenTelemetry tracing, this post walks through the four control points you need to integrate LLM APIs into production, with code."
 date: 2026-08-04
 tags:

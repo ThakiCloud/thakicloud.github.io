@@ -1,7 +1,7 @@
 ---
-title: "AGI Is Still Far Off: Demis Hassabis's Realism and the Culture of Expectation Management"
+title: "Hassabis on AGI: Realism Over Hype"
 excerpt: "Starting from DeepMind CEO Hassabis's statement that we are 'nowhere near AGI,' this post explores why AI organizations should make honest expectation-setting a core cultural value rather than chasing hype."
-seo_title: "Hassabis AGI Realism vs Hype: Expectation Management Culture - Thaki Cloud"
+seo_title: "Hassabis on AGI: Realism Over Hype"
 seo_description: "Why AI organizations must adopt honest expectation management culture, drawing on Demis Hassabis's candid AGI timeline statements at Davos 2026 and Google I/O."
 date: 2026-06-22
 last_modified_at: 2026-06-22

@@ -1,7 +1,7 @@
 ---
 title: "What Made Electricity Electricity Was Not the Generator"
 excerpt: "The day OpenAI called for 'AI like electricity,' it cut $20 billion from its revenue. What this morning's news points to is not model performance but the last wall: the distribution, metering, and audit that make AI usable like electricity."
-seo_title: "What Made Electricity Electricity Was Not the Generator: The Last Wall to Making AI Usable Like Electricity"
+seo_title: "What Made Electricity Electricity Was Not the Generator"
 seo_description: "OpenAI's revenue correction, the Haiku 5.5 price cut, Kimi K2.6 agent swarms, OSAT memory supply, Acrylic GPU orchestration, GoodData's Agentic Serving Plane, SAP's TechWolf acquisition, SKT's token economy, and the four walls of 'AI like electricity.' The layer this morning's news all pointed to was the Agent-Native Cloud."
 date: 2026-10-09
 last_modified_at: 2026-10-09

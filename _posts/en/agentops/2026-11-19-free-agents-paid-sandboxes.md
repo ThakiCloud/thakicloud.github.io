@@ -1,7 +1,7 @@
 ---
 title: "Free Agents and Paid Sandboxes"
 excerpt: "The day Google opened Gemini's 'Tasks' to hundreds of millions of users for free, the companies in the same digest were paying for isolated sandboxes, confirmation procedures, audit logs, and model routing. The moment agents become free, the axis of competition moves to the execution environment."
-seo_title: "Gemini 'Tasks' goes free; the cost of agents lives in the execution environment"
+seo_title: "Free Agents and Paid Sandboxes"
 seo_description: "Google opened its agent feature 'Tasks' to hundreds of millions of users in six countries for free. On the day per-user hardware-isolated sandboxes and confirmation steps for sensitive actions became the standard, this post analyzes how enterprise news now lists safety, audit, cost, and sovereignty as line items."
 date: 2026-11-19
 last_modified_at: 2026-11-19

@@ -1,7 +1,7 @@
 ---
-title: "Google Agent Development Kit (ADK) Samples: Complete Tutorial for Multi-Agent Applications"
+title: "Google ADK Samples: Building Multi-Agent Applications"
 excerpt: "Learn how to build intelligent multi-agent systems using Google's ADK with practical examples from the official samples repository."
-seo_title: "Google ADK Samples Tutorial: Build Multi-Agent Applications - Thaki Cloud"
+seo_title: "Google ADK Samples: Building Multi-Agent Applications"
 seo_description: "Master Google's Agent Development Kit (ADK) with our comprehensive tutorial covering installation, sample agents, and practical implementation examples for multi-agent systems."
 date: 2025-09-21
 tags:

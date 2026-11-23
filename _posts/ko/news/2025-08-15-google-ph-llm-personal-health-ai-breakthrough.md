@@ -1,7 +1,7 @@
 ---
-title: "구글의 PH-LLM, 개인 건강 AI의 새로운 지평을 열다 - 웨어러블 데이터로 수면과 피트니스 코칭 혁신"
+title: "PH-LLM: 웨어러블 데이터로 하는 건강 코칭 AI"
 excerpt: "Google이 Nature Medicine에 발표한 PH-LLM은 웨어러블 기기 데이터를 활용한 개인 맞춤형 건강 코칭 AI로, 의료 전문가를 능가하는 성능을 보여주며 디지털 헬스케어의 패러다임을 바꾸고 있습니다."
-seo_title: "구글 PH-LLM 개인 건강 AI 혁신 - 웨어러블 데이터 활용 건강 코칭 - Thaki Cloud"
+seo_title: "PH-LLM: 웨어러블 데이터로 하는 건강 코칭 AI"
 seo_description: "Google의 PH-LLM이 Nature Medicine에 발표되어 개인 건강 관리의 새로운 시대를 열었습니다. 웨어러블 데이터를 활용한 AI 건강 코칭의 혁신과 미래 전망을 상세히 분석합니다."
 date: 2025-08-15
 last_modified_at: 2025-08-15

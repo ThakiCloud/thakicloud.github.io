@@ -1,7 +1,7 @@
 ---
 title: "Not a Blockade, but a Pass"
 excerpt: "This morning's HuggingNews digest carries chip licenses, a 45% price hike after signing, a 26B model on a single GPU, and an IPO banker non-compete on the same page. A signal that the conditions for running AI are now set by rules."
-seo_title: "Not a Blockade, but a Pass | 879,868 AI Chip Licenses and the New Cost Structure of Compute"
+seo_title: "Not a Blockade, but a Pass"
 seo_description: "879,868 AI chip export licenses the US approved for China, and AI server prices up to 45% higher even after signing. The dual price structure of compute supply and the enterprise response, seen through this morning's digest."
 date: 2026-11-23
 last_modified_at: 2026-11-23

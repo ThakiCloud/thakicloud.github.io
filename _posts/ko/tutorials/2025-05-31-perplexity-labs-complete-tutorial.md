@@ -1,5 +1,5 @@
 ---
-title: "Perplexity Labs 완전 정복: AI로 10분 만에 보고서부터 웹앱까지 자동 생성하기"
+title: "Perplexity Labs: 보고서부터 웹앱까지 AI로 자동 생성"
 date: 2024-05-31
 tags: 
   - PerplexityLabs

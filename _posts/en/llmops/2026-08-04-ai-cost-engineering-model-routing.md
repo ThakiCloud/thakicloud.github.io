@@ -1,7 +1,7 @@
 ---
-title: "Model Tiers and Routing Economics: Designing Systems to Spend Expensive Models Wisely"
+title: "Model Tiers and Routing: Spending Expensive Models Wisely"
 excerpt: "Route every request to your best model and the bill hits a wall first. This post covers how to split models into tiers, how to set the criteria for routing decisions, and where routing actually saves money and where it does not."
-seo_title: "LLM Model Routing Design: Tier Separation and the Cost-Quality Tradeoff - Thaki Cloud"
+seo_title: "Model Tiers and Routing: Spending Expensive Models Wisely"
 seo_description: "Covers the routing economics of LLM cost engineering: tiering primary, routing, and light models, implementing rule-based, classifier-based, and embedding-based routing engines, and why the middle tier goes to waste on the cost-quality tradeoff curve."
 date: 2026-08-04
 tags:

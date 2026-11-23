@@ -1,7 +1,7 @@
 ---
 title: "One pipeline from research to final draft: academic-research-skills"
 excerpt: "academic-research-skills, the Claude Code skill pack that passed 55,000 GitHub stars in 8 months. The core is not writing automation but the integrity gates you cannot remove and the Devil's Advocate that does not concede. Includes the results of actually running a review on one in-house FAIR paper."
-seo_title: "academic-research-skills: the 55k-star Claude Code research skill pack. Integrity gates and a measured 7-agent review"
+seo_title: "One pipeline from research to final draft: academic-research-skills"
 seo_description: "academic-research-skills, an open source Claude Code skill pack connecting research to final draft in one line. 10-stage orchestration, mandatory integrity verification, the Devil's Advocate protocol, and a hands-on analysis with real in-house execution results."
 date: 2026-11-04
 last_modified_at: 2026-11-04

@@ -1,7 +1,7 @@
 ---
-title: "Top 10 Reinforcement Learning Post-Training Research Trends 2025: From GLM-4.5 to RLUF"
+title: "RL Post-Training in 2025: From GLM-4.5 to RLUF"
 excerpt: "In-depth analysis of 10 key research papers in reinforcement learning post-training since April 2025, providing practical insights for real-world applications"
-seo_title: "2025 RL Post-Training Research Trends Analysis - GLM-4.5, GSPO, GRPO Latest Techniques - Thaki Cloud"
+seo_title: "RL Post-Training in 2025: From GLM-4.5 to RLUF"
 seo_description: "Analysis of 10 key research papers in 2025 reinforcement learning post-training. From GLM-4.5 agentic models to GSPO stabilization techniques and self-feedback RL, covering latest trends and practical applications"
 date: 2025-08-22
 last_modified_at: 2025-08-22

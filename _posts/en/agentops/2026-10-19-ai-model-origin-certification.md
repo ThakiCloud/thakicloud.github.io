@@ -1,7 +1,7 @@
 ---
 title: "The Day a Model Became a Part Asked for a Certificate of Origin"
 excerpt: "KIC's in-house AI usage dropped 78.7% in four months, and a 900 million won GPU expansion was signed in the same period. The point at which a model's 'origin' starts being written on the procurement spec sheet in the export control era."
-seo_title: "The Day a Model Needs a Certificate of Origin, the Missing Fields in the Spec Sheet That KIC's 798 Requests Told About"
+seo_title: "The Day a Model Became a Part Asked for a Certificate of Origin"
 seo_description: "While KIC's in-house AI usage plunged 78.7%, a 900 million won GPU expansion was contracted. An analysis that in the U.S.-China export control era, model origin and execution governance are starting to be written on the procurement spec sheet."
 date: 2026-10-19
 last_modified_at: 2026-10-19

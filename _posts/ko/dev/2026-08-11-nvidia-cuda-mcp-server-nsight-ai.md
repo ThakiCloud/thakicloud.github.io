@@ -1,6 +1,6 @@
 ---
-title: "CUDA 문서를 에이전트 안으로: NVIDIA CUDA MCP Server 연결과 온프레미스 대안"
-seo_title: "NVIDIA CUDA MCP Server 연결 가이드와 Nsight Copilot Blueprint 자체 호스팅 비교 | ThakiCloud"
+title: "CUDA 문서를 에이전트 안으로: NVIDIA CUDA MCP Server"
+seo_title: "CUDA 문서를 에이전트 안으로: NVIDIA CUDA MCP Server"
 seo_description: "NVIDIA가 호스팅하는 CUDA MCP Server를 Claude Code와 Codex와 Cursor에 한 줄로 붙이는 방법, 엔드포인트 실측 응답, 그리고 사내 코드가 외부로 나가면 안 되는 조직을 위한 Apache-2.0 자체 호스팅 대안인 Nsight Copilot Blueprint의 요구 사항을 정리했습니다."
 excerpt: "CUDA 커널을 최적화할 때 에이전트가 옛날 문서를 기억해서 틀린 답을 내놓는 일이 잦습니다. NVIDIA가 공식 문서를 MCP로 열었습니다. 붙이는 방법과 붙이면 안 되는 경우를 나눠 봤습니다."
 date: 2026-08-11

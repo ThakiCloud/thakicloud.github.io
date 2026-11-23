@@ -1,6 +1,6 @@
 ---
-title: "A New Baseline for Local LLM Inference on Apple Silicon: BaseRT's Hand-Written Metal Kernels, Signed Quantized Bundles, and the Cost of a Proprietary Engine"
-seo_title: "BaseRT Apple Silicon Local LLM Inference Engine, Hand-Written Metal Kernels, Signed Quantized .base Bundles, llama.cpp Comparison, OpenAI-Compatible Server, Edge Serving Economics - ThakiCloud"
+title: "BaseRT: A New Baseline for Local LLM on Apple Silicon"
+seo_title: "BaseRT: A New Baseline for Local LLM on Apple Silicon"
 seo_description: "Base Compute's BaseRT redesigns local LLM inference on Apple Silicon with hand-written Metal kernels and signed quantized bundles. We examine the context of the vendor-published 6.4x prefill figures, the .base format, the license implications of an open CLI versus a proprietary engine, and local serving economics, all within verifiable bounds."
 excerpt: "A new local inference engine, BaseRT, said to outperform llama.cpp has started running on Apple Silicon. Hand-written Metal kernels and signed quantized bundles produce fast numbers. But that engine is sealed. We take BaseRT apart within the bounds we can verify."
 date: 2026-10-29

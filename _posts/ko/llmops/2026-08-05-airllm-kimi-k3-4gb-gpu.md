@@ -1,6 +1,6 @@
 ---
 title: "4GB GPU에서 2.8조 파라미터가 돌아갑니다, 토큰 하나에 5분씩"
-seo_title: "AirLLM으로 Kimi K3 2.8T를 4GB GPU에서 돌리면: VRAM 3.72GB, 토큰당 292초 | ThakiCloud"
+seo_title: "4GB GPU에서 2.8조 파라미터가 돌아갑니다, 토큰 하나에 5분씩"
 seo_description: "AirLLM이 Kimi K3 2.8T를 단일 4GB급 GPU에서 실행합니다. 공개된 측정치는 VRAM 3.72GB, 토큰당 약 292초, 500토큰 답변에 42시간입니다. 레이어 단위 오프로딩이 무엇을 해결하고 무엇을 해결하지 못하는지, vLLM 정식 서빙 경로와 함께 정리합니다."
 excerpt: "돌아간다는 말과 쓸 수 있다는 말 사이에는 대략 500배의 거리가 있습니다."
 date: 2026-08-05

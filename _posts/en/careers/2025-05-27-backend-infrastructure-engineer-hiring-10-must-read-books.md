@@ -1,5 +1,5 @@
 ---
-title: "Backend·Infrastructure Engineer Hiring: **10 Must-Read Books** and the People We're Looking For"
+title: "Hiring Backend and Infrastructure Engineers: 10 Books"
 excerpt: "Introducing the ideal candidate profile and hiring criteria through 10 must-read books for backend·infrastructure engineer recruitment and practical application cases."
 date: 2025-05-27
 tags:

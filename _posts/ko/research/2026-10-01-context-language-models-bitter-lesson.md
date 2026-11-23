@@ -1,6 +1,6 @@
 ---
-title: "컨텍스트는 모델이 스스로 다시 쓰는 파일: Context Language Models(CLM)과 컨텍스트 관리의 쓴 교훈"
-seo_title: "Context Language Models(CLM) 논문 분석 - 컨텍스트를 파일처럼 대우해 모델이 unrestricted updates로 스스로 관리하게 하면 인간 설계 compaction SOTA를 정확도 11.4%·FLOPs 21.5% 상회, 온라인 RL 시 Qwen3.5-9B 47.6% 개선. Bitter Lesson 프레임, BrowseComp-Plus·TerminalBench 2.1·TBLite 결과, 멀티에이전트 컨텍스트 파일 공존, ThakiCloud Paxis·Maxis 적용 - ThakiCloud"
+title: "컨텍스트는 모델이 다시 쓰는 파일: Context Language Models"
+seo_title: "컨텍스트는 모델이 다시 쓰는 파일: Context Language Models"
 seo_description: "Meta가 내놓은 Context Language Models(CLM)은 컨텍스트를 모델이 자유롭게 업데이트할 수 있는 파일로 취급합니다. 인간이 설계한 압축(compaction) 헤uris틱 대신 모델 스스로 컨텍스트를 관리하게 한 결과, 벤치마크에서 SOTA를 정확도와 계산량 둘 다에서 이깁니다. 쓴 교훈(Bitter Lesson)이 컨텍스트 관리 층으로 옮겨온 뜻과 에이전트 플랫폼·RL 학습 인프라 관점의 시사점을 정리했습니다."
 excerpt: "컨텍스트를 모델이 스스로 다시 쓰는 파일로 대우하면, 인간 설계한 압축 헤uris틱보다 정확도도 계산량도 낫습니다. Meta의 Context Language Models(CLM) 논문이 말하는 쓴 교훈(Bitter Lesson)의 최신 사례를 분석합니다."
 date: 2026-10-01

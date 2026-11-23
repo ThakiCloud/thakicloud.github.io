@@ -1,7 +1,7 @@
 ---
-title: "3.2 Kilometers of Copper in a Single GB200, and Why Thieves Came for the Data Center"
+title: "Why Thieves Came for the Data Center"
 excerpt: "As AI's value moved down from the model to the infrastructure, the thief who cuts cables and the thief who paralyzes traffic ended up at the same front door. Defending AI infrastructure in 2026 has become a matter of treating the execution environment itself like a vault."
-seo_title: "The Year AI Infrastructure Became a Thief's Target: What Copper Theft and Ransomware Are Telling Us"
+seo_title: "Why Thieves Came for the Data Center"
 seo_description: "3.2 kilometers of copper in a single GB200 rack, ransomware up 76.8 percent in the first half. As AI's value moves down to infrastructure, physical theft and cyberattacks have both surged at once. We look at why isolated execution, audit trails, and sovereign infrastructure are becoming the axis of defense."
 date: 2026-08-03
 last_modified_at: 2026-08-03

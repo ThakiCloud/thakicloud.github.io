@@ -1,6 +1,6 @@
 ---
-title: "How Smart RL Can Make a Model Is Already Decided by Pretraining: Chess Reveals the Scaling Law of Reasoning"
-seo_title: "Pretraining Loss Predicts RL Reasoning Performance | Chess Scaling Law Study | ThakiCloud"
+title: "RL Ceilings Are Set by Pretraining: A Chess Experiment"
+seo_title: "RL Ceilings Are Set by Pretraining: A Chess Experiment"
 seo_description: "Researchers from NYU, Modal, and UCLA used chess as a controlled testbed to uncover a joint scaling law that spans the entire pipeline from pretraining to RL post-training. Post-RL performance is well predicted by pretraining loss, and the slope of the RL reward curve improves almost linearly with pretraining token count. Here is a summary of findings you can use directly when deciding how to split a GPU budget between pretraining and RL."
 excerpt: "RL looks like what makes a model smart, but its ceiling is already set by pretraining. We look at a joint scaling law, discovered on the controlled testbed of chess, in which pretraining loss predicts post-RL reasoning performance."
 date: 2026-07-24

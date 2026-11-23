@@ -1,7 +1,7 @@
 ---
-title: "Folding Skills and MCP Into One Directory: We Packaged and Validated an Agent Plugin Against the 1.0.0 Spec"
+title: "Agent Plugins 1.0.0: Skills and MCP in One Directory"
 excerpt: "Agent Plugins 1.0.0, published jointly by OpenAI, Microsoft, Amazon, Cursor and Vercel, is a minimal format for shipping Agent Skills and MCP servers as one distributable unit. We packaged a real skill of ours into it, validated it against the official schemas, and scanned 1,935 skills to see what actually blocks a migration."
-seo_title: "Agent Plugins 1.0.0 hands-on: what the plugin.json schema catches and misses"
+seo_title: "Agent Plugins 1.0.0: Skills and MCP in One Directory"
 seo_description: "A walkthrough of the Agent Plugins 1.0.0 plugin.json and mcp.json structure, with a real skill packaged and validated against the official JSON Schemas. Includes two spec violations the schema accepts and a measured scan of a 1,935-skill corpus."
 date: 2026-08-10
 last_modified_at: 2026-08-10

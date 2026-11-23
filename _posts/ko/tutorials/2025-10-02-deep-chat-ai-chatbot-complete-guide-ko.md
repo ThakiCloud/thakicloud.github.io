@@ -1,7 +1,7 @@
 ---
-title: "Deep Chat: 완전히 커스터마이징 가능한 AI 챗봇 컴포넌트 구축하기 - 완벽 가이드"
+title: "Deep Chat: 커스터마이징 가능한 AI 챗봇 컴포넌트"
 excerpt: "단 한 줄의 코드로 웹사이트에 통합할 수 있는 강력한 AI 챗봇 컴포넌트 Deep Chat의 설치부터 OpenAI 연동, 음성 인식 및 카메라 지원 등 고급 기능까지 단계별로 완벽하게 안내합니다."
-seo_title: "Deep Chat AI 챗봇 튜토리얼: 완벽한 통합 가이드 - Thaki Cloud"
+seo_title: "Deep Chat: 커스터마이징 가능한 AI 챗봇 컴포넌트"
 seo_description: "Deep Chat 완벽 가이드 - OpenAI, HuggingFace, 커스텀 API 연동 방법. React, Vue, Angular 예제와 음성-텍스트 변환 기능 포함."
 date: 2025-10-02
 lang: ko

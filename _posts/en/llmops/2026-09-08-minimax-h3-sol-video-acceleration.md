@@ -1,5 +1,5 @@
 ---
-title: "A 5-Second Video in 1.6 Seconds: How NVIDIA Accelerated MiniMax-H3 Video Generation"
+title: "MiniMax-H3 in 1.6 Seconds: NVIDIA's Video Acceleration"
 excerpt: "NVIDIA's Sol team open-sourced two acceleration stacks for MiniMax-H3. On 8× B300 a 5-second 1344×768 video takes 1.653 seconds, and a two-stage draft-refine pipeline claims up to 27.7x over SGLang on a single GB200. Video generation serving has entered the faster-than-realtime regime."
 date: 2026-09-08
 permalink: /en/llmops/minimax-h3-sol-video-acceleration/

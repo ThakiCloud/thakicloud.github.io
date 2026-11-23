@@ -1,7 +1,7 @@
 ---
-title: "Handing an Agent a Real iPhone: We Installed phone-harness, and What Was Left Was Approval Design"
+title: "phone-harness: Handing an Agent a Real iPhone"
 excerpt: "phone-harness gives an agent eyes and hands through nothing but the Mac's iPhone Mirroring window. Installing the 792-line harness showed almost no technical barrier, and left behind the fact that half of what this project documents is a list of things not to do."
-seo_title: "phone-harness hands-on: agent iPhone control and the human approval boundary"
+seo_title: "phone-harness: Handing an Agent a Real iPhone"
 seo_description: "We cloned and installed phone-harness, the open-source agent harness that drives a real iPhone through macOS iPhone Mirroring, and ran its doctor check. Covers the 792-line structure, a dependency error in the documented install, and its approval boundary design."
 date: 2026-08-10
 last_modified_at: 2026-08-10

@@ -1,6 +1,6 @@
 ---
 title: "Google 'Deep Review': 제출 전에 원고를 스트레스 테스트하는 에이전트"
-seo_title: "Google Research Deep Review: 4단계 에이전틱 문서 검증, STOC/ICML/NeurIPS/ICLR 16,000+ 원고 파일럿 - ThakiCloud"
+seo_title: "Google 'Deep Review': 제출 전에 원고를 스트레스 테스트하는 에이전트"
 seo_description: "Google Research가 논문, 디자인 문서, 복잡한 제안서를 제출 전 스트레스 테스트하는 에이전틱 시스템 Deep Review를 출시했습니다. 분할, 적응적 예산, 병렬 검증, 글로벌 종합 + 근거 교차 검증의 4단계 파이프라인이며, 주간 2회 무료 리뷰를 제공합니다."
 excerpt: "제출 전에 원고를 스트레스 테스트하는 AI가 공개 서비스로 나왔습니다. Google Research의 Deep Review는 STOC 2026, ICML 2026, NeurIPS 2026, ICLR 2027에서 16,000개 이상 원고에 제출 전 피드백을 제공했고, 이제 누구나 주간 2회 무료로 쓸 수 있습니다. 4단계 파이프라인과 리뷰 루프에 미치는 뜻을 정리합니다."
 date: 2026-10-16

@@ -1,7 +1,7 @@
 ---
-title: "Jekyll 한국어 블로그를 3개 언어 다국어 시스템으로 완전 전환한 실제 경험기"
+title: "Jekyll 블로그를 다국어 시스템으로 전환한 경험기"
 excerpt: "기존 한국어 Jekyll 블로그를 한국어/영어/아랍어 3개 언어를 지원하는 완전한 다국어 시스템으로 전환한 실제 구현 과정과 마주한 문제들, 그리고 해결 방법을 상세히 공유합니다."
-seo_title: "Jekyll 다국어 블로그 실제 구현 경험기 - 한국어에서 3개 언어로 - Thaki Cloud"
+seo_title: "Jekyll 블로그를 다국어 시스템으로 전환한 경험기"
 seo_description: "Jekyll 블로그를 다국어로 전환하는 실제 과정에서 마주한 문제들과 해결책. GitHub Actions 증분 배포, Liquid 템플릿 오류, 언어별 검색 시스템 구축까지 모든 실무 경험을 공유합니다."
 date: 2025-08-23
 lang: ko

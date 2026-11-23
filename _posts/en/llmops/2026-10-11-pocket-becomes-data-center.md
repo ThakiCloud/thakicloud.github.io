@@ -1,7 +1,7 @@
 ---
 title: "The Day the Pocket Becomes the Data Center"
 excerpt: "The blueprint for a 100-billion-parameter phone by 2028, the all-night arithmetic of a Mac running 3.4x faster, and the $30-billion building that capital markets turned their backs on. This week, as the destination of inference changes, the questions companies need to ask change with it."
-seo_title: "The Day the Pocket Becomes the Data Center: the 100B phone, the 3.4x Mac, and the rejected $30 billion valuation | ThakiCloud"
+seo_title: "The Day the Pocket Becomes the Data Center"
 seo_description: "Qualcomm's forecast for a 100-billion-parameter phone by 2028, llama.cpp's 3.4x acceleration on M3 Ultra, Firmus's IPO withdrawal, and Nvidia's $25 billion acqui-hire. On the morning that inference moves from the building to the pocket, routing and governance become the company's questions."
 date: 2026-10-11
 last_modified_at: 2026-10-11

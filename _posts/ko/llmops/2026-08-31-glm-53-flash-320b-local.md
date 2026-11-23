@@ -1,7 +1,7 @@
 ---
-title: "320B를 128GB RAM에 넣은 게 아닙니다: GLM-5.3-Flash 로컬 실행을 정확히 읽는 법"
+title: "GLM-5.3-Flash: 128GB 로컬 실행 주장을 정확히 읽기"
 excerpt: "Z.ai의 320B MoE GLM-5.3-Flash가 3비트 양자화로 128GB RAM에서 로컬 실행된다며 화제입니다. 사실이지만, macOS의 GPU 메모리 캡과 MoE의 활성 파라미터 구조를 읽지 않으면 그 '128GB'는 모델이 실제로 쓰는 128GB가 아닙니다."
-seo_title: "GLM-5.3-Flash 320B 로컬 실행: 128GB RAM 산수를 정확히 읽는 법"
+seo_title: "GLM-5.3-Flash: 128GB 로컬 실행 주장을 정확히 읽기"
 seo_description: "Z.ai GLM-5.3-Flash(320B MoE, 활성 18B, 1M 컨텍스트)를 3비트 GGUF로 128GB 통합 메모리에서 돌리는 구성의 실체입니다. macOS GPU 메모리 75% 캡, 계층형 메모리 배치, 벤치마크의 기준을 검증하며 분석합니다."
 date: 2026-08-31
 published: true

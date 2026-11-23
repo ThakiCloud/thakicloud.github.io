@@ -1,7 +1,7 @@
 ---
 title: "How to Blame the Wrong Thing in a Generative Pipeline"
 excerpt: "Image models do not return the same output for the same input. So naming a cause after seeing one failure is usually wrong. We found two causes while building character turnarounds, and six more runs showed one of them did not exist."
-seo_title: "Debugging generative pipelines: separating deterministic causes from probabilistic ones"
+seo_title: "How to Blame the Wrong Thing in a Generative Pipeline"
 seo_description: "A cause named from a single observation in a probabilistic image pipeline, then refuted by an A/B rerun. How to order suspects by verification cost, why similarity-based gates structurally miss the failure they should catch, and how to find the information a prompt never carried."
 date: 2026-08-15
 last_modified_at: 2026-08-15

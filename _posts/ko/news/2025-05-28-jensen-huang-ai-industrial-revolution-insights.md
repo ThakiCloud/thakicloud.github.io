@@ -1,5 +1,5 @@
 ---
-title: "젠슨 황이 말하는 AI 산업혁명: 'AI 팩토리'가 바꿀 미래 일자리와 제조업의 모든 것"
+title: "젠슨 황의 AI 산업혁명: AI 팩토리와 일자리"
 date: 2025-05-28
 tags: 
   - Jensen Huang

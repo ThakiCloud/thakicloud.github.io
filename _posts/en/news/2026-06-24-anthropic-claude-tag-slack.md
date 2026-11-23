@@ -1,7 +1,7 @@
 ---
-title: "Anthropic Claude Tag: Turning Slack Channels into a Resident AI Teammate's Workspace"
+title: "Claude Tag: A Resident AI Teammate in Slack"
 excerpt: "Anthropic has unveiled Claude Tag to replace its existing Slack app. A single Claude per channel collaborates with everyone on the team, proactively follows context, and takes on async work. We analyze how this multiplayer agent changes the enterprise collaboration layer, through the lens of a multi-tenant agent platform."
-seo_title: "Anthropic Claude Tag Analysis - Slack Multiplayer AI Teammate - Thaki Cloud"
+seo_title: "Claude Tag: A Resident AI Teammate in Slack"
 seo_description: "An analysis of Anthropic Claude Tag (a Slack-resident agent powered by Claude Opus 4.8). One shared Claude per channel, proactive ambient behavior, scoped data control, and implications for ThakiCloud's K8s multi-tenant agent platform."
 date: 2026-06-24
 last_modified_at: 2026-06-24

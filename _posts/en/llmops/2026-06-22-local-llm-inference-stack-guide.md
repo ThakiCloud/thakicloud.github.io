@@ -1,7 +1,7 @@
 ---
-title: "The Local LLM Inference 'Bible': Decide the Hardware First, and the Engine Follows"
+title: "The Local LLM Inference Bible: Pick Hardware First"
 excerpt: "A breakdown of the free comprehensive local LLM inference guide published by Ahmad Osman, r/LocalLLaMA GPU moderator. From llama.cpp to vLLM, TensorRT-LLM, and NVIDIA Dynamo, we analyze scenario-based engine selection from ThakiCloud's serving perspective."
-seo_title: "Local LLM Inference Engine Guide Analysis - Thaki Cloud"
+seo_title: "The Local LLM Inference Bible: Pick Hardware First"
 seo_description: "Ahmad Osman's local LLM inference guide, scenario-based selection across llama.cpp, MLX, vLLM, SGLang, TensorRT-LLM, and NVIDIA Dynamo, and on-premise serving economics from ThakiCloud's perspective."
 date: 2026-06-22
 last_modified_at: 2026-06-22

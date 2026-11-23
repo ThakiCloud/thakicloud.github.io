@@ -1,7 +1,7 @@
 ---
-title: "A $60 Billion Deal and an MIT License Pointed at the Same Place on the Same Day"
+title: "A $60 Billion Deal and an MIT License, Same Day"
 excerpt: "In one day, a 2.4 trillion parameter set of weights went free, and a coding agent company sold for $60 billion. Tracking where the value moved tells you what to buy and what to build in-house next quarter."
-seo_title: "Weights go free, value moves to the agent execution layer"
+seo_title: "A $60 Billion Deal and an MIT License, Same Day"
 seo_description: "Reading SpaceX's $60B acquisition of Cursor, DeepSeek's MIT-licensed harness release, and Alibaba's 2.4 trillion parameter weight drop as one signal. What companies need to lock down when the asset stops being the model and becomes the execution layer."
 date: 2026-08-15
 last_modified_at: 2026-08-15

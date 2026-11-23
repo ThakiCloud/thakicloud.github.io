@@ -1,7 +1,7 @@
 ---
-title: "Fine-Tuning gpt-oss for Accuracy and Performance with Quantization Aware Training"
+title: "Fine-Tuning gpt-oss with Quantization Aware Training"
 excerpt: "Learn how to effectively fine-tune OpenAI's gpt-oss model using supervised fine-tuning and quantization-aware training to maintain accuracy while leveraging FP4 precision benefits for production deployment."
-seo_title: "gpt-oss Fine-Tuning Guide: QAT for Production AI Models - Thaki Cloud"
+seo_title: "Fine-Tuning gpt-oss with Quantization Aware Training"
 seo_description: "Complete guide to fine-tuning gpt-oss with quantization-aware training. Learn SFT + QAT workflow, MXFP4 vs NVFP4 comparison, and production deployment strategies for optimal AI performance."
 date: 2025-08-30
 lang: en

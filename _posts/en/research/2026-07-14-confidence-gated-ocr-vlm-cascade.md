@@ -1,7 +1,7 @@
 ---
-title: "When Can You Trust the Cheap Model: Cutting Multilingual Document OCR Costs with a Confidence-Gated VLM Cascade"
+title: "When to Trust the Cheap Model: Confidence-Gated OCR Cascade"
 excerpt: "For engineers running two differently sized VLMs in a document OCR pipeline. Measured on an actual H200 node, a cascade that uses a single confidence threshold to escalate only the hard documents to the large model matched, or slightly beat, the large model's error rate at roughly 60 to 67 percent of its cost."
-seo_title: "Confidence-Gated VLM Cascade for Document OCR Cost Optimization - Thaki Cloud"
+seo_title: "When to Trust the Cheap Model: Confidence-Gated OCR Cascade"
 seo_description: "We measured a confidence-gated OCR cascade built from SmolVLM-256M and Qwen2-VL-2B on an H200 node. In the tau = 0.85 to 0.95 range, it reaches large-model-level accuracy at roughly 60 to 67 percent of the cost; this post lays out the mechanism and its limits with the actual data."
 date: 2026-07-14
 last_modified_at: 2026-07-21

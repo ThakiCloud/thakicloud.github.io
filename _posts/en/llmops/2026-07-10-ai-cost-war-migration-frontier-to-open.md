@@ -1,5 +1,5 @@
 ---
-title: "From the Intelligence War to the Value War: Enterprises Leaving Frontier APIs and the Economics of Migration"
+title: "From Intelligence War to Value War: Leaving Frontier APIs"
 excerpt: "Microsoft has started routing bulk AI requests from Excel and Outlook to its own models, Chinese open models now handle nearly half of some US enterprise AI usage, and over a trillion dollars in market capitalization evaporated in a single stretch of days. The assumption that enterprises will pay premium frontier prices forever is breaking down. This post reads the signals, lays out a migration playbook for moving bulk workloads to open models, and explains how ThakiCloud's ai-platform and Paxis fit together as the control plane that executes it."
 tags:
   - cost-optimization

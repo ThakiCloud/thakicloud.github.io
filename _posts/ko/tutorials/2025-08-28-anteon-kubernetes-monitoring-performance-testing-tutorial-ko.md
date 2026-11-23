@@ -1,7 +1,7 @@
 ---
 title: "Anteon: eBPF 기반 쿠버네티스 모니터링과 성능 테스팅 완벽 가이드"
 excerpt: "Anteon(구 Ddosify)을 활용한 포괄적인 쿠버네티스 모니터링과 성능 테스팅 구현 방법을 배워보세요. 설치부터 서비스 맵 생성, 로드 테스팅까지 실무 중심의 튜토리얼입니다."
-seo_title: "Anteon 쿠버네티스 모니터링 튜토리얼 - eBPF 서비스 맵 & 성능 테스팅 - Thaki Cloud"
+seo_title: "Anteon: eBPF 기반 쿠버네티스 모니터링과 성능 테스팅 완벽 가이드"
 seo_description: "Anteon을 활용한 실습 가이드: eBPF 기반 쿠버네티스 모니터링, 자동 서비스 맵 생성, 실시간 메트릭, 다중 위치 성능 테스팅. 무료 설정 튜토리얼."
 date: 2025-08-28
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "We Measured the Complete Map of Claude Code Project Structure Against Our Own Repo"
+title: "Claude Code Project Structure: Measured Against Our Repo"
 excerpt: "CLAUDE.md, rules, skills, agents, hooks, MCP -- all of it. We read the 'complete map' that defines the role boundary of every Claude Code project component, then held it up against the ThakiCloud repo (40 rules, 1,655 skills, 54 agents) to see what matched and what was missing. Includes the placement decision tree for deciding where new knowledge lives, plus observations from running a K8s AI/ML SaaS platform on top of this structure."
-seo_title: "Claude Code Project Structure Complete Map -- Measured Against a Real Repo"
+seo_title: "Claude Code Project Structure: Measured Against Our Repo"
 seo_description: "A precise breakdown of the role boundaries for CLAUDE.md, .claude/rules, skills, agents, hooks, and MCP in Claude Code projects, plus a placement decision tree. We measured the ThakiCloud repo: 40 rules, 1,655 skills, 54 agents. Includes context hygiene strategy from a K8s AI/ML SaaS platform perspective."
 date: 2026-06-27
 last_modified_at: 2026-06-27

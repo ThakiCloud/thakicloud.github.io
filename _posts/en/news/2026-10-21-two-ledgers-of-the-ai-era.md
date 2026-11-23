@@ -3,7 +3,7 @@ title: "The Two Ledgers of the AI Era: The Burning Side and the Saving Side"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/two-ledgers-of-the-ai-era/"
 excerpt: "Goldman Sachs has named electricity the new bottleneck of AI, and Anthropic disclosed a 107 trillion won loss despite 1500% revenue growth. On the same day, Korean nuclear power and securities firms began calculating AI in minutes and in won. An analysis that reads today's news through two ledgers."
-seo_title: "The Two Ledgers of the AI Era: The Burning Side and the Saving Side | ThakiCloud"
+seo_title: "The Two Ledgers of the AI Era: The Burning Side and the Saving Side"
 seo_description: "The electricity bottleneck warning, Anthropic's $450 billion in locked compute, the 2028 supply countdown, and the ROI ledgers of nuclear power and finance. Today's news read through two ledgers, and what 'smart' now means in the AI era."
 date: 2026-10-21
 last_modified_at: 2026-10-21

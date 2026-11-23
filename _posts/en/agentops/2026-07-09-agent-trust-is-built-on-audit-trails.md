@@ -1,7 +1,7 @@
 ---
-title: "Smart Agents Have Become Commonplace. Now Enterprises Are Asking, 'Prove What You Did.'"
+title: "Smart Agents Are Common. Now Enterprises Ask for Proof."
 excerpt: "On a day when a 1.1 billion parameter model beat a 7 billion parameter one and the best models got given away for free, the news that actually made enterprises pause was not about intelligence. It was about behavior records. Here is how the market split into two directions today."
-seo_title: "Agent Trust Is Built on Audit Trails, Not Intelligence"
+seo_title: "Smart Agents Are Common. Now Enterprises Ask for Proof."
 seo_description: "From Ant Group's lightweight vision AI to OpenAI's free tokens to Qualcomm's HBM free chip, intelligence and compute keep leveling up, but the real bottleneck for enterprises turned out to be an agent's behavior records and audit trails. An analysis of the trust architecture emerging in the age of the AI Framework Act."
 date: 2026-07-09
 last_modified_at: 2026-07-09

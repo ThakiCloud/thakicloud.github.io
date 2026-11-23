@@ -1,7 +1,7 @@
 ---
 title: "Power Can Be Bought, but the Speed Did Not Come from Compute"
 excerpt: "The independent evaluation group METR ruled out compute growth as the main driver behind Anthropic's 2x research speedup. In the same week, Anthropic signed a $3.4 billion contract for gas generators, and Tencent previewed an unmanned science lab. Today we read the signal that the source of speed is moving outside of compute."
-seo_title: "Power Can Be Bought, but the Speed Did Not Come from Compute: METR's Verdict on Anthropic's 2x Speedup"
+seo_title: "Power Can Be Bought, but the Speed Did Not Come from Compute"
 seo_description: "METR ruled out compute growth as the main driver of Anthropic's 2x AI progress speedup. The $3.4 billion gas generator deal, Tencent's unmanned AI labs, and Bloomington's autonomous AI ban. What today's news shows about the source of speed and what it means for agent governance."
 date: 2026-11-09
 last_modified_at: 2026-11-09

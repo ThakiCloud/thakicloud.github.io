@@ -1,7 +1,7 @@
 ---
-title: "Complete CCPM Tutorial: Transform PRDs to Production Code with Claude Code PM"
+title: "CCPM: Turning PRDs into Code with Claude Code"
 excerpt: "Master the revolutionary Claude Code Project Management system that turns PRDs into epics, epics into GitHub issues, and issues into production code with full traceability and parallel execution."
-seo_title: "CCPM Tutorial: Claude Code Project Management Guide - Thaki Cloud"
+seo_title: "CCPM: Turning PRDs into Code with Claude Code"
 seo_description: "Learn CCPM (Claude Code Project Management) - a battle-tested system for spec-driven development using GitHub Issues, Git worktrees, and parallel AI agents."
 date: 2025-08-25
 tags:

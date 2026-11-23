@@ -1,7 +1,7 @@
 ---
 title: "Config Incidents Leave No Trace in Git"
 excerpt: "A code bug that fails review or tests never reaches production. A config value does not even reach the review table. This piece gives every value a home through four questions, keeps exactly one path for production changes, and shows how a diff on every deploy stops drift from growing."
-seo_title: "Preventing Config Incidents: Treat Environment Settings and Secrets Like Code"
+seo_title: "Config Incidents Leave No Trace in Git"
 seo_description: "Why production config incidents never show up in git history, and a practical method for deciding where each value lives, keeping one change path, and catching drift with a ten-minute weekly check."
 date: 2026-08-30
 last_modified_at: 2026-08-30

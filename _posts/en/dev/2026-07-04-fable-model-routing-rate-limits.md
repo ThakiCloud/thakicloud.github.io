@@ -1,5 +1,5 @@
 ---
-title: "Working Without Rate Limits on Fable 5: Model Routing and Token Budget Strategy"
+title: "Fable 5 Without Rate Limits: Routing and Token Budgets"
 excerpt: "We unpack the Claude Fable 5 workflow tips shared by T3 creator Theo: effort levels, Codex orchestration, model priority in CLAUDE.md, and offloading token-hungry work. We line them up next to the model routing discipline ThakiCloud already uses across Paxis and ai-platform."
 tags:
   - claude-code

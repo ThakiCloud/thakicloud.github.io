@@ -1,7 +1,7 @@
 ---
 title: "Chunkr: Intelligent Document Data Processing Platform for RAG and LLMs"
 excerpt: "An open-source document intelligence API platform that converts complex PDFs, PPTs, and Word documents into structured data optimized for RAG systems through layout analysis, OCR, and semantic chunking."
-seo_title: "Chunkr Document Intelligence Data Processing Platform Complete Guide - Thaki Cloud"
+seo_title: "Chunkr: Intelligent Document Data Processing Platform for RAG and LLMs"
 seo_description: "How to process document data using Chunkr's layout analysis, OCR, and semantic chunking. A practical guide to converting PDF, PPT, and Word documents into RAG/LLM-friendly structured data."
 date: 2025-08-05
 last_modified_at: 2025-08-05

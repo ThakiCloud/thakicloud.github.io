@@ -1,7 +1,7 @@
 ---
-title: "8ms 판단, 출력을 하나도 안 쓰는 모델: d1-3B decision model을 내 데이터로 fine-tune 하는 법"
+title: "d1-3B: 출력 토큰 없이 판단하는 모델 fine-tune"
 excerpt: "Liquid AI의 d1-3B는 텍스트·JSON·이미지를 state로 주고 여러 질문을 한 번의 forward pass에 타입 있는 답으로 돌려받는 decision model입니다. 출력을 0개 토큰 쓰고 4090에서 8ms. 이 글은 decision model이 무엇인지, d1-3B 안에 무엇이 들어 있는지, 그리고 내 데이터로 fine-tune하는 두 notebook(TRL·Unsloth)의 실제 절차를 정리합니다. 가중치를 직접 내려받아 config까지 확인한 내부 온보딩 기록도 포함합니다."
-seo_title: "d1-3B decision model fine-tune 튜토리얼 - TRL/Unsloth, 내 데이터로 - Thaki Cloud"
+seo_title: "d1-3B: 출력 토큰 없이 판단하는 모델 fine-tune"
 seo_description: "Liquid AI d1-3B(3.1B, single-forward-pass decision model)를 내 데이터로 fine-tune하는 튜토리얼: system_one API, noul/choice/score 질문 스키마, TRL SFT와 Unsloth notebook 절차, LFM2.5-VL 하이브리드 conv 아키텍처 인스펙션, ThakiCloud S3 온보딩과 에이전트 게이트 적용 관점."
 date: 2026-10-19
 last_modified_at: 2026-11-09

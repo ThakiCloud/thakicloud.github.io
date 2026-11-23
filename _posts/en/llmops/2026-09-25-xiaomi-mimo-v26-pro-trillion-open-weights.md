@@ -1,7 +1,7 @@
 ---
 title: "1.02 Trillion Parameters, Open This Time"
 excerpt: "Xiaomi has released the weights of MiMo-V2.6-Pro, a 1.02 trillion parameter open-weights model, along with its training environment. Media rate the model on par with Grok 4.7 at the top of the open-weights rankings, a release that signals the center of the AI race is moving from models to execution environments."
-seo_title: "1.02 Trillion Parameter Open-Weights Release Moves the Axis of the AI Race to Execution Environments"
+seo_title: "1.02 Trillion Parameters, Open This Time"
 seo_description: "The Xiaomi MiMo-V2.6-Pro release, the early Gemini 4 launch, sustained US-China development pace, and model access going diplomatic. An analysis of the execution-environment competition signals hidden in today's AI news."
 date: 2026-09-25
 last_modified_at: 2026-09-25

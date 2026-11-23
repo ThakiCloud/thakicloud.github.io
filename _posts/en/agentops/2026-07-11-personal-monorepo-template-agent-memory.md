@@ -1,6 +1,6 @@
 ---
-title: "Coding Agents That Remember Through Folders, Not Vector Databases: A Look at personal-monorepo-template"
-seo_title: "Giving Coding Agents Persistent Memory - personal-monorepo-template - Thaki Cloud"
+title: "Folders, Not Vector DBs: Agent Memory in a Monorepo"
+seo_title: "Folders, Not Vector DBs: Agent Memory in a Monorepo"
 seo_description: "Instructor creator jxnl has released personal-monorepo-template, which gives coding agents persistent memory using nothing but plain folders and an AGENTS.md file, no vector database required. We break down the structure and validate it against ThakiCloud's Paxis skill-harness perspective."
 excerpt: "OpenAI Codex engineer jxnl has released personal-monorepo-template, which gives agents persistent memory through folder structure and an AGENTS.md file, no vector database needed. We break down this design and validate it from ThakiCloud's perspective of treating skills as first-class resources."
 date: 2026-07-11

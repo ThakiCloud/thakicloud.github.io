@@ -1,6 +1,6 @@
 ---
 title: "Reading the Whole Chain of Thought Still Misses the Computation"
-seo_title: "Invisible Reasoning Paper Review: How Filler Tokens Slip Past CoT Monitoring | ThakiCloud"
+seo_title: "Reading the Whole Chain of Thought Still Misses the Computation"
 seo_description: "arXiv 2607.22925 measures how meaningless filler tokens shift accuracy across 13 frontier models. We cover the experiment where Claude Opus 4.5 satisfied a hidden modular constraint with no output trace, the activation-patching evidence for where the computation lives, and where audit designs that lean on CoT monitoring break."
 excerpt: "The output tokens carry no information about the problem, yet accuracy moves. We follow the paper's numbers to see where the computation happened and what an output-only monitor cannot see."
 date: 2026-07-30

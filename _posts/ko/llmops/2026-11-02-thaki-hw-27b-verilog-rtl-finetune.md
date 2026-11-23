@@ -1,6 +1,6 @@
 ---
 title: "RTL로 학습한 27B는 원본을 이기지 못했습니다: Thaki-HW-27B-v0.1 개발기"
-seo_title: "Thaki-HW-27B-v0.1 - Qwen3.8-27B Verilog RTL 파인튜닝의 데이터·평가·실패 분석 | ThakiCloud"
+seo_title: "RTL로 학습한 27B는 원본을 이기지 못했습니다: Thaki-HW-27B-v0.1 개발기"
 seo_description: "Qwen3.8-27B를 라이선스가 추적되는 Verilog RTL 1,000건으로 LoRA 학습했습니다. VerilogEval +0.85%p(95% CI −2.99~+4.70), RTLLM −4.27%p(−12.82~+4.27)로 원본 대비 개선은 입증하지 못했습니다. 어떤 과제에서 좋아지고 어디서 나빠졌는지, 왜 이런 결과가 나왔는지 정리합니다."
 excerpt: "Verilog RTL을 잘 쓰는 27B 모델을 만들려고 했습니다. 공개 기준은 통과했지만 원본 Qwen3.8-27B보다 낫다는 증거는 나오지 않았습니다. 과제 단위로 뜯어 보면 단순한 순차 회로는 좋아졌고 복잡한 FSM과 산술 회로는 나빠졌습니다."
 date: 2026-11-02

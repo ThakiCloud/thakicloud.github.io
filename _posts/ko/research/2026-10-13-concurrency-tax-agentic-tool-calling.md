@@ -1,6 +1,6 @@
 ---
-title: "The Concurrency Tax: 동시성을 올리면 function-calling 정확도가 내리는 세금, 그리고 안전 동시성 상한의 closed form"
-seo_title: "The Concurrency Tax(동시성 세금) 논문 소개 - self-hosted H200에서 에이전틱 function-calling 워크로드의 serving concurrency를 경량 부하에서 포화까지 올리면 정확도가 얼마나 드리프트하는지를 concurrency tax tau_u로 형식화합니다. item-flip noise floor가 드리프트와 run-to-run null을 분리하고, saturating throughput law와 KV 포화 knee 이후의 piecewise-linear drift 가정 아래 effective passing throughput이 full load 아래에서 내부 최대점에 도달하는 utilization illusion 정리를 closed form으로 줍니다. 드리프트 경사 s가 임계값 s_crit을 넘으면 maximum utilization이 엄격히 지배되고, headroom 가격 H과 안전 동시성 상한 C*가 도출됩니다. low-bit checkpoint는 16-bit보다 더 일찍, 더 멀리 내리는 double cliff가 라우팅 게이트를 부하를 아는 3차원 조건 Q(m,q,u) >= g으로 업그레이드하며, 드리프트는 batch-composition 수치, KV preemption, wall time, co-tenant 간섭의 네 채널로 분해됩니다. 선언된 H200 플랫폼에서 concurrency 1~256 sweep, 고정 60-item BFCL-v3 서브셋, 1:1 반증 기준을 지닌 pre-registered 프로토콜이 frontier를 측정으로 채웁니다. - ThakiCloud"
+title: "The Concurrency Tax: 동시성과 function-calling 정확도"
+seo_title: "The Concurrency Tax: 동시성과 function-calling 정확도"
 seo_description: "GPU utilization을 올리면 토큰당 비용은 내려가지만, 에이전틱 툴콜의 정확도는 함께 드리프트할 수 있습니다. 이 논문은 경량 부하에서 포화까지의 동시성 드리프트를 concurrency tax로 형식화하고, 드리프트 경사가 closed-form 임계값을 넘으면 maximum utilization이 엄격히 지배되는 utilization illusion을 증명합니다. low-bit checkpoint의 double cliff와 부하를 아는 3차원 라우팅 게이트까지 포함하며, concurrency 1~256 sweep과 고정 60-item BFCL-v3 서브셋 위의 pre-registered 반증 프로토콜을 지닙니다."
 excerpt: "self-hosted 토큰 팩토리의 sizing은 utilization로 결정되고, 이 시리즈의 모든 cost-quality frontier는 경량 부하에서 잰 값이었습니다. 이 논문은 그 누락된 축을 추가합니다. 동시성을 올리며 function-calling 워크로드가 잃는 정확도 점수를 concurrency tax로 formalize하고, 그 세금이 토큰당 절전을 넘어서는 지점인 안전 동시성 상한을 closed form으로 줍니다."
 date: 2026-10-13

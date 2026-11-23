@@ -1,7 +1,7 @@
 ---
 title: "Number One at 19.2%"
 excerpt: "Zai's GLM-Legal took the number one spot in open-weight legal AI, but the score that number one earned was 19.2%. Relative first places keep stacking up every day while absolute readiness sits at one fifth. What fills the space between them is not a bigger model but the execution environment around the model."
-seo_title: "The morning a 19.2% number one was born. The gap between a relative first place and absolute readiness, and the execution environment that fills it | ThakiCloud"
+seo_title: "Number One at 19.2%"
 seo_description: "Zai GLM-Legal at 19.2% on the Harvey benchmark, Muse Wonder at 59.1 points, 288x transcription on an M3 MacBook Air, and the Intel and Broadcom CEOs warning about capital scarcity. On the morning relative first places pile up, we look at the execution environment and cost routing behind the scores."
 date: 2026-10-13
 last_modified_at: 2026-10-13

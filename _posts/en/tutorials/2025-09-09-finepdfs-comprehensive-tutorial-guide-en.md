@@ -1,7 +1,7 @@
 ---
 title: "FinePDFs: Complete Guide to Hugging Face's Revolutionary PDF Dataset"
 excerpt: "Master FinePDFs, the 4.7M document dataset from Hugging Face. Learn extraction, filtering, and training with comprehensive examples and best practices."
-seo_title: "FinePDFs Tutorial: Complete Guide to PDF Dataset Processing - Thaki Cloud"
+seo_title: "FinePDFs: Complete Guide to Hugging Face's Revolutionary PDF Dataset"
 seo_description: "Learn to use FinePDFs dataset effectively with practical examples, optimization tips, and real-world applications for AI training and research."
 date: 2025-09-09
 tags:

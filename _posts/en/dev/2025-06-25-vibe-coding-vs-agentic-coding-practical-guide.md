@@ -1,5 +1,5 @@
 ---
-title: "Vibe Coding vs. Agentic Coding: A Complete Practical Guide Using ChatGPT and Cursor AI"
+title: "Vibe Coding vs. Agentic Coding in Practice"
 excerpt: "Based on a Cornell University paper, understand the two AI coding paradigms and learn how to effectively use ChatGPT and Cursor AI in real-world development"
 date: 2025-06-25
 last_modified_at: 2025-06-25

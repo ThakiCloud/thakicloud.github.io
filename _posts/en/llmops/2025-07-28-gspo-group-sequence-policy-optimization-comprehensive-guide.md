@@ -1,7 +1,7 @@
 ---
-title: "GSPO: Group Sequence Policy Optimization - A New Paradigm for LLM Reinforcement Learning"
+title: "GSPO: Group Sequence Policy Optimization for LLM RL"
 excerpt: "A detailed analysis of the GSPO algorithm applied in Qwen3 and its advantages over GRPO. Explore an innovative approach that achieves stability in MoE models through sequence-level optimization."
-seo_title: "GSPO vs GRPO: Complete Analysis of LLM Reinforcement Learning Algorithms - Thaki Cloud"
+seo_title: "GSPO: Group Sequence Policy Optimization for LLM RL"
 seo_description: "In-depth analysis of Group Sequence Policy Optimization (GSPO) core principles and advantages over GRPO. Comprehensive guide covering Qwen3 application and MoE model stability."
 date: 2025-07-28
 last_modified_at: 2025-07-28

@@ -1,7 +1,7 @@
 ---
-title: "Jet-Nemotron: Revolutionizing Language Model Architecture Through Post Neural Architecture Search"
+title: "Jet-Nemotron: Post Neural Architecture Search for LLMs"
 excerpt: "An in-depth analysis of Jet-Nemotron's hybrid architecture and PostNAS methodology, demonstrating breakthrough achievements in balancing model accuracy with generation speed efficiency."
-seo_title: "Jet-Nemotron PostNAS Hybrid Language Model Analysis - Thaki Cloud"
+seo_title: "Jet-Nemotron: Post Neural Architecture Search for LLMs"
 seo_description: "Comprehensive research analysis of Jet-Nemotron's innovative PostNAS approach achieving 53.6x generation speed improvement while maintaining competitive accuracy across language model benchmarks."
 date: 2025-08-28
 tags:

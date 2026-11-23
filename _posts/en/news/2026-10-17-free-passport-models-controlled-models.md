@@ -1,7 +1,7 @@
 ---
 title: "Models That Move Freely, Models That Can't Clear Customs"
 excerpt: "The same morning, a 501B open model was released to the world and a frontier model was added to the export control catalog. We read today's news on why openness is becoming a model's route and the execution platform is becoming the new control point."
-seo_title: "Models That Move Freely, Models That Can't Clear Customs: The Morning Openness Became a Border"
+seo_title: "Models That Move Freely, Models That Can't Clear Customs"
 seo_description: "Reflection AI's 501B open model Beam and China's AI export controls. On the same morning, open models get automatic clearance and closed models become controlled items. We analyze why the execution platform is becoming the new control point."
 date: 2026-10-17
 last_modified_at: 2026-10-17

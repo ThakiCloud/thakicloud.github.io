@@ -1,7 +1,7 @@
 ---
-title: "8 Gigawatts for 20 Years, 27B in Four Months: The AI Industry Signed Two Contracts on the Same Day"
+title: "Eight Gigawatts, Four Months: Two Contracts, One Day"
 excerpt: "Power gets bought in 20-year blocks while the price of intelligence drops every quarter. The timescale mismatch that showed up in today's news together will govern infrastructure decisions for years to come."
-seo_title: "8GW 20-Year Deals and a 27B Open Model: AI Infrastructure's Duration Mismatch"
+seo_title: "Eight Gigawatts, Four Months: Two Contracts, One Day"
 seo_description: "Nvidia's $105 billion guarantee behind an 8GW 20-year lease, $3 trillion in obligations across nine companies, and a 27B open-weight model that just cracked the frontier score. An execution-layer read on the gap between fixed infrastructure and rapidly cheapening intelligence."
 date: 2026-08-18
 last_modified_at: 2026-08-18

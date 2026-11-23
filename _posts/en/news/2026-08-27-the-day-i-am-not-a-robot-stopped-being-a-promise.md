@@ -1,7 +1,7 @@
 ---
 title: "The Day 'I Am Not a Robot' Stopped Being a Promise"
 excerpt: "In 2023, automated internet traffic overtook human traffic for the first time. The era of bidirectional authentication has opened, in which humans prove they are human and AI proves it is AI. Behind that, companies ask an even deeper question. Who sent that agent, and with what authority. This post reads today's news through the lens of agent identity governance."
-seo_title: "The Bidirectional Authentication Era: The Day 'I Am Not a Robot' Stopped Being a Promise - Thaki Cloud"
+seo_title: "The Day 'I Am Not a Robot' Stopped Being a Promise"
 seo_description: "In 2023, automated internet traffic (53%) overtook human traffic (47%) for the first time. World ID has 18 million users, Anthropic is applying statistical watermarks, and the identity verification market is projected to reach $45.5 billion by 2033. This post analyzes the day when 'Are you human or AI?' becomes the internet's central question, and the enterprise agent governance questions hidden behind it."
 date: 2026-08-27
 last_modified_at: 2026-08-27

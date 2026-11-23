@@ -1,6 +1,6 @@
 ---
-title: "DeepSeek, 인하우스 추론 엔진을 열다: DeepInfer와 '모델 특화 커널 + Ascend' 전략"
-seo_title: "DeepSeek이 10월 20일 인하우스 추론 프레임워크 DeepInfer를 Apache 2.0으로 오픈소스했습니다. FlashMLA 어텐션 커널과 DeepEP-Ascend 통신 라이브러리, 오프라인 배치 중심 설계, 그리고 NVIDIA Hopper 탈퇴와 Huawei Ascend 950 추가. vLLM 기반 ThakiCloud 서빙 운용에 주는 시사점을 정리합니다. - ThakiCloud"
+title: "DeepSeek, 인하우스 추론 엔진 DeepInfer 공개"
+seo_title: "DeepSeek, 인하우스 추론 엔진 DeepInfer 공개"
 seo_description: "DeepSeek 추론 엔진 DeepInfer 오픈소스 해부: FlashMLA(Ascend 950 + NVIDIA Blackwell, Hopper 탈퇴), DeepEP-Ascend(MoE all-to-all), 오프라인 배치 중심 설계, 온라인 서빙 구성(KV cache·PD disaggregation) 미포함. 155T tok/day 주장의 축을 읽고 ThakiCloud vLLM 운용 시사점까지. - ThakiCloud"
 excerpt: "DeepSeek이 자사 생산 서비스에서 쓰던 추론 엔진 DeepInfer를 Apache 2.0으로 열었습니다. NVIDIA Hopper를 탈퇴하고 Huawei Ascend 950을 추가했고, 온라인 서빙 구성은 의도적으로 빼고 오프라인 배치 중심으로 내놓았습니다. 이 설계 방향이 이번 릴리스의 진짜 뉴스입니다."
 date: 2026-10-21

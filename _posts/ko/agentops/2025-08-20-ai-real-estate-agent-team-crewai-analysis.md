@@ -1,7 +1,7 @@
 ---
 title: "CrewAI 기반 AI 부동산 에이전트 팀 시스템 완전 분석"
 excerpt: "local_ai_real_estate_agent_team.py 코드를 통해 살펴보는 다중 에이전트 협업 시스템의 아키텍처와 구현 방법"
-seo_title: "CrewAI AI 부동산 에이전트 시스템 분석 - 다중 에이전트 협업 아키텍처 - Thaki Cloud"
+seo_title: "CrewAI 기반 AI 부동산 에이전트 팀 시스템 완전 분석"
 seo_description: "CrewAI와 LangChain을 활용한 AI 부동산 에이전트 팀 시스템의 코드 분석, 아키텍처 설계, 유저 플로우와 머메이드 다이어그램으로 상세 해부"
 date: 2025-08-20
 last_modified_at: 2025-08-20

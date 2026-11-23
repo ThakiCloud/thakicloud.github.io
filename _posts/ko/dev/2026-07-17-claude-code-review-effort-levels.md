@@ -1,5 +1,5 @@
 ---
-title: "코드 리뷰에 노력 단계를 붙이다: Claude Code /code-review의 low부터 ultra까지"
+title: "코드 리뷰의 노력 단계: /code-review, low에서 ultra까지"
 excerpt: "Claude Code가 v2.1.101에서 /simplify를 /code-review로 바꾸면서 리뷰에 노력 단계를 붙였습니다. low와 medium은 확신 높은 소수의 지적만, high와 max는 넓은 커버리지와 불확실한 발견까지, ultra는 클라우드에서 여러 에이전트가 병렬로 검증하는 심층 리뷰입니다. 저희는 이 단계 설계가 왜 코드 리뷰의 비용과 품질을 나누는 올바른 방식인지, 그리고 이 발상이 Paxis의 스킬 하네스와 어떻게 맞물리는지 짚어봅니다."
 tags:
   - claude-code

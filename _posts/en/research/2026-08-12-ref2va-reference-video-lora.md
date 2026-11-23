@@ -1,5 +1,5 @@
 ---
-title: "Porting a Reference-Conditioned Video LoRA Recipe to Our Own GPUs: What Identity Costs"
+title: "Reference-Conditioned Video LoRA on Our Own GPUs"
 excerpt: "We ported the subject-consistency training recipe hidden behind a commercial API onto open-weight Wan2.2 and measured it. Identity rose 70 percent, and we publish the curve showing exactly what you pay for it."
 categories:
   - research

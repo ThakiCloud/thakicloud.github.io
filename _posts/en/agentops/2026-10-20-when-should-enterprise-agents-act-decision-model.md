@@ -1,7 +1,7 @@
 ---
-title: "When Should an Enterprise AI Agent Act? Why We Are Adding a Dedicated Decision Model to Paxis"
+title: "When Should an Enterprise Agent Act? A Decision Model for Paxis"
 excerpt: "Answer, call a tool, or ask a human first. Instead of leaving that call entirely to the generative model, we split it between a 4B decision model and a deterministic policy layer. Here is why, and what we have measured so far."
-seo_title: "Action Decisions for Enterprise AI Agents: Separating a Decision Model from Policy Enforcement | ThakiCloud"
+seo_title: "When Should an Enterprise Agent Act? A Decision Model for Paxis"
 seo_description: "We trained 2B, 4B and 9B decision models that pick one of seven next actions for an agent: answer, call a tool, ask for confirmation, refuse and more. The 4B made the fewest dangerous executions and decides in about 60 ms on vLLM."
 date: 2026-10-20
 last_modified_at: 2026-10-24

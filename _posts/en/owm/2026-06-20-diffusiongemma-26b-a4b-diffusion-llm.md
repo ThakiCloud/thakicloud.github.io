@@ -1,7 +1,7 @@
 ---
-title: "DiffusionGemma 26B-A4B: Google's Experiment Generating 15-20 Tokens at Once with Discrete Text Diffusion"
+title: "DiffusionGemma 26B-A4B: Text Diffusion at Google"
 excerpt: "Google DeepMind released diffusiongemma-26B-A4B-it, a MoE-based VLM that generates text via discrete diffusion rather than autoregressive decoding. 25.2B total parameters, 3.8B active, 256K context, Apache-2.0."
-seo_title: "DiffusionGemma 26B-A4B Discrete Diffusion LLM K8s Deployment Guide - ThakiCloud"
+seo_title: "DiffusionGemma 26B-A4B: Text Diffusion at Google"
 seo_description: "DiffusionGemma-26B-A4B-it architecture (MoE, discrete diffusion, 256K context), benchmarks (AIME 2026 69.1%, GPQA Diamond 73.2%), vLLM/SGLang serving, and K8s deployment considerations."
 date: 2026-06-20
 last_modified_at: 2026-06-20

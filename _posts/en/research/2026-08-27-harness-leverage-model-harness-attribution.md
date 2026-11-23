@@ -1,6 +1,6 @@
 ---
-title: "A Better Worker or a Better Scaffold: Six in Ten Performance Swings Come From the Scaffold"
-seo_title: "Unattended Agent Quality: Harness Beats Model Tier, Measured - ThakiCloud"
+title: "Better Worker or Better Scaffold: Where Swings Come From"
+seo_title: "Better Worker or Better Scaffold: Where Swings Come From"
 seo_description: "ThakiCloud AI Research crossed 5 harness (scaffold) styles with 3 model (worker) tiers across 15 order-sensitive long tasks and ran 7,200 trials. Six in ten points of explainable performance change came from the scaffold side, and a cheap tier with one check step matched an expensive tier's completion rate at roughly 20x lower cost."
 excerpt: "Buy a better model, or fix the code wrapped around it. Anyone running unattended agents keeps asking this. This experiment put a number on that question. More than half the answer sat on the scaffold side, and a cheap tier fitted with one check step matched an expensive tier's completion rate at nearly 20x lower cost."
 date: 2026-08-27

@@ -1,6 +1,6 @@
 ---
-title: "10,702 Questions, Only 5 Components: Why RAG Evaluation Independence Matters"
-seo_title: "RAG Evaluation Independence: Why Question Count and Independent Components Differ, and Two Failed Benchmark Builds - ThakiCloud"
+title: "10,702 Questions, 5 Components: RAG Evaluation Independence"
+seo_title: "10,702 Questions, 5 Components: RAG Evaluation Independence"
 seo_description: "We tried twice, from Wikipedia and from Korean statutes, to build an independent benchmark for a RAG decision model, and stopped both times. The statute build could produce over 10,000 questions, but under the link rules fixed in advance they formed only 5 independent units. How the independence definition sets the effective sample size."
 excerpt: "We could build ten thousand evaluation questions. But once questions that share the same passages were grouped together, only five independent clusters remained. Question count and independent sample size turned out to be very different numbers."
 date: 2026-10-12

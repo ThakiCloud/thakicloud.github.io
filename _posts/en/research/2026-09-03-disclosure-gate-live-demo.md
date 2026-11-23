@@ -1,5 +1,5 @@
 ---
-title: "A Consultation Demo With a Disclosure Gate: Yesterday's Numbers, On Screen Today"
+title: "A Disclosure Gate Demo: Yesterday's Numbers on Screen"
 excerpt: "One day after publishing measurements of a model with disclosures baked into its weights, we turned the numbers into an interactive demo. Watch the same question get one of five required disclosures from the raw model, and all five from the weights model, with zero instructions."
 categories: [research, product]
 permalink: /en/research/disclosure-gate-live-demo/

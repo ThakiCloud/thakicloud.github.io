@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron-3-Ultra-550B: LatentMoE Hybrid, 1M Context, Korean Language Support On-Premises Analysis"
+title: "Nemotron-3-Ultra-550B: On-Prem Analysis for Korean Use"
 excerpt: "NVIDIA's Nemotron-3-Ultra-550B-A55B, released under the OpenMDW-1.1 license, is a LatentMoE hybrid architecture combining Mamba-2, MoE, and Attention. A minimum of 8 B200 GPUs is required, and 10 languages including Korean are officially supported."
-seo_title: "NVIDIA Nemotron-3-Ultra-550B LatentMoE Self-Hosting Guide - Thaki Cloud"
+seo_title: "Nemotron-3-Ultra-550B: On-Prem Analysis for Korean Use"
 seo_description: "Nemotron-3-Ultra 550B LatentMoE architecture (Mamba-2+MoE+Attention), benchmarks (SWE-Bench Verified 70.7%, MMLU-Pro 86.8%), vLLM/SGLang/TRT-LLM serving, and B200 minimum requirements analyzed."
 date: 2026-06-20
 last_modified_at: 2026-06-20

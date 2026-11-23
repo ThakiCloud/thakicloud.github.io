@@ -1,6 +1,6 @@
 ---
-title: "Check the Answer Key Before You Call the Teacher: What a Zero-Cost Router Saves"
-seo_title: "Zero-Token Skill Routing: Costing Out Savings Without Losing Quality - Thaki Cloud"
+title: "Check the Answer Key Before You Call the Teacher"
+seo_title: "Check the Answer Key Before You Call the Teacher"
 seo_description: "We worked out where an agent should send its small, repeated decisions among an answer key, a small model, and an expensive frontier model. The post walks through how far the answer key needs to grow before the expensive model is never needed, and how much that saves, plus how to check the numbers for real."
 excerpt: "Solving a problem means choosing between the answer key, a classmate, or a call to the tutor. Agents make the same choice for their routine decisions. As the answer key covers more, the point where the call to the tutor disappears arrives, and savings jump right there."
 date: 2026-08-28

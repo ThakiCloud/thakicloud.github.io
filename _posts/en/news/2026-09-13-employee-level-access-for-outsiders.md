@@ -1,7 +1,7 @@
 ---
 title: "Giving Outsiders Employee-Level Access"
 excerpt: "OpenAI pledged external safety reviewers the same access as its employees, and the week Anthropic granted METR permanent employee-level access, it blocked a scientist's account over bioweapon risk. 'Access' is quietly becoming the industry's unit of trust."
-seo_title: "Giving Outsiders Employee-Level Access: The AI Industry's New Unit of Trust - ThakiCloud"
+seo_title: "Giving Outsiders Employee-Level Access"
 seo_description: "OpenAI's pledge of access for external evaluators, Anthropic's permanent METR access and the scientist account blocks, the $100 billion IPO and the 42x chip cost gap. An analysis of how 'access' became the new unit of the AI industry in today's news."
 date: 2026-09-13
 last_modified_at: 2026-09-13

@@ -1,7 +1,7 @@
 ---
 title: "DuPO: Dual-Policy Optimization Framework for LLMs"
 excerpt: "An analysis of DuPO, a dual-policy optimization framework that simultaneously trains exploration and exploitation policies to achieve balanced improvements across diverse tasks."
-seo_title: "DuPO: Dual-Policy Optimization Framework - LLM Post-Training - Thaki Cloud"
+seo_title: "DuPO: Dual-Policy Optimization Framework for LLMs"
 seo_description: "A detailed analysis of the DuPO dual-policy optimization framework, covering its exploration-exploitation balance mechanism, training strategy, and performance results in translation, mathematics, and reranking."
 date: 2025-08-22
 last_modified_at: 2025-08-22

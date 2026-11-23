@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Artifacts Come to Pro and Max: Your Session Becomes a Living Web Page"
+title: "Claude Code Artifacts Reach Pro and Max Plans"
 excerpt: "Claude Code artifacts have expanded beyond Team and Enterprise to the Pro and Max plans. We break down the feature that turns a coding session into a live, shareable web page, and look at how ThakiCloud's Paxis and ai-platform can absorb the pattern."
 tags:
   - claude-code

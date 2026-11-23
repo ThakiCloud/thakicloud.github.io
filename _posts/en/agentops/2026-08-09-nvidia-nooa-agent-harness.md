@@ -1,7 +1,7 @@
 ---
-title: "When an Agent Is Just a Python Object: Installing NVIDIA's NOOA and Measuring Its Six Harness Capabilities"
+title: "NOOA: When an Agent Is Just a Python Object"
 excerpt: "NVIDIA Labs' NOOA folds an agent into a single class. Methods are capabilities, docstrings are prompts, type annotations are contracts. We measured how much context its pass-by-reference preview actually saves, and how far the framework's own safety boundary really goes."
-seo_title: "NVIDIA NOOA hands-on: 99.7% context savings from pass-by-reference, and its cost"
+seo_title: "NOOA: When an Agent Is Just a Python Object"
 seo_description: "A walkthrough of the six agent harness capabilities behind NVIDIA Labs Object-Oriented Agents (NOOA), with locally measured token savings from pass-by-reference and an empirical look at what its code validator actually blocks."
 date: 2026-08-09
 last_modified_at: 2026-08-09

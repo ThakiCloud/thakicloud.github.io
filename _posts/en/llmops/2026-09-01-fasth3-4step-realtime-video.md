@@ -1,7 +1,7 @@
 ---
-title: "A 15-Second Video in 13 Seconds: How FastH3 Made Real-Time Video Serving Possible"
+title: "FastH3: Real-Time Video Serving in Four Steps"
 excerpt: "FastH3 Preview v1, a distilled variant of MiniMax H3, reworks inference into 4 steps and renders a 15-second 768p video in under 13 seconds on 8x B200 GPUs. Up to 14x speedup on a single Blackwell GPU, VSA-DataFree LoRAs included. And the license you should read before you run it."
-seo_title: "FastH3 4-Step Distillation: 15-Second Video in 13 Seconds and Real-Time T2VA Serving - ThakiCloud"
+seo_title: "FastH3: Real-Time Video Serving in Four Steps"
 seo_description: "Analysis of FastH3 Preview v1 by FastVideo, Nuva Lab, and NVIDIA FastGen: 4-step distillation, 15s 768p video in under 13s on 8x B200, up to 14x speedup on a single Blackwell GPU, VSA-DataFree LoRAs, and the license constraints."
 date: 2026-09-01
 published: true

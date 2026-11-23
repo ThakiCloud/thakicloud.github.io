@@ -1,7 +1,7 @@
 ---
 title: "The Bank That Got an AI Prescription Had Its Report Card Returned First"
 excerpt: "The FSC pushed a prescription: 'Defend against AI attacks with AI.' But the first one dropped from the network separation exception list was the bank that had been hacked. In a November when security history becomes the entry qualification for AI, the question left for companies is 'can you prove it.'"
-seo_title: "The Paradox of the AI Security Prescription and the Report Card: Financial Network Separation Exceptions and Agent Governance"
+seo_title: "The Bank That Got an AI Prescription Had Its Report Card Returned First"
 seo_description: "In one month, 40 intrusion incidents at 37 financial companies, and Kookmin Bank fails twice in a row for the network separation exception. From Woori Bank's remittance review AI to NVIDIA's OpenShell, we analyze why security history becomes the AI qualification through the Paxis lens."
 date: 2026-11-06
 last_modified_at: 2026-11-06

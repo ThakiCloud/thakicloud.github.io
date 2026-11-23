@@ -1,7 +1,7 @@
 ---
-title: "Claude Opus 4 and Sonnet 4 System Card Analysis: Setting New Standards for AI Safety and Alignment Assessment"
+title: "Reading the Claude 4 System Card: Safety and Alignment"
 excerpt: "An in-depth analysis of Anthropic's Claude Opus 4 and Sonnet 4 system card, exploring advanced AI safety evaluation frameworks and alignment risk assessments"
-seo_title: "Claude Opus 4 & Sonnet 4 System Card Analysis - Complete AI Safety Guide"
+seo_title: "Reading the Claude 4 System Card: Safety and Alignment"
 seo_description: "Comprehensive analysis of Anthropic's latest AI models Claude Opus 4 and Sonnet 4, covering safety evaluations, alignment risks, and model welfare assessments"
 date: 2025-09-01
 lang: en

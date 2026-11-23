@@ -1,7 +1,7 @@
 ---
-title: "Operit AI: Complete Mobile AI Assistant Tutorial - The Most Powerful Android AI Agent"
+title: "Operit AI: A Mobile AI Agent for Android"
 excerpt: "Discover Operit AI, the most comprehensive mobile AI assistant with Ubuntu 24 VM, 40+ built-in tools, and advanced agentic capabilities. Complete setup and usage guide."
-seo_title: "Operit AI Mobile Assistant Tutorial - Complete Setup Guide"
+seo_title: "Operit AI: A Mobile AI Agent for Android"
 seo_description: "Learn how to set up and use Operit AI, the most powerful Android AI agent with Ubuntu VM, 40+ tools, and advanced automation capabilities."
 date: 2025-10-01
 tags:

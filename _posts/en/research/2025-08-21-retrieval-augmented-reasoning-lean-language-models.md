@@ -1,7 +1,7 @@
 ---
-title: "Retrieval-Augmented Reasoning with Lean Language Models: A New Paradigm for Privacy-Preserving AI"
+title: "Lean Language Models for Private Retrieval-Augmented Reasoning"
 excerpt: "An analysis of the Alan Turing Institute's research on RAG systems built on lean language models, covering a reasoning-retrieval integrated architecture for local deployment and experimental results using NHS data."
-seo_title: "Retrieval-Augmented Reasoning with Lean Language Models - Thaki Cloud"
+seo_title: "Lean Language Models for Private Retrieval-Augmented Reasoning"
 seo_description: "The Alan Turing Institute's latest research on integrating reasoning with RAG in lean language models for privacy-preserving AI systems, including NHS data experiments and performance analysis."
 date: 2025-08-21
 last_modified_at: 2025-08-21

@@ -1,7 +1,7 @@
 ---
-title: "Google MedGemma-27B-IT: 의료 현장을 위한 차세대 멀티모달 AI 모델 완전 가이드"
+title: "MedGemma-27B-IT: 의료 현장을 위한 멀티모달 모델"
 excerpt: "Google의 Health AI Developer Foundation이 출시한 MedGemma-27B-IT 모델의 핵심 기능과 의료 현장 적용 방안을 상세히 살펴봅니다."
-seo_title: "Google MedGemma-27B-IT 의료 AI 모델 완전 가이드 - Thaki Cloud"
+seo_title: "MedGemma-27B-IT: 의료 현장을 위한 멀티모달 모델"
 seo_description: "Google MedGemma-27B-IT 의료 특화 AI 모델의 멀티모달 기능, 실제 활용 사례, 그리고 실습 가이드를 통해 의료 현장의 혁신적 변화를 소개합니다."
 date: 2025-07-11
 last_modified_at: 2025-07-11

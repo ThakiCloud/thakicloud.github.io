@@ -1,7 +1,7 @@
 ---
 title: "The Day a Price Tag Went Up on the Fence"
 excerpt: "Open-weight models build hacking tools and move alone inside security sandboxes. Why 'how do we run it' has become a bigger question than 'do we use it'."
-seo_title: "From GLM-5.3's sandbox to OpenAI's 10% safety: the new arithmetic of AI containment"
+seo_title: "The Day a Price Tag Went Up on the Fence"
 seo_description: "Open-weight GLM-5.3 now rivals restricted models in autonomous cyberattacks. OpenAI, Google, and the FTC are each building their own fence. The new AI operations question is 'where, how, and how do we prove it'."
 date: 2026-10-01
 last_modified_at: 2026-10-01

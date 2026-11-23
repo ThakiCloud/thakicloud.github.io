@@ -1,7 +1,7 @@
 ---
-title: "Reading Ripple-65B Preview, Ricursive's 65B Open-Weight Agentic-Coding Model"
+title: "Ripple-65B Preview: An Open-Weight Agentic Coding Model"
 excerpt: "Ricursive Intelligence's first model, Ripple-65B Preview, is a 65B dense Transformer with up to 1M context under Apache 2.0. We break down the thin-and-deep architecture, the training-token layout, the benchmarks (TerminalBench 2.1 at 80.52, self-reported), the NVFP4 checkpoint and DGX Spark path, and what it means for on-prem serving and Paxis agent economics."
-seo_title: "Ripple-65B Preview: Dissecting a 65B Agentic-Coding Open Model | ThakiCloud"
+seo_title: "Ripple-65B Preview: An Open-Weight Agentic Coding Model"
 seo_description: "Ripple-65B Preview dissected: d_model 5120, 80-layer thin-and-deep design, 12T-token training, 1M context, Apache 2.0. TerminalBench 2.1 80.52 (self-reported U.S. open-weight SOTA), SWE-bench 76.5, NVFP4 checkpoint and DGX Spark execution, plus an on-prem serving view."
 date: 2026-11-07
 last_modified_at: 2026-11-07

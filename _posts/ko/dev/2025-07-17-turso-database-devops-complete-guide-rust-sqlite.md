@@ -1,7 +1,7 @@
 ---
 title: "Turso Database DevOps 완전 가이드: 차세대 SQLite로 인프라 혁신하기"
 excerpt: "Rust로 구축된 차세대 SQLite 호환 데이터베이스 Turso의 DevOps 관점 완전 가이드. CI/CD 파이프라인부터 프로덕션 배포, 모니터링까지 실전 중심 설명"
-seo_title: "Turso Database DevOps 가이드 - Rust 기반 차세대 SQLite 완벽 마스터 - Thaki Cloud"
+seo_title: "Turso Database DevOps 완전 가이드: 차세대 SQLite로 인프라 혁신하기"
 seo_description: "12.1k 스타의 Turso Database DevOps 완전 가이드. Rust 기반 차세대 SQLite로 인프라 혁신. CI/CD, 멀티 플랫폼 배포, 언어별 바인딩, 성능 최적화 실습 포함"
 date: 2025-07-17
 last_modified_at: 2025-07-17

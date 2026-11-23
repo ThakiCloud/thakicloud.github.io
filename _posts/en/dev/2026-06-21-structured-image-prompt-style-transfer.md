@@ -1,7 +1,7 @@
 ---
-title: "Controlling Image Style with Structured Prompts: The 5-Section Layered Prompt Technique"
+title: "Structured Prompts for Controlling Image Style"
 excerpt: "An analysis of a structured-prompt technique that turns a travel photo into a Studio Ghibli style animation. We break down how to separate subject, background, style, composition, and quality into layers, how to anchor the original for preservation, and what this means for ThakiCloud's image serving and prompt-template productization."
-seo_title: "Structured Image Prompt Style Transfer Technique Analysis - Thaki Cloud"
+seo_title: "Structured Prompts for Controlling Image Style"
 seo_description: "A 5-section layered image prompt, original-preservation anchoring, style layering, and the productization angle of image serving prompt templates."
 date: 2026-06-21
 last_modified_at: 2026-06-21

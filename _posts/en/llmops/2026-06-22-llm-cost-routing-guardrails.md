@@ -1,7 +1,7 @@
 ---
-title: "How We Controlled LLM Operating Costs with Routing and Guardrails - Lessons from a $705/Day Incident"
+title: "Routing and Guardrails After a $705 Day of LLM Spend"
 excerpt: "We honestly disclose a $705 single-day billing incident and prove with numbers the root cause found in a one-month audit (Opus main session at 90.3%) along with the remedies: model routing, retro-based escalation, cron offloading, and context hygiene. Includes the path to productization with Paxis's cost-aware router."
-seo_title: "LLM Cost Optimization in Practice: How Model Routing and Guardrails Prevent a $705/Day Incident - Thaki Cloud"
+seo_title: "Routing and Guardrails After a $705 Day of LLM Spend"
 seo_description: "We disclose a $705 single-day Claude Opus overuse incident and a one-month $4,691 audit. We explain with numbers and code the cost control mechanisms we actually run in production: model routing, retro-based automatic escalation, cron offloading, and context hygiene."
 date: 2026-06-22
 last_modified_at: 2026-06-22

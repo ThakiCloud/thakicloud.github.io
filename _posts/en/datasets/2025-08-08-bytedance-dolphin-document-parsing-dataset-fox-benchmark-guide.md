@@ -1,7 +1,7 @@
 ---
-title: "ByteDance Dolphin Document Image Parsing: Fox Dataset and Benchmark Complete Analysis"
+title: "ByteDance Dolphin: The Fox Dataset and Benchmark"
 excerpt: "A detailed analysis of ByteDance's Dolphin project Fox dataset and benchmark, including the Analyze-then-Parse paradigm from ACL 2025 and a large-scale dataset with 30M+ samples."
-seo_title: "ByteDance Dolphin Fox Dataset Analysis - Document Image Parsing Benchmark Guide - Thaki Cloud"
+seo_title: "ByteDance Dolphin: The Fox Dataset and Benchmark"
 seo_description: "Complete analysis of ByteDance Dolphin's Fox dataset and document image parsing benchmark. Covers the ACL 2025 paper, the Analyze-then-Parse paradigm, and the 30M-sample dataset structure."
 date: 2025-08-08
 last_modified_at: 2025-08-08

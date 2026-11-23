@@ -1,6 +1,6 @@
 ---
-title: "EmbeddingGemma 2 4비트 모델을 표준 vLLM으로 서빙하기: 가중치 메모리 43.7% 절감"
-seo_title: "eg2q vLLM 플러그인: EmbeddingGemma 2 하이브리드 W4를 포크 없는 vLLM의 /v1/embeddings로 서빙, 가중치 메모리 0.563배 - ThakiCloud"
+title: "EmbeddingGemma 2 4비트 모델을 표준 vLLM으로 서빙"
+seo_title: "EmbeddingGemma 2 4비트 모델을 표준 vLLM으로 서빙"
 seo_description: "ThakiCloud eg2-l2v1 v0.2.0은 EmbeddingGemma 2 하이브리드 W4 체크포인트를 수정하지 않은 업스트림 vLLM에 올리는 플러그인입니다. 텍스트·이미지·오디오·비디오를 OpenAI 호환 API로 서빙하고, 가중치 상주 메모리는 BF16 참조의 0.563배, 처리량은 최저 0.826배입니다."
 excerpt: "멀티모달 임베딩을 API로 서빙해야 하는데 GPU 자리가 아까운 분을 위한 글입니다. 공개된 4비트 EmbeddingGemma 2를 포크 없는 vLLM에 플러그인으로 올려 네 모달리티를 서빙했고, 가중치 메모리가 43.7% 줄었습니다. 빨라지지는 않고 B200에서만 검증했습니다."
 date: 2026-10-15

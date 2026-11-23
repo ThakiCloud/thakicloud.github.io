@@ -1,6 +1,6 @@
 ---
-title: "Skills as Curriculum: How Qwen's Skill Self-Play Solves the Verification Problem"
-seo_title: "Skill Self-Play Analysis: Skills as the Middle Ground for Self-Evolving LLMs | ThakiCloud"
+title: "Skills as Curriculum: Qwen's Skill Self-Play"
+seo_title: "Skills as Curriculum: Qwen's Skill Self-Play"
 seo_description: "Self-evolutionary training has had to give up either task diversity or verification reliability. Alibaba's Qwen team uses agent skills as a middle ground to secure both. We break down the proposer, solver, and skill controller co-evolving in a self-play loop, and what it implies for Paxis."
 excerpt: "A model that invents its own problems cannot trust its own grading, and one bound to an environment only improves inside narrow walls. The Qwen team found the way out of that dilemma in agent skills."
 date: 2026-07-30

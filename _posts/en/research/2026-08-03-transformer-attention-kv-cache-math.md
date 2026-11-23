@@ -1,6 +1,6 @@
 ---
-title: "KV Cache Does Not Scale With Model Size: Computing Serving Memory From the Attention Equations"
-seo_title: "How to Compute KV Cache: MHA vs GQA vs MLA Memory From First Principles"
+title: "KV Cache Does Not Scale With Model Size"
+seo_title: "KV Cache Does Not Scale With Model Size"
 seo_description: "We applied the tensor dimension tables from arXiv 2604.00965 to real published model specs to compute per-token KV cache. Gemma 3 27B holds 1.55x more per token than Llama 3 70B, and DeepSeek V2's latent attention holds 8.3x less. Layer count and KV head count set serving memory, not parameter count."
 excerpt: "For engineers serving LLMs with vLLM who need to size GPU capacity. The short version: per-token KV cache is almost independent of parameter count and falls out of layer count and KV head count alone. A 27B model really can consume more cache than a 70B one."
 lang: en

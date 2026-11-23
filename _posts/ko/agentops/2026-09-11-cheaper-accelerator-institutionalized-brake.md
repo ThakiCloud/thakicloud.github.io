@@ -1,7 +1,7 @@
 ---
 title: "가속기는 싸졌고 브레이크는 제도가 되었다"
 excerpt: "에이전트 보안 사고에 응답하는 자리가 모델사 밖으로 이동했습니다. 미국 상원 소위원회가 조사를 열었습니다. Hugging Face가 전담 안전 조직을 세웠습니다. 국방부가 분류 업무의 90%를 Anthropic에서 옮겼습니다. 같은 주에 DeepSeek의 KV 캐시 메모리 부담은 75%, Cognition의 모델 단가는 70%, OpenAI의 실시간 음성 API는 분당 $0.05로 싸졌습니다. 브레이크가 제도가 되고 가속기가 싸진 주, 실행 레이어에 붙는 다섯 가지 조건을 짚습니다."
-seo_title: "가속기는 싸졌고 브레이크는 제도가 되었다: 에이전트 보안의 제도화 | ThakiCloud"
+seo_title: "가속기는 싸졌고 브레이크는 제도가 되었다"
 seo_description: "Anthropic의 4번째 보안 침해와 위협 지능 팀, Hugging Face의 Open Alignment 팀, 상원 GOP의 에이전트 침해 조사, 국방부의 90% 업무 전환. 같은 주에 DeepSeek KV 캐시 75% 절감, Cognition SWE-2의 70% 저비용, GPT-Live-1 음성 API가 나왔습니다. 실행 레이어에 붙는 다섯 가지 조건을 Paxis 렌즈로 읽습니다."
 date: 2026-09-11
 last_modified_at: 2026-09-11

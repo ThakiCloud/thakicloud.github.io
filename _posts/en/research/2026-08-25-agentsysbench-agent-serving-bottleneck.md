@@ -1,6 +1,6 @@
 ---
 title: "Coffee Pours Fast, So Why Is Your Agent Slow"
-seo_title: "AgentSysBench in plain terms: why agent serving is actually slow - ThakiCloud"
+seo_title: "Coffee Pours Fast, So Why Is Your Agent Slow"
 seo_description: "In 5 of 10 agent apps measured, the slow part was not the AI model but the work around it. We break down AgentSysBench in plain terms, the 29 to 40 percent time savings from reordering that work, and what it means for ThakiCloud's products."
 excerpt: "A barista pulls a shot in seconds. The customer still waits much longer for the coffee. Agents work the same way: the real time sink is not the AI model, it is everything around it."
 date: 2026-08-25

@@ -1,7 +1,7 @@
 ---
 title: "Ruler: 모든 AI 코딩 어시스턴트를 위한 통합 규칙 관리 도구 완전 가이드"
 excerpt: "GitHub Copilot, Cursor, Claude, Aider 등 모든 AI 코딩 도구에 동일한 규칙을 적용하는 Ruler 도구의 설치부터 고급 활용까지 완벽 정리"
-seo_title: "Ruler AI 코딩 어시스턴트 통합 관리 가이드 - macOS 테스트 포함 - Thaki Cloud"
+seo_title: "Ruler: 모든 AI 코딩 어시스턴트를 위한 통합 규칙 관리 도구 완전 가이드"
 seo_description: "Ruler로 GitHub Copilot, Cursor, Claude, Aider 등 AI 코딩 도구들을 통합 관리하는 방법. 설치부터 실전 활용까지 macOS 테스트 예제 포함"
 date: 2025-08-15
 last_modified_at: 2025-08-15

@@ -1,7 +1,7 @@
 ---
-title: "ytDownloader: 멀티플랫폼 비디오 다운로드를 위한 완벽한 설치 및 사용 가이드"
+title: "ytDownloader: 멀티플랫폼 비디오 다운로더 설치와 사용"
 excerpt: "ytDownloader 마스터하기 - YouTube, TikTok, Instagram 등 수백 개 사이트를 지원하는 현대적인 GUI 애플리케이션. 설치, 고급 기능, 최적화 팁을 학습하세요."
-seo_title: "ytDownloader 튜토리얼: 완벽한 비디오 다운로드 가이드 2025 - Thaki Cloud"
+seo_title: "ytDownloader: 멀티플랫폼 비디오 다운로더 설치와 사용"
 seo_description: "Windows/Linux/macOS 설치, 플레이리스트 다운로드, 비디오 압축 등 고급 기능과 문제 해결 팁을 포함한 완전한 ytDownloader 가이드."
 date: 2025-10-05
 tags:

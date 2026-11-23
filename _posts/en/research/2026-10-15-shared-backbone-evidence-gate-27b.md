@@ -1,6 +1,6 @@
 ---
-title: "One 27B Model Serving Both Answers and Evidence Checks: A Shared Backbone That Splits Only in the Last Four Layers"
-seo_title: "Shared-Backbone Serving: Running 27B Generation and a RAG Evidence Gate in One vLLM Engine - ThakiCloud"
+title: "One 27B Model for Answers and Evidence Checks"
+seo_title: "One 27B Model for Answers and Evidence Checks"
 seo_description: "We loaded Qwen3.8-27B onto the GPU once and served both answer generation and RAG evidence judgments from the same vLLM engine. Layers 0-43 are shared and only gate requests branch into layers 44-47. Generation stayed within vLLM's own run-to-run variation, and all 256 gate decisions matched the dedicated gate engine."
 excerpt: "If the model that writes the answer and the model that decides whether you may answer are essentially the same 27B, there is no reason to load it twice. We made the last four layers branch inside one engine, and on the way we hit a problem where merely reading an intermediate value changed the output."
 date: 2026-10-15

@@ -1,6 +1,6 @@
 ---
-title: "이미지 DiT 서빙도 같은 원리로 수렴한다: vLLM-Omni의 Qwen-Image-2.1 day-0 지원"
-seo_title: "Qwen-Image-2.1이 vLLM-Omni에서 day-0으로 서빙되는 이유를 짚습니다. 7.1B 단일 스트림 DiT의 블록인과적 어텐션과 크로스스텝 프리픽스 KV 캐시의 exact 재사용, CUDA Graphs까지. LLM 서빙과 같은 원리가 diffusion 서빙에 도착했고 ThakiCloud Metis의 이미지 엔드포인트와 B200 실측(18.2초/장) 기준 엔진 선택이 어떤 의미를 갖는지 분석합니다."
+title: "Qwen-Image-2.1 vLLM-Omni: 이미지 DiT 서빙의 수렴"
+seo_title: "Qwen-Image-2.1 vLLM-Omni: 이미지 DiT 서빙의 수렴"
 seo_description: "알리바바 Qwen 팀이 2026년 9월 20일 공개한 Qwen-Image-2.1은 7.1B DiT + Qwen3-VL-8B 인코더 + 16x RGBA 오토인코더 구성으로 네이티브 2K 투명 PNG와 10장 참조 편집을 통합했습니다. vLLM-Omni가 day-0으로 서빙하면서 크로스스텝 프리픽스 KV 캐시의 exact 재사용과 CUDA Graphs가 LLM 서빙의 원칙과 겹칩니다. Metis DOCKER_CUSTOM 엔드포인트와 B200 실측을 기준으로 ThakiCloud 관점의 엔진 선택과 라이선스 함정을 짚습니다."
 excerpt: "이미지 생성 모델 서빙이 더 이상 별개의 영역이 아닙니다. Qwen-Image-2.1의 블록인과적 어텐션이 만드는 exact 크로스스텝 KV 캐시는 LLM 서빙의 프리픽스 재사용과 같은 원리이며 vLLM-Omni의 day-0 지원이 플랫폼의 엔진 통합 선택을 어떻게 바꾸는지 실측 기준으로 읽습니다."
 date: 2026-09-22

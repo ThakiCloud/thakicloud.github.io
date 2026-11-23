@@ -1,7 +1,7 @@
 ---
-title: "The Day the Capability Race Built the Brakes: OpenAI's 35-Second Emergency Stop"
+title: "OpenAI's 35-Second Emergency Stop for Frontier Models"
 excerpt: "OpenAI has made public that it can stop the output of its own frontier model within 35 seconds. It is evidence that the industry is moving from 'how strong can we build it' to 'how fast can we stop it.' That brake is no longer a story limited to research labs."
-seo_title: "The Day the Capability Race Built the Brakes: OpenAI's 35-Second Emergency Stop | ThakiCloud"
+seo_title: "OpenAI's 35-Second Emergency Stop for Frontier Models"
 seo_description: "Starting with OpenAI's control room that stops model output in 35 seconds, this post analyzes the AI industry's shift from a capability race to building control infrastructure. The control floor enterprises need answers the agent governance questions that Paxis addresses."
 date: 2026-11-10
 last_modified_at: 2026-11-11

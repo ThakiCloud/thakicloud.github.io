@@ -1,7 +1,7 @@
 ---
 title: "From Explore to Execute: AI Verbs Finally Get an Object"
 excerpt: "The line Naver put on its slogan today, the Military Manpower Administration, Adobe, and Kakao each said it in their own way. We pulled together today's news to see what follows the moment an agent takes hold of a verb."
-seo_title: "From Explore to Execute: What Follows the Day Agents Gain Execution Authority"
+seo_title: "From Explore to Execute: AI Verbs Finally Get an Object"
 seo_description: "Naver's real estate agent, the Military Manpower Administration's Workmate, and Adobe's ChatGPT plugin all point the same direction. We trace the security, cost, and sovereignty questions execution authority raises, through today's news."
 date: 2026-08-07
 last_modified_at: 2026-08-07

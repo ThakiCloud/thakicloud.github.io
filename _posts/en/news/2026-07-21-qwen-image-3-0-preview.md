@@ -1,7 +1,7 @@
 ---
-title: "Qwen-Image-3.0 Unveiled: A Third-Generation Image Model Built on 'Real', Weights Still Pending"
+title: "Qwen-Image-3.0: A 'Real' Image Model, Weights Pending"
 excerpt: "Alibaba's Qwen team has announced Qwen-Image-3.0, its third-generation image generation model. It leads with 4.5k-token input, 10px micro-text rendering, and 12-language support, but the only way to try it right now is the Qwen Chat hosted service, and neither weights nor benchmarks have been released. Here's what's confirmed and what isn't."
-seo_title: "Qwen-Image-3.0 Announcement Breakdown: Confirmed Capabilities vs. Unreleased Weights"
+seo_title: "Qwen-Image-3.0: A 'Real' Image Model, Weights Pending"
 seo_description: "Alibaba's Qwen-Image-3.0 is a third-generation image generation model built around 4.5k-token input, 10px small-text rendering, and 12-language support. This article separates what's confirmed (Qwen Chat hosted availability) from what isn't (unreleased weights and benchmarks), and examines what it means for on-prem serving and document automation as image generation shifts from 'pretty pictures' to a productivity tool."
 date: 2026-07-21
 last_modified_at: 2026-07-21

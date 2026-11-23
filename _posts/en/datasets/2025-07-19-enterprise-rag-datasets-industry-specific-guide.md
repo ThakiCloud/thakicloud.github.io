@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to Industry-Specific Public Datasets for Enterprise RAG Systems: From Banking to Securities"
+title: "Industry-Specific Public Datasets for Enterprise RAG"
 excerpt: "Comprehensive compilation of public datasets and implementation methods for building RAG-based LLM chatbots across banking, insurance, accounting, legal, healthcare, automotive, and securities sectors"
-seo_title: "RAG Chatbot Industry Dataset Guide - Banking Insurance Healthcare Legal - Thaki Cloud"
+seo_title: "Industry-Specific Public Datasets for Enterprise RAG"
 seo_description: "Public dataset catalog and implementation examples for 7 industry sectors building enterprise RAG systems. Verified datasets including FDIC, SEC, MIMIC-IV, CourtListener usage methods"
 date: 2025-07-19
 last_modified_at: 2025-07-19

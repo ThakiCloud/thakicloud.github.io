@@ -1,6 +1,6 @@
 ---
-title: "Cloud Sessions GA: Coding Agent Sessions No Longer Tied to a Single Machine"
-seo_title: "Claude Code Cloud Sessions GA analysis. The --cloud and --teleport handoff, Pro/Max/Team/Enterprise plan coverage, one-time credits, and what it means for the Paxis control plane that a session has become a workload - ThakiCloud"
+title: "Cloud Sessions GA: Agent Sessions Beyond One Machine"
+seo_title: "Cloud Sessions GA: Agent Sessions Beyond One Machine"
 seo_description: "Anthropic's cloud sessions have moved from research preview to general availability. Close your laptop and the session keeps running on Anthropic's hosted infrastructure. This post covers the --cloud/--teleport round trip between local and cloud, plan coverage, one-time credits (Pro $100 / Max $250), and the constraint of one-way teleport, then analyzes what the session-as-workload shape means for Paxis and ThakiCloud's headless runner fleet."
 excerpt: "A coding agent's session no longer dies with the machine that started it. Cloud Sessions GA turned the session into a persistent unit you can hand off between browser, mobile, and terminal. If you design agent platforms, this is a shape worth studying now."
 date: 2026-09-27

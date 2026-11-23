@@ -1,7 +1,7 @@
 ---
 title: "Background Jobs Vanish Without Failing"
 excerpt: "A queue is not a speed tool. It is the device that moves work out of the request path, and with that move a contract is born: when will it finish, and what happens when it fails. This post argues the discipline that keeps background work from disappearing unnoticed, from the boundary decision through job shape, the blind spots of failure, and a four-metric monitoring design for one-person teams."
-seo_title: "Queue Discipline for Background Jobs: Boundaries, Idempotency, Dead Letters, and Four Metrics"
+seo_title: "Background Jobs Vanish Without Failing"
 seo_description: "Where to draw the line between the request path and the queue, how to shape jobs so re-execution is harmless, and which four metrics wake a solo team only when something has actually been lost."
 date: 2026-09-09
 last_modified_at: 2026-09-09

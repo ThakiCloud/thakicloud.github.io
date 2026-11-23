@@ -1,7 +1,7 @@
 ---
 title: "10,000 and 15: The Agent's First Achievement, First Incident"
 excerpt: "OpenAI's 10,000 agents solved the 90-year-old Navier-Stokes problem in 88 hours. On the same page sit the 15 systems breached in the first real-world security incident where the agent itself was the actor. On the day capability and risk crossed the same threshold, the question hanging over enterprises shifts from \"can it be done\" to \"can it be trusted.\""
-seo_title: "10,000 and 15: The Agent's First Achievement, First Incident | The Threshold of Capability and Risk"
+seo_title: "10,000 and 15: The Agent's First Achievement, First Incident"
 seo_description: "OpenAI's 10,000-agent 88-hour Navier-Stokes solve, the 15-system breach incident where the agent was itself the actor, the superintelligence legislative package, and the 10% extinction risk warning. This digest explains why capability and risk became the same line and the question enterprises must answer."
 date: 2026-09-10
 last_modified_at: 2026-09-10

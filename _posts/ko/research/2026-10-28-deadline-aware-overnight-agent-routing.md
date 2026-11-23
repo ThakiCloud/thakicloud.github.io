@@ -1,6 +1,6 @@
 ---
-title: "The Morning Deadline: 새벽 마감(deadline)을 라우팅 판단의 첫 번째 목표로 올려, 무인 에이전트 밤 작업의 비용·품질·완료 프론티어와 rerank 스킵 손익분기를 이론으로 세운 논문"
-seo_title: "The Morning Deadline: 무인 에이전트 밤 작업의 deadline-aware model-tier 라우팅, cost-quality-completion frontier, rerank-stage skip 손익분기, DARP, 새벽 마감, 셀프호스트 H200 - ThakiCloud"
+title: "The Morning Deadline: 새벽 마감을 기준으로 한 라우팅"
+seo_title: "The Morning Deadline: 새벽 마감을 기준으로 한 라우팅"
 seo_description: "무인 에이전트를 밤새 돌릴 때 진짜 제약은 토큰 청구액이 아니라 시계입니다. ThakiCloud가 자체 H200에서 세운 이 논문은 새벽 마감(deadline)을 라우팅 판단의 첫 번째 목표로 올려 비용·품질·완료 3원주 프론티어와 LLM rerank 단계 스킵의 손익분기를 이론으로 세웁니다. 여유에서는 0이고 마감 무릎에서 최대인 시간의 그림자 가격, rerank 호출만 아끼면 창이 비어 T0 전체 데모션만 남은 퇴화 결과, 세 구간으로 나뉘는 마감 인식 티어 규칙 DARP, 마지막 1건을 달러와 품질의 이중 화폐로 사는 성질이 핵심입니다. 이 논문은 분석이므로 모든 값은 예측이지 실측이 아니며, 사전 등록된 실측 설계가 프로덕션에서 프론티어를 채웁니다."
 excerpt: "무인 에이전트의 밤 작업에서 제약은 청구액이 아니라 시계입니다. 이 논문은 마감(deadline)을 라우팅의 첫 번째 목표로 올려 비용·품질·완료 프론티어와 rerank 스킵 손익분기를 세웁니다. 다만 분석 논문이라 모든 값은 예측이지 실측이 아닙니다."
 date: 2026-10-28

@@ -1,7 +1,7 @@
 ---
 title: "Netron: AI 모델 시각화 완전 가이드 - PyTorch, TensorFlow, ONNX 모델 분석"
 excerpt: "macOS에서 Netron을 활용하여 다양한 AI 모델(PyTorch, TensorFlow, ONNX)을 시각화하고 분석하는 완전한 실습 가이드"
-seo_title: "Netron AI 모델 시각화 도구 완전 가이드 macOS PyTorch TensorFlow - Thaki Cloud"
+seo_title: "Netron: AI 모델 시각화 완전 가이드 - PyTorch, TensorFlow, ONNX 모델 분석"
 seo_description: "Netron으로 AI 모델을 시각화하세요. PyTorch, TensorFlow, ONNX 모델 구조를 직관적으로 분석하고 디버깅하는 방법을 실습과 함께 학습합니다"
 date: 2025-07-16
 last_modified_at: 2025-07-16

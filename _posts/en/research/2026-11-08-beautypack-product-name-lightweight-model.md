@@ -1,6 +1,6 @@
 ---
-title: "Picking the Product Name on Cosmetics Packaging: Full-Photo E2E F1 of 0.605, Released as a Review-Candidate Model"
-seo_title: "A Small Model for Product Name Identification on Cosmetics Packaging: Why the Rule Failed and the Full-Photo E2E Result | ThakiCloud"
+title: "Picking the Product Name on Cosmetics Packaging"
+seo_title: "Picking the Product Name on Cosmetics Packaging"
 seo_description: "We built a small tree model that picks which text line read from a package photo is the product name. We released it on Hugging Face. A single full-photo evaluation through detection and OCR gave an F1 of 0.605 and passed the preregistered criteria, but it is at the level of candidate suggestions that help human review."
 excerpt: "On full photos, a rule that picks the largest text line reached an F1 of only 0.161, while the deployable tree model reached 0.605. We released the two lexicon-free models as ThakiCloud/BeautyProductName-KO, and the product's default output stays NOT_EXTRACTED."
 date: 2026-11-08

@@ -1,6 +1,6 @@
 ---
-title: "Does an Agent That Reads Its Own Bill Spend Less: The Cost Mirror in Unattended Agent Loops"
-seo_title: "Cost Mirror: An Analytical Model of Spend, Strategy, and Quality Changes When Live Token-Cost Feedback Is Injected into Unattended LLM Agent Loops, and a Pre-Registered 4arm A/B Protocol - ThakiCloud"
+title: "Does an Agent That Reads Its Own Bill Spend Less?"
+seo_title: "Does an Agent That Reads Its Own Bill Spend Less?"
 seo_description: "How much can an agent cut its spend when it sees the token cost of its own work in context? The cost mirror is formalized as an induced Lagrange multiplier, spend is decomposed into the four channels verbosity, tool call, retry, and escalation, yielding the mirror ceiling, the cheapest-slack-first ordering, and the meter gap (Goodhart) bound. This is an analytical paper that also freezes a 4arm 168task code-graded A/B protocol with five predictions."
 excerpt: "Billing metering already computes per-task token cost. The reader is only the operator. The cost mirror re-injects that read-only value into the agent context, turning a read-only ledger into a control signal inside the loop. It binds the reducible headroom (slack), sets the cutting order (cheapest slack first) and the sign of the quality change (valley position), and even puts a cap on the shortcuts the meter does not see (meter gap)."
 date: 2026-09-12

@@ -1,7 +1,7 @@
 ---
 title: "We Can Already Pay Agents. We Still Cannot Authorize Them."
 excerpt: "Payments and messaging moved to standards foundations within a year. But the layer that decides who an agent acts for, how far it can go, and whether its results are real still has no owner. Here is what is solved and what is empty as of August 2026."
-seo_title: "The Missing Layer in the Agent Economy: Identity, Authorization, and Proof of Outcome"
+seo_title: "We Can Already Pay Agents. We Still Cannot Authorize Them."
 seo_description: "Agent payments and messaging are standardized, from Visa TAP and Mastercard Agent Pay to Stripe SPT, MCP, and A2A v1.0. Agent identity delegation, meanwhile, is contested by three competing IETF individual drafts, prompt injection remains unsolved, and the proof of outcome layer for outcome based billing is empty. A snapshot from August 2026."
 date: 2026-08-15
 last_modified_at: 2026-08-15

@@ -1,7 +1,7 @@
 ---
-title: "한 주에 프론티어 오픈웨이트 두 개: Kimi K3 2.8조와 Thinking Machines Inkling 975B"
+title: "한 주에 프론티어 오픈웨이트 둘: Kimi K3와 Inkling"
 excerpt: "2026년 7월, 오픈웨이트 진영이 같은 주에 두 발을 쐈습니다. Moonshot AI는 2.8조 파라미터로 역대 최대 오픈웨이트가 될 Kimi K3를 공개했고, 미라 무라티의 Thinking Machines Lab은 첫 오픈웨이트 모델 Inkling(975B/41B 활성)을 Apache 2.0으로 풀었습니다. 두 모델의 팩트와 아키텍처, 벤치마크상 위치를 정리하고, 온프렘 서빙 관점에서 오늘 우리가 실제로 무엇을 얹을 수 있는지 솔직하게 리뷰합니다."
-seo_title: "Kimi K3 vs Thinking Machines Inkling - 오픈웨이트 프론티어 비교와 온프렘 서빙 - Thaki Cloud"
+seo_title: "한 주에 프론티어 오픈웨이트 둘: Kimi K3와 Inkling"
 seo_description: "Kimi K3(2.8조 MoE, 100만 컨텍스트, Kimi Delta Attention, 7/27 오픈웨이트)와 Inkling(975B/41B 활성, 45조 토큰, 텍스트·이미지·오디오, Apache 2.0)을 팩트 기반으로 정리. 아키텍처, 벤치마크, NVFP4 서빙, 파인튜닝, ThakiCloud K8s 온프렘 관점."
 date: 2026-07-17
 last_modified_at: 2026-07-17

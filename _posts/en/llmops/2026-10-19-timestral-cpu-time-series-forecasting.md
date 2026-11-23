@@ -1,7 +1,7 @@
 ---
 title: "A 140-millisecond Time-Series Forecast"
 excerpt: "Mistral shipped Timestral, a family of four time-series foundation models from 5M to 209M parameters. They run on CPU alone and forecast one day ahead in as little as 140 milliseconds. Shrink the model and the forecast moves from the data center to the terminal."
-seo_title: "No GPU, 140ms on CPU: what Mistral Timestral changes for time-series serving | ThakiCloud"
+seo_title: "A 140-millisecond Time-Series Forecast"
 seo_description: "Mistral Timestral, four time-series foundation models from 5M to 209M. One-day-ahead forecast in 10-140ms on CPU alone. #1 on GIFT-Eval, TIME and fev-bench, Modified MIT. What moving time-series forecasting off the GPU means, through an ai-platform lens."
 date: 2026-10-19
 last_modified_at: 2026-10-19

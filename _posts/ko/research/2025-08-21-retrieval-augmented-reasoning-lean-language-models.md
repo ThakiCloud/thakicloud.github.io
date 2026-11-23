@@ -1,7 +1,7 @@
 ---
-title: "경량 언어 모델에서의 검색 증강 추론: 프라이버시 보장 AI 시스템의 새로운 패러다임"
+title: "경량 언어 모델로 하는 프라이버시 보호 검색 증강 추론"
 excerpt: "Alan Turing Institute에서 발표한 경량 언어 모델 기반 RAG 시스템 연구 분석. 로컬 배포 가능한 추론-검색 통합 아키텍처와 NHS 데이터를 활용한 실험 결과를 상세히 살펴봅니다."
-seo_title: "경량 언어 모델 검색 증강 추론 연구 분석 - Thaki Cloud"
+seo_title: "경량 언어 모델로 하는 프라이버시 보호 검색 증강 추론"
 seo_description: "Alan Turing Institute의 최신 연구: 경량 언어 모델에서 추론과 RAG를 통합한 프라이버시 보장 AI 시스템. NHS 데이터 활용 실험과 성능 분석 포함."
 date: 2025-08-21
 last_modified_at: 2025-08-21

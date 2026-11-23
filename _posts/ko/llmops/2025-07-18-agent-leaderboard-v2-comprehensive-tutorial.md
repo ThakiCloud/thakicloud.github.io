@@ -1,7 +1,7 @@
 ---
 title: "Agent Leaderboard v2 완벽 가이드 - AI 에이전트 성능 평가의 새로운 표준"
 excerpt: "Galileo.ai의 Agent Leaderboard v2를 활용하여 AI 에이전트의 툴 사용 성능을 평가하고 벤치마킹하는 방법을 실습을 통해 학습합니다."
-seo_title: "Agent Leaderboard v2 튜토리얼 - AI 에이전트 평가 완벽 가이드 - Thaki Cloud"
+seo_title: "Agent Leaderboard v2 완벽 가이드 - AI 에이전트 성능 평가의 새로운 표준"
 seo_description: "Agent Leaderboard v2를 사용한 AI 에이전트 성능 평가 방법, TSQ 메트릭 활용법, 실습 예제까지 포함한 종합 가이드입니다."
 date: 2025-07-18
 last_modified_at: 2025-07-18

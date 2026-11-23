@@ -1,7 +1,7 @@
 ---
-title: "Activepieces: Complete Guide to AI Workflow Automation with 280+ MCP Servers"
+title: "Activepieces: Open-Source AI Workflow Automation"
 excerpt: "Comprehensive tutorial on Activepieces - the open-source AI workflow automation platform supporting 280+ MCP servers. Learn setup, AI agent creation, and advanced automation techniques."
-seo_title: "Activepieces AI Workflow Automation Tutorial - Complete Guide - Thaki Cloud"
+seo_title: "Activepieces: Open-Source AI Workflow Automation"
 seo_description: "Master Activepieces platform with this complete guide. Learn AI workflow automation, MCP server integration, Docker deployment, and advanced automation patterns with 17.2k starred open-source platform."
 date: 2025-09-02
 lang: en

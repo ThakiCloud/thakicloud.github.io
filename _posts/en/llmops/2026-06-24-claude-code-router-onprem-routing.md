@@ -1,7 +1,7 @@
 ---
-title: "Routing Claude Code to Your Own Models - Cost-Efficient Coding Infra with claude-code-router"
+title: "Routing Claude Code to Your Own Models"
 excerpt: "Routing Claude Code traffic across glm-5.2, MiniMax-M2.7, and Kimi K2 with claude-code-router. A hands-on record of verifying all three models live, fixing MiniMax thinking leakage, and building a loop that continuously checks every routed model is cheaper than Sonnet."
-seo_title: "claude-code-router Cost Routing - Multi-Model Claude Code Setup - Thaki Cloud"
+seo_title: "Routing Claude Code to Your Own Models"
 seo_description: "Practical guide to routing Claude Code across glm-5.2/MiniMax-M2.7/Kimi K2 with claude-code-router. Per-task model split, MiniMax thinking-leak fix, and a continuous cost-vs-Sonnet measurement loop, all verified in the ThakiCloud environment."
 date: 2026-06-24
 last_modified_at: 2026-06-24

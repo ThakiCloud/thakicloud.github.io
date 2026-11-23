@@ -1,7 +1,7 @@
 ---
 title: "Chatbots price questions. Agents price work."
 excerpt: "In developer workloads, agents consume up to 3000x the compute resources of chatbots. Why that number came out of Microsoft's CPU announcement, and why the 3000x should be read as 'wage management'."
-seo_title: "Agent resource usage at 3000x: why Microsoft is investing in CPUs | ThakiCloud"
+seo_title: "Chatbots price questions. Agents price work."
 seo_description: "The GM of Azure Infrastructure said agent workloads consume up to 3000x more compute than chatbots. Why the GPU-to-CPU ratio shifts from 8:1 to 1:1, and the order of response for Korean companies."
 date: 2026-11-18
 last_modified_at: 2026-11-18

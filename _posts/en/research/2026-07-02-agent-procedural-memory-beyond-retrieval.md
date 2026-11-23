@@ -1,7 +1,7 @@
 ---
 title: "Agent Procedural Memory: Beyond Prompt Retrieval"
 excerpt: "Stuffing skills into an agent's prompt eats context and breaks easily. Recent research is moving procedural memory from prompt templates toward architectures that separate build, retrieval, and update, and further toward parametric neural policies. We map this shift around Memp and the AFTER benchmark, then look at how ThakiCloud Paxis's skill harness puts it into practice."
-seo_title: "Agent Procedural Memory: Skill Storage Beyond Prompt Retrieval | Thaki Cloud"
+seo_title: "Agent Procedural Memory: Beyond Prompt Retrieval"
 seo_description: "A survey of LLM agent procedural memory research centered on Memp (arXiv 2508.06433) and the AFTER benchmark (arXiv 2606.23127), covering the build-retrieval-update architecture, the shift toward parametric memory, and its application in ThakiCloud Paxis's skill harness."
 date: 2026-07-02
 last_modified_at: 2026-07-02

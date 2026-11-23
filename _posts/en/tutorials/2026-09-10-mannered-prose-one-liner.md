@@ -1,6 +1,6 @@
 ---
 title: "What the one-line prompt removes, and what the code measures"
-seo_title: "Anthropic's Mannered-Prose One-Liner: The Axis Boundary Measured in a 3-Round Rewrite Experiment - ThakiCloud"
+seo_title: "What the one-line prompt removes, and what the code measures"
 seo_description: "We put the one-line instruction 'Please remove all mannered prose', which Anthropic added to the Fable 5.1 prompting guide, through a 3-round rewrite experiment. The one-liner took the metaphor axis from 28 instances to 0, while structural tells still need a deterministic gate to catch them."
 excerpt: "Does one line de-AI your text? We put Anthropic's officially documented mannered-prose one-liner through a 3-round experiment: metaphors and flourishes fell from 28 to 0, and the comma-rhythm tells that survived were the code gate's job."
 date: 2026-09-10

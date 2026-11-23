@@ -1,7 +1,7 @@
 ---
 title: "Stitching Sessions Together Is Now the Coordinator's Job"
 excerpt: "Claude Code Projects moved from 'a folder that holds sessions' to 'a conversation with parallel threads and shared memory'. This post covers the coordinator's role, each thread's own branch and PR, the shared memory structure, and the four new features shipped on November 13."
-seo_title: "Stitching Sessions Together Is Now the Coordinator's Job: Claude Code Projects"
+seo_title: "Stitching Sessions Together Is Now the Coordinator's Job"
 seo_description: "The coordinator + parallel threads + shared memory structure of Claude Code Projects, the public beta on Pro, Max, and Ultra, the November 13 features (/btw, /fork, reminders, read-only links), and the limits to know before you start."
 date: 2026-11-15
 last_modified_at: 2026-11-15

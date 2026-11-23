@@ -1,7 +1,7 @@
 ---
-title: "When Models Stop Themselves: This Isn't a Safety Story, It's a Procurement One"
+title: "When Models Stop Themselves: A Procurement Story"
 excerpt: "OpenAI paused reinforcement learning on Astra for two weeks, citing safety. On the same day, Oklo broke ground on a reactor for Meta, and a 27B open model hit frontier-level performance on a laptop. Read these three scenes from the buyer's seat."
-seo_title: "What OpenAI's Astra Training Pause Really Asks of Enterprises"
+seo_title: "When Models Stop Themselves: A Procurement Story"
 seo_description: "A procurement and execution-control read on OpenAI's first safety scaling halt, Stripe's $8B OpenRouter acquisition, and Qwen3.8-27B's arrival at the local frontier."
 date: 2026-08-19
 last_modified_at: 2026-08-19

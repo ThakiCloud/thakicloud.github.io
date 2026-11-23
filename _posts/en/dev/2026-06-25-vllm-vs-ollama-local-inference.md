@@ -1,7 +1,7 @@
 ---
 title: "vLLM vs Ollama - Local LLM Inference: When to Choose Which"
 excerpt: "The conventional wisdom that Ollama is easy and vLLM is fast gets re-examined with 2026 RTX 4090 public benchmarks. At a single user the gap is around 13%, but at 50 concurrent users vLLM delivers roughly 6x the throughput. This post breaks down the scaling curves that PagedAttention and continuous batching produce, along with implications for ThakiCloud Kubernetes-based serving."
-seo_title: "vLLM vs Ollama Local LLM Inference Benchmark Comparison (2026) - Thaki Cloud"
+seo_title: "vLLM vs Ollama - Local LLM Inference: When to Choose Which"
 seo_description: "Comparing vLLM and Ollama on throughput, latency, and VRAM usage with RTX 4090 public benchmarks. PagedAttention, continuous batching, concurrency scaling curves, and Kubernetes multi-tenant serving considerations."
 date: 2026-06-25
 last_modified_at: 2026-06-25

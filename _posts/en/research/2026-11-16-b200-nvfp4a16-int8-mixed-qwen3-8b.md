@@ -1,6 +1,6 @@
 ---
-title: "More Accurate Than NVFP4 W4A4, Smaller Than BF16: Mixed-Precision Quantization of Qwen3-8B Verified on B200"
-seo_title: "Mixed-Precision Quantization Measured on B200: How the A81 Configuration Cut Qwen3-8B to 5.92 GiB and Passed the Korean Quality Gate | ThakiCloud"
+title: "Mixed-Precision Qwen3-8B: Beating NVFP4 W4A4"
+seo_title: "Mixed-Precision Qwen3-8B: Beating NVFP4 W4A4"
 seo_description: "On NVIDIA B200, the A81 configuration packs Qwen3-8B with 4-bit weights, 16-bit compute and 46 INT8-protected modules. It passed every memory, kernel, quality and latency gate on a sealed 5,168-item evaluation. This post covers the accuracy gap to NVFP4 W4A4, first-token latency and the remaining limits."
 excerpt: "In our previous post no model passed the Korean quality gate. This time a configuration that keeps weights at 4 bits, computes in 16 bits and leaves 46 sensitive modules at 8 bits passed every gate, using 61.2% less memory than BF16."
 date: 2026-11-16

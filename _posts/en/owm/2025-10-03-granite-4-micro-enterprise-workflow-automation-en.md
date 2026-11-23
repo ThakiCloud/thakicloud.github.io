@@ -1,7 +1,7 @@
 ---
-title: "IBM Granite 4.0 Micro: Revolutionizing Enterprise Workflow Automation with 3B Parameter AI"
+title: "IBM Granite 4.0 Micro for Enterprise Workflow Automation"
 excerpt: "Explore how IBM's Granite 4.0 Micro transforms enterprise workflow automation with advanced tool-calling capabilities, multilingual support, and efficient 3B parameter architecture for seamless AI-driven business processes."
-seo_title: "IBM Granite 4.0 Micro Enterprise Workflow Automation Guide - Thaki Cloud"
+seo_title: "IBM Granite 4.0 Micro for Enterprise Workflow Automation"
 seo_description: "Complete guide to implementing IBM Granite 4.0 Micro for enterprise workflow automation. Learn tool-calling, multilingual support, and AI-driven business process optimization."
 date: 2025-10-03
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "LangGraph 에이전트 핵심 프롬프트 심층 분석 - Gemini 연구 에이전트 시리즈 2편"
+title: "LangGraph 에이전트 핵심 프롬프트 분석: Gemini 시리즈 2편"
 date: 2025-06-10
 tags: 
   - LangGraph

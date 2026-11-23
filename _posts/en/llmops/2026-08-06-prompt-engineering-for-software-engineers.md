@@ -1,7 +1,7 @@
 ---
-title: "Prompts Are Contracts: Bringing Software Engineering Discipline to Prompt Design"
+title: "Prompts Are Contracts: Engineering Discipline for Prompts"
 excerpt: "Treating a prompt as a function contract, not freeform copywriting, changes how reliably it survives production. This piece walks through input contracts, output contracts, and change-history contracts as the three layers that separate prompts that hold up from prompts that quietly rot."
-seo_title: "Prompt Engineering as a Function Contract | ThakiCloud Tech Blog"
+seo_title: "Prompts Are Contracts: Engineering Discipline for Prompts"
 seo_description: "A practical guide to prompt engineering for software engineers. Covers few-shot prompting, chain-of-thought, structured output validation, and prompt version control as contract discipline."
 date: 2026-08-06
 last_modified_at: 2026-08-06

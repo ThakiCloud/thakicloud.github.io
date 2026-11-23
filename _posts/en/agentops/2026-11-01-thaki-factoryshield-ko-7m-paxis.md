@@ -1,6 +1,6 @@
 ---
-title: "A 7M Model That Proposes Equipment Commands and Never Executes Them: Thaki-FactoryShield-KO-7M"
-seo_title: "Thaki-FactoryShield-KO-7M - A Korean Model That Turns Spoken Equipment Commands into Structured Proposals, and Paxis | ThakiCloud"
+title: "Thaki-FactoryShield-KO-7M: Proposes Commands, Never Executes"
+seo_title: "Thaki-FactoryShield-KO-7M: Proposes Commands, Never Executes"
 seo_description: "A Korean model with 7,352,909 parameters turns an equipment command into a proposal made of an operation, an equipment ID and a delay, or refuses. It checks the pick exactly against a registry of equipment IDs and abstains on everything when no registry is given. We separate passing a synthetic sealed test from field safety validation, and show how Paxis keeps judgment apart from execution."
 excerpt: "We released a small Korean model that turns spoken equipment commands into structured proposals before any agent executes them. The network only proposes. It never drives equipment."
 date: 2026-11-01

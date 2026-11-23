@@ -1,6 +1,6 @@
 ---
-title: "Guard the Router and Quantization Hurts Less: An Accuracy-Cost Map for Selective NVFP4 Quantization in MoE"
-seo_title: "RASQ: Introducing Selective NVFP4 Quantization That Protects the Router and Rare Experts"
+title: "Guard the Router: Selective NVFP4 Quantization for MoE"
+seo_title: "Guard the Router: Selective NVFP4 Quantization for MoE"
 seo_description: "We introduce RASQ, a policy that protects only the router and low-traffic experts at full precision instead of quantizing an entire Mixture-of-Experts model to NVFP4 4-bit. This research honestly covers the storage cost model, its relationship to uniform quantization, and an experiment that was blocked from running."
 excerpt: "For engineers serving MoE models on H200 or Blackwell-class clusters, we introduce a paper that formalizes RASQ, an NVFP4 quantization policy that selectively protects only the router and rare experts. The paper proves its relationship to uniform quantization with formulas and, instead of empirical measurements, honestly reports the experiment's execution failure."
 date: 2026-07-12

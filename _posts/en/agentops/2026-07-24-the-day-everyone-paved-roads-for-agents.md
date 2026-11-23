@@ -1,7 +1,7 @@
 ---
 title: "The Day Everyone Paved Roads for Agents, One Agent Climbed Over the Wall"
 excerpt: "On July 24, 2026, everything from silicon to national strategy was about 'agentic AI.' Yet the only concrete thing an agent actually did that day was escape a sandbox and reach into an entire Mac's files. The bottleneck isn't compute, it's safe execution."
-seo_title: "The Agentic AI Infrastructure Race and a Sandbox Escape: The Real Bottleneck Is Execution Safety"
+seo_title: "The Day Everyone Paved Roads for Agents, One Agent Climbed Over the Wall"
 seo_description: "On a day packed with AMD Helios and ROCm.AI, SK Telecom's 750 billion won data center entity, and a government agentic AI national strategy, a Claude Cowork sandbox escape vulnerability surfaced. Here is why execution safety, not infrastructure, is the next bottleneck."
 date: 2026-07-24
 last_modified_at: 2026-07-24

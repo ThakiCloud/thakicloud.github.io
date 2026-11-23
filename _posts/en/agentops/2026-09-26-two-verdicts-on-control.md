@@ -1,7 +1,7 @@
 ---
 title: "Two Verdicts, the Same Word: Control"
 excerpt: "A court ruled that a model's safety device is a national security threat, and the CEO of the same company warned that agents without safety devices threaten humanity. In the week that one word drew two verdicts, this is the analysis of the position a company running agents must hold."
-seo_title: "Two Verdicts, the Same Word 'Control': The Week a Model's Legal Status Became a Procurement Variable"
+seo_title: "Two Verdicts, the Same Word: Control"
 seo_description: "The D.C. Circuit upholds Anthropic's exclusion, the U.N. Security Council hears calls for global AI standards, Oracle invokes force majeure, and Sanders introduces a superintelligence ban. The two pulls on the word control, and the execution platform position for companies running agents."
 date: 2026-09-26
 last_modified_at: 2026-09-26

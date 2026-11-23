@@ -1,7 +1,7 @@
 ---
-title: "AI That Can Now See Through Glass, Yet What Companies Really Ask Is 'What Exactly Did You Just Do?'"
+title: "Physical AI Needs Action Records, Not Just Senses"
 excerpt: "A day full of news about AI expanding its senses and gaining hands. But the question that actually decides adoption is shifting from performance to 'evidence.' We reread today's digest through that lens."
-seo_title: "The Real Bottleneck of the Physical AI Era: Not Performance, but 'Action Records'"
+seo_title: "Physical AI Needs Action Records, Not Just Senses"
 seo_description: "From the 20-trillion-won K-Physical AI push to Ant Group's vision model and the free-token race, we read July 9, 2026 AI news through the lens of 'agent action records and auditability,' and outline the operational layer enterprises need to prepare."
 date: 2026-07-09
 last_modified_at: 2026-07-09

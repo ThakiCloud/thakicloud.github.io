@@ -1,7 +1,7 @@
 ---
-title: "Training a Reasoning LLM Over a Weekend with NVIDIA NeMo: A Complete Practitioner's Guide"
+title: "Training a Reasoning LLM in a Weekend with NeMo"
 excerpt: "A hands-on guide to training a GPT-4-level reasoning LLM on a single GPU within 48 hours using NVIDIA NeMo"
-seo_title: "Complete Guide to Training a Reasoning LLM with NVIDIA NeMo: Implemented in 48 Hours - Thaki Cloud"
+seo_title: "Training a Reasoning LLM in a Weekend with NeMo"
 seo_description: "A hands-on guide for training a reasoning-capable LLM on a single GPU within 48 hours using NVIDIA NeMo and the Llama Nemotron dataset."
 date: 2025-07-25
 last_modified_at: 2025-07-25

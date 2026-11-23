@@ -1,7 +1,7 @@
 ---
 title: "Rowfill: 지식 근로자를 위한 비정형 데이터 처리 플랫폼 완전 가이드"
 excerpt: "PDF, 이미지, 오디오 파일을 자동으로 구조화하는 오픈소스 AI 플랫폼 Rowfill의 핵심 기능과 활용법을 알아보세요."
-seo_title: "Rowfill 비정형 데이터 처리 플랫폼 가이드 - OCR AI 문서 추출 도구 - Thaki Cloud"
+seo_title: "Rowfill: 지식 근로자를 위한 비정형 데이터 처리 플랫폼 완전 가이드"
 seo_description: "오픈소스 Rowfill로 PDF, 이미지, 오디오를 구조화된 데이터로 변환하는 방법. AI OCR, 자동 스키마 생성, 로컬 LLM 지원까지 상세 분석"
 date: 2025-08-18
 last_modified_at: 2025-08-18

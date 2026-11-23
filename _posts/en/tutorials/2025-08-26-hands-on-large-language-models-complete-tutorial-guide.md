@@ -1,7 +1,7 @@
 ---
 title: "Hands-On Large Language Models: Complete Tutorial Guide and Book Review"
 excerpt: "Comprehensive guide to the O'Reilly book 'Hands-On Large Language Models' - covering all 12 chapters with practical tutorials, code examples, and implementation guides for LLM development."
-seo_title: "Hands-On Large Language Models Tutorial Guide - Complete Review | Thaki Cloud"
+seo_title: "Hands-On Large Language Models: Complete Tutorial Guide and Book Review"
 seo_description: "Master LLMs with this complete tutorial guide covering Jay Alammar & Maarten Grootendorst's O'Reilly book. Includes practical examples, code implementations, and chapter-by-chapter breakdown."
 date: 2025-08-26
 tags:

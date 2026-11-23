@@ -1,7 +1,7 @@
 ---
-title: "프롬프트를 그만 치고 루프를 설계하라: Claude Code 루프 엔지니어링 공식 문서 읽기"
+title: "프롬프트 대신 루프를 설계하라: Claude Code 공식 가이드"
 excerpt: "Anthropic이 2026년 7월 7일 'Getting started with loops'라는 첫 공식 루프 엔지니어링 문서를 공개했습니다. 매 단계를 사람이 프롬프트로 지시하는 방식에서, 에이전트를 대신 프롬프트해 주는 시스템을 설계하는 방식으로 넘어가는 전환입니다. 수동 루프, /loop 간격 루프, /schedule 루틴, 그리고 /goal 완료 조건을 정리하고, 이 패턴을 실제로 무인 파이프라인에 배선한 ThakiCloud의 운영 사례와 Paxis 에이전트 제어 평면 관점으로 연결합니다."
-seo_title: "Claude Code 루프 엔지니어링 - /goal /loop /schedule 공식 가이드 읽기 (2026) - Thaki Cloud"
+seo_title: "프롬프트 대신 루프를 설계하라: Claude Code 공식 가이드"
 seo_description: "Anthropic의 공식 문서 'Getting started with loops'(2026-07-07)를 소개합니다. 수동 루프, /loop 간격 루프, /schedule 스케줄 루틴, /goal 완료 조건과 턴 캡, 검증 가능한 성공 기준 설계, 스킬 기반 검증을 정리하고, pge-loop와 Goal Mode, launchd cron 러너로 이 패턴을 실제 무인 파이프라인에 배선한 ThakiCloud 사례와 Paxis Agent-Native Cloud 관점의 함의를 다룹니다."
 date: 2026-07-08
 last_modified_at: 2026-07-08

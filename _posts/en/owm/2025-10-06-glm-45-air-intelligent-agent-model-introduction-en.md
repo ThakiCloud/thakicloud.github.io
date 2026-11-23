@@ -1,7 +1,7 @@
 ---
-title: "GLM-4.5-Air: Revolutionizing Intelligent Agent Development with Compact Efficiency"
+title: "GLM-4.5-Air: A Compact Model for Agent Development"
 excerpt: "Discover GLM-4.5-Air, Z.ai's groundbreaking 106B parameter model that delivers exceptional performance for intelligent agents with hybrid reasoning capabilities and commercial-friendly MIT license."
-seo_title: "GLM-4.5-Air Model Guide: Intelligent Agent Development - Thaki Cloud"
+seo_title: "GLM-4.5-Air: A Compact Model for Agent Development"
 seo_description: "Complete guide to GLM-4.5-Air: 106B parameter model with hybrid reasoning, tool usage, and commercial MIT license for intelligent agent applications."
 date: 2025-10-06
 tags:

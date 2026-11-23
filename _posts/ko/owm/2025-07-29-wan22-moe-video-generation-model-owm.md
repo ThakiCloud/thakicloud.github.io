@@ -1,7 +1,7 @@
 ---
 title: "Wan2.2: 세계 최초 오픈소스 MoE 아키텍처 비디오 생성 모델의 혁신"
 excerpt: "Wan AI가 공개한 Wan2.2는 세계 최초 오픈소스 MoE(Mixture-of-Experts) 아키텍처를 적용한 비디오 생성 모델로, 시네마틱 컨트롤과 복잡한 모션 생성 능력을 제공하는 차세대 AI 영상 제작 플랫폼입니다."
-seo_title: "Wan2.2 오픈소스 MoE 비디오 생성 AI 완벽 가이드 - 시네마틱 컨트롤 - Thaki Cloud"
+seo_title: "Wan2.2: 세계 최초 오픈소스 MoE 아키텍처 비디오 생성 모델의 혁신"
 seo_description: "Wan AI의 Wan2.2 분석. 세계 최초 오픈소스 MoE 비디오 생성 모델, Text-to-Video, Image-to-Video, 시네마틱 컨트롤 시스템까지 완전 공개된 AI 영상 제작 도구"
 date: 2025-07-29
 last_modified_at: 2025-07-29

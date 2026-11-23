@@ -1,6 +1,6 @@
 ---
-title: "Demonstrate Once, Get a Skill: Reading Microsoft's Skill Recorder at the Source Level"
-seo_title: "Microsoft Skill Recorder Analysis: Turning a Screen Recording Into SKILL.md | ThakiCloud"
+title: "Demonstrate Once, Get a Skill: Microsoft's Skill Recorder"
+seo_title: "Demonstrate Once, Get a Skill: Microsoft's Skill Recorder"
 seo_description: "Microsoft released Skill Recorder under MIT. It records a work session, uses the GitHub Copilot CLI to reconstruct intent and ordered steps, and builds a reusable SKILL.md or automation. We cloned it, ran its 58 tests, and read the pipeline code to see how it generalises through native tool calls instead of UI replay, and what that implies for an agent platform."
 excerpt: "Consuming skills got easy. Producing them still meant a human writing the document. This tool goes after the input side."
 date: 2026-08-03

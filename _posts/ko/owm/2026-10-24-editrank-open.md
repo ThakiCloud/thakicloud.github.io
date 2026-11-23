@@ -1,7 +1,7 @@
 ---
 title: "문서 수정안 중 무엇을 고를까, EditRank 두 모델을 공개합니다"
 excerpt: "한 문서를 여러 방식으로 고쳐 썼을 때 AI 답변 엔진이 어느 판을 더 높이 출처로 쓸지 순위를 매기는 작은 모델입니다. 0.6B와 4B 두 가지를 연구용 미리보기로 공개하고, 사실을 바꾼 수정안을 고르는 실패율까지 함께 적었습니다."
-seo_title: "EditRank-0.6B·EditRank-Multidomain-4B: 문서 수정안 순위 모델 공개 - ThakiCloud"
+seo_title: "문서 수정안 중 무엇을 고를까, EditRank 두 모델을 공개합니다"
 seo_description: "다키클라우드가 공개한 EditRank는 질의 하나와 문서 하나에 대한 수정안들의 순위를 매기는 Research Preview 리랭커입니다. 0.6B는 상품 페이지에서 BM25보다 높은 효용을 보였고, 4B는 기술 문서에서 0.6B보다 높은 효용과 낮은 사실 위반율을 보였습니다. 시뮬레이션 엔진 결과와 한계를 함께 정리했습니다."
 date: 2026-10-24
 last_modified_at: 2026-10-24

@@ -1,6 +1,6 @@
 ---
-title: "ThakiOCR-Large-27B-R2B: We Fine-Tuned Qwen 27B for Korean Word OCR and Released It"
-seo_title: "Korean OCR fine-tuning on Qwen 27B: ThakiOCR-Large-27B-R2B released | ThakiCloud"
+title: "ThakiOCR-Large-27B-R2B: Qwen 27B Tuned for Korean Word OCR"
+seo_title: "ThakiOCR-Large-27B-R2B: Qwen 27B Tuned for Korean Word OCR"
 seo_description: "We released ThakiOCR-Large-27B-R2B under Apache-2.0, a LoRA adapter that fine-tunes Qwen3.6-27B for Korean word OCR. On a fixed 2,400-crop development set, word CER fell from 18.04% to 6.01%. Evaluation scope, GPU memory, error types, and what we have not measured yet."
 excerpt: "We trained a LoRA adapter on a 27B vision-language model to read Korean word images. What improved, and where the verified scope ends, in numbers."
 date: 2026-11-07

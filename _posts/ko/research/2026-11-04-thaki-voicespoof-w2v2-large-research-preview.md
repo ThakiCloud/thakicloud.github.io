@@ -1,6 +1,6 @@
 ---
-title: "AI가 만든 목소리를 구별하는 모델을 만들었습니다: VoiceSpoof의 성능과 Maxis·Metis·Paxis 활용 가능성"
-seo_title: "Thaki-VoiceSpoof-W2V2-Large: 음성 딥페이크 탐지 Research Preview - ThakiCloud"
+title: "VoiceSpoof: AI가 만든 목소리를 구별하는 모델"
+seo_title: "VoiceSpoof: AI가 만든 목소리를 구별하는 모델"
 seo_description: "실제 녹음과 합성·변환 음성을 구별하는 3억 파라미터급 모델을 Research Preview로 공개했습니다. ASVspoof 5 봉인 Eval에서 EER 8.06%, minDCF 0.1995였고, 재로드 검사 G5는 원래 기준으로 실패했습니다. 검증한 BF16 실행 환경만 지원합니다."
 excerpt: "음성 딥페이크 탐지 모델을 Research Preview로 공개했습니다. 성능, 공개 검사에서 실패한 것과 그 원인, 그리고 Maxis·Metis·Paxis에서 어떻게 쓸 수 있는지와 아직 검증하지 않은 것을 정리했습니다."
 date: 2026-11-04

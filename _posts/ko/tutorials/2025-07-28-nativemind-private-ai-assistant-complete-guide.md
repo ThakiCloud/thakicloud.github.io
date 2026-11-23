@@ -1,7 +1,7 @@
 ---
-title: "NativeMind 완벽 가이드: 완전 프라이빗 온디바이스 AI 어시스턴트 브라우저 확장"
+title: "NativeMind: 완전 프라이빗 온디바이스 AI 브라우저 확장"
 excerpt: "GitHub 483 스타를 받은 완전 프라이빗 온디바이스 AI 어시스턴트 NativeMind 설치부터 고급 활용까지 완전 정복"
-seo_title: "NativeMind 완벽 가이드 - 프라이빗 온디바이스 AI 브라우저 확장 - Thaki Cloud"
+seo_title: "NativeMind: 완전 프라이빗 온디바이스 AI 브라우저 확장"
 seo_description: "NativeMind 설치, 설정, Ollama 연동, WebLLM 활용까지 완전 프라이빗 온디바이스 AI 어시스턴트 브라우저 확장 완전 가이드"
 date: 2025-07-28
 last_modified_at: 2025-07-28

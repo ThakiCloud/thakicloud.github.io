@@ -1,7 +1,7 @@
 ---
-title: "Google's PH-LLM Opens New Horizons for Personal Health AI - Revolutionizing Sleep and Fitness Coaching with Wearable Data"
+title: "PH-LLM: Personal Health Coaching from Wearable Data"
 excerpt: "Google's PH-LLM published in Nature Medicine is a personalized health coaching AI utilizing wearable device data, showing performance surpassing medical professionals and changing the paradigm of digital healthcare."
-seo_title: "Google PH-LLM Personal Health AI Innovation - Wearable Data Health Coaching - Thaki Cloud"
+seo_title: "PH-LLM: Personal Health Coaching from Wearable Data"
 seo_description: "Google's PH-LLM published in Nature Medicine opens a new era of personal health management. Detailed analysis of AI health coaching innovation and future prospects using wearable data."
 date: 2025-08-15
 last_modified_at: 2025-08-15

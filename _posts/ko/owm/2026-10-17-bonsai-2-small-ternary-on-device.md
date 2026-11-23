@@ -1,6 +1,6 @@
 ---
-title: "9B를 2GB에 담다: Bonsai 2 소형 시리즈(2B·4B·9B) ternary 모델, ThakiCloud 독립 검증"
-seo_title: "PrismML이 2026년 10월 15일 발표한 Bonsai 2 2B·4B·9B는 Qwen3.5 기반 ternary({−1,0,+1}) 저비트 모델입니다. 0.43~2GB 용량에서 에이전트·수학·코드·비전 유지율 90~95%를 보고했고, ThakiCloud는 공개 가중치를 비트 레벨로 검증해 ternary 주장이 성립하고 표준 런타임은 로딩 불가·번들 런타임 필수임을 확인했습니다. - ThakiCloud"
+title: "Bonsai 2 Small: 9B 모델을 2GB에 담다"
+seo_title: "Bonsai 2 Small: 9B 모델을 2GB에 담다"
 seo_description: "Bonsai 2 소형 시리즈(2B·4B·9B) ternary 모델 리뷰: 0.43~2GB 온디바이스 확장의 보고 벤치마크, ThakiCloud의 비트 레벨 독립 검증(151 모듈 전수 언팩)과 M4 Pro 실측 생성, GGUF·MLX 런타임 매트릭스까지 정리합니다."
 excerpt: "PrismML이 10월 15일 발표한 Bonsai 2 2B·4B·9B는 Qwen3.5 기반 ternary({−1,0,+1}) 저비트 모델입니다. 0.43~2GB 용량에서 원본 대비 90~95% 유지율을 보고했고, ThakiCloud는 공개 가중치를 비트 레벨에서 검증해 ternary 주장이 성립함을 확인했습니다. 다만 표준 런타임은 로딩이 불가하고, Hadamard 회전을 처리하는 번들 런타임이 필수라는 점은 실측으로 재확인했습니다."
 date: 2026-10-17

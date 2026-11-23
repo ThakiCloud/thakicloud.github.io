@@ -1,7 +1,7 @@
 ---
 title: "The Bill for 1,000 Tool Calls Traces All the Way Back to the Bond Market"
 excerpt: "Running an agent once doesn't stop costing you at the model price sheet. Follow today's news and a bill that starts with a tool call runs through GPU leases, a $15 billion bond, and import restrictions. Here's where the layer a company can actually control sits."
-seo_title: "The Real Cost of 1,000 Agent Tool Calls: A Chain That Reaches Bonds and Regulation"
+seo_title: "The Bill for 1,000 Tool Calls Traces All the Way Back to the Bond Market"
 seo_description: "From Meta Muse Code's 1,000 tool calls to Anthropic's $10 billion compute deal and $15 billion bond issuance, we break down the three layers that set the price of running an AI agent: capital, supply chain, and regulation."
 date: 2026-08-06
 last_modified_at: 2026-08-06

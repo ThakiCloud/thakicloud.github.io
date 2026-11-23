@@ -1,7 +1,7 @@
 ---
-title: "Is Fine-Tuning Really Dead? A Survival Strategy Read from June 2026's Verified Signals"
+title: "Is Fine-Tuning Really Dead? A 2026 Survival Strategy"
 excerpt: "As frontier LLMs and agent skills keep improving, the industry has started to feel that fine-tuning is no longer necessary. OpenAI is, in fact, winding down its self-serve fine-tuning API. Yet the very same month produced signals pointing the opposite direction: a 19-day frontier model shutdown, an open-weight license built around the assumption that customers will fine-tune, and a fine-tuning worker beating a frontier model in production at 11 times lower cost. Using only sources published between June 5 and July 5, 2026, we cross-checked what is actually dying and what is actually surviving."
-seo_title: "2026 Fine-Tuning Survival Strategy: Domain-Specific Models in the Agent Skill Era - Thaki Cloud"
+seo_title: "Is Fine-Tuning Really Dead? A 2026 Survival Strategy"
 seo_description: "An analysis built on verified June 2026 data covering OpenAI's fine-tuning API shutdown, Anthropic's export-control outage, NVIDIA Nemotron 3, and the Harvey hybrid case study, laying out the survival conditions for fine-tuning and small models and a model-ownership strategy for the sovereign AI era."
 date: 2026-07-05
 last_modified_at: 2026-07-05

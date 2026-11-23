@@ -1,5 +1,5 @@
 ---
-title: "Claude Code + iOS Simulator: A Closed Coding Loop Where You Build, Run, and Watch"
+title: "Claude Code and the iOS Simulator: Build, Run, Watch"
 excerpt: "Claude Code desktop has shipped a public beta feature that opens the iOS simulator in a panel right next to the conversation. Here is what changes when Claude can build, run, and watch its own app respond, how to turn it on, and why it matters from an agent-native cloud perspective."
 date: 2026-07-22
 tags:

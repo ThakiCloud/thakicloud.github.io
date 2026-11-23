@@ -1,7 +1,7 @@
 ---
 title: "19.2%짜리 1위"
 excerpt: "Zai의 GLM-Legal이 오픈웨이트 법률 AI 1위에 올랐지만, 그 1위가 받은 성적은 19.2%였습니다. 상대적 1위가 매일 쌓이는 동안 절대적 준비는 5분의 1에 머물러 있습니다. 그 사이를 채우는 것은 더 큰 모델이 아니라, 모델 주위의 실행 환경입니다."
-seo_title: "19.2%짜리 1위가 나온 아침. 상대적 1위와 절대적 준비의 간극, 그리고 그 사이를 채우는 실행 환경 | ThakiCloud"
+seo_title: "19.2%짜리 1위"
 seo_description: "Zai GLM-Legal의 Harvey 벤치마크 19.2%, Muse Wonder 59.1점, M3 MacBook Air의 288배 전사, Intel과 Broadcom CEO의 자본 희소성 경고. 상대적 1위가 쌓인 아침, 점수 뒤의 실행 환경과 비용 라우팅을 분석합니다."
 date: 2026-10-13
 last_modified_at: 2026-10-13

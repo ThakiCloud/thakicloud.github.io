@@ -1,7 +1,7 @@
 ---
 title: "OrcaCyber Nano 1.0: 27B 사이버 방어 모델이 16GB 카드로 내려온 이유"
 excerpt: "OrcaRouter가 '긴급'을 붙여 내놓은 27B 사이버 방어 특화 오픈웨이트입니다. 262K 컨텍스트, 비전 입력, GGUF 빌드로 16GB 카드에서 돌게 만든 것이 핵심이고, 이 글의 결론도 하나입니다. 가치가 벤치마크 숫자가 아니라 그 형태에 있고, 온프렘 보안 라인에 로컬 27B 방어 전문가라는 첫 옵션을 놓는다는 것입니다."
-seo_title: "OrcaCyber Nano 1.0 27B 사이버 방어 오픈웨이트 - 16GB 구동, 262K 컨텍스트, DFlash2 스펙추리 - Thaki Cloud"
+seo_title: "OrcaCyber Nano 1.0: 27B 사이버 방어 모델이 16GB 카드로 내려온 이유"
 seo_description: "OrcaCyber Nano 1.0(27B dense, 262K 컨텍스트, 비전, GGUF) 모델카드 분석: 긴급 오픈웨이트 출시, DFlash2 스펙추리 데코딩과 MTP 헤드, 16GB/24GB 카드 메모리 산정, 자체 보고 벤치마크 읽기, 온프렘·엣지 보안 서빙 관점. ThakiCloud 제품 적용 시사점 포함."
 date: 2026-10-20
 last_modified_at: 2026-10-20

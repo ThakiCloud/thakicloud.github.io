@@ -1,6 +1,6 @@
 ---
-title: "무인 에이전트 루프는 실패하지 않고, 약해진다: 72시간으로 본 endurance wall"
-seo_title: "The Endurance Wall 논문 분석 - 24/48/72시간 무인 LLM agent loop의 신뢰성 decay, context bloat 터미널 실패 세분화, compaction/veto/checkpoint 개입의 quality-per-dollar ablation - ThakiCloud"
+title: "무인 에이전트 루프는 실패하지 않고 약해진다"
+seo_title: "무인 에이전트 루프는 실패하지 않고 약해진다"
 seo_description: "무인 에이전트 루프의 신뢰성은 작업 단위, 분 단위 horizon에서만 측정되어 왔습니다. 이 논문은 경과 무인 시간을 1급 실패 축으로 만들어 72시간·3hazard·8arm·100seed 제어 측정으로 endurance wall을 지도합니다. 72시간 성공률은 87.1%에서 39.6%로, context bloat가 지배 터미널 클래스(47.9~55.7%)이고, compaction은 QPD 3.4~4.2배의 효율 챔피언, veto는 비용 parity에서 endurance를 사는 유일한 단일 개입, checkpoint는 QPD 0.80~0.92배에 검증 gap을 9~22pp로 부풀리는 가장 비싼 구매입니다."
 excerpt: "무인 에이전트 루프를 밤사이 돌린다면, 몇 시간까지 신뢰할 수 있는가. 이 논문은 경과 무인 시간을 1급 실패 축으로 두고 72시간 제어 측정으로 그 벽을 지도합니다. context bloat가 지배 실패 클래스이고, compaction은 가장 싼 효율, veto는 parity에서 endurance를 사는 개입, checkpoint는 검증 무결성을 깎는 가장 비싼 endurance 구매입니다."
 date: 2026-09-14

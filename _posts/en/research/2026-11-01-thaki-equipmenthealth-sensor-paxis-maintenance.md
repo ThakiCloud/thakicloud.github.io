@@ -1,6 +1,6 @@
 ---
-title: "Reading Equipment Health from Sensors, and Letting Paxis Open the Maintenance Work"
-seo_title: "Thaki-EquipmentHealth-Sensor-LGBM - Sensor-Based Equipment Health Classification and Paxis Maintenance Automation | ThakiCloud"
+title: "Equipment Health From Sensors, Maintenance From Paxis"
+seo_title: "Equipment Health From Sensors, Maintenance From Paxis"
 seo_description: "We released a 1 MB LightGBM model on Hugging Face that reads current, temperature, and particulate sensors on semiconductor-fab transport vehicles (OHT and AGV) and sorts them into four states: normal, attention, warning, danger. On vehicles it never saw, it reached macro F1 0.94 and never called a danger reading normal. We show how Paxis turns that verdict into maintenance work with evidence attached, with a human approving any risky action."
 excerpt: "Not every decision needs an LLM. A 1 MB model sorts equipment into four health states from sensor readings, and Paxis turns that verdict into maintenance work with evidence attached."
 date: 2026-11-01

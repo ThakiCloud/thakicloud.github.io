@@ -1,6 +1,6 @@
 ---
 title: "vLLM 콜드스타트를 18초 줄이는 한 줄: UV_COMPILE_BYTECODE=1"
-seo_title: "vLLM 공식 블로그가 공개한 콜드스타트 최적화. 이미지 빌드 시점에 Python 바이트코드를 미리 컴파일하는 UV_COMPILE_BYTECODE=1 한 줄로 H100에서 스타트업 시간이 14~18%(약 18초) 줄어듭니다. 메커니즘과 실측, 그리고 ThakiCloud Metis 서빙 운용에 미칠 영향을 정리합니다. - ThakiCloud"
+seo_title: "vLLM 콜드스타트를 18초 줄이는 한 줄: UV_COMPILE_BYTECODE=1"
 seo_description: "uv가 바이트코드 컴파일을 건너뛰면서 새 컨테이너마다 수천 개 Python 파일을 다시 컴파일해 왔습니다. UV_COMPILE_BYTECODE=1이 그 일을 빌드타임으로 옮깁니다. vLLM의 H100 실측(17.6초, 17.6%)과 우리의 로컬 재현 결과까지. - ThakiCloud"
 excerpt: "콜드스타트의 숨은 비용은 모델 로딩이 아니라 Python 컴파일이었다. vLLM이 이미지 한 줄로 그것을 빌드타임으로 옮겼고, 우리는 같은 메커니즘을 로컬에서 재현해 확인했습니다."
 date: 2026-10-21

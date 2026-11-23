@@ -1,7 +1,7 @@
 ---
-title: "RAG 기반 LLMOps 프로덕션 구현 가이드: 엔터프라이즈 환경에서의 검색 증강 생성 시스템 설계"
+title: "RAG LLMOps: 프로덕션 검색 증강 생성 설계"
 excerpt: "Retrieval Augmented Generation(RAG) 시스템의 핵심 아키텍처부터 프로덕션 배포까지, LLMOps 관점에서 살펴보는 엔터프라이즈급 RAG 구현 전략과 최적화 방법론을 제공합니다."
-seo_title: "RAG LLMOps 프로덕션 구현 가이드 - 엔터프라이즈 RAG 시스템 - Thaki Cloud"
+seo_title: "RAG LLMOps: 프로덕션 검색 증강 생성 설계"
 seo_description: "RAG 시스템의 아키텍처 설계부터 프로덕션 배포, 성능 최적화까지 LLMOps 관점에서 제공하는 실무 중심 가이드. 엔터프라이즈 환경에서의 RAG 구현 전략과 모범 사례를 상세히 다룹니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20

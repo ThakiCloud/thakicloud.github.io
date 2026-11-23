@@ -1,7 +1,7 @@
 ---
-title: "AI로 진화한 Google Finance 완벽 활용 가이드 - 스마트 투자 분석의 새로운 차원"
+title: "AI로 진화한 Google Finance로 투자 분석하기"
 excerpt: "AI 기반 시장 트렌드 분석, 스마트 포트폴리오 관리, 개인화된 투자 인사이트까지, 새롭게 진화한 Google Finance의 핵심 기능을 마스터하세요."
-seo_title: "Google Finance AI 활용 가이드 - 스마트 투자 분석 완전 정복"
+seo_title: "AI로 진화한 Google Finance로 투자 분석하기"
 seo_description: "AI 중심으로 재구성된 Google Finance의 시장 트렌드 분석, 포트폴리오 관리, 워치리스트 최적화 등 핵심 기능 완벽 활용법. 실전 투자 전략과 AI 인사이트 활용 팁 포함"
 date: 2025-08-10
 last_modified_at: 2025-08-10

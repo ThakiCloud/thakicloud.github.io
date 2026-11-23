@@ -1,7 +1,7 @@
 ---
 title: "Thaki-CiteRank-4B: a 4B model that picks what a RAG agent should cite"
 excerpt: "A 4B reranker that moves the passages you can actually cite to the top. It beat the base Qwen3-Reranker-4B even on contract data it never saw in training, and this post shows where to place it behind Paxis Hybrid RAG."
-seo_title: "Thaki-CiteRank-4B: an evidence reranker for Paxis RAG agents - ThakiCloud"
+seo_title: "Thaki-CiteRank-4B: a 4B model that picks what a RAG agent should cite"
 seo_description: "Thaki-CiteRank-4B is a Research Preview reranker that takes a question or claim plus candidate passages and ranks them by whether they can be cited as evidence. nDCG@10 rose to 0.919 on QASPER and 0.905 on held-out CUAD, and unsupported citations dropped. We cover how to wire it into a Paxis agent and what it cannot do."
 date: 2026-10-25
 last_modified_at: 2026-11-09

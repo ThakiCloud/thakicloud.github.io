@@ -1,7 +1,7 @@
 ---
-title: "스킬 1,600개를 노이즈 없이 라우팅하는 법 - AI 에이전트 스킬 생태계 운영기"
+title: "스킬 1,600개를 노이즈 없이 라우팅하는 법"
 excerpt: "스킬은 많을수록 좋은 게 아니라 세금입니다. Claude Code 기반 1,620개 스킬을 1인 운영하며 SRA + BM25 게이트로 노이즈를 걸러낸 라우팅 설계와 실측 벤치를 공개합니다."
-seo_title: "AI 에이전트 스킬 1600개 라우팅 설계 - Skill Retrieval Augmentation - Thaki Cloud"
+seo_title: "스킬 1,600개를 노이즈 없이 라우팅하는 법"
 seo_description: "스킬이 많다고 좋은 게 아닙니다. Claude Code 기반 1,620개 스킬 생태계에서 SRA + BM25 게이트로 노이즈를 제거한 라우팅 설계와 실측 벤치를 공개합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22

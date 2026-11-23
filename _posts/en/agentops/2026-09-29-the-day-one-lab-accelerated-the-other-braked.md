@@ -1,9 +1,9 @@
 ---
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/agentops/the-day-one-lab-accelerated-the-other-braked/
-title: "The day one lab accelerated and the other braked: why the speed axis split in two"
+title: "One Lab Accelerated, the Other Braked: The Speed Axis Splits"
 excerpt: "On the same day, Anthropic shipped two 'faster and cheaper' announcements, and OpenAI dropped Astra from its launch schedule a day before its conference. A lens for reading the day the speed of the agent era split into two: the speed of capability improvement and the speed of proving the output."
-seo_title: "The Day One Lab Accelerated and the Other Braked | ThakiCloud"
+seo_title: "One Lab Accelerated, the Other Braked: The Speed Axis Splits"
 seo_description: "On September 28, Sonnet 5.5 overtook the flagship Opus 5.5 (66.4 percent) at half the price with 70.6 percent on the agentic coding benchmark Terminal-Bench 4.0, and Opus 5.5 debuted at No. 2 in the Agent Arena with 64 percent lower cost per task. On the same day, OpenAI canceled the Astra launch over safety alignment failures, followed by Florida's emergency order request, a White House lunch, and Nvidia's hardware watchdog platform."
 date: 2026-09-29
 last_modified_at: 2026-09-29

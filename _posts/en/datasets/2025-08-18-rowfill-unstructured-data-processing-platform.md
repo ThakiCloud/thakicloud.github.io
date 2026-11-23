@@ -1,7 +1,7 @@
 ---
-title: "Rowfill: Complete Guide to Unstructured Data Processing Platform for Knowledge Workers"
+title: "Rowfill: Structuring Unstructured Data for Knowledge Work"
 excerpt: "Discover the core features and applications of Rowfill, an open-source AI platform that automatically structures PDF, image, and audio files."
-seo_title: "Rowfill Unstructured Data Processing Platform Guide - OCR AI Document Extraction Tool - Thaki Cloud"
+seo_title: "Rowfill: Structuring Unstructured Data for Knowledge Work"
 seo_description: "How to convert PDF, images, and audio to structured data with open-source Rowfill. Detailed analysis including AI OCR, automatic schema generation, and local LLM support"
 date: 2025-08-18
 last_modified_at: 2025-08-18

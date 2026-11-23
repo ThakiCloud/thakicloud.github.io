@@ -1,7 +1,7 @@
 ---
-title: "LLM Agents That Evolve Without Rewards: World Knowledge Exploration Training (arXiv:2604.18131)"
+title: "Agents That Evolve Without Rewards"
 excerpt: "An analysis of a training methodology in which agents generate world knowledge on their own without external reward signals, then use that knowledge to improve downstream performance. Includes 20% gain on web tasks and Qwen3-14B outperforming Gemini-2.5-Flash."
-seo_title: "Reward-Free LLM Agent Self-Evolution Training Analysis - Thaki Cloud"
+seo_title: "Agents That Evolve Without Rewards"
 seo_description: "arXiv 2604.18131: reward-free agent self-evolution, world knowledge exploration training, 20% web task performance gain, and the ThakiCloud platform perspective."
 date: 2026-06-20
 last_modified_at: 2026-06-20

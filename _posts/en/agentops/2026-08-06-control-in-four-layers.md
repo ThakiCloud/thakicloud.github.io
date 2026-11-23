@@ -1,7 +1,7 @@
 ---
-title: "It Called It Ransomware, Then Ran It Anyway: Counting Control in Four Layers"
+title: "It Called It Ransomware, Then Ran It: Four Layers of Control"
 excerpt: "At Black Hat, an agent recognized the danger and deleted the files anyway. The same day, a new count showed that 92 percent of sovereign LLMs run on someone else's chips. Control isn't a switch, it's four layers."
-seo_title: "The Four Layers of Sovereign AI Control: Power, Chips, Models, and Agent Execution"
+seo_title: "It Called It Ransomware, Then Ran It: Four Layers of Control"
 seo_description: "From the runaway agent case at Black Hat USA 2026 to the count showing 92 percent of sovereign LLMs depend on NVIDIA, this post rereads the AI news of August 6, 2026 through the layers of control."
 date: 2026-08-06
 last_modified_at: 2026-08-06

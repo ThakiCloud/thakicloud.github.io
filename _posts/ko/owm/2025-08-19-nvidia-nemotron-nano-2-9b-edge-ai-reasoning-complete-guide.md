@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron Nano 2 9B: 엣지 AI 추론 혁신과 Thinking Budget 완전 가이드"
+title: "Nemotron Nano 2 9B: 엣지 추론과 Thinking Budget"
 excerpt: "6배 빠른 처리 속도와 60% 비용 절감을 제공하는 NVIDIA Nemotron Nano 2 9B 모델의 Hybrid Transformer-Mamba 아키텍처와 실습 가이드"
-seo_title: "NVIDIA Nemotron Nano 2 9B 엣지 AI 추론 모델 완전 가이드 - Thaki Cloud"
+seo_title: "Nemotron Nano 2 9B: 엣지 추론과 Thinking Budget"
 seo_description: "NVIDIA Nemotron Nano 2 9B의 Hybrid Transformer-Mamba 아키텍처, Thinking Budget 기능, 실습 가이드로 엣지 AI 추론 성능을 혁신하세요"
 date: 2025-08-19
 last_modified_at: 2025-08-19

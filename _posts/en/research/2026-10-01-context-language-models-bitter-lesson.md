@@ -1,6 +1,6 @@
 ---
-title: "Context Is a File the Model Rewrites Itself: Context Language Models (CLMs) and the Bitter Lesson for Context Management"
-seo_title: "Context Language Models (CLMs) paper analysis - treating context as a file the model updates unrestrictedly beats human-designed compaction SOTA by 11.4% accuracy and 21.5% fewer FLOPs; online RL adds 47.6% on Qwen3.5-9B. Bitter Lesson framing, BrowseComp-Plus/TerminalBench 2.1/TBLite results, multi-agent context files, ThakiCloud Paxis and Maxis implications - ThakiCloud"
+title: "Context Is a File the Model Rewrites: Context Language Models"
+seo_title: "Context Is a File the Model Rewrites: Context Language Models"
 seo_description: "Meta's Context Language Models (CLMs) treat the model's own context as a file it can update without restriction. Instead of human-designed compaction heuristics, the model learns to manage its context, beating SOTA on both accuracy and compute. We analyze what the latest Bitter Lesson data point means for agent platforms and RL training infrastructure."
 excerpt: "Treat the context as a file the model rewrites itself, and you beat hand-designed compaction heuristics on both accuracy and compute. Meta's Context Language Models (CLMs) paper is the newest data point of the Bitter Lesson, this time for context management."
 date: 2026-10-01

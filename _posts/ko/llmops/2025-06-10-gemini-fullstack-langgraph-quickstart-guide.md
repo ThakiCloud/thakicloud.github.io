@@ -1,5 +1,5 @@
 ---
-title: "Google Gemini 2.5 + LangGraph로 구축하는 AI 연구 에이전트 - 풀스택 가이드"
+title: "Gemini 2.5와 LangGraph로 만드는 AI 연구 에이전트"
 date: 2025-06-10
 tags: 
   - Google Gemini

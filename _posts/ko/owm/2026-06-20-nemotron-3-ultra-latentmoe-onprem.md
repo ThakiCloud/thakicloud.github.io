@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron-3-Ultra-550B: LatentMoE 하이브리드, 1M 컨텍스트, 한국어 지원 온프렘 분석"
+title: "Nemotron-3-Ultra-550B: 한국어 온프렘 도입 분석"
 excerpt: "NVIDIA가 OpenMDW-1.1 라이선스로 공개한 Nemotron-3-Ultra-550B-A55B는 Mamba-2와 MoE, Attention을 결합한 LatentMoE 하이브리드 아키텍처다. 최소 B200 8장이 필요하고 한국어를 포함한 10개 언어를 공식 지원한다."
-seo_title: "NVIDIA Nemotron-3-Ultra-550B LatentMoE 온프렘 서빙 가이드 - Thaki Cloud"
+seo_title: "Nemotron-3-Ultra-550B: 한국어 온프렘 도입 분석"
 seo_description: "Nemotron-3-Ultra 550B의 LatentMoE 아키텍처(Mamba-2+MoE+Attention), 벤치마크(SWE-Bench Verified 70.7%, MMLU-Pro 86.8%), vLLM/SGLang/TRT-LLM 서빙과 B200 최소 요구사항을 분석했다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

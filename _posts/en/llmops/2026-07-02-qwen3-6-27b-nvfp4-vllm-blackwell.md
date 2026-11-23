@@ -1,7 +1,7 @@
 ---
 title: "Qwen3.6-27B in NVFP4: The Economics of Single-GPU Blackwell Serving"
 excerpt: "NVIDIA re-quantized Qwen3.6-27B to NVFP4 so it serves on a single Blackwell GPU with vLLM out of the box. We break down how the mixed precision (MLP in NVFP4, attention and KV cache in FP8) fits a 27B model in about 22GB, and what that means for the multi-tenant GPU serving economics of ThakiCloud ai-platform."
-seo_title: "Qwen3.6-27B-NVFP4 on vLLM: Single-GPU Blackwell Serving Analysis | Thaki Cloud"
+seo_title: "Qwen3.6-27B in NVFP4: The Economics of Single-GPU Blackwell Serving"
 seo_description: "How NVIDIA ModelOpt's Qwen3.6-27B-NVFP4 re-quantization (MLP in NVFP4 W4A16, attention and KV cache in FP8) serves on vLLM, and what single-GPU Blackwell serving implies for GPU cost efficiency on ThakiCloud ai-platform."
 date: 2026-07-02
 last_modified_at: 2026-07-02

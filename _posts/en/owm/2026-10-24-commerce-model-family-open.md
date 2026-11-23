@@ -1,7 +1,7 @@
 ---
 title: "From Search to Support: Releasing Ten Commerce Models for Online Shops"
 excerpt: "Product search, reranking, attribute extraction, order and repurchase prediction, next-click recommendation, review analysis and refund support are each a different model's job. Here is where each of ThakiCloud's ten open commerce models fits in a shop's pipeline, what it beat, and how far it has been checked."
-seo_title: "Ten Open Commerce Models: Product Search, Reranker, Attribute Extraction, Order Intent, Session Recommendation, Review Analysis, Support Agent - ThakiCloud"
+seo_title: "From Search to Support: Releasing Ten Commerce Models for Online Shops"
 seo_description: "ThakiCloud's ten Commerce models on Hugging Face, walked through in pipeline order: EmbeddingGemma 2 product search, a Qwen3 reranker, Qwen3.5-4B attribute extraction, OTTO order intent, repurchase and session recommendation, FINN slate click, a Korean review aspect-sentiment model, and a support agent shipped with an authorization guard, with their roles, results and limitations."
 date: 2026-10-24
 last_modified_at: 2026-10-25

@@ -1,6 +1,6 @@
 ---
-title: "이미지 서빙의 두 번째 레버: Pruna가 Qwen-Image-2.1의 스텝을 5~8회로 줄인 LoRA"
-seo_title: "PrunaAI가 Qwen-Image-2.1용 few-step LoRA 어댑터를 오픈소스했다. 5스텝 또는 8스텝, CFG 불필요, 최대 6.3배 빠르다. 베이스 가중치와 엔진을 건드리지 않는 형태라 vLLM-Omni의 크로스스텝 KV 캐시와 CUDA Graphs 같은 엔진 레버와 독립적으로 합성된다. 다키클라우드 B200 이미지 파이프라인 관점에서 스텝 수 레버가 어떤 비용·지연 효과를 내는지 분석한다."
+title: "이미지 서빙의 두 번째 레버: Few-Step LoRA"
+seo_title: "이미지 서빙의 두 번째 레버: Few-Step LoRA"
 seo_description: "Qwen-Image-2.1 서빙 논쟁이 엔진(vLLM-Omni day-0, 크로스스텝 KV 캐시)에서 스텝 수로 확장됐다. PrunaAI의 few-step LoRA 어댑터가 5~8회 전달로 동작하고 CFG를 제거해 최대 6.3배 가속을 주장한다. 베이스 파이프라인·인코더·VAE가 그대로인 adapter-only 형태, diffusers/ComfyUI 사용법, 그리고 B200 배치 생성 비용에 대한 시사점을 짚는다."
 excerpt: "이미지 생성 서빙의 비용은 두 레버로 줄인다. 엔진 효율과 스텝 수. Pruna의 few-step LoRA가 두 번째 레버를 오프더셸 부품으로 만들었다. 베이스 가중치를 바꾸지 않는다는 것이 핵심이다."
 date: 2026-09-27

@@ -1,6 +1,6 @@
 ---
-title: "3,000시간의 베트남어 오디오로 EmbeddingGemma 2를 재훈련한 356M 모델, 대형 API ASR보다 평균 WER 6.87%로 앞선 일"
-seo_title: "EmbeddingGemma 2를 3,000시간 베트남어 오디오로 재훈련한 356M 모델이 평균 WER 6.87%로 Gemini-Flash-3.8(6.92%)·Qwen3-ASR-1.7B(7.01%)보다 낫습니다. 8xH100 2시간 - ThakiCloud"
+title: "EmbeddingGemma 2를 베트남어 ASR로 재훈련한 모델"
+seo_title: "EmbeddingGemma 2를 베트남어 ASR로 재훈련한 모델"
 seo_description: "음성을 벡터로 대표하던 임베딩 모델을 ASR으로 전환한 실험. 3,000시간의 베트남어 오디오와 8xH100 2시간의 훈련으로 356M 모델이 베트남어 WER 6.87%에 도달했습니다. 다국어 STT에서 대형 API 모델이 기본값인지 되묻게 하는 벤치마크 테이블입니다."
 excerpt: "음성을 벡터로 대표하던 모델이, 3,000시간의 베트남어 오디오로 재훈련되자 2B대 대형 API ASR 모델보다 말소리를 더 잘 옮겼습니다. 훈련 비용은 8장의 H100에 2시간."
 date: 2026-10-16

@@ -1,7 +1,7 @@
 ---
-title: "iTool: Reinforced Fine-Tuning with Dynamic Deficiency Calibration for Advanced Tool Use"
+title: "iTool: Reinforced Fine-Tuning for Advanced Tool Use"
 excerpt: "An in-depth analysis of iTool, an innovative reinforced fine-tuning methodology that addresses the diminishing training effectiveness of synthetic tool-use data"
-seo_title: "iTool Reinforced Fine-Tuning Research: Improving LLM Tool Use Capability - Thaki Cloud"
+seo_title: "iTool: Reinforced Fine-Tuning for Advanced Tool Use"
 seo_description: "Analysis of the iTool research paper jointly developed by Harbin Institute of Technology and Huawei. Achieves 13% improvement in LLM tool use performance through MCTS-based path search and preference optimization"
 date: 2025-08-21
 last_modified_at: 2025-08-21

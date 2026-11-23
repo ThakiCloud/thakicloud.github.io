@@ -1,6 +1,6 @@
 ---
-title: "Script-Blind Retrieval: CJK Queries Invisible to an ASCII Tokenizer, and a Regression in the Name of Consistency"
-seo_title: "Script-Blind Retrieval, CJK Trigger Blind Spots, and Gate Collapse - ThakiCloud"
+title: "Script-Blind Retrieval: CJK Queries Invisible to ASCII"
+seo_title: "Script-Blind Retrieval: CJK Queries Invisible to ASCII"
 seo_description: "An audit of the 1,911-item production skill router found that the ASCII-only tokenizer reduces all 21 pure Chinese character queries to an empty token set, leaving Top-1 at 0.0%. A one-line character class extension revives Top-1 to 95.24%. The existing Korean benchmark is untouched, but applying the 0.35 fragment discount consistently to Chinese characters and kana drops gated Recall@5 to 19.05% while ranking metrics stay healthy. We name this failure mode gate collapse and show, in measured numbers, why retrieval systems with threshold gates must report gate metrics alongside ranking metrics."
 excerpt: "Characters absent from the tokenizer's regex do not rank poorly, they are simply invisible. In an audit of the 1,911-item production skill router, 21 pure Chinese character queries tokenize to an empty token set, and applying the Hangul-only 0.35 discount to Chinese characters and kana 'consistently' yields a measured failure mode where the production injection gate drops 76 points while ranking metrics stay intact."
 date: 2026-08-15

@@ -1,5 +1,5 @@
 ---
-title: "It Warned Every Time but Rarely Refused: Re-Measuring Suitability as Action"
+title: "It Warned Every Time but Rarely Refused"
 excerpt: "A model that spoke every mandatory warning still kept selling on risky requests. The fix was not more training data but better data, and it lifted the suitability action pass rate from 8.0% to 81.8%."
 categories: [research]
 tags: [compliance, finetuning, suitability, korean-llm, financial-ai]

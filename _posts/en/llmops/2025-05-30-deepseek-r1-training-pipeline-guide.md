@@ -1,7 +1,7 @@
 ---
-title: "DeepSeek-R1 Complete Reproduction Guide: 2-Stage RL + 2-Stage SFT + Distillation Pipeline"
+title: "Reproducing DeepSeek-R1: The Full Training Pipeline"
 excerpt: "Step-by-step complete reproduction of DeepSeek-R1's official training pipeline. From reinforcement learning to knowledge distillation - a comprehensive implementation guide"
-seo_title: "DeepSeek-R1 Training Pipeline - Complete Reproduction Guide"
+seo_title: "Reproducing DeepSeek-R1: The Full Training Pipeline"
 seo_description: "Master the complete DeepSeek-R1 training methodology with our comprehensive guide covering 2-stage RL, 2-stage SFT, and distillation processes"
 date: 2025-05-30
 tags:

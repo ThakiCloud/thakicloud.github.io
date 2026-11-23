@@ -1,7 +1,7 @@
 ---
-title: "Does splitting vLLM Prefill/Decode across two B200s actually make things faster?"
+title: "Does Splitting vLLM Prefill and Decode Speed Things Up?"
 excerpt: "We measured actual tokens-per-second across tensor parallelism, data parallelism, and Prefill/Decode disaggregation (1P1D) for Qwen3.6-27B-NVFP4 and gemma-4-26B-A4B on two NVIDIA B200 GPUs. With only two GPUs, the winner for total throughput was not disaggregation but data parallelism, and this result does not contradict large-scale cases like DistServe, Mooncake, DeepSeek, and NVIDIA Dynamo. We lay out a decision guide, backed by evidence, for when to disaggregate and when to just use DP/TP."
-seo_title: "B200 2-GPU vLLM Prefill/Decode Disaggregation TPS Benchmark - Qwen3.6-NVFP4 / gemma-4-FP8 | Thaki Cloud"
+seo_title: "Does Splitting vLLM Prefill and Decode Speed Things Up?"
 seo_description: "We measured TPS and TPOT for tensor parallelism (TP=2), data parallelism (DP=2), and Prefill/Decode disaggregation (1P1D, NIXL) on vLLM 0.24 across two NVIDIA B200 GPUs. We cover NVFP4, hybrid attention, and real-world gotchas of MoE serving from a ThakiCloud GPU serving operations perspective."
 date: 2026-07-03
 last_modified_at: 2026-07-03

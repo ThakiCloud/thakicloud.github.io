@@ -1,7 +1,7 @@
 ---
-title: "LandingAI Agentic Document Extraction 완전 가이드: AI 기반 PDF 및 이미지 처리"
+title: "LandingAI Agentic Document Extraction: PDF 데이터 추출"
 excerpt: "LandingAI의 Agentic Document Extraction 라이브러리를 활용한 지능형 문서 처리 마스터하기. 복잡한 PDF, 이미지, 문서에서 구조화된 데이터를 AI 파싱 기능으로 추출하는 방법을 학습합니다."
-seo_title: "LandingAI Agentic Document Extraction 튜토리얼 - AI PDF 처리 가이드"
+seo_title: "LandingAI Agentic Document Extraction: PDF 데이터 추출"
 seo_description: "LandingAI의 Agentic Document Extraction 라이브러리를 활용한 AI 기반 문서 처리 방법을 학습하세요. 코드 예제, 배치 처리, 시각화 기능을 포함한 완전한 튜토리얼입니다."
 date: 2025-10-05
 tags:

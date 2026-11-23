@@ -1,7 +1,7 @@
 ---
 title: "The Morning the Black Box Myth Ended"
 excerpt: "Research on trillion-parameter models has confirmed that the tangled knots inside neural networks are far simpler than previously thought. It was the morning the premise behind the phrase 'black box,' which had described AI for a decade, began to shake. Once the inside becomes readable, the question shifts from 'do we understand it' to 'where and how do we run it.'"
-seo_title: "The Morning the Black Box Myth Ended: The Inside of AI Models Starts to Be Readable | ThakiCloud"
+seo_title: "The Morning the Black Box Myth Ended"
 seo_description: "Cammarata's research confirms that the 'tangled knots' inside neural networks are simpler than assumed, and Anthropic has granted METR employee-level access to begin an independent audit. Once legibility matures, the next competition belongs to the organizations that turn understanding into execution that is safe, cheap, and inside their own domain."
 date: 2026-10-16
 last_modified_at: 2026-10-16

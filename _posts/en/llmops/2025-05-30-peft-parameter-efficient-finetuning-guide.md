@@ -1,7 +1,7 @@
 ---
-title: "PEFT: Revolutionary Technology That Achieves Full Fine-Tuning Performance by Training Only 0.2% of Parameters"
+title: "PEFT: Full Fine-Tuning Quality From 0.2% of Parameters"
 excerpt: "Save 80% memory while maintaining performance with cutting-edge PEFT techniques including LoRA, AdaLoRA, and IA3. Applicable to all models from Llama to BERT to Stable Diffusion"
-seo_title: "PEFT Parameter-Efficient Fine-Tuning - Complete Guide to Memory-Efficient Training"
+seo_title: "PEFT: Full Fine-Tuning Quality From 0.2% of Parameters"
 seo_description: "Master PEFT techniques for efficient LLM training. Learn LoRA, AdaLoRA, IA3, and more to achieve full fine-tuning performance with minimal resources"
 date: 2025-05-30
 tags:

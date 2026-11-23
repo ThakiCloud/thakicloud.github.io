@@ -1,6 +1,6 @@
 ---
-title: "A Coding Model That Lights Up 8 Experts Out of 256: Inside the KAT-Coder-V2.5-Dev Checkpoint"
-seo_title: "KAT-Coder-V2.5-Dev On-Premises Serving Analysis: 35B-A3B MoE Measured | ThakiCloud"
+title: "KAT-Coder-V2.5-Dev: 8 Experts Out of 256, Opened Up"
+seo_title: "KAT-Coder-V2.5-Dev: 8 Experts Out of 256, Opened Up"
 seo_description: "We tallied the config.json and safetensors index of KAT-Coder-V2.5-Dev, the Apache-2.0 agentic coding model, straight from the source. Here is the 3.12% expert sparsity, why only 10 of 40 layers use full attention so a 262K-token KV cache costs just 5GiB, and how 65.2GiB of bf16 weights fit on a single H200."
 excerpt: "It scores 69.4 on SWE-bench Verified with 3B active parameters. We opened the checkpoint to see what that number means for your GPUs."
 date: 2026-07-29

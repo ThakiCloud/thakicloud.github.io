@@ -1,7 +1,7 @@
 ---
-title: "AnyCrawl: LLM 친화적 웹 크롤러 완전 가이드 - AI 데이터 수집의 새로운 표준"
+title: "AnyCrawl: LLM 친화적 웹 크롤러"
 excerpt: "Node.js/TypeScript로 구축된 AnyCrawl로 웹사이트를 LLM 친화적 데이터로 변환하고, Google/Bing SERP 결과를 효율적으로 수집하는 방법을 마스터해보세요."
-seo_title: "AnyCrawl LLM 웹 크롤러 완전 가이드 - AI 데이터 수집 도구 - Thaki Cloud"
+seo_title: "AnyCrawl: LLM 친화적 웹 크롤러"
 seo_description: "Any4AI의 AnyCrawl로 웹 스크래핑, SERP 크롤링, 멀티스레딩 데이터 수집을 구현하는 방법. Docker 설치부터 실전 활용까지 상세 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15

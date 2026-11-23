@@ -1,6 +1,6 @@
 ---
-title: "A 36-Second Product Promo Rendered in 22.76 Seconds: A Measured Report on video-shotcraft"
-seo_title: "video-shotcraft Measured: Cinematic Product Video From an Agent Skill | ThakiCloud"
+title: "video-shotcraft: A 36-Second Promo in 22.76 Seconds"
+seo_title: "video-shotcraft: A 36-Second Promo in 22.76 Seconds"
 seo_description: "We cloned video-shotcraft, the video skill for Claude Code and Codex, and rendered its Remotion template end to end. A 1085-frame 1920x1080 promo finished in 22.76 seconds on a 12-core MacBook, 1.59x faster than realtime. We look at how 104 shot recipe cards hide behind a 15KB entry point and what that structure implies for Paxis skill harness design."
 excerpt: "The real achievement of this video skill is not the motion. It is the progressive-disclosure structure that fronts a 1.33MB knowledge bundle with a single 15KB entry point. Here are the numbers we measured ourselves."
 date: 2026-07-27

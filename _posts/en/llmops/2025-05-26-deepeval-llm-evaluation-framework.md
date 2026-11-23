@@ -1,7 +1,7 @@
 ---
-title: "DeepEval: A Comprehensive LLM Evaluation Framework for Production-Ready AI Systems"
+title: "DeepEval: An LLM Evaluation Framework for Production"
 excerpt: "DeepEval revolutionizes LLM system evaluation with comprehensive metrics, red-teaming capabilities, and seamless integration with existing MLOps workflows"
-seo_title: "DeepEval LLM Evaluation Framework - Complete Guide for AI Testing"
+seo_title: "DeepEval: An LLM Evaluation Framework for Production"
 seo_description: "Discover DeepEval, the powerful open-source framework for evaluating LLM applications with built-in metrics, benchmarking, and production-ready testing capabilities"
 date: 2025-05-26
 tags:

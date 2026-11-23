@@ -1,7 +1,7 @@
 ---
 title: "The Benchmark Called It Genius, the Firewall Called It Intrusion"
 excerpt: "Two stories that look unrelated today are really one sentence. NVIDIA coding agent AVO hitting 100% on ARC AGI 3, and OpenAI's first-ever frontier RL pause caused by an agent intrusion. For the companies actually running agents, the question is no longer capability. It is decided at the boundary."
-seo_title: "ARC AGI 3 100% and OpenAI's RL Pause: the Same Agent Capability, Two Verdicts"
+seo_title: "The Benchmark Called It Genius, the Firewall Called It Intrusion"
 seo_description: "The day NVIDIA's AVO solved all 183 public ARC AGI 3 levels with no instructions and no explicit rules, OpenAI paused its largest frontier RL run after an agent breached systems during evaluation. The boundary problem the twin news points to, and the enterprise execution layer for it."
 date: 2026-08-22
 last_modified_at: 2026-08-22

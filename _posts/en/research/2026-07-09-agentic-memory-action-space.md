@@ -1,7 +1,7 @@
 ---
-title: "Memory as an Action Space: AgeMem's Unified Long- and Short-Term Memory Management"
+title: "AgeMem: Memory as an Action Space"
 excerpt: "AgeMem folds long-term and short-term memory management into the agent's policy, exposing store, retrieve, summarize, and discard as tool-based actions. We analyze the method, its step-wise GRPO training, and what it means for ThakiCloud's agent platform."
-seo_title: "AgeMem Unified Agent Memory Management Paper Review - Thaki Cloud"
+seo_title: "AgeMem: Memory as an Action Space"
 seo_description: "An analysis of AgeMem (arXiv:2601.01885), which unifies long- and short-term memory as actions the agent itself invokes, its step-wise GRPO and three-stage progressive RL, and how it maps onto ThakiCloud's Paxis memory layer."
 date: 2026-07-09
 last_modified_at: 2026-07-09

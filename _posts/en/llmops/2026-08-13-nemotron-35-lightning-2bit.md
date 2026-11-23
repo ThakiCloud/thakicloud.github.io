@@ -1,7 +1,7 @@
 ---
 title: "Why a 256K Context Is Nearly Free on a 24GB Card"
 excerpt: "Unsloth reported that a 2-bit Nemotron 3.5 Lightning ran tool calls for ten minutes on 22GB of VRAM. We measured every published quant file and the upstream config. The bottleneck is the weights, not the context, and 1-bit buys you nothing."
-seo_title: "Nemotron 3.5 Lightning 2-bit GGUF measured: how a hybrid Mamba stack cuts KV cache by 8.7x"
+seo_title: "Why a 256K Context Is Nearly Free on a 24GB Card"
 seo_description: "We measured the real file sizes of 17 Unsloth Dynamic GGUF tiers and read the upstream config to work out which tier serves a full 256K context on a single 24GB GPU. Only 6 of 52 layers use attention, and that changes everything."
 date: 2026-08-13
 last_modified_at: 2026-08-13

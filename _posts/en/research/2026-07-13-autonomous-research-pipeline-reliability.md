@@ -1,6 +1,6 @@
 ---
-title: "Auditing an Autonomous Nightly Paper-Generation Pipeline Over 8 Days: A Case Study in Reliability, Diversity, and Research Integrity"
-seo_title: "Autonomous LLM Research Pipeline Reliability Audit Study - ThakiCloud"
+title: "Auditing a Nightly Paper-Generation Pipeline for 8 Days"
+seo_title: "Auditing a Nightly Paper-Generation Pipeline for 8 Days"
 seo_description: "We introduce a study that audits an unattended nightly paper-generation pipeline, which runs from topic discovery through drafting, citation verification, and self-review, using eight days of real operational logs. It covers the reliability shift before and after a guardrail fix, topic diversity, an independent recomputation of gate metrics, and a set of six minimal guardrails."
 excerpt: "This study audits a fully autonomous pipeline that generates a paper every night, not by inspecting the final output but by examining its actual operational logs. Across eight days, it finds a clear before/after shift centered on 2026-07-08, where language purity and review pass rate improved together, and distills this into six minimal guardrails."
 date: 2026-07-13

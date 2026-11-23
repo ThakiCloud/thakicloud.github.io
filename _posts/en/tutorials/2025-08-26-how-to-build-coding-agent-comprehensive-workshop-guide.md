@@ -1,7 +1,7 @@
 ---
 title: "How to Build a Coding Agent: A Comprehensive Workshop Guide"
 excerpt: "Learn to build your own AI coding agent similar to Cursor, Cline, and Windsurf with this step-by-step tutorial using Go and Anthropic Claude API"
-seo_title: "Build AI Coding Agent: Step-by-Step Tutorial with Go & Claude - Thaki Cloud"
+seo_title: "How to Build a Coding Agent: A Comprehensive Workshop Guide"
 seo_description: "Complete guide to building coding agents like Cursor and Windsurf. Learn tool integration, API management, and progressive development with practical examples"
 date: 2025-08-26
 tags:

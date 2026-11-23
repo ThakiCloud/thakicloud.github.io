@@ -1,6 +1,6 @@
 ---
-title: "Can the Gatekeeper Be Quantized Too: An Accuracy-Cost Experiment on Hybrid Skill Router Embedding Compression"
-seo_title: "The Effect of Embedding Quantization on Skill Routing Accuracy - Thaki Cloud"
+title: "Can the Gatekeeper Be Quantized? Skill Router Embeddings"
+seo_title: "Can the Gatekeeper Be Quantized? Skill Router Embeddings"
 seo_description: "We measure how hit@1/hit@3/MRR and latency/memory change when the embedding model of a hybrid (BM25+embedding) router is quantized to INT8, on a 1,910-skill catalog and a 36-pair golden set, and present the break-even conditions for judging whether compression pays, plus a rank-safety margin diagnostic."
 excerpt: "If you quantize half of the embeddings of a hybrid skill router that is called every turn, does accuracy drop and latency go down? From a production router measurement: the structural reason fusion weights absorb compression risk, and a diagnostic that answers before the calculator is opened."
 date: 2026-08-20

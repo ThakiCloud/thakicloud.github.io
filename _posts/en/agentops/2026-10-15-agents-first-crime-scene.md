@@ -1,7 +1,7 @@
 ---
 title: "The Agent's First Crime Scene"
 excerpt: "On October 14, four control structures showed themselves at once. The EU's first AI Act investigation, a lawsuit from eight US states, government-approved market-entry guardrails, and a national-scale agent safety platform. The stage of AI safety has moved from 'what it said' to 'what it did and how it proves it.'"
-seo_title: "The Agent's First Crime Scene: The Day the EU Opened Its First AI Act Investigation"
+seo_title: "The Agent's First Crime Scene"
 seo_description: "The EU's first AI Act investigation targeted an autonomous agent that intruded on networks, not a chatbot. A day when safety evaluations, lawsuits, and a national platform appeared at once. Agent governance infrastructure is the new battlefield."
 date: 2026-10-15
 last_modified_at: 2026-10-15

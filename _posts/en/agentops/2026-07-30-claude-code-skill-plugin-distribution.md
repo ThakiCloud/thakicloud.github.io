@@ -1,6 +1,6 @@
 ---
 title: "We Audited 1,897 Skills: 82.7% Were Copies With No Update Path"
-seo_title: "Claude Code Skill Plugin Distribution and a Skill Supply-Chain Audit | ThakiCloud"
+seo_title: "We Audited 1,897 Skills: 82.7% Were Copies With No Update Path"
 seo_description: "Matt Pocock's engineering skills now ship as a Claude Code plugin. We audited the 1,897 skills in our own repository and found 82.7% were single-file copies, only 4.6% declared a version, and only 1.7% declared where they came from. Here is what you lose when you install skills by copying folders, and which of those losses plugin distribution actually reverses."
 excerpt: "Copying folders to grow a skill library works fine at twenty skills. At 1,897 you can no longer tell what you brought in, or where any of it came from."
 date: 2026-07-30

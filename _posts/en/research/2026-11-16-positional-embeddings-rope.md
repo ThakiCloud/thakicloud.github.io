@@ -1,6 +1,6 @@
 ---
-title: "Positional Embeddings: Word Order Is the One Thing Attention Cannot Infer"
-seo_title: "Positional Embeddings: Reproducing RoPE From Scratch and the 2026 Partial RoPE vs NoPE Split — Measuring the 0.134 GB Table Halving at 1M Context - ThakiCloud"
+title: "Positional Embeddings: What Attention Cannot Infer"
+seo_title: "Positional Embeddings: What Attention Cannot Infer"
 seo_description: "Sebastian Raschka's positional embeddings tutorial covers six schemes from GPT-2's learned absolute positions to 2026's partial RoPE and NoPE layers. This post reproduces the core RoPE math (the dot product depends only on relative distance) in PyTorch and walks through the 2026 model landscape (MiniMax-M3, SmolLM3, Inkling) and what it means for context economics."
 excerpt: "The partial_rotary_factor and no_pe fields in a model config are design decisions, not typos. We reproduced the RoPE core (the dot product depends only on relative distance) in 10 lines of PyTorch and measured how partial RoPE halves the 1M-context table (0.268 to 0.134 GB)."
 date: 2026-11-16

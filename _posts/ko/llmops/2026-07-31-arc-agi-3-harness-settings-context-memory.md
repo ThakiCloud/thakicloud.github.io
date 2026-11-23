@@ -1,6 +1,6 @@
 ---
 title: "같은 모델, 다른 점수: ARC-AGI-3에서 하네스가 벤치마크를 결정한 사건"
-seo_title: "ARC-AGI-3 하네스 논쟁 정리: retained reasoning과 compaction이 점수를 3배로 올린 이유 | ThakiCloud"
+seo_title: "같은 모델, 다른 점수: ARC-AGI-3에서 하네스가 벤치마크를 결정한 사건"
 seo_description: "OpenAI는 2026년 7월 GPT-5.6 Sol의 ARC-AGI-3 공개 세트 점수가 공식 하네스에서 13.3%였지만 Responses API에 retained reasoning과 compaction을 켜자 38.3%로 올랐고 출력 토큰은 약 6분의 1로 줄었다고 밝혔습니다. 무엇이 실제로 달라졌는지, 이 수치를 Opus 5의 공식 30.2%와 나란히 놓을 수 있는지, 그리고 우리 에이전트 파이프라인의 컨텍스트 관리에 어떤 의미인지 정리했습니다."
 excerpt: "모델을 바꾸지 않고 API 설정 두 개만 바꿨는데 점수가 세 배가 됐습니다. 이 사건이 알려주는 것은 벤치마크의 순위가 아니라 컨텍스트 관리가 곧 성능이라는 사실입니다."
 date: 2026-07-31

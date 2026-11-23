@@ -1,6 +1,6 @@
 ---
-title: "Moving a Quantized Model to a Standard Format: Both NO-GOs Came From Our Own Test Code"
-seo_title: "A 3-gate verification design for moving packed low-bit weights to GGUF: bit-identical readback, exhaustive tokenizer comparison, embedding cosine 0.999020 - ThakiCloud"
+title: "Moving a Quantized Model to a Standard Format"
+seo_title: "Moving a Quantized Model to a Standard Format"
 seo_description: "ThakiCloud shares the verification design used to move the D50 M1a embedding model from its own packed format to GGUF. We never lowered the thresholds we wrote down in advance, and both NO-GOs pointed at defects in the measurement code."
 excerpt: "How do you prove that a quantized model still works after conversion to another format? We built a 3-gate check and got two NO-GOs, and both times the cause was the verification code, not the model. We found those defects because we did not lower the thresholds."
 date: 2026-10-17

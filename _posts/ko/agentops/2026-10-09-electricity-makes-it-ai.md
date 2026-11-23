@@ -1,7 +1,7 @@
 ---
 title: "전기를 전기로 만든 것은 발전기가 아니었다"
 excerpt: "오픈AI가 '전기처럼 AI'를 외친 바로 그날, 매출 200억 달러를 깎았다. 오늘 아침 뉴스가 가리킨 것은 모델의 성능이 아니라, AI를 전처럼 쓰게 하는 배급과 계측, 그리고 감사라는 마지막 벽이었다."
-seo_title: "전기를 전기로 만든 것은 발전기가 아니었다 | AI를 전기처럼 쓰게 하는 마지막 벽"
+seo_title: "전기를 전기로 만든 것은 발전기가 아니었다"
 seo_description: "오픈AI 매출 정정, Haiku 5.5 가격 인하, Kimi K2.6 스웜, OSAT 메모리 공급, 아크릴 GPU 오케스트레이션, GoodData 서빙 플레인, SAP TechWolf, SKT 토큰 경제, 그리고 '전기처럼 AI'의 네 벽. 오늘 아침 뉴스가 공통으로 가리킨 층은 Agent-Native Cloud이었다."
 date: 2026-10-09
 last_modified_at: 2026-10-09

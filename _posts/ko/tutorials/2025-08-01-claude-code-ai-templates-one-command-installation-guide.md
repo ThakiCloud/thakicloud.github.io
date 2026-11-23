@@ -1,7 +1,7 @@
 ---
-title: "Claude Code AI Templates 완전 활용 가이드 - 원클릭으로 에이전트, MCP, 템플릿 설치하기"
+title: "Claude Code AI Templates: 한 줄 명령으로 에이전트 설치"
 excerpt: "Claude Code가 더욱 강력해졌습니다! 이제 단일 명령으로 AI 에이전트, MCP 서버, 코딩 템플릿을 즉시 설치할 수 있습니다. aitmpl.com을 통한 GitHub 기반 AI 개발 도구 생태계를 완전히 활용하는 방법을 알아보세요."
-seo_title: "Claude Code AI Templates 설치 가이드 - 원클릭 에이전트, MCP 템플릿 설치 - Thaki Cloud"
+seo_title: "Claude Code AI Templates: 한 줄 명령으로 에이전트 설치"
 seo_description: "Claude Code의 새로운 AI Templates 기능으로 에이전트, MCP 서버, 개발 템플릿을 한 번의 명령으로 설치하는 완전 가이드. GitHub Actions 기반 자동화와 실전 활용법까지 상세히 설명합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

@@ -1,6 +1,6 @@
 ---
 title: "Stop Appending History, Mutate State: Google's SKILL.state"
-seo_title: "Google SKILL.state paper analysis - explicit mutable execution state bounds agent prompts, cuts token use about 16x on long-horizon tasks - ThakiCloud"
+seo_title: "Stop Appending History, Mutate State: Google's SKILL.state"
 seo_description: "arXiv 2608.26263 SKILL.state replaces an agent's append-only conversation history with an explicit, mutable execution state. Each step the model receives only the immutable skill spec, the current state, and the latest observation, so prompt size is independent of turn count. We walk through the mechanism, the benchmarks, and where the design lands for ThakiCloud's agent platform."
 excerpt: "An agent that keeps appending history grows its prompt at every turn. SKILL.state removes the growth at the structure: each step the model sees only the immutable spec, the current state, and the latest observation."
 date: 2026-09-11

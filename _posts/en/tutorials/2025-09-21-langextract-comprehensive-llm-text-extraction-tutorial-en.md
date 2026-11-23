@@ -1,7 +1,7 @@
 ---
-title: "LangExtract: Comprehensive Tutorial for Structured Text Extraction with LLMs"
+title: "LangExtract: Structured Text Extraction with LLMs"
 excerpt: "Master Google's LangExtract library for extracting structured information from unstructured text using advanced LLMs with precise source grounding and interactive visualization capabilities."
-seo_title: "LangExtract Tutorial: LLM-Powered Text Extraction Guide - Thaki Cloud"
+seo_title: "LangExtract: Structured Text Extraction with LLMs"
 seo_description: "Complete tutorial on Google's LangExtract library for structured data extraction from unstructured text using Gemini, OpenAI, and Ollama models with practical examples."
 date: 2025-09-21
 tags:

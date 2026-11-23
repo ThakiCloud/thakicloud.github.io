@@ -1,7 +1,7 @@
 ---
 title: "어려운 작업일수록 목표부터 쓰게 합니다: Codex goal 위임 프롬프팅"
 excerpt: "한 개발자가 Codex에 어려운 /goal을 줄 때 '다른 스레드가 이 목표를 달성하도록 목표를 대신 써달라'고 먼저 요청한다는 팁을 공유했습니다. 얼핏 말장난처럼 들리지만, 그 안에는 검증 가능한 목표 명세를 모델에게 먼저 작성시키고 그 명세를 새 스레드에 위임한다는 실질적인 에이전트 운용 패턴이 들어 있습니다. Codex goal의 실제 동작을 확인하고, ThakiCloud가 운용하는 Goal Mode와 pge-loop, Paxis 관점에서 이 기법을 짚습니다."
-seo_title: "Codex goal 위임 프롬프팅: 검증 가능한 목표를 먼저 쓰게 하는 기법 - Thaki Cloud"
+seo_title: "어려운 작업일수록 목표부터 쓰게 합니다: Codex goal 위임 프롬프팅"
 seo_description: "Codex의 /goal 기능과 '다른 스레드를 위한 목표를 대신 쓰게 하는' 메타 프롬프팅 기법을 분석합니다. 측정 가능한 결과, 검증 표면, 제약이라는 목표의 세 요소, ThakiCloud의 Goal Mode와 pge-loop 실제 구현, Paxis Agent-Native Cloud 적용 관점을 정리했습니다."
 date: 2026-07-15
 last_modified_at: 2026-07-15

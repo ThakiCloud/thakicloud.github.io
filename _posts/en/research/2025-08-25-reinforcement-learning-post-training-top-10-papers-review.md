@@ -1,7 +1,7 @@
 ---
-title: "Frontiers of Reinforcement Learning Post-Training in 2025: A Deep Review of 10 Essential Papers"
+title: "RL Post-Training in 2025: Ten Papers Worth Reading"
 excerpt: "An in-depth analysis of the most important reinforcement learning post-training research published from April 2025 onward. From Kimi k1.5 to AlphaMed, we examine the latest techniques transforming LLM reasoning capabilities."
-seo_title: "Top 10 RL Post-Training Papers of 2025 Review - Frontiers of Reasoning Innovation - Thaki Cloud"
+seo_title: "RL Post-Training in 2025: Ten Papers Worth Reading"
 seo_description: "Detailed analysis of 10 leading reinforcement learning post-training papers from 2025, including Kimi k1.5, Microsoft RPT, and Agent Lightning. Key techniques for improving LLM reasoning and practical insights for deployment."
 date: 2025-08-25
 last_modified_at: 2025-08-25

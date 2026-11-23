@@ -1,7 +1,7 @@
 ---
-title: "When Training and Inference Disagree on the Last Bit, RL Wobbles: Why That Fix Stalls at Linear Attention"
+title: "When Training and Inference Disagree, RL Wobbles"
 excerpt: "vLLM and TorchTitan audited every kernel call to make training and inference numerics match bit for bit, and once KL divergence hit zero the reward climbed higher. The same technique is still blocked on linear attention families like Gated DeltaNet."
-seo_title: "vLLM and TorchTitan bitwise parity, and the Gated DeltaNet linear attention wall"
+seo_title: "When Training and Inference Disagree, RL Wobbles"
 seo_description: "How numeric mismatch between training and inference kernels breaks RL, how vLLM and TorchTitan drove KL to zero, and the structural reason batch invariance stalls on GDN linear attention."
 date: 2026-08-09
 last_modified_at: 2026-08-09

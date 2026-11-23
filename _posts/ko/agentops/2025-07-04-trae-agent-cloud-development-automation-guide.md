@@ -1,7 +1,7 @@
 ---
-title: "TRAE-agent: ByteDance의 AI 기반 소프트웨어 엔지니어링 자동화 도구 완벽 가이드"
+title: "TRAE-agent: ByteDance의 AI 개발 자동화 도구"
 excerpt: "ByteDance에서 개발한 TRAE-agent로 클라우드 개발 워크플로우를 혁신적으로 자동화하는 방법을 알아보세요."
-seo_title: "TRAE-agent 완벽 가이드 - ByteDance AI 개발 자동화 도구 - Thaki Cloud"
+seo_title: "TRAE-agent: ByteDance의 AI 개발 자동화 도구"
 seo_description: "ByteDance TRAE-agent를 활용한 클라우드 개발 자동화 전략. 인프라 코드 생성, CI/CD 파이프라인 구축, 모니터링 시스템 개발까지 실전 사례와 함께 제공."
 date: 2025-07-04
 last_modified_at: 2025-07-04

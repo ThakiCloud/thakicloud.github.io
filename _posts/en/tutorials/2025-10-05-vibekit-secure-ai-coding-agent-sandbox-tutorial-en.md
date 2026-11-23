@@ -1,7 +1,7 @@
 ---
-title: "VibeKit: The Ultimate Security Layer for AI Coding Agents - Complete Tutorial"
+title: "VibeKit: A Security Layer for AI Coding Agents"
 excerpt: "Learn how to run Claude Code, Gemini, and other AI coding agents in secure, isolated sandboxes with built-in data redaction and comprehensive observability using VibeKit."
-seo_title: "VibeKit Tutorial: Secure AI Coding Agent Sandbox with Data Redaction - Thaki Cloud"
+seo_title: "VibeKit: A Security Layer for AI Coding Agents"
 seo_description: "Complete guide to VibeKit - run AI coding agents like Claude Code and Gemini in isolated Docker containers with automatic sensitive data redaction and real-time monitoring."
 date: 2025-10-05
 tags:

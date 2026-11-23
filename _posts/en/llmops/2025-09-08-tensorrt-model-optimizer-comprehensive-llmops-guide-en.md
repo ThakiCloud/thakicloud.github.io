@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA TensorRT Model Optimizer: Comprehensive LLMOps Guide for Production AI Deployment"
+title: "TensorRT Model Optimizer for Production LLMOps"
 excerpt: "Master NVIDIA's TensorRT Model Optimizer for enterprise LLM deployment with quantization, pruning, and optimization techniques that reduce inference costs by up to 4x."
-seo_title: "TensorRT Model Optimizer Complete Guide: LLMOps Best Practices 2025"
+seo_title: "TensorRT Model Optimizer for Production LLMOps"
 seo_description: "Learn how to optimize LLM inference with NVIDIA TensorRT Model Optimizer. Complete guide covering quantization, pruning, distillation for production AI deployment."
 date: 2025-09-08
 tags:

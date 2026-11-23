@@ -1,7 +1,7 @@
 ---
-title: "A Cognitive Virus: The Epidemic Model That Says LLM Dependence Is Not Gradual"
+title: "Cognitive Virus: An Epidemic Model of LLM Dependence"
 excerpt: "An international team including Harvard's Wyss Institute published a paper modeling LLM adoption as an epidemic. A three-state ODE (uncoupled, coupled, dependent) with a collective-reinforcement term produces a tipping point: a small increase in adoption can shift the whole population into persistent dependence, and the state does not come back easily. Here is what the model structure means for running enterprise AI platforms."
-seo_title: "LLMs as a Cognitive Virus: An Epidemic Model of Cognitive Dependence and Tipping Points | ThakiCloud"
+seo_title: "Cognitive Virus: An Epidemic Model of LLM Dependence"
 seo_description: "Analysis of arXiv 2609.03344 'Large-Language Models as a Cognitive Virus': the three-state ODE (uncoupled/coupled/dependent), the transcritical bifurcation and tipping point, hysteresis and lock-in, cognitive immunization, and implications for ThakiCloud's Paxis agent governance."
 date: 2026-09-09
 last_modified_at: 2026-09-09

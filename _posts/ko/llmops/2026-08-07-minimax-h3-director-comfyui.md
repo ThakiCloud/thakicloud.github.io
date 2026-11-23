@@ -1,7 +1,7 @@
 ---
-title: "타임라인이 프롬프트가 되는 순간: MiniMax H3 Director와 한국이 빠진 라이선스"
+title: "타임라인이 프롬프트가 될 때: MiniMax H3 Director"
 excerpt: "ComfyUI 안에 영상 편집 타임라인이 들어왔습니다. 샷마다 프롬프트를 쓰고 키프레임을 얹으면 그대로 컨디셔닝으로 컴파일됩니다. 그런데 H3 오픈웨이트 라이선스의 적용 지역에서 한국은 빠져 있습니다."
-seo_title: "MiniMax H3 Director 분석: ComfyUI 타임라인 저작과 한국 제외 라이선스"
+seo_title: "타임라인이 프롬프트가 될 때: MiniMax H3 Director"
 seo_description: "MiniMax H3 오픈웨이트의 구성과 ComfyUI 데이 제로 지원, Director 타임라인 노드의 동작을 정리하고, 한국을 적용 지역에서 제외한 커뮤니티 라이선스가 자체 서빙 계획에 미치는 영향을 검토합니다."
 date: 2026-08-07
 last_modified_at: 2026-08-07

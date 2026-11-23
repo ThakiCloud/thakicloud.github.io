@@ -1,7 +1,7 @@
 ---
-title: "When Software Becomes Free, What Do Engineers Do? Dario Amodei's Prophecy"
+title: "When Software Is Free, What Do Engineers Do?"
 excerpt: "When the marginal cost of code approaches zero, the value of an engineering team shifts from 'what we build' to 'knowing what should be built.'"
-seo_title: "When Software Becomes Free, What Do Engineers Do? Dario Amodei's Prophecy - Thaki Cloud"
+seo_title: "When Software Is Free, What Do Engineers Do?"
 seo_description: "Amodei warned software could become 'essentially free.' When code generation costs approach zero, what engineering value survives? A structured analysis."
 date: 2026-06-22
 last_modified_at: 2026-06-22

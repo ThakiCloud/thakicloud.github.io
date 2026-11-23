@@ -1,5 +1,5 @@
 ---
-title: "100% 로컬 환경에서 200개 이상의 데이터 소스를 연결하는 MCP 서버 구축 가이드: MindsDB, Cursor, Docker 활용"
+title: "로컬에서 200여 데이터 소스를 잇는 MCP 서버와 MindsDB"
 date: 2024-05-31
 tags: 
   - MCP

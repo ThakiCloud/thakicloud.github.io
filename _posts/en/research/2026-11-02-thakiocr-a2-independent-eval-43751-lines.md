@@ -1,6 +1,6 @@
 ---
-title: "ThakiOCR A2: What an Independent 43,751-Line Evaluation Confirmed, and What Is Still Missing"
-seo_title: "ThakiOCR A2 Sealed Evaluation: 31% Lower CER Than G2M on 3 Unseen Form Types, 1,493 Pages, 43,751 Lines; Research GO, Product NO_GO | ThakiCloud"
+title: "ThakiOCR A2: What an Independent Evaluation Confirmed"
+seo_title: "ThakiOCR A2: What an Independent Evaluation Confirmed"
 seo_description: "We evaluated ThakiOCR A2 on a sealed set of 3 form types never used in training: 1,493 pages and 43,751 lines. It passed all 6 preregistered gates and received a research-candidate GO, but the product verdict is NO_GO and the weights stay private. This post covers the per-gate results, the leakage we found while building the evaluation set, and the remaining limits."
 excerpt: "We evaluated the new model exactly once on 1,493 pages of forms it never saw in training. This post covers what improved, what we filtered out while building the evaluation set, and why it is not a product yet."
 date: 2026-11-02

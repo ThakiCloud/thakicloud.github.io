@@ -1,7 +1,7 @@
 ---
-title: "GitHub Actions 증분 빌드 최적화 완벽 가이드 - Jekyll 블로그 500개 포스트 빌드 시간 90% 단축"
+title: "GitHub Actions 증분 빌드로 Jekyll 빌드 시간 줄이기"
 excerpt: "500개가 넘는 Jekyll 블로그 포스트의 GitHub Actions 빌드 시간을 90% 단축하는 증분 빌드 시스템 구축 가이드. 변경된 파일만 감지하여 빌드하는 최적화 전략과 macOS에서 act를 이용한 로컬 테스트 환경 구축까지 완벽 정리"
-seo_title: "GitHub Actions Jekyll 증분 빌드 최적화 가이드 - 빌드 시간 90% 단축 - Thaki Cloud"
+seo_title: "GitHub Actions 증분 빌드로 Jekyll 빌드 시간 줄이기"
 seo_description: "Jekyll 블로그 500개 포스트 GitHub Actions 빌드 시간을 90% 단축하는 증분 빌드 시스템 구축 가이드. 변경 파일 감지, act 로컬 테스트, 성능 최적화 전략까지 실무 중심 완벽 정리"
 date: 2025-08-23
 last_modified_at: 2025-08-23

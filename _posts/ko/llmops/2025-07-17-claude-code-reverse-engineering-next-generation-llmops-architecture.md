@@ -1,7 +1,7 @@
 ---
-title: "Claude Code 역공학으로 발견한 차세대 LLMOps 아키텍처 Part 1: 실시간 Steering과 지능형 컨텍스트 관리"
+title: "Claude Code 역공학 Part 1: 실시간 Steering과 컨텍스트 관리"
 excerpt: "shareAI-lab의 Claude Code v1.0.33 역공학 분석을 통해 발견된 혁신적인 LLMOps 기술들을 심도있게 분석합니다. 실시간 Steering, 지능형 컨텍스트 압축, 6단계 도구 실행 프레임워크 등 현대 LLM 운영의 핵심 기술을 탐구합니다."
-seo_title: "Claude Code 역공학 LLMOps 아키텍처 분석: 실시간 Steering 기술 - Thaki Cloud"
+seo_title: "Claude Code 역공학 Part 1: 실시간 Steering과 컨텍스트 관리"
 seo_description: "Claude Code 역공학을 통해 발견된 차세대 LLMOps 기술 분석. 실시간 Steering, 지능형 컨텍스트 관리, Agent 루프 시스템, 보안 프레임워크 등 LLM 운영의 핵심 아키텍처를 상세히 해부합니다."
 date: 2025-07-17
 last_modified_at: 2025-07-17

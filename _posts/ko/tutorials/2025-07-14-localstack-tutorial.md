@@ -1,7 +1,7 @@
 ---
 title: "LocalStack 완벽 가이드 - 로컬 AWS 클라우드 개발 환경 구축하기"
 excerpt: "LocalStack을 사용하여 로컬 환경에서 AWS 서비스를 에뮬레이션하는 방법을 배워보세요. 설치부터 실제 활용까지 완벽한 가이드를 제공합니다."
-seo_title: "LocalStack 완벽 가이드 - 로컬 AWS 클라우드 개발 환경 구축하기 - Thaki Cloud"
+seo_title: "LocalStack 완벽 가이드 - 로컬 AWS 클라우드 개발 환경 구축하기"
 seo_description: "LocalStack을 사용하여 로컬 환경에서 AWS 서비스를 에뮬레이션하는 방법을 배워보세요. 설치, 설정, S3, DynamoDB, Lambda 등 주요 서비스 사용법을 실전 예제와 함께 제공합니다."
 date: 2025-07-14
 last_modified_at: 2025-07-14

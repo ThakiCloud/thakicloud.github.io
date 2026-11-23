@@ -1,7 +1,7 @@
 ---
-title: "Dual-Pool Token-Budget Routing: Cutting vLLM Inference GPU Time by 31 to 42% with Two-Pool Scheduling"
+title: "Dual-Pool Token-Budget Routing: Less vLLM GPU Time"
 excerpt: "Short requests waiting behind long ones in a single queue silently waste GPU time, and that is Head-of-Line (HoL) blocking. Dual-Pool Token-Budget Routing, proposed in arXiv 2604.08075, splits requests into a short-context pool and a long-context pool, achieving 31 to 42% GPU time savings and a 6% improvement in P99 TTFT. This post walks through implementing the technique on Kubernetes using Kueue LocalQueue."
-seo_title: "Dual-Pool Token-Budget Routing: 31 to 42% vLLM GPU Savings | Thaki Cloud"
+seo_title: "Dual-Pool Token-Budget Routing: Less vLLM GPU Time"
 seo_description: "Learn how to eliminate HoL blocking and save 31 to 42% of GPU time by routing vLLM inference requests into short-context and long-context pools, integrated with Kubernetes Kueue LocalQueue."
 date: 2026-07-01
 last_modified_at: 2026-07-01

@@ -1,6 +1,6 @@
 ---
-title: "Can an 8.9M-Parameter Line OCR Grow to Japanese and Chinese? What We Measured First, With No GPU"
-seo_title: "ThakiOCR G2M-R3 multilingual pre-check: charset coverage, the cost of two head designs, and why the backbone must learn | ThakiCloud"
+title: "ThakiOCR G2M: Can a Line OCR Grow to Japanese and Chinese?"
+seo_title: "ThakiOCR G2M: Can a Line OCR Grow to Japanese and Chinese?"
 seo_description: "G2M-R3, a Korean-English line OCR, can output only 1,085 of the 3,755 GB2312 level-1 characters. Yet even on Japanese lines whose characters are fully covered, its CER was 46.4% to 50.7%. Widening the head is not enough; the backbone has to learn too. We measured charset coverage, training-data character counts, two head designs and a CPU baseline, without any training."
 excerpt: "Our current model cannot output most Japanese and Chinese characters. But even on Japanese lines made only of characters it can output, CER was 46.4% to 50.7%. Enlarging the type case is not enough; the backbone has to learn Japanese character shapes too. Here is what we measured before spending any training or GPU time."
 date: 2026-11-22

@@ -1,7 +1,7 @@
 ---
 title: "Error Budgets Turn 'Should I Ship Tonight' Into Arithmetic"
 excerpt: "Make it more stable' has no stopping point. An error budget ends that by writing the stability promise as a number, so the decision to ship or hold stops being a feeling and becomes arithmetic. This post walks solo developers through picking the user-facing SLI, sizing the budget in minutes, reading burn rate, and writing a one-page policy that decides for you at 2 a.m."
-seo_title: "Error Budgets for Solo Developers: SLOs, Burn Rate, and a One-Page Policy"
+seo_title: "Error Budgets Turn 'Should I Ship Tonight' Into Arithmetic"
 seo_description: "Turn 'should I ship tonight' into arithmetic: user-facing SLIs, a real SLO, 43 minutes of error budget, burn rate, and the one-page policy you follow at 2 a.m."
 date: 2026-09-11
 last_modified_at: 2026-09-11

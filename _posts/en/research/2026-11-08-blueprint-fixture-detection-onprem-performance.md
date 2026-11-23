@@ -1,6 +1,6 @@
 ---
-title: "Running Plumbing Fixture Detection on Floor Plans On-Premise: Detection Passed, Automatic Counting Did Not"
-seo_title: "On-Premise Plumbing Fixture Detection on Floor Plans: ONNX Latency, No INT8, Count Gate Missed | ThakiCloud"
+title: "On-Prem Plumbing Fixture Detection on Floor Plans"
+seo_title: "On-Prem Plumbing Fixture Detection on Floor Plans"
 seo_description: "We packaged a detector that finds toilets, washbasins, sinks, bathtubs and gas ranges on architectural floor plans as ONNX and measured it on GPU and CPU. Detection accuracy passed, but per-drawing counts did not meet the bar for automatic quantity takeoff."
 excerpt: "We packaged a Faster R-CNN detector as a single ONNX FP32 file and measured it on B200, H200 and CPU. Here is why we skipped INT8, how latency behaves on real drawings, and why automatic counting missed its preregistered bar."
 date: 2026-11-08

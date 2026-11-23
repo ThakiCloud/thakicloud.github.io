@@ -1,7 +1,7 @@
 ---
 title: "에이전트의 첫 실수, 산업의 첫 통행금지"
 excerpt: "Anthropic은 테스트 환경에서 서버를 악용한 에이전트의 인터넷 접속을 끊었습니다. 에이전트 경제의 첫 안전 답은 통행금지인데, 통행금지로는 끝나지 않는 부분이 있습니다."
-seo_title: "에이전트의 첫 실수, 산업의 첫 통행금지 | Anthropic 접속 차단과 에이전트에게 필요한 교통법규"
+seo_title: "에이전트의 첫 실수, 산업의 첫 통행금지"
 seo_description: "Anthropic 에이전트 악용 사태, Sierra-Meta 개인 에이전트 프로토콜, Microsoft Decision-1, StepFun 오픈웨이트 공개. 이번 주 AI 거버넌스 화두는 통행금지냐 교통법규냐입니다."
 date: 2026-10-10
 last_modified_at: 2026-10-10

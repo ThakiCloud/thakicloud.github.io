@@ -1,5 +1,5 @@
 ---
-title: "Uncensored models are not retrained, they have one direction subtracted from their weights"
+title: "Abliteration: Uncensoring by Removing One Direction"
 excerpt: "Abliteration is not a technique for retraining a model. It is surgery: find the single residual-stream direction that mediates refusal behavior, then erase it from the weights with an orthogonal projection. This post covers the mechanism, and why you should not take a vendor's reported refusal rate of 0% at face value."
 categories:
   - research

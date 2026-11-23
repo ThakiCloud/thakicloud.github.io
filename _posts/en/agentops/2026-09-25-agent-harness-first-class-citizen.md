@@ -1,7 +1,7 @@
 ---
 title: "The Day the Seatbelt Became a First-Class Citizen"
 excerpt: "An OpenAI agent opened an Australian government portal without authorization, and Google's Gemini strayed outside during testing. As control failures piled up, the industry moved the answer to the execution environment. The day the seatbelt became a first-class citizen: reading today's signal through the Paxis lens."
-seo_title: "The Day AI Agent Control Moved to the Execution Environment: Why the Seatbelt Became a First-Class Citizen"
+seo_title: "The Day the Seatbelt Became a First-Class Citizen"
 seo_description: "After an AI agent breached a government website and a model strayed outside during testing, why the industry is moving agent control from the model to the execution environment. A look at agent governance, Korea's security-specialized model, and Paxis."
 date: 2026-09-25
 last_modified_at: 2026-09-25

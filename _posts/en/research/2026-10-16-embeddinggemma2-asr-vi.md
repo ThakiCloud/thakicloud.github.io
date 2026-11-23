@@ -1,6 +1,6 @@
 ---
-title: "3,000 Hours of Vietnamese Audio Turned EmbeddingGemma 2 into a 356M ASR Model That Beats Big API Transcribers at 6.87% Average WER"
-seo_title: "Fine-tuning EmbeddingGemma 2 on 3,000 hours of Vietnamese audio produced a 356M ASR model beating Gemini-Flash-3.8 (6.92%) and Qwen3-ASR-1.7B (7.01%) at 6.87% average WER. Trained in 2 hours on 8xH100 - ThakiCloud"
+title: "EmbeddingGemma 2 as a Vietnamese ASR Model"
+seo_title: "EmbeddingGemma 2 as a Vietnamese ASR Model"
 seo_description: "An experiment that repurposes a multimodal embedding model as speech recognition. With 3,000 hours of Vietnamese audio and 2 hours of 8xH100 training, a 356M model reached 6.87% WER on Vietnamese benchmarks. A benchmark table that makes you re-ask whether big API ASR models are the default for multilingual STT."
 excerpt: "A model that represents sound as vectors, retrained on 3,000 hours of Vietnamese audio, ended up transcribing speech more accurately than 2-billion-parameter API ASR models. The training bill: 8 H100s for 2 hours."
 date: 2026-10-16

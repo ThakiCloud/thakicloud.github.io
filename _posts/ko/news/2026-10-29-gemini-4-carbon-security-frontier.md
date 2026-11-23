@@ -1,7 +1,7 @@
 ---
 title: "프런티어 모델 경쟁이 '누구의 방어를 맡나'로 이동했다"
 excerpt: "Google DeepMind의 새 모델 Gemini 4 Carbon. 공개된 15개 벤치마크 중 11개 1위라는 점보다, 사이버 방어 기관부터 단계적으로 내보낸 배포 설계가 플랫폼 평가에 무엇을 바꿀지 살펴봅니다."
-seo_title: "Gemini 4 Carbon 공개 — 시큐리티 우선 단계적 배포, 플랫폼 평가가 바뀌는 이유"
+seo_title: "프런티어 모델 경쟁이 '누구의 방어를 맡나'로 이동했다"
 seo_description: "Google DeepMind의 Gemini 4 Carbon이 15개 벤치마크 중 11개 1위, Artificial Analysis v5.0 지수 1위를 기록했습니다. 사이버 방어 기관 우선의 단계적 배포가 플랫폼의 모델 선정과 평가에 어떤 신호인지 정리했습니다."
 date: 2026-10-29
 last_modified_at: 2026-10-29

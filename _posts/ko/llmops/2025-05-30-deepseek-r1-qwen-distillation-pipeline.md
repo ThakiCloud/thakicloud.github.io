@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek-R1 → Qwen 지식 증류 완전 가이드: 11개 오픈소스 파이프라인 총정리"
+title: "DeepSeek-R1에서 Qwen으로: 지식 증류 오픈소스 파이프라인"
 excerpt: "교사-학생 모델 증류의 실전 구현체들. MIT/Apache 2.0 라이선스로 자유롭게 활용 가능한 DeepSeek-R1 → Qwen 계열 지식 증류 파이프라인 11선"
 date: 2025-05-30
 tags:

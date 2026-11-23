@@ -1,7 +1,7 @@
 ---
-title: "SkyPilot: Revolutionary AI Workload Management Platform for Multi-Cloud Infrastructure"
+title: "SkyPilot: Managing AI Workloads Across Clouds"
 excerpt: "Comprehensive guide to SkyPilot - the unified platform for running, managing, and scaling AI workloads across Kubernetes, 17+ clouds, and on-premises infrastructure with cost optimization and vendor lock-in prevention."
-seo_title: "SkyPilot AI Workload Management Platform Guide - Multi-Cloud LLMOps"
+seo_title: "SkyPilot: Managing AI Workloads Across Clouds"
 seo_description: "Complete guide to SkyPilot for AI/ML workload management across clouds. Learn deployment, cost optimization, and best practices for LLMOps infrastructure."
 date: 2025-09-02
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "Chinese AI Models Leading Open Workflow Management Innovation - In-depth Analysis of Kimi K2, DeepSeek-R1, Qwen3, GLM-4.5"
+title: "Chinese AI Models Lead Open Workflow Management"
 excerpt: "From Moonshot AI's Kimi K2 to Alibaba's Qwen3, detailed analysis of how Chinese AI models are presenting new paradigms in workflow automation through Agentic Intelligence."
-seo_title: "Chinese AI Model Workflow Automation Innovation - Kimi K2, DeepSeek-R1, Qwen3 Analysis - Thaki Cloud"
+seo_title: "Chinese AI Models Lead Open Workflow Management"
 seo_description: "Analysis of Chinese AI models' Agentic Intelligence innovation in 2025 from OWM perspective. From Kimi K2's ultra-long personalization to DeepSeek-R1's reasoning capabilities and Qwen3's thinking mode control, presenting workflow automation strategies."
 date: 2025-08-01
 last_modified_at: 2025-08-01

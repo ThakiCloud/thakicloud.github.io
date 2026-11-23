@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA TensorRT Model Optimizer: 프로덕션 AI 배포를 위한 종합 LLMOps 가이드"
+title: "TensorRT Model Optimizer: 프로덕션 LLMOps 활용법"
 excerpt: "NVIDIA TensorRT Model Optimizer를 활용한 기업용 LLM 배포 마스터링. 양자화, 가지치기, 최적화 기법으로 추론 비용을 최대 4배까지 절감하는 방법을 학습하세요."
-seo_title: "TensorRT Model Optimizer 완전 가이드: LLMOps 모범 사례 2025"
+seo_title: "TensorRT Model Optimizer: 프로덕션 LLMOps 활용법"
 seo_description: "NVIDIA TensorRT Model Optimizer로 LLM 추론 최적화하기. 프로덕션 AI 배포를 위한 양자화, 가지치기, 증류 기법 완전 정복."
 date: 2025-09-08
 tags:

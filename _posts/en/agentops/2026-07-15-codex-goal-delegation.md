@@ -1,7 +1,7 @@
 ---
-title: "Have It Write the Goal First on Hard Tasks: Codex Goal-Delegation Prompting"
+title: "Hard Tasks: Have Codex Write the Goal First"
 excerpt: "A developer shared a tip: when handing Codex a genuinely hard /goal, first ask it to write the goal so that another thread can achieve it. It sounds like wordplay, but underneath is a real agent-operations pattern: make the model author a verifiable goal spec first, then delegate that spec to a fresh thread. We look at how Codex goals actually work and read the technique through ThakiCloud's Goal Mode, pge-loop, and Paxis."
-seo_title: "Codex Goal-Delegation Prompting: Writing a Verifiable Goal First - Thaki Cloud"
+seo_title: "Hard Tasks: Have Codex Write the Goal First"
 seo_description: "We analyze Codex's /goal feature and the meta-prompting technique of writing a goal for another thread. The three parts of a goal (measurable outcome, verification surface, constraints), ThakiCloud's real Goal Mode and pge-loop, and a Paxis Agent-Native Cloud perspective."
 date: 2026-07-15
 last_modified_at: 2026-07-15

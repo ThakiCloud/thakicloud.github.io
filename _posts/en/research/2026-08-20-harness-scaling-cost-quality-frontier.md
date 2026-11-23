@@ -1,6 +1,6 @@
 ---
-title: "Raise the Model, or Thicken the Harness: The Cost-Quality Break-Even of Autonomous Agents"
-seo_title: "Harness Scaling Laws: The Break-Even Between Richer Harnesses and Stronger Models - Thaki Cloud"
+title: "Raise the Model or Thicken the Harness: Cost Break-Even"
+seo_title: "Raise the Model or Thicken the Harness: Cost Break-Even"
 seo_description: "We set a cost-quality frontier for autonomous agent workflows, comparing harness components such as verification gates, rules, and memory against model-tier upgrades in marginal quality per dollar, and present the equipmarginal break-even rule that says how far harness investment pays, plus a five-measurement calibration protocol."
 excerpt: "When the same job keeps failing, which buys more quality per dollar: wrapping a cheaper model in a thicker harness, or upgrading the model itself. ThakiCloud's analysis paper turns harness components into price parameters and sets a break-even rule for this question."
 date: 2026-08-20

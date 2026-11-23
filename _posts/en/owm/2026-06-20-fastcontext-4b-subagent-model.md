@@ -1,7 +1,7 @@
 ---
-title: "FastContext-1.0-4B-SFT: A 4B Subagent Model Dedicated to Repository Exploration for Coding Agents"
+title: "FastContext-1.0-4B-SFT: A Repo-Exploration Subagent"
 excerpt: "Microsoft released FastContext-1.0-4B-SFT, a fine-tuned Qwen3-4B coding agent subagent model. It explores repositories using only three tools, READ, GLOB, and GREP, to locate relevant files and evidence. 262K context, MIT license."
-seo_title: "FastContext-1.0-4B-SFT Coding Agent Subagent Model Guide - ThakiCloud"
+seo_title: "FastContext-1.0-4B-SFT: A Repo-Exploration Subagent"
 seo_description: "Microsoft FastContext-1.0-4B-SFT architecture (Qwen3-4B base, 262K context), arXiv:2606.14066, SWE-bench benchmarks, vLLM serving, and direct connection to subagent-model-routing."
 date: 2026-06-20
 last_modified_at: 2026-06-20

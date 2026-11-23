@@ -1,7 +1,7 @@
 ---
-title: "Latest Preference Optimization Techniques: A Comprehensive Analysis of Modern Policy Methods"
+title: "Preference Optimization Techniques: Five Modern Methods"
 excerpt: "An in-depth scholarly examination of five cutting-edge preference optimization techniques including Pref-GRPO, PVPO, DCPO, ARPO, and GRPO-RoC, exploring their theoretical foundations and practical implications"
-seo_title: "Latest Preference Optimization Techniques 2025 - Comprehensive Analysis"
+seo_title: "Preference Optimization Techniques: Five Modern Methods"
 seo_description: "Detailed analysis of modern policy optimization methods: Pref-GRPO, PVPO, DCPO, ARPO, and GRPO-RoC. Research insights into reinforcement learning advances"
 date: 2025-09-08
 lang: en

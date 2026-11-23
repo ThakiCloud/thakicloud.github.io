@@ -1,7 +1,7 @@
 ---
-title: "LongCat-Flash-Thinking: China's New SOTA Open-Source Reasoning Model Revolutionizes AI Efficiency"
+title: "LongCat-Flash-Thinking: An Open Reasoning Model from China"
 excerpt: "Discover LongCat-Flash-Thinking, a groundbreaking 560B parameter MoE model achieving SOTA performance with 64.5% token reduction and innovative asynchronous RL training."
-seo_title: "LongCat-Flash-Thinking: SOTA Open-Source Reasoning Model with 560B Parameters"
+seo_title: "LongCat-Flash-Thinking: An Open Reasoning Model from China"
 seo_description: "Explore China's new LongCat-Flash-Thinking model - 560B parameters, 27B activation, SOTA benchmarks, 64.5% token reduction, and asynchronous RL training."
 date: 2025-09-23
 tags:

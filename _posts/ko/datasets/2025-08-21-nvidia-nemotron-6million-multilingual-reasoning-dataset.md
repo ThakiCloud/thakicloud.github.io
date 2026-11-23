@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron 6백만 다국어 추론 데이터셋 공개 - 오픈소스 AI 생태계 강화"
+title: "NVIDIA Nemotron 6백만 건 다국어 추론 데이터셋"
 excerpt: "NVIDIA가 6백만 개의 다국어 추론 데이터셋을 공개하며 프랑스어, 스페인어, 독일어, 이탈리아어, 일본어 5개 언어로 확장된 고품질 훈련 데이터를 제공합니다."
-seo_title: "NVIDIA 6백만 다국어 추론 데이터셋 공개 - AI 훈련 데이터 - Thaki Cloud"
+seo_title: "NVIDIA Nemotron 6백만 건 다국어 추론 데이터셋"
 seo_description: "NVIDIA Nemotron Post-Training Dataset v2 분석. 6백만 다국어 추론 데이터셋의 번역 방법론, 품질 관리, 활용 방법을 상세히 알아보세요. 오픈소스 AI 개발에 필수적인 고품질 훈련 데이터입니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21

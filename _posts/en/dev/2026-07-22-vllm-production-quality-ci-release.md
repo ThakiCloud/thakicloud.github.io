@@ -1,5 +1,5 @@
 ---
-title: "How vLLM Stays Solid at 2,000 Commits a Month: Three Devices in CI, Benchmarking, and Releases"
+title: "How vLLM Stays Solid at 2,000 Commits a Month"
 excerpt: "vLLM merges roughly 2,000 commits into main every month and still holds production quality. The secret is not 'more tests' but three deterministic devices: a benchmark gate, release-branch pinning, and per-commit bisection. We break down the vLLM maintainers' write-up through a ThakiCloud serving lens."
 date: 2026-07-22
 tags:

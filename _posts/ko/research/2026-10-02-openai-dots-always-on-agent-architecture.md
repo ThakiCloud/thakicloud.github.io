@@ -1,6 +1,6 @@
 ---
-title: "24시간 일하는 에이전트: OpenAI Dots의 알웨이즈 온 아키텍처를 플랫폼 관점에서 읽다"
-seo_title: "OpenAI Dots (GPT-6 Astra, 알웨이즈 온 에이전트) 아키텍처 분석 - 자체 클라우드 컴퓨터+브라우저, 4000개 이상 도구 연결, 메모리·위임·가드레일·승인 규칙, 2026년 9월 29일 DevDay 발표. always-on agent 설계가 ThakiCloud Paxis 에이전트 플랫폼과 ai-platform 서빙에 주는 시사점 - ThakiCloud"
+title: "OpenAI Dots: 24시간 에이전트 아키텍처 읽기"
+seo_title: "OpenAI Dots: 24시간 에이전트 아키텍처 읽기"
 seo_description: "OpenAI가 DevDay 2026에서 발표한 Dots는 각자 클라우드 컴퓨터와 브라우저를 갖는 알웨이즈 온(Always-on) 에이전트입니다. GPT-6 Astra로 구동하고, 사용자의 기기가 꺼져도 작업을 이어가며, 4000개 이상의 도구와 연결합니다. 이 글은 Dots의 아키텍처 층(모델·도구·메모리·위임·가드레일·운영)을 정리하고, 같은 범주의 문제를 자체 인프라에서 푸는 ThakiCloud 관점의 시사점을 다룹니다."
 excerpt: "Dots는 '채팅을 끝낸 후에도 일하는' 에이전트입니다. 자체 클라우드 컴퓨터와 브라우저, 세션이 아닌 목표를 단위로 하는 설계. 알웨이즈 온 에이전트의 아키텍처 층을 하나씩 열고, 기업 플랫폼 관점에서 무엇을 가져가야 하는지 살펴봅니다."
 date: 2026-10-02

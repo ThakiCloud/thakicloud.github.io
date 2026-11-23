@@ -1,7 +1,7 @@
 ---
-title: "RAGHub: The Ultimate Community-Driven Directory for RAG Ecosystem Innovation"
+title: "RAGHub: A Community Directory of RAG Tools"
 excerpt: "Discover RAGHub, a comprehensive collection of cutting-edge RAG frameworks, tools, and resources driving the future of Retrieval-Augmented Generation systems."
-seo_title: "RAGHub Guide: RAG Frameworks & Tools Directory 2025 - Thaki Cloud"
+seo_title: "RAGHub: A Community Directory of RAG Tools"
 seo_description: "Explore RAGHub's curated collection of RAG frameworks, evaluation tools, and emerging projects. Stay updated with the latest trends in Retrieval-Augmented Generation ecosystem."
 date: 2025-09-21
 tags:

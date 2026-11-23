@@ -1,7 +1,7 @@
 ---
 title: "The Day AI Learned Division of Labor on a Factory Floor"
 excerpt: "The quality report that took 12 hours now takes 1, but the real news is who did the work and who approved it. Pharma, VC, and banking are converging on one formula: AI explores, code computes, and people decide."
-seo_title: "The Division-of-Labor Contract for Enterprise AI, the Convergence Formula of the Assurance Era"
+seo_title: "The Day AI Learned Division of Labor on a Factory Floor"
 seo_description: "A pharma production floor, a VC investment contract, and a banking app all chose the same architecture. Division of labor in which AI explores, code computes, and people decide, plus AI assurance with full-lifecycle verification. The new standard for enterprise AI that today's digest reveals."
 date: 2026-10-26
 last_modified_at: 2026-10-26

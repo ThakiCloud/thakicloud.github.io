@@ -2,7 +2,7 @@
 title: "The $895.4 Billion Defense Line"
 lang: en
 excerpt: "Anthropic's roadshow put its ledger on the table. $33.24B in nine-month revenue against $895.4B in compute purchase commitments. The first pricing plan was withdrawn on day one, and the roadshow video explains total effective compute. From Nov 19 the public market prices that ratio under the name ANT."
-seo_title: "The $895.4 Billion Defense Line: Anthropic's Roadshow Ledger and the First Close on Nov 19 | ThakiCloud"
+seo_title: "The $895.4 Billion Defense Line"
 seo_description: "The ledger Anthropic's IPO roadshow disclosed: $33.24B nine-month revenue, $895.4B purchase commitments, a $104B net loss mostly driven by fair-value revaluation. The withdrawn first pricing plan, the total effective compute pitch, and the public-market audit standard ahead of the Nov 19 Nasdaq debut, through a ThakiCloud lens."
 date: 2026-11-12
 last_modified_at: 2026-11-12

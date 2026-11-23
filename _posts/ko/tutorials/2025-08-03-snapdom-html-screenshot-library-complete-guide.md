@@ -1,7 +1,7 @@
 ---
 title: "SnapDOM: 웹 페이지를 이미지로 변환하는 JavaScript 라이브러리 완전 가이드"
 excerpt: "HTML 요소를 고품질 이미지로 빠르게 변환하는 SnapDOM으로 스크린샷 자동화, 문서 생성, 소셜 미디어 카드 제작을 마스터하세요."
-seo_title: "SnapDOM HTML 스크린샷 라이브러리 완전 가이드 - 웹페이지 이미지 변환 - Thaki Cloud"
+seo_title: "SnapDOM: 웹 페이지를 이미지로 변환하는 JavaScript 라이브러리 완전 가이드"
 seo_description: "SnapDOM JavaScript 라이브러리로 HTML 요소를 PNG/JPEG 이미지로 변환하는 방법, E2E 테스팅, 자동화, 실무 활용 사례를 상세히 설명합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03

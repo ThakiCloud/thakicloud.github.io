@@ -1,6 +1,6 @@
 ---
 title: "Uber MCP Gateway 해부: 800개 서버, 5000개 툴 뒤에 있는 설계"
-seo_title: "Uber MCP Gateway: 기존 서비스 재작성 없이 800여 개 MCP 서버와 5000여 개 툴을 하나의 제어 플레인으로 - ThakiCloud"
+seo_title: "Uber MCP Gateway 해부: 800개 서버, 5000개 툴 뒤에 있는 설계"
 seo_description: "Uber는 부서마다 흩어져 있던 MCP 연동을 단일 게이트웨이로 통합했습니다. IDL을 스캔해 툴을 자동 생성하는 AutoCrawler, HTTP/gRPC/TChannel을 번역하는 Proxy Gateway, 발견은 노출을 전제하지 않는 거버넌스, 컨텍스트를 희소 자원처럼 다룸으로 context bloat를 푸는 세 가지 설계까지."
 excerpt: "수백 개 팀이 각자 MCP 연동을 만들던 Uber. 답은 게이트웨이 하나였습니다. IDL을 자동 스캔하는 레지스트리, 프로토콜을 번역하는 데이터 플레인, disabled-by-default 거버넌스, 그리고 컨텍스트를 희소 자원으로 다룬 설계."
 date: 2026-10-06

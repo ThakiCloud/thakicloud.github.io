@@ -1,6 +1,6 @@
 ---
-title: "A Cross-Vendor Workflow Where Fable 5 Conducts and Grok 4.5 Implements: fable-advisor"
-seo_title: "Conducting Grok 4.5 with Fable 5 - fable-advisor Plugin Analysis - Thaki Cloud"
+title: "fable-advisor: Fable 5 Conducts, Grok 4.5 Implements"
+seo_title: "fable-advisor: Fable 5 Conducts, Grok 4.5 Implements"
 seo_description: "fable-advisor is a cross-vendor multi-agent workflow where Claude Fable 5 handles specs and reviews while Grok 4.5 does the actual implementation typing. We break down the conductor-worker split and verify it from ThakiCloud Paxis's perspective."
 excerpt: "We break down the conductor-worker split of the fable-advisor plugin, in which Claude Fable 5 conducts spec writing and diff review while Grok 4.5 handles the actual code typing, and verify it from ThakiCloud's perspective of treating multi-agent systems and model routing as first-class resources."
 date: 2026-07-11

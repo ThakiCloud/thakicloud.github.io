@@ -1,7 +1,7 @@
 ---
-title: "Deep Chat: Building a Fully Customizable AI Chatbot Component - Complete Guide"
+title: "Deep Chat: A Customizable AI Chatbot Component"
 excerpt: "Learn how to integrate Deep Chat, a powerful AI chatbot component, into your website with just one line of code. Step-by-step tutorial covering installation, OpenAI integration, and advanced features like speech recognition and camera support."
-seo_title: "Deep Chat AI Chatbot Tutorial: Complete Integration Guide - Thaki Cloud"
+seo_title: "Deep Chat: A Customizable AI Chatbot Component"
 seo_description: "Comprehensive guide to Deep Chat - integrate AI chatbots with OpenAI, HuggingFace, and custom APIs. Includes React, Vue, Angular examples and speech-to-text features."
 date: 2025-10-02
 lang: en

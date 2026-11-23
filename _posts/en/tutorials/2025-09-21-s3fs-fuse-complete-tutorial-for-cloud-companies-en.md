@@ -1,7 +1,7 @@
 ---
 title: "s3fs-fuse Complete Tutorial: Enterprise Cloud Implementation Guide"
 excerpt: "Comprehensive guide to implementing s3fs-fuse in enterprise cloud environments with detailed licensing analysis for commercial deployment"
-seo_title: "s3fs-fuse Enterprise Tutorial: Complete Implementation Guide - Thaki Cloud"
+seo_title: "s3fs-fuse Complete Tutorial: Enterprise Cloud Implementation Guide"
 seo_description: "Master s3fs-fuse deployment for cloud companies with detailed installation, configuration, and GPL-2.0 licensing guidelines"
 date: 2025-09-21
 tags:

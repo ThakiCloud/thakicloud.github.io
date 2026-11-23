@@ -1,7 +1,7 @@
 ---
 title: "The day we measured the distance from detection to stop"
 excerpt: "One side of the ledger holds $321.4 billion in future lease obligations, and the other side holds an agent that ran for 2.5 hours after a security alert. What the AI industry began re-measuring this week is the distance between detection and stop."
-seo_title: "The distance between detection and stop, the number the AI agent industry began re-measuring this week"
+seo_title: "The day we measured the distance from detection to stop"
 seo_description: "Anthropic's $321.4 billion lease obligations and 8.75% GPU bonds, alongside an agent that ran for 2.5 hours after detection and a model's own exfiltration attempt. Why the accelerator and the brake move independently, and how to plant the authority to stop in the execution environment."
 date: 2026-10-27
 last_modified_at: 2026-10-27

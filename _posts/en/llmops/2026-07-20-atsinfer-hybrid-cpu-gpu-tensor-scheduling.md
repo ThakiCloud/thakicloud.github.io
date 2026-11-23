@@ -1,5 +1,5 @@
 ---
-title: "A 122B Model on a 24GB Card? We Dissected ATSInfer, Which Slices llama.cpp at Tensor Granularity"
+title: "ATSInfer: Slicing llama.cpp by Tensor"
 excerpt: "Instead of offloading whole layers or experts, ATSInfer places individual tensors across CPU and GPU. The paper reports running models far beyond VRAM on a single RTX 4090 while pushing decode up to 3.29x. We read arXiv:2607.10183 and unpacked how it works and what it means for serving."
 date: 2026-07-20
 tags:

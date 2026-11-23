@@ -1,7 +1,7 @@
 ---
-title: "Tiny Reasoning Language Model (TRLM-135M): Revolutionizing Reasoning in Small Models"
+title: "TRLM-135M: Step-by-Step Reasoning in a Tiny Model"
 excerpt: "TRLM-135M, a 135M parameter model, represents a breakthrough in step-by-step reasoning for small language models. Through a sophisticated 3-stage pipeline, it learns from general conversations to complex reasoning tasks."
-seo_title: "TRLM-135M Tiny Reasoning Language Model Guide - Thaki Cloud"
+seo_title: "TRLM-135M: Step-by-Step Reasoning in a Tiny Model"
 seo_description: "Discover the 3-stage training pipeline and reasoning capabilities of the 135M parameter TRLM-135M model. Explore how small models can achieve advanced reasoning through innovative training methods."
 date: 2025-09-29
 tags:

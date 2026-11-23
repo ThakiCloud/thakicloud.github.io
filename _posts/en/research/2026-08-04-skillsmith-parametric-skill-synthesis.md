@@ -1,6 +1,6 @@
 ---
 title: "Write Skills Down or Bake Them Into Weights? Google's Third Answer"
-seo_title: "Analyzing arXiv 2607.27497 SkillSmith: Agent Skill Synthesis That Reads Weights as a Modality | ThakiCloud"
+seo_title: "Write Skills Down or Bake Them Into Weights? Google's Third Answer"
 seo_description: "Google DeepMind's SkillSmith treats prefix K-V caches as another input modality an LLM reads natively, composing textual and parametric skills in a single forward pass. We pair the paper's reported Elo ablation with ThakiCloud's own measurement of what one skill costs to keep resident."
 excerpt: "If you have ever weighed whether to store agent skills as documents or as adapter weights, this paper questions the premise that you must choose."
 date: 2026-08-04

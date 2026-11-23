@@ -1,6 +1,6 @@
 ---
-title: "FinTermIE-EventPrice-KO · 전환가액 조정 공시에서 조정 전·후 가액을 위치와 함께 뽑는 2.78억 파라미터 인코더"
-seo_title: "FinTermIE-EventPrice-KO: 전환가액 조정 공시의 조정 전·후 가액 추출 모델 실험 공개 | ThakiCloud"
+title: "FinTermIE-EventPrice-KO: 전환가액 조정 전후 추출"
+seo_title: "FinTermIE-EventPrice-KO: 전환가액 조정 전후 추출"
 seo_description: "전환가액 조정 공시의 「조정근거 및 방법」 서술에서 조정 전·후 가액을 뽑는 2.78억 파라미터 인코더 FinTermIE-EventPrice-KO를 실험 공개했습니다. 처음 보는 발행사 258건에서 규칙 기준선을 앞섰지만 값이 없는 문서에서 답한 건수가 더 많아 사전등록 안전 게이트 G3를 통과하지 못했습니다."
 excerpt: "처음 보는 발행사 258건에서 조정 전 0.798, 조정 후 0.938로 규칙 기준선(0.601, 0.729)을 앞섰고 답한 값 457개가 모두 근거 위치와 일치했습니다. 하지만 값이 없는 문서 46건 중 3건에서 답해 안전 게이트 G3를 통과하지 못했습니다."
 date: 2026-11-13

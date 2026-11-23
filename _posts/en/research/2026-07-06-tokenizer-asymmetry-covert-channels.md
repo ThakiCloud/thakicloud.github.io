@@ -1,7 +1,7 @@
 ---
-title: "The Characters the Monitor Cannot Read: How Tokenizer Asymmetry Opens a Covert Channel Around AI Control"
+title: "Tokenizer Asymmetry: A Covert Channel Around AI Control"
 excerpt: "The core defense of AI control, the idea that an untrusted strong model can be controlled by a weaker, trusted monitor, rests on the assumption that the monitor and the policy model read the same text. In on-prem, multi-tenant clusters, that assumption quietly breaks down. Different tokenizers and normalization rules create a covert channel that the monitor cannot see but the policy model and a colluding receiver can read perfectly well. We introduce a paper from ThakiCloud's research team that quantifies the capacity of this channel and proposes a deterministic gate that closes it without touching any model weights."
-seo_title: "Tokenizer Asymmetry Covert Channels and AI Control Vulnerabilities - Thaki Cloud"
+seo_title: "Tokenizer Asymmetry: A Covert Channel Around AI Control"
 seo_description: "We introduce a paper from ThakiCloud AI Research on the covert channel created by monitor-policy tokenizer asymmetry. It bounds channel capacity as a sum of log2 terms across carriers such as case, zero-width characters, and confusable glyphs, and shows how a shared canonicalizer paired with a tokenizer-alignment admission check can deterministically guarantee monitoring integrity in on-prem, multi-tenant clusters."
 date: 2026-07-06
 last_modified_at: 2026-07-06

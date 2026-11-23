@@ -1,7 +1,7 @@
 ---
-title: "DiffusionGemma-as-Jev: Self-Hosting a System-1 Decision API on Open Weights"
+title: "DiffusionGemma-as-Jev: A Self-Hosted Decision API"
 excerpt: "vLLM now serves Google's diffusion LLM DiffusionGemma natively, and a structured-reads (Jev-like) mode on top reproduces TypeSafe's commercial System-1 decision model Jev on open weights. Yes/no, multiple-choice, and scored questions get typed answers with per-option confidence in a single parallel diffusion pass."
-seo_title: "DiffusionGemma-as-Jev: Open-Weight System-1 Decision Serving on vLLM"
+seo_title: "DiffusionGemma-as-Jev: A Self-Hosted Decision API"
 seo_description: "What diffusion LLMs are, how vLLM supports DiffusionGemma natively, and what the structured-reads mode adds as a new capability axis. The path to self-hosting typed decisions with confidence."
 date: 2026-09-24
 last_modified_at: 2026-09-24

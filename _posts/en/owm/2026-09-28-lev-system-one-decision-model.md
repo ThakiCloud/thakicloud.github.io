@@ -1,7 +1,7 @@
 ---
-title: "The 4B That Outputs Probabilities Instead of Text: Jev, Open-Sourced as Lev"
+title: "Lev: The 4B Decision Model That Outputs Probabilities"
 excerpt: "TypeSafe's System One decision model Jev has been open-sourced by Interfaze as Lev. Built on Qwen3.5-4B with a LoRA adapter, it answers typed questions (yes/no, choice, score) with calibrated probabilities rather than free text. With zero output tokens it is 40-200x faster than frontier LLMs for the same question, and it tops the open models at 4B or smaller on S1Bench."
-seo_title: "System One decision model Lev, Jev open-sourced | ThakiCloud"
+seo_title: "Lev: The 4B Decision Model That Outputs Probabilities"
 seo_description: "Review of Lev, Interfaze's open-weights version of TypeSafe's Jev. A 4B (Qwen3.5-4B + LoRA) System One decision model that outputs calibrated probabilities via label-token readout with zero output tokens. S1Bench 71.9%, top of the open 4B class, Apache-2.0, and what it means for serving and agents."
 date: 2026-09-28
 last_modified_at: 2026-09-28

@@ -1,7 +1,7 @@
 ---
 title: "When the Recipe Became Free, the Kitchen Became the Brand"
 excerpt: "What connects the four-legged robot and the airport check-in robot is a common execution environment called 'Airpath.' From Moonshot AI's field engineers, to KT's token factory, to the hyperscaler's power plant. All 18 items today are stories about 'the place where the model runs.' This post reads why, as the recipe gets cheaper, the kitchen becomes the brand."
-seo_title: "When the Recipe Became Free, the Kitchen Became the Brand: Reading Today's AI News Through the Execution Environment | ThakiCloud"
+seo_title: "When the Recipe Became Free, the Kitchen Became the Brand"
 seo_description: "From Integrite Airpath's 1,200 robots, to Moonshot AI's adoption of Palantier's FDE, to a 31 percent throughput gain for KT's token factory, to the hyperscaler's entry into power plants. On the day the model gets cheap like a recipe, this post reads today's news, where value moves to the execution environment, through the lens of the execution environment."
 date: 2026-09-14
 last_modified_at: 2026-09-14

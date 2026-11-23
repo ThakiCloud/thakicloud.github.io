@@ -1,7 +1,7 @@
 ---
-title: "The Day Apple's Crown Sat on Someone Else's Chips: The AI Era Moves From Owning to Governing"
+title: "Apple's Crown on Someone Else's Chips: Owning to Governing"
 excerpt: "Apple, the symbol of vertical integration, gives up its own chip and borrows Google's GPUs and even a Chinese rival's model. On the same day, Korea pours tens of trillions of won into owning 15GW of data centers, the opposite direction. We read the single conclusion both directions point to."
-seo_title: "Apple Gives Up Its Own Chip and Sovereign AI Infrastructure: From Owning to Governing"
+seo_title: "Apple's Crown on Someone Else's Chips: Owning to Governing"
 seo_description: "Apple gave up its own server chip and is leasing Google's Nvidia GPUs, while running Alibaba's Qwen in China. On the same day, SKT announced a 15GW data center plan and a tens-of-trillion-won construction race broke out. We analyze why the capability to govern a heterogeneous AI stack is the next battleground."
 date: 2026-07-16
 author_profile: true

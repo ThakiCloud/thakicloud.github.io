@@ -1,7 +1,7 @@
 ---
-title: "Promptify: Complete Guide to Structured LLM Output with Prompt Engineering"
+title: "Promptify: Structured LLM Output via Prompt Engineering"
 excerpt: "Master prompt engineering and get structured outputs from GPT, PaLM, and other LLMs using Promptify - a powerful Python library for NLP tasks without training data."
-seo_title: "Promptify Tutorial: LLM Prompt Engineering for Structured Output - Complete Guide"
+seo_title: "Promptify: Structured LLM Output via Prompt Engineering"
 seo_description: "Learn how to use Promptify for prompt engineering with GPT and other LLMs. Get structured outputs for NER, classification, QA, and more NLP tasks without training data."
 date: 2025-09-05
 tags:

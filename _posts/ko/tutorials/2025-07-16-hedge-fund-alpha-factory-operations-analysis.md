@@ -1,7 +1,7 @@
 ---
-title: "헤지펀드 알파 공장 해부: 6대 탑티어 펀드의 수천 개 모델 운영 전략 완전 분석"
+title: "헤지펀드 알파 공장: 수천 개 모델을 운영하는 방식"
 excerpt: "Renaissance Technologies부터 DeepSeek까지, 실제 헤지펀드들이 어떻게 수만 개의 알파 신호를 수집하고 집계해서 초과수익을 만들어내는지 상세히 분석합니다."
-seo_title: "헤지펀드 알파 공장 운영 전략 - Renaissance Citadel Two Sigma - Thaki Cloud"
+seo_title: "헤지펀드 알파 공장: 수천 개 모델을 운영하는 방식"
 seo_description: "Renaissance Technologies, Citadel, Two Sigma 등 탑티어 헤지펀드 6곳의 알파 공장 운영 방식을 상세 분석. 수천 개 모델을 어떻게 집계해서 초과수익을 만드는지 완전 해부"
 date: 2025-07-16
 last_modified_at: 2025-07-16

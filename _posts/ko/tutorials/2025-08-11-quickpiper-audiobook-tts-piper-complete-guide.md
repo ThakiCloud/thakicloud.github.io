@@ -1,7 +1,7 @@
 ---
-title: "QuickPiperAudiobook: 오프라인 TTS로 만드는 자연스러운 오디오북 완전 가이드"
+title: "QuickPiperAudiobook: 오프라인 TTS로 만드는 오디오북"
 excerpt: "687 스타의 QuickPiperAudiobook으로 PDF, EPUB, TXT 등 다양한 포맷을 Piper TTS를 사용해 오프라인에서 자연스러운 오디오북으로 변환하는 방법을 macOS 환경에서 실습과 함께 마스터해보세요."
-seo_title: "QuickPiperAudiobook Piper TTS 오디오북 변환 Go 오프라인 완벽 튜토리얼 - Thaki Cloud"
+seo_title: "QuickPiperAudiobook: 오프라인 TTS로 만드는 오디오북"
 seo_description: "Go 기반 QuickPiperAudiobook으로 PDF EPUB TXT 파일을 Piper TTS 엔진을 사용해 오프라인에서 자연스러운 오디오북으로 변환하는 방법을 macOS에서 실습과 함께 상세히 알아봅니다."
 date: 2025-08-11
 last_modified_at: 2025-08-11

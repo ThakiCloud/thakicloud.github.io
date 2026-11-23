@@ -1,5 +1,5 @@
 ---
-title: "AI Agents in the Labor Market: Stanford's WORKBank Study on Human-AI Collaboration"
+title: "WORKBank: Stanford's Study of Agents and Human Work"
 excerpt: "Stanford researchers conducted a large-scale study with 1,500 workers and 52 AI experts to analyze labor market changes and human-AI collaboration realities in the age of AI agents"
 date: 2025-06-21
 lang: en

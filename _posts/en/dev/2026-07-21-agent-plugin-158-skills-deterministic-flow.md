@@ -1,5 +1,5 @@
 ---
-title: "158 Skills and 24 Agents in One Plugin: How a Deterministic Skeleton Tames Agent Explosion"
+title: "158 Skills, 24 Agents: A Deterministic Plugin Skeleton"
 excerpt: "The open-source marketing plugin Digital Marketing Pro bundles 158 skills and 24 specialist agents without collapsing. The trick is a deterministic skeleton: a fixed 12-part flow. We dissect the design and show how ThakiCloud's Paxis productizes the same principle."
 date: 2026-07-21
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "RAG 스택 선택 완전 가이드: 데이터 규모별 최적화 전략과 비용 분석"
 excerpt: "10만 벡터부터 10억 벡터까지, 데이터 규모에 따른 최적의 RAG 스택 선택 방법과 Qwen3 활용 전략을 상세히 알아봅니다."
-seo_title: "RAG 벡터스토어 선택 가이드: FAISS, Chroma, Qdrant, Milvus 비교 - Thaki Cloud"
+seo_title: "RAG 스택 선택 완전 가이드: 데이터 규모별 최적화 전략과 비용 분석"
 seo_description: "데이터 규모별 최적의 RAG 스택 선택 방법과 월간 비용 분석. FAISS에서 Weaviate까지 완벽 가이드와 Qwen3 임베딩 활용 전략을 제공합니다."
 date: 2025-06-30
 last_modified_at: 2025-06-30

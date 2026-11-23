@@ -1,6 +1,6 @@
 ---
-title: "Can a 10K-Parameter Ranker Pick Better vLLM Settings Than the Defaults? Building Thaki-MemoryPolicy"
-seo_title: "Thaki-MemoryPolicy-vLLM-Ranker - Measured Results of a Tiny Ranker That Picks One of 15 vLLM Serving Configurations | ThakiCloud"
+title: "Thaki-MemoryPolicy: Can a Tiny Ranker Pick vLLM Settings?"
+seo_title: "Thaki-MemoryPolicy: Can a Tiny Ranker Pick vLLM Settings?"
 seo_description: "A ranker with about 10,000 parameters picks one of 15 vLLM serving configurations before the server starts. Trained on 1,440 measured cells, it matched the vLLM defaults on 16 unseen-workload scenarios: throughput +19 tok/s (95% CI −82.8 to +119.9), with a worse latency tail."
 excerpt: "Do you need a large LLM to choose vLLM serving settings? We trained a 10K-parameter ranker on measured data. On dev it came close to the best configuration, but on unseen workloads it only matched vLLM's defaults. The first version leaked the answer into its inputs and was discarded."
 date: 2026-11-02

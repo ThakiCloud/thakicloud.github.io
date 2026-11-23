@@ -1,5 +1,5 @@
 ---
-title: "AI 기업 도입 완벽 가이드: OpenAI, Google, Anthropic의 최신 실무 자료 모음"
+title: "기업 AI 도입: OpenAI·Google·Anthropic 실무 자료"
 date: 2024-05-31
 tags: 
   - OpenAI

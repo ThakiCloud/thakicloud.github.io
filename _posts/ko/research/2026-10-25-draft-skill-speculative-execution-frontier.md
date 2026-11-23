@@ -1,6 +1,6 @@
 ---
-title: "The Draft Skill: 하이브리드 라우터의 LLM-rerank 구간이 스킬을 고르는 동안, lite-confidence 후보를 병행해서 미리 실행하고 수용 frontier를 재는 분석 논문"
-seo_title: "The Draft Skill: LLM-rerank 스테이지와 병행하는 싼 결정론 스킬의 스펙ulative pre-execution 수용률과 wall-time-대-wasted-compute frontier 분석 논문 소개 (task-level speculation, acceptance rate, break-even p*=1/2, hidden regime, unattended agent harness, 셀프호스트 H200) - ThakiCloud"
+title: "Draft Skill: rerank 구간에 후보 스킬을 미리 실행하기"
+seo_title: "Draft Skill: rerank 구간에 후보 스킬을 미리 실행하기"
 seo_description: "이 분석 논문은 두 스테이지 하이브리드 스킬 라우터(lite 스테이지 BM25+ k=8 manifest 주입, LLM-rerank 스테이지)의 rerank 구간을 실행 경로상의 유휴 윈도우로 봅니다. rerank가 최종 스킬을 고르는 동안 lite-confidence가 임계 τ를 넘는 후보 스킬을 여유 worker에 병행 pre-execution(draft)하고, 라우터 자신의 최종 결정과 결정론 검증기(schema, idempotency, read-side only)로 수용·폐기하는 정책입니다. 클래스 내 drafting(T_D = T_E)에서 단일 draft break-even p* = 1/2, hidden-regime 불변성(절감 pT_E가 T_R에 무관, 폐기-절감비 (1-p)/p), 임계 부호-독립성, m-pool 규칙(T_D = T_E이면 단일 top-1 draft가 더 큰 pool을 엄격 지배)을 증명합니다. 선언된 nominal(2,293-entry 레지스트리, 인용 8.9pp hybrid-over-BM25 lift, p = 0.911)에서 수용 margin은 1.82x, 결정당 speedup은 1.09~1.82x입니다. 토큰 단위 Draft Law를 행동 단위로 끌어올리고, 반증 기준 R1-R4를 둔 사전 등록 two-arm 실측 프로토콜을 함께 둡니다."
 excerpt: "rerank 스테이지는 실행 경로상의 유휴 시간입니다. 이 논문은 그 윈도우 동안 lite-confidence가 높은 후보 스킬을 미리 실행하고, 라우터 자신의 결정으로 수용하거나 폐기하는 Draft Skill의 frontier를 씁니다. break-even은 1/2이고, 선언된 nominal 수용률 0.911이 그 기준을 1.82x margin으로 넘는다는 계산입니다."
 date: 2026-10-25

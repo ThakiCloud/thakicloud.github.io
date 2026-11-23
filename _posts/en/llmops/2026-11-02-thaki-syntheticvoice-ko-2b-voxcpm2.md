@@ -1,6 +1,6 @@
 ---
-title: "A Korean Voice Built Without a Real Person: Building Thaki-SyntheticVoice-KO-2B"
-seo_title: "Thaki-SyntheticVoice-KO-2B-v0.1 - Fine-Tuning VoxCPM2 on a Designed Synthetic Speaker, With Measured Results | ThakiCloud"
+title: "Thaki-SyntheticVoice-KO: A Korean Voice With No Real Speaker"
+seo_title: "Thaki-SyntheticVoice-KO: A Korean Voice With No Real Speaker"
 seo_description: "We LoRA fine-tuned VoxCPM2 on 80.8 minutes of speech from F1, a synthetic speaker designed from a text description. With a reference clip it matched the base model; without one, UTMOS rose 2.22→3.23 and CER fell 3.6%→1.8%, but speaker locking is only partial."
 excerpt: "Instead of releasing a model that reproduces a real voice actor, we designed a virtual speaker from a text description and fine-tuned VoxCPM2 on its synthetic speech. With a reference clip the result matched the base model. Only without a reference did a clear difference appear, and even then the voice was not fully locked."
 date: 2026-11-02

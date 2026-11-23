@@ -1,7 +1,7 @@
 ---
-title: "The Question Behind a 25 Billion Won Bill: Why AI Agent Costs Have Become Invisible"
+title: "Behind a 25 Billion Won Bill: Invisible Agent Costs"
 excerpt: "From a 25 billion won bill sent to a user in Korea to allegations of overbilling at 60 companies, the past month of AI cost news points to a single blind spot. In the age of agents, where a single request can trigger hundreds of model calls, the bill no longer explains what you actually paid for. Here is how we think that observability gap should be closed."
-seo_title: "AI Agent Cost Observability and FinOps: Lessons from a 25 Billion Won Billing Incident"
+seo_title: "Behind a 25 Billion Won Bill: Invisible Agent Costs"
 seo_description: "In July 2026, Anthropic's 25 billion won billing error, allegations that 60 companies were overcharged $1.7 million, retry storms, and shadow IT. We analyze the structural reasons why agent workloads make costs unobservable, and lay out ThakiCloud's strategy of self-hosting plus agent cost observability and governance to address it."
 date: 2026-07-20
 tags:

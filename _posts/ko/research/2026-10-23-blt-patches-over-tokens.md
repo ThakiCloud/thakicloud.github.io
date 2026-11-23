@@ -1,6 +1,6 @@
 ---
-title: "BLT가 '토큰을 없앤다'는 말의 진짜 의미: Meta의 바이트 레벨 LLM을 숫자로 검증했다"
-seo_title: "BLT(Byte Latent Transformer) 토크나이저-프리 바이트 레벨 LLM, 엔트로피 기반 동적 패치, 추론 효율, Fast BLT, Meta FAIR, ThakiCloud"
+title: "BLT가 토큰을 없앤다는 말의 의미"
+seo_title: "BLT가 토큰을 없앤다는 말의 의미"
 seo_description: "10월 바이럴로 재점화된 Meta의 바이트 레벨 LLM, BLT 라인을 논문과 GitHub, HF 모델로 검증했습니다. '토큰을 영원히 없앤다'는 말보다, 계산 단위를 정보 밀도에 맞게 동적으로 재할당한다는 것이 핵심입니다. 우리 venv에서 패치 분할 원리를 시뮬레이션해 475바이트 샘플 기준 원시 바이트 475, char 328, BPE 179, 동적 패치 90이라는 실측을 제시합니다."
 excerpt: "'토큰을 없앤다'는 말보다 중요한 것은 계산 단위를 어디에 쓰느냐입니다. BLT는 예측이 쉬운 곳은 길게, 복잡한 곳은 촘촘하게 패치를 잘라 transformer 스텝 수를 줄입니다. 우리 venv에서 그 원리를 시뮬레이션해 실측으로 확인했습니다."
 date: 2026-10-23

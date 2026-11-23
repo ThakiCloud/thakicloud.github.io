@@ -1,6 +1,6 @@
 ---
-title: "궁금함은 계산 가능한 신호일까: Schmidhuber가 ICML 2026에서 interestingness를 '미래 압축 진전의 귀납적 휴리스틱'으로 형식화한 포지션 페이퍼"
-seo_title: "Interestingness as an Inductive Heuristic for Future Compression Progress: Schmidhuber ICML 2026 포지션 페이퍼, 압축 진전, 호기심 형식화, Kolmogorov 복잡도, 오픈엔드 에이전트 - ThakiCloud"
+title: "궁금함은 계산 가능할까: Schmidhuber의 interestingness"
+seo_title: "궁금함은 계산 가능할까: Schmidhuber의 interestingness"
 seo_description: "Herrmann과 Schmidhuber의 ICML 2026 포지션 페이퍼가 '다음에 뭘 배우면 미래 진전이 있는가'를 계산 가능한 신호로 형식화했습니다. 세 가지 사전에서 기대 미래 진전이 마지막 돌파의 근성에 지수적으로 의존하고, Algorithmic prior가 Length prior보다 이차적으로 낙관적이라는 정리가 무엇인지, 그리고 무인 에이전트 루프의 스케줄링 목적 함수로 쓸 수 있는 길을 정리합니다."
 excerpt: "X에서 '왜 아름다운지, 왜 웃긴지' 답한다는 논문이 돌았습니다. 그 논문은 Herrmann과 Schmidhuber의 ICML 2026 포지션 페이퍼이고, 실제 주장은 좀 더 좁습니다. interestingness, 즉 미래 압축 진전의 잠재가 과거 진전 기록에서 예측 가능한 신호라는 것. 그 형식화와 정리, 그리고 에이전트 스케줄링으로 쓰는 길을 짚습니다."
 date: 2026-10-29

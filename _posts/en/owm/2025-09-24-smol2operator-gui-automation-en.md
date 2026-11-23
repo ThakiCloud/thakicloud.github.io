@@ -1,7 +1,7 @@
 ---
-title: "Smol2Operator: Revolutionary GUI Agent Training for Computer Use Automation"
+title: "Smol2Operator: Training Lightweight GUI Agents"
 excerpt: "Explore HuggingFace's breakthrough approach to training lightweight vision-language models for GUI automation through a comprehensive two-phase methodology that transforms zero-grounding models into intelligent GUI agents."
-seo_title: "Smol2Operator GUI Agent Training: Computer Use Automation Guide - Thaki Cloud"
+seo_title: "Smol2Operator: Training Lightweight GUI Agents"
 seo_description: "Learn how HuggingFace's Smol2Operator transforms lightweight VLMs into GUI automation agents using innovative two-phase training with unified action spaces and agentic reasoning capabilities."
 date: 2025-09-24
 tags:

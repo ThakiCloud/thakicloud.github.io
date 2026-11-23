@@ -1,5 +1,5 @@
 ---
-title: "Skill Graveyard: Safely Deprecating Skills in an Agent Harness With Over 2,000 Units"
+title: "Skill Graveyard: Deprecating Skills Safely at Scale"
 excerpt: "If your team has kept expanding its catalog of agent skills or MCP tools, you've probably felt routing accuracy start to slip at some point. What happens if, instead of building a better retriever, you shrink the corpus itself? This post introduces an experiment that deprecated 160 skills without regression in a real production harness holding 2,164 units."
 tags:
   - skill-ecosystem

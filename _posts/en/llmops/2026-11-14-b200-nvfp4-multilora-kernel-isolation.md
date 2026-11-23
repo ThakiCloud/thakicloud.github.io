@@ -1,7 +1,7 @@
 ---
-title: "Eight Specialized AI Adapters on One GPU: Validating NVFP4 Multi-LoRA Kernel and Cache Isolation"
+title: "Eight Specialized Adapters on One GPU"
 excerpt: "We attached eight task-specific LoRA adapters, without retraining, to a single NVFP4-quantized 27B base and served nine models from one B200. We checked that computation and the prefix cache do not mix when requests for different adapters share a batch, and we kept the failed verdicts and the unverified product stability and task quality on the record."
-seo_title: "B200 NVFP4 Multi-LoRA Kernel and Cache Isolation: Eight Specialized AI Adapters on One GPU | ThakiCloud"
+seo_title: "Eight Specialized Adapters on One GPU"
 seo_description: "ThakiCloud attached eight LoRA adapters for security, fact checking, RAG, operations, RTL and Korean dialects to a Qwen3.8-27B NVFP4 base and served them from one B200 with vLLM 0.29.0. All 72 adapter pairs distinguished, zero rows over tolerance, every injected fault detected, zero prefix cache reuse across adapters or tenants. Memory arithmetic and the limits of the test, side by side."
 date: 2026-11-14
 last_modified_at: 2026-11-17

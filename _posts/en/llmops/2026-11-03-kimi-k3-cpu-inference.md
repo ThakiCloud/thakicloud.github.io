@@ -1,6 +1,6 @@
 ---
-title: "How to fit 2.78 trillion parameters in 8 GB of RAM: building and reproducing a Kimi K3 CPU inference engine"
-seo_title: "kimi-k3-in-c: running a 2.78T MoE on a CPU, MXFP4 quantization, NVMe expert streaming, 8.24 GB RAM, C99 engine build and reproduction | ThakiCloud"
+title: "Kimi K3 on 8 GB of RAM: Building a CPU Inference Engine"
+seo_title: "Kimi K3 on 8 GB of RAM: Building a CPU Inference Engine"
 seo_description: "We cloned and built kimi-k3-in-c, a portable C99 engine that runs the 2.78-trillion-parameter Kimi K3 on a CPU with no GPU. MXFP4 packing and NVMe expert streaming drop RAM to 8.24 GB, but the wall is bandwidth, so it is 10+ s/token. We include the kernel benchmark measured on our own Mac."
 excerpt: "Fitting a 2.78-trillion-parameter model into 8 GB of RAM is not hype. It is a real, buildable C99 engine. But 'it runs' does not mean 'it is fast.' We built the engine, ran its weightless tests and kernel benchmark, and used the numbers to show that storage bandwidth, not RAM, is the actual bottleneck."
 date: 2026-11-03

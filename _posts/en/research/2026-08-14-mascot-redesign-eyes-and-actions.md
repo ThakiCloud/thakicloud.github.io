@@ -1,5 +1,5 @@
 ---
-title: "If Your Mascot's Eyes Look Alien, the Problem Is the Catchlight, Not the Colour"
+title: "Alien Mascot Eyes Are a Catchlight Problem, Not Color"
 excerpt: "Glowing eyes are not the fault. Pure emission erases the corneal reflection and the face reads as dead. Once the eyes were fixed, the remaining awkwardness turned out to live in the training data, not the design."
 categories:
   - research

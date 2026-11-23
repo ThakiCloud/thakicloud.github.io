@@ -1,7 +1,7 @@
 ---
 title: "Magnitude: 비전 AI 기반 브라우저 자동화 완전 가이드"
 excerpt: "자연어로 브라우저를 제어하는 혁신적인 AI 자동화 프레임워크 Magnitude의 설치부터 실무 활용까지 완벽 정리"
-seo_title: "Magnitude AI 브라우저 자동화 튜토리얼 및 비즈니스 활용 가이드 - Thaki Cloud"
+seo_title: "Magnitude: 비전 AI 기반 브라우저 자동화 완전 가이드"
 seo_description: "Vision AI 기반 브라우저 자동화 프레임워크 Magnitude의 설치, 사용법, 그리고 클라우드 및 일반 기업에서의 실무 활용 사례를 상세히 분석합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02

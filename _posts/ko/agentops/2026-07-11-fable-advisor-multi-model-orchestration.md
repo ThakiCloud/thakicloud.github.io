@@ -1,6 +1,6 @@
 ---
-title: "Fable 5가 지휘하고 Grok 4.5가 구현하는 크로스벤더 워크플로: fable-advisor"
-seo_title: "Fable 5로 Grok 4.5 지휘하기 - fable-advisor 플러그인 분석 - Thaki Cloud"
+title: "fable-advisor: Fable 5가 지휘하고 Grok 4.5가 구현"
+seo_title: "fable-advisor: Fable 5가 지휘하고 Grok 4.5가 구현"
 seo_description: "fable-advisor는 Claude Fable 5가 스펙과 리뷰를 맡고 Grok 4.5가 실제 구현을 타이핑하는 크로스벤더 멀티에이전트 워크플로입니다. 지휘자-워커 분리 구조를 분해하고 ThakiCloud Paxis 관점에서 검증합니다."
 excerpt: "Claude Fable 5가 스펙 작성과 diff 리뷰를 지휘하고, 실제 코드 타이핑은 Grok 4.5가 전담하는 fable-advisor 플러그인의 지휘자-워커 분리 구조를 분해하고, 멀티에이전트를 일급 리소스로 다루는 ThakiCloud 관점에서 검증합니다."
 date: 2026-07-11

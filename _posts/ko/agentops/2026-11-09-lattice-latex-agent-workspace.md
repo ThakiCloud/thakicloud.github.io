@@ -1,7 +1,7 @@
 ---
 title: "에이전트가 옆 자리에 앉는다: 로컬 우선 LaTeX 워크스페이스 Lattice"
 excerpt: "Tsinghua University IIIS 소속 학부생의 사이드 프로젝트 Lattice가 소스와 PDF, 논문 라이브러리, Overleaf 공동 저자, 그리고 내가 데려온 AI 에이전트를 한 macOS 창에 모았습니다. 에이전트의 모든 수정은 내가 승인할 때까지 diff로 남습니다. 에이전트를 일급 시민으로 다루는 앱의 구조를 보고, Paxis가 플랫폼 레벨에서 하는 일을 비추어 봅니다."
-seo_title: "Lattice 로컬 LaTeX 워크스페이스: 에이전트를 공동 저자로 두는 구조 | ThakiCloud 기술블로그"
+seo_title: "에이전트가 옆 자리에 앉는다: 로컬 우선 LaTeX 워크스페이스 Lattice"
 seo_description: "Tauri 기반 macOS 앱 Lattice가 Claude Code·Codex 등 내 자신의 에이전트 CLI를 diff 승인 루프와 MCP 커넥터로 논문 작성 워크스페이스에 접목하는 구조를 정리합니다. OpenSlide 슬라이드, Overleaf 양방향 동기, latexdiff 변경 추적으로 보는 에이전트 네이티브 앱 설계 패턴."
 date: 2026-11-09
 last_modified_at: 2026-11-09

@@ -1,6 +1,6 @@
 ---
-title: "The Gains From Self-Evolving Harnesses May Be an Illusion: Separating Harness Updating From Harness Benefit"
-seo_title: "Rethinking Self-Evolving Agent Harness Evaluation - Separating Updating From Benefit - Thaki Cloud"
+title: "Self-Evolving Harnesses: Are the Gains an Illusion?"
+seo_title: "Self-Evolving Harnesses: Are the Gains an Illusion?"
 seo_description: "The performance gains attributed to self-evolving agent harnesses mix two distinct abilities together. Separate the ability to update a harness from the ability to benefit from an updated harness, and updating turns out flat across model tiers while benefit peaks at mid-tier models. We unpack the findings of arXiv 2605.30621 and map what transfers to ThakiCloud Paxis's self-evolving skill loop, where skills are treated as first-class resources."
 excerpt: "The gains attributed to self-evolving harnesses are a mix of 'the ability to produce good updates' and 'the ability to use those updates well,' tangled together within a single loop. Separate the two, and the question of where to spend your capability budget flips."
 date: 2026-07-16

@@ -1,7 +1,7 @@
 ---
-title: "When the Timeline Becomes the Prompt: MiniMax H3 Director and the License That Leaves Korea Out"
+title: "When the Timeline Becomes the Prompt: MiniMax H3 Director"
 excerpt: "A video editing timeline has landed inside ComfyUI. Write a prompt per shot, drop in keyframes, and it compiles straight into conditioning. But Korea is absent from the applicable territory of the H3 open-weight license."
-seo_title: "MiniMax H3 Director Analysis: ComfyUI Timeline Authoring and a License That Excludes Korea"
+seo_title: "When the Timeline Becomes the Prompt: MiniMax H3 Director"
 seo_description: "A breakdown of the MiniMax H3 open-weight release, its day-zero ComfyUI support and the Director timeline node, plus what a community license excluding Korea means for self-hosting plans."
 date: 2026-08-07
 last_modified_at: 2026-08-07

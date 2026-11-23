@@ -1,7 +1,7 @@
 ---
-title: "Qwen3-Next: Revolutionary AI Architecture Transforming the Future of Large Language Models"
+title: "Qwen3-Next: A Hybrid-Attention Architecture for Long Context"
 excerpt: "Exploring Alibaba's breakthrough Qwen3-Next-80B-A3B-Instruct model that combines hybrid attention mechanisms with ultra-efficient processing capabilities, setting new standards for parameter efficiency and context handling in artificial intelligence."
-seo_title: "Qwen3-Next AI Model: Hybrid Architecture Revolution - Thaki Cloud"
+seo_title: "Qwen3-Next: A Hybrid-Attention Architecture for Long Context"
 seo_description: "Discover how Qwen3-Next-80B-A3B-Instruct revolutionizes AI with hybrid attention, sparse MoE, and ultra-long context processing capabilities up to 1M tokens."
 date: 2025-09-22
 tags:

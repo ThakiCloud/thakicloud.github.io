@@ -2,7 +2,7 @@
 title: "A Proof Is Now a Claim"
 lang: en
 excerpt: "The industry's first reaction to the Claude-assisted Riemann Hypothesis proof was not applause but four independent Lean kernels and zero errors. Around the same time, a 940-page human-only proof draft was also released, and the first open benchmark that scores AI autonomous research appeared. The signal in this morning's digest is one. Scarcity in the industry is moving from generation to verification."
-seo_title: "Four Kernels, Zero Errors. The Industry's Verification Response to the AI Riemann Hypothesis Proof"
+seo_title: "A Proof Is Now a Claim"
 seo_description: "The Claude-assisted Riemann Hypothesis proof verified without error by four Lean kernels, a 940-page human-only GRH draft, the first open benchmark that scores AI autonomous research, a 26B model that runs on a 32GB laptop. Read today's digest in one line and the message is that verification is becoming the scarce layer."
 date: 2026-11-21
 last_modified_at: 2026-11-22

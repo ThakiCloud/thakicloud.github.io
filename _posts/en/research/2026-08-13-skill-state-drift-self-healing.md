@@ -1,6 +1,6 @@
 ---
-title: "In a Multi-Machine Agent Harness, a Skill Can Go Silently Dark and No One Notices"
-seo_title: "Drift Detection in Agent Harnesses: Session Checks vs Periodic Sweeps Compared"
+title: "Silent Skill Drift in Multi-Machine Agent Harnesses"
+seo_title: "Silent Skill Drift in Multi-Machine Agent Harnesses"
 seo_description: "We measured silent drift, where skills and rules quietly turn off in a multi-machine agent harness, using 20 fault-injection simulations. We explain why periodic sweeps beat session-triggered checks at detecting it, using the inspection paradox from renewal theory."
 excerpt: "Even with identical average check intervals, a periodic sweep cuts drift-detection time in half compared to a session-triggered check. We introduce a paper that explains why with 20 fault-injection simulations and the inspection paradox from renewal theory."
 date: 2026-08-13

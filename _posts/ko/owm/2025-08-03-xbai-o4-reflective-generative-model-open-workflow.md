@@ -1,7 +1,7 @@
 ---
-title: "XBai o4: 오픈소스 추론 모델의 새로운 패러다임, Reflective Generative Model"
+title: "XBai o4: 오픈소스 Reflective Generative 추론 모델"
 excerpt: "MetaStone-AI의 XBai o4는 Long-CoT 강화학습과 Process Reward Learning을 통합한 혁신적인 오픈소스 추론 모델로, OpenAI o3-mini를 넘어선 성능을 보여줍니다."
-seo_title: "XBai o4 오픈소스 추론 모델 완전 가이드 - Reflective Generative Model - Thaki Cloud"
+seo_title: "XBai o4: 오픈소스 Reflective Generative 추론 모델"
 seo_description: "MetaStone-AI XBai o4의 Reflective Generative Form 기술, 성능 벤치마크, 설치 방법까지 오픈 워크플로우 관리 관점에서 종합 분석합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03

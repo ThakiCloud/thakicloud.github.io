@@ -1,7 +1,7 @@
 ---
-title: "It's Not the Answers Failing Anymore: The Middle Layer Korean AI Left Empty"
+title: "The Middle Layer Korean AI Left Empty: Execution"
 excerpt: "The word that came up most often in today's news was execution. The layer below, semiconductors, and the layer above, models, have both been filled with trillion-won deals, but the layer in between, the one that defines an agent's authority and keeps the record of it, remains empty."
-seo_title: "The Execution Layer Is Empty: The Real Bottleneck for Korean Companies in the Agentic AI Era"
+seo_title: "The Middle Layer Korean AI Left Empty: Execution"
 seo_description: "Reading OpenAI's agent sandbox breach, warnings about execution errors in medical AI, and the adoption gap in insurance and manufacturing as one story. Not the model, not the GPU: the execution layer is what will decide the next one to two years."
 date: 2026-07-27
 last_modified_at: 2026-07-27

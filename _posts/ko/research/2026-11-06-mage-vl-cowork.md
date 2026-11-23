@@ -1,6 +1,6 @@
 ---
-title: "Mage-VL-Cowork: 화면 클릭과 터미널 타이핑을 단일 정책이 결정하는 Microsoft의 4B 컴퓨터 에이전트, 그리고 그걸 만든 5단계 훈련 레시피"
-seo_title: "Microsoft Mage 팀의 오픈웨이트 4B 하이브리드 컴퓨터 유즈 에이전트 Mage-VL-Cowork 리뷰. 외부 오케스트레이터 없이 GUI와 터미널 채널 라우팅을 단일 정책 내부에서 학습하고, OSWorld-Verified 66.0%(50스텝)로 4B급 최고, evolved harnesses와 Mage-CUA-Forge(293,806 태스크, 6,915 스킬)로 태스크당 생성 비용 $0.158(−82.6%). 5단계 커리큘럼, GRPO+TIS 온라인 RL, Apache-2.0 공개 - ThakiCloud"
+title: "Mage-VL-Cowork: 클릭과 코드를 고르는 4B 에이전트"
+seo_title: "Mage-VL-Cowork: 클릭과 코드를 고르는 4B 에이전트"
 seo_description: "Microsoft가 공개한 4B 컴퓨터 유즈 에이전트 Mage-VL-Cowork와 그 전체 훈련 레시피(arXiv 2610.40747)를 리뷰합니다. 스크린샷 GUI 채널과 터미널 코드 채널을 한 정책이 turn별로 라우팅하며, OSWorld-Verified 66.0%(50스텝, 361 태스크)로 4B급 기준선을 세웁니다. 교사가 하네스(스캐폴드, 도구, 프롬프트, 터미널 환경)를 진화시키며 데몬스트레이션을 만들고, 6,915개 스킬 체계 위에서 293,806개 태스크를 태스크당 $0.158에 합성하는 데이터 인프라까지. Apache-2.0 오픈웨이트로 온디바이스 CUA의 새 기준점입니다."
 excerpt: "클릭할 때와 코드를 쓸 때를 아는 4B 정책 하나. Microsoft가 온디바이스 컴퓨터 유즈의 기준선을 66%로 올리고, 훈련 레시피 전체와 모델을 Apache-2.0으로 풀었습니다."
 date: 2026-11-06

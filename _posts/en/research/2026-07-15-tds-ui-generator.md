@@ -1,6 +1,6 @@
 ---
-title: "If You Want an LLM to Generate Screens From a Design System, Build the Gate Before the Model"
-seo_title: "TDS UI Generator: Constraints Over Training, and Why Selection Matters - Thaki Cloud"
+title: "Build the Gate Before the Model: Design-System UI Generation"
+seo_title: "Build the Gate Before the Model: Design-System UI Generation"
 seo_description: "A field report on ThakiCloud's design system (TDS) console UI generator experiment. A 27B fine-tune failed the gate at 0/40, but registry-based constrained decoding passed 39/40 with no training at all. Validity and fidelity turned out to be different axes, and the remaining bottleneck wasn't generation but selection, where a requirement-based selector beat an LLM judge."
 excerpt: "We expected fine-tuning to win. The data said otherwise. Here's how we ended up with a generator that respects TDS without any training, and the next problem we're chasing: a valid screen isn't the same as a good one."
 date: 2026-07-15

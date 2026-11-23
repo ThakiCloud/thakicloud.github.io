@@ -1,6 +1,6 @@
 ---
 title: "What you need after the agent has answered"
-seo_title: "Running real company work on our in-house 245k model with Paxis - procedure matching, execution traces, audit | ThakiCloud"
+seo_title: "What you need after the agent has answered"
 seo_description: "We pointed Paxis at our in-house Qwen3.8-27B NVFP4 245k endpoint and ran two real company procedures. It picked the registered procedure out of 922 skills, logged the model and token count of every call, and accumulated audit events carrying an actor. Screen recordings plus ledger queries."
 excerpt: "A local agent answers just fine. What separates an organization is whether the answer records which procedure it followed, which model spent what, and who asked."
 date: 2026-08-28

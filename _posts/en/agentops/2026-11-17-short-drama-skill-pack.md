@@ -1,7 +1,7 @@
 ---
 title: "A Skill Pack That Indexes Short-Drama Production on Three Axes"
 excerpt: "VibeEverything's '86 skills for making AI short dramas' is already 131 projects in the repo, a week on. We pulled the curation data and aggregated it deterministically. Three axes of stage, model and agent, a license scan, and the finder skill built into the pack itself."
-seo_title: "awesome-short-drama-skills, 131 Projects Analyzed, Three-Axis Indexing | ThakiCloud"
+seo_title: "A Skill Pack That Indexes Short-Drama Production on Three Axes"
 seo_description: "We pulled and aggregated the AI short-drama skill pack awesome-short-drama-skills. The stage x model x agent structure of 131 projects, a license scan, the built-in finder skill, and what it means for agent-native skill curation."
 date: 2026-11-17
 last_modified_at: 2026-11-17

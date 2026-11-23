@@ -1,7 +1,7 @@
 ---
 title: "Webhooks Don't Fail Loud. They Fail Quiet."
 excerpt: "Webhook failures do not shout. The crash is the safe failure, because it returns a 500 and the sender retries. The dangerous one is the endpoint that answers the wrong status code once and lets a message disappear without a trace. The sender's only promise is at-least-once delivery, and this post argues the four devices the receiver must build to match that contract."
-seo_title: "Webhook Receiver Discipline: Trust, Duplicates, Response Codes, Dead Letters"
+seo_title: "Webhooks Don't Fail Loud. They Fail Quiet."
 seo_description: "A webhook URL is a public address and duplicates are the normal case. Signature verification, the idempotency table, response-code discipline, and the dead-letter routine to have in place before you open the endpoint."
 date: 2026-09-12
 last_modified_at: 2026-09-12

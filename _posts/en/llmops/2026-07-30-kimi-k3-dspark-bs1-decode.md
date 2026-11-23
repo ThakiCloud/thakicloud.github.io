@@ -1,6 +1,6 @@
 ---
-title: "464 tok/s at Batch Size 1: What Cuts Agent Wait Time Is Acceptance Rate, Not Throughput"
-seo_title: "Taking Apart Kimi K3 + DSpark bs=1 Decoding at 464 tok/s | ThakiCloud"
+title: "Batch Size 1: Acceptance Rate Cuts Agent Wait Time"
+seo_title: "Batch Size 1: Acceptance Rate Cuts Agent Wait Time"
 seo_description: "vLLM reached 464 tok/s decoding Kimi K3 at batch size 1. Starting from the published figures of 118 tok/s without speculative decoding, 370 tok/s with the DSpark draft model, and 464 tok/s two days later, we worked backwards to find what actually moves that number. Block-diffusion drafting, acceptance-rate sensitivity, and what it implies for on-premises agent workloads."
 excerpt: "Agents never fill your batch. In a workload that runs one stream at a time, speed is decided by how many draft tokens get accepted, not by how many GPUs you added."
 date: 2026-07-30

@@ -1,6 +1,6 @@
 ---
-title: "The Night We Fix the Controls Instead of the Notes: Self-Tuning of the Agent Harness and the Frozen Holdout Gate"
-seo_title: "Overnight Self-Evolution of Agent Harness Control Parameters: The Frozen Holdout Promotion Gate That Stops Silent Regressions - ThakiCloud"
+title: "Tuning the Controls, Not the Notes: Harness Self-Tuning"
+seo_title: "Tuning the Controls, Not the Notes: Harness Self-Tuning"
 seo_description: "The unattended agent now fixes the controls of its own harness every night, from pass lines and time budgets to the do-not-pick list. This paper shows why control edits drift strictly faster than note edits on the secret exam, and introduces the frozen holdout promotion gate placed out of the agent's reach plus a 6-arm factorial design."
 excerpt: "What if the student fixes the grading criteria every night instead of the notes? Can the report card still be trusted? We introduce the fast divergence that appears when an agent tunes the controls of its own harness, and the frozen holdout promotion gate that stops silent regressions."
 date: 2026-09-05

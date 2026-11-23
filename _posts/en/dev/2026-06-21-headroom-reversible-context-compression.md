@@ -1,7 +1,7 @@
 ---
-title: "Cutting Token Cost by 34-71% with Reversible Compression: A Headroom Field Report and ThakiCloud Context Hygiene"
+title: "Headroom: Reversible Context Compression for Agent Cost"
 excerpt: "The biggest hidden cost of an AI coding agent is context. We ran Headroom (headroom-ai) directly against three real JSON tool outputs from the ThakiCloud repo and measured the token reduction. We walk through how SmartCrusher's lossless, reversible compression cut tokens by up to 71.2%, from install command to measured numbers."
-seo_title: "Headroom Reversible Context Compression Field Report - Thaki Cloud"
+seo_title: "Headroom: Reversible Context Compression for Agent Cost"
 seo_description: "Measuring Headroom (headroom-ai) SmartCrusher reversible JSON compression on real repo data (34-71% token reduction), install and integration commands, and K8s LLM serving token-cost and context-hygiene analysis"
 date: 2026-06-21
 last_modified_at: 2026-06-21

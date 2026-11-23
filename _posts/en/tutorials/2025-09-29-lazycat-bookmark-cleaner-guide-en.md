@@ -1,7 +1,7 @@
 ---
-title: "LazyCat Bookmark Cleaner: Complete Guide to Automated Browser Bookmark Management"
+title: "LazyCat Bookmark Cleaner: Automated Bookmark Management"
 excerpt: "Learn how to intelligently organize and manage your browser bookmarks with a cute cat AI assistant. From removing duplicates to cleaning invalid links and generating bookmark profiles - a comprehensive guide to bookmark automation."
-seo_title: "LazyCat Bookmark Cleaner Automated Bookmark Management Guide - Thaki Cloud"
+seo_title: "LazyCat Bookmark Cleaner: Automated Bookmark Management"
 seo_description: "Complete guide to using LazyCat Bookmark Cleaner for smart browser bookmark organization. Learn duplicate removal, invalid link cleanup, and bookmark profile generation with this comprehensive tutorial."
 date: 2025-09-29
 tags:

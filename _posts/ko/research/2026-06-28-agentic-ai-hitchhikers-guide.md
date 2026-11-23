@@ -1,7 +1,7 @@
 ---
-title: "에이전트 AI를 처음부터 시스템까지 한 권으로: 'The Hitchhiker's Guide to Agentic AI'를 읽었습니다"
+title: "Hitchhiker's Guide to Agentic AI: 읽기 노트"
 excerpt: "arXiv에 올라온 'The Hitchhiker's Guide to Agentic AI: From Foundations to Systems'는 LLM 기질부터 정렬·추론, 에이전트 시스템, 그리고 프로덕션 배포까지 에이전트 AI의 전 계층을 한 번에 꿰는 실무 레퍼런스입니다. 네 개 층위로 정리하고, ThakiCloud의 Agent-Native Cloud인 Paxis 관점에서 무엇을 가져갈 수 있는지 짚었습니다."
-seo_title: "에이전트 AI 전 계층 가이드 정리 - Hitchhiker's Guide to Agentic AI - Thaki Cloud"
+seo_title: "Hitchhiker's Guide to Agentic AI: 읽기 노트"
 seo_description: "arXiv:2606.24937 'The Hitchhiker's Guide to Agentic AI'를 LLM 기질, 정렬·추론, 에이전트 시스템(MCP·스킬·메모리·멀티에이전트·A2A), 배포·평가의 네 층위로 정리하고 ThakiCloud Paxis Agent-Native Cloud 적용 관점을 더했습니다."
 date: 2026-06-28
 last_modified_at: 2026-06-28

@@ -1,6 +1,6 @@
 ---
 title: "From AI That Understands Speech to AI That Completes Work"
-seo_title: "Thaki Korean ASR and the Paxis Agent Platform - From Speech Recognition to Verified Work Execution | ThakiCloud"
+seo_title: "From AI That Understands Speech to AI That Completes Work"
 seo_description: "We fine-tuned Qwen3-ASR-1.7B for Korean customer-service speech and numbers, and verified it with an independent evaluation that passed all five pre-registered release gates. We look at the call-center gains, how the 2026-11-04 release audit narrowed the interpretation of the general-speech and numeric results, and the Voice-to-Mission architecture that connects this model to the Perception layer of Paxis."
 excerpt: "Once speech becomes text, what happens next is the real question. We fine-tuned and verified a Korean ASR model, and introduce the architecture Paxis uses to turn its output into work execution with an evidence trail."
 date: 2026-10-30

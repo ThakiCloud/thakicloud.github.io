@@ -1,7 +1,7 @@
 ---
-title: "Two Frontier Open Weights in One Week: Kimi K3 (2.8T) and Thinking Machines Inkling (975B)"
+title: "Two Frontier Open Weights in One Week: Kimi K3 and Inkling"
 excerpt: "In July 2026 the open-weight camp fired two shots in a single week. Moonshot AI unveiled Kimi K3, set to become the largest open-weight model ever at 2.8 trillion parameters, while Mira Murati's Thinking Machines Lab released its first open-weight model, Inkling (975B total, 41B active), under Apache 2.0. We lay out the facts, the architectures, and where each lands on benchmarks, then review honestly what an on-prem team can actually serve today."
-seo_title: "Kimi K3 vs Thinking Machines Inkling - Open-Weight Frontier Compared and On-Prem Serving - Thaki Cloud"
+seo_title: "Two Frontier Open Weights in One Week: Kimi K3 and Inkling"
 seo_description: "A fact-based rundown of Kimi K3 (2.8T MoE, 1M context, Kimi Delta Attention, weights July 27) and Inkling (975B/41B active, 45T tokens, text/image/audio, Apache 2.0): architecture, benchmarks, NVFP4 serving, fine-tuning, and a ThakiCloud K8s on-prem perspective."
 date: 2026-07-17
 last_modified_at: 2026-07-17

@@ -1,7 +1,7 @@
 ---
-title: "macOS GitHub CLI Complete Automation Series - Part 2: Full Issue Management Automation"
+title: "GitHub CLI Automation on macOS, Part 2: Issue Management"
 excerpt: "From intelligent issue creation and automatic labeling to sprint planning - a professional guide to automating every aspect of GitHub issue management"
-seo_title: "macOS GitHub CLI Automation Part 2 - Issue Management Automation - Thaki Cloud"
+seo_title: "GitHub CLI Automation on macOS, Part 2: Issue Management"
 seo_description: "How to fully automate GitHub CLI workflows from issue creation and classification to labeling, assignee allocation, and sprint planning. A complete guide to building an intelligent issue management system."
 date: 2025-07-02
 last_modified_at: 2025-07-02

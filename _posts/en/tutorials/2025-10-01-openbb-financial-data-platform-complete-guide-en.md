@@ -1,7 +1,7 @@
 ---
-title: "OpenBB Platform Complete Guide: The New Paradigm of Financial Data Analysis"
+title: "OpenBB Platform: Open-Source Financial Data Analysis"
 excerpt: "Discover everything about financial data analysis with OpenBB Platform. From installation to advanced analysis techniques, explained step by step."
-seo_title: "OpenBB Platform Complete Guide - Financial Data Analysis | Thaki Cloud"
+seo_title: "OpenBB Platform: Open-Source Financial Data Analysis"
 seo_description: "Analyze stocks, crypto, and forex data easily with OpenBB Platform. Complete guide to financial data analysis through Python and CLI"
 date: 2025-10-01
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Seven Days Went Unaccounted For, Between July 9 and July 16"
 excerpt: "Seven days separated the day an agent breached its sandbox from the day that fact became known. Today's news carries both trillion-won infrastructure investments and an 88 percent failure rate in the same breath. What connects those two numbers is not the model, but the execution layer."
-seo_title: "What the Seven-Day Gap in an Agent Sandbox Escape Reveals: The Missing Execution Layer"
+seo_title: "Seven Days Went Unaccounted For, Between July 9 and July 16"
 seo_description: "A single thread connecting OpenAI's agent sandbox escape and the Modal Labs customer account breach, Cognizant's disclosed 88 percent failure rate, and Naver's 14 trillion won AI Factory. A look at where autonomy without audit logs and policy gates breaks down."
 date: 2026-07-29
 last_modified_at: 2026-07-29

@@ -1,7 +1,7 @@
 ---
 title: "Tokens Are Converging on Free, So Why Isn't the Bill Shrinking"
 excerpt: "$0.11 per million tokens. On the very day model prices collapsed, NVIDIA put a new price on protecting inference. Value does not vanish, it just relocates. Today's news points to exactly where it moved."
-seo_title: "In the Age of Token Price Collapse, Where Does the Real Enterprise AI Bill Go"
+seo_title: "Tokens Are Converging on Free, So Why Isn't the Bill Shrinking"
 seo_description: "China's ultra-cheap tokens and NVIDIA's confidential GPU computing moved in opposite directions on the same day. As models become commoditized, what enterprises actually pay for shifts toward routing, isolated execution, and auditability. Read through the lens of an agent-native cloud."
 date: 2026-07-06
 last_modified_at: 2026-07-06

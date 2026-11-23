@@ -1,7 +1,7 @@
 ---
-title: "Jensen Huang Is Mostly Right. You Should Still Bring Open-Weight Models In This Way"
+title: "Bringing In Chinese Open-Weight Models: An On-Prem Checklist"
 excerpt: "The claim that weight files contain no backdoor is technically correct. The catch is that this does not mean there is no risk, only that the risk sits somewhere else. Here is the real attack surface and the intake procedure for running Chinese open-weight models on-premises."
-seo_title: "An On-Premises Intake Checklist for Chinese Open-Weight Models, Starting With safetensors and remote_code"
+seo_title: "Bringing In Chinese Open-Weight Models: An On-Prem Checklist"
 seo_description: "Starting from Jensen Huang's defense of Chinese open-weight models, this piece separates the attack surface of weight files from that of loader code, then walks through enforcing safetensors, blocking trust_remote_code, pinning hashes, and isolating execution."
 date: 2026-07-26
 last_modified_at: 2026-07-26

@@ -1,6 +1,6 @@
 ---
 title: "When Better RAG Accuracy Makes Evidence Decisions Less Safe"
-seo_title: "Accuracy vs Unsupported Answers and Counterfactual Invariance in RAG Decision Models - ThakiCloud"
+seo_title: "When Better RAG Accuracy Makes Evidence Decisions Less Safe"
 seo_description: "We improved a RAG answer, retrieve and stop adapter three times. Accuracy rose 1.1 points, but so did the unsupported-answer rate, and a cost re-weighting moved only the boundary, not the ranking. Counterfactual evaluation and a failed dataset build, in full."
 excerpt: "The experiment to raise accuracy worked. In the same experiment, answers to questions without enough evidence rose by 30%. The student whose score went up was also guessing more confidently on questions they did not know."
 date: 2026-10-12

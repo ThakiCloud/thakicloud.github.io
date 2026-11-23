@@ -1,6 +1,6 @@
 ---
-title: "We Searched All of Korea's Statutes for Numeric Contradictions: Zero Confirmed, and the Gaps Were in Amendment Lag"
-seo_title: "A Census of Numeric-Threshold Conflicts in Korean Statutes with a Code Oracle and Three-Model Consensus - ThakiCloud"
+title: "Numeric Contradictions in Korean Statutes: None Confirmed"
+seo_title: "Numeric Contradictions in Korean Statutes: None Confirmed"
 seo_description: "For engineers who want to check numeric consistency across regulations and contracts automatically. We checked 8,055 age, amount, period, and ratio comparisons across Korea's public statutes with a code oracle and a Claude, GPT, and Qwen consensus. Zero conflicts were confirmed; the real mismatches came from amendment lag, where a law changed and its enforcement decree had not caught up."
 excerpt: "Among clause pairs linked by explicit citation, three model families never unanimously confirmed a case where the current texts contradict each other on a numeric threshold. Real mismatches showed up in the gap between amending a law and amending its decree."
 date: 2026-09-26

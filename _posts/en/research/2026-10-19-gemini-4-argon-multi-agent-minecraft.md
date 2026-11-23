@@ -1,6 +1,6 @@
 ---
-title: "A Four-Person Expedition Without a Map: Gemini 4 Argon Agents Clear Minecraft in 27 Hours"
-seo_title: "Four Gemini 4 Argon coding agents from Google DeepMind cleared the Minecraft campaign in 27 hours 14 minutes. In a setup with no role assignment, no curriculum, and no human-written tools, this post examines the emergent coordination behaviors (shared memory, mutual rescue, self-correction) and the verification and cost accounting through the Paxis lens. - ThakiCloud"
+title: "Gemini 4 Argon Agents Clear Minecraft Without a Map"
+seo_title: "Gemini 4 Argon Agents Clear Minecraft Without a Map"
 seo_description: "Review of arXiv:2610.22319: the coordination outputs of a multi-agent run that cleared Minecraft with only the standard library, no curriculum or skill library; the Observer verification design; and the 91% context cache cost structure, analyzed from the ThakiCloud Paxis application lens."
 excerpt: "A paper reports that a four-person expedition with no map and no specialized tools reached the summit in 27 hours 14 minutes. Google DeepMind's four Gemini 4 Argon agents cleared the Minecraft campaign, and the record contains 605 falls and two 'what I just said was wrong' moments. This post pulls out the four patterns a multi-agent platform should take from that record."
 date: 2026-10-19

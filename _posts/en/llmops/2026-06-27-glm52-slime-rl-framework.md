@@ -1,7 +1,7 @@
 ---
 title: "Inside slime, the Open-Source RL Framework That Built GLM-5.2"
 excerpt: "slime, the asynchronous reinforcement-learning infrastructure behind the post-training of Z.ai's 1M-context open-weight model GLM-5.2, has been fully open-sourced. We break down its three-component design that bridges Megatron training and SGLang rollout through a Data Buffer, its colocated/disaggregated execution modes, and its multi-turn agent-RL design from the perspective of ThakiCloud's K8s and Kueue GPU serving stack."
-seo_title: "GLM-5.2 RL Framework slime Analysis: Megatron SGLang Post-Training - Thaki Cloud"
+seo_title: "Inside slime, the Open-Source RL Framework That Built GLM-5.2"
 seo_description: "An analysis of THUDM slime (an SGLang-native RL post-training framework): its Training/Rollout/Data Buffer three-component design, colocated vs disaggregated modes, multi-turn agent-RL features, and GLM-5.x validation, examined from ThakiCloud's K8s-based multi-tenant GPU operations perspective."
 date: 2026-06-27
 last_modified_at: 2026-06-27

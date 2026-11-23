@@ -1,7 +1,7 @@
 ---
-title: "Weaviate 완전 정복: 벡터 검색과 인덱싱으로 차세대 AI 검색 시스템 구축하기"
+title: "Weaviate: 벡터 검색과 인덱싱으로 AI 검색 만들기"
 excerpt: "Weaviate를 활용한 벡터 검색, 하이브리드 검색, 인덱싱 최적화까지 실제 테스트 기반 완전 가이드"
-seo_title: "Weaviate 벡터 검색 완전 가이드 - AI 검색 시스템 구축 튜토리얼 - Thaki Cloud"
+seo_title: "Weaviate: 벡터 검색과 인덱싱으로 AI 검색 만들기"
 seo_description: "Weaviate 벡터 데이터베이스를 활용한 AI 검색 시스템 구축 완전 가이드. Docker 설치, Python 클라이언트, 벡터 검색, 하이브리드 검색 실전 예제 포함"
 date: 2025-06-28
 tags: 

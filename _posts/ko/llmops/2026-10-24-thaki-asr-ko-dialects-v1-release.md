@@ -1,7 +1,7 @@
 ---
 title: "방언 5권역 CER 20% 낮춘 첫 공개 ASR, Thaki-ASR-KO-Dialects-v1"
 excerpt: "Qwen3-ASR-1.7B를 한국어 방언 289.6시간으로 미세조정해 Hugging Face에 공개했습니다. 5권역 합산 CER 13.52%에서 10.81%, 제주어 39.07%에서 28.44%, 표준어는 그대로입니다. 세 번째 시도에서야 사전등록 게이트를 넘은 과정과 솔직한 한계를 적었습니다."
-seo_title: "Thaki-ASR-KO-Dialects-v1 공개: 한국어 방언 ASR 미세조정 결과 | ThakiCloud"
+seo_title: "방언 5권역 CER 20% 낮춘 첫 공개 ASR, Thaki-ASR-KO-Dialects-v1"
 seo_description: "ThakiCloud 첫 공개 ASR 모델 Thaki-ASR-KO-Dialects-v1. Qwen3-ASR-1.7B를 강원·경상·전라·제주·충청 방언 289.6시간으로 전체 미세조정해 합산 CER 20.1% 개선, 제주어 27.2% 개선, Zeroth 유지. 세 번의 학습과 사전등록 게이트 판정을 수치로 정리합니다."
 date: 2026-10-24
 last_modified_at: 2026-11-09

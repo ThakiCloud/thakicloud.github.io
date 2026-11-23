@@ -1,6 +1,6 @@
 ---
-title: "Agents Take the Wheel on GPU Training: Dissecting NVIDIA Cosmos 3 Agent Skills"
-seo_title: "NVIDIA Cosmos 3 Agent Skills Post-Training Analysis - Thaki Cloud"
+title: "Agents Take the Wheel on GPU Training: NVIDIA Cosmos 3"
+seo_title: "Agents Take the Wheel on GPU Training: NVIDIA Cosmos 3"
 seo_description: "With TAO agent skills published by NVIDIA, a coding agent automatically drives LoRA fine-tuning and AutoML sweeps for the Cosmos 3 vision model. We dissect a workflow where two prompts raised validation accuracy from 54.41% to 93.35%, and lay out what ThakiCloud Paxis, which treats skills as first-class resources, and ai-platform, which schedules GPU training, can each take from it."
 excerpt: "Give a coding agent two natural-language prompts, and post-training a vision foundation model finishes in a single day. We dissect NVIDIA's agent skill and look at what transfers to our own platform, where skills are already treated as first-class resources."
 date: 2026-07-16

@@ -1,6 +1,6 @@
 ---
 title: "An 8.2M-Parameter Model That Guards the Input Before an Agent Acts"
-seo_title: "Thaki-InputGuard-KO-9M and the Paxis Input Stage - A Korean Input-Correction Edit Tagger | ThakiCloud"
+seo_title: "An 8.2M-Parameter Model That Guards the Input Before an Agent Acts"
 seo_description: "We released Thaki-InputGuard-KO-9M, an 8.2M-parameter Korean input-correction edit tagger. In a sealed evaluation it was strong on keyboard typos and spacing and weak on speech-recognition semantic errors. We lay out what this model should and should not do at the input stage of a Paxis agent."
 excerpt: "We released a small model that cleans up user input before an agent acts. We show what it does well and what it does not, with the numbers as measured, and describe a Paxis input stage where deterministic checks and ABSTAIN hold the boundary."
 date: 2026-11-01

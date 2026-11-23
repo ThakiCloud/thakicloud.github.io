@@ -1,7 +1,7 @@
 ---
-title: "Generative Music Won't Change Its Voice for a Caption: A Record of Ripping Out the Vocal and Swapping It In"
+title: "Swapping a Generated Song's Voice: Ripping Out the Vocal"
 excerpt: "When you generate a song with MiniMax-Music3, you cannot choose the singer. Neither the caption, the seed, nor the sampling settings move the voice, because the vocal tract length stays fixed at one value. So we let the model handle composition and separated out the vocal to swap it ourselves, splitting the same song into a 251Hz female take and a 126Hz male take."
-seo_title: "Swapping Vocal Timbre in Generative Music: A Separation, Conversion, and F0 Transplant Chain, Measured"
+seo_title: "Swapping a Generated Song's Voice: Ripping Out the Vocal"
 seo_description: "We confirmed via formant analysis why a music generation model is stuck with a single voice, then measured the process of swapping only the vocal using demucs separation, chatterbox conversion, and WORLD F0 transplantation. We also cover why transposition is limited to 0 and plus or minus 12 semitones, and where to place the gender-detection gate."
 date: 2026-08-18
 last_modified_at: 2026-08-18

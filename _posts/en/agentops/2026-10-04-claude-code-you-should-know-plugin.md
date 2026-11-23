@@ -1,6 +1,6 @@
 ---
 title: "Claude Code's You should Know: The Side Agent That Catches What You Miss"
-seo_title: "Claude Code built-in mod 'You should Know' analyzed - a side agent that watches long agentic sessions and surfaces notes above the prompt, the five powers of a mod, telemetry coupling, and the human-attention bottleneck through the ThakiCloud Paxis lens"
+seo_title: "Claude Code's You should Know: The Side Agent That Catches What You Miss"
 seo_description: "Anthropic added a built-in mod to Claude Code called You should Know. A side agent watches Claude's output during long sessions and surfaces a note above the prompt for anything worth knowing that you might miss. What a mod is, and what this does for agent attention, analyzed through the ThakiCloud Paxis lens."
 excerpt: "As agentic sessions get longer, the bottleneck moves from 'can the agent do it' to 'can a human keep up'. Claude Code's new built-in mod, You should Know, is a side agent that keeps that attention for you."
 date: 2026-10-04

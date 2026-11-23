@@ -1,7 +1,7 @@
 ---
 title: "AI Got an Employee ID"
 excerpt: "The story of security is changing. It is no longer about who got in, but about what authority was given to whoever is inside. A scenario in which an employee who knows the internal systems moves tens of GB of confidential data with AI, two agent access control patents, and office agents up 14x. If AI is a new employee, what companies need is not a wall but an HR system."
-seo_title: "AI Got an Employee ID. It Is a Question of Authority, Not Walls | ThakiCloud"
+seo_title: "AI Got an Employee ID"
 seo_description: "An insider threat scenario where tens of GB of confidential data moves without any hacking tool, SoftFrick's two agent access control patents, and ChatGPT Work's 14x surge. An analysis of what companies should prepare before agents become insiders."
 date: 2026-10-13
 last_modified_at: 2026-10-13

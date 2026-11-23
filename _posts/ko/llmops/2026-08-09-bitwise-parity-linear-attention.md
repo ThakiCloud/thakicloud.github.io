@@ -1,7 +1,7 @@
 ---
-title: "훈련과 추론의 비트가 어긋나면 RL이 흔들립니다: 그 정합이 선형 어텐션에서 막히는 이유"
+title: "훈련과 추론의 비트가 어긋나면 RL이 흔들린다"
 excerpt: "vLLM과 TorchTitan은 커널 호출을 하나씩 감사해 훈련과 추론의 수치를 비트 단위로 맞췄고, KL 발산을 0으로 만들자 보상이 더 높이 올라갔습니다. 그런데 같은 기법이 Gated DeltaNet 같은 선형 어텐션 계열에서는 아직 막혀 있습니다."
-seo_title: "vLLM TorchTitan 비트 단위 정합과 Gated DeltaNet 선형 어텐션의 벽"
+seo_title: "훈련과 추론의 비트가 어긋나면 RL이 흔들린다"
 seo_description: "훈련과 추론 커널의 수치 불일치가 RL 결과를 어떻게 망가뜨리는지, vLLM과 TorchTitan이 KL 0을 만든 방법, 그리고 GDN 선형 어텐션에서 배치 불변성이 막히는 구조적 이유를 정리했습니다."
 date: 2026-08-09
 last_modified_at: 2026-08-09

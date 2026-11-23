@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA GLM-5.2-NVFP4: Serving a 753B Frontier MoE at 4-Bit Precision"
 excerpt: "NVIDIA has released a NVFP4 (4-bit) quantization of ZAI's 753B MoE reasoning model GLM-5.2 on Hugging Face. Rather than blanket-quantizing every weight, the approach selectively reduces only the linear operators inside MoE routing experts to 4-bit while keeping shared experts and attention in BF16, preserving accuracy almost on par with the FP8 baseline. This post covers the quantization strategy, public benchmark results, and vLLM/SGLang deployment commands from the perspective of ThakiCloud's Kubernetes multi-tenant serving platform."
-seo_title: "NVIDIA GLM-5.2-NVFP4 753B MoE 4-bit Quantization vLLM SGLang Serving Analysis - Thaki Cloud"
+seo_title: "NVIDIA GLM-5.2-NVFP4: Serving a 753B Frontier MoE at 4-Bit Precision"
 seo_description: "An analysis of nvidia/GLM-5.2-NVFP4 (NVFP4 4-bit quantization) covering its selective quantization strategy, accuracy retention vs. FP8, vLLM/SGLang deployment commands, and the Blackwell TP=8 requirement, examined through the lens of ThakiCloud's Kubernetes-based multi-tenant serving platform."
 date: 2026-06-26
 last_modified_at: 2026-06-26

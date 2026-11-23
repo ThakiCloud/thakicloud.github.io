@@ -1,7 +1,7 @@
 ---
-title: "망분리 공공기관을 위한 주권 AI 구축 가이드: 온프레미스 LLM 레퍼런스 아키텍처"
+title: "망분리 공공기관을 위한 소버린 AI 구축"
 excerpt: "외부 클라우드를 쓸 수 없는 공공·정부 기관이 사내 GPU 인프라에서 LLM을 안전하게 서비스하는 방법을 설명합니다. ThakiCloud AI Platform의 에어갭 배포 레퍼런스 아키텍처와 보안·거버넌스 설계를 소개합니다."
-seo_title: "망분리 공공기관 온프레미스 LLM 구축 레퍼런스 - Thaki Cloud"
+seo_title: "망분리 공공기관을 위한 소버린 AI 구축"
 seo_description: "망분리 에어갭 환경의 공공기관·정부 조직이 주권 AI 클라우드를 온프레미스로 구축하는 레퍼런스 아키텍처. 국정원 보안요구, 데이터 국내저장 의무, Keycloak RBAC, ArgoCD GitOps, vLLM 서버리스 추론을 포함합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22

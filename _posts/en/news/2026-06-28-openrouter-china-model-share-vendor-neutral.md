@@ -1,7 +1,7 @@
 ---
-title: "What OpenRouter's Share Reversal Actually Tells Us: Tokens Are Not Revenue, and Why Model Neutrality Matters"
+title: "What OpenRouter's Share Reversal Really Tells Us"
 excerpt: "US model token share on OpenRouter fell from roughly 70% to roughly 30% in a year while Chinese open-weight models climbed to about 46%. But the real story is how token share and revenue share are diverging. We examine the data, unpack the second layer that headlines miss, and lay out what model-neutral routing plus a license and data compliance layer means for ThakiCloud and Paxis."
-seo_title: "OpenRouter US vs China Model Share Reversal and the Case for Model Neutrality - Thaki Cloud"
+seo_title: "What OpenRouter's Share Reversal Really Tells Us"
 seo_description: "We verify OpenRouter token share data showing US models dropping from 70% to 30% while Chinese models reach 46%, then examine the token-revenue split (Anthropic holds 12% token share but 46% of revenue). We cover why DeepSeek and Qwen surged, and what model-neutral routing with a compliance layer means for ThakiCloud and Paxis."
 date: 2026-06-28
 last_modified_at: 2026-06-28

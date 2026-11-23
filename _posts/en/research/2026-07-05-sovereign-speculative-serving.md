@@ -1,7 +1,7 @@
 ---
-title: "The Moment Speculative Decoding Turns Into a Loss on On-Prem Multi-Tenant GPU Clusters"
+title: "When Speculative Decoding Loses on Multi-Tenant GPUs"
 excerpt: "Every speculative decoding milestone that has topped 1,000 TPS, JetSpec included, assumes a single-tenant cluster with abundant spare compute on B200-class hardware. On an on-prem cluster where Kueue and Kubernetes co-batch multiple tenants, the same policy can actually increase latency. We introduce a paper in which the ThakiCloud research team models this gap as a function of acceptance rate, spare-compute headroom, and batching interference, and proposes SovereignSpec, a scheduler-driven policy for making that call directly."
-seo_title: "Research on Scheduling Speculative Decoding for On-Prem Multi-Tenant Clusters - Thaki Cloud"
+seo_title: "When Speculative Decoding Loses on Multi-Tenant GPUs"
 seo_description: "We introduce the SovereignSpec paper from ThakiCloud AI Research. It models the real-world speedup of speculative decoding as a function of acceptance rate, spare-compute headroom, and batching interference, and presents a scheduling policy that performs acceptance decisions, heterogeneous placement, and sovereignty-preserving co-batching on top of a Kueue plus Kubernetes stack."
 date: 2026-07-05
 last_modified_at: 2026-07-05

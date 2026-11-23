@@ -1,7 +1,7 @@
 ---
 title: "The Day the Agent Became an OS, the Harness Disappeared"
 excerpt: "DeepSeek's agent framework 'Harness' reached 1.54 million daily active users and 92 trillion tokens a day within three months of launch. The name means a device that reins in a horse's behavior, but the more open the ecosystem, the clearer the control structure enterprises actually need."
-seo_title: "DeepSeek's Agent OS Harness: the Enterprise Control Structure the Name Doesn't Capture | ThakiCloud"
+seo_title: "The Day the Agent Became an OS, the Harness Disappeared"
 seo_description: "This post analyzes DeepSeek Harness's 1.54 million daily active users and 92 trillion daily tokens, the AI auto-approval password leak, and the gap in agent KPIs, and examines the enterprise governance structure an agent OS requires."
 date: 2026-11-10
 last_modified_at: 2026-11-11

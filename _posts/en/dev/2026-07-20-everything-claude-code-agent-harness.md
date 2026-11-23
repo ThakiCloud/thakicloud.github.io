@@ -1,5 +1,5 @@
 ---
-title: "everything-claude-code: Dissecting an AI Coding Harness Battle-Tested Over Six Months"
+title: "everything-claude-code: Dissecting a Six-Month Harness"
 excerpt: "AI coding tools forget your rules every new session. An Anthropic hackathon winner solved this by open-sourcing the config they refined over six months on a real TypeScript microservice. We dissect everything-claude-code's thin-harness, fat-skills design and show how ThakiCloud's Paxis productizes the same principle."
 date: 2026-07-20
 lang: en

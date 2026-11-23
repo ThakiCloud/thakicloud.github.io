@@ -1,6 +1,6 @@
 ---
-title: "501B의 지식을 23B의 계산으로: Reflection AI 첫 오픈웨이트 Beam(501B-A23B)"
-seo_title: "Reflection AI가 2026년 10월 16일 Apache 2.0으로 공개한 첫 오픈웨이트 모델 Beam(501B-A23B)는 총 501B·활성 23B 희소 MoE입니다. 6,144개 GB300 NVL72에서 23.8조 토큰을 학습했고, 추론 코딩과 에이전트 작업에서 GLM-5.2 대비 3~4배 적은 컴퓨트를 주장합니다. 서빙 비용 구조와 독립 평가의 유보를 정리합니다. - ThakiCloud"
+title: "Reflection Beam: 501B의 지식, 23B의 계산"
+seo_title: "Reflection Beam: 501B의 지식, 23B의 계산"
 seo_description: "Beam(501B-A23B) 모델카드 분석: MoE 구조와 GB300 학습 규모, 공식 벤치마크와 양자화별 점수, NVFP4 280GB 서빙 구조, DataCamp 독립 평가의 반론까지 ThakiCloud 관점에서 정리합니다."
 excerpt: "Reflection AI의 첫 오픈웨이트 모델 Beam은 501B 총 파라미터 중 토큰마다 23B만 활성화하는 희소 MoE입니다. Apache 2.0 가중치와 NVFP4 280GB 서빙 구조는 매력적이지만, '3~4배 적은 컴퓨트'는 공급자 주장이고 독립 평가는 아직 계획할 단계는 아니라고 봅니다."
 date: 2026-10-19

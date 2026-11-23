@@ -1,6 +1,6 @@
 ---
-title: "ThakiOCR-Large-27B-R2B: Qwen 27B를 한국어 단어 OCR로 미세조정해 공개했습니다"
-seo_title: "Qwen 27B로 한국어 OCR 학습: ThakiOCR-Large-27B-R2B 공개 | ThakiCloud"
+title: "ThakiOCR-Large-27B-R2B: 한국어 단어 OCR 미세조정"
+seo_title: "ThakiOCR-Large-27B-R2B: 한국어 단어 OCR 미세조정"
 seo_description: "Qwen3.6-27B에 LoRA 어댑터를 붙여 한국어 단어 OCR로 미세조정한 ThakiOCR-Large-27B-R2B를 Apache-2.0으로 공개했습니다. 고정 개발 세트 2,400장에서 단어 CER이 18.04%에서 6.01%로 내려갔습니다. 평가 범위, GPU 메모리, 오류 유형, 아직 측정하지 않은 것을 정리합니다."
 excerpt: "27B 비전 언어 모델에 LoRA 어댑터를 붙여 한국어 단어 이미지 읽기를 학습시켰습니다. 무엇이 좋아졌는지, 어디까지가 검증된 범위인지 숫자로 정리했습니다."
 date: 2026-11-07

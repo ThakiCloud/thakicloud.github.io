@@ -1,7 +1,7 @@
 ---
 title: "HRM: 인간 뇌 구조에서 영감받은 계층적 추론 모델의 혁신적 접근"
 excerpt: "2700만 개 파라미터로 대형 모델을 능가하는 Hierarchical Reasoning Model의 핵심 원리와 AGI 향한 새로운 패러다임을 분석합니다."
-seo_title: "Hierarchical Reasoning Model HRM 논문 분석 - 뇌 구조 영감 AI 아키텍처 - Thaki Cloud"
+seo_title: "HRM: 인간 뇌 구조에서 영감받은 계층적 추론 모델의 혁신적 접근"
 seo_description: "Chain-of-Thought 한계를 극복한 HRM의 계층적 추론 메커니즘, ARC 벤치마크 성능, AGI 향한 새로운 접근법을 상세 분석합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03

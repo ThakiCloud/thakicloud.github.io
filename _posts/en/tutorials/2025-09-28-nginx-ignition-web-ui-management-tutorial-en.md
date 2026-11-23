@@ -1,7 +1,7 @@
 ---
 title: "nginx-ignition: Complete Guide to Web-Based nginx Management"
 excerpt: "Learn how to manage nginx servers effortlessly with nginx-ignition's intuitive web interface. Complete tutorial covering installation, configuration, SSL certificates, and Docker integration."
-seo_title: "nginx-ignition Tutorial: Web UI for nginx Server Management - Thaki Cloud"
+seo_title: "nginx-ignition: Complete Guide to Web-Based nginx Management"
 seo_description: "Master nginx-ignition web interface for nginx server management. Step-by-step guide covering Docker setup, SSL certificates, virtual hosts, and proxy configuration."
 date: 2025-09-28
 tags:

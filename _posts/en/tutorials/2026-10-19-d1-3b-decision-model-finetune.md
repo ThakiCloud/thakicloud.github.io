@@ -1,7 +1,7 @@
 ---
-title: "An 8ms decision with zero output tokens: fine-tuning the d1-3B decision model on your own data"
+title: "d1-3B: Fine-Tuning a Decision Model on Your Own Data"
 excerpt: "Liquid AI's d1-3B is a decision model: give it a state (text, JSON, images, or a mix) and a set of questions, and it returns typed, calibrated answers in one forward pass with zero output tokens, 8ms on a 4090. This post covers what a decision model is, what is actually inside d1-3B (we downloaded the weights and read the config), and the two fine-tuning notebooks (TRL and Unsloth), including our S3 onboarding record."
-seo_title: "d1-3B decision model fine-tuning tutorial - TRL/Unsloth, your own data - Thaki Cloud"
+seo_title: "d1-3B: Fine-Tuning a Decision Model on Your Own Data"
 seo_description: "Fine-tune Liquid AI d1-3B (3.1B, single-forward-pass decision model) on your own data: system_one API, noul/choice/score question schema, TRL SFT and Unsloth notebook walkthroughs, LFM2.5-VL hybrid conv architecture inspection, ThakiCloud S3 onboarding, and agent-gate application perspective."
 date: 2026-10-19
 last_modified_at: 2026-11-09

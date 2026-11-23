@@ -1,6 +1,6 @@
 ---
 title: "We Measured What It Actually Costs to Skim 1,000 Papers in Minutes"
-seo_title: "Zotero AI Paper Triage Benchmark: 35s Screening vs 24M Prompt Tokens | ThakiCloud"
+seo_title: "We Measured What It Actually Costs to Skim 1,000 Papers in Minutes"
 seo_description: "We measured the claim that a Zotero AI plugin can skim 1,000 papers in minutes. On a MacBook, text extraction ran at 76 pages per second, or 6.5 minutes for 1,000 papers. Feeding all of them to an LLM costs 24.38M prompt tokens, while embedding-based screening ranks the same library in 35 seconds."
 excerpt: "Skimming and reading are different jobs. We measured where one ends and the other begins."
 date: 2026-07-29

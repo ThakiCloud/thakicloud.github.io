@@ -1,7 +1,7 @@
 ---
 title: "Ring-flash-2.0: IcePop 알고리즘으로 혁신을 이룬 차세대 사고형 MoE 모델"
 excerpt: "1000억 파라미터 중 추론 시 61억만 활성화하는 혁신적인 MoE 모델 Ring-flash-2.0과 안정적인 RL 훈련을 위한 IcePop 알고리즘, 그리고 복잡한 추론 작업에서의 획기적인 성능을 살펴봅니다."
-seo_title: "Ring-flash-2.0 MoE 모델 리뷰: IcePop 알고리즘과 복잡한 추론 - Thaki Cloud"
+seo_title: "Ring-flash-2.0: IcePop 알고리즘으로 혁신을 이룬 차세대 사고형 MoE 모델"
 seo_description: "1000억 파라미터의 고성능 사고형 MoE 모델 Ring-flash-2.0의 종합 리뷰. IcePop 알고리즘과 수학, 코딩, 논리적 추론 벤치마크에서의 획기적인 성과를 분석합니다."
 date: 2025-09-21
 lang: ko

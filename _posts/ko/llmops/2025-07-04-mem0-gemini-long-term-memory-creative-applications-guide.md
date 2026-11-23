@@ -1,7 +1,7 @@
 ---
-title: "Mem0 + Gemini 2.5: 장기 메모리 AI의 무한 가능성 - 창의적 응용부터 엔터프라이즈까지"
+title: "Mem0와 Gemini 2.5: 장기 기억을 갖춘 AI 활용법"
 excerpt: "상태 없는 LLM에 영구 기억을 부여하는 Mem0 프레임워크와 Gemini 2.5 통합. 개인 맞춤형 AI부터 엔터프라이즈 지식 관리까지 혁신적 응용 사례."
-seo_title: "Mem0 Gemini 2.5 장기 메모리 AI 완벽 가이드 - LLMOps 최적화 - Thaki Cloud"
+seo_title: "Mem0와 Gemini 2.5: 장기 기억을 갖춘 AI 활용법"
 seo_description: "Mem0 오픈소스 프레임워크로 Gemini 2.5에 장기 메모리를 구현하는 방법. 벡터 임베딩 기반 메모리 시스템과 창의적 응용 사례, 엔터프라이즈 배포 전략까지 완전 정리."
 date: 2025-07-04
 last_modified_at: 2025-07-04

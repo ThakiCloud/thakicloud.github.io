@@ -1,7 +1,7 @@
 ---
-title: "A 27B Built for Korea's Small-Business Owners: Releasing MerchantDesk v0.1"
+title: "MerchantDesk v0.1: A 27B Model for Korean Small Businesses"
 excerpt: "A model built for Korea's small-business owners. A model that answers customer questions for a neighborhood restaurant should not memorize the store; it should make decisions. ThakiCloud is releasing MerchantDesk v0.1, trained on top of Qwen3.8-27B-Human-KO to learn store-desk policy. Against the strongest control we could build without training, its resolution rate is 10.0 points higher on the IID set and 8.3 points higher on hard conversations, with zero unsupported facts."
-seo_title: "MerchantDesk v0.1 released - a store-desk model for Korea's small-business owners | ThakiCloud"
+seo_title: "MerchantDesk v0.1: A 27B Model for Korean Small Businesses"
 seo_description: "Introducing Qwen3.8-27B-Human-KO-MerchantDesk-v0.1 from ThakiCloud, a store-desk policy model for Korean small businesses. It reads a store profile and a customer message and returns intent, slots and an action as JSON. Compared under identical conditions with the untrained base model and the general policy model Enterprise-v0.2: resolution 0.609 to 0.708, zero unsupported facts. Why it ships with a rule compiler and fact gates, and its limits."
 date: 2026-09-28
 last_modified_at: 2026-09-28

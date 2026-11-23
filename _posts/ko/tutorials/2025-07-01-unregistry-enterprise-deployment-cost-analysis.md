@@ -1,7 +1,7 @@
 ---
-title: "Unregistry 기업용 배포 시스템 완벽 가이드 - Docker Hub 대비 90% 비용 절감"
+title: "Unregistry: SSH로 Docker 이미지를 직접 배포하기"
 excerpt: "SSH 기반 Docker 이미지 직접 배포로 레지스트리 비용을 획기적으로 절감하고 보안성을 강화하는 엔터프라이즈 솔루션"
-seo_title: "Unregistry 기업용 Docker 배포 시스템 - 비용 절감 가이드 - Thaki Cloud"
+seo_title: "Unregistry: SSH로 Docker 이미지를 직접 배포하기"
 seo_description: "Docker Hub, GHCR 없이 SSH로 직접 이미지 배포하는 Unregistry 도입으로 기업 규모별 90% 이상 비용 절감을 실현하는 완벽 가이드"
 date: 2025-07-01
 last_modified_at: 2025-07-01

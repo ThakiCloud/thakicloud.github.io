@@ -1,7 +1,7 @@
 ---
-title: "We Opened Every Open Video Model License. Korea Has Been Excluded for 20 Months."
+title: "We Read Every Open Video Model License: Korea Is Excluded"
 excerpt: "The news that MiniMax H3 dropped Korea from its licensed territory made headlines, but opening six license files shows Tencent had already been doing the same thing since December 2024. Here are the seven clauses a Korean team should read before comparing benchmarks when picking an open video model."
-seo_title: "Open Video Model License Territory Audit: Which Models Actually Exclude Korea"
+seo_title: "We Read Every Open Video Model License: Korea Is Excluded"
 seo_description: "We opened the license text for HunyuanVideo, MiniMax H3, LTX-2.3, Wan 2.2, and CogVideoX and compared territory exclusions, revenue gates, output clauses, distillation bans, and governing law. A checklist for figuring out which models a Korean team can actually use."
 date: 2026-08-09
 last_modified_at: 2026-08-09

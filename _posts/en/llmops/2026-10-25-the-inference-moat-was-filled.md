@@ -1,7 +1,7 @@
 ---
 title: "The Inference Moat Was Filled"
 excerpt: "The open frameworks SGLang and vLLM have caught up with DeepSeek's newly open-sourced inference engine DeepInfer, matching or exceeding its performance. We analyze the signal of inference becoming commoditized and the industry's center of gravity moving to the layers above the engine."
-seo_title: "Inference Engine Commoditization: SGLang and vLLM Catch Up With DeepSeek DeepInfer"
+seo_title: "The Inference Moat Was Filled"
 seo_description: "SGLang and vLLM have matched DeepSeek DeepInfer on performance. In one analysis: this week's inference commoditization, cost-cutting moves, and the rise of the execution-judgment layer."
 date: 2026-10-25
 last_modified_at: 2026-10-25

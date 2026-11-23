@@ -1,7 +1,7 @@
 ---
 title: "If AI Were the Best Decision-Maker: A Culture Where Data Beats Intuition"
 excerpt: "Starting from a market-coined label about Jensen Huang, and deepening the Moneyball legacy, how to root a data-beats-intuition decision culture inside your organization"
-seo_title: "If AI Were the Best Decision-Maker: Data-Driven Decision Culture - Thaki Cloud"
+seo_title: "If AI Were the Best Decision-Maker: A Culture Where Data Beats Intuition"
 seo_description: "How to build a decision culture where data beats intuition. Expanding on Moneyball, the data theater trap, and practical steps for organizations."
 date: 2026-06-22
 last_modified_at: 2026-06-22

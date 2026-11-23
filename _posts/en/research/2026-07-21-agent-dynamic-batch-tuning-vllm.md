@@ -1,5 +1,5 @@
 ---
-title: "Why Dynamic Batch Tuning Failed to Beat Static Scheduling: An Honest Failure Analysis of a Multi-Tenant vLLM Serving Control Loop"
+title: "Why Dynamic Batch Tuning Lost to Static Scheduling"
 excerpt: "Does an agent that observes GPU telemetry and adjusts batch size and concurrency in real time outperform static Kueue admission control? The simulation said no, and traced exactly why."
 tags: [vllm, kueue, gpu-scheduling, multi-tenant-serving, llm-agents, dynamic-batching, inference-cost-optimization, h200, queuing-simulation, control-loop]
 date: 2026-07-21

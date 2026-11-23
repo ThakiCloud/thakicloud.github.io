@@ -1,6 +1,6 @@
 ---
-title: "The Transplant: 재사용 에이전트 스킬이 하네스를 옮길 때 능력의 몇 퍼센트가 남는지, 이동 전에 계산됩니다"
-seo_title: "The Transplant: 크로스 하네스 스킬 이식과 능력 보존률 측정 논문 소개 (시스템 프롬프트, 도구 스키마, 모델 티어 시프트, 셀프호스트 H200) - ThakiCloud"
+title: "The Transplant: 스킬이 하네스를 옮겨도 남는 능력"
+seo_title: "The Transplant: 스킬이 하네스를 옮겨도 남는 능력"
 seo_description: "홈 하네스에서 한 번 측정한 스킬은 시스템 프롬프트, 도구 스키마, 모델 티어가 다른 하네스로 재배치되지만 이식 뒤 얼마의 능력이 남는지 정량화한 controlled 연구는 없었습니다. 이 분석 논문은 portability gap을 로딩 성분과 실행 성분으로 정확히 분해하는 항등식, verbatim과 re-wrap 이식 정책의 폐쇄형 보존률, 플릿 단위 이식-재조정-재생성 손익분기 규칙, 셀프호스트 H200 위 결정론적 2×2×2 팩토리얼 프로토콜을 제시합니다."
 excerpt: "스킬이 하네스를 옮길 때 잃는 태스크 성공률과 라우팅 리콜의 비율은 스킬 자체의 속성에서 이동 전에 계산됩니다. portability gap은 로딩 성분과 실행 성분으로 정확히 쪼개집니다. 완전하게 스키마에 결합된 스킬은 verbatim 이식에서 total silent breakage를 보입니다."
 date: 2026-10-19

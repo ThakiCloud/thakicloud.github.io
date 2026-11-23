@@ -1,7 +1,7 @@
 ---
 title: "Nvidia's 14 Days, the Grid's 2030"
 excerpt: "Today's news table has two calendars. One compresses data center construction into 14 days, and the other pushes the grid connection date into the early-to-mid 2030s, pulling a sovereign AI investment back. With the bottleneck moving from construction to electricity, the question a company must answer is not how fast it can build, but how much auditable work each watt produces."
-seo_title: "Nvidia's 14 Days, the Grid's 2030 | The AI Data Center Bottleneck Moves to the Grid"
+seo_title: "Nvidia's 14 Days, the Grid's 2030"
 seo_description: "The day Nvidia unveiled its DSX POD modular data center that cuts build time to 14 days, a sovereign AI data center in the UK was pulled after its grid connection date slipped into the early-to-mid 2030s. This post looks at why the AI infrastructure bottleneck is moving to power, and at the Paxis lens that reads work per watt."
 date: 2026-10-22
 last_modified_at: 2026-10-22

@@ -1,6 +1,6 @@
 ---
-title: "The Night Shift: 무인 에이전트 밤 부하에서 LLM 에이전트가 K8s GPU 큐 쿼터와 노드 증감을 직접 운영할 때, 교정된 휴리스틱 대비 손익분점과 절감 상한을 달러로 세운 논문"
-seo_title: "The Night Shift: LLM 에이전트의 K8s GPU 큐 자율 운영, provisioned-cost vs deadline-reliability frontier, honest bar, break-even L*=0.906분, Kueue 쿼터, Karpenter 노드 증감, FinOps, 셀프호스트 클러스터 - ThakiCloud"
+title: "The Night Shift: 야간 GPU 큐 운영을 LLM 에이전트에 맡길 때"
+seo_title: "The Night Shift: 야간 GPU 큐 운영을 LLM 에이전트에 맡길 때"
 seo_description: "ThakiCloud의 분석 논문 The Night Shift는 밤사이 비정적인 무인 에이전트 부하에서 LLM 에이전트가 Kueue GPU 큐 쿼터와 노드 프로비저닝을 직접 운영할 때의 손익분점을 달러로 세웁니다. 정적 쿼터, 교정된 임계 휴리스틱, LLM 에이전트 컨트롤러 세 팔을 같은 밤에 비교하는 프론티어 위에서 에이전트는 forecast가 버스트당 0.906분의 사용 가능한 선지를 줄 때만 honest bar를 넘으며, 포화 시 절감은 한 밤 $6.52(휴리스틱 보험의 84.9%)입니다. 실행 지연에 무관하고 burstiness와 horizon에 반비례하는 break-even 구조, telemetry로 계산 가능한 절감 상한, 선언된 시드의 재현 가능한 세 팔 프로토콜이 핵심입니다."
 excerpt: "밤엔 사람이 큐를 보지 못합니다. GPU 용량은 정적 Kueue 쿼터가 결정하는데, 이 논문은 LLM 에이전트가 그 쿼터와 노드 증감을 직접 운영할 때 어디서 손익분점에 도달하는지 provisioned 비용과 마감 신뢰도의 프론티어 위에서 달러로 세웁니다. 분석 논문이라 모든 값은 실측이 아닙니다."
 date: 2026-10-31

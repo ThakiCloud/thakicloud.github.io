@@ -1,7 +1,7 @@
 ---
-title: "FastContext-1.0-4B-SFT: 코딩 에이전트 저장소 탐색 전용 4B 서브에이전트 모델"
+title: "FastContext-1.0-4B-SFT: 저장소 탐색 전용 서브에이전트"
 excerpt: "Microsoft가 공개한 FastContext-1.0-4B-SFT는 Qwen3-4B를 파인튜닝한 코딩 에이전트 서브에이전트 모델이다. READ/GLOB/GREP 세 가지 도구만 써서 저장소를 탐색하고 근거를 찾는다. 262K 컨텍스트, MIT 라이선스."
-seo_title: "FastContext-1.0-4B-SFT 코딩 에이전트 서브에이전트 모델 가이드 - ThakiCloud"
+seo_title: "FastContext-1.0-4B-SFT: 저장소 탐색 전용 서브에이전트"
 seo_description: "Microsoft FastContext-1.0-4B-SFT 아키텍처(Qwen3-4B 기반, 262K 컨텍스트), arXiv:2606.14066, SWE-bench 벤치마크, vLLM 서빙, subagent-model-routing 직결."
 date: 2026-06-20
 last_modified_at: 2026-06-20

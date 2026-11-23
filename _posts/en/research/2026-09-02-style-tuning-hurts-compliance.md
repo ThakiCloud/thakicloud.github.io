@@ -1,5 +1,5 @@
 ---
-title: "Polishing the Style Erased the Disclosures: A 4-Arm Study of a Securities Assistant"
+title: "Style Tuning Erased the Disclosures"
 excerpt: "A model tuned for short, human-sounding answers dropped mandatory risk disclosures more often. Baking the disclosures into the weights restored compliance from 13.8% to 95.4%, with zero instructions at inference time."
 categories: [research]
 tags: [compliance, finetuning, context-distillation, korean-llm, financial-ai]

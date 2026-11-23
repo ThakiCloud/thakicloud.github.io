@@ -1,5 +1,5 @@
 ---
-title: "If your character comes back as a different character every time, more reference images will not fix it"
+title: "Why More Reference Images Won't Fix Character Identity"
 excerpt: "We gave the model four reference stills and asked for the same character. The base model scored between 0.35 and 0.43 CLIP-I no matter which character it was. An adapter took that to 0.76, and editing from a reference took it to 0.82."
 categories:
   - research

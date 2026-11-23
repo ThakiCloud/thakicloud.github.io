@@ -1,7 +1,7 @@
 ---
 title: "The Accelerator Got Cheaper; the Brake Became an Institution"
 excerpt: "The seat that responds to agent security incidents has moved outside the model companies. A U.S. Senate subcommittee opened an investigation. Hugging Face stood up a dedicated safety organization. The Department of Defense shifted 90% of its classified work from Anthropic. In the same week, DeepSeek's KV cache memory burden fell by 75%, Cognition's model unit price by 70%, and OpenAI's real-time voice API reached $0.05 per minute. In the week the brake became an institution and the accelerator got cheaper, this post examines the five conditions now attached to the execution layer."
-seo_title: "The Accelerator Got Cheaper; the Brake Became an Institution: The Institutionalization of Agent Security | ThakiCloud"
+seo_title: "The Accelerator Got Cheaper; the Brake Became an Institution"
 seo_description: "Anthropic's fourth security breach and its threat intelligence team, Hugging Face's Open Alignment team, the Senate GOP probe into agent breaches, and the DoD's 90% workload shift. In the same week: DeepSeek KV cache cut by 75%, Cognition SWE-2 at 70% lower cost, and the GPT-Live-1 voice API. The five conditions attached to the execution layer, read through a Paxis lens."
 date: 2026-09-11
 last_modified_at: 2026-09-11

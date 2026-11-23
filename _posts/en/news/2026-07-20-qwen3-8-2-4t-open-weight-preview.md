@@ -1,7 +1,7 @@
 ---
-title: "Qwen3.8, 2.4 Trillion Parameters Open-Weight Preview: What's Confirmed and What Isn't"
+title: "Qwen3.8 2.4T Preview: What Is Confirmed and What Is Not"
 excerpt: "Alibaba has previewed Qwen3.8, a 2.4-trillion-parameter model, promising an open-weight release. The preview is already testable, but neither the weights nor benchmarks have been released yet. We separate what this announcement actually confirms from what remains an unverified claim."
-seo_title: "Qwen3.8 2.4T Open-Weight Preview Analysis: Confirmed Facts and Unverified Claims"
+seo_title: "Qwen3.8 2.4T Preview: What Is Confirmed and What Is Not"
 seo_description: "Alibaba's Qwen3.8 is a 2.4-trillion-parameter multimodal model with a promised open-weight release. We examine preview availability, undisclosed benchmarks, and the missing active-parameter count, and analyze what the ongoing race among massive open frontier models, following Kimi K3, means for on-premises serving and sovereign AI demand."
 date: 2026-07-20
 last_modified_at: 2026-07-20

@@ -1,7 +1,7 @@
 ---
 title: "채용 플랫폼이 만든 33B 에이전트 모델, Nanbeige4.3-33B"
 excerpt: "BOSS Zhipin의 Nanbeige LLM Lab이 Apache 2.0으로 33B dense 모델 Nanbeige4.3-33B를 공개했습니다. 20개 에이전틱 벤치마크 중 17개를 선두라는 자체 표를 우리가 받은 config.json으로 다시 계산해 검증했습니다."
-seo_title: "Nanbeige4.3-33B 공개: 30B급 오픈 에이전트 모델과 교사-증류 전략 | ThakiCloud 기술블로그"
+seo_title: "채용 플랫폼이 만든 33B 에이전트 모델, Nanbeige4.3-33B"
 seo_description: "33B dense, 512K 컨텍스트, Apache 2.0. Terminal-Bench 2.1 80.9라는 자체 보고 수치를 config.json 기반 독립 계산으로 검증하고, 서빙 실용성과 교사-증류 전략을 분석합니다."
 date: 2026-10-26
 last_modified_at: 2026-10-26

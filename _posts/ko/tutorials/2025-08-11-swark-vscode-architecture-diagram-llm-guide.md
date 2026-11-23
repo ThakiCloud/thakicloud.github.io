@@ -1,7 +1,7 @@
 ---
-title: "Swark: LLM으로 코드에서 자동 아키텍처 다이어그램 생성하는 VS Code 확장 완전 가이드"
+title: "Swark: 코드에서 아키텍처 다이어그램 자동 생성"
 excerpt: "934 스타의 Swark VS Code 확장으로 GitHub Copilot과 LLM을 활용해 코드베이스에서 Mermaid.js 아키텍처 다이어그램을 자동 생성하는 방법을 실습과 함께 마스터해보세요."
-seo_title: "Swark VS Code 확장 LLM 아키텍처 다이어그램 Mermaid GitHub Copilot 완벽 튜토리얼 - Thaki Cloud"
+seo_title: "Swark: 코드에서 아키텍처 다이어그램 자동 생성"
 seo_description: "Swark VS Code 확장으로 GitHub Copilot을 사용해 코드베이스에서 자동으로 Mermaid.js 아키텍처 다이어그램을 생성하는 방법을 설치부터 고급 활용까지 상세히 알아봅니다."
 date: 2025-08-11
 last_modified_at: 2025-08-11

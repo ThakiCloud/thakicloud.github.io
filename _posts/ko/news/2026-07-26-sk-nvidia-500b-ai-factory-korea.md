@@ -1,7 +1,7 @@
 ---
 title: "2기가와트 AI 팩토리가 켜져도 여러분의 GPU 대기열은 짧아지지 않습니다"
 excerpt: "SK그룹과 NVIDIA가 5000억 달러 규모 파트너십을 발표했고, SK텔레콤은 최대 2기가와트 AI 팩토리를 2027년부터 돌리겠다고 했습니다. 국내에 이만한 가속 컴퓨팅이 들어오면 무엇이 실제로 바뀌고, 무엇은 그대로인지 짚습니다."
-seo_title: "SK그룹 NVIDIA 5000억 달러 파트너십과 2GW AI 팩토리, 기업이 준비할 운영 계층"
+seo_title: "2기가와트 AI 팩토리가 켜져도 여러분의 GPU 대기열은 짧아지지 않습니다"
 seo_description: "SK텔레콤 2기가와트 AI 팩토리, NVIDIA DSX 플랫폼, SK하이닉스 HBM4 공동개발을 사실 그대로 정리하고, 공급이 늘어날 때 병목이 어디로 이동하는지, 그리고 ThakiCloud의 ai-platform과 Paxis가 그 지점에서 무엇을 하는지 분석합니다."
 date: 2026-07-26
 last_modified_at: 2026-07-26

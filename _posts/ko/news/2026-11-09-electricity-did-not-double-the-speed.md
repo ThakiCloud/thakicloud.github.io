@@ -1,7 +1,7 @@
 ---
 title: "전원은 사도, 속도는 컴퓨트에서 오지 않았다"
 excerpt: "독립 평가기관 METR은 Anthropic의 2배 연구 가속에서 컴퓨트 증가를 주요 동인으로 배제했습니다. 같은 주에 Anthropic은 34억 달러짜리 가스발전기 계약을 맺었고, Tencent은 무인 과학 연구실을 예고했습니다. 속도의 출처가 컴퓨트 밖으로 이동하는 오늘의 신호를 뉴스로 읽습니다."
-seo_title: "전원은 사도 속도는 컴퓨트에서 오지 않았다: METR의 Anthropic 2배 가속 판결"
+seo_title: "전원은 사도, 속도는 컴퓨트에서 오지 않았다"
 seo_description: "METR이 Anthropic의 AI 진전 2배 가속에서 컴퓨트 증가를 배제했습니다. 34억 달러 가스발전기 계약, Tencent의 무인 AI 연구실, Bloomington의 자율 AI 금지안까지. 오늘의 뉴스가 보여주는 속도의 출처 이동과 에이전트 거버넌스의 의미."
 date: 2026-11-09
 last_modified_at: 2026-11-09

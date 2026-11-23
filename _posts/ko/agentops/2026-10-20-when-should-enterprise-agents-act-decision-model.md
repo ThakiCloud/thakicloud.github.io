@@ -1,7 +1,7 @@
 ---
-title: "기업용 AI 에이전트는 언제 행동해야 할까? Paxis에 전용 Decision 모델을 붙이는 이유"
+title: "기업용 에이전트는 언제 행동할까: Paxis Decision 모델"
 excerpt: "답할지, 도구를 실행할지, 사람에게 물을지. 이 판단을 생성 모델에 통째로 맡기지 않고 4B 전용 모델과 결정론적 정책 계층으로 나눈 이유와, 지금까지 측정한 결과를 정리합니다."
-seo_title: "기업용 AI 에이전트의 행동 결정: 전용 Decision 모델과 정책 엔진의 역할 분리 | ThakiCloud"
+seo_title: "기업용 에이전트는 언제 행동할까: Paxis Decision 모델"
 seo_description: "에이전트가 답할지, 도구를 호출할지, 확인을 받을지, 거절할지를 7개 행동 중 하나로 고르는 전용 Decision 모델을 2B·4B·9B로 학습해 비교했습니다. 4B가 위험한 실행을 가장 적게 냈고, vLLM에서 판단 한 번에 약 60ms가 걸렸습니다."
 date: 2026-10-20
 last_modified_at: 2026-10-24

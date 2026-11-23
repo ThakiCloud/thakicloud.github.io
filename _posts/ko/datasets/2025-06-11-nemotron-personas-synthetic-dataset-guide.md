@@ -1,5 +1,5 @@
 ---
-title: "Nemotron-Personas: 실제 인구 분포를 반영한 NVIDIA의 합성 페르소나 데이터셋 완전 가이드"
+title: "Nemotron-Personas: 실제 인구 분포를 반영한 합성 페르소나"
 date: 2025-06-11
 tags: 
   - NVIDIA

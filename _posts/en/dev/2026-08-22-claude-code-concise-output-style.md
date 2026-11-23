@@ -1,6 +1,6 @@
 ---
-title: "Claude Code's Built-in Concise Output Style: The Shortcut That Leads With the Result"
-seo_title: "Claude Code Concise output style: response trimming at the system prompt level and token economics - Thaki Cloud"
+title: "Claude Code's Concise Output Style: Lead With the Result"
+seo_title: "Claude Code's Concise Output Style: Lead With the Result"
 seo_description: "Claude Code v2.1.237 added Concise to its built-in output styles. Result first, preamble and narration skipped, safety information kept intact. How it works, how it differs from CLAUDE.md, skills, and subagents, and what it means for agent-loop token economics."
 excerpt: "Concise is the first built-in output style in Claude Code that controls response length. The design point is not 'shorter' but where the cut line is: error reports, security warnings, and destructive-action confirmations are kept intact. And it applies to the main conversation only, which is the first thing to verify in multi-agent environments."
 date: 2026-08-22

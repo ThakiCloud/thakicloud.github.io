@@ -1,7 +1,7 @@
 ---
-title: "MetisRCA-E4B: A 4B-Class Root-Cause Model That Cites Evidence or Steps Back"
+title: "MetisRCA-E4B: A 4B Root-Cause Model That Cites Evidence"
 excerpt: "For teams attaching root-cause analysis to agents. MetisRCA-E4B, a LoRA on Nemotron 3.5 Bolt E4B, reaches 0.873 top-1 on a held-out set and cuts unsupported diagnoses to 0.3%. The limits are reported alongside."
-seo_title: "MetisRCA-E4B Root-Cause Analysis Model - ThakiCloud"
+seo_title: "MetisRCA-E4B: A 4B Root-Cause Model That Cites Evidence"
 seo_description: "For teams attaching root-cause analysis to agents. MetisRCA-E4B, a LoRA on Nemotron 3.5 Bolt E4B, reaches 0.873 top-1 on a held-out set and cuts unsupported diagnoses to 0.3%. The limits are reported alongside."
 date: 2026-10-26
 published: true

@@ -1,6 +1,6 @@
 ---
 title: "프롬프트는 병렬로, 깊이는 순차로 쌓는 Recurrent Looped Transformer(RLT)"
-seo_title: "Recurrent Looped Transformer(RLT): 병렬 causal encoder와 순차 recurrent decoder를 분리해 '무한 temporal 깊이'를 지향하는 설계 명세 리뷰 - ThakiCloud"
+seo_title: "프롬프트는 병렬로, 깊이는 순차로 쌓는 Recurrent Looped Transformer(RLT)"
 seo_description: "Princeton의 Yifan Zhang이 제안한 Recurrent Looped Transformer(RLT)를 리뷰합니다. 관측 토큰은 병렬 인코더로, 생성 토큰은 경계 리셋 없이 상태가 이어지는 순차 디코더로 처리해 시퀀스가 길어질수록 계산 깊이가 t × L_D로 확장됩니다. 벤치마크가 없는 설계 명세라는 점까지, 서빙 관점에서 함께 읽습니다."
 excerpt: "RLT의 핵심은 층수를 늘리는 대신, 고정 깊이의 디코더를 토큰 위에 '루프'시키는 것입니다. 프롬프트는 병렬로 넣고, 생성은 상태를 이어가며 순차로 깊이를 쌓는 구조입니다. 아직 측정값이 없는 설계 명세인데, 왜 서빙 엔지니어가 관심을 가져야 하는지 정리합니다."
 date: 2026-09-15

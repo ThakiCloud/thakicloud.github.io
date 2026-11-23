@@ -1,7 +1,7 @@
 ---
-title: "Automated AI Web Researcher with Ollama - 자동화된 AI 연구 도구 완전 가이드"
+title: "Ollama로 만드는 자동 AI 웹 리서처"
 excerpt: "Ollama를 활용한 AI 자동 웹 연구 도구의 모든 것. 단일 질문으로 체계적인 연구를 수행하고 종합적인 결과를 얻는 혁신적인 도구"
-seo_title: "Automated AI Web Researcher Ollama 완전 가이드 - Thaki Cloud"
+seo_title: "Ollama로 만드는 자동 AI 웹 리서처"
 seo_description: "Ollama 기반 AI 자동 연구 도구로 웹 검색, 스크래핑, 분석을 자동화하는 완전 가이드. 설치부터 활용까지 단계별 설명"
 date: 2025-08-08
 last_modified_at: 2025-08-08

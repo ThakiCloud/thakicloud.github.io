@@ -1,7 +1,7 @@
 ---
 title: "에이전트 토큰을 반으로 줄이는 방법: NVIDIA, SoL-Pi 오픈소스화"
 excerpt: "NVIDIA가 자사 에이전트 하네스 Pi의 효율 확장 SoL-Pi를 오픈소스했습니다. 자동 연구 루프로 발견한 4개 메커니즘이 토큰 소비를 최대 64%, API 비용을 50%가량 줄인다고 합니다. 더 좋은 모델로 교체하기 전에, 토큰이 어디에서 새는지 점검하는 체크리스트가 될 수 있습니다."
-seo_title: "에이전트 토큰을 반으로 줄이는 방법: NVIDIA, SoL-Pi 오픈소스화 | ThakiCloud"
+seo_title: "에이전트 토큰을 반으로 줄이는 방법: NVIDIA, SoL-Pi 오픈소스화"
 seo_description: "NVIDIA NVlabs가 오픈소스한 에이전트 하네스 효율 확장 SoL-Pi. 자동 연구 루프로 발견한 4개 메커니즘(Action Fusion, ObservationPack, Evidence-Preserving Reducer, Online Context Compact)으로 토큰 소비 최대 64% 절감. 에이전트 운영자를 위한 토큰 경제성 점검 체크리스트."
 date: 2026-09-11
 last_modified_at: 2026-09-11

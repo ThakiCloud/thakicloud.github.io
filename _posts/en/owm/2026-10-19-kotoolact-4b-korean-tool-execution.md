@@ -1,7 +1,7 @@
 ---
 title: "Releasing KoToolAct-4B, a 4B Model Built for Korean Tool Execution"
 excerpt: "Can a small model learn to use tools properly on routine work such as customer lookups, meeting cancellations and pod status checks? We trained a 4B model on 3,200 simulated business tasks whose answers were verified by an executor. Here is what changed, including the errors our grader missed."
-seo_title: "KoToolAct-4B: A 4B Model for Korean Enterprise Tool Execution - ThakiCloud"
+seo_title: "Releasing KoToolAct-4B, a 4B Model Built for Korean Tool Execution"
 seo_description: "ThakiCloud released KoToolAct-4B, a Research Preview model that adapts Qwen3.5-4B to tool execution in Korean enterprise workflows. Trained with LoRA SFT only on 3,200 executor-verified simulated tasks, it raised sealed-test task success from 48.50% to 91.00%. Covers the 2.71GB GGUF build and the limitations."
 date: 2026-10-19
 last_modified_at: 2026-11-09

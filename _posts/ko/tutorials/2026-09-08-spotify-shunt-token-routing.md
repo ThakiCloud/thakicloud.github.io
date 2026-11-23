@@ -1,5 +1,5 @@
 ---
-title: "Spotify, Claude Code 토큰 90%를 깎은 라우터. 우리 환경에서 재보니 숫자가 달랐습니다"
+title: "Spotify shunt: 우리 환경에서 재보니 숫자가 달랐다"
 excerpt: "Spotify의 shunt 플러그인은 PreToolUse 훅으로 큰 파일 읽기를 싼 워커 모델로 돌립니다. 이 패턴 자체를 우리 세션 트랜스크립트 1,099개로 재보니 기본 threshold 350줄은 Read 바이트의 14%만 오프로드했습니다. 우리의 read 분포 p50은 158줄이었습니다."
 date: 2026-09-08
 permalink: /ko/tutorials/spotify-shunt-token-routing/

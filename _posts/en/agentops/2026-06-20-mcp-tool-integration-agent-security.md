@@ -1,7 +1,7 @@
 ---
-title: "MCP Tool Integration and Agent Security: What You Need to Know in Production"
+title: "MCP Tool Integration and Agent Security in Production"
 excerpt: "A look at the security problems and operational patterns that have emerged as MCP became the de facto agent connectivity standard in 2026. Covers Tool Poisoning, permission boundaries, and agent security gateways from a production perspective."
-seo_title: "MCP Agent Tool Integration and Security Guide - Thaki Cloud"
+seo_title: "MCP Tool Integration and Agent Security in Production"
 seo_description: "Security vulnerabilities and production operational patterns for MCP-based agent tool integration. Covers Tool Poisoning attack defense, privilege minimization, and MCP gateway configuration."
 date: 2026-06-20
 last_modified_at: 2026-06-20

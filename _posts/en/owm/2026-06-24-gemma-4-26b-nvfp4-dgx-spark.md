@@ -1,7 +1,7 @@
 ---
-title: "Running Gemma 4 26B 16x Parallel on a Single DGX Spark: NVFP4 Quantization and an Honest Cost-Efficiency Review"
+title: "Gemma 4 26B on One DGX Spark: NVFP4 and Cost Efficiency"
 excerpt: "NVIDIA's Gemma-4-26B-A4B-NVFP4 running 16 parallel streams on a single DGX Spark (128 GB unified memory) delivers roughly 18 tokens/s per stream and about 300 tokens/s combined. This post covers how NVFP4 compresses a 25.2B MoE to 14 GB, the trade-off between single-stream latency and concurrency, and an honest assessment of whether the DGX Spark is actually cost-effective compared to other Blackwell GPUs."
-seo_title: "Gemma-4-26B-A4B-NVFP4 DGX Spark 16x Parallel Inference - Honest Cost Efficiency Review - Thaki Cloud"
+seo_title: "Gemma 4 26B on One DGX Spark: NVFP4 and Cost Efficiency"
 seo_description: "Serving Gemma-4-26B-A4B-NVFP4 (25.2B MoE / 3.8B active) on a DGX Spark 128 GB with 16x parallelism: 18 tok/s per stream, 300 tok/s combined. NVFP4 4-bit quantization, memory-bandwidth bottleneck, RTX 5090/RTX PRO 6000/B200 cost comparisons, and ThakiCloud on-premises serving perspective."
 date: 2026-06-24
 last_modified_at: 2026-06-24

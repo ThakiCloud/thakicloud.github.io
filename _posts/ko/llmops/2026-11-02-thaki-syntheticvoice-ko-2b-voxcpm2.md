@@ -1,6 +1,6 @@
 ---
 title: "실존 인물 없이 만든 한국어 음성: Thaki-SyntheticVoice-KO-2B 개발기"
-seo_title: "Thaki-SyntheticVoice-KO-2B-v0.1 - 설계한 합성 화자로 VoxCPM2를 파인튜닝한 과정과 실측 결과 | ThakiCloud"
+seo_title: "실존 인물 없이 만든 한국어 음성: Thaki-SyntheticVoice-KO-2B 개발기"
 seo_description: "텍스트 설명으로 설계한 가상 화자 F1의 합성 음성 80.8분으로 VoxCPM2를 LoRA 파인튜닝했습니다. 참조 클립을 주면 원본 모델과 동등했고, 참조 없이는 UTMOS 2.22→3.23, CER 3.6%→1.8%로 나아졌지만 화자 고정은 부분적입니다."
 excerpt: "실제 성우 목소리를 공개 모델로 재현하는 대신, 텍스트 설명만으로 가상 화자를 설계하고 그 합성 음성으로 VoxCPM2를 파인튜닝했습니다. 참조 클립이 있을 때는 원본과 같은 수준이었고, 참조가 없을 때만 분명한 차이가 났습니다. 그 차이도 화자를 완전히 고정하지는 못했습니다."
 date: 2026-11-02

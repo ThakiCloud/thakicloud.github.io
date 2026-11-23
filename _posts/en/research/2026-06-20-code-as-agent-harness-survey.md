@@ -1,7 +1,7 @@
 ---
-title: "Code as Agent Harness: A Three-Layer Framework for AI Agent Infrastructure (arXiv:2605.18747)"
+title: "Code as Agent Harness: A Three-Layer Framework"
 excerpt: "An analysis of a survey that systematizes how code functions as the foundational infrastructure for AI agent systems, organized into three layers: harness interface, harness mechanism, and multi-agent coordination."
-seo_title: "Code-Based AI Agent Harness Architecture Survey Analysis - Thaki Cloud"
+seo_title: "Code as Agent Harness: A Three-Layer Framework"
 seo_description: "arXiv 2605.18747 Code as Agent Harness survey: deep analysis of the three-layer agent infrastructure framework, planning and adaptive control, multi-agent coordination, and open safety challenges."
 date: 2026-06-20
 last_modified_at: 2026-06-20

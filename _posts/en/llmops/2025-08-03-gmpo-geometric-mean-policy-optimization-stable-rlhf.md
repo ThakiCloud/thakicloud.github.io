@@ -1,7 +1,7 @@
 ---
-title: "GMPO: Solving RLHF Stability Problems with Geometric-Mean Policy Optimization"
+title: "GMPO: Geometric-Mean Policy Optimization for Stable RLHF"
 excerpt: "Geometric-Mean Policy Optimization addresses the outlier sensitivity of GRPO and achieves 4.1% improvement on mathematical reasoning and 1.4% on multimodal reasoning. A detailed analysis of this innovative LLMOps technique."
-seo_title: "GMPO Geometric-Mean Policy Optimization Complete Guide - Improving RLHF Stability - Thaki Cloud"
+seo_title: "GMPO: Geometric-Mean Policy Optimization for Stable RLHF"
 seo_description: "A detailed analysis of GMPO's geometric-mean token-level reward optimization technique that overcomes GRPO limitations, with concrete implementation guidance and LLMOps utilization strategies."
 date: 2025-08-03
 last_modified_at: 2025-08-03

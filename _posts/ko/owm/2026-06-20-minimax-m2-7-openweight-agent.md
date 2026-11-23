@@ -1,7 +1,7 @@
 ---
-title: "MiniMax-M2.7: 229B 오픈웨이트 에이전트 모델, 113종 양자화와 온프렘 라이선스 주의사항"
+title: "MiniMax-M2.7: 오픈웨이트 에이전트 모델과 라이선스 주의점"
 excerpt: "MiniMax가 공개한 M2.7은 229B 파라미터, FP8 지원, 113종 양자화 변형으로 온프렘 경로가 다양하다. 에이전트 팀 협업과 자기진화를 표방하지만, 라이선스가 'other'로 상용 배포 전 반드시 원문을 확인해야 한다."
-seo_title: "MiniMax-M2.7 229B 오픈웨이트 에이전트 모델 온프렘 가이드 - Thaki Cloud"
+seo_title: "MiniMax-M2.7: 오픈웨이트 에이전트 모델과 라이선스 주의점"
 seo_description: "MiniMax-M2.7의 아키텍처, 벤치마크(MLE Bench Lite 66.6%, SWE-Pro 56.22%, GDPval-AA ELO 1495), SGLang/vLLM/NIM 서빙 방법과 라이선스 주의사항을 정리했다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

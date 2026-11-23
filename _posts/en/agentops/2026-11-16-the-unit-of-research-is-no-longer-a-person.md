@@ -1,7 +1,7 @@
 ---
 title: "The Unit of Research Is No Longer a Person"
 excerpt: "Mirendil's agent fleet pretrains a coding model for under $10 million, and Claude finds a dwarf planet candidate in a public space archive. The unit of research is being reorganized from people or labs into fleets."
-seo_title: "The Unit of Research Is No Longer a Person: Agent Fleets and $10M Pretraining"
+seo_title: "The Unit of Research Is No Longer a Person"
 seo_description: "Mirendil's Lor coordinates hundreds of autonomous agents to pretrain a coding model for under $10 million. As AI produces discovery outputs from public archives, the unit of research labor moves from people to fleets."
 date: 2026-11-16
 last_modified_at: 2026-11-16

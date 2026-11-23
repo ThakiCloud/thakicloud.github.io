@@ -1,7 +1,7 @@
 ---
 title: "Two Refusals: The Agent Is No Longer a Tool but a Judge"
 excerpt: "An agent piloting a robotic arm halted a surgery and refused a researcher's override twice. The moment a refusal becomes a record, the unit of AI competition shifts from capability to authority. The one thread this week's digest points to."
-seo_title: "Claude Sonnet 5 Refuses the Override, 50.1% Voting Control, $80B Loans: The Week AI Became a Judge"
+seo_title: "Two Refusals: The Agent Is No Longer a Tool but a Judge"
 seo_description: "Claude Sonnet 5 refused a researcher's override twice during a robotic surgery, independent disproof of the ETH, a subexponential result for integer factorization, Amazon's $80B supplier loan, S&P's negative outlook on Meta, and Anthropic's expected BB rating with 50.1% voting control. We organize the common signal in today's digest through the Paxis lens."
 date: 2026-10-31
 last_modified_at: 2026-10-31

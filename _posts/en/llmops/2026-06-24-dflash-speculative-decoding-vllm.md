@@ -1,7 +1,7 @@
 ---
-title: "DFlash Speculative Decoding: Up to 15x Faster vLLM Inference with Block Diffusion Drafting"
+title: "DFlash: Block Diffusion Drafting for Faster vLLM"
 excerpt: "DFlash replaces the autoregressive token-by-token drafter used in EAGLE-3 with a block diffusion drafter that proposes a block of future tokens in a single forward pass. It drops into vLLM, SGLang, and TensorRT-LLM without application code changes. Based on published figures, it delivers 6x lossless speedup on a single stream and up to 15x throughput on Blackwell. We break down what this means for K8s-based multi-tenant model serving."
-seo_title: "DFlash Speculative Decoding vLLM Integration Analysis - Block Diffusion Drafting - Thaki Cloud"
+seo_title: "DFlash: Block Diffusion Drafting for Faster vLLM"
 seo_description: "How DFlash block diffusion speculative decoding plugs into vLLM/SGLang/TensorRT-LLM to boost inference throughput beyond EAGLE-3, with analysis of published benchmarks (Qwen3-8B lossless 6.08x, Blackwell 15x) from a ThakiCloud K8s serving platform perspective."
 date: 2026-06-24
 last_modified_at: 2026-06-24

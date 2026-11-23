@@ -1,7 +1,7 @@
 ---
-title: "ReTool: Reinforcement Learning for Strategic Tool Use in Large Language Models"
+title: "ReTool: Teaching LLMs Strategic Tool Use With RL"
 excerpt: "ReTool by ByteDance Seed dynamically integrates a code interpreter into large language models through reinforcement learning, achieving breakthrough performance on mathematical reasoning benchmarks."
-seo_title: "ReTool: RL Framework for LLM Tool Use - Mathematical Reasoning Breakthrough - Thaki Cloud"
+seo_title: "ReTool: Teaching LLMs Strategic Tool Use With RL"
 seo_description: "A detailed analysis of ByteDance Seed's ReTool research. We cover the innovative approach of integrating reinforcement learning with a code interpreter to surpass OpenAI o1-preview by 27.9% on the AIME benchmark."
 date: 2025-08-21
 last_modified_at: 2025-08-21

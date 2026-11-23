@@ -1,7 +1,7 @@
 ---
 title: "What \"I Don't Prompt\" Actually Means: How Skill Files Compound Judgment"
 excerpt: "At Startup School 2026, Garry Tan said he barely prompts AI anymore, because the skills are the prompts. We unpack the skill file and harness structure behind that sentence, and why it turns into a question about ownership."
-seo_title: "Garry Tan's Own Your Intelligence, unpacked: skill files and the agent harness"
+seo_title: "What \"I Don't Prompt\" Actually Means: How Skill Files Compound Judgment"
 seo_description: "An engineering read of Garry Tan's Startup School 2026 talk: personal AGI, skill file driven workflows, the harness that connects models to deterministic code, and the ownership problem facing knowledge workers."
 date: 2026-08-10
 last_modified_at: 2026-08-10

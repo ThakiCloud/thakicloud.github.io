@@ -1,6 +1,6 @@
 ---
 title: "2.8 Trillion Parameters on a 4GB GPU, at Five Minutes per Token"
-seo_title: "Running Kimi K3 2.8T on a 4GB GPU with AirLLM: 3.72GB VRAM, 292s per Token | ThakiCloud"
+seo_title: "2.8 Trillion Parameters on a 4GB GPU, at Five Minutes per Token"
 seo_description: "AirLLM runs Kimi K3 2.8T on a single 4GB-class GPU. Published measurements show 3.72GB VRAM, roughly 292 seconds per token, and 42 hours for a 500-token answer. Here is what layer-wise offloading solves, what it does not, and how it compares to the vLLM serving path."
 excerpt: "Between it runs and you can use it lies a gap of roughly 500x."
 date: 2026-08-05

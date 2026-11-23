@@ -1,7 +1,7 @@
 ---
-title: "The Gate Makes the Result, Not the Model: Six LLM Harnesses for Security Research, Compared"
+title: "The Gate Makes the Result: Six LLM Security Harnesses"
 excerpt: "Point an LLM at vulnerability hunting and you mostly get plausible false positives. Line up six public security harnesses and the same skeleton appears in all of them, and it is not the model tier that produces usable output. It is stage separation and a refutation gate."
-seo_title: "Comparing LLM Security Research Harnesses: RAPTOR, Anthropic, audit, VVAH, harness-kit"
+seo_title: "The Gate Makes the Result: Six LLM Security Harnesses"
 seo_description: "A comparison of six public LLM harnesses for vulnerability research, covering stage design, validation gates, context budgets and model routing, plus what it means for enterprise agent platforms."
 date: 2026-08-09
 last_modified_at: 2026-08-09

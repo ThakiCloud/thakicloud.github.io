@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Flare: A Local Inference Server That Serves Without Python on Workstation GPUs"
+title: "NVIDIA Flare: A Local Inference Server Without Python"
 excerpt: "NVIDIA quietly published Flare on October 20, a local inference server built for SM120/SM121 workstation GPUs. A two-stage design that compiles with PyTorch and serves from Rust, signed runtime packages, eight model recipes. Calling it a vLLM alternative is a misreading; it is a reference implementation of the serving contract for local agent workloads."
-seo_title: "NVIDIA Flare: A Local Inference Server That Serves Without Python on Workstation GPUs | ThakiCloud"
+seo_title: "NVIDIA Flare: A Local Inference Server Without Python"
 seo_description: "Anatomy of NVIDIA Flare (local inference server): the Ignition (Python) / Helios (Rust) boundary, signed runtime packages, FP8 KV, MTP speculative decoding, Orbit fleet control. For DGX Spark and RTX PRO 6000, with our real clone and build attempt results included."
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/dev/nvidia-flare-local-inference/"

@@ -1,7 +1,7 @@
 ---
-title: "The Era of AI Completing 32-Step Intrusions Start to Finish: GPT-5.6 Sol and Cybersecurity"
+title: "GPT-5.6 Sol and the Cyber Range: A Full Intrusion"
 excerpt: "OpenAI announced that GPT-5.6 Sol set a new record on a cyber range. As frontier models begin autonomously executing real attack chains, the decisive factor shifts from model capability to where and under what controls that model runs."
-seo_title: "GPT-5.6 Sol Cybersecurity: Analyzing The Last Ones 32-Step Attack and the Defense Stack"
+seo_title: "GPT-5.6 Sol and the Cyber Range: A Full Intrusion"
 seo_description: "OpenAI's GPT-5.6 Sol scored 73.5% on ExploitBench2, emerging as the strongest cybersecurity model to date. We analyze AISI's 32-step cyber range The Last Ones, the layered safety stack, and why on-premises sovereign AI and agentic policy gates are now central to defense."
 date: 2026-07-19
 last_modified_at: 2026-07-19

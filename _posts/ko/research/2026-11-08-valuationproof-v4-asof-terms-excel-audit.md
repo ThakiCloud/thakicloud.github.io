@@ -1,6 +1,6 @@
 ---
-title: "전환사채 공시로 기준일 조건을 복원할 때 놓치는 세 가지: ValuationProof V4 검증 기록"
-seo_title: "ValuationProof V4 - DART 정정공시 체인, 기준일 조건 선택, Excel 셀 대조 | ThakiCloud"
+title: "ValuationProof V4: 전환사채 조건 복원의 세 가지 함정"
+seo_title: "ValuationProof V4: 전환사채 조건 복원의 세 가지 함정"
 seo_description: "OpenDART 전환사채 공시로 기준일 조건을 복원하며 효력일과 접수일의 차이, 기재정정 소급 여부의 불확실성, 전환가액 조정 공시 누락을 찾았습니다. 공개 공시와 합성 워크북으로 확인한 범위와 검증하지 못한 범위를 나눠 정리했습니다."
 excerpt: "공개 DART 공시에서 효력일과 접수일의 차이, 기재정정의 소급 여부 불확실성, 전환가액 조정 공시 누락으로 낡은 전환가액이 나오는 문제를 찾았고 V4.1에서 불확실한 값을 확인 필요로 돌렸습니다. Excel 대조는 합성 워크북에서만 확인했고 실제 회계법인 평가모형, RCPS, 공정가치는 검증하지 않았습니다."
 date: 2026-11-08

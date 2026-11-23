@@ -1,6 +1,6 @@
 ---
-title: "The Sign Only Shows Its First 300 Characters: How to Measure What Decides Routing"
-seo_title: "Routability Under Budget: A Causal Measurement Protocol for Skill Description Length and Routing Accuracy - ThakiCloud"
+title: "The First 300 Characters: What Decides Skill Routing"
+seo_title: "The First 300 Characters: What Decides Skill Routing"
 seo_description: "The program that picks a tool for our agents reads only the first 300 characters of each tool's description. This paper builds a way to measure what inside that 300-character window decides the pick. It is designed against a 2,275-skill registry and a 63-case check set, and this post reports no accuracy numbers."
 excerpt: "The picking program never sees past the first 300 characters of a skill description. This post introduces a measurement plan for what inside that narrow window decides the pick, and how much accuracy one more character buys. The paper delivers the measuring stick only; the real numbers come in a follow-up."
 date: 2026-08-23

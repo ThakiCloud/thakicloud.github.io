@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Screen Reader Mode: One Flag That Opens Terminal AI Coding to Everyone"
+title: "Claude Code Screen Reader Mode: One Flag, Wider Access"
 excerpt: "Claude Code added a screen reader mode that swaps its visual terminal UI for plain, linear text. Here is what `claude --ax-screen-reader` actually changes, how it works, and why accessibility of agent interfaces matters for platforms like ThakiCloud."
 date: 2026-07-21
 tags:

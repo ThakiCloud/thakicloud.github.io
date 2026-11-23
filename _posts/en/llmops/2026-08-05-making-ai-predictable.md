@@ -1,7 +1,7 @@
 ---
-title: "You Cannot Control What an LLM Outputs, But You Can Control the System Around It"
+title: "You Can't Control LLM Output, but You Can Control the System"
 excerpt: "Send the same prompt ten times and you can get ten different answers. Engineers who try to fix this by writing better prompts usually hit a wall. The ones who ship reliable LLM systems in production stop trying to predict the output and start designing the boundary the output has to cross."
-seo_title: "LLM Production Reliability: Control the System Boundary, Not the Output"
+seo_title: "You Can't Control LLM Output, but You Can Control the System"
 seo_description: "Why does an LLM give a different answer to the same input? This piece walks through the root causes of non-determinism, prompt sensitivity, and hallucination, then explains how structured output contracts, failure-classified retries, and observability turn a probabilistic component into a reliable production system."
 date: 2026-08-05
 last_modified_at: 2026-08-05

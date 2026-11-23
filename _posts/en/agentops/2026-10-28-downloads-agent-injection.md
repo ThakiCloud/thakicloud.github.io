@@ -1,7 +1,7 @@
 ---
-title: "The Moment Markdown Became an Executable: The Wild Attack Hijacking Coding Agents via the Downloads Folder"
+title: "Downloads Folder Injection: Markdown as an Executable"
 excerpt: "Live malware that security firm Forever caught on a customer machine. A 13KB markdown file silently delivered by the web hijacked Claude Code and Codex, with the malicious package executing at over 90% probability on Codex. We reproduced both core mechanisms 100% locally."
-seo_title: "Hijacking Coding Agents via the Downloads Folder | ThakiCloud Tech Blog"
+seo_title: "Downloads Folder Injection: Markdown as an Executable"
 seo_description: "The web silently drops an AGENTS.md/CLAUDE.md into ~/Downloads that hijacks coding agents. Reproduction of a Forever Security wild incident, measured CLAUDE.md auto-loading and settings.json API rerouting, and a 5-step self-check."
 date: 2026-10-28
 last_modified_at: 2026-10-28

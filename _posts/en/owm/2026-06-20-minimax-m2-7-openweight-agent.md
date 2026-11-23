@@ -1,7 +1,7 @@
 ---
-title: "MiniMax-M2.7: 229B Open-Weight Agent Model, 113 Quantization Variants, and License Considerations"
+title: "MiniMax-M2.7: Open-Weight Agent Model and License Limits"
 excerpt: "MiniMax's M2.7 offers 229B parameters, FP8 support, and 113 quantization variants, providing a wide range of on-premises deployment paths. It claims agent team collaboration and self-evolution, but the license is classified as 'other' and must be read before any commercial deployment."
-seo_title: "MiniMax-M2.7 229B Open-Weight Agent Model Self-Hosting Guide - Thaki Cloud"
+seo_title: "MiniMax-M2.7: Open-Weight Agent Model and License Limits"
 seo_description: "MiniMax-M2.7 architecture, benchmarks (MLE Bench Lite 66.6%, SWE-Pro 56.22%, GDPval-AA ELO 1495), SGLang/vLLM/NIM serving methods, and license considerations explained."
 date: 2026-06-20
 last_modified_at: 2026-06-20

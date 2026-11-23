@@ -1,7 +1,7 @@
 ---
-title: "Running a Coding Agent Fleet Costs $47K a Month at List Price. On Our Own GPU, $3,960."
+title: "Coding Agent Fleet: $47K at List Price, $3,960 Self-Hosted"
 excerpt: "Convert a month of tokens from 57 unattended agents to list price and you get $46,911 on Claude Code, $47,705 on Codex. Running the same work on a single B200 costs $3,960. Both vendor totals land within 1.7% of each other for the same reason the gap runs 12x: 90% of the bill is cache reads."
-seo_title: "Agent Fleet Cost: API List Price vs Self-Hosted GPU, Measured - Thaki Cloud"
+seo_title: "Coding Agent Fleet: $47K at List Price, $3,960 Self-Hosted"
 seo_description: "We converted a month of tokens from 57 unattended coding agents to Claude Code and Codex list price, then compared it against self-hosting a quantized Qwen3.8-27B on one B200. The gap is 12x, and 90% of the API bill turns out to be cache reads, not output tokens. We also cover the serving-config lever that beat quantization, and where a distilled 8B worker helps and where it doesn't."
 date: 2026-08-21
 last_modified_at: 2026-08-21

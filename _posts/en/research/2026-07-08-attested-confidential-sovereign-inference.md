@@ -1,7 +1,7 @@
 ---
-title: "Binding GPU TEE Attestation to Model Signatures: Attested Confidential Inference for Sovereign Multi-Tenant AI"
+title: "Attested Confidential Inference for Sovereign AI"
 excerpt: "Hospitals, banks, and government agencies running on-premises AI platforms must prove two things to regulators: that data never leaked outside the enclave, and that the model weights actually served are the exact file that was audited. Remote attestation for GPU confidential computing and model provenance have until now evolved as two separate technologies. ThakiCloud AI Research proposes ACI (Attested Confidential Inference), a protocol that cryptographically binds the two per request and enforces the binding at the Kubernetes scheduler admission stage."
-seo_title: "Binding GPU TEE Remote Attestation to Model Provenance - The ACI Protocol - Thaki Cloud"
+seo_title: "Attested Confidential Inference for Sovereign AI"
 seo_description: "This article introduces the Attested Confidential Inference (ACI) paper published by ThakiCloud AI Research. It covers a design that cryptographically binds GPU TEE remote attestation with signed model provenance records on a per-request basis and enforces it at the Kueue admission gate, so that sovereign on-premises AI platforms can prove both data confidentiality and model integrity to regulators, along with its threat model and overhead analysis."
 date: 2026-07-08
 last_modified_at: 2026-07-08

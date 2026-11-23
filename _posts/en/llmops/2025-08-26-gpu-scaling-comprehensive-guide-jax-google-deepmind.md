@@ -1,7 +1,7 @@
 ---
-title: "Deep Understanding of GPU Scaling: Google DeepMind JAX Scaling Guide Analysis"
+title: "GPU Scaling Explained: Reading the JAX Scaling Guide"
 excerpt: "From NVIDIA GPU architecture to networking and large language model training - comprehensive theoretical analysis for performance optimization of GPU-based ML systems"
-seo_title: "GPU Scaling Guide: H100/B200 Architecture and LLM Training Optimization - Thaki Cloud"
+seo_title: "GPU Scaling Explained: Reading the JAX Scaling Guide"
 seo_description: "In-depth analysis from NVIDIA H100, B200 hardware architecture to networking and large-scale language model parallel processing based on Google DeepMind's GPU scaling guide"
 date: 2025-08-26
 tags:

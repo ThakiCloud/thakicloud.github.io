@@ -1,7 +1,7 @@
 ---
 title: "Context Engineering for AI Agents: Practical Lessons from Building Manus"
 excerpt: "A detailed analysis of the context optimization strategies and core principles for production AI agents, drawn from the Manus AI team's experience rebuilding their framework four times."
-seo_title: "AI Agent Context Engineering Practical Guide - Manus Case Study - Thaki Cloud"
+seo_title: "Context Engineering for AI Agents: Practical Lessons from Building Manus"
 seo_description: "Learn proven context engineering strategies from the Manus build experience: KV-cache optimization, dynamic tool management, file system utilization, and more for AI agent development."
 date: 2025-07-23
 last_modified_at: 2025-07-23

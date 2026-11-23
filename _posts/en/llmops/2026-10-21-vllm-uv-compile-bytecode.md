@@ -1,6 +1,6 @@
 ---
 title: "One Line That Cuts vLLM Cold Start by 18 Seconds: UV_COMPILE_BYTECODE=1"
-seo_title: "vLLM's official blog shows a one-line cold-start fix. Setting UV_COMPILE_BYTECODE=1 at image build time precompiles Python bytecode and cuts startup by 14-18% (about 18s) on H100. We explain the mechanism with official H100 numbers and a local reproduction. - ThakiCloud"
+seo_title: "One Line That Cuts vLLM Cold Start by 18 Seconds: UV_COMPILE_BYTECODE=1"
 seo_description: "uv skips bytecode compilation, so every fresh vLLM container recompiles thousands of Python files at startup. UV_COMPILE_BYTECODE=1 moves that work to image build time. vLLM's H100 measurements (17.6s, 17.6%) plus our local reproduction. - ThakiCloud"
 excerpt: "The hidden cost of a cold start was not model loading, it was Python compilation. vLLM moves it to build time with one line, and we reproduced the same mechanism locally."
 date: 2026-10-21

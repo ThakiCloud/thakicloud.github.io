@@ -1,6 +1,6 @@
 ---
-title: "One Teacher Per Subject: How to Pack the Skills of Several 27B Models Into a Single 4B"
-seo_title: "MOPD Explained Simply: Multi-Teacher On-Policy Distillation From 27B Teachers Into a 4B Student - ThakiCloud"
+title: "One Teacher Per Subject: Distilling Several 27Bs Into a 4B"
+seo_title: "One Teacher Per Subject: Distilling Several 27Bs Into a 4B"
 seo_description: "The way skill moves from a big model to a small one has flipped from memorizing answer keys to letting the student solve first. This post explains multi-teacher on-policy distillation in plain language, reports the numbers the public papers actually measured, and lays out our plan to use Human-KO 27B as a Korean teacher for two 4B students."
 excerpt: "Do not make the student memorize an answer key. Sit a teacher beside them, and use a different teacher for each subject. Wiring three teachers together straight recovered only about three in ten of the lost gains. Rebalancing the training budget per subject pushed that to about eight in ten."
 date: 2026-09-07

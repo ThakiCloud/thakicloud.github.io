@@ -1,7 +1,7 @@
 ---
-title: "Inside Kimi Code CLI: How an Open Source Terminal Agent Swallows Editors via ACP"
+title: "Kimi Code CLI: An Open Terminal Agent Built on ACP"
 excerpt: "We dig into the open source coding CLI that Moonshot AI released alongside Kimi K3, working strictly from the official docs and repository. From coder/explore/plan sub-agents to interactive MCP configuration and its real differentiator, native Agent Client Protocol support, we verify how much of the 'features Claude Code lacks' marketing line actually holds up."
-seo_title: "Kimi Code CLI and ACP Fully Explained: The Real Differentiators of an Open Source Agent CLI"
+seo_title: "Kimi Code CLI: An Open Terminal Agent Built on ACP"
 seo_description: "We verify Moonshot AI's Kimi Code CLI sub-agents, MCP, and Agent Client Protocol against the official documentation. We read the real differences from Claude Code and the on-premise self-hosting angle through the Paxis and ai-platform lens."
 date: 2026-07-20
 last_modified_at: 2026-07-20

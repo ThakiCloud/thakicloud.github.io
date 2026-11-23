@@ -1,7 +1,7 @@
 ---
-title: "Reflex: 순수 Python 풀스택 웹 개발 완전 가이드 - JavaScript 없이 웹앱 마스터하기"
+title: "Reflex: 순수 Python으로 만드는 풀스택 웹앱"
 excerpt: "Reflex로 프론트엔드와 백엔드를 모두 Python으로 개발하세요. 60+ 내장 컴포넌트, 상태 관리, 실시간 업데이트부터 AI 앱 구축, 배포까지 순수 Python 웹 개발의 모든 것을 마스터합니다."
-seo_title: "Reflex 순수 Python 풀스택 웹 개발 완전 가이드 - JavaScript 없는 웹앱 - Thaki Cloud"
+seo_title: "Reflex: 순수 Python으로 만드는 풀스택 웹앱"
 seo_description: "Reflex를 활용한 순수 Python 풀스택 웹 개발 완전 마스터 가이드. 설치부터 고급 상태 관리, AI 통합, 실시간 앱 구축, 클라우드 배포까지 JavaScript 없이 웹앱 개발하는 모든 방법을 완전 마스터하세요."
 date: 2025-08-03
 last_modified_at: 2025-08-03

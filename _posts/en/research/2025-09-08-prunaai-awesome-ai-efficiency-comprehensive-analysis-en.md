@@ -1,7 +1,7 @@
 ---
-title: "PrunaAI's Awesome AI Efficiency: A Comprehensive Analysis of Modern AI Optimization Paradigms"
+title: "Awesome AI Efficiency: A Survey of Optimization Methods"
 excerpt: "An in-depth academic exploration of PrunaAI's curated repository on AI efficiency, examining the theoretical foundations and practical implications of eight key optimization paradigms in contemporary artificial intelligence systems."
-seo_title: "PrunaAI Awesome AI Efficiency Analysis - Comprehensive Research Review - Thaki Cloud"
+seo_title: "Awesome AI Efficiency: A Survey of Optimization Methods"
 seo_description: "Detailed academic analysis of PrunaAI's awesome-ai-efficiency repository, covering quantization, pruning, distillation, and other AI optimization techniques with theoretical foundations and research insights."
 date: 2025-09-08
 lang: en

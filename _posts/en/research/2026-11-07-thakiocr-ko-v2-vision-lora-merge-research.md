@@ -1,6 +1,6 @@
 ---
-title: "Merging Only the Vision LoRA Gave a 4.80% Dev CER: A ThakiOCR-KO-v2 Diagnostic That Kept Table Structure"
-seo_title: "ThakiOCR-KO-v2 diagnostic: merging only the vision LoRA gives 4.80% Dev Word CER and passes table-structure checks (unreleased, not independently verified) | ThakiCloud"
+title: "ThakiOCR-KO-v2: Merging Only the Vision LoRA"
+seo_title: "ThakiOCR-KO-v2: Merging Only the Vision LoRA"
 seo_description: "We combined two LoRA adapters from KO-v1 training component by component, with no extra training. The arm that moved only the vision LoRA reached 4.80% Word CER and 9.78% handwriting CER on Dev and passed the table-structure checks. The independent evaluation data fell short of the preregistered requirements, so the model was not released."
 excerpt: "We kept the decoder as it was and moved only the vision LoRA. Handwriting errors dropped and table structure held. These are Dev diagnostic numbers, and we put the release on hold because the independent evaluation data is not enough."
 date: 2026-11-07

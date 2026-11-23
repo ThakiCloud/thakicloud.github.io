@@ -1,7 +1,7 @@
 ---
-title: "Nature급 그림과 교열을 코드로: nature-skills를 직접 돌려 본 학술 버티컬 리포트"
+title: "nature-skills: Nature급 그림과 교열을 코드로"
 excerpt: "Nature 저널 기준의 과학 그림 생성과 학술 교열을 묶은 오픈소스 Claude 스킬 패키지 nature-skills를 직접 클론하고, nature-figure로 ThakiCloud 서빙 데이터를 제출 등급 2패널 그림으로 렌더링했습니다. 편집 가능한 SVG 36개 텍스트 태그까지 실측하고, 스킬 마켓플레이스의 버티컬 PMF 관점에서 시사점을 정리합니다."
-seo_title: "nature-skills 학술 그림·교열 스킬 실측 리포트 - Thaki Cloud"
+seo_title: "nature-skills: Nature급 그림과 교열을 코드로"
 seo_description: "nature-skills(Yuan1z0825) Claude 스킬 패키지를 직접 실행한 리포트. nature-figure의 rcParams·PALETTE로 제출 등급 matplotlib 2패널 그림을 600dpi로 렌더링하고, 편집 가능한 SVG와 학술 버티컬 마켓플레이스 시사점을 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21

@@ -1,7 +1,7 @@
 ---
-title: "AI Coding Era Cultural Innovation: Paradigm Shift from Resistance to Collaboration"
+title: "AI Coding Culture: From Resistance to Collaboration"
 excerpt: "How to embrace and develop the new development culture brought by Vibe Coding and Agentic Coding? A guide to building collaborative culture with AI, breaking away from past conventions"
-seo_title: "AI Coding Culture Transformation Guide - From Resistance to Collaboration - Thaki Cloud"
+seo_title: "AI Coding Culture: From Resistance to Collaboration"
 seo_description: "Transform your development culture for the AI era. Complete guide to building collaborative AI-human workflows with Vibe Coding and Agentic Coding approaches."
 date: 2025-06-25
 tags: 

@@ -1,6 +1,6 @@
 ---
-title: "Why We Did Not Release Our Motor Fault Model: Auditing the AI-Hub #238 Current Dataset"
-seo_title: "AI-Hub #238 Motor Current Data Audit: Why We Did Not Release the Fault Model | ThakiCloud"
+title: "Why We Did Not Release Our Motor Fault Model"
+seo_title: "Why We Did Not Release Our Motor Fault Model"
 seo_description: "We trained motor fault classifiers on three-phase current from AI-Hub dataset #238 and scored them once on a sealed test set. A baseline that only reads the filename date beat both signal models. This is how we audited equipment IDs, operating conditions and duplicate labels, and why we held the release."
 excerpt: "On a sealed test set, a baseline that only reads the filename date beat our signal models. Here is how we audited equipment IDs, operating conditions and duplicated waveforms, and why we chose not to release."
 date: 2026-11-08

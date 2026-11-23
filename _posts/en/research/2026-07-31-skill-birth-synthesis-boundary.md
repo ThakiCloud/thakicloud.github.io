@@ -1,6 +1,6 @@
 ---
-title: "When Should a Skill Be Born? The Synthesis-Versus-Reuse Decision Boundary in Self-Evolving Agents"
-seo_title: "Skill-Birth Decision Boundary: An Empirical Study | ThakiCloud Tech Blog"
+title: "When Should a Skill Be Born? Synthesis Versus Reuse"
+seo_title: "When Should a Skill Be Born? Synthesis Versus Reuse"
 seo_description: "We cover a paper that audited 811 commits and 1,972 skill-birth events to measure when a new skill should be automatically synthesized. The core finding is not whether a skill gets reused, but how fast and how intensely."
 excerpt: "Auditing a self-evolving agent's skill library found that how fast a new skill gets reused is a far stronger signal than whether it gets reused at all."
 date: 2026-07-31

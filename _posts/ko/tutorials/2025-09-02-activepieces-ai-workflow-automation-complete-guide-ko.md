@@ -1,7 +1,7 @@
 ---
-title: "Activepieces: 280개 이상 MCP 서버를 지원하는 AI 워크플로우 자동화 완전 가이드"
+title: "Activepieces: 오픈소스 AI 워크플로우 자동화"
 excerpt: "GitHub 17.2k 스타를 받은 오픈소스 AI 워크플로우 자동화 플랫폼 Activepieces의 완전한 설치, 설정, AI 에이전트 생성, 고급 자동화 기법까지 상세 튜토리얼입니다."
-seo_title: "Activepieces AI 워크플로우 자동화 완전 가이드 - Thaki Cloud"
+seo_title: "Activepieces: 오픈소스 AI 워크플로우 자동화"
 seo_description: "Activepieces 플랫폼 마스터 가이드. AI 워크플로우 자동화, MCP 서버 통합, Docker 배포, 고급 자동화 패턴까지 17.2k 스타 오픈소스 플랫폼 완전 정복."
 date: 2025-09-02
 lang: ko

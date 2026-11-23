@@ -1,5 +1,5 @@
 ---
-title: "NVIDIA AceReason-1.1-SFT: Comprehensive Guide to Math & Code Reasoning Specialized SFT Dataset"
+title: "AceReason-1.1-SFT: A Math and Code Reasoning SFT Dataset"
 excerpt: "Detailed analysis of NVIDIA's AceReason-1.1-SFT dataset - CC BY 4.0 license, 4M samples, DeepSeek-R1 based high-quality math and code reasoning data"
 date: 2025-06-18
 tags: 

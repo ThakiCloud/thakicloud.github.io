@@ -1,7 +1,7 @@
 ---
-title: "환경을 먼저 상상하는 에이전트: Qwen-AgentWorld 언어 월드 모델을 뜯어봤습니다"
+title: "Qwen-AgentWorld: 환경을 먼저 상상하는 에이전트"
 excerpt: "Alibaba Qwen이 공개한 Qwen-AgentWorld는 행동을 학습하는 대신 환경 자체를 예측하도록 학습한 언어 월드 모델입니다. arXiv 기술 보고서와 공식 벤치마크를 근거로 핵심 아이디어와 실제 수치, 그리고 ThakiCloud 에이전트 플랫폼 관점의 의미를 정리했습니다."
-seo_title: "Qwen-AgentWorld 언어 월드 모델 분석 - 에이전트 환경 시뮬레이션 - Thaki Cloud"
+seo_title: "Qwen-AgentWorld: 환경을 먼저 상상하는 에이전트"
 seo_description: "Qwen-AgentWorld-35B-A3B와 AgentWorldBench를 공식 자료 기준으로 분석합니다. CPT/SFT/RL 3단계 학습, 7개 도메인 환경 시뮬레이션, Sim RL과 LWM 워밍업의 실제 성능 향상, ThakiCloud 쿠버네티스 에이전트 플랫폼 적용 관점."
 date: 2026-06-25
 last_modified_at: 2026-06-25

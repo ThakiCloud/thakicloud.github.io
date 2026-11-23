@@ -1,7 +1,7 @@
 ---
-title: "Releasing Voice2Policy v0.1: Two Models That Read Spoken Bookings and Orders as Commands"
+title: "Voice2Policy v0.1: Reading Spoken Orders as Commands"
 excerpt: "When a customer says \"Book a scaling for 3 p.m. tomorrow,\" what should the system do first? ThakiCloud is releasing two models that read Korean voice commands as command frames: a 0.84MB text router and an audio reader alpha that reads sound directly, without a transcript. We also explain why the audio reader stayed an alpha."
-seo_title: "Voice2Policy v0.1: Korean Voice Command Text Router and Audio Reader Alpha - ThakiCloud"
+seo_title: "Voice2Policy v0.1: Reading Spoken Orders as Commands"
 seo_description: "ThakiCloud released Voice2Policy Text Router v0.1 and Audio Reader v0.1-alpha, small models that read small-business booking and ordering voice commands as intent, action, pending item and whether a time was mentioned. Covers the drop to 82.7% on hand-written sentences and why the audio reader, slower than the ASR path and still proposing some unsafe actions, is released as an alpha."
 date: 2026-10-24
 last_modified_at: 2026-10-24

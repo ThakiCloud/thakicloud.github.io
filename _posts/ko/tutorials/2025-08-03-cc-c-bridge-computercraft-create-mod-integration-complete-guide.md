@@ -1,7 +1,7 @@
 ---
-title: "CC:C Bridge: ComputerCraft와 Create 모드 완벽 통합 가이드 - 마인크래프트 자동화의 새로운 차원"
+title: "CC-C Bridge로 ComputerCraft와 Create 모드 연동"
 excerpt: "CC:C Bridge로 ComputerCraft와 Create 모드를 완벽하게 연결하세요. Lua 스크립트를 통한 기계 제어부터 애니메트로닉, RedRouter까지 마인크래프트 자동화의 모든 것을 마스터합니다."
-seo_title: "CC:C Bridge ComputerCraft Create 모드 통합 완전 가이드 - 마인크래프트 자동화 - Thaki Cloud"
+seo_title: "CC-C Bridge로 ComputerCraft와 Create 모드 연동"
 seo_description: "CC:C Bridge를 활용한 ComputerCraft와 Create 모드 완벽 통합 방법. 주변 장치 활용, Lua 스크립팅, 애니메트로닉 제어, RedRouter 활용까지 마인크래프트 자동화 완전 마스터 가이드입니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03

@@ -1,7 +1,7 @@
 ---
-title: "Reflection Beam 1.0: 501B 중 23B만 켜는 오픈웨이트 MoE가 1M 컨텍스트를 여는 이유"
+title: "Reflection Beam 1.0: 23B만 켜서 1M 컨텍스트를 여는 이유"
 excerpt: "Reflection AI가 NVIDIA의 지원 아래 첫 오픈웨이트 모델 Beam 1.0을 내놓았습니다. 총 501B 파라미터 중 토큰마다 23B만 활성화되는 희소 MoE 구조에 1M 컨텍스트, Apache 2.0 라이선스. 이 글의 결론은 하나입니다. Beam의 가치는 새 벤치마크 기록이 아니라 서빙 경제학에 있고 그 경제학은 우리 플랫폼이 가장 잘 다루는 형태입니다."
-seo_title: "Reflection Beam 1.0 501B 오픈웨이트 MoE - 23B 활성, 1M 컨텍스트, vLLM 데이즈로 - Thaki Cloud"
+seo_title: "Reflection Beam 1.0: 23B만 켜서 1M 컨텍스트를 여는 이유"
 seo_description: "Reflection AI Beam 1.0(501B 총/23B 활성 MoE, 1M 컨텍스트, Apache 2.0) 모델카드 분석: 256 전문가 그룹제한 라우팅, 하이브리드 어텐션, GB300 훈련 이력, BF16/FP8/NVFP4 수치 옵션과 vLLM 데이즈로 서빙, 온프렘 배포 메모리 산정. ThakiCloud 서빙 관점 포함."
 date: 2026-10-19
 last_modified_at: 2026-10-19

@@ -1,5 +1,5 @@
 ---
-title: "Your AI Bill Leaks Through Repetitive Work — How On-Prem Specialized Models Cut It Structurally"
+title: "AI Bills Leak Through Repetitive Work"
 excerpt: "Most of an AI agent's cost isn't smart judgment — it's simple, repetitive decisions made thousands of times a day. Peel those off into small specialized models running on your own infrastructure, and cost per call drops sharply while your data never leaves. ThakiCloud measured the pattern and open-sourced all of it."
 date: 2026-07-18
 tags:

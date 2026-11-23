@@ -1,6 +1,6 @@
 ---
-title: "FigmaTrace: The First Computer-Use Dataset That Records the Design Process"
-seo_title: "FigmaTrace: 200 hours of Figma design workflows turned into 3,469 trajectories - Thaki Cloud"
+title: "FigmaTrace: A Computer-Use Dataset of Design Process"
+seo_title: "FigmaTrace: A Computer-Use Dataset of Design Process"
 seo_description: "Patronus AI open-sourced FigmaTrace, a design-focused computer-use dataset. 126 long-horizon tasks, Playwright-MCP action space, phase-based segmentation. Qwen3.8-27B SFT beats Claude-Opus-5 on GUI-Odyssey."
 excerpt: "VLMs are bad at design not because they cannot read pixels, but because they have never seen how a designer runs the process. FigmaTrace converts 200+ hours of expert Figma screen recordings into 3,469 trajectories, and shows with numbers how 'how you cut the process' matters more than 'how much data you throw in.'"
 date: 2026-08-22

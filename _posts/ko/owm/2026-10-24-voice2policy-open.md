@@ -1,7 +1,7 @@
 ---
-title: "말로 하는 예약·주문을 명령으로 읽는 두 모델, Voice2Policy v0.1을 공개합니다"
+title: "Voice2Policy v0.1: 말로 하는 주문을 명령으로 읽다"
 excerpt: "\"내일 오후 세 시에 스케일링 예약해 주세요\" 같은 말을 들으면 시스템은 무엇을 해야 할까요. 다키클라우드가 음성 명령을 명령 틀로 읽는 두 모델을 공개합니다. 0.84MB 텍스트 라우터와 받아쓰기 없이 소리를 바로 읽는 오디오 리더 alpha입니다. 오디오 리더가 왜 alpha에 머물렀는지도 함께 정리했습니다."
-seo_title: "Voice2Policy v0.1 공개: 한국어 음성 명령 텍스트 라우터와 오디오 리더 alpha - ThakiCloud"
+seo_title: "Voice2Policy v0.1: 말로 하는 주문을 명령으로 읽다"
 seo_description: "다키클라우드가 공개한 Voice2Policy Text Router v0.1과 Audio Reader v0.1-alpha를 소개합니다. 소상공인 예약·주문 음성 명령을 의도, 동작, 대기 항목, 시간 언급 여부로 읽는 소형 모델입니다. 사람이 쓴 문장에서 정확도가 0.827로 떨어지는 점, 오디오 리더가 ASR 경로보다 느리고 위험 제안이 남아 alpha인 이유까지 정리했습니다."
 date: 2026-10-24
 last_modified_at: 2026-10-24

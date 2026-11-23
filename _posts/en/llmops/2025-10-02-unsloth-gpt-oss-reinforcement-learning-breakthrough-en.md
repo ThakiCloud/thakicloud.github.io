@@ -1,7 +1,7 @@
 ---
-title: "Unsloth's Revolutionary gpt-oss Reinforcement Learning: Training Frontier Models on Free GPUs"
+title: "Unsloth: Reinforcement Learning for gpt-oss on Free GPUs"
 excerpt: "Discover how Unsloth democratizes frontier AI model training by enabling gpt-oss reinforcement learning on free Google Colab with 3x faster inference, 50% less VRAM, and breakthrough reward hacking solutions."
-seo_title: "Unsloth gpt-oss RL Training: 3x Faster on Free GPUs - Thaki Cloud"
+seo_title: "Unsloth: Reinforcement Learning for gpt-oss on Free GPUs"
 seo_description: "Learn how Unsloth enables gpt-oss-20b reinforcement learning training on free Colab with revolutionary optimizations: 3x speed, 50% less VRAM, and reward hacking prevention techniques."
 date: 2025-10-02
 tags:

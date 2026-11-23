@@ -1,7 +1,7 @@
 ---
-title: "Claude Code로 영상을 만든다: claude-code-video-toolkit을 직접 돌려봤습니다"
+title: "Claude Code로 영상 만들기: claude-code-video-toolkit 실습"
 excerpt: "Claude Code 안에서 슬래시 명령 한두 개로 1080p 영상을 렌더링하는 오픈소스 toolkit입니다. API 키 없이 examples/hello-world를 실제로 클론해 렌더했더니 750프레임 25초짜리 1080p 영상이 18초 만에 나왔습니다. 구조와 실측, 그리고 ThakiCloud 쿠버네티스 AI/ML SaaS 플랫폼 관점에서 GPU 영상 워크로드를 어떻게 보는지 정리합니다."
-seo_title: "claude-code-video-toolkit 직접 실행 후기와 플랫폼 관점 - Thaki Cloud"
+seo_title: "Claude Code로 영상 만들기: claude-code-video-toolkit 실습"
 seo_description: "digitalsamba/claude-code-video-toolkit을 API 키 없이 직접 클론해 hello-world를 렌더한 실측(npm install 3.5초, 콜드 렌더 18.4초, 1920x1080 25초 2.15MB)과 구조 분석. Remotion·오픈소스 AI 모델 스택, ThakiCloud 쿠버네티스 GPU 워크로드 적용 관점을 정리합니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23

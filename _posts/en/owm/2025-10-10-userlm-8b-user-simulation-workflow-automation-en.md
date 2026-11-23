@@ -1,7 +1,7 @@
 ---
-title: "UserLM-8b: Revolutionizing Conversational AI Testing with User Simulation"
+title: "UserLM-8b: Testing Conversational AI With a Simulated User"
 excerpt: "Discover how Microsoft's UserLM-8b flips traditional LLM training by simulating users instead of assistants, enabling more realistic testing workflows for conversational AI systems."
-seo_title: "UserLM-8b: User Simulation for AI Workflow Automation - Thaki Cloud"
+seo_title: "UserLM-8b: Testing Conversational AI With a Simulated User"
 seo_description: "Learn how UserLM-8b transforms conversational AI testing with user role simulation, offering realistic test automation and evaluation workflows for assistant LLMs."
 date: 2025-10-10
 tags:

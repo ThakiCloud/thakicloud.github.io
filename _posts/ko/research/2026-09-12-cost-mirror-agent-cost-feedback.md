@@ -1,6 +1,6 @@
 ---
-title: "자기 청구서를 보는 에이전트는 지출을 줄이는가: unattended agent loop의 cost mirror"
-seo_title: "Cost Mirror: unattended LLM agent loop에 live 토큰 비용 피드백을 주입했을 때 지출·전략·품질 변화의 분석 모델과 프리레지스터 4arm A/B 프로토콜 - ThakiCloud"
+title: "자기 청구서를 보는 에이전트는 지출을 줄이는가"
+seo_title: "자기 청구서를 보는 에이전트는 지출을 줄이는가"
 seo_description: "에이전트가 자기 작업의 토큰 비용을 컨텍스트에서 보면 지출은 얼마나 줄 수 있는가. cost mirror를 유도된 Lagrange multiplier로 정형화하고 지출을 verbosity, tool call, retry, escalation 4채널로 분해해 mirror ceiling, cheapest-slack-first 순서, meter gap(Goodhart) 상한을 줍니다. 4arm 168task 코드 그레이딩 A/B 프로토콜과 5개 예측까지 동결한 분석 논문을 정리합니다."
 excerpt: "청구 metering은 이미 작업당 토큰 비용을 계산합니다. 다만 읽는 주체가 운영자일 뿐입니다. cost mirror는 그 read-only 값을 에이전트 컨텍스트에 다시 주입해, 읽기 전용 장부를 루프 안의 제어 신호로 바꿉니다. 줄일 수 있는 상한(slack)을 바인딩하고 자르는 순서(가장 싼 slack부터)와 품질의 부호(valley 위치)를 정하며 미터가 안 보는 지름길(meter gap)까지 상한으로 둡니다."
 date: 2026-09-12

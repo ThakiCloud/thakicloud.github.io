@@ -1,7 +1,7 @@
 ---
-title: "Reproducing a Paper by Changing One Word in the URL: alphaXiv autoresearch and GPU Reproducibility Automation"
+title: "alphaXiv autoresearch: Reproduce a Paper from a URL"
 excerpt: "Swap 'arxiv' for 'autoarxiv' in an arXiv URL and an agent automatically sets up the codebase environment, runs a minimal reproduction, and estimates the GPU cost of full replication. We look at this approach to automating AI research reproducibility through the lens of Kueue based GPU orchestration."
-seo_title: "alphaXiv autoresearch Paper Reproduction Automation Analysis - Thaki Cloud"
+seo_title: "alphaXiv autoresearch: Reproduce a Paper from a URL"
 seo_description: "An analysis of alphaXiv autoresearch, an agent based approach to paper reproduction, GPU replication cost estimation, and how AI research reproducibility automation connects to Kueue GPU orchestration"
 date: 2026-06-21
 last_modified_at: 2026-06-21

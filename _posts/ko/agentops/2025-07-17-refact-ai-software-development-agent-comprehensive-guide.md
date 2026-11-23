@@ -1,7 +1,7 @@
 ---
 title: "Refact.ai: 엔드투엔드 AI 소프트웨어 개발 에이전트 완전 가이드"
 excerpt: "SWE-bench 검증을 통과한 오픈소스 AI 에이전트 Refact.ai의 핵심 기능과 실제 적용 사례, 그리고 엔터프라이즈 환경에서의 활용 전략을 상세히 분석합니다."
-seo_title: "Refact.ai AI 개발 에이전트 완전 가이드 - 오픈소스 SWE-bench 검증 - Thaki Cloud"
+seo_title: "Refact.ai: 엔드투엔드 AI 소프트웨어 개발 에이전트 완전 가이드"
 seo_description: "3k stars의 오픈소스 AI 에이전트 Refact.ai 심층 분석. 자체 호스팅, 25+ 언어 지원, Docker 통합, VS Code/JetBrains 플러그인까지 실무 적용 가이드"
 date: 2025-07-17
 last_modified_at: 2025-07-17

@@ -1,6 +1,6 @@
 ---
-title: "모델을 키우는 것보다 문서를 넣는 게 낫습니다: JAXBench가 측정한 TPU 커널 생성"
-seo_title: "JAXBench 논문 리뷰: TPU Pallas 커널 자동 최적화와 컨텍스트 우위 | ThakiCloud"
+title: "모델보다 문서: JAXBench가 잰 TPU 커널 생성"
+seo_title: "모델보다 문서: JAXBench가 잰 TPU 커널 생성"
 seo_description: "구글과 하버드, 버클리 연구진이 공개한 JAXBench(arXiv 2607.20466)를 정리했습니다. TPU v6e에서 50개 워크로드로 측정한 결과, 큐레이션된 TPU 문서를 주입하자 샘플당 정확도가 5.8%에서 37.3%로 올랐습니다. 모델 등급을 올리는 것보다 큰 폭이었습니다."
 excerpt: "학습 데이터에 거의 없는 DSL을 다룰 때, 병목은 모델의 추론 능력이 아니라 정보입니다. TPU 커널 생성 벤치마크가 이 명제를 숫자로 보여줍니다."
 date: 2026-07-29

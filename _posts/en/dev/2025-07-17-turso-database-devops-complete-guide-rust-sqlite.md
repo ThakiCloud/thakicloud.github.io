@@ -1,7 +1,7 @@
 ---
-title: "Turso Database DevOps Complete Guide: Modernizing Infrastructure with Next-Generation SQLite"
+title: "Turso: Rust-Built SQLite for DevOps Teams"
 excerpt: "A DevOps-focused complete guide to Turso, the next-generation SQLite-compatible database built in Rust. Covers CI/CD pipelines, production deployment, and monitoring with hands-on examples."
-seo_title: "Turso Database DevOps Guide - Rust-Based Next-Generation SQLite Mastery - Thaki Cloud"
+seo_title: "Turso: Rust-Built SQLite for DevOps Teams"
 seo_description: "Complete DevOps guide for Turso Database (12.1k stars). Modernize infrastructure with Rust-based next-generation SQLite. Includes CI/CD, multi-platform deployment, language bindings, and performance tuning."
 date: 2025-07-17
 last_modified_at: 2025-07-17

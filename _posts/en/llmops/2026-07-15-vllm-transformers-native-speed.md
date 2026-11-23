@@ -1,5 +1,5 @@
 ---
-title: "Implement Once, Serve at vLLM Native Speed: the Transformers Backend Ends the Double-Build"
+title: "Implement Once, Serve at vLLM Native Speed"
 excerpt: "Until now, every new model architecture had to be built twice: once in Transformers for training and research, and again in vLLM for production inference. vLLM v0.25.0's native-speed Transformers backend ends that duplication. It works by using torch.fx to statically analyze the model graph, finding known patterns like attention, normalization, and MLP, then rewiring them onto vLLM's optimized kernels. We reproduced the graph-analysis step the backend actually runs on a 4-layer decoder and measured which of its 178 nodes become fusion targets. Then we look at what this means for ThakiCloud's multi-tenant open-weight serving infrastructure."
 tags:
   - vllm

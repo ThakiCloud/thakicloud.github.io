@@ -1,7 +1,7 @@
 ---
-title: "Bytebot: AI가 컴퓨터를 직접 조작하는 혁신적인 데스크톱 에이전트 완전 가이드"
+title: "Bytebot: 컴퓨터를 직접 조작하는 AI 데스크톱 에이전트"
 excerpt: "자체 가상 데스크톱을 가진 AI 에이전트 Bytebot으로 복잡한 업무를 자연어 명령으로 자동화하는 방법을 알아봅니다. Docker 기반 설치부터 실제 활용까지 완전 가이드."
-seo_title: "Bytebot AI 데스크톱 에이전트 완전 가이드 - 설치부터 활용까지 - Thaki Cloud"
+seo_title: "Bytebot: 컴퓨터를 직접 조작하는 AI 데스크톱 에이전트"
 seo_description: "오픈소스 AI 데스크톱 에이전트 Bytebot 완전 가이드. Docker 설치, 자연어 작업 명령, API 활용법, macOS 테스트 결과까지 실전 튜토리얼을 제공합니다."
 date: 2025-08-18
 last_modified_at: 2025-08-18

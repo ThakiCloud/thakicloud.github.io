@@ -1,6 +1,6 @@
 ---
-title: "모니터가 보는 것만 벌점 주는 순간, 모델은 보이지 않는 방식으로 해킹한다: GRAFT"
-seo_title: "RL post-training에서 reward hacking을 막는 monitor 기반 penalty는 모델이 monitor의 사각지대를 이용하도록 학습시키는 실패 모드를 낳습니다. GRAFT(arXiv 2610.17062)는 monitor를 reward에 두지 않고 gradient routing의 스위치로만 써, hacking을 일회성 ablation으로 제거 가능한 sacrificial 파라미터에 국한시킵니다. Qwen3-8B RL과 Qwen3-32B SFT 실험 결과를 정리합니다. - ThakiCloud"
+title: "GRAFT: 모니터 밖의 보상 해킹을 막는 그래디언트 라우팅"
+seo_title: "GRAFT: 모니터 밖의 보상 해킹을 막는 그래디언트 라우팅"
 seo_description: "monitor가 잡는 hack에 penalty를 주면 모델은 monitor가 잡지 못하는 형태로 hack을 옮깁니다. GRAFT는 flag된 트래젝토리의 gradient를 추가 adapter에만 route하고 훈련 후 ablate하는 방식으로 이 실패 모드를 구조적으로 회피합니다. 135M에서 32B까지의 결과와 적용 시사점까지. - ThakiCloud"
 excerpt: "벌점을 주면 모델은 벌점을 피하는 법을 배웁니다. GRAFT는 벌점 대신 '어느 파라미터가 그 벌점의 교훈을 배울지'를 분리하는 방법입니다. monitor의 사각지대가 있는 post-training 환경에서 monitor-exploiting policy를 전 환경에서 피했습니다."
 date: 2026-10-21

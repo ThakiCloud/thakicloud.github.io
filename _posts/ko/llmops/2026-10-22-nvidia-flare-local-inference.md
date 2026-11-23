@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA Flare: Rust가 서빙하는 로컬 인퍼런스 서버"
-seo_title: "NVIDIA가 발표 없이 GitHub에 올린 로컬 인퍼런스 서버 Flare. Python(Ignition)이 서명된 런타임 패키지를 만들고 Rust(Helios)가 Python 없이 서빙합니다. 아키텍처, 지원 모델, 설치 명령, 그리고 16GB 카드에서 못 돌리는 이유를 정리합니다. - ThakiCloud"
+seo_title: "NVIDIA Flare: Rust가 서빙하는 로컬 인퍼런스 서버"
 seo_description: "Flare는 SM120/SM121 GPU를 위한 로컬 인퍼런스 서버입니다. 모델 준비를 서명된 런타임 패키지로 앞당기고 서빙 경로는 Rust만으로 돌립니다. vLLM 대체가 아니라 로컬 에이전트 워크로드의 참조점. - ThakiCloud"
 excerpt: "주방은 Python이, 서빙대는 Rust가 맡는다. NVIDIA가 발표 없이 GitHub에 올린 Flare의 2단 구조, 서명된 런타임 패키지, 그리고 왜 우리 16GB 카드에서는 메뉴를 못 받드는지."
 date: 2026-10-22

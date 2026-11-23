@@ -1,7 +1,7 @@
 ---
-title: "What Does 'Safe' Even Mean? We Put Human-KO Next to EXAONE and Our Own Ruler"
+title: "What Does 'Safe' Mean? Human-KO Against EXAONE"
 excerpt: "To know if a thermometer works, test it on someone with a real fever first. We validated our safety metrics on a model with safety training stripped out, then measured Human-KO's bias and refusal behavior against its base model and EXAONE."
-seo_title: "Human-KO 27B Safety & Bias Benchmark: KoBBQ, BBQ, and XSTest Results"
+seo_title: "What Does 'Safe' Mean? Human-KO Against EXAONE"
 seo_description: "We benchmarked Human-KO 27B against base Qwen3.8-27B and EXAONE-4.5-33B using KoBBQ, BBQ, and XSTest, first validating the metrics themselves with a safety-stripped control model."
 date: 2026-09-04
 published: true

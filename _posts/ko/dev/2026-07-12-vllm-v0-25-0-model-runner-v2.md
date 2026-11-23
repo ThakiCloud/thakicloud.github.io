@@ -1,5 +1,5 @@
 ---
-title: "vLLM v0.25.0: Model Runner V2가 기본값이 되고 PagedAttention이 사라졌습니다"
+title: "vLLM v0.25.0: Model Runner V2가 기본값이 됐다"
 excerpt: "vLLM v0.25.0이 232명의 기여자가 보낸 558개의 커밋과 함께 나왔습니다. 이번 릴리스의 핵심은 두 가지입니다. 첫째, Model Runner V2가 모든 밀집 모델의 기본 실행 경로가 되었습니다. 둘째, vLLM을 처음 유명하게 만든 PagedAttention의 레거시 구현이 코드베이스에서 삭제되었습니다. 여기에 효율적 비디오 샘플링(EVS), 동적 추측 디코딩, Mamba 하이브리드 접두어 캐싱이 더해졌습니다. 서빙 인프라를 운영하는 관점에서 무엇이 바뀌었고 어떤 마이그레이션을 준비해야 하는지 정리합니다."
 tags:
   - dev

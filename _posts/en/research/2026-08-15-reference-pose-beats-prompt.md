@@ -1,5 +1,5 @@
 ---
-title: "If Your Mascot Keeps Standing There, Change the References, Not the Prompt"
+title: "If Your Mascot Keeps Standing, Change the References"
 excerpt: "We asked for twelve distinct actions and mostly got twelve standing poses. Replacing every verb with a whole-body one changed nothing. Replacing the four reference stills did."
 categories:
   - research

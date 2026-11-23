@@ -1,7 +1,7 @@
 ---
-title: "Reading varien's First Open Model Built by Direct Weight Editing: Qwen Concept 27B"
+title: "Qwen Concept 27B: An Open Model Built by Weight Editing"
 excerpt: "varien open-sourced Qwen Concept 27B on November 6, claiming a 54% cut in thinking tokens via direct weight-space edits inspired by MIT CSAIL's weight-space programming research. Here is what was announced, what is verified as of writing, the NVFP4 on-prem path, and what it means for serving economics and agent action classes."
-seo_title: "Qwen Concept 27B, the No-Training Open Model, Explained | ThakiCloud"
+seo_title: "Qwen Concept 27B: An Open Model Built by Weight Editing"
 seo_description: "Qwen Concept 27B: weight-space editing claims 54% fewer thinking tokens, +3% GPQA Diamond, built on a DGX Spark, BF16/FP8/NVFP4 free. Weight-link verification status, NVFP4 serving path, and ThakiCloud ai-platform and Paxis perspectives."
 date: 2026-11-07
 last_modified_at: 2026-11-07

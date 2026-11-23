@@ -1,7 +1,7 @@
 ---
-title: "An Open Answer to OpenAI Dots: Open Dots, the Self-Hosted Agent Workspace"
+title: "Open Dots: A Self-Hosted Answer to OpenAI Dots"
 excerpt: "Two days after OpenAI unveiled always-on agents called Dots at DevDay, Open Dots shipped, an MIT-licensed self-hosted agent workspace claiming the same capabilities at one tenth the cost. The next battleground of the agent-workspace race is 'where, by whom, audited how.'"
-seo_title: "Open Dots self-hosted agent workspace launch - MIT-licensed open-source alternative to OpenAI Dots (DevDay 2026, always-on agents, GPT-6 Astra). Chat, tool use, approvals, connectors, computer tasks, Composio integration, the 1/10th-cost claim, ThakiCloud Paxis perspective"
+seo_title: "Open Dots: A Self-Hosted Answer to OpenAI Dots"
 seo_description: "In response to OpenAI's always-on agents Dots, a self-hosted open-source agent workspace called Open Dots has launched. Why approvals, connectors, and audit-first self-hosted workspaces matter now, and what the agent-infrastructure race means for ThakiCloud Paxis."
 date: 2026-10-01
 last_modified_at: 2026-10-01

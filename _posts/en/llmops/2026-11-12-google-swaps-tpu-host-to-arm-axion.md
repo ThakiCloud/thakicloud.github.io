@@ -1,7 +1,7 @@
 ---
 title: "While Everyone Watched the Accelerator, Google Swapped the Host"
 excerpt: "The TPU 8i Max is the muscle; the host CPU is what decides data flow and task orchestration. From Google's move to Arm Axion to Anthropic's $10 billion compute deals, every signal today points to the 'host layer'."
-seo_title: "The Day Google Swapped Its AI Accelerator Host: The Layer That Matters More Than the Chip | ThakiCloud"
+seo_title: "While Everyone Watched the Accelerator, Google Swapped the Host"
 seo_description: "Google's move to host the TPU 8i Max on Arm Axion CPUs, read through the host layer: Anthropic's $10 billion compute deals, Helsing's Clarity, and the Gemini API's self-hosted sandboxes."
 date: 2026-11-12
 last_modified_at: 2026-11-12

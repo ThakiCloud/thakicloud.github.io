@@ -1,7 +1,7 @@
 ---
 title: "Drag-and-Drop LLMs: Zero-Shot Prompt-to-Weights Technology"
 excerpt: "Analysis of the DnD technique that adapts LLMs to specific tasks in seconds without training"
-seo_title: "Drag-and-Drop LLMs Zero-Shot Prompt-to-Weights Research Analysis - Thaki Cloud"
+seo_title: "Drag-and-Drop LLMs: Zero-Shot Prompt-to-Weights Technology"
 seo_description: "Analysis of the DnD LLMs technique developed by NUS and UT Austin that achieves 12,000x faster speed and 30% performance improvement over LoRA"
 date: 2025-07-29
 last_modified_at: 2025-07-29

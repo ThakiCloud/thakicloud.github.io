@@ -1,7 +1,7 @@
 ---
 title: "The Load That Kills Your Service Is Your Own Retry Storm"
 excerpt: "When traffic surges it is easy to assume the service dies from the incoming load, but the real cause is usually the second wave the system calls on itself, the retry storm. This piece lays out the exact loop overload runs through, then shows how to break it at three points with numbers: the server rate limit, the client backoff, and the LLM API budget. It argues why deliberately slowing down and refusing is the whole of overload defense."
-seo_title: "Why Retry Storms, Not Traffic, Take Services Down, and How Rate Limits, Backoff, and LLM Budgets Stop Them"
+seo_title: "The Load That Kills Your Service Is Your Own Retry Storm"
 seo_description: "Under overload a service usually dies from the load it calls on itself, not the traffic sent to it. How a token bucket with 429, exponential backoff with jitter, and LLM API budget enforcement break the cascade failure loop."
 date: 2026-09-02
 last_modified_at: 2026-09-02

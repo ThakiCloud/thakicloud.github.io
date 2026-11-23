@@ -1,7 +1,7 @@
 ---
-title: "Design the Loop Before You Run It: Agent Loop Engineering That Doesn't Burn Tokens"
+title: "Design the Loop Before You Run It: Agent Loop Engineering"
 excerpt: "We're moving from an era of writing good prompts to an era of designing good loops. An agent loop launched without design burns tokens and delivers results you cannot use. This post covers how to design the small system that finds work, dispatches it, verifies results, records progress, and decides what comes next, plus the loop guardrails ThakiCloud built after a $700-in-one-day incident."
-seo_title: "Agent Loop Engineering: Design Before You Run - Thaki Cloud"
+seo_title: "Design the Loop Before You Run It: Agent Loop Engineering"
 seo_description: "What to design before running an agent loop (goal definition, memory file, verifier separation, caps), and how to control the two costs of tokens and attention. Includes the real loop operation guardrails from ThakiCloud's Kubernetes AI/ML SaaS platform."
 date: 2026-06-25
 last_modified_at: 2026-06-25

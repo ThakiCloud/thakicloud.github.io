@@ -1,6 +1,6 @@
 ---
-title: "Reading the Anthropic Forward Deployed Engineer Interview, a 6-Stage Structure"
-seo_title: "2026 Anthropic FDE interview guide explained - live Claude+MCP use-case round and values round, Thaki Cloud"
+title: "Anthropic FDE Interview: A 6-Stage Structure"
+seo_title: "Anthropic FDE Interview: A 6-Stage Structure"
 seo_description: "The 2026 Anthropic Forward Deployed Engineer (FDE) interview is structured in six stages: recruiter screen, use-case, coding, hiring manager, solution design, and values. The live Claude+MCP scenario and a non-technical values round of equal weight are the core. Implications for hiring AI deployment engineers."
 excerpt: "The newest part of the FDE interview is the 'use-case round': you work a live scenario with Claude and MCP tools, not a take-home. A values round of equal weight to the technical stages is run by a non-technical interviewer."
 date: 2026-08-25

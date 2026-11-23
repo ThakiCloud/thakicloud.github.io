@@ -1,5 +1,5 @@
 ---
-title: "CrewAI: 협업하는 AI 에이전트들의 세계 - 멀티 에이전트 프레임워크 완전 가이드"
+title: "CrewAI: 협업하는 멀티 에이전트 프레임워크"
 date: 2025-06-10
 tags: 
   - CrewAI

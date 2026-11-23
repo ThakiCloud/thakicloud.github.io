@@ -1,7 +1,7 @@
 ---
-title: "77.3% Is the Number You Trust. 13 Million Lines Is the Number You Verify."
+title: "Trust the Score, Verify the Lines"
 excerpt: "Two results landed on the same morning. One you must trust as a score. The other you can check as a verification. In an age where agents work alone for hours, the unit of a company's trust is changing."
-seo_title: "77.3% and 13 Million Lines: Trust the Score, Verify the Process"
+seo_title: "Trust the Score, Verify the Lines"
 seo_description: "This post contrasts Astra's browser benchmark score with Claude's Lean formalization of Fermat's Last Theorem to analyze the structure of trust and audit-based governance in the age of autonomous agents."
 date: 2026-09-07
 last_modified_at: 2026-09-07

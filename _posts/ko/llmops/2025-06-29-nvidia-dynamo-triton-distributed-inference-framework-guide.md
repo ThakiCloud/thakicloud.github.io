@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Dynamo vs Dynamo-Triton: LLM 분산 추론 최적화 프레임워크 완전 가이드"
+title: "Dynamo와 Dynamo-Triton: 분산 추론 프레임워크 선택 기준"
 excerpt: "NVIDIA Dynamo는 멀티노드 LLM 분산 추론을, Dynamo-Triton은 단일 노드 범용 모델 서빙을 최적화합니다. 두 프레임워크의 차이점과 선택 기준을 상세히 분석합니다."
-seo_title: "NVIDIA Dynamo vs Dynamo-Triton: LLM 분산 추론 프레임워크 선택 가이드 - Thaki Cloud"
+seo_title: "Dynamo와 Dynamo-Triton: 분산 추론 프레임워크 선택 기준"
 seo_description: "NVIDIA Dynamo와 Dynamo-Triton의 아키텍처, 성능, 사용 시나리오를 비교 분석하여 최적의 LLM 서빙 솔루션 선택을 도와드립니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29

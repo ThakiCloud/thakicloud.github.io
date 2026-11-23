@@ -1,6 +1,6 @@
 ---
-title: "The Score Stays the Same, but the Top Has Already Fallen Below Half: The Curse of Skills"
-seo_title: "List-Size Scaling Law for Skill Routing Accuracy, Top Accuracy Breakpoint, Mitigation Order - ThakiCloud"
+title: "The Curse of Skills: Scores Hold While the Top Falls"
+seo_title: "The Curse of Skills: Scores Hold While the Top Falls"
 seo_description: "Our agent's tool list grew from about 1,600 entries to 2,029 in three weeks, and the monitoring score stayed the same. With a two-number survival model we find the size at which top accuracy halves, about 1,950, and show how to keep quality by shrinking the exam room first."
 excerpt: "The test quietly shrank from 63 questions to 42, and the score stayed the same. As the school grows, more students come to look like that child, and the odds of putting the right answer at the front fall below half. Monitoring only checked whether it made the top five."
 date: 2026-09-02

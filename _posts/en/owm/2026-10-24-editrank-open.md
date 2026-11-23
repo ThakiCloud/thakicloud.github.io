@@ -1,7 +1,7 @@
 ---
 title: "Which Rewrite Should You Pick? Releasing Two EditRank Models"
 excerpt: "When one document has been rewritten several ways, which version will an AI answer engine rank higher as a source? EditRank is a small model that ranks those rewrites. We are releasing a 0.6B and a 4B version as research previews, along with how often they pick a rewrite that changes the facts."
-seo_title: "EditRank-0.6B and EditRank-Multidomain-4B: Edit-Ranking Models - ThakiCloud"
+seo_title: "Which Rewrite Should You Pick? Releasing Two EditRank Models"
 seo_description: "ThakiCloud released EditRank, a Research Preview reranker that ranks candidate rewrites of one document for one query. The 0.6B model beat BM25 on product pages, and the 4B model showed higher utility and a lower fact-violation rate than the 0.6B on technical documentation. Covers the simulated-engine results and the limitations."
 date: 2026-10-24
 last_modified_at: 2026-10-24

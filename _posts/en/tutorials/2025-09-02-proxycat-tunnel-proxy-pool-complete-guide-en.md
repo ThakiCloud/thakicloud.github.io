@@ -1,7 +1,7 @@
 ---
 title: "Complete Guide to Building Tunnel Proxy Pool with ProxyCat"
 excerpt: "Comprehensive implementation guide covering installation to practical applications of ProxyCat, which transforms short-lived IPs into permanent tunnel proxies."
-seo_title: "ProxyCat Tunnel Proxy Pool Complete Guide - Cost-Effective IP Management Solution"
+seo_title: "Complete Guide to Building Tunnel Proxy Pool with ProxyCat"
 seo_description: "Learn how to transform 1-minute short-term IPs into permanent tunnel proxies using ProxyCat. Complete coverage of Docker deployment, Web UI management, HTTP/SOCKS5 support, and practical applications"
 date: 2025-09-02
 tags:

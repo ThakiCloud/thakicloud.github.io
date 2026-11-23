@@ -1,7 +1,7 @@
 ---
-title: "Microsoft VibeVoice: Frontier Long Conversational Text-to-Speech Model Guide"
+title: "Microsoft VibeVoice: Long-Form Conversational Speech Synthesis"
 excerpt: "Comprehensive guide to Microsoft's VibeVoice TTS model that can generate 90-minute multi-speaker conversations with expressive, natural speech synthesis using continuous speech tokenizers and diffusion architecture."
-seo_title: "Microsoft VibeVoice TTS Model Complete Guide - Multi-Speaker Conversational AI"
+seo_title: "Microsoft VibeVoice: Long-Form Conversational Speech Synthesis"
 seo_description: "Learn about Microsoft VibeVoice, an advanced text-to-speech model supporting 4-speaker conversations up to 90 minutes with cross-lingual capabilities and natural turn-taking."
 date: 2025-08-26
 tags:

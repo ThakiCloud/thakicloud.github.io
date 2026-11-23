@@ -1,7 +1,7 @@
 ---
-title: "Three Giants, Three Futures: What Hassabis, Huang, and Amodei Leave for Builder Organizations"
+title: "Three Giants, Three Futures: Hassabis, Huang, Amodei"
 excerpt: "A comparison of the worldviews of Hassabis, Huang, and Amodei, who read the same AI wave through three different lenses of AGI, infrastructure, and labor, and a synthesis of what builder organizations should take from each at a time when their uncertainties overlap."
-seo_title: "Hassabis Huang Amodei AI Futures Compared - Thaki Cloud"
+seo_title: "Three Giants, Three Futures: Hassabis, Huang, Amodei"
 seo_description: "Compare how Hassabis, Huang, and Amodei see AI's future across AGI, infrastructure, and labor, and what builder orgs should take from each."
 date: 2026-06-22
 last_modified_at: 2026-06-22

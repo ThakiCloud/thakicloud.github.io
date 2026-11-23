@@ -1,7 +1,7 @@
 ---
-title: "RAG-Based LLMOps Production Implementation Guide: Designing Retrieval Augmented Generation Systems for Enterprise Environments"
+title: "RAG LLMOps: Designing Production Retrieval Systems"
 excerpt: "From the core architecture of Retrieval Augmented Generation (RAG) systems to production deployment, this guide delivers enterprise-grade RAG implementation strategies and optimization methodologies from an LLMOps perspective."
-seo_title: "RAG LLMOps Production Implementation Guide - Enterprise RAG System - Thaki Cloud"
+seo_title: "RAG LLMOps: Designing Production Retrieval Systems"
 seo_description: "A practitioner-focused guide covering RAG system architecture design, production deployment, and performance optimization from an LLMOps perspective. Enterprise RAG implementation strategies and best practices explained in detail."
 date: 2025-07-20
 last_modified_at: 2025-07-20

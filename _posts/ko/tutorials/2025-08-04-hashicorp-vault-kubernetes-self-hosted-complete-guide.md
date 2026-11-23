@@ -1,7 +1,7 @@
 ---
-title: "HashiCorp Vault Kubernetes Self-Hosted 완전 가이드 - 시크릿 관리의 새로운 패러다임"
+title: "HashiCorp Vault: Kubernetes 셀프호스팅으로 시크릿 관리"
 excerpt: "HashiCorp Vault를 Kubernetes 클러스터에 Self-Hosted로 배포하고 운영하는 완전한 튜토리얼. 시크릿 관리, 암호화 서비스, 권한 관리의 모든 것을 다룹니다."
-seo_title: "HashiCorp Vault Kubernetes Self-Hosted 완전 가이드 - Thaki Cloud"
+seo_title: "HashiCorp Vault: Kubernetes 셀프호스팅으로 시크릿 관리"
 seo_description: "HashiCorp Vault를 Kubernetes에 배포하여 시크릿 관리, 암호화 서비스, 권한 관리를 구현하는 완전한 튜토리얼 가이드"
 date: 2025-08-04
 last_modified_at: 2025-08-04

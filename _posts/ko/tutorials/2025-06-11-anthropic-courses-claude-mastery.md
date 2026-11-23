@@ -1,5 +1,5 @@
 ---
-title: "Claude 마스터하기: Anthropic의 공식 교육 과정으로 AI 프롬프팅 전문가 되기"
+title: "Anthropic 공식 과정으로 배우는 Claude 프롬프팅"
 date: 2025-06-11
 tags: 
   - Claude

@@ -1,7 +1,7 @@
 ---
-title: "21 Million Dollars for One Rack: When AI's Bill Arrived, the Bottleneck Moved to Power"
+title: "$21 Million per Rack: AI's Bottleneck Moves to Power"
 excerpt: "HBM4 has pushed the price of a single server rack to 21 million dollars, and SK hynix raised 40 trillion won in a single day. Now that capital and power have become the real bottleneck, the contest is moving down to the software layer that turns expensive compute into provable work."
-seo_title: "In the Age of the 21 Million Dollar AI Rack, the Bottleneck Is Power and Proof, Not GPUs"
+seo_title: "$21 Million per Rack: AI's Bottleneck Moves to Power"
 seo_description: "The thread running through the July 10, 2026 news is capital and power. Reading the 21 million dollar HBM4 rack, SK hynix's 40 trillion won ADR, and the 5,241 trillion won AIDC forecast, here is where ThakiCloud's Paxis opens a window of differentiation."
 date: 2026-07-10
 last_modified_at: 2026-07-10

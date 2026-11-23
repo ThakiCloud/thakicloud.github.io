@@ -1,7 +1,7 @@
 ---
-title: "Deploy Your Own SaaS: Complete Guide to Self-Hosting Private Cloud Services"
+title: "Deploy Your Own SaaS: Self-Hosting Private Cloud Services"
 excerpt: "A comprehensive guide to deploying your own VPN, file storage, analytics, password manager, and more. Take control of your data with open-source self-hosted alternatives to popular SaaS platforms."
-seo_title: "Deploy Your Own SaaS: Self-Hosting Guide for Privacy-Focused Services"
+seo_title: "Deploy Your Own SaaS: Self-Hosting Private Cloud Services"
 seo_description: "Learn how to deploy your own VPN, cloud storage, analytics, password manager, and 30+ other services. Complete self-hosting guide with privacy and data control in mind."
 date: 2025-10-04
 tags:

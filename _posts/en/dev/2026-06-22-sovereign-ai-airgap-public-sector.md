@@ -1,7 +1,7 @@
 ---
-title: "Building Sovereign AI for Air-Gapped Public Sector: On-Premises LLM Reference Architecture"
+title: "Sovereign AI for Air-Gapped Public Sector"
 excerpt: "A guide for government and public sector organizations that cannot use external cloud services to securely operate LLMs on internal GPU infrastructure. Introduces ThakiCloud AI Platform's air-gap deployment reference architecture, along with security and governance design."
-seo_title: "On-Premises LLM Reference Architecture for Air-Gapped Public Sector - Thaki Cloud"
+seo_title: "Sovereign AI for Air-Gapped Public Sector"
 seo_description: "Reference architecture for public sector and government organizations in air-gapped environments to build a sovereign AI cloud on-premises. Covers NIS security requirements, domestic data storage mandates, Keycloak RBAC, ArgoCD GitOps, and vLLM serverless inference."
 date: 2026-06-22
 last_modified_at: 2026-06-22

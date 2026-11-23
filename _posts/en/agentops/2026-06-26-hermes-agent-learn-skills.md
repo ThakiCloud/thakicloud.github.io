@@ -1,7 +1,7 @@
 ---
-title: "Stop Hand-Writing SKILL.md: A Deep Dive into Hermes Agent's /learn Command"
+title: "Hermes Agent /learn: Stop Hand-Writing SKILL.md"
 excerpt: "The /learn command that Nous Research added to Hermes Agent can point at a directory, a URL, a just-finished conversation, or a pasted note and turn it into a reusable skill - no hand-written SKILL.md required. We ran the installed Hermes to measure the skill system skeleton directly, and here we break down how /learn works and what it means for ThakiCloud's multi-tenant agent operations on a Kubernetes AI/ML SaaS platform."
-seo_title: "Hermes Agent /learn: Direct Verification and Platform Perspective - Thaki Cloud"
+seo_title: "Hermes Agent /learn: Stop Hand-Writing SKILL.md"
 seo_description: "We verified Hermes Agent's /learn command against official documentation and hands-on testing. This post covers the source-collection flow using read_file and web_extract to author a standard SKILL.md, the write_approval gate, the curator, progressive disclosure structure, and implications for ThakiCloud's multi-tenant agent platform."
 date: 2026-06-26
 last_modified_at: 2026-06-26

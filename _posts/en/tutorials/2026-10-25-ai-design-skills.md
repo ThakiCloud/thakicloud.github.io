@@ -1,6 +1,6 @@
 ---
-title: "Locking In an Agent's Design System: A/B Testing a Designer's 16 KB Skill File"
-seo_title: "Designer Skill File A/B Test: the 16 KB Markdown That Pins Typography, Spacing, and Motion for Coding Agents - ThakiCloud"
+title: "A/B Testing a 16 KB Designer Skill File"
+seo_title: "A/B Testing a 16 KB Designer Skill File"
 seo_description: "We applied an 8-year product designer's 16 KB markdown skill file to a coding agent, then built the same landing page without it. The skill pinned all six design determinants; the no-skill arm produced 10 gate violations."
 excerpt: "No skill was needed to avoid slop. The model avoided it anyway. What the skill file decides is the values. We A/B tested a product designer's 16 KB markdown file with and without a coding agent."
 date: 2026-10-25

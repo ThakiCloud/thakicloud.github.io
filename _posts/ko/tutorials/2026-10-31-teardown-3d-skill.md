@@ -1,6 +1,6 @@
 ---
 title: "3D 시뮬레이터 워크플로 전체를 Claude 스킬 하나로: teardown 설치·실측"
-seo_title: "teardown Claude 스킬 실측: 3D 시뮬레이터 워크플로, build 56ms, 리뷰 시트 15.8초 - ThakiCloud"
+seo_title: "3D 시뮬레이터 워크플로 전체를 Claude 스킬 하나로: teardown 설치·실측"
 seo_description: "AI 크리에이터 Elvar의 무료 MIT 스킬 'teardown'은 리퍼런스 사진에서 three.js 3D 시뮬레이터, 60fps 영상까지를 Claude Code 스킬 하나로 압축합니다. 실제 설치해 6개 번들 빌드(전부 1MB 미만)와 리뷰 루프 캡처를 실측했습니다."
 excerpt: "가치는 3D 영상 자체가 아니라, 워크플로가 실행 가능한 계약이 됐다는 점입니다. 7개 빌드 규칙, '비디오는 보지 않고 프레임만 본다'는 리뷰 루프, 숫자로 정의한 미감까지 전부 SKILL.md 안에 있습니다. 6개 번들은 295ms에 빌드됐고 페이지당 806KB였습니다."
 date: 2026-10-31

@@ -1,6 +1,6 @@
 ---
 title: "Where a Model That Never Saw the Data Beat the One That Did"
-seo_title: "Satoori-KO Korean dialect models - 92% synthetic recovery measured - ThakiCloud"
+seo_title: "Where a Model That Never Saw the Data Beat the One That Did"
 seo_description: "We measured how much licence-restricted Korean dialect supervision synthetic data can recover, and released two five-region dialect models on Hugging Face. Recovery split sharply by axis, and on sentences we wrote ourselves the ranking flipped."
 excerpt: "Korean dialect data is not missing, it is unusable. We trained one model on the restricted corpus and one on zero characters of it, and found that recovery depends entirely on which ability you measure."
 date: 2026-09-10

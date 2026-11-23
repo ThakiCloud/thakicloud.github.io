@@ -1,7 +1,7 @@
 ---
-title: "Automating PhD-Grade Research with the STORM Method: A 4-Step Knowledge Curation Workflow"
+title: "STORM: Automating Research With Knowledge Curation"
 excerpt: "Stanford's OVAL Lab built STORM, an LLM knowledge-curation system that asks questions, investigates from multiple perspectives, drafts an outline, and produces a cited report. This post walks through porting that method into a 4-prompt workflow and frames it from ThakiCloud's multi-agent knowledge-work perspective."
-seo_title: "Stanford STORM Research Automation Workflow Analysis - Thaki Cloud"
+seo_title: "STORM: Automating Research With Knowledge Curation"
 seo_description: "How to implement the STORM (NAACL 2024) knowledge-curation method as a 4-step prompt workflow, and how it applies to a multi-agent research pipeline"
 date: 2026-06-21
 last_modified_at: 2026-06-21

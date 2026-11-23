@@ -1,7 +1,7 @@
 ---
 title: "The Day $2 Trillion and 94 Pages Hit the Market at the Same Time"
 excerpt: "Anthropic's IPO filing put a 14x growth profitability story and a 94-page warning that AI could refuse to shut down into one document. The day safety was elevated from an internal issue to an investor disclosure duty, the enterprise question moved from 'which model' to 'on which foundation'."
-seo_title: "Anthropic IPO: The Day a $2 Trillion Target Met 94 Pages of Risk Disclosure"
+seo_title: "The Day $2 Trillion and 94 Pages Hit the Market at the Same Time"
 seo_description: "14x revenue growth, a first operating profit, and a 94-page warning that AI could refuse to shut down. An analysis of how the elevation of safety to an investor disclosure duty is reshaping the enterprise agent execution foundation."
 date: 2026-10-27
 last_modified_at: 2026-10-27

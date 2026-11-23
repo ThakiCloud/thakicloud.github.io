@@ -1,7 +1,7 @@
 ---
-title: "The $0.75 'fast' model beat the premium tier. The week the tier order was rewritten"
+title: "The Fast Model That Beat the Premium Tier"
 excerpt: "Reports that Google's Gemini 3.8 Flash, at an introductory price of $0.75 per million input tokens, outperformed premium models on coding. The same week, Meta's Muse Spark 1.3 reached GPT-5.6 Sol level, and xAI confirmed a September 11 launch for Grok 4.7. When the ranking changes weekly, the answer to 'which model to use' moves from selection to routing."
-seo_title: "Model rankings decay weekly: from selection to routing | ThakiCloud"
+seo_title: "The Fast Model That Beat the Premium Tier"
 seo_description: "Gemini 3.8 Flash beat Opus on coding, and Muse Spark 1.3 matched GPT-5.6 Sol. The 2.1 trillion parameter Grok 4.7 is set to launch on September 11. Why premium is no longer premium, and why this week's news is an operations problem."
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/llmops/flash-beats-premium-tier-order-rewritten/

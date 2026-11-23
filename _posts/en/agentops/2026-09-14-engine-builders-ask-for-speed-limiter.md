@@ -1,7 +1,7 @@
 ---
 title: "The Day the Engine Builders Asked for a Speed Limiter"
 excerpt: "Nadella said speed control should be a design goal, and Trump rejected the development limit. The frontier labs chose the brake. The state chose the accelerator. The unit of speed control is moving to the floor where enterprises deploy agents."
-seo_title: "The Day the Engine Builders Asked for a Speed Limiter: The Subject of Speed Is Changing - ThakiCloud"
+seo_title: "The Day the Engine Builders Asked for a Speed Limiter"
 seo_description: "Nadella's speed-control design goal, Anthropic's slowdown proposal backed by Altman and Musk, the Big 3 safety-standards body talks, and Trump's rejection of a development limit. As the unit of speed decisions moves to enterprises, this post analyzes why agent governance becomes an operating condition."
 date: 2026-09-14
 last_modified_at: 2026-09-14

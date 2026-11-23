@@ -1,7 +1,7 @@
 ---
 title: "Plane 쿠버네티스 운영 완전 가이드 - OrbStack부터 Production까지"
 excerpt: "Plane을 macOS OrbStack에서 테스트하고 실제 쿠버네티스 운영 환경으로 배포하는 완전 가이드. Helm 차트, 모니터링, CI/CD, 보안 설정까지 엔터프라이즈급 운영 노하우를 담았습니다."
-seo_title: "Plane 쿠버네티스 운영 완전 가이드 - OrbStack Production 배포 - Thaki Cloud"
+seo_title: "Plane 쿠버네티스 운영 완전 가이드 - OrbStack부터 Production까지"
 seo_description: "Plane 쿠버네티스 배포 가이드. macOS OrbStack 테스트부터 AWS EKS GCP GKE 운영까지. Helm Monitoring CI/CD 보안 설정 완전 정복"
 date: 2025-07-01
 last_modified_at: 2025-07-01

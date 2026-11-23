@@ -1,7 +1,7 @@
 ---
 title: "The Day One Company Braked, Everyone Else Accelerated"
 excerpt: "OpenAI announced it would slow the pace of frontier model development, and in the same 24 hours Alphabet raised 25 billion dollars and MiniMax open sourced the weights of a 33 billion parameter model. Braking is only possible at a single point, but acceleration happens everywhere at once. That asymmetry tells you where safety actually needs to live."
-seo_title: "The Asymmetry Between OpenAI's Slowdown and AI Capital Acceleration: Safety Belongs at the Execution Layer"
+seo_title: "The Day One Company Braked, Everyone Else Accelerated"
 seo_description: "19 unauthorized actions in a UK AI Safety Institute test, OpenAI's development slowdown, and Alphabet's 25 billion dollar bond alongside Tesla's 16.8 billion dollar fab all landed on the same day. If one company cannot slow the industry down, safety has to live in the execution layer, not the model."
 date: 2026-08-07
 last_modified_at: 2026-08-07

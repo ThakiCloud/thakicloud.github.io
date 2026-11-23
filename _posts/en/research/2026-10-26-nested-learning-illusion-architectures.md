@@ -1,7 +1,7 @@
 ---
 title: "Nested Learning: The Essence of an Architecture Is Its Update Frequency"
 excerpt: "Google Research's Nested Learning paper (NeurIPS 2025) argues that the essence of a deep learning architecture is not attention or recurrence but 'update frequency'. Its proof-of-concept, HOPE, fuses Self-Modifying Titans with a continuum memory system into an attention-free model that learns at test time and incorporates new knowledge without eroding what it already knows."
-seo_title: "Nested Learning, a new paradigm where update frequency is the essence of architecture"
+seo_title: "Nested Learning: The Essence of an Architecture Is Its Update Frequency"
 seo_description: "An analysis of Google Research's Nested Learning paper (arXiv 2512.24695, NeurIPS 2025): the claim that transformers are linear layers running at different update frequencies, the HOPE architecture (Self-Modifying Titans + Continuum Memory System), and what it means for agent continual learning."
 date: 2026-10-26
 last_modified_at: 2026-10-26

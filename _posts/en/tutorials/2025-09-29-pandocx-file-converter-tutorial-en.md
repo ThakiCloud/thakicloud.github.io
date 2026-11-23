@@ -1,7 +1,7 @@
 ---
-title: "PandocX File Converter Complete Guide: Convert Any Document Format with Ease"
+title: "PandocX: A File Converter Built on Pandoc"
 excerpt: "PandocX is a powerful file conversion tool based on Pandoc. It enables easy and fast conversion between various document formats including Markdown, HTML, PDF, Word, and more."
-seo_title: "PandocX File Converter Tutorial - Complete Document Format Conversion Guide"
+seo_title: "PandocX: A File Converter Built on Pandoc"
 seo_description: "Complete guide to file conversion using PandocX. Learn how to convert between Markdown, HTML, PDF, Word and other document formats with detailed examples and best practices."
 date: 2025-09-29
 tags:

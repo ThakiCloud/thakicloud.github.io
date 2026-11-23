@@ -1,7 +1,7 @@
 ---
-title: "Agno ReasoningTools Complete Analysis - The Core Tool Revolutionizing AI Agent Thinking Capabilities"
+title: "Agno ReasoningTools: Reasoning for AI Agents"
 excerpt: "A detailed analysis of ReasoningTools in the Agno framework and how to leverage reasoning in RAG systems. From Chain-of-Thought to Agentic RAG, practical techniques for enhancing AI agent thinking capabilities."
-seo_title: "Agno ReasoningTools Complete Analysis Guide - Thaki Cloud"
+seo_title: "Agno ReasoningTools: Reasoning for AI Agents"
 seo_description: "In-depth analysis of Agno ReasoningTools structure, operating principles, and usage in RAG systems. Chain-of-Thought, think tool, Agentic RAG implementation methods with practical example code."
 date: 2025-06-28
 tags: 

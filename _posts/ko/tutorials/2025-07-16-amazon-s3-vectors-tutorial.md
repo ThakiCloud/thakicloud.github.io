@@ -1,7 +1,7 @@
 ---
-title: "Amazon S3 Vectors로 RAG 애플리케이션 구축하기: 벡터 스토리지부터 검색까지"
+title: "Amazon S3 Vectors로 만드는 RAG 애플리케이션"
 excerpt: "AWS의 새로운 S3 Vectors를 활용하여 비용 효율적인 RAG 애플리케이션을 구축하는 완전 가이드. 실제 코드 예제와 최적화 팁 포함"
-seo_title: "Amazon S3 Vectors RAG 애플리케이션 구축 완전 가이드 - Thaki Cloud"
+seo_title: "Amazon S3 Vectors로 만드는 RAG 애플리케이션"
 seo_description: "AWS S3 Vectors를 활용한 RAG 시스템 구축. 벡터 임베딩 생성부터 의미적 검색까지 실무 중심 튜토리얼"
 date: 2025-07-16
 last_modified_at: 2025-07-16

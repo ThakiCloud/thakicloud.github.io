@@ -1,7 +1,7 @@
 ---
-title: "Dual-Pool Token-Budget Routing: vLLM 추론 GPU 시간 31~42% 절감하는 이원화 스케줄링"
+title: "Dual-Pool Token-Budget Routing: vLLM GPU 시간 절감"
 excerpt: "짧은 응답 요청이 긴 응답 요청에 밀려 기다리는 HoL 블로킹은 GPU 시간을 낭비하는 조용한 적입니다. 요청을 short-context 풀과 long-context 풀로 나눠 라우팅하는 Dual-Pool Token-Budget Routing은 arXiv 2604.08075에서 GPU 시간 31~42% 절감, P99 TTFT 6% 개선을 측정했습니다. Kueue LocalQueue와 연동해 이 기법을 Kubernetes 위에서 구현하는 방법을 단계별로 정리합니다."
-seo_title: "Dual-Pool Token-Budget Routing: vLLM GPU 시간 31~42% 절감 | Thaki Cloud"
+seo_title: "Dual-Pool Token-Budget Routing: vLLM GPU 시간 절감"
 seo_description: "vLLM 추론 요청을 short-context 풀과 long-context 풀로 이원화해 HoL 블로킹을 제거하고 GPU 시간 31~42%를 절감하는 Dual-Pool Token-Budget Routing 기법과 Kubernetes Kueue LocalQueue 연동 구현을 설명합니다."
 date: 2026-07-01
 last_modified_at: 2026-07-01

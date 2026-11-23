@@ -1,5 +1,5 @@
 ---
-title: "Intelligence That Runs at Home: The Personal AI Computer and the Economics of On-Prem Serving"
+title: "Intelligence at Home: The Economics of On-Prem Serving"
 excerpt: "Starting from the Personal AI Computer build guides shared by tom_doerr, which reach up to 384GB of VRAM, we work out through calculation how VRAM decides which models you can actually run, and lay out what it takes to scale that single home machine into organization-grade on-prem serving from ThakiCloud's ai-platform perspective."
 tags:
   - on-premise

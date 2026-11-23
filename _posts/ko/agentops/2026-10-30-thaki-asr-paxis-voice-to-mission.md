@@ -1,6 +1,6 @@
 ---
 title: "음성을 이해하는 AI에서 업무를 수행하는 AI로"
-seo_title: "Thaki 한국어 ASR과 Paxis Agent Platform - 음성인식에서 업무 실행까지 | ThakiCloud"
+seo_title: "음성을 이해하는 AI에서 업무를 수행하는 AI로"
 seo_description: "Qwen3-ASR-1.7B를 기반으로 한국어 상담과 숫자 인식을 직접 학습한 ASR을 독립 평가로 검증했습니다. 상담 음성 인식 개선과 사전 정의한 5개 출시 게이트 통과 결과, 2026-11-04 릴리스 감사로 좁혀진 해석 범위와, 이 모델을 Paxis의 Perception 계층으로 잇는 Voice-to-Mission 아키텍처를 함께 살펴봅니다."
 excerpt: "음성을 텍스트로 바꾼 다음 무엇을 하는지가 진짜 질문입니다. 한국어 ASR을 직접 학습해 검증하고, Paxis가 그 결과를 근거를 남긴 업무 실행으로 잇는 아키텍처를 소개합니다."
 date: 2026-10-30

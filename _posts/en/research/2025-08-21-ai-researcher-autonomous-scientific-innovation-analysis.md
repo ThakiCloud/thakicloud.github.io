@@ -1,7 +1,7 @@
 ---
 title: "AI-Researcher: Analysis of a Fully Autonomous Scientific Research System"
 excerpt: "The AI-Researcher project from HKUDS implements a fully autonomous scientific research pipeline, from literature review to paper submission. This analysis covers system architecture, core innovations, and applicability in research environments."
-seo_title: "AI-Researcher Autonomous Scientific Research System Analysis - Thaki Cloud"
+seo_title: "AI-Researcher: Analysis of a Fully Autonomous Scientific Research System"
 seo_description: "A deep look at the AI-Researcher project architecture, key capabilities, and what fully autonomous scientific research could mean for the research community."
 date: 2025-08-21
 last_modified_at: 2025-08-21

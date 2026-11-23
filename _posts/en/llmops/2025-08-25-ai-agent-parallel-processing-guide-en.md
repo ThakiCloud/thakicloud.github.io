@@ -1,7 +1,7 @@
 ---
-title: "AI Agent Parallel Processing: Workflow Optimization with LangGraph and CrewAI"
+title: "Parallel AI Agents with LangGraph and CrewAI"
 excerpt: "Learn how to efficiently perform complex tasks through parallel processing of AI Agents. Discover practical guides and performance optimization techniques using LangGraph and CrewAI."
-seo_title: "AI Agent Parallel Processing Complete Guide: LangGraph CrewAI Workflow Optimization - Thaki Cloud"
+seo_title: "Parallel AI Agents with LangGraph and CrewAI"
 seo_description: "Efficiently perform complex tasks with AI Agent parallel processing. Practical guides, performance optimization techniques, and real-world project applications using LangGraph and CrewAI."
 date: 2025-08-25
 last_modified_at: 2025-08-25

@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to ByteDance Dolphin: Advanced Document Image Parsing with Heterogeneous Anchor Prompting"
+title: "ByteDance Dolphin: Document Parsing with Anchor Prompting"
 excerpt: "Learn how to use ByteDance Dolphin, a state-of-the-art multimodal document parsing model that combines layout analysis with element-specific parsing through innovative heterogeneous anchor prompting techniques."
-seo_title: "ByteDance Dolphin Tutorial: Document Image Parsing Guide - Thaki Cloud"
+seo_title: "ByteDance Dolphin: Document Parsing with Anchor Prompting"
 seo_description: "Comprehensive tutorial on ByteDance Dolphin document parsing model. Learn installation, usage, and implementation of page-level and element-level parsing with practical examples."
 date: 2025-09-24
 tags:

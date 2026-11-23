@@ -1,7 +1,7 @@
 ---
 title: "Paxis: Run a Full Team of AI Employees Without Writing Code"
 excerpt: "Just as traditional clouds treat servers as first-class resources, Paxis treats agent skills, tools, policies, and audit logs as first-class resources. 849 skills loaded automatically, a CostRouter that picks the right model per task, and capabilities that sharpen with use. We share a working PoC with real code."
-seo_title: "Paxis Agent-Native Cloud: Governance, CostRouter, and Evolving Skills - Thaki Cloud"
+seo_title: "Paxis: Run a Full Team of AI Employees Without Writing Code"
 seo_description: "ThakiCloud Paxis is an Agent-Native Cloud for running autonomous AI agents safely. It features L0-L3 autonomy governance, multi-LLM CostRouter cost optimization, a Git-based HKE knowledge engine, and an 849-skill harness. Explained with real code."
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/praxis-agent-native-cloud/"

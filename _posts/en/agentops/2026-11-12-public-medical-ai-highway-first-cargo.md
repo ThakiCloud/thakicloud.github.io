@@ -1,7 +1,7 @@
 ---
 title: "The First Cargo on the Medical AI Highway Is the Referral Letter"
 excerpt: "The first stretch of the public medical AI highway has opened, cutting referral letter writing time from 10 minutes to 1 minute. The highway is a distribution network, not a model, and the first cargo is a document. What the exits of this highway require is agent governance."
-seo_title: "Analysis of the Public Medical AI Highway's First Opening | The First Cargo Is the Referral Letter, and the Highway Is a Distribution Network"
+seo_title: "The First Cargo on the Medical AI Highway Is the Referral Letter"
 seo_description: "The public medical AI highway opens from 8 hospitals in 2027 to 72 hospitals by 2029. From 10 minutes to 1 minute for referral letters: why the first cargo is a document agent, the agent governance agenda for healthcare and finance, and the sovereign execution base."
 date: 2026-11-12
 last_modified_at: 2026-11-12

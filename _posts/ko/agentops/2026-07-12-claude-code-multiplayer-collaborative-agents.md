@@ -1,6 +1,6 @@
 ---
-title: "코딩 에이전트가 서로 대화하기 시작할 때: 멀티플레이어 Claude Code와 협업 에이전트의 설계"
-seo_title: "멀티플레이어 Claude Code - 협업 코딩 에이전트 설계 분석 - Thaki Cloud"
+title: "멀티플레이어 Claude Code: 코딩 에이전트가 대화할 때"
+seo_title: "멀티플레이어 Claude Code: 코딩 에이전트가 대화할 때"
 seo_description: "여러 사람과 여러 Claude가 같은 터미널에서 서로 대화하는 멀티플레이어 Claude Code를 계기로, 협업 코딩 에이전트의 설계 과제를 분해하고 멀티에이전트를 일급 리소스로 다루는 ThakiCloud Paxis 관점에서 검증합니다."
 excerpt: "한 사람이 한 에이전트를 쓰던 구조에서, 여러 사람과 여러 에이전트가 같은 작업 공간에서 서로 대화하는 구조로 넘어가고 있습니다. 멀티플레이어 Claude Code를 계기로 협업 에이전트의 동시성·충돌·신뢰 경계 문제를 짚고 ThakiCloud 운영 관점에서 검증합니다."
 date: 2026-07-12

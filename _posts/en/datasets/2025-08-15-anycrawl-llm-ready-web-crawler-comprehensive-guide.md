@@ -1,7 +1,7 @@
 ---
-title: "AnyCrawl: A Comprehensive Guide to the LLM-Ready Web Crawler - A New Standard for AI Data Collection"
+title: "AnyCrawl: An LLM-Ready Web Crawler"
 excerpt: "Master how to transform websites into LLM-ready data and efficiently collect Google/Bing SERP results with AnyCrawl, built on Node.js/TypeScript."
-seo_title: "AnyCrawl LLM Web Crawler Comprehensive Guide - AI Data Collection Tool - Thaki Cloud"
+seo_title: "AnyCrawl: An LLM-Ready Web Crawler"
 seo_description: "How to implement web scraping, SERP crawling, and multithreaded data collection with Any4AI's AnyCrawl. Detailed guide from Docker installation to real-world usage."
 date: 2025-08-15
 last_modified_at: 2025-08-15

@@ -1,6 +1,6 @@
 ---
-title: "The Twin Registry: 셀프에볼빙 2,200 스킬 레지스트리의 twin(근접 중복 스킬) 축적 법칙, 4채널 라우팅 오류 귀속, merge vs rewrite 중복 제거 dividend를 분석으로 세운 논문"
-seo_title: "The Twin Registry: twin 밀도 법칙, 4채널 오류 귀속, merge vs rewrite 중복 제거 dividend, aging in place, 2,200 스킬 셀프에볼빙 에이전트 하네스 - ThakiCloud"
+title: "Twin Registry: 근접 중복 스킬이 라우터를 늙게 한다"
+seo_title: "Twin Registry: 근접 중복 스킬이 라우터를 늙게 한다"
 seo_description: "나이트 LLM 커레이터가 매일 밤 설명을 다시 쓰고 빠지길 합성하는 셀프에볼빙 2,200 스킬 레지스트리에서 twin(근접 중복)이 쌓이면 라우팅 top-1은 레지스트리가 커지지 않아도 늙습니다. ThakiCloud가 세운 이 논문은 설명 공간 밀도를 레지스트리 위생의 제3 축으로 올려 breakpoint 후퇴 법칙, 4채널 오류 귀속(수집 실패, 양성 twin, 악성 충돌, 커버리지 갭), 고정 카드날리티에서의 merge vs rewrite 손익분기 밀도와 기능적 중복 기반 팔 지배성 규칙을 분석으로 제시합니다. 3프로토콜 실측 프로그램은 반증 기준으로 사전 등록되어 있고 모든 값은 기록된 앵커, 1차 산술, 라벨 붙인 모델 예측입니다."
 excerpt: "레지스트리가 커지지 않아도 라우팅 top-1은 늙습니다. twin 축적 법칙, 4채널 오류 귀속, merge vs rewrite 중복 제거 dividend를 분석으로 세운 ThakiCloud의 논문 The Twin Registry를 소개합니다. 분석 논문이라 모든 값은 실측이 아닙니다."
 date: 2026-10-29

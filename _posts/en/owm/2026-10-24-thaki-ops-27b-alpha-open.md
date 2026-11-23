@@ -1,7 +1,7 @@
 ---
-title: "Releasing Thaki-Ops-27B v0.1-alpha, an Experimental Model for Read-Only Kubernetes Incident Investigation"
+title: "Thaki-Ops-27B: A Read-Only Model for Kubernetes Incidents"
 excerpt: "Can an incident-investigation agent leave the cluster alone, stop repeating the same query, and say it does not know when it does not? We are releasing a LoRA adapter for Qwen3.8-27B as an experimental alpha. The checks it failed against our own release gate are written down here too."
-seo_title: "Thaki-Ops-27B v0.1-alpha: A LoRA Adapter for Kubernetes Incident Diagnosis - ThakiCloud"
+seo_title: "Thaki-Ops-27B: A Read-Only Model for Kubernetes Incidents"
 seo_description: "ThakiCloud released Thaki-Ops-27B v0.1-alpha, a LoRA adapter for Qwen3.8-27B that tunes tool-calling agents such as HolmesGPT to investigate Kubernetes incidents read-only. Covers what improved, what fell short of our release gate, intended use and limitations."
 date: 2026-10-24
 last_modified_at: 2026-10-24

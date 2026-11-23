@@ -1,7 +1,7 @@
 ---
-title: "Google Gemini 4 Carbon: SOTA Cybersecurity and Long-Horizon at Half the Intro Price"
+title: "Gemini 4 Carbon: Cybersecurity and Long-Horizon at Half Price"
 excerpt: "Google unveiled Gemini 4 Carbon on October 28. First on the Artificial Analysis Intelligence Index v5.0 with 59 points, 88.2% on SEC-bench Pro for vulnerability discovery, sustained agentic workflows over days, an intro $2/$10 (per 1M tokens) price structure, and a phased rollout plan."
-seo_title: "Gemini 4 Carbon Released: Cybersecurity Benchmarks and Agent Execution Economics | ThakiCloud"
+seo_title: "Gemini 4 Carbon: Cybersecurity and Long-Horizon at Half Price"
 seo_description: "Gemini 4 Carbon dissected: AA Intelligence Index v5.0 59 points at #1, SEC-bench Pro 88.2%, ExploitGym 54.8%, CWE-bench 71.0%, days-long long-horizon agents, Fairwind Program phased release, intro $2/$10 then $4/$20. Per the official Google blog."
 date: 2026-10-30
 last_modified_at: 2026-10-30

@@ -1,7 +1,7 @@
 ---
-title: "Complete RAG System Tutorial: Building Production-Ready AI with ArXiv Paper Curator"
+title: "Building a Production RAG System with ArXiv Paper Curator"
 excerpt: "Learn to build a production-ready RAG (Retrieval-Augmented Generation) system from scratch using the ArXiv Paper Curator project. This comprehensive tutorial covers data ingestion, hybrid search, embeddings, and LLM integration."
-seo_title: "RAG System Tutorial: Build Production AI with ArXiv Papers - Thaki Cloud"
+seo_title: "Building a Production RAG System with ArXiv Paper Curator"
 seo_description: "Step-by-step guide to building a complete RAG system using ArXiv Paper Curator. Learn data ingestion, OpenSearch, embeddings, and LLM integration for production AI applications."
 date: 2025-09-22
 tags:

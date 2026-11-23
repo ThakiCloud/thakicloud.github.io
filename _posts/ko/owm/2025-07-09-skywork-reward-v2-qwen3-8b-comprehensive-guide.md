@@ -1,7 +1,7 @@
 ---
-title: "Skywork-Reward-V2-Qwen3-8B: 차세대 리워드 모델로 보는 AI 정렬의 새로운 기준"
+title: "Skywork-Reward-V2-Qwen3-8B: 리워드 모델의 새 기준"
 excerpt: "Skywork-Reward-V2-Qwen3-8B는 Human-AI 협력 데이터 큐레이션을 통해 훈련된 8B 파라미터 리워드 모델로, 7개 주요 벤치마크에서 SOTA 성능을 달성했습니다."
-seo_title: "Skywork-Reward-V2-Qwen3-8B 리워드 모델 완벽 가이드 - Thaki Cloud"
+seo_title: "Skywork-Reward-V2-Qwen3-8B: 리워드 모델의 새 기준"
 seo_description: "Skywork-Reward-V2-Qwen3-8B 모델의 기술적 특징, 성능 벤치마크, 활용 방안을 통해 AI 정렬 기술의 최신 동향을 살펴봅니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09

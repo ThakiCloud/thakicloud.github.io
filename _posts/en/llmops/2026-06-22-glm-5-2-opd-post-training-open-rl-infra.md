@@ -1,7 +1,7 @@
 ---
 title: "OPD Post-Training: How GLM-5.2 Merged 10+ Expert Models in Two Days"
 excerpt: "Building GLM-5.2, Z.ai open-sourced its entire RL post-training infrastructure. We analyze OPD post-training, which merged more than ten expert models in about two days, and what an open RL stack means for on-premise training from a ThakiCloud K8s perspective."
-seo_title: "GLM-5.2 OPD Post-Training and Open-Source RL Infrastructure - Thaki Cloud"
+seo_title: "OPD Post-Training: How GLM-5.2 Merged 10+ Expert Models in Two Days"
 seo_description: "GLM-5.2 parallel OPD post-training, merging 10+ expert models, slime open-source RL infrastructure, and K8s-based on-premise RL training analysis"
 date: 2026-06-22
 last_modified_at: 2026-06-22

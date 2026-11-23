@@ -1,5 +1,5 @@
 ---
-title: "vLLM v0.25.0: Model Runner V2 Becomes the Default and PagedAttention Is Gone"
+title: "vLLM v0.25.0: Model Runner V2 Becomes the Default"
 excerpt: "vLLM v0.25.0 landed with 558 commits from 232 contributors. Two changes define this release: Model Runner V2 is now the default execution path for every dense model, and the legacy PagedAttention implementation that first made vLLM famous has been removed from the codebase. Alongside that, the release adds efficient video sampling (EVS), dynamic speculative decoding, and Mamba hybrid prefix caching. Here is what changed and what to prepare for from the perspective of a team running serving infrastructure."
 tags:
   - dev

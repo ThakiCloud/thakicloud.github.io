@@ -1,7 +1,7 @@
 ---
 title: "Illa Helper - 몰입형 언어 학습 브라우저 확장 프로그램 완전 가이드"
 excerpt: "AI 번역과 발음 기능을 갖춘 Illa Helper로 웹 페이지에서 자연스럽게 언어를 학습하는 방법을 상세히 알아보세요. 설치부터 고급 설정까지 단계별로 설명합니다."
-seo_title: "Illa Helper 언어 학습 확장 프로그램 완전 가이드 - 몰입형 학습의 혁신 - Thaki Cloud"
+seo_title: "Illa Helper - 몰입형 언어 학습 브라우저 확장 프로그램 완전 가이드"
 seo_description: "AI 번역과 발음 기능으로 웹 브라우징하며 자연스럽게 언어를 학습하는 Illa Helper 확장 프로그램의 설치, 설정, 활용법을 상세히 알아보세요. OpenAI API 연동부터 스마트 번역까지."
 date: 2025-08-08
 last_modified_at: 2025-08-08

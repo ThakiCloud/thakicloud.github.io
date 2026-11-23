@@ -1,6 +1,6 @@
 ---
-title: "From $1.2M a Month to $100K: Redesigning the Inference Cost of an Agentic Product"
-seo_title: "Cutting Agentic Product Inference Cost 12x: Complexity-Based Model Routing and Open-Weight Offload | ThakiCloud"
+title: "Tiered Routing: Redesigning Agent Inference Cost"
+seo_title: "Tiered Routing: Redesigning Agent Inference Cost"
 seo_description: "Polsia, the AI startup that reached a $250M valuation with zero employees, saw its Claude inference bill climb to $1.2M a month, then cut it to roughly $100K in two months. We break down the shift from routing every agent action to a frontier model, to a complexity-based router that offloads the standardizable long tail to open-weight models and reserves frontier models for hard reasoning, and where that same pattern maps onto ThakiCloud's Metis serving and Praxis agent runtime."
 excerpt: "The cost of an agentic product is set by routing design, not model price. Here is how $1.2M a month became $100K."
 date: 2026-08-03

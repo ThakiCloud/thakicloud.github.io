@@ -1,6 +1,6 @@
 ---
-title: "The Whole Process of LLM Reinforcement Learning, on One Map: Cameron Wolfe's Complete Guide"
-seo_title: "LLM RL Roadmap from RLHF to GRPO++, Cameron Wolfe Guide, Thaki Cloud"
+title: "LLM Reinforcement Learning on One Map: Cameron Wolfe's Guide"
+seo_title: "LLM Reinforcement Learning on One Map: Cameron Wolfe's Guide"
 seo_description: "Netflix Research's Cameron Wolfe published a complete guide (2026-08-24) that organizes LLM reinforcement learning from first principles to the frontier. MDP vs bandit formulation, RLHF vs RLVR, PPO/GAE, why GRPO is critic-free, CISPO/TIS/DAPO variants, online vs offline, and scaling laws - plus how to use it as a practical reference for Maxis fine-tuning docs."
 excerpt: "A single guide that lays out the LLM reinforcement learning algorithm lineage from RLHF to GRPO++ and the frontier topics on one map. Token-level MDP vs sequence-level bandit, why critic-free GRPO is designed that way, and DAPO's loss-aggregation bias correction are all visible in one map."
 date: 2026-08-26

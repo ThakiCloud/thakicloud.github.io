@@ -1,7 +1,7 @@
 ---
-title: "LangGPT: Master Structured Prompt Engineering Framework for Better AI Interactions"
+title: "LangGPT: A Structured Framework for Prompt Engineering"
 excerpt: "Learn how to create high-quality, reusable prompts using LangGPT's structured framework. Transform chaotic prompt engineering into systematic methodology with templates, examples, and best practices."
-seo_title: "LangGPT Tutorial: Structured Prompt Engineering Framework Guide - Thaki Cloud"
+seo_title: "LangGPT: A Structured Framework for Prompt Engineering"
 seo_description: "Complete LangGPT tutorial covering structured prompt design, role-based templates, and advanced prompt engineering techniques for ChatGPT, Claude, and other LLMs."
 date: 2025-10-12
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Kimi K2 로컬 실행 완전 가이드 - 1T 파라미터 MoE 모델 실행하기"
 excerpt: "Moonshot AI의 Kimi K2를 로컬에서 실행하는 방법을 단계별로 설명합니다. Unsloth 동적 양자화와 llama.cpp를 활용한 효율적인 실행 방법을 다룹니다."
-seo_title: "Kimi K2 로컬 실행 가이드 - 1T 파라미터 MoE 모델 설치 및 실행 - Thaki Cloud"
+seo_title: "Kimi K2 로컬 실행 완전 가이드 - 1T 파라미터 MoE 모델 실행하기"
 seo_description: "Moonshot AI Kimi K2 모델을 로컬 환경에서 실행하는 완전한 가이드. Unsloth 양자화 버전과 llama.cpp 활용법, GPU 메모리 최적화 방법 포함."
 date: 2025-07-17
 last_modified_at: 2025-07-17

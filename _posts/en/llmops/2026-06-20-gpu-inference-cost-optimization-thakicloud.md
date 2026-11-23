@@ -1,7 +1,7 @@
 ---
-title: "The Real Cost of a Single GPU: How ThakiCloud Optimizes AI Inference Spend"
+title: "The Real Cost of One GPU: Optimizing AI Inference Spend"
 excerpt: "GPU depreciation formulas, Kueue gang scheduling, vLLM scale-to-zero, and model-tier routing -- all in one place. A code-and-math walkthrough of how ThakiCloud cuts inference costs internally, and how customers pull the same levers on the platform."
-seo_title: "AI Inference Cost Optimization in Practice: GPU Economics, Kueue, vLLM Scale-to-Zero - Thaki Cloud"
+seo_title: "The Real Cost of One GPU: Optimizing AI Inference Spend"
 seo_description: "ThakiCloud's practical guide to AI inference cost optimization. GPU hourly cost formulas, OpEx breakdown, Kueue+KAI gang scheduling, vLLM+KEDA scale-to-zero, model-tier routing, and daily cost auditing -- explained with code and math."
 date: 2026-06-20
 last_modified_at: 2026-06-20

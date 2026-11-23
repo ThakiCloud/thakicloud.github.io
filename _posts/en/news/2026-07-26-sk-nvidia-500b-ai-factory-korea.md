@@ -1,7 +1,7 @@
 ---
-title: "Even When the 2-Gigawatt AI Factory Switches On, Your GPU Queue Will Not Get Shorter"
+title: "The AI Factory Won't Shorten Your GPU Queue"
 excerpt: "SK Group and NVIDIA announced a partnership valued at more than 500 billion dollars, and SK Telecom said it will run an AI factory of up to 2 gigawatts starting in 2027. Here is what actually changes when that much accelerated compute lands in one country, and what does not."
-seo_title: "SK Group and NVIDIA's 500 Billion Dollar Partnership, the 2GW AI Factory, and the Operating Layer Enterprises Must Prepare"
+seo_title: "The AI Factory Won't Shorten Your GPU Queue"
 seo_description: "A factual reading of SK Telecom's 2-gigawatt AI factory, the NVIDIA DSX platform, and the SK hynix HBM4 co-development deal, followed by an analysis of where the bottleneck moves once supply grows and what ThakiCloud's ai-platform and Paxis do at that exact point."
 date: 2026-07-26
 last_modified_at: 2026-07-26

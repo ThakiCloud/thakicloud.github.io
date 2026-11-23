@@ -1,6 +1,6 @@
 ---
-title: "Is Curiosity a Computable Signal? How Schmidhuber Formalized Interestingness as an Inductive Heuristic for Future Compression Progress at ICML 2026"
-seo_title: "Interestingness as an Inductive Heuristic for Future Compression Progress: Schmidhuber ICML 2026 position paper, compression progress, curiosity formalized, Kolmogorov complexity, open-ended agents - ThakiCloud"
+title: "Is Curiosity Computable? Schmidhuber on Interestingness"
+seo_title: "Is Curiosity Computable? Schmidhuber on Interestingness"
 seo_description: "Herrmann and Schmidhuber's ICML 2026 position paper formalizes 'which task has potential for future progress' as a computable signal. What the two results say, expected future progress depending exponentially on the recency of the last breakthrough and the Algorithmic prior being quadratically more optimistic than the Length prior, and how the heuristic plugs into unattended agent-loop scheduling."
 excerpt: "A thread went viral claiming a paper answers why anything is beautiful and why jokes are funny. The paper behind it is Herrmann and Schmidhuber's ICML 2026 position paper, and its actual claim is narrower. Interestingness, the potential for future compression progress, is predictable from past progress records. Here is the formalization, the results, and the path to agent scheduling."
 date: 2026-10-29

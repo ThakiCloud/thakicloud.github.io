@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to LLM Fine-tuning with Unsloth Docker: From Setup to Production"
+title: "Fine-Tuning LLMs With Unsloth Docker"
 excerpt: "Learn how to fine-tune large language models efficiently using Unsloth's Docker container. This comprehensive tutorial covers installation, configuration, and practical examples for local LLM training."
-seo_title: "Unsloth Docker LLM Fine-tuning Tutorial - Complete Guide 2025"
+seo_title: "Fine-Tuning LLMs With Unsloth Docker"
 seo_description: "Master LLM fine-tuning with Unsloth Docker. Step-by-step tutorial covering installation, GPU setup, Jupyter Lab access, and practical training examples for efficient model customization."
 date: 2025-10-03
 tags:

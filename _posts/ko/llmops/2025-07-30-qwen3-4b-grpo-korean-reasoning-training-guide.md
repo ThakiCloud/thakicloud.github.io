@@ -1,7 +1,7 @@
 ---
-title: "Qwen3-4B GRPO 학습 완전 가이드 - 한국어 추론 데이터셋 활용 및 Colab 노트북 분석"
+title: "Qwen3-4B GRPO: 한국어 추론 학습과 Colab 분석"
 excerpt: "Qwen3-4B 모델의 GRPO(Gradient-based Reasoning Policy Optimization) 학습 과정을 상세 분석하고, 한국어 추론 데이터셋을 활용한 효과적인 모델 훈련 방법을 제공합니다."
-seo_title: "Qwen3-4B GRPO 한국어 추론 모델 훈련 가이드 - Thaki Cloud"
+seo_title: "Qwen3-4B GRPO: 한국어 추론 학습과 Colab 분석"
 seo_description: "Qwen3-4B 모델의 GRPO 학습 과정 완전 분석. Colab 노트북 해부부터 한국어 추론 데이터셋 활용법까지 실무진을 위한 상세 가이드."
 date: 2025-07-30
 last_modified_at: 2025-07-30

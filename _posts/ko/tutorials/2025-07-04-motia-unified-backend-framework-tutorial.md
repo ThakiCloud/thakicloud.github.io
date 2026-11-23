@@ -1,7 +1,7 @@
 ---
-title: "Motia 프레임워크 완벽 가이드 - 통합 백엔드 프레임워크로 API, 이벤트, AI 에이전트 구축하기"
+title: "Motia: API, 이벤트, AI 에이전트를 하나로 묶는 프레임워크"
 excerpt: "Motia 프레임워크를 활용한 이벤트 기반 워크플로우 구축 방법을 상세히 알아보고, GitHub Agent와 Gmail Manager 예시를 통해 실제 응용 사례를 분석합니다."
-seo_title: "Motia 프레임워크 완벽 가이드 - 통합 백엔드 개발 - Thaki Cloud"
+seo_title: "Motia: API, 이벤트, AI 에이전트를 하나로 묶는 프레임워크"
 seo_description: "Motia 프레임워크로 API, 이벤트, AI 에이전트를 통합 구축하는 방법을 배우고, GitHub Agent와 Gmail Manager 실제 예시를 통해 실무 적용 가이드를 제공합니다."
 date: 2025-07-04
 last_modified_at: 2025-07-04

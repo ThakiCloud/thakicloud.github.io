@@ -1,5 +1,5 @@
 ---
-title: "Remember the Decision, Not the Description: A Meta-Affiliated Study Reframes Agent Memory as a Rate-Distortion Problem"
+title: "DeMem: Remember the Decision, Not the Description"
 excerpt: "Long-running agents operate within limited memory, yet memory methods to date have organized the past using descriptive criteria such as relevance or summary quality. This paper, co-authored by a Meta AI researcher, argues that the criterion itself is wrong. The value of memory does not come from faithfully describing the past, but from keeping apart, even under a fixed budget, situations that call for different actions. The authors formalize this as a decision-centric rate-distortion problem and propose a learner called DeMem that consistently outperforms existing methods at the same memory budget."
 tags:
   - agent-memory

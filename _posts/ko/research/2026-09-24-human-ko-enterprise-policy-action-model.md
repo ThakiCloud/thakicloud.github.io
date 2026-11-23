@@ -1,6 +1,6 @@
 ---
-title: "회사 규정 안에서 다음 행동을 고르는 한국어 모델, Human-KO-Enterprise를 공개합니다"
-seo_title: "Human-KO-Enterprise: 회사 정책을 읽고 실행·되묻기·확인·이관·거절을 고르는 한국어 오픈 가중치 모델 - ThakiCloud"
+title: "Human-KO-Enterprise: 회사 규정 안에서 행동 고르기"
+seo_title: "Human-KO-Enterprise: 회사 규정 안에서 행동 고르기"
 seo_description: "ThakiCloud가 회사 정책과 고객 요청을 함께 읽고 정책에 맞는 행동 하나를 JSON으로 고르는 한국어 27B 오픈 가중치 모델 두 개와 2,414문항 벤치를 Apache-2.0으로 공개했습니다. 기업이 이 모델을 어디에 어떻게 붙이면 되는지 시나리오와 도입 경로 중심으로 정리했습니다."
 excerpt: "기업 에이전트의 어려운 문제는 답을 아는 것이 아니라 회사 규정 안에서 지금 무엇을 해야 하는지 고르는 것입니다. 그 선택 하나만 잘하도록 만든 한국어 모델 두 개와 벤치를 공개했습니다."
 date: 2026-09-24

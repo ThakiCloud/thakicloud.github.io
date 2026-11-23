@@ -1,6 +1,6 @@
 ---
-title: "A Motor Current Encoder Trained Without Labels: It Beat the Baselines on Reconstruction, but Still Recognizes the Device"
-seo_title: "Self-Supervised (SSL) Motor Current Encoder Validation - Reconstruction Wins and the Device Shortcut | ThakiCloud"
+title: "Label-Free Motor Current Encoder: It Memorizes the Machine"
+seo_title: "Label-Free Motor Current Encoder: It Memorizes the Machine"
 seo_description: "We trained a label-free self-supervised encoder on 1.1 million industrial current waveforms from AI-Hub. On devices it never saw, it reconstructed masked waveform segments better than a harmonic baseline, but all four representations we compared, including physics features, a random encoder, and MantisV2, identified the device almost perfectly, so no advantage as a fault-diagnosis representation was shown. The final within-device and cross-device evaluation found no SSL advantage either."
 excerpt: "We trained an industrial current encoder without labels. It beat the baselines at reconstructing masked waveforms, but every representation we compared recognized the device almost perfectly, so we cannot call it a better representation for fault diagnosis. The final evaluation reached the same conclusion."
 date: 2026-11-08

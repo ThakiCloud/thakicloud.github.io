@@ -1,7 +1,7 @@
 ---
-title: "PDF to Markdown Without an LLM: LiteParse, RAG Ingest Cost, and Data Sovereignty"
+title: "LiteParse: Parsing PDFs to Markdown Without an LLM"
 excerpt: "LiteParse, released by LlamaIndex, is an Apache 2.0 open-source parser that converts PDFs to markdown without an LLM. We look at the cost and data-sovereignty advantages of a model-free parser, along with its limits, from the perspective of ThakiCloud's RAG document ingest pipeline."
-seo_title: "LiteParse Model-Free PDF Parser and RAG Ingest Analysis - Thaki Cloud"
+seo_title: "LiteParse: Parsing PDFs to Markdown Without an LLM"
 seo_description: "An analysis of LlamaIndex's LiteParse, an Apache 2.0 model-free PDF parser, covering RAG document ingest cost reduction, data sovereignty, and the trade-offs of model-independent parsing."
 date: 2026-06-21
 last_modified_at: 2026-06-21

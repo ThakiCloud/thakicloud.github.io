@@ -1,7 +1,7 @@
 ---
-title: "MoE training know-how, hundreds of thousands of GPU hours in a free handbook"
+title: "A Free Handbook on Training MoE Models"
 excerpt: "18 of the 20 best open models are MoE, yet the know-how to train them stayed locked in a handful of teams. Hugging Face released 'The Ultimate MoE Training Handbook', distilled from hundreds of thousands of GPU hours of experiments, for free. Expert sizing, routers, all-to-all communication, and the silent 25x slowdown, chapter by chapter."
-seo_title: "Hugging Face releases free MoE training handbook after hundreds of thousands of GPU hours | ThakiCloud"
+seo_title: "A Free Handbook on Training MoE Models"
 seo_description: "Hugging Face published The Ultimate MoE Training Handbook. From the first MoE run on 8x 80GB GPUs to fp32 routers, load balancing, all-to-all communication, upcycling, and serving, the seven core questions and what they mean for ThakiCloud."
 date: 2026-11-06
 last_modified_at: 2026-11-06

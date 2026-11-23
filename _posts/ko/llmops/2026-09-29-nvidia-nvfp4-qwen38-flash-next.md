@@ -1,7 +1,7 @@
 ---
 title: "125B MoE를 135GB로: NVIDIA가 NVFP4로 재포장한 Qwen3.8-Flash-Next"
 excerpt: "알리바바의 Qwen3.8-Flash-Next(125B MoE, 활성 6B)가 NVIDIA NVFP4 양자화로 2.7배 축소됐습니다. 단일 DGX Spark(128GB)에서 도는 125B급 서빙. 다만 우리 B200 실측은 체크포인트가 아니라 서빙 설정이 처리량을 결정한다고 말합니다."
-seo_title: "NVIDIA NVFP4 Qwen3.8-Flash-Next: 125B MoE를 135GB로, 그리고 서빙 설정이 성능을 결정하는 이유"
+seo_title: "125B MoE를 135GB로: NVIDIA가 NVFP4로 재포장한 Qwen3.8-Flash-Next"
 seo_description: "NVFP4 양자화된 Qwen3.8-Flash-Next(125B MoE, 활성 6B)의 하이브리드 어텐션 아키텍처와 단일 GB10 서빙, 그리고 ThakiCloud의 B200 NVFP4 실측에서 확인한 서빙 설정의 영향까지 정리했습니다."
 date: 2026-09-29
 last_modified_at: 2026-09-30

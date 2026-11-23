@@ -1,5 +1,5 @@
 ---
-title: "We Deleted 423GB from GLM-5.2 Without Quantization: Measuring the Waste in BF16 Exponents"
+title: "GLM-5.2 Minus 423GB, No Quantization: Wasted BF16 Exponents"
 excerpt: "Someone claimed they shrank GLM-5.2 from 1403GB to 980GB. Not quantization, not pruning, but lossless compression that is bit-for-bit identical to the original. It was hard to believe, so we opened up 490 million weights of Qwen2.5-0.5B and measured the entropy of the BF16 exponent field ourselves. The 8 allocated bits were actually carrying only 2.64 bits of information, which means roughly 33.5 percent can be removed losslessly. This post walks through where that waste comes from, and why the savings show up not only on disk but in VRAM, using measured data."
 tags:
   - lossless-compression

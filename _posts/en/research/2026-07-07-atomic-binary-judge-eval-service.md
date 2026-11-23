@@ -1,7 +1,7 @@
 ---
-title: "An Evaluation That Trusts No Single Number: Building a Sovereign LLM-Judge Service on Binary Decomposition and Deterministic Gates"
+title: "An Evaluation That Trusts No Single Number"
 excerpt: "Using an LLM as a grader, the practice known as LLM-as-a-judge, is now the default in model development, but the evidence that piled up through 2026 shows that a scalar judge producing a single score is fragile to prompt wording and answer position, drifts toward the middle of the scale, and collapses to coin-flip reliability against adversarial inputs. On-prem multi-tenant clusters in hospitals, banks, and government agencies, where data can never leave the facility, add cost caps, latency caps, and auditability on top of that fragility. ThakiCloud AI Research introduces ABJ-Gate, an architecture that decomposes evaluation criteria into atomic binary questions and hands aggregation, verification, and scheduling entirely to code."
-seo_title: "Binary-Decomposed LLM Judges and Sovereign Eval-as-a-Service Research - Thaki Cloud"
+seo_title: "An Evaluation That Trusts No Single Number"
 seo_description: "An introduction to the ABJ-Gate paper published by ThakiCloud AI Research. It covers how to decompose evaluation criteria into atomic binary questions, let deterministic code own aggregation, calibration, and audit logging, and combine adversarial verification votes, conformal risk control, and Kueue-based per-tenant cost and latency cap scheduling to build a reproducible, auditable LLM evaluation service on on-prem multi-tenant clusters."
 date: 2026-07-07
 last_modified_at: 2026-07-07

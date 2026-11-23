@@ -1,5 +1,5 @@
 ---
-title: "Google Agent Development Kit (ADK) 완전 가이드: 차세대 AI 에이전트 개발하기"
+title: "Google ADK: AI 에이전트 개발 키트 시작하기"
 date: 2025-06-09
 tags: 
   - google-adk

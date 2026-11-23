@@ -1,7 +1,7 @@
 ---
-title: "Does a Reasoning-Effort Label Actually Cut Compute? What Qwen3-8B Showed Us"
+title: "Does a Reasoning-Effort Label Really Cut Compute?"
 excerpt: "We attached reasoning-effort control to Qwen3-8B and measured it. A soft length reward does not make the label gate compute (1.1x), but it did make the model globally more token-efficient. Here is why it fails and the hard-budget (LCPO) fix."
-seo_title: "Reasoning-Effort Label and Token Control, Measured - Qwen3-8B GRPO - Thaki Cloud"
+seo_title: "Does a Reasoning-Effort Label Really Cut Compute?"
 seo_description: "Effort-conditioned SFT+GRPO on Qwen3-8B: the label does not gate compute (1.08-1.28x vs 1.8x target), but yields a Pareto token-efficiency gain. The correctness-reward-dominance mechanism and the LCPO hard-budget fix."
 date: 2026-07-27
 last_modified_at: 2026-07-27

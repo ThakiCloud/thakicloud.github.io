@@ -1,6 +1,6 @@
 ---
-title: "Coding with Kimi K3: Wiring a 2.8T Open Model into the OpenCode Terminal Agent"
-seo_title: "Coding with Kimi K3 + OpenCode in the Terminal - Thaki Cloud"
+title: "Coding with Kimi K3 in the OpenCode Terminal Agent"
+seo_title: "Coding with Kimi K3 in the OpenCode Terminal Agent"
 seo_description: "How to connect Kimi K3, Moonshot AI's 2.8-trillion-parameter open MoE model, to OpenCode, an open-source terminal coding agent. We install OpenCode 1.18.3, walk the provider auth and model-selection flow first-hand, and read the implications for ThakiCloud's ai-platform (serving a 2.8T open model on-prem) and Paxis (an Agent-Native Cloud where the coding brain is swappable)."
 excerpt: "Kimi K3, called Fable 5-class by many, can run inside an open-source terminal agent rather than a locked proprietary IDE. We installed OpenCode to verify the provider connection flow end to end."
 date: 2026-07-18

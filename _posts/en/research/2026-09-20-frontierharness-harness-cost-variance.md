@@ -1,6 +1,6 @@
 ---
-title: "Same Model, 17.5x Invoice: Why FrontierHarness Exposes the Hidden Variable in Coding Agents"
-seo_title: "FrontierHarness Eval analysis - a coding-agent benchmark that fixes one model (Kimi K3) and varies 9 harnesses, showing pass rates of 50.0 to 66.7 percent and per-completed-task costs of $1.05 to $18.34, a spread of up to roughly 17.5x. The context of MiniMax Code CLI going MIT open source and self-reporting 76.7 percent on FrontierHarness. Implications for ThakiCloud Metis serving optimization and the Paxis harness layer - ThakiCloud"
+title: "FrontierHarness: Same Model, 17.5x Invoice"
+seo_title: "FrontierHarness: Same Model, 17.5x Invoice"
 seo_description: "When you evaluate a coding agent with one model held fixed, the only remaining variable is the harness. Runta's FrontierHarness Eval v1.0 holds Kimi K3 fixed and runs 9 harnesses, 12 configs, and 30 tasks (360 evals), showing pass rates of 50.0 to 66.7 percent and per-completed-task costs of $1.05 to $18.34, a spread of up to about 17.5x. Read why the hidden variable in coding agents is the harness, up to the boundary where MiniMax Code CLI's open source self-reports 76.7 percent, from a ThakiCloud perspective."
 excerpt: "Hold one model fixed and the only variable left in a coding agent is the harness. FrontierHarness shows that on the same Kimi K3, pass rates of 50.0 to 66.7 percent and per-completed-task costs of $1.05 to $18.34, a spread of up to about 17.5x, come from the harness. And the boundary where MiniMax Code CLI's open source self-reports 76.7 percent on that same benchmark."
 date: 2026-09-20

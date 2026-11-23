@@ -1,7 +1,7 @@
 ---
 title: "Safety Is No Longer a Research Question"
 excerpt: "A $2 trillion IPO delay request from a pension investor, a Big Three safety body formed without an antitrust exemption, and a $6.87 million resident evaluator. We analyze the signals that the question of safety is moving from the research lab into capital markets and contracts, and how enterprise operations should take on the 'prove it' question."
-seo_title: "The Week Safety Became 'Proof': How Should Agent Operations Prepare | ThakiCloud"
+seo_title: "Safety Is No Longer a Research Question"
 seo_description: "A $2 trillion IPO delay demand, a Big Three safety body without an antitrust exemption, a METR resident evaluator proposal, and JD Vance's order to build defenses in-house. We look at the signals that AI safety governance is moving into capital markets and audit, and what that means for enterprise agent operations."
 date: 2026-09-17
 last_modified_at: 2026-09-17

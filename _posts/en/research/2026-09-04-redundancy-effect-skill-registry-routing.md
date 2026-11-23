@@ -1,6 +1,6 @@
 ---
-title: "The Size Stays the Same, but Only the Twins Grew: The Redundancy Effect in the Skill Registry"
-seo_title: "Skill Routing Redundancy Effect: Holding Size Fixed and Splitting Duplicate Mass, Top-1 Accuracy 1/(m+1) Symmetry, Cluster-Aware Grading and Breakeven Deduplication Policy - ThakiCloud"
+title: "The Redundancy Effect in the Skill Registry"
+seo_title: "The Redundancy Effect in the Skill Registry"
 seo_description: "Our agent skill registry grew from about 1,600 entries to 2,234 in two weeks. The growth was near copies the curator rewrote every night. Holding size fixed and splitting composition, we show that the top-1 accuracy drop belongs to the duplicate mass, and introduce a one-line grading fix plus a breakeven policy for deduplication."
 excerpt: "The school stays the same size; only students with identical faces grew. Grading by jersey number, three twins make the top chance one in four. Grading by the top five, nothing happens. Today's paper peels off the score drop the copy mass caused, and delivers a one-line grading fix and a breakeven point for deduplication."
 date: 2026-09-04

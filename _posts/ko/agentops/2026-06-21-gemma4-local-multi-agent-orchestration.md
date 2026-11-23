@@ -1,7 +1,7 @@
 ---
-title: "로컬에서 도는 멀티에이전트: Gemma 4 26B로 10개 병렬 서브에이전트 오케스트레이션"
+title: "로컬 멀티에이전트: Gemma 4 26B로 서브에이전트 10개"
 excerpt: "Gemma 4 26B를 로컬에서 띄워 10개 병렬 서브에이전트로 SVG 아트 갤러리를 코딩하는 데모를 분석합니다. 온프레미스 추론 경제성과 멀티에이전트 오케스트레이션을 ThakiCloud K8s 서빙 관점에서 정리합니다."
-seo_title: "Gemma 4 26B 로컬 멀티에이전트 오케스트레이션 분석 - Thaki Cloud"
+seo_title: "로컬 멀티에이전트: Gemma 4 26B로 서브에이전트 10개"
 seo_description: "Gemma 4 26B 로컬 병렬 서브에이전트 데모와 온프레미스 추론 경제성, K8s 기반 멀티에이전트 서빙 관점 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21

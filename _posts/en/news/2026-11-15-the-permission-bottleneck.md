@@ -2,7 +2,7 @@
 title: "Compute Is Not Scarce. Permission Is."
 lang: en
 excerpt: "Texas says it will pause permits for its 34GW data center pipeline until a law protecting rural areas passes. The same week, Perplexity's open-weight decision models post 70 and 64, and two oversight gaps grip the industry at its core. Today there is one signal. The scarce resource is moving from compute to the permission to run that compute."
-seo_title: "The 34GW Freeze and the Permission Layer: The Morning the AI Bottleneck Moved From Compute to Oversight | ThakiCloud"
+seo_title: "Compute Is Not Scarce. Permission Is."
 seo_description: "Texas's push to freeze AI facility permitting, Perplexity's open-weight models scoring 70 and 64 on the decision index, the resignation of OpenAI's robotics chief, and the identification of Gemini 4 Argon in a safety test. We set out what the permission layer in today's digest means and how companies should prepare to act."
 date: 2026-11-15
 last_modified_at: 2026-11-15

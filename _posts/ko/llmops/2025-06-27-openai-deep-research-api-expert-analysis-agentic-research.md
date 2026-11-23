@@ -1,7 +1,7 @@
 ---
 title: "OpenAI Deep Research API 전문가 분석 - 에이전틱 리서치의 새로운 패러다임"
 excerpt: "OpenAI의 Deep Research API가 제시하는 자율형 연구 워크플로우와 o3/o4-mini 모델의 기술적 혁신을 전문가 관점에서 분석"
-seo_title: "OpenAI Deep Research API 전문가 분석 - 에이전틱 AI 연구 혁신 - Thaki Cloud"
+seo_title: "OpenAI Deep Research API 전문가 분석 - 에이전틱 리서치의 새로운 패러다임"
 seo_description: "OpenAI Deep Research API의 기술적 아키텍처, o3/o4-mini 모델 비교, MCP 프로토콜 활용, 프롬프트 엔지니어링 전략까지 실무 전문가를 위한 완전 분석"
 date: 2025-06-27
 tags: 

@@ -1,7 +1,7 @@
 ---
-title: "Distilling Our Own Skills Into Small Models to Run Them Automatically: The Last 6 Months"
+title: "Distilling Our Skills into Small Models: Six Months"
 excerpt: "Running agent skills exclusively on frontier APIs makes costs explode once you hit thousands of calls. Research from the first half of 2026 has pushed distilling those skills into 1B to 35B small models and running them locally automatically to a practical stage. This post surveys recent techniques like on-policy skill distillation, multi-teacher distillation, and training-free agent distillation, and explains why ThakiCloud's already-confirmed small-worker results (Gemma-4-26B tying Haiku) and our thin-harness, format-determinism architecture are well suited to this shift, along with where it breaks down."
-seo_title: "Distilling Agent Skills Into Small Models for Automated Execution - Thaki Cloud"
+seo_title: "Distilling Our Skills into Small Models: Six Months"
 seo_description: "A survey of first-half-2026 SLM agent and on-policy skill distillation research (Skill-SD, SOD, OPID, AgentDistill, multi-teacher MOPD), covering the hybrid architecture behind distilling the ThakiCloud skill fleet into small local models for automated execution, real measurements (Gemma-4-26B tied Haiku), pitfalls, and verification gates."
 date: 2026-07-12
 last_modified_at: 2026-07-12

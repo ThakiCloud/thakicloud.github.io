@@ -1,6 +1,6 @@
 ---
-title: "The Friend Writes First, the Teacher Grades It: Speculative Decoding Made Easy"
-seo_title: "Speculative Decoding Explained Simply: From the Basics to EAGLE and DFlash | ThakiCloud"
+title: "Speculative Decoding, Made Easy"
+seo_title: "Speculative Decoding, Made Easy"
 seo_description: "A single analogy explains why LLMs are slow and how speculative decoding speeds them up two to six times without changing the answer. Covers the grading rule, the break-even point for how many letters to draft ahead, recent methods like EAGLE and DFlash, and why the effect shrinks as batch size grows."
 excerpt: "A large model spreads out every heavy book just to write one letter. Seat a quick-witted friend next to it, and it has to spread those books far less often. Here is why the answer stays the same while only the speed changes."
 date: 2026-08-24

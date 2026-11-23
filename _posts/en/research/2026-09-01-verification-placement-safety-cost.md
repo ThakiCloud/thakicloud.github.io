@@ -1,6 +1,6 @@
 ---
-title: "At the Same Price, the Blocker Wins: We Price the Unattended Agent's Verifier Placement in Dollars"
-seo_title: "Pre-Action Gating and Post-Action Verification for Unattended K8s Agents: The Safety-Cost Frontier - ThakiCloud"
+title: "At the Same Price, the Blocker Wins"
+seo_title: "At the Same Price, the Blocker Wins"
 seo_description: "When you attach a check model to an agent running an unattended cluster, we settle where that check happens in dollars. We derive, in closed form, the breakeven points of the four placements: blocking before execution, watching after execution, doing both, and doing neither."
 excerpt: "Think of a home renovation. The master blocks before the hammer falls. The inspector looks at the wall after the work is done. This paper values these two seats in dollars. At the same price the blocker wins, and having both is the cheapest."
 date: 2026-09-01

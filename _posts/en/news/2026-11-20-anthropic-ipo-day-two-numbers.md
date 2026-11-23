@@ -2,7 +2,7 @@
 title: "The Same Day: $1.4 Trillion and 100 People"
 lang: en
 excerpt: "An AI company that began trading at a $1.4 trillion valuation and roughly 100 people demanding an RSI ban outside its headquarters stood on the same street. On listing day, we follow the governance question that capital, the street, and equity each answered in turn, and point out what a company should look at when it chooses where its agents run."
-seo_title: "Anthropic's Listing Day: When $1.4 Trillion and 100 People Stood on the Same Street"
+seo_title: "The Same Day: $1.4 Trillion and 100 People"
 seo_description: "On November 19, Anthropic began trading on Nasdaq at a $1.4 trillion valuation while roughly 100 people gathered outside its headquarters demanding an RSI ban. The CEO's pledge, a stake transfer, and chip rental regulation. We analyze the questions that day's answers leave for enterprise agent operations."
 date: 2026-11-20
 last_modified_at: 2026-11-20

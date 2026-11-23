@@ -1,7 +1,7 @@
 ---
-title: "Essential Skills Guide for ML Engineers - A Must-Have Checklist for Recruiters and Candidates"
+title: "Core Skills for ML Engineers: A Hiring Checklist"
 excerpt: "A practical guide outlining the core technology stack and competencies needed to build ML applications in production environments"
-seo_title: "ML Engineer Essential Skills Guide - Hiring Checklist - Thaki Cloud"
+seo_title: "Core Skills for ML Engineers: A Hiring Checklist"
 seo_description: "Made-With-ML based ML engineer core competencies, technology stack, and practical experience requirements hiring guide"
 date: 2025-07-08
 last_modified_at: 2025-07-08

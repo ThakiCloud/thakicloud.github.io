@@ -1,7 +1,7 @@
 ---
-title: "Qwen3-4B GRPO Training Complete Guide - Korean Reasoning Dataset Utilization and Colab Notebook Analysis"
+title: "Qwen3-4B GRPO: Korean Reasoning Training Walkthrough"
 excerpt: "A detailed analysis of the GRPO (Gradient-based Reasoning Policy Optimization) training process for the Qwen3-4B model, with a practical guide for effective model training using Korean reasoning datasets."
-seo_title: "Qwen3-4B GRPO Korean Reasoning Model Training Guide - Thaki Cloud"
+seo_title: "Qwen3-4B GRPO: Korean Reasoning Training Walkthrough"
 seo_description: "Complete analysis of the Qwen3-4B GRPO training process. A detailed practitioner guide covering Colab notebook internals and Korean reasoning dataset usage."
 date: 2025-07-30
 last_modified_at: 2025-07-30

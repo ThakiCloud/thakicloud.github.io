@@ -1,7 +1,7 @@
 ---
-title: "macOS GitHub CLI Complete Automation Series - Part 4: Complete Wiki Management Automation"
+title: "macOS GitHub CLI Automation, Part 4: Wiki Management"
 excerpt: "Auto-generate wikis from code, sync API documentation, and manage multilingual docs - automate your entire development documentation workflow"
-seo_title: "GitHub CLI Wiki Automation Part 4 - Complete Documentation Automation - Thaki Cloud"
+seo_title: "macOS GitHub CLI Automation, Part 4: Wiki Management"
 seo_description: "Expert guide to automating wiki generation, API doc synchronization, multilingual support, version management, and documentation quality checks with GitHub CLI"
 date: 2025-07-02
 tags:

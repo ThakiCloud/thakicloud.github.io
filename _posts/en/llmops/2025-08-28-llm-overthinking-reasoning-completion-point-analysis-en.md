@@ -1,7 +1,7 @@
 ---
-title: "Understanding LLM Overthinking: The Science Behind Reasoning Completion Points"
+title: "LLM Overthinking and Where Reasoning Should Stop"
 excerpt: "An in-depth analysis of how large language models can fall into overthinking patterns during reasoning tasks, and how identifying Reasoning Completion Points can optimize both performance and computational efficiency."
-seo_title: "LLM Overthinking Analysis: Reasoning Completion Points - Thaki Cloud"
+seo_title: "LLM Overthinking and Where Reasoning Should Stop"
 seo_description: "Comprehensive research analysis on large language model overthinking phenomena, reasoning completion point identification, and optimization strategies for improved AI efficiency."
 date: 2025-08-28
 tags:

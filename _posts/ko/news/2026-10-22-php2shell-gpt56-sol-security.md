@@ -1,6 +1,6 @@
 ---
 title: "PHP2Shell: LLM이 팠다, 22년 동안 숨어 있던 구멍"
-seo_title: "GPT-5.6 Sol이 발견한 PHP2Shell(CVE-2026-109618/109619)은 OpenAI가 '빙산의 일각'이라 부른 것의 첫 사례입니다. longjmp 오류 경로 취약점의 메커니즘, 두 회사의 독립적 발견, 패치 버전, 그리고 AI 보안 시대의 운영 시사점을 정리합니다. - ThakiCloud"
+seo_title: "PHP2Shell: LLM이 팠다, 22년 동안 숨어 있던 구멍"
 seo_description: "2004년부터 줄곧 나갔던 PHP의 longjmp 오류 경로에 RCE 두 개가 숨어 있었습니다. GPT-5.6 Sol이 찾았고, Wiz의 Gemini 4 Argon이 독립적으로 다시 찾았습니다. 패치는 8.2.35부터 8.5.12, 그리고 '빙산의 일각'이라는 말의 무게를 설명합니다. - ThakiCloud"
 excerpt: "22년간 아무도 안 열던 비상수밸브가 녹슨 채로 남아 있었습니다. LLM은 그 밸브를 열었다가 터뜨렸고, 인터넷의 70%가 달린 PHP가 멈췄습니다. 패치 버전부터 '빙산의 일각'의 의미까지."
 date: 2026-10-22

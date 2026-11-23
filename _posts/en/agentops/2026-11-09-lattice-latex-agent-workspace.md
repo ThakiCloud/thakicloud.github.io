@@ -1,7 +1,7 @@
 ---
-title: "The Agent Takes the Seat Beside You: Lattice, a Local-First LaTeX Workspace"
+title: "Lattice: A Local-First LaTeX Workspace With an Agent"
 excerpt: "An undergraduate student's side project called Lattice puts the source, the PDF, the paper library, Overleaf co-authors, and the AI agent you bring yourself into one macOS window. Every edit the agent makes waits as a diff until you approve it. We look at the architecture of an agent-first app and what it mirrors of the work Paxis does at platform scale."
-seo_title: "Lattice local LaTeX workspace: structuring an agent as co-author | ThakiCloud Tech Blog"
+seo_title: "Lattice: A Local-First LaTeX Workspace With an Agent"
 seo_description: "How the Tauri-based macOS app Lattice wires your own agent CLIs such as Claude Code or Codex into a paper-writing workspace with a diff approval loop and MCP connectors. The agent-native app design pattern, read through Open Slide decks, two-way Overleaf sync, and latexdiff change tracking."
 date: 2026-11-09
 last_modified_at: 2026-11-09

@@ -1,7 +1,7 @@
 ---
 title: "26B가 32GB 랩톱에 들어가는 이유: Inkling 2 Mini의 루프 아키텍처"
 excerpt: "Thinking Machines가 11월 20일 Apache 2.0으로 발표한 26.4B MoE입니다. 층을 늘리는 대신 중간 12층을 3회 방문하는 루프 설계가 24층을 48층만큼 쓰게 합니다. 20GB 단일 체크포인트, 1M 컨텍스트, 에이전틱 코딩에서 Qwen3.8-27B를 앞서는 공식 수치를 config.json과 대조해 검증했습니다."
-seo_title: "Inkling 2 Mini 26B 루프 MoE, 32GB 랩톱 서빙과 Qwen3.8-27B 공식 벤치마크 비교"
+seo_title: "26B가 32GB 랩톱에 들어가는 이유: Inkling 2 Mini의 루프 아키텍처"
 seo_description: "26.4B 총 가중치 · 5.4B 유효 액티브 · NVFP4 20GB 체크포인트 · 1M 컨텍스트. 중간 12층 3회 루프 설계와 공식 벤치마크, 32GB 하드웨어 서빙 방법을 HF config.json 검증과 함께 정리했습니다."
 date: 2026-11-23
 author_profile: true

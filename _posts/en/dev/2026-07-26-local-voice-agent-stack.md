@@ -1,5 +1,5 @@
 ---
-title: "Four Speech Models on One Laptop: We Measured the Latency of a Fully Local Voice Agent"
+title: "Four Speech Models on One Laptop: Local Voice Agent Latency"
 excerpt: "Voice agents that run VAD, STT, LLM, and TTS entirely on-device are having a moment. But do they actually reach conversational speed? We rebuilt the same loop on a MacBook with Qwen3-ASR and Qwen3-TTS and measured every stage. The bottleneck was not model size. It was a call path that reloaded the model on every utterance. Switching the batch path alone made it 1.92x faster."
 date: 2026-07-26
 tags:

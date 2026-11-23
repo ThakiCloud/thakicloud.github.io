@@ -1,6 +1,6 @@
 ---
-title: "The Longer the Run, the More History You Should Throw Away: Reading SKILL.state"
-seo_title: "SKILL.state paper analysis - 41x fewer tokens for long-horizon agents by replacing chat history with execution state - ThakiCloud"
+title: "SKILL.state: Throw Away History as Runs Get Longer"
+seo_title: "SKILL.state: Throw Away History as Runs Get Longer"
 seo_description: "arXiv 2608.26263 SKILL.state drops append-only conversation history and keeps only a structured execution state. We walk through the 41x token cut at 200 steps, the accuracy that holds at 94 percent, and the budget-matched control that rules out 'it just got shorter'."
 excerpt: "A fridge whiteboard is not a shortened transcript. Cap every runtime at the same 1,800 tokens and summarization scores 52 percent, truncation 18 percent, and the state board 94 percent."
 date: 2026-09-02

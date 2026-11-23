@@ -1,7 +1,7 @@
 ---
 title: "When an Agent Acts on My Behalf, Where Is the Line?"
 excerpt: "When agents start representing people, the hard problem is not performance but where to stop. Two 30-second short films sit at opposite ends of the same axis, showing how to draw the boundary of delegation in code and policy."
-seo_title: "The Boundary of Agent Delegation: A2A Negotiation and Human-in-the-Loop - Thaki Cloud"
+seo_title: "When an Agent Acts on My Behalf, Where Is the Line?"
 seo_description: "As agents start negotiating with other agents and making decisions on our behalf, here is how to design the boundary of delegation around three questions: mandate, irreversibility, and confidence. Two short films illustrate A2A and HITL, viewed through the lens of an agent control plane."
 date: 2026-07-24
 last_modified_at: 2026-07-24

@@ -1,7 +1,7 @@
 ---
-title: "Fable 5는 다르게 프롬프팅합니다: Anthropic 공식 가이드가 말하는 네 가지 전환"
+title: "Fable 5는 다르게 프롬프팅한다: 네 가지 전환"
 excerpt: "Anthropic이 Claude Fable 5와 Mythos 5를 위한 공식 프롬프팅 가이드를 조용히 공개했습니다. 핵심은 더 정교한 프롬프트가 아니라 반대 방향입니다. 이전 모델용으로 쌓아온 지시를 지우고, effort로 지능·비용을 조절하고, 진행 보고를 증거에 감사시키고, 서브에이전트를 비동기로 오케스트레이션하라는 것입니다. 네 가지 전환을 실제 문서 근거로 정리하고, ThakiCloud의 Paxis Agent-Native Cloud와 ai-platform 운용 관점에서 무엇이 바뀌는지 짚습니다."
-seo_title: "Anthropic Fable 5 공식 프롬프팅 가이드 정리: effort·검증·서브에이전트 - Thaki Cloud"
+seo_title: "Fable 5는 다르게 프롬프팅한다: 네 가지 전환"
 seo_description: "Anthropic 공식 Fable 5 프롬프팅 가이드의 네 가지 핵심 전환을 분석합니다. 과도한 프롬프트 삭제, effort 파라미터로 지능·지연·비용 제어, 증거 기반 진행 검증, 비동기 서브에이전트 오케스트레이션, 그리고 ThakiCloud Paxis·ai-platform 적용 관점을 정리했습니다."
 date: 2026-07-06
 last_modified_at: 2026-07-06

@@ -1,7 +1,7 @@
 ---
-title: "FleetWorker-E4B: A 4B-Class Task-Board Classifier and a Recipe for Training on Your Own Board"
+title: "FleetWorker-E4B: A Task-Board Classifier You Can Retrain"
 excerpt: "For teams that want to train a small model to sort task-board items by project. A reference model on Nemotron 3.5 Bolt E4B and the recipe for retraining on your own board."
-seo_title: "FleetWorker-E4B Task-Board Classifier - ThakiCloud"
+seo_title: "FleetWorker-E4B: A Task-Board Classifier You Can Retrain"
 seo_description: "For teams that want to train a small model to sort task-board items by project. A reference model on Nemotron 3.5 Bolt E4B and the recipe for retraining on your own board."
 date: 2026-10-26
 published: true

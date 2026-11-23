@@ -1,7 +1,7 @@
 ---
-title: "Quantifying Team Chemistry with Saberr: Data-Driven Hiring and Organizational Strategy"
+title: "Saberr: Quantifying Team Chemistry for Hiring"
 excerpt: "How to leverage Saberr algorithms to quantify team compatibility through 15-minute surveys and behavioral data, optimizing everything from hiring to onboarding"
-seo_title: "Saberr Team Chemistry Data-Driven Hiring Strategy - Thaki Cloud"
+seo_title: "Saberr: Quantifying Team Chemistry for Hiring"
 seo_description: "Transform hiring and team management with Saberr's data-driven approach to team chemistry. Quantify compatibility and optimize organizational performance."
 date: 2025-06-17
 tags:

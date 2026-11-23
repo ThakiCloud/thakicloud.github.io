@@ -1,5 +1,5 @@
 ---
-title: "Ilya Sutskever: 'AI Can Implement All Human Capabilities' - AGI Prospects from a Computational Functionalism Perspective"
+title: "Ilya Sutskever on AI and Computational Functionalism"
 excerpt: "Former OpenAI Chief Scientist Ilya Sutskever's ambitious vision for AI's future at University of Toronto graduation ceremony, raising fundamental questions about AI research's philosophical foundations and future directions"
 date: 2025-06-10
 lang: en

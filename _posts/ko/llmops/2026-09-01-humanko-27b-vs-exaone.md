@@ -1,7 +1,7 @@
 ---
-title: "한국어 27B, 무엇으로 비교해야 하나: Human-KO와 EXAONE을 나란히 놓아 봤습니다"
+title: "Human-KO 27B와 EXAONE: 한국어 모델 비교법"
 excerpt: "지식 시험 점수와 대화 말투는 다른 과목입니다. 저희가 공개한 Human-KO 27B를 EXAONE 4.5 33B와 같은 문항·같은 조건으로 비교했습니다. 지식 축 결과는 있는 그대로, 문체 축 결과도 있는 그대로 공개합니다."
-seo_title: "Qwen3.8-27B-Human-KO vs EXAONE-4.5-33B 비교 실측"
+seo_title: "Human-KO 27B와 EXAONE: 한국어 모델 비교법"
 seo_description: "공개 가중치 Human-KO 27B와 EXAONE-4.5-33B를 KMMLU 2,000문항·HAE-RAE 500문항 짝지은 벤치와 자유 생성 문체 분포로 비교했습니다. 각 모델이 이기는 축이 다릅니다."
 date: 2026-09-01
 published: true

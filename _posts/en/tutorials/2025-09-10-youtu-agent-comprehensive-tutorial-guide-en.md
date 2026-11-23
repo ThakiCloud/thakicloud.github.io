@@ -1,7 +1,7 @@
 ---
 title: "Youtu-Agent: Complete Tutorial Guide for Building Powerful AI Agents"
 excerpt: "Master Youtu-Agent, Tencent's open-source agent framework built on OpenAI-agents. Learn installation, configuration, and build real-world AI applications with web search, SVG generation, and evaluation capabilities."
-seo_title: "Youtu-Agent Tutorial: Build AI Agents with Open-Source Models - Thaki Cloud"
+seo_title: "Youtu-Agent: Complete Tutorial Guide for Building Powerful AI Agents"
 seo_description: "Complete guide to Youtu-Agent framework: installation, setup, examples, and benchmarking. Build powerful AI agents with web search, automation, and async processing capabilities."
 date: 2025-09-10
 tags:

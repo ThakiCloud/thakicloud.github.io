@@ -1,6 +1,6 @@
 ---
-title: "벡터DB 없이 폴더로 기억하는 코딩 에이전트: personal-monorepo-template 분석"
-seo_title: "코딩 에이전트에 영구 기억 부여하기 - personal-monorepo-template - Thaki Cloud"
+title: "벡터DB 없이 폴더로 기억하는 코딩 에이전트"
+seo_title: "벡터DB 없이 폴더로 기억하는 코딩 에이전트"
 seo_description: "Instructor 창시자 jxnl이 공개한 personal-monorepo-template은 벡터DB 없이 평범한 폴더와 AGENTS.md만으로 코딩 에이전트에 영구 기억을 부여합니다. 구조를 분해하고 ThakiCloud Paxis 스킬 하네스 관점에서 검증합니다."
 excerpt: "OpenAI Codex 팀 엔지니어 jxnl이 공개한 personal-monorepo-template은 벡터DB 없이 폴더 구조와 AGENTS.md만으로 에이전트에 영구 기억을 부여합니다. 이 설계를 분해하고 스킬을 일급 리소스로 다루는 ThakiCloud 관점에서 검증합니다."
 date: 2026-07-11

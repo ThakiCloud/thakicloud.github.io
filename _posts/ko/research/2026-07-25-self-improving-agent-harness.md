@@ -1,6 +1,6 @@
 ---
-title: "에이전트가 스스로 자기 하네스를 고친다: Self-Harness가 보여준 자가개선의 진짜 병목"
-seo_title: "Self-Harness 논문 리뷰: 하네스가 스스로 개선되는 3단계 루프 | ThakiCloud"
+title: "Self-Harness: 에이전트가 스스로 하네스를 고친다"
+seo_title: "Self-Harness: 에이전트가 스스로 하네스를 고친다"
 seo_description: "MiniMax M2.5, Qwen3.5-35B-A3B, GLM-5를 Terminal-Bench-2.0에서 40.5%에서 61.9%까지 끌어올린 Self-Harness(arXiv 2606.09498)를 정리했습니다. 사람 엔지니어 없이 에이전트가 자기 하네스를 약점 발굴, 개선안 제안, 개선안 검증의 3단계로 고칩니다. 자가개선 루프의 진짜 병목이 평가자라는 점을 ThakiCloud 관점에서 짚습니다."
 excerpt: "모델을 바꾸지 않고 하네스만 스스로 고쳐서 Terminal-Bench 통과율을 최대 60% 넘게 올렸습니다. 다만 이 루프의 상한은 평가자가 얼마나 까다로워지느냐가 정합니다."
 date: 2026-07-25

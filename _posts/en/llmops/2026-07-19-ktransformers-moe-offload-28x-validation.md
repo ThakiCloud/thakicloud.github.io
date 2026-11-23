@@ -1,5 +1,5 @@
 ---
-title: "A $400K Rack on a 24GB Graphics Card? We Put ktransformers' '28x' to the Test"
+title: "ktransformers' '28x' Claim on a 24GB GPU, Put to the Test"
 excerpt: "ktransformers claims you can run a giant model on a single 24GB GPU by offloading MoE experts to CPU. We measured the viral '28x' and '$400K to 24GB' claims ourselves on RunPod. The trick turned out to be real: with the INT4 AMX kernel enabled, a 671B-class model decoded at roughly 16 tok/s."
 date: 2026-07-19
 tags:

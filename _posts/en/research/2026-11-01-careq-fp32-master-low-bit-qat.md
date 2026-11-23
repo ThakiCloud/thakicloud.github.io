@@ -1,6 +1,6 @@
 ---
-title: "Why Our 2.4-Bit Model Stopped Learning: BF16 Update Stagnation and the FP32 Master"
-seo_title: "How BF16 Rounding Erases Updates in Ultra-Low-Bit QAT, and How an FP32 Master Fixed It | ThakiCloud"
+title: "Why Our 2.4-Bit Model Stopped Learning"
+seo_title: "Why Our 2.4-Bit Model Stopped Learning"
 seo_description: "While distilling Qwen3-1.7B-Base into a 2.4-bit-per-weight format, direct BF16 updates changed only 0.007% of the scale parameters. Restoring the updates with an FP32 master copy raised GSM8K test accuracy by 8.2 points over our previous 2.4-bit checkpoint. We walk through the diagnosis, the controlled comparison, and the limits."
 excerpt: "The loss kept going down, yet some parameters barely changed. We measured how BF16 rounding erases updates in a 2.4-bit compressed model and share what happened once an FP32 master brought them back."
 date: 2026-11-01

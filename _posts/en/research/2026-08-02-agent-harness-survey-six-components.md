@@ -1,6 +1,6 @@
 ---
-title: "The Shell Decides, Not the Model: A Survey That Splits the Agent Harness Into Six Parts"
-seo_title: "Agent harness survey explained: auditing our own harness with the H=(E,T,C,S,L,V) completeness matrix | ThakiCloud"
+title: "The Shell Decides: Six Parts of an Agent Harness"
+seo_title: "The Shell Decides: Six Parts of an Agent Harness"
 seo_description: "A 2026 survey formalizes the agent harness as six components - execution, tools, context, state, loop, verification - and places 110+ papers and 23 systems on a completeness matrix. We ran the same ruler over ThakiCloud's production agent harness and report the real counts: 1,914 skills, 60 rules, 14 hooks, 51 loops, plus two holes found on the lifecycle axis."
 excerpt: "This paper stops the reflex of upgrading the model first. Split the harness into six parts and you can count what is missing."
 date: 2026-08-02

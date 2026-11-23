@@ -1,5 +1,5 @@
 ---
-title: "Fable-5-traces: How to Distill Small Models Using Coding Agent Session Traces"
+title: "Fable-5-traces: Distilling Small Models from Agent Traces"
 excerpt: "Glint-Research released 4,665 Fable 5 (Claude Code) agent traces in AGPL-3.0 under the HF Agent Traces format, with 81% tool-use composition. A practical guide to distilling small models and building self-hosted coding agents."
 date: 2026-06-20
 tags:

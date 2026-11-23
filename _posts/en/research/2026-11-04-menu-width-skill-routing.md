@@ -1,6 +1,6 @@
 ---
-title: "Let the One Who Knows the Occasion Choose: Pricing the Menu Width of Skill Routing"
-seo_title: "The Menu Width paper - Under same-tier self-hosted serving, the five-card menu the agent picks is 0.21 m$ cheaper per route than the committed rerank call, and per-session routing spend is bounded independent of registry size - ThakiCloud"
+title: "Let the One Who Knows Choose: Pricing Skill Router Menus"
+seo_title: "Let the One Who Knows Choose: Pricing Skill Router Menus"
 seo_description: "The last stage of a skill router comes in two forms. The router pays for one model call and decides the answer itself, or it hands a candidate list to the agent and lets the agent pick. This paper prices that choice. Under one rate card, the menu route is 0.21 m$ cheaper per pick, at every list length. The best list length is five cards. Capping the width at five cards bounds per-session routing spend, no matter how many skills the registry holds."
 excerpt: "The final decision of a skill router is a question of who orders. Under self-hosted serving with one rate card, the five-card menu the agent picks is 0.21 m$ cheaper per route than the paid call where the router decides for it. Cap the menu at five cards and per-session routing spend gets a fixed bound, independent of registry size."
 date: 2026-11-04

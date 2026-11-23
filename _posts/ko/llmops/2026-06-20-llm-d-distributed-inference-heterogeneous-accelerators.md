@@ -1,7 +1,7 @@
 ---
-title: "GPU를 더 사도 안 풀린다: llm-d 분산추론과 GPU + 어떤 NPU/XPU든 이기종 아키텍처"
+title: "GPU를 더 사도 안 풀린다: llm-d와 이기종 구성"
 excerpt: "llm-d는 GPU를 늘리는 대신 같은 GPU에서 더 많은 요청을 처리하는 추론 스케줄러입니다. KV-cache aware 라우팅과 prefill/decode 분리의 원리부터, vLLM 호환이면 어떤 가속기(Rebellions·Furiosa 등 NPU, Intel·TPU 등 XPU)든 같은 오케스트레이션에 꽂는 가속기 중립 이기종 구성까지 정리합니다."
-seo_title: "llm-d 분산추론과 GPU+NPU/XPU 이기종 아키텍처 - Thaki Cloud"
+seo_title: "GPU를 더 사도 안 풀린다: llm-d와 이기종 구성"
 seo_description: "분산추론 llm-d의 KV-cache 라우팅과 prefill/decode 분리 원리, 그리고 vLLM 위에서 GPU와 다양한 NPU·XPU(Rebellions, Furiosa, Intel Gaudi, TPU 등)를 가속기 중립으로 함께 운용하는 소버린 AI 추론 레퍼런스 아키텍처를 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

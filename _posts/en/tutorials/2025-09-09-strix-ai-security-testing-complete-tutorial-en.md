@@ -1,7 +1,7 @@
 ---
-title: "Strix AI Security Testing: Complete Tutorial for Autonomous Vulnerability Detection"
+title: "Strix: Autonomous AI Vulnerability Detection"
 excerpt: "Learn how to use Strix, an open-source AI agent that acts like real hackers to find and validate security vulnerabilities through dynamic testing and actual exploitation."
-seo_title: "Strix AI Security Testing Tutorial: Autonomous Vulnerability Detection Guide"
+seo_title: "Strix: Autonomous AI Vulnerability Detection"
 seo_description: "Complete guide to Strix AI security testing tool - installation, configuration, and practical usage for automated vulnerability detection and validation in web applications and codebases."
 date: 2025-09-09
 tags:

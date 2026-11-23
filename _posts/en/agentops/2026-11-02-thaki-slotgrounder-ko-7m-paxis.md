@@ -1,6 +1,6 @@
 ---
-title: "Confidence Is Not Evidence: Thaki-SlotGrounder-KO-7M, a 7M Model That Checks Structured Commands Against the Source Sentence"
-seo_title: "Thaki-SlotGrounder-KO-7M - A Korean verifier that rejects agent command proposals lacking evidence, and Paxis | ThakiCloud"
+title: "Thaki-SlotGrounder-KO: Confidence Is Not Evidence"
+seo_title: "Thaki-SlotGrounder-KO: Confidence Is Not Evidence"
 seo_description: "A Korean model with 7,461,060 parameters checks each field of a structured command proposal (send, delete, ...) against the source sentence and rejects weakly supported ones. On synthetic sealed tests, wrong proposals that got through dropped from 28 to 2 while coverage fell by 11 to 16 points. We also describe how a deterministic verifier now blocks the amount-boundary error the model missed."
 excerpt: "We released a small Korean model that checks an agent's command proposals against the source sentence before execution and filters out weakly supported ones. The only thing it can do is reject."
 date: 2026-11-02

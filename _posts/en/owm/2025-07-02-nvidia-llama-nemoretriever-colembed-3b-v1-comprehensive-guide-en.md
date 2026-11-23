@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA LLaMA NemoRetriever ColEmbed 3B v1 Complete Guide"
 excerpt: "Comprehensive analysis of NVIDIA's groundbreaking multimodal embedding model achieving #1 performance on ViDoRe V1, V2, and MTEB Visual Document Retrieval benchmarks with revolutionary visual document search capabilities"
-seo_title: "NVIDIA LLaMA NemoRetriever ColEmbed 3B Complete Guide - Visual Document Retrieval Leader - Thaki Cloud"
+seo_title: "NVIDIA LLaMA NemoRetriever ColEmbed 3B v1 Complete Guide"
 seo_description: "Explore NVIDIA's llama-nemoretriever-colembed-3b-v1 model achieving top performance on ViDoRe and MTEB benchmarks for visual document retrieval with comprehensive implementation guide and practical applications."
 date: 2025-07-02
 tags:

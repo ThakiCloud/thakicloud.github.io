@@ -1,7 +1,7 @@
 ---
 title: "Octopus OS: The Day Agents Reshaped Their Own Runtime"
 excerpt: "An operating system where neither the model nor the loop is at the center. The Rust kernel knows no provider, channel, or tool by name; capabilities are declared as JSON descriptors. We cloned the MIT repo and measured every claim."
-seo_title: "Octopus OS Verified: An Agentic OS Where Agents Rewrite Their Own Environment"
+seo_title: "Octopus OS: The Day Agents Reshaped Their Own Runtime"
 seo_description: "A boundary-contract audit of Octopus OS, the self-evolving agentic OS. 58.7k kernel lines measured, 12 execution environments and 191 tools verified, vLLM provider interface analyzed. From a depth-1 clone of the MIT open-source repo."
 date: 2026-10-26
 last_modified_at: 2026-10-26

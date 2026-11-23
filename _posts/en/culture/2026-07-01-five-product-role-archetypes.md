@@ -1,5 +1,5 @@
 ---
-title: "Five Archetypes That Remain When Job Titles Dissolve: From Prototyper to Maintainer"
+title: "Five Archetypes That Remain When Job Titles Dissolve"
 excerpt: "As engineering, product, design, and data blur into a single mass, Boris Cherny, the creator of Claude Code, proposes five role archetypes and a team-composition formula tied to product lifecycle stage."
 date: 2026-07-01
 last_modified_at: 2026-07-01

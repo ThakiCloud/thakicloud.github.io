@@ -1,7 +1,7 @@
 ---
 title: "Fable 5 Prompts Differently: Four Shifts From Anthropic's Official Guide"
 excerpt: "Anthropic quietly published an official prompting guide for Claude Fable 5 and Mythos 5. The core message is not more sophisticated prompts, it is the opposite direction: strip out instructions you built up for older models, use effort to tune intelligence and cost, audit progress reports against evidence, and orchestrate subagents asynchronously. We walk through the four shifts with documented evidence, then look at what changes for ThakiCloud's Paxis Agent-Native Cloud and ai-platform operations."
-seo_title: "Anthropic Fable 5 Official Prompting Guide: Effort, Verification, Subagents - Thaki Cloud"
+seo_title: "Fable 5 Prompts Differently: Four Shifts From Anthropic's Official Guide"
 seo_description: "An analysis of the four core shifts in Anthropic's official Fable 5 prompting guide: removing over-specified prompts, controlling intelligence, latency, and cost with the effort parameter, evidence-based progress verification, asynchronous subagent orchestration, and what it means for ThakiCloud's Paxis and ai-platform."
 date: 2026-07-06
 last_modified_at: 2026-07-06

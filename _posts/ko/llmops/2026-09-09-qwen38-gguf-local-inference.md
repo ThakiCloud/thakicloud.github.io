@@ -1,7 +1,7 @@
 ---
 title: "1천만 다운로드의 GGUF: Qwen3.8-27B가 로컬 경로를 1호로 만든 날"
 excerpt: "Qwen3.8-27B의 Unsloth GGUF가 24일 만에 1천만 다운로드, 3천700 좋아요로 역대 가장 사랑받은 GGUF가 됐습니다. 27B급 멀티모달 모델이 소비 머신으로 밀리는 데 결정적이었던 것은 하이브리드 어텐션의 KV 구조였고, 같은 가중치의 데이터센터 서빙과 어떻게 갈리는지 정리합니다."
-seo_title: "Qwen3.8-27B GGUF 1천만 다운로드: 로컬 인퍼런스 경로와 데이터센터 서빙의 갈림 | ThakiCloud"
+seo_title: "1천만 다운로드의 GGUF: Qwen3.8-27B가 로컬 경로를 1호로 만든 날"
 seo_description: "Unsloth Qwen3.8-27B-GGUF가 24일 만에 1천만 다운로드, 역대 1위 좋아요를 기록한 배경. 하이브리드 어텐션(48 linear + 16 full)의 KV 캐시 구조, GGUF 퀀트 메뉴와 크기, llama.cpp과 vLLM NVFP4 서빙의 비교, ThakiCloud 서빙 관점까지 정리합니다."
 date: 2026-09-09
 last_modified_at: 2026-09-09

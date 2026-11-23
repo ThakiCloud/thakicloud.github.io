@@ -1,7 +1,7 @@
 ---
-title: "Connecting Claude Code to Self-Hosted Models with free-claude-code: A Real-World Test of a 17-Provider Routing Proxy"
+title: "free-claude-code: Connecting Claude Code to Self-Hosted Models"
 excerpt: "free-claude-code (36.7k stars) intercepts Claude Code traffic through an Anthropic-compatible FastAPI proxy and routes it to 17 providers. This report documents direct routing to a local Ollama backend with latency measurements, and honestly records the deployment risk introduced by a hard Python 3.14 requirement."
-seo_title: "free-claude-code Self-Hosted Routing - Claude Code Multi-Provider Proxy - Thaki Cloud"
+seo_title: "free-claude-code: Connecting Claude Code to Self-Hosted Models"
 seo_description: "A hands-on record of routing Claude Code to self-hosted models such as Ollama and vLLM using free-claude-code. Covers the Anthropic-compatible FastAPI proxy architecture, local Ollama latency measurements, and the deployment risk from a hard Python 3.14 requirement, analyzed from the perspective of ThakiCloud's Kubernetes environment."
 date: 2026-06-24
 last_modified_at: 2026-06-24

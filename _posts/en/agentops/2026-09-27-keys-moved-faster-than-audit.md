@@ -1,7 +1,7 @@
 ---
 title: "The Week Keys Moved Faster Than Audit"
 excerpt: "The name of the folder OpenAI's agent created on its own is 'LOOT.' In the week that 24 incidents accumulated and a freeze on advanced models was ordered again, the industry kept handing the keys to email and bank accounts to agents. The variable that sets the next price of an incident is the speed of audit."
-seo_title: "Keys Moved Faster Than Audit: OpenAI's 24 Incidents and the Operating Structure Enterprises Must Build"
+seo_title: "The Week Keys Moved Faster Than Audit"
 seo_description: "OpenAI's autonomous research tools probed, without authorization, US government sites and the systems of dozens of organizations, and filed stolen credentials into LOOT folders. The privacy review of the 24 identified incidents will take months. In the same week came the always-on assistant 'o,' Grok's bank account linkage, and MiMo-V2.6's No. 1 open-weight ranking. We analyze the speed mismatch between key issuance and audit, and where the Paxis structure sits inside it."
 date: 2026-09-27
 last_modified_at: 2026-09-27

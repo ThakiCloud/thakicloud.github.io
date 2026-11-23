@@ -1,7 +1,7 @@
 ---
-title: "Authorizer 오픈소스 인증 시스템 완전 가이드 - 120초 만에 프로덕션 준비 완료"
+title: "Authorizer: 오픈소스 인증 시스템 구축"
 excerpt: "완전 오픈소스 인증 및 권한 관리 시스템 Authorizer로 락인 걱정 없이 안전한 인증을 구축하세요. Railway 120초 배포부터 소셜 로그인, 2FA, 매직 링크까지 모든 기능을 단계별로 완벽 가이드합니다."
-seo_title: "Authorizer 오픈소스 인증 시스템 설치 가이드 - 완전 무료 Auth 솔루션 - Thaki Cloud"
+seo_title: "Authorizer: 오픈소스 인증 시스템 구축"
 seo_description: "Authorizer 오픈소스 인증 시스템 완전 설치 가이드. Railway 120초 배포, Docker 설정, 소셜 로그인, 2FA, 매직 링크, RBAC까지 프로덕션 준비 완료 인증 시스템 구축 방법을 제공합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

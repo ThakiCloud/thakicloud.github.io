@@ -1,7 +1,7 @@
 ---
-title: "Anteon: Complete Guide to eBPF-based Kubernetes Monitoring and Performance Testing"
+title: "Anteon: eBPF Kubernetes Monitoring and Load Testing"
 excerpt: "Learn how to implement comprehensive Kubernetes monitoring and performance testing with Anteon (formerly Ddosify). This tutorial covers installation, service map generation, and load testing from setup to production."
-seo_title: "Anteon Kubernetes Monitoring Tutorial - eBPF Service Map & Performance Testing - Thaki Cloud"
+seo_title: "Anteon: eBPF Kubernetes Monitoring and Load Testing"
 seo_description: "Complete hands-on guide to Anteon: eBPF-based Kubernetes monitoring, automatic service map creation, real-time metrics, and multi-location performance testing. Free setup tutorial."
 date: 2025-08-28
 tags:

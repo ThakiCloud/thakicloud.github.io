@@ -1,7 +1,7 @@
 ---
-title: "GitHub CEO Thomas Dohmke's Declaration of Developer Renaissance: AI Era Developer Identity Revolution"
+title: "GitHub CEO Thomas Dohmke on Developer Reinvention"
 excerpt: "Shocking reality revealed by GitHub CEO through interviews with 22 active developers: Accept AI or abandon the profession. The 4-stage evolution process of developers transforming from code writers to AI orchestrators and their remarkable results."
-seo_title: "GitHub CEO Thomas Dohmke on AI Era Developer Revolution - Thaki Cloud"
+seo_title: "GitHub CEO Thomas Dohmke on Developer Reinvention"
 seo_description: "GitHub CEO's latest research reveals fundamental changes in the developer profession. Detailed analysis of AI era 4-stage evolution theory and prospects for 90% AI coding era within 2-5 years, confirmed through 22 developer interviews."
 date: 2025-08-06
 last_modified_at: 2025-08-06

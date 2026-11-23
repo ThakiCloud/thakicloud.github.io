@@ -1,7 +1,7 @@
 ---
-title: "aiXiv: Revolutionizing Scientific Publishing Through AI-Native Open Access Platform Architecture"
+title: "aiXiv: An AI-Native Open Access Platform"
 excerpt: "A comprehensive analysis of aiXiv, the groundbreaking platform that integrates multi-agent workflows and structured peer review systems to accelerate AI-generated research publication and scientific discovery through autonomous collaboration between human and AI scientists."
-seo_title: "aiXiv Platform Analysis: AI-Native Scientific Publishing Revolution - Thaki Cloud"
+seo_title: "aiXiv: An AI-Native Open Access Platform"
 seo_description: "In-depth research analysis of aiXiv's multi-agent architecture, structured peer review systems, and iterative improvement pipelines that transform scientific publishing for AI-generated research content."
 date: 2025-08-26
 tags:

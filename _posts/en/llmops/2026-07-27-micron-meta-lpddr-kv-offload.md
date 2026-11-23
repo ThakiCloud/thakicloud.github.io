@@ -1,7 +1,7 @@
 ---
-title: "What Happens When You Push the KV Cache Off the GPU: Reading Micron's LPDDR White Paper"
+title: "Pushing the KV Cache Off the GPU: Micron's LPDDR Paper"
 excerpt: "In long-context inference the memory hog is not the model weights, it is the KV cache. Put Micron's GH200 measurements next to our own footprint math and it becomes clear why the serving bottleneck should be read as capacity rather than bandwidth."
-seo_title: "Micron LPDDR KV cache offload white paper, long-context capacity planning"
+seo_title: "Pushing the KV Cache Off the GPU: Micron's LPDDR Paper"
 seo_description: "A walkthrough of Micron's LPDDR5X KV cache offload results measured on NVIDIA GH200 with Llama 3 70B, plus our own KV footprint calculation comparing concurrent sessions on 512GB and 1.5TB configurations, the Meta DCPerf joint validation, and what it means for on-prem serving."
 date: 2026-07-27
 last_modified_at: 2026-07-27

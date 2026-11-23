@@ -1,7 +1,7 @@
 ---
-title: "Claude Code /cd: How to Move Between Directories Without Restarting Your Session and Keep the Prompt Cache Intact"
+title: "Claude Code /cd: Switch Directories, Keep the Prompt Cache"
 excerpt: "In a monorepo, switching between a library directory and the service that consumes it used to mean restarting your session, and with it, both your conversation context and your prompt cache. The /cd command in Claude Code v2.1.169 moves a running session to a new directory while keeping the cache alive. Using the documented rate difference between cache reads (0.1x) and cache writes (1.25x), this post explains why that one line changes coding agent operating costs, and connects it to ThakiCloud's Paxis coding agent and ai-platform serving cost picture."
-seo_title: "Claude Code /cd: Change Directories Without Losing Your Prompt Cache (2026) - Thaki Cloud"
+seo_title: "Claude Code /cd: Switch Directories, Keep the Prompt Cache"
 seo_description: "The /cd command in Claude Code v2.1.169 lets you switch working directories without restarting your session, preserving the prompt cache along the way. This post calculates the cost model from the documented 0.1x cache-read and 1.25x cache-write rates, explains why reloading CLAUDE.md doesn't rewrite the system prompt, and connects the mechanism to ThakiCloud's Paxis coding agent and ai-platform multi-tenant serving costs."
 date: 2026-07-07
 lang: en

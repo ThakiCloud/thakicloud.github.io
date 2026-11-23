@@ -1,7 +1,7 @@
 ---
-title: "ChatGPT 사용 패턴의 전 세계적 확산과 경제적 영향: OpenAI의 대규모 사용자 행동 분석 연구"
+title: "ChatGPT 사용 패턴: OpenAI의 대규모 행동 분석"
 excerpt: "OpenAI의 최신 연구를 통해 살펴본 ChatGPT의 전 세계적 확산 현황과 사용자 행동 패턴의 심층 분석, 그리고 지식 집약적 노동 시장에 미치는 경제적 함의"
-seo_title: "ChatGPT 사용 패턴 분석: 전 세계 10% 인구 채택과 경제적 영향 - Thaki Cloud"
+seo_title: "ChatGPT 사용 패턴: OpenAI의 대규모 행동 분석"
 seo_description: "OpenAI 연구진이 700만 사용자와 180억 메시지를 분석한 ChatGPT 사용 패턴 연구 결과와 지식 경제에 미치는 경제적 영향을 심층 분석"
 date: 2025-09-16
 lang: ko

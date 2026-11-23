@@ -1,5 +1,5 @@
 ---
-title: "Where Do You Put a Quantized Model? Four AWS and Unsloth Deployment Patterns"
+title: "Where Do You Put a Quantized Model on AWS?"
 excerpt: "Plenty of teams know how to shrink a model to 4-bit with Unsloth. But the moment they have to decide whether to put that file on EC2, wrap it in a SageMaker endpoint, or launch it as an EKS pod, most get stuck. The AWS guide co-authored with Unsloth gives a clear map for this. The key idea: the model file format decides the runtime, and the runtime decides the AWS service. This post covers where GGUF goes, where merged safetensors goes, and how this thinking maps onto ThakiCloud's serving infrastructure."
 tags:
   - unsloth

@@ -1,7 +1,7 @@
 ---
-title: "753B Open Weights on a Consumer GPU: GLM-5.2 and the Economics of On-Premise LLM Serving"
+title: "GLM-5.2 on a Consumer GPU: On-Premise Serving Economics"
 excerpt: "An analysis of running the 753B-scale SOTA open-weight model GLM-5.2 on an RTX 4090 consumer GPU. We cover the DSA sparse-attention kernel port and the economics of on-premise large-LLM serving from ThakiCloud's serving perspective."
-seo_title: "GLM-5.2 753B on RTX 4090 On-Premise Serving Analysis - Thaki Cloud"
+seo_title: "GLM-5.2 on a Consumer GPU: On-Premise Serving Economics"
 seo_description: "Running GLM-5.2 753B open weights on an RTX 4090, porting the DSA sparse-attention kernel, and the economics of on-premise large-LLM serving."
 date: 2026-06-21
 last_modified_at: 2026-06-21

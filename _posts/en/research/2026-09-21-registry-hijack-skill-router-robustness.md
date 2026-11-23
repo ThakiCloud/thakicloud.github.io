@@ -1,6 +1,6 @@
 ---
-title: "When One Skill Description Hijacks the Routing of an Entire Registry: The Vulnerability and the Two Gates at Write Time"
-seo_title: "ThakiCloud Autonomous Paper Analysis: The Registry Hijack - In a 2,029-skill registry, the SKILL.md description is the only routing signal of the BM25+embedding hybrid router. Maliciously editing this one description, rewritten nightly by the machine, can hijack top-1 routing on the first query, while top-1 drops by about 49 points and Recall@5 moves only about 0.2 points. The vulnerability split between the lexical lane and the semantic lane, the loss of attenuation under rank-level fusion (RRF), the union of the two gates, the idf-weighted description set-difference and embedding drift, a full-registry scan cost under 0.15%, and a precise restore path - ThakiCloud"
+title: "Registry Hijack: One Skill Description Steals the Router"
+seo_title: "Registry Hijack: One Skill Description Steals the Router"
 seo_description: "The skill registry description is the only routing signal of the BM25+embedding hybrid router and an everyday writing target rewritten nightly by the machine. This paper covers the speed at which one malicious description hijacks top-1 routing, the vulnerability split between the lexical lane and the semantic lane, the cost at which two complementary gates separate the four attack conditions from benign variation (full-registry scan, under 0.15% of a night cycle), and the precise restore path."
 excerpt: "The skill description rewritten nightly by the machine is the router's only routing signal. When one sentence hijacks top-1 routing, the dashboard's Recall@5 moves only 0.2 points, and two gates catch every attack at a cost under 0.15% of a night cycle."
 date: 2026-09-21

@@ -1,7 +1,7 @@
 ---
-title: "NeMo QAT Complete Guide: Maximizing FP4 Model Accuracy Through Quantization-Aware Training"
+title: "NeMo QAT: Recovering FP4 Accuracy Through Training"
 excerpt: "Professional guide to minimizing accuracy loss during FP4 quantization using NVIDIA NeMo's Quantization-Aware Training. From practical implementation to optimization tips"
-seo_title: "NeMo QAT Guide - Quantization-Aware Training for FP4 Models"
+seo_title: "NeMo QAT: Recovering FP4 Accuracy Through Training"
 seo_description: "Master NVIDIA NeMo QAT for FP4 quantization with minimal accuracy loss. Complete guide covering implementation, optimization, and production deployment"
 date: 2025-06-01
 tags:

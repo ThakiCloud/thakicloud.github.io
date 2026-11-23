@@ -1,7 +1,7 @@
 ---
-title: "copyparty 기업 파일 서버 구축 완전 가이드 - 단일 파일로 시작하는 엔터프라이즈 파일 관리"
+title: "copyparty: 단일 파일로 시작하는 기업 파일 서버"
 excerpt: "8.6k 스타를 받은 copyparty로 구축하는 기업용 파일 서버. WebDAV, FTP, 중복제거, 미디어 인덱싱까지 모든 기능을 단일 파일로 실현하는 실용적인 가이드"
-seo_title: "copyparty 기업 파일서버 구축 가이드 - 포터블 파일관리 솔루션 - Thaki Cloud"
+seo_title: "copyparty: 단일 파일로 시작하는 기업 파일 서버"
 seo_description: "MIT 라이선스 copyparty로 구축하는 엔터프라이즈 파일 서버. WebDAV, FTP, TFTP, 중복제거, 미디어 인덱싱을 지원하는 완전한 기업용 파일 관리 시스템"
 date: 2025-08-15
 last_modified_at: 2025-08-15

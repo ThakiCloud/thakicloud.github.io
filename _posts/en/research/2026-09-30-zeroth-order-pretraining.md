@@ -1,7 +1,7 @@
 ---
-title: "Pretraining Transformers Without Backprop: What Two Zero-Order Papers Actually Measure"
+title: "Pretraining Transformers Without Backprop"
 excerpt: "A day after a Stanford CRFM researcher tweeted that they had found a way to pretrain transformers with zeroth-order optimization and no backprop, two zero-order papers landed on arXiv. One claims in-place OPT-30B training on a single A100; the other scales pretraining by sharding experts. A conservative reading, with only the verified numbers."
-seo_title: "Zero-Order Optimization, Pretraining Without Backprop (arXiv 2609.38095, 2609.37899) Analysis - ThakiCloud"
+seo_title: "Pretraining Transformers Without Backprop"
 seo_description: "A summary of two Stanford (Chaubard, Kochenderfer, Ré) zero-order optimization papers. In-place OPT-30B training on an A100, probe-space preconditioning, and expert sharding (SOMA) training efficiency. The changing memory budget, read from ThakiCloud ai-platform's GPU training perspective."
 date: 2026-09-30
 last_modified_at: 2026-09-30

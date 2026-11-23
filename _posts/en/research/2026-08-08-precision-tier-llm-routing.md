@@ -1,6 +1,6 @@
 ---
-title: "Serving Each Request at a Different Precision: How Precision-Tier Routing Cuts LLM Serving Cost"
-seo_title: "Cutting LLM Serving Cost with Precision-Tier Routing - H200 Quantization Precision Routing - ThakiCloud"
+title: "Precision-Tier Routing: Serving Each Request Differently"
+seo_title: "Precision-Tier Routing: Serving Each Request Differently"
 seo_description: "We introduce precision-tier routing, which serves the same checkpoint at three precisions, BF16, W4A16, and NVFP4, and allocates requests by difficulty. This ThakiCloud AI Research paper explains, through a Pareto-frontier formula, exactly when the savings are large and when they vanish to zero."
 excerpt: "Serve easy requests cheaply and hard requests expensively. Splitting the same checkpoint across three precisions can cut cost while holding accuracy steady."
 date: 2026-08-08

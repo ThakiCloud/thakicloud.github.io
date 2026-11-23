@@ -1,7 +1,7 @@
 ---
 title: "Earnings Up, Footprint Down: AI Is Starting to Buy Back the Work"
 excerpt: "Netflix cut 1,000 employees while net income rose 43.9%. Disney is moving legal work to AI agents, and Amazon is previewing an era of 6 to 8 models. The common question behind this week's earnings: what should companies prepare for when agents do the work?"
-seo_title: "Earnings Up, Footprint Down, AI Buys Back the Work | ThakiCloud Tech Blog"
+seo_title: "Earnings Up, Footprint Down: AI Is Starting to Buy Back the Work"
 seo_description: "Netflix and Disney layoffs, Microsoft Azure up 48%, Amazon's 6-to-8-model era, SAP Joule Work. This week's big-tech earnings and domestic infrastructure news, and the preparation task for companies in the agent era."
 date: 2026-10-30
 last_modified_at: 2026-10-30

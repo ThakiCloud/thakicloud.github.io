@@ -1,6 +1,6 @@
 ---
-title: "코딩 에이전트가 3D 씬을 직접 렌더링한다: Mirage Tesseract 설치부터 패스 트레이싱 실측까지"
-seo_title: "Mirage의 오픈소스 크리에이티브 CLI Tesseract 0.5.0을 macOS에 실제로 설치해 코딩 에이전트가 JSON 액션으로 3D 씬을 구성하고, 라스터와 GPU 패스 트레이서(16샘플) 렌더링 시간을 실측한 기록. 같은 씬에서 3.03초 대 6.85초, filmstrip 프레임당 0.19초 대 0.49초 - ThakiCloud"
+title: "3D 씬을 직접 렌더링하는 코딩 에이전트: Tesseract"
+seo_title: "3D 씬을 직접 렌더링하는 코딩 에이전트: Tesseract"
 seo_description: "2026년 11월 초 X에서 'Claude가 3D를 한다'는 트윗이 돌았지만, 도구 실체는 Mirage의 Tesseract CLI였다. v0.5.0 darwin-arm64 번들을 SHA-256 검증으로 설치하고, 공식 Scene3D 레시피로 카메라·태양·상자 두 개 씬을 JSON 액션 배치로 구성했다. preview 렌더는 라스터 3.03초, 패스 트레이서 16샘플 6.85초였고 filmstrip은 프레임당 0.19초 대 0.49초를 기록했다. 에이전트가 씬을 직접 조작하는 구조와 렌더러 선택 기준을 정리한다."
 excerpt: "코딩 에이전트가 3D 씬을 직접 조종하는 길이 열렸다. Mirage의 Tesseract CLI 0.5.0을 실제로 설치해 JSON 액션으로 씬을 구성하고, 라스터와 패스 트레이서 렌더링 시간을 MacBook에서 실측했다. 같은 씬에서 3.03초 대 6.85초. 모니터를 보는 감독처럼, 에이전트가 렌더 결과를 스스로 검토하는 루프가 핵심이다."
 date: 2026-11-05

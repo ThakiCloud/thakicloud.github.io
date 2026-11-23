@@ -1,6 +1,6 @@
 ---
 title: "Decision Models Learn Too: Fine-tuning d1-3B with TRL and Unsloth"
-seo_title: "A hands-on reproduction of Liquid AI's two d1-3B decision-model fine-tuning notebooks (TRL, Unsloth) on Apple Silicon. SFT where the completion is a single token, case-level data hygiene, measured LoRA 24.46M trainable parameters, baseline 83.0 percent on Banking77, and the commercial terms of the LFM Open License. - ThakiCloud"
+seo_title: "Decision Models Learn Too: Fine-tuning d1-3B with TRL and Unsloth"
 seo_description: "Decision-model fine-tuning in practice: d1-3B's System One API and answer-slot mechanism, the TRL vs Unsloth notebooks, case-level dedup and option-list randomization, Apple Silicon measurements, and the LFM Open License commercial threshold."
 excerpt: "Instead of generating text like an LLM, a decision model outputs a verdict with probabilities. We reproduced Liquid AI's d1-3B fine-tuning notebooks on Apple Silicon. What decides quality is not the framework but three data-hygiene steps."
 date: 2026-10-19

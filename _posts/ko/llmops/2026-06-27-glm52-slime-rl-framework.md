@@ -1,7 +1,7 @@
 ---
 title: "GLM-5.2를 만든 오픈소스 RL 프레임워크 slime 뜯어보기"
 excerpt: "Z.ai의 1M 컨텍스트 오픈웨이트 모델 GLM-5.2의 후처리 학습을 떠받친 비동기 강화학습 인프라 slime이 완전 오픈소스로 공개되었습니다. Megatron 학습과 SGLang 롤아웃을 Data Buffer로 잇는 3-컴포넌트 구조, colocated/disaggregated 두 실행 모드, 멀티턴 에이전트 RL 설계를 ThakiCloud의 K8s·Kueue GPU 서빙 관점에서 정리합니다."
-seo_title: "GLM-5.2 RL 프레임워크 slime 분석 Megatron SGLang 후처리 학습 - Thaki Cloud"
+seo_title: "GLM-5.2를 만든 오픈소스 RL 프레임워크 slime 뜯어보기"
 seo_description: "THUDM slime(SGLang-native RL post-training framework)의 Training/Rollout/Data Buffer 3-컴포넌트 구조, colocated·disaggregated 모드, 멀티턴 에이전트 RL 설계, GLM-5.x 검증 사례를 ThakiCloud K8s 기반 멀티테넌트 GPU 운영 관점에서 분석합니다."
 date: 2026-06-27
 last_modified_at: 2026-06-27

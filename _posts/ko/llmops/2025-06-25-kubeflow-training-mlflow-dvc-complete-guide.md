@@ -1,5 +1,5 @@
 ---
-title: "Kubeflow Training Operator로 분산 ML 학습하기 - MLflow, MinIO, DVC 통합 가이드"
+title: "Kubeflow Training Operator로 분산 ML 학습하기"
 excerpt: "OrbStack 환경에서 Kubeflow Training Operator와 MLflow, MinIO, DVC를 통합하여 완전한 MLOps 파이프라인을 구축하고 분산 모델 학습을 수행하는 방법을 알아봅니다."
 date: 2025-06-25
 tags: 

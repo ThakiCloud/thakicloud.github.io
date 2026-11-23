@@ -1,7 +1,7 @@
 ---
 title: "62 in the Badge, 63 in the Tree, 22 in the Architecture Diagram"
 excerpt: "claude-ops promises to turn Claude Code into a business operating system. We counted its skills ourselves and got a different number from every document, and that disagreement turned out to say more about agent harnesses than the feature list did."
-seo_title: "Reading claude-ops: the agent harness bottleneck is skill routing and safety gates, not the model"
+seo_title: "62 in the Badge, 63 in the Tree, 22 in the Architecture Diagram"
 seo_description: "We counted the skills and agents in the MIT-licensed Claude Code plugin claude-ops directly from the git tree, compared the result against every number its own docs claim, and weighed the few-thick-skills design against the many-thin-skills harness we run."
 date: 2026-08-11
 last_modified_at: 2026-08-11

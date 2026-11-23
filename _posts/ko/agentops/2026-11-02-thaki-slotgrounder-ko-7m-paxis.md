@@ -1,6 +1,6 @@
 ---
-title: "확신과 근거는 다릅니다: 구조화 명령의 근거를 따지는 7M 모델, Thaki-SlotGrounder-KO-7M"
-seo_title: "Thaki-SlotGrounder-KO-7M - 에이전트 명령 제안을 원문 근거로 거절하는 한국어 검증 모델과 Paxis | ThakiCloud"
+title: "Thaki-SlotGrounder-KO: 확신은 근거가 아니다"
+seo_title: "Thaki-SlotGrounder-KO: 확신은 근거가 아니다"
 seo_description: "파라미터 7,461,060개의 한국어 모델이 송금·삭제 같은 구조화 명령 제안을 필드별로 원문과 대조해 근거가 약하면 거절합니다. 합성 봉인 테스트에서 통과한 틀린 제안이 28건에서 2건으로 줄었고 coverage는 11~16%p 떨어졌습니다. 모델이 놓친 금액 경계 오류를 결정론 검증기로 막은 과정도 정리합니다."
 excerpt: "에이전트가 만든 명령 제안을 실행 전에 원문과 대조해 근거가 약한 것을 걸러 내는 작은 한국어 모델을 공개했습니다. 이 모델이 할 수 있는 일은 거절 하나뿐입니다."
 date: 2026-11-02

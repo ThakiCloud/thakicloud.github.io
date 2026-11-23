@@ -1,6 +1,6 @@
 ---
-title: "The Culling Dividend: 자기 진화형 2,200-skill 레지스트리를 줄일 때, 어떤 스킬을 남기느냐가 얼마나 남기느냐보다 먼저 정밀도를 정하고 break-even은 운영 게이트가 결정합니다"
-seo_title: "The Culling Dividend: 자기 진화형 2,200-skill 에이전트 하네스에서 usage-ranked culling vs random down-sizing의 정밀도-유지 frontier와 break-even 게이트 논문 소개 (composition vs cardinality, culling dividend, break-even depth K_be, binding gate, near-Zipf, frozen factorial protocol) - ThakiCloud"
+title: "Culling Dividend: 어떤 스킬을 남기느냐가 먼저다"
+seo_title: "Culling Dividend: 어떤 스킬을 남기느냐가 먼저다"
 seo_description: "스킬 라이프사이클 연구는 진입(side, mint frontier), 크기(selection break-even), 생존자(survivor economics)에는 가격을 매겼지만 퇴출(exit)에는 한 번도 매기지 않았습니다. 이 분석 논문은 자기 진화형 2,200-skill 레지스트리에서 같은 최종 크기로 usage-ranked culling(적게 쓰인 것부터 제거)과 random down-sizing(같은 개수 무작위 제거)을 통제 실험으로 비교합니다. 회수 정밀도를 coverage x discrimination으로 분해하고, culling arm이 모든 ladder 크기에서 random arm을 weakly 지배함을 보여 줍니다(composition dividend ΔK(β) ≥ 0). 사전 등록된 가격비 밴드 ρ ∈ [0.5, 10^3] 전체에서 경제적 break-even depth K_be는 100 스킬 미만(최대 99.94, ρ = 10^3, κ = 0.9)으로 운영 정밀도-유지 게이트(K* ≥ 220) 아래에 머물므로 게이트가 culling 깊이를 바인딩합니다. 동결 팩토리얼 측정 프로토콜과 반증 조건 F1-F6을 함께 둡니다."
 excerpt: "스킬을 줄일 때 회수 정밀도를 가르는 변수는 얼마나 남기느냐가 아니라 어떤 스킬이 남느냐입니다. usage-ranked culling은 무작위 축소가 유지해야 하는 레지스트리 크기의 dividend를 남깁니다. 사전 등록된 가격밴드 전체에서 경제적 break-even은 운영 정밀도 게이트 아래에 머뭅니다. 깎는 깊이를 정하는 것은 게이트입니다."
 date: 2026-10-24

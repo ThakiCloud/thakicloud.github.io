@@ -1,7 +1,7 @@
 ---
 title: "Overrun Is the Default, Not the Exception"
 excerpt: "Your estimates come in 1.5 to 2 times low not because you are dishonest or under-skilled, but because of how the number is produced. This piece argues the four-step process end to end: outside view, named buffers, checkpoint re-estimation, and a personal estimation log, which you can run on your very next quote."
-seo_title: "Project Estimation in Practice: Why Estimates Come in Low and the Four-Step Fix"
+seo_title: "Overrun Is the Default, Not the Exception"
 seo_description: "Why low estimates are a process problem rather than an honesty problem, and the four-step discipline to fix them: reference class, named buffers, checkpoint re-estimation, and an estimation log that grows into your own correction factor."
 date: 2026-08-31
 last_modified_at: 2026-08-31

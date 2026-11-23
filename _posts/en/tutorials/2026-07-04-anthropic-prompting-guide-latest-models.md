@@ -1,5 +1,5 @@
 ---
-title: "Reading Anthropic's Prompting Guide: Model-Specific Strategy for Fable 5, Sonnet 5, and Opus 4.8"
+title: "Anthropic's Prompting Guide: Fable 5, Sonnet 5, Opus 4.8"
 excerpt: "We work through Anthropic's official guide to prompting best practices for the latest models. Model differences, the core techniques (clarity, examples, XML, chain of thought, roles, chaining, extended thinking), and migration. We connect it to how ThakiCloud hardens prompts into contracts inside the Paxis skill harness."
 tags:
   - prompt-engineering

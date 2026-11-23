@@ -1,6 +1,6 @@
 ---
-title: "Is 4-Bit Safe for Tool Calls: Pricing the Precision Cliff of Agentic Structured Output"
-seo_title: "The Tool-Call Cliff paper analysis - the precision cliff where low-bit quantization hits unattended agent tool-call accuracy faster than prose on self-hosted H200 serving, the accuracy tax and cliff ratio definitions, the structured decode stage amplification model, falsifiable predictions P1/P2, the 4-bit break-even and task-type precision routing, the four-arm falsification criteria R1-R4 measurement design - ThakiCloud"
+title: "Is 4-Bit Safe for Tool Calls? The Precision Cliff"
+seo_title: "Is 4-Bit Safe for Tool Calls? The Precision Cliff"
 seo_description: "When unattended agent fleets run on 4-bit checkpoints, the precision tier, the cheapest cost lever, can be harsher on tool calls than on prose. This paper defines that gap with the accuracy tax and the cliff ratio and predicts the 4-bit cliff from margin concentration and noise amplification in the structured decode stage. The measured 4-bit baseline of 800 cases (89.6% overall) already matches the predicted failure composition, and the 1:2:4 cost ratio decides the break-even inequality between a unified 4-bit fleet and 2-tier task-type routing."
 excerpt: "4-bit quantization cuts serving costs for sure. But the structured calls an unattended agent emits can break faster than free prose at the same low precision. This paper defines that gap with the accuracy tax and the cliff ratio and aligns the location of the 4-bit cliff with H200 serving costs. If the cliff exists, 2-tier routing that runs calls at a higher precision wins; if not, a unified 4-bit fleet is the answer."
 date: 2026-09-17

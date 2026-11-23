@@ -1,7 +1,7 @@
 ---
-title: "LLaMA Factory: The Unified LLM Framework That Fine-Tunes 100+ Models with a Single Line of Code"
+title: "LLaMA Factory: One Framework for Fine-Tuning 100+ LLMs"
 excerpt: "Fine-tune Llama 3, Qwen 3, DeepSeek, and 100+ cutting-edge LLMs effortlessly. An open-source framework integrating LoRA/QLoRA, FSDP, Flash-Attention 2, and the latest techniques"
-seo_title: "LLaMA Factory - Complete Guide to Unified LLM Fine-Tuning Framework"
+seo_title: "LLaMA Factory: One Framework for Fine-Tuning 100+ LLMs"
 seo_description: "Master LLaMA Factory, the comprehensive framework for fine-tuning 100+ LLMs including Llama 3, Qwen 3, DeepSeek with LoRA, QLoRA, and advanced optimization techniques"
 date: 2025-05-28
 tags:

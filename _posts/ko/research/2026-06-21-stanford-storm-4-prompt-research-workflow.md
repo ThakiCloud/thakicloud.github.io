@@ -1,7 +1,7 @@
 ---
-title: "STORM 방법론으로 박사급 리서치를 자동화하기: 4단계 지식 큐레이션 워크플로"
+title: "STORM 방법론으로 자동화하는 박사급 리서치"
 excerpt: "스탠퍼드 OVAL 연구실의 STORM은 질문을 던지고, 다관점으로 조사하고, 개요를 잡고, 인용이 달린 보고서를 생성하는 LLM 지식 큐레이션 시스템입니다. 이 방법론을 4프롬프트 워크플로로 옮긴 사례와 ThakiCloud 멀티에이전트 지식노동 관점을 정리합니다."
-seo_title: "Stanford STORM 리서치 자동화 워크플로 분석 - Thaki Cloud"
+seo_title: "STORM 방법론으로 자동화하는 박사급 리서치"
 seo_description: "STORM(NAACL 2024) 지식 큐레이션 방법론을 4단계 프롬프트 워크플로로 구현하는 방법과 멀티에이전트 리서치 파이프라인 적용 관점"
 date: 2026-06-21
 last_modified_at: 2026-06-21

@@ -1,7 +1,7 @@
 ---
-title: "Harness Design and Post-Training Aren't Separable: Harness-Aware Post-Training and LLM Agent Performance"
+title: "Harness-Aware Post-Training: Harness and Model Together"
 excerpt: "Tool-using LLM agents run on top of a harness that wraps the model. A recent arXiv paper shows empirically that treating harness design and post-training as separate concerns breaks performance, especially when the tool environment shifts. We unpack this result through the lens of treating the harness as a first-class resource."
-seo_title: "The Interplay of Harness Design and Post-Training in LLM Agents - Thaki Cloud"
+seo_title: "Harness-Aware Post-Training: Harness and Model Together"
 seo_description: "A summary of The Interplay of Harness Design and Post-Training in LLM Agents (arXiv:2606.25447). We interpret the finding that harness informativeness lifts both zero-shot and post-trained performance, and that only harness-aware post-training generalizes robustly under tool environment shifts (OOD), through the lens of an agent-native cloud and inference/training infrastructure."
 date: 2026-07-20
 last_modified_at: 2026-07-20

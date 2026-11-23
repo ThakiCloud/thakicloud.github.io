@@ -1,7 +1,7 @@
 ---
-title: "BillionMail 완벽 가이드: 오픈소스 메일서버 & 이메일 마케팅 플랫폼 구축하기"
+title: "BillionMail: 오픈소스 메일 마케팅 플랫폼"
 excerpt: "GitHub 8.1k 스타를 받은 완전 자체 호스팅 가능한 오픈소스 이메일 마케팅 플랫폼 BillionMail 설치부터 운영까지"
-seo_title: "BillionMail 완벽 가이드 - 오픈소스 이메일 마케팅 플랫폼 - Thaki Cloud"
+seo_title: "BillionMail: 오픈소스 메일 마케팅 플랫폼"
 seo_description: "BillionMail 설치, 설정, 도메인 연결, 이메일 캠페인 생성까지 완전 자체 호스팅 이메일 마케팅 플랫폼 구축 가이드"
 date: 2025-07-28
 last_modified_at: 2025-07-28

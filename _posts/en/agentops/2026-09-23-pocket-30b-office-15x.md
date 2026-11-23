@@ -1,7 +1,7 @@
 ---
 title: "30B in the Pocket, 15x in the Office"
 excerpt: "Qualcomm puts a 30B-class MoE model on a smartphone, and enterprise agents grew 15x in a year. Agents are flowing in two directions, and the line between them is not size but trust."
-seo_title: "30B in the Pocket, 15x in the Office: the line that divides agents is trust, not size"
+seo_title: "30B in the Pocket, 15x in the Office"
 seo_description: "Qualcomm's 2nm dual Elite and a 30B-class MoE on device, MS365 agents up 15x, HBM4 pricing observed at +65%. The two diverging flows of pocket and office, and the enterprise governance question of which work runs where."
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/pocket-30b-office-15x/"

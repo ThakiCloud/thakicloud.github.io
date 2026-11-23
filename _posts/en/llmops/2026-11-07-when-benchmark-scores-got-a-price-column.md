@@ -1,7 +1,7 @@
 ---
 title: "The Morning a Price Column Appeared Next to Benchmark Scores"
 excerpt: "A small open-weight model that scored 81.7%, the open-weight high on the ARC Prize verification test, costs 27 cents per inference task. That same morning, Google was planning a 2.7 gigawatt campus and Anthropic was pressing an IPO of up to $100 billion. Now that intelligence is traded per task, the structure of enterprise AI budgets is shifting."
-seo_title: "27 Cents per Inference Task: The Morning Intelligence Got a Price Per Unit | ThakiCloud"
+seo_title: "The Morning a Price Column Appeared Next to Benchmark Scores"
 seo_description: "Inkling 2 Small set the open-weight high of 81.7% on ARC-AGI-2 at 27 cents per task. Google's 2.7 GW campus, Anthropic's IPO of up to $100 billion, and Microsoft scaling back its lease. As intelligence is traded per unit, enterprise AI budgets and execution structures are changing."
 date: 2026-11-07
 last_modified_at: 2026-11-07

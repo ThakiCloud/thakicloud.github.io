@@ -1,7 +1,7 @@
 ---
-title: "GPU 클러스터 운영비 최적화: Kueue 페어셰어 + Gang Scheduling + Scale-to-Zero"
+title: "GPU 클러스터 운영비: Kueue 스케줄링으로 줄이기"
 excerpt: "1,000 GPU 클러스터에서 연간 최대 수천만 달러를 낭비하는 세 가지 병목 지점을 K8s 네이티브 스케줄링으로 회수하는 방법을 설명합니다."
-seo_title: "GPU 클러스터 비용 최적화: Kueue 페어셰어, Gang Scheduling, Scale-to-Zero - Thaki Cloud"
+seo_title: "GPU 클러스터 운영비: Kueue 스케줄링으로 줄이기"
 seo_description: "Kueue GPU 스케줄링과 vLLM Scale-to-Zero를 활용해 GPU 유휴 비용을 30~50% 절감하는 K8s 네이티브 아키텍처를 ThakiCloud 운용 관점으로 설명합니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22

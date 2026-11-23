@@ -1,7 +1,7 @@
 ---
-title: "Pepper: Building a Proactive AI Assistant with Real-Time Event-Driven Architecture"
+title: "Pepper: A Proactive AI Assistant on Event-Driven Design"
 excerpt: "A comprehensive guide to setting up and using Pepper, an open-source personal AI assistant that proactively manages your Gmail, summarizes important emails, and autonomously handles tasks in the background using event-driven architecture."
-seo_title: "Pepper AI Assistant Tutorial: Real-Time Event-Driven Personal Assistant - Thaki Cloud"
+seo_title: "Pepper: A Proactive AI Assistant on Event-Driven Design"
 seo_description: "Learn how to set up Pepper, a proactive AI assistant from Berkeley Sky Computing Lab. Complete guide covering installation, Gmail integration, and event-driven architecture with Feeds, Scheduler, and Workers."
 date: 2025-10-04
 tags:

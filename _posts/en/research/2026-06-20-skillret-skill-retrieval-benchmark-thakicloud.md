@@ -1,5 +1,5 @@
 ---
-title: "SkillRet: ThakiCloud Sets the Retrieval Standard for Agents Managing Thousands of Skills"
+title: "SkillRet: A Retrieval Benchmark for Thousands of Skills"
 excerpt: "When LLM agents operate with thousands of reusable skills, accurate skill retrieval becomes the bottleneck. We introduce SkillRet, a large-scale benchmark ThakiCloud researched and released in full under Apache-2.0."
 date: 2026-06-20
 last_modified_at: 2026-06-20

@@ -1,7 +1,7 @@
 ---
 title: "Mirai Labs의 uzu, Apple Silicon에서 llama.cpp보다 4배 빠른 로컬 LLM 추론"
 excerpt: "Rust로 쓴 오픈소스 인퍼런스 엔진 uzu는 패스당 토큰을 7.5개씩 내면서 메모리 대역폭 상한을 넘습니다. base M5 MacBook 16GB에서 Qwen3.5 9B를 llama.cpp 22.0 t/s, MLX 25.1 t/s에 비해 92.1 t/s로 돌린 공식 벤치마크와 그 메커니즘을 정리했습니다."
-seo_title: "Mirai Labs uzu, Apple Silicon에서 llama.cpp보다 4배 빠른 로컬 LLM 인퍼런스 엔진 | ThakiCloud"
+seo_title: "Mirai Labs의 uzu, Apple Silicon에서 llama.cpp보다 4배 빠른 로컬 LLM 추론"
 seo_description: "uzu(DFlash+Weaver 트리 추측 디코딩) 해부: M5 16GB에서 Qwen3.5 9B 92.1 t/s, llama.cpp 22.0, MLX 25.1. Rust+Metal, MIT, OpenAI 호환 서버, 4-bit 체크포인트. 공식 발표 수치 기준."
 date: 2026-10-29
 last_modified_at: 2026-10-29

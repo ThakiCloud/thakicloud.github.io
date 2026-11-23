@@ -1,6 +1,6 @@
 ---
-title: "What BLT's 'Killing the Tokenizer' Actually Means: Meta's Byte-Level LLM, Verified With Numbers"
-seo_title: "BLT (Byte Latent Transformer) tokenizer-free byte-level LLM, entropy-based dynamic patches, inference efficiency, Fast BLT, Meta FAIR, ThakiCloud"
+title: "BLT: What Killing the Tokenizer Actually Means"
+seo_title: "BLT: What Killing the Tokenizer Actually Means"
 seo_description: "The October viral thread about Meta 'ending the LLM era' re-ignites an older line of work. We verify the BLT line against its papers, GitHub, and HF models. The real contribution is reallocating the unit of computation by information density, not removing tokens. A lightweight simulation in our venv gives, for a 475-byte sample, 475 raw bytes, 328 chars, 179 BPE tokens, and 90 dynamic patches."
 excerpt: "More important than 'killing the tokenizer' is where the unit of computation goes. BLT makes predictable regions long and complex regions fine-grained, cutting transformer steps. We simulated that principle in our venv and measured it."
 date: 2026-10-23

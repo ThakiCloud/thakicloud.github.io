@@ -1,7 +1,7 @@
 ---
-title: "Google's Revolutionary Liquid Cooling Technology at Hot Chips 2025: Transforming Datacenter Thermal Management"
+title: "Google's Liquid Cooling at Hot Chips 2025"
 excerpt: "Google showcases datacenter-scale liquid cooling innovation at Hot Chips 2025, revealing how water-based cooling systems deliver 4000x better thermal conductivity than air while reducing cooling power consumption by 95%."
-seo_title: "Google Liquid Cooling Technology Hot Chips 2025 Datacenter Innovation - Thaki Cloud"
+seo_title: "Google's Liquid Cooling at Hot Chips 2025"
 seo_description: "Explore Google's groundbreaking liquid cooling technology presented at Hot Chips 2025, featuring TPU cooling systems, maintenance protocols, and implications for GPU cloud services."
 date: 2025-08-26
 tags:

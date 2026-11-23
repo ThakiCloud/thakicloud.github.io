@@ -1,7 +1,7 @@
 ---
 title: "DocuSeal: Complete Tutorial for Open Source Document Signing Platform"
 excerpt: "Learn how to set up and use DocuSeal, the open-source alternative to DocuSign. This comprehensive tutorial covers Docker installation, PDF form creation, and digital signature workflows."
-seo_title: "DocuSeal Tutorial: Open Source Document Signing Platform Guide - Thaki Cloud"
+seo_title: "DocuSeal: Complete Tutorial for Open Source Document Signing Platform"
 seo_description: "Complete DocuSeal tutorial covering installation, setup, and usage. Learn to create PDF forms, manage digital signatures, and integrate this open-source DocuSign alternative."
 date: 2025-09-28
 tags:

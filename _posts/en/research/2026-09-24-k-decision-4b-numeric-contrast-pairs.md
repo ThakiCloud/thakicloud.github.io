@@ -1,6 +1,6 @@
 ---
-title: "Teaching a 4B Model to Judge Numbers in Korean Statutes: Contrast Pairs Whose Answers Code Computes"
-seo_title: "ThakiCloud K-Decision 4B: how a Korean typed-decision model learned numeric reasoning from 6,000 code-computed contrast pairs, and what a sealed evaluation gate found - ThakiCloud"
+title: "Teaching a 4B Model Numbers in Korean Statutes"
+seo_title: "Teaching a 4B Model Numbers in Korean Statutes"
 seo_description: "K-Decision is a 4B Korean typed-decision model that reads a statute excerpt and a question and outputs calibrated probabilities instead of text. Adding 6,000 contrast pairs whose gold answers are computed by code raised sealed-evaluation accuracy by 13.8 points; the gap between arms that survives is in numeric questions. For engineers training domain decision models on small GPUs."
 excerpt: "Adding 6,000 contrast pairs whose gold answers are computed by code, not labeled by a person or another model, raised accuracy sharply on exactly the questions that ask about numbers. Every other question type was already saturated."
 date: 2026-09-24

@@ -1,7 +1,7 @@
 ---
-title: "Claude Code가 영상을 봅니다: /watch로 프레임·전사를 에이전트에 주입하는 claude-video"
+title: "claude-video: Claude Code가 /watch로 영상을 본다"
 excerpt: "코딩 에이전트는 오랫동안 텍스트만 읽어 왔습니다. claude-video는 yt-dlp·ffmpeg·Whisper를 얇게 엮어, 유튜브·Zoom·Loom·로컬 파일을 프레임 이미지와 타임스탬프 전사로 바꿔 Claude의 멀티모달 Read 컨텍스트에 넣습니다. GitHub 5,400개 넘는 스타를 받은 이 오픈소스 스킬의 실제 설치·사용법과 내부 동작(자막 우선, 3단계 프레임 추출, 중복 제거, 전사 폴백)을 뜯어보고, ThakiCloud의 Agent-Native Cloud인 Paxis 스킬 하네스와 ai-platform 서빙 관점에서 어떤 의미인지 정리합니다."
-seo_title: "claude-video: Claude Code로 영상을 보는 /watch 스킬 분석 - Thaki Cloud"
+seo_title: "claude-video: Claude Code가 /watch로 영상을 본다"
 seo_description: "claude-video(bradautomates)의 /watch 스킬을 분석합니다. yt-dlp 자막 우선, ffmpeg 3단계 프레임 추출, 16x16 그레이스케일 중복 제거, Whisper(Groq large-v3·OpenAI 폴백) 전사를 Claude 멀티모달 Read로 주입하는 구조와 ThakiCloud Paxis·ai-platform 적용 시사점을 다룹니다."
 date: 2026-07-13
 last_modified_at: 2026-07-13

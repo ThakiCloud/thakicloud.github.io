@@ -1,7 +1,7 @@
 ---
-title: "모델이 아니라 게이트가 결과를 만듭니다: 보안 연구용 LLM 하네스 여섯 개를 뜯어봤습니다"
+title: "결과를 만드는 건 게이트: 보안 LLM 하네스 여섯 개 비교"
 excerpt: "취약점 헌팅에 LLM을 붙이면 대부분 그럴듯한 오탐이 쏟아집니다. 공개된 보안 하네스 여섯 개를 나란히 놓고 보면 쓸 만한 출력을 만드는 것은 모델 등급이 아니라 단계 분리와 반증 게이트라는 공통 구조가 드러납니다."
-seo_title: "보안 연구용 LLM 하네스 비교: RAPTOR, Anthropic, audit, VVAH, harness-kit"
+seo_title: "결과를 만드는 건 게이트: 보안 LLM 하네스 여섯 개 비교"
 seo_description: "ZephrFish의 harness-kit을 포함해 공개된 LLM 보안 연구 하네스 여섯 개의 단계 구성, 검증 게이트, 컨텍스트 예산, 모델 라우팅 설계를 비교하고 에이전트 플랫폼 관점의 시사점을 정리했습니다."
 date: 2026-08-09
 last_modified_at: 2026-08-09

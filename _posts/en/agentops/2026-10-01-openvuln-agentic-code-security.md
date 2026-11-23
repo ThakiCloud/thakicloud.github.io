@@ -1,7 +1,7 @@
 ---
 title: "The Open-Weight That Finishes the Security Review Alone"
 excerpt: "Z.ai's open-weight GLM-5.3 powers OpenVuln, which has surfaced 4,249 potential vulnerabilities across 389 open-source projects. The moment the 'finder' stops being a person and becomes an agent, security review stops being a feature and starts being an operating cost."
-seo_title: "OpenVuln and GLM-5.3: An Agent That Digs Through Code and Finds Vulnerabilities"
+seo_title: "The Open-Weight That Finishes the Security Review Alone"
 seo_description: "OpenVuln, built on the open-weight GLM-5.3, has detected 4,249 potential vulnerabilities across 389 open-source projects. From ThakiCloud Paxis's perspective, why isolation, policy gates, and audit logs become prerequisites once an agent does the review."
 date: 2026-10-01
 last_modified_at: 2026-10-01

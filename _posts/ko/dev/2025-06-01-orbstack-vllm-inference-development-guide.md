@@ -1,5 +1,5 @@
 ---
-title: "OrbStack으로 시작하는 vLLM 추론 서비스 개발 - 신입 개발자를 위한 완벽 가이드"
+title: "OrbStack으로 시작하는 vLLM 추론 서비스 개발"
 date: 2025-06-01
 tags: 
   - orbstack

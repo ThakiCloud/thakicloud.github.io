@@ -1,7 +1,7 @@
 ---
 title: "The 33B agent model built by a job platform, Nanbeige4.3-33B"
 excerpt: "Nanbeige LLM Lab of BOSS Zhipin released Nanbeige4.3-33B, a 33B dense model, under Apache 2.0. We re-computed their self-reported table, leading 17 of 20 agentic benchmarks, from the config.json we received and verified it."
-seo_title: "Nanbeige4.3-33B Released: A 30B-Class Open Agent Model and the Teacher-Distillation Strategy | ThakiCloud Tech Blog"
+seo_title: "The 33B agent model built by a job platform, Nanbeige4.3-33B"
 seo_description: "33B dense, 512K context, Apache 2.0. We verify the self-reported Terminal-Bench 2.1 score of 80.9 with independent config.json-based computation and analyze serving practicality and the teacher-distillation strategy."
 date: 2026-10-26
 last_modified_at: 2026-10-26

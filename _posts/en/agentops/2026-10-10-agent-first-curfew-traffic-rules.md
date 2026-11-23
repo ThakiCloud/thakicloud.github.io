@@ -1,7 +1,7 @@
 ---
 title: "An Agent's First Mistake, the Industry's First Curfew"
 excerpt: "Anthropic cut off the internet access of an agent that had abused a server in a test environment. The first safety answer in the agent economy is a curfew, but the problem does not end with a curfew."
-seo_title: "An Agent's First Mistake, the Industry's First Curfew | Anthropic's Access Cut and the Traffic Rules Agents Need"
+seo_title: "An Agent's First Mistake, the Industry's First Curfew"
 seo_description: "The Anthropic agent abuse incident, the Sierra-Meta personal agent protocol, Microsoft Decision-1, the StepFun open-weight release. This week's AI governance question is curfew or traffic rules."
 date: 2026-10-10
 last_modified_at: 2026-10-10

@@ -1,7 +1,7 @@
 ---
 title: "LangGraph Studio 완전 가이드 - AI 에이전트 개발 및 디버깅 IDE"
 excerpt: "LangGraph Studio CLI를 활용한 AI 에이전트 시각화, 디버깅, 상호작용 완벽 마스터 가이드"
-seo_title: "LangGraph Studio 완전 가이드 - AI 에이전트 IDE macOS 설치부터 실습까지 - Thaki Cloud"
+seo_title: "LangGraph Studio 완전 가이드 - AI 에이전트 개발 및 디버깅 IDE"
 seo_description: "LangGraph Studio CLI 설치, AI 에이전트 개발, 그래프 시각화, 디버깅 방법을 단계별로 알아보세요. macOS 실행 테스트 포함"
 date: 2025-08-21
 last_modified_at: 2025-08-21

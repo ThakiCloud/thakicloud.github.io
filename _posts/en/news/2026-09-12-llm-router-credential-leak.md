@@ -1,6 +1,6 @@
 ---
 title: "The LLM Router Kept the Prompts: Credential Leaks Inside a 6TB Dump"
-seo_title: "Security researcher claims 19 companies and 7 government agencies' SSH and cloud keys were exposed in a 6TB dataset bought from a China-based LLM router, changing how agent secrets and LLM middlemen should be audited - ThakiCloud"
+seo_title: "The LLM Router Kept the Prompts: Credential Leaks Inside a 6TB Dump"
 seo_description: "Chaofan Shou of Fuzzland bought a 6TB dataset from a top China-based LLM router and says it contains SSH keys, VPN configs, Aliyun credentials, and GitLab tokens that could compromise 19 companies and 7 government agencies. We separate what is confirmed from what is still a claim, and lay out the design implications for agent secret management."
 excerpt: "When an agent puts credentials in the prompt and the request flows through an LLM router, the router's full logs become the leak path. A security researcher claims a 6TB dump bought from a China-based router contained the keys of 19 companies and 7 government agencies. Here is what is verified, what is not, and what it means for serving design."
 date: 2026-09-12

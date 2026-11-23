@@ -1,6 +1,6 @@
 ---
-title: "320 Seconds for One Embedding, and the Model Was Not the Cause: An 8-Core cgroup Meets the llama.cpp Thread Pool"
-seo_title: "Why llama.cpp embeddings took over 300 seconds in a container. The os.cpu_count 256 vs cgroup 8-core mismatch, the unset n_threads_batch, and a 7000x gap confirmed by separate-arm measurement - ThakiCloud"
+title: "320 Seconds per Embedding: Blame the Thread Pool, Not the Model"
+seo_title: "320 Seconds per Embedding: Blame the Thread Pool, Not the Model"
 seo_description: "In a Kubernetes pod, GGUF Q4_1 inference for a 0.6B embedding model took 298 to 353 seconds per call. The clue was a latency that stayed constant regardless of token count. The cause was that llama.cpp sized the thread pool for the prompt-evaluation path from the host's 256 cores because no separate thread count was set. This post covers how the OpenMP hypothesis and the batch-padding hypothesis were each refuted, and the code that reads the available cores in a container and sets threads explicitly."
 excerpt: "If 8 tokens and 16 tokens both take the same 320 seconds, the model is not slow, the threads are fighting. The cgroup grants 8 cores, but the library sized its pool from the host's 256, and adding one n_threads_batch line brought the same file back to 0.04 seconds."
 date: 2026-10-17

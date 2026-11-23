@@ -1,7 +1,7 @@
 ---
-title: "Keep 완벽 가이드 - 오픈소스 AIOps 및 알림 관리 플랫폼으로 모니터링 자동화하기"
+title: "Keep: 오픈소스 AIOps 알림 관리 플랫폼"
 excerpt: "Keep 오픈소스 AIOps 플랫폼을 활용한 알림 관리 자동화 방법을 알아보고, 워크플로우 기반 모니터링 도구 통합 가이드를 제공합니다."
-seo_title: "Keep AIOps 플랫폼 완벽 가이드 - 알림 관리 자동화 - Thaki Cloud"
+seo_title: "Keep: 오픈소스 AIOps 알림 관리 플랫폼"
 seo_description: "Keep 오픈소스 AIOps 플랫폼으로 알림 관리를 자동화하는 방법과 워크플로우 기반 모니터링 도구 통합 방법을 상세히 알아보세요."
 date: 2025-07-04
 last_modified_at: 2025-07-04

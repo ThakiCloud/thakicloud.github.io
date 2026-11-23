@@ -1,6 +1,6 @@
 ---
-title: "Releasing a Korean LoRA for Nemotron 3.5 Transcribe: How We Fine-Tuned a 30B Speech Recognition Model"
-seo_title: "Korean LoRA Fine-Tuning for Nemotron 3.5 Transcribe 30B with Guarded Decoding - Thaki-KSpeech Release | ThakiCloud"
+title: "A Korean LoRA for Nemotron 3.5 Transcribe: How We Tuned It"
+seo_title: "A Korean LoRA for Nemotron 3.5 Transcribe: How We Tuned It"
 seo_description: "We released a Korean LoRA adapter for NVIDIA Nemotron 3.5 Transcribe 30B-A4B. Why two training runs failed their release gates, how the guarded-dg-v1 decoding guard stops repetition loops, same-pipeline Korean evaluation, how to reproduce it, and its limits."
 excerpt: "We trained and released a Korean LoRA for a 30B speech recognition model. What got it through the release gates was not only the training recipe but a decoding guard that stops the model when it cannot stop itself, and refuses to count those segments as transcribed."
 date: 2026-11-07

@@ -1,7 +1,7 @@
 ---
 title: "The Omni Model Doesn't Get a Seat Next to the Video Model"
 excerpt: "We gave an omni model and a specialist pipeline the same waveform on one H200 and measured them side by side. The omni model cut transcription error by 1.34 percentage points, but it used seventeen times the VRAM, and putting it next to the video model fills 93.2% of the card."
-seo_title: "Omni Model vs Specialist Pipeline on H200: 17x VRAM for 1.34 Points of Accuracy"
+seo_title: "The Omni Model Doesn't Get a Seat Next to the Video Model"
 seo_description: "We gave Qwen3-Omni-30B-A3B and Qwen3-ASR-1.7B the same Korean waveform and measured latency, resident VRAM, and character error rate directly on a single NVIDIA H200. We also work out whether either one can share a card with the Wan2.2 video model."
 date: 2026-08-09
 last_modified_at: 2026-08-09

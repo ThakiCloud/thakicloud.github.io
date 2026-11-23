@@ -1,6 +1,6 @@
 ---
-title: "한국어·영어 OCR 893만 파라미터 모델을 학습량 3배로 늘리면 얼마나 좋아질까? ThakiOCR G2M-R2 공개"
-seo_title: "ThakiOCR-KOEN-G2M-R2 공개: 893만 파라미터 한국어·영어 줄 OCR을 4만 step에서 12만 step으로 이어 학습한 결과와 한계 | ThakiCloud"
+title: "ThakiOCR G2M-R2: 학습량 3배의 효과"
+seo_title: "ThakiOCR G2M-R2: 학습량 3배의 효과"
 seo_description: "ThakiOCR G2M-Preview 가중치에서 8만 step을 더 학습한 G2M-R2를 공개했습니다. 개발셋 7개 모두에서 CER이 내려갔지만 개선은 대부분 합성 줄에서 나왔고 실제 스캔 줄은 8.43%에서 8.37%로 거의 그대로였습니다. 짧은 실제 텍스트는 조금 나빠졌습니다."
 excerpt: "같은 8.93M 모델을 3배 오래 학습했습니다. 합성 줄 CER은 약 1%p씩 내려갔지만 실제 스캔 줄은 0.05%p만 움직였습니다. 무엇이 좋아졌고 무엇이 그대로인지 정리했습니다."
 date: 2026-11-15

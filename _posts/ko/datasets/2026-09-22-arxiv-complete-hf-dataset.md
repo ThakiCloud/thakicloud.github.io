@@ -1,6 +1,6 @@
 ---
-title: "arXiv 전체가 하나의 데이터셋으로: 315만 편, 전 버전, SHA-256 프로비넌스까지"
-seo_title: "secemp9가 Hugging Face에 arXiv 전체를 데이터셋으로 공개 - 3,148,796편, 모든 버전, LaTeX·PDF·PostScript·HTML 포함, 총 16.08TB. 공식 S3 버킷에서 누락 파일을 찾아 GCS로 보완한 수집 과정, 4.35GB 메타데이터 parquet과 sha256 프로비넌스, DuckDB·Polars 쿼리 경로, 기존 아카이브 미러와 비교, 운영비(egress $626, 호스팅 $249/월)까지 실제 수치로 정리한 ThakiCloud 데이터셋 리뷰"
+title: "arXiv 전체를 하나의 데이터셋으로"
+seo_title: "arXiv 전체를 하나의 데이터셋으로"
 seo_description: "arXiv 3,148,796편 전체를 모든 버전·모든 포맷으로 담은 16.08TB 데이터셋 arxiv-complete가 Hugging Face에 공개됐습니다. 공식 S3에서 누락됐던 파일을 GCS로 보완한 수집 과정, sha256 프로비넌스, 메타데이터 parquet만으로도 시작하는 접근 전략을 실제 수치로 정리했습니다."
 excerpt: "arXiv 공식 S3 버킷은 '전체 코퍼스 다운로드의 정석'이라는데, 실제로 대량으로 받아보니 파일이 빠져 있었습니다. secemp9는 그 누락분을 GCS에서 채워 3,148,796편 전 버전, 16.08TB 스냅샷을 하나로 만들었습니다. 이 데이터셋의 가치는 용량이 아니라, 파일 하나하나에 경로·크기·SHA-256이 붙어 있는 프로비넌스입니다."
 date: 2026-09-22

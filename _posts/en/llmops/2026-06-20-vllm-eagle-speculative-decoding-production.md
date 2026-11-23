@@ -1,7 +1,7 @@
 ---
-title: "EAGLE 3.1 + vLLM: A Production Guide to Speculative Decoding for LLM Serving"
+title: "EAGLE 3.1 + vLLM: Speculative Decoding in Production"
 excerpt: "After EAGLE 3.1 merged into vLLM main in May 2026, how to integrate speculative decoding into a K8s LLM serving stack and validate real-world performance."
-seo_title: "EAGLE 3.1 + vLLM Speculative Decoding Production Guide - Thaki Cloud"
+seo_title: "EAGLE 3.1 + vLLM: Speculative Decoding in Production"
 seo_description: "Principles, configuration, and practical multi-tenant operation strategy for EAGLE 3.1 speculative decoding integrated into vLLM, from an ML infrastructure engineer's perspective."
 date: 2026-06-20
 last_modified_at: 2026-06-20

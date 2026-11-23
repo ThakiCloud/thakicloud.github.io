@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek-V3 리뷰: 하드웨어-소프트웨어 협업이 이끈 비용 효율적 초대규모 모델 학습 전략"
+title: "DeepSeek-V3: 하드웨어와 소프트웨어를 함께 설계한 학습"
 date: 2025-05-28
 tags: 
   - DeepSeek

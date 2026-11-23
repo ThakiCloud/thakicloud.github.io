@@ -1,6 +1,6 @@
 ---
-title: "Slow Decode Is Not a Weak GPU: Measuring the Real LLM Inference Bottleneck With a Roofline"
-seo_title: "Why LLM Decode Is Memory-Bound: A Measured Roofline Analysis | ThakiCloud"
+title: "Slow Decode Is Not a Weak GPU: A Roofline Measurement"
+seo_title: "Slow Decode Is Not a Weak GPU: A Roofline Measurement"
 seo_description: "A batch-1 decode step uses 2.36% of the accelerator's compute. We measured 124 GB/s of bandwidth and 5.96 TFLOP/s of fp16 compute on a laptop-class device, then swept batch size from 1 to 512 over a Llama-3-8B FFN weight shape to locate the roofline ridge at 48 FLOP/byte. Here is why vLLM and SGLang obsess over batching, and what that means for GPU serving cost."
 excerpt: "Going from batch 1 to batch 16 cost only 10% more time per step. Sixteen times the work for almost nothing, and the reason behind it is the whole economics of inference serving."
 date: 2026-08-03

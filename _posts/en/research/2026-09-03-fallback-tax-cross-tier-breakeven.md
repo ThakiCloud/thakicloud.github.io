@@ -1,6 +1,6 @@
 ---
 title: "There were seats. There was no ledger: measuring the fallback tax"
-seo_title: "LLM Serving Fallback Break-Even: Measured Queue, Slow In-House Tier, and Commercial API Paths When the Fast GPU Tier Saturates, Fallback Failures From 50% to 0 - ThakiCloud"
+seo_title: "There were seats. There was no ledger: measuring the fallback tax"
 seo_description: "When the fastest GPU tier saturated, an idle H100 never took a request because the ledger did not know it was there. With measured pricing for the slow in-house tier, we find a break-even point of $2.7 per million tokens and introduce a fallback policy that cuts fallback failures from 50% to zero."
 excerpt: "The branch restaurant is packed, and the headquarters has four empty seats. Because the reservation book hangs only at the branch, customers wait in line while the empty seats stay empty. Today's paper measures the price of this accident. It covers the dollars and latency of the three paths (the queue, the slow in-house tier, the commercial API) and the 50% of fallback failures that disappear with a single configuration fix."
 date: 2026-09-03

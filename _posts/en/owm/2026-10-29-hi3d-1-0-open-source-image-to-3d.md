@@ -1,7 +1,7 @@
 ---
 title: "Hi3D 1.0: a production-validated image-to-3D model, now open source"
 excerpt: "The model formerly known as Sparc3D went open source as Hi3D V1.0: a self-pruning sparse VAE that refines coarse geometry to 1536-resolution with reference images, trained on about 2 million curated 3D assets, with a technical-report claim that 90 percent of outputs pass 3D-print slicing. License terms, system requirements, and what is not included in the release, below."
-seo_title: "Hi3D 1.0 open source: production-validated image-to-3D geometry model | ThakiCloud"
+seo_title: "Hi3D 1.0: a production-validated image-to-3D model, now open source"
 seo_description: "Hi3D V1.0 (ex-Sparc3D) open-source dissection: 2M-asset training, 1536 sparse-grid refinement, Hi3D Open License v1.0, NVIDIA CC8.0+ requirement (96GB H20 validated), geometry only, no textures. GitHub and Hugging Face distribution."
 date: 2026-10-29
 last_modified_at: 2026-10-29

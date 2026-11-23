@@ -1,7 +1,7 @@
 ---
-title: "SKILL.md를 손으로 쓰지 않습니다: Hermes Agent의 /learn 명령을 뜯어봤습니다"
+title: "Hermes Agent /learn: SKILL.md를 손으로 쓰지 않는 법"
 excerpt: "Nous Research가 Hermes Agent에 추가한 /learn은 디렉터리, URL, 방금 끝낸 대화, 붙여넣은 메모 어느 것이든 가리켜 재사용 가능한 스킬로 만들어 줍니다. SKILL.md를 한 줄도 손으로 쓰지 않습니다. 설치된 Hermes를 직접 돌려 스킬 시스템 골격을 실측했고, /learn의 동작과 ThakiCloud 쿠버네티스 AI/ML SaaS 플랫폼의 멀티테넌트 에이전트 운용 관점에서 무엇을 의미하는지 정리합니다."
-seo_title: "Hermes Agent /learn 직접 검증과 플랫폼 관점 - Thaki Cloud"
+seo_title: "Hermes Agent /learn: SKILL.md를 손으로 쓰지 않는 법"
 seo_description: "Hermes Agent의 /learn 명령을 공식 문서와 실측으로 검증했습니다. read_file·web_extract로 소스를 수집해 표준 SKILL.md를 저작하는 흐름, write_approval 게이트, curator, progressive disclosure 구조와 ThakiCloud 멀티테넌트 에이전트 플랫폼 적용 관점을 정리합니다."
 date: 2026-06-26
 last_modified_at: 2026-06-26

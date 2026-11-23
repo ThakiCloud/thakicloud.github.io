@@ -1,7 +1,7 @@
 ---
-title: "OpenAI Unveils Agent Builder at DevDay 2025: A New Era of Visual AI Workflow Creation"
+title: "OpenAI Agent Builder: A Visual Canvas for AI Workflows"
 excerpt: "OpenAI introduces Agent Builder, a drag-and-drop canvas for creating AI workflows that competes directly with Zapier and n8n, featuring MCP connectors and pre-built templates."
-seo_title: "OpenAI Agent Builder DevDay 2025 Release - Visual AI Workflow Tool"
+seo_title: "OpenAI Agent Builder: A Visual Canvas for AI Workflows"
 seo_description: "OpenAI launches Agent Builder at DevDay 2025, offering drag-and-drop AI workflow creation with MCP integration, templates, and visual canvas for developers and businesses."
 date: 2025-10-06
 tags:

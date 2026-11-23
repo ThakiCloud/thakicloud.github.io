@@ -1,6 +1,6 @@
 ---
-title: "모델에게 결정을 맡기지 않았습니다: 한국어 규정 판단 모델 Thaki-PolicyGate-9B 공개"
-seo_title: "Thaki-PolicyGate-9B 공개: 추출은 모델이, 결정은 결정론 코드가 하는 한국어 규정 판단 - ThakiCloud"
+title: "Thaki-PolicyGate-9B: 모델에 결정을 맡기지 않은 규정 판단"
+seo_title: "Thaki-PolicyGate-9B: 모델에 결정을 맡기지 않은 규정 판단"
 seo_description: "한국어 사례와 규정 원문을 읽는 9B 모델을 Hugging Face에 공개했습니다. 모델은 조건과 근거 문장을 JSON으로 적기만 하고, 결정은 원문과 대조하는 결정론 Backend가 내립니다. 개발 셋 두 곳에서 틀린 허용은 0건이었고 새로 내려받아 다시 띄운 결과는 300건 모두 같았습니다."
 excerpt: "지난 4B 모델은 보기마다 확률을 읽어 직접 답했습니다. 이번 9B는 답하지 않습니다. 규정과 사례에서 읽은 것을 적어 내고, 그 기록을 원문과 맞춰 보는 코드가 답을 고르거나 보류합니다."
 date: 2026-10-17

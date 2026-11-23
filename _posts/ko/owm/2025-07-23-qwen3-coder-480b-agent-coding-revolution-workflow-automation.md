@@ -1,7 +1,7 @@
 ---
 title: "Qwen3-Coder 480B: 에이전트 코딩 혁명과 워크플로우 자동화의 새로운 지평"
 excerpt: "480B 매개변수로 SWE-Bench에서 69.6% 성능을 달성한 Qwen3-Coder와 워크플로우 자동화를 위한 Qwen Code CLI 도구의 실전 활용 가이드"
-seo_title: "Qwen3-Coder 480B MoE 모델 완전 가이드 - 에이전트 코딩 워크플로우 자동화 - Thaki Cloud"
+seo_title: "Qwen3-Coder 480B: 에이전트 코딩 혁명과 워크플로우 자동화의 새로운 지평"
 seo_description: "최강 오픈소스 코딩 에이전트 Qwen3-Coder 480B의 SWE-Bench 69.6% 성능 분석과 Qwen Code CLI를 활용한 워크플로우 자동화 전략을 상세히 알아보세요."
 date: 2025-07-23
 last_modified_at: 2025-07-23

@@ -1,6 +1,6 @@
 ---
-title: "EmbeddingGemma 2를 작게 쓰는 법: 550MB 색인 모델과 17.6MB 질의 인코더 고르기"
-seo_title: "EmbeddingGemma 2 양자화 550MB·차트 검색 A1·한국어 상품 검색 K4 사용 가이드 - ThakiCloud"
+title: "EmbeddingGemma 2 작게 쓰기: 색인 모델과 질의 인코더"
+seo_title: "EmbeddingGemma 2 작게 쓰기: 색인 모델과 질의 인코더"
 seo_description: "다키클라우드가 공개한 EmbeddingGemma 2 양자화 모델 2종, 차트 검색 질의 인코더 A1, 한국어 상품 검색 질의 인코더 K4를 언제 어떻게 쓰는지 정리했습니다. 이미지 색인은 한 번 만들고, 검색은 CPU의 작은 인코더로 하는 구성과 확인된 성능, 한계를 담았습니다."
 excerpt: "이미지 색인은 큰 모델로 한 번만 만들고, 검색어는 17.6MB짜리 인코더가 CPU에서 처리합니다. 다키클라우드가 공개한 EmbeddingGemma 2 계열 네 저장소를 언제 무엇에 쓰는지, 실행 코드와 확인된 숫자로 정리했습니다."
 date: 2026-10-20

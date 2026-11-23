@@ -1,7 +1,7 @@
 ---
 title: "The Same Morning, Two Price Tags Moved in Opposite Directions"
 excerpt: "A memory shock has pushed the cost of owning AI infrastructure to an all time high, while Kimi K3 and Chinese open weight models have dragged the cost of using AI to an all time low. In the widening gap between these two price tags, the real battleground shifts from models to utilization."
-seo_title: "AI Ownership Costs Soar as Usage Costs Crash: The Widening Scissors and the Utilization War"
+seo_title: "The Same Morning, Two Price Tags Moved in Opposite Directions"
 seo_description: "In July 2026, a memory shock pushed server purchase costs up 70 percent, while Kimi K3 and Chinese open weight models cut AI usage costs by as much as 1/50. This piece analyzes why GPU utilization and model routing become the new battleground as ownership costs and usage costs pull in opposite directions."
 date: 2026-07-19
 last_modified_at: 2026-07-19

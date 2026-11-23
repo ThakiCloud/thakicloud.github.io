@@ -1,7 +1,7 @@
 ---
-title: "코퍼스를 먼저 임베딩하지 않는 검색: WonderSearch가 RAG의 비용 모델을 뒤집는 이유"
+title: "WonderSearch: 임베딩 없이 검색하는 RAG의 비용 모델"
 excerpt: "Polygres(YC F26)가 9월 28일 출시한 WonderSearch는 문서를 임베딩하지 않고, 쿼리가 올 때 계산해서 검색합니다. 벡터 인덱스 유지라는 RAG의 상시 비용이 아니라 쿼리당 비용을 물겠다고 선언한 이 모델이 ThakiCloud ai-platform의 RAG 인프라에 던지는 질문을 정리합니다."
-seo_title: "WonderSearch(Polygres, YC F26): 임베딩 없는 쿼리타임 검색과 RAG 비용 모델 분석 - ThakiCloud"
+seo_title: "WonderSearch: 임베딩 없이 검색하는 RAG의 비용 모델"
 seo_description: "Polygres가 출시한 WonderSearch는 코퍼스를 사전 임베딩하지 않고 쿼리 순간에 계산하는 검색을 제공합니다. 벡터 인덱스 유지·재임베딩 비용 구조와 쿼리당 과금 모델의 차이를 RAG 인프라 관점에서 분석합니다."
 date: 2026-09-30
 last_modified_at: 2026-09-30

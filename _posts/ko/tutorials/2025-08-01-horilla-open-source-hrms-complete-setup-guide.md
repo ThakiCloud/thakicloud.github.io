@@ -1,7 +1,7 @@
 ---
 title: "Horilla 오픈소스 HRMS 완전 설치 가이드 - 무료 인사관리 시스템 구축하기"
 excerpt: "Django 기반의 완전 무료 오픈소스 HRMS인 Horilla로 채용부터 급여관리까지 모든 HR 업무를 자동화하세요. Ubuntu, Windows, macOS 설치부터 프로덕션 배포까지 단계별로 완벽 가이드합니다."
-seo_title: "Horilla 오픈소스 HRMS 설치 가이드 - 무료 인사관리 시스템 구축 튜토리얼 - Thaki Cloud"
+seo_title: "Horilla 오픈소스 HRMS 완전 설치 가이드 - 무료 인사관리 시스템 구축하기"
 seo_description: "Horilla 오픈소스 HRMS 완전 설치 및 설정 가이드. Django 기반 무료 인사관리 시스템으로 채용, 급여, 출근관리, 성과관리까지 HR 업무 자동화하는 방법을 상세히 설명합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

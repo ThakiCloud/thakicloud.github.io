@@ -1,6 +1,6 @@
 ---
-title: "Ghost Occupancy Detector: A Multi-Signal Protocol for Safely Reclaiming Idle GPUs in a Kueue Cluster"
-seo_title: "Ghost Occupancy Detection: How to Safely Reclaim Phantom GPU Occupancy in a Shared GPU Cluster"
+title: "Ghost Occupancy Detector: Reclaiming Idle GPUs in Kueue"
+seo_title: "Ghost Occupancy Detector: Reclaiming Idle GPUs in Kueue"
 seo_description: "A multi-signal protocol catches GPU occupancy that Kueue's queue accounting can't see. Utilization alone leaves false positives against active jobs, but adding process count drives the false-positive rate to exactly zero."
 excerpt: "The queue reads full while the node has room to spare. That gap is ghost occupancy invisible to queue accounting. A multi-signal detection protocol shows, with measurement, how to reclaim it without killing active jobs."
 date: 2026-08-19

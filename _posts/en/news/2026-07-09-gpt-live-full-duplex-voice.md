@@ -1,5 +1,5 @@
 ---
-title: "Listening While Speaking: How GPT-Live's Full-Duplex Voice Opens Real-Time Inference"
+title: "GPT-Live: Full-Duplex Voice That Listens While Speaking"
 excerpt: "GPT-Live, released by OpenAI, is a full-duplex voice model that listens and speaks at the same time, without waiting for the user to finish talking. It offers backchannel responses, stays silent when needed, and delegates hard questions to a frontier model behind the scenes. This piece looks at what that architecture demands from real-time inference infrastructure, and what it means for the era of voice agents."
 tags:
   - voice-ai

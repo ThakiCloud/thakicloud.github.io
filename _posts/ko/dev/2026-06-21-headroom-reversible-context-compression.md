@@ -1,7 +1,7 @@
 ---
-title: "토큰 비용을 34~71% 깎는 가역 압축: Headroom 실측 리포트와 ThakiCloud 컨텍스트 위생"
+title: "Headroom: 가역 압축으로 줄이는 에이전트 토큰 비용"
 excerpt: "AI 코딩 에이전트의 가장 큰 숨은 비용은 컨텍스트입니다. Headroom(headroom-ai)을 ThakiCloud repo의 실제 JSON 도구 출력 3종에 직접 돌려 토큰 절감률을 측정했습니다. SmartCrusher가 무손실 가역 압축으로 토큰을 최대 71.2% 줄이는 과정을 설치 명령부터 측정 수치까지 정리합니다."
-seo_title: "Headroom 가역 컨텍스트 압축 실측 리포트 - Thaki Cloud"
+seo_title: "Headroom: 가역 압축으로 줄이는 에이전트 토큰 비용"
 seo_description: "Headroom(headroom-ai) SmartCrusher 가역 JSON 압축을 실제 repo 데이터로 측정한 결과(토큰 34~71% 절감), 설치·통합 명령, K8s LLM 서빙 토큰 비용 절감과 컨텍스트 위생 실무 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21

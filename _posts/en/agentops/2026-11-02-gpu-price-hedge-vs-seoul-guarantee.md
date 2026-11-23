@@ -1,7 +1,7 @@
 ---
-title: "The Week Wall Street Bet on Falling GPU Prices and Seoul Wrote an 18.7 Trillion Won Guarantee"
+title: "Betting on Cheaper GPUs While Seoul Guarantees Supply"
 excerpt: "In the same week, US markets saw derivatives betting on falling GPU rental prices, while Korea lined up its largest ever R&D budget alongside an 18.7 trillion won guarantee. The price of compute is being priced, insured, and contracted."
-seo_title: "GPU Price Hedges vs the 18.7 Trillion Won Guarantee: The Week Compute Became a Commodity"
+seo_title: "Betting on Cheaper GPUs While Seoul Guarantees Supply"
 seo_description: "The week Wall Street buys hedges and insurance against AI GPU credit risk and price declines, while Seoul buys compute with its largest ever 40 trillion won R&D budget and an 18.7 trillion won payment guarantee. A signal that compute unit prices are becoming financial products, and the answer from the enterprise agent execution layer."
 date: 2026-11-02
 last_modified_at: 2026-11-02

@@ -1,7 +1,7 @@
 ---
 title: "제조 운영을 자율 에이전트팀으로 자동화하는 방법"
 excerpt: "MLOps 인력 부족과 멀티공장 클러스터 관리 문제를 멀티페르소나 자율 에이전트팀으로 해소하는 실전 접근법을 소개합니다. ThakiCloud AI Platform과 Paxis가 스마트팩토리 운영에 어떻게 적용되는지 가상 제조사 케이스로 설명합니다."
-seo_title: "제조 AI 에이전트 자동화 - 멀티클러스터 GPU 운영과 자율 에이전트팀 - Thaki Cloud"
+seo_title: "제조 운영을 자율 에이전트팀으로 자동화하는 방법"
 seo_description: "스마트팩토리·중공업·전자 제조사의 MLOps 인력 병목과 멀티공장 클러스터 관리를 자율 에이전트팀으로 자동화하는 방법. ThakiCloud AI Platform의 멀티클러스터 중앙관리와 Paxis 에이전트 운영 클라우드 실전 적용 사례."
 date: 2026-06-22
 last_modified_at: 2026-06-22

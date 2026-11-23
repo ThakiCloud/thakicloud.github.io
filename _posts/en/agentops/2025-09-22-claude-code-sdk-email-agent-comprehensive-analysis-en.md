@@ -1,7 +1,7 @@
 ---
-title: "Claude Code SDK Email Agent: A Deep Dive into Anthropic's AI-Powered Email Assistant Demo"
+title: "Claude Code SDK Email Agent: Anthropic's Demo Dissected"
 excerpt: "Comprehensive analysis of Anthropic's Claude Code SDK demo featuring an IMAP email assistant with AI-powered search, natural language processing, and real-time streaming capabilities."
-seo_title: "Claude Code SDK Email Agent Analysis - AI Email Assistant Tutorial"
+seo_title: "Claude Code SDK Email Agent: Anthropic's Demo Dissected"
 seo_description: "In-depth review of Anthropic's Claude Code SDK email agent demo: IMAP integration, AI-powered search, WebSocket streaming, and SQLite caching implementation."
 date: 2025-09-22
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Blender Just Became a Prompt Box: Turning Apps Into Agents With MCP"
 excerpt: "Connect Kimi K3 to Blender through MCP and you can build a 3D scene just by describing it in plain English. The real story here isn't 3D, it's MCP. Here's how far the standard for letting agents drive GUI apps has come, and what it takes to run that safely."
-seo_title: "Blender MCP and Natural Language 3D: Turning Apps Into Agents - Thaki Cloud"
+seo_title: "Blender Just Became a Prompt Box: Turning Apps Into Agents With MCP"
 seo_description: "An analysis of Blender MCP and Kimi K3 generating 3D scenes from plain-language prompts, through the lens of MCP turning GUI apps into agent tools. Covers the two-way bridge architecture, the security risk of arbitrary code execution, and how ThakiCloud Paxis applies MCP connectors with sandbox isolation."
 date: 2026-07-25
 last_modified_at: 2026-07-25

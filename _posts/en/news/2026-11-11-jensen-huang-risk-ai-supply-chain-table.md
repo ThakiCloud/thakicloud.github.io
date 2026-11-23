@@ -3,7 +3,7 @@ title: "The AI Industry, One Risk Table: The Jensen Huang Risk and Korea's Seat"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/jensen-huang-risk-ai-supply-chain-table/"
 excerpt: "An NVIDIA CEO governance probe, TSMC equity stakes in OpenAI and Anthropic, an Anthropic IPO of up to $90.4 billion. The world's AI supply chain is already one table tied together by cross-investment. The execution seat is in Korea. The capital seat is farther away."
-seo_title: "The Jensen Huang Risk and the AI Cross-Investment Table: Korea's Seat and the Steady Execution Layer"
+seo_title: "The AI Industry, One Risk Table: The Jensen Huang Risk and Korea's Seat"
 seo_description: "Why the Jensen Huang risk reads as a supply-chain event. The Anthropic IPO, TSMC equity stakes, CoreWeave's finances, Google's TPUs, and a three-way sovereign alliance: today's news shows the cross-investment structure of global AI, where Korea sits, and the execution layer that does not shake."
 date: 2026-11-11
 last_modified_at: 2026-11-11

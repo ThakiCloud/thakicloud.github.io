@@ -1,7 +1,7 @@
 ---
-title: "SecProof 2B, 4B, 8B and 27B on a Sealed Test, and Picking the Model for Paxis Security Review"
+title: "SecProof: Choosing a Model for Paxis Security Review"
 excerpt: "We scored four SecProof models, which judge permission boundaries in agent-runtime code, once each on template families they never trained on. 4B and 27B cleared all eight pre-registered gates; 2B and 8B each missed one. This post covers what we saw when we plugged the Previews into Paxis, and why the model's answer still has to be checked by a sandbox and a policy."
-seo_title: "Thaki-SecProof 2B, 4B, 8B, 27B sealed results and the Paxis security agent - ThakiCloud"
+seo_title: "SecProof: Choosing a Model for Paxis Security Review"
 seo_description: "Thaki-SecProof is a family of LoRA-tuned Qwen-family code security judges. On a single sealed run over held-out template families, 4B and 27B passed all eight gates (G1 to G7, with G4 split into G4a and G4b), 2B failed G4a and 8B failed G4b. In a Paxis test, 4B and 8B caught a tenant isolation bug that 2B missed, and all three Previews over-confirmed an undecidable case."
 date: 2026-10-25
 last_modified_at: 2026-11-09

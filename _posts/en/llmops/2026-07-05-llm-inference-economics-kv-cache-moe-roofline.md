@@ -1,7 +1,7 @@
 ---
-title: "Why an 8x Larger Model Is 5x Cheaper: The Real Structure of LLM Inference Costs"
+title: "Why an 8x Larger Model Costs 5x Less: LLM Inference Costs"
 excerpt: "We dissect, with a roofline model, the paradox that the 284B DeepSeek V4 Flash prices its output tokens 5x cheaper than the 35B Qwen3.6. From KV cache reads to MoE batching economics to 8xH100 serving-shape calculations, we walk through the real structure of inference cost in numbers."
-seo_title: "LLM Inference Cost Structure Analysis: KV Cache and MoE Serving Economics - Thaki Cloud"
+seo_title: "Why an 8x Larger Model Costs 5x Less: LLM Inference Costs"
 seo_description: "We analyze the real structure of LLM inference cost through the pricing paradox between DeepSeek V4 Flash and Qwen3.6, including KV cache reads, MoE batching economics, and 8xH100 roofline calculations."
 date: 2026-07-05
 tags:

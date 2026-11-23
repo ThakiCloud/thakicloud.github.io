@@ -1,6 +1,6 @@
 ---
-title: "EmbeddingGemma 2: Google이 내린 멀티모달 임베딩, 740M에 768차원 통합 공간"
-seo_title: "EmbeddingGemma 2 리뷰: 텍스트·코드·이미지·영상·오디오를 단일 768차원 벡터로 매핑하는 740M 멀티모달 임베딩 모델, Apache 2.0 - ThakiCloud"
+title: "EmbeddingGemma 2: 멀티모달을 하나의 공간에 임베딩"
+seo_title: "EmbeddingGemma 2: 멀티모달을 하나의 공간에 임베딩"
 seo_description: "Google DeepMind가 2026년 10월 6일 Apache 2.0으로 공개한 EmbeddingGemma 2는 텍스트·코드·이미지·영상 프레임·오디오를 단일 768차원 임베딩 공간으로 매핑하는 740M 오픈웨이트 모델입니다. MRL 절단, Ollama 서빙, 온디바이스 멀티모달 RAG 관점을 정리합니다."
 excerpt: "멀티모달 RAG를 만들려면 그동안 '캡션 생성 후 텍스트 임베딩'이라는 2단 파이프라인이 기본값이었습니다. EmbeddingGemma 2는 그 2단 구조를 740M 단일 모델로 바꿉니다. 텍스트·코드·이미지·영상 프레임·오디오를 같은 768차원 공간에 두고, 양자화 시 활성 RAM 약 567MB로 온디바이스까지 내립니다. Apache 2.0."
 date: 2026-10-07

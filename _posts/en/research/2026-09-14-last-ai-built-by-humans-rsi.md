@@ -1,6 +1,6 @@
 ---
-title: "The Last AI Built by Humans: A 5-Stage Ladder for Genuine Recursive Self-Improvement, and the Metric That Measures the Headroom"
-seo_title: "The Last AI Built by Humans (arXiv 2609.11873): a 5-level autonomy taxonomy (B0 to L5) for genuine recursive self-improvement, plus the Headroom-Closed Index (HCI) metric. Review of a 75-page paper from a Chinese research consortium - ThakiCloud"
+title: "The Last AI Built by Humans: A 5-Stage Ladder to RSI"
+seo_title: "The Last AI Built by Humans: A 5-Stage Ladder to RSI"
 seo_description: "Genuine recursive self-improvement is not one leap but a 5-stage ladder of how much of its own improvement process an AI puts in its own hands, from B0 to L5. The Headroom-Closed Index (HCI) metric says static reasoning is near the ceiling (math 86.4) while agentic work is still far behind (software 52.6). We review the framework, the metric, and the safety argument it carries inside."
 excerpt: "'The last AI built by humans' is rhetoric, not a benchmark. Reading the paper leaves you with two tools: a 5-level ladder (B0 to L5) that names the threshold where an AI starts modifying the mechanism that makes future improvements, and HCI, a headroom metric that says static reasoning is near saturation while the interactive, agentic axis where agents actually work is still below half."
 date: 2026-09-14

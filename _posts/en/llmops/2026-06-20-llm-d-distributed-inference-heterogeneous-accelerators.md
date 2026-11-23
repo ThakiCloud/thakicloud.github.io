@@ -1,7 +1,7 @@
 ---
-title: "Buying More GPUs Won't Fix It: llm-d Distributed Inference and a Heterogeneous Architecture with GPUs and Any NPU/XPU"
+title: "Buying More GPUs Won't Fix It: llm-d and Mixed Hardware"
 excerpt: "llm-d is an inference scheduler that gets more requests through the same GPUs rather than buying more. We cover the principles of KV-cache aware routing and prefill/decode disaggregation, then show how any vLLM-compatible accelerator (NPUs like Rebellions and Furiosa, XPUs like Intel Gaudi and TPUs) can plug into the same accelerator-neutral heterogeneous orchestration layer."
-seo_title: "llm-d Distributed Inference and GPU+NPU/XPU Heterogeneous Architecture"
+seo_title: "Buying More GPUs Won't Fix It: llm-d and Mixed Hardware"
 seo_description: "How llm-d's KV-cache routing and prefill/decode disaggregation work, and how to run GPUs alongside diverse NPUs and XPUs (Rebellions, Furiosa, Intel Gaudi, TPU) on a vendor-neutral sovereign AI inference reference architecture."
 date: 2026-06-20
 last_modified_at: 2026-06-20

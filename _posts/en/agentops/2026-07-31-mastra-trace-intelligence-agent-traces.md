@@ -1,6 +1,6 @@
 ---
-title: "What Only Shows Up After 100 Traces: The Problem Mastra Trace Intelligence Solves"
-seo_title: "Mastra Trace Intelligence analysis: clustering agent traces into goal, outcome, behavior and sentiment themes | ThakiCloud"
+title: "What Only Shows Up After 100 Traces: Mastra Trace Intelligence"
+seo_title: "What Only Shows Up After 100 Traces: Mastra Trace Intelligence"
 seo_description: "Trace Intelligence, released by Mastra in private beta in July 2026, decomposes agent traces into four signals of goal, outcome, behavior and sentiment and clusters them into themes instead of asking humans to read traces one at a time. It needs at least 100 completed traces per agent and @mastra/core 1.53.0 or newer. Here is what is genuinely new and what remains an open problem."
 excerpt: "Agent traces are logs one at a time and product signal in aggregate. Someone is now trying to automate that transition."
 date: 2026-07-31

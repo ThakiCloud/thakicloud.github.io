@@ -1,7 +1,7 @@
 ---
-title: "Metabase Dataset Generator: LLM 기반 현실적인 합성 데이터 생성 완벽 가이드"
+title: "Metabase Dataset Generator: LLM으로 만드는 합성 데이터"
 excerpt: "OpenAI GPT-4o를 활용한 Metabase Dataset Generator로 데모, 학습, 대시보드를 위한 현실적인 합성 데이터셋을 생성하는 방법을 알아보세요."
-seo_title: "Metabase Dataset Generator - LLM 합성 데이터 생성 도구 - Thaki Cloud"
+seo_title: "Metabase Dataset Generator: LLM으로 만드는 합성 데이터"
 seo_description: "OpenAI GPT-4o와 Faker를 활용한 Metabase Dataset Generator로 현실적인 합성 데이터를 생성하는 방법. CSV/SQL 내보내기, 실시간 미리보기, 스키마 설계까지 완벽 가이드."
 date: 2025-07-04
 last_modified_at: 2025-07-04

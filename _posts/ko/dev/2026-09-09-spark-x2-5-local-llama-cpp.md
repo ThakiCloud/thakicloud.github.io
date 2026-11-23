@@ -1,7 +1,7 @@
 ---
 title: "1M 컨텍스트 4B: Spark-X2.5가 llama.cpp로 로컬 하드웨어에 들어온 날"
 excerpt: "iFlytek이 Apache 2.0으로 공개한 Spark-X2.5-4B/1.7B. 4개 층 중 1개만 full attention을 두는 하이브리드 어텐션 구조가 100만 토큰 네이티브 컨텍스트를 만들었고, 공식 GGUF와 llama.cpp 지원이 CPU 경로까지 열었습니다. 로컬 하드웨어에서 이 조합을 가르는 KV 경제 구조와 생태계 현주소를 정리합니다."
-seo_title: "Spark-X2.5 1M 컨텍스트 로컬 인퍼런스: 하이브리드 어텐션과 llama.cpp 지원 | ThakiCloud"
+seo_title: "1M 컨텍스트 4B: Spark-X2.5가 llama.cpp로 로컬 하드웨어에 들어온 날"
 seo_description: "iFlytek Spark-X2.5-4B/1.7B (Apache 2.0, 1M 네이티브 컨텍스트)의 하이브리드 어텐션 구조와 KV 캐시 경제, llama.cpp 공식 지원과 GGUF 배포 경로, 벤치마크 현주소, ThakiCloud 서빙 관점까지 정리합니다."
 date: 2026-09-09
 last_modified_at: 2026-09-09

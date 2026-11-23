@@ -1,7 +1,7 @@
 ---
-title: "SkillOpt: 에이전트 스킬을 훈련 가능한 텍스트 컴포넌트로 최적화하다 (arXiv:2605.23904)"
+title: "SkillOpt: 스킬을 훈련 가능한 텍스트로 최적화하다"
 excerpt: "에이전트 스킬 문서를 외부 최적화 대상으로 삼아 스코어링된 롤아웃을 제어된 편집(추가/삭제/교체)으로 변환하는 SkillOpt를 분석한다. GPT-5.5에서 최대 +23.5 포인트 성능 향상을 보고한다."
-seo_title: "SkillOpt 에이전트 스킬 자기최적화 시스템 분석 - Thaki Cloud"
+seo_title: "SkillOpt: 스킬을 훈련 가능한 텍스트로 최적화하다"
 seo_description: "arXiv 2605.23904 SkillOpt: 텍스트 공간 스킬 최적화, 제어된 편집 메커니즘, GPT-5.5 +23.5 포인트 향상, 크로스 모델 전이성에 대한 심층 분석"
 date: 2026-06-20
 last_modified_at: 2026-06-20

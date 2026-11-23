@@ -1,6 +1,6 @@
 ---
-title: "Claude Code 아티팩트가 MCP 커넥터를 부른다: 스스로 갱신되는 라이브 대시보드 만들기"
-seo_title: "Claude Code 아티팩트 + MCP 커넥터로 라이브 대시보드 만들기 - Thaki Cloud"
+title: "Claude Code 아티팩트가 MCP 커넥터를 부른다"
+seo_title: "Claude Code 아티팩트가 MCP 커넥터를 부른다"
 seo_description: "Claude Code 아티팩트가 이제 MCP 커넥터를 직접 호출해 데이터를 가져오고 동작까지 수행합니다. 열 때마다 커넥터를 다시 질의해 최신 상태를 보여 주는 라이브 대시보드와 앱을 만드는 방법, 승인 게이트와 접근 범위 원리, 그리고 MCP 커넥터를 일급 리소스로 다루는 ThakiCloud Paxis 관점을 정리합니다."
 excerpt: "정적 마크다운으로 끝나던 아티팩트가 커넥터를 호출하는 살아 있는 앱이 됐습니다. 열 때마다 스스로 최신 데이터를 다시 긁어 오는 대시보드를 어떻게 만드는지 봅니다."
 date: 2026-07-16

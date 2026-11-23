@@ -1,5 +1,5 @@
 ---
-title: "Unsloth+TRL 한국어 LLM 학습 자동화 - 3편: Kubeflow 및 MLOps 프레임워크 활용"
+title: "Unsloth+TRL 한국어 LLM 3편: Kubeflow와 MLOps 자동화"
 excerpt: "Kubeflow, MLflow, DVC를 활용한 엔터프라이즈급 한국어 LLM 학습 파이프라인 구축"
 date: 2025-06-17
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "Gemma 4 전체 라인업 정리: Apache 2.0 오픈웨이트 5종 모델과 온프렘 서빙 가이드"
+title: "Gemma 4 라인업: 오픈웨이트 5종과 온프렘 서빙"
 excerpt: "Google DeepMind가 2026년 4월 공개한 Gemma 4는 E2B부터 31B까지 5종으로 구성된 멀티모달 오픈웨이트 패밀리입니다. Apache 2.0 라이선스, 256K 컨텍스트, 26B MoE와 31B Dense의 차이, 그리고 온프렘 서빙 관점에서 각 모델을 어떻게 골라야 하는지 정리했습니다."
-seo_title: "Gemma 4 모델 5종 라인업 비교 - E2B/E4B/12B/26B MoE/31B 온프렘 가이드 - Thaki Cloud"
+seo_title: "Gemma 4 라인업: 오픈웨이트 5종과 온프렘 서빙"
 seo_description: "Gemma 4 라인업(E2B, E4B, 12B Unified, 26B A4B MoE, 31B Dense)의 파라미터, 컨텍스트, 멀티모달리티, 벤치마크(MMLU-Pro 85.2%, GPQA 84.3%)와 vLLM/SGLang/Ollama 서빙, Apache 2.0 라이선스를 정리했습니다."
 date: 2026-06-24
 last_modified_at: 2026-06-24

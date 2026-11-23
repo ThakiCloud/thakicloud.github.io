@@ -1,6 +1,6 @@
 ---
-title: "Grok 4.5 Arrives for Coding and Agents: The Math That Cheap Opus-Class Performance Changes"
-seo_title: "Grok 4.5 Coding Agent Model Analysis - Thaki Cloud"
+title: "Grok 4.5 for Coding Agents: What Cheap Changes"
+seo_title: "Grok 4.5 for Coding Agents: What Cheap Changes"
 seo_description: "SpaceXAI's Grok 4.5 is the first model trained specifically for coding and autonomous agents, delivering Opus-class performance at a fraction of the price. We break down the RL training invested in per-token intelligence, the Cursor integration, and what this announcement means from ThakiCloud's agent cloud perspective."
 excerpt: "SpaceXAI has unveiled Grok 4.5. Trained from the ground up for coding and agents, it delivers Opus-class performance at $2 per million input tokens and $6 per million output tokens. We examine the shift in economics that cheap agentic intelligence creates, from ThakiCloud's perspective."
 date: 2026-07-10

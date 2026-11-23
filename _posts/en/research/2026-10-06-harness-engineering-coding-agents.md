@@ -1,6 +1,6 @@
 ---
 title: "Harness Engineering: A Source-Code Study That Autopsied 11 Coding Agents"
-seo_title: "Harness Engineering: A Source-Code Study That Autopsied 11 Coding Agents - ThakiCloud"
+seo_title: "Harness Engineering: A Source-Code Study That Autopsied 11 Coding Agents"
 seo_description: "Wavestone AI Lab's Harness Engineering (arXiv 2609.00006) read ~4 million lines across 11 production coding agents. No agent imports a framework, and none uses vector search."
 excerpt: "Do you need a framework to build a coding agent? Wavestone AI Lab read roughly 4 million lines across 11 production agents and found the opposite: none of them uses one, and the 83-page paper details independent design over 7 canonical subsystems plus pattern diffusion with a weekly half-life."
 date: 2026-10-06

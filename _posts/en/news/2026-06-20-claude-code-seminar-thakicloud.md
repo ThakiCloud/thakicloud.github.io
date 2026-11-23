@@ -1,7 +1,7 @@
 ---
-title: "Why We Taught Claude Code Ourselves: ThakiCloud Internal Seminar Materials Now Public"
+title: "Why We Taught Claude Code Ourselves: Our Seminar Materials"
 excerpt: "From environment setup to easy-to-miss features. Here is how the ThakiCloud engineering team internalized Claude Code, along with the complete seminar materials."
-seo_title: "ThakiCloud Claude Code Internal Seminar Materials - Developer Productivity Internalization"
+seo_title: "Why We Taught Claude Code Ourselves: Our Seminar Materials"
 seo_description: "ThakiCloud's engineering team shares the Claude Code internal seminar materials. Slides and recorded video covering environment setup, key commands, mastering workflows, and easy-to-miss features."
 date: 2026-06-20
 last_modified_at: 2026-06-20

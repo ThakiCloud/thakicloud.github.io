@@ -1,7 +1,7 @@
 ---
-title: "MindsDB 완벽 가이드: 200개 이상의 데이터 소스를 연결하는 엔터프라이즈 AI 분석 엔진 구축"
+title: "MindsDB: 200여 데이터 소스를 잇는 AI 분석 엔진"
 excerpt: "MindsDB를 활용한 종합 가이드 - 대규모 데이터를 지능형 인사이트로 변환하는 AI 분석 엔진. 설치, 구성, 실제 엔터프라이즈 구현 방법을 상세히 학습하세요."
-seo_title: "MindsDB 튜토리얼: 엔터프라이즈 AI 분석 엔진 가이드 - Thaki Cloud"
+seo_title: "MindsDB: 200여 데이터 소스를 잇는 AI 분석 엔진"
 seo_description: "MindsDB AI 분석 엔진을 마스터하는 완벽한 튜토리얼. 200개 이상의 데이터 소스 연결, AI 모델 생성, 엔터프라이즈용 지능형 데이터 파이프라인 구축 방법을 학습하세요."
 date: 2025-09-21
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "Unified Multimodal Without a VAE: SenseNova U1, NEO-Unify, and On-Premise Serving"
+title: "SenseNova U1: Unified Multimodal Without a VAE"
 excerpt: "SenseTime has released 日日新 SenseNova U1 under Apache 2.0. Its NEO-Unify architecture drops both the visual encoder and the VAE, handling understanding, generation, editing, and interleaved generation in a single model. This post lays out the on-premise angle: the difference between the open weights (8B-MoT/A3B-MoT) and the hosted U1 Pro, where it lands on benchmarks, serving paths through transformers, vLLM-Omni, and ComfyUI, and why you can't just drop it into A1111."
-seo_title: "SenseNova U1 NEO-Unify Unified Multimodal - Open Weights and On-Premise Serving - Thaki Cloud"
+seo_title: "SenseNova U1: Unified Multimodal Without a VAE"
 seo_description: "A fact-based rundown of SenseNova U1 (NEO-Unify, no VAE, 8B-MoT/A3B-MoT MoE, Apache 2.0): distinguishing U1 Pro from the open weights, benchmark positioning, serving via transformers, vLLM-Omni, and GGUF, ComfyUI support versus A1111 incompatibility, and the ThakiCloud K8s on-premise serving perspective."
 date: 2026-07-19
 last_modified_at: 2026-07-19

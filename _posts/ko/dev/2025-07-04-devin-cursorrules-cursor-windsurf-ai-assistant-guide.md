@@ -1,7 +1,7 @@
 ---
-title: "Devin.cursorrules: $20 Cursor를 $25 Devin급 AI 어시스턴트로 변환하는 완벽 가이드"
+title: "Devin.cursorrules: Cursor를 Devin급 에이전트로 바꾸기"
 excerpt: "Cursor/Windsurf IDE를 Devin과 같은 고급 AI 어시스턴트로 향상시키는 혁신적인 도구, devin.cursorrules의 모든 것을 알아보세요."
-seo_title: "Devin.cursorrules 완벽 가이드 - Cursor AI 어시스턴트 향상 도구 - Thaki Cloud"
+seo_title: "Devin.cursorrules: Cursor를 Devin급 에이전트로 바꾸기"
 seo_description: "월 $20 Cursor를 $25 Devin급 AI 어시스턴트로 변환하는 devin.cursorrules 프로젝트. 자동 계획, 자기 진화, 웹 브라우징, 멀티 에이전트 협업 기능까지 완벽 가이드."
 date: 2025-07-04
 last_modified_at: 2025-07-04

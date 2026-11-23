@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek-R1 완전 재현 가이드: 2단계 RL + 2단계 SFT + Distillation 파이프라인"
+title: "DeepSeek-R1 재현: 전체 학습 파이프라인 따라가기"
 excerpt: "DeepSeek-R1의 공식 학습 파이프라인을 단계별로 완전 재현. 강화학습부터 지식 증류까지 전체 과정의 실전 구현 가이드"
 date: 2025-05-30
 tags:

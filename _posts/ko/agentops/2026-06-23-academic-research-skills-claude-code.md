@@ -1,7 +1,7 @@
 ---
-title: "논문 한 편을 13개 에이전트가 함께 씁니다: Academic Research Skills를 직접 붙여 본 기록"
+title: "13개 에이전트가 쓰는 논문: Academic Research Skills"
 excerpt: "문헌 조사부터 투고 가능한 원고까지, 10단계 파이프라인을 자동으로 잇는 Claude Code 스킬팩을 ThakiCloud 에이전트 환경에 실제로 통합해 봤습니다. 13개 연구 에이전트, 2단계 피어리뷰, 100퍼센트 인용 검증이라는 설계가 무엇을 의미하는지, 그리고 검증 우선(verified_only) 원칙이 우리 플랫폼 철학과 어디서 만나는지 정리합니다."
-seo_title: "Academic Research Skills 통합기 - Claude Code 13에이전트 논문 파이프라인 | Thaki Cloud"
+seo_title: "13개 에이전트가 쓰는 논문: Academic Research Skills"
 seo_description: "deep-research 13에이전트, academic-paper 작성 파이프라인, 2단계 피어리뷰, Semantic Scholar 인용 검증을 갖춘 Academic Research Skills 스킬팩을 ThakiCloud 에이전트 플랫폼에 직접 통합한 기록과 멀티테넌트 적용 시사점을 정리했습니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23

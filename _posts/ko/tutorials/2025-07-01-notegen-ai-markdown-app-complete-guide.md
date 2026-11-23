@@ -1,7 +1,7 @@
 ---
 title: "NoteGen AI 마크다운 앱 완전 가이드 - 소스 컴파일부터 Docker까지"
 excerpt: "AI 기반 크로스플랫폼 마크다운 노트 앱 NoteGen을 소스에서 컴파일하고 도커라이징하는 완전 가이드. RAG, 임베딩, 다중 AI 모델 지원 기능까지 상세히 다룹니다."
-seo_title: "NoteGen AI 마크다운 앱 완전 가이드 - 소스 컴파일 Docker 설정 - Thaki Cloud"
+seo_title: "NoteGen AI 마크다운 앱 완전 가이드 - 소스 컴파일부터 Docker까지"
 seo_description: "AI 기반 크로스플랫폼 마크다운 노트 앱 NoteGen 소스 컴파일, Docker 설정, AI LLM 기능 완전 가이드. Tauri Next.js 기반 앱 개발 튜토리얼"
 date: 2025-07-01
 last_modified_at: 2025-07-01

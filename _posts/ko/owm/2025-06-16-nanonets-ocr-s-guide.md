@@ -1,5 +1,5 @@
 ---
-title: "Nanonets-OCR-s 완벽 사용 가이드: 복합 문서를 구조화된 Markdown으로 변환하기"
+title: "Nanonets-OCR-s: 복합 문서를 구조화된 Markdown으로"
 excerpt: "LaTeX 수식·표·서명·워터마크까지 변환하는 Nanonets-OCR-s 모델을 Transformers, vLLM, Docext 환경에서 사용하는 방법과 LLM 파이프라인 통합 전략을 소개합니다."
 date: 2025-06-16
 tags:

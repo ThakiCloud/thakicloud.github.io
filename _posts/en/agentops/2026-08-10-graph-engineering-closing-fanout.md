@@ -1,7 +1,7 @@
 ---
 title: "Drawing the Graph Is Not the Same as Verifying It"
 excerpt: "Graph Engineering became a buzzword in July. We opened our own session logs: 180 fan-outs, 9 closed by verification, a 5% closure rate. The graph bought us width, not judgment."
-seo_title: "Graph Engineering Measured - A 5% Fan-Out Closure Rate and Where Cost Actually Lives"
+seo_title: "Drawing the Graph Is Not the Same as Verifying It"
 seo_description: "We instrumented multi-agent fan-out. Cost correlates with main-thread turns at 0.991, not with fan-out width. Here is how graph_close.py enforces a dead-node guard and adversarial verification in code, with real run output."
 date: 2026-08-10
 last_modified_at: 2026-08-10

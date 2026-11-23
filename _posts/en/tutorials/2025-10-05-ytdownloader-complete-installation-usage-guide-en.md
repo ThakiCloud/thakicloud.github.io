@@ -1,7 +1,7 @@
 ---
-title: "ytDownloader: Complete Installation and Usage Guide for Multi-Platform Video Downloads"
+title: "ytDownloader: A Multi-Platform Video Downloader"
 excerpt: "Master ytDownloader - a modern GUI application supporting hundreds of sites including YouTube, TikTok, Instagram. Learn installation, advanced features, and optimization tips."
-seo_title: "ytDownloader Tutorial: Complete Video Download Guide 2025 - Thaki Cloud"
+seo_title: "ytDownloader: A Multi-Platform Video Downloader"
 seo_description: "Complete ytDownloader guide covering installation on Windows/Linux/macOS, advanced features like playlist downloads, video compression, and troubleshooting tips."
 date: 2025-10-05
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "추론 엔진을 고르지 마세요, 하드웨어 전략을 고르세요"
 excerpt: "vLLM이냐 SGLang이냐 TensorRT-LLM이냐를 먼저 고민하는 것은 순서가 틀렸습니다. 한 엔지니어가 제시한 하드웨어 우선 선택법은, 가진 하드웨어와 워크로드 모양이 엔진을 결정하게 두라고 말합니다. 이 프레임을 ThakiCloud의 쿠버네티스 GPU 서빙 운영 관점에서 다시 읽고, 왜 우리가 기본값으로 vLLM에서 출발하는지를 정리합니다."
-seo_title: "LLM 추론 엔진 선택: 하드웨어 우선 전략 - vLLM/SGLang/TensorRT-LLM | Thaki Cloud"
+seo_title: "추론 엔진을 고르지 마세요, 하드웨어 전략을 고르세요"
 seo_description: "llama.cpp, MLX, ExLlamaV2, vLLM, SGLang, TensorRT-LLM을 하드웨어와 워크로드 모양으로 고르는 하드웨어 우선 선택법을 ThakiCloud 쿠버네티스 GPU 서빙 운영 관점에서 분석하고, 측정된 병목이 나타날 때만 엔진을 바꾸는 운영 원칙을 정리했습니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23

@@ -1,7 +1,7 @@
 ---
-title: "Autogenesis: 에이전트가 스스로를 고치는 자기진화 프로토콜 (arXiv:2604.15034)"
+title: "Autogenesis: 스스로 고치는 에이전트 프로토콜"
 excerpt: "프롬프트, 툴, 메모리를 버전 관리 가능한 '프로토콜 리소스'로 추상화해 에이전트가 스스로 개선 루프를 닫는 Autogenesis Protocol(AGP)의 설계와 실험 결과를 분석한다."
-seo_title: "Autogenesis 자기진화 에이전트 프로토콜 분석 - Thaki Cloud"
+seo_title: "Autogenesis: 스스로 고치는 에이전트 프로토콜"
 seo_description: "arXiv 2604.15034 Autogenesis Protocol: 에이전트 리소스 추상화, 자기진화 루프, 벤치마크 성능 향상에 대한 심층 분석과 ThakiCloud 플랫폼 적용 관점"
 date: 2026-06-20
 last_modified_at: 2026-06-20

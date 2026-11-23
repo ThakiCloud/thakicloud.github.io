@@ -1,7 +1,7 @@
 ---
-title: "Qwen3-Omni-30B-A3B-Captioner: 기업 자동화 환경에서 오디오 처리 워크플로우 혁신"
+title: "Qwen3-Omni Captioner: 기업 오디오 처리 자동화"
 excerpt: "Qwen3-Omni-30B-A3B-Captioner의 고급 멀티모달 기능을 통해 음성 전사, 환경음 분석, 멀티미디어 콘텐츠 처리의 자동화를 구현하여 오디오 분석 워크플로우를 혁신하는 방법을 탐구합니다."
-seo_title: "Qwen3-Omni 오디오 캡셔너: 기업 워크플로우 자동화 가이드 - Thaki Cloud"
+seo_title: "Qwen3-Omni Captioner: 기업 오디오 처리 자동화"
 seo_description: "자동화된 오디오 처리 워크플로우를 위한 Qwen3-Omni-30B-A3B-Captioner 구현 종합 가이드. 배포 전략, 통합 패턴, 기업 활용 사례를 학습하세요."
 date: 2025-09-23
 tags:

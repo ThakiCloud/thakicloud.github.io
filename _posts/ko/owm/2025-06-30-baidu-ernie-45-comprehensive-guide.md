@@ -1,7 +1,7 @@
 ---
-title: "Baidu ERNIE 4.5: 0.3B부터 424B까지 완전 오픈소스 AI 모델 시리즈 완벽 가이드"
+title: "Baidu ERNIE 4.5: 오픈소스 모델 시리즈 분석"
 excerpt: "Baidu가 2025년 6월 마지막 날 공개한 ERNIE 4.5 모델 시리즈 완벽 분석. MoE 아키텍처, Vision-Language 모델, Apache 2.0 라이선스, 실전 활용까지 총정리."
-seo_title: "Baidu ERNIE 4.5 완전 오픈소스 AI 모델 가이드 - 0.3B~424B MoE - Thaki Cloud"
+seo_title: "Baidu ERNIE 4.5: 오픈소스 모델 시리즈 분석"
 seo_description: "Baidu ERNIE 4.5 시리즈 완벽 분석. 0.3B~424B 파라미터, MoE 아키텍처, Vision-Language 모델, Apache 2.0 오픈소스, 128K 컨텍스트, 실전 배포 가이드까지 상세 정리."
 date: 2025-06-30
 last_modified_at: 2025-06-30

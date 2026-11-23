@@ -1,5 +1,5 @@
 ---
-title: "Kimi K3: What It Actually Takes to Serve a 2.8 Trillion Parameter Open Weight Model"
+title: "Serving Kimi K3: What a 2.8T Open Model Takes"
 excerpt: "Moonshot has released Kimi K3, the largest open weight model in the world to date. What is striking is not just that it beat top closed models on a frontend coding benchmark. The real question comes after that: what does it actually take to run a 2.8 trillion parameter model on your own infrastructure? We break it down from a ThakiCloud serving perspective."
 date: 2026-07-18
 tags:

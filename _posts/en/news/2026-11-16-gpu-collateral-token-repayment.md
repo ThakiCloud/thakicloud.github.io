@@ -2,7 +2,7 @@
 title: "The Collateral Is a Chip, but the Tokens Decide the Repayment"
 lang: en
 excerpt: "Korea's first GPU financing, a 10.7 trillion won syndicated loan. The repayment capacity of a loan collateralized by chips is decided by the price of a token and the execution environment that runs it. Between GPUs becoming assets and a 26.9% import rate, we read today's news through that axis."
-seo_title: "10.7 Trillion Won GPU Financing: Collateral Is Chips, Repayment Is Tokens"
+seo_title: "The Collateral Is a Chip, but the Tokens Decide the Repayment"
 seo_description: "KB Kookmin Bank arranges a 10.7 trillion won AI infrastructure loan, and Korea's first GPU financing with GPUs as collateral has begun. We analyze the execution environment problem of assetized GPUs, along with a 26.9% GPU import rate and token prices that have fallen by up to 90%."
 date: 2026-11-16
 last_modified_at: 2026-11-16

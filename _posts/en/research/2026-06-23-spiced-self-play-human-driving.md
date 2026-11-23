@@ -1,7 +1,7 @@
 ---
-title: "A Pinch of Human Data Is Enough: Anchoring Self-Play Driving Policies to People via Regularization"
+title: "A Pinch of Human Data Anchors Self-Play Driving"
 excerpt: "Pure self-play is fast but converges on driving conventions that are incompatible with humans. arXiv 2606.19370 adds human data not as the main signal but as a 30-minute lightweight regularization anchor, achieving a safer policy with 2500x less data than imitation learning."
-seo_title: "Spiced Self-Play Analysis (arXiv 2606.19370) - Human-Compatible Driving from 30 Minutes of Human Data - Thaki Cloud"
+seo_title: "A Pinch of Human Data Anchors Self-Play Driving"
 seo_description: "How data-regularized self-play learns driving policies that coordinate with humans. We analyze on-policy KL regularization, 30 minutes of human data, 15 hours on a consumer GPU, and 2500x data efficiency through ThakiCloud's multi-agent and RL infrastructure lens."
 date: 2026-06-23
 last_modified_at: 2026-06-23

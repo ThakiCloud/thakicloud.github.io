@@ -1,7 +1,7 @@
 ---
-title: "OpenAI Launches AgentKit: Revolutionary Platform for AI Agent Development"
+title: "OpenAI AgentKit: A Toolkit for Building AI Agents"
 excerpt: "OpenAI introduces AgentKit, a comprehensive toolkit that transforms agent development from months-long processes to hours, featuring visual workflow design and enterprise-grade deployment capabilities."
-seo_title: "OpenAI AgentKit Launch: AI Agent Development Platform - Thaki Cloud"
+seo_title: "OpenAI AgentKit: A Toolkit for Building AI Agents"
 seo_description: "Discover OpenAI's new AgentKit platform that revolutionizes AI agent development with visual workflow design, connector registry, and ChatKit for rapid deployment."
 date: 2025-10-08
 tags:

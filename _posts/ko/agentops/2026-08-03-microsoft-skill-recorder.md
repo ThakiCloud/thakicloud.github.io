@@ -1,6 +1,6 @@
 ---
-title: "한 번 시연하면 스킬이 됩니다: 마이크로소프트 Skill Recorder를 코드까지 뜯어봤습니다"
-seo_title: "Microsoft Skill Recorder 분석: 화면 녹화를 SKILL.md로 바꾸는 파이프라인 | ThakiCloud"
+title: "한 번 시연하면 스킬이 된다: 마이크로소프트 Skill Recorder"
+seo_title: "한 번 시연하면 스킬이 된다: 마이크로소프트 Skill Recorder"
 seo_description: "마이크로소프트가 MIT 라이선스로 공개한 Skill Recorder는 작업 화면을 녹화해 GitHub Copilot CLI로 의도와 단계를 복원하고, 재사용 가능한 SKILL.md나 자동화로 만들어 줍니다. 저장소를 직접 받아 테스트 58개를 통과시키고 파이프라인 코드를 읽어, 이 도구가 UI 재생이 아니라 네이티브 도구 호출로 일반화하는 방식과 에이전트 플랫폼 관점의 시사점을 정리했습니다."
 excerpt: "스킬을 쓰는 방법은 많아졌는데 만드는 방법은 여전히 사람이 문서를 쓰는 것이었습니다. 이 도구는 그 입력단을 건드립니다."
 date: 2026-08-03

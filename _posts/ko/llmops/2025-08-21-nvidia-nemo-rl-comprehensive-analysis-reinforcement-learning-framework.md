@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA NeMo RL: 차세대 대규모 언어모델 강화학습 프레임워크 완전 분석"
 excerpt: "NVIDIA NeMo RL의 아키텍처, 기술 스택, 핵심 컴포넌트를 심층 분석하고 기업 환경에서의 활용 전략을 제시합니다."
-seo_title: "NVIDIA NeMo RL 강화학습 프레임워크 완전 분석 - 아키텍처부터 활용까지 - Thaki Cloud"
+seo_title: "NVIDIA NeMo RL: 차세대 대규모 언어모델 강화학습 프레임워크 완전 분석"
 seo_description: "NVIDIA NeMo RL의 GRPO, DPO, SFT 기술과 Ray 기반 분산 처리 아키텍처를 상세 분석. 대규모 언어모델 강화학습의 모든 것을 담았습니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21

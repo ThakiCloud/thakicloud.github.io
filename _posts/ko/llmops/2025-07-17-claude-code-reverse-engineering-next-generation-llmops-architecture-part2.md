@@ -1,7 +1,7 @@
 ---
-title: "Claude Code 역공학으로 발견한 차세대 LLMOps 아키텍처 Part 2: Agent 루프와 도구 실행 프레임워크"
+title: "Claude Code 역공학 Part 2: Agent 루프와 도구 실행"
 excerpt: "Claude Code 역공학 분석의 두 번째 편으로, nO 주 루프 엔진의 상태 관리, 6단계 도구 실행 파이프라인, 6층 보안 프레임워크, 실시간 모니터링 시스템 등 프로덕션 환경을 위한 핵심 LLMOps 기술들을 상세히 분석합니다."
-seo_title: "Claude Code 역공학 Part 2: Agent 루프와 도구 실행 LLMOps 기술 - Thaki Cloud"
+seo_title: "Claude Code 역공학 Part 2: Agent 루프와 도구 실행"
 seo_description: "Claude Code 역공학으로 발견된 Agent 루프 시스템, 6단계 도구 실행 프레임워크, 보안 아키텍처, 모니터링 시스템 등 프로덕션 LLMOps의 핵심 기술을 실무 관점에서 심층 분석합니다."
 date: 2025-07-17
 last_modified_at: 2025-07-17

@@ -1,6 +1,6 @@
 ---
-title: "Learning to Detect PCB Defects from Normal Images: DINOv2 and Flow-Based Anomaly Detection"
-seo_title: "Thaki FabVision PCB Anomaly: DINOv2 + Flow Anomaly Detection Trained on Normal Images Only | ThakiCloud"
+title: "Detecting PCB Defects From Normal Images Alone"
+seo_title: "Detecting PCB Defects From Normal Images Alone"
 seo_description: "We released a research-preview anomaly detector that learns from normal PCB photos only and marks where a defect is. On the official VisA PCB1-4 test split it reached image AUROC 0.978, pixel AUROC 0.991 and AUPRO 0.956; PatchCore on the same features reached 0.871. It has not been validated on a real SMT line."
 excerpt: "We trained a model on normal PCB photos only, with no defect images, and it marks where a board looks wrong. Here are the VisA PCB1-4 results, the limits, and the release check that failed before it passed."
 date: 2026-11-03

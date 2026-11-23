@@ -1,7 +1,7 @@
 ---
 title: "Why the Model Answered That Way: Logs Alone Won't Tell You"
 excerpt: "When a production LLM produces an unexpected answer, a log that only kept the final probability can't tell you why. This post walks through white-box diagnostic techniques that dig into layer activations, attention, and probes, along with their limits."
-seo_title: "AI Interpretability Engineering: Logit Lens and Attention Diagnostics - Thaki Cloud"
+seo_title: "Why the Model Answered That Way: Logs Alone Won't Tell You"
 seo_description: "For engineers debugging anomalous output from production LLMs, this post explains white-box interpretability techniques, including Logit Lens, Direct Logit Attribution, attention pattern analysis, and linear probes, with code."
 date: 2026-08-04
 tags:

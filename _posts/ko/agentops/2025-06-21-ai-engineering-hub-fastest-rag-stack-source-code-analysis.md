@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Hub Fastest RAG Stack 소스코드 완전 분석: Binary Quantization으로 40배 빠른 RAG 구현"
+title: "AI Engineering Hub: 초고속 RAG 스택 소스코드 분석"
 excerpt: "10.7k 스타 AI Engineering Hub의 Fastest RAG Stack 프로젝트를 소스코드 레벨에서 심층 분석하고, Binary Quantization을 활용한 초고속 RAG 시스템 구현 방법을 제시합니다."
 date: 2025-06-21
 tags: 

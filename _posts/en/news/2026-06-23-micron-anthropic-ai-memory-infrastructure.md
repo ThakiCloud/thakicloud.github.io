@@ -1,8 +1,8 @@
 ---
-title: "Micron-Anthropic Partnership: Memory Becomes the Battleground of AI Infrastructure"
+title: "Micron and Anthropic: Memory Becomes the AI Battleground"
 excerpt: "Micron will supply HBM, DRAM, and SSD to Anthropic, co-design AI workload memory architectures, and invested in the Series H round. This analysis examines why memory bandwidth is the real bottleneck in LLM inference and what the partnership means from an on-premises AI infrastructure perspective."
 lang: en
-seo_title: "Micron Anthropic Memory Partnership Analysis - HBM and AI Inference Bottleneck - Thaki Cloud"
+seo_title: "Micron and Anthropic: Memory Becomes the AI Battleground"
 seo_description: "An infrastructure-focused analysis of the Micron-Anthropic strategic partnership (HBM/DRAM/SSD supply, co-designed memory architecture, Series H investment). Why memory bandwidth bottlenecks LLM inference throughput and implications for ThakiCloud's K8s-based serving platform."
 date: 2026-06-23
 last_modified_at: 2026-06-23

@@ -1,7 +1,7 @@
 ---
-title: "Ling-flash-2.0: 1000억 매개변수의 혁신적인 MoE 언어모델과 초고속 추론 성능"
+title: "Ling-flash-2.0: 활성 파라미터를 줄인 MoE 언어모델"
 excerpt: "inclusionAI의 최신 MoE 아키텍처 Ling-flash-2.0을 살펴보세요. 단 61억 개의 활성화 매개변수로 SOTA 성능을 달성하며 7배의 효율성 향상과 초당 200+ 토큰의 추론 속도를 제공합니다."
-seo_title: "Ling-flash-2.0 모델 리뷰: 1000억 매개변수 MoE 아키텍처 - Thaki Cloud"
+seo_title: "Ling-flash-2.0: 활성 파라미터를 줄인 MoE 언어모델"
 seo_description: "Ling-flash-2.0의 MoE 아키텍처, 성능 벤치마크, vLLM/SGLang 배포 옵션, 그리고 기업 워크플로우를 위한 실용적 구현 가이드를 완전 분석합니다."
 date: 2025-09-18
 tags:

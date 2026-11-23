@@ -1,7 +1,7 @@
 ---
-title: "Hacking and Reverse Engineering: A New Methodology for AI Vibe Coding Era"
+title: "Hacking and Reverse Engineering for AI Vibe Coding"
 excerpt: "In the AI era, developers don't need to know everything. Explore a new paradigm that transforms ignorance into strength through hacking mindset and reverse engineering spirit."
-seo_title: "Hacking & Reverse Engineering in AI Vibe Coding Era - Thaki Cloud"
+seo_title: "Hacking and Reverse Engineering for AI Vibe Coding"
 seo_description: "Transform ignorance into strength with hacking mindset and reverse engineering approach in AI coding. New development methodology for the modern era."
 date: 2025-06-17
 tags: 

@@ -1,6 +1,6 @@
 ---
-title: "The Apprentice Reranker: 라우터의 가장 비싼 LLM rerank 단계를 27B teacher에서 8B apprentice로 증류해, token bill은 7.1% 오르는 대신 wall time이 약 14.6배 줄어드는 cost-quality frontier를 실측했습니다"
-seo_title: "The Apprentice Reranker: skill router의 LLM rerank 단계 27B teacher 대 8B DPO-distilled apprentice cost-quality frontier 실측 논문 소개 (rerank distillation, DPO, teacher-student, tokenizer divergence, wall-time frontier, break-even escalation, SRA holdout, 셀프호스트 H200) - ThakiCloud"
+title: "Apprentice Reranker: 라우터 rerank 증류"
+seo_title: "Apprentice Reranker: 라우터 rerank 증류"
 seo_description: "ThakiCloud 라우터 시리즈에서 라우터 자체 bill의 71.6%는 LLM 쪽이었고, 지금까지 모든 실측에서 rerank 모델을 27B teacher로 고정해 왔습니다. 실측 논문 The Apprentice Reranker는 이 LLM rerank 단계를 8B DPO student로 증류하고, 2,295-entry production registry 위의 동결 63-decision holdout에서 window quality를 고정해 cost-quality frontier를 실측합니다. token bill은 아끼는 항목이 아닙니다. student가 결정당 7.1% 더 냅니다(1,445.3 대 1,350.1 token), 원인은 모델 크기가 아니라 family 안의 tokenizer divergence입니다. 진짜 지렛대는 wall time입니다. median 결정당 시간이 10.63s에서 0.73s로 약 14.6배 빠지고 세션당 약 59s가 사라집니다. 판단 pass rate는 aggregate에서 91.5%로 동일하고 safety-critical kind는 온전히 살아남지만 synthesis axis가 100%에서 66-69%로 떨어져 binding constraint가 됩니다. style gate 위반은 30.2%로 teacher의 53.5%보다 엄격히 좋아집니다. 논문은 frontier를 형식화하고 break-even escalation 조건(초당 약 0.016 달러)을 유도해, synthesis 조건부 teacher escalation을 붙인 student-first rerank를 권고합니다."
 excerpt: "LLM rerank 단계를 27B teacher에서 8B apprentice로 증류하면 token bill은 7.1% 오릅니다. 14.6배 줄어드는 것은 결정당 시간입니다. ThakiCloud 실측 논문이 window quality를 고정해 cost-quality frontier를 실측했고, binding constraint는 synthesis axis에 있습니다."
 date: 2026-10-27

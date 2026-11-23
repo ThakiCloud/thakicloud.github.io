@@ -3,7 +3,7 @@ title: "Autonomy: Show the Receipt"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/autonomy-receipt/"
 excerpt: "In October, SAP officially released its 'Autonomous Enterprise' and switched billing to a consumption model of 'AI units.' In the same week, Samsung SDS outlined its four elements of agent governance, SK AX unveiled a control tower, and KT said 'use it often.' The model layer is flooding with $12 billion and a trillion parameters. It was a week in which the first question about enterprise AI moved from 'how smart is it?' to 'can it be audited, measured, and stopped?'"
-seo_title: "SAP Autonomous Enterprise GA, Samsung SDS Four Elements of Agent Governance: The Center of Gravity of Enterprise AI Moves to the Control Layer (ThakiCloud)"
+seo_title: "Autonomy: Show the Receipt"
 seo_description: "SAP's shift to 'AI units' billing, Samsung SDS FabriX 2.0, and SK AX's integrated control tower announcement all landed in the same week. With the model layer flooding with new releases, we analyze through the lens of ThakiCloud Paxis why agent governance has become a product, and the four enterprise pains it reveals."
 date: 2026-10-07
 last_modified_at: 2026-10-07

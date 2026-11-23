@@ -1,7 +1,7 @@
 ---
 title: "Google Gemini 4 Carbon, 사이버보안·롱호라이즌 SOTA에 intro 가격 반값"
 excerpt: "Google이 10월 28일 Gemini 4 Carbon을 공개했습니다. Artificial Analysis Intelligence Index v5.0에서 59점으로 1위, 취약점 발견 SEC-bench Pro 88.2%, 장기간 작동하는 에이전트 워크플로 설계, intro 기간 $2/$10(1M 토큰당) 가격 구조와 단계별 출시 계획을 정리했습니다."
-seo_title: "Gemini 4 Carbon 공개, 사이버보안 벤치마크와 에이전트 실행 경제학 | ThakiCloud"
+seo_title: "Google Gemini 4 Carbon, 사이버보안·롱호라이즌 SOTA에 intro 가격 반값"
 seo_description: "Gemini 4 Carbon 해부: AA Intelligence Index v5.0 59점 1위, SEC-bench Pro 88.2%, ExploitGym 54.8%, CWE-bench 71.0%, 며칠간 지속되는 long-horizon 에이전트, Fairwind Program 단계 출시, intro $2/$10 이후 $4/$20. 공식 블로그 기준."
 date: 2026-10-30
 last_modified_at: 2026-10-30

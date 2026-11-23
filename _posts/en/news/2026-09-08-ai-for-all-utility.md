@@ -3,7 +3,7 @@ lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/ai-for-all-utility/"
 title: "The Week AI Became a Utility: Free for 51 Million, 80% Domestic"
 excerpt: "South Korea will give every citizen free, unlimited generative AI, backed by three carrier consortiums, 512 B200 GPUs, and a 10-trillion-won budget. But the real story is not 'free'; it is the 80% domestic mandate that starts to reshape the market structure."
-seo_title: "The Week AI Became a Utility: Free AI for Citizens and the 80% Domestic Mandate | ThakiCloud"
+seo_title: "The Week AI Became a Utility: Free for 51 Million, 80% Domestic"
 seo_description: "South Korea's 'AI for All' program. Free, unlimited generative AI for 51 million citizens, three consortiums (SK Telecom, KT, Kakao), 512 B200 GPUs, a 10-trillion-won budget. Analysis of the market the 80% domestic-AI mandate creates for AI infrastructure and the agent execution layer."
 date: 2026-09-08
 last_modified_at: 2026-09-08

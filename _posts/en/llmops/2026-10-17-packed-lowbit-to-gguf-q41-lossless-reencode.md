@@ -1,6 +1,6 @@
 ---
-title: "Shipping a Custom Low-Bit Format on llama.cpp: A Bit-Identical GGUF Q4_1 Re-Encode"
-seo_title: "Losslessly re-encoding a packed mixed 3-bit and 4-bit checkpoint to GGUF Q4_1 and running it on llama.cpp - ThakiCloud"
+title: "Shipping a Custom Low-Bit Format as GGUF Q4_1"
+seo_title: "Shipping a Custom Low-Bit Format as GGUF Q4_1"
 seo_description: "ThakiCloud re-encoded a mixed 3-bit and 4-bit embedding model, stored in its own packed format, into GGUF Q4_1. All 197 quantized tensors read back bit-identical, so outside users can run the model on llama.cpp with no custom kernel or private loader. The file grows from 295MB to 378MB."
 excerpt: "For anyone with an in-house quantization format and no way to run it outside the lab. We moved the model to GGUF Q4_1 without changing a single restored value, and all 197 tensors read back bit-identical. The price is a file that grows by 28%."
 date: 2026-10-17

@@ -1,7 +1,7 @@
 ---
-title: "AWS Agent Squad: Complete Tutorial for Multi-Agent Orchestration Framework"
+title: "AWS Agent Squad: Multi-Agent Orchestration"
 excerpt: "Comprehensive guide to AWS Labs' Agent Squad framework - from basic setup to advanced multi-agent orchestration with Python and TypeScript implementations"
-seo_title: "AWS Agent Squad Tutorial: Multi-Agent Orchestration Framework Guide"
+seo_title: "AWS Agent Squad: Multi-Agent Orchestration"
 seo_description: "Learn AWS Agent Squad framework for multi-agent AI orchestration. Complete tutorial with Python/TypeScript examples, Bedrock integration, and real-world implementations."
 date: 2025-09-07
 tags:

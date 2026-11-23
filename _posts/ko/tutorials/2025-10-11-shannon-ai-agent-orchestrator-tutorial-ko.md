@@ -1,7 +1,7 @@
 ---
-title: "Shannon AI Agent Orchestrator: 엔터프라이즈급 AI 에이전트 관리 완전 가이드"
+title: "Shannon: 오픈소스 AI 에이전트 오케스트레이터"
 excerpt: "엔터프라이즈급 보안, 비용 제어, 벤더 유연성을 제공하는 오픈소스 AI 에이전트 오케스트레이터 Shannon의 설치부터 고급 멀티 에이전트 워크플로우까지 완전한 가이드를 제공합니다."
-seo_title: "Shannon AI Agent Orchestrator 튜토리얼 - 엔터프라이즈 AI 에이전트 관리"
+seo_title: "Shannon: 오픈소스 AI 에이전트 오케스트레이터"
 seo_description: "Shannon AI Agent Orchestrator 완전 튜토리얼: 설치, 구성, 멀티 에이전트 워크플로우, 보안 기능, 엔터프라이즈 배포 가이드까지 상세히 다룹니다."
 date: 2025-10-11
 tags:

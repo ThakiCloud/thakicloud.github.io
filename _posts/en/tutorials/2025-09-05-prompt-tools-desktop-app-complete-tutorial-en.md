@@ -1,7 +1,7 @@
 ---
 title: "Prompt Tools: Complete Desktop App Tutorial for AI Prompt Management"
 excerpt: "Learn how to build and use Prompt Tools, a powerful Tauri-based desktop application for managing AI prompts efficiently with local storage and cross-platform support."
-seo_title: "Prompt Tools Desktop App Tutorial: AI Prompt Management Guide - Thaki Cloud"
+seo_title: "Prompt Tools: Complete Desktop App Tutorial for AI Prompt Management"
 seo_description: "Complete tutorial on Prompt Tools - a Tauri-based desktop app for AI prompt management. Learn setup, usage, and advanced features with practical examples."
 date: 2025-09-05
 tags:

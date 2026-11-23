@@ -1,6 +1,6 @@
 ---
-title: "CPU-ARC: one reasoning pass is enough — rephrased or reparameterized, it re-solves at 1/16 to 1/291 the cost, and matches or beats the source model on 7 of 8 benchmarks"
-seo_title: "CPU-ARC (Agentic Reasoning Caching) NVIDIA tech report: LLM reasoning traces compiled into CPU-executable semantic function networks, 16-291x lower per-invocation cost on rephrased and reparameterized instances, accuracy on or above the source model on 7 of 8 benchmarks, AIME 2025 93.3% vs 83.3%, build cost 12-84x, break-even 13-90 invocations, gated serving fallback, fine-tuned Llama 3.2 1B target - ThakiCloud"
+title: "CPU-ARC: One Reasoning Pass Is Enough"
+seo_title: "CPU-ARC: One Reasoning Pass Is Enough"
 seo_description: "Once a frontier model has reasoned through a problem family, CPU-ARC compiles the reasoning trace into a CPU-executable semantic function network. New instances of the same family are re-solved at 1/16 to 1/291 the cost, with accuracy on or above the source model on 7 of 8 benchmarks and a 10-point lead on AIME 2025. Build cost, break-even, gated serving, and the limits before you apply it."
 excerpt: "One solution is enough. NVIDIA's CPU-ARC compiles a frontier model's reasoning trace into a CPU-executable semantic function network, so a rephrased or reparameterized instance gets re-solved at 1/16 to 1/291 the price. Accuracy held on or above the source model on 7 of 8 benchmarks and led by 10 points on AIME 2025."
 date: 2026-11-22

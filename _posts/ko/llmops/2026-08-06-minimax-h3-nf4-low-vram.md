@@ -1,6 +1,6 @@
 ---
 title: "48GiB 모델이 8GB 그래픽카드에서 도는 진짜 이유"
-seo_title: "MiniMax-H3 NF4 양자화 실측: 464GiB에서 48GiB로, 그래도 8GB에는 안 들어간다 | ThakiCloud"
+seo_title: "48GiB 모델이 8GB 그래픽카드에서 도는 진짜 이유"
 seo_description: "DiffSynth-Studio가 공개한 MiniMax-H3 NF4 양자화본의 실제 용량을 HuggingFace 매니페스트로 측정했습니다. 중복을 걷어낸 고유 가중치 기준 4.08배 압축이지만 48GiB는 여전히 8GB VRAM의 6배입니다. 격차를 메우는 것은 양자화가 아니라 디스크에서 VRAM으로의 순차 로딩입니다."
 excerpt: "8GB로 돌아간다는 문장은 사실입니다. 다만 그 문장을 가능하게 한 기술은 양자화가 아니라 다른 것입니다."
 date: 2026-08-06

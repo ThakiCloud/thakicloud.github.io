@@ -1,6 +1,6 @@
 ---
-title: "Claude Code Cloud Sessions Now Configure Their Own Environment: Dependencies, Network, API Keys, and a Sandbox That Keeps Credentials Out of the VM"
-seo_title: "Claude Code Cloud Session Environment Auto-Setup: How Dependencies, Network Access, and API Keys Get Configured and Saved, Plus the 4 vCPU/16 GB Sandbox and the GitHub Proxy and Network Secrets Design - ThakiCloud"
+title: "Claude Code Cloud Sessions Configure Their Own Environment"
+seo_title: "Claude Code Cloud Sessions Configure Their Own Environment"
 seo_description: "In early November 2026, Anthropic announced that Claude Code cloud sessions figure out the dependencies, network access, and API keys a repository needs, then save the environment. We lay out the sandbox spec, the four network access levels, the two proxies that keep credentials outside the VM, and the seven-day cache against the official docs, and we replicated the docs' install-script pattern locally."
 excerpt: "The execution environment is now a first-class resource. The cloud VM runs at 4 vCPU, 16 GB RAM, and 30 GB disk; credentials never enter the VM; and the environment cache expires after about seven days. Replicating the docs' dependency install script locally turned up one edge case the docs do not mention."
 date: 2026-11-08

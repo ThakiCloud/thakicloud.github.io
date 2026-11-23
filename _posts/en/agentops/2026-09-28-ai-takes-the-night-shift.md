@@ -1,7 +1,7 @@
 ---
 title: "The AI That Took the Night Shift"
 excerpt: "The National Intelligence Service's unmanned AI cyber defense team, Project Phalanx, has been put into live action, and Jensen Huang has declared cybersecurity the next growth axis for AI. In the week AI started taking the night shift of defense operations, what companies should prepare first is the rules."
-seo_title: "The AI That Took the Night Shift: NSIS Phalanx and the Next Growth Axis for Cybersecurity | ThakiCloud"
+seo_title: "The AI That Took the Night Shift"
 seo_description: "NSIS's AI cyber defense team Phalanx was put into live action at APEX 2026, and 24-hour unmanned AI defense operations have begun. In the same week, Jensen Huang named cybersecurity the next growth axis for AI, and AI and machines joined the list of entities that access permission management must cover. We look at the governance devices needed to hand autonomous response workflows to the field, through a Paxis lens."
 date: 2026-09-28
 last_modified_at: 2026-09-28

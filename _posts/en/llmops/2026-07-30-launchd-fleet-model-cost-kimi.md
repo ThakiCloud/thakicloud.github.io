@@ -1,7 +1,7 @@
 ---
-title: "Model Cost Diet for a 90-Job Automation Fleet: Opus to Sonnet, then Kimi K3"
+title: "Model Cost Diet for an Automation Fleet: Opus to Kimi K3"
 excerpt: "If dozens of automations wake up on the Claude API every morning, dropping one model tier alone erases 40 to 60 percent of the bill. The more surprising fact: even Kimi K3, widely called the cheap option, lists the same output-token price as Sonnet 5. Here is what actually happened to our API bill as we moved a 90-job launchd fleet, and the six guardrails that keep output stable when the model changes."
-seo_title: "LLM Automation Fleet Cost Optimization: Opus to Sonnet to Kimi K3 | Thaki Cloud"
+seo_title: "Model Cost Diet for an Automation Fleet: Opus to Kimi K3"
 seo_description: "How we cut API cost 40 to 60 percent moving a 90-job launchd fleet from Claude Opus to Sonnet 5 to Kimi K3, plus six guardrails that keep skill output stable across model swaps."
 date: 2026-07-30
 last_modified_at: 2026-07-30

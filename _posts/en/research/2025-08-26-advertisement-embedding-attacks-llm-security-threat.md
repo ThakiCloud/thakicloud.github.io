@@ -1,7 +1,7 @@
 ---
-title: "Advertisement Embedding Attacks: A Novel Security Threat to Large Language Models"
+title: "Advertisement Embedding Attacks on LLMs"
 excerpt: "Exploring the emerging threat of Advertisement Embedding Attacks (AEA) against LLMs, which stealthily inject malicious content into model outputs while maintaining apparent normalcy, compromising information integrity."
-seo_title: "Advertisement Embedding Attacks on LLMs: New Security Vulnerabilities - Thaki Cloud"
+seo_title: "Advertisement Embedding Attacks on LLMs"
 seo_description: "Deep analysis of Advertisement Embedding Attacks (AEA) targeting Large Language Models, examining attack vectors, victim groups, and defense strategies for AI security."
 date: 2025-08-26
 tags:

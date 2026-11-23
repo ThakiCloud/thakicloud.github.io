@@ -1,6 +1,6 @@
 ---
-title: "Nemotron 3.5 Transcribe 한국어 LoRA 공개: 30B 음성인식 모델을 어떻게 파인튜닝했나"
-seo_title: "Nemotron 3.5 Transcribe 30B 한국어 LoRA 파인튜닝과 디코딩 가드 - Thaki-KSpeech 공개 | 다키클라우드"
+title: "Nemotron 3.5 Transcribe 한국어 LoRA: 파인튜닝 과정"
+seo_title: "Nemotron 3.5 Transcribe 한국어 LoRA: 파인튜닝 과정"
 seo_description: "NVIDIA Nemotron 3.5 Transcribe 30B-A4B에 한국어 LoRA를 얹어 공개했습니다. 두 번의 학습이 출시 판정을 받지 못한 이유, 반복 생성을 막는 디코딩 가드 guarded-dg-v1, 같은 파이프라인 한국어 평가, 재현 방법과 한계를 정리합니다."
 excerpt: "30B 음성인식 모델에 한국어 LoRA를 학습해 공개했습니다. 출시 게이트를 넘긴 것은 학습 레시피만이 아니라, 모델이 멈추지 못하는 구간을 막고 전사 성공으로 세지 않는 디코딩 가드였습니다."
 date: 2026-11-07

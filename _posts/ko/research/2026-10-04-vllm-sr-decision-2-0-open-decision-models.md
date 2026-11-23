@@ -1,6 +1,6 @@
 ---
 title: "Decision 2.0: '어떤 모델로 돌릴 것인가'를 결정하는 모델이 오픈됐다"
-seo_title: "vLLM Semantic Router와 Decision 2.0 오픈웨이트 결정 모델 패밀리 분석 - 0.6B~27B 풀 사이즈, JevArena 벤치마크, Mixture-of-Models 라우팅 레이어, ThakiCloud Metis·Paxis 적용 시사점 - ThakiCloud"
+seo_title: "Decision 2.0: '어떤 모델로 돌릴 것인가'를 결정하는 모델이 오픈됐다"
 seo_description: "vLLM 팀이 Mixture-of-Models 라우팅 레이어인 vLLM Semantic Router의 결정 모델 Decision 2.0을 0.6B에서 27B까지 풀 사이즈로 오픈웨이트로 내놓았습니다. 시그널을 읽어 어떤 모델 경로를 쓸지를 단일 포워드 패스로 확률로 결정하는 구조와 JevArena 벤치마크, 그리고 ThakiCloud 관점의 시사점을 정리했습니다."
 excerpt: "요청 라우팅의 '결정' 자체를 소형 모델에 맡기는 레이어가 오픈소스가 됐고, 그 결정 모델이 0.6B에서 27B까지 풀 사이즈로 오픈웨이트가 됐습니다. 어떤 모델로 이 요청을 돌릴지를 타입 지정 질문에 보정 확률로, 단일 패스로 결정하는 vLLM Semantic Router와 Decision 2.0 패밀리를 분석합니다."
 date: 2026-10-04

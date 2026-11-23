@@ -1,6 +1,6 @@
 ---
-title: "Image DiT serving converges on the same principles: vLLM-Omni day-0 support for Qwen-Image-2.1"
-seo_title: "Why Qwen-Image-2.1 is served day-0 by vLLM-Omni. The 7.1B single-stream DiT, block-causal attention, exact cross-step prefix KV cache reuse, and CUDA Graphs. The same principles as LLM serving arrive in diffusion serving, and what that means for engine selection on the ThakiCloud Metis image endpoint with B200 measurements (18.2 s/image)."
+title: "Qwen-Image-2.1 on vLLM-Omni: Image DiT Serving Converges"
+seo_title: "Qwen-Image-2.1 on vLLM-Omni: Image DiT Serving Converges"
 seo_description: "Alibaba's Qwen team released Qwen-Image-2.1 on September 20, 2026: a 7.1B DiT + Qwen3-VL-8B encoder + 16x RGBA autoencoder that integrates native 2K transparent PNG output with 10-reference editing. vLLM-Omni serves it day-0, and exact cross-step prefix KV cache reuse plus CUDA Graphs overlap with LLM serving principles. We read the engine choice and the licensing trap from the ThakiCloud perspective, using the Metis DOCKER_CUSTOM endpoint and B200 measurements as the baseline."
 excerpt: "Serving image generation models is no longer a separate domain. The exact cross-step KV cache that Qwen-Image-2.1's block-causal attention enables follows the same principle as prefix reuse in LLM serving, and vLLM-Omni's day-0 support changes the platform's engine-unification decision. Read against real measurements."
 date: 2026-09-22

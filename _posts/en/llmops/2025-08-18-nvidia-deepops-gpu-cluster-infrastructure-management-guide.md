@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA DeepOps: A Practical Guide to Enterprise GPU Cluster Infrastructure Automation"
+title: "NVIDIA DeepOps: Automating Enterprise GPU Clusters"
 excerpt: "An in-depth analysis of NVIDIA DeepOps, covering the philosophy and strategy behind GPU cluster management in the AI/ML era. Explores next-generation cluster operations using Kubernetes and Slurm."
-seo_title: "NVIDIA DeepOps GPU Cluster Management Complete Guide - LLMOps Infrastructure Strategy - Thaki Cloud"
+seo_title: "NVIDIA DeepOps: Automating Enterprise GPU Clusters"
 seo_description: "Enterprise GPU cluster infrastructure management strategy built on NVIDIA DeepOps. Covers Kubernetes, Slurm, DGX system optimization, and LLMOps environments in a comprehensive analysis."
 date: 2025-08-18
 last_modified_at: 2025-08-18

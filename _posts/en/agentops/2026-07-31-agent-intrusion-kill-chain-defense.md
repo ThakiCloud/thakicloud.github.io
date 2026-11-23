@@ -1,6 +1,6 @@
 ---
-title: "The Agent Never Fetched a URL: Anatomy of an Intrusion That Walked Past the Allowlist"
-seo_title: "Analyzing the Hugging Face Agent Intrusion Timeline, Defense Lessons for Multi-Tenant Kubernetes | ThakiCloud"
+title: "The Agent Never Fetched a URL: An Intrusion Anatomy"
+seo_title: "The Agent Never Fetched a URL: An Intrusion Anatomy"
 seo_description: "An analysis of the autonomous agent intrusion timeline Hugging Face published on July 27, 2026. How HDF5 local file reads and fsspec Jinja2 template injection made a URL allowlist irrelevant, the escalation path from instance metadata to CSI tokens and an EdDSA signing key, why 17,600 actions created a detection problem, and what any platform that processes other people's data on Kubernetes should check today."
 excerpt: "The allowlist was blocking every external URL. Instead of requesting one, the attacker read a local file and executed local code, so the allowlist never saw a thing."
 date: 2026-07-31

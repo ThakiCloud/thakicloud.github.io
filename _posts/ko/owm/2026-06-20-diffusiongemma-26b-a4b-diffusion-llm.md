@@ -1,7 +1,7 @@
 ---
-title: "DiffusionGemma 26B-A4B: 이산 텍스트 확산으로 15~20 토큰을 한 번에 생성하는 Google의 실험"
+title: "DiffusionGemma 26B-A4B: 텍스트 확산을 실험한 Google"
 excerpt: "Google DeepMind가 공개한 DiffusionGemma-26B-A4B-it는 MoE 기반 VLM이되, 텍스트 생성을 autoregressive가 아니라 이산 확산(discrete diffusion)으로 수행한다. 25.2B 총 파라미터, 3.8B 활성, 256K 컨텍스트, Apache-2.0."
-seo_title: "DiffusionGemma 26B-A4B 이산 확산 LLM K8s 배포 가이드 - ThakiCloud"
+seo_title: "DiffusionGemma 26B-A4B: 텍스트 확산을 실험한 Google"
 seo_description: "DiffusionGemma-26B-A4B-it 아키텍처(MoE, discrete diffusion, 256K context), 벤치마크(AIME 2026 69.1%, GPQA Diamond 73.2%), vLLM/SGLang 서빙, K8s 배포 특이점."
 date: 2026-06-20
 last_modified_at: 2026-06-20

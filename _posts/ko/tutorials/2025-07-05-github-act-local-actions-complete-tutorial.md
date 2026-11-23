@@ -1,7 +1,7 @@
 ---
-title: "GitHub Act 완벽 가이드 - GitHub Actions를 로컬에서 실행하는 혁신적인 개발 도구"
+title: "GitHub Act: GitHub Actions를 로컬에서 실행하기"
 excerpt: "nektos/act를 활용하여 GitHub Actions를 로컬에서 빠르게 테스트하고 디버깅하는 방법을 상세히 알아보고, macOS에서 실제 구현까지 완벽하게 마스터하세요."
-seo_title: "GitHub Act 완벽 가이드 - 로컬 GitHub Actions 실행 도구 - Thaki Cloud"
+seo_title: "GitHub Act: GitHub Actions를 로컬에서 실행하기"
 seo_description: "GitHub Actions를 로컬에서 실행할 수 있는 act 도구의 설치부터 실제 워크플로우 테스트까지, 개발 생산성을 높이는 완벽한 가이드를 제공합니다."
 date: 2025-07-05
 last_modified_at: 2025-07-05

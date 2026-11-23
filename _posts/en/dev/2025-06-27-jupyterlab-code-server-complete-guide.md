@@ -1,7 +1,7 @@
 ---
-title: "Using code-server in JupyterLab 4: A Complete Development Environment Guide from MacBook to GPU Server"
+title: "code-server in JupyterLab 4: From MacBook to GPU Server"
 excerpt: "A complete guide covering all development scenarios from running VS Code in a browser with JupyterLab 4, through Docker container setup, to GPU server environments"
-seo_title: "JupyterLab 4 code-server Complete Guide - From MacBook to GPU Server - Thaki Cloud"
+seo_title: "code-server in JupyterLab 4: From MacBook to GPU Server"
 seo_description: "A complete guide to using VS Code in the browser via jupyter-codeserver-proxy in JupyterLab 4, Docker environment configuration, and GPU server development environments"
 date: 2025-06-27
 tags:

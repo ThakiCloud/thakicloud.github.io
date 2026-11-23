@@ -1,7 +1,7 @@
 ---
-title: "Mito: Complete Tutorial for Jupyter Spreadsheet AI Tools - From Installation to Advanced Features"
+title: "Mito: AI and Spreadsheet Tools for Jupyter"
 excerpt: "Learn how to use Mito AI and Spreadsheet extensions to accelerate Python development in Jupyter. Complete guide covering installation, AI chat, spreadsheet editing, and code generation."
-seo_title: "Mito Jupyter AI Tutorial - Spreadsheet & AI Chat Guide - Thaki Cloud"
+seo_title: "Mito: AI and Spreadsheet Tools for Jupyter"
 seo_description: "Complete Mito tutorial: Install AI-powered Jupyter extensions for spreadsheet editing, context-aware AI chat, and automatic Python code generation. Step-by-step guide."
 date: 2025-09-25
 tags:

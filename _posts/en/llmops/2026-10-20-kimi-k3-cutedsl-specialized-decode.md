@@ -1,6 +1,6 @@
 ---
-title: "The Day Software Rewrote the Decode Path: NVIDIA's Kimi K3-Specialized CuTeDSL Kernel and vLLM's 2.8x Optimizations"
-seo_title: "NVIDIA upstreamed a Kimi K3-specialized decode kernel (CuTe DSL megakernel, PR #61867) to vLLM, and 423 tok/s/user (P90 interactivity) and 1.68x were measured on the same GB300 NVL72 hardware. We read the three numbers: the vLLM 'Road to 2.8x' stack optimizations, the PR microbenchmark, and the SemiAnalysis dashboard point, each on its own axis, and summarize what it means for ThakiCloud vLLM serving operations. - ThakiCloud"
+title: "Kimi K3 Decode Path: NVIDIA's Specialized CuTeDSL Kernel"
+seo_title: "Kimi K3 Decode Path: NVIDIA's Specialized CuTeDSL Kernel"
 seo_description: "NVIDIA's Kimi K3-specialized CuTe DSL decode kernel (vLLM PR #61867) and the 423 tok/s/user (P90 interactivity, 1.68x, GB300 NVL72) result. Read axis by axis alongside the 2.2~2.8x throughput and 72~85% TTFT improvements across the vLLM stack, and see the implications for ThakiCloud serving tuning. - ThakiCloud"
 excerpt: "As a headline, 423 tok/s/user reads like 'the whole system got faster', but it is actually a per-user streaming metric. We read this case, in which NVIDIA upstreamed a roughly 12,000-line Kimi K3-specialized CuTe DSL decode kernel to vLLM, as three numbers on three axes, alongside the vLLM community's stack-wide optimization results."
 date: 2026-10-20

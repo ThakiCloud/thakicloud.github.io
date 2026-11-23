@@ -1,6 +1,6 @@
 ---
-title: "A Small Model That Names the Drone From One Slice of Radio, and the Work That Follows"
-seo_title: "Thaki RFUAV PSD ResNet1D: Identifying 14 Drone Models From an RF Spectrum, Connected to Paxis Security Operations | ThakiCloud"
+title: "RF-UAV: Naming a Drone From One Slice of Radio"
+seo_title: "RF-UAV: Naming a Drone From One Slice of Radio"
 seo_description: "We released a 3.3M-parameter model that identifies which of 14 drone models is transmitting from a single 0.1-second RF spectrum. At a recording site never used for training it scored macro-F1 0.93, about 0.1 above a baseline. A later v2 did not beat it, so v1 stays. We also show how Paxis turns the result into alert triage, evidence, and human approval."
 excerpt: "We released a small model that names the drone model from one slice of radio. A newer version did not beat it, so the first one stays. Here is what it can and cannot do, and how Paxis turns its output into security-operations work."
 date: 2026-11-01

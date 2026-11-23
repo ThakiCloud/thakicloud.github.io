@@ -1,6 +1,6 @@
 ---
-title: "What Should an Agent Do When OCR Misreads an Amount? Paxis and a Document Verification Workflow"
-seo_title: "Designing the verification step for document AI agents: cross-checking critical OCR fields and routing to human approval with Paxis | ThakiCloud"
+title: "When OCR Misreads an Amount: Verification in Paxis"
+seo_title: "When OCR Misreads an Amount: Verification in Paxis"
 seo_description: "If an agent writes an OCR result with a misread won sign or clause number straight into a business system, a recognition error becomes a business error. We share VER-001 cross-check results on 256 synthetic documents (15.2% auto-confirmed, 0 of 168 error documents missed) and a design that connects it to a Paxis approval workflow."
 excerpt: "Between the model that reads a document and the agent that acts on it, there has to be a separate verification and approval step. Here are our cross-check results and a design for connecting them to Paxis."
 date: 2026-11-02

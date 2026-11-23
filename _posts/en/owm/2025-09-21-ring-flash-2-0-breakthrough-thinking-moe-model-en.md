@@ -1,7 +1,7 @@
 ---
-title: "Ring-flash-2.0: Breakthrough in Thinking MoE Models with IcePop Algorithm"
+title: "Ring-flash-2.0: A Thinking MoE With IcePop"
 excerpt: "Explore Ring-flash-2.0, a revolutionary 100B parameter MoE model that activates only 6.1B parameters per inference, featuring the innovative IcePop algorithm for stable RL training and achieving leading performance in complex reasoning tasks."
-seo_title: "Ring-flash-2.0 MoE Model Review: IcePop Algorithm & Complex Reasoning - Thaki Cloud"
+seo_title: "Ring-flash-2.0: A Thinking MoE With IcePop"
 seo_description: "Comprehensive review of Ring-flash-2.0, a high-performance thinking MoE model with 100B parameters, IcePop algorithm, and breakthrough results in math, coding, and logical reasoning benchmarks."
 date: 2025-09-21
 lang: en

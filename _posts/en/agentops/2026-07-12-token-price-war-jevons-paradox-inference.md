@@ -1,7 +1,7 @@
 ---
-title: "The Week Token Prices Were Cut in Half, Inference Chip Valuations Rose Fivefold"
+title: "Token Prices Halved, Inference Chip Valuations Soared"
 excerpt: "When prices fall, do we use less? In the inference market, the opposite is happening. We read the paradox of the token price war and SambaNova's fivefold valuation through the lens of Jevons paradox, and look at where the real bottleneck for enterprises is shifting."
-seo_title: "The Token Price War and 5x Inference Chip Valuations: AI Inference's Jevons Paradox"
+seo_title: "Token Prices Halved, Inference Chip Valuations Soared"
 seo_description: "Token prices are being cut in half, yet enterprise AI total spend is surging and inference chip valuations have jumped fivefold. Through SambaNova, CXL, and the UST-Claude case, we examine the real bottleneck of the inference era and the agent governance challenge ahead."
 date: 2026-07-12
 last_modified_at: 2026-07-12

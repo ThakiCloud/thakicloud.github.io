@@ -1,7 +1,7 @@
 ---
 title: "Chain of Agents: 긴 컨텍스트 작업을 위한 대규모 언어모델 협업 연구"
 excerpt: "Google과 Penn State 대학이 공동 개발한 Chain-of-Agents 프레임워크는 멀티에이전트 협업을 통해 긴 컨텍스트 처리 문제를 해결하는 혁신적인 접근법을 제시합니다."
-seo_title: "Chain of Agents: LLM 멀티에이전트 협업으로 긴 컨텍스트 처리 혁신 - Thaki Cloud"
+seo_title: "Chain of Agents: 긴 컨텍스트 작업을 위한 대규모 언어모델 협업 연구"
 seo_description: "Google과 Penn State가 개발한 Chain-of-Agents는 멀티에이전트 협업을 통해 RAG와 Full-Context 방식보다 최대 10% 향상된 성능으로 긴 컨텍스트 작업을 처리하는 새로운 프레임워크입니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21

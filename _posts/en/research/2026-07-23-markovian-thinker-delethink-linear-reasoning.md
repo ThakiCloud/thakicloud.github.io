@@ -1,5 +1,5 @@
 ---
-title: "Longer Thinking, Linear Cost: How the Markovian Thinker and Delethink Redesign Long Reasoning"
+title: "Longer Thinking, Linear Cost: Markovian Thinker and Delethink"
 excerpt: "The real cost of long reasoning comes from the state growing without bound. Markovian Thinking breaks reasoning into fixed-size chunks and passes only a short state across each boundary, turning cost from quadratic into linear."
 tags: [long-reasoning, chain-of-thought, markovian-thinking, delethink, reinforcement-learning, inference-cost-optimization, linear-scaling, kv-cache, test-time-scaling, inference-serving]
 date: 2026-07-23

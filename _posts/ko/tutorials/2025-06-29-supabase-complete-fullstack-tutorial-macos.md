@@ -1,7 +1,7 @@
 ---
-title: "Supabase 완전 정복: PostgreSQL BaaS로 풀스택 앱 개발하기 - macOS 로컬 테스트 완료!"
+title: "Supabase로 만드는 PostgreSQL 기반 풀스택 앱"
 excerpt: "85k GitHub Stars의 Supabase를 활용해 PostgreSQL 기반 풀스택 애플리케이션을 구축하는 완전한 가이드입니다. 데이터베이스, 인증, 실시간, 스토리지, Edge Functions까지 모든 기능을 실제 macOS 환경에서 테스트했습니다."
-seo_title: "Supabase 완전 가이드: PostgreSQL BaaS 풀스택 개발 튜토리얼 - Thaki Cloud"
+seo_title: "Supabase로 만드는 PostgreSQL 기반 풀스택 앱"
 seo_description: "Supabase의 모든 기능을 macOS에서 실제 테스트한 완전한 튜토리얼. PostgreSQL 데이터베이스, 인증, 실시간, 스토리지, Edge Functions, Vector DB까지 단계별 구현 가이드를 제공합니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29

@@ -1,5 +1,5 @@
 ---
-title: "40만 달러 랙을 24GB 그래픽카드로? ktransformers의 '28배'를 직접 재현해봤습니다"
+title: "ktransformers의 '28배'를 24GB GPU에서 재현해봤습니다"
 excerpt: "MoE 전문가를 CPU로 내려 24GB GPU 한 장으로 거대 모델을 돌린다는 ktransformers. 화제가 된 '28배'와 '40만 달러를 24GB로'를 RunPod에서 직접 쟀습니다. 트릭은 진짜였고, INT4 AMX 커널을 켜니 671B급이 디코딩 약 16 tok/s로 돌았습니다."
 date: 2026-07-19
 tags:

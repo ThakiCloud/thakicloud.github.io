@@ -1,6 +1,6 @@
 ---
-title: "15초 2K 영상에 스테레오 소리까지, MiniMax-H3를 사내에 들이면 무엇이 필요한가"
-seo_title: "MiniMax-H3 온프렘 서빙 예산 분석: 가중치 134GiB와 32만 토큰 시퀀스 | ThakiCloud"
+title: "MiniMax-H3를 사내에 들이면: 15초 2K 영상과 스테레오"
+seo_title: "MiniMax-H3를 사내에 들이면: 15초 2K 영상과 스테레오"
 seo_description: "오픈웨이트로 공개된 MiniMax-H3를 자체 인프라에서 돌릴 때 실제로 필요한 자원을 HuggingFace 파일 매니페스트와 공개 압축 계수로 계산했습니다. H3-Base 33B, 단일 변형 가중치 134GiB, 2K 15초 클립의 32만 토큰 시퀀스까지 숫자로 정리합니다."
 excerpt: "가중치가 공개됐다는 말과 우리 서버에서 돌릴 수 있다는 말 사이에는 계산해 봐야 알 수 있는 거리가 있습니다."
 date: 2026-08-04

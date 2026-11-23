@@ -1,7 +1,7 @@
 ---
-title: "Kimi K2: 1조 매개변수와 MuonClip 최적화로 구현한 에이전틱 인텔리전스의 혁신"
+title: "Kimi K2: 에이전틱 인텔리전스와 MuonClip 옵티마이저"
 excerpt: "문샷 AI의 Kimi K2 모델 심층 분석 - 에이전틱 인텔리전스의 획기적 혁신, MuonClip 옵티마이저, 대규모 강화학습을 통해 소프트웨어 엔지니어링 벤치마크에서 SOTA 성능을 달성한 기술적 돌파구를 탐구합니다."
-seo_title: "Kimi K2 기술 분석: 에이전틱 인텔리전스와 MuonClip 혁신 - Thaki Cloud"
+seo_title: "Kimi K2: 에이전틱 인텔리전스와 MuonClip 옵티마이저"
 seo_description: "Kimi K2의 혁신적인 에이전틱 인텔리전스 접근법에 대한 종합적 분석 - MuonClip 옵티마이저, 대규모 MoE 아키텍처, SWE-Bench 및 코딩 벤치마크에서의 획기적 성능을 중심으로 살펴봅니다."
 date: 2025-09-01
 lang: ko

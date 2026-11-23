@@ -1,5 +1,5 @@
 ---
-title: "AI 코딩 모델이 vLLM 서빙을 최적화했다: Gemini 4 Argon, Gemma 4 E2B 2.85배 스피드업의 실체와 검증"
+title: "Gemini 4 Argon의 vLLM 최적화: Gemma 4 E2B 속도 검증"
 excerpt: "Google의 AI 코딩 모델 Gemini 4 Argon이 vLLM에서 Gemma 4 E2B 서빙을 스스로 최적화해 A100 1장에서 약 2.85배(37.9k에서 108k+ tok/s)를 만들었다는 주장. 그 최적화가 실제로 무엇을 바꾸는지, 그리고 로컬에서 재현 시도를 해본 결과를 솔직히 기록합니다."
 tags:
   - dev

@@ -1,7 +1,7 @@
 ---
-title: "The Whole Agent Platform Inside Your Security Perimeter: Self-Hosted Claude Managed Agents"
+title: "Self-Hosted Claude Managed Agents Inside Your Perimeter"
 excerpt: "Anthropic now lets you run the agent harness, sandboxes, credentials, and session history entirely on your own infrastructure. We break down the structure and security principles of self-hosted Claude Managed Agents (private beta), and the responsibilities that come with it."
-seo_title: "The Whole Agent Platform Inside Your Perimeter: Self-Hosted Claude Managed Agents"
+seo_title: "Self-Hosted Claude Managed Agents Inside Your Perimeter"
 seo_description: "Self-hosted Claude Managed Agents (private beta) runs the harness, sandboxes, credentials, and session history on your infrastructure while you choose where model calls go. Structure, security principles, and operational responsibilities."
 date: 2026-11-14
 last_modified_at: 2026-11-14

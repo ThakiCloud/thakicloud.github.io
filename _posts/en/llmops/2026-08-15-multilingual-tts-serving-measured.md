@@ -1,7 +1,7 @@
 ---
-title: "We Benchmarked Four Multilingual TTS Models on the Same GPU: A 12x Gap and Three Scorers That Lied"
+title: "Four Multilingual TTS Models on One GPU: Three Liar Scorers"
 excerpt: "If you are picking a speech synthesis endpoint that has to cover Korean and Japanese, look at RTF and idle power share before you look at the naturalness score on the model card. On the same B200, VoxCPM2 was 12x faster than Qwen3-TTS, and 86.7% of the power Qwen3-TTS drew had nothing to do with synthesis. Emotional expressiveness spread as wide as 17x between models."
-seo_title: "Multilingual TTS Serving, Measured: RTF, Power, and Emotional Range Compared"
+seo_title: "Four Multilingual TTS Models on One GPU: Three Liar Scorers"
 seo_description: "We measured Qwen3-TTS, VoxCPM2, Supertonic-3, and Kokoro-82M across Korean, English, Chinese, and Japanese on the same harness. A 12x RTF gap, 86.7% idle power, and three evaluators that reported success while scoring zero."
 date: 2026-08-15
 last_modified_at: 2026-08-15

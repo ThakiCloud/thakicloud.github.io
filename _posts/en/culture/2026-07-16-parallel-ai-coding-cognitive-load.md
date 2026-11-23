@@ -1,5 +1,5 @@
 ---
-title: "Melting Your Brain by Hitting Enter: The Cognitive Cost of Parallel AI Coding and the Art of Delegation"
+title: "Hitting Enter Melts Your Brain: Parallel AI Coding Costs"
 excerpt: "A day spent with six terminals open, waiting on responses and just smashing enter. This new kind of labor, called multi-Clauding, is quietly draining developers' focus. We examine why, and trace the shift from watcher to orchestrator."
 date: 2026-07-16
 last_modified_at: 2026-07-16

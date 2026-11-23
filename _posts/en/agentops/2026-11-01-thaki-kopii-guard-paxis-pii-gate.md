@@ -1,6 +1,6 @@
 ---
 title: "Mask Personal Data Before the Agent Starts Working"
-seo_title: "Thaki KoPII-Guard v1 - A Korean PII Masking Model in Front of Paxis Agent Work | ThakiCloud"
+seo_title: "Mask Personal Data Before the Agent Starts Working"
 seo_description: "We released KoPII-Guard v1 on Hugging Face. It finds the location of 18 types of Korean personal information, such as names, phone numbers, resident registration numbers and addresses. We cover the synthetic benchmark results, the lighter variants we chose not to release, and where the model sits in front of Paxis agent work."
 excerpt: "We released a Korean model that masks personal information before an agent reads documents or calls tools. Here is what it catches, what it misses, and where it fits in the Paxis workflow."
 date: 2026-11-01

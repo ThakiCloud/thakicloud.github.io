@@ -1,7 +1,7 @@
 ---
 title: "Why an Async Harness Cuts Coding-Agent Cost by 39%"
 excerpt: "The tokens an agent burns waiting for tool results (waits, polls, heartbeats) are a cost the harness design, not the model, controls. Unreal Labs' open-source Go harness Unreal Agent hits the same pass rate as Codex at 39% lower cost. I build it from source and probe the runner to trace how async tool management makes the harness an independent cost variable."
-seo_title: "Why an async harness cuts coding-agent cost by 39%. Unreal Agent's async tool-calling architecture, GPT-6 Astra measurements (Terminal-Bench $1428 vs $2350), and what it means for ThakiCloud Paxis agent-run economics."
+seo_title: "Why an Async Harness Cuts Coding-Agent Cost by 39%"
 seo_description: "Unreal Labs' open-source Go agent harness Unreal Agent manages tool calls fully asynchronously, removing the model's wait/poll/heartbeat overhead. It measures up to 40% cheaper than Codex and 20% cheaper than Pi at equal or higher pass rate. Architecture, benchmarks, and the platform-operations perspective."
 date: 2026-09-23
 last_modified_at: 2026-09-23

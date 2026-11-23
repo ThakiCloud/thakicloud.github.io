@@ -1,7 +1,7 @@
 ---
 title: "Same GPU, Same Model, Opposite Settings"
 excerpt: "A serving endpoint's concurrency setting is not a constant. We measured the same model on the same card at two endpoints and the recommendations came out reversed. What decided it was request length, not hardware."
-seo_title: "vLLM inference tuning measured: max_num_seqs is your KV pool divided by request length"
+seo_title: "Same GPU, Same Model, Opposite Settings"
 seo_description: "A 27B model quantized to 4-bit on one B200, measured from 1 to 256 concurrent requests. One kind of layer held 99.5 percent of the cache; halving its number format doubled capacity."
 date: 2026-09-05
 published: true

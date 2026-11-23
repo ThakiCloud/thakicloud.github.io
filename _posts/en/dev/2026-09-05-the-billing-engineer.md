@@ -1,7 +1,7 @@
 ---
-title: "Money Systems Break Silently: Making Every Billing Failure Visible Within a Day"
+title: "Billing Failures Are Silent: Making Them Visible in a Day"
 excerpt: "A failed card charge leaves no crash, no error log, and no alert. The customer keeps using the service while that month's revenue quietly stops existing. This post argues why money systems fail that way and what it takes to make every failure surface within 24 hours."
-seo_title: "Money Systems Break Silently: Billing Design for Solo Developers"
+seo_title: "Billing Failures Are Silent: Making Them Visible in a Day"
 seo_description: "Why subscription billing fails without any error, and how an event-first ledger, an event-driven state machine, idempotency keys, and reconciliation make every failure visible within a day."
 date: 2026-09-05
 last_modified_at: 2026-09-05

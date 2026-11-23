@@ -1,6 +1,6 @@
 ---
-title: "Does Adding Votes to a Skill Router Improve Accuracy? We Costed the Ensemble Before Building It"
-seo_title: "Cost-Quality Analysis of Ensemble Voting Across Model Tiers for Skill Routing - ThakiCloud Research"
+title: "Ensemble Voting for Skill Routers: Costed Before Built"
+seo_title: "Ensemble Voting for Skill Routers: Costed Before Built"
 seo_description: "We analyze whether adding confidence-weighted votes from cheap model tiers to a production harness that routes skills on a single hybrid retrieval signal improves accuracy, and when the cost is justified, using a cost model built on measured numbers and a pre-registered evaluation protocol."
 excerpt: "Would adding voters to a router with over 1,000 skills make it better? Before answering, we calculated how much better it would need to get for the cost to pay off."
 date: 2026-08-06

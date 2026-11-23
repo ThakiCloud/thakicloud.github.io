@@ -1,7 +1,7 @@
 ---
 title: "Qwen3.6-27B을 4비트로: NVFP4 양자화가 Hopper까지 내려온 이유"
 excerpt: "NVIDIA가 공개한 Qwen3.6-27B-NVFP4는 27B 하이브리드 어텐션 추론 모델을 4비트로 눌러 메모리를 약 2.5배 줄이면서도 FP8 대비 벤치마크 차이를 1%p 이내로 유지합니다. 지난 Gemma NVFP4가 Blackwell 전용이었던 것과 달리 이번 빌드는 Hopper까지 지원해, 이미 H100/H200을 가진 조직이 오늘 당장 온프렘에서 돌릴 수 있습니다. 모델 팩트와 NVFP4 원리, 서빙 경로, 그리고 ThakiCloud 서빙 관점을 정리했습니다."
-seo_title: "Qwen3.6-27B-NVFP4 온프렘 서빙 가이드 - Hopper/Blackwell 4비트 양자화 - Thaki Cloud"
+seo_title: "Qwen3.6-27B을 4비트로: NVFP4 양자화가 Hopper까지 내려온 이유"
 seo_description: "Qwen3.6-27B-NVFP4(27B, 하이브리드 어텐션, 262K 컨텍스트, 멀티모달 추론)를 vLLM으로 서빙: NVFP4 4비트 양자화로 메모리 약 2.5배 절감, FP8 대비 벤치 1%p 이내. Hopper/Blackwell 동시 지원, Apache 2.0. ThakiCloud K8s 온프렘 서빙과 에이전트 워커 관점."
 date: 2026-07-01
 last_modified_at: 2026-07-01

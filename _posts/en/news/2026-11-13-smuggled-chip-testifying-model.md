@@ -2,7 +2,7 @@
 title: "Chips Are Smuggled, Models Testify"
 lang: en
 excerpt: "A report that Nvidia Blackwell GPU fingerprints were found in the weights of a public frontier model, a DeepSeek funding round used to procure restricted GPUs, and a US regulation draft blocking cloud rental in seven countries. The three stories this morning point the same direction. The target of export controls is moving from chips to models and to rental contracts. There is one question left for companies. Who can explain which GPU did what."
-seo_title: "Chips Are Smuggled, Models Testify: The Morning GPU Export Controls Moved to Weights and Rental Contracts | ThakiCloud"
+seo_title: "Chips Are Smuggled, Models Testify"
 seo_description: "A former OpenAI researcher identified Nvidia Blackwell GPU fingerprints in the weights of public frontier models, DeepSeek procured restricted GPUs through a funding round, and the US is finalizing a regulation draft blocking cloud rental in seven countries. Along with SpaceX's $74 billion hubs, Inkling 2 Small open weights, and Gemini 4 Hydrogen. We answer the question of verifiability this morning's signals pose to enterprise execution, through the Paxis lens."
 date: 2026-11-13
 last_modified_at: 2026-11-13

@@ -1,7 +1,7 @@
 ---
 title: "140밀리초짜리 시간계열 예측"
 excerpt: "Mistral이 Timestral을 내놓았다. 5M에서 209M까지 네 개의 시간계열 파운데이션 모델로, GPU 없이 CPU에서만 돌리며 하루 앞을 140밀리초 만에 예측한다. 모델 규모가 작아진다는 것은 예측이 데이터센터가 아니라 터미널로 이동한다는 뜻이다."
-seo_title: "GPU 없이 CPU 140밀리초, Mistral Timestral이 바꿀 시간계열 예측의 단가 | ThakiCloud"
+seo_title: "140밀리초짜리 시간계열 예측"
 seo_description: "Mistral Timestral, 5M~209M 네 사이즈 시간계열 파운데이션 모델. CPU에서만 하루 앞 예측을 10~140밀리초에 끝낸다. GIFT-Eval·TIME·fev-bench 1위, Modified MIT. GPU 인프라 없이 시간계열 예측이 어디로 이동하는지 ai-platform 렌즈로 분석합니다."
 date: 2026-10-19
 last_modified_at: 2026-10-19

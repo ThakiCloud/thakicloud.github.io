@@ -1,6 +1,6 @@
 ---
 title: "FigmaTrace: 디자인 과정을 녹인 첫 computer-use 데이터셋"
-seo_title: "FigmaTrace: 200시간 Figma 디자인 워크플로를 3,469개 trajectories로 - Thaki Cloud"
+seo_title: "FigmaTrace: 디자인 과정을 녹인 첫 computer-use 데이터셋"
 seo_description: "Patronus AI가 오픈소스한 디자인 전문 computer-use 데이터셋 FigmaTrace. 126개 long-horizon 태스크, Playwright-MCP 액션 공간, phase-based 분할. Qwen3.8-27B SFT로 GUI-Odyssey에서 Claude-Opus-5를 앞섰습니다."
 excerpt: "VLM이 디자인을 못 하는 이유는 픽셀을 못 읽어서가 아니라, 디자이너가 어떻게 과정을 굴리는지 본 적이 없어서입니다. FigmaTrace는 전문가 200시간의 Figma 화면 녹화를 3,469개 trajectories로 바꾸고, 이 과정에서 '잘라내는 방법'이 데이터 양보다 성과에 크게 작용한다는 것을 숫자로 보여줍니다."
 date: 2026-08-22

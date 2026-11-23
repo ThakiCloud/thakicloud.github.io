@@ -1,7 +1,7 @@
 ---
 title: "The Capability Gap Is 4 Months, and the Cost Gap Has Inverted"
 excerpt: "While a record $63 billion in bonds lands on a single chip facility, open-weight models set new records in quantization, throughput, and sovereignty. The capability gap holds at a 4-month median, and the cost gap has inverted. This is the day the question shifts from 'which model do we use' to 'how do we route.'"
-seo_title: "Record $63B Bonds, 150GB of RAM, and a 4-Month Gap: The Day the Price Tag Split in Two"
+seo_title: "The Capability Gap Is 4 Months, and the Cost Gap Has Inverted"
 seo_description: "A record $63 billion AI chip facility, a 428B model running on 150GB of RAM, near 1,000 tokens per second of throughput, and an open-weight gap fixed at a 4-month median. This post lays out the two price tags in today's news, the model routing questions for enterprises, and the Paxis lens."
 date: 2026-10-30
 last_modified_at: 2026-10-30

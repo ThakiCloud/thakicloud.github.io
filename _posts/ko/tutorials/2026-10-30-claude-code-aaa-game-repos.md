@@ -1,6 +1,6 @@
 ---
-title: "Claude Code로 AAA급 게임 만들기: GitHub 레포 10개 실측 검증 + 실제로 빌드해본 결과"
-seo_title: "AAA급 게임 시스템 오픈소스 레포 10개: Jolt Physics, Recast, meshoptimizer 실측 검증과 Claude Code 통합 워크플로 - ThakiCloud"
+title: "Claude Code로 AAA급 게임 만들기: 10개 레포 검증"
+seo_title: "Claude Code로 AAA급 게임 만들기: 10개 레포 검증"
 seo_description: "바이럴된 'Claude Code로 AAA급 게임 만들기' 트윗의 10개 GitHub 레포를 GitHub API로 일일히 검증하고, meshoptimizer를 실제로 빌드·실행해 정점 50% 감소를 실측했습니다. 10개 중 1개(ozz-animation)는 라이선스가 표준 SPDX로 분류되지 않는 NOASSERTION으로 확인됐습니다."
 excerpt: "10개 레포 전부 실재하고 총 별 55,723개, 9개는 최근 90일 내 활성. meshoptimizer를 실제로 빌드해 204,800개 삼각형을 102,400개로 줄이고 에러가 예산의 8분의 1이었다는 숫자를 남깁니다. 핵심은 레포 자체가 아니라 'API 계약을 에이전트에 주고 통합 코드를 나오게 한다'는 패턴입니다."
 date: 2026-10-30

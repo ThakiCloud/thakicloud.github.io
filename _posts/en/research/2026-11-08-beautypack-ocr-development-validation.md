@@ -1,6 +1,6 @@
 ---
-title: "Building and Validating a Cosmetics Packaging OCR: From Crop Recognition to Full-Photo E2E and a Near-Duplicate Audit"
-seo_title: "Cosmetics Packaging OCR: CRNN, Detector Fine-Tuning and a Near-Duplicate Audit | ThakiCloud"
+title: "Cosmetics Packaging OCR: Build and Validation"
+seo_title: "Cosmetics Packaging OCR: Build and Validation"
 seo_description: "We built a small OCR that reads text on cosmetics and pharmaceutical package photos. A preregistered single evaluation gave a full-photo E2E F1 of 0.809, a rescore without near-duplicates gave 0.775 to 0.792, and it runs at about 0.55 s per photo on 4 CPU threads."
 excerpt: "An 8.9M-parameter CRNN and a fine-tuned detector read text and dates on cosmetics package photos. Here are the single-evaluation numbers, the numbers after a near-duplicate audit, and the conditions we have not measured yet."
 date: 2026-11-08

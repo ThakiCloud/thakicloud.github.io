@@ -1,7 +1,7 @@
 ---
-title: "Controlling Reasoning Effort - How LLMs Learn Low, Medium, and High Thinking Modes"
+title: "Controlling Reasoning Effort: Low, Medium, and High Modes"
 excerpt: "With GPT-5.6 shipping five or six reasoning effort settings per size, effort control has become table stakes for reasoning models. We dig into what training recipe sits behind the same labels, drawing on technical reports from six open-weight models to map the shared skeleton."
-seo_title: "Controlling Reasoning Effort - How LLMs Learn Low/Medium/High Reasoning Modes - Thaki Cloud"
+seo_title: "Controlling Reasoning Effort: Low, Medium, and High Modes"
 seo_description: "What is reasoning effort and how is it trained? From effort-conditioned SFT and RLVR length penalties to the training recipes and inference-time budget controls of six open-weight models (DeepSeek V4, Nemotron 3 Ultra, Kimi K2.5, GLM-5, Qwen3, Inkling), we summarize Sebastian Raschka's analysis from a cloud and inference serving perspective."
 date: 2026-07-19
 last_modified_at: 2026-07-19

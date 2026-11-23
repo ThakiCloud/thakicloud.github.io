@@ -1,5 +1,5 @@
 ---
-title: "NVIDIA OpenMathReasoning: AIMO-2 우승 모델의 기반이 된 대규모 수학 추론 데이터셋"
+title: "OpenMathReasoning: AIMO-2 우승을 받친 수학 추론 데이터"
 excerpt: "306K 수학 문제와 568만 솔루션으로 구성된 OpenMathReasoning 데이터셋 완전 분석 - CoT, TIR, GenSelect 방법론과 OpenMath-Nemotron 시리즈 성과"
 date: 2025-06-18
 tags: 

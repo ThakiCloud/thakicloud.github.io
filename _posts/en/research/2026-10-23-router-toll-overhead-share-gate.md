@@ -1,6 +1,6 @@
 ---
-title: "The Router's Toll: Measuring the Token Toll the skill-router Pipeline Pays Itself, and Skipping 71.6% of That Bill with a Deterministic Precondition Gate"
-seo_title: "The Router's Toll: Measuring the Own Token Overhead Share of a Hybrid skill-router Pipeline and the Precondition Gate Skip Study (routing overhead share, cost-quality frontier, BM25, LLM reranking, duty-cycle, token metering, self-hosted H200) - ThakiCloud"
+title: "The Router's Toll: Token Overhead of a Skill Router"
+seo_title: "The Router's Toll: Token Overhead of a Skill Router"
 seo_description: "The routing literature has only priced how much a router saves, and has never measured what share of the agent loop's tokens the router pipeline itself consumes. This measurement paper meters the off/lite/full/gated 4 arms on a 2,293-entry production skill registry and a frozen 63-decision holdout, and shows that the full pipeline pays 1,440.3 tokens per decision (0.45574%), with 71.6% of that bill being LLM calls. The break-even accuracy lift is 0.30% while the cited lift is 8.9pp. In the pre-registered 30-config sweep, exactly 6 configs are zero-degradation-safe, and the best family skips 100% of the holdout at production scale and cuts the bill by 71.6% with zero measured accuracy loss."
 excerpt: "The routing literature has only priced what the router saves. No one has measured what share of the agent loop's tokens the router pipeline itself uses. This paper closes that accounting gap with measurements on a 2,293-skill production registry and shows that a deterministic precondition gate skips 71.6% of the bill with zero measured accuracy loss."
 date: 2026-10-23

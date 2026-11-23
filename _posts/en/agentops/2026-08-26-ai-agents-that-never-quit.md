@@ -1,7 +1,7 @@
 ---
-title: "150,000 People Who Never Quit: The Day Agents Became the New Technical Debt"
+title: "150,000 Agents Per Company: The New Technical Debt"
 excerpt: "Gartner projects 150,000 AI agents per Fortune 500 company by 2028. But few organizations can answer the 'retirement' procedure. The cost of agents is shifting from where they are created to where they are left behind."
-seo_title: "150,000 AI Employees Who Never Retire: The Day Agent Retirement Became a Security Issue"
+seo_title: "150,000 Agents Per Company: The New Technical Debt"
 seo_description: "From 15 in 2025 to 150,000 by 2028. Only 21% of companies have a formal agent decommissioning procedure. Why 'retirement' is becoming the most expensive procedure for agents, and the answer platforms must prepare."
 lang: en
 date: 2026-08-26

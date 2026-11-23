@@ -1,7 +1,7 @@
 ---
 title: "Vibe Kanban 완전 가이드 - AI 에이전트와 GitHub 프로젝트 통합 운영법"
 excerpt: "BloopAI의 Vibe Kanban을 활용하여 AI 코딩 에이전트들을 효율적으로 관리하고, 기존 GitHub 프로젝트와 완벽하게 통합하는 방법을 상세히 설명합니다."
-seo_title: "Vibe Kanban 튜토리얼 - AI 에이전트 프로젝트 관리 완전 가이드 - Thaki Cloud"
+seo_title: "Vibe Kanban 완전 가이드 - AI 에이전트와 GitHub 프로젝트 통합 운영법"
 seo_description: "BloopAI Vibe Kanban으로 Claude Code, Gemini CLI 등 AI 에이전트를 관리하고 GitHub 프로젝트와 통합하는 실무 가이드. Apache-2.0 라이선스 분석 포함."
 date: 2025-07-17
 last_modified_at: 2025-07-17

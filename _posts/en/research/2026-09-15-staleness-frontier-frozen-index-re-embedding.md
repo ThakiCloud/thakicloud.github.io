@@ -1,6 +1,6 @@
 ---
-title: "The Index Rots: Staleness Frontier and Re-Embedding Cadence of a 2,000-Skill Router"
-seo_title: "The Staleness Frontier paper analysis - accuracy decay law of frozen skill-router embedding indexes under registry churn in a 2,000-skill agent harness, two-parameter time-extended survival model in d_r and Δλ, square-root law for the cost-optimal re-embedding cadence Δt* = sqrt(2C_re/(c_q P'(0))) and break-even inequality, and the operational map of the dimensionless cost ratio ρ - ThakiCloud"
+title: "The Index Rots: Re-Embedding Cadence for a Skill Router"
+seo_title: "The Index Rots: Re-Embedding Cadence for a Skill Router"
 seo_description: "When the skill registry evolves every night, the retrieval index slowly rots. This paper fixes the registry size, makes index age and churn rate the variables, and derives the accuracy decay law. It then distills the cadence that minimizes total cost between re-embedding cost and routing miss cost into a square-root law and a break-even inequality. Under observed churn, top-1 decays concavely, losing 2.8 points at 7 days, 9.1 points at 30 days, and 18.3 points in total, while the optimal cadence ranges from 2 days to 3 months depending on the dimensionless cost ratio ρ. However, the decay depth is model output on reference values that recorded evidence does not support, and it is what the 30-day frozen arm protocol will re-anchor."
 excerpt: "The skill catalog changes every night, but the retrieval index stays where it is. How fast does a frozen index lose accuracy, and which re-embedding cadence, in days, minimizes total cost? The decay law falls concavely toward a floor, and the optimal cadence is set by the ratio of the two costs."
 date: 2026-09-15

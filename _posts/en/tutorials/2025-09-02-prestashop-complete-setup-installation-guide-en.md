@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to PrestaShop Installation and Setup: Building Your E-commerce Store from Scratch"
+title: "PrestaShop 9: Installing and Setting Up Your Store"
 excerpt: "Step-by-step tutorial for installing and configuring PrestaShop 9.0 e-commerce platform with Docker, PHP, and MySQL. Perfect for beginners building their first online store."
-seo_title: "PrestaShop Installation Guide 2025 - Complete Setup Tutorial - Thaki Cloud"
+seo_title: "PrestaShop 9: Installing and Setting Up Your Store"
 seo_description: "Learn how to install PrestaShop 9.0 e-commerce platform step-by-step. Includes Docker setup, database configuration, and best practices for online store development."
 date: 2025-09-02
 tags:

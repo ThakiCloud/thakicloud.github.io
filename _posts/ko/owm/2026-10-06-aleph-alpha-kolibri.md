@@ -1,6 +1,6 @@
 ---
 title: "Kolibri: 독일이 내린 소버린 오픈웨이트 MoE, 78B 총합에 활성 3.46B"
-seo_title: "Aleph Alpha Kolibri 1 리뷰: 78B MoE(활성 3.46B) 독일어·영어 특화, 1M 컨텍스트, FP8, Apache 2.0 - ThakiCloud"
+seo_title: "Kolibri: 독일이 내린 소버린 오픈웨이트 MoE, 78B 총합에 활성 3.46B"
 seo_description: "독일 Aleph Alpha가 2026년 10월 3일 공개한 Kolibri 1은 독일어·영어 특화 78B MoE 오픈웨이트 모델입니다. 토큰당 활성 3.46B, 검증된 1M 컨텍스트, FP8 네이티브, Apache 2.0. 모델카드 벤치마크와 서빙 요구사항, ThakiCloud 온프레미스 관점을 정리합니다."
 excerpt: "트윗은 '독일이 프런티어 LLM 레이스에 진입했다'고 했지만, 모델카드가 말하는 것은 더 구체적인 것입니다. 78B 총합에 토큰당 활성 3.46B, 독일어·영어 특화, 1M 컨텍스트, FP8 네이티브, Apache 2.0. H200 1장이 최소 요구입니다."
 date: 2026-10-06

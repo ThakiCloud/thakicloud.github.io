@@ -1,7 +1,7 @@
 ---
-title: "Validate Expensive, Then Descend: Cutting a Skill Fleet's Model Cost with Code Gates"
+title: "Validate Expensive, Then Descend: Code Gates Cut Model Cost"
 excerpt: "When a company's recurring work is defined as skills, each skill can tell you, through measurement rather than intuition, exactly how far down the model tier it can go. The most expensive model isn't for doing the work, it's for judging whether a cheaper one can. This is a real operating record of a 16-skill fleet where 10 skills were pushed down to a mid tier."
-seo_title: "VETD - Cutting LLM Costs by Validating Expensive, Then Descending to Cheaper Tiers - Thaki Cloud"
+seo_title: "Validate Expensive, Then Descend: Code Gates Cut Model Cost"
 seo_description: "An operating method for defining company work as skills, judging quality with opus, and letting a code gate decide whether to descend to sonnet. We share real fleet-wide descent and hold decisions across 16 skills, including the failures."
 lang: en
 date: 2026-07-12

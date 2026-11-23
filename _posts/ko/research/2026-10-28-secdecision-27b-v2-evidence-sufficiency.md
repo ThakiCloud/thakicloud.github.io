@@ -1,6 +1,6 @@
 ---
-title: "증거가 충분할 때만 결론을 내리는 보안 판단: 생성 없는 27B 증거 충분성 모델"
-seo_title: "Thaki-SecDecision-27B-V2: 생성 없는 보안 증거 충분성 판단 모델 - ThakiCloud"
+title: "SecDecision 27B: 증거가 충분할 때만 결론 내리기"
+seo_title: "SecDecision 27B: 증거가 충분할 때만 결론 내리기"
 seo_description: "클레임과 필수 사실, 증거 집합을 받아 SUPPORTED, REFUTED, INSUFFICIENT, CONFLICTED와 결론 가능 여부를 판정합니다. 동결 27B 백본에 LoRA와 fp32 소형 헤드 3개를 얹고 자유 생성을 없앤 구조입니다. 봉인 TEST 4,002건에서 잘못된 결론은 1건, 결론 가능한 케이스의 회수율은 97.2%였습니다."
 excerpt: "자율 보안 대응에서 결론을 내는 순간은 곧 행동이 시작되는 순간입니다. 증거가 충분할 때만 결론을 내리고 나머지는 증거를 더 모으라고 답하는 모델을 만들었습니다. 이 모델은 텍스트를 생성하지 않습니다."
 date: 2026-10-28

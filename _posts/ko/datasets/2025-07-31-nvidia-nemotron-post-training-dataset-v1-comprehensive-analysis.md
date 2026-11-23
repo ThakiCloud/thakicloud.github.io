@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron Post-Training Dataset v1 - LLM 성능 향상을 위한 대규모 합성 데이터셋 완전 분석"
+title: "Nemotron Post-Training v1: LLM 튜닝용 합성 데이터셋 분석"
 excerpt: "NVIDIA가 공개한 2,560만 개 샘플의 대규모 합성 데이터셋으로, 수학, 코딩, STEM, 추론, 도구 호출 능력 향상을 위한 고품질 훈련 데이터를 제공합니다."
-seo_title: "NVIDIA Nemotron Post-Training Dataset v1 완전 분석 - Thaki Cloud"
+seo_title: "Nemotron Post-Training v1: LLM 튜닝용 합성 데이터셋 분석"
 seo_description: "NVIDIA Nemotron Post-Training Dataset v1의 구조, 카테고리별 데이터 분포, 사용법을 상세히 분석한 가이드. 25.6M 샘플의 고품질 합성 데이터셋 활용 방법까지."
 date: 2025-07-31
 last_modified_at: 2025-07-31

@@ -1,6 +1,6 @@
 ---
-title: "It Does Better With the Examples Removed: The New Rules of Context Engineering for the Latest Models"
-seo_title: "What Cutting the Claude Code System Prompt by 80% Teaches Us | New Rules of Context Engineering | ThakiCloud"
+title: "Better Without Examples: Context Engineering for New Models"
+seo_title: "Better Without Examples: Context Engineering for New Models"
 seo_description: "Anthropic cut the Claude Code system prompt by more than 80% for the latest generation of models. The smarter the model, the better it does when you strip out examples and prohibition lists. We explain why examples now become a shackle, how to rewrite a system prompt, and what it means for the ThakiCloud skill harness."
 excerpt: "The smarter a model gets, the more examples and do-not lists become a shackle rather than help. We look at why Anthropic cut its system prompt by 80% and why you should re-trim your prompt every time a new model ships."
 date: 2026-07-25

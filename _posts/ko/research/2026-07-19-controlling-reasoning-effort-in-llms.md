@@ -1,7 +1,7 @@
 ---
-title: "리즈닝 노력(reasoning effort)을 조절한다는 것 - LLM이 저·중·고 추론 모드를 학습하는 법"
+title: "리즈닝 노력 조절: LLM이 저·중·고 모드를 배우는 법"
 excerpt: "GPT-5.6이 사이즈마다 대여섯 개의 추론 노력 설정을 달고 나오면서, effort 조절은 이제 리즈닝 모델의 기본기가 됐습니다. 같은 라벨 뒤에 어떤 학습 레시피가 숨어 있는지, 오픈웨이트 6개 모델의 기술 리포트를 뜯어 공통 골격을 정리합니다."
-seo_title: "리즈닝 노력 조절 - LLM 저·중·고 추론 모드 학습법 정리 - Thaki Cloud"
+seo_title: "리즈닝 노력 조절: LLM이 저·중·고 모드를 배우는 법"
 seo_description: "reasoning effort는 무엇이고 어떻게 학습시키는가. effort-conditioned SFT와 RLVR 길이 페널티부터 DeepSeek V4·Nemotron 3 Ultra·Kimi K2.5·GLM-5·Qwen3·Inkling 6개 오픈웨이트 모델의 학습 레시피와 추론 시점 예산 제어까지, Sebastian Raschka의 분석을 클라우드·추론 서빙 관점에서 정리했습니다."
 date: 2026-07-19
 last_modified_at: 2026-07-19

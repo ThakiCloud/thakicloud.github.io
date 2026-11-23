@@ -1,7 +1,7 @@
 ---
 title: "1비트로 줄인 744B: Unsloth GLM-5.2 Dynamic GGUF가 던지는 온프레미스 질문"
 excerpt: "Unsloth가 GLM-5.2(약 744B MoE)의 1.51TB BF16 가중치를 1비트 Dynamic GGUF로 줄여 176GB까지 압축했습니다. 프런티어급 오픈 모델을 256GB Mac이나 멀티 GPU 한 대에서 돌릴 수 있게 된 셈입니다. 양자화 단계별 용량·정확도 공개 수치와 함께, GGUF 로컬 서빙이 ThakiCloud 같은 멀티테넌트 K8s 플랫폼에 어디까지 들어맞고 어디서 갈라지는지 정리합니다."
-seo_title: "Unsloth GLM-5.2 1비트 Dynamic GGUF 양자화 온프레미스 서빙 분석 - Thaki Cloud"
+seo_title: "1비트로 줄인 744B: Unsloth GLM-5.2 Dynamic GGUF가 던지는 온프레미스 질문"
 seo_description: "Unsloth GLM-5.2 Dynamic GGUF(1.51TB→176GB, 1비트)의 양자화 단계별 용량·정확도, 256GB Mac 로컬 실행, llama.cpp vs vLLM 서빙 트레이드오프를 ThakiCloud K8s 멀티테넌트 서빙 플랫폼 관점에서 분석합니다."
 date: 2026-06-25
 last_modified_at: 2026-06-25

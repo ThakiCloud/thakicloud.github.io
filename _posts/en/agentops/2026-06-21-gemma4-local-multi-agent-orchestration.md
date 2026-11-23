@@ -1,7 +1,7 @@
 ---
-title: "Multi-Agent Orchestration on Your Own Machine: Running 10 Parallel Subagents with Gemma 4 26B"
+title: "Gemma 4 26B Orchestrating Ten Local Subagents"
 excerpt: "We break down a demo that runs Gemma 4 26B locally to orchestrate 10 parallel subagents coding an SVG art gallery. Here is what on-premise inference economics and multi-agent orchestration look like from a ThakiCloud K8s serving perspective."
-seo_title: "Gemma 4 26B Local Multi-Agent Orchestration Analysis - Thaki Cloud"
+seo_title: "Gemma 4 26B Orchestrating Ten Local Subagents"
 seo_description: "Analysis of a Gemma 4 26B local parallel subagent demo, on-premise inference economics, and a K8s-based multi-agent serving perspective"
 date: 2026-06-21
 last_modified_at: 2026-06-21

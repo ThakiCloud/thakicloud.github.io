@@ -1,6 +1,6 @@
 ---
-title: "KV Cache Tiering and Prefill-Decode Disaggregation Together: Does H200 MoE Serving Cost Actually Drop"
-seo_title: "KV Cache Tiering x PD Disaggregation MoE Serving Cost Analysis | ThakiCloud"
+title: "KV Cache Tiering Plus PD Disaggregation: Cheaper H200 MoE?"
+seo_title: "KV Cache Tiering Plus PD Disaggregation: Cheaper H200 MoE?"
 seo_description: "An analysis of how the latency-cost curve for H200 MoE serving shifts when prefill-decode disaggregation is combined with LMCache-based KV cache tiering, reported honestly through to the H200 measurement attempt that ended in a vLLM engine initialization failure."
 excerpt: "Do two optimization techniques compound into synergy, or cancel each other out. We structure the answer as a break-even formula, and cover the vLLM engine initialization failure that happened on H200 along the way."
 date: 2026-07-28

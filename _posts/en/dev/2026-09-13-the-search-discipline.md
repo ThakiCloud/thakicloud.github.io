@@ -1,7 +1,7 @@
 ---
 title: "Search Is Translation, Not Matching"
 excerpt: "The \"the data is there but the user cannot find it\" failure is almost never a storage failure; it is a translation failure. Search moves a user's fuzzy memory into a condition the database can answer, and it stops failing only when you treat each stage of that translation as evidence, not a guess."
-seo_title: "Search Is Translation, Not Matching: Designing Product Search for Solo Developers"
+seo_title: "Search Is Translation, Not Matching"
 seo_description: "From exact match to trigrams, the results page, EXPLAIN, and search logs. How to treat \"the data exists but cannot be found\" as a translation problem and fix it cheaply, inside the database."
 date: 2026-09-13
 last_modified_at: 2026-09-13

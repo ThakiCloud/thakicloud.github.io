@@ -1,7 +1,7 @@
 ---
-title: "free-claude-code로 Claude Code를 자체호스팅 모델에 연결하기 - 17개 프로바이더 라우팅 프록시 실측"
+title: "free-claude-code: Claude Code를 자체호스팅 모델에 연결"
 excerpt: "36.7k 스타의 free-claude-code는 Claude Code 트래픽을 Anthropic 호환 FastAPI 프록시로 받아 17개 프로바이더로 분기합니다. 로컬 Ollama 백엔드로 직접 라우팅해 레이턴시를 측정하고, Python 3.14 하드 요구가 만든 배포 리스크까지 정직하게 기록한 실측 리포트입니다."
-seo_title: "free-claude-code 자체호스팅 라우팅 - Claude Code 멀티프로바이더 프록시 - Thaki Cloud"
+seo_title: "free-claude-code: Claude Code를 자체호스팅 모델에 연결"
 seo_description: "free-claude-code로 Claude Code를 Ollama·vLLM 등 자체호스팅 모델로 라우팅하는 실전 기록. Anthropic 호환 FastAPI 프록시 구조, 로컬 Ollama 레이턴시 실측, Python 3.14 하드 요구가 만든 배포 리스크를 ThakiCloud K8s 환경 관점에서 분석합니다."
 date: 2026-06-24
 last_modified_at: 2026-06-24

@@ -1,7 +1,7 @@
 ---
 title: "The Day 474 Gigawatts Never Arrived"
 excerpt: "In one month in August, 474 gigawatts of interconnection requests came into the Texas power grid. 90% were for data centers, and a fact-check found two-thirds were closer to reservations. A recap of the day the numbers turned the AI power panic on its head."
-seo_title: "The Day 474 Gigawatts Never Arrived, 67.7% of Power Applications Were Phantom and the Real Bottleneck for AI Data Centers"
+seo_title: "The Day 474 Gigawatts Never Arrived"
 seo_description: "A fact-check found 67.7% of AI data center power applications were fake or duplicated. The real bottleneck is not generation capacity but regional grid imbalance and deployment speed. Implications for Korea's 550 trillion won plan and enterprise AI execution."
 date: 2026-09-22
 last_modified_at: 2026-09-22

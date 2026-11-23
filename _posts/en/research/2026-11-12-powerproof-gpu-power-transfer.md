@@ -1,6 +1,6 @@
 ---
-title: "PowerProof: Why GPU Power Prediction Failed to Transfer from H100/H200 to B200"
-seo_title: "PowerProof: Why a GPU Power Model Trained on H100/H200 Failed on B200 | ThakiCloud"
+title: "PowerProof: Why GPU Power Models Failed to Reach B200"
+seo_title: "PowerProof: Why GPU Power Models Failed to Reach B200"
 seo_description: "We trained Ridge and GBDT models on GPU board power measured on H100 and H200 and applied them unchanged to B200. Mean power WAPE was 30.02% and 43.33%, and all 240 runs were underpredicted. This post covers the pre-frozen evaluation procedure, the failure pattern, a development analysis, and the plan for the next independent test."
 excerpt: "We trained serving power models on H100 and H200 measurements and applied them unchanged to B200. Mean power error was 30% and 43%, and all 240 runs were underpredicted."
 date: 2026-11-12

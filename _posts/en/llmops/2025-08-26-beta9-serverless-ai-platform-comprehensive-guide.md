@@ -1,7 +1,7 @@
 ---
-title: "Beta9: Revolutionizing Serverless AI Infrastructure with Python-First Approach"
+title: "Beta9: Python-First Serverless AI Infrastructure"
 excerpt: "Comprehensive guide to Beta9, an open-source serverless AI platform that simplifies ML workload deployment with fast container startup, scale-to-zero architecture, and seamless GPU orchestration."
-seo_title: "Beta9 Serverless AI Platform Guide - Python-First ML Infrastructure"
+seo_title: "Beta9: Python-First Serverless AI Infrastructure"
 seo_description: "Learn how Beta9 transforms AI workload deployment with sub-second container startup, serverless scaling, and Python-native APIs for modern ML infrastructure."
 date: 2025-08-26
 tags:

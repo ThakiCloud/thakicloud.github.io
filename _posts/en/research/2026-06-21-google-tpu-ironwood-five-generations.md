@@ -1,7 +1,7 @@
 ---
-title: "From TPU v2 to Ironwood: Five Generations of Google's Training Supercomputers"
+title: "From TPU v2 to Ironwood: Five Generations of Training"
 excerpt: "We analyze a paper (arXiv:2606.15870) that traces Google's five generations of training supercomputers from TPU v2 to Ironwood, covering architectural stability, scale, resilience, power efficiency, and sustainability. We break down the lessons for large-scale AI infrastructure design from an MLOps perspective."
-seo_title: "Google TPU Ironwood: Five Generations of Training Supercomputers Analyzed - Thaki Cloud"
+seo_title: "From TPU v2 to Ironwood: Five Generations of Training"
 seo_description: "arXiv 2606.15870: Five generations from TPU v2 to Ironwood, power efficiency, resilience, and an MLOps-perspective analysis of large-scale AI training infrastructure design"
 date: 2026-06-21
 last_modified_at: 2026-06-21

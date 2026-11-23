@@ -1,6 +1,6 @@
 ---
-title: "One Machine, Swap the Capsule: A Cheaper Way to Serve Community Model Variants"
-seo_title: "Cost Frontier for Community LoRA Serving: Shared Server vs. Dedicated Server - ThakiCloud"
+title: "One Base, Swappable LoRAs: Serving Community Variants"
+seo_title: "One Base, Swappable LoRAs: Serving Community Variants"
 seo_description: "A popular open model quickly grows dozens or hundreds of community variants. This paper computes when pooling those variants onto one shared server beats giving each one its own dedicated server. At 32 variants the gap is about 30x, at 512 it is about 385x, and a dedicated server only wins when one variant takes more than a third of all requests."
 excerpt: "Release one open model and community variants follow within days. Give each variant its own server and you buy the expensive body over and over. Pool them on one server and you buy the body once, then just swap a small piece. This paper works out exactly where that line falls."
 date: 2026-08-26

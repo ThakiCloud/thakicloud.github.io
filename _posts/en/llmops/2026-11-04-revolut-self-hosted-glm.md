@@ -1,6 +1,6 @@
 ---
-title: "Revolut's self-hosted GLM, one year in: cutting coding-agent cost to 1/10"
-seo_title: "Revolut self-hosted GLM 1 year: 2,000 engineers, coding agent cost cut to 1/10 | ThakiCloud"
+title: "Revolut's Self-Hosted GLM: One Year In"
+seo_title: "Revolut's Self-Hosted GLM: One Year In"
 seo_description: "How Revolut runs Zhipu GLM on 56 B200 GPUs as the default coding model for about 2,000 engineers, at roughly 1/10 the price of OpenAI Codex and Claude Code. NVFP4 quantization, disaggregated prefill/decode serving, and context rightsizing are the three levers behind the 10x, plus the 'frontier is the exception' routing policy."
 excerpt: "Revolut, Europe's largest fintech, made self-hosted GLM the default coding model for roughly 2,000 engineers and cut inference cost to 1/10 in a year. The 10x did not come from more GPUs. It came from three levers: NVFP4 quantization, prefill/decode disaggregation, and context rightsizing. Based on The Register's coverage and the original talk."
 date: 2026-11-04

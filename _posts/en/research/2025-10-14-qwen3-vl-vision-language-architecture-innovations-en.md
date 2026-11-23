@@ -1,7 +1,7 @@
 ---
-title: "Qwen3-VL: The Evolution of Vision-Language Models Through Advanced Positional Embeddings and Multi-Level Feature Fusion"
+title: "Qwen3-VL: Positional Embeddings and Multi-Level Features"
 excerpt: "An in-depth exploration of Qwen3-VL's architectural innovations including Interleaved-MRoPE, DeepStack feature fusion, and text-timestamp alignment that enable superior multimodal reasoning and long-context video understanding"
-seo_title: "Qwen3-VL Architecture Innovations - Advanced Vision-Language Models - Thaki Cloud"
+seo_title: "Qwen3-VL: Positional Embeddings and Multi-Level Features"
 seo_description: "Comprehensive analysis of Qwen3-VL's breakthrough architecture featuring Interleaved-MRoPE positional embeddings, DeepStack multi-level feature fusion, and 235B parameter scale for enhanced multimodal reasoning"
 date: 2025-10-14
 tags:

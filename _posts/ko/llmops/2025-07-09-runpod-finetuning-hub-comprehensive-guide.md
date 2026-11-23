@@ -1,7 +1,7 @@
 ---
-title: "RunPod 파인튜닝 매니지먼트 서비스와 Hub 완전 분석 - 2025년 AI 개발의 새로운 패러다임"
+title: "RunPod 파인튜닝 서비스와 Hub 분석"
 excerpt: "RunPod의 Axolotl 기반 파인튜닝 자동화와 GitHub 연동 Hub 플랫폼을 통한 AI 개발 혁신. 멀티노드 클러스터부터 서버리스 배포까지 최신 업데이트를 심도 있게 분석합니다."
-seo_title: "RunPod 파인튜닝 매니지먼트 서비스와 Hub 플랫폼 완전 가이드 2025 - Thaki Cloud"
+seo_title: "RunPod 파인튜닝 서비스와 Hub 분석"
 seo_description: "RunPod의 Axolotl 기반 파인튜닝 자동화 서비스와 GitHub 연동 Hub 플랫폼 분석. 멀티노드 클러스터, 서버리스 배포, 비용 최적화까지 실무 중심 가이드"
 date: 2025-07-09
 last_modified_at: 2025-07-09

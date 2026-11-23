@@ -1,6 +1,6 @@
 ---
 title: "What Motor Current Signature Analysis (MCSA) Can and Cannot See"
-seo_title: "Motor Current Signature Analysis (MCSA) Basics - Fundamental, Harmonics, Negative Sequence, Sidebands, Frequency Resolution and Device Memorization | ThakiCloud"
+seo_title: "What Motor Current Signature Analysis (MCSA) Can and Cannot See"
 seo_description: "A practical guide to what motor current signature analysis reads from current alone: the fundamental, harmonics, phase unbalance and fault sidebands. It also covers window length and frequency resolution, what 512-point inputs throw away, and how models score well by memorizing the machine instead of the fault."
 excerpt: "What can a current sensor tell you about a motor? We walk through the fundamental, harmonics, negative sequence and sidebands, then show how a poorly chosen window or a model that memorizes the machine can still produce a high score."
 date: 2026-11-08

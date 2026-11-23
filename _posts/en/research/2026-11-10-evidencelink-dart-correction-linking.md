@@ -1,6 +1,6 @@
 ---
-title: "Releasing EvidenceLink, a Reranker That Finds the Original Filing a DART Correction Amends"
-seo_title: "EvidenceLink-DART-Reranker-KO Release: Linking DART Convertible Bond Corrections to Original Filings | ThakiCloud"
+title: "EvidenceLink: Finding the Filing a DART Correction Amends"
+seo_title: "EvidenceLink: Finding the Filing a DART Correction Amends"
 seo_description: "We are releasing a Korean cross-encoder that takes a DART convertible bond issuance correction filing and either picks the original filing (the specific tranche) it amends or declines to link. Sealed pre-registered evaluation: CLEAN Top-1 0.978, +0.2387 over BM25. Limitations such as the small natural NONE sample are documented too."
 excerpt: "We released a reranker on Hugging Face that picks the original filing for a correction among nearly identical convertible bond filings from the same company. This post covers the sealed evaluation results and the limitations you should know before using it."
 date: 2026-11-10

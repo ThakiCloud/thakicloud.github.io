@@ -1,6 +1,6 @@
 ---
-title: "The Second Lever of Image Serving: The LoRA That Cuts Qwen-Image-2.1 to 5-8 Steps"
-seo_title: "PrunaAI open-sourced a few-step LoRA adapter for Qwen-Image-2.1. It runs in 5 or 8 steps, needs no CFG, and claims up to 6.3x faster generation. Because it leaves the base weights and the engine untouched, it composes independently with engine levers such as vLLM-Omni's cross-step KV cache and CUDA Graphs. We analyze what cost and latency effects the step-count lever produces from the perspective of ThakiCloud's B200 image pipeline."
+title: "The Second Lever of Image Serving: Few-Step LoRA"
+seo_title: "The Second Lever of Image Serving: Few-Step LoRA"
 seo_description: "The serving debate around Qwen-Image-2.1 has expanded from the engine (vLLM-Omni day-0, cross-step KV cache) to step count. PrunaAI's few-step LoRA adapter works in 5 or 8 passes, removes CFG, and claims up to 6.3x speedup. It is an adapter-only form that keeps the base pipeline, encoder, and VAE intact. We cover usage with diffusers and ComfyUI and its implications for B200 batch generation cost."
 excerpt: "The cost of image generation serving comes down on two levers: engine efficiency and step count. Pruna's few-step LoRA turns the second lever into an off-the-shelf part. The key is that it does not change the base weights."
 date: 2026-09-27

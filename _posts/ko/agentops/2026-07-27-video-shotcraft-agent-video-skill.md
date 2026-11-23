@@ -1,6 +1,6 @@
 ---
-title: "36초 제품 홍보 영상을 22.76초 만에 렌더했습니다: video-shotcraft 실측 리포트"
-seo_title: "video-shotcraft 실측: 에이전트 스킬로 시네마틱 제품 영상 만들기 | ThakiCloud"
+title: "video-shotcraft: 36초 영상을 22.76초에 렌더하다"
+seo_title: "video-shotcraft: 36초 영상을 22.76초에 렌더하다"
 seo_description: "Claude Code와 Codex용 영상 스킬 video-shotcraft를 직접 클론해 Remotion 템플릿을 끝까지 렌더했습니다. 1085프레임 1920x1080 영상이 12코어 맥북에서 22.76초, 실시간의 1.59배 속도로 나왔습니다. 104장의 촬영 레시피 카드가 어떻게 15KB 진입점 뒤에 숨어 있는지, 그 구조가 Paxis 스킬 하네스 설계에 무엇을 시사하는지 정리했습니다."
 excerpt: "영상 스킬의 진짜 성과는 화려한 모션이 아니라 15KB짜리 진입점 하나로 1.33MB 지식 묶음을 다루는 점진적 공개 구조에 있었습니다. 직접 렌더해 측정한 수치와 함께 정리합니다."
 date: 2026-07-27

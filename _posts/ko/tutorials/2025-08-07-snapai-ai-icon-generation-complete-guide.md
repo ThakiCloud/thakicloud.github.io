@@ -1,7 +1,7 @@
 ---
 title: "SnapAI: AI 기반 아이콘 생성 CLI 도구 완전 마스터 가이드"
 excerpt: "OpenAI의 최신 모델로 React Native & Expo 앱 아이콘을 몇 초 만에 생성하세요. GPT-Image-1, DALL-E 3, DALL-E 2 비교와 실전 활용법까지"
-seo_title: "SnapAI AI 아이콘 생성 CLI 완전 가이드 - macOS 설치 및 활용법 - Thaki Cloud"
+seo_title: "SnapAI: AI 기반 아이콘 생성 CLI 도구 완전 마스터 가이드"
 seo_description: "SnapAI CLI로 AI 기반 앱 아이콘 자동 생성. OpenAI GPT-Image-1, DALL-E 3, DALL-E 2 모델 비교, 비용 최적화, React Native Expo 개발자용 완전 가이드"
 date: 2025-08-07
 last_modified_at: 2025-08-07

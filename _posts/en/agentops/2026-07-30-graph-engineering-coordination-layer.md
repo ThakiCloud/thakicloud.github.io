@@ -1,6 +1,6 @@
 ---
-title: "Graph Engineering: The Coordination Layer That Ties Many Loops into One Job"
-seo_title: "Graph Engineering, the Unit of Work Across Five Layers from Prompt to Graph | ThakiCloud"
+title: "Graph Engineering: The Layer That Coordinates Many Loops"
+seo_title: "Graph Engineering: The Layer That Coordinates Many Loops"
 seo_description: "An analysis of Akshay Pachaar's graph engineering piece from DailyDoseOfDS. The five layers (prompt, context, harness, loop, graph) told apart by their unit of work, the structure of nodes, edges, and shared state, the four hard problems of node granularity, state hygiene, trustworthy routing, and agent agreement, plus Anthropic's cost numbers and a decision rule for when a graph is overkill."
 excerpt: "The moment you need several loops working together, coordination becomes the problem, and graphs are how engineers describe coordination. The name is new, the practice is from 2024. Here is when a graph is the answer and when it is overkill, told through each layer's unit of work."
 date: 2026-07-30

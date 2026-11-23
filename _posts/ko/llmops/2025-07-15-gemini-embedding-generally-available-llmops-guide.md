@@ -1,7 +1,7 @@
 ---
 title: "Gemini Embedding API 일반 공개 - 차세대 임베딩 모델의 혁신적 성능"
 excerpt: "구글이 MTEB 다국어 리더보드 1위의 Gemini Embedding API를 일반 공개했습니다. 100개 이상 언어 지원, 3072 출력 차원, 그리고 혁신적인 Matryoshka 기법까지 살펴봅니다."
-seo_title: "Gemini Embedding API 일반 공개 - 차세대 임베딩 모델 완전 분석 - Thaki Cloud"
+seo_title: "Gemini Embedding API 일반 공개 - 차세대 임베딩 모델의 혁신적 성능"
 seo_description: "구글 Gemini Embedding API가 일반 공개되었습니다. MTEB 1위 성능, 100개 언어 지원, 3072 출력 차원, Matryoshka 기법 등 최신 기능을 상세히 분석합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15

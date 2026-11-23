@@ -1,6 +1,6 @@
 ---
-title: "284B 중에 13B만 켠다: DeepSeek-V4-Flash 공개 베타를 서빙 관점에서 뜯어보기"
-seo_title: "DeepSeek-V4-Flash API 공개 베타 분석: 에이전트 벤치마크와 284B MoE 서빙 비용 | ThakiCloud"
+title: "DeepSeek-V4-Flash: 서빙 비용은 활성 파라미터가 정한다"
+seo_title: "DeepSeek-V4-Flash: 서빙 비용은 활성 파라미터가 정한다"
 seo_description: "DeepSeek이 2026년 7월 31일 V4-Flash 공식 API를 공개 베타로 열었습니다. 아키텍처는 프리뷰와 같고 사후 학습만 바꿨는데 Terminal Bench 2.1에서 82.7점을 내며 상위 등급 프리뷰를 앞질렀습니다. 284B 총 파라미터에 활성 13B라는 구조가 자체 서빙 비용에 어떤 의미인지, Responses API 네이티브 지원이 에이전트 파이프라인에 무엇을 바꾸는지 정리했습니다."
 excerpt: "가중치 크기가 아니라 활성 파라미터가 서빙 예산을 정합니다. 이번 릴리스는 그 차이를 계산해 볼 좋은 재료입니다."
 date: 2026-08-02

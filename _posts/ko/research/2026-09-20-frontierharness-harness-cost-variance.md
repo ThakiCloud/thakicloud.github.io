@@ -1,6 +1,6 @@
 ---
-title: "같은 모델, 17.5배 청구서: FrontierHarness가 코딩 에이전트의 숨은 변수를 노출한 이유"
-seo_title: "FrontierHarness Eval 분석 - 코딩 에이전트 벤치마크가 모델을 하나(Kimi K3)로 고정하고 하네스만 9종으로 바꾸자 pass rate 50.0~66.7%, 완수 작업당 비용 $1.05~$18.34로 최대 17.5배 차이가 나는 발견. MiniMax Code CLI가 MIT로 오픈소스화되며 FrontierHarness 기준 76.7%를 자기 보고한 맥락. ThakiCloud Metis 서빙 최적화와 Paxis 하네스 계층에 대한 시사점 - ThakiCloud"
+title: "FrontierHarness: 같은 모델, 17.5배 청구서"
+seo_title: "FrontierHarness: 같은 모델, 17.5배 청구서"
 seo_description: "코딩 에이전트를 평가할 때 모델을 고정하면, 남는 변수는 하네스 하나입니다. Runta의 FrontierHarness Eval v1.0은 같은 Kimi K3 위에서 9개 하네스·12개 구성·30개 작업(360회 평가)을 돌리자 pass rate가 50.0~66.7%, 완수 작업당 비용이 $1.05~$18.34로 최대 약 17.5배 벌어지는 것을 보여 줍니다. MiniMax Code CLI가 MIT로 오픈소스화되며 이 벤치마크 기준 76.7%를 자기 보고한 경계까지, 코딩 에이전트의 숨은 변수가 하네스인 이유를 ThakiCloud 관점에서 읽습니다."
 excerpt: "모델을 하나로 고정하면 코딩 에이전트의 남은 변수는 하네스 하나입니다. FrontierHarness는 같은 Kimi K3 위에서 pass rate 50.0~66.7%, 완수 작업당 비용 $1.05~$18.34로 최대 약 17.5배의 차이가 하네스 선택에서 나온다는 것을 보여 줍니다. 그리고 그 경계에서 자기 보고 76.7%를 주장한 MiniMax Code CLI 오픈소스까지."
 date: 2026-09-20

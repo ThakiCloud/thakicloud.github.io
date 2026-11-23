@@ -1,7 +1,7 @@
 ---
-title: "Kubernetes 기본 스케줄러의 한계: AI 워크로드에서 전문 스케줄러가 필요한 이유와 실제 사례 분석"
+title: "Kubernetes 기본 스케줄러의 한계와 AI 워크로드"
 excerpt: "Kubernetes 기본 스케줄러(kube-scheduler)로는 AI/ML 워크로드를 효율적으로 관리할 수 없는 이유를 실제 기업 사례와 함께 심층 분석합니다."
-seo_title: "Kubernetes 기본 스케줄러 한계점: AI 워크로드 전문 스케줄러 필요성 실제 사례 - Thaki Cloud"
+seo_title: "Kubernetes 기본 스케줄러의 한계와 AI 워크로드"
 seo_description: "Kubernetes 기본 스케줄러의 AI/ML 워크로드 관리 한계점을 실제 기업 사례로 분석하고, GPU 활용률 30% 문제부터 배치 작업 스케줄링 실패까지 구체적 해결방안을 제시합니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09

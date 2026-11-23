@@ -1,7 +1,7 @@
 ---
-title: "Hugging Face Wasn't Breached by a Human, but by an Autonomous AI Agent: When the Dataset Pipeline Became the Attack Surface"
+title: "Hugging Face Breach: An Autonomous Agent via Datasets"
 excerpt: "In July 2026 Hugging Face disclosed an internal breach driven by an autonomous AI agent. The entry point was a single malicious dataset, and two vulnerabilities in the dataset-processing pipeline led to code execution. We separate what is confirmed from what is still under investigation, and explain why dataset processing must be treated as a trust boundary."
-seo_title: "Hugging Face Autonomous AI Agent Breach: The Dataset Pipeline as Attack Surface"
+seo_title: "Hugging Face Breach: An Autonomous Agent via Datasets"
 seo_description: "An analysis of how Hugging Face was breached by an autonomous AI agent through two code-execution vulnerabilities (a remote-code dataset loader and dataset-config template injection) triggered by a malicious dataset. What is confirmed vs. still open, and how sandbox isolation plus policy-and-audit defenses treat dataset processing as a trust boundary."
 date: 2026-07-21
 last_modified_at: 2026-07-21

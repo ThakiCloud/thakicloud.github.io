@@ -1,7 +1,7 @@
 ---
-title: "The Model That Found the Most Vulnerabilities Isn't the Most Trustworthy One"
+title: "DeepSeek V4 Pro: Most Vulnerabilities Found, Least Trusted?"
 excerpt: "DeepSeek V4 Pro 0813 topped the CVE rediscovery rate on a cybersecurity benchmark. But that same model's reporting precision was 65.6%, and a different model held the top spot on precision. That split changes how you should design a security audit pipeline."
-seo_title: "Dissecting the DeepSeek V4 Pro 0813 Security Benchmark: Why 87.5% Recall and 65.6% Precision Came From the Same Model"
+seo_title: "DeepSeek V4 Pro: Most Vulnerabilities Found, Least Trusted?"
 seo_description: "A breakdown of DeepSeek V4 Pro 0813, which led CVE rediscovery at 87.5% pass@3, ahead of Opus 5 and Qwen 3.8. Its single-run average is 58.3%, and its reporting precision is 65.6%. We propose a two-stage audit pipeline that doesn't ask one model to carry both recall and precision."
 date: 2026-08-14
 last_modified_at: 2026-08-14

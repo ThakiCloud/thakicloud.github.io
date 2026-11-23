@@ -1,5 +1,5 @@
 ---
-title: "We Made an Actual Ad with a Trained Character: 43 Seconds, 8 Shots, One Face"
+title: "A Trained Character Ad Film: 8 Shots, One Face"
 excerpt: "The next question after measuring a reference-conditioned LoRA was practical: can it carry a real production? We took our trained synthetic persona, cast her as a fictitious brand ambassador, and produced a complete ad on internal GPUs."
 categories:
   - research

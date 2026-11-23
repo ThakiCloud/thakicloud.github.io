@@ -1,7 +1,7 @@
 ---
-title: "ccflare 완전 튜토리얼 - Claude API 프록시로 Rate Limit 극복하고 모니터링하기"
+title: "ccflare: Claude API 프록시와 사용량 모니터링"
 excerpt: "ccflare를 사용하여 Claude API의 rate limit을 우회하고, 지능적 로드 밸런싱과 실시간 모니터링으로 안정적인 AI 애플리케이션을 구축하는 완전한 가이드를 제공합니다."
-seo_title: "ccflare Claude API 프록시 튜토리얼 - Rate Limit 해결 가이드 - Thaki Cloud"
+seo_title: "ccflare: Claude API 프록시와 사용량 모니터링"
 seo_description: "ccflare로 Claude API rate limit 문제 해결하기. 다중 계정 로드밸런싱, 실시간 모니터링, 디버깅 기능까지 완전 튜토리얼."
 date: 2025-07-31
 last_modified_at: 2025-07-31

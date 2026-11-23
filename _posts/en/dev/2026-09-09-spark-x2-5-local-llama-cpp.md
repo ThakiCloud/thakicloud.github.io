@@ -1,7 +1,7 @@
 ---
 title: "A 1M-Context 4B: The Day Spark-X2.5 Reached Local Hardware via llama.cpp"
 excerpt: "iFlytek open-sourced Spark-X2.5-4B/1.7B under Apache 2.0. A hybrid attention layout that keeps only one of every four layers as full attention makes a 1-million-token native context possible, and official GGUF plus llama.cpp support opens the CPU path. Here is the KV-cache economics that decides this combination on local hardware, and where the ecosystem stands."
-seo_title: "Spark-X2.5 1M Context Local Inference: Hybrid Attention and llama.cpp Support | ThakiCloud"
+seo_title: "A 1M-Context 4B: The Day Spark-X2.5 Reached Local Hardware via llama.cpp"
 seo_description: "iFlytek Spark-X2.5-4B/1.7B (Apache 2.0, 1M native context): hybrid attention architecture and KV cache economics, official llama.cpp support and the GGUF distribution path, the current benchmark picture, and ThakiCloud's serving-side perspective."
 date: 2026-09-09
 last_modified_at: 2026-09-09

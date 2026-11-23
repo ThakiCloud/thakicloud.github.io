@@ -1,5 +1,5 @@
 ---
-title: "Paper2Poster 튜토리얼: 학술 논문을 자동으로 포스터로 변환하는 멀티모달 AI 시스템"
+title: "Paper2Poster: 논문을 포스터로 자동 변환하는 AI"
 date: 2025-05-30
 tags: 
   - Paper2Poster

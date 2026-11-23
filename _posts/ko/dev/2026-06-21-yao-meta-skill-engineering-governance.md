@@ -1,7 +1,7 @@
 ---
-title: "스킬을 '소프트웨어처럼' 다루는 메타스킬: yao-meta-skill v1.1.0 직접 검증 리포트"
+title: "yao-meta-skill: 스킬을 소프트웨어처럼 다루기"
 excerpt: "Anthropic 공식 Skill-creator보다 강력하다고 입소문이 난 오픈소스 메타스킬 yao-meta-skill을 ThakiCloud 환경에 직접 클론하고 로컬 검증 게이트를 돌렸습니다. Skill IR, Output Eval Lab, Review Studio 2.0의 구조를 실측 수치로 분해하고, 사내 .claude/skills 거버넌스 관점에서 시사점을 정리합니다."
-seo_title: "yao-meta-skill v1.1.0 검증 리포트 - Thaki Cloud"
+seo_title: "yao-meta-skill: 스킬을 소프트웨어처럼 다루기"
 seo_description: "yao-meta-skill(YAO) 메타스킬을 직접 클론·검증한 실측 리포트. Skill IR 플랫폼 중립 표현, Output Eval Lab, Review Studio 2.0 거버넌스 게이트를 632파일·77테스트 규모로 분해하고 ThakiCloud .claude/skills 운영에 적용"
 date: 2026-06-21
 last_modified_at: 2026-06-21

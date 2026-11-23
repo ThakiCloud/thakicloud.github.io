@@ -1,7 +1,7 @@
 ---
-title: "DeepCode: AI 연구 논문을 실행 가능한 코드로 변환하는 혁신적인 도구 완전 가이드"
+title: "DeepCode: 연구 논문을 실행 가능한 코드로 바꾸는 도구"
 excerpt: "홍콩대학교에서 개발한 DeepCode로 연구 논문, 웹사이트, 백엔드를 자동으로 생성하는 방법을 macOS 실습과 함께 상세히 알아보세요."
-seo_title: "DeepCode AI 논문 변환 도구 설치 사용법 가이드 - Thaki Cloud"
+seo_title: "DeepCode: 연구 논문을 실행 가능한 코드로 바꾸는 도구"
 seo_description: "DeepCode 설치부터 AI 멀티에이전트로 연구 논문을 코드로 변환하는 실전 가이드. macOS 환경 테스트 포함, API 설정, 53개 전문 에이전트 활용법까지 완벽 정리"
 date: 2025-08-19
 last_modified_at: 2025-08-19

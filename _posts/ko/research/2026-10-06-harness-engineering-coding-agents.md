@@ -1,6 +1,6 @@
 ---
 title: "코딩 에이전트 11개를 소스코드로 해부한 논문: Harness Engineering"
-seo_title: "Harness Engineering 논문 리뷰: 11개 프로덕션 코딩 에이전트 약 400만 줄 소스 코드 연구, 7개 정준 서브시스템, 프레임워크 부재와 벡터 검색 부재의 twin absence - ThakiCloud"
+seo_title: "코딩 에이전트 11개를 소스코드로 해부한 논문: Harness Engineering"
 seo_description: "Wavestone AI Lab의 Harness Engineering(arXiv 2609.00006)은 Claude Code, Codex CLI, Gemini CLI 등 11개 프로덕션 코딩 에이전트의 약 400만 줄 코드를 읽은 소스 코드 연구입니다. 어떤 에이전트도 범용 agentic framework를 import하지 않고, 코드 검색에 vector embedding을 쓰지 않는다는 발견과 7개 정준 서브시스템, 90일 종단 관찰까지 정리합니다."
 excerpt: "코딩 에이전트를 만들려면 framework를 써야 할까요? Wavestone AI Lab이 11개 프로덕션 에이전트 약 400만 줄을 읽은 결론은 반대로, 그 어떤 에이전트도 framework를 쓰지 않았습니다. 7개 정준 서브시스템 위에서의 독자적 설계, 그리고 주 단위 반감기의 패턴 확산을 실증한 83쪽 논문입니다."
 date: 2026-10-06

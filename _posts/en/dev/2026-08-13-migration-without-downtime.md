@@ -1,7 +1,7 @@
 ---
-title: "Zero-Downtime Migration Isn't About Moving Things, It's About Building a Bridge You Can Walk Back Over"
+title: "Zero-Downtime Migration Means Building a Way Back"
 excerpt: "Legacy migrations don't fail because the new stack isn't good enough. They fail because at some point, someone loses the ability to go back. This piece walks through seams, strangler facades, dual writes with idempotent backfills, reversible cutovers, and the decommission step everyone skips, all as one continuous argument: reversibility, not speed, is the thing you're actually engineering."
-seo_title: "Zero-Downtime Migration Strategy: Engineering for Reversibility"
+seo_title: "Zero-Downtime Migration Means Building a Way Back"
 seo_description: "A practical argument for why zero-downtime legacy migrations succeed or fail on reversibility, not technology choice. Covers seams, strangler facades, dual writes, idempotent backfills, reversible cutover plans, and safely decommissioning the old system."
 date: 2026-08-13
 last_modified_at: 2026-08-13

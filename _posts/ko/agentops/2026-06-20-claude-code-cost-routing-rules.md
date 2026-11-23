@@ -1,7 +1,7 @@
 ---
-title: "에이전트 운영비를 라우팅으로 접는다: 모델 티어, 스킬 라우터, 그리고 7개의 비용 룰"
+title: "라우팅으로 줄이는 에이전트 운영비"
 excerpt: "하루 705달러를 태운 사고에서 출발해, LLM 모델 라우팅과 스킬 라우터, 토큰 위생 룰로 Claude Code 에이전트 운영비를 구조적으로 줄인 방법을 실제 규칙과 수치로 공개합니다."
-seo_title: "Claude Code 비용 최적화: 모델 라우팅·스킬 라우터·토큰 룰 - Thaki Cloud"
+seo_title: "라우팅으로 줄이는 에이전트 운영비"
 seo_description: "ThakiCloud가 Claude Code 에이전트 운영비를 줄이는 실전 규칙. haiku/sonnet/opus/fable 모델 라우팅, BM25 스킬 라우터, 2K 토큰 룰, retro 모델 에스컬레이션, 일일 비용 감사까지 사고 사례와 수치로 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-08-27

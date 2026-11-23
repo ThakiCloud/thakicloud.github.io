@@ -1,7 +1,7 @@
 ---
-title: "Comprehensive Guide to LLM Dataset Curation: From Training to Preference Alignment"
+title: "LLM Dataset Curation: From Training to Preference Alignment"
 excerpt: "Explore the essential datasets and tools for LLM post-training, including supervised fine-tuning datasets, preference alignment data, and curation methodologies for building high-quality AI models."
-seo_title: "LLM Dataset Curation Guide: Training Data & Tools - Thaki Cloud"
+seo_title: "LLM Dataset Curation: From Training to Preference Alignment"
 seo_description: "Complete guide to LLM datasets for post-training, covering SFT datasets, preference alignment, and data curation tools for AI model development."
 date: 2025-08-31
 tags:

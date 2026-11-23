@@ -1,5 +1,5 @@
 ---
-title: "Cursor's AI Coding Revolution: The Secret Behind Achieving $300M ARR in 21 Months and the Future of Developers in 2027"
+title: "Cursor's Rise: How an AI Coding Tool Reached $300M ARR"
 excerpt: "AI coding tool Cursor achieved $300M ARR in just 21 months since launch, breaking records of legendary SaaS companies like Slack and Zoom"
 date: 2025-06-12
 lang: en

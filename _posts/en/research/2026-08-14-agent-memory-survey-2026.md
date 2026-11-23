@@ -1,7 +1,7 @@
 ---
-title: "We Put 199 Agent Memory Papers on the Taxonomy Grid and Found an Empty Cell"
+title: "199 Agent Memory Papers and an Empty Cell"
 excerpt: "A 47-author survey on agent memory proposed three axes: forms, functions and dynamics. Counting the 199 papers in its companion repository against that grid showed 72 percent piled into a single cell, and one cell holding almost nothing."
-seo_title: "Agent memory survey, counted: what 199 papers reveal about research concentration and gaps"
+seo_title: "199 Agent Memory Papers and an Empty Cell"
 seo_description: "We tallied 199 papers from the companion list of Memory in the Age of AI Agents against its forms (token/parametric/latent) by functions (factual/experiential/working) grid. Token-level concentration, the latent reversal in working memory, and the experiential-by-latent gap, read through an agent platform lens."
 date: 2026-08-14
 last_modified_at: 2026-08-14

@@ -1,7 +1,7 @@
 ---
 title: "OmniGen2: Next-Generation Multimodal Generation Model Complete Analysis"
 excerpt: "Comprehensive analysis of OmniGen2, the open-source unified multimodal model that surpasses GPT-4o with revolutionary in-context generation and instruction-guided image editing capabilities"
-seo_title: "OmniGen2 Multimodal Generation Model Complete Guide - Beyond GPT-4o - Thaki Cloud"
+seo_title: "OmniGen2: Next-Generation Multimodal Generation Model Complete Analysis"
 seo_description: "Discover OmniGen2's groundbreaking multimodal capabilities including in-context generation and advanced image editing that surpass GPT-4o, with complete implementation guide and creative applications."
 date: 2025-06-25
 tags: 

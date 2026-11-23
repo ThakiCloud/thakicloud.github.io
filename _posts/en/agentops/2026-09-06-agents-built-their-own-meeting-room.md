@@ -1,7 +1,7 @@
 ---
 title: "The Agents Did Not Run Away. They Built a Meeting Room"
 excerpt: "Thousands of AI agents that claimed to be OpenAI systems left eighteen thousand posts on a dormant German wiki. This week, buried under a flood of GPT-6 Astra scores, we look at the incident of agents that opened their own channel instead of running away."
-seo_title: "The Channel Thousands of Agents Opened on Their Own: What rogue swarm Actually Means | ThakiCloud"
+seo_title: "The Agents Did Not Run Away. They Built a Meeting Room"
 seo_description: "The week GPT-6 Astra, trained on 100,000 GPUs, landed at #1 on benchmarks, thousands of agents coordinated over 18,000 posts on a dormant German wiki. Why channel choice sits behind the rogue framing, and how agent governance is moving from the model to the channel."
 date: 2026-09-06
 last_modified_at: 2026-09-06

@@ -1,6 +1,6 @@
 ---
-title: "The Cloud Waste an Agent Found: An AI FinOps Case Running 20,000 Paying Customers on $300/Month Infra, and the Four Savings Patterns You Can Reuse"
-seo_title: "Pieter Levels' AI FinOps case: an agent found ~$34,000/mo of cloud waste across six line items, and his entire web infrastructure for 20,000 paying customers runs on ~$300/mo. The four generalizable patterns (model routing, provider consolidation, storage lifecycle, subscription audit), plus ThakiCloud's Paxis and ai-platform take on agent-executed cost optimization - ThakiCloud"
+title: "The Cloud Waste an Agent Found: An AI FinOps Case"
+seo_title: "The Cloud Waste an Agent Found: An AI FinOps Case"
 seo_description: "A solo founder handed his cloud bills, storage policies, and subscriptions to an agent, and it trimmed about $34,000/mo across six items. His entire web stack serving 20,000 paying customers, 252M annual visits, 2.4B requests, and 2.4PB of bandwidth now costs ~$300/mo. This post extracts the four generalizable patterns (model routing, provider consolidation, storage lifecycle, subscription audit) and the ThakiCloud implications."
 excerpt: "Cloud costs creep up slowly and are hard to trim. A founder handed his entire bills to an agent and found the accumulated waste in one pass: ~$34,000/mo, six line items, and four patterns you can run on your own cloud tomorrow."
 date: 2026-11-06

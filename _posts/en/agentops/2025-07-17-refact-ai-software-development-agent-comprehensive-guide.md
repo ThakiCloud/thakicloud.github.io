@@ -1,7 +1,7 @@
 ---
 title: "Refact.ai: A Complete Guide to End-to-End AI Software Development Agents"
 excerpt: "An in-depth look at Refact.ai, an open-source AI agent validated on SWE-bench, covering its core capabilities, real-world use cases, and strategies for adoption in enterprise environments."
-seo_title: "Refact.ai AI Development Agent Complete Guide - Open-Source SWE-bench Validated - Thaki Cloud"
+seo_title: "Refact.ai: A Complete Guide to End-to-End AI Software Development Agents"
 seo_description: "Deep dive into Refact.ai, the open-source AI agent with 3k stars. Self-hosting, 25+ language support, Docker integration, VS Code/JetBrains plugins, and a practical deployment guide."
 date: 2025-07-17
 last_modified_at: 2025-07-17

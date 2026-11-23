@@ -1,7 +1,7 @@
 ---
-title: "AI 음성 전사 앱 개발 완전 가이드: Whisper + Together.ai로 구축하는 현대적 음성 메모 시스템"
+title: "Whisper + Together.ai로 만드는 음성 전사 앱"
 excerpt: "Together.ai, Next.js, Clerk을 활용하여 음성을 텍스트로 변환하고 AI로 변형하는 전문적인 음성 전사 앱을 단계별로 구축하는 실전 튜토리얼"
-seo_title: "Whisper AI 음성 전사 앱 개발 튜토리얼 - Next.js Together.ai 완전 가이드 - Thaki Cloud"
+seo_title: "Whisper + Together.ai로 만드는 음성 전사 앱"
 seo_description: "Together.ai Whisper 모델과 Next.js를 사용한 AI 음성 전사 앱 개발 방법을 실전 코드와 함께 상세히 알아보세요. 인증, 파일 업로드, AI 변환까지 포함된 완전한 가이드입니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23

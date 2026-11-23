@@ -1,7 +1,7 @@
 ---
-title: "Gemma 4 12B on an 8GB GPU: What QAT and TurboQuant Mean for Consumer Inference Economics"
+title: "Gemma 4 12B on an 8GB GPU: QAT and TurboQuant"
 excerpt: "We look at a community benchmark running Gemma 4 12B on an RTX 4060 8GB using QAT and TurboQuant, and unpack what quantization-aware training and consumer-GPU serving imply for on-premises inference economics from a ThakiCloud serving perspective."
-seo_title: "Gemma 4 12B QAT TurboQuant Consumer GPU Inference Analysis - Thaki Cloud"
+seo_title: "Gemma 4 12B on an 8GB GPU: QAT and TurboQuant"
 seo_description: "An analysis of Gemma 4 12B QAT, TurboQuant quantization, and a local RTX 4060 8GB benchmark, covering on-premises inference economics and the consumer-GPU serving angle"
 date: 2026-06-21
 last_modified_at: 2026-06-21

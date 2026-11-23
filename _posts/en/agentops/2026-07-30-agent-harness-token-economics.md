@@ -1,6 +1,6 @@
 ---
 title: "Same Model, Same Task, Different Bill: Your Harness Decides Agent Cost"
-seo_title: "Agent Harness Token Economics: Why One Model Gets 5.6x More Expensive | ThakiCloud"
+seo_title: "Same Model, Same Task, Different Bill: Your Harness Decides Agent Cost"
 seo_description: "Composio ran a single Kimi K3 through three harnesses on 28 identical tasks. Success rates converged while median token spend split between 61k and 340k. We asked the same question of our own harness, counted every resident layer with tiktoken, and found that 96.7 percent of the post-routing budget is always-on rules rather than skills."
 excerpt: "Switching models feels like the way to cut agent cost, but the same model can bill 5.6x more depending on the harness. We measured our own harness and the bottleneck was not where we expected."
 date: 2026-07-30

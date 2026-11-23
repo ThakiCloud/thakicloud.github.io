@@ -1,7 +1,7 @@
 ---
-title: "Self-Evolving Agents Research Survey: The Road to Artificial Super Intelligence"
+title: "Self-Evolving Agents: A Research Survey"
 excerpt: "An analysis of the latest research trends in Self-Evolving Agents that overcome the limitations of static LLMs, exploring ASI realization possibilities through the three dimensions of evolution: What, When, and How"
-seo_title: "Self-Evolving Agents Research Survey Analysis - ASI Implementation Roadmap - Thaki Cloud"
+seo_title: "Self-Evolving Agents: A Research Survey"
 seo_description: "From core concepts of Self-Evolving Agents to ASI implementation: an in-depth analysis based on a 51-page survey paper by 27 researchers, covering evolution mechanisms and future research directions"
 date: 2025-07-31
 last_modified_at: 2025-07-31

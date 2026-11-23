@@ -1,7 +1,7 @@
 ---
 title: "MAESTRO: Complete AI-Powered Research Platform Setup and Usage Guide"
 excerpt: "Comprehensive guide from installation to advanced usage of MAESTRO, an AI agent-based research automation platform"
-seo_title: "MAESTRO AI Research Platform Setup Guide - Docker, GPU, Local LLM Integration - Thaki Cloud"
+seo_title: "MAESTRO: Complete AI-Powered Research Platform Setup and Usage Guide"
 seo_description: "Complete tutorial for MAESTRO open-source AI research platform: installation, GPU optimization, SearXNG search engine integration, and local LLM configuration"
 date: 2025-08-26
 tags:

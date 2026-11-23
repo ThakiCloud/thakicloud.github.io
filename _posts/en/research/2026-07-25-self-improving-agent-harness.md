@@ -1,6 +1,6 @@
 ---
-title: "The Agent Fixes Its Own Harness: What Self-Harness Reveals About the Real Bottleneck of Self-Improvement"
-seo_title: "Self-Harness Paper Review: A 3-Stage Loop Where the Harness Improves Itself | ThakiCloud"
+title: "Self-Harness: The Agent Fixes Its Own Harness"
+seo_title: "Self-Harness: The Agent Fixes Its Own Harness"
 seo_description: "A walkthrough of Self-Harness (arXiv 2606.09498), which lifted MiniMax M2.5, Qwen3.5-35B-A3B, and GLM-5 on Terminal-Bench-2.0 from 40.5% up to 61.9% pass rate. Without human engineers, the agent fixes its own harness through weakness mining, harness proposal, and proposal validation. We examine, from a ThakiCloud viewpoint, why the evaluator is the real bottleneck of any self-improvement loop."
 excerpt: "Without touching model weights, fixing only the harness raised Terminal-Bench pass rates by more than 60% in relative terms. But the ceiling of this loop is set by how demanding the evaluator becomes."
 date: 2026-07-25

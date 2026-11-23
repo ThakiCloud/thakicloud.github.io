@@ -2,7 +2,7 @@
 title: "This Week, the AI Industry Built Doors"
 lang: en
 excerpt: "A week in which chip-access rules, sovereign cloud deals, and disclosure rules were put in place one after another. Even at the door of safety verification, the model providers were put to the test. We look at the foyer the three doors point a company to."
-seo_title: "The AI Industry's Doors: Chips, Sovereignty, and Safety Verification in a Single Week"
+seo_title: "This Week, the AI Industry Built Doors"
 seo_description: "A chip rule that blocks remote access, a $1 billion sovereign cloud deal, and an 89-signatory safety open letter. We analyze the three doors put in place in the AI industry this week, and the foyer a company should have."
 date: 2026-11-19
 last_modified_at: 2026-11-19

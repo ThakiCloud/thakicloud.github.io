@@ -1,7 +1,7 @@
 ---
-title: "vLLM Prefix Caching in Production: Cut Inference Costs by Half with KV Cache Reuse"
+title: "vLLM Prefix Caching: Halving Inference Cost in Production"
 excerpt: "How to configure and measure vLLM Automatic Prefix Caching in production, with real hit-rate and cost-reduction numbers."
-seo_title: "vLLM Prefix Caching KV Cache Reuse Production Guide - Thaki Cloud"
+seo_title: "vLLM Prefix Caching: Halving Inference Cost in Production"
 seo_description: "How to enable vLLM Automatic Prefix Caching, how PagedAttention KV block hashing works, conditions for achieving 60-85% hit rates, and practical patterns for multi-tenant SaaS."
 date: 2026-06-20
 last_modified_at: 2026-06-20

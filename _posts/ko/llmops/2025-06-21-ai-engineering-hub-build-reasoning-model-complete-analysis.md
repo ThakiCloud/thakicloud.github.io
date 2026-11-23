@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Hub Build-Reasoning-Model 완전 분석: DeepSeek R1 기반 추론 모델 구현"
+title: "AI Engineering Hub: 추론 모델 구현 소스코드 분석"
 excerpt: "10.7k 스타 AI Engineering Hub의 Build-reasoning-model 프로젝트를 소스코드 레벨에서 심층 분석하고, DeepSeek R1 방법론을 활용한 추론 모델 구축 방법을 제시합니다."
 date: 2025-06-21
 tags: 

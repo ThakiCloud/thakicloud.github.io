@@ -1,7 +1,7 @@
 ---
-title: "Racks Exploding Upward, Inference Collapsing Downward: Enterprises Stand in the Middle of the AI Scissors"
+title: "The AI Scissors: Racks Up, Inference Down"
 excerpt: "Two numbers released on the same day moved in opposite directions: a 21 million dollar AI rack and inference pricing that got 34 times cheaper. Here is a look at the handles enterprises need to grip in the middle of this widening scissors."
-seo_title: "The AI Scissors: What a $21M Rack and 34x Cheaper Inference Say on the Same Day"
+seo_title: "The AI Scissors: Racks Up, Inference Down"
 seo_description: "HBM4 rack price surges and DeepSeek-driven inference price collapse arrived on the same day. An analysis of the structure where infrastructure capital costs and model costs diverge in opposite directions, and the variables enterprises can actually control in between."
 date: 2026-07-10
 last_modified_at: 2026-07-10

@@ -1,5 +1,5 @@
 ---
-title: "Connecting Claude Code to Self-Hosted Open Models: Inside the free-claude-code Proxy"
+title: "Connecting Claude Code to Open Models: free-claude-code"
 excerpt: "Coding agents like Claude Code and Codex are tied to the Anthropic API. free-claude-code sits an Anthropic-compatible proxy in between, letting teams keep the same agent UI while routing requests to self-hosted backends such as Ollama, llama.cpp, and vLLM. We examine the real repository, how it lets you pick from 24 backends in an Admin UI and route Opus, Sonnet, and Haiku traffic to different models, and what this means for ThakiCloud from an on-premise coding agent perspective."
 tags:
   - llmops

@@ -1,7 +1,7 @@
 ---
 title: "It Wasn't the Model That Was Worth $8 Billion. It Was the Router."
 excerpt: "Today's most expensive AI headline didn't attach to a model. It attached to the layer that picks the model. Here's what to buy in a market where the throne changes hands every four days, and why that judgment call is now reshaping infrastructure purchasing decisions."
-seo_title: "What Stripe's OpenRouter Acquisition Really Says: Models Are Commodities, Routing Is the Asset"
+seo_title: "It Wasn't the Model That Was Worth $8 Billion. It Was the Router."
 seo_description: "Stripe acquired OpenRouter for $8 billion. With GLM-5.3, Qwen3.8-27B, and Ornith 397B swapping rankings every few days, here's why the most expensive price tag landed on the routing layer."
 date: 2026-08-20
 last_modified_at: 2026-08-20

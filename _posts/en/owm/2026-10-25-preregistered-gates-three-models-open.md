@@ -1,7 +1,7 @@
 ---
-title: "Three Models for ATT&CK Technique Retrieval, Evidence Gating and Edge Skill Search, With the Gates We Did Not Pass"
+title: "Three Open Models, With the Gates We Did Not Pass"
 excerpt: "A security embedding that retrieves MITRE ATT&CK documentation, an evidence gate that decides whether RAG should answer or stop, and a skill-search embedding that runs on CPU. Two of the three did not clear the bar we wrote down before training, and the cards say by how much."
-seo_title: "Thaki-SecEmbed-8B, ECP-SB-27B and SKILLRET-Edge-305M released - ThakiCloud"
+seo_title: "Three Open Models, With the Gates We Did Not Pass"
 seo_description: "ThakiCloud released three models. Thaki-SecEmbed-8B, evaluated only on MITRE ATT&CK technique retrieval, showed no clear difference from its base model on the preregistered set and +0.1447 nDCG@10 over its base on a post-release independent-teacher benchmark that was not binding on release. ECP-SB-27B missed its 5% unsupported-answer target at 6.5%. SKILLRET-Edge-305M passed its gates and answers in 47.7ms on CPU."
 date: 2026-10-25
 last_modified_at: 2026-11-01

@@ -1,6 +1,6 @@
 ---
 title: "When the Rulebook Changes, the Agent Has to Think Again"
-seo_title: "Enterprise policy decisions: what to learn and what to reason - ThakiCloud"
+seo_title: "When the Rulebook Changes, the Agent Has to Think Again"
 seo_description: "We separated two things usually bundled together in an enterprise agent: generating the decision, and being allowed to reason before deciding. On familiar policies the generation step bought nothing. On unseen policies reasoning was decisive. We release the sealed 300-item benchmark, the proofs, and the weights."
 excerpt: "A teller who has memorised the rulebook decides without thinking. Hand them a rulebook they have never seen and they have to read and reason. Our agent behaved the same way, and it memorised the boundaries we taught it while leaving the one we did not teach unchanged."
 date: 2026-10-02

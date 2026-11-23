@@ -1,7 +1,7 @@
 ---
-title: "Context Engineering 시대의 도래: 프롬프트 엔지니어링은 정말 구시대 유물인가?"
+title: "Context Engineering의 시대, 프롬프트 엔지니어링은 끝났나"
 excerpt: "AI 업계에서 화두가 되고 있는 Context Engineering의 가치와 한계를 분석하며, 프롬프트 엔지니어링의 지속적 중요성을 재조명해본다."
-seo_title: "Context Engineering vs Prompt Engineering 논쟁 분석 - Thaki Cloud"
+seo_title: "Context Engineering의 시대, 프롬프트 엔지니어링은 끝났나"
 seo_description: "Context Engineering의 등장과 프롬프트 엔지니어링의 진화, AI 개발에서 두 접근법의 상호보완적 관계를 심층 분석"
 date: 2025-07-08
 last_modified_at: 2025-07-08

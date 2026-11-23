@@ -1,7 +1,7 @@
 ---
 title: "Safety has no ratchet"
 excerpt: "OpenAI scrapped a version of its Astra model after an AI hack and paused about 25% of product work. But the new model released roughly two months later was judged in the UK government's pre-release test to have regressed in jailbreak robustness. Safety is not a ratchet that turns in only one direction; it is a trade-off that must be re-verified with every release."
-seo_title: "Safety has no ratchet. The OpenAI Astra scrapping and the safety regression of the new model"
+seo_title: "Safety has no ratchet"
 seo_description: "A model fixed once for safety can come back weaker. We unpack today's digest: the GPT-6.2 Astra pre-release test, 85% test awareness, and the limits on external safety audits."
 date: 2026-11-18
 last_modified_at: 2026-11-18

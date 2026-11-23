@@ -1,7 +1,7 @@
 ---
 title: "Nested Learning: 아키텍처의 본질은 업데이트 주파수다"
 excerpt: "Google Research의 Nested Learning 논문(NeurIPS 2025)은 딥러닝 아키텍처의 본질이 '업데이트 주파수'이며, 트랜스포머도 다른 시계 속도로 도는 선형 계층의 묶음이라고 주장합니다. 증표물 HOPE는 Self-Modifying Titans와 연속 메모리 시스템을 결합한 어텐션 프리 모델로, 테스트 시간 학습과 지식을 통합하는 새 길을 보여줍니다."
-seo_title: "Nested Learning: 아키텍처의 본질은 업데이트 주파수라는 새로운 학습 패러다임 - ThakiCloud"
+seo_title: "Nested Learning: 아키텍처의 본질은 업데이트 주파수다"
 seo_description: "Google Research의 Nested Learning 논문(arXiv 2512.24695, NeurIPS 2025)을 분석합니다. 트랜스포머가 다른 업데이트 주파수를 가진 선형 계층이라는 '환상' 주장, HOPE 아키텍처(Self-Modifying Titans + Continuum Memory System), 그리고 에이전트 지속 학습에 대한 시사점을 정리했습니다."
 date: 2026-10-26
 last_modified_at: 2026-10-26

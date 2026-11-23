@@ -1,7 +1,7 @@
 ---
 title: "CrewAI-Based AI Real Estate Agent Team System: A Complete Analysis"
 excerpt: "A deep dive into the multi-agent collaboration system architecture and implementation through the local_ai_real_estate_agent_team.py codebase"
-seo_title: "CrewAI AI Real Estate Agent System Analysis - Multi-Agent Collaboration Architecture - Thaki Cloud"
+seo_title: "CrewAI-Based AI Real Estate Agent Team System: A Complete Analysis"
 seo_description: "Code analysis, architecture design, user flow, and Mermaid diagrams of an AI real estate agent team system built with CrewAI and LangChain"
 date: 2025-08-20
 last_modified_at: 2025-08-20

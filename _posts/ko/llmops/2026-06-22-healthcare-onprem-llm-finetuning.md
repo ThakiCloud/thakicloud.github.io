@@ -1,7 +1,7 @@
 ---
-title: "환자 데이터를 외부로 내보내지 않고 사내에서 LLM 파인튜닝하기 - 의료·바이오 온프렘 AI 구축"
+title: "환자 데이터 반출 없이 사내에서 LLM 파인튜닝하기"
 excerpt: "의료 기관이 환자 데이터를 외부 클라우드로 반출하지 않고 사내 GPU 클러스터에서 도메인 특화 LLM을 파인튜닝하고 서빙하는 전체 워크플로를 설명합니다. ThakiCloud AI Platform의 6종 파인튜닝, DevSpace, vLLM Scale-to-Zero 적용 사례를 다룹니다."
-seo_title: "의료 LLM 파인튜닝 온프렘 - 병원·제약 데이터 반출 없이 AI 구축 - Thaki Cloud"
+seo_title: "환자 데이터 반출 없이 사내에서 LLM 파인튜닝하기"
 seo_description: "환자 데이터를 외부로 내보내지 않고 사내에서 의료 LLM을 파인튜닝하고 서빙하는 방법. SFT, DPO, LoRA 등 6종 튜닝과 vLLM Scale-to-Zero 적용으로 도메인 특화 헬스케어 AI를 온프레미스로 구축하는 완전 가이드."
 date: 2026-06-22
 last_modified_at: 2026-06-22

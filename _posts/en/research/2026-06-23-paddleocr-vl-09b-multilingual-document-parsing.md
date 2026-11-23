@@ -1,7 +1,7 @@
 ---
-title: "Document Parsing SOTA at 0.9B: We Ran PaddleOCR-VL on Korean and Arabic Documents"
+title: "PaddleOCR-VL: Document Parsing at 0.9B on Korean and Arabic"
 excerpt: "We installed PaddlePaddle's 0.9B compact vision-language model PaddleOCR-VL and ran inference on documents mixing Korean, English, and Arabic. This post covers the two-stage architecture, multilingual performance, and what it means for ThakiCloud's multi-tenant document intelligence platform."
-seo_title: "PaddleOCR-VL 0.9B Multilingual Document Parsing Hands-On - Thaki Cloud"
+seo_title: "PaddleOCR-VL: Document Parsing at 0.9B on Korean and Arabic"
 seo_description: "Hands-on report installing PaddleOCR-VL-0.9B (NaViT encoder + ERNIE-4.5-0.3B) and running inference on Korean and Arabic documents. OmniDocBench results, two-stage architecture, and analysis for ThakiCloud Kubernetes document intelligence deployment."
 date: 2026-06-23
 last_modified_at: 2026-06-23

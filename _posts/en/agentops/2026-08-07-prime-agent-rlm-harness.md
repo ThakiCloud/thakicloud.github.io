@@ -1,7 +1,7 @@
 ---
-title: "When Context Becomes a Variable Instead of a Prompt: Reproducing Prime Agent's RLM Harness"
+title: "Prime Agent: Reproducing the RLM Harness"
 excerpt: "Prime Intellect's Prime Agent gives the model exactly one tool, a persistent IPython kernel. We measured how much that design actually saves, and where the savings disappear."
-seo_title: "Reproducing Prime Agent's RLM Harness: How Much Does Context-as-a-Variable Really Save?"
+seo_title: "Prime Agent: Reproducing the RLM Harness"
 seo_description: "An analysis of Prime Intellect's Prime Agent, its RLM runtime and Continual Harness, plus a local reproduction measuring token savings from loading session context into a persistent IPython kernel."
 date: 2026-08-07
 last_modified_at: 2026-08-07

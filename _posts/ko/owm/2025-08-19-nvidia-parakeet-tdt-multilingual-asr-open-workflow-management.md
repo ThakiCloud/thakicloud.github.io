@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Parakeet TDT 0.6B v3: 다국어 음성 인식으로 혁신하는 오픈 워크플로우 관리"
+title: "Parakeet TDT 0.6B v3: 다국어 음성 인식 워크플로우"
 excerpt: "600만 파라미터의 다국어 ASR 모델이 25개 언어를 지원하며, 글로벌 워크플로우 자동화에 가져오는 혁신적 변화를 살펴봅니다."
-seo_title: "NVIDIA Parakeet TDT 0.6B v3 다국어 ASR 워크플로우 자동화 가이드 - Thaki Cloud"
+seo_title: "Parakeet TDT 0.6B v3: 다국어 음성 인식 워크플로우"
 seo_description: "25개 언어 지원, 자동 구두점 처리, 실시간 타임스탬프 제공하는 NVIDIA Parakeet TDT 0.6B v3로 글로벌 워크플로우 관리를 혁신하는 방법을 알아보세요."
 date: 2025-08-19
 last_modified_at: 2025-08-19

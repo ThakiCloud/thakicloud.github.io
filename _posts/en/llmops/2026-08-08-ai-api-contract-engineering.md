@@ -1,7 +1,7 @@
 ---
-title: "Your LLM Integration Isn't Breaking Because of Bad Prompts. It's Breaking Because You Never Wrote a Contract"
+title: "Your LLM Integration Needs a Contract, Not a Better Prompt"
 excerpt: "Backend engineers who wire LLM calls into a pipeline tend to spend all their tuning effort on the prompt. But the outages that actually page you at 3am almost never come from a weak prompt. They come from an API boundary with no contract behind it. This post walks through the five design principles that turn an LLM call from a hopeful guess into a component you can actually operate."
-seo_title: "LLM API Contract Design: The Boundary Protects Production, Not the Prompt"
+seo_title: "Your LLM Integration Needs a Contract, Not a Better Prompt"
 seo_description: "A practical guide to treating LLM calls as unreliable network services and enforcing that reality with input gates, output fallbacks, retry with backoff, and cost circuit breakers."
 date: 2026-08-08
 last_modified_at: 2026-08-08

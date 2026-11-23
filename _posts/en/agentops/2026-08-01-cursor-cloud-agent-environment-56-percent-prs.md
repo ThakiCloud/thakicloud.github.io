@@ -1,6 +1,6 @@
 ---
-title: "How Agents Came to Write Half the Merged PRs: What Cursor Poured Into the Environment"
-seo_title: "Inside Cursor's Cloud Agent Environment: From 10% to 56% of Merged PRs | ThakiCloud"
+title: "How Agents Came to Write Half the Merged PRs at Cursor"
+seo_title: "How Agents Came to Write Half the Merged PRs at Cursor"
 seo_description: "On July 30, 2026 Cursor published how it built its internal cloud agent environment. The jump from one in ten merged PRs last December to 56% came not from swapping models but from development environments, Temporal-backed durable execution, egress restrictions and secret scanning. Here are the lessons a team building an agent platform can take directly."
 excerpt: "The single largest factor in agent output quality was not the model. It was the environment, and Cursor's internal numbers show it."
 date: 2026-08-01

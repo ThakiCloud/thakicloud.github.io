@@ -1,5 +1,5 @@
 ---
-title: "Go 언어로 REST API 서비스 구축하기: Docker + OrbStack 맥북 로컬 개발 가이드"
+title: "Go로 REST API 서비스 만들기: Docker와 OrbStack"
 date: 2025-06-09
 tags: 
   - golang

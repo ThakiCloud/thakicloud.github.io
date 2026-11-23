@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Templates 완전 튜토리얼 - AI 개발 환경 자동 설정 도구"
 excerpt: "Claude Code를 위한 프로젝트 설정을 자동화하는 오픈소스 CLI 도구의 설치부터 실제 사용까지 완전 가이드"
-seo_title: "Claude Code Templates CLI 완전 튜토리얼 - macOS 테스트 포함 - Thaki Cloud"
+seo_title: "Claude Code Templates 완전 튜토리얼 - AI 개발 환경 자동 설정 도구"
 seo_description: "Claude Code 프로젝트 설정을 자동화하는 오픈소스 CLI 도구 사용법. Python, JavaScript/TypeScript 지원, MCP 서버 통합, 실제 macOS 테스트 결과 포함"
 date: 2025-07-16
 last_modified_at: 2025-07-16

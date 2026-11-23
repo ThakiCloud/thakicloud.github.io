@@ -1,6 +1,6 @@
 ---
-title: "The Mint Frontier: When a task departs from the registry distribution, the boundary between minting a new skill and routing to an existing one is priced by OOD distance"
-seo_title: "The Mint Frontier: Introducing a cost-quality break-even paper on skill generation and routing in self-evolving agent harnesses (OOD distance, SLO-allowable cost argmin, verification coverage, action-Brier calibration, self-hosted H200) - ThakiCloud"
+title: "The Mint Frontier: When to Mint a Skill vs Route"
+seo_title: "The Mint Frontier: When to Mint a Skill vs Route"
 seo_description: "No prior study priced the boundary that decides whether to mint a new skill, route to an existing one, or abstain and escalate, as a function of out-of-distribution (OOD) distance. This analytical paper presents a piecewise closed-form effective mint frontier under the SLO-allowable cost argmin, a verification-side dominance identity set by verification coverage, a three-way calibrated decision rule scored by the action-Brier score, and a frozen factorial protocol with pre-registered falsification criteria F1-F5."
 excerpt: "For a task at a given distance from the registry distribution, there is a point where minting a new skill costs less than routing to an existing one. The excess over the pure amortization break-even does not include generation cost. The boundary is drawn by the verifier, not the generator."
 date: 2026-10-20

@@ -1,7 +1,7 @@
 ---
-title: "Claude Code와 UV 패키지 관리자로 만드는 HTML PPT 완벽 가이드 - Markdown부터 프레젠테이션까지"
+title: "Claude Code와 uv로 Markdown을 HTML 프레젠테이션으로"
 excerpt: "Claude Code를 활용해 Python UV 패키지 관리자 튜토리얼을 작성하고, Markdown을 HTML 프레젠테이션으로 변환하는 전체 워크플로우를 단계별로 구현합니다."
-seo_title: "Claude Code UV 패키지 관리자 HTML PPT 제작 가이드 - Agent Ops"
+seo_title: "Claude Code와 uv로 Markdown을 HTML 프레젠테이션으로"
 seo_description: "Claude Code로 UV 패키지 관리자 사용법을 조사하고 Markdown 튜토리얼 작성 후 HTML PPT로 변환하는 실전 가이드. Reveal.js, Marp, Slidev 비교와 GenSpark, SkyWork 기반 디자인 팁 포함"
 date: 2025-08-10
 last_modified_at: 2025-08-10

@@ -1,6 +1,6 @@
 ---
 title: "Claude Code의 You should Know: 놓친 것을 대신 알아채는 사이드 에이전트"
-seo_title: "Claude Code 빌트인 mod 'You should Know' 분석 - 사이드 에이전트가 장기 에이전트 세션의 출력을 감시해 프롬프트 위에 노트를 띄우는 구조, mod의 5가지 능력, telemetry 연동, ThakiCloud Paxis 관점의 인간 주의력 병목 분석 - ThakiCloud"
+seo_title: "Claude Code의 You should Know: 놓친 것을 대신 알아채는 사이드 에이전트"
 seo_description: "Anthropic이 Claude Code에 'You should Know'라는 빌트인 mod를 추가했습니다. 사이드 에이전트가 Claude의 출력을 감시해 사용자가 놓치기 쉬운 중요한 정보를 프롬프트 상단 노트로 띄워 줍니다. mod란 무엇이고, 이 기능이 에이전트 세션의 주의력 문제를 어떻게 푸는지 ThakiCloud 관점에서 분석합니다."
 excerpt: "에이전트 세션이 길어질수록 병목은 '에이전트가 할 수 있느냐'에서 '사람이 따라잡을 수 있느냐'로 옮겨갑니다. Claude Code의 새 빌트인 mod, You should Know는 그 주의를 대신 보는 사이드 에이전트입니다."
 date: 2026-10-04

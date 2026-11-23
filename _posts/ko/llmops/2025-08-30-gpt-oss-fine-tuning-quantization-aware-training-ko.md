@@ -1,7 +1,7 @@
 ---
-title: "gpt-oss 모델의 정확도와 성능 최적화: 양자화 인식 훈련을 통한 파인튜닝 가이드"
+title: "gpt-oss 파인튜닝: 양자화 인식 훈련으로 정확도 지키기"
 excerpt: "OpenAI의 gpt-oss 모델을 효과적으로 파인튜닝하는 방법을 학습하세요. 지도 학습과 양자화 인식 훈련을 통해 FP4 정밀도의 이점을 유지하면서 정확도를 보장하는 프로덕션 배포 전략을 소개합니다."
-seo_title: "gpt-oss 파인튜닝 가이드: 프로덕션 AI 모델을 위한 QAT - Thaki Cloud"
+seo_title: "gpt-oss 파인튜닝: 양자화 인식 훈련으로 정확도 지키기"
 seo_description: "양자화 인식 훈련을 통한 gpt-oss 파인튜닝 완전 가이드. SFT + QAT 워크플로우, MXFP4 vs NVFP4 비교, 최적의 AI 성능을 위한 프로덕션 배포 전략을 학습하세요."
 date: 2025-08-30
 lang: ko

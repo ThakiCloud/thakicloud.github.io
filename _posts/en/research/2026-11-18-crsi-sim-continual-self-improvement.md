@@ -1,6 +1,6 @@
 ---
-title: "Weights frozen, only the harness evolves: reading Google's continual self-improvement (CRSI) experiment"
-seo_title: "CRSI and SIM paper review: harness self-improvement that continues across benchmarks and models - ThakiCloud"
+title: "Weights Frozen, Harness Evolving: Google's CRSI Experiment"
+seo_title: "Weights Frozen, Harness Evolving: Google's CRSI Experiment"
 seo_description: "We read the paper from Google Cloud AI, Google DeepMind, and Penn State on Continual Recursive Self-Improvement (CRSI) and Self-Improvement Memory (SIM). With policy weights frozen and only the harness evolving, we check where improvement carries over and where it breaks when the benchmark or the policy model changes."
 excerpt: "If you freeze an LLM's weights and only evolve the harness around it, can self-improvement continue after the benchmark or the policy model changes? We read Google's CRSI/SIM paper, including the cases where transfer fails."
 date: 2026-11-18

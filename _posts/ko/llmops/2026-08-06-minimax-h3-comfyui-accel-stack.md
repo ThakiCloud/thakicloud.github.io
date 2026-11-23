@@ -1,6 +1,6 @@
 ---
 title: "커널은 1.44배 빨라졌는데 렌더는 1.11배만 빨라진 이유"
-seo_title: "MiniMax-H3 ComfyUI 가속 노드 해부: EasyCache와 Sol-Attn, Sage Attention의 실측 한계 | ThakiCloud"
+seo_title: "커널은 1.44배 빨라졌는데 렌더는 1.11배만 빨라진 이유"
 seo_description: "MiniMax-H3를 빠르게 돌리는 ComfyUI 노드 조합을 소스 코드와 공개 벤치마크로 확인했습니다. Sol-Attn의 커널 1.44배가 파이프라인에서는 1.11배로 줄어드는 이유, 그리고 실제 렌더 길이가 벤치마크 측정 구간 밖에 있다는 사실을 숫자로 정리합니다."
 excerpt: "노드 세 개를 끼우면 빨라진다는 팁은 맞습니다. 다만 얼마나 빨라지는지는 팁에 적혀 있지 않고, 그 답은 여러분의 렌더 길이에 달려 있습니다."
 date: 2026-08-06

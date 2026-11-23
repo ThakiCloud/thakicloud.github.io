@@ -1,6 +1,6 @@
 ---
-title: "DeepSeek Opens Its In-House Inference Engine: DeepInfer and the 'Model-Specialized Kernels + Ascend' Strategy"
-seo_title: "DeepSeek open-sourced its in-house inference framework DeepInfer under Apache 2.0 on October 20. The FlashMLA attention kernel, the DeepEP-Ascend communication library, the offline-batch-first design, and the drop of NVIDIA Hopper in favor of Huawei Ascend 950. We summarize what it means for vLLM-based ThakiCloud serving operations. - ThakiCloud"
+title: "DeepSeek Opens DeepInfer, Its In-House Inference Engine"
+seo_title: "DeepSeek Opens DeepInfer, Its In-House Inference Engine"
 seo_description: "A teardown of DeepSeek's open-sourced inference engine DeepInfer: FlashMLA (Ascend 950 + NVIDIA Blackwell, Hopper dropped), DeepEP-Ascend (MoE all-to-all), an offline-batch-first design, and the deliberately omitted online-serving pieces (advanced KV cache, prefill/decode disaggregation). How to read the 155T tokens/day claim, and the implications for ThakiCloud vLLM operations. - ThakiCloud"
 excerpt: "DeepSeek has opened up the inference engine it runs in production, DeepInfer, under Apache 2.0. The real news is not how many tokens faster it is, but what paths it left on what hardware. Dropping NVIDIA Hopper and adding Huawei Ascend 950, and deliberately shipping an offline-batch-first engine while leaving out the hard online-serving pieces, is what this release is actually about."
 date: 2026-10-21

@@ -1,7 +1,7 @@
 ---
-title: "DGX Spark 한 대로 Gemma 4 26B를 16배 병렬로: NVFP4 양자화와 가성비 솔직 리뷰"
+title: "DGX Spark 한 대로 Gemma 4 26B 병렬 서빙: NVFP4"
 excerpt: "NVIDIA가 공개한 Gemma-4-26B-A4B-NVFP4를 DGX Spark 한 대에서 16배 병렬로 돌리면 스트림당 약 18토큰/초, 합산 약 300토큰/초가 나옵니다. 25.2B MoE를 4비트로 압축해 14GB대에 올리는 NVFP4의 원리, 단일 스트림 대 동시성의 트레이드오프, 그리고 DGX Spark가 다른 Blackwell GPU 대비 정말 가성비가 좋은지 솔직하게 따져봤습니다."
-seo_title: "Gemma-4-26B-A4B-NVFP4 DGX Spark 16배 병렬 추론 - 가성비 솔직 리뷰 - Thaki Cloud"
+seo_title: "DGX Spark 한 대로 Gemma 4 26B 병렬 서빙: NVFP4"
 seo_description: "Gemma-4-26B-A4B-NVFP4(25.2B MoE/active 3.8B)를 DGX Spark 128GB에서 16배 병렬 서빙: 스트림당 18tok/s, 합산 300tok/s. NVFP4 4비트 양자화, 메모리 대역폭 병목, RTX 5090/RTX PRO 6000/B200 가성비 비교와 ThakiCloud 온프렘 서빙 관점."
 date: 2026-06-24
 last_modified_at: 2026-06-24

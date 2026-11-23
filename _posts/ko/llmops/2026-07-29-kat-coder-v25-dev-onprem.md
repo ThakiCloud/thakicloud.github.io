@@ -1,6 +1,6 @@
 ---
-title: "전문가 256개 중 8개만 켜지는 코딩 모델: KAT-Coder-V2.5-Dev 체크포인트를 뜯어봤습니다"
-seo_title: "KAT-Coder-V2.5-Dev 온프레미스 서빙 분석: 35B-A3B MoE 실측 | ThakiCloud"
+title: "KAT-Coder-V2.5-Dev: 전문가 256개 중 8개만 켠다"
+seo_title: "KAT-Coder-V2.5-Dev: 전문가 256개 중 8개만 켠다"
 seo_description: "Apache-2.0으로 공개된 에이전틱 코딩 모델 KAT-Coder-V2.5-Dev의 config.json과 safetensors 인덱스를 직접 집계했습니다. 전문가 256개 중 8개만 활성화되는 3.12% 희소성, 40개 레이어 중 10개만 full attention이라 26만 토큰 KV 캐시가 5GiB에 그친다는 사실, bf16 65.2GiB가 H200 한 장에 올라간다는 계산까지 정리했습니다."
 excerpt: "SWE-bench Verified 69.4점을 3B 활성 파라미터로 냅니다. 그 숫자가 우리 GPU에서 어떤 의미인지 체크포인트를 열어 확인했습니다."
 date: 2026-07-29

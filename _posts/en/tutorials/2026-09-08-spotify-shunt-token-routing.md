@@ -1,5 +1,5 @@
 ---
-title: "Spotify Cut Claude Code Tokens by 90%. We Measured the Same Pattern Ourselves and Got a Different Number"
+title: "Spotify's Token Router, Replayed on Our Own Sessions"
 excerpt: "Spotify's shunt plugin routes large file reads to a cheap worker model via a PreToolUse hook. We replayed the pattern against 1,099 of our own session transcripts: at the default 350-line threshold only 14% of read bytes would be offloaded, and our read distribution sits at a p50 of 158 lines."
 date: 2026-09-08
 permalink: /en/tutorials/spotify-shunt-token-routing/

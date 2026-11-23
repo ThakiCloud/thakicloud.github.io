@@ -1,6 +1,6 @@
 ---
-title: "Encode Domain Knowledge as Infrastructure: Redefining Automation in the Agent Era"
-seo_title: "Domain Knowledge as Infrastructure - Automation in the Agent Era - Thaki Cloud"
+title: "Domain Knowledge as Infrastructure for the Agent Era"
+seo_title: "Domain Knowledge as Infrastructure for the Agent Era"
 seo_description: "Boris Cherny argues that automation, an engineer's highest leverage activity, matters even more in the agent era. Encoding domain knowledge beyond lint rules and e2e tests, into CLAUDE.md, skills, review rules, and memory, lets both agents and non engineers contribute from day one. We put ThakiCloud's own numbers, 52 rules, thousands of skills, 41 unattended automations, against this principle."
 excerpt: "If an agent can't work productively in a codebase, that is not a failure of the model. It is a failure of automation. Moving domain knowledge into infrastructure is a natural extension of what engineers have always done."
 date: 2026-07-16

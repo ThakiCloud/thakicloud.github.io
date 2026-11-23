@@ -1,7 +1,7 @@
 ---
-title: "The Complete Gemma 4 Lineup: Five Apache 2.0 Open-Weight Models and an On-Premises Serving Guide"
+title: "The Gemma 4 Lineup: Five Open Models and On-Prem Serving"
 excerpt: "Released by Google DeepMind in April 2026, Gemma 4 is a multimodal open-weight family of five models spanning E2B to 31B. We break down the Apache 2.0 license, 256K context, the difference between the 26B MoE and 31B Dense, and how to pick each model from an on-premises serving perspective."
-seo_title: "Gemma 4 Lineup Compared - E2B/E4B/12B/26B MoE/31B On-Prem Guide - Thaki Cloud"
+seo_title: "The Gemma 4 Lineup: Five Open Models and On-Prem Serving"
 seo_description: "Gemma 4 lineup (E2B, E4B, 12B Unified, 26B A4B MoE, 31B Dense): parameters, context, multimodality, benchmarks (MMLU-Pro 85.2%, GPQA 84.3%), vLLM/SGLang/Ollama serving, and the Apache 2.0 license."
 date: 2026-06-24
 last_modified_at: 2026-06-24

@@ -1,7 +1,7 @@
 ---
-title: "The Day Chips Stopped Talking About Intelligence and Started Talking About Work"
+title: "The Day Chips Started Talking About Work"
 excerpt: "Samsung set '1,000 tokens per second' as the goal for agentic AI, and on the same stage CXL's exit was declared. The unit of the semiconductor industry is shifting from intelligence to work, and on top of that the AI infrastructure landscape is being redrawn."
-seo_title: "1,000 Tokens per Second: The Day Chips Started Talking About Working Speed"
+seo_title: "The Day Chips Started Talking About Work"
 seo_description: "Samsung's zHBM 1,000 tokens per second target, CXL's exit, and an agent entering chip design verification. We read today's AI infrastructure news through a single lens: the speed of doing work."
 date: 2026-09-17
 last_modified_at: 2026-09-17

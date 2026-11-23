@@ -1,5 +1,5 @@
 ---
-title: "Nanobrowser Complete Guide: AI Agent-Based Web Automation and Agentic Ops Strategy"
+title: "Nanobrowser: AI Agent Web Automation and Agentic Ops"
 excerpt: "A detailed look at implementing multi-agent web automation with the open-source Chrome extension Nanobrowser, including practical use cases and deployment strategies."
 date: 2025-06-24
 last_modified_at: 2025-06-24

@@ -1,6 +1,6 @@
 ---
-title: "Same Weights, Different Decision Probabilities: The Hidden Reproducibility Problem in LLM Decision Heads"
-seo_title: "Reproducibility of LLM Decision Heads: Batch Padding, flash-linear-attention and CUDA Builds - ThakiCloud"
+title: "Same Weights, Different Probabilities: A Reproducibility Trap"
+seo_title: "Same Weights, Different Probabilities: A Reproducibility Trap"
 seo_description: "With the same 27B model and the same adapter weights, decision probabilities moved by up to 14.4 points depending on batch padding, a kernel library and the CUDA build. Why reproducing accuracy and reproducing probabilities are different requirements, and how we pinned the release."
 excerpt: "Right before release, the public loader failed to reproduce the reference results. The weights and code were right. What differed was how many inputs were batched together and which kernel library was installed."
 date: 2026-10-12

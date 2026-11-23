@@ -1,7 +1,7 @@
 ---
-title: "macOS GitHub CLI Complete Automation Series - Part 5: Advanced Workflows and Real-World Application"
+title: "macOS GitHub CLI Automation, Part 5: Advanced Workflows"
 excerpt: "Full system integration, CI/CD pipeline connectivity, and team onboarding automation - a complete GitHub automation system ready for immediate use in production"
-seo_title: "GitHub CLI Advanced Workflows Part 5 - Real-World Application Complete Guide - Thaki Cloud"
+seo_title: "macOS GitHub CLI Automation, Part 5: Advanced Workflows"
 seo_description: "Completing the GitHub CLI automation system: full integration, CI/CD pipeline connectivity, performance optimization, and production use cases for an expert-level development environment"
 date: 2025-07-02
 tags:

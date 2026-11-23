@@ -1,7 +1,7 @@
 ---
 title: "PocketFlow로 AI 기반 코드베이스 튜토리얼 자동 생성하기"
 excerpt: "복잡한 GitHub 저장소를 AI가 자동으로 분석하여 초보자 친화적인 튜토리얼로 변환해주는 PocketFlow 프로젝트를 설치하고 사용하는 방법을 단계별로 알아봅니다."
-seo_title: "PocketFlow 튜토리얼: AI로 코드베이스 분석하고 튜토리얼 생성하기 - Thaki Cloud"
+seo_title: "PocketFlow로 AI 기반 코드베이스 튜토리얼 자동 생성하기"
 seo_description: "PocketFlow를 사용하여 GitHub 저장소를 분석하고 AI가 자동으로 초보자용 튜토리얼을 생성하는 방법을 배워보세요. 설치부터 실제 사용까지 완벽 가이드입니다."
 date: 2025-07-07
 last_modified_at: 2025-07-07

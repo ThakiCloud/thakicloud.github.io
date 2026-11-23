@@ -1,7 +1,7 @@
 ---
-title: "OpenVoice 완전 가이드: MIT 기술로 구현하는 즉석 음성 복제 및 다국어 TTS 시스템"
+title: "OpenVoice: MIT 기술 기반 즉석 음성 복제와 다국어 TTS"
 excerpt: "MIT와 MyShell이 개발한 혁신적인 음성 복제 기술 OpenVoice로 정확한 톤 컬러 복제, 유연한 스타일 제어, 제로샷 크로스링구얼 음성 생성을 구현하는 완전한 실전 가이드"
-seo_title: "OpenVoice 음성 복제 튜토리얼 - MIT TTS 기술 완전 가이드 - Thaki Cloud"
+seo_title: "OpenVoice: MIT 기술 기반 즉석 음성 복제와 다국어 TTS"
 seo_description: "OpenVoice V2를 사용한 즉석 음성 복제 방법을 실전 예제와 함께 상세히 알아보세요. 설치부터 고급 활용까지 포함된 완전한 가이드입니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23

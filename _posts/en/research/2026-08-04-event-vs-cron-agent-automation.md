@@ -1,6 +1,6 @@
 ---
-title: "Measuring the Real Cost Gap Between Cron Polling and Event Triggers in Unattended Agent Automation"
-seo_title: "Event Triggers vs. Cron Polling: A Measured Cost Comparison | ThakiCloud Research"
+title: "Cron Polling vs Event Triggers: The Real Cost Gap"
+seo_title: "Cron Polling vs Event Triggers: The Real Cost Gap"
 seo_description: "We quantify with simulation how much latency and compute cost change when an unattended agent harness switches from cron polling to event-based triggering, and lay out why idempotent design is mandatory rather than optional."
 excerpt: "A shorter polling interval looks safer, but in practice most invocations come up empty. We cover the latency-cost frontier measured by simulation and why idempotent design is necessary."
 date: 2026-08-04

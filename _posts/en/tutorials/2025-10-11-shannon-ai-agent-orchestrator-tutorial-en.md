@@ -1,7 +1,7 @@
 ---
-title: "Shannon AI Agent Orchestrator: Complete Tutorial for Enterprise-Grade AI Agent Management"
+title: "Shannon: An Open-Source AI Agent Orchestrator"
 excerpt: "Learn how to set up and use Shannon, an open-source AI agent orchestrator with enterprise-grade security, cost controls, and vendor flexibility. A comprehensive guide from installation to advanced multi-agent workflows."
-seo_title: "Shannon AI Agent Orchestrator Tutorial - Enterprise AI Agent Management"
+seo_title: "Shannon: An Open-Source AI Agent Orchestrator"
 seo_description: "Complete tutorial for Shannon AI Agent Orchestrator: installation, configuration, multi-agent workflows, security features, and enterprise deployment guide."
 date: 2025-10-11
 tags:

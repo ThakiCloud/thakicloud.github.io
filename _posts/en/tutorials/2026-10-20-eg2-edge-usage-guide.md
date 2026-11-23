@@ -1,6 +1,6 @@
 ---
-title: "Running EmbeddingGemma 2 Small: Choosing a 550 MB Index Model and a 17.6 MB Query Encoder"
-seo_title: "EmbeddingGemma 2 550 MB Quantized, A1 Chart Search and K4 Korean Product Search: Usage Guide - ThakiCloud"
+title: "EmbeddingGemma 2 Small: Pairing Index and Query Models"
+seo_title: "EmbeddingGemma 2 Small: Pairing Index and Query Models"
 seo_description: "When to use ThakiCloud's two quantized EmbeddingGemma 2 models, the A1 chart-search query encoder and the K4 Korean product-search query encoder. Build the image index once, encode queries on CPU with a small encoder, with the measured results and limits from each model card."
 excerpt: "Build the image index once with a large model, then let a 17.6 MB encoder turn search queries into vectors on CPU. Here is when to use each of ThakiCloud's four EmbeddingGemma 2 repositories, with runnable code and the numbers we measured."
 date: 2026-10-20

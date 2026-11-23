@@ -1,6 +1,6 @@
 ---
-title: "We Measured Kimi K3's Weights: 1,453GiB, Eleven H200s, and a GGUF Repository That Is Still Empty"
-seo_title: "Kimi K3 Local Serving Measured: Weight Size and GPU Requirements | ThakiCloud"
+title: "Kimi K3 Local Serving: Measuring the Weights Ourselves"
+seo_title: "Kimi K3 Local Serving: Measuring the Weights Ourselves"
 seo_description: "We summed every published weight file of Kimi K3, the 2.8T parameter open-weight model, through the HuggingFace API. It comes to 1,453.7GiB across 96 shards, and holding the weights alone takes eleven 141GB H200s. Here is what the MXFP4 release actually contains, what the Kimi K3 License requires above certain revenue thresholds, and why the Unsloth GGUF repository was still empty on release day."
 excerpt: "Releasing weights and being able to run them in your own environment are two different claims. We measured the exact size of that gap for Kimi K3."
 date: 2026-07-28

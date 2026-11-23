@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Hub Fastest RAG Stack Complete Source Code Analysis: 40x Faster RAG with Binary Quantization"
+title: "AI Engineering Hub: Fastest RAG Stack Analysis"
 excerpt: "An in-depth source-code-level analysis of the Fastest RAG Stack project from the 10.7k-star AI Engineering Hub, with practical guidance for building an ultra-fast RAG system using Binary Quantization."
 date: 2025-06-21
 lang: en

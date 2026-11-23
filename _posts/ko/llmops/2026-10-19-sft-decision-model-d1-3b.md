@@ -1,6 +1,6 @@
 ---
-title: "판단을 내리는 모델도 학습된다: d1-3B decision model을 TRL과 Unsloth로 fine-tuning하기"
-seo_title: "Liquid AI의 d1-3B decision model을 Banking77에서 SFT+LoRA로 fine-tuning하는 두 노트북(TRL·Unsloth)을 Apple Silicon에서 실측 재현한 글입니다. completion이 토큰 1개인 SFT의 구조, case 단위 데이터 위생, LoRA 24.46M 파라미터 실측, LFM 라이선스 조건까지 정리합니다. - ThakiCloud"
+title: "d1-3B: 판단하는 모델을 TRL과 Unsloth로 학습하기"
+seo_title: "d1-3B: 판단하는 모델을 TRL과 Unsloth로 학습하기"
 seo_description: "decision model fine-tuning 실전: d1-3B의 System One API와 answer slot 구조, TRL/Unsloth 두 노트북의 차이, case 단위 dedup과 옵션 리스트 랜덤화, Apple Silicon 실측(베이스라인 83.0%)과 LFM Open License의 상업 조건을 다룹니다."
 excerpt: "LLM이 에세이를 쓰듯 답을 생성하는 대신, decision model은 단답에 확률만 붙입니다. d1-3B를 Banking77에서 fine-tuning하는 Liquid AI의 두 노트북을 Apple Silicon에서 실측했습니다. quality를 가르는 것은 프레임워크가 아니라 데이터 위생 세 가지입니다."
 date: 2026-10-19

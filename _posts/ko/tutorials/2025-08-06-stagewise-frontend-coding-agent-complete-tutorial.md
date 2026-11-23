@@ -1,7 +1,7 @@
 ---
-title: "Stagewise: 프로덕션 코드베이스를 위한 혁신적인 프론트엔드 코딩 에이전트 완전 가이드"
+title: "Stagewise: 프로덕션 코드베이스용 프론트엔드 에이전트"
 excerpt: "브라우저에서 직접 작동하는 AI 코딩 에이전트 Stagewise를 활용하여 기존 웹 애플리케이션을 효율적으로 개발하고 수정하는 방법을 배워보세요."
-seo_title: "Stagewise 프론트엔드 AI 코딩 에이전트 완전 튜토리얼 - Thaki Cloud"
+seo_title: "Stagewise: 프로덕션 코드베이스용 프론트엔드 에이전트"
 seo_description: "Stagewise로 React, Vue, Angular 등 모든 프레임워크에서 브라우저 기반 AI 코딩을 시작하세요. 설치부터 실전 활용까지 단계별 가이드."
 date: 2025-08-06
 last_modified_at: 2025-08-06

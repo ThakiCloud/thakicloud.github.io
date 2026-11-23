@@ -1,7 +1,7 @@
 ---
-title: "One Skill Is Not Enough: Compositional Skill Routing and the Decomposition Bottleneck Revealed by SkillWeaver"
+title: "SkillWeaver: Compositional Skill Routing and Decomposition"
 excerpt: "A composite user request is not the problem of picking one skill but of composing several. SkillWeaver (arXiv:2606.18051) formalizes this problem and shows, with data, that the real bottleneck is not the retriever but decomposition."
-seo_title: "SkillWeaver Compositional Skill Routing Paper Analysis - Thaki Cloud"
+seo_title: "SkillWeaver: Compositional Skill Routing and Decomposition"
 seo_description: "arXiv 2606.18051: Decompose-Retrieve-Compose composite skill routing, the decomposition bottleneck and SAD methodology, multi-agent evaluation design from a practitioner perspective"
 date: 2026-06-21
 last_modified_at: 2026-06-21

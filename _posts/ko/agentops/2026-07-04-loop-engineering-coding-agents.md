@@ -1,7 +1,7 @@
 ---
 title: "프롬프트를 쓰지 않고 루프를 씁니다: 코딩 에이전트의 루프 엔지니어링"
 excerpt: "한 개발자가 '이제 Claude Code에 프롬프트를 넣지 않는다. Fable에 프롬프트를 넣는 루프를 돌리고, 내 일은 그 루프를 짜는 것뿐이다'라고 말했습니다. 과장을 걷어내고 보면 이 문장은 작업의 단위가 프롬프트에서 루프로 옮겨간다는 실질적 변화를 가리킵니다. 관찰-판단-실행을 반복하고 컴파일러와 테스트를 보상 신호로 삼는 루프 엔지니어링을, ThakiCloud가 실제로 운용하는 pge-loop와 Goal Mode 사례로 짚습니다."
-seo_title: "루프 엔지니어링: 코딩 에이전트를 프롬프트가 아니라 루프로 다루기 - Thaki Cloud"
+seo_title: "프롬프트를 쓰지 않고 루프를 씁니다: 코딩 에이전트의 루프 엔지니어링"
 seo_description: "프롬프트에서 루프로 넘어가는 코딩 에이전트 운용 패턴을 분석합니다. Act-Observe-Learn-Repeat 구조, 결정론적 게이트를 보상 신호로 쓰는 방법, ThakiCloud의 pge-loop와 Goal Mode 실제 구현, Paxis Agent-Native Cloud 적용 관점을 정리했습니다."
 date: 2026-07-04
 last_modified_at: 2026-07-04

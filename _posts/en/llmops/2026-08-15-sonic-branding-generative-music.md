@@ -1,7 +1,7 @@
 ---
-title: "We Built a Brand Sound System on One GPU: $0.007 a Song, and a 12.7x Gap That Came From the Execution Stack"
+title: "A Brand Sound System on One GPU"
 excerpt: "If you are weighing whether to serve a music model in-house, look at the execution stack before you look at the model. Same B200, same weights, different execution path, and throughput went from 36 songs an hour to 463. At $0.007 a song we built the whole sonic identity, including the ad film, in a day."
-seo_title: "Serving a music model, measured: a 12.7x throughput gap and $0.007 per song"
+seo_title: "A Brand Sound System on One GPU"
 seo_description: "MiniMax-Music3 measured on a single B200. Reference pipeline 36 songs/hour, serving stack 463. VRAM is pinned at 24.5GB regardless of song length and idle draw alone is 239W. Also why a sonic logo should be synthesised in code rather than generated."
 date: 2026-08-15
 last_modified_at: 2026-08-15

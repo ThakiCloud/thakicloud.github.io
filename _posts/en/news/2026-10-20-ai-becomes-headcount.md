@@ -1,7 +1,7 @@
 ---
 title: "The Day AI Made the Headcount Roster"
 excerpt: "34 case studies, 511 agents running continuously, 36,800 hours saved per year. Bespin Global's own operating numbers are rewriting the language of pride in the enterprise agent market. The new question is no longer how many you run, but under what system you run them."
-seo_title: "The Day AI Made the Headcount Roster | From Agent Pilots to the Era of Operating Numbers"
+seo_title: "The Day AI Made the Headcount Roster"
 seo_description: "Bespin Global discloses 511 agents running continuously. As enterprise AI evaluation criteria shift from pilot success to operating performance, the next battleground is governance spanning audit, approval, and isolated execution."
 date: 2026-10-20
 last_modified_at: 2026-10-20

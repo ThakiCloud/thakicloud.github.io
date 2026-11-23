@@ -1,6 +1,6 @@
 ---
-title: "Dense Share: hybrid BM25+dense 스킬 라우터에서 임베딩 레인이 실제로 내는 정확도의 몫과, 백본 크기·INT8 양자화·인덱스 차원의 비용-품질 무릎을 닫힘 형태로 정한 논문"
-seo_title: "Dense Share 논문: RRF hybrid 스킬 라우터의 dense 레인 기여를 BM25-only counterfactual로 분리하고, backbone size × INT8 index quantization × Matryoshka dimension의 cost-quality knee를 셀프호스트드 H200에서 닫힘 형태로 정한 모델 (embedding-backbone-ablation, hybrid-skill-routing, bm25-dense-fusion, matryoshka-dimension-truncation, int8-embedding-quantization, cost-quality-frontier, sra-bench, skill-ecosystem, h200-serving) - ThakiCloud"
+title: "Dense Share: 스킬 라우터에서 임베딩 레인의 정확도 몫"
+seo_title: "Dense Share: 스킬 라우터에서 임베딩 레인의 정확도 몫"
 seo_description: "하이브리드 스킬 라우터의 dense 레인은 시리즈 내내 전제만 됐습니다. 이 논문은 RRF fusion 아래 dense 레인이 실제로 내는 정확도(dense share)를 recovery와 loss로 닫힘 형태에 분리하고, 백본 크기·INT8 index quantization·index dimension의 cost-quality knee를 셀프호스트드 H200에서 정합니다. 예측 knee는 512차원 per-vector INT8(3.98× 저장 절감), 규칙은 레지스트리 규모 불변. 14-arm factorial protocol은 pre-registered."
 excerpt: "라우터는 단계별로 가격 매겨졌지만, 임베딩 백본 하나만 안 씁니다. 이 논문은 dense 레인의 정확도 기여(dense share)를 RRF fusion 아래 닫힘 형태로 분리하고, 백본 크기·INT8 양자화·인덱스 차원의 cost-quality knee를 셀프호스트드 H200의 2,029-skill registry에서 정한 모델입니다."
 date: 2026-11-22

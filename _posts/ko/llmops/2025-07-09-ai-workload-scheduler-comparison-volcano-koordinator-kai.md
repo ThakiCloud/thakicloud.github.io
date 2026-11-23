@@ -1,7 +1,7 @@
 ---
-title: "AI 워크로드 스케줄러 비교 분석: 클라우드 업체를 위한 Volcano vs Koordinator vs KAI Scheduler 완벽 가이드"
+title: "AI 스케줄러 비교: Volcano, Koordinator, KAI"
 excerpt: "클라우드 업체 관점에서 GPU 최적화 AI 워크로드 스케줄러 3종 세트를 심층 분석하고 도입 시나리오별 선택 가이드를 제공합니다."
-seo_title: "AI 워크로드 스케줄러 비교: Volcano vs Koordinator vs KAI Scheduler 클라우드 업체 가이드 - Thaki Cloud"
+seo_title: "AI 스케줄러 비교: Volcano, Koordinator, KAI"
 seo_description: "클라우드 업체를 위한 AI 워크로드 스케줄러 완벽 비교 가이드. Volcano, Koordinator, KAI Scheduler의 GPU 최적화 기능, 운영 복잡성, 비용 효율성을 심층 분석하고 도입 시나리오별 선택 전략을 제시합니다."
 date: 2025-07-09
 last_modified_at: 2025-07-09

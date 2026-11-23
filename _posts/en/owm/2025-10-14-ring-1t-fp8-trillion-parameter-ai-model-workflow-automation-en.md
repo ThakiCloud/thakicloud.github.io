@@ -1,7 +1,7 @@
 ---
-title: "Ring-1T-FP8: Integrating Trillion-Parameter AI Models into Workflow Automation"
+title: "Ring-1T-FP8: A Trillion-Parameter Model in Workflows"
 excerpt: "Explore how inclusionAI's Ring-1T-FP8, a trillion-parameter thinking model, revolutionizes workflow automation through deep reasoning capabilities, multi-agent frameworks, and scalable deployment strategies."
-seo_title: "Ring-1T-FP8 Trillion-Parameter AI Model for Workflow Automation - Thaki Cloud"
+seo_title: "Ring-1T-FP8: A Trillion-Parameter Model in Workflows"
 seo_description: "Discover Ring-1T-FP8's integration into workflow automation systems with AWorld framework, SGLang deployment, and ASystem RL training for enterprise AI operations."
 date: 2025-10-14
 tags:

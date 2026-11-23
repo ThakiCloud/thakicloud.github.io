@@ -1,6 +1,6 @@
 ---
 title: "스킬을 커리큘럼으로 쓰는 자기대전: Qwen의 Skill Self-Play가 푼 검증 문제"
-seo_title: "Skill Self-Play 논문 분석: 스킬이 자기진화 학습의 검증 문제를 푸는 방식 | ThakiCloud"
+seo_title: "스킬을 커리큘럼으로 쓰는 자기대전: Qwen의 Skill Self-Play가 푼 검증 문제"
 seo_description: "자기진화 학습은 과제 다양성과 검증 신뢰성 사이에서 하나를 포기해 왔습니다. Alibaba Qwen 팀의 Skill Self-Play는 에이전트 스킬을 중간 지대로 삼아 둘을 동시에 확보합니다. 제안자와 해결자, 스킬 컨트롤러가 자기대전 루프에서 함께 진화하는 구조를 정리하고 Paxis 관점의 시사점을 짚었습니다."
 excerpt: "스스로 문제를 만들어 학습하는 모델은 채점을 믿을 수 없고, 환경에 묶인 모델은 좁은 데서만 늡니다. Qwen 팀은 이 딜레마의 해법을 에이전트 스킬에서 찾았습니다."
 date: 2026-07-30

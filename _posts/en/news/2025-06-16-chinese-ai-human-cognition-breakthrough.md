@@ -1,5 +1,5 @@
 ---
-title: "Chinese Scientists First Confirm AI Can Spontaneously Form Human-Level Cognitive Abilities"
+title: "A Chinese Study on AI Forming Human-Level Cognition"
 excerpt: "Chinese Academy of Sciences research team published in Nature Machine Intelligence that multimodal large language models can spontaneously form object concept representation systems similar to humans"
 date: 2025-06-16
 lang: en

@@ -1,6 +1,6 @@
 ---
 title: "Serving 4-bit EmbeddingGemma 2 on Stock vLLM: 43.7% Less Weight Memory"
-seo_title: "eg2q vLLM plugin: serve EmbeddingGemma 2 Hybrid W4 through /v1/embeddings on unforked vLLM, weight memory 0.563x - ThakiCloud"
+seo_title: "Serving 4-bit EmbeddingGemma 2 on Stock vLLM: 43.7% Less Weight Memory"
 seo_description: "ThakiCloud eg2-l2v1 v0.2.0 is a plugin that loads the EmbeddingGemma 2 Hybrid W4 checkpoint into unmodified upstream vLLM. It serves text, image, audio and video through the OpenAI-compatible API, with weight memory at 0.563x of the BF16 reference and throughput at 0.826x or better."
 excerpt: "For engineers who need to serve multimodal embeddings over an API and would rather spend GPU memory on something else. We loaded the public 4-bit EmbeddingGemma 2 into unforked vLLM with one plugin, served all four modalities, and cut weight memory by 43.7%. It is not faster, and it is verified on B200 only."
 date: 2026-10-15

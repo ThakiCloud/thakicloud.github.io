@@ -1,7 +1,7 @@
 ---
-title: "When a Single Skill Pack Can Reshape an AI Coding Agent: Rethinking Enterprise Guardrails"
+title: "One Skill Pack Can Reshape a Coding Agent"
 excerpt: "A security researcher published a skill pack that reroutes a general-purpose coding agent into more than twenty specialized workflows using nothing but a routing configuration file, and flagged it themselves as a dangerous dual-use project. This is not a problem with any single tool. It is a problem with the new attack surface that AI agents as execution engines have created. This post examines four defensive layers: skill whitelisting, tool execution boundaries, egress controls, and audit trails, through the lens of ThakiCloud's multi-tenant platform."
-seo_title: "Four-Layer Enterprise AI Agent Guardrails Analysis - Thaki Cloud"
+seo_title: "One Skill Pack Can Reshape a Coding Agent"
 seo_description: "In an era where a skill pack can redefine an agent's behavior at runtime, ThakiCloud examines skill whitelisting, tool execution boundaries, egress controls, and audit trails as the four essential guardrail layers for multi-tenant agent governance on Kubernetes."
 date: 2026-06-22
 last_modified_at: 2026-06-22

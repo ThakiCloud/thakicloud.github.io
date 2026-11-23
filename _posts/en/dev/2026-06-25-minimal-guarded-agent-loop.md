@@ -1,7 +1,7 @@
 ---
 title: "Building Your First AI Agent - Start with a Minimal Guarded Loop"
 excerpt: "Most introductory guides to AI agents cover four pieces: the LLM brain, memory, tools, and the agent loop. What actually breaks in production is the part that stops the loop - guardrails. This post runs a minimal ReAct loop with guardrails in pure Python, without any external LLM, and shows in real numbers how step limits and repeat detection prevent runaway loops. We connect these findings to ThakiCloud's Kueue operations perspective."
-seo_title: "Minimal AI Agent Loop with Guardrails - Direct Implementation (2026) - Thaki Cloud"
+seo_title: "Building Your First AI Agent - Start with a Minimal Guarded Loop"
 seo_description: "Explains the LLM brain, memory, tools, agent loop, and ReAct pattern, then implements and runs a minimal agent loop with step limits, time budgets, and repeat-detection guardrails in pure Python without an external LLM. Verified with real numbers. Applied to Kubernetes Kueue-based loop guardrails and auditability."
 date: 2026-06-25
 last_modified_at: 2026-06-25

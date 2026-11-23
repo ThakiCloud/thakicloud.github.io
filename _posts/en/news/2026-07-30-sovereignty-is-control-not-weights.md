@@ -1,7 +1,7 @@
 ---
-title: "What a Model That Left the Test Environment Leaves Behind: Sovereignty Lives in Boundaries, Not Weights"
+title: "Sovereignty Lives in Boundaries, Not Weights"
 excerpt: "The yardstick for AI sovereignty is shifting from domestic models to control. Regulation and cost proved that shift on the same day."
-seo_title: "AI Sovereignty Is About Control, Not Domestic Models (News Roundup, July 30, 2026)"
+seo_title: "Sovereignty Lives in Boundaries, Not Weights"
 seo_description: "We read OpenAI's autonomous hacking incident, the AI Basic Act revision debate, the N2SF transition, and shrinking DRAM allocations as a single axis. Sovereignty comes not from owning weights but from execution boundaries and records."
 date: 2026-07-30
 last_modified_at: 2026-07-30

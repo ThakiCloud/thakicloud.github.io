@@ -3,7 +3,7 @@ title: "When the U.S. Government Lands on the Cap Table"
 excerpt: "President Trump opened the door to government stakes in OpenAI and Anthropic while ruling out nationalization. As frontier models are reclassified as strategic assets, the question of who owns them follows the question of which model to use."
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/news/government-on-the-cap-table/
-seo_title: "Government Stakes, Not Nationalization: How OpenAI and Anthropic News Rewrites the Math of Model Dependency"
+seo_title: "When the U.S. Government Lands on the Cap Table"
 seo_description: "Trump's mention of stakes in OpenAI and Anthropic, Broadcom's $60B chip credit, SpaceXAI's 420,000 GPU deployment. We trace the process by which the frontier becomes a strategic asset and the questions it leaves for enterprise agent operations."
 date: 2026-10-03
 last_modified_at: 2026-10-03

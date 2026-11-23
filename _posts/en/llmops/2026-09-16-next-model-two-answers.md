@@ -1,7 +1,7 @@
 ---
-title: "A Trillion Parameters and 200 Times the Speed: Two Answers to the Next Model Running in Opposite Directions"
+title: "A Trillion Parameters or 200x Speed: Two Answers Diverge"
 excerpt: "Two stories in the morning digest run in opposite directions on the question of the next model. A one-trillion-parameter specialist model beats GPT-6 Astra in scientific analysis, and a decision engine that generates not a single token runs 200 times faster than an LLM. When the answer moves away from a single model name, the next front is routing."
-seo_title: "Two Answers to the Next Model, A Trillion Parameters vs. 200x Speed | ThakiCloud"
+seo_title: "A Trillion Parameters or 200x Speed: Two Answers Diverge"
 seo_description: "Neon, a one-trillion-parameter domain-specialized model that beats GPT-6 Astra in scientific analysis, and Jev, a decision engine that is 200 times faster than an LLM without generating tokens. We analyze the direction of model routing that today's AI news points to."
 date: 2026-09-16
 last_modified_at: 2026-09-16

@@ -1,7 +1,7 @@
 ---
-title: "GPU TEE와 모델 서명을 하나로 묶기: 주권형 멀티테넌트 AI를 위한 증명된 기밀 추론"
+title: "주권형 멀티테넌트 AI의 증명된 기밀 추론"
 excerpt: "온프렘 AI 플랫폼을 쓰는 병원이나 은행, 정부기관은 데이터가 엔클레이브 밖으로 새지 않았다는 것과 서빙된 모델 가중치가 감사받은 그 파일이 맞다는 것, 이 두 가지를 규제기관에게 증명해야 합니다. GPU 기밀 컴퓨팅의 원격 증명과 모델 프로버넌스는 지금까지 따로 발전해 온 두 기술입니다. ThakiCloud AI Research가 이 둘을 요청 단위로 암호학적으로 묶어 Kubernetes 스케줄러 admission 단계에서 강제하는 프로토콜 ACI(Attested Confidential Inference)를 제안합니다."
-seo_title: "GPU TEE 원격 증명과 모델 프로버넌스 결합 - ACI 프로토콜 연구 - Thaki Cloud"
+seo_title: "주권형 멀티테넌트 AI의 증명된 기밀 추론"
 seo_description: "ThakiCloud AI Research가 발표한 Attested Confidential Inference(ACI) 논문을 소개합니다. GPU TEE 원격 증명과 서명된 모델 프로버넌스 레코드를 요청 단위로 암호학적으로 결합하고 Kueue admission 게이트에서 강제해, 주권형 온프렘 AI 플랫폼이 규제기관에게 데이터 기밀성과 모델 무결성을 동시에 증명할 수 있게 하는 설계와 위협 모델, 오버헤드 분석을 다룹니다."
 date: 2026-07-08
 last_modified_at: 2026-07-08

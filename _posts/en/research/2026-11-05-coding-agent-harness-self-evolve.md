@@ -1,6 +1,6 @@
 ---
-title: "125 Proposals from the /retro Skill: How Many Actually Reduced the Agent's Repeated Work?"
-seo_title: "An Empirical Study of Coding-Agent Harness Self-Evolution, the /retro Skill - ThakiCloud Tech Blog"
+title: "The /retro Skill Made 125 Proposals: How Many Helped?"
+seo_title: "The /retro Skill Made 125 Proposals: How Many Helped?"
 seo_description: "The design and results of arXiv 2610.34938. Thirty sessions, 125 proposals, 12 adaptations, 13 transfer events. Only two of seven informative evaluations eliminated the targeted action, and some adaptations added work on unrelated tasks. A recipe you can apply to the evaluation stage of Paxis's skill evolution loop."
 excerpt: "A paper that empirically checks whether coding-agent harness self-evolution works. It coded the 125 proposals that the /retro skill made across 30 SWE-bench Verified sessions, transferred the 12 implemented adaptations to later issues, and evaluated them A/B. Two of seven informative adaptations eliminated the targeted action completely, and an incomplete note added work to an unrelated task."
 date: 2026-11-05

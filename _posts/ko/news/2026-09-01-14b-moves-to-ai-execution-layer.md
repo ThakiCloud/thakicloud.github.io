@@ -1,7 +1,7 @@
 ---
-title: "140억 달러가 한 방향으로 움직인 아침: AI 경쟁의 전장이 실행층으로 내려왔다"
+title: "140억 달러의 아침: AI 투자가 실행층으로 간다"
 excerpt: "NVIDIA, Together AI, SB Energy. 오늘 아침 AI 뉴스의 큰 돈은 전부 한 방향으로 움직였다. 실행의 땅, 칩과 메모리와 데이터센터와 전력을 둘러싼 140억 달러의 계약들. 그 돈의 흐름이 기업 에이전트 실행에 남기는 질문을 짚는다."
-seo_title: "AI 경쟁, 실행층으로: 하루 140억 달러 인프라 계약 분석 | ThakiCloud"
+seo_title: "140억 달러의 아침: AI 투자가 실행층으로 간다"
 seo_description: "NVIDIA와 MediaTek 35억 달러, Together AI 사우디 50억 달러, SB Energy와 OpenAI 55억 달러. 하루에 140억 달러가 AI 실행 인프라로 이동한 이유와 기업 에이전트 실행에 주는 시사점."
 date: 2026-09-01
 last_modified_at: 2026-09-01

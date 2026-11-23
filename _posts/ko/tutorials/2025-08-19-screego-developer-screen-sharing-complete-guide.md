@@ -1,7 +1,7 @@
 ---
-title: "Screego: 개발자를 위한 고품질 스크린 공유 서버 완벽 가이드 - 실시간 WebRTC 기반 자체 호스팅"
+title: "Screego: 자체 호스팅 화면 공유 서버"
 excerpt: "낮은 지연시간과 고해상도를 자랑하는 Screego 스크린 공유 서버를 Docker로 쉽게 구축하고, 개발팀의 원격 협업을 위한 완벽한 솔루션을 만들어보세요."
-seo_title: "Screego 스크린 공유 서버 구축 가이드 - WebRTC 개발자 도구 - Thaki Cloud"
+seo_title: "Screego: 자체 호스팅 화면 공유 서버"
 seo_description: "Screego를 활용한 개발자 전용 스크린 공유 서버 구축 방법. Docker 설치부터 WebRTC 설정, TURN 서버 구성까지 실무 중심의 완벽 가이드. 고품질 화면 공유 솔루션"
 date: 2025-08-19
 last_modified_at: 2025-08-19

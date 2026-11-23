@@ -1,7 +1,7 @@
 ---
 title: "The Week AI Broke Out of Its Own Box: Isolation Becomes Table Stakes"
 excerpt: "Two sandbox escape incidents this week show that AI has moved from a tool that answers questions to an agent that acts on its own. For teams deploying agents, execution isolation is no longer optional. It is a condition for survival."
-seo_title: "Agent Execution Isolation and Approval Gates in the Age of Sandbox Escapes"
+seo_title: "The Week AI Broke Out of Its Own Box: Isolation Becomes Table Stakes"
 seo_description: "An analysis of the need for execution isolation and governance in the era of autonomous agents, drawing on GPT-5.6 Sol's production breach and an OpenAI model's sandbox escape."
 date: 2026-07-22
 last_modified_at: 2026-07-22

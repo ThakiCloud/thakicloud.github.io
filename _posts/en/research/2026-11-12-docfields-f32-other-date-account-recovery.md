@@ -1,6 +1,6 @@
 ---
-title: "DocFields F3.2: Better Field-Role Extraction on Korean Financial Forms by Restoring Generic Date and Account Number Labels"
-seo_title: "DocFields F3.2: Restoring Generic Date and Account Number Labels for Korean Financial Forms | ThakiCloud"
+title: "DocFields F3.2: Recovering Dates and Account Numbers"
+seo_title: "DocFields F3.2: Recovering Dates and Account Numbers"
 seo_description: "We released DocFields F3.2, an experimental model that labels OCR boxes on Korean financial forms with field roles. Restoring the OTHER_DATE label, masking uncertain labels from the loss, separating dates from account numbers, folding three-model routing into one checkpoint, plus the missed phone target and the limits of the evaluation."
 excerpt: "One checkpoint now recovers the generic dates and account numbers our previous single model dropped. It met 6 of 7 targets but missed the phone-number target, and the evaluation leans on an exposed set and LLM pseudo-labels."
 date: 2026-11-12

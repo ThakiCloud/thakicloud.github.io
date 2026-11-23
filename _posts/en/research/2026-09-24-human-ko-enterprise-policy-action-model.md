@@ -1,6 +1,6 @@
 ---
-title: "Human-KO-Enterprise: a Korean Model That Picks the Next Action Inside Company Policy"
-seo_title: "Human-KO-Enterprise: open-weight Korean models that read company policy and choose to execute, ask, confirm, escalate, or refuse - ThakiCloud"
+title: "Human-KO-Enterprise: Choosing the Next Action Within Policy"
+seo_title: "Human-KO-Enterprise: Choosing the Next Action Within Policy"
 seo_description: "ThakiCloud released two Korean 27B open-weight models and a 2,414-item benchmark under Apache-2.0. The models read a company policy and a customer request together and return exactly one policy-compliant action as JSON. This post covers where enterprises can plug them in and how to adopt them."
 excerpt: "The hard part of an enterprise agent is not knowing the answer. It is choosing what to do right now within company rules. We released two Korean models and a benchmark built to make that one choice well."
 date: 2026-09-24

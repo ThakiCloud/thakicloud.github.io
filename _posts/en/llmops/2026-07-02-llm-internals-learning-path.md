@@ -1,7 +1,7 @@
 ---
-title: "How to Systematically Learn LLM Internals: From Tokenization to Inference Optimization"
+title: "Learning LLM Internals, from Tokenization to Inference"
 excerpt: "If you operate LLMs in production but can't explain why the KV cache eats memory or what GQA actually saves, your optimization work is running on intuition. amitshekhariitbhu/llm-internals is a learning repository that strings together tokenization, the attention formula, transformer blocks, KV cache, MoE, and GQA in a deliberate sequence. This post explains why each topic is a direct weapon for infrastructure engineers."
-seo_title: "LLM Internals Learning Roadmap: Tokenization, Attention, KV Cache, MoE, GQA | Thaki Cloud"
+seo_title: "Learning LLM Internals, from Tokenization to Inference"
 seo_description: "An analysis of the llm-internals learning repository, covering tokenization (BPE), Query/Key/Value attention, transformer blocks, KV cache, MoE, and GQA from an infrastructure engineer's perspective, and connecting them to vLLM and Kueue serving optimization."
 date: 2026-07-02
 last_modified_at: 2026-07-02

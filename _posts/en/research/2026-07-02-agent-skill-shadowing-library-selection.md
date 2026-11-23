@@ -1,7 +1,7 @@
 ---
 title: "More Skills, Worse Agents: Skill Shadowing and the Selection Bottleneck"
 excerpt: "Recent work shows agent performance can drop as skill libraries grow. arXiv 2605.24050 decomposes the decline into skill shadowing and context overhead, and finds the real bottleneck is wrong skill selection, not context size. We look at how ThakiCloud Paxis's skill harness blocks this in practice with BM25 retrieval and an abstain gate, with real bench numbers."
-seo_title: "Skill Shadowing: Why Bigger Skill Libraries Make Agents Worse | Thaki Cloud"
+seo_title: "More Skills, Worse Agents: Skill Shadowing and the Selection Bottleneck"
 seo_description: "Built on arXiv 2605.24050 'More Skills, Worse Agents?', this post separates skill shadowing from context overhead and shows how ThakiCloud Paxis's skill harness stops the selection bottleneck with BM25 retrieval and an abstain gate, backed by real bench numbers."
 date: 2026-07-02
 last_modified_at: 2026-07-02

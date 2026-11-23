@@ -1,7 +1,7 @@
 ---
-title: "Llama Nemotron Super 49B v1.5: 오픈소스 추론 모델의 새로운 지평을 연 혁신적 AI"
+title: "Llama Nemotron Super 49B v1.5: 오픈 추론 모델 살펴보기"
 excerpt: "70B 오픈 모델 카테고리에서 1위를 차지한 Llama Nemotron Super 49B v1.5의 기술적 혁신과 오픈 워크플로우 관리에서의 활용 방안을 상세히 분석합니다."
-seo_title: "Llama Nemotron Super 49B v1.5 오픈소스 추론 모델 완전 분석 - Thaki Cloud"
+seo_title: "Llama Nemotron Super 49B v1.5: 오픈 추론 모델 살펴보기"
 seo_description: "NVIDIA의 최신 오픈소스 추론 모델 Llama Nemotron Super 49B v1.5의 핵심 기술, 성능 벤치마크, 그리고 AI 에이전트 구축에서의 실용적 활용 방법을 종합 분석합니다."
 date: 2025-07-30
 last_modified_at: 2025-07-30

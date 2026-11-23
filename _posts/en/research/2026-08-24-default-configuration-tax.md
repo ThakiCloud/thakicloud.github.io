@@ -1,6 +1,6 @@
 ---
-title: "Low Flame, Narrow Door: How an Untouched Server Setting Turned Customers Away"
-seo_title: "Why Default AI Server Settings Quietly Cut Throughput - Thaki Cloud"
+title: "Default Configuration Tax: An Untouched Server Setting"
+seo_title: "Default Configuration Tax: An Untouched Server Setting"
 seo_description: "An AI-serving server can lose more than 18x its capacity to handle requests, purely because of two settings nobody ever touched. We explain the measured numbers and a five-step check, in plain terms."
 excerpt: "Same computer, same model. Changing only two server settings widened the speed gap by more than 18x. The problem was not the model. It was a default setting nobody had looked at."
 date: 2026-08-24

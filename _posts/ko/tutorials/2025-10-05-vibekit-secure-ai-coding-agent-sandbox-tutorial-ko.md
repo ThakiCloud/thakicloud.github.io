@@ -1,7 +1,7 @@
 ---
 title: "VibeKit: AI 코딩 에이전트를 위한 궁극의 보안 계층 - 완전 가이드"
 excerpt: "VibeKit을 사용하여 Claude Code, Gemini 등 AI 코딩 에이전트를 안전한 격리 샌드박스에서 실행하고, 내장된 데이터 편집 및 포괄적인 관찰 가능성을 활용하는 방법을 학습하세요."
-seo_title: "VibeKit 튜토리얼: 데이터 편집 기능을 갖춘 안전한 AI 코딩 에이전트 샌드박스 - Thaki Cloud"
+seo_title: "VibeKit: AI 코딩 에이전트를 위한 궁극의 보안 계층 - 완전 가이드"
 seo_description: "VibeKit 완전 가이드 - Claude Code와 Gemini 같은 AI 코딩 에이전트를 격리된 Docker 컨테이너에서 자동 민감 데이터 편집 및 실시간 모니터링과 함께 실행하는 방법"
 date: 2025-10-05
 tags:

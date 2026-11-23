@@ -1,7 +1,7 @@
 ---
-title: "Conversations Become Skills: Mining Workflows from Past Sessions and Letting Agents Evolve Them"
+title: "Conversations Become Skills: Mining Past Sessions for Workflows"
 excerpt: "We open-source two autonomous loops -- one that uses a deterministic engine to mine recurring workflows from 800+ past conversations and package them as skills, and another that evolves existing skill bodies leak-free based on real failure evidence."
-seo_title: "Conversations to Skills: Chronicle Mining & Selfharness"
+seo_title: "Conversations Become Skills: Mining Past Sessions for Workflows"
 seo_description: "ThakiCloud extracts recurring workflows from 801 Claude Code sessions with a deterministic miner, converts them to skills, and evolves skill bodies leak-free using the Self-Harness paper approach."
 date: 2026-06-20
 last_modified_at: 2026-06-20

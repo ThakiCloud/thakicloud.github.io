@@ -1,7 +1,7 @@
 ---
 title: "How to Make Agent Memory Persistent: The Five Steps of Graph Engineering"
 excerpt: "Agent memory dies with the context window. Treating a knowledge graph as shared memory keeps it alive. We break down the five steps shared by the community, Extract, Resolve, Assemble, Query, and Repeat, and look at how they fit into multi-agent systems."
-seo_title: "Graph Engineering: Designing Persistent Memory for Multi-Agent Systems - Thaki Cloud"
+seo_title: "How to Make Agent Memory Persistent: The Five Steps of Graph Engineering"
 seo_description: "An engineering breakdown of graph engineering's five steps (Extract, Resolve, Assemble, Query, Repeat) for solving the problem of agent memory disappearing with the context window, using a shared knowledge graph. Covers Haiku/Sonnet model routing, provenance, and application to ThakiCloud Paxis."
 date: 2026-07-25
 last_modified_at: 2026-07-25

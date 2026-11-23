@@ -1,5 +1,5 @@
 ---
-title: "Fitting a 27B Model on a Phone: Dissecting Bonsai 27B's 1-bit and Ternary Quantization"
+title: "Bonsai 27B: Fitting a 27B Model on a Phone"
 excerpt: "Bonsai 27B, released by PrismML, is not a newly trained model but the result of compressing Qwen3.6-27B's weights to 1-bit and ternary while leaving the architecture untouched. The ternary build reportedly keeps 94.6% of FP16 quality at 5.9GB, and the 1-bit build keeps 89.5% at 3.9GB. We look at how this compression actually works, why memory rather than storage capacity is the real constraint, and what low-bit serving means for ThakiCloud's multi-tenant inference infrastructure."
 tags:
   - quantization

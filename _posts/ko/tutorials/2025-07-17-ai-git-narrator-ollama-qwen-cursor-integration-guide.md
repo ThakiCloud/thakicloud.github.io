@@ -1,7 +1,7 @@
 ---
 title: "Ollama Qwen + 맥북에서 AI 커밋 메시지 자동화: Cursor 완벽 연동 가이드"
 excerpt: "macOS에서 Ollama Qwen3 모델과 자체 제작 스크립트를 활용하여 Cursor IDE와 연동한 AI 커밋 메시지 자동 생성 시스템입니다. 로컬 AI로 프라이버시 보호하면서 개발 생산성을 극대화하세요."
-seo_title: "Ollama Qwen AI 커밋 메시지 자동화: macOS Cursor 연동 가이드 - Thaki Cloud"
+seo_title: "Ollama Qwen + 맥북에서 AI 커밋 메시지 자동화: Cursor 완벽 연동 가이드"
 seo_description: "macOS Ollama Qwen3 모델로 AI 커밋 메시지 자동 생성. Cursor IDE 완벽 연동, 로컬 프라이버시 보호, API 비용 없이 개발 생산성 향상하는 실전 가이드."
 date: 2025-07-17
 last_modified_at: 2025-07-17

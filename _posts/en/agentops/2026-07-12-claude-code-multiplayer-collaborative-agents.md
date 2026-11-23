@@ -1,6 +1,6 @@
 ---
-title: "When Coding Agents Start Talking to Each Other: Designing Multiplayer Claude Code and Collaborative Agents"
-seo_title: "Multiplayer Claude Code - Analyzing the Design of Collaborative Coding Agents - Thaki Cloud"
+title: "Multiplayer Claude Code: When Coding Agents Talk"
+seo_title: "Multiplayer Claude Code: When Coding Agents Talk"
 seo_description: "Multiplayer Claude Code lets several people and several Claudes talk to each other in the same terminal. We break down the design challenges of collaborative coding agents and examine what treating multi-agent systems as first-class resources means from ThakiCloud Paxis's perspective."
 excerpt: "We are moving from a world where one person uses one agent to one where multiple people and multiple agents share a workspace and talk to each other. Using multiplayer Claude Code as a starting point, we look at the concurrency, conflict, and trust-boundary problems of collaborative agents and examine them from an operational perspective at ThakiCloud."
 date: 2026-07-12

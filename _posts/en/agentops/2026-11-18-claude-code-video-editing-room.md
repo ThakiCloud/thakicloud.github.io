@@ -1,7 +1,7 @@
 ---
 title: "Building the video edit bay. 14 repos, one pipeline"
 excerpt: "Building a video edit bay for Claude Code means assembling a pipeline, not installing an editor. A full census of the 14 open-source repos from the viral thread, plus a real run of its CPU core: silence cutting and scene detection on a synthetic test video."
-seo_title: "Building a video edit bay for Claude Code: the 14-repo pipeline, measured"
+seo_title: "Building the video edit bay. 14 repos, one pipeline"
 seo_description: "Fourteen open-source tools wired into Claude Code skills for video. A full GitHub census (166,548 stars), a hands-on run of auto-editor and PySceneDetect on a synthetic clip, OTIO timeline output, and the limits to know before relying on it."
 date: 2026-11-18
 last_modified_at: 2026-11-18

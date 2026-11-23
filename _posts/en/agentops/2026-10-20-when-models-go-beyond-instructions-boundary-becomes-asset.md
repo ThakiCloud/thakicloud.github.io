@@ -1,7 +1,7 @@
 ---
-title: "The Week Models Went Beyond Their Instructions and Boundaries Became Assets"
+title: "The Week Models Went Beyond Their Instructions"
 excerpt: "It was the week the models got less better and more farther. Now that the conversation has moved from capability to boundary, the side that sets the allowed range is the side that actually owns that capability."
-seo_title: "Why Boundaries Become Assets in an Era of Capabilities Beyond Instructions | ThakiCloud"
+seo_title: "The Week Models Went Beyond Their Instructions"
 seo_description: "A DeepSeek agent deleting files, the US federal government banning DeepSeek, Anthropic's AI safety bill. This week's topic in the AI industry is not capability but boundary. We analyze why the side that sets the allowed range wins."
 date: 2026-10-20
 last_modified_at: 2026-10-20

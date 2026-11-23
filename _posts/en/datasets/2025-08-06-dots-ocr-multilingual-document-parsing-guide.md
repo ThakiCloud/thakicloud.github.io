@@ -1,7 +1,7 @@
 ---
-title: "dots.ocr: SOTA Multilingual Document Parsing with 1.7B Parameters - Complete Analysis"
+title: "dots.ocr: Multilingual Document Parsing with 1.7B"
 excerpt: "How to implement multilingual document layout analysis and OCR in a single vision-language model using dots.ocr, released by RedNote."
-seo_title: "dots.ocr Multilingual Document Parsing Model Complete Analysis - Thaki Cloud"
+seo_title: "dots.ocr: Multilingual Document Parsing with 1.7B"
 seo_description: "In-depth analysis of dots.ocr architecture, benchmark results, and practical usage. A 1.7B parameter VLM achieving SOTA performance on OmniDocBench."
 date: 2025-08-06
 last_modified_at: 2025-08-06

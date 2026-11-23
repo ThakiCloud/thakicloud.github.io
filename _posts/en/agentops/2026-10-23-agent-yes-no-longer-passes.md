@@ -1,7 +1,7 @@
 ---
 title: "A 'Yes' No Longer Passes: The Day an Agent's Brake Becomes the Product"
 excerpt: "Anthropic's Claude Duet blocks fund transfers between bank accounts and stock trades even when the user explicitly permits them. From METR's OpenAI audit, to more than 700 autonomous trials, to China export controls, today's signals point the same way. The agent's top authority is moving from the user's 'yes' to the boundary below it."
-seo_title: "Claude Duet's Hard Block on Fund Transfers: Why 'Yes' Is No Longer the Top Authority"
+seo_title: "A 'Yes' No Longer Passes: The Day an Agent's Brake Becomes the Product"
 seo_description: "Anthropic blocks Claude Duet's fund transfers and stock trades even with explicit permission. The direction of agent governance read through the METR audit and China export control signals, and the policy gate and audit log design in Paxis."
 date: 2026-10-23
 last_modified_at: 2026-10-23

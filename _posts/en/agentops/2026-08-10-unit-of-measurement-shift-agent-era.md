@@ -1,7 +1,7 @@
 ---
-title: "The Unit We Used to Count By Is Gone: What 87% Reveals About the Shift in Measurement"
+title: "The Unit We Counted By Is Gone: 87% of Copilot Is Agents"
 excerpt: "The finding that 87% of Copilot traffic now comes from agents is not a traffic statistic. It signals that the unit request, which has underpinned serving, safety evaluation, isolation, access control, and cost, is coming apart at the same time."
-seo_title: "In the Agent Era, the Unit for Measuring LLM Serving Is Changing"
+seo_title: "The Unit We Counted By Is Gone: 87% of Copilot Is Agents"
 seo_description: "Centered on Microsoft's finding that 87% of GitHub Copilot calls come from agents, this piece lays out how the units of safety evaluation, isolation, access control, and inference cost are being redefined."
 date: 2026-08-10
 last_modified_at: 2026-08-10

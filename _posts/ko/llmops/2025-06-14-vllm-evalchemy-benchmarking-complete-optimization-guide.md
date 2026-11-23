@@ -1,5 +1,5 @@
 ---
-title: "vLLM + Evalchemy 벤치마킹 완벽 최적화 가이드: 동적 배칭부터 실전 튜닝까지"
+title: "vLLM + Evalchemy: 신뢰할 수 있는 벤치마크 최적화"
 excerpt: "동적 배칭과 요청 큐를 이해하여 신뢰할 수 있는 LLM 성능 측정을 위한 서버-클라이언트 통합 최적화 전략"
 date: 2025-06-14
 tags: 

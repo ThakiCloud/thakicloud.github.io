@@ -1,7 +1,7 @@
 ---
-title: "Automating Empirical Research with an Agent Skill Library: The Stanford REAP Case and Its Limits"
+title: "Stanford REAP: An Agent Skill Library for Research"
 excerpt: "An analysis of the agent skill library with over 23,000 empirical research skills released by Stanford REAP-based CoPaper.AI. We hedge the exaggeration in the '20-minute top journal paper' claim and lay out the real value and unresolved problems of multi-agent knowledge work automation."
-seo_title: "Stanford REAP Empirical Research Agent Skill Library Analysis - Thaki Cloud"
+seo_title: "Stanford REAP: An Agent Skill Library for Research"
 seo_description: "Stanford REAP/CoPaper.AI 23,000+ agent skill library, the value of empirical research automation, and the limits of causal identification, reproducibility, and hallucination from a multi-agent knowledge work perspective"
 date: 2026-06-21
 last_modified_at: 2026-06-21

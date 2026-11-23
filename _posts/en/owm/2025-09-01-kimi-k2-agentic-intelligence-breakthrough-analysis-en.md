@@ -1,7 +1,7 @@
 ---
-title: "Kimi K2: Revolutionizing Agentic Intelligence with 1 Trillion Parameters and MuonClip Optimization"
+title: "Kimi K2: Agentic Intelligence and the MuonClip Optimizer"
 excerpt: "Deep analysis of Moonshot AI's Kimi K2 model - exploring breakthrough innovations in agentic intelligence, MuonClip optimizer, and large-scale reinforcement learning that achieves SOTA performance on software engineering benchmarks."
-seo_title: "Kimi K2 Technical Analysis: Agentic Intelligence & MuonClip Innovation - Thaki Cloud"
+seo_title: "Kimi K2: Agentic Intelligence and the MuonClip Optimizer"
 seo_description: "Comprehensive analysis of Kimi K2's revolutionary approach to agentic intelligence, featuring MuonClip optimizer, massive-scale MoE architecture, and breakthrough performance on SWE-Bench and coding benchmarks."
 date: 2025-09-01
 lang: en

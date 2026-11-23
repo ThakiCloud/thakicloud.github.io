@@ -1,5 +1,5 @@
 ---
-title: "ChatGPT Next Web + vLLM 로컬 환경 구축 가이드 - HyperCLOVA X SEED 0.5B로 경량 한국어 AI"
+title: "ChatGPT Next Web과 vLLM으로 만드는 로컬 한국어 AI"
 date: 2025-05-28
 tags: 
   - ChatGPT

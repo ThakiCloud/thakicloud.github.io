@@ -1,7 +1,7 @@
 ---
 title: "The Day the Nation's Ceiling Became a Company's Floor"
 excerpt: "Korea's entire compute capacity is 0.7GW, while one company's vision is 15GW. The figure, 21 times the nation's total, points to questions of power and value chains, not a chip race."
-seo_title: "A 0.7GW Nation, a 15GW Company: Korea's Compute Race and the Question of Value"
+seo_title: "The Day the Nation's Ceiling Became a Company's Floor"
 seo_description: "Korea's total compute of 0.7GW versus SKT's 15GW AI factory vision. The power bottleneck in the GW race, and the value-chain question that scale alone cannot answer."
 date: 2026-09-18
 last_modified_at: 2026-09-18

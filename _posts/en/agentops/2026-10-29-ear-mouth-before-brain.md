@@ -1,7 +1,7 @@
 ---
-title: "The Day Ears and Mouths Came First: Nemotron 3.5 Transcribe and AssemblyAI-TTS-1"
+title: "The Day Ears and Mouths Came First: Speech Models"
 excerpt: "The day open-weight speech recognition tied for first in accuracy, the day a TTS for large-scale voice agents shipped, both fell on today. The bottleneck of a voice agent was not the intelligence of the LLM but the two ends, the ear and the mouth."
-seo_title: "The Day Ears and Mouths Came First: Why Both Ends of the Voice Agent Stack Shipped the Same Day"
+seo_title: "The Day Ears and Mouths Came First: Speech Models"
 seo_description: "NVIDIA Nemotron 3.5 Transcribe ties for first in open-weight speech accuracy with 40 languages and speaker identification, and AssemblyAI releases a TTS for large-scale voice agents. The multi-model cost structure of one phone call and its governance questions, through the Paxis lens."
 date: 2026-10-29
 last_modified_at: 2026-10-29

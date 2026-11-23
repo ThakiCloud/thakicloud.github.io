@@ -1,7 +1,7 @@
 ---
-title: "AI Coding Assistant: Complete Guide to Boost Your Development Productivity"
+title: "AI Coding Assistants: Boosting Developer Productivity"
 excerpt: "Master AI-powered coding tools like GitHub Copilot, ChatGPT, and Claude to accelerate your development workflow and write better code faster."
-seo_title: "AI Coding Assistant Guide: Boost Development Productivity - Thaki Cloud"
+seo_title: "AI Coding Assistants: Boosting Developer Productivity"
 seo_description: "Learn how to effectively use AI coding assistants like GitHub Copilot, ChatGPT, and Claude to improve code quality, speed up development, and enhance your programming skills."
 date: 2025-10-09
 tags:

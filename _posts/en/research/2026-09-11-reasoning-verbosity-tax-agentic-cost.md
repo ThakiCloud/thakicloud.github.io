@@ -1,6 +1,6 @@
 ---
-title: "You Reason Once. You Get Billed Every Turn: The Formula for the Reasoning Verbosity Tax in Agent Loops"
-seo_title: "Agentic LLM Reasoning Verbosity Tax: Quality-Per-Dollar Break-Even Formula and 4arm Measurement Protocol for Explicit vs Compact Thinking in H200 Self-Hosted Serving - ThakiCloud"
+title: "The Reasoning Verbosity Tax in Agent Loops"
+seo_title: "The Reasoning Verbosity Tax in Agent Loops"
 seo_description: "Reasoning tokens left in context are re-billed at input price on every turn of the agent loop. Under persistent context the reasoning verbosity tax grows quadratically in the horizon T, linearly under discard, and the Qwen3 thinking toggle pins the quality-per-dollar break-even in closed form. We also lay out a 4arm refutation protocol to run on H200."
 excerpt: "You think once, but the bill comes back every turn. Leave reasoning in context with thinking on, and those tokens are re-priced at input cost on every later turn. This paper casts that tax into a formula, hands over the horizon where compact wins on quality per dollar as a closed-form solution, and declares the 4arm protocol built to overturn it."
 date: 2026-09-11

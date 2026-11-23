@@ -1,6 +1,6 @@
 ---
-title: "EmbeddingGemma 2: Google's Multimodal Embedding Model, 740M in a Unified 768-Dim Space"
-seo_title: "EmbeddingGemma 2 Review: 740M Multimodal Embedding Model Mapping Text, Code, Image, Video, Audio into a Single 768-Dim Vector Space, Apache 2.0 - ThakiCloud"
+title: "EmbeddingGemma 2: One Space for Multimodal Embeddings"
+seo_title: "EmbeddingGemma 2: One Space for Multimodal Embeddings"
 seo_description: "EmbeddingGemma 2, released by Google DeepMind on 2026-10-06 under Apache 2.0, is a 740M open-weight model that maps text, code, images, video frames, and audio into a single 768-dimensional embedding space. MRL truncation, Ollama serving, and the on-device multimodal RAG perspective."
 excerpt: "Building multimodal RAG has meant a two-stage pipeline: caption or transcribe, then embed the text. EmbeddingGemma 2 replaces that two-stage structure with a single 740M model. It puts text, code, images, video frames, and audio into one 768-dimensional space, and at roughly 567MB of active RAM when quantized, it goes all the way to on-device. Apache 2.0."
 date: 2026-10-07

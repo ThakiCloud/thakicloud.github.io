@@ -1,7 +1,7 @@
 ---
 title: "Zasper 상업적 사용 가이드 - 고성능 Jupyter IDE 완전 활용법"
 excerpt: "AGPL-3.0 라이선스 기반 Zasper의 상업적 사용 가능성을 분석하고, 기업 환경에서의 안전한 도입 방법과 실제 사용법을 상세히 설명합니다."
-seo_title: "Zasper 상업적 사용 가이드 - Jupyter IDE 기업 도입 완전 가이드 - Thaki Cloud"
+seo_title: "Zasper 상업적 사용 가이드 - 고성능 Jupyter IDE 완전 활용법"
 seo_description: "AGPL-3.0 라이선스 Zasper의 상업적 사용 가능성 분석과 기업 환경 도입 가이드. 설치부터 고급 기능까지 완전한 튜토리얼 제공."
 date: 2025-07-17
 last_modified_at: 2025-07-17

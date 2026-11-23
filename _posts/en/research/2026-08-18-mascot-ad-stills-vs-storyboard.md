@@ -1,5 +1,5 @@
 ---
-title: "Stills or a storyboard barely changes character identity, the real difference is cut count"
+title: "Stills vs Storyboards: Cut Count Drives Character Identity"
 excerpt: "Conditioning on stills versus a storyboard sheet barely splits identity, 0.636 versus 0.617. What actually diverged was cut count, and a third method had been failing for three rounds because of a single default value."
 categories:
   - research

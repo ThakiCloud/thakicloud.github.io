@@ -1,7 +1,7 @@
 ---
-title: "Eclaire: Building Your Own Local-First AI Assistant for Personal Data Management"
+title: "Eclaire: A Local-First AI Assistant for Personal Data"
 excerpt: "Complete guide to setting up and using Eclaire, an open-source AI assistant that unifies tasks, notes, docs, photos, and bookmarks while keeping your data private and local."
-seo_title: "Eclaire Local-First AI Assistant Tutorial - Complete Setup Guide"
+seo_title: "Eclaire: A Local-First AI Assistant for Personal Data"
 seo_description: "Learn how to set up Eclaire, the open-source local-first AI assistant for personal data management. Step-by-step tutorial with installation, configuration, and usage examples."
 date: 2025-10-03
 tags:

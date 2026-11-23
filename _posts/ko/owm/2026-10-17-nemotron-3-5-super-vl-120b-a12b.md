@@ -1,6 +1,6 @@
 ---
-title: "전문의 120명, 당직은 12명: Nemotron 3.5 Super VL(120B/A12B) 에이전트 오픈 모델"
-seo_title: "NVIDIA가 2026년 10월 15일 공개한 Nemotron 3.5 Super VL은 120B 총 파라마미터 중 토큰당 12B를 활성화하는 MoE 에이전트 오픈 모델입니다. Mamba-Transformer 하이브리드, 1M 컨텍스트, 텍스트·이미지·문서·비디오 이해와 도구 호출을 단일 체크포인트에 담고, NVFP4 양자화와 vLLM·SGLang day-0 서빙을 제공합니다. - ThakiCloud"
+title: "전문의 120명, 당직 12명: Nemotron 3.5 Super VL"
+seo_title: "전문의 120명, 당직 12명: Nemotron 3.5 Super VL"
 seo_description: "NVIDIA Nemotron 3.5 Super VL 리뷰: 120B/A12B MoE, Mamba-Transformer 하이브리드, 1M 컨텍스트 멀티모달 에이전트 모델의 아키텍처·벤치마크·NVFP4 서빙과 ThakiCloud 관점의 도입 판단 기준을 정리합니다."
 excerpt: "NVIDIA가 10월 15일 공개한 Nemotron 3.5 Super VL은 토큰당 12B만 활성화하는 120B MoE 에이전트 모델입니다. Mamba-Transformer 하이브리드와 1M 컨텍스트, 텍스트·이미지·문서·비디오 이해와 도구 호출을 단일 오픈 체크포인트에 담고 NVFP4 양자화까지 함께 냈습니다. 전문의 120명을 고용해 당직은 12명만 세우는 구조의 서빙 경제학, 그리고 자기 보고·벤더 보고 숫자를 가르는 읽는 법을 정리합니다."
 date: 2026-10-17

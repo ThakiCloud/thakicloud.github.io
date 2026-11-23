@@ -1,5 +1,5 @@
 ---
-title: "Manus AI System Analysis: Innovation in Agent Loop and Modular Architecture"
+title: "Manus AI: Analyzing the Agent Loop and Modular Design"
 excerpt: "A comprehensive analysis of Manus AI's unique agent loop mechanism and modular architecture that enables complex task execution beyond simple question-answering capabilities"
 date: 2025-06-01
 lang: en

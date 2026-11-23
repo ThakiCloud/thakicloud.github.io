@@ -1,6 +1,6 @@
 ---
-title: "Packing an Entire 3D Simulator Workflow into One Claude Skill: We Installed teardown and Measured It"
-seo_title: "teardown Claude Skill, Measured: 3D Simulator Workflow, 56ms Builds, 15.8s Review Sheets - ThakiCloud"
+title: "A 3D Simulator Workflow Packed Into One Claude Skill"
+seo_title: "A 3D Simulator Workflow Packed Into One Claude Skill"
 seo_description: "AI creator Elvar's free MIT skill 'teardown' packs the whole pipeline from reference photo to three.js 3D simulator and 60fps video into a single Claude Code skill. We installed it for real, built all 6 bundles (all under 1MB) and ran the review-loop capture."
 excerpt: "The value is not the 3D video itself but that the workflow became an executable contract. The 7 build rules, the 'don't watch the video, only look at frames' review loop, and the numerically defined taste are all inside SKILL.md. All 6 bundles built in 295ms, 806KB per page."
 date: 2026-10-31

@@ -1,7 +1,7 @@
 ---
 title: "This Year's Most Expensive Capability Is Not Doing"
 excerpt: "Benchmarks measured whether a model does well. This week, capital points at a different question: how much did it do that it should not have? The $3.1 billion safety index, agents that persist for days, and paper withdrawals point to the same place."
-seo_title: "This Year's Most Expensive Capability Is Not Doing: The Arrival of the AI Error Index"
+seo_title: "This Year's Most Expensive Capability Is Not Doing"
 seo_description: "First real-world AI safety index at $3.1 billion, enterprise agents that persist for days, withdrawal of 722 math manuscripts. The one question this week's signals point to together: how much did it do that it should not have."
 date: 2026-10-09
 last_modified_at: 2026-10-09

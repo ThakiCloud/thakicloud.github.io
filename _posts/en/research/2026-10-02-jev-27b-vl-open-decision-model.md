@@ -1,6 +1,6 @@
 ---
-title: "A 27B That Only Makes Decisions: JEV-27B-VL and System 1 Decisions in Open Weights"
-seo_title: "JEV-27B-VL (AutoTrust) open-weight multimodal decision model analysis - System 1/System 2 dual blocks (108.9M trained parameters + frozen Qwen3.8-27B), trained in 9.2 hours on a single B200, calibrated-probability typed outputs, Open-Jev/Valen ecosystem, ThakiCloud Paxis and Metis implications - ThakiCloud"
+title: "JEV-27B-VL: An Open 27B That Only Makes Decisions"
+seo_title: "JEV-27B-VL: An Open 27B That Only Makes Decisions"
 seo_description: "AutoTrust AI's JEV-27B-VL is not a model that 'writes answers' but a model that 'makes decisions.' It returns choice, score, or yes/no with calibrated probabilities for typed questions, in a single parallel forward pass. Only about 0.4% of the model (108.9M parameters) was trained, producing it in 9.2 hours on a single B200. We analyze what System 1 decision models are and why they matter now, from a ThakiCloud perspective."
 excerpt: "Agent workflows make more 'decisions' than they produce 'generation.' AutoTrust's JEV-27B-VL is a 27B open-weight model that makes those decisions as calibrated probabilities, typed outputs, and a single parallel forward pass. What System 1 decision models are and why they matter now."
 date: 2026-10-02

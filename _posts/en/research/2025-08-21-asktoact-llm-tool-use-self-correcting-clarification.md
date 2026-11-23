@@ -1,7 +1,7 @@
 ---
 title: "AskToAct: Improving LLM Tool Use through Self-Correcting Clarification"
 excerpt: "AskToAct is a self-correcting clarification framework that enables LLMs to handle ambiguous, incomplete user queries and perform accurate tool calls by systematically eliciting missing intent."
-seo_title: "AskToAct: Self-Correcting Clarification Framework for LLM Tool Use - Thaki Cloud"
+seo_title: "AskToAct: Improving LLM Tool Use through Self-Correcting Clarification"
 seo_description: "A detailed analysis of AskToAct's core mechanisms, dataset construction methodology, and training process for handling underspecified queries in real-world LLM tool-use scenarios."
 date: 2025-08-21
 last_modified_at: 2025-08-21

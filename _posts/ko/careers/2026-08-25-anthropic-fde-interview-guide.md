@@ -1,6 +1,6 @@
 ---
 title: "Anthropic 포워드 디플로이드 엔지니어(FDE) 인터뷰, 6단계 구조를 읽는 법"
-seo_title: "2026 Anthropic FDE 인터뷰 가이드 해설 - 라이브 Claude+MCP 유즈케이스와 밸류즈 라운드, Thaki Cloud"
+seo_title: "Anthropic 포워드 디플로이드 엔지니어(FDE) 인터뷰, 6단계 구조를 읽는 법"
 seo_description: "2026년 Anthropic Forward Deployed Engineer(FDE) 인터뷰가 리크루터 스크린·유즈케이스·코딩·하이얼매니저·솔루션 디자인·밸류즈 6단계로 구성됐다는 가이드를 해설합니다. 라이브 Claude+MCP 시나리오와 비기술 밸류즈 라운드가 핵심이며, AI 배포 엔지니어 채용 관점의 시사점을 정리합니다."
 excerpt: "FDE 인터뷰에서 가장 새로운 것은 '유즈케이스 라운드'입니다. 미리보기가 아니라 라이브로 Claude와 MCP 도구를 다루는 시나리오를 풀고, 기술 단계와 동등한 비중의 밸류즈 라운드가 비기술 인터뷰어가 진행합니다."
 date: 2026-08-25

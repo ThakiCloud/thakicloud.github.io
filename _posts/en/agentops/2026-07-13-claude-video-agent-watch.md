@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Can Watch Videos: claude-video Feeds Frames and Transcripts Into the Agent via /watch"
+title: "claude-video: Letting Claude Code Watch Videos via /watch"
 excerpt: "Coding agents have long read only text. claude-video thinly wires yt-dlp, ffmpeg, and Whisper together to turn YouTube, Zoom, Loom, or local files into frame images and timestamped transcripts, then injects them into Claude's multimodal Read context. This post dissects the actual install and usage of this open-source skill (5,400+ GitHub stars) and its internals (captions-first, three-tier frame extraction, deduplication, transcription fallback), and reads what it means through ThakiCloud's Agent-Native Cloud Paxis skill harness and the ai-platform serving lens."
-seo_title: "claude-video: The /watch Skill That Lets Claude Code See Videos - Thaki Cloud"
+seo_title: "claude-video: Letting Claude Code Watch Videos via /watch"
 seo_description: "An analysis of claude-video (bradautomates): the /watch skill's captions-first yt-dlp path, three-tier ffmpeg frame extraction, 16x16 grayscale deduplication, and Whisper (Groq large-v3, OpenAI fallback) transcription injected via Claude multimodal Read, plus ThakiCloud Paxis and ai-platform implications."
 date: 2026-07-13
 last_modified_at: 2026-07-13

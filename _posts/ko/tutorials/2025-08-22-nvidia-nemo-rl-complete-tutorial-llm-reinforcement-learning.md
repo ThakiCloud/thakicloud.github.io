@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA NeMo RL 완전 가이드: LLM 강화학습 post-training 마스터하기"
 excerpt: "NVIDIA NeMo RL을 활용한 LLM 강화학습 튜토리얼 - SFT, DPO, RM 훈련부터 멀티노드 확장까지 완전 정복"
-seo_title: "NVIDIA NeMo RL 완전 가이드 - LLM 강화학습 post-training 튜토리얼 - Thaki Cloud"
+seo_title: "NVIDIA NeMo RL 완전 가이드: LLM 강화학습 post-training 마스터하기"
 seo_description: "NVIDIA NeMo RL로 LLM 강화학습을 마스터하세요. SFT, DPO, RM 훈련 방법과 멀티노드 확장 가이드까지 완전 정복 튜토리얼"
 date: 2025-08-22
 last_modified_at: 2025-08-22

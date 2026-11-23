@@ -1,7 +1,7 @@
 ---
-title: "vLLM + Prometheus + Kueue: Building an LLM Serving Observability Stack on Kubernetes"
+title: "LLM Serving Observability on Kubernetes with vLLM and Prometheus"
 excerpt: "How to build an LLM serving observability stack that monitors GPU utilization, KV cache pressure, and token throughput in a Kubernetes multi-tenant environment."
-seo_title: "vLLM Prometheus Kueue LLM Serving Observability Guide - Thaki Cloud"
+seo_title: "LLM Serving Observability on Kubernetes with vLLM and Prometheus"
 seo_description: "Design for a K8s LLM serving observability stack integrating vLLM /metrics, DCGM Exporter, and Kueue metrics. Track GPU utilization and inference costs in real time."
 date: 2026-06-20
 last_modified_at: 2026-06-20

@@ -1,7 +1,7 @@
 ---
-title: "Git Is a Timeline, Not a Backup: The Solo Developer's Version-Control Discipline"
+title: "Git Is a Timeline, Not a Backup"
 excerpt: "Treating git like a backup tool keeps the files safe, but the reasons and the states are quietly lost a little every day. For a solo developer, git's real value is a timeline you can ask questions of, one where yesterday's you can answer. This article walks through the checkpoint commits, the branches as free sandboxes, and the history that works as a search index for future you."
-seo_title: "Git as a Timeline, Not a Backup: Solo Developer Discipline"
+seo_title: "Git Is a Timeline, Not a Backup"
 seo_description: "Why using git only as a backup quietly costs a solo developer a little every day, and how checkpoint commits, branches as free sandboxes, and a five-minute routine turn that cost into a reflex."
 date: 2026-08-27
 last_modified_at: 2026-08-27

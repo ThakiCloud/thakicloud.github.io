@@ -1,5 +1,5 @@
 ---
-title: "Agents Last Exam: Why Computer-Use Agent Evaluation Has Evolved to 153 Long-Horizon Tasks"
+title: "Agents Last Exam: 153 Long-Horizon Agent Tasks"
 excerpt: "agents-last-exam is a benchmark dataset of 153 long-horizon tasks for evaluating computer-use agents. Five domains including Business, Computing, Engineering, and Legal. CC-BY-4.0 license. A guide to building your own model benchmarking pipeline."
 date: 2026-06-20
 tags:

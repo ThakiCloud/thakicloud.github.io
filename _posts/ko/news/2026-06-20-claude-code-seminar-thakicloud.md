@@ -1,7 +1,7 @@
 ---
-title: "우리가 Claude Code를 직접 가르치는 이유: ThakiCloud 사내 세미나 자료 공개"
+title: "우리가 Claude Code를 직접 가르치는 이유: 세미나 자료 공개"
 excerpt: "환경설정부터 놓치기 쉬운 기능까지. ThakiCloud 개발팀이 Claude Code를 내재화한 과정과 세미나 자료 전체를 공개합니다."
-seo_title: "ThakiCloud Claude Code 사내 세미나 자료 공개 - 개발자 생산성 내재화"
+seo_title: "우리가 Claude Code를 직접 가르치는 이유: 세미나 자료 공개"
 seo_description: "ThakiCloud 개발팀이 운영한 Claude Code 사내 세미나 자료를 공개합니다. 환경설정, 핵심 명령어, 마스터하기, 놓치기 쉬운 기능까지 실무 중심으로 정리한 슬라이드와 녹화 영상."
 date: 2026-06-20
 last_modified_at: 2026-06-20

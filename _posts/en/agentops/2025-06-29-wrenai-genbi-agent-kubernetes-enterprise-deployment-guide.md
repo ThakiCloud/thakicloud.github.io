@@ -1,7 +1,7 @@
 ---
-title: "WrenAI: Complete Guide to the GenBI Agent for Conversational Data Interaction + Kubernetes Enterprise Deployment Architecture"
+title: "WrenAI: A GenBI Agent for Talking to Your Data on K8s"
 excerpt: "A detailed analysis of WrenAI, the GenBI Agent with 8.5k GitHub stars, and a complete architecture and implementation guide for enterprise-grade deployment in Kubernetes environments."
-seo_title: "WrenAI GenBI Agent Kubernetes Enterprise Deployment Complete Guide - Thaki Cloud"
+seo_title: "WrenAI: A GenBI Agent for Talking to Your Data on K8s"
 seo_description: "WrenAI GenBI Agent Text-to-SQL and Text-to-Charts features, enterprise deployment architecture on Kubernetes clusters, high availability, and scaling strategies in depth."
 date: 2025-06-29
 last_modified_at: 2025-06-29

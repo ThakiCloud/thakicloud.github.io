@@ -1,6 +1,6 @@
 ---
-title: "FinTermIE-EventPrice-KO: A 278M-Parameter Encoder That Extracts Pre- and Post-Adjustment Conversion Prices with Their Positions"
-seo_title: "FinTermIE-EventPrice-KO: Extracting Conversion Price Adjustments from Korean Filings, Experimental Release | ThakiCloud"
+title: "FinTermIE-EventPrice-KO: Extracting Conversion Prices"
+seo_title: "FinTermIE-EventPrice-KO: Extracting Conversion Prices"
 seo_description: "We released FinTermIE-EventPrice-KO, a 278M-parameter encoder that reads the adjustment narrative of Korean conversion price adjustment filings and returns the pre- and post-adjustment prices. It beat the rule baseline on 258 filings from unseen issuers, but answered more often on documents without a value and did not pass the pre-registered safety gate G3."
 excerpt: "On 258 filings from unseen issuers it scored 0.798 before and 0.938 after adjustment, ahead of the rule baseline (0.601, 0.729), and all 457 values it returned matched their evidence positions. It still answered on 3 of 46 documents without a value, so it did not pass the safety gate G3."
 date: 2026-11-13

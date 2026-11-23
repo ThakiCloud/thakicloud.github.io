@@ -1,7 +1,7 @@
 ---
-title: "Kubernetes 장애를 읽기만 하며 조사하는 실험 모델, Thaki-Ops-27B v0.1-alpha를 공개합니다"
+title: "Thaki-Ops-27B: 읽기만 하는 K8s 장애 조사 모델"
 excerpt: "장애 조사 에이전트가 클러스터를 건드리지 않고, 같은 조회를 반복하지 않고, 모르면 모른다고 말하게 할 수 있을까요. Qwen3.8-27B에 붙이는 LoRA 어댑터를 실험용 알파로 공개합니다. 자체 공개 기준을 통과하지 못한 항목까지 그대로 적었습니다."
-seo_title: "Thaki-Ops-27B v0.1-alpha: Kubernetes 장애 진단 LoRA 어댑터 공개 - ThakiCloud"
+seo_title: "Thaki-Ops-27B: 읽기만 하는 K8s 장애 조사 모델"
 seo_description: "다키클라우드가 공개한 Thaki-Ops-27B v0.1-alpha는 Qwen3.8-27B용 LoRA 어댑터로, HolmesGPT 같은 도구 호출 에이전트가 Kubernetes 장애를 읽기 전용으로 조사하도록 조정했습니다. 개선된 항목과 자체 기준에 미달한 항목, 권장 용도와 한계를 정리했습니다."
 date: 2026-10-24
 last_modified_at: 2026-10-24

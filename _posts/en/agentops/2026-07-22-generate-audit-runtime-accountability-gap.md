@@ -1,7 +1,7 @@
 ---
-title: "The Agent That Writes Code and the Agent That Audits It Arrived on the Same Day"
+title: "The Agent That Writes Code and the One That Audits It"
 excerpt: "On July 22, two open weight releases stood facing each other like mirror images. One generates code, the other finds vulnerabilities in it. Yet neither answers one question: on whose infrastructure, and with what authority, does that code actually run."
-seo_title: "Generation Meets Audit: The Runtime Accountability Gap Open Weight Coding Agents Leave Behind"
+seo_title: "The Agent That Writes Code and the One That Audits It"
 seo_description: "Poolside's Laguna S 2.1 and Cisco's Antares launched on the same day. As code generation and code auditing both move to self hosted open weights, we examine the empty execution layer that still needs an owner."
 date: 2026-07-22
 last_modified_at: 2026-07-22

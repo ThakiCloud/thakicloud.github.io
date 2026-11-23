@@ -1,6 +1,6 @@
 ---
-title: "Memory Dropped 73%, but the Model Could Not Answer: Performance and Quality Limits of Low-Bit LLM Quantization on B200"
-seo_title: "Low-Bit LLM Quantization Measured on NVIDIA B200: How Memory, Latency, Throughput and Korean Quality Diverge When Qwen3-8B Is Cut to 2, 3 and 4 Bits, NVFP4 and Mixed Precision | ThakiCloud"
+title: "Memory Down 73%, but the Model Could Not Answer"
+seo_title: "Memory Down 73%, but the Model Could Not Answer"
 seo_description: "We quantized Qwen3-8B on NVIDIA B200 from 2 bits up to 4 bits, NVFP4 and mixed precision, and served it with real packed kernels. Memory fell by up to 73% and all 144 linear modules ran low-bit, but no arm passed the Korean quality gate. These are the measurements and failure modes."
 excerpt: "The 2-bit model cut memory by 73% and produced no answers at all. Serving 3-bit, 4-bit, NVFP4 and mixed-precision models on B200 showed that speed and memory are solved, while Korean quality remains the open problem."
 date: 2026-11-15

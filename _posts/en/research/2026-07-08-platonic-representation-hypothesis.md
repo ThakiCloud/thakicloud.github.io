@@ -1,7 +1,7 @@
 ---
-title: "The Hypothesis That Every AI Is Converging on the Same 'Brain': Reading the Platonic Representation Hypothesis"
+title: "The Platonic Representation Hypothesis: One Brain for All AI"
 excerpt: "Vision models and language models trained on different data for different objectives are starting to represent data in the same way. MIT's Platonic Representation Hypothesis argues this convergence is not a coincidence but the result of structural pressures that grow with scale and competence, and that its endpoint is a shared statistical model of reality. This post walks through the evidence, the measurements, and what it means for a platform that serves many models."
-seo_title: "Platonic Representation Hypothesis - Why AI Models Converge - Thaki Cloud"
+seo_title: "The Platonic Representation Hypothesis: One Brain for All AI"
 seo_description: "An introduction to MIT's Platonic Representation Hypothesis (arXiv:2405.07987). We cover mutual nearest-neighbor alignment across 78 vision models and language models, the three convergence pressures (multitask scaling, capacity, simplicity bias), and the implications for a platform running multi-model serving and shared embedding infrastructure, plus the limitations."
 date: 2026-07-08
 last_modified_at: 2026-07-08

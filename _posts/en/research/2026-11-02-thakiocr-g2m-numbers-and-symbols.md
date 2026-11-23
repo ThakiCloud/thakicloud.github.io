@@ -1,6 +1,6 @@
 ---
-title: "ThakiOCR G2M: Our Second Public Model, Built to Read Numbers and Symbols More Accurately"
-seo_title: "ThakiOCR-KOEN-G2M-Preview Release: 8.93M-Parameter Korean-English OCR Research Preview Focused on Won Signs, Dates, and Circled Numbers | ThakiCloud"
+title: "ThakiOCR G2M: Reading Numbers and Symbols More Accurately"
+seo_title: "ThakiOCR G2M: Reading Numbers and Symbols More Accurately"
 seo_description: "G2M, the second public ThakiOCR model, is an 8.93M-parameter research preview focused on preserving won signs, dates, circled numbers, and masked digits. It failed the date gate, one of five preregistered gates, and was ruled A1_GEN2_NO_GO. Do not use it for critical fields in financial or contract documents."
 excerpt: "One wrong symbol changes what an amount or a date means. We are releasing the second model trained to fix that problem, along with the gate it did not pass."
 date: 2026-11-02

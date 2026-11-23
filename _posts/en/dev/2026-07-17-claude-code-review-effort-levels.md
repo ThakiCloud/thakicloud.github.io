@@ -1,5 +1,5 @@
 ---
-title: "Effort Levels for Code Review: Claude Code /code-review from low to ultra"
+title: "Effort Levels for Code Review: /code-review, Low to Ultra"
 excerpt: "In v2.1.101 Claude Code renamed /simplify to /code-review and attached effort levels to the review. low and medium return a few high-confidence findings, high and max add broader coverage with uncertain findings, and ultra runs a deep review where multiple agents verify each finding in the cloud. We look at why this staging is the right way to split cost and quality in code review, and how the idea maps onto the Paxis skill harness."
 tags:
   - claude-code

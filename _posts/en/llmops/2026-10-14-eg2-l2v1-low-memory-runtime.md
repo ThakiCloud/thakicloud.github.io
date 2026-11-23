@@ -1,6 +1,6 @@
 ---
 title: "EG2 Hybrid W4 Runtime: Cutting Multimodal Embedding GPU Memory to 0.58x"
-seo_title: "EG2 Hybrid W4 Runtime eg2-l2v1: Keeping EmbeddingGemma 2 4-bit Media Weights 4-bit on the GPU for 0.58x Resident Memory - ThakiCloud"
+seo_title: "EG2 Hybrid W4 Runtime: Cutting Multimodal Embedding GPU Memory to 0.58x"
 seo_description: "ThakiCloud's eg2-l2v1 v0.1.0 is a runtime that keeps the 4-bit vision and audio weights of EmbeddingGemma 2 in 4 bits on the GPU. Resident memory is 0.58x of BF16, audio throughput is 0.83 to 0.94x, and it is verified on B200 only."
 excerpt: "For engineers who need text, image, audio and video search in one embedding space on a tight GPU memory budget. Keeping a 4-bit checkpoint in 4 bits on the GPU brings resident memory down to 0.58x of BF16. It does not run faster, and it is verified on B200 only."
 date: 2026-10-14

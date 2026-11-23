@@ -1,6 +1,6 @@
 ---
-title: "One-Quarter the KV Cache: The Compression-First Design of DeepSeek V4.1-Flash"
-seo_title: "DeepSeek V4.1-Flash analysis - 552B MoE with CSA2 and FP4 KV caching redesigns 1M-context serving cost, +19.8pt on coding - ThakiCloud"
+title: "DeepSeek V4.1-Flash: Compressing the KV Cache First"
+seo_title: "DeepSeek V4.1-Flash: Compressing the KV Cache First"
 seo_description: "Released September 10, DeepSeek V4.1-Flash is not a smarter model but a cheaper one to run. A 552B MoE backbone carries a 1M-token context while CSA2 cross-layer KV reuse and FP4 KV caching cut the global KV cache to about a quarter of V4-Flash. We walk through the four KV mechanisms, the coding benchmark numbers, and what they change for serving teams - through ThakiCloud's lens."
 excerpt: "The model is smarter too, but the real headline is the KV cache. Serving a 1M-token context at a quarter of the KV means more concurrent sequences on the same GPU, and agents taking more turns without serving cost jumping linearly."
 date: 2026-09-11

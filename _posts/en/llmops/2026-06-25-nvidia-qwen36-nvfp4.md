@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Qwen3.6-35B-A3B-NVFP4: Running 35B at 3B Speed with FP4 Quantization"
+title: "Qwen3.6-35B-A3B NVFP4: Running 35B at 3B Speed"
 excerpt: "NVIDIA released an NVFP4 (4-bit) quantized version of Alibaba's Qwen3.6-35B-A3B. Cutting weights from 16-bit to 4-bit reduces disk and GPU memory by about 3.06x, while accuracy loss against BF16 stays within 0.1-0.8 points on the model card's published numbers. We break down how the MoE structure (35B total, 3B active) combines with NVFP4 quantization, the vLLM deployment commands, and what it means for ThakiCloud's on-premises serving."
-seo_title: "NVIDIA Qwen3.6-35B-A3B-NVFP4 FP4 Quantization vLLM Deployment Analysis - Thaki Cloud"
+seo_title: "Qwen3.6-35B-A3B NVFP4: Running 35B at 3B Speed"
 seo_description: "Analysis of NVIDIA Qwen3.6-35B-A3B-NVFP4 (NVFP4 4-bit quantization): ~3.06x memory savings, accuracy retention vs BF16, vLLM deployment commands, and Blackwell/Hopper hardware requirements from a ThakiCloud K8s multi-tenant serving perspective."
 date: 2026-06-25
 last_modified_at: 2026-06-25

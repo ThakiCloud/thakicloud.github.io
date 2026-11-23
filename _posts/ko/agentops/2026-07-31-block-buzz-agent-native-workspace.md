@@ -1,6 +1,6 @@
 ---
 title: "에이전트에게 계정을 주는 워크스페이스: Block의 Buzz가 건드린 진짜 문제"
-seo_title: "Block Buzz 분석: Nostr 키페어로 에이전트에게 신원을 주는 오픈소스 워크스페이스 | ThakiCloud"
+seo_title: "에이전트에게 계정을 주는 워크스페이스: Block의 Buzz가 건드린 진짜 문제"
 seo_description: "Jack Dorsey의 Block이 2026년 7월 21일 Apache 2.0으로 공개한 Buzz는 Slack을 닮았지만 에이전트가 애드온이 아니라 채널 멤버입니다. 사람과 에이전트 모두에게 Schnorr 키페어를 발급하고 모든 행동을 서명된 append-only 로그로 남깁니다. ACP 하네스로 Claude Code와 Codex, goose가 같은 채널에 들어옵니다. 셀프호스팅 요구 스택과 한계까지 정리했습니다."
 excerpt: "에이전트를 팀에 넣을 때 진짜 병목은 모델이 아니라 신원과 감사입니다. Buzz는 그 지점을 프로토콜 레벨에서 건드렸습니다."
 date: 2026-07-31

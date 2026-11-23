@@ -1,7 +1,7 @@
 ---
-title: "ARPO: Revolutionary Reinforcement Learning Algorithm Analysis for Multi-Turn LLM Agents"
+title: "ARPO: Reinforcement Learning for Multi-Turn LLM Agents"
 excerpt: "Chinese research team developed ARPO, a novel reinforcement learning algorithm that dramatically improves multi-turn LLM agent performance by leveraging entropy changes after tool usage"
-seo_title: "ARPO Reinforcement Learning Algorithm Analysis Multi-Turn LLM Agent Research - Thaki Cloud"
+seo_title: "ARPO: Reinforcement Learning for Multi-Turn LLM Agents"
 seo_description: "ARPO (Agentic Reinforced Policy Optimization) paper analysis. Entropy-based adaptive rollout and advantage attribution improve multi-turn LLM agent performance with 50% fewer resources"
 date: 2025-07-30
 last_modified_at: 2025-07-30

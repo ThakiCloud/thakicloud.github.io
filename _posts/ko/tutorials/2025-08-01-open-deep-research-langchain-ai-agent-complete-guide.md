@@ -1,7 +1,7 @@
 ---
-title: "Open Deep Research 완전 가이드 - LangChain AI 에이전트로 구축하는 차세대 연구 자동화 시스템"
+title: "Open Deep Research: LangChain 기반 연구 에이전트 구축"
 excerpt: "LangChain AI의 Open Deep Research로 고급 AI 연구 에이전트를 구축하세요. LangGraph 기반의 설정 가능한 오픈소스 솔루션으로 다중 모델, MCP 서버, 평가 시스템까지 완벽 구현 가이드를 제공합니다."
-seo_title: "Open Deep Research LangChain AI 에이전트 튜토리얼 - 연구 자동화 완전 가이드 - Thaki Cloud"
+seo_title: "Open Deep Research: LangChain 기반 연구 에이전트 구축"
 seo_description: "LangChain AI Open Deep Research 에이전트 완전 설치 및 활용 가이드. LangGraph Studio, MCP 서버 연동, 다중 모델 설정, 평가 시스템까지 AI 연구 자동화의 모든 것을 단계별로 설명합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

@@ -1,6 +1,6 @@
 ---
-title: "The shift is 4 cents, the mistake is $80: the capability-cost frontier of LLM agent on-call"
-seo_title: "LLM Agent Kubernetes On-Call: The Capability-Cost Frontier Computed Per Incident Class - ThakiCloud"
+title: "The Shift Costs 4 Cents, the Mistake $80"
+seo_title: "The Shift Costs 4 Cents, the Mistake $80"
 seo_description: "A paper defining the capability-cost frontier that decides, per incident class, whether an LLM agent with kubectl access should take the L1 on-call shift. It introduces a four-outcome model, closed-form break-even results, a five-class taxonomy, and a calibration protocol with disqualification conditions. The example numbers are based on 2026 API prices, and the rest are explicitly stated assumption values."
 excerpt: "The token bill for one crash loop is 4 cents. Touch a node drain the wrong way and an expected $80 of collateral damage rides along per incident. The bottleneck of autonomous on-call is safety and capability, not tokens, and the classes worth automating first are the expensive, context-heavy ones."
 date: 2026-09-09

@@ -1,7 +1,7 @@
 ---
 title: "Context Engineering: The Complete Guide to AI Coding Assistant Mastery"
 excerpt: "Master Context Engineering - the revolutionary approach that's 10x better than prompt engineering and 100x better than vibe coding. Learn how to make AI coding assistants truly effective."
-seo_title: "Context Engineering Complete Guide - AI Coding Assistant Mastery - Thaki Cloud"
+seo_title: "Context Engineering: The Complete Guide to AI Coding Assistant Mastery"
 seo_description: "Learn Context Engineering fundamentals, PRP workflow, and best practices to make AI coding assistants 10x more effective. Complete tutorial with examples."
 date: 2025-10-06
 tags:

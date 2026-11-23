@@ -1,7 +1,7 @@
 ---
-title: "Searching Without Pre-Embedding: How Polygres' WonderSearch Flips the RAG Cost Model"
+title: "WonderSearch: RAG Search Without Pre-Embedding"
 excerpt: "Polygres (YC F26) launched WonderSearch, which claims to search millions of unstructured documents without embedding the corpus up front. That moves RAG ingestion cost from the corpus to the query. The mechanism is undisclosed and the recall claim has no published numbers yet."
-seo_title: "WonderSearch (Polygres): Document Search Without Pre-Embedding and What It Means for RAG Costs"
+seo_title: "WonderSearch: RAG Search Without Pre-Embedding"
 seo_description: "A breakdown of Polygres' WonderSearch query-time search model, the pgContext hybrid retrieval background, and what the cost-model shift means for RAG pipelines on ThakiCloud."
 date: 2026-09-30
 last_modified_at: 2026-09-30

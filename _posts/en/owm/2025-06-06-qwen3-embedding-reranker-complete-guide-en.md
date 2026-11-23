@@ -1,7 +1,7 @@
 ---
 title: "Qwen3-Embedding & Reranker Series Complete Guide"
 excerpt: "Comprehensive analysis of Alibaba's Qwen3-Embedding and Qwen3-Reranker models that achieved SOTA performance in multilingual text embedding and relevance ranking across 119 languages"
-seo_title: "Qwen3-Embedding & Reranker Complete Guide - SOTA Multilingual Models - Thaki Cloud"
+seo_title: "Qwen3-Embedding & Reranker Series Complete Guide"
 seo_description: "Explore Alibaba's Qwen3-Embedding and Qwen3-Reranker series achieving top performance on MMTEB, MTEB, and MTEB-Code benchmarks with 119-language support and open-source availability."
 date: 2025-06-06
 tags: 

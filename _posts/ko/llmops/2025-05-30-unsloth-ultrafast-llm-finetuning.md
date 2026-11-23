@@ -1,5 +1,5 @@
 ---
-title: "Unsloth: LLM 파인튜닝을 2배 빠르게, 메모리는 80% 절약하는 혁신적 프레임워크"
+title: "Unsloth: 더 빠르고 가벼운 LLM 파인튜닝"
 excerpt: "Qwen3, Llama 4, Gemma 3를 2배 빠르게 파인튜닝하면서 VRAM을 80%까지 절약. OpenAI Triton 기반의 정확도 손실 없는 최적화 엔진"
 date: 2025-05-30
 tags:

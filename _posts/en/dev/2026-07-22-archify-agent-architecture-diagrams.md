@@ -1,5 +1,5 @@
 ---
-title: "Drawing Architecture Diagrams With Words: We Ran Archify and Mapped the ThakiCloud Stack"
+title: "Archify: Drawing Architecture Diagrams With Words"
 excerpt: "Archify is an agent skill that generates self-contained HTML architecture diagrams from plain-language descriptions, no Mermaid syntax required. We installed it and used it to diagram ThakiCloud's ai-platform structure, and found that the real value isn't the drawing itself but a renderer that forcibly validates layout. Here's why that design lines up with the skill-harness philosophy behind ThakiCloud's Paxis."
 date: 2026-07-22
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "인덱스는 썩는다: 2,000스킬 라우터의 staleness frontier와 재임베딩 주기"
-seo_title: "The Staleness Frontier 논문 분석 - 2,000스킬 agent harness에서 registry churn 하에 동결된 skill-router embedding 인덱스의 정확도 decay law, d_r와 Δλ 두 파라미터 시간 확장 survival model, cost-optimal 재임베딩 주기 square-root law Δt* = sqrt(2C_re/(c_q P'(0)))와 break-even 부등식, 무차원 비용비 ρ의 운영 지도 - ThakiCloud"
+seo_title: "인덱스는 썩는다: 2,000스킬 라우터의 staleness frontier와 재임베딩 주기"
 seo_description: "스킬 레지스트리가 밤마다 진화하면 검색 인덱스는 서서히 썩습니다. 이 논문은 레지스트리 크기를 고정하고 인덱스 나이와 churn율을 변수로 만들어 정확도 decay law를 유도하고 재임베딩 비용과 라우팅 miss 비용 사이에서 총비용을 최소화하는 주기를 square-root law와 break-even 부등식으로 정리합니다. 관측 churn에서 top-1은 7일에 2.8점, 30일에 9.1점, 총 18.3점까지 떨어지는 오목한 decay를 주며 최적 주기는 무차원 비용비 ρ에 따라 2일에서 3개월까지 달라집니다. 다만 decay 깊이는 기록된 증거가 지원하지 않는 reference 값 위 모델 출력이며 30일 동결 arm 프로토콜이 재고정할 대상입니다."
 excerpt: "스킬 카탈로그는 밤마다 바뀌지만 검색 인덱스는 그 자리에 있다. 동결된 인덱스가 며칠 만에 정확도를 잃고 재임베딩은 며칠 주기가 총비용을 최소화하는가. decay law는 바닥을 향해 오목하게 떨어지고 최적 주기는 두 비용의 비율로 결정된다."
 date: 2026-09-15

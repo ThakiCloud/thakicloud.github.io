@@ -1,7 +1,7 @@
 ---
-title: "RAG-Anything: 멀티모달 All-in-One RAG 시스템 완전 가이드 - 텍스트, 이미지, 테이블, 수식 통합 처리"
+title: "RAG-Anything: 멀티모달 RAG 시스템 구축기"
 excerpt: "3.5k stars를 받은 RAG-Anything으로 텍스트, 이미지, 테이블, 수식을 모두 처리하는 멀티모달 RAG 시스템을 구축하는 방법을 실제 테스트와 함께 알아봅니다."
-seo_title: "RAG-Anything 멀티모달 RAG 시스템 완전 가이드 - 설치부터 활용까지 - Thaki Cloud"
+seo_title: "RAG-Anything: 멀티모달 RAG 시스템 구축기"
 seo_description: "오픈소스 멀티모달 RAG 시스템 RAG-Anything 완전 가이드. Python 설치, MinerU/Docling 파서, VLM 통합, API 활용법, macOS 테스트 결과까지 실전 튜토리얼을 제공합니다."
 date: 2025-08-18
 last_modified_at: 2025-08-18

@@ -1,7 +1,7 @@
 ---
-title: 'The Week Washington Told Allies "Don''t Build Sovereign AI," the World Ran Toward It'
+title: "Sovereign AI: The Week the World Ran Toward It"
 excerpt: "In the same week that Washington circulated a diplomatic cable pressuring allies to adopt American AI, Samsung put 1.7 trillion won into a European sovereign champion, Japan launched a 3.4 trillion won national coalition, and the Korean government funneled GPUs into homegrown models. Here is why the pressure and the sprint pulled in opposite directions, and what that leaves enterprises to solve for."
-seo_title: "America's Sovereign AI Restraint Push and the Global Countercurrent: The Control Capability Enterprises Must Build"
+seo_title: "Sovereign AI: The Week the World Ran Toward It"
 seo_description: "In the same week the US issued a diplomatic cable urging restraint on sovereign AI, Samsung invested in Mistral, Japan committed 3.4 trillion won to robotics AI, and Korea moved on GPU policy, all in the opposite direction. An analysis of why sovereignty is a matter of execution control, not declaration."
 date: 2026-07-23
 last_modified_at: 2026-07-23

@@ -1,7 +1,7 @@
 ---
-title: "WhisperLiveKit: Complete Guide to Real-Time Speech Recognition with Ultra-Low Latency"
+title: "WhisperLiveKit: Real-Time Speech Recognition"
 excerpt: "Master WhisperLiveKit, the cutting-edge real-time speech transcription system powered by SOTA research. Learn to build production-ready voice applications with SimulStreaming, speaker diarization, and web UI integration."
-seo_title: "WhisperLiveKit Real-Time Speech Recognition Tutorial - Complete Guide - Thaki Cloud"
+seo_title: "WhisperLiveKit: Real-Time Speech Recognition"
 seo_description: "Learn to implement WhisperLiveKit for real-time speech transcription with ultra-low latency. Complete tutorial covering installation, configuration, and advanced features like speaker diarization."
 date: 2025-08-31
 tags:

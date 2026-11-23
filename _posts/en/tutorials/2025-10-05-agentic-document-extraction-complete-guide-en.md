@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to LandingAI Agentic Document Extraction: AI-Powered PDF and Image Processing"
+title: "LandingAI Agentic Document Extraction for PDFs and Images"
 excerpt: "Master LandingAI's Agentic Document Extraction library for intelligent document processing. Extract structured data from complex PDFs, images, and documents with AI-powered parsing capabilities."
-seo_title: "LandingAI Agentic Document Extraction Tutorial - AI PDF Processing Guide"
+seo_title: "LandingAI Agentic Document Extraction for PDFs and Images"
 seo_description: "Learn how to use LandingAI's Agentic Document Extraction library for AI-powered document processing. Complete tutorial with code examples, batch processing, and visualization features."
 date: 2025-10-05
 tags:

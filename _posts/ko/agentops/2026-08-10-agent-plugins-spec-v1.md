@@ -1,7 +1,7 @@
 ---
-title: "스킬과 MCP를 한 폴더로 접는 표준: Agent Plugins 1.0.0을 직접 패키징하고 검증해봤습니다"
+title: "Agent Plugins 1.0.0: 스킬과 MCP를 한 폴더로"
 excerpt: "OpenAI와 마이크로소프트, 아마존, 커서, 버셀이 함께 낸 Agent Plugins 1.0.0은 에이전트 스킬과 MCP 서버를 하나의 배포 단위로 묶는 최소 규격입니다. 저희 스킬 하나를 실제로 플러그인으로 포장해 공식 스키마로 검증하고, 스킬 1,935개를 훑어 이 포맷으로 옮길 때 무엇이 걸리는지 측정했습니다."
-seo_title: "Agent Plugins 1.0.0 직접 검증: plugin.json 스키마가 잡는 것과 놓치는 것"
+seo_title: "Agent Plugins 1.0.0: 스킬과 MCP를 한 폴더로"
 seo_description: "Agent Plugins 1.0.0 규격의 plugin.json과 mcp.json 구조를 정리하고, 실제 스킬을 플러그인으로 포장해 공식 JSON 스키마로 검증했습니다. 스키마만으로는 걸러지지 않는 두 가지 위반과 스킬 1,935개 코퍼스 실측 결과를 담았습니다."
 date: 2026-08-10
 last_modified_at: 2026-08-10

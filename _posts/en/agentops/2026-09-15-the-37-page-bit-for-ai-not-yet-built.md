@@ -1,7 +1,7 @@
 ---
-title: "The 37-Page Bit for the AI Not Yet Built: What Microsoft Has Drawn for It"
+title: "A 37-Page Code of Conduct for AI Not Yet Built"
 excerpt: "While Washington argues over whether to regulate, a 37-page code of conduct lands first, saying a model must not refuse to shut down. The front line of AI control moves to a spec sheet outside the committee room."
-seo_title: "The 37-Page Bit: Microsoft's Code of Conduct and the Game of AI Control"
+seo_title: "A 37-Page Code of Conduct for AI Not Yet Built"
 seo_description: "Microsoft has published a draft 37-page code of conduct that bans refusing shutdown and setting independent goals. I read the game of AI control that is being drawn up in documents before regulation, amid a rally in security stocks and weakness in semiconductors."
 date: 2026-09-15
 last_modified_at: 2026-09-15

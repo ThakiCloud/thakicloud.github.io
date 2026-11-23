@@ -1,6 +1,6 @@
 ---
-title: "Scoring Agents That Turn Design Rules Into Verification Scripts by Execution: The Rule2DRC Benchmark"
-seo_title: "Rule2DRC: Execution-Based Benchmark for Semiconductor DRC LLM Agents | ThakiCloud"
+title: "Rule2DRC: Scoring Rule-to-Script Agents by Execution"
+seo_title: "Rule2DRC: Scoring Rule-to-Script Agents by Execution"
 seo_description: "Rule2DRC scores LLM agents that translate natural-language design rules into executable DRC scripts by running them in KLayout, not by code similarity. It spans 1,000 rules and 13,921 layouts and measures functional correctness without giving the agent the answer layouts. Seoul National University and Samsung AI Center even shipped an on-prem GUI app."
 excerpt: "What matters is not plausible-looking code but code that actually passes. We look at Rule2DRC as a concrete case of domain-specific agents replacing expert manual EDA verification inside a regulated, secure environment."
 date: 2026-07-23

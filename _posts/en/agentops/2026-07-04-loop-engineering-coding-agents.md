@@ -1,7 +1,7 @@
 ---
-title: "Stop Writing Prompts, Start Writing Loops: Loop Engineering for Coding Agents"
+title: "Stop Writing Prompts, Start Writing Loops for Coding Agents"
 excerpt: "One developer put it this way: \"I don't type prompts into Claude Code anymore. I run a loop that feeds prompts to Fable, and my job is just writing that loop.\" Strip away the hyperbole and the sentence points to a real shift: the unit of work is moving from the prompt to the loop. We look at loop engineering, the practice of repeating observe-judge-act cycles and using the compiler and test suite as the reward signal, through ThakiCloud's own pge-loop and Goal Mode in production."
-seo_title: "Loop Engineering: Treating Coding Agents as Loops, Not Prompts - Thaki Cloud"
+seo_title: "Stop Writing Prompts, Start Writing Loops for Coding Agents"
 seo_description: "An analysis of the shift from prompts to loops in how coding agents are operated: the Act-Observe-Learn-Repeat structure, using deterministic gates as reward signals, ThakiCloud's real implementations in pge-loop and Goal Mode, and what this means for the Paxis Agent-Native Cloud."
 date: 2026-07-04
 last_modified_at: 2026-07-04

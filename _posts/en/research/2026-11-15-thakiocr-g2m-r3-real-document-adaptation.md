@@ -1,6 +1,6 @@
 ---
-title: "Beyond Synthetic OCR: What Improved Real-Document Recognition in an 8.93M-Parameter Model?"
-seo_title: "ThakiOCR-KOEN-G2M-R3 release: two ways to adapt an 8.93M-parameter Korean-English line OCR to real documents | ThakiCloud"
+title: "ThakiOCR G2M-R3: Adapting OCR to Real Documents"
+seo_title: "ThakiOCR G2M-R3: Adapting OCR to Real Documents"
 seo_description: "Training G2M-R2 three times longer barely moved real scanned-line CER. We compared R3A, which changes the real-document data mix, with R3B, which adds capture augmentation, and released R3A as G2M-R3 because it lost less synthetic accuracy. The gain is about 0.2 points on single-seed dev sets."
 excerpt: "Longer training did not move real scanned-line CER, so we changed the training data instead. A new data mix and capture augmentation fixed different kinds of errors. Here is what we picked and why."
 date: 2026-11-15

@@ -1,7 +1,7 @@
 ---
-title: "The Year Open-Weight Models Caught the Frontier: Why Self-Hosting Economics Now Decide the Outcome"
+title: "Open-Weight Models Caught Up: Self-Hosting Economics Decide"
 excerpt: "By mid-2026, open-weight models had closed to within a 3-to-6-month capability gap of frontier labs, and that gap is no longer widening. The real decision has shifted away from model performance and toward where and how to run workloads, in other words, self-hosting economics. This post examines that shift from ThakiCloud's Kubernetes serving perspective."
-seo_title: "Open-Weight Model Momentum and Self-Hosting Economics 2026 - Thaki Cloud"
+seo_title: "Open-Weight Models Caught Up: Self-Hosting Economics Decide"
 seo_description: "A mid-2026 survey of the open-weight landscape through DeepSeek V4 Flash, GLM-5.2, MiniMax M3, and Nemotron 3 Ultra, covering self-hosting break-even versus proprietary APIs and ThakiCloud Kubernetes serving analysis."
 date: 2026-06-29
 last_modified_at: 2026-06-29

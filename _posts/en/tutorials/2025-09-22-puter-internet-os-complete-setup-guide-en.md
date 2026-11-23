@@ -1,7 +1,7 @@
 ---
-title: "Puter: The Complete Guide to Setting Up Your Own Internet Operating System"
+title: "Puter: Self-Hosting Your Own Internet OS"
 excerpt: "Learn how to install and use Puter, an advanced open-source internet operating system that serves as a privacy-first personal cloud platform."
-seo_title: "Puter Internet OS Setup Guide - Complete Tutorial 2025 - Thaki Cloud"
+seo_title: "Puter: Self-Hosting Your Own Internet OS"
 seo_description: "Comprehensive guide to installing and using Puter, the open-source internet operating system. Learn local development, Docker deployment, and self-hosting."
 date: 2025-09-22
 tags:

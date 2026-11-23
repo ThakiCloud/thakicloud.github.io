@@ -1,6 +1,6 @@
 ---
-title: "Opus to Work, Fable to Watch: Reproducing the Claude Code Advisor 3-Gate Pattern"
-seo_title: "Claude Code /advisor pattern analysis. A multi-model tree that places Fable 5.1 at three points on an Opus main, measured numbers from a 3-gate A/B reproduction in the same session, and the readback lesson of who actually served it - ThakiCloud"
+title: "Opus Works, Fable Watches: The Claude Code Advisor Pattern"
+seo_title: "Opus Works, Fable Watches: The Claude Code Advisor Pattern"
 seo_description: "I reproduced the Claude Code advisor pattern from thedelost's tweet in a ThakiCloud session. A structure where a strong model speaks only at three gates: before planning, on error repetition, and just before declaring completion. Measured time and tokens from a solo-run versus 3-gate-run A/B, how the gate caught a defect the green tests missed, and the serving-model readback to do first even in a fleet without gates."
 excerpt: "A structure where a fast model does the work and a strong model only speaks at three points. In the A/B reproduction, the gate caught one design mistake before code was written and one defect hiding behind the green suite, and the price was 5x model time on a simple task. And the more important thing this experiment taught: you have to read the model field in the transcript."
 date: 2026-10-01

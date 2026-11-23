@@ -1,6 +1,6 @@
 ---
-title: "When Serving MoE Models on B200, When Should You Turn On Quantization, Speculative Decoding, and Prefix Caching?"
-seo_title: "B200 MoE Serving Break-Even Analysis: Precision, Speculative Decoding, and Prefix Caching Depend on Traffic Regime | ThakiCloud"
+title: "On B200, When to Turn On Quantization and Speculation"
+seo_title: "On B200, When to Turn On Quantization and Speculation"
 seo_description: "When serving MoE models on B200, precision (FP16/FP8/NVFP4), n-gram speculative decoding, and automatic prefix caching are not independent switches. We walk through a closed-form cost model showing how the three break-even points push against each other depending on the traffic regime, defined by concurrency, prefix sharing rate, and repetitiveness."
 excerpt: "If lowering precision suddenly turned speculative decoding into a loss, it's because the two switches were never independent to begin with."
 date: 2026-08-05

@@ -1,6 +1,6 @@
 ---
 title: "API 비용 0원으로 에이전트에게 인터넷을 읽힌다: Agent-Reach 실측"
-seo_title: "Agent-Reach 실전: API 비용 0원으로 에이전트에 웹·RSS·유튜브·GitHub 콘텐츠 접근을 붙이는 법 - ThakiCloud"
+seo_title: "API 비용 0원으로 에이전트에게 인터넷을 읽힌다: Agent-Reach 실측"
 seo_description: "Agent-Reach는 에이전트가 15개 플랫폼 콘텐츠를 읽게 해주는 능력 레이어입니다. Jina Reader, yt-dlp, gh, RSS 같은 무료 엔드포인트를 라우팅해 API 비용을 0원으로 만들어요. 설치부터 doctor, watch, 실제 콘텐츠 읽기 실험까지 ThakiCloud에서 실측한 결과와 한계까지 정리했습니다."
 excerpt: "에이전트가 웹·RSS·유튜브 자막·GitHub를 읽으려면 매번 API 요금을 내야 할까요? Agent-Reach는 무료 엔드포인트 라우팅으로 그 비용을 0원으로 만듭니다. 설치 직후 실측, 15개 채널 중 6개가 무설정에서 바로 쓸 수 있었습니다."
 date: 2026-10-06

@@ -1,6 +1,6 @@
 ---
-title: "The Five Layers the Model Map Never Draws: 2026's AI Contest Is Decided Below the Stack"
-seo_title: "Five Layers Beneath the AI Model Stack - Inference Silicon, Serving, Evals, Licensing, Harness - Thaki Cloud"
+title: "The Five Layers the Model Map Never Draws"
+seo_title: "The Five Layers the Model Map Never Draws"
 seo_description: "A map that lists which models exist cannot tell you who wins. We trace five layers beneath the model, inference silicon, serving economics, evaluation and observability, open-weight licensing, and agent harnesses, with mid-2026 data, and explain why three of them are exactly where ThakiCloud stands."
 excerpt: "The question isn't whether GPT-5.6 is smarter. It's who serves those tokens cheaper and faster, because that's what decides the margin. We map the five stack layers the model-listing map skips: inference silicon, serving, evaluation, licensing, and harness, with real numbers."
 date: 2026-07-14

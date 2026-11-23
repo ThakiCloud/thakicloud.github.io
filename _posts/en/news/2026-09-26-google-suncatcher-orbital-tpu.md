@@ -1,7 +1,7 @@
 ---
-title: "Google Sends Chips to Orbit: The Suncatcher MVP and the Next Data Center Bottleneck"
+title: "Suncatcher MVP: Google Takes Chips to Orbit"
 excerpt: "Google launches its first Project Suncatcher experimental satellite, MVP, on October 1 aboard a SpaceX Falcon 9 Transporter-18 rideshare. The four TPUs it carries turn the vehicle into a test bench for one question: can a chip survive in space. We read this extreme experiment as a measurement of power, cooling, and radiation, the real ground bottlenecks, through the lens of ai-platform."
-seo_title: "Google Suncatcher MVP to Launch Four TPUs October 1 | ThakiCloud"
+seo_title: "Suncatcher MVP: Google Takes Chips to Orbit"
 seo_description: "Analysis of Google's first Project Suncatcher test: the MVP satellite, four TPUs, October 1 Falcon 9 Transporter-18 rideshare. Orbital data centers are far off, but the experiment measures power, cooling, and radiation, the true data center bottlenecks, from ThakiCloud's on-prem and cost-efficiency vantage."
 date: 2026-09-26
 last_modified_at: 2026-09-26

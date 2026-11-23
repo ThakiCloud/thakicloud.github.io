@@ -1,6 +1,6 @@
 ---
-title: "prefix는 첫 편집에서 깨진다: 스킬 하네스의 밤마다 자기 재작성이 캐시 재사용과 서빙 비용을 빼앗는 방식"
-seo_title: "The Unstable Prefix 논문 분석 - 무인 에이전트 루프의 overnight self-evolution 루프가 스킬 설명을 재작성하고 엔트리 순서를 바꾸고 제어 파라미터를 바꾸면 exact-match prefix cache의 캐시된 prefix가 첫 편집된 엔트리부터 무효화된다. closed-form first-break law(reference βN=50, 생존 1.6%, 무효 98.4%), prefix-stable layout PSL(byte-stable identifier skeleton + 변동성 순서 detail block, apply span 1.7x 축소), re-warm collision factor(TTFT 1.7~3.9x), per-night hyperbolic decay law, square-root 비용 최적 freeze cadence k*(2x band 안 25% 이하, 재임베딩 cadence의 dual), quality gate 합성(γ=0.5가 event rate를 절반), pool pin(registry 27% 성장의 +4.5% ratchet을 제로). 모든 수치는 명시된 전제 하의 모델 예측 - ThakiCloud"
+title: "prefix는 첫 편집에서 깨진다"
+seo_title: "prefix는 첫 편집에서 깨진다"
 seo_description: "무인 에이전트가 매 턴 재전송하는 스킬 매니페스트는 버전 안에만 고정 prefix입니다. 하네스가 밤마다 자기 자신을 다시 쓰면 exact-match 캐시는 첫 편집된 엔트리부터 무효화되고, 6,000토큰의 대부분이 처음부터 다시 계산됩니다. 이 논문은 그 비용을 닫힌 형태로 가격 매기고 배포 시점 레버를 줍니다. 안정 레이아웃, 동결 주기, 품질 게이트, 풀 핀을 쌓으면 변동 세는 0.07%에서 약 0.01%로 줄어듭니다. 모든 수치는 명시된 전제 하의 모델 예측이며 실측이 아닙니다."
 excerpt: "무인 에이전트가 매 턴 다시 보내는 고정 머리말은 버전 안에만 고정되어 있습니다. 하네스가 밤마다 자기 자신을 다시 쓰면, 캐시는 첫 편집된 엔트리부터 무효화됩니다. 이 논문은 그 비용을 닫힌 형태로 매기고 배포 시점에서 당길 수 있는 레버를 줍니다."
 date: 2026-10-01

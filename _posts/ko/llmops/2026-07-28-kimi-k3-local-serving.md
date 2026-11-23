@@ -1,6 +1,6 @@
 ---
-title: "Kimi K3 가중치를 직접 재봤습니다: 1,453GiB, H200 11장, 그리고 아직 비어 있는 GGUF 저장소"
-seo_title: "Kimi K3 로컬 서빙 실측: 가중치 용량과 GPU 요구량 | ThakiCloud"
+title: "Kimi K3 로컬 서빙: 가중치를 직접 재봤습니다"
+seo_title: "Kimi K3 로컬 서빙: 가중치를 직접 재봤습니다"
 seo_description: "2.8T 파라미터 오픈웨이트 모델 Kimi K3의 실제 가중치 용량을 HuggingFace API로 전수 집계했습니다. 96개 샤드에 1,453.7GiB, 가중치만 담는 데 H200 141GB 11장이 필요합니다. MXFP4 릴리스 구성과 Kimi K3 라이선스의 매출 조항, 그리고 Unsloth GGUF 저장소가 아직 비어 있다는 사실까지 확인한 내용을 정리했습니다."
 excerpt: "가중치를 공개했다는 말과 우리 환경에서 돌릴 수 있다는 말은 다릅니다. Kimi K3의 실제 용량을 전수 집계해 그 간극이 정확히 얼마인지 숫자로 확인했습니다."
 date: 2026-07-28

@@ -1,6 +1,6 @@
 ---
-title: "정상 PCB 이미지만 학습해 결함을 찾아냈습니다: DINOv2와 Flow 기반 이상 탐지 모델"
-seo_title: "Thaki FabVision PCB Anomaly 공개: 정상 이미지만으로 학습한 DINOv2 + Flow 이상 탐지 | ThakiCloud"
+title: "정상 PCB 이미지만으로 결함을 찾는 이상 탐지"
+seo_title: "정상 PCB 이미지만으로 결함을 찾는 이상 탐지"
 seo_description: "정상 PCB 사진만 학습해 결함 위치를 찾는 이상 탐지 모델을 Research Preview로 공개했습니다. VisA PCB1~4 공식 Test에서 Image AUROC 0.978, Pixel AUROC 0.991, AUPRO 0.956이었고 같은 특징 위 PatchCore는 0.871이었습니다. 실제 SMT 라인에서는 검증하지 않았습니다."
 excerpt: "결함 사진 없이 정상 PCB 사진만 학습해 결함 위치를 표시하는 모델을 공개했습니다. VisA PCB1~4에서 나온 결과와 한계, 그리고 공개 직전 검증에서 실패한 기록까지 정리했습니다."
 date: 2026-11-03

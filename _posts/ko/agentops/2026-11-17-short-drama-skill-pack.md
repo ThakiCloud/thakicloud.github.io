@@ -1,7 +1,7 @@
 ---
 title: "세 축으로 인덱싱하는 숏드라마 스킬 팩"
 excerpt: "@VibeEverything의 'AI 숏드라마 만들 때 쓸만한 스킬 86개 모음'이 레포 기준 131개 프로젝트로 늘었습니다. 큐레이션 데이터를 받아 결정론적으로 집계했습니다. 단계 × 모델 × 에이전트 세 축, 라이선스 스캔, 팩 자체에 내장된 finder 스킬까지."
-seo_title: "awesome-short-drama-skills 131개 프로젝트 분석, 세 축 인덱싱 | ThakiCloud"
+seo_title: "세 축으로 인덱싱하는 숏드라마 스킬 팩"
 seo_description: "AI 숏드라마 제작 스킬 팩 awesome-short-drama-skills를 실제로 받아 집계했습니다. 131개 프로젝트의 단계 × 모델 × 에이전트 구조, 라이선스 스캔, 내장 finder 스킬과 에이전트 네이티브 스킬 큐레이션에 대한 시사점."
 date: 2026-11-17
 last_modified_at: 2026-11-17

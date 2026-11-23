@@ -1,7 +1,7 @@
 ---
 title: "A 125B MoE in 135GB: NVIDIA Re-packs Qwen3.8-Flash-Next in NVFP4"
 excerpt: "Alibaba's Qwen3.8-Flash-Next (125B MoE, 6B active) shrinks 2.7x under NVIDIA's NVFP4 quantization. A 125B-class model now serves from a single DGX Spark (128GB). But our B200 measurements say serving config, not the checkpoint, decides throughput."
-seo_title: "NVIDIA NVFP4 Qwen3.8-Flash-Next: 125B MoE in 135GB, and Why Serving Config Decides Performance"
+seo_title: "A 125B MoE in 135GB: NVIDIA Re-packs Qwen3.8-Flash-Next in NVFP4"
 seo_description: "The hybrid-attention architecture of NVFP4-quantized Qwen3.8-Flash-Next (125B MoE, 6B active), single GB10 serving paths, and what ThakiCloud's B200 NVFP4 measurements show about serving configuration."
 date: 2026-09-29
 last_modified_at: 2026-09-30

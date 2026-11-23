@@ -1,6 +1,6 @@
 ---
-title: "The Twin Registry: An Analytical Paper on the Twin (Near-Duplicate Skill) Accumulation Law, 4-Channel Routing Error Attribution, and the Merge vs Rewrite Dedup Dividend in a Self-Evolving 2,200-Skill Registry"
-seo_title: "The Twin Registry: Twin density law, 4-channel error attribution, merge vs rewrite dedup dividend, aging in place, self-evolving 2,200-skill agent harness - ThakiCloud"
+title: "The Twin Registry: Near-Duplicate Skills Age Your Router"
+seo_title: "The Twin Registry: Near-Duplicate Skills Age Your Router"
 seo_description: "In a self-evolving 2,200-skill registry where a nightly LLM curator rewrites descriptions and abstentions synthesize new skills, accumulating twins (near-duplicates) age routing top-1 even when the registry does not grow. This paper, established by ThakiCloud, promotes description-space density to the third axis of registry hygiene and presents analytically the breakpoint retreat law, 4-channel error attribution (retrieval failure, benign twin, malignant collision, coverage gap), the break-even density of merge vs rewrite at fixed cardinality, and arm-dominance rules based on functional redundancy. The 3-protocol measurement program is pre-registered with falsification criteria, and every value is a recorded anchor, first-order arithmetic on those anchors, or a labeled model prediction."
 excerpt: "Routing top-1 ages even when the registry does not grow. We introduce The Twin Registry, ThakiCloud's paper that establishes the twin accumulation law, 4-channel error attribution, and the merge vs rewrite dedup dividend analytically. It is an analytical paper, so every value is a prediction, not a measurement."
 date: 2026-10-29

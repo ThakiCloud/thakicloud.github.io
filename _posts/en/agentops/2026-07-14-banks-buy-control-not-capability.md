@@ -1,7 +1,7 @@
 ---
 title: "Autonomy Is Not a Switch, It Is a Dial: What Banks Buy Before Capability"
 excerpt: "The Korea Federation of Banks did not order a smarter model, it ordered a sequence for adoption. Reading today's moves across regulated industries closely reveals that the real battleground for AI adoption is control, not capability."
-seo_title: "What the Bank Federation's AI Roadmap Reveals: Control Comes Before Autonomy - Thaki Cloud"
+seo_title: "Autonomy Is Not a Switch, It Is a Dial: What Banks Buy Before Capability"
 seo_description: "From the Bank Federation's AI adoption roadmap to the National Information Resources Service's N2SF grade reassignment and SAP's autonomous enterprise vision. The signal running through today's news is that autonomy is not a switch you flip on or off, it is a dial you turn in stages."
 date: 2026-07-14
 last_modified_at: 2026-07-15

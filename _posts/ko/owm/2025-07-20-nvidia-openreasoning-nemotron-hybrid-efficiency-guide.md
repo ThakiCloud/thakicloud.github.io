@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA OpenReasoning-Nemotron: 추론과 효율성을 겸비한 하이브리드 AI 모델"
 excerpt: "NVIDIA가 공개한 Nemotron-H 추론 모델 패밀리의 혁신적인 아키텍처와 성능을 분석하고, 기업 AI 워크플로우 최적화 방안을 탐구합니다."
-seo_title: "NVIDIA OpenReasoning-Nemotron 하이브리드 AI 모델 완벽 가이드 - Thaki Cloud"
+seo_title: "NVIDIA OpenReasoning-Nemotron: 추론과 효율성을 겸비한 하이브리드 AI 모델"
 seo_description: "NVIDIA Nemotron-H 추론 모델의 Mamba-Transformer 하이브리드 아키텍처, FP8 훈련, 테스트 시간 스케일링 기술을 상세히 분석하고 기업 워크플로우 적용 방안을 제시합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20

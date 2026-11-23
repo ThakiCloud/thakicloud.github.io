@@ -1,6 +1,6 @@
 ---
-title: "When speech data ships as tokens instead of audio: measuring Trelis' duplex S2S pre-training dataset"
-seo_title: "Trelis duplex S2S pre-training dataset: re-measuring 237x storage compression with Mimi codec tokens - ThakiCloud"
+title: "Trelis Duplex S2S: Speech Data Shipped as Tokens"
+seo_title: "Trelis Duplex S2S: Speech Data Shipped as Tokens"
 seo_description: "Trelis released a speech-to-speech pre-training dataset filtered from YODAS3's 1.1M hours, stored as Mimi codec tokens instead of raw audio. We re-measured how much storage that saves and where quality lands, on our own 6.17s sample."
 excerpt: "Trelis' first speech-to-speech dataset ships codec tokens, not raw audio. We measured the storage and quality claims on one 6.17-second clip and list the four things to check before using it."
 date: 2026-11-18

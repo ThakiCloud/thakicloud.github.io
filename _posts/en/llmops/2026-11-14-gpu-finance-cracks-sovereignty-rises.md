@@ -1,7 +1,7 @@
 ---
-title: "While the Financing Layer Wobbles, the Industry Moves Inside Its Own Boundary"
+title: "GPU Financing Wobbles as the Industry Turns Inward"
 excerpt: "Lenders are pulling back from Nvidia's $500 billion credit, and Nscale's cash runway has fallen to 12 months. The real tension in today's HuggingNews is not the model but the money behind compute. The industry is quietly hedging with local and confidential computing."
-seo_title: "GPU Financing Stress and the Rise of Compute Sovereignty | ThakiCloud"
+seo_title: "GPU Financing Wobbles as the Industry Turns Inward"
 seo_description: "Nvidia's $500 billion AI credit is being reconsidered and Nscale carries $5.5 billion in debt. Today's digest analyzes why local and confidential compute are spreading and why on-prem sovereignty has now become a technical choice."
 date: 2026-11-14
 last_modified_at: 2026-11-14

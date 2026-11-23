@@ -1,7 +1,7 @@
 ---
-title: "ATT&CK 기법 검색·근거 게이트·엣지 스킬 검색 3종을 공개합니다: 미달한 게이트까지 그대로"
+title: "모델 3종 공개: 통과하지 못한 게이트까지 그대로"
 excerpt: "MITRE ATT&CK 문서를 찾는 보안 임베딩, RAG가 답할지 멈출지 정하는 근거 게이트, CPU에서 도는 스킬 검색 임베딩 세 가지입니다. 셋 중 둘은 공개 전에 걸어 둔 기준을 넘지 못했습니다. 어디서 얼마나 못 넘었는지 숫자로 적었습니다."
-seo_title: "Thaki-SecEmbed-8B·ECP-SB-27B·SKILLRET-Edge-305M 공개 - ThakiCloud"
+seo_title: "모델 3종 공개: 통과하지 못한 게이트까지 그대로"
 seo_description: "다키클라우드가 공개한 세 모델을 정리했습니다. Thaki-SecEmbed-8B는 MITRE ATT&CK 기법 검색만 평가했습니다. 사전등록 평가에서는 기본 모델과 분명한 차이가 없었고, 공개 결정 뒤에 잰 독립 출제 벤치에서는 기본 모델보다 nDCG@10이 +0.1447 높았습니다. ECP-SB-27B는 미답변율 6.5%로 5% 목표를 넘지 못했습니다. SKILLRET-Edge-305M은 게이트를 통과해 CPU에서 47.7ms에 답합니다."
 date: 2026-10-25
 last_modified_at: 2026-11-01

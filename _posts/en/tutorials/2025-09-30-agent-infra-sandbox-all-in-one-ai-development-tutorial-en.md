@@ -1,7 +1,7 @@
 ---
-title: "AIO Sandbox: Complete Guide to All-in-One AI Agent Development Environment"
+title: "AIO Sandbox: All-in-One Agent Dev Environment"
 excerpt: "Learn how to set up and use agent-infra/sandbox, the comprehensive Docker-based development environment that combines browser automation, terminal access, file operations, VSCode Server, and MCP integration in a single container."
-seo_title: "AIO Sandbox Tutorial: All-in-One AI Agent Development Environment - Thaki Cloud"
+seo_title: "AIO Sandbox: All-in-One Agent Dev Environment"
 seo_description: "Complete tutorial on agent-infra/sandbox - Docker container with browser automation, VSCode Server, Jupyter, MCP integration for AI agent development. Step-by-step setup guide."
 date: 2025-09-30
 tags:

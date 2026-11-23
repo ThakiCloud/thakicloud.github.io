@@ -1,6 +1,6 @@
 ---
-title: "The noise floor beneath a benchmark row: closed-form resolution limits for deterministic BFCL tool-call evaluation on NVFP4-quantized H200 serving"
-seo_title: "Noise Floor paper: closed-form noise floor and promotion gate resolution limits for deterministic BFCL tool-call evaluation on NVFP4-quantized continuous batching serving. The 1.5pp margin is a coin flip inside the floor, and the equal-budget rerun dominates suite expansion - ThakiCloud"
+title: "The Noise Floor Beneath a Benchmark Row"
+seo_title: "The Noise Floor Beneath a Benchmark Row"
 seo_description: "Even at temperature 0, a single-pass benchmark row moves by several points. This paper gives the noise floor theory for deterministic AST-graded tool-call evaluation on continuous batching serving in closed form. It derives the MDE, the rerun budget, and the gate stability boundary, and preregisters a BF16 vs NVFP4 H200 measurement protocol."
 excerpt: "The 90% row of a single-pass benchmark is a random variable rather than a fact. The paper that gives that random variable its probability laws, from the decomposition and the minimum detectable effect to the rerun budget, gate stability, and the preregistered measurement protocol."
 date: 2026-11-19

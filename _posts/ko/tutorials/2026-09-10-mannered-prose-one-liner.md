@@ -1,6 +1,6 @@
 ---
 title: "한 줄 프롬프트가 지우고, 코드가 남는 것을 재다"
-seo_title: "Anthropic mannered prose 제거 한 줄 지시, 3라운드 교정 실험으로 확인한 축의 경계 - ThakiCloud"
+seo_title: "한 줄 프롬프트가 지우고, 코드가 남는 것을 재다"
 seo_description: "Anthropic이 Fable 5.1 프롬팅 가이드에 올린 'Please remove all mannered prose' 한 줄 지시를 3라운드 교정 실험으로 재 본 글입니다. 은유 축은 한 줄에 28건에서 0으로 사라지고, 구조 티는 결정론 게이트가 잡아야 한다는 실측 결과를 담았습니다."
 excerpt: "AI스러운 글을 고치는 데 한 줄이면 되나. Anthropic이 공식 문서에 올린 mannered prose 제거 지시를 3라운드 실험으로 재 보니, 은유·수식 축은 한 줄에 사라지고 쉼표 리듬 같은 구조 티는 코드가 재야 했습니다."
 date: 2026-09-10

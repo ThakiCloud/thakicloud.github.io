@@ -1,6 +1,6 @@
 ---
-title: "Hybrid Reasoning Agents: 생각은 잠재 공간에서, 행동은 텍스트로. 10M 파라미터 어댑터가 디코딩 토큰을 54.7% 줄이고 11개 벤치마크를 10.4% 올린 논문"
-seo_title: "Stanford와 Together AI의 'Hybrid Reasoning Agents'(arXiv 2610.18861)는 단일 생성 과정 안에서 잠재 추론과 텍스트 행동을 동적으로 전환하는 HybridAgent를 제시합니다. 최종 레이어 hidden state를 입력 임베딩 공간으로 되돌리는 10M 파라미터급 경량 어댑터 HybridLink와, 54K 하이브리드 궤적 위 3단계 HybridSFT, 그리고 모드를 명시적으로 보상하지 않는 HybridRL로 구성됩니다. Qwen3-Base 4B·8B·14B에서 수학·과학·의학·에이전트 추론 11개 벤치마크를 평가해 텍스트 에이전트 baseline 대비 평균 10.4% 성능 향상과 함께 노출 텍스트 토큰 35.5~54.7% 절감, 추론 속도 1.8~2.6x, 비용 2.7~3.7x 절감을 보고합니다. 코드(MIT)와 8B·14B 어댑터 가중치, 학습 데이터셋이 공개되어 있습니다. - ThakiCloud"
+title: "Hybrid Reasoning Agents: 생각은 잠재 공간에서"
+seo_title: "Hybrid Reasoning Agents: 생각은 잠재 공간에서"
 seo_description: "에이전트가 모든 생각을 텍스트로 쓰면 디코딩 비용이 커집니다. 이 논문은 생각은 hidden state로 '속으로' 하고, 툴콜과 답만 텍스트로 내는 하이브리드 생성을 10M 파라미터 어댑터와 2단계 학습으로 구현해 정확도 +10.4%, 토큰 -54.7%까지 절감하는 수치를 냅니다."
 excerpt: "Stanford와 Together AI의 'Hybrid Reasoning Agents'는 단일 생성 과정 안에서 잠재 추론과 텍스트 행동을 오가는 에이전트를 만듭니다. 10M 파라미터급 HybridLink 어댑터와 HybridSFT·HybridRL 2단계 학습으로, 14B 모델은 GAIA 52.4점을 내며 텍스트 에이전트 대비 평균 10.4%를 앞서고, 노출 토큰은 35.5~54.7%, 비용은 2.7~3.7x 줄어듭니다. 코드는 MIT, 가중치와 데이터셋도 공개됐습니다."
 date: 2026-10-15

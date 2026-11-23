@@ -1,6 +1,6 @@
 ---
 title: "센서 값으로 설비 상태를 읽고, Paxis가 정비 업무를 엽니다"
-seo_title: "Thaki-EquipmentHealth-Sensor-LGBM 공개 - 센서 기반 설비 상태 분류와 Paxis 정비 업무 자동화 | ThakiCloud"
+seo_title: "센서 값으로 설비 상태를 읽고, Paxis가 정비 업무를 엽니다"
 seo_description: "반도체 공장 물류 차량(OHT·AGV)의 전류·온도·미세먼지 센서로 설비 상태를 정상·관심·경고·위험 네 단계로 나누는 1MB짜리 LightGBM 모델을 Hugging Face에 공개했습니다. 처음 보는 차량에서 매크로 F1 0.94, 위험을 정상으로 놓친 경우 0건이었습니다. 이 판정을 Paxis가 근거를 붙인 정비 업무로 잇고 위험한 조치는 사람 승인을 거치는 구조를 소개합니다."
 excerpt: "모든 판단에 LLM이 필요하지는 않습니다. 1MB짜리 작은 모델이 센서 값으로 설비 상태를 네 단계로 나누고, Paxis가 그 판정을 근거가 붙은 정비 업무로 엽니다."
 date: 2026-11-01

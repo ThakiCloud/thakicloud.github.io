@@ -1,6 +1,6 @@
 ---
-title: "Unattended Agent Loops Don't Fail, They Weaken: The Endurance Wall Seen Over 72 Hours"
-seo_title: "The Endurance Wall paper analysis - reliability decay of 24/48/72-hour unattended LLM agent loops, context bloat terminal failure taxonomy, quality-per-dollar ablation of compaction/veto/checkpoint interventions - ThakiCloud"
+title: "Unattended Agent Loops Don't Fail, They Weaken"
+seo_title: "Unattended Agent Loops Don't Fail, They Weaken"
 seo_description: "Unattended agent loop reliability has only been measured per task, on minute-scale horizons. This paper makes elapsed unattended time a first-class failure axis and maps the endurance wall with a controlled 72-hour, 3-hazard, 8-arm, 100-seed measurement. The 72-hour success rate falls from 87.1% to 39.6%, context bloat is the dominant terminal class (47.9~55.7%), compaction is the efficiency champion at 3.4~4.2x QPD, veto is the only single intervention that buys endurance at cost parity, and checkpoint is the most expensive purchase, at 0.80~0.92x QPD while inflating the verification gap by 9~22pp."
 excerpt: "If you run an unattended agent loop overnight, how many hours can you trust it? This paper treats elapsed unattended time as a first-class failure axis and maps that wall with a 72-hour controlled measurement. Context bloat is the dominant failure class, compaction is the cheapest efficiency, veto is the intervention that buys endurance at parity, and checkpoint is the most expensive endurance purchase, one that cuts verification integrity."
 date: 2026-09-14

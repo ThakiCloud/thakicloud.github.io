@@ -1,7 +1,7 @@
 ---
-title: "LEANN: Complete Tutorial for the Revolutionary Vector Index with 97% Storage Savings"
+title: "LEANN: A Vector Index That Saves Storage"
 excerpt: "Master LEANN, the groundbreaking vector index system that delivers 97% storage savings while maintaining fast, accurate search. Complete guide from installation to advanced usage"
-seo_title: "LEANN Vector Index Tutorial - 97% Storage Savings RAG System"
+seo_title: "LEANN: A Vector Index That Saves Storage"
 seo_description: "Learn LEANN, the revolutionary vector index system offering 97% storage savings. Complete tutorial covering installation, usage, and advanced features for efficient RAG applications"
 date: 2025-08-30
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "에이전트 스웜이 SQLite를 Rust로 다시 썼다: Cursor가 공개한 멀티에이전트 경제학"
+title: "에이전트 스웜이 SQLite를 Rust로 다시 썼다"
 excerpt: "Cursor가 835쪽 매뉴얼만 보고 SQLite를 Rust로 재구현한 에이전트 스웜을 공개했습니다. 홀드아웃 테스트 100% 통과, 모델 조합에 따라 15배 벌어진 비용, 초당 1,000커밋을 감당하려 새로 만든 버전관리 시스템까지, 홍보 문구가 아니라 공식 블로그 수치로 검증하고 Agent-Native Cloud 관점에서 읽습니다."
-seo_title: "Cursor 에이전트 스웜 SQLite Rust 재구현 완전 분석: 멀티에이전트 비용 경제학"
+seo_title: "에이전트 스웜이 SQLite를 Rust로 다시 썼다"
 seo_description: "Cursor 에이전트 스웜이 SQLite를 Rust로 재작성한 사례를 공식 수치로 분석합니다. 플래너/워커 구조, 모델 조합별 15배 비용 차이, 초당 1000커밋 VCS, 병합충돌 해소 에이전트를 Paxis와 ai-platform 렌즈로 읽습니다."
 date: 2026-07-21
 last_modified_at: 2026-07-21

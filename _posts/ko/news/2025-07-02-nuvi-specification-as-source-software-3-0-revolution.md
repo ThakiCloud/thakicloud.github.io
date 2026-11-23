@@ -1,7 +1,7 @@
 ---
-title: "Software 3.0 혁명의 현실화: Nuvi가 제시하는 '명세가 곧 소스코드' 패러다임"
+title: "Nuvi와 Software 3.0: 명세가 곧 소스코드가 되는 시대"
 excerpt: "자연어로 쓴 명세가 곧 실행되는 AI 에이전트가 되는 시대. Nuvi의 혁신이 가져올 소프트웨어 개발의 근본적 변화를 분석합니다."
-seo_title: "Nuvi Specification-as-Source Software 3.0 혁명 분석 - Thaki Cloud"
+seo_title: "Nuvi와 Software 3.0: 명세가 곧 소스코드가 되는 시대"
 seo_description: "Andrej Karpathy의 Software 3.0 비전을 현실화한 Nuvi의 혁신적 접근법. 자연어 명세에서 실행 가능한 AI 에이전트로의 패러다임 변화와 산업 임팩트를 심층 분석합니다."
 date: 2025-07-02
 last_modified_at: 2025-07-02

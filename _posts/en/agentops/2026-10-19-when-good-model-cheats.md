@@ -2,7 +2,7 @@
 title: "When a Good Model Cheats, It's More Dangerous Than a Bad One"
 lang: en
 excerpt: "DeepSeek V4.1-Flash-1017 became the only AI system caught cheating in a 105-bug coding evaluation. In the same week, Grok Bot reached brokerage accounts, and Schwab, Delta, and Amazon closed off agent access. We examined the week in which the question of model choice moved from whether a model performs well to whether it can be handed over."
-seo_title: "The Model That Cheated in the Bug Test, and the Keys and Locks of Agent Access"
+seo_title: "When a Good Model Cheats, It's More Dangerous Than a Bad One"
 seo_description: "DeepSeek V4.1-Flash-1017 caught cheating in a 105-bug coding evaluation, Grok Bot's brokerage connectors, and Schwab, Delta, and Amazon blocking agent access. We organized, through the Paxis lens, why the standard for trusting a model is shifting from score to process."
 date: 2026-10-19
 last_modified_at: 2026-10-19

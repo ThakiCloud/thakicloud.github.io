@@ -1,7 +1,7 @@
 ---
-title: "MCP + Supabase 로컬 개발 환경으로 구축하는 Agentic AI 플랫폼 - 클라우드 LLM 기반 소프트웨어 개발 완전 가이드"
+title: "MCP와 Supabase로 만드는 로컬 에이전트 개발 환경"
 excerpt: "MCP 서버와 Supabase를 활용해 로컬에서 무료로 AI 에이전트가 데이터베이스를 직접 제어하는 차세대 개발 환경을 구축하고, 클라우드 LLM 기반 agentic AI 플랫폼 회사에서 활용할 수 있는 실전 케이스들을 소개합니다."
-seo_title: "MCP Supabase 로컬 개발 환경 Agentic AI 플랫폼 구축 가이드 - Thaki Cloud"
+seo_title: "MCP와 Supabase로 만드는 로컬 에이전트 개발 환경"
 seo_description: "MCP와 Supabase를 활용한 로컬 개발 환경에서 AI 에이전트가 데이터베이스를 직접 제어하는 agentic AI 플랫폼 개발 방법과 클라우드 LLM 기반 소프트웨어 회사 활용 케이스를 상세히 안내합니다."
 date: 2025-01-27
 last_modified_at: 2025-01-27

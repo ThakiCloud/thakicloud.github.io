@@ -1,7 +1,7 @@
 ---
 title: "Build the body everywhere, buy the brain in one place"
 excerpt: "This morning's 18 AI news items fall into two piles. Seven are stories about memory, cooling, and data center capacity. The other pile is about the brain. The heaviest item in the brain pile comes with Paris economic diplomacy: a €3 billion Mistral AI round led by Samsung Electronics, and joint development of semiconductor-specialized AI."
-seo_title: "Build the body everywhere, buy the brain in one place: Samsung, Mistral €3 billion | ThakiCloud"
+seo_title: "Build the body everywhere, buy the brain in one place"
 seo_description: "A Samsung-led Mistral AI €3 billion round and joint development of a semiconductor-specialized AI model and platform. Qualcomm and Amazon's 80 trillion won chip alliance, DRAM breaking $154.7 billion, Naver's 10 trillion won data center. This week's news splits into two piles: body and brain. Once the brain becomes plural, the problem of management comes to the front."
 date: 2026-09-09
 last_modified_at: 2026-09-09

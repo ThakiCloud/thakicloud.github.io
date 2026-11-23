@@ -1,7 +1,7 @@
 ---
-title: "Qwen-Image-2.1을 5스텝까지 줄인 이야기: LoRA 하나로 이미지 생성 비용을 5분의 1로"
+title: "Qwen-Image-2.1 5스텝: LoRA 하나로 비용 5분의 1"
 excerpt: "이미지 생성 모델을 서비스에 올려놓고 GPU 비용을 걱정하는 팀을 위한 글입니다. Qwen-Image-2.1에 LoRA 어댑터 하나만 얹으면 40스텝을 8스텝, 심지어 5스텝까지 줄이면서도 품질은 원본보다 오히려 나아집니다."
-seo_title: "Qwen-Image-2.1 FewStep: 8스텝/5스텝 LoRA 디스틸레이션 - ThakiCloud"
+seo_title: "Qwen-Image-2.1 5스텝: LoRA 하나로 비용 5분의 1"
 seo_description: "ThakiCloud가 공개한 Qwen-Image-2.1 FewStep LoRA. DMD2 기반 자체 학습으로 40스텝 대비 최대 8.2배 빠른 추론과 더 높은 품질을 동시에 달성했습니다."
 date: 2026-09-27
 categories:

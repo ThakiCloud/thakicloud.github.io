@@ -1,7 +1,7 @@
 ---
-title: "코퍼스를 미리 임베딩하지 않는 검색: Polygres WonderSearch가 뒤집는 RAG 비용 모델"
+title: "WonderSearch: 코퍼스를 미리 임베딩하지 않는 RAG"
 excerpt: "Polygres(YC F26)가 문서 수백만 개를 코퍼스 전체 임베딩 없이 검색하는 WonderSearch를 발표했습니다. 비용이 전체 코퍼스가 아니라 쿼리에만 붙는 구조로, RAG 인제스트 비용 설계의 기준점이 바뀔 수 있습니다. 다만 메커니즘은 공개되지 않았고, recall 주장도 아직 검증 수치가 없습니다."
-seo_title: "WonderSearch(Polygres): 사전 임베딩 없는 문서 검색과 RAG 비용 모델 변화"
+seo_title: "WonderSearch: 코퍼스를 미리 임베딩하지 않는 RAG"
 seo_description: "Polygres가 발표한 WonderSearch의 쿼리 시점 검색 모델, pgContext 하이브리드 검색 배경, 그리고 ThakiCloud RAG 파이프라인에 주는 비용 설계 시사점을 정리했습니다."
 date: 2026-09-30
 last_modified_at: 2026-09-30

@@ -1,7 +1,7 @@
 ---
-title: "Agents That Imagine the Environment First: A Deep Dive into Qwen-AgentWorld Language World Models"
+title: "Qwen-AgentWorld: Agents That Imagine the Environment First"
 excerpt: "Qwen-AgentWorld, released by Alibaba's Qwen team, is a language world model trained to predict the environment itself rather than to learn actions directly. We analyze the core ideas, benchmark numbers, and implications for the ThakiCloud agent platform, grounded in the arXiv technical report and official benchmark data."
-seo_title: "Qwen-AgentWorld Language World Model Analysis - Agent Environment Simulation - Thaki Cloud"
+seo_title: "Qwen-AgentWorld: Agents That Imagine the Environment First"
 seo_description: "A data-driven analysis of Qwen-AgentWorld-35B-A3B and AgentWorldBench based on official sources. Covers CPT/SFT/RL three-stage training, 7-domain environment simulation, real performance gains from Sim RL and LWM warmup, and implications for ThakiCloud's Kubernetes agent platform."
 date: 2026-06-25
 last_modified_at: 2026-06-25

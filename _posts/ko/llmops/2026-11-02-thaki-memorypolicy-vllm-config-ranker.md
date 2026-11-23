@@ -1,6 +1,6 @@
 ---
-title: "1만 파라미터 랭커로 vLLM 설정을 고르면 기본값보다 나을까: Thaki-MemoryPolicy 개발기"
-seo_title: "Thaki-MemoryPolicy-vLLM-Ranker - vLLM 서빙 설정 15개 중 하나를 고르는 초소형 랭커의 실측 결과 | ThakiCloud"
+title: "Thaki-MemoryPolicy: 작은 랭커가 vLLM 설정을 고른다"
+seo_title: "Thaki-MemoryPolicy: 작은 랭커가 vLLM 설정을 고른다"
 seo_description: "약 1만 파라미터 랭커가 vLLM 서빙 설정 15개 중 하나를 서버를 띄우기 전에 고릅니다. 1,440칸을 실측해 학습했고, 처음 보는 워크로드 16개 시나리오에서 기본 설정과 동등했습니다. 처리량 +19 tok/s(95% CI −82.8~+119.9), 꼬리 TTFT는 더 나빴습니다."
 excerpt: "vLLM 설정 선택에 대형 LLM이 꼭 필요할까요? 1만 파라미터 랭커를 만들어 실측 데이터로 학습했습니다. dev에서는 최적 설정에 가까웠지만, 처음 보는 워크로드에서는 기본 설정과 같은 수준에 머물렀습니다. 첫 버전은 정답이 입력에 새어 들어가 폐기했습니다."
 date: 2026-11-02

@@ -1,7 +1,7 @@
 ---
 title: "The Day Models Got Passports"
 excerpt: "In the same morning, OpenAI urged the United States to lead a global standard with independent model audits, while China is probing DeepSeek and Moonshot over 35 million leaked data requests. The US builds a standard; China builds a wall. Both point at the same models."
-seo_title: "The Day Models Got Passports: US Audit Standards and China's Data Leakage Probe"
+seo_title: "The Day Models Got Passports"
 seo_description: "OpenAI's independent model audit proposal and Chinese authorities' probe into DeepSeek and Moonshot data leakage arrived on the same morning. Through an agent platform lens, why 'where the data goes' becomes a procurement question as API prices fall."
 date: 2026-09-23
 last_modified_at: 2026-09-23

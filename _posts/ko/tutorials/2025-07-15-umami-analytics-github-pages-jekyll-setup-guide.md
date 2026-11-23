@@ -1,7 +1,7 @@
 ---
-title: "Umami Analytics GitHub Pages Jekyll 연동 완벽 가이드: 프라이버시 중심 웹사이트 분석"
+title: "Umami Analytics: GitHub Pages Jekyll 블로그에 연동하기"
 excerpt: "GitHub Pages Jekyll 블로그에 Umami Analytics를 설정하여 프라이버시를 보호하면서 웹사이트 트래픽을 분석하는 완벽한 구현 가이드입니다."
-seo_title: "Umami Analytics GitHub Pages Jekyll 설정 완벽 가이드 - Thaki Cloud"
+seo_title: "Umami Analytics: GitHub Pages Jekyll 블로그에 연동하기"
 seo_description: "GitHub Pages Jekyll 블로그에 Umami Analytics를 연동하는 단계별 가이드. 프라이버시 중심 웹 분석 툴 설정부터 실시간 모니터링까지 완벽 구현 방법을 제공합니다."
 date: 2025-07-15
 last_modified_at: 2025-07-15

@@ -1,6 +1,6 @@
 ---
-title: "Why We Did Not Train a Document Field Extraction Model: A DATA_NO_GO From a Label Schema Audit"
-seo_title: "Auditing Document Field Role Labels Before Training: A DATA_NO_GO Case | ThakiCloud"
+title: "Why We Did Not Train a Field Extraction Model"
+seo_title: "Why We Did Not Train a Field Extraction Model"
 seo_description: "We had 142,111 finance and logistics documents and about 10 million text boxes, but zero answers for field roles such as amount or date. Here is how a mechanical label schema audit stopped training before it started, and a procedure you can run on your own data."
 excerpt: "A large dataset does not mean the answers your task needs are in it. Three CPU audit runs over a document OCR dataset showed there were no field role labels, so we decided not to train."
 date: 2026-11-09

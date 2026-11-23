@@ -1,6 +1,6 @@
 ---
-title: "Same Model, Different Harness: We Cut Tokens 16x by Measuring RLM on H200"
-seo_title: "RLM Recursive Harness on H200: Verified 16x Token Savings - Thaki Cloud"
+title: "Same Model, Different Harness: Measuring RLM on H200"
+seo_title: "Same Model, Different Harness: Measuring RLM on H200"
 seo_description: "We measured MIT's Recursive Language Models (RLM) paper claims on our own H200 cluster. We attached only a recursive harness to an untrained Qwen3-8B, ran a 3-arm comparison that cut long-document aggregation tokens 16x while lifting accuracy, then reproduced the paper's GRPO training with prime-rl and documented the 11 real things that broke."
 excerpt: "If long-context cost is your bottleneck, swapping the harness may come before swapping the model. We share the numbers from measuring an RLM-style recursive harness on Qwen3-8B, and the points where reproducing the paper actually breaks."
 date: 2026-07-23

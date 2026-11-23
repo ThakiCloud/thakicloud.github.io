@@ -1,6 +1,6 @@
 ---
-title: "The Coach Stays the Same, Only the Tactics Board Changes: A Different Way for Agents to Keep Improving"
-seo_title: "Harness Continual Learning: updating the harness, not the model, to grow agents - Thaki Cloud"
+title: "Same Coach, New Tactics Board: How Agents Keep Improving"
+seo_title: "Same Coach, New Tactics Board: How Agents Keep Improving"
 seo_description: "A plain-language walkthrough of Harness Continual Learning (HCL), a paper from Nanjing University. Keep the model frozen and only rewrite the prompts, memory, and rules around it, and performance climbs a lot, while a single tolerance number controls how much old skill you are willing to lose."
 excerpt: "What gets better when you run an agent for a long time might not be its brain. This paper freezes the brain and keeps rewriting everything around it instead, then shows how one number controls the cost of forgetting old skills."
 date: 2026-08-22

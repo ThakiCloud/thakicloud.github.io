@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA TensorRT-LLM: 대규모 언어모델 추론 성능 최적화와 배포 전략"
 excerpt: "TensorRT-LLM이 어떻게 LLM 추론 성능을 6.7배까지 향상시키는지, 그리고 실제 프로덕션 환경에 도입하는 방법을 상세히 알아봅니다."
-seo_title: "TensorRT-LLM 성능 최적화 가이드 - NVIDIA GPU에서 LLM 추론 속도 6.7배 향상 - Thaki Cloud"
+seo_title: "NVIDIA TensorRT-LLM: 대규모 언어모델 추론 성능 최적화와 배포 전략"
 seo_description: "NVIDIA TensorRT-LLM으로 Llama 2 70B 모델 추론 성능을 6.7배 향상시키는 방법과 텐서 병렬 처리, FlashAttention 최적화 기법을 알아보세요."
 date: 2025-08-22
 last_modified_at: 2025-08-22

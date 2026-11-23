@@ -1,5 +1,5 @@
 ---
-title: "OpenAI 실시간 음성 API를 한 줄로 갈아타기: 직접 돌리는 오픈 음성 스택 hugging-voice"
+title: "hugging-voice: 직접 돌리는 실시간 음성 스택"
 excerpt: "허깅페이스가 공개한 hugging-voice와 그 엔진인 speech-to-speech는 VAD에서 STT, LLM, TTS까지 이어지는 실시간 음성 파이프라인을 OpenAI Realtime 호환 WebSocket으로 감쌌습니다. 클라이언트의 base URL 한 줄만 바꾸면 자체 인프라로 옮겨올 수 있다는 이 접근을, 서빙 관점에서 뜯어봤습니다."
 date: 2026-07-21
 tags:

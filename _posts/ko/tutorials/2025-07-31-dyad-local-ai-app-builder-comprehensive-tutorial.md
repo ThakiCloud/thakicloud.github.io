@@ -1,7 +1,7 @@
 ---
-title: "Dyad - 로컬 AI 앱 빌더 완전 가이드: v0, Bolt, Lovable의 무료 오픈소스 대안"
+title: "Dyad: v0·Bolt·Lovable의 로컬 오픈소스 대안"
 excerpt: "dyad는 완전히 로컬에서 실행되는 오픈소스 AI 앱 빌더입니다. v0, Bolt, Lovable과 같은 기능을 제공하지만 개인정보 보호와 완전한 제어권을 보장합니다."
-seo_title: "Dyad 튜토리얼 - 로컬 AI 앱 빌더 설치부터 활용까지 완전 가이드 - Thaki Cloud"
+seo_title: "Dyad: v0·Bolt·Lovable의 로컬 오픈소스 대안"
 seo_description: "dyad AI 앱 빌더 설치, 설정, 활용법을 단계별로 안내합니다. v0, Bolt 대안으로 완전히 로컬에서 실행되는 무료 오픈소스 솔루션"
 date: 2025-07-31
 last_modified_at: 2025-07-31

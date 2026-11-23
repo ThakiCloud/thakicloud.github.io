@@ -1,7 +1,7 @@
 ---
-title: "Yank Note: 고도로 확장 가능한 마크다운 에디터 완전 가이드 - AI 코파일럿부터 플러그인 개발까지"
+title: "Yank Note: 확장 가능한 마크다운 에디터"
 excerpt: "Monaco 커널 기반의 Yank Note로 버전 관리, AI 코파일럿, 마인드 맵, 문서 암호화, 코드 실행 등 강력한 기능을 마스터하는 완전한 가이드입니다."
-seo_title: "Yank Note 마크다운 에디터 완전 가이드 - VSCode 경험의 생산성 도구 - Thaki Cloud"
+seo_title: "Yank Note: 확장 가능한 마크다운 에디터"
 seo_description: "Yank Note의 설치부터 고급 기능까지. AI 코파일럿, 버전 관리, 플러그인 개발, 문서 암호화, 코드 실행 등 모든 기능을 상세하게 설명하는 완전 가이드"
 date: 2025-08-15
 last_modified_at: 2025-08-15

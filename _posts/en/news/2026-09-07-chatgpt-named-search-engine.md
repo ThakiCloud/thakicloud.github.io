@@ -3,7 +3,7 @@ lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/news/chatgpt-named-search-engine/
 title: "The day ChatGPT was given the name 'search engine'"
 excerpt: "The EU placed ChatGPT in the same category as Google, and an AI chatbot has for the first time entered the regulatory framework. In the same week, the US House gave NIST a one-year deadline to produce agent security standards. 'How an agent behaves' is moving from a technical issue to a legal item."
-seo_title: "The day ChatGPT was given the name 'search engine': EU DSA designation and the US agent security standard deadline | ThakiCloud"
+seo_title: "The day ChatGPT was given the name 'search engine'"
 seo_description: "The first case in which the European Commission designated ChatGPT as a Very Large Online Search Engine under the Digital Services Act. A fine of up to 6% of global revenue, a four-month compliance obligation, and the US House 'AI Loss-of-Control Block Act'. An analysis of the moment agent governance becomes a legal requirement."
 date: 2026-09-07
 last_modified_at: 2026-09-07

@@ -1,7 +1,7 @@
 ---
 title: "Making Videos from Claude Code: I Ran claude-code-video-toolkit Myself"
 excerpt: "An open-source toolkit that renders 1080p video from inside Claude Code with a couple of slash commands. I cloned examples/hello-world and rendered it with zero API keys, and a 750-frame, 25-second 1080p clip came out in about 18 seconds. Here is the structure, the measured results, and how ThakiCloud's Kubernetes AI/ML SaaS platform views GPU video workloads."
-seo_title: "Hands-on with claude-code-video-toolkit and a Platform View - Thaki Cloud"
+seo_title: "Making Videos from Claude Code: I Ran claude-code-video-toolkit Myself"
 seo_description: "A hands-on run of digitalsamba/claude-code-video-toolkit with zero API keys (npm install 3.5s, cold render 18.4s, 1920x1080 25s 2.15MB) plus structural analysis. Remotion, open-source AI model stack, and ThakiCloud Kubernetes GPU workload perspective."
 date: 2026-06-23
 last_modified_at: 2026-06-23

@@ -1,6 +1,6 @@
 ---
-title: "Keep the 27B Model, Train Only the Decision: A 2.18M-Parameter Adapter Shared Across Models"
-seo_title: "Shared Decision Adapter: Learning RAG Answer, Retrieve and Stop Decisions Without Retraining a 27B LLM - ThakiCloud"
+title: "A Shared Decision Adapter for 27B Models"
+seo_title: "A Shared Decision Adapter for 27B Models"
 seo_description: "We froze Qwen3.8-27B and trained a single 2.18M-parameter adapter for RAG decisions: answer, retrieve more, or stop. Attached unchanged to four derived 27B models, accuracy moved by at most 0.3 points. Architecture, transfer results and what does not work yet."
 excerpt: "Many companies now run several 27B models tuned for Korean, finance or support work. Does each one need its own retrieval decision training? We built one small decision sheet that leaves the base model untouched and attached it to several derived models."
 date: 2026-10-12

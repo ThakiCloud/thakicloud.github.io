@@ -1,7 +1,7 @@
 ---
 title: "Don't Pick an Inference Engine. Pick a Hardware Strategy."
 excerpt: "Asking whether to use vLLM, SGLang, or TensorRT-LLM first is the wrong order. One engineer's hardware-first selection method says: let the hardware you have and the shape of your workload decide the engine. We reread this framework from the perspective of running ThakiCloud's Kubernetes GPU serving operations, and explain why we start with vLLM as our default."
-seo_title: "LLM Inference Engine Selection: Hardware-First Strategy - vLLM/SGLang/TensorRT-LLM | Thaki Cloud"
+seo_title: "Don't Pick an Inference Engine. Pick a Hardware Strategy."
 seo_description: "A hardware-first framework for choosing among llama.cpp, MLX, ExLlamaV2, vLLM, SGLang, and TensorRT-LLM based on hardware and workload shape, analyzed from ThakiCloud's Kubernetes GPU serving operations perspective, with the operational principle of switching engines only when a measured bottleneck appears."
 date: 2026-06-23
 last_modified_at: 2026-06-23

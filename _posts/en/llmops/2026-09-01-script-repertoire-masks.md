@@ -1,7 +1,7 @@
 ---
-title: "We Rebuilt the Han-Character Filter Per Language and Measured Five of Them"
+title: "Script Repertoire Masks: Per-Language Han-Character Filters"
 excerpt: "Reusing the Korean mask on Japanese cuts 11 of 12 ordinary words. We moved the test to legacy national encodings, built per-language masks, and measured each with 300 prompts. Traditional Chinese contamination fell from 40.0% to 1.3%; Arabic had no contamination to fix."
-seo_title: "Multilingual LLM Script Leakage: Measured Per-Language Masks"
+seo_title: "Script Repertoire Masks: Per-Language Han-Character Filters"
 seo_description: "We measured per-language script contamination in Qwen3.8-27B with 300 paired prompts each. At T=1.0, Traditional Chinese fell 40.0 to 1.3%, Cantonese 20.3 to 0.7%, Japanese 5.0 to 0.3%. No capability regression, no collateral loss, and Arabic was a null."
 date: 2026-09-01
 published: true

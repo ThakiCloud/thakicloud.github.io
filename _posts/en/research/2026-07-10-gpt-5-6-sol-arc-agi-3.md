@@ -1,6 +1,6 @@
 ---
-title: "Orientation Before Execution: How GPT-5.6 Sol Broke ARC-AGI-3 for the First Time"
-seo_title: "GPT-5.6 Sol ARC-AGI-3 7.8% Breakthrough Analysis - Thaki Cloud"
+title: "GPT-5.6 Sol: Orientation Before Execution on ARC-AGI-3"
+seo_title: "GPT-5.6 Sol: Orientation Before Execution on ARC-AGI-3"
 seo_description: "GPT-5.6 Sol set the first SOTA on ARC-AGI-3 at 7.78% and became the first model to clear a game. We break down why orientation-centered reasoning, not better execution, matters for agent infrastructure and serving economics from ThakiCloud's perspective."
 excerpt: "ARC-AGI-3 measures whether an agent can figure out a situation and adapt on its own inside an interactive game with no instructions. GPT-5.6 Sol became the first model to break this benchmark, reaching 7.78%. The driving force was not better execution but orientation, the ability to find its bearings in an unfamiliar environment first."
 date: 2026-07-10

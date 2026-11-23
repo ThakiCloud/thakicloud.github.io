@@ -1,7 +1,7 @@
 ---
-title: "기업용 RAG 시스템을 위한 산업별 공개 데이터셋 완벽 가이드: 은행부터 증권까지"
+title: "기업용 RAG를 위한 산업별 공개 데이터셋 정리"
 excerpt: "은행, 보험, 회계, 법률, 의료, 자동차, 증권 분야에서 RAG 기반 LLM 챗봇 구축에 활용 가능한 공개 데이터셋과 실제 구현 방법을 종합 정리"
-seo_title: "RAG 챗봇 산업별 데이터셋 가이드 - 은행 보험 의료 법률 - Thaki Cloud"
+seo_title: "기업용 RAG를 위한 산업별 공개 데이터셋 정리"
 seo_description: "기업용 RAG 시스템 구축을 위한 7개 산업 분야별 공개 데이터셋 목록과 실제 구현 예시. FDIC, SEC, MIMIC-IV, CourtListener 등 검증된 데이터셋 활용법"
 date: 2025-07-19
 last_modified_at: 2025-07-19

@@ -1,6 +1,6 @@
 ---
 title: "범용 모델에서 송금 전용 모델로: Thaki-IntentAction-Finance-KO-7M 개발기"
-seo_title: "Thaki-IntentAction-Finance-KO-7M - 한국어 송금 요청을 수취인·금액·통화 제안으로 바꾸는 7M 모델과 Paxis | ThakiCloud"
+seo_title: "범용 모델에서 송금 전용 모델로: Thaki-IntentAction-Finance-KO-7M 개발기"
 seo_description: "파라미터 7,402,003개의 한국어 모델이 송금 요청을 수취인·금액·통화로 된 제안으로 바꾸거나 거절합니다. 범용 명령 추출 목표는 봉인 시도 열 번에서 실패했고, 같은 체크포인트를 송금 하나로 좁혀 합성 봉인 테스트에서 제안 오류 0건을 얻었습니다. 실패한 과정과 좁힌 이유, Paxis에서의 자리를 정리합니다."
 excerpt: "여러 행동을 뽑으려던 초소형 모델이 범용 목표에서 실패한 과정과, 같은 모델을 송금 하나로 좁혀 공개한 이유를 정리했습니다. 이 모델은 돈을 옮기지 않습니다."
 date: 2026-11-02

@@ -3,7 +3,7 @@ title: "Humans to GPT-6, Computers to Haiku"
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/humans-gpt6-computer-haiku/"
 excerpt: "The day GPT-6 launched to 1.2 billion people, the lead in computer-use scores tilted to the small model. On the morning an agent's hand becomes a consumable, the seat that takes the wheel becomes the enterprise's question."
-seo_title: "Humans to GPT-6, Computers to Haiku: Two Races on the Same Day | ThakiCloud"
+seo_title: "Humans to GPT-6, Computers to Haiku"
 seo_description: "GPT-6's 1.2 billion user launch and Claude Haiku 5.5's 72.4% on OSWorld 2.1. On the morning the flagship's screen and the agent's hand diverge, the execution environment is the question left to the enterprise."
 date: 2026-10-08
 last_modified_at: 2026-10-08

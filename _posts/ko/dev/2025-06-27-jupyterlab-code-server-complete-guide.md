@@ -1,7 +1,7 @@
 ---
-title: "JupyterLab 4에서 code-server 활용하기 - 맥북에서 GPU 서버까지 완전 개발 환경 가이드"
+title: "JupyterLab 4의 code-server: 맥북에서 GPU 서버까지"
 excerpt: "JupyterLab 4에서 VS Code를 브라우저로 사용하는 방법부터 도커 컨테이너, GPU 서버 환경까지 모든 개발 시나리오를 다루는 완전 가이드"
-seo_title: "JupyterLab 4 code-server 완전 가이드 - 맥북부터 GPU 서버까지 - Thaki Cloud"
+seo_title: "JupyterLab 4의 code-server: 맥북에서 GPU 서버까지"
 seo_description: "JupyterLab 4에서 jupyter-codeserver-proxy로 VS Code를 브라우저에서 사용하는 방법, 도커 환경 구성, GPU 서버 개발 환경까지 완전 정리"
 date: 2025-06-27
 tags: 

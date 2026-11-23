@@ -1,5 +1,5 @@
 ---
-title: "Coherent 10-Minute Video Is Made by Agent Orchestration, Not a Better Model"
+title: "Coherent Long Video Comes from Orchestration, Not Models"
 excerpt: "The key to keeping long-form generated video consistent is not a bigger single model, but the orchestration of agents that plan and then verify that plan. Google's unified multi-agent framework, announced on September 24, 2026, layers four agents on top of Gemini and Veo. We walk through what each agent does and what the structure gives to agent design in general."
 date: 2026-09-27
 permalink: /en/agentops/google-coherent-video-multi-agent/

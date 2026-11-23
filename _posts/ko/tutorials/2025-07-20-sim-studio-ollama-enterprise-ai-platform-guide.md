@@ -1,7 +1,7 @@
 ---
-title: "Sim Studio + Ollama로 구축하는 엔터프라이즈 AI 플랫폼: 클라우드 AI 회사를 위한 완벽 가이드"
+title: "Sim Studio와 Ollama로 만드는 AI 플랫폼"
 excerpt: "오픈소스 AI 에이전트 워크플로우 빌더 Sim Studio와 Ollama를 활용하여 클라우드 AI 플랫폼 회사가 비용 효율적이고 확장 가능한 AI 서비스를 구축하는 실전 가이드입니다."
-seo_title: "Sim Studio Ollama 엔터프라이즈 AI 플랫폼 구축 가이드 - Thaki Cloud"
+seo_title: "Sim Studio와 Ollama로 만드는 AI 플랫폼"
 seo_description: "Sim Studio와 Ollama를 활용한 클라우드 AI 플랫폼 구축 방법과 비즈니스 활용 사례, 비용 절감 전략, 엔터프라이즈 배포 가이드를 상세히 제공합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20

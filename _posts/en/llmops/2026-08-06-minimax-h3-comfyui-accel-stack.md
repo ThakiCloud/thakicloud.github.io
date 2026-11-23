@@ -1,6 +1,6 @@
 ---
 title: "The Kernel Got 1.44x Faster. The Render Got 1.11x Faster."
-seo_title: "Dissecting the MiniMax-H3 ComfyUI Acceleration Stack: EasyCache, Sol-Attn and Sage Attention | ThakiCloud"
+seo_title: "The Kernel Got 1.44x Faster. The Render Got 1.11x Faster."
 seo_description: "We read the source code and published benchmarks behind the node combination people use to speed up MiniMax-H3. Here is why Sol-Attn's 1.44x kernel speedup becomes 1.11x end to end, and why your actual render length sits outside the measured range."
 excerpt: "The tip that adding three nodes makes it faster is correct. How much faster is not in the tip, and the answer depends on how long your render is."
 date: 2026-08-06

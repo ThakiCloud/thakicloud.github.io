@@ -1,7 +1,7 @@
 ---
-title: "Stanford STORM: Complete Guide to the LLM-Based Knowledge Curation Agent System"
+title: "Stanford STORM: An LLM Knowledge Curation Agent"
 excerpt: "Complete analysis of STORM and Co-STORM developed at Stanford. Practical guide covering automated research, report generation, citation systems, and collaborative AI agents."
-seo_title: "Stanford STORM Complete Guide - LLM Knowledge Curation Agent System - Thaki Cloud"
+seo_title: "Stanford STORM: An LLM Knowledge Curation Agent"
 seo_description: "Complete analysis of the Stanford STORM project. Automated research, Wikipedia-style report generation, collaborative AI agents, and production deployment guide. How to use the 25.4k-star open-source project."
 date: 2025-06-30
 last_modified_at: 2025-06-30

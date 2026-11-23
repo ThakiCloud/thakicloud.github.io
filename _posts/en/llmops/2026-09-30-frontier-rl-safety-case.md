@@ -1,7 +1,7 @@
 ---
-title: "May this training run continue: OpenAI's proposal for frontier RL safety cases"
+title: "May This Run Continue? OpenAI's Frontier RL Safety Case"
 excerpt: "OpenAI has proposed borrowing the 'safety case' discipline from aviation and nuclear power and applying it to frontier RL training. On top of technical safeguards (alignment training, containment, monitoring) it layers named approvals, leadership veto, fail-closed auto-pause, and public incident postmortems. The subset that applies directly to commercial training operators is a set of four governance machines: evidence bundling, named approvals, fail-closed pause, and postmortem record-keeping."
-seo_title: "OpenAI frontier RL training safety case: the three pillars and the governance machines"
+seo_title: "May This Run Continue? OpenAI's Frontier RL Safety Case"
 seo_description: "An analysis of OpenAI's 'Towards safety cases for frontier AI training': the alignment-training, containment, and monitoring pillars; named approvals, veto, fail-closed auto-pause, and postmortem publication; and the scope that applies to ThakiCloud training operations."
 date: 2026-09-30
 last_modified_at: 2026-09-30

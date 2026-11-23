@@ -1,5 +1,5 @@
 ---
-title: "쿠버네티스 최신 명령어 가이드 - kubectl로 마스터하는 컨테이너 오케스트레이션"
+title: "쿠버네티스 최신 kubectl 명령어 정리"
 date: 2025-06-05
 tags: 
   - Kubernetes

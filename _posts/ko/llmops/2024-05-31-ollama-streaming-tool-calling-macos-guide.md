@@ -1,5 +1,5 @@
 ---
-title: "Ollama 스트리밍 툴 콜링 완전 가이드: macOS에서 실시간 AI 에이전트 구축하기"
+title: "Ollama 스트리밍 툴 콜링: macOS 에이전트 만들기"
 date: 2024-05-31
 tags: 
   - Ollama

@@ -1,7 +1,7 @@
 ---
-title: "Mail-in-a-Box Enterprise Complete Guide: Dockerization and Kubernetes Operations"
+title: "Mail-in-a-Box on Docker and Kubernetes for Enterprise"
 excerpt: "A practical complete guide to Dockerizing Mail-in-a-Box (14.6k stars) as an internal corporate mail server and running it on Kubernetes"
-seo_title: "Mail-in-a-Box Enterprise Mail Server Kubernetes Operations Guide - Thaki Cloud"
+seo_title: "Mail-in-a-Box on Docker and Kubernetes for Enterprise"
 seo_description: "Complete guide to Dockerizing Mail-in-a-Box in an enterprise environment and operating it on Kubernetes. Practical implementation including high availability, security, and monitoring."
 date: 2025-06-28
 lang: en

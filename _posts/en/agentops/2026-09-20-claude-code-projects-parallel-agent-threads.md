@@ -1,6 +1,6 @@
 ---
-title: "One Coordinator, Many Consoles: The Parallel Cloud Sessions and Shared-Memory Structure of Claude Code Projects"
-seo_title: "Claude Code Projects redesign analysis - how one conversation acts as a coordinator for parallel cloud sessions, isolated branches, and repo copies, with shared memory and system-handled merge conflicts. The 200-threads/day cap, the plan-limit cost of parallel sessions, and the 1:1 correspondence with the ThakiCloud Paxis control plane and Metis serving economics - ThakiCloud"
+title: "One Coordinator, Many Consoles: Claude Code Projects"
+seo_title: "One Coordinator, Many Consoles: Claude Code Projects"
 seo_description: "Anthropic shipped a redesigned Claude Code Projects as a beta on September 17, 2026. It hands the coordination burden - splitting work, threading hand-offs, combining results - to Claude as a coordinator. Each parallel thread runs as an isolated cloud session on its own branch and repo copy, so the system resolves merge conflicts, and shared memory cuts down repeated explanation. Read the coordination structure from the vantage point of a platform engineer who runs parallel coding agents and answers for their bill."
 excerpt: "The cost and confusion of parallel coding agents come mostly from the coordination structure, not the model. Claude Code Projects puts one conversation in charge as a coordinator and isolates each thread as its own session, branch, and repo copy. Here is how that structure, and the plan-limit cost and merge conflicts it carries, reads from a ThakiCloud perspective."
 date: 2026-09-20

@@ -1,7 +1,7 @@
 ---
 title: "Mirai Labs' uzu: 4x faster local LLM inference on Apple Silicon"
 excerpt: "A Rust-and-Metal open-source inference engine that verifies many tokens per forward pass. On a base M5 MacBook Pro with 16GB, official benchmarks put Qwen3.5 9B at 92.1 tokens/sec versus 22.0 for llama.cpp and 25.1 for MLX. We break down the mechanism, the numbers, and where it fits for edge and on-prem serving."
-seo_title: "Mirai Labs uzu: local LLM inference 4x faster than llama.cpp on Apple Silicon | ThakiCloud"
+seo_title: "Mirai Labs' uzu: 4x faster local LLM inference on Apple Silicon"
 seo_description: "uzu (DFlash + Weaver tree speculative decoding) dissected: Qwen3.5 9B at 92.1 t/s on M5 16GB vs llama.cpp 22.0 and MLX 25.1. Rust+Metal, MIT license, OpenAI-compatible server, 4-bit checkpoints. Official announcement numbers."
 date: 2026-10-29
 last_modified_at: 2026-10-29

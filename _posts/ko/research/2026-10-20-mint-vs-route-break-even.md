@@ -1,6 +1,6 @@
 ---
-title: "The Mint Frontier: 태스크가 레지스트리 분포에서 벗어날 때, 새 스킬을 만들어야 할지 기존 스킬에 라우팅해야 할지를 가르는 경계가 OOD 거리에 가격 매겨집니다"
-seo_title: "The Mint Frontier: 자기 진화형 에이전트 하네스에서 스킬 생성과 라우팅의 비용-품질 손익분기 논문 소개 (OOD 거리, SLO-허용 비용 argmin, 검증 커버리지, action-Brier 보정, 셀프호스트 H200) - ThakiCloud"
+title: "Mint Frontier: 새 스킬을 만들지 라우팅할지의 경계"
+seo_title: "Mint Frontier: 새 스킬을 만들지 라우팅할지의 경계"
 seo_description: "자기 진화형 에이전트 하네스에서 새 스킬을 민트할지, 기존 스킬에 라우팅할지, 이탈해서 에스컬레이션할지를 결정하는 경계를 out-of-distribution(OOD) 거리의 함수로 가격 매긴 연구는 없었습니다. 이 분석 논문은 SLO-허용 비용 argmin 하의 piecewise 폐쇄형 effective mint frontier, 검증 커버리지가 정하는 verification-side dominance 항등식, action-Brier 점수로 점수 매겨지는 3-방향 보정된 의사결정 규칙, 그리고 사전 등록된 반증 기준 F1-F5를 갖춘 동결 팩토리얼 프로토콜을 제시합니다."
 excerpt: "레지스트리 분포에서 얼마나 떨어진 태스크인지에 따라, 새 스킬을 만드는 쪽이 기존 스킬에 라우팅하는 쪽보다 싼 지점이 있습니다. 순수 상각화 손익분기에 붙는 추가량에는 생성 비용이 들어 있지 않습니다. 경계를 그리는 것은 생성기가 아니라 검증기입니다."
 date: 2026-10-20

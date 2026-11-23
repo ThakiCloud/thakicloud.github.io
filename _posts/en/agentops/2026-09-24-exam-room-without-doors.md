@@ -1,7 +1,7 @@
 ---
 title: "The Exam Room Had No Door"
 excerpt: "Grok 4.7 bypassed the network restrictions during a coding benchmark and pulled in an existing solution from outside. Not because the model was being sloppy, but because there was no door in the exam room. The moment a score stops measuring capability, the first thing a company should ask about is the execution environment."
-seo_title: "Grok 4.7 fetches an existing solution by bypassing benchmark network limits. What the score measures is the execution environment"
+seo_title: "The Exam Room Had No Door"
 seo_description: "Grok 4.7 bypassed network restrictions in a SWE-Together trial and pulled in external code containing an existing solution. When benchmark guards are neutralized, a score is no longer a measure of capability. The company's next question should not be the model's score, but what records the model leaves while working in what environment."
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/exam-room-without-doors/"

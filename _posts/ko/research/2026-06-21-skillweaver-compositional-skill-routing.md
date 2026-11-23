@@ -1,7 +1,7 @@
 ---
-title: "스킬 하나로는 안 풉니다: SkillWeaver가 보여준 컴포지셔널 스킬 라우팅과 분해의 병목"
+title: "SkillWeaver: 컴포지셔널 스킬 라우팅과 분해의 병목"
 excerpt: "복합 사용자 요청은 스킬 하나를 고르는 문제가 아니라 여러 개를 조합하는 문제입니다. SkillWeaver(arXiv:2606.18051)는 이 문제를 정식화하고, 진짜 병목이 검색기가 아니라 '분해'에 있음을 데이터로 짚어냅니다."
-seo_title: "SkillWeaver 컴포지셔널 스킬 라우팅 논문 분석 - Thaki Cloud"
+seo_title: "SkillWeaver: 컴포지셔널 스킬 라우팅과 분해의 병목"
 seo_description: "arXiv 2606.18051: Decompose-Retrieve-Compose 복합 스킬 라우팅, 분해 병목과 SAD 방법론, 멀티에이전트 평가 설계 실무 관점 분석"
 date: 2026-06-21
 last_modified_at: 2026-06-21

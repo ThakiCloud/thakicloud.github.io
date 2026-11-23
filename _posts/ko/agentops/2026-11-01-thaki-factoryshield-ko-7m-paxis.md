@@ -1,6 +1,6 @@
 ---
 title: "설비 명령을 실행하지 않고 제안만 하는 7M 모델, Thaki-FactoryShield-KO-7M"
-seo_title: "Thaki-FactoryShield-KO-7M - 말로 내린 설비 명령을 구조화된 제안으로 바꾸는 한국어 모델과 Paxis | ThakiCloud"
+seo_title: "설비 명령을 실행하지 않고 제안만 하는 7M 모델, Thaki-FactoryShield-KO-7M"
 seo_description: "파라미터 7,352,909개의 한국어 모델이 설비 명령을 동작·설비 ID·지연 시간으로 된 제안으로 바꾸거나 거절합니다. 등록 설비 목록과 정확히 대조하고, 목록이 없으면 전부 ABSTAIN합니다. 합성 봉인 테스트 결과와 실제 현장 검증의 차이, Paxis에서 판단과 실행을 나누는 방식을 정리합니다."
 excerpt: "말로 들어온 설비 명령을 에이전트가 실행하기 전에 구조화된 제안으로 바꾸는 작은 한국어 모델을 공개했습니다. 신경망은 제안만 하고, 설비 구동은 하지 않습니다."
 date: 2026-11-01

@@ -1,7 +1,7 @@
 ---
-title: "From a One-Line Topic to a Sellable Ebook: 5 Books in 6 Days with the ai-ebook-launch Skill"
+title: "ai-ebook-launch: 5 Ebooks in 6 Days"
 excerpt: "A record of actually running an ebook production skill that bundles research, cover design, sales funnel, and deployment scripts into a single pipeline."
-seo_title: "AI Ebook Production Automation Pipeline ai-ebook-launch - Thaki Cloud"
+seo_title: "ai-ebook-launch: 5 Ebooks in 6 Days"
 seo_description: "An ebook production skill that automates topic selection, manuscript writing, gpt-image-2 cover design, sales page, and Whop/X distribution across 6 stages. A real-world record of producing 5 Korean ebooks in 6 days, including its limitations."
 date: 2026-06-20
 last_modified_at: 2026-06-20

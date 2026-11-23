@@ -1,6 +1,6 @@
 ---
-title: "Checking What AI Said Against the Evidence: FactGuard 4B, 8B, 9B and 27B Open Models"
-seo_title: "FactGuard Release: Open Models That Check AI Claims Against Evidence with Four Labels - ThakiCloud"
+title: "FactGuard: Open Models That Check AI Against Evidence"
+seo_title: "FactGuard: Open Models That Check AI Against Evidence"
 seo_description: "We released FactGuard 4B, 8B, 9B and 27B under Apache-2.0. Given evidence and one claim from an AI answer about a product, price, plan or feature, each model picks SUPPORTED, CONTRADICTED, NOT_VERIFIABLE or STALE. We separate what was validated from what is only a candidate use."
 excerpt: "Nobody can check every sentence a RAG system, shopping assistant, support bot or agent produces. FactGuard reads one claim and a bundle of evidence and picks one of four labels. This post separates the scope we trained and evaluated from the uses that remain candidates."
 date: 2026-10-18

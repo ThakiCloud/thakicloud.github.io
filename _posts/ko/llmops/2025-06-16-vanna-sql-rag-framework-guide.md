@@ -1,7 +1,7 @@
 ---
 title: "Vanna: RAG 기반 Text-to-SQL 프레임워크 실전 활용 가이드"
 excerpt: "실제 프로덕션 환경에서 Vanna를 활용한 Text-to-SQL 시스템 구축부터 최적화까지 완벽 실전 가이드"
-seo_title: "Vanna Text-to-SQL RAG 프레임워크 실전 활용 가이드 - macOS 완벽 튜토리얼 - Thaki Cloud"
+seo_title: "Vanna: RAG 기반 Text-to-SQL 프레임워크 실전 활용 가이드"
 seo_description: "Vanna RAG 기반 Text-to-SQL 프레임워크를 macOS에서 설치하고 실제 프로덕션 환경에서 활용하는 방법. 실제 테스트 결과와 최적화 팁 포함"
 date: 2025-06-16
 last_modified_at: 2025-07-16

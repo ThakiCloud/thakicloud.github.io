@@ -1,7 +1,7 @@
 ---
 title: "Pepper: 실시간 이벤트 기반 아키텍처로 구축하는 프로액티브 AI 어시스턴트"
 excerpt: "Gmail을 자동으로 관리하고, 중요한 이메일을 요약하며, 백그라운드에서 작업을 자율적으로 처리하는 오픈소스 개인 AI 어시스턴트 Pepper의 설치 및 활용 완벽 가이드. 이벤트 드리븐 아키텍처의 모든 것."
-seo_title: "Pepper AI 어시스턴트 튜토리얼: 실시간 이벤트 기반 개인 비서 - Thaki Cloud"
+seo_title: "Pepper: 실시간 이벤트 기반 아키텍처로 구축하는 프로액티브 AI 어시스턴트"
 seo_description: "Berkeley Sky Computing Lab에서 개발한 프로액티브 AI 어시스턴트 Pepper 설정 가이드. 설치, Gmail 연동, Feeds, Scheduler, Workers를 활용한 이벤트 드리븐 아키텍처 완벽 분석."
 date: 2025-10-04
 tags:

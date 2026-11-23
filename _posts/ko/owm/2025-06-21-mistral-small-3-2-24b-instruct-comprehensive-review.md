@@ -1,5 +1,5 @@
 ---
-title: "Mistral-Small-3.2-24B: 완벽해진 명령 수행과 비전 기능을 갖춘 차세대 멀티모달 모델"
+title: "Mistral-Small-3.2-24B: 명령 수행과 비전이 나아진 모델"
 excerpt: "Mistral AI의 최신 모델 Mistral-Small-3.2-24B-Instruct-2506의 주요 개선사항, 벤치마크 성능, 그리고 실제 활용 방법을 상세히 분석합니다."
 date: 2025-06-21
 tags: 

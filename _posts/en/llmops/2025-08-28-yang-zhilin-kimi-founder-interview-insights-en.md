@@ -1,7 +1,7 @@
 ---
-title: "Yang Zhilin's Vision: Building the Future of AI with Kimi and Long-Context Language Models"
+title: "Yang Zhilin on Kimi and Long-Context Models"
 excerpt: "An in-depth exploration of Moonshot AI founder Yang Zhilin's journey from NLP researcher to leading China's long-context LLM revolution with Kimi Chat."
-seo_title: "Yang Zhilin Kimi Founder Interview - Moonshot AI LLMOps Insights - Thaki Cloud"
+seo_title: "Yang Zhilin on Kimi and Long-Context Models"
 seo_description: "Discover Yang Zhilin's entrepreneurial journey, his vision for Kimi Chat, and how Moonshot AI is revolutionizing long-context language models in the competitive AI landscape."
 date: 2025-08-28
 lang: en

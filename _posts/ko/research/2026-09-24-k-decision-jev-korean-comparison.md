@@ -1,6 +1,6 @@
 ---
 title: "Jev 한국판을 만든 이유: 같은 API로 도는 한국어 온프렘 디시전 모델"
-seo_title: "K-Decision vs TypeSafe Jev: 같은 System One API로 도는 한국어 온프렘 타입드 디시전 모델 정직 비교 - ThakiCloud"
+seo_title: "Jev 한국판을 만든 이유: 같은 API로 도는 한국어 온프렘 디시전 모델"
 seo_description: "TypeSafe Jev가 만든 디시전 모델이라는 카테고리를 한국어 온프렘 환경에 그대로 옮기면 어떻게 될까요. ThakiCloud K-Decision은 Jev와 같은 System One API 형태를 노출해 코드 변경 없이 엔드포인트만 바꾸는 것을 목표로 합니다. 같은 질문으로 머리를 맞댄 결과, 이기는 곳과 지는 곳을 숫자로 그대로 보여줍니다."
 excerpt: "TypeSafe Jev는 상태와 타입드 질문을 받아 보정된 확률을 내는 디시전 모델이라는 카테고리를 만들었습니다. 같은 API 모양을 한국어·온프렘 조건에서 그대로 내놓으면 어떻게 될지 같은 질문으로 정직하게 비교했습니다."
 date: 2026-09-24

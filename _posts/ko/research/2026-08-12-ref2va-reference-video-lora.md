@@ -1,5 +1,5 @@
 ---
-title: "레퍼런스 조건 영상 LoRA를 사내 GPU로 재현하기: identity는 얻었고, 무엇을 내줬는가"
+title: "레퍼런스 조건 영상 LoRA를 사내 GPU로 재현하다"
 excerpt: "상용 API 뒤에 숨어 있던 subject 일관성 학습 레시피를 오픈 가중치 Wan2.2에 이식해 실측했습니다. identity는 70% 올랐고, 그 대가로 무엇을 지불하는지까지 곡선으로 공개합니다."
 categories:
   - research

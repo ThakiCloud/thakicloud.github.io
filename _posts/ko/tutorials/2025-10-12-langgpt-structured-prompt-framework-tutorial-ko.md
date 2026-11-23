@@ -1,7 +1,7 @@
 ---
-title: "LangGPT: 구조화된 프롬프트 엔지니어링 프레임워크로 AI 상호작용 마스터하기"
+title: "LangGPT: 구조화된 프롬프트 엔지니어링 프레임워크"
 excerpt: "LangGPT의 구조화된 프레임워크를 사용하여 고품질의 재사용 가능한 프롬프트를 만드는 방법을 배워보세요. 혼란스러운 프롬프트 엔지니어링을 체계적인 방법론으로 변환하는 템플릿, 예제, 모범 사례를 제공합니다."
-seo_title: "LangGPT 튜토리얼: 구조화된 프롬프트 엔지니어링 프레임워크 가이드 - Thaki Cloud"
+seo_title: "LangGPT: 구조화된 프롬프트 엔지니어링 프레임워크"
 seo_description: "ChatGPT, Claude 등 LLM을 위한 구조화된 프롬프트 설계, 역할 기반 템플릿, 고급 프롬프트 엔지니어링 기법을 다루는 완전한 LangGPT 튜토리얼."
 date: 2025-10-12
 tags:

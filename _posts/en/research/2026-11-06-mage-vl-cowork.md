@@ -1,6 +1,6 @@
 ---
-title: "Mage-VL-Cowork: Microsoft's 4B Computer Agent That Decides When to Click and When to Type, and the Five-Stage Training Recipe Behind It"
-seo_title: "Microsoft Mage team's open-weight 4B hybrid computer-use agent Mage-VL-Cowork review. A single policy learns turn-level channel routing between the GUI and terminal channels with no external orchestrator, reaches 66.0% on OSWorld-Verified (50 steps, 361 tasks) as the best 4B-class result, and its evolved harnesses plus Mage-CUA-Forge (293,806 tasks over 6,915 skills) cut per-task generation cost to $0.158 (-82.6%). Five-stage curriculum, GRPO+TIS online RL, Apache-2.0 release - ThakiCloud"
+title: "Mage-VL-Cowork: A 4B Agent That Picks Click or Code"
+seo_title: "Mage-VL-Cowork: A 4B Agent That Picks Click or Code"
 seo_description: "A review of Microsoft's 4B computer-use agent Mage-VL-Cowork and its full training recipe (arXiv 2610.40747). A single policy routes between the screenshot-GUI channel and the terminal-code channel at turn level, reaching 66.0% on OSWorld-Verified (50-step budget, 361 held-out tasks) - the best 4B-class result. The recipe: a five-stage curriculum from a general multimodal checkpoint, teacher harnesses that evolve (scaffold, tools, prompt, terminal env), and a data engine that synthesizes 293,806 tasks across 6,915 skills at $0.158 per task. Released Apache-2.0 as an on-device CUA baseline."
 excerpt: "One 4B policy that knows when to click and when to code. Microsoft moved the on-device computer-use baseline to 66% and released the full recipe and the model under Apache-2.0."
 date: 2026-11-06

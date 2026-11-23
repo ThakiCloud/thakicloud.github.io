@@ -1,7 +1,7 @@
 ---
 title: "48.1% and 4x: The Day Models Started Fixing Models"
 excerpt: "MIT CSAIL used GPT-6 Astra to edit Qwen's weights directly and pushed its math score to 48.1%, and the same day Gemini 4 Carbon posted a 90.4% mean at four times lower cost than Opus 5.5. Once the loop of models making and fixing models closes, the enterprise seat moves to the layer that picks, executes, and records."
-seo_title: "GPT-6 Astra Weight Editing at 48.1%, Gemini 4 Carbon Mean 90.4% and a 4x Cost Gap: The Day Models Started Fixing Models"
+seo_title: "48.1% and 4x: The Day Models Started Fixing Models"
 seo_description: "MIT CSAIL's GPT-6 Astra weight editing demo, Gemini 4 Carbon's first APEX-Agents mean above 90.4% and 4x lower cost than Opus 5.5 on GDPx, OpenAI's next GPT based on a Navier-Stokes-solving model, Anthropic's warning of dramatically accelerated research, Oracle's $20 billion raise, and Goldman Sachs' AI tool restrictions. The common signal in today's digest, organized."
 date: 2026-11-03
 last_modified_at: 2026-11-03

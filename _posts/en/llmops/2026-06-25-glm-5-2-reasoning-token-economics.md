@@ -1,7 +1,7 @@
 ---
-title: "The Model That Thinks 220K Tokens: How GLM-5.2 Flips the Self-Hosting Math"
+title: "The Model That Thinks 220K Tokens: GLM-5.2 Self-Hosting"
 excerpt: "When Matt Pocock used the /teach skill to have GLM-5.2 solve a Rubik's cube, even the lowest effort setting produced roughly 220,000 tokens of thinking traces across just three turns. Open-weight reasoning models are powerful, but they burn tokens. On a per-token API that translates directly to a bill, but on an on-premises GPU cluster amortizing compute time, the economics flip in the opposite direction. This post walks through the numbers using GLM-5.2's published figures."
-seo_title: "GLM-5.2 Reasoning Token Economics and On-Premises Self-Hosting Analysis - Thaki Cloud"
+seo_title: "The Model That Thinks 220K Tokens: GLM-5.2 Self-Hosting"
 seo_description: "A breakdown of GLM-5.2 (744B MoE, 1M context, MIT) token usage by effort level, Z.ai API pricing, and export-control context, analyzed through the lens of ThakiCloud's K8s, Kueue, and vLLM multi-tenant serving stack. Public figures show how verbose reasoning traces change the self-hosting cost calculus."
 date: 2026-06-25
 last_modified_at: 2026-06-25

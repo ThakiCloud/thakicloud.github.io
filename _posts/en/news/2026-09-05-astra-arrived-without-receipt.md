@@ -3,7 +3,7 @@ lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/news/astra-arrived-without-receipt/
 title: "The week the strongest model arrived without a receipt"
 excerpt: "OpenAI's GPT-6 Astra shipped with a 98% score on FrontierMath Tier 4, alongside reports of lower monitorability and no system-card sentence explaining where its alignment gains came from. The same week, Claude's 13-million-line Lean proof and the US and China AI labs' voluntary oversight proposal made the rounds. When the strongest model arrives without a receipt, the question for companies is not which model to use first, but whether you can produce a receipt for whichever model you use."
-seo_title: "The week GPT-6 Astra shipped: the strongest model arrived without a receipt | ThakiCloud"
+seo_title: "The week the strongest model arrived without a receipt"
 seo_description: "98% on FrontierMath Tier 4, a 169-epoch record, lower monitorability, and one reset per day after an apology. GPT-6 Astra entered production this week, alongside a 13-million-line Lean proof and a US proposal for voluntary lab oversight. What companies should prepare for in the era of models that arrive without receipts."
 date: 2026-09-05
 last_modified_at: 2026-09-05

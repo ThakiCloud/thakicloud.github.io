@@ -1,7 +1,7 @@
 ---
-title: "Measuring AI's Economic Impact Beyond Log Analysis: A Look at Anthropic's Economic Index 'Cadences' Report"
+title: "Anthropic Economic Index Cadences: Beyond Log Analysis"
 excerpt: "Anthropic's Economic Index 'Cadences' report (June 26, 2026) drops seven-day samples for continuous hourly telemetry, then combines an artifact classifier with survey data to lift AI-impact measurement from chat logs to a layered, mixed-method approach. Here is how ThakiCloud can rethink enterprise AI platform ROI."
-seo_title: "Anthropic Economic Index Cadences Report Analysis - Measuring AI Economic Impact - Thaki Cloud"
+seo_title: "Anthropic Economic Index Cadences: Beyond Log Analysis"
 seo_description: "An analysis of Anthropic's Economic Index Cadences report (June 2026) based on official material: hourly sampling, 93% of conversations producing artifacts, the 0.37-point Claude Code autonomy gap, the Economic Index Survey (6 in 10 expect more next year), and how ThakiCloud's Kubernetes multi-tenant AI platform can apply this ROI measurement framework."
 date: 2026-06-27
 last_modified_at: 2026-06-27

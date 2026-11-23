@@ -1,7 +1,7 @@
 ---
-title: "NVFP4 다음을 준비한다: vLLM으로 서빙하는 양자화 기법 총정리 (Unsloth 포함)"
+title: "NVFP4 다음: vLLM으로 서빙하는 양자화 기법 정리"
 excerpt: "Blackwell 전용 NVFP4 말고, Hopper·Ampere에서 오늘 당장 vLLM으로 서빙 가능한 양자화 기법을 정리합니다. AWQ·GPTQ·FP8·W4A16·compressed-tensors부터 Unsloth Dynamic 2.0까지, 실제 레시피와 서빙 플래그로."
-seo_title: "vLLM 양자화 서빙 총정리: AWQ·GPTQ·FP8·W4A16·Unsloth - Thaki Cloud"
+seo_title: "NVFP4 다음: vLLM으로 서빙하는 양자화 기법 정리"
 seo_description: "vLLM으로 서빙 가능한 LLM 양자화 기법을 비교합니다. llm-compressor(compressed-tensors) W4A16·W8A8·FP8, AWQ+Marlin, GPTQModel, AutoRound, Unsloth Dynamic 2.0와 merge→AWQ 프로덕션 경로까지 실제 코드로 정리."
 date: 2026-06-20
 last_modified_at: 2026-06-20

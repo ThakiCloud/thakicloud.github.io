@@ -1,6 +1,6 @@
 ---
 title: "정정공시가 고치는 원공시를 찾는 리랭커, EvidenceLink를 공개합니다"
-seo_title: "EvidenceLink-DART-Reranker-KO 공개: DART 전환사채 정정공시와 원공시 연결 | ThakiCloud"
+seo_title: "정정공시가 고치는 원공시를 찾는 리랭커, EvidenceLink를 공개합니다"
 seo_description: "DART 전환사채권발행결정 정정공시를 받아 그 정정이 고치는 원공시 회차를 고르거나 연결하지 않는 한국어 크로스인코더를 공개합니다. 사전등록 봉인 평가 CLEAN Top-1 0.978, BM25 대비 +0.2387과 함께 자연 NONE 표본 부족 같은 한계도 정리했습니다."
 excerpt: "같은 회사가 낸 거의 같은 전환사채 공시 사이에서 정정공시의 원공시를 고르는 리랭커를 Hugging Face에 공개했습니다. 봉인 평가 결과와 쓰기 전에 알아야 할 한계를 함께 적었습니다."
 date: 2026-11-10

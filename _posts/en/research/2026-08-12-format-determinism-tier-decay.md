@@ -1,6 +1,6 @@
 ---
-title: "There Were Only Five Rules. Why Did Thirty-Three Outputs All Come Out Different?"
-seo_title: "Format Freedom and Model Tier: A Cost Model for Code-Owned Validation"
+title: "Five Rules, Thirty-Three Different Outputs"
+seo_title: "Five Rules, Thirty-Three Different Outputs"
 seo_description: "We introduce a paper arguing that format freedom, not rule count, is the real axis behind structured-output failure. It covers a code-owns-the-format validation pattern, a cost model for when it beats tier escalation, and an experiment designed to test it."
 excerpt: "Thirty-three workers received the same three-rule instruction and returned the same field in five different shapes. This failure cannot be explained by rule count. We introduce a paper that extracts a new axis, format freedom, and a cost model for code-owned validation from it."
 date: 2026-08-12

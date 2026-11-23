@@ -1,7 +1,7 @@
 ---
-title: "The Moment Agents Became a 3D Art Team: Anatomy of the 94-Skill Pack, Blender Skills"
+title: "Blender Skills: A 94-Skill Pack for 3D Agents"
 excerpt: "We counted all 94 skills, verified the 175 references and the single orchestrator, and measured the skill-pack + MCP pipeline pattern that turns Claude Code into a Blender production team. Three structural weaknesses stand out before you adopt it."
-seo_title: "Blender Skills: Anatomy of the 94-Skill Pack That Turns Agents Into a 3D Art Team | ThakiCloud Tech Blog"
+seo_title: "Blender Skills: A 94-Skill Pack for 3D Agents"
 seo_description: "We cloned arjun988/blender-skills and verified 94 skills, 175 references, the blender-director orchestrator, and the blender-mcp dependency chain, then analyzed the strengths and weaknesses of the skill-pack + MCP pipeline pattern."
 date: 2026-10-28
 last_modified_at: 2026-10-28

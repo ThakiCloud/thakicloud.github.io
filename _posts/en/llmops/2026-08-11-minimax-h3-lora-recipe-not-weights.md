@@ -1,7 +1,7 @@
 ---
 title: "You Cannot Have the Weights, but You Can Have the Recipe"
 excerpt: "A week after MiniMax H3 opened its weights, the LoRA training stack was complete and the winning configuration was published with it. Korea sits outside the Applicable Territory, so the weights are off limits. The weights were not the only thing that got published."
-seo_title: "Inside the MiniMax H3 LoRA Recipe: 176 Curated Clips, Rank 16, and the Territory Problem"
+seo_title: "You Cannot Have the Weights, but You Can Have the Recipe"
 seo_description: "We break down the data curation and training configuration behind fal's MiniMax-H3-Realism-People-LoRA (rank 16, 5000 steps, 1e-4) and work out what a team outside the Applicable Territory can actually take from it."
 date: 2026-08-11
 last_modified_at: 2026-08-11

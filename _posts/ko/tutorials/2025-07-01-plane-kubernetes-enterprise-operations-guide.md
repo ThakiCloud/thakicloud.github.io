@@ -1,7 +1,7 @@
 ---
 title: "Plane 엔터프라이즈 쿠버네티스 운영 가이드 - Helm부터 자체 클라우드까지"
 excerpt: "Plane 쿠버네티스 운영의 모든 것을 다루는 완전한 엔터프라이즈 가이드. Helm 차트, AWS/GCP/자체 클라우드 배포, 규모별 하드웨어 스펙, 모니터링, CI/CD까지 실전 운영 노하우를 모두 담았습니다."
-seo_title: "Plane 엔터프라이즈 쿠버네티스 운영 가이드 - Helm 자체클라우드 - Thaki Cloud"
+seo_title: "Plane 엔터프라이즈 쿠버네티스 운영 가이드 - Helm부터 자체 클라우드까지"
 seo_description: "Plane 엔터프라이즈 쿠버네티스 완전 운영 가이드. Helm 차트 AWS EKS GCP GKE 자체클라우드 구축 규모별 하드웨어 스펙 모니터링 CI/CD 백업 보안"
 date: 2025-07-01
 last_modified_at: 2025-07-01

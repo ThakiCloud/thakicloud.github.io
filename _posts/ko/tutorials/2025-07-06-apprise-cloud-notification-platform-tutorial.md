@@ -1,7 +1,7 @@
 ---
 title: "Apprise: 클라우드 기업을 위한 통합 알림 플랫폼 구축 완전 가이드"
 excerpt: "13.9k 스타의 Apprise로 클라우드 인프라 모니터링부터 고객 알림까지, 엔터프라이즈급 통합 알림 시스템을 macOS에서 실습과 함께 구축해보세요."
-seo_title: "Apprise 클라우드 알림 플랫폼 Python BSD 라이센스 완벽 가이드 - Thaki Cloud"
+seo_title: "Apprise: 클라우드 기업을 위한 통합 알림 플랫폼 구축 완전 가이드"
 seo_description: "Python 기반 Apprise 프레임워크로 클라우드 기업의 인프라 모니터링, CI/CD, 보안 알림 시스템을 구축하는 방법을 BSD 라이센스 분석과 함께 상세히 알아봅니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06

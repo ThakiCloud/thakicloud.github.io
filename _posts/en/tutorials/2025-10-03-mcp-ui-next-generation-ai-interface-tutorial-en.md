@@ -1,7 +1,7 @@
 ---
-title: "MCP-UI: Building Next-Generation AI Interfaces with Model Context Protocol"
+title: "MCP-UI: Building Interactive AI Interfaces over MCP"
 excerpt: "Learn how to create interactive UI experiences over MCP protocol. Build dynamic interfaces that enhance AI agent interactions with real-time components and seamless integration."
-seo_title: "MCP-UI Tutorial: Next-Gen AI Interface Development Guide - Thaki Cloud"
+seo_title: "MCP-UI: Building Interactive AI Interfaces over MCP"
 seo_description: "Complete guide to MCP-UI development. Learn to build interactive AI interfaces with TypeScript, Python, and Ruby. Includes practical examples and deployment strategies."
 date: 2025-10-03
 tags:

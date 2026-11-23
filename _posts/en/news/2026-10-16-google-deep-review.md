@@ -1,6 +1,6 @@
 ---
-title: "Google's 'Deep Review': the agent that stress-tests your manuscript before submission"
-seo_title: "Google Research Deep Review: 4-stage agentic document verification, 16,000+ manuscripts at STOC/ICML/NeurIPS/ICLR pilot - ThakiCloud"
+title: "Deep Review: Google's Agent That Stress-Tests Manuscripts"
+seo_title: "Deep Review: Google's Agent That Stress-Tests Manuscripts"
 seo_description: "Google Research released Deep Review, an agentic system that stress-tests manuscripts, design docs, and complex proposals. A 4-stage pipeline of segmentation, adaptive budgeting, parallel verification, and global synthesis with grounding, with two free reviews per week."
 excerpt: "An AI that stress-tests a manuscript before submission is now a public service. Google Research's Deep Review gave pre-submission feedback to 16,000+ manuscripts across STOC 2026, ICML 2026, NeurIPS 2026, and ICLR 2027, and anyone can now use it twice a week for free. The 4-stage pipeline and what it means for review loops."
 date: 2026-10-16

@@ -1,6 +1,6 @@
 ---
-title: "The Router's Toll: skill-router 파이프라인이 스스로 내는 토큰 통행료를 실측하고, 결정론 precondition gate로 그 bill의 71.6%를 스킵합니다"
-seo_title: "The Router's Toll: 하이브리드 skill-router 파이프라인의 자체 token overhead share 실측과 precondition gate 스킵 논문 소개 (routing overhead share, cost-quality frontier, BM25, LLM reranking, duty-cycle, token metering, 셀프호스트 H200) - ThakiCloud"
+title: "라우터 통행료: 스킬 라우터가 쓰는 토큰 비용"
+seo_title: "라우터 통행료: 스킬 라우터가 쓰는 토큰 비용"
 seo_description: "라우팅 문헌은 라우터가 '얼마를 아끼는지'만 가격 매겨 왔고, 라우터 파이프라인 자체가 에이전트 루프 token의 몇 %를 쓰지는 측정하지 못했습니다. 이 실측 논문은 2,293-entry production skill registry와 동결 63-decision holdout에서 off/lite/full/gated 4개 arm을 미터링하고, full 파이프라인이 결정당 1,440.3 token(0.45574%)을 내며 그 bill의 71.6%가 LLM 호출임을 보여 줍니다. break-even 정확도 lift는 0.30%인데 인용 lift는 8.9pp입니다. 사전 등록 30-config sweep에서 zero-degradation-safe 구성은 정확히 6개이고, 최적 family는 production scale에서 holdout 100%를 스킵하며 bill을 71.6% 줄이는데 실측 정확도 손실이 0입니다."
 excerpt: "라우팅 문헌은 라우터가 아끼는 것만 가격 매겨 왔습니다. 라우터 파이프라인 스스로가 에이전트 루프 token의 몇 %를 쓰지는 측정한 적이 없습니다. 이 논문은 그 회계 공백을 2,293-skill production registry에서 실측하고, 결정론 precondition gate로 bill의 71.6%를 스킵하면서 실측 정확도 손실이 0임을 보여 줍니다."
 date: 2026-10-23

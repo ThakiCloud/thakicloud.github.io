@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA TensorRT-LLM: Large Language Model Inference Performance Optimization and Deployment Strategy"
+title: "TensorRT-LLM: Inference Optimization and Deployment"
 excerpt: "A detailed look at how TensorRT-LLM improves LLM inference performance by up to 6.7x and how to introduce it to a real production environment."
-seo_title: "TensorRT-LLM Performance Optimization Guide - 6.7x LLM Inference Speed on NVIDIA GPUs - Thaki Cloud"
+seo_title: "TensorRT-LLM: Inference Optimization and Deployment"
 seo_description: "Learn how to improve NVIDIA TensorRT-LLM inference performance for Llama 2 70B by 6.7x using tensor parallelism and FlashAttention optimization techniques."
 date: 2025-08-22
 last_modified_at: 2025-08-22

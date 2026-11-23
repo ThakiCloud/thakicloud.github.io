@@ -1,7 +1,7 @@
 ---
-title: "Growth Warning and $800 Billion: The Week the Axis of Competition Moved from Speed to Cash"
+title: "Growth Warning and $800 Billion: Competition Shifts to Cash"
 excerpt: "Anthropic's IPO filing (S-1) carries two sentences at once. Over $800 billion in future compute, data center, and power obligations, and a warning that growth can slow. The token limits that followed, the reversing credit, the traces to leave, and the processes to control are all pieces of the same transition. This is the week the axis of competition moved from speed to cash, and the week the question began: answer a company's execution cost and its records with numbers."
-seo_title: "Anthropic S-1's $800 Billion Compute Commitments and Growth Slowdown Warning: The Week the Axis of Competition Moved to Cash"
+seo_title: "Growth Warning and $800 Billion: Competition Shifts to Cash"
 seo_description: "Anthropic's IPO filing lists over $800 billion in future compute, data center, and power obligations alongside a warning that growth will slow. OpenAI's December token limits, CoreWeave and Nebius shut out of the bond market, distillation defense for Astra, Grok watermarking, SpaceX's 1.2 million GPU supercomputer, and Germany's AI tax proposal. We organized the common signal in today's digest and the Paxis lens."
 date: 2026-11-01
 last_modified_at: 2026-11-01

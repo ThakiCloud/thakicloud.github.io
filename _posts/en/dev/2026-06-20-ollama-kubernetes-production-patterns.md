@@ -1,7 +1,7 @@
 ---
 title: "Running Ollama on Kubernetes in Production"
 excerpt: "Practical patterns for operating Ollama as an LLM serving layer in a K8s cluster rather than as a local experimentation tool."
-seo_title: "Ollama Kubernetes Production Deployment Patterns GPU PVC HPA - Thaki Cloud"
+seo_title: "Running Ollama on Kubernetes in Production"
 seo_description: "GPU node configuration, model storage PVC design, HPA autoscaling, Prometheus monitoring, and Modelfile patterns for deploying Ollama on Kubernetes."
 date: 2026-06-20
 last_modified_at: 2026-06-20

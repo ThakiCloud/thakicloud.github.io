@@ -1,6 +1,6 @@
 ---
 title: "Your Agents Aren't Stuck on Algorithms. They're Stuck on Plumbing."
-seo_title: "arXiv 2607.01120 analysis: the bottleneck for self-evolving agents is system substrate, not RL algorithms | ThakiCloud"
+seo_title: "Your Agents Aren't Stuck on Algorithms. They're Stuck on Plumbing."
 seo_description: "A paper from Ant Group, HKUST and Tsinghua argues that the bottleneck for enterprise self-evolving agents is not stronger LLMs or better RL algorithms, but the missing system substrate that turns deployed agent experience into governed learning material. We walk through its three pillars and hold the same ruler against ThakiCloud's real model-routing policy file."
 excerpt: "The agent you deployed is frozen on day one. Weights, prompts, tool lists, all fixed. This paper puts the blame on plumbing rather than algorithms."
 date: 2026-08-03

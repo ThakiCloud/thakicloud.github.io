@@ -1,7 +1,7 @@
 ---
 title: "182 Credentials Came Out of Agent Logs in Public Repositories"
 excerpt: "The encrypted thinking blocks a reasoning model hands back turned out to be portable across the provider's own ecosystem. Researchers decoded 315,320 blocks scraped from public repositories and pulled 62 API keys out of them."
-seo_title: "Stealing Reasoning Traces analysed: four attacks that follow when encrypted reasoning blocks are portable across a provider"
+seo_title: "182 Credentials Came Out of Agent Logs in Public Repositories"
 seo_description: "An analysis of arXiv 2608.09867. We walk through the architectural flaw of reasoning blocks signed with a single global key and interchangeable across sessions, users and models, the resulting distillation, secret extraction, prompt injection and safety bypass, and what agent teams should do about it."
 date: 2026-08-13
 last_modified_at: 2026-08-13

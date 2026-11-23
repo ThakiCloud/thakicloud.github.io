@@ -1,7 +1,7 @@
 ---
-title: "One side: an $895.4 billion commitment. The other: a 33% diet."
+title: "$895.4 Billion Commitment vs. a 33% Usage Cut"
 excerpt: "Anthropic's $895.4 billion (about 1,203 trillion won) computing spend commitment and Apple's 33% cut to the daily AI usage limit stood side by side on the same morning. When the spending ledger and the cutting ledger are both visible at once, 'what is one token worth' becomes the question for the whole industry."
-seo_title: "One side: an $895.4 billion commitment, the other: a 33% diet | ThakiCloud"
+seo_title: "$895.4 Billion Commitment vs. a 33% Usage Cut"
 seo_description: "Anthropic's $895.4 billion computing commitment, Apple's 33% cut to AI usage fees, and More's cost-per-token strategy with Token Factory. Analyzing the signals from the morning AI became a ledger, and answering with governance at the agent execution layer."
 date: 2026-11-05
 last_modified_at: 2026-11-05

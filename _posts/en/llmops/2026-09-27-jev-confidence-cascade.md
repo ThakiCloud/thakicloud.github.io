@@ -1,5 +1,5 @@
 ---
-title: "Cheap Model First, Expensive Model Only for the Hard Cases: A Confidence Gate for LLM Inference"
+title: "Confidence Gate: Cheap Model First, Strong Model If Hard"
 excerpt: "Most inference cost is burned not on the hard requests but on the ones that are not. Run a cheap decision model over everything, then hand only the low-confidence minority to a frontier LLM, and you can cut cost sharply while holding quality. We walk through an independent benchmark's numbers to see where this cascade holds and where it breaks."
 date: 2026-09-27
 permalink: /en/llmops/jev-confidence-cascade/

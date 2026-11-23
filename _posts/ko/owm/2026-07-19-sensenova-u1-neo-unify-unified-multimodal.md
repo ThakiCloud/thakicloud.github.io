@@ -1,7 +1,7 @@
 ---
 title: "VAE를 버린 통합 멀티모달: SenseNova U1과 NEO-Unify, 그리고 온프렘 서빙"
 excerpt: "상탕(SenseTime)이 日日新 SenseNova U1을 Apache 2.0으로 공개했습니다. 비주얼 인코더와 VAE를 모두 없앤 NEO-Unify 아키텍처로 이해·생성·편집·인터리브를 한 모델에서 처리합니다. 오픈 가중치(8B-MoT/A3B-MoT)와 호스티드 U1 Pro의 차이, 벤치마크상 위치, transformers·vLLM-Omni·ComfyUI 서빙 경로, 그리고 A1111에는 왜 못 올리는지까지 온프렘 관점으로 정리합니다."
-seo_title: "SenseNova U1 NEO-Unify 통합 멀티모달 - 오픈웨이트와 온프렘 서빙 - Thaki Cloud"
+seo_title: "VAE를 버린 통합 멀티모달: SenseNova U1과 NEO-Unify, 그리고 온프렘 서빙"
 seo_description: "SenseNova U1(NEO-Unify, VAE 제거, 8B-MoT/A3B-MoT MoE, Apache 2.0)을 팩트 기반으로 정리. U1 Pro와 오픈 가중치 구분, 벤치마크, transformers·vLLM-Omni·GGUF 서빙, ComfyUI 지원과 A1111 비호환, ThakiCloud K8s 온프렘 서빙 관점."
 date: 2026-07-19
 last_modified_at: 2026-07-19

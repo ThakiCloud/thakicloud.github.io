@@ -1,6 +1,6 @@
 ---
-title: "CPU-ARC: 풀이 한 번이면 충분하다. 바꿔 말해도 값을 바꿔도 16에서 291배 싸고, 8개 벤치마크 중 7개는 소스 모델에 못지않다"
-seo_title: "CPU-ARC (Agentic Reasoning Caching) NVIDIA tech report: LLM reasoning traces compiled into CPU-executable semantic function networks, 16-291x lower per-invocation cost on rephrased and reparameterized instances, accuracy on or above the source model on 7 of 8 benchmarks, AIME 2025 93.3% vs 83.3%, build cost 12-84x, break-even 13-90 invocations, gated serving fallback, fine-tuned Llama 3.2 1B target - ThakiCloud"
+title: "CPU-ARC: 추론은 한 번이면 충분하다"
+seo_title: "CPU-ARC: 추론은 한 번이면 충분하다"
 seo_description: "프런티어 모델이 문제를 한 번 풀면, 그 추론 흔적을 CPU에서 도는 시맨틱 함수 네트웍으로 컴파일하는 CPU-ARC. 같은 문제 계열의 새 인스턴스는 16에서 291배 싼 가격에 다시 풀리고, 8개 벤치마크 중 7개에서 정확도는 소스 모델에 못지않았습니다. AIME 2025에서는 10점 이겼습니다. 빌드 비용, 브레이크이븐, gated serving 구조, 적용 전 한계까지."
 excerpt: "풀이 한 번이면 충분합니다. NVIDIA의 CPU-ARC는 프런티어 모델의 추론 흔적을 CPU에서 도는 시맨틱 함수 네트웍으로 컴파일해, 바꿔 말하고 값을 바꿔도 새 인스턴스를 16분의 1에서 291분의 1 가격에 다시 풀게 합니다. 정확도는 8개 벤치마크 중 7개에서 소스 모델에 못지않았고, AIME 2025에서는 오히려 10점 높았습니다."
 date: 2026-11-22

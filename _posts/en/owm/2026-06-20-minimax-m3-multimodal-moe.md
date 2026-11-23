@@ -1,7 +1,7 @@
 ---
-title: "MiniMax-M3: 428B MoE Multimodal, 1M Context and MSA Deliver 9x Faster Prefill Than M2.7"
+title: "MiniMax-M3: Multimodal MoE with 9x Faster Prefill"
 excerpt: "MiniMaxAI's M3 is a 428B total / 23B active parameter MoE multimodal VLM. 1M context, MiniMax Sparse Attention, SGLang/vLLM support. License is minimax-community; verify the full text before commercial deployment."
-seo_title: "MiniMax-M3 428B MoE Multimodal Model On-Premises Serving Guide - ThakiCloud"
+seo_title: "MiniMax-M3: Multimodal MoE with 9x Faster Prefill"
 seo_description: "MiniMax-M3 architecture (428B/23B MoE, 1M context, MSA), arXiv:2606.13392, SGLang/vLLM serving, Kueue deployment strategy, and license considerations."
 date: 2026-06-20
 last_modified_at: 2026-06-20

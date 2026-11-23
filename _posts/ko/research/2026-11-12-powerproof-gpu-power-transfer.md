@@ -1,6 +1,6 @@
 ---
-title: "PowerProof: H100·H200으로 학습한 GPU 전력 예측 모델은 왜 B200에서 실패했는가?"
-seo_title: "PowerProof: H100·H200 전력 예측 모델의 B200 적용 실패 분석 | ThakiCloud"
+title: "PowerProof: GPU 전력 예측이 B200에서 실패한 이유"
+seo_title: "PowerProof: GPU 전력 예측이 B200에서 실패한 이유"
 seo_description: "H100·H200에서 잰 GPU 보드 전력으로 학습한 Ridge·GBDT 모델을 B200에 그대로 적용했더니 평균 전력 WAPE가 30.02%와 43.33%였고 240건 전부 과소예측이었습니다. 사전 동결 평가 절차, 실패 양상, 개발 분석, 다음 독립 검증 계획을 정리했습니다."
 excerpt: "H100·H200 측정으로 학습한 서빙 전력 예측 모델을 B200에 그대로 적용했더니 평균 전력 오차가 30%와 43%였고, 240건 모두 과소예측이었습니다."
 date: 2026-11-12

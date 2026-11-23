@@ -1,7 +1,7 @@
 ---
-title: "GPU Workload Preemption with Kueue: ClusterQueue Design and Priority Patterns"
+title: "GPU Preemption with Kueue: ClusterQueue Design Patterns"
 excerpt: "Kueue's preemption mechanism and ClusterQueue design principles from the perspective of operating a real AI/ML platform."
-seo_title: "Kueue GPU Scheduling Preemption Patterns ClusterQueue Design - Thaki Cloud"
+seo_title: "GPU Preemption with Kueue: ClusterQueue Design Patterns"
 seo_description: "Kueue ClusterQueue design, workload priority, GPU preemption policy, quota borrowing, and MultiKueue multi-cluster deployment patterns with practical examples."
 date: 2026-06-20
 last_modified_at: 2026-06-20

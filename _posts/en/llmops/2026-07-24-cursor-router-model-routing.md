@@ -1,6 +1,6 @@
 ---
-title: "A Router That Swaps Models Per Request: How Cursor Router Cut Costs by 60%"
-seo_title: "How Cursor Router's Model Routing Cuts Costs by 60% | ThakiCloud"
+title: "Cursor Router: Swapping Models Per Request to Cut Costs"
+seo_title: "Cursor Router: Swapping Models Per Request to Cut Costs"
 seo_description: "Cursor Router classifies coding requests by task type and complexity and automatically routes them between frontier models and low-cost models. Trained on more than 600,000 real-world requests, it cuts costs by 30 to 60 percent without sacrificing quality. Here is how it works, and how ThakiCloud applies the same pattern to model-tier routing and skill routing."
 excerpt: "Sending every request to the top model is wasteful. Cursor Router assigns exactly as much intelligence as each request needs, cutting cost while holding quality steady. Here is why routing is becoming a new axis of frontier performance."
 date: 2026-07-24

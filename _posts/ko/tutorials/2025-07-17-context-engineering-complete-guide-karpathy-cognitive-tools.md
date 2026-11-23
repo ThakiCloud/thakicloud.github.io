@@ -1,7 +1,7 @@
 ---
 title: "Context Engineering 완전 가이드: Karpathy부터 IBM 인지 도구까지"
 excerpt: "Andrej Karpathy가 정의한 Context Engineering의 모든 것. 생물학적 메타포로 이해하는 Atoms→Molecules→Cells→Organs→Cognitive Tools 진화 과정과 실전 활용법"
-seo_title: "Context Engineering 완전 가이드 - Karpathy 이론부터 IBM 인지 도구까지 - Thaki Cloud"
+seo_title: "Context Engineering 완전 가이드: Karpathy부터 IBM 인지 도구까지"
 seo_description: "프롬프트 엔지니어링을 넘어선 차세대 기술 Context Engineering. Andrej Karpathy 정의부터 IBM/Princeton/MIT 최신 연구까지 생물학적 메타포와 실습으로 완벽 마스터"
 date: 2025-07-17
 last_modified_at: 2025-07-17

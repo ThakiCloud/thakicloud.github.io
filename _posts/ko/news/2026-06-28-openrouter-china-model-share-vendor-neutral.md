@@ -1,7 +1,7 @@
 ---
-title: "OpenRouter 점유율 역전이 말하는 것: 토큰은 매출이 아니다, 그리고 모델 중립의 값어치"
+title: "OpenRouter 점유율 역전이 말해 주는 것"
 excerpt: "OpenRouter에서 미국 모델 토큰 점유율이 1년 만에 약 70%에서 약 30%로 떨어지고 중국 오픈웨이트 모델이 약 46%까지 올라왔습니다. 그러나 토큰 점유율과 매출 점유율이 갈라지는 시장 재편을 한 겹 들여다보고, 모델 중립 라우팅과 라이선스·데이터 컴플라이언스 레이어라는 ThakiCloud·Paxis의 자리를 정리합니다."
-seo_title: "OpenRouter 미·중 모델 점유율 역전과 모델 중립 전략 - Thaki Cloud"
+seo_title: "OpenRouter 점유율 역전이 말해 주는 것"
 seo_description: "OpenRouter 토큰 점유율에서 미국 모델이 70%에서 30%로 내려가고 중국 모델이 46%로 올라온 데이터를 검증하고, 토큰 점유율과 매출 점유율의 분리(Anthropic 토큰 12%·매출 46%)를 짚습니다. DeepSeek·Qwen 부상의 원인과 모델 중립 라우팅·컴플라이언스 레이어라는 ThakiCloud·Paxis 관점 시사점을 정리합니다."
 date: 2026-06-28
 last_modified_at: 2026-06-28

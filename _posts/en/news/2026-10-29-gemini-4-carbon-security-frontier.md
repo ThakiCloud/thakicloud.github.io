@@ -1,7 +1,7 @@
 ---
 title: "The Frontier Race Moves to Who Defends First"
 excerpt: "Google DeepMind's new model Gemini 4 Carbon claims 11 of 15 public benchmarks at number one. More than the scores, the staged rollout that puts cyber-defense organizations first is changing what a platform must ask before it registers a new model."
-seo_title: "Gemini 4 Carbon Announced - Security-First Staged Rollout, and Why Platform Evaluation Changes"
+seo_title: "The Frontier Race Moves to Who Defends First"
 seo_description: "Google DeepMind's Gemini 4 Carbon leads the Artificial Analysis Intelligence Index v5.0 and claims 11 of 15 public benchmarks. What the cyber-defense-first staged rollout signals for model selection and platform evaluation."
 date: 2026-10-29
 last_modified_at: 2026-10-29

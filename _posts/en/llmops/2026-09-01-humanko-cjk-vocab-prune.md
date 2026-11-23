@@ -1,7 +1,7 @@
 ---
-title: "Chinese Characters Leaking Into Korean Output? Check Your Temperature First"
+title: "Chinese Characters in Korean Output? Check Temperature"
 excerpt: "Qwen3.8-27B drops Han characters mid-sentence when answering in Korean. Chasing the cause, we found that a single generation setting accounts for a 5x swing, and pruning the output path cut real errors from 1.81% to 0.18% while keeping Korean Hanja notation alive."
-seo_title: "Korean LLM Han Character Leakage: Temperature, DPO, Vocabulary Pruning"
+seo_title: "Chinese Characters in Korean Output? Check Temperature"
 seo_description: "We measured CJK contamination in Qwen3.8-27B Korean responses across 3,369 prompts. Temperature drives a 5x difference, and lm_head vocabulary pruning cuts real errors from 1.81% to 0.18% while preserving Korean Hanja notation."
 date: 2026-09-01
 published: true

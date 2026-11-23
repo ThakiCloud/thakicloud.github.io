@@ -1,5 +1,5 @@
 ---
-title: "24GB 그래픽카드로 122B 모델을? llama.cpp를 텐서 단위로 쪼갠 ATSInfer를 뜯어봤습니다"
+title: "ATSInfer: llama.cpp를 텐서 단위로 쪼개다"
 excerpt: "레이어나 전문가 단위가 아니라 텐서 하나하나를 CPU와 GPU에 나눠 배치하면, RTX 4090 한 장으로 VRAM을 훌쩍 넘는 모델을 돌리면서 디코딩을 최대 3.29배 끌어올릴 수 있다는 논문 ATSInfer를 읽고, 그 원리와 우리 서빙 관점에서의 함의를 정리했습니다."
 date: 2026-07-20
 tags:

@@ -3,7 +3,7 @@ title: "The Day the Chip Took a Loan"
 excerpt: "Amazon is reviewing a structure in which it sells $8 billion of chips and leases them back. The BIS warns on circular financing, and the physical world has a 159-trillion-won investment stalled at its door. The duality of capital that today's news shows."
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/news/chip-took-a-loan/"
-seo_title: "Chip Leasing and Sale-and-Leaseback, the BIS Circular Financing Warning, and How to Read AI Infrastructure Balance Sheets"
+seo_title: "The Day the Chip Took a Loan"
 seo_description: "Big Tech's AI capex is moving off the balance sheet through chip leasing, asset-collateralized loans, and sale-and-leaseback. We analyze the circular financing risk the Bank for International Settlements has pointed to, and the preparations an enterprise running agents should make, from today's news."
 date: 2026-10-05
 last_modified_at: 2026-10-05

@@ -1,7 +1,7 @@
 ---
-title: "Jitsu: Complete Guide to Open-Source Data Collection Platform - Segment Alternative"
+title: "Jitsu: An Open-Source Alternative to Segment"
 excerpt: "Learn how to set up and use Jitsu, an open-source alternative to Segment for real-time data collection and streaming to data warehouses. Complete tutorial with Docker setup and integration examples."
-seo_title: "Jitsu Tutorial: Open-Source Data Collection Platform Setup Guide - Thaki Cloud"
+seo_title: "Jitsu: An Open-Source Alternative to Segment"
 seo_description: "Complete Jitsu tutorial covering installation, configuration, and integration. Learn to build real-time data pipelines with this open-source Segment alternative for modern data teams."
 date: 2025-09-28
 tags:

@@ -1,6 +1,6 @@
 ---
-title: "The Transplant: How Much of a Reusable Agent Skill's Capability Survives a Harness Move, Computed Before the Move"
-seo_title: "The Transplant: Introducing the Cross-Harness Skill Transplant and Capability Retention Measurement Paper (System-Prompt, Tool-Schema, Model-Tier Shift, Self-Hosted H200) - ThakiCloud"
+title: "The Transplant: What a Skill Keeps After Changing Harnesses"
+seo_title: "The Transplant: What a Skill Keeps After Changing Harnesses"
 seo_description: "A skill measured once on its home harness can be redeployed to a harness with a different system prompt, tool schema, or model tier, but no controlled study had quantified how much capability survives the transplant. This analytic paper presents an identity that decomposes the portability gap exactly into a loading component and an execution component, closed-form retention for verbatim and re-wrap transplant policies, fleet-level break-even rules for transplant versus re-tune versus regenerate, and a deterministic 2×2×2 factorial protocol on self-hosted H200."
 excerpt: "The share of task success rate and routing recall a skill loses when it moves harnesses is computed from the skill's own properties before the move. The portability gap decomposes exactly into a loading component and an execution component. A skill fully coupled to the schema shows total silent breakage under verbatim transplant."
 date: 2026-10-19

@@ -1,6 +1,6 @@
 ---
-title: "에이전트가 오래 못 버티는 이유는 모델이 아니라 상태였습니다, LongHorizon-Harness를 직접 깔아봤습니다"
-seo_title: "LongHorizon-Harness 설치 실측과 MEA 루프 분석 - 장기 실행 에이전트 하네스 - ThakiCloud"
+title: "에이전트가 무너지는 이유는 상태: LongHorizon-Harness"
+seo_title: "에이전트가 무너지는 이유는 상태: LongHorizon-Harness"
 seo_description: "장기 실행 에이전트가 무너지는 원인을 태스크 상태 관리 문제로 재정의한 LongHorizon-Harness(arXiv:2608.01964)를 직접 설치해 CLI, 설정 스키마, 읽기 전용 감사 강제 코드를 확인하고 ThakiCloud Paxis 관점에서 정리했습니다."
 excerpt: "같은 모델로 WeaveBench 점수가 51.8%에서 80.7%로 올랐습니다. 바뀐 것은 모델이 아니라 상태를 어디에 두느냐였습니다."
 date: 2026-08-08

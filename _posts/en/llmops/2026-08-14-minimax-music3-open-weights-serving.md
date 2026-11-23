@@ -1,7 +1,7 @@
 ---
 title: "Serving MiniMax Music 3 Means Budgeting Disk Before GPU"
 excerpt: "An open-weights model that writes five-minute songs just shipped. The model card says 24GB of VRAM is enough, but pulling the full repository costs you 53.35GiB. We measured the repository metadata directly to find where that gap comes from and what a serving operator has to prepare."
-seo_title: "MiniMax Music 3 serving measured: the gap between 53GiB of weights and 24GB of VRAM"
+seo_title: "Serving MiniMax Music 3 Means Budgeting Disk Before GPU"
 seo_description: "We aggregated the Hugging Face blob metadata for MiniMax-Music3 to measure per-component weight size. Covers the Hybrid-LM architecture, SGLang-Omni serving commands, and the community license revenue gate and safeguard obligations from an on-premises serving perspective."
 date: 2026-08-14
 last_modified_at: 2026-08-14

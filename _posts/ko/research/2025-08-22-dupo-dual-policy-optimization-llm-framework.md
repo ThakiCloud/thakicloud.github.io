@@ -1,7 +1,7 @@
 ---
-title: "DuPO: 듀얼 정책 최적화를 통한 대규모 언어 모델의 혁신적 자기 감독 학습 프레임워크"
+title: "DuPO: 듀얼리티 기반 자기 감독 학습 프레임워크"
 excerpt: "기존 RLHF와 RLVR의 한계를 극복하는 DuPO의 듀얼리티 기반 자기 감독 학습 방법론과 다양한 작업에서의 성능 향상 분석"
-seo_title: "DuPO 듀얼 정책 최적화 LLM 프레임워크 연구 분석 - Thaki Cloud"
+seo_title: "DuPO: 듀얼리티 기반 자기 감독 학습 프레임워크"
 seo_description: "DuPO의 듀얼 학습 기반 자기 감독 방식으로 번역, 수학적 추론에서 평균 6.4점 성능 향상을 달성한 혁신적 LLM 최적화 프레임워크 연구"
 date: 2025-08-22
 last_modified_at: 2025-08-22

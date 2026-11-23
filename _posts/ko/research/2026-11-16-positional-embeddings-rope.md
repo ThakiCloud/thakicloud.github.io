@@ -1,6 +1,6 @@
 ---
 title: "포지셔널 임베딩: 어순은 어텐션이 스스로 알 수 없는 유일함"
-seo_title: "포지셔널 임베딩: RoPE를 처음부터 재현하고 2026 Partial RoPE와 NoPE 분화까지, 1M 컨텍스트 테이블 0.134 GB 절감 실측 - ThakiCloud"
+seo_title: "포지셔널 임베딩: 어순은 어텐션이 스스로 알 수 없는 유일함"
 seo_description: "Sebastian Raschka의 포지셔널 임베딩 튜토리얼은 GPT-2의 학습 절대 위치부터 2026년 partial RoPE와 NoPE 레이어까지 여섯 방식을 다룹니다. 이 글은 RoPE 핵심 수학(점적은 상대 거리만 의존)을 PyTorch로 재현하고 2026 오픈 모델 동향(MiniMax-M3, SmolLM3, Inkling)과 컨텍스트 경제학을 정리합니다."
 excerpt: "모델 config의 partial_rotary_factor와 no_pe 필드는 오타가 아니라 설계 결정입니다. RoPE 핵심(점적은 상대 거리만 의존)을 10줄 PyTorch로 재현하고 1M 컨텍스트에서 partial RoPE가 테이블을 절반(0.268→0.134 GB)으로 줄이는 것을 실측했습니다."
 date: 2026-11-16

@@ -1,6 +1,6 @@
 ---
-title: "Compressing a 30B MoE Model to 4-Bit Precision Within 32GiB of Host Memory"
-seo_title: "Measured 30B MoE Pruning + W4A16 Quantization on a Memory-Constrained GPU"
+title: "Compressing a 30B MoE to 4-Bit Within 32GiB of Host Memory"
+seo_title: "Compressing a 30B MoE to 4-Bit Within 32GiB of Host Memory"
 seo_description: "ThakiCloud measured pruning and 4-bit quantization of the roughly 61-billion-parameter Qwen3-Coder-30B-A3B checkpoint via shard streaming on a single H200 GPU pod with only 32GiB of host RAM."
 excerpt: "A measured paper that solves the problem of large MoE compression pipelines being bottlenecked by host RAM rather than GPU memory, using shard-level streaming pruning and layer-wise RTN W4A16 quantization."
 date: 2026-07-30

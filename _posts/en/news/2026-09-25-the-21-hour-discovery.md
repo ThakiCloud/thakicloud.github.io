@@ -1,7 +1,7 @@
 ---
 title: "The 21-Hour Discovery: The Day Claude Found a CRISPR-Like Enzyme System"
 excerpt: "Anthropic announced that Claude autonomously searched a DNA database for 21 hours and discovered an enzyme system reminiscent of CRISPR. Between a researcher who calls it 'incredibly exciting' and one who insists 'CRISPR-like is not the next CRISPR,' this post argues that the next frontier of agent autonomy is not runtime but the verification layer."
-seo_title: "Claude's 21-Hour Autonomous Search Finds CRISPR-Like Enzyme System | ThakiCloud"
+seo_title: "The 21-Hour Discovery: The Day Claude Found a CRISPR-Like Enzyme System"
 seo_description: "Analysis of Anthropic's Claude-led discovery announcement. A 21-hour DNA database search, a CRISPR-like enzyme system, praise and skepticism from two scientists, and what 'autonomous' actually means, examined through the lens of agent autonomy and verification layers."
 date: 2026-09-25
 last_modified_at: 2026-09-25

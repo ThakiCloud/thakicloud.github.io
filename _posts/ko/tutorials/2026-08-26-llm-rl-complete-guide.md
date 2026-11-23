@@ -1,6 +1,6 @@
 ---
 title: "LLM 강화학습의 전 과정을 한 지도로: Cameron Wolfe의 완전가이드"
-seo_title: "RLHF에서 GRPO++까지 LLM 강화학습 로드맵, Cameron Wolfe 가이드, ThakiCloud"
+seo_title: "LLM 강화학습의 전 과정을 한 지도로: Cameron Wolfe의 완전가이드"
 seo_description: "Netflix Research의 Cameron Wolfe가 LLM 강화학습을 first principles부터 프런티어까지 정리한 완전가이드(2026-08-24)를 리뷰합니다. MDP vs 밴딧 형성, RLHF vs RLVR, PPO/GAE, GRPO의 critic-free 설계와 CISPO·TIS·DAPO 변종, 온·오프라인과 스케일링 로까지. Maxis 파인튜닝 문서의 실용 참고서로 어떻게 쓰는지도 함께 다룹니다."
 excerpt: "RLHF에서 GRPO++까지, LLM 강화학습의 알고리즘 계보와 프런티어 주제를 단일 자료로 정리한 가이드입니다. token 단위 MDP와 sequence 단위 밴딧의 구분, critic 없는 GRPO의 설계 이유, DAPO의 로스 집계 편향 교정까지 한 지도로 볼 수 있습니다."
 date: 2026-08-26

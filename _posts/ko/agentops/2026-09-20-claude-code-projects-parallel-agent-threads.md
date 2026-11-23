@@ -1,6 +1,6 @@
 ---
-title: "조율자 한 명, 조종석 여러 개: Claude Code Projects의 병렬 클라우드 세션과 shared memory 구조"
-seo_title: "Claude Code Projects 재설계 분석 - 하나의 대화가 coordinator로 병렬 클라우드 세션·독립 브랜치·저장소 카피를 조율하고, shared memory와 merge conflict 처리를 담당하는 구조. 200 thread/일 상한과 병렬 세션의 plan limit 소모, Paxis 제어 평면과 Metis 서빙 경제와의 1:1 대응 - ThakiCloud"
+title: "조율자 한 명, 조종석 여러 개: Claude Code Projects"
+seo_title: "조율자 한 명, 조종석 여러 개: Claude Code Projects"
 seo_description: "Anthropic이 2026년 9월 17일 베타로 내놓은 재설계된 Claude Code Projects는 작업 쪼개기와 스레드 간 핸드오프, 결과 결합이라는 조율 부하를 Claude가 coordinator로 맡게 합니다. 각 병렬 스레드는 독립 클라우드 세션·독립 브랜치·독립 저장소 카피 위에서 돌아와 merge conflict를 시스템이 처리하고, shared memory가 반복 설명을 줄입니다. 병렬 코딩 에이전트를 운영하는 플랫폼 엔지니어 관점에서 이 조율 구조가 ThakiCloud Paxis 제어 평면과 Metis 서빙 경제와 어떻게 겹치는지 짚습니다."
 excerpt: "병렬 코딩 에이전트의 비용과 혼란은 대부분 모델이 아니라 조율 구조에서 나옵니다. Claude Code Projects가 하나의 대화를 coordinator로 놓고 각 스레드를 독립 세션·독립 브랜치·독립 저장소 카피로 격리하는 방식, 그리고 그 대가로 치르는 plan limit 소모와 merge conflict를 ThakiCloud 관점에서 읽습니다."
 date: 2026-09-20

@@ -1,7 +1,7 @@
 ---
-title: "Autonomous Remediation or Human Escalation: Calculating the Safety Boundary for Kubernetes GPU Incident Response"
+title: "Autonomy or Escalation: A Safety Boundary for GPU Incidents"
 excerpt: "Any team trying to hand Kubernetes GPU incident remediation to an LLM agent eventually runs into this question: how long should the agent be left to fix things on its own, and when should a human be called in. We introduce a paper that answers this not by gut feel, but by computing the boundary from a risk formula and a safety ceiling."
-seo_title: "Calculating the Safety Boundary for Autonomous K8s GPU Incident Remediation - Thaki Cloud"
+seo_title: "Autonomy or Escalation: A Safety Boundary for GPU Incidents"
 seo_description: "We introduce a paper that quantifies, using a 176-incident benchmark, the threshold separating autonomous remediation from human escalation for LLM agents handling Kubernetes GPU incidents. It shows how much more per-incident-type threshold calibration reduces MTTR compared to a single global threshold."
 date: 2026-07-16
 last_modified_at: 2026-07-16

@@ -1,7 +1,7 @@
 ---
-title: "OrcaCyber Nano 1.0: why a 27B cyber-defense model came down to a 16GB card"
+title: "OrcaCyber Nano 1.0: A 27B Cyber Model on a 16GB Card"
 excerpt: "OrcaRouter shipped OrcaCyber Nano 1.0, a 27B cyber-defense-specialized open-weight model, as an 'emergency release.' 262K context, vision input, and GGUF builds that run on a 16GB card are the point. Our verdict: the value is in the form, not the benchmark numbers, and that form puts a first local 27B defense specialist on the table for on-prem security lines."
-seo_title: "OrcaCyber Nano 1.0 27B cyber-defense open-weight - 16GB local, 262K context, DFlash2 speculation - Thaki Cloud"
+seo_title: "OrcaCyber Nano 1.0: A 27B Cyber Model on a 16GB Card"
 seo_description: "OrcaCyber Nano 1.0 (27B dense, 262K context, vision, GGUF) model card analysis: the emergency open-weight release, DFlash2 speculative decoding and MTP head, 16GB/24GB card memory math, how to read the self-reported benchmarks, and on-prem/edge security serving perspective. Includes ThakiCloud product implications."
 date: 2026-10-20
 last_modified_at: 2026-10-20

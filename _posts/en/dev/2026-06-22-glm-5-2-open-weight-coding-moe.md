@@ -1,7 +1,7 @@
 ---
-title: "The Open-Weight Model That Matches GPT-5.5 at One-Sixth the Cost: A Self-Hosting Analysis of GLM-5.2"
+title: "GLM-5.2: Matching GPT-5.5 at a Fraction of the Cost"
 excerpt: "Z.ai has released GLM-5.2, a 744B MoE coding model under the MIT license. Reports indicate it surpasses GPT-5.5 on SWE-bench Pro and Terminal-Bench at roughly one-sixth the cost. Vercel's CEO publicly expressed admiration. We examine the benchmark claims, the vLLM and SGLang self-hosting requirements, and what this means for ThakiCloud's on-premises and sovereign AI serving strategy."
-seo_title: "GLM-5.2 Open-Weight Coding Model Self-Hosting Analysis - Thaki Cloud"
+seo_title: "GLM-5.2: Matching GPT-5.5 at a Fraction of the Cost"
 seo_description: "Fact-checking GLM-5.2's SWE-bench Pro 62.1 and Terminal-Bench 81.0 scores (744B MoE, MIT, 1M context), reviewing FP8/8x H200/vLLM/SGLang self-hosting requirements, and drawing out ThakiCloud on-premises sovereign AI serving implications."
 date: 2026-06-22
 last_modified_at: 2026-06-22

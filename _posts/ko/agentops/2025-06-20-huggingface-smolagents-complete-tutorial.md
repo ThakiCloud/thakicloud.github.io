@@ -1,5 +1,5 @@
 ---
-title: "HuggingFace Smolagents 완벽 가이드: 코드로 사고하는 에이전트의 새로운 패러다임"
+title: "Smolagents: 코드로 사고하는 에이전트 만들기"
 excerpt: "HuggingFace Smolagents를 활용해 코드 기반 AI 에이전트를 구축하고 프로덕션 환경에서 안전하게 운영하는 방법을 실전 예제와 함께 소개합니다."
 date: 2025-06-20
 tags:

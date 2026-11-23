@@ -1,7 +1,7 @@
 ---
-title: "사람 데이터 한 줌이면 충분합니다: self-play 운전 정책에 사람을 정규화 앵커로 거는 법"
+title: "사람 데이터 한 줌으로 self-play 운전 정책 고정하기"
 excerpt: "순수 self-play는 빠르지만 사람과 호환되지 않는 운전 관습으로 수렴합니다. arXiv 2606.19370은 사람 데이터를 주 신호가 아니라 30분짜리 경량 정규화 앵커로 얹어, 모방학습 대비 2500배 적은 데이터로 더 안전한 정책을 얻는 방법을 정량적으로 보입니다."
-seo_title: "Spiced Self-Play 논문 분석 (arXiv 2606.19370) - 사람 30분 데이터로 사람 호환 운전 - Thaki Cloud"
+seo_title: "사람 데이터 한 줌으로 self-play 운전 정책 고정하기"
 seo_description: "data-regularized self-play로 사람과 협응하는 운전 정책을 학습하는 방법. on-policy KL 정규화, 30분 사람 데이터, 소비자 GPU 15시간, 2500배 데이터 효율을 ThakiCloud 멀티에이전트·RL 인프라 관점에서 분석합니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23

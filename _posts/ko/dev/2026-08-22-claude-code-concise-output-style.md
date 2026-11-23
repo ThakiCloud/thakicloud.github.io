@@ -1,6 +1,6 @@
 ---
 title: "Claude Code 내장 output style Concise: 결과부터 말하는 단축키"
-seo_title: "Claude Code Concise output style: 시스템 프롬프트 레벨의 응답 단축과 토큰 경제 - Thaki Cloud"
+seo_title: "Claude Code 내장 output style Concise: 결과부터 말하는 단축키"
 seo_description: "Claude Code v2.1.237이 내장 output style에 Concise를 추가했습니다. 결과가 먼저, 서론과 내레이션은 생략, 안전 정보는 그대로. 어떻게 동작하고 CLAUDE.md·skills·subagent와 어떻게 다른지, 에이전트 루프의 토큰 경제에서 어떤 의미를 가지는지 정리합니다."
 excerpt: "Concise는 Claude Code가 처음 내장한 응답 길이 조절 output style입니다. 시스템 프롬프트 레벨에서 '결과부터, 짧게'를 지시하되 에러 리포트와 보안 경고, 파괴적 작업 확인은 그대로 남기는 설계가 핵심이고, subagent에는 적용되지 않는다는 한계가 다중 에이전트 환경에서 가장 먼저 확인해야 할 지점입니다."
 date: 2026-08-22

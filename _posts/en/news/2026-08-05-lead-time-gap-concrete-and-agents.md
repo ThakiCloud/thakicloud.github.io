@@ -1,7 +1,7 @@
 ---
-title: "Concrete That Arrives in 2030, and the Agent That Finished the Job in 16 Days"
+title: "Concrete Takes Years, the Agent Finished in 16 Days"
 excerpt: "On the day the National AI Computing Center broke ground in Haenam, Alibaba's model ran a project for 16 days with no human involvement. With the clock of physical infrastructure and the clock of software now more than four years apart, today's news answers what companies are using to fill that gap."
-seo_title: "The AI Infrastructure Lead-Time Gap: Four Years Between Haenam's Groundbreaking and Autonomous Agents"
+seo_title: "Concrete Takes Years, the Agent Finished in 16 Days"
 seo_description: "From the groundbreaking of the Haenam National AI Computing Center to SpaceX's 20GW buildout, Apple's adoption of Gemini, and Red Hat's Asago project, one thread runs through the news of August 5, 2026: the gap between infrastructure lead time and agent speed."
 date: 2026-08-05
 last_modified_at: 2026-08-05

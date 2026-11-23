@@ -1,7 +1,7 @@
 ---
 title: "KAG: Comprehensive Guide to Knowledge Augmented Generation Framework"
 excerpt: "Explore KAG (Knowledge Augmented Generation), a revolutionary framework that combines OpenSPG engine with LLMs for logical reasoning and retrieval in professional domain knowledge bases."
-seo_title: "KAG Tutorial: Knowledge Augmented Generation Framework Guide - Thaki Cloud"
+seo_title: "KAG: Comprehensive Guide to Knowledge Augmented Generation Framework"
 seo_description: "Learn about KAG framework features, architecture, installation, and implementation. Complete tutorial for knowledge graph reasoning and Q&A solutions."
 date: 2025-09-09
 tags:

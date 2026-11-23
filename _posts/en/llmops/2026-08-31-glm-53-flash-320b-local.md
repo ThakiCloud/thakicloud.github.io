@@ -1,7 +1,7 @@
 ---
-title: "It Is Not 320B in 128GB of RAM: Reading the GLM-5.3-Flash Local Claim Correctly"
+title: "GLM-5.3-Flash: Reading the 128GB Local Claim Correctly"
 excerpt: "Z.ai's 320B MoE GLM-5.3-Flash is said to run locally on 128GB of RAM at 3-bit. True, but the macOS GPU-memory cap and the MoE active-parameter structure mean that '128GB' is not 128GB the model actually gets."
-seo_title: "GLM-5.3-Flash 320B Local Inference: Reading the 128GB RAM Math Correctly"
+seo_title: "GLM-5.3-Flash: Reading the 128GB Local Claim Correctly"
 seo_description: "What it actually takes to run Z.ai GLM-5.3-Flash (320B MoE, 18B active, 1M context) at 3-bit GGUF on 128GB of unified memory. The macOS 75% GPU cap, hierarchical memory placement, and how to read the benchmarks."
 date: 2026-08-31
 published: true

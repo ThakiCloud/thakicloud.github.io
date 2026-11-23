@@ -1,6 +1,6 @@
 ---
 title: "CPU에서 도는 스킬 검색: SKILLRET 소형 모델 패밀리 개발기"
-seo_title: "SKILLRET Small Family - 22M·109M 증류, int3/int4 양자화, drift-mixed, Reranker-0.6B 실측 정리 | ThakiCloud"
+seo_title: "CPU에서 도는 스킬 검색: SKILLRET 소형 모델 패밀리 개발기"
 seo_description: "1.19GB 교사(SkillRet NDCG@10 78.48)를 22M·109M 학생으로 증류하고 int4·int3로 줄였습니다. 22M int4는 17.0MB에서 75.14, 109M int4는 82.0MB에서 79.21이었습니다. 리랭커와 CPU 비용은 평가 조건이 달라 따로 정리했습니다."
 excerpt: "에이전트가 수천 개 스킬 중 맞는 것을 고르는 일을 GPU 없이 하려고 SKILLRET 임베딩을 작은 학생 모델로 증류하고 3~4비트로 줄였습니다. 같은 조건에서 잰 품질·크기 표와, 조건이 달라 따로 떼어 놓은 리랭커·CPU 비용 표를 함께 정리합니다. 안 된 것도 적었습니다."
 date: 2026-11-03

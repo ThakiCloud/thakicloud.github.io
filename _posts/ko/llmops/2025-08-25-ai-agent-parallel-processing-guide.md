@@ -1,7 +1,7 @@
 ---
 title: "AI Agent 병렬 처리: LangGraph와 CrewAI를 활용한 워크플로우 최적화"
 excerpt: "AI Agent들의 병렬 처리를 통해 복잡한 작업을 효율적으로 수행하는 방법을 알아보세요. LangGraph와 CrewAI를 활용한 실전 가이드와 성능 최적화 기법을 소개합니다."
-seo_title: "AI Agent 병렬 처리 완전 가이드: LangGraph CrewAI 워크플로우 최적화 - Thaki Cloud"
+seo_title: "AI Agent 병렬 처리: LangGraph와 CrewAI를 활용한 워크플로우 최적화"
 seo_description: "AI Agent 병렬 처리로 복잡한 작업을 효율적으로 수행하세요. LangGraph와 CrewAI를 활용한 실전 가이드, 성능 최적화 기법, 실제 프로젝트 적용 사례를 제공합니다."
 date: 2025-08-25
 last_modified_at: 2025-08-25

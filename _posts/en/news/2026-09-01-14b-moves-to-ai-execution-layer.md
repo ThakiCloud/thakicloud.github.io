@@ -1,7 +1,7 @@
 ---
-title: "A Morning When $14 Billion Moved in One Direction: The AI Battlefield Descends to the Execution Layer"
+title: "$14 Billion in One Morning: AI Money Moves to Execution"
 excerpt: "NVIDIA, Together AI, SB Energy. The big money in this morning's AI news all moved in one direction. Contracts worth $14 billion over the land of execution: chips, memory, datacenters, and power. We look at the questions this flow of money leaves for enterprise agent execution."
-seo_title: "AI Competition Moves to the Execution Layer: Analyzing $14 Billion in Infrastructure Deals in a Day | ThakiCloud"
+seo_title: "$14 Billion in One Morning: AI Money Moves to Execution"
 seo_description: "NVIDIA and MediaTek, $3.5 billion. Together AI and Saudi Humain, $5 billion. SB Energy and OpenAI, $5.5 billion in warrants. Why $14 billion moved into AI execution infrastructure in a single day, and what it means for enterprise agent execution."
 date: 2026-09-01
 last_modified_at: 2026-09-01

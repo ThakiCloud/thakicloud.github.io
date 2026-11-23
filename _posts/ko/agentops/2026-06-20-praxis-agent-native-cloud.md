@@ -1,7 +1,7 @@
 ---
 title: "Paxis: AI 직원 한 팀을 코드 없이 운영하는 Agent-Native Cloud"
 excerpt: "기존 클라우드가 서버를 다루듯, Paxis는 에이전트의 능력·도구·정책·감사를 일급 자원으로 다룹니다. 849개 스킬 자동 탑재, 작업마다 모델을 고르는 CostRouter, 쓸수록 다듬어지는 능력까지. 실제 동작하는 PoC를 코드와 함께 공개합니다."
-seo_title: "Paxis Agent-Native Cloud: 거버넌스·CostRouter·진화하는 스킬 - Thaki Cloud"
+seo_title: "Paxis: AI 직원 한 팀을 코드 없이 운영하는 Agent-Native Cloud"
 seo_description: "ThakiCloud Paxis는 자율 AI 에이전트를 안전하게 운영하는 Agent-Native Cloud입니다. L0-L3 자율도 거버넌스, 멀티-LLM CostRouter 비용 최적화, Git 기반 HKE 지식엔진, 849 스킬 하니스를 실제 코드와 함께 소개합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

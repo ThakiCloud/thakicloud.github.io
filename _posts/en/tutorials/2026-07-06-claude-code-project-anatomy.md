@@ -1,5 +1,5 @@
 ---
-title: "Setting Up a Claude Code Project the Right Way: Dissecting the .claude/ Folder"
+title: "Setting Up a Claude Code Project: Inside the .claude/ Folder"
 excerpt: "Most developers skip the setup and jump straight into prompting. That's a mistake. We dissect the structure of the .claude/ folder, from CLAUDE.md to rules, commands, skills, agents, and hooks, by measuring an actual production project running 1,671 skills. We also connect this pattern to how ThakiCloud productized it as the Agent-Native Cloud 'Paxis.'"
 tags:
   - claude-code

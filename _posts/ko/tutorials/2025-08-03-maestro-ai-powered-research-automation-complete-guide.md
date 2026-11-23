@@ -1,7 +1,7 @@
 ---
-title: "Maestro: AI 기반 연구 자동화 플랫폼 완전 가이드 - 멀티 에이전트 시스템으로 연구 혁신하기"
+title: "Maestro: 멀티 에이전트로 자동화하는 연구 플랫폼"
 excerpt: "복잡한 연구 작업을 자동화하는 Maestro의 멀티 에이전트 시스템을 마스터하세요. Docker 기반 설치부터 RAG 파이프라인, 실시간 연구 추적까지 완전 자체 호스팅 솔루션을 구축합니다."
-seo_title: "Maestro AI 연구 자동화 플랫폼 완전 가이드 - 멀티 에이전트 시스템 - Thaki Cloud"
+seo_title: "Maestro: 멀티 에이전트로 자동화하는 연구 플랫폼"
 seo_description: "Maestro AI 연구 애플리케이션의 멀티 에이전트 시스템 구축 방법부터 RAG 파이프라인, 실시간 추적, 자체 호스팅까지 전문가 수준의 연구 자동화 솔루션을 완벽 마스터하세요."
 date: 2025-08-03
 last_modified_at: 2025-08-03

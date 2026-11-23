@@ -1,7 +1,7 @@
 ---
-title: "RL Post-Training as Infrastructure: The slime Open-Source Framework and RL Scaling"
+title: "slime: Open-Source Infrastructure for RL Post-Training"
 excerpt: "slime, open-sourced by Z.ai, is an LLM post-training framework built for RL scaling. This post analyzes the infrastructure behind GLM-5.2's post-training process and maps the RL post-training stack to ThakiCloud's K8s training infrastructure."
-seo_title: "slime RL Post-Training Infrastructure Open-Source Analysis - Thaki Cloud"
+seo_title: "slime: Open-Source Infrastructure for RL Post-Training"
 seo_description: "Z.ai slime LLM post-training RL scaling framework, GLM-5.2 post-training, K8s-based RL training infrastructure and GPU orchestration analysis"
 date: 2026-06-21
 last_modified_at: 2026-06-21

@@ -1,7 +1,7 @@
 ---
-title: "13 Agents Write a Paper Together: Integrating Academic Research Skills into Our Stack"
+title: "13 Agents, One Paper: Academic Research Skills"
 excerpt: "From literature search to submission-ready manuscript, we connected a 10-stage pipeline automatically using a Claude Code skill pack and integrated it into the ThakiCloud agent environment. We explain what the design of 13 research agents, two rounds of peer review, and 100% citation verification actually means, and where the verified-only principle meets our platform philosophy."
-seo_title: "Academic Research Skills Integration - Claude Code 13-Agent Paper Pipeline | Thaki Cloud"
+seo_title: "13 Agents, One Paper: Academic Research Skills"
 seo_description: "A hands-on account of integrating the Academic Research Skills pack into the ThakiCloud agent platform: deep-research with 13 agents, academic-paper writing pipeline, two-stage peer review, and Semantic Scholar citation verification, with notes on multi-tenant implications."
 date: 2026-06-23
 last_modified_at: 2026-06-23

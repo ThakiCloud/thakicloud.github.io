@@ -1,7 +1,7 @@
 ---
 title: "The Day AI Moved in Two Directions at Once"
 excerpt: "On the same day, OpenAI shipped a 10-trillion-parameter model and its own chip, Anthropic pitched a $30 trillion market, and Perplexity put an entire agent runtime into one box on a desk. This post covers why both directions are real at the same time, and why execution location has to become an architecture decision."
-seo_title: "The Day AI Moved in Two Directions: 10 Trillion Parameters and a Desktop-Box Agent"
+seo_title: "The Day AI Moved in Two Directions at Once"
 seo_description: "The same day OpenAI's Bel reached 10 trillion parameters with a custom chip, Anthropic pitched a $30 trillion market on $11.6 billion in Q2 revenue, and Perplexity's Portable Computer ran an entire agent runtime on a single DGX Spark. An analysis of why up and down are both real at once, and how to bring the execution-location decision to the architecture layer."
 date: 2026-08-26
 last_modified_at: 2026-08-26

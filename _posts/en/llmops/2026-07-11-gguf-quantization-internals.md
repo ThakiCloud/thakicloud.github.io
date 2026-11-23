@@ -1,5 +1,5 @@
 ---
-title: "There Was Almost No Q4 Inside Q4_K_M: Dissecting GGUF Quantization Internals"
+title: "Almost No Q4 Inside Q4_K_M: GGUF Quantization Internals"
 excerpt: "There is a real gap between someone who downloads a GGUF file from Hugging Face and just clicks run, and someone who knows exactly which tensors are stored at how many bits inside that file. We actually downloaded a Q4_K_M file for Qwen2.5-0.5B and opened it tensor by tensor. Despite its name, only 6 percent of the file was true 4-bit Q4_K, and the effective bit width was not 4 but 6.16. This post walks through why that happens, using measured data on K-quantization's superblock structure and its 256-divisibility rule."
 tags:
   - quantization

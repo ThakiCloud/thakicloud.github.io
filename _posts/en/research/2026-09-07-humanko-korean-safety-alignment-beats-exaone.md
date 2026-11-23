@@ -1,6 +1,6 @@
 ---
-title: "Say 'I Don't Know' When You Don't, Answer When You Do: An Alignment Log That Pushed a 27B Model's Abstention to 92.8% on a Korean Bias Benchmark"
-seo_title: "Human-KO Safety Alignment: 92.8% Abstention on KoBBQ (EXAONE 65.7%), 6.7% Stereotyped Answers (EXAONE 28.0%), Pre-registered Conditional Bias Target Missed - ThakiCloud"
+title: "Know When to Say 'I Don't Know': A 27B Alignment Log"
+seo_title: "Know When to Say 'I Don't Know': A 27B Alignment Log"
 seo_description: "We raised a 27B model's abstention rate on the Korean bias benchmark KoBBQ from 78.8% to 92.8% and cut stereotyped answers to 6.7% of all items, a quarter of EXAONE's. The pre-registered conditional bias target was not met, and we explain the structural reason. The log also covers a DPO template defect, a β ladder, and a full capability gate."
 excerpt: "Two behaviors, one model: decline when the question lacks evidence, answer when the evidence is there. It took a ten-rung ladder to get both at once. Abstention went from 78.8% to 92.8% and stereotyped answers fell to a quarter, but one metric we set in advance was missed. We explain why."
 date: 2026-09-07

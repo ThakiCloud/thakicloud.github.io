@@ -1,6 +1,6 @@
 ---
 title: "지도 없는 4인 원정대: Gemini 4 Argon 에이전트의 27시간 Minecraft 완주"
-seo_title: "Google DeepMind의 Gemini 4 Argon 코딩 에이전트 4개가 27시간 14분에 걸쳐 Minecraft 주공을 완주했습니다. 역할 배정도 커리큘럼도 사람 손으로 쓴 도구도 없는 설정에서 신흥한 조율 행동(공유 메모리, 구조, 자기 교정)과 검증·비용 회계를 Paxis 관점에서 정리합니다. - ThakiCloud"
+seo_title: "지도 없는 4인 원정대: Gemini 4 Argon 에이전트의 27시간 Minecraft 완주"
 seo_description: "arXiv:2610.22319 리뷰: 커리큘럼·스킬 라이브러리 없이 표준 라이브러리 하나만으로 Minecraft를 완주한 멀티에이전트 실행의 조율 산출물, Observer 검증 설계, 91% 컨텍스트 캐시 비용 구조를 ThakiCloud Paxis 적용 관점에서 분석합니다."
 excerpt: "지도도 전문 도구도 없는 4인 원정대가 27시간 14분 만에 정상을 찍었다는 논문이 나왔다. Google DeepMind의 Gemini 4 Argon 에이전트 4개는 Minecraft 주공을 완주했고, 그 기록에는 605번의 추락과 2건의 '방금 말한 건 틀렸다'가 들어 있다. 이 글은 그 기록에서 멀티에이전트 플랫폼이 가져가야 할 네 가지 패턴을 뽑는다."
 date: 2026-10-19

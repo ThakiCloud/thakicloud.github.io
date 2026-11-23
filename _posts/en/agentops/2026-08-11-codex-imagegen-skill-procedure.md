@@ -1,7 +1,7 @@
 ---
 title: "An Agent Skill Is Worth What Its Procedure Is Worth, Not Its Capability"
 excerpt: "Open Codex's imagegen skill and the model call is one line. Everything else is routing rules and deterministic post-processing. We implemented that post-processing and measured it: 12.17 ms turned 2,376 green fringe pixels into zero."
-seo_title: "Inside the Codex imagegen Skill: Selling Procedure Instead of Model Capability"
+seo_title: "An Agent Skill Is Worth What Its Procedure Is Worth, Not Its Capability"
 seo_description: "We analyze the routing rules and chroma-key procedure defined by OpenAI Codex's imagegen system skill, then implement and measure its four stages: alpha extraction, soft matte, despill, and edge contraction."
 date: 2026-08-11
 last_modified_at: 2026-08-11

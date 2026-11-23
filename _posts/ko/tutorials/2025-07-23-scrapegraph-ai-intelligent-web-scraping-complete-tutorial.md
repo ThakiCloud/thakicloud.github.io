@@ -1,7 +1,7 @@
 ---
-title: "ScrapeGraphAI 완전 가이드: AI 기반 지능형 웹 스크래핑으로 데이터 수집 혁신하기"
+title: "ScrapeGraphAI: LLM으로 하는 지능형 웹 스크래핑"
 excerpt: "LLM을 활용한 혁신적인 웹 스크래핑 라이브러리 ScrapeGraphAI로 복잡한 웹사이트에서 정확한 데이터를 추출하는 방법을 단계별로 학습하는 완전한 실전 가이드"
-seo_title: "ScrapeGraphAI AI 웹 스크래핑 튜토리얼 - LLM 기반 데이터 추출 완전 가이드 - Thaki Cloud"
+seo_title: "ScrapeGraphAI: LLM으로 하는 지능형 웹 스크래핑"
 seo_description: "ScrapeGraphAI를 사용한 AI 기반 웹 스크래핑 방법을 실전 예제와 함께 상세히 알아보세요. OpenAI, Ollama 연동부터 고급 파이프라인까지 포함된 완전한 가이드입니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23

@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to mdream: Convert Any Website to Clean Markdown for AI & LLMs"
+title: "mdream: Converting Websites to Clean Markdown for LLMs"
 excerpt: "Learn how to use mdream, a powerful Node.js library that converts websites into clean markdown format perfect for AI applications and LLM context generation."
-seo_title: "mdream Tutorial: HTML to Markdown Conversion for AI - Thaki Cloud"
+seo_title: "mdream: Converting Websites to Clean Markdown for LLMs"
 seo_description: "Master mdream library for converting websites to markdown. Includes installation, API usage, plugin system, and real-world examples for AI applications and LLM integration."
 date: 2025-09-24
 tags:

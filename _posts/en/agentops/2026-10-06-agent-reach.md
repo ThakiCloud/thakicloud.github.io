@@ -1,6 +1,6 @@
 ---
-title: "Reading the Internet for Your Agent at Zero API Cost: A Practical Agent-Reach Test"
-seo_title: "Reading the Internet for Your Agent at Zero API Cost: A Practical Agent-Reach Test - ThakiCloud"
+title: "Agent-Reach: Reading the Web at Zero API Cost"
+seo_title: "Agent-Reach: Reading the Web at Zero API Cost"
 seo_description: "Agent-Reach routes your agent to free endpoints (Jina Reader, RSS, yt-dlp, gh) so 15 platforms read at zero API cost. We measured install, doctor, watch, and real content reads, plus limits."
 excerpt: "Does an agent owe an API bill to read the web, RSS, YouTube captions, and GitHub? Agent-Reach routes to free endpoints and makes that cost zero. Measured right after install, 6 of 15 channels worked with no configuration."
 date: 2026-10-06

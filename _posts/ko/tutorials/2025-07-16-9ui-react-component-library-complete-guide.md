@@ -1,7 +1,7 @@
 ---
-title: "9ui: React Base UI + Tailwind CSS Copy-Paste 컴포넌트 라이브러리 완벽 가이드"
+title: "9ui: Tailwind 기반 복사형 React 컴포넌트"
 excerpt: "Base UI와 Tailwind CSS 기반의 혁신적인 copy-paste 방식 컴포넌트 라이브러리 9ui를 실제 프로젝트에 적용해보고 활용법을 마스터해보세요."
-seo_title: "9ui React 컴포넌트 라이브러리 완벽 가이드 - Thaki Cloud"
+seo_title: "9ui: Tailwind 기반 복사형 React 컴포넌트"
 seo_description: "Base UI + Tailwind CSS 기반 copy-paste 방식의 9ui 라이브러리 설치부터 실제 프로젝트 적용까지 단계별 완벽 가이드"
 date: 2025-07-16
 last_modified_at: 2025-07-16

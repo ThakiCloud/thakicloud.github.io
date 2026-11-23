@@ -1,7 +1,7 @@
 ---
-title: "LangWatch: Building an AI Operations Framework with an Open-Source LLMOps Platform"
+title: "LangWatch: An Open-Source LLMOps Platform in Practice"
 excerpt: "A comprehensive LLMOps guide covering LLM tracing, evaluation, dataset management, and prompt optimization with LangWatch, integrated with RunPod and vLLM"
-seo_title: "LangWatch LLMOps Platform Complete Guide - Building AI Operations - Thaki Cloud"
+seo_title: "LangWatch: An Open-Source LLMOps Platform in Practice"
 seo_description: "How to implement LLM observability, evaluation, dataset management, and prompt optimization with open-source LangWatch, and build a comprehensive LLMOps environment integrated with RunPod and vLLM"
 date: 2025-08-19
 last_modified_at: 2025-08-19

@@ -1,7 +1,7 @@
 ---
 title: "An Agent Swarm Rewrote SQLite in Rust: Cursor's Multi-Agent Economics"
 excerpt: "Cursor showed an agent swarm that rebuilt SQLite in Rust from only its 835-page manual. It passed 100% of a held-out test suite, cost varied 15x by model mix, and the throughput forced Cursor to build a new version control system. We verify it against the official figures, not the hype, and read it through an Agent-Native Cloud lens."
-seo_title: "Cursor Agent Swarm Rebuilds SQLite in Rust: Multi-Agent Cost Economics Explained"
+seo_title: "An Agent Swarm Rewrote SQLite in Rust: Cursor's Multi-Agent Economics"
 seo_description: "A grounded analysis of Cursor's agent swarm rebuilding SQLite in Rust: planner/worker structure, 15x cost gap across model mixes, a 1,000-commits-per-second VCS, and a merge-conflict agent, read through Paxis and ai-platform lenses."
 date: 2026-07-21
 last_modified_at: 2026-07-21

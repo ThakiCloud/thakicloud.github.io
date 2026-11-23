@@ -1,7 +1,7 @@
 ---
 title: "The Meter the 14x Agent Demands"
 excerpt: "Agent token usage is up 14x since February, with a single agent consuming about 5x a human user. In the same week, Stripe acquired OpenRouter, and Shinhan Investment Securities' AI Agent Division, SKT's 'completed work' metric, and KT's AX Integrated Platform each began building their own meter."
-seo_title: "Agent Tokens Up 14x: The Meter Becomes a First-Order Question - Thaki Cloud"
+seo_title: "The Meter the 14x Agent Demands"
 seo_description: "OpenRouter data puts agent token usage up 14x since February, with a single agent consuming about 5x a human user. In the same week, Stripe acquired OpenRouter, and in Korea, Shinhan Investment Securities' AI Agent Division, SK Telecom's 'completed work' metric, and KT's AX Integrated Platform each answered the question in a different way."
 date: 2026-08-24
 last_modified_at: 2026-08-24

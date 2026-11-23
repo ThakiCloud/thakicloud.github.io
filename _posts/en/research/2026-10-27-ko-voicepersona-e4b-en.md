@@ -1,7 +1,7 @@
 ---
-title: "KO-VoicePersona-E4B: A Korean Voice Persona Model That Speaks Short and Checks Facts With Tools"
+title: "KO-VoicePersona-E4B: A Korean Voice Persona That Checks Facts"
 excerpt: "For teams building a Korean voice assistant or mascot. KO-VoicePersona-E4B, a LoRA on Nemotron 3.5 Bolt E4B, reaches 0.78 tool-call accuracy and 0.88 persona retention on a hand-written independent set of 58 dialogs. The limits are reported alongside."
-seo_title: "KO-VoicePersona-E4B Korean Voice Persona Model - ThakiCloud"
+seo_title: "KO-VoicePersona-E4B: A Korean Voice Persona That Checks Facts"
 seo_description: "For teams building a Korean voice assistant or mascot. KO-VoicePersona-E4B, a LoRA on Nemotron 3.5 Bolt E4B, reaches 0.78 tool-call accuracy and 0.88 persona retention on 58 independent dialogs."
 date: 2026-10-27
 published: true

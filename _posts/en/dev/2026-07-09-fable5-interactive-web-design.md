@@ -1,7 +1,7 @@
 ---
-title: "Building Interactive Web Experiences with Fable 5: 3D, Scroll Animation, and GLSL in a Single Prompt"
+title: "Interactive Web Experiences with Fable 5 in One Prompt"
 excerpt: "Anthropic's Claude Fable 5 is setting a new bar for frontend generation. We look at real public guides and open-source galleries showing scroll-driven 3D scenes, GLSL shaders, and screenshot-based redesigns pulled from a single prompt, and consider what this shift means from the perspective of ThakiCloud Paxis, which treats coding agents as first-class resources."
-seo_title: "Claude Fable 5 Interactive Web Design - 3D Scroll Animation GLSL Workflow (2026) - Thaki Cloud"
+seo_title: "Interactive Web Experiences with Fable 5 in One Prompt"
 seo_description: "An analysis of how Claude Fable 5 generates 3D interactive sites, scroll-driven animation, and GLSL shaders from a single prompt, grounded in a real public guide (Viktor Oddy) and an open-source gallery (claude-directory). Covers frontend generation workflows, screenshot-based redesign, and Three.js integration, and unpacks the implications for ThakiCloud's Paxis Agent-Native Cloud, which treats coding agents as first-class resources."
 date: 2026-07-09
 last_modified_at: 2026-07-09

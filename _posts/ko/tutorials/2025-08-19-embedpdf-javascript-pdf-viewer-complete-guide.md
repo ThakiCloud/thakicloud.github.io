@@ -1,7 +1,7 @@
 ---
 title: "EmbedPDF로 JavaScript PDF 뷰어 구현하기 - 완전 가이드"
 excerpt: "오픈소스 EmbedPDF를 활용해 React, Vue, Vanilla JS에서 현대적이고 강력한 PDF 뷰어를 구현하는 방법을 실습과 함께 상세히 알아봅니다."
-seo_title: "EmbedPDF JavaScript PDF 뷰어 구현 완전 가이드 - React Vue 실습 - Thaki Cloud"
+seo_title: "EmbedPDF로 JavaScript PDF 뷰어 구현하기 - 완전 가이드"
 seo_description: "오픈소스 EmbedPDF 라이브러리로 JavaScript PDF 뷰어 구현하기. React, Vue, Vanilla JS 실습 예제와 주석, 검색, 줌 기능까지 완벽 구현 가이드."
 date: 2025-08-19
 last_modified_at: 2025-08-19

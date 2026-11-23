@@ -1,7 +1,7 @@
 ---
-title: "중국 AI 모델들이 주도하는 오픈 워크플로우 관리 혁신 - Kimi K2, DeepSeek-R1, Qwen3, GLM-4.5 심층 분석"
+title: "중국 AI 모델이 이끄는 오픈 워크플로우 관리 혁신"
 excerpt: "Moonshot AI의 Kimi K2부터 Alibaba의 Qwen3까지, 중국발 AI 모델들이 어떻게 Agentic Intelligence를 통해 워크플로우 자동화의 새로운 패러다임을 제시하고 있는지 상세히 분석합니다."
-seo_title: "중국 AI 모델 워크플로우 자동화 혁신 - Kimi K2, DeepSeek-R1, Qwen3 분석 - Thaki Cloud"
+seo_title: "중국 AI 모델이 이끄는 오픈 워크플로우 관리 혁신"
 seo_description: "2025년 중국 AI 모델들의 Agentic Intelligence 혁신을 OWM 관점에서 분석. Kimi K2의 초장문 개인화, DeepSeek-R1의 추론 능력, Qwen3의 사고 모드 제어까지 워크플로우 자동화 전략을 제시합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

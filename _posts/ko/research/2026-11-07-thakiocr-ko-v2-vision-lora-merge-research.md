@@ -1,6 +1,6 @@
 ---
-title: "Vision LoRA만 결합했더니 Dev CER 4.80%: 표 구조를 지킨 ThakiOCR-KO-v2 진단 실험"
-seo_title: "ThakiOCR-KO-v2 진단 실험: Vision LoRA만 결합해 Dev Word CER 4.80%, 표 구조 진단 통과(미공개·독립 검증 전) | ThakiCloud"
+title: "ThakiOCR-KO-v2: Vision LoRA만 합친 진단 실험"
+seo_title: "ThakiOCR-KO-v2: Vision LoRA만 합친 진단 실험"
 seo_description: "KO-v1 학습에서 나온 두 LoRA 어댑터를 추가 학습 없이 부품 단위로 결합했습니다. Vision LoRA만 옮긴 조합이 Dev 진단에서 Word CER 4.80%, 손글씨 CER 9.78%를 기록하고 표 구조 진단을 통과했습니다. 독립 평가 데이터가 사전등록 기준에 못 미쳐 모델은 공개하지 않았습니다."
 excerpt: "디코더는 그대로 두고 Vision LoRA만 옮겼더니 손글씨 오류가 줄고 표 구조는 유지됐습니다. 다만 이 수치는 Dev 진단값이고, 독립 평가 데이터가 모자라 공개를 보류했습니다."
 date: 2026-11-07

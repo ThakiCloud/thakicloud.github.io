@@ -1,12 +1,12 @@
 ---
-title: "The Night the Search Dictionary Fixed Itself: Closing a Skill-Routing Bottleneck with an Unattended Loop"
+title: "The Night the Search Dictionary Fixed Itself"
 excerpt: "After a prior diagnosis found that the real cause of routing failures in a large skill ecosystem was the retriever rather than decomposition, this study measures whether moving the fixing hand from a human to an unattended loop actually narrows the bottleneck."
 tags: [skill-routing, agent-harness, autonomous-repair-loop, loop-engineering, bm25, information-retrieval, self-healing, ai-agent]
 date: 2026-07-10
 lang: en
 canonical_url: "https://thakicloud.com/tech-blog/en/research/autonomous-skill-router-repair-loop/"
 categories: [research]
-seo_title: "Autonomous Skill Router Repair Loop: Closing a Search Bottleneck with a Model-Free Nightly Loop, Measured"
+seo_title: "The Night the Search Dictionary Fixed Itself"
 seo_description: "In a real agent harness with more than 1,600 skills, this study introduces a deterministic loop that fixes the retriever's Korean-to-English synonym dictionary without any human involvement, and measures the resulting improvement in skill-routing accuracy."
 author_profile: true
 toc: true

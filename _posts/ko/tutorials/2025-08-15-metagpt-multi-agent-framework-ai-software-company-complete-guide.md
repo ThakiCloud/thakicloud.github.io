@@ -1,7 +1,7 @@
 ---
-title: "MetaGPT: 멀티 에이전트 프레임워크로 AI 소프트웨어 회사 구축하기 완전 가이드"
+title: "MetaGPT: 멀티 에이전트로 만드는 AI 소프트웨어 회사"
 excerpt: "자연어 한 줄로 완전한 소프트웨어를 개발하는 MetaGPT 멀티 에이전트 프레임워크. 설치부터 실제 프로젝트 생성까지 단계별 튜토리얼"
-seo_title: "MetaGPT 멀티 에이전트 AI 소프트웨어 개발 튜토리얼 - Thaki Cloud"
+seo_title: "MetaGPT: 멀티 에이전트로 만드는 AI 소프트웨어 회사"
 seo_description: "MetaGPT로 AI 소프트웨어 회사 구축하기. Python 설치, 설정, 실제 프로젝트 생성까지 포함한 완전 가이드. 자연어 프로그래밍의 혁신"
 date: 2025-08-15
 last_modified_at: 2025-08-15

@@ -1,7 +1,7 @@
 ---
-title: "Treating Skills Like Software: A Hands-On Verification of yao-meta-skill v1.1.0"
+title: "yao-meta-skill: Treating Skills Like Software"
 excerpt: "yao-meta-skill, an open-source meta-skill rumored to be more powerful than Anthropic's official Skill-creator, gets cloned into the ThakiCloud environment and put through its local verification gates. We break down Skill IR, the Output Eval Lab, and Review Studio 2.0 with measured numbers, and draw lessons for in-house .claude/skills governance."
-seo_title: "yao-meta-skill v1.1.0 Verification Report - Thaki Cloud"
+seo_title: "yao-meta-skill: Treating Skills Like Software"
 seo_description: "A hands-on report cloning and verifying yao-meta-skill (YAO). We dissect its Skill IR platform-neutral representation, Output Eval Lab, and Review Studio 2.0 governance gates at 632-file/77-test scale, and apply them to ThakiCloud .claude/skills operations."
 date: 2026-06-21
 last_modified_at: 2026-06-21

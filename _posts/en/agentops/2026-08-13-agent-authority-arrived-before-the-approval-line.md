@@ -1,7 +1,7 @@
 ---
-title: "The Day a Firefighting Robot Got Authority to Close a Fire Door, the Approval Chain Still Did Not Exist"
+title: "Agents Got Authority Before the Approval Chain Existed"
 excerpt: "Between August 12 and 13, agents received execution authority in inboxes, calendars, and at fire scenes, all at once. During the same two days, the National Assembly pointed out that no one has yet decided who is responsible for that authority. Reading a situation where authority arrived first, and the paperwork to delegate it has not."
-seo_title: "Agent Execution Authority Has Outrun Governance | AI News Analysis, August 2026"
+seo_title: "Agents Got Authority Before the Approval Chain Existed"
 seo_description: "Reading Hancom's Agentic OS deployed on firefighting robots, Grok's expanded work connectors, Pixel 11's booking delegation, Naver Cloud's EASY, and a National Assembly critique of physical-AI governance gaps as a single axis, and laying out the execution layer companies need to prepare now."
 date: 2026-08-13
 last_modified_at: 2026-08-13

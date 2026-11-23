@@ -1,5 +1,5 @@
 ---
-title: "The Mascot Ate the Background: We Blamed Training, the Culprit Was the Training Data"
+title: "The Mascot Ate the Background: It Was the Training Data"
 excerpt: "Our character adapter turned every requested scene into the same wall. We read it as a limit of the method. Reshooting the training clips against varied backgrounds fixed it, and let us rebuild the commercial."
 categories:
   - research

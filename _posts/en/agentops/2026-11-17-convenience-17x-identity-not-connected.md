@@ -1,7 +1,7 @@
 ---
-title: "Convenience Grew 17x, and Identity Verification Has Not Yet Been Connected"
+title: "Convenience Grew 17x; Identity Verification Has Not Followed"
 excerpt: "Pickel, the AI assistant that makes restaurant calls, grew its daily active users 17x in two weeks, and handling time on the other end of the line doubled. While Pickel's calls were getting blocked, OpenAI released agent payments where even the card number is not visible. Today's digest shows that the first friction in the agent economy is not capability but identity."
-seo_title: "Agents Started Making Phone Calls: Pickel's 17x Growth and the Identity Problem"
+seo_title: "Convenience Grew 17x; Identity Verification Has Not Followed"
 seo_description: "AI assistant Pickel made restaurant reservation calls and grew its DAU 17x in two weeks, while the time operators spend handling those calls doubled. OpenAI's payment token design, Dell's data gateway, and the in-house agents of IBK and SK. It analyzes the identity, permission, and proof problems of the agent economy and looks at the answer through Paxis governance."
 date: 2026-11-17
 last_modified_at: 2026-11-17

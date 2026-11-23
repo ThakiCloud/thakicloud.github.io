@@ -1,7 +1,7 @@
 ---
 title: "The Day Sovereignty Got an Interest Rate"
 excerpt: "The GPU cloud Nebius, which Palantir named its sovereign AI priority partner, raised $775 million at SOFR plus 2.50 percent, maturing in 2030. The collateral was customer contract cash flow. This week, sovereign AI is being signed into contracts in full. Read the effectiveness of sovereignty through the lens of contract terms, and look at the four questions the buyer should ask."
-seo_title: "The Day Sovereignty Got an Interest Rate: How to Read the Palantir and Nebius Deal | ThakiCloud"
+seo_title: "The Day Sovereignty Got an Interest Rate"
 seo_description: "The sovereign AI contract between Palantir and Nebius, $775 million raised at SOFR plus 2.50 percent. Sovereignty is no longer a technology claim, it is a question of contract terms. Sakana AI's move to Japan, Naver's move to France, 830 TB of security data, national audit scrutiny of Dugpamo. Read today's news from the perspective of contract design and pose the four questions companies should ask."
 date: 2026-09-10
 last_modified_at: 2026-09-10

@@ -1,7 +1,7 @@
 ---
-title: "Why Organizations Keep Repeating the Same Outage: Punishment Is a Tax on Information"
+title: "Why Organizations Repeat the Same Outage"
 excerpt: "Teams that suffer the same incident twice are not staffed by careless engineers. They are staffed by engineers who learned that honesty is expensive. Reframing blameless culture as an information system design problem, rather than a moral stance, changes how you should run a postmortem meeting, write a timeline, and track action items."
-seo_title: "Blameless Postmortem Culture: Why Punishment Silences Information"
+seo_title: "Why Organizations Repeat the Same Outage"
 seo_description: "An engineering-culture deep dive into why punishment breaks incident learning loops, how to write timelines that separate fact from judgment, and how to design action items that actually get closed."
 date: 2026-08-12
 last_modified_at: 2026-08-12

@@ -1,7 +1,7 @@
 ---
-title: "AI Governance and Audit Automation in Financial Services: Regulatory Compliance and Autonomous Agent Control"
+title: "AI Governance and Audit Automation in Finance"
 excerpt: "A hypothetical case study examining how banks, securities firms, and insurers can meet data localization, audit trail, and internal control requirements when deploying AI agents -- using a policy engine and hash-chain audit logs."
-seo_title: "AI Governance and Audit Automation in Financial Services - Thaki Cloud"
+seo_title: "AI Governance and Audit Automation in Finance"
 seo_description: "Financial AI audit logs, AI governance in financial services, and how to comply with ISMS and Electronic Financial Supervision Regulations when deploying on-premises AI agents. A case study applying the Paxis platform with a 4-level autonomy x 7-tier risk policy engine, hash-chain audit logs, and masking of 16 categories of personal data."
 lang: en
 date: 2026-06-22

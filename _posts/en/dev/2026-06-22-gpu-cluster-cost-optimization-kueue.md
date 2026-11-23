@@ -1,7 +1,7 @@
 ---
-title: "GPU Cluster Cost Optimization: Kueue Fair-Share + Gang Scheduling + Scale-to-Zero"
+title: "GPU Cluster Cost: Kueue, Gang Scheduling, Scale-to-Zero"
 excerpt: "How to reclaim tens of millions of dollars annually wasted across three bottlenecks in a 1,000-GPU cluster using Kubernetes-native scheduling."
-seo_title: "GPU Cluster Cost Optimization: Kueue Fair-Share, Gang Scheduling, Scale-to-Zero - Thaki Cloud"
+seo_title: "GPU Cluster Cost: Kueue, Gang Scheduling, Scale-to-Zero"
 seo_description: "A K8s-native architecture that cuts GPU idle costs by 30-50% using Kueue GPU scheduling and vLLM Scale-to-Zero, explained from ThakiCloud's operational perspective."
 date: 2026-06-22
 last_modified_at: 2026-06-22

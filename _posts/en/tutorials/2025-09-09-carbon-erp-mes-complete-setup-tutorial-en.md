@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to Carbon ERP/MES: Open-Source Manufacturing Management System"
+title: "Carbon: Open-Source ERP and MES Setup"
 excerpt: "Learn how to set up and use Carbon, the powerful open-source ERP/MES/QMS system perfect for complex assembly, HMLV, and configure-to-order manufacturing."
-seo_title: "Carbon ERP/MES Complete Tutorial: Manufacturing Management Setup Guide - Thaki Cloud"
+seo_title: "Carbon: Open-Source ERP and MES Setup"
 seo_description: "Master Carbon ERP/MES system with our comprehensive tutorial. Perfect for manufacturing, complex assembly, HMLV operations, and configure-to-order processes."
 date: 2025-09-09
 lang: en

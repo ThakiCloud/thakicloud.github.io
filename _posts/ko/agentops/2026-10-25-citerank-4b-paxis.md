@@ -1,7 +1,7 @@
 ---
 title: "RAG 에이전트가 인용할 문서를 고르는 4B 모델, Thaki-CiteRank-4B"
 excerpt: "질문과 주장에 맞는 근거 문서를 앞으로 끌어올리는 4B 리랭커입니다. 학습에 쓰지 않은 계약서 데이터에서도 원본 Qwen3-Reranker-4B보다 순위가 좋아졌고, Paxis의 Hybrid RAG 뒤에 붙여 인용 단계를 맡기는 방법을 정리했습니다."
-seo_title: "Thaki-CiteRank-4B: Paxis RAG 에이전트를 위한 근거 문서 리랭커 - ThakiCloud"
+seo_title: "RAG 에이전트가 인용할 문서를 고르는 4B 모델, Thaki-CiteRank-4B"
 seo_description: "Thaki-CiteRank-4B는 질문·주장과 후보 문서를 받아 인용할 근거를 고르는 Research Preview 리랭커입니다. QASPER nDCG@10 0.919, 학습하지 않은 CUAD 0.905로 원본보다 높았고, 근거 없는 인용률도 줄었습니다. Paxis 에이전트에 붙이는 구조와 남은 한계를 함께 적었습니다."
 date: 2026-10-25
 last_modified_at: 2026-11-09

@@ -1,6 +1,6 @@
 ---
-title: "Stop Saying '95% Accurate': Guarantee an Error Ceiling on What You Answer Instead"
-seo_title: "K-Decision Conformal Abstention: Guaranteeing Error on Answered Questions at 90% Confidence While Abstaining on the Rest - ThakiCloud"
+title: "Stop Saying '95% Accurate': Guarantee an Error Ceiling"
+seo_title: "Stop Saying '95% Accurate': Guarantee an Error Ceiling"
 seo_description: "For finance and public-sector engineers evaluating LLMs for rule-based decisions. ThakiCloud K-Decision calibrates confidence thresholds with Learn-then-Test so the error rate on questions it actually answers stays under a target α with 90% confidence, abstaining on the rest and routing them to an in-house 27B model. We report the measured numbers for two domains: public statutes and internal AI Hub documents."
 excerpt: "For engineers evaluating LLMs for rule-based decisions. The point is not '95% accurate' but 'with 90% confidence, the error rate on what it answers stays under α, and it abstains on X% of questions.'"
 date: 2026-09-26

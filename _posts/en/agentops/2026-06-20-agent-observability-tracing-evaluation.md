@@ -1,7 +1,7 @@
 ---
-title: "LLM Agent Observability: Tracing, Evaluation Loops, and Production Debugging"
+title: "LLM Agent Observability: Tracing and Evaluation Loops"
 excerpt: "A practical look at why traditional logging falls short in multi-agent systems, and how to build span tracing, evaluation pipelines, and production debugging capabilities for LLM agents."
-seo_title: "Building LLM Agent Observability - Thaki Cloud"
+seo_title: "LLM Agent Observability: Tracing and Evaluation Loops"
 seo_description: "A production guide to LLM agent tracing and evaluation loops using MLflow, LangSmith, and Arize AI. Grounded in the finding that 65% of agent failures stem from context problems rather than model capability."
 date: 2026-06-20
 last_modified_at: 2026-06-20

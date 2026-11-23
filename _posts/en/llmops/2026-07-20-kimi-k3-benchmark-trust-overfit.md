@@ -1,7 +1,7 @@
 ---
-title: "Can We Trust a 2.8 Trillion Parameter Open Model: Kimi K3 and Benchmark Reliability"
+title: "Can We Trust Kimi K3's Benchmarks?"
 excerpt: "Kimi K3, released by Moonshot, is the largest open-weight model in history at 2.8 trillion parameters. The scores are dazzling, but a benchmark-overfitting debate erupted almost immediately. Here is what operators should verify before adopting this model."
-seo_title: "Kimi K3 Benchmark Reliability: A Verification Guide for Adopting a 2.8T Open Frontier Model"
+seo_title: "Can We Trust Kimi K3's Benchmarks?"
 seo_description: "Moonshot's Kimi K3 is a 2.8 trillion parameter open MoE model that scored 93.5% on GPQA, yet it has been caught up in a benchmark-overfitting controversy. We analyze the architecture, how to read the benchmarks, a held-out validation checklist, and adoption criteria from the perspective of on-premises serving and agent policy gates."
 date: 2026-07-20
 last_modified_at: 2026-07-20

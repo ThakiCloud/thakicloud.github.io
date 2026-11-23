@@ -1,7 +1,7 @@
 ---
-title: "Qwen3: Revolutionary Large Language Model Transforming Open Workflow Management"
+title: "Qwen3: Unified Thinking Modes for Workflow Automation"
 excerpt: "Explore Qwen3, the latest breakthrough in LLM technology featuring unified thought modes, budget mechanisms, and enhanced multilingual support for workflow automation."
-seo_title: "Qwen3 LLM: Advanced Workflow Management & AI Integration - Thaki Cloud"
+seo_title: "Qwen3: Unified Thinking Modes for Workflow Automation"
 seo_description: "Discover how Qwen3's innovative features like unified thought modes and budget mechanisms revolutionize open workflow management and AI-driven automation processes."
 date: 2025-09-09
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "바이브 코딩 시대: AI 개발 도구 Cursor, 전문가처럼 활용하기 (2025년 6월 4일 업데이트)"
+title: "바이브 코딩 시대: Cursor 활용 가이드 (2025년 6월)"
 excerpt: "Cursor 0.50 이후 변화한 .mdc 규칙 시스템과 Claude‑4 Sonnet 최적 활용법, End‑to‑End 파이프라인 최신 가이드"
 date: 2025-06-04
 tags:

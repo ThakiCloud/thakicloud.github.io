@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron 3.5 Transcribe, 40개 언어 1시간 녹음을 vLLM에서 day-0 서빙한다"
+title: "Nemotron 3.5 Transcribe: vLLM에서 day-0 서빙"
 excerpt: "NVIDIA가 10월 28일 30B-A4B 멀티링구얼 ASR Nemotron 3.5 Transcribe를 공개하고 같은 날 NeMo Speech 플러그인으로 vLLM 0.32.0 서빙까지 열었습니다. 한국어 FLEURS CER 2.78, NVFP4 기준 초당 2,238초 오디오 처리. ASR가 LLM 서빙 스택에 들어온 날입니다."
-seo_title: "NVIDIA Nemotron 3.5 Transcribe, vLLM day-0 서빙과 한국어 CER 2.78 | ThakiCloud"
+seo_title: "Nemotron 3.5 Transcribe: vLLM에서 day-0 서빙"
 seo_description: "Nemotron 3.5 Transcribe 해부: 30B-A4B Mamba-Transformer MoE, 40개 언어, 최대 1시간 오프라인 전사. NeMo Speech vLLM 플러그인 설치·서빙 명령, BF16/FP8/NVFP4 하드웨어 티어, 공식 모델카드 벤치마크 기준."
 date: 2026-10-30
 last_modified_at: 2026-10-30

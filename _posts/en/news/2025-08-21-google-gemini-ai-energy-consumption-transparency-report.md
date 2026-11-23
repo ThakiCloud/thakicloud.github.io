@@ -1,7 +1,7 @@
 ---
-title: "Google Discloses Gemini AI Energy Usage for the First Time: A New Milestone in Big-Tech Transparency"
+title: "Gemini Energy Disclosure: Google Publishes Per-Prompt Usage"
 excerpt: "Google has become the first company in the industry to publish detailed energy consumption data for Gemini AI. At 0.24 watt-hours per prompt, equivalent to one second of microwave use, the figures also reveal a 33x efficiency improvement over the past year."
-seo_title: "Google Gemini AI Energy Consumption Disclosed: Big-Tech Transparency Report - Thaki Cloud"
+seo_title: "Gemini Energy Disclosure: Google Publishes Per-Prompt Usage"
 seo_description: "Detailed data from Google's first-ever public disclosure of Gemini AI energy usage: 0.24 Wh per prompt, 0.03 g CO2, a 33x efficiency improvement in one year, and an analysis of the industry impact."
 date: 2025-08-21
 last_modified_at: 2025-08-21

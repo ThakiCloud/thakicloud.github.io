@@ -1,6 +1,6 @@
 ---
-title: "One Airplane Sound Can Reveal Where a Video Was Recorded: Running the Doppler Geolocation Tool on the Original Demo"
-seo_title: "OSINT technique that locates a recording from the inaudible Doppler curves of propeller aircraft in its audio, matched against public ADS-B flight data. Hands-on record of running digitalis-p/doppler-locate on Colsto's 29-minute demo video: 36 seconds on a laptop CPU, 5 aircraft events and 6 road vehicles separated - ThakiCloud"
+title: "One Airplane Sound Can Reveal Where a Video Was Shot"
+seo_title: "One Airplane Sound Can Reveal Where a Video Was Shot"
 seo_description: "Propeller aircraft mixed into video audio leave Doppler pitch sweeps in the spectrogram. Matching those curves (closest-approach time, base frequency, speed, slant range) against public ADS-B flight data narrows the recording location to a heatmap peak, roughly 100 meters under good conditions. We ran the open-source tool doppler-locate on the original 29:12 demo video: 36 seconds on a laptop CPU (numba fallback), 5 aircraft Doppler events (two high-confidence, fit rms 0.20-0.31 Hz) and 6 road-vehicle sources separated. This is the hands-on record of the detect stage; the ADS-B matching stage is documented but not run."
 excerpt: "The inaudible airplane sound in video audio leaks the recording location. Doppler curves of propellers in the spectrogram, matched against public ADS-B data, can estimate where the recording was made. We ran the open-source tool doppler-locate on Colsto's original 29:12 demo video and separated 5 aircraft Doppler events and 6 road vehicles in 36 seconds on a laptop CPU."
 date: 2026-11-04

@@ -1,7 +1,7 @@
 ---
 title: "The Day AI Security Got a Score: The Smartest AI Didn't Take the Test"
 excerpt: "Artificial Analysis released the 'Cyber Index,' an independent benchmark measuring an AI's ability to find, reproduce, and patch vulnerabilities. The top models refused the test citing safety policies, and the two models tied for first place differed by 65x in cost per task. What this score means for companies adopting agents."
-seo_title: "AI Security's First Standard Score, the 'Cyber Index': A Tie for First, a 65x Cost Gap"
+seo_title: "The Day AI Security Got a Score: The Smartest AI Didn't Take the Test"
 seo_description: "The Cyber Index, an independent measure of how well AI finds and fixes security holes, was announced. The top models were unmeasurable due to safety policies, and the cost per task of the co-first-place finishers differed by 65x. The buying criteria of agent-adopting companies are shifting."
 date: 2026-09-29
 last_modified_at: 2026-09-29

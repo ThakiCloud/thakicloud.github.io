@@ -1,7 +1,7 @@
 ---
-title: "Chain of Agents: Large Language Model Collaboration for Long-Context Tasks"
+title: "Chain of Agents: LLMs Collaborating on Long Context"
 excerpt: "Google and Penn State University jointly developed the Chain-of-Agents framework, presenting an innovative approach to solving long-context processing problems through multi-agent collaboration"
-seo_title: "Chain of Agents: LLM Multi-Agent Collaboration Revolutionizes Long-Context Processing - Thaki Cloud"
+seo_title: "Chain of Agents: LLMs Collaborating on Long Context"
 seo_description: "Google and Penn State developed Chain-of-Agents, a new framework that processes long-context tasks through multi-agent collaboration with up to 10% better performance than RAG and Full-Context methods"
 date: 2025-08-21
 last_modified_at: 2025-08-21

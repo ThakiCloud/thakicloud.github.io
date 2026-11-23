@@ -1,7 +1,7 @@
 ---
-title: "SpiceAI Private 클라우드 AI 플랫폼 완전 활용 가이드 - 엔터프라이즈 데이터 통합부터 AI 추론까지"
+title: "SpiceAI로 구축하는 프라이빗 클라우드 AI 플랫폼"
 excerpt: "Apache-2.0 라이선스의 SpiceAI를 활용하여 private 클라우드 환경에서 고성능 AI 플랫폼을 구축하는 방법을 실제 활용 사례와 함께 상세히 설명합니다."
-seo_title: "SpiceAI Private 클라우드 AI 플랫폼 구축 가이드 - 엔터프라이즈 AI 솔루션 - Thaki Cloud"
+seo_title: "SpiceAI로 구축하는 프라이빗 클라우드 AI 플랫폼"
 seo_description: "SpiceAI로 private 클라우드 AI 플랫폼 구축하기. 데이터 페더레이션, 실시간 ML 추론, RAG 시스템 등 엔터프라이즈 AI 활용 사례 완전 가이드."
 date: 2025-07-17
 last_modified_at: 2025-07-17

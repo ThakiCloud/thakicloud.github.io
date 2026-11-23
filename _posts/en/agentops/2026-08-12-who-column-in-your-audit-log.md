@@ -1,7 +1,7 @@
 ---
 title: "When a Bot Logs In, What Fills the 'Who' Column in Your Audit Log?"
 excerpt: "A watermark forces a trace to exist. An API vulnerability pulls out a trace that had been hidden. An agent app logs in with a human's account. Yesterday's AI news pushed the same axis in four directions at once. What a team wiring agents into internal systems needs to check right now is not a model leaderboard, it is the name column in the log."
-seo_title: "Identity and Audit Logs in the Agent Era: Reading the AI News From August 2026"
+seo_title: "When a Bot Logs In, What Fills the 'Who' Column in Your Audit Log?"
 seo_description: "Anthropic's watermarking, a leak of 315,000 hidden reasoning blocks, xAI's Grok Bot, GPT-5.6 Cyber, and Nemotron 3.5 Lightning. Reading yesterday's AI news through a single axis, agent identity and audit trails, and laying out a design that makes policy gates and audit logs first-class resources."
 date: 2026-08-12
 last_modified_at: 2026-08-12

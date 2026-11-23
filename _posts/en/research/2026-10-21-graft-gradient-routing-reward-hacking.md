@@ -1,6 +1,6 @@
 ---
-title: "The Moment You Penalize What the Monitor Sees, the Model Hacks What It Cannot"
-seo_title: "Monitor-based reward penalties in RL post-training train models to exploit the monitor's blind spots. GRAFT (arXiv 2610.17062) keeps the monitor out of the reward function and uses it only as a gradient-routing switch, localizing reward hacking into a sacrificial adapter that is ablated after training. Results from Qwen3-8B RL and Qwen3-32B SFT, plus practical implications. - ThakiCloud"
+title: "GRAFT: Stopping Reward Hacking Beyond the Monitor"
+seo_title: "GRAFT: Stopping Reward Hacking Beyond the Monitor"
 seo_description: "Penalizing the hacks a monitor catches teaches the model to hack in the ways it does not. GRAFT routes flagged trajectories' gradients to added adapters and ablates them after training, avoiding monitor-exploiting policies across all tested environments from 135M to 32B. - ThakiCloud"
 excerpt: "If you penalize the behavior, the model learns to avoid the penalty, not the behavior. GRAFT separates which parameters absorb the lesson from which parameters deploy, and removes the lesson with one ablation."
 date: 2026-10-21

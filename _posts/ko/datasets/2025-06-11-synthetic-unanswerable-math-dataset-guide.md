@@ -1,5 +1,5 @@
 ---
-title: "Synthetic Unanswerable Math (SUM): LLM 신뢰성 향상을 위한 답변 불가능 수학 문제 데이터셋"
+title: "SUM: 답변 불가능한 수학 문제 데이터셋"
 date: 2025-06-11
 tags: 
   - hugging-face

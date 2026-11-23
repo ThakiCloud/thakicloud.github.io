@@ -1,7 +1,7 @@
 ---
-title: "The Era of Context Engineering: Is Prompt Engineering Really a Relic of the Past?"
+title: "The Era of Context Engineering: Is Prompt Engineering Dead?"
 excerpt: "Analyzing the value and limitations of Context Engineering, which has become a hot topic in the AI industry, while re-examining the continued importance of prompt engineering."
-seo_title: "Context Engineering vs Prompt Engineering Debate Analysis - Thaki Cloud"
+seo_title: "The Era of Context Engineering: Is Prompt Engineering Dead?"
 seo_description: "In-depth analysis of the emergence of Context Engineering and the evolution of prompt engineering, exploring the complementary relationship between the two approaches in AI development"
 date: 2025-07-08
 last_modified_at: 2025-07-08

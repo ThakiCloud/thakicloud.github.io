@@ -1,6 +1,6 @@
 ---
-title: "A 2.13M-Parameter OCR Cut Real-Document CER from 39% to 14.8%, but Spacing Errors Remained"
-seo_title: "ThakiOCR Dense-R2 research log: real-document adaptation of a 2.13M-parameter Korean-English line OCR, a spacing regression, and a NO-GO correction run | ThakiCloud"
+title: "ThakiOCR Dense R2: Real-Document CER Fell, Spacing Stayed"
+seo_title: "ThakiOCR Dense R2: Real-Document CER Fell, Spacing Stayed"
 seo_description: "We continued training a 2.13M-parameter OCR, built only on synthetic data, on real document lines and cut real-line CER from 39.23% to 14.80%. In exchange, English CER got 0.82 points worse and dropped spaces increased. A spacing correction run cut dropped spaces but added extra spaces and hurt word CER, so our pre-set rule gave it a NO-GO."
 excerpt: "Keeping the model size fixed and training on real document lines took real-line CER from 39% to 14.8%. Two attempts to fix the spacing problem that came with it were both rejected by rules we wrote in advance. This post reports the numbers as they are."
 date: 2026-11-16

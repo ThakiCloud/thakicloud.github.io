@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Hub Zep Memory Assistant 소스코드 완전 분석: 장기 기억 기반 AI 어시스턴트 구현"
+title: "AI Engineering Hub: Zep 메모리 어시스턴트 분석"
 excerpt: "10.7k 스타 AI Engineering Hub의 Zep Memory Assistant 프로젝트를 소스코드 레벨에서 심층 분석하고, 실전 구현 방법을 제시합니다."
 date: 2025-06-21
 tags: 

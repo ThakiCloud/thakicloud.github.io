@@ -1,7 +1,7 @@
 ---
-title: "Ports are at 88%, construction at stage 1 to 2. The difference was not the AI"
+title: "Ports Run Deep, Construction Does Not: It Was Not the AI"
 excerpt: "In the same country, the same AI ran at two speeds. Ports went deep because work never breaks; construction stayed shallow because work resets with every project. Data center and rack-scale benchmarks are shifting to the same standard. I read today's news through the lens of continuity."
-seo_title: "Ports at 88%, construction at stage 1 to 2: the variable that sets AI depth | ThakiCloud"
+seo_title: "Ports Run Deep, Construction Does Not: It Was Not the AI"
 seo_description: "IT Chosun's analysis of China's AX, Equinix's 'connect' strategy, and 'effective performance' benchmarks for the agentic era. The common variable the three articles point to is the continuity of work state. I lay out Korea's industry-by-industry minimum DX requirements and AX permission levels, and reread them from an agent's perspective."
 date: 2026-09-02
 last_modified_at: 2026-09-02

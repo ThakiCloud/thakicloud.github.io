@@ -1,7 +1,7 @@
 ---
 title: "€3 Billion to the Factory, $60 Billion to the Cloud"
 excerpt: "Samsung brings Mistral models into the factory floor, and Amazon rebuilds its data centers with custom chips. Money points to the center and the edge, and where you run agents is becoming the baseline of enterprise infrastructure."
-seo_title: "€3 Billion to the Factory, $60 Billion to the Cloud | The Center and the Edge of AI"
+seo_title: "€3 Billion to the Factory, $60 Billion to the Cloud"
 seo_description: "Samsung leads a €3 billion investment in Mistral AI to place on-prem models in its semiconductor plants, and Amazon and Qualcomm tie 25 million share warrants to a $60 billion custom silicon partnership. A look at why where you run agents is becoming the baseline of enterprise AI strategy."
 canonical_url: https://thakicloud.com/tech-blog/en/llmops/the-center-and-the-edge-where-ai-runs/
 lang: en

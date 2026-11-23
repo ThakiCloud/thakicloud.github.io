@@ -1,7 +1,7 @@
 ---
-title: "The Moment Agents Ran the Closed Loop of Drug Development: Anthropic's Early Results With Six Pharma Orgs and Mithril"
+title: "Agents Run the Closed Loop of Drug Development"
 excerpt: "We broke down Anthropic's early drug-development partnership results case by case. 35,000 antibody designs, 1,010 variants, a 1,061-page document review. Read through a Paxis lens, we interpret the signal that frontier agents are moving from 'assistance' to 'process participation.'"
-seo_title: "Anthropic Drug-Development Agent Results: Six Partner Cases and What They Signal | ThakiCloud Tech Blog"
+seo_title: "Agents Run the Closed Loop of Drug Development"
 seo_description: "We analyze Anthropic's 'early progress on accelerating drug development' announcement. From the measured cases across six partners — Generate, Divergence, BigHat, Enveda, TCG, BMS — to the Mithril Medicine acquisition and Claude Science, read through a Paxis lens."
 date: 2026-10-28
 last_modified_at: 2026-10-28

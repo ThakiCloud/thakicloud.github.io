@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA-Verified Agent Skills: Planting Trust in the Skill Supply Chain with OMS Signatures"
+title: "NVIDIA-Verified Agent Skills: Signing the Skill Supply Chain"
 excerpt: "NVIDIA has open-sourced over 200 agent skills paired with OMS cryptographic signatures. The same SKILL.md works across Claude Code, Codex, and Cursor, and anyone can verify that a downloaded skill has not been tampered with. We cloned the repository, ran signature verification end-to-end, mutated a single line to confirm tamper detection, and drew out the implications for ThakiCloud's skill operations."
-seo_title: "NVIDIA Verified Agent Skills and OMS Signatures - Skill Supply-Chain Trust - Thaki Cloud"
+seo_title: "NVIDIA-Verified Agent Skills: Signing the Skill Supply Chain"
 seo_description: "A hands-on walkthrough of NVIDIA Verified Agent Skills: the 8-step verification pipeline, OpenSSF Model Signing (OMS) detached signatures, and SkillSpector security scans. We measured 226 skills and 237 signatures, reproduced signature verification and tamper detection with model_signing, and distilled the governance implications for ThakiCloud's Kubernetes AI/ML SaaS platform."
 date: 2026-06-25
 last_modified_at: 2026-06-25

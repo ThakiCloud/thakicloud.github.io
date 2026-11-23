@@ -1,7 +1,7 @@
 ---
-title: "OpenPipe ART: Complete Guide to the Practical Agent Reinforcement Training Framework"
+title: "OpenPipe ART: An Agent Reinforcement Training Framework"
 excerpt: "From multi-step agent training with GRPO to real-world task application. Building production-ready AI agents with Qwen, Llama, and Kimi models"
-seo_title: "OpenPipe ART Reinforcement Learning Agent Guide - GRPO Multi-Step Training - Thaki Cloud"
+seo_title: "OpenPipe ART: An Agent Reinforcement Training Framework"
 seo_description: "Train real-world AI agents with OpenPipe ART. Complete guide covering GRPO algorithm, multi-step training, RULER reward functions, and vLLM integration"
 date: 2025-07-19
 last_modified_at: 2025-07-19

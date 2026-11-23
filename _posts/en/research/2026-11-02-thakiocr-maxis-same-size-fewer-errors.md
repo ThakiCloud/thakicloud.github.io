@@ -1,6 +1,6 @@
 ---
-title: "Same 8.93M Parameters, 31% Fewer OCR Errors: Building Our Own Model, Seen Through Maxis"
-seo_title: "ThakiOCR A2 Results: 31% Lower Character Error Rate at the Same Model Size, From Data Separation and Preregistered Evaluation | ThakiCloud"
+title: "ThakiOCR: 31% Fewer Errors at the Same Model Size"
+seo_title: "ThakiOCR: 31% Fewer Errors at the Same Model Size"
 seo_description: "We compared two OCR models with the same architecture and parameter count, G2M and A2. By changing the training data mix and the evaluation design, A2 cut the character error rate from 4.84% to 3.34% on three financial form types excluded from training. We walk through duplicate removal, document-family splits, and preregistered gates from the viewpoint of the Maxis training pipeline."
 excerpt: "We kept the model size fixed and redesigned the data and the evaluation. OCR errors dropped by 31%. Here is what we changed and how far that number can be trusted."
 date: 2026-11-02

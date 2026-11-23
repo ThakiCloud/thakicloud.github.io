@@ -1,5 +1,5 @@
 ---
-title: "An AI Coding Model Optimized vLLM Serving: The Reality of Gemini 4 Argon's 2.85x Gemma 4 E2B Speedup, and How to Verify It"
+title: "Gemini 4 Argon Tuned vLLM for Gemma 4 E2B: Verified"
 excerpt: "Google's AI coding model Gemini 4 Argon claims to have optimized Gemma 4 E2B serving in vLLM by ~2.85x (37.9k to 108k+ tok/s) on a single A100. What the optimization actually changes, and an honest record of our local reproduction attempt."
 tags:
   - dev

@@ -1,7 +1,7 @@
 ---
-title: "Mito: Jupyter 스프레드시트 AI 도구 완전 튜토리얼 - 설치부터 고급 기능까지"
+title: "Mito: Jupyter에서 쓰는 AI 스프레드시트 도구"
 excerpt: "Mito AI와 스프레드시트 확장 프로그램을 사용하여 Jupyter에서 Python 개발을 가속화하는 방법을 배워보세요. 설치, AI 채팅, 스프레드시트 편집, 코드 생성을 포괄하는 완전 가이드입니다."
-seo_title: "Mito Jupyter AI 튜토리얼 - 스프레드시트 & AI 채팅 가이드 - Thaki Cloud"
+seo_title: "Mito: Jupyter에서 쓰는 AI 스프레드시트 도구"
 seo_description: "완전한 Mito 튜토리얼: AI 기반 Jupyter 확장 프로그램을 설치하여 스프레드시트 편집, 상황 인식 AI 채팅, 자동 Python 코드 생성. 단계별 가이드."
 date: 2025-09-25
 tags:

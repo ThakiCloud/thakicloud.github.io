@@ -1,7 +1,7 @@
 ---
-title: "에이전트 메모리는 이제 데이터 시스템입니다: Agent-Native Memory를 데이터 관리 관점에서 뜯어봤습니다"
+title: "에이전트 메모리는 이제 데이터 시스템이다"
 excerpt: "arXiv 2606.24775 'Are We Ready For An Agent-Native Memory System?'은 LLM 에이전트 메모리를 RAG가 아니라 하나의 데이터 관리 시스템으로 보고, 12개 메모리 시스템을 4개 모듈로 분해해 측정합니다. 논문 초록과 공개 코드를 근거로 핵심 주장과 ThakiCloud 플랫폼 관점의 의미를 정리했습니다."
-seo_title: "Agent-Native Memory System 분석 - 에이전트 메모리의 데이터 관리 관점 - Thaki Cloud"
+seo_title: "에이전트 메모리는 이제 데이터 시스템이다"
 seo_description: "arXiv 2606.24775를 공식 초록 기준으로 분석합니다. 표현·저장 / 추출 / 검색·라우팅 / 유지보수 4개 모듈 분해, 12개 메모리 시스템과 5개 워크로드 11개 데이터셋 평가, 워크로드 병목 정합성과 비용-성능 트레이드오프, ThakiCloud 쿠버네티스 멀티테넌트 에이전트 플랫폼 적용 관점."
 date: 2026-06-26
 last_modified_at: 2026-06-26

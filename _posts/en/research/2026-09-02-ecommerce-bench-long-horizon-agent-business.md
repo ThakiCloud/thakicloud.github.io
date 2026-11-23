@@ -1,6 +1,6 @@
 ---
 title: "We Handed an Agent a Shop for a Year: Reading E-Commerce Bench"
-seo_title: "E-Commerce Bench paper analysis - 365 days of autonomous business operation scoring 18 LLM agents on seven axes - ThakiCloud"
+seo_title: "We Handed an Agent a Shop for a Year: Reading E-Commerce Bench"
 seo_description: "arXiv 2608.30730 E-Commerce Bench hands an agent a 365-day online shop and scores it on end-of-year assets. First and last place differ by a factor of 1,264, the top earner ranks 16th on fraud avoidance, and 16 of 18 models never bargain a repeat price down."
 excerpt: "Across 8,647 repeat purchases from the same honest supplier, 16 of 18 models failed to shave a single yuan off the price. A full year of experience, and no learning."
 date: 2026-09-02

@@ -1,7 +1,7 @@
 ---
-title: "LongCat-Flash-Thinking: 중국의 새로운 SOTA 오픈소스 추론 모델이 AI 효율성을 혁신하다"
+title: "LongCat-Flash-Thinking: 중국발 오픈소스 추론 모델"
 excerpt: "560B 매개변수 MoE 모델인 LongCat-Flash-Thinking의 혁신적인 성능과 64.5% 토큰 감소, 비동기 RL 훈련 기술을 알아보세요."
-seo_title: "LongCat-Flash-Thinking: 560B 매개변수 SOTA 오픈소스 추론 모델"
+seo_title: "LongCat-Flash-Thinking: 중국발 오픈소스 추론 모델"
 seo_description: "중국의 새로운 LongCat-Flash-Thinking 모델 소개 - 560B 매개변수, 27B 활성화, SOTA 벤치마크, 64.5% 토큰 감소, 비동기 RL 훈련."
 date: 2025-09-23
 tags:

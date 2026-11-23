@@ -1,7 +1,7 @@
 ---
-title: "Persistent Agents Inside Slack: Reading Claude Tag from a Platform Perspective"
+title: "Claude Tag: Persistent Agents Inside Slack"
 excerpt: "Anthropic has released Claude Tag, which lets teams invoke @Claude inside a Slack channel and delegate work to it. The key insight is that this is not a one-shot chatbot but a persistent, multi-player agent that lives in the channel, shares context with the whole team, and proactively handles follow-ups on its own. This post examines how to read the company's claim that 65% of its product-team code was written by an internal version, and what this pattern means for multi-tenant on-premises AI platforms."
-seo_title: "Claude Tag Slack Persistent Agent, Platform Perspective Analysis - Thaki Cloud"
+seo_title: "Claude Tag: Persistent Agents Inside Slack"
 seo_description: "A look at the multi-player, proactive, and persistent characteristics of Anthropic's Claude Tag (Slack-embedded persistent agent), how to interpret the '65% of internal code' figure, and how ThakiCloud's Kubernetes multi-tenant platform would design an on-premises persistent agent."
 date: 2026-06-25
 last_modified_at: 2026-06-25

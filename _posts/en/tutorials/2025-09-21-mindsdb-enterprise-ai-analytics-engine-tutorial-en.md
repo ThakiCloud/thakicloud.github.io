@@ -1,7 +1,7 @@
 ---
-title: "MindsDB Complete Tutorial: Building Enterprise AI Analytics Engine with 200+ Data Sources"
+title: "MindsDB: An AI Analytics Engine Over 200+ Data Sources"
 excerpt: "Comprehensive guide to MindsDB - the AI analytics engine that transforms large-scale data into intelligent insights. Learn installation, configuration, and real-world enterprise implementations."
-seo_title: "MindsDB Tutorial: Enterprise AI Analytics Engine Guide - Thaki Cloud"
+seo_title: "MindsDB: An AI Analytics Engine Over 200+ Data Sources"
 seo_description: "Master MindsDB AI analytics engine with this complete tutorial. Learn to connect 200+ data sources, create AI models, and build intelligent data pipelines for enterprise applications."
 date: 2025-09-21
 tags:

@@ -1,6 +1,6 @@
 ---
-title: "So Agents Stop Forgetting: How WikiSkill Evolves Skills From a Persistent Experience Wiki"
-seo_title: "WikiSkill paper analysis - Google Research's persistent experience wiki evolves agent skills, 68.1% average across five benchmarks - ThakiCloud"
+title: "WikiSkill: Agents That Stop Forgetting"
+seo_title: "WikiSkill: Agents That Stop Forgetting"
 seo_description: "arXiv 2608.27454 WikiSkill stops throwing away an agent's execution history. It accumulates it in a persistent wiki that never resets and uses it to evolve skills. We walk through the 68.1 percent average across five benchmarks, the gains that grow with model size, and why the evolved skills transfer across models - through ThakiCloud's lens."
 excerpt: "Record the rejected edits too, and an agent stops repeating the same mistakes while its skills get better on their own. Across five benchmarks, the no-skill agent scores 49.5; WikiSkill scores 68.1."
 date: 2026-09-11

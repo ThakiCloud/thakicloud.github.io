@@ -1,5 +1,5 @@
 ---
-title: "AI 워크플로우의 완성: yap + llm + yt-dlp로 YouTube 영상을 자동 요약하는 방법"
+title: "yap + llm + yt-dlp로 YouTube 영상 자동 요약하기"
 excerpt: "macOS의 yap 음성 전사 도구와 llm CLI, yt-dlp를 조합하여 YouTube 영상을 자동으로 다운로드하고 전사한 후 AI로 요약하는 완전한 워크플로우를 구축합니다."
 date: 2025-06-21
 tags: 

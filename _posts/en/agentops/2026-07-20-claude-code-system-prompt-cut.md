@@ -1,7 +1,7 @@
 ---
-title: "Why We Cut the System Prompt by 80 Percent: Smarter Models Want a Thinner Harness"
+title: "Cutting the System Prompt: Smarter Models, Thinner Harness"
 excerpt: "News that Anthropic stripped Claude Code's system prompt down by 80 percent made the rounds among developers. The person behind the change explained that the new model 'wants a smaller system prompt' and is often more imaginative than the instructions we hand it. As models get stronger, the harness gets thinner and rules shift from hard constraints to context. This post walks through what that shift means, backed by what ThakiCloud has actually observed running the Paxis skill harness and rule system."
-seo_title: "Claude Code System Prompt Cut by 80%: Thin Harness and Context Steering - Thaki Cloud"
+seo_title: "Cutting the System Prompt: Smarter Models, Thinner Harness"
 seo_description: "A look at Anthropic cutting Claude Code's system prompt by roughly 80 percent: why smarter models want shorter prompts, what scaffolding-interference research says, the shift from hard rules to context steering, and what it means for ThakiCloud Paxis's thin-harness, fat-skill design."
 date: 2026-07-20
 last_modified_at: 2026-07-20

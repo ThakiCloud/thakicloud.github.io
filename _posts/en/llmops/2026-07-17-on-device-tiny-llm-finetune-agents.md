@@ -1,5 +1,5 @@
 ---
-title: "From 46% to 90% Inside a Phone: Fine-Tuning Small LLMs for On-Device Agents"
+title: "From 46% to 90% on a Phone: Tuning Small On-Device Agents"
 excerpt: "Google AI Edge's Cormac Brick presented a case where fine-tuning the 270M-parameter FunctionGemma lifted accuracy on a specific agent task from 46% to 90%. The key is running a small model tuned to a narrow task on the phone itself instead of calling a large one. We look at why this approach captures latency, privacy, and cost at once, and what the rise of on-device specialized models means for ThakiCloud's serving infrastructure and agent platform."
 tags:
   - on-device

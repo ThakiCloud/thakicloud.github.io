@@ -1,5 +1,5 @@
 ---
-title: "Essential-Web v1.0: 24조 토큰 규모의 고품질 웹 데이터셋 - EAI 분류 체계와 품질 평가 시스템"
+title: "Essential-Web v1.0: EAI 분류 체계와 품질 평가"
 excerpt: "Essential AI의 24T 토큰 웹 데이터셋 완전 분석 - EAI 분류학, Red Pajama v2 품질 지표, FastText 분류, ODC-By 라이센스 가이드"
 date: 2025-06-20
 tags: 

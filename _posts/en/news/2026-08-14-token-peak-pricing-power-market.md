@@ -1,7 +1,7 @@
 ---
-title: "Tokens Just Got Peak Pricing: AI Inference Is Starting to Look Like the Power Grid"
+title: "Tokens Get Peak Pricing, Like the Power Grid"
 excerpt: "DeepSeek is introducing time-of-day API pricing starting August 16th. The same day brought a price cut, a nine-year GPU contract, and a $5 billion bond offering. Put together, the AI inference market is walking the exact same path power markets already walked."
-seo_title: "AI Inference Pricing Starts to Mirror Power Markets: DeepSeek's Peak Pricing and Today's Signals"
+seo_title: "Tokens Get Peak Pricing, Like the Power Grid"
 seo_description: "Reading DeepSeek's first time-of-day API pricing, Gemini 3.7 Flash's price cut, and CoreWeave's A100 contract through 2029 as one lens. What teams that treat inference cost like a power bill need to prepare for."
 date: 2026-08-14
 last_modified_at: 2026-08-14

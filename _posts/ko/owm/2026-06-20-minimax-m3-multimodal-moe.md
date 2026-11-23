@@ -1,7 +1,7 @@
 ---
-title: "MiniMax-M3: 428B MoE 멀티모달, 1M 컨텍스트와 MSA로 M2.7 대비 prefill 9배 빨라졌다"
+title: "MiniMax-M3: prefill이 9배 빨라진 멀티모달 MoE"
 excerpt: "MiniMaxAI가 공개한 M3은 428B 총 파라미터, 23B 활성 파라미터 MoE 멀티모달 VLM이다. 1M 컨텍스트, MiniMax Sparse Attention, SGLang/vLLM 지원. 라이선스는 minimax-community로 상용 배포 전 원문 확인 필수."
-seo_title: "MiniMax-M3 428B MoE 멀티모달 모델 온프렘 서빙 가이드 - ThakiCloud"
+seo_title: "MiniMax-M3: prefill이 9배 빨라진 멀티모달 MoE"
 seo_description: "MiniMax-M3 아키텍처(428B/23B MoE, 1M 컨텍스트, MSA), arXiv:2606.13392, SGLang/vLLM 서빙, Kueue 배포 전략, 라이선스 주의사항."
 date: 2026-06-20
 last_modified_at: 2026-06-20

@@ -1,6 +1,6 @@
 ---
 title: "Your Location Can Be Pinpointed from the Doppler Effect of Airplanes"
-seo_title: "Aircraft Doppler Side-Channel Geolocation, Claude Code Replication - ThakiCloud Tech Blog"
+seo_title: "Your Location Can Be Pinpointed from the Doppler Effect of Airplanes"
 seo_description: "A demo that pinpointed a webcam's physical location by matching Doppler curves in its audio against open-source aircraft position data. Claude Code replicated it in hours, and the side channel it exposes is broader than most people assume."
 excerpt: "A demo that predicted the location of a webcam 7 km south of Southampton using only its audio. The method: extract Doppler curves from the spectrogram and match them against open-source aircraft position data. Claude Code replicated it within a few hours, which widens the attack surface considerably."
 date: 2026-11-05

@@ -1,7 +1,7 @@
 ---
-title: "Local-First AI: How the Constraint That Data Never Leaves the Device Reshapes Design"
+title: "Local-First AI: When Data Never Leaves the Device"
 excerpt: "For engineers who have to build AI features in environments where cloud APIs are off the table, this post lays out the constraints local inference forces on you, and what you gain and what you have to give up within them."
-seo_title: "Local-First AI Software Development: The Constraints and Design of On-Device Inference - Thaki Cloud"
+seo_title: "Local-First AI: When Data Never Leaves the Device"
 seo_description: "This post covers data sovereignty constraints, how latency shapes architecture, the memory and quantization limits of local hardware, and hybrid designs that mix local and cloud: the realities of local-first AI development."
 date: 2026-08-04
 tags:

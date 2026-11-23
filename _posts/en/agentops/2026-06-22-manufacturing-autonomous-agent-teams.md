@@ -1,7 +1,7 @@
 ---
 title: "How to Automate Manufacturing Operations with Autonomous Agent Teams"
 excerpt: "A practical approach to resolving MLOps talent shortages and multi-factory cluster management challenges using multi-persona autonomous agent teams. Explained through a hypothetical manufacturer case study showing how ThakiCloud AI Platform and Paxis apply to smart factory operations."
-seo_title: "Manufacturing AI Agent Automation - Multi-Cluster GPU Operations and Autonomous Agent Teams - Thaki Cloud"
+seo_title: "How to Automate Manufacturing Operations with Autonomous Agent Teams"
 seo_description: "How to automate MLOps talent bottlenecks and multi-factory cluster management for smart factories, heavy industry, and electronics manufacturers using autonomous agent teams. Real-world application of ThakiCloud AI Platform multi-cluster central management and Paxis agent operations cloud."
 date: 2026-06-22
 last_modified_at: 2026-06-22

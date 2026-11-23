@@ -1,6 +1,6 @@
 ---
-title: "It Fetches the Ingredients but Never Writes the Recipe: The Gap When Agents Use Tools in Order"
-seo_title: "The Multi-Skill Gap: Order-Sensitive Skill Chain Routing and Its Cost-Quality Frontier - ThakiCloud"
+title: "It Finds the Ingredients but Can't Write the Recipe"
+seo_title: "It Finds the Ingredients but Can't Write the Recipe"
 seo_description: "When an agent has to use several tools in the right order, our current retrieval finds about three quarters of the needed tools yet almost never produces a correctly ordered plan. Measured on a 2,275-skill registry and 48 chain tasks, with why a bigger local model does not help and where the real bottleneck sits."
 excerpt: "Picking one tool looks fine on the scoreboard. Chaining tools in order is a different story. The librarian pulls most of the recipe cards you need, but it never sorts them. The bottleneck turned out to be not the model that sorts the cards, but the names of the quarter of cards that were never pulled."
 date: 2026-08-31

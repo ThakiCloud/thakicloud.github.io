@@ -1,7 +1,7 @@
 ---
-title: "Agent Leaderboard v2 Complete Guide - The New Standard for AI Agent Performance Evaluation"
+title: "Agent Leaderboard v2: Benchmarking Tool-Use Agents"
 excerpt: "Learn how to evaluate and benchmark AI agent tool-use performance using Galileo.ai's Agent Leaderboard v2 through hands-on practice."
-seo_title: "Agent Leaderboard v2 Tutorial - Complete Guide to AI Agent Evaluation - Thaki Cloud"
+seo_title: "Agent Leaderboard v2: Benchmarking Tool-Use Agents"
 seo_description: "A comprehensive guide covering how to evaluate AI agent performance with Agent Leaderboard v2, how to use the TSQ metric, and practical examples."
 date: 2025-07-18
 last_modified_at: 2025-07-18

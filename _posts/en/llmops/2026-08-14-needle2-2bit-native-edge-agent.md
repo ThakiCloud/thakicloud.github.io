@@ -1,7 +1,7 @@
 ---
 title: "Two-Bit Ruins Small Models, Unless You Train at Two Bits From the Start"
 excerpt: "Cactus Compute's Needle 2 packs 45M parameters into a 14MB binary and calls tools on a microcontroller. The story is not the number two, but the fact that those two bits were applied at the start of pretraining rather than after training finished."
-seo_title: "Needle 2 Analysis: A 14MB Agent Model That Skipped Post-Training Quantization"
+seo_title: "Two-Bit Ruins Small Models, Unless You Train at Two Bits From the Start"
 seo_description: "How Needle 2 reaches 500+ tokens per second on a Raspberry Pi 5 with a 14MB binary and 28MB of RAM. A look at how Cactus Quants holds weights, activations, and the KV cache at two bits from pretraining onward, and what that means for edge agent deployment."
 date: 2026-08-14
 last_modified_at: 2026-08-14

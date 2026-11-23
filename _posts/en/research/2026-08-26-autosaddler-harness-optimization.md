@@ -1,6 +1,6 @@
 ---
-title: "It Fixes Itself From Failure Records: AutoSaddler Evolves the Agent Harness"
-seo_title: "AutoSaddler: Automatic Harness Optimization From Failure Records - ThakiCloud"
+title: "AutoSaddler: An Agent Harness That Fixes Itself"
+seo_title: "AutoSaddler: An Agent Harness That Fixes Itself"
 seo_description: "AutoSaddler, from KAIST, POSTECH, and Microsoft, treats everything an agent uses to do its job as one system and fixes it by reading only its own failure records. Across GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 it beat hand-tuned automation baselines using far fewer tries, and we look at what this means for the Paxis self-evolution loop."
 excerpt: "A program that used to be hand-tuned by people now fixes itself by reading only its failure records, and scores jumped on all three benchmarks tested. The trick is three habits: dig for the real cause, never patch blindly, and always test a fix before keeping it."
 date: 2026-08-26

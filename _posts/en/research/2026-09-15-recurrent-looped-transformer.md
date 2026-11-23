@@ -1,6 +1,6 @@
 ---
-title: "Recurrent Looped Transformer (RLT): prompts in parallel, depth in sequence"
-seo_title: "Recurrent Looped Transformer (RLT): a design spec that pairs a parallel causal encoder with a stateful recurrent decoder to chase 'unbounded temporal depth' - ThakiCloud"
+title: "Recurrent Looped Transformer: Depth in Sequence"
+seo_title: "Recurrent Looped Transformer: Depth in Sequence"
 seo_description: "A review of the Recurrent Looped Transformer (RLT) proposed by Yifan Zhang at Princeton. Observed tokens go through a parallel encoder; generated tokens loop a fixed-depth decoder whose hidden state and layer-wise SWA cache carry across the prompt/response boundary without reset, so computation depth grows as t x L_D. We read it, measurement-free design spec and all, through a serving lens."
 excerpt: "RLT's core move is to make depth by 'looping a fixed-depth decoder over tokens' instead of stacking more layers. Prompts are ingested in parallel, and generation accumulates depth sequentially by carrying state. It is still a measurement-free design spec, and this post explains why a serving engineer should care."
 date: 2026-09-15

@@ -1,6 +1,6 @@
 ---
-title: "Different Bits for Different Layers: Mixed-Precision Quantization of a Multilingual Embedding Model (D50 M1a)"
-seo_title: "D50 M1a Mixed-Precision Quantization: A Multilingual Embedding Model With Per-Layer Bit Widths - ThakiCloud"
+title: "Different Bits per Layer: Mixed-Precision Embedding Model"
+seo_title: "Different Bits per Layer: Mixed-Precision Embedding Model"
 seo_description: "We quantized Qwen3-Embedding-0.6B with 4 bits on the first seven layers and 3 bits on the rest. It is 0.95% smaller than a uniform 3-bit layout by quantization payload and scored higher on five of nine retrieval sets. We also explain why we cannot point to one source of the gain."
 excerpt: "Giving every layer the same bit width is the default. Keeping the budget nearly fixed and splitting bits differently across layers improved retrieval quality. What produced that gain, though, is something we cannot say yet."
 date: 2026-10-17

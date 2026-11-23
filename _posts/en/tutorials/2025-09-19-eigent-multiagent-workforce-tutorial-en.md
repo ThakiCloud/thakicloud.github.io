@@ -1,7 +1,7 @@
 ---
-title: "Getting Started with Eigent: World's First Multi-agent Workforce Platform"
+title: "Getting Started with Eigent: A Multi-Agent Workforce"
 excerpt: "A comprehensive tutorial on setting up and using Eigent, the revolutionary multi-agent platform that automates complex workflows through intelligent AI agents."
-seo_title: "Eigent Multi-agent Workforce Tutorial: Complete Setup Guide - Thaki Cloud"
+seo_title: "Getting Started with Eigent: A Multi-Agent Workforce"
 seo_description: "Learn how to set up and use Eigent, the world's first multi-agent workforce platform. Complete tutorial with practical examples and use cases."
 date: 2025-09-19
 lang: en

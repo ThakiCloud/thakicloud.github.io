@@ -1,7 +1,7 @@
 ---
-title: "What an Open 27B Can Build: An Insurance Agent That Runs Inside Your Own Walls"
+title: "What an Open 27B Can Build: An In-House Insurance Agent"
 excerpt: "If you want your own model running inside your own company, this is a worked example. We took the weights we released two days ago, added 452 clauses of the Financial Supervisory Service's standard insurance terms, and trained nothing. The agent answers in one sentence with a grounded citation, and first sound arrives about 0.6 seconds after the question. Every component, the answer model and the speech synthesizer, ran on our own GPUs, and no request ever left the building. Because the weights are open, the same setup can move straight into a company's own internal network."
-seo_title: "A Sovereign AI Case Study Built on Open Weights: Human-KO 27B Insurance Clause Agent"
+seo_title: "What an Open 27B Can Build: An In-House Insurance Agent"
 seo_description: "An insurance chatbot that answers in one sentence, grounded in 452 clauses of the Financial Supervisory Service's standard terms. We publish clause-selection accuracy (recall at 1 of 0.969), time to first sound (about 0.6 seconds), and how we fixed the voice, all measured."
 date: 2026-09-03
 published: true

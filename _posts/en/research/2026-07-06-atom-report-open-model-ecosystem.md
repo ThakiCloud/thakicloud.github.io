@@ -1,7 +1,7 @@
 ---
-title: "The Center of Gravity Has Shifted: Reading the Open Model Ecosystem Through the ATOM Report"
+title: "The ATOM Report: Where the Open Model Ecosystem Is Heading"
 excerpt: "The ATOM Report measures open language models across both downloads and inference usage in one place, and shows with data that Chinese open models overtook the U.S. camp in the summer of 2025 and have widened the gap since. Qwen crossed roughly one billion cumulative downloads on Hugging Face, while DeepSeek leads the OpenRouter inference market. We read what this shift means from the perspective of ThakiCloud, which runs on-prem and sovereign infrastructure."
-seo_title: "Reading the Open Model Ecosystem Through the ATOM Report - Thaki Cloud"
+seo_title: "The ATOM Report: Where the Open Model Ecosystem Is Heading"
 seo_description: "The ATOM Report (arXiv 2604.07190) measures both Hugging Face downloads and OpenRouter inference usage to map the open language model ecosystem. We summarize its key findings, Qwen's billion downloads, the mid-2025 Chinese overtake, DeepSeek's inference lead, and the rise of GPT-OSS, then draw implications for ThakiCloud's ai-platform, which serves open models in on-prem multi-tenant clusters."
 date: 2026-07-06
 lang: en

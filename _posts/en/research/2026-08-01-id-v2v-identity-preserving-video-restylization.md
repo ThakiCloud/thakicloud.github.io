@@ -1,6 +1,6 @@
 ---
-title: "Keep the Face, Change Everything Else: How ID-V2V Turned Identity Preservation Into a Lighting Problem"
-seo_title: "ID-V2V Explained: Identity-Preserving Video Restylization on Wan 2.1 + VACE | ThakiCloud"
+title: "ID-V2V: Identity Preservation as a Lighting Problem"
+seo_title: "ID-V2V: Identity Preservation as a Lighting Problem"
 seo_description: "Eyeline Labs' SIGGRAPH Asia 2026 paper ID-V2V changes an entire video's scene and lighting from a single edited first frame while preserving the subject's face, expression, gaze and lip sync. We unpack the decision to recast identity preservation as video relighting, the normal and depth control signals, and what the pipeline costs to serve on premises."
 excerpt: "Recasting identity preservation as a lighting problem rather than a generation problem is the core move here, and it has serving implications too."
 date: 2026-08-01

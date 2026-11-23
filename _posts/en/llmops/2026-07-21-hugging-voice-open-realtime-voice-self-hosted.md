@@ -1,5 +1,5 @@
 ---
-title: "Switch off the OpenAI Realtime API in one line: hugging-voice, an open voice stack you run yourself"
+title: "hugging-voice: Self-Hosted Realtime Voice, One Line Away"
 excerpt: "Hugging Face's hugging-voice and its engine speech-to-speech wrap a full realtime voice pipeline, from VAD through STT, LLM, and TTS, behind an OpenAI Realtime compatible WebSocket. Change one line in your client's base URL and you move onto your own infrastructure. We took the design apart from a serving perspective."
 date: 2026-07-21
 tags:

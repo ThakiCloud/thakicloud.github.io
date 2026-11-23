@@ -1,7 +1,7 @@
 ---
-title: "Agent Memory Is Now a Data System: A Data-Management Lens on Agent-Native Memory"
+title: "Agent Memory Is Now a Data System"
 excerpt: "arXiv 2606.24775 'Are We Ready For An Agent-Native Memory System?' treats LLM agent memory not as RAG but as a full data-management system, decomposing 12 memory systems into 4 modules and measuring each. Based on the official abstract and public code, we summarize the core claims and their implications for the ThakiCloud platform."
-seo_title: "Agent-Native Memory System Analysis - A Data-Management Perspective on Agent Memory - Thaki Cloud"
+seo_title: "Agent Memory Is Now a Data System"
 seo_description: "Analysis of arXiv 2606.24775 based on the official abstract. Covers the 4-module decomposition of Representation & Storage / Extraction / Retrieval & Routing / Maintenance, evaluation across 12 memory systems with 5 workloads and 11 datasets, workload-bottleneck alignment, cost-performance trade-offs, and implications for the ThakiCloud Kubernetes multi-tenant agent platform."
 date: 2026-06-26
 last_modified_at: 2026-06-26

@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Hub Agentic RAG Source Code Deep Dive: Agent-Based Retrieval-Augmented Generation"
+title: "AI Engineering Hub: Agentic RAG Source Code Analysis"
 excerpt: "A thorough source-level analysis of the Agentic RAG project inside the 10.7k-star AI Engineering Hub repository, with practical implementation guidance."
 date: 2025-06-21
 tags: 

@@ -1,7 +1,7 @@
 ---
-title: "Devin.cursorrules: The Complete Guide to Converting a $20 Cursor into a $25 Devin-Level AI Assistant"
+title: "Devin.cursorrules: Turning Cursor into a Devin-Like Agent"
 excerpt: "Everything you need to know about devin.cursorrules, the innovative tool that upgrades Cursor/Windsurf IDE into an advanced AI assistant like Devin."
-seo_title: "Devin.cursorrules Complete Guide - Cursor AI Assistant Enhancement Tool - Thaki Cloud"
+seo_title: "Devin.cursorrules: Turning Cursor into a Devin-Like Agent"
 seo_description: "The devin.cursorrules project converts a $20/month Cursor into a $25/task Devin-level AI assistant. Complete guide to automated planning, self-evolution, web browsing, and multi-agent collaboration."
 date: 2025-07-04
 last_modified_at: 2025-07-04

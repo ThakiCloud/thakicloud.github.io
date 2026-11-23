@@ -1,7 +1,7 @@
 ---
-title: "Cutting Agent Operating Costs with Routing: Model Tiers, Skill Router, and 7 Cost Rules"
+title: "Cutting Agent Operating Costs With Routing"
 excerpt: "Starting from an incident that burned $705 in a single day, we reveal the practical rules and numbers behind how we structurally reduced Claude Code agent operating costs through LLM model routing, a skill router, and token hygiene."
-seo_title: "Claude Code Cost Optimization: Model Routing & Token Rules"
+seo_title: "Cutting Agent Operating Costs With Routing"
 seo_description: "ThakiCloud's field-tested rules for reducing Claude Code agent costs: haiku/sonnet/opus/fable routing, BM25 skill router, 2K token rule, retro-driven model escalation, and daily cost auditing -- all with real incident data."
 date: 2026-06-20
 last_modified_at: 2026-06-20

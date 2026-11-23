@@ -1,7 +1,7 @@
 ---
-title: "Claude Relay Service 완전 설치 가이드 - 자건 Claude API 미러링 서비스 구축"
+title: "Claude Relay Service: 자체 Claude API 중계 서비스 구축"
 excerpt: "Claude 계정 차단 걱정 없이 안전하게 Claude API를 사용할 수 있는 자체 중계 서비스를 구축하는 완전한 가이드입니다. 다중 계정 관리, OpenAI 호환 API, OAuth 인증까지 모든 기능을 단계별로 설명합니다."
-seo_title: "Claude Relay Service 설치 튜토리얼 - 자체 Claude API 중계 서비스 구축 가이드 - Thaki Cloud"
+seo_title: "Claude Relay Service: 자체 Claude API 중계 서비스 구축"
 seo_description: "Claude 계정 차단 걱정 없는 자체 Claude API 중계 서비스 구축 완전 가이드. 다중 계정 관리, OpenAI 호환, OAuth 인증, 클라이언트 제한 기능까지 상세한 설치와 설정 방법을 제공합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

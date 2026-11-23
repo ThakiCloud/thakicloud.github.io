@@ -1,6 +1,6 @@
 ---
-title: "The Community's Adapters Turned Out to Be a Map of What Was Never Released"
-seo_title: "MiniMax H3 Adapter Ecosystem: Where LoRA Stopped Being a Style Adapter - ThakiCloud"
+title: "H3 Adapter Ecosystem: A Map of What Was Never Released"
+seo_title: "H3 Adapter Ecosystem: A Map of What Was Never Released"
 seo_description: "We opened the model cards for fourteen MiniMax H3 adapters and sorted them by what they actually do. The places the community filled line up exactly with the three modules that were held back, and adapters have moved from style into sampling trajectories, temporal structure, and cross-model transfer. We also cover the license terms that exclude Korea."
 excerpt: "A video model shipped, and small modules piled up around it fast. But once you count what was actually built, the gaps the community filled match the modules that were never released. The adapter list is not a feature list. It is a map of holes."
 date: 2026-08-31

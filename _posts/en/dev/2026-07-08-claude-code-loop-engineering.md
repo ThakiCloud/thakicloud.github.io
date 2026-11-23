@@ -1,7 +1,7 @@
 ---
-title: "Stop Typing Prompts, Start Designing Loops: Reading Claude Code's Official Loop Engineering Guide"
+title: "Stop Typing Prompts, Start Designing Loops"
 excerpt: "On July 7, 2026, Anthropic published its first official loop engineering document, 'Getting started with loops.' It marks the shift from a human prompting every step to designing a system that prompts the agent for you. This post covers manual loops, /loop interval loops, /schedule routines, and /goal completion conditions, then connects the patterns to how ThakiCloud has wired them into real unattended pipelines and to the Paxis agent control plane."
-seo_title: "Claude Code Loop Engineering - Reading the /goal /loop /schedule Guide (2026) - Thaki Cloud"
+seo_title: "Stop Typing Prompts, Start Designing Loops"
 seo_description: "An introduction to Anthropic's official 'Getting started with loops' (2026-07-07). We cover manual loops, /loop interval loops, /schedule routines, /goal completion conditions and turn caps, designing verifiable success criteria, and skill-based verification, plus how ThakiCloud wired these patterns into real unattended pipelines with pge-loop, Goal Mode, and launchd cron, and the Paxis Agent-Native Cloud implications."
 date: 2026-07-08
 last_modified_at: 2026-07-08

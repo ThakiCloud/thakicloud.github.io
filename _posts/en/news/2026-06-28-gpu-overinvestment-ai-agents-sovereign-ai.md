@@ -1,7 +1,7 @@
 ---
-title: "The Real Logic Behind Big Tech's GPU Overinvestment: Asymmetric Insurance and the Next Tollgate"
+title: "Big Tech's GPU Overinvestment as Asymmetric Insurance"
 excerpt: "Hyperscaler capex in 2026 reaches roughly $725B, up 77% year over year. This article reads that spending through two structural lenses: asymmetric insurance and the intent-router tollgate. It validates the framing against METR's task horizon data and the reliability-threshold math, then maps what it means for enterprises that want to avoid tollgate dependency and for ThakiCloud's position as a K8s/Kueue-based sovereign AI infrastructure provider."
-seo_title: "Big Tech GPU Overinvestment: Asymmetric Insurance and the AI Tollgate - Thaki Cloud"
+seo_title: "Big Tech's GPU Overinvestment as Asymmetric Insurance"
 seo_description: "Is big tech's ~$725B AI capex in 2026 (+77%) a bubble? This analysis applies two structural lenses: asymmetric insurance and the intent-router tollgate. It draws on METR task horizon data (~7-month doubling, accelerating to ~4 months) and reliability step-function math. Implications for sovereign AI demand and ThakiCloud's K8s/Kueue agent infrastructure are discussed."
 date: 2026-06-28
 last_modified_at: 2026-06-28

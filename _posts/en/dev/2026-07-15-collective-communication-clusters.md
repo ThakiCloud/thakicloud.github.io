@@ -1,5 +1,5 @@
 ---
-title: "The Anatomy of GPU and TPU Clusters: How Collective Communication Determines the Speed of Distributed Training"
+title: "GPU and TPU Cluster Anatomy: Collective Communication"
 excerpt: "When training or serving a large model across many accelerators, the real bottleneck usually isn't computation, it's the data moving between accelerators. This post walks through what collective operations like all-reduce, all-gather, reduce-scatter, and all-to-all actually are, and how they run on two very different physical structures: GPU clusters (NVLink, NVSwitch, InfiniBand) and TPU clusters (the ICI 3D torus and optical circuit switches). From the bandwidth cost formula behind ring all-reduce to which collectives are triggered by data, tensor, pipeline, and expert parallelism, we cover this from the perspective ThakiCloud brings to running GPU infrastructure."
 tags:
   - dev

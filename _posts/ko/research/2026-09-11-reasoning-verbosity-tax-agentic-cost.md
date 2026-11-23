@@ -1,6 +1,6 @@
 ---
-title: "생각은 한 번입니다. 청구는 매 턴입니다: 에이전트 루프의 추론 과잉세(verbosity tax) 공식"
-seo_title: "Agentic LLM 추론 과잉세: H200 셀프호스트 서빙에서 explicit vs compact thinking의 품질-달러 손익분기점 공식과 4arm 측정 프로토콜 - ThakiCloud"
+title: "추론 과잉세: 에이전트 루프의 매 턴 청구"
+seo_title: "추론 과잉세: 에이전트 루프의 매 턴 청구"
 seo_description: "에이전트 루프에서 컨텍스트에 남은 추론 토큰은 매 턴 입력 가격으로 다시 청구됩니다. persistent context에서는 추론 과잉세가 지평선 T에 대해 이차적으로, discard에서는 1차적으로 커지고 Qwen3 thinking 토글로 품질-달러 손익분기점이 닫힌 해로 주어집니다. H200에서 실행할 4arm 반증 프로토콜까지 짚습니다."
 excerpt: "생각은 한 번이면 되는데, 청구는 매 턴 돌아옵니다. thinking을 켜둔 채 컨텍스트에 추론을 남기면 그 토큰은 이후 모든 턴에서 입력 가격으로 다시 계산됩니다. 이 논문은 그 세를 공식으로 짜고 품질-달러로 compact가 이기는 지평선을 닫힌 해로 줍니다. 그 공식을 뒤집을 4arm 프로토콜도 선언합니다."
 date: 2026-09-11

@@ -1,7 +1,7 @@
 ---
-title: "AI 경제 영향 측정이 로그 분석을 넘어섭니다: Anthropic Economic Index 'Cadences' 보고서를 뜯어봤습니다"
+title: "Economic Index Cadences: 로그 분석을 넘어서"
 excerpt: "Anthropic이 2026년 6월 26일 공개한 Economic Index 'Cadences' 보고서는 7일 샘플을 버리고 시간 단위 연속 텔레메트리로 전환했습니다. 여기에 산출물 분류기와 설문 데이터를 결합해, AI 영향 측정을 채팅 로그에서 다층 혼합 방법론으로 끌어올립니다. ThakiCloud가 엔터프라이즈 AI 플랫폼 ROI를 어떻게 다시 정의할 수 있는지 정리했습니다."
-seo_title: "Anthropic Economic Index Cadences 보고서 분석 - AI 경제 영향 측정 방법론 - Thaki Cloud"
+seo_title: "Economic Index Cadences: 로그 분석을 넘어서"
 seo_description: "Anthropic Economic Index Cadences(2026-06) 보고서를 공식 자료 기준으로 분석합니다. 시간 단위 샘플링, 93% 대화의 산출물 분류, Claude Code 자율성 0.37점 격차, 경제지수 설문(10명 중 6명 내년 기대 상승), 그리고 ThakiCloud 쿠버네티스 멀티테넌트 AI 플랫폼의 ROI 측정 프레임워크 적용 관점."
 date: 2026-06-27
 last_modified_at: 2026-06-27

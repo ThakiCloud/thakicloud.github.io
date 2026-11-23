@@ -1,7 +1,7 @@
 ---
-title: "Claude Code SDK 이메일 에이전트: Anthropic의 AI 기반 이메일 어시스턴트 데모 심층 분석"
+title: "Claude Code SDK 이메일 에이전트 데모 해부"
 excerpt: "IMAP 이메일 어시스턴트, AI 기반 검색, 자연어 처리, 실시간 스트리밍 기능을 갖춘 Anthropic의 Claude Code SDK 데모에 대한 종합적 분석."
-seo_title: "Claude Code SDK 이메일 에이전트 분석 - AI 이메일 어시스턴트 튜토리얼"
+seo_title: "Claude Code SDK 이메일 에이전트 데모 해부"
 seo_description: "Anthropic의 Claude Code SDK 이메일 에이전트 데모 심층 리뷰: IMAP 통합, AI 기반 검색, WebSocket 스트리밍, SQLite 캐싱 구현 분석."
 date: 2025-09-22
 tags:

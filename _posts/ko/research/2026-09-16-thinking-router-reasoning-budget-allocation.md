@@ -1,6 +1,6 @@
 ---
-title: "무인 에이전트는 어디서 생각해야 하는가: 스킬 선택과 실행 사이 reasoning budget의 cost-quality frontier"
-seo_title: "The Thinking Router 논문 분석 - 무인 agent loop의 thinking 토큰을 skill 선택과 실행 사이 어디에 배분할 것인가. error amplification, water-filling 배분 규칙(독수준 water level, bisection 해), flip condition, retriever 압축과의 1차 보완, 5×3 요인 측정 프로토콜 - ThakiCloud"
+title: "Reasoning Budget: 무인 에이전트는 어디서 생각할까"
+seo_title: "Reasoning Budget: 무인 에이전트는 어디서 생각할까"
 seo_description: "프로덕션 agent harness는 모든 작업을 skill 라우터로 먼저 보내지만 thinking 예산의 대부분은 실행 단계에 쓰입니다. 이 논문은 총 thinking budget이 고정됐을 때 라우팅과 실행 사이 배분을 stage-level cost-quality frontier 문제로 정식화합니다. 라우터 thinking 토큰의 하류 증폭 구조, dollar당 마진 품질을 맞히는 water-filling 배분 규칙, 예산이 실행에서 라우터로 넘어가는 flip condition, retriever 압축과의 1차 보완을 유도하고 5×3 요인 프로토콜로 frontier를 프로덕션 route bench에서 재는 절차까지 지정합니다."
 excerpt: "무인 에이전트 루프의 thinking 토큰은 어디에 쓰면 값이 붙는가. 라우터의 토큰 하나는 하류 실행 전체를 지키기도 하고 통째로 날리기도 하므로, 배분의 답은 실행 단계에만 몰아주는 것이 아닙니다. stage별 cost-quality frontier를 긋고 물이 낮은 데로 차는 water-filling 규칙으로 배분을 정합니다. 예산이 실행에서 라우터로 넘어가는 flip condition은 부등식으로 줍니다."
 date: 2026-09-16

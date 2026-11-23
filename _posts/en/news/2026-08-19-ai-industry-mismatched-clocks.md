@@ -1,7 +1,7 @@
 ---
 title: "Today's AI News Wasn't Full of Numbers. It Was Full of Clocks"
 excerpt: "We pulled the units out of seventeen articles we ran today and lined them up. Most of them turned out to be time. From 30 minutes to 2030, eight clocks running at odds with each other point straight at where AI adoption in Korea is actually getting stuck."
-seo_title: "Between 30 Minutes and 20 Weeks: What Blocks AI Adoption Isn't a Tech Gap, It's a Clock Gap"
+seo_title: "Today's AI News Wasn't Full of Numbers. It Was Full of Clocks"
 seo_description: "OpenAI's 30-minute alert, a 20-week memory lead time, procurement cut from 60 days to 10. A time-sorted read of AI news from August 19, 2026, and what organizations need to line up."
 date: 2026-08-19
 last_modified_at: 2026-08-19

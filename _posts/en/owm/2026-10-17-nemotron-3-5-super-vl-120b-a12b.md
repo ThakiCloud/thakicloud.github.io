@@ -1,6 +1,6 @@
 ---
-title: "120 Specialists, 12 on Duty: Nemotron 3.5 Super VL (120B/A12B), an Open Agent Model"
-seo_title: "Released by NVIDIA on 2026-10-15, Nemotron 3.5 Super VL is an open MoE agent model that activates 12B of its 120B total parameters per token. A Mamba-Transformer hybrid with 1M context, packing text, image, document, and video understanding plus tool calling into a single checkpoint, with NVFP4 quantization and day-0 vLLM and SGLang serving. - ThakiCloud"
+title: "120 Specialists, 12 on Duty: Nemotron 3.5 Super VL"
+seo_title: "120 Specialists, 12 on Duty: Nemotron 3.5 Super VL"
 seo_description: "A review of NVIDIA Nemotron 3.5 Super VL: the 120B/A12B MoE, Mamba-Transformer hybrid, 1M-context multimodal agent model. Architecture, reported benchmarks, NVFP4 serving, and the adoption decision criteria from the ThakiCloud perspective."
 excerpt: "Nemotron 3.5 Super VL, released by NVIDIA on 2026-10-15, is a 120B MoE agent model that activates only 12B per token. It pairs a Mamba-Transformer hybrid and 1M context with text, image, document, and video understanding plus tool calling in a single open checkpoint, and ships NVFP4 quantization the same day. This post covers the serving economics of hiring 120 specialists and putting only 12 on duty, and how to read self-reported and vendor-reported numbers apart."
 date: 2026-10-17

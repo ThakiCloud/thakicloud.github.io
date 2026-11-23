@@ -1,6 +1,6 @@
 ---
-title: "Apple Silicon 로컬 LLM 추론의 새 기준 BaseRT: 손글 Metal 커널과 서명된 양자화 번들, 그리고 프로프라이어티 엔진이라는 대가"
-seo_title: "BaseRT Apple Silicon 로컬 LLM 추론 엔진, 손글 Metal 커널, 서명된 양자화 .base 번들, llama.cpp 비교, OpenAI 호환 서버, 엣지 서빙 경제성 - ThakiCloud"
+title: "BaseRT: Apple Silicon 로컬 LLM 추론의 새 기준"
+seo_title: "BaseRT: Apple Silicon 로컬 LLM 추론의 새 기준"
 seo_description: "Base Compute의 BaseRT가 손글 Metal 커널과 서명된 양자화 번들로 Apple Silicon 로컬 LLM 추론을 재설계했습니다. 벤더가 발표한 6.4배 프리필 숫자의 맥락, .base 포맷, 오픈 CLI 대 프로프라이어티 엔진의 라이선스 함의, 그리고 로컬 서빙 경제성을 검증 가능한 범위에서 짚어봅니다."
 excerpt: "llama.cpp를 앞지를 만큼 빠르다는 신규 로컬 추론 엔진 BaseRT가 Apple Silicon에서 돌기 시작했습니다. 손글 Metal 커널과 서명된 양자화 번들이 빠른 수치를 만듭니다. 다만 그 엔진은 밀봉되어 있습니다. 검증할 수 있는 범위에서 BaseRT를 뜯어봅니다."
 date: 2026-10-29

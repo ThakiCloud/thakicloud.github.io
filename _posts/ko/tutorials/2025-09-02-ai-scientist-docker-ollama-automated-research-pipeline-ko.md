@@ -1,7 +1,7 @@
 ---
 title: "AI Scientist와 Docker & Ollama: 자동화된 연구 파이프라인 구축하기"
 excerpt: "SakanaAI의 AI Scientist를 OrbStack Docker 환경에서 구동하여 연구 워크플로우를 혁신하세요. 이 종합 가이드는 Ollama와 LM Studio 같은 로컬 LLM을 활용하여 24/7 자동 연구 파이프라인을 구축하는 방법을 큐 관리와 지속적 운영 예제와 함께 제시합니다."
-seo_title: "AI Scientist Docker Ollama 설정 가이드 - 자동화된 연구 파이프라인 구축 - Thaki Cloud"
+seo_title: "AI Scientist와 Docker & Ollama: 자동화된 연구 파이프라인 구축하기"
 seo_description: "SakanaAI의 AI Scientist를 OrbStack Docker, Ollama, LM Studio와 함께 설정하여 자동화된 연구를 수행하는 완전한 튜토리얼입니다. 큐 관리, 모니터링, 24/7 운영 예제와 실용적인 구현 가이드를 포함합니다."
 date: 2025-09-02
 last_modified_at: 2025-09-02

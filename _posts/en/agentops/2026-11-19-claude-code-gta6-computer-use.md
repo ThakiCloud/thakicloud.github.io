@@ -1,7 +1,7 @@
 ---
 title: "The 8 Hours I Gave the Agent My Desktop"
 excerpt: "A post claiming Claude Code played GTA 6 for 8 hours unattended went viral. Behind it is 'computer use,' the feature that hands an agent the mouse and keyboard. This post covers how to enable it, where the 8-hour claim lines up and does not with the documented constraints, and where the safety boundary actually splits."
-seo_title: "Claude Code computer use: the safety boundary behind 'played GTA 6 for 8 hours'"
+seo_title: "The 8 Hours I Gave the Agent My Desktop"
 seo_description: "Claude Code's computer use hands screen access to an agent. Based on the official docs, this post covers how to enable it, the per-app approval and Esc-interrupt design, and where the viral 'GTA 6 8-hour unattended play' claim and the documentation do not match."
 date: 2026-11-19
 last_modified_at: 2026-11-19

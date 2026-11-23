@@ -1,7 +1,7 @@
 ---
 title: "Bright Data MCP 완전 가이드: AI에게 실시간 웹 슈퍼파워 부여하기"
 excerpt: "Claude 및 기타 AI 어시스턴트와 Bright Data의 Model Context Protocol 서버를 통합하여 차단 없이 원활한 웹 스크래핑, 실시간 데이터 액세스, 브라우저 자동화를 구현하는 방법을 학습하세요."
-seo_title: "Bright Data MCP 튜토리얼: AI 웹 스크래핑 및 실시간 데이터 액세스 - Thaki Cloud"
+seo_title: "Bright Data MCP 완전 가이드: AI에게 실시간 웹 슈퍼파워 부여하기"
 seo_description: "Claude AI와 Bright Data MCP 통합 마스터하기. 웹 스크래핑, 실시간 검색, 브라우저 자동화를 위한 월 5,000회 무료 요청. 완전한 설정 가이드 포함."
 date: 2025-09-28
 tags:

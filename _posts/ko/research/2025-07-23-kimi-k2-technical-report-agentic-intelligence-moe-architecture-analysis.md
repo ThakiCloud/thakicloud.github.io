@@ -1,7 +1,7 @@
 ---
-title: "Kimi K2 기술 보고서 심층 분석: 에이전틱 인텔리전스를 위한 1조 파라미터 MoE 아키텍처"
+title: "Kimi K2 기술 보고서: 에이전트를 위한 MoE"
 excerpt: "MoonshotAI의 Kimi K2 기술 보고서를 통해 살펴보는 MuonClip 옵티마이저, 대규모 합성 데이터 파이프라인, 그리고 차세대 에이전틱 AI의 핵심 혁신 기술들"
-seo_title: "Kimi K2 기술 보고서 완전 분석 - 에이전틱 AI MoE 아키텍처 연구 - Thaki Cloud"
+seo_title: "Kimi K2 기술 보고서: 에이전트를 위한 MoE"
 seo_description: "MoonshotAI Kimi K2의 1조 파라미터 MoE 모델, MuonClip 옵티마이저, 15.5조 토큰 사전훈련, 에이전틱 데이터 합성 파이프라인의 기술적 혁신을 심층 분석합니다."
 date: 2025-07-23
 last_modified_at: 2025-07-23

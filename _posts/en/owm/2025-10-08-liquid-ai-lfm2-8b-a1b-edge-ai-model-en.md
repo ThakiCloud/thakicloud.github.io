@@ -1,7 +1,7 @@
 ---
-title: "Liquid AI LFM2-8B-A1B: Revolutionary Edge AI Model for On-Device Deployment"
+title: "LFM2-8B-A1B: Liquid AI's Hybrid MoE for On-Device Use"
 excerpt: "Explore Liquid AI's LFM2-8B-A1B, a groundbreaking hybrid MoE model with 8.3B total parameters and 1.5B active parameters, designed specifically for edge AI and on-device deployment with exceptional quality and speed."
-seo_title: "Liquid AI LFM2-8B-A1B Edge AI Model Review - Thaki Cloud"
+seo_title: "LFM2-8B-A1B: Liquid AI's Hybrid MoE for On-Device Use"
 seo_description: "Comprehensive review of Liquid AI's LFM2-8B-A1B hybrid MoE model featuring 8.3B parameters, edge deployment capabilities, and superior performance on mobile devices."
 date: 2025-10-08
 tags:

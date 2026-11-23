@@ -1,7 +1,7 @@
 ---
-title: "HRM: An Innovative Approach to Hierarchical Reasoning Models Inspired by the Human Brain"
+title: "HRM: Hierarchical Reasoning Inspired by the Human Brain"
 excerpt: "Analysis of the core principles of the Hierarchical Reasoning Model that outperforms large models with only 27 million parameters, and the new paradigm it opens toward AGI"
-seo_title: "Hierarchical Reasoning Model HRM Paper Analysis - Brain-Inspired AI Architecture - Thaki Cloud"
+seo_title: "HRM: Hierarchical Reasoning Inspired by the Human Brain"
 seo_description: "Detailed analysis of HRM's hierarchical reasoning mechanism that overcomes Chain-of-Thought limitations, ARC benchmark performance, and its new approach toward AGI"
 date: 2025-08-03
 last_modified_at: 2025-08-03

@@ -1,7 +1,7 @@
 ---
-title: "LangChain Open Deep Research: Complete Guide to the Multi-Agent AI Research Automation System"
+title: "LangChain Open Deep Research: A Multi-Agent Research System"
 excerpt: "An in-depth guide to LangChain Open Deep Research covering quality-focused agents, multi-agent research systems, and advanced RAG architecture. Practical implementation patterns for production research automation."
-seo_title: "LangChain Open Deep Research Complete Guide - Multi-Agent Research System - Thaki Cloud"
+seo_title: "LangChain Open Deep Research: A Multi-Agent Research System"
 seo_description: "LangChain Open Deep Research comprehensive analysis. QualityFocusedAgent, MultiAgentResearchSystem, AdvancedRAGSystem implementation, domain-specific agents, and Kubernetes deployment guide for AI-powered research automation."
 date: 2025-07-17
 last_modified_at: 2025-07-17

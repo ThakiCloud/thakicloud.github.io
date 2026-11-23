@@ -1,6 +1,6 @@
 ---
-title: "Building AAA-Style Games with Claude Code: We Verified All 10 GitHub Repos and Actually Built One"
-seo_title: "10 Open-Source Repos for AAA-Style Game Systems: Jolt Physics, Recast, meshoptimizer Verified with Claude Code - ThakiCloud"
+title: "Building AAA-Style Games with Claude Code: 10 Repos Tested"
+seo_title: "Building AAA-Style Games with Claude Code: 10 Repos Tested"
 seo_description: "We verified all 10 'insane repos' from a viral tweet through the GitHub API and actually built and ran meshoptimizer, cutting a 204,800-triangle mesh to 50% with an error one-eighth of budget. One repo (ozz-animation) came back as NOASSERTION, a license GitHub cannot classify."
 excerpt: "All 10 repos exist, totaling 55,723 stars, with 9 active in the last 90 days. We built meshoptimizer for real: 204,800 triangles down to 102,400, error at one-eighth of budget. The point is not the repos but the pattern of handing an agent the API contract and letting it write the integration."
 date: 2026-10-30

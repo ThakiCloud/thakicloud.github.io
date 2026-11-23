@@ -1,6 +1,6 @@
 ---
-title: "Qwen3-8B Held Up Without Its 46 INT8 Guard Layers: Releasing A82, 0.48 GiB Smaller Than A81"
-seo_title: "B200 NVFP4A16 follow-up: A82 shrinks Qwen3-8B to 5.44 GiB without INT8 guard layers - ThakiCloud"
+title: "Qwen3-8B A82: Releasing Without INT8 Guard Layers"
+seo_title: "Qwen3-8B A82: Releasing Without INT8 Guard Layers"
 seo_description: "On NVIDIA B200, A82 keeps the whole Qwen3-8B body in NVFP4A16 and only the output layer in INT8. It passed a preregistered non-inferiority test against A81 on 10,210 independent items, at 5.438 GiB of weight memory. We also cover the open reasoning question and the concurrency throughput limit."
 excerpt: "Last week's A81 kept 46 sensitive units in INT8. A82 removes all of that protection and still passed the preregistered non-inferiority bar. Memory dropped another 0.479 GiB, but there is no basis for a superiority claim and the reasoning axis is still unresolved."
 date: 2026-11-17

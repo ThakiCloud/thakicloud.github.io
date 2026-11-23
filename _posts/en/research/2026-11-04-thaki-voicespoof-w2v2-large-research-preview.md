@@ -1,6 +1,6 @@
 ---
-title: "We Built a Model That Tells AI-Generated Voices Apart: VoiceSpoof's Performance and Where It Could Fit in Maxis, Metis and Paxis"
-seo_title: "Thaki-VoiceSpoof-W2V2-Large: Voice Deepfake Detection Research Preview - ThakiCloud"
+title: "VoiceSpoof: Telling AI-Generated Voices Apart"
+seo_title: "VoiceSpoof: Telling AI-Generated Voices Apart"
 seo_description: "We released a ~300M-parameter model that separates real recordings from synthetic and converted speech as a Research Preview. Sealed ASVspoof 5 Eval: EER 8.06%, minDCF 0.1995. The reload-parity check failed under its original criterion. Only the verified BF16 runtime is supported."
 excerpt: "We released a voice deepfake detection model as a Research Preview. This post covers its performance, what failed in the release checks and why, and how it could be used in Maxis, Metis and Paxis, along with what we have not verified."
 date: 2026-11-04

@@ -1,7 +1,7 @@
 ---
-title: "Preparing for What Comes After NVFP4: A Complete Guide to Quantization Methods for vLLM Serving (Including Unsloth)"
+title: "After NVFP4: Quantization Options for Serving with vLLM"
 excerpt: "Beyond Blackwell-only NVFP4, this guide covers every quantization method you can serve with vLLM today on Hopper and Ampere -- AWQ, GPTQ, FP8, W4A16, compressed-tensors, and Unsloth Dynamic 2.0 -- with real recipes and serving flags."
-seo_title: "Complete vLLM Quantization Serving Guide: AWQ, GPTQ, FP8, W4A16, Unsloth - Thaki Cloud"
+seo_title: "After NVFP4: Quantization Options for Serving with vLLM"
 seo_description: "Compare LLM quantization methods for vLLM serving. Covers llm-compressor (compressed-tensors) W4A16, W8A8, FP8; AWQ+Marlin; GPTQModel; AutoRound; Unsloth Dynamic 2.0; and the merge-to-AWQ production path -- with real code."
 date: 2026-06-20
 last_modified_at: 2026-06-20

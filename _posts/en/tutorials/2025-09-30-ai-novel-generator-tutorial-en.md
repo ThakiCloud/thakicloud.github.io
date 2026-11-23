@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to AI Novel Generator - Automated Long-Form Fiction Writing"
+title: "AI Novel Generator: Automated Long-Form Fiction"
 excerpt: "Learn how to use AI-powered tools for automated novel generation with step-by-step setup and configuration. Discover how to create consistent, long-form fiction using OpenAI API and vector search technology."
-seo_title: "AI Novel Generator Tutorial - Automated Fiction Writing Guide"
+seo_title: "AI Novel Generator: Automated Long-Form Fiction"
 seo_description: "Master AI novel generation with our comprehensive tutorial. Learn setup, configuration, and best practices for creating consistent long-form fiction using AI technology."
 date: 2025-09-30
 tags:

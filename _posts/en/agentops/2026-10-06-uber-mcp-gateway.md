@@ -1,6 +1,6 @@
 ---
-title: "Anatomy of Uber's MCP Gateway: 800 Servers and 5,000 Tools Behind One Control Surface"
-seo_title: "Uber MCP Gateway: One control plane for 800+ MCP servers and 5,000+ tools without rewriting existing services - ThakiCloud"
+title: "Inside Uber's MCP Gateway"
+seo_title: "Inside Uber's MCP Gateway"
 seo_description: "Uber consolidated its fragmented MCP integrations behind a single gateway. The design behind an IDL-scanning AutoCrawler, a Proxy Gateway that translates HTTP/gRPC/TChannel, disabled-by-default governance, and three context-economy techniques that tame context bloat."
 excerpt: "Hundreds of teams each wiring up their own MCP integrations. Uber's answer is one gateway: a registry that auto-scans IDLs, a data plane that translates protocols, disabled-by-default governance, and a design that treats context as a scarce resource."
 date: 2026-10-06

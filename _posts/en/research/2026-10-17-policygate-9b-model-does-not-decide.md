@@ -1,6 +1,6 @@
 ---
-title: "We Did Not Let the Model Decide: Releasing Thaki-PolicyGate-9B for Korean Regulation Checks"
-seo_title: "Thaki-PolicyGate-9B Release: The Model Extracts, Deterministic Code Decides - ThakiCloud"
+title: "Thaki-PolicyGate-9B: Keeping the Model Out of the Decision"
+seo_title: "Thaki-PolicyGate-9B: Keeping the Model Out of the Decision"
 seo_description: "We released a 9B model on Hugging Face that reads a Korean case together with the regulation text. The model only writes down conditions and evidence sentences as JSON; a deterministic backend checks that record against the source text and makes the decision. On two dev sets it allowed zero wrong answers, and a fresh download reproduced all 300 decisions."
 excerpt: "Our earlier 4B model read a probability for each option and answered directly. The new 9B does not answer. It writes down what it read in the regulation and the case, and code that checks that record against the source text either picks an answer or abstains."
 date: 2026-10-17

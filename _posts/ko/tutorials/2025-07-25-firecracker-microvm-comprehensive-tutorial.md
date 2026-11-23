@@ -1,7 +1,7 @@
 ---
 title: "Firecracker MicroVM 완전 가이드 - AWS 서버리스 가상화 기술 마스터하기"
 excerpt: "Amazon이 개발한 오픈소스 가상화 기술 Firecracker MicroVM의 설치부터 운영까지 완전 정복 가이드"
-seo_title: "Firecracker MicroVM 튜토리얼 - AWS 서버리스 가상화 완전 가이드 - Thaki Cloud"
+seo_title: "Firecracker MicroVM 완전 가이드 - AWS 서버리스 가상화 기술 마스터하기"
 seo_description: "Firecracker MicroVM 설치, 설정, 실행까지 상세한 단계별 튜토리얼. AWS Lambda의 핵심 기술을 직접 체험해보세요."
 date: 2025-07-25
 last_modified_at: 2025-07-25

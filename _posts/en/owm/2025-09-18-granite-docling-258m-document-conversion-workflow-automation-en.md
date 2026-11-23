@@ -1,7 +1,7 @@
 ---
-title: "Revolutionizing Document Conversion Workflows with IBM Granite Docling 258M"
+title: "IBM Granite Docling 258M for Document Conversion"
 excerpt: "Discover how IBM's Granite Docling 258M transforms document processing workflows with multimodal AI, enabling efficient conversion from images to structured formats like HTML, Markdown, and JSON."
-seo_title: "IBM Granite Docling 258M: AI-Powered Document Workflow Automation - Thaki Cloud"
+seo_title: "IBM Granite Docling 258M for Document Conversion"
 seo_description: "Learn how IBM Granite Docling 258M revolutionizes document conversion workflows with multimodal AI technology. Complete guide to automated document processing and structured data extraction."
 date: 2025-09-18
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Five Open Korean OCR Models Compared: From 2.13M to 27B"
-seo_title: "Five open Korean OCR models compared: from a 2.13M-parameter line OCR to a 27B word OCR, why the sizes differ and how each was measured | ThakiCloud"
+seo_title: "Five Open Korean OCR Models Compared: From 2.13M to 27B"
 seo_description: "ThakiCloud's five public Korean OCR models (three 2.13M and 8.93M-parameter line OCR models, 0.9B-class and 27B word OCR adapters): why we built them at different sizes, what each one learned, and how their evaluation sets and metrics differ. The numbers are not a ranking between models."
 excerpt: "We released a model that reads a line in a few milliseconds on CPU alongside one that needs 53GB of GPU memory. Here is why four sizes were needed, and how far each model's numbers can be read."
 date: 2026-11-07

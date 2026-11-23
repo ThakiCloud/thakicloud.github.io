@@ -1,7 +1,7 @@
 ---
 title: "24GB 카드에서 256K 컨텍스트가 거의 공짜인 이유"
 excerpt: "2비트로 줄인 Nemotron 3.5 Lightning이 22GB에서 10분 동안 도구를 호출했다는 보고를 보고, 실제 양자화 파일과 설정을 전부 측정해봤습니다. 병목은 컨텍스트가 아니라 가중치였고, 2비트 아래로는 더 내려가지도 않았습니다."
-seo_title: "Nemotron 3.5 Lightning 2비트 GGUF 실측: 하이브리드 Mamba 구조가 KV 캐시를 8.7배 줄이는 방법"
+seo_title: "24GB 카드에서 256K 컨텍스트가 거의 공짜인 이유"
 seo_description: "Unsloth Dynamic GGUF 17개 티어의 실제 파일 크기와 upstream config를 측정해, 24GB GPU 한 장에서 어느 양자화 티어가 256K 컨텍스트까지 감당하는지 계산했습니다. 52개 레이어 중 어텐션이 6개뿐인 하이브리드 구조가 핵심입니다."
 date: 2026-08-13
 last_modified_at: 2026-08-13

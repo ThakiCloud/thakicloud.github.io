@@ -1,7 +1,7 @@
 ---
 title: "Promptify: LLM 구조화된 출력을 위한 프롬프트 엔지니어링 완전 가이드"
 excerpt: "프롬프트 엔지니어링을 마스터하고 Promptify로 GPT, PaLM 등 LLM에서 구조화된 출력을 얻는 방법을 학습합니다. 학습 데이터 없이 다양한 NLP 태스크를 수행하는 강력한 파이썬 라이브러리입니다."
-seo_title: "Promptify 튜토리얼: LLM 구조화 출력을 위한 프롬프트 엔지니어링 완전 가이드"
+seo_title: "Promptify: LLM 구조화된 출력을 위한 프롬프트 엔지니어링 완전 가이드"
 seo_description: "GPT 등 LLM과 함께 프롬프트 엔지니어링을 위한 Promptify 사용법을 배웁니다. 학습 데이터 없이 NER, 분류, QA 등 NLP 태스크에서 구조화된 출력을 얻으세요."
 date: 2025-09-05
 tags:

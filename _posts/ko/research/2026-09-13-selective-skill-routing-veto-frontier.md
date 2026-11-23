@@ -1,6 +1,6 @@
 ---
 title: "틀리면 작업 통째, 의심하면 호출 한 번: 2,000스킬 라우터의 veto frontier"
-seo_title: "The Veto Frontier 논문 분석 - 2,000스킬 agent harness에서 skill-router 마진의 교정과 자동 라우팅 대 LLM judge 이관의 비대칭 비용, break-even posterior p* = p_j + C_e/C_r과 regret bound, RRF 마진의 유한 격자 구조 - ThakiCloud"
+seo_title: "틀리면 작업 통째, 의심하면 호출 한 번: 2,000스킬 라우터의 veto frontier"
 seo_description: "스킬이 2,000개 달린 에이전트 harness에서 라우터의 유일한 확신은 top-1과 2위의 RRF 점수 마진입니다. 틀린 자동 라우팅은 작업 통째를 소모하지만 심판 호출은 한 번이므로, 이 논문은 '어느 마진에서 자동 실행을 멈추는가'를 break-even posterior p* = p_j + C_e/C_r과 regret bound로 정리합니다. RRF 마진의 유한 격자 구조와 이전 양자화 연구와의 인증된 임계값 합성까지."
 excerpt: "스킬을 하나 잘못 고르면 실행이 통째로 사라지고 심판 호출로 확인하면 대가는 한 번에 불과합니다. 이 비대칭 위에서 '어느 마진까지 자동 실행하고 어느 마진에서 의심할 것인가'는 결국 교정의 질문입니다. 손익분기는 p* = p_j + C_e/C_r이라는 하나의 상수로 정리되고 regret bound는 거부 레이어에 바인딩되는 비용이 교정 오차임을 보여 줍니다."
 date: 2026-09-13

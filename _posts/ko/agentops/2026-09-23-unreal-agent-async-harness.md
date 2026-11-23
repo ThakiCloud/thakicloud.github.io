@@ -1,7 +1,7 @@
 ---
 title: "비동기 하니스가 코딩 에이전트 비용을 39% 줄인 이유"
 excerpt: "에이전트가 도구의 결과를 기다리며 태우는 토큰, wait과 poll과 heartbeat를 하니스가 비동기로 대신하면 어떻게 되는가. Unreal Labs의 오픈소스 Go 하니스 Unreal Agent는 동일한 pass rate로 Codex 대비 39% 저렴한 실측을 냈다. 소스에서 빌드하고 러너를 돌려, 하니스 설계가 에이전트 비용을 독립 변수로 만드는 메커니즘을 짚는다."
-seo_title: "비동기 하니스가 코딩 에이전트 비용을 39% 줄이는 원리. Unreal Agent의 async tool calling 아키텍처와 GPT-6 Astra 실측(Terminal-Bench $1428 vs $2350), ThakiCloud Paxis 관점의 에이전트 실행 경제성까지."
+seo_title: "비동기 하니스가 코딩 에이전트 비용을 39% 줄인 이유"
 seo_description: "Unreal Labs의 오픈소스 Go 에이전트 하니스 Unreal Agent는 도구 호출을 완전히 비동기로 관리해 모델의 wait/poll/heartbeat 오버헤드를 제거한다. 동일 pass rate로 Codex 대비 최대 40%, Pi 대비 최대 20% 절감을 실측했다. 소스 빌드와 러너 CLI로 확인한 아키텍처와 벤치마크, 그리고 에이전트 실행 환경을 운영하는 플랫폼 관점까지."
 date: 2026-09-23
 last_modified_at: 2026-09-23

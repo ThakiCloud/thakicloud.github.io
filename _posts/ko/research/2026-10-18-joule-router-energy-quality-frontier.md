@@ -1,6 +1,6 @@
 ---
-title: "The Joule Frontier: token ledger가 가장 싼 router 구성과 미터가 가장 싼 구성은 다를 수 있고, 그 차이는 closed form입니다"
-seo_title: "The Joule Frontier(Joule frontier) 논문 소개 - self-hosted H200 위에서 24/7 agent platform의 skill router economics는 거의 전부 token dollar로 표기되지만, 플랫폼이 실제로 매초 지불하는 것은 물리적 에너지입니다. 이 논문은 라우팅 요청당 에너지(energy per routed request)를 dollar cost와 quality와 나란한 세 번째 objective로 도입하고 hybrid skill router의 12개 구성 공간에서 분석합니다. 구조적 전력 모델 E(c) = P0 t(c) + η W(c) + R(c) 하에서, 비용 최적 구성이 에너지 최적 구성보다 엄격히 나쁜 것은 floor-time penalty가 work-energy advantage를 넘는 것과 동치이며, 이를 closed-form energy tax로 이름 붙입니다. decoupling은 load-dependent이고, crossover concurrency B*에서 두 objective 순서가 다시 만납니다. 에너지-품질 Pareto knee는 load와 함께 drift합니다. rank-safety margin 안의 quantization은 dollar-neutral이고 strictly energy-dominant이며, 이전 gatekeeper 연구의 명시적 upgrade입니다. NVML integrated power sampling으로 교정하는 measurement protocol이 모든 조건을 production 인프라에서 falsifiable하게 만들고, TCO의 energy slice가 uptime과 함께 커지는 proposition까지 제시합니다. - ThakiCloud"
+title: "Joule Frontier: 토큰 장부와 에너지 미터의 차이"
+seo_title: "Joule Frontier: 토큰 장부와 에너지 미터의 차이"
 seo_description: "24/7 agent platform의 router는 잠들지 않고, 플랫폼이 매초 실제로 지불하는 것은 token dollar가 아니라 물리적 에너지입니다. 이 논문은 라우팅 요청당 줄을 세 번째 objective로 도입하고, 비용 최적과 에너지 최적 구성이 decouple되는 iff 조건인 energy tax, load와 함께 이동하는 crossover concurrency B*와 knee drift, rank-safety margin 안의 energy-dominant quantization을 closed form으로 줍니다."
 excerpt: "token ledger는 토큰만 가격 매기고, 미터는 시간과 일을 가격 매깁니다. 두 대장은 같은 라우터 구성의 다른 좌표를 읽으므로, 가장 싼 구성은 각자 다를 수 있습니다. 이 논문은 그 차이를 측정 가능한 매개변수의 closed-form 함수로 줍니다."
 date: 2026-10-18

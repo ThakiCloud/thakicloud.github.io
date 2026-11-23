@@ -1,7 +1,7 @@
 ---
-title: "GPT-5.5를 1/6 비용으로 따라잡은 오픈웨이트: GLM-5.2를 자체 호스팅 관점에서 뜯어봤습니다"
+title: "GLM-5.2: 훨씬 적은 비용으로 GPT-5.5를 따라잡은 오픈웨이트"
 excerpt: "Z.ai가 MIT 라이선스로 공개한 744B MoE 코딩 모델 GLM-5.2가 SWE-bench Pro와 Terminal-Bench에서 GPT-5.5를 앞섰고, 비용은 약 1/6이라는 보도가 나왔습니다. Vercel CEO까지 감탄한 이 모델을 벤치마크 사실 확인, vLLM·SGLang 자체 호스팅 요구사항, 그리고 ThakiCloud의 온프렘·소버린 AI 서빙 관점에서 분석합니다."
-seo_title: "GLM-5.2 오픈웨이트 코딩 모델 자체 호스팅 분석 - Thaki Cloud"
+seo_title: "GLM-5.2: 훨씬 적은 비용으로 GPT-5.5를 따라잡은 오픈웨이트"
 seo_description: "Z.ai GLM-5.2(744B MoE, MIT, 1M 컨텍스트)의 SWE-bench Pro 62.1·Terminal-Bench 81.0 벤치마크를 사실 확인하고, FP8·8x H200·vLLM·SGLang 자체 호스팅 요구사항과 ThakiCloud 온프렘 소버린 AI 서빙 시사점을 정리했습니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22

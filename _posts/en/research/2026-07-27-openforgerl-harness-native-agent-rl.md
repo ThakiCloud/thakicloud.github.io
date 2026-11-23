@@ -1,6 +1,6 @@
 ---
-title: "Training Agents Inside the Harness They Ship With: How OpenForgeRL Closes the Train-Deploy Gap"
-seo_title: "OpenForgeRL Paper Review: Harness-Native Agent RL | ThakiCloud"
+title: "OpenForgeRL: Training Agents Inside Their Own Harness"
+seo_title: "OpenForgeRL: Training Agents Inside Their Own Harness"
 seo_description: "A walkthrough of OpenForgeRL (arXiv 2607.21557) from Columbia University, Dartmouth College, and Microsoft Research. A lightweight proxy serves the harness's model calls while recording them as training data, and Kubernetes runs every rollout in its own container. With only 2,500 tasks it reaches 37.7 on OSWorld-Verified and 72.3 on WebVoyager."
 excerpt: "Training agents that run inside harnesses like Claude Code or Codex has been hard with open infrastructure because RL stacks cannot express stateful multi-process inference. Here is how a proxy and Kubernetes decouple training from inference."
 date: 2026-07-27

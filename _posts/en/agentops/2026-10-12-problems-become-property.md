@@ -1,7 +1,7 @@
 ---
 title: "The Day Problems Became Property"
 excerpt: "OpenAI's 700-paper release, integer multiplication improved by 69.13% in a single day, and a mathematician's warning to stop publishing. It is a morning when the status of unsolved problems changes."
-seo_title: "The Day Problems Became Property: 700 Papers and the Closing Door of Mathematics | ThakiCloud"
+seo_title: "The Day Problems Became Property"
 seo_description: "After OpenAI's 700-paper release, a mathematician warns of retreating from openness, an AI agent improves integer multiplication by 69.13% in a day, and Hugging Face builds open-source RL environments. On a morning when the value of problems is revalued, the questions companies ask change too."
 date: 2026-10-12
 last_modified_at: 2026-10-12

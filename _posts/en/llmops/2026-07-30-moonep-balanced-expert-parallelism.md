@@ -1,6 +1,6 @@
 ---
-title: "The Busiest Rank Sets Your Step Time: Running MoonEP's Planning Code Ourselves"
-seo_title: "MoonEP Expert Parallel Load Balance Measured: Planning Kernel Reproduced on CPU | ThakiCloud"
+title: "The Busiest Rank Sets Step Time: Running MoonEP's Planner"
+seo_title: "The Busiest Rank Sets Step Time: Running MoonEP's Planner"
 seo_description: "Moonshot's MIT-licensed MoonEP claims every rank receives exactly S*K tokens no matter how skewed the router is. We ran the repository's planning reference on CPU across 256 experts and 8 EP ranks to check it, and measured the price: at bias 5 the 2.74x rank imbalance collapses to exactly 1.00x, but 29.82% of tokens leave their home rank."
 excerpt: "In MoE training the GPU killer is not a slow card, it is a skewed router. We ran the planning code to see how MoonEP drives that skew to zero and what it costs."
 date: 2026-07-30

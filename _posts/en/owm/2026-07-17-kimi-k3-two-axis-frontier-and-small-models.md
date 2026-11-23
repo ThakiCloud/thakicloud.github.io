@@ -1,6 +1,6 @@
 ---
-title: "Kimi K3 Is Not the End of the Gap: Two Axes of the Open-Weight Frontier Era"
-seo_title: "Rereading the Kimi K3 Benchmarks: Open-Weight Frontier and Two Axes - Thaki Cloud"
+title: "Kimi K3 Is Not the End of the Gap: Two Frontier Axes"
+seo_title: "Kimi K3 Is Not the End of the Gap: Two Frontier Axes"
 seo_description: "Kimi K3 topped the frontend code arena, but it ranks third on GDPval, the broad real-work benchmark. This post covers four facts the hype erased, a two-axis hypothesis where frontier models and small execution models are both needed, and the ThakiCloud serving strategy perspective."
 excerpt: "Kimi K3 has overtaken the frontier on a narrow benchmark. Yet on a broad real-work task it still ranks third. That gap tells us what comes next."
 date: 2026-07-17

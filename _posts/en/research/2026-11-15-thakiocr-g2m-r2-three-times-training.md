@@ -1,6 +1,6 @@
 ---
-title: "How much better does an 8.93M-parameter Korean-English OCR model get with 3x the training? Releasing ThakiOCR G2M-R2"
-seo_title: "ThakiOCR-KOEN-G2M-R2 release: continuing an 8.93M-parameter Korean-English line OCR from 40k to 120k steps, results and limits | ThakiCloud"
+title: "ThakiOCR G2M-R2: What 3x Training Actually Buys"
+seo_title: "ThakiOCR G2M-R2: What 3x Training Actually Buys"
 seo_description: "We released G2M-R2, trained 80k more steps from the ThakiOCR G2M-Preview weights. CER dropped on all 7 development sets, but most of the gain came from synthetic lines. Real scanned lines barely moved, from 8.43% to 8.37%, and very short real text got slightly worse."
 excerpt: "We trained the same 8.93M model 3x longer. Synthetic-line CER fell by about 1pp each, while real scanned lines moved only 0.05pp. Here is what improved and what did not."
 date: 2026-11-15

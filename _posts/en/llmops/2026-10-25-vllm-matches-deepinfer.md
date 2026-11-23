@@ -1,7 +1,7 @@
 ---
-title: "How vLLM Matched DeepInfer: The Measurement Engineering of NVL72-Scale Serving"
+title: "How vLLM Matched DeepInfer"
 excerpt: "vLLM matched DeepSeek's own DeepInfer engine within 6% on decode and scaled to a GB300 NVL72 rack. This post goes after the measurement methodology behind those numbers, and after which vLLM releases the optimizations actually ship in, verified against our own serving stack."
-seo_title: "How vLLM Matched DeepInfer, NVL72 Serving Measurement Engineering"
+seo_title: "How vLLM Matched DeepInfer"
 seo_description: "vLLM tracks DeepSeek's DeepInfer within 6% at batch 8-256 decode and hits 954K tokens/s per GPU on a GB300 NVL72 rack. We break down the mirror/lag replay and balancedness measurement methods and verify, against real GitHub data, which vLLM release contains which optimization PR."
 date: 2026-10-25
 last_modified_at: 2026-10-25

@@ -1,7 +1,7 @@
 ---
-title: "Bytebot: Complete Setup Guide for AI Desktop Agent - Automate Any Task with Natural Language"
+title: "Bytebot: Setting Up an AI Desktop Agent"
 excerpt: "Learn how to set up and use Bytebot, an open-source AI desktop agent that automates computer tasks through natural language commands in a containerized Linux environment."
-seo_title: "Bytebot AI Desktop Agent Setup Guide - Complete Tutorial 2025"
+seo_title: "Bytebot: Setting Up an AI Desktop Agent"
 seo_description: "Complete guide to setting up Bytebot AI desktop agent. Learn installation, configuration, and automation of computer tasks with natural language commands."
 date: 2025-09-08
 tags:

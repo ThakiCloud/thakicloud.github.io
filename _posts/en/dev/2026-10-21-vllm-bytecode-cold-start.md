@@ -1,5 +1,5 @@
 ---
-title: "vLLM Cold Start, Moved to Build Time: How UV_COMPILE_BYTECODE=1 Cuts Startup"
+title: "vLLM Cold Start Moved to Build Time"
 excerpt: "vLLM now bundles precompiled Python bytecode into the image, removing the source-to-bytecode compile cost at launch. About 18s per startup on H100, a 17.6-17.8s median cut for Qwen3-8B/32B. We reproduced the mechanism with a 1500-module synthetic pure-Python package to see exactly where the bytecode effect lands."
 tags:
   - dev

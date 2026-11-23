@@ -1,6 +1,6 @@
 ---
-title: "501B of Knowledge, 23B of Compute: Reflection AI's First Open-Weight Beam (501B-A23B)"
-seo_title: "Beam (501B-A23B), the first open-weight model from Reflection AI, released under Apache 2.0 on 2026-10-16, is a sparse MoE with 501B total and 23B active parameters. Trained on 6,144 GB300 NVL72 systems over 23.8 trillion tokens, it claims 3 to 4x less inference compute than GLM-5.2 on reasoning. We break down the serving-cost structure and the caveats in independent evaluation. - ThakiCloud"
+title: "Reflection Beam: 501B Knowledge, 23B Compute"
+seo_title: "Reflection Beam: 501B Knowledge, 23B Compute"
 seo_description: "Beam (501B-A23B) model card analysis: MoE architecture and GB300 training scale, official benchmarks with per-quantization scores, the NVFP4 280GB serving structure, and the counterarguments from independent evaluation, all from a ThakiCloud perspective."
 excerpt: "Beam, Reflection AI's first open-weight model, is a sparse MoE that activates only 23B of its 501B total parameters per token. The Apache 2.0 weights and the 280GB NVFP4 serving structure are attractive, but the '3 to 4x less compute' claim is a vendor-reported efficiency figure. Independent evaluation says it is not yet a number to plan around."
 date: 2026-10-19

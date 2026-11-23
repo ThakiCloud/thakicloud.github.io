@@ -1,6 +1,6 @@
 ---
 title: "ThakiOCR A: 213만 파라미터 자체 한국어·영어 OCR을 공개했습니다"
-seo_title: "ThakiOCR-KOEN-V1-Dense 공개: 213만 파라미터 한국어·영어 줄 단위 OCR, 합성 데이터만으로 처음부터 학습 | ThakiCloud"
+seo_title: "ThakiOCR A: 213만 파라미터 자체 한국어·영어 OCR을 공개했습니다"
 seo_description: "213만 파라미터 한국어·영어 줄 단위 OCR 모델 ThakiOCR-KOEN-V1-Dense를 Apache-2.0으로 공개했습니다. NVIDIA 합성 데이터만으로 처음부터 학습했고, 실문서에서는 음절 사이에 공백을 넣는 약점이 분명합니다. 작은 모델을 직접 만든 이유와 측정 결과, 한계를 정리합니다."
 excerpt: "직접 만든 가장 작은 OCR 모델을 공개했습니다. 왜 작게 시작했는지, 합성 데이터만으로 학습하면 실문서에서 무엇이 무너지는지 숫자로 정리했습니다."
 date: 2026-11-02

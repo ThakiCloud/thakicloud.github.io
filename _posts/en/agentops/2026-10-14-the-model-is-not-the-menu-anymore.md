@@ -2,7 +2,7 @@
 title: "The Model Is No Longer the Menu"
 lang: en
 excerpt: "From the mandatory 50/30 domestic-model mix in Korea's 'Everyone's AI' to KakaoTalk's model routing, today's 18 news items point at one place. The model is the ingredient; the layer that mixes, routes, and records is the business."
-seo_title: "The Model Is No Longer the Menu: The New AI Spec Is a Mixing Ratio | ThakiCloud"
+seo_title: "The Model Is No Longer the Menu"
 seo_description: "From the mandatory 50/30 domestic-model mix in 'Everyone's AI' to enterprise agent orchestration, big-tech M&A, and audit logs. Reading today's (2026-10-14) news as the baseline of an AI industry shifting from 'which model' to 'who mixes and who governs.'"
 date: 2026-10-14
 last_modified_at: 2026-10-14

@@ -1,6 +1,6 @@
 ---
 title: "결정만 내려주는 27B: JEV-27B-VL과 System 1 결정을 오픈웨이트로"
-seo_title: "JEV-27B-VL (AutoTrust) 오픈웨이트 멀티모달 결정 모델 분석 - System 1/System 2 이중 블록 (108.9M 학습 파라미터 + Qwen3.8-27B 동결), 단일 B200 9.2시간 학습, 보정 확률 타입 지정 출력, Open-Jev·Valen 생태계, ThakiCloud Paxis·Metis 적용 시사점 - ThakiCloud"
+seo_title: "결정만 내려주는 27B: JEV-27B-VL과 System 1 결정을 오픈웨이트로"
 seo_description: "AutoTrust AI의 JEV-27B-VL은 '답을 쓰는' 모델이 아니라 '결정을 내리는' 모델입니다. 타입 지정 질문에 보정된 확률로 choice·score·yes/no를 돌려주며, 전체 모델의 약 0.4%인 108.9M 파라미터만 학습해 단일 B200에서 9.2시간 만에 나왔습니다. System 1 결정 모델이 왜 에이전트 워크플로우의 비용 문제를 바꾸는지, ThakiCloud 관점에서 분석했습니다."
 excerpt: "에이전트 워크플로우는 '생성'보다 '결정'을 더 많이 합니다. AutoTrust의 JEV-27B-VL은 그 결정을 보정된 확률로, 타입 지정 출력으로, 단일 병렬 포워드 패스로 내리는 27B 오픈웨이트 모델입니다. System 1 결정 모델이 무엇이고, 왜 지금 중요한지 정리합니다."
 date: 2026-10-02

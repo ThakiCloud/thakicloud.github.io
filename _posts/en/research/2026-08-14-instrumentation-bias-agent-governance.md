@@ -1,6 +1,6 @@
 ---
-title: "When the Compliance Dashboard Reads 0%, Is It the Process Failing or the Sensor?"
-seo_title: "Instrumentation Bias in Agent Governance: The Trap in Fan-Out Verification Closure Rates"
+title: "Compliance Dashboard Reads 0%: Process or Sensor?"
+seo_title: "Compliance Dashboard Reads 0%: Process or Sensor?"
 seo_description: "We audited a multi-agent harness's fan-out verification rule against real operational logs and got a 5% closure rate. We introduce a paper that formalizes why this number is only a floor on the true compliance rate, not the rate itself, as a new failure mode called instrumentation bias."
 excerpt: "We tried to measure compliance with a fan-out verification rule and got 5%, and the re-experiment meant to validate that number returned exactly zero. Neither failure happened because the rule was missing. Both happened because the measurement path was never open."
 date: 2026-08-14

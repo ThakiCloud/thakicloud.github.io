@@ -1,6 +1,6 @@
 ---
-title: "Every Agent Searching on Its Own Multiplies the Bill: The Structure Behind DoorDash's 98% LLM Search Cost Cut"
-seo_title: "DoorDash Decoupled Search Grounding: 98% LLM Search Cost Reduction via a Shared Search Gateway | ThakiCloud"
+title: "Per-Agent Search Multiplies the Bill: DoorDash's Gateway"
+seo_title: "Per-Agent Search Multiplies the Bill: DoorDash's Gateway"
 seo_description: "DoorDash cut LLM search costs by 98% by decoupling search from the model's built-in feature and letting every agent share one gateway. We re-verify that structure with a sandbox experiment: 27.3% cold-cache hit rate, 100% precision, 98.5% cost reduction, with the limits included."
 excerpt: "The 98% search cost cut came not from a cheaper search API but from a structural decision: pull search out of the model and let all agents share one gateway. We re-verify that structure with real numbers from a cold-cache semantic cache experiment."
 date: 2026-11-08

@@ -1,7 +1,7 @@
 ---
-title: "Claude Code를 사내 모델로 라우팅하기 - claude-code-router로 비용 효율적 코딩 인프라 구축"
+title: "Claude Code를 사내 모델로 라우팅하기"
 excerpt: "claude-code-router로 Claude Code 트래픽을 glm-5.2·MiniMax-M2.7·Kimi K2로 분기합니다. 세 모델을 실제로 호출해 검증하고, MiniMax thinking 누수를 고치고, 모든 라우팅 모델이 Sonnet보다 싼지 상시 측정하는 루프까지 구축한 실전 기록입니다."
-seo_title: "claude-code-router 비용 라우팅 - Claude Code 멀티모델 구축 - Thaki Cloud"
+seo_title: "Claude Code를 사내 모델로 라우팅하기"
 seo_description: "claude-code-router로 Claude Code를 glm-5.2/MiniMax-M2.7/Kimi K2로 라우팅하는 실전 가이드. 작업별 모델 분기, MiniMax thinking 누수 해결, Sonnet 대비 비용 상시 측정 루프를 ThakiCloud 환경에서 검증."
 date: 2026-06-24
 last_modified_at: 2026-06-24

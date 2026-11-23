@@ -1,7 +1,7 @@
 ---
-title: "Google Opal: AI 미니 앱 빌더 완벽 가이드 - 코드 없이 AI 워크플로우 구축하기"
+title: "Google Opal: 코드 없이 만드는 AI 미니 앱"
 excerpt: "Google Labs의 새로운 실험적 도구 Opal로 자연어만으로 강력한 AI 미니 앱을 만드는 방법을 단계별로 배워보세요. 프롬프트 체이닝부터 앱 공유까지 완벽 가이드."
-seo_title: "Google Opal AI 미니 앱 빌더 튜토리얼 - 코드 없이 AI 워크플로우 구축 - Thaki Cloud"
+seo_title: "Google Opal: 코드 없이 만드는 AI 미니 앱"
 seo_description: "Google Opal로 AI 미니 앱을 만드는 완벽 가이드. 자연어로 프롬프트 체이닝하고, 비주얼 에디터로 워크플로우를 구축하며, AI 앱을 공유하는 방법을 상세히 설명합니다."
 date: 2025-07-25
 last_modified_at: 2025-07-25

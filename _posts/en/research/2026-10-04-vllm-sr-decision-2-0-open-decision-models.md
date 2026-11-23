@@ -1,6 +1,6 @@
 ---
 title: "Decision 2.0: The Model That Decides 'Which Model to Run' Is Now Open"
-seo_title: "vLLM Semantic Router and the open Decision 2.0 decision-model family - 0.6B to 27B, JevArena benchmarks, Mixture-of-Models routing layer, ThakiCloud Metis and Paxis implications"
+seo_title: "Decision 2.0: The Model That Decides 'Which Model to Run' Is Now Open"
 seo_description: "The vLLM team released Decision 2.0, the open decision models powering vLLM Semantic Router, in every size from 0.6B to 27B. We analyze the signal-driven routing layer, the single-forward-pass decision interface, JevArena numbers, and what it means for ThakiCloud."
 excerpt: "The layer that delegates request-routing decisions to small models is now open source, and the decision models that drive it are open weights from 0.6B to 27B. A look at vLLM Semantic Router and the Decision 2.0 family: typed questions, per-option probabilities, one forward pass."
 date: 2026-10-04

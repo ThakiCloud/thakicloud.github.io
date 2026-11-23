@@ -1,6 +1,6 @@
 ---
 title: "A Korean Decision Model Trained on Maxis and Served on Metis"
-seo_title: "Maxis training + Metis serving: a pipeline for building a Korean decision model on a customer's own documents - ThakiCloud"
+seo_title: "A Korean Decision Model Trained on Maxis and Served on Metis"
 seo_description: "Enterprises that must justify decisions against a regulation often cannot send documents outside their own network. ThakiCloud trains a small decision model on Maxis inside the customer's network, serves only the models that pass a sealed evaluation gate on Metis, and has a Paxis agent log every verdict with its probability and evidence for audit."
 excerpt: "A pipeline that runs from data through training, a sealed evaluation gate, serving, and an agent lets a regulated enterprise automate regulation-based decisions and still keep them auditable. One GPU, one LoRA adapter, and an evaluation set that opens exactly once are the core of the loop."
 date: 2026-09-24

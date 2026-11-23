@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron Post-Training Dataset v1: A Comprehensive Analysis of a Large-Scale Synthetic Dataset for LLM Enhancement"
+title: "Nemotron Post-Training v1: A Synthetic Dataset for LLM Tuning"
 excerpt: "NVIDIA's 25.6 million-sample synthetic dataset designed to improve math, coding, STEM, reasoning, and tool-calling capabilities in large language models."
-seo_title: "NVIDIA Nemotron Post-Training Dataset v1 Comprehensive Analysis - Thaki Cloud"
+seo_title: "Nemotron Post-Training v1: A Synthetic Dataset for LLM Tuning"
 seo_description: "Detailed analysis of the NVIDIA Nemotron Post-Training Dataset v1: structure, per-category data distribution, usage guide, and practical fine-tuning workflows for the 25.6M sample synthetic dataset."
 date: 2025-07-31
 last_modified_at: 2025-07-31

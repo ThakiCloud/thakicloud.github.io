@@ -1,7 +1,7 @@
 ---
-title: "Android 에뮬레이터를 컨테이너로 - docker-android로 K8s 위에 재현 가능한 디바이스 팜 만들기"
+title: "컨테이너 속 Android 에뮬레이터: K8s 디바이스 팜"
 excerpt: "docker-android는 Android 에뮬레이터를 단일 컨테이너로 패키징해 헤드리스로 띄우는 오픈소스 프로젝트입니다. 이미지 크기와 KVM 요구사항을 실제 문서 기준으로 확인하고, ThakiCloud K8s 플랫폼에서 디바이스 패스스루 워크로드를 운용하는 관점을 정리합니다."
-seo_title: "docker-android K8s 에뮬레이터 - 컨테이너 Android 디바이스 팜 구축 - Thaki Cloud"
+seo_title: "컨테이너 속 Android 에뮬레이터: K8s 디바이스 팜"
 seo_description: "docker-android로 Android 에뮬레이터를 헤드리스 컨테이너로 띄우는 방법. KVM 패스스루, GPU 가속, scrcpy 원격 제어, CI/CD 테스트 자동화를 ThakiCloud Kubernetes 기반으로 운용하는 실전 가이드."
 date: 2026-06-24
 last_modified_at: 2026-06-24

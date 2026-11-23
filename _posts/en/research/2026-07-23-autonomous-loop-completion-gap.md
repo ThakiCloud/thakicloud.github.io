@@ -1,6 +1,6 @@
 ---
-title: "The Completion-Rate Gap in Unattended Agent Loops: What Actually Closes It"
-seo_title: "Verification Gates vs Checkpoint Rollback vs Stall Escalation, Measured"
+title: "What Closes the Completion Gap in Unattended Agent Loops"
+seo_title: "What Closes the Completion Gap in Unattended Agent Loops"
 seo_description: "We introduce ThakiCloud research that measures, through a controlled experiment, how far three mechanisms, verification gates, checkpoint rollback, and stall escalation, can close the gap between the number of tasks an unattended overnight agent loop reports as complete and the number actually finished."
 excerpt: "We took apart, through measurement, the common belief that adding a verification gate to an unattended agent loop makes it safe, and found a trap: the gate alone actually causes a sharp spike in iteration-exhaustion rate."
 date: 2026-07-23

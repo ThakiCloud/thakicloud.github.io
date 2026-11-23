@@ -1,7 +1,7 @@
 ---
 title: "GPU 한 장의 진짜 원가부터: ThakiCloud가 AI 추론 비용을 최적화하는 법"
 excerpt: "GPU 감가상각 공식, Kueue 갱 스케줄링, vLLM scale-to-zero, 모델 티어 라우팅까지. ThakiCloud가 내부에서 추론 비용을 줄이는 방식과, 고객이 같은 레버를 제품에서 당기는 방법을 코드와 수식으로 정리합니다."
-seo_title: "AI 추론 비용 최적화 실전: GPU 원가·Kueue·vLLM scale-to-zero - Thaki Cloud"
+seo_title: "GPU 한 장의 진짜 원가부터: ThakiCloud가 AI 추론 비용을 최적화하는 법"
 seo_description: "ThakiCloud의 AI 추론 비용 최적화 실전 가이드. GPU 시간당 원가 산식, OpEx 분해, Kueue+KAI 갱 스케줄링, vLLM+KEDA scale-to-zero, 모델 티어 라우팅과 일일 비용 감사까지 코드와 수식으로 설명합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

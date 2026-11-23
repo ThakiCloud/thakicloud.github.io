@@ -1,7 +1,7 @@
 ---
-title: "Cutting Qwen-Image-2.1 Down to 5 Steps: One LoRA, a Fifth of the Inference Cost"
+title: "Qwen-Image-2.1 in 5 Steps: One LoRA, One Fifth the Cost"
 excerpt: "For teams running image generation in production and watching the GPU bill climb: dropping a single LoRA adapter onto Qwen-Image-2.1 takes 40 sampling steps down to 8, or even 5, and quality comes out ahead of the original rather than behind it."
-seo_title: "Qwen-Image-2.1 FewStep: 8-Step and 5-Step LoRA Distillation - ThakiCloud"
+seo_title: "Qwen-Image-2.1 in 5 Steps: One LoRA, One Fifth the Cost"
 seo_description: "ThakiCloud releases Qwen-Image-2.1 FewStep LoRA adapters. An in-house DMD2 trainer delivers up to 8.2x faster inference with quality that matches or beats the 40-step base model."
 date: 2026-09-27
 categories:

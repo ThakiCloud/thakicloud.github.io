@@ -1,7 +1,7 @@
 ---
-title: "ByteDance Dolphin 완전정복: 이종 앵커 프롬프팅을 활용한 고급 문서 이미지 파싱 가이드"
+title: "ByteDance Dolphin: 앵커 프롬프팅 문서 파싱"
 excerpt: "혁신적인 이종 앵커 프롬프팅 기술을 통해 레이아웃 분석과 요소별 파싱을 결합한 최첨단 멀티모달 문서 파싱 모델 ByteDance Dolphin 사용법을 완전히 마스터해보세요."
-seo_title: "ByteDance Dolphin 튜토리얼: 문서 이미지 파싱 완벽 가이드 - Thaki Cloud"
+seo_title: "ByteDance Dolphin: 앵커 프롬프팅 문서 파싱"
 seo_description: "ByteDance Dolphin 문서 파싱 모델 완벽 튜토리얼. 설치부터 실전 활용까지, 페이지 레벨과 요소 레벨 파싱을 실무 예제와 함께 단계별로 학습하세요."
 date: 2025-09-24
 tags:

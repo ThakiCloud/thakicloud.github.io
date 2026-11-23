@@ -1,7 +1,7 @@
 ---
 title: "Ornith-1.0: An Open Coding Model That Writes Its Own RL Scaffolds"
 excerpt: "Released by DeepReinforce on June 25, 2026, Ornith-1.0 is an open-source coding model family built on a self-scaffolding mechanism: during reinforcement learning, the model writes the training scaffold that guides its own solutions. We examine the four-size lineup (9B/31B dense and 35B/397B MoE), its MIT license, 262K context, and the reported SWE-Bench Verified score of 82.4 through the lens of ThakiCloud's K8s multi-tenant serving and in-house coding agent infrastructure."
-seo_title: "Ornith-1.0 Self-Scaffolding RL Open Coding Model Analysis vLLM Serving - Thaki Cloud"
+seo_title: "Ornith-1.0: An Open Coding Model That Writes Its Own RL Scaffolds"
 seo_description: "Analysis of DeepReinforce Ornith-1.0 (MIT, 9B/31B/35B/397B): self-scaffolding reinforcement learning mechanism, public benchmarks (SWE-Bench Verified 82.4, Terminal-Bench 2.1 77.5), and vLLM serving recipes evaluated from a ThakiCloud K8s multi-tenant coding agent operations perspective."
 date: 2026-06-26
 last_modified_at: 2026-06-26

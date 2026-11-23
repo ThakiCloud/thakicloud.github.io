@@ -1,7 +1,7 @@
 ---
 title: "The AI that eats too much, the AI that borrows too much"
 excerpt: "In the same week, Apple called its memory supply an 'absolute crisis' and CoreWeave's debt swallowed the semiconductor index. We laid out the two fault lines of supply shortage and debt excess, and the answers companies must arrive at."
-seo_title: "Memory absolute crisis, AI debt shock. The two fault lines of AI infrastructure"
+seo_title: "The AI that eats too much, the AI that borrows too much"
 seo_description: "Apple's declaration of an absolute crisis in memory supply and CoreWeave's $40 billion in debt. Supply shortage and debt excess, the two fault lines heading toward companies, and how to respond viewed through the Paxis lens."
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/agentops/the-ai-that-eats-too-much-borrows-too-much/

@@ -1,7 +1,7 @@
 ---
-title: "Meta Builds Games From a Sentence: Horizon Create and the Agentic-Creation Bet"
+title: "Meta Builds Games From a Sentence: Horizon Create"
 excerpt: "Meta shipped Horizon Create (mobile) and Horizon Studio (browser) at Connect, agentic tools that turn a plain sentence into a 2D/3D mobile game. The cost curve of 'natural language into a runnable artifact' has bent. Moving that bet to enterprise workflows is where ThakiCloud's Paxis sits, and the watershed is not building it but verifying it."
-seo_title: "Meta Horizon Create and Studio: Make Games From a Prompt | ThakiCloud"
+seo_title: "Meta Builds Games From a Sentence: Horizon Create"
 seo_description: "Analysis of Meta Connect's Horizon Create and Horizon Studio. Agentic creation, from natural language to a runnable artifact, has a bent cost curve, distribution is built in, and ThakiCloud Paxis's position, the verification layer, when the same structure moves to enterprise workflows."
 date: 2026-09-26
 last_modified_at: 2026-09-26

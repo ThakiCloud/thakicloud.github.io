@@ -1,6 +1,6 @@
 ---
 title: "PHP2Shell: The LLM That Picked the Hole Hidden for 22 Years"
-seo_title: "The PHP2Shell flaws (CVE-2026-109618/109619) found with GPT-5.6 Sol are the first concrete case OpenAI called the 'tip of the iceberg.' We break down the longjmp error-path mechanism, the independent discovery by two companies, the patch versions, and what it means for AI-driven security operations. - ThakiCloud"
+seo_title: "PHP2Shell: The LLM That Picked the Hole Hidden for 22 Years"
 seo_description: "Two RCE flaws sat in PHP's longjmp error paths for 22 years, since PHP 5.x shipped in 2004. GPT-5.6 Sol found them, and Wiz's Gemini 4 Argon found them independently. Patches are 8.2.35 through 8.5.12, and here is what 'tip of the iceberg' actually weighs. - ThakiCloud"
 excerpt: "The emergency valve nobody had opened in 22 years was rusted shut. An LLM turned it, and PHP, which runs about 70% of the internet, had to stop. Patch versions first, then the meaning of 'tip of the iceberg.'"
 date: 2026-10-22

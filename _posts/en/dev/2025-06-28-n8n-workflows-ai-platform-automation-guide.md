@@ -1,7 +1,7 @@
 ---
-title: "Automating Cloud AI Platform Operations with n8n Workflows: A Practical Guide"
+title: "Automating Cloud AI Platform Operations with n8n"
 excerpt: "Curated automation use cases and implementation patterns for cloud AI platform companies, drawn from the 9.8k-star n8n-workflows collection"
-seo_title: "n8n Workflow AI Platform Automation Guide - Cloud Operations Optimization - Thaki Cloud"
+seo_title: "Automating Cloud AI Platform Operations with n8n"
 seo_description: "Complete guide to automating cloud AI platform operations with n8n workflows. Practical examples covering customer management, model monitoring, notification systems, and more."
 date: 2025-06-28
 tags:

@@ -1,6 +1,6 @@
 ---
-title: "We Auto-Tuned Retrieval Weights with a Bandit: Performance Held Steady, But Something Else Was Leaking"
-seo_title: "Online Bandit Calibration for Hybrid Retrieval: A Tie and a Hidden Hallucination Cost - Thaki Cloud"
+title: "We Auto-Tuned Retrieval Weights With a Bandit"
+seo_title: "We Auto-Tuned Retrieval Weights With a Bandit"
 seo_description: "An experiment that calibrated the parameters of a hybrid BM25+embedding retriever routing about a thousand skills using a LinUCB bandit in real time. The result was a 192-to-192 tie, and while the bandit's preferred setting won on the tracked metrics, it also drove the hallucination rate on queries that need no retrieval at all from 0 to 0.4."
 excerpt: "Can an online bandit take over from manual re-tuning of a skill router's hybrid retrieval parameters? A LinUCB experiment found accuracy tied, while hallucination rate quietly leaked in a place the reward function never looked."
 date: 2026-07-27

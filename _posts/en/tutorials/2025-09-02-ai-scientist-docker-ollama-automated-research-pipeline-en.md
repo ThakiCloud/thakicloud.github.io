@@ -1,7 +1,7 @@
 ---
 title: "AI Scientist with Docker & Ollama: Building Automated Research Pipelines"
 excerpt: "Transform your research workflow with SakanaAI's AI Scientist running on OrbStack Docker environment. This comprehensive guide shows how to set up automated, 24/7 research pipelines using local LLMs like Ollama and LM Studio with queue management for continuous operation."
-seo_title: "AI Scientist Docker Ollama Setup Guide - Automated Research Pipeline - Thaki Cloud"
+seo_title: "AI Scientist with Docker & Ollama: Building Automated Research Pipelines"
 seo_description: "Complete tutorial on setting up SakanaAI's AI Scientist with OrbStack Docker, Ollama, and LM Studio for automated research. Includes queue management, monitoring, and 24/7 operation examples with practical implementation guides."
 date: 2025-09-02
 last_modified_at: 2025-09-02

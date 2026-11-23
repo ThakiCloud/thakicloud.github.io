@@ -1,5 +1,5 @@
 ---
-title: "The Age of Steam Engines, Waiting for Carnot: The Mindset Science Needs Right Now"
+title: "Waiting for Carnot: Science's Steam Engine Moment"
 excerpt: "The gap between a machine that works and a principle we understand is one of the oldest scenes in the history of science. In an era that solves everything with computing power, this essay rereads the deep learning age through the lens of energy and waves, and argues for a scientist's humility."
 date: 2026-07-05
 last_modified_at: 2026-07-05

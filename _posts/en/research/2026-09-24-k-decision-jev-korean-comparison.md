@@ -1,6 +1,6 @@
 ---
 title: "Why We Built a Korean Jev: an On-Prem Decision Model Behind the Same API"
-seo_title: "K-Decision vs TypeSafe Jev: an honest comparison of Korean on-prem typed-decision models sharing one System One API - ThakiCloud"
+seo_title: "Why We Built a Korean Jev: an On-Prem Decision Model Behind the Same API"
 seo_description: "TypeSafe Jev created the decision model category and serves it only from the cloud. ThakiCloud K-Decision exposes the same System One API shape in Korean and on-prem, aiming for a drop-in endpoint swap with no code change. We ran the same questions through both and report where we win, where we lose, and what is not measured yet."
 excerpt: "TypeSafe Jev created a new category: a decision model that takes state and typed questions and returns calibrated probabilities. We built the same API shape for Korean, on-prem deployments and ran the same questions through both, honestly."
 date: 2026-09-24

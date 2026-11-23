@@ -1,5 +1,5 @@
 ---
-title: "Rereading Musk's Davos Forecast: Intelligence in Five Years, and Where That Intelligence Actually Runs"
+title: "Rereading Musk's Davos Forecast on Intelligence"
 excerpt: "Elon Musk's three Davos predictions got recompressed online into a warning that 'the age of the paycheck ends in three years.' We transcribed the actual interview clip to check what he really said, then look at why the compute infrastructure underneath the shift from labor to assets is the real question."
 date: 2026-07-20
 last_modified_at: 2026-07-20

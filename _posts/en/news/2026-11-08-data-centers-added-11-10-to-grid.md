@@ -1,7 +1,7 @@
 ---
 title: "The $11.10 per MWh Data Centers Added to the Grid"
 excerpt: "PJM's independent market monitor estimated that data center demand added $11.10 per MWh to wholesale power prices in early 2026. The average wholesale power cost for the first half of 2026 was $114.50 per MWh. Nine governors pledged pauses on 41 percent of planned capacity. OpenAI changed a name. $4.5 trillion moved off the books. This week's signal is one: the grid has started to price AI."
-seo_title: "The $11.10 per MWh Data Centers Added to the Grid: The Week the Grid Started Pricing AI | ThakiCloud"
+seo_title: "The $11.10 per MWh Data Centers Added to the Grid"
 seo_description: "PJM wholesale power prices reached $114.50 per MWh in the first half of 2026, with data center demand adding $11.10 per MWh. Nine governors pledged a 41 percent pause, OpenAI renamed its sites 'AI compute campuses', the top seven companies committed $4.5 trillion in off-balance-sheet spending, and Hugging Face confirmed TwIL-8B. What the grid bill asks of where companies run AI."
 date: 2026-11-08
 last_modified_at: 2026-11-08

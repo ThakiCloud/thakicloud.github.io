@@ -1,6 +1,6 @@
 ---
-title: "Fifteen Seconds of 2K Video With Stereo Sound: What It Takes to Bring MiniMax-H3 In-House"
-seo_title: "MiniMax-H3 On-Prem Serving Budget: 134 GiB of Weights and a 325K-Token Sequence | ThakiCloud"
+title: "Running MiniMax-H3 In-House: 15-Second 2K Video With Audio"
+seo_title: "Running MiniMax-H3 In-House: 15-Second 2K Video With Audio"
 seo_description: "We computed what it actually takes to run the open-weight MiniMax-H3 on your own infrastructure, using the HuggingFace file manifest and the published compression factors. H3-Base at 33B, 134 GiB for a single variant, and a 325K-token sequence for a 2K 15-second clip."
 excerpt: "Between weights are public and it runs on our servers lies a distance you only learn by doing the arithmetic."
 date: 2026-08-04

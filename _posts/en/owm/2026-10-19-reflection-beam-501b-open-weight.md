@@ -1,7 +1,7 @@
 ---
-title: "Reflection Beam 1.0: the 501B MoE that activates 23B, and why 1M context finally makes sense"
+title: "Reflection Beam 1.0: Why 1M Context Finally Makes Sense"
 excerpt: "Reflection AI released Beam 1.0, its first open-weight model: a 501B sparse MoE that activates 23B parameters per token, with a 1M context window under Apache 2.0. The value is not a benchmark record. It is the economics of sparsity, and that is exactly the model profile our serving platform handles every day."
-seo_title: "Reflection Beam 1.0 501B open-weight MoE - 23B active, 1M context, vLLM day zero - Thaki Cloud"
+seo_title: "Reflection Beam 1.0: Why 1M Context Finally Makes Sense"
 seo_description: "Reflection AI Beam 1.0 (501B total / 23B active MoE, 1M context, Apache 2.0) model card analysis: 256-expert group-limited routing, hybrid attention, GB300 training history, BF16/FP8/NVFP4 numerics, vLLM day-zero serving, and on-prem memory math. Includes ThakiCloud serving perspective."
 date: 2026-10-19
 last_modified_at: 2026-10-19

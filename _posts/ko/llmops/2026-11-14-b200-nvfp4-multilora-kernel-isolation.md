@@ -1,7 +1,7 @@
 ---
-title: "GPU 한 장에서 8개 전문 AI를 동시에 · NVFP4 Multi-LoRA 커널·캐시 격리 실증"
+title: "GPU 한 장에서 8개 전문 어댑터를 동시에"
 excerpt: "NVFP4로 양자화한 27B Base 하나에 업무별 LoRA 8개를 재학습 없이 붙여 B200 1장에서 9개 모델로 서빙했습니다. 서로 다른 어댑터 요청이 한 배치에 섞여도 계산과 Prefix Cache가 섞이지 않는지 확인했습니다. 실패 판정과 아직 검증하지 못한 제품 안정성·업무 품질까지 그대로 적었습니다."
-seo_title: "B200 NVFP4 Multi-LoRA 커널·캐시 격리 실증: GPU 한 장에 전문 AI 8개 | ThakiCloud"
+seo_title: "GPU 한 장에서 8개 전문 어댑터를 동시에"
 seo_description: "다키클라우드가 Qwen3.8-27B NVFP4 Base에 보안·사실검증·RAG·운영·RTL·방언 LoRA 8개를 붙여 vLLM 0.29.0으로 B200 한 장에서 서빙했습니다. 72개 어댑터 순서쌍 100% 구별, 허용오차 초과 0행, 결함 주입 전수 검출, Prefix Cache 어댑터·테넌트 간 재사용 0건. 메모리 산술과 검증의 한계를 함께 정리합니다."
 date: 2026-11-14
 last_modified_at: 2026-11-17

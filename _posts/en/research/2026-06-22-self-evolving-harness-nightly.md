@@ -1,7 +1,7 @@
 ---
-title: "The AI Harness That Evolves Itself Every Night - Nightly Self-Evolving Harness"
+title: "The Nightly Self-Evolving Harness"
 excerpt: "While you sleep, the system learns from yesterday's failures and improves itself. We reveal how ThakiCloud's nightly self-evolving loop meets the Self-Harness paradigm from arXiv:2606.09498."
-seo_title: "The AI Harness That Evolves Itself Every Night - Thaki Cloud"
+seo_title: "The Nightly Self-Evolving Harness"
 seo_description: "A real-world implementation of a nightly self-evolving loop based on Self-Harness (arXiv:2606.09498). Covers the three phases -- Weakness Mining, Harness Proposal, Proposal Validation -- along with the anti-hallucination gate, the hermes/autoimprove/auto-distill skill ecosystem, and the path to productization as Paxis Curator."
 date: 2026-06-22
 last_modified_at: 2026-06-22

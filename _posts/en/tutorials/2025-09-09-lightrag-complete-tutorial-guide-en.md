@@ -1,7 +1,7 @@
 ---
-title: "LightRAG Complete Tutorial: Building Fast and Simple Retrieval-Augmented Generation Systems"
+title: "LightRAG: Building Fast, Simple Retrieval-Augmented Generation"
 excerpt: "Learn how to implement LightRAG, a revolutionary RAG system that outperforms GraphRAG with simpler setup and faster performance. Complete guide with hands-on examples."
-seo_title: "LightRAG Tutorial: Fast RAG Implementation Guide - Thaki Cloud"
+seo_title: "LightRAG: Building Fast, Simple Retrieval-Augmented Generation"
 seo_description: "Complete LightRAG tutorial with setup, usage examples, and performance comparison. Learn to build efficient RAG systems with knowledge graphs."
 date: 2025-09-09
 tags:

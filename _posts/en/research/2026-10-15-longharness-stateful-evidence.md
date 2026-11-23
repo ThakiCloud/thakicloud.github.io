@@ -1,6 +1,6 @@
 ---
-title: "The Accuracy Jumped 14x When Evidence Left the Conversation: A Stateful Harness for 100M-Token Corpus Reasoning"
-seo_title: "LongHarness: A Stateful Evidence Harness for Long-Context Corpus Reasoning - ThakiCloud"
+title: "Accuracy Jumped 14x When Evidence Left the Conversation"
+seo_title: "Accuracy Jumped 14x When Evidence Left the Conversation"
 seo_description: "LongHarness is a model-agnostic harness that manages acquired evidence and evolving conclusions as explicit state outside the conversation. On a 100M-token financial document corpus it lifted exact match from 4.4 to 61.1 for the same Flash model, beating established coding-agent harnesses by 12 to 19 points."
 excerpt: "The bottleneck in long-context corpus reasoning is rarely the model. It is how acquired evidence gets accumulated. LongHarness separated evidence and conclusions into explicit state, and the same model's accuracy changed by 14x."
 date: 2026-10-15

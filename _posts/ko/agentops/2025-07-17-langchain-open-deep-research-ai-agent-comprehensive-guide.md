@@ -1,7 +1,7 @@
 ---
-title: "LangChain Open Deep Research: 자동화된 연구 보고서 생성 AI 에이전트 완전 가이드"
+title: "LangChain Open Deep Research: 연구 보고서 자동 생성 에이전트"
 excerpt: "4.6k stars를 보유한 LangChain의 오픈소스 연구 에이전트가 제공하는 자동화된 연구 보고서 생성 시스템과 멀티 에이전트 아키텍처의 실무 활용 전략을 심층 분석합니다."
-seo_title: "LangChain Open Deep Research AI 연구 에이전트 완전 가이드 - 자동화된 보고서 생성 - Thaki Cloud"
+seo_title: "LangChain Open Deep Research: 연구 보고서 자동 생성 에이전트"
 seo_description: "4.6k stars 오픈소스 LangChain Open Deep Research 심층 분석. 멀티 에이전트 아키텍처, RAG 활용, 자동화된 연구 보고서 생성까지 실무 활용 가이드"
 date: 2025-07-17
 last_modified_at: 2025-07-17

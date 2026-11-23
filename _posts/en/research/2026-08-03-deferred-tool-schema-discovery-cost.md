@@ -1,6 +1,6 @@
 ---
-title: "Deferred MCP Tools: If the Agent Doesn't Know the Name, Search Won't Find It Either"
-seo_title: "Measuring Cold-Start Blindness in Deferred MCP Tool Loading | ThakiCloud Research"
+title: "Deferred MCP Tools: Search Can't Find an Unknown Name"
+seo_title: "Deferred MCP Tools: Search Can't Find an Unknown Name"
 seo_description: "In agent harnesses that defer-load MCP tool schemas, we measured cold-start blindness, where a tool the agent doesn't know by name never surfaces in search, and quantified it with BM25. We propose a hybrid loading policy based on the results."
 excerpt: "Deferred loading, fetching a tool's schema only when needed instead of putting every schema in the prompt up front, saves a lot of tokens. The problem is when the agent doesn't know the tool exists at all. In our measurements, 88.5 percent of vocabulary-mismatched tools never appear in the top 5 search results."
 date: 2026-08-03

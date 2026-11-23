@@ -1,7 +1,7 @@
 ---
 title: "Kimi K2.6: 1T MoE, 32B Active, 300-Subagent Swarm Architecture Analysis"
 excerpt: "Moonshot AI's Kimi K2.6 is a MoE model with 1T total parameters but only 32B active per token, maintaining dense 32B inference costs while supporting 256K context and multimodal input. Its 300-subagent swarm capability maps naturally onto K8s multi-tenant agent architectures."
-seo_title: "Kimi K2.6 1T MoE Agent Swarm Architecture Self-Hosting Guide - Thaki Cloud"
+seo_title: "Kimi K2.6: 1T MoE, 32B Active, 300-Subagent Swarm Architecture Analysis"
 seo_description: "Kimi K2.6 architecture (MLA attention, 384 experts, MoonViT 400M), benchmarks (SWE-Bench Verified 80.2, AIME 2026 96.4), vLLM/SGLang/KTransformers serving, and H100 serving footprint analyzed."
 date: 2026-06-20
 last_modified_at: 2026-06-20

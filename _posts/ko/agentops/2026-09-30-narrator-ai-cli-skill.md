@@ -1,7 +1,7 @@
 ---
 title: "스킬은 오픈소스, 파이프라인은 유료: narrator-ai-cli 영화해설 스킬 실측"
 excerpt: "X에서 '오픈소스라 에이전트에 넣기만 하면 영화해설 영상이 자동 나온다'는 게시물이 돌았습니다. 실제로 설치해 재측정한 결과, MIT 라이선스는 SKILL.md 파일에만 적용되고 생성 파이프라인·자산·TTS·과금은 전부 제3자 API(openapi.jieshuo.cn)였습니다. 키 없이 검증 가능한 93편·146곡·63음성 세 숫자는 마케팅과 정확히 일치했고, '모든 조작 전에 확인'을 계약으로 쓰는 에이전트 스킬 설계는 그대로 가치가 있었습니다."
-seo_title: "narrator-ai-cli-skill 실측: 에이전트 스킬로 영화해설 영상 파이프라인 만들기"
+seo_title: "스킬은 오픈소스, 파이프라인은 유료: narrator-ai-cli 영화해설 스킬 실측"
 seo_description: "NarratorAI-Studio의 narrator-ai-cli-skill을 실제로 설치해 CLI 명령·내장 자산 수량·Agent Rules를 재측정했습니다. 오픈소스 경계, 비용 구조, ThakiCloud Paxis 스킬 거버넌스에 주는 시사점을 정리합니다."
 date: 2026-09-30
 last_modified_at: 2026-09-30

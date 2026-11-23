@@ -1,7 +1,7 @@
 ---
 title: "Yandex Yambda: 50억 규모 음악 추천시스템 데이터셋 완전 가이드"
 excerpt: "Yandex가 공개한 대규모 음악 청취 행동 데이터셋으로 추천시스템 연구의 새로운 표준을 제시하는 Yambda 완전 분석"
-seo_title: "Yandex Yambda 음악 추천 데이터셋 완전 가이드 - 50억 청취 데이터 분석 - Thaki Cloud"
+seo_title: "Yandex Yambda: 50억 규모 음악 추천시스템 데이터셋 완전 가이드"
 seo_description: "Yandex Yambda 음악 추천시스템 데이터셋 완전 가이드. 50억 청취 데이터, 오디오 임베딩, 사용자 행동 분석까지 상세 튜토리얼"
 date: 2025-06-28
 tags:

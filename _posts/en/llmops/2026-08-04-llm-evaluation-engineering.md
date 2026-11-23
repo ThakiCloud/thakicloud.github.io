@@ -1,7 +1,7 @@
 ---
-title: "How to Turn LLM Evaluation Into a System: From Golden Sets to Regression Detection"
+title: "Turning LLM Evaluation Into a System: Golden Sets to Regression"
 excerpt: "'The output looks good' is an impression, not verification. This post covers evaluation engineering: defining what to measure, building golden sets without bias, acknowledging the limits of LLM judges, and separating offline from online signals."
-seo_title: "LLM Evaluation Engineering: Golden Sets, LLM-as-Judge, Regression Detection - Thaki Cloud"
+seo_title: "Turning LLM Evaluation Into a System: Golden Sets to Regression"
 seo_description: "This post lays out how to turn LLM evaluation into a system instead of a gut feeling. It covers defining three layers, precision, impact, and stability, building golden sets with a frequency-importance matrix, the trust limits of LLM judges, separating offline from online evaluation, and pre/post regression detection."
 date: 2026-08-04
 tags:

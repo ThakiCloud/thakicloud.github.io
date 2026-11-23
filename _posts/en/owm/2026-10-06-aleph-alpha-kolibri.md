@@ -1,6 +1,6 @@
 ---
-title: "Kolibri: Germany's Sovereign Open-Weight MoE, 78B Total with 3.46B Active"
-seo_title: "Kolibri: Germany's Sovereign Open-Weight MoE, 78B Total with 3.46B Active - ThakiCloud"
+title: "Kolibri: Germany's Sovereign Open-Weight MoE"
+seo_title: "Kolibri: Germany's Sovereign Open-Weight MoE"
 seo_description: "Aleph Alpha's Kolibri 1 is a German and English focused 78B open-weight MoE: 3.46B active per token, validated 1M context, native FP8, Apache 2.0. Model card benchmarks and serving requirements."
 excerpt: "The tweet says 'GERMANY JUST ENTERED THE FRONTIER LLM RACE', but the model card is more concrete: 78B total, 3.46B active per token, German and English focus, validated 1M context, native FP8, Apache 2.0, with a single H200 as the minimum requirement."
 date: 2026-10-06

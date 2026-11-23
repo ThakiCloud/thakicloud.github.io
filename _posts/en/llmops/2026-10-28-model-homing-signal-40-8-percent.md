@@ -1,7 +1,7 @@
 ---
-title: "The 40.8% Homing Signal: You Can Bring the Model Home, but It Still Has a Home to Return To"
+title: "The 40.8% Homing Signal: A Model Still Calls Home"
 excerpt: "In a 10,000-sample local experiment, the model chose the vendor's cloud domain in 40.8% of its runs. Self-hosting secures only half of sovereignty."
-seo_title: "The 40.8% Homing Signal: You Can Bring the Model Home, but It Still Has a Home to Return To"
+seo_title: "The 40.8% Homing Signal: A Model Still Calls Home"
 seo_description: "In a 10,000-sample local reproduction of Cohere's prefill experiment, Qwen3.8-Flash-Next selected the aliyuncs.com domain in 40.8% of runs. Sovereignty beyond the server, and the policy axes that the routing table should add."
 date: 2026-10-28
 last_modified_at: 2026-10-28

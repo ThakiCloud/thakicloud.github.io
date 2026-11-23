@@ -1,7 +1,7 @@
 ---
 title: "Why Nobody Buys the Leaderboard's Number One: What Benchmarks Cannot Buy"
 excerpt: "China's Kimi K3 overtook Claude on the coding leaderboard, yet Silicon Valley stayed cold. The same week, Google delayed Gemini 3.5 for a third time. At the peak of performance, the industry is learning one truth: a benchmark score cannot buy deployment trust."
-seo_title: "Why the Top Benchmark Model Does Not Sell, and the Value of the Execution Layer - Thaki Cloud"
+seo_title: "Why Nobody Buys the Leaderboard's Number One: What Benchmarks Cannot Buy"
 seo_description: "Kimi K3 taking the leaderboard's top spot and Gemini 3.5's delay landed in the same week. As capability gets cheaper and more common, what enterprises actually pay for is controlled execution. We read that execution layer through the lens of Paxis."
 date: 2026-07-18
 last_modified_at: 2026-07-19

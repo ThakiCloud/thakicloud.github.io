@@ -2,7 +2,7 @@
 title: "We Give Compute a Residence Registration"
 lang: en
 excerpt: "U.S. export control has moved from 'where the chip goes' to 'who executes the compute.' The new end user is not a person but an agent."
-seo_title: "We Give Compute a Residence Registration. Who Is the End User of an AI Agent's Compute"
+seo_title: "We Give Compute a Residence Registration"
 seo_description: "BIS's new rule closes the chip bypass and opens the era of verifying the end user of compute. We analyze what the standard of safe execution becomes in an era where agents execute power."
 date: 2026-11-20
 last_modified_at: 2026-11-20

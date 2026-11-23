@@ -1,6 +1,6 @@
 ---
-title: "Bringing CUDA Docs Inside Your Agent: Connecting NVIDIA's CUDA MCP Server and the On-Prem Alternative"
-seo_title: "NVIDIA CUDA MCP Server Setup Guide and Nsight Copilot Blueprint Self-Hosting Comparison | ThakiCloud"
+title: "CUDA Docs Inside Your Agent: NVIDIA's CUDA MCP Server"
+seo_title: "CUDA Docs Inside Your Agent: NVIDIA's CUDA MCP Server"
 seo_description: "How to attach NVIDIA's hosted CUDA MCP Server to Claude Code, Codex, and Cursor in one line, what the endpoint actually returns when probed, and the requirements of the Apache-2.0 self-hosted alternative, Nsight Copilot Blueprint, for teams whose code cannot leave the building."
 excerpt: "Coding agents often answer CUDA questions from stale training-time knowledge. NVIDIA has opened its official docs over MCP. Here is how to connect it, and when you should not."
 date: 2026-08-11

@@ -1,6 +1,6 @@
 ---
-title: "8GB RAM에 2.78조 파라미터를 올리는 법: Kimi K3 CPU 추론 엔진을 빌드하고 재현했다"
-seo_title: "kimi-k3-in-c · 2.78T MoE CPU 추론, MXFP4 양자화, NVMe expert 스트리밍, 8.24GB RAM, C99 엔진 빌드·재현 | ThakiCloud"
+title: "Kimi K3를 8GB RAM에: CPU 추론 엔진 재현기"
+seo_title: "Kimi K3를 8GB RAM에: CPU 추론 엔진 재현기"
 seo_description: "2.78조 파라미터 Kimi K3를 GPU 없이 CPU에서 돌리는 C99 엔진 kimi-k3-in-c을 클론하고 빌드해 검증했습니다. MXFP4 패킹과 NVMe expert 스트리밍이 RAM을 8.24GB까지 낮추지만 병목은 대역폭이라 토큰당 10초 이상입니다. 이 Mac에서 잰 kernel 벤치 실측을 함께 담았습니다."
 excerpt: "2.78조 파라미터 모델을 램 8GB에 올린다는 말은 과장이 아닙니다. 다만 '돌린다'가 대화 속도를 뜻하지는 않습니다. C99 엔진을 빌드하고 weightless 테스트와 kernel 벤치를 돌린 실측으로, 저장소 대역폭이 진짜 병목임을 보여 줍니다."
 date: 2026-11-03

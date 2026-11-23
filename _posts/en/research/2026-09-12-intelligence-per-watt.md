@@ -1,6 +1,6 @@
 ---
-title: "Intelligence per Watt: A Metric for Local AI Efficiency, and the 60-80% Savings Hybrid Routing Unlocks"
-seo_title: "Intelligence per Watt (IPW): the Stanford + Together AI paper that measures local AI efficiency, and why complexity-based hybrid routing cuts energy and cost by 60-80% - ThakiCloud"
+title: "Intelligence per Watt: A Metric for Local AI Efficiency"
+seo_title: "Intelligence per Watt: A Metric for Local AI Efficiency"
 seo_description: "Stanford researchers evaluated 20+ local LLMs across 8 hardware platforms with ~1M real queries. Local systems now answer 88.7% of single-turn queries correctly, and a hybrid local-cloud router cuts energy and cost by 60-80% versus cloud-only inference. We break down the IPW metric and what it means for serving design."
 excerpt: "A paper that adds a second axis to routing design: intelligence per watt. Local inference efficiency improved 5.3x in two years, now handles 88.7% of single-turn queries, and a complexity-based hybrid router that sends only the hard tail to the cloud saves 60-80% of energy and cost versus cloud-only serving."
 date: 2026-09-12

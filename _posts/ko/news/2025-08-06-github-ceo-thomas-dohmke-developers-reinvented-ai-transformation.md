@@ -1,7 +1,7 @@
 ---
-title: "GitHub CEO 토마스 돔케가 선언한 개발자의 재탄생: AI 시대 개발자 정체성 혁명"
+title: "GitHub CEO 돔케가 말한 개발자의 재탄생"
 excerpt: "GitHub CEO가 22명의 현직 개발자 인터뷰를 통해 밝혀낸 충격적 현실: AI를 받아들이거나 직업을 포기하거나. 개발자가 코드 작성자에서 AI 오케스트레이터로 변모하는 4단계 진화 과정과 그 놀라운 결과들."
-seo_title: "GitHub CEO 토마스 돔케가 말하는 AI 시대 개발자 혁명 - Thaki Cloud"
+seo_title: "GitHub CEO 돔케가 말한 개발자의 재탄생"
 seo_description: "GitHub CEO의 최신 연구가 밝혀낸 개발자 직업의 근본적 변화. 22명 개발자 인터뷰로 확인한 AI 시대 4단계 진화론과 2-5년 내 90% AI 코딩 시대 전망을 상세 분석합니다."
 date: 2025-08-06
 last_modified_at: 2025-08-06

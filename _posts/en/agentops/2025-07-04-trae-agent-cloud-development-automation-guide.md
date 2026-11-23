@@ -1,7 +1,7 @@
 ---
-title: "TRAE Agent: Complete Cloud Development Automation Guide - AI-Powered Software Engineering"
+title: "TRAE Agent: ByteDance's Software Engineering Agent"
 excerpt: "A complete guide to TRAE Agent by ByteDance, an AI-powered software engineering agent. In-depth coverage of task planning, file management, shell operations, and automated implementation."
-seo_title: "TRAE Agent Complete Guide - AI Software Engineering Agent by ByteDance - Thaki Cloud"
+seo_title: "TRAE Agent: ByteDance's Software Engineering Agent"
 seo_description: "Complete technical guide to TRAE Agent by ByteDance. AI agent for automated software development, task planning, multi-tool integration, and development workflow automation with trajectory recording."
 date: 2025-07-04
 last_modified_at: 2025-07-04

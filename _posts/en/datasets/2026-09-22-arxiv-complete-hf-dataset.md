@@ -1,6 +1,6 @@
 ---
-title: "The Entire arXiv in One Dataset: 3.15M Papers, Every Version, SHA-256 Provenance Included"
-seo_title: "secemp9 publishes the full arXiv as a Hugging Face dataset - arxiv-complete covers 3,148,796 papers, every version, in LaTeX, PDF, PostScript, and HTML at 16.08 TB total. The collection pass uncovered missing files in the official S3 bucket that were backfilled from GCS. We walk through the 4.35 GB metadata parquet, the sha256 provenance fields, DuckDB and Polars query paths, comparison against existing archive mirrors, and the operating economics ($626 one-time egress, $249/month hosting) - a ThakiCloud dataset review"
+title: "The Entire arXiv in One Dataset"
+seo_title: "The Entire arXiv in One Dataset"
 seo_description: "The full arXiv archive, 3,148,796 papers in every version and format, now exists as a single 16.08 TB Hugging Face dataset. We break down the collection process that found missing files in the official S3 bucket, the schema, the query path starting from the 4.35 GB metadata parquet, and the real operating costs."
 excerpt: "arXiv's official S3 bucket is billed as the canonical path for full-corpus downloads. Pull it at scale and files turn out to be missing. secemp9 backfilled those gaps from GCS and packaged the result as one 16.08 TB snapshot. The value of this dataset is not its size; it is the path, size, and SHA-256 provenance attached to every file, queryable through a single parquet layer."
 date: 2026-09-22

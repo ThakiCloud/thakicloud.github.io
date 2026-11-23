@@ -1,6 +1,6 @@
 ---
-title: "AI Agents Reverse-Engineer Anything with One Prompt: Dissecting REA's 207 Tools and 6 Guided Workflows"
-seo_title: "REA: An MCP Reverse-Engineering Server for AI Coding Agents - ThakiCloud"
+title: "REA: One Prompt, Any Reverse-Engineering Job"
+seo_title: "REA: One Prompt, Any Reverse-Engineering Job"
 seo_description: "REA is an MCP server and CLI that lets AI coding agents such as Claude Code, Codex, and Cursor reverse-engineer Android APKs, Windows binaries, Electron apps, and firmware. One registration opens 207 tools and six guided investigation workflows, and all analysis runs locally."
 excerpt: "I verified the shipped package behind the viral reverse-engineering tool REA: 207 tools, six guided workflows, 15 agent clients, and an explicit warning that it is not a sandbox."
 date: 2026-10-15

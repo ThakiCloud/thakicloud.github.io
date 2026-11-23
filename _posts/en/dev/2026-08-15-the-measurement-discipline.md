@@ -1,7 +1,7 @@
 ---
-title: "A P95 of 180ms Proves Nothing: How to Make Performance Numbers Trustworthy"
+title: "A P95 of 180ms Proves Nothing"
 excerpt: "A performance metric is not something you observe, it is something you choose. What separates a disciplined team from a sloppy one is what happens the moment the same benchmark returns two different numbers. This piece argues that a number without its conditions is not data, and shows how to enforce those conditions in code rather than in prose."
-seo_title: "The Measurement Discipline: How to Make Benchmark Numbers Trustworthy"
+seo_title: "A P95 of 180ms Proves Nothing"
 seo_description: "From metric selection to warmup and steady-state detection, benchmark distortion, and honest reporting: why unconditioned performance numbers mislead engineering decisions, and how to enforce the fix as code gates instead of documentation."
 date: 2026-08-15
 last_modified_at: 2026-08-15

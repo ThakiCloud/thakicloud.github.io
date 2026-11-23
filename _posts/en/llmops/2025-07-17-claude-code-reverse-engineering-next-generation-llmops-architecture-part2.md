@@ -1,7 +1,7 @@
 ---
-title: "Next-Generation LLMOps Architecture Discovered Through Claude Code Reverse Engineering Part 2: Agent Loop and Tool Execution Framework"
+title: "Claude Code Reverse Engineering, Part 2: The Agent Loop"
 excerpt: "The second installment of Claude Code reverse-engineering analysis covers the state management of the nO main loop engine, the 6-stage tool execution pipeline, the 6-layer security framework, and real-time monitoring systems as core LLMOps technologies for production environments."
-seo_title: "Claude Code Reverse Engineering Part 2: Agent Loop and Tool Execution LLMOps - Thaki Cloud"
+seo_title: "Claude Code Reverse Engineering, Part 2: The Agent Loop"
 seo_description: "An in-depth practical analysis of the agent loop system, 6-stage tool execution framework, security architecture, and monitoring system discovered through Claude Code reverse engineering for production LLMOps."
 date: 2025-07-17
 last_modified_at: 2025-07-17

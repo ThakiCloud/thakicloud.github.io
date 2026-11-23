@@ -1,6 +1,6 @@
 ---
-title: "A Zotero Plugin That Ships a Vector Database and llama.cpp Inside It: Taking Apart PapersGPT's 131MB"
-seo_title: "Dissecting PapersGPT for Zotero: Local RAG and MCP Bundle Analysis | ThakiCloud"
+title: "PapersGPT: Taking Apart a Zotero Plugin With a Local RAG"
+seo_title: "PapersGPT: Taking Apart a Zotero Plugin With a Local RAG"
 seo_description: "We downloaded the 131MB PapersGPT v0.6.1 release and classified all 55 entries. GitHub's language stats show only JavaScript, but the artifact carries the AwaDB vector engine, PDFium, llama.cpp, and a full Python 3.12 runtime as prebuilt binaries. Native code is 48.5MB against 9.8MB of script, and there is no Linux build."
 excerpt: "A Zotero plugin claiming to index 1,000 papers in minutes made the rounds, along with a fair objection: the repository language stats show no C++. We opened the release artifact to see what is actually in there."
 date: 2026-07-29

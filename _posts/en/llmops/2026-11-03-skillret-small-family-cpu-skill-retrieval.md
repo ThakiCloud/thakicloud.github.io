@@ -1,6 +1,6 @@
 ---
 title: "Skill Retrieval on a CPU: Building the SKILLRET Small Model Family"
-seo_title: "SKILLRET Small Family - 22M and 109M Distillation, int3/int4 Quantization, drift-mixed and Reranker-0.6B, With Measured Results | ThakiCloud"
+seo_title: "Skill Retrieval on a CPU: Building the SKILLRET Small Model Family"
 seo_description: "We distilled a 1.19 GB teacher (SkillRet NDCG@10 78.48) into 22M and 109M students and quantized them to int4 and int3. 22M int4 scored 75.14 at 17.0 MB; 109M int4 scored 79.21 at 82.0 MB. Reranker and CPU cost results come from different conditions and are kept in separate tables."
 excerpt: "To pick the right skill out of thousands without a GPU, we distilled the SKILLRET embedding model into small students and cut them to 3 and 4 bits. This post puts the quality and size results measured under one condition in one table, keeps the reranker and CPU cost results in their own tables because their conditions differ, and records what did not work."
 date: 2026-11-03

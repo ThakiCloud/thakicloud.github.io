@@ -1,7 +1,7 @@
 ---
-title: "Localizing the Model Does Not Bring Sovereignty: What Today's News Points To Is the 'Execution Layer'"
+title: "Sovereignty Needs an Execution Layer, Not Local Models"
 excerpt: "From the four-way race for a domestic foundation model to Hancom's corporate rebrand, the morning news on July 5, 2026 points in one direction. The real battleground for sovereign AI has already shifted from 'which model do you build' to 'where and how do you run and audit that model.'"
-seo_title: "The Real Battleground for Sovereign AI Is Not the Model, It Is the Execution Layer"
+seo_title: "Sovereignty Needs an Execution Layer, Not Local Models"
 seo_description: "We read Hancom's shift to an agentic OS, financial-sector AI adoption, the Apple supplier hack, and the sovereign AI supply-chain debate as one story. It is not localizing the model but the foundation for execution and audit that decides sovereignty."
 date: 2026-07-05
 last_modified_at: 2026-07-05

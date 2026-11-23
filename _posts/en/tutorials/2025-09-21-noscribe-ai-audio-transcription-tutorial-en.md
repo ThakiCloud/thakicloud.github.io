@@ -1,7 +1,7 @@
 ---
-title: "noScribe: Complete Guide to AI-Powered Audio Transcription with Whisper and Speaker Detection"
+title: "noScribe: Audio Transcription with Whisper and Speakers"
 excerpt: "Master professional audio transcription with noScribe - a powerful GUI tool combining OpenAI's Whisper and pyannote for automated transcription with speaker identification, perfect for interviews and qualitative research."
-seo_title: "noScribe AI Audio Transcription Tutorial - Complete Setup Guide"
+seo_title: "noScribe: Audio Transcription with Whisper and Speakers"
 seo_description: "Learn how to use noScribe for professional audio transcription with AI. Step-by-step guide covering installation, configuration, and advanced features for researchers and content creators."
 date: 2025-09-21
 tags:

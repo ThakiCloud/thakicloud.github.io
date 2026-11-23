@@ -1,7 +1,7 @@
 ---
-title: "DeepSeek-V3.1: 하이브리드 씽킹 모드와 오픈 워크플로우 관리의 새로운 패러다임"
+title: "DeepSeek-V3.1: 하이브리드 씽킹 모드와 워크플로우 관리"
 excerpt: "DeepSeek-V3.1의 혁신적인 하이브리드 씽킹 모드와 고도화된 에이전트 기능으로 차세대 오픈 워크플로우 관리 시스템의 가능성을 탐구해봅시다."
-seo_title: "DeepSeek-V3.1 하이브리드 씽킹 모드 완전 가이드 - Thaki Cloud"
+seo_title: "DeepSeek-V3.1: 하이브리드 씽킹 모드와 워크플로우 관리"
 seo_description: "DeepSeek-V3.1의 671B 파라미터 하이브리드 모델과 코드/검색 에이전트를 활용한 오픈 워크플로우 관리 시스템 구축 가이드"
 date: 2025-08-21
 last_modified_at: 2025-08-21

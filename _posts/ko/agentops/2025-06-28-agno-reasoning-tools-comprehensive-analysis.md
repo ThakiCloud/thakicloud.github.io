@@ -1,7 +1,7 @@
 ---
-title: "Agno ReasoningTools 완전 분석 - AI 에이전트의 사고 능력을 혁신하는 핵심 도구"
+title: "Agno ReasoningTools: 에이전트의 추론 도구"
 excerpt: "Agno 프레임워크의 ReasoningTools를 상세히 분석하고 RAG 시스템에서의 reasoning 활용 방법을 탐구합니다. Chain-of-Thought부터 Agentic RAG까지, AI 에이전트의 사고 능력을 향상시키는 실전 기법을 소개합니다."
-seo_title: "Agno ReasoningTools 완전 분석 가이드 - Thaki Cloud"
+seo_title: "Agno ReasoningTools: 에이전트의 추론 도구"
 seo_description: "Agno ReasoningTools의 구조, 작동 원리, RAG 시스템에서의 활용법을 상세 분석. Chain-of-Thought, think tool, Agentic RAG 구현 방법과 실전 예제 코드를 제공합니다."
 date: 2025-06-28
 tags: 

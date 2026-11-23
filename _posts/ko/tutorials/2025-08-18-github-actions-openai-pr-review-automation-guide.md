@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions + OpenAI API로 PR 자동 리뷰 시스템 구축하기"
 excerpt: "Python 기반 GitHub Actions와 OpenAI API를 연동하여 실제 production 환경에서 검증된 Pull Request 자동 리뷰, PR 룰 검증, 커스터마이징 가능한 코드 리뷰 시스템 완벽 구축 가이드"
-seo_title: "GitHub Actions OpenAI API Python PR 자동 리뷰 시스템 구축 가이드 - Thaki Cloud"
+seo_title: "GitHub Actions + OpenAI API로 PR 자동 리뷰 시스템 구축하기"
 seo_description: "Python 기반 GitHub Actions와 OpenAI API를 활용한 PR 자동 리뷰 시스템 구축 방법과 PR 룰 검증, 실제 production 검증 완료한 커스터마이징 가능한 리뷰 시스템까지 완벽 가이드"
 date: 2025-08-18
 last_modified_at: 2025-08-18

@@ -1,7 +1,7 @@
 ---
-title: "Fable 5로 인터랙티브 웹을 짓는다: 3D, 스크롤 애니메이션, GLSL까지 한 프롬프트로"
+title: "Fable 5로 짓는 인터랙티브 웹: 3D와 GLSL을 한 프롬프트로"
 excerpt: "Anthropic의 Claude Fable 5가 프런트엔드 생성에서 새로운 기준을 세우고 있습니다. 스크롤로 제어되는 3D 씬, GLSL 셰이더, 스크린샷 기반 리디자인을 단일 프롬프트에서 뽑아내는 워크플로를 실제 공개 가이드와 오픈소스 갤러리를 근거로 정리하고, 코딩 에이전트를 일급 리소스로 다루는 ThakiCloud Paxis 관점에서 이 흐름이 무엇을 의미하는지 짚습니다."
-seo_title: "Claude Fable 5 인터랙티브 웹 디자인 - 3D 스크롤 애니메이션 GLSL 워크플로 (2026) - Thaki Cloud"
+seo_title: "Fable 5로 짓는 인터랙티브 웹: 3D와 GLSL을 한 프롬프트로"
 seo_description: "Claude Fable 5로 3D 인터랙티브 사이트, 스크롤 제어 애니메이션, GLSL 셰이더를 단일 프롬프트에서 생성하는 기법을 실제 공개 가이드(Viktor Oddy)와 오픈소스 갤러리(claude-directory)를 근거로 분석합니다. 프런트엔드 생성 워크플로, 스크린샷 리디자인, Three.js 통합을 다루고 코딩 에이전트를 일급 리소스로 다루는 ThakiCloud Paxis Agent-Native Cloud 관점의 함의를 정리합니다."
 date: 2026-07-09
 last_modified_at: 2026-07-09

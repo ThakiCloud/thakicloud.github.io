@@ -1,6 +1,6 @@
 ---
-title: "What Running Dozens of Agents Actually Means: The Graph Starts With Primitives"
-seo_title: "Building an Agent Graph With Claude Code Subagents: Nodes, Edges, Cost | ThakiCloud"
+title: "What Running Dozens of Agents Means: Start With Primitives"
+seo_title: "What Running Dozens of Agents Means: Start With Primitives"
 seo_description: "A quote from the head of Claude Code saying most of their engineers run dozens to hundreds of agents is making the rounds. This post separates what is verifiable from what is not, uses the 90.2 percent and 15x token figures Anthropic published for its multi-agent research system as the design baseline, and shows how subagents become graph nodes, alongside numbers counted directly from our own harness."
 excerpt: "Organizations running dozens of agents are not managing agent count. They are managing the shape of the graph. Without node boundaries and exit conditions, more agents only means a bigger bill."
 date: 2026-08-01

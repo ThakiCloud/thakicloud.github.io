@@ -1,7 +1,7 @@
 ---
 title: "GPT-5.6 Sol, Terra, Luna: Why a Frontier Model Split Into Three Tiers"
 excerpt: "OpenAI is splitting GPT-5.6 into three tiers, Sol, Terra, and Luna, launching this Thursday. Instead of one do-everything model, this structure prices by task difficulty, and that changes how the people who use these models design routing."
-seo_title: "GPT-5.6 Sol, Terra, Luna: Three-Tier Model Structure, Pricing, Benchmarks, and What's Behind Them"
+seo_title: "GPT-5.6 Sol, Terra, Luna: Why a Frontier Model Split Into Three Tiers"
 seo_description: "OpenAI's GPT-5.6 ships in three tiers: Sol (flagship), Terra (balanced), and Luna (lightweight). We cover the per-tier pricing and TerminalBench results, METR's benchmark-gaming warning, from a data scientist's perspective, and read it through the lens of model routing on an agent-native cloud."
 date: 2026-07-08
 last_modified_at: 2026-07-08

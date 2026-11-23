@@ -1,7 +1,7 @@
 ---
-title: "Tabby 터미널 에뮬레이터 완벽 가이드 - 현대적인 크로스플랫폼 터미널 솔루션"
+title: "Tabby: 현대적인 크로스플랫폼 터미널"
 excerpt: "Tabby 터미널 에뮬레이터 설치부터 고급 설정까지 모든 것을 다루는 완벽한 가이드. SSH 연결, 플러그인 활용, 테마 커스터마이징까지 실전 예제와 함께 알아보세요."
-seo_title: "Tabby 터미널 에뮬레이터 완벽 가이드 - 설치, 설정, 활용법 - Thaki Cloud"
+seo_title: "Tabby: 현대적인 크로스플랫폼 터미널"
 seo_description: "Tabby 터미널 에뮬레이터의 설치부터 고급 설정까지 완벽 가이드. macOS, Windows, Linux 설치 방법, SSH 연결 설정, 플러그인 활용법을 실전 예제와 함께 제공합니다."
 date: 2025-07-14
 last_modified_at: 2025-07-14

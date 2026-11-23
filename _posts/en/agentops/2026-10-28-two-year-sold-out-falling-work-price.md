@@ -1,7 +1,7 @@
 ---
 title: "Two Years Sold Out, but the Price of Work Is Falling"
 excerpt: "At the same conference, OCI's two-year compute sellout and a cheap CPU agent sandbox appeared side by side. The price of capability is locked in by 10-year contracts, while the price of work fragments into token-level metering. The place where the two ledgers cross is the execution environment."
-seo_title: "Oracle's Two-Year Sellout and the Vera CPU Sandbox: When the Capability Ledger and the Work Ledger Crossed | ThakiCloud Tech Blog"
+seo_title: "Two Years Sold Out, but the Price of Work Is Falling"
 seo_description: "Big Tech's $1.2T AI capex, Samsung's 10-year memory contracts, Naver's 12-trillion-won AI factory, KT's token metering. Two pricing systems, the price of capability and the price of work, are diverging, and the execution layer is where they cross."
 date: 2026-10-28
 last_modified_at: 2026-10-28

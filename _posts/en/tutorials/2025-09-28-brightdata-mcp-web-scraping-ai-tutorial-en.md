@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to Bright Data MCP: Give Your AI Real-Time Web Superpowers"
+title: "Bright Data MCP: Real-Time Web Access for AI Agents"
 excerpt: "Learn how to integrate Bright Data's Model Context Protocol server with Claude and other AI assistants for seamless web scraping, real-time data access, and browser automation without getting blocked."
-seo_title: "Bright Data MCP Tutorial: AI Web Scraping & Real-Time Data Access - Thaki Cloud"
+seo_title: "Bright Data MCP: Real-Time Web Access for AI Agents"
 seo_description: "Master Bright Data MCP integration with Claude AI. Get 5,000 free requests monthly for web scraping, real-time search, and browser automation. Complete setup guide included."
 date: 2025-09-28
 tags:

@@ -2,7 +2,7 @@
 layout: post
 title: "Parlant AI Agent Framework: A Complete Production LLMOps Guide"
 excerpt: "Build AI agents that follow instructions 100% of the time. Learn how to operate predictable and reliable LLM applications using Parlant's guideline-based control system."
-seo_title: "Parlant AI Agent Framework: Complete Production LLMOps Guide - Thaki Cloud"
+seo_title: "Parlant AI Agent Framework: A Complete Production LLMOps Guide"
 seo_description: "A production LLMOps guide for building and operating reliable AI agents with Parlant. Guideline-based control, conversational journeys, and enterprise-grade feature implementation."
 date: 2025-08-19
 last_modified_at: 2025-08-19

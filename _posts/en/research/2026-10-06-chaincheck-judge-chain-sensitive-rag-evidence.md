@@ -1,6 +1,6 @@
 ---
-title: "Your evidence judge scores 0.99. Is it reading the chain or the edit? Releasing ChainCheck-Judge"
-seo_title: "ChainCheck-Judge release - RAG evidence-sufficiency judges at 4B, 9B and 27B. Ordinary sufficiency scores sit near the ceiling and cannot separate systems. Trained with ChainCheck counterfactual controls that split a broken reasoning chain from a harmless edit, 2Wiki chain selectivity rises from 0.13 to 0.46 at 27B. The drop on synthetic entities is reported too - ThakiCloud"
+title: "ChainCheck-Judge: Does Your Evidence Judge Read the Chain?"
+seo_title: "ChainCheck-Judge: Does Your Evidence Judge Read the Chain?"
 seo_description: "Judges that decide whether retrieved passages are enough to answer a question often score above 0.9. That score can come from a judge that cannot tell a broken reasoning chain from a context where only a name was changed. We trained 4B, 9B and 27B judges with controls that separate the two and released them. Chain selectivity rose sharply on real entities, and fell on synthetic ones. Both results are here."
 excerpt: "Judges that decide whether retrieved passages are enough to answer a question often score above 0.9. That score can come from a judge that cannot tell a broken reasoning chain from a context where only a name was changed. We trained three judges with controls that separate the two and released them on Hugging Face."
 date: 2026-10-06

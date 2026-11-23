@@ -1,7 +1,7 @@
 ---
-title: "AI Products Don't Fail Because of the Model. They Fail Because Nobody Defined When to Stop."
+title: "AI Products Fail When Nobody Defines When to Stop"
 excerpt: "Every team that has shipped an AI feature knows the moment: the deployment finishes, and nobody can say exactly what would have stopped it if the model had been wrong. This piece names that discomfort and shows why evaluation, deployment, failure handling, and observability are really one discipline."
-seo_title: "AI Deployment Reliability: Why Stop Rules Matter More Than Model Quality"
+seo_title: "AI Products Fail When Nobody Defines When to Stop"
 seo_description: "Most AI products fail in production not because the model is weak, but because nobody defined the conditions under which the system should stop. A unified look at eval gates, deployment strategy, failure taxonomy, and observability."
 date: 2026-08-07
 last_modified_at: 2026-08-07

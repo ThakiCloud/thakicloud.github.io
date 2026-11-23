@@ -1,7 +1,7 @@
 ---
 title: "Delete the Middle Step and Character Animation Becomes Real Time"
 excerpt: "Wan-Animate-2 feeds the driving video straight into a diffusion transformer. We opened the checkpoint and measured it: 46.29 GiB of weights, 32.8% of a single H200."
-seo_title: "Wan-Animate-2 On-Prem Serving Analysis: 46.29 GiB of Weights and Real-Time Streaming"
+seo_title: "Delete the Middle Step and Character Animation Becomes Real Time"
 seo_description: "We analyzed the architecture and actual checkpoint size of Wan-Animate-2, released by Alibaba on August 7, 2026. An end-to-end DiT with no motion extractor, text-driven viewpoint control, and a real-time streaming variant, viewed through an on-premises serving lens."
 date: 2026-08-10
 last_modified_at: 2026-08-10

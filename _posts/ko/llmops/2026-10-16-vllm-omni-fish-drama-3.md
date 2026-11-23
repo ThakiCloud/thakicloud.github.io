@@ -1,6 +1,6 @@
 ---
-title: "vLLM-Omni로 Fish Audio Drama 3 멀티스피커 TTS 서빙하기: 16인 화자, 첫 오디오 126ms"
-seo_title: "vLLM-Omni Fish Audio Drama 3 서빙: 35B MoE TTS를 단일 H100에서 OpenAI 호환 API로, TTFA 126ms - ThakiCloud"
+title: "vLLM-Omni로 Fish Audio Drama 3 서빙하기"
+seo_title: "vLLM-Omni로 Fish Audio Drama 3 서빙하기"
 seo_description: "vLLM-Omni가 Fish Audio의 35B MoE 멀티스피커 TTS 모델 Drama 3을 서빙합니다. OpenAI 호환 /v1/audio/speech API, 제로샷 목소리 클로닝, 16개 스피커 태그, 44.1kHz 스트리밍. 단일 H100 80GB에서 동시성 1 기준 TTFA 126ms입니다."
 excerpt: "멀티스피커 대화 TTS가 표준 vLLM 서빙 경로로 들어왔습니다. Fish Audio Drama 3은 35B MoE로 16개 화자와 목소리 클로닝을 지원하고, 단일 H100에서 첫 오디오 지연 126ms(동시성 1, vLLM 공개 실측)를 냅니다. 서빙 레시피와 운영상 주의점을 정리합니다."
 date: 2026-10-16

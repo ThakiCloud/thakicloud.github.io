@@ -1,7 +1,7 @@
 ---
 title: "Sakana Fugu: 모델이 모델을 지휘하는 오케스트레이션 시대"
 excerpt: "Sakana AI가 공개한 Fugu는 여러 LLM을 동적으로 조율하면서도 단일 모델처럼 동작하는 오케스트레이션 시스템입니다. 멀티에이전트 플랫폼 관점에서 이 구조가 왜 중요한지, ThakiCloud의 멀티테넌트 에이전트 운영에 어떤 의미가 있는지 분석합니다."
-seo_title: "Sakana Fugu 오케스트레이션 모델 분석 - 멀티에이전트와 벤더 종속 - Thaki Cloud"
+seo_title: "Sakana Fugu: 모델이 모델을 지휘하는 오케스트레이션 시대"
 seo_description: "Sakana AI Fugu는 LLM 에이전트 풀을 동적으로 조율하는 오케스트레이션 모델입니다. 아키텍처, 자체 발표 벤치마크의 한계, 벤더 종속 헤지 논리, ThakiCloud K8s 기반 멀티테넌트 에이전트 플랫폼 적용 관점을 정리했습니다."
 date: 2026-06-23
 last_modified_at: 2026-06-23

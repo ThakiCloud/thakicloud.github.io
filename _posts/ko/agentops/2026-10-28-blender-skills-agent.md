@@ -1,7 +1,7 @@
 ---
 title: "에이전트가 3D 아트 팀이 된 순간: 94스킬 팩 Blender Skills 해부"
 excerpt: "94개 스킬을 하나하나 셜고, references 175개와 오케스트레이터 1개를 확인했습니다. Claude Code를 Blender 제작 팀으로 바꾸는 스킬 팩 + MCP 파이프라인 패턴을 레포지토리를 클론해 실측하고, 구조적 약점 세 가지를 짚었습니다."
-seo_title: "Blender Skills: 에이전트를 3D 아트 팀으로 만드는 94스킬 팩 해부 | ThakiCloud 기술블로그"
+seo_title: "에이전트가 3D 아트 팀이 된 순간: 94스킬 팩 Blender Skills 해부"
 seo_description: "arjun988/blender-skills를 클론해 스킬 94개, references 175개, blender-director 오케스트레이터, blender-mcp 의존성 체인을 실측하고 스킬 팩 + MCP 파이프라인 패턴의 강점과 약점을 분석합니다."
 date: 2026-10-28
 last_modified_at: 2026-10-28

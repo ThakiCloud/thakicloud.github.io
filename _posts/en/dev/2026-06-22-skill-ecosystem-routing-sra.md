@@ -1,7 +1,7 @@
 ---
-title: "Routing 1,600 Skills Without Noise - Operating an AI Agent Skill Ecosystem"
+title: "Routing 1,600 Skills Without Noise"
 excerpt: "Routing design principles learned from running 1,620 skills solo on Claude Code. Honestly sharing SRA (Skill Retrieval Augmentation) + BM25 gate design, description quality discipline, and real benchmark results."
-seo_title: "AI Agent 1600 Skill Routing Design - Skill Retrieval Augmentation - Thaki Cloud"
+seo_title: "Routing 1,600 Skills Without Noise"
 seo_description: "More skills does not mean a better agent. We share the routing design and real benchmarks from eliminating noise in a 1,620-skill ecosystem using an SRA + BM25 two-stage gate on Claude Code."
 date: 2026-06-22
 last_modified_at: 2026-06-22

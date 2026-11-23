@@ -1,7 +1,7 @@
 ---
 title: "The 'Neutrality' Promise of $12.93 Billion"
 excerpt: "Nvidia announced it will acquire Hugging Face for $12.93 billion, promising to keep it open and neutral. The same day carried a custom chip revenue forecast, an open model at one eighteenth the cost, and a three-provider simultaneous outage. As model supply converges into one hand, companies need four devices in place."
-seo_title: "Nvidia Buys Hugging Face for $12.93 Billion: What 'Staying Neutral' Means for Companies | ThakiCloud"
+seo_title: "The 'Neutrality' Promise of $12.93 Billion"
 seo_description: "Nvidia's acquisition of Hugging Face ($12.93 billion) came with a promise to stay neutral. The same day reported a custom chip revenue forecast, a low-cost open model, and a simultaneous frontier provider outage. In a market where a promise is the premise, we analyze what companies need: per-task model selection, failover, sovereignty options, and records, through the Paxis lens."
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/llmops/neutrality-promise-for-12-93-billion/

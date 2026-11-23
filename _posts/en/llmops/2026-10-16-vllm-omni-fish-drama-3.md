@@ -1,6 +1,6 @@
 ---
-title: "Serving Fish Audio Drama 3 Multi-Speaker TTS with vLLM-Omni: 16 Speakers, 126 ms First Audio"
-seo_title: "vLLM-Omni Fish Audio Drama 3 serving: 35B MoE TTS on a single H100 as an OpenAI-compatible API, TTFA 126 ms - ThakiCloud"
+title: "Fish Audio Drama 3 on vLLM-Omni: 126 ms First Audio"
+seo_title: "Fish Audio Drama 3 on vLLM-Omni: 126 ms First Audio"
 seo_description: "vLLM-Omni now serves Fish Audio's 35B MoE multi-speaker TTS model Drama 3. OpenAI-compatible /v1/audio/speech API, zero-shot voice cloning, 16 speaker tags, 44.1 kHz streaming. On a single H100 80GB, TTFA is 126 ms at concurrency 1."
 excerpt: "Multi-speaker dialogue TTS has entered the standard vLLM serving path. Fish Audio Drama 3 is a 35B MoE that supports 16 speakers and voice cloning, running on a single H100 with a 126 ms first-audio latency at concurrency 1 (vLLM published measurement). The serving recipe and operational caveats, organized."
 date: 2026-10-16

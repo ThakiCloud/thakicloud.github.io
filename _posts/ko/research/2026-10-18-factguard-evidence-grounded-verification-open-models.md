@@ -1,6 +1,6 @@
 ---
 title: "AI가 말한 사실을 근거로 검증하다: FactGuard 4B·8B·9B·27B 오픈 모델 공개"
-seo_title: "FactGuard 공개: AI 답변의 주장을 근거와 대조해 4가지 라벨로 판정하는 오픈 모델 4종 - ThakiCloud"
+seo_title: "AI가 말한 사실을 근거로 검증하다: FactGuard 4B·8B·9B·27B 오픈 모델 공개"
 seo_description: "AI 답변 속 가격, 플랜, 기능 주장을 제공된 근거와 대조해 SUPPORTED, CONTRADICTED, NOT_VERIFIABLE, STALE 중 하나로 판정하는 FactGuard 4B, 8B, 9B, 27B를 Apache-2.0으로 공개했습니다. 검증된 범위와 아직 검증하지 않은 후보 영역을 구분해 정리합니다."
 excerpt: "RAG, 쇼핑 AI, 상담 센터, 에이전트가 내놓은 문장을 사람이 일일이 확인하기는 어렵습니다. FactGuard는 주장 하나와 근거 묶음을 읽고 네 가지 라벨 중 하나를 고릅니다. 학습하고 평가한 범위와 아직 후보로만 남은 범위를 나눠 적었습니다."
 date: 2026-10-18

@@ -1,5 +1,5 @@
 ---
-title: "PaperCoder 튜토리얼: 머신러닝 논문을 즉시 실행 코드 리포지토리로 변환하기"
+title: "PaperCoder: 머신러닝 논문을 실행 코드로 바꾸기"
 date: 2025-05-28
 tags: 
   - Machine Learning

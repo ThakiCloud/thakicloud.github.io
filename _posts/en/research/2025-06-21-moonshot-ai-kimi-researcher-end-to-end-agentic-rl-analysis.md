@@ -1,5 +1,5 @@
 ---
-title: "Complete Analysis of Moonshot AI Kimi-Researcher: A New Paradigm in End-to-End Agentic Reinforcement Learning"
+title: "Kimi-Researcher: End-to-End Agentic Reinforcement Learning"
 excerpt: "In-depth analysis of Moonshot AI's Kimi-Researcher, which achieved 26.9% HLE performance through innovative End-to-End agentic reinforcement learning approaches and core technologies"
 date: 2025-06-21
 lang: en

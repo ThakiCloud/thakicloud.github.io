@@ -1,7 +1,7 @@
 ---
-title: "한 사람이 시네마틱 웹사이트를 만드는 시대: Gemini 3.1 + Seedance 2.0 워크플로를 뜯어봤습니다"
+title: "1인 시네마틱 웹사이트: Gemini 3.1과 Seedance 2.0"
 excerpt: "웹 디자이너 빅터 오디가 공개한 16분 튜토리얼은 Gemini 3.1로 사이트 구조를 짜고 Seedance 2.0으로 시네마틱 영상을 입혀, 과거 1만 달러를 받던 마케팅 사이트를 한 사람이 만드는 과정을 보여줍니다. 이 단일 운영자 워크플로가 무엇을 압축했는지, 그리고 멀티모달 생성 워크로드가 만들어내는 GPU 서빙 수요를 ThakiCloud 관점에서 분석합니다."
-seo_title: "Gemini 3.1 + Seedance 2.0 시네마틱 웹 워크플로 분석 - Thaki Cloud"
+seo_title: "1인 시네마틱 웹사이트: Gemini 3.1과 Seedance 2.0"
 seo_description: "Gemini 3.1(코드·구조)과 ByteDance Seedance 2.0(멀티모달 영상)을 결합해 시네마틱 웹사이트를 단일 운영자로 만드는 워크플로를 분석하고, 멀티모달 생성형 AI 워크로드의 GPU 서빙·소버린 AI 수요를 ThakiCloud 관점에서 정리했습니다."
 date: 2026-06-22
 last_modified_at: 2026-06-22

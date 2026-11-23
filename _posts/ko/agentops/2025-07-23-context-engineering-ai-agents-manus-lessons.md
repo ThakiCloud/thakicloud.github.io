@@ -1,7 +1,7 @@
 ---
 title: "AI 에이전트를 위한 컨텍스트 엔지니어링: Manus 구축에서 얻은 실전 교훈"
 excerpt: "Manus AI팀이 4번의 프레임워크 재구축을 통해 발견한 프로덕션 AI 에이전트의 컨텍스트 최적화 전략과 핵심 원칙들을 상세히 분석합니다."
-seo_title: "AI 에이전트 컨텍스트 엔지니어링 실전 가이드 - Manus 사례 분석 - Thaki Cloud"
+seo_title: "AI 에이전트를 위한 컨텍스트 엔지니어링: Manus 구축에서 얻은 실전 교훈"
 seo_description: "KV-캐시 최적화, 동적 도구 관리, 파일 시스템 활용 등 AI 에이전트 개발에서 검증된 컨텍스트 엔지니어링 전략을 Manus 구축 경험을 통해 학습하세요."
 date: 2025-07-23
 last_modified_at: 2025-07-23

@@ -1,7 +1,7 @@
 ---
-title: "OpenAI Dots에 열린 답이 나왔다: 셀프호스트 에이전트 워크스페이스 Open Dots"
+title: "Open Dots: OpenAI Dots에 대한 셀프호스트 해답"
 excerpt: "OpenAI가 DevDay에서 항상 켜져 있는 에이전트 Dots를 발표한 지 이틀 만에, MIT 라이선스의 셀프호스트 대안 Open Dots가 출시되었습니다. 에이전트 워크스페이스 전쟁의 다음 전장인 '어디서, 누가, 어떻게 감사하는가'를 짚습니다."
-seo_title: "Open Dots 셀프호스트 에이전트 워크스페이스 출시 - OpenAI Dots(DevDay 2026, 항상 켜진 에이전트, GPT-6 Astra)에 대한 MIT 라이선스 오픈소스 대안. 채팅·도구 사용·승인·커넥터·컴퓨터 태스크, Composio 통합, 1/10 비용 주장, ThakiCloud Paxis 관점 분석"
+seo_title: "Open Dots: OpenAI Dots에 대한 셀프호스트 해답"
 seo_description: "OpenAI가 발표한 항상 켜져 있는 에이전트 Dots에 대응해, 셀프호스트 오픈소스 에이전트 워크스페이스 Open Dots가 출시됐습니다. 승인(approvals)과 커넥터, 감사 중심의 셀프호스트 워크스페이스가 왜 지금 중요한지, 그리고 에이전트 인프라 경쟁이 ThakiCloud Paxis에 무엇을 의미하는지 정리했습니다."
 date: 2026-10-01
 last_modified_at: 2026-10-01

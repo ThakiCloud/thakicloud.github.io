@@ -1,7 +1,7 @@
 ---
-title: "744B in 1 Bit: The On-Premises Question Unsloth's GLM-5.2 Dynamic GGUF Raises"
+title: "GLM-5.2 in 1 Bit: Unsloth's Dynamic GGUF"
 excerpt: "Unsloth shrank GLM-5.2's (~744B MoE) 1.51TB of BF16 weights down to 176GB with a 1-bit Dynamic GGUF. A frontier-class open model now fits on a single 256GB Mac or one multi-GPU box. We walk through the published per-quant size and accuracy numbers, and where GGUF local serving fits a multi-tenant K8s platform like ThakiCloud, and where it diverges."
-seo_title: "Unsloth GLM-5.2 1-bit Dynamic GGUF Quantization On-Premises Serving Analysis - Thaki Cloud"
+seo_title: "GLM-5.2 in 1 Bit: Unsloth's Dynamic GGUF"
 seo_description: "Analysis of Unsloth GLM-5.2 Dynamic GGUF (1.51TB→176GB, 1-bit): per-quant size and accuracy, 256GB Mac local execution, and the llama.cpp vs vLLM serving trade-off from a ThakiCloud K8s multi-tenant serving perspective."
 date: 2026-06-25
 last_modified_at: 2026-06-25

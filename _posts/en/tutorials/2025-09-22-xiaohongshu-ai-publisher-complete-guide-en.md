@@ -1,7 +1,7 @@
 ---
-title: "Complete Guide to Xiaohongshu AI Publisher: Automate Content Creation and Publishing"
+title: "xhs_ai_publisher: Automating Xiaohongshu Publishing"
 excerpt: "Master the xhs_ai_publisher tool for automated Xiaohongshu content creation and publishing. Complete tutorial covering installation, configuration, and advanced features for social media automation."
-seo_title: "Xiaohongshu AI Publisher Tutorial: Complete Automation Guide - Thaki Cloud"
+seo_title: "xhs_ai_publisher: Automating Xiaohongshu Publishing"
 seo_description: "Learn to automate Xiaohongshu content creation and publishing with xhs_ai_publisher. Step-by-step tutorial with installation, configuration, and best practices for social media automation."
 date: 2025-09-22
 tags:

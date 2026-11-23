@@ -1,7 +1,7 @@
 ---
-title: "GLM-5.2: An MIT Open-Weight Model That Surpasses GPT-5.5, and the Sovereign Serving Opportunity"
+title: "GLM-5.2: An MIT-Licensed Model and Sovereign Serving"
 excerpt: "A deep look at GLM-5.2, the 744B MoE coding model released under the MIT license by China's Z.ai (Zhipu). It claims SWE-bench Pro 62.1, beating GPT-5.5 at one-sixth the cost. We analyze what that means for vLLM self-hosting and on-premises sovereign serving from the ThakiCloud perspective."
-seo_title: "GLM-5.2 Open-Weight Analysis and vLLM Self-Hosting - Thaki Cloud"
+seo_title: "GLM-5.2: An MIT-Licensed Model and Sovereign Serving"
 seo_description: "Z.ai's GLM-5.2 (744B MoE, 1M context, MIT) scores 62.1 on SWE-bench Pro, surpassing GPT-5.5. We break down the 8xH200 vLLM self-hosting setup and the economics of on-premises sovereign serving from the ThakiCloud perspective."
 date: 2026-06-22
 last_modified_at: 2026-06-22

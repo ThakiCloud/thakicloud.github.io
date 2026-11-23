@@ -1,6 +1,6 @@
 ---
-title: "Does Every Document Need a Giant VLM? Designing Tiered Document Inference with ThakiOCR and Metis"
-seo_title: "Tiered document inference: serving a lightweight line OCR and document VLMs together on Metis | ThakiCloud"
+title: "Tiered Document Inference: Not Every Page Needs a Big VLM"
+seo_title: "Tiered Document Inference: Not Every Page Needs a Big VLM"
 seo_description: "We propose a tiered inference design that sends short text lines to a millisecond-scale lightweight OCR and complex pages to document VLMs. Built on ThakiOCR latency measurements, the evaluation of a Korean-specialist VLM path, and a fast external OCR model that rewrote the Korean won sign."
 excerpt: "Reading every document with the same large model means paying the same cost for the easy ones. We sketched a tiered design that splits work between a lightweight OCR and document VLMs, backed by measurements."
 date: 2026-11-02

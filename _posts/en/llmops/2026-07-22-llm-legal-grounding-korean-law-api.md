@@ -1,5 +1,5 @@
 ---
-title: "How to stop an LLM from inventing statutes: grounding legal answers on Korea's National Law Open API"
+title: "Stopping LLMs from Inventing Statutes with Korea's Law API"
 excerpt: "Ask ChatGPT or Claude about the law and you sometimes get a plausible but fabricated statute. The problem is not the model's intelligence but a design that never binds the answer to verified source text. We walk through how to turn LLM legal answers into citation-grounded output using Korea's National Law Information Open API, from a serving perspective."
 date: 2026-07-22
 tags:

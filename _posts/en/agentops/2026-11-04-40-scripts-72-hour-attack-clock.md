@@ -1,7 +1,7 @@
 ---
 title: "The Week 40 Scripts Moved in 3 Days: The Attacker's 72-Hour Clock"
 excerpt: "Hackers gain time with AI, and companies lose their response time. What the seven Israeli security firms sold in Korea was not something fast, but the moment of execution."
-seo_title: "The Week 40 Scripts Moved in 3 Days, the Attacker's 72-Hour Clock | ThakiCloud"
+seo_title: "The Week 40 Scripts Moved in 3 Days: The Attacker's 72-Hour Clock"
 seo_description: "The attack that arrived 3 days after the PHP2Shell disclosure, the 40 mass-produced LLM scripts, and the seven Israeli security firms selling agent control. This post analyzes the time asymmetry of AI security and the moment an agent-native cloud answers it."
 date: 2026-11-04
 last_modified_at: 2026-11-04

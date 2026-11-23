@@ -1,7 +1,7 @@
 ---
-title: "GPU money has split in two: the side that guaranteed demand, the side that guarantees chips"
+title: "GPU Money Splits: Guaranteed Demand vs. Guaranteed Chips"
 excerpt: "In the week it was reported that Nvidia paused the revenue-sharing financing program it introduced in July, 3.08 trillion won went into SK Horizon, the Korean datacenter entity, and GPU financing of up to 400 billion won was pushed forward. Money is moving in two directions, and the price and stability of a company's compute are decided by which direction it stands on."
-seo_title: "GPU money has split in two: the side that guaranteed demand, the side that guarantees chips - Thaki Cloud"
+seo_title: "GPU Money Splits: Guaranteed Demand vs. Guaranteed Chips"
 seo_description: "Nvidia's temporary pause of its neocloud revenue-sharing deals, SK Horizon's 3.08 trillion won raise, and Vesel AI's 400 billion won GPU financing. Today's news takes up what the two directions of GPU capital mean and the question a company should ask: whose name is the money running the agents under."
 date: 2026-08-28
 last_modified_at: 2026-08-28

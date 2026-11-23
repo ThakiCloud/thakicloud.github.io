@@ -1,6 +1,6 @@
 ---
-title: "WavLM vs. pyannote for Korean Meeting Diarization: An Evaluation Across 64 Real Meetings"
-seo_title: "WavLM vs. pyannote for Korean Meeting Diarization: An Evaluation Across 64 Real Meetings | ThakiCloud"
+title: "WavLM vs. pyannote for Korean Meeting Diarization"
+seo_title: "WavLM vs. pyannote for Korean Meeting Diarization"
 seo_description: "We compared our existing WavLM-based speaker linking with pyannote diarization on 64 real Korean meetings (dev2: 30, final2: 34) from AI Hub 「주요 영역별 회의 음성인식 데이터」 (#464). In final2 5-8 speaker meetings, wrong merges dropped from 0.4085 to 0.0342. In final2 3-4 speaker meetings, cpCER got worse, from 0.2743 to 0.3562. So we kept the default and made the method a per-meeting choice."
 excerpt: "Switching the diarization method cut wrong merges sharply in larger meetings and made one set of small meetings worse. Here is how we read those numbers, and why we kept the default and let users choose per meeting."
 date: 2026-11-07

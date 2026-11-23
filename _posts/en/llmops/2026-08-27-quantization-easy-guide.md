@@ -1,6 +1,6 @@
 ---
-title: "Measuring the World With a Ruler That Has Sixteen Marks: Quantization Made Easy"
-seo_title: "LLM Quantization Explained Simply - GGUF, MLX, NVFP4 and Unsloth Dynamic 3.0 | ThakiCloud"
+title: "Quantization Made Easy: A Ruler With Sixteen Marks"
+seo_title: "Quantization Made Easy: A Ruler With Sixteen Marks"
 seo_description: "One analogy that carries all the way through what quantization is, how GGUF, MLX, NVFP4 and MXFP4 actually differ, and which format belongs on which hardware. Includes the four-bit-storage-but-sixteen-bit-compute trap and our own measurements on B200 and H200."
 excerpt: "Four bits means measuring a number with a ruler that has sixteen marks. But if your GPU cannot read four bits, it unpacks every weight back to sixteen bits before each multiply. That fork, not the format name, decides your speed."
 date: 2026-08-27

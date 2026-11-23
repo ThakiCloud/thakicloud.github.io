@@ -1,7 +1,7 @@
 ---
-title: "안전하다는 건 무슨 뜻일까: Human-KO를 EXAONE과 저희 잣대 옆에 세워봤습니다"
+title: "안전하다는 건 무슨 뜻일까: Human-KO와 EXAONE 비교"
 excerpt: "체온계가 고장났는지 확인하려면 열이 확실한 사람부터 재야 합니다. 저희는 안전학습을 일부러 제거한 모델로 잣대부터 검증한 뒤, Human-KO의 편향·거절 행동을 원본·EXAONE과 나란히 쟀습니다."
-seo_title: "Human-KO 27B 안전성·편향 벤치마크: KoBBQ·BBQ·XSTest 실측"
+seo_title: "안전하다는 건 무슨 뜻일까: Human-KO와 EXAONE 비교"
 seo_description: "KoBBQ·BBQ 편향 벤치마크와 XSTest 안전성 시험으로 Human-KO 27B를 원본 Qwen3.8-27B, EXAONE-4.5-33B와 비교했습니다. 안전학습을 제거한 모델을 대조군으로 써서 측정 자체가 유효한지부터 확인했습니다."
 date: 2026-09-04
 published: true

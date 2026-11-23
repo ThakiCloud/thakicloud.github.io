@@ -1,6 +1,6 @@
 ---
-title: "Agentic RL Stops Waiting for the Group and Learns from One Rollout at a Time"
-seo_title: "SAO Single-Rollout Async Agentic RL Analysis - Thaki Cloud"
+title: "SAO: Agentic RL That Learns From One Rollout at a Time"
+seo_title: "SAO: Agentic RL That Learns From One Rollout at a Time"
 seo_description: "An analysis of SAO (Single-Rollout Asynchronous Optimization), the paper Tsinghua University and Z AI actually used to train GLM-5.2. We cover why GRPO's group sampling is a poor fit for asynchronous agentic training, how single-rollout learning combined with double-side token clipping solves it, and what this means for ThakiCloud's GPU training infrastructure and the Paxis agent platform."
 excerpt: "When training long-horizon agentic tasks with RL, GRPO's group sampling idles the GPU while it waits for the slowest rollout to finish. SAO, the method Tsinghua University and Z AI actually deployed to train GLM-5.2, drops the group entirely and learns from a single rollout, protecting stability instead with double-side token clipping."
 date: 2026-07-11

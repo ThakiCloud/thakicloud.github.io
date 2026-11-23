@@ -1,7 +1,7 @@
 ---
 title: "AI-Researcher: 완전 자율 과학 연구 시스템의 혁신과 미래"
 excerpt: "홍콩대학교 연구팀이 개발한 AI-Researcher는 문헌 조사부터 논문 출간까지 전 과정을 AI가 독립적으로 수행하는 혁신적인 자율 연구 시스템입니다. 이 분석에서는 시스템 아키텍처, 핵심 혁신 요소, 그리고 한국 연구 환경에서의 활용 가능성을 종합적으로 살펴봅니다."
-seo_title: "AI-Researcher 완전 자율 과학 연구 시스템 분석 - 연구 패러다임의 혁신 - Thaki Cloud"
+seo_title: "AI-Researcher: 완전 자율 과학 연구 시스템의 혁신과 미래"
 seo_description: "AI-Researcher 프로젝트의 시스템 아키텍처, 핵심 기능, 그리고 완전 자율 과학 연구의 미래를 종합 분석합니다. 문헌 조사부터 논문 출간까지 AI가 독립적으로 수행하는 혁신적 연구 시스템을 깊이 있게 탐구합니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21

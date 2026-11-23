@@ -1,7 +1,7 @@
 ---
 title: "Hidden Reasoning Was Not Hidden"
 excerpt: "In the same week researchers recovered 62 API keys from 315,320 reasoning blocks, a tool that strips provenance watermarks widened its supported formats. It's time to ask again who owns the trail a model leaves behind."
-seo_title: "Reasoning Trace Leaks and Watermark Removal: A Turning Point for AI Trail Security"
+seo_title: "Hidden Reasoning Was Not Hidden"
 seo_description: "In August 2026, researchers recovered 62 API keys from a frontier model's hidden reasoning, and provenance-watermark removal tools spread wider. Paired with falling token prices, here's why execution-record governance is becoming central."
 date: 2026-08-13
 last_modified_at: 2026-08-13

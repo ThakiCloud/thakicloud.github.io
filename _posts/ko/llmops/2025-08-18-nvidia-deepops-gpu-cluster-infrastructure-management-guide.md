@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA DeepOps: 엔터프라이즈 GPU 클러스터 인프라 자동화의 새로운 패러다임"
+title: "NVIDIA DeepOps: 엔터프라이즈 GPU 클러스터 자동화"
 excerpt: "AI/ML 시대의 핵심 인프라인 GPU 클러스터 관리를 혁신하는 NVIDIA DeepOps의 철학과 전략을 심도 있게 분석합니다. Kubernetes와 Slurm을 활용한 차세대 클러스터 운영 방법론을 탐구합니다."
-seo_title: "NVIDIA DeepOps GPU 클러스터 관리 완전 가이드 - LLMOps 인프라 전략 - Thaki Cloud"
+seo_title: "NVIDIA DeepOps: 엔터프라이즈 GPU 클러스터 자동화"
 seo_description: "NVIDIA DeepOps로 구축하는 엔터프라이즈 GPU 클러스터 인프라 관리 전략. Kubernetes, Slurm, DGX 시스템 최적화부터 LLMOps 환경까지 포괄적 분석을 제공합니다."
 date: 2025-08-18
 last_modified_at: 2025-08-18

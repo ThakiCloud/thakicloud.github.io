@@ -1,5 +1,5 @@
 ---
-title: "Putting a Safety Net Under Autonomous Skill Rollout with Canary Gates: Trace-Based Regression Detection and Automatic Rollback"
+title: "Canary Gates: A Safety Net for Autonomous Skill Rollout"
 excerpt: "How should an agent harness that rewrites its own code overnight safely roll out the result the next day? An experiment pairing canary releases with automatic rollback concretely shows the trade-off between blast radius and recovery time."
 tags: [canary-deployment, agent-harness, skill-evolution, automatic-rollback, span-tracing, regression-detection, self-improving-pipelines, observability, cost-latency-monitoring, autonomous-agents]
 date: 2026-07-20

@@ -1,7 +1,7 @@
 ---
-title: "The Real Engineering Behind 'AI That Works While You Sleep': A Deep Dive into Opus 4.8 Dynamic Workflows and Parallel Subagents"
+title: "Opus 4.8 Overnight Workflows: The Engineering Beneath the Hype"
 excerpt: "A viral X article about '40 workflows that make money while you sleep' swept through developer timelines. The passive income framing is overblown, but the underlying engineering is real: dynamic workflows, parallel subagent fan-out, and the verification gates that close the loop. We analyze the GPU workloads that long-running unattended agents generate, from a ThakiCloud Kubernetes and Kueue perspective."
-seo_title: "Opus 4.8 Dynamic Workflows and Parallel Subagent Analysis - Thaki Cloud"
+seo_title: "Opus 4.8 Overnight Workflows: The Engineering Beneath the Hype"
 seo_description: "We separate the hype from the substance in the viral 'AI earns money while you sleep' article, then examine the real engineering of Opus 4.8 dynamic workflows, parallel subagent fan-out, verification gates, and the GPU serving demand that unattended long-running agents create - from a ThakiCloud Kubernetes perspective."
 date: 2026-06-22
 last_modified_at: 2026-06-22

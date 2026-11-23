@@ -1,6 +1,6 @@
 ---
-title: "A Coding Agent Renders Its Own 3D Scenes: Installing Mirage Tesseract and Measuring Path Tracing"
-seo_title: "Hands-on record of installing Mirage's open creative CLI Tesseract 0.5.0 on macOS, building a 3D scene from JSON actions with a coding agent, and measuring raster vs GPU path-traced rendering. Same scene: 3.03s vs 6.85s for a full preview, 0.19s vs 0.49s per filmstrip frame - ThakiCloud"
+title: "A Coding Agent That Renders Its Own 3D Scenes"
+seo_title: "A Coding Agent That Renders Its Own 3D Scenes"
 seo_description: "A tweet claiming 'Claude can do 3D now' traced back to Mirage's Tesseract CLI. We installed the v0.5.0 darwin-arm64 bundle with SHA-256 verification, built an official recipe scene (camera, parallel sun, two boxes) from JSON action batches, and rendered it with both renderers on a MacBook: raster preview 3.03s, path tracer at 16 samples 6.85s, filmstrip 0.19s vs 0.49s per frame. This post covers the agent-driven scene workflow and the renderer choice."
 excerpt: "A coding agent can now direct a 3D scene end to end: JSON actions build it, the CLI verifies against a schema, and the renderer reports its own timing. We installed Tesseract 0.5.0 for real and measured raster vs path-traced rendering on a MacBook: 3.03s vs 6.85s for the same scene. The loop is the point: the agent builds, renders, looks, and revises."
 date: 2026-11-05

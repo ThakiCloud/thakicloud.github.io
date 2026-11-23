@@ -1,7 +1,7 @@
 ---
 title: "Where Does an Agent That Lives for Seven Days Keep Its Memory?"
 excerpt: "Google gave agents a seven-day runtime and a memory bank, and SK hynix unveiled the first standard for a new memory tier to hold that memory. Two announcements arriving on the same day point to a single question."
-seo_title: "The Agent Memory War: Why Google's Seven-Day Runtime and SK hynix's HBF Arrived on the Same Day"
+seo_title: "Where Does an Agent That Lives for Seven Days Keep Its Memory?"
 seo_description: "Reading Google's Gemini Enterprise Agent Platform GA together with SK hynix's HBF standard announcement. As agents start living longer, where to place their memory has become a question of cost and sovereignty."
 date: 2026-08-12
 last_modified_at: 2026-08-12

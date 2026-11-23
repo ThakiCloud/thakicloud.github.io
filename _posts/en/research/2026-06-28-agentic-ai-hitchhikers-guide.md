@@ -1,7 +1,7 @@
 ---
-title: "Agentic AI from Foundations to Systems: Notes on 'The Hitchhiker's Guide to Agentic AI'"
+title: "The Hitchhiker's Guide to Agentic AI: Reading Notes"
 excerpt: "'The Hitchhiker's Guide to Agentic AI: From Foundations to Systems' on arXiv is a practitioner reference that traces every layer of agentic AI -- from LLM substrate through alignment and reasoning, up to agent systems and production deployment. We summarize it across four layers and draw out what it means for Paxis, ThakiCloud's Agent-Native Cloud."
-seo_title: "Agentic AI Full-Stack Guide Summary - Hitchhiker's Guide to Agentic AI - Thaki Cloud"
+seo_title: "The Hitchhiker's Guide to Agentic AI: Reading Notes"
 seo_description: "arXiv:2606.24937 'The Hitchhiker's Guide to Agentic AI' summarized across four layers -- LLM substrate, alignment and reasoning, agent systems (MCP, skills, memory, multi-agent, A2A), and deployment and evaluation -- with a ThakiCloud Paxis Agent-Native Cloud perspective."
 date: 2026-06-28
 last_modified_at: 2026-06-28

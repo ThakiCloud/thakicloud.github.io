@@ -1,5 +1,5 @@
 ---
-title: "Less Verification Is Safer: Measuring the Cost-Quality Curve of Multi-Agent Verification Gates"
+title: "Less Verification Is Safer: The Fan-Out Cost Curve"
 excerpt: "The principle that every fan-out should close with adversarial verification is widely accepted, but how much verifier tier and how many skeptics to use has mostly been set by convention rather than measurement. We present a study that tests this assumption with 12 findings and 180 real API calls."
 tags: [multi-agent, llm-orchestration, adversarial-verification, model-routing, cost-optimization, hallucination-detection, ai-agents, skill-orchestration]
 date: 2026-07-11

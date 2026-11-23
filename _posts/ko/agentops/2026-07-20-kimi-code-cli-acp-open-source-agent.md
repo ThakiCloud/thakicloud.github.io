@@ -1,7 +1,7 @@
 ---
-title: "Kimi Code CLI 뜯어보기: 오픈소스 터미널 에이전트가 ACP로 에디터를 삼키는 법"
+title: "Kimi Code CLI: ACP로 에디터와 붙는 터미널 에이전트"
 excerpt: "문샷AI가 MIT 라이선스로 공개한 오픈소스 코딩 CLI를 공식 문서 기준으로 분석합니다. 서브에이전트와 MCP 편의성은 클로드 코드와 겹치지만, 진짜 차별점은 Agent Client Protocol 네이티브 지원과 모델 개방성입니다."
-seo_title: "Kimi Code CLI와 ACP 완전 분석: 오픈소스 에이전트 CLI의 진짜 차별점"
+seo_title: "Kimi Code CLI: ACP로 에디터와 붙는 터미널 에이전트"
 seo_description: "문샷AI Kimi Code CLI의 서브에이전트, MCP, Agent Client Protocol을 공식 문서 기준으로 검증합니다. 클로드 코드 대비 실제 차별점과 온프렘 셀프호스팅 관점을 정리합니다."
 date: 2026-07-20
 last_modified_at: 2026-07-20

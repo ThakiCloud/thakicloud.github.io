@@ -1,7 +1,7 @@
 ---
-title: "AI Agents That Write Papers - Moving Your Writing Workflow to an Open-Source Skill Package"
+title: "AI Agents That Write Papers: An Open-Source Skill Package"
 excerpt: "An open-source project bundles a professor's paper-writing expertise into a Skill package that works across Codex, Claude Code, and Gemini. We examine how it differs from a plain prompt collection, why the Agent Skill format matters, and what this trend signals for ThakiCloud -- an organization running an agent platform with hundreds of Skills."
-seo_title: "Open-Source Research Paper Writing Skill Package Analysis (2026) - Thaki Cloud"
+seo_title: "AI Agents That Write Papers: An Open-Source Skill Package"
 seo_description: "Research-Paper-Writing-Skills packages ML/CV/NLP paper-writing expertise as an Agent Skill that works across Codex, Claude Code, and Gemini. We cover what makes the Skill format different from prompts, how to install and use it, and ThakiCloud's perspective including known limitations."
 date: 2026-06-26
 last_modified_at: 2026-06-26

@@ -1,7 +1,7 @@
 ---
 title: "PocketBase: 단일 파일로 구축하는 실시간 백엔드 완전 가이드"
 excerpt: "48.2k 스타의 PocketBase로 SQLite, 실시간 구독, 사용자 관리, Admin UI를 단일 바이너리에서 구현하는 방법을 macOS 환경에서 실습과 함께 마스터해보세요."
-seo_title: "PocketBase 실시간 백엔드 Go SQLite MIT 라이센스 완벽 튜토리얼 - Thaki Cloud"
+seo_title: "PocketBase: 단일 파일로 구축하는 실시간 백엔드 완전 가이드"
 seo_description: "Go 기반 PocketBase로 단일 파일 백엔드 구축, SQLite 실시간 구독, 사용자 인증, 파일 관리, Admin UI를 macOS에서 실습과 함께 상세히 알아봅니다."
 date: 2025-07-06
 last_modified_at: 2025-07-06

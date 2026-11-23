@@ -1,7 +1,7 @@
 ---
-title: "macOS GitHub CLI Full Automation Series - Part 1: Installation and Environment Setup"
+title: "GitHub CLI Automation on macOS, Part 1: Setup"
 excerpt: "Building a fully automated GitHub CLI environment on macOS: zshrc scripts, aliases, and one-click workflow configuration"
-seo_title: "macOS GitHub CLI Full Automation Part 1 - Installation and Environment Setup - Thaki Cloud"
+seo_title: "GitHub CLI Automation on macOS, Part 1: Setup"
 seo_description: "How to fully automate GitHub CLI on macOS: a step-by-step guide from Homebrew installation to advanced zshrc scripts and custom aliases for a professional-grade development environment"
 date: 2025-07-02
 last_modified_at: 2025-07-02

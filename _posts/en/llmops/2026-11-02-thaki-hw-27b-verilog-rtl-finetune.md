@@ -1,6 +1,6 @@
 ---
-title: "Our RTL Fine-Tune of a 27B Model Did Not Beat the Base: Building Thaki-HW-27B-v0.1"
-seo_title: "Thaki-HW-27B-v0.1 - Data, Evaluation and Failure Analysis of a Qwen3.8-27B Verilog RTL Fine-Tune | ThakiCloud"
+title: "Thaki-HW-27B-v0.1: An RTL Fine-Tune That Didn't Beat Base"
+seo_title: "Thaki-HW-27B-v0.1: An RTL Fine-Tune That Didn't Beat Base"
 seo_description: "We LoRA-trained Qwen3.8-27B on 1,000 licence-traced Verilog RTL examples. VerilogEval +0.85pp (95% CI −2.99 to +4.70) and RTLLM −4.27pp (−12.82 to +4.27): no improvement over the base was demonstrated. This post covers which tasks got better, which got worse, and why."
 excerpt: "We set out to build a 27B model that writes better Verilog RTL. It passed our pre-registered release criteria, but there is no evidence it beats the original Qwen3.8-27B. Task by task, simple sequential circuits improved while complex FSMs and arithmetic circuits got worse."
 date: 2026-11-02

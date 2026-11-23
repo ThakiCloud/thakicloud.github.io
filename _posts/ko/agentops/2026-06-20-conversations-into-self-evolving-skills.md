@@ -1,7 +1,7 @@
 ---
-title: "대화가 스킬이 된다: 과거 세션에서 워크플로를 캐내고 스스로 진화시키는 에이전트"
+title: "대화가 스킬이 된다: 과거 세션에서 워크플로 캐내기"
 excerpt: "800개가 넘는 과거 대화에서 반복 워크플로를 결정론 엔진으로 캐내 스킬로 만들고, 실패를 근거로 스킬 본문을 leak-free로 진화시키는 두 개의 자율 루프를 코드와 함께 공개합니다."
-seo_title: "과거 대화를 스킬로: Chronicle 마이닝과 selfharness 자가진화 - Thaki Cloud"
+seo_title: "대화가 스킬이 된다: 과거 세션에서 워크플로 캐내기"
 seo_description: "ThakiCloud가 Claude Code 세션 801개에서 반복 워크플로를 결정론 마이너로 추출해 스킬로 변환하고, Self-Harness 논문 기반으로 스킬 본문을 누수 없이 진화시키는 방식을 코드와 수치로 정리합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

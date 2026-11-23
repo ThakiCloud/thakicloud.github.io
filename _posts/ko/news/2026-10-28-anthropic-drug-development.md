@@ -1,7 +1,7 @@
 ---
-title: "에이전트가 약 개발의 닫힌 루프를 도는 순간: Anthropic, 6개 제약 조직과 Mithril의 초기 실적"
+title: "에이전트가 도는 신약 개발의 닫힌 루프"
 excerpt: "Anthropic이 발표한 약 개발 파트너십 초기 실적을 사례별로 정리했습니다. 35,000개 항체 설계, 1,010개 변이체, 1,061페이지 문서 리뷰. frontier 에이전트가 '보조'에서 '프로세스 참여'로 이동하는 신호를 Paxis 관점에서 읽었습니다."
-seo_title: "Anthropic 약 개발 에이전트 실적: 6개 파트너 사례와 시사점 | ThakiCloud 기술블로그"
+seo_title: "에이전트가 도는 신약 개발의 닫힌 루프"
 seo_description: "Anthropic의 early progress on drug development 발표를 분석합니다. Generate, Divergence, BigHat, Enveda, TCG, BMS 여섯 파트너의 측정 사례와 Mithril Medicine 인수, Claude Science까지 Paxis 관점에서 정리했습니다."
 date: 2026-10-28
 last_modified_at: 2026-10-28

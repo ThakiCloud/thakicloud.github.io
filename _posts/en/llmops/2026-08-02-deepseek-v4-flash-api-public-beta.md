@@ -1,6 +1,6 @@
 ---
-title: "284B Parameters, 13B Awake: Reading the DeepSeek-V4-Flash Public Beta From a Serving Desk"
-seo_title: "DeepSeek-V4-Flash public beta analysis: agent benchmarks and the serving math of a 284B MoE | ThakiCloud"
+title: "DeepSeek-V4-Flash: Active Parameters Set Serving Cost"
+seo_title: "DeepSeek-V4-Flash: Active Parameters Set Serving Cost"
 seo_description: "DeepSeek opened the official V4-Flash API in public beta on 31 July 2026. The architecture is unchanged from the preview and only post-training was iterated, yet it scores 82.7 on Terminal Bench 2.1 and passes the higher-tier preview. We work through what 284B total with 13B active means for self-hosting cost and what native Responses API support changes for an agent pipeline."
 excerpt: "Active parameters set your serving budget, not the weight file size. This release is a good case to do that arithmetic on."
 date: 2026-08-02

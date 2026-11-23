@@ -1,7 +1,7 @@
 ---
 title: "The Day a Rocket Company Borrowed $40 Billion for AI"
 excerpt: "While SpaceX borrowed $40 billion to fund AI compute, a warning emerged that the door to funding is closing on more than 200 AI-only neoclouds. The Swedish government blocks ChatGPT and Claude on official computers starting today. The price of AI is now set by balance sheets, not benchmarks."
-seo_title: "The Day a Rocket Company Borrowed $40 Billion for AI, and Why Money Is Drying Up for Neoclouds"
+seo_title: "The Day a Rocket Company Borrowed $40 Billion for AI"
 seo_description: "An analysis of why AI infrastructure is now priced by balance sheets, centered on SpaceX's $40 billion debt raise, the neocloud credit squeeze, and Sweden's AI block for government computers."
 date: 2026-10-26
 last_modified_at: 2026-10-26

@@ -1,7 +1,7 @@
 ---
-title: "Kimi K2 Technical Report In-Depth Analysis: 1 Trillion Parameter MoE Architecture for Agentic Intelligence"
+title: "Kimi K2 Technical Report: A MoE Built for Agents"
 excerpt: "Comprehensive analysis of MoonshotAI's Kimi K2 technical report examining MuonClip optimizer, large-scale synthetic data pipeline, and core innovations in next-generation agentic AI"
-seo_title: "Kimi K2 Technical Report Complete Analysis - Agentic AI MoE Architecture Research - Thaki Cloud"
+seo_title: "Kimi K2 Technical Report: A MoE Built for Agents"
 seo_description: "In-depth analysis of MoonshotAI Kimi K2's 1 trillion parameter MoE model, MuonClip optimizer, 15.5 trillion token pretraining, and agentic data synthesis pipeline technical innovations"
 date: 2025-07-23
 last_modified_at: 2025-07-23

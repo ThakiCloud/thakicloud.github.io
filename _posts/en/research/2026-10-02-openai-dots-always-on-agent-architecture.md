@@ -1,6 +1,6 @@
 ---
-title: "The Agent That Works Around the Clock: Reading OpenAI Dots' Always-On Architecture from a Platform Perspective"
-seo_title: "OpenAI Dots (GPT-6 Astra, always-on agent) architecture analysis - own cloud computer+browser, 4,000+ tool connections, memory, delegation, guardrails, approval rules, announced at DevDay on September 29, 2026. What the always-on agent design means for ThakiCloud Paxis and ai-platform serving - ThakiCloud"
+title: "OpenAI Dots: Reading the Always-On Agent Architecture"
+seo_title: "OpenAI Dots: Reading the Always-On Agent Architecture"
 seo_description: "Dots, announced by OpenAI at DevDay 2026, are always-on agents, each with its own cloud computer and browser. Powered by GPT-6 Astra, they keep working even when your device is off and connect to 4,000+ tools. This post walks through the architecture layers of Dots (model, tools, memory, delegation, guardrails, operations) and the implications for platforms that solve the same class of problem on customer-controlled infrastructure."
 excerpt: "Dots are agents that 'keep working after the chat ends.' Own cloud computer and browser, goal-based design instead of session-based. We walk through the architecture layers of always-on agents and what enterprise platforms should take from them."
 date: 2026-10-02

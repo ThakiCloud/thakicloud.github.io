@@ -1,5 +1,5 @@
 ---
-title: "Claude Code를 자체 호스팅 오픈 모델에 연결하기: free-claude-code 프록시 해부"
+title: "Claude Code를 오픈 모델에 연결하기: free-claude-code"
 excerpt: "Claude Code와 Codex 같은 코딩 에이전트는 Anthropic API에 묶여 있습니다. free-claude-code는 그 사이에 Anthropic 호환 프록시를 끼워, 같은 에이전트 UI를 그대로 쓰면서 요청을 Ollama, llama.cpp, vLLM 같은 자체 호스팅 백엔드로 돌립니다. 24개 백엔드를 Admin UI에서 골라 Opus, Sonnet, Haiku 트래픽을 각기 다른 모델로 라우팅하는 구조를 실제 저장소 기준으로 뜯어보고, 온프레미스 코딩 에이전트라는 각도에서 ThakiCloud 관점의 의미를 정리합니다."
 tags:
   - llmops

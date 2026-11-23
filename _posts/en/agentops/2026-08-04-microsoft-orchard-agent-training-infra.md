@@ -1,6 +1,6 @@
 ---
-title: "Agent Training Infrastructure Just Landed on Kubernetes: Reading Microsoft's Orchard"
-seo_title: "Microsoft Orchard Analysis: Kubernetes-Native Agent Training, RL and Evaluation Infrastructure | ThakiCloud"
+title: "Agent Training Lands on Kubernetes: Microsoft's Orchard"
+seo_title: "Agent Training Lands on Kubernetes: Microsoft's Orchard"
 seo_description: "Microsoft released Orchard under the MIT license on August 3, 2026. It puts trajectory distillation, reinforcement learning rollouts and evaluation on a single Kubernetes sandbox service, ships agent harnesses preinstalled on PATH, and opens 107,185 software engineering trajectories. The reported resolve rate goes from 22.0 percent at base to 64.3 percent with supervised fine-tuning and 67.5 percent after RL."
 excerpt: "Training an agent needs an isolated environment before it needs a model. Microsoft carved out that environment layer and open-sourced it. Here is what shipped and what transfers to our platform."
 date: 2026-08-04

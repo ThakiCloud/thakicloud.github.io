@@ -1,7 +1,7 @@
 ---
-title: "Reading a Whole Book in One Pass: The Constant KV Cache Behind Baidu's Unlimited OCR"
+title: "Baidu Unlimited OCR: A Whole Book in One Pass"
 excerpt: "Baidu's Unlimited OCR replaces decoder attention with Reference Sliding Window Attention to keep the KV cache constant. We unpack how it parses dozens of pages in a single forward pass and what it means for ThakiCloud's multi-tenant inference."
-seo_title: "Unlimited OCR R-SWA Constant KV Cache Long-Document Parsing - Thaki Cloud"
+seo_title: "Baidu Unlimited OCR: A Whole Book in One Pass"
 seo_description: "Analysis of Baidu Unlimited OCR (arXiv 2606.23050) and its Reference Sliding Window Attention. Constant KV cache processes 32K context in one pass, 93.23% on OmniDocBench v1.5. ThakiCloud Kubernetes multi-tenant document inference perspective."
 date: 2026-06-25
 last_modified_at: 2026-06-25

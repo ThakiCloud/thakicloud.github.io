@@ -1,7 +1,7 @@
 ---
-title: "Tiledesk Design Studio 완벽 가이드: 노코드 챗봇 빌더로 대화형 AI 구축하기"
+title: "Tiledesk Design Studio: 노코드 챗봇 빌더로 대화형 AI 만들기"
 excerpt: "오픈소스 Tiledesk Design Studio를 활용하여 드래그 앤 드롭으로 ChatGPT 통합 챗봇을 개발하는 방법을 실전 예제와 함께 상세히 안내합니다."
-seo_title: "Tiledesk Design Studio 노코드 챗봇 빌더 완벽 가이드 - Thaki Cloud"
+seo_title: "Tiledesk Design Studio: 노코드 챗봇 빌더로 대화형 AI 만들기"
 seo_description: "Angular 기반 오픈소스 Tiledesk Design Studio로 드래그 앤 드롭 인터페이스와 ChatGPT 통합을 통해 전문적인 대화형 AI 챗봇을 구축하는 실전 튜토리얼"
 date: 2025-08-19
 last_modified_at: 2025-08-19

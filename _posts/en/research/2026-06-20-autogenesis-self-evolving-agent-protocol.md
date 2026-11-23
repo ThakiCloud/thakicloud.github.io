@@ -1,7 +1,7 @@
 ---
-title: "Autogenesis: A Self-Evolving Agent Protocol That Repairs Itself (arXiv:2604.15034)"
+title: "Autogenesis: A Self-Evolving Agent Protocol"
 excerpt: "By abstracting prompts, tools, and memory into versioned protocol resources, the Autogenesis Protocol (AGP) lets an agent close its own improvement loop. This post analyzes the design and experimental results."
-seo_title: "Autogenesis Self-Evolving Agent Protocol Analysis - Thaki Cloud"
+seo_title: "Autogenesis: A Self-Evolving Agent Protocol"
 seo_description: "arXiv 2604.15034 Autogenesis Protocol: deep analysis of agent resource abstraction, self-evolution loop, benchmark performance gains, and ThakiCloud platform application perspective."
 date: 2026-06-20
 last_modified_at: 2026-06-20

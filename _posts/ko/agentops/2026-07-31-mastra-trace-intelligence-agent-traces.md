@@ -1,6 +1,6 @@
 ---
 title: "트레이스 100건이 모여야 보이는 것: Mastra Trace Intelligence가 푸는 문제"
-seo_title: "Mastra Trace Intelligence 분석: 에이전트 트레이스를 목표·결과·행동·감정으로 군집화하는 관측 계층 | ThakiCloud"
+seo_title: "트레이스 100건이 모여야 보이는 것: Mastra Trace Intelligence가 푸는 문제"
 seo_description: "Mastra가 2026년 7월 프라이빗 베타로 공개한 Trace Intelligence는 개별 트레이스를 하나씩 읽는 대신 목표와 결과와 행동과 감정이라는 네 가지 신호로 분해해 테마로 군집화합니다. 에이전트당 100건 이상의 완료 트레이스가 필요하고 @mastra/core 1.53.0 이상을 요구합니다. 무엇이 새롭고 무엇이 아직 열린 문제인지 정리했습니다."
 excerpt: "에이전트 트레이스는 개별로 보면 로그이고 뭉쳐서 보면 제품 신호입니다. 그 전환을 자동화하려는 시도가 나왔습니다."
 date: 2026-07-31

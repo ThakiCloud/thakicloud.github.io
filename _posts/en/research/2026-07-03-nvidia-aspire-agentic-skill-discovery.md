@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA ASPIRE: Robots That Turn Failure Into Skills"
 excerpt: "Robots throw away their trial and error every time they solve a task, then fumble from scratch on the next one. NVIDIA's ASPIRE is a continual-learning system where an LLM writes robot control code directly, observes failures during execution, repairs them, and distills the verified repair experience into a reusable skill library. Alongside the result that bimanual handover success rose from 20% to 92% with no extra training, we look at how ThakiCloud Paxis's self-evolving skill harness puts this loop into practice."
-seo_title: "NVIDIA ASPIRE: Robot Skill Discovery and Continual Learning | Thaki Cloud"
+seo_title: "NVIDIA ASPIRE: Robots That Turn Failure Into Skills"
 seo_description: "A breakdown of NVIDIA GEAR's ASPIRE (arXiv 2607.00272): writing robot control code as policy, repairing failures and distilling them into skills, the 20%-to-92% handover result, and its application to the ThakiCloud Paxis skill harness."
 date: 2026-07-03
 last_modified_at: 2026-07-03

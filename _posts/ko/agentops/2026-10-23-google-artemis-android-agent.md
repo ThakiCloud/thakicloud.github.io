@@ -1,7 +1,7 @@
 ---
 title: "ARTEMIS, 실제 안드로이드 폰을 MCP로 조종하는 에이전트"
 excerpt: "구글이 ARTEMIS를 오픈소스로 내놓았습니다. Android 자동화 스크립트가 아니라, 스마트폰 화면을 에이전트의 도구로 만드는 계약이 핵심입니다. MCP 5개 도구로 실제 폰을 Claude Code와 Codex 같은 코딩 에이전트에 연결하고, Flash와 Pro 두 실행 프로필로 속도와 검증 깊이를 분리했습니다. 손해보니 191개 패키지 설치에 477ms가 걸렸고, doctor가 없는 API 키와 기기를 정확히 잡아냈습니다."
-seo_title: "ARTEMIS, 실제 안드로이드 폰을 MCP로 조종하는 에이전트 | 구글 오픈소스 모바일 테스트 에이전트"
+seo_title: "ARTEMIS, 실제 안드로이드 폰을 MCP로 조종하는 에이전트"
 seo_description: "구글이 오픈소스한 ARTEMIS는 자연어 지시로 실제 Android 기기를 조종하는 멀티모달 에이전트입니다. MCP 네이티브 서버와 Flash/Pro 실행 프로필, AndroidWorld 99%+ 수치, ThakiCloud 관점의 진단 계약과 프로필 라우팅 시사점을 정리했습니다."
 date: 2026-10-23
 last_modified_at: 2026-10-23

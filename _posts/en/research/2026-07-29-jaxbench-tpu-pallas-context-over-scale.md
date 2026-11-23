@@ -1,6 +1,6 @@
 ---
-title: "Adding Documentation Beats Scaling the Model: What JAXBench Measured in TPU Kernel Generation"
-seo_title: "JAXBench Paper Review: TPU Pallas Kernel Optimization and the Context Advantage | ThakiCloud"
+title: "Documentation Beats Scale: JAXBench on TPU Kernels"
+seo_title: "Documentation Beats Scale: JAXBench on TPU Kernels"
 seo_description: "A walkthrough of JAXBench (arXiv 2607.20466) from researchers at Google, Harvard, and Berkeley. Across 50 workloads on TPU v6e, injecting curated TPU documentation raised per-sample correctness from 5.8% to 37.3%, a larger jump than moving up a model tier."
 excerpt: "When a DSL is nearly absent from training data, the bottleneck is information rather than reasoning. A TPU kernel generation benchmark puts numbers on that claim."
 date: 2026-07-29

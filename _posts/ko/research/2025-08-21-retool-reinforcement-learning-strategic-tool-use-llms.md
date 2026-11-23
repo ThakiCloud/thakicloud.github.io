@@ -1,7 +1,7 @@
 ---
 title: "ReTool: 강화학습을 통한 대형 언어 모델의 전략적 도구 사용 연구"
 excerpt: "ByteDance Seed가 개발한 ReTool은 대형 언어 모델에 코드 인터프리터를 동적으로 통합하여 수학적 추론 능력을 획기적으로 향상시킨 강화학습 프레임워크입니다."
-seo_title: "ReTool: LLM 도구 사용 강화학습 프레임워크 - 수학 추론 성능 혁신 - Thaki Cloud"
+seo_title: "ReTool: 강화학습을 통한 대형 언어 모델의 전략적 도구 사용 연구"
 seo_description: "ByteDance Seed의 ReTool 연구를 상세 분석합니다. 강화학습과 코드 인터프리터 통합으로 AIME 벤치마크에서 OpenAI o1-preview를 27.9% 상회하는 성과를 달성한 혁신적 접근법을 소개합니다."
 date: 2025-08-21
 last_modified_at: 2025-08-21

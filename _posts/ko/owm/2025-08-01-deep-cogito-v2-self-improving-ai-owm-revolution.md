@@ -1,7 +1,7 @@
 ---
-title: "Deep Cogito v2의 자기 개선 AI 혁명 - 추론에서 초지능까지, OWM 워크플로우의 새로운 패러다임"
+title: "Deep Cogito v2: 자기 개선 AI와 OWM 워크플로우"
 excerpt: "Deep Cogito가 발표한 Cogito v2 Preview는 Iterated Distillation and Amplification을 통해 자기 개선하는 AI의 새로운 가능성을 제시합니다. 671B MoE 모델의 혁신적 효율성과 오픈소스 초지능 구축 전략을 OWM 관점에서 분석합니다."
-seo_title: "Deep Cogito v2 자기 개선 AI 워크플로우 혁신 - 오픈소스 초지능 구축 전략 - Thaki Cloud"
+seo_title: "Deep Cogito v2: 자기 개선 AI와 OWM 워크플로우"
 seo_description: "Deep Cogito v2 Preview 발표로 본 자기 개선 AI의 혁명적 변화. IDA 기술과 671B MoE 모델의 60% 효율성 개선, $3.5M 비용 혁신까지 OWM 워크플로우 자동화의 미래를 제시합니다."
 date: 2025-08-01
 last_modified_at: 2025-08-01

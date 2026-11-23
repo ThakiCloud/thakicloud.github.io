@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA AceReason-Nemotron-1.1-7B: Advanced Mathematical and Coding Reasoning Through SFT and RL Synergy"
+title: "AceReason-Nemotron-1.1-7B: Combining SFT and RL"
 excerpt: "Comprehensive analysis of NVIDIA's latest reasoning model built on Qwen2.5-Math-7B, achieving record-breaking performance on AIME 2024/2025 and LiveCodeBench through innovative combination of supervised fine-tuning and reinforcement learning"
-seo_title: "NVIDIA AceReason-Nemotron-1.1-7B Mathematical Reasoning Model Guide - Thaki Cloud"
+seo_title: "AceReason-Nemotron-1.1-7B: Combining SFT and RL"
 seo_description: "Explore NVIDIA's AceReason-Nemotron-1.1-7B model achieving SOTA performance on AIME and LiveCodeBench through advanced SFT+RL training methodology with comprehensive implementation guide."
 date: 2025-06-18
 tags: 

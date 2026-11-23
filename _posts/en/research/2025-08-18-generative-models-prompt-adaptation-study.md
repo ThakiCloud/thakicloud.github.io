@@ -1,7 +1,7 @@
 ---
 title: "How Users Adapt Their Prompts as Generative AI Models Improve"
 excerpt: "A large-scale online experiment with 1,893 participants measured how users changed their prompting behavior when moving from DALL-E 2 to DALL-E 3, finding that model improvement and user adaptation each account for roughly half of the observed performance gain."
-seo_title: "User Prompt Adaptation Patterns as Generative AI Models Improve - Thaki Cloud"
+seo_title: "How Users Adapt Their Prompts as Generative AI Models Improve"
 seo_description: "A study of 1,893 participants shows how DALL-E users co-evolved their prompting strategies alongside model upgrades, with user adaptation contributing as much as model improvement to final outcomes."
 date: 2025-08-18
 last_modified_at: 2025-08-18

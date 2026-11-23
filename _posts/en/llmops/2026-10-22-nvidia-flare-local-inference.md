@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA Flare: The Local Inference Server Where Rust Does the Serving"
-seo_title: "NVIDIA quietly put Flare on GitHub, a local inference server for SM120/SM121 GPUs. Python (Ignition) prepares a signed runtime package, and Rust (Helios) serves it without Python. Architecture, supported models, install commands, and why a 16GB card cannot run it. - ThakiCloud"
+seo_title: "NVIDIA Flare: The Local Inference Server Where Rust Does the Serving"
 seo_description: "Flare is a local inference server for NVIDIA SM120/SM121 GPUs. It moves model preparation into a signed runtime package, and the serving path runs on a Python-free Rust runtime. Not a vLLM replacement. A reference point for local agent workloads. - ThakiCloud"
 excerpt: "The kitchen is Python. The serving counter is Rust. NVIDIA put Flare on GitHub without an announcement. Its two-stage design, the signed runtime package, and why our 16GB card cannot take the menu."
 date: 2026-10-22

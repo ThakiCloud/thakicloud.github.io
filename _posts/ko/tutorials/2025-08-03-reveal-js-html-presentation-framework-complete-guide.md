@@ -1,7 +1,7 @@
 ---
-title: "Reveal.js: HTML 프레젠테이션 프레임워크 완전 가이드 - 웹 기반 멀티미디어 프레젠테이션 마스터하기"
+title: "Reveal.js: 웹으로 만드는 HTML 프레젠테이션"
 excerpt: "Reveal.js로 기존 PPT를 뛰어넘는 인터랙티브 웹 프레젠테이션을 만드세요. HTML/CSS/JS 기반 프레젠테이션부터 애니메이션, 플러그인, PDF 내보내기까지 완전 마스터 가이드입니다."
-seo_title: "Reveal.js HTML 프레젠테이션 프레임워크 완전 가이드 - 웹 프레젠테이션 - Thaki Cloud"
+seo_title: "Reveal.js: 웹으로 만드는 HTML 프레젠테이션"
 seo_description: "Reveal.js를 활용한 HTML 기반 인터랙티브 프레젠테이션 완전 가이드. 설치부터 고급 기능, 커스텀 테마, 플러그인 개발, 배포까지 전문가 수준의 웹 프레젠테이션 제작 방법을 완전 마스터하세요."
 date: 2025-08-03
 last_modified_at: 2025-08-03

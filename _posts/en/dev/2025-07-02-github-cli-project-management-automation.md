@@ -1,7 +1,7 @@
 ---
-title: "macOS GitHub CLI Complete Automation Series - Part 3: Complete Project Management Separation"
+title: "macOS GitHub CLI Automation, Part 3: Project Management"
 excerpt: "Complete work/personal project separation, GitHub Projects v2 automation, and team collaboration workflows"
-seo_title: "GitHub CLI Project Management Automation Part 3 - Work/Personal Separation - Thaki Cloud"
+seo_title: "macOS GitHub CLI Automation, Part 3: Project Management"
 seo_description: "Expert guide to completely separating work and personal projects with GitHub CLI, automating Projects v2, and building team collaboration workflows"
 date: 2025-07-02
 tags:

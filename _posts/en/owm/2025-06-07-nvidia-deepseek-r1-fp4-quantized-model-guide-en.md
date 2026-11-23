@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA DeepSeek-R1 FP4: Revolutionary 4-bit Quantized Language Model Complete Guide"
+title: "DeepSeek-R1 FP4: NVIDIA's 4-Bit Quantized Reasoning Model"
 excerpt: "Comprehensive analysis of NVIDIA's groundbreaking DeepSeek-R1-0528-FP4 model featuring 4-bit floating-point quantization, 1.6x memory reduction, and optimized performance for Blackwell architecture"
-seo_title: "NVIDIA DeepSeek-R1 FP4 Quantized Model Guide - TensorRT-LLM Optimization - Thaki Cloud"
+seo_title: "DeepSeek-R1 FP4: NVIDIA's 4-Bit Quantized Reasoning Model"
 seo_description: "Explore NVIDIA's DeepSeek-R1-0528-FP4 model with revolutionary FP4 quantization technology, achieving 1.6x memory efficiency while maintaining 98%+ performance across mathematical reasoning benchmarks."
 date: 2025-06-07
 tags: 

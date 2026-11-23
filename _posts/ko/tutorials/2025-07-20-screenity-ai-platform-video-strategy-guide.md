@@ -1,7 +1,7 @@
 ---
-title: "Screenity로 클라우드 AI 플랫폼의 영상 마케팅 전략 완벽 가이드: 무료 도구로 만드는 프로급 콘텐츠"
+title: "Screenity로 만드는 AI 플랫폼 영상 마케팅"
 excerpt: "무료 오픈소스 스크린 레코더 Screenity를 활용하여 클라우드 AI 플랫폼 회사가 제품 데모, 고객 지원, 마케팅 콘텐츠를 효과적으로 제작하는 실전 가이드입니다."
-seo_title: "Screenity 클라우드 AI 플랫폼 영상 마케팅 전략 가이드 - Thaki Cloud"
+seo_title: "Screenity로 만드는 AI 플랫폼 영상 마케팅"
 seo_description: "Screenity 오픈소스 스크린 레코더로 AI 플랫폼 회사의 제품 데모, 튜토리얼, 고객 지원 영상을 효과적으로 제작하는 방법과 실제 활용 사례를 제공합니다."
 date: 2025-07-20
 last_modified_at: 2025-07-20

@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron 3.5 Transcribe: 40-Language, One-Hour Audio Served Day-0 on vLLM"
+title: "Nemotron 3.5 Transcribe: Day-0 vLLM Serving for ASR"
 excerpt: "NVIDIA released Nemotron 3.5 Transcribe, a 30B-A4B multilingual ASR model, on October 28 and opened day-0 serving on vLLM 0.32.0 through the NeMo Speech plugin the same day. Korean FLEURS CER 2.78, 2,238 audio-seconds per second at NVFP4. The day ASR entered the LLM serving stack."
-seo_title: "NVIDIA Nemotron 3.5 Transcribe, vLLM Day-0 Serving and Korean CER 2.78 | ThakiCloud"
+seo_title: "Nemotron 3.5 Transcribe: Day-0 vLLM Serving for ASR"
 seo_description: "Nemotron 3.5 Transcribe dissected: 30B-A4B Mamba-Transformer MoE, 40 languages, up to one hour of offline transcription. NeMo Speech vLLM plugin install and serve commands, BF16/FP8/NVFP4 hardware tiers, and official model card benchmarks."
 date: 2026-10-30
 last_modified_at: 2026-10-30

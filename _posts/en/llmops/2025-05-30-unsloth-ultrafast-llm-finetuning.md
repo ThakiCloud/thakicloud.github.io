@@ -1,7 +1,7 @@
 ---
-title: "Unsloth: Revolutionary Framework That Makes LLM Fine-Tuning 2x Faster While Saving 80% Memory"
+title: "Unsloth: 2x Faster LLM Fine-Tuning With Less Memory"
 excerpt: "Fine-tune Qwen3, Llama 4, and Gemma 3 at 2x speed while saving up to 80% VRAM. OpenAI Triton-based optimization engine with zero accuracy loss"
-seo_title: "Unsloth LLM Fine-Tuning - 2x Faster Training with 80% Memory Savings"
+seo_title: "Unsloth: 2x Faster LLM Fine-Tuning With Less Memory"
 seo_description: "Master Unsloth for ultrafast LLM fine-tuning. Learn how to train Qwen3, Llama 4, Gemma 3 with 2x speed improvement and 80% memory reduction"
 date: 2025-05-30
 tags:

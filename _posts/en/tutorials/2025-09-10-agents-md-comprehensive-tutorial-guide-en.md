@@ -1,7 +1,7 @@
 ---
 title: "AGENTS.md: Complete Guide to Improving AI Code Output"
 excerpt: "Learn how to create an effective AGENTS.md file that dramatically improves AI agent performance in your coding projects with practical examples and best practices."
-seo_title: "AGENTS.md Tutorial: Improve AI Code Output with Best Practices - Thaki Cloud"
+seo_title: "AGENTS.md: Complete Guide to Improving AI Code Output"
 seo_description: "Complete guide to writing AGENTS.md files for better AI coding assistance. Includes dos/don'ts, safety rules, project structure, and real-world examples for optimal results."
 date: 2025-09-10
 tags:

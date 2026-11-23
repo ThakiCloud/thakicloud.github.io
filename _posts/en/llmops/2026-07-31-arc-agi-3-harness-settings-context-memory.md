@@ -1,6 +1,6 @@
 ---
-title: "Same Model, Different Score: When the Harness Decided the ARC-AGI-3 Benchmark"
-seo_title: "Inside the ARC-AGI-3 harness dispute: why retained reasoning and compaction tripled the score | ThakiCloud"
+title: "Same Model, Different Score: The Harness Decided ARC-AGI-3"
+seo_title: "Same Model, Different Score: The Harness Decided ARC-AGI-3"
 seo_description: "In July 2026 OpenAI reported that GPT-5.6 Sol scored 13.3% on the ARC-AGI-3 public set under the official harness, but 38.3% once retained reasoning and compaction were enabled on the Responses API, using roughly six times fewer output tokens. Here is what actually changed, whether that number belongs next to Opus 5's official 30.2%, and what it means for context management in your own agent pipeline."
 excerpt: "The model did not change. Two API settings did, and the score tripled. The lesson is not about leaderboard rank but about context management being performance itself."
 date: 2026-07-31

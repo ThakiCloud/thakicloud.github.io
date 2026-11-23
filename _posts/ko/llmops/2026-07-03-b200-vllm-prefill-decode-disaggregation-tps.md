@@ -1,7 +1,7 @@
 ---
 title: "B200 두 장으로 vLLM Prefill/Decode를 분리하면 정말 빨라질까"
 excerpt: "NVIDIA B200 두 장에서 Qwen3.6-27B-NVFP4와 gemma-4-26B-A4B를 대상으로 텐서병렬, 데이터병렬, Prefill/Decode 분리(1P1D)의 초당 생성 토큰을 실제로 측정했습니다. 두 장뿐일 때 총 처리량의 승자는 분리가 아니라 데이터병렬이었고, 이 결과는 DistServe·Mooncake·DeepSeek·NVIDIA Dynamo 같은 대규모 사례와 모순되지 않습니다. 언제 분리하고 언제 그냥 DP/TP인지, 근거와 함께 판정 가이드를 정리합니다."
-seo_title: "B200 2-GPU vLLM Prefill/Decode 분리 TPS 실측 - Qwen3.6-NVFP4 / gemma-4-FP8 | Thaki Cloud"
+seo_title: "B200 두 장으로 vLLM Prefill/Decode를 분리하면 정말 빨라질까"
 seo_description: "NVIDIA B200 2장에서 vLLM 0.24로 텐서병렬(TP=2), 데이터병렬(DP=2), Prefill/Decode 분리(1P1D, NIXL)의 TPS와 TPOT를 실측했습니다. NVFP4와 하이브리드 어텐션, MoE 서빙의 실전 gotcha까지 ThakiCloud GPU 서빙 운영 관점으로 정리합니다."
 date: 2026-07-03
 last_modified_at: 2026-07-03

@@ -1,6 +1,6 @@
 ---
 title: "We Set the Config. It Never Reached the Wire."
-seo_title: "Why reasoning_effort is a no-op on self-hosted coding agents - measured | ThakiCloud"
+seo_title: "We Set the Config. It Never Reached the Wire."
 seo_description: "We attached an agent harness to our in-house Qwen3.8-27B and split four arms to find what actually drives convergence. It was not the turn budget, not explicit provider selection, and not our accumulated tuning. Meanwhile the reasoning_effort we had carefully set was never transmitted at all."
 excerpt: "We ran with reasoning_effort set to low for two days. Reading the source, that field never left the client for our endpoint. A value sitting in a config file looks exactly like a value that is in effect."
 date: 2026-08-27

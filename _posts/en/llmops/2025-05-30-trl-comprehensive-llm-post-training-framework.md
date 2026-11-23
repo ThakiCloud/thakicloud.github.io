@@ -1,7 +1,7 @@
 ---
-title: "TRL: Hugging Face's Next-Generation LLM Post-Training Framework Complete Guide"
+title: "TRL: Hugging Face's LLM Post-Training Framework"
 excerpt: "Master cutting-edge reinforcement learning techniques including SFT, DPO, GRPO, and PPO for Transformer model post-training. A comprehensive library supporting everything from CLI to distributed training"
-seo_title: "TRL Transformer Reinforcement Learning - Complete Post-Training Guide"
+seo_title: "TRL: Hugging Face's LLM Post-Training Framework"
 seo_description: "Comprehensive guide to TRL (Transformer Reinforcement Learning) framework covering SFT, DPO, GRPO, PPO, and advanced post-training techniques for LLMs"
 date: 2025-05-30
 tags:

@@ -1,6 +1,6 @@
 ---
-title: "Zotero 플러그인 하나에 벡터DB와 llama.cpp가 들어 있습니다: PapersGPT 131MB를 뜯어봤습니다"
-seo_title: "PapersGPT for Zotero 해부: 로컬 RAG와 MCP 번들 구조 분석 | ThakiCloud"
+title: "PapersGPT: 벡터DB를 품은 Zotero 플러그인 해부"
+seo_title: "PapersGPT: 벡터DB를 품은 Zotero 플러그인 해부"
 seo_description: "PapersGPT v0.6.1 배포 파일 131MB를 직접 내려받아 55개 엔트리를 전수 분류했습니다. GitHub 언어 통계에는 JavaScript만 보이지만 실제로는 AwaDB 벡터엔진, PDFium, llama.cpp, 파이썬 3.12 런타임이 프리빌트 바이너리로 들어 있습니다. 네이티브 48.5MB 대 스크립트 9.8MB, 그리고 리눅스 빌드는 없습니다."
 excerpt: "논문 1,000개를 몇 분 만에 색인한다는 Zotero 플러그인이 화제였습니다. 저장소 언어 통계에 C++가 없다는 지적도 함께 돌았습니다. 배포 아티팩트를 직접 열어 무엇이 들어 있는지 확인했습니다."
 date: 2026-07-29

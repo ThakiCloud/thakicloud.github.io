@@ -1,5 +1,5 @@
 ---
-title: "SkillRet: 에이전트가 수천 개 스킬을 다루는 시대의 검색 표준을 ThakiCloud가 만들다"
+title: "SkillRet: 수천 개 스킬을 위한 검색 벤치마크"
 excerpt: "LLM 에이전트가 수천 개의 재사용 스킬을 운용할 때 정확한 스킬 검색이 병목이 됩니다. ThakiCloud가 직접 연구하고 Apache-2.0로 전부 공개한 대규모 벤치마크 SkillRet을 소개합니다."
 date: 2026-06-20
 last_modified_at: 2026-06-20

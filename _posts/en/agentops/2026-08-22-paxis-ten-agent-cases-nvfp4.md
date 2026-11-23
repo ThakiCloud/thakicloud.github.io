@@ -1,7 +1,7 @@
 ---
-title: "We Verified Work Automation Where Data Never Leaves the Building, on One Internal GPU"
+title: "Work Automation That Keeps Data In-House on One GPU"
 excerpt: "We actually tested whether you can automate work without sending contracts or incident logs outside the building. We shrank a 27B model to NVFP4, deployed it on internal GPUs, and screen-recorded ten Paxis work agents: all ten finished, with zero external API calls. Cost came out to 1/123rd of Claude Opus 5, but five of the Korean responses had simplified-Chinese characters mixed in. We report both the wins and the loss."
-seo_title: "Sovereign AI Verified: Ten Work Agents Complete on Internal GPUs"
+seo_title: "Work Automation That Keeps Data In-House on One GPU"
 seo_description: "We put a sovereign AI setup, one where data never leaves the building, to a real test. Screen recordings of ten work agents running on an NVFP4-quantized 27B model on internal GPUs, how we verified zero external calls, cost versus Claude Opus 5 and GPT-5.6, and the Korean-purity weakness we found along the way."
 date: 2026-08-22
 last_modified_at: 2026-08-22

@@ -1,7 +1,7 @@
 ---
-title: "Token Usage Explodes, AI Spend Halves: Coinbase's Better-Defaults Strategy"
+title: "Coinbase: Token Use Explodes While AI Spend Halves"
 excerpt: "Coinbase CEO Brian Armstrong's recipe for controlling AI cost was not usage caps or spend alerts, but better defaults, routing, and caching. Backed by the finding that 91% of employees never hit their usage caps, the company swapped its LLM gateway defaults to open-weight models instead of adding friction. We analyze the strategy and what it implies through the lens of low-cost serving on ThakiCloud's ai-platform."
-seo_title: "Coinbase's AI Cost Strategy: Routing, Caching, Defaults - Thaki Cloud"
+seo_title: "Coinbase: Token Use Explodes While AI Spend Halves"
 seo_description: "Coinbase cut AI spend nearly in half even as token usage grew exponentially. The keys were model routing, aggressive caching, and open-weight defaults. We analyze the data that 91% of employees never hit caps and the LLM gateway strategy, then map it to multi-tenant low-cost serving on ThakiCloud's ai-platform."
 date: 2026-06-27
 last_modified_at: 2026-06-27

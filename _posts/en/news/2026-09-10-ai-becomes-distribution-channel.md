@@ -1,7 +1,7 @@
 ---
-title: "The Week AI Became the Distribution Channel: Five Companies Join Claude Marketplace"
+title: "AI Becomes a Distribution Channel: Claude Marketplace"
 excerpt: "CrowdStrike, Cursor, Factory, Gamma, and Vercel just joined the Claude Marketplace. The headline is five logos, but the real news is one: enterprise software can now be purchased with the credits of an AI platform itself."
-seo_title: "The Week AI Became the Distribution Channel: Five Companies Join Claude Marketplace | ThakiCloud"
+seo_title: "AI Becomes a Distribution Channel: Claude Marketplace"
 seo_description: "CrowdStrike Falcon lands on the Claude Marketplace alongside Cursor, Factory, Gamma, and Vercel. What buying software with AI credits means, the security-agent workflow, and the implications through the Paxis lens."
 date: 2026-09-10
 last_modified_at: 2026-09-10

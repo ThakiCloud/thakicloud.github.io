@@ -1,6 +1,6 @@
 ---
-title: "ThakiOCR-KO-v1: We Released a LoRA That Adapts OvisOCR3 to Korean Word OCR"
-seo_title: "ThakiOCR-KO-v1: Open-Weight Korean Handwriting and Word OCR LoRA for OvisOCR3 | ThakiCloud"
+title: "ThakiOCR-KO-v1: A LoRA That Adapts OvisOCR3 to Korean"
+seo_title: "ThakiOCR-KO-v1: A LoRA That Adapts OvisOCR3 to Korean"
 seo_description: "We released ThakiOCR-KO-v1, a roughly 0.85B model that adapts OvisOCR3 to Korean word recognition with a LoRA, under Apache-2.0. CER on 2,400 word crops went from 25.28% to 7.78%. LoRA download, inference code, and evaluation limits."
 excerpt: "One 25.6 MB LoRA on top of OvisOCR3 lowered the character error rate on Korean word crops from 25.28% to 7.78%. Why we chose this adapter over a variant that reads words better, and what we did not measure, in numbers."
 date: 2026-11-07

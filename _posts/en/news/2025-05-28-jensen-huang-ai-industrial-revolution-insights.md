@@ -1,5 +1,5 @@
 ---
-title: "Jensen Huang on the AI Industrial Revolution: How 'AI Factories' Will Transform Future Jobs and Manufacturing"
+title: "Jensen Huang: AI Factories and the Industrial Revolution"
 excerpt: "NVIDIA CEO Jensen Huang's detailed explanation of the AI industrial revolution at the Hilton Valley Forum, defining AI as a new industrial revolution power like electricity and presenting the blueprint for the future economy through the concept of 'AI Factory'"
 date: 2025-05-28
 lang: en

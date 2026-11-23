@@ -1,7 +1,7 @@
 ---
-title: "UltraRAG Complete Tutorial: Building Advanced RAG Systems with Low-Code Framework"
+title: "UltraRAG: Building RAG Systems With Low Code"
 excerpt: "Learn how to build sophisticated RAG (Retrieval-Augmented Generation) systems using UltraRAG, a MCP-based low-code framework that enables rapid deployment and experimentation."
-seo_title: "UltraRAG Tutorial: Complete Guide to Low-Code RAG Framework - Thaki Cloud"
+seo_title: "UltraRAG: Building RAG Systems With Low Code"
 seo_description: "Master UltraRAG framework with our comprehensive tutorial. Learn installation, configuration, and advanced RAG system implementation with practical examples."
 date: 2025-09-09
 tags:

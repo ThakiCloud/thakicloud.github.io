@@ -1,7 +1,7 @@
 ---
-title: "KO-VoicePersona-E4B: 짧게 말하고 도구로 확인하는 한국어 음성 페르소나 모델"
+title: "KO-VoicePersona-E4B: 짧게 말하고 도구로 확인하는 음성 모델"
 excerpt: "한국어 음성 비서나 마스코트를 만드는 팀을 위한 글입니다. Nemotron 3.5 Bolt E4B에 LoRA를 얹은 KO-VoicePersona-E4B는 직접 쓴 독립 평가 58개 대화에서 도구 호출 정확도 0.78, 페르소나 유지 0.88을 냈습니다. 한계도 같이 적습니다."
-seo_title: "KO-VoicePersona-E4B 한국어 음성 페르소나 모델 - ThakiCloud"
+seo_title: "KO-VoicePersona-E4B: 짧게 말하고 도구로 확인하는 음성 모델"
 seo_description: "한국어 음성 비서나 마스코트를 만드는 팀을 위한 글입니다. Nemotron 3.5 Bolt E4B에 LoRA를 얹은 KO-VoicePersona-E4B는 독립 평가 58개 대화에서 도구 호출 정확도 0.78, 페르소나 유지 0.88을 냈습니다."
 date: 2026-10-27
 published: true

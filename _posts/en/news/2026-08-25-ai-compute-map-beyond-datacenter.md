@@ -1,7 +1,7 @@
 ---
 title: "The Map Where the Data Center Isn't the Center"
 excerpt: "In a single day, news about space, smartphones, and low-latency accelerators all arrived together. AI compute is moving to where the agents work."
-seo_title: "The AI Compute Map Moving From the Data Center to Orbit and to Your Pocket"
+seo_title: "The Map Where the Data Center Isn't the Center"
 seo_description: "SpaceX's orbital AI compute, Xiaomi's edge accelerator, Liquid AI's mobile suite, Nvidia Groq's 3,400 tokens per second. Today's decentralization of inference, read through HuggingNews."
 date: 2026-08-25
 last_modified_at: 2026-08-25

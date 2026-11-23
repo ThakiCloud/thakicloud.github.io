@@ -1,7 +1,7 @@
 ---
-title: "OpenAI HealthBench: Revolutionizing Medical AI Evaluation Through Collaborative LLMOps"
+title: "OpenAI HealthBench: Evaluating Medical AI With Physicians"
 excerpt: "Discover how OpenAI's HealthBench transforms medical AI evaluation with 262 global doctors, 5,000 real conversations, and innovative LLMOps methodologies for safer healthcare AI deployment."
-seo_title: "OpenAI HealthBench: Medical AI Evaluation & LLMOps Best Practices"
+seo_title: "OpenAI HealthBench: Evaluating Medical AI With Physicians"
 seo_description: "Explore OpenAI HealthBench's revolutionary approach to medical AI evaluation. Learn how 262 doctors from 60 countries created 5,000 realistic medical conversations to benchmark AI safety in healthcare."
 date: 2025-08-28
 tags:

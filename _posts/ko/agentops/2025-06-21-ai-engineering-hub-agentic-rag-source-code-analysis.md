@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Hub Agentic RAG 소스코드 완전 분석: 에이전트 기반 검색 증강 생성 시스템"
+title: "AI Engineering Hub: Agentic RAG 소스코드 분석"
 excerpt: "10.7k 스타 AI Engineering Hub 리포지토리의 Agentic RAG 프로젝트를 소스코드 레벨에서 심층 분석하고, 실전 구현 방법을 제시합니다."
 date: 2025-06-21
 tags: 

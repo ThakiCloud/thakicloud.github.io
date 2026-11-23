@@ -1,5 +1,5 @@
 ---
-title: "How to Prompt Claude Fable 5: Five Principles from Anthropic's Official Guide"
+title: "Prompting Claude Fable 5: Five Principles From Anthropic"
 excerpt: "We break down Anthropic's official prompting guide for Claude Fable 5. It lays out five principles: strip out instructions written for older models, audit progress against tool results, lean into subagents, learn from past runs, and state constraints explicitly. We read them through the lens of how ThakiCloud actually operates its agents."
 tags:
   - claude

@@ -1,6 +1,6 @@
 ---
 title: "Keep the Model, Cut the Thinking: Routing Reasoning Effort Per Subtask"
-seo_title: "Effort-Routing Paper Review: Per-Subtask Reasoning Effort Allocation in Multi-Agent Workflows | ThakiCloud"
+seo_title: "Keep the Model, Cut the Thinking: Routing Reasoning Effort Per Subtask"
 seo_description: "A review of the Effort-Routing paper, which challenges the common practice of pinning a single reasoning-effort tier across every subtask in a multi-agent workflow. Covers a cost-savings model for the 'how much to think' axis separated from model choice, Proposition 1's decomposition of savings, a low-cost rule-based classifier, and a measurement protocol that has not yet been run."
 excerpt: "Subtasks inside a workflow vary wildly in difficulty, yet orchestrators typically pin one reasoning-effort tier across all of them. This paper builds a cost model that quantifies that waste and states the conditions under which routing pays off, leaving execution for future work."
 date: 2026-07-29

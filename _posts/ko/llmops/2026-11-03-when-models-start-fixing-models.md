@@ -1,7 +1,7 @@
 ---
 title: "48.1%와 4배: 모델이 모델을 고치기 시작한 날"
 excerpt: "MIT CSAIL은 GPT-6 Astra로 Qwen의 가중치를 직접 고쳐 수학 점수 48.1%를 만들어냈고, 같은 날 Gemini 4 Carbon은 평균 90.4%와 Opus 5.5 대비 4배 낮은 비용을 동시에 써냈습니다. 모델이 모델을 만들고 고치는 루프가 닫히면, 기업의 자리는 모델을 고르고 집행하고 기록하는 층으로 이동합니다."
-seo_title: "GPT-6 Astra 가중치 편집 48.1%, Gemini 4 Carbon 평균 90.4%와 4배 비용 격차: 모델이 모델을 고치기 시작한 날"
+seo_title: "48.1%와 4배: 모델이 모델을 고치기 시작한 날"
 seo_description: "MIT CSAIL의 GPT-6 Astra 가중치 편집 시연, Gemini 4 Carbon의 APEX-Agents 평균 90.4% 첫 돌파와 GDPx에서 Opus 5.5 대비 4배 낮은 비용, OpenAI의 차기 GPT 기반, Anthropic의 연구 급가속 경고, 오라클 200억 달러 조달, 골드만삭스의 AI 도구 제한까지. 오늘 다이제스트의 공통 신호를 정리했습니다."
 date: 2026-11-03
 last_modified_at: 2026-11-03

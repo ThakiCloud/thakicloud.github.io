@@ -2,7 +2,7 @@
 title: "The Conversation That Became Evidence"
 lang: en
 excerpt: "The US DOJ linked a former OpenAI engineer's chatbot account to a bugging suspect. The former safety chief testified that agentic compute usage grew 100x, and Character.AI filed for bankruptcy with $14 million in monthly compute costs against $1 million in revenue. Why today's conversations are at the same time evidence, testimony, cost, and an audit target."
-seo_title: "The Conversation That Became Evidence: When Chatbot Logs Become Legal Clues and Agent Records Become Assets | ThakiCloud"
+seo_title: "The Conversation That Became Evidence"
 seo_description: "The DOJ's link between a chatbot account and a bugging suspect, testimony on 100x agentic compute growth, Character.AI's bankruptcy, Cursor and Grok's weekly pool billing, and the US-UK audit negotiation. An analysis of why usage records are becoming first-class assets, and of the execution environment that leaves such records behind."
 date: 2026-10-14
 last_modified_at: 2026-10-14

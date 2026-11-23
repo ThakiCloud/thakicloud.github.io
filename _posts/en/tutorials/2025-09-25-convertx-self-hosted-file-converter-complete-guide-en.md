@@ -1,7 +1,7 @@
 ---
-title: "ConvertX: Self-Hosted Online File Converter - Complete Setup and Usage Guide"
+title: "ConvertX: Self-Hosted File Converter Setup"
 excerpt: "Learn how to deploy and use ConvertX, a powerful self-hosted file converter supporting 1000+ formats with Docker. Perfect for privacy-conscious users and organizations."
-seo_title: "ConvertX Self-Hosted File Converter Tutorial - Complete Guide - Thaki Cloud"
+seo_title: "ConvertX: Self-Hosted File Converter Setup"
 seo_description: "Step-by-step guide to deploy ConvertX with Docker. Self-hosted file converter supporting 1000+ formats including images, videos, documents, and 3D assets."
 date: 2025-09-25
 tags:

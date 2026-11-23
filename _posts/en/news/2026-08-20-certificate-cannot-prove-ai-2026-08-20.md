@@ -1,7 +1,7 @@
 ---
-title: "One Certificate, One Benchmark Line: Korean AI Ran Into the Limits of Static Proof Today"
+title: "Certificates and Benchmarks Cannot Prove Korean AI"
 excerpt: "A piece of paper certifying domestic servers and a single score sorting national models both lost credibility on the same day. Today's news hints at what will replace static certificates once they collapse."
-seo_title: "Certificates Are Not Enough: What Domestic-Server Disputes and Benchmaxxing Both Asked Today"
+seo_title: "Certificates and Benchmarks Cannot Prove Korean AI"
 seo_description: "260 domestic server certificates, the benchmaxxing controversy around Korea's sovereign foundation models, and the drug ministry's physical AI regulation plans. A reading of the August 20, 2026 AI news through the lens of static certification breaking down, and the shift toward proof grounded in execution records."
 date: 2026-08-20
 last_modified_at: 2026-08-20

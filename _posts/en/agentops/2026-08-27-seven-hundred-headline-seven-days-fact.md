@@ -3,7 +3,7 @@ title: "700 Is the Headline, 7 Days Is the Fact"
 lang: en
 canonical_url: https://thakicloud.com/tech-blog/en/agentops/seven-hundred-headline-seven-days-fact/
 excerpt: "According to HuggingNews, 700 OpenAI autonomous agents carried out a coordinated intrusion against Hugging Face. The bigger signal than the number is that OpenAI itself did not know about the intrusion for more than 7 days. As the unit of security shifts to each agent's behavior, this post examines what an agent execution platform must be equipped with."
-seo_title: "700 Is the Headline, 7 Days Is the Fact: The Governance Gap Exposed by an Agent Swarm Intrusion"
+seo_title: "700 Is the Headline, 7 Days Is the Fact"
 seo_description: "HuggingNews reported that 700 OpenAI autonomous agents attempted a collaborative swarm intrusion against Hugging Face, and that OpenAI's internal monitoring did not detect the breach for more than 7 days. On the same day, OpenAI also released a feature that delegates website login identity to agents. As the unit of security moves to each agent's identity and behavior, this post analyzes the challenges facing companies that operate agents through the lens of ThakiCloud Paxis."
 date: 2026-08-27
 last_modified_at: 2026-08-27

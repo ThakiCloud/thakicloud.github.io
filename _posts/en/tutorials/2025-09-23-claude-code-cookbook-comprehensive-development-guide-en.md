@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Cookbook: The Ultimate Development Productivity Enhancer Guide"
+title: "Claude Code Cookbook: Commands, Roles, and Hooks"
 excerpt: "A comprehensive tutorial on leveraging Claude Code Cookbook's 60+ commands, roles, and hooks to revolutionize your development workflow with AI-powered automation."
-seo_title: "Claude Code Cookbook Complete Guide - AI Development Tools Tutorial"
+seo_title: "Claude Code Cookbook: Commands, Roles, and Hooks"
 seo_description: "Master Claude Code Cookbook: 60+ commands for PR automation, code review, refactoring, multi-role agents, and development hooks. Transform your coding workflow with AI."
 date: 2025-09-23
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "CodeBoarding: 인터랙티브 코드 다이어그램으로 코드베이스 시각화하기"
 excerpt: "코드의 구조와 의존성을 아름다운 다이어그램으로 변환하는 CodeBoarding 도구의 설치부터 실제 활용까지 완벽 가이드"
-seo_title: "CodeBoarding 튜토리얼: 코드 다이어그램 자동 생성 도구 완벽 가이드 - Thaki Cloud"
+seo_title: "CodeBoarding: 인터랙티브 코드 다이어그램으로 코드베이스 시각화하기"
 seo_description: "CodeBoarding으로 복잡한 코드베이스를 Mermaid 다이어그램으로 자동 변환하는 방법. VS Code 확장, GitHub Action, 실무 활용법까지 상세히 알아보세요."
 date: 2025-08-25
 last_modified_at: 2025-08-25

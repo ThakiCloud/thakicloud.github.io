@@ -1,7 +1,7 @@
 ---
-title: "NeoHtop: The Blazing-Fast System Monitor Built with Rust & Tauri - Complete Guide"
+title: "NeoHtop: A Fast System Monitor Built with Rust and Tauri"
 excerpt: "Master NeoHtop, a modern cross-platform system monitor with 8.2K+ GitHub stars. Learn installation, advanced features, and best practices for system monitoring."
-seo_title: "NeoHtop System Monitor Rust Tauri Complete Tutorial Guide - Thaki Cloud"
+seo_title: "NeoHtop: A Fast System Monitor Built with Rust and Tauri"
 seo_description: "Complete guide to NeoHtop, the modern system monitor built with Rust, Tauri & Svelte. Installation, advanced search, process management, and best practices."
 date: 2025-09-07
 tags:

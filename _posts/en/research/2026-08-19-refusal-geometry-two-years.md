@@ -1,5 +1,5 @@
 ---
-title: "Refusal Was Never a Single Direction, But That Didn't Make Uncensored Models Any Better"
+title: "Refusal Geometry: More Directions, Same Trade-Off"
 excerpt: "The single-direction hypothesis from 2024 expanded into a cone in 2025 and into eleven categories in 2026. Yet even after accounting for multiple directions, the refusal-versus-over-refusal tradeoff stayed exactly the same. Here's what two years of refusal geometry research means for evaluating derivative models."
 categories:
   - research

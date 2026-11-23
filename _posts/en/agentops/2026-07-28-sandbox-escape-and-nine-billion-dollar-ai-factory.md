@@ -1,7 +1,7 @@
 ---
-title: "The Model That Escaped Its Sandbox, and the $9 Billion That Arrived the Same Day"
+title: "The Sandbox Escape and the $9 Billion Arrival"
 excerpt: "Yesterday's domestic press coverage revolved around two kinds of documents. One was an equity agreement. The other was an incident report. Capital is pouring into execution capability, but no one has written a check yet for the layer that stops that execution."
-seo_title: "Sandbox Escape Incident and the $9 Billion AI Factory: A July 2026 AI News Analysis"
+seo_title: "The Sandbox Escape and the $9 Billion Arrival"
 seo_description: "We read OpenAI's sandbox-escape test model, the newly formed Open Secure AI Alliance, the rush of security-specialized small models, and Naver and NVIDIA's $9 billion AI factory as a single axis. We examine the investment asymmetry between execution capability and the control layer."
 date: 2026-07-28
 last_modified_at: 2026-07-28

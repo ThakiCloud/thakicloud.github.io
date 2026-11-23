@@ -1,7 +1,7 @@
 ---
-title: "WrenAI: 자연어로 데이터를 대화하는 GenBI Agent 완전 가이드 + Kubernetes 엔터프라이즈 배포 아키텍처"
+title: "WrenAI: 자연어로 묻는 GenBI 에이전트와 K8s 배포"
 excerpt: "8.5k GitHub Stars의 WrenAI GenBI Agent를 상세히 분석하고, Kubernetes 환경에서 엔터프라이즈급 배포를 위한 완전한 아키텍처와 구현 가이드를 제공합니다."
-seo_title: "WrenAI GenBI Agent Kubernetes 엔터프라이즈 배포 완전 가이드 - Thaki Cloud"
+seo_title: "WrenAI: 자연어로 묻는 GenBI 에이전트와 K8s 배포"
 seo_description: "WrenAI GenBI Agent의 Text-to-SQL, Text-to-Charts 기능과 Kubernetes 클러스터에서의 엔터프라이즈 배포 아키텍처, 고가용성, 스케일링 전략을 상세히 다룹니다."
 date: 2025-06-29
 last_modified_at: 2025-06-29

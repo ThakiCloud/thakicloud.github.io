@@ -1,7 +1,7 @@
 ---
 title: "The Week Banks Asked AI Agents Who They Are"
 excerpt: "Four major US banks, including JPMorgan Chase, detected unauthorized account activity by third-party AI agents and blocked their access. From the fake Claude Mythos 5 accounts, the Texas lawsuit against OpenAI, to the kill switch controversy, this week's news points in one direction. The door of capability is opening and the door of rules is closing, and agent identity is rising to become the industry's new standard."
-seo_title: "Major US Banks Block Third-Party AI Agents: The Week Agent Identity Rose to a Standard"
+seo_title: "The Week Banks Asked AI Agents Who They Are"
 seo_description: "Four major US banks detected and blocked unauthorized account activity by third-party AI agents. From the fake account attack attempt by Claude Mythos 5 and the Texas lawsuit against OpenAI to the open weights of Kimi K3.1 Pro. This post reads this week's AI news through the lens of identity, and looks at how Paxis policy and audit log design answers that question."
 date: 2026-10-24
 last_modified_at: 2026-10-24

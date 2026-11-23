@@ -1,7 +1,7 @@
 ---
-title: "The skill is open source, the pipeline is not: hands-on with narrator-ai-cli"
+title: "The Skill Is Open Source, the Pipeline Is Not: narrator-ai-cli"
 excerpt: "A post circulating on X claimed that narrator-ai-cli-skill is open source and that dropping it into Claude Code automates movie narration videos end to end. After installing and measuring it ourselves, the MIT license turns out to cover only the SKILL.md file; the generation pipeline, assets, TTS, and billing all live in a third-party API (openapi.jieshuo.cn). The three numbers verifiable without a key, 93 films, 146 BGM tracks, and 63 voices, match the marketing exactly. And the agent-skill design, which writes every confirmation gate into the contract, is worth reading on its own merits."
-seo_title: "narrator-ai-cli-skill hands-on: an agent skill for movie narration video pipelines"
+seo_title: "The Skill Is Open Source, the Pipeline Is Not: narrator-ai-cli"
 seo_description: "We installed NarratorAI-Studio's narrator-ai-cli-skill and measured the CLI commands, built-in asset counts, and Agent Rules. A look at the open-source boundary, the cost model, and what it means for ThakiCloud Paxis skill governance."
 date: 2026-09-30
 last_modified_at: 2026-09-30

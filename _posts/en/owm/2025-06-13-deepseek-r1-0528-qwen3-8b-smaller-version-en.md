@@ -1,7 +1,7 @@
 ---
 title: "DeepSeek-R1-0528-Qwen3-8B: A New Horizon for Open Source LLMs"
 excerpt: "Comprehensive analysis of DeepSeek's revolutionary 8B parameter model that achieves superior performance on AIME 2025 while running efficiently on single GPUs, representing a breakthrough in accessible AI reasoning capabilities"
-seo_title: "DeepSeek-R1-0528-Qwen3-8B Open Source LLM Guide - Single GPU Performance - Thaki Cloud"
+seo_title: "DeepSeek-R1-0528-Qwen3-8B: A New Horizon for Open Source LLMs"
 seo_description: "Discover DeepSeek-R1-0528-Qwen3-8B, an 8B parameter open-source model achieving 76.3% on AIME 2025, outperforming larger models while running efficiently on single GPUs with MIT license."
 date: 2025-06-13
 tags: 

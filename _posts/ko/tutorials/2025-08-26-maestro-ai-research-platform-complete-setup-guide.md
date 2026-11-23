@@ -1,7 +1,7 @@
 ---
 title: "MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드"
 excerpt: "AI 에이전트 기반 연구 자동화 플랫폼 MAESTRO의 설치부터 고급 활용까지 단계별 완전 가이드"
-seo_title: "MAESTRO AI 연구 플랫폼 설치 가이드 - Docker, GPU 설정, 로컬 LLM 연동 - Thaki Cloud"
+seo_title: "MAESTRO: AI 기반 연구 플랫폼 완전 설치 및 활용 가이드"
 seo_description: "오픈소스 AI 연구 플랫폼 MAESTRO 설치 방법부터 GPU 최적화, SearXNG 검색 엔진 연동, 로컬 LLM 설정까지 실무 중심 튜토리얼"
 date: 2025-08-26
 tags:

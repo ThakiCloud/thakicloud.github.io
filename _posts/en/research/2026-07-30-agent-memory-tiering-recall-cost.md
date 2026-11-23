@@ -1,6 +1,6 @@
 ---
 title: "Agent Memory Wasn't an Ordering Problem, It Was a Duplication Problem"
-seo_title: "Agent Memory Tiering, Measured: Why Deduplication Beats Ordering Policies | ThakiCloud"
+seo_title: "Agent Memory Wasn't an Ordering Problem, It Was a Duplication Problem"
 seo_description: "We measured three memory tiering (hot/cold consolidation) policies for long-running autonomous agents against a real production corpus of 45 items. Similarity-based deduplication beat recency and frequency policies by 17 to 20 percent on AUC, and in the actual production configuration, an item-count cap, not the character cap, was the one quietly starving recall."
 excerpt: "The memory briefing you reload every session runs on a fixed budget. When we tested the policies that decide what stays and what gets cut against a real corpus, removing duplicates first turned out to matter far more than ranking items well."
 date: 2026-07-30

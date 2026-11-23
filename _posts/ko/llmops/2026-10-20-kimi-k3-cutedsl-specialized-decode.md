@@ -1,6 +1,6 @@
 ---
-title: "소프트웨어가 디코드 경로를 다시 쓴 날: NVIDIA의 Kimi K3 특화 CuTeDSL 커널과 vLLM의 2.8x 최적화"
-seo_title: "NVIDIA가 vLLM에 Kimi K3 특화 디코드 커널(CuTe DSL 메가커널, PR #61867)을 올려 같은 GB300 NVL72 하드웨어에서 423 tok/s/user(P90 인터랙티비티)와 1.68x가 측정됐습니다. vLLM 'Road to 2.8x' 스택 최적화, PR 마이크로벤치마크, SemiAnalysis 대시보드 포인트 세 수치를 각자의 축으로 읽고 ThakiCloud vLLM 서빙 운용에 미칠 영향을 정리합니다. - ThakiCloud"
+title: "Kimi K3 디코드 경로: NVIDIA의 CuTeDSL 특화 커널"
+seo_title: "Kimi K3 디코드 경로: NVIDIA의 CuTeDSL 특화 커널"
 seo_description: "NVIDIA의 Kimi K3 특화 CuTe DSL 디코드 커널(vLLM PR #61867)과 423 tok/s/user(P90 인터랙티비티, 1.68x, GB300 NVL72) 결과. vLLM 스택 전반 2.2~2.8x 스루풋·TTFT 72~85% 개선 수치와 함께 축별로 읽고, ThakiCloud 서빙 튜닝 시사점까지 정리합니다. - ThakiCloud"
 excerpt: "423 tok/s/user는 헤드라인으로 읽으면 '전체 시스템이 빨라진 것'처럼 보이지만, 실제로는 사용자당 스트리밍 지표입니다. NVIDIA가 Kimi K3 특화 CuTe DSL 디코드 커널 약 12,000줄을 vLLM에 올린 이번 사례를, vLLM 커뮤니티의 스택 최적화 결과와 함께 세 숫자·세 축으로 읽습니다."
 date: 2026-10-20

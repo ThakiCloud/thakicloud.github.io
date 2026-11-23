@@ -1,6 +1,6 @@
 ---
-title: "Where Does a Real-Time Voice Agent Actually Bottleneck: A Latency Budget Calculator and GPU Serving Measurements"
-seo_title: "Real-Time Voice Agent Latency Budget + Self-Hosted GPU Benchmark - Thaki Cloud"
+title: "Where a Real-Time Voice Agent Bottlenecks"
+seo_title: "Where a Real-Time Voice Agent Bottlenecks"
 seo_description: "We introduce voice-latency-budget, an open calculator that breaks down the delay from end-of-utterance to first response sound into stages to diagnose bottlenecks, and share measurements of our actual stack (Qwen3-ASR, VoxCPM2, Qwen3-TTS, Qwen3.5-9B) on a RunPod H200 to show where the real bottleneck in a self-hosted voice stack lies. We also publish a reproducible download-once network volume cost-optimization and teardown-guaranteed harness."
 excerpt: "We built an open tool that diagnoses which stage of your voice agent is the bottleneck, without any vendor SDK, and measured our actual stack (Qwen3-ASR, VoxCPM2, Qwen3-TTS) on a RunPod H200. STT was fast; non-streaming TTS was the real bottleneck."
 date: 2026-07-19

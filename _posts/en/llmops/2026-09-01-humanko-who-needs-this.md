@@ -1,7 +1,7 @@
 ---
-title: "Companies Whose Turn It Is to Own a Model — the Formula Thomson Reuters Just Proved"
+title: "Who Should Own a Model: The Thomson Reuters Formula"
 excerpt: "Thomson Reuters trained open weights on 175 years of proprietary data to build its own model. The program cost $40M, but the final training run was about $450K. We confirmed the same formula works at a much smaller scale — this article maps which companies, and which seats, it fits."
-seo_title: "Open Weights + Your Own Data: Who Should Own a Model"
+seo_title: "Who Should Own a Model: The Thomson Reuters Formula"
 seo_description: "Thomson Reuters' in-house LLM and the Human-KO 27B release point at the same formula. A segment-by-segment look at where owning a model fits: insurance call centers, brokerage compliance, brand voice, and air-gapped public sector."
 date: 2026-09-01
 published: true

@@ -1,6 +1,6 @@
 ---
-title: "A Workspace That Gives Agents Their Own Accounts: What Block's Buzz Actually Solves"
-seo_title: "Block Buzz Analysis: Cryptographic Agent Identity on Nostr in an Open-Source Workspace | ThakiCloud"
+title: "Block's Buzz: Giving Agents Their Own Accounts"
+seo_title: "Block's Buzz: Giving Agents Their Own Accounts"
 seo_description: "Block released Buzz under Apache 2.0 on July 21, 2026. It looks like Slack, but agents are channel members rather than add-ons. Every human and agent gets a Schnorr keypair and every action lands in a signed append-only log. The ACP harness brings Claude Code, Codex, and goose into the same channel. Self-hosting requirements and limitations included."
 excerpt: "When you put agents on a team, the real bottleneck is not the model. It is identity and audit. Buzz addresses that at the protocol layer."
 date: 2026-07-31

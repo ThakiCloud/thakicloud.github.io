@@ -1,7 +1,7 @@
 ---
-title: "The Month of 1,000 Merged PRs: pstack, a Verification-First Agent Workflow"
+title: "pstack: A Verification-First Agent Workflow"
 excerpt: "The bottleneck of AI coding is not generating code, it is verifying code. A Cursor engineer published her own verification workflow as a plugin called pstack. A breakdown of its 23 skills, 21 principles, 22 playbooks, and model-role delegation."
-seo_title: "1,000 PRs a Month: pstack, the Verification-First Agent Workflow"
+seo_title: "pstack: A Verification-First Agent Workflow"
 seo_description: "Lauren Tan's pstack plugin rejects 'the build passed' and rebuilds verification as a repository capability. Its architecture, playbooks, 21 principles, model roles, and what it means for Paxis."
 date: 2026-08-27
 last_modified_at: 2026-08-27

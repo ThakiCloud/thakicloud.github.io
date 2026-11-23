@@ -1,5 +1,5 @@
 ---
-title: "OpenCut 완전 가이드: macOS 로컬 테스트 완료! 무료 오픈소스 비디오 에디터로 CapCut 대체하기"
+title: "OpenCut: macOS에서 써본 무료 오픈소스 영상 편집기"
 excerpt: "프라이버시 중심의 무료 비디오 에디터 OpenCut을 macOS에서 완전 테스트했습니다. 설치부터 개발 서버 실행까지 단계별 가이드를 제공합니다."
 date: 2025-06-23
 tags: 

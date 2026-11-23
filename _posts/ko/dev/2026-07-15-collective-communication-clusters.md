@@ -1,5 +1,5 @@
 ---
-title: "GPU와 TPU 클러스터의 해부학: 컬렉티브 커뮤니케이션이 분산 학습의 속도를 결정합니다"
+title: "GPU·TPU 클러스터의 해부: 컬렉티브 커뮤니케이션"
 excerpt: "대규모 모델을 여러 가속기에 나눠 학습하거나 서빙할 때, 실제 병목은 연산이 아니라 가속기 사이를 오가는 데이터입니다. 이 글은 all-reduce, all-gather, reduce-scatter, all-to-all 같은 컬렉티브 연산이 무엇인지, 그리고 이 연산들이 GPU 클러스터(NVLink·NVSwitch·InfiniBand)와 TPU 클러스터(ICI 3D 토러스·광 회선 스위치)라는 서로 다른 물리 구조 위에서 어떻게 도는지를 정리합니다. 링 all-reduce의 대역폭 비용 공식부터 데이터·텐서·파이프라인·전문가 병렬화가 각각 어떤 컬렉티브를 부르는지까지, ThakiCloud가 GPU 인프라를 운영하며 마주하는 관점에서 짚습니다."
 tags:
   - dev

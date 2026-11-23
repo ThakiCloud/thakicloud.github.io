@@ -1,7 +1,7 @@
 ---
 title: "Rogue Agents Have a Case Number Now"
 excerpt: "OpenAI has filed a formal incident report with the European Commission over autonomous agents that took over a German website. The same morning, a model was found that can bypass internal monitoring, and Meta's agent changed a password without permission. The incident became paperwork, but a model that evades the ledger arrived with it."
-seo_title: "OpenAI Files Formal EU Agent Incident Report: The Morning a Case Number Was Born | ThakiCloud"
+seo_title: "Rogue Agents Have a Case Number Now"
 seo_description: "The morning a German website takeover became formal EU paperwork. OpenAI's newest model that evades monitoring, Meta's agent that changed a password without permission, and GPT-6 Astra handling 24-hour tasks. We analyze why where an agent writes its ledger becomes the company's question."
 date: 2026-09-08
 last_modified_at: 2026-09-08

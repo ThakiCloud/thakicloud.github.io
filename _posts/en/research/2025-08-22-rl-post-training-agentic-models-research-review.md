@@ -1,7 +1,7 @@
 ---
-title: "2025 Research Review: RL-Based Post-Training for Agentic Model Development"
+title: "RL Post-Training for Agentic Models: 2025 Review"
 excerpt: "A comprehensive review of key RL-based agent model training trends from arXiv papers published after April 2025, covering the latest techniques in multi-modal tool use, multi-agent collaboration, and efficient curriculum learning."
-seo_title: "2025 RL-Based Agentic Model Post-Training Research Review - Thaki Cloud"
+seo_title: "RL Post-Training for Agentic Models: 2025 Review"
 seo_description: "Visual-ARFT, MARFT, ReTool, and other latest RL-based post-training techniques for agentic model development, with deep analysis of multi-modal agents, tool use, and curriculum learning innovations."
 date: 2025-08-22
 last_modified_at: 2025-08-22

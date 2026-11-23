@@ -1,6 +1,6 @@
 ---
-title: "The Chip That Gave Up Peak FLOPS: Why Inference-Native Design Starts at Memory"
-seo_title: "Inference-Native Chip Design: Why Jalapeño Went the Opposite Way from GPUs - ThakiCloud"
+title: "Inference-Native Chips: Giving Up Peak FLOPS for Memory"
+seo_title: "Inference-Native Chips: Giving Up Peak FLOPS for Memory"
 seo_description: "A design-goal reading of Jalapeño, the LLM inference chip from OpenAI and Broadcom. Why GPUs stall at batch-1 decode, why the unified memory model was replaced with per-core NUMA slices, how a persistent kernel and compiler search fit in, and where the official numbers end and speculation begins."
 excerpt: "Once the objective becomes more answers per watt instead of peak throughput, the shape of the chip changes. A cafeteria kitchen is unbeatable at serving 500 people at once, but when one guest orders a spoonful at a time, the whole kitchen sits idle."
 date: 2026-08-31

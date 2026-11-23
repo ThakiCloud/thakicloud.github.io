@@ -1,6 +1,6 @@
 ---
 title: "KV를 4분의 1로: DeepSeek V4.1-Flash의 압축 우선 설계"
-seo_title: "DeepSeek V4.1-Flash 분석 - 552B MoE에 CSA2·FP4 KV 캐시로 1M 컨텍스트 서빙 비용 재설계, 코딩 벤치 +19.8pt - 다키클라우드"
+seo_title: "KV를 4분의 1로: DeepSeek V4.1-Flash의 압축 우선 설계"
 seo_description: "DeepSeek가 9월 10일 내놓은 V4.1-Flash는 더 똑똑한 모델이 아니라 더 싸게 도는 모델입니다. 552B MoE 백본에 CSA2 크로스레이어 KV 재사용과 FP4 KV 캐시를 얹어 글로벌 KV 캐시를 V4-Flash의 약 4분의 1로 줄이고 코딩 벤치마크에서 전작 대비 뚜렷한 이득을 냅니다. 서빙 관점에서 이 수치가 무엇을 바꾸는지 다키클라우드가 정리합니다."
 excerpt: "모델이 똑똑해진 것도 맞지만, 이번 릴리스의 진짜 헤드라인은 KV 캐스트입니다. 1M 토큰 컨텍스트를 4분의 1 크기의 KV로 서빙하게 된다는 말은, 같은 GPU 위에 더 많은 동시 시퀀스를 앉힐 수 있다는 뜻입니다."
 date: 2026-09-11

@@ -1,7 +1,7 @@
 ---
 title: "The oldest technique in history"
 excerpt: "All five major banks were attacked. The weapon was not a zero-day but the oldest technique in history. 40.5 billion won and 86 billion won, the information protection budgets of two banks. What divided 25,000 and 119 in damage was not budget but identity verification. This week, 'defending AI attacks with AI' became a budget line item."
-seo_title: "The oldest technique in history breaches the five major banks | ThakiCloud"
+seo_title: "The oldest technique in history"
 seo_description: "A week in which AI hacking spread to the five major banks and the non-bank financial sector. We analyzed why an old technique like credential stuffing was turned into a weapon at machine speed, the variable that divided the scale of damage, and what the government and financial sector's shift to 'defending AI with AI' means, using today's news."
 date: 2026-10-06
 last_modified_at: 2026-10-06

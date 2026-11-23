@@ -1,6 +1,6 @@
 ---
-title: "The Narrowest Way to Give an Agent a Body: The Three MCP Tools Persona Ships"
-seo_title: "Persona MCP Analyzed: Least-Privilege Tool Design for a Desktop Character | ThakiCloud"
+title: "Persona: The Narrowest Way to Give an Agent a Body"
+seo_title: "Persona: The Narrowest Way to Give an Agent a Body"
 seo_description: "We read the MCP server of Persona, the open-source desktop 3D character a coding agent can drive, at the source level. Three tools, enum-closed arguments, loopback-only binding, and a name contract that grants no filesystem access: design decisions worth copying into your own MCP server."
 excerpt: "How many tools should you expose when you give an agent a new capability? Persona stops at three. We checked how that narrowing is actually implemented."
 date: 2026-07-30

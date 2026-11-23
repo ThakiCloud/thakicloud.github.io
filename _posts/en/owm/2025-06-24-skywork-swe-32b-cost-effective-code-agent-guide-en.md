@@ -1,7 +1,7 @@
 ---
-title: "Skywork-SWE-32B: The Most Cost-Effective Software Engineering AI Agent Complete Guide"
+title: "Skywork-SWE-32B: A Cost-Effective Software Engineering Agent"
 excerpt: "Comprehensive analysis of Skywork-SWE-32B achieving 38% performance on SWE-bench, offering exceptional value for software engineering tasks with practical deployment strategies and cost-effective implementation approaches"
-seo_title: "Skywork-SWE-32B Cost-Effective Code Agent Guide - SWE-bench Performance - Thaki Cloud"
+seo_title: "Skywork-SWE-32B: A Cost-Effective Software Engineering Agent"
 seo_description: "Discover Skywork-SWE-32B's 38% SWE-bench performance, cost-effective deployment strategies, and practical implementation guide for software engineering AI agents with vLLM and OpenHands integration."
 date: 2025-06-24
 tags: 

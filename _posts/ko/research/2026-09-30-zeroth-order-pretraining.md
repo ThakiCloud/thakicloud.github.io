@@ -1,7 +1,7 @@
 ---
-title: "Backprop 없이 Transformer를 학습시킨다: Zero-Order 최적화의 두 논문이 재는 것"
+title: "Backprop 없이 Transformer를 학습시킨다"
 excerpt: "9월 28일 'backprop 없이 transformer를 pretrain하는 법을 찾았다'는 Stanford CRFM 연구자의 트윗 하루 뒤, arXiv에 zero-order 최적화 논문 두 편이 올라왔습니다. A100 한 대로 OPT-30B를 in-place 학습한다는 주장과, expert sharding으로 학습 스케일링을 재는 주장. 확인된 수치만 추려서 읽습니다."
-seo_title: "Zero-Order Optimization, Backprop 없이 Transformer 학습 (arXiv 2609.38095, 2609.37899) 분석 - ThakiCloud"
+seo_title: "Backprop 없이 Transformer를 학습시킨다"
 seo_description: "Stanford(Chaubard, Kochenderfer, Ré)의 zero-order 최적화 논문 두 편을 정리합니다. A100에서 OPT-30B in-place 학습, probe-space 사전조건화, expert sharding(SOMA)의 학습 효율. ThakiCloud ai-platform의 GPU 트레이닝 관점에서 읽는 메모 예산의 변화."
 date: 2026-09-30
 last_modified_at: 2026-09-30

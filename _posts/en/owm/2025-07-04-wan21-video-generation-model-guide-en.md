@@ -1,7 +1,7 @@
 ---
-title: "Wan2.1 Complete Guide - Revolutionizing Content Creation with Next-Generation Open Source Video Generation AI"
+title: "Wan2.1: An Open-Source Video Generation Model"
 excerpt: "Comprehensive guide to Wan2.1, the SOTA open-source video generation model featuring Text-to-Video and Image-to-Video capabilities, with practical implementation strategies and creative applications for content innovation"
-seo_title: "Wan2.1 Video Generation AI Complete Guide - Open Source Content Creation - Thaki Cloud"
+seo_title: "Wan2.1: An Open-Source Video Generation Model"
 seo_description: "Master Wan2.1 open-source video generation model with Text-to-Video and Image-to-Video capabilities. Complete implementation guide with creative applications and optimization strategies for content creators."
 date: 2025-07-04
 tags:

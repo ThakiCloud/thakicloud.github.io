@@ -1,7 +1,7 @@
 ---
 title: "Full Throttle and the Brake Pedal in the Same Week"
 excerpt: "In the same week, Nvidia set a record of more than 1,000 tokens per second per user and OpenAI began pushing for mandatory AI speed limits in Washington. The real signal of this week is not speed. It is governance."
-seo_title: "The Week Agents Learned Speed Limits: The Accelerator, the Brakes, and $4.1 Trillion"
+seo_title: "Full Throttle and the Brake Pedal in the Same Week"
 seo_description: "Nvidia's 1,000 tokens per second, OpenAI's speed-limit lobbying, and Anthropic's 0.1% poisoning research. This week someone in the AI industry floored the accelerator and someone else started reaching for the brakes. The next battlefield is the layer that governs agents."
 date: 2026-11-02
 last_modified_at: 2026-11-02

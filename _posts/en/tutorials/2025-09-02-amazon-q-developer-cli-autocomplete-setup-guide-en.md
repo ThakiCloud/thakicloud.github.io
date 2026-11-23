@@ -1,7 +1,7 @@
 ---
-title: "Amazon Q Developer CLI: Complete Setup and Usage Guide for Terminal Autocomplete"
+title: "Amazon Q Developer CLI: Terminal Autocomplete Setup"
 excerpt: "Learn how to install and configure Amazon Q Developer CLI (formerly Fig) for intelligent terminal autocomplete with hundreds of CLI tools including git, npm, docker, and aws."
-seo_title: "Amazon Q Developer CLI Setup Guide - Terminal Autocomplete Tutorial"
+seo_title: "Amazon Q Developer CLI: Terminal Autocomplete Setup"
 seo_description: "Complete guide to installing Amazon Q Developer CLI for intelligent terminal autocomplete. Step-by-step tutorial with examples for git, npm, docker commands."
 date: 2025-09-02
 tags:

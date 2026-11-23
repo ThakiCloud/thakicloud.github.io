@@ -1,6 +1,6 @@
 ---
-title: "Security judgment that concludes only when the evidence is enough: a generation-free 27B evidence-sufficiency model"
-seo_title: "Thaki-SecDecision-27B-V2: generation-free security evidence-sufficiency model - ThakiCloud"
+title: "SecDecision 27B: Concluding Only on Enough Evidence"
+seo_title: "SecDecision 27B: Concluding Only on Enough Evidence"
 seo_description: "Takes a claim, its required facts, and the evidence set, then decides SUPPORTED, REFUTED, INSUFFICIENT, CONFLICTED and whether a conclusion is allowed. Frozen 27B backbone with LoRA and three fp32 heads, no free generation. On the sealed TEST of 4,002 examples, 1 wrong conclusion; 97.2% recall on the cases that allow one."
 excerpt: "In autonomous security response, the moment you conclude is the moment action begins. We built a model that concludes only when the evidence is enough and says the rest need more evidence. It generates no text."
 date: 2026-10-28

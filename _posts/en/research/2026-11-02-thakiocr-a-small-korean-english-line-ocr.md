@@ -1,6 +1,6 @@
 ---
 title: "ThakiOCR A: We Released Our Own 2.13M-Parameter Korean-English OCR"
-seo_title: "ThakiOCR-KOEN-V1-Dense released: a 2.13M-parameter Korean-English line OCR trained from scratch on synthetic data only | ThakiCloud"
+seo_title: "ThakiOCR A: We Released Our Own 2.13M-Parameter Korean-English OCR"
 seo_description: "We released ThakiOCR-KOEN-V1-Dense, a 2.13M-parameter Korean-English text-line OCR, under Apache-2.0. It was trained from scratch on NVIDIA synthetic data only, and on real documents it clearly inserts spaces between syllables. Why we built a small model ourselves, what we measured, and where it falls short."
 excerpt: "We released the smallest OCR model we have built ourselves. Here is why we started small, and what breaks on real documents when a model learns from synthetic data alone, in numbers."
 date: 2026-11-02

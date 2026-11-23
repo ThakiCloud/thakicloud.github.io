@@ -1,7 +1,7 @@
 ---
 title: "15초 영상을 13초 만에: FastH3가 실시간 영상 서빙을 어떻게 만들었나"
 excerpt: "MiniMax H3의 디스틸레이션 변종 FastH3 Preview v1이 4스텝으로 추론을 재단장해 15초 768p 영상을 13초 만에 만듭니다. 8×B200 기준, 단일 Blackwell 기준 14× 스피드업, VSA-DataFree LoRA. 그리고 실행 전에 먼저 읽어야 하는 라이선스."
-seo_title: "FastH3 4스텝 디스틸레이션: 15초 영상 13초 생성과 실시간 T2VA 서빙 - ThakiCloud"
+seo_title: "15초 영상을 13초 만에: FastH3가 실시간 영상 서빙을 어떻게 만들었나"
 seo_description: "FastVideo·Nuva Lab·NVIDIA FastGen이 공개한 FastH3 Preview v1의 4스텝 디스틸레이션, 8×B200 기준 15초 768p 13초 생성, 단일 Blackwell 14× 스피드업, VSA-DataFree LoRA와 라이선스 제약을 분석합니다."
 date: 2026-09-01
 published: true

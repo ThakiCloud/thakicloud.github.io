@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA Flare, 워크스테이션 GPU에서 Python 없이 서빙하는 로컬 추론 서버"
 excerpt: "NVIDIA가 10월 20일 조용히 공개한 Flare는 SM120/SM121 워크스테이션 GPU 전용 로컬 추론 서버입니다. PyTorch로 컴파일하고 Rust로 서빙하는 두 단계 설계, 서명된 런타임 패키지, 8개 모델 레시피. vLLM의 대안이라는 표기는 오해이고, 로컬 에이전트 워크로드의 서빙 계약에 대한 레퍼런스 구현입니다."
-seo_title: "NVIDIA Flare, 워크스테이션 GPU에서 Python 없이 서빙하는 로컬 추론 서버 | ThakiCloud"
+seo_title: "NVIDIA Flare, 워크스테이션 GPU에서 Python 없이 서빙하는 로컬 추론 서버"
 seo_description: "NVIDIA Flare(local inference server) 해부: Ignition(Python)과 Helios(Rust)의 경계, 서명된 런타임 패키지, FP8 KV, MTP 추측 디코딩, Orbit 플릿 제어. DGX Spark·RTX PRO 6000 대상, 실제 클론과 빌드 시도 결과를 포함합니다."
 date: 2026-10-22
 last_modified_at: 2026-10-22

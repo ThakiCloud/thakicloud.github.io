@@ -1,7 +1,7 @@
 ---
 title: "How Much Truth Is in the '100% Open-Source Grok Bot'"
 excerpt: "One developer's claim of a '100% open-source version of Grok Bot' went viral. Auditing the code, the harness is fully decoupled from model and execution environment. But on the cloud-computer axis it is a self-hosted configuration, not a managed service. A guide for teams deciding which layer to own and which to buy."
-seo_title: "Verifying the Grok Bot Open-Source Counterpart: Harness Separation and Paxis"
+seo_title: "How Much Truth Is in the '100% Open-Source Grok Bot'"
 seo_description: "We audit xAI's Grok Bot and the open-source agent harness Hermes Agent at code level, and examine what the 3-layer split of model, harness, and execution environment means for enterprise adoption and the control plane."
 date: 2026-08-21
 last_modified_at: 2026-08-21

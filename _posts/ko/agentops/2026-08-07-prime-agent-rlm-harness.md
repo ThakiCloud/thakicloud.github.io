@@ -1,7 +1,7 @@
 ---
-title: "컨텍스트를 프롬프트가 아니라 변수로 두면: Prime Agent의 RLM 하네스를 직접 재현했습니다"
+title: "Prime Agent: RLM 하네스를 직접 재현하다"
 excerpt: "Prime Intellect가 공개한 Prime Agent는 도구가 IPython 커널 하나뿐입니다. 세션 히스토리를 프롬프트에 넣지 않고 커널 변수로 두는 이 설계가 실제로 토큰을 얼마나 줄이는지, 그리고 어디서부터 이득이 사라지는지 직접 측정했습니다."
-seo_title: "Prime Agent RLM 하네스 재현: 컨텍스트를 변수로 두면 토큰이 얼마나 줄어드나"
+seo_title: "Prime Agent: RLM 하네스를 직접 재현하다"
 seo_description: "Prime Intellect Prime Agent의 RLM과 Continual Harness를 분석하고, 영속 IPython 커널에 컨텍스트를 변수로 적재하는 패턴을 로컬에서 재현해 토큰 절감폭과 그 한계를 실측했습니다."
 date: 2026-08-07
 last_modified_at: 2026-08-07

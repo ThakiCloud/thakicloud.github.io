@@ -1,7 +1,7 @@
 ---
 title: "BrowserOS: AI 에이전트 기반 오픈소스 웹 브라우저 완전 가이드"
 excerpt: "Chromium 기반 BrowserOS로 로컬 AI 에이전트를 활용한 자동화된 웹 브라우징 경험을 구축하고, MCP 프로토콜을 통한 생산성 향상 도구를 개발하는 방법을 학습합니다."
-seo_title: "BrowserOS AI 에이전트 웹 브라우저 완전 가이드 - 설치부터 활용까지 - Thaki Cloud"
+seo_title: "BrowserOS: AI 에이전트 기반 오픈소스 웹 브라우저 완전 가이드"
 seo_description: "오픈소스 BrowserOS로 AI 에이전트 기반 자동화 웹 브라우징, 로컬 AI 채팅, 생산성 도구 개발 방법을 단계별로 상세 설명합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03

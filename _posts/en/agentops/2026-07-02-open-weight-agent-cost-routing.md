@@ -1,7 +1,7 @@
 ---
-title: "Route Every Task to Its Winning Model: How We Cut Agent Automation Costs 44x with Open-Weight Models"
+title: "Per-Task Model Routing Cut Agent Costs 44x"
 excerpt: "Most agent automation is not top-tier reasoning. It is tool calling and pipeline execution. We ran real production requests through Gemma 4 as structured tool calls, confirmed 6/6 success, then calculated the exact cost of routing each task to an open-weight model tier using Paxis CostRouter, real token counts, and real prices."
-seo_title: "Open-Weight Agent Cost Optimization: Per-Task Model Routing in Practice - Thaki Cloud"
+seo_title: "Per-Task Model Routing Cut Agent Costs 44x"
 seo_description: "Gemma 4 tool-call experiment 6/6 success rate, Paxis models.yaml real-price cost calculation showing 44x savings vs. frontier. A practical look at routing agent automation workloads to open-weight models with measured numbers."
 date: 2026-07-02
 last_modified_at: 2026-07-02

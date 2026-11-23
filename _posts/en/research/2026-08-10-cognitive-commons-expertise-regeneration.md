@@ -1,7 +1,7 @@
 ---
 title: "If You Automate the Junior Work, Where Do Seniors Come From?"
 excerpt: "Effective AI oversight requires expertise, and that expertise was built by doing the very work AI now does for you. Nolan Lovett calls this loop the Validation Tether. It is the first question a company selling agent automation has to answer."
-seo_title: "The Tragedy of the Cognitive Commons - When AI Breaks Expertise Regeneration"
+seo_title: "If You Automate the Junior Work, Where Do Seniors Come From?"
 seo_description: "A walkthrough of the Cognitive Commons framework from arXiv 2607.29380: Internalized versus Distributed Mastery, the Validation Tether, and what it means in practice for a company building an agent automation platform."
 date: 2026-08-10
 last_modified_at: 2026-08-10

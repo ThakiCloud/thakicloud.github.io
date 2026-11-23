@@ -1,7 +1,7 @@
 ---
 title: "An OS Where Agents Fix Their Own Harness: A Dissection of Octopus-SI-OS"
 excerpt: "A 58.7k-line Rust kernel, agents as two JSON files, denials as one ledger row. We verified the claim that 'agents modify their own harness' by cloning the actual repository and checking structure, counts, and a compile attempt."
-seo_title: "Octopus OS: Verifying the Self-Evolving Agent Harness Architecture | ThakiCloud Tech Blog"
+seo_title: "An OS Where Agents Fix Their Own Harness: A Dissection of Octopus-SI-OS"
 seo_description: "We clone miu21590's Octopus-SI-OS to verify kernel size, the worker JSON contract, and the policy and ledger schemas, then analyze the agent self-modification architecture from a Paxis perspective."
 date: 2026-10-26
 last_modified_at: 2026-10-26

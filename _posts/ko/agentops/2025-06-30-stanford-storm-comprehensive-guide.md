@@ -1,7 +1,7 @@
 ---
 title: "Stanford STORM: LLM 기반 지식 큐레이션 에이전트 시스템 완벽 가이드"
 excerpt: "Stanford에서 개발한 STORM과 Co-STORM 완벽 분석. 자동 리서치, 보고서 생성, 인용 시스템, 협업 AI 에이전트까지 실전 활용 가이드."
-seo_title: "Stanford STORM 완벽 가이드 - LLM 지식 큐레이션 에이전트 시스템 - Thaki Cloud"
+seo_title: "Stanford STORM: LLM 기반 지식 큐레이션 에이전트 시스템 완벽 가이드"
 seo_description: "Stanford STORM 프로젝트 완벽 분석. 자동 리서치, Wikipedia 스타일 보고서 생성, 협업 AI 에이전트, 실전 배포 가이드. 25.4k 스타 오픈소스 프로젝트 활용법."
 date: 2025-06-30
 last_modified_at: 2025-06-30

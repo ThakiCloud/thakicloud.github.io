@@ -1,7 +1,7 @@
 ---
-title: "A Complete Guide to HTML Presentations with Claude Code and the UV Package Manager: From Markdown to Slides"
+title: "HTML Presentations with Claude Code and uv"
 excerpt: "A step-by-step walkthrough of the full workflow for using Claude Code to write a Python UV package manager tutorial and converting Markdown into an HTML presentation."
-seo_title: "Claude Code UV Package Manager HTML Presentation Guide - Agent Ops"
+seo_title: "HTML Presentations with Claude Code and uv"
 seo_description: "A practical guide to researching UV package manager usage with Claude Code, writing a Markdown tutorial, and converting it to an HTML presentation. Includes comparisons of Reveal.js, Marp, and Slidev, plus design tips inspired by GenSpark and SkyWork."
 date: 2025-08-10
 last_modified_at: 2025-08-10

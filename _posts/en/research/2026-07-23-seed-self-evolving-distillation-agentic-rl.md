@@ -1,5 +1,5 @@
 ---
-title: "The Agent Teaches Itself With Skills It Wrote: How SEED Fixes the Sparse-Reward Problem"
+title: "SEED: Agents Teach Themselves With Skills They Wrote"
 excerpt: "The real bottleneck in agentic RL is that the reward arrives only once, at the very end of a trajectory. SEED turns that single sparse signal into dense per-token supervision by having the agent mine natural-language skills from its own trajectories and distill them back into itself."
 tags: [agentic-rl, reinforcement-learning, on-policy-distillation, sparse-reward, self-evolving, llm-agents, post-training, sample-efficiency, hindsight-skills, credit-assignment]
 date: 2026-07-23

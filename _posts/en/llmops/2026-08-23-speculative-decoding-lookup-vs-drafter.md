@@ -1,6 +1,6 @@
 ---
-title: "Speculative Decoding Wasn't Slow. The Lookup Just Didn't Fit: 11.9x on the Same Model"
-seo_title: "Speculative decoding re-measured: lookup vs learned drafter, B200 measured | ThakiCloud"
+title: "Speculative Decoding: The Lookup Didn't Fit"
+seo_title: "Speculative Decoding: The Lookup Didn't Fit"
 seo_description: "We overturned our own conclusion that speculative decoding was a net loss on free-form generation. Lookup drafting finds candidates inside the prompt, so it is powerless when writing new sentences, but a learned drafter predicts from hidden states. From 15.0 to 178.8 tok/s on a 234k-token prompt, 11.9x, all 34 quality metrics lossless, and the boundary past 245k where the server dies, measured on a single B200."
 excerpt: "If you tried speculative decoding once while serving long contexts and shelved it, it is worth checking which method you actually measured. Lookup and a learned drafter produce completely different results under the same name."
 date: 2026-08-23

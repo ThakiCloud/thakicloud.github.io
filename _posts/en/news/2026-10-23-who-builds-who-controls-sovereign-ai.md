@@ -1,7 +1,7 @@
 ---
-title: "Two answers to the question of sovereignty: who builds it, who controls it"
+title: "Sovereign AI: Who Builds It, Who Controls It"
 excerpt: "The 99.98% NVIDIA dependence of public AI chips and Palantier's claim that 'control is sovereignty' crossed paths on the same day. In an age where agents act, the battleground of sovereignty is shifting from the nationality of the model to the boundaries of execution."
-seo_title: "Sovereignty, two answers: localization and control | ThakiCloud Tech Blog"
+seo_title: "Sovereign AI: Who Builds It, Who Controls It"
 seo_description: "Why the Ministry of Trade's domestic-priority purchasing and Palantier's control argument collided on the same day. Analyzing the questions of execution, audit, and autonomy that redefine sovereign AI in the agent era, plus four checks for enterprises."
 date: 2026-10-23
 last_modified_at: 2026-10-23

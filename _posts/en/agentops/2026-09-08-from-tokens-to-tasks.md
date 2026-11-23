@@ -1,7 +1,7 @@
 ---
 title: "The Unit on the Invoice Is Changing: Not Tokens, but Completed Tasks"
 excerpt: "SenseTime's first-ever half-year profit is evidence that a business settling in completed tasks, not tokens, actually makes money. While Korea and the world build capacity, the unit on the AI invoice is quietly moving from input to output."
-seo_title: "The AI Invoice Unit Is Changing: Completed Tasks, Not Tokens | ThakiCloud"
+seo_title: "The Unit on the Invoice Is Changing: Not Tokens, but Completed Tasks"
 seo_description: "SenseTime's first-ever half-year profit and its shift to task-based billing. From Korea's 208 trillion won DRAM quarter to Brookfield's 10 billion dollars and Moody's one-fifth investment gap closing on capacity. What companies buying agents by the task ask for in verification, governance, and cost attribution, read in today's news."
 date: 2026-09-08
 last_modified_at: 2026-09-08

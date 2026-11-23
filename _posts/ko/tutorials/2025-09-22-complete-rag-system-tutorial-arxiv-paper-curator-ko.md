@@ -1,7 +1,7 @@
 ---
-title: "완전한 RAG 시스템 구축 튜토리얼: ArXiv Paper Curator로 프로덕션 AI 만들기"
+title: "RAG 시스템 구축: ArXiv Paper Curator 튜토리얼"
 excerpt: "ArXiv Paper Curator 프로젝트를 활용하여 프로덕션 환경에서 사용 가능한 RAG(검색 증강 생성) 시스템을 처음부터 구축하는 방법을 학습합니다. 데이터 수집, 하이브리드 검색, 임베딩, LLM 통합을 포함한 종합 가이드입니다."
-seo_title: "RAG 시스템 튜토리얼: ArXiv 논문으로 프로덕션 AI 구축하기 - Thaki Cloud"
+seo_title: "RAG 시스템 구축: ArXiv Paper Curator 튜토리얼"
 seo_description: "ArXiv Paper Curator를 사용한 완전한 RAG 시스템 구축 가이드. 데이터 수집, OpenSearch, 임베딩, LLM 통합을 통한 프로덕션 AI 애플리케이션 개발 방법을 단계별로 학습하세요."
 date: 2025-09-22
 tags:

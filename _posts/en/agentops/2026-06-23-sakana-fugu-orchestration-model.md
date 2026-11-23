@@ -1,7 +1,7 @@
 ---
 title: "Sakana Fugu: The Orchestration Era Where Models Command Models"
 excerpt: "Fugu, released by Sakana AI, is an orchestration system that dynamically coordinates multiple LLMs while appearing to the user as a single model API. We analyze why this architecture matters from a multi-agent platform perspective and what it means for ThakiCloud's multi-tenant agent operations."
-seo_title: "Sakana Fugu Orchestration Model Analysis - Multi-Agent and Vendor Lock-In - Thaki Cloud"
+seo_title: "Sakana Fugu: The Orchestration Era Where Models Command Models"
 seo_description: "Sakana AI Fugu is an orchestration model that dynamically coordinates a pool of LLM agents. This post covers the architecture, the limits of self-reported benchmarks, the vendor lock-in hedge logic, and implications for ThakiCloud's K8s-based multi-tenant agent platform."
 date: 2026-06-23
 last_modified_at: 2026-06-23

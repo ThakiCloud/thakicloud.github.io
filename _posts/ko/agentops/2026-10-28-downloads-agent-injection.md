@@ -1,7 +1,7 @@
 ---
-title: "Markdown이 실행 파일이 된 순간: Downloads 폴더가 코딩 에이전트를 하이재크하는 야생 공격"
+title: "Downloads 폴더 공격: 실행 파일이 된 Markdown"
 excerpt: "보안 회사 Forever가 고객 기계에서 잡아낸 라이브 악성코드. 웹이 조용히 내려준 13KB 마크다운 파일이 Claude Code와 Codex를 하이재크하고, Codex에서는 악성 패키지 실행 성공률 90% 이상. 두 가지 핵심 메커니즘을 로컬에서 100% 재현했습니다."
-seo_title: "Markdown이 실행 파일이 된 순간: Downloads 폴더를 통한 코딩 에이전트 하이재크 공격 | ThakiCloud 기술블로그"
+seo_title: "Downloads 폴더 공격: 실행 파일이 된 Markdown"
 seo_description: "웹이 ~/Downloads에 조용히 떨어뜨린 AGENTS.md/CLAUDE.md가 코딩 에이전트를 하이재크하는 공격. Forever Security 야생 사고 재현, CLAUDE.md 자동 로딩과 settings.json API 재라우팅 실측, 5단계 셀프체크."
 date: 2026-10-28
 last_modified_at: 2026-10-28

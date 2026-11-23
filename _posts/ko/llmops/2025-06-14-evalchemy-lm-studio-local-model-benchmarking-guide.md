@@ -1,5 +1,5 @@
 ---
-title: "로컬 LM Studio 모델을 API처럼 벤치마킹하기: Evalchemy + LiteLLM 완벽 가이드"
+title: "로컬 LM Studio 모델을 API처럼 벤치마킹하기"
 excerpt: "LM Studio와 Evalchemy를 연동하여 로컬 언어 모델을 OpenAI API처럼 간편하게 평가하는 방법"
 date: 2025-06-14
 tags: 

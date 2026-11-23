@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA Nemotron 6 Million Multilingual Reasoning Dataset Released -- Strengthening the Open-Source AI Ecosystem"
+title: "NVIDIA Nemotron's 6M Multilingual Reasoning Dataset"
 excerpt: "NVIDIA releases a 6-million-example multilingual reasoning dataset, providing high-quality training data expanded across five languages: French, Spanish, German, Italian, and Japanese."
-seo_title: "NVIDIA 6 Million Multilingual Reasoning Dataset Released - AI Training Data - Thaki Cloud"
+seo_title: "NVIDIA Nemotron's 6M Multilingual Reasoning Dataset"
 seo_description: "Analysis of the NVIDIA Nemotron Post-Training Dataset v2. Explore the translation methodology, quality controls, and usage patterns of the 6-million multilingual reasoning dataset. Essential high-quality training data for open-source AI development."
 date: 2025-08-21
 last_modified_at: 2025-08-21

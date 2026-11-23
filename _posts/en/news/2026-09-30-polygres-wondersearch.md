@@ -1,7 +1,7 @@
 ---
-title: "Search Without Pre-Embedding the Corpus: Why WonderSearch Flips RAG's Cost Model"
+title: "WonderSearch: RAG Without Embedding the Corpus First"
 excerpt: "Polygres (YC F26) launched WonderSearch on September 28, searching millions of unstructured documents without pre-embedding the corpus. The core of the launch is not the recall claim but a statement to move RAG's cost from once-per-corpus to per-query. What that means for the RAG infrastructure ThakiCloud ai-platform operates."
-seo_title: "WonderSearch (Polygres, YC F26): Query-Time Search Without Embeddings and the RAG Cost Model - ThakiCloud"
+seo_title: "WonderSearch: RAG Without Embedding the Corpus First"
 seo_description: "Polygres launched WonderSearch, which searches unstructured documents at query time without a pre-embedding pipeline. Analysis of the vector index maintenance and re-embedding cost structure versus a pay-per-query model, from a RAG infrastructure perspective."
 date: 2026-09-30
 last_modified_at: 2026-09-30

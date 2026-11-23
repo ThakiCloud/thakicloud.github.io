@@ -1,7 +1,7 @@
 ---
-title: "Diagrams로 그리는 쿠버네티스 Agentic RAG 아키텍처 - Python 코드로 시스템 설계하기"
+title: "Diagrams로 그리는 쿠버네티스 Agentic RAG 아키텍처"
 excerpt: "Python 코드로 클라우드 아키텍처를 그릴 수 있는 Diagrams 라이브러리를 소개하고, 쿠버네티스 환경에서 Agentic RAG 시스템을 설계하는 실전 예제를 제공합니다. Diagram as Code로 시스템 아키텍처를 버전 관리하세요."
-seo_title: "Diagrams 쿠버네티스 Agentic RAG 아키텍처 가이드 - Thaki Cloud"
+seo_title: "Diagrams로 그리는 쿠버네티스 Agentic RAG 아키텍처"
 seo_description: "Python Diagrams 라이브러리로 쿠버네티스 환경의 Agentic RAG 시스템 아키텍처를 설계하는 방법. 실전 예제 코드와 함께 Diagram as Code 개념을 마스터하세요."
 date: 2025-06-28
 tags: 

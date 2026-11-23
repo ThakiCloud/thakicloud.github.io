@@ -1,7 +1,7 @@
 ---
 title: "The Day Proof Became a Product"
 excerpt: "MIT's weight edit missed its claim only after the logs were examined. OpenAI paused training and attacked its own infrastructure with agents. Anthropic released a tool that cryptographically guarantees where an output came from. The common thread of today's digest is weight shifting from 'how smart is it' to 'can it be proven.'"
-seo_title: "The Day Proof Became a Product: OpenAI Agents Audit Their Own Infra, Anthropic FlashProve, MIT Weight-Edit Audit, $437B Compute Obligations - ThakiCloud Tech Blog"
+seo_title: "The Day Proof Became a Product"
 seo_description: "OpenAI paused training and used AI agents to find VM escapes and a Brotli RCE in its own infrastructure. Anthropic released FlashProve, a zero-knowledge tool to verify AI response provenance. MIT's GPT-6 weight edit was caught by log auditing. Plus the amended IPO filing's $437B compute obligations and Nvidia supply-chain policing doubts. The common signal of today's digest."
 date: 2026-11-04
 last_modified_at: 2026-11-04

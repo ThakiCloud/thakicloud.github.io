@@ -1,7 +1,7 @@
 ---
-title: "0.9B로 문서 파싱 SOTA: PaddleOCR-VL을 직접 설치해 한국어·아랍어로 돌려봤습니다"
+title: "PaddleOCR-VL: 0.9B 모델로 한국어·아랍어 문서 파싱"
 excerpt: "PaddlePaddle이 공개한 0.9B 초소형 비전-언어 모델 PaddleOCR-VL을 직접 설치해 한국어·영어·아랍어가 섞인 문서로 추론을 돌려봤습니다. 2단계 아키텍처와 다국어 성능, 그리고 ThakiCloud의 멀티테넌트 문서 인텔리전스 관점에서 의미를 정리합니다."
-seo_title: "PaddleOCR-VL 0.9B 다국어 문서 파싱 직접 실험 - Thaki Cloud"
+seo_title: "PaddleOCR-VL: 0.9B 모델로 한국어·아랍어 문서 파싱"
 seo_description: "PaddleOCR-VL-0.9B(NaViT 인코더 + ERNIE-4.5-0.3B)를 직접 설치해 한국어·아랍어 문서로 추론한 실험 보고서. OmniDocBench 성능, 2단계 아키텍처, ThakiCloud 쿠버네티스 문서 인텔리전스 적용 관점 분석."
 date: 2026-06-23
 last_modified_at: 2026-06-23

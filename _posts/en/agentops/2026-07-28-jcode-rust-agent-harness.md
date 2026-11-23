@@ -1,6 +1,6 @@
 ---
-title: "Where Does 245x Come From? We Measured the Rust Coding Agent Harness jcode on a MacBook"
-seo_title: "jcode Measured: Startup Time and Memory of a Rust Coding Agent Harness | ThakiCloud"
+title: "Where Does 245x Come From? Measuring the jcode Harness"
+seo_title: "Where Does 245x Come From? Measuring the jcode Harness"
 seo_description: "jcode is an open-source Rust coding agent harness that claims to boot 245x faster than Claude Code. We downloaded the official release binary, verified its checksum, and measured it ourselves: 7.1ms versus 41.5ms startup, 16.9MB versus 217.0MB peak resident memory. Here is what conditions produced the 245x figure, and what the memory graph and swarm design imply for Paxis."
 excerpt: "The 245x headline is a Linux TUI first-frame number. Measuring CLI startup on a MacBook, we got 5.8x. Both are true, and the reason why matters more than either figure."
 date: 2026-07-28

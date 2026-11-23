@@ -1,6 +1,6 @@
 ---
-title: "Does It Actually Pay for an Agent to Tidy Its Own Memory Into Folders? The First Measurement of Filesystem Memory"
-seo_title: "Filesystem-Based Agent Memory Study: Organizing Halves Search Cost but Never Buys Accuracy | ThakiCloud"
+title: "Does Tidying Agent Memory into Folders Pay Off?"
+seo_title: "Does Tidying Agent Memory into Folders Pay Off?"
 seo_description: "Most deployed LLM agents keep long-term memory as a markdown folder tree. arXiv 2607.26637 is the first systematic study of that default, finding that organization reliably buys search economy but not answer quality, and that taxonomy discipline erodes as the store grows. We held the same yardstick to ThakiCloud's own store and found 1789 of 1878 files are raw logs."
 excerpt: "The first paper to put a price tag on tidying agent memory. Organization buys search cost. It does not buy accuracy."
 date: 2026-08-02

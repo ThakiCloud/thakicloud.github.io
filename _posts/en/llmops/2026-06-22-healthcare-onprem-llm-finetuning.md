@@ -1,7 +1,7 @@
 ---
-title: "Fine-Tuning LLMs On-Premises Without Exporting Patient Data - Healthcare and Biomedical AI Infrastructure"
+title: "Fine-Tuning LLMs On-Premises Without Exporting Patient Data"
 excerpt: "A complete workflow for healthcare organizations to fine-tune and serve domain-specific LLMs on in-house GPU clusters without sending patient data to external clouds. Covers ThakiCloud AI Platform's six fine-tuning methods, DevSpace, and vLLM Scale-to-Zero deployment."
-seo_title: "Healthcare LLM Fine-Tuning On-Premises - Build AI Without Exporting Hospital or Pharma Data - Thaki Cloud"
+seo_title: "Fine-Tuning LLMs On-Premises Without Exporting Patient Data"
 seo_description: "How to fine-tune and serve a healthcare LLM on-premises without exporting patient data. A complete guide to building domain-specific healthcare AI on-premises using six tuning methods (SFT, DPO, LoRA, and more) and vLLM Scale-to-Zero."
 date: 2026-06-22
 last_modified_at: 2026-06-22

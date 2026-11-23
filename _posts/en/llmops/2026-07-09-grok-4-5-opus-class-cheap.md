@@ -1,5 +1,5 @@
 ---
-title: "Opus-Class Performance at a Third of the Price: How Grok 4.5 Is Rewriting Model Economics"
+title: "Grok 4.5: Opus-Class Performance at a Third of the Price"
 excerpt: "SpaceXAI's newly released Grok 4.5 comes close to Opus 4.8 and GPT-5.5 in performance, at less than half the price. When benchmark gaps shrink to a point or two, cost per task and token efficiency start driving real-world model choices instead. We break down the published numbers and what this economics shift means for ThakiCloud's model routing strategy."
 tags:
   - model-economics

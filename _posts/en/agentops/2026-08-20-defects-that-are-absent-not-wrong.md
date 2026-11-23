@@ -1,5 +1,5 @@
 ---
-title: "Every defect code review found was a wrong one. What zeroed the yield was an absent one."
+title: "Absent Defects: What Zeroed the Agent Trace Yield"
 excerpt: "The tool that turns agent runs into training data produced nothing usable for any run that called a tool. Four of the seven defects came out of reading code; three did not, and those three were the ones blocking it."
 categories:
   - agentops

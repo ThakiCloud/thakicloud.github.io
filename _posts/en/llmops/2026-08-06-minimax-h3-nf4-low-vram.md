@@ -1,6 +1,6 @@
 ---
 title: "Why a 48GiB Model Runs on an 8GB Graphics Card"
-seo_title: "MiniMax-H3 NF4 Measured: 464GiB Down to 48GiB, Still Not 8GB | ThakiCloud"
+seo_title: "Why a 48GiB Model Runs on an 8GB Graphics Card"
 seo_description: "We measured the real size of DiffSynth-Studio's NF4 quantization of MiniMax-H3 from the HuggingFace manifest. Deduplicated, it is 4.08x compression, yet 48GiB is still six times the claimed 8GB VRAM. What closes the gap is sequential disk-to-VRAM loading, not quantization."
 excerpt: "It is true that it runs in 8GB. The technology that makes that sentence true is not quantization."
 date: 2026-08-06

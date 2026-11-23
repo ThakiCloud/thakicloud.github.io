@@ -1,7 +1,7 @@
 ---
-title: "pgroll - PostgreSQL 무중단 마이그레이션 완벽 가이드: 실무에서 안전한 스키마 변경하기"
+title: "pgroll: PostgreSQL 무중단 스키마 마이그레이션"
 excerpt: "pgroll을 사용하여 PostgreSQL 데이터베이스의 스키마를 무중단으로 변경하는 방법을 실제 테스트와 함께 단계별로 안내합니다. 제로 다운타임 마이그레이션의 핵심 개념부터 실무 적용까지 완벽 가이드."
-seo_title: "pgroll PostgreSQL 무중단 마이그레이션 완벽 가이드 - Thaki Cloud"
+seo_title: "pgroll: PostgreSQL 무중단 스키마 마이그레이션"
 seo_description: "pgroll로 PostgreSQL 스키마를 안전하게 변경하는 실무 가이드. 제로 다운타임 마이그레이션, 롤백 기능, expand/contract 패턴까지 실제 테스트 결과와 함께 완벽 설명"
 date: 2025-08-18
 last_modified_at: 2025-08-18

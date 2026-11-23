@@ -1,7 +1,7 @@
 ---
-title: "GLM-5.2 and the Open-Source RL Stack slime: Post-Training a Flagship Model in Two Days"
+title: "GLM-5.2 and slime: An Open RL Post-Training Stack"
 excerpt: "Z.ai open-sourced slime, the reinforcement-learning post-training framework it used for GLM-5.2. The entire OPD post-training of GLM-5.2 ran on slime in about two days. GLM-5.2 ships under an MIT license with a MoE+DSA architecture and a 1M-token context."
-seo_title: "GLM-5.2 + slime RL Post-Training Framework On-Prem Guide - ThakiCloud"
+seo_title: "GLM-5.2 and slime: An Open RL Post-Training Stack"
 seo_description: "GLM-5.2 architecture (MoE+DSA, 1M context, IndexShare), benchmarks, MIT license, the slime RL post-training stack (Apache-2.0), vLLM/SGLang serving, and a Kueue deployment perspective."
 date: 2026-06-21
 last_modified_at: 2026-06-21

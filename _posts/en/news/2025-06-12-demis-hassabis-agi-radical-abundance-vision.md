@@ -1,5 +1,5 @@
 ---
-title: "Google DeepMind CEO's Vision for AGI's Future: The Era of 'Radical Abundance' Is Coming"
+title: "Demis Hassabis and the Era of Radical Abundance"
 excerpt: "Nobel Prize winner and Google DeepMind CEO Demis Hassabis reveals stunning vision for AGI achievement timeline and humanity's future in WIRED interview"
 date: 2025-06-12
 lang: en

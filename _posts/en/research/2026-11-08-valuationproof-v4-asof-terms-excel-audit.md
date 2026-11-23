@@ -1,6 +1,6 @@
 ---
-title: "Three Things You Miss When Rebuilding Convertible Bond Terms from Filings: ValuationProof V4"
-seo_title: "ValuationProof V4 - DART Correction Chains, As-of Term Selection, Excel Cell Audit | ThakiCloud"
+title: "ValuationProof V4: Three Gaps in Rebuilding Bond Terms"
+seo_title: "ValuationProof V4: Three Gaps in Rebuilding Bond Terms"
 seo_description: "Rebuilding convertible bond terms as of a valuation date from OpenDART filings, we found gaps between effective and filing dates, uncertain retroactivity of corrections and missing conversion price adjustments. Here is what we verified on public filings and synthetic workbooks, and what we have not verified."
 excerpt: "On public DART filings we found gaps between effective and filing dates, uncertain retroactivity of corrections, and missing conversion price adjustments that make a filing-date rule return stale prices. V4.1 routes uncertain values to review. The Excel audit was checked only on synthetic workbooks; real accounting-firm models, RCPS and fair value were not validated."
 date: 2026-11-08

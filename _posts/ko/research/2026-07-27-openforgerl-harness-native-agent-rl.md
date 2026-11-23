@@ -1,6 +1,6 @@
 ---
-title: "에이전트를 배포 하네스 안에서 직접 학습시킵니다: OpenForgeRL이 푼 train-deploy 불일치"
-seo_title: "OpenForgeRL 논문 리뷰: 하네스 네이티브 에이전트 RL | ThakiCloud"
+title: "OpenForgeRL: 배포 하네스 안에서 에이전트 학습하기"
+seo_title: "OpenForgeRL: 배포 하네스 안에서 에이전트 학습하기"
 seo_description: "컬럼비아대와 다트머스대, 마이크로소프트 리서치가 공개한 OpenForgeRL(arXiv 2607.21557)을 정리했습니다. 경량 프록시가 하네스의 모델 호출을 대신 처리하며 학습 데이터로 기록하고, 쿠버네티스가 롤아웃마다 독립 컨테이너를 띄웁니다. 태스크 2,500개만으로 OSWorld-Verified 37.7, WebVoyager 72.3을 냈습니다."
 excerpt: "Claude Code나 Codex 같은 하네스 안에서 도는 에이전트를 오픈 인프라로 학습시키기 어려웠던 이유는 RL 스택이 상태를 가진 멀티프로세스 추론을 표현하지 못해서였습니다. 프록시와 쿠버네티스로 학습과 추론을 분리한 접근을 정리합니다."
 date: 2026-07-27

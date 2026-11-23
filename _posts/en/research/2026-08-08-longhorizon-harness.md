@@ -1,6 +1,6 @@
 ---
-title: "Agents Do Not Break Because the Model Is Weak, They Break Because of State: Installing LongHorizon-Harness"
-seo_title: "LongHorizon-Harness Hands-On: MEA Loop and Read-Only Audit Enforcement - ThakiCloud Research"
+title: "Agents Break on State, Not Model: LongHorizon-Harness"
+seo_title: "Agents Break on State, Not Model: LongHorizon-Harness"
 seo_description: "LongHorizon-Harness (arXiv:2608.01964) reframes long-horizon agent failure as a task-state management problem. We installed it, inspected the CLI, config schema, and read-only audit enforcement in code, and mapped it to ThakiCloud Paxis."
 excerpt: "WeaveBench went from 51.8% to 80.7% on the same model. What changed was not the model but where the state lives."
 date: 2026-08-08

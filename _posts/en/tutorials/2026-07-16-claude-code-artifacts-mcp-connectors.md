@@ -1,6 +1,6 @@
 ---
-title: "Claude Code Artifacts Now Call MCP Connectors: Building Live, Self-Refreshing Dashboards"
-seo_title: "Build Live Dashboards with Claude Code Artifacts + MCP Connectors - Thaki Cloud"
+title: "Claude Code Artifacts Now Call MCP Connectors"
+seo_title: "Claude Code Artifacts Now Call MCP Connectors"
 seo_description: "Claude Code artifacts can now call MCP connectors directly to fetch data and perform actions. Here's how to build a live dashboard or app that re-queries connectors every time it opens, how approval gates and access scope work, and what ThakiCloud Paxis makes of treating MCP connectors as first-class resources."
 excerpt: "Artifacts used to end as static markdown. Now they're living apps that call connectors. Here's how to build a dashboard that pulls fresh data every time you open it."
 date: 2026-07-16

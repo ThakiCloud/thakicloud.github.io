@@ -1,6 +1,6 @@
 ---
-title: "Wrong Costs the Whole Task; Doubt Costs One Call: The Veto Frontier of a 2,000-Skill Router"
-seo_title: "The Veto Frontier paper analysis - skill-router margin calibration in a 2,000-skill agent harness and the asymmetric cost of auto-routing vs. LLM judge escalation, break-even posterior p* = p_j + C_e/C_r and regret bound, the finite lattice structure of the RRF margin - ThakiCloud"
+title: "The Veto Frontier: Pricing Doubt in Skill Routing"
+seo_title: "The Veto Frontier: Pricing Doubt in Skill Routing"
 seo_description: "In an agent harness with 2,000 skills, the router's only confidence signal is the RRF score margin between the top-1 and the runner-up. A wrong auto-routing burns the whole task, while a judge call costs only one, so this paper distills 'at which margin to stop auto-executing' into the break-even posterior p* = p_j + C_e/C_r and a regret bound, covering the finite lattice structure of the RRF margin and the certified-threshold composition with a prior quantization study."
 excerpt: "Pick one skill wrong and the execution is gone whole; verify with a judge call and the price is a single one. On top of that asymmetry, 'how far to auto-execute and at what margin to doubt' is ultimately a question of calibration. The break-even point condenses into a single constant, p* = p_j + C_e/C_r, and the regret bound shows that what binds on the veto layer's cost is calibration error."
 date: 2026-09-13

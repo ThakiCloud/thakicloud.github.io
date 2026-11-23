@@ -1,7 +1,7 @@
 ---
-title: "Our First Public ASR Model Cuts Korean Dialect CER by 20%: Thaki-ASR-KO-Dialects-v1"
+title: "Thaki-ASR-KO-Dialects-v1: Korean Dialect ASR, Open"
 excerpt: "We fine-tuned Qwen3-ASR-1.7B on 289.6 hours of Korean regional dialect speech and released it on Hugging Face. Pooled CER across five regions drops from 13.52% to 10.81%, Jeju language from 39.07% to 28.44%, and standard Korean holds steady. Here is why it took three runs to pass the pre-registered gates, and what the model still cannot do."
-seo_title: "Thaki-ASR-KO-Dialects-v1 Release: Korean Dialect ASR Fine-Tuning Results | ThakiCloud"
+seo_title: "Thaki-ASR-KO-Dialects-v1: Korean Dialect ASR, Open"
 seo_description: "ThakiCloud's first public ASR model, Thaki-ASR-KO-Dialects-v1. Qwen3-ASR-1.7B fully fine-tuned on 289.6 hours of Gangwon, Gyeongsang, Jeolla, Jeju and Chungcheong dialect speech: pooled CER down 20.1%, Jeju dialectal speech down 27.2%, Zeroth unchanged. Three training runs and the pre-registered gate verdicts, in numbers."
 date: 2026-10-24
 last_modified_at: 2026-11-09

@@ -1,7 +1,7 @@
 ---
 title: "Security: Not the Next Market, but the One Already Clocked In"
 excerpt: "Cybersecurity is the market Jensen Huang called the 'next great AI market.' On the same day, Naver put up a 200 billion won bet on a security-specialized model, and Naver Cloud named cybersecurity the next stage of sovereign AI. This post reads, through today's execution surface, why a market labeled 'next' has already clocked in, and lays out the structure a company should buy first in that market."
-seo_title: "Security: Not the Next Market, but the One Already Clocked In: How to Read Three Security Declarations on the Same Day | ThakiCloud"
+seo_title: "Security: Not the Next Market, but the One Already Clocked In"
 seo_description: "Jensen Huang's declaration that the 'next great AI market is cybersecurity,' Naver's 200 billion won security-specialized model, and Naver Cloud's next stage for sovereign AI. This piece reads today's news through the expansion of the execution surface that the three same-day declarations point to, and the verification structure a company must put in place first."
 date: 2026-09-11
 last_modified_at: 2026-09-11

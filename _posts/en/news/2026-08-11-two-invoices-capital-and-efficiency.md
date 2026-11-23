@@ -1,7 +1,7 @@
 ---
 title: "$500 Billion and Two H200s: Two Invoices That Arrived the Same Day"
 excerpt: "Nvidia raised $500 billion to turn GPUs into collateral assets, while Korea's sovereign foundation model finalists get judged on two H200 cards. Today's news showed, in two opposite directions at once, where AI cost actually gets calculated."
-seo_title: "$500 Billion and Two H200s: Capital and Efficiency Collide in AI Infrastructure, August 2026"
+seo_title: "$500 Billion and Two H200s: Two Invoices That Arrived the Same Day"
 seo_description: "We read Nvidia's $500 billion compute financing, Intel's $15 billion stock offering, looser data-center ABS rules, and Korea's sovereign LLM finalists' MoE efficiency race side by side, and trace the signal of AI billing shifting from seats to executions."
 date: 2026-08-11
 last_modified_at: 2026-08-11

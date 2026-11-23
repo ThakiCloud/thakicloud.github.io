@@ -1,7 +1,7 @@
 ---
-title: "Ling-flash-2.0: Revolutionary MoE Language Model with 100B Parameters and Lightning-Fast Inference"
+title: "Ling-flash-2.0: A Fast Open MoE Language Model"
 excerpt: "Discover Ling-flash-2.0, inclusionAI's latest MoE architecture achieving SOTA performance with only 6.1B activated parameters while delivering 7× efficiency gains and 200+ tokens/s inference speed."
-seo_title: "Ling-flash-2.0 Model Review: 100B Parameter MoE with 6.1B Activation - Thaki Cloud"
+seo_title: "Ling-flash-2.0: A Fast Open MoE Language Model"
 seo_description: "Complete analysis of Ling-flash-2.0's MoE architecture, performance benchmarks, deployment options with vLLM/SGLang, and practical implementation guide for enterprise workflows."
 date: 2025-09-18
 tags:

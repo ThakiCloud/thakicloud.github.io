@@ -1,7 +1,7 @@
 ---
 title: "ScreenCoder: AI 기반 비주얼 코딩 어시스턴트 완전 가이드"
 excerpt: "스크린샷만으로 코드를 자동 생성하는 ScreenCoder의 설치부터 고급 활용까지, AI 비전 모델을 활용한 혁신적인 개발 워크플로우를 완전 정복합니다."
-seo_title: "ScreenCoder AI 비주얼 코딩 도구 완전 가이드 - 화면에서 코드로 - Thaki Cloud"
+seo_title: "ScreenCoder: AI 기반 비주얼 코딩 어시스턴트 완전 가이드"
 seo_description: "ScreenCoder로 스크린샷, 디자인 목업, UI 이미지에서 자동으로 HTML, CSS, React, Vue 코드를 생성하는 방법과 실무 활용 전략을 상세 설명합니다."
 date: 2025-08-03
 last_modified_at: 2025-08-03

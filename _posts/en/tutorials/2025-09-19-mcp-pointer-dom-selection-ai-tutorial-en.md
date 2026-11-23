@@ -1,7 +1,7 @@
 ---
-title: "MCP Pointer: Revolutionary DOM Element Selection for AI-Powered Web Development"
+title: "MCP Pointer: Selecting DOM Elements for AI Web Development"
 excerpt: "Learn how to use MCP Pointer's Option+Click functionality to bridge browser DOM elements with AI coding assistants through the Model Context Protocol. Complete setup guide and practical examples included."
-seo_title: "MCP Pointer Tutorial: DOM Element Selection for AI Tools - Thaki Cloud"
+seo_title: "MCP Pointer: Selecting DOM Elements for AI Web Development"
 seo_description: "Master MCP Pointer's Chrome extension and MCP server to enable AI assistants like Claude Code and Cursor to analyze browser DOM elements through Option+Click selection."
 date: 2025-09-19
 tags:

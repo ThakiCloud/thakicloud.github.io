@@ -1,7 +1,7 @@
 ---
-title: "Seed-X-Instruct-7B 모델 변환 완벽 가이드: GGUF vs MLX (macOS Apple Silicon)"
+title: "Seed-X-Instruct-7B: 맥에서 GGUF와 MLX 변환하기"
 excerpt: "ByteDance Seed-X-Instruct-7B 모델을 GGUF와 MLX 두 가지 방법으로 변환하여 Ollama, LM Studio에서 활용하는 실전 가이드"
-seo_title: "Seed-X-Instruct-7B GGUF MLX 변환 가이드 macOS - Thaki Cloud"
+seo_title: "Seed-X-Instruct-7B: 맥에서 GGUF와 MLX 변환하기"
 seo_description: "ByteDance Seed-X-Instruct-7B를 GGUF 4-bit 양자화와 MLX Apple Silicon 최적화로 변환하여 Ollama, LM Studio에서 사용하는 완벽한 macOS 튜토리얼"
 date: 2025-07-19
 last_modified_at: 2025-07-19

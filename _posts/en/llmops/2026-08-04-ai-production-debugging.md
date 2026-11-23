@@ -1,7 +1,7 @@
 ---
 title: "An AI Outage You Can't Reproduce: What to Suspect First"
 excerpt: "An AI feature breaks and there's no stack trace. The same input won't reproduce it, the error logs are clean, and user complaints keep piling up. This post covers how to capture a failure you can't reproduce, the order for narrowing the cause across input, model, and code, how to catch quality that's quietly degrading, and the criteria for deciding on a rollback."
-seo_title: "AI Production Debugging: A Diagnostic Order for Irreproducible Outages - Thaki Cloud"
+seo_title: "An AI Outage You Can't Reproduce: What to Suspect First"
 seo_description: "Explains, with code, how to capture snapshots of an irreproducible AI outage, the order for narrowing the cause among a shift in input distribution, a model change, and a code change, how to catch silent quality degradation using incident statistics, and the criteria for deciding whether to roll back."
 date: 2026-08-04
 tags:

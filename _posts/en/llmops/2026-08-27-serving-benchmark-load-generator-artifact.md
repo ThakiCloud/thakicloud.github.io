@@ -1,6 +1,6 @@
 ---
 title: "We Quadrupled the Chunk Size and TTFT Moved 0.4%"
-seo_title: "Your serving benchmark's p99 TTFT is set by the load generator - burst vs Poisson arrivals measured on B200 | ThakiCloud"
+seo_title: "We Quadrupled the Chunk Size and TTFT Moved 0.4%"
 seo_description: "A benchmark firing 128 requests at once reported a p99 TTFT of 5.38 seconds. The same endpoint under Poisson arrivals carrying 91% of that throughput reported 0.477 seconds. Here is why quadrupling the chunk size changed nothing, and why the binding constraint moving from TTFT to TPOT changes which knob you should reach for."
 excerpt: "We raised the chunk size from 8,192 to 32,768 and p99 TTFT went from 5.380 seconds to 5.401. The knob was not broken. It was never the knob's problem. It was our load generator."
 date: 2026-08-27

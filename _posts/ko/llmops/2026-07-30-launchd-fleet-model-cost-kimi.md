@@ -1,7 +1,7 @@
 ---
-title: "90개 자동화 플릿의 모델 비용 다이어트: Opus에서 Sonnet, 그리고 Kimi K3까지"
+title: "자동화 플릿의 모델 비용 다이어트: Opus에서 Kimi K3까지"
 excerpt: "매일 아침 수십 개의 자동화가 Claude API로 깨어나는 환경이라면, 모델 티어를 한 칸 내리는 것만으로 청구서의 40~60%가 사라집니다. 더 의외의 사실은 흔히 '싸다'고 알려진 Kimi K3조차 output 토큰 정가는 Sonnet 5와 똑같다는 점입니다. 90개 launchd 작업 플릿을 실제로 옮기며 API 청구서가 어떻게 줄었는지, 그리고 모델을 바꿔도 산출물이 흔들리지 않게 만든 가드레일 여섯 가지를 정리합니다."
-seo_title: "LLM 자동화 플릿 비용 최적화: Opus→Sonnet→Kimi K3 | Thaki Cloud"
+seo_title: "자동화 플릿의 모델 비용 다이어트: Opus에서 Kimi K3까지"
 seo_description: "90개 launchd 자동화를 Claude Opus에서 Sonnet 5로, 다시 Kimi K3로 옮기며 API 비용을 40~60% 줄인 실측 기록과, 모델을 교체해도 스킬 산출물이 흔들리지 않게 만드는 여섯 가지 가드레일을 정리합니다."
 date: 2026-07-30
 last_modified_at: 2026-07-30

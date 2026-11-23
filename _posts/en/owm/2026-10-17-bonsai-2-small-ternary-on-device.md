@@ -1,6 +1,6 @@
 ---
-title: "Fitting a 9B Model into 2GB: Bonsai 2 Small Series (2B, 4B, 9B) Ternary Models, ThakiCloud Independent Verification"
-seo_title: "The Bonsai 2 2B, 4B, and 9B models announced by PrismML on 2026-10-15 are Qwen3.5-based ternary (-1, 0, +1) low-bit models. They report 90 to 95 percent retention on agent, math, code, and vision tasks at 0.43 to 2GB, and ThakiCloud verified the public weights at the bit level, confirming the ternary claim holds and that standard runtimes cannot load the files while the bundled runtime is required. - ThakiCloud"
+title: "Bonsai 2 Small: Fitting a 9B Model into 2GB"
+seo_title: "Bonsai 2 Small: Fitting a 9B Model into 2GB"
 seo_description: "Bonsai 2 small series (2B, 4B, 9B) ternary model review: reported benchmarks for 0.43 to 2GB on-device deployment, ThakiCloud's bit-level independent verification (full unpack of all 151 modules), measured generation on M4 Pro, and a runtime matrix covering GGUF and MLX."
 excerpt: "The Bonsai 2 2B, 4B, and 9B models announced by PrismML on 2026-10-15 are Qwen3.5-based ternary (-1, 0, +1) low-bit models. They report 90 to 95 percent retention over the original at 0.43 to 2GB of capacity, and ThakiCloud verified the public weights at the bit level, confirming the ternary claim holds. The standard runtimes cannot load the files, and the bundled runtime that handles the Hadamard rotation is required. Both points were re-confirmed by direct measurement."
 date: 2026-10-17

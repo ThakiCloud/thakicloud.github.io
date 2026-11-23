@@ -1,7 +1,7 @@
 ---
 title: "Qwen3.6-27B at 4-bit: Why NVFP4 Quantization Came Down to Hopper"
 excerpt: "NVIDIA's Qwen3.6-27B-NVFP4 compresses a 27B hybrid-attention reasoning model to 4-bit, cutting memory by roughly 2.5x while keeping benchmark gaps within 1 point of FP8. Unlike the earlier Gemma NVFP4 build that effectively required Blackwell, this one lists Hopper as a supported target, so any team already running H100/H200 can try it on-premises today. Model facts, the NVFP4 mechanism, the serving path, and ThakiCloud's serving perspective."
-seo_title: "Qwen3.6-27B-NVFP4 On-Prem Serving Guide - Hopper/Blackwell 4-bit Quantization - Thaki Cloud"
+seo_title: "Qwen3.6-27B at 4-bit: Why NVFP4 Quantization Came Down to Hopper"
 seo_description: "Serving Qwen3.6-27B-NVFP4 (27B, hybrid attention, 262K context, multimodal reasoning) with vLLM: NVFP4 4-bit quantization cuts memory ~2.5x, benchmarks within 1 point of FP8. Hopper and Blackwell support, Apache 2.0. ThakiCloud K8s on-prem serving and agent-worker perspective."
 date: 2026-07-01
 last_modified_at: 2026-07-01
