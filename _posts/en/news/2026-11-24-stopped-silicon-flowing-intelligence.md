@@ -27,6 +27,9 @@ This morning's digest carries two movements in exactly opposite directions. Inte
 
 According to Palmer Luckey's remarks, roughly 600,000 Nvidia H200 processors are tied up at Chinese ports. This happened after the Chinese government refused to process import permits. The H200 is a high-end AI chip placed directly under export rules. The movement of this chip is predicated on government approval from the start. On the other side, Xingchen AGI Lab under China Telecom released the BF16 weights of its model Xing4.1-Preview on Hugging Face under the Apache 2.0 license. It is 285B in scale. No one needs permission to download it. One stopped at customs. The other is already in the download queue.
 
+![Chips tied up at the dock on the left, flowing intelligence on the right](/assets/images/stopped-silicon-flowing-intelligence-hero.webp)
+*The title's contrast, visualized. The left is stopped silicon, the right is flowing intelligence.*
+
 ## Hardware in the Age of the Standstill
 
 The signal to read on the regulation side is bigger than the story of one chip model. The US introduced new export controls to cut China's access to advanced AI chips. The ripple reaches Southeast Asia. A regional data center boom worth hundreds of billions of dollars is under direct threat, and the regional shares tied to it have already turned to a decline.
@@ -66,6 +69,27 @@ The same morning carried the argument for the accelerator, the proposal for the 
 The implication of that assumption is clear. When intelligence enters the runtime, the next question is not the amount of intelligence but the safety of execution. Where will it run, under whose authority, and what record will it leave behind? The common-limits proposal and the agent defense runtime are two sides of that question. They are only speaking of the same direction, to make intelligence verifiable inside the runtime, at different altitudes.
 
 The year 2027 shows the clock of this direction. If common limits harden into the industry's common language, a new question will appear in the enterprise procurement Q&A: "Within what limits do your agents execute?" The side that has an execution environment able to answer that question today is the side that will sign that Q&A next year. Today's bottleneck is, in effect, already attached to the question of execution safety.
+
+```mermaid
+flowchart TB
+    subgraph HW["Hardware, the age of the standstill"]
+        H1["600,000 H200 chips, tied up at Chinese ports"]
+        H2["US export controls, China refuses import permits"]
+        H3["Southeast Asia data center boom revalued"]
+        H1 --> H2 --> H3
+    end
+    subgraph SW["Software, the age of the flow"]
+        S1["Xing4.1-Preview 285B open weights, Apache 2.0"]
+        S2["GLM-5.4, Loop Transformer architecture"]
+        S3["Shirudo runtime, agent defense"]
+        S1 --> S2 --> S3
+    end
+    H3 --> M["The shifting bottleneck, from supply to execution"]
+    S3 --> M
+    M --> E["The enterprise question, the execution environment"]
+```
+
+*The diagram. Set the standstill and the flow side by side and the line of the shifting bottleneck appears. While the chips are tied up at the port, models and runtimes keep flowing, and that flow enters the enterprise's execution environment.*
 
 ## The Enterprise Question Lies in the Execution Environment
 

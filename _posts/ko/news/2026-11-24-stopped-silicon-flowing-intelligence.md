@@ -19,11 +19,15 @@ tags:
   - agentops
 categories:
   - news
+canonical_url: "https://thakicloud.com/tech-blog/ko/news/stopped-silicon-flowing-intelligence/"
 ---
 
 오늘 아침 다이제스트에는 정반대 방향의 움직임 두 개가 나란히 실려 있습니다. 지능은 인터넷을 타고 계속 흐르는 것이다. 지능을 싣는 칩은 규제에 걸려 항구에서 멈추기 시작했습니다. 세계에서 가장 비싼 칩이 항구에서 대기하는 동안, 2850억 파라미터짜리 오픈 모델은 같은 아침에 Hugging Face에 올라와 있었습니다. 같은 날의 뉴스가 서로의 반대편을 확인시켜 주는 날은 흔하지 않습니다. 오늘의 다이제스트는 그 드문 날에 속합니다. 이 대비는 이번 주 뉴스의 한 줄로 끝나는 종류가 아닙니다. 앞으로의 분기를 가르는 선 위에 놓여 있는 셈입니다.
 
 팔머 럭키의 발언에 따르면, Nvidia H200 프로세서 약 60만 개가 중국 항구에 묶여 있습니다. 중국 정부가 수입 허가 처리를 거부하면서 생긴 일입니다. H200은 수출 규칙이 직접 관리 대상에 올린 고급 AI 칩입니다. 칩의 움직임은 처음부터 정부의 승인을 전제로 하는 것입니다. 반대로, 중국텔레콤 산하 Xingchen AGI Lab은 Xing4.1-Preview라는 모델의 BF16 웨이트를 Apache 2.0 라이선스로 Hugging Face에 공개했습니다. 285B 규모입니다. 내려받을 허가는 누구에게도 필요 없습니다. 하나는 통관에서 멈췄습니다. 하나는 이미 다운로드 대기열에 들어 있습니다.
+
+![왼쪽으로는 항구에 묶인 칩, 오른쪽으로는 흐르는 지능을 나란히 둔 이미지](/assets/images/stopped-silicon-flowing-intelligence-hero.webp)
+*제목의 대비를 형상화했습니다. 왼쪽은 멈춘 실리콘, 오른쪽은 흐르는 지능.*
 
 ## 하드웨어는 멈춤의 시대
 
@@ -39,6 +43,8 @@ categories:
 
 기업의 계산서는 여기서 바뀝니다. GPU 가용성과 가격이 정책 변수가 되는 순간, 용량 계획은 시장 논리만으로 짜일 수 없는 것입니다. 하드웨어는 더 이상 사면 들어오는 자원이 아니라, 도착 시점이 불확실한 자원이 됐습니다. 그리고 도착이 불확실해지면, 가진 하드웨어 위에서 무엇을 돌릴지가 더 중요한 질문으로 떠오릅니다. 가진 하드웨어의 가동률을 지키는 일, 그 위에 올라오는 소프트웨어의 흐름을 받는 일. 둘 다 같은 실행 환경의 역량으로 묶입니다.
 
+![stopped-silicon-flowing-intelligence 슬라이드 1](/assets/images/stopped-silicon-flowing-intelligence-slide-01.webp)
+
 ## 소프트웨어는 흐름의 시대
 
 소프트웨어 쪽의 다이제스트는 반대로 흐릅니다. 두 항목 모두 중국에서 왔지만, 가리키는 곳은 다릅니다. 하나는 양(量)의 이야기입니다. Xing4.1-Preview는 아직 성능 검증을 마친 모델이 아닙니다. Preview라는 말이 그대로 그 상태를 가리킵니다. 그런데도 오늘의 뉴스인 이유는 라이선스에 있습니다. Apache 2.0으로 풀린 285B 오픈웨이트는, 대형 모델이 더 이상 공급사의 창구에서만 나오는 물건이 아니라는 것을 보여줍니다. 이 라이선스는 웨이트의 상업적 이용에 대가를 묻지 않습니다. 내려받아, 고쳐 쓰고, 자기 집 서버에 올리더라도 추가 문서를 꺼낼 필요가 없는 조건입니다.
@@ -50,6 +56,8 @@ BF16이라는 포맷도 주목할 대목입니다. 압축을 거친 미리보기
 그래서 오늘의 대비는 이런 모양이 됩니다. 하드웨어 쪽은 항구에서 멈춰 서는 동안, 소프트웨어 쪽은 주 단위로 늘어나고 있습니다. 모델 지형이 하드웨어 지형보다 빠르게 바뀌는 시대가 시작됐습니다.
 
 이 대비는 규제된 칩의 세상에서 의외로 실용적입니다. 오픈웨이트의 흐름은 하드웨어 제약의 상쇄항으로 작동합니다. 새로운 칩이 들어오지 않아도, 소프트웨어 쪽이 계속 흐르면 이미 가진 용량에서 더 많은 것을 뽑아낼 수 있습니다. 역량의 성장 방향이 '더 사는 것'에서 '흘러온 것을 더 돌리는 것'으로 옮겨가고 있습니다.
+
+![stopped-silicon-flowing-intelligence 슬라이드 2](/assets/images/stopped-silicon-flowing-intelligence-slide-02.webp)
 
 ## 흐름에는 도착지가 있다
 
@@ -65,6 +73,29 @@ BF16이라는 포맷도 주목할 대목입니다. 압축을 거친 미리보기
 
 2027이라는 해는 이 방향의 시계를 보여줍니다. 공동 한도가 만약 산업의 공통 문장으로 굳어지면, 기업의 조달 문답서에는 '당신의 에이전트는 어떤 한도 안에서 실행되는가'라는 질문이 새로 생깁니다. 오늘 그 질문을 이미 답할 수 있는 실행 환경을 갖춘 쪽이, 내년에 그 문답서에 서명하는 쪽입니다. 오늘의 병목은 이미 실행의 안전이라는 질문에 붙어 있는 셈입니다.
 
+```mermaid
+flowchart TB
+    subgraph HW["하드웨어, 멈춤의 시대"]
+        H1["H200 60만 개, 중국 항구에 묶임"]
+        H2["미국 수출 규제, 중국 수입 허가 거부"]
+        H3["동남아 데이터센터 붐 재평가"]
+        H1 --> H2 --> H3
+    end
+    subgraph SW["소프트웨어, 흐름의 시대"]
+        S1["Xing4.1-Preview 285B 오픈웨이트, Apache 2.0"]
+        S2["GLM-5.4, Loop Transformer 아키텍처"]
+        S3["Shirudo 런타임, 에이전트 방어"]
+        S1 --> S2 --> S3
+    end
+    H3 --> M["병목 이동선, 공급에서 실행으로"]
+    S3 --> M
+    M --> E["기업의 질문, 실행 환경"]
+```
+
+*그림. 멈춤과 흐름을 나란히 두면 병목의 이동선이 보입니다. 칩이 항구에 묶이는 동안 모델과 런타임은 계속 흐르고, 그 흐름은 기업의 실행 환경으로 들어옵니다.*
+
+![stopped-silicon-flowing-intelligence 슬라이드 3](/assets/images/stopped-silicon-flowing-intelligence-slide-03.webp)
+
 ## 기업의 질문은 실행 환경에 있다
 
 그럼으로, 항구의 장면으로 돌아섭니다. 오늘의 움직임 두 가지를 동시에 맞는 기업에게는 공통점 하나만 남습니다. 허가를 기다릴 수 없는 것입니다. 칩은 올 때 옵니다. 다음 분기 후보 풀에서 어떤 아키텍처가 쓸모를 보일지는 지금으로선 알 수 없는 것입니다. 준비는 실행 환경 쪽에서 해야 합니다.
@@ -79,6 +110,8 @@ ThakiCloud의 Paxis는 에이전트 네이티브 클라우드의 정식 제품(v
 
 칩이 항구에서 기다리는 동안, 기업이 준비해야 하는 것은 더 많은 칩이 아니다. 지능이 자기 자리에서, 자기 규칙대로, 증명 가능하게 돌아가는 장소다.
 
+![stopped-silicon-flowing-intelligence 슬라이드 4](/assets/images/stopped-silicon-flowing-intelligence-slide-04.webp)
+
 ## 참고 자료
 
 이 글은 아래 뉴스를 종합해 작성했다.
@@ -90,4 +123,3 @@ ThakiCloud의 Paxis는 에이전트 네이티브 클라우드의 정식 제품(v
 - HuggingNews, [OpenAI and Cisco Launch Shirudo Linux Runtime for AI-Driven System Defense](https://huggingnews.com/ai/openai-and-cisco-launch-shirudo-linux-runtime-for-ai-driven-system-defen-c8731224)
 - HuggingNews, [Meta AI Chief Says Superintelligence Is Arriving Following AI Proof of Riemann Hypothesis](https://huggingnews.com/ai/meta-ai-chief-says-superintelligence-is-arriving-following-ai-proof-of-r-915d949d)
 - HuggingNews, [China Telecom Releases Weights for 285B Xing4.1-Preview AI Model](https://huggingnews.com/ai/china-telecom-releases-weights-for-285b-xing41-preview-ai-model-9b939d94)
-
