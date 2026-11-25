@@ -22,6 +22,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/agentops/legal-agent-70-perc
 
 A number landed quietly in the legal AI industry: 30.3%. It is the all-pass rate that the post-trained version of the open model Muse Spark Open set on the Legal Agent Benchmark. Open-weight or closed-weight, it is the first time anything has crossed 30% on this benchmark. The coverage reported it as the first 30% breakthrough. That is accurate. But the important part is what stays behind it. Look at it the other way and the story changes. It means that even the best model today fails 70% of legal agent tasks. That gap is not something you close by swapping in another model. It is something design must close. Specialized domains such as law, life sciences, and art history have long been grouped as areas AI still cannot handle. This week the label on that group simply shifted, from "cannot do it yet" to "still cannot do much". The direction is clear. The numbers are going up. The open question is how far. Today we will look at the 70% left behind the 30% in the headline, and what the enterprise should do about it.
 
+![The 30% band of light, and the structure that fills the remaining 70%](/assets/images/legal-agent-70-percent-gap-hero.webp)
+*A visual metaphor for the article's key idea. The 70% left behind the 30% headline, and the operating layer designed to fill it.*
+
 ## The First 30%, and the Standard Behind It
 
 To interpret this result, start with the standard. On an agent benchmark, "pass" is not a short-answer question. A task that runs through several steps must be completed all the way to the end to count as a pass. This is the standard called all-pass. If the work strays in any one segment, the whole task is scored as a failure. Most agent benchmarks evaluate a multi-step flow in which the model makes a plan, reads materials, calls tools, and then checks the result. Stray by one step in that flow and the score is zero. At this standard, 30.3% is not the number of "a well-performing model". It is the number of a starting point that has just stepped into a specialized domain for the first time. Why does the distinction matter? If it were a "score", you could wait for the next model version to post 40%, 50%. If it is a "starting point", you have both a reason to put it in production today and a reason not to. Legal work is also one of the areas where the enterprise has been most cautious about AI. Documents are confidential, mistakes turn into liability, and every step must be provable later. So the meaning of this result is not "let us run a legal agent right now". It is closer to "a starting point you can run has appeared". One more fact to pin down here: the model that crossed 30% is open-weight. The fact that this score came from a post-trained version of an open model means the path to reproduce and extend the same benchmark results in your own environment is also open. When access to a model is not restricted, the relative position of a company that has invested in the operating layer changes. And what will ultimately fill the remaining 70% is not the model. It is the structure that wraps the model, in other words the operating layer.
@@ -35,6 +38,26 @@ The general-purpose model side is a different story. Speed and price come down v
 ## What to Do with the 70%
 
 The common belief is one thing: adopt it once the model's success rate goes up. The enterprise answer is the opposite. Right now, at 30%, design the 70%. In legal work, a 70% chance of failure leads to an incident problem. Miss one clause in contract review, or let one citation in a compliance document drift off, and the adopting organization takes the liability. During the time you wait for the model's score to rise, the structure that reduces this risk can already be built from now. Waiting also carries a cost. While a competitor wraps its 30% in a 70% design, we end up staring only at the benchmark's next announcement. In the meantime, the standard for adopting agents in specialized domains is already being set. Unraveled, this reduces to six questions. The first is autonomy. You do not need to give the same permission to every task. Some tasks get full permission, some are sent to a person for review, and some only receive a suggestion. In the legal domain, the natural order is to start with tasks that have many review steps and raise autonomy only for tasks that post a score. The second is pre-execution inspection. You need a policy gate that checks, before execution, what data it reads, what actions it takes, and how far it can go. The third is where it runs. Only by executing in an isolated sandbox separated from production does a failed run avoid leaving a wound in the real system. The fourth is records. Without an audit log that can later explain who, when, in which task, left which result, you cannot leave the 70% failure as a lesson learned. You need records to analyze the failed 70% and make the next 30%. Without an audit log, you cannot even answer which rule prevented which failure. The fifth is where the data sits. Because material as confidential as legal documents should be kept from moving outside, the execution environment itself often has to be inside the company. The sixth is model choice. Instead of attaching the best model to every request, use the cheapest model that gets the job done. A coding agent can use the model that got 10 times faster this week, and a light document summary may be well served by a cheaper one. Line these six questions up and a common point emerges. None of them is choosing a model. All of them are answers about the structure outside the model, the operating layer. The 70% gap is not a problem the model vendor will close for you. It is the part the enterprise itself must hold in its operating layer.
+
+```mermaid
+flowchart TB
+    A["A legal agent task<br>plan, read materials, call tools, re-check the result"] --> B["Pass only if completed to the end<br>all-pass standard, 30.3%"]
+    B --> C{"The remaining 70%<br>not closed by swapping the model"}
+    C --> D["Autonomy levels L0~L3<br>start with the heavy-review tasks"]
+    C --> E["Pre-execution policy gate<br>checks what it reads, does, and may reach"]
+    C --> F["Isolated sandbox<br>a failed run never wounds production"]
+    C --> G["Audit log<br>who, when, which task, which result"]
+    C --> H["Where the data sits<br>confidential material stays inside the company"]
+    C --> I["Per-task model selection<br>the cheapest model that gets it done"]
+    D --> J["The operating layer<br>analyze the failed 70% to make the next 30%"]
+    E --> J
+    F --> J
+    G --> J
+    H --> J
+    I --> J
+```
+
+*Figure. The 70% left behind the 30.3% all-pass result. The six operating-layer components that answer the six questions.*
 
 ## Where the 70% Gets Designed
 
