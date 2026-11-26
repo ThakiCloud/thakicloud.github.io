@@ -24,6 +24,9 @@ canonical_url: "https://thakicloud.com/tech-blog/en/news/gpu-has-an-oil-price/"
 
 GPU compute now has a market price. Four numbers sat side by side in this morning's news: $10 and $12, $4.5 billion, and 2028. They say it. A price that moves up and down between buyers and sellers. Just as the day an industry's oil gets listed on an exchange is confirmed by the oil price, the same market opened for the AI industry. There is a bigger meaning. In an era where agents work continuously, the fact that the raw material of that work is a market means cost has become a variable. It also means the cost of intelligence is starting to shift its center of gravity from model fees toward the spot price of a raw material.
 
+![Four screens of the compute market converging into one price line](/assets/images/gpu-has-an-oil-price-hero.webp)
+*The core concept of the post visualized. The four screens of spot, prediction market, credit, and supply converge into a single screen: the market for compute.*
+
 ## Spot: One Customer's Move Makes the Price
 
 SpaceX cut the spot rental price for small Blackwell GPU clusters to $10 to $12 per GPU hour. It had previously been around $15 to $15.5. The cut is roughly 20% to 35%. According to reporting that cites SemiAnalysis, behind the cut is Anthropic's exit from a 50,000-chip cluster. One large customer's move alone was enough to shake the cash price of top-tier chips this much.
@@ -61,6 +64,28 @@ Three things overlap. The unit of output moves from a single token to a paper, g
 ## Moving the Four Screens to the Enterprise
 
 The four scenes become a checklist when moved into enterprise operations. First, spot. When is the compute for our agent workload fixed, and at what price. If the volume exposed to spot is large, a customer change at one supplier is a change in our cost. Second, prediction markets. Where do you place the basis for next year's budget. With only a single supplier's brochure, there is no standard to judge a reasonable price. Now that the whole market's price expectation is starting to be used as an indicator, the two bases must sit side by side. Third, credit. You now need to look at the financial structure of the supplier selling capacity. In a world where chip-collateralized loans are sold onto the market, a supplier's funding line is the continuity of our service. Fourth, supply. The diversity of supply routes and alternative execution environments become a basic premise of operations. The four screens end up being one screen. The screen of a compute market.
+
+```mermaid
+flowchart TB
+    S1["Screen 1: Spot<br/>spot cut to $10 to $12, roughly 20% to 35%<br/>a 50,000-chip cluster exit shakes top-tier prices"]
+    S2["Screen 2: Prediction market<br/>bets on H100, B200, B300 on-demand prices<br/>trading conditions through 2028"]
+    S3["Screen 3: Credit<br/>$4.5B loan sale, collateral is the Meta GPUs<br/>chips move from equipment to financial asset"]
+    S4["Screen 4: Supply<br/>after the US curbs China remote access<br/>thousands of B300s flood the resale market"]
+    S1 --> M["Four screens become one<br/>a market where compute, the raw material, gets a price"]
+    S2 --> M
+    S3 --> M
+    S4 --> M
+    M --> C1["Spot<br/>when and at what price is the workload fixed"]
+    M --> C2["Prediction market<br/>put the budget basis side by side with the market indicator"]
+    M --> C3["Credit<br/>look at the financial structure of the supplier selling capacity"]
+    M --> C4["Supply<br/>diversity of supply routes and alternative execution environments"]
+    C1 --> H["Hedge with a platform<br/>per-task model selection, isolated sandbox execution, audit logs"]
+    C2 --> H
+    C3 --> H
+    C4 --> H
+```
+
+*Figure. The four screens of the day's news (spot, prediction market, credit, supply) converge into one screen, the market for compute, and the enterprise meets that volatility with a checklist and a platform hedge.*
 
 ## The Question Left for Enterprises: A Platform That Handles Volatility
 
