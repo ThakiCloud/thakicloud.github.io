@@ -5,7 +5,7 @@ excerpt: "The day a C4ADS investigation revealed that two China-owned firms had 
 seo_title: "Three Leaks in AI: the Border of the Chip, the Gate of the Token, the Gap in People"
 seo_description: "Nvidia chip export-control bypass routes, agent tokens at five times a chatbot's and the open-weight surge, shadow AI and technical debt. This post examines where to draw the border in an era where execution is autonomous, using today's three news stories."
 date: 2026-11-27
-last_modified_at: 2026-11-27
+last_modified_at: 2026-11-28
 author_profile: true
 toc: true
 toc_label: "Contents"
@@ -19,6 +19,9 @@ categories:
   - news
 canonical_url: "https://thakicloud.com/tech-blog/en/news/the-border-is-at-the-chip-the-leak-is-in-the-behavior/"
 ---
+
+![The border wall over the chip and the light streams that slip through its seams, abstracted](/assets/images/the-border-is-at-the-chip-the-leak-is-in-the-behavior-hero.webp)
+*An abstract image of today's three news stories: the border sits on the object, the chip, and the leak flows through the behavior.*
 
 ## Two Companies on the Same Partner List
 
@@ -39,6 +42,18 @@ The third leak is the hardest to stop because it is the least visible. The subje
 ## The Border Is in the Wrong Place
 
 Put the three leaks side by side and one pattern shows up. The rule follows the object; the leak follows the execution. Export control goes after the chip, the mandatory disclosure regime goes after the model, and shadow AI policy goes after the tool. But what actually moves data and makes judgments is no longer the object but the execution. Before, controlling the server room meant controlling the information. Now, an agent chooses tools, calls APIs, and moves data along its own workflow. What the same chip runs, what the same model sends out, and what leaks through the convenience of the same employee are all decided by "under what rules it executes." Korea's position is especially interesting here. It is a beneficiary of the chip wall, and at the same time it is running the border debate of enacting the Defense AI Act on a sovereign AI line, while the gate of behavior inside companies is still open. The wall of the chip and the wall of the law are already in place; only the gate of behavior is still at the blueprint stage. The question is not whether to build a higher wall but where to draw the border. If the object is the border, it is a wall. If execution is the border, it is a log. And this log is not a record made after the fact. It is the question of what is allowed right in front of the execution and what is left right behind it. Only when the border sits in front of and behind the execution can the object's wall do its job as the object's wall.
+
+```mermaid
+flowchart LR
+    A["Checkpoint 1<br/>the Border of Silicon"] --> L1["The leak: partner lists,<br/>legal entities, re-lease routes"]
+    B["Checkpoint 2<br/>the Gate of Tokens"] --> L2["The leak: open-weight share<br/>from 7% to 56%"]
+    C["Checkpoint 3<br/>the Gap in People"] --> L3["The leak: shadow AI<br/>and technical debt"]
+    L1 --> E["The border in front of and behind execution<br/>the policy gate and the audit log"]
+    L2 --> E
+    L3 --> E
+```
+
+*The three checkpoints go after the object, but the leak follows the execution. The border sits in front of and behind execution: the policy gate and the audit log.*
 
 ## So Where Do We Draw the Border
 
