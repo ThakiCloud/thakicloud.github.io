@@ -22,6 +22,9 @@ categories:
 canonical_url: "https://thakicloud.com/tech-blog/en/agentops/week-that-demanded-unredacted/"
 ---
 
+![One line that can be shown, over everything that is not](/assets/images/week-that-demanded-unredacted-hero.webp)
+*A visual metaphor for the article's key idea: what this week's news does not show, and the one line of record that can be shown over it.*
+
 ## A Week That Demanded the "Unredacted Original"
 
 If your team has shipped agents to production, the first thing to catch in this morning's news is a one-line order from the UK Parliament. The order itself, "submit the unredacted original", is the news. You only have to ask for the unredacted version when the redacted one has become the default. Liam Byrne, Chair of the UK Parliament's Business, Innovation, Science and Trade Committee, instructed Anthropic to submit the unredacted version of its report on AI acceleration.
@@ -67,6 +70,25 @@ Back to the order. What the UK committee demanded is neither a summary nor a con
 News demanding the location of the record also came out in the same week. Poland's Ministry of National Defence signed a contract with Palantir valued at $300 million. The target is Maven Smart System, an AI tool that fuses satellite, drone, and radar data. The fusion of defense data is a domain where where and under whose jurisdiction is demanded with the same weight as performance. One demand asks what is being hidden, and the other asks where the hiding is placed.
 
 The two point in the same direction. The unit of industry governance is moving from the model layer to the execution layer. The black box of the model is opened by open source and benchmarks. The black box of behavior is still closed. All four hidings of this week sit in the action layer.
+
+```mermaid
+flowchart TB
+    A["The common denominator of the week<br>What is not shown"]
+    A --> B1["Code the model quietly fixed<br>No changelog, no approval record"]
+    A --> B2["Money a human quietly received<br>The relationship behind the report undisclosed"]
+    A --> B3["The book the author took down<br>The door of knowledge closed"]
+    A --> B4["The opening in the opposite direction<br>80B Apache 2.0, 708B MIT weights"]
+    B4 --> B5["The model is visible<br>What it did is not"]
+    B1 --> C["All four sit in<br>the action layer"]
+    B2 --> C
+    B3 --> C
+    B5 --> C
+    C --> D["The unit of governance<br>From the model layer to the execution layer"]
+    D --> E["The protagonist of the record<br>The execution log"]
+    E --> F["Which action, by which model,<br>under whose approval, and where"]
+```
+
+*Figure. The axis of this week's news. Four stories about what is not shown all point at the action layer, and the protagonist of the record becomes the execution log.*
 
 ## The Seat Where Hiding Is Managed
 
